@@ -1,0 +1,80 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+0001;Geräte, Werkzeuge und sonstige Betriebsmittel, die zur;1,0;Psch;gaeb;leistungsbeschreibungen/LV.X83
+0002;Baustelle von allen Geräten, Anlagen, Einrichtungen und;1,0;Psch;gaeb;leistungsbeschreibungen/LV.X83
+0001;Verkehrssicherung längerer Dauer einschließlich Ver-;1,0;Psch;gaeb;leistungsbeschreibungen/LV.X83
+0002;Verkehrssicherung längerer Dauer vorhalten, warten, in-;7,0;d;gaeb;leistungsbeschreibungen/LV.X83
+0003;Verkehrssicherung an Arbeitsstellen von längerer Dauer;1,0;Psch;gaeb;leistungsbeschreibungen/LV.X83
+0004;Verkehrssicherung längerer Dauer vorhalten, warten, in-;10,0;d;gaeb;leistungsbeschreibungen/LV.X83
+0005;Verkehrssicherung an Arbeitsstellen von längerer Dauer;1,0;Psch;gaeb;leistungsbeschreibungen/LV.X83
+0006;Verkehrssicherung längerer Dauer vorhalten, warten, in-;7,0;d;gaeb;leistungsbeschreibungen/LV.X83
+0007;Verkehrssicherung an Arbeitsstellen längerer Dauer ab-;1,0;Psch;gaeb;leistungsbeschreibungen/LV.X83
+0008;Kontrolle der Verkehrssicherung an Arbeitsstellen;24,0;d;gaeb;leistungsbeschreibungen/LV.X83
+0009;Kontrolle der temporären Verkehrsschilder, vorüberge-;24,0;d;gaeb;leistungsbeschreibungen/LV.X83
+0010;Absperrgerät oder Warneinrichtung betriebsfertig auf-;4,0;St;gaeb;leistungsbeschreibungen/LV.X83
+0011;Absperrgerät oder Warneinrichtung vorhalten, warten,;24,0;d;gaeb;leistungsbeschreibungen/LV.X83
+0012;Absperrgerät oder Warneinrichtung innerhalb des Ar-;4,0;St;gaeb;leistungsbeschreibungen/LV.X83
+0013;Zusätzliche An- und Abfahrt, sowie An- und;5,0;St;gaeb;leistungsbeschreibungen/LV.X83
+0014;Absperrgerät oder Warneinrichtung betriebsfertig auf-;4,0;St;gaeb;leistungsbeschreibungen/LV.X83
+0015;Absperrgerät oder Warneinrichtung vorhalten, warten,;24,0;d;gaeb;leistungsbeschreibungen/LV.X83
+0016;Baustelleninformationsschild einschließlich Aufstell-;2,0;St;gaeb;leistungsbeschreibungen/LV.X83
+0017;Baustelleninformationsschild und Aufstellvorrichtung;2,0;St;gaeb;leistungsbeschreibungen/LV.X83
+0001;Koordinierung der Maßnahme während der Ausführung;1,0;Psch;gaeb;leistungsbeschreibungen/LV.X83
+0002;Vorankündigung gemäß Baustellenverordnung erstellen und;1,0;Psch;gaeb;leistungsbeschreibungen/LV.X83
+0003;Sicherheits- und Gesundheitsschutzplan (SiGe-Plan) nach;1,0;Psch;gaeb;leistungsbeschreibungen/LV.X83
+0001;Längsmarkierung einschl. evtl. Sperrflächenumrandung;5200,0;m;gaeb;leistungsbeschreibungen/LV.X83
+0002;Längsmarkierung einschl. evtl. Sperrflächenumrandung;1300,0;m;gaeb;leistungsbeschreibungen/LV.X83
+0003;Asphalt fräsen und Fräsgut aufnehmen. Anschlusskante;11400,0;m2;gaeb;leistungsbeschreibungen/LV.X83
+0004;Asphalt feinfräsen und Fräsgut aufnehmen.;11400,0;m2;gaeb;leistungsbeschreibungen/LV.X83
+0005;Pechhaltige Befestigung lösen und aufnehmen. Beschaf-;2800,0;m2;gaeb;leistungsbeschreibungen/LV.X83
+0006;Asphalt feinfräsen und Fräsgut aufnehmen.;2800,0;m2;gaeb;leistungsbeschreibungen/LV.X83
+0007;Asphalt fräsen und Fräsgut aufnehmen. Anschlusskante;100,0;m2;gaeb;leistungsbeschreibungen/LV.X83
+0008;Asphalt fräsen und Fräsgut aufnehmen. Anschlusskante;400,0;m2;gaeb;leistungsbeschreibungen/LV.X83
+0009;Asphalt fräsen und Fräsgut aufnehmen. Anschlusskante;100,0;m2;gaeb;leistungsbeschreibungen/LV.X83
+0010;Asphalt fräsen und Fräsgut aufnehmen. Anschlusskante;110,0;m2;gaeb;leistungsbeschreibungen/LV.X83
+0011;Betonfahrbahn eines Wirtschaftsweges aufnehmen und ausbauen.;25,0;m3;gaeb;leistungsbeschreibungen/LV.X83
+0012;Natursteinpflaster im Bereich des Straßeneinlaufs aufnehmen und an den neuen Fahrbahnhochpunkt anpassen.;2,0;m2;gaeb;leistungsbeschreibungen/LV.X83
+0013;Aufnahme der Bestandsdaten der Fahrbahn (Höhenlage, Lage, Breiten sowie Standorte der Verkehrszeichen und Einbauteile) zur Erstellung des Deckenbuches für den geplanten Hocheinbau.;1,0;Psch;gaeb;leistungsbeschreibungen/LV.X83
+0014;Pflasterfläche der Grundstückszufahrt aufnehmen und durch Asphaltbefestigung ersetzen.;15,0;m2;gaeb;leistungsbeschreibungen/LV.X83
+0015;Asphaltbefestigung geradlinig trennen.;150,0;m;gaeb;leistungsbeschreibungen/LV.X83
+0016;Naht oder Anschluss ohne Fugenspalt in Asphaltdeck-;130,0;m;gaeb;leistungsbeschreibungen/LV.X83
+0017;Naht oder Anschluss ohne Fugenspalt in Asphaltdeck-;20,0;m;gaeb;leistungsbeschreibungen/LV.X83
+0018;Fugenfüllung herstellen.;130,0;m;gaeb;leistungsbeschreibungen/LV.X83
+0019;Fugenfüllung herstellen.;20,0;m;gaeb;leistungsbeschreibungen/LV.X83
+0020;Unterlage reinigen. Anfallendes Kehrgut nach Wahl des;12000,0;m2;gaeb;leistungsbeschreibungen/LV.X83
+0021;Unterlage reinigen. Anfallendes Kehrgut einer ordnungsgemäßen Entsorgung zuführen.;2800,0;m2;gaeb;leistungsbeschreibungen/LV.X83
+0022;Bitumenemulsion zur Herstellung des Schichtenverbundes;14800,0;m2;gaeb;leistungsbeschreibungen/LV.X83
+0023;Bitumenemulsion zur Herstellung des Schichtenverbundes;14800,0;m2;gaeb;leistungsbeschreibungen/LV.X83
+0024;Asphaltdeckschicht aus Asphaltbeton für Asphaltdeck-;1550,0;t;gaeb;leistungsbeschreibungen/LV.X83
+0025;Asphalttragschicht aus Asphalttragschichtmischgut;3200,0;t;gaeb;leistungsbeschreibungen/LV.X83
+0026;Asphalttragdeckschicht aus Asphalttragdeckschichtmischgut AC 16 TD herstellen.;25,0;t;gaeb;leistungsbeschreibungen/LV.X83
+0027;Asphaltdeckschicht aus Asphaltbeton für Asphaltdeck-;15,0;t;gaeb;leistungsbeschreibungen/LV.X83
+0028;Zulage für den Einbau der Asphaltdeckschicht in;250,0;m2;gaeb;leistungsbeschreibungen/LV.X83
+0029;Asphalteinlage nach Unterlagen des AG einbauen.;100,0;m2;gaeb;leistungsbeschreibungen/LV.X83
+0030;Abstumpfungsmaßnahme zur Erhöhung der Anfangsgriffig-;14800,0;m2;gaeb;leistungsbeschreibungen/LV.X83
+0031;Flankenfläche des hochliegenden Randes der Asphalt-;1700,0;m;gaeb;leistungsbeschreibungen/LV.X83
+0032;Verkehrsfläche mit einer selbstaufnehmenden Kehrmaschi-;14800,0;m2;gaeb;leistungsbeschreibungen/LV.X83
+0033;Aufsatz des Straßenablaufs freilegen und entsprechend;1,0;St;gaeb;leistungsbeschreibungen/LV.X83
+0034;Erschwernis infolge Einbauten, Schächten und Straßenab-;1,0;St;gaeb;leistungsbeschreibungen/LV.X83
+0035;Erschwernis infolge Einfassungen, Borden und Fahr-;135,0;m;gaeb;leistungsbeschreibungen/LV.X83
+0036;Erschwernis infolge Einfassungen, Borden und Fahr-;50,0;m;gaeb;leistungsbeschreibungen/LV.X83
+0037;Erschwernis infolge Einbauten, Schächten und Straßenab-;2,0;St;gaeb;leistungsbeschreibungen/LV.X83
+0038;Einbauteile in Asphaltbefestigung freilegen und an die;1,0;St;gaeb;leistungsbeschreibungen/LV.X83
+0039;Einbauteile in Asphaltbefestigung freilegen und an die;1,0;St;gaeb;leistungsbeschreibungen/LV.X83
+0040;Gefährlichen Abfall aus Baustelle laden, fördern und;300,0;t;gaeb;leistungsbeschreibungen/LV.X83
+0001;Bankett abtragen ggf. einschließlich Vegetationsde-;5000,0;m;gaeb;leistungsbeschreibungen/LV.X83
+0002;Bankett gemäß ZTV E-StB profilgerecht herstellen.;800,0;t;gaeb;leistungsbeschreibungen/LV.X83
+0003;Ausbau und Entsorgung der vorhandenen Befestigung;600,0;m;gaeb;leistungsbeschreibungen/LV.X83
+0004;Herstellung eines verstärkten Banketts mit Rasengittersteinen in den Kurvenbereichen der Fahrbahn.;600,0;m;gaeb;leistungsbeschreibungen/LV.X83
+0005;Entwässerungsmulde neben dem Powerbankett profilgerecht herstellen.;50,0;m;gaeb;leistungsbeschreibungen/LV.X83
+0006;Bestehende Entwässerungsmulde neben dem Powerbankett reinigen und profilgerecht nacharbeiten.;380,0;m;gaeb;leistungsbeschreibungen/LV.X83
+0007;Rasenansaat auf den Flächen der Entwässerungsmulde herstellen.;100,0;m2;gaeb;leistungsbeschreibungen/LV.X83
+0008;Erschwernis durch Einbauten. Abgerechnet wird nach;120,0;St;gaeb;leistungsbeschreibungen/LV.X83
+0009;Erschwernis durch Einbauten. Abgerechnet wird nach;19,0;St;gaeb;leistungsbeschreibungen/LV.X83
+0010;Einbauteil freilegen und an die neue planmäßige Höhe anpassen.;1,0;St;gaeb;leistungsbeschreibungen/LV.X83
+0011;Schicht ohne Bindemittel aufnehmen;20,0;m3;gaeb;leistungsbeschreibungen/LV.X83
+0012;Frostschutzschicht herstellen.;25,0;m3;gaeb;leistungsbeschreibungen/LV.X83
+0001;Schutz für Baumstamm durch Mantel mit Polsterung her-;36,0;St;gaeb;leistungsbeschreibungen/LV.X83
+0002;Freigelegte Wurzelbereiche während der Bauzeit gegen;50,0;m2;gaeb;leistungsbeschreibungen/LV.X83
+0003;Einzelgehölz wässern, Wasser liefern. Bodenart, Exposi-;2,0;St;gaeb;leistungsbeschreibungen/LV.X83
+0004;Wurzelschaden des Baumes unter Berücksichtigung des;10,0;St;gaeb;leistungsbeschreibungen/LV.X83
+0005;Boden im Bereich der Bäume mittels Maschinen unterstützter Handschachtung abtragen.;10,0;m3;gaeb;leistungsbeschreibungen/LV.X83

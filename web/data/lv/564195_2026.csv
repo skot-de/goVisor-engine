@@ -1,0 +1,342 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+0010;Einrichten, Vorhalten und Räumen der Baustelle und der;1,0;St;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0020;Baustelleneinrichtung aus der Vorposition über die;100,0;StWo;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0030;Stellung Bauaufzug als Material- und Personenaufzug, für;4,0;St;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0040;Weitere Vorhaltung Bauaufzüge über die Grundvorhaltung;400,0;StWo;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0050;Vorhandene Fenster und Türen mittels Hartfasplatten vor;360,0;m2;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0060;Vorhandene Fenster und Türen mittels Folie vor;360,0;m2;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0070;Schutzangrenzender Bauteile mittels Folie vor;300,0;m2;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0080;Abkleben aller Natursteinelementen wie Fensterbänke usw.;400,0;m;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0090;Herstellung eines Bodenschutzes für besondere Zwecke im;100,0;m2;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0100;Schutzzaun, versetzbar, auf befestigtem Untergrund, aus;90,0;m;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0110;Weitere Vorhaltung Schutzzaun über die Grundvorhaltung;6000,0;mWo;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0010;Die Fassade ist hinsichtlich ihrer Schäden zu untersuchen.;1,0;psch;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0020;Für die Fassaden des gesamten Bauabschnitts sind alle;1,0;psch;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0030;Auf Grundlage der Maßnahmenkartierung ist ein prüfbares;1,0;psch;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0040;Beschaffung von Musterplatten aus Warthauer Sandstein;4,0;St;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0050;Musterplatte aus Wünschelburger Sandstein;4,0;St;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0060;Musterflächen zur Reinigung der Oberflächen der Fassaden;2,0;St;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0070;Musterflächen zur Reinigung der Oberflächen der Fassaden;2,0;St;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0080;Die durchgeführten Arbeiten sind in einer Arbeitsdokumentation;1,0;psch;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0010;Sichtflächen der Fassaden, ebene, ggf. in der Ansicht;105,0;m2;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0020;Fassadengliederungen und -teile, profiliert, aus Warthauer;260,0;m2;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0030;Werkstücke der Balustradenabdeckungen aus Warthauer;0,5;m3;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0040;Baluster aus Warthauer Sandstein,;24,0;St;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0050;Werkstücke der Balustradensockel aus Warthauer Sandstein;1,2;m3;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0060;Abbruch des Bodenbelages des Balkons aus Asphalt, Dicke bis;11,0;m2;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0070;Anspachteln von Höhendifferenzen des Untergrundes aus;11,0;m2;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0080;Abdichtung des Balkons mit Flüssigkunststoff mit Europäischer;13,0;m2;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0090;Werkstücke der Balustradensockel aus Warthauer Sandstein,;1,1;m3;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0100;Baluster aus Warthauer Sandstein,;24,0;St;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0110;Balustradenabdeckungen aus Warthauer Sandstein,;0,5;m3;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0120;Stoßfugen der Balustradensockel oberflächenbündig mit Blei;9,0;St;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0130;Stoßfugen der Balustradensabdeckungen oberflächenbündig;9,0;St;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0140;Klammer, Flachstahl 50x6 mm, Länge 400 mm zuzüglich 2;18,0;St;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0150;Vorhandene Eisenteile, Dübel, Kabel, Rohre, Haken, Schellen;30,0;St;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0160;Morbide und absandende Oberflächen der;6,0;m2;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0170;Geschädigte Oberflächen mit Materialverlusten in geringer;8,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0180;Geschädigte Oberflächen mit Materialverlusten in geringer;10,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0190;Geschädigte Oberflächen mit Materialverlusten in geringer;5,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0200;Schadstellen in den Ansichtsflächen der;15,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0210;Schadstellen in den Ansichtsflächen mit Steinersatzmasse;12,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0220;Schadstellen in den Ansichtsflächen mit Steinersatzmasse;8,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0230;Schadstellen in den Ansichtsflächen mit Steinersatzmasse;2,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0240;Schadstellen in den Ansichtsflächen mit Steinersatzmasse;1,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0250;Schadstellen, mangelhafte Mörtelergänzungen und;3,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0260;Vierungen, Bearbeitung: eben/glatt scharriert bzw. geschliffen;4,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0270;Vierungen, Bearbeitung: eben/glatt scharriert bzw. geschliffen;2,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0280;Vierungen, Bearbeitung: eben/glatt scharriert bzw. geschliffen;2,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0290;Vierungen, Bearbeitung: eben/glatt scharriert bzw. geschliffen;1,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0300;Vierungen, Bearbeitung: eben/glatt scharriert bzw. geschliffen;1,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0310;Vierungen, Bearbeitung: eben/glatt scharriert bzw. geschliffen;1,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0320;Vierungen, Bearbeitung: profiliert, kanneliert, in der Ansicht;4,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0330;Vierungen, Bearbeitung: profiliert, kanneliert, in der Ansicht;4,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0340;Vierungen, Bearbeitung: profiliert, kanneliert, in der Ansicht;3,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0350;Vierungen, Bearbeitung: profiliert, kanneliert, in der Ansicht;2,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0360;Vierungen, Bearbeitung: profiliert, kanneliert, in der Ansicht;1,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0370;Vierungen, Bearbeitung: profiliert, kanneliert, in der Ansicht;1,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0380;Vierungen, Bearbeitung: profiliert, kanneliert, in der Ansicht;1,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0390;Risse, offene Lager und Brüche in Sandsteinwerkstücken;3,0;m;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0400;Risse, offene Lager und Brüche in Sandsteinwerkstücken;2,0;m;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0410;Schadhafte Fugen bis auf den ungeschädigten Fugenmörtel;75,0;m;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0420;Dübellöcher der Gerüstverankerungen im Zuge des;50,0;St;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0010;Sicht- bzw. Oberflächen der Skulpturengruppe rechts (nördlich);1,0;psch;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0020;Sicht- bzw. Oberflächen der Skulpturengruppe links (südlich);1,0;psch;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0030;Sicht- bzw. Oberflächen der Voluten Achse N und Q in einem;2,0;St;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0040;Sicht- bzw. Oberflächen der Voluten Achse O und P in einem;2,0;St;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0050;Sicht- bzw. Oberflächen der Voluten Achse M und R in einem;2,0;St;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0060;Morbide und absandende Oberflächen der Bauplastik partiell;3,5;m2;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0070;Geschädigte Oberflächen mit Materialverlusten in geringer;3,2;m2;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0080;Fugenflächen auf den zu ergänzenden Bereich der Bauplastik;2,0;St;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0090;Bauplastische Ergänzung bis 500 cm² abgewickelte;2,0;St;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0100;Risse, offene Lager und Brüche mit einem Injektionsverfahren;0,5;m;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0110;Schadhafte Fugen der Bauplastik bis auf den ungeschädigten;16,0;m;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0010;Sichtflächen der Fassaden, ebene, ggf. in der Ansicht;125,0;m2;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0020;Fassadenflächen, Sichflächen der Pilaster, Fenster- und;165,0;m2;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0030;Sichtflächen des Gebäudesockels aus Granitporphyr und der;33,0;m2;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0040;Profilierte Fassadenflächen und -teile aus Wünschelburger;455,0;m2;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0050;Fenstergitter der Fenster E0 aus Flachstahl, ca. 1,15 m breit,;1,0;St;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0060;Werkstücke der Balustradenabdeckungen aus Wünschelburger;0,4;m3;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0070;Werkstücke der Brüstungen aus Wünschelburger Sandstein zur;1,0;m3;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0080;Baluster aus Wünschelburger Sandstein,;6,0;St;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0090;Oberes Werkstücke der Kartusche über dem Haupteingang aus;1,0;St;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0100;Werkstücke der Balustradensockel aus Wünschelburger;0,4;m3;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0110;Abbruch des Bodenbelages, aus Steinzeugfliesen,;3,5;m2;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0120;Anspachteln von Höhendifferenzen des Untergrundes aus;6,0;m2;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0130;Abdichtung des Balkons mit Flüssigkunststoff mit Europäischer;6,0;m2;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0140;Werkstücke der Balustradensockel aus Wünschelburger;0,4;m3;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0150;Werkstücke der Brüstungen aus Wünschelburger Sandstein,;0,5;m3;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0160;Baluster aus Wünschelburger Sandstein,;6,0;St;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0170;Oberes Werkstücke der Kartusche über dem Haupteingang aus;1,0;St;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0180;Balustradenabdeckungen aus Wünschelburger Sandstein,;0,5;m3;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0190;Stoßfugen der Balustradensockel oberflächenbündig mit Blei;9,0;St;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0200;Stoßfugen der Balustradensabdeckungen oberflächenbündig;9,0;St;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0210;Klammer, Flachstahl 50x6 mm, Länge 400 mm zuzüglich 2;12,0;St;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0220;Vorhandene Eisenteile, Dübel, Kabel, Rohre, Haken, Schellen;45,0;St;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0230;Morbide und absandende Oberflächen der;8,0;m2;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0240;Geschädigte Oberflächen mit Materialverlusten in geringer;8,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0250;Geschädigte Oberflächen mit Materialverlusten in geringer;10,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0260;Geschädigte Oberflächen mit Materialverlusten in geringer;5,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0270;Schadstellen in den Ansichtsflächen der;15,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0280;Schadstellen in den Ansichtsflächen mit Steinersatzmasse;12,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0290;Schadstellen in den Ansichtsflächen mit Steinersatzmasse;8,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0300;Schadstellen in den Ansichtsflächen mit Steinersatzmasse;2,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0310;Schadstellen in den Ansichtsflächen mit Steinersatzmasse;1,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0320;Schadstellen, mangelhafte Mörtelergänzungen und;3,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0330;Vierungen, Bearbeitung: eben/glatt scharriert bzw. geschliffen;4,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0340;Vierungen, Bearbeitung: eben/glatt scharriert bzw. geschliffen;2,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0350;Vierungen, Bearbeitung: eben/glatt scharriert bzw. geschliffen;2,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0360;Vierungen, Bearbeitung: eben/glatt scharriert bzw. geschliffen;1,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0370;Vierungen, Bearbeitung: eben/glatt scharriert bzw. geschliffen;1,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0380;Vierungen, Bearbeitung: eben/glatt scharriert bzw. geschliffen;1,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0390;Vierungen, Bearbeitung: profiliert, kanneliert, in der Ansicht;4,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0400;Vierungen, Bearbeitung: profiliert, kanneliert, in der Ansicht;10,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0410;Vierungen, Bearbeitung: profiliert, kanneliert, in der Ansicht;6,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0420;Vierungen, Bearbeitung: profiliert, kanneliert, in der Ansicht;4,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0430;Vierungen, Bearbeitung: profiliert, kanneliert, in der Ansicht;2,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0440;Vierungen, Bearbeitung: profiliert, kanneliert, in der Ansicht;1,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0450;Vierungen, Bearbeitung: profiliert, kanneliert, in der Ansicht;1,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0460;Risse, offene Lager und Brüche in Sandsteinwerkstücken;3,0;m;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0470;Risse, offene Lager und Brüche in Sandsteinwerkstücken;2,0;m;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0480;Schadhafte Fugen bis auf den ungeschädigten Fugenmörtel;165,0;m;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0490;Dübellöcher der Gerüstverankerungen im Zuge des;120,0;St;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0010;Sicht- bzw. Oberflächen der Kapitelle der Dreiviertelsäulen in;6,0;St;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0020;Sicht- bzw. Oberflächen der Gewände in einem kombinierten;3,0;St;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0030;Sicht- bzw. Oberflächen der Fensterstürze und Verdachungen;3,0;St;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0040;Sicht- bzw. Oberflächen aller Teile der Kartusche über dem;1,0;St;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0050;Sicht- bzw. Oberflächen der Reliefs in den Fensterbrüstungen in;2,0;St;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0060;Morbide und absandende Oberflächen der Bauplastik partiell;1,5;m2;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0070;Geschädigte Oberflächen mit Materialverlusten in geringer;1,2;m2;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0080;Fugenflächen auf den zu ergänzenden Bereich der Bauplastik;5,0;St;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0090;Bauplastische Ergänzung bis 500 cm² abgewickelte;4,0;St;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0100;Risse, offene Lager und Brüche mit einem Injektionsverfahren;0,5;m;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0110;Schadhafte Fugen der Bauplastik bis auf den ungeschädigten;10,0;m;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0120;Sicht- bzw. Oberflächen des Gewändes in einem kombinierten;1,0;St;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0130;Sicht- bzw. Oberflächen und Profilierungen des Gewändes;1,0;St;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0140;Schadstellen in den Ansichtsflächen und Profilierungen der;2,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0010;Sichtflächen der Fassaden, ebene, scharriert oder fein gespitzt;190,0;m2;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0020;Fassadenflächen, rustizierte Flächen, aus Wünschelburger;205,0;m2;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0030;Fassadengliederungen und -teile, profiliert, aus;405,0;m2;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0040;Spiegel der Fensterbrüstungen E2, ornamental reich verziert,;10,0;St;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0050;Sichtflächen des Gebäudesockels aus Granitporphyr;38,0;m2;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0060;Fenstergitter der Fenster E0 aus Flachstahl, ca. 1,15 m breit,;4,0;St;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0070;Vorhandene Eisenteile, Dübel, Kabel, Rohre, Haken, Schellen;20,0;St;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0080;Morbide und absandende Oberflächen der;8,0;m2;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0090;Geschädigte Oberflächen mit Materialverlusten in geringer;12,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0100;Geschädigte Oberflächen mit Materialverlusten in geringer;15,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0110;Geschädigte Oberflächen mit Materialverlusten in geringer;8,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0120;Schadstellen in den Ansichtsflächen der;20,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0130;Schadstellen in den Ansichtsflächen mit Steinersatzmasse;25,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0140;Schadstellen in den Ansichtsflächen mit Steinersatzmasse;18,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0150;Schadstellen in den Ansichtsflächen mit Steinersatzmasse;4,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0160;Schadstellen in den Ansichtsflächen mit Steinersatzmasse;1,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0170;Schadstellen, mangelhafte Mörtelergänzungen und;8,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0180;Vierungen, Bearbeitung: eben/glatt scharriert bzw. geschliffen;12,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0190;Vierungen, Bearbeitung: eben/glatt scharriert bzw. geschliffen;5,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0200;Vierungen, Bearbeitung: eben/glatt scharriert bzw. geschliffen;4,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0210;Vierungen, Bearbeitung: eben/glatt scharriert bzw. geschliffen;3,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0220;Vierungen, Bearbeitung: eben/glatt scharriert bzw. geschliffen;1,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0230;Vierungen, Bearbeitung: eben/glatt scharriert bzw. geschliffen;1,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0240;Vierungen, Bearbeitung: profiliert, kanneliert, in der Ansicht;10,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0250;Vierungen, Bearbeitung: profiliert, kanneliert, in der Ansicht;12,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0260;Vierungen, Bearbeitung: profiliert, kanneliert, in der Ansicht;8,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0270;Vierungen, Bearbeitung: profiliert, kanneliert, in der Ansicht;5,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0280;Vierungen, Bearbeitung: profiliert, kanneliert, in der Ansicht;3,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0290;Vierungen, Bearbeitung: profiliert, kanneliert, in der Ansicht;2,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0300;Vierungen, Bearbeitung: profiliert, kanneliert, in der Ansicht;1,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0310;Risse, offene Lager und Brüche in Sandsteinwerkstücken;5,0;m;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0320;Risse, offene Lager und Brüche in Sandsteinwerkstücken;7,0;m;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0330;Schadhafte Fugen bis auf den ungeschädigten Fugenmörtel;220,0;m;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0340;Dübellöcher der Gerüstverankerungen im Zuge des;140,0;St;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0010;Fassadenbewuchs mit wildem Wein (Parthenocissus;1,0;psch;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0020;Sichtflächen der Fassaden, ebene, scharriert oder fein gespitzt;160,0;m2;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0030;Fassadenflächen, rustizierte Flächen, aus Wünschelburger;205,0;m2;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0040;Fassadengliederungen und -teile, profiliert, aus;605,0;m2;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0050;Sichtflächen des Gebäudesockels aus Granitporphyr und der;38,0;m2;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0060;Fenstergitter der Fenster E0 aus Flachstahl, ca. 1,15 m breit,;8,0;St;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0070;Vorhandene Eisenteile, Dübel, Kabel, Rohre, Haken, Schellen;10,0;St;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0080;Morbide und absandende Oberflächen der;8,0;m2;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0090;Geschädigte Oberflächen mit Materialverlusten in geringer;15,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0100;Geschädigte Oberflächen mit Materialverlusten in geringer;20,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0110;Geschädigte Oberflächen mit Materialverlusten in geringer;10,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0120;Schadstellen in den Ansichtsflächen der;25,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0130;Schadstellen in den Ansichtsflächen mit Steinersatzmasse;25,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0140;Schadstellen in den Ansichtsflächen mit Steinersatzmasse;18,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0150;Schadstellen in den Ansichtsflächen mit Steinersatzmasse;4,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0160;Schadstellen in den Ansichtsflächen mit Steinersatzmasse;1,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0170;Schadstellen, mangelhafte Mörtelergänzungen und;8,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0180;Vierungen, Bearbeitung: eben/glatt scharriert bzw. geschliffen;12,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0190;Vierungen, Bearbeitung: eben/glatt scharriert bzw. geschliffen;8,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0200;Vierungen, Bearbeitung: eben/glatt scharriert bzw. geschliffen;6,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0210;Vierungen, Bearbeitung: eben/glatt scharriert bzw. geschliffen;4,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0220;Vierungen, Bearbeitung: eben/glatt scharriert bzw. geschliffen;2,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0230;Vierungen, Bearbeitung: eben/glatt scharriert bzw. geschliffen;1,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0240;Vierungen, Bearbeitung: profiliert, kanneliert, in der Ansicht;10,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0250;Vierungen, Bearbeitung: profiliert, kanneliert, in der Ansicht;14,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0260;Vierungen, Bearbeitung: profiliert, kanneliert, in der Ansicht;10,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0270;Vierungen, Bearbeitung: profiliert, kanneliert, in der Ansicht;6,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0280;Vierungen, Bearbeitung: profiliert, kanneliert, in der Ansicht;4,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0290;Vierungen, Bearbeitung: profiliert, kanneliert, in der Ansicht;3,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0300;Vierungen, Bearbeitung: profiliert, kanneliert, in der Ansicht;1,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0310;Risse, offene Lager und Brüche in Sandsteinwerkstücken;7,0;m;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0320;Risse, offene Lager und Brüche in Sandsteinwerkstücken;9,0;m;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0330;Schadhafte Fugen bis auf den ungeschädigten Fugenmörtel;210,0;m;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0340;Dübellöcher der Gerüstverankerungen im Zuge des;150,0;St;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0010;Sicht- bzw. Oberflächen des Tympanons mit Kartusche und;1,0;St;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0020;Trompete der Engelsgestalt aus Kupferblech wie folgt;1,0;St;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0030;Sicht- bzw. Oberflächen der Pilasterkapitelle in einem;6,0;St;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0040;Sicht- bzw. Oberflächen der Draperien der Fensterbrüstungen;3,0;St;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0050;Sicht- bzw. Oberflächen der Verdachung mit Ziergiebel des;1,0;St;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0060;Sicht- bzw. Oberflächen der Stürze der Erkerfenster E2 in;3,0;St;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0070;Sicht- bzw. Oberflächen der Kapitelle der Dreiviertelsäulen;4,0;St;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0080;Sicht- bzw. Oberflächen der Bauplastik Konsolen mit;1,0;St;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0090;Sicht- bzw. Oberflächen des Gewändes des ovalen Fensters;1,0;St;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0100;Sicht- bzw. Oberflächen der Kartuschen neben dem Eingang in;2,0;St;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0110;Morbide und absandende Oberflächen der Bauplastik partiell;1,5;m2;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0120;Geschädigte Oberflächen mit Materialverlusten in geringer;1,2;m2;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0130;Fugenflächen auf den zu ergänzenden Bereich der Bauplastik;3,0;St;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0140;Bauplastische Ergänzung bis 500 cm² abgewickelte;1,0;St;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0150;Risse, offene Lager und Brüche mit einem Injektionsverfahren;0,5;m;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0160;Schadhafte Fugen der Bauplastik bis auf den ungeschädigten;16,0;m;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0010;Sichtflächen der Fassaden, ebene, scharriert oder fein gespitzt;215,0;m2;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0020;Fassadenflächen, rustizierte Flächen, aus Wünschelburger;205,0;m2;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0030;Fassadengliederungen und -teile, profiliert, aus;405,0;m2;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0040;Spiegel der Fensterbrüstungen E2, ornamental reich verziert,;10,0;St;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0050;Sichtflächen des Gebäudesockels aus Granitporphyr;35,0;m2;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0060;Fenstergitter der Fenster E0 aus Flachstahl, ca. 1,15 m breit,;4,0;St;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0070;Vorhandene Eisenteile, Dübel, Kabel, Rohre, Haken, Schellen;10,0;St;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0080;Morbide und absandende Oberflächen der;8,0;m2;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0090;Geschädigte Oberflächen mit Materialverlusten in geringer;15,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0100;Geschädigte Oberflächen mit Materialverlusten in geringer;20,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0110;Geschädigte Oberflächen mit Materialverlusten in geringer;10,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0120;Schadstellen in den Ansichtsflächen der;25,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0130;Schadstellen in den Ansichtsflächen mit Steinersatzmasse;25,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0140;Schadstellen in den Ansichtsflächen mit Steinersatzmasse;18,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0150;Schadstellen in den Ansichtsflächen mit Steinersatzmasse;4,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0160;Schadstellen in den Ansichtsflächen mit Steinersatzmasse;1,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0170;Schadstellen, mangelhafte Mörtelergänzungen und;8,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0180;Vierungen, Bearbeitung: eben/glatt scharriert bzw. geschliffen;12,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0190;Vierungen, Bearbeitung: eben/glatt scharriert bzw. geschliffen;8,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0200;Vierungen, Bearbeitung: eben/glatt scharriert bzw. geschliffen;6,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0210;Vierungen, Bearbeitung: eben/glatt scharriert bzw. geschliffen;4,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0220;Vierungen, Bearbeitung: eben/glatt scharriert bzw. geschliffen;2,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0230;Vierungen, Bearbeitung: eben/glatt scharriert bzw. geschliffen;1,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0240;Vierungen, Bearbeitung: profiliert, kanneliert, in der Ansicht;10,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0250;Vierungen, Bearbeitung: profiliert, kanneliert, in der Ansicht;14,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0260;Vierungen, Bearbeitung: profiliert, kanneliert, in der Ansicht;10,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0270;Vierungen, Bearbeitung: profiliert, kanneliert, in der Ansicht;6,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0280;Vierungen, Bearbeitung: profiliert, kanneliert, in der Ansicht;4,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0290;Vierungen, Bearbeitung: profiliert, kanneliert, in der Ansicht;4,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0300;Vierungen, Bearbeitung: profiliert, kanneliert, in der Ansicht;3,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0310;Risse, offene Lager und Brüche in Sandsteinwerkstücken;7,0;m;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0320;Risse, offene Lager und Brüche in Sandsteinwerkstücken;9,0;m;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0330;Schadhafte Fugen bis auf den ungeschädigten Fugenmörtel;210,0;m;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0340;Dübellöcher der Gerüstverankerungen im Zuge des;150,0;St;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0010;Sicht- bzw. Oberflächen des Tympanons mit Kartusche und;1,0;St;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0020;Sicht- bzw. Oberflächen der Pilasterkapitelle in einem;10,0;St;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0030;Sicht- bzw. Oberflächen der Draperien der Fensterbrüstungen;2,0;St;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0040;Sicht- bzw. Oberflächen der Verdachung mit Ziergiebel des;1,0;St;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0050;Morbide und absandende Oberflächen der Bauplastik partiell;1,6;m2;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0060;Geschädigte Oberflächen mit Materialverlusten in geringer;1,0;m2;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0070;Fugenflächen auf den zu ergänzenden Bereich der Bauplastik;6,0;St;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0080;Bauplastische Ergänzung bis 500 cm² abgewickelte;2,0;St;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0090;Risse, offene Lager und Brüche mit einem Injektionsverfahren;0,5;m;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0100;Schadhafte Fugen der Bauplastik bis auf den ungeschädigten;16,0;m;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0010;Sicht- bzw. Oberflächen der Vasen auf den Traufgesimsen in;16,0;St;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0020;Sicht- bzw. Oberflächen der Vasen auf den Tymanongiebeln;2,0;St;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0030;Morbide und absandende Oberflächen der Bauplastik partiell;1,6;m2;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0040;Geschädigte Oberflächen mit Materialverlusten in geringer;1,0;m2;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0050;Fugenflächen auf den zu ergänzenden Bereich der Bauplastik;6,0;St;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0060;Bauplastische Ergänzung bis 500 cm² abgewickelte;2,0;St;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0070;Fehlstellen und mangelhafte Mörtelergänzungen der Bauplastik;12,0;St;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0080;Risse, offene Lager und Brüche mit einem Injektionsverfahren;0,5;m;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0090;Schadhafte Fugen der Bauplastik bis auf den ungeschädigten;16,0;m;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0100;Sockel aus Mauerwerk (b/t= ca. 75x75 cm, h= ca. 60 cm);16,0;St;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0110;Sockel aus Stahlbeton (b/t= ca. 75x75 cm, h= ca. 60 cm), mit;16,0;St;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0120;Ankerstangen, Gewindestangen l= 2,50 m, d=24 mm, A4, mit 2;16,0;St;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0130;Segmente der Vasen für den Einbau der Ankerstange;16,0;St;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0010;Fassadenflächen und Sichflächen der Pilaster rustiziert, aus;15,0;m2;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0020;Sichtflächen des Gebäudesockels aus Granit;5,0;m2;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0030;Profilierte Fassadenflächen und -teile aus Elbsandstein,;19,0;m2;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0040;Morbide und absandende Oberflächen der;0,5;m2;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0050;Geschädigte Oberflächen mit Materialverlusten in geringer;2,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0060;Geschädigte Oberflächen mit Materialverlusten in geringer;5,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0070;Schadstellen in den Ansichtsflächen der;2,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0080;Schadstellen in den Ansichtsflächen mit Steinersatzmasse;5,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0090;Schadstellen in den Ansichtsflächen mit Steinersatzmasse;1,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0100;Schadstellen, mangelhafte Mörtelergänzungen und;3,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0110;Vierungen, Bearbeitung: eben/glatt scharriert bzw. geschliffen;4,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0120;Vierungen, Bearbeitung: profiliert, kanneliert, in der Ansicht;1,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0130;Vierungen, Bearbeitung: profiliert, kanneliert, in der Ansicht;2,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0140;Vierungen, Bearbeitung: profiliert, kanneliert, in der Ansicht;4,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0150;Vierungen, Bearbeitung: profiliert, kanneliert, in der Ansicht;1,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0160;Vierungen, Bearbeitung: profiliert, kanneliert, in der Ansicht;1,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0170;Vierungen, Bearbeitung: profiliert, kanneliert, in der Ansicht;1,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0180;Vierungen, Bearbeitung: profiliert, kanneliert, in der Ansicht;1,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0190;Risse, offene Lager und Brüche in Sandsteinwerkstücken;0,8;m;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0200;Risse, offene Lager und Brüche in Sandsteinwerkstücken;0,5;m;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0210;Schadhafte Fugen bis auf den ungeschädigten Fugenmörtel;65,0;m;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0010;Abbruch der Werkstücke des Sturzes aus Sandstein, nicht;0,25;m2;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0020;Abbruch Mauerwerk Mz 12-1,6 NF in MG IIa zur Herstellung;0,4;m2;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0030;Vorhandenes Lehrgerüst aus Bauschnittholz, Holzart;1,0;St;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0040;Abbinden und Aufstellen eines Lehrgerüsts aus;1,0;St;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0050;Gewölbten Sturz aus Elbsandstein, Typ Postaer Sandstein,;0,45;m3;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0060;Typgeprüften Trageanker, Einmörtelankern für;12,0;St;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0070;Mauerwerk Mz 12-1,6 NF in MG IIa zur Ausmauerung des;0,4;m2;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0010;Fassadenflächen unterhalb des Balkon, rustiziert, aus;35,0;m2;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0020;Sichtflächen des Gebäudesockels und der Blockstufen der;30,0;m2;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0030;Profilierte Fassadenflächen und -teile aus Elbsandstein,;38,0;m2;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0040;Morbide und absandende Oberflächen der;0,5;m2;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0050;Geschädigte Oberflächen mit Materialverlusten in geringer;22,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0060;Geschädigte Oberflächen mit Materialverlusten in geringer;28,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0070;Schadstellen in den Ansichtsflächen der;5,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0080;Schadstellen in den Ansichtsflächen mit Steinersatzmasse;8,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0090;Schadstellen in den Ansichtsflächen mit Steinersatzmasse;1,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0100;Schadstellen, mangelhafte Mörtelergänzungen und;3,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0110;Vierungen, Bearbeitung: eben/glatt scharriert bzw. geschliffen;4,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0120;Vierungen, Bearbeitung: profiliert, rustiziert, in der Ansicht;1,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0130;Vierungen, Bearbeitung: profiliert, rustiziert, in der Ansicht;2,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0140;Vierungen, Bearbeitung: profiliert, rustiziert, in der Ansicht;4,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0150;Vierungen, Bearbeitung: profiliert, rustiziert, in der Ansicht;1,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0160;Vierungen, Bearbeitung: profiliert, rustiziert, in der Ansicht;1,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0170;Vierungen, Bearbeitung: profiliert, rustiziert, in der Ansicht;1,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0180;Vierungen, Bearbeitung: profiliert, rustiziert, in der Ansicht;1,0;Stk;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0190;Risse, offene Lager und Brüche in Sandsteinwerkstücken;0,8;m;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0200;Risse, offene Lager und Brüche in Sandsteinwerkstücken;0,5;m;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0210;Schadhafte Fugen bis auf den ungeschädigten Fugenmörtel;65,0;m;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0010;Liefern und einbauen von mehrteiligen;2,0;St;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0020;Liefern und einbauen von Gesimsabdeckungen 1.OG nach;22,0;m;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0030;Liefern und einbauen von Abdeckung Architravgesims DG;25,0;m;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0040;Zulage für den Mehraufwand und Verschnitt bei der;47,0;m;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0050;Liefern und einbauen von Abdeckungen der Balustraden;16,0;m;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0060;Liefern und einbauen von Abdeckungen der Balustraden;16,0;m;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0070;Zulage für den Mehraufwand und Verschnitt bei der;32,0;m;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0080;Liefern und einbauen von Abdeckungen der Halbkapitelle;6,0;St;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0090;Liefern und einbauen von Abdeckungen der Halbkapitelle;4,0;St;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0100;Zulage für den Mehraufwand für die Ausarbeitunge von;62,0;St;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0110;Herstellung von Dehnern in den Gesimsabdeckungen zum;6,0;St;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0120;Dauerelastische Verfugung der Dehnungsfugen an;120,0;m;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0010;Lohnstunden eines Vorarbeiters / Meisters für im LV nicht;5,0;h;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0020;Lohnstunden eines Restaurators für im LV nicht erfaßte;10,0;h;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0030;Lohnstunden eines Facharbeiters für im LV nicht erfaßte;15,0;h;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83
+0040;Lohnstunden eines Helfers für im LV nicht erfaßte;15,0;h;gaeb;leistungsbeschreibungen/OV-B-KIS-195-26_LV_VE59.2_Fassade-Naturstein_GAEB.X83

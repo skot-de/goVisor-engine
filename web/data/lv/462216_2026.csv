@@ -1,0 +1,61 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+0010;Die Bauleitung Baulogistik hat die im Baulogistikhandbuch definierten Regelungen und Leistungen sowie die nachfolgend aufgeführten Aufgaben zu koordinieren, zu überwachen und organisatorisch umzusetzen.;42,0;Mt;gaeb;leistungsbeschreibungen/26E10181 LV Stand 04_08_2026.X83
+0020;Leistungsinhalt wie zuvor beschrieben, jedoch in zusätzlicher Anwesenheit;10,0;St;gaeb;leistungsbeschreibungen/26E10181 LV Stand 04_08_2026.X83
+0030;Nach Abstimmung mit dem AG sind unter Berücksichtigung der vorliegenden Ergebnisse der Fachplanung Baulogistik, nachfolgend aufgelistete Aufgaben der beschriebenen Baumaßnahme im Zusammenhang mit den im Baulogistikhandbuch;42,0;Mt;gaeb;leistungsbeschreibungen/26E10181 LV Stand 04_08_2026.X83
+0040;Ab 101 eingesetzten Mitarbeitern auf der Baustelle ist seitens des Auftragnehmer Baulogistik  an allen Tagen während der Baustellenöffnungszeiten eine Person mit der Qualifikation eines Betriebssanitäters zu stellen.;25,0;Tag;gaeb;leistungsbeschreibungen/26E10181 LV Stand 04_08_2026.X83
+0010;Liefern und gebrauchsfertig montieren eines Drehkreuzcontainers, als Zutrittskontrollcontainers inkl. mindestens eines ausgestatteten Büroarbeitsplatz. Die Montage erfolgt betriebsbereit auf einer bauseits hergestellten ebenen und standfesten Fläche. Ein Niveauausgleich von bis zu 10 cm ist einzukal;1,0;St;gaeb;leistungsbeschreibungen/26E10181 LV Stand 04_08_2026.X83
+0020;Drehkreuzcontainer aus der Vorposition vorhalten und betriebstauglich unterhalten, inklusive aller notwendigen Prüfungs- und Wartungsarbeiten. Technische Anforderungen sind wie in der Vorposition auszuführen.;42,0;Mt;gaeb;leistungsbeschreibungen/26E10181 LV Stand 04_08_2026.X83
+0030;Umsetzen und gebrauchsfertig montieren des Drehkreuzcontainers sowie eines Zutrittskontrollcontainers. Die Montage erfolgt betriebsbereit auf einer bauseits hergestellten ebenen und standfesten Fläche. Ein Niveauausgleich von bis zu 10 cm ist einzukalkulieren.;1,0;St;gaeb;leistungsbeschreibungen/26E10181 LV Stand 04_08_2026.X83
+0040;Drehkreuz aus der Vorposition demontieren und abtransportieren.;1,0;St;gaeb;leistungsbeschreibungen/26E10181 LV Stand 04_08_2026.X83
+0050;Der Auftragnehmer (AN) hat sämtliche für die Durchführung der Zutrittskontrolle erforderliche EDV-Hardware und Software bereitzustellen, betriebsbereit an den Drehkreuzen zu installieren und während der gesamten Projektlaufzeit vorzuhalten.;42,0;Mt;gaeb;leistungsbeschreibungen/26E10181 LV Stand 04_08_2026.X83
+0060;Farbige Ausweise unter Berücksichtigung der Vorbemerkungen und nachfolgender Beschreibung liefern und vorhalten:;250,0;St;gaeb;leistungsbeschreibungen/26E10181 LV Stand 04_08_2026.X83
+0010;Vollelektronische Schrankenanlage inkl. Unterkriechschutz liefern und gebrauchsfertig;1,0;St;gaeb;leistungsbeschreibungen/26E10181 LV Stand 04_08_2026.X83
+0020;Schrankenlage aus der Vorposition innerhalb des Baufeldes umsetzen.;1,0;St;gaeb;leistungsbeschreibungen/26E10181 LV Stand 04_08_2026.X83
+0030;Die in der Vorposition beschriebene Schrankenanlage ist inklusive aller notwendigen Prüfungs- und Wartungsarbeiten innerhalb der gesamten Vorhaltungsdauer anzubieten.;42,0;StMt;gaeb;leistungsbeschreibungen/26E10181 LV Stand 04_08_2026.X83
+0040;Schrankenanlage der Vorposition demontieren und abtransportieren.;1,0;St;gaeb;leistungsbeschreibungen/26E10181 LV Stand 04_08_2026.X83
+0010;Bürocontaineranlage AG bestehend aus 2 Geschossen gemäß Vorbemerkungen und beigefügter Zeichnung liefern sowie standsicher und betriebsbereit montieren. Vor der;1,0;St;gaeb;leistungsbeschreibungen/26E10181 LV Stand 04_08_2026.X83
+0020;Bürocontaineranlage AG gemäß vorstehender Position über die gesamte Bauzeit vorhalten und betreiben. Zu berücksichtigen sind hierbei nachfolgend aufgezeigte;50,0;StMt;gaeb;leistungsbeschreibungen/26E10181 LV Stand 04_08_2026.X83
+0030;Bürocontaineranlage AG gemäß Hauptposition räumen und abtransportieren.;1,0;St;gaeb;leistungsbeschreibungen/26E10181 LV Stand 04_08_2026.X83
+0010;Winterbauheizung als Mietlösung bestehend aus;1,0;St;gaeb;leistungsbeschreibungen/26E10181 LV Stand 04_08_2026.X83
+0020;Vorhalten der vorbeschriebenen Winterbauheizung als Mietlösung;20,0;StWo;gaeb;leistungsbeschreibungen/26E10181 LV Stand 04_08_2026.X83
+0010;Anschluss an vorhandener PE Leitung, Anschluss an Außenzapfstelle;3,0;St;gaeb;leistungsbeschreibungen/26E10181 LV Stand 04_08_2026.X83
+0020;"Bestehend aus zwei Zapfventilen 3/4""mit Rohrbelüfter und Rückflussverhinderer gemäß DIN EN 1717.";3,0;St;gaeb;leistungsbeschreibungen/26E10181 LV Stand 04_08_2026.X83
+0030;Zur Zählung der entnommenen Wassermengen.;3,0;St;gaeb;leistungsbeschreibungen/26E10181 LV Stand 04_08_2026.X83
+0040;Schützt das Wassernetz vor Rückfließen, Rücksaugen und Rückdrücken von nicht-Trinkwasser.;3,0;St;gaeb;leistungsbeschreibungen/26E10181 LV Stand 04_08_2026.X83
+0050;Absperrorgan zur Zonenteilung einzelner Stränge.;3,0;St;gaeb;leistungsbeschreibungen/26E10181 LV Stand 04_08_2026.X83
+0060;Bei gewünschter Erdverlegung sind die Erdarbeiten bauseits zu erbringen.;50,0;m;gaeb;leistungsbeschreibungen/26E10181 LV Stand 04_08_2026.X83
+0070;Lefeirn, an Rohrleitung der Vorposition betriebsbereit zu installieren, abmontieren und entsorgen;50,0;m;gaeb;leistungsbeschreibungen/26E10181 LV Stand 04_08_2026.X83
+0080;Liefern und an Rohrleitung der Vorposition betriebsbereit zu installieren, abmontieren und entsorgen;3,0;St;gaeb;leistungsbeschreibungen/26E10181 LV Stand 04_08_2026.X83
+0090;Montage Zuleitung;30,0;m;gaeb;leistungsbeschreibungen/26E10181 LV Stand 04_08_2026.X83
+0100;Bauabwasserentsorgung;1,0;St;gaeb;leistungsbeschreibungen/26E10181 LV Stand 04_08_2026.X83
+0010;Teleskopstapler auf Anweisung des AG  gemäß nachfolgender Beschreibung liefern und in Betrieb nehmen.;1,0;St;gaeb;leistungsbeschreibungen/26E10181 LV Stand 04_08_2026.X83
+0020;Teleskopstapler gemäß vorstehender Position inklusive aller Unterhalts-, Betriebs-, Verbrauchs- und Materialkosten betriebsbereit vorhalten und betreiben.;22,0;StMt;gaeb;leistungsbeschreibungen/26E10181 LV Stand 04_08_2026.X83
+0030;Teleskopstapler gemäß Hauptposition räumen und abtransportieren.;1,0;St;gaeb;leistungsbeschreibungen/26E10181 LV Stand 04_08_2026.X83
+0010;Online-Avisierungssystem unter Berücksichtigung der Vorbemerkungen und nachfolgender Beschreibung im Zusammenhang mit den im Baulogistikhandbuch beschriebenen Leistungen betriebsbereit einrichten:;1,0;psch;gaeb;leistungsbeschreibungen/26E10181 LV Stand 04_08_2026.X83
+0020;Online-Avisierungssystem gemäß vorstehender Position vorhalten. Einzukalkulieren sind hierbei eventuelle Beratungen der Nutzer sowie notwendige Anpassungen des Systems an den Baufortschritt.;42,0;Mt;gaeb;leistungsbeschreibungen/26E10181 LV Stand 04_08_2026.X83
+0010;Einrichtung Wertstoffhof, Fläche, Umzäunung. Einrichten einer zentralen Sammelstelle in Form eines Wertstoffhofes als ebene trockene Fläche mit Umzäunung und Tor. Die Wege von den Aufzügen zum Wertstoffhof sind für die Nutzung durch die Rollbehälter aufzubereiten (ebene Schotterwege) und vorzuhalten;1,0;St;gaeb;leistungsbeschreibungen/26E10181 LV Stand 04_08_2026.X83
+0020;Wertstoffhof gemäß vorstehender Position betriebsbereit vorhalten und betreiben sowie einmal pro Woche Sichtkontrolle der Umzäunung auf Beschädigungen durch einen Mitarbeiter des AN Baulogistik aus dem Titel 1.;42,0;Mt;gaeb;leistungsbeschreibungen/26E10181 LV Stand 04_08_2026.X83
+0030;Wertstoffhof gemäß Hauptposition demontieren / räumen und abtransportieren.;1,0;St;gaeb;leistungsbeschreibungen/26E10181 LV Stand 04_08_2026.X83
+0040;AVV-Nr. 15 01 01;21,0;t;gaeb;leistungsbeschreibungen/26E10181 LV Stand 04_08_2026.X83
+0050;AVV-Nr. 15 01 02 Verpackungen aus Kunststoff (Folie;19,0;t;gaeb;leistungsbeschreibungen/26E10181 LV Stand 04_08_2026.X83
+0060;AVV-Nr. 17 02 03;7,0;t;gaeb;leistungsbeschreibungen/26E10181 LV Stand 04_08_2026.X83
+0070;AVV-Nr. 17 01 07 mit Ausnahme derjenigen,;87,0;t;gaeb;leistungsbeschreibungen/26E10181 LV Stand 04_08_2026.X83
+0080;entsprechend der Altholzkategorie A I bis A III;156,0;t;gaeb;leistungsbeschreibungen/26E10181 LV Stand 04_08_2026.X83
+0090;AVV-Nr. 17 03 02;7,0;t;gaeb;leistungsbeschreibungen/26E10181 LV Stand 04_08_2026.X83
+0100;AVV-Nr. 17 04 07;3,0;t;gaeb;leistungsbeschreibungen/26E10181 LV Stand 04_08_2026.X83
+0110;AVV-Nr. 17 06 04 mit Ausnahme desjenigen,;12,0;t;gaeb;leistungsbeschreibungen/26E10181 LV Stand 04_08_2026.X83
+0120;AVV-Nr. 17 08 02 mit Ausnahme derjenigen,;41,0;t;gaeb;leistungsbeschreibungen/26E10181 LV Stand 04_08_2026.X83
+0130;AVV-Nr. 17 09 04 mit Ausnahme derjenigen,;46,0;t;gaeb;leistungsbeschreibungen/26E10181 LV Stand 04_08_2026.X83
+0140;AVV-Nr. 20 03 01;4,0;t;gaeb;leistungsbeschreibungen/26E10181 LV Stand 04_08_2026.X83
+0150;Angabe der Transportkosten inklusive der An- und;64,0;St;gaeb;leistungsbeschreibungen/26E10181 LV Stand 04_08_2026.X83
+0160;Angabe der Transportkosten inklusive der An- und;62,0;St;gaeb;leistungsbeschreibungen/26E10181 LV Stand 04_08_2026.X83
+0170;Ordnungsgemäße Entsorgung des Kehrgutes entsprechend;5,0;t;gaeb;leistungsbeschreibungen/26E10181 LV Stand 04_08_2026.X83
+0010;Seitens des AN Baulogistik sind Rollbehäter 770 Liter (mit verschließbaren Deckeln sowie mit vier 360 Grad drehbaren Rollen, so dass ein Verfahren ermöglicht wird) in ausreichender Anzahl für unterschiedliche Abfallfraktionen zur Nutzung durch die Fachunternehmen bereitzustellen und zum Abschluss de;120,0;St;gaeb;leistungsbeschreibungen/26E10181 LV Stand 04_08_2026.X83
+0020;Vorhaltung der vorgenannten Entsorgungsbehälter, als;3720,0;StMt;gaeb;leistungsbeschreibungen/26E10181 LV Stand 04_08_2026.X83
+0010;Reinigung der Flucht- und Verkehrswege einschließlich der Treppenhäuser auf Anweisung der Objektüberwachung Baulogistik. Es erfolgt ein Mindestabruf von 300 m2.;10000,0;m²;gaeb;leistungsbeschreibungen/26E10181 LV Stand 04_08_2026.X83
+0010;Aufwand für die Nachsortierung eines Abfallrollbehälters aufgrund von Fehlbefüllungen eines;15,0;h;gaeb;leistungsbeschreibungen/26E10181 LV Stand 04_08_2026.X83
+0010;Operativer Baulogistiker gemäß Hauptposition, jedoch werktags von Mo. bis Fr. außerhalb der;50,0;Std;gaeb;leistungsbeschreibungen/26E10181 LV Stand 04_08_2026.X83
+0020;Operativer Baulogistiker gemäß Hauptposition, jedoch werktags von Mo. bis Fr. außerhalb der;25,0;Std;gaeb;leistungsbeschreibungen/26E10181 LV Stand 04_08_2026.X83
+0030;Monteurstunden für die Unterhaltung  der Bauwasserinstallation inkl. An- und Abfahrt.;10,0;Std;gaeb;leistungsbeschreibungen/26E10181 LV Stand 04_08_2026.X83
+0010;Die Bereitstellung und Lieferung von Heizöl im Zusammenhang mit der vorbeschriebenen Winterbaubeheizung und den mobilen Öl-Heizgeräten. Die Abrechnung der Heizölkosten hat auf Grundlage der zum Zeitpunkt der Anlieferung des Heizöls nachgewiesenen marktüblichen Preisen zu erfolgen. Das Bereitstellen ;45000,0;l;gaeb;leistungsbeschreibungen/26E10181 LV Stand 04_08_2026.X83
+0020;Die Handlungskosten, die dem AN entstehen sind hier in EUR pro Liter anzugeben.;45000,0;l;gaeb;leistungsbeschreibungen/26E10181 LV Stand 04_08_2026.X83

@@ -1,0 +1,387 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+1.1.10;Einrichten und Räumen der Baustelle;1,0;psch;gaeb-flat;260804_230910.D83
+1.1.20;Vorhalten und Unterhalten der Baustelle;12,0;Woch;gaeb-flat;260804_230910.D83
+1.1.30;Straßensäuberung;1,0;psch;gaeb-flat;260804_230910.D83
+1.1.40;Bauzaun (rot-weiß) aufst.u.beseitig.;60,0;m;gaeb-flat;260804_230910.D83
+1.1.50;Der AN hat eine Bauleistungsversicherung;1,0;psch;gaeb-flat;260804_230910.D83
+1.1.60;Bauablaufplan erstellen;1,0;psch;gaeb-flat;260804_230910.D83
+1.1.70;Koordinierung der Arbeiten;1,0;psch;gaeb-flat;260804_230910.D83
+1.2.10;Unterlagen zur Inbetriebnahme;1,0;psch;gaeb-flat;260804_230910.D83
+1.2.20;Inbetriebnahme;1,0;psch;gaeb-flat;260804_230910.D83
+1.3.10;Zustandsdokumentation;2,0;St;gaeb-flat;260804_230910.D83
+1.3.20;Baubegleitende Vermessungsleistungen Bestandspläne;1,0;psch;gaeb-flat;260804_230910.D83
+1.3.30;Wartungspläne, Betriebsmittel-, Verschleiß- und Ersatzteillisten;1,0;psch;gaeb-flat;260804_230910.D83
+1.3.40;Bestandsdokumentation Gesamtanlage;1,0;psch;gaeb-flat;260804_230910.D83
+1.4.10;Kennzeichnungsschild;4,0;St;gaeb-flat;260804_230910.D83
+1.4.20;Beschilderung;10,0;St;gaeb-flat;260804_230910.D83
+1.4.30;Fließpfeile;8,0;St;gaeb-flat;260804_230910.D83
+1.5.10;Abbruch Pflasterfläche;30,0;m2;gaeb-flat;260804_230910.D83
+1.5.20;Abbruch Betonborde;35,0;m;gaeb-flat;260804_230910.D83
+1.5.30;Abbruch Treppe bis 14 Stufen;1,0;psch;gaeb-flat;260804_230910.D83
+1.5.40;Abbruch Treppe bis 4 Stufen;1,0;psch;gaeb-flat;260804_230910.D83
+1.6.10;Boden für Baugrube Kalkmilchbehälter ausheben;40,0;m3;gaeb-flat;260804_230910.D83
+1.6.15;Kabelgraben unter Fundament;2,0;m3;gaeb-flat;260804_230910.D83
+1.6.20;Fundament hinterfüllen, verdichten;5,0;m3;gaeb-flat;260804_230910.D83
+1.6.30;Baugrubensohle verdichten BK3-5;22,0;m2;gaeb-flat;260804_230910.D83
+1.6.40;Abnahme Baugrubensohle durch BG-Gutachter;1,0;psch;gaeb-flat;260804_230910.D83
+1.6.50;Mineralgemisch 0/45, 25 cm;5,0;m3;gaeb-flat;260804_230910.D83
+1.6.60;Unbewehrten Beton  C12/15 liefern und einbauen;22,0;m2;gaeb-flat;260804_230910.D83
+1.6.70;Gleitfolie;22,0;m2;gaeb-flat;260804_230910.D83
+1.6.80;Statik Silofundament;1,0;psch;gaeb-flat;260804_230910.D83
+1.6.90;Silofundament;26,0;m3;gaeb-flat;260804_230910.D83
+1.6.100;Betonstahl entsprechend statischen;5,5;t;gaeb-flat;260804_230910.D83
+1.6.110;Grabenaushub Bkl. 3-5, T bis 1,60 m, SB bis 2,0 m Parallelverlegung;100,0;m3;gaeb-flat;260804_230910.D83
+1.6.120;Grabenaushub Bkl. 3-5, T bis 1,60 m, SB bis 1,0 m TW;25,0;m3;gaeb-flat;260804_230910.D83
+1.6.130;Grabenaushub Bkl. 3-5, T bis 0,8 m, SB bis 1,00 m Leerrohre;10,0;m3;gaeb-flat;260804_230910.D83
+1.6.140;Grabenaushub Bkl. 3-5, T bis 0,75 m, SB bis 1,00 m Grundleitung;12,0;m3;gaeb-flat;260804_230910.D83
+1.6.150;Grabenaushub Bkl. 3-5, T bis 0,75 m, SB bis 1,00 m Kalkmilchleitung;10,0;m3;gaeb-flat;260804_230910.D83
+1.6.160;Grabenaushub Hand;20,0;m3;gaeb-flat;260804_230910.D83
+1.6.170;Liefern 'Sand für Sauberkeitschicht ';20,0;m3;gaeb-flat;260804_230910.D83
+1.6.180;Liefern 'Sand für Austausch in der Rohrleitungszone ';60,0;m3;gaeb-flat;260804_230910.D83
+1.6.190;Liefern Gut verdichtbarer nichtbindiger Erdstoff für Austausch oberhalb der Rohrleitungszone;30,0;m3;gaeb-flat;260804_230910.D83
+1.6.200;Gelagerten Boden vom Bereitstellungslager des AN laden, fördern,;55,0;m3;gaeb-flat;260804_230910.D83
+1.7.10;Verbau bis 1,60 m, Sohlbreite bis 2,00 m;150,0;m2;gaeb-flat;260804_230910.D83
+1.8.10;Offene Wasserhaltung für den Rohrgraben;45,0;m;gaeb-flat;260804_230910.D83
+1.9.10;Kernbohrung Durchmesser 125 mm, Länge bis 350 mm;1,0;St;gaeb-flat;260804_230910.D83
+1.9.20;Kernbohrung Durchmesser 200 mm, Länge bis 350 mm;1,0;St;gaeb-flat;260804_230910.D83
+1.9.30;Kernbohrung Durchmesser 250 mm, Länge bis 350 mm;3,0;St;gaeb-flat;260804_230910.D83
+1.9.40;PVC U-Rohr, DN 150;12,0;m;gaeb-flat;260804_230910.D83
+1.9.50;Druckrohr aus PE 100 RC, SDR 11, d 32, liefern und verlegen;30,0;m;gaeb-flat;260804_230910.D83
+1.9.60;Bogen 45 Grad DN 150;2,0;St;gaeb-flat;260804_230910.D83
+1.9.70;Bogen 87,5 Grad DN 150;1,0;St;gaeb-flat;260804_230910.D83
+1.9.80;Ringraumdichtung für Rohr aus Rohr aus PVC DN 150;2,0;St;gaeb-flat;260804_230910.D83
+1.9.90;Rohrmarkierung;12,0;m;gaeb-flat;260804_230910.D83
+1.9.100;Entwässerungskanal PP homogen DN 150 SN10;15,0;m;gaeb-flat;260804_230910.D83
+1.9.110;PP-Reduzierung KGR DN150 DN100;1,0;St;gaeb-flat;260804_230910.D83
+1.9.120;Ringraumdichtung für PP-Rohr DN 150 SN 10;2,0;St;gaeb-flat;260804_230910.D83
+1.9.130;Rohrmarkierung;15,0;m;gaeb-flat;260804_230910.D83
+1.9.140;Bodenablauf;1,0;St;gaeb-flat;260804_230910.D83
+1.9.150;Druckrohr aus PE 100 RC, SDR 11, d 50, liefern und verlegen;45,0;m;gaeb-flat;260804_230910.D83
+1.9.160;Formstueck PE-Rohr Muffe d 50;25,0;St;gaeb-flat;260804_230910.D83
+1.9.170;Formstueck PE-Rohr Muffe d 32;2,0;St;gaeb-flat;260804_230910.D83
+1.9.180;Winkel 90° d 50 SDR 11;5,0;St;gaeb-flat;260804_230910.D83
+1.9.190;Winkel 45° d 50 SDR 11;2,0;St;gaeb-flat;260804_230910.D83
+1.9.200;Winkel 30° d 50 SDR 11;2,0;St;gaeb-flat;260804_230910.D83
+1.9.210;PE Reduzierung d 50/d 32 SDR 11;1,0;St;gaeb-flat;260804_230910.D83
+1.9.220;"PE- Schweißübergangsstutzen d 50 x G 1 1/2"" AG";1,0;St;gaeb-flat;260804_230910.D83
+1.9.230;"PE- Schweißübergangsstutzen d 50 x G 1 1/2"" IG";1,0;St;gaeb-flat;260804_230910.D83
+1.9.240;PE T-Stück d 50/d 50 SDR 11;1,0;St;gaeb-flat;260804_230910.D83
+1.9.250;Übergangsstück Storz;1,0;St;gaeb-flat;260804_230910.D83
+1.9.260;Blindkupplung Storz;1,0;St;gaeb-flat;260804_230910.D83
+1.9.270;"Kugelhahn 1,5"" AG/IG, aus Edelstahl mit Handhebel";1,0;St;gaeb-flat;260804_230910.D83
+1.9.280;Rohrhalterung, Edelstahl 1.4571, f. Wandmontage, d 50;5,0;St;gaeb-flat;260804_230910.D83
+1.9.290;Ringraumdichtung für Rohr aus PE 100 SDR 11 d 50;2,0;St;gaeb-flat;260804_230910.D83
+1.9.300;Rohrmarkierung;35,0;m;gaeb-flat;260804_230910.D83
+1.9.310;Druckprüfung für Rohr PE 100 SDR 11 d 50;1,0;St;gaeb-flat;260804_230910.D83
+1.9.320;PVC-Schutzrohr DN 125 SN10;2,0;m;gaeb-flat;260804_230910.D83
+1.9.330;Kabelschutzrohre NW 160,;80,0;m;gaeb-flat;260804_230910.D83
+1.9.340;Warnband, 40 mm breit, Farbe gelb,;80,0;m;gaeb-flat;260804_230910.D83
+1.9.350;Ringraumdichtung für Kabelschutzrohr NW 160 KB 250;2,0;St;gaeb-flat;260804_230910.D83
+1.9.360;Ringraumdichtung für Mehrfachkabel in Kabelschutzrohr;4,0;St;gaeb-flat;260804_230910.D83
+110.10;Stahl-Silo 77 m³;1,0;St;gaeb-flat;260804_230910.D83
+110.20;Silo Austrags- und Dosiereinheit;1,0;St;gaeb-flat;260804_230910.D83
+110.30;Kalk- Injektor;1,0;St;gaeb-flat;260804_230910.D83
+110.40;Kalkmilch-Ansetzbehälter;1,0;St;gaeb-flat;260804_230910.D83
+111.10;Untergrundvorbehandlung;10,0;m2;gaeb-flat;260804_230910.D83
+111.20;Untergrundvorbereitung, Strahlen,Estrich;10,0;m2;gaeb-flat;260804_230910.D83
+111.30;Haftbrücke für Estrich;10,0;m2;gaeb-flat;260804_230910.D83
+111.40;Zementestrich C50 F6;10,0;m2;gaeb-flat;260804_230910.D83
+111.50;Zulage Mehrdicke;10,0;m2;gaeb-flat;260804_230910.D83
+112.10;Grundierung;10,0;m2;gaeb-flat;260804_230910.D83
+112.20;Untergr.abdichten 'Streichisolierung;10,0;m2;gaeb-flat;260804_230910.D83
+112.30;Bodenbelag Dünnbett;10,0;m2;gaeb-flat;260804_230910.D83
+112.40;Verfugung/Silikon, dauerelastisch, innen;20,0;m;gaeb-flat;260804_230910.D83
+113.10;Gelände abräumen;30,0;m2;gaeb-flat;260804_230910.D83
+113.20;Bodendecker roden;5,0;m2;gaeb-flat;260804_230910.D83
+113.30;Teppichmispel / Kriechmispel 'Jürgl' (Cotoneaster dammeri 'Jürgl') liefern;30,0;St;gaeb-flat;260804_230910.D83
+113.40;Gehölz pflanzen;30,0;St;gaeb-flat;260804_230910.D83
+113.50;Mulchen;5,0;m2;gaeb-flat;260804_230910.D83
+113.60;Sträucher pflegen;20,0;m2;gaeb-flat;260804_230910.D83
+113.70;Wasser an Gehölze giessen;40,0;m2;gaeb-flat;260804_230910.D83
+113.80;Grasnarbe vor Mutterbodenabtrag zerkleinern;30,0;m2;gaeb-flat;260804_230910.D83
+113.90;Oberboden abtragen und lagern;6,0;m3;gaeb-flat;260804_230910.D83
+113.100;Oberboden  andecken;3,0;m3;gaeb-flat;260804_230910.D83
+113.110;Nicht wiederverwendbaren Oberboden der Verwertung zuführen;3,0;m3;gaeb-flat;260804_230910.D83
+113.120;Oberboden Bkl.1 DIN 18300 liefern;3,0;m3;gaeb-flat;260804_230910.D83
+113.130;Rasenansaat,Landschaftsr.A;30,0;m2;gaeb-flat;260804_230910.D83
+113.140;Planum herstellen;35,0;m2;gaeb-flat;260804_230910.D83
+113.150;Frostschutzschicht herstellen 0/45,  mind. EV2 80 MPa;10,0;m3;gaeb-flat;260804_230910.D83
+113.160;Betonsteinpflasterdecke herstellen St.100/200/10/F*Beton ungefärbt;35,0;m2;gaeb-flat;260804_230910.D83
+113.170;Bordsteine aus Beton setzen, Tiefbord 8 x 25;40,0;m;gaeb-flat;260804_230910.D83
+113.180;Bordsteine aus Beton setzen, Hochbord 150 x 300;5,0;m;gaeb-flat;260804_230910.D83
+113.190;Betonpflaster verschiedener Formate aufbrech D 8 cm;50,0;m2;gaeb-flat;260804_230910.D83
+113.200;"Frostschutzschicht herstellen 0/45, 80 MPa; 28 cm";15,0;m3;gaeb-flat;260804_230910.D83
+113.210;Betonpflaster  verschiedener Formate aus Aufbruch;50,0;m2;gaeb-flat;260804_230910.D83
+113.220;Zulage 'Ersatzlieferung Pflastersteine';10,0;m2;gaeb-flat;260804_230910.D83
+113.230;Treppenanlage Breite 1,00 m, Höhe 2,16 m;1,0;St;gaeb-flat;260804_230910.D83
+113.240;Treppenanlage Breite 1,00 m, Höhe 0,54 m;1,0;St;gaeb-flat;260804_230910.D83
+114.10;Notwendige Beprobungen und Analysen, Boden gem. EBV;1,0;St;gaeb-flat;260804_230910.D83
+114.20;Notwendige Beprobungen und Analysen, Boden gem. LAGA;1,0;St;gaeb-flat;260804_230910.D83
+114.30;Chemische Analyse von Erdstoffen auf;1,0;St;gaeb-flat;260804_230910.D83
+114.40;Geladenen Boden bis Z 1.2 -Material;250,0;t;gaeb-flat;260804_230910.D83
+114.50;ASN 17 05 04 - Boden und Steine, bis Z 1.2;250,0;t;gaeb-flat;260804_230910.D83
+114.60;ASN 17 05 04 - Oberboden,;5,0;t;gaeb-flat;260804_230910.D83
+114.70;"ASN 20 02 01 - kompostierbare Abfälle;";1,0;t;gaeb-flat;260804_230910.D83
+115.10;Verrechnungssatz fuer Arbeitskraft Polier;10,0;h;gaeb-flat;260804_230910.D83
+115.20;Verrechnungssatz fuer Arbeitskraft BFA;10,0;h;gaeb-flat;260804_230910.D83
+115.30;Verrechnungssatz fuer Arbeitskraft Bauwerker;10,0;h;gaeb-flat;260804_230910.D83
+2.1.10;NSV inkl. Steuerung Bekalkungsanlage;1,0;psch;gaeb-flat;260804_230910.D83
+2.1.20;Schaltplan;1,0;St;gaeb-flat;260804_230910.D83
+2.1.30;LWL Box;1,0;St;gaeb-flat;260804_230910.D83
+2.1.40;Scalance XC206-2SFP;1,0;St;gaeb-flat;260804_230910.D83
+2.1.50;LWL-SFB;1,0;St;gaeb-flat;260804_230910.D83
+2.1.60;LWL-Kabel;40,0;m;gaeb-flat;260804_230910.D83
+2.1.70;Messprotokoll LWL Kabel;1,0;St;gaeb-flat;260804_230910.D83
+2.1.80;Spleißen;2,0;St;gaeb-flat;260804_230910.D83
+2.1.90;LWL Patchkabelsatz hybrid;2,0;St;gaeb-flat;260804_230910.D83
+2.1.100;Patchkabel 1 m;2,0;St;gaeb-flat;260804_230910.D83
+2.1.110;Patchkabel 3 m;1,0;St;gaeb-flat;260804_230910.D83
+2.1.120;Abgang 400 VAC;1,0;St;gaeb-flat;260804_230910.D83
+2.1.130;Abgang 230VAC;1,0;St;gaeb-flat;260804_230910.D83
+2.1.140;Wandgehäuse mit Tür;1,0;St;gaeb-flat;260804_230910.D83
+2.1.150;LWL Box;1,0;St;gaeb-flat;260804_230910.D83
+2.1.160;LWL-SFB;1,0;St;gaeb-flat;260804_230910.D83
+2.1.170;Scalance XC206-2SFP;1,0;St;gaeb-flat;260804_230910.D83
+2.1.180;Patchkabel bis 10 m;1,0;St;gaeb-flat;260804_230910.D83
+2.1.190;Netzgerät 24 V, DC;1,0;St;gaeb-flat;260804_230910.D83
+2.2.10;Öffnen und Schließen Kabelabschottung;2,0;St;gaeb-flat;260804_230910.D83
+2.3.10;Gummi-Press-Dichtung GPD 125;2,0;St;gaeb-flat;260804_230910.D83
+2.3.20;Schutzrohrabdichtung;2,0;St;gaeb-flat;260804_230910.D83
+2.4.10;Montagepläne;1,0;psch;gaeb-flat;260804_230910.D83
+2.4.20;HVI Leitung im Stützrohr mit Fangspitze Farbe grau;18,0;m;gaeb-flat;260804_230910.D83
+2.4.30;Halter für Fangstangen D40;2,0;St;gaeb-flat;260804_230910.D83
+2.4.40;Halter für HVI-Leitung;2,0;St;gaeb-flat;260804_230910.D83
+2.4.50;UNI-Trennklemme (200 kA);1,0;St;gaeb-flat;260804_230910.D83
+2.4.60;Edelstahlrunddraht (Ringerder);60,0;m;gaeb-flat;260804_230910.D83
+2.4.70;Verbinder;5,0;St;gaeb-flat;260804_230910.D83
+2.4.80;Verbinder K;5,0;St;gaeb-flat;260804_230910.D83
+2.4.90;Überbrückungsseil 50;10,0;St;gaeb-flat;260804_230910.D83
+2.4.100;Trennfunkenstrecke;1,0;St;gaeb-flat;260804_230910.D83
+2.4.110;Potentialausgleichsleitung;10,0;m;gaeb-flat;260804_230910.D83
+2.4.120;Potentialausgleichsleitung;30,0;m;gaeb-flat;260804_230910.D83
+2.4.130;Potentialschiene;1,0;St;gaeb-flat;260804_230910.D83
+2.4.140;Messen/Prüfen;1,0;St;gaeb-flat;260804_230910.D83
+2.5.10;Beleuchtungsanlage Bekalkungsanlage;1,0;psch;gaeb-flat;260804_230910.D83
+2.6.10;Isolierstoffrohr, PVC NG 29;10,0;m;gaeb-flat;260804_230910.D83
+2.6.20;Isolierstoffrohr, PVC NG 16;10,0;m;gaeb-flat;260804_230910.D83
+2.6.30;Isolierstoffrohr, PVC NG 21;10,0;m;gaeb-flat;260804_230910.D83
+2.6.40;Profilstahl;10,0;kg;gaeb-flat;260804_230910.D83
+2.6.50;Profilstahl;10,0;kg;gaeb-flat;260804_230910.D83
+2.6.60;Leitungsschutzschalter B, 16 A 1-polig;1,0;St;gaeb-flat;260804_230910.D83
+2.6.70;Fehlerstromschutzschalter 2/25A/30 mA;1,0;St;gaeb-flat;260804_230910.D83
+2.6.80;Steckdose, AP;3,0;St;gaeb-flat;260804_230910.D83
+2.6.90;Abzweigdose, AP;3,0;St;gaeb-flat;260804_230910.D83
+2.6.100;Install.schalter, AP;1,0;St;gaeb-flat;260804_230910.D83
+2.6.110;Frostschutzheizung;2,0;St;gaeb-flat;260804_230910.D83
+2.7.10;Kabelkennzeichnungssystem;1,0;psch;gaeb-flat;260804_230910.D83
+2.7.20;Verkabelung für Bekalkungsanlage;1,0;psch;gaeb-flat;260804_230910.D83
+2.7.30;NYY-J,  5x10;45,0;m;gaeb-flat;260804_230910.D83
+2.7.40;NYY-J,  3x1,5;30,0;m;gaeb-flat;260804_230910.D83
+2.8.10;Einpflege Prozessvariable in PLS;200,0;St;gaeb-flat;260804_230910.D83
+2.8.20;Inbetriebnahme Datenübertragung;1,0;psch;gaeb-flat;260804_230910.D83
+2.8.30;Prozessbilder;4,0;St;gaeb-flat;260804_230910.D83
+2.9.10;Technische Bearbeitung;1,0;psch;gaeb-flat;260804_230910.D83
+2.9.20;Schaltschrankunterlagen;1,0;psch;gaeb-flat;260804_230910.D83
+2.9.30;Dokumentation Kabelanlage;1,0;psch;gaeb-flat;260804_230910.D83
+2.9.40;Pflichtenheft;1,0;psch;gaeb-flat;260804_230910.D83
+2.9.50;Einweisung;1,0;psch;gaeb-flat;260804_230910.D83
+2.9.60;Messen/Prüfen;1,0;St;gaeb-flat;260804_230910.D83
+2.9.70;Inbetriebnahmeleistungen / Funktionsprüfungen;1,0;psch;gaeb-flat;260804_230910.D83
+2.9.80;Abnahme;1,0;psch;gaeb-flat;260804_230910.D83
+2.9.90;Baustelleneinrichtung;1,0;psch;gaeb-flat;260804_230910.D83
+2.9.100;Beschilderung;1,0;psch;gaeb-flat;260804_230910.D83
+2.9.110;Schilder;15,0;St;gaeb-flat;260804_230910.D83
+2.9.120;Halterung;15,0;St;gaeb-flat;260804_230910.D83
+1.1.10;Einrichten und Räumen der Baustelle;1,0;psch;gaeb-flat;230910.D83
+1.1.20;Vorhalten und Unterhalten der Baustelle;12,0;Woch;gaeb-flat;230910.D83
+1.1.30;Straßensäuberung;1,0;psch;gaeb-flat;230910.D83
+1.1.40;Bauzaun (rot-weiß) aufst.u.beseitig.;60,0;m;gaeb-flat;230910.D83
+1.1.50;Der AN hat eine Bauleistungsversicherung;1,0;psch;gaeb-flat;230910.D83
+1.1.60;Bauablaufplan erstellen;1,0;psch;gaeb-flat;230910.D83
+1.1.70;Koordinierung der Arbeiten;1,0;psch;gaeb-flat;230910.D83
+1.2.10;Unterlagen zur Inbetriebnahme;1,0;psch;gaeb-flat;230910.D83
+1.2.20;Inbetriebnahme;1,0;psch;gaeb-flat;230910.D83
+1.3.10;Zustandsdokumentation;2,0;St;gaeb-flat;230910.D83
+1.3.20;Baubegleitende Vermessungsleistungen Bestandspläne;1,0;psch;gaeb-flat;230910.D83
+1.3.30;Wartungspläne, Betriebsmittel-, Verschleiß- und Ersatzteillisten;1,0;psch;gaeb-flat;230910.D83
+1.3.40;Bestandsdokumentation Gesamtanlage;1,0;psch;gaeb-flat;230910.D83
+1.4.10;Kennzeichnungsschild;4,0;St;gaeb-flat;230910.D83
+1.4.20;Beschilderung;10,0;St;gaeb-flat;230910.D83
+1.4.30;Fließpfeile;8,0;St;gaeb-flat;230910.D83
+1.5.10;Abbruch Pflasterfläche;30,0;m2;gaeb-flat;230910.D83
+1.5.20;Abbruch Betonborde;35,0;m;gaeb-flat;230910.D83
+1.5.30;Abbruch Treppe bis 14 Stufen;1,0;psch;gaeb-flat;230910.D83
+1.5.40;Abbruch Treppe bis 4 Stufen;1,0;psch;gaeb-flat;230910.D83
+1.6.10;Boden für Baugrube Kalkmilchbehälter ausheben;40,0;m3;gaeb-flat;230910.D83
+1.6.15;Kabelgraben unter Fundament;2,0;m3;gaeb-flat;230910.D83
+1.6.20;Fundament hinterfüllen, verdichten;5,0;m3;gaeb-flat;230910.D83
+1.6.30;Baugrubensohle verdichten BK3-5;22,0;m2;gaeb-flat;230910.D83
+1.6.40;Abnahme Baugrubensohle durch BG-Gutachter;1,0;psch;gaeb-flat;230910.D83
+1.6.50;Mineralgemisch 0/45, 25 cm;5,0;m3;gaeb-flat;230910.D83
+1.6.60;Unbewehrten Beton  C12/15 liefern und einbauen;22,0;m2;gaeb-flat;230910.D83
+1.6.70;Gleitfolie;22,0;m2;gaeb-flat;230910.D83
+1.6.80;Statik Silofundament;1,0;psch;gaeb-flat;230910.D83
+1.6.90;Silofundament;26,0;m3;gaeb-flat;230910.D83
+1.6.100;Betonstahl entsprechend statischen;5,5;t;gaeb-flat;230910.D83
+1.6.110;Grabenaushub Bkl. 3-5, T bis 1,60 m, SB bis 2,0 m Parallelverlegung;100,0;m3;gaeb-flat;230910.D83
+1.6.120;Grabenaushub Bkl. 3-5, T bis 1,60 m, SB bis 1,0 m TW;25,0;m3;gaeb-flat;230910.D83
+1.6.130;Grabenaushub Bkl. 3-5, T bis 0,8 m, SB bis 1,00 m Leerrohre;10,0;m3;gaeb-flat;230910.D83
+1.6.140;Grabenaushub Bkl. 3-5, T bis 0,75 m, SB bis 1,00 m Grundleitung;12,0;m3;gaeb-flat;230910.D83
+1.6.150;Grabenaushub Bkl. 3-5, T bis 0,75 m, SB bis 1,00 m Kalkmilchleitung;10,0;m3;gaeb-flat;230910.D83
+1.6.160;Grabenaushub Hand;20,0;m3;gaeb-flat;230910.D83
+1.6.170;Liefern 'Sand für Sauberkeitschicht ';20,0;m3;gaeb-flat;230910.D83
+1.6.180;Liefern 'Sand für Austausch in der Rohrleitungszone ';60,0;m3;gaeb-flat;230910.D83
+1.6.190;Liefern Gut verdichtbarer nichtbindiger Erdstoff für Austausch oberhalb der Rohrleitungszone;30,0;m3;gaeb-flat;230910.D83
+1.6.200;Gelagerten Boden vom Bereitstellungslager des AN laden, fördern,;55,0;m3;gaeb-flat;230910.D83
+1.7.10;Verbau bis 1,60 m, Sohlbreite bis 2,00 m;150,0;m2;gaeb-flat;230910.D83
+1.8.10;Offene Wasserhaltung für den Rohrgraben;45,0;m;gaeb-flat;230910.D83
+1.9.10;Kernbohrung Durchmesser 125 mm, Länge bis 350 mm;1,0;St;gaeb-flat;230910.D83
+1.9.20;Kernbohrung Durchmesser 200 mm, Länge bis 350 mm;1,0;St;gaeb-flat;230910.D83
+1.9.30;Kernbohrung Durchmesser 250 mm, Länge bis 350 mm;3,0;St;gaeb-flat;230910.D83
+1.9.40;PVC U-Rohr, DN 150;12,0;m;gaeb-flat;230910.D83
+1.9.50;Druckrohr aus PE 100 RC, SDR 11, d 32, liefern und verlegen;30,0;m;gaeb-flat;230910.D83
+1.9.60;Bogen 45 Grad DN 150;2,0;St;gaeb-flat;230910.D83
+1.9.70;Bogen 87,5 Grad DN 150;1,0;St;gaeb-flat;230910.D83
+1.9.80;Ringraumdichtung für Rohr aus Rohr aus PVC DN 150;2,0;St;gaeb-flat;230910.D83
+1.9.90;Rohrmarkierung;12,0;m;gaeb-flat;230910.D83
+1.9.100;Entwässerungskanal PP homogen DN 150 SN10;15,0;m;gaeb-flat;230910.D83
+1.9.110;PP-Reduzierung KGR DN150 DN100;1,0;St;gaeb-flat;230910.D83
+1.9.120;Ringraumdichtung für PP-Rohr DN 150 SN 10;2,0;St;gaeb-flat;230910.D83
+1.9.130;Rohrmarkierung;15,0;m;gaeb-flat;230910.D83
+1.9.140;Bodenablauf;1,0;St;gaeb-flat;230910.D83
+1.9.150;Druckrohr aus PE 100 RC, SDR 11, d 50, liefern und verlegen;45,0;m;gaeb-flat;230910.D83
+1.9.160;Formstueck PE-Rohr Muffe d 50;25,0;St;gaeb-flat;230910.D83
+1.9.170;Formstueck PE-Rohr Muffe d 32;2,0;St;gaeb-flat;230910.D83
+1.9.180;Winkel 90° d 50 SDR 11;5,0;St;gaeb-flat;230910.D83
+1.9.190;Winkel 45° d 50 SDR 11;2,0;St;gaeb-flat;230910.D83
+1.9.200;Winkel 30° d 50 SDR 11;2,0;St;gaeb-flat;230910.D83
+1.9.210;PE Reduzierung d 50/d 32 SDR 11;1,0;St;gaeb-flat;230910.D83
+1.9.220;"PE- Schweißübergangsstutzen d 50 x G 1 1/2"" AG";1,0;St;gaeb-flat;230910.D83
+1.9.230;"PE- Schweißübergangsstutzen d 50 x G 1 1/2"" IG";1,0;St;gaeb-flat;230910.D83
+1.9.240;PE T-Stück d 50/d 50 SDR 11;1,0;St;gaeb-flat;230910.D83
+1.9.250;Übergangsstück Storz;1,0;St;gaeb-flat;230910.D83
+1.9.260;Blindkupplung Storz;1,0;St;gaeb-flat;230910.D83
+1.9.270;"Kugelhahn 1,5"" AG/IG, aus Edelstahl mit Handhebel";1,0;St;gaeb-flat;230910.D83
+1.9.280;Rohrhalterung, Edelstahl 1.4571, f. Wandmontage, d 50;5,0;St;gaeb-flat;230910.D83
+1.9.290;Ringraumdichtung für Rohr aus PE 100 SDR 11 d 50;2,0;St;gaeb-flat;230910.D83
+1.9.300;Rohrmarkierung;35,0;m;gaeb-flat;230910.D83
+1.9.310;Druckprüfung für Rohr PE 100 SDR 11 d 50;1,0;St;gaeb-flat;230910.D83
+1.9.320;PVC-Schutzrohr DN 125 SN10;2,0;m;gaeb-flat;230910.D83
+1.9.330;Kabelschutzrohre NW 160,;80,0;m;gaeb-flat;230910.D83
+1.9.340;Warnband, 40 mm breit, Farbe gelb,;80,0;m;gaeb-flat;230910.D83
+1.9.350;Ringraumdichtung für Kabelschutzrohr NW 160 KB 250;2,0;St;gaeb-flat;230910.D83
+1.9.360;Ringraumdichtung für Mehrfachkabel in Kabelschutzrohr;4,0;St;gaeb-flat;230910.D83
+110.10;Stahl-Silo 77 m³;1,0;St;gaeb-flat;230910.D83
+110.20;Silo Austrags- und Dosiereinheit;1,0;St;gaeb-flat;230910.D83
+110.30;Kalk- Injektor;1,0;St;gaeb-flat;230910.D83
+110.40;Kalkmilch-Ansetzbehälter;1,0;St;gaeb-flat;230910.D83
+111.10;Untergrundvorbehandlung;10,0;m2;gaeb-flat;230910.D83
+111.20;Untergrundvorbereitung, Strahlen,Estrich;10,0;m2;gaeb-flat;230910.D83
+111.30;Haftbrücke für Estrich;10,0;m2;gaeb-flat;230910.D83
+111.40;Zementestrich C50 F6;10,0;m2;gaeb-flat;230910.D83
+111.50;Zulage Mehrdicke;10,0;m2;gaeb-flat;230910.D83
+112.10;Grundierung;10,0;m2;gaeb-flat;230910.D83
+112.20;Untergr.abdichten 'Streichisolierung;10,0;m2;gaeb-flat;230910.D83
+112.30;Bodenbelag Dünnbett;10,0;m2;gaeb-flat;230910.D83
+112.40;Verfugung/Silikon, dauerelastisch, innen;20,0;m;gaeb-flat;230910.D83
+113.10;Gelände abräumen;30,0;m2;gaeb-flat;230910.D83
+113.20;Bodendecker roden;5,0;m2;gaeb-flat;230910.D83
+113.30;Teppichmispel / Kriechmispel 'Jürgl' (Cotoneaster dammeri 'Jürgl') liefern;30,0;St;gaeb-flat;230910.D83
+113.40;Gehölz pflanzen;30,0;St;gaeb-flat;230910.D83
+113.50;Mulchen;5,0;m2;gaeb-flat;230910.D83
+113.60;Sträucher pflegen;20,0;m2;gaeb-flat;230910.D83
+113.70;Wasser an Gehölze giessen;40,0;m2;gaeb-flat;230910.D83
+113.80;Grasnarbe vor Mutterbodenabtrag zerkleinern;30,0;m2;gaeb-flat;230910.D83
+113.90;Oberboden abtragen und lagern;6,0;m3;gaeb-flat;230910.D83
+113.100;Oberboden  andecken;3,0;m3;gaeb-flat;230910.D83
+113.110;Nicht wiederverwendbaren Oberboden der Verwertung zuführen;3,0;m3;gaeb-flat;230910.D83
+113.120;Oberboden Bkl.1 DIN 18300 liefern;3,0;m3;gaeb-flat;230910.D83
+113.130;Rasenansaat,Landschaftsr.A;30,0;m2;gaeb-flat;230910.D83
+113.140;Planum herstellen;35,0;m2;gaeb-flat;230910.D83
+113.150;Frostschutzschicht herstellen 0/45,  mind. EV2 80 MPa;10,0;m3;gaeb-flat;230910.D83
+113.160;Betonsteinpflasterdecke herstellen St.100/200/10/F*Beton ungefärbt;35,0;m2;gaeb-flat;230910.D83
+113.170;Bordsteine aus Beton setzen, Tiefbord 8 x 25;40,0;m;gaeb-flat;230910.D83
+113.180;Bordsteine aus Beton setzen, Hochbord 150 x 300;5,0;m;gaeb-flat;230910.D83
+113.190;Betonpflaster verschiedener Formate aufbrech D 8 cm;50,0;m2;gaeb-flat;230910.D83
+113.200;"Frostschutzschicht herstellen 0/45, 80 MPa; 28 cm";15,0;m3;gaeb-flat;230910.D83
+113.210;Betonpflaster  verschiedener Formate aus Aufbruch;50,0;m2;gaeb-flat;230910.D83
+113.220;Zulage 'Ersatzlieferung Pflastersteine';10,0;m2;gaeb-flat;230910.D83
+113.230;Treppenanlage Breite 1,00 m, Höhe 2,16 m;1,0;St;gaeb-flat;230910.D83
+113.240;Treppenanlage Breite 1,00 m, Höhe 0,54 m;1,0;St;gaeb-flat;230910.D83
+114.10;Notwendige Beprobungen und Analysen, Boden gem. EBV;1,0;St;gaeb-flat;230910.D83
+114.20;Notwendige Beprobungen und Analysen, Boden gem. LAGA;1,0;St;gaeb-flat;230910.D83
+114.30;Chemische Analyse von Erdstoffen auf;1,0;St;gaeb-flat;230910.D83
+114.40;Geladenen Boden bis Z 1.2 -Material;250,0;t;gaeb-flat;230910.D83
+114.50;ASN 17 05 04 - Boden und Steine, bis Z 1.2;250,0;t;gaeb-flat;230910.D83
+114.60;ASN 17 05 04 - Oberboden,;5,0;t;gaeb-flat;230910.D83
+114.70;"ASN 20 02 01 - kompostierbare Abfälle;";1,0;t;gaeb-flat;230910.D83
+115.10;Verrechnungssatz fuer Arbeitskraft Polier;10,0;h;gaeb-flat;230910.D83
+115.20;Verrechnungssatz fuer Arbeitskraft BFA;10,0;h;gaeb-flat;230910.D83
+115.30;Verrechnungssatz fuer Arbeitskraft Bauwerker;10,0;h;gaeb-flat;230910.D83
+2.1.10;NSV inkl. Steuerung Bekalkungsanlage;1,0;psch;gaeb-flat;230910.D83
+2.1.20;Schaltplan;1,0;St;gaeb-flat;230910.D83
+2.1.30;LWL Box;1,0;St;gaeb-flat;230910.D83
+2.1.40;Scalance XC206-2SFP;1,0;St;gaeb-flat;230910.D83
+2.1.50;LWL-SFB;1,0;St;gaeb-flat;230910.D83
+2.1.60;LWL-Kabel;40,0;m;gaeb-flat;230910.D83
+2.1.70;Messprotokoll LWL Kabel;1,0;St;gaeb-flat;230910.D83
+2.1.80;Spleißen;2,0;St;gaeb-flat;230910.D83
+2.1.90;LWL Patchkabelsatz hybrid;2,0;St;gaeb-flat;230910.D83
+2.1.100;Patchkabel 1 m;2,0;St;gaeb-flat;230910.D83
+2.1.110;Patchkabel 3 m;1,0;St;gaeb-flat;230910.D83
+2.1.120;Abgang 400 VAC;1,0;St;gaeb-flat;230910.D83
+2.1.130;Abgang 230VAC;1,0;St;gaeb-flat;230910.D83
+2.1.140;Wandgehäuse mit Tür;1,0;St;gaeb-flat;230910.D83
+2.1.150;LWL Box;1,0;St;gaeb-flat;230910.D83
+2.1.160;LWL-SFB;1,0;St;gaeb-flat;230910.D83
+2.1.170;Scalance XC206-2SFP;1,0;St;gaeb-flat;230910.D83
+2.1.180;Patchkabel bis 10 m;1,0;St;gaeb-flat;230910.D83
+2.1.190;Netzgerät 24 V, DC;1,0;St;gaeb-flat;230910.D83
+2.2.10;Öffnen und Schließen Kabelabschottung;2,0;St;gaeb-flat;230910.D83
+2.3.10;Gummi-Press-Dichtung GPD 125;2,0;St;gaeb-flat;230910.D83
+2.3.20;Schutzrohrabdichtung;2,0;St;gaeb-flat;230910.D83
+2.4.10;Montagepläne;1,0;psch;gaeb-flat;230910.D83
+2.4.20;HVI Leitung im Stützrohr mit Fangspitze Farbe grau;18,0;m;gaeb-flat;230910.D83
+2.4.30;Halter für Fangstangen D40;2,0;St;gaeb-flat;230910.D83
+2.4.40;Halter für HVI-Leitung;2,0;St;gaeb-flat;230910.D83
+2.4.50;UNI-Trennklemme (200 kA);1,0;St;gaeb-flat;230910.D83
+2.4.60;Edelstahlrunddraht (Ringerder);60,0;m;gaeb-flat;230910.D83
+2.4.70;Verbinder;5,0;St;gaeb-flat;230910.D83
+2.4.80;Verbinder K;5,0;St;gaeb-flat;230910.D83
+2.4.90;Überbrückungsseil 50;10,0;St;gaeb-flat;230910.D83
+2.4.100;Trennfunkenstrecke;1,0;St;gaeb-flat;230910.D83
+2.4.110;Potentialausgleichsleitung;10,0;m;gaeb-flat;230910.D83
+2.4.120;Potentialausgleichsleitung;30,0;m;gaeb-flat;230910.D83
+2.4.130;Potentialschiene;1,0;St;gaeb-flat;230910.D83
+2.4.140;Messen/Prüfen;1,0;St;gaeb-flat;230910.D83
+2.5.10;Beleuchtungsanlage Bekalkungsanlage;1,0;psch;gaeb-flat;230910.D83
+2.6.10;Isolierstoffrohr, PVC NG 29;10,0;m;gaeb-flat;230910.D83
+2.6.20;Isolierstoffrohr, PVC NG 16;10,0;m;gaeb-flat;230910.D83
+2.6.30;Isolierstoffrohr, PVC NG 21;10,0;m;gaeb-flat;230910.D83
+2.6.40;Profilstahl;10,0;kg;gaeb-flat;230910.D83
+2.6.50;Profilstahl;10,0;kg;gaeb-flat;230910.D83
+2.6.60;Leitungsschutzschalter B, 16 A 1-polig;1,0;St;gaeb-flat;230910.D83
+2.6.70;Fehlerstromschutzschalter 2/25A/30 mA;1,0;St;gaeb-flat;230910.D83
+2.6.80;Steckdose, AP;3,0;St;gaeb-flat;230910.D83
+2.6.90;Abzweigdose, AP;3,0;St;gaeb-flat;230910.D83
+2.6.100;Install.schalter, AP;1,0;St;gaeb-flat;230910.D83
+2.6.110;Frostschutzheizung;2,0;St;gaeb-flat;230910.D83
+2.7.10;Kabelkennzeichnungssystem;1,0;psch;gaeb-flat;230910.D83
+2.7.20;Verkabelung für Bekalkungsanlage;1,0;psch;gaeb-flat;230910.D83
+2.7.30;NYY-J,  5x10;45,0;m;gaeb-flat;230910.D83
+2.7.40;NYY-J,  3x1,5;30,0;m;gaeb-flat;230910.D83
+2.8.10;Einpflege Prozessvariable in PLS;200,0;St;gaeb-flat;230910.D83
+2.8.20;Inbetriebnahme Datenübertragung;1,0;psch;gaeb-flat;230910.D83
+2.8.30;Prozessbilder;4,0;St;gaeb-flat;230910.D83
+2.9.10;Technische Bearbeitung;1,0;psch;gaeb-flat;230910.D83
+2.9.20;Schaltschrankunterlagen;1,0;psch;gaeb-flat;230910.D83
+2.9.30;Dokumentation Kabelanlage;1,0;psch;gaeb-flat;230910.D83
+2.9.40;Pflichtenheft;1,0;psch;gaeb-flat;230910.D83
+2.9.50;Einweisung;1,0;psch;gaeb-flat;230910.D83
+2.9.60;Messen/Prüfen;1,0;St;gaeb-flat;230910.D83
+2.9.70;Inbetriebnahmeleistungen / Funktionsprüfungen;1,0;psch;gaeb-flat;230910.D83
+2.9.80;Abnahme;1,0;psch;gaeb-flat;230910.D83
+2.9.90;Baustelleneinrichtung;1,0;psch;gaeb-flat;230910.D83
+2.9.100;Beschilderung;1,0;psch;gaeb-flat;230910.D83
+2.9.110;Schilder;15,0;St;gaeb-flat;230910.D83
+2.9.120;Halterung;15,0;St;gaeb-flat;230910.D83

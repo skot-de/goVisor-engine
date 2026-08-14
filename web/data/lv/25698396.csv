@@ -1,0 +1,129 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+1;Prozessserver;1,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+2;Thin-Client als SCADA-Bedienplatz;2,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+3;Notebook als Client für den mobilen Zugriff auf das SCADA-System;2,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+4;Maus- und Tastatur-Set;2,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+5;"TFT-Flachbildschirm 27""";2,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+6;Provisorischer Aufbau der PC-Komponenten;1,0;psch;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+7;NAS-Storage Datensicherung (19'');1,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+8;Festplatte NAS aus vorstehender Position als Ersatzteillieferung für die Lagerhaltung des Auftraggebers;1,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+9;GPRS/LTE-Modem;1,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+10;NAS-Storage Transferlaufwerk (19'');1,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+11;Einrichtung des Transferlaufwerks;1,0;psch;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+1;Betriebssystemlieferung Microsoft Windows Server Standard Edition (Basislizenz/ 16 Kerne);1,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+2;Betriebssystemlieferung Microsoft Windows 11 Pro;4,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+3;Microsoft Office-Paket mit Word/Excel (keine Abo-Version);3,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+4;pdf-Software (Vollversion, keine Abo-Version);3,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+5;SCADA-System auf HTML 5-Basis;1,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+6;Virenscanner mit zentraler Verwaltungs- und Verteilungsfunktion;1,0;psch;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+7;Lieferung einer für das angebotene SCADA-System freigegebenen Whitelistening-Sicherheitssoftware;1,0;psch;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+8;Datensicherungssoftware;1,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+9;SIMATIC STEP 7 Professional V19/2021 SR2 Combo inkl. TIA Portal;1,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+1;Betriebssystemeinrichtung Microsoft Windows Server 2022;1,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+2;Installation und Einrichtung Prozessserver;1,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+3;Installation und Einrichtung STEP 7, TIA Portal;1,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+4;Installation und Einrichtung Datensicherung;1,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+5;Installation und Einrichtung Virenscaner;1,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+6;Installation und Einrichtung Whitelisting;1,0;psch;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+7;Betriebssystemeinrichtung Microsoft Windows 11;4,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+8;Installation und Einrichtung Thin-Client;2,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+9;Installation und Einrichtung Notebook;2,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+10;Einrichtung Virenscanner-Clients auf Clients;1,0;psch;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+11;Einrichtung Whitelisting-Client auf Clients;1,0;psch;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+1;"Analyse Bestands-PLS ""InTouch""";1,0;psch;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+2;Umstellung PLS von InTouch auf neues SCADA-System;1,0;psch;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+3;Prozessbilderstellung Gesamt-Anlagenübersicht;1,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+4;Prozessbilderstellung;1,0;psch;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+5;Erstellen und Parametrieren von Archiven;50,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+6;Nachparametrieren von Verfahrensgrößen;10,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+7;Anpassung/ Einrichtung Datenübermittlung;1,0;psch;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+1;Managebarer Switch als zentraler Switch;1,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+2;SFP Medienmodul für o. g. Switch;4,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+3;Patchpanel 24 x RJ45, CAT 6A;1,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+4;Analyse und Anpassung vorhandene Netzwerktechnik;1,0;psch;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+5;Einrichtung neue Netzwerktechnik;1,0;psch;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+6;Einrichtung VLAN;1,0;psch;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+7;Abstimmung und Aktualisierung bauseitige Firewall;1,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+8;Erstellen von provisorischen Patchverbindungen;20,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+9;Patchkabel RJ45, Länge 1,5 m, LAN CAT 6;5,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+10;Patchkabel RJ45, Länge 3 m, LAN CAT 6;5,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+11;Patchkabel RJ45, Länge 5 m, LAN CAT 6;5,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+12;Netzwerksystemkabel LAN CAT 6A;300,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+13;Geschirmte Stecker RJ45, passend für v. g. LAN-Kabel;20,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+14;Anschlüsse für Netzwerksystemkabel CAT 6A, RJ45-Stecker;20,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+15;PROFINET-Installationskabel;40,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+16;RJ45-Stecker PROFINET;4,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+1;Kunststoffkabel NYY-J 3 x 1,5 mm²;10,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+2;Kunststoffkabel NYY-J 5 x 1,5 mm²;10,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+3;Kunststoffkabel NYY-J 5 x 2,5 mm²;10,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+4;Ölflex-Robust-Nummernkabel 3 x 1,5 mm²;10,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+5;Ölflex-Robust-Nummernkabel 5 x 1,5 mm²;10,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+6;Ölflex-Robust-Nummernkabel 5 x 2,5 mm²;10,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+7;Datenkabel LiYCY(TP) 8 x 2 x 0,75 mm²;20,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+8;Anschlüsse für NYY, NYM und Ölflex 3 x 1 mm² bis 5 x 2,5 mm²;13,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+9;Signal-/ Datenkabelanschluss 2 x 2 x 0,5 mm² bis 10 x 2 x 0,8 mm²;8,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+1;"TFT-Flachbildschirm 43"" für Schautafel";2,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+2;VESA-Halterung für o. g. Bildschirm;2,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+3;Trägerplatte für Schautafel;1,0;psch;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+4;Schaufenster-Sonnenschutzfolie;1,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+5;Montage der Schautafel;1,0;psch;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+6;Rückbau/ Demontage der alten Schautafel;1,0;psch;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+1;Analyse Bestandsautomatisierung;1,0;psch;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+2;CPU SIMATIC S7-1500;1,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+3;Kommunikationsmodul CP Industrial Ethernet;2,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+4;Dezentrale Peripheriebaugruppe ET 200MP;2,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+5;Digitalbaugruppe DI 32;10,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+6;Digitalbaugruppe DQ 32;7,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+7;Analogbaugruppe AI 8;6,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+8;Analogbaugruppe AQ 8;3,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+9;Laststromversorgung für SIMATIC S7-1500/ ET 200MP;3,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+10;Installationszubehör SIMATIC S7-1500/ ET 200MP;3,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+11;Zulage zur Montage der Automatisierungstechnik in bauseitigen Schrank;1,0;psch;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+12;Funktionsbeschreibung Automatisierungsgerät;1,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+13;Automatisierungsprogramm;1,0;psch;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+14;Übergabemodul 14-polig;9,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+15;Übergabemodul 50-polig;17,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+16;Systemkabel geschirmt mit einem offenen Ende 14-polig, bis 3 m;18,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+17;Systemkabel geschirmt mit einem offenen Ende 50-polig, bis 3 m;34,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+18;Umverdrahtung von binären Ein- und Ausgängen auf Anschaltmodul;480,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+19;Umverdrahtung von analogen Ein- und Ausgängen auf Anschaltmodul, jedoch zunächst provisorisches Einschleifen der Stromsignale und Freiklemmen vorhandener E/A-Karten. Nach Abschluss der Inbetriebnahme endgültiger Anschluss und Verlegung der Signalleitungen. Einschließlich aller erforderlichen Zwische;60,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+20;Kommunikationsmodul CP Industrial Ethernet S7-300;1,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+21;Anpassung bauseitige S7-300;1,0;psch;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+1;Multiparameter-Messumformer;4,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+2;Sensor pH-Wert;4,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+3;Sensor el. Leitfähigkeit/ Temperatur;4,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+4;Sensor Sauerstoff;4,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+5;Sensor Trübung;4,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+6;Sensor SAK;4,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+7;Durchflussmesstopf;4,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+8;Ansteuerbares 2-Wege-Regelventil;4,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+9;Weiteres Material zur Installation der Messtechnik;1,0;psch;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+10;Einbau/ Anbindung der Messtechnik;1,0;psch;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+11;Kompakt-Schaltschrank;1,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+12;Montageplatte;4,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+13;Auffangwanne;1,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+1;Rückbau von komplexen Komponenten aus z. B. Schaltanlagen, sofern diese nicht in anderen Positionen enthalten sind. Eine Demontage erfolgt erst nach Beendigung des Probebetriebs.;7,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+2;Rückbau von einfachen Komponenten;10,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+3;Abklemmen, demontieren und herausziehen von Installationsleitungen, Steuerleitungen und Leistungskabeln bis zu einem Durchmesser von 16 mm, inkl. evtl. notwendigem Schneiden;35,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+4;Abklemmen, demontieren und herausziehen bis zu einem Durchmesser von 28 mm;5,0;m;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+5;Rückbau/ Demontage der alten Messtechnik;1,0;psch;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+1;Pflichtenheft;1,0;psch;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+1;Inbetriebnahme der IT/OS-Infrastruktur (Server, Clients, Schautafel, Netzwerkkomponenten, Datenübermittlung etc.);1,0;psch;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+2;Inbetriebnahme der Bedienebene;1,0;psch;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+3;Inbetriebnahme Automatisierungstechnik;1,0;psch;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+4;Inbetriebnahme Messtechnik;1,0;psch;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+5;Probebetrieb mit Bereitschaftsdienst;4,0;Wo;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+6;Komplette ingenieurmäßige Projektabwicklung;1,0;psch;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+7;Dokumentation nach Fertigstellung für die Gesamtanlage;1,0;psch;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+1;Baustelleneinrichtung ,-unterhaltung und -räumung;1,0;psch;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+2;Endreinigung;1,0;psch;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+3;Ingenieurstunden;50,0;h;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+4;Obermonteurstunden;20,0;h;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+5;Monteurstunden;40,0;h;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+6;Für Materiallieferungen, die nicht über Einheitspreise erfasst werden, wird auf den Einstandspreis des Auftragnehmers ein prozentualer Stoffzuschlag für Gemeinkosten, Wagnis und Gewinn in nachfolgend zu benennender Höhe hinzugerechnet.;1,0;psch;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+1;Begleitende Unterweisung in die Bedienung des Prozessleitsystems;1,0;psch;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+2;Schulung SCADA-System Basis;2,0;St;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+1;Wartungs- und Servicevertrag für das 1. Jahr;1,0;psch;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+2;Wartungs- und Servicevertrag für das 2. Jahr;1,0;psch;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+3;Wartungs- und Servicevertrag für das 3. Jahr;1,0;psch;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83
+4;Wartungs- und Servicevertrag für das 4. Jahr;1,0;psch;gaeb;leistungsbeschreibungen/Leistungsverzeichnis(LVZ)_RGS Worms.x83

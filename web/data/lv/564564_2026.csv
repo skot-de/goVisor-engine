@@ -1,0 +1,617 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+0101.10;Körperschall-Dämmstreifen;12,0;m;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0101.20;Kraneinsatz;1,0;St;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0101.30;RLT-Anlage 1 Schwimmhalle 2.900m³/h;1,0;St;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0101.40;RLT-Anlage 2 Nebenräume 2.160m³/h;1,0;St;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0101.50;RLT-Anlage 3 Technik 1.000m³/h;1,0;St;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0102.10;Luftkanal L1;55,0;m²;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0102.20;Luftkanal L2;8,0;m²;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0102.30;Luftkanal Formteil F1;175,0;m²;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0102.40;Luftkanal Formteil F2;45,0;m²;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0102.50;Aufstellung Luftkanal und Formteil Dach;7,0;St;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0102.60;Aufstellung Luftkanal und Formteil Dach Wickelfalzrohr;12,0;St;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0102.70;Wickelfalzrohr DN 125;3,0;m;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0102.80;Wickelfalzrohr DN 160;50,0;m;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0102.90;Wickelfalzrohr DN 200;8,5;m;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0102.100;Wickelfalzrohr DN 250;7,0;m;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0102.110;Wickelfalzrohr DN 355 WFR-Bogen;2,0;m;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0102.120;Zulage WFR-Bogen DN 125;4,0;St;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0102.130;Zulage WFR-Bogen DN 160;22,0;St;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0102.140;Zulage WFR-Bogen DN 200;2,0;St;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0102.150;Zulage WFR-Bogen DN 250 Abzweigstück (T-Stück);5,0;St;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0102.160;Zulage WFR-T-Stück DN 160;4,0;St;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0102.170;Zulage WFR-T-Stück DN 200;3,0;St;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0102.180;Zulage WFR-T-Stück DN 355 Übergangsstück;3,0;St;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0102.190;Übergangsstück DN 125;2,0;St;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0102.200;Übergangsstück DN 160;2,0;St;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0102.210;Übergangsstück DN 200;2,0;St;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0102.220;Übergangsstück DN 355 Flexibles Rohr;4,0;St;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0102.230;Flexibles Rohr DN 125;4,0;m;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0102.240;Flexibles Rohr DN 160;2,0;m;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0102.250;Flexibles Rohr DN 250 Enddeckel;8,0;m;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0102.260;Enddeckel DN 160;5,0;St;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0102.270;Enddeckel DN 200 Verbindungsstück;2,0;St;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0102.280;Verbindungsstück DN 125;2,0;m;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0102.290;Verbindungsstück DN 160;6,0;m;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0102.300;Verbindungsstück DN 200 Befestigungsschellen Rohr;1,0;m;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0102.310;Befestigungsschelle DN 125;3,0;St;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0102.320;Befestigungsschelle DN 160;35,0;St;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0102.330;Befestigungsschelle DN 200;5,0;St;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0102.340;Befestigungsschelle DN 250;5,0;St;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0102.350;Befestigungsschelle DN 355;5,0;St;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0103.10;Brandschutzklappe Federrücklaufmotor 350 x 200;1,0;St;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0103.20;Rauchschutzklappen 350 x 650;1,0;St;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0103.30;Rauchschutzklappen 500 x 400;1,0;St;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0103.40;Volumenstromregler DN160;5,0;St;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0103.50;Schalldämpfer DN 160;5,0;St;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0103.60;Volumenstromregler Konstant 300 x 200;5,0;St;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0103.70;Schalldämpfer 300 x 200;5,0;St;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0103.80;Volumenstromregler DN 125;1,0;St;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0103.90;Schalldämpfer DN 125;1,0;St;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0103.100;Volumenstromregler DN160;4,0;St;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0103.110;Schalldämpfer DN 160;4,0;St;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0103.120;Volumenstromregler 400 x 200;4,0;St;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0103.130;Schalldämpfer 400 x 200;4,0;St;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0103.140;Volumenstromregler 400 x 250;2,0;St;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0103.150;Schalldämpfer 400 x 250;2,0;St;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0103.160;ABL Schalldämpfer Eckig Anlage 3;1,0;St;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0103.170;ZUL Schalldämpfer Eckig Anlage 3;1,0;St;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0103.180;AUL Schalldämpfer Eckig Anlage 3;1,0;St;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0103.190;FOL Schalldämpfer Eckig Anlage 3;1,0;St;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0103.200;Drall-Deckenluftdurchlass Abluft 440 m³/h;4,0;St;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0103.210;Drall-Deckenluftdurchlass Zuluft 440 m³/h;4,0;St;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0103.220;Lüftungsgitter Beckenumgang;10,0;St;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0103.230;Abluftgitter Rund DN 160;1,0;St;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0103.240;Lüftungsgitter Abluft 325x125;1,0;St;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0103.250;Lüftungsgitter Abluft 825x325;2,0;St;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0103.260;Verstellbare Weitwurfdüsen;5,0;St;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0103.270;Welldrahtgitter 500 x 400 mm;2,0;St;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0103.280;Welldrahtgitter 350 x 650 mm;1,0;St;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0103.290;Welldrahtgitter 350 x 400 mm;1,0;St;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0103.300;Welldrahtgitter 850 x 500 mm;1,0;St;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0103.310;Welldrahtgitter 850 x 400 mm;1,0;St;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0103.320;Lüftungsventil Abluft DN 100;2,0;St;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0103.330;Lüftungsventil Abluft DN 200;1,0;St;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0103.340;Lüftungsventil Zuluft DN 125;2,0;St;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0103.350;Lüftungsventil Zuluft DN 225;1,0;St;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0103.360;Dachdurchführung 400/250;2,0;St;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0103.370;Dachdurchführung 300/400;1,0;St;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0103.380;Dachdurchführung 500/500;1,0;St;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0103.390;Dachdurchführung 400/400;1,0;St;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0104.10;Wärmedämmung MW 30 an Luftkanal L1;3,0;m²;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0104.20;Wärmedämmung MW 30 an Luftkanal L2;5,0;m²;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0104.30;Wärmedämmung MW 30 an Luftkanal F1;50,0;m²;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0104.40;Wärmedämmung MW 30 an Luftkanal F2;0,0;m²;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0104.50;Wärmedämmung MW 100 an Luftkanal L1;60,0;m²;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0104.60;Wärmedämmung MW 100 an Luftkanal L2;10,0;m²;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0104.70;Wärmedämmung MW 100 an Luftkanal F1;120,0;m²;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0104.80;Wärmedämmung MW 100 an Luftkanal F2;37,0;m²;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0104.90;Zulage Ummantelung Blechmantel an Luftkanal L1;60,0;m²;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0104.100;Zulage Ummantelung Blechmantel an Luftkanal L2;10,0;m²;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0104.110;Zulage Ummantelung Blechmantel an Formst. F1;120,0;m²;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0104.120;Zulage Ummantelung Blechmantel an Formst. F2;37,0;m²;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0104.130;Wärmedämmung AF30 an Luftkanal L1;5,0;m²;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0104.140;Wärmedämmung AF30 an Luftkanal L2;2,0;m²;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0104.150;Wärmedämmung AF30 an Luftkanal Formteil F1;12,0;m²;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0104.160;Wärmedämmung AF30 an Luftkanal Formteil F2;5,0;m²;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0104.170;W-Dämmung MW Wickelfalzrohr DN 125;3,0;m;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0104.180;W-Dämmung MW Wickelfalzrohr DN 160;50,0;m;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0104.190;W-Dämmung MW Wickelfalzrohr DN 200;8,5;m;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0104.200;W-Dämmung MW Wickelfalzrohr DN 250;7,0;m;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0104.210;W-Dämmung MW Wickelfalzrohr DN 355;2,0;m;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0104.220;Zulage MW Bogen DN 125;4,0;St;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0104.230;Zulage MW Bogen DN 160;22,0;St;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0104.240;Zulage MW Bogen DN 200;2,0;St;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0104.250;Zulage MW Bogen DN 250;5,0;St;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0104.260;Zulage MW Abzweig  DN 160;4,0;St;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0104.270;Zulage MW Abzweig  DN 200;3,0;St;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0104.280;Zulage MW Abzweig  DN 355;3,0;St;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+02.10;Vorbereitung Demontage;1,0;St;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+02.20;Nachbereitung Demontage;1,0;St;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0301.10;Koordination MSR / ELT;1,0;St;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0301.20;Kanalnetzmessung;1,0;St;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0301.30;Inbetriebnahme / Einweisung  RLT-Anlagen;1,0;St;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0301.40;Hygiene-Erstinspektion nach VDI 6022 Blatt 1, Pkt. 7 und 8;1,0;St;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0301.50;Abnahme;1,0;St;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0301.60;Dokumentation;1,0;St;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0302.10;Diamant-Kernlochbohrung 220mm;6,0;St;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0302.20;Diamant-Kernlochbohrung 250mm;1,0;St;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0302.30;Diamant-Kernlochbohrung 280mm;2,0;St;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0302.40;Diamant-Kernlochbohrung 300mm;5,0;St;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0302.50;Montageschiene kaltgewalzt;500,0;kg;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0302.60;Kennzeichnung;20,0;St;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0302.70;Bezeichnungsschild 52 x 100 mm;50,0;St;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0303.10;Facharbeiter Obermonteur;10,0;Std.;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0303.20;Facharbeiter Monteur;10,0;Std.;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+0303.30;Helfer;10,0;Std.;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+04.10;Wartungspreis nach dem ersten Betriebsjahr;1,0;St;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+04.20;Wartungspreis nach dem zweiten Betriebsjahr;1,0;St;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+04.30;Wartungspreis nach dem dritten Betriebsjahr;1,0;St;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+04.40;Wartungspreis nach dem viertem Betriebsjahr;1,0;St;gaeb-flat;leistungsbeschreibungen/LOS 1 SZR LV_Lüftung_Anlagentechnik.D83
+10;Körperschall-Dämmstreifen;12,0;m;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+20;Kraneinsatz;1,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+30;RLT-Anlage 1 Schwimmhalle 2.900m³/h;1,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+40;RLT-Anlage 2 Nebenräume 2.160m³/h;1,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+50;RLT-Anlage 3 Technik 1.000m³/h;1,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+10;Luftkanal Formteil L1;55,0;m²;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+20;Luftkanal Formteil L2;8,0;m²;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+30;Luftkanal Formteil F1;175,0;m²;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+40;Luftkanal Formteil F2;45,0;m²;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+50;Aufstellung Luftkanal und Formteil Dach;7,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+60;Aufstellung Luftkanal und Formteil Dach;12,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+70;Wickelfalzrohr DN 125;3,0;m;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+80;Wickelfalzrohr DN 160;50,0;m;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+90;Wickelfalzrohr DN 200;8,5;m;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+100;Wickelfalzrohr DN 250;7,0;m;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+110;Wickelfalzrohr DN 355;2,0;m;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+120;Zulage WFR-Bogen DN 125;4,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+130;Zulage WFR-Bogen DN 160;22,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+140;Zulage WFR-Bogen DN 200;2,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+150;Zulage WFR-Bogen DN 250;5,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+160;Zulage WFR-T-Stück DN 160;4,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+170;Zulage WFR-T-Stück DN 200;3,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+180;Zulage WFR-T-Stück DN 355;3,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+190;Übergangsstück DN 125;2,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+200;Übergangsstück DN 160;2,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+210;Übergangsstück DN 200;2,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+220;Übergangsstück DN 355;4,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+230;Flexibles Rohr DN 125;4,0;m;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+240;Flexibles Rohr DN 160;2,0;m;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+250;Flexibles Rohr DN 250;8,0;m;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+260;Enddeckel DN 160;5,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+270;Enddeckel DN 200;2,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+280;Verbindungsstück DN 125;2,0;m;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+290;Verbindungsstück DN 160;6,0;m;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+300;Verbindungsstück DN 200;1,0;m;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+310;Befestigungsschelle DN 125;3,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+320;Befestigungsschelle DN 160;35,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+330;Befestigungsschelle DN 200;5,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+340;Befestigungsschelle DN 250;5,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+350;Befestigungsschelle DN 355;5,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+10;Brandschutzklappe Federrücklaufmotor 350 x 200;1,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+20;Rauchschutzklappen 350 x 650;1,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+30;Rauchschutzklappen 500 x 400;1,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+40;Volumenstromregler DN160;5,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+50;Schalldämpfer DN 160;5,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+60;Volumenstromregler Konstant 300 x 200;5,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+70;Schalldämpfer 300 x 200;5,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+80;Volumenstromregler DN 125;1,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+90;Schalldämpfer DN 125;1,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+100;Volumenstromregler DN160;4,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+110;Schalldämpfer DN 160;4,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+120;Volumenstromregler 400 x 200;4,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+130;Schalldämpfer 400 x 200;4,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+140;Volumenstromregler 400 x 250;2,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+150;Schalldämpfer 400 x 250;2,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+160;ABL Schalldämpfer Eckig Anlage 3;1,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+170;ZUL Schalldämpfer Eckig Anlage 3;1,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+180;AUL Schalldämpfer Eckig Anlage 3;1,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+190;FOL Schalldämpfer Eckig Anlage 3;1,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+200;Drall-Deckenluftdurchlass Abluft 440 m³/h;4,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+210;Drall-Deckenluftdurchlass Zuluft 440 m³/h;4,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+220;Lüftungsgitter Beckenumgang;10,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+230;Abluftgitter Rund DN 160;1,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+240;Lüftungsgitter Abluft 325x125;1,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+250;Lüftungsgitter Abluft 825x325;2,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+260;Verstellbare Weitwurfdüsen;5,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+270;Welldrahtgitter 500 x 400 mm;2,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+280;Welldrahtgitter 350 x 650 mm;1,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+290;Welldrahtgitter 350 x 400 mm;1,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+300;Welldrahtgitter 850 x 500 mm;1,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+310;Welldrahtgitter 850 x 400 mm;1,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+320;Lüftungsventil Abluft DN 100;2,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+330;Lüftungsventil Abluft DN 200;1,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+340;Lüftungsventil Zuluft DN 125;2,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+350;Lüftungsventil Zuluft DN 225;1,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+360;Dachdurchführung;2,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+370;Dachdurchführung;1,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+380;Dachdurchführung;1,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+390;Dachdurchführung;1,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+10;Wärmedämmung MW 30 an Luftkanal L1;3,0;m²;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+20;Wärmedämmung MW 30 an Luftkanal L2;5,0;m²;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+30;Wärmedämmung MW 30 an Luftkanal F1;50,0;m²;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+40;Wärmedämmung MW 30 an Luftkanal F2;0,0;m²;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+50;Wärmedämmung MW 100 an Luftkanal L1;60,0;m²;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+60;Wärmedämmung MW 100 an Luftkanal L2;10,0;m²;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+70;Wärmedämmung MW 100 an Luftkanal F1;120,0;m²;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+80;Wärmedämmung MW 100 an Luftkanal F2;37,0;m²;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+90;Zulage Ummantelung Blechmantel an Luftkanal L1;60,0;m²;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+100;Zulage Ummantelung Blechmantel an Luftkanal L2;10,0;m²;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+110;Zulage Ummantelung Blechmantel an Formst. F1;120,0;m²;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+120;Zulage Ummantelung Blechmantel an Formst. F2;37,0;m²;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+130;Wärmedämmung AF30 an Luftkanal L1;5,0;m²;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+140;Wärmedämmung AF30 an Luftkanal L2;2,0;m²;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+150;Wärmedämmung AF30 an Luftkanal Formteil F1;12,0;m²;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+160;Wärmedämmung AF30 an Luftkanal Formteil F2;5,0;m²;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+170;W-Dämmung MW Wickelfalzrohr DN 125;3,0;m;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+180;W-Dämmung MW Wickelfalzrohr DN 160;50,0;m;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+190;W-Dämmung MW Wickelfalzrohr DN 200;8,5;m;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+200;W-Dämmung MW Wickelfalzrohr DN 250;7,0;m;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+210;W-Dämmung MW Wickelfalzrohr DN 355;2,0;m;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+220;Zulage MW Bogen DN 125;4,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+230;Zulage MW Bogen DN 160;22,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+240;Zulage MW Bogen DN 200;2,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+250;Zulage MW Bogen DN 250;5,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+260;Zulage MW Abzweig  DN 160;4,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+270;Zulage MW Abzweig  DN 200;3,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+280;Zulage MW Abzweig  DN 355;3,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+10;Vorbereitung Demontage;1,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+20;Nachbereitung Demontage;1,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+10;Koordination MSR / ELT;1,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+20;Kanalnetzmessung;1,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+30;Inbetriebnahme / Einweisung  RLT-Anlagen;1,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+40;H;1,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+50;Abnahme;1,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+60;Dokumentation;1,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+10;Diamant-Kernlochbohrung 220mm;6,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+20;Diamant-Kernlochbohrung 250mm;1,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+30;Diamant-Kernlochbohrung 280mm;2,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+40;Diamant-Kernlochbohrung 300mm;5,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+50;Montageschiene kaltgewalzt;500,0;kg;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+60;Kennzeichnung;20,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+70;Bezeichnungsschild 52 x 100 mm;50,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+10;Facharbeiter Obermonteur;10,0;Std.;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+20;Facharbeiter Monteur;10,0;Std.;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+30;Helfer;10,0;Std.;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+10;Wartungspreis nach dem ersten Betriebsjahr;1,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+20;Wartungspreis nach dem zweiten Betriebsjahr;1,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+30;Wartungspreis nach dem dritten Betriebsjahr;1,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+40;Wartungspreis nach dem viertem Betriebsjahr;1,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Lüftung_Anlagentechnik.X83
+10;RLT-Anlage 1 Schwimmhalle 5.600m³/h;1,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+20;RLT-Anlage 2 Nebenräume 5.160m³/h;1,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+30;RLT-Anlage 3 Technik 1.000m³/h;1,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+10;Luftkanal Formteil L1;12,0;m²;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+20;Luftkanal Formteil L2;80,0;m²;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+30;Luftkanal Formteil F1;60,0;m²;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+40;Luftkanal Formteil F2;240,0;m²;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+50;Luftkanal Formteil F3;10,0;m²;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+60;Luftkanal Formteil F4;25,0;m²;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+70;Wickelfalzrohr DN 100;22,0;m;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+80;Wickelfalzrohr DN 140;10,0;m;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+90;Wickelfalzrohr DN 140;4,0;m;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+100;Wickelfalzrohr DN 160;7,0;m;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+110;Wickelfalzrohr DN 180;11,0;m;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+120;Wickelfalzrohr DN 200;8,0;m;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+130;Wickelfalzrohr DN 224;20,0;m;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+140;Wickelfalzrohr DN 250;4,0;m;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+150;Wickelfalzrohr DN 315;20,0;m;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+160;Wickelfalzrohr DN 350;80,0;m;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+170;Zulage WFR-Bogen DN 100;15,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+180;Zulage WFR-Bogen DN 125;20,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+190;Zulage WFR-Bogen DN 140;5,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+200;Zulage WFR-Bogen DN 160;10,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+210;Zulage WFR-Bogen DN 180;6,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+220;Zulage WFR-Bogen DN 224;14,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+230;Zulage WFR-Bogen DN 250;4,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+240;Zulage WFR-Bogen DN 315;10,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+250;Zulage WFR-Bogen DN 350;10,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+260;Zulage WFR-T-Stück DN 100;2,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+270;Zulage WFR-T-Stück DN 224;2,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+280;Zulage WFR-T-Stück DN 160;1,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+290;Zulage WFR-T-Stück DN 315;8,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+300;Übergangsstück DN 125;4,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+310;Übergangsstück DN 140;2,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+320;Übergangsstück DN 160;4,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+330;Übergangsstück DN 180;1,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+340;Übergangsstück DN 20;6,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+350;Übergangsstück DN 224;4,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+360;Übergangsstück DN 315;5,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+370;Übergangsstück DN 350;11,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+380;Flexibles Rohr DN 100;2,0;m;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+390;Flexibles Rohr DN 125;6,0;m;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+400;Flexibles Rohr DN 140;2,0;m;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+410;Flexibles Rohr DN 160;2,0;m;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+420;Flexibles Rohr DN 180;1,0;m;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+430;Flexibles Rohr DN 200;2,0;m;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+440;Flexibles Rohr DN 250;11,0;m;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+450;Enddeckel DN 100;2,0;m;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+460;Enddeckel DN 355;4,0;m;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+470;Verbindungsstück DN 100;2,0;m;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+480;Verbindungsstück DN 125;6,0;m;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+490;Verbindungsstück DN 140;2,0;m;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+500;Verbindungsstück DN 160;4,0;m;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+510;Verbindungsstück DN 180;2,0;m;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+520;Verbindungsstück DN 224;6,0;m;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+530;Verbindungsstück DN 250;2,0;m;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+540;Verbindungsstück DN 315;14,0;m;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+550;Verbindungsstück DN 350;8,0;m;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+560;Befestigungsschelle DN 100;20,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+570;Befestigungsschelle DN 125;5,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+580;Befestigungsschelle DN 140;5,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+590;Befestigungsschelle DN 160;5,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+600;Befestigungsschelle DN 180;5,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+610;Befestigungsschelle DN 200;5,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+620;Befestigungsschelle DN 224;15,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+630;Befestigungsschelle DN 250;4,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+640;Befestigungsschelle DN 315;15,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+650;Befestigungsschelle DN 350;60,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+10;Brandschutzklappe Federrücklaufmotor 800 x 350;1,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+20;Brandschutzklappe Federrücklaufmotor 300 x 400;2,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+30;Brandschutzklappe Federrücklaufmotor 600 x 400;2,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+40;Brandschutzklappe Federrücklaufmotor 350 x 200;1,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+50;Brandschutzklappe Federrücklaufmotor 350 x 200;1,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+60;Brandschutzklappe Federrücklaufmotor DN 250;6,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+70;Brandschutzklappe Federrücklaufmotor DN 355;4,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+80;Rauchschutzklappen 1000 x 400;1,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+90;Rauchschutzklappen 800 x 400;1,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+100;Rechteckige Warmwasser-Wärmeübertrager;1,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+110;Volumenstromregler DN100;3,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+120;Schalldämpfer DN 100;3,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+130;Volumenstromregler DN160;1,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+140;Schalldämpfer DN 224;1,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+150;Volumenstromregler DN250;1,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+160;Schalldämpfer DN 250;1,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+170;Volumenstromregler DN315;1,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+180;Schalldämpfer DN 315;1,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+190;Volumenstromregler DN100;10,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+200;Schalldämpfer DN 100;10,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+210;Volumenstromregler DN160;5,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+220;Schalldämpfer DN 160;5,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+230;Volumenstromregler DN250;8,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+240;Schalldämpfer DN 250;8,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+250;Volumenstromregler DN315;6,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+260;Schalldämpfer DN 315;6,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+270;Volumenstromregler 400 x 200;2,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+280;Schalldämpfer 400 x 200;2,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+290;ABL Schalldämpfer Eckig Anlage 1;1,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+300;ZUL Schalldämpfer Eckig Anlage 1;1,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+310;ABL Schalldämpfer Eckig Anlage 2;1,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+320;ABL Schalldämpfer Eckig Anlage 2;1,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+330;ZUL Schalldämpfer Eckig Anlage 2;1,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+340;AUL FOL Schalldämpfer Eckig;2,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+350;ABL Schalldämpfer Eckig Anlage 3;1,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+360;ZUL Schalldämpfer Eckig Anlage 3;1,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+370;AUL Schalldämpfer Eckig Anlage 3;1,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+380;FOL Schalldämpfer Eckig Anlage 3;1,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+390;Drall-Deckenluftdurchlass Abluft 550 m³/h;4,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+400;Drall-Deckenluftdurchlass Zuluft 550 m³/h;4,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+410;Drall-Deckenluftdurchlass Abluft 120 m³/h;1,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+420;Drall-Deckenluftdurchlass Zuluft 120 m³/h;3,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+430;Drall-Deckenluftdurchlass Abluft 200 m³/h;1,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+440;Drall-Deckenluftdurchlass Abluft 180 m³/h;1,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+450;Drall-Deckenluftdurchlass Zuluft 400 m³/h;1,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+460;Wetterschutzgitter für den Fassadeneinbau;1,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+470;Wetterschutzgitter für den Fassadeneinbau;1,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+480;Wetterschutzgitter für den Fassadeneinbau;1,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+490;Wetterschutzgitter für den Fassadeneinbau;1,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+500;Lüftungsgitter Beckenumgang;6,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+510;Lüftungsgitter Schwimmhalle;16,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+520;Gitterband Abluft 1225 x 525;4,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+530;Abluftgitter Rund DN 224;2,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+540;Lüftungsventil Abluft DN 100;2,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+550;Lüftungsventil Abluft DN 200;4,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+560;Lüftungsventil Zuluft DN 125;7,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+570;Lüftungsventil Zuluft DN 225;2,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+10;Wärmedämmung MW 30 an Luftkanal L1;5,0;m²;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+20;Wärmedämmung MW 30 an Luftkanal L2;32,0;m²;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+30;Wärmedämmung MW 30 an Luftkanal F1;24,0;m²;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+40;Wärmedämmung MW 30 an Luftkanal F2;70,0;m²;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+50;Wärmedämmung AF30 an Luftkanal L1;8,0;m²;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+60;Wärmedämmung AF30 an Luftkanal L2;20,0;m²;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+70;Wärmedämmung AF30 an Luftkanal Formteil F1;26,0;m²;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+80;Wärmedämmung AF30 an Luftkanal Formteil F2;77,0;m²;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+90;Wärmedämmung AF30 an Luftkanal Formteil F4;22,0;m²;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+100;W-Dämmung MW Wickelfalzrohr DN 100;5,0;m;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+110;W-Dämmung MW Wickelfalzrohr DN 125;10,0;m;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+120;W-Dämmung MW Wickelfalzrohr DN 140;0,0;m;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+130;W-Dämmung MW Wickelfalzrohr DN 160;0,0;m;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+140;W-Dämmung MW Wickelfalzrohr DN 180;0,0;m;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+150;W-Dämmung MW Wickelfalzrohr DN 200;3,0;m;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+160;W-Dämmung MW Wickelfalzrohr DN 224;2,0;m;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+170;W-Dämmung MW Wickelfalzrohr DN 250;8,0;m;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+180;W-Dämmung MW Wickelfalzrohr DN 315;7,0;m;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+190;W-Dämmung MW Wickelfalzrohr DN 350;5,0;m;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+200;Zulage MW Bogen DN 100;4,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+210;Zulage MW Bogen DN 125;10,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+220;Zulage MW Bogen DN 1225;4,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+230;Zulage MW Bogen DN 315;5,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+240;Zulage MW Bogen DN 350;10,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+250;Zulage MW Abzweig  DN 100;5,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+260;Zulage MW Abzweig  DN 224;2,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+270;Zulage MW Abzweig  DN 315;2,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+280;Zulage MW Reduzierung DN 315;8,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+290;Zulage MW Reduzierung DN 355;5,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+300;Zulage MW Stutzen DN 315;6,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+310;Zulage MW Stutzen DN 355;4,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+10;Vorbereitung Demontage;1,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+20;Nachbereitung Demontage;1,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+10;Koordination MSR / ELT;1,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+20;Kanalnetzmessung;1,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+30;Inbetriebnahme / Einweisung  RLT-Anlagen;1,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+40;H;1,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+50;Abnahme;1,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+60;Dokumentation;1,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+10;Diamant-Kernlochbohrung 150mm;3,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+20;Diamant-Kernlochbohrung 200mm;4,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+30;Diamant-Kernlochbohrung 300mm;3,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+40;Diamant-Kernlochbohrung 350mm;1,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+50;Diamant-Kernlochbohrung 400mm;4,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+60;Montageschiene kaltgewalzt;750,0;kg;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+70;Kennzeichnung;20,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+80;Bezeichnungsschild 52 x 100 mm;50,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+10;Facharbeiter Obermonteur;10,0;Std.;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+20;Facharbeiter Monteur;10,0;Std.;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+30;Helfer;10,0;Std.;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+10;Wartungspreis nach dem ersten Betriebsjahr;1,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+20;Wartungspreis nach dem zweiten Betriebsjahr;1,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+30;Wartungspreis nach dem dritten Betriebsjahr;1,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+40;Wartungspreis nach dem viertem Betriebsjahr;1,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.X83
+0101.10;RLT-Anlage 1 Schwimmhalle 5.600m³/h;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0101.20;RLT-Anlage 2 Nebenräume 5.160m³/h;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0101.30;RLT-Anlage 3 Technik 1.000m³/h;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0102.10;Luftkanal L1;12,0;m²;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0102.20;Luftkanal L2;80,0;m²;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0102.30;Luftkanal Formteil F1;60,0;m²;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0102.40;Luftkanal Formteil F2;240,0;m²;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0102.50;Luftkanal Formteil F3;10,0;m²;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0102.60;Luftkanal Formteil F4 Wickelfalzrohr;25,0;m²;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0102.70;Wickelfalzrohr DN 100;22,0;m;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0102.80;Wickelfalzrohr DN 125;10,0;m;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0102.90;Wickelfalzrohr DN 140;4,0;m;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0102.100;Wickelfalzrohr DN 160;7,0;m;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0102.110;Wickelfalzrohr DN 180;11,0;m;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0102.120;Wickelfalzrohr DN 200;8,0;m;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0102.130;Wickelfalzrohr DN 224;20,0;m;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0102.140;Wickelfalzrohr DN 250;4,0;m;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0102.150;Wickelfalzrohr DN 315;20,0;m;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0102.160;Wickelfalzrohr DN 350 WFR-Bogen;80,0;m;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0102.170;Zulage WFR-Bogen DN 100;15,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0102.180;Zulage WFR-Bogen DN 125;20,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0102.190;Zulage WFR-Bogen DN 140;5,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0102.200;Zulage WFR-Bogen DN 160;10,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0102.210;Zulage WFR-Bogen DN 180;6,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0102.220;Zulage WFR-Bogen DN 224;14,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0102.230;Zulage WFR-Bogen DN 250;4,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0102.240;Zulage WFR-Bogen DN 315;10,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0102.250;Zulage WFR-Bogen DN 350 Abzweigstück (T-Stück);10,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0102.260;Zulage WFR-T-Stück DN 100;2,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0102.270;Zulage WFR-T-Stück DN 224;2,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0102.280;Zulage WFR-T-Stück DN 160;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0102.290;Zulage WFR-T-Stück DN 315 Übergangsstück;8,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0102.300;Übergangsstück DN 125;4,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0102.310;Übergangsstück DN 140;2,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0102.320;Übergangsstück DN 160;4,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0102.330;Übergangsstück DN 180;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0102.340;Übergangsstück DN 200;6,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0102.350;Übergangsstück DN 224;4,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0102.360;Übergangsstück DN 315;5,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0102.370;Übergangsstück DN 350 Flexibles Rohr;11,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0102.380;Flexibles Rohr DN 100;2,0;m;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0102.390;Flexibles Rohr DN 125;6,0;m;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0102.400;Flexibles Rohr DN 140;2,0;m;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0102.410;Flexibles Rohr DN 160;2,0;m;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0102.420;Flexibles Rohr DN 180;1,0;m;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0102.430;Flexibles Rohr DN 200;2,0;m;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0102.440;Flexibles Rohr DN 250 Enddeckel;11,0;m;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0102.450;Enddeckel DN 100;2,0;m;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0102.460;Enddeckel DN 355 Verbindungsstück;4,0;m;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0102.470;Verbindungsstück DN 100;2,0;m;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0102.480;Verbindungsstück DN 125;6,0;m;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0102.490;Verbindungsstück DN 140;2,0;m;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0102.500;Verbindungsstück DN 160;4,0;m;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0102.510;Verbindungsstück DN 180;2,0;m;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0102.520;Verbindungsstück DN 224;6,0;m;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0102.530;Verbindungsstück DN 250;2,0;m;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0102.540;Verbindungsstück DN 315;14,0;m;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0102.550;Verbindungsstück DN 350 Befestigungsschellen Rohr;8,0;m;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0102.560;Befestigungsschelle DN 100;20,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0102.570;Befestigungsschelle DN 125;5,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0102.580;Befestigungsschelle DN 140;5,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0102.590;Befestigungsschelle DN 160;5,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0102.600;Befestigungsschelle DN 180;5,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0102.610;Befestigungsschelle DN 200;5,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0102.620;Befestigungsschelle DN 224;15,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0102.630;Befestigungsschelle DN 250;4,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0102.640;Befestigungsschelle DN 315;15,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0102.650;Befestigungsschelle DN 350;60,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0103.10;Brandschutzklappe Federrücklaufmotor 800 x 350;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0103.20;Brandschutzklappe Federrücklaufmotor 300 x 400;2,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0103.30;Brandschutzklappe Federrücklaufmotor 600 x 400;2,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0103.40;Brandschutzklappe Federrücklaufmotor 350 x 200;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0103.50;Brandschutzklappe Federrücklaufmotor 350 x 200;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0103.60;Brandschutzklappe Federrücklaufmotor DN 250;6,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0103.70;Brandschutzklappe Federrücklaufmotor DN 355;4,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0103.80;Rauchschutzklappen 1000 x 400;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0103.90;Rauchschutzklappen 800 x 400;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0103.100;Nacherhitzer;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0103.110;Volumenstromregler DN100;3,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0103.120;Schalldämpfer DN 100;3,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0103.130;Volumenstromregler DN224;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0103.140;Schalldämpfer DN 224;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0103.150;Volumenstromregler DN250;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0103.160;Schalldämpfer DN 250;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0103.170;Volumenstromregler DN315;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0103.180;Schalldämpfer DN 315;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0103.190;Volumenstromregler DN100;10,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0103.200;Schalldämpfer DN 100;10,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0103.210;Volumenstromregler DN160;5,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0103.220;Schalldämpfer DN 160;5,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0103.230;Volumenstromregler DN250;8,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0103.240;Schalldämpfer DN 250;8,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0103.250;Volumenstromregler DN315;6,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0103.260;Schalldämpfer DN 315;6,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0103.270;Volumenstromregler 400 x 200;2,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0103.280;Schalldämpfer 400 x 200;2,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0103.290;ABL Schalldämpfer Eckig Anlage 1;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0103.300;ZUL Schalldämpfer Eckig Anlage 1;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0103.310;ABL Schalldämpfer Eckig Anlage 2;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0103.320;ABL Schalldämpfer Eckig Anlage 2;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0103.330;ZUL Schalldämpfer Eckig Anlage 2;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0103.340;AUL FOL Schalldämpfer Eckig;2,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0103.350;ABL Schalldämpfer Eckig Anlage 3;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0103.360;ZUL Schalldämpfer Eckig Anlage 3;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0103.370;AUL Schalldämpfer Eckig Anlage 3;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0103.380;FOL Schalldämpfer Eckig Anlage 3;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0103.390;Drall-Deckenluftdurchlass Abluft 550 m³/h;4,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0103.400;Drall-Deckenluftdurchlass Zuluft 550 m³/h;4,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0103.410;Drall-Deckenluftdurchlass Abluft 120 m³/h;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0103.420;Drall-Deckenluftdurchlass Zuluft 120 m³/h;3,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0103.430;Drall-Deckenluftdurchlass Abluft 200 m³/h;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0103.440;Drall-Deckenluftdurchlass Abluft 180 m³/h;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0103.450;Drall-Deckenluftdurchlass Zuluft 400 m³/h;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0103.460;Wetterschutzgitter für den Fassadeneinbau;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0103.470;Wetterschutzgitter für den Fassadeneinbau;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0103.480;Wetterschutzgitter für den Fassadeneinbau;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0103.490;Wetterschutzgitter für den Fassadeneinbau;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0103.500;Lüftungsgitter Beckenumgang;6,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0103.510;Lüftungsgitter Schwimmhalle;16,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0103.520;Gitterband Abluft 1225 x 525;4,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0103.530;Abluftgitter Rund DN 224;2,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0103.540;Lüftungsventil Abluft DN 100;2,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0103.550;Lüftungsventil Abluft DN 200;4,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0103.560;Lüftungsventil Zuluft DN 125;7,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0103.570;Lüftungsventil Zuluft DN 225;2,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0104.10;Wärmedämmung MW 30 an Luftkanal L1;5,0;m²;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0104.20;Wärmedämmung MW 30 an Luftkanal L2;32,0;m²;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0104.30;Wärmedämmung MW 30 an Luftkanal F1;24,0;m²;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0104.40;Wärmedämmung MW 30 an Luftkanal F2;70,0;m²;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0104.50;Wärmedämmung AF30 an Luftkanal L1;8,0;m²;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0104.60;Wärmedämmung AF30 an Luftkanal L2;20,0;m²;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0104.70;Wärmedämmung AF30 an Luftkanal Formteil F1;26,0;m²;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0104.80;Wärmedämmung AF30 an Luftkanal Formteil F2;77,0;m²;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0104.90;Wärmedämmung AF30 an Luftkanal Formteil F4;22,0;m²;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0104.100;W-Dämmung MW Wickelfalzrohr DN 100;5,0;m;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0104.110;W-Dämmung MW Wickelfalzrohr DN 125;10,0;m;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0104.120;W-Dämmung MW Wickelfalzrohr DN 140;0,0;m;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0104.130;W-Dämmung MW Wickelfalzrohr DN 160;0,0;m;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0104.140;W-Dämmung MW Wickelfalzrohr DN 180;0,0;m;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0104.150;W-Dämmung MW Wickelfalzrohr DN 200;3,0;m;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0104.160;W-Dämmung MW Wickelfalzrohr DN 224;2,0;m;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0104.170;W-Dämmung MW Wickelfalzrohr DN 250;8,0;m;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0104.180;W-Dämmung MW Wickelfalzrohr DN 315;7,0;m;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0104.190;W-Dämmung MW Wickelfalzrohr DN 350;5,0;m;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0104.200;Zulage MW Bogen DN 100;4,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0104.210;Zulage MW Bogen DN 125;10,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0104.220;Zulage MW Bogen DN 1225;4,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0104.230;Zulage MW Bogen DN 315;5,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0104.240;Zulage MW Bogen DN 350;10,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0104.250;Zulage MW Abzweig  DN 100;5,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0104.260;Zulage MW Abzweig  DN 224;2,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0104.270;Zulage MW Abzweig  DN 315;2,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0104.280;Zulage MW Reduzierung DN 315;8,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0104.290;Zulage MW Reduzierung DN 355;5,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0104.300;Zulage MW Stutzen DN 315;6,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0104.310;Zulage MW Stutzen DN 355;4,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+02.10;Vorbereitung Demontage;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+02.20;Nachbereitung Demontage;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0301.10;Koordination MSR / ELT;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0301.20;Kanalnetzmessung;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0301.30;Inbetriebnahme / Einweisung  RLT-Anlagen;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0301.40;Hygiene-Erstinspektion nach VDI 6022 Blatt 1, Pkt. 7 und 8;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0301.50;Abnahme;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0301.60;Dokumentation;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0302.10;Diamant-Kernlochbohrung 150mm;3,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0302.20;Diamant-Kernlochbohrung 200mm;4,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0302.30;Diamant-Kernlochbohrung 300mm;3,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0302.40;Diamant-Kernlochbohrung 350mm;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0302.50;Diamant-Kernlochbohrung 400mm;4,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0302.60;Montageschiene kaltgewalzt;750,0;kg;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0302.70;Kennzeichnung;20,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0302.80;Bezeichnungsschild 52 x 100 mm;50,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0303.10;Facharbeiter Obermonteur;10,0;Std.;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0303.20;Facharbeiter Monteur;10,0;Std.;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+0303.30;Helfer;10,0;Std.;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+04.10;Wartungspreis nach dem ersten Betriebsjahr;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+04.20;Wartungspreis nach dem zweiten Betriebsjahr;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+04.30;Wartungspreis nach dem dritten Betriebsjahr;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83
+04.40;Wartungspreis nach dem viertem Betriebsjahr;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Lüftung_Anlagentechnik.D83

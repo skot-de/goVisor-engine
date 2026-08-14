@@ -1,0 +1,57 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+0010;Profilschiene mit einer Länge 2.000 mm zur Aufnahme der SPS;1,0;St;gaeb;leistungsbeschreibungen/260810_LV-20-087_KKE440.3 Dieselsteuerung_LV.X81
+0020;Einsatzgebiete/Anwendungen;2,0;St;gaeb;leistungsbeschreibungen/260810_LV-20-087_KKE440.3 Dieselsteuerung_LV.X81
+0030;Einsatzgebiete/Anwendungen;2,0;St;gaeb;leistungsbeschreibungen/260810_LV-20-087_KKE440.3 Dieselsteuerung_LV.X81
+0040;Einsatzgebiete/Anwendungen;2,0;St;gaeb;leistungsbeschreibungen/260810_LV-20-087_KKE440.3 Dieselsteuerung_LV.X81
+0050;Frontstecker in Push-In Technik,;4,0;St;gaeb;leistungsbeschreibungen/260810_LV-20-087_KKE440.3 Dieselsteuerung_LV.X81
+0060;Unmanaged Medienkonverter 1x 10/100Mbit/s RJ45,;4,0;St;gaeb;leistungsbeschreibungen/260810_LV-20-087_KKE440.3 Dieselsteuerung_LV.X81
+0070;Managed IE Switch 8x 10/100 Mbit/s RJ45 Ports,;2,0;St;gaeb;leistungsbeschreibungen/260810_LV-20-087_KKE440.3 Dieselsteuerung_LV.X81
+0080;Wechselmedium zum einfachen Geräte-Tausch im Fehlerfall,;2,0;St;gaeb;leistungsbeschreibungen/260810_LV-20-087_KKE440.3 Dieselsteuerung_LV.X81
+0090;Schutz von Ethernet-Geräten vor unbefugtem Zugriff;1,0;St;gaeb;leistungsbeschreibungen/260810_LV-20-087_KKE440.3 Dieselsteuerung_LV.X81
+0100;Zur DC-Versorgung,;2,0;St;gaeb;leistungsbeschreibungen/260810_LV-20-087_KKE440.3 Dieselsteuerung_LV.X81
+0110;MICO Lastkreisüberwachung,;2,0;St;gaeb;leistungsbeschreibungen/260810_LV-20-087_KKE440.3 Dieselsteuerung_LV.X81
+0120;Sicherungsautomat für DC 70-V;4,0;St;gaeb;leistungsbeschreibungen/260810_LV-20-087_KKE440.3 Dieselsteuerung_LV.X81
+0130;Relaisbaustein mit Stecksockel;10,0;St;gaeb;leistungsbeschreibungen/260810_LV-20-087_KKE440.3 Dieselsteuerung_LV.X81
+0140;Div Zubehör;1,0;Psch;gaeb;leistungsbeschreibungen/260810_LV-20-087_KKE440.3 Dieselsteuerung_LV.X81
+0150;Halogenfreie Kunststoffaderleitung DIN EN 50525-3-41 (VDE 0285-525-3-41), H07Z-K 1 x 1,5, Cu-Zahl 14,4.;1,0;Psch;gaeb;leistungsbeschreibungen/260810_LV-20-087_KKE440.3 Dieselsteuerung_LV.X81
+0160;Multi-Mode-Pigtails spleißen und in der LWL-Spleißbox;48,0;St;gaeb;leistungsbeschreibungen/260810_LV-20-087_KKE440.3 Dieselsteuerung_LV.X81
+0010;Softwareerweiterung und Programmierung der SPS-Anlage nachAbsprache mit dem AG. Dabei ist das;1,0;Psch;gaeb;leistungsbeschreibungen/260810_LV-20-087_KKE440.3 Dieselsteuerung_LV.X81
+0020;Softwareerweiterung für die Visualisierungsstationen.;1,0;Psch;gaeb;leistungsbeschreibungen/260810_LV-20-087_KKE440.3 Dieselsteuerung_LV.X81
+0010;Durchführung der vollständigen Prüfung, der funktionalen Tests sowie der fachlichen Abstimmung und Dokumentation der Dieselsteuerung im Zusammenhang mit der Mittelspannungsanlage nach erfolgtem Umbau und separater Programmierung.;1,0;psch;gaeb;leistungsbeschreibungen/260810_LV-20-087_KKE440.3 Dieselsteuerung_LV.X81
+0020;Es sind Dokumentations- / Revisionsunterlagen gemäß den;1,0;Psch;gaeb;leistungsbeschreibungen/260810_LV-20-087_KKE440.3 Dieselsteuerung_LV.X81
+0030;Nach Fertigstellung der Maßnahme erfolgt ein Scharftest der;1,0;Psch;gaeb;leistungsbeschreibungen/260810_LV-20-087_KKE440.3 Dieselsteuerung_LV.X81
+0040;Inbetriebnahme der erweiterten Dieselsteuerung;1,0;Psch;gaeb;leistungsbeschreibungen/260810_LV-20-087_KKE440.3 Dieselsteuerung_LV.X81
+0050;Erstellung von Stromlaufplänen.;1,0;St;gaeb;leistungsbeschreibungen/260810_LV-20-087_KKE440.3 Dieselsteuerung_LV.X81
+0010;Teilnahme an projektbezogenen Abstimmungs- und Koordinationsterminen mit dem Auftraggeber (AG), der Betriebstechnik, sowie der Feuerwehr;4,0;St;gaeb;leistungsbeschreibungen/260810_LV-20-087_KKE440.3 Dieselsteuerung_LV.X81
+0020;Pauschale Durchführung projektbezogener Abstimmungs- und Koordinationsleistungen mit der ARGE sowie den beteiligten Nebengewerken im Zuge der Planung, Ausführung und Umsetzung der Leistungen.;1,0;psch;gaeb;leistungsbeschreibungen/260810_LV-20-087_KKE440.3 Dieselsteuerung_LV.X81
+0030;Beistellen von Personal für die Sachverständigenabnahme der elektrischen Anlagen, Vergütung des Sachverständigen durch gesonderten Vertrag.;16,0;h;gaeb;leistungsbeschreibungen/260810_LV-20-087_KKE440.3 Dieselsteuerung_LV.X81
+0040;Beistellen von Personal für den Probebetrieb der elektrischen Anlagen, Vergütung des Sachverständigen durch gesonderten Vertrag.;16,0;h;gaeb;leistungsbeschreibungen/260810_LV-20-087_KKE440.3 Dieselsteuerung_LV.X81
+0050;Beistellen von Personal für den Interaktionstest der elektrischen Anlagen, Vergütung des Sachverständigen durch gesonderten Vertrag.;16,0;h;gaeb;leistungsbeschreibungen/260810_LV-20-087_KKE440.3 Dieselsteuerung_LV.X81
+01.0010;Profilschiene Länge 2.000 mm;1,0;St;gaeb-flat;leistungsbeschreibungen/260810_LV-20-087_KKE440.3 Dieselsteuerung_LV.D83
+01.0020;PROFINET-Anschaltmodul für dezentrale Peripherie;2,0;St;gaeb-flat;leistungsbeschreibungen/260810_LV-20-087_KKE440.3 Dieselsteuerung_LV.D83
+01.0030;16 Digitale Eingänge für 24VUC bis 125VUC;2,0;St;gaeb-flat;leistungsbeschreibungen/260810_LV-20-087_KKE440.3 Dieselsteuerung_LV.D83
+01.0040;8 Digitale Ausgänge für 24VDC 2A;2,0;St;gaeb-flat;leistungsbeschreibungen/260810_LV-20-087_KKE440.3 Dieselsteuerung_LV.D83
+01.0050;Frontstecker in Push-In Technik;4,0;St;gaeb-flat;leistungsbeschreibungen/260810_LV-20-087_KKE440.3 Dieselsteuerung_LV.D83
+01.0060;Medienkonverter 1x 10/100Mbit/s RJ45, 1x 100Mbit/s MM-LWL-BFOC;4,0;St;gaeb-flat;leistungsbeschreibungen/260810_LV-20-087_KKE440.3 Dieselsteuerung_LV.D83
+01.0070;Managed IE Switch 8x 10/100 Mbit/s RJ45 Ports,;2,0;St;gaeb-flat;leistungsbeschreibungen/260810_LV-20-087_KKE440.3 Dieselsteuerung_LV.D83
+01.0080;Wechselmedium;2,0;St;gaeb-flat;leistungsbeschreibungen/260810_LV-20-087_KKE440.3 Dieselsteuerung_LV.D83
+01.0090;Security Modul 2x RJ45 VPN Tunnel;1,0;St;gaeb-flat;leistungsbeschreibungen/260810_LV-20-087_KKE440.3 Dieselsteuerung_LV.D83
+01.0100;DC-DC Wandler 216V auf 24V mit 35A;2,0;St;gaeb-flat;leistungsbeschreibungen/260810_LV-20-087_KKE440.3 Dieselsteuerung_LV.D83
+01.0110;MICO Lastkreisüberwachung;2,0;St;gaeb-flat;leistungsbeschreibungen/260810_LV-20-087_KKE440.3 Dieselsteuerung_LV.D83
+01.0120;DC Sicherungsautomat 70-V;4,0;St;gaeb-flat;leistungsbeschreibungen/260810_LV-20-087_KKE440.3 Dieselsteuerung_LV.D83
+01.0130;Relais mit Stecksockel 2polig 24V/DC;10,0;St;gaeb-flat;leistungsbeschreibungen/260810_LV-20-087_KKE440.3 Dieselsteuerung_LV.D83
+01.0140;Kleinteile - Zubehör;1,0;Psch;gaeb-flat;leistungsbeschreibungen/260810_LV-20-087_KKE440.3 Dieselsteuerung_LV.D83
+01.0150;Kunststoffaderleitung halogenfrei H07Z-K 1x1,5;1,0;Psch;gaeb-flat;leistungsbeschreibungen/260810_LV-20-087_KKE440.3 Dieselsteuerung_LV.D83
+01.0160;Pigtails in Fusionstechnik spleißen MM;48,0;St;gaeb-flat;leistungsbeschreibungen/260810_LV-20-087_KKE440.3 Dieselsteuerung_LV.D83
+02.0010;"Softwareerweiterung ""Erweiterung der Dieselsteuerung""";1,0;Psch;gaeb-flat;leistungsbeschreibungen/260810_LV-20-087_KKE440.3 Dieselsteuerung_LV.D83
+02.0020;"Softwareerweiterung ""Visualisierungsstationen""";1,0;Psch;gaeb-flat;leistungsbeschreibungen/260810_LV-20-087_KKE440.3 Dieselsteuerung_LV.D83
+03.0010;Prüfung, 1:1-Test und Inbetriebnahmebegleitung der Dieselsteuerung;1,0;psch;gaeb-flat;leistungsbeschreibungen/260810_LV-20-087_KKE440.3 Dieselsteuerung_LV.D83
+03.0020;Dokumentationsunterlagen;1,0;Psch;gaeb-flat;leistungsbeschreibungen/260810_LV-20-087_KKE440.3 Dieselsteuerung_LV.D83
+03.0030;Funktionstest;1,0;Psch;gaeb-flat;leistungsbeschreibungen/260810_LV-20-087_KKE440.3 Dieselsteuerung_LV.D83
+03.0040;Inbetriebnahme;1,0;Psch;gaeb-flat;leistungsbeschreibungen/260810_LV-20-087_KKE440.3 Dieselsteuerung_LV.D83
+03.0050;Erstellung Stromlaufpläne;1,0;St;gaeb-flat;leistungsbeschreibungen/260810_LV-20-087_KKE440.3 Dieselsteuerung_LV.D83
+04.0010;Abstimmungstermine mit Auftraggeber / Betriebstechnik / Feuerwehr;4,0;St;gaeb-flat;leistungsbeschreibungen/260810_LV-20-087_KKE440.3 Dieselsteuerung_LV.D83
+04.0020;Abstimmung mit ARGE und Nebengewerken;1,0;psch;gaeb-flat;leistungsbeschreibungen/260810_LV-20-087_KKE440.3 Dieselsteuerung_LV.D83
+04.0030;Beistellen Personal Sachverständigenabnahme elektr. Anlagen;16,0;h;gaeb-flat;leistungsbeschreibungen/260810_LV-20-087_KKE440.3 Dieselsteuerung_LV.D83
+04.0040;Beistellen Personal Probebetrieb elektr. Anlagen;16,0;h;gaeb-flat;leistungsbeschreibungen/260810_LV-20-087_KKE440.3 Dieselsteuerung_LV.D83
+04.0050;Beistellen Personal Interaktionstest elektr. Anlagen;16,0;h;gaeb-flat;leistungsbeschreibungen/260810_LV-20-087_KKE440.3 Dieselsteuerung_LV.D83

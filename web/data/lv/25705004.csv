@@ -1,0 +1,42 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+10;Bauzaun, auf unbefestigtem Untergrund, aufstellen.;82,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BE.x83
+20;Bauzaun vorhalten;2460,0;mWo;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BE.x83
+30;Bauzaun abbauen und von der Baustelle entfernen;82,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BE.x83
+40;Stützstreben an Bauzaunfeldern;20,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BE.x83
+50;Umbau des vorgenannten Bauzauns;30,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BE.x83
+60;Ertüchtigung Bauzaunfeld als Tor durch Bauzaun-Tor-Set,;2,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BE.x83
+70;Bauzauntor vorhalten;60,0;SktW;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BE.x83
+80;Bauzaun-Tor-Set beseitigen;2,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BE.x83
+90;Stabiles Hinweisschild mit dem Hinweis;3,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BE.x83
+100;Hinweisschild vorhalten;90,0;SktW;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BE.x83
+110;Hinweisschild beseitigen;3,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BE.x83
+120;Sichtschutz am Bauzaun aus Planen oder nahezu blickdichten Netzen, Höhe wie Bauzaun einbauen;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BE.x83
+130;Sichtschutz vorhalten;600,0;mWo;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BE.x83
+140;Sichtschutz am Bauzaun entfernen;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BE.x83
+150;Sanitärcontainer entsprechend Technische Regeln für Arbeitsstätten ASR A4.1 auf den vom Auftraggeber ausgewiesenen Flächen anliefern, aufstellen;1,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BE.x83
+160;Sanitärcontainer 10 ft. vorhalten;30,0;StkW;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BE.x83
+170;"Sanitärcontainer 10 ft. entfernen; Medienanschlüsse zurückbauen";1,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BE.x83
+180;Abwassertank für Sanitärcontainer 10 ft liefern, in Betrieb nehmen, Fassungsvermögen 7 bis 10 m3;1,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BE.x83
+190;Abwassertank für Sanitärcontainer 10 ft vorhalten;30,0;StkW;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BE.x83
+200;"Abwassertank für Sanitärcontainer 10 ft entfernen; Medienanschlüsse zurückbauen";1,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BE.x83
+210;Sanitärcontainer entsprechend den baulichen Anforderungen und den Anforderungen an die Einrichtung nach Par. 47 Arbeitsstättenverordnung und der;1,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BE.x83
+220;Sanitärcontainer 6 ft. vorhalten;30,0;StkW;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BE.x83
+230;"Sanitärcontainer 6 ft entfernen; Medienanschlüsse zurückbauen";1,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BE.x83
+240;Abwassertank für Sanitärcontainer 6 ft liefern, in Betrieb nehmen, Fassungsvermögen 7 bis 10 m3;1,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BE.x83
+250;Abwassertank für Sanitärcontainer 6 ft vorhalten;30,0;StkW;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BE.x83
+260;"Abwassertank für Sanitärcontainer 6 ft entfernen; Medienanschlüsse zurückbauen";1,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BE.x83
+270;Entleerung des Abwassertanks, einschließlich Fahrtkosten und Entsorgungsgebühren;6,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BE.x83
+280;Behelfsmäßige Baustraße in Geländehöhe für nicht öffentlichen Verkehr,;180,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BE.x83
+290;Behelfsmäßige Baustraße vorhalten;5400,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BE.x83
+300;Behelfsmäßige Baustraße komplett beseitigen, in Anspruch genommene Fläche reinigen.;180,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BE.x83
+10;Schutz des Treppenpodestes aus Werksteinplatten  mittels Malervlies und Sperrholzplatten errichten.;6,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BE.x83
+20;Schutz des Treppenpodestes aus Werksteinplatten  mittels Malervlies und Sperrholzplatten vorhalten;180,0;m2Wo;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BE.x83
+30;Schutz des Treppenpodestes aus Werksteinplatten mittels Malervlies und Sperrholzplatten ausbauen und von der Baustelle entfernen;6,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BE.x83
+40;Schutz Türanlage zweiflüglig (B x H) ca. 2,20 x 2,80 m;1,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BE.x83
+50;Schutz Türanlage (B x H) ca. 2,20 x 2,80 m;30,0;StkW;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BE.x83
+60;Schutz Türanlage (B x H) ca. 2,20 x 2,80 m;1,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BE.x83
+70;Schutz Türanlage einflüglig (B x H) ca. 1,20 x 2,20 m;1,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BE.x83
+80;Schutz Türanlage einflüglig (B x H) ca. 1,20 x 2,20 m;30,0;StkW;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BE.x83
+90;Schutz Türanlage einflüglig (B x H) ca. 1,20 x 2,20 m;1,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BE.x83
+10;Stundenlohnarbeiten Facharbeiter;5,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BE.x83
+20;Stundenlohnarbeiten Helfer;5,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_BE.x83

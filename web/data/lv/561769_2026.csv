@@ -1,0 +1,609 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+0101.1;Leitungsschutzschalter 1 polig 6kA B-Charakteristik 10A 1 Modul;6,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0101.2;Schrank, IP44/I, 1400x550x205mm, leer;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0101.3;Baustein, 300x500mm, für Reihenklemmen waagerecht;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0101.4;Baustein, 600x500mm, für Reiheneinbaugeräte waagerecht, 8x12 PLE;2,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0101.5;Baustein, 450x500mm, für Reiheneinbaugeräte waagerecht, 6x12 PLE;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0101.6;Tragschienen, 1350mm, für Schränke ab 160mm Tiefe, Set = 2 Stück;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0101.7;Lasttrennschalter für Sicherungen D02 E18 63A AC400V 3polig Hutschiene;3,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0101.8;Fehlerstrom-Leitungsschutzschalter 1P+N 6kA B-16A 30mA Typ A QuickConnect;3,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0101.9;Fehlerstromschutzschalter 4 polig 6kA 63A 30mA Typ A;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0101.10;Leitungsschutzschalter 1 polig 6kA B-Charakteristik 16A 1 Modul;16,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0101.11;Leitungsschutzschalter 3 polig 6kA B-Charakteristik 16A 3 Module;5,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0101.12;Leitungsschutzschalter 3 polig 6kA C-Charakteristik 16A 3 Module;4,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0101.13;Überspannungsableiter 4P T2 TNS Uc 275V In 20kA Imax 40kA;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0101.14;Hilfsschalter zum Anbau an Leitungsschutzschalter, 1 Schließer + 1 Öffner, 230 V AC, 6 A;6,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0101.15;InstallationsSchütz 25A 2S 230V;2,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0101.16;DALI Control 64 Gateway, 4TE REG, KNX,;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0101.17;KNX Busspannungsversorgung, 4TE REG, 640 mA;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0101.18;Dokumentation und Messungen;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0201.10;PVC-Energiekabel NYY-J 5 x 2,5 mm2 Mehradriges Starkstromkabel, mit PE,;20,0;m;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0201.20;Halogenfreie Mantelleitung NHXMH 1x6 verbessertes Verhalten im Brandfall;50,0;m;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0201.30;Halogenfreie Mantelleitung NHXMH 1x10 verbessertes Verhalten im Brandfall;1,0;m;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0201.40;Halogenfreie Mantelleitung NHXMH 1x16 verbessertes Verhalten im Brandfall;10,0;m;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0201.50;Halogenfreie Mantelleitung NHXMH 3x1,5 verbessertes Verhalten im Brandfall;50,0;m;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0201.60;Halogenfreie Mantelleitung NHXMH 3x2,5 verbessertes Verhalten im Brandfall;500,0;m;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0201.70;Halogenfreie Mantelleitung NHXMH 5x1,5 verbessertes Verhalten im Brandfall;200,0;m;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0201.80;Halogenfreie Mantelleitung NHXMH 5x2,5 verbessertes Verhalten im Brandfall;500,0;m;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0201.90;Halogenfreie Mantelleitung NHXMH 5x4 verbessertes Verhalten im Brandfall;50,0;m;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0201.100;Halogenfreie Mantelleitung NHXMH 5x6 verbessertes Verhalten im Brandfall;50,0;m;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0201.110;Halogenfreie Mantelleitung NHXMH 5x10 verbessertes Verhalten im Brandfall;1,0;m;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0201.120;Halogenfreie Mantelleitung NHXMH 5x16 verbessertes Verhalten im Brandfall;30,0;m;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0201.130;Mantelleitung (N)HXH E90 3x1,5, halogen- frei, Funktionserhalt 90min im Brandfall;60,0;m;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0201.140;Datenleitg. J-2Y(ST)H St III Bd 4x2x0,8 halogenfrei, verbessert. Verhalten Brand;150,0;m;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0201.150;Brandmeldekabel 2x2x0,8 mm, halogenfrei / CPR Eca;300,0;m;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0201.160;Datenleitg. J-2Y(ST)H St III Bd 6x2x0,8 halogenfrei, verbessert. Verhalten Brand;200,0;m;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0201.170;Datenkabel Horizontal-/Steigbereich Kat.7A geschirmt 4x2xAWG22 halogenfrei flammwidrig;100,0;m;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0201.180;Datenkabel Horizontal-/Steigbereich Kat.7A geschirmt 2x(4x2xAWG22) halogenfrei flammwidrig;450,0;m;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0201.190;Datenleitung JE-H(St)H 4x2x0,8, halogen- frei, Funktionserhalt 90min im Brandfall;100,0;m;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0201.200;LWL-Installationskabel UCFibre I/O CT LSHF 3.0kN 12 OM4B;50,0;m;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0201.210;EIB Systemleitung IY(ST)2 x 2 x 0,8;25,0;m;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0201.220;Halogenfreie Steuerleitung, 5-adrig, 1,5 mm²;150,0;m;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0202.10;Kabelanschluss einseitig 3*1,5 bis 3*4,0mm²;21,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0202.20;Kabelanschluss einseitig 5*1,5 bis 5*2,5mm²;15,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0202.30;Kabelanschluss einseitig 4*4,0 bis 5*6,0 mm²;6,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0202.40;Kabelanschluss einseitig 4*10 bis 5*16 mm²;6,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0202.50;Kabelanschluss einseitig 2*2*0,6 bis 2*2*0,8 mm;10,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0202.60;Kabelanschluss einseitig 4*2*0,6 bis 4*2*0,8 mm;10,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0202.70;Kabelanschluss J-02YSCH 4x2xAWG22/1;4,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0202.80;Kabelanschluss J-02YSCH 2x(4x2xAWG22/1);14,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0203.10;Kabelbügel für 8 Ltg. aus Stahl;20,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0203.20;Sammelhalter für 15 Ltg. aus Stahl;20,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0203.30;Sammelhalter für 30 Ltg. aus Stahl;10,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0203.40;Sammelhalter für 15 Ltg. PVC;100,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0203.50;Sammelhalter für 30 Ltg., PVC;100,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0203.60;Kabelleiter H 60mm B 500mm;4,0;m;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0203.70;Ankerschiene;80,0;m;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0203.80;Hängestiel- und Wandausleger,;50,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0203.90;Bügelschellen, für die Befestigung der Leitungen im;30,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0203.100;Elektroinstallationsrohr halogenfr.Kunststoff AD 25mm AP;300,0;m;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0203.110;Elektroinstallationsrohr halogenfr.Kunststoff AD 32mm AP;3,0;m;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0203.120;Elektroinstallationsrohr halogenfr.Kunststoff AD 40mm AP;90,0;m;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0203.130;Elektroinstallationsrohr halogenfr.Kunststoff AD 63mm AP;9,0;m;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0203.140;"Schweres Stahlrohr; starr; Staro Steck-ES-V 25 feuerverzinkt";20,0;m;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0203.150;"Schweres Stahlrohr; starr; Staro Steck-ES-V 32 feuerverzinkt";20,0;m;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0203.160;"Schweres Stahlrohr; starr; Staro Steck-ES-V 40 feuerverzinkt";9,0;m;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0203.170;Leitungsführungskanal aus PC/ABS halogenfrei LFH 40x60mm verkehrweiß;2,0;m;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0203.180;Gitterrinne 68 x 118 mm;3,0;m;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0203.190;Mini-Gitterrinne 68 x 68 mm;3,0;m;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0203.200;Kabelrinne, 60x100x3000 mm;16,0;m;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0203.210;Deckel für Kabelrinne/-leiter, m. Stoßleiste, 102x3000 mm, t=0,75mm;6,0;m;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0204.10;Kabelabzweigkasten;20,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0204.20;Verbindungsdose;20,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0204.30;Mini Verbindungsdose;20,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0204.40;Decken-Präsenzmelder - Master;11,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0204.50;Decken-Präsenzmelder - Slave;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0204.60;Geräteeinbaukanal, halogenfrei;2,0;m;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0204.70;Geräteeinbaudose, 1-fach;4,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0204.80;Verbindungsmuffe für Energiekabel, 1 kV;6,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0204.90;KNX Glastaster  4-fach, RGBW, Weiß, Neutral;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0204.100;AP-Gehäuse 1f + Rahmen;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0204.110;Aus- / Wechselschalter UP;2,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0204.120;Serienschalter UP;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0204.130;Jalousieschalter UP;10,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0204.140;Wippen Jalousienschalter;10,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0204.150;Schuko-Steckdose;2,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0204.160;Schuko-Steckdose mit Klappdeckel IP44;10,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0204.170;Blindabdeckung mit Tragring;5,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0204.180;Einsatz Schlüsselschalter 2-p inkl. Abdeckung und Profilhalbzylinder;2,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0204.190;Aus-/Wechselschalter AP, IP55;2,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0204.200;Kombination Aus-/Wechselschalter m. Steckdose AP, IP55;5,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0204.210;Steckdose 1-fach AP, IP55;2,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0204.220;Steckdose 2-fach AP, IP55 waagerecht;5,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0204.230;Wartungsschalter 4-polig;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0204.240;CEE Wandsteckdose 16A, 5p, 6h, 400V, IP44;4,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0204.250;CEE Wandsteckdose 32A, 5p, 6h, 400V, IP44;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0205.10;Kabelbox eckig für Rohbauöffnung (HxB) ca. 100x200 mm;2,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0205.20;Kabelbox eckig für Rohbauöffnung (HxB) ca. 150x280 mm;3,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0205.30;Mörtelmasse zur Einmörtelung von Kabelboxen als;6,0;kg;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0205.40;Brandschutzabschottung Leitungsanlagen MW-Pl.Schott EI90 Gebäude Wand D 240mm 0,01-0,02m2 A;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0205.50;Brandschutzabschottung Leitungsanlagen MW-Pl.Schott EI90 Gebäude Wand D 240mm 0,02-0,05m2 A;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0205.60;Brandschutzabschottung Leitungsanlagen Schaumschott EI30 Gebäude Decke D 260mm bis 0,01m2 A;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0205.70;Bezeichnungsschild Alu Beschriftung gedruckt;6,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0205.80;Dokumentation Brandschotts;6,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0301.10;LED-Feuchtraum-Anbauleuchte IP66 mit PC-Leuchtenkörper und PC-Diffusor.;4,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0301.20;LED Rohrleuchte mit hoher chemischer Beständigkeit 1200mm;10,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0301.30;Einbau-Downlight;28,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0301.40;Decken- und Wandleuchte;18,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0401.10;Fangltg Rd8-Al Attiken Flachdach;100,0;m;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0401.20;Dachleitungshalter Stahl verz Betonstein Rundleiter;50,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0401.30;Fangstange Al Rd16-3000mm Dachkonstruktion Standfuß Beton;2,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0401.40;Fangstange Al Rd16-4500mm Dachkonstruktion Standfuß Beton;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0401.50;Verbinder Kl.H Kreuzverbindung Stahl niro;10,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0401.60;Prüfung und Messbericht Blitzschutzanlage;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0402.10;Überprüfung der vorhandenen Erdungsanlage;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0402.20;Prüfung, Messung und Dokumentation Erdungsanlage;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0501.10;Überprüfung der vorhandenen Stetofon Anlage;10,0;Std;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0501.20;Elektronischer Gong;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0501.30;IP-Einbau-Terminal CRM-V-2;3,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0501.40;Aufbaugehäuse AIP81003;3,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0501.50;IP-Lautsprecher ZIPS-WC;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0501.60;IP-Deckenlautsprecher ZIPS-C;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0501.70;IP-Station-Lizenz ICX-500;5,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0501.80;Netzwerk-Switch Netgear GS108PP;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0601.10;Sonnenschutzzentrale;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0601.20;Sonnenschutz-Wetterstation;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0601.30;Anschlussleitung Wetterstation 4xAWG 26 UL 10m;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0601.40;Motorsteuereinheit Kompakt 6 REG;2,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0701.10;Herstellen und Zusammenstellen der IT-Dokumentation;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0702.10;Datenanschlussdose symm. Kat.6A 2Ports IP44;4,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0702.20;Auflegen je RJ45-Anschluss;30,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0702.30;Elektronik-Dose Unterputz;2,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0702.40;Stecker dienstneutral Kat.6A;15,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0702.50;Kabelverbinder, dienstneutral Kat.7A;2,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0702.60;"Wandgehäuse 19"" für IT-/Kommunikationstechnik";1,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0702.70;Keystone 19 Zoll Modulträger 1HE 24 Port schwarz unbestückt, geschirmt;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0702.80;C6Amodul K 180° Buchse - Keystone;24,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0702.90;1HE Durchführungs und Rangierpanel mit Bürstenleiste;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0702.100;Fachboden für Serverschränke;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0702.110;1HE Aluminium Steckdosenleiste mit Überspannungsschutz,;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0702.120;Kabelabfangschiene;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0702.130;Potentialausgleichsschiene;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0702.140;Cu-Abnahmemessungen Klasse EA aller fertig installierten;15,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0703.10;"Spleissbox, ausziehbar, 19""""/1HE, 6xLC-D, OM4";2,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0703.20;Lichtbogenspleiß;8,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0703.30;OTDR -Messung (beidseitig);8,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0703.40;LWL-Steckeroberflächenbewertung;8,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+08.10;Demontage, Entsorgung und Überprüfung vorhandene Installation;35,0;Std;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0901.10;Dokumentationspläne / Revisionsunterlagen;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0902.10;Facharbeiter Obermonteur;11,0;Std;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0902.20;Facharbeiter Monteur;12,0;Std;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+0902.30;Helfer;12,0;Std;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+10.10;Wartungspreis nach dem ersten Betriebsjahr;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+10.20;Wartungspreis nach dem zweiten Betriebsjahr;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+10.30;Wartungspreis nach dem dritten Betriebsjahr;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+10.40;Wartungspreis nach dem viertem Betriebsjahr;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.D83
+1;Leitungsschutzschalter nach DIN EN 60898-1(VDE 0641-11) mit zeitverzögertem thermischen Auslöser für Überlastschutz und elektromagnetischer Auslöser für Kurzschlussschutz. Geeignet zum nachträglichen Anbau von Zusatzeinrichtungen. Beschriftungsmöglichkeit direkt am Gerät und Einzelentnahme aus dem P;6,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+2;Wandaufbauschrank für die Innenraummontage mit VDE-Gutachten (Fertigungsüberwachung) nach DIN EN 61439-1/-3 zur Aufputz-, Unterputz- oder teilversenkter Montage. Zum Aufbau einer Niederspannungsverteilung bis 400 A, 3AC 230/400 V 50 Hz. Schutzart IP44, Schutzklasse I, Luft- und Kriechstrecken nach D;1,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+3;Reihenklemmen- oder REG-Geräte Baustein mit Hutschiene zum Aufbau einer Niederspannungsverteilung als Schaltgerätekombination bis 1600A, Bemessungsspannung 3AC 690 V 50 Hz. Serienmäßig plombierbare Berührungsschutzabdeckungen, verstärkt mittels Gasinnendruckverfahren mit je vier Schnellverschlussbol;1,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+4;Reihenklemmen- oder REG-Geräte Baustein mit Hutschiene zum Aufbau einer Niederspannungsverteilung als Schaltgerätekombination bis 1600A, Bemessungsspannung 3AC 690 V 50 Hz. Serienmäßig plombierbare Berührungsschutzabdeckungen, verstärkt mittels Gasinnendruckverfahren mit je vier Schnellverschlussbol;2,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+5;Reihenklemmen- oder REG-Geräte Baustein mit Hutschiene zum Aufbau einer Niederspannungsverteilung als Schaltgerätekombination bis 1600A, Bemessungsspannung 3AC 690 V 50 Hz. Serienmäßig plombierbare Berührungsschutzabdeckungen, verstärkt mittels Gasinnendruckverfahren mit je vier Schnellverschlussbol;1,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+6;Tragschienen aus profiliertem und verzinktem Stahlblech.;1,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+7;D0-Sicherungslasttrennschalter dreipolig schaltbar für D02 Sicherungen, für Hutschienenmontage. Mit Meldesystem für Sicherungsausfall durch LED. Schraubkappenlose Stecktechnik bietet werksseitigen dauerhaften Kontaktdruck. Keine Kontaktlockerung während des Betriebes. Abschließbar mit Vorhängeschlos;3,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+8;Fehlerstrom-Leitungsschutzschalter nachDIN EN 61009-1 (VDE 0664-20) mit QuickConnect Klemme, am Abgang bis 20 A und am Zugang bis 63 A, blaue Test-Taste und Fehlerstromanzeige. Einfache Einzelentnahme aus dem Phasenschienenverbund. Geeignet zum nachträglichen Anbau von Zusatzeinrichtungen. Beschrift;3,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+9;Fehlerstrom-Schutzschalter (FI) nach DIN EN 61008-1 (VDE 0664-10), DIN EN 61008-2-1 (VDE 0664-11) mitBi-Connect-Klemmen unten, externe blaue Test-Taste und Fehlerstromanzeige. Geeignet zum nachträglichen Anbau von Zusatzeinrichtungen. Anschlussklemmen mit Draht-Einschiebe-Schutz, Beschriftungsmöglic;1,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+10;Leitungsschutzschalter nach DIN EN 60898-1(VDE 0641-11) mit zeitverzögertem thermischen Auslöser für Überlastschutz und elektromagnetischer Auslöser für Kurzschlussschutz. Geeignet zum nachträglichen Anbau von Zusatzeinrichtungen. Beschriftungsmöglichkeit direkt am Gerät und Einzelentnahme aus dem P;16,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+11;Leitungsschutzschalter nach DIN EN 60898-1(VDE 0641-11) mit zeitverzögertem thermischen Auslöser für Überlastschutz und elektromagnetischer Auslöser für Kurzschlussschutz. Geeignet zum nachträglichen Anbau von Zusatzeinrichtungen. Beschriftungsmöglichkeit direkt am Gerät und Einzelentnahme aus dem P;5,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+12;Leitungsschutzschalter nach DIN EN 60898-1(VDE 0641-11) mit zeitverzögertem thermischen Auslöser für Überlastschutz und elektromagnetischer Auslöser für Kurzschlussschutz. Geeignet zum nachträglichen Anbau von Zusatzeinrichtungen. Beschriftungsmöglichkeit direkt am Gerät und Einzelentnahme aus dem P;4,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+13;Überspannungsableiter Typ 2, bestehend aus Schutz-Steckmodulen und Basiselement für die Montage auf der Hutschiene. Mit optischer rot/grün Anzeige zur Statusüberwachung und modular anbaubarem Fernmeldekontakt. Abschaltung der einzelnen Schutzpfade im Fehlerfall. Vorsicherungsfreie Installation bis z;1,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+14;Hilfsschalter zum Anbau an Leitungsschutzschalter, 1 Schließer + 1 Öffner, 230 V AC, 6 A;6,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+15;Schütz in kompakter Bauweise nach DIN EN 61095 (VDE 0637-3) mit Kontaktstellungsanzeige durch Anzeigefenster, integriertes Beschriftungsfeld und geeignet zum nachträglichen Anbau von Zusatzeinrichtung.;2,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+16;Das DALI-Gateway ist DALI-2 zertifiziert. Farbeinstellung durch HSV Ansteuerung. 1 DALI-Ausgang;1,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+17;Ausführung mit Nennstrom 640 mA;1,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+18;Erstellung und Übergabe einer vollständigen Anlagendokumentation inklusive Revisionsunterlagen, Plänen, Verzeichnissen sowie Bedienungs- und Wartungsanleitungen. Durchführung aller vorgeschriebenen Prüfungen nach DIN VDE 0100-600 und Erstellung eines umfassenden, nachvollziehbaren Mess- und Prüfberi;1,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+10;"mit gelbgrünem Schutzleiter; Nennspan-";20,0;m;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+20;nach DIN VDE 0250, flammwidrig,;50,0;m;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+30;nach DIN VDE 0250, flammwidrig,;1,0;m;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+40;nach DIN VDE 0250, flammwidrig,;10,0;m;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+50;nach DIN VDE 0250, flammwidrig,;50,0;m;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+60;nach DIN VDE 0250, flammwidrig,;500,0;m;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+70;nach DIN VDE 0250, flammwidrig,;200,0;m;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+80;nach DIN VDE 0250, flammwidrig,;500,0;m;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+90;nach DIN VDE 0250, flammwidrig,;50,0;m;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+100;nach DIN VDE 0250, flammwidrig,;50,0;m;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+110;nach DIN VDE 0250, flammwidrig,;1,0;m;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+120;nach DIN VDE 0250, flammwidrig,;30,0;m;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+130;Funktionserhalt 90 min nach DIN 4102;60,0;m;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+140;für Fernsprech-, Signal- und Datenüber-;150,0;m;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+150;Liefern und Verlegen eines Brandmeldekabels mit statischem Schirm,;300,0;m;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+160;für Fernsprech-, Signal- und Datenüber-;200,0;m;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+170;Datenkabel für den Horizontal- und Steigbereich DIN EN 50288-9-1 (VDE 0819-9-1), Kategorie 7 Index A tiefgestellt DIN EN 50173-1, geschirmt, Trennklasse d DIN EN 50174-2 (VDE 0800-174-2), Link-Klasse DIN EN 50173-1 E Index A tiefgestellt, 4 x 2 x AWG 22, halogenfrei, flammwidrig.;100,0;m;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+180;Datenkabel für den Horizontal- und Steigbereich DIN EN 50288-9-1 (VDE 0819-9-1), Kategorie 7 Index A tiefgestellt DIN EN 50173-1, geschirmt, Trennklasse d DIN EN 50174-2 (VDE 0800-174-2), Link-Klasse DIN EN 50173-1 E Index A tiefgestellt, 2 x (4 x 2 x AWG 22), halogenfrei, flammwidrig.;450,0;m;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+190;Halogenfreies Installationskabel für;100,0;m;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+200;DIN VDE Bezeichnung: U-DQ(ZN)BH ZB 12G50 OM4 3kN LWL-Kabel als zentrale mit Gel gefüllte Bündelader-Ausführung für die strukturierte Verkabelung mit 12 biegeunempfindlichen Bendbright-Fasern Multimode OM4. Das Kabel ist UV-beständig, metallfrei, längswasserdicht und nagetiergeschützt mit einer Zugfe;50,0;m;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+210;EIB Systemleitung IY(ST)2 x 2 x 0,8 mit 4 kV Prüfspannung Farbe grün mit Aufdruck EIB Bussystem: Bussystem EIB;25,0;m;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+220;Ausführung als mehradrige Leitung mit 5 Adern und einem Leiternennquerschnitt von jeweils 1,5 mm², feindrähtig (Klasse 5), mit Schutzleiter. Aderkennzeichnung mittels Ziffern.;150,0;m;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+10;komplette Arbeit bestehend aus den Einzelleistungen;21,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+20;komplette Arbeit bestehend aus den Einzelleistungen;15,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+30;komplette Arbeit bestehend aus den Einzelleistungen;6,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+40;komplette Arbeit bestehend aus den Einzelleistungen;6,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+50;komplette Arbeit bestehend aus den Einzelleistungen;10,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+60;komplette Arbeit bestehend aus den Einzelleistungen;10,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+70;simplex Spezifiziert;4,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+80;duplex Spezifiziert;14,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+10;Kabelbügel aus Edelstahl für ca. 8 Leitungen;20,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+20;Sammelhalter, aus Metall für ca. 15 Leitungen;20,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+30;Sammelhalter, aus Metall für ca. 30 Leitungen;10,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+40;Sammelhalter, aus Kunststoff für ca. 15 Leitungen;100,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+50;Sammelhalter, aus Kunststoff für ca. 30 Leitungen;100,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+60;Steigetrasse nach DIN IEC 61537, für die Wandmontage, mit durchgehend perforierten und profilierten Seitenholmen, mit eingenieteten Sprossen aus C-Profilen mit 18 mm Schlitzweite.;4,0;m;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+70;Ankerschiene, C-Profil nach DIN EN 60715, gelocht.;80,0;m;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+80;Hängestiel- und Wandausleger, mittelschwer, zur Wand- und Hängestielmontage, einschließlich feuerverzinkten anteilmäßigem Befestigungszubehör.;50,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+90;Bügelschellen, für die Befestigung der;30,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+100;Elektroinstallationsrohr DIN EN 61386 (VDE 0605), Maße DIN EN 60423, aus Kunststoff, halogenfrei, einwandig, glatt, starr, mit angeformter Muffe, Außendurchmesser 25 mm, Druckfestigkeit Klasse 2 - leicht (320 N) DIN EN 61386-1 (VDE 0605-1), Klasse Schlagbeanspruchung 3 - mittel DIN EN 61386-1 (VDE 0;300,0;m;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+110;Elektroinstallationsrohr DIN EN 61386 (VDE 0605), Maße DIN EN 60423, aus Kunststoff, halogenfrei, einwandig, glatt, starr, mit angeformter Muffe, Außendurchmesser 32 mm, Druckfestigkeit Klasse 2 - leicht (320 N) DIN EN 61386-1 (VDE 0605-1), Klasse Schlagbeanspruchung 3 - mittel DIN EN 61386-1 (VDE 0;3,0;m;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+120;Elektroinstallationsrohr DIN EN 61386 (VDE 0605), Maße DIN EN 60423, aus Kunststoff, halogenfrei, einwandig, glatt, starr, mit angeformter Muffe, Außendurchmesser 40 mm, Druckfestigkeit Klasse 2 - leicht (320 N) DIN EN 61386-1 (VDE 0605-1), Klasse Schlagbeanspruchung 3 - mittel DIN EN 61386-1 (VDE 0;90,0;m;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+130;Elektroinstallationsrohr DIN EN 61386 (VDE 0605), Maße DIN EN 60423, aus Kunststoff, halogenfrei, einwandig, glatt, starr, mit angeformter Muffe, Außendurchmesser 63 mm, Druckfestigkeit Klasse 2 - leicht (320 N) DIN EN 61386-1 (VDE 0605-1), Klasse Schlagbeanspruchung 3 - mittel DIN EN 61386-1 (VDE 0;9,0;m;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+140;Elektroinstallationsrohr DIN EN 61386-21, Maße DIN EN;20,0;m;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+150;Elektroinstallationsrohr DIN EN 61386-21, Maße DIN EN;20,0;m;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+160;Elektroinstallationsrohr DIN EN 61386-21, Maße DIN EN;9,0;m;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+170;Elektro-Installationskanal-System Leitungsführungskanal aus halogenfreiem Kunststoff nach DIN EN 50085-1 zur Leitungsverlegung.;2,0;m;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+180;Gitterrinne nach DIN IEC 61537, C-förmig, schwere Ausführung aus Stahldrähten, punktgeschweißt, mit 75 mm Querdrahtabstand.;3,0;m;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+190;Mini-Gitterrinne nach DIN IEC 61537, C-förmig, schwere Ausführung aus Stahldrähten, punktgeschweißt, mit 75 mm Querdrahtabstand.;3,0;m;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+200;Kabelrinne, leicht, nach DIN IEC 61537, mit angeprägtem Stoßstellenverbinder zur schraublosen Schnellbefestigung und mit versetzt angeordneter Boden- und Seitenperforation für stufenlose Befestigung und Anbringung der Systembauteile, Boden zusätzlich gesickt und mit durchgehend mittiger Loch- bzw. S;16,0;m;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+210;Deckel für Kabelrinne/-leiter, mit Stoßleiste zur Verminderung der Durchbiegung am Deckelstoß, Schutz gegen Eindringen von Schmutz sowie Erhöhung der Stabilität mit dem angrenzenden Deckel, mit unverlierbar vormontierten Drehriegelverschlüssen.;6,0;m;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+10;Kabelabzweigkästen nach IEC 60670-22 mit heraustrennbaren, elastischen Dichtmembranen. Geeignet für Innenräume und geschützte Installation im Freien nach DIN VDE 0100, Teil 737. Für Umgebungstemperatur maximal +40 °C und minimal -25 °C, bei relativer Luftfeuchte 50 % bei +40 °C oder 100 % bei +25 °C;20,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+20;75 x 75 x 37 mm;20,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+30;89 x 43 x 38 mm;20,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+40;Mini-Präsenzmelder mit 360° Erfassungsbereich für die Deckeneinbaumontage zum bedarfsgerechten Schalten der Beleuchtung, somit spürbare Verringerung der Energiekosten;11,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+50;"Slave-Präsenzmelder zur Erweiterung des Erfassungsbereiches eines ""Master""-Präsenzmelders mit 360° Erfassungsbereich für die Deckenmontage";1,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+60;Geräteeinbaukanal, halogenfrei, mit Bodenlochung zur Verlegung elektrischer Kabel und Leitungen im Innenbereich. Halogenfreie Ausführung. Mit Bodenlochung zur Montage direkt an der Wand. Geräteeinbau möglich. Installationsgeräte im 45‑mm‑Modulsystem (z. B. Modul 45®) sowie Schalterprogramme in Tragr;2,0;m;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+70;Geräteeinbaudose, 1‑fach, zur Montage von Installationsgeräten mit Tragringen im Installationskanal. Geräteeinbaudose zur Aufnahme von Geräteeinbauten in Geräteeinbaukanälen sowie Installationssäulen. Systembestandteil gemäß DIN EN 50085‑1.;4,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+80;Verbindungsmuffe für Energiekabel, 1 kV;6,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+90;Ausführung Neutral mit 4 Sensorflächen;1,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+100;Aufputz-Gehäuse, komplett mit Abdeckrahmen 1fach;1,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+110;Aus- / Wechselschalter UP;2,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+120;Serienschalter UP;1,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+130;Jalousieschalter UP;10,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+140;Wippen Jalousienschalter;10,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+150;Schuko-Steckdose;2,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+160;Schuko-Steckdose mit Klappdeckel inkl. Dichtungsset IP44;10,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+170;Blindabdeckung mit Tragring;5,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+180;Liefern und fachgerechter Einbau eines Schlüsselschalters, bemessen für 10 A, 250 V~.;2,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+190;Wechselschalter AP, IP55, Aus/Wechsel, mit Steckklemmen, mit einer Einführung für 2 Leitungen und einer Einführung für Leitung oder Rohr, vollflächige Dichtung unter dem Gehäuseboden zur Abdichtung der Gehäuserückseite, gut zugängliche, trichterförmige Montagelöcher in den Gehäusen, eine Wago 2-Leit;2,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+200;Kombination Wechselschalter/Steckdose SCHUKO® mit Klappdeckel AP, IP55. Für senkrechte Montage, Wechselschalter und Steckdose separat anschließbar, mit Steckklemmen, mit einer Einführung für 2 Leitungen und einer Einführung für Leitung oder Rohr, vollflächige Dichtung unter dem Gehäuseboden zur Abdi;5,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+210;Steckdose SCHUKO® mit Klappdeckel AP, IP55, 16 A, mit Steckklemmen, mit einer Einführung für 2 Leitungen und einer Einführung für Leitung oder Rohr, vollflächige Dichtung unter dem Gehäuseboden zur Abdichtung der Gehäuserückseite, mit zufallendem Klappdeckel, manuell einrastbar, um den Schutzgrad IP;2,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+220;Steckdose SCHUKO® 2-fach waagerecht mit Klappdeckel AP, IP55. Für waagerechte Montage, Einsätze durchverdrahtet, mit Steckklemmen, mit einer Einführung für 2 Leitungen und einer Einführung für Leitung oder Rohr, die obere und untere Einführung für Leitungen sind seitlich angeordnet und daher besonde;5,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+230;Wartungsschalter, Typkenner: P1, STOPP-Funktion: NOT-AUS-Funktion, mit rotem Drehgriff und gelbem Sperrkranz, Information zum Lieferumfang:;1,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+240;- schraubenlose Feder-Klemm-Technik;4,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+250;- schraubenlose Feder-Klemm-Technik;1,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+10;Kabelbox eckig für Rohbauöffnung ca. 100x200 mm;2,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+20;Kabelbox eckig für Rohbauöffnung ca. 150x280 mm;3,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+30;Mörtelmasse zur Einmörtelung von Kabelboxen als Formbeständiger, nichbrennbarer Baustoffe, EN 13501-1 und Klasse A1/A2;6,0;kg;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+40;Brandschutzabschottung an Kabel-/Leitungsanlagen als Mineralwolleplattenschott, mit allgemeinem bauaufsichtlichen Prüfzeugnis/allgemeiner bauaufsichtlicher Zulassung, Klassifizierung EI 90 DIN EN 13501-2, im Gebäude, Oberkante Abschottung über Gelände/Fußboden bis 3,5 m, Wand aus Kalksandstein, Dick;1,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+50;Brandschutzabschottung an Kabel-/Leitungsanlagen als Mineralwolleplattenschott, mit allgemeinem bauaufsichtlichen Prüfzeugnis/allgemeiner bauaufsichtlicher Zulassung, Klassifizierung EI 90 DIN EN 13501-2, im Gebäude, Oberkante Abschottung über Gelände/Fußboden bis 3,5 m, Wand aus Kalksandstein, Dick;1,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+60;Brandschutzabschottung an Kabel-/Leitungsanlagen als Schaumschott, mit allgemeinem bauaufsichtlichen Prüfzeugnis/allgemeiner bauaufsichtlicher Zulassung, Klassifizierung EI 30 DIN EN 13501-2, im Gebäude, Oberkante Abschottung über Gelände/Fußboden bis 3,5 m, Decke aus Stahlbeton, Dicke 260 mm, eckig;1,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+70;Bezeichnungsschild, aus Aluminium, Beschriftung gedruckt, befestigen mit Schrauben.;6,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+80;Erstellung einer vollständigen und revisionsfähigen Dokumentation aller ausgeführten Brandschottungen.;6,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+10;LED-Feuchtraum-Anbauleuchte IP66 mit PC-Leuchtenkörper und PC-Diffusor.;4,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+20;"Innen- und Außenleuchte, Rohrleuchte; Decken-Wand und Pendelmontage; Gehäuse aus PE, mit hoher chemischer Beständigkeit; Korrosionsbeständige Endkappen und antivibrations Montageschellen aus hochwertigem Edelstahl V4A (316), auch in chlor- und salzhaltigen Atmosphären. Geeignet für Ozonierung, ein w";10,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+30;Flexibles rundes Einbau-Downlight mit Multi-Funktionen. Gehäuse Stahlblech pulverbeschichtet.;28,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+40;Decken- und Wandleuchte. Die Farbtemperatur der Leuchte kann wahlweise auf 3000 K oder 4000 K eingestellt werden. LED, 22 W Leuchten-Anschlussleistung, Leuchten-Lichtstrom 2653 lm im Betrieb bei Farbtemperatur 3000 K. Leuchten-Lichtstrom 2785 lm im Betrieb bei Farbtemperatur 4000 K. Farbwiedergabein;18,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+10;Fangleitung DIN EN 62561-2 (VDE 0185-561-2), aus Aluminium, Rd 8, auf Attiken und flachem Dach.;100,0;m;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+20;Dachleitungshalter aus feuerverzinktem Stahl, für Dachfläche mit Bitumen-/Kunststoffbahnen, flach, mit Betonstein, für Rundleiter.;50,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+30;Fangstange DIN EN 62561-2 (VDE 0185-561-2), aus Aluminiumlegierung Rd 16, Länge 3000 mm, auf der Dachkonstruktion, mit Standfuß aus Beton.;2,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+40;Fangstange DIN EN 62561-2 (VDE 0185-561-2), aus Aluminiumlegierung Rd 16, Länge 4500 mm, auf der Dachkonstruktion, mit Standfuß aus Beton.;1,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+50;Verbinder DIN EN 62561-1 (VDE 0185-561-1), Klasse H für hohe Belastung, für Kreuzverbindungen, aus nichtrostendem Stahl, für Rd 8 bis 10 mit Rd 8 bis 10, mit Zwischenplatte.;10,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+60;Durchführung der Prüfung sowie der erforderlichen Messungen der Blitzschutzanlage gemäß DIN EN 62305‑3 (VDE 0185‑305‑3).;1,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+10;Überprüfung der vorhandenen Erdungsanlage durch Sichtkontrolle, Prüfung der Anschlüsse sowie Durchführung geeigneter Messungen zur Beurteilung der Wirksamkeit gemäß DIN VDE 0100 und DIN 18014. Dokumentation der Ergebnisse und Übergabe an den Auftraggeber.;1,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+20;Durchführung der Prüfung, Messung sowie Erstellung der Dokumentation der Erdungsanlage gemäß DIN 18014.;1,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+10;Überprüfung der bestehenden Telefonanlage auf Funktion, Vollständigkeit und ordnungsgemäßen Zustand.;10,0;Std;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+20;Elektronischer Gong zur Innenmontage als Klingel- bzw. Signalgeber. Ausführung in Kunststoffgehäuse, Farbe weiß oder gleichwertig.;1,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+30;IP‑Einbau‑Terminals;3,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+40;Aufbaugehäuses;3,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+50;IP‑Lautsprechers;1,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+60;IP‑Deckenlautsprechers;1,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+70;ILS‑IC - IP ICX‑500‑Station‑Lizenz;5,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+80;Netgear GS108PP 8‑Port Gigabit Ethernet Switch;1,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+10;Sonnenschutzzentrale 2-Kanal UP;1,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+20;Sonnenschutz-Wetterstation;1,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+30;Anschlussleitung Wetterstation 4xAWG 26 UL 10m;1,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+40;Bedienungselemente: Taster;2,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+10;Herstellen und Zusammenstellen der notwendigen Dokumentation. D.h. ordentliche (maschinelle) und dauerhafte Beschriftung der Datendosen, der Datenleitungen und der Patchfelder. Aus der Dokumentation muss eindeutig hervorgehen welches Kabel wo und auf welchem Patchfeld aufgelegt ist. Die Übergabe der;1,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+10;Datenanschlussdose, symmetrisch, Kategorie 6 Index A tiefgestellt DIN EN 50173-1, Link-Klasse E Index A tiefgestellt DIN EN 50173-1, Potentialausgleich DIN EN 50310 (VDE 0800-2-310), modular, 2 Ports, RJ45-Buchse DIN EN 60603-7-51, Schutzart IP 44 DIN EN 60529 (VDE 0470-1), in Schneidklemmtechnik, S;4,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+20;Auflegen je RJ 45-Anschluss, 8pol. in modularer Buchse in Datenanschlussdose bzw. Patchfeld incl. Beschriftung;30,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+30;Elektronik-Dose Unterputz;2,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+40;Stecker, dienstneutral, GG45 DIN EN 60603-7-7 (VDE 0687-603-7-7), rückwärtskompatibel zu RJ45, Kategorie 6 Index A tiefgestellt DIN EN 50173-1, Funkstörstrahlung DIN EN 55022 (VDE 0878-22), Klasse B, zum Anschluss von massivem Datenkabel.;15,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+50;Kabelverbinder, dienstneutral, Kategorie 7 Index A tiefgestellt DIN EN 50173-1, Funkstörstrahlung DIN EN 55022 (VDE 0878-22), Klasse B, zum Anschluss von massivem Datenkabel, Schutzart IP 2X DIN EN 60529 (VDE 0470-1).;2,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+60;"Liefern und montieren eines Wandgehäuses zur Aufnahme von 19""-Einbauten (482,6 mm) für Kommunikations- und Netzwerktechnik.";1,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+70;Keystone Modultraeger, 19 Zoll, 1HE, 24 Steckplaetze;1,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+80;C6[A]modul K 180 Grad JackHinweis: [A] = tiefgestellter BuchstabeUniverselle Keystone-Anschlusseinheit Datentechnik, Kategorie 6[A], 500 MHz Komponenten gepruefte Ausfuehrung fuer Datenuebertragungsraten bis 10 GBit nachIEEE 802.3an aus Zinkdruckguss, Oberflaechen veredelt, mit einzelgeschirmter RJ4;24,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+90;1HE Durchführungs und Rangierpanel mit Bürstenleiste;1,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+100;"Fachboden für 19"" -";1,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+110;1HE Aluminium Steckdosenleiste mit Überspannungsschutz, 16A 250VAC 50/60Hz, 7-Schukosteckdosen, mit Schalter, Überspannungsschutz;1,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+120;Kabelabfangschiene.;1,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+130;Potentialausgleichsschiene.;1,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+140;Cu-Abnahmemessungen Klasse EA aller fertig installierten Verkabelungs-Strecken Kupfer;15,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+10;"Spleissbox, ausziehbar, 19""""/1HE, 6xLC-D, OM4,; - pulverbeschichtetes Stahlblechgehäuse; - werkseitige Portkennzeichnung; - ausziehbare Schubladenlösung; - im geöffneten Zustand nach unten neigbar; - mit frontseitigem Schnellverschluss (Push-Pull); - mit Spleisskassette zur Aufnahme von 12 oder 24 P";2,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+20;Zur Verbindung Pigtail mit LWL-Kabel, inklusive Spleißschutz und vorbereiten des LWL-Kabels für diesen Arbeitsschritt.;8,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+30;Durchführung von OTDR‑Messungen an installierten LWL‑Multimodeleitungen (OM4) gemäß DIN ISO/IEC 14763‑3.;8,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+40;LWL-Steckeroberflächenbewertung;8,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+10;Stundenlohnarbeiten dürfen nur nach vorheriger Abstimmung;35,0;Std;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+10;Erstellung und Übergabe vollständiger und revisionsfähiger Dokumentationsunterlagen der ausgeführten Anlagen.;1,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+10;Facharbeiter Obermonteur;11,0;Std;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+20;Facharbeiter Monteur;12,0;Std;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+30;Helfer;12,0;Std;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+10;Wartungspreis nach dem ersten Betriebsjahr;1,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+20;Wartungspreis nach dem zweiten Betriebsjahr;1,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+30;Wartungspreis nach dem dritten Betriebsjahr;1,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+40;Wartungspreis nach dem viertem Betriebsjahr;1,0;St;gaeb;leistungsbeschreibungen/Los 1 SZR LV_Elektro_Anlagentechnik.X83
+0101.10;Schrank, IP44/I, 1400x550x205mm, leer;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0101.20;Baustein, 300x500mm, für Reihenklemmen waagerecht;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0101.30;Baustein, 600x500mm, für Reiheneinbaugeräte waagerecht, 8x12 PLE;2,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0101.40;Baustein, 450x500mm, für Reiheneinbaugeräte waagerecht, 6x12 PLE;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0101.50;Tragschienen, 1350mm, für Schränke ab 160mm Tiefe, Set = 2 Stück;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0101.60;Lasttrennschalter für Sicherungen D02 E18 63A AC400V 3polig Hutschiene;3,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0101.70;Fehlerstrom-Leitungsschutzschalter 1P+N 6kA B-16A 30mA Typ A QuickConnect;3,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0101.80;Fehlerstromschutzschalter 4 polig 6kA 63A 30mA Typ A;10,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0101.90;Leitungsschutzschalter 1 polig 6kA B-Charakteristik 10A 1 Modul;16,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0101.100;Leitungsschutzschalter 1 polig 6kA B-Charakteristik 16A 1 Modul;16,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0101.110;Leitungsschutzschalter 3 polig 6kA B-Charakteristik 16A 3 Module;15,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0101.120;Leitungsschutzschalter 3 polig 6kA C-Charakteristik 16A 3 Module;9,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0101.130;Leitungsschutzschalter 3 polig 6kA C-Charakteristik 25A 3 Module;2,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0101.140;Hilfsschalter zum Anbau an Leitungsschutzschalter, 1 Schließer + 1 Öffner, 230 V AC, 6 A;16,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0101.150;InstallationsSchütz 25A 2S 230V;3,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0101.160;Überspannungsableiter 4P T2 TNS Uc 275V In 20kA Imax 40kA;3,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0101.170;DALI Control 64 Gateway, 4TE REG, KNX,;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0101.180;KNX Busspannungsversorgung, 4TE REG, 640 mA;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0101.190;Dokumentation und Messungen;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0101.200;Kleinverteiler 315 x 750 x 155 mm;3,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0101.210;Dokumentation und Messungen - Kleinverteiler;2,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0201.10;Kabelbügel für 8 Ltg. aus Stahl;50,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0201.20;Sammelhalter für 15 Ltg. aus Stahl;100,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0201.30;Sammelhalter für 30 Ltg. aus Stahl;20,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0201.40;Sammelhalter für 15 Ltg. PVC;150,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0201.50;Sammelhalter für 30 Ltg., PVC;150,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0201.60;Ankerschiene;10,0;m;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0201.70;Kabelleiter H 60mm B 500mm;4,0;m;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0201.80;Hängestiel- und Wandausleger,;20,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0201.90;Bügelschellen, für die Befestigung der Leitungen;25,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0201.100;Elektroinstallationsrohr halogenfr.Kunststoff AD 25mm AP;150,0;m;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0201.110;Elektroinstallationsrohr halogenfr.Kunststoff AD 40mm AP;50,0;m;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0201.120;"Schweres Stahlrohr; starr; Staro Steck-ES-V 25 feuerverzinkt";30,0;m;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0201.130;"Schweres Stahlrohr; starr; Staro Steck-ES-V 32 feuerverzinkt";3,0;m;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0201.140;"Schweres Stahlrohr; starr; Staro Steck-ES-V 40 feuerverzinkt";3,0;m;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0201.150;Leitungsführungskanal aus PC/ABS halogenfrei LFH 40x60mm verkehrweiß;72,0;m;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0201.160;Elektroinstallationsrohr PVC-U AD 25mm;10,0;m;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0201.170;Elektroinstallationsrohr PVC-U AD 32mm;10,0;m;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0202.10;PVC-Energiekabel NYY-J 5 x 2,5 mm2 Mehradriges Starkstromkabel, mit PE,;20,0;m;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0202.20;Halogenfreie Mantelleitung NHXMH 1x6 verbessertes Verhalten im Brandfall;50,0;m;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0202.30;Halogenfreie Mantelleitung NHXMH 1x10 verbessertes Verhalten im Brandfall;1,0;m;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0202.40;Halogenfreie Mantelleitung NHXMH 1x16 verbessertes Verhalten im Brandfall;20,0;m;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0202.50;Halogenfreie Mantelleitung NHXMH 3x1,5 verbessertes Verhalten im Brandfall;50,0;m;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0202.60;Halogenfreie Mantelleitung NHXMH 3x2,5 verbessertes Verhalten im Brandfall;500,0;m;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0202.70;Halogenfreie Mantelleitung NHXMH 5x1,5 verbessertes Verhalten im Brandfall;200,0;m;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0202.80;Halogenfreie Mantelleitung NHXMH 5x2,5 verbessertes Verhalten im Brandfallng NYM-J 5 x 2,5 mm²;500,0;m;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0202.90;Halogenfreie Mantelleitung NHXMH 5x4 verbessertes Verhalten im Brandfall;30,0;m;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0202.100;Halogenfreie Mantelleitung NHXMH 5x6 verbessertes Verhalten im Brandfall;20,0;m;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0202.110;Halogenfreie Mantelleitung NHXMH 5x10 verbessertes Verhalten im Brandfall;15,0;m;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0202.120;Halogenfreie Mantelleitung NHXMH 5x16 verbessertes Verhalten im Brandfall;60,0;m;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0202.130;Mantelleitung (N)HXH E90 3x1,5, halogen- frei, Funktionserhalt 90min im Brandfall;50,0;m;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0202.140;Datenleitg. J-2Y(ST)H St III Bd 4x2x0,8 halogenfrei, verbessert. Verhalten Brand;1,0;m;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0202.150;Datenleitg. J-2Y(ST)H St III Bd 6x2x0,8 halogenfrei, verbessert. Verhalten Brand;250,0;m;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0202.160;Brandmeldekabel 2x2x0,8 mm, halogenfrei / CPR Eca;300,0;m;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0202.170;Datenkabel Horizontal-/Steigbereich Kat.7A geschirmt 4x2xAWG22 halogenfrei flammwidrig;100,0;m;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0202.180;Datenkabel Horizontal-/Steigbereich Kat.7A geschirmt 2x(4x2xAWG22) halogenfrei flammwidrig;600,0;m;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0202.190;Datenleitung JE-H(St)H 4x2x0,8, halogen- frei, Funktionserhalt 90min im Brandfall;100,0;m;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0202.200;LWL-Installationskabel UCFibre I/O CT LSHF 3.0kN 12 OM4B;50,0;m;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0202.210;EIB Systemleitung IY(ST)2 x 2 x 0,8;25,0;m;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0202.220;Halogenfreie Steuerleitung, 5-adrig, 1,5 mm²;20,0;m;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0203.10;Kabelanschluss einseitig 3*1,5 bis 3*4,0mm²;21,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0203.20;Kabelanschluss einseitig 5*1,5 bis 5*2,5mm²;15,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0203.30;Kabelanschluss einseitig 4*4,0 bis 5*6,0 mm²;6,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0203.40;Kabelanschluss einseitig 4*10 bis 5*16 mm²;6,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0203.50;Kabelanschluss einseitig 2*2*0,6 bis 2*2*0,8 mm;10,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0203.60;Kabelanschluss einseitig 4*2*0,6 bis 4*2*0,8 mm;10,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0203.70;Kabelanschluss J-02YSCH 4x2xAWG22/1;4,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0203.80;Kabelanschluss J-02YSCH 2x(4x2xAWG22/1);14,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0204.10;Kabelabzweigkasten;30,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0204.20;Verbindungsdose;20,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0204.30;Mini Verbindungsdose;20,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0204.40;Decken-Präsenzmelder - Master;10,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0204.50;Decken-Präsenzmelder - Slave;6,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0204.60;Geräteeinbaukanal, halogenfrei;8,0;m;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0204.70;Geräteeinbaudose, 1-fach;10,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0204.80;Verbindungsmuffe für Energiekabel, 1 kV;6,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0204.90;KNX Glastaster  4-fach, RGBW, Weiß, Neutral;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0204.100;AP-Gehäuse 1f + Rahmen;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0204.110;Aus- / Wechselschalter UP;4,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0204.120;Serienschalter UP;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0204.130;Jalousieschalter UP;7,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0204.140;Wippen Jalousienschalter;7,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0204.150;Schuko-Steckdose;10,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0204.160;Schuko-Steckdose mit Klappdeckel IP44;13,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0204.170;Blindabdeckung mit Tragring;5,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0204.180;Einsatz Schlüsselschalter 2-p inkl. Abdeckung und Profilhalbzylinder;3,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0204.190;Aus-/Wechselschalter AP, IP55;2,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0204.200;Kombination Aus-/Wechselschalter m. Steckdose AP, IP55;9,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0204.210;Steckdose 1-fach AP, IP55;8,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0204.220;Steckdose 2-fach AP, IP55 waagerecht;8,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0204.230;Hauptschalter 4-polig;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0204.240;CEE Wandsteckdose 16A, 5p, 6h, 400V, IP44;5,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0204.250;CEE Wandsteckdose 32A, 5p, 6h, 400V, IP44;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0205.10;Kabelbox eckig für Rohbauöffnung (HxB) ca. 100x200 mm;2,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0205.20;Kabelbox eckig für Rohbauöffnung (HxB) ca. 150x280 mm;2,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0205.30;Mörtelmasse zur Einmörtelung von Kabelboxen als;6,0;kg;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0205.40;Brandschutzabschottung Leitungsanlagen MW-Pl.Schott EI90 Gebäude Wand D 240mm 0,01-0,02m2 A;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0205.50;Brandschutzabschottung Leitungsanlagen MW-Pl.Schott EI90 Gebäude Wand D 240mm 0,02-0,05m2 A;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0205.60;Brandschutzabschottung Leitungsanlagen Schaumschott EI30 Gebäude Decke D 260mm bis 0,01m2 A;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0205.70;I-60 / I-90 / I-120 - Kanal als Standardbauteil wie unter Pos. 1. beschrieben als Gerader Kanal in 2,0 m Länge.;10,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0205.80;I-60 / I-90 / I-120 - Kanal als Standardbauteil wie unter Pos. 1. beschrieben als Gerader Kanal in 1,0 m Länge.;4,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0205.90;"Verbindungselement für vierseitigen I-60 / I-90 / I-120 Kanal oder Kanal-Formteil 140 x 80 mm; verzinkt";10,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0205.100;"Befestigungsmaterial (bestehend aus Wandausleger / Gewindestangen für direkte Decken- oder Wandabhängung) für Verbindungselement für vierseitigen I-60 / I-90 / I-120 Kanal oder Kanal-Formteil; inkl. Metalldübel";20,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0205.110;I-60 / I-90 / I-120 - Kanal als Standardbauteil wie unter Pos. 1. beschrieben - hier als Flachwinkel 2 x 45° (90°);2,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0205.120;Wandanschluss an Trennwand erstellen, Mauerwerk oder Beton gemäß ABG wie unter Pos. 1. beschrieben;2,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0205.130;Laibung in Massivwand erstellen + Mineralwolle bzw. Brandschutzmörtel MIII gemäß ABG wie unter Pos. 1. beschrieben;2,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0205.140;Kabeleintritt / -austritt aus I-60 / I-90 / I-120 - Kanal gemäß ABG wie unter Pos. 1. beschrieben;2,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0205.150;Potentialausgleich im I-60 / I-90 / I-120 - Kanal gemäß ABG wie unter Pos. 1. beschrieben;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0205.160;Bezeichnungsschild Alu Beschriftung gedruckt;10,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0205.170;Dokumentation Brandschotts;10,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0301.10;Decken- und Wandleuchte.;32,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0301.20;Aufputz-Montagerahmen;12,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0301.30;LED-Feuchtraum-Anbauleuchte IP66 mit PC-Leuchtenkörper und PC-Diffusor.;4,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0301.40;LED-Feuchtraum-Anbauleuchte IP66 mit PC-Leuchtenkörper und PC-Diffusor.;2,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0301.50;LED Rohrleuchte mit hoher chemischer Beständigkeit 1200mm;7,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0301.60;LED Rohrleuchte mit hoher chemischer Beständigkeit 1500mm;9,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0301.70;Einbau-Downlight;48,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0401.10;Überprüfung der vorhandenen Erdungsanlage;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0501.10;Ruf-Kompaktset für Behinderten-WC;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0501.20;Zugtaster als Zubehör für Behinderten-WC;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0502.10;Überprüfung der vorhandenen Telefonanlage;12,0;Std;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0601.10;Herstellen und Zusammenstellen der IT-Dokumentation;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0602.10;E-DAT C6A 2 Port UP0;4,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0602.20;Datenanschlussdose symm. Kat.6A 2Ports IP44;4,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0602.30;Auflegen je RJ45-Anschluss;24,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0602.40;Elektronik-Dose Unterputz;2,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0602.50;Stecker dienstneutral Kat.6A;15,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0602.60;Kabelverbinder, dienstneutral Kat.7A;2,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0602.70;"Wandgehäuse 19"" für IT-/Kommunikationstechnik";1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0602.80;Keystone 19 Zoll Modulträger 1HE 24 Port schwarz unbestückt, geschirmt;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0602.90;C6Amodul K 180° Buchse - Keystone;24,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0602.100;1HE Durchführungs und Rangierpanel mit Bürstenleiste;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0602.110;Fachboden für Serverschränke;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0602.120;1HE Aluminium Steckdosenleiste mit Überspannungsschutz,;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0602.130;Kabelabfangschiene;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0602.140;Potentialausgleichsschiene;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0602.150;Cu-Abnahmemessungen Klasse EA aller fertig installierten;15,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0603.10;"Spleissbox, ausziehbar, 19""""/1HE, 6xLC-D, OM4";2,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0603.20;Lichtbogenspleiß;8,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0603.30;OTDR -Messung (beidseitig);8,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0603.40;LWL-Steckeroberflächenbewertung;8,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+07.10;Demontage, Entsorgung und Überprüfung vorhandene Installation;40,0;Std;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0801.10;Dokumentationspläne / Revisionsunterlagen;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0802.10;Facharbeiter Obermonteur;20,0;Std;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0802.20;Facharbeiter Monteur;37,0;Std;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+0802.30;Helfer;15,0;Std;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+09.10;Wartungspreis nach dem ersten Betriebsjahr;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+09.20;Wartungspreis nach dem zweiten Betriebsjahr;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+09.30;Wartungspreis nach dem dritten Betriebsjahr;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+09.40;Wartungspreis nach dem viertem Betriebsjahr;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.D83
+10;Wandaufbauschrank für die Innenraummontage mit VDE-Gutachten (Fertigungsüberwachung) nach DIN EN 61439-1/-3 zur Aufputz-, Unterputz- oder teilversenkter Montage. Zum Aufbau einer Niederspannungsverteilung bis 400 A, 3AC 230/400 V 50 Hz. Schutzart IP44, Schutzklasse I, Luft- und Kriechstrecken nach D;1,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+20;Reihenklemmen- oder REG-Geräte Baustein mit Hutschiene zum Aufbau einer Niederspannungsverteilung als Schaltgerätekombination bis 1600A, Bemessungsspannung 3AC 690 V 50 Hz. Serienmäßig plombierbare Berührungsschutzabdeckungen, verstärkt mittels Gasinnendruckverfahren mit je vier Schnellverschlussbol;1,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+30;Reihenklemmen- oder REG-Geräte Baustein mit Hutschiene zum Aufbau einer Niederspannungsverteilung als Schaltgerätekombination bis 1600A, Bemessungsspannung 3AC 690 V 50 Hz. Serienmäßig plombierbare Berührungsschutzabdeckungen, verstärkt mittels Gasinnendruckverfahren mit je vier Schnellverschlussbol;2,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+40;Reihenklemmen- oder REG-Geräte Baustein mit Hutschiene zum Aufbau einer Niederspannungsverteilung als Schaltgerätekombination bis 1600A, Bemessungsspannung 3AC 690 V 50 Hz. Serienmäßig plombierbare Berührungsschutzabdeckungen, verstärkt mittels Gasinnendruckverfahren mit je vier Schnellverschlussbol;1,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+50;Tragschienen aus profiliertem und verzinktem Stahlblech.;1,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+60;D0-Sicherungslasttrennschalter dreipolig schaltbar für D02 Sicherungen, für Hutschienenmontage. Mit Meldesystem für Sicherungsausfall durch LED. Schraubkappenlose Stecktechnik bietet werksseitigen dauerhaften Kontaktdruck. Keine Kontaktlockerung während des Betriebes. Abschließbar mit Vorhängeschlos;3,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+70;Fehlerstrom-Leitungsschutzschalter nachDIN EN 61009-1 (VDE 0664-20) mit QuickConnect Klemme, am Abgang bis 20 A und am Zugang bis 63 A, blaue Test-Taste und Fehlerstromanzeige. Einfache Einzelentnahme aus dem Phasenschienenverbund. Geeignet zum nachträglichen Anbau von Zusatzeinrichtungen. Beschrift;3,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+80;Fehlerstrom-Schutzschalter (FI) nach DIN EN 61008-1 (VDE 0664-10), DIN EN 61008-2-1 (VDE 0664-11) mitBi-Connect-Klemmen unten, externe blaue Test-Taste und Fehlerstromanzeige. Geeignet zum nachträglichen Anbau von Zusatzeinrichtungen. Anschlussklemmen mit Draht-Einschiebe-Schutz, Beschriftungsmöglic;10,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+90;Leitungsschutzschalter nach DIN EN 60898-1(VDE 0641-11) mit zeitverzögertem thermischen Auslöser für Überlastschutz und elektromagnetischer Auslöser für Kurzschlussschutz. Geeignet zum nachträglichen Anbau von Zusatzeinrichtungen. Beschriftungsmöglichkeit direkt am Gerät und Einzelentnahme aus dem P;16,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+100;Leitungsschutzschalter nach DIN EN 60898-1(VDE 0641-11) mit zeitverzögertem thermischen Auslöser für Überlastschutz und elektromagnetischer Auslöser für Kurzschlussschutz. Geeignet zum nachträglichen Anbau von Zusatzeinrichtungen. Beschriftungsmöglichkeit direkt am Gerät und Einzelentnahme aus dem P;16,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+110;Leitungsschutzschalter nach DIN EN 60898-1(VDE 0641-11) mit zeitverzögertem thermischen Auslöser für Überlastschutz und elektromagnetischer Auslöser für Kurzschlussschutz. Geeignet zum nachträglichen Anbau von Zusatzeinrichtungen. Beschriftungsmöglichkeit direkt am Gerät und Einzelentnahme aus dem P;15,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+120;Leitungsschutzschalter nach DIN EN 60898-1(VDE 0641-11) mit zeitverzögertem thermischen Auslöser für Überlastschutz und elektromagnetischer Auslöser für Kurzschlussschutz. Geeignet zum nachträglichen Anbau von Zusatzeinrichtungen. Beschriftungsmöglichkeit direkt am Gerät und Einzelentnahme aus dem P;9,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+130;Leitungsschutzschalter nach DIN EN 60898-1(VDE 0641-11) mit zeitverzögertem thermischen Auslöser für Überlastschutz und elektromagnetischer Auslöser für Kurzschlussschutz. Geeignet zum nachträglichen Anbau von Zusatzeinrichtungen. Beschriftungsmöglichkeit direkt am Gerät und Einzelentnahme aus dem P;2,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+140;Hilfsschalter zum Anbau an Leitungsschutzschalter, 1 Schließer + 1 Öffner, 230 V AC, 6 A;16,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+150;Schütz in kompakter Bauweise nach DIN EN 61095 (VDE 0637-3) mit Kontaktstellungsanzeige durch Anzeigefenster, integriertes Beschriftungsfeld und geeignet zum nachträglichen Anbau von Zusatzeinrichtung.;3,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+160;Überspannungsableiter Typ 2, bestehend aus Schutz-Steckmodulen und Basiselement für die Montage auf der Hutschiene. Mit optischer rot/grün Anzeige zur Statusüberwachung und modular anbaubarem Fernmeldekontakt. Abschaltung der einzelnen Schutzpfade im Fehlerfall. Vorsicherungsfreie Installation bis z;3,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+170;Das DALI-Gateway ist DALI-2 zertifiziert. Farbeinstellung durch HSV Ansteuerung. 1 DALI-Ausgang;1,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+180;Ausführung mit Nennstrom 640 mA;1,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+190;Erstellung und Übergabe einer vollständigen Anlagendokumentation inklusive Revisionsunterlagen, Plänen, Verzeichnissen sowie Bedienungs- und Wartungsanleitungen. Durchführung aller vorgeschriebenen Prüfungen nach DIN VDE 0100-600 und Erstellung eines umfassenden, nachvollziehbaren Mess- und Prüfberi;1,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+200;Kleinverteiler, mit Schutzart IP65, 3-reihig, 42 verfügbare Teilungseinheiten, mit integrierten Belüftungselementen zur Verminderung der Kondenswasserbildung, Bemessungsbetriebsspannung: 400V AC, Bemessungsisolationsspannung: 1000V AC, 1500V DC, zertifiziert durch VDE (DIN EN 60670-1/-24 (VDE 0606-1;3,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+210;Erstellung und Übergabe einer vollständigen Anlagendokumentation inklusive Revisionsunterlagen, Plänen, Verzeichnissen sowie Bedienungs- und Wartungsanleitungen. Durchführung aller vorgeschriebenen Prüfungen nach DIN VDE 0100-600 und Erstellung eines umfassenden, nachvollziehbaren Mess- und Prüfberi;2,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+10;Kabelbügel aus Metall für ca. 8 Leitungen;50,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+20;Sammelhalter, aus Metall für ca. 15 Leitungen;100,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+30;Sammelhalter, aus Metall für ca. 30 Leitungen;20,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+40;Sammelhalter, aus Kunststoff für ca. 15 Leitungen;150,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+50;Sammelhalter, aus Kunststoff für ca. 30 Leitungen;150,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+60;Ankerschiene, C-Profil nach DIN EN 60715, gelocht.;10,0;m;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+70;Steigetrasse nach DIN IEC 61537, für die Wandmontage, mit durchgehend perforierten und profilierten Seitenholmen, mit eingenieteten Sprossen aus C-Profilen mit 18 mm Schlitzweite.;4,0;m;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+80;Hängestiel- und Wandausleger, mittelschwer, zur Wand- und Hängestielmontage, einschließlich feuerverzinkten anteilmäßigem Befestigungszubehör.;20,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+90;Bügelschellen, für die Befestigung der;25,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+100;Elektroinstallationsrohr DIN EN 61386 (VDE 0605), Maße DIN EN 60423, aus Kunststoff, halogenfrei, einwandig, glatt, starr, mit angeformter Muffe, Außendurchmesser 25 mm, Druckfestigkeit Klasse 2 - leicht (320 N) DIN EN 61386-1 (VDE 0605-1), Klasse Schlagbeanspruchung 3 - mittel DIN EN 61386-1 (VDE 0;150,0;m;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+110;Elektroinstallationsrohr DIN EN 61386 (VDE 0605), Maße DIN EN 60423, aus Kunststoff, halogenfrei, einwandig, glatt, starr, mit angeformter Muffe, Außendurchmesser 40 mm, Druckfestigkeit Klasse 2 - leicht (320 N) DIN EN 61386-1 (VDE 0605-1), Klasse Schlagbeanspruchung 3 - mittel DIN EN 61386-1 (VDE 0;50,0;m;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+120;Elektroinstallationsrohr DIN EN 61386-21, Maße DIN EN;30,0;m;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+130;Elektroinstallationsrohr DIN EN 61386-21, Maße DIN EN;3,0;m;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+140;Elektroinstallationsrohr DIN EN 61386-21, Maße DIN EN;3,0;m;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+150;Elektro-Installationskanal-System Leitungsführungskanal aus halogenfreiem Kunststoff nach DIN EN 50085-1 zur Leitungsverlegung.;72,0;m;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+160;Elektroinstallationsrohr DIN EN 61386 (VDE 0605), Maße DIN EN 60423, aus PVC-U, einwandig, gewellt, flexibel, Außendurchmesser 25 mm, Druckfestigkeit Klasse 1 - sehr leicht (125 N) DIN EN 61386-1 (VDE 0605-1), Klasse Schlagbeanspruchung 1 - sehr leicht DIN EN 61386-1 (VDE 0605-1).;10,0;m;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+170;Elektroinstallationsrohr DIN EN 61386 (VDE 0605), Maße DIN EN 60423, aus PVC-U, einwandig, gewellt, flexibel, Außendurchmesser 32 mm, Druckfestigkeit Klasse 1 - sehr leicht (125 N) DIN EN 61386-1 (VDE 0605-1), Klasse Schlagbeanspruchung 1 - sehr leicht DIN EN 61386-1 (VDE 0605-1),;10,0;m;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+10;"mit gelbgrünem Schutzleiter; Nennspan-";20,0;m;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+20;nach DIN VDE 0250, flammwidrig,;50,0;m;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+30;nach DIN VDE 0250, flammwidrig,;1,0;m;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+40;nach DIN VDE 0250, flammwidrig,;20,0;m;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+50;nach DIN VDE 0250, flammwidrig,;50,0;m;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+60;nach DIN VDE 0250, flammwidrig,;500,0;m;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+70;nach DIN VDE 0250, flammwidrig,;200,0;m;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+80;nach DIN VDE 0250, flammwidrig,;500,0;m;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+90;nach DIN VDE 0250, flammwidrig,;30,0;m;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+100;nach DIN VDE 0250, flammwidrig,;20,0;m;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+110;nach DIN VDE 0250, flammwidrig,;15,0;m;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+120;nach DIN VDE 0250, flammwidrig,;60,0;m;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+130;Funktionserhalt 90 min nach DIN 4102;50,0;m;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+140;für Fernsprech-, Signal- und Datenüber-;1,0;m;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+150;für Fernsprech-, Signal- und Datenüber-;250,0;m;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+160;Liefern und Verlegen eines Brandmeldekabels mit statischem Schirm,;300,0;m;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+170;Datenkabel für den Horizontal- und Steigbereich DIN EN 50288-9-1 (VDE 0819-9-1), Kategorie 7 Index A tiefgestellt DIN EN 50173-1, geschirmt, Trennklasse d DIN EN 50174-2 (VDE 0800-174-2), Link-Klasse DIN EN 50173-1 E Index A tiefgestellt, 4 x 2 x AWG 22, halogenfrei, flammwidrig.;100,0;m;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+180;Datenkabel für den Horizontal- und Steigbereich DIN EN 50288-9-1 (VDE 0819-9-1), Kategorie 7 Index A tiefgestellt DIN EN 50173-1, geschirmt, Trennklasse d DIN EN 50174-2 (VDE 0800-174-2), Link-Klasse DIN EN 50173-1 E Index A tiefgestellt, 2 x (4 x 2 x AWG 22), halogenfrei, flammwidrig.;600,0;m;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+190;Halogenfreies Installationskabel für;100,0;m;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+200;DIN VDE Bezeichnung: U-DQ(ZN)BH ZB 12G50 OM4 3kN LWL-Kabel als zentrale mit Gel gefüllte Bündelader-Ausführung für die strukturierte Verkabelung mit 12 biegeunempfindlichen Bendbright-Fasern Multimode OM4. Das Kabel ist UV-beständig, metallfrei, längswasserdicht und nagetiergeschützt mit einer Zugfe;50,0;m;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+210;EIB Systemleitung IY(ST)2 x 2 x 0,8 mit 4 kV Prüfspannung Farbe grün mit Aufdruck EIB Bussystem: Bussystem EIB;25,0;m;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+220;Ausführung als mehradrige Leitung mit 5 Adern und einem Leiternennquerschnitt von jeweils 1,5 mm², feindrähtig (Klasse 5), mit Schutzleiter. Aderkennzeichnung mittels Ziffern.;20,0;m;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+10;komplette Arbeit bestehend aus den Einzelleistungen;21,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+20;komplette Arbeit bestehend aus den Einzelleistungen;15,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+30;komplette Arbeit bestehend aus den Einzelleistungen;6,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+40;komplette Arbeit bestehend aus den Einzelleistungen;6,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+50;komplette Arbeit bestehend aus den Einzelleistungen;10,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+60;komplette Arbeit bestehend aus den Einzelleistungen;10,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+70;simplexSpezifizier;4,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+80;duplexSpezifiziert;14,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+10;Kabelabzweigkästen nach IEC 60670-22 mit heraustrennbaren, elastischen Dichtmembranen. Geeignet für Innenräume und geschützte Installation im Freien nach DIN VDE 0100, Teil 737. Für Umgebungstemperatur maximal +40 °C und minimal -25 °C, bei relativer Luftfeuchte 50 % bei +40 °C oder 100 % bei +25 °C;30,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+20;75 x 75 x 37 mm;20,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+30;89 x 43 x 38 mm;20,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+40;Mini-Präsenzmelder mit 360° Erfassungsbereich für die Deckeneinbaumontage zum bedarfsgerechten Schalten der Beleuchtung, somit spürbare Verringerung der Energiekosten;10,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+50;"Slave-Präsenzmelder zur Erweiterung des Erfassungsbereiches eines ""Master""-Präsenzmelders mit 360° Erfassungsbereich für die Deckenmontage";6,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+60;Geräteeinbaukanal, halogenfrei, mit Bodenlochung zur Verlegung elektrischer Kabel und Leitungen im Innenbereich. Halogenfreie Ausführung. Mit Bodenlochung zur Montage direkt an der Wand. Geräteeinbau möglich. Installationsgeräte im 45‑mm‑Modulsystem (z. B. Modul 45®) sowie Schalterprogramme in Tragr;8,0;m;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+70;Geräteeinbaudose, 1‑fach, zur Montage von Installationsgeräten mit Tragringen im Installationskanal. Geräteeinbaudose zur Aufnahme von Geräteeinbauten in Geräteeinbaukanälen sowie Installationssäulen. Systembestandteil gemäß DIN EN 50085‑1.;10,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+80;Verbindungsmuffe für Energiekabel, 1 kV;6,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+90;Ausführung Neutral mit 4 Sensorflächen;1,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+100;Aufputz-Gehäuse, komplett mit Abdeckrahmen 1fach;1,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+110;Aus- / Wechselschalter UP;4,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+120;Serienschalter UP;1,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+130;Jalousieschalter UP;7,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+140;Wippen Jalousienschalter;7,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+150;Schuko-Steckdose;10,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+160;Schuko-Steckdose mit Klappdeckel inkl. Dichtungsset IP44;13,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+170;Blindabdeckung mit Tragring;5,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+180;Liefern und fachgerechter Einbau eines Schlüsselschalters, bemessen für 10 A, 250 V~.;3,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+190;Wechselschalter AP, IP55, Aus/Wechsel, mit Steckklemmen, mit einer Einführung für 2 Leitungen und einer Einführung für Leitung oder Rohr, vollflächige Dichtung unter dem Gehäuseboden zur Abdichtung der Gehäuserückseite, gut zugängliche, trichterförmige Montagelöcher in den Gehäusen, eine Wago 2-Leit;2,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+200;Kombination Wechselschalter/Steckdose SCHUKO® mit Klappdeckel AP, IP55. Für senkrechte Montage, Wechselschalter und Steckdose separat anschließbar, mit Steckklemmen, mit einer Einführung für 2 Leitungen und einer Einführung für Leitung oder Rohr, vollflächige Dichtung unter dem Gehäuseboden zur Abdi;9,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+210;Steckdose SCHUKO® mit Klappdeckel AP, IP55, 16 A, mit Steckklemmen, mit einer Einführung für 2 Leitungen und einer Einführung für Leitung oder Rohr, vollflächige Dichtung unter dem Gehäuseboden zur Abdichtung der Gehäuserückseite, mit zufallendem Klappdeckel, manuell einrastbar, um den Schutzgrad IP;8,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+220;Steckdose SCHUKO® 2-fach waagerecht mit Klappdeckel AP, IP55. Für waagerechte Montage, Einsätze durchverdrahtet, mit Steckklemmen, mit einer Einführung für 2 Leitungen und einer Einführung für Leitung oder Rohr, die obere und untere Einführung für Leitungen sind seitlich angeordnet und daher besonde;8,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+230;Wartungsschalter, Typkenner: P1, STOPP-Funktion: NOT-AUS-Funktion, mit rotem Drehgriff und gelbem Sperrkranz, Information zum Lieferumfang:;1,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+240;- schraubenlose Feder-Klemm-Technik;5,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+250;- schraubenlose Feder-Klemm-Technik;1,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+10;Kabelbox eckig für Rohbauöffnung ca. 100x200 mm;2,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+20;Kabelbox eckig für Rohbauöffnung ca. 150x280 mm;2,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+30;Mörtelmasse zur Einmörtelung von Kabelboxen als Formbeständiger, nicht brennbarer Baustoffe, EN 13501-1 mit Klasse A1/A2;6,0;kg;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+40;Brandschutzabschottung an Kabel-/Leitungsanlagen als Mineralwolleplattenschott, mit allgemeinem bauaufsichtlichen Prüfzeugnis/allgemeiner bauaufsichtlicher Zulassung, Klassifizierung EI 90 DIN EN 13501-2, im Gebäude, Oberkante Abschottung über Gelände/Fußboden bis 3,5 m, Wand aus Kalksandstein, Dick;1,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+50;Brandschutzabschottung an Kabel-/Leitungsanlagen als Mineralwolleplattenschott, mit allgemeinem bauaufsichtlichen Prüfzeugnis/allgemeiner bauaufsichtlicher Zulassung, Klassifizierung EI 90 DIN EN 13501-2, im Gebäude, Oberkante Abschottung über Gelände/Fußboden bis 3,5 m, Wand aus Kalksandstein, Dick;1,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+60;Brandschutzabschottung an Kabel-/Leitungsanlagen als Schaumschott, mit allgemeinem bauaufsichtlichen Prüfzeugnis/allgemeiner bauaufsichtlicher Zulassung, Klassifizierung EI 30 DIN EN 13501-2, im Gebäude, Oberkante Abschottung über Gelände/Fußboden bis 3,5 m, Decke aus Stahlbeton, Dicke 260 mm, eckig;1,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+70;"Gerader Kanal 140 x 80 mm; vierseitig; I-60 / I-90 / I-120; verzinkt";10,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+80;"Gerader Kanal 140 x 80 mm; vierseitig; I-60 / I-90 / I-120; verzinkt";4,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+90;"Verbindungselement für vierseitigen I-60 / I-90 / I-120 Kanal oder Kanal-Formteil 140 x 80 mm; verzinkt";10,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+100;Wandausleger inklusive Gewindestangen für abgehängte Montage an der Wand, inkl. Metalldübel /;20,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+110;"Flachwinkel 2 x 45° (90°), 140 x 80 mm; für vierseitigen I-60 / I-90 / I-120 Kanal; verzinkt";2,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+120;Wandanschluss für vierseitigen I-60 / I-90 / I-120 Kanal - alle Größen;2,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+130;Laibung für Massivwand für vierseitigen I-60 / I-90 / I-120 Kanal - alle Größen;2,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+140;Kabeleintritt / -austritt für vierseitigen I-60 / I-90 / I-120 Kanal - alle Größen;2,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+150;Potentialausgleich durch Erdungsklammern im vierseitigen I-60 / I-90 / I-120 Kanal - alle Größen;1,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+160;Bezeichnungsschild, aus Aluminium, Beschriftung gedruckt, befestigen mit Schrauben.;10,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+170;Erstellung einer vollständigen und revisionsfähigen Dokumentation aller ausgeführten Brandschottungen.;10,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+10;Decken- und Wandleuchte. Die Farbtemperatur der Leuchte kann wahlweise auf 3000 K (Werkseinstellung) oder 4000 K eingestellt werden. LED, 30,1 W Leuchten-Anschlussleistung, Leuchten-Lichtstrom 3945 lm im Betrieb bei Farbtemperatur 3000 K. Leuchten-Lichtstrom 4148 lm im Betrieb bei Farbtemperatur 400;32,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+20;Aufputz-Montagerahmen für die Leitungseinführung bei Aufputz-Elektroinstallationen. Die Leitungseinführung in den Montagerahmen erfolgt von der Seite (4x 90° versetzt). Montagerahmen besteht aus Kunststoff. Farbe Weiß. Abmessungen Ø 225 x Höhe 25 mm.;12,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+30;LED-Feuchtraum-Anbauleuchte IP66 mit PC-Leuchtenkörper und PC-Diffusor.;4,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+40;LED-Feuchtraum-Anbauleuchte IP66 mit PC-Leuchtenkörper und PC-Diffusor.;2,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+50;"Innen- und Außenleuchte, Rohrleuchte; Decken-Wand und Pendelmontage; Gehäuse aus PE, mit hoher chemischer Beständigkeit; Korrosionsbeständige Endkappen und antivibrations Montageschellen aus hochwertigem Edelstahl V4A (316), auch in chlor- und salzhaltigen Atmosphären. Geeignet für Ozonierung, ein w";7,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+60;"Innen- und Außenleuchte, Rohrleuchte; Decken-Wand und Pendelmontage; Gehäuse aus PE, mit hoher chemischer Beständigkeit; Korrosionsbeständige Endkappen und antivibrations Montageschellen aus hochwertigem Edelstahl V4A (316), auch in chlor- und salzhaltigen Atmosphären. Geeignet für Ozonierung, ein w";9,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+70;Flexibles rundes Einbau-Downlight mit Multi-Funktionen. Gehäuse Stahlblech pulverbeschichtet.;48,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+10;Überprüfung der vorhandenen Erdungsanlage durch Sichtkontrolle, Prüfung der Anschlüsse sowie Durchführung geeigneter Messungen zur Beurteilung der Wirksamkeit gemäß DIN VDE 0100 und DIN 18014. Dokumentation der Ergebnisse und Übergabe an den Auftraggeber.;1,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+10;Ruf-Kompaktset für Behinderten-WC;1,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+20;Zugtaster als Zubehör für Behinderten-WC;1,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+10;Überprüfung der bestehenden Telefonanlage auf Funktion, Vollständigkeit und ordnungsgemäßen Zustand.;12,0;Std;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+10;Herstellen und Zusammenstellen der notwendigen Dokumentation. D.h. ordentliche (maschinelle) und dauerhafte Beschriftung der Datendosen, der Datenleitungen und der Patchfelder. Aus der Dokumentation muss eindeutig hervorgehen welches Kabel wo und auf welchem Patchfeld aufgelegt ist. Die Übergabe der;1,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+10;E-DAT C6A 2 Port UP0 Cat.6[A]Hinweis: [A] = tiefgestellter BuchstabeUniversal-Datenanschlussdose RJ45 2 Port,vollgeschirmte Ausfuehrung, grossflaechiger Schirmanschlussvom Schirmanschluss getrennte Zugentlastung unverlierbar,zum Anschluss von Kategorie 6[A] bis 8 Kabeln, fuerDatenuebertragungsraten ;4,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+20;Datenanschlussdose, symmetrisch, Kategorie 6 Index A tiefgestellt DIN EN 50173-1, Link-Klasse E Index A tiefgestellt DIN EN 50173-1, Potentialausgleich DIN EN 50310 (VDE 0800-2-310), modular, 2 Ports, RJ45-Buchse DIN EN 60603-7-51, Schutzart IP 44 DIN EN 60529 (VDE 0470-1), in Schneidklemmtechnik, S;4,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+30;Auflegen je RJ 45-Anschluss, 8pol. in modularer Buchse in Datenanschlussdose bzw. Patchfeld incl. Beschriftung;24,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+40;Elektronik-Dose Unterputz;2,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+50;Stecker, dienstneutral, GG45 DIN EN 60603-7-7 (VDE 0687-603-7-7), rückwärtskompatibel zu RJ45, Kategorie 6 Index A tiefgestellt DIN EN 50173-1, Funkstörstrahlung DIN EN 55022 (VDE 0878-22), Klasse B, zum Anschluss von massivem Datenkabel.;15,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+60;Kabelverbinder, dienstneutral, Kategorie 7 Index A tiefgestellt DIN EN 50173-1, Funkstörstrahlung DIN EN 55022 (VDE 0878-22), Klasse B, zum Anschluss von massivem Datenkabel, Schutzart IP 2X DIN EN 60529 (VDE 0470-1).;2,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+70;"Liefern und montieren eines Wandgehäuses zur Aufnahme von 19""-Einbauten (482,6 mm) für Kommunikations- und Netzwerktechnik.";1,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+80;Keystone Modultraeger, 19 Zoll, 1HE, 24 Steckplaetze;1,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+90;C6[A]modul K 180 Grad JackHinweis: [A] = tiefgestellter BuchstabeUniverselle Keystone-Anschlusseinheit Datentechnik, Kategorie 6[A], 500 MHz Komponenten gepruefte Ausfuehrung fuer Datenuebertragungsraten bis 10 GBit nachIEEE 802.3an aus Zinkdruckguss, Oberflaechen veredelt, mit einzelgeschirmter RJ4;24,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+100;1HE Durchführungs und Rangierpanel mit Bürstenleiste;1,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+110;"Fachboden für 19"" -";1,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+120;1HE Aluminium Steckdosenleiste mit Überspannungsschutz, 16A 250VAC 50/60Hz, 7-Schukosteckdosen, mit Schalter, Überspannungsschutz;1,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+130;Kabelabfangschiene.;1,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+140;Potentialausgleichsschiene.;1,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+150;Cu-Abnahmemessungen Klasse EA aller fertig installierten Verkabelungs-Strecken Kupfer;15,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+10;"Spleissbox, ausziehbar, 19""""/1HE, 6xLC-D, OM4,; - pulverbeschichtetes Stahlblechgehäuse; - werkseitige Portkennzeichnung; - ausziehbare Schubladenlösung; - im geöffneten Zustand nach unten neigbar; - mit frontseitigem Schnellverschluss (Push-Pull); - mit Spleisskassette zur Aufnahme von 12 oder 24 P";2,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+20;Zur Verbindung Pigtail mit LWL-Kabel, inklusive Spleißschutz und vorbereiten des LWL-Kabels für diesen Arbeitsschritt.;8,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+30;Durchführung von OTDR‑Messungen an installierten LWL‑Multimodeleitungen (OM4) gemäß DIN ISO/IEC 14763‑3.;8,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+40;LWL-Steckeroberflächenbewertung;8,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+10;Stundenlohnarbeiten dürfen nur nach vorheriger Abstimmung;40,0;Std;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+10;Erstellung und Übergabe vollständiger und revisionsfähiger Dokumentationsunterlagen der ausgeführten Anlagen.;1,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+10;Facharbeiter Obermonteur;20,0;Std;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+20;Facharbeiter Monteur;37,0;Std;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+30;Helfer;15,0;Std;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+10;Wartungspreis nach dem ersten Betriebsjahr;1,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+20;Wartungspreis nach dem zweiten Betriebsjahr;1,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+30;Wartungspreis nach dem dritten Betriebsjahr;1,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83
+40;Wartungspreis nach dem viertem Betriebsjahr;1,0;St;gaeb;leistungsbeschreibungen/Los 2 MMS LV_Elektro_Anlagentechnik.X83

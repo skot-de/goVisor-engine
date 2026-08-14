@@ -1,0 +1,252 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+0001;Ger;1,0;Psch;gaeb;3196_42-01.X83
+0002;Baustelle von allen Ger;1,0;Psch;gaeb;3196_42-01.X83
+0003;Bauunterbrechung zum;1,0;St;gaeb;3196_42-01.X83
+0004;Einholung der Schachterlaubnisse bzw. Aufgrabegenehmigungen;1,0;Psch;gaeb;3196_42-01.X83
+0005;F;1,0;Psch;gaeb;3196_42-01.X83
+0006;Benennung Entsorgungswege, Erstellen und;1,0;Psch;gaeb;3196_42-01.X83
+0007;Beweissicherung durchf;1,0;Psch;gaeb;3196_42-01.X83
+0008;Kontrollpr;1,0;St;gaeb;3196_42-01.X83
+0009;Kontrollpr;40,0;St;gaeb;3196_42-01.X83
+0001;Einholen aller erforderlichen;1,0;Psch;gaeb;3196_42-01.X83
+0001;mobile Absturzsicherung / Absperrschranke;42,0;St;gaeb;3196_42-01.X83
+0002;Absperrschranken (VZ 600-35);3,0;St;gaeb;3196_42-01.X83
+0003;Absperrschranken (VZ 600-35);7,0;St;gaeb;3196_42-01.X83
+0004;Leitbaken- VZ 605-41 (1.000 x 250 mm),;4,0;St;gaeb;3196_42-01.X83
+0005;Leitbaken - VZ 605-41 (1.000 x 250 mm);1,0;St;gaeb;3196_42-01.X83
+0006;Verkehrszeichen Gr;7,0;St;gaeb;3196_42-01.X83
+0007;Zusatzzeichen Gr;4,0;St;gaeb;3196_42-01.X83
+0008;Zusatzzeichen Gr;4,0;St;gaeb;3196_42-01.X83
+0001;Absturzsicherung / Absperrschranke bei Wechsel der;38,0;St;gaeb;3196_42-01.X83
+0002;Absperrschranken mit 3 St;2,0;St;gaeb;3196_42-01.X83
+0003;Absperrschranken mit 1 St;5,0;St;gaeb;3196_42-01.X83
+0004;Leitbaken- VZ 605-41 (1.000 x 250 mm),;3,0;St;gaeb;3196_42-01.X83
+0001;mobile Absturzsicherung / Absperrschranke;47,0;St;gaeb;3196_42-01.X83
+0002;Absturzsicherung / Absperrschranke bei Wechsel der;13,0;St;gaeb;3196_42-01.X83
+0003;Absperrschranken mit 3 St;1,0;St;gaeb;3196_42-01.X83
+0004;Absperrschranken (VZ 600-35);5,0;St;gaeb;3196_42-01.X83
+0005;Absperrschranken mit 1 St;4,0;St;gaeb;3196_42-01.X83
+0006;Leitbaken- VZ 605-41 (1.000 x 250 mm),;1,0;St;gaeb;3196_42-01.X83
+0007;Leitbaken - VZ 605-41 (1.000 x 250mm);3,0;St;gaeb;3196_42-01.X83
+0008;Verkehrszeichen Gr;3,0;St;gaeb;3196_42-01.X83
+0009;Zusatzzeichen Gr;2,0;St;gaeb;3196_42-01.X83
+0010;Zusatzzeichen Gr;3,0;St;gaeb;3196_42-01.X83
+0001;Absturzsicherung / Absperrschranke bei Wechsel der;60,0;St;gaeb;3196_42-01.X83
+0002;Absperrschranken mit 3 St;2,0;St;gaeb;3196_42-01.X83
+0003;Absperrschranken mit 1 St;9,0;St;gaeb;3196_42-01.X83
+0004;Leitbaken- VZ 605-41 (1.000 x 250mm),;3,0;St;gaeb;3196_42-01.X83
+0005;Leitbaken- VZ 605-41 (1.000 x 250 mm),;1,0;St;gaeb;3196_42-01.X83
+0006;Leitbaken- VZ 605-41 (1.000 x 250 mm),;3,0;St;gaeb;3196_42-01.X83
+0007;Verkehrszeichen Gr;4,0;St;gaeb;3196_42-01.X83
+0008;Verkehrszeichen Gr;4,0;St;gaeb;3196_42-01.X83
+0009;Zusatzzeichen Gr;3,0;St;gaeb;3196_42-01.X83
+0010;Zusatzzeichen Gr;4,0;St;gaeb;3196_42-01.X83
+0001;mobile Absturzsicherung / Absperrschranke;60,0;St;gaeb;3196_42-01.X83
+0002;Absperrschranken (VZ 600-35);5,0;St;gaeb;3196_42-01.X83
+0003;Absperrschranken (VZ 600-35);9,0;St;gaeb;3196_42-01.X83
+0004;Leitbaken- VZ 605-41 (1.000 x 250 mm),;2,0;St;gaeb;3196_42-01.X83
+0005;Leitbaken - VZ 605-41 (1.000 x 250 mm);5,0;St;gaeb;3196_42-01.X83
+0006;Verkehrszeichen Gr;9,0;St;gaeb;3196_42-01.X83
+0007;Zusatzzeichen Gr;7,0;St;gaeb;3196_42-01.X83
+0008;Zusatzzeichen Gr;4,0;St;gaeb;3196_42-01.X83
+0001;mobile Absturzsicherung / Absperrschranke;48,0;St;gaeb;3196_42-01.X83
+0002;Absturzsicherung / Absperrschranke bei Wechsel der;44,0;St;gaeb;3196_42-01.X83
+0003;Absperrschranken mit 3 St;2,0;St;gaeb;3196_42-01.X83
+0004;Absperrschranken (VZ 600-35);11,0;St;gaeb;3196_42-01.X83
+0005;Absperrschranken mit 1 St;9,0;St;gaeb;3196_42-01.X83
+0006;Leitbaken- VZ 605-41 (1.000 x 250 mm),;2,0;St;gaeb;3196_42-01.X83
+0007;Leitbaken- VZ 605-41 (1.000 x 250 mm),;1,0;St;gaeb;3196_42-01.X83
+0008;Leitbaken - VZ 605-41 (1.000 x 250 mm);2,0;St;gaeb;3196_42-01.X83
+0009;Leitbaken- VZ 605-41 (1.000 x 250 mm),;3,0;St;gaeb;3196_42-01.X83
+0010;Verkehrszeichen Gr;4,0;St;gaeb;3196_42-01.X83
+0011;Verkehrszeichen Gr;1,0;St;gaeb;3196_42-01.X83
+0012;Zusatzzeichen Gr;3,0;St;gaeb;3196_42-01.X83
+0013;Zusatzzeichen Gr;4,0;St;gaeb;3196_42-01.X83
+0001;mobile Absturzsicherung / Absperrschranke;4,0;St;gaeb;3196_42-01.X83
+0002;Absturzsicherung / Absperrschranke bei Wechsel der;67,0;St;gaeb;3196_42-01.X83
+0003;Absperrschranken mit 3 St;1,0;St;gaeb;3196_42-01.X83
+0004;Absperrschranken mit 1 St;9,0;St;gaeb;3196_42-01.X83
+0005;Leitbaken- VZ 605-41 (1.000 x 250 mm),;2,0;St;gaeb;3196_42-01.X83
+0006;Leitbaken- VZ 605-41 (1.000 x 250mm),;5,0;St;gaeb;3196_42-01.X83
+0007;Verkehrszeichen Gr;4,0;St;gaeb;3196_42-01.X83
+0008;Zusatzzeichen Gr;2,0;St;gaeb;3196_42-01.X83
+0009;Zusatzzeichen Gr;4,0;St;gaeb;3196_42-01.X83
+0001;mobile Absturzsicherung / Absperrschranke;12,0;St;gaeb;3196_42-01.X83
+0002;Absturzsicherung / Absperrschranke bei Wechsel der;71,0;St;gaeb;3196_42-01.X83
+0003;Absperrschranken (VZ 600-35);1,0;St;gaeb;3196_42-01.X83
+0004;Absperrschranken mit 3 St;2,0;St;gaeb;3196_42-01.X83
+0005;Absperrschranken (VZ 600-35);10,0;St;gaeb;3196_42-01.X83
+0006;Absperrschranken mit 1 St;9,0;St;gaeb;3196_42-01.X83
+0007;Leitbaken- VZ 605-41 (1000 x 250 mm),;2,0;St;gaeb;3196_42-01.X83
+0008;Leitbaken- VZ 605-41 (1.000 x 250mm),;4,0;St;gaeb;3196_42-01.X83
+0009;Leitbaken- VZ 605-41 (1.000 x 250 mm),;6,0;St;gaeb;3196_42-01.X83
+0010;Verkehrszeichen Gr;9,0;St;gaeb;3196_42-01.X83
+0011;Verkehrszeichen Gr;1,0;St;gaeb;3196_42-01.X83
+0012;Zusatzzeichen Gr;6,0;St;gaeb;3196_42-01.X83
+0013;Zusatzzeichen Gr;6,0;St;gaeb;3196_42-01.X83
+0001;Absturzsicherung / Absperrschranke bei Wechsel der;44,0;St;gaeb;3196_42-01.X83
+0002;Absperrschranken mit 3 St;2,0;St;gaeb;3196_42-01.X83
+0003;Leitbaken- VZ 605-41 (1.000 x 250mm),;2,0;St;gaeb;3196_42-01.X83
+0004;Absperrschranken mit 1 St;8,0;St;gaeb;3196_42-01.X83
+0005;Leitbaken- VZ 605-41 (1.000 x 250 mm),;2,0;St;gaeb;3196_42-01.X83
+0006;Leitbaken- VZ 605-41 (1.000 x 250 mm),;3,0;St;gaeb;3196_42-01.X83
+0007;Verkehrszeichen Gr;6,0;St;gaeb;3196_42-01.X83
+0008;Verkehrszeichen Gr;2,0;St;gaeb;3196_42-01.X83
+0009;Zusatzzeichen Gr;4,0;St;gaeb;3196_42-01.X83
+0010;Zusatzzeichen Gr;6,0;St;gaeb;3196_42-01.X83
+0001;mobile Absturzsicherung / Absperrschranke;31,0;St;gaeb;3196_42-01.X83
+0002;Absturzsicherung / Absperrschranke bei Wechsel der;44,0;St;gaeb;3196_42-01.X83
+0003;Absperrschranken mit 3 St;2,0;St;gaeb;3196_42-01.X83
+0004;Absperrschranken (VZ 600-35);7,0;St;gaeb;3196_42-01.X83
+0005;Absperrschranken mit 1 St;10,0;St;gaeb;3196_42-01.X83
+0006;Leitbaken- VZ 605-41 (1.000 x 250 mm),;2,0;St;gaeb;3196_42-01.X83
+0007;Leitbaken- VZ 605-41 (1.000 x 250 mm),;2,0;St;gaeb;3196_42-01.X83
+0008;Leitbaken - VZ 605-41 (1.000 x 250mm);2,0;St;gaeb;3196_42-01.X83
+0009;Leitbaken- VZ 605-41 (1000 x 250 mm),;3,0;St;gaeb;3196_42-01.X83
+0010;Verkehrszeichen Gr;6,0;St;gaeb;3196_42-01.X83
+0011;Verkehrszeichen Gr;4,0;St;gaeb;3196_42-01.X83
+0012;Zusatzzeichen Gr;6,0;St;gaeb;3196_42-01.X83
+0013;Zusatzzeichen Gr;8,0;St;gaeb;3196_42-01.X83
+0001;Absturzsicherung / Absperrschranke bei Wechsel der;19,0;St;gaeb;3196_42-01.X83
+0002;Absperrschranken mit 3 St;2,0;St;gaeb;3196_42-01.X83
+0003;Absperrschranken mit 1 St;1,0;St;gaeb;3196_42-01.X83
+0004;Leitbaken- VZ 605-41 (1.000 x 250 mm),;2,0;St;gaeb;3196_42-01.X83
+0005;Verkehrszeichen Gr;2,0;St;gaeb;3196_42-01.X83
+0006;Verkehrszeichen Gr;2,0;St;gaeb;3196_42-01.X83
+0007;Zusatzzeichen Gr;1,0;St;gaeb;3196_42-01.X83
+0008;Zusatzzeichen Gr;2,0;St;gaeb;3196_42-01.X83
+0001;mobile Absturzsicherung / Absperrschranke;38,0;St;gaeb;3196_42-01.X83
+0002;Absturzsicherung / Absperrschranke bei Wechsel der;19,0;St;gaeb;3196_42-01.X83
+0003;Absperrschranken mit 3 St;2,0;St;gaeb;3196_42-01.X83
+0004;Absperrschranken (VZ 600-35);13,0;St;gaeb;3196_42-01.X83
+0005;Absperrschranken mit 1 St;1,0;St;gaeb;3196_42-01.X83
+0006;Leitbaken- VZ 605-41 (1.000 x 250 mm),;4,0;St;gaeb;3196_42-01.X83
+0007;Leitbaken- VZ 605-41 (1.000 x 250 mm),;2,0;St;gaeb;3196_42-01.X83
+0008;Leitbaken - VZ 605-41 (1.000 x 250mm);5,0;St;gaeb;3196_42-01.X83
+0009;Verkehrszeichen Gr;6,0;St;gaeb;3196_42-01.X83
+0010;Verkehrszeichen Gr;1,0;St;gaeb;3196_42-01.X83
+0011;Zusatzzeichen Gr;3,0;St;gaeb;3196_42-01.X83
+0012;Zusatzzeichen Gr;6,0;St;gaeb;3196_42-01.X83
+0001;Kontrolle der Arbeitsstellensicherung (Verkehrsbereich);1,0;Psch;gaeb;3196_42-01.X83
+0001;Stahlplatten f;8,0;St;gaeb;3196_42-01.X83
+0002;Stahlplattenabdeckung;1,0;St;gaeb;3196_42-01.X83
+0003;Fu;8,0;St;gaeb;3196_42-01.X83
+0004;Fu;3,0;St;gaeb;3196_42-01.X83
+0005;Bordanrampung aus Beton liefern und herstellen;18,0;St;gaeb;3196_42-01.X83
+0006;Bordanrampung der Vorposition;18,0;St;gaeb;3196_42-01.X83
+0007;Bordanrampung aus Beton liefern und herstellen;3,0;St;gaeb;3196_42-01.X83
+0008;Bordanrampung der Vorposition;3,0;St;gaeb;3196_42-01.X83
+0009;Provisorien aus gebrochenem Mineralgemisch 0/32;15,0;m3;gaeb;3196_42-01.X83
+0001;Asphaltbefestigung geradlinig trennen.;710,0;m;gaeb;3196_42-01.X83
+0002;Asphaltbefestigung geradlinig trennen.;12,0;m;gaeb;3196_42-01.X83
+0003;Asphaltbefestigung aufbrechen und aufnehmen.;225,0;m2;gaeb;3196_42-01.X83
+0004;Asphaltbefestigung aufbrechen und aufnehmen.;5,0;m2;gaeb;3196_42-01.X83
+0001;Koordinierung der Bauma;1,0;Psch;gaeb;3196_42-01.X83
+0002;Boden f;15,0;m3;gaeb;3196_42-01.X83
+0003;Anreise, An- und Abtransport Saugbagger,;2,0;St;gaeb;3196_42-01.X83
+0004;Stundenlohnarbeiten f;6,0;h;gaeb;3196_42-01.X83
+0005;Montagegruben f;10,0;m3;gaeb;3196_42-01.X83
+0006;Leitungsgraben profilgerecht herstellen,;115,0;m3;gaeb;3196_42-01.X83
+0007;Leitungsgraben profilgerecht herstellen,;3,0;m3;gaeb;3196_42-01.X83
+0008;Aushub von Leitungsgr;145,0;m3;gaeb;3196_42-01.X83
+0009;Boden-Gemische aus Baustelle;95,0;t;gaeb;3196_42-01.X83
+0010;Boden-Gemische aus Baustelle;95,0;t;gaeb;3196_42-01.X83
+0011;Boden-Gemische aus Baustelle;70,0;t;gaeb;3196_42-01.X83
+0012;Sicherungsma;6,0;St;gaeb;3196_42-01.X83
+0013;F;40,0;m3;gaeb;3196_42-01.X83
+0014;Kabelschutzrohr glatt, PVC-hart 90 x 4,3 mm;155,0;m;gaeb;3196_42-01.X83
+0015;Schutzt;18,0;St;gaeb;3196_42-01.X83
+0016;Trassenwarnband, gelb, PE, 0,15 mm dick, 40 mm breit,;470,0;m;gaeb;3196_42-01.X83
+0017;Kabelabdeckhauben ausbauen;10,0;m;gaeb;3196_42-01.X83
+0018;Anlage zum Umpumpen von Regenwasser,;1,0;St;gaeb;3196_42-01.X83
+0019;Pumpenanlage der vorbenannten Position betreiben;8,0;h;gaeb;3196_42-01.X83
+0001;Schleuderbeton-Beleuchtungsmast Typ MSLL7800 Gesamtl;10,0;St;gaeb;3196_42-01.X83
+0002;Schleuderbeton-Beleuchtungsmast Typ MSLL7800 Gesamtl;2,0;St;gaeb;3196_42-01.X83
+0003;Baugrube herstellen.;25,0;m3;gaeb;3196_42-01.X83
+0004;Verbau f;85,0;m2;gaeb;3196_42-01.X83
+0005;vorhandenen vorgespannter Schleuderbeton-Beleuchtungsmast in vorhandene;11,0;St;gaeb;3196_42-01.X83
+0006;Baustoffgemisch liefern, in Baugrube der Vorposition;25,0;m3;gaeb;3196_42-01.X83
+0001;Planum f;285,0;m2;gaeb;3196_42-01.X83
+0002;Frostschutzschicht aus Baustoffgemisch f;80,0;m3;gaeb;3196_42-01.X83
+0003;Asphalttragschicht aus Asphalttragschichtmischgut;225,0;m2;gaeb;3196_42-01.X83
+0004;Asphalttragschicht aus Asphalttragschichtmischgut;5,0;m2;gaeb;3196_42-01.X83
+0005;Bitumenemulsion zur;230,0;m2;gaeb;3196_42-01.X83
+0006;Asphaltdeckschicht aus Asphaltbeton f;230,0;m2;gaeb;3196_42-01.X83
+0007;Asphaltdeckschicht aus Asphaltbeton f;5,0;m2;gaeb;3196_42-01.X83
+0008;Abstumpfungsma;225,0;m2;gaeb;3196_42-01.X83
+0009;Fugen schneiden und verf;695,0;m;gaeb;3196_42-01.X83
+0010;Fugen schneiden und verf;15,0;m;gaeb;3196_42-01.X83
+0011;Bordsteine aufbrechen und aufnehmen.;3,0;m;gaeb;3196_42-01.X83
+0012;Bordsteine aufbrechen und aufnehmen.;2,0;m;gaeb;3196_42-01.X83
+0013;Bordsteine aus Beton liefern und setzen.;3,0;m;gaeb;3196_42-01.X83
+0014;Bordsteine aus Beton liefern und setzen.;3,0;m;gaeb;3196_42-01.X83
+0015;Bordsteine auf Passma;3,0;St;gaeb;3196_42-01.X83
+0016;Bordsteine aufnehmen.;2,0;m;gaeb;3196_42-01.X83
+0017;vorhandene Bordsteine;2,0;m;gaeb;3196_42-01.X83
+0018;"Plattenbelag ""Wiedemannplatte"" umverlegen,";4,0;St;gaeb;3196_42-01.X83
+0019;Pflasterbelag aus Beton,;4,0;m2;gaeb;3196_42-01.X83
+0020;Pflasterdecke nach Merkblatt f;4,0;m2;gaeb;3196_42-01.X83
+0021;Pflasterdecke aufnehmen zur Wiederverwendung.;4,0;m2;gaeb;3196_42-01.X83
+0022;Kleinpflasterdecke aus Naturstein,;4,0;m2;gaeb;3196_42-01.X83
+0023;Rohrpfosten mit Verkehrszeichen,;1,0;St;gaeb;3196_42-01.X83
+0001;Oberboden liefern,;50,0;m2;gaeb;3196_42-01.X83
+0002;Feinplanum f;50,0;m2;gaeb;3196_42-01.X83
+0003;Rasenansaat herstellen;50,0;m2;gaeb;3196_42-01.X83
+0001;Asphaltbefestigung geradlinig trennen.;105,0;m;gaeb;3196_42-01.X83
+0002;Asphaltbefestigung aufbrechen und aufnehmen.;420,0;m2;gaeb;3196_42-01.X83
+0001;Planum f;225,0;m2;gaeb;3196_42-01.X83
+0002;Frostschutzschicht aus Baustoffgemisch f;45,0;m3;gaeb;3196_42-01.X83
+0003;Bordsteine aus Beton liefern und setzen.;220,0;m;gaeb;3196_42-01.X83
+0004;Bordsteine auf Passma;100,0;St;gaeb;3196_42-01.X83
+0005;Asphalttragschicht aus Asphalttragschichtmischgut;225,0;m2;gaeb;3196_42-01.X83
+0006;Bitumenemulsion zur;225,0;m2;gaeb;3196_42-01.X83
+0007;Asphaltdeckschicht aus Asphaltbeton f;225,0;m2;gaeb;3196_42-01.X83
+0008;Abstumpfungsma;225,0;m2;gaeb;3196_42-01.X83
+0009;Fugen schneiden und verf;105,0;m;gaeb;3196_42-01.X83
+0010;Bordsteine aufnehmen.;20,0;m;gaeb;3196_42-01.X83
+0011;vorhandene Bordsteine;20,0;m;gaeb;3196_42-01.X83
+0001;Fl;40,0;m2;gaeb;3196_42-01.X83
+0002;Boden f;10,0;m3;gaeb;3196_42-01.X83
+0003;Boden f;325,0;m3;gaeb;3196_42-01.X83
+0004;Aushub von Leitungsgr;325,0;m3;gaeb;3196_42-01.X83
+0005;Boden-Gemische aus Baustelle;130,0;t;gaeb;3196_42-01.X83
+0006;Boden-Gemische aus Baustelle;150,0;t;gaeb;3196_42-01.X83
+0007;Boden-Gemische aus Baustelle;140,0;t;gaeb;3196_42-01.X83
+0008;Boden-Gemische aus Baustelle;150,0;t;gaeb;3196_42-01.X83
+0009;Boden-Gemische aus Baustelle;30,0;t;gaeb;3196_42-01.X83
+0010;Sicherungsma;30,0;m;gaeb;3196_42-01.X83
+0011;Baumsubstrat f;265,0;m3;gaeb;3196_42-01.X83
+0012;Baumsubstrat f;15,0;m3;gaeb;3196_42-01.X83
+0013;Wurzellockstoff liefern;3500,0;kg;gaeb;3196_42-01.X83
+0014;Wurzelsperre als Medienschutz bei Neupflanzungen;115,0;m2;gaeb;3196_42-01.X83
+0015;Robinienrundholz liefern und standsicher lotgerecht;36,0;St;gaeb;3196_42-01.X83
+0001;Fraxinus angustifolia;19,0;St;gaeb;3196_42-01.X83
+0002;Liquidambar styraciflua;16,0;St;gaeb;3196_42-01.X83
+0003;Perlhumus als Granulat liefern - Sackware- und in den oberen Horizont der Baumgrube einbringen.;350,0;kg;gaeb;3196_42-01.X83
+0004;Bodenhilfsstoff zur Wasserspeicherung;70,0;kg;gaeb;3196_42-01.X83
+0005;Langzeit-Volld;35,0;kg;gaeb;3196_42-01.X83
+0006;Schutz des Stammes vor nichtparasit;35,0;St;gaeb;3196_42-01.X83
+0007;Baumverankerung mit Pfahl-Dreibock;19,0;St;gaeb;3196_42-01.X83
+0008;Pflanzenverankerung mit Pfahl-Zweibock;16,0;St;gaeb;3196_42-01.X83
+0009;Gie;35,0;St;gaeb;3196_42-01.X83
+0010;Baumbew;35,0;St;gaeb;3196_42-01.X83
+0011;Planum f;155,0;m2;gaeb;3196_42-01.X83
+0012;Baumscheibe nach dem Pflanzen sch;155,0;m2;gaeb;3196_42-01.X83
+0013;Baumscheibe;2,0;St;gaeb;3196_42-01.X83
+0014;Stammschutz gegen M;4,0;St;gaeb;3196_42-01.X83
+0015;Oberboden liefern,;40,0;m2;gaeb;3196_42-01.X83
+0016;Feinplanum f;40,0;m2;gaeb;3196_42-01.X83
+0017;Rasenansaat herstellen;40,0;m2;gaeb;3196_42-01.X83
+0001;Wasser an Einzelgeh;700,0;St;gaeb;3196_42-01.X83
+0002;Einzelgeh;210,0;St;gaeb;3196_42-01.X83
+0003;offene Baumscheibe, gesplittet mit Splitt 8/16 pflegen,;930,0;m2;gaeb;3196_42-01.X83
+0004;Rasenfl;120,0;m2;gaeb;3196_42-01.X83
+0001;Wasser an Einzelgeh;525,0;St;gaeb;3196_42-01.X83
+0002;Einzelgeh;210,0;St;gaeb;3196_42-01.X83
+0003;offene Baumscheibe, gesplittet mit Splitt 8/16 pflegen,;930,0;m2;gaeb;3196_42-01.X83
+0001;Wasser an Einzelgeh;525,0;St;gaeb;3196_42-01.X83
+0002;Einzelgeh;210,0;St;gaeb;3196_42-01.X83
+0003;offene Baumscheibe, gesplittet mit Splitt 8/16 pflegen,;930,0;m2;gaeb;3196_42-01.X83
+0004;Erneuerung des Voranstrichs und des Deckanstrichs,;35,0;St;gaeb;3196_42-01.X83
+0005;Splittabdeckung der Baumscheiben nachbessern, ganzfl;155,0;m2;gaeb;3196_42-01.X83
+0006;Mulchschicht nachbessern, ganzfl;2,0;St;gaeb;3196_42-01.X83

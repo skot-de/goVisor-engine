@@ -1,0 +1,73 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+0101.10;technische Bearbeitung,  Montageplanung;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV Vorhangfassade.D83
+0101.20;Unterkonstruktion, Konsolen, Tragprofile, 220mm;40,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV Vorhangfassade.D83
+0101.30;Unterkonstruktion, Konsolen, Tragprofile, 120mm;10,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV Vorhangfassade.D83
+0101.40;Anarbeitung an Einbauten;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV Vorhangfassade.D83
+0101.50;Wärmedämmung, MW, d=120mm;40,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV Vorhangfassade.D83
+0101.60;Wärmedämmung, MW, d=80mm;10,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV Vorhangfassade.D83
+0101.70;Dämmung Anschlussbereich, XPS, 120mm;2,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV Vorhangfassade.D83
+0101.80;Dämmung Anschlussbereich, XPS, 80mm;3,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV Vorhangfassade.D83
+0101.90;Aussparung in MW, <0,50m2;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV Vorhangfassade.D83
+0101.100;VHF, Aluminiumverbundplatte, 220mm;40,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV Vorhangfassade.D83
+0101.110;VHF, Aluminiumverbundplatte, 120mm;10,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV Vorhangfassade.D83
+0101.120;Zulage Außen- und Innenecke, Fassade;5,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV Vorhangfassade.D83
+0101.130;Zulage seitlicher Fassadenanschluss an Technikzentrale;7,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV Vorhangfassade.D83
+0101.140;Zulage unterer Fassadenanschluss an Klinkerabdeckung;5,5;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV Vorhangfassade.D83
+0101.150;Zulage unterer Fassadenanschluss, DG;11,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV Vorhangfassade.D83
+0101.160;Zulage Anpassen der Alu-Fassade an Attika;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV Vorhangfassade.D83
+0101.170;Zulage Fassadendurchdringungen, rund;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV Vorhangfassade.D83
+0101.180;Attikaabdeckung als Kantteil;16,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV Vorhangfassade.D83
+0101.190;Zulage Außen-/Innenecke, Attika;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV Vorhangfassade.D83
+0101.200;Zulage Endstücke, Attika;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV Vorhangfassade.D83
+0102.10;technische Bearbeitung,  Montageplanung;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV Vorhangfassade.D83
+0102.20;Unterkonstruktion, Konsolen, Tragprofile, 200mm;35,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV Vorhangfassade.D83
+0102.30;Anarbeitung an Einbauten;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV Vorhangfassade.D83
+0102.40;Wärmedämmung, MW, d=160mm;35,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV Vorhangfassade.D83
+0102.50;Dämmung Anschlussbereich, XPS, 160mm;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV Vorhangfassade.D83
+0102.60;Aussparung in MW, <0,50m2;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV Vorhangfassade.D83
+0102.70;VHF, Aluminiumverbundplatte, 200mm;35,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV Vorhangfassade.D83
+0102.80;Zulage Außen- und Innenecke, Fassade;4,5;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV Vorhangfassade.D83
+0102.90;Zulage Sockelanschluss;5,5;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV Vorhangfassade.D83
+0102.100;Zulage unterer Fassadenanschluss, DG;3,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV Vorhangfassade.D83
+0102.110;Zulage Fassadendurchdringungen, rund;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV Vorhangfassade.D83
+0102.120;Attikaabdeckung als Kantteil;28,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV Vorhangfassade.D83
+0102.130;Zulage Außen-/Innenecke, Attika;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV Vorhangfassade.D83
+0102.140;Zulage Endstücke, Attika;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV Vorhangfassade.D83
+0201.10;Stundenlohn Facharbeiter;5,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV Vorhangfassade.D83
+0201.20;Stundenlohn Bauhelfer;5,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/LV Vorhangfassade.D83
+10;Technische Bearbeitung (Werk- und Montageplanung) für den gesamten Umfang und Ausführung der beschriebenen vorgehängten hinterlüfteten Fassade.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV Vorhangfassade_V33.X83
+20;Justirbare Unterkonsktruktion zur Befestigung von Aluminium-Verbundplatten.;40,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/LV Vorhangfassade_V33.X83
+30;Stärke Gesamtaufbau:;10,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/LV Vorhangfassade_V33.X83
+40;Anarbeitung/Anpassung der Unterkonstruktion an bauseitige Einbauten einschl. erf. Auswechslung und Anpassung der Unterkonstruktion.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV Vorhangfassade_V33.X83
+50;Wanddämmung, außen, Mineralwolle, im Verband dichtgestoßen verlegen.;40,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/LV Vorhangfassade_V33.X83
+60;Dämmschichtdicke:;10,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/LV Vorhangfassade_V33.X83
+70;Dämmung mit extrudierten Polystyrolhartschaumplatten mit Stufenfalz einschl. Abdecken mit 2 Lagen PE-Folie, 0,2 mm, kreuzweise verlegt, als Trenn- und Gleitschicht.;2,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/LV Vorhangfassade_V33.X83
+80;Plattendicke:;3,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/LV Vorhangfassade_V33.X83
+90;Aussparungen in Wanddämmung für den bauseitigen Einbau von TGA-Elementen.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV Vorhangfassade_V33.X83
+100;Vorgehängte hinterlüftete Fassade (VHF) aus Aluminiumverbundplatte als Einhangsystem, mit werkseitig erstellten Passfräsungen auf der Rückseite.;40,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/LV Vorhangfassade_V33.X83
+110;Stärke Gesamtaufbau:;10,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/LV Vorhangfassade_V33.X83
+120;Zulage zu vorbeschriebener Vorgehängter hinterlüfteter Fassade (VHF) aus Aluminiumverbundplatten, für die Ausführung von Außenecken mit Kantteil;5,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV Vorhangfassade_V33.X83
+130;Zulage zu vorbeschriebener Vorgehängter hinterlüfteter Fassade (VHF) aus Aluminiumverbundplatten, für den seitlichen Anschluss an die Fassade Technikzentrale.;7,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV Vorhangfassade_V33.X83
+140;Zulage zu vorbeschriebener Vorgehängter hinterlüfteter Fassade (VHF) aus Aluminiumverbundplatten, für den unteren Anschluss.;5,5;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV Vorhangfassade_V33.X83
+150;für den Fassadenabschluss im Dachgeschoss.;11,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV Vorhangfassade_V33.X83
+160;Zulage zu vorbeschriebener Vorgehängter hinterlüfteter Fassade (VHF) aus Aluminiumverbundplatten, für die Anpassung an die Attika.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV Vorhangfassade_V33.X83
+170;Zulage für die Herstellung runder Aussparungen in der Aluminiumverbundplatte.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV Vorhangfassade_V33.X83
+180;Attikaabdeckung als Kantteil aus Aluminiumverbundplatten.;16,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV Vorhangfassade_V33.X83
+190;Innen- und Außenecken bei Attikaabdeckung mit gekanteten und verlöteten Formteilen.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV Vorhangfassade_V33.X83
+200;Endstücke bei Attikaabdeckung mit gekanteten und verlöteten Formteilen.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV Vorhangfassade_V33.X83
+10;Technische Bearbeitung (Werk- und Montageplanung) für den gesamten Umfang und Ausführung der beschriebenen vorgehängten hinterlüfteten Fassade.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV Vorhangfassade_V33.X83
+20;Justirbare Unterkonsktruktion zur Befestigung von Aluminium-Verbundplatten.;35,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/LV Vorhangfassade_V33.X83
+30;Anarbeitung/Anpassung der Unterkonstruktion an bauseitige Einbauten einschl. erf. Auswechslung und Anpassung der Unterkonstruktion.;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV Vorhangfassade_V33.X83
+40;Wanddämmung, außen, Mineralwolle, im Verband dichtgestoßen verlegen.;35,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/LV Vorhangfassade_V33.X83
+50;Dämmung mit extrudierten Polystyrolhartschaumplatten mit Stufenfalz einschl. Abdecken mit 2 Lagen PE-Folie, 0,2 mm, kreuzweise verlegt, als Trenn- und Gleitschicht.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV Vorhangfassade_V33.X83
+60;Aussparungen in Wanddämmung für den bauseitigen Einbau von TGA-Elementen.;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV Vorhangfassade_V33.X83
+70;Vorgehängte hinterlüftete Fassade (VHF) aus Aluminiumverbundplatte als Einhangsystem, mit werkseitig erstellten Passfräsungen auf der Rückseite.;35,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/LV Vorhangfassade_V33.X83
+80;Zulage zu vorbeschriebener Vorgehängter hinterlüfteter Fassade (VHF) aus Aluminiumverbundplatten, für die Ausführung von Außenecken mit Kantteil;4,5;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV Vorhangfassade_V33.X83
+90;Zulage zu vorbeschriebener Vorgehängter hinterlüfteter Fassade (VHF) aus Aluminiumverbundplatten, für den unteren Anschluss.;5,5;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV Vorhangfassade_V33.X83
+100;für den Fassadenabschluss höheres Dach an tieferes Dach Verbindungsgang, Anschluss an Bestandsgebäude.;3,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV Vorhangfassade_V33.X83
+110;Zulage für die Herstellung runder Aussparungen in der Aluminiumverbundplatte.;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV Vorhangfassade_V33.X83
+120;Attikaabdeckung als Kantteil aus Aluminiumverbundplatten.;28,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV Vorhangfassade_V33.X83
+130;Innen- und Außenecken bei Attikaabdeckung mit gekanteten und verlöteten Formteilen.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV Vorhangfassade_V33.X83
+140;Endstücke bei Attikaabdeckung mit gekanteten und verlöteten Formteilen.;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV Vorhangfassade_V33.X83
+10;Stundensatz für Leistungen, welche nicht in den Positionen erfasst sind und nur auf ausdrückliche Anweisung der Bauleitung gegen Nachweis zur Ausführung kommen.;5,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/LV Vorhangfassade_V33.X83
+20;Stundensatz für Leistungen, welche nicht in den Positionen erfasst sind und nur auf ausdrückliche Anweisung der Bauleitung gegen Nachweis zur Ausführung kommen.;5,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/LV Vorhangfassade_V33.X83

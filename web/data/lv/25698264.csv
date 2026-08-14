@@ -1,0 +1,93 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+1;Die Einrichtung der vollständig betriebsfähigen Baustelleneinrichtung inkl. Anfuhr, Aufstellen und Unterhaltung aller zur Ausführung der nachfolgend beschriebenen Leistungen erforderlichen Geräte, Hebezeuge und Maschinen ist durch den AN zu stellen.;1,0;St;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+2;Schnurgerüst für die Ermittlung der Geländehöhen (Höhendifferenzen) gemeinsam mit der BL abstecken.;1,0;psch;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+1;Aufwuchs bis 1,00 m Höhe über OK Gelände roden und entsorgen.;50,0;m²;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+2;wie Position zovor, aufgrund interner Abrechnungsmodalitäten differenziert.;50,0;m²;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+3;Aufwuchs von 1,00 m bis 2,00 m Höhe über OK Gelände roden und entsorgen.;25,0;m²;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+4;wie Position zovor, aufgrund interner Abrechnungsmodalitäten differenziert.;25,0;m²;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+5;Baum- und Strauchwurzeln ausgraben und entsorgen.;5,0;St;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+6;wie Position zovor, aufgrund interner Abrechnungsmodalitäten differenziert.;5,0;St;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+7;Vorhandene Krautschicht, Wuchshöhe bis 0,50m, bis 10 cm Stärke abziehen, laden und entsorgen;100,0;m²;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+8;wie Position zovor, aufgrund interner Abrechnungsmodalitäten differenziert.;100,0;m²;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+9;Oberboden, profilgerecht abtragen und seitlich auf einer Miete lagern.;15,0;m³;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+10;humosen Oberboden abtragen und seitlich lagern. Abtrag-H 15 cm (Positionsdifferenzierung für interne Abrechnung);5,0;m³;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+11;Seitlich gelagerten Oberboden der vorherigen Position auf LKW des AN laden, der Beseitigung (Deponierung) zuführen,;5,0;to;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+12;Gelände im Bereich der Gebäudetraufe begradigen.;180,0;m²;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+13;Planum herstellen, zulässige Abweichung von der Sollhöhe +/- 5 cm;625,0;m2;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+14;wie Position zuvor, aufgrund interner Abrechnungsmodalitäten differenziert.;375,0;m²;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+15;Boden der Bodenklasse 3-4 ausheben, laden und abfahren, Ausbauhöhe bis 30cm.;20,0;m³;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+16;wie Position zuvor, aufgrund interner Abrechnungsmodalitäten differenziert.;10,0;m³;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+17;Boden der Bodenklasse 3-4 ausheben,;55,0;m³;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+18;wie Position zuvor, aufgrund interner Abrechnungsmodalitäten differenziert.;25,0;m³;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+19;Boden, Bodenklassen 3 und 4 DIN 18300, nicht schadstoffbelastet, nicht gefährlicher Abfall, nicht überwachungsbedürftig, Entsorgungsnachweis ist nicht erforderlich, der Beseitigung (Deponierung) zuführen,;45,0;to;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+20;wie Position zuvor, aufgrund interner Abrechnungsmodalitäten differenziert.;25,0;to;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+21;Zulage zu Bodenentsorgung (siehe Position 02.15 bzw. 02.17) für Entsorgung Boden BM-F1 und BM-F2 nach ErsatzbaustoffVerordnung.;10,0;to;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+22;Zulage zu Bodenentsorgung (siehe Position 02.15 bzw. 02.17) für Entsorgung Boden BM-F3 nach ErsatzbaustoffVerordnung.;10,0;to;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+23;Seitlich lagernden Bodenaushub wieder einbauen und lagenweise verdichten.;50,0;m³;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+24;wie Position zovor, aufgrund interner Abrechnungsmodalitäten differenziert.;30,0;m³;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+25;Gut zu verdichtenden Füllsand liefern, lagenweise einbauen und maschinell verdichten.;5,0;m³;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+26;Oberboden liefern und seitlich lagern.;10,0;to;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+27;wie Position zovor, aufgrund interner Abrechnungsmodalitäten differenziert.;10,0;to;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+28;Gelieferten und seitlich gelagerten Oberboden fachgerecht als Deckschicht, Stärke 15 cm, flächig einbauen, gerade abziehen und harken.;455,0;m²;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+29;wie Position zovor, aufgrund interner Abrechnungsmodalitäten differenziert.;250,0;m²;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+1;Vorhandenen HKS-Schotter 0/45 im Bereich der Baustraße aufnehmen für den erneuten Einbau.;30,0;m³;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+2;HKS-Schotter, Körnung 0/45 oder 0/56 mm gem. TL SoB-StB, kapillarbrechend, nur liefern.;20,0;to;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+3;wie Position zovor, aufgrund interner Abrechnungsmodalitäten differenziert.;40,0;to;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+4;Tragschicht aus HKS 0/45 oder 0/56 im Bereich der befestigten Flächen lagenweise einbauen und verdichten.;220,0;m²;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+5;wie Position zovor, aufgrund interner Abrechnungsmodalitäten differenziert.;125,0;m²;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+6;Nottenbahn für Grundmauerschutz, beständig gegen Pilze, recyclebar, unverrottbar, wurzelfest, Noppenhöhe 7 mm, Farbton schwarz, geprüft nach DIN EN 13967:2012, aus Hart-Polyethylen (HDPE), für außen, ohne Vlieskaschierung, 400gr/m2.;120,0;m;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+1;Herstellung von Drainagebetonmustern.;2,0;St;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+2;Bei drainfähigen Deckschichten und nicht drainfähigen Tragschichten ist zur Verbesserung des Wasserabflusses ein dränfähiges Geotextil zwischen Deckschicht und Tragschicht vorzusehen.;175,0;m²;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+3;wie Position zovor, aufgrund interner Abrechnungsmodalitäten differenziert.;90,0;m²;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+4;"Drainagebeton wie im Hinweistext Betonierarbeiten beschrieben und über die vorab beschriebene Position ""Drainagebetonmuster"" freigegebene Rezeptur herstellen und fachgerecht einbauen.";175,0;m²;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+5;wie Position zovor, aufgrund interner Abrechnungsmodalitäten differenziert.;90,0;m²;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+6;Einseitige Randschaltung für den Einbau von Drainagebeton herstellen, aufstellen, vorhalten und nach den Betonierarbeiten wieder demontieren und abfahren.;50,0;m;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+7;wie Position zovor, aufgrund interner Abrechnungsmodalitäten differenziert.;50,0;m;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+8;Randschalung wie zuvor beschrieben, jedoch als gebogenes / geschwungenes Element.;30,0;m;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+9;wie Position zovor, aufgrund interner Abrechnungsmodalitäten differenziert.;10,0;m;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+10;Zulage für das Ausbilden von scharfkantigen Schalungsecken ohne Dreikantleiste.;5,0;St;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+11;wie Position zovor, aufgrund interner Abrechnungsmodalitäten differenziert.;3,0;St;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+12;Zulage für das Anarbeiten der Schalung an angrenzende Bauteile ohne Dreikantleiste.;7,0;St;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+13;wie Position zovor, aufgrund interner Abrechnungsmodalitäten differenziert.;5,0;St;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+14;Drainagebeton an aufsteigenden Bauteilen (Meter) wie folgt ausbilden.;30,0;m;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+15;wie Position zovor, aufgrund interner Abrechnungsmodalitäten differenziert.;25,0;m;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+16;Drainagebeton an aufsteigenden Bauteilen (Stück) wie zuvor ausbilden.;1,0;St;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+17;wie Position zovor, aufgrund interner Abrechnungsmodalitäten differenziert.;6,0;St;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+18;Fugen nach Freigabe Bauleitung geradlinig (entlang einer Leere) einschneiden.;18,0;m;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+19;wie Position zovor, aufgrund interner Abrechnungsmodalitäten differenziert.;22,0;m;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+20;Schutz der betonierten Ränder nach Demontage der Schalung bis zur Fertigstellung der Außenanlagen.;6,0;St;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+21;Schutz der nicht zu übertretenden betonierten Ränder nach Demontage der Schalung bis zur Fertigstellung der Außenanlagen.;78,0;m;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+22;wie Position zovor, aufgrund interner Abrechnungsmodalitäten differenziert.;50,0;m;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+1;Randeinfassung aus Natursteinpflaster, 10x10x10 cm, in Mörtelbett. Bettung auf vorab hergestellter Tragschicht aus HKS-Schotter.;50,0;m;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+2;Dynamische Schicht für wassergebundene Wege herstellen.;65,0;m²;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+3;Wassergebundene Schicht für wassergebundene Wege als Deckschicht herstellen.;65,0;m²;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+4;Pflege der wassergebundenen Wegedecke bis zur Abnahme durch wässern, walzen und nachplanieren der Flächen.;65,0;m²;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+5;Wassergebundene Wegedecke (über alle Schichten) fachgerecht an die vorab montierten Fahrradbügel anarbeiten.;9,0;St;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+1;Fassadenrinne als gedeckte Kastenrinne mit freiem Querschnitt aus Edelstahl, Werkstoff (V2A), Materialstärke 1,5 mm mit verstärktem Einlaufrand t= 4 mm, inkl. eingeschweißten U-Profilen als Rostauflage, sowie zur Aussteifung und zur Rostarretierung. Rinne ohne Gefälle, in Baulängen bis 3 m an einem ;12,0;m;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+2;Endstück/ Stirnwand gesteckt oder werkseits verschweißt.;2,0;St;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+3;Ablaufstutzen DN 100, werkseitig eingeschweißt, Abgang wahlweise senkrecht oder waagerecht.;1,0;St;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+4;KG-Rohr DN 100 für RW-Entwässerung;1,0;St;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+5;KG-Rohr DN 100 für RW-Entwässerung;1,0;St;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+6;KG-Rohr DN 100 für RW-Entwässerung;1,0;St;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+7;Zulageposition für das passgenaue Zuschneiden von KG-Rohren entsprechend der örtlichen Situation.;2,0;St;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+8;KG-Rohrbögen DN 100 für RW-Entwässerung in verschiedenen Winkeln;6,0;St;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+9;KG-Rohr Übergangsstück DN125/DN 100 für RW-Entwässerung.;2,0;St;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+10;Vorhandenen Anschluss (Abzweig) der RW-Entwässerung in Handschachtung freilegen.;1,0;St;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+11;RW-Entwässerung der Fassadenrinnen fachgerecht an den vorhandenen Abzweig anschließen.;2,0;St;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+12;Fahrrad-Anlehnbügel aus Stahl, feuerverzinkt, pulverbeschichtet, zum einbetonieren.;9,0;St;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+13;E-Bike Ladesäule aus feuerverzinktem Stahl und/oder Aluminium, pulverbeschichtet.;1,0;St;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+14;Schachtring DN 100, aus Beton fachgerecht auf vorhandenen Schachtdom aufbauen, entsprechend Höhenlage Geländeoberfläche.;1,0;St;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+15;Schachtring DN 100, aus Beton fachgerecht auf vorhandenen Schachtdom aufbauen, entsprechend Höhenlage Geländeoberfläche.;1,0;St;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+16;Punktfundament für Pollerleuchte (bauseits) herstellen.;8,0;St;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+1;Japansche Nelkenkirsche Kanzan (Prunus surrulata kanzan), mehrstämmig.;1,0;St;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+2;Winterbirne, Nordhäuser Winterforelle (Pyrus communis Nordh. Winterforelle);1,0;St;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+3;Holunder (Sambuccus nigra) als verschulter Strauch, im 5l-Container, Höhe 60 - 100 cm.;1,0;St;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+4;Chinesischer Blumenhartriegel (Cornus kousa var. chinensis);1,0;St;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+5;Unterirdische Baumverankerung mit einem zugelassenen Baumverankerungssystem für mehrstämmige Bäume mit Wurzelballen. Das Verankerungssystem wird als Wurzelballenverankerung vor dem Verschließen des Pflanzloches montiert. Mind. 3 Verankerungspunkte und 3 Seile. Nach dem Verschließen ist das Verankeru;2,0;St;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+6;"Baumverankerung oberirdisch, aus 3 Stück angespitzten und geschälten Robinien-Pfosten, Ø 6-8cm, Höhe: 2,50 m, als Dreieck um den Wurzelballen aufstellen, im Erdreich verankern; Befestigung fachgerecht mittels Kokosband.";1,0;St;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+7;Rasen ansäen, Gebrauchsrasen, RSM Rasen 2.3 Gebrauchsrasen - Spielrasen, Saatgutmenge 25 g/m2, Nachweis der Beschaffenheit durch Vorlage des Mischungsnummernbescheides, Ausführung gemäß Zeichnung.;455,0;m2;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+8;wie Position zovor, aufgrund interner Abrechnungsmodalitäten differenziert.;250,0;m²;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+10;Stundenlohnarbeiten durch Facharbeiter/-in;5,0;h;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+20;wie Position zovor, aufgrund interner Abrechnungsmodalitäten differenziert.;5,0;h;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+30;Stundenlohnarbeiten durch Helfer/-in;9,0;h;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83
+40;wie Position zovor, aufgrund interner Abrechnungsmodalitäten differenziert.;9,0;h;gaeb;leistungsbeschreibungen/DR-26-211-OE_GAEB_LV-VE5-80_Aussenanlagen_V33.X83

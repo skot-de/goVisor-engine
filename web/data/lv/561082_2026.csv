@@ -1,0 +1,45 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+0101.10;Mitwirkung Bauablaufplanung;1,0;St;gaeb-flat;leistungsbeschreibungen/18390_B_03_06_223_Einblasdämmung_2026_05_07.D83
+0101.20;Werk- und Montageplanung;1,0;psch;gaeb-flat;leistungsbeschreibungen/18390_B_03_06_223_Einblasdämmung_2026_05_07.D83
+0101.30;Technische Bearbeitung;1,0;psch;gaeb-flat;leistungsbeschreibungen/18390_B_03_06_223_Einblasdämmung_2026_05_07.D83
+0101.40;Rüstkosten nach Arbeitsunterbrechung;1,0;St;gaeb-flat;leistungsbeschreibungen/18390_B_03_06_223_Einblasdämmung_2026_05_07.D83
+0101.50;Baustelleneinrichtung für eigene Leistung.;1,0;psch;gaeb-flat;leistungsbeschreibungen/18390_B_03_06_223_Einblasdämmung_2026_05_07.D83
+0101.60;Vorhaltung der Baustelleneinrichtung;4,0;Wo;gaeb-flat;leistungsbeschreibungen/18390_B_03_06_223_Einblasdämmung_2026_05_07.D83
+0102.10;Einblasdämmung Außenwände Anbau;110,0;m2;gaeb-flat;leistungsbeschreibungen/18390_B_03_06_223_Einblasdämmung_2026_05_07.D83
+0103.10;Einblasdämmung Außenwände Anbau;110,0;m2;gaeb-flat;leistungsbeschreibungen/18390_B_03_06_223_Einblasdämmung_2026_05_07.D83
+0104.10;Dokumentation;1,0;psch;gaeb-flat;leistungsbeschreibungen/18390_B_03_06_223_Einblasdämmung_2026_05_07.D83
+0105.10;Baufacharbeiter/-in;10,0;h;gaeb-flat;leistungsbeschreibungen/18390_B_03_06_223_Einblasdämmung_2026_05_07.D83
+0105.20;Bauhelfer/-in;10,0;h;gaeb-flat;leistungsbeschreibungen/18390_B_03_06_223_Einblasdämmung_2026_05_07.D83
+10;10 Kalendertage nach Auftragserteilung ist ein Bauablaufplan zur Abstimmung beim AG vorzulegen.;1,0;St;gaeb;leistungsbeschreibungen/18390_B_03_06_223_Einblasdämmung_2026_05_07.X83
+20;Werk-und Montageplanung für den kompletten Umfang der im Leistungsverzeichnis aufgeführten Arbeiten.;1,0;psch;gaeb;leistungsbeschreibungen/18390_B_03_06_223_Einblasdämmung_2026_05_07.X83
+30;Technische Bearbeitung für den gesamten Umfang der ausgeschriebenen Leistungen.;1,0;psch;gaeb;leistungsbeschreibungen/18390_B_03_06_223_Einblasdämmung_2026_05_07.X83
+40;Rüstkosten für die Arbeitsaufnahme nach Unterbrechungen der Arbeiten.;1,0;St;gaeb;leistungsbeschreibungen/18390_B_03_06_223_Einblasdämmung_2026_05_07.X83
+50;Baustelleneinrichtung für die Ausführung der eigenen Leistung.;1,0;psch;gaeb;leistungsbeschreibungen/18390_B_03_06_223_Einblasdämmung_2026_05_07.X83
+60;Vorhaltung der Baustelleneinrichtung aus Pos.;4,0;Wo;gaeb;leistungsbeschreibungen/18390_B_03_06_223_Einblasdämmung_2026_05_07.X83
+10;Lieferung und fachgerechter Einbau von Einblasdämmung in die Luftschicht der zweischaligen Mauerwerkswände der Anbauten im EG.;110,0;m2;gaeb;leistungsbeschreibungen/18390_B_03_06_223_Einblasdämmung_2026_05_07.X83
+10;Lieferung und fachgerechter Einbau von Einblasdämmung in die Luftschicht der zweischaligen Mauerwerkswände der Anbauten im EG.;110,0;m2;gaeb;leistungsbeschreibungen/18390_B_03_06_223_Einblasdämmung_2026_05_07.X83
+10;Erstellung der Dokumentationsunterlagen in folgendem Umfang;1,0;psch;gaeb;leistungsbeschreibungen/18390_B_03_06_223_Einblasdämmung_2026_05_07.X83
+10;Stundenlohnarbeiten durch Baufacharbeiter/-in;10,0;h;gaeb;leistungsbeschreibungen/18390_B_03_06_223_Einblasdämmung_2026_05_07.X83
+20;Stundenlohnarbeiten durch Bauhelfer/-in;10,0;h;gaeb;leistungsbeschreibungen/18390_B_03_06_223_Einblasdämmung_2026_05_07.X83
+0101.10;Mitwirkung Bauablaufplanung;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/18390_B_03_06_223_Einblasdämmung_2026_05_07 (1).D83
+0101.20;Werk- und Montageplanung;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/18390_B_03_06_223_Einblasdämmung_2026_05_07 (1).D83
+0101.30;Technische Bearbeitung;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/18390_B_03_06_223_Einblasdämmung_2026_05_07 (1).D83
+0101.40;Rüstkosten nach Arbeitsunterbrechung;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/18390_B_03_06_223_Einblasdämmung_2026_05_07 (1).D83
+0101.50;Baustelleneinrichtung für eigene Leistung.;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/18390_B_03_06_223_Einblasdämmung_2026_05_07 (1).D83
+0101.60;Vorhaltung der Baustelleneinrichtung;4,0;Wo;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/18390_B_03_06_223_Einblasdämmung_2026_05_07 (1).D83
+0102.10;Einblasdämmung Außenwände Anbau;110,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/18390_B_03_06_223_Einblasdämmung_2026_05_07 (1).D83
+0103.10;Einblasdämmung Außenwände Anbau;110,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/18390_B_03_06_223_Einblasdämmung_2026_05_07 (1).D83
+0104.10;Dokumentation;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/18390_B_03_06_223_Einblasdämmung_2026_05_07 (1).D83
+0105.10;Baufacharbeiter/-in;10,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/18390_B_03_06_223_Einblasdämmung_2026_05_07 (1).D83
+0105.20;Bauhelfer/-in;10,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/18390_B_03_06_223_Einblasdämmung_2026_05_07 (1).D83
+10;10 Kalendertage nach Auftragserteilung ist ein Bauablaufplan zur Abstimmung beim AG vorzulegen.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/18390_B_03_06_223_Einblasdämmung_2026_05_07 (1).X83
+20;Werk-und Montageplanung für den kompletten Umfang der im Leistungsverzeichnis aufgeführten Arbeiten.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/18390_B_03_06_223_Einblasdämmung_2026_05_07 (1).X83
+30;Technische Bearbeitung für den gesamten Umfang der ausgeschriebenen Leistungen.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/18390_B_03_06_223_Einblasdämmung_2026_05_07 (1).X83
+40;Rüstkosten für die Arbeitsaufnahme nach Unterbrechungen der Arbeiten.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/18390_B_03_06_223_Einblasdämmung_2026_05_07 (1).X83
+50;Baustelleneinrichtung für die Ausführung der eigenen Leistung.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/18390_B_03_06_223_Einblasdämmung_2026_05_07 (1).X83
+60;Vorhaltung der Baustelleneinrichtung aus Pos.;4,0;Wo;gaeb;vom_unternehmen_auszufuellende_dokumente/18390_B_03_06_223_Einblasdämmung_2026_05_07 (1).X83
+10;Lieferung und fachgerechter Einbau von Einblasdämmung in die Luftschicht der zweischaligen Mauerwerkswände der Anbauten im EG.;110,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/18390_B_03_06_223_Einblasdämmung_2026_05_07 (1).X83
+10;Lieferung und fachgerechter Einbau von Einblasdämmung in die Luftschicht der zweischaligen Mauerwerkswände der Anbauten im EG.;110,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/18390_B_03_06_223_Einblasdämmung_2026_05_07 (1).X83
+10;Erstellung der Dokumentationsunterlagen in folgendem Umfang;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/18390_B_03_06_223_Einblasdämmung_2026_05_07 (1).X83
+10;Stundenlohnarbeiten durch Baufacharbeiter/-in;10,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/18390_B_03_06_223_Einblasdämmung_2026_05_07 (1).X83
+20;Stundenlohnarbeiten durch Bauhelfer/-in;10,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/18390_B_03_06_223_Einblasdämmung_2026_05_07 (1).X83

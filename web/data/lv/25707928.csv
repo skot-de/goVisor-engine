@@ -1,0 +1,95 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+01.1;Baustelle einrichten und räumen;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Unbenannt.D83
+01.2;Absperrschrankengitter mit Warnleuchten;17,5;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Unbenannt.D83
+01.3;Verkehrszeichen Vorschriftzeichen 250 reflektierend Aufstellvorr. aufbauen abbauen;7,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Unbenannt.D83
+01.4;Verkehrssicherung längerer Dauer aufstellen mit LSA;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Unbenannt.D83
+01.5;Verkehrssicherung längerer Dauer aufstellen, Baustellenausfahrt;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Unbenannt.D83
+01.6;Kontrollprüfung Tragschicht Verformungsmodul Lastplattendruckversuch;7,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Unbenannt.D83
+02.1;Asphaltoberbau schneiden, d = 7 bis 12 cm;12,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Unbenannt.D83
+02.2;Fahrbahn aus Beton schneiden, d = 10 bis 20 cm;15,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Unbenannt.D83
+02.3;Fahrbahndecke aus Asphalt, Rückbau, d = 7 bis 12 cm;460,0;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Unbenannt.D83
+02.4;Fahrbahndecke aus Asphalt, Rückbau, d = über 12 bis 20 cm;260,0;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Unbenannt.D83
+02.5;Fahrbahndecke aus Beton, Rückbau;1170,0;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Unbenannt.D83
+03.1;Seitenstreifen abtragen, seitlich lagern;1670,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Unbenannt.D83
+03.2;Seitenstreifen atragen, transportieren und abkippen;770,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Unbenannt.D83
+03.3;Oberboden abtragen seitl. lagern;330,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Unbenannt.D83
+03.4;Oberboden abtragen laden fördern lagern;50,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Unbenannt.D83
+03.5;Oberboden auf Baustelle gelagert einbauen;380,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Unbenannt.D83
+04.1;Suchgraben herstellen und verfüllen, Tiefe bis 1,00 m;5,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Unbenannt.D83
+04.2;Suchgraben herstellen und verfüllen, Tiefe 1,00 m bis 1,50 m;10,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Unbenannt.D83
+04.5;Auffüllung Weg lösen fördern abkippen;100,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Unbenannt.D83
+04.6;Auffüllung gelagert einbauen und verdichten;100,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Unbenannt.D83
+04.7;Boden Weg lösen und laden;110,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Unbenannt.D83
+04.8;Auffüllung Weg lösen und laden;1070,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Unbenannt.D83
+04.9;Planum herstellen;8630,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Unbenannt.D83
+04.10;Erstellung einer Eignungsprüfung;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Unbenannt.D83
+04.11;Mischbindemittel Kalk/Zement liefern.;172,0;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Unbenannt.D83
+04.12;Planum verbessern verdichten;8630,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Unbenannt.D83
+05.1;Abfall nicht gefährlich AVV170504 nicht schadstoffbelastet EBV 2023 BM-0 - Sand;830,0;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Unbenannt.D83
+05.2;Abfall nicht gefährlich AVV170504 nicht schadstoffbelastet EBV 2023 BM-0 - Schluff;220,0;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Unbenannt.D83
+05.3;Abfall nicht gefährlich AVV170504 schadstoffbelastet EBV 2023 BM-0* - Sand;1310,0;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Unbenannt.D83
+06.1;Schottertragschicht herstellen;4320,0;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Unbenannt.D83
+06.2;Asphalttragdeckschicht liefern und einbauen;6900,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Unbenannt.D83
+06.3;Deckschicht Asphaltbeton abstumpfen;6829,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Unbenannt.D83
+06.4;Naht oder Anschluss zur Fuge aufweiten;55,5;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Unbenannt.D83
+06.5;Fugenfüllung herstellen;55,5;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Unbenannt.D83
+06.6;Deckschicht ohne Bindemittel, Seitenstreifen b=0,50 m;3600,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Unbenannt.D83
+06.7;Schachtabdeck. anpassen ländl. Weg höher setzen 5-10cm;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Unbenannt.D83
+06.8;Straßenkappe anpassen ländl. Weg höher setzen 5-10cm;4,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Unbenannt.D83
+06.9;Erschwernis Straßeneinbauten 0,03-0,5m2;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Unbenannt.D83
+07.1;Seitenstreifen atragen, transportieren und abkippen;120,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Unbenannt.D83
+07.2;Fahrbahndecke aus Asphalt, Rückbau, d = über 12 bis 20 cm;240,0;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Unbenannt.D83
+07.3;Auffüllung Weg lösen und laden;250,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Unbenannt.D83
+07.4;Abfall nicht gefährlich AVV170504 schadstoffbelastet EBV 2023 BM-0* - Sand;490,0;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Unbenannt.D83
+07.5;Oberboden abtragen fördern auftragen;330,0;m³;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Unbenannt.D83
+10.1;Hydraulikbagger Fahrer/-in Grabenräumlöffel 15-20t;10,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Unbenannt.D83
+10.2;Baufacharbeiter/-in sämtliche Kosten/Zuschläge;10,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Unbenannt.D83
+10.3;LKW Fahrer/-in einsetzen 12-20t;10,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Unbenannt.D83
+10.4;Grader Fahrer/-in einsetzen 88-120kW;5,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/Unbenannt.D83
+1;Abgeltung der für die folgenden Leistungen notwendigen;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/Unbenannt_V32.X83
+2;Verkehrseinrichtung nach StVO, temporär, Absperrschrankengitter, TL Absperrschranken, spezifischer Rückstrahlwert RA2 DIN EN 12899-1, Länge 2000 mm - 2400 mm, mit Warnleuchten, TL Warnleuchten, Typ WL2 (Richtstrahler), Lichtfarbe rot, 5 Leuchten, aufbauen, vorhalten und abbauen.;17,5;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Unbenannt_V32.X83
+3;Verkehrszeichen nach StVO, Vorschriftzeichen Nr 250, Oberfläche reflektierend, mit Aufstellvorrichtung, aufbauen, unterhalten, vorhalten und abbauen.;7,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Unbenannt_V32.X83
+4;Verkehrssicherungen an Arbeitstellen von längerer Dauer mit Lichtsignalanlage aufstellen, vorhalten, warten und beseitigen.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Unbenannt_V32.X83
+5;Verkehrssicherungen an Arbeitstellen von längerer Dauer aufstellen, vorhalten, warten und beseitigen.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Unbenannt_V32.X83
+6;Kontrollprüfung ZTV-LW auf besondere Anordnung des AG für Tragschicht ohne Bindemittel Prüfung für Verformungsmodul, mit dynamischem Lastplattendruckversuch TP BF-StB.;7,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Unbenannt_V32.X83
+1;Asphaltoberbau schneiden, Dicke der Befestigung über 7 bis 12 cm, Ausführung mit Fugenschneidgerät, Tiefe bis 120 mm, Entsorgung ist in den Einheitspreis einzukalkulieren.;12,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Unbenannt_V32.X83
+2;Fahrbahn aus Beton schneiden, Dicke der Befestigung über 10 bis 20 cm, Ausführung mit Fugenschneidgerät, Tiefe bis 200 mm, Entsorgung ist in den Einheitspreis einzukalkulieren.;15,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Unbenannt_V32.X83
+3;Rückbau der bitumenhaltigen Befestigung nach Wahl des AN, in ländliche Wegen, mit Asphaltdeckschicht aus Asphaltbeton, Tiefe 7 bis 12 cm, nicht schadstoffbelastet,;460,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/Unbenannt_V32.X83
+4;Rückbau der bitumenhaltigen Befestigung nach Wahl des AN, in ländliche Wegen, mit Asphaltdeckschicht aus Asphaltbeton, Tiefe über 12 bis 20 cm, nicht schadstoffbelastet,;260,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/Unbenannt_V32.X83
+5;Rückbau der Fahrbahndecke aus unbewehrtem Beton, Normalbeton, in ländliche Wegen, schadstoffbelastet gemäß Analyse, Abfall ist nicht gefährlich, Werte gemäß Ersatzbaustoffverordnung 2023 sind eingehalten, Charakterisierung gemischter;1170,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/Unbenannt_V32.X83
+1;Seitenstreifen einschließlich der Vegetationsdecke abtragen und gelöstes Material seitlich auf den landwirtschaftlichen Flächen abladen.;1670,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/Unbenannt_V32.X83
+2;Seitenstreifen abtragen.;770,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/Unbenannt_V32.X83
+3;Oberboden, profilgerecht abtragen und seitlich lagern, eine Bodengruppe, Bodengruppe 1 SU DIN 18196 (Sand-Schluff-Gemisch), Abtragshöhe über 20 bis 30 cm,;330,0;m³;gaeb;vom_unternehmen_auszufuellende_dokumente/Unbenannt_V32.X83
+4;Oberboden, profilgerecht abtragen, laden, fördern und geordnet lagern, Förderweg bis 1 km, Bodengruppe SU DIN 18915 (Sand-Schluff-Gemisch), Abtragshöhe über 20 bis 30 cm, Mengenermittlung nach Aufmaß an der Entnahmestelle.;50,0;m³;gaeb;vom_unternehmen_auszufuellende_dokumente/Unbenannt_V32.X83
+5;Oberboden, seitlich gelagert, profilgerecht an den Wegerändern auftragen, für zukünftige vegetationsflächen, Bodengruppe 1 SU DIN 18196 (Sand-Schluff-Gemisch), Auftragsdicke über 10 bis 30 cm, Angleichungen zwischen den Seitenstreifen und angrenzenden Ackerflächen so anlegen, dass das Oberflächenwas;380,0;m³;gaeb;vom_unternehmen_auszufuellende_dokumente/Unbenannt_V32.X83
+1;Boden für Suchgraben Bodenklasse 3-5 DIN 18300, ab Geländeoberfläche zur Freilegung von Kabeln und Leitungen profilgerecht lösen, seitlich lagern, verfüllen und verdichten, Aushubtiefe bis 1,00 m, Breite der Sohle über 0,5 bis 0,6 m, Mengenermittlung nach Aufmaß an der Entnahmestelle.;5,0;m³;gaeb;vom_unternehmen_auszufuellende_dokumente/Unbenannt_V32.X83
+2;Boden für Suchgraben Bodenklasse 3-5 DIN 18300, ab Geländeoberfläche zur Freilegung von Kabeln und Leitungen profilgerecht lösen, seitlich lagern, verfüllen und verdichten, Aushubtiefe von 1,00 m bis 1,50 m, Breite der Sohle über 0,5 bis 0,6 m, Mengenermittlung nach Aufmaß an der Entnahmestelle.;10,0;m³;gaeb;vom_unternehmen_auszufuellende_dokumente/Unbenannt_V32.X83
+5;Auffüllung für Wege, profilgerecht lösen, laden, zur Kippstelle des AG fördern, abkippen, Förderweg bis 1,0 km, Abtragtiefe bis 0,3 m,;100,0;m³;gaeb;vom_unternehmen_auszufuellende_dokumente/Unbenannt_V32.X83
+6;Auffüllung profilgerecht einbauen Auffüllung Kies sandig, schwach schluffig, für Wege, verdichten, Verformungsmodul mind. EV2 45 MPa, Einbauhöhe von 0,30 m bis 0,60 m, Mengenermittlung nach Aufmaß an der Entnahmestelle.;100,0;m³;gaeb;vom_unternehmen_auszufuellende_dokumente/Unbenannt_V32.X83
+7;Boden für Wege, nach Abtrag Oberbau / Bewuchs;110,0;m³;gaeb;vom_unternehmen_auszufuellende_dokumente/Unbenannt_V32.X83
+8;Auffüllung für Wege, nach Abtrag des Oberbaus / Bewuchs;1070,0;m³;gaeb;vom_unternehmen_auszufuellende_dokumente/Unbenannt_V32.X83
+9;Planum in Vorbereitung der Bodenverbesserung profilgerecht herstellen für Wege, zulässige Abweichung von der Sollhöhe +/- 2 cm.;8630,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/Unbenannt_V32.X83
+10;Erstellung einer Eignungsprüfung für die Bodenverbesserung.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/Unbenannt_V32.X83
+11;Liefern von hydraulischen Mischbindemitteln zur Bodenverbesserung, Kalk-Zement-Gemisch, Verhältnis 30% / 70%.;172,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/Unbenannt_V32.X83
+12;Planum verbessern und verdichten, Verformungsmodul mind. EV2 45 MPa, Ausführung nach ZTV E-StB sowie Merkblatt zur Herstellung, Wirkungsweise und Anwendung von Mischbindemittel, für Wege, Schichtdicke 30 cm, mit hydraulischem Bindemittel, das Liefern des Verbesserungsstoffes wird gesondert vergütet.;8630,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/Unbenannt_V32.X83
+1;Bau- und Abbruchabfälle, Boden, Steine und Baggergut,;830,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/Unbenannt_V32.X83
+2;Bau- und Abbruchabfälle, Boden, Steine und Baggergut,;220,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/Unbenannt_V32.X83
+3;Bau- und Abbruchabfälle, Boden, Steine und Baggergut,;1310,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/Unbenannt_V32.X83
+1;Schottertragschicht ZTV LW, in ländlichen Wegen profilgerecht herstellen, Verdichtungsgrad mind. DPr 100 %, Verformungsmodul auf der Oberfläche mind. EV2 80 MPa, aus Baustoffgemisch für Schottertragschicht, natürliche Gesteinskörnung gem. TL-LW, Körnung 0/32, Feinanteil Kategorie UF 5, im eingebaute;4320,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/Unbenannt_V32.X83
+2;Asphalttragdeckschicht gemäß ZTV LW, in ländlichen Wegen, Mischgutart AC 16 TD LW, natürliche Gesteinskörnung TL Gestein, Mitverwendung von Asphaltgranulat ist zulässig, Bindemittel Straßenbaubitumen 70/100 TL Bitumen-StB und DIN EN 12591, Hohlraumgehalt max. 6,5 Vol.-%, Rand mit Neigung 2:1, abgere;6900,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/Unbenannt_V32.X83
+3;Deckschicht aus Asphaltbeton gemäß ZTV LW 16 abstumpfen mit Baustoffgemisch für Oberflächenbehandlung, Körnung 1/3 aus natürlichen gebrochenen Gesteinskörnungen, Abstreumenge 1 kg/m2, mit glatter Walze einwalzen, erkaltete Decke abkehren, vor Verkehrsfreigabe nicht gebundenen Splitt aufnehmen, laden;6829,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/Unbenannt_V32.X83
+4;Naht oder Anschluss ohne Fugenspalt in Asphaltdeckschicht zur Fuge aufweiten und säubern. Anfallender Ausbaustoff nach Wahl des AN entsorgen.;55,5;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Unbenannt_V32.X83
+5;Fugenfüllung in Längs- und Querfugen herstellen.;55,5;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Unbenannt_V32.X83
+6;Deckschicht ohne Bindemittel ZTV LW, Seitenstreifen in ländlichen Wegen, Baustoffgemisch für Deckschichten ohne Bindemittel aus Schotter-Splitt-Sand-Gemisch, natürliche Gesteinskörnung TL Gestein, Körnung 0/22, Schichtdicke bis 6 cm, Verdichtungsgrad und Verformungsmodul müssen den geforderten Werte;3600,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Unbenannt_V32.X83
+7;Schachtabdeckung anpassen, aus Beton, in ländlichen Wegen, höher setzen, verlegen in Mörtel MG III, Höhenänderung über 5 bis 10 cm.;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Unbenannt_V32.X83
+8;Straßenkappe anpassen, aus Kunststoff/Gusseisen, in ländlichen Wegen, höher setzen, Höhenänderung über 5 bis 10 cm.;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Unbenannt_V32.X83
+9;Für die Ausführung der Erdarbeiten, Erdplanum, sowie des Einbaus der ungebundenen Tragschicht im Bereich vorhandener Straßeneinbauten (z.B.: Kanalschächte, Straßeneinläufe, Kabelschächte) sind erschwerte Bedingungen zu berücksichtigen.;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Unbenannt_V32.X83
+1;Seitenstreifen abtragen.;120,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/Unbenannt_V32.X83
+2;Rückbau der bitumenhaltigen Befestigung nach Wahl des AN, in ländliche Wegen, mit Asphaltdeckschicht aus Asphaltbeton, Tiefe über 12 bis 20 cm, nicht schadstoffbelastet,;240,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/Unbenannt_V32.X83
+3;Auffüllung für Wege, nach Abtrag des Oberbaus / Bewuchs;250,0;m³;gaeb;vom_unternehmen_auszufuellende_dokumente/Unbenannt_V32.X83
+4;Bau- und Abbruchabfälle, Boden, Steine und Baggergut,;490,0;t;gaeb;vom_unternehmen_auszufuellende_dokumente/Unbenannt_V32.X83
+5;Oberboden, profilgerecht abtragen, fördern, profilgerecht auftragen, Förderweg bis 0,3 km, Bodengruppe 3a DIN 18915 (schwach bindig, sandig), eine Bodengruppe, Bodengruppe 1 SU DIN 18196 (Sand-Schluff-Gemisch), Abtragshöhe über 30 bis 40 cm, Auftragsdicke über 30 bis 40 cm, Mengenermittlung nach Auf;330,0;m³;gaeb;vom_unternehmen_auszufuellende_dokumente/Unbenannt_V32.X83
+1;Hydraulikbagger, mit Fahrer/-in, einsetzen,;10,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/Unbenannt_V32.X83
+2;Stundenlohnarbeiten durch Baufacharbeiter/-in;10,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/Unbenannt_V32.X83
+3;LKW, mit Fahrer/-in, auf Anordnung des AG einsetzen,;10,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/Unbenannt_V32.X83
+4;Grader, mit Fahrer/-in, auf Anordnung des AG einsetzen,;5,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/Unbenannt_V32.X83

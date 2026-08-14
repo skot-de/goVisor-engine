@@ -1,0 +1,50 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+01010010;Lieferung des Steuergerätes;1,0;Stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/06_K213 LV.D83
+01020010;OCIT-Schnittstelle;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/06_K213 LV.D83
+01020020;Anschluss an den OCIT-Verkehrsrechner;1,0;Stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/06_K213 LV.D83
+01020030;Funkuhr bzw. GDF-Uhr liefern;1,0;Stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/06_K213 LV.D83
+01020040;Schlüsselschalter mit Kontrollleuchte;2,0;Stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/06_K213 LV.D83
+01020050;Qualitätsanalysefunktion;1,0;Stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/06_K213 LV.D83
+01030010;Erstellung der verkehrstechnischen Unterlagen (mit ÖV);1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/06_K213 LV.D83
+01030020;Erstellung der Festzeitprogramme;2,0;Stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/06_K213 LV.D83
+01030030;Erstellung der verkehrsabhängigen Programme;2,0;Stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/06_K213 LV.D83
+01030040;Erstellung der Basisprogramme;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/06_K213 LV.D83
+02010010;Fertigfundament für Steuergeräteschaltschrank liefern;1,0;Stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/06_K213 LV.D83
+02020010;Fahrverkehrsignalgeber liefern (3-feldig, 200er);9,0;Stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/06_K213 LV.D83
+02020020;Fahrverkehrsignalgeber liefern (Rot/Gelb, 2-feldig, 200er);2,0;Stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/06_K213 LV.D83
+02020030;Fg/Rd-Signalgeber liefern (2-feldig, 200er);4,0;Stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/06_K213 LV.D83
+02020040;Fg/Rd-Signalgeber liefern (2-feldig, 200er);4,0;Stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/06_K213 LV.D83
+02020050;Fg/Rd-Signalgeber liefern (3-feldig, 200er);2,0;Stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/06_K213 LV.D83
+02020060;Rad-Signalgeber liefern (2-feldig, 200er);2,0;Stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/06_K213 LV.D83
+02020070;Blinksignalgeber liefern (Fg/Rd, 1-feldig, 200er);1,0;Stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/06_K213 LV.D83
+02020080;Strab-Signalgeber liefern (1-feldig, 200er);5,0;Stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/06_K213 LV.D83
+02020090;Strab-Signalgeber liefern (2-feldig, 200er);2,0;Stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/06_K213 LV.D83
+02020100;Strab-Signalgeber liefern (3-feldig, 200er);1,0;Stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/06_K213 LV.D83
+02020110;FG-Anforderungsgerät für Fußgänger und Sehbehinderte;2,0;Stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/06_K213 LV.D83
+02020120;FG-Anforderungsgerät für Sehbehinderte;6,0;Stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/06_K213 LV.D83
+02020130;Blindenakustik liefern;8,0;Stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/06_K213 LV.D83
+02020140;Kontrastblenden für FV-Signalgeber (2-begriffig, 200er);1,0;Stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/06_K213 LV.D83
+02020150;Kontrastblenden für FV-Signalgeber (3-begriffig, 200er);3,0;Stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/06_K213 LV.D83
+02030010;Signalmast (Normallänge) liefern;9,0;Stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/06_K213 LV.D83
+02030020;Fundamentrahmen für Signalmast liefern;9,0;Stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/06_K213 LV.D83
+03010010;Aufstellung und Montage des Steuergerätes;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/06_K213 LV.D83
+03010020;Montage der Außenanlage;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/06_K213 LV.D83
+01010010;Lieferung des Steuergerätes;1,0;Stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/06_K214 LV.D83
+01020010;OCIT-Schnittstelle;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/06_K214 LV.D83
+01020020;Anschluss an den OCIT-Verkehrsrechner;1,0;Stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/06_K214 LV.D83
+01020030;Funkuhr bzw. GDF-Uhr liefern;1,0;Stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/06_K214 LV.D83
+01020040;Schlüsselschalter mit Kontrollleuchte;2,0;Stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/06_K214 LV.D83
+01020050;Qualitätsanalysefunktion;1,0;Stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/06_K214 LV.D83
+01030010;Erstellung der verkehrstechnischen Unterlagen (mit ÖV);1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/06_K214 LV.D83
+01030020;Erstellung der Festzeitprogramme;2,0;Stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/06_K214 LV.D83
+01030030;Erstellung der verkehrsabhängigen Programme;2,0;Stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/06_K214 LV.D83
+01030040;Erstellung der Basisprogramme;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/06_K214 LV.D83
+02010010;Fertigfundament für Steuergeräteschaltschrank liefern;1,0;Stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/06_K214 LV.D83
+02020010;Fahrverkehrsignalgeber liefern (Rot/Gelb, 2-feldig, 200er);2,0;Stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/06_K214 LV.D83
+02020020;Fahrverkehrsignalgeber mit Pfeilsymbol liefern (Rot/Gelb, 2-feldig, 200er);2,0;Stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/06_K214 LV.D83
+02020030;Strab-Signalgeber liefern (1-feldig, 200er);2,0;Stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/06_K214 LV.D83
+02020040;Strab-Signalgeber liefern (2-feldig, 200er);2,0;Stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/06_K214 LV.D83
+02020050;Strab-Signalgeber liefern (3-feldig, 200er);2,0;Stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/06_K214 LV.D83
+02020060;Kontrastblenden für FV-Signalgeber (2-begriffig, 200er);2,0;Stck;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/06_K214 LV.D83
+03010010;Aufstellung und Montage des Steuergerätes;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/06_K214 LV.D83
+03010020;Montage der Außenanlage;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/06_K214 LV.D83

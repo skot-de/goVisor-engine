@@ -1,0 +1,60 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+0001;Baubüro (Baracke oder Container) für den AG, doppelwan-;1,0;Psch;gaeb;leistungsbeschreibungen/15_K51.X83
+0002;Baubüro für den AG mit allen Einrichtungen vor- und;1,5;Mt;gaeb;leistungsbeschreibungen/15_K51.X83
+0001;Belastungsfahrzeug als Gegengewicht (z.B. ausreichend;3,0;h;gaeb;leistungsbeschreibungen/15_K51.X83
+0002;Probegefäß zur Aufnahme von Baustoffproben, für Kon-;2,0;St;gaeb;leistungsbeschreibungen/15_K51.X83
+0001;Vorankündigung gemäß Baustellenverordnung erstellen und;1,0;Psch;gaeb;leistungsbeschreibungen/15_K51.X83
+0002;Sicherheits- und Gesundheitsschutzplan (SiGe-Plan) nach;1,0;Psch;gaeb;leistungsbeschreibungen/15_K51.X83
+0003;Sicherheits- und Gesundheitsschutzkoordinator während;1,0;Psch;gaeb;leistungsbeschreibungen/15_K51.X83
+0001;Die Baustrecke ist von Seiten des AG nicht vermessen und überplant.;1,0;Psch;gaeb;leistungsbeschreibungen/15_K51.X83
+0001;Geräte, Werkzeuge und sonstige Betriebsmittel, die zur;1,0;Psch;gaeb;leistungsbeschreibungen/15_K51.X83
+0002;Baustelle von allen Geräten, Anlagen, Einrichtungen und;1,0;Psch;gaeb;leistungsbeschreibungen/15_K51.X83
+0001;Verkehrssicherung längerer Dauer einschließlich Ver-;1,0;Psch;gaeb;leistungsbeschreibungen/15_K51.X83
+0002;Verkehrssicherung an Arbeitsstellen längerer Dauer ab-;1,0;Psch;gaeb;leistungsbeschreibungen/15_K51.X83
+0003;Verkehrssicherung längerer Dauer vorhalten, warten, in-;45,0;d;gaeb;leistungsbeschreibungen/15_K51.X83
+0004;Kontrolle der Verkehrssicherung an Arbeitsstellen und der eingerichteten Umleitungsstrecke einschließlich temporärer Verkehrsschilder, vorübergehender Markierungen,  baulicher Leitelemente und transportabler Schutzeinrichtungen gem. ZTV-SA durchführen. Die Kontrolle ist unmittelbar nach deren Durchf;45,0;d;gaeb;leistungsbeschreibungen/15_K51.X83
+0005;Mehraufwendungen Baustellenverkehr Dritter;1,0;Psch;gaeb;leistungsbeschreibungen/15_K51.X83
+0006;Transportable Lichtsignalanlage (LSA) einschl. der dazugehörigen CI/5 Beschilderung für Engstelle;2,0;St;gaeb;leistungsbeschreibungen/15_K51.X83
+0007;Verkehrssicherung längerer Dauer vorhalten, warten, in-;15,0;d;gaeb;leistungsbeschreibungen/15_K51.X83
+0008;Kontrolle der Verkehrssicherung an Arbeitsstellen und der eingerichteten Umleitungsstrecke einschließlich temporärer Verkehrsschilder, vorübergehender Markierungen, transportabler Lichtsignalanlagen, baulicher Leitelemente und transportabler Schutzeinrichtungen gem. ZTV-SA durchführen. Die Kon-;15,0;d;gaeb;leistungsbeschreibungen/15_K51.X83
+0009;Bankette im Bereich der Umleitungsstrecke profilgerecht;100,0;m;gaeb;leistungsbeschreibungen/15_K51.X83
+0010;Absperrgerät oder Warneinrichtung betriebsfertig auf-;5,0;St;gaeb;leistungsbeschreibungen/15_K51.X83
+0011;Verkehrsschild aufbauen, vorhalten, warten, instand;5,0;St;gaeb;leistungsbeschreibungen/15_K51.X83
+0012;Verkehrslenkungstafel aufbauen, vorhalten, warten, in-;2,0;St;gaeb;leistungsbeschreibungen/15_K51.X83
+0013;Vorhandenes Verkehrsschild verändern, vorhalten, warten;5,0;St;gaeb;leistungsbeschreibungen/15_K51.X83
+0001;Bauliche Anlage abbrechen. Anlage nach Unterlagen des;5,0;m3;gaeb;leistungsbeschreibungen/15_K51.X83
+0002;Asphaltbefestigung geradlinig trennen.;150,0;m;gaeb;leistungsbeschreibungen/15_K51.X83
+0003;Bituminöse Befestigung nach Wahl des AN Aufbrechen oder Fräsen und aufnehmen.;500,0;m2;gaeb;leistungsbeschreibungen/15_K51.X83
+0004;Unterlage reinigen. Anfallendes Kehrgut nach Wahl des;11350,0;m2;gaeb;leistungsbeschreibungen/15_K51.X83
+0005;Bitumenemulsion zur Herstellung des Schichtenverbundes;12620,0;m2;gaeb;leistungsbeschreibungen/15_K51.X83
+0006;Asphalttragschicht aus Asphalttragschichtmischgut;1620,0;t;gaeb;leistungsbeschreibungen/15_K51.X83
+0007;Asphalttragschicht aus Asphalttragschichtmischgut;260,0;t;gaeb;leistungsbeschreibungen/15_K51.X83
+0008;Asphaltdeckschicht aus Asphaltbeton für Asphaltdeck-;5900,0;m2;gaeb;leistungsbeschreibungen/15_K51.X83
+0009;Abstumpfungsmaßnahme zur Erhöhung der Anfangsgriffig-;5900,0;m2;gaeb;leistungsbeschreibungen/15_K51.X83
+0010;Unterlage reinigen. Anfallendes Kehrgut nach Wahl des;400,0;m2;gaeb;leistungsbeschreibungen/15_K51.X83
+0011;Asphalttragschicht aus Asphalttragschichtmischgut;120,0;t;gaeb;leistungsbeschreibungen/15_K51.X83
+0012;Asphaltdeckschicht aus Asphaltbeton für Asphaltdeck-;400,0;m2;gaeb;leistungsbeschreibungen/15_K51.X83
+0013;Abstumpfungsmaßnahme zur Erhöhung der Anfangsgriffig-;400,0;m2;gaeb;leistungsbeschreibungen/15_K51.X83
+0014;Flankenfläche des hochliegenden Randes der Asphalt-;945,0;m;gaeb;leistungsbeschreibungen/15_K51.X83
+0015;Anschluss als Fuge mit Fugenmasse herstellen.;200,0;m;gaeb;leistungsbeschreibungen/15_K51.X83
+0001;Bankett abtragen ggf. einschließlich Vegetationsde-;180,0;m3;gaeb;leistungsbeschreibungen/15_K51.X83
+0002;Bankett gemäß ZTV E-StB profilgerecht herstellen.;1890,0;m2;gaeb;leistungsbeschreibungen/15_K51.X83
+0003;Nassansaat auf Rohbodenflächen und Flächen mit angedecktem Oberboden in Abstimmung mit AG ausführen.;1890,0;m2;gaeb;leistungsbeschreibungen/15_K51.X83
+0004;Mulde bzw. Graben und daran anschließende Böschungen profilgerecht wiederherstellen bzw. nachprofilieren;1890,0;m;gaeb;leistungsbeschreibungen/15_K51.X83
+0005;Mulde ausräumen und profilgerecht wiederherstellen.;915,0;m;gaeb;leistungsbeschreibungen/15_K51.X83
+0001;Entwässerungsrohrleitung abbrechen. Entwässerungsrohr-;16,0;m;gaeb;leistungsbeschreibungen/15_K51.X83
+0002;Leitungsgraben profilgerecht herstellen. Straßenauf-;25,0;m3;gaeb;leistungsbeschreibungen/15_K51.X83
+0003;Entwässerungsleitung aus Kunststoffrohren nach stati-;16,0;m;gaeb;leistungsbeschreibungen/15_K51.X83
+0004;Kunststoffrohrleitung quer trennen durch Schneiden.;1,0;St;gaeb;leistungsbeschreibungen/15_K51.X83
+0005;Wildpflaster aus Naturstein herstellen, Steine bruchrauh, verwitterungsbeständig, Aufsichtsfläche mind. 0,06 m2, mind. 15 cm dick. Erf. Erdarbeiten ausführen.;3,0;m2;gaeb;leistungsbeschreibungen/15_K51.X83
+0006;Entwässerungsrohrleitung abbrechen. Entwässerungsrohr-;50,0;m;gaeb;leistungsbeschreibungen/15_K51.X83
+0007;Leitungsgraben profilgerecht herstellen. Straßenauf-;70,0;m3;gaeb;leistungsbeschreibungen/15_K51.X83
+0008;Entwässerungsleitung aus Kunststoffrohren nach stati-;50,0;m;gaeb;leistungsbeschreibungen/15_K51.X83
+0009;Kunststoffrohrleitung quer trennen durch Schneiden.;6,0;St;gaeb;leistungsbeschreibungen/15_K51.X83
+0010;Wildpflaster aus Naturstein herstellen, Steine bruchrauh, verwitterungsbeständig, Aufsichtsfläche mind. 0,06 m2, mind. 15 cm dick. Erf. Erdarbeiten ausführen.;16,0;m2;gaeb;leistungsbeschreibungen/15_K51.X83
+0001;Unterlage profilieren;500,0;m2;gaeb;leistungsbeschreibungen/15_K51.X83
+0002;Frostschutzschicht herstellen. Erschwernisse durch;50,0;t;gaeb;leistungsbeschreibungen/15_K51.X83
+0001;Leitpfosten abbauen.;40,0;St;gaeb;leistungsbeschreibungen/15_K51.X83
+0002;Leitpfosten des AG aufstellen.;40,0;St;gaeb;leistungsbeschreibungen/15_K51.X83
+0001;Stundenlohnarbeiten durch Arbeitskraefte auf Anordnung;7,0;h;gaeb;leistungsbeschreibungen/15_K51.X83
+0002;Stundenlohnarbeiten durch Baugeräte auf Anordnung des;7,0;h;gaeb;leistungsbeschreibungen/15_K51.X83

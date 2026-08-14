@@ -1,0 +1,67 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+01.1;Ortstermin an der Baustelle, nach Auftragsvergabe,;1,0;Psch;gaeb-flat;leistungsbeschreibungen/20 Photovoltaikanlage.D83
+01.2;PV-Anlage;1,0;Psch;gaeb-flat;leistungsbeschreibungen/20 Photovoltaikanlage.D83
+01.3;Unterkonstruktion für vorgenannte PV Anlage / PV-Module;1,0;Psch;gaeb-flat;leistungsbeschreibungen/20 Photovoltaikanlage.D83
+01.4;Solarkabel mit ausreichendem Querschnitt;1,0;Psch;gaeb-flat;leistungsbeschreibungen/20 Photovoltaikanlage.D83
+01.5;Wechselrichter;1,0;St;gaeb-flat;leistungsbeschreibungen/20 Photovoltaikanlage.D83
+01.6;Wechselrichtermontagerahmen;1,0;psch;gaeb-flat;leistungsbeschreibungen/20 Photovoltaikanlage.D83
+01.7;Wechselrichter;1,0;St;gaeb-flat;leistungsbeschreibungen/20 Photovoltaikanlage.D83
+01.8;Unterverteilung für Wechselrichter;2,0;Psch;gaeb-flat;leistungsbeschreibungen/20 Photovoltaikanlage.D83
+01.9;NA-Schutz;1,0;St;gaeb-flat;leistungsbeschreibungen/20 Photovoltaikanlage.D83
+01.10;Datenleitung verlegen zum Datenschrank;1,0;Psch;gaeb-flat;leistungsbeschreibungen/20 Photovoltaikanlage.D83
+01.11;Modulerdungsleitungen;1,0;Psch;gaeb-flat;leistungsbeschreibungen/20 Photovoltaikanlage.D83
+01.12;Anlagenüberwachung mittels Datenmanager;1,0;Psch;gaeb-flat;leistungsbeschreibungen/20 Photovoltaikanlage.D83
+01.13;Feuerwehrschalter;2,0;Psch;gaeb-flat;leistungsbeschreibungen/20 Photovoltaikanlage.D83
+01.14;Einspeisemanagement;1,0;Psch;gaeb-flat;leistungsbeschreibungen/20 Photovoltaikanlage.D83
+01.15;Aufbaugehäuse;1,0;psch;gaeb-flat;leistungsbeschreibungen/20 Photovoltaikanlage.D83
+01.16;Vorrüstung Batteriespeicher;1,0;psch;gaeb-flat;leistungsbeschreibungen/20 Photovoltaikanlage.D83
+01.17;Absturzsicherung, PSA gemäß DGUV Vorschrift, ASR und BG Bau;1,0;Psch;gaeb-flat;leistungsbeschreibungen/20 Photovoltaikanlage.D83
+01.18;Überspannungsschutzgerät Typ 1/2;2,0;psch;gaeb-flat;leistungsbeschreibungen/20 Photovoltaikanlage.D83
+02.1;Kabel NYCWY 4x50SM/25 vorh.Kabelrinne/Kanal;100,0;m;gaeb-flat;leistungsbeschreibungen/20 Photovoltaikanlage.D83
+02.2;Kabel NYCWY 4x50SM/25 AP Abstandsschellen;50,0;m;gaeb-flat;leistungsbeschreibungen/20 Photovoltaikanlage.D83
+02.3;A-2YF(L)2Y 10x2x0,8 Nachfolgend aufgeführtes starres Rohr,;150,0;m;gaeb-flat;leistungsbeschreibungen/20 Photovoltaikanlage.D83
+02.4;Kunststoff - Stangenrohr DN 25 Kabelsteigtrasse feuerverzinkt, mittelschwere Ausführung;25,0;m;gaeb-flat;leistungsbeschreibungen/20 Photovoltaikanlage.D83
+02.5;Breite bis 200 mm Die nachfolgenden Schottungen und Verkleidungen;12,0;m;gaeb-flat;leistungsbeschreibungen/20 Photovoltaikanlage.D83
+02.6;Universal-Brandschott, Querschnitt bis 100 qcm Kernbohrungen in bewehrtem Stahlbeton herstellen,;10,0;St;gaeb-flat;leistungsbeschreibungen/20 Photovoltaikanlage.D83
+02.7;Kernbohrung Durchmesser von 26 bis 60 mm;100,0;cm;gaeb-flat;leistungsbeschreibungen/20 Photovoltaikanlage.D83
+02.8;Schwanenhalsdurchführung;1,0;St;gaeb-flat;leistungsbeschreibungen/20 Photovoltaikanlage.D83
+02.9;Gerüstturm;2,0;Psch;gaeb-flat;leistungsbeschreibungen/20 Photovoltaikanlage.D83
+03.1;Monteurstunden;8,0;h;gaeb-flat;leistungsbeschreibungen/20 Photovoltaikanlage.D83
+03.2;Auszubildenden-,Helferstunden;8,0;h;gaeb-flat;leistungsbeschreibungen/20 Photovoltaikanlage.D83
+03.3;Revisionsunterlagen;1,0;Psch;gaeb-flat;leistungsbeschreibungen/20 Photovoltaikanlage.D83
+03.4;Inbetriebnahme der PV-Anlage;1,0;Psch;gaeb-flat;leistungsbeschreibungen/20 Photovoltaikanlage.D83
+03.5;Meldung im Marktstammdatenregister;1,0;Psch;gaeb-flat;leistungsbeschreibungen/20 Photovoltaikanlage.D83
+04.10;Wartung PV Anlage;5,0;St;gaeb-flat;leistungsbeschreibungen/20 Photovoltaikanlage.D83
+01.1;Ortstermin an der Baustelle, nach Auftragsvergabe,;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20 Photovoltaikanlage.D83
+01.2;PV-Anlage;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20 Photovoltaikanlage.D83
+01.3;Unterkonstruktion für vorgenannte PV Anlage / PV-Module;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20 Photovoltaikanlage.D83
+01.4;Solarkabel mit ausreichendem Querschnitt;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20 Photovoltaikanlage.D83
+01.5;Wechselrichter;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20 Photovoltaikanlage.D83
+01.6;Wechselrichtermontagerahmen;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20 Photovoltaikanlage.D83
+01.7;Wechselrichter;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20 Photovoltaikanlage.D83
+01.8;Unterverteilung für Wechselrichter;2,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20 Photovoltaikanlage.D83
+01.9;NA-Schutz;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20 Photovoltaikanlage.D83
+01.10;Datenleitung verlegen zum Datenschrank;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20 Photovoltaikanlage.D83
+01.11;Modulerdungsleitungen;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20 Photovoltaikanlage.D83
+01.12;Anlagenüberwachung mittels Datenmanager;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20 Photovoltaikanlage.D83
+01.13;Feuerwehrschalter;2,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20 Photovoltaikanlage.D83
+01.14;Einspeisemanagement;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20 Photovoltaikanlage.D83
+01.15;Aufbaugehäuse;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20 Photovoltaikanlage.D83
+01.16;Vorrüstung Batteriespeicher;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20 Photovoltaikanlage.D83
+01.17;Absturzsicherung, PSA gemäß DGUV Vorschrift, ASR und BG Bau;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20 Photovoltaikanlage.D83
+01.18;Überspannungsschutzgerät Typ 1/2;2,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20 Photovoltaikanlage.D83
+02.1;Kabel NYCWY 4x50SM/25 vorh.Kabelrinne/Kanal;100,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20 Photovoltaikanlage.D83
+02.2;Kabel NYCWY 4x50SM/25 AP Abstandsschellen;50,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20 Photovoltaikanlage.D83
+02.3;A-2YF(L)2Y 10x2x0,8 Nachfolgend aufgeführtes starres Rohr,;150,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20 Photovoltaikanlage.D83
+02.4;Kunststoff - Stangenrohr DN 25 Kabelsteigtrasse feuerverzinkt, mittelschwere Ausführung;25,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20 Photovoltaikanlage.D83
+02.5;Breite bis 200 mm Die nachfolgenden Schottungen und Verkleidungen;12,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20 Photovoltaikanlage.D83
+02.6;Universal-Brandschott, Querschnitt bis 100 qcm Kernbohrungen in bewehrtem Stahlbeton herstellen,;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20 Photovoltaikanlage.D83
+02.7;Kernbohrung Durchmesser von 26 bis 60 mm;100,0;cm;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20 Photovoltaikanlage.D83
+02.8;Schwanenhalsdurchführung;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20 Photovoltaikanlage.D83
+02.9;Gerüstturm;2,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20 Photovoltaikanlage.D83
+03.1;Monteurstunden;8,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20 Photovoltaikanlage.D83
+03.2;Auszubildenden-,Helferstunden;8,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20 Photovoltaikanlage.D83
+03.3;Revisionsunterlagen;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20 Photovoltaikanlage.D83
+03.4;Inbetriebnahme der PV-Anlage;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20 Photovoltaikanlage.D83
+03.5;Meldung im Marktstammdatenregister;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20 Photovoltaikanlage.D83
+04.10;Wartung PV Anlage;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20 Photovoltaikanlage.D83

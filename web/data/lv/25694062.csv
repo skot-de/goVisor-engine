@@ -1,0 +1,317 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+01010001;Außentemperatur-Messwertgeber mit Sonnenschutzkappe;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+01010002;Tauchtemperatur-Messwertgeber, Niro-Tasche, 100 mm;3,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+01010003;Tauchtemperatur-Messwertgeber, Niro-Tasche, 200 mm;3,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+01010004;Tauchtemperatur-Messwertgeber mit Niro-Tasche, 400 mm;3,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+01010005;Energieventil 3-Weg Monitoring, IG, DN50, 86,4-288 l/min.,Antrieb busf.;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+01010006;Anlegetemperatur-Messwertgeber Spannbandbefestigung;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+01020001;Ein-Ausgabe-Modul Feldbus mit 4 Koppelrelais;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+01020002;Ein-Ausgabe-Modul Feldbus, 4AA, 4AE;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+01020003;Lokale Vorrangbedienung, 4 Handschalter, Auto/Aus/Ein;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+01020004;Lokale Vorrangbedienung, 4 Handschalter, Auto/0..100%;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+01020005;Eingabe-Modul Feldbus, 4 AE;4,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+01020006;Eingabe-Modul Feldbus, 8 BE;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+01030001;"Sichtfenster (2x19"")";1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+01030002;"11""-Einschubrahmen";1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+01030003;Pumpensteuerung, busfähig, 230VAC 4kW Netzabgang mit Meldung;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+01030004;Meldung potentialfrei, Erweiterung Bestand;6,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+01030005;Meldung potentialbehaftet, Erweiterung Bestand;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+01030006;Aufschaltung Messwert  aktiv Erweiterung Bestand;8,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+01030007;Aufschaltung Messwert passiv;2,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+01030008;Aufschaltung Stellbefehl stetig;4,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+01030009;Strömungsüberwachung Druckschalter;2,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+01030010;Einbau/Verdrahtung auf Montageplatte Ein- u. Ausgabemodule Feldbus in vorhandenen ISP;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+01030011;"Einbau in 19""-Einbaurahmen Automationsstation/Geräte FSM";1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+01030012;Projektierung Schaltschrank Erweiterung ISP / Unterlagen;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+01030013;Inbetriebnahme Schaltschrank;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+01030014;Einrichten busfähigen Handbedienebene und Signalisierungsebene;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+01030015;Inbetriebnahme busfähige Handbedienebene und Signalisierungsebene;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+01030016;Hardwarecheck der Datenpunkte;15,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+01040001;Projektausführung Automationsstation, Technische Bearbeitung Bestandsanlage DDC4002e;1,0;Psch;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+01040002;Klartext Automationsstation;15,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+01040003;Einrichten der Schnellabfrage;1,0;psch;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+01040004;Inbetriebnahme Automationsstation und Einregulierung;1,0;Psch;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+01040005;Inbetriebnahme  Datenkommunikation Automationsstationen System DDC4000 und Gebäudeleittechnik;1,0;Psch;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+01040006;Beschriften der Automationsgeräte mit kundenspezifischen Texten;2,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+01040007;Projektierung Grafik/Anlagenbild DIN EN ISO 16484 GA-FL Abschnitt 8.1;5,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+01040008;Projektierung Dynamische Einblendung DIN EN ISO 16484 GA-FL Abschnitt 8.2;25,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+01040009;Projektierung Historische Datenbank DIN EN ISO 16484 GA-FL Abschnitt 7.4;11,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+01050001;Abzweigkasten Einführungen Kunststoff 80/80mm T 37mm IP55 AP Beton;11,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+01050002;Klein- und Hilfsmaterial;1,0;Psch;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+01050003;Profilstahlkonstruktion, verzinkt;22,0;kg;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+01050004;Potentialausgleichsschiene Stahl verz 8x1,5-25mm2 40x4mm;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+01050005;Erdungsbandrohrschelle Stahl niro 1x2,5mm2-2x16mm2 Durchm. bis 100mm;4,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+01050006;Bezeichnungsschild mehrschichtig Kunststoff H 37mm B 74mm Schildträger Spannband;16,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+01050007;Elektroinstallationsrohr Stahl besch flex AD 20mm AP;6,0;m;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+01050008;Elektroinstallationsrohr Stahl besch flex AD 25mm AP;6,0;m;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+01050009;Schlauchverschraubung, gerade, M20;4,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+01050010;Schlauchverschraubung, gerade, M25;4,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+01050011;Iso-Gegenmutter M20;4,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+01050012;Iso-Gegenmutter M25;4,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+01050013;Iso-Kabelverschraubung M20;4,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+01050014;Iso-Kabelverschraubung M25;4,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+01050015;Installationskabel symmetrisch J-Y(St)Y 2x2x0,8 Bd vorh.Rohr/Unterflurkanal;62,0;m;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+01050016;Installationskabel symmetrisch J-Y(St)Y 4x2x0,8 Bd vorh.Rohr/Unterflurkanal;114,0;m;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+01050017;Installationsleitung NYM-J 3x1,5 vorh.Rohr/Unterflurkanal;35,0;m;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+01050018;Installationsleitung NYM-J 3x2,5 vorh.Rohr/Unterflurkanal;24,0;m;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+01050019;Installationsleitung NYM-J 5x1,5 vorh.Rohr/Unterflurkanal;28,0;m;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+01050020;Installationsleitung NYM-J 5x2,5 vorh.Rohr/Unterflurkanal;32,0;m;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+01050021;Installationskabel symmetrisch Anschluss J-Y(St)Y 2x2x0,8 Bd;8,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+01050022;Installationskabel symmetrisch Anschluss J-Y(St)Y 4x2x0,8 Bd;9,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+01050023;Installationsleitung NYM-J 3x1,5 anschließen Betriebsmittel;4,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+01050024;Installationsleitung NYM-J 3x2,5 anschließen Betriebsmittel;2,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+01050025;Installationsleitung NYM-J 5x1,5 anschließen Betriebsmittel;2,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+01050026;Installationsleitung NYM-J 5x2,5 anschließen Betriebsmittel;4,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+01050027;Kabelrinne Stahl bandverz H 60mm B 100mm;12,0;m;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+01050028;Stiel Ausleger Stahl galvanisch verz bis 3kN Deckenbefestigung L bis 400mm;16,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+01050029;Ausleger Stahl galvanisch verz bis 3,5kN L 100mm an Stielen;16,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+01050030;Ausleger Stahl galvanisch verz bis 3,5kN L 100mm Wandbefestigung;6,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+01050031;Bogen 90Grad Stahl bandverz H 60mm B 100mm;2,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+01050032;Bogen bis 90Grad Stahl bandverz H 60mm B 100mm;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+01050033;T-Abzweig Stahl bandverz H 60mm B 100mm;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+01050034;Reduzierstück Stahl bandverz H 60mm B 100mm;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+01050035;Kabelleiter Stahl bandverz H 60mm B 200mm;4,0;m;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+01050036;Bügelschelle, 2fach, 34 mm;15,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+01050037;Bügelschelle, 2fach, 40 mm;15,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+01050038;Elektroinstallationsrohr PVC-U AD 16mm AP Abstandsschellen;12,0;m;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+01050039;Elektroinstallationsrohr PVC-U AD 20mm AP Abstandsschellen;18,0;m;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+01050040;Elektroinstallationsrohr PVC-U AD 25mm AP Abstandsschellen;36,0;m;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+01050041;Elektroinstallationsrohr PVC-U AD 32mm AP Abstandsschellen;8,0;m;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+01050042;Elektroinstallationskanal Geräteeinbau H/B 70/170mm PVC-U;22,0;m;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+01050043;Brandschutzabschottung Leitungsanlagen flexibler Schott S90 Gebäude Wand D 300mm 0,05-0,1m2 A;2,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+01050044;Rauchdichter Verschluss, Wand, 50 mm;6,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+01050045;Kernbohrung Beton Durchm. 50-100mm T 35-40cm Geräteeinsatz mgl. nicht schadstoffbelastet;2,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+01050046;Bohrung Stahlbeton Durchm. bis 25mm T 35-40cm Geräteeinsatz mgl. nicht schadstoffbelastet;6,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+01050047;Bohrung Metall 16 mm;12,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+01050048;Langfeldleuchte;2,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+01050049;PIR-Bewegungsmelder;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+01050050;Ausschalter/-taster;2,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+02010001;Projektausführung Gebäudemanagement, Erweiterung bestehende Anlage;1,0;psch;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+02010002;Inbetriebnahme Gebäudemanagement, Erweiterung bestehende Anlage;1,0;psch;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+03.0001;Baustelle einrichten räumen;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+03.0002;Facharbeiter/-in sämtliche Kosten/Zuschläge;5,0;h;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+03.0003;Regelungstechniker/-in sämtliche Kosten/Zuschläge;5,0;h;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+03.0004;Ingenieur/-in sämtliche Kosten/Zuschläge;5,0;h;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+03.0005;Mitwirkung Wiederinbetriebnahme Wärmeerzeugungsanlage;1,0;Psch;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+03.0006;MSR-Anl vor Abnahme betreiben;2,0;StWo;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+03.0007;Einweisung/Schulung Einweisung des Bedienungspersonals;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+03.0008;Erstellen der Automationsschemata nach DIN ISO 16484;1,0;Psch;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+03.0009;Erstellen der Funktionsliste nach DIN ISO 16484;1,0;Psch;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+03.0010;Bestandsdokumentation Bestandsdokumentation;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 2 Gebäudeautomation.D83
+0001;"Außentemperatur-Messwertgeber mit Sonnenschutzkappe Kunststoffgehäuse für Wandaufbau Messtoleranz entsprechend VDI 3512, entsprechend Genauigkeitsklasse ""A-TGA"".";1,0;St;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0002;"Tauchtemperatur-Messwertgeber Niro-Fühlertasche Messtoleranz entsprechend VDI 3512, entsprechend Genauigkeitsklasse ""A-TGA"".";3,0;St;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0003;"Tauchtemperatur-Messwertgeber mit Niro-Tasche Niro-Fühlertasche Messtoleranz entsprechend VDI 3512, entsprechend Genauigkeitsklasse ""A-TGA"".";3,0;St;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0004;"Tauchtemperatur-Messwertgeber mit Niro-Tasche Niro-Fühlertasche Messtoleranz entsprechend VDI 3512, entsprechend Genauigkeitsklasse ""A-TGA""";3,0;St;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0005;Regelkugelhahn mit sensorgeführter Durchfluss- oder Leistungsregelung, Leistungs- und Energiemonitoring, 3-Weg Innengewinde, für stetige wasserseitige Regelung von Luftbehandlungs- und Heizungsanlagen. Bestehend aus 3-Weg Regelkugelhahn mit Antrieb, Messrohr mit Volumenstromsensor und Temperatursens;1,0;St;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0006;"Anlegetemperatur-Messwertgeber Spannbandbefestigung Messtoleranz entsprechend VDI 3512, entsprechend Genauigkeitsklasse ""A-TGA"".";1,0;St;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0001;Ein-Ausgabe-Modul Feldbus mit 4 Koppelrelais 10 invertierbaren binären Eingängen und 2 autarken Kommunikationsschnittstellen. In Verbindung mit aufgeschaltetem FSModul die direkte Bedienebene in betriebstechnischen Anlagen. Anschluss eines FSModules über QBSchnittstelle zur unabhängigen, direkten Be;1,0;St;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0002;"Ein-Ausgabe-Modul Feldbus 4AA, 4AE Anschluss eines FrontSchaltModules über QBS zur unabhängigen, direkten Bedienung bei Feldbus- oder Zentralen-Ausfall. 2-DIP Schalter zur Auswahl des FSM-Typs 1-DIP Schalter Relaissteuerung ""Y-In/Y-Out"". 8 Analog-Werte und 8 Binär-Zustände von FSM/FBM über Feld-Bus ";1,0;St;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0003;Lokale Vorrangbedienung 4 Handschalter, Auto/Aus/Ein für Befehlsgabe in Verbindung mit FeldBusModul FBM38 über autarke QBSchnittstelle. 4-Drahtleitung bis max. 30m absetzbar. Zur lokalen Vorrangbedienung von 4x1 Stufigen Aggregaten gemäß DIN EN ISO 16484-2. Integrierte Betriebsmeldekontrolle Differe;1,0;St;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0004;Lokale Vorrangbedienung 4 Handschalter, Auto/0..100% mit 10 Stellungen für Befehlsgabe gemäß VDI 3814 in Verbindung mit DDC-FeldBusModul über Quasi-Bidirektionale-Schnittstelle (QBS), 4-Drahtleitung bis max. 30m absetzbar. 8-LED-Balken(grün) für Stellungsanzeige auf jeden Analog-Ausgang, LED für Bet;1,0;St;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0005;Eingabe-Modul Feldbus 4 AE Kunststoffgehäuse für Tragschienenmontage, LEDs für Zustandsanzeigen.;4,0;St;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0006;Eingabe-Modul Feldbus 8 BE Kunststoffgehäuse für Tragschienenmontage, Eingänge als potentialfreie Schließer/ Öffner oder Impulszähler 80 Hz. LEDs für Zustandsanzeigen.;1,0;St;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0001;"Sichtfenster, 2x19"", stabile Rahmenkonstruktion aus";1,0;St;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0002;"11""-Einschubrahmen für die Aufnahme von 4 Einfachkassetten oder 2 Doppelkassetten.";1,0;St;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0003;Pumpensteuerung, busfähig, 230 VAC, 4 kW;1,0;St;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0004;Meldung potentialfrei, Erweiterung Bestand, bestehend aus:;6,0;St;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0005;Meldung potentialbehaftet, Erweiterung Bestand, bestehend aus:;1,0;St;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0006;Aufschaltung Messwert aktiv, Erweiterung Bestand, bestehend aus:;8,0;St;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0007;Aufschaltung Messwert passiv, bestehend aus:;2,0;St;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0008;Aufschaltung Stellbefehl stetig, bestehend aus:;4,0;St;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0009;Strömungsüberwachung Druckschalter, bestehend aus:;2,0;St;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0010;Einbau/Verdrahtung auf Montageplatte, Ein- u. Ausgabemodule Feldbus, in vorhandenen ISP, einschließlich sämtlicher Zubehörteile, Reihenklemmen nach Bedarf.;1,0;St;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0011;"Einbau in 19""-Einbaurahmen, Automationsstation/Geräte";1,0;St;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0012;Projektierung Schaltschrank, Erweietrung ISP, Schaltschrankausführung in Abstimmung;1,0;St;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0013;Inbetriebnahme Schaltschrank,;1,0;St;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0014;Einrichten busfähigen Handbedienebene;1,0;St;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0015;Inbetriebnahme busfähige Handbedienebene;1,0;St;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0016;Hardwarecheck der Datenpunkte;15,0;St;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0001;Projektausführung Automationsstation, Technische Bearbeitung Bestandsanlage DDC4002e.;1,0;Psch;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0002;Klartext Automationsstation;15,0;St;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0003;Einrichten der Schnellabfrage, zur Abfrage/Änderung von Istwerten, Sollwerten, Nutzungszeiten, Jahresdatenpunkten und Betriebszuständen.;1,0;psch;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0004;Inbetriebnahme Automationsstation und Einregulierung.;1,0;Psch;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0005;Inbetriebnahme Datenkommunikation;1,0;Psch;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0006;Beschriften der Automationsgeräte mit kundenspezifischen Texten für alle Betriebs-und Störmeldeanzeigen, Taster und Schalter.;2,0;St;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0007;Projektierung Grafik/Anlagenbild, DIN EN ISO 16484 GA-FL Abschnitt 8.1;5,0;St;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0008;Projektierung Dynamische Einblendung DIN EN ISO 16484 GA-FL Abschnitt 8.2.;25,0;St;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0009;Projektierung Historische Datenbank DIN EN ISO 16484 GA-FL Abschnitt 7.4.;11,0;St;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0001;Verbindungsdose DIN EN 60670-1 (VDE 0606-1) als Abzweigkasten, mit Einführungen für Mantelleitungen für ortsfeste Installation, aus Kunststoff, Grundfläche mind. 80/80 mm, Tiefe mind. 37 mm, mit Deckel, Schutzart IP 55 DIN EN 60529 (VDE 0470-1), Aufputz, auf Beton.;11,0;St;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0002;Klein- und Hilfsmaterial.;1,0;Psch;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0003;Profilstahlkonstruktion, tauchverzinkt, für Stütz-, Hänge-, Trag- und Sonderbefestigungen einschl. Befestigungsmaterial.;22,0;kg;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0004;Potentialausgleichsschiene DIN VDE 0618-1 (VDE 0618-1), aus verzinktem Stahl, mit Anschluss für 8 x 1,5 bis 25 mm2, ein Flachband bis 40 mm x 4 mm, und Massivrundleiter, Durchmesser 8 bis 10 mm.;1,0;St;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0005;Erdungsbandrohrschelle aus nichtrostendem Stahl, Werkstoff-Nr 1.4571, mit Anschlussmöglichkeit für einen Leiter 2,5 mm2 bis 2 Leiter 16 mm2, für Rohrdurchmesser bis 100 mm.;4,0;St;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0006;Bezeichnungsschild DIN 825, Farbe und Beschriftung nach Angaben des AG, aus mehrschichtigem Kunststoff, Beschriftung 2-zeilig, gefräst, rechteckig, Höhe 37 mm, Breite 74 mm, Befestigung mit Schildträger aus verzinktem Stahl, Halter und Spannband.;16,0;St;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0007;Elektroinstallationsrohr DIN EN 61386 (VDE 0605), Maße DIN EN 60423, aus beschichtetem Stahl, einwandig, gewellt, flexibel, Außendurchmesser 20 mm, Druckfestigkeit Klasse 4 - schwer (1250 N) DIN EN 61386-1 (VDE 0605-1), Klasse Schlagbeanspruchung 4 - schwer DIN EN 61386-1 (VDE 0605-1), min. Gebrauch;6,0;m;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0008;Elektroinstallationsrohr DIN EN 61386 (VDE 0605), Maße DIN EN 60423, aus beschichtetem Stahl, einwandig, gewellt, flexibel, Außendurchmesser 25 mm, Druckfestigkeit Klasse 4 - schwer (1250 N) DIN EN 61386-1 (VDE 0605-1), Klasse Schlagbeanspruchung 4 - schwer DIN EN 61386-1 (VDE 0605-1), min. Gebrauch;6,0;m;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0009;Schlauchverschraubung, gerade, M20, Messinganschlussstück, passend für Metallschutzschlauch.;4,0;St;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0010;Schlauchverschraubung, gerade, M25, Messinganschlussstück, passend für Metallschutzschlauch.;4,0;St;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0011;Iso-Gegenmutter M20, Verbindungsbauteil für Kabel und;4,0;St;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0012;Iso-Gegenmutter M25, Verbindungsbauteil für Kabel und;4,0;St;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0013;Iso-Kabelverschraubung M20, Verbindungsbauteil für Kabel und Leitungen aus Polyamid mit;4,0;St;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0014;Iso-Kabelverschraubung M25, Verbindungsbauteil für Kabel und Leitungen aus Polyamid mit;4,0;St;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0015;Installationskabel, symmetrisch, DIN VDE 0815 (VDE 0815), J-Y(St)Y, 2 x 2 x 0,8 Bd, in vorh. Rohre/Unterflurkanäle.;62,0;m;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0016;Installationskabel, symmetrisch, DIN VDE 0815 (VDE 0815), J-Y(St)Y, 4 x 2 x 0,8 Bd, in vorh. Rohre/Unterflurkanäle.;114,0;m;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0017;Installationsleitung DIN VDE 0250-204 (VDE 0250-204) NYM-J 3 x 1,5, Cu-Zahl 43, in vorh. Rohre/Unterflurkanäle.;35,0;m;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0018;Installationsleitung DIN VDE 0250-204 (VDE 0250-204) NYM-J 3 x 2,5, Cu-Zahl 72, in vorh. Rohre/Unterflurkanäle.;24,0;m;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0019;Installationsleitung DIN VDE 0250-204 (VDE 0250-204) NYM-J 5 x 1,5, Cu-Zahl 72, in vorh. Rohre/Unterflurkanäle.;28,0;m;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0020;Installationsleitung DIN VDE 0250-204 (VDE 0250-204) NYM-J 5 x 2,5, Cu-Zahl 120, in vorh. Rohre/Unterflurkanäle.;32,0;m;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0021;Installationskabel, symmetrisch, DIN VDE 0815 (VDE 0815), nur anschließen je Ende, an Leiste, geschirmt, in Schraubtechnik, J-Y(St)Y, 2 x 2 x 0,8 Bd.;8,0;St;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0022;Installationskabel, symmetrisch, DIN VDE 0815 (VDE 0815), nur anschließen je Ende, an Leiste, geschirmt, in Schraubtechnik, J-Y(St)Y, 4 x 2 x 0,8 Bd.;9,0;St;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0023;Installationsleitung DIN VDE 0250-204 (VDE 0250-204) NYM-J 3 x 1,5, Cu-Zahl 43, anschließen an beigestellte Betriebsmittel, einschl. Verbindungsmittel.;4,0;St;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0024;Installationsleitung DIN VDE 0250-204 (VDE 0250-204) NYM-J 3 x 2,5, Cu-Zahl 72, anschließen an beigestellte Betriebsmittel, einschl. Verbindungsmittel.;2,0;St;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0025;Installationsleitung DIN VDE 0250-204 (VDE 0250-204) NYM-J 5 x 1,5, Cu-Zahl 72, anschließen an beigestellte Betriebsmittel, einschl. Verbindungsmittel.;2,0;St;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0026;Installationsleitung DIN VDE 0250-204 (VDE 0250-204) NYM-J 5 x 2,5, Cu-Zahl 120, anschließen an beigestellte Betriebsmittel, einschl. Verbindungsmittel.;4,0;St;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0027;Kabelrinne für Kabelträgersystem DIN EN 61537 (VDE 0639), gelocht, mit einem Trennsteg, einschl. Abdeckung mit Drehriegelverschluss, aus bandverzinktem Stahl DIN EN 10346, Dicke 1 mm, Seitenhöhe mind. 60 mm, Breite mind. 100 mm, Arbeitshöhe bis 4 m.;12,0;m;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0028;Stiel für Ausleger für Kabelrinne, aus galvanisch verzinktem Stahl DIN 50961, Tragfähigkeit bis 3 kN, an Decke befestigen mit bauaufsichtlich zugelassenen Dübeln, mit angeschraubter Kopfplatte, Stiellänge bis 400 mm, Arbeitshöhe bis 4 m.;16,0;St;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0029;Ausleger für Kabelrinne, aus galvanisch verzinktem Stahl DIN 50961, Tragfähigkeit bis 3,5 kN, Länge 100 mm, an Stielen, einseitig, Stiele werden gesondert vergütet, Arbeitshöhe bis 4 m.;16,0;St;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0030;Ausleger für Kabelrinne, aus galvanisch verzinktem Stahl DIN 50961, Tragfähigkeit bis 3,5 kN, Länge 100 mm, an der Wand aus Beton befestigen mit bauaufsichtlich zugelassenen Dübeln, Arbeitshöhe bis 4 m.;6,0;St;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0031;Bogen, für Kabelrinne, 90 Grad, waagerecht, aus bandverzinktem Stahl DIN EN 10346, Seitenhöhe mind. 60 mm, Breite mind. 100 mm, Arbeitshöhe bis 4 m.;2,0;St;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0032;Bogen, für Kabelrinne, bis 90 Grad, senkrecht, aus bandverzinktem Stahl DIN EN 10346, Seitenhöhe mind. 60 mm, Breite mind. 100 mm, Arbeitshöhe bis 4 m.;1,0;St;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0033;T-Abzweig, für Kabelrinne, aus bandverzinktem Stahl DIN EN 10346, Dicke 1 mm, Seitenhöhe mind. 60 mm, Breite mind. 100 mm, Arbeitshöhe bis 4 m.;1,0;St;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0034;Reduzierstück, für Kabelrinne, aus bandverzinktem Stahl DIN EN 10346, Dicke 1 mm, Seitenhöhe mind. 60 mm, Breite mind. 100 mm, Arbeitshöhe bis 4 m.;1,0;St;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0035;Kabelleiter für Kabelträgersystem DIN EN 61537 (VDE 0639), Sprossenabstand 300 mm, mit einem Trennsteg, aus bandverzinktem Stahl DIN EN 10346, Dicke 1,5 mm, Seitenhöhe mind. 60 mm, Breite mind. 200 mm, Arbeitshöhe bis 4 m.;4,0;m;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0036;Bügelschellen, für senkrechte und waagerechte Befestigung an C-Profilschiene. Mit Druckwanne, Doppelwanne und Gegenwanne aus Polypropylen.;15,0;St;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0037;Bügelschellen, für senkrechte und waagerechte Befestigung an C-Profilschiene. Mit Druckwanne, Doppelwanne und Gegenwanne aus Polypropylen.;15,0;St;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0038;Elektroinstallationsrohr DIN EN 61386 (VDE 0605), Maße DIN EN 60423, aus PVC-U, einwandig, glatt, starr, mit angeformter Muffe, Außendurchmesser 16 mm, Druckfestigkeit Klasse 4 - schwer (1250 N) DIN EN 61386-1 (VDE 0605-1), Klasse Schlagbeanspruchung 4 - schwer DIN EN 61386-1 (VDE 0605-1), min. Gebr;12,0;m;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0039;Elektroinstallationsrohr DIN EN 61386 (VDE 0605), Maße DIN EN 60423, aus PVC-U, einwandig, glatt, starr, mit angeformter Muffe, Außendurchmesser 20 mm, Druckfestigkeit Klasse 4 - schwer (1250 N) DIN EN 61386-1 (VDE 0605-1), Klasse Schlagbeanspruchung 4 - schwer DIN EN 61386-1 (VDE 0605-1), min. Gebr;18,0;m;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0040;Elektroinstallationsrohr DIN EN 61386 (VDE 0605), Maße DIN EN 60423, aus PVC-U, einwandig, glatt, starr, mit angeformter Muffe, Außendurchmesser 25 mm, Druckfestigkeit Klasse 4 - schwer (1250 N) DIN EN 61386-1 (VDE 0605-1), Klasse Schlagbeanspruchung 4 - schwer DIN EN 61386-1 (VDE 0605-1), min. Gebr;36,0;m;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0041;Elektroinstallationsrohr DIN EN 61386 (VDE 0605), Maße DIN EN 60423, aus PVC-U, einwandig, glatt, starr, mit angeformter Muffe, Außendurchmesser 32 mm, Druckfestigkeit Klasse 4 - schwer (1250 N) DIN EN 61386-1 (VDE 0605-1), Klasse Schlagbeanspruchung 4 - schwer DIN EN 61386-1 (VDE 0605-1), min. Gebr;8,0;m;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0042;Elektroinstallationskanal DIN EN 50085-2-1 (VDE 0604-2-1) als Geräteeinbaukanal, mit innenliegendem Oberteil, Breite 100 mm, Außenmaße H/B mind. 70/170 mm, aus PVC-U, Oberteil aus PVC, mit einem Trennsteg, aus Kunststoff, einschl. aller systembedingten Form- und Verbindungsstücke, auf Beton.;22,0;m;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0043;Brandschutzabschottung an Kabel-/Leitungsanlagen als flexibles Schott, mit allgemeinem bauaufsichtlichen Prüfzeugnis/allgemeiner bauaufsichtlicher Zulassung, Feuerwiderstandsklasse S 90 DIN 4102-9, im Gebäude, Oberkante Abschottung über Gelände/Fußboden bis 3,5 m, Wand aus Beton, Dicke 300 mm, durch;2,0;St;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0044;Rauchdichter Verschluss von Kabel- und Leitungsdurchführungen durch Wände. Ringspalt bis Durchmesser ca. 50 mm, Dichtstoff Acryl.;6,0;St;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0045;Kernbohrung, senkrecht zur Untergrundfläche, Untergrundfläche senkrecht, aus unbewehrtem Beton, Normalbeton, Bohrdurchmesser über 50 bis 100 mm, Bohrtiefe über 35 bis 40 cm, einschl. Lösen des Bohrkerns aus dem Gefüge, Wichte des Abbruchstoffes DIN EN 1991-1-1 26 kN/m3, Arbeitshöhe bis 3 m,;2,0;St;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0046;Bohrung, senkrecht zur Untergrundfläche, Untergrundfläche senkrecht, aus Stahlbeton, Normalbeton, Bohrdurchmesser bis 25 mm, Bohrtiefe über 35 bis 40 cm, Wichte des Abbruchstoffes DIN EN 1991-1-1 24 kN/m3, Arbeitshöhe bis 4 m,;6,0;St;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0047;Bohrung 16 mm einbringen, Wandöffnung für Kabelverschraubungen oder Kabeltüllen in Geräten oder Verteilerschränken einbringen, bis zu einer Blechstärke von 2 mm als Bohrung bis 16 mm.;12,0;St;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0048;Langfeldleuchte, bis 2x58 W, umsetzen. Zuleitung ausklemmen, Leuchte demontieren, umsetzen, montieren, Zuleitung einklemmen.;2,0;St;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0049;PIR-Bewegungsmelder, umsetzen. Zuleitung ausklemmen, PIR-Melder demontieren, umsetzen, montieren, Zuleitung einklemmen.;1,0;St;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0050;Ausschalter/-taster, umsetzen. Zuleitung ausklemmen, Leuchte demontieren, umsetzen, montieren, Zuleitung einklemmen.;2,0;St;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0001;Projektausführung Gebäudemanagement;1,0;psch;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0002;Inbetriebnahme Gebäudemanagement;1,0;psch;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0001;Baustelle für sämtliche, in der Leistungsbeschreibung aufgeführten Leistungen einrichten und räumen.;1,0;St;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0002;Stundenlohnarbeiten durch Facharbeiter/-in;5,0;h;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0003;Stundenlohnarbeiten durch Regelungstechniker/-in;5,0;h;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0004;Stundenlohnarbeiten durch Ingenieur/-in;5,0;h;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0005;Mitwirkung Wiederinbetriebnahme Wärmeerzeugungsanlage. Vollständiger Funktionstest in Zusammenarbeit mit dem Anlagenerrichter. Einstellung und Parametrierung der Parameter.;1,0;Psch;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0006;MSR-Anlage vor der Abnahme betreiben, mit provisorischen Programmen und Parametern, ohne Anschluss an die Managementebene,;2,0;StWo;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0007;Schulung des Bedienungspersonals;1,0;St;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0008;Erstellen der Automationsschemata des Leistungsumfangs nach DIN ISO 16484 nach Abstimmung mit dem Auftraggeber im Format DIN A4.;1,0;Psch;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0009;Erstellen der Funktionslisten des Leistungsumfangs nach DIN ISO 16484.;1,0;Psch;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+0010;Bestandsdokumentation, in 3-facher Ausfertigung.;1,0;St;gaeb;leistungsbeschreibungen/VD04.A - Los 2_Gebäudeautomation.X83
+001;Schutzabdeckung für Inventar;12,0;m²;gaeb;leistungsbeschreibungen/VD04.A - Los 3_Bauleistungen.X83
+002;Schutzabdeckung Inventar, vorhalten;24,0;m²Wo;gaeb;leistungsbeschreibungen/VD04.A - Los 3_Bauleistungen.X83
+003;Öffnungen, abkleben, staubdicht;6,5;m²;gaeb;leistungsbeschreibungen/VD04.A - Los 3_Bauleistungen.X83
+004;Bautür, Größe ca. 1,01 x 2,135 m;1,0;St;gaeb;leistungsbeschreibungen/VD04.A - Los 3_Bauleistungen.X83
+005;Bautür ca. 1,25 x 2,50 m, vorhalten;2,0;StWo;gaeb;leistungsbeschreibungen/VD04.A - Los 3_Bauleistungen.X83
+006;Bauteile oder Geländeflächen schützen;72,0;m²;gaeb;leistungsbeschreibungen/VD04.A - Los 3_Bauleistungen.X83
+007;Bauzaun;18,0;m;gaeb;leistungsbeschreibungen/VD04.A - Los 3_Bauleistungen.X83
+008;Bauzaun vorhalten;36,0;mWo;gaeb;leistungsbeschreibungen/VD04.A - Los 3_Bauleistungen.X83
+009;Bauzaun - Tor, 2,50 m breit;1,0;St;gaeb;leistungsbeschreibungen/VD04.A - Los 3_Bauleistungen.X83
+010;Bauzaun - Tor, vorhalten;2,0;StWo;gaeb;leistungsbeschreibungen/VD04.A - Los 3_Bauleistungen.X83
+011;Verschluss, Baustellen - Tor;1,0;St;gaeb;leistungsbeschreibungen/VD04.A - Los 3_Bauleistungen.X83
+012;WC-Kabine bereitstellen, (m. WB.);1,0;St;gaeb;leistungsbeschreibungen/VD04.A - Los 3_Bauleistungen.X83
+013;WC-Kabinen vorhalten;2,0;StWo;gaeb;leistungsbeschreibungen/VD04.A - Los 3_Bauleistungen.X83
+014;Zulage, Beheizung Baustellen-WC;1,0;Psch;gaeb;leistungsbeschreibungen/VD04.A - Los 3_Bauleistungen.X83
+015;Kabelbrücken, überfahrbar;5,0;m;gaeb;leistungsbeschreibungen/VD04.A - Los 3_Bauleistungen.X83
+001;Sicherung Eingangstür;1,0;St;gaeb;leistungsbeschreibungen/VD04.A - Los 3_Bauleistungen.X83
+002;Abbruch Estrich;24,0;m²;gaeb;leistungsbeschreibungen/VD04.A - Los 3_Bauleistungen.X83
+003;Abbruch Folie;24,0;m²;gaeb;leistungsbeschreibungen/VD04.A - Los 3_Bauleistungen.X83
+004;Abbruch Fußbodendämmung;24,0;m²;gaeb;leistungsbeschreibungen/VD04.A - Los 3_Bauleistungen.X83
+005;Schneidarbeiten Beton, bis 20 cm;6,0;m;gaeb;leistungsbeschreibungen/VD04.A - Los 3_Bauleistungen.X83
+006;Stahlbeton-Boden abbrechen;24,0;m²;gaeb;leistungsbeschreibungen/VD04.A - Los 3_Bauleistungen.X83
+007;Abbruch Abdichtung, teerhaltig;24,0;m²;gaeb;leistungsbeschreibungen/VD04.A - Los 3_Bauleistungen.X83
+008;Teerhaltige Produkte - AVV 17 03 01*;0,1;t;gaeb;leistungsbeschreibungen/VD04.A - Los 3_Bauleistungen.X83
+001;Suchschachtung (Querschläge) vor Baubeginn;3,0;St;gaeb;leistungsbeschreibungen/VD04.A - Los 3_Bauleistungen.X83
+002;Baugrubenaushub, Bkl. 3-4, abfahren;5,0;m³;gaeb;leistungsbeschreibungen/VD04.A - Los 3_Bauleistungen.X83
+003;Zulage Handaushub;5,0;m³;gaeb;leistungsbeschreibungen/VD04.A - Los 3_Bauleistungen.X83
+004;Grobplanum herrichten;24,0;m²;gaeb;leistungsbeschreibungen/VD04.A - Los 3_Bauleistungen.X83
+005;Gründung, Mikropfähle;9,0;St;gaeb;leistungsbeschreibungen/VD04.A - Los 3_Bauleistungen.X83
+006;Trennlage aus PE-Folie, Bodenplatte;24,0;m²;gaeb;leistungsbeschreibungen/VD04.A - Los 3_Bauleistungen.X83
+007;Sauberkeitsschicht, Bodenplatte;24,0;m²;gaeb;leistungsbeschreibungen/VD04.A - Los 3_Bauleistungen.X83
+008;Anschlussfugenausbildung, XPS, 20/3 cm;25,0;m;gaeb;leistungsbeschreibungen/VD04.A - Los 3_Bauleistungen.X83
+009;Ortbeton der Bodenplatte, C25/30, 20 cm;5,0;m³;gaeb;leistungsbeschreibungen/VD04.A - Los 3_Bauleistungen.X83
+010;Betonstahl B500B (S);1,2;t;gaeb;leistungsbeschreibungen/VD04.A - Los 3_Bauleistungen.X83
+011;Baustahlgewebe Unterstützungskörbe;15,0;kg;gaeb;leistungsbeschreibungen/VD04.A - Los 3_Bauleistungen.X83
+012;Rohfußboden reinigen;24,0;m²;gaeb;leistungsbeschreibungen/VD04.A - Los 3_Bauleistungen.X83
+013;Voranstrich, kaltflüssig;24,0;m²;gaeb;leistungsbeschreibungen/VD04.A - Los 3_Bauleistungen.X83
+014;Abdichtung gegen Erdfeuchte;28,0;m²;gaeb;leistungsbeschreibungen/VD04.A - Los 3_Bauleistungen.X83
+015;Randdämmstreifen;25,0;m;gaeb;leistungsbeschreibungen/VD04.A - Los 3_Bauleistungen.X83
+016;Zementestrich CT-C 30 F 5, 50 mm;24,0;m²;gaeb;leistungsbeschreibungen/VD04.A - Los 3_Bauleistungen.X83
+017;Wanddurchbruch schließen, 5 x 5/30 cm;2,0;St;gaeb;leistungsbeschreibungen/VD04.A - Los 3_Bauleistungen.X83
+018;Wanddurchbruch schließen, 10 x 10/30 cm;1,0;St;gaeb;leistungsbeschreibungen/VD04.A - Los 3_Bauleistungen.X83
+019;Kalk-Zement-Putz, 2-lagig, Innenwand, bis 0,50 m²;2,0;m²;gaeb;leistungsbeschreibungen/VD04.A - Los 3_Bauleistungen.X83
+020;Fehlstelle im Altputz bis 10x10cm beiputzen,bis 2,5 cm;10,0;St;gaeb;leistungsbeschreibungen/VD04.A - Los 3_Bauleistungen.X83
+021;Magerbeton, C12/15;2,0;St;gaeb;leistungsbeschreibungen/VD04.A - Los 3_Bauleistungen.X83
+001;Wandflächen vorbehandeln;70,0;m²;gaeb;leistungsbeschreibungen/VD04.A - Los 3_Bauleistungen.X83
+002;Überholungsanstrich Wände, NAK 1;70,0;m²;gaeb;leistungsbeschreibungen/VD04.A - Los 3_Bauleistungen.X83
+003;Leibungen vorbehandeln;17,0;m;gaeb;leistungsbeschreibungen/VD04.A - Los 3_Bauleistungen.X83
+004;Überholungsanstrich Leibungen, NAK 1;17,0;m;gaeb;leistungsbeschreibungen/VD04.A - Los 3_Bauleistungen.X83
+005;Deckenflächen vorbehandeln;25,0;m²;gaeb;leistungsbeschreibungen/VD04.A - Los 3_Bauleistungen.X83
+006;Überholungsanstrich Decken, NAK 3;25,0;m²;gaeb;leistungsbeschreibungen/VD04.A - Los 3_Bauleistungen.X83
+007;Reinigung des Untergrundes;24,0;m²;gaeb;leistungsbeschreibungen/VD04.A - Los 3_Bauleistungen.X83
+008;Grundbeschichtung/Imprägnierung;24,0;m²;gaeb;leistungsbeschreibungen/VD04.A - Los 3_Bauleistungen.X83
+009;Zwischenbeschichtung;24,0;m²;gaeb;leistungsbeschreibungen/VD04.A - Los 3_Bauleistungen.X83
+010;Schlussbeschichtung;24,0;m²;gaeb;leistungsbeschreibungen/VD04.A - Los 3_Bauleistungen.X83
+011;Sockelausbildung, H= 10 cm;25,0;m;gaeb;leistungsbeschreibungen/VD04.A - Los 3_Bauleistungen.X83
+001;Polier;1,0;h;gaeb;leistungsbeschreibungen/VD04.A - Los 3_Bauleistungen.X83
+002;Vorarbeiter;1,0;h;gaeb;leistungsbeschreibungen/VD04.A - Los 3_Bauleistungen.X83
+003;Facharbeiter;5,0;h;gaeb;leistungsbeschreibungen/VD04.A - Los 3_Bauleistungen.X83
+004;Helfer;3,0;h;gaeb;leistungsbeschreibungen/VD04.A - Los 3_Bauleistungen.X83
+01.001;Schutzabdeckung für Inventar;12,0;m²;gaeb-flat;leistungsbeschreibungen/Los 3 Bauleistungen.D83
+01.002;Schutzabdeckung Inventar, vorhalten;24,0;m²Wo;gaeb-flat;leistungsbeschreibungen/Los 3 Bauleistungen.D83
+01.003;Öffnungen, abkleben, staubdicht;6,5;m²;gaeb-flat;leistungsbeschreibungen/Los 3 Bauleistungen.D83
+01.004;Bautür, Größe ca. 1,01 x 2,135 m;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 3 Bauleistungen.D83
+01.005;Bautür ca. 1,25 x 2,50 m, vorhalten;2,0;StWo;gaeb-flat;leistungsbeschreibungen/Los 3 Bauleistungen.D83
+01.006;Bauteile oder Geländeflächen schützen;72,0;m²;gaeb-flat;leistungsbeschreibungen/Los 3 Bauleistungen.D83
+01.007;Bauzaun;18,0;m;gaeb-flat;leistungsbeschreibungen/Los 3 Bauleistungen.D83
+01.008;Bauzaun vorhalten;36,0;mWo;gaeb-flat;leistungsbeschreibungen/Los 3 Bauleistungen.D83
+01.009;Bauzaun - Tor, 2,50 m breit;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 3 Bauleistungen.D83
+01.010;Bauzaun - Tor, vorhalten;2,0;StWo;gaeb-flat;leistungsbeschreibungen/Los 3 Bauleistungen.D83
+01.011;Verschluss, Baustellen - Tor;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 3 Bauleistungen.D83
+01.012;WC-Kabine bereitstellen, (m. WB.);1,0;St;gaeb-flat;leistungsbeschreibungen/Los 3 Bauleistungen.D83
+01.013;WC-Kabinen vorhalten;2,0;StWo;gaeb-flat;leistungsbeschreibungen/Los 3 Bauleistungen.D83
+01.014;Zulage, Beheizung Baustellen-WC;1,0;Psch;gaeb-flat;leistungsbeschreibungen/Los 3 Bauleistungen.D83
+01.015;Kabelbrücken, überfahrbar;5,0;m;gaeb-flat;leistungsbeschreibungen/Los 3 Bauleistungen.D83
+02.001;Sicherung Eingangstür;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 3 Bauleistungen.D83
+02.002;Abbruch Estrich;24,0;m²;gaeb-flat;leistungsbeschreibungen/Los 3 Bauleistungen.D83
+02.003;Abbruch Folie;24,0;m²;gaeb-flat;leistungsbeschreibungen/Los 3 Bauleistungen.D83
+02.004;Abbruch Fußbodendämmung;24,0;m²;gaeb-flat;leistungsbeschreibungen/Los 3 Bauleistungen.D83
+02.005;Schneidarbeiten Beton, bis 20 cm;6,0;m;gaeb-flat;leistungsbeschreibungen/Los 3 Bauleistungen.D83
+02.006;Stahlbeton-Boden abbrechen;24,0;m²;gaeb-flat;leistungsbeschreibungen/Los 3 Bauleistungen.D83
+02.007;Abbruch Abdichtung, teerhaltig;24,0;m²;gaeb-flat;leistungsbeschreibungen/Los 3 Bauleistungen.D83
+02.008;Teerhaltige Produkte - AVV 17 03 01*;0,1;t;gaeb-flat;leistungsbeschreibungen/Los 3 Bauleistungen.D83
+03.001;Suchschachtung (Querschläge) vor Baubeginn;3,0;St;gaeb-flat;leistungsbeschreibungen/Los 3 Bauleistungen.D83
+03.002;Baugrubenaushub, Bkl.3-4, abfahren;5,0;m³;gaeb-flat;leistungsbeschreibungen/Los 3 Bauleistungen.D83
+03.003;Zulage Handaushub;5,0;m³;gaeb-flat;leistungsbeschreibungen/Los 3 Bauleistungen.D83
+03.004;Grobplanum herrichten;24,0;m²;gaeb-flat;leistungsbeschreibungen/Los 3 Bauleistungen.D83
+03.005;Gründung, Mikropfähle;9,0;St;gaeb-flat;leistungsbeschreibungen/Los 3 Bauleistungen.D83
+03.006;Trennlage aus PE-Folie, Bodenplatte;24,0;m²;gaeb-flat;leistungsbeschreibungen/Los 3 Bauleistungen.D83
+03.007;Sauberkeitsschicht, Bodenplatte;24,0;m²;gaeb-flat;leistungsbeschreibungen/Los 3 Bauleistungen.D83
+03.008;Anschlussfugenausbildung, XPS, 20/3 cm;25,0;m;gaeb-flat;leistungsbeschreibungen/Los 3 Bauleistungen.D83
+03.009;Ortbeton der Bodenplatte, C25/30, 20 cm;5,0;m³;gaeb-flat;leistungsbeschreibungen/Los 3 Bauleistungen.D83
+03.010;Betonstahl B500B (S);1,2;t;gaeb-flat;leistungsbeschreibungen/Los 3 Bauleistungen.D83
+03.011;Baustahlgewebe Unterstützungskörbe;15,0;kg;gaeb-flat;leistungsbeschreibungen/Los 3 Bauleistungen.D83
+03.012;Rohfußboden reinigen;24,0;m²;gaeb-flat;leistungsbeschreibungen/Los 3 Bauleistungen.D83
+03.013;Voranstrich, kaltflüssig;24,0;m²;gaeb-flat;leistungsbeschreibungen/Los 3 Bauleistungen.D83
+03.014;Abdichtung gegen Erdfeuchte;28,0;m²;gaeb-flat;leistungsbeschreibungen/Los 3 Bauleistungen.D83
+03.015;Randdämmstreifen;25,0;m;gaeb-flat;leistungsbeschreibungen/Los 3 Bauleistungen.D83
+03.016;Zementestrich CT-C 30 F 5, 50 mm;24,0;m²;gaeb-flat;leistungsbeschreibungen/Los 3 Bauleistungen.D83
+03.017;Wanddurchbruch schließen, 5 x 5/30 cm;2,0;St;gaeb-flat;leistungsbeschreibungen/Los 3 Bauleistungen.D83
+03.018;Wanddurchbruch schließen, 10 x 10/30 cm;1,0;St;gaeb-flat;leistungsbeschreibungen/Los 3 Bauleistungen.D83
+03.019;Kalk-Zement-Putz, 2-lagig, Innenwand, bis 0,50 m²;2,0;m²;gaeb-flat;leistungsbeschreibungen/Los 3 Bauleistungen.D83
+03.020;Fehlstelle im Altputz bis 10x10 cm beiputzen, bis 2,5 cm;10,0;St;gaeb-flat;leistungsbeschreibungen/Los 3 Bauleistungen.D83
+03.021;Magerbeton, C12/15;2,0;St;gaeb-flat;leistungsbeschreibungen/Los 3 Bauleistungen.D83
+04.001;Wandflächen vorbehandeln;70,0;m²;gaeb-flat;leistungsbeschreibungen/Los 3 Bauleistungen.D83
+04.002;Überholungsanstrich Wände, NAK 1;70,0;m²;gaeb-flat;leistungsbeschreibungen/Los 3 Bauleistungen.D83
+04.003;Leibungen vorbehandeln;17,0;m;gaeb-flat;leistungsbeschreibungen/Los 3 Bauleistungen.D83
+04.004;Überholungsanstrich Leibungen, NAK 1;17,0;m;gaeb-flat;leistungsbeschreibungen/Los 3 Bauleistungen.D83
+04.005;Deckenflächen vorbehandeln;25,0;m²;gaeb-flat;leistungsbeschreibungen/Los 3 Bauleistungen.D83
+04.006;Überholungsanstrich Decken, NAK 3;25,0;m²;gaeb-flat;leistungsbeschreibungen/Los 3 Bauleistungen.D83
+04.007;Reinigung des Untergrundes;24,0;m²;gaeb-flat;leistungsbeschreibungen/Los 3 Bauleistungen.D83
+04.008;Grundbeschichtung/Imprägnierung;24,0;m²;gaeb-flat;leistungsbeschreibungen/Los 3 Bauleistungen.D83
+04.009;Zwischenbeschichtung;24,0;m²;gaeb-flat;leistungsbeschreibungen/Los 3 Bauleistungen.D83
+04.010;Schlussbeschichtung;24,0;m²;gaeb-flat;leistungsbeschreibungen/Los 3 Bauleistungen.D83
+04.011;Sockelausbildung, H= 10 cm;25,0;m;gaeb-flat;leistungsbeschreibungen/Los 3 Bauleistungen.D83
+05.001;Polier;1,0;h;gaeb-flat;leistungsbeschreibungen/Los 3 Bauleistungen.D83
+05.002;Vorarbeiter;1,0;h;gaeb-flat;leistungsbeschreibungen/Los 3 Bauleistungen.D83
+05.003;Facharbeiter;5,0;h;gaeb-flat;leistungsbeschreibungen/Los 3 Bauleistungen.D83
+05.004;Helfer;3,0;h;gaeb-flat;leistungsbeschreibungen/Los 3 Bauleistungen.D83

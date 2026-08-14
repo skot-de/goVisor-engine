@@ -1,0 +1,33 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+10;"Einrichten und Räumen der Baustelle;";1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_estrich.x83
+10;Abbruch Sockelleiste aus Dachlatten 4/6 cm,;60,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_estrich.x83
+20;Abbruch Trockenestrich, bestehend aus;340,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_estrich.x83
+30;Abbruch Trockenschüttung Knauf Isoself zwischen den Lagerhölzern,;60,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_estrich.x83
+40;Abbruch Sichtschutzwände und -bekleidungen, bestehend aus;190,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_estrich.x83
+50;Abbruch Gk-Ständerwände;25,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_estrich.x83
+60;Aufnehmen von lose auf dem Fußboden verlegten Datenkabeln;60,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_estrich.x83
+10;Entsorgung von nicht gefährlichen Abfällen;0,2;t;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_estrich.x83
+20;Entsorgung von nicht gefährlichen Abfällen;5,8;t;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_estrich.x83
+30;Entsorgung von nicht gefährlichen Abfällen;0,3;t;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_estrich.x83
+40;Entsorgung von nicht gefährlichen Abfällen;0,2;t;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_estrich.x83
+50;Entsorgung von nicht gefährlichen Abfällen;0,1;t;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_estrich.x83
+60;Entsorgung von nicht gefährlichen Abfällen;0,2;t;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_estrich.x83
+70;Entsorgung von nicht gefährlichen Abfällen;0,5;t;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_estrich.x83
+10;Trittschalldämmschicht mit Randstreifen als Unterlage für schwimmenden Estrich aus Mineralwolledämmstoff (MW) nach DIN EN 13162, Anwendungstyp DES nach DIN 4108-10, sg - Trittschalldämmung, geringe Zusammen- drückbarkeit (CP max. 3), Bemessungswert der Wärmeleitfähigkeit 0,035 W/mK, Dynamische Steif;405,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_estrich.x83
+20;Zementestrich (CT) nach DIN 18560/DIN EN 13813, als Estrich auf Dämmschicht (schwimmend),;405,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_estrich.x83
+30;Zulage für den Einbau eines Abbindebeschleunigers  in den;405,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_estrich.x83
+10;Untergrundvorbereitungen vor Aufbringen der;405,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_estrich.x83
+20;Reinigen des Untergrundes aus Beton von grober Verschmutzung z.B. Gipsreste, Mörtelreste, Farbreste, Öl soweit diese von anderen Unternehmen stammen;10,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_estrich.x83
+30;Höhennivellement der Rohdecke im Bestandsgebäude;405,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_estrich.x83
+40;Zementausgleichsestrich (CT) nach DIN 18560/DIN EN 13813, als Verbundestrich, Druckfestigkeitsklasse C16, Biegezugfestigkeitsklasse F3 nach DIN 18560/DIN EN 13813, Estrichnenndicke 10 mm (im Mittel), auf vorhandenem Geschoßdecken aus Spannbeton,;50,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_estrich.x83
+50;Zementausgleichsestrich (CT) nach DIN 18560/DIN EN 13813, als Verbundestrich, Druckfestigkeitsklasse C16, Biegezugfestigkeitsklasse F3 nach DIN 18560/DIN EN 13813, Estrichnenndicke 25 mm (im Mittel), auf vorhandenem Geschoßdecken aus Stahlbeton,;20,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_estrich.x83
+60;Schüttung aus Perlite, mit Rieselschutz, im Mittel 30 mm dick, in gebundener Form gemäß Estrich-DIN 18560-2, druckstabil und selbstverklebend, staubfrei, einschl. Abdeckung nach Wahl des AN, einschl. Randstreifen,;50,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_estrich.x83
+70;Mehrpreis für Mehrstärke des Zementestrichs über 5 mm bis;50,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_estrich.x83
+80;Bewegungsfugen im frischen Estrich herstellen;71,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_estrich.x83
+90;Ausweisen von Feuchtigkeitsmesstellen nach BEB Merkblatt.;2,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_estrich.x83
+100;Aussparungen in Estrichen aller Arten und Dicken herstellen.;5,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_estrich.x83
+110;Estrichabstellung als Schalung im Bereich von nicht mit Estrich zu belegenden Flächen;8,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_estrich.x83
+1;Dokumentation;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_estrich.x83
+2;Leistungen zur Erfüllung der relevanten Forderungen gem.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_estrich.x83
+1;Facharbeiter;5,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_estrich.x83
+2;Helfer;5,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_estrich.x83

@@ -1,0 +1,141 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+0010;Kabel 12/20kV N2XS(F)2Y 1x120 RM/ 16;3100,0;m;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0020;Betonabdeckplatten mit den Abmessungen 40x40x5 cm bzw. 35x20x5 cm im Bereich der Versorgungsgänge von dem vorhandenen Betonbodenkanal aufnehmen, seitlich auf dem Boden lagern, nach dem Umlegen bzw. Neuverlegen der 20kV- und LWL-Kabel Betonabdeckplatten wieder auflegen.;225,0;St;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0030;Kabel 12/20kV N2XS(F)2Y 1x120 RM/ 16;150,0;m;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0040;Erschwerter Aufwand für Kabelzug im Bereich der Ebene E98 / 99 Versorgungsgänge, gemäß Vorbeschreibung;270,0;m;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0050;Anschluss des neu verlegten Ringkabels von der an der Station PH 1/5, N2XS(F)2Y 3x1x120RM/16 an der MS-;1,0;Psch;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0060;Kabelendverschluss DIN VDE 0278-629-1 (VDE 0278-629-1),;3,0;St;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0070;Durchführung einer Mantel- und Isolationsprüfung;3,0;St;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0080;20-kV-Gießharzverbindungsmuffe 95-240 mm² für 24-kV-VPE-Kabel 95-240 mm² liefern und im Bereich des bestehenden Betonkabelkanals E98 versetzt betriebsfertig ausführen und im Kabelkanal im Sandbett verlegen.;6,0;St;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0090;Übergangsmuffe für Kabel Uo/U 12/20 kV, Um 24 kV, N2XS(F)2Y 1 x 120 RM/16, zur Verbindung mit Kabel, Uo/U 12/20 kV, Um 24 kV, N2XS(F)2Y 1 x 120 RM/16, einschl. systemgebundenem Zubehör.;9,0;St;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0100;Vorhandene, in im Erdreich in Leerrohren verlegte 20-kV-Einleiterkabel 12/20 kV N2XS(F) 2Y 1 x 120 RM/16 bei den vorhandenen MS- Muffen im Kabelschacht schneiden und aus Leerohren auf einer Strecke von ca.;9,0;St;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0110;Bestandskabel eines Mittelspannungssystems mit der KTG freischalten sowie spätere Kabelinbetriebnahme mit KTG nach der Verlegung.;3,0;St;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0120;MS- Schutzeinrichtung Differentialschutzrelais Fabrikat Siemens, Typ 7 SD 80, für Ringkabel in Übergabestation Stadtwerke HD, Station PH 1/5, Station Medizinsche Klinik 3/2 und Station HIT 5/1 nach den durchgeführten Umlegungen der MS- Kabelanlagen überprüfen und Funktionen dokumentieren.;3,0;St;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0130;Mehraufwand für Zwischenlagerung von Mittelspannungskabel N2XS(F)2Y 3 x 1x120 RM/ 16 Kabellängen, bei zeitlicher Unterbrechung des Kabelzuges.;750,0;m;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0140;Kabelrinne in schwerer Ausführung, Breite 300 mm, Höhe 60 mm, aus Stahlblech gelocht, Blechstärke 1,5 mm, feuerverzinkt nach DIN EN ISO 1461,;60,0;m;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0150;Abdeckung für v.g. Kabelrinne 300/60mm, geschlossen;60,0;m;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0160;Ausleger 310 mm;30,0;St;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0170;Ausleger;10,0;St;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0180;Ausleger;10,0;St;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0190;H-Hängestiel 200 mm;20,0;St;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0200;H-Hängestiel;30,0;St;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0210;H-Hängestiel;10,0;St;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0220;Steigetrassensystem für Wandmontage;6,0;m;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0230;C-Profilschiene 40 x 22 mm;40,0;m;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0010;Metallfreies LWL-Universal (OM3) 6 x GI 50/125 µmAussenkabel mit längswasserdichter Ausführung, einschl. Klein-und Befestigungsmaterial liefern, in Betonkabelkanal, auf Kabelrinne verlegen oder in Leerrohre einziehen;350,0;m;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0020;Vorhandenes, im Leerrohr im Erdreich verlegtes 6- fasriges LWL-Kabel von Ring 3 von der Station UA Neuenheim kommend im Bereich des bestehenden MS- Kabelschachts schneiden, Kabel in einer Teillänge von;1,0;Psch;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0030;Vorhandenes, im Leerrohr im Erdreich verlegtes 6- fasriges LWL-Kabel von Ring 5 von der Station UA Neuenheim kommend im Bereich des bestehenden MS- Kabelschachts schneiden, Kabel in einer Teillänge von;1,0;Psch;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0040;Absetzen und Ausformen eines LWL-Kabels;1,0;St;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0050;LWL-Kleinverteiler für 6 Fasern;1,0;St;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0060;LWL - Pigtail GI 50/125 µm und Spleiß;6,0;St.;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0070;Messung je 6 Fasern LWL- Kabel nach dem Einbau oder nach erfolgter Umlegung ,sonst wie vor beschrieben;3,0;St;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0080;Bestehende LWL- Multifunktionsmuffe/Spleisbox zur Verbindung der bestehenden 20kV Netzschutzverbindungen in einem bestehenden Kabelschacht öffnen, Trennung von 6 Stück LWL Fasern eines 6- fasriges LWL Aussenkabel aus der Verbindung, LWL Kabel aus der Spleisbox herausführen.;3,0;St;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0090;6- fasriges LWL Aussenkabel absetzen und ausformen und in bestehende LWL Spleisbox einführen, Erstellung eines LWL - Pigtail GI 50/125 µm und Spleiß;3,0;St;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0010;Kabel DIN VDE 0276-603 (VDE 0276-603) NYY-J 4 x 35 SM, Cu-Zahl 1344,;300,0;m;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0020;Kabel DIN VDE 0276-603 (VDE 0276-603) NYCY 4 x 10 RE/10, Cu-Zahl 504, in vorh. Rohre/Unterflurkanäle.;90,0;m;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0030;Außenkabel, symmetrisch, DIN VDE 0816-1 (VDE 0816-1), A-2YF(L)2Y, 50 x 2 x 0,6 STIII BD, in vorh. Rohre/Unterflurkanäle.;300,0;m;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0040;speedpipe-Rohrverband-ground SRV-G 22x7+1x12 tc, zur direkten Erdverlegung, gefüllt mit 22 Stück speedpipe-ground 7x1,5 und 1 Stück speedpipe-ground 12x2,0,;200,0;m;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0050;speedpipe-Rohrverband-ground SRV-G 3x16 tc;400,0;m;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0060;Koordination und Terminabstimmung mit den verschiedenen technischen Ansprechpartnern des UKHD der Starkstromanlagen, Schrankenanlange, Sprechanlage, Kameraanlage durch die die Betreuung der einzelnen Anlagen erfolgt.;1,0;Psch;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0070;Fernmeldeaußenkabel A-2YF(L)2Y 20 x 2 x 0,6 mm;300,0;m;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0080;4- fasriges Lichtwellenleiter-Breakoutkabel für den Einsatz im Außenbereich, Fabrikat Kerpen oder gleichwertig, bestehend aus vier einzeln verstärkten Glasfasern (Breakout-Ausführung), geeignet für direkte Steckermontage, inklusive beidseitiger, fachgerechter Konfektion mit beidseitiger Steckerkonfe;210,0;m;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0090;4- fasriges Lichtwellenleiter-Breakoutkabel für den Einsatz im Außenbereich, Fabrikat Kerpen oder gleichwertig, bestehend aus vier einzeln verstärkten Glasfasern (Breakout-Ausführung), geeignet für direkte Steckermontage, inklusive beidseitiger, fachgerechter Konfektion mit beidseitiger Steckerkonfe;40,0;m;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0100;4- fasriges Lichtwellenleiter-Breakoutkabel für den Einsatz im Außenbereich, Fabrikat Kerpen oder gleichwertig, bestehend aus vier einzeln verstärkten Glasfasern (Breakout-Ausführung), geeignet für direkte Steckermontage, inklusive beidseitiger, fachgerechter Konfektion mit beidseitiger Steckerkonfe;180,0;m;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0110;Fernmeldeaußenkabel A-2YF(L)2Y 6 x 2 x 0,6 mm;40,0;m;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0120;Fernmeldeaußenkabel A-2YF(L)2Y 6 x 2 x 0,6 mm;160,0;m;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0130;Datenkabel S-STP (Kategorie 7);90,0;m;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0140;Kabel DIN VDE 0276-603 (VDE 0276-603) NYY-J 3 x 2,5 RE, Cu-Zahl 72, nur verlegen, in vorh. Rohre/Unterflurkanäle.;80,0;m;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0150;Kabel DIN VDE 0276-603 (VDE 0276-603) NYY-J 5 x 6 RE, Cu-Zahl 288, nur verlegen, in vorh. Rohre/Unterflurkanäle.;140,0;m;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0160;Kabel DIN VDE 0276-603 (VDE 0276-603) NYCWY 4 x 16 RE/16, Cu-Zahl 796, in vorh. Rohre/Unterflurkanäle.;120,0;m;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0170;Kabel DIN VDE 0276-603 (VDE 0276-603) NYCWY 4 x 16 RE/16, Cu-Zahl 796, mit Bügelschellen auf vorh. Ankerschienen oder Kabelleiter.;50,0;m;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0180;Gummischlauchleitung DIN EN 50525-2-21 (VDE 0285-525-2-21) H07RN-F 5 G 16, Cu-Zahl 768, Ausführung gemäß Einzelbeschreibung,;170,0;m;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0010;Kabelrinne 100 / 60 mm;30,0;m;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0020;Kabelrinne wie vor beschrieben, jedoch Rinnenbreite;50,0;m;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0030;Kabelrinne wie vor beschrieben, jedoch Rinnenbreite;30,0;m;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0040;U-Hängestiel wie vor beschrieben,  Länge 500 mm;60,0;St;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0050;U-Hängestiel wie vor beschrieben, Länge 800 mm;40,0;St;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0060;Ausleger 110 mm;30,0;St;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0070;Ausleger 310 mm;40,0;St;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0080;Ausleger 510 mm;30,0;St;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0090;Kabelrinnen- Formteil  100/60 mm, ungelocht,als Bogen, T-, Kreuzungs-, Höhenversprung Formstück 100/60 mm,;2,0;St;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0100;Kabelrinnen- Formteil  300/60 mm, ungelocht wie vor beschrieben;4,0;St;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0110;Kabelrinnen- Formteil  500/60 mm, ungelocht wie vor beschrieben;6,0;St;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0120;Steigetrasse 300 mm, freistehend;5,0;m;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0130;C-Profilschiene, Breite 40 mm, Höhe 10 mm, gelocht, an Decke und Wand befestigen mit bauaufsichtlich zugelassenen Dübeln, in Teillängen befestigen;20,0;m;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0140;Stapa verzinkt EN 40, wie vor beschrieben;30,0;m;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0150;Stapa verzinkt EN 63, wie vor beschrieben;20,0;m;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0010;Fachgerechtes Öffnen von vorhandenen Brandschottungen;10,0;St;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0020;Brandschutzabdeckung an Kabel-/Leitungsanlagen als Mineralwolleplattenschott, mit allgemeinem bauaufsichtlichem Prüfzeugnis/allgemeiner bauaufsichtlicher Zulassung, Feuerwiderstandsklasse S 90 DIN 4102-9 im Gebäude, Oberkante Abschottung über Gelände/Fußboden bis 3,5 m, Wand aus Stahlbeton, Dicke bi;5,0;St;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0030;Brandschutzabdeckung an Kabel-/Leitungsanlagen als Mineralwolleplattenschott, mit allgemeinem bauaufsichtlichem Prüfzeugnis/allgemeiner bauaufsichtlicher Zulassung, Feuerwiderstandsklasse S 90 DIN 4102-9 im Gebäude, Oberkante Abschottung über Gelände/Fußboden bis 3,5 m, Wand aus Stahlbeton, Dicke bi;5,0;St;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0040;Brandschutzabdeckung an Kabel-/Leitungsanlagen als Mineralwolleplattenschott, mit allgemeinem bauaufsichtlichem Prüfzeugnis/allgemeiner bauaufsichtlicher Zulassung, Feuerwiderstandsklasse S 90 DIN 4102-9 im Gebäude, Oberkante Abschottung über Gelände/Fußboden bis 3,5 m, Wand aus Stahlbeton, Dicke bi;8,0;St;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0050;Prov. Verschließen der Brandschotte mit Kissen;10,0;St;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0010;Anschlüsse von NHXMH / NYY bis 3 x 2,5 mm²,;14,0;St;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0020;Anschlüsse von NHXMH / NYY  bis 5 x 2,5 mm²,;1,0;St;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0030;Anschlüsse von NHXMH / NYY  bis 5 x 6 mm²,;10,0;St;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0040;Anschlüsse von NYCY  bis 4 x 10/10 mm²,;4,0;St;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0050;Anschlüsse von N2XCH/NYCWY  bis 4 x 16/16 mm²,;4,0;St;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0060;Anschlüsse von N2XCH/NYCWY  bis 4 x 35/16 mm²,;3,0;St;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0070;Anschlüsse von H07RN-F 5G16²,;2,0;St;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0080;Anschluss 10 DA;10,0;St.;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0090;Außenkabel, symmetrisch, DIN VDE 0816-1 (VDE 0816-1), nur anschließen, an Leiste, in löt-, schraub- und abisolierfreier Technik (LSA-Technik), A-2Y(L)2Y, 50 x 2 x 0,8 STIII BD.;2,0;St;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0100;Überprüfung eines bestehenden Stromkreises 230/400V;10,0;St;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0110;Verbindungsmuffe 0,6/1 kV, in Gießharztechnik, für 1 Kabel, NYCWY 4 x 35 SM/16, einschl. systemgebundenem Zubehör, zur Verbindung mit einem Kabel, NYCWY 4 x 35 RM/16, Montage im Freien.;1,0;St;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0120;Doppelabzweigmuffe 0,6/1 kV, Abzweig 30 Grad, in Gießharztechnik, für 1 Kabel, NYCWY 4 x 35 SM/16, einschl. systemgebundenem Zubehör, zur Verbindung mit 2 Kabeln, NYCWY 4 x 35 RM/16, Montage im Freien.;2,0;St;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0130;Verbindungsmuffe, symmetrisch, für Montage im Freien, als Schrumpfmuffe, mit versiegeltem Spleiß, mit Spleißen durch Quetschverbindung und Kennzeichnung der Adern.;2,0;St;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0140;Verbindungsmuffe 0,6/1 kV, in Gießharztechnik, für 1 Kabel, NYCY 4 x 10 RE/10, einschl. systemgebundenem Zubehör, zur Verbindung mit einem Kabel, NYCY 4 x 10 RE/10, Montage im Freien.;4,0;St;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0150;Gummi- Press Dichtung gegen nicht drückendes Wasser,;3,0;St;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0160;Demontage von Mantelleitung oder Kunststoffkabel;200,0;m;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0170;Demontage von Mantelleitung oder Kunststoffkabel;170,0;m;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0180;Demontage von Mantelleitung oder Kunststoffkabel;200,0;m;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0190;Demontage von Mantelleitung oder Kunststoffkabel;250,0;m;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0200;Demontage von Mittelspannungskabel Kabel 12/20kV N2XS2Y 1x120 RM/ 16 aller Verlegearten. Die demontierten Materialien werdenEigentum des AN und sind von diesem zu entsorgen. Die Kosten sind mit dieser Position abgegolten.;1500,0;m;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0210;Demontage von FM- / Datenkabeln und -leitungen;400,0;m;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0220;Demontage von FM- / Datenkabeln und -leitungen;200,0;m;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0230;Demontage von LWL Kabel bis 12- Fasern aller Verlegearten. Die demontierten Materialien werden Eigentum des AN und sind von diesem zu entsorgen. Die Kosten sind mit dieser Position abgegolten.;400,0;m;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0240;Kabelrinne 100 x 100 mm, geschlossen mit Deckel demontieren,s. w. v.;100,0;m;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0250;Wandausleger für Kabelrinnen bis 610 x 110 mm, an Betonwand montiert, demontieren, s.w.v.;70,0;St;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0260;Installationskanal bis 60 x 230 mm, demontieren, s.w.v.;20,0;m;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0270;Öffnung einer mit Mittelspannungskabeln belegte geschlossene Kabeltrasse 100/100 mm, Abnahme Kabeltrassenabdeckung, seitliche Lagerung und nach Neuverlegung der MS- Kabel Deckel wieder verschließen.;100,0;m;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0280;Elektroinstallationsrohr, demontieren bis DN 32;30,0;m;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0290;Elektroinstallationsrohr, demontieren;30,0;m;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0300;Kabelpritsche mit Konsole, einschl. Befestigungsmittel demontieren Maße bis 300x60;30,0;m;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0310;Demontage von C-Profilschienen mit Kabelbefestigungs- material, Länge bis 1m Die demontierten Materialien werden Eigentum des AN und sind von diesem zu entsor-;10,0;St;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0320;Demontage eines bestehenden ISO- Gehäusen mit Überspannungsschutzableiter, Gehäusegröße ca. 350mm x 50mm,;1,0;Psch;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0330;Demontage eines bestehenden ISO- Gehäusen mit Überspannungsschutzableiter, Gehäusegröße ca. 350mm x 50mm,;1,0;Psch;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0340;Erstellung der gesamten Revisonsunterlagen für die ausgeschriebenen Leistungen.;1,0;Psch;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0010;Einfach/Zweifach/Dreifach designfähige Anschlussdose;2,0;St;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0020;Kategorie 6;4,0;St;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0030;Permanent Link Messung nach EIA/TIA 568-B.2 Add. 10 Category 6A bzw. ISO/IEC Standards;2,0;St;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0040;Abtrennung eines bestehenden 6- fasrigen LWL Kabel von einer bestehenden LWL Kabelmuffe mit Schutzgehäuse mit Verbindung zweier 48- fasriger LWL Aussenkabel und Abzweig mehrerer LWL 6- fasrigen Aussenkabeln.;4,0;St;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0050;6- fasriges LWL Aussenkabel absetzen und ausformen und in bestehende LWL Bestandsmuffe einführen, Erstellung eines LWL - Pigtail GI 50/125 µm und Spleiß;4,0;St;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0060;Dokumenation der vorgenommenen Änderung an der Belegung der bestehenden LWL Bestandsmuffe.;2,0;St;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0070;Verteiler zur Montage im Außenbereich, freistehend, Gehäuse aus glasfaserverstärktem;1,0;St;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0080;TK Verteilerkasten in nachfolgender Ausführung:;1,0;St;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0090;Kabelbrücke für die Überfahrung von Kabel, für 2 Kanäle 30 x 30mm, Fuß aus vulkanisiertem Recyclinggummi, Klappe aus PE- Kunstoff, Brücke modular erweiterbar, belastbar bis zu einem Achsgewicht von 5 Tonnen, Fahrzeuge bis zu 12 Tonnen geeignet, Oberfläche rutschfest.;6,0;St;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0010;Flexibles Kabelschutzrohr als Leerrohr der Größe DN63 in Teillängen liefern und in vorhandenen Kabelgraben verlegen.;60,0;m;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0020;Vorh. Leuchtstelle bis  LPH 5000 in Betonfundament demontieren;12,0;St;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0030;Demontierte Leuchtstelle bis LPH 5000mm im Bereich des Neuenheimer Felds mit einen Fahrzeug / LKW zu einem Einlagerungsort nach Vorgaben des Klinikums Heidelberg abtransportieren und einlagern.;12,0;St;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0040;Abzweigkasten 150/150mm, AP, Schutzart IP 65, für Kabel bis 5x10mm;3,0;St;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0050;Überprüfung eines bestehenden Beleuchtungsstromkreises;5,0;St;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0010;Leihweise vorhalten der nachfolgend beschriebenen gesamten Baustromanlage, im Wesentlichen bestehend aus;5,0;Mt;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0020;Baustromverteiler DIN EN 61439-4 (VDE 0660-600-4), als Anschlussschrank, geeignet für die Versorgung frequenzgeregelter Antriebe, mit Berührungsschutzabdeckung DIN EN 50274 (VDE 0660-514), Gehäuse aus verzinktem Stahl, pulverbeschichtet, Schutzklasse I,;1,0;St;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0030;Baustromverteiler DIN EN 61439-4 (VDE 0660-600-4), als Gruppenverteiler, mit Berührungsschutzabdeckung DIN EN 50274 (VDE 0660-514), Gehäuse aus verzinktem Stahl, pulverbeschichtet, Schutzklasse I,;1,0;St;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0040;Baustromverteiler DIN EN 61439-4 (VDE 0660-600-4), als Endverteiler, geeignet für die Versorgung frequenzgeregelter Antriebe, mit Berührungsschutzabdeckung DIN EN 50274 (VDE 0660-514), Gehäuse aus verzinktem Stahl, pulverbeschichtet, Schutzklasse I,;3,0;St;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0050;Baustromverteiler DIN EN 61439-4 (VDE 0660-600-4), als Beleuchtungsverteiler, Bedienung durch elektrotechnischen Laien, mit Berührungsschutzabdeckung DIN EN 50274 (VDE 0660-514), Gehäuse aus verzinktem Stahl, pulverbeschichtet, Schutzklasse I,;1,0;St;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0060;Baustromverteiler DIN EN 61439-4 (VDE 0660-600-4), als Anschlussverteilerschrank, geeignet für die Versorgung frequenzgeregelter Antriebe, mit Berührungsschutzabdeckung DIN EN 50274 (VDE 0660-514), Gehäuse aus verzinktem Stahl, pulverbeschichtet, Schutzklasse I,;1,0;St;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0070;Zähler und Messwandlersatz 3x160A/1A, Kl. 0,5,;1,0;St;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0080;Tiefenerder zum Anschluss an Baustromverteiler,;1,0;St;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0090;Gummischlauchleitung DIN EN 50525-2-21 (VDE 0285-525-2-21) H07RN-F 4 G 70, Cu-Zahl 2688.;100,0;m;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0100;Gummischlauchleitung DIN EN 50525-2-21 (VDE 0285-525-2-21) H07RN-F 5 G 35,;100,0;m;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0110;Gummischlauchleitung DIN EN 50525-2-21 (VDE 0285-525-2-21) H07RN-F 5 G 25, Cu-Zahl 1200.;350,0;m;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0120;Gummischlauchleitung DIN EN 50525-2-21 (VDE 0285-525-2-21) H07RN-F 5 G 6, Cu-Zahl 288.;50,0;m;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0130;Gummischlauchleitung DIN EN 50525-2-21 (VDE 0285-525-2-21) H07RN-F 3 G 2,5,;100,0;m;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0140;CEE-Stecker DIN EN 60309-2 (VDE 0623-2), 5-polig, Bemessungsbetriebsspannung 230/400 V AC, 63 A, Schutzart IP 44 DIN EN 60529 (VDE 0470-1),;6,0;St;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0150;CEE-Kupplung DIN EN 60309-2 (VDE 0623-2), 5-polig, Bemessungsbetriebsspannung 230/400 V AC, 63 A, Schutzart IP 44 DIN EN 60529 (VDE 0470-1),;6,0;St;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0160;Gummi-Schukostecker / Schukokupplung 230V/16A,;3,0;St;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0170;Komplette Inbetriebnahme der gesamten Baustromver- sorgung, einschließlich der erforderlichen Abklärungs- gespräche, mit der Bauleitung und den für den Baustrom zuständigen Mitarbeiter des Klinikums;1,0;Psch;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0180;Anschluss der Zuleitung für die Baustromversorgung;1,0;St;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0190;Wartung der gesamten Baustromanlage;5,0;Mt;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0200;Abnahme der errichteten Baustromanlage sowie Einweisung des Betriebspersonal der KTG.;1,0;Psch;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0010;Obermonteur;40,0;Std.;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83
+0020;Selbstständiger Monteur;80,0;Std.;gaeb;leistungsbeschreibungen/Geab-Datei - unbepreist_V33.X83

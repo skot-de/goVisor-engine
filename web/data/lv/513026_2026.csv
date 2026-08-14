@@ -1,0 +1,331 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+01.;Fahrgestellbeschreibung;;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+;Allgemeine Anforderungen;;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+01.01;Angebotener Hersteller und Typ:;;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+;Grundfahrgestell für Brancheneinsatz Feuerwehr;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+01.02;Technische Angaben:;;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+;Dem Angebot ist eine technische Beschreibung zur Fahrzeugbeschreibung mit den geforderten Werten beizulegen.;;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+01.03;Gewichtsvariante;;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+;Fahrgestellausführung:;;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+01.04;Fahrzeuggewichte:;;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+;Angabe technisch max. zul. Gewichte;;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+01.05;Allrad;;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+;"Umrüstung auf ""Achleitner"" Allrad für das Fahrgestell
+Fahrgestelle: mit Schaltgetriebe wie beschrieben
+Permanenter Allradantrieb mit Geländeuntersetzung (i=2,5),
+manuell vom Fahrerhaus sperrbar 100% Differenzialsperre.
+Auftritte für Normeinstiegshöhe sowie alle Notwendigenumbauten 
+Mehrgewicht Allra";1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+02.;Fahrzeugausstattung;;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+02.01;Motor;;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+;4-Zylinder-Reihenmotor mit Turbolader, Wasserkühler und Ladeluftkühlung, Drehmoment mind. 430 Nm nach Abgasnorm EURO 6.;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+;Technische Daten (tatsächlich);;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+;Angaben zu Motorleistung:;;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+02.03;Getriebe;;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+;Schaltgetriebe;;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+;Anzahl Gänge:;;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+;Dem Angebot ist eine detaillierte technische Beschreibung beizufügen.;;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+;Nebenabtrieb, geeignet zum Dauerbetrieb einer Feuerlöschkreiselpumpe, mit Ölkühler in Abstimmung mit dem Aufbauhersteller;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+03.;Antrieb / Fahrwerk;;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+03.01;Geschwindigkeitsmesser in km/h, ohne Fahrtenschreiber;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+03.03;ABS, ASR, ESP;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+03.03;Differenzialsperre Hinterachse;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+03.04;Verstärkte Vorder- und Hinterachsfedern mit zusätzlichen Stabilisatoren;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+03.06;Abschleppvorrichtung vorne;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+03.07;Trapezfeder an der Hinterachse;;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+;Lenkung;;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+03.07;Servolenkung;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+03.08;Lenkradverstellung in Höhe und Neigung;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+;Bremsanlage;;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+03.09;Elektronisches Stabilitätsprogramm (ESP);1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+03.10;Scheibenbremse an VA+HA m.elektr.Verschleißanzeige;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+03.11;ABS mit elektronischer Bremskraftverteilung;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+;Bereifung;;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+03.16;Bereifung 225/ 75 R 16;;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+03.17;"Herstellerempfohlene M+S Bereifung mit Schneeflockensymbol und
+entsprechender Zulassung, größte mögliche Breite:";;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+;Angebotene Bereifung:;;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+03.21;Radmittenabdeckungen vorne;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+03.22;Reifendruck-Überwachungssystem;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+03.23;Ersatzrad (Vollwertiges) lose;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+04.;Fahrerhaus;;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+04.01;Airbag für Fahrer und Beifahrer mit Gurtstraffer;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+04.02;Voll-LED Scheinwerfer;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+04.03;Klimaanlage incl., Klimakompr. 170 cm³, Pollenfilter;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+04.04;Zusatzwasserheizung mit mind. 2,5 kW Heizleistung incl. Zeitschaltuhr;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+04.05;Schutz für Ölwanne;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+04.06;Zentralverriegelung + Vorbereitung Aufbautüren;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+04.07;Tempomat;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+04.08;"Komf. Sitz Fahrer Höhe, Neig, Längsr. vers. hydr. gef.
+Einzelsitz für Beifahrer verstellbar";1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+04.09;"Vario-Block-Basis-System
+(Basisplatte und Schutzkappe)";1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+05.;Elektrik / Beleuchtung /Sonstige Ausstattungen;;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+;Konsole Zusatzaggregat, für verstärkten Generator;;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+;Es ist darauf zu achten, dass jederzeit eine ausreichende Versorgung – unter Berücksichtigung aller Verbraucher – mit einem ausreichend dimensionierten Generator sichergestellt wird.;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+05.02;"Fahrgestellvorbereitung für Nachrüstung zusätzlicher Einbaugenerator mittels Riementrieb
+Nebenabtrieb für feuerwehrtechnische Einbauten";1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+05.03;"Außenspiegel für Aufbaubreite 2.350 mm
+Außenspiegel heizbar u. elektr. Verstellbar";1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+05.04;Spritzschutzlappen an der Vorderachse;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+05.05;"Auspuff seitl. Links
+Abgasanlage ändern gemäß DIN EN 1846-2";1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+05.06;"Aufbauhersteller Interface-Erweiterungsmodul
+EG-Kontrollgerät entfall";1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+05.07;Dachablage mit DIN-Fach;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+05.08;Fenster in der Rückwand Entfall;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+05.09;AHK Maulkpl., Montage Steckdose;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+05.10;AHK Kugelkopf, Montage Steckdose;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+05.11;LED-Tagfahrlicht;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+05.12;Nebelscheinwerfer;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+05.13;LED Frontscheinwerfer;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+05.14;Umrissleuchten (nach ECE R7);1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+05.15;Seitliche Blinkleuchten;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+05.16;Lichtautomatik mit Lichtsensor;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+05.17;Fernlichtassistent (Intelligent Headlight Control);1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+05.18;Infotainment, Radio;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+05.19;Rückfahrkamera mit Aufschaltung im Radiodisplay;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+05.20;Geschwindigkeitsbegrenzung 110 km/h;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+05.21;Einaltung der GSR-B;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+05.22;Spurhalteassistent (LDWS);1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+05.23;Berganfahrassistent;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+05.24;Gummifußmatten Fahrer und Beifahrer;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+06.;Lackierung;;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+;Lackierung für Karosserie- und Anbauteile;;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+;Konservierung (inkl. Hohlräume) und Unterbodenschutz;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+07.;Weitere Lieferumfänge;;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+;Zubehör;;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+;Lieferung inkl. folgender Zubehörteile:;;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+;Überführungskosten:;;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+07.07;Anlieferung frei Aufbauhersteller;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+;Fahrzeugdokumente;;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+07.08;Nationale Zulassungsdokumente Deutschland;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+07.09;Zulassungsbescheinigung II sowie EU - Konformitätserklärung;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+07.10;Prüfbuch;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+07.11;Lieferung Monat/Jahr:;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+;Preisaufstellung:;;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+;Gesamtsumme Netto Fahrgestell:;;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+;Allgemeine Fahrzeugbeschreibung und Projektablauf;;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+01.01;Fahrzeugaufbau MLF;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+01.02;"Das Fahrzeug ist als Mittleres Löschfahrzeug ""MLF""  gemäß DIN 14530-25:2019-11 sowie eventuelle Zusatztabelle Bayern (jeweils in der zum Ausschreibungszeitpunkt aktuellen Fassung) auszuführen.";1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+01.03;Das Fahrzeug darf seine Abmessungen nach den Baurichtlinien nicht überschreitten.;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+01.04;Nach Ferstigstellung des Fahrzeuges ist eine Abnahme nach §21 StVZO durchzuführen.;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+01.05;Vor der Auslieferung des Fahrzeuges hat eine Feuerwehrtechnische Abnahme des Bundeslandes Bayern beim Aufbauhersteller zu erfolgen.;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+01.06;Die Fahrzeugabholung erfolgt durch die Feuerwehr Schwangau am Produktionsstandort des Aufbauherstellers.;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+01.07;Bei der Fahrzeugabholung hat eine ausführliche Einweisung durch den Aufbauhersteller in Fahrgestell, Aufbau und Pumpe zu erfolgen.;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+01.08;Nach der Auslieferung des Fahrzeuges hat eine weitere ausführliche Einweisung in Fahrgestell, Aufbau und Pumpe am Standort der Feuerwehr Schwangau (ca. 5h) zu erfolgen.;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+01.09;Es sind, sofern die Entfernung vom Standort der Feuerwehr zum Herstellerwerk > 160 km Luftlinie beträgt,  Bewirtungs- und Übernachtungskosten für 6 Personen bei folgenden Terminen einzukalkulieren: Konstruktionsgespräch, Rohbauabnahme, Fahrzeugabholung. Pro Übernachtung und Person ist ein Frühstück,;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+01.10;Falls die Lieferung von Los 2 feuerwehrtechnische Beladung MLF nicht beim Aufbauhersteller beauftragt wird, sind hier entsprechende Regiekosten anzugeben. Zu berücksichtigen sind die Kosten für die Annahme und Einlagerung der Beladung sowie das vollständige Beladen des Fahrzeuges vor der Auslieferun;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+01.11;Die Lieferzeit des Fahrzeuges ab Auftragseingang ist verbindlich anzugeben.;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+01.012;"Der voraussichtliche Produktionsstandort des Fahrzeuges (Aufbauhersteller) ist anzugeben.
+Angaben Produktionsstandort:";1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+02.01;Das Fahrzeug ist möglichst mit einer Mehrschichtlackierung in der Farbe Rot (RAL 3020) zu versehen. Der Mannschaftsraum und der Kofferaufbau sind mit einer Hohlraumkonservierung zu versehen. Auf der Fahrzeugunterseite ist ein dauerhafter vollflächiger Unterbodenschutz aufzubringen. Hinweis: Lackieru;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+02.02;Die Bordwandklappen und das Kofferheck sind zur besseren Haftung der Beklebung bevorzugt glatt zu lackieren.;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+02.03;Es ist eine transparente Schutzfolie als Kantenschutz am Einstieg, Fahrerhaus- und Mannschaftsraumtüren anzubringen. Zu verwendendes Fabrikat: 3M oder gleichwertig.;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+02.04;Es sind vom Auftraggeber beigestellte Klebewappen an den Fahrerhaustüren anzubringen.;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+02.05;Die Fahrerhaustüren sind mit der Beschriftung Silber mit Schatten. Freiwillige Feuerwehr - Wappen - Schwangau zu bekleben. Zu verwendende Folie: Fabrikat 3M, Typ SC 80-10 oder gleichwertig.;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+02.06;Das Dach des Mannschaftsraumes ist mit einer Dachbeschriftung gemäß DIN in weiß (RAL 9010) zu bekleben. Zu verwendende Folie: Fabrikat 3M, Typ SC 80-10 oder gleichwertig.;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+02.07;"Die Fahrzeugfront ist mit einer Beschriftung ""FEUERWEHR"" in Leuchtgelb zu bekleben. Zu verwendende Folie: Fabrikat 3M, Typ SC 80-10 oder gleichwertig.";1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+02.08;"Die seitlichen Dachblenden des Kofferaufbaus sind möglichst vollfächig und ohne Unterbrechung mit einer Beschriftung ""FEUERWEHR Schwangau"" in Leuchtgelb zu bekleben. Zu verwendende Folie: Fabrikat 3M, Typ SC 80-10 oder gleichwertig.";1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+02.09;An den Fahrzeugseiten ist eine Konturmarkierung in Gelb nach ECE-R 104 anzubringen. Zu verwendende Folie: Fabrikat 3M, Typ SL 983-10 oder gleichwertig. Eine Folienbreite von mindestens 50 mm ist möglichst durchgehend einzuhalten.;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+02.10;Am Fahrzeugheck ist eine Konturmarkierung in gelb nach ECE-R 104 anzubringen. Zu verwendende Folie: Fabrikat 3M, Typ SL 983-72 oder gleichwertig. Eine Folienbreite von mindestens 50 mm ist möglichst durchgehend einzuhalten.;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+02.11;Am Fahrzeugheck ist eine möglichst großflächige Warnbeklebung in gelb/rot anzubringen. Zu verwendende Folie: Fabrikat 3M, Typ B07192 oder gleichwertig.;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+02.12;An der vorderen linken Stoßstange am Einstiegsbereich ist eine Höhenkennzeichnung der Wasserdurchfahrtsfähigkeit anzubringen.;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+02.13;Heckbeschriftung auf Rolladen ca. 150mm hoch ebenfalls neongelb wie oben beschrieben. Schwangau 47/1, neongelb floureszierend und retroreflektierende Klebefolie (Oralite VC 612);1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+02.14;"Beschriftung des Fahrzeuges mit Funkrufname ""47/1"" an der Frontscheibe des Fahrzeuges in weiß (RAL 9010)";1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+02.15;Die Fahrzeugbeklebung erfolgt nach Vorbild der bereits bestehenden Fahrzeugflotte der Feuerwehr Schwangau, wie in der Leistungsbeschreibung beschrieben bzw. auf der Homepage: www.feuerwehr.schwangau.de dargestellt. Der Feuerwehr muss ein kostenloser Entwurfsvorschlag zur Verfügung estellt werden.;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+02.16;Beschriftung aller Beladungscontainer mit einfach zu ersetzenden Industrieaufklebern auf der Vorder- und Rückseite der Kisten;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+02.17;Beschriftung aller Beladungslagerungen mittels einfach zu ersetzenden Industrieaufklebern mit weißer schrift auf schwarzem Hintergrund;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+02.18;An der Frontscheibe sind Piktogramme zur Kennzeichnung der zulässigen Gesamtmasse, der Fahrzeugbreite und der Fahrzeughöhe anzubringen.;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+02.19;Kotflügel und Stoßstange in RAL 9010 (reinweiß) lackiert;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+02.20;Angabe Reifenfülldruck an Kotflügeln;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+02.21;Alle Schmierstellen in schwefelgelb (RAL 1016) gekennzeichnet;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+;Fahrgestelldaten / Fahrgestellarbeiten / Fahrgestellanbauten/Mannschaftsraum/Staffelkabine;;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+03.01;Aufbaubreite 2300mm;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+03.02;4 Sitzplätze im Mannschaftsraum in Fahrtrichtung, davon 4 Sitze innen mit PA-Halterungen in den Rückenlehnen. Mit federbelastetem Bebänderungshalter für leichteres Aufsetzen des PA-Gerätes, mittels Ausbuchtung in der Mannschaftsraumrückwand. Elektrische Absicherung der Geräteentnahme (Freigabe nur b;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+03.03;Alle Atemanschlüsse sind in der Mannschaftskabine so zu verbauen, dass von jedem Sitzplatz ein Atemanschluss erreicht werden kann, sodass sich alle Einsatzkräfte im Mannschaftsraum während der Fahrt mit Masken ausrüsten können, Die Halterungen der PA sind so auszulegen, dass ein am PA eingehängter L;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+03.04;Mannschaftsraum mit Noppengummiboden;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+03.05;"Fahrzeug-Aufbau im ALPAS-System
+Vollaluminium-Aufbau in Paneel-Bauweise. Mehrkammer-Paneele mit zwei umlaufenden Nuten (Lastpfade) zur Aufnahme von Halterungen. 
+Als Ring ausgebildet und an jeder Stelle gleich stark belastbar, auch für Schwerlastauszüge an jeder beliebigen Stelle zu montieren ist. G";1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+03.06;"Lackierung Koffer in RAL 3020
+(Feuerwehrrot)";1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+03.07;Heckgeräteraum mit Rollladen mit einem innenligender Verschluss für den Heckrolladen einzubauen. Heck mit Klappe und integriertem Rolladen;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+03.08;"Eine Querstange ist durchgängig über die gesamte Breite der Geräteraumverschlüsseanzubringen.
+Die Arretierungen der Schließmechanismusen müssen innenliegend, geschützt in den Führungsleisten des Rollladens verbaut werden.
+Hochgezogene Rollläden, in Aufbaudach integriert";5,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+03.09;Schließzylinder für Geräteraumverschluß gleichschließend;5,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+03.10;"Ladegerät für 12 oder 24 Volt
+Fahrzeugbatterie, 25 A";1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+03.11;Pumpe FPN 10-1000-2 HR;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+03.12;"Nebenantriebsschaltung ANS f.
+Pumpe (bei Schaltgetriebe)";1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+03.13;Lenzeinrichtung für Pumpe;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+03.14;Bedien- und Kontrolltableau oberhalb am Pumpenstand im Heck;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+03.15;B-Druckabgang, re. und li. Seitlich am Fahrzeug,;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+03.16;"Trinkwassserschutz nach DVGW Regelwerk entsprechend E-DIN 14502-2:2019-02
+Zur Vermeidung von Beeinträchtigungen des Trinkwassers und Rohrnetzes bei Löschwasserentnahme sind folgende Einrichtungen sind nach DVGW W 405-B1 (A) zu verbauen:
+Freier Einlauf in den Wasserbehälter mit Rückflussverhinderung.";1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+03.17;"Saugeingang Gr. A mit Schwenkklappe
+klappe";1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+03.18;"Farbleitmarkierung Löschsystem ""Wasser"" (rot-grün)";1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+03.19;"Löschwasserbehälter 1000 l, 
+Material PE 100 RC, blau, auf separatem Rahmen mit Spannbändern im Aufbau";1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+03.20;Tankanzeige Wasser, elektrisch mit LED;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+03.21;"Druckregelung, elektronisch
+Das System muss einen vorgegebenen Arbeitsdruck automatisch konstant halten. Eine individuelle, elektrische Gasverstellung muss vorhanden sein.
+Kavitations-Warn-und Regelanlage für Kreiselpumpen
+Wenn die Pumpe im Kavitationsbereich betrieben wird, muss das System sofort a";1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+03.22;"Füllstandsregulierung für Löschwasserbehälter
+Die Tankfüllleitung muss je nach Wasserstand des Behälters elektro-pneumatisch geöffnet bzw. geschlossen werden";1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+03.23;"Buchtenfach f. 2 C-Druckschläuche und 1 Strahlrohr, Buchtenfach Alu entnehmbar
+1 Stück B-Schlauch gerollt mit Verteiler";1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+03.24;Dreiverteiler-Schnellangriff, re. Hinten, im Tiefbau;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+03.25;Sicherungsautomaten anstelle einer serienmäßigen Sicherung;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+03.26;Entladeschutz für Bordnetz mit akust. Unterspannungswarner für 12- bzw. 24-Volt-Bordnetz;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+03.27;Fremdstartsteckdose „Nato“ mit Kabel (Stecker und Polklemmen) mind. 10m;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+03.28;Lieferung und Einbau Leab Pow Box 230V und Ladegerät 30A;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+03.29;Blinkleuchten an den 4 Auftrittklappen,;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+03.30;"Leseleuchte Osram LED
+Osram Onyx CopilotLeseleuchte Osram LED grün/weiß schaltbar";1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+03.31;"Mannschaftsraumleuchte LED, grün-weiss umschaltbar
+Zusätzliche Leuchte im Mannschaftsraum.
+Umschaltbar von grün auf weiß über einen separaten Schalter.";1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+03.32;"Einstiegsbeleuchtung LED
+Je eine LED-Leuchte im Mannschaftsraum-Einstieg.
+Geschaltet über den Türöffnungskontakt der Innenraumleuchte.";1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+03.33;"Sondersignalanlage
+flache Bauweise mit  4x3 LED-Einheiten,
+9 blaue Hochleistungs-LEDs mit Weitwinkeloptik und 3 blaue Hochleistungs-LEDs mit gerichteter Optik
+Ausführung soll erweiterbar sein
+Wenn Blaulicht an, automatisch Abblendlicht aktiv";1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+03.34;"Kombinierte Umfeld-und Geräteraumbeleuchtung
+LED-Strips
+Ausleuchtung der Geräteräume mittels LED-Strips seitlich und oben in jedem Geräteraum.";1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+03.35;"LED-Umfeldbeleuchtung 
+Umfeldbeleuchtung mit blendfreier Ausleuchtung des seitlichen Fahrzeugumfeldes.
+Lichtleistung ca. 1000lm/m
+Schaltbar vom Fahrerhaus und am Fahrzeugheck 
+2 Leuchteinheiten pro Aufbauseite
+G1 und G2 jeweils mittig, Ausführungshinweis: Separat zuschaltbar in Langsamfahrt sowohl v";1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+03.36;"LED-Kennleuchten 
+in Verbindung mit der Umfeldbeleuchtung 
+Zusätzlich Kennleuchte (Ausführung Talfin) soll in jedes Modul der Umfeldbeleuchtung eine zusätzliche blaue Kennleuchte eingebaut werden. Der Talilfin in die Kofferecken integriert, für optimale Warnwirkung um das Fahrzeug. Die Talfin-Kennle";1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+03.37;"Heckbeleuchtung gemäß StVZO
+LED in Konsole, Blink-, Brems-, Schluss-, Rückfahrscheinwerfer und Nebelschlussleuchte LED in Leuchtenkonsole unten.
+Blink-, Schluss-, und Bremsleuchte LED in Leuchtenkonsole oben.
+Zwischen den oberen und unteren Leuchtenkonsolen ist eine Griffstange eingzubauen.
+Elemente";1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+03.38;"Martin-Horn (4 Schallbecher)
+zusätzlich zur vorgeschriebenen Ausführung,
+oder als Hauptanlage bei Fahrzeugen ohne
+akustische Warneinrichtung";1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+03.39;LED-Scheinwerfer auf Fahrerhausdach;2,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+03.40;"LED Frontblitzer 2 blaue LED-Blitz-Kennleuchten in der Fahrzeugfront integriert eingebaut.
+Geschaltet über die Dachkennleuchten, separat abschaltbar.";1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+03.41;"Verkehrswarnanlage am Heck 4-gelbe LED-Blitzleuchten
+- 4 rechteckigen LED-Blitzkennleuchten gelb, an der Blende über dem Heckgeräteraum aufgebaut
+-Taster ""Ein-Aus"" und Kontrollleuchte im Fahrerhaus und im GR-Heck
+Wenn Blaulicht an und Handbremse angezogen, Schaltet Fahrzeug Automatisch Warnblinkanla";1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+03.42;"LED-Kennleuchten Heck
+Talfin, blau, Formschlüssige Kennleuchte links und rechts am Kofferheck, schaltbar in Verbindung mit vorderen Kennleuchten, separat abschaltbar";1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+03.43;"Lichtmast, 4 x 50 Watt (LED)
+(PnM/Brü:el.drb./SW:el.neigb.)
+Pneumatisch ausfahrbarer Lichtmast,innenliegend.
+""Aus-Einfahren"": pneumatisch über elekt. Kompressor 
+Lampenbrücke: elektrisch drehbar
+Scheinwerfer: elektrisch gemeinsam neigbar
+Bedienstelle: Fernbedienung mit Spiralkabel
+Stromversorgung üb";1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+03.44;2 zusätzliche Scheinwerfer 50 Watt (LED) auf Lichtmast Lichtleistung 4200 Lumen pro Scheinwerfer;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+03.45;Funkhauptschalter;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+03.46;"Funkvorbereitung - Digital
+Einbauort nach Standard TSF-W / MLF
+- Verkabelung Stromversorgung Digitalfunkgerät
+- Verkabelung Antenne mit Kabel RG-58
+- Installation eines Spannungswandlers 24/12V 12A";1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+03.47;Digital-Funkantenne, mit Verkabelung und Installation;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+03.48;"Verkabelung f. Dach, Heck- -und Mannschaftsraumlautsprecher
+Mannschaftsraum-Lautsprecher inklusive Verstärker";1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+03.49;"Verkabelung für Ladehalterung
+Handscheinwerfer/Handlampe
+Kabel lose in die Nähe des Standard-Montageortes auszuführen.
+1 x zwischen Fahrer und Beifahrer
+1 x im Mannschaftsraum";5,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+03.50;"Einbau angeliefertes Funkgerät im Fahrerhaus
+-Sende-/Empfangsgerät mit Halterung
+-Bedienteil mit Halterung
+-Verbindungskabels und Spannungswandlers
+Einbau einer Steckdose für den beigestellten Handapparat und die Montage der Handapparat-Auflage.";1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+03.51;2. Sprechstelle Motorola mit Funklautsprecher;;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+03.52;"Verkabelung für Ladehalterung
+Handsprechfunkgerät
+Das Kabel muss verdeckt bzw. in Kabelkanälen bis zum Standard-Montageort geführt werden.
+1 x zwischen Fahrer und Beifahrer
+1 x im Mannschaftsraum";2,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+03.53;"Verkabelung + Installation für Ladehalterung Handsprechfunkgeräte
+Das Kabel verdeckt bzw. in Kabelkanälen vom Sicherungskasten bis zum Standard-Montageort verlegen. Die Ladehalterungen müssen montiert und am Bordnetz angeschlossen sein. Einbaulage in Rücksprache mit dem Auftraggeber. 
+6 x davon 1 x ";6,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+;Einbau Beladung, Halterungen für MLF DIN 14530-25, Dachaufbauten;;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+04.01;Halterung Hi-Cafs/Hi-Presslöscher anstelle Kübelspritze;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+04.02;"Halterung für 10 B-Rollschläuche
+B-Rollschläuche";1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+04.03;2 x C-Rollschlauch, zzgl. Halterung für 2 x Schlauchspirale (pro Truppe 1 x Spirale und 1 x TragekorbHalterung für 2 x Tragekorb C 1 x mit Rauchvorhang,;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+04.04;Halterung für B-Schlauch 5 Meter im Kunststoffbehälter;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+04.05;Halterung für Druckbegrenzungsventil;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+04.06;Halterung f. Schaumpistole und Ersatzbehälter;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+04.07;"Halterung f.Übergangsstück A/B
+Halterung f.Übergangsstück B/C";1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+04.08;"Halterung für 4-teilige Steckleiter auf dem Dach
+Lagerung 2 x 2 Elemente übereinander, jeweils 2 Steckleiterteile verbunden.
+Entnahme über das begehbare Dach.
+Lagerung 4 Stück Saugschläuche unter der Steckleiterlagerung";1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+04.09;Dachkasten, Länge ca. 2300 mm (rechts oder links, Aufbauort wird bei der Auftragsbesprechung festgelegt) mit Beleuchtung aus Aluminium-Quintett-Raupenblech und den Deckel mit Gasdruckzylindern;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+04.10;Lagerung für Rettungsbrett mit Zubehör;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+04.11;"Flutlicht
+Stativ mit Abspannung, Aufnahmebrücke, und 2 Flutlichtscheinwerfer (LED), als Halterung im Fahrzeug,";1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+04.12;Halterung für 1 Faltsignal;2,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+04.13;Halterung f. Anhaltestab;2,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+04.14;Containerhalterung aus Alu für Tauchpumpe TP 4/1;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+04.15;"Containerhalterung aus Alu fürMotorsäge mit Zubehör
+(Zubehör umfasst: Schnittschutz, 2-Kammer-Kanister, Ersatzkette, Gesichtsschutz). 
+Bis auf den Kanister muss die gesamte Funktionsgruppe in einem herausnehmbaren Alu-Behälter untergebracht werden.";1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+04.16;"Halterungen Zusatzbeladung ""Strom"" 3kVA nach DIN 14800-18 Bbl.2, Ausg. 11/11. 
+(1 Stromerzeuger 3kVA auf Auszug, drehbar
+1 Abgasschlauch 1,5 m
+1 Reservekanister 5 l
+1 Leitungsroller 50 m)";1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+04.17;"Halterung für Hydraulikgeräte (Auszug drehbar)
+Auf dem Auszug muss das Hydraulikaggregat, des Spreizer und das Schneidgerät gelagert werden
+Das Aggregat soll auf dem Auszug drehbar sein.";1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+04.18;Montage angelieferte Ladehalterung für 1 Stück WBK incl. Stromversorgung (Angriffstrupp/ Wassertrupp) so, dass sie der Ausrüstende Trupp von seinem Sitzplatz aus erreicht;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+04.19;Lieferung und Einbau Schlüsselkasten mit Zahlenschloss;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+04.20;Halterung für Drucklüfter, Lüfter Akkubetrieben (Stromversorgung);1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+04.21;"Hygiene-Board für MLF PUSH
+für Hand-, Körper- und Gerätereinigung.
+Die ""Hygienewand"" muss automatisch ausfahren.
+Bestückt mit Desinfektionsmittelspender, mit Seifen- und Handtuchspender, einem Handschrubber mit Schlauch und einer direkt ans Bordnetz angeschlossenen Ausblaspistole.
+Zusätzliche Tasche";1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+04.22;Insatallation einer Tablethalterung inkl. USB Lademöglichkeit im Fahrer- Beifahrerraum;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+04.23;Lagerung Fettbrandlöscher;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+04.24;AT Überwachung Lagerung im Mannschaftsraum;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+04.25;Getränkelagerung als Kühlschublade/Kühlbox;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+04.26;Lagerung, Halterung Kiste Verkehrsunfallkasten;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+04.27;Lagerung, Halterung Kisten Unterbauholz (Typ München) in direkter nähe zum Verkehrsunfallkasten und zum Radkeil des Fahrzeugs;2,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+04.28;Lagerung, Halterung Schwelleraufsatz;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+04.29;Lagerung, Halterung Kiste Hydraulikstempel und Pedalschneider;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+04.30;Containerbehälter als Leerbehälter;2,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+04.31;Halterung für Mulde im Aufbau waagrecht verbauen, sodass Transport mit Füllung möglich ist.;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+04.32;Lagerung Halterung Kiste klein für 4 x ABEK-2 P3 Filter, Überdruck/ Normaldruck Adapter und 2 x  Kontaminationsschutzhauben (Form 1 zur Menschenrettung) in der Nähe zu den 4 PA im Mannschaftsraum;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+04.33;Lagerung Halterung Rolle Müllsack (120 l ) für Einsatzstellenhygiene in der Nähe der 2 PA im Mannschaftsraum;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+04.34;"Lagerung für die normmäßige Beladung des MLF nach DIN 14 530-25. 
+Die Lagerung der Ausrüstungsgegenstände müssen ergonomisch und entnahmefreundlich sein, in sinnvoller und logischer Verteilung mit geeigneten Materialien einzubauen. 
+Dreh- und Schwenkfächer sind arretierbar, Auszugsschienen sind als ";1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+;TÜV/Abnahme/Sonstiges;;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+05.01;TÜV-Gutachten nach StVZO;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+05.02;Feuerwehrtechnische Landesabnahme;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+05.03;Fundierte Ausbildungsunterlagen;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+05.03;Es müssen für alle technischen Geräte Bedienungsanleitungen, Bescheinigungen, Nachweise, Wartungsanleitungen, Ersatzteillisten und Elektroschaltpläne geliefert werden. Siehe Leistungsbeschreibung!;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+;Garantie;;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+06.01;Die Garantiezeit für Aufbau und Pumpe ist anzugeben.;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx
+06.020;Die Garantiezeit gegen Durchrostung des Aufbaus ist anzugeben.;1,0;;preisblatt;02_Los_1_Fahrgestell_Aufbau_nur_avasign_20191.xlsx

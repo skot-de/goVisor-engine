@@ -1,0 +1,37 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+01010010;Baustelle einrichten räumen;1,0;psch;gaeb-flat;leistungsbeschreibungen/20-034-06.D83
+01010020;Baustelleneinr. vorhalten;2,0;Mt;gaeb-flat;leistungsbeschreibungen/20-034-06.D83
+01010030;Erstellen von Werk- und Montageplanung;1,0;psch;gaeb-flat;leistungsbeschreibungen/20-034-06.D83
+01010040;Herstellung Dokumentation aller erbrachten Leistungen;1,0;psch;gaeb-flat;leistungsbeschreibungen/20-034-06.D83
+01020010;Mobile Trennwand Halbautomatik;12,0;m²;gaeb-flat;leistungsbeschreibungen/20-034-06.D83
+01030010;Einmalige Wartung der Halbautomatischen Mobile Trennwand;1,0;psch;gaeb-flat;leistungsbeschreibungen/20-034-06.D83
+01040010;Meister / Vorarbeiter / -in;5,0;h;gaeb-flat;leistungsbeschreibungen/20-034-06.D83
+01040020;Facharbeiter / -in;20,0;h;gaeb-flat;leistungsbeschreibungen/20-034-06.D83
+01040030;Helfer / -in;10,0;h;gaeb-flat;leistungsbeschreibungen/20-034-06.D83
+0010;Baustelle f;1,0;psch;gaeb;leistungsbeschreibungen/2026_08_03-LV Mobile Trennwand.X83
+0020;Baustelleneinrichtung f;2,0;Mt;gaeb;leistungsbeschreibungen/2026_08_03-LV Mobile Trennwand.X83
+0030;Anfertigen der Werk- und Montageplanung f;1,0;psch;gaeb;leistungsbeschreibungen/2026_08_03-LV Mobile Trennwand.X83
+0040;Herstellung einer zusammenfassenden Dokumentation aller erbrachten Leistungen;1,0;psch;gaeb;leistungsbeschreibungen/2026_08_03-LV Mobile Trennwand.X83
+0010;Mobile Trennwand als Halbautomatik wie zuvor beschrieben liefern und betriebsfertig montieren:;12,0;m²;gaeb;leistungsbeschreibungen/2026_08_03-LV Mobile Trennwand.X83
+0010;Wartung einer halbautomatischen mobilen Trennwandanlage einschlie;1,0;psch;gaeb;leistungsbeschreibungen/2026_08_03-LV Mobile Trennwand.X83
+0010;Meister / Vorarbeiter / -in;5,0;h;gaeb;leistungsbeschreibungen/2026_08_03-LV Mobile Trennwand.X83
+0020;Facharbeiter / in;20,0;h;gaeb;leistungsbeschreibungen/2026_08_03-LV Mobile Trennwand.X83
+0030;Helfer / -in;10,0;h;gaeb;leistungsbeschreibungen/2026_08_03-LV Mobile Trennwand.X83
+0010;Baustelle f;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_08_03-LV Mobile Trennwand.X83
+0020;Baustelleneinrichtung f;2,0;Mt;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_08_03-LV Mobile Trennwand.X83
+0030;Anfertigen der Werk- und Montageplanung f;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_08_03-LV Mobile Trennwand.X83
+0040;Herstellung einer zusammenfassenden Dokumentation aller erbrachten Leistungen;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_08_03-LV Mobile Trennwand.X83
+0010;Mobile Trennwand als Halbautomatik wie zuvor beschrieben liefern und betriebsfertig montieren:;12,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_08_03-LV Mobile Trennwand.X83
+0010;Wartung einer halbautomatischen mobilen Trennwandanlage einschlie;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_08_03-LV Mobile Trennwand.X83
+0010;Meister / Vorarbeiter / -in;5,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_08_03-LV Mobile Trennwand.X83
+0020;Facharbeiter / in;20,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_08_03-LV Mobile Trennwand.X83
+0030;Helfer / -in;10,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/2026_08_03-LV Mobile Trennwand.X83
+01010010;Baustelle einrichten räumen;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20-034-06.D83
+01010020;Baustelleneinr. vorhalten;2,0;Mt;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20-034-06.D83
+01010030;Erstellen von Werk- und Montageplanung;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20-034-06.D83
+01010040;Herstellung Dokumentation aller erbrachten Leistungen;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20-034-06.D83
+01020010;Mobile Trennwand Halbautomatik;12,0;m²;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20-034-06.D83
+01030010;Einmalige Wartung der Halbautomatischen Mobile Trennwand;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20-034-06.D83
+01040010;Meister / Vorarbeiter / -in;5,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20-034-06.D83
+01040020;Facharbeiter / -in;20,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20-034-06.D83
+01040030;Helfer / -in;10,0;h;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/20-034-06.D83

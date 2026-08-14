@@ -1,0 +1,60 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+0010;Ortstermin, Besprechung vor Ort mit AG / Planer,;2,0;St;gaeb;leistungsbeschreibungen/1. GAEB-Datei_26-051-Ö.X83
+0020;Einholen Leitungsauskünfte;1,0;psch;gaeb;leistungsbeschreibungen/1. GAEB-Datei_26-051-Ö.X83
+0030;Abstimmung Betretungs- und Bohrerlaubnis auf anliegenden Grundstücken;1,0;psch;gaeb;leistungsbeschreibungen/1. GAEB-Datei_26-051-Ö.X83
+0040;Einholen von Genehmigungen / Koordination;1,0;psch;gaeb;leistungsbeschreibungen/1. GAEB-Datei_26-051-Ö.X83
+0050;Darstellung und Auswertung der Feldarbeiten,;1,0;psch;gaeb;leistungsbeschreibungen/1. GAEB-Datei_26-051-Ö.X83
+0060;Einmessen der Untersuchungsstellen (Bohransatzpunkte) nach Lage und Höhe;10,0;St;gaeb;leistungsbeschreibungen/1. GAEB-Datei_26-051-Ö.X83
+0010;Allgemeine Baustelleneinrichtung;1,0;psch;gaeb;leistungsbeschreibungen/1. GAEB-Datei_26-051-Ö.X83
+0020;Baustelleneinrichtung vorhalten;6,0;Wo;gaeb;leistungsbeschreibungen/1. GAEB-Datei_26-051-Ö.X83
+0030;Liefern, aufstellen, bauzeiliches Betreiben und Vorhalten sowie Abtransportieren  geschlossener Container oder abdeckbarer Behälter zur Aufbewahrung entsorgungspflichtigen Bohrguts.;1,0;psch;gaeb;leistungsbeschreibungen/1. GAEB-Datei_26-051-Ö.X83
+0040;Erstellen einer Mischprobe und Durchführung einer Analytik mit dem Parameterkatalog der Dep V 2009 für die Deponieklassen DK 0 bis DK III für die Aufnahme und spätere Entsorgung des Bohrguts.;1,0;St;gaeb;leistungsbeschreibungen/1. GAEB-Datei_26-051-Ö.X83
+0050;Transport der Kernkisten nach Fertigstellung der jeder Bohrung zum Planungsbüro nach Bochum.;2,0;St;gaeb;leistungsbeschreibungen/1. GAEB-Datei_26-051-Ö.X83
+0010;An- und Abfahrt Bohrgerät Kampfmittelsondierung inkl. vorbereitender Maßnahmen;1,0;St;gaeb;leistungsbeschreibungen/1. GAEB-Datei_26-051-Ö.X83
+0020;Kampfmittelsondierbohrung im Hohlbohrschnecken- Bohrverfahren inkl. Ausbau mittels PVC- Rohren DN 50;2,0;St;gaeb;leistungsbeschreibungen/1. GAEB-Datei_26-051-Ö.X83
+0030;Durchführung einer Suchschachtung von Hand zum Auffinden von Versorgungsleitungen, Tiefe bis 1,25 m, Bodenklasse 2 -5 inkl. Verfüllen und Verdichten (ohne Aufnahme bzw. Wiederherstellung von befestigten Oberflächen);2,0;St;gaeb;leistungsbeschreibungen/1. GAEB-Datei_26-051-Ö.X83
+0010;An- und Abfahrt sowie Auf- und Abbau Bohrgerät am jeweiligen Bohrpunkt, inkl. Umsetzen der Gerätschaften;2,0;St;gaeb;leistungsbeschreibungen/1. GAEB-Datei_26-051-Ö.X83
+0020;Kernbohrungen mit durchgehender Gewinnung gekernter Proben inkl. der benötigen Hilfsverrohrungen. DIN EN ISO 22475-1 im Lockerboden und Fels ,;50,0;m;gaeb;leistungsbeschreibungen/1. GAEB-Datei_26-051-Ö.X83
+0030;Entnahme von Bohrkernen DN 100;50,0;St;gaeb;leistungsbeschreibungen/1. GAEB-Datei_26-051-Ö.X83
+0040;Liefern und Vorhalten von Kernkisten, Auslegen der Bohrkerne in Kernkisten;50,0;m;gaeb;leistungsbeschreibungen/1. GAEB-Datei_26-051-Ö.X83
+0050;Entnahme von ungestörten Bodenproben Güteklasse 1 DIN EN ISO 22475-1 in vom AN vorzuhaltenden Entnahmehülsen (100 mm);6,0;St;gaeb;leistungsbeschreibungen/1. GAEB-Datei_26-051-Ö.X83
+0060;Verfüllen der Bohrungen mit Kiessand Chemie BM-0;50,0;m;gaeb;leistungsbeschreibungen/1. GAEB-Datei_26-051-Ö.X83
+0010;An- und Abfahrt zur Baustelle,;1,0;St;gaeb;leistungsbeschreibungen/1. GAEB-Datei_26-051-Ö.X83
+0020;Rammkernsondierungen (RKS), zur Feststellung des Untergrundaufbaus,;8,0;St;gaeb;leistungsbeschreibungen/1. GAEB-Datei_26-051-Ö.X83
+0030;Aufbrechen von Oberflächenversiegelungen bis max. 15 cm Stärke;2,0;St;gaeb;leistungsbeschreibungen/1. GAEB-Datei_26-051-Ö.X83
+0040;Durchführung von Kernbohrung DN 100 im Bereich von Asphalt / Betonversiegelungen bis max. 40 cm Stärke;3,0;St;gaeb;leistungsbeschreibungen/1. GAEB-Datei_26-051-Ö.X83
+0050;Durchführung von Kernbohrung DN 100 im Bereich von Asphalt / Betonversiegelungen > 40 cm Stärke als Zulage zu Position 4.1.40;10,0;cm;gaeb;leistungsbeschreibungen/1. GAEB-Datei_26-051-Ö.X83
+0060;Rammkernsondierungen (RKS), bzw. Rammsondierung (DP), Abteufen;20,0;m;gaeb;leistungsbeschreibungen/1. GAEB-Datei_26-051-Ö.X83
+0070;Entnahme gestörter Bodenproben;40,0;St;gaeb;leistungsbeschreibungen/1. GAEB-Datei_26-051-Ö.X83
+0080;Schwere Rammsondierung (DPH), Abteufen;20,0;m;gaeb;leistungsbeschreibungen/1. GAEB-Datei_26-051-Ö.X83
+0090;Einrichten einer temp. Grundwassermessstelle zur Messung des ausgespiegelten Grundwasserstands, incl. Messung und Rückbau;2,0;St;gaeb;leistungsbeschreibungen/1. GAEB-Datei_26-051-Ö.X83
+0100;Verfüllen der Bohrlöcher mit Bohrgut / Sand;8,0;St;gaeb;leistungsbeschreibungen/1. GAEB-Datei_26-051-Ö.X83
+0110;Wiederherstellen Oberflächenversiegelung;8,0;St;gaeb;leistungsbeschreibungen/1. GAEB-Datei_26-051-Ö.X83
+0010;An- und Abfahrt des / der Probennehmer/s für die Probenentnahme.;1,0;St;gaeb;leistungsbeschreibungen/1. GAEB-Datei_26-051-Ö.X83
+0020;Entnahme einer Einzelprobe aus der Bausubstanz mittels geeignetem (Hand-)Gerät (z.B. Messer, Meißel, Beitel, Bohrer), inkl. geeignetem Probengefäß;10,0;St;gaeb;leistungsbeschreibungen/1. GAEB-Datei_26-051-Ö.X83
+0030;Entnahme einer Mischprobe aus der Bausubstanz aus min. 5 Einzelstellen mittels geeignetem (Hand-)Gerät (z.B. Messer, Meißel, Beitel, Bohrer), inkl. geeignetem Probengefäß Führen eines Probenentnahmeprotokolls;2,0;St;gaeb;leistungsbeschreibungen/1. GAEB-Datei_26-051-Ö.X83
+0010;"Bestimmung des Wassergehaltes nach DIN EN ISO 17892-1;";40,0;St;gaeb;leistungsbeschreibungen/1. GAEB-Datei_26-051-Ö.X83
+0020;"Bestimmung der Dichte des Bodens gemäß DIN 18 125-2;";14,0;St;gaeb;leistungsbeschreibungen/1. GAEB-Datei_26-051-Ö.X83
+0030;"Bestimmung der Korndichte gemäß DIN 18 124-2;";2,0;St;gaeb;leistungsbeschreibungen/1. GAEB-Datei_26-051-Ö.X83
+0040;Bestimmung der Korngrößenverteilung nach DIN 18 123 /DIN EN ISO 17892-2 durch kombinierte Sieb-/Schlämmanalyse, Auswertung und Darstellung der Versuchsergebnisse;10,0;St;gaeb;leistungsbeschreibungen/1. GAEB-Datei_26-051-Ö.X83
+0050;"Bestimmung der Zustandsgrenzen nach DIN  18 122/DIN EN ISO 17 892-12 durch Bestimmung der Fließgrenze w'L sowie Bestimmung der Ausrollgrenze w'P; Auswertung und Darstellung der Versuchsergebnisse";8,0;St;gaeb;leistungsbeschreibungen/1. GAEB-Datei_26-051-Ö.X83
+0060;Bestimmung Trockenrückstand, Säuregrad n. Baumann-Gully, Sulfid, Sulfat Chlorid;1,0;St;gaeb;leistungsbeschreibungen/1. GAEB-Datei_26-051-Ö.X83
+0070;Bestimmung der Zusammendrückbarkeit als Kompressionsversuch mit mehr als 6 Laststufen (Erst- und  Wiederbelastung) nach DIN EN ISO 17 892-5;1,0;St;gaeb;leistungsbeschreibungen/1. GAEB-Datei_26-051-Ö.X83
+0080;Einaxialer Druckversuch mit ungehinderter Querdehnung nach DIN 18 136/ DIN EN ISO 17892-7 an ungestörten, bindigen Bodenproben;2,0;St;gaeb;leistungsbeschreibungen/1. GAEB-Datei_26-051-Ö.X83
+0090;Einaxialer Druckversuch gem. DGGT Empfehlung Nr.1;2,0;St;gaeb;leistungsbeschreibungen/1. GAEB-Datei_26-051-Ö.X83
+0100;Bestimmung der Scherfestigkeit durch direkten Scherversuch nach DIN 18 137 / DIN  EN ISO 17892-10 für bindige Böden bestehend aus drei Einzelversuchen;2,0;St;gaeb;leistungsbeschreibungen/1. GAEB-Datei_26-051-Ö.X83
+0110;Bestimmung der Abrasivität am Festgestein (CAI);1,0;St;gaeb;leistungsbeschreibungen/1. GAEB-Datei_26-051-Ö.X83
+0120;Bestimmung der Abrasivität am Lockergestein (LPC);1,0;St;gaeb;leistungsbeschreibungen/1. GAEB-Datei_26-051-Ö.X83
+0130;Bestimmung des Kalkgehaltes gem. DIN 18129;2,0;St;gaeb;leistungsbeschreibungen/1. GAEB-Datei_26-051-Ö.X83
+0140;Bestimmen der organischen Bestandteile im Boden gemäß DIN 18128, Glühverlust;2,0;St;gaeb;leistungsbeschreibungen/1. GAEB-Datei_26-051-Ö.X83
+0010;"Chemische Untersuchungen gemäß den "" Richtlinien für die umweltverträgliche Verwertung von Ausbauasphalt im Straßenbau"" (RUVA - StB 01, Fassung), Feststoff  und Eluatuntersuchung für Zuordnung Verwertungsklasse A bis C.";2,0;St;gaeb;leistungsbeschreibungen/1. GAEB-Datei_26-051-Ö.X83
+0020;Chemische Untersuchungen von Bauschutt Anlage 1, Tabelle 1;2,0;St;gaeb;leistungsbeschreibungen/1. GAEB-Datei_26-051-Ö.X83
+0030;Chemische Untersuchungen von Bodenmaterial / Baggergut bis 10 Vol .-% mineralischem Fremdbestandteil Anlage 1 , Tabelle 3 ,;2,0;St;gaeb;leistungsbeschreibungen/1. GAEB-Datei_26-051-Ö.X83
+0040;Chemische Untersuchungen von Bodenmaterial / Baggergut > 10 und < 50 Vol .-% mineralischem Fremdbestandteil gem. ErsatzbaustoffV Anlage 1 , Tabelle 3 , BMF0* - BM-F3 (Materialwerte für Bodenmaterial und Baggergut) der ErsatzbaustoffV.;2,0;St;gaeb;leistungsbeschreibungen/1. GAEB-Datei_26-051-Ö.X83
+0050;Chemische Untersuchungen gemäß Deponieverordnung (DepV) , Ausfertigungsdatum 2009, nach aktuellem Stand, Anhang 3, Tab. 2 , Spalte 4 -9;2,0;St;gaeb;leistungsbeschreibungen/1. GAEB-Datei_26-051-Ö.X83
+0060;Stahl- + Betonagressivität in Wässern;1,0;St;gaeb;leistungsbeschreibungen/1. GAEB-Datei_26-051-Ö.X83
+0070;PAK im Feststoff;6,0;St;gaeb;leistungsbeschreibungen/1. GAEB-Datei_26-051-Ö.X83
+0080;PCB (Bestimmung der 6 DIN Kongemere PCB 28, PCB 52, PCB 101, PCB 138, PCB 153, PCB 180) im Feststoff;2,0;St;gaeb;leistungsbeschreibungen/1. GAEB-Datei_26-051-Ö.X83
+0090;Blei, Cadmium, Chrom, Kupfer, Nickel, Quecksilber, Zink im Feststoff;2,0;St;gaeb;leistungsbeschreibungen/1. GAEB-Datei_26-051-Ö.X83
+0100;Bestimmung von Asbestgehalten in Einzelproben, Nachweisgrenze 0,1 %;4,0;St;gaeb;leistungsbeschreibungen/1. GAEB-Datei_26-051-Ö.X83
+0110;Bestimmung von Asbestgehalten in Einzel- oder Mischproben, Nachweisgrenze 0,001 %;4,0;St;gaeb;leistungsbeschreibungen/1. GAEB-Datei_26-051-Ö.X83

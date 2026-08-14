@@ -1,0 +1,233 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+0010;Koordinierungsaufwand für Abschaltung und Zuschaltung der bestehenden 11 kV- und 0,4 kV- Schaltanlagen in der Trafostation bei Geb. 72 und der von der Station versorgten Gebäuden;1,0;psch;gaeb;sonstiges/20260724 Elektro_V32.X83
+0020;Demontage/Herausziehen eines NH00 Abgang in Feld N3,;2,0;St;gaeb;sonstiges/20260724 Elektro_V32.X83
+0030;Demontage von Blindabdeckungen Gr. 00 (Blenden) in Feld N3;2,0;St;gaeb;sonstiges/20260724 Elektro_V32.X83
+0040;Umsetzen Abgang innerhalb Feld N3,;1,0;St;gaeb;sonstiges/20260724 Elektro_V32.X83
+0050;Demontage freier NH3 Abgang in Feld N2,;1,0;St;gaeb;sonstiges/20260724 Elektro_V32.X83
+0060;Nachrüsten NH3 Abgang mit Stromwandler 600/5A;2,0;St;gaeb;sonstiges/20260724 Elektro_V32.X83
+0070;Verlängern der Wandlerleitungen von den 2x3 Stromwandlern der nachgerüsteten NH3 Abgänge in Feld N3 und N2;6,0;St;gaeb;sonstiges/20260724 Elektro_V32.X83
+0080;6-Kanal-Netzanalysator UMG 96RM-E für Betriebsstrom und RCM-Fehlerstromüberwachung, BACnet IP;2,0;St;gaeb;sonstiges/20260724 Elektro_V32.X83
+0090;Eigenfester 3-poliger Motorschutzschalter;2,0;St;gaeb;sonstiges/20260724 Elektro_V32.X83
+0100;Ausschnitt in der Schaltschranktür der bauseitigen Schaltanlage, Material: Stahlblech;2,0;St;gaeb;sonstiges/20260724 Elektro_V32.X83
+0110;Einbinden des Multifunktionsmeßgerätes in BACNet;2,0;St;gaeb;sonstiges/20260724 Elektro_V32.X83
+0120;GA-Klemmleiste;2,0;St;gaeb;sonstiges/20260724 Elektro_V32.X83
+0130;Vollständige Schaltschrankdokumentation mit den Ergänzungen / Anpassungen;1,0;St;gaeb;sonstiges/20260724 Elektro_V32.X83
+0140;Übersichtsschaltplan DIN EN 61082-1 (VDE 0040-1) für Niederspannungsanlage, gerahmt unter Glas, Ausführung:;1,0;St;gaeb;sonstiges/20260724 Elektro_V32.X83
+0010;Kabel DIN VDE 0276-603 (VDE 0276-603) NYCWY 4 x 185 SM/95, Cu-Zahl 8159.;320,0;m;gaeb;sonstiges/20260724 Elektro_V32.X83
+0020;Kabel DIN VDE 0276-603 (VDE 0276-603) NYCWY 4 x 150 SM/70, Cu-Zahl 6540.;10,0;m;gaeb;sonstiges/20260724 Elektro_V32.X83
+0030;Verbindungsmuffe 0,6/1 kV, in Schrumpftechnik, für 1 Kabel, NYCWY 4 x 150 SM/70, zur Verbindung mit einem Kabel, NYCWY 4 x 150 RM/70, Montage in Gebäuden.;1,0;St;gaeb;sonstiges/20260724 Elektro_V32.X83
+0040;Erschwerniszulage für Herstellung einer;1,0;St;gaeb;sonstiges/20260724 Elektro_V32.X83
+0050;Kabel DIN VDE 0276-603 (VDE 0276-603) NYY-J 5 x 10 RE, Cu-Zahl 480.;50,0;m;gaeb;sonstiges/20260724 Elektro_V32.X83
+0060;Kabel DIN VDE 0276-603 (VDE 0276-603) NYY-J 5 x 6 RE, Cu-Zahl 288.;25,0;m;gaeb;sonstiges/20260724 Elektro_V32.X83
+0070;Kabel DIN VDE 0276-603 (VDE 0276-603) NYY-J 5 x 4 RE, Cu-Zahl 192.;25,0;m;gaeb;sonstiges/20260724 Elektro_V32.X83
+0080;Kabel DIN VDE 0276-603 (VDE 0276-603) NYY-J 5 x 2,5 RE, Cu-Zahl 120.;25,0;m;gaeb;sonstiges/20260724 Elektro_V32.X83
+0090;Kabel DIN VDE 0276-603 (VDE 0276-603) NYY-J 3 x 2,5 RE, Cu-Zahl 72.;200,0;m;gaeb;sonstiges/20260724 Elektro_V32.X83
+0100;Kabel DIN VDE 0276-603 (VDE 0276-603) NYY-J 3 x 1,5 RE, Cu-Zahl 43.;40,0;m;gaeb;sonstiges/20260724 Elektro_V32.X83
+0110;Installationskabel, symmetrisch, DIN VDE 0815 (VDE 0815), J-Y(St)Y, 2 x 2 x 0,8 Bd.;50,0;m;gaeb;sonstiges/20260724 Elektro_V32.X83
+0010;Steigleiter als Kabelleiter, gelocht, Sprossenabstand 300 mm, aus nichtrostendem Stahl, Seitenhöhe mind. 60 mm, Breite mind. 200 mm, an Stahlkonstruktion anschrauben, Einbau im Freien.;10,0;m;gaeb;sonstiges/20260724 Elektro_V32.X83
+0020;C-Profilschiene, gelocht, aus nichtrostendem Stahl, an Stahlkonstruktion befestigen, Einbau im Freien.;20,0;m;gaeb;sonstiges/20260724 Elektro_V32.X83
+0030;Bügelschelle für Kabelleiter Spannbereich: 12 - 16 mm;40,0;St;gaeb;sonstiges/20260724 Elektro_V32.X83
+0040;Bügelschelle für Kabelleiter Spannbereich: 22 - 28 mm;100,0;St;gaeb;sonstiges/20260724 Elektro_V32.X83
+0050;Bügelschelle für Kabelleiter Spannbereich: 34 - 40 mm;80,0;St;gaeb;sonstiges/20260724 Elektro_V32.X83
+0060;Elektroinstallationskanal DIN EN 50085-2-1 (VDE 0604-2-1) als Leitungsführungskanal, Außenmaße H/B mind. 40/60 mm, aus PVC-U, auf Stahlkonstruktion.;50,0;m;gaeb;sonstiges/20260724 Elektro_V32.X83
+0070;Elektroinstallationsrohr DIN EN 61386 (VDE 0605), Maße DIN EN 60423, nicht flammenausbreitend, aus Kunststoff, UV-stabilisiert, einwandig, glatt, starr, Außendurchmesser 16 mm, Druckfestigkeit Klasse 1 - sehr leicht (125 N) DIN EN 61386-1 (VDE 0605-1), Klasse Schlagbeanspruchung 4 - schwer DIN EN 61;40,0;m;gaeb;sonstiges/20260724 Elektro_V32.X83
+0080;Elektroinstallationsrohr DIN EN 61386 (VDE 0605), Maße DIN EN 60423, nicht flammenausbreitend, aus Kunststoff, UV-stabilisiert, einwandig, glatt, starr, Außendurchmesser 25 mm, Druckfestigkeit Klasse 1 - sehr leicht (125 N) DIN EN 61386-1 (VDE 0605-1), Klasse Schlagbeanspruchung 4 - schwer DIN EN 61;20,0;m;gaeb;sonstiges/20260724 Elektro_V32.X83
+0090;Elektroinstallationsrohr DIN EN 61386 (VDE 0605), Maße DIN EN 60423, nicht flammenausbreitend, aus Kunststoff, UV-stabilisiert, einwandig, glatt, starr, Außendurchmesser 32 mm, Druckfestigkeit Klasse 1 - sehr leicht (125 N) DIN EN 61386-1 (VDE 0605-1), Klasse Schlagbeanspruchung 4 - schwer DIN EN 61;20,0;m;gaeb;sonstiges/20260724 Elektro_V32.X83
+0100;Elektroinstallationsrohr DIN EN 61386 (VDE 0605), Maße DIN EN 60423, nicht flammenausbreitend, aus Kunststoff, UV-stabilisiert, einwandig, glatt, starr, Außendurchmesser 40 mm, Druckfestigkeit Klasse 1 - sehr leicht (125 N) DIN EN 61386-1 (VDE 0605-1), Klasse Schlagbeanspruchung 4 - schwer DIN EN 61;30,0;m;gaeb;sonstiges/20260724 Elektro_V32.X83
+0010;Wipptaster DIN EN 60669-1 (VDE 0632-1) einpolig, Aus/Wechsel, 10 A, 250 V AC, in Aufputzausführung, mit Beschriftungsfeld, mit Kontrolllampe, Schutzart IP 44 DIN EN 60529 (VDE 0470-1).;1,0;St;gaeb;sonstiges/20260724 Elektro_V32.X83
+0020;Wippschalter DIN EN 60669-1 (VDE 0632-1) einpolig, Aus/Wechsel, 10 A, 250 V AC, in Aufputzausführung, mit Beschriftungsfeld, mit Kontrolllampe, Schutzart IP 44 DIN EN 60529 (VDE 0470-1).;1,0;St;gaeb;sonstiges/20260724 Elektro_V32.X83
+0030;Schutzkontaktsteckdose DIN VDE 0620-1 (VDE 0620-1), 250 V AC, 16 A, mit Klappdeckel, in Aufputzgehäuse, mit Beschriftungsfeld, Schutzart IP 44 DIN EN 60529 (VDE 0470-1).;1,0;St;gaeb;sonstiges/20260724 Elektro_V32.X83
+0040;Schutzkontaktsteckdose DIN VDE 0620-1 (VDE 0620-1), 250 V AC, 16 A, 2-fach, mit Klappdeckel, in Aufputzgehäuse, mit Beschriftungsfeld, Schutzart IP 44 DIN EN 60529 (VDE 0470-1).;8,0;St;gaeb;sonstiges/20260724 Elektro_V32.X83
+0050;CEE-Steckdose DIN EN 60309-2 (VDE 0623-2), mit Klappdeckel, 5-polig, Bemessungsbetriebsspannung 230/400 V AC, 16 A, in Aufputzausführung, mit Beschriftungsfeld.;1,0;St;gaeb;sonstiges/20260724 Elektro_V32.X83
+0060;CEE-Steckdose DIN EN 60309-2 (VDE 0623-2), mit Klappdeckel, 5-polig, Bemessungsbetriebsspannung 230/400 V AC, 32 A, in Aufputzausführung, mit Beschriftungsfeld.;1,0;St;gaeb;sonstiges/20260724 Elektro_V32.X83
+0070;CEE-Steckdose DIN EN 60309-2 (VDE 0623-2), mit Klappdeckel, 5-polig, Bemessungsbetriebsspannung 230/400 V AC, 63 A, in Aufputzausführung, mit Beschriftungsfeld.;1,0;St;gaeb;sonstiges/20260724 Elektro_V32.X83
+0080;Verbindungsdose DIN EN IEC 60670-1 (VDE 0606-1) als Abzweigkasten, aus Kunststoff, UV-stabilisiert, Grundfläche mind. 80/80 mm, Tiefe mind. 37 mm, mit Deckel mit Schraubbefestigung, Schutzart IP 44 DIN EN 60529 (VDE 0470-1), Aufputz, an Stahlkonstruktion.;20,0;St;gaeb;sonstiges/20260724 Elektro_V32.X83
+0090;Anschließen von Kabel/Leitungen;2,0;St;gaeb;sonstiges/20260724 Elektro_V32.X83
+0100;Anschließen von Kabel/Leitungen;10,0;St;gaeb;sonstiges/20260724 Elektro_V32.X83
+0110;Anschließen von Kabel/Leitungen;10,0;St;gaeb;sonstiges/20260724 Elektro_V32.X83
+0120;Anschließen von Kabel/Leitungen;6,0;St;gaeb;sonstiges/20260724 Elektro_V32.X83
+0130;Anschließen von Kabel/Leitungen;40,0;St;gaeb;sonstiges/20260724 Elektro_V32.X83
+0140;Anschließen von Kabel/Leitungen;20,0;St;gaeb;sonstiges/20260724 Elektro_V32.X83
+0010;Kernbohrung, Untergrundfläche senkrecht, aus Stahlbeton, Normalbeton, Bohrdurchmesser über 50 bis 100 mm, Bohrtiefe über 17,5 bis 20 cm, nicht schadstoffbelastet,;4,0;St;gaeb;sonstiges/20260724 Elektro_V32.X83
+0020;Dichtungseinsatz zur Abdichtung von Kabeldurchführungen. Dicht gegen drückendes Wasser. Ausführung zur schonenden Abdichtung von Kunststoffrohre, Kabelschutzrohre und flexible vorisolierte Kunststoffrohre. Einsatz in Betonkernbohrung.;4,0;St;gaeb;sonstiges/20260724 Elektro_V32.X83
+0010;LED-Feuchtraum-Anbauleuchte als;10,0;St;gaeb;sonstiges/20260724 Elektro_V32.X83
+0020;K265/3O IP 65;6,0;St;gaeb;sonstiges/20260724 Elektro_V32.X83
+0030;Montage beigestellte Hausnummerleuchte,;1,0;St;gaeb;sonstiges/20260724 Elektro_V32.X83
+0040;Ortsveränderliche LED-Notleuchte DIN EN 60598-2-22 (VDE 0711-2-22) mit Einzelbatterie, in Bereitschaftsschaltung, Bemessungsbetriebsdauer Hauptlicht mind. 3 h, Gehäuse aus Kunststoff, mit Ladegerät in separater Wandkonsole, Schutzklasse II, Schutzart IP 54 DIN EN 60529 (VDE 0470-1).;1,0;St;gaeb;sonstiges/20260724 Elektro_V32.X83
+0050;Beschriftung Sicherheitsleuchte,;6,0;St;gaeb;sonstiges/20260724 Elektro_V32.X83
+0060;Einweisung und Programmierung,;1,0;Psch;gaeb;sonstiges/20260724 Elektro_V32.X83
+0070;Zielortprogrammierung der Leuchten, Module;1,0;Psch;gaeb;sonstiges/20260724 Elektro_V32.X83
+0080;Erweiterung Liegenschafts-Überwachungsprogramm = Programmierung der Leuchten, Module für Anlagen der Sicherheitsbeleuchtung mit Einzelleuchtenüberwachung im Liegenschafts-Überwachungsprogramm.;1,0;Psch;gaeb;sonstiges/20260724 Elektro_V32.X83
+0090;Prüfbuch der Sicherheitsbeleuchtung als Ringbuchordner;1,0;St;gaeb;sonstiges/20260724 Elektro_V32.X83
+0100;Einweisung der Bediener zur sachgerechten Durchführung sämtlicher Bedienerarbeiten an der Sicherheitsbeleuchtungsanlage, auf Grundlage der Erstinbetriebnahme nach Anforderung, vor Ort.;1,0;St;gaeb;sonstiges/20260724 Elektro_V32.X83
+0010;Multifunktionsgehäuse;1,0;St;gaeb;sonstiges/20260724 Elektro_V32.X83
+0020;Kunststoff-Schaltschrank mit Sichtscheibe;1,0;St;gaeb;sonstiges/20260724 Elektro_V32.X83
+0030;Patchfeld mit Spleißkassette und allem systembedingten Zubehör, LWL, eine Höheneinheit, ausziehbar, Einmodenfaser OS 2, DIN EN 50173-1 (VDE 0800-173-1), mit Steckgesicht SCD-Durchführungskupplungen, Ferrulen aus Phosphor Bronze, Kontakte mit PC, Anzahl Ausbrüche 24 St, Anzahl Kupplungen 12 St,;4,0;St;gaeb;sonstiges/20260724 Elektro_V32.X83
+0040;Steckdosenleiste, 230 V mit Abzweigdose, mit 6 Steckdosen, als 19-Zoll-Bauteil, Ausführung gemäß Einzelbeschreibung.;2,0;St;gaeb;sonstiges/20260724 Elektro_V32.X83
+0050;Kabelführungsring, für Verteiler.;8,0;St;gaeb;sonstiges/20260724 Elektro_V32.X83
+0060;Potentialausgleichsschiene DIN EN 50310 (VDE 0800-2-310), Ausführung gemäß Einzelbeschreibung,;2,0;St;gaeb;sonstiges/20260724 Elektro_V32.X83
+0070;Rangierpanel, waagerecht, eine Höheneinheit, Ausführung gemäß Einzelbeschreibung.;3,0;St;gaeb;sonstiges/20260724 Elektro_V32.X83
+0080;Datenanschlussdose, symmetrisch, Kategorie 6 Index A tiefgestellt DIN EN 50173-1, Link-Klasse E Index A tiefgestellt DIN EN 50173-1, modular, 1 Ports, RJ45-Buchse DIN EN 60603-7-51, in Schneidklemmtechnik, für Hutschienenmontage, Steckrichtung 45 Grad, mit Beschriftungsfeld und Fenster.;8,0;St;gaeb;sonstiges/20260724 Elektro_V32.X83
+0090;Datenanschlussdose, symmetrisch, Kategorie 6 Index A tiefgestellt DIN EN 50173-1 (VDE 0800-173-1), Link-Klasse E Index A tiefgestellt, DIN EN 50173-1 (VDE 0800-173-1), modular, Anzahl Ausbrüche 2 St, 2 Ports, RJ45-Buchse DIN EN 60603-7-51, Schutzart IP 44 DIN EN 60529 (VDE 0470-1), einschl. Gehäuse ;1,0;St;gaeb;sonstiges/20260724 Elektro_V32.X83
+0100;"19"" Rangierverteilerplatte (1 HE) mit Kabelführungsbügel und Potentialausgleichklemme, großflächige Kontaktierungsschelle für Kabelschirm, Erdungsklemmen, Kabelbrücken, mit 24 einzel voll geschirmten RJ 45-Einbaubuchsen, 8-polig, Frontplatte aus AL, einschl. Zubehör, Kategorie 6a/Class EA,";1,0;St;gaeb;sonstiges/20260724 Elektro_V32.X83
+0110;S/FTP-Kabel 4x2xAWG 22/1,;16,0;St;gaeb;sonstiges/20260724 Elektro_V32.X83
+0120;Messen und Nachweis von CAT 6A-Teilstrecken und Steckvorrichtungen gem. EN 50173,als Channel-Link-Messung, Nachweis der gesamten Übertragungsstrecke, Messung von beiden Seiten, Prüfung folgender Parameter mit einem Klasse EA-Meßgerät,;16,0;St;gaeb;sonstiges/20260724 Elektro_V32.X83
+0010;LWL-Universalkabel (Außen-/Innenkabel) als Einmodenfaser, OS 2, DIN EN 50173-1 (VDE 0800-173-1), metallfrei, bewehrt, U-DQ(ZN)BH, 2 x 12 E 9/125, Wellenlänge 1550 nm, Dämpfungskoeffizient 0,25 dB/km, längswasserdicht, in vorh. Rohre/Unterflurkanäle.;800,0;m;gaeb;sonstiges/20260724 Elektro_V32.X83
+0020;Kabelzugschächte öffenen und Schließen;6,0;St;gaeb;sonstiges/20260724 Elektro_V32.X83
+0030;Datenkabel für Außenanwendung DIN EN 50288-4-1 (VDE 0819-4-1), Kategorie 7 DIN EN 50173-1 (VDE 0800-173-1), geschirmt, Trennklasse d DIN EN 50174-2 (VDE 0800-174-2), für PoE, Typ 3, Leitungswiderstand 0,075 Ohm/m und Kabeldurchmesser 0,007 m DIN EN 50174-2 (VDE 0800-174-2), Link-Klasse F, DIN EN 501;150,0;m;gaeb;sonstiges/20260724 Elektro_V32.X83
+0040;Patchkabel RJ45 CAT.6a S-FTP 0,5m;8,0;St;gaeb;sonstiges/20260724 Elektro_V32.X83
+0050;Patchkabel RJ45 CAT.6a S-STP 1,0m;8,0;St;gaeb;sonstiges/20260724 Elektro_V32.X83
+0060;Patchkabel, LWL, Einmodenfaser OS 2, DIN EN 50173-1 (VDE 0800-173-1), 2 E 9/125,;16,0;St;gaeb;sonstiges/20260724 Elektro_V32.X83
+0010;Fangstange D40 Gesamtlänge 4500mm Al;6,0;St;gaeb;sonstiges/20260724 Elektro_V32.X83
+0020;Klemme, DIN EN IEC 62561-1 (VDE 0185-561-1), Klasse N für normale Belastung, für Flach- und Profilstahl, aus nichtrostendem Stahl, Werkstoff-Nr 1.4571, für Rd 10, Klemmbereich für Flachteile bis 20 mm.;12,0;St;gaeb;sonstiges/20260724 Elektro_V32.X83
+0030;Überbrückungsbauteil, DIN EN IEC 62561-1 (VDE 0185-561-1), Klasse N für normale Belastung, als Seil aus feuerverzinktem Stahl, Länge bis 200 mm, mit Kabelschuhen und Gegenplatten.;10,0;St;gaeb;sonstiges/20260724 Elektro_V32.X83
+0040;Klemme, DIN EN IEC 62561-1 (VDE 0185-561-1), Klasse N für normale Belastung, für Bleche, aus feuerverzinktem Stahl, für Rd 7 bis 10 und 16, mit Treibschrauben, Gegenplatte und Einlage aus Aluminium/Kupfer.;2,0;St;gaeb;sonstiges/20260724 Elektro_V32.X83
+0050;Ableitung DIN EN IEC 62561-2 (VDE 0185-561-2), aus Aluminium, Rd 10, an Pfeilern, sichtbar auf der fertigen Oberfläche.;28,0;m;gaeb;sonstiges/20260724 Elektro_V32.X83
+0060;Anschlussklemmen für Stahlträger senkrecht mit Klemmbock NIRO;60,0;St;gaeb;sonstiges/20260724 Elektro_V32.X83
+0070;Leitungshalter aus Kunststoff, mit Anschlussgewinde M 8, Länge bis 60 mm, für Rundleiter.;6,0;St;gaeb;sonstiges/20260724 Elektro_V32.X83
+0080;Erdeinführung mit Stange DIN EN IEC 62561-2 (VDE 0185-561-2) einschl. Anschluss an die Erdungseinrichtung, aus nichtrostendem Stahl, Werkstoff-Nr 1.4571, einschl. Verbindungs-/Trennbauteile, Länge 1500 mm.;6,0;St;gaeb;sonstiges/20260724 Elektro_V32.X83
+0090;Trennstück DIN EN IEC 62561-1 (VDE 0185-561-1), Klasse N für normale Belastung, aus nichtrostendem Stahl, Werkstoff-Nr 1.4301, Klemmbereich Rd 8-10/Rd 16.;6,0;St;gaeb;sonstiges/20260724 Elektro_V32.X83
+0100;Nummernschild mit dauerhafter witterungsbeständiger Beschriftung.;8,0;St;gaeb;sonstiges/20260724 Elektro_V32.X83
+0110;Korrosionsschutz an den Erdeinführungen, 30 cm über und 30 cm unter Oberfläche Erdreich, durch Beschichtung mit Bitumen.;6,0;St;gaeb;sonstiges/20260724 Elektro_V32.X83
+0120;Erdung als Ringerder, DIN EN IEC 62561-2 (VDE 0185-561-2), aus nichtrostendem Stahl, Rd 10, Werkstoff-Nr 1.4571, in vorh. Graben einlegen, Tiefe mind. 0,8 m.;80,0;m;gaeb;sonstiges/20260724 Elektro_V32.X83
+0130;Verbinder, DIN EN IEC 62561-1 (VDE 0185-561-1), Klasse N für normale Belastung, für Kreuzverbindungen, aus nichtrostendem Stahl, Werkstoff-Nr 1.4571, für Rd 10 mit Rd 10.;30,0;St;gaeb;sonstiges/20260724 Elektro_V32.X83
+0140;Erdungsrohrschelle DIN EN 62561-1 (VDE 0185-561-1), Klasse N für normale Belastung, aus nichtrostendem Stahl, für Rohrnennweite über 50 bis 100 mm, für Leitungsanschlüsse Rd 7 bis 10 oder Fl 40.;2,0;St;gaeb;sonstiges/20260724 Elektro_V32.X83
+0150;Erdungsrohrschelle DIN EN 62561-1 (VDE 0185-561-1), Klasse N für normale Belastung, aus nichtrostendem Stahl, für Rohrnennweite über 100 bis 150 mm, für Leitungsanschlüsse Rd 7 bis 10 oder Fl 40.;2,0;St;gaeb;sonstiges/20260724 Elektro_V32.X83
+0010;Potentialausgleichsschiene Industrie für den Hauptpotentialausgleich nach DIN VDE 0100 Teil 410/540 und den Blitzschutz-Potentialausgleich nach EN 62305.;1,0;St;gaeb;sonstiges/20260724 Elektro_V32.X83
+0020;Potentialausgleichsschiene Industrie für den Hauptpotentialausgleich nach DIN VDE 0100 Teil 410/540 und den Blitzschutz-Potentialausgleich nach EN 62305.;1,0;St;gaeb;sonstiges/20260724 Elektro_V32.X83
+0030;Kabel DIN VDE 0276-603 (VDE 0276-603) NYY-J 1 x 6 RE, Cu-Zahl 58.;40,0;m;gaeb;sonstiges/20260724 Elektro_V32.X83
+0040;Kabel DIN VDE 0276-603 (VDE 0276-603) NYY-J 1 x 16 RE, Cu-Zahl 154.;50,0;m;gaeb;sonstiges/20260724 Elektro_V32.X83
+0050;Kabel DIN VDE 0276-603 (VDE 0276-603) NYY-J 1 x 50 RM, Cu-Zahl 480.;15,0;m;gaeb;sonstiges/20260724 Elektro_V32.X83
+0060;Kabel DIN VDE 0276-603 (VDE 0276-603) NYY-J 1 x 95 RM, Cu-Zahl 912.;25,0;m;gaeb;sonstiges/20260724 Elektro_V32.X83
+0070;Anschlußarbeiten Erdungsanlage/Potentialausgleich,;20,0;St;gaeb;sonstiges/20260724 Elektro_V32.X83
+0080;Potentialausgleichsleitungen;20,0;St;gaeb;sonstiges/20260724 Elektro_V32.X83
+0090;Potentialausgleichsleitungen;20,0;St;gaeb;sonstiges/20260724 Elektro_V32.X83
+0100;Erdungsbandrohrschelle aus nichtrostendem Stahl, mit Anschlussmöglichkeit für einen Leiter 2,5 mm2 bis 2 Leiter 16 mm2, für Rohrdurchmesser bis 100 mm.;20,0;St;gaeb;sonstiges/20260724 Elektro_V32.X83
+0110;Messen und Prüfen der Erdungsanlage / des Potentialausgleichs nach DIN VDE 0100 Teil 610,;1,0;St;gaeb;sonstiges/20260724 Elektro_V32.X83
+0010;Messbericht/Dokumentation DIN 18014 und DIN EN IEC 62305-3 (VDE 0185-305-3).;1,0;St;gaeb;sonstiges/20260724 Elektro_V32.X83
+0020;Dokumentation wie vor, jedoch;2,0;St;gaeb;sonstiges/20260724 Elektro_V32.X83
+0010;Komplette Inbetriebnahme und Einregulierung der im vorliegenden LV enthaltenen technischen;1,0;St;gaeb;sonstiges/20260724 Elektro_V32.X83
+0020;Einweisung;1,0;St;gaeb;sonstiges/20260724 Elektro_V32.X83
+0030;Dokumentation;1,0;St;gaeb;sonstiges/20260724 Elektro_V32.X83
+0040;Dokumentation wie vor, jedoch;2,0;St;gaeb;sonstiges/20260724 Elektro_V32.X83
+0010;Stundenlohnarbeiten durch Facharbeiter/-in;25,0;h;gaeb;sonstiges/20260724 Elektro_V32.X83
+0020;Stundenlohnarbeiten durch Obermonteur/-in;25,0;h;gaeb;sonstiges/20260724 Elektro_V32.X83
+0030;Stundenlohnarbeiten durch Projektleiter/-in;10,0;h;gaeb;sonstiges/20260724 Elektro_V32.X83
+0010;"Wartung aller in diesem LV enthaltenen Anlagenteile gemäß VDMA 24186 ""Wartung von technischen Anlagen und Ausrüstungen in Gebäuden""";1,0;St;gaeb;sonstiges/20260724 Elektro_V32.X83
+0020;Wartung;2,0;St;gaeb;sonstiges/20260724 Elektro_V32.X83
+01010010;Koordinierungsaufwand Schaltungen 11kV-Anlagen;1,0;psch;gaeb-flat;sonstiges/20260724 Elektro.D83
+01010020;Demontage NH00 Abgang in Feld N3;2,0;St;gaeb-flat;sonstiges/20260724 Elektro.D83
+01010030;Demontage Blindabdeckungen Gr. 00 in Feld N3;2,0;St;gaeb-flat;sonstiges/20260724 Elektro.D83
+01010040;Umsetzen Abgang in Feld N3;1,0;St;gaeb-flat;sonstiges/20260724 Elektro.D83
+01010050;Demontage NH3 Abgang in Feld N2;1,0;St;gaeb-flat;sonstiges/20260724 Elektro.D83
+01010060;Nachrüsten NH3 Abgang mit Stromwandler 600/5A;2,0;St;gaeb-flat;sonstiges/20260724 Elektro.D83
+01010070;Verlängern der Wandlerleitungen von den 2x3 Stromwandlern;6,0;St;gaeb-flat;sonstiges/20260724 Elektro.D83
+01010080;6-Kanal-Netzanalysator UMG 96RM-E für Betriebsstrom und RCM, BACnet IP;2,0;St;gaeb-flat;sonstiges/20260724 Elektro.D83
+01010090;MSS Spannungspfadabsicherung bis 10 A;2,0;St;gaeb-flat;sonstiges/20260724 Elektro.D83
+01010100;Schaltschrankausschnitt;2,0;St;gaeb-flat;sonstiges/20260724 Elektro.D83
+01010110;Einbinden des Multifunktionsmeßgerätes in BACNet;2,0;St;gaeb-flat;sonstiges/20260724 Elektro.D83
+01010120;GA-Klemmleiste;2,0;St;gaeb-flat;sonstiges/20260724 Elektro.D83
+01010130;Anpassung der Schaltschrankdokumentation;1,0;St;gaeb-flat;sonstiges/20260724 Elektro.D83
+01010140;Übersichtsschaltplan im Geb. 72;1,0;St;gaeb-flat;sonstiges/20260724 Elektro.D83
+02010010;Kabel NYCWY 4x185SM/95;320,0;m;gaeb-flat;sonstiges/20260724 Elektro.D83
+02010020;Kabel NYCWY 4x150SM/70;10,0;m;gaeb-flat;sonstiges/20260724 Elektro.D83
+02010030;Verbindungsmuffe 1Kabel NYCWY 4x150SM/70 1Kabel NYCWY 4x150RM/70 Gebäude;1,0;St;gaeb-flat;sonstiges/20260724 Elektro.D83
+02010040;Erschwerniszulage für Verb.-Muffe unter DoBo;1,0;St;gaeb-flat;sonstiges/20260724 Elektro.D83
+02010050;Kabel NYY-J 5x10RE;50,0;m;gaeb-flat;sonstiges/20260724 Elektro.D83
+02010060;Kabel NYY-J 5x6RE;25,0;m;gaeb-flat;sonstiges/20260724 Elektro.D83
+02010070;Kabel NYY-J 5x4RE;25,0;m;gaeb-flat;sonstiges/20260724 Elektro.D83
+02010080;Kabel NYY-J 5x2,5RE;25,0;m;gaeb-flat;sonstiges/20260724 Elektro.D83
+02010090;Kabel NYY-J 3x2,5RE;200,0;m;gaeb-flat;sonstiges/20260724 Elektro.D83
+02010100;Kabel NYY-J 3x1,5RE;40,0;m;gaeb-flat;sonstiges/20260724 Elektro.D83
+02010110;Installationskabel symmetrisch J-Y(St)Y 2x2x0,8 Bd;50,0;m;gaeb-flat;sonstiges/20260724 Elektro.D83
+02020010;Steigleiter gelocht Stahl niro H 60mm B 200mm an Stahlkonstruktion;10,0;m;gaeb-flat;sonstiges/20260724 Elektro.D83
+02020020;C-Profilsch. gelocht Stahl niro an Stahlkonstruktion;20,0;m;gaeb-flat;sonstiges/20260724 Elektro.D83
+02020030;Bügelschelle für Kabelleiter Spannbereich: 12 - 16 mm Edelst., mit Wannen;40,0;St;gaeb-flat;sonstiges/20260724 Elektro.D83
+02020040;Bügelschelle für Kabelleiter Spannbereich: 22 - 28 mm Edelst.  mit Wannen;100,0;St;gaeb-flat;sonstiges/20260724 Elektro.D83
+02020050;Bügelschelle für Kabelleiter Spannbereich: 34 - 40 mm Edelst. mit Wannen;80,0;St;gaeb-flat;sonstiges/20260724 Elektro.D83
+02020060;Elektroinstallationskanal Leitungsführung H/B 40/60mm PVC-U Stahlkonstruktion;50,0;m;gaeb-flat;sonstiges/20260724 Elektro.D83
+02020070;Elektroinstallationsrohr Kunststoff AD 16mm Stahlkonstruktion Trägerklammern;40,0;m;gaeb-flat;sonstiges/20260724 Elektro.D83
+02020080;Elektroinstallationsrohr Kunststoff AD 25mm Stahlkonstruktion Trägerklammern;20,0;m;gaeb-flat;sonstiges/20260724 Elektro.D83
+02020090;Elektroinstallationsrohr Kunststoff AD 32mm Stahlkonstruktion Trägerklammern;20,0;m;gaeb-flat;sonstiges/20260724 Elektro.D83
+02020100;Elektroinstallationsrohr Kunststoff AD 40mm Stahlkonstruktion Trägerklammern;30,0;m;gaeb-flat;sonstiges/20260724 Elektro.D83
+02030010;Wipptaster 1-polig Aus/Wechsel 10A 250V AP-Ausführung Beschriftungsfeld Kontrolllampe IP44;1,0;St;gaeb-flat;sonstiges/20260724 Elektro.D83
+02030020;Wippschalter einpolig Aus/Wechsel 10A 250V AP Beschriftungsfeld Kontrolllampe IP44;1,0;St;gaeb-flat;sonstiges/20260724 Elektro.D83
+02030030;Schutzkontaktsteckdose 250V 16A Klappdeckel AP Beschriftungsfeld IP44;1,0;St;gaeb-flat;sonstiges/20260724 Elektro.D83
+02030040;Schutzkontaktsteckdose 250V 16A 2fach Klappdeckel AP Beschriftungsfeld IP44;8,0;St;gaeb-flat;sonstiges/20260724 Elektro.D83
+02030050;CEE-Steckdose Klappdeckel 5-polig 230/400VAC 16A AP-Ausführung Beschriftungsfeld;1,0;St;gaeb-flat;sonstiges/20260724 Elektro.D83
+02030060;CEE-Steckdose Klappdeckel 5polig 230/400VAC 32A AP Beschriftungsfeld;1,0;St;gaeb-flat;sonstiges/20260724 Elektro.D83
+02030070;CEE-Steckdose Klappdeckel 5polig 230/400VAC 63A AP Beschriftungsfeld;1,0;St;gaeb-flat;sonstiges/20260724 Elektro.D83
+02030080;Abzweigkasten Kunststoff 80/80mm T 37mm IP44 AP Stahlkonstruktion;20,0;St;gaeb-flat;sonstiges/20260724 Elektro.D83
+02030090;Anschließen 5 x 120-185mm²;2,0;St;gaeb-flat;sonstiges/20260724 Elektro.D83
+02030100;Anschließen 5 x 35-95mm²;10,0;St;gaeb-flat;sonstiges/20260724 Elektro.D83
+02030110;Anschließen 5 x 16-35mm²;10,0;St;gaeb-flat;sonstiges/20260724 Elektro.D83
+02030120;Anschließen 5 x 4-16mm²;6,0;St;gaeb-flat;sonstiges/20260724 Elektro.D83
+02030130;Anschließen 5 x 2,5-4mm²;40,0;St;gaeb-flat;sonstiges/20260724 Elektro.D83
+02030140;Anschließen bis 5 x 1,5 und bis 8x2x0,8;20,0;St;gaeb-flat;sonstiges/20260724 Elektro.D83
+02040010;Kernbohrung Stahlbeton Durchm. 50-100mm T 17,5-20cm nicht schadstoffbelastet Geräteeinsatz mgl. Stoffe;4,0;St;gaeb-flat;sonstiges/20260724 Elektro.D83
+02040020;Dichtungseinsatz Kabeldurchführung 100/58;4,0;St;gaeb-flat;sonstiges/20260724 Elektro.D83
+03010010;Feuchtraum-Anbauleuchte, 2540 lm;10,0;St;gaeb-flat;sonstiges/20260724 Elektro.D83
+03010020;LED Sicherheitsleuchte Aussen-Anbau, IP 65;6,0;St;gaeb-flat;sonstiges/20260724 Elektro.D83
+03010030;Montage beigestellte Hausnummerleuchte;1,0;St;gaeb-flat;sonstiges/20260724 Elektro.D83
+03010040;Ortsveränderliche LED-Notleuchte Bereitschaftsschaltung Ladegerät separat IP54;1,0;St;gaeb-flat;sonstiges/20260724 Elektro.D83
+03010050;Beschriftung Notleuchte;6,0;St;gaeb-flat;sonstiges/20260724 Elektro.D83
+03010060;Einweisung und Programmierung;1,0;Psch;gaeb-flat;sonstiges/20260724 Elektro.D83
+03010070;Zielortprogrammierung der Leuchten, Module;1,0;Psch;gaeb-flat;sonstiges/20260724 Elektro.D83
+03010080;Erweiterung Liegenschafts-Überwachungsprogramm /  Programmierung der Leuchten, Module;1,0;Psch;gaeb-flat;sonstiges/20260724 Elektro.D83
+03010090;Prüfbuch Sicherheitsbel, Ringbuchordner;1,0;St;gaeb-flat;sonstiges/20260724 Elektro.D83
+03010100;Einweisung;1,0;St;gaeb-flat;sonstiges/20260724 Elektro.D83
+04010010;Multifunktionsgehäuse;1,0;St;gaeb-flat;sonstiges/20260724 Elektro.D83
+04010020;Kunststoff-Schaltschrank mit Sichtscheibe;1,0;St;gaeb-flat;sonstiges/20260724 Elektro.D83
+04010030;Patchfeld Spleißkassette LWL 1HE ausziehbar OS 2 SCD 24Ausbrüche 12Kupplungen AnzPigtails 24 St;4,0;St;gaeb-flat;sonstiges/20260724 Elektro.D83
+04010040;Steckdosenleiste 230V Abzweigd. 6Steckdosen;2,0;St;gaeb-flat;sonstiges/20260724 Elektro.D83
+04010050;Kabelführungsring Verteiler;8,0;St;gaeb-flat;sonstiges/20260724 Elektro.D83
+04010060;Potentialausgleichssch.;2,0;St;gaeb-flat;sonstiges/20260724 Elektro.D83
+04010070;Rangierpanel 1HE;3,0;St;gaeb-flat;sonstiges/20260724 Elektro.D83
+04010080;Datenanschlussdose symm. Kat.6A 1Port Hutschiene;8,0;St;gaeb-flat;sonstiges/20260724 Elektro.D83
+04010090;Datenanschlussdose symm. Kat.6A 2Ausbrüche 2Ports IP44 AP;1,0;St;gaeb-flat;sonstiges/20260724 Elektro.D83
+04010100;CAT 6-Rangierverteiler;1,0;St;gaeb-flat;sonstiges/20260724 Elektro.D83
+04010110;Auflegen S/FTP;16,0;St;gaeb-flat;sonstiges/20260724 Elektro.D83
+04010120;Messen CAT 6A;16,0;St;gaeb-flat;sonstiges/20260724 Elektro.D83
+04020010;LWL-Universalkabel Einmodenfaser U-DQ(ZN)BH 2x12E9/125 vorh.Rohr/Unterflurkanal;800,0;m;gaeb-flat;sonstiges/20260724 Elektro.D83
+04020020;Kabelzugschächte öffenen und Schließen;6,0;St;gaeb-flat;sonstiges/20260724 Elektro.D83
+04020030;Datenkabel außen Kat.7 geschirmt 4x2xAWG22 in Schutzrohr;150,0;m;gaeb-flat;sonstiges/20260724 Elektro.D83
+04020040;Patchkabel RJ45 CAT.6a S-FTP 0,5m;8,0;St;gaeb-flat;sonstiges/20260724 Elektro.D83
+04020050;Patchkabel RJ45 CAT.6a S-STP 1,0m;8,0;St;gaeb-flat;sonstiges/20260724 Elektro.D83
+04020060;Patchkabel LWL L 2 m SCD;16,0;St;gaeb-flat;sonstiges/20260724 Elektro.D83
+05010010;Fangstange Al 4500mm an Stahlkonst. mit Halter.;6,0;St;gaeb-flat;sonstiges/20260724 Elektro.D83
+05010020;Klemme Kl.N Flach-Profilstahl Stahl / niro Rd10 bis 20mm;12,0;St;gaeb-flat;sonstiges/20260724 Elektro.D83
+05010030;Überbrückungsbauteil Kl.N Seil Stahl verz L bis 200mm;10,0;St;gaeb-flat;sonstiges/20260724 Elektro.D83
+05010040;Klemme Kl.N Blech Stahl verz Rd7-10 16;2,0;St;gaeb-flat;sonstiges/20260724 Elektro.D83
+05010050;Abltg Al Rd10 Pfeiler sichtbar;28,0;m;gaeb-flat;sonstiges/20260724 Elektro.D83
+05010060;Anschlussklemme für Stahlträger senkrecht mit Klemmbock V2A;60,0;St;gaeb-flat;sonstiges/20260724 Elektro.D83
+05010070;Leitungshalter Kunststoff Anschlussgewinde M8 L bis 60mm Rundleiter;6,0;St;gaeb-flat;sonstiges/20260724 Elektro.D83
+05010080;Erdeinführung Stahl niro L 1500mm;6,0;St;gaeb-flat;sonstiges/20260724 Elektro.D83
+05010090;Trennstück Kl.N Stahl niro Rd8-10/Rd16;6,0;St;gaeb-flat;sonstiges/20260724 Elektro.D83
+05010100;Nummernschild;8,0;St;gaeb-flat;sonstiges/20260724 Elektro.D83
+05010110;Korrosionsschutz Erdeinführung bit.Besch;6,0;St;gaeb-flat;sonstiges/20260724 Elektro.D83
+05010120;Erdung Ringerder Stahl niro Rd10;80,0;m;gaeb-flat;sonstiges/20260724 Elektro.D83
+05010130;Verbinder Kl.N Kreuzverbindung Stahl niro;30,0;St;gaeb-flat;sonstiges/20260724 Elektro.D83
+05010140;Erdungsrohrschelle Kl.N Stahl verz NW 50-100mm Ltg-Anschl. Rd7-10/Fl40;2,0;St;gaeb-flat;sonstiges/20260724 Elektro.D83
+05010150;Erdungsrohrschelle Kl.N Stahl verz NW 100-150mm Ltg-Anschl. Rd7-10/Fl40;2,0;St;gaeb-flat;sonstiges/20260724 Elektro.D83
+05020010;Potentialausgleichsschiene Industrie 12 Anschlüsse mit Isolatoren NIRO, 505 mm;1,0;St;gaeb-flat;sonstiges/20260724 Elektro.D83
+05020020;Potentialausgleichsschiene Industrie 8 Anschl. mit Isol. NIRO, 365 mm;1,0;St;gaeb-flat;sonstiges/20260724 Elektro.D83
+05020030;Kabel NYY-J 1x6RE;40,0;m;gaeb-flat;sonstiges/20260724 Elektro.D83
+05020040;Kabel NYY-J 1x16RE;50,0;m;gaeb-flat;sonstiges/20260724 Elektro.D83
+05020050;Kabel NYY-J 1x50RM;15,0;m;gaeb-flat;sonstiges/20260724 Elektro.D83
+05020060;Kabel NYY-J 1x95RM;25,0;m;gaeb-flat;sonstiges/20260724 Elektro.D83
+05020070;Anschlußarbeiten vorh. Geräte;20,0;St;gaeb-flat;sonstiges/20260724 Elektro.D83
+05020080;Potentialausgleichsleitung NYY-J 1x6, konfektioniert;20,0;St;gaeb-flat;sonstiges/20260724 Elektro.D83
+05020090;Potentialausgleichsleitung NYY-J 1x16, konfektioniert;20,0;St;gaeb-flat;sonstiges/20260724 Elektro.D83
+05020100;Erdungsbandrohrschelle Stahl niro 1x2,5mm2-2x16mm2 Durchm. bis 100mm;20,0;St;gaeb-flat;sonstiges/20260724 Elektro.D83
+05020110;Messen und Prüfen PA, 50 Messungen;1,0;St;gaeb-flat;sonstiges/20260724 Elektro.D83
+05030010;Dokumentation Messbericht;1,0;St;gaeb-flat;sonstiges/20260724 Elektro.D83
+05030020;Kopie Betriebsunterlagen;2,0;St;gaeb-flat;sonstiges/20260724 Elektro.D83
+06010010;Inbetriebnahme;1,0;St;gaeb-flat;sonstiges/20260724 Elektro.D83
+06010020;Einweisung Nutzer;1,0;St;gaeb-flat;sonstiges/20260724 Elektro.D83
+06010030;Betriebsunterlage 1.Ausfertigung;1,0;St;gaeb-flat;sonstiges/20260724 Elektro.D83
+06010040;Kopie Betriebsunterlagen;2,0;St;gaeb-flat;sonstiges/20260724 Elektro.D83
+06020010;Facharbeiter/-in sämtliche Kosten/Zuschläge;25,0;h;gaeb-flat;sonstiges/20260724 Elektro.D83
+06020020;Obermonteur/-in sämtliche Kosten/Zuschläge;25,0;h;gaeb-flat;sonstiges/20260724 Elektro.D83
+06020030;Projektleiter/-in sämtliche Kosten/Zuschläge;10,0;h;gaeb-flat;sonstiges/20260724 Elektro.D83
+07010010;Wartung 2 Jahre;1,0;St;gaeb-flat;sonstiges/20260724 Elektro.D83
+07010020;Wartung Folgejahr;2,0;St;gaeb-flat;sonstiges/20260724 Elektro.D83

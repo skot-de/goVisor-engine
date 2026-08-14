@@ -1,0 +1,763 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+1;Einholung der Schachtscheine der im Baubereich bekannten Medientr;1,0;psch;gaeb;2024-19-24-19-35.X83
+2;Der Auftragnehmer hat vor Beginn aller Arbeiten eine;1,0;Psch;gaeb;2024-19-24-19-35.X83
+3;Die vorhandene Beschilderung der Verkehrsanlagen im Baufeld ist vor Besch;1,0;psch;gaeb;2024-19-24-19-35.X83
+4;Sichern von Versorgungsmasten, Strassenlaternen, Schaltschr;3,0;St;gaeb;2024-19-24-19-35.X83
+5;Sicherung von Grenzsteinen;5,0;St;gaeb;2024-19-24-19-35.X83
+6;Tempor;8,0;St;gaeb;2024-19-24-19-35.X83
+7;Tempor;10,0;St;gaeb;2024-19-24-19-35.X83
+8;Vorankündigung gemäß Baustellenverordnung erstellen und;1,0;Psch;gaeb;2024-19-24-19-35.X83
+9;Sicherheits- und Gesundheitsschutzkoordinator während;1,0;Psch;gaeb;2024-19-24-19-35.X83
+10;Sicherheits- und Gesundheitsschutzplan (SiGe-Plan) nach;1,0;Psch;gaeb;2024-19-24-19-35.X83
+11;Probenahme und Aufbereitung zur Durchf;2,0;St;gaeb;2024-19-24-19-35.X83
+12;Probenahme und Aufbereitung zur Durchf;2,0;St;gaeb;2024-19-24-19-35.X83
+13;Durchf;4,0;St;gaeb;2024-19-24-19-35.X83
+14;Eignungspr;2,0;St;gaeb;2024-19-24-19-35.X83
+15;Plattendruckversuch gemae;4,0;St;gaeb;2024-19-24-19-35.X83
+16;Bauvorarbeiter (Berufsgruppe II);1,0;h;gaeb;2024-19-24-19-35.X83
+17;Baufacharbeiter (Berufsgruppe V);1,0;h;gaeb;2024-19-24-19-35.X83
+18;Spezialbaufacharbeiter (Berufsgruppe III);1,0;h;gaeb;2024-19-24-19-35.X83
+19;Bagger, 0,75 bis 1,50 m;1,0;h;gaeb;2024-19-24-19-35.X83
+20;Transporter;1,0;h;gaeb;2024-19-24-19-35.X83
+21;Hauptachse der Trinkwasserleitung nach Zeichnung und;1,0;Psch;gaeb;2024-19-24-19-35.X83
+22;Die digitalen Bestandsdaten sind auf einem;1,0;Psch;gaeb;2024-19-24-19-35.X83
+23;Erstellen einer Dokumentation zum kompletten Bauvorhaben in;1,0;psch;gaeb;2024-19-24-19-35.X83
+1;Geräte, Werkzeuge und sonstige Betriebsmittel, die zur;1,0;Psch;gaeb;2024-19-24-19-35.X83
+2;Baustelle von allen Geräten, Anlagen, Einrichtungen und;1,0;Psch;gaeb;2024-19-24-19-35.X83
+3;Baustelleneinrichtung f;1,0;Psch;gaeb;2024-19-24-19-35.X83
+4;Anwohner- bzw. Anliegerinformationen 7 Tage vor Baubeginn oder;1,0;psch;gaeb;2024-19-24-19-35.X83
+5;W;1,0;psch;gaeb;2024-19-24-19-35.X83
+6;Baustellensicherung;1,0;Psch;gaeb;2024-19-24-19-35.X83
+7;Kontrolle der Arbeitsstellensicherung gem. ZTV-SA;60,0;d;gaeb;2024-19-24-19-35.X83
+8;Verkehrssicherung längerer Dauer einschließlich Ver-;1,0;Psch;gaeb;2024-19-24-19-35.X83
+9;Verkehrssicherung längerer Dauer vorhalten, warten, in-;60,0;d;gaeb;2024-19-24-19-35.X83
+10;Verkehrssicherung an Arbeitsstellen längerer Dauer ab-;1,0;Psch;gaeb;2024-19-24-19-35.X83
+11;Verkehrssicherung längerer Dauer einschließlich Ver-;1,0;Psch;gaeb;2024-19-24-19-35.X83
+12;Verkehrssicherung längerer Dauer vorhalten, warten, in-;60,0;d;gaeb;2024-19-24-19-35.X83
+13;Verkehrssicherung an Arbeitsstellen längerer Dauer ab-;1,0;Psch;gaeb;2024-19-24-19-35.X83
+14;Absperrgerät oder Warneinrichtung aufstellen und besei-;4,0;St;gaeb;2024-19-24-19-35.X83
+15;Absperrgerät oder Warneinrichtung aufstellen und besei-;20,0;St;gaeb;2024-19-24-19-35.X83
+16;Station;1,0;Psch;gaeb;2024-19-24-19-35.X83
+17;Bauzaun nach Unterlagen des AG einschl. der erforderli-;70,0;m;gaeb;2024-19-24-19-35.X83
+18;Bauzaun innerhalb der Baustelle umsetzen. Nicht wieder-;20,0;m;gaeb;2024-19-24-19-35.X83
+1;Oberboden (Gr;40,0;m²;gaeb;2024-19-24-19-35.X83
+2;Andeckung von Oberboden im Bereich privater Grundst;40,0;m²;gaeb;2024-19-24-19-35.X83
+3;Feinplanie f;40,0;m2;gaeb;2024-19-24-19-35.X83
+4;Rasenansaat mit Regelsaatgutmischung;40,0;m2;gaeb;2024-19-24-19-35.X83
+5;Graben für Sickerleitungen, Druckleitungen, Kabel,;15,0;m;gaeb;2024-19-24-19-35.X83
+6;Boden in Leitungszone (obere und untere Bettung, Seitenverf;15,0;m;gaeb;2024-19-24-19-35.X83
+7;Baustoff nach Unterlagen des AG liefern, in Leitungs-;15,0;m;gaeb;2024-19-24-19-35.X83
+8;Aushub der Baugruben f;5,0;m³;gaeb;2024-19-24-19-35.X83
+9;Suchschlitze zur Feststellung der Lage von Kabeln, Leitungen und dgl. nach Angabe des AG bzw. nach vorhandenen Schachtscheinen in Handschachtung bis 1,25 m Tiefe in B;2,0;St;gaeb;2024-19-24-19-35.X83
+10;Boden zur Herstellung eines Kopflochs/ Einstich- und Montagegrube f;82,0;m³;gaeb;2024-19-24-19-35.X83
+11;Boden zur Herstellung eines Kopflochs/ Einstich- und Montagegrube f;11,0;m³;gaeb;2024-19-24-19-35.X83
+12;Boden zur Herstellung einer Baugrube f;15,0;m³;gaeb;2024-19-24-19-35.X83
+13;L;95,0;m;gaeb;2024-19-24-19-35.X83
+14;Auffangen der Bohrsuspension und fachgerechte Entsorgung als Komplettleistung.;1,0;psch;gaeb;2024-19-24-19-35.X83
+15;Hinterf;15,0;m³;gaeb;2024-19-24-19-35.X83
+16;Rohrbettung und - ummantelung mit vom AN zu liefernden Stoffen bis 30cm;11,0;m³;gaeb;2024-19-24-19-35.X83
+17;Aushub der Baugruben f;5,0;m³;gaeb;2024-19-24-19-35.X83
+18;Boden bzw. Fels aus Abtragsbereichen lösen, laden und;3,0;m3;gaeb;2024-19-24-19-35.X83
+19;Geeigneten Baustoff liefern, profilgerecht einbauen und;3,0;m3;gaeb;2024-19-24-19-35.X83
+20;Ver- und Entsorgungsleitungen parallel verlaufend freilegen und sichern;5,0;m;gaeb;2024-19-24-19-35.X83
+21;Ver- und Entsorgungsleitungen quer zum Rohrgraben verlaufend freilegen und sichern - Einzelleitungen;10,0;St;gaeb;2024-19-24-19-35.X83
+22;Versorgungsleitungen quer zum Rohrgraben verlaufend freilegen und sichern - Kabelb;1,0;St;gaeb;2024-19-24-19-35.X83
+23;"Beton C16/20 im Grabenquerschnitt herstellen zur Widerlagerausbildung; Dicke i.M. ca. 0,30- 0,50m; einschlie";1,0;m³;gaeb;2024-19-24-19-35.X83
+24;Rohrgrabenverbau durch Einschalen der Grabenw;45,0;m²;gaeb;2024-19-24-19-35.X83
+25;Ausf;1,0;psch;gaeb;2024-19-24-19-35.X83
+26;Baustelle f;1,0;psch;gaeb;2024-19-24-19-35.X83
+27;Vermessungsarbeiten f;1,0;psch;gaeb;2024-19-24-19-35.X83
+28;Baugrubenverbau als Tr;160,0;m²;gaeb;2024-19-24-19-35.X83
+29;Zulage f;2,0;St;gaeb;2024-19-24-19-35.X83
+30;Zulage f;2,0;St;gaeb;2024-19-24-19-35.X83
+31;Gel;40,0;m;gaeb;2024-19-24-19-35.X83
+32;Ausbau der eingebauten Holzausfachung NH S10 C24,;160,0;m²;gaeb;2024-19-24-19-35.X83
+33;R;20,0;St;gaeb;2024-19-24-19-35.X83
+34;Aussteifung Baugrubenverbau der Baugruben;25,0;m;gaeb;2024-19-24-19-35.X83
+35;Aussteifung Baugrubenverbau der Baugruben;8,0;St;gaeb;2024-19-24-19-35.X83
+36;Trinkwasserleitung aus PE- HD Rohr (PE 100-RC) da 140 x 8,3 nach DIN EN 12201 Farbe k;15,0;m;gaeb;2024-19-24-19-35.X83
+37;Trinkwasserleitung aus PE- HD Rohr (PE 100-RC) da 140 x 8,3 nach DIN EN 12201 Farbe k;95,0;m;gaeb;2024-19-24-19-35.X83
+38;Trinkwasserleitung aus PE- HD Rohr (PE 100-RC) da 225 x 13,4 nach DIN EN 12201 Farbe k;95,0;m;gaeb;2024-19-24-19-35.X83
+39;Pr;1,0;Psch;gaeb;2024-19-24-19-35.X83
+40;Elastomere Abschlussmanschette zum schmutz- und feuchtigkeitsdichten Abschluss  des Raumes zwischen Mantelrohr und Medienrohr liefern und gem;2,0;St;gaeb;2024-19-24-19-35.X83
+41;Im Abstand von 2,5m sind;36,0;St;gaeb;2024-19-24-19-35.X83
+42;Rohrleitung mit Trassenwarnband (mit eingelegtem Ortungsdraht)   im Abstand von ca. 40 cm;15,0;m;gaeb;2024-19-24-19-35.X83
+43;Betriebsfertige Sp;110,0;m;gaeb;2024-19-24-19-35.X83
+44;Innendruckdruckpr;110,0;m;gaeb;2024-19-24-19-35.X83
+45;Schneiden der vorhandenen Trinkwasserleitung PEHD da 160.;2,0;St;gaeb;2024-19-24-19-35.X83
+46;Ausbau und fachgerechte Entsorgung von Teill;2,0;m;gaeb;2024-19-24-19-35.X83
+47;Ausbau und fachgerechte Entsorgung alter Formst;1,0;St;gaeb;2024-19-24-19-35.X83
+48;Rohrverbindung zwischen den neu verlegten und der bestehenden Hauptleitungen herstellen, einschl. freilegen, einpassen und trennen der vorh. Leitungen, Einbau von Formst;3,0;St;gaeb;2024-19-24-19-35.X83
+49;KOS DN 125 wie vorab beschrieben liefern und einbauen;1,0;St;gaeb;2024-19-24-19-35.X83
+50;KOS DN 150 wie vorab beschrieben liefern und einbauen;1,0;St;gaeb;2024-19-24-19-35.X83
+51;Einbaugarnitur f;2,0;St;gaeb;2024-19-24-19-35.X83
+52;Hinweisschilder f;2,0;St;gaeb;2024-19-24-19-35.X83
+53;Schieber-, und Hydrantenkappen beim Einbau der bitumin;2,0;St;gaeb;2024-19-24-19-35.X83
+54;Hinweiss;2,0;St;gaeb;2024-19-24-19-35.X83
+55;FFR- St;1,0;St;gaeb;2024-19-24-19-35.X83
+56;T- St;1,0;St;gaeb;2024-19-24-19-35.X83
+57;Bogen 11,25;8,0;St;gaeb;2024-19-24-19-35.X83
+58;Bogen 11,25;2,0;St;gaeb;2024-19-24-19-35.X83
+59;Vorschwei;2,0;St;gaeb;2024-19-24-19-35.X83
+60;Vorschwei;2,0;St;gaeb;2024-19-24-19-35.X83
+61;PE-Schwei;5,0;St;gaeb;2024-19-24-19-35.X83
+62;PE-Schwei;2,0;St;gaeb;2024-19-24-19-35.X83
+63;Stahlrohr-Markierungspfahl / Stahl-Fluchtstab, Durchmesser 150 mm, 4m lang mit blau-wei;2,0;St;gaeb;2024-19-24-19-35.X83
+64;Sauberkeitsschicht aus unbewehrtem Beton C12/15  (DIN;0,5;m³;gaeb;2024-19-24-19-35.X83
+65;Fertigteil-Schacht mit Schachthals einschließlich der;1,0;St;gaeb;2024-19-24-19-35.X83
+66;"Schachtabdeckung; SN, selbstnivellierend, zum oberfl";1,0;St;gaeb;2024-19-24-19-35.X83
+67;Kernbohrung f;1,0;St;gaeb;2024-19-24-19-35.X83
+68;Kernbohrung f;1,0;St;gaeb;2024-19-24-19-35.X83
+69;"Ringraumdichtung zur Eindichtung des Schutzrohres PEHD da 225 x 13,4 zum Kontrollschacht;";1,0;St;gaeb;2024-19-24-19-35.X83
+70;"Ringraumdichtung zur Eindichtung des Medienrohres PEHD da 140 x 8,3 zum Kontrollschacht;";1,0;St;gaeb;2024-19-24-19-35.X83
+71;St;1,0;St;gaeb;2024-19-24-19-35.X83
+72;Bitumin;12,0;m;gaeb;2024-19-24-19-35.X83
+73;Bitumin;10,0;m²;gaeb;2024-19-24-19-35.X83
+74;Tragschichten bzw. Schichten ohne Bindemittel  unter Pflaster-, Asphalt-  und Betonoberbau aufbrechen und aufnehmen,;20,0;m²;gaeb;2024-19-24-19-35.X83
+75;Planum herstellen und verdichten nach ZTVE 94, Profilgenauigkeit +/- 2 cm, Verdichtung auf EV2 >=45MN/m;20,0;m²;gaeb;2024-19-24-19-35.X83
+76;Frostschutzschicht herstellen.;6,0;m3;gaeb;2024-19-24-19-35.X83
+77;Schottertragschicht herstellen.;75,0;m2;gaeb;2024-19-24-19-35.X83
+78;Erschwernis durch Einbauten.;2,0;St;gaeb;2024-19-24-19-35.X83
+79;Bankett und ungebundene Fahrbahnbel;10,0;m²;gaeb;2024-19-24-19-35.X83
+80;Asphalttragschicht aus Asphalttragschichtmischgut;10,0;m2;gaeb;2024-19-24-19-35.X83
+81;Bitumenemulsion zur Herstellung des Schichtenverbundes;10,0;m2;gaeb;2024-19-24-19-35.X83
+82;Asphaltdeckschicht aus Asphaltbeton für Asphaltdeck-;10,0;m2;gaeb;2024-19-24-19-35.X83
+83;Erschwernis infolge Einbauten, Schächten und Straßenab-;2,0;St;gaeb;2024-19-24-19-35.X83
+84;Erschwernis infolge Einbauten, Schächten und Straßenab-;2,0;St;gaeb;2024-19-24-19-35.X83
+85;Naht in Asphaltschicht herstellen.;12,0;m;gaeb;2024-19-24-19-35.X83
+86;Abstumpfungsmaßnahme zur Erhöhung der Anfangsgriffig-;10,0;m2;gaeb;2024-19-24-19-35.X83
+87;Verkehrsfläche mit einer selbstaufnehmenden Kehrmaschi-;10,0;m2;gaeb;2024-19-24-19-35.X83
+88;Baustoffgemisch f;10,0;m²;gaeb;2024-19-24-19-35.X83
+89;Tragschicht des provisorischen Fahrbahnoberbaus (;10,0;m²;gaeb;2024-19-24-19-35.X83
+1;Geräte, Werkzeuge und sonstige Betriebsmittel, die zur;1,0;Psch;gaeb;2024-19-24-19-35.X83
+2;Baustelle von allen Geräten, Anlagen, Einrichtungen und;1,0;Psch;gaeb;2024-19-24-19-35.X83
+3;Baustelleneinrichtung f;1,0;Psch;gaeb;2024-19-24-19-35.X83
+4;Anwohner- bzw. Anliegerinformationen 7 Tage vor Baubeginn oder;1,0;psch;gaeb;2024-19-24-19-35.X83
+5;W;1,0;psch;gaeb;2024-19-24-19-35.X83
+6;Planum herstellen f;40,0;m²;gaeb;2024-19-24-19-35.X83
+7;Geotextil als Trenn- und Filterschicht verlegen. Trenn-;65,0;m2;gaeb;2024-19-24-19-35.X83
+8;Ungebundene Gehbahnbel;40,0;m²;gaeb;2024-19-24-19-35.X83
+9;Ungebundene Gehbahnbefestigungen aus Schotter, Splitt- Sandgemischen aufnehmen, in Eigentum des AN;40,0;m²;gaeb;2024-19-24-19-35.X83
+10;Geotextil, GRK 4, partiell ausbauen und entsorgen, einschl. Trennschnitt an der Ausbaukante des verbleibenden Gehwegunterbaus und Entsorgungskosten;65,0;m2;gaeb;2024-19-24-19-35.X83
+11;Baustellensicherung;1,0;Psch;gaeb;2024-19-24-19-35.X83
+12;Kontrolle der Arbeitsstellensicherung gem. ZTV-SA;70,0;d;gaeb;2024-19-24-19-35.X83
+13;Genehmigungen und die verkehrsrechtliche;1,0;psch;gaeb;2024-19-24-19-35.X83
+14;Ä;1,0;psch;gaeb;2024-19-24-19-35.X83
+15;Informationen;1,0;Stck;gaeb;2024-19-24-19-35.X83
+16;Aufwendungen zur;1,0;psch;gaeb;2024-19-24-19-35.X83
+17;Bauzaun nach Unterlagen des AG einschl. der erforderli-;200,0;m;gaeb;2024-19-24-19-35.X83
+18;Bauzaun innerhalb der Baustelle umsetzen. Nicht wieder-;50,0;m;gaeb;2024-19-24-19-35.X83
+19;Zusatzzeichen f;4,0;Stck;gaeb;2024-19-24-19-35.X83
+20;Zusatzzeichen f;1,0;Stck;gaeb;2024-19-24-19-35.X83
+21;Aufstellung der Verkehrszeichen 283 incl.ZZ;8,0;Stck;gaeb;2024-19-24-19-35.X83
+22;Einfache Entfernung mit Transporter;150,0;km;gaeb;2024-19-24-19-35.X83
+23;Aufbau Baustellensicherung (Arbeitsstellenbereich);1,0;psch;gaeb;2024-19-24-19-35.X83
+24;Freigabe der  Baustellensicherung;1,0;psch;gaeb;2024-19-24-19-35.X83
+25;Aufbau von Schrankenschutzgitter;100,0;m;gaeb;2024-19-24-19-35.X83
+26;Station;5,0;Stck;gaeb;2024-19-24-19-35.X83
+27;Aufwendungen f;1,0;psch;gaeb;2024-19-24-19-35.X83
+28;nur Fahrleistung  zur LP  Aufbau / Umbau;150,0;km;gaeb;2024-19-24-19-35.X83
+29;Verkehrssicherung l;23,0;KT;gaeb;2024-19-24-19-35.X83
+30;Schrankenschutzgitter;2300,0;mKT;gaeb;2024-19-24-19-35.X83
+31;t;21,0;Stck;gaeb;2024-19-24-19-35.X83
+32;Abbau der  Verkehrszeichen  und -einrichtungen incl. VZ;1,0;psch;gaeb;2024-19-24-19-35.X83
+33;Umbau von Absturzsicherung von BA 2.1 auf BA2.3;100,0;m;gaeb;2024-19-24-19-35.X83
+34;Station;5,0;Stck;gaeb;2024-19-24-19-35.X83
+35;L;135,0;m;gaeb;2024-19-24-19-35.X83
+36;Pfeil  gerade und rechts-, linksweisend Typ II;1,0;Stck;gaeb;2024-19-24-19-35.X83
+37;Demarkierung  der  markierten Fl;135,0;m;gaeb;2024-19-24-19-35.X83
+38;Demarkierung  der  markierten Fl;1,0;Stck;gaeb;2024-19-24-19-35.X83
+39;Zusatzzeichen f;2,0;Stck;gaeb;2024-19-24-19-35.X83
+40;Zusatzzeichen f;1,0;Stck;gaeb;2024-19-24-19-35.X83
+41;Plantafel / Verschwenkungstafel auf Grundlage der;1,0;Stck;gaeb;2024-19-24-19-35.X83
+42;Plantafel aufstellen;1,0;Stck;gaeb;2024-19-24-19-35.X83
+43;Aufbau / Umbau Mehrbeschilderung zu Umbau BA 2.1;1,0;psch;gaeb;2024-19-24-19-35.X83
+44;Freigabe der  Baustellensicherung;1,0;psch;gaeb;2024-19-24-19-35.X83
+45;Aufbau von Schrankenschutzgitter;50,0;m;gaeb;2024-19-24-19-35.X83
+46;Station;3,0;Stck;gaeb;2024-19-24-19-35.X83
+47;Aufwendungen f;1,0;psch;gaeb;2024-19-24-19-35.X83
+48;nur Fahrleistung  zur LP  Aufbau / Umbau;150,0;km;gaeb;2024-19-24-19-35.X83
+49;Verkehrssicherung l;23,0;KT;gaeb;2024-19-24-19-35.X83
+50;Schrankenschutzgitter;3450,0;mKT;gaeb;2024-19-24-19-35.X83
+51;t;23,0;Stck;gaeb;2024-19-24-19-35.X83
+52;Plantafel abbauen;1,0;Stck;gaeb;2024-19-24-19-35.X83
+53;Abbau der  Verkehrszeichen  und -einrichtungen incl. VZ;1,0;psch;gaeb;2024-19-24-19-35.X83
+54;Umbau von Absturzsicherung;50,0;m;gaeb;2024-19-24-19-35.X83
+55;Station;3,0;Stck;gaeb;2024-19-24-19-35.X83
+56;nur Fahrleistung  zur LP  Abbau;150,0;km;gaeb;2024-19-24-19-35.X83
+57;L;135,0;m;gaeb;2024-19-24-19-35.X83
+58;Pfeil  gerade und rechts-, linksweisend Typ II;5,0;Stck;gaeb;2024-19-24-19-35.X83
+59;Markierungskreuz  gro;5,0;Stck;gaeb;2024-19-24-19-35.X83
+60;Markierungskreuz  klein Typ II herstellen als tempor;3,0;Stck;gaeb;2024-19-24-19-35.X83
+61;Demarkierung  der  markierten Fl;125,0;m;gaeb;2024-19-24-19-35.X83
+62;Demarkierung  der  markierten Fl;5,0;Stck;gaeb;2024-19-24-19-35.X83
+63;Demarkierung  der  markierten Fl;3,0;Stck;gaeb;2024-19-24-19-35.X83
+64;Demarkierung  der  markierten Fl;5,0;Stck;gaeb;2024-19-24-19-35.X83
+65;Zusatzzeichen f;2,0;Stck;gaeb;2024-19-24-19-35.X83
+66;Plantafel auf Grundlage der Planskizze nach RUB und;2,0;Stck;gaeb;2024-19-24-19-35.X83
+67;Plantafel aufstellen;2,0;Stck;gaeb;2024-19-24-19-35.X83
+68;Einfache Entfernung mit Transporter;150,0;km;gaeb;2024-19-24-19-35.X83
+69;Aufbau Baustellensicherung;1,0;psch;gaeb;2024-19-24-19-35.X83
+70;Umbau von Schrankenschutzgitter;150,0;m;gaeb;2024-19-24-19-35.X83
+71;Station;2,0;Stck;gaeb;2024-19-24-19-35.X83
+72;Aufwendungen f;1,0;psch;gaeb;2024-19-24-19-35.X83
+73;nur Fahrleistung  zur LP  Aufbau / Umbau;150,0;km;gaeb;2024-19-24-19-35.X83
+74;Plantafel vorhalten;46,0;StKT;gaeb;2024-19-24-19-35.X83
+75;Verkehrssicherung l;24,0;KT;gaeb;2024-19-24-19-35.X83
+76;Schrankenschutzgitter;3600,0;mKT;gaeb;2024-19-24-19-35.X83
+77;t;24,0;Stck;gaeb;2024-19-24-19-35.X83
+78;Plantafel abbauen;2,0;Stck;gaeb;2024-19-24-19-35.X83
+79;Abbau der  Verkehrszeichen  und -einrichtungen incl. VZ;1,0;psch;gaeb;2024-19-24-19-35.X83
+80;Abbau von Absturzsicherung;150,0;m;gaeb;2024-19-24-19-35.X83
+81;Station;2,0;Stck;gaeb;2024-19-24-19-35.X83
+82;nur Fahrleistung  zur LP  Abbau;150,0;km;gaeb;2024-19-24-19-35.X83
+83;L;275,0;m;gaeb;2024-19-24-19-35.X83
+84;Markierungskreuz  gro;12,0;Stck;gaeb;2024-19-24-19-35.X83
+85;Pfeil  gerade und rechts-, linksweisend Typ II;6,0;Stck;gaeb;2024-19-24-19-35.X83
+86;Demarkierung Typ II herstellen als tempor;275,0;m;gaeb;2024-19-24-19-35.X83
+87;Demarkierung  der  markierten Fl;6,0;Stck;gaeb;2024-19-24-19-35.X83
+88;Demarkierung  der  markierten Fl;12,0;Stck;gaeb;2024-19-24-19-35.X83
+89;Plantafeln   anfertigen;5,0;Stck;gaeb;2024-19-24-19-35.X83
+90;Zusatzzeichen f;13,0;Stck;gaeb;2024-19-24-19-35.X83
+91;Station;4,0;Stck;gaeb;2024-19-24-19-35.X83
+92;Station;8,0;Stck;gaeb;2024-19-24-19-35.X83
+93;Aufbau von Plantafeln,;5,0;Stck;gaeb;2024-19-24-19-35.X83
+94;Aufbau Umleitungsbeschilderung;1,0;psch;gaeb;2024-19-24-19-35.X83
+95;-dito- nur Fahrleistung  mit Transporter oder LKW;50,0;km;gaeb;2024-19-24-19-35.X83
+96;Plantafeln / Informations- und Verschwenkungstafeln;230,0;Std;gaeb;2024-19-24-19-35.X83
+97;Verkehrssicherung l;46,0;KT;gaeb;2024-19-24-19-35.X83
+98;w;6,0;St;gaeb;2024-19-24-19-35.X83
+99;Abbau  von Plantafeln,;5,0;Stck;gaeb;2024-19-24-19-35.X83
+100;Umleitungsf;1,0;Stck;gaeb;2024-19-24-19-35.X83
+101;Station;1,0;psch;gaeb;2024-19-24-19-35.X83
+102;Station;1,0;psch;gaeb;2024-19-24-19-35.X83
+103;-dito- nur Fahrleistung  mit Transporter oder LKW;50,0;km;gaeb;2024-19-24-19-35.X83
+104;Markierung, 0.12 m breit, wei;1,0;m;gaeb;2024-19-24-19-35.X83
+105;Markierung, 0.25 m breit, wei;1,0;m;gaeb;2024-19-24-19-35.X83
+1;Oberboden (Gr;75,0;m²;gaeb;2024-19-24-19-35.X83
+2;Andeckung von Oberboden im Bereich privater Grundst;75,0;m²;gaeb;2024-19-24-19-35.X83
+3;Feinplanie f;75,0;m2;gaeb;2024-19-24-19-35.X83
+4;Rasenansaat mit Regelsaatgutmischung;75,0;m2;gaeb;2024-19-24-19-35.X83
+5;Graben für Sickerleitungen, Druckleitungen, Kabel,;20,0;m;gaeb;2024-19-24-19-35.X83
+6;Boden in Leitungszone (obere und untere Bettung, Seitenverf;20,0;m;gaeb;2024-19-24-19-35.X83
+7;Baustoff nach Unterlagen des AG liefern, in Leitungs-;20,0;m;gaeb;2024-19-24-19-35.X83
+8;Boden zur Herstellung eines Kopflochs/ Einstich- und Montagegrube f;130,0;m³;gaeb;2024-19-24-19-35.X83
+9;Boden zur Herstellung eines Kopflochs/ Einstich- und Montagegrube f;10,0;m³;gaeb;2024-19-24-19-35.X83
+10;Boden zur Herstellung einer Baugrube f;15,0;m³;gaeb;2024-19-24-19-35.X83
+11;L;465,0;m;gaeb;2024-19-24-19-35.X83
+12;Auffangen der Bohrsuspension und fachgerechte Entsorgung als Komplettleistung.;1,0;psch;gaeb;2024-19-24-19-35.X83
+13;Hinterf;17,0;m³;gaeb;2024-19-24-19-35.X83
+14;Rohrbettung mit vom AN zu liefernden Stoffen bis;8,0;m³;gaeb;2024-19-24-19-35.X83
+15;Aushub der Baugruben f;5,0;m³;gaeb;2024-19-24-19-35.X83
+16;Boden bzw. Fels aus Abtragsbereichen lösen, laden und;7,0;m3;gaeb;2024-19-24-19-35.X83
+17;Geeigneten Baustoff liefern, profilgerecht einbauen und;7,0;m3;gaeb;2024-19-24-19-35.X83
+18;Suchschlitze zur Feststellung der Lage von Kabeln, Leitungen und dgl. nach Angabe des AG bzw. nach vorhandenen Schachtscheinen in Handschachtung bis 1,25 m Tiefe in B;6,0;St;gaeb;2024-19-24-19-35.X83
+19;Ver- und Entsorgungsleitungen parallel verlaufend freilegen und sichern;40,0;m;gaeb;2024-19-24-19-35.X83
+20;Ver- und Entsorgungsleitungen quer zum Rohrgraben verlaufend freilegen und sichern - Einzelleitungen;20,0;St;gaeb;2024-19-24-19-35.X83
+21;Versorgungsleitungen quer zum Rohrgraben verlaufend freilegen und sichern - Kabelb;5,0;St;gaeb;2024-19-24-19-35.X83
+22;"Beton C16/20 im Grabenquerschnitt herstellen zur Widerlagerausbildung; Dicke i.M. ca. 0,30- 0,50m; einschlie";1,0;m³;gaeb;2024-19-24-19-35.X83
+23;Rohrgrabenverbau durch Einschalen der Grabenw;305,0;m²;gaeb;2024-19-24-19-35.X83
+24;Trinkwasserleitung aus PE- HD Rohr (PE 100-RC) da 180 x 10,7 nach DIN EN 12201 Farbe k;5,0;m;gaeb;2024-19-24-19-35.X83
+25;Trinkwasserleitung aus PE- HD Rohr (PE 100-RC) da 225 x 13,4 nach DIN EN 12201 Farbe k;480,0;m;gaeb;2024-19-24-19-35.X83
+26;Rohrleitung mit Trassenwarnband (mit eingelegtem Ortungsdraht)   im Abstand von ca. 40 cm;70,0;m;gaeb;2024-19-24-19-35.X83
+27;Betriebsfertige Sp;485,0;m;gaeb;2024-19-24-19-35.X83
+28;Innendruckdruckpr;485,0;m;gaeb;2024-19-24-19-35.X83
+29;Schneiden der vorhandenen Trinkwasserleitung GG/St/PE DN 80 bis 150.;10,0;St;gaeb;2024-19-24-19-35.X83
+30;Ausbau und fachgerechte Entsorgung von Teill;10,0;m;gaeb;2024-19-24-19-35.X83
+31;Ausbau und fachgerechte Entsorgung von Teill;20,0;m;gaeb;2024-19-24-19-35.X83
+32;Ausbau und fachgerechte Entsorgung alter Formst;32,0;St;gaeb;2024-19-24-19-35.X83
+33;M;10,0;St;gaeb;2024-19-24-19-35.X83
+34;Rohrverbindung zwischen den neu verlegten und der bestehenden Hauptleitungen herstellen, einschl. freilegen, einpassen und trennen der vorh. Leitungen, Einbau von Formst;3,0;St;gaeb;2024-19-24-19-35.X83
+35;KOS DN 100 wie vorab beschrieben liefern und einbauen;1,0;St;gaeb;2024-19-24-19-35.X83
+36;KOS DN 150 wie vorab beschrieben liefern und einbauen;2,0;St;gaeb;2024-19-24-19-35.X83
+37;KOS DN 200 wie vorab beschrieben liefern und einbauen;3,0;St;gaeb;2024-19-24-19-35.X83
+38;Einbaugarnitur f;6,0;St;gaeb;2024-19-24-19-35.X83
+39;Hinweisschilder f;6,0;St;gaeb;2024-19-24-19-35.X83
+40;Unterflurhydrant DN 80 liefern und einbauen, komplett wie in Vorbemerkung beschrieben, liefern und einbauen;1,0;St;gaeb;2024-19-24-19-35.X83
+41;Sickerelement f;1,0;St;gaeb;2024-19-24-19-35.X83
+42;Ü;1,0;St;gaeb;2024-19-24-19-35.X83
+43;Hinweisschilder wie zuvor beschrieben liefern und einbauen;2,0;St;gaeb;2024-19-24-19-35.X83
+44;Schieber-, und Hydrantenkappen beim Einbau der bitumin;7,0;St;gaeb;2024-19-24-19-35.X83
+45;Hinweiss;3,0;St;gaeb;2024-19-24-19-35.X83
+46;FF- St;1,0;St;gaeb;2024-19-24-19-35.X83
+47;FF- St;1,0;St;gaeb;2024-19-24-19-35.X83
+48;FF- St;3,0;St;gaeb;2024-19-24-19-35.X83
+49;FFK- St;1,0;St;gaeb;2024-19-24-19-35.X83
+50;FFK- St;1,0;St;gaeb;2024-19-24-19-35.X83
+51;FFK- St;1,0;St;gaeb;2024-19-24-19-35.X83
+52;FFK- St;1,0;St;gaeb;2024-19-24-19-35.X83
+53;FFR- St;1,0;St;gaeb;2024-19-24-19-35.X83
+54;FFR- St;1,0;St;gaeb;2024-19-24-19-35.X83
+55;FFR- St;2,0;St;gaeb;2024-19-24-19-35.X83
+56;T- St;1,0;St;gaeb;2024-19-24-19-35.X83
+57;T- St;1,0;St;gaeb;2024-19-24-19-35.X83
+58;T- St;1,0;St;gaeb;2024-19-24-19-35.X83
+59;T- St;2,0;St;gaeb;2024-19-24-19-35.X83
+60;N- St;1,0;St;gaeb;2024-19-24-19-35.X83
+61;Liefern und Einbau von Multi- Joint DN 150, sonst wie vorab beschrieben,;2,0;St;gaeb;2024-19-24-19-35.X83
+62;Liefern und Einbau einer St;1,0;St;gaeb;2024-19-24-19-35.X83
+63;Bogen 11,25;5,0;St;gaeb;2024-19-24-19-35.X83
+64;Bogen 11,25;5,0;St;gaeb;2024-19-24-19-35.X83
+65;T-St;2,0;St;gaeb;2024-19-24-19-35.X83
+66;Reduzierung PE da 90 / 63 liefern und einbauen;2,0;St;gaeb;2024-19-24-19-35.X83
+67;Vorschwei;1,0;St;gaeb;2024-19-24-19-35.X83
+68;Vorschwei;2,0;St;gaeb;2024-19-24-19-35.X83
+69;Vorschwei;4,0;St;gaeb;2024-19-24-19-35.X83
+70;PE-Schwei;3,0;St;gaeb;2024-19-24-19-35.X83
+71;PE-Schwei;2,0;St;gaeb;2024-19-24-19-35.X83
+72;PE-Schwei;11,0;St;gaeb;2024-19-24-19-35.X83
+73;Bitumin;110,0;m;gaeb;2024-19-24-19-35.X83
+74;Bitumin;80,0;m²;gaeb;2024-19-24-19-35.X83
+75;Pflasterdecke aufbrechen und aufnehmen. Aufbruch der;10,0;m2;gaeb;2024-19-24-19-35.X83
+76;Pflasterdecke mit Pflastersteinen aus Beton aufnehmen.;5,0;m2;gaeb;2024-19-24-19-35.X83
+77;Rinne aus Betonformsteinen aufnehmen. Aufbruch der;5,0;m;gaeb;2024-19-24-19-35.X83
+78;Rinne aus Betonformsteinen aufnehmen. Aufbruch der;5,0;m;gaeb;2024-19-24-19-35.X83
+79;Bordsteine aufnehmen.;10,0;m;gaeb;2024-19-24-19-35.X83
+80;Tragschichten bzw. Schichten ohne Bindemittel  unter Pflaster-, Asphalt-  und Betonoberbau aufbrechen und aufnehmen,;70,0;m²;gaeb;2024-19-24-19-35.X83
+81;Tragschichten bzw. Schichten ohne Bindemittel  unter Pflaster-, Asphalt-  und Betonoberbau aufbrechen und aufnehmen,;10,0;m²;gaeb;2024-19-24-19-35.X83
+82;Erschwernis durch Einbauten.;10,0;St;gaeb;2024-19-24-19-35.X83
+83;Planum herstellen und verdichten nach ZTVE 94, Profilgenauigkeit +/- 2 cm, Verdichtung auf EV2 >=45MN/m;95,0;m²;gaeb;2024-19-24-19-35.X83
+84;Frostschutzschicht herstellen.;20,0;m3;gaeb;2024-19-24-19-35.X83
+85;Schottertragschicht herstellen.;75,0;m2;gaeb;2024-19-24-19-35.X83
+86;Schottertragschicht herstellen.;10,0;m2;gaeb;2024-19-24-19-35.X83
+87;Erschwernis durch Einbauten.;8,0;St;gaeb;2024-19-24-19-35.X83
+88;Asphalttragschicht aus Asphalttragschichtmischgut;80,0;m2;gaeb;2024-19-24-19-35.X83
+89;Bitumenemulsion zur Herstellung des Schichtenverbundes;80,0;m2;gaeb;2024-19-24-19-35.X83
+90;Asphaltbinderschicht aus Asphaltbinder AC 16 B S her-;80,0;m2;gaeb;2024-19-24-19-35.X83
+91;Bitumenemulsion zur Herstellung des Schichtenverbundes;80,0;m2;gaeb;2024-19-24-19-35.X83
+92;Asphaltdeckschicht aus Asphaltbeton für Asphaltdeck-;80,0;m2;gaeb;2024-19-24-19-35.X83
+93;Erschwernis infolge Einbauten, Schächten und Straßenab-;1,0;St;gaeb;2024-19-24-19-35.X83
+94;Erschwernis infolge Einbauten, Schächten und Straßenab-;1,0;St;gaeb;2024-19-24-19-35.X83
+95;Erschwernis infolge Einbauten, Schächten und Straßenab-;1,0;St;gaeb;2024-19-24-19-35.X83
+96;Naht in Asphaltschicht herstellen.;110,0;m;gaeb;2024-19-24-19-35.X83
+97;Abstumpfungsmaßnahme zur Erhöhung der Anfangsgriffig-;80,0;m2;gaeb;2024-19-24-19-35.X83
+98;Verkehrsfläche mit einer selbstaufnehmenden Kehrmaschi-;80,0;m2;gaeb;2024-19-24-19-35.X83
+99;Pflasterdecke mit Verbundpflastersteinen herstellen, Rechteckpflaster lagert auf der Baustelle.;10,0;m2;gaeb;2024-19-24-19-35.X83
+100;Streifen aus Pflastersteinen aus Beton herstellen.;5,0;m;gaeb;2024-19-24-19-35.X83
+101;Streifen aus Pflastersteinen aus Beton herstellen.;5,0;m;gaeb;2024-19-24-19-35.X83
+102;Bordsteine aus Beton setzen.;10,0;m;gaeb;2024-19-24-19-35.X83
+103;Baustoffgemisch f;80,0;m²;gaeb;2024-19-24-19-35.X83
+104;Tragschicht des provisorischen Fahrbahnoberbaus (;80,0;m²;gaeb;2024-19-24-19-35.X83
+105;Einfassung Stra;5,0;St;gaeb;2024-19-24-19-35.X83
+106;Verkehrssicherung an Arbeitsstellen von k;1,0;psch;gaeb;2024-19-24-19-35.X83
+107;Fläche für Markierung reinigen. Kehrgut aufnehmen und;10,0;m2;gaeb;2024-19-24-19-35.X83
+108;Längsmarkierung Typ II einschl. evtl. Sperrflächenum-;10,0;m;gaeb;2024-19-24-19-35.X83
+109;Längsmarkierung Typ II einschl. evtl.;10,0;m;gaeb;2024-19-24-19-35.X83
+1;Oberboden (Gr;30,0;m²;gaeb;2024-19-24-19-35.X83
+2;Andeckung von Oberboden im Bereich privater Grundst;30,0;m²;gaeb;2024-19-24-19-35.X83
+3;Feinplanie f;30,0;m2;gaeb;2024-19-24-19-35.X83
+4;Rasenansaat mit Regelsaatgutmischung;30,0;m2;gaeb;2024-19-24-19-35.X83
+5;Boden der Gr;10,0;m³;gaeb;2024-19-24-19-35.X83
+6;Boden der Gr;10,0;m³;gaeb;2024-19-24-19-35.X83
+7;"Bodenaushub wie zuvor; jedoch in B";1,0;m³;gaeb;2024-19-24-19-35.X83
+8;Rohrbettung und - ummantelung mit vom AN zu liefernden Stoffen bis 30cm;8,0;m³;gaeb;2024-19-24-19-35.X83
+9;Verf;10,0;m³;gaeb;2024-19-24-19-35.X83
+10;Verf;2,0;m³;gaeb;2024-19-24-19-35.X83
+11;Aushub der Baugruben f;1,0;m³;gaeb;2024-19-24-19-35.X83
+12;Suchschlitze zur Feststellung der Lage von Kabeln, Leitungen und dgl. nach Angabe des AG bzw. nach vorhandenen Schachtscheinen in Handschachtung bis 1,25 m Tiefe in B;1,0;St;gaeb;2024-19-24-19-35.X83
+13;Ver- und Entsiorgungsleitungen parallel verlaufend freilegen und sichern;5,0;m;gaeb;2024-19-24-19-35.X83
+14;Ver- und Entsorgungsleitungen quer zum Rohrgraben verlaufend freilegen und sichern - Einzelleitungen;2,0;St;gaeb;2024-19-24-19-35.X83
+15;Rohrgrabenverbau durch Einschalen der Grabenw;60,0;m²;gaeb;2024-19-24-19-35.X83
+16;Anbohrarmatur aus PE-HD DIN 3543 Teil 4 f;1,0;St;gaeb;2024-19-24-19-35.X83
+17;Anbohrarmatur aus PE-HD DIN 3543 Teil 4 f;1,0;St;gaeb;2024-19-24-19-35.X83
+18;Weichdichtender-Hausanschluss-Schieber f;2,0;St;gaeb;2024-19-24-19-35.X83
+19;KOS DN 50 wie vorab beschrieben liefern und einbauen;1,0;St;gaeb;2024-19-24-19-35.X83
+20;Einbaugarnitur f;1,0;St;gaeb;2024-19-24-19-35.X83
+21;Beton-Tragplatten f;1,0;St;gaeb;2024-19-24-19-35.X83
+22;Stra;4,0;St;gaeb;2024-19-24-19-35.X83
+23;Hinweisschilder f;5,0;St;gaeb;2024-19-24-19-35.X83
+24;Hinweiss;5,0;St;gaeb;2024-19-24-19-35.X83
+25;Trinkwasserleitung aus PE- HD-Rohr (PE 100-RC) da 32 x 3,0 nach DIN EN 12201 Farbe k;2,0;m;gaeb;2024-19-24-19-35.X83
+26;Trinkwasserleitung aus PE- HD-Rohr (PE 100-RC) da 63 x 5,8 nach DIN EN 12201 Farbe k;20,0;m;gaeb;2024-19-24-19-35.X83
+27;Bogen 11,25;1,0;St;gaeb;2024-19-24-19-35.X83
+28;PE-Schwei;7,0;St;gaeb;2024-19-24-19-35.X83
+29;Rohrleitung mit Trassenwarnband (mit eingelegtem Ortungsdraht) im Abstand von ca. 40 cm;17,0;m;gaeb;2024-19-24-19-35.X83
+30;Innendruckdruckpr;5,0;St;gaeb;2024-19-24-19-35.X83
+31;Schneiden der vorhandenen Trinkwasserleitung PE da 32-63.;6,0;St;gaeb;2024-19-24-19-35.X83
+32;Ausbau und fachgerechte Entsorgung von Teill;10,0;m;gaeb;2024-19-24-19-35.X83
+33;Ausbau und fachgerechte Entsorgung alter Ventilanbohrarmaturen als Komplettleistung inkl. Schiebergest;5,0;St;gaeb;2024-19-24-19-35.X83
+34;Anschlu;5,0;St;gaeb;2024-19-24-19-35.X83
+35;Anschlu;5,0;St;gaeb;2024-19-24-19-35.X83
+36;Plassonendkappen da 63 liefern und einbauen f;2,0;St;gaeb;2024-19-24-19-35.X83
+37;Schieber-, und Hydrantenkappen beim Einbau der bitumin;5,0;St;gaeb;2024-19-24-19-35.X83
+0.1.1;Einholung der Schachtscheine;1,0;psch;gaeb-flat;2024-19-24-19-35.D83
+0.1.1;Beweissicherung;1,0;Psch;gaeb-flat;2024-19-24-19-35.D83
+0.1.1;Schutz der vorhandenen Beschilderung während der Baumaßnahme;1,0;psch;gaeb-flat;2024-19-24-19-35.D83
+0.1.1;Sichern von Versorgungsmasten, Straßenbeleuchtungsmasten;3,0;St;gaeb-flat;2024-19-24-19-35.D83
+0.1.1;Sicherung von Grenzsteinen;5,0;St;gaeb-flat;2024-19-24-19-35.D83
+0.1.1;Grabenabdeckung SLW 30 (Stahlplatten);8,0;St;gaeb-flat;2024-19-24-19-35.D83
+0.1.1;Grabenabdeckung SLW 60 (Stahlplatten);10,0;St;gaeb-flat;2024-19-24-19-35.D83
+0.1.3;Vorankündigung erstellen;1,0;Psch;gaeb-flat;2024-19-24-19-35.D83
+0.1.3;SiGe-Koordinator stellen.;1,0;Psch;gaeb-flat;2024-19-24-19-35.D83
+0.1.3.1;SiGe-Plan erstellen;1,0;Psch;gaeb-flat;2024-19-24-19-35.D83
+0.1.4.1;Probenahme und Aufbereitung zur Durchführung einer Deklarationsanalyse für Schichten ohne Bindemittel;2,0;St;gaeb-flat;2024-19-24-19-35.D83
+0.1.4.1;Probenahme und Aufbereitung zur Durchführung einer Deklarationsanalyse für Erdaushub;2,0;St;gaeb-flat;2024-19-24-19-35.D83
+0.1.4.1;Durchführung der Deklarationsanalyse zur Wiederverwertung (ggf. Entsorgung) von Schichten ohne Bindemittel und Erdaushub nach Ersatzbaustoff-VO;4,0;St;gaeb-flat;2024-19-24-19-35.D83
+0.1.4.1;Eignungsprüfung zur Festlegung der Verwertung Asphalt;2,0;St;gaeb-flat;2024-19-24-19-35.D83
+0.1.4.1;Plattendruckvers. f.Kpruefg.durchf., einschl. Gegengewicht;4,0;St;gaeb-flat;2024-19-24-19-35.D83
+0.1.5.1;Stundenlohn Bauvorarbeiter (Bgr.II);1,0;h;gaeb-flat;2024-19-24-19-35.D83
+0.1.5.1;Stundenlohn Baufacharbeiter (Bgr. V);1,0;h;gaeb-flat;2024-19-24-19-35.D83
+0.1.5.1;Stundenlohn Spezialbaufacharbeiter (Bgr. III);1,0;h;gaeb-flat;2024-19-24-19-35.D83
+0.1.5.1;Bagger, 0,75 bis 1,50 m³;1,0;h;gaeb-flat;2024-19-24-19-35.D83
+0.1.5.2;Transporter;1,0;h;gaeb-flat;2024-19-24-19-35.D83
+0.1.6.2;Absteckung für Trinkwasserleitungsbau Bauteil 1 und 2 herstellen;1,0;Psch;gaeb-flat;2024-19-24-19-35.D83
+0.1.6.2;Bestandseinmessung nach Abschluß der Baumaßnahme für Trinkwasserleitungsbau Bauteil 1 und 2 nach Veolia-CAIGOS-Regelwerk;1,0;Psch;gaeb-flat;2024-19-24-19-35.D83
+0.1.6.2;Dokumentation Bauteil 1 und 2 zusammenstellen und liefern;1,0;psch;gaeb-flat;2024-19-24-19-35.D83
+1.1.1;Baustelle einrichten Sämtl.LV-Abschn.  Zufahrt vorh.;1,0;Psch;gaeb-flat;2024-19-24-19-35.D83
+1.1.1;Baustelle räumen Sämtl. LV-Abschn.;1,0;Psch;gaeb-flat;2024-19-24-19-35.D83
+1.1.1;Baustelle einrichten, vorhalten, umsetzen und beräumen für Horizontalbohrspühlbohren;1,0;Psch;gaeb-flat;2024-19-24-19-35.D83
+1.1.1;Anwohner- und Anliegerinformation;1,0;psch;gaeb-flat;2024-19-24-19-35.D83
+1.1.1;Notdienst;1,0;psch;gaeb-flat;2024-19-24-19-35.D83
+1.1.2;Baustellensicherung;1,0;Psch;gaeb-flat;2024-19-24-19-35.D83
+1.1.2;Kontrolle der Arbeitsstellensi- cher. zwei bzw.einmal  Schriftl.Dokument;60,0;d;gaeb-flat;2024-19-24-19-35.D83
+1.1.2;Verkehrssich. läng. Dauer aufbauen Arbeitsstelle   ''                                                    21 auß. Kraft setzen 'ca. 50m'                                           32 'Vollsperrung'Anordnung Unt. AG                                       41 Geb.ü.100b.200Eu.;1,0;Psch;gaeb-flat;2024-19-24-19-35.D83
+1.1.2;Verkehrssich. läng. Dauer vorhalten wie Vorposition;60,0;d;gaeb-flat;2024-19-24-19-35.D83
+1.1.2.1;Verkehrssich. läng. Dauer abbauen BI/15;1,0;Psch;gaeb-flat;2024-19-24-19-35.D83
+1.1.2.1;Verkehrssich. läng. Dauer aufbauen Arbeitsstelle   ''                                                    21 auß. Kraft setzen 'ca. 100m'                                          32 'Vollsperrung'Anordnung Unt. AG                                       41 Geb.ü.100b.200Eu.;1,0;Psch;gaeb-flat;2024-19-24-19-35.D83
+1.1.2.1;Verkehrssich. läng. Dauer vorhalten wie Vorposition;60,0;d;gaeb-flat;2024-19-24-19-35.D83
+1.1.2.1;Verkehrssich. läng. Dauer abbauen BI/15;1,0;Psch;gaeb-flat;2024-19-24-19-35.D83
+1.1.2.1;Absperrg.o. Warneinricht. aufstellen Abspsch. 250x2400 Folie Typ 1 5 Richtstr.,rot   Versorg.n.Wahl AN;4,0;St;gaeb-flat;2024-19-24-19-35.D83
+1.1.2.1;Absperrg.o. Warneinricht. aufstellen Leitbake beidseit Folie Typ 1 Zweis. Dauerlicht Versorg.n.Wahl AN;20,0;St;gaeb-flat;2024-19-24-19-35.D83
+1.1.2.1;Stat. vorh. Verkehrszeichen außer Kraft;1,0;Psch;gaeb-flat;2024-19-24-19-35.D83
+1.1.2.1;Bauzaun aufstellen und entfernen 'H =1,00m, '                                                          21 'gelber Kunstst'                                                      22;70,0;m;gaeb-flat;2024-19-24-19-35.D83
+1.1.2.1;Bauzaun umsetzen '1,00m'                                                               21 'Kunststoffzaun'                                                      22;20,0;m;gaeb-flat;2024-19-24-19-35.D83
+1.2.1;Oberboden(Grünfl.)abtr./a.d.Baustel.lag., d=30-50cm;40,0;m²;gaeb-flat;2024-19-24-19-35.D83
+1.2.1;Seitl. gelagerten  Oberboden andecken, d=30-50cm, Grundstücksflächen;40,0;m²;gaeb-flat;2024-19-24-19-35.D83
+1.2.1;Feinplanum Rasenflächen;40,0;m2;gaeb-flat;2024-19-24-19-35.D83
+1.2.1;Rasenansaat, 25 g/m²;40,0;m2;gaeb-flat;2024-19-24-19-35.D83
+1.2.1;Graben für Leitungen herst. gew. Boden, Homogenb. n. Unterlagen AG, Grabentiefe 1,45-4,50 m, Gabenbreite 1,0-1,2 m Verfüllboden ges. BM-0*       Aushub verwerten;15,0;m;gaeb-flat;2024-19-24-19-35.D83
+1.2.1;Leitungszone verfüllen Boden liefern, Rohr DN 125;15,0;m;gaeb-flat;2024-19-24-19-35.D83
+1.2.1;Baustoff liefern, in Leitungsgraben einb. grobk. Boden    Tiefe >1,45-4,50m Rohr DN 125 Baust.;15,0;m;gaeb-flat;2024-19-24-19-35.D83
+1.2.1;Rohrgraben- und Baugrubenaushub von Hand, auf Anordnung der Bauleitung, Bkl. 3-5;5,0;m³;gaeb-flat;2024-19-24-19-35.D83
+1.2.1;Suchschlitze herstellen, Boden einbauen;2,0;St;gaeb-flat;2024-19-24-19-35.D83
+1.2.1.1;Kopfloch für Maschinenaufstellung/ Einstich/ und Montagegrube nach technologischen Erfordernissen, Aushub seitlich lagern und wieder einbauen;82,0;m³;gaeb-flat;2024-19-24-19-35.D83
+1.2.1.1;Kopfloch für Maschinenaufstellung/ Einstich/ und Montagegrube nach technologischen Erfordernissen, Aushub abfahren und verwerten;11,0;m³;gaeb-flat;2024-19-24-19-35.D83
+1.2.1.1;Baugrube zur Beseitigung von Bohrhindernissen nach technologischen Erfordernissen sowie für den Rückbau von Armaturen, Aushub abfahren und verwerten;15,0;m³;gaeb-flat;2024-19-24-19-35.D83
+1.2.1.1;Längsverlegung Schutzrohr PE da 225 x 13,4 im steuerbaren Horizontalspülbohrverfahren;95,0;m;gaeb-flat;2024-19-24-19-35.D83
+1.2.1.1;Auffangen und Entsorgen Bohrsuspension;1,0;psch;gaeb-flat;2024-19-24-19-35.D83
+1.2.1.1;Hinterfüllung Einstich-, Montage- und sonstige Baugruben, Füllboden liefern;15,0;m³;gaeb-flat;2024-19-24-19-35.D83
+1.2.1.1;Rohrbettung, Umhüllung Sand  0 - 8 mm;11,0;m³;gaeb-flat;2024-19-24-19-35.D83
+1.2.1.1;Rohrgraben- und Baugrubenaushub von Hand, Zulage auf Anordnung der Bauleitung;5,0;m³;gaeb-flat;2024-19-24-19-35.D83
+1.2.1.1;Boden bzw. Fels lösen und verwerten bis 0,5 m lösen Planum nicht ges.;3,0;m3;gaeb-flat;2024-19-24-19-35.D83
+1.2.1.1;Baustoff liefern und einbauen grobkörnigerBoden Vertiefungen Abrechng. Auftrag;3,0;m3;gaeb-flat;2024-19-24-19-35.D83
+1.2.1.2;Ver- und Entsorgungsleitungen parallel;5,0;m;gaeb-flat;2024-19-24-19-35.D83
+1.2.1.2;Kreuzung Ver- und Entsorgungsleitungen;10,0;St;gaeb-flat;2024-19-24-19-35.D83
+1.2.1.2;Kreuzung Kabel, Kabelbündel;1,0;St;gaeb-flat;2024-19-24-19-35.D83
+1.2.1.2;Beton C16/20 als Widerlager für Knotenpunkte;1,0;m³;gaeb-flat;2024-19-24-19-35.D83
+1.2.2.2;Rohrgrabenverbau, t= bis 2,00 m;45,0;m²;gaeb-flat;2024-19-24-19-35.D83
+1.2.2.2;Planung, Statik - Trägerbohlwand;1,0;psch;gaeb-flat;2024-19-24-19-35.D83
+1.2.2.2;Trägerbohlverbau, BE, bis 12 m;1,0;psch;gaeb-flat;2024-19-24-19-35.D83
+1.2.2.2;Vermessungsarbeit, Baugrubenverbau: Bohrpunkte Trägerbohlen abstecken;1,0;psch;gaeb-flat;2024-19-24-19-35.D83
+1.2.2.2;Trägerbohlwand, hindernisfreier Boden, Ein- und Rückbau;160,0;m²;gaeb-flat;2024-19-24-19-35.D83
+1.2.2.2;Zulage für Aussparungen in der Holzausfachung DN 250 für Durchführung Schutzrohr;2,0;St;gaeb-flat;2024-19-24-19-35.D83
+1.2.2.3;Zulage für Aussparungen in der Holzausfachung DN 200 für Durchführung Trinkwasserleitung;2,0;St;gaeb-flat;2024-19-24-19-35.D83
+1.2.2.3;Geländer für Absturzsicherung;40,0;m;gaeb-flat;2024-19-24-19-35.D83
+1.2.2.3;Rückbau der Holzausfachung;160,0;m²;gaeb-flat;2024-19-24-19-35.D83
+1.2.2.3;Ausbau der Träger;20,0;St;gaeb-flat;2024-19-24-19-35.D83
+1.2.2.3;Aussteifung Baugrubenverbau, Gurthölzer;25,0;m;gaeb-flat;2024-19-24-19-35.D83
+1.2.2.3;Aussteifung Baugrubenverbau, Gurtsteifen;8,0;St;gaeb-flat;2024-19-24-19-35.D83
+1.2.3.3;"Schutzmantelrohr PE- HD da 140 x 8,3; SDR 17; PN 10 liefern und in offener Bauweise einbauen";15,0;m;gaeb-flat;2024-19-24-19-35.D83
+1.2.3.3;"Schutzmantelrohr PE- HD da 140 x 8,3; SDR 17; PN 10 liefern und in Schutzrohr PE-HD da 225 x 13,4 einziehen";95,0;m;gaeb-flat;2024-19-24-19-35.D83
+1.2.3.3;"Schutzmantelrohr PE- HD da 225 x 13,4 SDR 17; PN 10 mit Ortungsdraht";95,0;m;gaeb-flat;2024-19-24-19-35.D83
+1.2.3.3;Prüffähige statische Berechnung für das Schutzrohr PEHD da 225 x 13,4 liefern;1,0;Psch;gaeb-flat;2024-19-24-19-35.D83
+1.2.3.4;Abschlussmanschette liefern und einbauen PE-HD da 225 / PE-HD da 140;2,0;St;gaeb-flat;2024-19-24-19-35.D83
+1.2.3.4;Gleitkufen liefern und einbauen für Medienrohrverlegung PE-HD da 140 x 8,3 in Schutzrohr PE-HD da 225 x 13,4;36,0;St;gaeb-flat;2024-19-24-19-35.D83
+1.2.3.4;Rohrleitungsmarkierung einschl. Ortungsdraht;15,0;m;gaeb-flat;2024-19-24-19-35.D83
+1.2.3.4;Rohrleitungen spülen u.entkeimen, DN 125;110,0;m;gaeb-flat;2024-19-24-19-35.D83
+1.2.3.4;Druckprüfung, DN 125;110,0;m;gaeb-flat;2024-19-24-19-35.D83
+1.2.3.4;Schneiden vorhandene Trinkwasserleitung PE-HD da 160;2,0;St;gaeb-flat;2024-19-24-19-35.D83
+1.2.3.4;Rückbau und Entsorgung PE-HD da 160;2,0;m;gaeb-flat;2024-19-24-19-35.D83
+1.2.3.4;Ausbau und Entsorgung alter Formstücke, Armaturen und Unterflurhydranten;1,0;St;gaeb-flat;2024-19-24-19-35.D83
+1.2.3.4;Anschluß an vorhandene Leitung herstellen;3,0;St;gaeb-flat;2024-19-24-19-35.D83
+1.2.4.4;KOS DN 125;1,0;St;gaeb-flat;2024-19-24-19-35.D83
+1.2.4.5;KOS DN 150;1,0;St;gaeb-flat;2024-19-24-19-35.D83
+1.2.4.5;Einbaugarnitur für Schieber, höhenverstellbar;2,0;St;gaeb-flat;2024-19-24-19-35.D83
+1.2.4.5;Hinweisschilder f. Schieber;2,0;St;gaeb-flat;2024-19-24-19-35.D83
+1.2.4.5;Schieberkappen höhengerecht setzen;2,0;St;gaeb-flat;2024-19-24-19-35.D83
+1.2.4.5;Hinweissäule, Aluminium;2,0;St;gaeb-flat;2024-19-24-19-35.D83
+1.2.4.5;FFR- Stück, DN 125/100;1,0;St;gaeb-flat;2024-19-24-19-35.D83
+1.2.4.5;T- Stück 150/125;1,0;St;gaeb-flat;2024-19-24-19-35.D83
+1.2.4.5;Bogen 11,25° / 22,50° / 30° / 45° PE da 140 liefern und einbauen;8,0;St;gaeb-flat;2024-19-24-19-35.D83
+1.2.4.5;Bogen 11,25° / 22,50° / 30° / 45° PE da 160 liefern und einbauen;2,0;St;gaeb-flat;2024-19-24-19-35.D83
+1.2.4.5;Vorschweißbund mit Losflansch PE 140 x 8,3 liefern und einbauen;2,0;St;gaeb-flat;2024-19-24-19-35.D83
+1.2.4.6;Vorschweißbund mit Losflansch PE 160 x 9,5 liefern und einbauen;2,0;St;gaeb-flat;2024-19-24-19-35.D83
+1.2.4.6;PE-Schweißmuffe da 140 liefern und einbauen;5,0;St;gaeb-flat;2024-19-24-19-35.D83
+1.2.4.6;PE-Schweißmuffe da 160 liefern und einbauen;2,0;St;gaeb-flat;2024-19-24-19-35.D83
+1.2.4.6;Stahlrohr-Markierungspfahl / Stahl-Fluchtstab, Durchmesser 150 mm, 4 m lang, blau-weiß, liefern und montieren;2,0;St;gaeb-flat;2024-19-24-19-35.D83
+1.2.5.6;Sauberkeitsschicht und Auflager aus Beton C12/15;0,5;m³;gaeb-flat;2024-19-24-19-35.D83
+1.2.5.6;Fertigteil- Schacht herstellen BFT        DU 1000 mm Schachttiefe 2,30 m, Betonsohle mit Pumpensumpf Aufl. C 8/10,10cm Gleitringdichtung ... Freitext ...;1,0;St;gaeb-flat;2024-19-24-19-35.D83
+1.2.5.6;Schachtabdeckung, Rahmen GG, Deckel BEGU, Kl.D 400 selbstnivellierend, liefern und lose auflegen;1,0;St;gaeb-flat;2024-19-24-19-35.D83
+1.2.5.6;Kernbohrung für Bauwerksdurchführung für Schutzrohr PEHD da 225;1,0;St;gaeb-flat;2024-19-24-19-35.D83
+1.2.5.6;Kernbohrung für Bauwerksdurchführung für Medienrohr PEHD da 140;1,0;St;gaeb-flat;2024-19-24-19-35.D83
+1.2.5.6;Ringraumdichtung Link Seal o. glw. zur Eindichtung des Schutzrohrs PE- HD da 225 zum Kontrollschacht;1,0;St;gaeb-flat;2024-19-24-19-35.D83
+1.2.5.7;Ringraumdichtung Link Seal o. glw. zur Eindichtung des Medienrohrs PE- HD da 140 zum Kontrollschacht;1,0;St;gaeb-flat;2024-19-24-19-35.D83
+1.2.5.7;Stützelement für Medienrohr PE da 140;1,0;St;gaeb-flat;2024-19-24-19-35.D83
+1.2.6.7;Bituminöse Befestigung schneiden 15-20 cm stark,;12,0;m;gaeb-flat;2024-19-24-19-35.D83
+1.2.6.7;Oberbau bituminös aufbrechen, entfernen d=0,15 bis 0,20 m, Verwertungsklasse A;10,0;m²;gaeb-flat;2024-19-24-19-35.D83
+1.2.6.7;Tragschicht aufnehmen, 40-50 cm dick Mat. entfernen;20,0;m²;gaeb-flat;2024-19-24-19-35.D83
+1.2.6.7;Planum herstellen und verdichten, Rohrgraben Fahrbahnbereich, EV2 > 45MN/m²;20,0;m²;gaeb-flat;2024-19-24-19-35.D83
+1.2.6.7;Frostschutzschic- ht herstellen Bk100 b.1,0 o.F. 0/45 URA+Einbaudoku, EV2>=120MPa Dicke 28 cm, Abrechng. Auftrag;6,0;m3;gaeb-flat;2024-19-24-19-35.D83
+1.2.6.7;Schottertragschi- cht herstellen Bk100 b.1,0 o.F.  0/45 URA+Einbaudoku, EV2>=150MPa Dicke 15 cm;75,0;m2;gaeb-flat;2024-19-24-19-35.D83
+1.2.6.7;Erschwernis durch Einbauten b.Herst. ToB    Hydranten+Schiebk;2,0;St;gaeb-flat;2024-19-24-19-35.D83
+1.2.6.7;Bankett und ungebundene Fahrbahnbeläge herstellen;10,0;m²;gaeb-flat;2024-19-24-19-35.D83
+1.2.6.8;Asphalttragsch. aus AC 22 T N herst Bk1,8-Bk0,3    Dicke 10 cm Bitumen 70/100;10,0;m2;gaeb-flat;2024-19-24-19-35.D83
+1.2.6.8;Bitumenemulsion aufsprühen Bk1,8-Bk0,3    Asphalt frisch Rampenspritzgerät C60BP4-S Menge 250 g/m2   vor A.deckschicht;10,0;m2;gaeb-flat;2024-19-24-19-35.D83
+1.2.6.8;Asphaltdecksch. aus AC 11 D N herst Bk1,8-Bk0,3    Dicke 4,0 cm Bitumen 50/70;10,0;m2;gaeb-flat;2024-19-24-19-35.D83
+1.2.6.8;Erschwernis infolge Einbauten Erschw.herstellen A.tragschicht Hydranten+Schieberkappen;2,0;St;gaeb-flat;2024-19-24-19-35.D83
+1.2.6.8;Erschwernis infolge Einbauten Erschw.herstellen A.deckschicht Hydranten+Schieberkappen;2,0;St;gaeb-flat;2024-19-24-19-35.D83
+1.2.6.8;Naht in Asphaltschicht herst. Naht ADS      Quernaht Trennscheibe    PmB heiß Dicke ü.2,5-4,5cm;12,0;m;gaeb-flat;2024-19-24-19-35.D83
+1.2.6.8;Abstumpfungsmaßn- ahme durchführen LFK 2/5 Menge 1 kg/m2;10,0;m2;gaeb-flat;2024-19-24-19-35.D83
+1.2.6.8;Verkehrsfläche kehren Walzasphalt    VSM durchführen;10,0;m2;gaeb-flat;2024-19-24-19-35.D83
+1.2.6.8;Prov. Deckenschluss herstellen, Mineralgemisch 0/45 d=14cm;10,0;m²;gaeb-flat;2024-19-24-19-35.D83
+1.2.6.8;Tragschicht (Prov. Fahrbahnbelag) aufnehmen, 14 cm dick Mat. entfernen;10,0;m²;gaeb-flat;2024-19-24-19-35.D83
+2.1.1;Baustelle einrichten Sämtl.LV-Abschn.  Zufahrt vorh.;1,0;Psch;gaeb-flat;2024-19-24-19-35.D83
+2.1.1;Baustelle räumen Sämtl. LV-Abschn.;1,0;Psch;gaeb-flat;2024-19-24-19-35.D83
+2.1.1;Baustelle einrichten, vorhalten, umsetzen und beräumen für Horizontalbohrspühlbohren;1,0;Psch;gaeb-flat;2024-19-24-19-35.D83
+2.1.1;Anwohner- und Anliegerinformation;1,0;psch;gaeb-flat;2024-19-24-19-35.D83
+2.1.1;Notdienst;1,0;psch;gaeb-flat;2024-19-24-19-35.D83
+2.1.1;Planum herstellen und verdichten;40,0;m²;gaeb-flat;2024-19-24-19-35.D83
+2.1.1;Geotextil als Trennschicht verlegen Nutz.Dauer<25Jahr pH 4-9 GRK 4 verlegen quer Abr. Überdeckung;65,0;m2;gaeb-flat;2024-19-24-19-35.D83
+2.1.1;Ungebundene Gehbahnbeläge herstellen;40,0;m²;gaeb-flat;2024-19-24-19-35.D83
+2.1.1;Ungebundene Gehbahnbefestigung   aufnehmen d= 0,20 bis 0,30m;40,0;m²;gaeb-flat;2024-19-24-19-35.D83
+2.1.1.1;Geotextil, GRK 4, ausbauen und entsorgen, einschl. Trennschnitt und Entsorgungskosten;65,0;m2;gaeb-flat;2024-19-24-19-35.D83
+2.1.2.1;Baustellensicherung;1,0;Psch;gaeb-flat;2024-19-24-19-35.D83
+2.1.2.1;Kontrolle der Arbeitsstellensi- cher. zwei bzw.einmal  Schriftl.Dokument;70,0;d;gaeb-flat;2024-19-24-19-35.D83
+2.1.2.1;Einholung von Genehmigungen und verkehrsrechtlichen Anordnungen;1,0;psch;gaeb-flat;2024-19-24-19-35.D83
+2.1.2.1;Änderungen der Verkehrzeichenpläne der Ausschreibung,;1,0;psch;gaeb-flat;2024-19-24-19-35.D83
+2.1.2.1;Informationen über Straßensperrungen und Verkehrsbehinderungen;1,0;Stck;gaeb-flat;2024-19-24-19-35.D83
+2.1.2.1;Aufwendungen zur örtlichen Abstimmung;1,0;psch;gaeb-flat;2024-19-24-19-35.D83
+2.1.2.1;Bauzaun aufstellen und entfernen 'H =1,00m, '                                                          21 'gelber Kunstst'                                                      22;200,0;m;gaeb-flat;2024-19-24-19-35.D83
+2.1.2.1;Bauzaun umsetzen '1,00m'                                                               21 'Kunststoffzaun'                                                      22;50,0;m;gaeb-flat;2024-19-24-19-35.D83
+2.1.3.1;Zusatzzeichen für Z283 etc. anfertigen;4,0;Stck;gaeb-flat;2024-19-24-19-35.D83
+2.1.3.2;Zusatzzeichen für VZ div. etc. anfertigen;1,0;Stck;gaeb-flat;2024-19-24-19-35.D83
+2.1.3.2;Aufstellung der Verkehrszeichen 283 incl.ZZ;8,0;Stck;gaeb-flat;2024-19-24-19-35.D83
+2.1.3.2;Einfache Entfernung mit Transporter;150,0;km;gaeb-flat;2024-19-24-19-35.D83
+2.1.3.2;Aufbau Baustellensicherung (Arbeitsstellenbereich);1,0;psch;gaeb-flat;2024-19-24-19-35.D83
+2.1.3.2;Freigabe der  Baustellensicherung (Arbeitsstellenbereich);1,0;psch;gaeb-flat;2024-19-24-19-35.D83
+2.1.3.2;Aufbau von Schrankenschutzgitter;100,0;m;gaeb-flat;2024-19-24-19-35.D83
+2.1.3.2;Stationär vorhandene Richt- , Verkehrszeichen und;5,0;Stck;gaeb-flat;2024-19-24-19-35.D83
+2.1.3.2;Aufwendungen für die Aufrechterhaltung von;1,0;psch;gaeb-flat;2024-19-24-19-35.D83
+2.1.3.2;nur Fahrleistung  zur LP  Aufbau / Umbau;150,0;km;gaeb-flat;2024-19-24-19-35.D83
+2.1.3.2;Verkehrssicherung läng. Dauer vorh.;23,0;KT;gaeb-flat;2024-19-24-19-35.D83
+2.1.3.3;Schrankenschutzgitter;2300,0;mKT;gaeb-flat;2024-19-24-19-35.D83
+2.1.3.3;tägliche  Kontrolle nach ZTV-SA;21,0;Stck;gaeb-flat;2024-19-24-19-35.D83
+2.1.3.3;Abbau der  Verkehrszeichen  und -einrichtungen incl. VZ;1,0;psch;gaeb-flat;2024-19-24-19-35.D83
+2.1.3.3;Umbau von Absturzsicherung von BA 2.1 auf BA 2.3;100,0;m;gaeb-flat;2024-19-24-19-35.D83
+2.1.3.3;Stationär vorhandene Richt- und Verkehrszeichen;5,0;Stck;gaeb-flat;2024-19-24-19-35.D83
+2.1.3.3;Längsmarkierung Typ II herstellen als temporäre Baustellenmarkierung;135,0;m;gaeb-flat;2024-19-24-19-35.D83
+2.1.3.3;Pfeil  gerade und rechts-, linksweisend Typ II herstellen;1,0;Stck;gaeb-flat;2024-19-24-19-35.D83
+2.1.3.3;Demarkierung  der  markierten Fläche mit geeigneten vom AN;135,0;m;gaeb-flat;2024-19-24-19-35.D83
+2.1.3.3;Demarkierung  der  markierten Fläche mit geeigneten vom AN;1,0;Stck;gaeb-flat;2024-19-24-19-35.D83
+2.1.4.3;Zusatzzeichen für Z283 etc. anfertigen;2,0;Stck;gaeb-flat;2024-19-24-19-35.D83
+2.1.4.4;Zusatzzeichen für VZ div. etc. anfertigen;1,0;Stck;gaeb-flat;2024-19-24-19-35.D83
+2.1.4.4;Plantafel / Verschwenkungstafel auf Grundlage der Planskizze nach;1,0;Stck;gaeb-flat;2024-19-24-19-35.D83
+2.1.4.4;Plantafel aufstellen;1,0;Stck;gaeb-flat;2024-19-24-19-35.D83
+2.1.4.4;Aufbau / Umbau Mehrbeschilderung zu Umbau BA 2.1;1,0;psch;gaeb-flat;2024-19-24-19-35.D83
+2.1.4.4;Freigabe der  Baustellensicherung (Arbeitsstellenbereich);1,0;psch;gaeb-flat;2024-19-24-19-35.D83
+2.1.4.4;Aufbau von Schrankenschutzgitter;50,0;m;gaeb-flat;2024-19-24-19-35.D83
+2.1.4.4;Stationär vorhandene Richt- , Verkehrszeichen und;3,0;Stck;gaeb-flat;2024-19-24-19-35.D83
+2.1.4.4;Aufwendungen für die Aufrechterhaltung von;1,0;psch;gaeb-flat;2024-19-24-19-35.D83
+2.1.4.4;nur Fahrleistung  zur LP  Aufbau / Umbau;150,0;km;gaeb-flat;2024-19-24-19-35.D83
+2.1.4.4;Verkehrssicherung läng. Dauer vorh.;23,0;KT;gaeb-flat;2024-19-24-19-35.D83
+2.1.4.5;Schrankenschutzgitter;3450,0;mKT;gaeb-flat;2024-19-24-19-35.D83
+2.1.4.5;tägliche  Kontrolle nach ZTV-SA;23,0;Stck;gaeb-flat;2024-19-24-19-35.D83
+2.1.4.5;Plantafel abbauen;1,0;Stck;gaeb-flat;2024-19-24-19-35.D83
+2.1.4.5;Abbau der  Verkehrszeichen  und -einrichtungen incl. VZ;1,0;psch;gaeb-flat;2024-19-24-19-35.D83
+2.1.4.5;Umbau von Absturzsicherung;50,0;m;gaeb-flat;2024-19-24-19-35.D83
+2.1.4.5;Stationär vorhandene Richt- und Verkehrszeichen, -;3,0;Stck;gaeb-flat;2024-19-24-19-35.D83
+2.1.4.5;nur Fahrleistung  zur LP  Abbau;150,0;km;gaeb-flat;2024-19-24-19-35.D83
+2.1.4.5;Längsmarkierung Typ II herstellen als temporäre Baustellenmarkierung;135,0;m;gaeb-flat;2024-19-24-19-35.D83
+2.1.4.5;Pfeil  gerade und rechts-, linksweisend Typ II herstellen;5,0;Stck;gaeb-flat;2024-19-24-19-35.D83
+2.1.4.5;Markierungskreuz  groß Typ II herstellen als temporäre Baustellenmarkierung;5,0;Stck;gaeb-flat;2024-19-24-19-35.D83
+2.1.4.6;Markierungskreuz  klein Typ II herstellen als temporäre Baustellenmarkierung;3,0;Stck;gaeb-flat;2024-19-24-19-35.D83
+2.1.4.6;Demarkierung  der  markierten Fläche mit geeigneten vom AN;125,0;m;gaeb-flat;2024-19-24-19-35.D83
+2.1.4.6;Demarkierung  der  markierten Fläche mit geeigneten vom AN;5,0;Stck;gaeb-flat;2024-19-24-19-35.D83
+2.1.4.6;Demarkierung  der  markierten Fläche mit geeigneten vom AN;3,0;Stck;gaeb-flat;2024-19-24-19-35.D83
+2.1.4.6;Demarkierung  der  markierten Fläche mit geeigneten vom AN;5,0;Stck;gaeb-flat;2024-19-24-19-35.D83
+2.1.5.6;Zusatzzeichen für VZ div. etc. anfertigen;2,0;Stck;gaeb-flat;2024-19-24-19-35.D83
+2.1.5.6;Plantafel auf Grundlage der Planskizze nach RUB und;2,0;Stck;gaeb-flat;2024-19-24-19-35.D83
+2.1.5.6;Plantafel aufstellen;2,0;Stck;gaeb-flat;2024-19-24-19-35.D83
+2.1.5.6;Einfache Entfernung mit Transporter;150,0;km;gaeb-flat;2024-19-24-19-35.D83
+2.1.5.6;Aufbau Baustellensicherung;1,0;psch;gaeb-flat;2024-19-24-19-35.D83
+2.1.5.7;Umbau von Schrankenschutzgitter;150,0;m;gaeb-flat;2024-19-24-19-35.D83
+2.1.5.7;Stationär vorhandene Richt- , Verkehrszeichen und;2,0;Stck;gaeb-flat;2024-19-24-19-35.D83
+2.1.5.7;Aufwendungen für die Aufrechterhaltung von;1,0;psch;gaeb-flat;2024-19-24-19-35.D83
+2.1.5.7;nur Fahrleistung  zur LP  Aufbau / Umbau;150,0;km;gaeb-flat;2024-19-24-19-35.D83
+2.1.5.7;Plantafel vorhalten;46,0;StKT;gaeb-flat;2024-19-24-19-35.D83
+2.1.5.7;Verkehrssicherung läng. Dauer vorh.;24,0;KT;gaeb-flat;2024-19-24-19-35.D83
+2.1.5.7;Schrankenschutzgitter;3600,0;mKT;gaeb-flat;2024-19-24-19-35.D83
+2.1.5.7;tägliche  Kontrolle nach;24,0;Stck;gaeb-flat;2024-19-24-19-35.D83
+2.1.5.7;Plantafel abbauen;2,0;Stck;gaeb-flat;2024-19-24-19-35.D83
+2.1.5.7;Abbau der  Verkehrszeichen  und -einrichtungen incl. VZ;1,0;psch;gaeb-flat;2024-19-24-19-35.D83
+2.1.5.8;Abbau von Absturzsicherung;150,0;m;gaeb-flat;2024-19-24-19-35.D83
+2.1.5.8;Stationär vorhandene Richt- und Verkehrszeichen, -;2,0;Stck;gaeb-flat;2024-19-24-19-35.D83
+2.1.5.8;nur Fahrleistung  zur LP  Abbau;150,0;km;gaeb-flat;2024-19-24-19-35.D83
+2.1.5.8;Längsmarkierung Typ II herstellen als temporäre Baustellenmarkierung;275,0;m;gaeb-flat;2024-19-24-19-35.D83
+2.1.5.8;Markierungskreuz  groß Typ II herstellen als temporäre Baustellenmarkierung;12,0;Stck;gaeb-flat;2024-19-24-19-35.D83
+2.1.5.8;Pfeil  gerade und rechts-, linksweisend Typ II herstellen;6,0;Stck;gaeb-flat;2024-19-24-19-35.D83
+2.1.5.8;Demarkierung Typ II herstellen als temporäre;275,0;m;gaeb-flat;2024-19-24-19-35.D83
+2.1.5.8;Demarkierung  der  markierten Fläche mit geeigneten vom AN;6,0;Stck;gaeb-flat;2024-19-24-19-35.D83
+2.1.5.8;Demarkierung  der  markierten Fläche mit geeigneten vom AN;12,0;Stck;gaeb-flat;2024-19-24-19-35.D83
+2.1.6.8;Plantafeln   anfertigen;5,0;Stck;gaeb-flat;2024-19-24-19-35.D83
+2.1.6.9;Zusatzzeichen für Z 455 / 357 etc. anfertigen;13,0;Stck;gaeb-flat;2024-19-24-19-35.D83
+2.1.6.9;Stationär vorhandene Richt- , Verkehrszeichen und;4,0;Stck;gaeb-flat;2024-19-24-19-35.D83
+2.1.6.9;Stationär vorhandene Vor- und Tabellenwegweiser;8,0;Stck;gaeb-flat;2024-19-24-19-35.D83
+2.1.6.9;Aufbau von Plantafeln,;5,0;Stck;gaeb-flat;2024-19-24-19-35.D83
+2.1.6.9;Aufbau Umleitungsbeschilderung;1,0;psch;gaeb-flat;2024-19-24-19-35.D83
+2.1.6.9;-dito- nur Fahrleistung  mit Transporter oder LKW;50,0;km;gaeb-flat;2024-19-24-19-35.D83
+2.1.6.9;Plantafeln / Informations- und Verschwenkungstafeln;230,0;Std;gaeb-flat;2024-19-24-19-35.D83
+2.1.6.9;Verkehrssicherung läng. Dauer vorh.;46,0;KT;gaeb-flat;2024-19-24-19-35.D83
+2.1.6.9;wöchentliche  Kontrolle nach ZTV-SA;6,0;St;gaeb-flat;2024-19-24-19-35.D83
+2.1.6.9;Abbau  von Plantafeln,;5,0;Stck;gaeb-flat;2024-19-24-19-35.D83
+2.1.6.10;Umleitungsführung /Verkehrssicherung läng. Dauer;1,0;Stck;gaeb-flat;2024-19-24-19-35.D83
+2.1.6.10;Stationär vorhandene Richt- und Verkehrszeichen, -;1,0;psch;gaeb-flat;2024-19-24-19-35.D83
+2.1.6.10;Stationär vorhandene Vor- und Tabellenwegweiser, -;1,0;psch;gaeb-flat;2024-19-24-19-35.D83
+2.1.6.10;-dito- nur Fahrleistung  mit Transporter oder LKW;50,0;km;gaeb-flat;2024-19-24-19-35.D83
+2.1.7.10;Markierung, 0.12 m breit, weiß, herstellen;1,0;m;gaeb-flat;2024-19-24-19-35.D83
+2.1.7.10;Markierung, 0.25 m breit, weiß, herstellen;1,0;m;gaeb-flat;2024-19-24-19-35.D83
+2.2.1;Oberboden(Grünfl.)abtr./a.d.Baustel.lag., d=20-30cm;75,0;m²;gaeb-flat;2024-19-24-19-35.D83
+2.2.1;Seitl. gelagerten  Oberboden andecken, d=20-30cm, Grundstücksflächen;75,0;m²;gaeb-flat;2024-19-24-19-35.D83
+2.2.1;Feinplanum Rasenflächen;75,0;m2;gaeb-flat;2024-19-24-19-35.D83
+2.2.1;Rasenansaat, 25 g/m²;75,0;m2;gaeb-flat;2024-19-24-19-35.D83
+2.2.1;Graben für Leitungen herst. gew. Boden, Homogenb. n. Unterlagen AG, Grabentiefe 1,45-2,50 m, Gabenbreite 1,0-1,1 m Verfüllboden ges. BM-0*       Aushub verwerten;20,0;m;gaeb-flat;2024-19-24-19-35.D83
+2.2.1;Leitungszone verfüllen Boden liefern, Rohr DN 150-200;20,0;m;gaeb-flat;2024-19-24-19-35.D83
+2.2.1;Baustoff liefern, in Leitungsgraben einb. grobk. Boden    Tiefe >1,45-2,50m Rohr DN 150-200 Baust.;20,0;m;gaeb-flat;2024-19-24-19-35.D83
+2.2.1;Kopfloch für Maschinenaufstellung/ Einstich/ und Montagegrube nach technologischen Erfordernissen, Aushub seitlich lagern und wieder einbauen;130,0;m³;gaeb-flat;2024-19-24-19-35.D83
+2.2.1;Kopfloch für Maschinenaufstellung/ Einstich/ und Montagegrube nach technologischen Erfordernissen, Aushub abfahren und verwerten;10,0;m³;gaeb-flat;2024-19-24-19-35.D83
+2.2.1.1;Baugrube zur Beseitigung von Bohrhindernissen nach technologischen Erfordernissen sowie für den Rückbau von Armaturen, Aushub abfahren und verwerten;15,0;m³;gaeb-flat;2024-19-24-19-35.D83
+2.2.1.1;Längsverlegung Trinkwasserleitung PEHD da 225 x 13,4 im steuerbaren Horizontalspülbohrverfahren;465,0;m;gaeb-flat;2024-19-24-19-35.D83
+2.2.1.1;Auffangen und Entsorgen Bohrsuspension;1,0;psch;gaeb-flat;2024-19-24-19-35.D83
+2.2.1.1;Hinterfüllung Einstich-, Montage- und sonstige Baugruben, Füllboden liefern;17,0;m³;gaeb-flat;2024-19-24-19-35.D83
+2.2.1.1;Rohrbettung, 10 cm unter Rohr, Sand  0 - 8 mm;8,0;m³;gaeb-flat;2024-19-24-19-35.D83
+2.2.1.1;Rohrgraben- und Baugrubenaushub von Hand, Zulage auf Anordnung der Bauleitung;5,0;m³;gaeb-flat;2024-19-24-19-35.D83
+2.2.1.1;Boden bzw. Fels lösen und verwerten bis 0,5 m lösen Planum nicht ges.;7,0;m3;gaeb-flat;2024-19-24-19-35.D83
+2.2.1.1;Baustoff liefern und einbauen grobkörnigerBoden Vertiefungen Abrechng. Auftrag;7,0;m3;gaeb-flat;2024-19-24-19-35.D83
+2.2.1.1;Suchschlitze herstellen, Boden einbauen;6,0;St;gaeb-flat;2024-19-24-19-35.D83
+2.2.1.1;Ver- und Entsorgungsleitungen parallel;40,0;m;gaeb-flat;2024-19-24-19-35.D83
+2.2.1.2;Kreuzung Ver- und Entsorgungsleitungen;20,0;St;gaeb-flat;2024-19-24-19-35.D83
+2.2.1.2;Kreuzung Kabel, Kabelbündel;5,0;St;gaeb-flat;2024-19-24-19-35.D83
+2.2.1.2;Beton C16/20 als Widerlager für Knotenpunkte;1,0;m³;gaeb-flat;2024-19-24-19-35.D83
+2.2.2.2;Rohrgrabenverbau, t= bis 2,50 m;305,0;m²;gaeb-flat;2024-19-24-19-35.D83
+2.2.3.2;"Druckrohr PE- HD da 180 x 10,7; SDR 17; PN 16 liefern und in offener Bauweise einbauen";5,0;m;gaeb-flat;2024-19-24-19-35.D83
+2.2.3.2;"Schutzmantelrohr PE- HD da 225 x 13,4 SDR 17; PN 16 mit Ortungsdraht";480,0;m;gaeb-flat;2024-19-24-19-35.D83
+2.2.3.2;Rohrleitungsmarkierung einschl. Ortungsdraht;70,0;m;gaeb-flat;2024-19-24-19-35.D83
+2.2.3.2;Rohrleitungen spülen u.entkeimen, DN 150-200;485,0;m;gaeb-flat;2024-19-24-19-35.D83
+2.2.3.2;Druckprüfung, DN 150-200;485,0;m;gaeb-flat;2024-19-24-19-35.D83
+2.2.3.2;Schneiden vorhandene Trinkwasserleitung DN 80-150 GG/St/PE;10,0;St;gaeb-flat;2024-19-24-19-35.D83
+2.2.3.3;Rückbau und Entsorgung GG/St/PE DN 80-150;10,0;m;gaeb-flat;2024-19-24-19-35.D83
+2.2.3.3;Rückbau und Entsorgung DN 150 AZ;20,0;m;gaeb-flat;2024-19-24-19-35.D83
+2.2.3.3;Ausbau und Entsorgung alter Formstücke, Armaturen und Unterflurhydranten;32,0;St;gaeb-flat;2024-19-24-19-35.D83
+2.2.3.3;Verschluß Altleitung DN 150 AZ;10,0;St;gaeb-flat;2024-19-24-19-35.D83
+2.2.3.3;Anschluß an vorhandene Leitung herstellen;3,0;St;gaeb-flat;2024-19-24-19-35.D83
+2.2.4.3;KOS DN 100;1,0;St;gaeb-flat;2024-19-24-19-35.D83
+2.2.4.3;KOS DN 150;2,0;St;gaeb-flat;2024-19-24-19-35.D83
+2.2.4.3;KOS DN 200;3,0;St;gaeb-flat;2024-19-24-19-35.D83
+2.2.4.3;Einbaugarnitur für Schieber, höhenverstellbar;6,0;St;gaeb-flat;2024-19-24-19-35.D83
+2.2.4.3;Hinweisschilder f. Schieber;6,0;St;gaeb-flat;2024-19-24-19-35.D83
+2.2.4.4;Unterflurhydrant DN 80 liefern u. einbauen;1,0;St;gaeb-flat;2024-19-24-19-35.D83
+2.2.4.4;Sickerelement für Unterflurhydrant;1,0;St;gaeb-flat;2024-19-24-19-35.D83
+2.2.4.4;Überflurhydrant DN 100 liefern u. einbauen;1,0;St;gaeb-flat;2024-19-24-19-35.D83
+2.2.4.4;Hinweisschilder f. Unter- und Überflurhydranten;2,0;St;gaeb-flat;2024-19-24-19-35.D83
+2.2.4.4;Schieber- und Hydrantenkappen höhengerecht setzen;7,0;St;gaeb-flat;2024-19-24-19-35.D83
+2.2.4.4;Hinweissäule, Aluminium;3,0;St;gaeb-flat;2024-19-24-19-35.D83
+2.2.4.4;FF- Stück, DN 80, Baulänge 0,1m;1,0;St;gaeb-flat;2024-19-24-19-35.D83
+2.2.4.4;FF- Stück, DN 100, Baulänge 0,3m;1,0;St;gaeb-flat;2024-19-24-19-35.D83
+2.2.4.4;FF- Stück, DN 200, Baulänge 0,3m;3,0;St;gaeb-flat;2024-19-24-19-35.D83
+2.2.4.4;FFK- Stück, DN 200, Bogen 11,25°;1,0;St;gaeb-flat;2024-19-24-19-35.D83
+2.2.4.5;FFK- Stück, DN 200, Bogen 22,5°;1,0;St;gaeb-flat;2024-19-24-19-35.D83
+2.2.4.5;FFK- Stück, DN 200, Bogen 30°;1,0;St;gaeb-flat;2024-19-24-19-35.D83
+2.2.4.5;FFK- Stück, DN 200, Bogen 45°;1,0;St;gaeb-flat;2024-19-24-19-35.D83
+2.2.4.5;FFR- Stück, DN 100/50;1,0;St;gaeb-flat;2024-19-24-19-35.D83
+2.2.4.5;FFR- Stück, DN 200/100;1,0;St;gaeb-flat;2024-19-24-19-35.D83
+2.2.4.5;FFR- Stück, DN 200/150;2,0;St;gaeb-flat;2024-19-24-19-35.D83
+2.2.4.5;T- Stück 200/80;1,0;St;gaeb-flat;2024-19-24-19-35.D83
+2.2.4.5;T- Stück 200/100;1,0;St;gaeb-flat;2024-19-24-19-35.D83
+2.2.4.5;T- Stück 200/150;1,0;St;gaeb-flat;2024-19-24-19-35.D83
+2.2.4.5;T- Stück 200/200;2,0;St;gaeb-flat;2024-19-24-19-35.D83
+2.2.4.6;N- Stück, DN 100;1,0;St;gaeb-flat;2024-19-24-19-35.D83
+2.2.4.6;Liefern und Einbau Multi- Joint DN 150;2,0;St;gaeb-flat;2024-19-24-19-35.D83
+2.2.4.6;Liefern und Einbau Stützhülse für Multijoint DN 150;1,0;St;gaeb-flat;2024-19-24-19-35.D83
+2.2.4.6;Bogen 11,25° / 22,50° / 30° / 45° PE da 90 liefern und einbauen;5,0;St;gaeb-flat;2024-19-24-19-35.D83
+2.2.4.6;Bogen 11,25° / 22,50° / 30° / 45° PE da 225 liefern und einbauen;5,0;St;gaeb-flat;2024-19-24-19-35.D83
+2.2.4.6;T-Stück PE da 225 / 90 liefern und einbauen;2,0;St;gaeb-flat;2024-19-24-19-35.D83
+2.2.4.6;Reduzierung PE da 90 / 63 liefern und einbauen;2,0;St;gaeb-flat;2024-19-24-19-35.D83
+2.2.4.6;Vorschweißbund mit Losflansch PE 63 x 5,8 liefern und einbauen;1,0;St;gaeb-flat;2024-19-24-19-35.D83
+2.2.4.6;Vorschweißbund mit Losflansch PE 180 x 10,7 liefern und einbauen;2,0;St;gaeb-flat;2024-19-24-19-35.D83
+2.2.4.6;Vorschweißbund mit Losflansch PE da 225 x 13,4 liefern und einbauen;4,0;St;gaeb-flat;2024-19-24-19-35.D83
+2.2.4.7;PE-Schweißmuffe da 90 liefern und einbauen;3,0;St;gaeb-flat;2024-19-24-19-35.D83
+2.2.4.7;PE-Schweißmuffe da 180 liefern und einbauen;2,0;St;gaeb-flat;2024-19-24-19-35.D83
+2.2.4.7;PE-Schweißmuffe da 225 liefern und einbauen;11,0;St;gaeb-flat;2024-19-24-19-35.D83
+2.2.5.7;Bituminöse Befestigung schneiden 15-25 cm stark,;110,0;m;gaeb-flat;2024-19-24-19-35.D83
+2.2.5.7;Oberbau bituminös aufbrechen, entfernen d=0,15 bis 0,25 m, Verwertungsklasse A;80,0;m²;gaeb-flat;2024-19-24-19-35.D83
+2.2.5.7;Pflasterdecke aufnehmen  Bet/Verbpfl. 8-10 cm Sandbettung, Material säubern, seitl. zum Wiedereinbau lagern;10,0;m2;gaeb-flat;2024-19-24-19-35.D83
+2.2.5.7;Pflasterd.m. Betonpfl.-steinen aufn. 8 cm dick     ungeb. Fugenmat. ungeb. Bettung   Verwertung AN;5,0;m2;gaeb-flat;2024-19-24-19-35.D83
+2.2.5.7;Rinne aus Betonformst. aufnehmen 1-zeilig, Breite bis 20 cm Fugenmörtel    Fund.bet. ü.10-20 Verwertung AN;5,0;m;gaeb-flat;2024-19-24-19-35.D83
+2.2.5.7;Rinne aus Betonformst. aufnehmen 2-zeilig, Breite 30-40 cm Fugenmörtel    Fund.bet. ü.10-20 Verwertung AN;5,0;m;gaeb-flat;2024-19-24-19-35.D83
+2.2.5.7;Bordsteine aufnehmen  Bet.10/20 - 20/25 Tief/Hochb. Beton, Aufbr.+Eigentum AN;10,0;m;gaeb-flat;2024-19-24-19-35.D83
+2.2.5.8;Tragschicht aufnehmen, 40-50 cm dick Mat. entfernen;70,0;m²;gaeb-flat;2024-19-24-19-35.D83
+2.2.5.8;Tragschicht aufnehmen, 20-30 cm dick Mat. entfernen;10,0;m²;gaeb-flat;2024-19-24-19-35.D83
+2.2.5.8;Erschwernis durch Einbauten b.Aufnehmen SoB  Hydranten+Schieberkappen;10,0;St;gaeb-flat;2024-19-24-19-35.D83
+2.2.5.8;Planum herstellen und verdichten, Rohrgraben Fahrbahnbereich, EV2 > 45MN/m²;95,0;m²;gaeb-flat;2024-19-24-19-35.D83
+2.2.5.8;Frostschutzschic- ht herstellen Bk100 b.1,0 o.F. 0/45 URA+Einbaudoku, EV2>=120MPa Dicke 28 cm, Abrechng. Auftrag;20,0;m3;gaeb-flat;2024-19-24-19-35.D83
+2.2.5.8;Schottertragschi- cht herstellen Bk100 b.1,0 o.F.  0/45 URA+Einbaudoku, EV2>=150MPa Dicke 15 cm;75,0;m2;gaeb-flat;2024-19-24-19-35.D83
+2.2.5.8;Schottertragschi- cht herstellen Gehu.Radw. o.F.  0/45 URA+Einbaudoku   ... Freitext ... ... Freitext ...;10,0;m2;gaeb-flat;2024-19-24-19-35.D83
+2.2.5.8;Erschwernis durch Einbauten b.Herst. ToB    Hydranten+Schiebk;8,0;St;gaeb-flat;2024-19-24-19-35.D83
+2.2.5.8;Asphalttragsch. aus AC 22 T S herst Bk3,2       Dicke 12 cm Bitumen 50/70;80,0;m2;gaeb-flat;2024-19-24-19-35.D83
+2.2.5.8;Bitumenemulsion aufsprühen Bk100-Bk3,2    Asphalt frisch Rampenspritzgerät C60BP4-S Menge 250 g/m2   vor A.bindersch.;80,0;m2;gaeb-flat;2024-19-24-19-35.D83
+2.2.5.9;Asphaltbindersch. a. AC 16 B S herst Bk3,2       Dicke 6 cm Bitumen 25/55-55A Gestein SZ 18;80,0;m2;gaeb-flat;2024-19-24-19-35.D83
+2.2.5.9;Bitumenemulsion aufsprühen Bk100-Bk3,2    Asphalt frisch Rampenspritzgerät C60BP4-S Menge 250 g/m2   vor A.deckschicht;80,0;m2;gaeb-flat;2024-19-24-19-35.D83
+2.2.5.9;Asphaltdecksch. aus AC 11 D S herst Bk3,2       Dicke 4 cm Bitumen 25/55-55A;80,0;m2;gaeb-flat;2024-19-24-19-35.D83
+2.2.5.9;Erschwernis infolge Einbauten Erschw.herstellen A.tragschicht Hydranten+Schieberkappen;1,0;St;gaeb-flat;2024-19-24-19-35.D83
+2.2.5.9;Erschwernis infolge Einbauten Erschw.herstellen A.binderschicht Hydranten+Schieb;1,0;St;gaeb-flat;2024-19-24-19-35.D83
+2.2.5.9;Erschwernis infolge Einbauten Erschw.herstellen A.deckschicht Hydranten+Schieberkappen;1,0;St;gaeb-flat;2024-19-24-19-35.D83
+2.2.5.9;Naht in Asphaltschicht herst. Naht ADS      Quernaht Trennscheibe    PmB heiß Dicke ü.2,5-4,5cm;110,0;m;gaeb-flat;2024-19-24-19-35.D83
+2.2.5.9;Abstumpfungsmaßn- ahme durchführen LFK 1/3      Gestein wie Decke Menge 1 kg/m2   maschinell;80,0;m2;gaeb-flat;2024-19-24-19-35.D83
+2.2.5.9;Verkehrsfläche kehren Walzasphalt    VSM durchführen;80,0;m2;gaeb-flat;2024-19-24-19-35.D83
+2.2.5.9;Pflasterdecke mit  Verb.pfl. herst. Plaster seitlich lagernd Rechteckpflaster 10x20*8 Bettung 0/8. Fuge 0/2           (52)'Ellbogen'                                     61;10,0;m2;gaeb-flat;2024-19-24-19-35.D83
+2.2.5.10;Streifen aus Betonpfl.st. herst. vor Bordsteinen  St.160/160/140 m.F., m. Vorsatz. 1-zeilig bis 10 cm unt.OK  F-Beton 12 MPa Fuge Typ B;5,0;m;gaeb-flat;2024-19-24-19-35.D83
+2.2.5.10;Streifen aus Betonpfl.st. herst. vor Bordsteinen  St.160/160/140 m.F., m. Vorsatz. 2-zeilig bis 10 cm unt.OK  F-Beton 12 MPa Fuge Typ B;5,0;m;gaeb-flat;2024-19-24-19-35.D83
+2.2.5.10;Bordsteine aus Beton setzen BSt. HB 150x250 An Rinne      Gerader Stein bis 10 cm unt.OK  'C16/20 d=15cm'                                     52;10,0;m;gaeb-flat;2024-19-24-19-35.D83
+2.2.5.10;Prov. Deckenschluss herstellen, Mineralgemisch 0/45 d=22cm;80,0;m²;gaeb-flat;2024-19-24-19-35.D83
+2.2.5.10;Tragschicht (Prov. Fahrbahnbelag) aufnehmen, 22 cm dick Mat. entfernen;80,0;m²;gaeb-flat;2024-19-24-19-35.D83
+2.2.5.10;Einfassung Straßenkappe auf unbefestigten Wegen und im Gelände;5,0;St;gaeb-flat;2024-19-24-19-35.D83
+2.2.6.10;Verkehrssicherung an Arbeitsstellen: Markierungsarbeiten;1,0;psch;gaeb-flat;2024-19-24-19-35.D83
+2.2.6.10;Markierungsfläche reinigen Wasserhochdruck;10,0;m2;gaeb-flat;2024-19-24-19-35.D83
+2.2.6.10;Längsmarkierung Typ II herstellen Blockmark. 1 zu 1 Breite 0,25 m ohne Vormarkier.  einkomp. Farbe mind. P 6 a.Asphaltdecksch.;10,0;m;gaeb-flat;2024-19-24-19-35.D83
+2.2.6.10;Längsmarkierung Typ II herstellen Blockmark. 1 zu 1 Breite 0,25 m mit Vormarkierung Kaltplastikmasse grobe Nachstreum. mind. P 6     vorh. Markierung;10,0;m;gaeb-flat;2024-19-24-19-35.D83
+2.3.1;Oberboden(Grünfl.)abtr./a.d.Baustel.lag., d=20-30cm;30,0;m²;gaeb-flat;2024-19-24-19-35.D83
+2.3.1;Seitl. gelagerten  Oberboden andecken, d=20-30cm, Grundstücksflächen;30,0;m²;gaeb-flat;2024-19-24-19-35.D83
+2.3.1;Feinplanum Rasenflächen;30,0;m2;gaeb-flat;2024-19-24-19-35.D83
+2.3.1;Rasenansaat, 25 g/m²;30,0;m2;gaeb-flat;2024-19-24-19-35.D83
+2.3.1;Rohrgraben- und Baugrubenaushub t bis 1,60m lagern;10,0;m³;gaeb-flat;2024-19-24-19-35.D83
+2.3.1;Rohrgraben- und Baugrubenaushub t bis 1,60m abfahren;10,0;m³;gaeb-flat;2024-19-24-19-35.D83
+2.3.1;Boden laden, abfahren, Bkl.6, Zul.,;1,0;m³;gaeb-flat;2024-19-24-19-35.D83
+2.3.1;Rohrbettung, Umhüllung Sand  0 - 8 mm;8,0;m³;gaeb-flat;2024-19-24-19-35.D83
+2.3.1;Verfüllen Leitungsgraben seitl. gelagert;10,0;m³;gaeb-flat;2024-19-24-19-35.D83
+2.3.1.1;Verfüllen von Leitungsgräben, Material liefern;2,0;m³;gaeb-flat;2024-19-24-19-35.D83
+2.3.1.1;Rohrgrabenaushub von Hand;1,0;m³;gaeb-flat;2024-19-24-19-35.D83
+2.3.1.1;Suchschlitze herstellen, Boden einbauen;1,0;St;gaeb-flat;2024-19-24-19-35.D83
+2.3.1.1;Ver- und Entsorgungsleitungen parallel;5,0;m;gaeb-flat;2024-19-24-19-35.D83
+2.3.1.1;Kreuzung Ver- und Entsorgungsleitungen;2,0;St;gaeb-flat;2024-19-24-19-35.D83
+2.3.2.1;Rohrgrabenverbau, t= bis 1,60 m;60,0;m²;gaeb-flat;2024-19-24-19-35.D83
+2.3.3.1;Ventilanbohrung, PN 16, da 225, Abgang da 32;1,0;St;gaeb-flat;2024-19-24-19-35.D83
+2.3.3.1;Ventilanbohrung, PN 16, da 225, Abgang da 63;1,0;St;gaeb-flat;2024-19-24-19-35.D83
+2.3.3.1;Hausanschluss-Schieber für Erdeinbau mit zugfesten Einsteckmuffen für PE-HD-Rohre da 63, PN 16;2,0;St;gaeb-flat;2024-19-24-19-35.D83
+2.3.3.1;KOS DN 50;1,0;St;gaeb-flat;2024-19-24-19-35.D83
+2.3.3.2;Einbaugarnitur für Schieber, höhenverstellbar;1,0;St;gaeb-flat;2024-19-24-19-35.D83
+2.3.3.2;Tragplatte f. Straßenk./Schieber setzen;1,0;St;gaeb-flat;2024-19-24-19-35.D83
+2.3.3.2;Straßenkappe Hausanschluss-Schieber im befestigten Bereich, geringer bis mittlerer Schwerlastverkehr;4,0;St;gaeb-flat;2024-19-24-19-35.D83
+2.3.3.2;Hinweisschilder f. Hausanschlüsse;5,0;St;gaeb-flat;2024-19-24-19-35.D83
+2.3.3.2;Hinweissäule, Aluminium;5,0;St;gaeb-flat;2024-19-24-19-35.D83
+2.3.3.2;"Druckrohr PE- HD da 32 x 3,0; SDR 11; PN 16 liefern, verlegen in offener Bauweise";2,0;m;gaeb-flat;2024-19-24-19-35.D83
+2.3.3.2;"Druckrohr PE- HD da 63 x 5,8; SDR 11; PN 16 liefern, verlegen in offener Bauweise";20,0;m;gaeb-flat;2024-19-24-19-35.D83
+2.3.3.2;Bogen 11,25° / 22,50° / 30° / 45° PE da 63 liefern und einbauen;1,0;St;gaeb-flat;2024-19-24-19-35.D83
+2.3.3.2;PE-Schweißmuffe da 63 liefern und einbauen;7,0;St;gaeb-flat;2024-19-24-19-35.D83
+2.3.3.2;Rohrleitungsmarkierung einschl. Ortungsdraht;17,0;m;gaeb-flat;2024-19-24-19-35.D83
+2.3.3.3;Innendruckprüfung als Sichtprüfung für Hausanschluß da 32-63;5,0;St;gaeb-flat;2024-19-24-19-35.D83
+2.3.3.3;Schneiden vorhandene Trinkwasserleitung PE da 32-63;6,0;St;gaeb-flat;2024-19-24-19-35.D83
+2.3.3.3;Rückbau und Entsorgung Hausanschlußleitungen PE da 32-63;10,0;m;gaeb-flat;2024-19-24-19-35.D83
+2.3.3.3;Ausbau und Entsorgung alter Ventilanbohrarmaturen als Komplettleistung, inkl. Schieberkappen;5,0;St;gaeb-flat;2024-19-24-19-35.D83
+2.3.3.3;Umbindung Hausanschlußleitung da 32-63 außerhalb von Gebäuden;5,0;St;gaeb-flat;2024-19-24-19-35.D83
+2.3.3.3;Anbindung Hausanschlußleitung da 32-63 an die neue Ventilanbohrung im Erdreich;5,0;St;gaeb-flat;2024-19-24-19-35.D83
+2.3.3.3;Plassonendkappe PE da 63 liefern und einbauen;2,0;St;gaeb-flat;2024-19-24-19-35.D83
+2.3.3.3;Schieber- und Hydrantenkappen höhengerecht setzen;5,0;St;gaeb-flat;2024-19-24-19-35.D83

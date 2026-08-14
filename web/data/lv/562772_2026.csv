@@ -1,0 +1,261 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+5;Baustelleneinrichtung als Hauptposition. Einrichten, Vorhalten über die gesamte Bauzeit sowie Räumen der Baustelle und Wiederherstellung des Geländes und Verunreinigungen mit folgenden in den Einheitspreis einzurechnenden Leistungen:;1,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+10;Baustromanschluss einrichten, inklusive;3,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+15;Baustromverteiler vorhalten und warten;24,0;Mona;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+20;Baustromverteiler nach Aufforderung der;3,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+25;Bauwasseranschluss einrichten,;1,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+30;Bauwasserverteiler vorhalten und warten.;24,0;Mona;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+35;Baustromverteiler nach Aufforderung der;1,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+40;Doppelcontainer als Bürocontainer für Baubesprechungen/ Bauleitung des AG liefern, aufstellen sowie herstellen eines Stromanschlusses.;1,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+45;Vorhalten des Baubesprechungs-/ Bauleitungs-/ Bürocontainers für die Dauer von 24 Monaten, einschließlich der Wartung, sowie wöchentliche Reinigung durch einen Reinigungsdienst.;24,0;Mon;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+50;Baubesprechungs-/ Bauleitungs-/ Bürocontainer nach Aufforderung der Bauleitung des AG räumen.;1,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+55;Lieferung und Montage von Wasch- und Abortcontainer;1,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+60;Vorhalten des Sanitärcontainers für die Dauer von 24 Monaten, einschließlich einer 2-mal pro Woche Reinigung bzw. bei entsprechendem Bedarf einer darüber hinausgehenden Reinigung, einschließlich Wartung, Lieferung von Toilettenpapier, Papierhandtüchern, Seife, etc.;24,0;Mon;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+65;Sanitärcontainer nach besonderer Aufforderung der Bauleitung des AG räumen.;1,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+70;Komplettes Schnurgerüst für die gesamte Erstellung der unter den einzelnen Titeln beschriebenen Arbeiten. Dabei ist zu berücksichtigen, dass außer dem Schnurgerüst rings um das Gebäude auch die notwendigen Zwischenschnurgerüste an den Hauptgebäudeachsen bzw. den Gebäudedehnfugen in Abhängigkeit von ;1,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+75;Meterrissplakette für alle Handwerker verbindliche Meterrissplakette in Absprache mit der Bauleitung setzen und markieren.;8,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+80;Liefern und montieren, sowie vorhalten und räumen einer;10,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+85;Bautür ausbauen, umsetzen und wiedereinbauen auf Anweisung der Bauleitung;5,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+90;Aufstellen, Vorhalten und Leeren eines Schuttcontainers 7,5 cbm Inhalt, auf der Baustelle nach Maßgabe der Bauleitung. Der Container ist für alle Fremdhandwerker zur Verfügung zu stellen und nach Maßgabe zu leeren bzw. auszutauschen.;3,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+95;Aufstellen, Vorhalten und Leeren eines Schuttcontainers 7,5 cbm Inhalt, auf der Baustelle nach Maßgabe der Bauleitung. Der Container ist für alle Fremdhandwerker zur Verfügung zu stellen und nach Maßgabe zu leeren bzw. auszutauschen.;3,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+5;Herrichten des Geländes für eine ebene und standfeste  Standfläche des Gerüstes.;1,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+10;Arbeits-/Schutzgerüst und Fassadengerüst LK 4 / W09;1110,0;m²;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+15;Komplette Vorhaltung und Unterhaltung des Arbeits- und Schutzgerüst für jede weitere Woche über die vereinbarte Grundeinsatzzeit hinaus.;8,0;Wo;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+20;Schutzdach von je 5m mit vertikaler Bordwand als Erweiterung des vorbeschriebenen Gerüstes zum Einbau im Bereich von Gebäudezugängen in unterschiedlichen Einzellängen;10,0;m;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+25;Komplette Vorhaltung und Unterhaltung des Schutzdaches Eingänge für jede weitere Woche über die vereinbarte Grundeinsatzzeit hinaus.;8,0;Wo;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+30;"Konsolgerüst; Fanggerüst für Dachflächen < 20° Neigung, gemäß DIN EN  auskragend als Konsolgerüst, für eine Absturzhöhe bis 2,00 m (gemessen von OK oberster Belag bis oberste Lage Dach),";132,0;m;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+35;Komplette Vorhaltung und Unterhaltung des Dachfanggerüstes für jede weitere Woche über die vereinbarte Grundeinsatzzeit hinaus.;8,0;Wo;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+40;Seitenschutz/ Geländer im Gebäudeinneren nach DIN mit Absturzhöhen über 2,00 m Höhe, als Absturzsicherung entlang der Deckenkante.;45,0;m;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+45;Komplette Vorhaltung und Unterhaltung des Seitenschutzes/ Geländer im Gebäudeinneren für jede weitere Woche über die vereinbarte Grundeinsatzzeit hinaus.;8,0;Wo;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+50;Treppenturm zusätzlich liefern und einbauen. Von OK Gelände bis zu obersten Gerüstlage, Höhe: 8,25 m,;3,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+55;Komplette Vorhaltung und Unterhaltung eines Treppenaufgangs für jede weitere Woche über die vereinbarte Grundeinsatzzeit hinaus.;8,0;Wo;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+60;Gerüstbrücke aus Gitterträgerpaar, L = ca. 2 x 4,00 m.;2,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+65;Komplette Vorhaltung und Unterhaltung eines;8,0;Wo;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+70;Stundenlohnarbeiten Facharbeiterstunden Gerüstbauer;20,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+75;Stundenlohnarbeiten Helferstunden Gerüstbauer;20,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+5;Bodenmassen der Fundamentgräben;2,0;m³;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+10;Bodenmassen der Fundamentgräben;0,6;m³;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+15;Bodenmassen der Fundamentgräben;120,0;m³;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+20;Bodenmassen der Fundamentgräben;70,0;m³;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+25;Bodenmassen der Aufzugsunterfahrt;5,0;m³;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+30;Nach Ausheben der Fundamentgräben und vor dem Betonieren ist das Planum der Schotterfläche aus RC-Schotter (0/45) wieder herzustellen.;1600,0;m²;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+5;Rohrgraben, in Formation wie Sand,;210,0;m;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+10;desgleichen wie vor, jedoch;10,0;m;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+15;Nach Verlegen der Rohrleitungen im;210,0;m;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+20;Abwasserkanal aus PP (Polypropylen)-Rohren DIN EN 13476-2, mit Steckverbindung, DN/ID 100, einschl. Dichtungsringe, Doppel- und Reduziermuffen, Verlegung DIN EN 1610 in vorh. verbautem Graben, Grabentiefe bis 1 m, einschl. Bettung Typ 1, Dicke der unteren Bettungsschicht mind. 10 cm, aus Sand, obere;210,0;m;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+25;Bogen als Zulage, aus Werkstoff, wie vor;15,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+30;Abzweige als Zulage, aus Rohrwerkstoff;55,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+35;Doppelabzweige als Zulage, sonst wie vor;5,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+40;Endkappe als Zulage,;50,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+45;Druckprobe nach DIN 1986 einschl.;1,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+50;Gestellung eines Hochdruckspül-;1,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+55;Gestellung eines TV-Fahrzeuges, ausgerüstet;1,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+60;Baustelle für sämtliche, in der Leistungsbeschreibung aufgeführten Leistungen einrichten.;1,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+65;Revisionsplan Entwässerungsleitungen;1,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+70;Einspartenhauseinführung/ Bodeneinführung Komplettset;4,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+75;Mehrspartenhauseinführung/ Bodeneinführung liefern und montieren.;2,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+80;Mehrspartenhauseinführung/ Bodeneinführung liefern und montieren.;1,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+5;Noppenbahn als Sauberkeitsschicht unter den Streifenfundamenten liefern und herstellen.;320,0;m²;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+10;Schalung für Plattenränder von Boden-und;720,0;m²;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+15;Ortbeton Streifenfundamente, in verschiedenen Längen,;2,0;m³;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+20;Ortbeton Streifenfundamente, in verschiedenen Längen,;0,6;m³;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+25;Ortbeton Streifenfundamente, in verschiedenen Längen,;120,0;m³;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+30;Ortbeton Streifenfundamente, in verschiedenen Längen,;70,0;m³;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+35;Perimeterdämmung an der Außen- und Innenseite der Streifenfundamente verlegen, umlaufend der Außenwände, aus Polystyrol- Hartschaum XPS DIN EN 13164, oder gleichwertig, Bemessungswert der Wärmeleitfähigkeit max. 0,030 W/(mK), Dicke 80 mm, Anwendungsgebiet DIN 4108-10 PB, sehr hohe Druckbelastbarkeit;720,0;m²;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+5;Noppenbahn als Sauberkeitsschicht unter der Sohlplatte liefern und herstellen.;1600,0;m²;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+10;Perimeterdämmung unter Bodenplatte, aus Polystyrol PS-Extruderschaum DIN EN 13164, WLG 0,030 W/(mK), Dicke 80 mm, Anwendungsgebiet DIN 4108-10 PB, sehr hohe Druckbelastbarkeit - ds, lose auflegen, liefern und montieren.;72,0;m³;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+15;Trennlage aus PE-Folie 0,2 mm, Stöße überlappen, auf Dämmung gem. DIN 12524 im Sohlenbereich unterhalb der Stb.-Sohle;890,0;m²;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+20;Ortbeton der Sohlplatte, d=25 cm;225,0;m³;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+25;Ortbeton Sauberkeitsschicht, für Bodenplatte, Untergrund waagerecht, obere Betonfläche waagerecht, als unbewehrter Beton, Normalbeton C 12/15 DIN 1045-2, Dicke 5 cm.;710,0;m²;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+30;Trennlage aus PE-Folie 0,2 mm, Stöße überlappen, auf Suaberkeitsschicht gem. DIN 12524 im Sohlenbereich unterhalb der Stb.-Sohle;710,0;m²;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+35;Ortbeton der Sohlplatte, d=21cm;152,0;m³;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+40;Schalung Sohlplatte, einhäuptig einschl. Anlegen von;180,0;m;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+45;Aussparungen in Sohlplatte;5,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+50;Aussparungen in Sohlplatte für die Aufzugsunterfahrt;1,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+55;Aussparungen in Sohlplatte für den Hausanschlussraum;1,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+60;Rückbiegeanschluss Typ HBT 150 - 8/15 - 5 - 800,  mit zweilagiger Rückbiegebewehrung in einem verzinkten Stahlblechkasten zur Herstellung von Bewehrungsanschlüssen,;1,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+5;Stahlbetondecke als teilelementierte Decke liefern und herstellen, bestehend aus Elementtafeln und Passstücken, einschl.der Grundbewehrung. Die Plattenstöße sind grob zu verspachteln.;625,0;m²;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+10;Aussparungen in Stb.-Decke, d=26,5cm, für Aufzug herstellen.;1,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+15;Lieferung und Verlegung von vorgespannten, selbsttragen-;470,0;m²;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+20;Konstruktives Verschließen der Löcher in der Hohlplattendecke mit einer OSB-Platte und Folie, Deckenhöhe 26,5cm, bis Löcher baulich geschlossen werden können, Eindringen von Feuchtigkeit, Regen oder Schnee ist zu verhindern,;210,0;m;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+25;Aussparungen in Hohldielendecke , d=26,5cm, herstellen.;4,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+30;Aussparungen in Hohldielendecke , d=26,5cm, herstellen.;21,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+35;Aussparungen in Hohldielendecke , d=26,5cm, herstellen.;3,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+40;Aussparungen in Hohldielendecke , d=26,5cm, herstellen.;2,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+45;Aussparungen in Hohldielendecke , d=26,5cm, herstellen.;3,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+50;Aussparungen in Hohldielendecke , d=26,5cm, herstellen.;1,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+55;Aussparungen in Hohldielendecke , d=26,5cm, herstellen.;2,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+60;Aussparungen in Hohldielendecke , d=26,5cm, herstellen.;3,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+65;Aussparungen in Hohldielendecke , d=26,5cm, herstellen.;3,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+70;Deckendurchbruch eckig bis 26,5cm Stärke;6,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+75;Deckendurchbruch eckig bis 26,5cm Stärke;4,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+80;Deckendurchbruch eckig bis 26,5 cm Stärke;2,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+85;Deckendurchbruch eckig bis 26,5 cm Stärke;2,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+90;Lieferung und Verlegung von vorgespannten, selbsttragen-;325,0;m²;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+95;Aussparungen in Hohldielendecke , d=26,5cm, für Aufzugsüberfahrt herstellen.;1,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+100;Stahlbetondecke als teilelementierte Decke liefern und herstellen, bestehend aus Elementtafeln und Passstücken, einschl.der Grundbewehrung. Die Plattenstöße sind grob zu verspachteln.;65,0;m²;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+105;Deckendurchbruch eckig bis 40cm Stärke;1,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+110;Deckendurchbruch eckig bis 40cm Stärke;3,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+115;Deckendurchbruch eckig bis 40cm Stärke;2,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+120;Deckendurchbruch eckig bis 40cm Stärke;1,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+5;Prüffähige statische Berechnung Stb.-Fertigteile;1,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+10;Prüffähige Übersichts- u. Werkpläne für Stb.-Fertigteile;1,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+15;Elementwand aus zweiseitigen Halbfertigteilen,;1260,0;m²;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+20;Zulage für das Herstellen der vorbenannten Stb.-Fertigteilwände in Sichtbetonklasse 3;770,0;m²;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+25;Schalung der Wand als glatte Schalung,;125,0;m²;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+30;Zulage für das Herstellen der vorbenannten Schalung Wand in Sichtbetonklasse 3 herstellen;125,0;m²;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+35;Quellband, zum Einlegen unter den Aussenwänden der Stb.-Wände, liefern und unter Beachtung der Einbaurichtlinien des Herstellers fachgerecht einbauen, bauaufsichtliches Prüfungszeugnis vorlegen.;150,0;m;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+40;Innenwände in Ortbeton (Transportbeton) der Wände aus Stahlbeton als;11,5;m³;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+45;Dübelanker gemäß bauaufsichtlicher Zulassung, aus nichtrostendem Stahl, Einbau in Außenwand, beim Aufmauern in vorh. Bauteil aus Beton eindübeln, Schalenabstand 160 mm.;1260,0;m²;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+50;Maueranschlussschiene, zum Festdübeln, zur Befestigung von Mauerwerk mit Maueranschlussankern Typ ML, Sendzimirverzinkt (SV) mit Vollschaumfüllung (Vf),;100,0;m;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+55;Aussparung b/h=3,5/39,5 cm senkrecht, links und rechts an Öffnungen in Betonwand liefern und herstellen.;44,0;m;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+60;Aussparungen in Stahlbetonwand, bis d=24cm, für Tür- und Fensteröffnungen herstellen.;8,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+65;Aussparungen in Stahlbetonwand, bis d=24cm, für Tür- und Fensteröffnungen herstellen.;14,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+70;Aussparungen in Stahlbetonwand, bis d=24cm, für Tür- und Fensteröffnungen herstellen.;17,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+75;Aussparungen in Stb.-Fertigteilwand, bis d=24cm, für Türöffnungen herstellen.;1,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+80;Aussparungen in Stb.-Fertigteilwand, bis d=24cm, für Türöffnungen herstellen.;1,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+85;Aussparungen in Stb.-Fertigteilwand, bis d=24cm, für Türöffnungen herstellen.;1,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+90;Zweiteiliges wärmedämmendes Bewehrungselement, bestehend aus Part C und Part T, mit druckfester Tragstruktur aus Hochleistungsleichtbeton für die thermische Trennung quadratischer Stahlbetonstützen von darüber liegenden Decken, inkl. Vergussbeton.;3,0;Stk;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+95;Wandaussparung bis 10/ 10 cm;6,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+100;Wandaussparung bis 15/15 cm;2,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+105;Wandaussparung bis 30/20 cm;1,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+110;Wandaussparung bis  40/20cm;2,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+115;Wandaussparung bis 50/20 cm;2,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+120;Wandaussparung bis 60/20 cm;2,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+125;Wandaussparung bis 35/40 cm;2,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+130;Wandaussparung bis 35/35cm;1,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+135;Wandaussparung bis 100/13 cm;1,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+140;Wandschlitz 250/2350/80mm;2,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+145;Wandschlitz 1500/110/90mm;1,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+150;Wandschlitz 760/110/960mm;1,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+5;Stütze als Stb.-Fertigteil, gem. Statik und;60,0;m;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+10;Stütze als Stb.-Fertigteil, gem. Statik und;8,0;m;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+15;Stütze als Stb.-Fertigteil, gem. Statik und;22,5;m;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+20;Stb.-Aufkantung über der Hohldielendecke und Stahlbetondecke C 25/30, als Stb.-Fertigteil,;64,0;m;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+25;Stb.-Balken in Deckenebene, als Stb.-Fertigteil, C 25/30,;3,0;m;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+30;Stb.-Balken in Deckenebene, als Stb.-Fertigteil, C 25/30,;7,0;m;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+35;Stb.-Balken in Deckenebene, als Stb.-Fertigteil, C 25/30,;30,0;m;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+40;Stb.-Balken in Deckenebene, als Stb.-Fertigteil, C 25/30,;10,5;m;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+45;Stb.-Balken in Deckenebene, als Stb.-Fertigteil, C 25/30,;12,5;m;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+50;Stahlbetonstütze, als Stb.-Fertigteil, C 25/30,;12,0;m;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+55;Stahlbetonstütze, als Stb.-Fertigteil, C 25/30,;15,2;m;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+60;Stahlbetonstütze, als Stb.-Fertigteil, C 25/30,;4,0;m;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+65;Stahlbetonstütze, als Stb.-Fertigteil, C 25/30,;4,0;m;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+70;Stahlbeton-Fenstersturz, als Stb.-Fertigteil, C 25/30,;24,0;m;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+75;Stahlbeton-Fenstersturz, als Stb.-Fertigteil, C 25/30,;44,0;m;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+80;Stb.-Türsturz, als Stb.-Fertigteil, C 25/30,;3,5;m;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+85;Stb.-Treppe Fertigteil herstellen und liefern:;1,0;Stk;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+90;Für die akustische Entkopplung von Treppenlauf und Stb.-Decke, siehe Statik, liefern und einbauen.;3,0;m;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+95;Für die akustische Entkopplung von Treppenlauf und Sohle, siehe Statik, liefern und einbauen.;3,0;m;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+100;Akustische Entkopplung von Treppenlauf und Wände,;9,0;m;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+105;Stb.-Aufkantung auf der Stb.-Sohle in Fahrzeughalle, in Ebene der C-Profile, Befestigung an Stb.-Stützen, C 25/30, als Stb.-Fertigteil,;24,0;m;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+110;Zulage zur Vorposition:;24,0;m;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+115;Wärmedämmendes Stahlbetonfertigteil als Bewehrungselement;3,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+120;Anschluss für die Stütze Position 11 mit einem wärmedämmenden zweiteiligem Bewehrungselement, mit druckfester Tragstruktur aus Hochleistungsleichtbeton für die thermische Trennung Stahlbetonstützen von darunter liegenden Decken, mit PP-Fasern, für Stütze 36,5/24cm,;3,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+125;Stb.-Balken in Deckenebene, als Stb.-Fertigteil,C 25/30,;16,5;m;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+130;Stahlbetonstütze, als Stb.-Fertigteil, C 25/30,;11,0;m;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+135;Stahlbetonstütze, als Stb.-Fertigteil, C 25/30,;13,6;m;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+140;Stahlbetonstütze, als Stb.-Fertigteil, C 25/30,;30,0;m;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+145;Stb.-Balken in Deckenebene, als Stb.-Fertigteil, C 25/30,;38,0;m;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+150;Stahlbetonringbalken, als Stb.-Fertigteil, C 25/30,;13,5;m;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+155;Stahlbetonringbalken, als Stb.-Fertigteil, C 25/30,;51,0;m;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+160;Stahlbeton-Attika, als Stb.-Fertigteil, C 25/30,;90,0;m;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+5;Noppenbahn als Sauberkeitsschicht unter der Aufzugssohle liefern und herstellen.;4,8;m²;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+10;Ortbeton (Transportbeton) der Bodenplatte als;1,2;m³;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+15;Fugenblech liefern und fachgerecht nach;10,0;m;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+20;Ortbeton (Transportbeton) der Wände aus Stahlbeton als;1,0;m³;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+25;Schalung der Wand als glatte Schalung, Betonfläche;3,6;m²;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+30;Perimeterdämmung unter Bodenplatte und an der Außenseite der Stb.-Wände, aus Polystyrol PS-Extruderschaum DIN EN 13164, WLG 0,030 W/(mK), Dicke 80 mm, Anwendungsgebiet DIN 4108-10 PB, sehr hohe Druckbelastbarkeit - ds, liefern und montieren.;15,0;m³;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+35;Schalung der Wand als glatte Schalung,;4,0;m²;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+40;Außenwände in Ortbeton (Transportbeton) der Wände aus Stahlbeton als;1,2;m³;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+45;Stahlbetondecke als teilelementierte Decke liefern und herstellen, für die Aufzugsüberfahrt,;5,0;m²;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+50;Einbau von bauseits gelieferten Ankerschienen für den Aufzug,;38,0;m;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+5;Stahl, B St.500 S (Betonstahl) in den erforderlichen Längen und Stärken liefern, schneiden, biegen und lt. Statik verlegen.;48000,0;kg;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+10;Stahl, B St. 500 M (Matten) in den erforderlichen Längen und Stärken als Lagermatten frei Baustelle liefern, schneiden, biegen und lt. Statik verlegen.;60000,0;kg;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+5;ÜK2-Laborwagen;1,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+10;Dokumentation;1,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+15;Fremdüberwachung;1,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+5;Iso-Kimmstein;35,0;m;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+10;Iso-Kimmstein, DIN V 106;73,0;m;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+15;Waagerechte Abdichtung gegen Bodenfeuchte, DIN 18195-4, unterhalb der Verblender und Perimeterdämmung,;35,0;m;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+20;Waagerechte Abdichtung über Fensteröffnungen, DIN 18195-4, in Wänden aus Mauerwerk,;127,0;m;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+25;Verblendmauerwerk DIN 1053-1 an vorh. Drahtankern, mit 14 cm Mineralwolldämmung mit 2 cm Luftschicht, Format DF, Mauermörtel MG II a DIN V 18580, am unteren seitlichen Ende der Öffnungen sind 2-2,5 cm tiefe und 3 cm hohe Aussparungen als Tropfkante für die seitlichen Abschlüsse/ Endkappen der Fenste;720,0;m²;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+30;Aussparung im Verblender anlegen, senkrecht für die Regenfalleitungen, Breite 17cm für DN125 Fallleitung (bauseits), einschl. des erforderlichen Winkels, beschichtet und verzinkt, Länge: 55cm, Anzahl Kantungen: 4 Stück, Befestigung seitlich am Verblender;60,0;m;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+35;Öffnungen größer als 2,5 m² anlegen;21,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+40;Abdichtung gegen Bodenfeuchte, abgetreppt, als Z-Isolierung, in Wänden aus zweischaligem Mauerwerk, DIN 18195-4, aus Bitumenbahnen, Bitumen-Dachdichtungsbahnen DIN EN 14967 - G 200 DD mit Glasgewebeeinlage 200 g/m², einlagig, Anwendungstyp DIN V 20000-202 MSB (Mauersperrbahn), in vorhandene Innensch;140,0;m;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+45;Perimeter-Kerndämmung für 2-schalige Außenwand, aus extrudiertem Polystyrol-Hartschaum, XPS DIN EN 13164, 2-lagig, versetzt gestoßen, als Platte, Bemessungswert der Wärmeleitfähigkeit 0,035 W/(mK), Baustoffklasse DIN 4102-1 Baustoffklasse DIN 4102-1 B1 (schwer entflammbar), Gesamtdicke 140 mm, Anwen;112,0;m²;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+50;Mineralwolle-Kerndämmung für 2-schalige Außenwand,;540,0;m²;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+55;Mineralwolle-Kerndämmung für 2-schalige Außenwand,;31,0;m²;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+60;Mauerrandstreifen in den Laibungen zwischen Verblend- mauerwerk und Innenschale, waagerecht und senkrecht (nur wenn kein Rolladenkasten vorgesehen ist), die Hohlschicht im Bereich der Tür-und Fensteröffnungen mit Mauerrandstreifen aus extrudiertem Polystyrol-Hartschaum (XPS) schließen, wasserabweise;225,0;m;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+65;Statische Berechung und Werkplanung für die Einzelkonsolanker herstellen und vor Bestellung beim Architketen zur Prüfung einreichen;1,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+70;Winkelkonsolanker mit Versatz mit bauaufsichtlich zugelassenem Tragankerkopf einschließlich Dübel für gerissenen Beton liefern und fachgerecht einbauen.;190,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+75;Zulage zu Fertigteilsturz;19,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+80;Überdecken von Öffnungen, über 1,135m, im Verblendmauerwerk mit Betonfertigteil, als waagerechte Verblenderschichten (keine Grenadierschicht), mit passendem Verblendmauerwerk, Höhe/ Schichtenanzahl nach statischer Erfordernis.;1,5;m;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+85;Überdecken von Öffnungen, über 2,635 m, im Verblendmauerwerk mit Betonfertigteil, als waagerechte Verblenderschichten (keine Grenadierschicht), mit passendem Verblendmauerwerk, Höhe/ Schichtenanzahl nach statischer Erfordernis.;2,8;m;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+90;Überdecken von Öffnungen, über 3,01 m, im Verblendmauerwerk mit Betonfertigteil, als waagerechte Verblenderschichten (keine Grenadierschicht), mit passendem Verblendmauerwerk, Höhe/ Schichtenanzahl nach statischer Erfordernis.;6,4;m;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+95;Überdecken von Öffnungen, bis 2,01 m, verschiedene Elementlängen, im Verblendmauerwerk mit Betonfertigteil, als waagerechte Verblenderschichten (keine Grenadierschicht), mit passendem Verblendmauerwerk, Höhe/ Schichtenanzahl nach statischer Erfordernis.;10,2;m;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+100;Überdecken von Öffnungen, bis 3,51 m, (zzgl. Auflager), verschiedene Längen, im Verblendmauerwerk mit Betonfertigteil, als waagerechte Verblenderschichten (keine Grenadierschicht), mit passendem Verblendmauerwerk, Höhe/ Schichtenanzahl nach statischer Erfordernis.;7,3;m;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+105;Überdecken von Öffnungen, über 2,135 m, im Verblendmauerwerk mit Betonfertigteil, als waagerechte Verblenderschichten (keine Grenadierschicht), mit passendem Verblendmauerwerk, Höhe/ Schichtenanzahl nach statischer Erfordernis.;4,8;m;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+110;Überdecken von Öffnungen, bis 7,55 m, verschiedene Elemntlängen, im Verblendmauerwerk mit Betonfertigteil, als waagerechte Verblenderschichten (keine Grenadierschicht), mit passendem Verblendmauerwerk, Höhe/ Schichtenanzahl nach statischer Erfordernis.;13,0;m;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+115;Überdecken von Öffnungen, bis 18,51 m (zzgl. Auflager), verschiedene Längen, im Verblendmauerwerk mit Betonfertigteil, als waagerechte Verblenderschichten (keine Grenadierschicht), mit passendem Verblendmauerwerk, Höhe/ Schichtenanzahl nach statischer Erfordernis.;68,0;m;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+120;PVC-Stoßfugenlüfter, 1,2 x 71 mm,;400,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+125;Bewegungsfuge in Mauerwerk anlegen und füllen, mit elastischem Fugendichtstoff, Ausführung und Vorbehandlung nach Vorschrift des Fugendichtstoffherstellers, Fugentiefe über 10 bis 20 mm.;80,0;m;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+130;Musterflächen für das Verfugen des Verblendmauerwerks sind vor Ausführung der Verfugen herzustellen und in die Kalkulation einzubeziehen.;4,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+135;Verfugen des Verblendmauerwerks, Format NF, mit Fugenmörtel MG III, 12 Schichten je Meter Mauerwerkshöhe.;640,0;m²;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+140;Gründungsstein;1,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+5;Waagerechte Abdichtung gegen Bodenfeuchte, DIN 18195-4, in Wänden aus Mauerwerk,;20,0;m;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+10;Iso-Kimmstein, DIN V 106;20,0;m;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+15;Mauerwerk nach bauaufsichtlicher Zulassung, der Innenwand, für späteren Putzauftrag, Höhe bis 3,70 m, Mauerwerksdicke 11,5 cm, Kalksandstein, DIN V 106, KS, Festigkeitsklasse 20, Rohdichteklasse 2,0kg/dm³, Dünnbett-Mauermörtel MG II a DIN V 18580.;67,0;m²;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+20;Waagerechte Abdichtung gegen Bodenfeuchte, DIN 18195-4, in Wänden aus Mauerwerk,;98,0;m;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+25;Iso-Kimmstein;98,0;m;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+30;Mauerwerk nach bauaufsichtlicher Zulassung, der Innenwand, für späteren Putzauftrag, Höhe bis 3,70 m, Mauerwerksdicke 17,5 cm, Kalksandstein, DIN V 106, KS, Festigkeitsklasse 20, Rohdichteklasse 2,0, Dünnbett-Mauermörtel MG II a DIN V 18580.;400,0;m²;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+35;Sturz über Öffnungen des Innenmauerwerks 17,5 cm;5,0;m;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+40;Waagerechte Abdichtung gegen Bodenfeuchte, DIN 18195-4, in Wänden aus Mauerwerk,;72,0;m;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+45;Iso-Kimmstein;72,0;m;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+50;Mauerwerk nach bauaufsichtlicher Zulassung, der Innenwand, für späteren Putzauftrag, Höhe bis 3,75 m, Mauerwerksdicke 24,0 cm, Kalksandstein, DIN V 106, KS, Festigkeitsklasse 12, Rohdichteklasse 2,0, Dünnbett-Mauermörtel MG II a DIN V 18580.;250,0;m²;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+55;Sturz über Öffnungen des Innenmauerwerks 20,0 cm;12,5;m;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+60;Waagerechte Abdichtung gegen Bodenfeuchte, DIN 18195-4, in Wänden aus Mauerwerk,;15,0;m;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+65;Mauerwerk nach bauaufsichtlicher Zulassung der Innenwand als Brandwand F90, aus Porenbeton d= 30 cm, für späteren Putzauftrag, PPW4, Dünnbett-Mauermörtel MG II a DIN V 18580, Rohdichteklasse 0,65;56,0;m²;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+70;Schneiden von Hand oder maschinell von Mauerwerk aus Kalksandstein und Porenbeton, der Innenwand, Wanddicke 11,5 - 30,0 cm, bei Ecken < bzw. > 90° oder zur Anpassung an den Dachverlauf.;50,0;m;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+75;Verblendmauerwerk DIN 1053-1 als Vorsatzschale im Innenbereich, Format DF, Mauermörtel MG II a DIN V 18580,;38,0;m²;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+80;Fensterbänke, innen, aus Kunststein, gleichmäßig dick, einteilig, vordere Kantenfläche voll und 2 Seitenflächen teilweise sichtbar, gefast, gerade Ecke, in Mörtelbett verlegen und verfugen, in verschiedenen Längen gem. Fensteröffnung, Breite 18,5cm - 31 cm , Dicke 2 cm, Oberfläche poliert, Farbton C;77,0;m;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+5;Abzudichtende, mineralischen Flächen reinigen und staubfreien und tragfähigen Untergrund erstellen.;250,0;m²;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+10;"Fußpunktabdichtung gegen die Wassereinwirkungsklasse W4-E ""Spritzwasser im Wandsockel"" aus der 2.-komp.,";250,0;m²;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+15;Horizontale und vertikale. druckfeste Dämmstoffe und Unterbauelemente für die nachfolgende Fenstermontage vollflächig mit der flexiblen, polymermodifizierten Dickbeschichtung auf die vorhandene;23,0;m;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+20;Untergrund reinigen und gemäß Herstellervorgaben vorbereiten. Fugen und Übergänge zu nicht mineralischen Bauteilen sowie zwischen Fenster und Dämmstoffen mit;23,0;m;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+25;Alle in den vorgenannten Positionen vorbereitete Flächen vollflächig mit der flexiblen, polymermodifizierten Dickbeschichtung (FPD) überarbeiten.;28,0;m²;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+30;Für die Abdichtungsarbeiten ausgesparte Eckbereiche des Verblendmauerwerks fachgerecht ausmauern.;28,0;m²;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+5;Wandschlitz 250/2100/80mm;2,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+10;Wandschlitz 250/2800/80mm;2,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+15;Wanddurchbruch bis 15/ 15 cm;6,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+20;Wanddurchbruch bis 25/ 20 cm;5,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+25;Wanddurchbruch bis 25/ 15 cm;3,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+30;Wanddurchbruch bis 30/ 15 cm;4,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+35;Wanddurchbruch bis 30/ 20 cm;2,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+40;Wanddurchbruch bis 35/ 35 cm;9,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+45;Wanddurchbruch bis 35/ 40 cm;3,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+50;Wanddurchbruch bis 45/ 20 cm;4,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+55;Wanddurchbruch bis 50/ 20 cm;3,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+60;Wanddurchbruch bis 60/45 cm;2,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+65;Wanddurchbruch bis 70/ 20 cm;3,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+70;Wanddurchbruch bis 75/ 50 cm;2,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+5;Arbeits- und Schutzgerüst;1,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+10;Arbeits- und Schutzgerüst im Treppenhaus;50,0;m²;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+15;Einlagiges Innenputzsystem auf Wand, in allen Geschossen, Putzgrund Mauerwerk oder Beton, saugfähig, glatt, aus Putzmörtel P II DIN EN 998-1 und DIN V 18550, Dicke 15 mm, Putzoberfläche Qualitätsstufe 2 (Q2), abgezogen und abgerieben, für nachfolgende Anstriche, Fliesen oder Tapeten,;2850,0;m²;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+20;Einlagiges Innenputzsystem aus Kalkzementputz an der Treppe anbringen. Die Treppe ist seitlich und von unten zu putzen, Ausführung gem. der Vorposition;15,0;m²;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+25;angrenzende Bauteile, Fenster, schützen;200,0;m²;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+30;angrenzende Bauteile, Fensterbänke, schützen;30,0;m²;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+35;Zulage zum Innenputz für das Beiputzen von Fensterlaibungen.;225,0;m;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+40;Eckschoner für Außenecken der Laibungen, Unterputzprofil aus nichtrostendem Stahl, für Putzdicke 15 mm.;240,0;m;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+45;Schlitz/Fehlstelle füllen, in Wänden, mit Putzmörtel P II bzw. P IV, Schlitzbreite über 0,05 bis 0,15 m, Schlitztiefe über 0,05 bis 0,15m.;100,0;m;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+50;Zu-/Überputzen von Leitungsschlitzen, Kalkzementputz P II bzw. Kalkgipsputz P IV, Breite über 10 bis 15 cm.;100,0;m;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+55;Bauträgerplatte;55,6;m;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+60;Putzträger, Metallgewebe;65,0;m;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+65;Trennstreifen zu GK Trockenbauwänden;87,2;m;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+70;Eckschoner für Außenecken, Unterputzprofil aus nichtrostendem Stahl, für Putzdicke 15 mm.;32,0;m;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+75;Einteiliges Fertigteilprofil Anputzleiste, bestehend aus Kunststoffschiene, selbstklebendem Fugendichtband, Gewebestreifen und Klebestreifen für Folienabdeckung, liefern und zum Herstellen eines sauberen Putzabschlusses an Fensterblendrahmen, Türblendrahmen und andere Bauteile einbauen.;112,0;m;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+80;Stundenlohnarbeiten Facharbeiterstunden Gerüstbauer;20,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+85;Stundenlohnarbeiten Helferstunden Gerüstbauer;20,0;St;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+5;Revisions- und Bestandsunterlagen der kompletten Grundleitungen mit Revisionsplänen im Maßstab 1:50, farbig angelegt, eingeheftet in einen Sammelordner mit allen Protokollen, Kopien und Bedienungsunterlagen aller relevanten Einzelkomponenten, Antrags- und Genehmigungsunterlagen.;1,0;Stck;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+5;Stundenlohnarbeiten durch Facharbeiter/-in;130,0;h;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83
+10;Stundenlohnarbeiten durch Helfer/-in;40,0;h;gaeb;leistungsbeschreibungen/302 LV Rohbau,Gerüst,Putz.X83

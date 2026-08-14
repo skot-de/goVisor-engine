@@ -1,0 +1,42 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+1;Radialventilator;1,0;St;gaeb;leistungsbeschreibungen/BA1_493_LV_Absaugung_Dämpfe_H7_Angebotsaufforderung.x83
+2;Schwingmetall-Satz;1,0;St;gaeb;leistungsbeschreibungen/BA1_493_LV_Absaugung_Dämpfe_H7_Angebotsaufforderung.x83
+3;Gummimanschetten;1,0;St;gaeb;leistungsbeschreibungen/BA1_493_LV_Absaugung_Dämpfe_H7_Angebotsaufforderung.x83
+4;Schalldämmhaube;1,0;St;gaeb;leistungsbeschreibungen/BA1_493_LV_Absaugung_Dämpfe_H7_Angebotsaufforderung.x83
+5;Reparatur-Notschalter;1,0;St;gaeb;leistungsbeschreibungen/BA1_493_LV_Absaugung_Dämpfe_H7_Angebotsaufforderung.x83
+6;Analgen-/Ventilatorsteuerung;1,0;St;gaeb;leistungsbeschreibungen/BA1_493_LV_Absaugung_Dämpfe_H7_Angebotsaufforderung.x83
+7;Signalleuchte;1,0;St;gaeb;leistungsbeschreibungen/BA1_493_LV_Absaugung_Dämpfe_H7_Angebotsaufforderung.x83
+8;Druckschalter;1,0;St;gaeb;leistungsbeschreibungen/BA1_493_LV_Absaugung_Dämpfe_H7_Angebotsaufforderung.x83
+1;Luftleitungen als Rechteckkanal;3,0;m2;gaeb;leistungsbeschreibungen/BA1_493_LV_Absaugung_Dämpfe_H7_Angebotsaufforderung.x83
+2;Formstücke als Rechteckkanal;1,0;m2;gaeb;leistungsbeschreibungen/BA1_493_LV_Absaugung_Dämpfe_H7_Angebotsaufforderung.x83
+3;Wickelfalzrohr DN 125;2,0;m;gaeb;leistungsbeschreibungen/BA1_493_LV_Absaugung_Dämpfe_H7_Angebotsaufforderung.x83
+4;Wickelfalzrohr DN 180;6,0;m;gaeb;leistungsbeschreibungen/BA1_493_LV_Absaugung_Dämpfe_H7_Angebotsaufforderung.x83
+5;Wickelfalzrohr DN 200;1,0;m;gaeb;leistungsbeschreibungen/BA1_493_LV_Absaugung_Dämpfe_H7_Angebotsaufforderung.x83
+6;Wickelfalzrohr DN 250;2,0;m;gaeb;leistungsbeschreibungen/BA1_493_LV_Absaugung_Dämpfe_H7_Angebotsaufforderung.x83
+7;Wickelfalzrohr DN 280;1,0;m;gaeb;leistungsbeschreibungen/BA1_493_LV_Absaugung_Dämpfe_H7_Angebotsaufforderung.x83
+8;Wickelfalzrohr DN 300;4,0;m;gaeb;leistungsbeschreibungen/BA1_493_LV_Absaugung_Dämpfe_H7_Angebotsaufforderung.x83
+9;Wickelfalzrohr DN 355;1,0;m;gaeb;leistungsbeschreibungen/BA1_493_LV_Absaugung_Dämpfe_H7_Angebotsaufforderung.x83
+10;Formstück als Bogen, DN 180;4,0;St;gaeb;leistungsbeschreibungen/BA1_493_LV_Absaugung_Dämpfe_H7_Angebotsaufforderung.x83
+11;Formstück als Bogen, DN 300;4,0;St;gaeb;leistungsbeschreibungen/BA1_493_LV_Absaugung_Dämpfe_H7_Angebotsaufforderung.x83
+12;Formstück als Abzweig 90°, DN 250;1,0;St;gaeb;leistungsbeschreibungen/BA1_493_LV_Absaugung_Dämpfe_H7_Angebotsaufforderung.x83
+13;Formstück als Abzweig 90° DN 300;2,0;St;gaeb;leistungsbeschreibungen/BA1_493_LV_Absaugung_Dämpfe_H7_Angebotsaufforderung.x83
+14;Formstück als Übergangsstück DN 200;1,0;St;gaeb;leistungsbeschreibungen/BA1_493_LV_Absaugung_Dämpfe_H7_Angebotsaufforderung.x83
+15;Formstück als Übergangsstück DN 250;1,0;St;gaeb;leistungsbeschreibungen/BA1_493_LV_Absaugung_Dämpfe_H7_Angebotsaufforderung.x83
+16;Formstück als Übergangsstück DN 300;2,0;St;gaeb;leistungsbeschreibungen/BA1_493_LV_Absaugung_Dämpfe_H7_Angebotsaufforderung.x83
+17;Regulier-/Drosselklappe, rund, DN 180;4,0;St;gaeb;leistungsbeschreibungen/BA1_493_LV_Absaugung_Dämpfe_H7_Angebotsaufforderung.x83
+18;Rohrschalldämpfer;1,0;St;gaeb;leistungsbeschreibungen/BA1_493_LV_Absaugung_Dämpfe_H7_Angebotsaufforderung.x83
+19;Dachdurchführung;1,0;St;gaeb;leistungsbeschreibungen/BA1_493_LV_Absaugung_Dämpfe_H7_Angebotsaufforderung.x83
+20;Kompaktgitter Zuluft für Kanaleinbau 825 / 75;8,0;St;gaeb;leistungsbeschreibungen/BA1_493_LV_Absaugung_Dämpfe_H7_Angebotsaufforderung.x83
+21;Installationsschiene, ca. 40 / 40 / 2.0 mm;14,0;m;gaeb;leistungsbeschreibungen/BA1_493_LV_Absaugung_Dämpfe_H7_Angebotsaufforderung.x83
+22;Gewindestab M8;5,0;m;gaeb;leistungsbeschreibungen/BA1_493_LV_Absaugung_Dämpfe_H7_Angebotsaufforderung.x83
+23;Buche-Multiplex- oder Massiv-Arbeitsplatte 40 mm;8,0;m;gaeb;leistungsbeschreibungen/BA1_493_LV_Absaugung_Dämpfe_H7_Angebotsaufforderung.x83
+1;Interne Elektroinstallation der Anlage;1,0;psch;gaeb;leistungsbeschreibungen/BA1_493_LV_Absaugung_Dämpfe_H7_Angebotsaufforderung.x83
+2;Einregulierung und Inbetriebnahme;1,0;psch;gaeb;leistungsbeschreibungen/BA1_493_LV_Absaugung_Dämpfe_H7_Angebotsaufforderung.x83
+3;Einweisung des Nutzers;1,0;St;gaeb;leistungsbeschreibungen/BA1_493_LV_Absaugung_Dämpfe_H7_Angebotsaufforderung.x83
+1;Gerüste bzw. Arbeitsbühnen;1,0;St;gaeb;leistungsbeschreibungen/BA1_493_LV_Absaugung_Dämpfe_H7_Angebotsaufforderung.x83
+2;Material-/ Arbeitscontainer;1,0;Wo;gaeb;leistungsbeschreibungen/BA1_493_LV_Absaugung_Dämpfe_H7_Angebotsaufforderung.x83
+3;Werkstatt-/ Fertigungs- und Detailzeichnungen;1,0;St;gaeb;leistungsbeschreibungen/BA1_493_LV_Absaugung_Dämpfe_H7_Angebotsaufforderung.x83
+4;Dokumentation / Revisionsunterlagen;1,0;St;gaeb;leistungsbeschreibungen/BA1_493_LV_Absaugung_Dämpfe_H7_Angebotsaufforderung.x83
+1;Obermonteurstunden;4,0;h;gaeb;leistungsbeschreibungen/BA1_493_LV_Absaugung_Dämpfe_H7_Angebotsaufforderung.x83
+2;Monteurstunden;6,0;h;gaeb;leistungsbeschreibungen/BA1_493_LV_Absaugung_Dämpfe_H7_Angebotsaufforderung.x83
+3;Helferstunden;6,0;h;gaeb;leistungsbeschreibungen/BA1_493_LV_Absaugung_Dämpfe_H7_Angebotsaufforderung.x83

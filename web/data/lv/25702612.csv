@@ -1,0 +1,107 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+1;Schaltfeld für Aufbau und Ausrüstung der Niederspannungsunterverteilung, im Wesentlichen bestehend aus:;3,0;St;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+2;Schaltfeld für Aufbau und Ausrüstung der Niederspannungsunterverteilung, im Wesentlichen bestehend aus:;4,0;St;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+3;Schaltfeld für Aufbau und Ausrüstung der Niederspannungsunterverteilung, im Wesentlichen bestehend aus:;2,0;St;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+4;Einspeiseschalter 630 A, 3-polig in Festeinbautechnik;5,0;St;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+5;Kompaktleistungsschalter mit Motorantrieb 250 A;1,0;St;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+6;NH-Sicherungslasttrennschalterleiste Gr. 2, Stromwandler 3-phasig;2,0;St;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+7;NH-Sicherungslasttrennschalterleiste Gr. 1, Stromwandler 3-phasig;5,0;St;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+8;NH-Sicherungslasttrennschalterleiste Gr. 00, Stromwandler 3-phasig;8,0;St;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+9;4-poliger Fehlerstromschutzschalter 25/0,03 A, Typ A;1,0;St;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+10;Phasenwächter;2,0;St;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+11;Synchronprüfrelais;2,0;St;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+12;Unter- und Überspannungsrelais nach IEC/EN 60 255, VDE 0435-300;2,0;St;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+13;Zulage zur Wiederverwendung der bestehenden Unterspannungsrelais;4,0;St;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+14;Kombiableiter 4-polig TN-(C)-S, Typ 1 + 2;2,0;St;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+15;NH-Sicherungslasttrennschalter NH1, 3-polig überwacht;2,0;St;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+16;Motorschutzschalter, strombegrenzend;2,0;St;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+17;Motorschutzschalter, strombegrenzend;7,0;St;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+18;Motorschutzschalter, strombegrenzend;2,0;St;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+19;Motorschutzschalter, strombegrenzend;3,0;St;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+20;Steuer-Trenntransformator 1 000 VA;1,0;St;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+21;230-V-AC-Verteilerblock für Steuersignale;2,0;St;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+22;Leitungsschutzschalter, 1-polig, 10 A, Charakteristik B, 10 kA;1,0;St;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+23;Hilfskontakte für o. g. Sicherungsautomaten 2-polig aller Charakteristiken;1,0;St;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+24;Leitungsschutzschalter, 1-polig, 2 A, Charakteristik B, 10 kA;5,0;St;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+25;Hilfskontakte für o. g. Sicherungsautomaten 2-polig aller Charakteristiken;5,0;St;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+26;Universalmessgerät für Abgänge;13,0;St;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+27;Stromwandler 500/5 A, Kl. 0,5;3,0;St;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+28;Stromwandler 400/5 A, Kl. 0,5;3,0;St;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+29;Stromwandler 250/5 A, Kl. 0,5;3,0;St;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+30;Summenstromwandler 5 A + 5 A/5 A für Kompensationsanlage;1,0;St;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+31;3-Wege-Schalter;6,0;St;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+32;LED-Schalterstellungsanzeiger in Einbauausführung;6,0;St;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+33;Leuchtdrucktaster für Schaltschrankmontage;12,0;St;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+34;Leuchtmelder für Schaltschrankmontage;6,0;St;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+35;Koppelrelais;12,0;St;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+36;Not-Aus-Schaltgerät mit Netzausfallerkennung;1,0;St;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+37;Zulage zum Anschluss des o. g. Schaltgerätes an den bestehenden Pilztaster;1,0;St;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+38;Herstellung und Einbindung von Mitnahmeschaltungen und Verriegelungen (MS-Anlage);1,0;psch;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+1;F90-Schrank für USV-Anlage;1,0;St;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+2;Motorschutzschalter;1,0;St;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+3;DC USV 24 V DC, 20 A;1,0;St;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+4;Redundanzmodul mit Überwachung;1,0;St;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+5;Batteriemodul 12 Ah, für vorgenannte USV-Anlage;1,0;St;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+6;Leitungsschutzschalter, 1-polig, 6 A, Charakteristik B, 10 kA;3,0;St;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+7;Elektronischer Sicherungsautomat;30,0;St;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+8;Hilfskontakte für o. g. Sicherungsautomaten 1-polig aller Charakteristiken;30,0;St;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+9;24-V-DC-Verteilerblock für Steuersignale;2,0;St;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+10;Zulage zum Anschluss zusätzlicher Verbraucher an die USV-Anlage;1,0;St;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+11;Nachweis der USV-Dimensionierung;1,0;St;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+12;Kabel NYY 3 x 1 mm²;20,0;m;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+13;Demontage/ Entsorgung von USV-Anlage;1,0;St;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+1;Mietcontainer, zur Aufstellung der Schaltanlage;1,0;psch;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+2;An-/ Abtransport der Mietstation;1,0;psch;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+3;Mehr-/ Minderpreis;1,0;d;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+4;Öffnen Doppelboden für Demontagen und Neuinstallation;1,0;psch;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+5;Kabelschächte öffnen und wieder schließen;2,0;St;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+6;Kabelverlängerung Bestandskabel;1,0;psch;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+7;Provisorische Abdichtung für Kabeldurchführung;1,0;psch;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+8;Provisorischer Klemmkasten 630 A;1,0;St;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+9;Provisorischer Klemmkasten 400 A;4,0;St;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+10;Provisorischer Klemmkasten 250 A;4,0;St;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+11;Provisorischer Klemmkasten 125 A;3,0;St;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+12;Provisorischer Klemmkasten 63 A;2,0;St;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+13;Provisorischer Klemmkasten - Steuerleitungen;1,0;St;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+14;Umschwenken und Anschließen NYY 1 x 185 mm²;26,0;St;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+15;Umschwenken und Anschließen NYY 1 x 150 mm²;6,0;St;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+16;Umschwenken und Anschließen NYY 1 x 120 mm²;16,0;St;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+17;Umschwenken und Anschließen NYY 4 x 16 mm² bis 4 x 50 mm²;4,0;St;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+18;Umschwenken und Anschließen NYY bis 12 x 2,5 mm²;20,0;St;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+19;Abverdrahtung von digitalen Ein- und Ausgängen;130,0;St;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+20;Abverdrahtung von analogen Ein- und Ausgängen;25,0;St;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+21;Einklemmen der bestehenden Kabel an die neue NSHV;1,0;psch;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+22;Demontage von Klemmkasten;1,0;psch;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+23;Zulage zur Verdrahtung neuer digitaler Signale auf der bestehenden SPS;1,0;psch;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+24;Zulage zur Verdrahtung neuer analoger Signale auf der bestehenden SPS;1,0;psch;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+25;YSLYCY-J 10 x 1,0 mm²;40,0;m;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+1;Bestandsaufnahme der bestehenden NSHV;1,0;psch;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+2;Demontage Schaltanlagenfelder;1,0;psch;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+1;Managebarer IE Switch 8 Port;2,0;St;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+2;LAN-Patchkabel;11,0;St;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+3;LAN-Patchkabel;7,0;St;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+4;LAN-Patchkabel;3,0;St;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+5;LWL-Patchkabel, Länge 10 m;5,0;St;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+6;Zulage zur Verbindung der neuen Switch zum bestehenden Switch;2,0;St;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+7;Hard- und Softwareanalyse Bestandsautomatisierungsgeräte/ -SPS NSHV;1,0;psch;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+8;Rückprojektierungsleistungen;1,0;psch;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+9;Prozessbilderstellung (bis 15 Bildvariablen);6,0;St;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+1;Übersichtsschaltbilder;1,0;psch;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+2;Beschilderung der kompletten Anlagenteile die vom Auftragnehmer erstellt wurden, insbesondere der Kabel- und Leitungsinstallationen, der Klemm- und Rangierstellen, Beleuchtungs- und Steckdosenkreise etc. nach dem Kennzeichnungssystem des Auftraggebers.;1,0;psch;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+3;Revision oder Neuerstellung der Bestandsdokumentation;15,0;Seit;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+4;Komplette ingenieurmäßige Projektabwicklung mit sämtlichen auftragnehmerseitigen Leistungen für Detailplanung, Kabelverlegung, Installation etc. zur Gesamtabwicklung und Erstellung einer betriebsfertigen Anlage.;1,0;psch;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+5;Dokumentation nach Fertigstellung;1,0;psch;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+6;Pflichtenheft AS NSHV;1,0;psch;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+7;Inbetriebnahme AS NSHV;1,0;psch;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+8;Vorbereitung und Realisierung der Inbetriebnahme;1,0;psch;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+9;Arbeitsschutzkonzept/ Gefährdungsbeurteilung;1,0;psch;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+10;Ingenieurstunden;5,0;h;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+11;Obermonteurstunden;5,0;h;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+12;Monteurstunden;10,0;h;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+13;Einmal Baustelle gemäß den Leistungen und Fristen einrichten und vorhalten. Zur Einrichtung gehören u. a. Fahrzeuge, Maschinen, Geräte, Werkzeuge, Büro-Container (Auftragnehmer), ggf. notwendige Treppenanlage, Beleuchtung im Bereich der BE-Flächen.;1,0;psch;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+14;Temporäre Absturz- und Stolperschutzmaßnahmen;1,0;psch;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+15;Vorhaltung und Unterhaltung der Baustelleneinrichtung über die vertraglich vereinbarte Bauzeit (in Werktagen) hinaus.;1,0;Wo;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+16;Baustelle von allen Geräten, Anlagen, Einrichtungen und dergleichen räumen. Benutzte Flächen, Wege, entsprechend dem ursprünglichen Zustand ordnungsgemäß herrichten und Verunreinheiten beseitigen.;1,0;psch;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+17;Für Materiallieferungen, die nicht über Einheitspreise erfasst werden, wird auf den Einstandspreis des Auftragnehmers ein prozentualer Stoffzuschlag für Gemeinkosten, Wagnis und Gewinn in nachfolgend zu benennender Höhe hinzugerechnet.;1,0;psch;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+18;Einweisung Bedienung und Instandhaltung in den gesamten Leistungsumfang;1,0;d;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83
+19;Probebetrieb nach erfolgreich durchgeführter Funktionsprüfung des letzten nutzungsfähigen Teilabschnitts.;2,0;Wo;gaeb;leistungsbeschreibungen/LV_Linnich_NSHV.x83

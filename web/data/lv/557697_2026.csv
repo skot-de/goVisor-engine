@@ -1,0 +1,35 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+0010;Baustelleneinrichtung des AN f;1,0;psch;gaeb;leistungsbeschreibungen/26405-VE_337.X83
+0020;Vor- und Unterhalten der Baustelleneinrichtung f;1,0;Wo;gaeb;leistungsbeschreibungen/26405-VE_337.X83
+0010;Auf- und Abbauen fahrbare Arbeitsb;1,0;St;gaeb;leistungsbeschreibungen/26405-VE_337.X83
+0020;Vorhaltung  fahrbare Arbeitsb;2,0;StWo;gaeb;leistungsbeschreibungen/26405-VE_337.X83
+0030;Auf- und Abbauen fahrbare Arbeitsb;1,0;St;gaeb;leistungsbeschreibungen/26405-VE_337.X83
+0040;Vorhaltung  fahrbare Arbeitsb;2,0;StWo;gaeb;leistungsbeschreibungen/26405-VE_337.X83
+0010;Umsetzung der Ausf;1,0;psch;gaeb;leistungsbeschreibungen/26405-VE_337.X83
+0020;Vom Auftragnehmer sind f;1,0;psch;gaeb;leistungsbeschreibungen/26405-VE_337.X83
+0030;Vom Auftragnehmer ist die Anfertigung von Unterlagen wie folgt einzukalkulieren:;1,0;psch;gaeb;leistungsbeschreibungen/26405-VE_337.X83
+0010;Wandabsorber-Fl;1,0;St;gaeb;leistungsbeschreibungen/26405-VE_337.X83
+0020;Wandabsorber-Fl;1,0;St;gaeb;leistungsbeschreibungen/26405-VE_337.X83
+0030;Wandabsorber-Fl;1,0;St;gaeb;leistungsbeschreibungen/26405-VE_337.X83
+0040;Wandabsorber-Fl;1,0;St;gaeb;leistungsbeschreibungen/26405-VE_337.X83
+0050;Liefern von Musterfl;5,0;St;gaeb;leistungsbeschreibungen/26405-VE_337.X83
+0010;Wandabsorber in direkt Montage auf Stahlbetonw;1,0;St;gaeb;leistungsbeschreibungen/26405-VE_337.X83
+0020;Wandabsorber in direkt Montage auf Stahlbetonw;1,0;St;gaeb;leistungsbeschreibungen/26405-VE_337.X83
+0010;Wandabsorber Fl;4,0;St;gaeb;leistungsbeschreibungen/26405-VE_337.X83
+0020;Wandabsorber Fl;1,0;St;gaeb;leistungsbeschreibungen/26405-VE_337.X83
+0030;Wandabsorber Fl;1,0;St;gaeb;leistungsbeschreibungen/26405-VE_337.X83
+0040;Wandabsorber Fl;1,0;St;gaeb;leistungsbeschreibungen/26405-VE_337.X83
+0050;Wandabsorber Fl;1,0;St;gaeb;leistungsbeschreibungen/26405-VE_337.X83
+0060;Wandabsorber Fl;1,0;St;gaeb;leistungsbeschreibungen/26405-VE_337.X83
+0070;Wandabsorber Fl;1,0;St;gaeb;leistungsbeschreibungen/26405-VE_337.X83
+0080;Wandabsorber Fl;1,0;St;gaeb;leistungsbeschreibungen/26405-VE_337.X83
+0090;Wandabsorber Fl;1,0;St;gaeb;leistungsbeschreibungen/26405-VE_337.X83
+0100;Wandabsorber Fl;1,0;St;gaeb;leistungsbeschreibungen/26405-VE_337.X83
+0110;Wandabsorber Fl;1,0;St;gaeb;leistungsbeschreibungen/26405-VE_337.X83
+0120;Wandabsorber Fl;1,0;St;gaeb;leistungsbeschreibungen/26405-VE_337.X83
+0130;Wandabsorber Fl;1,0;St;gaeb;leistungsbeschreibungen/26405-VE_337.X83
+0140;Liefern von Musterfl;1,0;St;gaeb;leistungsbeschreibungen/26405-VE_337.X83
+0010;Stundenlohnarbeiten durch Bauvorarbeiter/-in;5,0;h;gaeb;leistungsbeschreibungen/26405-VE_337.X83
+0020;Stundenlohnarbeiten durch Baufacharbeiter/-in;5,0;h;gaeb;leistungsbeschreibungen/26405-VE_337.X83
+0030;Stundenlohnarbeiten durch Bauhelfer/-in;5,0;h;gaeb;leistungsbeschreibungen/26405-VE_337.X83
+0040;Stundenlohnarbeiten durch Auszubildende/r (Mittellohn);5,0;h;gaeb;leistungsbeschreibungen/26405-VE_337.X83
