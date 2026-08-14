@@ -22,6 +22,27 @@ const BLACKOUT = process.env.NODE_ENV === "production" && process.env.LAUNCH_LIV
 const PREVIEW_KEY = process.env.PREVIEW_KEY ?? "";
 const PREVIEW_COOKIE = "gv_preview";
 
+/**
+ * VORHANG-PFAD — der zweite, sanftere Weg hinein.
+ *
+ * Bis hierher war der Preview-Schlüssel die Authentifizierung: ein Geheimnis, alles oder
+ * nichts, kein Login. Das hat zwei Nachteile. Erstens steht der Schlüssel in der URL und
+ * landet damit in Browser-Historie, Proxy-Logs und Referrern. Zweitens gibt es keine
+ * Rollen — wer ihn hat, ist drin, egal als wer.
+ *
+ * `ZUGANG_PFAD` ist deshalb ausdrücklich KEIN Passwort. Der Pfad zieht nur den Vorhang auf
+ * und zeigt ein Login-Fenster; wer dahinter etwas sehen will, muss sich anmelden. Der Schutz
+ * liegt in der Anmeldung, die Unerratbarkeit ist nur Ruhe vor Scannern.
+ *
+ * Bewusst ein PFAD und keine Subdomain: eine Subdomain taucht in den Certificate-
+ * Transparency-Logs auf, ist also faktisch öffentlich — sie wäre schwerer zu bauen und
+ * leichter zu finden.
+ *
+ * FAIL-CLOSED bleibt: ist `ZUGANG_PFAD` leer, gibt es diesen Weg nicht.
+ */
+const ZUGANG_PFAD = process.env.ZUGANG_PFAD ?? "";
+const VORHANG_COOKIE = "gv_vorhang";
+
 function blackPage() {
   return new NextResponse(BLACK_PAGE, {
     status: 200,
@@ -39,7 +60,21 @@ export async function middleware(request: NextRequest) {
     const q = new URL(request.url).searchParams.get("preview");
     const cookie = request.cookies.get(PREVIEW_COOKIE)?.value;
     const unlocked = PREVIEW_KEY.length > 0 && (q === PREVIEW_KEY || cookie === PREVIEW_KEY);
-    if (!unlocked) return blackPage();
+
+    // Zweiter Weg: der Vorhang-Pfad. Er fuehrt auf /login und setzt ein Cookie, damit die
+    // Folgeseiten (Anmeldung, Registrierung, App) nicht wieder schwarz werden. Was danach
+    // sichtbar ist, entscheidet die Supabase-Session — nicht dieser Pfad.
+    const pfad = new URL(request.url).pathname;
+    const vorhangCookie = request.cookies.get(VORHANG_COOKIE)?.value;
+    const vorhangAuf = ZUGANG_PFAD.length > 0 && vorhangCookie === ZUGANG_PFAD;
+    if (ZUGANG_PFAD.length > 0 && pfad === `/${ZUGANG_PFAD}`) {
+      const res = NextResponse.redirect(new URL("/login", request.url));
+      res.cookies.set(VORHANG_COOKIE, ZUGANG_PFAD, {
+        httpOnly: true, sameSite: "lax", secure: true, path: "/", maxAge: 60 * 60 * 24 * 30,
+      });
+      return res;
+    }
+    if (!unlocked && !vorhangAuf) return blackPage();
     // Schlüssel gültig → volle App; bei frischem ?preview den Cookie setzen (Folgeseiten ohne Query).
     const res = await updateSession(request);
     if (q === PREVIEW_KEY) {

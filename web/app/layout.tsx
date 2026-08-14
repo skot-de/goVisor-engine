@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import ProfilBanner from "./ProfilBanner";
 import { Archivo, IBM_Plex_Mono } from "next/font/google";
 import { copy } from "@/lib/copy";
 import "./globals.css";
@@ -37,7 +38,10 @@ export default function RootLayout({
       {/* `lang` bleibt hier "de": das ist die Server-Ausgabe. Der SprachProvider setzt es
           nach dem ersten Rendern auf die gewaehlte Sprache um — so gibt es keinen
           Hydration-Konflikt zwischen Server- und Client-Markup. */}
-      <body><SprachProvider>{children}</SprachProvider></body>
+      {/* Der Kundensicht-Hinweis haengt im Layout und damit auf JEDER Seite. Haenge ihn
+          nie in eine einzelne Seite um — genau die Seite, die man dann vergisst, ist die,
+          auf der man den Testzustand fuer echt haelt. */}
+      <body><SprachProvider><ProfilBanner />{children}</SprachProvider></body>
     </html>
   );
 }
