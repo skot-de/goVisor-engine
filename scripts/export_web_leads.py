@@ -170,9 +170,15 @@ def aufwand_for(ids):
             out[nid] = a
     return out
 
+# `ohne` MUSS hier stehen, obwohl es kein Fachgebiet ist. Der Grundraum existiert seit dem
+# Wegfall der CPV-Pflicht (Leads, deren QUELLE keinen CPV fuehrt), und `BRANCHE_LABEL.get(br, br)`
+# faellt sonst auf den rohen Code zurueck — im Markt-Mix stuende dann „ohne" statt „Ohne
+# Kategorie". Das Frontend fuehrt dasselbe Label in `web/lib/explorerCore.js`; die beiden
+# muessen zusammenbleiben.
 BRANCHE_LABEL = {"it": "IT & Software", "bau": "Bau & Infrastruktur",
                  "medizin": "Medizin & Gesundheit", "beratung": "Beratung & Dienstleistung",
-                 "sicherheit": "Sicherheit & Verteidigung", "energie": "Energie & Versorgung"}
+                 "sicherheit": "Sicherheit & Verteidigung", "energie": "Energie & Versorgung",
+                 "ohne": "Ohne Kategorie"}
 
 
 def conc_band(t):
@@ -336,7 +342,14 @@ def attach_mix(prof, own_branche):
     p["mix"] = mix
     return p
 
-BRANCHE = """CASE b.branche
+# ⚠ Die NULL-Prüfung steht VOR dem CASE über `b.branche` und ist nicht kosmetisch.
+# Seit die CPV-Pflicht aus `build_prospective_leads` raus ist (2026-08-14, sie warf 307
+# laufende Ausschreibungen weg), gibt es Leads ganz ohne CPV. Ohne diese Zeile fielen sie
+# in das `ELSE 'beratung'` am Fuss des CASE — „Lieferung von 15 Notebooks" und „Milch und
+# Molkereiprodukte" stuenden dann unter „Beratung & Dienstleistung". Ein eigener Grundraum
+# sagt statt dessen, was der Fall ist: die Vergabe ist da, die Branche kennen wir nicht.
+BRANCHE = """CASE WHEN e.cpv_code IS NULL THEN 'ohne'
+  ELSE CASE b.branche
   WHEN 'IT' THEN 'it' WHEN 'Elektro' THEN 'it' WHEN 'Messtechnik' THEN 'it'
   WHEN 'Bau' THEN 'bau' WHEN 'Installation' THEN 'bau' WHEN 'Immobilien' THEN 'bau'
     WHEN 'Ingenieur/Architektur' THEN 'bau' WHEN 'Wartung' THEN 'bau'
@@ -344,7 +357,7 @@ BRANCHE = """CASE b.branche
   WHEN 'Sicherheit' THEN 'sicherheit'
   WHEN 'Energie' THEN 'energie' WHEN 'Versorgung' THEN 'energie' WHEN 'Wasser' THEN 'energie'
     WHEN 'Umwelt/Reinigung' THEN 'energie' WHEN 'Chemie' THEN 'energie' WHEN 'Rohstoffe' THEN 'energie'
-  ELSE 'beratung' END"""
+  ELSE 'beratung' END END"""
 
 # Codes → Anzeige-Labels (Vertragsende/Rahmenvertrag/Dienstleistung …) leben jetzt im
 # Frontend-Katalog web/lib/labels.js; der Export trägt nur noch die Codes (src/contractKind/
@@ -754,7 +767,7 @@ counts = {k: n for k, n in counts}
 
 exported = {}
 markets = {}
-for key in ["it", "bau", "medizin", "beratung", "sicherheit", "energie"]:
+for key in ["it", "bau", "medizin", "beratung", "sicherheit", "energie", "ohne"]:
     exported[key] = export_branche(key)
     markets[key] = market_summary(key)
     print(f"  {key:11} {exported[key]:>5} / {counts.get(key, 0):>6} exportiert")
