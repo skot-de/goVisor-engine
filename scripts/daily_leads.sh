@@ -168,16 +168,16 @@ $PY -m govisor.netserver --portale hb,sn,mv,bw --kategorien tender,vorinfo,zusch
 # Der WUNSCHWERT waere der Quellenstart (atverg 2019, DOeE 2023, simap 2024, DTVP ~2024) —
 # davor kann es keine Quellen-Dublette geben. CH erreicht ihn, DE und AT nicht.
 #
-# ⚠ FOLGE, offen und bewusst in Kauf genommen: in den Marktpuls-Jahresschichten bleiben
-# AT 2019–2023 und DE 2023–2025 unbereinigt, dort zaehlen Quellen-Dubletten doppelt. Der
-# echte Fix ist nicht ein groesseres Zeitfenster, sondern der Umbau des Abgleichs von der
-# Python-Schleife auf DuckDB-SQL (Kandidaten + Enthaltung als Join). Bis dahin ist die
-# Zahl hier die Grenze des Machbaren, nicht die des Gewollten.
+# ERLEDIGT (2026-08-14): hier stand, dass AT 2019-2023 und DE 2023-2025 in den
+# Marktpuls-Jahresschichten unbereinigt bleiben und der echte Fix ein Umbau auf DuckDB-SQL
+# waere. Beides ist ueberholt. Der SQL-Umbau wurde gebaut und war gemessen zwei- bis
+# dreimal LANGSAMER (s. Docstring in govisor/dedupe.py); geholfen haben Seed-Deckel und
+# Zeitscheiben. Seither laeuft die volle Historie, die Luecke ist zu.
 #
-# Gemessen 2026-08-13, Paare mit Kaeufer-Beleg / gesammelte Anreicherungswerte:
-#   DE   6.116 Paare ·   976 mit Kaeufer-Beleg ·    21 Anreicherungswerte
-#   AT   5.421 Paare · 3.282 mit Kaeufer-Beleg · 3.703 Werte (2.614 NUTS, 1.072 Fristen)
-#   CH   2.874 Paare · 2.525 mit Kaeufer-Beleg ·   811 Werte
+# Gemessen 2026-08-14 ueber die volle Historie:
+#   AT  128.216 Paare ·  64.889 mit Kaeufer-Beleg ·  65.537 Anreicherungswerte
+#   CH   18.465 Paare ·  14.510 mit Kaeufer-Beleg ·   7.579 Werte
+#   DE  115.871 Paare ·  25.990 mit Kaeufer-Beleg ·   1.469 Werte
 # AT/CH liegen weit vor DE, weil TED und die nationale Quelle sich dort zu ~93 % ueberlappen
 # UND den Kaeufer fast gleich schreiben (98 % Beleg gegen 57 % in DE).
 #

@@ -1024,8 +1024,14 @@ def test_dubletten_filter_kommt_im_gold_an():
         ende = kopf.find("\ndef ", 10)
         kopf = kopf[:ende] if ende > 0 else kopf
         assert "notice_duplicates.parquet" in kopf, f"{funktion} liest die Firewall nicht"
-        assert "duplicate_id" in kopf, f"{funktion} schliesst keine Dubletten aus"
-        assert "kaeufer_und_titel" in kopf, f"{funktion} prueft die Belegstufe nicht"
+        # Seit 2026-08-14 ueber den gemeinsamen Helfer, nicht als eigene SQL-Kopie: die
+        # Bruecken hatten den Ausschluss OHNE die Master-Bedingung, also die gefaehrliche
+        # Haelfte der Regel. Der Test prueft die Verdrahtung, nicht den Wortlaut.
+        assert ("duplicate_id" in kopf or "_redundante_zweitquelle_sql" in kopf), \
+            f"{funktion} schliesst keine Dubletten aus"
+        # Die Belegstufe steht seit der Zusammenfuehrung im Helfer; wer ihn ruft, hat sie.
+        if "_redundante_zweitquelle_sql" not in kopf:
+            assert "kaeufer_und_titel" in kopf, f"{funktion} prueft die Belegstufe nicht"
 
     mp = (root / "scripts" / "build_marktpuls.py").read_text(encoding="utf-8")
     assert "notice_duplicates.parquet" in mp, "Marktpuls liest die Firewall nicht"
@@ -1719,7 +1725,11 @@ def test_zweitquellen_ausschluss_prueft_den_master():
         encoding="utf-8")
     b = src.split("def _redundante_zweitquelle_sql")[1].split("\ndef ")[0]
     assert "d.beleg = 'kaeufer_und_titel'" in b
-    assert ">= current_date" in b
+    # Der Stichtag ist parametrisiert: er MUSS derselbe sein wie die Lead-Zugehoerigkeit,
+    # sonst laufen Ausschluss und Zugehoerigkeit bei einem `--as-of` auseinander und die
+    # Vergabe verschwindet ganz. `current_date` bleibt nur die Rueckfallebene ohne Stichtag.
+    assert "{_ST}" in b, "Stichtag nicht parametrisiert"
+    assert 'DATE \'{stichtag}\'' in b and "current_date" in b
     for feld in ("submission_deadline_verlaengert", "submission_deadline"):
         assert feld in b, f"{feld} fehlt in der Master-Frist"
 

@@ -433,10 +433,15 @@ def build_ch_gold(cfg: Config, country: str = "CH") -> int:
     # übersprungen), bleibt es beim bisherigen Verhalten: beide Quellen ungefiltert. Das
     # rauscht sichtbar, verliert aber nichts — die richtige Ausfallrichtung.
     _dedup = g / "notice_duplicates.parquet"
-    DEDUP_EXCLUDE = (
-        f" AND n.notice_id NOT IN (SELECT duplicate_id FROM read_parquet('{_dedup.as_posix()}')"
-        f" WHERE beleg = 'kaeufer_und_titel')"
-    ) if _dedup.exists() else ""
+    # Wie in `gold.build_at_gold`: die Master-Bedingung gehoert dazu. Ohne sie faellt die
+    # simap-Zeile auch dann, wenn ihre TED-Entsprechung nicht mehr lead-faehig ist, und die
+    # Vergabe verschwindet ganz. Diese Bruecke ist nicht mehr im Tageslauf, aber ueber die
+    # CLI erreichbar — ein erreichbarer Pfad mit der gefaehrlichen Haelfte einer Regel ist
+    # schlimmer als gar keiner. Eine Kopie der Bedingung waere genau die Verzweigung, die
+    # spaeter nur an einer Stelle nachgezogen wird, deshalb der Helfer aus `gold`.
+    from . import gold as _gold
+    DEDUP_EXCLUDE = (_gold._redundante_zweitquelle_sql(cfg, country)
+                     if _dedup.exists() else "")
     LEAD = ("n.notice_kind='cn' AND n.submission_deadline >= current_date"  # offene Ausschreibungen
             + DEDUP_EXCLUDE)
     con = duckdb.connect()

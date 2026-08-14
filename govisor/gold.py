@@ -2297,8 +2297,14 @@ def _ANR_SQL(cfg: Config, country: str) -> str:
     p = cfg.gold_dir / country / "notice_enrichment.parquet"
     if p.exists():
         return f"read_parquet('{p.as_posix()}')"
+    # ⚠ Die leere Ersatzmenge muss JEDE Spalte fuehren, die ein Verbraucher anfasst — sonst
+    # ist die „optionale" Anreicherung genau dann ein harter Fehler, wenn sie fehlt.
+    # Gemessen: `_frist_joins_sql` joint auf `quelle_notice_id`; ohne die Spalte bricht
+    # `build_leads` und `build_prospective_leads` mit „Referenced table \"c\" not found".
+    # Die Tests dazu waren Quelltext-Zusicherungen und konnten das nicht sehen.
     return ("(SELECT NULL::VARCHAR AS notice_id, NULL::VARCHAR AS feld,"
-            " NULL::VARCHAR AS wert WHERE false)")
+            " NULL::VARCHAR AS wert, NULL::VARCHAR AS quelle_notice_id,"
+            " NULL::VARCHAR AS quelle_gen WHERE false)")
 
 
 def build_lead_deadline(cfg: Config, country: str = "DE"):
@@ -2625,12 +2631,30 @@ def _frist_joins_sql(cfg: Config, country: str, auf: str = "n.notice_id") -> str
     liesse sich die Währungssperre nicht anwenden."""
     ANR = _ANR_SQL(cfg, country)
     return f"""
-          LEFT JOIN (SELECT w.notice_id, min(w.wert) AS w, min(c.wert) AS waehrung
+          -- `arg_min(x, k)` = x aus der Zeile mit kleinstem k. Zwei Fehler auf einmal:
+          --
+          -- (1) `min(wert)` war ein LEXIKOGRAPHISCHES Minimum ueber Zahl-als-Text. Gemessen
+          --     an AT: 1.312 Bekanntmachungen mit widerspruechlichen Werten, bei 650 war die
+          --     Wahl nicht das numerische Minimum, bei 29 fiel sie aus dem Plausibilitaets-
+          --     band und der Wert wurde still „unbekannt". Beispiel 179464_2026: aus
+          --     460k…77,5M wurde 10.172.841,38 gewaehlt, weil „1" zuerst sortiert.
+          -- (2) Wert und Waehrung kamen aus ZWEI unabhaengigen Aggregaten, konnten also aus
+          --     verschiedenen Quellsaetzen stammen — die dokumentierte Kopplung galt nicht.
+          --     Heute latent (0 widerspruechliche Waehrungen), scharf bei jeder Waehrung,
+          --     die hinter 'EUR' sortiert (GBP/HUF/USD). Fuer eine EU-weite Engine zaehlt das.
+          --
+          -- Beide `arg_min` benutzen DENSELBEN Schluessel, also dieselbe Zeile. Das Minimum
+          -- ist die konservative Wahl: es untertreibt das Gebuehrenband, statt zu ueberziehen.
+          LEFT JOIN (SELECT w.notice_id,
+                            arg_min(w.wert, try_cast(w.wert AS DOUBLE)) AS w,
+                            arg_min(c.wert, try_cast(w.wert AS DOUBLE)) AS waehrung
                      FROM {ANR} w
                      LEFT JOIN {ANR} c ON c.notice_id = w.notice_id
                                       AND c.quelle_notice_id = w.quelle_notice_id
                                       AND c.feld = 'estimated_value_waehrung'
-                     WHERE w.feld = 'estimated_value' GROUP BY 1) wrtq
+                     WHERE w.feld = 'estimated_value'
+                       AND try_cast(w.wert AS DOUBLE) IS NOT NULL
+                     GROUP BY 1) wrtq
                  ON wrtq.notice_id = {auf}
           LEFT JOIN (SELECT notice_id, min(wert) w FROM {ANR}
                      WHERE feld='submission_deadline' GROUP BY 1) anrq ON anrq.notice_id = {auf}
@@ -2656,7 +2680,8 @@ _FRIST_EFF = ("coalesce(try_cast(vrlq.w AS DATE), n.submission_deadline::DATE,"
               " try_cast(anrq.w AS DATE))")
 
 
-def _redundante_zweitquelle_sql(cfg: Config, country: str, spalte: str = "n.notice_id") -> str:
+def _redundante_zweitquelle_sql(cfg: Config, country: str, spalte: str = "n.notice_id",
+                                stichtag: str | None = None) -> str:
     """SQL-Bedingung: schliesst Saetze aus, die eine Zweitquelle DOPPELT liefert.
 
     Die einzige Stelle, an der die Dubletten-Firewall wirklich etwas ENTFERNT. Ueberall
@@ -2687,6 +2712,12 @@ def _redundante_zweitquelle_sql(cfg: Config, country: str, spalte: str = "n.noti
         return ""
     NS = f"'{cfg.silver_table_glob('notices', country)}'"
     ANR = _ANR_SQL(cfg, country)
+    # DERSELBE Stichtag wie die Lead-Zugehoerigkeit, nicht `current_date`. Sonst laufen
+    # Ausschluss und Zugehoerigkeit bei einem `--as-of` auseinander: in der Zukunft flöge die
+    # Dublette raus, waehrend der Master noch nicht lead-faehig ist — die Vergabe verschwaende
+    # ganz, also genau der 64-Leads-Verlust, den diese Bedingung verhindern soll. In der
+    # Vergangenheit liefe der Ausschluss leer und die Dubletten blieben stehen.
+    _ST = f"DATE '{stichtag}'" if stichtag else "current_date"
     return f"""
             AND {spalte} NOT IN (
               SELECT d.duplicate_id
@@ -2701,7 +2732,7 @@ def _redundante_zweitquelle_sql(cfg: Config, country: str, spalte: str = "n.noti
               WHERE d.beleg = 'kaeufer_und_titel'
                 AND coalesce(try_cast(v.w AS DATE),
                              CAST(m.submission_deadline AS DATE),
-                             try_cast(a.w AS DATE)) >= current_date)"""
+                             try_cast(a.w AS DATE)) >= {_ST})"""
 
 
 def build_prospective_leads(cfg: Config, country: str = "DE", reference_date: str | None = None):
@@ -2790,7 +2821,22 @@ def build_prospective_leads(cfg: Config, country: str = "DE", reference_date: st
           LEFT JOIN '{DD}' dd ON dd.year=n.year
           LEFT JOIN '{DC}' dc ON dc.division=substr(n.cpv_main,1,2)
           {_frist_joins_sql(cfg, country)}
-          WHERE n.notice_kind IN ('cn','pin') AND n.cpv_main IS NOT NULL
+          -- KEINE CPV-Pflicht mehr. Sie stand hier bis 2026-08-14 und warf gemessen **307
+          -- laufende Ausschreibungen mit Vergabestelle** weg (DÖE 239, NetServer 68) —
+          -- lautlos, ohne Fehlermeldung, ohne Review-Eintrag.
+          --
+          -- Der CPV fehlt nicht der VERGABE, sondern der Quelle: dieselben UVgO-Vergaben
+          -- tragen bei DÖE zu 100 % einen echten CPV, nur die NetServer-Trefferliste führt
+          -- gar keinen. Ein Lead ohne Branche ist unvollständig, aber ein FEHLENDER Lead
+          -- ist im Vergleich zweier Werkzeuge eine sichtbare Lücke — und die Projektregel
+          -- lautet „nichts nach eigener Relevanz filtern, Unbekanntes markieren".
+          --
+          -- ⚠ FOLGE, die mitgetragen werden muss: `dc.branche` bleibt bei diesen Leads
+          -- NULL. `scripts/export_web_leads.py` faengt das heute mit `ELSE 'beratung'` ab —
+          -- fuer „15 Notebooks" oder „Milch und Molkereiprodukte" ist das schlicht falsch.
+          -- Die ehrliche Loesung ist ein eigener Grundraum „Sonstiges" im Frontend; bis
+          -- dahin ist die Fehlsortierung der Preis dafuer, die Vergabe ueberhaupt zu haben.
+          WHERE n.notice_kind IN ('cn','pin')
             AND {_FRIST_EFF} IS NOT NULL AND {_FRIST_EFF} >= DATE '{ref}'
             -- A6 war ein HARTER Schnitt bei 5 Jahren. Gemessen 2026-08-13: er warf in
             -- Oesterreich 357 von 684 offenen atverg-Verfahren weg (52 %), davon 258 mit dem
@@ -2801,7 +2847,7 @@ def build_prospective_leads(cfg: Config, country: str = "DE", reference_date: st
             -- beschreibt. Konvention "markieren statt filtern": die Obergrenze bleibt nur als
             -- Absurditaets-Sperre gegen Parse-Muell, die Einordnung macht `_open_house_sql`.
             AND {_FRIST_EFF} <= DATE '2200-01-01'
-            {_redundante_zweitquelle_sql(cfg, country)}
+            {_redundante_zweitquelle_sql(cfg, country, stichtag=ref)}
         ) TO '{out}.tmp' (FORMAT PARQUET, COMPRESSION ZSTD)
     """)
     import os
@@ -4210,10 +4256,12 @@ def build_at_gold(cfg: Config, country: str = "AT"):
     # unterschwellig geflaggt. Damit überlebten 57,2 % der echten Dubletten den Flag-Filter.
     # Die zentrale Firewall `govisor/dedupe.py` matcht sie inhaltlich; hier fliegen sie raus.
     _dedup = g / "notice_duplicates.parquet"
-    DEDUP_EXCLUDE = (
-        f" AND n.notice_id NOT IN (SELECT duplicate_id FROM read_parquet('{_dedup.as_posix()}')"
-        f" WHERE beleg = 'kaeufer_und_titel')"
-    ) if _dedup.exists() else ""
+    # Die Master-Bedingung gilt AUCH hier. Ohne sie faellt die Dublette, obwohl ihr Master
+    # laengst abgelaufen ist — die Vergabe verschwaende dann ganz. Diese Bruecke ist zwar
+    # nicht mehr im Tageslauf (build_dach_gold hat sie abgeloest), aber ueber
+    # `cli gold --country AT --bridge` erreichbar, und ein erreichbarer Pfad mit der
+    # gefaehrlichen Haelfte einer Regel ist schlimmer als gar keiner.
+    DEDUP_EXCLUDE = _redundante_zweitquelle_sql(cfg, country) if _dedup.exists() else ""
     LEAD = ("n.notice_kind='cn' AND n.submission_deadline >= current_date"
             + OSB_EXCLUDE + DEDUP_EXCLUDE)
 
