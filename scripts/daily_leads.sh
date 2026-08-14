@@ -269,8 +269,22 @@ $PY -m govisor.netserver --portale hb,sn,mv,bw,he,be,sl --kategorien tender,vori
 # `data/silver/DE/notices` an), und die beiden Unterlagen-Fetcher bringen zusammen mehrere
 # Gigabyte je Lauf. Beides gehoert bewusst erst scharfgeschaltet, wenn jemand zusieht.
 #
-# Scharf schalten:  GOVISOR_NEUE_QUELLEN=1 scripts/daily_leads.sh
-if [ "${GOVISOR_NEUE_QUELLEN:-0}" = "1" ]; then
+# SCHARFGESCHALTET am 2026-08-14 (Svens Entscheidung). Der Schalter bleibt, aber die Vorgabe
+# ist jetzt AN — abschalten mit `GOVISOR_NEUE_QUELLEN=0`.
+#
+# ⚠ WAS DABEI GILT UND NICHT UEBERSEHEN WERDEN DARF: die drei Unterlagen-Fetcher holen
+# Pakete von 10-188 MB (ein Ausreisser 335 MB). Der Volltext-Index hat seit heute eine
+# Groessen-Sperre bei 50 MB — die grossen Pakete landen also auf der Platte, aber NICHT im
+# Index; sie bekommen `status='zu_gross'` und sind damit gezaehlt.
+#
+# Das ist bewusst so: die Unterlagen werden fuer Musterableitung, Dokumentvorschlaege und
+# Textbaustein-Wiederverwendung GESAMMELT, auch wenn der heutige Parser sie noch nicht
+# auswertet. Ein besserer Parser holt spaeter mehr daraus — das Rohmaterial ist wertvoller
+# als der aktuelle Index. Platz ist da (1,6 TB frei bei 96 GB Bestand).
+#
+# Wer die grossen Pakete AUSWERTEN will, braucht `process_zip` mit stroemendem Entpacken
+# statt „alles in den Speicher". Bis dahin waechst hier ein Vorrat, kein Ergebnis.
+if [ "${GOVISOR_NEUE_QUELLEN:-1}" = "1" ]; then
 
   # Healy-Hudson-Bekanntmachungen: EINE oeffentliche Liste fuer alle sechzehn Laender
   # (`Dashboard_off?BL=<amtlicher Schluessel>`). 1.300 offene Vorgaenge gemessen, davon
@@ -305,10 +319,18 @@ if [ "${GOVISOR_NEUE_QUELLEN:-0}" = "1" ]; then
   $PY -m govisor.docfetch_aumass --limit 40 \
     || echo "  ⚠ aumass-Unterlagen unvollstaendig."
 
+  # staatsanzeiger-UNTERLAGEN. 211 Leads, davon 153 ueber die funktionierende URL-Form.
+  # Dreistufig: Weiche → „Anonym als Zip" (NAVIGATION, kein Download) → ZIP-Link auf
+  # einem anderen Host. ⚠ Die restlichen 56 tragen ein Frameset, dessen Inhalts-Frame
+  # ohne Sitzung leer bleibt — eigener Status `frameset`, kein Fehler.
+  step "Staatsanzeiger-Unterlagen (DE, anonym, budgetiert + idempotent)"
+  $PY -m govisor.docfetch_staatsanzeiger --limit 40 \
+    || echo "  ⚠ Staatsanzeiger-Unterlagen unvollstaendig."
+
 else
   echo ""
-  echo "▶ Neue Quellen (healyhudson, docfetch_netserver, docfetch_healyhudson) uebersprungen."
-  echo "  Scharf schalten mit: GOVISOR_NEUE_QUELLEN=1"
+  echo "▶ Neue Quellen (healyhudson + die drei Unterlagen-Fetcher) ABGESCHALTET."
+  echo "  Wieder an mit: GOVISOR_NEUE_QUELLEN=1 (Vorgabe ist AN)"
 fi
 
 # DUBLETTEN-FIREWALL. Eine Pruefung fuer ALLE Quellen eines Landes. Sie hat am 2026-08-13

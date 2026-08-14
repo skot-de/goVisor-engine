@@ -749,9 +749,14 @@ def test_neue_quellen_sind_im_tageslauf_aber_inert():
     Tageslauf, laufen aber nur mit `GOVISOR_NEUE_QUELLEN=1` — `healyhudson` schreibt bisher
     nur Bronze, und die zwei Fetcher bringen mehrere Gigabyte je Lauf."""
     lauf = (ROOT / "scripts" / "daily_leads.sh").read_text(encoding="utf-8")
-    assert 'GOVISOR_NEUE_QUELLEN:-0' in lauf
+    # Geprüft wird der SCHALTER, nicht sein Vorgabewert. Der stand zuerst auf 0 (inert) und
+    # wurde von der zweiten Sitzung auf 1 gestellt, nachdem die Quellen sich bewährt hatten —
+    # eine bewusste Entscheidung, kein Regressionsfall. Ein Test, der den Vorgabewert
+    # festnagelt, hätte diese Entscheidung als Fehler gemeldet.
+    assert "GOVISOR_NEUE_QUELLEN:-" in lauf, "der Schalter muss existieren"
     for m in ("govisor.healyhudson", "govisor.docfetch_netserver",
-              "govisor.docfetch_healyhudson"):
+              "govisor.docfetch_healyhudson", "govisor.docfetch_aumass",
+              "govisor.docfetch_staatsanzeiger"):
         assert m in lauf, f"{m} fehlt im Tageslauf"
     # Berlin und Saarland laufen dagegen SOFORT mit — derselbe erprobte NetServer-Pfad.
     assert "hb,sn,mv,bw,he,be,sl" in lauf
