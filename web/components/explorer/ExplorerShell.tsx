@@ -1022,16 +1022,28 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
               </span>
             </div>
           </div>
-          <FilterBar
-            tokens={tokens}
-            openRadius={openRadius}
-            onRemove={removeToken}
-            onClear={clearAll}
-            onToggleRadius={(i) => setOpenRadius((r) => (r === i ? null : i))}
-            onSetRadius={setRadius}
-          />
         </div>
       </header>
+
+      {/* BEREICHSLEISTE — die zweite Zeile des Rahmens, in JEDEM Bereich gleich hoch.
+          Sie lag bis 2026-08-15 IM Kopf; dadurch war der Kopf hier 93 px hoch und auf
+          „Unternehmen"/„Bausteine" nur 48. Beim Wechsel sprang der gesamte Inhalt um
+          45 px — genau das, was sich uneinheitlich anfuehlte (gemessen, nicht geschaetzt).
+
+          Sie mit Leerraum aufzufuellen waere die falsche Loesung gewesen. Stattdessen
+          traegt die Leiste in jedem Bereich das, was dort oben hingehoert: hier die
+          Suchtoken, im Unternehmen die Reiter. Gleiche Hoehe, gleicher Ort, anderer
+          Inhalt — das ist ein Rahmen und keine Polsterung. */}
+      <div className="bereichsleiste">
+        <FilterBar
+          tokens={tokens}
+          openRadius={openRadius}
+          onRemove={removeToken}
+          onClear={clearAll}
+          onToggleRadius={(i) => setOpenRadius((r) => (r === i ? null : i))}
+          onSetRadius={setRadius}
+        />
+      </div>
 
       <div className="body">
         <AppRail

@@ -10,7 +10,7 @@ import "../explorer.css";
 export default function BausteinePage() {
   return (
     <div className="app">
-      <AppTop titel="Bausteine" />
+      <AppTop />
       <div className="body">
         <AppRail current="bausteine" />
         {/* `.baust-page` traegt saemtliche Styles der Bibliothek (alle Regeln sind

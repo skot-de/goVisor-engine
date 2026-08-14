@@ -182,14 +182,28 @@ export function AppRail({
 
 /* Schlanke Kopfleiste für die eigenständigen Seiten: dieselbe Marke, derselbe Rahmen wie
  * im Explorer. Ohne sie sieht die Seite trotz Rail aus wie ein fremdes Werkzeug. */
-export function AppTop({ titel }: { titel: string }) {
+/**
+ * Der Kopf der eigenstaendigen Seiten — dieselbe Hoehe wie in der Shell.
+ *
+ * **Ohne Titel (Entscheidung vom 2026-08-15).** Vorher stand hier „Unser Unternehmen" bzw.
+ * „Bausteine", waehrend die vier Shell-Bereiche gar keine Ueberschrift haben. Zwei von
+ * sechs Bereichen beschriftet zu haben ist uneinheitlicher als keiner — welcher Bereich
+ * aktiv ist, sagt das hervorgehobene Symbol in der Leiste links.
+ *
+ * `leiste` ist die zweite Zeile des Rahmens (s. `.bereichsleiste` in explorer.css). Sie ist
+ * PFLICHT im Aufbau, auch wenn ein Bereich nichts hineinzustellen hat: ihre Hoehe haelt den
+ * Inhalt an derselben Stelle. Wer sie weglaesst, bringt das Springen zurueck.
+ */
+export function AppTop({ leiste }: { leiste?: React.ReactNode }) {
   return (
-    <header className="topbar topbar-schlank">
-      <div className="brandcell">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/govisor-wordmark.png" alt="goVisor" className="brandlogo" />
-      </div>
-      <span className="top-titel">{titel}</span>
-    </header>
+    <>
+      <header className="topbar topbar-schlank">
+        <div className="brandcell">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/govisor-wordmark.png" alt="goVisor" className="brandlogo" />
+        </div>
+      </header>
+      <div className="bereichsleiste">{leiste}</div>
+    </>
   );
 }

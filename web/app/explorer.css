@@ -46,10 +46,23 @@ body[data-view="verteidigung"] .band.risk[data-level="mittel"] .segs i:nth-child
 .seitenmain{overflow:auto;min-width:0}
 .seitenmain.baust-page,.seitenmain.ob-page{min-height:0}   /* im Raster scrollt der Rahmen, nicht die Seite */
 .seitenmain.set-page{padding:var(--s6) var(--s6) 60px}
-.topbar-schlank{height:48px;gap:var(--s4)}
+.topbar-schlank{gap:var(--s4)}   /* Hoehe kommt aus `.topbar` — eine Quelle, kein zweiter Wert */
+/* DIE ZWEITE ZEILE DES RAHMENS — in jedem Bereich vorhanden und gleich hoch, damit der
+   Inhalt beim Wechseln nicht springt. Gemessen 2026-08-15: vorher 93 px Kopf in den
+   Listen-Ansichten gegen 48 px auf Unternehmen/Bausteine; der Inhalt rutschte bei jedem
+   Wechsel um 45 px. Der Inhalt der Leiste ist je Bereich verschieden (Suchtoken, Reiter),
+   ihre Hoehe nicht. */
+.bereichsleiste{height:var(--leiste);flex:none;display:flex;align-items:center;
+                border-bottom:1px solid var(--line);background:var(--surface);
+                padding:0 var(--s5);position:relative;z-index:39;min-width:0}
+.bereichsleiste > *{min-width:0}
 .top-titel{font-size:13px;font-weight:600;color:var(--ink-700);letter-spacing:-.01em}
 /* Durchgehende Kopfleiste */
-.topbar{display:flex;align-items:center;border-bottom:1px solid var(--line);background:var(--surface);flex:none;position:relative;z-index:40}
+/* FESTE HOEHE, nicht aus dem Inhalt gewachsen. Vorher ergab sich die Hoehe aus den
+   Werkzeugen: in der Shell 53 px, auf den eigenstaendigen Seiten (`topbar-schlank`) 48 —
+   der Inhalt sass also je Bereich 5 px anders. Klein, aber beim Wechseln sichtbar, und
+   eine Hoehe, die vom Inhalt abhaengt, driftet mit jedem neuen Knopf wieder auseinander. */
+.topbar{display:flex;align-items:center;height:var(--kopf);border-bottom:1px solid var(--line);background:var(--surface);flex:none;position:relative;z-index:40}
 .brandcell{flex:none;display:flex;align-items:center;padding:0 var(--s5) 0 var(--s5);
   font-size:16px;font-weight:700;letter-spacing:-.03em;color:var(--ink-900)}
 .brandcell span{color:var(--signal)}

@@ -52,7 +52,7 @@ export default function SettingsPage() {
 
   return (
     <div className="app">
-      <AppTop titel={t("Einstellungen")} />
+      <AppTop />
       <div className="body">
         {/* Einstellungen sind kein Rail-Ziel (sie hängen am Konto-Menü) — deshalb ohne
             aktiven Punkt, aber MIT Navigation: sonst wäre es wieder eine Sackgasse. */}

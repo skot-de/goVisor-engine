@@ -178,11 +178,14 @@ def test_firewall_kennt_die_quelle():
 
 # ── Hinweis-Chips (UI-Vertrag) ────────────────────────────────────────────────────────
 #
-# Diese drei Tests stehen hier und nicht bei den Daten, weil sie eine Zusage an die
-# OBERFLAECHE festhalten. Sie pruefen Quelltext, nicht Verhalten — der Mehrfach-Fall (zwei
-# Chips, Auswahl umschalten) liess sich am 2026-08-15 im Browser nicht erreichen: kein Lead
-# in den obersten 14 eines Grundraums traegt zwei Hinweise. Gesehen ist er also NICHT; was
-# hier steht, ist die Absicht, nicht der Beweis.
+# Diese Tests stehen hier und nicht bei den Daten, weil sie eine Zusage an die OBERFLAECHE
+# festhalten. Sie pruefen Quelltext, nicht Verhalten.
+#
+# NACHTRAG 2026-08-15: der Mehrfach-Fall ist inzwischen im Browser GESEHEN — ueber die
+# Suche („IGEL OS" → „Verlaengerung der IGEL OS Lizenzen") erreichbar, zwei Chips, Klick auf
+# den zweiten schaltet die Belegzeile von „Amtsinhaber neu" auf „Dieselbe Vergabe erscheint
+# auf 2 Portalen (Landesportal, TED)". Vorher stand hier, er sei nicht erreichbar; das lag
+# an meiner Browser-Steuerung, nicht am Produkt.
 
 def _hinweise_tsx() -> str:
     return (ROOT / "web" / "components" / "explorer" / "Hinweise.tsx").read_text(encoding="utf-8")
@@ -230,3 +233,48 @@ def test_hinweise_stehen_buendig_zum_uebrigen_panel():
     css = (ROOT / "web" / "app" / "explorer.css").read_text(encoding="utf-8")
     block = css.split(".hinweise-block {")[1].split("}")[0]
     assert "padding" in block and "32px" in block
+
+
+# ── Der Bereichsrahmen ────────────────────────────────────────────────────────────────
+#
+# Gemessen am 2026-08-15 beim Durchklicken aller sechs Bereiche, VOR dem Umbau:
+#
+#   Bereich       Kopf   Titel                 Was scrollt
+#   Akquise       93 px  —                     innerer Bereich
+#   Merkliste     93 px  —                     innerer Bereich
+#   Netzwerk      93 px  —                     innerer Bereich
+#   Strategie     93 px  —                     innerer Bereich
+#   Unternehmen   48 px  „Unser Unternehmen"   ganze Seite
+#   Bausteine     48 px  „Bausteine"           ganze Seite
+#
+# Der Inhalt sprang bei jedem Wechsel um 45 px, zwei von sechs Bereichen trugen eine
+# Ueberschrift, und das Scrollen fuehlte sich anders an. NACH dem Umbau: 48/45/93 ueberall.
+
+def test_rahmenmasse_stehen_an_einer_stelle():
+    """`--kopf` und `--leiste` halten den Inhalt in JEDEM Bereich auf derselben Hoehe. Zwei
+    Werte an zwei Orten driften auseinander — genau so entstanden die 93 gegen 48."""
+    g = (ROOT / "web" / "app" / "globals.css").read_text(encoding="utf-8")
+    assert "--kopf:" in g and "--leiste:" in g
+    css = (ROOT / "web" / "app" / "explorer.css").read_text(encoding="utf-8")
+    assert "height:var(--kopf)" in css, "die Kopfhoehe darf nicht aus dem Inhalt wachsen"
+    assert "height:var(--leiste)" in css
+
+
+def test_apptop_bringt_die_leiste_immer_mit():
+    """Die Bereichsleiste ist PFLICHT im Aufbau, auch wenn ein Bereich nichts hineinstellt:
+    ihre Hoehe haelt den Inhalt an derselben Stelle. Wer sie weglaesst, holt das Springen
+    zurueck — und es faellt erst beim Wechseln auf, nie beim Bauen der einzelnen Seite."""
+    quelle = (ROOT / "web" / "components" / "explorer" / "Rail.tsx").read_text(encoding="utf-8")
+    assert 'className="bereichsleiste"' in quelle
+    assert "titel" not in quelle.split("export function AppTop")[1].split("\n}")[0], (
+        "AppTop darf keinen Titel mehr fuehren — zwei von sechs beschriftete Bereiche sind "
+        "uneinheitlicher als keiner")
+
+
+def test_filterleiste_haengt_nicht_mehr_im_kopf():
+    """Sie war der Grund fuer die 93 px. Kaeme sie zurueck in den `<header>`, waere der
+    Kopf wieder hoeher als auf den eigenstaendigen Seiten."""
+    shell = (ROOT / "web" / "components" / "explorer" / "ExplorerShell.tsx").read_text(encoding="utf-8")
+    kopf = shell.split("<header className=\"topbar\">")[1].split("</header>")[0]
+    assert "<FilterBar" not in kopf, "die Filterleiste gehoert in die Bereichsleiste, nicht in den Kopf"
+    assert 'className="bereichsleiste"' in shell

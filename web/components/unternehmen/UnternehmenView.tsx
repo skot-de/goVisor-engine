@@ -32,14 +32,21 @@ const numIn = (v: string): number | null => {
   return v.trim() === "" || Number.isNaN(n) ? null : n;
 };
 
-export function UnternehmenView() {
+export type UnTab = "profil" | "bilanz" | "chancen";
+
+/**
+ * `tab`/`onTab` kommen seit 2026-08-15 von AUSSEN. Grund: die Reiter sind Navigation, nicht
+ * Inhalt — sie gehoeren in die Bereichsleiste des Rahmens, gleich hoch wie die Filterleiste
+ * der Listen-Ansichten. Damit sie dort stehen koennen, muss der Zustand eine Ebene hoeher
+ * liegen; sonst haette die Leiste keinen Zugriff darauf.
+ */
+export function UnternehmenView({ tab, onTab }: { tab: UnTab; onTab: (t: UnTab) => void }) {
   const { t } = useSprache();
   const [loading, setLoading] = useState(true);
   const [noSession, setNoSession] = useState(false);
   const [profil, setProfil] = useState<Profil | null>(null);
   const [ctx, setCtx] = useState<ProfilContext | null>(null);
   const [flash, setFlash] = useState<string | null>(null);
-  const [tab, setTab] = useState<"profil" | "bilanz" | "chancen">("profil");
   const [lokaleFirma, setLokaleFirma] = useState<string | null>(null);
 
   useEffect(() => {
@@ -99,14 +106,6 @@ export function UnternehmenView() {
       <div className="un-head">
         <h1>{t("Unser Unternehmen")}</h1>
         <p>{t("Die Eignungsangaben eures Betriebs — einmal erfasst, überall verwendet: Anforderungsabgleich, Textbausteine und Relevanz greifen darauf zu.")}</p>
-      </div>
-
-      <div className="un-tabs" role="tablist">
-        {(["profil", "bilanz", "chancen"] as const).map((k) => (
-          <button key={k} role="tab" aria-selected={tab === k} className={`un-tab ${tab === k ? "on" : ""}`} onClick={() => setTab(k)}>
-            {k === "profil" ? t("Eignungsprofil") : k === "bilanz" ? t("Unsere Bilanz") : t("Chancen")}
-          </button>
-        ))}
       </div>
 
       {tab === "profil" ? (
