@@ -127,13 +127,15 @@ def hole_liste(url: str, pg) -> dict:
             "angemeldet_noetig": "Login" in kopf or "Registration" in kopf}
 
 
-def lauf(limit: int | None, dry_run: bool, country: str = "DE") -> dict:
+def lauf(limit: int | None, dry_run: bool, country: str = "DE",
+         alles_neu: bool = False) -> dict:
     import duckdb
     from playwright.sync_api import sync_playwright
 
     from . import doctypes
 
     L = ROOT / "data" / "gold" / country / "lead_export.parquet"
+    out = ROOT / "data" / "docs" / country / "doc_listing_subreport.parquet"
     con = duckdb.connect()
     rows = con.execute(f"""
         SELECT lead_id, documents_url FROM read_parquet('{L.as_posix()}')
@@ -145,6 +147,22 @@ def lauf(limit: int | None, dry_run: bool, country: str = "DE") -> dict:
           AND coalesce(procedure_kind, '') <> 'open_house'
         ORDER BY deadline_date ASC
     """).fetchall()
+
+    # Idempotenz. Eine Vergabe braucht rund 14 s (clientseitiges Rendern, zweimal warten);
+    # 985 offene subreport-Vorgaenge waeren vier Stunden — jeden Tag neu, fuer Listen, die
+    # sich nicht mehr aendern. Bekannte Vorgaenge fallen deshalb raus. Die Dateiliste einer
+    # laufenden Vergabe kann sich zwar noch aendern (Nachtraege), aber das faengt der
+    # naechste Durchlauf ueber `--alles-neu` ab; taeglich alles neu zu holen waere das
+    # gleiche Muster wie der Bronze-Stau bei NetServer, nur andersherum.
+    altbestand: list[dict] = []
+    if out.exists() and not alles_neu:
+        altbestand = con.execute(
+            f"SELECT * FROM '{out.as_posix()}'").arrow().read_all().to_pylist()
+        bekannt = {s["lead_id"] for s in altbestand}
+        vorher = len(rows)
+        rows = [r for r in rows if r[0] not in bekannt]
+        if vorher != len(rows):
+            print(f"subreport: {vorher - len(rows)} bereits erfasst, werden übersprungen")
     if limit:
         rows = rows[:limit]
     print(f"subreport: {len(rows)} offene Vergaben zu prüfen")
@@ -192,21 +210,30 @@ def lauf(limit: int | None, dry_run: bool, country: str = "DE") -> dict:
             print("  ", json.dumps(s, ensure_ascii=False)[:200])
         return {"geprüft": len(saetze), "mit_liste": mit}
 
+    if not saetze and not altbestand:
+        print("nichts zu schreiben.")
+        return {"geprüft": 0, "mit_liste": 0, "mit_lv": 0}
+
     import pyarrow as pa
     import pyarrow.parquet as pq
-    out = ROOT / "data" / "docs" / country / "doc_listing_subreport.parquet"
     out.parent.mkdir(parents=True, exist_ok=True)
-    pq.write_table(pa.Table.from_pylist(saetze), out, compression="zstd")
-    print(f"→ {out}")
-    return {"geprüft": len(saetze), "mit_liste": mit, "mit_lv": mit_lv}
+    # Neue Saetze gewinnen — bei `--alles-neu` ersetzt der frische Lauf den alten Stand.
+    frisch = {s["lead_id"] for s in saetze}
+    alle = [s for s in altbestand if s["lead_id"] not in frisch] + saetze
+    pq.write_table(pa.Table.from_pylist(alle), out, compression="zstd")
+    print(f"→ {out} ({len(alle)} Vergaben gesamt)")
+    return {"geprüft": len(saetze), "mit_liste": mit, "mit_lv": mit_lv,
+            "gesamt": len(alle)}
 
 
 def main(argv: list[str] | None = None) -> int:
     p = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     p.add_argument("--limit", type=int, default=None)
     p.add_argument("--dry-run", action="store_true")
+    p.add_argument("--alles-neu", action="store_true",
+                   help="bekannte Vergaben nicht überspringen (Nachträge einsammeln)")
     a = p.parse_args(argv)
-    lauf(a.limit, a.dry_run)
+    lauf(a.limit, a.dry_run, alles_neu=a.alles_neu)
     return 0
 
 

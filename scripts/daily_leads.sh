@@ -252,6 +252,17 @@ $PY -m govisor.cli fetch-docs --country DE || echo "  ⚠ Fetch unvollständig �
 #   entstanden aus dem Textbestand des letzten Handlaufs. Genau die Falle, die wir beim
 #   Fetch schon einmal hatten — Herunterladen allein bringt nichts, Auswerten ohne
 #   Aufbereiten aber genauso wenig.
+# subreport ELViS: DATEILISTEN, keine Dateien. Der Download reagiert dort ohne Anmeldung
+# nicht (gemessen ueber drei Vergaben und alle Knopfpositionen; der eine Knopf, der liefert,
+# gibt die Bekanntmachung — die haben wir ueber TED). Die LISTE ist oeffentlich, und aus den
+# Dateinamen zieht `doctypes` genug: gemessen an 60 Vergaben 90 % mit Liste, 57 % mit
+# Leistungsverzeichnis, 77 % mit Eignungsunterlage. Damit ist beantwortbar, ob ein LV
+# existiert und welche Nachweise verlangt werden, ohne eine einzige Datei zu besitzen.
+# Gedeckelt, weil jede Vergabe ~14 s braucht (clientseitiges Rendern); idempotent, bekannte
+# Vorgaenge fallen raus — der Rueckstand arbeitet sich ueber die Tage ab.
+step "subreport-Dateilisten (DE, gedeckelt + idempotent)"
+$PY -m govisor.subreport --limit 120 || echo "  ⚠ subreport-Listen unvollständig."
+
 step "Unterlagen entpacken → Volltext-Index"
 $PY -m govisor.cli index-docs --country DE || echo "  ⚠ Index unvollständig — Auswertung läuft über den vorhandenen Textbestand."
 step "Unterlagen auswerten → Anforderungs-Signale"
