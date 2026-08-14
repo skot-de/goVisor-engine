@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import { Hinweise } from "./Hinweise";
 import {
   LEADS, WF, STAR, applyState,
   renderUebersicht, renderTeilnahme, renderAnalyse, renderMarkt, renderBuyer,
@@ -269,6 +270,33 @@ export function DetailPanel({
           ))}
         </div>
       </div>
+
+      {/* Zusätzliche Hinweise — bewusst als React-GESCHWISTER vor dem Reiter-Inhalt und nicht
+          in den HTML-String gewebt. Der Reiter-Inhalt kommt verbatim aus dem Prototyp-Renderer;
+          ihn anzufassen hiesse, jede kuenftige Aenderung dort nachzuziehen. Als Komponente
+          bleibt die Logik testbar (Rangfolge, Deckel, Belege) und der Renderer unberuehrt.
+
+          Nur in der Uebersicht: die Hinweise sollen das Erste sein, was man sieht, nicht ein
+          Fund in einem Unterreiter. Wer die Frist-Warnung erst im vierten Tab findet, hat den
+          Lead vorher schon zugeklappt.
+
+          Fehlen die Felder (der Export liefert sie noch nicht), rendert die Komponente nichts —
+          kein leerer Kasten, keine Fehlermeldung. */}
+      {activeTab === "uebersicht" && (
+        <Hinweise
+          felder={{
+            deadlineSource: l.deadlineSource as string | undefined,
+            deadlineVeroeffentlicht: l.deadlineVeroeffentlicht as string | undefined,
+            deadlineAktuell: l.deadlineAktuell as string | undefined,
+            portale: l.portale as string[] | undefined,
+            kategorieQuelle: l.kategorieQuelle as string | undefined,
+            amtsinhaberSeitJahre: l.amtsinhaberSeitJahre as number | undefined,
+            amtsinhaberZyklen: l.amtsinhaberZyklen as number | undefined,
+            erfolgloseVersuche: l.erfolgloseVersuche as number | undefined,
+            erfolgloseJahre: l.erfolgloseJahre as number | undefined,
+          }}
+        />
+      )}
 
       <div onClick={handleBody} dangerouslySetInnerHTML={{ __html: bodyHtml }} />
     </>
