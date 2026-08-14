@@ -395,6 +395,18 @@ for L in DE AT CH; do
     || echo "  ⚠ Dublettencheck $L fehlgeschlagen — Anreicherung bleibt auf altem Stand."
 done
 
+# KATEGORIE-WASSERFALL. Muss ZWISCHEN Firewall und Gold laufen, und das ist keine
+# Geschmacksfrage: er liest `notice_duplicates` (kommt aus der Firewall) und schreibt
+# `lead_kategorie.parquet`, das der Gold-Lead-Bau per LEFT JOIN liest. Davor gaebe es die
+# Zwillinge noch nicht, danach kaeme das Ergebnis einen Lauf zu spaet.
+#
+# GEFEHLT bis 2026-08-14: der Wasserfall war gebaut, aber nie verdrahtet. `lead_kategorie`
+# stand deshalb auf dem Stand eines einzelnen Handlaufs — alle spaeter dazugekommenen
+# Quellen (healyhudson: 676 Leads) blieben „Ohne Kategorie", ohne dass etwas abbrach.
+step "Kategorie-Ableitung fuer Ausschreibungen ohne CPV"
+$PY -m govisor.kategorie --country DE --schreiben \
+  || echo "  ⚠ Kategorie-Ableitung fehlgeschlagen — die Leads ohne CPV bleiben 'Ohne Kategorie'."
+
 step "AT/CH-Gold (volle Pipeline, 26 Schritte je Land)"
 $PY scripts/build_dach_gold.py --laender AT,CH --as-of "$TODAY" \
   && echo "  AT/CH-Gold ok." \
