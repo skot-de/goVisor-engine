@@ -1,5 +1,9 @@
 /* #27 „Unser Unternehmen" — Stammdaten. Namespace un-*. Tokens aus globals.css. */
-.un-wrap { max-width: 780px; margin: 0 auto; padding: 26px 20px 60px; }
+/* LINKE OBERE ECKE WIE UEBERALL. Gemessen 2026-08-15: die Ueberschrift stand hier bei
+   x=548/y=222, auf /bausteine bei x=404/y=70 — beim Wechsel sprang sie 144 px zur
+   Seite und 152 px nach unten. Die BREITE darf sich nach dem Inhalt richten, die
+   linke obere Ecke nicht. */
+.un-wrap { max-width: 780px; margin: 0; padding: var(--seite-y) var(--seite-x) 60px; }
 .un-head h1 { font-size: 24px; font-weight: 700; letter-spacing: -.02em; }
 .un-head p { color: var(--ink-500); font-size: 13.5px; margin-top: 6px; max-width: 66ch; line-height: 1.55; }
 .un-muted { color: var(--ink-500); font-size: 14px; padding: 24px 0; }
@@ -200,7 +204,10 @@
 
 /* Konto-Hinweis statt nacktem Anmelde-Satz: erklaert den Unterschied zwischen
    lokaler Einstellung und Konto-Profil und bietet den Weg dorthin. */
-.un-gate{max-width:560px;margin:12vh auto 0;text-align:left}
+/* `12vh auto 0` schob den Inhalt um 12 % der Fensterhoehe nach unten UND zentrierte ihn —
+   das war Svens „mal oben, mal zentriert in der Mitte". Ein Einstieg, der je nach
+   Fensterhoehe woanders steht, laesst sich nicht wiederfinden. */
+.un-gate{max-width:620px;margin:0;text-align:left}
 .un-gate h1{font-size:22px;font-weight:700;margin-bottom:10px}
 .un-gate p{font-size:14px;line-height:1.6;color:var(--ink-600);margin-bottom:14px}
 .un-gate-btns{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px}
@@ -230,3 +237,21 @@
 .btn-zweit:hover{background:var(--surface-2,#f8fafc)}
 /* Der Ausgang gehoert nicht neben den Eingang: leiser Link statt dritter Knopf. */
 .un-zurueck{color:var(--ink-600);text-decoration:underline;text-underline-offset:2px}
+
+/* DER MARKT IN ZAHLEN (abgemeldet). Echte Werte aus /api/branchen — dieselbe Quelle wie
+   die Grundraum-Zaehler in der Akquise. Fehlt sie, wird nichts gezeigt: eine leere Stelle
+   ist ehrlicher als eine geratene Zahl. */
+.mk-panel{margin:0 0 24px;padding:18px 20px;border:1px solid var(--line);
+  border-radius:10px;background:var(--surface)}
+.mk-kopf{display:flex;align-items:baseline;gap:12px;margin-bottom:14px}
+.mk-zahl{font-size:32px;font-weight:700;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.mk-lbl{font-size:13px;font-weight:600;color:var(--ink-900)}
+.mk-lbl span{display:block;font-size:12px;font-weight:400;color:var(--ink-500)}
+.mk-balken{list-style:none;margin:0;padding:0;display:grid;gap:7px}
+.mk-balken li{display:grid;grid-template-columns:150px 1fr 64px;align-items:center;gap:10px}
+.mk-name{font-size:12px;color:var(--ink-700);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.mk-bahn{height:7px;border-radius:999px;background:var(--surface-2,#f1f5f9);overflow:hidden}
+.mk-fuell{display:block;height:100%;border-radius:999px;background:var(--signal,#10b981)}
+.mk-wert{font-size:12px;text-align:right;color:var(--ink-600);font-variant-numeric:tabular-nums}
+.mk-fuss{margin:14px 0 0;font-size:13px;line-height:1.55;color:var(--ink-600)}
+@media (max-width:640px){.mk-balken li{grid-template-columns:110px 1fr 56px}}

@@ -17,6 +17,7 @@ import {
 import { catalogFor, requiredKeysFor, type CatalogItem } from "@/lib/unternehmen/catalog";
 import { exportProfilJson, exportProfilPdf } from "@/lib/unternehmen/export";
 import { BilanzTab, ChancenTab } from "./BilanzChancen";
+import { MarktPanel } from "./MarktPanel";
 
 /* #27 Eignungsprofil — „Unser Unternehmen". Ein Objekt, an einer Stelle gepflegt (§2).
  * Lädt das Profil einmal, hält es in State, jede Sektion speichert ihren Teil merge-sicher.
@@ -86,6 +87,12 @@ export function UnternehmenView({ tab, onTab }: { tab: UnTab; onTab: (t: UnTab) 
               {t("Hier pflegt ihr eure Eignungsangaben — Referenzen, Zertifikate, Nachweise. Sie liegen in eurem Konto und werden für Anforderungsabgleich, Textbausteine und Relevanz verwendet.")}
             </p>
           )}
+          {/* DER MARKT IN ZAHLEN. Svens Vorschlag: allgemeine Marktdaten zeigen, solange
+              das Unternehmen nicht angemeldet ist — dann sieht man, worum es geht, BEVOR
+              man etwas eingibt. Echte Zahlen aus derselben Quelle wie die Akquise-Zaehler;
+              erfundene waeren genau die Zierde, die das Produkt sonst vermeidet. */}
+          <MarktPanel />
+
           {/* WAS DAS PROFIL BEWIRKT — vorher stand hier nur, WAS man eintraegt
               („Referenzen, Zertifikate, Nachweise"). Das ist eine Aufgabe, kein Grund.
               Drei Wirkungen, jede an einer Stelle im Produkt, die es schon gibt. */}

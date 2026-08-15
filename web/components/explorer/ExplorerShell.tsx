@@ -235,6 +235,18 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
     if (br) { brancheManual.current = true; setAktiveBranche(br); }   // expliziter Deep-Link gewinnt vor Profil-Ableitung
   }, []);
 
+  // SUCHE VON EINER ANDEREN SEITE. Die eigenstaendigen Seiten (Unternehmen, Bausteine)
+  // tragen dieselbe Suchleiste, haben aber keinen Listenzustand — sie schicken den Begriff
+  // als `?q=` hierher. Ohne das waere die Leiste dort Zierde: sichtbar, aber wirkungslos,
+  // und das ist schlimmer als keine Leiste.
+  useEffect(() => {
+    const q = new URLSearchParams(window.location.search).get("q");
+    if (!q) return;
+    const tok = classifyQuery(q) as Token | null;
+    if (tok) setTokens((ts) => ts.some((x) => x.type === tok.type && x.value === tok.value)
+      ? ts : [...ts, tok]);
+  }, []);
+
   useEffect(() => {
     let cancelled = false;
     setLoading(true);

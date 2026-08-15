@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { logout } from "@/lib/supabase/auth";
 import { useSprache } from "@/lib/i18n";
+import { SeitenSuche } from "./SeitenSuche";
 
 /* Die Hauptnavigation — EINE Quelle für alle Seiten.
  *
@@ -202,13 +203,18 @@ export function AppRail({
  *
  * Deshalb: die Werkzeuge des Bereichs stehen IN dieser Leiste (`werkzeuge`), nicht darunter.
  */
-export function AppTop({ werkzeuge }: { werkzeuge?: React.ReactNode }) {
+export function AppTop({ werkzeuge, ohneSuche }: {
+  werkzeuge?: React.ReactNode; ohneSuche?: boolean;
+}) {
   return (
     <header className="topbar topbar-schlank">
       <div className="brandcell">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src="/govisor-wordmark.png" alt="goVisor" className="brandlogo" />
       </div>
+      {/* GRUNDAUFBAU UEBERALL GLEICH: Logo und Suche tragen alle Seiten, die
+          Listen-Werkzeuge (Filter, Spalten, Export) nur die Listen. */}
+      {ohneSuche ? null : <SeitenSuche />}
       {werkzeuge ? <div className="top-werkzeuge">{werkzeuge}</div> : null}
     </header>
   );

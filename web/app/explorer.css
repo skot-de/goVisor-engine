@@ -466,7 +466,11 @@ mark.hit{background:#CFF3E4;box-shadow:0 0 0 2px #CFF3E4}
 .baust-top{display:flex;align-items:center;gap:16px;padding:10px 20px;background:var(--surface);border-bottom:1px solid var(--line)}
 .baust-top .logo{font-size:17px;font-weight:700;letter-spacing:-.03em}
 .baust-back{margin-left:auto;color:var(--gd);text-decoration:none;font-size:13px;font-weight:500}
-.baust-page .libwrap{padding:22px 20px 60px;max-width:1120px;margin:0 auto}
+/* Gleiche linke obere Ecke wie alle Seiten; die groessere Breite ist inhaltlich
+   begruendet (zwei Spalten im Leerzustand), die Position nicht verhandelbar.
+   Gemessen 2026-08-15: Ueberschrift auf /bausteine x=404/y=70, auf /unternehmen
+   x=548/y=222 — beim Wechsel sprang sie 144 px zur Seite und 152 px nach unten. */
+.baust-page .libwrap{padding:var(--seite-y) var(--seite-x) 60px;max-width:1120px;margin:0}
 .baust-page .sechead{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:18px;flex-wrap:wrap}
 .baust-page .sechead h1{font-size:21px;font-weight:700;letter-spacing:-.02em}
 .baust-page .sechead p{font-size:13px;color:var(--ink-700);margin-top:3px;max-width:560px}
@@ -2047,3 +2051,7 @@ a.lb-kachel{text-decoration:none}
 .bl-muster { opacity: .62; pointer-events: none; }
 
 @media (max-width: 900px) { .baust-leer { grid-template-columns: 1fr; gap: 28px; } }
+
+/* Suchleiste der eigenstaendigen Seiten — dieselbe Form wie in der Shell, damit die
+   Topbar im Grundaufbau ueberall gleich ist. */
+.seitensuche{flex:1;max-width:520px;margin-left:var(--s4)}

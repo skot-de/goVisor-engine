@@ -4,7 +4,7 @@
 /* Eigener Wrapper — bewusst OHNE die Klasse `main`. Die traegt das Drei-Zeilen-Raster der
    Lead-Ansicht; wer sie fuer einen generischen Inhaltsbereich haelt (so wie ich beim ersten
    Entwurf), bekommt seine Karten in fremde Zeilen gequetscht. */
-.lauf-page { padding: 24px 32px 60px; overflow: auto; min-width: 0; }
+.lauf-page { padding: var(--seite-y) var(--seite-x) 60px; overflow: auto; min-width: 0; }
 .lauf-laedt { color: var(--muted, #6b7280); }
 .lauf-fehler { padding: 12px 14px; border-radius: 8px; background: #fef2f2;
                border: 1px solid #fecaca; color: #991b1b; margin-bottom: 16px; }

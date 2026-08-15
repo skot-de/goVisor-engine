@@ -654,3 +654,57 @@ def test_einstieg_nennt_die_WIRKUNG_nicht_nur_die_aufgabe():
     assert "un-wirkt" in v
     for wort in ("Relevanz", "Anforderungsabgleich", "Textbausteine"):
         assert wort in v.split("un-wirkt")[1][:1200], f"{wort} fehlt"
+
+
+def test_seiten_haben_dieselbe_linke_obere_ecke():
+    """Svens Befund: „mal ist der content oben, mal zentriert in der Mitte".
+
+    Gemessen 2026-08-15 VOR dem Fix — die Ueberschrift stand auf
+      /unternehmen  bei x=548, y=222   (`margin: 12vh auto 0`)
+      /bausteine    bei x=404, y=70    (`margin: 0 auto`, max-width 1120)
+    Beim Wechsel sprang sie 144 px zur Seite und 152 px nach unten.
+
+    `12vh` heisst ausserdem: die Position haengt an der FENSTERHOEHE. Ein Einstieg, der je
+    nach Fenster woanders steht, laesst sich nicht wiederfinden.
+
+    Die BREITE darf sich nach dem Inhalt richten (Bausteine haben zwei Spalten), die linke
+    obere Ecke nicht."""
+    g = (ROOT / "web" / "app" / "globals.css").read_text(encoding="utf-8")
+    assert "--seite-x:" in g and "--seite-y:" in g
+    for datei in ("web/app/unternehmen/unternehmen.css", "web/app/explorer.css",
+                  "web/app/intern/lauf/lauf.css"):
+        css = (ROOT / datei).read_text(encoding="utf-8")
+        assert "var(--seite-x)" in css, f"{datei} nutzt die gemeinsamen Masse nicht"
+    # NUR die Regel pruefen, nicht den Dateitext. ZWEITES MAL derselbe Fehler an einem Tag:
+    # erst verbot ich `btn-s` ueberall und schlug am erklaerenden Kommentar an, jetzt `12vh`.
+    # Ein Test, der die Begruendung verbietet, zwingt dazu, sie zu loeschen.
+    import re as _re
+    u = (ROOT / "web" / "app" / "unternehmen" / "unternehmen.css").read_text(encoding="utf-8")
+    ohne_kommentar = _re.sub(r"/\*.*?\*/", "", u, flags=_re.S)
+    assert "12vh" not in ohne_kommentar, (
+        "eine Position, die an der Fensterhoehe haengt, ist keine")
+
+
+def test_topbar_hat_ueberall_denselben_grundaufbau():
+    """Svens Vorgabe: „die topbar sollte im grundaufbau immer gleich sein. die suche kann
+    bleiben und nur die zusaetzlichen sachen wie filter/sortieren fallen halt raus."
+
+    Und sie muss wirklich suchen: diese Seiten haben keinen Listenzustand, die Leiste
+    koennte reine Zierde sein. Eine Suche, die aussieht wie eine Suche und nichts tut, ist
+    schlimmer als keine — sie verspricht etwas. Deshalb `?q=` an die Akquise, die es dort
+    in ein Token verwandelt."""
+    r = (ROOT / "web" / "components" / "explorer" / "Rail.tsx").read_text(encoding="utf-8")
+    assert "<SeitenSuche />" in r
+    s = (ROOT / "web" / "components" / "explorer" / "SeitenSuche.tsx").read_text(encoding="utf-8")
+    assert "/leads?q=" in s
+    shell = (ROOT / "web" / "components" / "explorer" / "ExplorerShell.tsx").read_text(encoding="utf-8")
+    assert 'get("q")' in shell, "die Akquise muss den Begriff aufnehmen"
+
+
+def test_marktpanel_zeigt_echte_zahlen_oder_nichts():
+    """Erfundene Marktzahlen auf einer Einstiegsseite waeren genau die Zierde, die das
+    Produkt sonst vermeidet — und jemand wuerde sie zitieren. Fehlt die Quelle, wird nichts
+    gezeigt."""
+    m = (ROOT / "web" / "components" / "unternehmen" / "MarktPanel.tsx").read_text(encoding="utf-8")
+    assert '"/api/branchen"' in m, "dieselbe Quelle wie die Akquise-Zaehler"
+    assert "if (!zahlen) return null;" in m, "keine Platzhalter, keine geratene Zahl"
