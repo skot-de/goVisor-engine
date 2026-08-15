@@ -1,0 +1,546 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+10;Die erforderlichen Kostenanteile für die zu erbringende Leistung sind nachvollziehbar und prüffähig zu kalkulieren. Die zeitabhängigen Kosten für die Bauleitung und Poliere sind hier zu erfassen.;1,0;psch;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+20;Erstellung des Logistikkonzeptes zur Realisierung aller nachfolgend beschriebenen Leistungen des AN auf Grundlage des Terminplans des AN sowie ergänzend zum nachfolgend beschriebenen Bauablaufplan,;1,0;psch;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+30;Erstellen eines detaillierten Bauablaufplanes als Terminplan mit Darstellung der Anfangs- und Endtermine aller Gerwerkeleistungen in Ergänzung zum vorbeschriebenen Logistikkonzept,;1,0;psch;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+40;Vorbeschriebenen Bauablaufplan auf Anforderung des AG weiter fortschreiben, einschl. Abgleich SOLL-IST,;2,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+50;Erstellen des Baustelleneinrichtungsplanes als zeichnerische Darstellung,;1,0;psch;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+60;"Erstellen der Geräteanfrage gemäß beigefügten Merkblatt ""Außergewöhnliche Belastungen im Einflussbereich von U-Bahnanlagen"", Stand 23.01.2025,";1,0;psch;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+70;"Erstellung des Baustromkonzeptes gemäß beigefügter Anlage ""Technische Anweisung - Anschluss und Betrieb einer Baustromversorgung Stand 25.10.2022"" inkl. der dazugehörigen Anlagen,";1,0;psch;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+80;Erstellen der abschließenden Dokumentationsunterlagen,;1,0;psch;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+90;Erstellen einer lückenlosen Fotodokumentation über alle Bauphasen mittels Digitalkamera, zu jedem Foto ist das Datum anzugeben,;1,0;psch;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+100;Fremdüberwachung der Überwachungsklasse 2 (ÜK 2) für Betone mit höheren Anforderungen nach DIN 1045-3 (12),;1,0;psch;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+10;Durchzuführende Arbeiten;1,0;psch;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+10;Baustelleneinrichtung für alle beschriebenen Leistungen des AN komplett liefern, betriebsfertig aufbauen,;1,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+20;Unterhalten und Nutzen;1,0;psch;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+30;"Baustelleneinrichtung aus der Position ""Baustelle einrichten für Zwecke AN"" für alle beschriebenen Leistungen und für alle Gewerke komplett abbauen und wieder abtransportieren,";1,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+40;Baubüro für den AG und die örtliche Bauüberwachung der BVG, bestehend aus 1 Stück Containeranlage,;1,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+50;Gebrauchsüberlassung des vorgenannten Baubüro für AG und örtliche BÜ, inkl. wöchentlicher Wartung und Reinigung;1,0;psch;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+60;"Baubüro aus der Position ""Baubüro für AG und örtliche BÜ aufbauen"" komplett abbauen und wieder abtransportieren,";1,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+70;WC-Anlage für Nutzung durch den AG,;1,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+80;Vorbeschriebene WC-Anlagen für AG und BÜ über die vertraglich vereinbarte Bauzeit hinaus vorhalten,;1,0;StWo;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+90;"Bauzaun aus mobilen Stahlrahmenelementen zur sicheren Einzäunung der BE-Flächen wie in Position 000.01.10 ""Baustelleneinrichtung aufbauen/vorhalten"" beschrieben,";150,0;m;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+100;Vorbeschriebenen Bauzaun aus Stahlrohrelementen (2,00 m hoch) umsetzen,;70,0;m;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+110;Zulage für Herrichtung der Zufahrtsmöglichkeit in vorbeschriebenen Bauzaun aus Stahlrohrelementen (2,00 m hoch),;10,0;m;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+120;Verlängerte Vorhaltung für den vorgenannten Bauzaun über die vertraglich vereinbarte Bauzeit hinaus,;1,0;mWo;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+130;Verschließbares 2-flügeliges Gittertor als Bautellenzugang,;2,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+140;Verlängerte Vorhaltung für das vorgenannte 2.flg. Gittertor für den Bauzaun über die vertraglich vereinbarte Bauzeit hinaus,;2,0;StWo;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+150;Verschließbares 1-flügeliges Gittertor als Bautellenzugang,;1,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+160;Verlängerte Vorhaltung für das vorgenannte 1-flg. Gittertor für den Bauzaun über die vertraglich vereinbarte Bauzeit hinaus,;1,0;StWo;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+170;Zuvor beschriebenen Bauzaun mit Bauzaunplane bekleiden,;130,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+180;Verlängerte Vorhaltung für die vorgenannte Bauzaunplane über die vertraglich vereinbarte Bauzeit hinaus,;1,0;m2Wo;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+190;Beleuchtung für vorbeschriebenen Bauzaun aufbauen einschl. Leitungsverlegung, an Baustromverteilung anschließen,;100,0;m;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+200;Verlängerte Vorhaltung für die vorgenannte Bauzaunbeleuchtung über die vertraglich vereinbarte Bauzeit hinaus,;1,0;mWo;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+210;Reflektorband für vorbeschriebenen Bauzaun in Richtung Gormannstraße und Radweg einbauen,;60,0;m;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+220;Verlängerte Vorhaltung für das vorgenannte Reflektorband am Bauzaun über die vertraglich vereinbarte Bauzeit hinaus,;1,0;mWo;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+230;Leitbalken auf Straßen- oder Gehwegbelag einbauen,;18,0;m;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+240;Verlängerte Vorhaltung für die vorgenannten Leitbalken über die vertraglich vereinbarte Bauzeit hinaus,;1,0;mWo;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+250;Bauzaun aus mobilen Kunststoffelementen/-absperrungen, h=1,00 m,;150,0;m;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+260;Vorbeschriebenen Kunststoff-Bauzaun (1,00 m hoch) umsetzen,;50,0;m;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+270;Vorbeschriebenen Kunststoff-Bauzaun (1,00 m hoch) über die Grundstandzeit hinaus vorhalten,;600,0;mWo;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+280;Bauzaun in geschlossener Bauweise zur sicheren Einzäunung,;50,0;m;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+290;Vorbeschriebenen geschlossenen Bauzaun inkl. Beleuchtung umsetzen,;17,5;m;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+300;Vorbeschriebenen geschlossenen-Bauzaun über Grundstandzeit hinaus vorhalten,;500,0;mWo;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+310;Verschließbares Tor, B=3,50 m,;1,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+320;Vorbeschriebenes Tor im geschlossenen Bauzaun, B=3,50m, über die vertraglich vereinbarte Bauzeit hinaus,;10,0;StWo;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+330;Behelfsbrücke für das Verlegen von Elektrokabeln im Straßenland, Breite 10 m, Durchfahrtshöhe = 5,50 m, inkl. Verkehrskennzeichnung, Material nach Wahl des AN, liefern, sturmfest aufstellen,;2,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+340;Verlängerte Vorhaltung für die vorgenannte Kabelbrücke über die vertraglich vereinbarte Bauzeit hinaus,;1,0;StWo;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+350;Leitbaken aus Kunststoff,;30,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+360;Verlängerte Vorhaltung für die vorgenannten Leitbaken über die vertraglich vereinbarte Bauzeit hinaus,;120,0;StWo;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+370;Zäune, Baken oder Schranken der Vorpositionen;30,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+380;Verlängerte Vorhaltung für die vorgenannten Warnbeleuchtung über die vertraglich vereinbarte Bauzeit hinaus,;30,0;StWo;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+390;Bauzaun aus mobilen Stahlrahmenelementen, h=2,00 m,;25,0;m;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+400;Verlängerte Vorhaltung für den vorgenannten Bauzaun über die Grundstandzeit hinaus,;100,0;mWo;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+410;Verschließbare 1-flügelige Bautür,;5,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+420;Vorbeschriebene 1-flügelige Bautür,;125,0;StWo;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+430;Schlüssel für die gleichschließenden Schlösser der Bauzauntore und -türen sowie Baubürocontainer-, Bau- und WC-Türen wie zuvor beschrieben dem AG auf Anforderung überreichen,;5,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+440;Bauschildanlage mit glatter Oberfläche, wetterfest,;2,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+450;Provisorische Befestigung als Gehweg in bituminöser Bauweise, im Mittel d = 10 cm, jeweils in Abschnitten herstellen, während der;25,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+460;Provisorische Befestigung befahrbar herstellen als Anrampungen, Keile usw., zum Höhenausgleich z.B. zwischen Fahrbahnschichten, prov. Zufahrten usw., in bituminöser Bauweise, verschiedene Stärken jeweils in Abschnitten herstellen, während der;25,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+470;Baum, mittelgroß bis groß,;1,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+480;Verlängerte Vorhaltung für den vorgenannten Baumschutz, d=30 cm, über die vertraglich vereinbarte Bauzeit hinaus,;1,0;StWo;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+490;"Leistung wie zuvor in Pos. ""Baumschutz, d=30 cm"" beschrieben, jedoch:";10,0;m;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+500;Verlängerte Vorhaltung für den vorgenannten Baumschutz, d über 30 cm, über die vertraglich vereinbarte Bauzeit hinaus,;1,0;mWo;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+10;Verkehrszeichenpläne zur Beantragung der Verkehrsrechtlichen Anordnung für alle nachfolgend beschriebenen Baufelder sowie die Baumaßnahme selbst (Verkehrssicherung des Baufeldes einschließlich der Einschränkungen der angrenzenden Straßen) herstellen und mit der zuständigen Verkehrsbehörde abstimmen ;1,0;psch;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+20;Verkehrssicherung aufstellen/einrichten,;1,0;psch;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+30;Zuvor beschriebene Verkehrssicherung vorhalten, warten und betreiben,;14,0;Mt;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+40;Zuvor beschriebene Verkehrssicherung komplett beseitigen und den Urzustand vor der Baumaßnahme wieder herstellen,;1,0;psch;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+50;Gewährung der ständigen Zugänglichkeit und Befahrbarkeit für PKWs und Rettungsfahrzeuge der anliegenden Grundstücke mit geeigneten Mittel nach Abstimmung mit dem AG, der Verkehrsbehörde und den Anliegern,;1,0;psch;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+60;Werktägliche Kontrolle der Verkehrssicherung an Arbeitsstellen wie zuvor beschrieben gem. ZTV-SA,;300,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+70;"Leistung wie zuvor in Pos. ""Kontrolle der Verkehrssicherung, werktäglich (Mo-Sa)"" beschrieben, jedoch:";55,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+80;"Leistung wie zuvor in Pos. ""Kontrolle der Verkehrssicherung, werktäglich (Mo-Sa)"" beschrieben, jedoch:";10,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+90;"Leistung wie zuvor in Pos. ""Kontrolle der Verkehrssicherung, Sonn-/Feiertage"" beschrieben, jedoch:";5,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+10;Stunden eines Vorarbeiters (Polier) - Normalschicht.;1,0;h;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+20;Stunden eines Vorarbeiters (Polier) - Nachtschicht.;3,0;h;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+30;Stunden eines Facharbeiters - Normalschicht.;1,0;h;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+40;Stunden eines Facharbeiters - Nachtschicht.;5,0;h;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+50;Stunden eines Bauwerkers - Normalschicht.;1,0;h;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+60;Stunden eines Bauwerkers - Nachtschicht.;5,0;h;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+10;Arbeits- und Schutzgerüst als flächenorientiertes Standgerüst (Raumgerüst) auf Tunnelsohle und über Pumpensumpf als Abbruchschalung für Abbruch der Innentreppe,;55,0;m3;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+20;Weitere Gebrauchsüberlassung des zuvor beschriebenen Raum-/Plateaugerüst als Abbruchschalung über die Grundstandzeit hinaus,;1,0;m3;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+10;Mauerwerk tragend (DIN 4103-1) als Pfeiler für neue Bahnsteigplatte,;0,21;m3;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+20;Mauerwerk tragend (DIN 4103-1) als Pfeiler für neue Bahnsteigplatte,;0,5;m3;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+30;Mauerwerk tragend (DIN 4103-1) als Aufmauerung auf Mittelauflager für neue Bahnsteigplatte,;2,0;m3;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+10;Wandöffnung bei vorhandenen Wänden aus Mauerwerk für Brandschutzklappen herstellen,;2,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+20;Einflügelige Stahltür mit Eckzarge,;1,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+10;Nichttragendes Mauerwerk (DIN  4103-1) der Innenwand auf Bestandsdeckenplatte,;3,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+20;Ankerschiene für dynamische Beanspruchung in Bestandswänden aus Vollstein-Mauerwerk,;3,1;m;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+30;Maueranschlussanker als Federanker für den Anschluss von Mauerwerk an angrenzende Bauteile,;16,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+40;Deckenanschluss der neuen nichttragenden Mauerwerkswände aus Kalksandstein wie zuvor beschrieben,;1,8;m;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+50;Herstellen von Türöffnungen beim Aufmauern des Mauerwerks mit Kalksandsteinen wie zuvor vorbeschrieben,;1,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+60;Leistung wie zuvor beschrieben, jedoch:;1,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+70;Fertigteilsturz aus bewehrtem Mauerwerk in neue Mauerwerkswand aus Kalksandstein-Vollsteine wie zuvor beschrieben beim Aufmauern über zwei Türöffnungen einbauen,;1,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+80;Einflügelige Stahltür mit Eck- und Gegenzarge,;1,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+90;Einflügelige Stahltür mit Eckzarge und Gegenzarge,;1,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+100;Einflügelige Stahltür mit Eckzarge,;1,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+10;"Erstellung des Logistikkonzeptes zur Realisierung der nachfolgend beschriebenen Betonagen ergänzend zum Logistikkonzept im Abschnitt ""1.001.1 - Techn. Bearbeitung und Dokumentation"",";1,0;psch;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+20;Betonflächen zur Erzielung eines tragfähigen Untergrundes für das Anschließen der neuen Bauteile an vorhandene Stahlbetonbauteile vorbereiten,;10,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+30;Deckenrandschalung an Bahnsteigkante als verlorenes Schalungssystemen, L-Winkel,;52,0;m;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+40;Ortbeton der 17,3 bis 19 cm starken Bahnsteigplatte,;16,0;m3;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+50;"Leistung wie zuvor in Position ""Bstg.-platte, bis 19 cm, Ortbeton bew., C25/30, XC3, B500B"" beschrieben, jedoch:";3,0;m3;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+60;"Leistung wie zuvor in Position ""Bstg.-platte, bis 19 cm, Ortbeton bew., C25/30, XC3, B500B"" beschrieben, jedoch:";1,6;m3;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+70;"Leistung wie zuvor in Position ""Bstg.-platte, bis 19 cm, Ortbeton bew., C25/30, XC3, B500B"" beschrieben, jedoch:";0,6;m3;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+80;Ortbeton der Unterzüge über Bahnsteigwänden im Zuge der Herstellung der zuvor beschriebenen Bahnsteigplatte herstellen,;0,5;m3;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+90;"Leistung wie zuvor in Position ""Unterzug Bstg.-platte/Wände, 25/10 cm, Ortbeton bew., C25/30, X3, B500B"" beschrieben, jedoch:";0,35;m3;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+100;"Leistung wie zuvor in Position ""Unterzug Bstg.-platte/Wände, 25/10 cm, Ortbeton bew., C25/30, X3, B500B"" beschrieben, jedoch:";0,7;m3;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+110;Öffnung für Einstiegsluken als deckendicke Aussparung beim Herstellen der vorbeschriebenen Bahnsteigplatte ausbilden,;2,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+120;Herstellen von runden Aussparungen;10,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+130;Anarbeitung an Stütze beim Herstellen der vorbeschriebenen Bahnsteigplatte,;2,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+140;Abstellelement aus konstruktiv verstärktem Streckmetall für Arbeitsfuge zwischen dem neuem Ortbeton der Bstg.-platten,;20,0;m;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+150;Geländerbefestigung 54/33 für die justierbare Befestigung von Geländern in Stahlbetonbauteilen mit geringem Randabstand.;8,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+160;Ortbeton der 35 cm breiten und bis 19 cm starken Bahnsteigkanten,;1,1;m3;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+170;Bewehrung für Anschluss der Bstg.-platte an vorhandene Bstg.-platte aus Stahlbeton der Tunnelsohle einkleben,;25,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+180;Bewehrung für Anschluss der Bstg.-kante an vorhandene Bstg.-platte aus Stahlbeton der Tunnelsohle einkleben,;32,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+190;Fehlbohrungen durch Hindernisse im Beton, wie tieferliegende Bewehrung u. Ä.,;3,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+200;Leistung wie zuvor beschrieben, jedoch:;3,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+210;Baustahl B500B liefern, zuschneiden, biegen und verlegen,;2,2;t;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+220;Leistung wie in Position zuvor beschrieben, jedoch:;0,7;t;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+230;Bestandsbewehrung in der Abbruchkante der Bahnsteigplatte, Durchmesser d = 10 mm, ab- und zurückbiegen, Abrechnung nach Stückzahl der Stäbe,;30,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+240;Bestandsbewehrung in der Abbruchkante der Bahnsteigplatte, d = 10 mm,;15,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+250;Bewehrungsstäbe mit Durchmesser 16 mm für Erdung der neuen Bauteile wie zuvor beschrieben sowie entsprechend den Bewehrungsplänen innerhalb der Bewehrung einbauen,;110,0;m;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+260;Verbindungsklemme für Bewehrungen zur universellen Verwendung als Kreuz-, T- und Parallelklemme,;110,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+270;Verbinden der zuvor beschriebenen Erdungsbewehrung mit der Bestandsbewehrung,;10,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+280;Erdungsbrücke mit 1 Anschweißlasche und Schraubanschluss sowie Cu-Kabel 500 mm entsprechend Erdungsplanung einbauen/anschweißen,;5,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+290;Erdungsbrücke mit 2 Anschweißlaschen und Cu-Kabel 500 mm entsprechend Erdungsplanung einbauen/anschweißen,;5,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+300;Leerrohre gemäß Vortext bei zuvor beschriebenen Bauteilen der Bstg.-platte einlegen,;15,0;m;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+310;Leistung wie zuvor beschrieben, jedoch:;15,0;m;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+320;Leistung wie zuvor beschrieben, jedoch:;5,0;m;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+10;"Erstellung des Logistikkonzeptes zur Realisierung der nachfolgend beschriebenen Betonagen ergänzend zum Logistikkonzept im Abschnitt ""1.001.1 - Techn. Bearbeitung und Dokumentation"",";1,0;psch;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+20;Betonflächen zur Erzielung eines tragfähigen Untergrundes für das Anschließen der neuen Bauteile an vorhandene Stahlbetonbauteile vorbereiten,;5,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+30;Ortbeton des Pfeilers um Fuß des Treppenlaufs im Kriechgangbereich auf vorhandener Tunnelsohle als Auflager für neue Treppenlaufplatte,;0,6;m3;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+40;Ortbeton des Unterzuges auf zuvor beschriebenen Pfeilern als Auflager für Treppenlauf bei Treppenantritt in Bstg.-ebene,;0,62;m3;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+50;Ortbeton des Voute unter Podest des Treppenlaufs auf Wandvorsprung der vorhandenen rechten Treppenseitenwand als Auflager für neue Treppenlaufplatte,;0,325;m3;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+60;Ortbeton des Sturzes bei 40 cm breiter Bestandsmittelwand zur Überbrückung der Wandöffnung über Pumpensumpf,;0,4;m3;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+70;Ortbeton des Sturzes bei 40 cm breiter Bestandsmittelwand zur Überbrückung der Wandöffnung als Durchgang,;0,104;m3;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+80;Ortbeton als Aufbetonierung der Mittewand oberhalb der Stürze, dient als Auflager für Treppenlaufplatte,;1,2;m3;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+90;Ortbeton der tragenden Treppenlaufplatte der Innentreppe mit Stufen,;9,7;m3;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+100;Bewehrung für Anschluss der Pfeiler in vorhandener Tunnelsohle aus Stahlbeton einkleben,;4,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+110;Fehlbohrungen durch Hindernisse im Beton, wie tieferliegende Bewehrung u. Ä.,;2,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+120;Baustahl B500B liefern, zuschneiden, biegen und verlegen,;2,1;t;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+130;Bewehrungsstäbe mit Durchmesser 16 mm für Erdung der neuen Bauteile wie zuvor beschrieben sowie entsprechend den Bewehrungsplänen innerhalb der Bewehrung einbauen,;60,0;m;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+140;Verbindungsklemme für Bewehrungen zur universellen Verwendung als Kreuz-, T- und Parallelklemme,;60,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+150;Verbinden der zuvor beschriebenen Erdungsbewehrung mit der Bestandsbewehrung,;10,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+160;Erdungsbrücke mit 1 Anschweißlasche und Schraubanschluss sowie Cu-Kabel 500 mm entsprechend Erdungsplanung einbauen/anschweißen,;5,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+170;Erdungsbrücke mit 2 Anschweißlaschen und Cu-Kabel 500 mm entsprechend Erdungsplanung einbauen/anschweißen,;5,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+10;"Erstellung des Logistikkonzeptes zur Realisierung der nachfolgend beschriebenen Betonagen ergänzend zum Logistikkonzept im Abschnitt ""1.001.1 - Techn. Bearbeitung und Dokumentation"",";1,0;psch;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+20;Betonflächen zur Erzielung eines tragfähigen Untergrundes für das Anschließen der neuen Bauteile an vorhandene Stahlbetonbauteile vorbereiten,;5,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+30;Ortbeton des Unterzuges bei 40 cm breiter Bestandsmittelwand zur Überbrückung über Pumpensumpf,;0,35;m3;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+40;Ortbeton des Sturzes bei 40 cm breiter Bestandsmittelwand zur Überbrückung der Türöffnung,;0,3;m3;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+50;Aussparung beim Herstellen des vorbeschriebenen 40 cm starken Unterzuges ausbilden,;1,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+60;Ortbeton des Stütze bei 40 cm breiter Bestandsmittelwand seitlich der Türöffnung,;0,31;m3;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+70;Ortbeton als Aufbetonierung der Mittewand ab Treppenfuß, oberhalb der Stürze sowie der abgebrochenen Seitenflächen neben Tür- und Wandöffnungen,;2,6;m3;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+80;Ortbeton der tragenden Treppenlaufplatte der Innentreppe mit Stufen,;9,5;m3;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+90;Baustahl B500B liefern, zuschneiden, biegen und verlegen,;2,0;t;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+100;Bewehrungsstäbe mit Durchmesser 16 mm für Erdung der neuen Bauteile wie zuvor beschrieben sowie entsprechend den Bewehrungsplänen innerhalb der Bewehrung einbauen,;50,0;m;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+110;Verbindungsklemme für Bewehrungen zur universellen Verwendung als Kreuz-, T- und Parallelklemme,;50,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+120;Verbinden der zuvor beschriebenen Erdungsbewehrung mit der Bestandsbewehrung,;10,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+130;Erdungsbrücke mit 1 Anschweißlasche und Schraubanschluss sowie Cu-Kabel 500 mm entsprechend Erdungsplanung einbauen/anschweißen,;5,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+140;Erdungsbrücke mit 2 Anschweißlaschen und Cu-Kabel 500 mm entsprechend Erdungsplanung einbauen/anschweißen,;5,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+10;Werkstattpläne als Verlegepläne für die Ausführung der nachfolgend beschriebenen Beläge aus Naturstein auf Grundlage der Architektenpläne, der Ausführungsrichtlinien des Herstellers, der gültigen DIN-Normen und der vom AN auszuführenden Aufmaßarbeiten am fertiggestellten Rohbau,;1,0;psch;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+20;Vorbereiten des neu hergestellten Beton-Untergrundes der nachfolgend zu belegenden Flächen der Treppenlaufplatte aus neuem Stahlbeton durch Reinigen mit Stahlbesen, so dass dieser trocken, tragfähig, feingriffig, frei von Schlämme, Staub und losen Teilen sowie von Öl, Fett und anderen Verunreinigung;61,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+30;"Stufenbelag aus schwarzem Naturstein gemäß Ausführungsbeschreibung Nr. 1: ""Schwarze Natursteinplatten, geflammt, SRT 45, Nero Impala"",";75,5;m;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+40;"Kontraststreifen aus weißem Granitstein gemäß Ausführungsbeschreibung Nr. 2: ""Weiße Granitsteinplatten Stufenvorderkante, SRT 45, Bethel White"",";75,5;m;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+50;"Plattenbelag aus schwarzem Naturstein auf Zwischenpodest gemäß Ausführungsbeschreibung Nr. 1: ""Schwarze Natursteinplatten, geflammt, SRT 45, Nero Impala"",";8,1;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+60;Plattenbelag aus schwarzem Naturstein für geneigte Fegerinnenflächen gemäß Ausführungsbeschreibung Nr. 1:;9,5;m;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+70;"Leistung wie zuvor in Pos. ""Plattenbelag Fegerinne, Naturstein schwarz, Nero Impala, 3 cm, 16 cm"" beschrieben, jedoch:";9,5;m;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+80;Seitenflächen der Stufen (Stufenzwickel) innenseitig der Fegerinne mit Mörtel verschließen und glatt abziehen,;40,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+90;"Sockelplatten an Treppenseitenwänden aus schwarzem Naturstein gemäß Ausführungsbeschreibung Nr. 1: ""Schwarze Natursteinplatten, geschliffen, Nero Impala"",";20,0;m;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+100;Flächen des ausgebauten Bestandsfliesenbelag mit Mörtel provisorisch verschließen und glatt abziehen,;10,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+110;Randfugen mit Marmor- und Natursteinsilikon herstellen, die in den Vorpositionen nicht enthalten sind,;80,0;m;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+120;Leistung wie zuvor beschrieben, jedoch:;40,0;m;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+130;Bauabschlussbehandlung vor Bauabnahme zur Herstellung einer mind. 5-jährigen Rutsch- und Trittsicherheit;64,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+10;Werkstattpläne als Verlegepläne für die Ausführung der nachfolgend beschriebenen Beläge aus Naturstein auf Grundlage der Architektenpläne, der Ausführungsrichtlinien des Herstellers, der gültigen DIN-Normen und der vom AN auszuführenden Aufmaßarbeiten am fertiggestellten Rohbau,;1,0;psch;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+20;Vorbereiten des neu hergestellten Beton-Untergrundes der nachfolgend zu belegenden Flächen der Treppenlaufplatte aus neuem Stahlbeton durch Reinigen mit Stahlbesen, so dass dieser trocken, tragfähig, feingriffig, frei von Schlämme, Staub und losen Teilen sowie von Öl, Fett und anderen Verunreinigung;60,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+30;"Stufenbelag aus schwarzem Naturstein gemäß Ausführungsbeschreibung Nr. 1: ""Schwarze Natursteinplatten, geflammt, SRT 45, Nero Impala"",";75,0;m;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+40;"Kontraststreifen aus weißem Granitstein gemäß Ausführungsbeschreibung Nr. 2: ""Weiße Granitsteinplatten Stufenvorderkante, SRT 45, Bethel White"",";75,0;m;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+50;"Plattenbelag aus schwarzem Naturstein auf Zwischenpodest gemäß Ausführungsbeschreibung Nr. 1: ""Schwarze Natursteinplatten, geflammt, SRT 45, Nero Impala"",";8,1;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+60;Plattenbelag aus schwarzem Naturstein für geneigte Fegerinnenflächen gemäß Ausführungsbeschreibung Nr. 1:;19,0;m;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+70;Seitenflächen der Stufen (Stufenzwickel) innenseitig der Fegerinne mit Mörtel verschließen und glatt abziehen,;40,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+80;"Sockelplatten an Treppenseitenwänden aus schwarzem Naturstein gemäß Ausführungsbeschreibung Nr. 1: ""Schwarze Natursteinplatten, geschliffen, Nero Impala"",";20,0;m;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+90;Flächen des ausgebauten Bestandsfliesenbelag mit Mörtel provisorisch verschließen und glatt abziehen,;10,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+100;Randfugen mit Marmor- und Natursteinsilikon herstellen, die in den Vorpositionen nicht enthalten sind,;80,0;m;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+110;Leistung wie zuvor beschrieben, jedoch:;40,0;m;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+120;Bauabschlussbehandlung vor Bauabnahme zur Herstellung einer mind. 5-jährigen Rutsch- und Trittsicherheit;64,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+10;Betonoberfläche der neuen Rohdecke (Bahnsteigplatte) zur Beseitigung von Unebenheiten in der Betonoberfläche und zur Beseitigung von haftungsmindernden Betonteilen unterhalb der Gussasphaltflächen abfräsen,;46,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+20;Leistung wie zuvor beschrieben, jedoch:;11,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+30;Bauzeitlicher Leitstreifen aus Zementestrich,;55,0;m;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+40;Gussasphalt-Estrich AS - IC15 - S 30,;46,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+50;Leistung wie zuvor beschrieben, jedoch:;11,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+60;"Leistung wie zuvor in Pos. ""Gussasphalt-Estrich/Verbundestrich, d=40 mm"" beschrieben, jedoch:";23,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+70;"Leistung wie zuvor in Pos. ""Gussasphalt-Estrich/Verbundestrich, d=40 mm, GG"" beschrieben, jedoch:";11,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+80;Anarbeitung an provisorischen Leitstreifen aus Zementestrich (s. Abschnitt 3),;16,0;m;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+90;Herstellen der Aussparungen beim Einbau des Gussasphaltestrich bei angrenzenden Bauteilen wie Stützen, Luken, Schienen der Fahrkartenautomaten u.ä.,;20,0;m;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+100;Ausbildung des Anschlusses an angrenzende, aufgehende Bauteile mittels Randstreifen und Fugenverguss,;12,0;m;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+110;Leistung wie zuvor beschrieben, jedoch:;22,0;m;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+120;Gebäudebewegungsfugen und Feldfugen im Gussasphaltestrich ausbilden,;15,0;m;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+10;Quadratischer Spiegel aus Stahl (1 x 1 m),;1,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+20;Leistung wie zuvor beschrieben, jedoch:;1,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+30;Pfosten mit Fußplatte aus Stahl für das Fahrsignal,;1,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+40;Leistung wie zuvor beschrieben, jedoch:;1,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+50;Sitzbank aus Stahlrohr/Drahtgitter in Edelstahl V4A ausbauen,;1,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+60;Gemäß Vorposition ausgebaute Sitzbank aus Stahlrohr/Drahtgitter in Edelstahl V4A an provisorischem Standort einbauen,;1,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+70;Gemäß Vorposition am prov. Standort eingebaute Sitzbank aus Stahlrohr/Drahtgitter in Edelstahl V4A ausbauen und zum endgültigen Standort transportieren,;1,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+80;Gemäß Vorpostion ausgebaute Sitzbank wieder einbauen,;1,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+90;Abfallbehälter für Einbau am provisorischen Standort ausbauen,;1,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+100;Gemäß Vorpostion ausgebauten Abfallbehälter am provisorischem Standort einbauen,;1,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+110;Gemäß Vorposition am prov. Standort eingebauten Abfallbehälter ausbauen und zum endgültigen Standort transportieren,;1,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+120;Gemäß Vorpostion in den abgesperrten Bereich transportierten Abfallbehälter wieder einbauen,;1,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+130;Gittertor am Gleisgang Ausgang II, bestehend aus Tür und Seitenteil, Anordnung L-förmig,;2,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+140;Gemäß Vorpostion zwischengelagertes Gittertor an altem Standort auf neuer Bstg.-platte wieder einbauen,;2,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+150;Pfosten im Gleisgang Gl. 1, Ausgang II,;1,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+160;Gemäß Vorpostion zwischengelagerten Pfosten vom Gleisgang an altem Standort auf neuer Bstg.-platte wieder einbauen,;1,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+170;Grundplatte (Standfuß) aus Stahl für die Notruf- und Informationssäule (NIS) ausbauen und für den Wiedereinbau zwischenlagern,;1,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+180;Zwischengealgerten oder bauseits gelieferte Grundplatte (Standfuß) aus Stahl für die Notruf- und Informationssäule (NIS) montieren,;1,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+190;Leistung wie zuvor beschrieben, jedoch:;1,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+200;Feuerlöscherkasten mit Standrahmen ausbauen und für den Wiedereinbau zwischenlagern,;1,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+210;Zwischengelagerten oder bauseits gelieferten Standrahmen mit Feuerlöscherkasten einbauen,;1,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+220;Leistung wie zuvor beschrieben, jedoch:;1,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+230;Vor Ort im BR der VH II zwischengelagerte Pfosten für Notsignalschalter (Nothalt) montieren,;4,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+240;Leistung wie zuvor beschrieben, jedoch:;2,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+250;Zwischengelagerte oder bauseits gelieferte Grundplatte (Standfuß) aus Stahl für die Notruf- und Informationssäule (NIS) bei bauzeitlichem Standort montieren,;1,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+260;Zwischengelagerten oder bauseits gelieferten Standrahmen mit Feuerlöscherkasten bei bauzeitlichem Standort einbauen,;1,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+270;Bauseits gelieferten für Notsignalschalter (Nothalt) an bauzeitlichem Standort montieren,;2,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+280;Drängelgeländer aus Stahlrohr, Werkstoff 1.4301, geschliffen, Schliff 240,;7,0;m;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+290;Stahlkette als Absperrung zwischen Drängelgeländer und Handlauf der Innentreppe, rostfrei, rot-weiß,;2,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+300;Stahlrohrgeländer mit geradem Verlauf für Betriebs- bzw. Gleisgang,;9,0;m;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+310;Einstiegsluke, bestehend aus Zarge, Schachtabdeckung und Auszugsleiter,;2,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+320;"Erstellen der Werkstattplanung gemäß ""Ausführungsbeschreibung Werkstattplanung (WPA)""";1,0;psch;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+330;Metallbauteile aus Stahl S235JR, feuerverzinkt und korrosionsgeschützt, die in vorbeschriebenen Positionen nicht enthalten sind,;50,0;kg;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+340;Leistung wie zuvor beschrieben, jedoch;25,0;kg;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+350;Leistung wie zuvor beschrieben, jedoch;25,0;kg;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+10;Handlauf für Bahnsteigtreppe (Innentreppe) mit Befestigung in Bestandsstahlbeton- oder Mauerwerkswänden, bekleidet mit Wandfliesen im Dickbett (Bestand),;25,0;m;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+20;Beschilderung an den Handläufen,;4,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+30;Leistung wie zuvor beschrieben, jedoch:;160,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+10;Handlauf für Bahnsteigtreppe (Innentreppe) mit Befestigung in Bestandsstahlbeton- oder Mauerwerkswänden, bekleidet mit Wandfliesen im Dickbett (Bestand),;21,0;m;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+20;Beschilderung an den Handläufen,;4,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+30;Leistung wie zuvor beschrieben, jedoch:;160,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+10;"Baureinigung des Bahnsteiges gemäß Ausführungsbeschreibung ""Baureinigung"",";340,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+20;Leistung wie zuvor beschrieben, jedoch;340,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+30;Feinreinigung des Bahnsteiges im abgesperrten Bereich einschl. Boden- und Wandflächen, Türen zu Betriebsräumen und aller Aufbauten (Bänke, Vitrinen, Schilder, Daisy-Anzeiger, Monitore, Kameras, Fahrkartenautomaten, Entwerter, NIS, Abfertigergebäude u. Ä.),;170,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+40;Leistung wie zuvor beschrieben, jedoch;170,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+10;"Baureinigung der Innentreppe I, der Vorhalle I sowie der Außentreppe I/1 gemäß Ausführungsbeschreibung ""Baureinigung"",";430,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+20;Feinreinigung des Innentreppe I, der Vorhalle I sowie der Außentreppe I/1 einschl. Boden- und Wandflächen, Türen zu Betriebsräumen und aller Aufbauten (Vitrinen, Schilder, Kameras u. Ä.),;215,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+10;"Baureinigung der Innentreppe II, der Vorhalle II sowie der Außentreppen II/1 und II/2 gemäß Ausführungsbeschreibung ""Baureinigung"",";450,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+20;Feinreinigung des Innentreppe II, der Vorhalle II sowie der Außentreppen II/1 und II/2 einschl. Boden- und Wandflächen, Türen zu Betriebsräumen und aller Aufbauten (Vitrinen, Schilder, Kameras, Glasfassade des Urbanis-Verkaufsraums u. Ä.),;225,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+10;Beschichtung der senkrechten Wandflächen in den Gleisgängen mit Hydro-Pu-Hochglanzlack,;21,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+20;Leistung wie zuvor beschrieben, jedoch;3,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+30;Beschichtung der senkrechten Wandflächen in den Gleisgängen mit Silicon-Fassadenfarbe,;30,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+40;Beschichtungen der beschichteten Gleisganggeländer im Gleisgangbereich, Bestand,;42,0;m;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+50;Zwischen- und Deckbeschichtung auf einflügeliger neuer Stahltür mit Eck- und Gegenzarge,;1,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+10;Beschichtung der senkrechten Wandflächen in den Gleisgängen mit Hydro-Pu-Hochglanzlack,;12,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+20;Leistung wie zuvor beschrieben, jedoch;2,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+30;Beschichtung der senkrechten Wandflächen in den Gleisgängen mit Silicon-Fassadenfarbe,;20,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+40;Beschichtungen der feuerverzinkten Gleisganggeländer im Gleisgangbereich, neu,;26,5;m;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+50;Entfernen von alten Anstrichen (Dipsersion, Kunstharzlack) an Wänden aus Stahlbeton und Putz durch Abbeizen und Nachwaschen, Untergrund für Neubeschichtung restlos freilegen,;42,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+60;Beschichtung senkrechter Wandflächen mit Dispersionssilikatfarbe für Innenbereiche,;42,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+70;"Leistung wie zuvor in Pos. ""Dispersionssilikat-Beschichtung, Innenwände, Putz und KSV/Glattstrich"" beschrieben, jedoch:";14,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+80;Beschichtung von Bodenflächen aus neuem Estrich als Erstbeschichtung,;5,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+90;Umlaufende 2K-Epoxidharz-Sockelbeschichtung, diffusionsfähig, tausalzbeständig,;9,0;m;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+100;Zwischen- und Deckbeschichtung auf einflügeliger neuer Stahltür mit Eck- und Gegenzarge,;2,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+110;Leistung wie zuvor beschrieben, jedoch;1,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+10;Einstiegsluke aus Stahl,;2,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+20;Standschienenrahmen für den Fahrkartenautomaten,;2,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+30;Pfosten für den Fahrkartenentwerter,;1,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+40;Trennschnitt in bituminösen Bahnsteigbelag,;30,0;m;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+50;"Leistung wie in Position ""Trennschnitt/Gussasphalt, 40 mm"" beschrieben, jedoch:";260,0;m;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+60;"Leistung wie in Position ""Trennschnitt/Gussasphalt, 40 mm"" beschrieben, jedoch:";30,0;m;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+70;"Leistung wie in Position ""Trennschnitt/Gussasphalt, 40 mm, Betriebspause"" beschrieben, jedoch:";260,0;m;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+80;Bodenbelag aus Gussasphalt komplett abbrechen,;110,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+90;"Leistung wie in Position ""Gussasphalt abbr., PAK < 100 mg/kg, bis 40 mm"" beschrieben, jedoch:";40,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+100;"Leistung wie in Position ""Gussasphalt abbr., PAK < 100 mg/kg, bis 40 mm"" beschrieben, jedoch:";220,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+110;"Leistung wie in Position ""Gussasphalt abbr., PAK < 100 mg/kg, + 5 mm Mehrstärke"" beschrieben, jedoch:";40,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+120;"Leistung wie in Position ""Gussasphalt abbr., PAK < 100 mg/kg, bis 40 mm"" beschrieben, jedoch:";110,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+130;"Leistung wie in Position ""Gussasphalt abbr., PAK > 100 mg/kg"" beschrieben, jedoch:";40,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+140;"Leistung wie in Position ""Gussasphalt abbr., PAK < 100 mg/kg, + 5 mm"" beschrieben, jedoch:";220,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+150;"Leistung wie in Position ""Gussasphalt abbr., PAK > 100 mg/kg, + 5 mm"" beschrieben, jedoch:";40,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+160;Geländer im Gleisgang Gl. 1, Ausgang II,;8,0;m;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+170;Pfosten im Gleisgang Gl. 1, Ausgang II,;1,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+180;Geländer auf der Bahnsteigplatte, Gleis 2,;1,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+190;Leistung wie Position zuvor, jedoch;1,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+200;Temporäre Unterstützung der Bahnsteigplatte vor Teilabbruch der Bahnsteigplatte,;14,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+210;"Leistung wie in Position ""Temporäre Unterstützung Bahnsteigplatte"" beschrieben, jedoch:";10,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+220;Abbruch des Bahnsteigkantenwinkels im Zuge des Teilabbruchs der Bahnsteigplatte,;52,0;m;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+230;Teilabbruch der Bahnsteigplatte in zusammenhängender Fläche,;110,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+240;"Leistung wie in Position ""Teilabbruch Bstg.-platte, Regelarbeitszeit"" beschrieben, jedoch";40,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+250;Teilabbruch der Auf- bzw. Untermauerung zwischen Bahnsteigplatte und Bankett aus Ziegeln o. Ä.,;3,0;m3;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+260;Abbruch des gleisseitigen Wandauflagers der alte Bahnsteigplatte als Kopf der MW-Wand unter Bahnsteig,;1,0;m3;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+270;Abbruch der Stahlbetonstützen unterhalb der Gleisgänge,;0,55;m3;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+280;Abbruch der Kante der auskragenden Bahnsteigplatte,;1,1;m3;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+10;Einflügelige Holztür mit Stahl- oder Holzzarge komplett inkl. Schwelle, Beschlägen, Schlösser, Drückergarnitur (Knauf + Drücker) u.a. komplett ausbauen und entfernen,;1,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+20;Handlauf aus Edelstahlrohr ausbauen,;21,0;m;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+30;Wandbekleidung aus im Dickbett verlegten Wandfliesen an Treppenwänden im Sockelbereich mit äußerster Vorsicht derart ausbauen, dass Wiedereinbau möglich ist, ausgebaute Fliesen vor Ort zwischenlagern (BR im Gang bei VH I),;11,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+40;Provisorische Treppe zur Stufenhöhenangeichung bei vorhandener Innentreppe komplett ausbauen und entfernen, angeordnet vor der Innentreppe ab 3. Stufe,;1,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+50;Innentreppe mit 2 Treppenläufen aus Block- bzw. Keilstufen und Zwischenpodest komplett abbrechen und entfernen,;1,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+60;Rückbau inkl. Entfernen der bauseits eingebauten Abbruchschalung aus Holz unterhalb der Treppenanlage nach Abbruch der Treppe,;1,0;psch;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+70;"Teilabbruch der Mittelwand für Ergänzungen wie in Gewerk ""013 - Betonarbeiten"" beschrieben,";1,3;m3;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+80;Stahlprofile bei zuvor beschriebener Mittelwand ausbauen und entfernen, bestehend aus Doppel-T-Profilen komplett inkl. Befestigungsmittel ausbauen,;700,0;kg;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+10;Einflügelige Holztür mit Stahl- oder Holzzarge komplett inkl. Schwelle, Beschlägen, Schlösser, Drückergarnitur (Knauf + Drücker) u.a. komplett ausbauen und entfernen,;2,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+20;Handlauf aus Edelstahlrohr ausbauen,;21,0;m;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+30;Wandbekleidung aus im Dickbett verlegten Wandfliesen an Treppenwänden im Sockelbereich mit äußerster Vorsicht derart ausbauen, dass Wiedereinbau möglich ist, ausgebaute Fliesen vor Ort zwischenlagern (BR im Gang bei VH I - Transportweg einkalkulieren),;11,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+50;Innentreppe mit 2 Treppenläufen aus Block- bzw. Keilstufen und Zwischenpodest komplett abbrechen und entfernen,;1,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+70;"Teilabbruch der Mittelwand für Ergänzungen wie in Gewerk ""013 - Betonarbeiten"" beschrieben,";2,6;m3;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+80;Stahlprofile bei zuvor beschriebener Mittelwand ausbauen und entfernen, bestehend aus Doppel-T-Profilen komplett inkl. Befestigungsmittel ausbauen,;700,0;kg;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+10;Behelfsmäßiger Schutzbelag im Gleisbett zum Schutz gegen Verschmutzungen des Schotterbettes,;200,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+20;Aufstellen von staubdichten, schwer entflammbaren Schutzwänden,;110,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+30;Umbauen der zuvor beschriebenen Staubschutzwände,;20,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+40;Verlängerte Vorhaltung für die vorgenannte Staubschutzwand/-wände auf dem Bahnsteig, Höhe bis 3,15 m, über die vertraglich vereinbarte Bauzeit hinaus,;1,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+50;Abbauen der zuvor beschriebenen Staubschutzwände,;110,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+60;Senkrechte Kanten der Staubschutzwände mit rot-weißer Markierung aus Kunststoff-Winkelprofilen versehen,;20,0;m;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+70;Verschließbare 1-flügelige Tür für die bis 3,15 m hohe Staubschutzwand,;2,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+80;Umbau und Umstellen der vorbeschriebenen 1-flg. Tür gemäß Bauablauf unter Verwendung aller vorbeschriebenen Materalien,;1,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+90;Verlängerte Vorhaltung für die vorgenannte 1-flügelige Tür für die Staubschutzwand über die vertraglich vereinbarte Bauzeit hinaus,;1,0;StWo;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+100;Abbauen der zuvor beschriebenen 1-flg. Tür in Staubschutzwand,;2,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+110;Aufstellen von staubdichten, schwer entflammbaren Staubschutzwänden im Raum zwischen Tunnelsohle und Bahnsteigplatte,;35,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+120;Umbauen der zuvor beschriebenen Staubschutzwände im Raum zwischen Tunnelsohle und Bahnsteigplatte,;10,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+130;Verlängerte Vorhaltung für die vorgenannte Staubschutzwand/-wände unter der Bstg.-platte, Höhe bis 1,25 m, über die vertraglich vereinbarte Bauzeit hinaus,;1,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+140;Abbauen der zuvor beschriebenen Staubschutzwände,;35,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+150;Verschließbare 1-flügelige Klappe für die 1,25 m hohe Staubschutzwand,;2,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+160;Verlängerte Vorhaltung für die vorgenannte 1-flügelige Klappe für die Staubschutzwand über die vertraglich vereinbarte Bauzeit hinaus,;1,0;StWo;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+170;Abbauen der zuvor beschriebenen 1-flg. Klappe in Staubschutzwand,;2,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+180;Behelfsmäßiger Schutz von nicht demontierten Einbauteilen und Aufbauten, i.d.R. allseitig,;50,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+190;Behelfsmäßiger Schutz von nicht demontierten Kabeltrassen an Wänden unter Bahnsteigplatte mit B1-Material,;90,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+200;Behelfsmäßige Aufhängung von Kabel- bzw. Kabelbündeln im Raum unterhalb der Bahnsteigplatte,;60,0;m;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+210;Bodenflächen aus Gussasphalt, Fliesenmaterial u. ä. auf dem gesperrten Bahnsteig mit Schutzvlies und Seekieferplatten stolpersicher abdecken, für;150,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+220;Gebrauchsüberlassung des zuvor beschriebenen Bodenschutzes über die Grundstandzeit hinaus,;300,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+230;Leistung wie zuvor beschrieben, jedoch:;50,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+240;Leistung wie zuvor beschrieben, jedoch:;50,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+10;Aufstellen von staubdichten, schwer entflammbaren Schutzwänden,;30,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+20;Umbauen der zuvor beschriebenen Staubschutzwände,;6,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+30;Verlängerte Vorhaltung für die vorgenannte Staubschutzwand/-wände auf dem Bahnsteig, Höhe bis 3,15 m, über die vertraglich vereinbarte Bauzeit hinaus,;1,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+40;Abbauen der zuvor beschriebenen Staubschutzwände,;30,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+50;Aufstellen von staubdichten, schwer entflammbaren Schutzwänden,;13,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+60;Umbauen der zuvor beschriebenen Staubschutzwände,;3,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+70;Verlängerte Vorhaltung für die vorgenannte Staubschutzwand/-wände in der VH, Höhe bis 2,20 m, über die vertraglich vereinbarte Bauzeit hinaus,;1,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+80;Abbauen der zuvor beschriebenen Staubschutzwände,;13,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+90;Zulage für Ertüchtigung der zuvor beschriebenen Staubschutzwand als Schallschutzwand,;13,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+100;Verlängerte Vorhaltung für den vorgenannten Schallschutz für die Staubschutzwand/-wände in der VH, über die vertraglich vereinbarte Bauzeit hinaus,;1,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+110;Abbauen des zuvor beschriebenen Schallschutzes der Staubschutzwände,;15,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+120;Senkrechte Kanten der Staubschutzwände mit rot-weißer Markierung aus Kunststoff-Winkelprofilen versehen,;10,0;m;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+130;Verschließbare 1-flügelige Tür für die bis 3,15 m hohe Staubschutzwand auf dem Bstg.,;1,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+140;Umbau und Umstellen der vorbeschriebenen 1-flg. Tür gemäß Bauablauf unter Verwendung aller vorbeschriebenen Materalien,;1,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+150;Verlängerte Vorhaltung für die vorgenannte 1-flügelige Tür für die Staubschutzwand auf dem Bstg. über die vertraglich vereinbarte Bauzeit hinaus,;1,0;StWo;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+160;Abbauen der zuvor beschriebenen 1-flg. Tür in Staubschutzwand auf dem Bstg.,;1,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+170;Verschließbare 1-flügelige Tür für die 2,20 m hohe Staubschutzwand,;1,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+180;Umbau und Umstellen der vorbeschriebenen 1-flg. Tür gemäß Bauablauf unter Verwendung aller vorbeschriebenen Materalien,;1,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+190;Verlängerte Vorhaltung für die vorgenannte 1-flügelige Tür für die Staubschutzwand in der VH über die vertraglich vereinbarte Bauzeit hinaus,;1,0;StWo;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+200;Abbauen der zuvor beschriebenen 1-flg. Tür in der Staubschutzwand der VH,;1,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+210;Aufstellen von staubdichten, schwer entflammbaren Staubschutzwänden im Raum zwischen Tunnelsohle und Bahnsteigplatte,;21,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+220;Verlängerte Vorhaltung für die vorgenannte Staubschutzwand/-wände unter der Bstg.-platte, Höhe bis 1,25 m, über die vertraglich vereinbarte Bauzeit hinaus,;1,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+230;Abbauen der zuvor beschriebenen Staubschutzwände,;21,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+240;Verschließbare 1-flügelige Klappe für die 1,25 m hohe Staubschutzwand,;2,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+250;Verlängerte Vorhaltung für die vorgenannte 1-flügelige Klappe für die Staubschutzwand über die vertraglich vereinbarte Bauzeit hinaus,;1,0;StWo;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+260;Abbauen der zuvor beschriebenen 1-flg. Klappe in Staubschutzwand,;2,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+270;Behelfsmäßiger Schutz von nicht demontierten Einbauteilen und Aufbauten, i.d.R. allseitig,;50,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+280;Behelfsmäßiger Schutz von nicht demontierten Kabeltrassen an Wänden unter Bahnsteigplatte mit B1-Material,;40,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+290;Behelfsmäßige Aufhängung von Kabel- bzw. Kabelbündeln im Raum unterhalb der Bahnsteigplatte,;50,0;m;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+300;Stufen- und Podestflächen aus Naturstein u. ä. im gesperrten Bereich mit Schutzvlies und Seekieferplatten als 2,00 m breiten Laufweg stolpersicher abdecken, für 1 Monat vor-/unterhalten, abbauen und abfahren,;30,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+310;Gebrauchsüberlassung des zuvor beschriebenen Schutzes der Stufen- und Podestflächen über die Grundstandzeit hinaus,;60,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+320;Bodenflächen aus Gussasphalt im dem gesperrten Bahnsteig mit Schutzvlies und Seekieferplatten als mind. 2,00 m breiten Laufweg stolpersicher abdecken, für 1 Monat vor-/unterhalten, abbauen und abfahren.;60,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+330;Gebrauchsüberlassung des zuvor beschriebenen Bodenschutzes über die Grundstandzeit hinaus,;120,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+340;Leistung wie zuvor beschrieben, jedoch:;5,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+350;Leistung wie zuvor beschrieben, jedoch:;5,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+10;Aufstellen von staubdichten, schwer entflammbaren Schutzwänden,;16,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+20;Umbauen der zuvor beschriebenen Staubschutzwände,;3,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+30;Verlängerte Vorhaltung für die vorgenannte Staubschutzwand/-wände in der VH, Höhe bis 2,20 m, über die vertraglich vereinbarte Bauzeit hinaus,;1,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+40;Abbauen der zuvor beschriebenen Staubschutzwände,;16,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+50;Zulage für Ertüchtigung der zuvor beschriebenen Staubschutzwand als Schallschutzwand,;16,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+60;Verlängerte Vorhaltung für den vorgenannten Schallschutz für die Staubschutzwand/-wände in der VH, über die vertraglich vereinbarte Bauzeit hinaus,;1,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+70;Abbauen des zuvor beschriebenen Schallschutzes der Staubschutzwände,;16,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+80;Senkrechte Kanten der Staubschutzwände mit rot-weißer Markierung aus Kunststoff-Winkelprofilen versehen,;10,0;m;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+90;Verschließbare 1-flügelige Tür für die 2,20 m hohe Staubschutzwand,;1,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+100;Umbau und Umstellen der vorbeschriebenen 1-flg. Tür gemäß Bauablauf unter Verwendung aller vorbeschriebenen Materalien.;1,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+110;Verlängerte Vorhaltung für die vorgenannte 1-flügelige Tür für die Staubschutzwand in der VH über die vertraglich vereinbarte Bauzeit hinaus,;1,0;StWo;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+120;Abbauen der zuvor beschriebenen 1-flg. Tür in Staubschutzwand,;1,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+130;Aufstellen von staubdichten, schwer entflammbaren Staubschutzwänden im Raum zwischen Tunnelsohle und Bahnsteigplatte,;20,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+140;Verlängerte Vorhaltung für die vorgenannte Staubschutzwand/-wände unter der Bstg.-platte, Höhe bis 1,25 m, über die vertraglich vereinbarte Bauzeit hinaus,;1,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+150;Abbauen der zuvor beschriebenen Staubschutzwände,;20,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+160;Verschließbare 1-flügelige Klappe für die 1,25 m hohe Staubschutzwand,;2,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+170;Verlängerte Vorhaltung für die vorgenannte 1-flügelige Klappe für die Staubschutzwand über die vertraglich vereinbarte Bauzeit hinaus,;1,0;StWo;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+180;Abbauen der zuvor beschriebenen 1-flg. Klappe in Staubschutzwand,;2,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+190;Behelfsmäßiger Schutz von nicht demontierten Einbauteilen und Aufbauten, i.d.R. allseitig,;50,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+200;Behelfsmäßiger Schutz von nicht demontierten Kabeltrassen an Wänden unter Bahnsteigplatte mit B1-Material,;40,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+210;Behelfsmäßige Aufhängung von Kabel- bzw. Kabelbündeln im Raum unterhalb der Bahnsteigplatte,;50,0;m;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+220;Stufen- und Podestflächen aus Naturstein u. ä. im gesperrten Bereich mit Schutzvlies und Seekieferplatten als 2,00 m breiten Laufweg stolpersicher abdecken, für 1 Monat vor-/unterhalten, abbauen und abfahren,;30,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+230;Gebrauchsüberlassung des zuvor beschriebenen Schutzes der Stufen- und Podestflächen über die Grundstandzeit hinaus,;60,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+240;Bodenflächen aus Gussasphalt im dem gesperrten Bahnsteig mit Schutzvlies und Seekieferplatten als mind. 2,00 m breiten Laufweg stolpersicher abdecken, für 1 Monat vor-/unterhalten, abbauen und abfahren.;60,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+250;Gebrauchsüberlassung des zuvor beschriebenen Bodenschutzes über die Grundstandzeit hinaus,;120,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+260;Leistung wie zuvor beschrieben, jedoch:;5,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+270;Leistung wie zuvor beschrieben, jedoch:;5,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+10;Erstellung und Pflege eines Entsorgungskonzept für die Abbruchleistungen der Gesamtmaßnahme,;1,0;psch;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+20;Erstellung und Pflege Rasterfeldbeprobungskonzept gem. Merkblatt 7 (SenUVK),;1,0;psch;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+30;Verbindliche Einstufung der Abfälle mittels vorgenannt beschriebener Formblätter bei der Senatsverwaltung für Umwelt, Mobilität, Verbraucher- und Klimaschutz - Abfallbehörde, I B 2 in Art und Umfang.;1,0;psch;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+40;Der AN hat dafür Sorge zu tragen, dass sämtliche nicht gefährliche Abfälle mittels Registerbelegen im eANV abgebildet werden,;1,0;psch;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+50;Anfahrt zur Probenahme,;20,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+60;Probenahmeprotokoll nach LAGA PN98 mit Lageskizze, Fotodokumentation, geschätztem Abfallvolumen sowie Zuordnung des Abfallschlüssels und ggf. LAGA-Einstufung/EBV-Einstufung,;20,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+70;"Asbest (Methode des Instituts für Arbeitssicherheit der Deutschen Gesetzlichen Unfallversicherung Arbeitsmappe Messung von Gefahrstoffen, Kennzahl 7487 ""IFA / BIA-Verfahren 7487"") (bzw. Alternativverfahren mit Nachweisgrenze deutlich unter 0,1%),";3,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+120;Altfarben analysieren:;2,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+130;Gemische aus Beton, Ziegeln, Fliesen und Keramik analysieren:;3,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+140;EBV-Bauschutt analysieren,;3,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+190;ASN 170301*, Straßenaufbruch (PAK > 100 mg/ kg) analysieren:;2,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+200;ASN 170302, Straßenaufbruch (Wiederverwendungsbereich 1 (BTR RC-StB))  analysieren:;2,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+210;ASN 170302, Straßenaufbruch (Wiederverwendungsbereich 3 + 4 (BTR RC-StB))  analysieren:;2,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+230;Baustoffe auf Gipsbasis, Gipskartonagen beproben:;1,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+240;Behandeltes Holz ist auf folgende Parameter zu beproben:;2,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+10;"Bauschutt - Betonabbruch der Abbruchpositionen gemäß derzeit gültigen Rechtsvorschriften entsorgen;";54,0;t;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+20;Bauschutt - Ziegelabbruch der Abbruchpositionen gemäß derzeit gültigen Rechtsvorschriften entsorgen,;8,0;t;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+30;Bauschutt - Gemische aus Beton, Ziegeln, Fliesen und Keramik -nicht kontaminiert - der Abbruchpositionen gemäß derzeit gültigen Rechtsvorschriften entsorgen,;31,0;t;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+40;Altholz der Altholzkategorien I, II, III aus den Abbruchpositionen gemäß derzeit gültigen Rechtsvorschriften entsorgen,;2,0;t;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+50;Straßenaufbruch der Verwertungsklasse A (RuVA-StB), rsp. Wiederverwendungsbereich 1 (BTR-RC StB) gemäß derzeit gültigen Rechtsvorschriften entsorgen,;11,0;t;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+60;Straßenaufbruch der Verwertungsklasse B und C (RuVA-StB), rsp. Wiederverwendungsbereich 3 und 4 (BTR-RC StB) gemäß derzeit gültigen Rechtsvorschriften entsorgen,;11,0;t;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+70;Eisen und Stahl der Abbruchpositionen gemäß derzeit gültigen Rechtsvorschriften entsorgen,;4,5;t;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+80;Gemischte Metalle der Abbruchpositionen gemäß derzeit gültigen Rechtsvorschriften entsorgen,;0,5;t;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+90;Gemischte Bau- und Abbruchabfälle der Abbruchpositionen gemäß derzeit gültigen Rechtsvorschriften entsorgen,;5,0;t;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+100;Bauschutt - kontaminiert - der Abbruchpositionen gemäß derzeit gültigen Rechtsvorschriften entsorgen,;2,0;t;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+110;Leistung wie zuvor beschrieben, jedoch:;4,0;t;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+120;Altholz der Altholzkategorien IV aus den Abbruchpositionen gemäß derzeit gültigen Rechtsvorschriften entsorgen.;0,5;t;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+10;"Bauschutt - Betonabbruch der Abbruchpositionen gemäß derzeit gültigen Rechtsvorschriften entsorgen;";5,0;t;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+20;Bauschutt - Ziegelabbruch der Abbruchpositionen gemäß derzeit gültigen Rechtsvorschriften entsorgen,;3,0;t;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+30;Bauschutt - Fliesen, Keramik der Abbruchpositionen gemäß derzeit gültigen Rechtsvorschriften entsorgen,;0,5;t;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+40;Bauschutt - Gemische aus Beton, Ziegeln, Fliesen und Keramik -nicht kontaminiert - der Abbruchpositionen gemäß derzeit gültigen Rechtsvorschriften entsorgen,;16,0;t;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+50;Altholz der Altholzkategorien I, II, III aus den Abbruchpositionen gemäß derzeit gültigen Rechtsvorschriften entsorgen,;1,0;t;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+60;Eisen und Stahl der Abbruchpositionen gemäß derzeit gültigen Rechtsvorschriften entsorgen,;3,2;t;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+70;Gemischte Metalle der Abbruchpositionen gemäß derzeit gültigen Rechtsvorschriften entsorgen,;0,5;t;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+80;Gemischte Bau- und Abbruchabfälle der Abbruchpositionen gemäß derzeit gültigen Rechtsvorschriften entsorgen,;5,0;t;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+90;Bauschutt - kontaminiert - der Abbruchpositionen gemäß derzeit gültigen Rechtsvorschriften entsorgen,;0,5;t;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+100;Leistung wie zuvor beschrieben, jedoch:;1,0;t;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+110;Altholz der Altholzkategorien IV aus den Abbruchpositionen gemäß derzeit gültigen Rechtsvorschriften entsorgen.;0,5;t;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+10;"Bauschutt - Betonabbruch der Abbruchpositionen gemäß derzeit gültigen Rechtsvorschriften entsorgen;";5,0;t;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+20;Bauschutt - Ziegelabbruch der Abbruchpositionen gemäß derzeit gültigen Rechtsvorschriften entsorgen,;6,0;t;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+30;Bauschutt - Fliesen, Keramik der Abbruchpositionen gemäß derzeit gültigen Rechtsvorschriften entsorgen,;0,5;t;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+40;Bauschutt - Gemische aus Beton, Ziegeln, Fliesen und Keramik - nicht kontaminiert - der Abbruchpositionen gemäß derzeit gültigen Rechtsvorschriften entsorgen,;18,0;t;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+50;Altholz der Altholzkategorien I, II, III aus den Abbruchpositionen gemäß derzeit gültigen Rechtsvorschriften entsorgen,;1,5;t;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+60;Eisen und Stahl der Abbruchpositionen gemäß derzeit gültigen Rechtsvorschriften entsorgen,;3,2;t;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+70;Gemischte Metalle der Abbruchpositionen gemäß derzeit gültigen Rechtsvorschriften entsorgen,;0,5;t;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+80;Gemischte Bau- und Abbruchabfälle der Abbruchpositionen gemäß derzeit gültigen Rechtsvorschriften entsorgen,;5,0;t;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+90;Bauschutt - kontaminiert - der Abbruchpositionen gemäß derzeit gültigen Rechtsvorschriften entsorgen,;0,5;t;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+100;Leistung wie zuvor beschrieben, jedoch:;1,0;t;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+110;Altholz der Altholzkategorien IV aus den Abbruchpositionen gemäß derzeit gültigen Rechtsvorschriften entsorgen.;1,5;t;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+10;Stunden eines Vorarbeiters (Polier) - Normalschicht.;1,0;h;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+20;Stunden eines Vorarbeiters (Polier) - Nachtschicht.;3,0;h;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+30;Stunden eines Facharbeiters - Normalschicht.;1,0;h;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+40;Stunden eines Facharbeiters - Nachtschicht.;5,0;h;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+50;Stunden eines Bauwerkers - Normalschicht.;1,0;h;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+60;Stunden eines Bauwerkers - Nachtschicht.;5,0;h;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+10;Stunden eines Vorarbeiters (Polier) - Normalschicht.;1,0;h;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+20;Stunden eines Vorarbeiters (Polier) - Nachtschicht.;3,0;h;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+30;Stunden eines Facharbeiters - Normalschicht.;1,0;h;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+40;Stunden eines Facharbeiters - Nachtschicht.;5,0;h;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+50;Stunden eines Bauwerkers - Normalschicht.;1,0;h;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+60;Stunden eines Bauwerkers - Nachtschicht.;5,0;h;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+10;Stunden eines Vorarbeiters (Polier) - Normalschicht.;1,0;h;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+20;Stunden eines Vorarbeiters (Polier) - Nachtschicht.;3,0;h;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+30;Stunden eines Facharbeiters - Normalschicht.;1,0;h;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+40;Stunden eines Facharbeiters - Nachtschicht.;5,0;h;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+50;Stunden eines Bauwerkers - Normalschicht.;1,0;h;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+60;Stunden eines Bauwerkers - Nachtschicht.;5,0;h;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+10;Aufbringen einer haftungserhöhenden Grundierung auf den Rohbeton an der Bstg.-kante, Breite 20 cm, Oberflächen gerieben.;45,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+20;Flächen, wie zuvor beschrieben, mit Dichtschlämme inkl. Quarzsandeinstreuung abdichten, hinter- und unterlaufsicher ausbilden,;45,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+30;"Markierungsstreifen (Kontraststreifen) aus Natursteinplatten ""Nero Assoluto"" und ""Bethel-White"" im schwarz-weißen Wechsel an Bahnsteigvorderkante,";225,0;m;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+40;Leistung wie zuvor beschrieben, jedoch:;12,0;m;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+50;Fugen mit Marmor- und Natursteinsilikon füllen,;225,0;m;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+60;Leistung wie zuvor beschrieben, jedoch:;110,0;m;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+70;Abschnittsweises Anschrägen der Stolperkanten, so dass Boden nach Beendigung der Arbeiten jeweils zu Betriebsbeginn sicher betretbar ist,;225,0;m;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+80;OSB-Platten als temporäre Auffüllung bei herzustellendem Markierungsstreifen,;45,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+90;Bauabschlussbehandlung vor Bauabnahme zur Herstellung einer mind. 5-jährigen Rutsch- und Trittsicherheit;45,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+10;Rippenplatten für Leitstreifen (LS) und Auffinde-/Auffangstreifen des Blindenleitsystems als Rippenplatte zur taktilen und optischen Orientierung frei Einbauort;71,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+20;Noppenplatten für Abzweigfelder (AB) und Aufmerksamkeitsstreifen des Blindenleitsystem zur taktilen und optischen Orientierung frei Einbauort;80,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+30;Grundierung auf Kunstharzbasis auf Untergrund aus alter und neuer Bstg.-platte,;80,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+40;Mörtelbett als Ausgleich für den Leitstreifen an der Bahnsteigkante mit Quergefälle bis zu 2 % und geringem Längsgefälle gemäß herzustellendem höhenmäßigem Verlauf der Bahnsteigkanten,;70,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+50;Leistung wie in zuvor beschrieben, jedoch;40,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+60;Leitstreifen (LS) für das Blindenleitsystem als Rippenplatte zur taktilen und optischen Orientierung,;230,0;m;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+70;Mörtelbett als Ausgleich für Auffinde-/Auffangstreifen und Abzweigfelder mit Quergefälle bis zu 1,8 % und geringem Längsgefälle gemäß Bestand der Bahnsteigplatte,;5,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+80;Leistung wie in zuvor beschrieben, jedoch;2,5;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+90;"Leistung wie zuvor in Pos. ""Leitstreifen verlegen, 30 cm, Rippe hell, 300/300 mm, Betriebspause"" beschrieben, jedoch:";4,275;m;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+100;Abzweigfeld (AB) für das Blindenleitsystem als Noppenplatte zur taktilen und optischen Orientierung;4,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+110;Leistung wie zuvor beschrieben, jedoch:;1,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+120;Leistung wie zuvor beschrieben, jedoch:;8,0;m;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+130;Fugen zu angrenzenden Bauteilen mit Silikon füllen,;170,0;m;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+140;Leistung wie zuvor beschrieben, jedoch:;50,0;m;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+150;Abschnittsweises Anschrägen der Stolperkanten, so dass Boden nach Beendigung der Arbeiten jeweils zu Betriebsbeginn sicher betretbar ist,;450,0;m;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+160;OSB-Platten als temporäre Auffüllung bei herzustellenden Leit-, Auffinde-/;80,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+10;Betonoberfläche der freigelegten Rohdecke (Bahnsteigplatte) zur Beseitigung von Unebenheiten in der Betonoberfläche und zur Beseitigung von haftungsmindernden Betonteilen unterhalb der Gussasphaltflächen abfräsen,;280,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+20;Oberflächenbeschaffenheit und Zustand der vom AN freigelegten Bestands-Rohbetonoberfläche visuell hinsichtlich Rissen, Abplatzungen und sonstigen für den Einbau der nachfolgend beschriebenen Blindenleitplatten nicht geeigneten Kriterien prüfen,;200,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+30;Risse in Stahlbeton füllen, Fläche waagerecht,;25,0;m;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+40;Leistung wie in Position zuvor beschrieben, jedoch;50,0;m;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+50;Leistung wie in Position zuvor beschrieben, jedoch;25,0;m;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+60;Bauzeitlicher Leitstreifen aus Zementestrich als Begrenzung für die Gussasphaltarbeiten,;215,0;m;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+70;Gussasphalt-Estrich AS - IC15 - S 30,;160,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+80;Leistung wie in zuvor beschrieben, jedoch;100,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+90;Anarbeitung an den an der Bahnsteigkante verlegten Marierungsstreifen aus Granitsteinplatten,;225,0;m;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+100;Leistung wie zuvor beschrieben, jedoch;215,0;m;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+110;Herstellen der Aussparungen beim Einbau des Gussasphaltestrich bei angrenzenden Bauteilen wie Signal-, Spiegel- und Geländerpfosten u.ä.,;5,0;m;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+120;Herstellen der Aussparungen im Gussasphaltestrich für Elemente des BLS,;35,0;m;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+130;Ausbildung des Anschlusses an angrenzende, aufgehende Bauteile mittels Randstreifen und Fugenverguss,;500,0;m;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+140;Gebäudebewegungsfugen und Feldfugen im Gussasphaltestrich ausbilden,;40,0;m;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+150;Abschnittsweises Anschrägen der Stolperkanten, so dass Boden nach Beendigung der Arbeiten jeweils zu Betriebsbeginn sicher betretbar ist,;450,0;m;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+160;OSB-Platten als temporäre Auffüllung bei herzustellendem Begleitstreifen,;280,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+10;Baureinigung der Bahnsteigkante in einer Breite von 1,10 m, bestehend aus 20 cm breiten Natursteinplatten an der Bahnsteigkante, 60 cm Begleitstreifen aus Gussasphalt und 30 cm Rippenplatten aus Fliesenmaterial als Leitstreifen,;200,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+20;Feinreinigung der Bahnsteigkante wie in Vorposition beschrieben,;100,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+10;Trennschnitt in bituminösen Fußbodenbelag aus Gussasphalt für Regulierung der Bahnsteigkante sowie Einbau des neuen BLS herstellen,;330,0;m;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+20;Leistung wie in Position zuvor beschrieben, jedoch:;330,0;m;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+30;Fußboden aus Gussasphalt an beiden Bahnsteigkanten als Begleitstreifen zwischen auszubauendem Markierungsstreifen und Leitstreifen abbrechen,;100,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+40;Leistung wie in Position zuvor beschrieben, jedoch:;100,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+50;Fußboden aus Gussasphalt an beiden Bahnsteigkanten neben dem Leitstreifen in einer Breite von 2,5 cm als Abbruchkante für das neue Blindenleitsystem abbrechen,;5,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+60;Leistung wie in Position zuvor beschrieben, jedoch:;5,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+70;"Leistung wie in Position ""Gussasphalt abbr., Bstg.-kante, PAK < 100 mg/kg, bis 40 mm, B=70,5 cm"" beschrieben, jedoch:";4,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+80;Leistung wie in Position zuvor beschrieben, jedoch:;4,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+90;"Leistung wie in allen Position ""Gussasphalt abbr., PAK >100 mg/kg"" beschrieben, jedoch:";110,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+100;Abbruch der 70 cm breiten Holzplatte aus OSB-Platten an Teilbereich der Bahnsteigkante,;9,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+110;Abbruch des 20 cm breiten Markierungsstreifens aus Granitsteinplatten zzgl. Fuge an beiden Bahnsteigkanten, bestehend aus hellen und dunklen Einzelplatten im Wechsel, Länge jeweils 40 cm,;212,0;m;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+120;Abbruch des 37,5 cm breiten Leitstreifens aus Rillenplatten zzgl. Fuge an beiden Bahnsteigkanten,;210,0;m;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+130;Abbruch des 60 cm breiten Leitstreifens aus Rillenplatten zzgl. Fuge vor der Bahnsteigtreppe,;3,3;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+140;Abbruch des 75 cm breiten Aufmerksamkeitsstreifens aus Noppenplatten zzgl. Fuge an Bahnsteigtreppe II,;4,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+150;Aufmerksamkeitsfeld aus Tränenblech inkl. Unterkonstruktion an Bahnsteigtreppe II komplett ausbauen und entfernen,;1,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+160;Abschnittsweises Anschrägen der Stolperkanten, so dass Boden nach Beendigung der Arbeiten jeweils zu Betriebsbeginn sicher betretbar ist,;450,0;m;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+170;OSB-Platten als temporäre Auffüllung bei herzustellendem Begleitstreifen,;110,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+10;Behelfsmäßiger Schutzbelag im Gleisbett zum Schutz gegen Verschmutzungen des Schotterbettes,;300,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+20;Behelfsmäßiger Schutz von nicht demontierten Einbauteilen und Aufbauten, i.d.R. allseitig,;50,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+30;Bodenflächen aus Gussasphalt, Fliesenmaterial u. ä. auf dem gesperrten Bahnsteig mit Schutzvlies und Seekieferplatten stolpersicher abdecken, für 1 Monat vor-/unterhalten, abbauen und abfahren.;150,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+40;Gebrauchsüberlassung des zuvor beschriebenen Bodenschutzes über die Grundstandzeit hinaus,;300,0;m2;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+10;Erstellung und Pflege eines Entsorgungskonzept für die Abbruchleistungen der Gesamtmaßnahme,;1,0;psch;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+20;Erstellung und Pflege Rasterfeldbeprobungskonzept gem. Merkblatt 7 (SenUVK),;1,0;psch;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+30;Verbindliche Einstufung der Abfälle mittels vorgenannt beschriebener Formblätter bei der Senatsverwaltung für Umwelt, Mobilität, Verbraucher- und Klimaschutz - Abfallbehörde, I B 2 in Art und Umfang.;1,0;psch;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+40;Der AN hat dafür Sorge zu tragen, dass sämtliche nicht gefährliche Abfälle mittels Registerbelegen im eANV abgebildet werden,;1,0;psch;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+50;Anfahrt zur Probenahme,;15,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+60;Probenahmeprotokoll nach LAGA PN98 mit Lageskizze, Fotodokumentation, geschätztem Abfallvolumen sowie Zuordnung des Abfallschlüssels und ggf. LAGA-Einstufung/EBV-Einstufung,;15,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+70;"Asbest (Methode des Instituts für Arbeitssicherheit der Deutschen Gesetzlichen Unfallversicherung Arbeitsmappe Messung von Gefahrstoffen, Kennzahl 7487 ""IFA / BIA-Verfahren 7487"") (bzw. Alternativverfahren mit Nachweisgrenze deutlich unter 0,1%),";3,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+130;Gemische aus Beton, Ziegeln, Fliesen und Keramik analysieren:;3,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+140;EBV-Bauschutt analysieren,;3,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+190;ASN 170301*, Straßenaufbruch (PAK > 100 mg/ kg) analysieren:;2,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+200;ASN 170302, Straßenaufbruch (Wiederverwendungsbereich 1 (BTR RC-StB))  analysieren:;2,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+210;ASN 170302, Straßenaufbruch (Wiederverwendungsbereich 3 + 4 (BTR RC-StB))  analysieren:;2,0;St;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+10;Bauschutt - Gemische aus Beton, Ziegeln, Fliesen und Keramik -nicht kontaminiert - der Abbruchpositionen gemäß derzeit gültigen Rechtsvorschriften entsorgen,;16,0;t;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+20;Altholz der Altholzkategorien I, II, III aus den Abbruchpositionen gemäß derzeit gültigen Rechtsvorschriften entsorgen,;2,3;t;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+30;Straßenaufbruch der Verwertungsklasse A (RuVA-StB), rsp. Wiederverwendungsbereich 1 (BTR-RC StB) gemäß derzeit gültigen Rechtsvorschriften entsorgen,;10,0;t;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+40;Straßenaufbruch der Verwertungsklasse B und C (RuVA-StB), rsp. Wiederverwendungsbereich 3 und 4 (BTR-RC StB) gemäß derzeit gültigen Rechtsvorschriften entsorgen,;10,0;t;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+50;Eisen und Stahl der Abbruchpositionen gemäß derzeit gültigen Rechtsvorschriften entsorgen,;0,3;t;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+60;Gemischte Metalle der Abbruchpositionen gemäß derzeit gültigen Rechtsvorschriften entsorgen,;0,5;t;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+70;Gemischte Bau- und Abbruchabfälle der Abbruchpositionen gemäß derzeit gültigen Rechtsvorschriften entsorgen,;2,0;t;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+80;Bauschutt - kontaminiert - der Abbruchpositionen gemäß derzeit gültigen Rechtsvorschriften entsorgen,;2,0;t;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+90;Leistung wie zuvor beschrieben, jedoch:;4,0;t;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+100;Altholz der Altholzkategorien IV aus den Abbruchpositionen gemäß derzeit gültigen Rechtsvorschriften entsorgen.;0,5;t;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+10;Stunden eines Vorarbeiters (Polier) - Normalschicht.;1,0;h;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+20;Stunden eines Vorarbeiters (Polier) - Nachtschicht.;3,0;h;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+30;Stunden eines Facharbeiters - Normalschicht.;1,0;h;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+40;Stunden eines Facharbeiters - Nachtschicht.;5,0;h;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+50;Stunden eines Bauwerkers - Normalschicht.;1,0;h;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81
+60;Stunden eines Bauwerkers - Nachtschicht.;5,0;h;gaeb;Dateien für Angebot/INF1-0328-2026neu.X81

@@ -1,0 +1,99 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+1.1.10;Metallgekapselte Schaltanlage GHV AV;1,0;St;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1.1.20;Leistungsschalter MCCB Hauptschalter 3polig 400A 400/415VAC Kat.A Betätigungsspannung 230VAC Anzeige Schaltstellung elektron. Auslösung Schutzfunktion LI;1,0;St;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1.1.30;NH-Sicherungslasttrennschalter LeistenBF 400VAC Gr.1 3polig NH- Sicherungseinsatz 250A;2,0;St;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1.1.40;NH-Sicherungslasttrennschalter LeistenBF 400VAC Gr.00 3polig NH- Sicherungseinsatz 125A;16,0;St;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1.1.50;Leistungsschütz 3polig AC-1 45kW 230V Betätigungsspannung 230VAC 1S 1Ö;2,0;St;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1.1.60;Blitzstrom-Ableiter/Überspannungs-Ableiter, Kombigerät;1,0;St;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1.1.70;Anschlussblockklemme 5polig bis 120mm2 Schraubbefest.;2,0;St;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1.1.80;Feldverteilereinsatz 72 TE;1,0;St;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1.1.90;Sicherungslasttrennschalter Gr.D02 400VAC AC-22 3-polig Sicherungseinsatz;1,0;St;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1.1.100;Fehlerstromschutzschalter RCBO TypA unverzögert Charakter.B 10A Fehlerstrom 30mA einpolig+N 230VAC Hilfsschalter 1W;4,0;St;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1.1.110;Leitungsschutzschalter 230/400VAC Ausschaltvermögen 10kA einpolig Hilfsschalter 1W Charakter.B;2,0;St;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1.1.120;Digitale Astro-Zeitschaltuhr, 2 Kanäle, 7 Tage;1,0;St;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1.1.130;Gruppenschalter 25A 1 Schließer 230V AC 1PLE;2,0;St;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1.1.140;Installationsrelais 16A 2S 230V;2,0;St;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1.1.150;Reihenklemme bis 4 mm2;16,0;St;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1.1.160;Neutralleiter-Reihenklemme bis 4 mm2;5,0;St;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1.1.170;Schutzleiter-Reihenklemme bis 16 mm2;8,0;St;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1.1.180;Reihenklemme 690V 3-stöckig NT-L-PE bis 2,5mm2 Tragschiene;8,0;St;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1.1.190;Übersichtsschaltplan;1,0;St;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1.2.10;Kabel NYCWY 4x16RE/16 vorh.Kabelrinne/Kanal;105,0;m;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1.2.20;Kabel NYCWY 4x16RE/16 Bügelschellen;16,0;m;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1.2.30;Kabel NYCWY 4x50SM/25 Bügelschellen;18,0;m;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1.2.40;Kabel NYCWY 4x50SM/25 vorh.Kabelrinne/Kanal;8,0;m;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1.2.50;Kabel NYY-J 1x25RM vorh.Kabelrinne/Kanal;50,0;m;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1.3.10;Installationsltg NYM-J 3x1,5 vorh.Kabelrinne/Kanal;135,0;m;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1.3.20;Installationsltg NYM-J 3x2,5 vorh.Kabelrinne/Kanal;275,0;m;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1.3.30;Installationsltg NYM-J 5x1,5 vorh.Kabelrinne/Kanal;155,0;m;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1.3.40;Kunststoffaderleitung H07V-K 1x6 vorh.Rohr/Unterflurkanal;150,0;m;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1.3.50;Kunststoffaderleitung H07V-K 1x16 vorh.Rohr/Unterflurkanal;55,0;m;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1.4.10;Weitspannkabelleiter 110 mm x 300 mm;12,0;m;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1.4.20;Steigleiter Stahl verz H 60mm B 300mm an Stahlkonstruktion;12,0;m;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1.4.30;Bügelschelle mit Gegenwanne 28-34 mm;30,0;St;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1.4.40;Bügelschelle mit Gegenwanne 52-58 mm;60,0;St;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1.4.50;Elektroinstallationsrohr Alu AD 32mm Stahlkonstruktion Trägerklammern;140,0;m;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1.4.60;Elektroinstallationsrohr Alu AD 25mm Stahlkonstruktion Trägerklammern;30,0;m;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1.5.10;Installationskleinverteiler Gehäuse Kunststoff TE 48 St Innenaufstellung IP54 IK05;2,0;St;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1.5.20;Steckdosenkombination AMAXX® Wand IP44;2,0;St;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1.5.30;Hauptschalter  3x 63A / 400V;2,0;St;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1.5.40;Sicherungslasttrennschalter Gr.D02 3-polig;3,0;St;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1.5.50;Überspannungsableiter 15 kA 4polig;2,0;St;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1.5.60;Fehlerstromschutzschalter Überstromsch. A unverzögert Charakter.B 16A Fehlerstrom 30mA;6,0;St;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1.5.70;Fehlerstromschutzschalter A unverzögert 40A Fehlerstrom 30mA 3-polig+N;2,0;St;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1.5.80;Leitungsschutzschalter 230/400VAC Ausschaltvermögen 10kA einpolig Hilfsschalter 1W Charakter.B;4,0;St;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1.5.90;Leitungsschutzschalter 230/400VAC Ausschaltvermögen 10kA einpolig 16A;6,0;St;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1.5.100;Leitungsschutzschalter 230/400VAC Ausschaltvermögen 10kA 3-polig 16A;2,0;St;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1.5.110;Dreistock-Installationsklemme;12,0;St;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1.5.120;Reihenklemme bis 35 mm2;6,0;St;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1.5.130;Neutralleiter-Reihenklemme bis 35 mm2;2,0;St;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1.5.140;Schutzleiter-Reihenklemme bis 35 mm2;2,0;St;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1.5.150;Kupfersammelschiene für Aufreihklemme;1,0;m;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1.5.160;Schuko-Steckdose 16A/230V;2,0;St;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1.6.10;Wippschalter einpolig Aus/Wechsel 10A 250V AP-Ausführung IP44;6,0;St;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1.6.20;Schlüsselschalter einpolig Aus/Wechsel 10A 250V Gerätedose Beschriftungsfeld Kontrolllampe IP44;2,0;St;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1.6.30;Schutzkontaktsteckdose 250V 16A AP-Ausführung Beschriftungsfeld IP44;8,0;St;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1.6.40;CEE-Steckdose 5polig 230/400VAC 16A AP;2,0;St;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1.6.50;Verbindungsdose Kunststoff 80/80mm T 50mm IP54 5x4mm2 AP Beton;25,0;St;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1.7.10;Bauseitig verlegte Kabel und Leitungen;10,0;St;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1.7.20;Kabel anklemmen, einseitig  bis 5 x 16;9,0;St;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1.7.30;Kabel anklemmen, einseitig  bis 5 x 25-50;1,0;St;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1.8.10;Potentialausgleichsschiene Messing 7x2,5-25mm2/2x2,5-95mm2 Abdeck. 40x4mm;2,0;St;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1.8.20;Erdungsbandrohrschelle Stahl niro 1x2,5mm2-2x16mm2 Durchm. bis 20mm;6,0;St;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1.8.30;Erdungsbandrohrschelle Stahl niro 1x2,5mm2-2x16mm2 Durchm. bis 100mm;10,0;St;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1.8.40;Schraubverbindung Stahl niro bohren Gewinde schneiden 2xM8;4,0;St;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1.8.50;Schraubverbindung Stahl niro bohren Gewinde schneiden 1xM10;6,0;St;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1.9.10;Fachwerker-in sämtliche Kosten/Zuschläge;8,0;h;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1.9.20;Inbetriebnahme;1,0;St;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1.9.30;Übergabeunterlagen KG 440/450;1,0;St;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1.9.40;Bereitstellung Gerüste;4,0;Wo;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1101.10;LED-Feuchtraum-Anbauleuchte IP66 mit PC-Leuchtenkörper;12,0;St;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1101.20;Stahlband-Aufhängung, 1 Paar, rostfrei;12,0;St;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1101.30;Träger- und Trapezblechbefestigungen;24,0;St;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1102.10;Rettungszeichenleuchte Einzelbatterie Kompaktgehäuse Erkennungsweite 15m Dauerschaltung Betr.-dauer 1h Wandanbau LED;2,0;St;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1102.20;Sicherheitsleuchte Einzelbatterie Kompaktgehäuse Bereitschaftsschaltung Betr.-dauer 1h Aufhängung LED;4,0;St;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1111.10;Hochspannungsfeste isolierte Ableitung;36,0;m;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1111.20;Anschlusselement;12,0;St;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1111.30;Fangmaste für  Leitung hochspannungsfeste isolierte Ableitungen;6,0;St;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1111.40;Erdeinführungsstangen-Set;6,0;St;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1111.50;Anschlusslasche mit Klemmbock;10,0;St;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1111.60;Klemme Kl.N Stange Stahl niro Rd7-10 u.16;6,0;St;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1111.70;Nummernschild;6,0;St;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1112.10;Potentialausgleichsschiene Messing 7x2,5-25mm2/2x2,5-95mm2 Abdeck. 40x4mm;1,0;St;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1112.20;Kabel NYY-J 1x16RE Stahlkonstruktion Trägerklammern;75,0;m;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1112.30;Kabel NYY-J 1x16RE vorh.Kabelrinne/Kanal;35,0;m;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1112.40;Elektroinstallationsrohr Alu AD 32 mm AP Abstandsschellen;52,0;m;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1112.50;Übergabeunterlagen der ausgeführten Anlagen;1,0;St;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1112.60;Regenrohrschelle St/tZn;2,0;St;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1112.70;Trennstück Kl.H Stahl niro Rd8-10/Rd8-10;76,0;St;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1112.80;Nummernschild;76,0;St;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1113.10;Erdung Fundamenterder Fl30-St;74,0;m;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1113.20;Erdung Ringerder Stahl niro Fl30;95,0;m;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1113.30;Anschlussfahne L 3m;8,0;St;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1113.40;Verbinder Kl.N Kreuzverbindung Stahl verz;25,0;St;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1113.50;Verbinder Kl.H Kreuzverbindung Stahl niro;15,0;St;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1113.60;Klemme Kl.H Blechfalz Stahl verz Rd8-10;18,0;St;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1113.70;Klemme Kl.H Flach-Profilstahl Stahl verz Rd8-10;18,0;St;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1113.80;Korroschutz Anschluss- Verbindungsstellen Korroschutzbinde;25,0;St;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1114.10;Übergabeunterlagen;1,0;St;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83
+1114.20;Messen Gesamterdungssystem;10,0;St;gaeb-flat;Vergabeunterlagen/2 Elektroinstallation Kalthalle.D83

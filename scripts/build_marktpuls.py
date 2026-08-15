@@ -108,13 +108,21 @@ Aufruf::
                                        [--out web/data/marktpuls.json] [--dry-run]
 """
 from __future__ import annotations
-from govisor import db as _db
 
 import argparse
 import datetime as dt
 import json
 import pathlib
 import sys
+
+# Das Projektverzeichnis MUSS selbst auf den Pfad — `python3 scripts/x.py` legt nur
+# `scripts/` auf sys.path, nie die Wurzel. Ohne diese Zeilen fand `from govisor …`
+# das Paket nur, wenn der Aufrufer zufaellig PYTHONPATH gesetzt hatte; im Tageslauf
+# unter launchd ist die Umgebung leer und der Schritt starb am 2026-08-15 lautlos
+# (abgefangen durch das `||` im Shell-Skript — marktpuls.json blieb still veraltet).
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent.parent))
+
+from govisor import db as _db  # noqa: E402
 
 import duckdb
 

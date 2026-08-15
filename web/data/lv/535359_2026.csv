@@ -1,0 +1,96 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+10;Einrichten der Baustelle f;1,0;psch;gaeb;3935536.x83
+20;Vorhalten der Baustelleneinrichtung;1,0;psch;gaeb;3935536.x83
+30;Erschwerniszuschlag f;1,0;psch;gaeb;3935536.x83
+10;Vermessungsarbeiten zur Absteckung der Achsen, Randpunkte, Einfassungen und Rinnen Grenzpunkte, usw.  einschlie;1,0;psch;gaeb;3935536.x83
+20;H;5,0;St;gaeb;3935536.x83
+30;H;12,0;St;gaeb;3935536.x83
+40;Bestandspl;1,0;psch;gaeb;3935536.x83
+10;Verkehrszeichenplan (mind. DIN A3) f;1,0;psch;gaeb;3935536.x83
+20;Einrichtungen zur Verkehrssicherung und Verkehrsrege-;1,0;psch;gaeb;3935536.x83
+30;Verkehrsfl;1,0;psch;gaeb;3935536.x83
+40;Vorhandene Beschilderung (Ronden, Dreiecke, Quadrate, Rechtecke, Richtungsschilder usw.), an Pfosten oder Geb;5,0;St;gaeb;3935536.x83
+50;Verkehrsschild gem. RSA, ZTV-SA, StVO u. VzKat mit;5,0;St;gaeb;3935536.x83
+60;Verkehrsschild gem. RSA, ZTV-SA, StVO u. VzKat mit;5,0;St;gaeb;3935536.x83
+70;Leitbake (Warnbake) gem. RSA, ZTV-SA, StVO u. VzKat, Zeichen 605, mit Aufstellvorrichtung nach statischen Erfordernissen gem. ZTV-SA, inkl. Anfahrt aufbauen, vorhalten/warten, Kontrolle gem;25,0;St;gaeb;3935536.x83
+80;Leitbake (Warnbake) gem. RSA, ZTV-SA, StVO u. VzKat, Zeichen 605, mit Warnleuchte, Aufstellvorrichtung nach statischen Erfordernissen gem. ZTV-SA, inkl. Anfahrt aufbauen, vorhalten/warten, Kontrolle gem;20,0;St;gaeb;3935536.x83
+90;Absperrschranke gem. RSA, ZTV-SA, StVO u. VzKat, Zeichen 600,  mit Aufstellvorrichtung nach statischen Erfordernissen gem. ZTV-SA, inkl. Anfahrt aufbauen, vorhalten/warten, Kontrolle gem;65,0;m;gaeb;3935536.x83
+100;Absperrschranke gem. RSA, ZTV-SA, StVO u. VzKat, Zeichen 600,  mit Aufstellvorrichtung nach statischen Erfordernissen gem. ZTV-SA, inkl. Anfahrt aufbauen, vorhalten/warten, Kontrolle gem;5,0;St;gaeb;3935536.x83
+10;Sicherung von Grenzsteinen, Vermessungsfestpunkten, H;60,0;St;gaeb;3935536.x83
+20;Bau- bzw. Schutzzaun einschlie;1250,0;m;gaeb;3935536.x83
+30;Zulage zum Bauzaun f;3,0;St;gaeb;3935536.x83
+40;Baugrubenabdeckung f;5,0;St;gaeb;3935536.x83
+50;Baumschutz aus Schalbrettern;100,0;St;gaeb;3935536.x83
+60;Schutzeinrichtung f;200,0;m2;gaeb;3935536.x83
+70;Graben f;250,0;m;gaeb;3935536.x83
+80;Ortung von vorhandenen Kabeln und Leitungen mittels Suchger;750,0;m;gaeb;3935536.x83
+90;Boden f;25,0;m3;gaeb;3935536.x83
+10;Vorhandenen Grenzstein innerhalb des;22,0;St;gaeb;3935536.x83
+20;Baum f;3,0;St;gaeb;3935536.x83
+30;wie Vorposition, jedoch;3,0;St;gaeb;3935536.x83
+40;wie Vorposition, jedoch;3,0;St;gaeb;3935536.x83
+50;Wurzelstock roden.;165,0;St;gaeb;3935536.x83
+60;wie Vorposition, jedoch;105,0;St;gaeb;3935536.x83
+70;wie Vorposition, jedoch;75,0;St;gaeb;3935536.x83
+80;Roden von Hecken und Str;450,0;m2;gaeb;3935536.x83
+90;Ausasten von B;495,0;m;gaeb;3935536.x83
+100;Schild mit Zeichen nach StVO, mit oder ohne;3,0;St;gaeb;3935536.x83
+110;Rohrpfosten, Durchmesser 60 oder 76 mm,;3,0;St;gaeb;3935536.x83
+120;Kanal DN 250 bis DN 500 aus STZ, Kunststoff, Beton o. StB ausbauen. Ausbauen aller Bestandteile, in Eigentum des AN;95,0;m;gaeb;3935536.x83
+130;Hindernis im Boden;10,0;m3;gaeb;3935536.x83
+140;Hindernis im Boden;10,0;m3;gaeb;3935536.x83
+150;Asphalt gem;10,0;m;gaeb;3935536.x83
+160;Gebundenen Oberbau l;250,0;m2;gaeb;3935536.x83
+170;Gelagerten Asphalt (PAK > 10 bis ≤ 25 mg/kg) von Lagerfl;90,0;t;gaeb;3935536.x83
+10;Oberboden Homogenbereich O1, profilgerecht abtragen, laden, f;2540,0;m3;gaeb;3935536.x83
+20;Oberboden Homogenbereich O1;2540,0;m3;gaeb;3935536.x83
+30;Boden Homogenbereich B1;975,0;m3;gaeb;3935536.x83
+40;Zulage zu den Aushubpositionen f;975,0;m3;gaeb;3935536.x83
+50;Mischbindemittel f;75,0;to;gaeb;3935536.x83
+60;Ausheben von Hand;20,0;m3;gaeb;3935536.x83
+70;Boden liefern, profilgerecht oder nach;2475,0;m3;gaeb;3935536.x83
+80;Geotextil aus Vlies liefern und;18890,0;m2;gaeb;3935536.x83
+90;Bodenverbesserung das Stra;3000,0;m3;gaeb;3935536.x83
+100;Erdplanum in allen Bereichen nach ZTVE-Stb herstellen.;18890,0;m2;gaeb;3935536.x83
+110;Zulage f;2700,0;m2;gaeb;3935536.x83
+120;Aufgelockerten Unterbau und Untergrund bzw. Planum in allen Bereichen statisch verdichten bis zum Erreichen des vorgeschriebenen Verdichtungsgrades.;18890,0;m2;gaeb;3935536.x83
+130;Abdichtung aus Tondichtungsbahn liefern und fachgerecht nach Angabe des Herstellers verlegen.;2690,0;m2;gaeb;3935536.x83
+140;Mechanisch verfestigter Schutzvliesstoff aus Polypropylen (PP) Stapelfasern frei Baustelle liefern und nach Hersteller-angabe einbauen. Die Bahnen sind an den St;2690,0;m2;gaeb;3935536.x83
+150;Mehraufwand bei der Ausf;650,0;m;gaeb;3935536.x83
+160;Mehraufwand bei der Ausf;50,0;m;gaeb;3935536.x83
+170;Statischer Plattendruckversuch als zus;10,0;St;gaeb;3935536.x83
+180;Einbetten und;175,0;m3;gaeb;3935536.x83
+190;Leitungen und Rohrleitung markieren mit Trassenwarnband mit eingelegtem Ortungsdraht, 40 cm;690,0;m;gaeb;3935536.x83
+10;Wasserhaltungsanlage zum Freihalten und Trockenlegen;5,0;St;gaeb;3935536.x83
+20;Wasserhaltungsanlage der Vorposition;1,0;psch;gaeb;3935536.x83
+30;Wasserhaltungsanlage der Vorposition;515,0;h;gaeb;3935536.x83
+10;Boden der Rohrgr;105,0;m3;gaeb;3935536.x83
+20;Abwasserkanal aus PP-Rohren nach DIN EN 1852;120,0;m;gaeb;3935536.x83
+30;Kamerabefahrung von Entw;110,0;m;gaeb;3935536.x83
+10;Frostschutzschicht herstellen (mehrlagig).;825,0;m3;gaeb;3935536.x83
+20;Frostschutzschicht herstellen (mehrlagig).;8100,0;m3;gaeb;3935536.x83
+30;Frostschutzschicht herstellen (mehrlagig).;495,0;to;gaeb;3935536.x83
+40;Bankett profilgerecht herstellen;4095,0;m2;gaeb;3935536.x83
+50;Statischer Plattendruckversuch als zus;15,0;St;gaeb;3935536.x83
+10;Schicht ohne Bindemittel (DoB) herstellen;10225,0;m2;gaeb;3935536.x83
+20;Tragdeckschicht aus Asphaltbeton AC 16 TD;345,0;m2;gaeb;3935536.x83
+10;Am Lagerplatz des AG gelagertes Verkehrsschilder und Pfosten aufnehmen, f;3,0;St;gaeb;3935536.x83
+20;Rohrpfosten und Rohrrahmen aus Stahl feuerver-;3,0;St;gaeb;3935536.x83
+30;Bodenh;3,0;St;gaeb;3935536.x83
+40;Verkehrsschilder bis Seitenl;3,0;St;gaeb;3935536.x83
+50;Zulage zur Vorposition f;3,0;St;gaeb;3935536.x83
+10;Rasen ans;1050,0;m2;gaeb;3935536.x83
+20;Feinplanum herstellen, Fremdk;1050,0;m2;gaeb;3935536.x83
+30;Sohlbefestigung aus Natursteinen in einer Sch;10,0;t;gaeb;3935536.x83
+10;Vorhandene Wildschutzz;510,0;m;gaeb;3935536.x83
+20;Wildschutzzaun aus Knotengeflecht entspr. den Richtlinien f;510,0;m;gaeb;3935536.x83
+30;Zulage zu Wildschutzzaun der OZ;38,0;St;gaeb;3935536.x83
+10;Stundenlohnarbeiten durch;20,0;h;gaeb;3935536.x83
+20;Stundenlohnarbeiten durch;20,0;h;gaeb;3935536.x83
+30;Stundenlohnarbeiten durch Bauger;20,0;h;gaeb;3935536.x83
+40;Stundenlohnarbeiten durch Bauger;20,0;h;gaeb;3935536.x83
+50;Stundenlohnarbeiten durch Bauger;20,0;h;gaeb;3935536.x83
+60;Stundenlohnarbeiten durch Bauger;20,0;h;gaeb;3935536.x83
+70;Stundenlohnarbeiten durch Bauger;20,0;h;gaeb;3935536.x83
+80;Stundenlohnarbeiten durch Bauger;20,0;h;gaeb;3935536.x83
+90;Stundenlohnarbeiten durch Bauger;20,0;h;gaeb;3935536.x83

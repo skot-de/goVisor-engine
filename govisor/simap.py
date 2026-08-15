@@ -523,3 +523,176 @@ def build_ch_gold(cfg: Config, country: str = "CH") -> int:
     con.close()
     print(f"simap {country} Gold: {n} offene Ausschreibungen → lead_export/lead_geo/lead_deadline")
     return n
+
+
+def abgeschlossene_projekte(cfg, country: str = "CH") -> set[str]:
+    """simap-Projekte, die nachweislich durch sind — Zuschlag, Abbruch oder Widerruf.
+
+    **Warum es das braucht.** Eine Schweizer Vergabe erscheint bei uns doppelt: als
+    TED-CHE-Notice (mit TED-Kennung) und als simap-Notice (mit simap-UUID). Wird sie
+    vergeben, veroeffentlicht simap den Zuschlag — aber unter der UUID. Die TED-Zeile bleibt
+    `notice_kind='cn'` mit ihrer alten, oft weit in der Zukunft liegenden Frist und gilt
+    damit ewig als offene Ausschreibung. Gemessen am 2026-08-15: die Vergabe 505197_2025 war
+    seit dem 18.11.2025 vergeben und stand bei uns mit Frist 15.09.2026 als offen.
+
+    **Die Bruecke liegt schon im Bestand** — `portal_url` der simap-Notice traegt dieselbe
+    Projekt-ID, die in der `documents_url` der TED-Zeile steckt. Es braucht also keinen
+    einzigen Netzaufruf, nur den Abgleich.
+
+    Gegen die oeffentliche Schnittstelle geprueft (`project-header.latestPublication.pubType`,
+    928 offene CH-Leads einzeln abgefragt): **3 Treffer, 3 bestaetigt, 0 Fehlalarme unter den
+    925 echt offenen.** Der Anteil ist heute klein (0,3 %), aber er waechst mit jedem Monat,
+    den der Bestand aelter wird — jede offene Ausschreibung wird irgendwann vergeben.
+    """
+    import duckdb
+
+    con = duckdb.connect()
+    try:
+        pids = con.execute(f"""
+          SELECT DISTINCT regexp_extract(portal_url, 'project-detail/([0-9a-f-]+)', 1)
+          FROM read_parquet('{cfg.silver_table_glob('notices', country)}', hive_partitioning=1)
+          WHERE portal_url LIKE '%project-detail/%'
+            AND notice_kind IN ('can', 'abandonment', 'revocation')""").fetchall()
+    finally:
+        con.close()
+    return {p[0] for p in pids if p[0]}
+
+
+def _juengste_dokument_flagge_sql(cfg, country: str) -> str:
+    """SQL für: Projekt-ID → hat die JÜNGSTE Publikation Unterlagen?
+
+    ⚠ **Die jüngste, nicht irgendeine.** `hasProjectDocuments` hängt an der einzelnen
+    Publikation, nicht am Projekt. Ein Maximum über alle Publikationen eines Projekts liegt
+    messbar schlechter: gegen die 928 einzeln abgefragten Wahrheitswerte 33 Fehlalarme
+    statt 12 (typischer Fall: die alte Ausschreibung hatte Unterlagen, die aktuelle
+    Zuschlagsmeldung hat keine — wir würden „Unterlagen vorhanden" behaupten).
+    """
+    return f"""
+      SELECT pid, hat FROM (
+        SELECT regexp_extract(n.portal_url, 'project-detail/([0-9a-f-]+)', 1) AS pid,
+               max(CASE WHEN a.path = 'simap/hasProjectDocuments' THEN 1 ELSE 0 END) = 1 AS hat,
+               row_number() OVER (
+                 PARTITION BY regexp_extract(n.portal_url, 'project-detail/([0-9a-f-]+)', 1)
+                 ORDER BY n.publication_date DESC NULLS LAST,
+                          n.publication_number DESC) AS rn
+        FROM read_parquet('{cfg.silver_table_glob('notices', country)}', hive_partitioning=1) n
+        LEFT JOIN read_parquet('{cfg.silver_table_glob('attributes', country)}',
+                               hive_partitioning=1) a ON a.notice_id = n.notice_id
+        WHERE n.portal_url LIKE '%project-detail/%'
+        GROUP BY 1, n.notice_id, n.publication_date, n.publication_number)
+      WHERE rn = 1"""
+
+
+def ergaenze_dokument_flagge(cfg, country: str = "CH") -> int:
+    """`has_documents` auf den TED-CHE-Leads aus der simap-Zeile desselben Projekts füllen.
+
+    **Das Problem.** Das Feld wird aus dem Attribut `simap/hasProjectDocuments` gebaut, und
+    das trägt nur die simap-Zeile. Unsere Schweizer Leads stammen aber überwiegend aus
+    TED-CHE — sie haben das Attribut nie gesehen und standen deshalb ausnahmslos auf `false`.
+    Gemessen an 928 offenen CH-Leads: **765 davon falsch**, die Flagge war für CH wertlos.
+
+    **Die Brücke ist dieselbe wie bei `entferne_abgeschlossene`** — Projekt-ID aus dem
+    `context` der `documents_url` gegen Projekt-ID im `portal_url` der simap-Zeile. Kein
+    Netzaufruf.
+
+    **Gemessene Güte** (gegen 928 einzeln abgefragte `project-header.hasProjectDocuments`):
+    848 richtig (91,4 %), 22 falsch (2,4 %, davon 12 zu optimistisch), 58 unbekannt (6,3 %,
+    kein simap-Geschwister im Bestand). Die 58 bleiben wie bisher auf `false` — das Feld ist
+    boolesch, und „lieber nichts versprechen" ist die richtige Ausfallrichtung.
+
+    ⚠ Die Flagge sagt nur, dass es Unterlagen GIBT. Holen kann sie in CH niemand ohne
+    Firmenregistrierung und Interessensbekundung (s. `simap_docs.interesse_bekunden`).
+    """
+    import duckdb
+
+    from .simap_docs import projekt_id
+
+    pfad = (cfg.gold_dir / country / "lead_export.parquet")
+    if not pfad.exists():
+        return 0
+
+    con = duckdb.connect()
+    try:
+        con.create_function("_simap_pid", lambda u: projekt_id(u) or "",
+                            ["VARCHAR"], "VARCHAR")
+        con.execute("CREATE TEMP TABLE flagge AS "
+                    + _juengste_dokument_flagge_sql(cfg, country))
+        # coalesce um die Brücke: fehlt das Geschwister, bleibt der alte Wert stehen.
+        NEU = ("coalesce(f.hat, l.has_documents)")
+        geaendert = con.execute(f"""
+          SELECT count(*) FROM read_parquet('{pfad.as_posix()}') l
+          LEFT JOIN flagge f ON f.pid = _simap_pid(l.documents_url)
+          WHERE {NEU} IS DISTINCT FROM l.has_documents""").fetchone()[0]
+        if geaendert:
+            tmp = pfad.with_suffix(".neu.parquet")
+            con.execute(f"""COPY (
+              SELECT l.* REPLACE ({NEU} AS has_documents)
+              FROM read_parquet('{pfad.as_posix()}') l
+              LEFT JOIN flagge f ON f.pid = _simap_pid(l.documents_url)
+            ) TO '{tmp.as_posix()}' (FORMAT PARQUET, COMPRESSION ZSTD)""")
+            tmp.replace(pfad)
+    finally:
+        con.close()
+    print(f"simap {country}: has_documents auf {geaendert} Leads aus der Projekt-Brücke gefüllt")
+    return geaendert
+
+
+def entferne_abgeschlossene(cfg, country: str = "CH") -> int:
+    """Vergebene/abgebrochene Vorgaenge aus `lead_export` nehmen. Gibt die Zahl zurueck.
+
+    **Entfernen statt markieren, ausnahmsweise.** Der Projektgrundsatz lautet sonst „Fehler
+    markieren statt wegwerfen" — hier ist aber nichts fehlerhaft und nichts geht verloren:
+    die Notice bleibt vollstaendig im Silber, die Zeile bleibt in `leads.parquet`, und ueber
+    den Zuschlag taucht der Vorgang spaeter im Auslauf-Radar wieder auf. Es faellt allein die
+    Zusage weg, das Frontend duerfe sie als *offene Gelegenheit* anbieten. Eine vergebene
+    Ausschreibung als offen anzuzeigen waere die teurere Unehrlichkeit.
+
+    ⚠ FK-Richtung beachtet: `verify` prueft `lead_export.lead_id → leads.lead_id`.
+    `lead_export` ist das Kind, Zeilen dort zu entfernen erzeugt keine Waisen. Andersherum
+    waere es ein Fehler.
+    """
+    import duckdb
+
+    from .simap_docs import projekt_id
+
+    pfad = (cfg.gold_dir / country / "lead_export.parquet")
+    if not pfad.exists():
+        return 0
+    erledigt = abgeschlossene_projekte(cfg, country)
+    if not erledigt:
+        return 0
+
+    # NULL-frei halten: DuckDB bricht eine UDF ab, die NULL zurueckgibt („null_handling was
+    # set to DEFAULT"), und NULL ist ausserdem genau der Wert, der die Filterlogik unten
+    # kippt. Ein leerer String kann nie in `erledigt` stehen — er ist der sichere Nicht-Treffer.
+    def _pid(url):
+        return projekt_id(url) or ""
+
+    con = duckdb.connect()
+    try:
+        con.create_function("_simap_pid", _pid, ["VARCHAR"], "VARCHAR")
+        con.execute("CREATE TEMP TABLE erledigt(pid VARCHAR)")
+        con.executemany("INSERT INTO erledigt VALUES (?)", [(p,) for p in erledigt])
+        # ⚠ `coalesce(..., FALSE)` ist hier NICHT Kosmetik. `_simap_pid` gibt bei jeder
+        # Nicht-simap-URL NULL zurueck, `NULL IN (…)` ist NULL, und `NOT (TRUE AND NULL)`
+        # ist NULL — also nicht wahr, also faellt die Zeile aus dem `WHERE` der Gegenprobe.
+        # Ohne das Coalesce loeschte dieser Schritt beim ersten Lauf **859 statt 3** Zeilen:
+        # jeden offenen Lead ohne simap-Link. Die Zaehlabfrage merkte davon nichts, weil sie
+        # die Bedingung positiv formuliert und NULL dort einfach nicht zaehlt — Zaehlung und
+        # Loeschung waren nicht dieselbe Aussage. Genau deshalb prueft der Test unten die
+        # UEBERLEBENDEN, nicht die Zahl der Entfernten.
+        TRIFFT = ("phase = 'open' AND coalesce(_simap_pid(documents_url) "
+                  "IN (SELECT pid FROM erledigt), FALSE)")
+        weg = con.execute(f"""
+          SELECT count(*) FROM read_parquet('{pfad.as_posix()}') WHERE {TRIFFT}
+        """).fetchone()[0]
+        if weg:
+            tmp = pfad.with_suffix(".neu.parquet")
+            con.execute(f"""COPY (
+              SELECT * FROM read_parquet('{pfad.as_posix()}') WHERE NOT ({TRIFFT})
+            ) TO '{tmp.as_posix()}' (FORMAT PARQUET, COMPRESSION ZSTD)""")
+            tmp.replace(pfad)                       # atomar, kein halb geschriebener Stand
+    finally:
+        con.close()
+    print(f"simap {country}: {weg} vergebene/abgebrochene Vorgänge aus lead_export entfernt")
+    return weg

@@ -39,6 +39,21 @@ CLI: `python -m govisor.cli {ingest|silver|gold|verify|review}`.
   Konkrete Altlasten dieser Art: der Regionen-Katalog kennt nur deutsche Bundesländer
   (Schweizer Leads fallen aus jeder Umkreissuche), und der Dokument-Fetcher deckt nur
   cosinex/DTVP ab (eine deutsche Plattform-Familie).
+- **⛔ VOR jedem schreibenden Schritt prüfen, ob ein anderer Lauf stört.** Ein Befehl,
+  unmittelbar davor, nicht „ich habe vorhin geschaut":
+
+      scripts/laeuft_was.sh && python3 -m govisor.docfetch_...
+
+  Gilt für Dokument-Abrufe, Gold-/Silber-Neubauten, Migrationen — alles, was nach `data/`
+  schreibt. Der Tageslauf schützt sich per Lock; **Aufrufe von Hand tun das nicht**, und
+  genau die sind der Grund. Warum es zählt: `index-docs --neu-aufbauen` liest stundenlang
+  denselben Baum `data/docs/DE`, in den ein Abruf schreibt — neue ZIPs mitten im Neuaufbau
+  werden übersehen oder halb gelesen. Am 2026-08-15 lief so ein Neuaufbau erst 9,5 h, war
+  durch, und **startete am selben Abend erneut**. „Vorhin war frei" ist deshalb keine
+  Auskunft. Zwei Fallen stecken im Prüfskript selbst und sind dort dokumentiert:
+  `ps aux` schneidet ohne Terminal bei 80 Zeichen ab (das Wort „govisor" fällt weg), und
+  `ps … | grep -q` liefert mit `set -o pipefail` **Exit 141 bei Erfolg** — beide Male lautet
+  die Fehlmeldung „Bahn frei".
 - **Messen statt annehmen** — jede Zahl/Feldposition an echten Daten prüfen, nie aus
   dem Gedächtnis behaupten. Auffällige Aggregat-Zahlen sind Warnsignale.
 - **Kein Datenverlust** — nichts nach eigener Relevanz filtern; Unbekanntes →

@@ -66,9 +66,14 @@ from __future__ import annotations
 
 import argparse
 import base64
+import hashlib
 import json
 import re
+import secrets
 from pathlib import Path
+
+from . import docfetch_queue as _queue
+from urllib.parse import parse_qs, urlencode, urlparse
 
 ROOT = Path(__file__).resolve().parent.parent
 ZUGANG = ROOT / ".secrets" / "simap.txt"
@@ -76,6 +81,8 @@ ZUGANG = ROOT / ".secrets" / "simap.txt"
 _LOGIN = "https://www.simap.ch/de/provider/login"
 _HOST = "www.simap.ch"
 _API = "/api"
+_CLIENT = "simap-fe"
+_REDIRECT = "https://www.simap.ch/"
 
 _WARTE_MS = 8000
 _HOEFLICH_MS = 2000
@@ -144,52 +151,153 @@ def zugang() -> tuple[str, str]:
     return zeilen[0], zeilen[1]
 
 
-def anmelden(pg) -> bool:
-    """Keycloak-Anmeldung, einmal je Lauf. Das Passwort wird nirgends ausgegeben."""
+def anmelden(pg) -> str | None:
+    """Authorization Code Flow mit PKCE → Zugriffstoken, oder None.
+
+    ⚠ **Warum nicht einfach das Anmeldeformular und dann Cookies.** Genau das war die erste
+    Fassung, und sie war doppelt falsch:
+
+    1. Die Erfolgspruefung („wir sind weg vom Keycloak-Pfad") war ein FEHLALARM. Sie meldete
+       „angemeldet", waehrend die Oberflaeche weiter einen Login-Knopf zeigte. Gemessen:
+       kein einziger Aufruf des Token-Endpunkts, kein `Authorization`-Kopf.
+    2. Die dokumentierte `/api/`-Schnittstelle nimmt **kein Sitzungs-Cookie**. Mit gueltiger
+       Sitzung und `credentials:'include'` antwortet sie 401. Die Oberflaeche selbst spricht
+       naemlich `/rest/`, nicht `/api/` — das sind zwei verschiedene Wege.
+
+    `simap-fe` erlaubt keinen Direct Grant („Client not allowed for direct access grants"),
+    also der dokumentierte Weg: PKCE-Paar erzeugen, Anmeldemaske ausfuellen, den Code aus der
+    Weiterleitung abfangen, gegen ein Token tauschen.
+
+    ⚠ **Den Code MUSS man im Moment der Weiterleitung abfangen.** Die Oberflaeche verarbeitet
+    ihn und leitet sofort auf `/de` bzw. `/en` weiter — danach ist die Abfrage aus `pg.url`
+    leer. Deshalb zwei Horcher (`framenavigated` UND `response`): mit nur einem ging der Code
+    in einem von zwei Laeufen verloren.
+    """
     benutzer, passwort = zugang()
-    pg.goto(_LOGIN, wait_until="domcontentloaded")
-    pg.wait_for_timeout(_WARTE_MS)
+    verifier = base64.urlsafe_b64encode(secrets.token_bytes(64)).decode().rstrip("=")
+    challenge = base64.urlsafe_b64encode(
+        hashlib.sha256(verifier.encode()).digest()).decode().rstrip("=")
+    auth = f"https://{_HOST}/auth/realms/simap/protocol/openid-connect/auth?" + urlencode({
+        "client_id": _CLIENT, "response_type": "code", "scope": "openid",
+        "redirect_uri": _REDIRECT, "code_challenge": challenge,
+        "code_challenge_method": "S256", "state": "govisor"})
+
+    gefangen: list[str] = []
+    def fang_nav(f):
+        if f == pg.main_frame and "code=" in f.url:
+            gefangen.append(f.url)
+    def fang_resp(r):
+        if "code=" in r.url and f"{_HOST}/?" in r.url:
+            gefangen.append(r.url)
+    pg.on("framenavigated", fang_nav)
+    pg.on("response", fang_resp)
     try:
+        pg.goto(auth, wait_until="domcontentloaded")
+        pg.wait_for_timeout(_WARTE_MS)
+        if pg.query_selector("#username") is None:
+            print("  ⚠ Keine Anmeldemaske — hat simap.ch den Ablauf geändert?")
+            return None
         pg.fill("#username", benutzer)
         pg.fill("#password", passwort)
         pg.click("#kc-login")
-    except Exception as e:                               # noqa: BLE001
-        print(f"  ⚠ Anmeldeformular nicht bedienbar ({type(e).__name__}) — Maske geändert?")
-        return False
-    pg.wait_for_timeout(_WARTE_MS)
-    # POSITIVES Merkmal: weg vom Keycloak-Pfad. Ein fehlgeschlagener Login bleibt dort
-    # stehen; ohne diese Pruefung liefe der ganze Lauf anonym weiter und meldete 889-mal
-    # „keine Dateien" — das saehe nach einem Portalproblem aus und waere keines.
-    if "/auth/realms/" in pg.url:
-        rumpf = pg.evaluate("() => document.body.innerText")[:160].replace("\n", " ")
-        print(f"  ⚠ Anmeldung fehlgeschlagen. Seite meldet: {rumpf[:110]}")
-        return False
-    return True
+        pg.wait_for_timeout(_WARTE_MS + 2000)
+    finally:
+        pg.remove_listener("framenavigated", fang_nav)
+        pg.remove_listener("response", fang_resp)
+
+    code = None
+    for u in gefangen:
+        c = parse_qs(urlparse(u).query).get("code")
+        if c:
+            code = c[0]
+            break
+    if not code:
+        # Kein Code heisst: Keycloak hat die Anmeldung NICHT abgeschlossen — meist falsche
+        # Zugangsdaten. Das Passwort wird dabei nirgends ausgegeben.
+        print("  ⚠ Kein Autorisierungscode erhalten — Zugangsdaten prüfen.")
+        return None
+
+    antwort = pg.evaluate(
+        """async ([code, verifier, redirect, client]) => {
+             const body = new URLSearchParams({grant_type: 'authorization_code',
+               client_id: client, code, code_verifier: verifier, redirect_uri: redirect});
+             const r = await fetch('/auth/realms/simap/protocol/openid-connect/token',
+               {method: 'POST',
+                headers: {'Content-Type': 'application/x-www-form-urlencoded'}, body});
+             const t = await r.text(); let j = null; try { j = JSON.parse(t); } catch (e) {}
+             return {status: r.status, token: j ? j.access_token : null,
+                     fehler: j ? (j.error_description || j.error || '') : t.slice(0, 120)};
+           }""", [code, verifier, _REDIRECT, _CLIENT])
+    if not antwort.get("token"):
+        print(f"  ⚠ Token-Tausch fehlgeschlagen (http {antwort['status']}): "
+              f"{antwort.get('fehler', '')[:90]}")
+        return None
+    return antwort["token"]
 
 
-def api(pg, pfad: str) -> dict:
-    """GET auf die API, AUS DER SEITE heraus (Sitzung + richtiger Netzwerk-Stack).
+def api(pg, pfad: str, token: str) -> dict:
+    """GET auf die API mit Bearer-Token, aus der Seite heraus.
 
-    Gibt {status, json|text}. Eigene HTTP-Clients bekommen hier 302 auf die SPA.
+    ⚠ Das Token ist Pflicht: mit blossem Sitzungs-Cookie antwortet `/api/` 401 — gemessen,
+    auch bei einer Oberflaeche, die den Nutzer als angemeldet fuehrt. Der Aufruf laeuft
+    trotzdem im Seitenkontext, weil eigene HTTP-Clients von simap.ch 302 auf die SPA
+    bekommen.
     """
     return pg.evaluate(
-        """async (p) => {
-             const r = await fetch(p, {credentials: 'include',
-                                       headers: {'Accept': 'application/json'}});
+        """async ([p, tk]) => {
+             const r = await fetch(p, {headers: {'Authorization': 'Bearer ' + tk,
+                                                 'Accept': 'application/json'}});
              const t = await r.text();
              let j = null; try { j = JSON.parse(t); } catch (e) {}
              return {status: r.status, json: j, text: t.slice(0, 200)};
-           }""", pfad)
+           }""", [pfad, token])
 
 
-def hole_vergabe(pid: str, pg, ziel: Path, dry_run: bool = False) -> dict:
+def interesse_bekunden(pg, pid: str, token: str) -> dict:
+    """PUT …/interest — macht uns beim Auftraggeber als Interessent SICHTBAR.
+
+    ⚠ **Das ist keine technische Formalie, sondern eine Aussenwirkung.** Die Spezifikation
+    ist eindeutig: der Auftraggeber ruft `/procoffices/v2/my/projects/{id}/involved-vendors`
+    ab und sieht uns mit Firmenname, Adresse, handelndem Nutzer und Zeitstempel
+    (`status='interest_shown'`), und ueber `…/history/document-downloads` zusaetzlich, welche
+    Unterlagen wir gezogen haben. Auf 889 Schweizer Vergaben angewandt hiesse das: goVisor
+    taucht bei praktisch jeder Schweizer Vergabestelle als Bieter-Interessent auf, ohne je
+    bieten zu wollen.
+
+    Deshalb ist der Schritt **standardmaessig aus** und kein Nebeneffekt des Holens. Er
+    laeuft nur mit ausdruecklichem `--interesse-bekunden`.
+    """
+    return pg.evaluate(
+        """async ([p, tk]) => {
+             const r = await fetch(p, {method: 'PUT',
+               headers: {'Authorization': 'Bearer ' + tk,
+                         'Content-Type': 'application/json'},
+               body: JSON.stringify({interest: 'interest_shown'})});
+             return {status: r.status, text: (await r.text()).slice(0, 200)};
+           }""", [f"{_API}/publications/v1/project/{pid}/interest", token])
+
+
+def hole_vergabe(pid: str, pg, token: str, ziel: Path, dry_run: bool = False,
+                 interesse: bool = False) -> dict:
     """Ein Projekt → Unterlagen-ZIP über die API."""
-    liste = api(pg, f"{_API}/vendors/v1/my/projects/{pid}/documents")
+    liste = api(pg, f"{_API}/vendors/v1/my/projects/{pid}/documents", token)
     if liste["status"] == 401:
         return {"status": "nicht_angemeldet", "bytes": 0, "n_files": 0, "note": "401"}
     if liste["status"] == 403:
-        # Kein Zugriff auf DIESES Projekt — etwas anderes als „keine Unterlagen".
-        return {"status": "kein_zugriff", "bytes": 0, "n_files": 0, "note": "403"}
+        # 403 heisst hier NICHT „gesperrt", sondern „nicht in *meinen* Projekten". Die
+        # Unterlagen haengen an der Interessensbekundung (s. interesse_bekunden). Ohne die
+        # ausdrueckliche Freigabe bleibt es beim ehrlichen Befund.
+        if not interesse:
+            return {"status": "interesse_noetig", "bytes": 0, "n_files": 0,
+                    "note": "403 — Interessensbekundung erforderlich"}
+        antwort = interesse_bekunden(pg, pid, token)
+        if antwort["status"] not in (200, 204):
+            return {"status": "interesse_abgelehnt", "bytes": 0, "n_files": 0,
+                    "note": f"http {antwort['status']} {antwort['text'][:50]}"}
+        liste = api(pg, f"{_API}/vendors/v1/my/projects/{pid}/documents", token)
+        if liste["status"] != 200:
+            return {"status": "kein_zugriff", "bytes": 0, "n_files": 0,
+                    "note": f"nach Bekundung http {liste['status']}"}
     if liste["status"] != 200 or not liste["json"]:
         return {"status": "fehler", "bytes": 0, "n_files": 0,
                 "note": f"http {liste['status']} {liste['text'][:60]}"}
@@ -202,7 +310,7 @@ def hole_vergabe(pid: str, pg, ziel: Path, dry_run: bool = False) -> dict:
         return {"status": "probe", "bytes": 0, "n_files": len(dokumente),
                 "note": ", ".join(n for n in namen[:3] if n)}
 
-    tok = api(pg, f"{_API}/vendors/v1/my/projects/{pid}/documents/zip-token")
+    tok = api(pg, f"{_API}/vendors/v1/my/projects/{pid}/documents/zip-token", token)
     if tok["status"] != 200 or not (tok["json"] or {}).get("token"):
         return {"status": "kein_token", "bytes": 0, "n_files": len(dokumente),
                 "note": f"http {tok['status']}"}
@@ -241,7 +349,8 @@ def hole_vergabe(pid: str, pg, ziel: Path, dry_run: bool = False) -> dict:
             "note": "weiterverwendung_eingeschraenkt" if eingeschraenkt else ""}
 
 
-def lauf(limit: int | None = None, dry_run: bool = False, country: str = "CH") -> dict:
+def lauf(limit: int | None = None, dry_run: bool = False, country: str = "CH",
+         interesse: bool = False) -> dict:
     import duckdb
     import pyarrow as pa
     import pyarrow.parquet as pq
@@ -270,6 +379,18 @@ def lauf(limit: int | None = None, dry_run: bool = False, country: str = "CH") -
         if ziel.exists() and ziel.stat().st_size > 0:
             continue
         offen.append((lead_id, pid, ziel))
+    # Frueher Gescheitertes ueberspringen. VOR dem Limit, sonst kappt das Limit auf
+    # Kandidaten, die gleich wieder aussortiert werden.
+    #
+    # `frei` ist hier keine Formalie: `interesse_noetig` heisst „die Unterlagen gibt es,
+    # wir haben nur kein Interesse bekundet". Ohne `--interesse-bekunden` bleibt das bei
+    # JEDEM Lauf so — der Vorgang gehoert also uebersprungen. Mit dem Schalter faellt der
+    # Blocker, und zwar sofort und ohne Wartefrist, weil sich nichts an der Gegenseite
+    # geaendert hat, sondern an uns.
+    _frei = {"interesse"} if interesse else set()
+    offen, _weg = _queue.filtere(offen, _queue.frueher(out_root, "simap"), frei=_frei)
+    if _weg:
+        print(_queue.bericht(_weg))
     if limit:
         offen = offen[:limit]
     print(f"simap.ch (API): {len(offen)} Vergaben zu holen (von {len(rows)} offenen CH-Leads)"
@@ -281,18 +402,23 @@ def lauf(limit: int | None = None, dry_run: bool = False, country: str = "CH") -
         ctx = b.new_context(accept_downloads=True)
         pg = ctx.new_page()
         pg.set_default_timeout(90000)
-        if not anmelden(pg):
+        token = anmelden(pg)
+        if not token:
             b.close()
             return {"versucht": 0, "geladen": 0, "note": "Anmeldung fehlgeschlagen"}
-        print("  angemeldet.")
+        print("  angemeldet (Zugriffstoken erhalten).")
         for i, (lead_id, pid, ziel) in enumerate(offen, 1):
             if geladen_mb >= _LAUF_BUDGET_MB:
                 print(f"\n  Lauf-Budget erreicht — {len(offen) - i + 1} bleiben für morgen.")
                 break
             try:
-                r = hole_vergabe(pid, pg, ziel, dry_run)
+                r = hole_vergabe(pid, pg, token, ziel, dry_run, interesse)
             except Exception as e:                       # noqa: BLE001
-                r = {"status": "fehler", "bytes": 0, "n_files": 0, "note": type(e).__name__}
+                # Der Klassenname allein ist wertlos — Playwright wirft fuer alles `Error`.
+                # Die erste Zeile der Meldung sagt, was wirklich schiefging.
+                erste = str(e).strip().splitlines()[0] if str(e).strip() else ""
+                r = {"status": "fehler", "bytes": 0, "n_files": 0,
+                     "note": f"{type(e).__name__}: {erste}"[:200]}
             saetze.append({"lead_id": lead_id, "project_id": pid, **r})
             info = (f"{r['n_files']} Dateien  {r['bytes']/1024**2:.1f} MB"
                     if r["status"] == "downloaded" else f"{r['status']} ({r['note'][:44]})")
@@ -317,8 +443,7 @@ def lauf(limit: int | None = None, dry_run: bool = False, country: str = "CH") -
         print("  ⚠ " + ", ".join(f"{k}={v}" for k, v in sorted(schlecht.items())))
     if saetze and not dry_run:
         out_root.mkdir(parents=True, exist_ok=True)
-        pq.write_table(pa.Table.from_pylist(saetze),
-                       out_root / "_manifest_simap.parquet", compression="zstd")
+        _queue.schreibe(out_root, "simap", saetze)
     return {"versucht": len(saetze), "geladen": ok, "mb": round(mb, 1)}
 
 
@@ -327,8 +452,16 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--limit", type=int, default=None)
     p.add_argument("--dry-run", action="store_true",
                    help="anmelden und die Dokumentliste zeigen, nichts herunterladen")
+    p.add_argument("--interesse-bekunden", action="store_true",
+                   help="AUSSENWIRKUNG: meldet goVisor bei jeder betroffenen Vergabestelle "
+                        "namentlich als Interessent an. Ohne diese Angabe endet der Lauf bei "
+                        "403 mit Status 'interesse_noetig'.")
     a = p.parse_args(argv)
-    lauf(a.limit, a.dry_run)
+    if a.interesse_bekunden and a.dry_run:
+        # Sonst waere „Probelauf" ein irrefuehrendes Wort: die Bekundung ist echt und bleibt.
+        p.error("--dry-run und --interesse-bekunden schliessen sich aus — eine "
+                "Interessensbekundung ist keine Probe, sie ist beim Auftraggeber sichtbar.")
+    lauf(a.limit, a.dry_run, interesse=a.interesse_bekunden)
     return 0
 
 

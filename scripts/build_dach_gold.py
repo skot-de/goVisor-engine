@@ -105,6 +105,20 @@ def main(laender: list[str], as_of: str | None) -> int:
             print(f"── {land}: kein Silber-Bestand — übersprungen")
             continue
         ok, fehler = lauf(land, as_of)
+        # Nachlauf, nur CH: vergebene/abgebrochene Vorgänge aus lead_export nehmen. Steht
+        # bewusst NICHT in KETTE — die Kette ruft `gold.<name>`, das hier ist simap-Wissen
+        # (die Projekt-ID-Brücke zwischen TED-CHE- und simap-Zeile) und gehört dorthin.
+        # Muss nach `build_lead_export` laufen, deshalb hier unten.
+        if land == "CH":
+            try:
+                from govisor import simap as _simap
+                _cfg = Config(countries=("CH",), data_dir="data")
+                _simap.entferne_abgeschlossene(_cfg)
+                _simap.ergaenze_dokument_flagge(_cfg)
+                ok += 1
+            except Exception as e:                       # noqa: BLE001
+                fehler += 1
+                print(f"  ✖ entferne_abgeschlossene       {type(e).__name__}: {str(e)[:70]}")
         gesamt_fehler += fehler
         print(f"   {land}: {ok} Schritte ok, {fehler} fehlgeschlagen")
     # Exit 1 nur bei Fehlern — der Tageslauf behandelt das als nicht-fatal, damit ein

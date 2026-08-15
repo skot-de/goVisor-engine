@@ -47,6 +47,8 @@ import re
 import sys
 from pathlib import Path
 
+from . import docfetch_queue as _queue
+
 ROOT = Path(__file__).resolve().parent.parent
 
 # Nur diese Hosts — beide führen auf dieselbe ELViS-Oberfläche.
@@ -163,6 +165,14 @@ def lauf(limit: int | None, dry_run: bool, country: str = "DE",
         rows = [r for r in rows if r[0] not in bekannt]
         if vorher != len(rows):
             print(f"subreport: {vorher - len(rows)} bereits erfasst, werden übersprungen")
+    # Zweite Erinnerung, andere Frage. `bekannt` oben ueberspringt, was ERFASST wurde;
+    # die Warteschlange ueberspringt, was GESCHEITERT ist. Ohne sie liefen genau die
+    # Vorgaenge ewig mit, die unten per `continue` gar keinen Satz hinterlassen.
+    _mroot = out.parent
+    rows, _weg = _queue.filtere(rows, _queue.frueher(_mroot, "subreport"))
+    if _weg:
+        print(_queue.bericht(_weg))
+    _manifest: list[dict] = []
     if limit:
         rows = rows[:limit]
     print(f"subreport: {len(rows)} offene Vergaben zu prüfen")
@@ -178,11 +188,15 @@ def lauf(limit: int | None, dry_run: bool, country: str = "DE",
             seite = vergabeseite(url)
             if not seite:
                 print(f"  [{i}/{len(rows)}] {lead_id}: keine ELVIS-Kennung in der URL", flush=True)
+                _manifest.append({"lead_id": lead_id, "status": "keine_kennung",
+                                  "note": f"keine ELVIS-Kennung in der URL"})
                 continue
             try:
                 r = hole_liste(seite, pg)
             except Exception as e:                       # noqa: BLE001
                 print(f"  [{i}/{len(rows)}] {lead_id}: Fehler ({type(e).__name__})", flush=True)
+                _manifest.append({"lead_id": lead_id, "status": "fehler",
+                                  "note": f"{type(e).__name__}"})
                 continue
             typen = [doctypes.classify(n) for n in r["dateien"]]
             prio = sorted({t for t in typen if doctypes.is_priority(t)},
@@ -194,6 +208,13 @@ def lauf(limit: int | None, dry_run: bool, country: str = "DE",
                 # Ehrlicher Status: die LISTE haben wir, die Dateien nicht.
                 "status": "nur_liste" if r["gefunden"] else "leer",
             })
+            # Schlank ins Manifest: Status und Zahl, NICHT die Dateiliste. Das Manifest
+            # beantwortet „nochmal versuchen?", nicht „was lag drin" — dafuer gibt es
+            # `doc_listing_subreport.parquet`. Zwei Dateien mit demselben Inhalt liefen
+            # sonst auseinander, und niemand wuesste, welche gilt.
+            _manifest.append({"lead_id": lead_id, "url": seite,
+                              "status": "nur_liste" if r["gefunden"] else "leer",
+                              "note": f"{r['gefunden']} Dateien"})
             print(f"  [{i}/{len(rows)}] {lead_id}: {r['gefunden']} Dateien"
                   + (f" · {', '.join(prio)}" if prio else ""), flush=True)
             pg.wait_for_timeout(_HOEFLICH_MS)
@@ -209,6 +230,14 @@ def lauf(limit: int | None, dry_run: bool, country: str = "DE",
         for s in saetze[:3]:
             print("  ", json.dumps(s, ensure_ascii=False)[:200])
         return {"geprüft": len(saetze), "mit_liste": mit}
+
+    # Das Manifest wird VOR dem frühen Ausstieg unten geschrieben. Ein Lauf, in dem jeder
+    # Versuch scheiterte, hat `saetze == []` — und genau seine Fehlschläge sind die, die
+    # man beim nächsten Mal überspringen will. Stünde das Schreiben dahinter, wäre der
+    # schlechteste Lauf der einzige ohne Gedächtnis.
+    if _manifest:
+        _mroot.mkdir(parents=True, exist_ok=True)
+        _queue.schreibe(_mroot, "subreport", _manifest)
 
     if not saetze and not altbestand:
         print("nichts zu schreiben.")

@@ -1,0 +1,71 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+1;Baustelleneinrichtung der gesamten Baustelle für alle;1,0;St;gaeb;3930521.x83
+1;nichttragende innere Trennwand gemäß;260,0;m2;gaeb;3930521.x83
+2;Mehraufwand für Ausführung der Trennwand Typ A1;125,0;m2;gaeb;3930521.x83
+3;Mehraufwand für Trennwand Typ A1 wie vor beschrieben,;6,0;m2;gaeb;3930521.x83
+4;Mehraufwand für Trennwand Typ A1 wie vor beschrieben,;8,0;m2;gaeb;3930521.x83
+5;Mehraufwand für Trennwand Typ A1 wie vor beschrieben,;12,0;m2;gaeb;3930521.x83
+6;Nichttragende innere Trennwand gemäß;130,0;m2;gaeb;3930521.x83
+7;Mehraufwand für Ausführung der Trennwand Typ A2;130,0;m2;gaeb;3930521.x83
+8;nichttragende innere Trennwand gemäß;13,0;m2;gaeb;3930521.x83
+9;Mehraufwand für;20,0;St;gaeb;3930521.x83
+10;Mehraufwand für Trennwandbeplankung, oberste Lage,;650,0;m2;gaeb;3930521.x83
+11;Mehraufwand für Trennwandbeplankung, unterste Lage,;320,0;m2;gaeb;3930521.x83
+12;Mehraufwand für Trennwand,;30,0;m;gaeb;3930521.x83
+13;Mehraufwand für Gipskartonwandanschluss im Decken-;135,0;m;gaeb;3930521.x83
+14;Mehraufwand für das Herstellen einer;20,0;St;gaeb;3930521.x83
+15;Mehraufwand für;60,0;m2;gaeb;3930521.x83
+16;Mehraufwand für;100,0;m2;gaeb;3930521.x83
+17;Nichttragende innere Trennwand gemäß;70,0;m2;gaeb;3930521.x83
+18;Nichttragende innere Trennwand gemäß;4,0;St;gaeb;3930521.x83
+19;Mehraufwand für lot- und fluchtrechte;350,0;m;gaeb;3930521.x83
+20;Mehraufwand für Bewegungsfuge innerhalb der Trocken-;6,0;m;gaeb;3930521.x83
+21;Mehraufwand für;220,0;m;gaeb;3930521.x83
+22;Traverse im Wandhohlraum aus Mehrschichtholzplatte;12,0;St;gaeb;3930521.x83
+23;Liefern und einbauen von Verstärkungen,;55,0;m;gaeb;3930521.x83
+24;Herstellen einer Wandaussparung innerhalb der Trocken-;2,0;St;gaeb;3930521.x83
+25;Wandrevisionsklappe;2,0;St;gaeb;3930521.x83
+26;Wandrevisionsklappe;2,0;St;gaeb;3930521.x83
+27;Wandrevisionsklappe;5,0;St;gaeb;3930521.x83
+1;Nichttragende innere Vorsatzschale;150,0;m2;gaeb;3930521.x83
+2;Zulage für;24,0;St;gaeb;3930521.x83
+3;Zulage für;10,0;St;gaeb;3930521.x83
+4;Zulage für;10,0;St;gaeb;3930521.x83
+5;Nichttragende innere Vorsatzschale;244,0;m2;gaeb;3930521.x83
+6;Nichttragende innere Vorsatzschale;82,0;m;gaeb;3930521.x83
+7;Vorsatzschale wie vor beschrieben, jedoch Mehraufwand;82,0;lfdm;gaeb;3930521.x83
+8;Vorsatzschale wie vor beschrieben, jedoch Mehrauf-;82,0;lfdm;gaeb;3930521.x83
+9;Nichttragende innere Vorsatzschale;15,0;m2;gaeb;3930521.x83
+10;Mehraufwand für nichttragende innere Vorsatzschale,;150,0;m2;gaeb;3930521.x83
+11;Gipskartonverkleidung im Bereich der Fensterleibungen;30,0;St;gaeb;3930521.x83
+12;Gipskartonverkleidung im Bereich der Fensterleibungen;14,0;St;gaeb;3930521.x83
+13;Gipskartonverkleidung im Bereich der Stahlbetonsäulen;10,0;St;gaeb;3930521.x83
+14;Gipskartonverkleidung im Bereich der Pfeiler zur Verkleidung;6,0;St;gaeb;3930521.x83
+15;In allen erf. Einzel-Abmessungen lt. Architektenplan;76,0;lfdm;gaeb;3930521.x83
+16;Mehraufwand für Fensteranschluss;180,0;m;gaeb;3930521.x83
+17;„Göppinger Profil“ und Einfassprofil aus PVC,;50,0;m;gaeb;3930521.x83
+18;Trockenputz als Wandbekleidung an Wänden;210,0;m2;gaeb;3930521.x83
+19;Schachtwand als einseitig beplankte leichte Trennwand;12,0;m2;gaeb;3930521.x83
+20;Schachtwand als einseitig beplankte leichte Trennwand;12,0;m2;gaeb;3930521.x83
+21;Deckengleichen Stahlträger in Stahlbetonmassivbalken;8,0;m;gaeb;3930521.x83
+22;Deckengleichen Stahlträger in Stahlbetonmassivbalken;11,0;m;gaeb;3930521.x83
+1;Unterdecke gemäß DIN 18168-1,;180,0;m2;gaeb;3930521.x83
+2;Wie in der Vorposition beschrieben, jedoch Abhängehöhe;180,0;m2;gaeb;3930521.x83
+3;Akustik-Platten-Unterdecke DIN 18168-1;698,0;m2;gaeb;3930521.x83
+4;Mehraufwand für Anschluss der Akustik-Plattendecke,;12,0;m;gaeb;3930521.x83
+5;Mehraufwand für Akustik-Plattendecke mit;698,0;m2;gaeb;3930521.x83
+6;Mehraufwand zu vorgenannter Akustikdecke;75,0;m;gaeb;3930521.x83
+7;Mehraufwand zu vorgenannter Akustikdecke;80,0;m;gaeb;3930521.x83
+8;Selbstklebendes, dünnes PE-Vliesgewebe,;600,0;m;gaeb;3930521.x83
+9;Mehraufwand für Anschluss der Akustik-Plattendecke an;600,0;m;gaeb;3930521.x83
+10;Deckenloch;30,0;St;gaeb;3930521.x83
+11;Deckenloch;35,0;St;gaeb;3930521.x83
+12;Deckenloch;40,0;St;gaeb;3930521.x83
+13;Deckenloch;35,0;St;gaeb;3930521.x83
+14;Liefern und einbauen von;15,0;St;gaeb;3930521.x83
+15;Liefern und einbauen von;10,0;St;gaeb;3930521.x83
+16;Inkl.;30,0;St;gaeb;3930521.x83
+1;Unterdecke DIN EN 13964 / DIN 18168 in allen erf.;50,0;m2;gaeb;3930521.x83
+2;Mehraufwand für zusätzliche Abhänger der Systemraster-;10,0;St;gaeb;3930521.x83
+3;Mehraufwand für Wandanschluss der Akustikdecke;50,0;m;gaeb;3930521.x83
+1;Facharbeiterstunden;220,0;h;gaeb;3930521.x83

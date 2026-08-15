@@ -1,0 +1,39 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+11;Personenaufzug;1,0;St;gaeb-flat;Zwingend erforderliche Angebotsdateien/LV 47 Förderanlagen 260713.D83
+12;Mehrpreis Tür Edelstahl;3,0;St;gaeb-flat;Zwingend erforderliche Angebotsdateien/LV 47 Förderanlagen 260713.D83
+13;Mehrpreis Seitenwände Edelstahl;1,0;St;gaeb-flat;Zwingend erforderliche Angebotsdateien/LV 47 Förderanlagen 260713.D83
+14;Mehrpreis Seitenwände Colorglas;1,0;St;gaeb-flat;Zwingend erforderliche Angebotsdateien/LV 47 Förderanlagen 260713.D83
+15;Mehrpreis statische Brandfallsteuerung;1,0;St;gaeb-flat;Zwingend erforderliche Angebotsdateien/LV 47 Förderanlagen 260713.D83
+21;Einweisung;1,0;St;gaeb-flat;Zwingend erforderliche Angebotsdateien/LV 47 Förderanlagen 260713.D83
+22;Dokumentation;1,0;Psch;gaeb-flat;Zwingend erforderliche Angebotsdateien/LV 47 Förderanlagen 260713.D83
+23;SV-Abnahme;1,0;Psch;gaeb-flat;Zwingend erforderliche Angebotsdateien/LV 47 Förderanlagen 260713.D83
+31;Demontage Bestandsaufzug Seil 3 Haltstellen;1,0;Psch;gaeb-flat;Zwingend erforderliche Angebotsdateien/LV 47 Förderanlagen 260713.D83
+32;Demontage Bestandsaufzug Hydraulik 3 Haltstellen;1,0;Psch;gaeb-flat;Zwingend erforderliche Angebotsdateien/LV 47 Förderanlagen 260713.D83
+33;Demontage Kleingüteraufzug 3 Haltestellen;1,0;Psch;gaeb-flat;Zwingend erforderliche Angebotsdateien/LV 47 Förderanlagen 260713.D83
+41;Wartungsvertrag Aufzug;2,0;St;gaeb-flat;Zwingend erforderliche Angebotsdateien/LV 47 Förderanlagen 260713.D83
+42;Verlängerung Wartungsvertrag Aufzug 3.Jahr;1,0;St;gaeb-flat;Zwingend erforderliche Angebotsdateien/LV 47 Förderanlagen 260713.D83
+43;Verlängerung Wartungsvertrag Aufzug 4.Jahr;1,0;St;gaeb-flat;Zwingend erforderliche Angebotsdateien/LV 47 Förderanlagen 260713.D83
+44;Notrufkosten / Bereitschaft;2,0;St;gaeb-flat;Zwingend erforderliche Angebotsdateien/LV 47 Förderanlagen 260713.D83
+45;Notrufkosten / Bereitschaft 3.Jahr;1,0;St;gaeb-flat;Zwingend erforderliche Angebotsdateien/LV 47 Förderanlagen 260713.D83
+46;Notrufkosten / Bereitschaft 4.Jahr;1,0;St;gaeb-flat;Zwingend erforderliche Angebotsdateien/LV 47 Förderanlagen 260713.D83
+51;Meister;5,0;h;gaeb-flat;Zwingend erforderliche Angebotsdateien/LV 47 Förderanlagen 260713.D83
+52;Monteur;5,0;h;gaeb-flat;Zwingend erforderliche Angebotsdateien/LV 47 Förderanlagen 260713.D83
+1;Liefern und betriebsfertig anschliesen,;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/LV 47 Förderanlagen 260713.X83
+2;Liefern, Montieren und Anschließen,;3,0;St;gaeb;Zwingend erforderliche Angebotsdateien/LV 47 Förderanlagen 260713.X83
+3;Liefern, Montieren und Anschließen,;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/LV 47 Förderanlagen 260713.X83
+4;Liefern, Montieren und Anschließen,;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/LV 47 Förderanlagen 260713.X83
+5;Liefern, Montieren und Anschließen,;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/LV 47 Förderanlagen 260713.X83
+1;Einweisung der Nutzer in die Gesamtanlagen an zwei verschiedenen Terminen, außerhalb des Ausführungszeitraumes.;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/LV 47 Förderanlagen 260713.X83
+2;Bestandspläne und Dokumentation für die kompletten Aufzugsanlagen mit Inhaltsverzeichnis inkl. Grundriss und Detailpläne, sowie die notwendigen Betriebsbücher inkl. Inbetriebnahmebescheinigung der Abnahmebehörde, Konformitätsbescheinigung, Prüfbücher usw. liefern und an der Anlage lagern. Dreifache ;1,0;Psch;gaeb;Zwingend erforderliche Angebotsdateien/LV 47 Förderanlagen 260713.X83
+3;ZÜS-Abnahme (Inverkehrbringung) der Anlagen inklusive Prüfung vor Inbetriebnahme (PvI) gemäß Betriebssicherheitsverordnung.;1,0;Psch;gaeb;Zwingend erforderliche Angebotsdateien/LV 47 Förderanlagen 260713.X83
+1;Demontieren und Entsorgen;1,0;Psch;gaeb;Zwingend erforderliche Angebotsdateien/LV 47 Förderanlagen 260713.X83
+2;Demontieren und Entsorgen;1,0;Psch;gaeb;Zwingend erforderliche Angebotsdateien/LV 47 Förderanlagen 260713.X83
+3;Demontieren und Entsorgen;1,0;Psch;gaeb;Zwingend erforderliche Angebotsdateien/LV 47 Förderanlagen 260713.X83
+1;Systemwartung der Aufzugsanlagen nach Herstellervorschrift;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/LV 47 Förderanlagen 260713.X83
+2;wie vor jedoch für das;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/LV 47 Förderanlagen 260713.X83
+3;wie vor jedoch für das;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/LV 47 Förderanlagen 260713.X83
+4;Kosten für die 24h-Bereitschaft der Notrufzentrale des AN Aufzüge ab Inbetriebnahme der Aufzugsanlage. Direkte Weiterleitung der Notrufe zum Störungsdienst und Einleitung der erforderlichen Maßnahmen. Durchführung der Befreiungsmaßnahmen (24h) mit geeigneten Servicetechnikern. Die laufenden Kosten f;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/LV 47 Förderanlagen 260713.X83
+5;wie vor jedoch für das;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/LV 47 Förderanlagen 260713.X83
+6;wie vor jedoch für das;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/LV 47 Förderanlagen 260713.X83
+1;Für unvorhergesehene Arbeiten, die nur auf Anweisung der Bauleitung mit Nachweis ausgeführt werden dürfen, werden angesetzt:;5,0;h;gaeb;Zwingend erforderliche Angebotsdateien/LV 47 Förderanlagen 260713.X83
+2;Für unvorhersehbare Arbeiten, die nur auf Anweisung der;5,0;h;gaeb;Zwingend erforderliche Angebotsdateien/LV 47 Förderanlagen 260713.X83

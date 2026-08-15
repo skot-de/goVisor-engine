@@ -1,0 +1,91 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+1;Einrichten und räumen der Baustelle;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83
+2;Vorhalten Baustelleneinrichtung;17,0;Wo;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83
+3;Fahrbare Gerüste Alu, 0,80 X 3,00 m;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83
+4;Nachträglicher Fassadenverschluss;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83
+1;Pauschale für Fassadenstatik;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83
+2;Pauschale für Isothermenberechnung;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83
+3;Pauschale für Werkstatt- und Montageplanung;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83
+4;Muster Holzfassade;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83
+5;Muster Metallteile;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83
+6;Pauschale Dokumentation;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83
+1;Wärmedämmung MW WLS 032, 240 mm, zweilagig;1330,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83
+2;Wärmedämmung an Sturz MW 032, d=240 mm, zweilagig;6,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83
+3;Unterspannbahn Fassade;1335,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83
+4;Unterkonstruktion auf Außenwand;1510,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83
+5;Zulage Montageerschwernis um Kastenfenster;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83
+6;Zulage Vorabmontage der Wandhalter;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83
+7;Zulage Unterkonstruktion Sichtbereich;90,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83
+8;Fassadenaufbau Typ 1.0;850,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83
+9;Fassadenaufbau Typ 2.2;90,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83
+10;Fassadenaufbau Typ 2.1;480,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83
+11;Nut- und Federschalung Eingangsbereich;12,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83
+12;Zulage Tapetentüre einfl. ca. 1,24 x 2,10 m;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83
+1;Wärmedämmung an Untersicht MW 032, d=200 mm, zweilagig, verdübelt;66,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83
+2;Wärmedämmung an Untersicht Unterzug MW 032, d=80 mm;3,6;m2;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83
+3;Abg. Deckenbekleidung Massivholz 70/21mm, Außenbereich;66,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83
+4;Zulage Randanschluss Unterdecke;20,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83
+5;Anarbeiten an Stützen, 30 x 30 cm;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83
+6;Aussparung Deckenleuchten, rund d=150mm;3,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83
+7;Aussparung Decke, rund d=70 mm;5,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83
+1;Ausbildung Innenecke 1.0;17,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83
+2;Ausbildung Innenecke 2.2;5,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83
+3;Ausbildung Innenecke Anschluss an PR-Fassade;9,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83
+4;Ausbildung Außenecke Typ 1.0;140,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83
+5;Ausbildung Außenecke Typ 2.2;65,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83
+6;Ecksituation Anschluss VHF zu Pfosten-Riegel-Fassade;5,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83
+7;Oberer Anschluss Attika;155,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83
+8;Anschluss an Fensterbank;140,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83
+9;Anschluss Fassadentyp 1.0 und 2.2 an Brandriegel und Zwischenbleche;230,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83
+10;Anschluss Fassadentyp 2.1 an Brandriegel und Zwischenbleche;32,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83
+11;Anschluss an Kastenfenster;37,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83
+12;Anschluss Fenster, Fassadenlattunge durchlaufend, Sonnenschutz;32,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83
+13;Anschluss Fenster, Fassadenlattunge durchlaufend;4,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83
+14;Anschluss Fenster oben;18,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83
+15;Anschluss Fenster seitlich;68,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83
+16;Abschluss Fassadenbekleidung bei Fassadenauskragung;14,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83
+1;Runde Aussparung Durchmesser ca. 110 mm, Attikaspeier;8,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83
+2;Runde Aussparung Durchmesser 70 mm;5,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83
+3;Runde Aussparung Durchmesser ca. 110mm, Wasserentnahmestelle Gartenwasser;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83
+4;Recheckige Aussparung ca. 400 x 400 mm;16,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83
+5;Recheckige Aussparung ca. 600 x 600 mm;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83
+6;Recheckige Aussparung ca. 390 x 290 mm;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83
+7;Recheckige Aussparung ca. 273 x 273 mm;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83
+8;Rechteckige Aussparungen Lüftungsauslässe, ca. 790 x 2000 mm;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83
+9;Rechteckige Aussparung Klingeltaster, ca. 135 x 275 mm;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83
+10;Aussparung Fallrohr in Dämmung;220,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83
+11;Konsolen Fallrohr;56,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83
+12;Wartungsklappe Fallrohr 400 x400 mm;16,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83
+13;Wartungsklappe NEA 600 x 600 mm;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83
+1;Horizontale Brandriegel, Auskragung ca. 50 mm;275,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83
+2;Horizontale Brandriegel, Auskragung ca. 250 mm;70,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83
+3;Zulage Brandsperre an Kastenfenster, Auskragung ca. 50mm;26,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83
+4;Zulage Brandsperre an Kastenfenster, Auskragung ca. 250mm;12,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83
+5;Horizontales Zwischenblech, Stahl verzinkt;230,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83
+6;Inneneckausbildung Brandriegel;8,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83
+7;Außeneckausbildung Brandriegel;32,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83
+8;Inneneckausbildung Zwischenblech;3,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83
+9;Außeneckausbildung Zwischenblech;23,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83
+10;Lüftungsprofil im Sockelbereich und oberer Fassadenabschluss;278,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83
+11;Mauerabdeckung Eingangsbereich;5,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83
+12;Seilsystem zweireihig;400,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83
+13;Planung und statische Dimensionierung Gerüstankerung;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83
+14;Gerüstverankerungen;140,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83
+15;Schließen von Gerüstankerlöchern;140,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83
+16;"Schriftzug ""112""- Groß 1,50 m x 1,20 m";1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83
+17;Unterkonstruktion für Schriftzug Groß;12,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83
+18;Konsolen für Schriftzug;12,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83
+19;"Schriftzug ""IRLS OSTWÜRTTEMBERG"" - Klein 4,00 m x 0,25 m";1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83
+1;Fassadenbekleidung Aluminiumblech 3mm;47,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83
+2;Fassadenbekleidung in Kleinflächen bis ca. 1m²;3,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83
+3;Zulage für die Ausführung von Ecken;13,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83
+4;Anarbeiten an Garagentor ca. 2,14 x 3,48 m;8,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83
+5;Aussparung Aluminiumfassade für Entwässerung;14,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83
+6;Wartungsklappe NEA 400 x400 mm;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83
+7;Wärmedämmung MW WLS 032, 100 mm;49,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83
+8;Fassadenbekleidung Brüstung, Aluminiumblech 3mm;49,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83
+9;Ausbildung Innenecke;4,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83
+10;Runde Aussparung Durchmesser ca. 70 mm;31,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83
+1;Stundenlohn Meister;5,0;Std;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83
+2;Stundenlohn Facharbeiter;15,0;Std;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83
+3;Stundenlohn Helfer;15,0;Std;gaeb;Zwingend erforderliche Angebotsdateien/260715_VE019_Vorgehängte hinterlüftete Holzfassade.x83

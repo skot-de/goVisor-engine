@@ -37,27 +37,99 @@ from __future__ import annotations
 import datetime as dt
 from pathlib import Path
 
+# ── EIN VOKABULAR ─────────────────────────────────────────────────────────────────────────
+#
+# Warum das hier steht und nicht in jedem Abrufer: die Warteschlange verzweigt über die
+# EXAKTE Zeichenkette. Zwei Schreibweisen für dieselbe Sache sind deshalb kein
+# Schönheitsfehler, sondern ein Fehler in der Entscheidung. Gemessen am 2026-08-15 lagen
+# `fehler` (2×) und `error` (1×) nebeneinander in den Manifesten — dieselbe Aussage, und
+# nur eine davon hätte eine Regel je erreichen können.
+#
+# `normalisiere()` läuft beim Schreiben UND beim Lesen. Deshalb heilen sich Altbestände
+# von selbst; niemand muss eine Migration fahren, damit die Sperrlogik greift.
+ALIASE = {
+    "error": "fehler",
+    "empty": "leer",
+    "ohne_dokumente": "leer",
+    "gate": "gated",
+}
+
+
+def normalisiere(status: str | None) -> str | None:
+    """Schreibweise auf die kanonische Form bringen (siehe ALIASE)."""
+    if status is None:
+        return None
+    return ALIASE.get(status, status)
+
+
 # Der Vorgang gibt strukturell nichts her — erneutes Abrufen kostet nur Zeit und fremde
 # Last. Wer hier etwas ergänzt, sollte begründen können, warum es sich NIE ändern kann.
 DAUERHAFT = frozenset({
     "ohne_unterlagen",      # Ex-Ante-Bekanntmachung: es gibt keine Unterlagen
     "kein_downloadbereich",  # Portal leitet anonyme Abrufe aufs Dashboard um
     "frameset",             # Inhalts-Frame bleibt ohne Sitzung leer
+    "abgelaufen",           # Frist vorbei — das Portal nimmt die Unterlagen herunter
 })
+
+# ── DRITTE KLASSE: blockiert ──────────────────────────────────────────────────────────────
+#
+# Weder „gibt es nicht" noch „vielleicht morgen". Die Unterlagen EXISTIEREN, wir kommen nur
+# nicht heran — es fehlt ein Zugang, eine Zusage oder eine Fähigkeit auf unserer Seite.
+#
+# Warum das eine eigene Klasse braucht (gemessen 2026-08-15): `gated` ist mit **389 Leads**
+# der grösste Blockade-Topf überhaupt. Als „vorübergehend" behandelt kostet er jede Woche
+# 389 sinnlose Abrufe bei fremden Portalen. Als „dauerhaft" markiert wäre er an dem Tag
+# verloren, an dem ein Konto existiert — und niemand würde daran denken.
+#
+# Ein blockierter Vorgang läuft deshalb NICHT über eine Frist wieder auf, sondern erst,
+# wenn der benannte Blocker fällt: entweder der Abrufer meldet ihn beim Aufruf als gelöst
+# (`filtere(..., frei={"konto"})`) oder jemand räumt ihn von Hand (`entsperre`).
+BLOCKIERT = {
+    "gated":                "konto",   # cosinex: Teilnahmeantrag/Login nötig
+    "gesperrt":             "konto",
+    "abgewiesen":           "konto",
+    "nicht_angemeldet":     "konto",
+    "kein_zugriff":         "konto",
+    "kein_token":           "konto",
+    "interesse_noetig":     "interesse",   # simap: Interesse muss bekundet werden
+    "interesse_abgelehnt":  "interesse",
+    "nur_cockpit":          "portal",  # Portal gibt anonym nur die Oberfläche her
+    "nur_einzeldateien":    "portal",  # kein Sammel-ZIP; Einzelabruf noch nicht gebaut
+    "zu_gross":             "groesse",  # über der Grössengrenze DIESES Laufs
+}
 
 # Kann sich ändern. Nicht bei jedem Lauf erneut probieren, aber auch nicht aufgeben.
 SPERRE_TAGE = 7
 
-# Kein Fehlschlag: `probe` ist der Trockenlauf-Vermerk, `downloaded` der Erfolg.
-KEIN_FEHLSCHLAG = frozenset({"downloaded", "probe"})
+# Kein Fehlschlag — hier ist nichts nachzuholen.
+#   downloaded  ZIP liegt
+#   exists      lag schon vor diesem Lauf
+#   probe       Trockenlauf-Vermerk
+#   nur_liste   das IST das Ergebnis: die Abrufer für subreport und vergabeportal.at
+#               sammeln Dateilisten, sie laden nichts herunter. Als Fehlschlag gewertet
+#               liefe jeder erfasste Vorgang für immer in der Warteschlange mit.
+KEIN_FEHLSCHLAG = frozenset({"downloaded", "exists", "probe", "nur_liste"})
+
+# Historische Dateinamen. `docfetch.py` (cosinex) schreibt seit jeher `_manifest.parquet`
+# ohne Quellenkürzel — 3.416 Zeilen Vorgeschichte. Statt sie umzubenennen (ein Schreibzugriff
+# auf `data/`, der einen laufenden Index stören könnte) zeigt der Pfad einfach dorthin,
+# solange die Datei existiert. Neue Quellen bekommen den einheitlichen Namen.
+_ALT_DATEI = {"cosinex": "_manifest.parquet"}
 
 
 def _pfad(out_root: Path, name: str) -> Path:
+    alt = _ALT_DATEI.get(name)
+    if alt and (out_root / alt).exists():
+        return out_root / alt
     return out_root / f"_manifest_{name}.parquet"
 
 
-def frueher(out_root: Path, name: str) -> dict[str, dict]:
-    """Letzter bekannter Ausgang je `lead_id`. Leeres Ergebnis, wenn es kein Manifest gibt.
+def frueher(out_root: Path, name: str, id_feld: str = "lead_id") -> dict[str, dict]:
+    """Letzter bekannter Ausgang je Kennung. Leeres Ergebnis, wenn es kein Manifest gibt.
+
+    `id_feld` gibt es, weil `docfetch.py` seine Sätze über `notice_id` führt und die übrigen
+    Abrufer über `lead_id`. Eine Doppelspalte nur zur Vereinheitlichung wäre schlechter: sie
+    könnte auseinanderlaufen, und dann wüsste niemand, welche gilt.
 
     Bewusst fehlertolerant: ein unlesbares Manifest darf einen Lauf nicht verhindern. Der
     schlimmste Fall ist, dass wieder von vorn probiert wird — der Zustand von gestern.
@@ -80,24 +152,37 @@ def frueher(out_root: Path, name: str) -> dict[str, dict]:
             import datetime as _dt
             stand = _dt.date.fromtimestamp(p.stat().st_mtime)
             wann_sql = f"DATE '{stand.isoformat()}'"
+        if id_feld not in spalten:
+            return {}
         rows = con.execute(
-            f"""SELECT lead_id, arg_max(status, {wann_sql}) AS status,
+            f"""SELECT {id_feld}, arg_max(status, {wann_sql}) AS status,
                        max({wann_sql}) AS wann
-                FROM read_parquet('{p.as_posix()}') GROUP BY lead_id""").fetchall()
+                FROM read_parquet('{p.as_posix()}') GROUP BY {id_feld}""").fetchall()
     except Exception:                                     # noqa: BLE001
         return {}
-    return {r[0]: {"status": r[1], "wann": r[2]} for r in rows}
+    return {r[0]: {"status": normalisiere(r[1]), "wann": r[2]} for r in rows}
 
 
-def ueberspringen(vorher: dict, heute: dt.date | None = None) -> str | None:
-    """Soll dieser Kandidat übersprungen werden? Gibt den Grund zurück, sonst None."""
+def ueberspringen(vorher: dict, heute: dt.date | None = None,
+                  frei: frozenset[str] | set[str] = frozenset()) -> str | None:
+    """Soll dieser Kandidat übersprungen werden? Gibt den Grund zurück, sonst None.
+
+    `frei` nennt die Blocker, die der Aufrufer als gelöst meldet — etwa `{"konto"}`, wenn
+    für dieses Portal inzwischen Zugangsdaten hinterlegt sind. Nur der Abrufer selbst weiss
+    das; die Warteschlange darf es nicht raten.
+    """
     if not vorher:
         return None
-    status = vorher.get("status")
+    status = normalisiere(vorher.get("status"))
     if status in KEIN_FEHLSCHLAG:
         return None
     if status in DAUERHAFT:
         return status
+    blocker = BLOCKIERT.get(status)
+    if blocker:
+        if blocker in frei:
+            return None                 # Zugang da → nochmal versuchen, ohne Frist
+        return f"{status} (blockiert: {blocker})"
     wann = vorher.get("wann")
     if not wann:
         return None
@@ -109,7 +194,8 @@ def ueberspringen(vorher: dict, heute: dt.date | None = None) -> str | None:
     return None
 
 
-def filtere(offen: list, vorher: dict[str, dict], lead_id=lambda x: x[0]) -> tuple[list, dict]:
+def filtere(offen: list, vorher: dict[str, dict], lead_id=lambda x: x[0],
+            frei: frozenset[str] | set[str] = frozenset()) -> tuple[list, dict]:
     """Kandidatenliste → (was zu holen ist, {grund: anzahl}).
 
     `lead_id` holt die Kennung aus einem Eintrag; die Fetcher führen unterschiedliche
@@ -117,7 +203,7 @@ def filtere(offen: list, vorher: dict[str, dict], lead_id=lambda x: x[0]) -> tup
     """
     bleibt, gruende = [], {}
     for eintrag in offen:
-        grund = ueberspringen(vorher.get(lead_id(eintrag)) or {})
+        grund = ueberspringen(vorher.get(lead_id(eintrag)) or {}, frei=frei)
         if grund:
             schluessel = grund.split(" (")[0]
             gruende[schluessel] = gruende.get(schluessel, 0) + 1
@@ -126,7 +212,37 @@ def filtere(offen: list, vorher: dict[str, dict], lead_id=lambda x: x[0]) -> tup
     return bleibt, gruende
 
 
-def schreibe(out_root: Path, name: str, saetze: list[dict]) -> int:
+def entsperre(out_root: Path, name: str, blocker: str) -> int:
+    """Alle Sätze eines Blockers aus dem Manifest nehmen — der nächste Lauf probiert sie neu.
+
+    Der Weg von Hand, wenn ein Blocker fällt, ohne dass ein Abrufer es merken kann: die
+    Grössengrenze wird angehoben, ein Portal öffnet seinen Download, ein Konto entsteht.
+    Gibt die Zahl der wieder freigegebenen Sätze zurück.
+
+    Bewusst LÖSCHEND und nicht „Status auf offen setzen": ein Satz ohne Manifest-Eintrag ist
+    exakt der Zustand „noch nie versucht", und den kann die Auswahl bereits.
+    """
+    import pyarrow as pa
+    import pyarrow.parquet as pq
+
+    p = _pfad(out_root, name)
+    if not p.exists():
+        return 0
+    try:
+        zeilen = pq.read_table(p).to_pylist()
+    except Exception:                                     # noqa: BLE001
+        return 0
+    bleibt = [z for z in zeilen
+              if BLOCKIERT.get(normalisiere(z.get("status"))) != blocker]
+    frei = len(zeilen) - len(bleibt)
+    if frei:
+        tmp = p.with_suffix(".part")
+        pq.write_table(pa.Table.from_pylist(bleibt), tmp, compression="zstd")
+        tmp.replace(p)
+    return frei
+
+
+def schreibe(out_root: Path, name: str, saetze: list[dict], id_feld: str = "lead_id") -> int:
     """Manifest FORTSCHREIBEN statt überschreiben. Gibt die Gesamtzahl der Zeilen zurück.
 
     Das alte Verhalten (`write_table` auf die Ergebnisse des aktuellen Laufs) warf mit
@@ -139,7 +255,10 @@ def schreibe(out_root: Path, name: str, saetze: list[dict]) -> int:
     if not saetze:
         return 0
     heute = dt.date.today()
-    neu = [{**s, "versucht_am": s.get("versucht_am") or heute} for s in saetze]
+    # Normalisiert wird beim SCHREIBEN, nicht erst beim Lesen: sonst stünde die abweichende
+    # Schreibweise dauerhaft in der Datei und jede Auswertung daneben müsste sie kennen.
+    neu = [{**s, "status": normalisiere(s.get("status")),
+            "versucht_am": s.get("versucht_am") or heute} for s in saetze]
     p = _pfad(out_root, name)
     alt: list[dict] = []
     if p.exists():
@@ -148,10 +267,10 @@ def schreibe(out_root: Path, name: str, saetze: list[dict]) -> int:
         except Exception:                                 # noqa: BLE001
             alt = []          # unlesbares Altmanifest kostet Historie, nicht den Lauf
 
-    # Je lead_id nur der jüngste Satz — sonst wächst die Datei mit jedem Lauf ohne Nutzen.
+    # Je Kennung nur der jüngste Satz — sonst wächst die Datei mit jedem Lauf ohne Nutzen.
     je_id: dict[str, dict] = {}
     for s in alt + neu:
-        lid = s.get("lead_id")
+        lid = s.get(id_feld)
         if lid is None:
             continue
         vorhanden = je_id.get(lid)
@@ -184,4 +303,7 @@ def bericht(gruende: dict[str, int]) -> str:
     if not gruende:
         return ""
     teile = ", ".join(f"{k}={v}" for k, v in sorted(gruende.items()))
-    return f"  übersprungen (früher gescheitert): {teile}"
+    # „bekannter Ausgang" statt „früher gescheitert": seit es die Klasse `BLOCKIERT` gibt,
+    # ist der häufigste Grund kein Fehlschlag, sondern ein fehlender Zugang. Die alte
+    # Formulierung hätte 389 wartende Vorgänge als kaputt dargestellt.
+    return f"  übersprungen (bekannter Ausgang): {teile}"

@@ -18,6 +18,7 @@ create table if not exists gov_leads (
   market_region_name       text,
   market_region_known      boolean,
   cpv_code                 text,
+  category_source          text,
   contract_kind            text,
   phase                    text,
   is_new_tender            boolean,
@@ -95,6 +96,7 @@ alter table gov_leads add column if not exists market_nuts3 text;
 alter table gov_leads add column if not exists market_region_name text;
 alter table gov_leads add column if not exists market_region_known boolean;
 alter table gov_leads add column if not exists cpv_code text;
+alter table gov_leads add column if not exists category_source text;
 alter table gov_leads add column if not exists contract_kind text;
 alter table gov_leads add column if not exists phase text;
 alter table gov_leads add column if not exists is_new_tender boolean;

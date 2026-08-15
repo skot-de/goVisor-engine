@@ -1,0 +1,59 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+1;Einrichten, Vorhalten über die vereinbarte;1,0;Stk;gaeb;3929573.x83
+2;Dokumentation ist mit der Abnahme der Bauleistung von der ausführenden Firma in zweifacher Ausführung in Papierform und Digital an die Objektüberwachung zu übergeben.;1,0;Psch;gaeb;3929573.x83
+1;Untergrund auf der STB-Bodenplatte mit Abdichtung (EG) von groben Verschmutzungen wie Staub, Ölrückständen befreien, trocken reinigen und angefallenen Schmutz beseitigen;1900,0;m2;gaeb;3929573.x83
+2;Untergrund auf der Holzdecke mit Folienabklebung (OG) von groben Verschmutzungen wie Staub, Ölrückständen befreien, trocken reinigen und angefallenen Schmutz beseitigen;1600,0;m2;gaeb;3929573.x83
+3;Folienstreifen aus PE-Folie als Feuchteschutz der Holz-;1800,0;m;gaeb;3929573.x83
+4;Messstellenmarkierung zur Ermittlung der Restfeuchte;80,0;St;gaeb;3929573.x83
+1;Trennschicht aus PE-Folie, einlagig, Dicke 0,2 mm,;1600,0;m2;gaeb;3929573.x83
+2;Trennschicht aus PE-Folie, einlagig, Dicke 0,2 mm,;3500,0;m2;gaeb;3929573.x83
+3;Ausgleichsdämmschüttung lose.;1110,0;m²;gaeb;3929573.x83
+4;Ausgleichsdämmschüttung lose.;540,0;m²;gaeb;3929573.x83
+5;Ausgleichsdämmschüttung lose.;150,0;m²;gaeb;3929573.x83
+6;Ausgleichsdämmschüttung lose.;100,0;m²;gaeb;3929573.x83
+7;Ausgleichsdämmschüttung lose.;180,0;m²;gaeb;3929573.x83
+8;Zulage für das Einbringen von Mehrstärken bei vorbeschriebener loser Ausgleichsdämmschüttung;500,0;m²;gaeb;3929573.x83
+9;Gebundene, elastische Ausgleichssplittschüttung,;1200,0;m2;gaeb;3929573.x83
+10;Gebundene, elastische Ausgleichssplittschüttung,;300,0;m2;gaeb;3929573.x83
+11;Zulage für das Einbringen von Mehrstärken bei;500,0;m2;gaeb;3929573.x83
+12;Gebundene, elastische Ausgleichssplittschüttung,;100,0;m2;gaeb;3929573.x83
+13;Bei hoher Einbaufeuchte bedingt durch die jeweiligen Witterungsbedingungen wird ggf. eine Trocknung der Splittschüttung auf eine Restfeuchtigkeit von weniger als;1,0;psch;gaeb;3929573.x83
+14;Abstellung an Treppenaustritten etc.;50,0;lfdm;gaeb;3929573.x83
+15;Trittschalldämmschicht aus Mineralwolle MW DIN EN;1900,0;m2;gaeb;3929573.x83
+16;Lieferdicke 40 mm,;1600,0;m2;gaeb;3929573.x83
+17;Randstreifen aus Mineralfaser, Dicke 8 mm, Höhe 100 mm.;1900,0;m;gaeb;3929573.x83
+18;Trittschaldämmung an durchdringende Bauteile anarbeiten.;5,0;St;gaeb;3929573.x83
+19;Aussparungsgröße : bis 0,5 m2.;5,0;St;gaeb;3929573.x83
+20;Aussparungsgröße : bis 0,1 m2.;5,0;St;gaeb;3929573.x83
+1;Zementestrich schwimmend liefern und einbauen.;1140,0;m2;gaeb;3929573.x83
+2;Zulage zu Vorpositionen Zement-Heizestrich und Zement-;250,0;m2;gaeb;3929573.x83
+3;Zulage für das Einbringen von Mehrstärken von;300,0;m2;gaeb;3929573.x83
+4;als Estrich (kein Heizestrich);40,0;m2;gaeb;3929573.x83
+5;Zulage zu Vorpositionen Zement-Heizestrich und Zement-;40,0;m2;gaeb;3929573.x83
+6;Estrichdicke: 85 mm.;2120,0;m2;gaeb;3929573.x83
+7;Zulage zu Vorpositionen Zement-Heizestrich und Zement-;1450,0;m2;gaeb;3929573.x83
+8;Zulage für das Einbringen von Mehrstärken von;500,0;m2;gaeb;3929573.x83
+9;Druckfestigkeitsklasse DIN EN 13813: C 35.;200,0;m2;gaeb;3929573.x83
+10;Zulage zu Vorpositionen Zement-Heizestrich und Zement-;200,0;m2;gaeb;3929573.x83
+11;Zulage für das Einbringen von Mehrstärken von;100,0;m2;gaeb;3929573.x83
+12;"Aussparung in vorbeschriebenem Estrich herstellen;";5,0;St;gaeb;3929573.x83
+13;Aussparungsgröße : bis 0,5 m2.;5,0;St;gaeb;3929573.x83
+14;Aussparungsgröße : bis 0,1 m2.;5,0;St;gaeb;3929573.x83
+15;Estrich nachträglich anarbeiten an Einbauteile, wie;5,0;St;gaeb;3929573.x83
+16;bis ca. B/L 60/60 cm.;3,0;St;gaeb;3929573.x83
+17;bis ca. B/L 100/100 cm.;2,0;St;gaeb;3929573.x83
+1;Risse im Untergrund (ohne Bewegung) durch Aufkratzen oder;50,0;m;gaeb;3929573.x83
+2;Höhenversatz in vorbeschriebenen Zementestrichen;50,0;lfdm;gaeb;3929573.x83
+3;Ausbildung einer Vertiefung für den bauseitigen Einbau oberflächenbündiger Sauberlaufzonen.;15,0;lfdm;gaeb;3929573.x83
+4;Estrichabstellung an freien Deckenrändern,;50,0;lfdm;gaeb;3929573.x83
+5;Abschlussprofil aus Stahl verzinkt, Höhe bis;5,0;m;gaeb;3929573.x83
+6;Dehnfugenausbildung mit Dehnfugenprofil.;90,0;m;gaeb;3929573.x83
+7;Fugenprofil sichtbar (in Sichtqualität), Einbau in CT-Estrich.;90,0;m;gaeb;3929573.x83
+8;Schließen von Fugen als Randfuge und Fuge in der Fläche, mit elastischem Dichtstoff, einschl. Fugenvorbehandlung und -;90,0;m;gaeb;3929573.x83
+9;Schließen von Fugen als Randfuge und Fuge in der Fläche, mit Epoxidharzplombe, einschl. Fugenvorbehandlung und -;90,0;m;gaeb;3929573.x83
+10;Herstellen von Scheinfugen in Estrich.;360,0;m;gaeb;3929573.x83
+11;Kraftschlüssiges Schließen von Schein- und Arbeitsfugen;130,0;m;gaeb;3929573.x83
+12;Kraftschlüssiges Schließen von Schein- und Arbeitsfugen;230,0;m;gaeb;3929573.x83
+1;Für evtl. erforderliche Arbeiten, die nicht im;10,0;Std.;gaeb;3929573.x83
+2;Für evtl. erforderliche Arbeiten, die nicht im;10,0;Std.;gaeb;3929573.x83
+3;Für evtl. erforderliche Arbeiten, die nicht im;10,0;Std.;gaeb;3929573.x83

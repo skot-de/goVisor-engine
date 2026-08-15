@@ -1,0 +1,703 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+1;Luftleitung, rechteckig, Dichtheitsklasse B DIN EN 1507, Druckklasse 1 DIN EN 1507, aus Edelstahl V2A (Werkstoff 1.4301), gefalzt, Maße DIN EN 1505, oben liegender Falz (Wannenausbildung) Kantenlänge bis 500 mm, Verbindung mit Winkelflansch, aus verzinktem Stahl, mit Schrauben und Dichtung, Dichtung;5,0;m2;gaeb;3921742.x83
+2;L 500 bis 1000mm (L2);3,0;m2;gaeb;3921742.x83
+3;Formstück für Luftleitung, rechteckig, Dichtheitsklasse B DIN EN 1507, Druckklasse 1 DIN EN 1507, aus Edelstahl V2A (Werkstoff 1.4301), gefalzt, Maße DIN EN 1505, oben liegender Falz (Wannenausbildung) Kantenlänge bis 500 mm, Verbindung mit Winkelflansch, aus verzinktem Stahl, mit Schrauben und Dich;45,0;m2;gaeb;3921742.x83
+4;L 500 bis 1000mm (F2);67,0;m2;gaeb;3921742.x83
+5;Luftleitung, rechteckig, Dichtheitsklasse B DIN EN 1507, Druckklasse 1 DIN EN 1507, aus verzinktem Stahl, gefalzt, Maße DIN EN 1505, Kantenlänge bis 500 mm, Verbindung mit Winkelflansch, aus verzinktem Stahl, mit Schrauben und Dichtung, min./max. Temperatur der geförderten Luft -15 bis 40 Grad C, mi;36,0;m2;gaeb;3921742.x83
+6;Kantenlänge über 500 bis 1000 mm;30,0;m2;gaeb;3921742.x83
+7;Kantenlänge über 1000 bis 1500 mm;15,0;m2;gaeb;3921742.x83
+8;Formstück für Luftleitung, rechteckig, Luftdichtheitsklasse B DIN EN 1507, Druckklasse 1 DIN EN 1507, aus verzinktem Stahl, gefalzt, Maße DIN EN 1505, Kantenlänge bis 500 mm, Verbindung mit Winkelflansch, aus verzinktem Stahl, mit Schrauben und Dichtung, min./max. Temperatur der geförderten Luft -15;49,0;m2;gaeb;3921742.x83
+9;Kantenlänge über 500 bis 1000 mm;92,0;m2;gaeb;3921742.x83
+10;Kantenlänge über 1000 bis 1500 mm;26,0;m2;gaeb;3921742.x83
+11;Zuschlag zu vorgenannten Positionen für die Montage;25,0;m²;gaeb;3921742.x83
+12;Flächenträger, bestehend aus aus mehreren PUR/PIR Elementen (FCKW-frei) eingebettet in Schaumstoff auf der Basis synthetischen Kautschuks, an der Außenseite der PIR Elemente metallisch diffusionsdicht überstehende Metalloberfläche zur Befestigung von thermisch isolierten Blechkanälen aus Stahl, Edel;10,0;m;gaeb;3921742.x83
+13;Inspektions- und Wartungsöffnung als Deckel mit Einbaurahmen und Dichtung, oval, aus verzinktem Stahl, Maße 300/100 mm, für Einbau in rechteckige Luftleitung, mit Schraubverschluss und Rändelmutter.;4,0;St;gaeb;3921742.x83
+14;Maße 400/200 mm;2,0;St;gaeb;3921742.x83
+15;Inspektions- und Wartungsöffnung als Deckel mit Einbaurahmen und Dichtung, oval, aus Edelstahl, Maße 300/100 mm, für Einbau in rechteckige Luftleitung, mit Schraubverschluss und Rändelmutter.;2,0;St;gaeb;3921742.x83
+16;Maße 400/200 mm;1,0;St;gaeb;3921742.x83
+17;Wickelfalzrohr Luftdichtheitsklasse B DIN EN 12237, aus verzinktem Stahl, Nähte gefalzt, Maße DIN EN 1506, DN 80, mit Einsteckende, mit Lippendichtung, geschraubt/genietet, min./max. Temperatur der geförderten Luft -15 bis 40 Grad C, Druckbereich von -750 bis 1000 Pa, befestigen mit bauaufsichtlich ;36,0;m;gaeb;3921742.x83
+18;Wie Position;13,0;m;gaeb;3921742.x83
+19;DN 125;13,0;m;gaeb;3921742.x83
+20;DN 160;42,0;m;gaeb;3921742.x83
+21;DN 180;3,0;m;gaeb;3921742.x83
+22;DN 200;31,0;m;gaeb;3921742.x83
+23;DN 250;8,0;m;gaeb;3921742.x83
+24;DN 315;10,0;m;gaeb;3921742.x83
+25;DN 355;18,0;m;gaeb;3921742.x83
+26;Rohrbefestigung, aus Stahl, verzinkt, für eine axiale;24,0;St;gaeb;3921742.x83
+27;Rohrbefestigung Stahl, verzinkt DN 100;8,0;St;gaeb;3921742.x83
+28;Rohrbefestigung Stahl, verzinkt DN 125;9,0;St;gaeb;3921742.x83
+29;Rohrbefestigung Stahl, verzinkt DN 160;28,0;St;gaeb;3921742.x83
+30;Rohrbefestigung Stahl, verzinkt DN 180;2,0;St;gaeb;3921742.x83
+31;Rohrbefestigung Stahl, verzinkt DN 200;21,0;St;gaeb;3921742.x83
+32;Rohrbefestigung Stahl, verzinkt DN 250;6,0;St;gaeb;3921742.x83
+33;Rohrbefestigung Stahl, verzinkt DN 315;5,0;St;gaeb;3921742.x83
+34;Rohrbefestigung Stahl, verzinkt DN 355;10,0;St;gaeb;3921742.x83
+35;Bundkragen, Luftdichtheitsklasse B DIN EN 12237, aus verzinktem Stahl, DN 80, zum Einstecken, mit Lippendichtung, min./max. Temperatur der geförderten Luft -15 bis 40 Grad C, Druckbereich von -750 bis 1000 Pa, Montagehöhe über Gelände/Fußboden bis 3,5 m, mit Aufhänge-/Auflagekonstruktion DIN EN 1223;1,0;St;gaeb;3921742.x83
+36;Wie Position;2,0;St;gaeb;3921742.x83
+37;DN 160;20,0;St;gaeb;3921742.x83
+38;DN 200;27,0;St;gaeb;3921742.x83
+39;Wie Position;4,0;St;gaeb;3921742.x83
+40;Bogen, Luftdichtheitsklasse B DIN EN 12237, Biegeradius größer gleich 1 DN, Maße DIN EN 1506, aus verzinktem Stahl, DN 80, mit Einsteckenden, mit Lippendichtung, geschraubt/genietet, mit Dichtungsband, min./max. Temperatur der geförderten Luft -15 bis 40 Grad C, Druckbereich von -750 bis 1000 Pa, mi;24,0;St;gaeb;3921742.x83
+41;Wie Position;14,0;St;gaeb;3921742.x83
+42;DN 125;9,0;St;gaeb;3921742.x83
+43;DN 160;45,0;St;gaeb;3921742.x83
+44;DN 180;2,0;St;gaeb;3921742.x83
+45;DN 200;30,0;St;gaeb;3921742.x83
+46;DN 250;6,0;St;gaeb;3921742.x83
+47;DN 315;5,0;St;gaeb;3921742.x83
+48;DN 355;4,0;St;gaeb;3921742.x83
+49;Abzweigstück, Luftdichtheitsklasse B DIN EN 12237, Maße DIN EN 1506, aus verzinktem Stahl, größter DN 80, mit Einsteckenden, mit Lippendichtung, geschraubt/genietet, mit Dichtungsband, min./max. Temperatur der geförderten Luft -15 bis 40 Grad C, Druckbereich von -750 bis 1000 Pa, mit Aufhänge-/Aufla;19,0;St;gaeb;3921742.x83
+50;Wie Position;10,0;St;gaeb;3921742.x83
+51;größter DN 125;9,0;St;gaeb;3921742.x83
+52;größter DN 160;27,0;St;gaeb;3921742.x83
+53;größter DN 180;2,0;St;gaeb;3921742.x83
+54;größter DN 200;11,0;St;gaeb;3921742.x83
+55;größter DN 250;2,0;St;gaeb;3921742.x83
+56;größter DN 315;10,0;St;gaeb;3921742.x83
+57;Revisionsstück mit Deckel, Luftdichtheitsklasse B DIN EN 12237, aus verzinktem Stahl, DN 100, mit Einsteckenden, mit Lippendichtung, geschraubt/genietet, mit Dichtungsband, min./max. Temperatur der geförderten Luft -15 bis 40 Grad C, Druckbereich von -750 bis 1000 Pa, mit Aufhänge-/Auflagekonstrukti;2,0;St;gaeb;3921742.x83
+58;DN 125;2,0;St;gaeb;3921742.x83
+59;DN 160;4,0;St;gaeb;3921742.x83
+60;Übergangsstück, Luftdichtheitsklasse B DIN EN 12237, konisch, Maße DIN EN 1506, aus verzinktem Stahl, größter DN 100, mit Einsteckenden, mit Lippendichtung, geschraubt/genietet, mit Dichtungsband, min./max. Temperatur der geförderten Luft -15 bis 40 Grad C, Druckbereich von -750 bis 1000 Pa, mit Auf;2,0;St;gaeb;3921742.x83
+61;größter DN 125;5,0;St;gaeb;3921742.x83
+62;größter DN 160;10,0;St;gaeb;3921742.x83
+63;größter DN 180;1,0;St;gaeb;3921742.x83
+64;größter DN 200;31,0;St;gaeb;3921742.x83
+65;größter DN 250;2,0;St;gaeb;3921742.x83
+66;größter DN 315;10,0;St;gaeb;3921742.x83
+67;Steckverbinder, Luftdichtheitsklasse B DIN EN 12237, Maße DIN EN 1506, aus verzinktem Stahl, DN 80, min./max. Temperatur der geförderten Luft -15 bis 40 Grad C, Druckbereich von -750 bis 1000 Pa, mit Aufhänge-/Auflagekonstruktion DIN EN 12236, schallgedämmt, befestigen mit bauaufsichtlich zugelassen;8,0;St;gaeb;3921742.x83
+68;Wie Position;5,0;St;gaeb;3921742.x83
+69;DN 125;6,0;St;gaeb;3921742.x83
+70;DN 160;27,0;St;gaeb;3921742.x83
+71;DN 180;2,0;St;gaeb;3921742.x83
+72;DN 200;23,0;St;gaeb;3921742.x83
+73;DN 250;3,0;St;gaeb;3921742.x83
+74;DN 315;10,0;St;gaeb;3921742.x83
+75;Muffe, Luftdichtheitsklasse B DIN EN 12237, Maße DIN EN 1506, aus verzinktem Stahl, DN 80, min./max. Temperatur der geförderten Luft -15 bis 40 Grad C, Druckbereich von -750 bis 1000 Pa, mit Aufhänge-/Auflagekonstruktion DIN EN 12236, schallgedämmt, befestigen mit bauaufsichtlich zugelassenen Befest;8,0;St;gaeb;3921742.x83
+76;Wie Position;5,0;St;gaeb;3921742.x83
+77;DN 125;6,0;St;gaeb;3921742.x83
+78;DN 160;27,0;St;gaeb;3921742.x83
+79;DN 180;2,0;St;gaeb;3921742.x83
+80;DN 200;23,0;St;gaeb;3921742.x83
+81;DN 250;3,0;St;gaeb;3921742.x83
+82;DN 315;10,0;St;gaeb;3921742.x83
+83;Luftleitung, rund, flexibel, aus Aluminium, Ausführung B DIN EN 13180, Biegeradius größer gleich 1,2 bis 1,5 DN, DN 80, Verbindung mit Einsteckende, mit Lippendichtung, geschraubt/genietet, mit Dichtungsband, min./max. Temperatur der geförderten Luft -15 bis 40 Grad C, Luftdichtheitsklasse B DIN EN ;10,0;m;gaeb;3921742.x83
+84;Wie Position;10,0;m;gaeb;3921742.x83
+85;DN 125;2,0;m;gaeb;3921742.x83
+86;DN 160;5,0;m;gaeb;3921742.x83
+87;DN 200;31,0;m;gaeb;3921742.x83
+88;DN 250;2,0;m;gaeb;3921742.x83
+89;Anschluss an WC mit Anschluss für Geruchsabsaugung.;11,0;St.;gaeb;3921742.x83
+1;Luftleitung, rechteckig, Dichtheitsklasse B DIN EN 1507, Druckklasse 1 DIN EN 1507, aus Edelstahl V2A (Werkstoff 1.4301), gefalzt, Maße DIN EN 1505, oben liegender Falz (Wannenausbildung) Kantenlänge 500 bis 1000 mm, Verbindung mit Winkelflansch, aus verzinktem Stahl, mit Schrauben und Dichtung, Dic;50,0;m2;gaeb;3921742.x83
+2;Formstück für Luftleitung, rechteckig, Dichtheitsklasse B DIN EN 1507, Druckklasse 1 DIN EN 1507, aus Edelstahl V2A (Werkstoff 1.4301), gefalzt, Maße DIN EN 1505, oben liegender Falz (Wannenausbildung) Kantenlänge bis 500 mm, Verbindung mit Winkelflansch, aus verzinktem Stahl, mit Schrauben und Dich;2,0;m2;gaeb;3921742.x83
+3;L 500 bis 1000mm (F2);40,0;m2;gaeb;3921742.x83
+4;L 1000 bis 1500mm (F3);5,0;m2;gaeb;3921742.x83
+5;Luftleitung, rechteckig, Dichtheitsklasse B DIN EN 1507, Druckklasse 1 DIN EN 1507, aus verzinktem Stahl, gefalzt, Maße DIN EN 1505, Kantenlänge über 500 bis 1000 mm, Verbindung mit Winkelflansch, aus verzinktem Stahl, mit Schrauben und Dichtung, min./max. Temperatur der geförderten Luft -15 bis 40 ;15,0;m2;gaeb;3921742.x83
+6;Formstück für Luftleitung, rechteckig, Luftdichtheitsklasse B DIN EN 1507, Druckklasse 1 DIN EN 1507, aus verzinktem Stahl, gefalzt, Maße DIN EN 1505, Kantenlänge bis 500 mm, Verbindung mit Winkelflansch, aus verzinktem Stahl, mit Schrauben und Dichtung, min./max. Temperatur der geförderten Luft -15;3,0;m2;gaeb;3921742.x83
+7;Kantenlänge über 500 bis 1000 mm;28,0;m2;gaeb;3921742.x83
+8;Kantenlänge über 1000 bis 1500 mm;5,0;m2;gaeb;3921742.x83
+9;Flächenträger, bestehend aus aus mehreren PUR/PIR Elementen (FCKW-frei) eingebettet in Schaumstoff auf der Basis synthetischen Kautschuks, an der Außenseite der PIR Elemente metallisch diffusionsdicht überstehende Metalloberfläche zur Befestigung von thermisch isolierten Blechkanälen aus Stahl, Edel;10,0;m;gaeb;3921742.x83
+10;Zulage Abdichtung Kanalfugen und Längsnähte;150,0;m;gaeb;3921742.x83
+11;Herstellen einer Unterkonstruktion / Kanalhalterung für Lüftungskanäle im Freien. Mit Profilschienen / Profilstahl und Zubehör aus feueverzinktem Stahl.;6,0;St.;gaeb;3921742.x83
+12;Herstellen einer Unterkonstruktion / Kanalhalterung für Lüftungskanäle im Freien. Mit Profilschienen / Profilstahl und Zubehör aus feueverzinktem Stahl.;3,0;St.;gaeb;3921742.x83
+13;Herstellen einer Unterkonstruktion / Kanalhalterung für Lüftungskanäle im Freien. Mit Profilschienen / Profilstahl und Zubehör aus feueverzinktem Stahl.;10,0;St.;gaeb;3921742.x83
+14;Inspektions- und Wartungsöffnung als Deckel mit Einbaurahmen und Dichtung, oval, aus verzinktem Stahl, Maße 300/100 mm, für Einbau in rechteckige Luftleitung, mit Schraubverschluss und Rändelmutter.;2,0;St;gaeb;3921742.x83
+15;Maße 400/200 mm;1,0;St;gaeb;3921742.x83
+16;Inspektions- und Wartungsöffnung als Deckel mit Einbaurahmen und Dichtung, oval, aus Edelstahl, Maße 300/100 mm, für Einbau in rechteckige Luftleitung, mit Schraubverschluss und Rändelmutter.;2,0;St;gaeb;3921742.x83
+17;Maße 400/200 mm;1,0;St;gaeb;3921742.x83
+1;Aufhänge- und Stützkonstruktion für Luftleitungen, aus verzinktem Stahl, mit schalldämmender Zwischenlage aus Profilgummi, einschl. Decken-/Mauerwerksbefestigung, mit bauaufsichtlich zugelassenen Befestigungsmitteln einschl. Bohrungen, einschl. statischem Nachweis,;200,0;kg;gaeb;3921742.x83
+2;Aufhänge- und Stützkonstruktion für Luftleitungen, aus Edelstahl, mit schalldämmender Zwischenlage aus Profilgummi, einschl. Decken-/Mauerwerksbefestigung, mit bauaufsichtlich zugelassenen Befestigungsmitteln einschl. Bohrungen, einschl. statischem Nachweis,;100,0;kg;gaeb;3921742.x83
+3;Installationsschiene aus verzinktem Stahl zur Befestigung von Rohren und Rohrtrassen.;30,0;m;gaeb;3921742.x83
+4;C-Profil NG 40/30 mm;60,0;m;gaeb;3921742.x83
+5;C-Profil NG 40/40 mm;30,0;m;gaeb;3921742.x83
+6;Installationsschiene aus Edelstahl zur Befestigung von Rohren und Rohrtrassen.;15,0;m;gaeb;3921742.x83
+7;C-Profil NG 40/30 mm;30,0;m;gaeb;3921742.x83
+8;C-Profil NG 40/40 mm;15,0;m;gaeb;3921742.x83
+9;Installationsschienen Konsole zur auskragenden Befestigung von Rohren und Rohrtrassen.;5,0;St;gaeb;3921742.x83
+10;C-Profil NG 40/30 mm;5,0;St;gaeb;3921742.x83
+11;C-Profil NG 40/40 mm;5,0;St;gaeb;3921742.x83
+12;Installationsschienen Konsole zur auskragenden Befestigung von Rohren und Rohrtrassen.;5,0;St;gaeb;3921742.x83
+13;C-Profil NG 40/30 mm;5,0;St;gaeb;3921742.x83
+14;C-Profil NG 40/40 mm;5,0;St;gaeb;3921742.x83
+15;Gewindestab M8;50,0;m;gaeb;3921742.x83
+16;Dübel M10x60mm;500,0;St.;gaeb;3921742.x83
+1;Ausmessen und Anzeichnen von Durchbrüchen/Bohrungen;7,0;St;gaeb;3921742.x83
+2;Kernbohrung in Decke aus Stahlbeton, senkrecht;2,0;St;gaeb;3921742.x83
+3;Kernbohrung in Decke aus Stahlbeton, senkrecht;5,0;St;gaeb;3921742.x83
+4;Stemm-, Bohr-, und Fräsarbeiten;12,0;St;gaeb;3921742.x83
+5;Stemm-, Bohr-, und Fräsarbeiten;10,0;St;gaeb;3921742.x83
+1;Kältedämmung DIN 4140 an Rohrleitungen, in Gebäuden, Schächten,Schlitzen und Vorwandinstallationen, einschl. aller Form- und Verbindungsstücke samt Rohrbe- festigungen, Oberkante Dämmung über Gelände/Fußboden bis 4,4 m, Rohrleitung aus vz. Wickelfalzrohr, Rohraußendurchmesser DN 100, Rohrverbindung ;10,0;m;gaeb;3921742.x83
+2;Größe: DN 125;5,0;m;gaeb;3921742.x83
+3;Größe: DN 160;10,0;m;gaeb;3921742.x83
+4;Größe: DN 200;5,0;m;gaeb;3921742.x83
+5;Größe: DN 250;2,0;m;gaeb;3921742.x83
+6;Wärmedämmung ohne Ummantelung DIN 4140, haus- und betriebstechnische Anlage, Luftleitung, rechteckig, Maße DIN EN 1505, Kantenlänge bis 500 mm, im Gebäude, Oberkante Dämmung über Gelände/Fußboden bis 4,4 m, Dämmung aus Mineralwolle, AS-Qualität, als Lamellenmatte, druckfest, Brandverhaltensklasse DI;2,0;m2;gaeb;3921742.x83
+7;Kantenlänge über 500 bis 1000 mm;3,0;m2;gaeb;3921742.x83
+8;Wärmedämmung ohne Ummantelung DIN 4140, haus- und betriebstechnische Anlage, Formstück für rechteckige Luftleitung, Maße DIN EN 1505, Kantenlänge bis 500 mm, im Gebäude, Oberkante Dämmung über Gelände/Fußboden bis 4,4 m, Dämmung aus Mineralwolle, AS-Qualität, als Lamellenmatte, druckfest, Brandverha;4,0;m2;gaeb;3921742.x83
+9;Kantenlänge über 500 bis 1000 mm;5,0;m2;gaeb;3921742.x83
+10;Mehrkosten Erschwernis in Bereichen mit Behinderung durch technische Einrichtungen und Bauteile, keine ausreichende Konvektion bzw. unzureichender Abstand (kleiner 100 mm) zu Objekten, für Wärmedämmung Mineralwolle bei Luftleitungen und Formstücke mit Kanten-L bis 500mm;3,0;m2;gaeb;3921742.x83
+11;Kanten-L bis 1000mm;4,0;m2;gaeb;3921742.x83
+12;Kältedämmung DIN 4140, an Luftleitung, rechteckig, Maße DIN EN 1505, Kantenlänge bis 500 mm, im Gebäude, Oberkante Dämmung über Gelände/Fußboden bis 4,40 m, Dämmung aus synthetischem Kautschuk, Baustoffklasse nach MVV TB s2,d0 (schwerentflammbar und nicht brennend abfallen oder abtropfend);3,0;m2;gaeb;3921742.x83
+13;Kantenlänge über 500 bis 1000 mm;5,0;m2;gaeb;3921742.x83
+14;Kältedämmung DIN 4140, an Formstück für rechteckige Luftleitung, Maße DIN EN 1505, Kantenlänge bis 500 mm, im Gebäude, Oberkante Dämmung über Gelände/Fußboden bis 4,4 m, Dämmung aus synthetischem Kautschuk,;3,0;m2;gaeb;3921742.x83
+15;Kantenlänge über 500 bis 1000 mm;5,0;m2;gaeb;3921742.x83
+16;Kantenlänge über 1000 bis 1500 mm;2,0;m2;gaeb;3921742.x83
+17;Mehrkosten Erschwernis in Bereichen mit Behinderung durch technische Einrichtungen und Bauteile, keine ausreichende Konvektion bzw. unzureichender Abstand zu Objekten für Kältedämmung Kautschuk bei Luftleitungen und Formstücke mit Kanten-L bis 500mm;3,0;m2;gaeb;3921742.x83
+18;Kanten-L bis 1000mm;5,0;m2;gaeb;3921742.x83
+19;Kanten-L bis 1500mm;2,0;m2;gaeb;3921742.x83
+20;Überdämmung eines Kanalflansches mit;8,0;St.;gaeb;3921742.x83
+21;Überdämmung Kanalflansch über 500 bis 1000mm (L2);12,0;St.;gaeb;3921742.x83
+22;Überdämmung Kanalflansch über 1000 bis 1500mm (L3);4,0;St.;gaeb;3921742.x83
+23;Mehrkosten für das Dämmen einer Revisionsöffnung 400x200 mm, 2-seitig gerundet, mit Flügelschrauben.;2,0;St.;gaeb;3921742.x83
+1;Luftventil, für Zu-/Abluft, für Einbau in runde Luftleitungen, Nenngröße 100 mm, mit Ventilsitz und einstellbarem Ventilteller, aus beschichtetem Stahl, mit Einbaurahmen aus beschichtetem Stahl, mit Frontplatte aus beschichtetem Stahl, L/B 185/185 mm,;12,0;St;gaeb;3921742.x83
+2;Größe: 125mm;2,0;St;gaeb;3921742.x83
+3;Größe: 150mm;3,0;St;gaeb;3921742.x83
+4;Deckendralldurchlässe mit quadratischem oder rundem Frontdurchlass. Als Zuluft- und Abluftdurchlass für Komfortbereiche. Frontdurchlass mit feststehenden Lamellen für drallförmige horizontale Luftführung mit hoher Induktion. Zum Einbau in abgehängte Decken aller Art. Einbaufertige Komponente, besteh;2,0;St;gaeb;3921742.x83
+5;Kleintierschutzgitter rund verzinkt DN100 zur Montage auf das Ende eines Kanal- bzw. Kanalformstücks;4,0;St;gaeb;3921742.x83
+6;Zu- und Abluftgitter für Wand-, Decken- und Lüftungsleitungseinbau, bestehend aus Frontrahmen und Lamellen aus Aluminium-Strangpressprofilen in RAL 9010lackiert. Mit frontseitig waagrechten feststehenden Profillamellen, kompakte Ausführung, gerade ausblasend. Mit Lamellenabstand 13 mm (nicht ballwur;20,0;St;gaeb;3921742.x83
+7;Schiebestutzen 625x125 mm;20,0;St.;gaeb;3921742.x83
+8;Zu- und Abluftgitter für Wand-, Decken- und Lüftungsleitungseinbau, bestehend aus Frontrahmen und Lamellen aus Aluminium-Strangpressprofilen in RAL 9010lackiert. Mit frontseitig waagrechten feststehenden Profillamellen, kompakte Ausführung, gerade ausblasend. Mit Lamellenabstand 13 mm (nicht ballwur;1,0;St;gaeb;3921742.x83
+9;Rundrohrauslass;10,0;St;gaeb;3921742.x83
+10;Endabdeckung, Stahlblech verzinkt passend zu vorgenannten Rundrohrlamellenauslass;2,0;St;gaeb;3921742.x83
+11;Gummilippendichtung (Paar);10,0;Paar;gaeb;3921742.x83
+12;Deckenauslass;6,0;St;gaeb;3921742.x83
+13;Schiebestutzen 825x115 mm;6,0;St.;gaeb;3921742.x83
+14;Dachdurchführung rechteckig od. quadratisch.;2,0;St;gaeb;3921742.x83
+15;Dachdurchführung für Kanal 500x250 mm;2,0;St;gaeb;3921742.x83
+16;Dachdurchführung für Kanal 500x250 mm;1,0;St;gaeb;3921742.x83
+17;Dachdurchführung für Kanal 750x500 mm;1,0;St;gaeb;3921742.x83
+18;Dachdurchführung für Kanal 750x500 mm;1,0;St;gaeb;3921742.x83
+19;Dachdurchführung mit wärmeisoliertem Rohr, für Rohr DN 250. Bestehend aus einem inneren und einem äußeren Spiralfalzrohr mit zwischenliegender Mineralwolle- dämmung. Mit grauer Polymergummiplatte als Abdichtungs- ebene. Höhe zwischen Abdichtungsflansch und Ende der Dachdurchführung auf Seite des Fla;2,0;St;gaeb;3921742.x83
+20;Dachdurchführung mit wärmeisoliertem Rohr, für Rohr DN 315. Bestehend aus einem inneren und einem äußeren Spiralfalzrohr mit zwischenliegender Mineralwolle- dämmung. Mit grauer Polymergummiplatte als Abdichtungs- ebene. Höhe zwischen Abdichtungsflansch und Ende der Dachdurchführung auf Seite des Fla;5,0;St;gaeb;3921742.x83
+21;Deflektorhaube verzinkt, Größe 700x500mm, passend zu vorgenannter Dachdurchführung. Mit innenliegendem Schutzgitter und Entwässerungen.;2,0;St;gaeb;3921742.x83
+22;Deflektorhaube verzinkt, Größe DN 250, passend zu vorgenannter Dachdurchführung. Mit innenliegendem Schutzgitter und Entwässerungen.;1,0;St;gaeb;3921742.x83
+23;Außenluft-Lamellenhaube verzinkt, Größe DN 250, passend zu vorgenannter Dachdurchführung. Mit innenliegendem Schutzgitter und Entwässerungen.;1,0;St;gaeb;3921742.x83
+24;Deflektorhaube verzinkt, Größe DN 315, passend zu vorgenannter Dachdurchführung. Mit innenliegendem Schutzgitter und Entwässerungen.;5,0;St;gaeb;3921742.x83
+1;Schalldämpfer, rund, für Luftleitungseinbau einschl. Gehäuse, Druckdifferenz bis 50 Pa, für Zuluft,;2,0;St;gaeb;3921742.x83
+2;Schalldämpfer, rund, für Luftleitungseinbau einschl. Gehäuse, Druckdifferenz bis 50 Pa, für Zuluft,;6,0;St;gaeb;3921742.x83
+3;DN 125;2,0;St;gaeb;3921742.x83
+4;DN 160;6,0;St;gaeb;3921742.x83
+5;DN 250;2,0;St;gaeb;3921742.x83
+6;Kulissenschalldämpfer zur Reduzierung von Ventilator- und Strömungsgeräuschen in raumlufttechnischen Anlagen. Dämpfungswirkung durch Absorption und Resonanz. Energiesparende sowie hygienisch getestete und zertifizierte Ausführung. Kulissenschalldämpfer bestehend aus einem Luftkanal mit Luftleitungsa;2,0;St;gaeb;3921742.x83
+7;Kulissenschalldämpfer zur Reduzierung von Ventilator- und Strömungsgeräuschen in raumlufttechnischen Anlagen. Dämpfungswirkung durch Absorption und Resonanz. Energiesparende sowie hygienisch getestete und zertifizierte Ausführung. Kulissenschalldämpfer bestehend aus einem Luftkanal mit Luftleitungsa;2,0;St;gaeb;3921742.x83
+8;Flexibler Rohrschalldämpfer;1,0;St;gaeb;3921742.x83
+9;Kulissenschalldämpfer, rechteckig,;1,0;St;gaeb;3921742.x83
+10;für Abluft;1,0;St;gaeb;3921742.x83
+11;für Zuluft;1,0;St;gaeb;3921742.x83
+12;für Außenluft;1,0;St;gaeb;3921742.x83
+1;Volumenstromregler, mechanisch selbsttätig für konstante Volumenströme, rund, für horizontalen Einbau;4,0;St;gaeb;3921742.x83
+2;Volumenstromregler, mechanisch selbsttätig für konstante Volumenströme, rund, für horizontalen Einbau;9,0;St;gaeb;3921742.x83
+3;DN 125;2,0;St;gaeb;3921742.x83
+4;DN 160;4,0;St;gaeb;3921742.x83
+5;VVS-Regelgeräte in rechteckiger Bauform für variable und konstante Volumenstromsysteme, für Zuluft oder Abluft, in 36 Nenngrößen. Hohe Regelgenauigkeit der eingestellten Volumenströme. Inbetriebnahmebereites Gerät, bestehend aus den mechanischen Bauteilen und den elektronischen Regelkomponenten. Ger;2,0;St;gaeb;3921742.x83
+6;VVS-Regelgeräte in rechteckiger Bauform für variable und konstante Volumenstromsysteme, für Zuluft oder Abluft, in 36 Nenngrößen. Hohe Regelgenauigkeit der eingestellten Volumenströme. Inbetriebnahmebereites Gerät, bestehend aus den mechanischen Bauteilen und den elektronischen Regelkomponenten. Ger;2,0;St;gaeb;3921742.x83
+1;Zentrales Lüftungsgerät 6.000 m3/h (Küche);1,0;St;gaeb;3921742.x83
+2;Segeltuchstutzen rechteckig 1222x917 mm passend zu vorgenannten Gerät. Segeltuchstutzen für rechteckige;2,0;St;gaeb;3921742.x83
+3;Kompletter Austauschsatz für alle im v.g. Gerät enthaltenen Filter.;1,0;St.;gaeb;3921742.x83
+4;Zentrales Lüftungsgerät 3.000 m3/h (Mensa);1,0;St;gaeb;3921742.x83
+5;Segeltuchstutzen rechteckig 866x355 mm passend zu vorgenannten Gerät. Segeltuchstutzen für rechteckige;4,0;St;gaeb;3921742.x83
+6;Kompletter Austauschsatz für alle im v.g. Gerät enthaltenen Filter.;1,0;St.;gaeb;3921742.x83
+7;Zentrales Lüftungsgerät 650 m3/h (WC-Anlagen);1,0;St;gaeb;3921742.x83
+8;Segeltuchstutzen rechteckig 409x247 mm passend zu vorgenannten Gerät. Segeltuchstutzen für rechteckige;4,0;St;gaeb;3921742.x83
+9;Kompletter Austauschsatz für alle im v.g. Gerät enthaltenen Filter.;1,0;St.;gaeb;3921742.x83
+10;Die Anlieferung bis zur Baustelle ist in den zuvor beschriebenen Positionen samt Abladen einzukalkulieren.;1,0;St;gaeb;3921742.x83
+11;Warmwasser-Heizregister;1,0;St;gaeb;3921742.x83
+12;EC-Radial-Rohrventilator zur direkten;10,0;St;gaeb;3921742.x83
+13;Befestigungsmanschetten;10,0;St;gaeb;3921742.x83
+14;Montagekonsole zu vorgenannten Rohrventilator;10,0;St;gaeb;3921742.x83
+15;Rückstauklappe für Rohreinbau;10,0;St;gaeb;3921742.x83
+16;Flexibler Rohrschalldämpfer;20,0;St;gaeb;3921742.x83
+1;Anschließen von Kabeln oder Leitungen, an gelieferten;20,0;St;gaeb;3921742.x83
+2;Anschließen von Kabeln oder Leitungen, an gelieferten;20,0;St;gaeb;3921742.x83
+3;Anschließen von Kabeln oder Leitungen, an gelieferten;25,0;St;gaeb;3921742.x83
+4;Anschließen von Kabeln oder Leitungen, an gelieferten;25,0;St;gaeb;3921742.x83
+5;Anschließen von Kabeln oder Leitungen, an gelieferten;5,0;St;gaeb;3921742.x83
+6;Anschließen von Kabeln oder Leitungen, an gelieferten;5,0;St;gaeb;3921742.x83
+7;Für die elektrische Verdrahtung der vom Lüftungsbauer zu liefernden Geräte sind exakte Schaltschemen und entsprechende Grundrißpläne mit eingezeichneten Standorten der Geräte und Kabelquerschnitte dem Elektriker zu übergeben. Kosten für erforderliche Baustellenbesprechungen sind einzukalkulieren.;1,0;psch;gaeb;3921742.x83
+1;Information zur Gebäudeautomation an den AN der Gebäudeautomation übergeben und fortschreiben, die Informationen werden mit den AN der beteiligten Leistungsbereiche abgestimmt und bearbeitet nach Auftragserteilung innerhalb von 14 Werktagen, die Informationsunterlagen bestehen aus Grund- und Verfahr;1,0;psch;gaeb;3921742.x83
+2;Funktionsmessung für RLT-Anlage DIN 18379, alle Messwerte werden dokumentiert und in einem Soll-Istvergleich zusammengestellt, gemessen wird die Stromaufnahme des Motors bei allen Bauelementen, die Druckdifferenz wasser-/medienseitig bei allen Bauelementen, die Druckdifferenz luftseitig bei allen Ba;1,0;psch;gaeb;3921742.x83
+3;Inbetriebnahme und Funktionsprüfung aller;1,0;psch;gaeb;3921742.x83
+4;Vor Inbetriebnahme und Übergabe ist die Erst-Hygieneinspektion nach VDI 6022 für alle vorbeschriebenen Anlagen mit entsprechende Beprobung und Auswertung samt Protokollierung durchzuführen.;1,0;psch;gaeb;3921742.x83
+5;Bezeichnungsschild DIN 825, Farbe und Beschriftung nach Angaben des AG, aus mehrschichtigem Kunststoff, Beschriftung 3-zeilig, gedruckt, Höhe 52 mm, Breite 100 mm, Befestigung mit Schildträger aus verzinktem Stahl, Halter und Spannband, Befestigungsuntergrund Rohrumhüllung.;40,0;St;gaeb;3921742.x83
+6;Luftrichtungspfeile um Aufkleben je nach Luftart.;30,0;St;gaeb;3921742.x83
+7;Mess-Stopfen zum Verschluss von Kanälen;24,0;St;gaeb;3921742.x83
+8;Erstellung der kompletten Montageplanung;1,0;Psch;gaeb;3921742.x83
+9;Anfertigen von revidierten Ausführungsunterlagen in kopier bzw. pausfähiger Form (Montagepläne), sowie elektronischer Form als Datenträger (z.B. CD-ROM, DVD-ROM, USB-Stick) gemäß DIN 18381, Punkt 3.5;1,0;St;gaeb;3921742.x83
+10;Anfertigen und Übergeben der vollständigen Dokumentation aller vom Auftragnehmer verbauten notwendigen Bauteile (Brandschotts, etc.) bestehend aus:;1,0;St;gaeb;3921742.x83
+11;Gerüststellung für die Zeit der Montage als fahrbares Spezialgerüst aus Aluminium oder als Hubsteiger. Die Arbeits- und Schutzgerüste sind nach Vorschriften der Berufsgenossen schaft, nach den Unfallverhütungsvorschriften und nach Angabe bzw. Vorgabe des SiGeKo zu errichten.;1,0;St;gaeb;3921742.x83
+12;Für die Gewährleitungszeit sind gemäß VDI 6022 entsprechende Abklatsch-Proben zu entnehmen. Die Beprobungen sind gemäß VDI 6022 zu prüfen. Die beiliegende Checkliste nach VDI 6022 ist einzuhalten und gilt als Kalkulationsgrundlage.;1,0;a;gaeb;3921742.x83
+1;Leistung wie Position zuvor, jedoch;30,0;h;gaeb;3921742.x83
+2;Leistung wie Position zuvor, jedoch;30,0;h;gaeb;3921742.x83
+3;Leistung wie Position zuvor, jedoch;15,0;h;gaeb;3921742.x83
+4;desgl. wie vor, jedoch;15,0;h;gaeb;3921742.x83
+5;desgl. wie vor, jedoch;15,0;h;gaeb;3921742.x83
+6;Leistung wie Position zuvor, jedoch;15,0;h;gaeb;3921742.x83
+7;desgl. wie vor, jedoch;10,0;h;gaeb;3921742.x83
+1;VRF 2-Leiter Aussengeraet;1,0;St;gaeb;3921742.x83
+2;VRF Steuerung;1,0;St;gaeb;3921742.x83
+3;VRF Ventil Set;1,0;St;gaeb;3921742.x83
+4;Erstinbetriebnahme;1,0;St;gaeb;3921742.x83
+5;VRF 2-Leiter Aussengeraet;1,0;St;gaeb;3921742.x83
+6;VRF Steuerung;1,0;St;gaeb;3921742.x83
+7;VRF Ventil Set;1,0;St;gaeb;3921742.x83
+8;Erstinbetriebnahme;1,0;St;gaeb;3921742.x83
+9;VRF-Inverter-Verfluessigereinheit,;1,0;St;gaeb;3921742.x83
+10;VRF 4-Wege Kassette 7,1 kW;4,0;St;gaeb;3921742.x83
+11;VRF 4-Wege Paneel weiss;4,0;St;gaeb;3921742.x83
+12;VRF 2-Leiter Y-Abzweig 19,2 - 42,6 kW;2,0;St;gaeb;3921742.x83
+13;VRF 2-Leiter Y-Abzweig <19,2 kW;1,0;St;gaeb;3921742.x83
+14;VRF Zentralfernbedienung;1,0;St;gaeb;3921742.x83
+15;Erstinbetriebnahme;1,0;St;gaeb;3921742.x83
+16;Erstinbetriebnahme;4,0;St;gaeb;3921742.x83
+17;Anschließen von Kabeln oder Leitungen, an gelieferten;6,0;St;gaeb;3921742.x83
+18;Anschließen von Kabeln oder Leitungen, an gelieferten;6,0;St;gaeb;3921742.x83
+19;Anschließen von Kabeln oder Leitungen, an gelieferten;6,0;St;gaeb;3921742.x83
+20;Anschließen von Kabeln oder Leitungen, an gelieferten;6,0;St;gaeb;3921742.x83
+21;Anschließen von Kabeln oder Leitungen, an gelieferten;2,0;St;gaeb;3921742.x83
+22;Anschließen von Kabeln oder Leitungen, an gelieferten;1,0;St;gaeb;3921742.x83
+23;Für die elektrische Verdrahtung der vom Kältebauer zu liefernden Geräte sind exakte Schaltschemen und entsprechende Grundrißpläne mit eingezeichneten Standorten der Geräte und Kabel- querschnitte dem Elektriker zu übergeben. Kosten für erforderliche Baustellenbesprechungen sind einzukalkulieren.;1,0;psch;gaeb;3921742.x83
+24;Rohrleitung aus Kupferrohr DIN EN 1057, nahtlos, für Klimakaltwasser, Außendurchmesser 12 mm, Wanddicke 1 mm, Verbindung durch Löten, einschl. Schweiß- bzw. Löt- und Dichtungsmittel, sowie Herstellen der Verbindungen, Form- und Verbindungsstücke werden gesondert vergütet, als Verteilungs- und Steigl;42,0;m;gaeb;3921742.x83
+25;Außendurchmesser 15 mm;16,0;m;gaeb;3921742.x83
+26;Außendurchmesser 18 mm;24,0;m;gaeb;3921742.x83
+27;Außendurchmesser 122mm;34,0;m;gaeb;3921742.x83
+28;Rohraufhängung als Rohrschelle, aus verzinktem Stahl, für eine axiale Dehnungsaufnahme bis 40 mm, mit Kautschuksystemträger als Einlage, Länge Aufhängung bis 0,5 m, Befestigung mit Gewindestäben, mit bauaufsichtlich zugelassenen Dübeln, einschl. Bohrarbeiten, Rohr aus Kupfer, DN 10, für Klimakaltwas;24,0;St;gaeb;3921742.x83
+29;DN 12;10,0;St;gaeb;3921742.x83
+30;DN 15;14,0;St;gaeb;3921742.x83
+31;DN 20;20,0;St;gaeb;3921742.x83
+32;Bogen als Kapillarlötfitting DIN EN 1254-1, aus Kupfer, für Rohrleitung aus Kupferrohr DIN EN 1057, nahtlos, für Klimakaltwasser, Außendurchmesser 12 mm.;8,0;St;gaeb;3921742.x83
+33;Außendurchmesser 15 mm;2,0;St;gaeb;3921742.x83
+34;Außendurchmesser 18 mm;4,0;St;gaeb;3921742.x83
+35;Außendurchmesser 22 mm;6,0;St;gaeb;3921742.x83
+36;Muffe als Kapillarlötfitting DIN EN 1254-1, aus Kupfer, für Rohrleitung aus Kupferrohr DIN EN 1057, nahtlos, für Klimakaltwasser, Außendurchmesser 10 mm.;5,0;St;gaeb;3921742.x83
+37;Außendurchmesser 15 mm;2,0;St;gaeb;3921742.x83
+38;Außendurchmesser 18 mm;4,0;St;gaeb;3921742.x83
+39;Außendurchmesser 22 mm;3,0;St;gaeb;3921742.x83
+40;Kältedämmung DIN 4140, an Rohrleitung, DN 10, im Gebäude, Oberkante Dämmung über Gelände/Fußboden bis 3,5 m, Dämmung aus flexiblem Elastomerschaum DIN EN 14304, Dämmschichtdicke 13 mm, Brandverhaltensklasse DIN EN 13501-1 B (schwerentflammbar), Wärmeleitfähigkeit 0,040 W/(mK) bei 0 Grad C Mitteltemp;60,0;m;gaeb;3921742.x83
+41;DN 12;16,0;m;gaeb;3921742.x83
+42;DN 15;24,0;m;gaeb;3921742.x83
+43;DN 20;52,0;m;gaeb;3921742.x83
+44;Passstück aus flexiblem Elastomerschaum DIN EN 14304, Kältedämmung DIN 4140 an haus- und betriebstechnische Anlagen, an Rohrleitung, DN 10, im Gebäude, Oberkante Dämmung über Gelände/Fußboden bis 3,5 m, Brandverhaltensklasse DIN EN 13501-1 B (schwerentflammbar), Wärmeleitfähigkeit 0,040 W/(mK) bei 0;8,0;St;gaeb;3921742.x83
+45;DN 12;2,0;St;gaeb;3921742.x83
+46;DN 15;4,0;St;gaeb;3921742.x83
+47;DN 20;6,0;St;gaeb;3921742.x83
+48;Bogen aus flexiblem Elastomerschaum DIN EN 14304, Kältedämmung DIN 4140 an haus- und betriebstechnische Anlagen, an Rohrleitung, DN 10, im Gebäude, Oberkante Dämmung über Gelände/Fußboden bis 3,5 m, Brandverhaltensklasse DIN EN 13501-1 B (schwerentflammbar), Wärmeleitfähigkeit 0,040 W/(mK) bei 0 Gra;8,0;St;gaeb;3921742.x83
+49;DN 12;2,0;St;gaeb;3921742.x83
+50;DN 15;4,0;St;gaeb;3921742.x83
+51;DN 20;6,0;St;gaeb;3921742.x83
+52;Ausschnitt für Dämmung aus flexiblem Elastomerschaum DIN EN 14304, an Kältedämmung DIN 4140 an haus- und betriebstechnische Anlagen, an Rohrleitung, DN 10, im Gebäude, Oberkante Dämmung über Gelände/Fußboden bis 3,5 m, Brandverhaltensklasse DIN EN 13501-1 B (schwerentflammbar), Wärmeleitfähigkeit 0,;34,0;St;gaeb;3921742.x83
+53;DN 12;10,0;St;gaeb;3921742.x83
+54;DN 15;14,0;St;gaeb;3921742.x83
+55;DN 20;30,0;St;gaeb;3921742.x83
+56;Endstelle für Dämmung aus flexiblem Elastomerschaum DIN EN 14304, an Kältedämmung DIN 4140 an haus- und betriebstechnische Anlagen, an Rohrleitung, DN 10, im Gebäude, Oberkante Dämmung über Gelände/Fußboden bis 3,5 m, Brandverhaltensklasse DIN EN 13501-1 B (schwerentflammbar), Wärmeleitfähigkeit 0,0;8,0;St;gaeb;3921742.x83
+57;DN 12;2,0;St;gaeb;3921742.x83
+58;DN 15;4,0;St;gaeb;3921742.x83
+59;DN 20;6,0;St;gaeb;3921742.x83
+60;Kältedämmung DIN 4140, an Rohraufhängung, DN 10, im Gebäude, Oberkante Dämmung über Gelände/Fußboden bis 3,5 m, Dämmung aus synthetischem Kautschuk, Baustoffklasse DIN 4102-1 B2 (normalentflammbar), Wärmeleitfähigkeit 0,033 W/(mK) bei 0 Grad C Mitteltemperatur DIN EN 12667, Wasserdampfdiffusionswide;34,0;St;gaeb;3921742.x83
+61;Kältedämmung DIN 4140, an Rohraufhängung, DN 12, im Gebäude, Oberkante Dämmung über Gelände/Fußboden bis 3,5 m, Dämmung aus synthetischem Kautschuk, Baustoffklasse DIN 4102-1 B2 (normalentflammbar), Wärmeleitfähigkeit 0,033 W/(mK) bei 0 Grad C Mitteltemperatur DIN EN 12667, Wasserdampfdiffusionswide;10,0;St;gaeb;3921742.x83
+62;Kältedämmung DIN 4140, an Rohraufhängung, DN 15, im Gebäude, Oberkante Dämmung über Gelände/Fußboden bis 3,5 m, Dämmung aus synthetischem Kautschuk, Baustoffklasse DIN 4102-1 B2 (normalentflammbar), Wärmeleitfähigkeit 0,033 W/(mK) bei 0 Grad C Mitteltemperatur DIN EN 12667, Wasserdampfdiffusionswide;14,0;St;gaeb;3921742.x83
+63;Kältedämmung DIN 4140, an Rohraufhängung, DN 20, im Gebäude, Oberkante Dämmung über Gelände/Fußboden bis 3,5 m, Dämmung aus synthetischem Kautschuk, Baustoffklasse DIN 4102-1 B2 (normalentflammbar), Wärmeleitfähigkeit 0,033 W/(mK) bei 0 Grad C Mitteltemperatur DIN EN 12667, Wasserdampfdiffusionswide;30,0;St;gaeb;3921742.x83
+64;Mehrkosten Erschwernis in Bereichen mit Behinderung durch technische Einrichtungen und Bauteile, keine ausreichende Konvektion bzw. unzureichender Abstand zu Objekten für Kältedämmung Kautschuk DN 10, Abrechnung pro Meter Kältedämmung einschl. aller Formstücke etc.;18,0;m;gaeb;3921742.x83
+65;Mehrkosten Erschwernis in Bereichen mit Behinderung durch technische Einrichtungen und Bauteile, keine ausreichende Konvektion bzw. unzureichender Abstand zu Objekten für Kältedämmung Kautschuk DN 12, Abrechnung pro Meter Kältedämmung einschl. aller Formstücke etc.;6,0;m;gaeb;3921742.x83
+66;Mehrkosten Erschwernis in Bereichen mit Behinderung durch technische Einrichtungen und Bauteile, keine ausreichende Konvektion bzw. unzureichender Abstand zu Objekten für Kältedämmung Kautschuk DN 15, Abrechnung pro Meter Kältedämmung einschl. aller Formstücke etc.;10,0;m;gaeb;3921742.x83
+67;Mehrkosten Erschwernis in Bereichen mit Behinderung durch technische Einrichtungen und Bauteile, keine ausreichende Konvektion bzw. unzureichender Abstand zu Objekten für Kältedämmung Kautschuk DN 20, Abrechnung pro Meter Kältedämmung einschl. aller Formstücke etc.;14,0;m;gaeb;3921742.x83
+68;Kältedämmung einschl. Ummantelung DIN 4140, an Rohrleitung, DN 10, im Freien, Oberkante Dämmung über Gelände/Fußboden bis 3,5 m, Dämmung aus flexiblem Elastomerschaum DIN EN 14304, Dämmschichtdicke 13 mm, Baustoffklasse DIN 4102-1 B2 (normalentflammbar), Wärmeleitfähigkeit 0,033 W/(mK) bei 0 Grad C ;28,0;m;gaeb;3921742.x83
+69;DN 12;8,0;m;gaeb;3921742.x83
+70;DN 20;36,0;m;gaeb;3921742.x83
+71;Passstück aus flexiblem Elastomerschaum DIN EN 14304, Kältedämmung einschl. Ummantelung DIN 4140 an haus- und betriebstechnische Anlagen, an Rohrleitung, DN 10, im Freien, Oberkante Dämmung über Gelände/Fußboden bis 3,5 m, Baustoffklasse DIN 4102-1 B2 (normalentflammbar), Wärmeleitfähigkeit 0,033 W/;4,0;St;gaeb;3921742.x83
+72;DN 12;2,0;St;gaeb;3921742.x83
+73;DN 20;6,0;St;gaeb;3921742.x83
+74;Bogen aus flexiblem Elastomerschaum DIN EN 14304, Kältedämmung einschl. Ummantelung DIN 4140 an haus- und betriebstechnische Anlagen, an Rohrleitung, DN 10, im Freien, Oberkante Dämmung über Gelände/Fußboden bis 3,5 m, Baustoffklasse DIN 4102-1 B2 (normalentflammbar), Wärmeleitfähigkeit 0,033 W/(mK);4,0;St;gaeb;3921742.x83
+75;DN 12;2,0;St;gaeb;3921742.x83
+76;DN 20;6,0;St;gaeb;3921742.x83
+77;Ausschnitt für Dämmung aus flexiblem Elastomerschaum DIN EN 14304, an Kältedämmung einschl. Ummantelung DIN 4140 an haus- und betriebstechnische Anlagen, an Rohrleitung, DN 10, im Freien, Oberkante Dämmung über Gelände/Fußboden bis 3,5 m, Baustoffklasse DIN 4102-1 B2 (normalentflammbar), Wärmeleitfä;16,0;St;gaeb;3921742.x83
+78;DN 12;4,0;St;gaeb;3921742.x83
+79;DN 20;18,0;St;gaeb;3921742.x83
+80;Deckel für Dämmung aus flexiblem Elastomerschaum DIN EN 14304, an Kältedämmung einschl. Ummantelung DIN 4140 an haus- und betriebstechnische Anlagen, an Rohrleitung, DN 10, im Freien, Oberkante Dämmung über Gelände/Fußboden bis 3,5 m, Baustoffklasse DIN 4102-1 B2 (normalentflammbar), Wärmeleitfähigk;4,0;St;gaeb;3921742.x83
+81;DN 12;2,0;St;gaeb;3921742.x83
+82;DN 20;6,0;St;gaeb;3921742.x83
+83;Endstelle für Dämmung aus flexiblem Elastomerschaum DIN EN 14304, an Kältedämmung einschl. Ummantelung DIN 4140 an haus- und betriebstechnische Anlagen, an Rohrleitung, DN 10, im Freien, Oberkante Dämmung über Gelände/Fußboden bis 3,5 m, Baustoffklasse DIN 4102-1 B2 (normalentflammbar), Wärmeleitfäh;4,0;St;gaeb;3921742.x83
+84;DN 12;2,0;St;gaeb;3921742.x83
+85;DN 20;6,0;St;gaeb;3921742.x83
+86;Kältedämmung DIN 4140 einschl. Ummantelung, an Rohraufhängung, DN 10, im Freien, Oberkante Dämmung über Gelände/Fußboden bis 3,5 m, Dämmung aus synthetischem Kautschuk, Baustoffklasse DIN 4102-1 B2 (normalentflammbar), Wärmeleitfähigkeit 0,033 W/(mK) bei 0 Grad C Mitteltemperatur DIN EN 12667, Wasse;14,0;St;gaeb;3921742.x83
+87;Kältedämmung DIN 4140 einschl. Ummantelung, an Rohraufhängung, DN 12, im Freien, Oberkante Dämmung über Gelände/Fußboden bis 3,5 m, Dämmung aus synthetischem Kautschuk, Baustoffklasse DIN 4102-1 B2 (normalentflammbar), Wärmeleitfähigkeit 0,033 W/(mK) bei 0 Grad C Mitteltemperatur DIN EN 12667, Wasse;4,0;St;gaeb;3921742.x83
+88;Kältedämmung DIN 4140 einschl. Ummantelung, an Rohraufhängung, DN 20, im Freien, Oberkante Dämmung über Gelände/Fußboden bis 3,5 m, Dämmung aus synthetischem Kautschuk, Baustoffklasse DIN 4102-1 B2 (normalentflammbar), Wärmeleitfähigkeit 0,033 W/(mK) bei 0 Grad C Mitteltemperatur DIN EN 12667, Wasse;18,0;St;gaeb;3921742.x83
+89;Kernbohrung in der Geschoßdecke aus Stahlbeton, senkrecht, Bohrdurchmesser über 100 bis 150 mm, Bohrtiefe über 25 bis 30 cm, einschl. Lösen des Bohrkerns aus dem Gefüge und Lagerung des anfallenden Kerns im Behälter des AN, Bohrstellenhöhe über der Standebene, Höhe bis 3,5 m, Ausführung von oben. Da;4,0;St;gaeb;3921742.x83
+90;Anzeichnen von Durchbrüchen;4,0;St;gaeb;3921742.x83
+91;Anzeichnen von Kernlochbohrzonen;4,0;St;gaeb;3921742.x83
+1;Abluftelement Rand V2A, Höhe 270;12,0;m;gaeb;3921742.x83
+2;Abluftelement Mittel V2A, Höhe 270;4,0;m;gaeb;3921742.x83
+3;Flachpaneele pulverbeschichtet in RAL 9010.;13,0;m²;gaeb;3921742.x83
+4;Randwinkel;30,0;m;gaeb;3921742.x83
+5;Randbalken doppelt H=500, V2A;13,0;m;gaeb;3921742.x83
+6;Kombi-Abscheider 500x250x45 mm;21,0;St;gaeb;3921742.x83
+7;LED-light Platine 4000K IP55 ALP 9010 nicht dimmbar L 600 mm;2,0;St;gaeb;3921742.x83
+8;LED-light Platine 4000K IP55 ALP 9010 nicht dimmbar L 1200 mm;4,0;St;gaeb;3921742.x83
+9;Flachpaneele pulverbeschichtet in RAL 9010.;54,0;m²;gaeb;3921742.x83
+10;Randwinkel;54,0;m;gaeb;3921742.x83
+11;T-Schiene;18,0;m;gaeb;3921742.x83
+12;Verdrängungsauslass verz.;22,0;m;gaeb;3921742.x83
+13;LED-light Platine 4000K IP55 ALP 9010 nicht dimmbar L 600 mm;10,0;St;gaeb;3921742.x83
+14;LED-light Platine 4000K IP55 ALP 9010 nicht dimmbar L 1200 mm;8,0;St;gaeb;3921742.x83
+15;Waagrechter Deckenabscheider 450 m3/h;3,0;St;gaeb;3921742.x83
+16;Ausschnitt bis 450 mm;10,0;St;gaeb;3921742.x83
+17;Steuerung komplett Basis-Modul;1,0;St;gaeb;3921742.x83
+18;Abscheider Sicherheitseinrichtung;4,0;St;gaeb;3921742.x83
+19;UV-C-Strahler 130 Watt;4,0;St;gaeb;3921742.x83
+20;UV-C-Strahler 160 Watt;2,0;St;gaeb;3921742.x83
+21;UV-C-Strahler Befestigung;6,0;St;gaeb;3921742.x83
+22;Steuermodul;6,0;St;gaeb;3921742.x83
+23;Strömungswächter 230V AC;1,0;St;gaeb;3921742.x83
+24;Patchkabel AWG 24, 5m Cat.5;1,0;St;gaeb;3921742.x83
+25;Inbetriebnahme UV-Anlage;1,0;St;gaeb;3921742.x83
+1;Wartung / Inspektion nach Wartungskatalog 430 / 434 (in Anlehnung an die AMEV2018) gemäß dem beigefügten Musterwartungsvertrag und Arbeitskarten / Leistungskatalogen;4,0;a;gaeb;3921742.x83
+02.1;Luftltg. rechteckig V2A Kanten-L bis 500mm (L1);5,0;m2;gaeb-flat;3921743.d83
+02.2;Luftltg. rechteckig V2A Kanten-L 500 bis 1000mm (L2);3,0;m2;gaeb-flat;3921743.d83
+02.3;Formstück rechteckig V2A Kanten-L bis 500mm (F1);45,0;m2;gaeb-flat;3921743.d83
+02.4;Formstück rechteckig V2A Kanten-L 500 bis 1000mm (F2);67,0;m2;gaeb-flat;3921743.d83
+02.5;Luftltg. rechteckig Stahl verz Kanten-L bis 500mm (L1);36,0;m2;gaeb-flat;3921743.d83
+02.6;"Wie vor, jedoch Kantenlänge über 500 bis 1000 mm; (L2)";30,0;m2;gaeb-flat;3921743.d83
+02.7;"Wie vor, jedoch Kantenlänge über 1000 bis 1500 mm; (L3)";15,0;m2;gaeb-flat;3921743.d83
+02.8;Formstück rechteckig Stahl verz Kanten-L bis 500mm (F1);49,0;m2;gaeb-flat;3921743.d83
+02.9;"Wie vor, jedoch Kantenlänge über 500 bis 1000 mm; (F2)";92,0;m2;gaeb-flat;3921743.d83
+02.10;"Wie vor, jedoch Kantenlänge über 1000 bis 1500 mm; (F3)";26,0;m2;gaeb-flat;3921743.d83
+02.11;Zuschlag Montage gedämmter Kanäle / Formstück;25,0;m²;gaeb-flat;3921743.d83
+02.12;Flachträger 19mm;10,0;m;gaeb-flat;3921743.d83
+02.13;Inspektionsöffnung oval Stahl verz 300/100mm;4,0;St;gaeb-flat;3921743.d83
+02.14;Inspektionsöffnung oval Stahl verz 400/200 mm;2,0;St;gaeb-flat;3921743.d83
+02.15;Inspektionsöffnung oval Edelstahl 300/100mm;2,0;St;gaeb-flat;3921743.d83
+02.16;Inspektionsöffnung oval Edelstahl 400/200 mm;1,0;St;gaeb-flat;3921743.d83
+02.17;Wickelfalzrohr Stahl verz DN80;36,0;m;gaeb-flat;3921743.d83
+02.18;Wickelfalzrohr Stahl verz DN100;13,0;m;gaeb-flat;3921743.d83
+02.19;Wickelfalzrohr Stahl verz DN125;13,0;m;gaeb-flat;3921743.d83
+02.20;Wickelfalzrohr Stahl verz DN160;42,0;m;gaeb-flat;3921743.d83
+02.21;Wickelfalzrohr Stahl verz DN180;3,0;m;gaeb-flat;3921743.d83
+02.22;Wickelfalzrohr Stahl verz DN200;31,0;m;gaeb-flat;3921743.d83
+02.23;Wickelfalzrohr Stahl verz DN250;8,0;m;gaeb-flat;3921743.d83
+02.24;Wickelfalzrohr Stahl verz DN315;10,0;m;gaeb-flat;3921743.d83
+02.25;Wickelfalzrohr Stahl verz DN355;18,0;m;gaeb-flat;3921743.d83
+02.26;Rohrbefestigung Stahl, verzinkt DN 80;24,0;St;gaeb-flat;3921743.d83
+02.27;Rohrbefestigung Stahl, verzinkt DN 100;8,0;St;gaeb-flat;3921743.d83
+02.28;Rohrbefestigung Stahl, verzinkt DN 125;9,0;St;gaeb-flat;3921743.d83
+02.29;Rohrbefestigung Stahl, verzinkt DN 160;28,0;St;gaeb-flat;3921743.d83
+02.30;Rohrbefestigung Stahl, verzinkt DN 180;2,0;St;gaeb-flat;3921743.d83
+02.31;Rohrbefestigung Stahl, verzinkt DN 200;21,0;St;gaeb-flat;3921743.d83
+02.32;Rohrbefestigung Stahl, verzinkt DN 250;6,0;St;gaeb-flat;3921743.d83
+02.33;Rohrbefestigung Stahl, verzinkt DN 315;5,0;St;gaeb-flat;3921743.d83
+02.34;Rohrbefestigung Stahl, verzinkt DN 355;10,0;St;gaeb-flat;3921743.d83
+02.35;Bundkragen Stahl verz DN 80;1,0;St;gaeb-flat;3921743.d83
+02.36;"Wie vor, jedoch DN 100;";2,0;St;gaeb-flat;3921743.d83
+02.37;"Wie vor, jedoch DN 160;";20,0;St;gaeb-flat;3921743.d83
+02.38;"Wie vor, jedoch DN 200;";27,0;St;gaeb-flat;3921743.d83
+02.39;Wie vor, jedoch DN 250;4,0;St;gaeb-flat;3921743.d83
+02.40;Bogen 15-90Grad Stahl verz DN 80;24,0;St;gaeb-flat;3921743.d83
+02.41;"Wie vor, jedoch DN 100;";14,0;St;gaeb-flat;3921743.d83
+02.42;"Wie vor, jedoch DN 125;";9,0;St;gaeb-flat;3921743.d83
+02.43;"Wie vor, jedoch DN 160;";45,0;St;gaeb-flat;3921743.d83
+02.44;"Wie vor, jedoch DN 180;";2,0;St;gaeb-flat;3921743.d83
+02.45;"Wie vor, jedoch DN 200;";30,0;St;gaeb-flat;3921743.d83
+02.46;"Wie vor, jedoch DN 250;";6,0;St;gaeb-flat;3921743.d83
+02.47;"Wie vor, jedoch DN 315;";5,0;St;gaeb-flat;3921743.d83
+02.48;"Wie vor, jedoch DN 355;";4,0;St;gaeb-flat;3921743.d83
+02.49;Abzweigstück 45-90Grad Stahl verz DN 80;19,0;St;gaeb-flat;3921743.d83
+02.50;"Wie vor, jedoch größter DN 100;";10,0;St;gaeb-flat;3921743.d83
+02.51;"Wie vor, jedoch größter DN 125;";9,0;St;gaeb-flat;3921743.d83
+02.52;"Wie vor, jedoch größter DN 160;";27,0;St;gaeb-flat;3921743.d83
+02.53;"Wie vor, jedoch größter DN 180;";2,0;St;gaeb-flat;3921743.d83
+02.54;"Wie vor, jedoch größter DN 200;";11,0;St;gaeb-flat;3921743.d83
+02.55;"Wie vor, jedoch größter DN 250;";2,0;St;gaeb-flat;3921743.d83
+02.56;"Wie vor, jedoch größter DN 315;";10,0;St;gaeb-flat;3921743.d83
+02.57;Revisionsstück Stahl verz DN100;2,0;St;gaeb-flat;3921743.d83
+02.58;"Wie vor, jedoch DN 125;";2,0;St;gaeb-flat;3921743.d83
+02.59;"Wie vor, jedoch DN 160;";4,0;St;gaeb-flat;3921743.d83
+02.60;Übergangsstück konisch Stahl verz DN 100;2,0;St;gaeb-flat;3921743.d83
+02.61;"Wie vor, jedoch größter DN 125;";5,0;St;gaeb-flat;3921743.d83
+02.62;"Wie vor, jedoch größter DN 160;";10,0;St;gaeb-flat;3921743.d83
+02.63;"Wie vor, jedoch größter DN 180;";1,0;St;gaeb-flat;3921743.d83
+02.64;"Wie vor, jedoch größter DN 200;";31,0;St;gaeb-flat;3921743.d83
+02.65;"Wie vor, jedoch größter DN 250;";2,0;St;gaeb-flat;3921743.d83
+02.66;"Wie vor, jedoch größter DN 315;";10,0;St;gaeb-flat;3921743.d83
+02.67;Steckverbinder Stahl verz DN 80;8,0;St;gaeb-flat;3921743.d83
+02.68;Wie vor, jedoch DN 100;5,0;St;gaeb-flat;3921743.d83
+02.69;"Wie vor, jedoch DN 125;";6,0;St;gaeb-flat;3921743.d83
+02.70;"Wie vor, jedoch DN 160;";27,0;St;gaeb-flat;3921743.d83
+02.71;"Wie vor, jedoch DN 180;";2,0;St;gaeb-flat;3921743.d83
+02.72;"Wie vor, jedoch DN 200;";23,0;St;gaeb-flat;3921743.d83
+02.73;"Wie vor, jedoch DN 250;";3,0;St;gaeb-flat;3921743.d83
+02.74;"Wie vor, jedoch DN 315;";10,0;St;gaeb-flat;3921743.d83
+02.75;Muffe Stahl verz DN 80;8,0;St;gaeb-flat;3921743.d83
+02.76;"Wie vor, jedoch DN 100;";5,0;St;gaeb-flat;3921743.d83
+02.77;"Wie vor, jedoch DN 125;";6,0;St;gaeb-flat;3921743.d83
+02.78;"Wie vor, jedoch DN 160;";27,0;St;gaeb-flat;3921743.d83
+02.79;"Wie vor, jedoch DN 180;";2,0;St;gaeb-flat;3921743.d83
+02.80;"Wie vor, jedoch DN 200;";23,0;St;gaeb-flat;3921743.d83
+02.81;"Wie vor, jedoch DN 250;";3,0;St;gaeb-flat;3921743.d83
+02.82;"Wie vor, jedoch DN 315;";10,0;St;gaeb-flat;3921743.d83
+02.83;Luftltg. rund flexibel Alu DN80;10,0;m;gaeb-flat;3921743.d83
+02.84;"Wie vor, jedoch DN 100;";10,0;m;gaeb-flat;3921743.d83
+02.85;"Wie vor, jedoch DN 125;";2,0;m;gaeb-flat;3921743.d83
+02.86;"Wie vor, jedoch DN 160;";5,0;m;gaeb-flat;3921743.d83
+02.87;"Wie vor, jedoch DN 200;";31,0;m;gaeb-flat;3921743.d83
+02.88;"Wie vor, jedoch DN 250;";2,0;m;gaeb-flat;3921743.d83
+02.89;Anschluss an WC mit Anschluss für Geruchsabsaugung.;11,0;St.;gaeb-flat;3921743.d83
+03.1;Luftltg. rechteckig V2A Kanten-L 500 bis 1000mm (L2);50,0;m2;gaeb-flat;3921743.d83
+03.2;Formstück rechteckig V2A Kanten-L bis 500mm (F1);2,0;m2;gaeb-flat;3921743.d83
+03.3;Formstück rechteckig V2A Kanten-L 500 bis 1000mm (F2);40,0;m2;gaeb-flat;3921743.d83
+03.4;Formstück rechteckig V2A Kanten-L 10000 bis 1500mm (F3);5,0;m2;gaeb-flat;3921743.d83
+03.5;Luftltg. rechteckig Stahl verz Kanten-L über 500 bis 1000mm (L2);15,0;m2;gaeb-flat;3921743.d83
+03.6;Formstück rechteckig Stahl verz Kanten-L bis 500mm (F1);3,0;m2;gaeb-flat;3921743.d83
+03.7;"Wie vor, jedoch Kantenlänge über 500 bis 1000 mm; (F2)";28,0;m2;gaeb-flat;3921743.d83
+03.8;"Wie vor, jedoch Kantenlänge über 1000 bis 1500 mm; (F3)";5,0;m2;gaeb-flat;3921743.d83
+03.9;Flachträger 19mm;10,0;m;gaeb-flat;3921743.d83
+03.10;Zulage Abdichtung Kanalfugen;150,0;m;gaeb-flat;3921743.d83
+03.11;Unterkonstruktion Lüftungskanal 750x500 mm Statischer Nachweis Windlast Aufhänge- Stützkonstruktion Luftltg. Stahl feuerverz Befestigungspunkt Lüftung Flachdach Installationsschiene NG 30/20 mm Installationsschiene NG 40/40 mm Schienenfuss NG 40/40;6,0;St.;gaeb-flat;3921743.d83
+03.12;Unterkonstruktion Lüftungskanal 1000+500x500 mm Statischer Nachweis Windlast Aufhänge- Stützkonstruktion Luftltg. Stahl feuerverz Befestigungspunkt Lüftung Flachdach Installationsschiene NG 30/20 mm Installationsschiene NG 40/40 mm Schienenfuss NG 40/40;3,0;St.;gaeb-flat;3921743.d83
+03.13;Unterkonstruktion Lüftungskanal 1000+1000x500 mm Statischer Nachweis Windlast Aufhänge- Stützkonstruktion Luftltg. Stahl feuerverz Befestigungspunkt Lüftung Flachdach Installationsschiene NG 30/20 mm Installationsschiene NG 40/40 mm Schienenfuss NG 40/40;10,0;St.;gaeb-flat;3921743.d83
+03.14;Inspektionsöffnung oval Stahl verz 300/100mm;2,0;St;gaeb-flat;3921743.d83
+03.15;Inspektionsöffnung oval Stahl verz 400/200 mm;1,0;St;gaeb-flat;3921743.d83
+03.16;Inspektionsöffnung oval Edelstahl 300/100mm;2,0;St;gaeb-flat;3921743.d83
+03.17;Inspektionsöffnung oval Edelstahl 400/200 mm;1,0;St;gaeb-flat;3921743.d83
+04.1;Aufhänge- Stützkonstruktion Luftltg. Stahl verz;200,0;kg;gaeb-flat;3921743.d83
+04.2;Aufhänge- Stützkonstruktion Luftltg. Edelstahl;100,0;kg;gaeb-flat;3921743.d83
+04.3;Installationsschiene NG 30/20 mm;30,0;m;gaeb-flat;3921743.d83
+04.4;Installationsschiene NG 40/30 mm;60,0;m;gaeb-flat;3921743.d83
+04.5;Installationsschiene NG 40/40 mm;30,0;m;gaeb-flat;3921743.d83
+04.6;Installationsschiene NG 30/20 mm Edelstahl;15,0;m;gaeb-flat;3921743.d83
+04.7;Installationsschiene NG 40/30 mm Edelstahl;30,0;m;gaeb-flat;3921743.d83
+04.8;Installationsschiene NG 40/40 mm Edelstahl;15,0;m;gaeb-flat;3921743.d83
+04.9;Installationsschienen Konsolen NG 30/20, l=300 mm;5,0;St;gaeb-flat;3921743.d83
+04.10;Installationsschienen Konsolen NG 40/30, l=300 mm;5,0;St;gaeb-flat;3921743.d83
+04.11;Installationsschienen Konsolen NG 40/40, l=300 mm;5,0;St;gaeb-flat;3921743.d83
+04.12;Installationsschienen Konsolen NG 30/20, l=500 mm;5,0;St;gaeb-flat;3921743.d83
+04.13;Installationsschienen Konsolen NG 40/30, l=500 mm;5,0;St;gaeb-flat;3921743.d83
+04.14;Installationsschienen Konsolen NG 40/40, l=500 mm;5,0;St;gaeb-flat;3921743.d83
+04.15;Gewindestab M8;50,0;m;gaeb-flat;3921743.d83
+04.16;Dübel M10x60mm;500,0;St.;gaeb-flat;3921743.d83
+05.1;Ausmessen und Anzeichnen von Durchbrüchen/Bohrungen;7,0;St;gaeb-flat;3921743.d83
+05.2;Kernbohrung Decke Durchmesser 350-400mm T 25-30cm;2,0;St;gaeb-flat;3921743.d83
+05.3;Kernbohrung Decke Durchmesser 400-450mm T 25-30cm;5,0;St;gaeb-flat;3921743.d83
+05.4;Stemm-, Bohr-, und Fräsarbeiten WD 250/250 Gipskarton;12,0;St;gaeb-flat;3921743.d83
+05.5;Stemm-, Bohr-, und Fräsarbeiten WD 400/400 Gipskarton;10,0;St;gaeb-flat;3921743.d83
+06.1;Isolierschlauch 4 mm für DN 100;10,0;m;gaeb-flat;3921743.d83
+06.2;Isolierschlauch 4 mm für DN 125;5,0;m;gaeb-flat;3921743.d83
+06.3;Isolierschlauch 4 mm für DN 160;10,0;m;gaeb-flat;3921743.d83
+06.4;Isolierschlauch 4 mm für DN 200;5,0;m;gaeb-flat;3921743.d83
+06.5;Isolierschlauch 4 mm für DN 250;2,0;m;gaeb-flat;3921743.d83
+06.6;Wärmedämmung Luftltg. Kanten-L bis 500mm Mineralwolle AS-Qualität Lamellenmatte druckfest D 30mm;2,0;m2;gaeb-flat;3921743.d83
+06.7;"Wie vor, jedoch Kantenlänge über 500 bis 1000 mm;";3,0;m2;gaeb-flat;3921743.d83
+06.8;Wärmedämmung Formstück Luftleitung rechteckig Kanten-L bis 500mm Mineralwolle AS-Qualität Lamellenmatte druckf;4,0;m2;gaeb-flat;3921743.d83
+06.9;"Wie vor, jedoch Kantenlänge über 500 bis 1000 mm;";5,0;m2;gaeb-flat;3921743.d83
+06.10;Mehrkosten erschwerte Montage Kanten-L bis 500mm;3,0;m2;gaeb-flat;3921743.d83
+06.11;Mehrkosten erschwerte Montage Kanten-L bis 1000mm;4,0;m2;gaeb-flat;3921743.d83
+06.12;Kältedämmung Luftltg. Kanten-L bis 500mm (L1) synth. Kautschuk D 19mm;3,0;m2;gaeb-flat;3921743.d83
+06.13;"Wie vor, jedoch Kantenlänge über 500 bis 1000 mm; (L2)";5,0;m2;gaeb-flat;3921743.d83
+06.14;"Kältedämmung Formstück Luftleitung rechteckig Kanten-L bis 500mm; (F1) synth. Kautschuk D 19mm";3,0;m2;gaeb-flat;3921743.d83
+06.15;"Wie vor, jedoch Kantenlänge über 500 bis 1000 mm; (F2)";5,0;m2;gaeb-flat;3921743.d83
+06.16;"Wie vor, jedoch Kantenlänge über 1000 bis 1500 mm; (F3)";2,0;m2;gaeb-flat;3921743.d83
+06.17;Mehrkosten Kältedämmung Kautschuk Kanten-L bis 500mm;3,0;m2;gaeb-flat;3921743.d83
+06.18;Mehrkosten Kältedämmung Kautschuk Kanten-L bis 1000mm;5,0;m2;gaeb-flat;3921743.d83
+06.19;Mehrkosten Kältedämmung Kautschuk Kanten-L bis 1500mm;2,0;m2;gaeb-flat;3921743.d83
+06.20;Überdämmung Kanalflansch bis 500mm (L1) synth. Kautschuk D 19mm;8,0;St.;gaeb-flat;3921743.d83
+06.21;Überdämmung Kanalflansch über 500 bis 1000mm (L2);12,0;St.;gaeb-flat;3921743.d83
+06.22;Überdämmung Kanalflansch über 1000 bis 1500mm (L3);4,0;St.;gaeb-flat;3921743.d83
+06.23;Mehrkosten Revisionsöffnung;2,0;St.;gaeb-flat;3921743.d83
+07.1;Luftventil Zu-/Abluft 100mm besch. Stahl;12,0;St;gaeb-flat;3921743.d83
+07.2;Luftventil Zu-/Abluft 125mm besch. Stahl;2,0;St;gaeb-flat;3921743.d83
+07.3;Luftventil Zu-/Abluft 150mm besch. Stahl;3,0;St;gaeb-flat;3921743.d83
+07.4;Zuluft - Drallauslass NG400;2,0;St;gaeb-flat;3921743.d83
+07.5;Kleintierschutzgitter rund DN100;4,0;St;gaeb-flat;3921743.d83
+07.6;Zu- und Abluftgitter 625x125mm;20,0;St;gaeb-flat;3921743.d83
+07.7;Schiebestutzen 625x125 mm;20,0;St.;gaeb-flat;3921743.d83
+07.8;Zu- und Abluftgitter 1025x525mm;1,0;St;gaeb-flat;3921743.d83
+07.9;Rundrohrauslass 355mm;10,0;St;gaeb-flat;3921743.d83
+07.10;Endabdeckung, Größe: 355mm;2,0;St;gaeb-flat;3921743.d83
+07.11;Gummilippendichtung, Größe: 355mm;10,0;Paar;gaeb-flat;3921743.d83
+07.12;Deckenauslass 825x115mm;6,0;St;gaeb-flat;3921743.d83
+07.13;Schiebestutzen 825x115 mm;6,0;St.;gaeb-flat;3921743.d83
+07.14;Dachdurchführung für Kanal 700x500 mm.;2,0;St;gaeb-flat;3921743.d83
+07.15;Dachdurchführung für Kanal 500x250 mm;2,0;St;gaeb-flat;3921743.d83
+07.16;Dachdurchführung für Kanal 500x250 mm;1,0;St;gaeb-flat;3921743.d83
+07.17;Dachdurchführung für Kanal 750x500 mm;1,0;St;gaeb-flat;3921743.d83
+07.18;Dachdurchführung für Kanal 750x500 mm;1,0;St;gaeb-flat;3921743.d83
+07.19;Dachdurchführung DN 250;2,0;St;gaeb-flat;3921743.d83
+07.20;Dachdurchführung DN 315;5,0;St;gaeb-flat;3921743.d83
+07.21;Deflektorhaube 700x500mm;2,0;St;gaeb-flat;3921743.d83
+07.22;Deflektorhaube DN 250;1,0;St;gaeb-flat;3921743.d83
+07.23;Außenluft-Lamellenhaube DN 250;1,0;St;gaeb-flat;3921743.d83
+07.24;Deflektorhaube DN 315;5,0;St;gaeb-flat;3921743.d83
+08.1;Schalldämpfer f. Volumenstromregler rund DN80;2,0;St;gaeb-flat;3921743.d83
+08.2;Schalldämpfer f. Volumenstromregler rund DN100;6,0;St;gaeb-flat;3921743.d83
+08.3;Schalldämpfer f. Volumenstromregler rund DN125;2,0;St;gaeb-flat;3921743.d83
+08.4;Schalldämpfer f. Volumenstromregler rund DN160;6,0;St;gaeb-flat;3921743.d83
+08.5;Schalldämpfer f. Volumenstromregler rund DN250;2,0;St;gaeb-flat;3921743.d83
+08.6;Schalldämpfer f. Volumenstromregler eckig 300x200x1250;2,0;St;gaeb-flat;3921743.d83
+08.7;Schalldämpfer f. Volumenstromregler eckig 400x300x1250;2,0;St;gaeb-flat;3921743.d83
+08.8;Flexibler Rohrschalldämpfer DN 100;1,0;St;gaeb-flat;3921743.d83
+08.9;Kulissenschalldämpfer rechteckig Druckdifferenz bis 30Pa Gehäuse Stahl verz Kulissenrahmen Stahl verz Fortluft;1,0;St;gaeb-flat;3921743.d83
+08.10;"Wie vor, jedoch  für Abluft;";1,0;St;gaeb-flat;3921743.d83
+08.11;"Wie vor, jedoch  für Zuluft;";1,0;St;gaeb-flat;3921743.d83
+08.12;"Wie vor, jedoch  für Außenluft;";1,0;St;gaeb-flat;3921743.d83
+09.1;Konstantvolumenstromregler rund DN80;4,0;St;gaeb-flat;3921743.d83
+09.2;Konstantvolumenstromregler rund DN100;9,0;St;gaeb-flat;3921743.d83
+09.3;Konstantvolumenstromregler rund DN125;2,0;St;gaeb-flat;3921743.d83
+09.4;Konstantvolumenstromregler rund DN160;4,0;St;gaeb-flat;3921743.d83
+09.5;Variabler Volumenstromregler eckig 300x200;2,0;St;gaeb-flat;3921743.d83
+09.6;Variabler Volumenstromregler eckig 400x300;2,0;St;gaeb-flat;3921743.d83
+10.1;Zentrales Lüftungsgerät 6.000 m3/h (Küche);1,0;St;gaeb-flat;3921743.d83
+10.2;Segeltuchstutzen rechteckig 1222x917 mm;2,0;St;gaeb-flat;3921743.d83
+10.3;Ersatzfiltersatz Lüftungsgerät 6.000 m3/h;1,0;St.;gaeb-flat;3921743.d83
+10.4;Zentrales Lüftungsgerät 3.000 m3/h (Mensa);1,0;St;gaeb-flat;3921743.d83
+10.5;Segeltuchstutzen rechteckig 866x355 mm;4,0;St;gaeb-flat;3921743.d83
+10.6;Ersatzfiltersatz Lüftungsgerät 3.000 m3/h;1,0;St.;gaeb-flat;3921743.d83
+10.7;Zentrales Lüftungsgerät 650 m3/h (WC-Anlagen);1,0;St;gaeb-flat;3921743.d83
+10.8;Segeltuchstutzen rechteckig 409x247 mm;4,0;St;gaeb-flat;3921743.d83
+10.9;Ersatzfiltersatz Lüftungsgerät 650 m3/h;1,0;St.;gaeb-flat;3921743.d83
+10.10;Transport größere Gerätschaften;1,0;St;gaeb-flat;3921743.d83
+10.11;Warmwasser-Heizregister DN 160;1,0;St;gaeb-flat;3921743.d83
+10.12;EC-Radial-Rohrventilator;10,0;St;gaeb-flat;3921743.d83
+10.13;Befestigungsmanschetten DN 160;10,0;St;gaeb-flat;3921743.d83
+10.14;Montagekonsole zu vorgenannten Rohrventilator;10,0;St;gaeb-flat;3921743.d83
+10.15;Rückstauklappe für Rohreinbau DN 160;10,0;St;gaeb-flat;3921743.d83
+10.16;Flexibler Rohrschalldämpfer DN 200;20,0;St;gaeb-flat;3921743.d83
+11.1;Anschließen Kabel/Leitung bis 2x2x0,8mm2;20,0;St;gaeb-flat;3921743.d83
+11.2;Anschließen Kabel/Leitung bis 4x2x0,8mm2;20,0;St;gaeb-flat;3921743.d83
+11.3;Anschließen Kabel/Leitung bis 3x1,5mm2;25,0;St;gaeb-flat;3921743.d83
+11.4;Anschließen Kabel/Leitung bis 5x1,5mm2;25,0;St;gaeb-flat;3921743.d83
+11.5;Anschließen Kabel/Leitung bis 5x2,5mm2;5,0;St;gaeb-flat;3921743.d83
+11.6;Anschließen Kabel/Leitung bis 7x1,5mm2;5,0;St;gaeb-flat;3921743.d83
+11.7;Kabelliste;1,0;psch;gaeb-flat;3921743.d83
+12.1;Informationsaustausch;1,0;psch;gaeb-flat;3921743.d83
+12.2;Funktionsmessung;1,0;psch;gaeb-flat;3921743.d83
+12.3;Inbetriebnahme und Funktionsprüfung;1,0;psch;gaeb-flat;3921743.d83
+12.4;Erst-Hygieneinspektion nach VDI 6022;1,0;psch;gaeb-flat;3921743.d83
+12.5;Bezeichnungsschild mehrschichtig Kunststoff H 52mm B 100mm;40,0;St;gaeb-flat;3921743.d83
+12.6;Luftrichtungspfeile;30,0;St;gaeb-flat;3921743.d83
+12.7;Mess-Stopfen;24,0;St;gaeb-flat;3921743.d83
+12.8;Erstellung der kompletten Montageplanung;1,0;Psch;gaeb-flat;3921743.d83
+12.9;Abrechnungs- und Bestandsunterlagen;1,0;St;gaeb-flat;3921743.d83
+12.10;Brandschutzdokumentation und Nachweis;1,0;St;gaeb-flat;3921743.d83
+12.11;Gerüststellung bis 4,4 m;1,0;St;gaeb-flat;3921743.d83
+12.12;Hygieneinspektion Lüftung;1,0;a;gaeb-flat;3921743.d83
+13.1;Obermonteur;30,0;h;gaeb-flat;3921743.d83
+13.2;A - Monteur;30,0;h;gaeb-flat;3921743.d83
+13.3;B - Monteur;15,0;h;gaeb-flat;3921743.d83
+13.4;C-Monteur;15,0;h;gaeb-flat;3921743.d83
+13.5;Lehrling (1.-3. Lehrjahr);15,0;h;gaeb-flat;3921743.d83
+13.6;Montagehelfer;15,0;h;gaeb-flat;3921743.d83
+13.7;Elektro-Monteur;10,0;h;gaeb-flat;3921743.d83
+14.1;VRF 2-Leiter Aussengeraet;1,0;St;gaeb-flat;3921743.d83
+14.2;VRF Steuerung WT;1,0;St;gaeb-flat;3921743.d83
+14.3;VRF Ventil-Set WT;1,0;St;gaeb-flat;3921743.d83
+14.4;Inbetriebnahme Außenteil;1,0;St;gaeb-flat;3921743.d83
+14.5;VRF 2-Leiter Aussengeraet;1,0;St;gaeb-flat;3921743.d83
+14.6;VRF Steuerung WT;1,0;St;gaeb-flat;3921743.d83
+14.7;VRF Ventil-Set WT;1,0;St;gaeb-flat;3921743.d83
+14.8;Inbetriebnahme Außenteil;1,0;St;gaeb-flat;3921743.d83
+14.9;VRF-Inverter-Verfluessigereinheit,;1,0;St;gaeb-flat;3921743.d83
+14.10;VRF 4-Wege Kassette 7,1 kW;4,0;St;gaeb-flat;3921743.d83
+14.11;VRF 4-Wege Paneel weiss;4,0;St;gaeb-flat;3921743.d83
+14.12;VRF 2-L Y-Abzweig;2,0;St;gaeb-flat;3921743.d83
+14.13;VRF 2-L Y-Abzweig < 19,...;1,0;St;gaeb-flat;3921743.d83
+14.14;VRF Zentralfernb.;1,0;St;gaeb-flat;3921743.d83
+14.15;Inbetriebnahme Außenteil;1,0;St;gaeb-flat;3921743.d83
+14.16;Inbetriebnahme Innenteil;4,0;St;gaeb-flat;3921743.d83
+14.17;Anschließen Kabel/Leitung bis 2x2x0,8mm2;6,0;St;gaeb-flat;3921743.d83
+14.18;Anschließen Kabel/Leitung bis 4x2x0,8mm2;6,0;St;gaeb-flat;3921743.d83
+14.19;Anschließen Kabel/Leitung bis 3x1,5mm2;6,0;St;gaeb-flat;3921743.d83
+14.20;Anschließen Kabel/Leitung bis 5x1,5mm2;6,0;St;gaeb-flat;3921743.d83
+14.21;Anschließen Kabel/Leitung bis 5x2,5mm2;2,0;St;gaeb-flat;3921743.d83
+14.22;Anschließen Kabel/Leitung bis 7x1,5mm2;1,0;St;gaeb-flat;3921743.d83
+14.23;Kabelliste;1,0;psch;gaeb-flat;3921743.d83
+14.24;Rohr Kupferrohr Klimakaltwasser AD 12mm WD 1mm Löten;42,0;m;gaeb-flat;3921743.d83
+14.25;"Wie vor, jedoch  Außendurchmesser 15 mm;";16,0;m;gaeb-flat;3921743.d83
+14.26;"Wie vor, jedoch  Außendurchmesser 18 mm;";24,0;m;gaeb-flat;3921743.d83
+14.27;"Wie vor, jedoch  Außendurchmesser 22 mm;";34,0;m;gaeb-flat;3921743.d83
+14.28;Rohrschelle Stahl verz L bis 0,5m DN10;24,0;St;gaeb-flat;3921743.d83
+14.29;"Wie vor, jedoch  DN 12;";10,0;St;gaeb-flat;3921743.d83
+14.30;"Wie vor, jedoch  DN 15;";14,0;St;gaeb-flat;3921743.d83
+14.31;"Wie vor, jedoch  DN 20;";20,0;St;gaeb-flat;3921743.d83
+14.32;Bogen Kapillarlötfitting Kupfer Klimakaltwasser AD 12mm;8,0;St;gaeb-flat;3921743.d83
+14.33;"Wie vor, jedoch  Außendurchmesser 15 mm;";2,0;St;gaeb-flat;3921743.d83
+14.34;"Wie vor, jedoch  Außendurchmesser 18 mm;";4,0;St;gaeb-flat;3921743.d83
+14.35;"Wie vor, jedoch  Außendurchmesser 22 mm;";6,0;St;gaeb-flat;3921743.d83
+14.36;Muffe Kapillarlötfitting Kupfer Klimakaltwasser AD 10mm;5,0;St;gaeb-flat;3921743.d83
+14.37;"Wie vor, jedoch  Außendurchmesser 15 mm;";2,0;St;gaeb-flat;3921743.d83
+14.38;"Wie vor, jedoch  Außendurchmesser 18 mm;";4,0;St;gaeb-flat;3921743.d83
+14.39;"Wie vor, jedoch  Außendurchmesser 22 mm;";3,0;St;gaeb-flat;3921743.d83
+14.40;Kältedämmung Rohr DN10 Gebäude flexibler Elastomerschaum D 13mm;60,0;m;gaeb-flat;3921743.d83
+14.41;"Wie vor, jedoch DN 12;";16,0;m;gaeb-flat;3921743.d83
+14.42;"Wie vor, jedoch DN 15;";24,0;m;gaeb-flat;3921743.d83
+14.43;"Wie vor, jedoch DN 20;";52,0;m;gaeb-flat;3921743.d83
+14.44;Passstück flexibler Elastomerschaum Kältedämmung Rohr DN10 Gebäude 0,040W/(mK) D 13mm;8,0;St;gaeb-flat;3921743.d83
+14.45;"Wie vor, jedoch DN 12;";2,0;St;gaeb-flat;3921743.d83
+14.46;"Wie vor, jedoch DN 15;";4,0;St;gaeb-flat;3921743.d83
+14.47;"Wie vor, jedoch DN 20;";6,0;St;gaeb-flat;3921743.d83
+14.48;Bogen flexibler Elastomerschaum Kältedämmung Rohr DN10 Gebäude 0,040W/(mK) D 13mm;8,0;St;gaeb-flat;3921743.d83
+14.49;"Wie vor, jedoch DN 12;";2,0;St;gaeb-flat;3921743.d83
+14.50;"Wie vor, jedoch DN 15;";4,0;St;gaeb-flat;3921743.d83
+14.51;"Wie vor, jedoch DN 20;";6,0;St;gaeb-flat;3921743.d83
+14.52;Ausschnitt flexibler Elastomerschaum Kältedämmung Rohr DN10 Gebäude 0,040W/(mK) D 13mm;34,0;St;gaeb-flat;3921743.d83
+14.53;"Wie vor, jedoch DN 12;";10,0;St;gaeb-flat;3921743.d83
+14.54;"Wie vor, jedoch DN 15;";14,0;St;gaeb-flat;3921743.d83
+14.55;"Wie vor, jedoch DN 20;";30,0;St;gaeb-flat;3921743.d83
+14.56;Endstelle flexibler Elastomerschaum Kältedämmung Rohr DN10 Gebäude 0,040W/(mK) D 13mm;8,0;St;gaeb-flat;3921743.d83
+14.57;"Wie vor, jedoch DN 12;";2,0;St;gaeb-flat;3921743.d83
+14.58;"Wie vor, jedoch  DN 15;";4,0;St;gaeb-flat;3921743.d83
+14.59;"Wie vor, jedoch  DN 20;";6,0;St;gaeb-flat;3921743.d83
+14.60;Kältedämmung Rohraufhängung DN10 synth. Kautschuk D 13mm;34,0;St;gaeb-flat;3921743.d83
+14.61;Kältedämmung Rohraufhängung DN12 synth. Kautschuk D 13mm;10,0;St;gaeb-flat;3921743.d83
+14.62;Kältedämmung Rohraufhängung DN15 synth. Kautschuk D 13mm;14,0;St;gaeb-flat;3921743.d83
+14.63;Kältedämmung Rohraufhängung DN20 synth. Kautschuk D 13mm;30,0;St;gaeb-flat;3921743.d83
+14.64;Mehrkosten Kältedämmung Kautschuk DN 10;18,0;m;gaeb-flat;3921743.d83
+14.65;Mehrkosten Kältedämmung Kautschuk DN 12;6,0;m;gaeb-flat;3921743.d83
+14.66;Mehrkosten Kältedämmung Kautschuk DN 15;10,0;m;gaeb-flat;3921743.d83
+14.67;Mehrkosten Kältedämmung Kautschuk DN 20;14,0;m;gaeb-flat;3921743.d83
+14.68;Kältedämmung Ummantelung Rohr DN10 im Freien flexibler Elastomerschaum D 13mm Mantel Blech Stahl verz;28,0;m;gaeb-flat;3921743.d83
+14.69;"Wie vor, jedoch DN 12;";8,0;m;gaeb-flat;3921743.d83
+14.70;"Wie vor, jedoch DN 20; Dämmschichtdicke 19 mm;";36,0;m;gaeb-flat;3921743.d83
+14.71;Passstück flexibler Elastomerschaum Kältedämmung Ummantelung Rohr DN10 im Freien 0,033W/(mK) D 13mm Mantel Blech Stahl verz D 0,4mm vernieten Dichtstoff abdichten;4,0;St;gaeb-flat;3921743.d83
+14.72;"Wie vor, jedoch DN 12;";2,0;St;gaeb-flat;3921743.d83
+14.73;"Wie vor, jedoch DN 20; Dämmschichtdicke 19 mm;";6,0;St;gaeb-flat;3921743.d83
+14.74;Bogen flexibler Elastomerschaum Kältedämmung Ummantelung Rohr DN10 im Freien 0,033W/(mK) D 13mm Mantel Blech Stahl verz D 0,4mm vernieten Dichtstoff abdichten;4,0;St;gaeb-flat;3921743.d83
+14.75;"Wie vor, jedoch DN 12;";2,0;St;gaeb-flat;3921743.d83
+14.76;"Wie vor, jedoch DN 20; Dämmschichtdicke 19 mm;";6,0;St;gaeb-flat;3921743.d83
+14.77;Ausschnitt flexibler Elastomerschaum Kältedämmung Ummantelung Rohr DN10 im Freien 0,033W/(mK) D 13mm Stahl verz D 0,4mm vernieten Dichtstoff abdichten;16,0;St;gaeb-flat;3921743.d83
+14.78;"Wie vor, jedoch DN 12;";4,0;St;gaeb-flat;3921743.d83
+14.79;"Wie vor, jedoch DN 20; Gesamt-Dämmschichtdicke 19 mm;";18,0;St;gaeb-flat;3921743.d83
+14.80;Deckel flexibler Elastomerschaum Kältedämmung Ummantelung Rohr DN10 im Freien 0,033W/(mK) D 13mm Stahl verz D 0,4mm vernieten Dichtstoff abdichten;4,0;St;gaeb-flat;3921743.d83
+14.81;"Wie vor, jedoch DN 12;";2,0;St;gaeb-flat;3921743.d83
+14.82;"Wie vor, jedoch DN 20; Gesamt-Dämmschichtdicke 19 mm;";6,0;St;gaeb-flat;3921743.d83
+14.83;Endstelle flexibler Elastomerschaum Kältedämmung Ummantelung Rohr DN10 im Freien 0,033W/(mK) D 13mm Stahl verz D 0,4mm vernieten Dichtstoff abdichten;4,0;St;gaeb-flat;3921743.d83
+14.84;"Wie vor, jedoch DN 12;";2,0;St;gaeb-flat;3921743.d83
+14.85;"Wie vor, jedoch DN 20; Gesamt-Dämmschichtdicke 19 mm;";6,0;St;gaeb-flat;3921743.d83
+14.86;Kältedämmung Rohraufhängung DN10 synth. Kautschuk D 13mm;14,0;St;gaeb-flat;3921743.d83
+14.87;Kältedämmung Rohraufhängung DN12 synth. Kautschuk D 13mm;4,0;St;gaeb-flat;3921743.d83
+14.88;Kältedämmung Rohraufhängung DN20 synth. Kautschuk D 19mm;18,0;St;gaeb-flat;3921743.d83
+14.89;Kernbohrung Geschoßdecke Durchmesser 100-150mm T 25-30cm;4,0;St;gaeb-flat;3921743.d83
+14.90;Anzeichnen von Durchbrüchen;4,0;St;gaeb-flat;3921743.d83
+14.91;Anzeichnen von Kernlochbohrzonen;4,0;St;gaeb-flat;3921743.d83
+15.1;Abluftelement Rand V2A, Höhe 270;12,0;m;gaeb-flat;3921743.d83
+15.2;Abluftelement Mittel V2A, Höhe 270;4,0;m;gaeb-flat;3921743.d83
+15.3;Flachpaneele;13,0;m²;gaeb-flat;3921743.d83
+15.4;Randwinkel;30,0;m;gaeb-flat;3921743.d83
+15.5;Randbalken doppelt H=500, V2A;13,0;m;gaeb-flat;3921743.d83
+15.6;Kombiabscheider 500x250x45;21,0;St;gaeb-flat;3921743.d83
+15.7;LED-light Platine 4000K IP55 ALP 9010 nicht dimmbar L;2,0;St;gaeb-flat;3921743.d83
+15.8;LED-light Platine 4000K IP55 ALP 9010 nicht dimmbar L;4,0;St;gaeb-flat;3921743.d83
+15.9;Flachpaneele;54,0;m²;gaeb-flat;3921743.d83
+15.10;Randwinkel;54,0;m;gaeb-flat;3921743.d83
+15.11;T-Schiene;18,0;m;gaeb-flat;3921743.d83
+15.12;Verdrängungsauslass verz.;22,0;m;gaeb-flat;3921743.d83
+15.13;LED-light Platine 4000K IP55 ALP 9010 nicht dimmbar L;10,0;St;gaeb-flat;3921743.d83
+15.14;LED-light Platine 4000K IP55 ALP 9010 nicht dimmbar L;8,0;St;gaeb-flat;3921743.d83
+15.15;Waagrechter Deckenabscheider;3,0;St;gaeb-flat;3921743.d83
+15.16;Ausschnitt bis 450 mm;10,0;St;gaeb-flat;3921743.d83
+15.17;Steuerung UV;1,0;St;gaeb-flat;3921743.d83
+15.18;Abscheider Sicherheitseinrichtung;4,0;St;gaeb-flat;3921743.d83
+15.19;UV-Strahler 130 Watt;4,0;St;gaeb-flat;3921743.d83
+15.20;UV-Strahler 160 Watt;2,0;St;gaeb-flat;3921743.d83
+15.21;UV-Strahler Befestigung;6,0;St;gaeb-flat;3921743.d83
+15.22;Steuermodul;6,0;St;gaeb-flat;3921743.d83
+15.23;Strömungswächter;1,0;St;gaeb-flat;3921743.d83
+15.24;Patchkabel;1,0;St;gaeb-flat;3921743.d83
+15.25;Inbetriebnahme UV-Anlage;1,0;St;gaeb-flat;3921743.d83
+16.1;Wartungsarbeiten Lüftung (430) / Kälte (434);4,0;a;gaeb-flat;3921743.d83

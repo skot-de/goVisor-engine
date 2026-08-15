@@ -1,0 +1,89 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+0010;Nichttragende innere Trennwand DIN 18183-1, DIN 4103-1, Einbaubereich 1 DIN 4103-1 (Bereiche mit geringer Menschenansammlung), Höhe bis 3,50 m, Dicke 250 mm, bewertetes Schalldämm-Maß DIN 4109 Rw 40 dB, Baustoffklasse DIN 4102-1 A2 (nichtbrennbar),;9,0;m2;gaeb;Leistungsverzeichnis/LV Trockenbauarbeiten_GAEB_260706.X83
+0020;Mehraufwand für einen bogenförmigen Deckenanschluss der Trennwand der Pos.;3,0;m;gaeb;Leistungsverzeichnis/LV Trockenbauarbeiten_GAEB_260706.X83
+0030;Vorsatzschale für Vorwandinstallation, Einbaubereich 1 DIN 4103-1 (Bereiche mit geringer Menschenansammlung),;56,0;m2;gaeb;Leistungsverzeichnis/LV Trockenbauarbeiten_GAEB_260706.X83
+0040;Mehraufwand für einen bogenförmigen Deckenanschluss der Vorsatzschale der Pos.;3,0;m;gaeb;Leistungsverzeichnis/LV Trockenbauarbeiten_GAEB_260706.X83
+0050;Freies Wandende, seitlicher Abschluß;10,0;m;gaeb;Leistungsverzeichnis/LV Trockenbauarbeiten_GAEB_260706.X83
+0060;Herstellen der Wandanschlüsse durch Anspachteln an Trennstreifen getrennter Wandanschlüsse für die Gipsplatten-Konstruktion der Pos.;46,0;m;gaeb;Leistungsverzeichnis/LV Trockenbauarbeiten_GAEB_260706.X83
+0070;Verstärkungsprofile aus verzinkten UA 100 Ständerprofilen als Befestigungsgrundlage für bauseitige Sanitärtraggerüste, Schamwände, Auswechselungen etc. herstellen, inkl. aller erforderlichen Fußwinkel, Boden-/ Deckenanschlüsse, Zuschnitte, Befestigungsmaterialien sowie sämtlichen Anpass- und Nebenar;18,0;St;gaeb;Leistungsverzeichnis/LV Trockenbauarbeiten_GAEB_260706.X83
+0080;Traversen für Sanitärarmaturen in rostgeschützter;8,0;St;gaeb;Leistungsverzeichnis/LV Trockenbauarbeiten_GAEB_260706.X83
+0090;CW-Profile in verschiedenen Abmessungen in Fixlängen liefern und nach Angabe der Bauleitung als Verstärkung in die Wände einbauen.;20,0;m;gaeb;Leistungsverzeichnis/LV Trockenbauarbeiten_GAEB_260706.X83
+0100;U-Aussteifungsprofile, d= 2 mm, passend zu CW-Profilen 100-06 mm in verschiedenen Abmessungen in Fixlängen liefern und nach Angabe der Bauleitung als Verstärkung in die Wände einbauen.;20,0;m;gaeb;Leistungsverzeichnis/LV Trockenbauarbeiten_GAEB_260706.X83
+0110;Eckausbildung für Außenecken der vorstehenden Trockenbauwände, aus einfach gekantetem Metallwinkel, Ausführung rechtwinklig (90°), einschl. Herstellen der Wandecke, Verspachteln der Anschlüsse, Anschluss- und Nebenarbeiten, Zuschnitte, Befestigungsmittel.;10,0;m;gaeb;Leistungsverzeichnis/LV Trockenbauarbeiten_GAEB_260706.X83
+0120;Mehrpreis für Anschluß auf Massivboden in Ausführung für Sockelausbildung mit einseitig vorgezogene Beplankung in weiteren Arbeitsgängen für die Abstellung der bauseitig nachfolgenden Estricharbeiten, in Anordnung vor schließen der Trockenbauwände und Vorsatzschalen,;30,0;m;gaeb;Leistungsverzeichnis/LV Trockenbauarbeiten_GAEB_260706.X83
+0130;Einbauort: Rohrdurchführung (Kalt-/ Warmwasser, Schmutzwasser);40,0;St;gaeb;Leistungsverzeichnis/LV Trockenbauarbeiten_GAEB_260706.X83
+0140;Rohrdurchführungen wie in Pos.;10,0;St;gaeb;Leistungsverzeichnis/LV Trockenbauarbeiten_GAEB_260706.X83
+0150;Ausschnitte, eckig, in vorstehende Vorsatzschalenverkleidung über die gesamte Bauteildicke herstellen, Schnittkanten glätten, ggf. erforderliche Auswechslung der Unterkonstruktion (Ausführung im Zuge der Montage der Montagewand), Übertragen und Einmessen der Installationsbereiche/ Auswechselungen. L;30,0;St;gaeb;Leistungsverzeichnis/LV Trockenbauarbeiten_GAEB_260706.X83
+0160;Einbauort: gem. Erfordernis;10,0;m2;gaeb;Leistungsverzeichnis/LV Trockenbauarbeiten_GAEB_260706.X83
+0170;Revisionsklappe aus Aluminium-Strangprofil, Eloxalqualität, mit Eingebaute Einlage aus 2x 12,5 mm Gipsplatten Typ GKBI nach DIN 18180 und DIN EN 520 (imprägniert), für die Montage in Vorsatzschalen und Trockenbauwände mit doppelt beplankter Konstruktion nach Angabe anlegen, Aussparung in der Beplank;5,0;St;gaeb;Leistungsverzeichnis/LV Trockenbauarbeiten_GAEB_260706.X83
+0180;Revisionsklappe aus Aluminium-Strangprofil, Eloxalqualität, mit Eingebaute Einlage aus;5,0;St;gaeb;Leistungsverzeichnis/LV Trockenbauarbeiten_GAEB_260706.X83
+0010;Unterdecke, DIN EN 13964, Brandverhaltensklasse DIN EN 13501-1 A2 -s1, d0 (nichtbrennbar),;72,0;m2;gaeb;Leistungsverzeichnis/LV Trockenbauarbeiten_GAEB_260706.X83
+0020;Akustik-Decke genau wie Pos.;61,0;m2;gaeb;Leistungsverzeichnis/LV Trockenbauarbeiten_GAEB_260706.X83
+0030;Plattenzuschnitt der Mineralfaser-Platten der vorbeschriebenen Einlegerasterdecken für Anpassarbeiten und Passplatten, einschließlich anpassen der Unterkonstruktion.;148,0;m;gaeb;Leistungsverzeichnis/LV Trockenbauarbeiten_GAEB_260706.X83
+0040;Akustik-Decken aus Mineralplatten genau wie in Pos.;11,0;St;gaeb;Leistungsverzeichnis/LV Trockenbauarbeiten_GAEB_260706.X83
+0050;Akustik-Decken aus Mineralplatten genau wie in Pos.;1,0;St;gaeb;Leistungsverzeichnis/LV Trockenbauarbeiten_GAEB_260706.X83
+0060;Wandanschluss, Ausführung an Unterdecke aus Mineralplatten DIN 18177, Dicke 15 mm.;68,0;m;gaeb;Leistungsverzeichnis/LV Trockenbauarbeiten_GAEB_260706.X83
+0070;Aufgrund der einseitig nicht möglichen Wandbefestigung der vorgenannten Rasterdecken ist die Unterkonstruktion der Decke freitragend mit Aussteifungen durch Abstrebungen herzustellen, um ein seitliches Verschieben der Profile zu verhindern.;137,0;m2;gaeb;Leistungsverzeichnis/LV Trockenbauarbeiten_GAEB_260706.X83
+0080;Der Deckenabschluss an das Metall-Glas-Element ist mit einem Weitspannträgersystem zu erstellen und mittels Abhängung sowie den Aussteifungen der Pos.;80,873;m;gaeb;Leistungsverzeichnis/LV Trockenbauarbeiten_GAEB_260706.X83
+0090;Liefern und fachgerecht einbauen eines vorkomprimierten Fugendichtungsbandes zur Herstellung eines schall- und luftdichten Wandanschlusses der Rasterdecke der Pos.;83,0;m;gaeb;Leistungsverzeichnis/LV Trockenbauarbeiten_GAEB_260706.X83
+0100;Einzelne Mineralfaserplatten 625 x 625 mm, Dicke 15 mm wie in Pos.;5,0;St;gaeb;Leistungsverzeichnis/LV Trockenbauarbeiten_GAEB_260706.X83
+0110;Runde Ausschnitte für bauseitige Einbauteile;10,0;St;gaeb;Leistungsverzeichnis/LV Trockenbauarbeiten_GAEB_260706.X83
+0120;Runde Ausschnitte für bauseitige Einbauteile in Mineralfaser-Platten herstellen.;40,0;St;gaeb;Leistungsverzeichnis/LV Trockenbauarbeiten_GAEB_260706.X83
+0130;Runde Ausschnitte für bauseitige Einbauteile in Mineralfaser-Platten herstellen.;10,0;St;gaeb;Leistungsverzeichnis/LV Trockenbauarbeiten_GAEB_260706.X83
+0140;Eckige Ausschnitte in v.g. Akustik-Decken herstellen.;20,0;St;gaeb;Leistungsverzeichnis/LV Trockenbauarbeiten_GAEB_260706.X83
+0150;Zusätzliche Winkel als Verstärkungen in Fixlängen für bauseits gelieferte Ein- oder Aufbauleuchten in verschiedenen Größen und Fabrikaten, nicht sichtbar befestigen und montieren.;40,0;m;gaeb;Leistungsverzeichnis/LV Trockenbauarbeiten_GAEB_260706.X83
+0010;Deckenbekleidung DIN 18168-1, geneigt,;57,0;m2;gaeb;Leistungsverzeichnis/LV Trockenbauarbeiten_GAEB_260706.X83
+0020;Dachschrägenbekleidung wie in v. Position beschrieben,;28,0;m2;gaeb;Leistungsverzeichnis/LV Trockenbauarbeiten_GAEB_260706.X83
+0030;Deckenbekleidung;87,0;m2;gaeb;Leistungsverzeichnis/LV Trockenbauarbeiten_GAEB_260706.X83
+0040;Fuge zwischen v.g Dachschrägenverkleidung / horizontaler Deckenverkleidung mit einem flexiblen Eckprofil hinterlegen zum Herstellen eines kraftschlüssigen Anschlusses;20,0;m;gaeb;Leistungsverzeichnis/LV Trockenbauarbeiten_GAEB_260706.X83
+0050;Herstellen und Ausbilden eines fachgerechten F-30 Anschlusses der Dachschrägenbekleidung im Bereich der Firstfette einschließlich Herstellen von ggf. erforderlichen Schrägschitten und Brandschutzverspachtelungen.;20,0;m;gaeb;Leistungsverzeichnis/LV Trockenbauarbeiten_GAEB_260706.X83
+0060;Deckenbekleidung DIN 18168-1, geneigt,;57,0;m2;gaeb;Leistungsverzeichnis/LV Trockenbauarbeiten_GAEB_260706.X83
+0070;Dachschrägenbekleidung wie in v. Position beschrieben,;6,0;m2;gaeb;Leistungsverzeichnis/LV Trockenbauarbeiten_GAEB_260706.X83
+0080;Herstellen und Ausbilden eines fachgerechten F-90 Anschlusses der Dachschrägenbekleidung im Bereich der Firstfette einschließlich Herstellen von ggf. erforderlichen Schrägschitten und Brandschutzverspachtelungen.;10,0;m;gaeb;Leistungsverzeichnis/LV Trockenbauarbeiten_GAEB_260706.X83
+0090;Fachgerechter Anschluss der;20,0;m;gaeb;Leistungsverzeichnis/LV Trockenbauarbeiten_GAEB_260706.X83
+0100;Vorsatzschale als Drempelbekleidung als einseitig beplankte leichte Trennwand DIN 4103-1, Einbaubereich 1;23,0;m2;gaeb;Leistungsverzeichnis/LV Trockenbauarbeiten_GAEB_260706.X83
+0010;Deckenbekleidung DIN 18168-1, geneigt,;85,0;m2;gaeb;Leistungsverzeichnis/LV Trockenbauarbeiten_GAEB_260706.X83
+0020;Herstellen und Ausbilden eines fachgerechten Anschlusses der Dachschrägenbekleidung im Bereich der Firstfette einschließlich Herstellen von erforderlichen Schrägschitten und Verspachtelungen, Arbeitshöhe bis 5,60 m.;12,0;m;gaeb;Leistungsverzeichnis/LV Trockenbauarbeiten_GAEB_260706.X83
+0030;sauberes Anarbeiten der;7,0;m;gaeb;Leistungsverzeichnis/LV Trockenbauarbeiten_GAEB_260706.X83
+0040;Öffnung herstellen, einschl. Unterkonstruktion auswechseln, mit CD-Profil, CD 60/27 DIN 18182-1, aus verzinktem Stahl, eckig, Anschluss umlaufend,;4,0;m;gaeb;Leistungsverzeichnis/LV Trockenbauarbeiten_GAEB_260706.X83
+0050;Nichttragende innere Trennwand DIN 18183-1, Einbaubereich 1 DIN 4103-1 (Bereiche mit geringer Menschenansammlung),;104,0;m2;gaeb;Leistungsverzeichnis/LV Trockenbauarbeiten_GAEB_260706.X83
+0060;Mehraufwand für das Anarbeiten der v.g. Trennwand an der;7,0;m;gaeb;Leistungsverzeichnis/LV Trockenbauarbeiten_GAEB_260706.X83
+0070;Einbinden / Anarbeiten an Kehlbalken und Sparren im Zuge der Wandmontage der Pos.;10,0;St;gaeb;Leistungsverzeichnis/LV Trockenbauarbeiten_GAEB_260706.X83
+0080;Herstellen der Wandanschlüsse durch Anspachteln an Trennstreifen getrennter Wandanschlüsse für die Gipsplatten-Konstruktion der Pos.;8,0;m;gaeb;Leistungsverzeichnis/LV Trockenbauarbeiten_GAEB_260706.X83
+0090;Eckausbildung in Fixlängen im Zuge der Errichtung der vor beschriebenen Montagewände mit zusätzlichen CW Wandprofilen herstellen.;8,0;m;gaeb;Leistungsverzeichnis/LV Trockenbauarbeiten_GAEB_260706.X83
+0100;Türöffnung fachgerecht nach Angabe und Herstellervorschrift in Montagewände anlegen, herstellen und mittels raumhohe Aussteifungsprofile UA 100-2 nach DIN 18182-2 mit allen erforderlichen Einbauteile wie Auswechselungen, Stürze, Anschlußwinkel, etc. entsprechend Herstellerangaben einbauen. Erforderl;1,0;St;gaeb;Leistungsverzeichnis/LV Trockenbauarbeiten_GAEB_260706.X83
+0110;Außenecken der Trockenbauwände mit flexiblen (verschiedene Winkelstellungen), aus papierummantelten Kunststoffkern bestehendem Kantenschutzprofil versehen, dazu mit Fugenspachtel gemäß DIN EN 13963 im Spachtelbett ansetzen und flächeneben einspachteln,;8,0;m;gaeb;Leistungsverzeichnis/LV Trockenbauarbeiten_GAEB_260706.X83
+0120;Aussparungen bzw. Bohrungen für den späteren Einbau von Steckdosen (Geräteanschluss Allgemein 400V) in vorstehende Trockenbauwände herstellen. Unterkonstruktion in diesem Bereich ggf. anpassen, Schnittkanten sauber und scharfkantig schneiden;10,0;St;gaeb;Leistungsverzeichnis/LV Trockenbauarbeiten_GAEB_260706.X83
+0130;Ausschnitte/ Aussparungen für bauseitige TGA-Einbauteile in vorstehende Trennwand über die gesamte Bauteildicke herstellen, einschl. Schnittkanten glätten, ggf. erforderliche Auswechslung der Unterkonstruktion, Übertragen und Einmessen der Installationsbereiche/ Auswechselungen, anfallenden Bauschut;15,0;St;gaeb;Leistungsverzeichnis/LV Trockenbauarbeiten_GAEB_260706.X83
+0140;Herstellen von Ausschnitten wie in v.g. Position beschrieben, jedoch;10,0;St;gaeb;Leistungsverzeichnis/LV Trockenbauarbeiten_GAEB_260706.X83
+0150;Herstellen von Ausschnitten wie in v.g. Position beschrieben, jedoch;5,0;St;gaeb;Leistungsverzeichnis/LV Trockenbauarbeiten_GAEB_260706.X83
+0160;Herstellen von Ausschnitten wie in v.g. Position beschrieben, jedoch;5,0;St;gaeb;Leistungsverzeichnis/LV Trockenbauarbeiten_GAEB_260706.X83
+0010;Nichttragende innere Trennwand DIN 18183-1, DIN 4103-1, Einbaubereich 1 DIN 4103-1 (Bereiche mit geringer Menschenansammlung),;40,0;m2;gaeb;Leistungsverzeichnis/LV Trockenbauarbeiten_GAEB_260706.X83
+0020;F90 Trennwand genau wie in v.g. Position;19,0;m2;gaeb;Leistungsverzeichnis/LV Trockenbauarbeiten_GAEB_260706.X83
+0030;Mehraufwand für das Anarbeiten der v.g. Trennwände der Pos.;30,0;m;gaeb;Leistungsverzeichnis/LV Trockenbauarbeiten_GAEB_260706.X83
+0040;Mehraufwand für das Herstellen der Unterkonstruktion der;4,0;St;gaeb;Leistungsverzeichnis/LV Trockenbauarbeiten_GAEB_260706.X83
+0050;Mehraufwand für das Arbeiten bei niedriger Höhe im Bereich der Dachschräge, Drempelhöhe ca.60 cm;4,0;St;gaeb;Leistungsverzeichnis/LV Trockenbauarbeiten_GAEB_260706.X83
+0060;Anschluss der Trennwände der Pos.;30,0;m;gaeb;Leistungsverzeichnis/LV Trockenbauarbeiten_GAEB_260706.X83
+0070;Herstellen der Wandanschlüsse durch Anspachteln an Trennstreifen getrennter Wandanschlüsse für die F90 Trennwand-Konstruktion der Pos.;10,0;m;gaeb;Leistungsverzeichnis/LV Trockenbauarbeiten_GAEB_260706.X83
+0080;Mehraufwand für das Herstellen der Unterkonstruktion der;2,0;St;gaeb;Leistungsverzeichnis/LV Trockenbauarbeiten_GAEB_260706.X83
+0090;Türöffnung fachgerecht nach Angabe und Herstellervorschrift;2,0;St;gaeb;Leistungsverzeichnis/LV Trockenbauarbeiten_GAEB_260706.X83
+0100;2-Lagige Beplankung in v.g. Türöffnungen als Leibungsverkleidung in Öffnungen der Wände aus Pos.;11,0;m;gaeb;Leistungsverzeichnis/LV Trockenbauarbeiten_GAEB_260706.X83
+0110;Aussparungen bzw. Bohrungen für den späteren Einbau von Steckdosen (Geräteanschluss Allgemein 400V) in vorstehende Trockenbauwände herstellen. Unterkonstruktion in diesem Bereich ggf. anpassen, Schnittkanten sauber und scharfkantig schneiden, einschl. notwendiger Leitern oder Arbeitsgerüste.;5,0;St;gaeb;Leistungsverzeichnis/LV Trockenbauarbeiten_GAEB_260706.X83
+0120;Ausschnitte/ Aussparungen für bauseitige TGA-Einbauteile in vorstehende Trennwand und Deckenverkleidungen über die gesamte Bauteildicke herstellen, einschl. Schnittkanten glätten, ggf. erforderliche Auswechslung der Unterkonstruktion, Übertragen und Einmessen der Installationsbereiche/ Auswechselung;10,0;St;gaeb;Leistungsverzeichnis/LV Trockenbauarbeiten_GAEB_260706.X83
+0130;Herstellen von Ausschnitten gem Vorposition, hier jedoch;5,0;St;gaeb;Leistungsverzeichnis/LV Trockenbauarbeiten_GAEB_260706.X83
+0140;Herstellen von Ausschnitten gem Vorposition, hier jedoch;5,0;St;gaeb;Leistungsverzeichnis/LV Trockenbauarbeiten_GAEB_260706.X83
+0010;Winkelförmige 2-seitige F90-Verkleidung als Abkofferung waage- oder senkrecht herstellen.;24,0;m;gaeb;Leistungsverzeichnis/LV Trockenbauarbeiten_GAEB_260706.X83
+0020;3-seitige Brandschutzbekleidung für waagerechte Stahlträger sach- und fachgerecht herstellen, einschl. aller Aussparungen und Vor- und Rücksprünge, einschl. Übergabe der Unternehmererklärungen über die Einhaltung des Brandschutzes nach Abschluß aller Arbeiten.;26,0;m;gaeb;Leistungsverzeichnis/LV Trockenbauarbeiten_GAEB_260706.X83
+0030;4-seitige Brandschutzbekleidung für waagerechte Stahlträger sach- und fachgerecht herstellen, einschl. aller Aussparungen und Vor- und Rücksprünge, einschl. Übergabe der Unternehmererklärungen über die Einhaltung des Brandschutzes nach Abschluß aller Arbeiten.;18,0;m;gaeb;Leistungsverzeichnis/LV Trockenbauarbeiten_GAEB_260706.X83
+0040;Abschottung von Rohr und Kabeldurchführungen S 90, als Kombischott aus Mineralwolleplatten mit Brandschutzcoating nach DIN 4102, liefern und fachgerecht montieren.;12,0;St;gaeb;Leistungsverzeichnis/LV Trockenbauarbeiten_GAEB_260706.X83
+0050;Abschottung von Rohr und Kabeldurchführungen S 90, als Kombischott aus Mineralwolleplatten mit Brandschutzcoating nach DIN 4102, liefern und fachgerecht montieren.;5,0;St;gaeb;Leistungsverzeichnis/LV Trockenbauarbeiten_GAEB_260706.X83
+0060;Abschottung von Rohr und Kabeldurchführungen S 90, als Kombischott aus Mineralwolleplatten mit Brandschutzcoating nach DIN 4102, liefern und fachgerecht montieren.;5,0;St;gaeb;Leistungsverzeichnis/LV Trockenbauarbeiten_GAEB_260706.X83
+0070;Abschottung von Rohr und Kabeldurchführungen S 90, als Kombischott aus Mineralwolleplatten mit Brandschutzcoating nach DIN 4102, liefern und fachgerecht montieren.;3,0;St;gaeb;Leistungsverzeichnis/LV Trockenbauarbeiten_GAEB_260706.X83
+0080;Streifen aus Bandschutzplatte, Feuerschutzplatten Typ DF, 2-lagig, Plattendicke 2x 20 mm, liefern und als Trennung zwischen Schott der Pos.;30,0;m;gaeb;Leistungsverzeichnis/LV Trockenbauarbeiten_GAEB_260706.X83
+0010;Schrägschnitte für vorstehende Plattenbekleidung im Übergang/ Plattenstoß mit unterschiedlichen Neigungswinkeln.;52,0;m;gaeb;Leistungsverzeichnis/LV Trockenbauarbeiten_GAEB_260706.X83
+0020;Fugen, fungizid, bis 5 mm nach Angabe der Bauleitung wie folgt bearbeiten und versiegeln.;200,0;m;gaeb;Leistungsverzeichnis/LV Trockenbauarbeiten_GAEB_260706.X83
+0030;Fugen nach Angabe der Bauleitung wie folgt versiegeln.;150,0;m;gaeb;Leistungsverzeichnis/LV Trockenbauarbeiten_GAEB_260706.X83
+0040;Aufbauen, Abbauen von Fahrgerüst, für die erforderliche Dauer der eigenen Leistungen vor- und unterhalten, höhenverstellbar mit bis zu 3 Arbeitsebenen, aus Aluminium mit Gerüstkonstruktion nach DIN EN 1004-1:2021-01;3,0;St;gaeb;Leistungsverzeichnis/LV Trockenbauarbeiten_GAEB_260706.X83
+0050;Dokumentationsunterlagen sind dem Auftraggeber in 2-facher Ausfertigung in Papierform im DIN A4 Aktenordner zu übergeben. Zeichnungen, Pläne usw. sind zusätzlich im Format .dwg oder .dxf 1-fach zu übergeben.;1,0;psch;gaeb;Leistungsverzeichnis/LV Trockenbauarbeiten_GAEB_260706.X83
+0060;Stundenlohnarbeiten durch Baufacharbeiter/-in;10,0;h;gaeb;Leistungsverzeichnis/LV Trockenbauarbeiten_GAEB_260706.X83
+0070;Stundenlohnarbeiten durch Bauhelfer/-in;10,0;h;gaeb;Leistungsverzeichnis/LV Trockenbauarbeiten_GAEB_260706.X83

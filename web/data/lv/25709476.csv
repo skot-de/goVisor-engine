@@ -1,0 +1,107 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+1;Pauschale für Baustelleneinrichtung, Vorhaltung von;1,0;psch;gaeb;leistungsbeschreibungen/Angebotsaufforderung_V33.X83
+2;Anlieferung, Aufbau und nach erfolgter Freimeldung Abbau;1,0;St;gaeb;leistungsbeschreibungen/Angebotsaufforderung_V33.X83
+3;Verlängerung der Standzeit des Gerüstes über die;1,0;Wo;gaeb;leistungsbeschreibungen/Angebotsaufforderung_V33.X83
+4;Einbau von Konsolenvorlagen, Länge 0,36 m, in;36,0;m;gaeb;leistungsbeschreibungen/Angebotsaufforderung_V33.X83
+5;Lieferung, Montage und und Abbau nach erfolgter;36,0;m;gaeb;leistungsbeschreibungen/Angebotsaufforderung_V33.X83
+6;Einsatz eines Mobilkranes für Schutt- und;5,0;d;gaeb;leistungsbeschreibungen/Angebotsaufforderung_V33.X83
+7;Stellung und Vorhaltung von Schuttcontainern, einschl. An- und;1,0;St;gaeb;leistungsbeschreibungen/Angebotsaufforderung_V33.X83
+8;Fachgerechte Entsorgung von sortiertem Bauschutt zum;12,0;t;gaeb;leistungsbeschreibungen/Angebotsaufforderung_V33.X83
+9;Fachgerechte Entsorgung von Sondermüll (imprägniertes;0,7;t;gaeb;leistungsbeschreibungen/Angebotsaufforderung_V33.X83
+10;Aufnahme der Steildacheindeckung, bestehend aus;250,0;m²;gaeb;leistungsbeschreibungen/Angebotsaufforderung_V33.X83
+11;Aufnahme der Unterspann-/Unterdeckbahn im Bereich der;250,0;m²;gaeb;leistungsbeschreibungen/Angebotsaufforderung_V33.X83
+12;Aufnahme der Traufbohlen, einschl. Verladung in;36,0;m;gaeb;leistungsbeschreibungen/Angebotsaufforderung_V33.X83
+13;Abnehmen von Dachrinnen mit Rinnenhalter und allen;36,0;m;gaeb;leistungsbeschreibungen/Angebotsaufforderung_V33.X83
+14;Abnehmen von Regenfallrohren mit Rohrschellen und allen;12,0;m;gaeb;leistungsbeschreibungen/Angebotsaufforderung_V33.X83
+15;Reinigung der Traufschalung von Nägeln. Herrichtung des;36,0;m;gaeb;leistungsbeschreibungen/Angebotsaufforderung_V33.X83
+16;Arbeitsvorbereitung Wärmedämmung.;1,0;St;gaeb;leistungsbeschreibungen/Angebotsaufforderung_V33.X83
+17;Baustelleneinrichtung, Abdeckmaterialien, mobile;1,0;St;gaeb;leistungsbeschreibungen/Angebotsaufforderung_V33.X83
+18;Vorhandene untere Brettdecke nachverschrauben, um;175,0;m²;gaeb;leistungsbeschreibungen/Angebotsaufforderung_V33.X83
+19;Vorhandene Mineralwolle 140mm dick ausbauen und in;195,0;m²;gaeb;leistungsbeschreibungen/Angebotsaufforderung_V33.X83
+20;Vorhandene Dampfbremsfolie entfernen und entsorgen.;195,0;m²;gaeb;leistungsbeschreibungen/Angebotsaufforderung_V33.X83
+21;Entsorgungskosten Mineralfaser KMF;27,3;m³;gaeb;leistungsbeschreibungen/Angebotsaufforderung_V33.X83
+22;Dampfbremsfolie schwarz zwischen den;195,0;m²;gaeb;leistungsbeschreibungen/Angebotsaufforderung_V33.X83
+23;Zellulosedämmung in Dämmdicke 320mm zwischen den;195,0;m²;gaeb;leistungsbeschreibungen/Angebotsaufforderung_V33.X83
+24;Vorhandene Dachluke ausbauen und entsorgen.;1,0;St;gaeb;leistungsbeschreibungen/Angebotsaufforderung_V33.X83
+25;Deckentüre, hochgedämmt.;1,0;St;gaeb;leistungsbeschreibungen/Angebotsaufforderung_V33.X83
+26;Lieferung und fachgerechte Verlegung einer;250,0;m²;gaeb;leistungsbeschreibungen/Angebotsaufforderung_V33.X83
+27;Einbau von Konterlattung auf die Steildachfläche mit;250,0;m²;gaeb;leistungsbeschreibungen/Angebotsaufforderung_V33.X83
+28;Anbringung von Nageldichtstreifen,;250,0;m²;gaeb;leistungsbeschreibungen/Angebotsaufforderung_V33.X83
+29;Einlattung der Steildachfläche mit scharfkantigen;250,0;m²;gaeb;leistungsbeschreibungen/Angebotsaufforderung_V33.X83
+30;Eindeckung der Steildachfläche mit Betondachsteinen mit;250,0;m²;gaeb;leistungsbeschreibungen/Angebotsaufforderung_V33.X83
+31;Lieferung und Verlegung einer scharfkantig geschnittenen;36,0;m;gaeb;leistungsbeschreibungen/Angebotsaufforderung_V33.X83
+32;Lieferung und Einbau von Lüftungselementen mit;36,0;m²;gaeb;leistungsbeschreibungen/Angebotsaufforderung_V33.X83
+33;Lieferung und Einbau von Traufgittern zur Absperrung;36,0;m²;gaeb;leistungsbeschreibungen/Angebotsaufforderung_V33.X83
+34;Deckung der Firste in der Steildachfläche mit Firststeinen;18,0;m;gaeb;leistungsbeschreibungen/Angebotsaufforderung_V33.X83
+35;Schließen der Firstdeckung mittels einer Firstendscheibe,;2,0;St;gaeb;leistungsbeschreibungen/Angebotsaufforderung_V33.X83
+36;Deckung der Ortgangbereiche mit Giebel-/ Ortgangsteinen,;14,0;m²;gaeb;leistungsbeschreibungen/Angebotsaufforderung_V33.X83
+37;Deckung der Ortgangbereiche mit Giebel-/ Ortgangstemen;9,0;m²;gaeb;leistungsbeschreibungen/Angebotsaufforderung_V33.X83
+38;Lieferung und fachgerechte Herstellung der;23,0;m;gaeb;leistungsbeschreibungen/Angebotsaufforderung_V33.X83
+39;Fachgerechter Anstrich der sichtbaren Seiten und der;21,0;m²;gaeb;leistungsbeschreibungen/Angebotsaufforderung_V33.X83
+40;Anstrich der sichtbaren Seiten Stim und Unterbretter;23,0;m;gaeb;leistungsbeschreibungen/Angebotsaufforderung_V33.X83
+41;Verklammerung der Dacheindeckung in den Trauf-,;250,0;m²;gaeb;leistungsbeschreibungen/Angebotsaufforderung_V33.X83
+42;Lieferung und fachgerechter Einbau von;1,0;St;gaeb;leistungsbeschreibungen/Angebotsaufforderung_V33.X83
+43;Befestigung von außenliegenden, halbrunden;36,0;m;gaeb;leistungsbeschreibungen/Angebotsaufforderung_V33.X83
+44;Lieferung und Einbau von Rinneneinhangstutzen für;3,0;St;gaeb;leistungsbeschreibungen/Angebotsaufforderung_V33.X83
+45;Einbau von Dilatationsrinnen mit Dehnungsteil aus;1,0;St;gaeb;leistungsbeschreibungen/Angebotsaufforderung_V33.X83
+46;Lieferung und Einbau von Rinnenböden, glatt, aus;6,0;St;gaeb;leistungsbeschreibungen/Angebotsaufforderung_V33.X83
+47;Lieferung und Befestigung von Regenfallrohren,;12,0;m;gaeb;leistungsbeschreibungen/Angebotsaufforderung_V33.X83
+48;"Herstellung von Standrohranschlüssen aus Titanzink;";3,0;St;gaeb;leistungsbeschreibungen/Angebotsaufforderung_V33.X83
+49;Lieferung und Einbau von Fallrohrbögen.;6,0;St;gaeb;leistungsbeschreibungen/Angebotsaufforderung_V33.X83
+50;Herstellung der Anschlüsse an aufgehenden Bauteilen und;5,0;m;gaeb;leistungsbeschreibungen/Angebotsaufforderung_V33.X83
+51;Montage von Wandanschlussprofilen, aus Aluminium, an;5,0;m;gaeb;leistungsbeschreibungen/Angebotsaufforderung_V33.X83
+52;Abdichtung von Anschlussfugen und Übergängen an;5,0;m;gaeb;leistungsbeschreibungen/Angebotsaufforderung_V33.X83
+53;Dachdecker-Facharbeiter zum Nachweis für Arbeiten auf;1,0;h;gaeb;leistungsbeschreibungen/Angebotsaufforderung_V33.X83
+1;Baustelleneinrichtung;1,0;psch;gaeb-flat;leistungsbeschreibungen/Angebotsaufforderung.D83
+2;Gerüst;1,0;St;gaeb-flat;leistungsbeschreibungen/Angebotsaufforderung.D83
+3;Gerüst-Standzeitverlängerung;1,0;Wo;gaeb-flat;leistungsbeschreibungen/Angebotsaufforderung.D83
+4;Konsolenvorlagen;36,0;m;gaeb-flat;leistungsbeschreibungen/Angebotsaufforderung.D83
+5;Dachdecker-Schutznetze/Schutzwand;36,0;m;gaeb-flat;leistungsbeschreibungen/Angebotsaufforderung.D83
+6;Einsatzmiete Mobilkran/Tag;5,0;d;gaeb-flat;leistungsbeschreibungen/Angebotsaufforderung.D83
+7;Container;1,0;St;gaeb-flat;leistungsbeschreibungen/Angebotsaufforderung.D83
+8;Entsorgung sort. Bauschutt;12,0;t;gaeb-flat;leistungsbeschreibungen/Angebotsaufforderung.D83
+9;Entsorgung Holz, imprägniert;0,7;t;gaeb-flat;leistungsbeschreibungen/Angebotsaufforderung.D83
+10;Abriss Dachsteine kompl.;250,0;m²;gaeb-flat;leistungsbeschreibungen/Angebotsaufforderung.D83
+11;Abriss Unterspann-/Unterdeckbahn;250,0;m²;gaeb-flat;leistungsbeschreibungen/Angebotsaufforderung.D83
+12;Abriss Traufbohle;36,0;m;gaeb-flat;leistungsbeschreibungen/Angebotsaufforderung.D83
+13;Abriss, Entsorgung Dachrinne;36,0;m;gaeb-flat;leistungsbeschreibungen/Angebotsaufforderung.D83
+14;Abriss Rgenfallrohre;12,0;m;gaeb-flat;leistungsbeschreibungen/Angebotsaufforderung.D83
+15;Vorarbeiten Traufschalung;36,0;m;gaeb-flat;leistungsbeschreibungen/Angebotsaufforderung.D83
+16;Arbeitsvorbereitung;1,0;St;gaeb-flat;leistungsbeschreibungen/Angebotsaufforderung.D83
+17;Baustelleneinrichtung Wärmedämmung;1,0;St;gaeb-flat;leistungsbeschreibungen/Angebotsaufforderung.D83
+18;Vorhandene untere Brettdecke nachverschrauben;175,0;m²;gaeb-flat;leistungsbeschreibungen/Angebotsaufforderung.D83
+19;Vorhandene Mineralwolle 140 mm dick ausbauen;195,0;m²;gaeb-flat;leistungsbeschreibungen/Angebotsaufforderung.D83
+20;Dampfbremsfolie entfernen;195,0;m²;gaeb-flat;leistungsbeschreibungen/Angebotsaufforderung.D83
+21;Entsorgungskosten Mineralfaser KMF;27,3;m³;gaeb-flat;leistungsbeschreibungen/Angebotsaufforderung.D83
+22;Dampfbremsfolie entfernen;195,0;m²;gaeb-flat;leistungsbeschreibungen/Angebotsaufforderung.D83
+23;Zelulosedämmung 320 mm;195,0;m²;gaeb-flat;leistungsbeschreibungen/Angebotsaufforderung.D83
+24;Dachluke ausbauen;1,0;St;gaeb-flat;leistungsbeschreibungen/Angebotsaufforderung.D83
+25;Bodentreppe;1,0;St;gaeb-flat;leistungsbeschreibungen/Angebotsaufforderung.D83
+26;Unterspannbahn auf Sparren;250,0;m²;gaeb-flat;leistungsbeschreibungen/Angebotsaufforderung.D83
+27;Konterlattung 30/150;250,0;m²;gaeb-flat;leistungsbeschreibungen/Angebotsaufforderung.D83
+28;Nageldichtstreifen;250,0;m²;gaeb-flat;leistungsbeschreibungen/Angebotsaufforderung.D83
+29;Decklattung 60/40;250,0;m²;gaeb-flat;leistungsbeschreibungen/Angebotsaufforderung.D83
+30;Flächendeckung Dachsteine;250,0;m²;gaeb-flat;leistungsbeschreibungen/Angebotsaufforderung.D83
+31;Trauf-/ Keilbohle 20/50/140 mm;36,0;m;gaeb-flat;leistungsbeschreibungen/Angebotsaufforderung.D83
+32;Traufbereich Aero-Traufelement;36,0;m²;gaeb-flat;leistungsbeschreibungen/Angebotsaufforderung.D83
+33;Traufgitter;36,0;m²;gaeb-flat;leistungsbeschreibungen/Angebotsaufforderung.D83
+34;Trockenfirst;18,0;m;gaeb-flat;leistungsbeschreibungen/Angebotsaufforderung.D83
+35;Firstendscheibe;2,0;St;gaeb-flat;leistungsbeschreibungen/Angebotsaufforderung.D83
+36;Ortgang, rechts;14,0;m²;gaeb-flat;leistungsbeschreibungen/Angebotsaufforderung.D83
+37;Ortgang, links;9,0;m²;gaeb-flat;leistungsbeschreibungen/Angebotsaufforderung.D83
+38;Ortgangausbildung Schalung;23,0;m;gaeb-flat;leistungsbeschreibungen/Angebotsaufforderung.D83
+39;Sichtschalung am Dachüberstand / Nut Feder Schalung 14 x 121 anstreichen;21,0;m²;gaeb-flat;leistungsbeschreibungen/Angebotsaufforderung.D83
+40;Ortgangbereich streichen;23,0;m;gaeb-flat;leistungsbeschreibungen/Angebotsaufforderung.D83
+41;Windsogsicherung Teilflächen 1:2;250,0;m²;gaeb-flat;leistungsbeschreibungen/Angebotsaufforderung.D83
+42;Dachaustieg Polyurethan schwarz wärmegedämmt;1,0;St;gaeb-flat;leistungsbeschreibungen/Angebotsaufforderung.D83
+43;Rinnen;36,0;m;gaeb-flat;leistungsbeschreibungen/Angebotsaufforderung.D83
+44;Rinneneinhangstutzen 330/100;3,0;St;gaeb-flat;leistungsbeschreibungen/Angebotsaufforderung.D83
+45;Rinnen-Dehnungsausgleiche 333;1,0;St;gaeb-flat;leistungsbeschreibungen/Angebotsaufforderung.D83
+46;Rinnenböden 333 rd;6,0;St;gaeb-flat;leistungsbeschreibungen/Angebotsaufforderung.D83
+47;Regenfallrohr rd 100;12,0;m;gaeb-flat;leistungsbeschreibungen/Angebotsaufforderung.D83
+48;Standrohranschluss 100 mm;3,0;St;gaeb-flat;leistungsbeschreibungen/Angebotsaufforderung.D83
+49;Fallrohrbogen 100;6,0;St;gaeb-flat;leistungsbeschreibungen/Angebotsaufforderung.D83
+50;Wandanschluss Wakaflex 280;5,0;m;gaeb-flat;leistungsbeschreibungen/Angebotsaufforderung.D83
+51;An- und Abschluss;5,0;m;gaeb-flat;leistungsbeschreibungen/Angebotsaufforderung.D83
+52;Versiegelung Silikon;5,0;m;gaeb-flat;leistungsbeschreibungen/Angebotsaufforderung.D83
+53;Facharbeiter / Geselle;1,0;h;gaeb-flat;leistungsbeschreibungen/Angebotsaufforderung.D83

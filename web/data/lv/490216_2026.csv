@@ -1,0 +1,15 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+01010001;Auf-/Abbau Container und Arbeitsplätze;3,0;St;gaeb-flat;3928560.d83
+01010002;Vorhaltung Container nach tatsächlichem Bedarf;30,0;Wo;gaeb-flat;3928560.d83
+01010003;Zeltüberdachung;30,0;St;gaeb-flat;3928560.d83
+01010004;Zeltüberdachung vorhalten und betreiben;60,0;d;gaeb-flat;3928560.d83
+02010001;An-und Abfahrt Personal;150,0;St;gaeb-flat;3928560.d83
+02010002;Grabungs- und Dokumentationsgerät;150,0;d;gaeb-flat;3928560.d83
+02010003;Verbrauchsmaterial;1,0;psch;gaeb-flat;3928560.d83
+02010004;Wissenschaftliche/r Grabungsleiter/in;300,0;h;gaeb-flat;3928560.d83
+02010005;Technische/r Grabungsleiter/in bzw. Grabungstechniker/in;520,0;h;gaeb-flat;3928560.d83
+02010006;Dokumentationsassistent/in;280,0;h;gaeb-flat;3928560.d83
+02010007;Grabungsfacharbeiter/in;220,0;h;gaeb-flat;3928560.d83
+02010008;Hilfskraft;180,0;h;gaeb-flat;3928560.d83
+02010009;Grabungsbericht;60,0;h;gaeb-flat;3928560.d83
+02010010;Gesamtdokumentation;90,0;h;gaeb-flat;3928560.d83

@@ -120,3 +120,125 @@ def test_alle_vier_fetcher_nutzen_das_gedaechtnis():
         # die gleich wieder aussortiert werden — und der Lauf holt wieder nichts.
         assert text.index("_queue.filtere") < text.index("offen = offen[:limit]"), (
             f"{name}: gefiltert wird nach dem Kappen — dann bleibt nichts übrig")
+
+
+# ══ Einheitliches Vokabular + dritte Klasse (2026-08-15) ═══════════════════════════════
+#
+# Ausgangslage: sieben von zwölf Abrufern schrieben ein Manifest, fünf nicht — und gelesen
+# wurde nur ein Teil davon. Status wie `leer`, `gesperrt` oder `interesse_noetig` lebten
+# damit ausschliesslich in der Konsolenausgabe. Diese Tests halten den vereinheitlichten
+# Zustand fest, weil er nur so lange trägt, wie ihn jemand prüft.
+
+def test_jeder_abrufer_liest_und_schreibt_das_manifest():
+    """Ein Manifest, das niemand liest, ist kein Fortschritt — und eines, das niemand
+    schreibt, ist eine Lücke im Gedächtnis. Beides muss zusammen vorkommen.
+
+    Gemessen am 2026-08-15: `gated` stand mit **389 Leads** im Manifest von `docfetch.py`
+    und wurde nie gelesen. Diese 389 Vorgänge wurden bei jedem Lauf erneut bei einem
+    fremden Portal angefragt.
+    """
+    import pathlib
+    import re
+
+    wurzel = pathlib.Path(__file__).resolve().parent.parent / "govisor"
+    # `docfetch_rib` ist ein Connector, den `docfetch.py` aufruft — er führt keine eigene
+    # Warteschlange und schreibt in das Manifest seines Aufrufers.
+    ausnahmen = {"docfetch_queue.py", "docfetch_rib.py"}
+    abrufer = [p for p in sorted(wurzel.glob("docfetch*.py")) if p.name not in ausnahmen]
+    abrufer += [wurzel / n for n in ("simap_docs.py", "subreport.py", "vergabeportal_at.py")]
+
+    luecken = []
+    for p in abrufer:
+        text = p.read_text(encoding="utf-8")
+        liest = re.search(r"_queue\.(frueher|filtere)", text)
+        schreibt = "_queue.schreibe" in text
+        if not (liest and schreibt):
+            luecken.append(f"{p.name} (liest={bool(liest)}, schreibt={schreibt})")
+    assert not luecken, "Abrufer ohne vollständige Warteschlangen-Anbindung: " + ", ".join(luecken)
+
+
+def test_filtern_geschieht_vor_dem_limit():
+    """Sonst kappt `--limit` auf Kandidaten, die gleich wieder aussortiert werden.
+
+    Der Lauf meldete dann „20 geprüft", hätte aber 20 bereits bekannte Fehlschläge
+    weggeworfen und nichts Neues angefasst — ein Fortschritt, den es nicht gab.
+    """
+    import pathlib
+    import re
+
+    wurzel = pathlib.Path(__file__).resolve().parent.parent / "govisor"
+    falsch = []
+    for p in sorted(wurzel.glob("*.py")):
+        text = p.read_text(encoding="utf-8")
+        if "_queue.filtere" not in text:
+            continue
+        f = text.index("_queue.filtere")
+        m = re.search(r"\n    if limit:", text)
+        if m and m.start() < f:
+            falsch.append(p.name)
+    assert not falsch, f"Limit wird VOR dem Filtern angewandt in: {falsch}"
+
+
+def test_schreibweisen_werden_vereinheitlicht():
+    """`error` und `fehler` sind dieselbe Aussage — die Regeln vergleichen Zeichenketten."""
+    assert q.normalisiere("error") == "fehler"
+    assert q.normalisiere("empty") == "leer"
+    assert q.normalisiere("downloaded") == "downloaded"
+    assert q.normalisiere(None) is None
+
+
+def test_blockiertes_laeuft_nicht_per_frist_wieder_auf(tmp_path):
+    """Der Kern der dritten Klasse: keine Wartefrist heilt ein fehlendes Konto."""
+    import datetime as dt
+
+    vorher = {"status": "gated", "wann": dt.date(2020, 1, 1)}   # uralt
+    assert q.ueberspringen(vorher) is not None, "blockiert muss übersprungen bleiben"
+    assert "blockiert: konto" in q.ueberspringen(vorher)
+
+    # …bis der Abrufer den Blocker als gelöst meldet.
+    assert q.ueberspringen(vorher, frei={"konto"}) is None
+
+
+def test_vorübergehendes_laeuft_nach_der_frist_wieder_auf():
+    """Gegenprobe: was sich ändern kann, darf nicht dauerhaft hängenbleiben."""
+    import datetime as dt
+
+    frisch = {"status": "fehler", "wann": dt.date.today()}
+    assert q.ueberspringen(frisch) is not None
+    alt = {"status": "fehler", "wann": dt.date.today() - dt.timedelta(days=q.SPERRE_TAGE)}
+    assert q.ueberspringen(alt) is None
+
+
+def test_nur_liste_gilt_als_erfolg():
+    """subreport und vergabeportal.at LADEN nichts — die Liste ist ihr Ergebnis.
+
+    Als Fehlschlag gewertet liefe jeder erfolgreich erfasste Vorgang für immer in der
+    Warteschlange mit und verdrängte echte Kandidaten.
+    """
+    import datetime as dt
+    assert q.ueberspringen({"status": "nur_liste", "wann": dt.date.today()}) is None
+
+
+def test_entsperre_gibt_genau_einen_blocker_frei(tmp_path):
+    q.schreibe(tmp_path, "x", [
+        {"lead_id": "a", "status": "gated"},        # konto
+        {"lead_id": "b", "status": "zu_gross"},     # groesse
+        {"lead_id": "c", "status": "downloaded"},
+    ])
+    assert q.entsperre(tmp_path, "x", "groesse") == 1
+    rest = q.frueher(tmp_path, "x")
+    assert set(rest) == {"a", "c"}, "nur der Grössen-Blocker durfte fallen"
+    assert q.entsperre(tmp_path, "x", "groesse") == 0, "zweiter Aufruf ändert nichts"
+
+
+def test_alte_schreibweise_im_bestand_heilt_beim_lesen(tmp_path):
+    """Ein Altmanifest mit `error` muss ohne Migration wie `fehler` behandelt werden."""
+    import datetime as dt
+    import pyarrow as pa
+    import pyarrow.parquet as pq
+
+    pq.write_table(pa.table({
+        "lead_id": ["a"], "status": ["error"],
+        "versucht_am": pa.array([dt.date.today()], pa.date32()),
+    }), tmp_path / "_manifest_y.parquet", compression="zstd")
+    assert q.frueher(tmp_path, "y")["a"]["status"] == "fehler"

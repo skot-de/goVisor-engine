@@ -1,0 +1,49 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+01010010;Erstellen eines Begehungs- und Einsatzplans der einzelnen faunistischen Experten;1,0;Psch;gaeb-flat;Leistungsverzeichnis/A044920026154.D83
+01010020;Mitwirken bei der Einholung erforderlicher Genehmigungen;1,0;Psch;gaeb-flat;Leistungsverzeichnis/A044920026154.D83
+01010030;Mitwirken bei der Information betroffener Dritter;1,0;Psch;gaeb-flat;Leistungsverzeichnis/A044920026154.D83
+01010040;Vorbereiten der Kartiergrundlagen und Materialien;1,0;Psch;gaeb-flat;Leistungsverzeichnis/A044920026154.D83
+02010010;Begründete logistische Tätigkeiten wie Ortswechsel oder Orientierung;1,0;Psch;gaeb-flat;Leistungsverzeichnis/A044920026154.D83
+02020010;Artengruppen übergreifend - V3 - Baumhöhlen;1,0;Psch;gaeb-flat;Leistungsverzeichnis/A044920026154.D83
+02020020;Avifauna - V1 - Revierkartierung;1,0;Psch;gaeb-flat;Leistungsverzeichnis/A044920026154.D83
+02020030;Avifauna - zu V1 - Auswertung der Erhebungen;1,0;Psch;gaeb-flat;Leistungsverzeichnis/A044920026154.D83
+02020040;Avifauna - V2 - Horstkartierung;1,0;Psch;gaeb-flat;Leistungsverzeichnis/A044920026154.D83
+02020050;Avifauna - V5 - Rastvogelkartierung;1,0;Psch;gaeb-flat;Leistungsverzeichnis/A044920026154.D83
+02020060;Säugetiere - S2 - Spurensuche Biber;1,0;Psch;gaeb-flat;Leistungsverzeichnis/A044920026154.D83
+02020070;Säugetiere - S4 - Niströhren Haselmaus;1,0;Psch;gaeb-flat;Leistungsverzeichnis/A044920026154.D83
+02020080;Säugetiere - S4 - Kontrolle Niströhren Haselmaus;1,0;Psch;gaeb-flat;Leistungsverzeichnis/A044920026154.D83
+02020090;Säugetiere - FM1 - Transekt Fledermäuse;1,0;Psch;gaeb-flat;Leistungsverzeichnis/A044920026154.D83
+02020100;Säugetiere - zu FM1 - Auswertung der Erhebungen;1,0;Psch;gaeb-flat;Leistungsverzeichnis/A044920026154.D83
+02020110;Säugetiere - FM2 - Horchboxenuntersuchung Flugrouten;1,0;Psch;gaeb-flat;Leistungsverzeichnis/A044920026154.D83
+02020120;Säugetiere - zu FM2 Auswertung der Erhebungen Flugrouten;1,0;Psch;gaeb-flat;Leistungsverzeichnis/A044920026154.D83
+02020130;Säugetiere - FM2 - Horchboxenuntersuchung Sommerquartier;1,0;Psch;gaeb-flat;Leistungsverzeichnis/A044920026154.D83
+02020140;Säugetiere - zu FM2 Auswertung der Erhebungen Sommerquartier;1,0;Psch;gaeb-flat;Leistungsverzeichnis/A044920026154.D83
+02020150;Amphibien - A1 - Laichgewässer;1,0;Psch;gaeb-flat;Leistungsverzeichnis/A044920026154.D83
+02020160;Amphibien - A4 - Hydrophon;1,0;Psch;gaeb-flat;Leistungsverzeichnis/A044920026154.D83
+02020170;optional: Amphibien Probenahme für eDNA;17,0;St;gaeb-flat;Leistungsverzeichnis/A044920026154.D83
+02020180;optional: Analytik eDNA Metabarcoding;17,0;St;gaeb-flat;Leistungsverzeichnis/A044920026154.D83
+02020190;optional: Analytik eDNA Metabarcoding;17,0;St;gaeb-flat;Leistungsverzeichnis/A044920026154.D83
+02020200;optional: eDNA Einzelartnachweis Knoblauchkröte;1,0;St;gaeb-flat;Leistungsverzeichnis/A044920026154.D83
+02020210;optional: eDNA Einzelartnachweis Kammmolch;1,0;St;gaeb-flat;Leistungsverzeichnis/A044920026154.D83
+02020220;Amphibien - zu A4 eDNA-Analyse;1,0;Psch;gaeb-flat;Leistungsverzeichnis/A044920026154.D83
+02020230;Reptilien - R1 - Sichtbeobachtung;1,0;Psch;gaeb-flat;Leistungsverzeichnis/A044920026154.D83
+02020240;Reptilien - R1 - künstliche Verstecke;1,0;Psch;gaeb-flat;Leistungsverzeichnis/A044920026154.D83
+02020250;Fische und Rundmäuler - Fi1 - Habitatkartierung;1,0;Psch;gaeb-flat;Leistungsverzeichnis/A044920026154.D83
+02020260;Tag- und Nachtfalter - F4 - Imagines Wiesenknopf-Ameisenbläulinge;1,0;Psch;gaeb-flat;Leistungsverzeichnis/A044920026154.D83
+02020270;Tag- und Nachtfalter - F5 - Imagines Spanische Flagge;1,0;Psch;gaeb-flat;Leistungsverzeichnis/A044920026154.D83
+02020280;Tag- und Nachtfalter - F6 - Imagines Thymian-Ameisenbläuling - Flugzeit;1,0;Psch;gaeb-flat;Leistungsverzeichnis/A044920026154.D83
+02020290;Tag- und Nachtfalter - F6 - Imagines Thymian-Ameisenbläuling - Transekt;1,0;Psch;gaeb-flat;Leistungsverzeichnis/A044920026154.D83
+02020300;Tag- und Nachtfalter - F12 - Imagines Goldener Scheckenfalter;1,0;Psch;gaeb-flat;Leistungsverzeichnis/A044920026154.D83
+02020310;Xylobionte Käfer - XK1 - Strukturkartierung;1,0;Psch;gaeb-flat;Leistungsverzeichnis/A044920026154.D83
+02020320;Libellen - L1 - Sichtbeobachtung besonderer Planungsrelevanz;1,0;Psch;gaeb-flat;Leistungsverzeichnis/A044920026154.D83
+02020330;Libellen - L1 - Sichtbeobachtung allgemeiner Planungsrelevanz;1,0;Psch;gaeb-flat;Leistungsverzeichnis/A044920026154.D83
+02020340;Krebse - K1 - Begehung von Gewässern;1,0;Psch;gaeb-flat;Leistungsverzeichnis/A044920026154.D83
+02020350;Schnecken / Muscheln - SM4 - Absuchen nach Großmuscheln;1,0;Psch;gaeb-flat;Leistungsverzeichnis/A044920026154.D83
+03010010;Beschreiben der Vorgehensweise;1,0;Psch;gaeb-flat;Leistungsverzeichnis/A044920026154.D83
+03010020;Darstellen und Analysieren / Bewerten;1,0;Psch;gaeb-flat;Leistungsverzeichnis/A044920026154.D83
+03010030;Beurteilen der Ergebnisse;1,0;Psch;gaeb-flat;Leistungsverzeichnis/A044920026154.D83
+03010040;Zusammenfassendes Darstellen der Ergebnisse;1,0;Psch;gaeb-flat;Leistungsverzeichnis/A044920026154.D83
+03010050;Mitwirken bei der Abstimmung;1,0;Psch;gaeb-flat;Leistungsverzeichnis/A044920026154.D83
+03010060;Abstimmen mit dem Auftraggeber;1,0;Psch;gaeb-flat;Leistungsverzeichnis/A044920026154.D83
+03010070;Darstellen der Dokumentation;1,0;Psch;gaeb-flat;Leistungsverzeichnis/A044920026154.D83
+03010080;Meldung der Fundpunkte an das LfU;1,0;Psch;gaeb-flat;Leistungsverzeichnis/A044920026154.D83

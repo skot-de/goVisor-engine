@@ -1,0 +1,411 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+10;Geräte, Werkzeuge und sonstige Betriebsmittel, die zur;1,0;psch;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+20;Baustelle von allen Geräten, Anlagen, Einrichtungen und;1,0;psch;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+30;Baustelle von allen Geräten, Anlagen, Einrichtungen und;1,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+10;Baubüro (Baracke oder Container) für den AG, doppelwan-;1,0;psch;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+20;Baubüro für den AG mit allen Einrichtungen vor- und;8,0;Mt;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+10;Reinigung von Flächen durch den AN welche im Zuge der Arbeiten in Mitleidenschaft gezogen bzw. verschmutzt wurden.;1,0;psch;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+20;Nach Beendigung aller Arbeiten, auch der Arbeiten anderer Unternehmer sind alle Bauwerke und die Außenanlage zu reinigen. Hierbei sind alle Teile - wie Rohrleitungen, Straßen, Schächte, Einrichtungsteile etc. von anhaftenden Schmutz, eingeschwemmten Sand und Kies, Mörtel und Betonspritzern, usw. zu ;1,0;psch;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+10;Verkehrsrechtliche Anordnung für Einrichtung und Be-;1,0;psch;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+20;Verkehrsschild aufbauen und abbauen. Vorhalten, Kon-;10,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+30;Verkehrssicherung längerer Dauer vorhalten, warten, in-;2400,0;St/d;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+40;Kontrolle der Verkehrssicherung an Arbeitsstellen;240,0;d;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+50;Transportable Absperrung mit Schrankenzaun,;50,0;m;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+60;Transportable Absperrung mit Schrankenzaun,;12000,0;md;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+70;Bauzaun auf befestigtem Untergrund,;150,0;m;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+80;Zusätzlichen Bauzaun aus Einzelelementen mit verzinktem;1200,0;m/Mt;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+90;Absperrschranken gem. TL Absperrschranke, mit Folie RA;4,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+100;Absperrschranken wie in v.g.Position beschrieben;960,0;St/d;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+10;Bestandsunterlagen Brücke,;1,0;psch;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+20;Bauwerkshauptprüfung der neuen Brücke;1,0;Stck;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+30;Erstellung eines Haverie- und Hochwasserschutzplans;1,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+40;Neue Bauwerksdaten sind mit einem Erfassungsprogramm;1,0;psch;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+50;Fotodokumentation von allen wesentlichen Arbeiten gemäß Baufortschritt der Bauwerkserrichtung erstellen.;1,0;psch;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+60;"Jahreszahl-Matrize nach RIZ ""Jahr 1"" einbauen.";1,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+70;Messbolzen einbauen.;2,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+80;Erkundung von Kabeln und Leitungen aller Art durch ge-;1,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+90;Erstellung und Lieferung einer kompletten Dokumentation des  Bauablaufes für Teilbereich Wasserversorgung.;1,0;psch;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+100;Revisionsunterlagen Abwasseranlagen,;1,0;psch;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+110;Revisionsunterlagen Ingenieurbauwerke.;1,0;psch;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+120;Revisionsunterlagen Verkehrsanlagen;1,0;psch;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+130;Revisionsunterlagen Eletro-, Fernmelde- und IT-Anlagen,;1,0;psch;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+10;Probekörper für Kontrollprüfungen aus Beton,;21,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+20;Belastungsfahrzeug als Gegengewicht (z.B. ausreichend;20,0;h;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+30;Plattendruckversuch nach DIN 18134 für Kontrollprüfung nach Angaben des AG von zugelassener Prüfstelle durchführen lassen. Sämtliche erforderlichen Geräte zur Verfügung stellen. Auswertungs durchführen und Ergebnisse direkt von der Prüfstelle dem AG zur verfügung stellen.;10,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+40;Kontrollprüfung ZTVT STB auf besondere Anordnung des AG;6,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+50;Prüfung des Sondierwiderstandes nach DIN 4094 zum;4,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+60;Erforderliche Ergänzungs- und;2,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+70;Erforderliche Ergänzungs- und;2,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+80;Bestimmung des Verdichtungsgrades innerhalb der Leitungs- und Verfüllzone sowie Einbau-und Verdichtungszone nach Angaben des AG von zugelassener Prüfstelle durchführen lassen. Sämtliche erforderlichen Geräte zur Verfügung stellen. Auswertungs durchführen und Ergebnisse direkt von der Prüfstelle dem ;2,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+90;Probegefäß zur Aufnahme von Baustoffproben, für Kon-;2,0;Stck;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+100;Probegefäß zur Aufnahme von Baustoffproben, für Kon-;1,0;Stck;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+110;Leistung umfasst die Führung der Abfallliste für alle;1,0;psch;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+120;Wassergehaltsbestimmung gemäß DIN 18121.;4,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+130;Proctorversuch gemäß DIN 18127 mit Durchmesser des;4,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+10;Umleitung für Gewässerquerung;1,0;psch;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+20;Bachumleitung nach Errichtung des Rahmens gemäß;1,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+30;Anlage für Wasserhaltung zum Freihalten der Baugrube;2,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+40;Pumpenanlage, Förderdurchfluss über 60 bis 100 m3/h,;180,0;d;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+50;Pumpenanlage, Förderdurchfluss über 60 bis 100 m3/h,;180,0;d;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+10;Geotextil als Trennschicht verlegen. Überlappung mind.;300,0;m2;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+20;Material zur provisorischen Anfüllung liefern,;100,0;m3;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+30;Schicht ohne Bindemittel aufnehmen. Erschwernisse durch;20,0;m3;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+40;Boden bzw. Fels aus Abtragsbereichen profilgerecht;80,0;m3;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+50;Stahlplatte zur Verkehrsüberfahrung auf Bettung;20,0;m2;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+60;Vorhandenen Schaukasten demontieren und im Baustellenbereich sicher lagern.;1,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+10;Beweissicherungsverfahren in mittelbar und unmittelbar;1,0;psch;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+20;Beweissicherungsverfahren innerhalb;4,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+10;Bereitstellungslager für zu beprobenden Boden/ SoB errichten und vorhalten.;1,0;psch;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+20;Gesamtmesskonzept für die Bodenanalyse nach Ersatzbaustoffverordnung (EBV) und Deponieverordnung (DepV) für die entsprechenden Aushubmengen (Frostschutzschichten/Schichten ohne Bindemittel und Bodenaushub aller Homogenbereiche) ausarbeiten und dem AG in 3-facher Ausfertigungmmindestens 2 Wochen vor ;1,0;psch;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+30;Analyse gemäß vorgelegtem Messkonzept Ersatz- baustoffverordnung und AVV durch eine akkredidiertes Labor durchführen lassen.;1050,0;m3;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+40;Gelagerten Boden des AG aufnehmen und entsorgen.;640,0;m3;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+50;Zulage für das Aufnehmen und das Entsorgen des;270,0;m3;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+60;Zulage für das Aufnehmen und das Entsorgen des;140,0;m3;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+10;Absteckung von Bauwerke (Brückenbauwerk) und Entwässerungsleitungen ausführen.;1,0;psch;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+20;Bestands- und Abrechnungspläne für die Abrechnung aller ausgeschriebenen Leistungen fachgerecht herstellen. Die Pläne sind mittels CAD-System (Dateiformat *.dwg) zu erstellen. Die Aufnahme aller abrechnungsrelevanten Daten wie;1,0;psch;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+10;Baugelände im Bereich der Brücke, einschl. anschließenden Gewässerabschnitte abräumen.;1,0;psch;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+20;Schutz für Baumstamm durch Mantel mit Polsterung her-;1,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+30;Vorhandene Brücke komplett abbrechen,;1,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+40;Zulage für zuvor genannter Position.;2,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+50;Zulage für zuvor genannter Position.;1,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+60;Zulage für zuvor genannter Position.;1,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+70;Sohle im Bauwerksbereich und in den Anschlußbereichen;100,0;m3;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+80;Vorhandene Befestigung der Böschungen und Bermen;25,0;m3;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+90;Nicht gefährlichen Abfall aus Baustelle laden, fördern;25,0;m3;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+100;Stützwand aus großformatigem Natursteinmauerwerk aufnehmen, laden und und im Baustellenbereich lagern.;30,0;m3;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+110;Zulage für zuvor genannter Position.;30,0;m3;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+120;Beton nach Unterlagen des AG abbrechen.;20,0;m3;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+130;Beton nach Unterlagen des AG abbrechen.;25,0;m3;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+140;Geländer aus Stahlrohrprofilen, DU 60 mm, bestehend aus Pfosten , Hand- und Knielauf sowie Fussplatten.;20,0;m;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+150;Geländer nach Unterlagen des AG abbauen, sichern und wiederaufbauen.;10,0;m;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+160;Verkehrsschild inkl. Fundament aufnehmen und sichern.;1,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+10;Oberboden ggf. einschließlich Vegetationsdecke abtragen;30,0;m3;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+20;Baugrube nach Unterlagen des AG herstellen.;520,0;m3;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+30;Boden des AG nach Unterlagen des AG als Dichtungs-;60,0;m3;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+40;Boden des AG als Bauwerkshinterfüllung profilgerecht;90,0;m3;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+50;Schichten ohne Bindemittel und Auffüllung im Bereich;140,0;m3;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+60;Suchgraben nach Unterlagen des AG herstellen. Aushub;10,0;m3;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+70;Material liefern, profilgerecht einbauen und verdich-;12,0;m3;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+80;Gründungssohle verdichten und Oberfläche profilgerecht;125,0;m2;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+90;Planum herstellen.;125,0;m2;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+100;Oberboden liefern und profilgerecht andecken. Abgerech-;5,0;m3;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+110;Feinplanum des Oberbodens für Rasenflächen herstellen.;30,0;m2;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+120;Ansaat mit RSM 2.3 (Gebrauchsrasen) herstellen.;30,0;m2;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+130;Leitungsgraben profilgerecht herstellen. Straße-;30,0;m3;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+10;Kreuzung von vorhandenen Kabel innerhalb des;20,0;m;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+20;Kreuzung von vorhandenen Ver- und Entsorgungsleitungen;10,0;m;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+30;Vorhandene Kabel im Bereich des Leitungsgrabens bzw. Baugrubenabstützen, sichern und falls erforderlich vorher;40,0;m;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+40;Vorhandene Ver-/ Entsorgungsleitungen im Bereich des;10,0;m;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+50;von Leitungen oder zur Ummantelung von Rohren in;3,0;m3;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+60;Kabel erdverlegt, in Betrieb, in Handschachtung;40,0;m;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+70;Kabelbrücke zur Verlegung vorhandener Elektroleitungen zur Überbrückung des Gewässers.;1,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+80;Kabelhaken für Provorische Leitungsführung;10,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+10;"Standsicherheitsnachweis für ""Baugrubenverbau Brückenbauwerk"" aufstellen und einem zugelassenem Prüfstatiker zur Prüfung vorlegen. Einarbeiten des Prüfergebniss in Standsicherheitsnachweis.";1,0;psch;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+20;Rammebene nach Wahl des AN für das Niederbringen der;1,0;psch;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+30;Auflockerungsbohrung als Einbringhilfe für Spundbohlen einschließlich aller erforderlicher Bohrgeräte und sonstiger Hilfsmittel sowie Nebenarbeiten ausführen.;500,0;m2;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+40;Kolonne zur Beseitigung von Hindernissen einsetzen.;20,0;h;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+50;Geräte für Stahlspundwand nach Unterlagen des AG ein-;1,0;psch;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+60;Stahlspundwand entsprechend statischen und konstrukti-;500,0;m2;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+70;Geräte für Stahlspundwand nach Unterlagen des AG ein-;1,0;psch;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+80;Stahlspundwand ziehen. Spundwand nach Unterlagen des;500,0;m2;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+90;Stahlspundwand nach Unterlagen des AG kürzen. Material;68,0;m;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+10;Beton für Sauberkeitsschicht einschließlich ggf. erfor-;110,0;m2;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+20;Untergrundverbesserung nach Unterlagen des AG durchfüh-;450,0;t;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+30;Stahlbeton einschließlich Schalung nach Unterlagen;40,0;m3;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+40;Stahlbeton einschließlich Schalung nach Unterlagen;22,0;m3;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+50;Stahlbeton einschließlich Schalung nach Unterlagen;11,0;m3;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+60;Stahlbeton einschließlich Schalung nach Unterlagen;32,0;m3;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+70;Zulage zur vorgenannten Position der Widerlager für die Herstellung von runden Öffnungen nach Angabe des AG.;4,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+80;Stahlbeton einschließlich Schalung nach Unterlagen;2,5;m3;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+90;Bewehrten Beton einschließlich Schalung nach Unterlagen;55,0;m3;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+100;Zulage zur vorgenannten Position für die Schalung des;80,0;m2;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+110;Stahlbeton einschließlich Schalung nach Unterlagen;13,0;m3;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+120;Kappenbeton, wie vor, jedoch eingefärbt durch Zugabe von hochwertigen, alkaliresistenten und UV-beständigen Farbpigmenten (z.B. Eisenoxide) im Betonwerk oder auf der Baustelle. Farbton: [Farbton einfügen, z.B. anthrazit/gelb/rot]. Pigmentanteil nach Angaben des Herstellers, um den gewünschten Farbto;13,0;m2;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+130;Betonstahl entsprechend statischen und konstruktiven;30,0;t;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+140;Betonstahl entsprechend statischen und konstruktiven;10,0;t;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+150;Betonstahl entsprechend statischen und konstruktiven;3,0;t;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+160;Fahrbahnabschlußprofil für Abdichtung nach Unterlagen;15,0;m;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+170;Böschungstreppe gemäß bast Richtzeichnung Bösch 1;16,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+10;Betonunterlage nach Unterlagen des AG vorbereiten. Vor-;80,0;m2;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+20;Vorbereitete Betonunterlage vor Herstellen der Dich-;80,0;m2;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+30;Schutzlage aus Glasvlies-Bitumendachbahn V 13 Dich-;40,0;m2;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+40;Verstärkungsstreifen einbauen und ggf. an Konstruktio-;15,0;m;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+50;Bauwerksfuge nach Unterlagen des AG herstellen. Fu-;10,0;m;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+60;Bauwerksfuge nach Unterlagen des AG herstellen. Fu-;15,0;m;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+70;Dichtungsschicht aus einer Bitumenschweißbahn gemäß;80,0;m2;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+80;Dränschicht an erdberührten Flächen von Bauwerken nach;60,0;m2;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+90;Senkrechte Sickerschicht aus abgestuftem filterstabilem;65,0;m3;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+100;Grundrohr aus teilporösem Beton außen quadratisch, In-;30,0;m;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+110;Sockel mit Gefälle aus Beton, Druckfestigkeitsklasse C;2,0;m3;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+120;Geotextil als Filter nach Unterlagen des AG in Sicker-;100,0;m2;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+130;Entwässerungsleitung aus Kunststoffrohren nach stati-;20,0;m;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+140;Formstück in Rohrleitung einbauen. Vergütet wird der;4,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+150;Formstück in Rohrleitung einbauen. Vergütet wird der;6,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+160;Kernbohrung für Drainageleitung in vorhandene Stahlbetonwand.;3,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+170;Froschklappen liefern und einbauen.;3,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+10;Gewässersohle nach Unterlagen des AG profilieren.;220,0;m2;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+20;Pfahlreihe im Wasserlauf aus senkrecht einschlagen Holzpfählen. Pfähle einseitig angespitzt.;20,0;m;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+30;Frosttschutzschicht aus Baustoffgemisch für Frostschutz-;70,0;m3;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+40;Wasserbausteine lose im Bachlauf verlegen.;40,0;m3;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+50;Grabenbett mit Wasserbaupflaster;80,0;m2;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+10;Geschweißtes Stahlgeländer nach Unterlagen des AG herstellen und einbauen.;32,0;m;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+20;Traggerüst der Bemessungsklasse B für gesamtes Bauwerk;1,0;psch;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+30;Arbeitsgerüste, einschließlich ggf. erforderlicher;1,0;psch;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+40;Witterungsbedingte Schutzeinrichtung entsprechend sta-;1,0;psch;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+10;Kabelschutzrohr DA 110 aus PE, mit glatter Innenwand, flexibel, Kabelschutzrohr in Verbundrohrbauweise gemäß DIN 16961, entsprechend DIN EN 61386-24 Klasse N 450 (Druckfestigkeit >=450 Newton,;100,0;m;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+20;Kunststoff-Muffenstopen zum Verschließen von Kabelschutzrohren, die nicht in Betrieb sind einschließlich Dichung. Als Zulage zur Rohrposition, passend zum Hauptrohr.;8,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+10;Ausführungszeichnungen herstellen,;1,0;psch;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+20;Standsicherheitsnachweis für Winkelstützwand aufstellen und in geprüfter Form, d;1,0;psch;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+30;Baugrube im Bereich der Winkelstützwnd herstellen. Boden und Auffüllung profilgerecht lösen, laden und verwerten. Abgerechnet wird nach der Kubatur der Baugrube, gemessen in der Achse des Kanals. Die Baugruben nach DIN 4124. Straßenaufbruch wird gesondert vergütet.;80,0;m3;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+40;Baugrubensohle gemäß Vorgaben der Bodengutachtens und der Unterlagen des AG profilgerecht herstellen. Inkl. der Behinderungen durch den Verbau. Baugrubensohle für Winkelstützwand. Baugrubensohle verdichten.;20,0;m2;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+50;Untergrundverbesserung nach Unterlagen des AG durchfüh-;25,0;t;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+60;Liefern und Errichten von Winkelstützelementen;1,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+70;Liefern und Errichten von Winkelstützelementen;2,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+80;Liefern und Errichten von Winkelstützelementen;2,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+90;Liefern und Errichten von Winkelstützelementen;4,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+100;Liefern und Errichten von Winkelstützelementen;1,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+110;Liefern und Errichten von Winkelstützelementen;1,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+120;Ortbeton, Aufbeton, als unbewehrter Beton als Normalbeton C 20/25 DIN 1045-2, natürliche Gesteinskörnung.;2,0;m3;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+130;Bauwerk profilgerecht hinterfüllen, einschl. Stoffe verdichten, Verdichtungsgrad mind. DPr 0,97, Frostschutzmaterial 0/45, Ausführung gemäß Unterlagen des AG.;25,0;m3;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+140;Geotextil als Trennschicht verlegen. Überlappung mind.;50,0;m2;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+150;Dränleitung aus Kunststoff-Vollsickerrohr, in Ringen, DN 100, Schlitzbreite 2,5 mm, im Bereich des Fundaments verlegen, Ausführung nach Unterlagen des AG.;10,0;m;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+160;Boden des AG als Bauwerkshinterfüllung profilgerecht;55,0;m3;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+10;Asphaltbefestigung geradlinig trennen.;33,0;m;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+20;Asphaltbefestigung aufbrechen.;16,0;m3;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+30;Asphaltbefestigung aufbrechen.;5,0;m3;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+40;Asphalt fräsen und Fräsgut aufnehmen. Anschlusskante;42,0;m2;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+50;Nicht gefährlichen Abfall aus Baustelle laden, fördern;85,0;t;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+60;Haufwerke für Probenahme nach LAGA PN 98 auf Anweisung;30,0;m3;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+70;Abdichtung/Dichtungsbahn abbrechen.;80,0;m2;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+80;Zulage zu vorgenannter Position - Abdichtung/Dichtungsbahn laden, transportieren und auf Lagerplatz auf Haufwerk abladen.;80,0;m2;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+90;Zulage zu vorgenannter Position - Abdichtung/Dichtungsbahn aufnehmen und entsorgen.;80,0;m2;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+100;Nicht gefährlichen Abfall aus Baustelle laden, fördern;2,0;t;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+110;Erschwernis infolge Einbauten, Schächten und Straßenab-;5,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+120;Erschwernis infolge Einbauten, Schächten und Straßenab-;5,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+130;Abfallregister für nicht gefährliche Abfälle führen.;1,0;psch;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+140;Straßenablauf einschließlich Aufsatz ausbauen. An-;1,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+150;Bordanlage aufnehmen und entsorgen.;70,0;m;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+160;1-zeilige Rinne aus Betonsteine aufnehmen und zur Wiederverwendung zwischenlagern im Bereich der Baustelle.;50,0;m;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+170;Pflasterdecke aus Betonsteinen aufnehmen und entorgen.;10,0;m2;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+180;Beton/Mauerwerk abbrechen.;5,0;m3;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+10;Bordsteine aus Beton setzen.;40,0;m;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+20;Bordsteine aus Beton setzen.;4,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+30;Bordsteine aus Beton setzen.;2,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+40;Bordsteine aus Beton setzen.;10,0;m;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+50;Leistung wie vor, jedoch Ausführung als Radienstein Radien kleiner 12 m. Als Zulage zur Vorposition Rundbord 15/22/100;8,0;m;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+60;Bordstein aus Beton nach DIN EN 1340 und Maße nach DIN 483 liefern und versetzen. Herstellung der Dehnungsfugen alle 12 m mit vorgefertigten Dehnscheiben entsprechend der Bordabmessungen. Überschüssiger Beton ist aufzunehmen und zu nach Wahl des AN zu entsorgen. Das Verteilen des Betons im Fahrbahnb;4,0;m;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+70;Bordstein aus Beton nach DIN EN 1340 und Maße nach DIN 483 liefern und versetzen. Herstellung der Dehnungsfugen alle 12 m mit vorgefertigten Dehnscheiben entsprechend der Bordabmessungen. Überschüssiger Beton ist aufzunehmen und zu nach Wahl des AN zu entsorgen. Das Verteilen des Betons im Fahrbahnb;10,0;m;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+80;Bordsteinpassstück im Nassschnitt an Hoch-, Rund- und Tief- bordsteinen aus Beton nach DIN EN 1340, Maße DIN 483 herstellen. Schnittreste sowie Schneidschlamm sind zu sammeln und zu entsorgen.;5,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+90;Pflasterstreifen als Rinne vor Bordsteinen in gebundener Bauweise aus Betonpflaster ZTV Pflaster-StB / TL Pflaster-StB / DIN EN 1338, einschl. Fundament aus Beton, als Rinne vor Bordsteine herstellen. Fugen mit zementgebundenen Pflaster- fugenmörtel herstellen. Einschl. Herstellung von Dehnungs- fug;55,0;m;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+100;Anschluss für Pflasterdecke aus Betonpflaster im Nassschnitt an Randeinfassungen und Materialübergängen herstellen. Schnittreste sowie Schneidschlamm sind zu sammeln und zu entsorgen.;5,0;m;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+110;Bordsteine auf Passmaß trennen.;10,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+120;Bordsteine auf Passmaß trennen.;5,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+130;Anpassung von Rinnen an Einbauten herstellen. Das Bear-;8,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+140;Betonsteine (Rinne/ Streifen) auf Passmaß trennen.;6,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+150;Rinnen;2,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+160;Bewegungsfuge im Fundament von Streifen, Rinnen und;10,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+170;Bewegungsfugen in Streifen und Rinnen herstellen. Fu-;10,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+180;Bewegungsfuge in Borden herstellen. Fugenbreite 10 mm.;10,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+10;Pflasterdecke nach ZTV / TL Pflaster-StB aus Pflastersteinen aus Beton, DIN EN 1338 in ungebundene Bauweise einschl. Bettung herstellen. Die Tragschicht wird gesondert vergütet. Bettung und Fugenfüllung aus natürlichen gebrochenen Gesteinskörnungen (Brechsand-Splitt-Gemisch). Fugenbreite nach Vorgab;100,0;m2;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+20;Pflasterdecke wie vor, jedoch Änderung im Verband. Als Zulage zur Position Pflasterdecke im Längsverband.;20,0;m2;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+30;zur Anpassung an Rändern, Einbauten usw. nass schneiden. Unbrauchbares Material und Aufbruchgut gehen in Eigentum des AN über und werden beseitigt. Beton- bzw. Klinker-platten/pflaster.;20,0;m;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+40;Anpassung des Pflasterbelages an Aussparungen oder Ein-;2,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+50;Anpassung des Pflasterbelages an Aussparungen oder Ein-;2,0;m2;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+60;Pflasterdecke mit Pflastersteinen aus Beton aufnehmen.;15,0;m2;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+70;Pflasterdecke aus Betonsteinen des AG herstellen.;15,0;m2;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+10;Rohrpfosten mit Abdeckkappe für Verkehrsschild liefern.;2,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+20;Gelieferten Rohrpfosten mit Abdeckkappe nach Angabe des AG  aufstellen einschl. anfallenden Fundamentarbeiten. Umgebende Fläche entsprechend dem früheren Zustand herstellen.;2,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+30;Verkehrsschild nach Unterlagen des AG liefern und anbringen.;2,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+10;Planum herstellen.;225,0;m2;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+20;Boden verdichten.;50,0;m2;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+30;Bodenaustausch durchführen. Baustoff in Auskofferung;130,0;m3;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+40;Geogitter 40/40 Q 1 GRK 4 C besteht aus gelegtem Geogitter;225,0;m2;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+10;Frosttschutzschicht aus Baustoffgemisch für Frostschutz-;200,0;m3;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+20;Asphaltschutzschicht auf Dichtungsschicht herstellen.;80,0;m²;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+30;Gussasphaltrinne als Randstreifen herstellen,;22,0;m;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+40;Asphalttragschicht aus Asphalttragschichtmischgut;130,0;m2;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+50;Asphalttragschicht aus Asphalttragschichtmischgut;2,0;t;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+60;Asphaltdeckschicht aus Asphaltbeton AC 11 D N;200,0;m2;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+70;Asphalttragschicht aus Asphalttragschichtmischgut;2,0;t;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+80;Unterlage reinigen. Anfallendes Kehrgut nach Wahl des;200,0;m2;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+90;Bitumenemulsion zur Herstellung des Schichtenverbundes;200,0;m2;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+100;Abstumpfungsmaßnahme zur Erhöhung der Anfangsgriffig-;200,0;m2;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+110;Fuge schneiden und vergießen.;25,0;m;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+120;Fugenfüllung herstellen.;25,0;m;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+130;PE-Straßenablauf DN 500, für Aufsätze 300x500 mm,;4,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+140;Aufsatz für Straßenablauf nach DIN 1229 aufsetzen.;4,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+150;Aufsatzrahmen für Beton/Gussaufsatz;4,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+160;Zusätzlichen Auflagering für regulierenden Strassenablauf;4,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+170;Leitungsgraben profilgerecht herstellen. Straße-;30,0;m3;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+180;Rohrleitung an Straßenablauf anschließen, Anschluss;4,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+190;Sämtliche Anschlußeitungen, vom Hauptkanal bis zum Straßenablauf, sind durch den AN höhen- und lagemäßig einmessen zu lassen und entsprechend in einem digitalen Plan einzeichnen zu lassen. Die Planunterlage ist als DWG- Datei auf CD gebrannt zu übergeben und einmal in Papier.;1,0;psch;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+200;Fotodokumentation der Straßenentwässerungsleitungen, die Zuordnung zu Anschlusspunkt und dazugehrigem Regeneinlauf muss erkennbar sein. Digitale Fotos min. 3,7 Megapixel, Größe 15/10 zu den Aufmaßen liefern und zusätzliche Übergabe der digitalen Daten im JPG Format auf DVD oder CD sind dem AG zu übe;1,0;psch;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+210;"Entwässerungsleitung aus Kunststoffrohren nach DIN EN 1610 herstellen. Wie unter ""Anforderungen an Rohrleitungen und Formteile von Kunststoffrohrleitungen (Vollwand-/Mehrzweckrohr)"" beschrieben.";20,0;m;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+220;Erschwernis infolge Einbauten, Schächten und Straße-;4,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+230;Erschwernis infolge Einbauten, Schächten und Straße-;4,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+240;Erschwernis infolge Einbauten, Schächten und Straße-;4,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+250;Gegenpole für Kontrollprüfungen nach Anweisung des AG;6,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+260;Gegenpole für Kontrollprüfungen nach Anweisung des AG;6,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+270;Messverfahren der Asphaltschichtdicken durchführen.;12,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+10;Trassenwarnband aus Kunststoff liefern und auf der Leitungs- zone der Wasserleitungen verlegen.;10,0;m;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+20;Leitungszone für die Kabeltrasse nach Vorgabe bzw. den Angaben des Herstellers lagen- bzw. schichtenweise bis 20 cm über Rohrscheitel liefern, in Rohrgräben und Baugruben einbauen und verdichten. Materials der Leitungszone aus Sand der Körnung 0/2 mm. Die Rohre sind gegen Auftrieb und seitliches Ver;2,0;m3;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+30;Beleuchtungsmast bis 6 m Lichtpunkthöhe (LPH) einschl. unbewehrtem Fundament abbrechen bzw. zurückbauen, laden nach Angaben des AG übernehmen, befördern und der Verwertung außerhalb der Baustelle nach Wahl des AN zuführen. Demontage der Leuchtenaufsätze sowie Trennung und Außerbetriebnahme der Leitu;1,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+40;Fundamentrohr aus PE-HD, DN 400, einschl. seitlicher Bohrung und Leerrohreinführung senkrecht in Erdloch DN 600 einsetzen. Kabelabdeckung und Sickerpackung an der Baugrubensohle in Form einer Schottertrag-/Sickerschicht aus Basalt 32/45 mm mit Kondenswasserablauf des Mastes einschl. aller Nebenleist;1,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+50;Lichtmast als gerader Mast DIN EN 40-2 und DIN EN 40-6 aus Aluminium, Bauform konisch, Querschnitt rund 76 mm, LPH 4,50 m, mit Ausschnitt für Türgröße B/H 90/400 mm, mit Grundplatte, Länge des Erdstückes/ Eingrabtiefe 0,8 m,;1,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+60;Aufsatzleuchte einschl. Betriebsmittel liefern und betriebsfertig montieren.;1,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+10;Geräte, Werkzeuge und sonstige Betriebsmittel, die zur;1,0;psch;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+20;Baustelle von allen Geräten, Anlagen, Einrichtungen und;1,0;psch;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+10;Bestandsunterlagen Stützwand,;1,0;psch;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+20;Bauwerkshauptprüfung der sanierten Stützwand;1,0;Stck;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+30;Erstellung eines Haverie- und Hochwasserschutzplans;1,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+40;Neue Bauwerksdaten sind mit einem Erfassungsprogramm;1,0;psch;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+50;Fotodokumentation von allen wesentlichen Arbeiten gemäß Baufortschritt der Bauwerkserrichtung erstellen.;1,0;psch;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+60;Messbolzen einbauen.;5,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+10;Probekörper für Kontrollprüfungen aus Beton,;9,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+10;Anlage für Wasserhaltung zum Freihalten der Baugrube;1,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+20;Pumpenanlage, Förderdurchfluss über 60 bis 100 m3/h,;60,0;d;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+30;Pumpenanlage, Förderdurchfluss über 60 bis 100 m3/h,;60,0;d;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+10;Absteckung von Bauwerke (Stützwand) ausführen.;1,0;psch;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+20;Bestandsvermessung Bauwerke (Stützwand) erstellen;1,0;psch;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+10;Geländer nach Unterlagen des AG abbauen und nach Wahl;135,0;m;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+20;Mauerkrone schneiden, für Anschluss der neuen Mauerkrone aus Beton, Beton unbewehrt, Stützwanddicke über 30 bis 50 cm, anfallende Stoffe laden.;135,0;m;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+30;Nicht gefährlichen Abfall aus Baustelle laden, fördern;16,0;m3;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+40;Vorhandene Gewässersohle beräumen.;200,0;m3;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+10;Gewässersohle nach Unterlagen des AG profilieren.;300,0;m2;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+10;Anker für das Befestigen der Spritzbetonbewehrung, Anker aus Betonstabstahl DIN 488-1, DIN 488-2, Durchmesser 10 bis 16 mm, Ankerlänge über 0,4 bis 0,5 m, Setztiefe über 0,3 bis 0,4 m, formschlüssig, hinterschneidend, an Wand, Untergrund Beton, Fläche vertikal, für Spritzbetondicke 10 cm, Arbeitshöh;290,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+20;Absuchen der Betonflächen nach Hohlstellen, Ausbrüchen, Fehlstellen oder Rissen, Schadstellen am Bauteil kennzeichnen, Bauteil Stützwand, Fläche senkrecht.;350,0;m2;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+30;Schadstellen entfernen und entsorgen.;15,0;m2;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+40;Nicht gefährlichen Abfall aus Baustelle laden, fördern;5,0;m3;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+50;Unterfangung mit Beton, unbewehrt, einschl. Erdarbeiten, nach;5,0;m³;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+60;Vierung an geradem Bauteil, Gesteinsart Kalkstein, Oberfläche eben, ausarbeiten der Einbaustelle, konstruktive Anker aus nichtrostendem Stahl, kleben mit mineralisch gebundenem Klebemittel, verfugen mit mineralischem Mörtel, Fugenbreite max. 3 mm, angleichen der Oberfläche an Kanten und Profile.;30,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+70;Herstellen von Bohrungen im Mauerwerk;50,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+80;Bohrkanal von losem Material und sonstigen trennend wirkenden Substanzen befreien, durch Absaugen oder Ausblasen mit ölfreier Druckluft. Bohrkanal mit Wasser gründlich vornässen.;50,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+90;Ankermörtel nach Herstellerangaben anmischen und mittels geeignetem Gerät (z.B. pneumatische Mörtelpresse + Verfülllanzeige) in die hergestellten Bohrlöcher in der Tragschicht einbringen. Ankermörtel ohne Trasszementanteile.;50,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+100;Auftragen einer Haftbrücke für RM-Reprofilierung, Bauteil Auffüllung, im Bereich der Ausbruchstellen, aus kunststoffmodifizierter Zementschlämme.;15,0;m2;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+110;Natursteinmauerwerk/Betonoberfläche mit einem Hochdruckreinigungsverfahren (nur mit Wasser) reinigen.;270,0;m²;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+120;Auftragen einer Haftbrücke für Reprofilierung mit Beton DIN 1045-2, Bauteil Aufbeton, Fläche senkrecht, vollflächig, aus kunststoffmodifizierter Zementschlämme, Erzeugnis im System geprüft.;270,0;m2;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+130;Bewehrung aus Betonstahlmatten B500A DIN 488-1, DIN 488-4, als Lagermatte, Q 335 A, für Spritzbetonschale an Stützwand.;3,0;t;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+140;Kernbohrung, Untergrundfläche senkrecht, aus unbewehrtem Beton, Normalbeton, Bohrdurchmesser über 100 bis 140 mm, Bohrtiefe über 60 bis 65 cm, nicht schadstoffbelastet,;70,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+150;Entlastungsrohr in vorh. Kernborhung einbauen zur Entwässerung der Stützwandhinterfüllung.;70,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+160;(Entspannungs-)Raumfuge in 25 mm Breite in Spritzbetonschale senkrecht über Gesamthöhe herstellen.;70,0;m;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+170;Spritzbeton DIN EN 14487 und DIN 18551, für Instandsetzung Wand aus Beton, als bewehrter Spritzbeton, Bewehrung wird gesondert vergütet, C 30/37 DIN EN 14487, Expositionsklasse XF2 (Frostangriff, mäßige Wassersättigung mit Taumittel), Expositionsklasse XA1 (Betonkorrosion durch chemisch schwach angr;270,0;m2;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+180;Verankerungsmittel für Mauerkrone, aus Betonstahl, Durchmesser 16 mm, Ankerlänge über 0,6 bis 0,8 m, Setztiefe über 0,4 bis 0,6 m, kraftschlüssig, Verankerung auf Stützwand, Befestigungsuntergrund Stahlbeton.;150,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+190;Stahlbeton einschließlich Schalung nach Unterlagen;20,0;m3;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+200;Betonstahl entsprechend statischen und konstruktiven;8,0;t;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+210;(Entspannungs-)Raumfuge in 25 mm Breite;20,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+10;Geschweißtes Stahlgeländer nach Unterlagen des AG herstellen und einbauen.;55,0;m;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+20;Zulage zur vorheriger Position.;4,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+30;Zulage zur vorheriger Position.;2,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+40;Geschweißtes Stahlgeländer nach Unterlagen des AG ein-;75,0;m;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+50;Zulage zur vorheriger Position.;2,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+60;Zulage zur vorheriger Position.;2,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+10;"Standsicherheitsnachweis für ""Baugrubenverbau"" aufstellen und einem zugelassenem Prüfstatiker zur Prüfung vorlegen. Einarbeiten des Prüfergebniss in Standsicherheitsnachweis.";1,0;psch;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+20;Rammebene nach Wahl des AN für das Niederbringen der;1,0;psch;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+30;Auflockerungsbohrung als Einbringhilfe für Spundbohlen einschließlich aller erforderlicher Bohrgeräte und sonstiger Hilfsmittel sowie Nebenarbeiten ausführen.;630,0;m2;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+40;Kolonne zur Beseitigung von Hindernissen einsetzen.;20,0;h;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+50;Geräte für Stahlspundwand nach Unterlagen des AG ein-;1,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+60;Wasserdichte;630,0;m2;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+70;Aussteifung / Gurtung der Baugrube an Spundwandbohlen mittels Stahlträger einschl. Zwischenaussteifung nach Wahl des AN entsprechend statischen und konstruktiven Erfordernissen sowie Einbau von Zwischenebenen.;10,0;t;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+80;Reinigen der Spundwandtäler, parallel zum Aushub.;630,0;m2;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+90;Verlängerung Vorhaltung Spundwand die aus der Pos. 4.2.50, 3 Monate, Vorhaltezeit hinausgeht. Abgerechnet wird die Quadratmeter pro Woche.;2000,0;m2Wo;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+100;Geräte für Stahlspundwand nach Unterlagen des AG ein-;1,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+110;Stahlspundwand ziehen. Lage der Spundwand, Profil und;600,0;m2;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+120;Stahlspundwand nach Unterlagen des AG einkürzen.;20,0;m;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+130;Zulage verlorene Spundwand die im Erdreich verbleiben.;30,0;m2;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+140;Kreisrunde Öffnung Ø 150 mm in Stahlspundwand zur Durchführung bzw. den Einbau eines Medienrohres (z.B. Entwässerungsrohr) durch Schneiden oder Einbrennen herstellen.;2,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+150;Kreisrunde Öffnung mind. Ø 1500 mm in Stahlspundwand zur Durchführung bzw. den Einbau eines Medienrohres (z.B. Entwässerungsrohr) durch Schneiden oder Einbrennen herstellen.;2,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+160;Mobile Absperrung als Absturzsicherung zur Anwendung auf ebenen Flächen bzw. auf Flächen mit einer Neigung. Feste Absperrung als Geländer mit Pfosten, Material nach Wahl des AN, Absturzhöhe > 2,0 m;70,0;m;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+10;Voraushub zur Vorbereitung zum Einbringen der Spundwände herstellen ggf. seitliche Böschung ausführen. Voraushub und Auffüllung profilgerecht lösen, laden  und auf Zwischenlager des AN transportieren(in regelmäßig geformten Mieten aufsetzen) und vor schädlichen Witterungseinflüssen schützen. Abgerec;180,0;m3;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+20;Baugrube für Mischwasserkanal herstellen. Boden und Auffüllung profilgerecht lösen, laden  und auf Zwischenlager des AN transportieren und vor schädlichen Witterungseinflüssen schützen. Abgerechnet wird nach der Kubatur der Baugrube, gemessen in der Achse des Kanals. Die Baugruben nach DIN 4124.;420,0;m3;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+30;Material liefern, profilgerecht einbauen und verdich-;10,0;m3;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+40;Gründungssohle verdichten und Oberfläche profilgerecht;90,0;m2;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+50;Leitungszone nach DIN 1610 herstellen.;60,0;m3;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+60;Geeigneter gelagerter Boden bzw. Fels des AG vom;300,0;m3;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+70;Material liefern, in Leitungsgraben einschließlich;120,0;m3;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+80;Sohlstabilisierung im Leitungsgraben auf Anordnung des AG durchführen.;30,0;m3;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+90;Geotextil zur Ummantelung der Untergrundverbesserungssschicht/ Bodenaustauschmaterial verlegen. Überlappung mind. 0,5 m.;70,0;m2;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+100;Magerbeton liefern und nach Angabe des AG bzw. auf;10,0;m3;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+10;Beton abbrechen.;5,0;m3;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+20;Beton abbrechen.;5,0;m3;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+30;Mauerwerk abbrechen. Abgerechnet wird das abgebrochene Mauerwerk, wobei Öffnungen und Nischen bis zu 0,5 m3 Einzelgröße und Schlitze bis zu 0,1 m3/m übermessen werden.;5,0;m3;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+10;Entwässerungsrohrleitung aus Kunststoffrohren nach sta-;30,0;m;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+20;Formstück in Rohrleitung einbauen. Vergütet wird der;1,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+30;Formstück in Rohrleitung einbauen. Vergütet wird der;5,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+40;Rohranschluss an Sammelrohrleitung herstellen, An-;1,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+50;Stahlbeton-Fußrohr mit Mittelaussparung in der Austandsfläche;33,0;m;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+60;Gelenkstück aus Stahlbetonrohr mit Fuß DN 700 liefern und;2,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+70;Rohrleitung an Schacht anschließen, Anschluss dichten.;2,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+80;Muffenstopfen liefern und einbauen. Passend zum Material der Hauptleitung einschließlich Dichung. Als Zulage zum Hauptrohr.;2,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+90;Aussschparungen der Kugelkopfanker verschließen. Verschließen mit kunststoffmodifiziertem Mörtel. Fläche vornässen und Mörtel oberflächenbündig erinbringen.;32,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+100;Kontrollschacht aus Beton-/Stahlbetonfertigteilen DIN EN 1917,;1,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+110;Zulage für Gefälle DN 700 bis 5 %;1,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+120;Verschiebesicherer Auflagerring (AR-V) DIN EN 1917 und DIN V 4034-1 liefern und einbauen. Als Lagerflächen für die Schachtabdeckungen und zur Angleichung an die Straßenhöhen in kunststoffvergüteten Fugenmörtel (z. B. Wipolit-Mörtel oder gleichwertiger Art) versetzen. Die Lagerfuge zwischen Schachtde;3,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+130;Einwalzbare und hochziehbare Schachtabdeckung einschl. Schmutzfänger und Betonführungsring liefern und einbauen, rund aus Gusseisen DIN EN 124-2 mit dämpfender Einlage im Deckel, Deckel Guss mit Betoneinlage, Verschluss mit Scharnier und Verriegelung, mit zwei wartungsfreien, schraubenlosen und verk;1,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+10;Optische Inspektion der gereinigten Abwasserkanäle mit einem ferngesteuerten, digitalen Dreh- und Schwenkkopf-Farb-Kamerasystem. Einschl. unmittelbarer vorheriger HD-Reinigung und Wasserhaltungsarbeiten. Es gelten die Anforderungen gemäß DWA-M 149-5.;33,0;m;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+20;Optische Inspektion der gereinigten Abwasserkanäle der Grundstücksentwässerung mit einem ferngesteuerten, digitalen Dreh- und Schwenkkopf-Farb-Kamerasystem, als Satellitensystem vom Hauptkanal aus. Ausführung in Teilmengen. Einschl. unmittelbarer vorheriger HD-Reinigung und Wasserhaltungsarbeiten. E;37,0;m;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+30;Haltungsweise Dichtheitsprüfung DWA-M 149 Teil 6;33,0;m;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+40;Haltungsweise Dichtheitsprüfung DWA-M 149 Teil 6;37,0;m;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+50;Dichtheitsprüfung DWA-M 149 Teil 6;1,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+60;Übergabe aller Videos, Bilder, Inspektionsdaten und Berichten auf;1,0;psch;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+10;Leitungsgraben profilgerecht herstellen. Straße-;20,0;m3;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+20;Boden des AG in Leitungsgraben einschließlich Schacht-;20,0;m3;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+30;Nicht gefährlichen Abfall aus Baustelle laden, fördern;26,0;t;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+40;Nicht gefährlichen Abfall aus Baustelle laden, fördern;10,0;t;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+50;Entwässerungsrohrleitung abbrechen. Entwässerungsrohr-;10,0;m;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+10;Rechtzeitig bzw. unmittelbar vor Baubeginn an Ver- und Entsorgungsleitungen der Haupt- und Hausanschlussleitungen, an der Hauptwasserleitung sind die betroffenen Anlieger über die anstehenden Maßnahmen mit einem Postwurfzettel über die Baumaßnahme in Kenntnis zu setzen, einschl. der An- und Abmeldun;1,0;psch;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+20;Vorhandene Rohrleitung/ Kanalrohre abbrechen, laden, transportieren und entsorgen. Als Zulage zum maschinellen Bodenaushub.;33,0;m;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+30;Kunststoffrohr-Kanal liefern und fachgerecht nach DIN EN 1610 in Rohrleitungsgraben einbauen. Lieferung der Rohre in den erforderlichen Längen einschl. Verbindungsmuffen, Dichtungen sowie der Herstellung aller erforderlichen Rohrschnitte zum Anschluss an Entwässerungsleitungen und Schachtunterteile.;37,0;m;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+40;Anschluss an vorhandenen Schacht herstellen. Schachtanschlussstück passend zum Rohrsystem des Kanals, aus PVCU, liefern und einbauen. Fachgerechte Herstellung der Anschlussbohrung mittels vom Hersteller freigegebenem Kernbohrgerät. Den Anschluss fachgrecht mit Vergussmörtel, Quellbänder o.Ä. verschl;1,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+50;Anbohr-Sattelstück, passend zum Rohrsystem des Hauptkanals, aus Stahlbeton, liefern und einbauen. Fachgerechte Herstellung der Anschlussbohrung am Hauptkanal mittels vom Hersteller freigegebenem Kernbohrgerät.;1,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+60;Rohrschnitt zur Herstellung von Passstücken.;5,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+70;Kunststoffbogen wandverstärkt einschl. Dichtungen, liefern und einbauen. Als Zulage zur Rohrposition der Hauptleitung.;5,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+80;Kunststoffüberschiebmuffe einschl. Dichtungen, liefern und einbauen. Als Zulage zur Rohrposition der Hauptleitung.;3,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+90;Kunststoff-Muffenstopen zum Verschließen von Anschlussleitungen, die nicht in Betrieb sind einschließlich Dichung. Als Zulage zur Rohrposition, passend zum Hauptrohr.;1,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+100;Abwasserkontroll-Set DN/OD 200/160 gerade, Klasse D 400, aus weichmacherfreiem Polyvinylchlorid (PVC-U), mit einem Durchmesser-Wanddickenverhältnis SDR 34, nach DIN EN 1401-1 wandverstärkt, glattwandig, mit DIBt-Zulassung Nr.: Z-42.1-309, Dichtigkeit bis 2,4 bar Wasserinnendruck (Prüfdruck), mit ger;1,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+10;Leistung umfasst die Führung der Abfallliste für alle;1,0;psch;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+20;Leitungsgraben für Trinkwasserleitungen einschließlich;40,0;m3;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+30;Arbeits-/Bau­gru­be für Leitungseinbindung Hausanschlüsse sowie Anbindung temporärer Anschlüsse ent­spre­chend An­for­de­run­gen DIN EN 1610 / DIN 4033 her­stel­len für Anbindungen.;8,0;m3;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+40;Schicht ohne Bindemittel aufnehmen. Erschwernisse durch;5,0;m3;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+50;Sohlstabilisierung durchführen.;9,0;m3;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+60;Geotextil als Trennschicht verlegen. Überlappung mind.;40,0;m2;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+70;Durchgehenden Dichtriegel aus mineralischem Ton TM, TA nach DIN 18196, mit einem Durchlässigkeitsbeiwert k<1*10^-8 m/s, in einer Dicke von 0,5 m bis 0,5 m unter Planum in den Leitungsgraben bis zu einer Grabenbreite entsprechend Unterlagen des AG einbauen. Je einen Dichtriegel je Kanalhaltung einbau;2,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+80;Boden von Hand ausheben. Ausführung nach Anordnung des AG zur Feststellung von Bauweisen und zum Freilegen von;2,0;m3;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+90;Boden für Suchgraben ausheben. Kombinierter Maschinen-Hand-Aushub. Im Bereich von Ver- und Entsorgungsleitungen, Bauwerken usw. Vorschriften der Versorgungsunternehmen beachten.Homogenklassen nach Unterlagen des AG.;3,0;m3;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+100;Geeignetes wasserunempfindliches, frostbeständiges,;40,0;m3;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+110;Material des AG als Bodenaustausch im Leitungsgraben oberhalb der Leitungszone als Hauptverfüllung, für Aushubvertiefungen unterhalb des Sohlprofils und zur Schachtverfüllung;9,0;m3;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+120;Rohrleitung markieren mit Trassenwarnband 30 cm über;20,0;m;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+130;Magerbeton liefern und nach Angabe des AG bzw. auf;3,0;m3;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+140;Zulage zu Leitungsgraben herstellen. Vergütet wird der Mehraufwand für das Freilegen der vorhandenen Leitung Kunststoff, GGG, AZ usw.. Inkl. der Aufwendungen für Such- und Handschachtungen gemäß Anforderungen des Versorgungsträgers. Zur Herstellung Anschlüssen an Bestand bzw. Einbindung der Hausansc;2,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+150;Kreuzung von vorhandenen Ver- und Entsorgungsleitungen;6,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+160;Vorhandene Ver- und Entsorgungsleitungen;2,0;m;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+10;Notversorgung aus Rohr DA 90 PE-HD;50,0;m;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+20;Nothausanschluß,Länge bis 10m.;2,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+30;Schneiden und Anschrägen DIN EN ISO 9692-1 an einzelnen Rohren, an Druckrohrleitungen für Trinkwasser, aus PE, DIN EN 12201-1 u. 2., bis einschließlich DN100. Rohr im Bestand (Boden verbaut). Wasserhaltung für auslaufendes Wasser ausführen.;2,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+40;Einbindungen der HL-Notleitung an vorh. Leitungen DN 100 aus GG, Ge, GGG, PVC, in Leitungsabschnitt, einschl. aller Kleinteile und Dichtungen, Schnitte, Passstück, Pumpen des anfallenden Wassers und Säubern an den Leitungen. Erdar- beiten und Formteile werden gesondert vergütet. Als Komplett- leistu;2,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+10;Demontage vorh. Rohrleitungen aus GG und GGG sowie Rohrleitungsverbindungen in Baugruben und Rohrgräben. Materialien ausbauen, laden, transportieren und nach Wahl des AN entsorgen. Einschl. Lösen aller Schraub- und Steckverbindungen, Trennen der Leitung, Säubern des Anschlusses. Das Entleeren der Le;39,0;m;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+20;Demontage und Ausbau von Armaturen DN 80 bis DN 125 mm,;1,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+30;Schutzrohr DN 200 einschließlich der Rohrverbindung liefern und einbauen. Erdarbeiten werden gesondert vergütet.;30,0;m;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+40;Kunststoffgleitkufen, bestehend aus Einzelsegmenten, zusammensetzbar für den;12,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+50;Druckrohre aus PE 100 da110 x 10,0 SDR 11 liefern und in Schutzrohr mit Gleitkufen verlegen. Einschl. aller erforderlicher Schweiß- oder Steckverbindungen.;36,0;m;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+60;Schneiden und Anschrägen DIN EN ISO 9692-1 an Druckrohr- leitungen für Trinkwasser, aus PE DIN EN 12201-1 und DIN EN 12201-2, PE 100.;2,0;m;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+70;Trassenwarnband aus Kunststoff liefern und auf der Leitungs- zone der Wasserleitungen verlegen.;30,0;m;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+80;Einbindungen der neuen Wasserleitung an vorh. Leitungen DN 100 aus GG, Ge, GGG, PVC, in Leitungsabschnitt, einschl. aller Kleinteile und Dichtungen, Schnitte, Passstück, Pumpen des anfallenden Wassers und Säubern an den Leitungen. Erdar- beiten und Formteile werden gesondert vergütet. Als Komplett- ;2,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+90;Winkel aus PE für Druckrohrleitung aus PE, passend zum Rohr;1,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+100;Unterflurhydranten DIN 3221, Flanschenanschluss liefern und montieren. Mit selbsttätiger Entleerung und Druckwasserschutz, Ventilkegel einteilig, kompakt und allseits gummiert, mit selbsttätigem Klappenverschluss unter der Klaue angeordnet, wartungsfreier Spindelanordnung, Korrosionsschutz der Gehäu;2,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+110;Mehr­be­reichskupplung DN 100 für Druckrohrleitung für Trinkwasser GW 368, DIN EN 545 mit Dichtelement aus EPDM.;2,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+120;PE Vor­schweiß­bund mit Los­flansch DN 100 / OD 110 mm - SDR 11 liefern und fach­ge­recht mon­tie­ren. Vorbereitet;2,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+130;Doppelflanschstück mit Flanschabzweig, T-Stück, für Druck-;2,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+140;Doppelflansch-Fußbogen, 90 Grad, N-Stück, für Druckrohr-;2,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+150;Ortbeton, als unbewehrter Beton, Normalbeton C12/15 DIN EN 206-1, DIN 1045-2, liefern und einbauen. Zur Längskraftsicherung der verlegten Muffendruckrohre gem. den Herstellerangaben, zur Ausbildung von Widerlagern an Schieberkreuzen und Steilstrecken etc. Einbau nur in Bereichen der freien Rohrstrec;1,0;m3;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+160;Absperrschieber / Streckenschieber DN 100 einschl. Einbaugarnitur und Straßenkappe liefern und einbauen.;2,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+170;Sonstige Formteile aus duktilem Gusseisen GGG, DN 80 bis 125, je nach Örtlichkeit. Formteile wie F-Stücke, EU-Stücke, U-Stücke etc. Formteile mit ZM-Auskleidung. Liefern und einbauen in Rohrgräben, Einbautiefe bis 2,00 m. Einschl. aller erforderlicher Verbindungen, Dichtungseinlagen, Schrauben und U;20,0;kg;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+180;Glatte Schilderpfosten aus Aluminium, Durchmesser 60 mm,;2,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+10;Demontage vorh. Rohrleitungen aus Blei, Stahl, PE, PVC sowie Rohrleitungsverbindungen in Baugruben und Rohrgräben. Mate- rialien ausbauen, laden, transportieren und nach Wahl des AN entsorgen. Einschl. Lösen aller Schraub- und Steckverbin- dungen, Trennen der Leitung, Säubern des Anschlusses.;10,0;m;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+20;Demontage vorh. Absteller / Anbohrarmaturen der Hauanschlussleitungen einschl. Rohrleitungsverbindungen, in Baugruben und Rohrgräben. Materialien ausbauen, laden, transportieren und nach Wahl des AN entsorgen. Einschl. Lösen aller Schraub- und Steckverbindungen, Trennen der Leitung, Säubern des Ansc;1,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+30;"Trinkwasseranbohrarmatur 1 1/4"" Zoll für von oben. Anbohren unter Druck, für Guss und Stahlrohre. Einschließlich dazugehörigen Befestigungsbügel, Dichtung und  Teleskopeinbaugarnitur aus Edelstahl für ca. 1,50 m Rohrdeckung, verstellbar.";1,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+40;Druckrohre aus PE 100 RC DA 40 x 3,7 mm / SDR 11 liefern und in Rohrgräben verlegen. Verlegung in Schutzsand- ummantelung im Bereich offener Rohrgräben. Einschl. aller erforderlicher Steckverbindungen. DVGW Zulassung für Trink- wasser, Maße nach DIN 807, DIN EN 12201. Gütesicherung gem. DVGW GW 321,;10,0;m;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+50;"Formstück / Übergangsstück von verschiedenen Materialien und Nennweiten auf PE 100 1 1/4"" Zoll liefern. Als Zulage zur Rohrposition, passend zur Hausanschlussleitung.";1,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+60;Umschluss der neu verlegten Leitung an vorhandene Hausanschlussleitung bis da50 mm an bestehende Leitungen aller Art oder Einbauarmatur / Wasserzähler von Abnehmern. Die Leistung beinhaltet den Einbau aller erforderlichen Materialien und Formstücke. Einschl. Anschnitt der Rohrleitung, Reinigung und ;1,0;St;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+70;Trassenwarnband nach Vorgaben des AG liefern und auf Wasserleitung verlegen.;10,0;m;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+10;Spülen und desinfizieren der Druckrohrleitung , als Vorbereitung der Inbetriebnahme der Trinkwasserleitungen. Einschl. Nachweis der Keimfreiheit durch Vorlage der bakteriologischen Untersuchungsergebnisse gem. TrinkwV, sowie Beseitigung des Spülwassers und gründlicher Nachspülung. Probenahme und Unt;36,0;m;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83
+20;Innendruckprüfung gem. DVGW-Arbeitsblatt W 400-2 mit kontinuierlichen Druckschreibern. Die Druckprüfung ist je nach Einzelfall auf ausdrückliche Anweisung durch den AG durchzuführen. Die Beschaffung und Entsorgung des Wassers ist Sache des AN und in die Einheitspreise einzukalkulieren. Erstellen ein;36,0;m;gaeb;Leistungsverzeichnis/02_5217_Leistungsverzeichnis_24.07.2026.X83

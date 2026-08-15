@@ -113,6 +113,11 @@ def build_parser() -> argparse.ArgumentParser:
     sg = sub.add_parser("signals-docs", help="Volltext → strukturierte Lead-Signale (doc_signals.parquet)")
     sg.add_argument("--country", default="DE")
     sg.add_argument("--data-dir", default="data")
+    # Der Schritt rechnet nur noch Neues/Geaendertes. Eine Regelaenderung erzwingt den
+    # Voll-Lauf von selbst (Fingerabdruck der Regeln); dieser Schalter ist fuer den Fall,
+    # dass man dem Bestand aus einem anderen Grund nicht traut.
+    sg.add_argument("--neu-aufbauen", action="store_true",
+                    help="alle Vorgaenge neu rechnen statt nur die geaenderten")
 
     srcp = sub.add_parser("sources", help="Quellen-Registry anzeigen (Connector × Land × Tier)")
     srcp.add_argument("--country", default=None, metavar="CC", help="nur Quellen dieses Landes")
@@ -389,7 +394,7 @@ def main(argv: list[str] | None = None) -> int:
     if args.command == "signals-docs":
         from . import docsignals
         cfg = Config(countries=(args.country,), data_dir=args.data_dir)
-        docsignals.build_signals(cfg, country=args.country)
+        docsignals.build_signals(cfg, country=args.country, neu_aufbauen=args.neu_aufbauen)
         return 0
     if args.command == "sources":
         return cmd_sources(args)

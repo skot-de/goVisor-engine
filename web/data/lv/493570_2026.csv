@@ -1,0 +1,485 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+01;Gerätebeschreibung:;3,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+02;Inbetriebnahme;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+03;Schmutzfänger für cor beschriebene WP (alle Va-;3,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+04;Schwingungsdämpfer für WLW276 53-59 (für;3,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+05;für den Wärmetauscher der Wärmepumpe;3,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+06;Heizkabel für den Kondensatablauf der;3,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+07;30 m langer Temperaturfühler für vor beschriebene Wärmepumpe;3,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+08;50 m langer Temperaturfühler für vor beschriebene Wärmepumpe;3,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+09;Kabel CANbus 30m 2x2x0,75mm2;3,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+10;Doppelkompensator, PN10, mit 90 Grad;6,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+11;Stahl-Kompensator;6,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+12;Kugelhahn;6,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+13;Elektr. Kondensatablauf-Heizung 5 m;3,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+14;Elektro-Heizeinsatz mit Anschlussgehäuse;8,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+15;Wärmeübertrager;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+16;Regelgerät R5311 S16 verp;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+17;Funktionsmodul FM-MM z. Einbindung zwei-;4,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+18;Funktionsmodul FM-AM zur Einbindung ei-;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+19;VPN Router ERT50-B;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+20;Vorlauftemperaturfühler Durchmesser;5,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+01;Pellets-Heizung mit Sauganlage (299kW) ECO-Betrieb:;2,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+02;Zusatzplatine für 2 Raum + 1 oder 2 Steig-/Verbindungsschnecken;2,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+03;Automatische 2-fach Umschalteinheit;2,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+04;Multizyklon mit Partikelfilter eCleaner für vor beschriebenen Pelletheizkessel.;2,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+05;Rücklaufanhebugsgruppe für vor beschrieben Heizkessel;2,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+06;Pellets-Saugrohrsystem für vor beschrieben Pelletsheizkessel.;4,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+07;Nennweite:  DN 50 (54 x 1,5 mm);35,0;m;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+08;Pellets-Saugrohrsystem Bogen für vor beschrieben Pelletsheizkessel.;6,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+09;Pellets-Saugrohrsystem Kupplung für vor beschrieben Pelletsheizkessel.;12,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+10;für Pellets-Saugrohrsystem;4,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+11;für Pellets-Saugrohrsystem;4,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+12;Saugschlauch-Verbindung DM50x80mm;2,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+13;Pelletsssaugrorhrsystem Einlegedichtung;2,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+14;Saugschlauch-Rolle 50lfm, hohe;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+15;Fabrikat der Planung:;6,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+16;Fabrikat der Planung:;8,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+17;Kaskadenmanagerin Stand-Alon Ausführung bis zu 8 Heizkessel;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+18;M-AFS-GM-330.1;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+19;modulares Aschefördersystem;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+20;RA-Verlängerung 600mm;2,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+21;RA-Verlängerung 800mm;2,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+22;RA-Verlängerung 1600mm;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+23;senkrechte Verbindungsschnecke S-VBS;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+24;Verlängerung-Fallrohr 150x500mm für Hackgut, inkl. Spannring;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+25;Verlängerung senkr.-VBS 180 x 1000mm,;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+26;Stützfuß für zusätzliche Verlängerungen;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+27;Anschlussstück für 800l Aschetonne;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+28;Aschetonne 800l für Rostentaschung;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+29;Systemmanager;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+30;Elektroanschluss von 2 Heizkreisen;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+31;Elektromaterial zum Anschluß der zuvor beschriebenen Anlagenteile einschließlich der Montage sowie das Verlegen der Elektroleitungen;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+32;Unterdrucküberwachung;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+33;"Projekt-Pufferspeicher 5000 D=1600mm, H=2818mm, DN100mm, ohne Isolierung Perfekte Anschlusspositionen für -Regel+Hydrauliksysteme: 2 x 90 versetzte Anschlussreihen mit je 2 Stk. Anschlussflanschen DN100/PN16, max. Betriebsdruck 3bar, max. Betriebstemperatur 95 C, 1 x Entlüftungsleitung oben 1""IG, 1 ";4,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+34;Dämmung;4,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+35;inkl. 5 m Anschlusskabel;10,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+36;Anlagendrucksensor für Pelletheizkessel;2,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+37;Thermische Ablaufsicherung 95 C, Ventil;2,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+38;Inbetriebnahme, Messung und Dokumentation der einwandfreien Funktion von zwei Heizkesseln, den Feintaubfiltern, dem Pelletfördersystem und Aschefördersystem;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+01;Genehmigung (Antrag Feuerstätte);1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+02;DW Fussteil mit Stütze,;2,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+03;DW Reinigungsöffnung (ohne Innendeckel);2,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+04;Reinigungsdeckel rund;2,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+05;DW T- Stück 90 Grad;2,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+06;DW Längenelement 1000 mm;16,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+07;DW Längenelement 500 mm;2,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+08;DW Längenelement 250 mm;2,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+09;DW Mündungsabschluss;2,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+10;DW Bogen 30 Grad starr;4,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+11;Wandhalter statisch;34,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+12;Wandhalter, Verlängerung;34,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+13;Flachdachdurchführung;2,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+14;Regenkragen;2,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+15;DW Längenelement 1000 mm;5,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+16;DW Längenelement 500 mm;2,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+17;DW Längenelement 250 mm;4,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+18;DW Bogen 30 Grad starr;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+19;DW Bogen 87 Grad starr;4,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+20;DW T- Stück, 90 Grad;2,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+21;DW Zugbegr.-Adapter;2,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+22;DW Ausgleichselement;2,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+23;DW Längenelement mit Messöffnung;2,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+24;Klemmband;15,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+25;Klemmband;20,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+26;DW Halter für Verbindungsleitung;12,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+01;Einblasstutzen gerade 100x500mm A-Kupplung mit belüftetem Deckel mit geradem Mauerrohr (individuell verlängerbar), mit Befestigungsflansch und Erdungsschraube, inkl. Spannring;8,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+02;Verlängerungsrohr 100x500 mm;4,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+03;Verlängerungsrohr 100x2000 mm;6,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+04;Rohrbogen 100x90;8,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+05;Prallschutzmatte 1200x1000mm, 3mm stark;4,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+06;Türschienen Set 1 für Einstiegsluke inkl. Kontrollluke und Türschutzbretter besteht aus:;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+07;für Schrägboden des Pelleltagers.;3200,0;kg;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+08;des Schrägbodens im Pelletlager mit;60,0;m²;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+01;fuer Mikroblasen oder Schlammpartikel,;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+02;Magnet Attachment, zur bauseitigen;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+03;bestehend aus;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+04;bestehend aus:;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+05;bestehend aus Basisgefäss und Druckhaltessysteme mit;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+06;Druckausdehnungsgefaess  mit;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+07;Kappenabsperrhahn DLV 20;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+08;Nachspeisung, Heiz-, Solar- und;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+09;Enthärtungsarmatur m. Filter;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+10;Netzgerät für Wassermesser;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+11;Elektr. Wassermesser;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+12;Automatischer Schnell-/Großentlüfter;4,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+01;fuer Mikroblasen oder Schlammpartikel,;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+02;Magnet Attachment, zur bauseitigen;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+03;bestehend aus;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+04;Druckausdehnungsgefaess  mit;2,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+05;Kappenventil;2,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+06;Sicherheitsventil für Wärmeerzeuger,;2,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+07;Maximaldruckbegrenzer;2,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+08;Sicherheitstemperaturbegrenzer;2,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+09;Wasserstandsbegrenzer;2,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+10;Automatischer Schnell-/Großentlüfter;4,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+01;fuer Mikroblasen oder Schlammpartikel,;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+02;Magnet Attachment, zur bauseitigen;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+03;bestehend aus;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+04;Druckausdehnungsgefaess  mit;3,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+05;Kappenabsperrhahn DLV 20;3,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+06;Sicherheitsventil für Wärmeerzeuger,;3,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+07;Nachspeisung, Heiz-, Solar- und;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+08;Enthärtungsarmatur m. Filter;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+09;Netzgerät für Wassermesser;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+10;Elektr. Wassermesser;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+11;Automatischer Schnell-/Großentlüfter;4,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+01;Nennweite:;20,0;m;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+02;geprimerte Ausführung;5,0;m;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+03;Nennweite:;5,0;m;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+04;Nennweite:;1,0;m;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+05;Nennweite:  DN 50;1,0;m;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+06;Nennweite:  DN 65;1,0;m;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+07;Nennweite:  DN 80;80,0;m;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+08;Nennweite:  DN 100;130,0;m;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+09;Nennweite:;10,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+10;Nennweite:;6,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+11;Nennweite:;5,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+12;Nennweite:;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+13;Nennweite:;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+14;Nennweite:;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+15;Nennweite:;50,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+16;Nennweite:;60,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+17;Größte Nennweite:;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+18;Größte Nennweite:;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+19;Größte Nennweite:;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+20;Größte Nennweite:;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+21;Größte Nennweite:;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+22;Größte Nennweite:;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+23;Größte Nennweite:;4,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+24;Größte Nennweite:;16,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+25;Nennweite: DN 25> DN 20;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+26;Nennweite: DN 32 > DN 25;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+27;Nennweite: DN 40 > DN 32;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+28;Nennweite: DN 50 > DN 40;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+29;Nennweite: DN 65 > DN 50;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+30;Nennweite: DN 80 > DN 65;2,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+31;Nennweite: DN 100 > DN 80;20,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+32;Luftgefäß bis Anschluss DN 100, 250 mm lang, aus Stahlrohr, mit gewölbtem Böden, zwei Leitungsanschlüssen und einem Entlüftungsanschluß,;8,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+33;Standard Ringraumdichtung zur Abdichtung von neu zu installierenden oder bereits verlegten Rohren in Kernbohrungen oder Futterrohren. Lieferbar für alle gängigen Rohrgrößen. Für nachträgliche Montage bis Ø 200 mm vor Ort teilbar;6,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+01;Verteiler Heizung;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+02;Dämmung;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+03;(Heizkreis WP Wärmetauscher);1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+04;(Heizkessel);2,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+05;(Heizkreis geregelt);1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+06;(Heizkreis ungeregelt);1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+07;(Heizkreis Primär);1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+08;Zwischenflansch- Absperrklappe;20,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+09;Elektrisch betriebene Zwischenflansch- Absperrklappe;4,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+10;Nennweite:;2,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+11;Nennweite:;4,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+12;Nennweite:;13,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+13;Zwischenflansch-  Rückschlagklappe;3,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+14;Flanschen- Schmutzfänge,;3,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+15;Flanschen- Schmutzfänge,;3,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+16;Flansch Volumenstromregler DN 80;4,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+17;beigestelltes 3- Wege- Regelventil montieren;2,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+18;beigestelltes Durchgangs- Regelventil montieren;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+19;beigestellte Tauchhülse DN 15l;50,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+20;KFE- Hahn aus Rotguß,mit Schlauchverschraubung Kette, Kappe und Schlüssel, inkl Schweißmuffe, Eindichtung;30,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+21;KFE- Hahn aus Rotguß,mit Schlauchverschraubung Kette, Kappe und Schlüssel, inkl Schweißmuffe, Eindichtung;5,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+22;Maschinen- Thermometer, Klasse 1;40,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+23;Röhrenfelder-Hochdruck-Manometer Klasse 1;40,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+01;Wärmedämmung aus Rohrschalen,;20,0;m;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+02;Wärmedämmung aus Rohrschalen,;5,0;m;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+03;Wärmedämmung aus Rohrschalen,;5,0;m;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+04;Wärmedämmung aus Rohrschalen,;1,0;m;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+05;Wärmedämmung aus Rohrschalen,;1,0;m;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+06;Wärmedämmung aus Rohrschalen,;1,0;m;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+07;Wärmedämmung aus Rohrschalen,;80,0;m;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+08;Wärmedämmung aus Rohrschalen,;130,0;m;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+09;als Bogen-Formstück in Schalen;10,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+10;als Bogen-Formstück in Schalen;6,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+11;als Bogen-Formstück in Schalen;5,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+12;als Bogen-Formstück in Schalen;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+13;als Bogen-Formstück in Schalen;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+14;als Bogen-Formstück in Schalen;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+15;als Bogen-Formstück in Schalen;50,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+16;als Bogen-Formstück in Schalen;60,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+17;als Abzweig in Schalen;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+18;als Abzweig in Schalen;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+19;als Abzweig in Schalen;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+20;als Abzweig in Schalen;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+21;als Abzweig in Schalen;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+22;als Abzweig in Schalen;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+23;als Abzweig in Schalen;4,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+24;als Abzweig in Schalen;16,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+25;Wärmedämmung aus Rohrschalen,;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+26;Wärmedämmung aus Rohrschalen,;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+27;Wärmedämmung aus Rohrschalen,;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+28;Wärmedämmung aus Rohrschalen,;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+29;Wärmedämmung aus Rohrschalen,;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+30;Wärmedämmung aus Rohrschalen,;2,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+31;Wärmedämmung aus Rohrschalen,;20,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+32;Nennweite DN 25;5,0;m;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+33;Nennweite DN 32;5,0;m;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+34;Nennweite DN 40;1,0;m;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+35;Nennweite DN 50;1,0;m;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+36;Nennweite DN 65;1,0;m;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+37;Nennweite DN 80;20,0;m;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+38;Nennweite DN 100;30,0;m;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+39;Nennweite DN 80;20,0;m;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+40;Nennweite:;2,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+01;Thermostat;3,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+02;Anschlussdose;3,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+03;Selbstregelndes Frostschutzband;30,0;m;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+04;Anschluss- Set Endabschluss;3,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+05;Kaltleiterverbindung;3,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+06;Heizband T-Abzweig;3,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+07;Aluminium-Klebeband für Heizunglseitungen;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+08;Kennzeichnungsaufkleber für Heizungsleitungen;6,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+09;Auflegen der Kabelenden im Schaltschrank sowie den Anschlussdosen und Inbetriebnahme der zuvor beschriebenen Rohrbegleitheizung;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+01;Anwendung/Typ: Tauchhülse, Zubehör;20,0;Stk;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+02;Anwendung/Typ: Tauchhülse, Zubehör;4,0;Stk;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+03;Kanal-/Tauchfühler zur Messung der Temperatur in gasförmigen Medien von Heizungs-, Lüftungs- und Klimaanlagen (z.B. in Zu-/Abluftkanälen). Ausgelegt zur Aufschaltung auf Regler- und Anzeigesysteme. Der Fühler kann wahlweise mittels Montageflansch oder über den mitgelieferten Montageclip direkt am Lü;20,0;Stk;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+04;Kanal-/Tauchfühler zur Messung der Temperatur in gasförmigen Medien von Heizungs-, Lüftungs- und Klimaanlagen (z.B. in Zu-/Abluftkanälen). Ausgelegt zur Aufschaltung auf Regler- und Anzeigesysteme. Der Fühler kann wahlweise mittels Montageflansch oder über den mitgelieferten Montageclip direkt am Lü;4,0;Stk;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+05;DN 20, PN 40;2,0;Stk;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+06;DN 25, PN 40;1,0;Stk;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+07;DN 32, PN 16;2,0;Stk;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+08;Elektron. 2-Weg Regelkugelhahn;1,0;Stk;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+09;Elektron. 2-Weg Regelkugelhahn;2,0;Stk;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+10;DN 65, PN 6;1,0;Stk;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+11;DN 80, PN 6;1,0;Stk;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+12;DN 100, PN 16;1,0;Stk;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+13;Stetiger elektromotorischer Drehantrieb für Kugelhähne;3,0;Stk;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+14;Stetiger elektromotorischer Drehantrieb für Kugelhähne;3,0;Stk;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+15;Kommunikativer elektromotorischer Drehantrieb für Kugelhähne;2,0;Stk;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+16;Hauptschalter, Wartungsschalter, Reparaturschalter, Typkenner: P1, STOPP-Funktion: HALT-Funktion, mit schwarzem Drehgriff und Sperrkranz, Information zum Lieferumfang: Hilfsschalterkontakt oder Neutralleiter nachrüstbar., 3-polig, Abschließbarkeit: abschließbar in 0-Stellung, Schutzart: Front IP65, ;7,0;Stk;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+17;Folgende Parameter können gemessen werden:;1,0;Stk;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+18;Bezeichnungsschild, Farbe und Beschriftung nach Angaben des AG, aus mehrschichtigem Kunststoff, Beschriftung 3-zeilig, gedruckt, rechteckig, Höhe über 30 bis 40 mm, Breite über 50 bis 60 mm.;80,0;Stk;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+01;Anreihschrank- / Anfangsschrank RAL 7035,;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+02;Laptopablage, ausklappbar;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+03;Einspeiseschalter als Lasttrennschalter 63A, 3pol.;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+04;BG Überspannungsschutz Einspeisung;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+05;BG LED- Schaltschrankbeleuchtung für;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+06;Schaltschrankbelüftung- Luftfördermenge 205 m³ /h;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+07;BG Netz- Spannungsüberwachung mit Phasen- Kontrollleuchten;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+08;BG Quittierung / Netzwiederkehr;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+09;BG Spannungsversorgung 230VAC / 24VDC / 10A;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+10;BG Spannungsversorgung 230VAC / 6A;2,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+11;Potentialverteiler PV10 16A;10,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+12;Ausgangsspannung DC 24 V,;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+13;4-kanalig, DC 24 V / 1 - 10 A;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+14;Neben den Netzwerk- und Feldbus-;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+15;Temperaturbereich -40 - 90 °C;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+16;Am Ende eines Feldbusknotens ist;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+17;DC 24 V positivschaltend;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+18;DC 0 - 10 V, ±10 V;2,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+19;positivschaltend;2,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+20;Widerstandsmessung, konfigurierbar;5,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+21;1 Wechsler Grenzdauerstrom 16 A, DC 24 V;8,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+22;Das Analogeingangsmodul verarbeitet;6,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+23;Serielle-Schnittstelle frei konfigurierbar;3,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+24;"25,7 cm / 10,1"", kapazitiver Touch";1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+25;Ist ein industri eller Unmanaged-ETHERNET-Switch;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+26;zur Tragschienen- und Schraubmontage;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+27;Schaltschranktransport bis Baustelle;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+28;Schaltschrank Inbetriebnahme;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+29;Schaltschrank wie vorstehend beschrieben;3,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+30;Werkstatt- und Montageplanung bestehend;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+31;Inbetriebnahme nach VDE 0100 Teil 600;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+32;Elektrische Überprüfung einer Anlage;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+01;Kabelverschraubung, M16;50,0;Stk;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+02;Kabelverschraubung, M20;65,0;Stk;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+03;Kabelverschraubung, M25;40,0;Stk;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+04;Einführen, Absetzen und Auflegen von fertig verlegten;65,0;Stk;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+05;Abzweigkasten 93x93x62, betriebsfertig verdrahtet;25,0;Stk;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+06;Kabelrinne für Kabelträgersystem;25,0;m;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+07;Bogen Kabelrinne,;12,0;Stk;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+08;Ausleger für Steigleiter,;10,0;Stk;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+09;Stiel für Ausleger für Kabelrinne,;10,0;Stk;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+10;für 10x NYM 3x1,5 Leitungen;50,0;Stk;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+11;für 40x NYM 3x1,5 Leitungen;50,0;Stk;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+12;Halogenfreie Installationsleitung J-H(St)H St III Bd B2ca;100,0;m;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+13;Halogenfreie Installationsleitung J-H(St)H St III Bd B2ca;100,0;m;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+14;Halogenfreie Installationsleitung J-H(St)H St III Bd B2ca;100,0;m;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+15;Halogenfreie Installationsleitung;70,0;m;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+16;Halogenfreie Installationsleitung;125,0;m;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+17;Installationskabel, symmetrisch,;50,0;Stk;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+18;Potentialausgleichsleitung NYM-J 1x16qmm;30,0;m;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+19;Verbindungsdose, Aufputz,;20,0;Stk;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+20;Elektroinstallationsrohr;30,0;m;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+21;Elektroinstallationsrohr;110,0;m;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+22;Elektroinstallationsrohr;125,0;m;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+23;für ausserhalb des Schaltschrankes;100,0;Stk;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+24;nach EN 50173 , E DIN 44312-5, ISO/IEC 11801,;100,0;m;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+25;Verlegung im bauseitigen Leerrohr mit Zudraht;150,0;m;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+26;Auflegen Kupferverbindungen incl. Beschriftungen;10,0;Stk;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+27;herstellen. Wand/Deckedicke bis 300mm;10,0;Stk;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+28;herstellen. Wand/Deckedicke bis 300mm;10,0;Stk;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+29;herstellen. Wand/Deckedicke bis 300mm;10,0;Stk;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+30;Abschottung für DB-Größe Ø:40mm;10,0;Stk;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+31;Abschottung für DB-Größe Ø:60mm;5,0;Stk;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+32;Abschottung für DB-Größe Ø:80mm;5,0;Stk;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+01;Heizungsanlage Bestandsgebäude mit bis zu 40kW entleeren und nach erfolgter Neumontage wieder mit aufbereitetem Wasser füllen.;4,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+02;Am Hausanschluss ist der Gashahn abzusperren und nach Demontage der Gasleitung endgültig mit einem Stopfen zu sichern. Die Gasanlage ist beim EVU abzumelden.;3,0;psch;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+03;Schaltschrank Heizung Strom zu Heizkesseln abschalten undaußer Betrieb nehmen.;3,0;psch;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+04;Heizungsrohr aus Stahl bis Durchmesser 50 mm, Mineralwollisolierung entfernen, Rohrleitung trennen und für Wiederanschliuss vorbereiten.;8,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+05;Demontage Gußheizkessel inkl. Formteile aus Stahl oder Kupfer, Gewicht ca. 200 kg,, inkl. Blechverkleidung und Dämmung von den Rohrleitungen, den Elektrozuleitungen und der Gasleitung trennen,  demontieren und abtransportieren.;3,0;psch;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+06;Demontage Hydraulische Weiche inkl. Formteile aus Stahl oder Kupfer, Gewicht ca. 150 kg,, inkl. Blechverkleidung und Dämmung von den Rohrleitungen trennen,  demontieren und abtransportieren.;1,0;psch;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+07;Abbruch der Rohrleitung Heizung und Gas inkl. Formteile aus Stahl oder Kupfer, Außendurchmesser bis DN 80, im Gebäude,  Höhe bis 3 m verlegt, inkl. Ummantelung aus Mineralwolle, demontieren und abtransportieren.;40,0;m;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+08;wie zuvor, jedoch DN80;60,0;m;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+09;Demontage der Armaturen , im Gebäude, Höhebis 3 m,;6,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+10;wie zuvor, jedoch DN80;10,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+11;Demontage Umwälzpumpe aus Gußeisen, Gewicht ca. 3 kg,, inkl.  Dämmung von den Rohrleitungen und den Elektrozuleitungen,  demontieren und abtransportieren.;5,0;psch;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+12;"Elektrokabel bis NY; 5 x 2,5 mm inkl. Halterungen und Leerohren sowie Temperaturfühlern demontieren und abtransportieren.";200,0;m;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+13;Behälter für Schrott und Armaflex  Dämmung  liefern und für Zeitraum der Demontagearbeiten auf die dafür vorgesehene Stelle zu platzieren.;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+01;Anschluss a DN 32 frei zugänglich einschließlich Formstücke wie Verschraubungen,;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+02;wie zuvor, jedoch DN50;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+03;wie zuvor, jedoch DN80;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+04;Wärmeübertrager;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+05;Wärmeübertrager;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+06;Wärmeübertrager;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+07;Druckausdehnungsgefaess  mit;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+08;Druckausdehnungsgefaess  mit;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+09;Druckausdehnungsgefaess  mit;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+10;Messing, Wartung;2,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+11;Messing, Wartung;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+12;Absicherung des maximalen Druckes an;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+13;Absicherung des maximalen Druckes an;2,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+14;fuer Mikroblasen oder Schlammpartikel,;2,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+15;fuer Mikroblasen oder Schlammpartikel,;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+16;bestehend aus;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+01;geprimerte Ausführung;25,0;m;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+02;geprimerte Ausführung;28,0;m;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+03;Nennweite:  DN 32;20,0;m;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+04;Nennweite:  DN 50;45,0;m;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+05;Nennweite:  DN 80;40,0;m;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+06;Nennweite:;26,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+07;Nennweite:;10,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+08;Nennweite:;18,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+09;Nennweite:;10,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+10;Nennweite:;22,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+11;Größte Nennweite:;8,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+12;Größte Nennweite:;6,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+13;Größte Nennweite:;4,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+14;Nennweite: DN 32 > DN 20;5,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+15;Nennweite: DN 32 > DN 25;5,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+16;Nennweite: DN 50 > DN 20;5,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+17;Nennweite: DN 50 > DN 25;5,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+18;Nennweite: DN 80 > DN 20;5,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+19;Nennweite: DN 80 > DN 25;5,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+20;Luftgefäß bis Anschluss DN 100, 250 mm lang, aus Stahlrohr, mit gewölbtem Böden, zwei Leitungsanschlüssen und einem Entlüftungsanschluß,;6,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+01;Heizungsrohr aus Stahl oder Kupfer bis Durchmesser DN 80, Isolierung aus Mineralwolle mit Blechmantel entfernen, Rohrleitung trennen und für Wiederanschluss vorbereiten.;6,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+02;Absperrventil mit Stellungsanz.und Hubbegrenz. Weichdichtendes Flanschen-Absperrventil, einteiliges Gehäuse, Baulänge EN 558/14. Durchgangsventil mit Schrägsitzhydraulik mit nicht steigendem Handrad, Drosselkegel, Stellungsanzeige, Feststellvorrichtung, geschützter innenliegender Hubbegrenzung und;4,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+03;Absperrventil mit Stellungsanz.und Hubbegrenz. Weichdichtendes Flanschen-Absperrventil, einteiliges Gehäuse, Baulänge EN 558/14. Durchgangsventil mit Schrägsitzhydraulik mit nicht steigendem Handrad, Drosselkegel, Stellungsanzeige, Feststellvorrichtung, geschützter innenliegender Hubbegrenzung und;8,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+04;Nennweite:;2,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+05;Nennweite:;2,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+06;Nennweite:;2,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+07;Druckunabhängiger 2-Weg-Regelkugelhahn (Energy Valve);1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+08;Druckunabhängiger 2-Weg-Regelkugelhahn;2,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+09;Druckunabhängiger 2-Weg-Regelkugelhahn (Energy Valve);1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+10;Dynamisch regelnder Volumenstrombegrenzer;4,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+11;Heizungs-Maschinenthermometer;12,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+12;Röhrenfeder-Hochdruck-Manometer;12,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+13;aus Rotguß, PN 6, mit Schlauchverschraubung Kette, Kappe und Schlüssel, inkl Schweißmuffe, Eindichtung;12,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+14;beigestellte Tauchhülse DN 15l;6,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+01;Wärmedämmung aus Rohrschalen,;25,0;m;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+02;Wärmedämmung aus Rohrschalen,;40,0;m;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+03;Wärmedämmung aus Rohrschalen,;20,0;m;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+04;Wärmedämmung aus Rohrschalen,;45,0;m;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+05;Wärmedämmung aus Rohrschalen,;60,0;m;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+06;als Bogen-Formstück in Schalen;10,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+07;als Bogen-Formstück in Schalen;10,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+08;als Bogen-Formstück in Schalen;10,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+09;als Abzweig in Schalen;10,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+10;als Abzweig in Schalen;10,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+11;Wärmedämmung aus Rohrschalen,;10,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+12;Wärmedämmung aus Rohrschalen,;10,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+13;Wärmedämmung aus Rohrschalen,;10,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+14;Wärmedämmung aus Rohrschalen,;10,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+15;Wärmedämmung aus Rohrschalen,;10,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+16;Wärmedämmung aus Rohrschalen,;10,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+17;Nennweite DN 20;25,0;m;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+18;Nennweite DN 25;40,0;m;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+19;Nennweite DN 32;40,0;m;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+20;Nennweite DN 50;60,0;m;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+21;Nennweite DN 80;25,0;m;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+22;Nennweite DN 20;10,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+23;Nennweite DN 25;10,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+24;Nennweite DN 50;10,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+25;Nennweite DN 80;10,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+26;Nennweite DN 50;10,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+27;Nennweite:;5,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+28;Nennweite:;5,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+29;Nennweite:;5,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+30;Nennweite:;5,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+31;Nennweite:;5,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+01;Kompakt-Schaltschrank, BHT: 800x1000x300 mm, Stahlblech, mit Montageplatte, eintürig, mit 3-Punkt-Verschluss-System inklusive Kabeleinführung, Kammkanal und Wandhalterung;3,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+02;Laptopablage, ausklappbar;3,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+03;BG Überspannungsschutz Einspeisung Überspgs.ableiter Typ 2/ 4pol. mit FM;3,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+04;BG LED- Schaltschrankbeleuchtung für Anfangsschrank bestehend aus: 1 x Systemleuchte LED 1200lm inkl. Steckdose, Bewegungsmelder, Anschlussleitung und Absicherung;3,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+05;Schaltschrankbelüftung- Luftfördermenge 205 m³ / h bestehend aus:;3,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+06;BG Netz- Spannungsüberwachung mit Phasen- Kontrollleuchten;3,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+07;BG Quittierung / Netzwiederkehr;3,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+08;BG Spannungsversorgung 230VAC / 24VDC / 10A;3,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+09;Potentialverteiler PV10 16A;10,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+10;Ausgangsspannung DC 24 V,;3,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+11;1-kanalig, DC 24 V / 1 - 8 A;3,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+12;Neben den Netzwerk- und Feldbus-;3,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+13;Temperaturbereich -40 - 90 °C;3,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+14;"mit D-Sub-Stecker; 9-polig";3,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+15;Am Ende eines Feldbusknotens ist;3,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+16;DC 24 V positivschaltend;6,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+17;positivschaltend;6,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+18;Widerstandsmessung, konfigurierbar;3,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+19;1 Wechsler Grenzdauerstrom 16 A, DC 24 V;6,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+20;Ist ein industri eller Unmanaged-ETHERNET-Switch;3,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+21;Das Analogeingangsmodul verarbeitet;3,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+22;"25,7 cm / 10,1"", kapazitiver Touch";3,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+23;zur Tragschienen- und Schraubmontage;3,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+01;Kabelverschraubung, M16;10,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+02;Kabelverschraubung, M20;10,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+03;Kabelverschraubung, M25;10,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+04;Einführen, Absetzen und Auflegen von fertig verlegten;10,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+05;Abzweigkasten 93x93x62, betriebsfertig verdrahtet;5,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+06;Halogenfreie Installationsleitung J-H(St)H St III Bd B2ca;125,0;m;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+07;Halogenfreie Installationsleitung J-H(St)H St III Bd B2ca;125,0;m;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+08;Halogenfreie Installationsleitung J-H(St)H St III Bd B2ca;10,0;m;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+09;Halogenfreie Installationsleitung;50,0;m;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+10;Halogenfreie Installationsleitung;125,0;m;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+11;Installationskabel, symmetrisch,;25,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+12;Potentialausgleichsleitung NYM-J 1x16qmm;30,0;m;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+13;Verbindungsdose, Aufputz,;20,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+14;Elektroinstallationsrohr;30,0;m;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+15;Elektroinstallationsrohr;100,0;m;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+16;Elektroinstallationsrohr;25,0;m;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+17;für ausserhalb des Schaltschrankes;50,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+18;nach EN 50173 , E DIN 44312-5, ISO/IEC 11801,;40,0;m;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+19;Kommunikationskabel;80,0;m;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+20;Auflegen Kupferverbindungen incl. Beschriftungen;10,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+21;für 10x NYM 3x1,5 Leitungen;25,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+22;für 40x NYM 3x1,5 Leitungen;85,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+23;Leitungsschutzschalter 16A Typ-B, 10kA, 1 polig;3,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+24;Schaltschrank Heizung ausschalten und nach Montagearbeiten wieder einschalten.;3,0;psch;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+25;Verkabelung suf Reihenklemmen vornehmen, inkl. Lieferung Reihenklemmen und Aderleitungen HO7V-U 1,5 mm² in unterschiedlichen Farben.;3,0;psch;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+26;Monteurstunde für Prüfen von Bestandsanlagen:;2,0;h;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+27;Monteurstunde für Feischalten und provirosche Inbetrieabnahme:;2,0;h;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+28;Monteurstunden für Dokumentation für Anlagen. nach der Abschluss der Demontagearbeiten folgende Dokumentation im pdf-Format zu liefern:;2,0;h;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+01;Die Bereitstellung der Geräte, Werkzeuge und sonstigen Betriebsmittel, die zur vertraglichen Erfüllung der Bauleistungen über die vereinbarte Bauzeit gehören, sind in die Einheitspreise einzukalkulieren.;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+02;Transport der im Leistungsverzeichnis beschriebenen drei Wärmepumpen auf das Dach des Gebäudes mittels Autokran.;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+03;Transport der im Leistungsverzeichnis beschriebenen Heizkessel in die Technikzentrale transportieren mittels elektrischem Hubwagen;2,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+04;Transport der im Leistungsverzeichnis beschriebenen vier Puferspeicher in die Technikzentrale transportieren mittels elektrischem Hubwagen;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+05;Flachdachdurchführung;6,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+06;Hydraulischer Abgleich;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+07;Bezeichnungsschilder;80,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+08;für aufwendige Konstruktionen von Traversen, wenn der Hochbau keine Befestigungsmöglichkeiten bietet.;500,0;kg;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+09;Inbetriebnahme und Einregulierung der gesamten vorgenannten Anlagen der technischen Gebäudeausrüstung inkl. Medien- versorgung.;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+10;Revisionsunterlagen;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+11;dauerhaft versiegelt mit Schrauben befestigt in Abstimmung mit der Bauleitung befestigen;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+12;Einweisung bzw. Schulung aller im Leistungsverzeichnis beschriebenen technischen Anlagen in Absprache mit;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+13;Leitungen spülen u.abdrückem;1,0;St;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+14;Monteurstunde;1,0;Std.;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+15;Helferstunde;1,0;Std.;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+16;Monteurstunde;1,0;Std.;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+17;Zuschlag Monteurstunde;1,0;Std;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+18;Zuschlag Monteurstunde;1,0;Std;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+19;Zuschlag Monteurstunde;1,0;Std;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+20;Obermonteurstunde;1,0;Std.;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+21;Zuschlag Obermonteurstunde;1,0;Std;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+22;Zuschlag Obermonteurstunde;1,0;Std;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+23;Zuschlag Obermonteurstunde;1,0;Std;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+24;Helferstunde;1,0;Std.;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+25;Zuschlag Helferstunde;1,0;Std;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+26;Zuschlag Helferstunde;1,0;Std;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83
+27;Zuschlag Helferstunde;1,0;Std;gaeb;Unterlagen\Anlagen zum Leistungsverzeichnis\2309-LV-Wärmeerzeugung-2026-07-09_V33.x83

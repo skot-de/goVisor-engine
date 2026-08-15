@@ -585,12 +585,20 @@ def test_source_registry_is_wellformed():
     ids = [s.id for s in sources.REGISTRY]
     assert len(ids) == len(set(ids)), "Quellen-IDs müssen eindeutig sein"
     for s in sources.REGISTRY:
-        assert s.connector in sources.CONNECTORS, f"{s.id}: unbekannter Connector {s.connector}"
+        # Seit 2026-08-15 zwei Ebenen: Bekanntmachungen und Vergabeunterlagen. Jede benutzt
+        # IHREN Connector-Namensraum — ein Doc-Abrufer unter CONNECTORS wuerde die
+        # Connector-Zahl aufblaehen, ohne eine Bekanntmachung mehr zu liefern.
+        erlaubt = sources.DOC_CONNECTORS if s.ebene == "unterlagen" else sources.CONNECTORS
+        assert s.connector in erlaubt, f"{s.id}: unbekannter Connector {s.connector}"
         assert s.status in sources.STATUSES, f"{s.id}: unbekannter Status {s.status}"
         assert s.tier in ("oberschwellig", "unterschwellig", "beides"), f"{s.id}: Tier {s.tier}"
+        assert s.ebene in ("bekanntmachung", "unterlagen"), f"{s.id}: Ebene {s.ebene}"
     summ = sources.summary()
     assert summ["connectors"] == len(sources.CONNECTORS)
-    assert summ["quellen_live"] == len(sources.by_status("live"))
+    # ⚠ gegen die BEKANNTMACHUNGS-Ebene pruefen, nicht gegen by_status() — das spannt jetzt
+    # beide Ebenen. Waere das hier nicht nachgezogen, zaehlte `quellen_live` die Abrufer mit.
+    assert summ["quellen_live"] == len([s for s in sources.bekanntmachungen()
+                                        if s.status == "live"])
     # DACH-Matrix: DE + CH beide Schwellen abgedeckt, AT ist die offene Arbeit
     dach = {(cc, tier): status for cc, tier, _, status in sources.dach_matrix()}
     assert dach[("DE", "oberschwellig")] == "live" and dach[("DE", "unterschwellig")] == "live"
@@ -601,7 +609,7 @@ def test_source_registry_is_wellformed():
     # "prepared", obwohl `ingest-atverg` taeglich laeuft. Beides ist beim Eintragen von
     # NetServer aufgefallen und bewusst nicht mit-korrigiert — der Status einer fremden
     # Quelle ist eine Produktaussage, keine Aufraeumarbeit nebenbei.
-    live_ids = {s.id for s in sources.by_status("live")}
+    live_ids = {s.id for s in sources.bekanntmachungen() if s.status == "live"}
     assert live_ids == {"ted-de", "doe-de", "simap-ch", "netserver-de"}
     # AT ist als Brücke vorbereitet (deckt sich mit build_at_gold)
     assert any(s.id == "ted-at" and s.status == "prepared" for s in sources.REGISTRY)
@@ -1835,3 +1843,32 @@ def test_uebernommener_wert_traegt_seine_waehrung():
     for bauer in ("def build_leads", "def build_prospective_leads"):
         b = gold.split(bauer)[1].split("\ndef ")[0]
         assert "wrtq.waehrung='EUR'" in b, f"{bauer}: Währungssperre fehlt"
+
+
+def test_skripte_finden_govisor_ohne_pythonpath():
+    """Jedes Skript, das `govisor` importiert, muss den Projektpfad selbst setzen.
+
+    `python3 scripts/x.py` legt **`scripts/`** auf `sys.path`, nicht die Projektwurzel.
+    Ein Skript ohne eigene `sys.path`-Zeile laeuft deshalb nur, wenn der Aufrufer
+    zufaellig `PYTHONPATH` gesetzt hat — aus einer interaktiven Shell also meistens,
+    unter `launchd` nie.
+
+    Das ist keine Theorie: `build_marktpuls.py` starb am 2026-08-15 im Tageslauf genau
+    daran. Weil der Aufruf im Shell-Skript ein `|| echo ⚠` traegt, lief der Lauf weiter
+    und `marktpuls.json` blieb **still** auf dem Vortagesstand — die teuerste Sorte
+    Fehler, weil nichts rot wird.
+    """
+    import pathlib
+    import re
+
+    wurzel = pathlib.Path(__file__).resolve().parent.parent
+    fehlend = []
+    for f in sorted((wurzel / "scripts").glob("*.py")):
+        text = f.read_text(encoding="utf-8", errors="replace")
+        if not re.search(r"^(from|import) govisor", text, re.M):
+            continue
+        if "sys.path" not in text:
+            fehlend.append(f.name)
+    assert not fehlend, (
+        "Skripte importieren `govisor`, setzen aber den Projektpfad nicht — sie brechen "
+        f"unter launchd ab: {fehlend}")

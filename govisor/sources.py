@@ -40,6 +40,39 @@ CONNECTORS = {
     "cosinex-html": "cosinex VMP Auftragsgegenstand-Überblick (server-gerendert) — DE-Landesportale NRW/RLP/BB, Bekanntmachungen MIT CPV-Division",
 }
 
+# --- Dokument-Abrufer = zweite Ebene (Vergabeunterlagen statt Bekanntmachungen) --------------
+#
+# **Warum getrennt gezählt.** Bis 2026-08-15 stand hier keiner von ihnen — die Registry kannte
+# nur Bekanntmachungs-Quellen, und damit zeigten der `sources`-Überblick und das Web-Panel die
+# gesamte Unterlagen-Ebene gar nicht. Für ein Produkt, dessen Unterscheidungsmerkmal die
+# Dokumentenanalyse ist, war das die grössere Lücke.
+#
+# Sie einfach unter CONNECTORS zu mischen wäre aber genau die Vanity-Metrik, gegen die der
+# Modul-Docstring oben argumentiert: aus 8 Connectoren würden 20, ohne dass eine einzige
+# Bekanntmachung mehr hereinkäme. Zwei Ebenen, zwei Zahlen — `Source.ebene` trennt sie, und
+# `summary()`/`dach_matrix()` rechnen sie NICHT zusammen.
+DOC_CONNECTORS = {
+    "docfetch-cosinex":    "cosinex/DTVP-Projektraum — Sammel-ZIP, grösste DE-Familie",
+    "docfetch-rib":        "RIB »meinauftrag« — Einzeldateien über requests",
+    "docfetch-evergabe":   "evergabe.de — Zustellweg-Auswahl, dann Dateiliste; WAF drosselt",
+    "docfetch-evgo":       "e-Vergabe des Bundes (evergabe-online.de) — Wicket, ZIP-Knopf frei",
+    "docfetch-netserver":  "NetServer — Servlet-Wechsel + Modal »Alles auswählen«",
+    "docfetch-healyhudson": "Healy Hudson — je Instanz verschieden (Bahn/Hamburg liefern, bieterzugang nicht)",
+    "docfetch-aumass":     "aumass — ein parametrisierter Endpunkt, ID MUSS gross geschrieben sein",
+    "docfetch-staatsanz":  "Staatsanzeiger — dreistufig, »Anonym als Zip« navigiert statt herunterzuladen",
+    "docfetch-dab":        "Deutsches Ausschreibungsblatt — sitzungsgebundenes getZip, frischer Kontext je Vergabe",
+    "docfetch-bimedien":   "bi-medien.de — Sammel-ZIP über publictender-Dienst, Links zugeklappt im DOM",
+    "docliste-subreport":  "subreport ELViS — NUR Dateiliste, Dateien hinter Anmeldung",
+    "docliste-vergabeportal-at": "vergabeportal.at-Familie — NUR Dateiliste, hCaptcha vor den Dateien",
+    "docfetch-simap":      "simap.ch — offizielle API (OIDC+PKCE), Unterlagen hinter Firma + Interessensbekundung",
+}
+
+# Was ein Abrufer tatsächlich einbringt — die Achse, auf die es beim Produkt ankommt.
+#   dateien   = echte Vergabeunterlagen im Bestand
+#   liste     = nur Dateinamen/Grössen/Daten (beantwortet »gibt es ein LV«, ohne eine Datei)
+#   gesperrt  = gebaut, Zugang aber verweigert oder an eine Entscheidung gebunden
+ERTRAEGE = ("dateien", "liste", "gesperrt")
+
 # --- Status einer Quelle ---------------------------------------------------------------------
 #   live      = ingestet, im Produkt sichtbar
 #   prepared  = Code/Brücke fertig, wartet nur auf den Voll-Ingest (z. B. Speicher)
@@ -60,6 +93,10 @@ class Source:
     coverage: str = ""          # was sie liefert
     overlap: str = ""           # bekannte Überschneidung mit anderen Quellen (Ehrlichkeit)
     url: str = ""
+    # --- zweite Ebene: Vergabeunterlagen -----------------------------------------------------
+    ebene: str = "bekanntmachung"   # "bekanntmachung" | "unterlagen"
+    ertrag: str = ""                # nur bei ebene="unterlagen": aus ERTRAEGE
+    modul: str = ""                 # nur bei ebene="unterlagen": das Python-Modul
 
 
 # EU/EEA-Länder, die die TED-Bulk-Pakete führen (bulk._walk filtert je ISO-Präfix).
@@ -182,18 +219,146 @@ REGISTRY += _ted_candidates()
 
 
 # ------------------------------------------------------------------------------------------
+# EBENE 2 — Vergabeunterlagen. Zahlen gemessen 2026-08-15 am Bestand (offene Leads mit Link /
+# davon mit Unterlagen auf der Platte). Sie veralten wie alle Messungen hier: das Datum steht
+# deshalb dabei, statt so zu tun, als wäre es ein Live-Wert.
+#
+# `status` heisst hier: live = läuft im Tageslauf und liefert · prepared = gebaut, erster
+# regulärer Lauf steht aus. Ob überhaupt etwas zu holen ist, sagt `ertrag`, nicht der Status —
+# `docliste-*` und simap sind fertig gebaut und liefern trotzdem keine Datei.
+# ------------------------------------------------------------------------------------------
+DOC_REGISTRY: list[Source] = [
+    Source("doc-cosinex-de", "cosinex/DTVP-Unterlagen", "docfetch-cosinex", "DE", "beides",
+           "live", portals=40, ebene="unterlagen", ertrag="dateien", modul="govisor.docfetch",
+           coverage="3.921 offene Leads mit Link, 2.457 mit Unterlagen im Bestand (63 %) — Stand 15.08.",
+           overlap="grösste DE-Familie; deckt dtvp.de + die VMP-Satelliten der Länder",
+           url="https://www.dtvp.de"),
+    Source("doc-rib-de", "RIB »meinauftrag«-Unterlagen", "docfetch-rib", "DE", "beides",
+           "live", portals=1, ebene="unterlagen", ertrag="dateien", modul="govisor.docfetch_rib",
+           coverage="793 Leads, 697 im Bestand (88 %) — die höchste Ausbeute aller Abrufer",
+           overlap="", url="https://www.meinauftrag.rib.de"),
+    Source("doc-netserver-de", "NetServer-Unterlagen", "docfetch-netserver", "DE", "beides",
+           "live", portals=33, ebene="unterlagen", ertrag="dateien",
+           modul="govisor.docfetch_netserver",
+           coverage="1.696 Leads, 17 im Bestand (1 %) — grosse Pakete (10–65 MB, Ausreisser 335 MB), "
+                    "der Rückstand ist Durchsatz, nicht Zugang",
+           overlap="⚠ Hostliste allein greift zu kurz: erkannt wird über Pfad + Servlet + Liste",
+           url="https://vergabe.bremen.de/NetServer/"),
+    Source("doc-evgo-de", "e-Vergabe des Bundes — Unterlagen", "docfetch-evgo", "DE", "beides",
+           "prepared", portals=1, ebene="unterlagen", ertrag="dateien",
+           modul="govisor.docfetch_evergabe_online",
+           coverage="1.033 Leads, noch kein regulärer Lauf. Download frei und ausdrücklich "
+                    "angeboten (»uneingeschränkter … Zugang gebührenfrei«), 30 von 30 mit ZIP",
+           overlap="⚠ /xvergabe/services/ existiert laut robots.txt, ist dort aber für "
+                   "automatische Zugriffe gesperrt — wir sprechen es NICHT an",
+           url="https://www.evergabe-online.de"),
+    Source("doc-evergabe-de", "evergabe.de-Unterlagen", "docfetch-evergabe", "DE", "beides",
+           "live", portals=1, ebene="unterlagen", ertrag="dateien",
+           modul="govisor.docfetch_evergabe",
+           coverage="890 Leads, 27 im Bestand (3 %)",
+           overlap="WAF drosselt nach ~10 Vorgängen → 7 min Abkühlung, Rest über die Tage",
+           url="https://www.evergabe.de"),
+    Source("doc-healy-de", "Healy-Hudson-Unterlagen", "docfetch-healyhudson", "DE", "beides",
+           "live", portals=5, ebene="unterlagen", ertrag="dateien",
+           modul="govisor.docfetch_healyhudson",
+           coverage="530 Leads, 3 im Bestand — ⚠ pro Instanz verschieden: Bahn und Hamburg "
+                    "liefern, bieterzugang.deutsche-evergabe.de leitet aufs Dashboard um",
+           overlap="302 weitere Leads auf www.deutsche-evergabe.de tragen eine Dashboard-URL "
+                   "ohne Deeplink — gemessen 5 von 5 ohne Dateien, kein Abrufer möglich",
+           url="https://www.deutsche-evergabe.de"),
+    Source("doc-aumass-de", "aumass-Unterlagen", "docfetch-aumass", "DE", "beides", "live",
+           portals=1, ebene="unterlagen", ertrag="dateien", modul="govisor.docfetch_aumass",
+           coverage="292 Leads, 9 im Bestand. Link heisst wörtlich »Ohne Registrierung herunterladen.«",
+           overlap="⚠ die aumass-ID muss GROSS geschrieben werden, sonst 404",
+           url="https://plattform.aumass.de"),
+    Source("doc-staatsanz-de", "Staatsanzeiger-Unterlagen", "docfetch-staatsanz", "DE", "beides",
+           "live", portals=2, ebene="unterlagen", ertrag="dateien",
+           modul="govisor.docfetch_staatsanzeiger",
+           coverage="218 Leads, 12 im Bestand. Dreistufig; »Anonym als Zip« ist ein "
+                    "input[type=submit], das NAVIGIERT (kein expect_download)",
+           overlap="56 Leads liegen als BekLanding4Bund im Frameset → Status `frameset`",
+           url="https://www.staatsanzeiger-eservices.de"),
+    Source("doc-dab-de", "Ausschreibungsblatt-Unterlagen", "docfetch-dab", "DE", "beides",
+           "live", portals=1, ebene="unterlagen", ertrag="dateien",
+           modul="govisor.docfetch_ausschreibungsblatt",
+           coverage="172 Leads, erste 6 geholt (6 von 6). Die Bezahlschranke der Seite gilt der "
+                    "RECHERCHE, nicht den Unterlagen — der Tarif-Knopf ist im DOM unsichtbar",
+           overlap="⚠ getZip trägt keine Kennung, nur Sitzungszustand → frischer Browser-"
+                   "Kontext JE Vergabe, sonst kommen die Unterlagen der vorigen",
+           url="https://www.deutsches-ausschreibungsblatt.de"),
+    Source("doc-bimedien-de", "bi-medien-Unterlagen", "docfetch-bimedien", "DE", "beides",
+           "live", portals=1, ebene="unterlagen", ertrag="dateien",
+           modul="govisor.docfetch_bimedien",
+           coverage="110 Leads, erste 6 geholt (6 von 6), Sammel-ZIP je Vergabe",
+           overlap="⚠ Links stehen zugeklappt im DOM — auslesen, nicht klicken (Klick = Timeout)",
+           url="https://bi-medien.de"),
+
+    # --- Nur Dateiliste: liefert Erkenntnis, aber keine Datei -----------------------------
+    Source("doc-subreport-de", "subreport ELViS — Dateiliste", "docliste-subreport", "DE",
+           "beides", "live", portals=1, ebene="unterlagen", ertrag="liste",
+           modul="govisor.subreport",
+           coverage="985 Leads. Dateinamen/Grössen sichtbar, Dateien hinter Anmeldung",
+           overlap="beantwortet »gibt es ein Leistungsverzeichnis, welche Nachweise« — "
+                   "der Inhalt fehlt",
+           url="https://www.subreport.de"),
+    Source("doc-vergabeportal-at", "vergabeportal.at — Dateiliste", "docliste-vergabeportal-at",
+           "AT", "beides", "live", portals=10, ebene="unterlagen", ertrag="liste",
+           modul="govisor.vergabeportal_at",
+           coverage="353 Leads (inkl. wien.gv.at — dieselbe Software). Name, Grösse, Erstell- "
+                    "und Änderungsdatum, Hash je Datei",
+           overlap="⚠ Dateien durch hCaptcha geschützt. Der anonyme Download ist ausdrücklich "
+                   "angeboten, aber botgesichert — wird NICHT umgangen",
+           url="https://gv.vergabeportal.at"),
+
+    # --- Gebaut, Zugang an eine Entscheidung gebunden -------------------------------------
+    Source("doc-simap-ch", "simap.ch-Unterlagen", "docfetch-simap", "CH", "beides", "prepared",
+           portals=27, ebene="unterlagen", ertrag="gesperrt", modul="govisor.simap_docs",
+           coverage="886 Leads. Einzige offizielle Unterlagen-API im Feld; OIDC+PKCE läuft, "
+                    "Token wird erteilt. Öffentlich abrufbar ist immerhin, OB Unterlagen "
+                    "existieren (791 von 928, 92 % treffsicher)",
+           overlap="⚠ /documents antwortet 403 ohne Firmenregistrierung UND namentliche "
+                   "Interessensbekundung je Vergabe — beim Auftraggeber sichtbar. "
+                   "Standardmässig AUS (--interesse-bekunden), offene Geschäftsentscheidung",
+           url="https://www.simap.ch"),
+]
+
+REGISTRY += DOC_REGISTRY
+
+
+# ------------------------------------------------------------------------------------------
 # Kennzahlen fürs Marketing/Produkt — ehrlich getrennt.
 # ------------------------------------------------------------------------------------------
+def bekanntmachungen() -> list[Source]:
+    """Nur Ebene 1. Jede Kennzahl über »Quellen« meint diese — Unterlagen sind etwas anderes."""
+    return [s for s in REGISTRY if s.ebene == "bekanntmachung"]
+
+
+def unterlagen() -> list[Source]:
+    """Nur Ebene 2 (Dokument-Abrufer)."""
+    return [s for s in REGISTRY if s.ebene == "unterlagen"]
+
+
 def summary() -> dict:
-    live = [s for s in REGISTRY if s.status == "live"]
-    by_status = {st: sum(1 for s in REGISTRY if s.status == st) for st in STATUSES}
+    """⚠ Die Ebenen werden NICHT addiert. `quellen_*` zählt Bekanntmachungs-Quellen — die
+    Dokument-Abrufer stehen getrennt unter `unterlagen_*`. Sie zusammenzuwerfen hiesse, aus
+    8 Connectoren 21 zu machen, ohne dass eine Bekanntmachung mehr hereinkäme; genau die
+    Vanity-Metrik, gegen die dieses Modul geschrieben ist."""
+    bm = bekanntmachungen()
+    live = [s for s in bm if s.status == "live"]
+    ul = unterlagen()
     return {
         "connectors": len(CONNECTORS),                         # technische Basen (Pflegeaufwand)
-        "quellen_total": len(REGISTRY),                        # Connector × Land × Tier
+        "quellen_total": len(bm),                              # Connector × Land × Tier
         "quellen_live": len(live),
-        "by_status": by_status,
+        "by_status": {st: sum(1 for s in bm if s.status == st) for st in STATUSES},
         "herkunfts_portale_live": sum(s.portals for s in live),  # aggregierte Breite (belegbar)
         "laender_live": sorted({s.country for s in live}),
+        # --- Ebene 2, bewusst eigene Schlüssel ---
+        "unterlagen_connectors": len(DOC_CONNECTORS),
+        "unterlagen_total": len(ul),
+        "unterlagen_live": sum(1 for s in ul if s.status == "live"),
+        "unterlagen_nach_ertrag": {e: sum(1 for s in ul if s.ertrag == e) for e in ERTRAEGE},
+        "unterlagen_laender": sorted({s.country for s in ul}),
     }
 
 
@@ -201,8 +366,10 @@ def dach_matrix() -> list[tuple]:
     """DACH-Abdeckung als Matrix (Land × Schwelle) → beste Quelle + Status. Fürs 100%-DACH-Ziel:
     zeigt, was live/prepared ist und wo die bewusste Restlücke bleibt."""
     def best(country, tier):
-        # relevante Quellen: exakter Tier oder "beides"
-        cand = [s for s in REGISTRY if s.country == country
+        # relevante Quellen: exakter Tier oder "beides". ⚠ NUR Ebene 1 — sonst gewänne hier
+        # ein Dokument-Abrufer die Zeile »AT unterschwellig«, obwohl er keine einzige
+        # Bekanntmachung liefert.
+        cand = [s for s in bekanntmachungen() if s.country == country
                 and (s.tier == tier or s.tier == "beides")]
         if not cand:
             return ("—", "fehlt")
@@ -214,6 +381,24 @@ def dach_matrix() -> list[tuple]:
         for tier in ("oberschwellig", "unterschwellig"):
             name, status = best(cc, tier)
             rows.append((cc, tier, name, status))
+    return rows
+
+
+def unterlagen_matrix() -> list[tuple]:
+    """DACH-Abdeckung auf der UNTERLAGEN-Ebene: Land → was wir dort tatsächlich bekommen.
+
+    Die Gegenfrage zu `dach_matrix()`. Bei den Bekanntmachungen ist DACH gelöst; hier trennt
+    sich, wo wir Dateien holen, wo nur Dateilisten, und wo gar nichts.
+    """
+    rows = []
+    for cc in ("DE", "AT", "CH"):
+        ul = [s for s in unterlagen() if s.country == cc]
+        for e in ERTRAEGE:
+            treffer = [s for s in ul if s.ertrag == e]
+            if treffer:
+                rows.append((cc, e, len(treffer), ", ".join(s.name for s in treffer)))
+        if not ul:
+            rows.append((cc, "—", 0, "kein Abrufer"))
     return rows
 
 
@@ -243,11 +428,32 @@ def format_overview() -> str:
         "-" * 78,
     ]
     order = {st: i for i, st in enumerate(STATUSES)}
-    for src in sorted(REGISTRY, key=lambda x: (order[x.status], x.country)):
+    for src in sorted(bekanntmachungen(), key=lambda x: (order[x.status], x.country)):
         lines.append(f"{src.name:<38}{src.connector:<14}{src.country:<5}{src.tier:<15}{src.status}")
     # DACH-Abdeckungsmatrix (das 100%-Ziel)
     lines += ["", "DACH-Abdeckung (Land × Schwelle → beste Quelle):", "-" * 78]
     for cc, tier, name, status in dach_matrix():
         mark = {"live": "✅", "prepared": "🟡", "candidate": "🟠", "research": "⚪", "fehlt": "❌"}.get(status, "")
         lines.append(f"  {cc}  {tier:<15} {mark} {name}  [{status}]")
+
+    # --- EBENE 2 -----------------------------------------------------------------------
+    lines += [
+        "", "=" * 60,
+        f"EBENE 2 — Vergabeunterlagen  ({s['unterlagen_connectors']} Abrufer, "
+        f"{s['unterlagen_live']} von {s['unterlagen_total']} im Tageslauf)",
+        "=" * 60,
+        f"{'Abrufer':<38}{'Land':<5}{'Ertrag':<13}{'Status':<11}Modul",
+        "-" * 78,
+    ]
+    zeichen = {"dateien": "📄", "liste": "📋", "gesperrt": "🔒"}
+    for src in sorted(unterlagen(), key=lambda x: (x.country, order[x.status], x.name)):
+        lines.append(f"{src.name:<38}{src.country:<5}"
+                     f"{zeichen.get(src.ertrag,'') + ' ' + src.ertrag:<13}"
+                     f"{src.status:<11}{src.modul}")
+    lines += ["", "Was jedes Land auf der Unterlagen-Ebene liefert:", "-" * 78]
+    for cc, ertrag, n, namen in unterlagen_matrix():
+        lines.append(f"  {cc}  {zeichen.get(ertrag,' ')} {ertrag:<10} {n:>2}  {namen[:52]}")
+    lines += ["",
+              "⚠ Die beiden Ebenen werden bewusst nicht addiert: ein Dokument-Abrufer bringt",
+              "  keine Bekanntmachung, und eine Quelle bringt keine Unterlagen."]
     return "\n".join(lines)

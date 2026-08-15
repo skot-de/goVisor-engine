@@ -1,0 +1,69 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+0001;"Besondere Baustelleneinrichtung ""Estrich""";1,0;psch;gaeb;3930359.x83
+0002;Erstellen von Fugenplänen mit Schwind- und Dehnungsfugen;1,0;psch;gaeb;3930359.x83
+0003;Erstellen eines Nivellement vor Beginn der Arbeiten zur;1,0;psch;gaeb;3930359.x83
+0004;Bestandsunterlagen und Dokumentation:;1,0;st;gaeb;3930359.x83
+0005;Baustellenbesprechungen (Jour fixe) für die Dauer der Ausführung;1,0;psch;gaeb;3930359.x83
+0006;Koordination mit Gewerk Zimmerer;1,0;psch;gaeb;3930359.x83
+0007;Koordination mit Gewerk Haustechnik (H, L, S, K);1,0;psch;gaeb;3930359.x83
+0008;Koordination mit Gewerk Haustechnik (E);1,0;psch;gaeb;3930359.x83
+0001;Schützen von Einbauteilen mit Folie  wie Türen usw.;480,0;m2;gaeb;3930359.x83
+0002;Holzdecke mit weichen Besen vorsichtig abkehren;1600,0;m2;gaeb;3930359.x83
+0003;Rohbetonflächen mit Stahlbesen scharf abkehren;1300,0;m2;gaeb;3930359.x83
+0004;Begradigen und Egalisieren der vorhandenen Bodenplatte;200,0;m2;gaeb;3930359.x83
+0005;Spachteln und Egalisieren von Unebenheiten auf vorhandener Bodenplatte;200,0;m2;gaeb;3930359.x83
+0006;Anbringen eines Stahlwinkels auf Rohdecke;40,0;kg;gaeb;3930359.x83
+0001;Bituminöser Voranstrich;1050,0;m2;gaeb;3930359.x83
+0002;Polymerbitumen-Sperrbahn mit Aluminium-Verbundeinlage;1050,0;m2;gaeb;3930359.x83
+0003;Polymerbitumen-Sperrbahn an Aufkantungen, 200 mm;220,0;m;gaeb;3930359.x83
+0004;Bodenablauf eindichten;18,0;st;gaeb;3930359.x83
+0005;Grundleitungsanschluss Kunststoffrohr eindichten bis 150mm;20,0;st;gaeb;3930359.x83
+0006;Ablaufrichter eindichten 270mm;15,0;st;gaeb;3930359.x83
+0007;Universaltrichter mit gebundener Perlitschüttung auffüllen;15,0;st;gaeb;3930359.x83
+0001;Ausreichend dimensionierter Randstreifen bis 8/300 mm;2100,0;m;gaeb;3930359.x83
+0002;Wärmedämmsch. Fußb. EPS D 40mm, DEO dh 038, 1-lagig;55,0;m2;gaeb;3930359.x83
+0003;Wärmedämmsch. Fußb. EPS D 60mm, DEO dh 038, 1-lagig;100,0;m2;gaeb;3930359.x83
+0004;Wärmedämmsch. Fußb. EPS D 80mm, DEO dh, 038, 1-lagig;1200,0;m2;gaeb;3930359.x83
+0005;Mehr- o. Minderstärke Wärmedämmschicht EPS je 10 mm/m²;500,0;m2;gaeb;3930359.x83
+0006;Trittschalldämmsch. EPS 30-3mm, DES sm;1300,0;m2;gaeb;3930359.x83
+0007;Trittschalldämmsch. EPS 25-3mm, DES sm;180,0;m2;gaeb;3930359.x83
+0008;Trittschalldämmsch. EPS 20-3mm, DES sm;1000,0;m2;gaeb;3930359.x83
+0009;Trittschal abdichten an Bodenabläufe;15,0;st;gaeb;3930359.x83
+0010;Rieselschutz PE-Folie;1100,0;m2;gaeb;3930359.x83
+0011;Rieselschutz hochführen;1100,0;m;gaeb;3930359.x83
+0012;Rieselschutz an Bodenabläufe abkleben;15,0;st;gaeb;3930359.x83
+0013;Gebundene Schüttung 80mm;50,0;m2;gaeb;3930359.x83
+0014;Gebundene Schüttung 90mm;680,0;m2;gaeb;3930359.x83
+0015;Gebundene Schüttung 100mm;390,0;m2;gaeb;3930359.x83
+0016;Schaumstoff Entkopplungsbahn;450,0;m2;gaeb;3930359.x83
+0017;Entkopplungsband;205,0;m;gaeb;3930359.x83
+0018;Trockenestrich 33mm;450,0;m2;gaeb;3930359.x83
+0001;CM-Feuchtigkeitsmessung, Estrich;10,0;st;gaeb;3930359.x83
+0002;Feuchtigkeitsmeßstellen;75,0;st;gaeb;3930359.x83
+0003;Perlitteschüttung an Leitungen und zum Ausgleichen;20,0;m3;gaeb;3930359.x83
+0004;Abstellen des Estriches mit Bretter oder Kantholz;250,0;m;gaeb;3930359.x83
+0005;Abstellung aus verzinktem 2mm Stahlblechwinkel, 80x220mm;25,0;st;gaeb;3930359.x83
+0006;Zulage für Ausklinkung bei Leitungen bei Winkel;10,0;st;gaeb;3930359.x83
+0007;Schnellzementestrich als Heizestrich, DIN 18560,;1700,0;m2;gaeb;3930359.x83
+0008;Schnellzementestrich als Heizestrich, DIN 18560,;650,0;m2;gaeb;3930359.x83
+0009;Schnellzementestrich als Heizestrich CT-C40-F6, d= 75 mm;15,0;m2;gaeb;3930359.x83
+0010;Schnellzementestrich als Heizestrich CT-C40-F6, d= 85 mm;350,0;m2;gaeb;3930359.x83
+0011;Schnellzementestrich CT-C40-F6, d= 150 mm;5,0;m2;gaeb;3930359.x83
+0012;Mehr- o. Minderstärke Heiz-Zementestrich D 5mm;500,0;m2;gaeb;3930359.x83
+0013;Zulage für erhöhte Genauigkeit nach DIN 18 202,;750,0;m2;gaeb;3930359.x83
+0014;Zulage für Verlegung im Gefälle bis ca. 2%;40,0;m2;gaeb;3930359.x83
+0015;Dehnfugenprofil für Heizestrich, Höhe 85 mm;240,0;m;gaeb;3930359.x83
+0016;Querkraftverdübelung bei Dehnfuge u. Türübergängen nach DIN 18560-2,;25,0;st;gaeb;3930359.x83
+0017;Herstellen eines Kellenschnitts, zur Trennung des Estrichs;750,0;m;gaeb;3930359.x83
+0018;Estrich an Durchdringung anpassen, bis 0,1 m2 Einzelgröße,;50,0;st;gaeb;3930359.x83
+0019;Estrich nachträglich anarbeiten an angrenzende;50,0;m;gaeb;3930359.x83
+0020;Herstellen einer Aussparung b x h 15x15cm;10,0;st;gaeb;3930359.x83
+0021;Herstellen einer Aussparung b x h 25x25cm;10,0;st;gaeb;3930359.x83
+0022;Herstellen einer Aussparung b x h 25x60cm;10,0;st;gaeb;3930359.x83
+0023;Herstellen einer Aussparung b x h 120/25 mm;15,0;st;gaeb;3930359.x83
+0024;Herstellen einer Aussparung b x h 180/25 mm;5,0;st;gaeb;3930359.x83
+0001;Facharbeiter;10,0;h;gaeb;3930359.x83
+0002;Helfer;10,0;h;gaeb;3930359.x83
+0003;Anfahrtspauschale;1,0;st;gaeb;3930359.x83
+0004;Zementestrich als Sackware;25,0;kg;gaeb;3930359.x83
+0005;Anhydritestrich als Sackware;25,0;kg;gaeb;3930359.x83

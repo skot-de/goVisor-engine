@@ -1,0 +1,39 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+00000001;Standsicherheitsnachweis aufstellen ... Freitext ...*... Freitext ...;1,0;Psch;gaeb-flat;sonstiges/325226_355226.D81
+00000002;Ausführungszeichnungen herstellen ... Freitext ...*... Freitext ...;1,0;Psch;gaeb-flat;sonstiges/325226_355226.D81
+00000003;Bestandunterlagen liefern Standsich.Nachw.*Bestandszeichn. ... Freitext ...;1,0;Psch;gaeb-flat;sonstiges/325226_355226.D81
+00010001;Baustelle einrichten Sämtl.LV-Abschn.*Zufahrt vorh.;1,0;Psch;gaeb-flat;sonstiges/325226_355226.D81
+00010002;Baustelle räumen Sämtl. LV-Abschn.;1,0;Psch;gaeb-flat;sonstiges/325226_355226.D81
+00020001;Verkehrssicherung läng.Dauer durchf Umleitungsstrecke*Verk.konzept AG bis 2 Tage;2,0;St;gaeb-flat;sonstiges/325226_355226.D81
+00030001;Vorschachtung für Leitungssuche Tiefe bis 1,25m*Handsch. Boden lag., einb.;3,0;St;gaeb-flat;sonstiges/325226_355226.D81
+00030002;Gerät f. Baugrunderkundung umsetzen Drucksonde*Weg ü. 0,1-1,0km;3,0;St;gaeb-flat;sonstiges/325226_355226.D81
+00030003;Drucksondierung ausführen Boden*CPT*qc+fs+Neig+F+v Kraft.mind.200kN*Endt. ü. 10-20m;80,0;m;gaeb-flat;sonstiges/325226_355226.D81
+00030004;Gerätestillstand Drucksonde;2,0;h;gaeb-flat;sonstiges/325226_355226.D81
+00040001;Geräteeinsatz für Pfähle Probepfahl*Ortbet.bohrpfähle Ebene herst/bes.;4,0;St;gaeb-flat;sonstiges/325226_355226.D81
+00040002;Ortbetonbohrpfahl herstellen Probepfahl*... Freitext ... Länge ü. 6-10 m*vertikal StB C30/37, XF3*verrohrt, Leerb. Bohrgut verwerten;12,0;m;gaeb-flat;sonstiges/325226_355226.D81
+00040003;Betonstahl einbauen ... Freitext ...*... Freitext ...;0,3;t;gaeb-flat;sonstiges/325226_355226.D81
+00040004;Lieferung/Einbau Dehnungsm.streifen;8,0;St;gaeb-flat;sonstiges/325226_355226.D81
+00040005;Pfahlkopf herrichten Probepfahl*Ortbetonbohrpfahl ... Freitext ...*Abbruch verwerten;2,0;St;gaeb-flat;sonstiges/325226_355226.D81
+00040006;Integritätsprüf. v. Pfählen durchf. Probepfahl*Bohrpfahl ... Freitext ...*vertikal;2,0;St;gaeb-flat;sonstiges/325226_355226.D81
+00040007;Stat. Probebelast.f. Pfahl durchf. ... Freitext ...*Probelast 3,0fach vertikal;2,0;St;gaeb-flat;sonstiges/325226_355226.D81
+00040008;Zulage zur Versuchsführung;1,0;Psch;gaeb-flat;sonstiges/325226_355226.D81
+00040009;Pfähle abbrechen, 1m u.GOK Baugr. verf.  Abbr. verw. AN;2,0;St;gaeb-flat;sonstiges/325226_355226.D81
+00040010;Ortbetonbohrpfahl herstellen Probepfahl*Pfahl-DU 90 cm Länge ü. 6-10 m*vertikal StB C30/37, XF3*verrohrt, Leerb. Bohrgut verwerten;16,0;m;gaeb-flat;sonstiges/325226_355226.D81
+00040011;Betonstahl einbauen ... Freitext ...*... Freitext ...;0,7;t;gaeb-flat;sonstiges/325226_355226.D81
+00040012;Lieferung/Einbau Dehnungsm.streifen;8,0;St;gaeb-flat;sonstiges/325226_355226.D81
+00040013;Pfahlkopf herrichten Probepfahl*Ortbetonbohrpfahl Pfahl-DU 90 cm*Abbruch verwerten;2,0;St;gaeb-flat;sonstiges/325226_355226.D81
+00040014;Integritätsprüf. v. Pfählen durchf. Probepfahl*Bohrpfahl Pfahl-DU 90 cm*vertikal;2,0;St;gaeb-flat;sonstiges/325226_355226.D81
+00040015;Stat. Probebelast.f. Pfahl durchf. ... Freitext ...*Probelast 3,0fach vertikal;2,0;St;gaeb-flat;sonstiges/325226_355226.D81
+00040016;Zulage zur Versuchsführung;1,0;Psch;gaeb-flat;sonstiges/325226_355226.D81
+00040017;Pfähle abbrechen, 1m u.GOK Baugr. verf.  Abbr. verw. AN;2,0;St;gaeb-flat;sonstiges/325226_355226.D81
+00040018;Ortbetonbohrpfahl herstellen Probepfahl*Pfahl-DU 120 cm Länge ü. 6-10 m*vertikal StB C30/37, XF3*verrohrt, Leerb. Bohrgut verwerten;16,0;m;gaeb-flat;sonstiges/325226_355226.D81
+00040019;Betonstahl einbauen ... Freitext ...*... Freitext ...;0,9;t;gaeb-flat;sonstiges/325226_355226.D81
+00040020;Lieferung/Einbau Dehnungsm.streifen;8,0;St;gaeb-flat;sonstiges/325226_355226.D81
+00040021;Pfahlkopf herrichten Probepfahl*Ortbetonbohrpfahl Pfahl-DU 120 cm*Abbruch verwerten;2,0;St;gaeb-flat;sonstiges/325226_355226.D81
+00040022;Integritätsprüf. v. Pfählen durchf. Probepfahl*Bohrpfahl Pfahl-DU 120 cm*vertikal;2,0;St;gaeb-flat;sonstiges/325226_355226.D81
+00040023;Stat. Probebelast.f. Pfahl durchf. ... Freitext ...*Probelast 3,0fach vertikal;2,0;St;gaeb-flat;sonstiges/325226_355226.D81
+00040024;Zulage zur Versuchsführung;1,0;Psch;gaeb-flat;sonstiges/325226_355226.D81
+00040025;Pfähle abbrechen, 1m u.GOK Baugr. verf.  Abbr. verw. AN;2,0;St;gaeb-flat;sonstiges/325226_355226.D81
+00050001;Probekörper herstellen 15 x 15 x 15 cm*21 Tage lagern;6,0;St;gaeb-flat;sonstiges/325226_355226.D81
+00050002;Probekörper herstellen 15 x 15 x 15 cm*21 Tage lagern;6,0;St;gaeb-flat;sonstiges/325226_355226.D81
+00050003;Probekörper herstellen 15 x 15 x 15 cm*21 Tage lagern;6,0;St;gaeb-flat;sonstiges/325226_355226.D81

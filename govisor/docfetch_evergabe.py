@@ -50,6 +50,8 @@ import tempfile
 import zipfile
 from pathlib import Path
 
+from . import docfetch_queue as _queue
+
 ROOT = Path(__file__).resolve().parent.parent
 
 # Genau dieser Host. Die Nachbarn heissen fast gleich und sind voellig andere Systeme:
@@ -278,6 +280,11 @@ def lauf(limit: int | None = None, dry_run: bool = False, country: str = "DE") -
             continue
         gesehen[seite] = lead_id
         offen.append((lead_id, seite, ziel))
+    # Frueher Gescheitertes ueberspringen. VOR dem Limit, sonst kappt das Limit auf
+    # Kandidaten, die gleich wieder aussortiert werden.
+    offen, _weg = _queue.filtere(offen, _queue.frueher(out_root, "evergabe"))
+    if _weg:
+        print(_queue.bericht(_weg))
     if limit:
         offen = offen[:limit]
     print(f"evergabe.de: {len(offen)} Vergaben zu holen (von {len(rows)} offenen Leads)")
@@ -387,8 +394,7 @@ def lauf(limit: int | None = None, dry_run: bool = False, country: str = "DE") -
     print(f"\nevergabe.de: {len(saetze)} versucht · {ok} mit Unterlagen · {mb:.1f} MB")
     if saetze and not dry_run:
         out_root.mkdir(parents=True, exist_ok=True)
-        pq.write_table(pa.Table.from_pylist(saetze),
-                       out_root / "_manifest_evergabe.parquet", compression="zstd")
+        _queue.schreibe(out_root, "evergabe", saetze)
     return {"versucht": len(saetze), "geladen": ok, "mb": round(mb, 1)}
 
 

@@ -182,6 +182,16 @@ def fetch_batch(cfg: Config, country: str = "DE", limit: int | None = None,
             -- gingen sechs an Vergaben aus 2025, Ausbeute null. Aufsteigend trifft man die
             -- Verfahren, die sicher noch offen sind — und zugleich die dringendsten Leads.
             ORDER BY deadline_date ASC""").fetchall()
+    # Frueher Gescheitertes ueberspringen. VOR dem Limit, sonst kappt das Limit auf
+    # Kandidaten, die gleich wieder aussortiert werden.
+    #
+    # Der Hebel steckt hier in `gated`: 389 Leads hinter Teilnahmeantrag/Login, gemessen
+    # 2026-08-15. Sie wurden bis dahin bei JEDEM Lauf erneut angefragt — das Manifest
+    # notierte sie sauber, nur las es niemand.
+    from . import docfetch_queue as _queue
+    rows, _weg = _queue.filtere(rows, _queue.frueher(out_root, "cosinex", id_feld="notice_id"))
+    if _weg:
+        print(_queue.bericht(_weg))
     if limit:
         rows = rows[:limit]
 
@@ -201,8 +211,10 @@ def fetch_batch(cfg: Config, country: str = "DE", limit: int | None = None,
             time.sleep(delay)   # nur nach echtem Download drosseln
 
     if results:
-        pq.write_table(pa.Table.from_pylist([asdict(r) for r in results]),
-                       out_root / "_manifest.parquet", compression="zstd")
+        # Fortschreiben statt ueberschreiben: das alte `write_table` warf mit jedem Lauf
+        # die gesamte Vorgeschichte weg — und damit die Grundlage jeder Sperrentscheidung.
+        _queue.schreibe(out_root, "cosinex", [asdict(r) for r in results],
+                        id_feld="notice_id")
     total_mb = sum(r.bytes for r in results if r.status == "downloaded") / 1e6
     print(f"\nUnterlagen-Fetch {country}: {len(rows)} Vorgänge | " +
           " | ".join(f"{k}={v}" for k, v in sorted(counts.items())) +

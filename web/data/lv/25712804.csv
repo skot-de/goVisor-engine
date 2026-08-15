@@ -1,0 +1,201 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+0010;Witterungsfühler Messelement Ni 1000 Ohm;1,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0020;Raumgerät mit Raumtemperaturfühler und Sollwertversteller -3 bis +3K;3,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0030;Tauchtemperaturfühler mit Schutzrohr;26,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0040;Kabeltemperaturfühler;3,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0050;Schutzrohr PN10;3,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0060;Druckfühler für Flüssigkeiten/Gase;6,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0070;Luftkanaldruckdifferenzfühler;1,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0080;Kanalfühler für Temperatur und rel. Feuchte;2,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0090;Kanaltemperaturfühler;2,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0100;Sicherheitsdruckbegrenzer;4,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0110;Strömungswächter;4,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0120;Feuerschutzthermostat, 350 mm Kapillare;1,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0130;Differenzdruckwächter;4,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0140;Drosselklappe PN 6/10/16, kvs = 260 m3/h;4,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0150;Drehantrieb für Hähne u. Drosselklappen;4,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0160;Hilfsschalter für SA..-Stellantriebe;4,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0170;Dreiwegeventil, Flansch, PN25, DN32, kvs 16;2,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0180;Durchgangsventil PN 25, Flansch DN 32;1,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0190;Ventilantrieb elektromotorisch;3,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0200;Durchgangsventil, Flansch, PN25, DN50, kvs 31.5;1,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0210;Elektromotorischer Stellantrieb, 1600 N, 20/40 mm, AC/DC 24 V, DC 0 bis 10 V / DC 4 bis 20 mA;1,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0220;Durchgangs-Kleinventil;5,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0230;Elektrothermischer Antrieb, 125N;5,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0240;Bezeichnungsschild mehrschichtig Kunststoff H 40mm B 120mm kleben;185,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0250;Zur Messung von Luftgeschwindigkeiten bzw. des Volumenstroms in Kanälen. Geeignet für Primärluftanlagen (Voreinstellung des Volumenstromes).;1,0;St;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0260;Ultraschall-Wärme-/Kältezähler 10 m3/h, Ø 6 mm L = 100 mm, DN40;3,0;St;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0270;Ultraschall-Wärme-/Kältezähler 25 m3/h, Ø 6 mm L = 100 mm, DN65;1,0;St;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0280;Das Modbus Kommunikationsmodul WZU-485E-MOD ist ein Zusatzmodul für die Zähler vom Typ UH50---;4,0;St;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0010;Standschrank BxHxT=800x1800x400 mm als Reihen- oder;2,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0020;Sockel H=200 mm für Schaltschrank BxT=800x400 mm;2,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0030;Seitenteile (2 Stk) für Standschrank;1,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0040;Schaltschrank-Innenbeleuchtung mit allem;1,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0050;Steckdose 230 V / 10 A mit FI-Schutzschalter 0,3 A;1,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0060;Schwenkhebelverschluss-Einsatz-Zylinder;2,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0070;Schrankbelüftung als Axiallüfter mit Temperaturregler,;1,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0080;Leistungsschalter 400 V / 3 x 63 A für Montageplatten-Aufbau,  mit Stromabhängig verzögertem;1,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0090;Anlagenschalter Schallter DDC-0-Hand;1,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0100;Schaltplantasche Blech Werkstoff;1,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0110;Sammelschiene bis 250 A, 3-pol. pro Schaltschrankfeld;2,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0120;Einspeiseklemmen 4-polig Einspeiseklemmen 4-polig;1,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0130;Phasenüberwachung,;1,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0140;"Sicherungsautomat ""C"" 1-pol.";1,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0150;Sammelstörmeldeeinrichtung (mit Hilfsschütz pro Störmeldung) bestehend aus:;1,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0160;Netzwiederkehr-Schaltung;1,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0170;Reparaturschalter-Überwachung über;10,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0180;Ansteuerung Stellantrieb 2-Punkt für Klappen;6,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0190;Verriegelung von Sicherheitsfunktionen mit Selbsthaltung und Entriegelung bestehend aus:;5,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0200;Koppelrelais 2 Wechsler Relais steckbar, mit Klemmenblock;2,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0210;Hilfsschütz 4 Kontakte Spulenspannung 24 - 230 VAC 50 Hz;4,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0220;Phasenüberwachung mit Drehstromunterspannungsrelais,;1,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0230;DDC-Baugruppe montieren je Datenpunkt;337,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0240;Datenanschlussdose, symmetrisch, Kategorie 7 DIN EN 50173-1 (VDE 0800-173-1), Link-Klasse F, DIN EN 50173-1 (VDE 0800-173-1), Potentialausgleich DIN EN 50310 (VDE 0800-2-310), modular, 2 Ports, Buchse DIN EN 61076-3-104 (VDE 0687-76-3-104), in Schneidklemmtechnik, Steckrichtung 45 Grad, mit Beschrif;2,0;St;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0250;Blitzstrom-/Überspannungsableiter z.B. für;1,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0260;Leistungsabgang bis 16 A 230 V mit Sicherung;12,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0270;Überspannungsschutz und Blitzschutz 400V für Einbau;2,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0280;"Drehstromzähler mit ""MID""-Konformität nach Modul 4-Leiter L-N 230V mit einem SO- Impulsausgang und über";1,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0290;Leistungsbaugruppe 1 kW 230 V;1,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0300;Leistungsbaugruppe bis 1 kW 230 V für EC-Motor;4,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0310;Hilfsspannungsversorgung 230 V/630 VA mit Trafo 400/230 V;1,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0320;Hilfsspannungsversorgung 230 V/1000 VA mit Trafo 400/230 V;1,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0330;Sicherungsabgang bis 25A 400V mit Sicherungseinsatz bestehend aus:;1,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0340;Spannungsversorgung 24V;1,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0350;Einbau eines beigestellten Switch-Moduls;1,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0360;Schaltschrankplanung für vorgenannten Schaltschrank-/schränke Planung mit CAD-System;1,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0370;Inbetriebnahme vorgenannter Schaltschränke;1,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0380;Schaltschrank-Transport und Montage für;1,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0390;Revisionspläne für Schaltschränke in 3-facher;1,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0400;Standschrank BxHxT=800x1800x400 mm als Reihen- oder;1,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0410;Schaltplantasche Blech Werkstoff;1,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0420;Netzeinspeisung 400 V / 3 x 35 A;1,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0430;Motorschutzschalter zur Schutzvorrichtung des Hauptstromkreis des Trafo für Leistungsteil und DDC;1,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0440;Hilfsspannungsversorgung 24 V / 400 VA mit Trafo 230/24 V;1,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0450;Phasenüberwachung, 3 Meldeleuchten 230 V;1,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0460;"Sicherungsautomat ""C"" 1-pol. 16 bis 25 A als Steuersicherung, mit Hilfskontakt für Steuer- und Schaltfunktionen, Regler und Steuergeräte";1,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0470;DDC-Baugruppe montieren je Datenpunkt;30,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0480;Spannungsversorgung 24V;1,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0490;Einbau eines beigestellten Speisemoduls;1,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0500;Tragschienen-Verteilerbox (Spleißbox),;1,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0510;Schaltschrankplanung für vorgenannten;1,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0520;Inbetriebnahme vorgenannter Schaltschränke;1,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0530;Schaltschrank-Transport und Montage für;1,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0540;Revisionspläne für Schaltschränke in 3-facher;1,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0550;Datenanschlussdose, symmetrisch, Kategorie 7 DIN EN 50173-1 (VDE 0800-173-1), Link-Klasse F, DIN EN 50173-1 (VDE 0800-173-1), Potentialausgleich DIN EN 50310 (VDE 0800-2-310), modular, 2 Ports, Buchse DIN EN 61076-3-104 (VDE 0687-76-3-104), in Schneidklemmtechnik, Steckrichtung 45 Grad, mit Beschrif;2,0;St;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0560;Wandschrank BxHxT=800x600x300mm einschließlich;1,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0570;Schaltplantasche Blech;1,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0580;Netzeinspeisung 230 V / 25 A Türeinbau;1,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0590;Einbau des Gateway zur Kopplung;1,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0600;Hilfsspannungsversorgung 24 V / 400 VA mit Trafo 230/24 V;1,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0610;Phasenüberwachung, 3 Meldeleuchten 230 V Sicherungen;1,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0620;"Sicherungsautomat ""C"" 1-pol.16 bis 25 A als Steuersicherung, mit Hilfskontakt für";1,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0630;DDC-Baugruppe montieren je Datenpunkt;8,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0640;Datenanschlussdose, symmetrisch, Kategorie 7 DIN EN 50173-1 (VDE 0800-173-1), Link-Klasse F, DIN EN 50173-1 (VDE 0800-173-1), Potentialausgleich DIN EN 50310 (VDE 0800-2-310), modular, 2 Ports, Buchse DIN EN 61076-3-104 (VDE 0687-76-3-104), in Schneidklemmtechnik, Steckrichtung 45 Grad, mit Beschrif;2,0;St;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0650;Spannungsversorgung 24V;1,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0660;Einbau eines beigestellten Speisemoduls;1,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0670;Schaltschrankplanung für vorgenannten Schaltschrank/-;1,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0680;Inbetriebnahme vorgenannter Schaltschränke bestehend aus:;1,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0690;Schaltschrank-Transport und Montage;1,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0700;Revisionspläne für Schaltschränke in 3-facher;1,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0710;Einbau und Verdrahtung einer DI-Baugruppe;1,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0720;Schaltschrankplanung für vorgenannten Schaltschrank/-;1,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0730;Inbetriebnahme vorgenannter Schaltschränke bestehend aus:;1,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0740;Revisionspläne für Schaltschränke in 3-facher;1,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0010;PXC7.E400M Automationsstation bis 200 DP;1,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0020;Adress-Stecker, 1-24 + Reset;1,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0030;Adress-Stecker, 25-48 + Reset;1,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0040;Eingangsmodul Digital 16-Kanal;2,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0050;Ausgangsmodul Digital 6-Kanal, Hand;8,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0060;Universalmodul 8-Kanal;14,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0070;Universalmodul 8-Kanal, Hand und LCD;5,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0080;Super-Universalmodul mit 8 Datenpunkten, lokaler Bedienung und Anzeige;2,0;ST;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0090;Zusatz-Speisungsmodul;2,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0100;Anschlussmodul E/A-Bus Durchleitung von;2,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0110;Patchkabel Cat. 8.2, bis 3m Länge;4,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0120;"Hochwertiges BACnet/ IP Touch Panel 10""";1,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0130;Automationsstation bis 100 DP BACnet/IP;1,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0140;Adress-Stecker, 1-12 + Reset;1,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0150;Ausgangsmodul Digital 6-Kanal, Hand;1,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0160;Eingangsmodul Digital 16-Kanal;2,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0170;Universalmodul 8-Kanal;2,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0180;Zusatz-Speisungsmodul;1,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0190;Patchkabel Cat. 8.2, bis 3m Länge;3,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0200;Automationsstation bis 50 DP BACnet/IP;1,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0210;Adress-Stecker, 1-12 + Reset;1,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0220;Ausgangsmodul Digital 6-Kanal, Hand;1,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0230;Eingangsmodul Digital 8-Kanal;1,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0240;Zusatz-Speisungsmodul;1,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0250;Ethernet Switch SCALANCE XB004-1G;1,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0260;Patchkabel Cat. 8.2, bis 3m Länge;1,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0270;Eingangsmodul Digital 16-Kanal für DE,;1,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0010;Inbetriebnahme der Gesamtanlage (Hard- und Software);535,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0020;Projektabwicklung und Koordination pro;535,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0030;Programmierung und Parametrierung von DDC-Funktionen;535,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0040;DESIGO-CC Aktualisierung dynamische Einblendungen;458,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0050;DESIGO-CC Bilderstellung bis 30 dyn. Einblendungen;530,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0060;DESIGO-CC Templateerstellung bis 30 dyn.;8,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0070;DESIGO-CC Aufruf Template;20,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0080;Dokumentationsunterlagen für den;1,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0090;Einmalige Einweisung des Betreibers in;1,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0100;Einmalige Abnahme und Übergabe;1,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0110;Probebetrieb für den Liefer- und Leistungsumfang;1,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0120;Erstellung der Bedienoberfläche der Touch-Bediengeräte;1,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0010;Installationskabel, symmetrisch, J-H(St)H, 2 x 2 x 0,8 Bd.;1428,0;m;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0020;Installationskabel, symmetrisch, J-H(St)H, 4 x 2 x 0,8 Bd.;384,0;m;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0030;Installationskabel, symmetrisch, J-H(St)H, 10 x 2 x 0,6 Bd.;72,0;m;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0040;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 3 x 1,5 RE, Cu-Zahl 43.;776,0;m;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0050;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 3 x 2,5 RE, Cu-Zahl 72.;60,0;m;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0060;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 5 x 1,5 RE, Cu-Zahl 72.;120,0;m;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0070;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE;80,0;m;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0080;Stahlblech-Kabelbahn 100 x 60 mm, feuerverzinkt,;15,0;M;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0090;Stahlblech-Kabelbahn 200 x 60 mm, feuerverzinkt, mit;15,0;M;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0100;Gitterrinne 100 x 60 mm, feuerverzinkt, mit allem;10,0;M;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0110;Kabelbahn - Bogen 90°, horizontal , 200mm Kabelbahn -;2,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0120;Kabelbahn - Bogen 90°, horizontal , 100mm;2,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0130;90° Bogen vertikal, 200mm Kabelrinne gelocht als;2,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0140;Ausleger 200mm:;5,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0150;Ausleger 300mm:;5,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0160;Stiel 400mm:;10,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0170;Schutzkappen gelb, für Hängestiele,;10,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0180;Steigetrasse 300 mm, für die Wandmontage,;8,0;m;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0190;Steigetrasse 500 mm, für die Wandmontage,;8,0;m;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0200;Kabelleiter für Kabelträgersystem DIN EN 61537 (VDE 0639), Sprossenabstand 300 mm, aus bandverzinktem Stahl DIN EN 10346, Seitenhöhe mind. 35 mm, Breite mind. 100 mm, Einbau im Innenbereich.;15,0;m;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0210;Kabelklammer aus Kunststoff;80,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0220;Elektroinstallationsrohr DIN EN 61386 (VDE 0605), Maße DIN EN 60423, aus beschichtetem Stahl, einwandig, glatt, starr, mit Gewinde beidseitig, Außendurchmesser 20 mm, Druckfestigkeit Klasse 1 - sehr leicht (125 N) DIN EN 61386-1 (VDE 0605-1), Klasse Schlagbeanspruchung 3 - mittel DIN EN 61386-1 (VDE;20,0;m;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0230;Elektroinstallationsrohr DIN EN 61386 (VDE 0605), Maße DIN EN 60423, aus beschichtetem Stahl, einwandig, glatt, starr, mit Gewinde beidseitig, Außendurchmesser 25 mm, Druckfestigkeit Klasse 1 - sehr leicht (125 N) DIN EN 61386-1 (VDE 0605-1), Klasse Schlagbeanspruchung 3 - mittel DIN EN 61386-1 (VDE;100,0;m;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0240;Elektroinstallationsrohr DIN EN 61386 (VDE 0605), Maße DIN EN 60423, aus beschichtetem Stahl, einwandig, glatt, starr, mit Gewinde beidseitig, Außendurchmesser 32 mm, Druckfestigkeit Klasse 1 - sehr leicht (125 N) DIN EN 61386-1 (VDE 0605-1), Klasse Schlagbeanspruchung 3 - mittel DIN EN 61386-1 (VDE;30,0;m;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0250;Elektroinstallationsrohr DIN EN 61386 (VDE 0605), Maße DIN EN 60423, aus beschichtetem Stahl, einwandig, glatt, starr, mit Gewinde beidseitig, Außendurchmesser 40 mm, Druckfestigkeit Klasse 1 - sehr leicht (125 N) DIN EN 61386-1 (VDE 0605-1), Klasse Schlagbeanspruchung 3 - mittel DIN EN 61386-1 (VDE;30,0;m;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0260;Elektroinstallationsrohr DIN EN 61386 (VDE 0605), Maße DIN EN 60423, nicht flammenausbreitend, aus Kunststoff, halogenfrei, einwandig, glatt, starr, mit angeformter Muffe, Außendurchmesser 20 mm, Druckfestigkeit Klasse 3 - mittel (750 N) DIN EN 61386-1 (VDE 0605-1), Klasse Schlagbeanspruchung 3 - mi;60,0;m;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0270;Elektroinstallationsrohr DIN EN 61386 (VDE 0605), Maße DIN EN 60423, nicht flammenausbreitend, aus Kunststoff, halogenfrei, einwandig, glatt, starr, Außendurchmesser 25 mm, Druckfestigkeit Klasse 3 - mittel (750 N) DIN EN 61386-1 (VDE 0605-1), Klasse Schlagbeanspruchung 3 - mittel DIN EN 61386-1 (VD;50,0;m;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0280;Universal-Bügelschelle, mit sendzimirverzinkter;50,0;St;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0290;Universal-Bügelschelle, mit sendzimirverzinkter;30,0;St;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0300;Universal-Bügelschelle, mit sendzimirverzinkter;20,0;St;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0310;Abzweigdose ca. 80 x 80 mm, Kunststoffgehäuse für;35,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0320;Beidseitiger Anschluss bis 2 x 2 x 0,8 mm²;76,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0330;Beidseitiger Anschluss bis 4 x 2 x 0,8 mm².;47,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0340;Beidseitiger Anschluss bis 10 x 2 x0,8 mm².;6,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0350;Beidseitiger Anschluss bis 3 x 2,5 mm².;36,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0360;Beidseitiger Anschluss bis 5 x 2,5 mm².;10,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0370;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 1 x 6 RE, Cu-Zahl 58, nur anschließen an beigestellte Betriebsmittel, einschl. Verbindungsmittel.;30,0;St;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0380;Kunststoff-Kabelmarker: mit Schriftfeld,;185,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0390;Reparaturschalter WP wie folgt:;2,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0010;BSK Bussystem Kasten montieren, BSKs anklemmen, Bus anschließen und Spannungsversorgung, BSK anschließen und auf Zonenverteiler auflegen.;8,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0020;Projektabwicklung und Koordination für den Bereich BSK Bus-System.;1,0;psch;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0030;Modbus-Kommunikationsanbindung von Wärmemengen- bzw. Kältemengenzählern an den vorhandenen DDC-Controller.;4,0;St;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0040;Beseitigung von Störgewerken durch den Rückbau von Anlagenkomponenten der TGA-Gewerke;1,0;psch;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0050;Aufschaltung auf Bestands-GLT der RUB;1,0;psch;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0060;Teilnahme an IBN, Probebetrieb der Phytotrone;25,0;h;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0070;0060 Teilnahme an SV Abnahme;1,0;psch;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0080;Stahlrohrgerüst, als Arbeitsgerüst, fahrbar,;1,0;St;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0090;Erstellen der Werk- und Montageplanung gemäß;1,0;psch;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0100;Nach Fertigstellung der Anlagen sind vom Auftragnehmer;1,0;psch;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0110;Sämtliche Anlagenkennzeichnungen sind vom Auftragnehmer;537,0;St;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0120;Mehrkosten Beschilderung der Anlagen und Komponenten;537,0;St;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0130;Erstellen von Bohrlöchern bis 20 mm Durchmesser,;5,0;St;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0140;Erstellen von Bohrlöchern 21 bis 40 mm;5,0;St;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0150;Brandschutzabschottung an Kabel-/Leitungsanlagen als flexibles Schott, Feuerwiderstandsklasse S 90 DIN 4102-9, mit allgemeinem bauaufsichtlichen Prüfzeugnis/allgemeiner bauaufsichtlicher Zulassung, Querschnitt über 0,01 bis 0,02 m2, Baustoffklasse DIN 4102-1 A (nichtbrennbar), Schmelzpunkt größer gl;2,0;St;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0160;Brandschutzabschottung an Kabel-/Leitungsanlagen als Mörtelschott, Feuerwiderstandsklasse S 90 DIN 4102-9, mit allgemeinem bauaufsichtlichen Prüfzeugnis/allgemeiner bauaufsichtlicher Zulassung, Querschnitt über 0,05 bis 0,1 m2, Baustoffklasse DIN 4102-1 A (nichtbrennbar), Schmelzpunkt größer gleich ;2,0;St;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0170;O-Monteur-Stunden (Verrechnungssatz);10,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0180;Monteur-Stunden (Verrechnungssatz);10,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0190;Helfer-Stunden (Verrechnungssatz);5,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81
+0200;MSR-Fachkraft-/Programmierer-Stunden (Verrechnungssatz);5,0;Stk;gaeb;leistungsbeschreibungen/2026-08-11_350c_LV_GA.X81

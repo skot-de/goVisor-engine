@@ -1,0 +1,929 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+1;Rohrleitungen aus nahtlosem schwarzen Stahlrohr, einschl. Form- und;20,0;m;gaeb;3927882.x83
+2;desgl., jedoch Nennweite: DN 25 - DN 32.;8,0;m;gaeb;3927882.x83
+3;desgl., jedoch Nennweite: DN 40 - DN 50.;6,0;m;gaeb;3927882.x83
+4;desgl., jedoch Nennweite: DN 65 - DN 80.;10,0;m;gaeb;3927882.x83
+5;Kupfer-Rohrleitungen, einschl. Form- und Verbindungsstücke,;15,0;m;gaeb;3927882.x83
+6;desgl. jedoch Nennweite DN 32 - 40.;8,0;m;gaeb;3927882.x83
+7;Flanschen-Heizungsumwälzpumpe DN 50 - 65, einschl. Gegenflansche, Schrauben und Dichtungen, inkl. elektrische Freischalten der Pumpe,;1,0;St;gaeb;3927882.x83
+8;"Flanschen-Stellventil mit Motorantrieb; Zweiwege bzw. Dreiwege-Ausführung,";1,0;St;gaeb;3927882.x83
+9;desgl., jedoch DN 40 - 50.;2,0;St;gaeb;3927882.x83
+10;Flanschen-Absperrarmatur aus Guss, Ausführung als Ventil mit Handrad oder Klappe mit Stellhebel, einschl. Gegenflanschen, Schrauben und Dichtungen,;2,0;St;gaeb;3927882.x83
+11;desgl. jedoch Nennweite DN 25 - 32.;2,0;St;gaeb;3927882.x83
+12;desgl. jedoch Nennweite DN 40 - 50.;4,0;St;gaeb;3927882.x83
+13;desgl. jedoch Nennweite DN 65 - 80.;2,0;St;gaeb;3927882.x83
+14;Muffen-Absperr- bzw. Regelungsarmatur aus Guss,  Rotguss, Messing,;5,0;St;gaeb;3927882.x83
+15;desgl. jedoch Nennweite DN 32 - 40.;2,0;St;gaeb;3927882.x83
+16;desgl. jedoch Nennweite DN 50.;4,0;St;gaeb;3927882.x83
+17;desgl. jedoch Nennweite DN 65.;2,0;St;gaeb;3927882.x83
+18;Demontage von Heizkörperhalterungen, Bohrkonsolen aus der Wand entfernen.;8,0;St;gaeb;3927882.x83
+19;Verrechnungssatz für das Entleeren der Heizungsanlage im Bereich des Heizraumes als Vorarbeit der Demontagearbeiten, in wenigen Teilbereichen, gemäß Demontagefortschritt und Auffangen des Rohrleitungsinhaltes in geeignete Gefäße. Das Abstellen und Entleeren ist mit dem Hausmeister abzustimmen,;6,0;h;gaeb;3927882.x83
+20;Ausblasen nicht entleerbarer Leitungsabschnitte mittels Druckluft über Kleinkompressor, einschl. Aufbringen von Schlauchübergängen zum Anschluss des Kompressors und Abstopfen von Öffnungen, einschl. aller Nebenarbeiten und Kleinmaterialien, über mehrere Bauabschnitte führend, inkl. Nachweisführung ü;2,0;h;gaeb;3927882.x83
+21;Bereitstellung eines fahr- bzw. tragbaren, anschlussfertigen Druckluft-;1,0;psch;gaeb;3927882.x83
+22;Abisolieren und Entfernung von nicht mit Schadstoffen belasteter Rohr-;16,0;m;gaeb;3927882.x83
+23;desgl., jedoch für Nennweite DN 25 - DN 32.;20,0;m;gaeb;3927882.x83
+24;desgl., jedoch für Nennweite DN 40 - DN 50.;8,0;m;gaeb;3927882.x83
+25;desgl., jedoch für Nennweite DN 65 - DN 80.;10,0;m;gaeb;3927882.x83
+26;Abisolieren und Entfernung von nicht mit Schadstoffen belasteter Armaturen-;4,0;St;gaeb;3927882.x83
+27;desgl., jedoch für Nennweite DN 25 - DN 32.;2,0;St;gaeb;3927882.x83
+28;desgl., jedoch für Nennweite DN 40 - DN 50.;4,0;St;gaeb;3927882.x83
+29;desgl., jedoch für Nennweite DN 65 - DN 80.;2,0;St;gaeb;3927882.x83
+1;Ortsbegehung zwecks Abstimmung der Einbringung der Wärmepumpen sowie;1,0;St;gaeb;3927882.x83
+2;Drehzahlgeregelte Luft-/Wasser-Wärmepumpe in Monoblockbauweise zur;2,0;St;gaeb;3927882.x83
+3;Mehrpreis als Aufpreis für vorgenannte Wärmepumpe in Monoblockbauweise,;2,0;St;gaeb;3927882.x83
+4;Mehrpreis als Aufpreis für vorgenannte Wärmepumpe in Monoblockbauweise,;2,0;St;gaeb;3927882.x83
+5;Genaue Ausrichtung der Wärmepumpen in Monoblockbauweise am Aufstellort auf dem Flachdach, Montage auf einer Stahlunterkonstruktion,;2,0;St;gaeb;3927882.x83
+6;Druckbehälter aus Stahl gefertigt, als Sonderspeicher ausgeführt,;1,0;St;gaeb;3927882.x83
+7;Mehrpreis als Aufpreis für vorgenannten Sonderspeicher 2.000 Liter,;1,0;St;gaeb;3927882.x83
+8;Zusätzlicher Flansch-Anschluss für vorgenannten Energiespeicher,;2,0;St;gaeb;3927882.x83
+9;Zusätzlicher Muffen-Anschluss für vorgenannten Energiespeicher,;6,0;St;gaeb;3927882.x83
+10;Fühlerklemmleiste als Sonderausstattung für vorgenannten Energiespeicher,;1,0;St;gaeb;3927882.x83
+11;Speicher-Thermometer mit Skalierung 0 - 120°C, Größe 100 mm, Schaftlänge 200 mm, als Sonderausstattung für vorgenannten Energiespeicher,;3,0;St;gaeb;3927882.x83
+12;Erschwernis-Zulage für den Transport und das Vertragen des vorgenannten;1,0;St;gaeb;3927882.x83
+13;Genaue Ausrichtung der Wärmepumpen in Monoblockbauweise am Aufstellort auf dem Flachdach, Montage auf einer Stahlunterkonstruktion,;2,0;St;gaeb;3927882.x83
+14;Dreiwege-Umschalt-Kugelhahn, Gehäuse aus Pressmessing, vernickelt,;2,0;St;gaeb;3927882.x83
+15;Zweiwege-Flanschen-Absperrklappe, aus Grauguss, mit Laschenaugen,;6,0;St;gaeb;3927882.x83
+16;Druckbehälter-Schichtenspeicher aus Stahl mit thermohydraulischem Schicht-;1,0;St;gaeb;3927882.x83
+17;Mehrpreis als Aufpreis für vorgenannten Schichtenspeicher 1.000 Liter,;1,0;St;gaeb;3927882.x83
+18;Erschwernis-Zulage für den Transport und das Vertragen des vorgenannten;1,0;St;gaeb;3927882.x83
+19;Kugelhahnset als Zubehör zu vorgenannten Schichtenspeicher 920 Liter,;1,0;St;gaeb;3927882.x83
+20;Anbauverteiler mit werksseitiger Isolierung als Zubehör zu vorgenannten Schichtenspeicher 920 Liter, zur Montage von Baugruppen und Kompakt-;1,0;St;gaeb;3927882.x83
+21;Zusätzlicher Muffen-Anschluss für vorgenannten Energiespeicher,;3,0;St;gaeb;3927882.x83
+22;Zubehörteile des vorgenannten Schichtenspeichers mit Nenninhalt 920 Liter;1,0;St;gaeb;3927882.x83
+23;Trinkwasserkompaktstation für geregelte, hygienische Warmwasserbereitung;1,0;St;gaeb;3927882.x83
+24;Trinkwasser-Zirkulationseinheit zum Direktanschluss an das Kaltwasserset;1,0;St;gaeb;3927882.x83
+25;Trinkwasserkompaktstation und -Zirkulationseinheit in den Technikraum;1,0;St;gaeb;3927882.x83
+26;Elektro-Heizgerät zur Nutzung von überschüssigen PV-Strom und als Elektro-Notheizgerät über Bezug von EVU-Strom, ausgeführt als modulierendes Elektroheizgerät im Leistungsbereich 0 bis 12 kW zur Heizungsunterstützung und Warmwasserbereitung.;1,0;St;gaeb;3927882.x83
+27;Elektro-Heizstab mit einer Nennleistung von 9 kW zur Erweiterung des vorgenannten Elektro-Heizgerätes um eine weitere Leistungsstufe mit 9 kW auf 21 kW.;1,0;St;gaeb;3927882.x83
+28;Elektronischer Energiezähler zur Erfassung von elektrischen und thermischen;1,0;St;gaeb;3927882.x83
+29;Elektro-Heizgerät und Zubehör in den Technikraum EG vertragen und;1,0;St;gaeb;3927882.x83
+30;Frei programmierbare Zentralregelung mit CMI-Modul in Wandgehäuse.;1,0;St;gaeb;3927882.x83
+31;Regler-Erweiterungsmodul als steckbare Erweiterungsmodul-Platine,;1,0;St;gaeb;3927882.x83
+32;Regler-Erweiterungsmodul im Kunststoff-Gehäuse,;1,0;St;gaeb;3927882.x83
+33;Zentralregler und Erweiterungsmodule zum Montageort im Technikraum EG vertragen und an der Wand montieren.;1,0;St;gaeb;3927882.x83
+34;"Fühler- und Sensorpaket für Projektumfang, bestehend aus Temperaturfühlern mit Tauchhülsen; Anlegefühlern, Außenfühler in Wandgehäuse, Raumfühlern in";1,0;St;gaeb;3927882.x83
+35;"Fühler- und Sensorpaket für Projektumfang, bestehend aus Temperaturfühlern mit Tauchhülsen; Anlegefühlern, Außenfühler in Wandgehäuse, Raumfühlern in";1,0;St;gaeb;3927882.x83
+36;Schnittstellenmodul als Gateway zur Kommunikation von CAN-Bus auf BacNet,;1,0;St;gaeb;3927882.x83
+37;Projektabwicklung und -bearbeitung für die Gesamtanlage, beginnend mit der Auftragserteilung und weiterführend mit Installation, Programmierung und Inbetriebnahme der Anlage bis hin zur Optimierung.;1,0;St;gaeb;3927882.x83
+38;Erstellen Funktionsbeschreibungen;1,0;St;gaeb;3927882.x83
+39;Erstellung von Kabelzuglisten und Kabelplänen für den gesamten Umfang der in diesem LV-Titel beschriebenen Wärmepumpenanlage(n);1,0;psch;gaeb;3927882.x83
+40;Beidseitige Kabelbeschriftung mittels Beschriftungsschilder und Kabelbinder an der Schaltanlage und am Feldgerät montieren, Kennzeichnung wie folgt:;1,0;psch;gaeb;3927882.x83
+41;Einführen, Auflegen und Abisolieren der bauseits verlegten Elektrokabel und Steuerleitungen für den gesamten Umfang der kompletten Inverter-Wärme-;1,0;psch;gaeb;3927882.x83
+42;Tagessatz (8 Arbeitsstunden) für die Installation, Konfiguration und Programmierung der kompletten Software durch einen Softwaretechniker des Herstellers für die geforderte Anlagenkonfiguration in Verbindung mit den benötigten;2,0;St;gaeb;3927882.x83
+43;Tagessatz (8 Arbeitsstunden) für die Installation, Konfiguration und Programmierung der kompletten Software wie zuvor ausführlich beschrieben,;1,0;St;gaeb;3927882.x83
+44;Einrichten des Gateway vor Ort mit Parametrierung und Konfiguration der Schnittstellen-Parameter, in Zusammenarbeit mit einem bauseitigen MSR-Techniker, zur Übergabe an die übergeordnete GLT-Station.;1,0;St;gaeb;3927882.x83
+45;Programmierung und Parametrierung von Sonder-Hardwaredatenpunkte in der I/O Ebene nach definierten Vorgaben des Auftraggebers und in Abstimmung mit;16,0;St;gaeb;3927882.x83
+46;Vorläufige Inbetriebsetzung der Wärmepumpenmodule durch den;1,0;St;gaeb;3927882.x83
+47;Tagessatz (8 Arbeitsstunden) für die Inbetriebnahme und Einregulierung der Wärmepumpenanlage und der Systemregelung durch den Werkskundendienst;3,0;St;gaeb;3927882.x83
+48;Tagessatz (8 Arbeitsstunden) für die Inbetriebnahme und Einregulierung der Wärmepumpenanlage und der Systemregelung wie zuvor ausführlich;2,0;St;gaeb;3927882.x83
+49;Inbetriebnahme und Funktionsprüfung der Einbindung in ein vorhandenes;1,0;St;gaeb;3927882.x83
+50;Ausführliche Erst-Einweisung des Bedienungspersonals bzw. des Bauherren;1,0;St;gaeb;3927882.x83
+51;Mitwirkung des;2,0;St;gaeb;3927882.x83
+52;Mitwirkung des;1,0;St;gaeb;3927882.x83
+53;Mitwirkung des;3,0;St;gaeb;3927882.x83
+54;Mitwirkung des;3,0;St;gaeb;3927882.x83
+55;Nach-Einweisung des Bedienungspersonals bzw. des Bauherren, die komplette;1,0;St;gaeb;3927882.x83
+56;Laufende Optimierung und Konfiguration der kompletten Software durch einen Softwaretechniker für die geforderte Anlagenkonfiguration in Verbindung mit den benötigten Softwarelizenzen gemäß dem ausgeschrieben Leistungen,;1,0;St;gaeb;3927882.x83
+57;Regelungstechniker bzw. Servicemonteur der Herstellerfirma;5,0;h;gaeb;3927882.x83
+58;Software-Programmierer der Herstellerfirma.;2,0;h;gaeb;3927882.x83
+59;Projektleiter der Wärmepumpen-Herstellerfirma;2,0;h;gaeb;3927882.x83
+60;Fahrtkosten für die gesondert benötigte An- und Abfahrt in Folge von bauab-;800,0;km;gaeb;3927882.x83
+1;Stahlkonstruktion wie zuvor beschrieben, für Wärmepumpen-Außengeräte,;1060,0;kg;gaeb;3927882.x83
+2;Zulage für das mehrstufige Montieren der Stahlstützen und der Stahlträger,;1060,0;kg;gaeb;3927882.x83
+3;Ausschäumen des runden Hohlraumes der Stahlstütze im Inneren,;8,0;St;gaeb;3927882.x83
+4;Futterblech für Höhenausgleich auf der Rohdecke als Plasmabrennteil,;8,0;St;gaeb;3927882.x83
+5;Norm-Gitterroste Maschenweite 30/30 mm TS 40/2 als Pressrost, mit U-Profil-;6,0;m2;gaeb;3927882.x83
+6;Herstellung einer Öffnung bzw. Aussparung im vorgenannten Industrie-;2,0;St;gaeb;3927882.x83
+7;Herstellung einer Öffnung bzw. Aussparung im vorgenannten Industrie-;2,0;St;gaeb;3927882.x83
+8;Herstellung einer Öffnung bzw. Aussparung im vorgenannten Industrie-;1,0;St;gaeb;3927882.x83
+9;Herstellung einer Öffnung bzw. Aussparung im vorgenannten Industrie-;1,0;St;gaeb;3927882.x83
+10;Herstellung einer Öffnung bzw. Aussparung im vorgenannten Industrie-;2,0;St;gaeb;3927882.x83
+11;Industriegeländer als Absturzsicherung für die vorgenannte Stahlkonstruktion,;180,0;kg;gaeb;3927882.x83
+12;Erstellung einer prüffähigen Statik nach DIN 18800/EC3, für vorgenannte;1,0;St;gaeb;3927882.x83
+13;Erstellung einer CAD-Konstruktion für vorgenannte beschriebene;1,0;St;gaeb;3927882.x83
+14;Meister bzw. Techniker der Stahlbaufirma;1,0;h;gaeb;3927882.x83
+15;Obermonteur der Stahlbaufirma;1,0;h;gaeb;3927882.x83
+16;Monteur der Stahlbaufirma;2,0;h;gaeb;3927882.x83
+1;Wärmeübertrager aus Edelstahl (Werkstoff: 1.4404) mit Kupferlot vakuum-verlötet, zulässiger Betriebsüberdruck 30 bar, zulässige Betriebstemperatur 195°C, geprüft und gefertigt nach der EU-Richtlinie 214/68/EU für Druckgefäße,;1,0;St;gaeb;3927882.x83
+2;System-Fertigisolierung, als Zubehör zu vorgenannten Plattenwärmeübertrager,;1,0;St;gaeb;3927882.x83
+3;Membrandruckausdehnungsgefäß für geschlossene Heizungsanlagen, gebaut nach DIN EN 13831, Zulassung gemäß EU-Richtlinie 2014/68/EG.;2,0;St;gaeb;3927882.x83
+4;Kappenventil für Membrandruckausdehnungsgefäße in geschlossenen Heizungs- und Kühlwasseranlagen, mit einer gegen unbeabsichtigtes Schließen gesicherten Absperrung und einer Entleerung, gemäß DIN EN12828 TÜV-geprüft,;2,0;St;gaeb;3927882.x83
+5;Membran-Sicherheitsventil, für geschlossene Heizungs- und Kühlwasser-Anla-;2,0;St;gaeb;3927882.x83
+6;Wärmeübertrager aus Edelstahl (Werkstoff: 1.4404) mit Kupferlot vakuum-verlötet, zulässiger Betriebsüberdruck 30 bar, zulässige Betriebstemperatur 195°C, geprüft und gefertigt nach der EU-Richtlinie 214/68/EU für Druckgefäße,;1,0;St;gaeb;3927882.x83
+7;Standkonsolenset aus Edelstahl für vorgenannten Plattenwärmeübertrager,;1,0;St;gaeb;3927882.x83
+8;System-Fertigisolierung, als Zubehör zu vorgenannten Plattenwärmeübertrager,;1,0;St;gaeb;3927882.x83
+9;Membrandruckausdehnungsgefäß für geschlossene Heizungsanlagen, gebaut nach DIN EN 13831, Zulassung gemäß EU-Richtlinie 2014/68/EG, außen mit;1,0;St;gaeb;3927882.x83
+10;Kappenventil für Membrandruckausdehnungsgefäße in geschlossenen Heizungs- und Kühlwasseranlagen, mit einer gegen unbeabsichtigtes Schließen gesicherten Absperrung und einer Entleerung, gemäß DIN EN12828 TÜV-geprüft,;1,0;St;gaeb;3927882.x83
+11;Membran-Sicherheitsventil, für geschlossene Heizungs- und Kühlwasser-Anla;1,0;St;gaeb;3927882.x83
+1;Heizungsverteiler als kombinierter Vor- und Rücklaufverteiler,;1,0;St;gaeb;3927882.x83
+2;Mehrpreis für zuvor beschriebenen Kompaktverteiler, für Ausführung der Kesselvor- und rücklaufstutzen nicht standardmäßig von oben, sondern stirnseitig oder von unten, als;1,0;St;gaeb;3927882.x83
+3;Mehrpreis als Aufpreis für vorgenannten Heizungsverteiler, für eine optional;2,0;St;gaeb;3927882.x83
+4;Fertigisolierung mit verzinktem Stahlblechmantel und Mineralwolle, Dämmstärke 100 mm, in Form von Halbschalen, Stirnseitig mit Deckel, mit Aussparungen für die Abgangsstutzen, Entleerung und Konsolen, als Zulage für vorstehenden Verteiler, einschl. aller Zwischen- und Endstücke, sowie Befestigungsbä;1,0;St;gaeb;3927882.x83
+5;"Entleerrinne aus verzinktem Stahlblech, als Zulage für zuvor beschriebenen Kompakt-Heizungsverteiler, als Grundmodul mit 2 Stirnblechen und Ablauf 2"",";1,0;St;gaeb;3927882.x83
+6;Entleerrinne aus verzinktem Stahlblech, als Zulage für zuvor beschriebenen Kompakt-Heizungsverteiler, als Verlängerung/Erweiterung des Grundmoduls;2,7;m;gaeb;3927882.x83
+7;Standkonsole schallgedämmt für vorstehenden Verteiler,;3,0;St;gaeb;3927882.x83
+8;"Anschlussbox mit einseitig vordefinierten Anschlüssen 2 St. je 1"",";1,0;St;gaeb;3927882.x83
+9;"Qualitäts-Gewinderohr DN 15 (R 1/2"") mit Walzkennzeichnung, nach DIN 2440, nahtlos, deutsches Fabrikat, einschl. Verschnittzuschlag, Arbeitshöhe bis 3,5 m, Form- und Verbindungsstücke werden als Zulage separat vergütet.";40,0;m;gaeb;3927882.x83
+10;"desgl., jedoch DN 20 (R 3/4"").";10,0;m;gaeb;3927882.x83
+11;"desgl., jedoch DN 25 (R 1"").";25,0;m;gaeb;3927882.x83
+12;"desgl., jedoch DN 32 (R 1 1/4"").";35,0;m;gaeb;3927882.x83
+13;"desgl., jedoch DN 40 (R 1 1/2"").";20,0;m;gaeb;3927882.x83
+14;Mehrpreis als Aufpreis für die vorgenannte Rohrleitungspositionen aus;25,0;m;gaeb;3927882.x83
+15;Qualitäts-Flussstahlrohr (Siederohr) DN 50 (57/60), mit Walzkennzeichnung, aus ST 37 nach DIN 2448 (ISO-Norm), nahtlos, deutsches Fabrikat,;20,0;m;gaeb;3927882.x83
+16;desgl., jedoch DN 65 (70/76).;55,0;m;gaeb;3927882.x83
+17;Mehrpreis als Aufpreis für die vorgenannte Rohrleitungspositionen aus;12,0;m;gaeb;3927882.x83
+18;"zusätzliche Oberflächenbehandlung zum Korrosionsschutz der vorgenannten Rohrleitungen aus schwarzem Stahl in Verbindung mit technischer Isolierung, mit gründlicher Vorbehandlung zum Entfernen von losen Bestandteilen und nachfolgender Beschichtung für Kälteleitungen gemäß AGI; Merkblatt Q 151";40,0;m;gaeb;3927882.x83
+19;"desgl., jedoch für Stahlrohr DN 20 (R 3/4"").";10,0;m;gaeb;3927882.x83
+20;"desgl., jedoch für Stahlrohr DN 25 (R 1"").";25,0;m;gaeb;3927882.x83
+21;"desgl., jedoch für Stahlrohr DN 32 (R 1 1/4"").";35,0;m;gaeb;3927882.x83
+22;"desgl., jedoch für Stahlrohr DN 40 (R 1 1/2"").";20,0;m;gaeb;3927882.x83
+23;"desgl., jedoch für Stahlrohr DN 50 (R 2"").";20,0;m;gaeb;3927882.x83
+24;"desgl., jedoch für Stahlrohr DN 65 (R 2 1/2"").";55,0;m;gaeb;3927882.x83
+25;Rohrbefestigung als Rohrschelle, aus verzinktem Stahl, mit schalldämmenden Einlagen, Anforderungen entsprechend DIN 4109, Temperaturbereich - 40 bis 110 Grad C, Länge Aufhängung bis 0,5 m, Befestigung über Gewindestäbe an bauaufsichtlich zugelassenen Dübeln, einschl. Bohrarbeiten, Befestigungsunterg;20,0;St;gaeb;3927882.x83
+26;desgl. jedoch für folgende Bedingungen:;6,0;St;gaeb;3927882.x83
+27;desgl. jedoch für folgende Bedingungen:;14,0;St;gaeb;3927882.x83
+28;desgl. jedoch für folgende Bedingungen:;18,0;St;gaeb;3927882.x83
+29;desgl. jedoch für folgende Bedingungen:;10,0;St;gaeb;3927882.x83
+30;desgl. jedoch für folgende Bedingungen:;10,0;St;gaeb;3927882.x83
+31;desgl. jedoch für folgende Bedingungen:;28,0;St;gaeb;3927882.x83
+32;Mehrpreis als Aufpreis für vorgenannte Rohrbefestigungen für eine Länge der Aufhängung von über 0,5 m bis 1,0 m.;10,0;St;gaeb;3927882.x83
+33;Stahlrohrbogen 90°, DN 15, nach DIN 2605, Teil 1,;28,0;St;gaeb;3927882.x83
+34;desgl., jedoch DN 20.;6,0;St;gaeb;3927882.x83
+35;desgl., jedoch DN 25.;8,0;St;gaeb;3927882.x83
+36;desgl., jedoch DN 32.;12,0;St;gaeb;3927882.x83
+37;desgl., jedoch DN 40.;8,0;St;gaeb;3927882.x83
+38;desgl., jedoch DN 50.;8,0;St;gaeb;3927882.x83
+39;desgl., jedoch DN 65.;12,0;St;gaeb;3927882.x83
+40;T-Stück, DN 15, nach DIN 2618/2619, aus St 37.0, zum Einschweißen,;2,0;St;gaeb;3927882.x83
+41;desgl., jedoch DN 20.;2,0;St;gaeb;3927882.x83
+42;desgl., jedoch DN 25.;14,0;St;gaeb;3927882.x83
+43;desgl., jedoch DN 32.;12,0;St;gaeb;3927882.x83
+44;desgl., jedoch DN 40.;16,0;St;gaeb;3927882.x83
+45;desgl., jedoch DN 50.;4,0;St;gaeb;3927882.x83
+46;desgl., jedoch DN 65.;8,0;St;gaeb;3927882.x83
+47;Reduzierstück, DN 20 x DN 15, nach DIN 2616, konzentrisch, aus St 35.8,;2,0;St;gaeb;3927882.x83
+48;desgl., jedoch DN 25 x DN 20 (15).;10,0;St;gaeb;3927882.x83
+49;desgl., jedoch DN 32 x DN 25 (20).;4,0;St;gaeb;3927882.x83
+50;desgl., jedoch DN 40 x DN 32 (25/20).;6,0;St;gaeb;3927882.x83
+51;desgl., jedoch DN 50 x DN 40 (32/25).;6,0;St;gaeb;3927882.x83
+52;desgl., jedoch DN 65 x DN 50 (40/32).;10,0;St;gaeb;3927882.x83
+53;Klöpperboden mit Bord, DN 26,9 mm x 3 mm, nach DIN 2617,;1,0;St;gaeb;3927882.x83
+54;desgl., jedoch DN 33,7 mm x 3,0 mm.;1,0;St;gaeb;3927882.x83
+55;desgl., jedoch DN 42,4 mm x 3,0 mm.;2,0;St;gaeb;3927882.x83
+56;desgl., jedoch DN 48,3 mm x 3,0 mm.;2,0;St;gaeb;3927882.x83
+57;desgl., jedoch DN 60,3 mm x 3,0 mm.;4,0;St;gaeb;3927882.x83
+58;desgl., jedoch DN 76,1 mm x 3,0 mm.;6,0;St;gaeb;3927882.x83
+59;"Anschweißnippel, DN 15 x R 1/2"" AG, aus E235, zum Einschweißen,";14,0;St;gaeb;3927882.x83
+60;"desgl., jedoch DN 20 x R 3/4""";8,0;St;gaeb;3927882.x83
+61;"desgl., jedoch DN 25 x R 1""";6,0;St;gaeb;3927882.x83
+62;"desgl., jedoch DN 32 x R 11/4""";4,0;St;gaeb;3927882.x83
+63;"desgl., jedoch DN 40 x R 1 1/2""";2,0;St;gaeb;3927882.x83
+64;"desgl., jedoch DN 50 x R 2""";2,0;St;gaeb;3927882.x83
+65;Einschweißen eines Rohranschluss DN 15 (da 21,3 mm) in Hauptrohr aus schwarzem Stahl ≥ DN 50 (da 60,3 mm), als Zulage,;8,0;St;gaeb;3927882.x83
+66;Einschweißen eines Rohranschluss DN 20 (da 26,9 mm) in Hauptrohr aus schwarzem Stahl ≥ DN 50 (da 60,3 mm), als Zulage,;6,0;St;gaeb;3927882.x83
+67;Einschweißen eines Rohranschluss DN 25 (da 33,7 mm) in Hauptrohr aus schwarzem Stahl ≥ DN 65 (da 76,1 mm), als Zulage,;4,0;St;gaeb;3927882.x83
+68;Einschweißen eines Rohranschluss DN 32 (da 42,4 mm) in Hauptrohr aus schwarzem Stahl ≥ DN 65 (da 76,1 mm), als Zulage,;4,0;St;gaeb;3927882.x83
+69;Einschweißen eines Rohranschluss DN 40 (da 48,3 mm) in Hauptrohr aus schwarzem Stahl ≥ DN 80 (da 88,9 mm), als Zulage,;2,0;St;gaeb;3927882.x83
+70;Einschweißen eines Rohranschluss DN 50 (da 60,3 mm) in Hauptrohr aus schwarzem Stahl ≥ DN 100 (da 114,3 mm), als Zulage,;2,0;St;gaeb;3927882.x83
+71;"Schmiedeeiserne Muffen (Schweißmuffen) DN 15 (R 1/2 ""),";60,0;St;gaeb;3927882.x83
+72;"desgl., jedoch DN 20 (R 3/4"").";10,0;St;gaeb;3927882.x83
+73;"desgl., jedoch DN 25 (R 1"").";4,0;St;gaeb;3927882.x83
+74;Vorschweißflansch DN 15, nach DIN 2631, PN 6, aus ST 37-2,;2,0;St;gaeb;3927882.x83
+75;desgl., jedoch DN 20.;2,0;St;gaeb;3927882.x83
+76;desgl., jedoch DN 25.;8,0;St;gaeb;3927882.x83
+77;desgl., jedoch DN 32.;6,0;St;gaeb;3927882.x83
+78;desgl., jedoch DN 40.;6,0;St;gaeb;3927882.x83
+79;desgl., jedoch DN 50.;8,0;St;gaeb;3927882.x83
+80;desgl., jedoch DN 65.;10,0;St;gaeb;3927882.x83
+81;Blindflansch DN 15, nach DIN 2527, PN 6, aus ST 37-2,;1,0;St;gaeb;3927882.x83
+82;desgl., jedoch DN 20.;1,0;St;gaeb;3927882.x83
+83;desgl., jedoch DN 25.;2,0;St;gaeb;3927882.x83
+84;desgl., jedoch DN 32.;1,0;St;gaeb;3927882.x83
+85;desgl., jedoch DN 40.;1,0;St;gaeb;3927882.x83
+86;desgl., jedoch DN 50.;2,0;St;gaeb;3927882.x83
+87;desgl., jedoch DN 65.;2,0;St;gaeb;3927882.x83
+88;"Gewindeflansch DN 15x1/2"", nach DIN 2565, PN 6, aus ST 37-2,";2,0;St;gaeb;3927882.x83
+89;"desgl., jedoch DN 20x3/4"".";2,0;St;gaeb;3927882.x83
+90;"desgl., jedoch DN 25x1"".";6,0;St;gaeb;3927882.x83
+91;"desgl., jedoch DN 32x1 1/4"".";4,0;St;gaeb;3927882.x83
+92;"desgl., jedoch DN 40x1 1/2"".";4,0;St;gaeb;3927882.x83
+93;"desgl., jedoch DN 50x2"".";2,0;St;gaeb;3927882.x83
+94;"desgl., jedoch DN 65x2 1/2"".";2,0;St;gaeb;3927882.x83
+95;"Flansch-Verbindungssatz DN 15; Druckstufe PN 6,";4,0;St;gaeb;3927882.x83
+96;"Flansch-Verbindungssatz DN 20; Druckstufe PN 6,";3,0;St;gaeb;3927882.x83
+97;"Flansch-Verbindungssatz DN 25; Druckstufe PN 6,";14,0;St;gaeb;3927882.x83
+98;"Flansch-Verbindungssatz DN 32; Druckstufe PN 6,";9,0;St;gaeb;3927882.x83
+99;"Flansch-Verbindungssatz DN 40; Druckstufe PN 6,";10,0;St;gaeb;3927882.x83
+100;"Flansch-Verbindungssatz DN 50; Druckstufe PN 6,";10,0;St;gaeb;3927882.x83
+101;"Flansch-Verbindungssatz DN 65; Druckstufe PN 6,";12,0;St;gaeb;3927882.x83
+102;"Asbestfreie Ersatz-Flanschdichtung einzeln, DN 15; Druckstufe PN 6,";4,0;St;gaeb;3927882.x83
+103;desgl., jedoch DN 20.;4,0;St;gaeb;3927882.x83
+104;desgl., jedoch DN 25.;14,0;St;gaeb;3927882.x83
+105;desgl., jedoch DN 32.;7,0;St;gaeb;3927882.x83
+106;desgl., jedoch DN 40.;10,0;St;gaeb;3927882.x83
+107;desgl., jedoch DN 50.;12,0;St;gaeb;3927882.x83
+108;desgl., jedoch DN 65.;14,0;St;gaeb;3927882.x83
+109;Vorschweißflansch DN 15, nach DIN 2633, PN 10/16, aus ST 37-2,;1,0;St;gaeb;3927882.x83
+110;desgl., jedoch DN 20.;2,0;St;gaeb;3927882.x83
+111;desgl., jedoch DN 25.;5,0;St;gaeb;3927882.x83
+112;desgl., jedoch DN 32.;3,0;St;gaeb;3927882.x83
+113;desgl., jedoch DN 40.;3,0;St;gaeb;3927882.x83
+114;desgl., jedoch DN 50.;4,0;St;gaeb;3927882.x83
+115;desgl., jedoch DN 65.;2,0;St;gaeb;3927882.x83
+116;"Flansch-Verbindungssatz DN 15; Druckstufe PN 10/16,";1,0;St;gaeb;3927882.x83
+117;"Flansch-Verbindungssatz DN 20; Druckstufe PN 10/16,";2,0;St;gaeb;3927882.x83
+118;"Flansch-Verbindungssatz DN 25; Druckstufe PN 10/16,";5,0;St;gaeb;3927882.x83
+119;"Flansch-Verbindungssatz DN 32; Druckstufe PN 10/16,";3,0;St;gaeb;3927882.x83
+120;"Flansch-Verbindungssatz DN 40; Druckstufe PN 10/16,";3,0;St;gaeb;3927882.x83
+121;"Flansch-Verbindungssatz DN 50; Druckstufe PN 10/16,";4,0;St;gaeb;3927882.x83
+122;"Flansch-Verbindungssatz DN 65; Druckstufe PN 10/16,";2,0;St;gaeb;3927882.x83
+123;"Asbestfreie Ersatz-Flanschdichtung einzeln, DN 15; Druckstufe PN 10/16,";1,0;St;gaeb;3927882.x83
+124;desgl., jedoch DN 20.;2,0;St;gaeb;3927882.x83
+125;desgl., jedoch DN 25.;5,0;St;gaeb;3927882.x83
+126;desgl., jedoch DN 32.;3,0;St;gaeb;3927882.x83
+127;desgl., jedoch DN 40.;3,0;St;gaeb;3927882.x83
+128;desgl., jedoch DN 50.;4,0;St;gaeb;3927882.x83
+129;desgl., jedoch DN 65.;2,0;St;gaeb;3927882.x83
+130;Ringfitting zum Kreuzen von Rohrleitungen in einer Ebene bei vollem Dehnungsausgleich ohne Höhenverlust in geschweißter Ausführung aus Gewinderohr nach DIN 2440 bzw. Siederohr nach DIN 2448, mit seitlichen Abgängen, einschl. einer Geräuschdämmfolie im Innenrohr, zum Einschweißen, als Zulage zu Quali;1,0;St;gaeb;3927882.x83
+131;desgl., jedoch für folgende Abmessungen:,;1,0;St;gaeb;3927882.x83
+132;desgl., jedoch für folgende Abmessungen:,;2,0;St;gaeb;3927882.x83
+133;desgl., jedoch für folgende Abmessungen:,;2,0;St;gaeb;3927882.x83
+134;desgl., jedoch für folgende Abmessungen:,;2,0;St;gaeb;3927882.x83
+135;desgl., jedoch für folgende Abmessungen:,;4,0;St;gaeb;3927882.x83
+136;desgl., jedoch für folgende Abmessungen:,;2,0;St;gaeb;3927882.x83
+137;"Temperguss-Fitting in Form als Winkel/Bogen, DN 15 (R 1/2""), alle Winkelgrade, beiderseits Innengewinde oder Innen-/Außengewinde, gleiche und ungleiche Schenkellängen, einschließlich Dichtmaterial, in schwarzer Ausführung,";4,0;St;gaeb;3927882.x83
+138;"desgl., jedoch DN 20 (R 3/4"").";2,0;St;gaeb;3927882.x83
+139;"desgl., jedoch DN 25 (R 1"").";6,0;St;gaeb;3927882.x83
+140;"desgl., jedoch DN 32 (R 1 1/4"").";4,0;St;gaeb;3927882.x83
+141;"desgl., jedoch DN 40 (R 1 1/2"").";2,0;St;gaeb;3927882.x83
+142;"desgl., jedoch DN 50 (R 2"").";2,0;St;gaeb;3927882.x83
+143;"Temperguss-Fitting in Form als T-Stück, DN 15 (R 1/2""), allseits Innengewinde mit oder ohne reduzierte Abgänge, einschließlich Dichtmaterial, in schwarzer Ausführung,";1,0;St;gaeb;3927882.x83
+144;"desgl., jedoch DN 20 (R 3/4"").";1,0;St;gaeb;3927882.x83
+145;"desgl., jedoch DN 25 (R 1"").";2,0;St;gaeb;3927882.x83
+146;"desgl., jedoch DN 32 (R 1 1/4"").";4,0;St;gaeb;3927882.x83
+147;"desgl., jedoch DN 40 (R 1 1/2"").";4,0;St;gaeb;3927882.x83
+148;"desgl., jedoch DN 50 (R 2"").";2,0;St;gaeb;3927882.x83
+149;"Temperguss-Fitting in Form als Muffe DN 15 (R 1/2""), mit zwei Innengewinde, einschl. Dichtmaterial, in schwarzer Ausführung,";6,0;St;gaeb;3927882.x83
+150;"desgl., jedoch DN 20 (R 3/4"").";4,0;St;gaeb;3927882.x83
+151;"desgl., jedoch DN 25 (R 1"").";8,0;St;gaeb;3927882.x83
+152;"desgl., jedoch DN 32 (R 1 1/4"").";4,0;St;gaeb;3927882.x83
+153;"desgl., jedoch DN 40 (R 1 1/2"").";4,0;St;gaeb;3927882.x83
+154;"desgl., jedoch DN 50 (R 2"").";2,0;St;gaeb;3927882.x83
+155;"Temperguss-Fitting in Form als Doppelnippel DN 15 (R 1/2""), mit zwei Außengewinde, einschl. Dichtmaterial, in schwarzer Ausführung,";6,0;St;gaeb;3927882.x83
+156;"desgl., jedoch DN 20 (R 3/4"").";2,0;St;gaeb;3927882.x83
+157;"desgl., jedoch DN 25 (R 1"").";8,0;St;gaeb;3927882.x83
+158;"desgl., jedoch DN 32 (R 11/4"").";6,0;St;gaeb;3927882.x83
+159;"desgl., jedoch DN 40 (R 1 1/2"").";4,0;St;gaeb;3927882.x83
+160;"desgl., jedoch DN 50 (R 2"").";2,0;St;gaeb;3927882.x83
+161;"Temperguss-Fitting in Form als Stopfen bzw. Kappe, DN 15 (R 1/2""),";2,0;St;gaeb;3927882.x83
+162;"desgl., jedoch DN 20 (R 3/4"").";2,0;St;gaeb;3927882.x83
+163;"desgl., jedoch DN 25 (R 1"").";4,0;St;gaeb;3927882.x83
+164;"desgl., jedoch DN 32 (R 1 1/4"").";2,0;St;gaeb;3927882.x83
+165;"desgl., jedoch DN 40 (R 1 1/2"").";2,0;St;gaeb;3927882.x83
+166;"desgl., jedoch DN 50 (R 2"").";2,0;St;gaeb;3927882.x83
+167;Temperguss-Fitting in Form als Verschraubung in Durchgangsform, DN 15;1,0;St;gaeb;3927882.x83
+168;"desgl., jedoch DN 20 (R 3/4"").";1,0;St;gaeb;3927882.x83
+169;"desgl., jedoch DN 25 (R 1"").";2,0;St;gaeb;3927882.x83
+170;"desgl., jedoch DN 32 (R 1 1/4"").";2,0;St;gaeb;3927882.x83
+171;"desgl., jedoch DN 40 (R 1 1/2"").";1,0;St;gaeb;3927882.x83
+172;"desgl., jedoch DN 50 (R 2"").";1,0;St;gaeb;3927882.x83
+173;Bauseits gestellten Temperaturfühler bzw. -sensor unter Verwendung und;21,0;St;gaeb;3927882.x83
+174;Bauseits gestellten Temperaturfühler bzw. -sensor unter Verwendung und;6,0;St;gaeb;3927882.x83
+175;Bauseits gestellten Kabel-Temperaturfühler bzw. -sensor in bauseits vorhandene Tauchhülse montieren, einschl. aller dazu benötigten und erforderlichen Dichtungsmaterialien,;5,0;St;gaeb;3927882.x83
+176;Bauseits gestellten Tauchthermostatfühler bzw. -sensor in bauseits vorhandene Tauchhülse montieren, einschl. aller dazu benötigten und erforderlichen Dichtungsmaterialien,;1,0;St;gaeb;3927882.x83
+177;"Bauseits gestelltes Motor-Dreiwegeventil DN 15; PN 16, mit Flanschanschluss in Rohrleitungsnetz bzw. Anlagenhydraulik einbauen,";1,0;St;gaeb;3927882.x83
+178;"Bauseits gestelltes Motor-Dreiwegeventil DN 20; PN 16, mit Flanschanschluss in Rohrleitungsnetz bzw. Anlagenhydraulik einbauen,";1,0;St;gaeb;3927882.x83
+179;"Bauseits gestelltes Motor-Dreiwegeventil DN 25; PN 16, mit Flanschanschluss in Rohrleitungsnetz bzw. Anlagenhydraulik einbauen,";3,0;St;gaeb;3927882.x83
+180;"Bauseits gestelltes Motor-Dreiwegeventil DN 32; PN 16, mit Flanschanschluss in Rohrleitungsnetz bzw. Anlagenhydraulik einbauen,";2,0;St;gaeb;3927882.x83
+181;"Bauseits gestelltes Motor-Dreiwegeventil DN 40; PN 16, mit Flanschanschluss in Rohrleitungsnetz bzw. Anlagenhydraulik einbauen,";1,0;St;gaeb;3927882.x83
+182;"Bauseits gestelltes Motor-Dreiwegeventil DN 50; PN 16, mit Flanschanschluss in Rohrleitungsnetz bzw. Anlagenhydraulik einbauen,";1,0;St;gaeb;3927882.x83
+183;"Bauseits gestelltes Motor-Dreiwegeventil DN 65; PN 16, mit Flanschanschluss in Rohrleitungsnetz bzw. Anlagenhydraulik einbauen,";2,0;St;gaeb;3927882.x83
+184;"Bauseits gestelltes Motor-Durchgangsventil DN 40; PN 16, mit Flansch-";1,0;St;gaeb;3927882.x83
+185;"Bauseits gestelltes Motor-Durchgangsventil DN 50; PN 16, mit Flansch-";2,0;St;gaeb;3927882.x83
+186;"Bauseits gestelltes Motor-Durchgangsventil DN 65; PN 16, mit Flansch-";2,0;St;gaeb;3927882.x83
+187;System-Leitungsrohr d 15 x 1,0 mm aus ferritisch nichtrostendem Stahl gemäß;60,0;m;gaeb;3927882.x83
+188;desgl., jedoch d 18 x 1,0 mm.;110,0;m;gaeb;3927882.x83
+189;desgl., jedoch d 22 x 1,2 mm.;95,0;m;gaeb;3927882.x83
+190;desgl., jedoch d 28 x 1,2 mm.;190,0;m;gaeb;3927882.x83
+191;desgl., jedoch d 35 x 1,5 mm.;320,0;m;gaeb;3927882.x83
+192;desgl., jedoch d 42 x 1,5 mm.;230,0;m;gaeb;3927882.x83
+193;desgl., jedoch d 54 x 1,5 mm.;105,0;m;gaeb;3927882.x83
+194;desgl., jedoch d 76,1 x 1,5 mm.;5,0;m;gaeb;3927882.x83
+195;Mehrpreis als Aufpreis für die vorgenannte Rohrleitungspositionen aus;45,0;m;gaeb;3927882.x83
+196;Mehrpreis als Aufpreis für die vorgenannte Rohrleitungspositionen aus;20,0;m;gaeb;3927882.x83
+197;Rohrbefestigung als Rohrschelle, aus verzinktem Stahl, mit schalldämmenden Einlagen, Anforderungen entsprechend DIN 4109, Temperaturbereich - 40 bis 110 Grad C, Länge Aufhängung bis 0,5 m, Befestigung über Gewindestäbe an bauaufsichtlich zugelassenen Dübeln, einschl. Bohrarbeiten, Befestigungsunterg;30,0;St;gaeb;3927882.x83
+198;desgl. jedoch für folgende Bedingungen:;56,0;St;gaeb;3927882.x83
+199;desgl. jedoch für folgende Bedingungen:;48,0;St;gaeb;3927882.x83
+200;desgl. jedoch für folgende Bedingungen:;96,0;St;gaeb;3927882.x83
+201;desgl. jedoch für folgende Bedingungen:;160,0;St;gaeb;3927882.x83
+202;desgl. jedoch für folgende Bedingungen:;116,0;St;gaeb;3927882.x83
+203;desgl. jedoch für folgende Bedingungen:;54,0;St;gaeb;3927882.x83
+204;desgl. jedoch für folgende Bedingungen:;4,0;St;gaeb;3927882.x83
+205;Mehrpreis als Aufpreis für vorgenannte Rohrbefestigungen für eine Länge der Aufhängung von über 0,5 m bis 1,0 m.;14,0;St;gaeb;3927882.x83
+206;Edelstahl-System-Pressfitting in Form als Winkel/Bogen, d 15, alle Winkelgrade, ein-/beidseitig Pressanschluss Innen/Innen oder Innen/Außen, mit einer oder zwei Muffen, einschließlich Dichtelement(e),;40,0;St;gaeb;3927882.x83
+207;desgl., jedoch d 18.;120,0;St;gaeb;3927882.x83
+208;desgl., jedoch d 22.;50,0;St;gaeb;3927882.x83
+209;desgl., jedoch d 28.;45,0;St;gaeb;3927882.x83
+210;desgl., jedoch d 35.;65,0;St;gaeb;3927882.x83
+211;desgl., jedoch d 42.;40,0;St;gaeb;3927882.x83
+212;desgl., jedoch d 54.;50,0;St;gaeb;3927882.x83
+213;desgl., jedoch d 76,1.;2,0;St;gaeb;3927882.x83
+214;Edelstahl-System-Pressfitting in Form als Übergangsbogen d 15,;4,0;St;gaeb;3927882.x83
+215;desgl., jedoch d 18.;6,0;St;gaeb;3927882.x83
+216;desgl., jedoch d 22.;4,0;St;gaeb;3927882.x83
+217;desgl., jedoch d 28.;2,0;St;gaeb;3927882.x83
+218;desgl., jedoch d 35.;2,0;St;gaeb;3927882.x83
+219;Edelstahl-System-Pressfitting in Form als Übergangswinkel d 15, 90 Grad,;4,0;St;gaeb;3927882.x83
+220;desgl., jedoch d 18.;10,0;St;gaeb;3927882.x83
+221;Edelstahl-System-Pressfitting in Form als T-Stück, d 15, allseitig gleichen Pressanschluss, mit drei Muffen, gleiche Anschlüsse d 15, nicht reduziert,;2,0;St;gaeb;3927882.x83
+222;desgl., jedoch d 18.;2,0;St;gaeb;3927882.x83
+223;desgl., jedoch d 22.;14,0;St;gaeb;3927882.x83
+224;desgl., jedoch d 28.;8,0;St;gaeb;3927882.x83
+225;desgl., jedoch d 35.;10,0;St;gaeb;3927882.x83
+226;desgl., jedoch d 42.;6,0;St;gaeb;3927882.x83
+227;desgl., jedoch d 54.;8,0;St;gaeb;3927882.x83
+228;desgl., jedoch d 76,1.;1,0;St;gaeb;3927882.x83
+229;Edelstahl-System-Pressfitting in Form als T-Stück, d 18, allseitig ungleichen Pressanschluss, mit drei Muffen, ungleiche Anschlüsse, reduziert oder erweitert, einschließlich Dichtelemente,;2,0;St;gaeb;3927882.x83
+230;desgl., jedoch d 22.;16,0;St;gaeb;3927882.x83
+231;desgl., jedoch d 28.;12,0;St;gaeb;3927882.x83
+232;desgl., jedoch d 35.;22,0;St;gaeb;3927882.x83
+233;desgl., jedoch d 42.;26,0;St;gaeb;3927882.x83
+234;desgl., jedoch d 54.;4,0;St;gaeb;3927882.x83
+235;desgl., jedoch d 76,1.;1,0;St;gaeb;3927882.x83
+236;Edelstahl-System-Pressfitting in Form als T-Stück, d 15, Durchgangsseite;2,0;St;gaeb;3927882.x83
+237;desgl., jedoch d 18.;2,0;St;gaeb;3927882.x83
+238;desgl., jedoch d 22.;2,0;St;gaeb;3927882.x83
+239;desgl., jedoch d 28.;2,0;St;gaeb;3927882.x83
+240;desgl., jedoch d 35.;2,0;St;gaeb;3927882.x83
+241;desgl., jedoch d 42.;2,0;St;gaeb;3927882.x83
+242;desgl., jedoch d 54.;2,0;St;gaeb;3927882.x83
+243;desgl., jedoch d 76,1.;1,0;St;gaeb;3927882.x83
+244;Edelstahl-System-Pressfitting in Form als Verbindungsmuffe, d 15,;12,0;St;gaeb;3927882.x83
+245;desgl., jedoch d 18.;22,0;St;gaeb;3927882.x83
+246;desgl., jedoch d 22.;20,0;St;gaeb;3927882.x83
+247;desgl., jedoch d 28.;36,0;St;gaeb;3927882.x83
+248;desgl., jedoch d 35.;54,0;St;gaeb;3927882.x83
+249;desgl., jedoch d 42.;44,0;St;gaeb;3927882.x83
+250;desgl., jedoch d 54.;18,0;St;gaeb;3927882.x83
+251;desgl., jedoch d 76,1.;1,0;St;gaeb;3927882.x83
+252;Edelstahl-System-Pressfitting in Form als Schiebemuffe, d 15,;4,0;St;gaeb;3927882.x83
+253;desgl., jedoch d 18.;6,0;St;gaeb;3927882.x83
+254;desgl., jedoch d 22.;8,0;St;gaeb;3927882.x83
+255;desgl., jedoch d 28.;4,0;St;gaeb;3927882.x83
+256;desgl., jedoch d 35.;2,0;St;gaeb;3927882.x83
+257;desgl., jedoch d 42.;2,0;St;gaeb;3927882.x83
+258;desgl., jedoch d 54.;2,0;St;gaeb;3927882.x83
+259;desgl., jedoch d 76,1.;1,0;St;gaeb;3927882.x83
+260;Edelstahl-System-Pressfitting in Form als Reduzierstück, d 18,;2,0;St;gaeb;3927882.x83
+261;desgl., jedoch d 22.;4,0;St;gaeb;3927882.x83
+262;desgl., jedoch d 28.;24,0;St;gaeb;3927882.x83
+263;desgl., jedoch d 35.;14,0;St;gaeb;3927882.x83
+264;desgl., jedoch d 42.;16,0;St;gaeb;3927882.x83
+265;desgl., jedoch d 54.;6,0;St;gaeb;3927882.x83
+266;desgl., jedoch d 76,1.;2,0;St;gaeb;3927882.x83
+267;Edelstahl-System-Pressfitting in Form als Kreuzstück, d 22 / d15,;2,0;St;gaeb;3927882.x83
+268;Edelstahl-System-Pressfitting in Form als Verschluss-/Endkappe, d 15,;4,0;St;gaeb;3927882.x83
+269;desgl., jedoch d 18.;4,0;St;gaeb;3927882.x83
+270;desgl., jedoch d 22.;2,0;St;gaeb;3927882.x83
+271;desgl., jedoch d 28.;2,0;St;gaeb;3927882.x83
+272;desgl., jedoch d 35.;2,0;St;gaeb;3927882.x83
+273;desgl., jedoch d 42.;2,0;St;gaeb;3927882.x83
+274;desgl., jedoch d 54.;2,0;St;gaeb;3927882.x83
+275;desgl., jedoch d 76,1.;1,0;St;gaeb;3927882.x83
+276;Edelstahl-System-Pressfitting in Form als gerades Übergangsstück d 15,;4,0;St;gaeb;3927882.x83
+277;desgl., jedoch d 18.;6,0;St;gaeb;3927882.x83
+278;desgl., jedoch d 22.;4,0;St;gaeb;3927882.x83
+279;desgl., jedoch d 28.;6,0;St;gaeb;3927882.x83
+280;desgl., jedoch d 35.;4,0;St;gaeb;3927882.x83
+281;desgl., jedoch d 42.;2,0;St;gaeb;3927882.x83
+282;desgl., jedoch d 54.;4,0;St;gaeb;3927882.x83
+283;desgl., jedoch d 76,1.;2,0;St;gaeb;3927882.x83
+284;Edelstahl-System-Pressfitting in Form als gerades Einsteckstück d 22,;2,0;St;gaeb;3927882.x83
+285;desgl., jedoch d 28.;4,0;St;gaeb;3927882.x83
+286;Edelstahl-System-Pressfitting in Form als Durchgangsverschraubung d 15,;2,0;St;gaeb;3927882.x83
+287;desgl., jedoch d 18.;2,0;St;gaeb;3927882.x83
+288;Edelstahl-System-Pressfitting in Form als Übergangsverschraubung d 15,;2,0;St;gaeb;3927882.x83
+289;desgl., jedoch d 18.;2,0;St;gaeb;3927882.x83
+290;desgl., jedoch d 22.;4,0;St;gaeb;3927882.x83
+291;desgl., jedoch d 28.;6,0;St;gaeb;3927882.x83
+292;desgl., jedoch d 35.;2,0;St;gaeb;3927882.x83
+293;desgl., jedoch d 42.;2,0;St;gaeb;3927882.x83
+294;desgl., jedoch d 54.;4,0;St;gaeb;3927882.x83
+295;Edelstahl-System-Pressfitting in Form als Anschlussverschraubung d 15,;2,0;St;gaeb;3927882.x83
+296;desgl., jedoch d 18.;2,0;St;gaeb;3927882.x83
+297;desgl., jedoch d 22.;4,0;St;gaeb;3927882.x83
+298;desgl., jedoch d 28.;6,0;St;gaeb;3927882.x83
+299;desgl., jedoch d 35.;2,0;St;gaeb;3927882.x83
+300;desgl., jedoch d 42.;2,0;St;gaeb;3927882.x83
+301;desgl., jedoch d 54.;4,0;St;gaeb;3927882.x83
+302;Edelstahl-System-Pressfitting in Form als Flanschübergang d 35, PN 6;1,0;St;gaeb;3927882.x83
+303;desgl., jedoch d 42.;1,0;St;gaeb;3927882.x83
+304;desgl., jedoch d 54.;2,0;St;gaeb;3927882.x83
+305;desgl., jedoch d 76,1.;2,0;St;gaeb;3927882.x83
+306;"Flanschdichtung für vorgenannten Flanschübergang d 35; PN 6";1,0;St;gaeb;3927882.x83
+307;desgl., jedoch d 42.;1,0;St;gaeb;3927882.x83
+308;desgl., jedoch d 54.;2,0;St;gaeb;3927882.x83
+309;desgl., jedoch d 76,1.;2,0;St;gaeb;3927882.x83
+310;Edelstahl-System-Pressfitting in Form als Flanschübergang d 35, PN 10/16;1,0;St;gaeb;3927882.x83
+311;desgl., jedoch d 42.;1,0;St;gaeb;3927882.x83
+312;desgl., jedoch d 54.;2,0;St;gaeb;3927882.x83
+313;desgl., jedoch d 76,1.;2,0;St;gaeb;3927882.x83
+314;"Flanschdichtung für vorgenannten Flanschübergang d 35; PN 10/16";1,0;St;gaeb;3927882.x83
+315;desgl., jedoch d 42.;1,0;St;gaeb;3927882.x83
+316;desgl., jedoch d 54.;2,0;St;gaeb;3927882.x83
+317;desgl., jedoch d 76,1.;2,0;St;gaeb;3927882.x83
+318;System-Montageset für vorgenannten Flanschübergang d 35 - d 54,;8,0;St;gaeb;3927882.x83
+319;System-Montageset für vorgenannten Flanschübergang d 76,1 - d 108,0,;2,0;St;gaeb;3927882.x83
+320;Rotguss-Press-Fitting in Form als Winkel/Bogen, d 15, alle Winkelgrade, einerseits Pressanschluss Innen/Außen, andererseits Innen-/Außengewinde-;2,0;St;gaeb;3927882.x83
+321;desgl., jedoch d 18.;6,0;St;gaeb;3927882.x83
+322;desgl., jedoch d 22.;4,0;St;gaeb;3927882.x83
+323;desgl., jedoch d 28.;2,0;St;gaeb;3927882.x83
+324;desgl., jedoch d 35.;2,0;St;gaeb;3927882.x83
+325;Rotguss-Press-Fitting in Form als T-Stück, d 15, Pressanschluss im Durchgang, Abgang mit Innen-/Außengewindeanschluss, auf sämtliche lieferbare Größen, einschließlich Dichtelemente und Gewindedichtmittel,;1,0;St;gaeb;3927882.x83
+326;desgl., jedoch d 18.;1,0;St;gaeb;3927882.x83
+327;desgl., jedoch d 22.;1,0;St;gaeb;3927882.x83
+328;desgl., jedoch d 28.;2,0;St;gaeb;3927882.x83
+329;desgl., jedoch d 35.;2,0;St;gaeb;3927882.x83
+330;Rotguss-Press-Fitting in Form als Übergangsnippel bzw. -muffe, d 15, einerseits Pressanschluss, andererseits Innen-/Außengewindeanschluss auf sämtliche;6,0;St;gaeb;3927882.x83
+331;desgl., jedoch d 18.;4,0;St;gaeb;3927882.x83
+332;desgl., jedoch d 22.;4,0;St;gaeb;3927882.x83
+333;desgl., jedoch d 28.;2,0;St;gaeb;3927882.x83
+334;desgl., jedoch d 35.;2,0;St;gaeb;3927882.x83
+335;Rotguss-Press-Fitting in Form als Durchgangs- o. Winkel-Rohrverschraubung,;2,0;St;gaeb;3927882.x83
+336;desgl., jedoch d 18.;2,0;St;gaeb;3927882.x83
+337;desgl., jedoch d 22.;4,0;St;gaeb;3927882.x83
+338;desgl., jedoch d 28.;2,0;St;gaeb;3927882.x83
+339;desgl., jedoch d 35.;2,0;St;gaeb;3927882.x83
+340;Rotguss-Press-Fitting in Form als Anschlussverschraubung, d 15, einerseits Pressanschluss, anderseits Außengewindeanschluss, einschließlich Dichtelement und Gewindedichtmittel,;2,0;St;gaeb;3927882.x83
+341;desgl., jedoch d 18.;2,0;St;gaeb;3927882.x83
+342;desgl., jedoch d 22.;4,0;St;gaeb;3927882.x83
+343;desgl., jedoch d 28.;2,0;St;gaeb;3927882.x83
+344;desgl., jedoch d 35.;2,0;St;gaeb;3927882.x83
+345;Rotguss--Press-Fitting in Form als Kreuzstück, d 15 allseits Pressanschluss,;1,0;St;gaeb;3927882.x83
+346;desgl., jedoch d 18.;1,0;St;gaeb;3927882.x83
+347;desgl., jedoch d 22.;1,0;St;gaeb;3927882.x83
+348;Verrechnungssatz für das abschnittsweise Spülen von Rohrleitungen im;1320,0;m;gaeb;3927882.x83
+349;Verrechnungssatz für das abschnittsweise Abdrücken von Rohrleitungen (Kesselkreise,  Verteilleitungen gemäß Bauabschnitte) im Umfang der;1320,0;m;gaeb;3927882.x83
+350;Verrechnungssatz für das abschnittsweise Entlüften der Heizungsanlage,;60,0;h;gaeb;3927882.x83
+1;Hocheffizienz-Inline-Nassläufer-Pumpe mit EC-Motor und elektronischer;1,0;St;gaeb;3927882.x83
+2;desgl. wie zuvor beschrieben, jedoch in folgender Ausführung:;2,0;St;gaeb;3927882.x83
+3;desgl. wie zuvor beschrieben, jedoch in folgender Ausführung:;1,0;St;gaeb;3927882.x83
+4;desgl. wie zuvor beschrieben, jedoch in folgender Ausführung:;1,0;St;gaeb;3927882.x83
+5;desgl. wie zuvor beschrieben, jedoch in folgender Ausführung:;1,0;St;gaeb;3927882.x83
+6;Diffusionsdichte Kältedämmschale zur Dämmung von Pumpengehäusen in;4,0;St;gaeb;3927882.x83
+7;Diffusionsdichte Kältedämmschale zur Dämmung von Pumpengehäusen in;1,0;St;gaeb;3927882.x83
+8;Hocheffizienz-Inline-Nassläufer-Pumpe mit EC-Motor und elektronischer;1,0;St;gaeb;3927882.x83
+9;desgl. wie zuvor beschrieben, jedoch in folgender Ausführung:;2,0;St;gaeb;3927882.x83
+10;Interface-Schnittstellenmodul als serielle, digitale Schnittstelle zum Anschluss;9,0;St;gaeb;3927882.x83
+11;Diffusionsdichte Kältedämmschale zur Dämmung von Pumpengehäusen in;2,0;St;gaeb;3927882.x83
+12;Tauchtemperaturfühler PT 1000 (AA), als Sensor zum Einbau in Tauchhülse, zur möglichen Temperaturdifferenzmessung und WMZ-Funktion,;9,0;St;gaeb;3927882.x83
+13;"Tauchhülse mit 45 mm Einbaulänge, inkl. Einschraubgewinde G1/2"" zur";9,0;St;gaeb;3927882.x83
+14;Hocheffizienz-Inline-Nassläufer-Pumpe, elektronisch geregelt, mit blockier-;1,0;St;gaeb;3927882.x83
+15;Hocheffizienz-Inline-Nassläufer-Pumpe, elektronisch geregelt, mit blockier-;2,0;St;gaeb;3927882.x83
+16;Ring-Einklemm-Absperrklappe in zentrischer Bauart mit integrierter Aufnahme für eine System-Temperaturanzeige, zum Einklemmen zwischen Gegenflansche nach DIN 2632/33/42, mit glatter Dichtleiste und Bördelflansche nach DIN 2642, in Isolierbauhöhe gemäß GEG (alt: EnEV).;12,0;St;gaeb;3927882.x83
+17;desgl., jedoch DN 32.;4,0;St;gaeb;3927882.x83
+18;desgl., jedoch DN 40.;22,0;St;gaeb;3927882.x83
+19;desgl., jedoch DN 50.;8,0;St;gaeb;3927882.x83
+20;desgl., jedoch DN 65.;12,0;St;gaeb;3927882.x83
+21;Thermometer für zuvor beschriebene Absperrklappe DN 25 bis DN 32,;8,0;St;gaeb;3927882.x83
+22;desgl., jedoch für Absperrklappe DN 40.;12,0;St;gaeb;3927882.x83
+23;desgl., jedoch für Absperrklappe DN 50 bis DN 65.;10,0;St;gaeb;3927882.x83
+24;Flanschen-Absperrventil mit Handrad, in Kurzbaulänge F4 nach DIN 3202,;2,0;St;gaeb;3927882.x83
+25;desgl., jedoch DN 32,;2,0;St;gaeb;3927882.x83
+26;desgl., jedoch DN 40,;2,0;St;gaeb;3927882.x83
+27;desgl., jedoch DN 50,;2,0;St;gaeb;3927882.x83
+28;desgl., jedoch DN 65,;1,0;St;gaeb;3927882.x83
+29;Mehrpreis als Aufpreis für PN 16 - Ausführung,;1,0;St;gaeb;3927882.x83
+30;Mehrpreis als Aufpreis für PN 16 - Ausführung,;1,0;St;gaeb;3927882.x83
+31;Mehrpreis als Aufpreis für PN 16 - Ausführung,;1,0;St;gaeb;3927882.x83
+32;Mehrpreis als Aufpreis für PN 16 - Ausführung,;1,0;St;gaeb;3927882.x83
+33;Mehrpreis als Aufpreis für PN 16 - Ausführung,;1,0;St;gaeb;3927882.x83
+34;Automatisches Scheiben-Rückschlagventil mit Luftschleuse zum Einbau in die Umwälzpumpen-Verschraubung. Ventilteller aus glasfaserverstärktem PTFE,;1,0;St;gaeb;3927882.x83
+35;desgl., jedoch DN 25,;5,0;St;gaeb;3927882.x83
+36;desgl., jedoch DN 32,;1,0;St;gaeb;3927882.x83
+37;"Wartungsfreie Rückschlagklappe mit Zentrierhilfe zum waagerechten oder senkrechten Einbau zwischen Flansche nach DIN 2632; PN 10.";2,0;St;gaeb;3927882.x83
+38;desgl., jedoch DN 32.;1,0;St;gaeb;3927882.x83
+39;desgl., jedoch DN 40.;2,0;St;gaeb;3927882.x83
+40;desgl., jedoch DN 50.;1,0;St;gaeb;3927882.x83
+41;desgl., jedoch DN 65.;1,0;St;gaeb;3927882.x83
+42;Herstellen einer Entlüftungsbohrung mit 2 mm Durchmesser in vorgenannte Rückschlagklappe zur Ableitung von Luftblasen in das weiterführende System, zur Verhinderung von Schäden an der Pumpe,;7,0;St;gaeb;3927882.x83
+43;Schlammabscheider mit variablen Anschluss und leistungssteigernde magnetische Unterstützung durch abnehmbarem, externen Magnet. Schlammabscheider mit externem Magnet zur schnellen und kontinuierlichen Entfernung ferromagnetischer und nicht magnetischer Schmutz-und Schlammpartikeln aus Heiz- oder Küh;1,0;St;gaeb;3927882.x83
+44;desgl., jedoch mit folgenden technischen Daten:;2,0;St;gaeb;3927882.x83
+45;desgl., jedoch mit folgenden technischen Daten:;1,0;St;gaeb;3927882.x83
+46;desgl., jedoch mit folgenden technischen Daten:;3,0;St;gaeb;3927882.x83
+47;desgl., jedoch mit folgenden technischen Daten:;2,0;St;gaeb;3927882.x83
+48;Schmutz- und Schlammabscheider für Heiz- und Kühlwassersysteme bzw.;1,0;St;gaeb;3927882.x83
+49;Hochenergie-Dauermagnet zum optionalen bzw. nachträglichen Einbau in;1,0;St;gaeb;3927882.x83
+50;Wärmedämmung  für vorgenannten Schmutz- und Schlammabscheider,;1,0;St;gaeb;3927882.x83
+51;"Lufttopf PN 6, Inhalt 1 Liter, aus schwarzem Stahlrohr, mit gewölbten Böden und Schweißanschlüssen, einschl. Muffe bzw. Rohrstutzen R 1/2"",";4,0;St;gaeb;3927882.x83
+52;desgl., jedoch mit ca. 3 Liter,;6,0;St;gaeb;3927882.x83
+53;desgl., jedoch mit ca. 5 Liter,;2,0;St;gaeb;3927882.x83
+54;desgl., jedoch mit ca. 10 Liter,;2,0;St;gaeb;3927882.x83
+55;Heizungskugelhahn aus Rotguss, DN 15, PN 10, mit 100% Durchgang,;12,0;St;gaeb;3927882.x83
+56;"desgl., jedoch DN 20 (R 3/4"").";38,0;St;gaeb;3927882.x83
+57;"desgl., jedoch DN 25 (R 1"").";22,0;St;gaeb;3927882.x83
+58;"desgl., jedoch DN 32 (R 1 1/4"").";8,0;St;gaeb;3927882.x83
+59;"desgl., jedoch DN 40 (R 1 1/2"").";6,0;St;gaeb;3927882.x83
+60;"desgl., jedoch DN 50 (R 2"").";2,0;St;gaeb;3927882.x83
+61;Thermometer als Zubehör zu oben genannten Heizungskugelhahn, nachrüstbar durch einfaches Austauschen der roten Verschlusskappe im Bedienungshebel,;12,0;St;gaeb;3927882.x83
+62;Strangregulierventil DN 15 mit Muffengewinde nach DIN EN 10226, einsetzbar von -20°C bis 150°C, Schrägsitzausführung mit gesicherter, jederzeit kontrollierbarer und stufenloser Feinstvoreinstellung, Ablesbarkeit der Voreinstellung in Abhängigkeit von der Handradstellung, Ventilgehäuse und Kopfstück ;21,0;St;gaeb;3927882.x83
+63;"desgl., jedoch DN 20 (R 3/4""), Kvs-Wert = ca. 5,71 m³/h,";9,0;St;gaeb;3927882.x83
+64;"desgl., jedoch DN 25 (R 1""), Kvs-Wert = ca. 8,89 m³/h,";4,0;St;gaeb;3927882.x83
+65;"desgl., jedoch DN 32 (R 1 1/4""), Kvs-Wert = ca. 19,45 m³/h,";2,0;St;gaeb;3927882.x83
+66;"desgl., jedoch DN 40 (R 1 1/2""), Kvs-Wert = ca. 27,51 m³/h,";1,0;St;gaeb;3927882.x83
+67;Voreinstellung am Strangregulierventil für den hydraulischen Abgleich in der Heizungsanlage nach VOB, gemäß Vorgabe der Bauleitung vornehmen, Verstellung am Handrad gemäß Herstelleranleitung mit Pombierung mittels Blockierstift,;37,0;St;gaeb;3927882.x83
+68;Strangabsperrventil DN 15 mit Muffengewinde nach DIN EN 10226, einsetzbar von -20°C bis 150°C, Schrägsitzausführung, Ventilgehäuse und Kopfstück aus Rotguss, Kegel und Spindel aus entzinkungsbeständigem Messing, Kegel mit Weichdichtung aus PTFE, wartungsfreie Spindelabdichtung durch doppelten O-Ring;21,0;St;gaeb;3927882.x83
+69;"desgl., jedoch DN 20 (R 3/4""), einschl. Verschraubungen und Isolierung bis 80°C, mit 1 F+E-Kugelhahn G 1/4"",";9,0;St;gaeb;3927882.x83
+70;"desgl., jedoch DN 25 (R 1""), einschl. Verschraubungen und Isolierung bis 80°C, mit 1 F+E-Kugelhahn G 1/4"",";4,0;St;gaeb;3927882.x83
+71;"desgl., jedoch DN 32 (R 1 1/4""), einschl. Verschraubungen und Isolierung bis 80°C, mit 1 F+E-Kugelhahn G 1/4"",";2,0;St;gaeb;3927882.x83
+72;"desgl., jedoch DN 40 (R 1 1/2""), einschl. Verschraubungen und Isolierung bis 80°C, mit 1 F+E-Kugelhahn G 1/4"",";1,0;St;gaeb;3927882.x83
+73;Abgleichventil DN 15 mit Muffengewinde, Gehäuse aus Messing, mit wärme-;4,0;St;gaeb;3927882.x83
+74;desgl., jedoch in folgender Ausführung:;2,0;St;gaeb;3927882.x83
+75;Bypass-Abgleichventil DN 15 mit Muffengewinde, Gehäuse aus Messing,;7,0;St;gaeb;3927882.x83
+76;desgl., jedoch in folgender Ausführung:;3,0;St;gaeb;3927882.x83
+77;desgl., jedoch in folgender Ausführung:;2,0;St;gaeb;3927882.x83
+78;"Standard-Manometer R 1/2"", als Betriebsdruckmessgerät für geschlossene Heizungsanlagen, mit rotem Markenzeiger und grüner Fahne. Gehäuse aus Kunststoff; Sichtscheibe aus glasklarem Kunststoffglas; Ziffernblatt aus Aluminium; weiß, schwarzer Skala, Zeiger aus schwarzem Kunststoff; Segmentwerk aus CUZ";12,0;St;gaeb;3927882.x83
+79;Dreiwege-Manometerhahn aus Messing, geeignet für Heizwasser bis 120°C,;12,0;St;gaeb;3927882.x83
+80;Wassersackrohr in U-Form, DN 15 AG,;12,0;St;gaeb;3927882.x83
+81;"Bimetall-Zeigerthermometer als Temperaturmessgerät, schwere solide Ausführung, für geschlossene Heizungsanlagen, Gehäuse aus verzinktem Stahl, Überring vernickelt, Sichtscheibe aus Acrylglas, Ziffernblatt aus Aluminium; weiß, Beschriftung schwarz, Zeiger aus schwarzem Aluminium, Anschluss rückseitig";16,0;St;gaeb;3927882.x83
+82;Tauchhülse aus Messing, für die Aufnahme von Fühlern, Messinstrumenten, etc, Tauchrohr-Innendurchmesser 6 - 7 mm gemäß Erfordernis, mit Außen-;4,0;St;gaeb;3927882.x83
+83;desgl. wie zuvor beschrieben, jedoch in folgender Ausführung:;4,0;St;gaeb;3927882.x83
+84;desgl. wie zuvor beschrieben, jedoch in folgender Ausführung:;2,0;St;gaeb;3927882.x83
+85;desgl. wie zuvor beschrieben, jedoch in folgender Ausführung:;2,0;St;gaeb;3927882.x83
+86;Rücklauftemperaturbegrenzer DN 15 mit Muffengewinde nach DIN EN 10226,;2,0;St;gaeb;3927882.x83
+87;Automatischer Schwimmerentlüfter DN 10, mit Absperrung, aus Messing,;2,0;St;gaeb;3927882.x83
+88;Verbindungsrohre aus Edelstahlwellrohr DN 15, in Grundlänge geliefert,;4,0;St;gaeb;3927882.x83
+89;Verbindungsrohre aus Edelstahlwellrohr DN 15, in Grundlänge geliefert,;4,0;St;gaeb;3927882.x83
+90;Verbindungsrohre aus Edelstahlwellrohr DN 20, in Grundlänge geliefert,;2,0;St;gaeb;3927882.x83
+91;Verbindungsrohre aus Edelstahlwellrohr DN 20, in Grundlänge geliefert,;2,0;St;gaeb;3927882.x83
+92;Füll- und Entleerhahn (KFE) aus Messing vernickelt, solide selbstdichtende;18,0;St;gaeb;3927882.x83
+93;"desgl., jedoch DN 20 (R 3/4"").";2,0;St;gaeb;3927882.x83
+94;Mehrpreis als Aufpreis für die vorgenannte Armaturen DN 15 bis DN 40;10,0;St;gaeb;3927882.x83
+95;Mehrpreis als Aufpreis für die vorgenannte Armaturen DN 50 bis DN 65;4,0;St;gaeb;3927882.x83
+96;Schwerer, flexibler Gewebeschlauch für heißes Wasser, temperaturbeständig;8,0;m;gaeb;3927882.x83
+97;Schwere massive Schlauchschelle, aus speziellem Werkzeugstahl oder Edel-;6,0;St;gaeb;3927882.x83
+98;Schwerer flexibler Gewebeschlauch für heißes Wasser, temperaturbeständig;4,0;m;gaeb;3927882.x83
+99;Schwere massive Schlauchschelle, aus speziellem Werkzeugstahl oder Edel-;4,0;St;gaeb;3927882.x83
+100;Schnellschlusskupplung mit Klauen (GEKA-System), aus Messing gefertigt,;4,0;St;gaeb;3927882.x83
+101;"desgl., jedoch DN 20 (R 3/4"").";4,0;St;gaeb;3927882.x83
+102;"desgl., jedoch DN 25 (R 1"").";2,0;St;gaeb;3927882.x83
+103;"desgl., jedoch DN 32 (R 1 1/4"").";1,0;St;gaeb;3927882.x83
+104;"desgl., jedoch DN 40 (R 1 1/2"").";1,0;St;gaeb;3927882.x83
+1;Membrandruckausdehnungsgefäß für geschlossene Heizungsanlagen, gebaut nach DIN EN 13831, Zulassung gemäß EU-Richtlinie 2014/68/EG, außen mit;2,0;St;gaeb;3927882.x83
+2;Kappenventil für Membrandruckausdehnungsgefäße in geschlossenen Heizungs- und Kühlwasseranlagen, mit einer gegen unbeabsichtigtes Schließen gesicherten Absperrung und einer Entleerung, gemäß DIN EN12828 TÜV-geprüft,;2,0;St;gaeb;3927882.x83
+3;Automatischer Schnell-/Großentlüfter für Heiz- und Kühlwassersysteme bzw. geschlossene, flüssigkeitsgefüllte Systemkreisläufe.;2,0;St;gaeb;3927882.x83
+4;Membran-Sicherheitsventil, für geschlossene Heizungs- und Kühlwasser-Anlagen entsprechend DIN 4751, Gehäuse aus Pressmessing/Rotguss Rg 5, Metallkappe, bauteilgeprüft, Kennbuchstabe H gemäß TRD 721,;2,0;St;gaeb;3927882.x83
+5;Pumpengesteuerte Druckhaltung mit Steuerungsmodul für Druck halten,;1,0;St;gaeb;3927882.x83
+6;Grundgefäß für als Membran-Ausdehnungsgefäß für vorgenannte ein- oder;1,0;St;gaeb;3927882.x83
+7;"Werkseitige Wärmedämmung für vorgenanntes VG-Grundgefäß 200 Liter;";1,0;St;gaeb;3927882.x83
+8;"Anschluss-Set  für Grundgefäße; zum Anschluss von der vorgenannten";1,0;St;gaeb;3927882.x83
+9;Motorkugelhahn als Umrüstsatz zur Wassernachspeisung in Verbindung mit;1,0;St;gaeb;3927882.x83
+10;Membranbruchmelder als Zubehör zu vorgenannten Druckhalte-Membran-;1,0;St;gaeb;3927882.x83
+11;Membrandruckausdehnungsgefäß für geschlossene Heizungsanlagen, gebaut nach DIN EN 13831, Zulassung gemäß EU-Richtlinie 2014/68/EG, außen mit;1,0;St;gaeb;3927882.x83
+12;Kappenventil für Membrandruckausdehnungsgefäße in geschlossenen Heizungs- und Kühlwasseranlagen, mit einer gegen unbeabsichtigtes Schließen gesicherten Absperrung und einer Entleerung, gemäß DIN EN12828 TÜV-geprüft,;1,0;St;gaeb;3927882.x83
+13;Nachspeise-Armatur zur direkten Verbindung von Nachspeiseeinrichtungen für Heiz- und Kühlwassersysteme mit Trinkwassernetzen, inkl. Impulsausgang.;1,0;St;gaeb;3927882.x83
+14;Kompakte Basisarmatur zur Aufbereitung von Füll- und Ergänzungswasser;1,0;St;gaeb;3927882.x83
+15;Mischbettharzpatrone zur Füll- und Ergänzungswasserentsalzung passend;4,0;St;gaeb;3927882.x83
+16;Kunststoffschlüssel in stabiler Ausführung als Zubehör zu vorgenannter;1,0;St;gaeb;3927882.x83
+17;Elektronischer Wasserzähler zur Überwachung von Enthärtungs- und;1,0;St;gaeb;3927882.x83
+18;Inbetriebnahme der oben beschriebenen, komplett vormontierten und einsatz-;1,0;St;gaeb;3927882.x83
+19;Separate Nach-Einweisung des Bedienungspersonals bzw. des Bauherren in die komplette Druckhalteanlage zu einem späteren Zeitpunkt durch den Werks- kundendienst des Hersteller bzw. durch den Kundendienst des Auftragnehmers, unter Erstellung eines Einweisungsprotokolls,;1,0;psch;gaeb;3927882.x83
+1;Erstbefüllung der Heizungsanlage in Teilabschnitten mit aufbereiteten, salzarmen Wasser gemäß den Richtlinien der VDI 2035, zur Vollentsalzung von klarem, praktisch eisen- und manganfreien Wasser, mittels mobiler Wasseraufbereitungsanlage.;6000,0;l;gaeb;3927882.x83
+2;Erste Messung des ph-Wertes nach Erstbefüllung Inbetriebnahme der Heizungsanlage, geforderter ph-Wert > 8,2 .....10,5 °dH (Achtung bei Aluminiumwerkstoffen > 8,2 bis < 8,5 °dH), einschl. Dokumentation der Werte in einem Anlagenbuch gemäß VDI 2035 Bl. 1 und 2.;1,0;St;gaeb;3927882.x83
+3;Herstellen der ph-Wert-Korrektur mittels Dosiermittel zur ph-Wertanhebung;1,0;St;gaeb;3927882.x83
+4;Nachkontrolle des ph-Wertes, Messen und eventuell weitere Korrektur mittels Dosiermittel zur ph-Wertanhebung oder ph-Wert-Senkung, in einem Zeitraum von ca. 30-36  Wochen nach Inbetriebnahme der Heizungsanlage, geforderter ph-Wert > 8,2 .....10,5 °dH (Achtung bei Aluminiumwerkstoffen < 8,5 °dH), ein;1,0;St;gaeb;3927882.x83
+5;Dosiermittel zur ph-Wert-Anhebung auf der Basis von Natriumphosphatlösung;60,0;l;gaeb;3927882.x83
+6;Dosiermittel als Korrosionsinhibitor, geeignet für geschlossene Heizungsanlagen, welche Aluminium, Stahl und kupferhaltige Werkstoffe enthalten.;30,0;l;gaeb;3927882.x83
+7;Füllpumpe für Heizungsinhibitoren wie vorgenanntes Dosiermittel zur ph-Wert-;1,0;St;gaeb;3927882.x83
+8;"Durchführung einer chemischen Wasseranalyse gemäß VDI 2035; Blatt 1 + 2, durch entsprechende Wasserentnahmeproben vor Ort durch eine staatlich zugelassene Prüfstelle für Heizungswasser in Heizungswasseranlagen gemäß DIN EN 12828.";1,0;St;gaeb;3927882.x83
+9;Wasseranalyse wie zuvor beschrieben, jedoch als wiederholende Wasserprobe-Entnahme nach erfolgter Wasserbehandlung mit Korrektur und Ergänzung des Anlageninhaltes der Heizungsanlage.;1,0;St;gaeb;3927882.x83
+10;Erstellung eines Anlagenbetriebs-Tagebuch in einem A4-Ordner in Anlehnung an die VDI 2035,;1,0;St;gaeb;3927882.x83
+11;Frostschutzmittel als Wärmeträger für Kühl- und Heizsysteme, schützt zuver-;20,0;kg;gaeb;3927882.x83
+12;Frostschutzprüfer für vorgenanntes Frostschutzmittel auf der Basis von Ethylen-;1,0;St;gaeb;3927882.x83
+13;Probeentnahmekühler zur Kühlung von Heißwasserproben, bestehend aus:;1,0;St;gaeb;3927882.x83
+14;Analysekoffer für Warmwasserheizungen mit Messgeräten im Kunststoffkoffer;1,0;St;gaeb;3927882.x83
+1;Deckenheizelement wie zuvor beschrieben,;6,0;St;gaeb;3927882.x83
+2;Digitaler Unterputz-Raumthermostat als eigenständiger Regler oder mittels;2,0;St;gaeb;3927882.x83
+3;Digitales Steuergerät für die Steuerung mehrerer Heizelemente sowie die;1,0;St;gaeb;3927882.x83
+4;Lastrelais 16 A für die Montage als Teileinheit auf einer Tragschiene, mit Leuchtdiode zur Ansteuerungsanzeige,;1,0;St;gaeb;3927882.x83
+1;Anschlussverteiler für Flächenheizung und -kühlung, aus hochwertigem;16,0;St;gaeb;3927882.x83
+2;Heizkreisverteiler wie zuvor beschrieben,;4,0;St;gaeb;3927882.x83
+3;Heizkreisverteiler wie zuvor beschrieben,;14,0;St;gaeb;3927882.x83
+4;Heizkreisverteiler wie zuvor beschrieben,;3,0;St;gaeb;3927882.x83
+5;Heizkreisverteiler wie zuvor beschrieben,;3,0;St;gaeb;3927882.x83
+6;Heizkreisverteiler wie zuvor beschrieben,;2,0;St;gaeb;3927882.x83
+7;Heizkreisverteiler wie zuvor beschrieben,;3,0;St;gaeb;3927882.x83
+8;Heizkreisverteiler wie zuvor beschrieben,;1,0;St;gaeb;3927882.x83
+9;Anschlussgarnitur für vorgenannten Flächenheizungs-Heizkreisverteiler,;46,0;St;gaeb;3927882.x83
+10;"Klemmringverschraubung d 20 mm; dreiteilig, bestehend aus Überwurfmutter,";264,0;St;gaeb;3927882.x83
+11;"Klemmringverschraubung d 16 mm; dreiteilig, bestehend aus Überwurfmutter,";48,0;St;gaeb;3927882.x83
+12;Kombiventil als druckunabhängiges, dynamisches Regel-, Abgleich- und;2,0;St;gaeb;3927882.x83
+13;Kombiventil als druckunabhängiges, dynamisches Regel-, Abgleich- und;2,0;St;gaeb;3927882.x83
+14;Kombiventil als druckunabhängiges, dynamisches Regel-, Abgleich- und;20,0;St;gaeb;3927882.x83
+15;Kombiventil als druckunabhängiges, dynamisches Regel-, Abgleich- und;20,0;St;gaeb;3927882.x83
+16;Kombiventil als druckunabhängiges, dynamisches Regel-, Abgleich- und;24,0;St;gaeb;3927882.x83
+17;Kombiventil als druckunabhängiges, dynamisches Regel-, Abgleich- und;3,0;St;gaeb;3927882.x83
+18;Kombiventil als druckunabhängiges, dynamisches Regel-, Abgleich- und;3,0;St;gaeb;3927882.x83
+19;Zulage für vorgenanntes Kombiventil für eine zusätzliche Ausstattung mit;49,0;St;gaeb;3927882.x83
+20;Zulage für vorgenanntes Kombiventil für eine zusätzliche Ausstattung mit;49,0;St;gaeb;3927882.x83
+21;Elektromotorischer Stellantrieb für druckunabhängige Kombiventile,;49,0;St;gaeb;3927882.x83
+22;Anschluss von Edelstahl-Rohrleitungen DN 25 an den vorgenannten Heizkreis-;46,0;St;gaeb;3927882.x83
+23;Spülen, Befüllen und Entlüften der Heiz- und Kühldecken, unter Verwendung;43,0;St;gaeb;3927882.x83
+24;Spülen, Befüllen und Entlüften der Heiz- und Kühldecken, unter Verwendung;1,0;St;gaeb;3927882.x83
+25;Druckprüfung von Rohrleitungen im vorgenannten Heiz-/ und Kühldeckensystem unter Verwendung von Druckluft, während des gesamten Baufortschritts. Die Druckproben ist in mehreren Teilabschnitten raumweise bzw. gemäß der Absperrgruppen auszuführen.;43,0;St;gaeb;3927882.x83
+26;Druckprüfung von Rohrleitungen im vorgenannten Heiz-/ und Kühldeckensystem unter Verwendung von Druckluft, während des gesamten Baufortschritts. Die Druckproben ist in mehreren Teilabschnitten raumweise bzw. gemäß der Absperrgruppen auszuführen.;1,0;St;gaeb;3927882.x83
+1;Absperrgruppe mit Entleerung als Leistungsgrenze zum Folgegewerk,;13,0;St;gaeb;3927882.x83
+2;Absperrgruppe mit Entleerung als Leistungsgrenze zum Folgegewerk,;1,0;St;gaeb;3927882.x83
+3;Absperrgruppe mit Entleerung als Leistungsgrenze zum Folgegewerk,;1,0;St;gaeb;3927882.x83
+4;Absperrgruppe mit Entleerung als Leistungsgrenze zum Folgegewerk,;1,0;St;gaeb;3927882.x83
+5;"Bauseits gestelltes Motor-Regelventil DN 15; G1/2""-Muffenanschluss,";13,0;St;gaeb;3927882.x83
+6;Anschluss von Rohrleitungen aus Edelstahlrohr und vormontierte Absperr-;26,0;St;gaeb;3927882.x83
+7;Anschluss von Rohrleitungen aus Edelstahlrohr und vormontierte Absperr-;2,0;St;gaeb;3927882.x83
+8;Anschluss von Rohrleitungen aus Edelstahlrohr und vormontierte Absperr-;2,0;St;gaeb;3927882.x83
+9;Anschluss von Rohrleitungen aus Edelstahlrohr und vormontierte Absperr-;2,0;St;gaeb;3927882.x83
+1;Montageträger als modulares System für Rohrmontage, Kabelpritschen;6,0;m;gaeb;3927882.x83
+2;Montageträger mit Einlegenut, als modulares System für Rohrmontage,;6,0;m;gaeb;3927882.x83
+3;Montageträger als modulares System für Rohrmontage, Kabelpritschen;3,0;m;gaeb;3927882.x83
+4;Verbindungs- und Zubehörteil für vorgenanntes schweres, modulares System;8,0;St;gaeb;3927882.x83
+5;Verbindungs- und Zubehörteil für vorgenanntes schweres, modulares System;6,0;St;gaeb;3927882.x83
+6;Verbindungs- und Zubehörteil für vorgenanntes schweres, modulares System;4,0;St;gaeb;3927882.x83
+7;Verbindungs- und Zubehörteil für vorgenanntes schweres, modulares System;22,0;St;gaeb;3927882.x83
+8;Verbindungs- und Zubehörteil für vorgenanntes schweres, modulares System;12,0;St;gaeb;3927882.x83
+9;Verbindungs- und Zubehörteil für vorgenanntes schweres, modulares System;18,0;St;gaeb;3927882.x83
+10;Verbindungs- und Zubehörteil für vorgenanntes schweres, modulares System;6,0;St;gaeb;3927882.x83
+11;Verbindungs- und Zubehörteil für vorgenanntes schweres, modulares System;4,0;St;gaeb;3927882.x83
+12;Verbindungs- und Zubehörteil für vorgenanntes schweres, modulares System;2,0;St;gaeb;3927882.x83
+13;Verbindungs- und Zubehörteil für vorgenanntes schweres, modulares System;4,0;St;gaeb;3927882.x83
+14;Verbindungs- und Zubehörteil für vorgenanntes schweres, modulares System;160,0;St;gaeb;3927882.x83
+15;Verbindungs- und Zubehörteil für vorgenanntes schweres, modulares System;60,0;St;gaeb;3927882.x83
+16;Verbindungs- und Zubehörteil für vorgenanntes schweres, modulares System;30,0;St;gaeb;3927882.x83
+17;Verbindungs- und Zubehörteil für vorgenanntes schweres, modulares System;25,0;St;gaeb;3927882.x83
+18;Verbindungs- und Zubehörteil für vorgenanntes schweres, modulares System;15,0;St;gaeb;3927882.x83
+19;Montageschiene mit Brandschutzprüfung, einfach gelocht, Material S 250 GD nach DIN EN 10147, sendzimierverzinkt , als verzahntes C-Profil, empfohlen für;8,0;m;gaeb;3927882.x83
+20;Montageschiene mit Brandschutzprüfung, einfach gelocht, Material S 250 GD nach DIN EN 10147, sendzimierverzinkt , als verzahntes C-Profil, empfohlen für;12,0;m;gaeb;3927882.x83
+21;Schienenendkappe zum Abdecken scharfer Schnittkanten, aus Polypropylen;6,0;St;gaeb;3927882.x83
+22;Schalldämmprofil für vorgenannte Montageschiene 41,3 mm, in Schienschlitz eingelegt als Dämmung. Einsatzmöglichkeit für M8- und M10-Gewindestangen mittels Durchgangsbohrungen sowie für Lüftungskanäle, welche großflächig aufliegen und so Körperschall und Vibrationen vermindern. Aus EDPM gefertigt.;8,0;m;gaeb;3927882.x83
+23;Konsole mit Brandschutzzulassung, verzahntes C-Profil, Montagehilfe durch Rastermaß, Material aus S 250 GD nach DIN EN 10326 sowie S235JR nach;2,0;St;gaeb;3927882.x83
+24;Konsole mit Brandschutzzulassung, verzahntes C-Profil, Montagehilfe durch Rastermaß, Material aus S 250 GD nach DIN EN 10326 sowie S235JR nach;4,0;St;gaeb;3927882.x83
+25;Konsole mit Brandschutzzulassung, verzahntes C-Profil, Montagehilfe durch Rastermaß, Material aus S 250 GD nach DIN EN 10326 sowie S235JR nach;2,0;St;gaeb;3927882.x83
+26;Winkel-Konsole mit Brandschutzzulassung, verzahntes C-Profil, Montagehilfe durch Rastermaß, Material aus S 250 GD nach DIN EN 10326 sowie S235JR nach DIN EN 10025, galvanisch verzinkt, eigenständige Verwendung an Decke, Wand und Boden oder in Kombination mit Schienensystem, zur Montage von;4,0;St;gaeb;3927882.x83
+27;Winkel-Konsole mit Brandschutzzulassung, verzahntes C-Profil, Montagehilfe durch Rastermaß, Material aus S 250 GD nach DIN EN 10326 sowie S235JR nach DIN EN 10025, galvanisch verzinkt, eigenständige Verwendung an Decke, Wand und Boden oder in Kombination mit Schienensystem, zur Montage von;4,0;St;gaeb;3927882.x83
+28;Verbindungsknopf mit Brandschutzprüfung, als einteiliges Bauteil zur Verbindung von Schienen und Konstruktionselementen, bestehend aus Bolzen,;22,0;St;gaeb;3927882.x83
+29;Lochplatte mit Brandschutzzulassung zur Anbindung von metrischen Gewinde-;6,0;St;gaeb;3927882.x83
+30;Lochplatte mit Brandschutzzulassung zur Anbindung von metrischen Gewinde-;4,0;St;gaeb;3927882.x83
+31;Lochplatte mit Brandschutzzulassung zur Anbindung von metrischen Gewinde-;2,0;St;gaeb;3927882.x83
+32;Schellenanbindung mit Brandschutzprüfung, für Rohrmontage, bestehend aus;8,0;St;gaeb;3927882.x83
+33;Schellenanbindung mit Brandschutzprüfung, für Rohrmontage, bestehend aus;4,0;St;gaeb;3927882.x83
+34;Schellenanbindung mit Brandschutzprüfung, für Rohrmontage, bestehend aus;2,0;St;gaeb;3927882.x83
+35;Schienenfuß mit Brandschutzzulassung, für sichere und einfache Anwendung,;4,0;St;gaeb;3927882.x83
+36;Festpunktschelle hochbelastbar, zweiteilig, verzinkt, in Verbindung mit Systemkonsole der ideale Rohrleitungsfestpunkt herstellbar.;2,0;St;gaeb;3927882.x83
+37;desgl. jedoch mit folgenden technischen Daten:;2,0;St;gaeb;3927882.x83
+38;desgl. jedoch mit folgenden technischen Daten:;2,0;St;gaeb;3927882.x83
+39;Konsolen-Bausatz als hochbelastbares, stabiles Trägersystem für Rohrinstallationen, in Verbindung mit vorgenannter Festpunktschelle ist der ideale Rohrleitungsfestpunkt herstellbar. Geeignet als verstellbare Unterkonstruktion für Fest-;6,0;St;gaeb;3927882.x83
+40;Rohrleitungsfestpunkt als Doppelbausatz in verzinkter Ausführung, geeignet für;2,0;St;gaeb;3927882.x83
+41;desgl. jedoch mit folgenden technischen Daten:;2,0;St;gaeb;3927882.x83
+42;desgl. jedoch mit folgenden technischen Daten:;2,0;St;gaeb;3927882.x83
+43;Komplettes Festpunkt-Abspannsystem, bestehend aus verzinkten Festpunktschellen, Abspannset 45 Grad und Stützset. Zum Abspannen von Festpunkten bei unterschiedlichen Abständen zum Baukörper bei kalt- und warmgehenden;2,0;St;gaeb;3927882.x83
+44;desgl. jedoch mit folgenden technischen Daten:;2,0;St;gaeb;3927882.x83
+45;desgl. jedoch mit folgenden technischen Daten:;2,0;St;gaeb;3927882.x83
+46;desgl. jedoch mit folgenden technischen Daten:;4,0;St;gaeb;3927882.x83
+47;Gleitschlitten zur Befestigung von Rohrleitungen mit temperaturbedingten;6,0;St;gaeb;3927882.x83
+48;Gleitschlitten zur Befestigung von Rohrleitungen mit temperaturbedingten;10,0;St;gaeb;3927882.x83
+49;Kompaktdübel aus Edelstahl für Mehrfach- bzw. Einzelbefestigungen,;24,0;St;gaeb;3927882.x83
+50;Kompaktdübel aus Edelstahl für Mehrfach- bzw. Einzelbefestigungen,;12,0;St;gaeb;3927882.x83
+51;Bolzenanker aus Edelstahl für Mehrfach- bzw. Einzelbefestigungen,;14,0;St;gaeb;3927882.x83
+52;Bolzenanker aus Edelstahl für Mehrfach- bzw. Einzelbefestigungen,;8,0;St;gaeb;3927882.x83
+53;Injektionsankerstange mit Brandschutzzulassung, aus galvanisch verzinkten Stahl gefertigt, geeignet für Beton, Vollsteinmauerwerk, Lochsteinmauerwerk, Kalksand- und Naturstein, beinhaltet Mutter und Unterlegscheibe,;2,0;St;gaeb;3927882.x83
+54;Injektionsankerstange mit Brandschutzzulassung, aus galvanisch verzinkten Stahl gefertigt, geeignet für Beton, Vollsteinmauerwerk, Lochsteinmauerwerk, Kalksand- und Naturstein, beinhaltet Mutter und Unterlegscheibe,;4,0;St;gaeb;3927882.x83
+55;Injektionsankerstange mit Brandschutzzulassung, aus galvanisch verzinkten Stahl gefertigt, geeignet für Beton, Vollsteinmauerwerk, Lochsteinmauerwerk, Kalksand- und Naturstein, beinhaltet Mutter und Unterlegscheibe,;6,0;St;gaeb;3927882.x83
+56;Injektionsankerstange mit Brandschutzzulassung, aus galvanisch verzinkten Stahl gefertigt, geeignet für Beton, Vollsteinmauerwerk, Lochsteinmauerwerk, Kalksand- und Naturstein, beinhaltet Mutter und Unterlegscheibe,;4,0;St;gaeb;3927882.x83
+57;Konstruktionseisen in Form von Montageschienen, -winkeln, Schienenhalter und -abdeckungen, Höhenregulierstücke, Knotenbleche, Klemmeinheiten, Hammerkopfschrauben, Schienenkupplungen, etc.;50,0;kg;gaeb;3927882.x83
+58;Konstruktionseisen in Form von Ausleger-, Winkel-, Klemm- und Stützkonsolen, Wand- und Deckenhalter mit Grundplatte, Stützstreben, schwere Stützelemente, Schienenteleskope, Spannbügel, etc.;45,0;kg;gaeb;3927882.x83
+59;Konstruktionseisen in Form von Montageschienen, -winkeln, Schienenhalter und -abdeckungen, Höhenregulierstücke, Knotenbleche, Klemmeinheiten, Hammerkopfschrauben, Schienenkupplungen, etc.;30,0;kg;gaeb;3927882.x83
+60;Konstruktionseisen in Form von Ausleger-, Winkel-, Klemm- und Stützkonsolen, Wand- und Deckenhalter mit Grundplatte, Stützstreben, schwere Stützelemente, Schienenteleskope, Spannbügel, etc.;20,0;kg;gaeb;3927882.x83
+61;Schienendämmprofil für Montageschienen, aus EPDM-Gummi, schwarz,;30,0;m;gaeb;3927882.x83
+62;Schienenendkappe passend für verwendete Montageschienen, zum Abdecken scharfer Schnittkanten aus Polypropylen, als Zulage.;50,0;St;gaeb;3927882.x83
+63;Konstruktionseisen in Form von verschweißten Stahlprofilen, für brauchbare Verstrebungen, Sonderaufhängungen, Verstärkungen, Festpunkte, Haltekonstruktionen, einschl. Schrauben, Dübel und Unterlegscheiben, einschl. Erstellen der Dübellöcher, Schrauben und Unterlegscheiben in verzinkter Ausführung, f;20,0;kg;gaeb;3927882.x83
+64;"Montagesystem für Installationen von Klimageräten; Solarmodulen, Laufwegen, Lüftungsleitungen, Kabeltrassen etc. auf flachen und leicht geneigten Dächern.";4,0;St;gaeb;3927882.x83
+65;desgl., jedoch in folgender Ausführung:;4,0;St;gaeb;3927882.x83
+66;Gewichtsblock als Systembestandteil zu vorgenannten Montagesystem,;8,0;St;gaeb;3927882.x83
+67;Montagesystem zur Aufständerung von Rohrleitungs- und Kabeltrassen, zur;2,0;St;gaeb;3927882.x83
+68;desgl., jedoch in folgender Ausführung:;4,0;St;gaeb;3927882.x83
+69;desgl., jedoch in folgender Ausführung:;8,0;St;gaeb;3927882.x83
+70;Elastische Gummiunterlage zur körperschallisolierten Aufstellung von Geräten;6,0;m;gaeb;3927882.x83
+71;desgl. wie zuvor beschrieben, jedoch mit folgenden technischen Daten:;8,0;m;gaeb;3927882.x83
+72;Elastische Gummiunterlage zur körperschallisollierten Aufstellung von Geräten;4,0;m;gaeb;3927882.x83
+73;desgl. wie zuvor beschrieben, jedoch mit folgenden technischen Daten:;4,0;m;gaeb;3927882.x83
+74;Set Schalldämmsockel bestehend aus Gummieinlage aus ölbeständigen Synthesekautschuk mit Trägerplatte aus Aluminium. Ideal für Körperschallentkopplung bei Heizkesseln, Klima- und Lüftungsgeräten. Dämmt die Übertragung von Körperschall zum Untergrund, mit eingelegtem hochelastischen Gummi, absorbiert ;2,0;St;gaeb;3927882.x83
+75;Set Schalldämmsockel bestehend aus Gummieinlage aus ölbeständigen Synthesekautschuk mit Trägerplatte aus Aluminium. Ideal für Körperschallentkopplung;2,0;St;gaeb;3927882.x83
+76;Set Schalldämmsockel bestehend aus Gummieinlage aus ölbeständigen Synthesekautschuk mit Trägerplatte aus Aluminium. Ideal für Körperschallentkopplung bei Heizkesseln, Klima- und Lüftungsgeräten. Dämmt die Übertragung von Körperschall zum Untergrund, mit eingelegten hochelastischen Gummi, absorbiert ;2,0;St;gaeb;3927882.x83
+77;Schallschutz-Platte als effektiver Schutz vor Erschütterungen, Schwingungen;6,0;St;gaeb;3927882.x83
+78;Schallentkoppler aus verzinktem Stahl, für schallentkoppelte Rohrleitungsfest-;2,0;St;gaeb;3927882.x83
+79;Schallentkoppler aus verzinktem Stahl, für schallentkoppelte Rohrleitungsfest-;2,0;St;gaeb;3927882.x83
+80;Schwingungsdämpfer aus Naturkautschuk als Puffer mit zylindrischer Kontur;4,0;St;gaeb;3927882.x83
+81;Schwingungsdämpfer aus Naturkautschuk als Puffer mit zylindrischer Kontur;4,0;St;gaeb;3927882.x83
+82;"Schallschutzaufhänger aus verzinktem Stahlblech mit integrierten hochelastischen Federelement; Schallentkopplung im Aufhänger integriert, sehr gute Schallpegelverbesserung um bis zu 17 dB(A).";4,0;St;gaeb;3927882.x83
+83;"Schallschutzaufhänger aus verzinktem Stahlblech mit integrierten hochelastischen Federelement; Schallentkopplung im Aufhänger integriert, sehr gute Schallpegelverbesserung um bis zu 17 dB(A).";8,0;St;gaeb;3927882.x83
+84;Schalldämm-Knopf als leistungsfähige Punktbefestigung mit hervorragender;4,0;St;gaeb;3927882.x83
+85;Schalldämmelement mit verzinktem Stahlmantel, vielseitig einsetzbar, z.B. zur Befestigung von Rohrleitungen, Lüftungskanälen und Aggregaten, auch zur;4,0;St;gaeb;3927882.x83
+86;Holz-Mehrschichtverbundplatte für Befestigung von Gegenständen an Ständerwänden, Größe: ca. 600 x 250 x 30 mm,;6,0;St;gaeb;3927882.x83
+87;Injektionsanker für spreizdruckfreie Verankerung in Vollziegel, Kalksandstein,;8,0;St;gaeb;3927882.x83
+88;Rohrmanschette aus EPDM, für Verwendung im Innen- und Außenbereich,;2,0;St;gaeb;3927882.x83
+89;desgl. wie zuvor beschrieben, jedoch mit folgenden technischen Daten:;4,0;St;gaeb;3927882.x83
+90;desgl. wie zuvor beschrieben, jedoch mit folgenden technischen Daten:;2,0;St;gaeb;3927882.x83
+91;desgl. wie zuvor beschrieben, jedoch mit folgenden technischen Daten:;2,0;St;gaeb;3927882.x83
+92;desgl. wie zuvor beschrieben, jedoch mit folgenden technischen Daten:;2,0;St;gaeb;3927882.x83
+93;desgl. wie zuvor beschrieben, jedoch mit folgenden technischen Daten:;4,0;St;gaeb;3927882.x83
+94;desgl. wie zuvor beschrieben, jedoch mit folgenden technischen Daten:;2,0;St;gaeb;3927882.x83
+95;Selbstregelndes Heizband bestehend aus zwei parallelen, verzinnten Kupfer-;30,0;m;gaeb;3927882.x83
+96;Thermostat als Rohranlegefühler bzw. Umgebungsthermostat, für Tempera-;1,0;St;gaeb;3927882.x83
+97;Befestigungswinkel, als Zubehör zu vorgenanntem Thermostat,;1,0;St;gaeb;3927882.x83
+98;Anschlussgarnitur mit Stromanschluss,;1,0;St;gaeb;3927882.x83
+99;"Verbindungsgarnitur mit Stromanschluss, für zwei Bänder, mit 1,5 m Anschlussleitung 3 x 2,5 mm² und zwei Endabschlüssen, als Bestandteil des VDE-geprüften Schnellverbindungssystems, inkl. Haltebügel und Endabschlüssen, Schutzklasse IP 68; max. 20 A,";1,0;St;gaeb;3927882.x83
+100;Verbindungsgarnitur für zwei Bänder, als Bestandteil des VDE-geprüften Schnellverbindungssystems, inkl. Haltebügel Schutzklasse IP 68,;1,0;St;gaeb;3927882.x83
+101;Isolierungseinführung für Blechmantelisolierung, bestehend aus Befestigungs- blech, PG 16-Verschraubung, Schlitzdichtung, als Zubehör zu vorgenanntem Frostschutzband,;4,0;St;gaeb;3927882.x83
+102;Kennzeichnungsaufkleber, als Zubehör zu vorgenanntem Frostschutzband,;3,0;St;gaeb;3927882.x83
+103;Packung Kabelbinder (100 Stück), als Zubehör zu vorgenanntem selbst-;1,0;St;gaeb;3927882.x83
+104;Glasseideklebeband, als Zubehör zu vorgenanntem selbstregelndes Heizband, temperaturbeständig, für ca. 55 m Rohrleitung, geeignet für Kunststoff-, Metallverbund-, Edelstahl- und Glasrohre,;1,0;St;gaeb;3927882.x83
+105;Einführen, Auflegen und Abisolieren der bauseits verlegten Elektrokabel und Steuerleitungen für den gesamten Umfang des Frostschutzbandes, in Zusammenarbeit und Koordination mit der bauseitigen Elektroinstallationsfirma,;1,0;psch;gaeb;3927882.x83
+106;Bezeichnungsschild aus Kunststoff, mit weißer dreiteiliger Beschriftung auf;30,0;St;gaeb;3927882.x83
+107;Kunststoff-Gravur-Bezeichnungsschild aus 1 mm starkem Material, mit Text nach Angabe, mit schwarzer bzw. weißer Schrift auf weißem bzw. schwarzem Untergrund, mit Klebebefestigung,;15,0;St;gaeb;3927882.x83
+108;desgl., jedoch in Ausführung:;15,0;St;gaeb;3927882.x83
+109;Selbstklebende Richtungspfeile, zum Aufkleben auf die Rohrleitungs-;20,0;St;gaeb;3927882.x83
+1;An- und Abfahrt eines 40 t-Teleskop-Autokranes zur Baustelle an der;2,0;St;gaeb;3927882.x83
+2;Autokranstunden für einen vorgenannten 40 t-Teleskop-Autokran, für das;4,0;h;gaeb;3927882.x83
+3;An- und Abfahrt eines 60 t-Teleskop-Autokranes zur Baustelle an der;1,0;St;gaeb;3927882.x83
+4;Autokranstunden für einen vorgenannten 60 t-Teleskop-Autokran, für das;2,0;h;gaeb;3927882.x83
+5;Wochenmiete (7 Kalendertage) für die Bereitstellung eines Rollgerüstes,;2,0;St;gaeb;3927882.x83
+6;Wochenmiete (7 Kalendertage) für die Bereitstellung einer Scheren-Arbeits-;1,0;St;gaeb;3927882.x83
+7;Wochenmiete (7 Kalendertage) für die Bereitstellung eines Gelenkteleskop-;2,0;St;gaeb;3927882.x83
+8;Bohrloch 20 mm Durchmesser, bis zu 30 cm Bohrlänge,;3,0;St;gaeb;3927882.x83
+9;desgl., jedoch Bohrloch 60 mm,;5,0;St;gaeb;3927882.x83
+10;desgl., jedoch Bohrloch 80 mm,;4,0;St;gaeb;3927882.x83
+11;desgl., jedoch Bohrloch 100 mm,;2,0;St;gaeb;3927882.x83
+12;desgl., jedoch Bohrloch 130 mm,;4,0;St;gaeb;3927882.x83
+13;desgl., jedoch Bohrloch 150 mm,;2,0;St;gaeb;3927882.x83
+14;desgl., jedoch Bohrloch 180 mm,;3,0;St;gaeb;3927882.x83
+15;desgl., jedoch Bohrloch 200 mm,;2,0;St;gaeb;3927882.x83
+16;desgl., jedoch Bohrloch 220 mm,;2,0;St;gaeb;3927882.x83
+17;desgl., jedoch Bohrloch 250 mm,;1,0;St;gaeb;3927882.x83
+18;desgl., jedoch Bohrloch 300 mm,;1,0;St;gaeb;3927882.x83
+19;Zulage für Bohrloch 20 mm durch stahlbewehrte Betonwände und Decken,;1,0;St;gaeb;3927882.x83
+20;Zulage für Bohrloch 60 mm durch stahlbewehrte Betonwände und Decken,;2,0;St;gaeb;3927882.x83
+21;Zulage für Bohrloch 80 mm durch stahlbewehrte Betonwände und Decken,;2,0;St;gaeb;3927882.x83
+22;Zulage für Bohrloch 100 mm durch stahlbewehrte Betonwände und Decken,;1,0;St;gaeb;3927882.x83
+23;Zulage für Bohrloch 130 mm durch stahlbewehrte Betonwände und Decken,;2,0;St;gaeb;3927882.x83
+24;Zulage für Bohrloch 150 mm durch stahlbewehrte Betonwände und Decken,;1,0;St;gaeb;3927882.x83
+25;Zulage für Bohrloch 180 mm durch stahlbewehrte Betonwände und Decken,;2,0;St;gaeb;3927882.x83
+26;Zulage für Bohrloch 200 mm durch stahlbewehrte Betonwände und Decken,;1,0;St;gaeb;3927882.x83
+27;Zulage für Bohrloch 220 mm durch stahlbewehrte Betonwände und Decken,;1,0;St;gaeb;3927882.x83
+28;Zulage für Bohrloch 250 mm durch stahlbewehrte Betonwände und Decken,;1,0;St;gaeb;3927882.x83
+29;Zulage für Bohrloch 300 mm durch stahlbewehrte Betonwände und Decken,;1,0;St;gaeb;3927882.x83
+30;Zulage zu Kernbohrarbeiten in bewehrten Stahlbetondecken und -wänden,;120,0;cm2;gaeb;3927882.x83
+31;Zulage zu Kernbohrarbeiten in bewehrten Stahlbetondecken und -wänden,;60,0;cm2;gaeb;3927882.x83
+32;Mehrpreis als Aufpreis für die vorgenannte Kernbohrungen in stahlbewehrten;12,0;St;gaeb;3927882.x83
+33;Mehrpreis als Aufpreis für die vorgenannte Kernbohrungen in stahlbewehrten;4,0;St;gaeb;3927882.x83
+34;Mehrpreis als Aufpreis für die vorgenannte Kernbohrungen in stahlbewehrten;2,0;St;gaeb;3927882.x83
+35;Zulage zu Kernbohrarbeiten in stahlbewehrten Betonwänden und -decken,;2,0;St;gaeb;3927882.x83
+36;Zulage zu Kernbohrarbeiten in stahlbewehrten Betonwänden und -decken,;3,0;St;gaeb;3927882.x83
+37;Herstellen einer Pilotbohrung bis 10 mm Durchmesser, bis 30 cm Bohrlänge,;6,0;St;gaeb;3927882.x83
+38;Zulage für Pilotbohrung bis 10 mm durch Beton-Bauteile, für eine erweiterte;2,0;St;gaeb;3927882.x83
+39;Mehrpreis als Aufpreis für die vorgenannte Pilotbohrung in Beton,;2,0;St;gaeb;3927882.x83
+40;Bohrloch 20 mm Durchmesser, bis zu 30 cm Bohrlänge,;4,0;St;gaeb;3927882.x83
+41;desgl., jedoch Bohrloch 60 mm,;5,0;St;gaeb;3927882.x83
+42;desgl., jedoch Bohrloch 80 mm,;12,0;St;gaeb;3927882.x83
+43;desgl., jedoch Bohrloch 100 mm,;16,0;St;gaeb;3927882.x83
+44;desgl., jedoch Bohrloch 130 mm,;8,0;St;gaeb;3927882.x83
+45;desgl., jedoch Bohrloch 150 mm,;6,0;St;gaeb;3927882.x83
+46;desgl., jedoch Bohrloch 180 mm,;4,0;St;gaeb;3927882.x83
+47;desgl., jedoch Bohrloch 200 mm,;2,0;St;gaeb;3927882.x83
+48;desgl., jedoch Bohrloch 220 mm,;1,0;St;gaeb;3927882.x83
+49;desgl., jedoch Bohrloch 250 mm,;1,0;St;gaeb;3927882.x83
+50;desgl., jedoch Bohrloch 300 mm,;1,0;St;gaeb;3927882.x83
+51;Zulage für Bohrloch 20 mm durch Mauerwerk, für eine erweiterte Bohrlänge von bis zu 10 cm, zusätzlich zur Grundlänge von 30 cm, Arbeitshöhe bis 3,5 m.;2,0;St;gaeb;3927882.x83
+52;Zulage für Bohrloch 60 mm durch Mauerwerk, für eine erweiterte Bohrlänge von bis zu 10 cm, zusätzlich zur Grundlänge von 30 cm, Arbeitshöhe bis 3,5 m.;2,0;St;gaeb;3927882.x83
+53;Zulage für Bohrloch 80 mm durch Mauerwerk, für eine erweiterte Bohrlänge von bis zu 10 cm, zusätzlich zur Grundlänge von 30 cm, Arbeitshöhe bis 3,5 m.;5,0;St;gaeb;3927882.x83
+54;Zulage für Bohrloch 100 mm durch Mauerwerk, für eine erweiterte Bohrlänge von bis zu 10 cm, zusätzlich zur Grundlänge von 30 cm, Arbeitshöhe bis 3,5 m.;6,0;St;gaeb;3927882.x83
+55;Zulage für Bohrloch 130 mm durch Mauerwerk, für eine erweiterte Bohrlänge von bis zu 10 cm, zusätzlich zur Grundlänge von 30 cm, Arbeitshöhe bis 3,5 m.;3,0;St;gaeb;3927882.x83
+56;Zulage für Bohrloch 150 mm durch Mauerwerk, für eine erweiterte Bohrlänge von bis zu 10 cm, zusätzlich zur Grundlänge von 30 cm, Arbeitshöhe bis 3,5 m.;2,0;St;gaeb;3927882.x83
+57;Zulage für Bohrloch 180 mm durch Mauerwerk, für eine erweiterte Bohrlänge von bis zu 10 cm, zusätzlich zur Grundlänge von 30 cm, Arbeitshöhe bis 3,5 m.;2,0;St;gaeb;3927882.x83
+58;Zulage für Bohrloch 200 mm durch Mauerwerk, für eine erweiterte Bohrlänge von bis zu 10 cm, zusätzlich zur Grundlänge von 30 cm, Arbeitshöhe bis 3,5 m.;1,0;St;gaeb;3927882.x83
+59;Zulage für Bohrloch 220 mm durch Mauerwerk, für eine erweiterte Bohrlänge von bis zu 10 cm, zusätzlich zur Grundlänge von 30 cm, Arbeitshöhe bis 3,5 m.;1,0;St;gaeb;3927882.x83
+60;Zulage für Bohrloch 250 mm durch Mauerwerk, für eine erweiterte Bohrlänge von bis zu 10 cm, zusätzlich zur Grundlänge von 30 cm, Arbeitshöhe bis 3,5 m.;1,0;St;gaeb;3927882.x83
+61;Zulage für Bohrloch 300 mm durch Mauerwerk, für eine erweiterte Bohrlänge von bis zu 10 cm, zusätzlich zur Grundlänge von 30 cm, Arbeitshöhe bis 3,5 m.;1,0;St;gaeb;3927882.x83
+62;Mehrpreis als Aufpreis für die vorgenannte Kernbohrungen in Mauerwerk,;18,0;St;gaeb;3927882.x83
+63;Mehrpreis als Aufpreis für die vorgenannte Kernbohrungen in Mauerwerk,;6,0;St;gaeb;3927882.x83
+64;Mehrpreis als Aufpreis für die vorgenannte Kernbohrungen in Mauerwerk,;2,0;St;gaeb;3927882.x83
+65;Zulage zu Kernbohrarbeiten in Mauerwerk, für eine Ausführung mit über Kopf bohren, Vergütung je Kernbohrung, als Mittelwert aller Durchmesser,;2,0;St;gaeb;3927882.x83
+66;Zulage zu Kernbohrarbeiten in Mauerwerk, für eine Ausführung mit Schräglage bohren, Vergütung je Kernbohrung, als Mittelwert aller Durchmesser,;4,0;St;gaeb;3927882.x83
+67;Herstellen einer Pilotbohrung bis 10 mm Durchmesser, bis 30 cm Bohrlänge,;8,0;St;gaeb;3927882.x83
+68;Zulage für Pilotbohrung bis 10 mm durch Mauerwerk-Bauteile, für eine;2,0;St;gaeb;3927882.x83
+69;Mehrpreis als Aufpreis für die vorgenannte Pilotbohrung in Mauerwerk,;4,0;St;gaeb;3927882.x83
+70;Zulage für das mehrfache Auf-, Ab- und Umrüsten der Bohrgerätschaften;3,0;St;gaeb;3927882.x83
+71;Demontage der Abdeckplatten zur Sicherung von Deckendurchbrüchen.;4,0;St;gaeb;3927882.x83
+72;Demontage der Abdeckplatten zur Sicherung von Deckendurchbrüchen.;2,0;St;gaeb;3927882.x83
+73;Erstellung von Kabelzuglisten und Kabelplänen für den gesamten Umfang der in diesem Leistungsverzeichnis beschriebenen Heizungsanlage(n) außerhalb der separat beauftragten MSR-Technik;1,0;St;gaeb;3927882.x83
+74;"Einseitiges Anschließen von Elektrokabeln und -leitungen;";3,0;St;gaeb;3927882.x83
+75;Leistung wie zuletzt in vollem Wortlaut beschrieben, jedoch:;2,0;St;gaeb;3927882.x83
+76;Leistung wie zuletzt in vollem Wortlaut beschrieben, jedoch:;5,0;St;gaeb;3927882.x83
+77;Leistung wie zuletzt in vollem Wortlaut beschrieben, jedoch:;8,0;St;gaeb;3927882.x83
+78;Leistung wie zuletzt in vollem Wortlaut beschrieben, jedoch:;2,0;St;gaeb;3927882.x83
+79;Leistung wie zuletzt in vollem Wortlaut beschrieben, jedoch:;3,0;St;gaeb;3927882.x83
+80;Leistung wie zuletzt in vollem Wortlaut beschrieben, jedoch:;2,0;St;gaeb;3927882.x83
+81;Leistung wie zuletzt in vollem Wortlaut beschrieben, jedoch;1,0;St;gaeb;3927882.x83
+82;Leistung wie zuletzt in vollem Wortlaut beschrieben, jedoch:;5,0;St;gaeb;3927882.x83
+83;Leistung wie zuletzt in vollem Wortlaut beschrieben, jedoch:;2,0;St;gaeb;3927882.x83
+84;Leistung wie zuletzt in vollem Wortlaut beschrieben, jedoch:;3,0;St;gaeb;3927882.x83
+85;Leistung wie zuletzt in vollem Wortlaut beschrieben, jedoch:;2,0;St;gaeb;3927882.x83
+86;Leistung wie zuletzt in vollem Wortlaut beschrieben, jedoch:;2,0;St;gaeb;3927882.x83
+87;Leistung wie zuletzt in vollem Wortlaut beschrieben, jedoch:;1,0;St;gaeb;3927882.x83
+88;Leistung wie zuletzt in vollem Wortlaut beschrieben, jedoch:;1,0;St;gaeb;3927882.x83
+89;Leistung wie zuletzt in vollem Wortlaut beschrieben, jedoch:;1,0;St;gaeb;3927882.x83
+90;Leistung wie zuletzt in vollem Wortlaut beschrieben, jedoch:;18,0;St;gaeb;3927882.x83
+91;Leistung wie zuletzt in vollem Wortlaut beschrieben, jedoch:;6,0;St;gaeb;3927882.x83
+92;Kabelverschraubungen als metrische Kunststoffverschraubung (PA) nach;3,0;St;gaeb;3927882.x83
+93;Kabelverschraubungen als metrische Kunststoffverschraubung (PA) nach;4,0;St;gaeb;3927882.x83
+94;Kabelverschraubungen als metrische Kunststoffverschraubung (PA) nach;7,0;St;gaeb;3927882.x83
+95;Kabelverschraubungen als metrische Kunststoffverschraubung (PA) nach;2,0;St;gaeb;3927882.x83
+96;Schwerer Ringkabelschuh mit 2 Schrauben aus Metall, für Anschluss-;3,0;St;gaeb;3927882.x83
+97;Schwerer Ringkabelschuh mit 2 Schrauben aus Metall, für Anschluss-;2,0;St;gaeb;3927882.x83
+98;Ringkabelschuh aus Metall, teilisoliert in allen lieferbaren Farben,;10,0;St;gaeb;3927882.x83
+99;Ringkabelschuh aus Metall, teilisoliert in allen lieferbaren Farben,;15,0;St;gaeb;3927882.x83
+100;Baustellenbelag als fester, leicht verlegbarer und rutschfester Belag in Gewerbequalität, zum Schutz vorhandener Fußbodenoberflächen vor Zerstörung und Verschmutzung, Auslage im Arbeitsumfeld und auf den benötigten Laufflächen,;20,0;m2;gaeb;3927882.x83
+101;Abdeckfolie aus Kunststoff-Baufolie in Gewerbequalität, mind. 35 µm stark,;100,0;m2;gaeb;3927882.x83
+1;Brandschutzabschottung mittels Steinwolle-Brandschutzschale, nicht brennbar (A1), feuchtigkeitsstabil, Mindestrohdichte 150 kg/m³,;1,0;m;gaeb;3927882.x83
+2;desgl., jedoch für nichtbrennbare Stahl-Rohrleitungen DN 20 (d 26,9);1,0;m;gaeb;3927882.x83
+3;desgl., jedoch für nichtbrennbare Stahl-Rohrleitungen DN 25 (d 33,7),;2,0;m;gaeb;3927882.x83
+4;desgl., jedoch für nichtbrennbare Stahl-Rohrleitungen DN 32 (d 42,4),;2,0;m;gaeb;3927882.x83
+5;desgl., jedoch für nichtbrennbare Stahl-Rohrleitungen DN 40 (d 48,3),;2,0;m;gaeb;3927882.x83
+6;desgl., jedoch für nichtbrennbare Stahl-Rohrleitungen DN 50 (d 60,3),;1,0;m;gaeb;3927882.x83
+7;desgl., jedoch für nichtbrennbare Stahl-Rohrleitungen DN 65 (d 76,1),;1,0;m;gaeb;3927882.x83
+8;desgl., jedoch für nichtbrennbare Stahl-Rohrleitungen DN 80 (d 88,9),;1,0;m;gaeb;3927882.x83
+9;Notwendige weiterführende Dämmung zu vorgenannter Brandschutzabschottung mittels Steinwolle in Form konzentrisch gewickelter Steinwolle-Schalen;2,0;m;gaeb;3927882.x83
+10;desgl., jedoch für nicht brennbare Stahl-Rohrleitungen DN 20 (d 26,9).;2,0;m;gaeb;3927882.x83
+11;desgl., jedoch für nicht brennbare Stahl-Rohrleitungen DN 25 (d 33,7).;4,0;m;gaeb;3927882.x83
+12;desgl., jedoch für nicht brennbare Stahl-Rohrleitungen DN 32 (d 42,4).;4,0;m;gaeb;3927882.x83
+13;desgl., jedoch für nicht brennbare Stahl-Rohrleitungen DN 40 (d 48,3).;4,0;m;gaeb;3927882.x83
+14;desgl., jedoch für nicht brennbare Stahl-Rohrleitungen DN 50 (d 60,3).;2,0;m;gaeb;3927882.x83
+15;desgl., jedoch für nicht brennbare Stahl-Rohrleitungen DN 65 (d 76,1).;2,0;m;gaeb;3927882.x83
+16;desgl., jedoch für nicht brennbare Stahl-Rohrleitungen DN 80 (d 88,9).;2,0;m;gaeb;3927882.x83
+17;Brandschutzabschottung mittels Steinwolle-Brandschutzschale, nicht brennbar (A1), feuchtigkeitsstabil, Mindestrohdichte 150 kg/m³, für nicht brennbare Kupfer-/Stahl-Rohrleitungen DN 12 (d 15,0), Verarbeitung gemäß Herstellerrichtlinien und Zulassung,;2,0;m;gaeb;3927882.x83
+18;desgl., jedoch für nichtbrennbare Kupfer-/Stahl-Rohrleitungen DN15 (d 18,0),;2,0;m;gaeb;3927882.x83
+19;desgl., jedoch für nichtbrennbare Kupfer-/Stahl-Rohrleitungen DN 20 (d 22,0);3,0;m;gaeb;3927882.x83
+20;desgl., jedoch für nichtbrennbare Kupfer-/Stahl-Rohrleitungen DN 25 (d 28,0),;4,0;m;gaeb;3927882.x83
+21;desgl., jedoch für nichtbrennbare Kupfer-/Stahl-Rohrleitungen DN32 (d 35,0),;4,0;m;gaeb;3927882.x83
+22;desgl., jedoch für nichtbrennbare Kupfer-/Stahl-Rohrleitungen DN40 (d 42,0),;2,0;m;gaeb;3927882.x83
+23;desgl., jedoch für nichtbrennbare Kupfer-/Stahl-Rohrleitungen DN50 (d 54,0),;2,0;m;gaeb;3927882.x83
+24;Notwendige weiterführende Dämmung zu vorgenannter Brandschutzabschottung mittels Steinwolle in Form konzentrisch gewickelter Steinwolle-Schalen mit einer gitternetzverstärkten, reißfesten Aluminium-Sandwich-Folie, mit selbstklebender Überlappung kaschiert, einseitig aufgeschlitzt und zur leichteren ;4,0;m;gaeb;3927882.x83
+25;desgl., jedoch für nicht brennbare Kupfer-/Stahl-Rohrleitungen DN 15 (d 18,0).;4,0;m;gaeb;3927882.x83
+26;desgl., jedoch für nicht brennbare Kupfer-/Stahl-Rohrleitungen DN 20 (d 22,0).;6,0;m;gaeb;3927882.x83
+27;desgl., jedoch für nicht brennbare Kupfer-/Stahl-Rohrleitungen DN 25 (d 28,0).;8,0;m;gaeb;3927882.x83
+28;desgl., jedoch für nicht brennbare Kupfer-/Stahl-Rohrleitungen DN 32 (d 35,0).;8,0;m;gaeb;3927882.x83
+29;desgl., jedoch für nicht brennbare Kupfer-/Stahl-Rohrleitungen DN 40 (d 42,0).;4,0;m;gaeb;3927882.x83
+30;desgl., jedoch für nicht brennbare Kupfer-/Stahl-Rohrleitungen DN 50 (d 54,0).;4,0;m;gaeb;3927882.x83
+31;Brandschutzabschottung mittels Steinwolle-Brandschutzschale, nicht brennbar (A1), feuchtigkeitsstabil, Mindestrohdichte 150 kg/m³, für nicht brennbare Gewindestangen M8/M10,;8,0;m;gaeb;3927882.x83
+32;Brandschutzabschottung mittels Steinwolle-Brandschutzschale, nicht brennbar (A1), feuchtigkeitsstabil, Mindestrohdichte 150 kg/m³, für nicht brennbare Gewindestangen M12,;4,0;m;gaeb;3927882.x83
+33;Rohrabschottung R 90 für nicht brennbare/brennbare Versorgungsleitungen bzw. nicht brennbare Versorgungsleitungen in Massivdecken/-wänden oder Leichtbauwänden.;2,0;m;gaeb;3927882.x83
+34;desgl., jedoch für Rohrleitungen DN 20 (d = 26,9 mm),;2,0;m;gaeb;3927882.x83
+35;desgl., jedoch für Rohrleitungen DN 25 (d = 33,7 mm),;2,0;m;gaeb;3927882.x83
+36;desgl., jedoch für Rohrleitungen DN 32 (d = 42,4 mm),;2,0;m;gaeb;3927882.x83
+37;desgl., jedoch für Rohrleitungen DN 40 (d = 48,3 mm),;1,0;m;gaeb;3927882.x83
+38;desgl., jedoch für Rohrleitungen DN 50 (d = 60,3 mm),;1,0;m;gaeb;3927882.x83
+39;Rohrabschottung R 90 für nicht brennbare/brennbare Versorgungsleitungen bzw. nicht brennbare Versorgungsleitungen in Massivdecken/-wänden oder Leichtbauwänden.;2,0;m;gaeb;3927882.x83
+40;desgl., jedoch für Rohrleitungen DN 15 (d 18),;2,0;m;gaeb;3927882.x83
+41;desgl., jedoch für Rohrleitungen DN 20 (d 22),;2,0;m;gaeb;3927882.x83
+42;desgl., jedoch für Rohrleitungen DN 25 (d 28),;1,0;m;gaeb;3927882.x83
+43;desgl., jedoch für Rohrleitungen DN 32 (d 35),;1,0;m;gaeb;3927882.x83
+44;Brandschutzmanschette für Rohrabschottung von brennbaren Rohren in;1,0;St;gaeb;3927882.x83
+45;Brandschutzdichtmasse zur Rohrabschottung in Massivwand, -decke oder in leichter Trennwand, einsetzbar für Feuerwiderstandsklassen feuerhemmend;2,0;St;gaeb;3927882.x83
+46;Brandschutzschaum zur Rohrabschottung von nicht brennbaren Rohrleitungen;1,0;St;gaeb;3927882.x83
+47;Brandschutzschaum zur Rohrabschottung von nicht brennbaren Rohrleitungen;1,0;St;gaeb;3927882.x83
+48;Brandschutzbandage zur Rohrabschottung von brennbaren und nicht brennbaren Rohrleitungen in Massivwänden und -decken, in Leichtbauwänden und Massivholzdecken, einsetzbar je nach Anwendungsfall für Feuerwiderstandsklassen hochfeuerhemmend (60 min) und feuerbeständig (90 min),;10,0;m;gaeb;3927882.x83
+49;Brandschutzzement MG III (DIN 1053-1) klassifiziert als Baustoff A 1 gemäß DIN 4102-4, zum vollvolumigen Ausgießen bzw. Verpressen von Wand- und Deckendurchbrüchen, standfest bei größeren Aufbauhöhen, dicht gegen Feuer- und Rauchgase, temperaturabbauend, raumabschließend, spritz- und löschwasserstra;4,0;St;gaeb;3927882.x83
+50;desgl., jedoch mit folgenden Daten:;2,0;St;gaeb;3927882.x83
+51;desgl., jedoch mit folgenden Daten:;1,0;St;gaeb;3927882.x83
+52;Zulage für das Auf- und Abrüsten einer Hochdruckmörtelpresse, einschl.;3,0;St;gaeb;3927882.x83
+1;Äußere Oberflächenreinigung der vorgenannten Wärmepumpen-Außeneinheit;2,0;St;gaeb;3927882.x83
+2;Äußere Oberflächenreinigung des vorgenannten Elektro-Heizgerätes mit;1,0;St;gaeb;3927882.x83
+3;"Äußere Oberflächenreinigung der vorgenannten Schichtenspeichers mit Wärmedämmung, inkl. Baustaub absaugen und abkehren, Verunreinigungen lösen; Etiketten entfernen, nassreinigen und nachledern bzw. trockenreiben,";1,0;St;gaeb;3927882.x83
+4;"Äußere Oberflächenreinigung der vorgenannten Schichtenspeichers mit Wärmedämmung, inkl. Baustaub absaugen und abkehren, Verunreinigungen lösen; Etiketten entfernen, nassreinigen und nachledern bzw. trockenreiben,";1,0;St;gaeb;3927882.x83
+5;"Äußere Oberflächenreinigung des vorgenannten MSR-Schrankes, inkl. Baustaub absaugen und abkehren, Verunreinigungen lösen; Etiketten entfernen, nassreinigen und nachledern bzw. trockenreiben,";1,0;St;gaeb;3927882.x83
+6;"Äußere Oberflächenreinigung des vorgenannten Wärmetauschers mit Wärmedämmung, inkl. Baustaub absaugen und abkehren, Verunreinigungen lösen;";1,0;St;gaeb;3927882.x83
+7;"Äußere Oberflächenreinigung des vorgenannten Wärmetauschers mit Wärmedämmung, inkl. Baustaub absaugen und abkehren, Verunreinigungen lösen;";1,0;St;gaeb;3927882.x83
+8;Oberflächenreinigung des vorgenannten kombinierten Heizkreisverteilers mit den Heizkreisgruppen, bestehend aus Einbauteilen wie Pumpen, Mischer, Absperrorgane, etc. zuvor aufgeführt.;1,0;St;gaeb;3927882.x83
+9;Oberflächenreinigung der Heizungsumwälzpumpen außerhalb des zentralen;9,0;St;gaeb;3927882.x83
+10;Oberflächenreinigung der Dreiwegemischer mit Stellventil außerhalb des;6,0;St;gaeb;3927882.x83
+1;Einrichten der Baustelle, für sämtliche in der Leistungsbeschreibung aufgeführten Materialien und Leistungen, einschl. Stellung und Einbau von Baustellentüren, eventuell Anschluss von bauseitigen Bau-WC, Koordinierung mit der Rohbaufirma und Bauleitung bezüglich des Bezuges von Bauwasser und Baustro;1,0;psch;gaeb;3927882.x83
+2;Vorhalten der Baustelle während der gesamten Bauzeit, für sämtliche in der Leistungsbeschreibung aufgeführten Materialien und Leistungen, inkl. Umsetzen von Baustellentüren, eventuell Umstellung von Bau-WC, Koordinierung mit der Rohbaufirma und Bauleitung bezüglich des Umbaues von Bauwasser,;1,0;psch;gaeb;3927882.x83
+3;Räumen der Baustelle, für sämtliche in der Leistungsbeschreibung aufgeführten Materialien und Leistungen, einschl. Abbau von Baustellentüren, eventuell;1,0;psch;gaeb;3927882.x83
+4;Monatsmiete für einen Lager-/Materialcontainer, in massiver Stahlkonstruktion,;15,0;St;gaeb;3927882.x83
+5;Mehrpreis als;15,0;St;gaeb;3927882.x83
+6;Mehrpreis als;15,0;St;gaeb;3927882.x83
+7;Transport, Anlieferung, Abladen und Aufstellung des vorgenannten Lager-;1,0;St;gaeb;3927882.x83
+8;Aufladen und Abtransport des vorgenannten Lagercontainers, einschl. des;1,0;St;gaeb;3927882.x83
+1;Erstellung von  B e s t a n d s u n t e r l a g e n für den Bereich:;1,0;psch;gaeb;3927882.x83
+1;Obermonteur;10,0;h;gaeb;3927882.x83
+2;Monteur;15,0;h;gaeb;3927882.x83
+3;Helfer;2,0;h;gaeb;3927882.x83
+4;Auszubildende (Verrechnungsstundensatz über alle Lehrjahre);4,0;h;gaeb;3927882.x83
+5;Verrechnungssatz für Stemm- und Freilegungsarbeiten von Rohrleitungen im Mauerwerk, in Gipskartonschächten, im Fußboden- und Deckenbereich, für das Erstellen von Durchbrüchen in Betondecken und -wänden nach Angabe der Bauleitung, einschl. erforderlichen Gerätschaften.;10,0;h;gaeb;3927882.x83

@@ -1,0 +1,108 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+1;"Werkplanung aller Tischlerleistungen, typweise zusammengefaßt, mit Darstellung der Untervarianten, gemäß ""0.5 Leitbeschreibung Werkplanung"" asuzuführen";1,0;PSCH;gaeb;Leistungsverzeichnis/26O70220.X83
+2;Sämtliche Bauteile eines Abschnittes der Innenfassade als vorgezogene Leistung vor der Fertigung und Materialdisposition herstellen, liefern und montieren, nach Aufforderung beräumen, abtransportieren und entsorgen.;1,0;PSCH;gaeb;Leistungsverzeichnis/26O70220.X83
+1;Innenfensterbank aus Holz, Fichte, Fensterbank mit Gratleiste, Vorderkante abgekantet, Ecken rechtwinklig, gefast, seitlicher Anschluss mit Ausklinkungen, auf Konsolen oder Stützen verdeckt befestigen, Oberfläche lackiert, Fensterbankbreite 15 cm, Dicke der Fensterbank 20 mm,;34,0;St;gaeb;Leistungsverzeichnis/26O70220.X83
+2;Länge;1,0;St;gaeb;Leistungsverzeichnis/26O70220.X83
+3;Länge;4,0;St;gaeb;Leistungsverzeichnis/26O70220.X83
+4;Länge;2,0;St;gaeb;Leistungsverzeichnis/26O70220.X83
+5;Länge;8,0;St;gaeb;Leistungsverzeichnis/26O70220.X83
+6;Länge;75,0;St;gaeb;Leistungsverzeichnis/26O70220.X83
+7;Länge;1,0;St;gaeb;Leistungsverzeichnis/26O70220.X83
+8;Länge;33,0;St;gaeb;Leistungsverzeichnis/26O70220.X83
+9;Länge;43,0;St;gaeb;Leistungsverzeichnis/26O70220.X83
+10;Länge;4,0;St;gaeb;Leistungsverzeichnis/26O70220.X83
+11;Länge;8,0;St;gaeb;Leistungsverzeichnis/26O70220.X83
+12;seitlicher Anschluss stumpf, auf Beton befestigen, Fensterbankbreite 35 cm,;10,0;St;gaeb;Leistungsverzeichnis/26O70220.X83
+13;Abschlusskanten furniert, Fensterbankbreite 25 cm,;2,0;St;gaeb;Leistungsverzeichnis/26O70220.X83
+14;Mehraufwand;3,5;m;gaeb;Leistungsverzeichnis/26O70220.X83
+15;Mehraufwand;84,0;m;gaeb;Leistungsverzeichnis/26O70220.X83
+16;Mehraufwand;11,0;St;gaeb;Leistungsverzeichnis/26O70220.X83
+17;jedoch Ausklinkung mit spitzem Winkel von ca. 83,2°, ggf. vor Ort anzupassen;5,0;St;gaeb;Leistungsverzeichnis/26O70220.X83
+18;jedoch Ausklinkung mit stumpfem Winkel von ca. 96,7°, ggf. vor Ort anzupassen;4,0;St;gaeb;Leistungsverzeichnis/26O70220.X83
+19;Mehraufwand zu Pos. 1.2.1 - 1.2.13;4,0;St;gaeb;Leistungsverzeichnis/26O70220.X83
+20;Mehraufwand;68,0;St;gaeb;Leistungsverzeichnis/26O70220.X83
+1;Seitliche Bekleidung der Fensterlaibung herstellen und montieren, Ausführung als Winkel in formstabiler Dreischichtplatte Fichte DL, d = 19 mm nach;148,0;St;gaeb;Leistungsverzeichnis/26O70220.X83
+2;jedoch mit seitlichem Anschluss an Trockenbauwand mit Schenkellänge = 326 mm inkl. Fuge, zusätzlich notwendige Unterkonstruktion bei großen Spannweiten ist in Position einzukalkulieren.;78,0;St;gaeb;Leistungsverzeichnis/26O70220.X83
+3;jedoch mit seitlichem Anschluss an Betonstütze mit Schenkellänge = 605 mm inkl. Fuge, außerdem Hinterlegung mit Mineralwolle d = 45 mm in 450 mm breitem Streifen an Eckübergang, Abrechnung der Hinterlegung über gesonderte Position, zusätzlich notwendige Unterkonstruktion bei großen Spannweiten ist i;8,0;St;gaeb;Leistungsverzeichnis/26O70220.X83
+4;jedoch mit seitlichem Anschluss an BSH-Stütze mit Schenkellänge = 35 mm inkl. Fuge.;18,0;St;gaeb;Leistungsverzeichnis/26O70220.X83
+5;jedoch mit seitlichem Anschluss an Betonwand mit Schenkellänge = 160 mm inkl. Fuge.;2,0;St;gaeb;Leistungsverzeichnis/26O70220.X83
+6;jedoch mit seitlichem Anschluss an Betonwand mit Schenkellänge = 225 mm inkl. Fuge.;10,0;St;gaeb;Leistungsverzeichnis/26O70220.X83
+7;jedoch mit hinterem Anschluss an Blendrahmen von Aluminium- oder Holzaluminiumtür, Höhe der Bekleidung = 2730 mm.;2,0;St;gaeb;Leistungsverzeichnis/26O70220.X83
+8;jedoch von zwei Fensterlaibungen ohne seitlichen Anschluss an BSH-Stütze, Ausführung als U-Bauteil, Schenkellänge zu Blendrahmen beidseitig = 113 mm inkl. Fugen, vordere Ansichtsbreite = 800 mm, Ausführung der Vorderseite aus einer durchgehenden Platte, zusätzlich notwendige Unterkonstruktion bei gr;13,0;St;gaeb;Leistungsverzeichnis/26O70220.X83
+9;jedoch als einfache Laibung ohne Gehrungsverbindung und seitlichen Schenkel, Breite = 90 mm inkl. Fugen, Erschwernis der Montage aufgrund von Einsetzen in nur seitlich zugänglichen Bereich zwischen Holz- oder Betonstütze und Blendrahmen;33,0;St;gaeb;Leistungsverzeichnis/26O70220.X83
+10;jedoch als einfache Laibung ohne Gehrungsverbindung und seitlichen Schenkel, Breite = 113 mm inkl. Fugen, Erschwernis der Montage, da in Verlängerung und Flucht von Bekleidung der dezentralen Lüftungsgeräte im Übergang an den Blendrahmen der Fenster;88,0;St;gaeb;Leistungsverzeichnis/26O70220.X83
+11;jedoch als einfache Laibung ohne Gehrungsverbindung und seitlichen Schenkel, Breite = 135 mm, Erschwernis der Montage aufgrund von Einsetzen in nur seitlich zugänglichen Bereich zwischen Blendrahmen und Trockenbauwand an Fassadenschwert.;1,0;St;gaeb;Leistungsverzeichnis/26O70220.X83
+12;Seitliche Bekleidung der Fensterlaibung in den zwei Treppenhäusern herstellen und montieren, jedoch als Dreischichtplatte Fichte DL, schwerentflammbar (B-s2, d0 gem. EN 13501), d = 19 mm, Schenkellänge zum Blendrahmen = 280 mm inkl. Fuge, seitlicher Anschluss an Betonlaibung mit Schenkellänge = 195 ;20,0;St;gaeb;Leistungsverzeichnis/26O70220.X83
+13;Mehraufwand;68,0;St;gaeb;Leistungsverzeichnis/26O70220.X83
+1;Obere Sichtbekleidung des Fenstersturzes herstellen und montieren, Ausführung in formstabiler Dreischichtplatte Fichte DL, d = 19 mm nach;51,0;St;gaeb;Leistungsverzeichnis/26O70220.X83
+2;Breite der Bekleidung bis 1100 mm;1,0;St;gaeb;Leistungsverzeichnis/26O70220.X83
+3;Breite der Bekleidung bis 1800 mm;4,0;St;gaeb;Leistungsverzeichnis/26O70220.X83
+4;Breite der Bekleidung bis 2100 mm;1,0;St;gaeb;Leistungsverzeichnis/26O70220.X83
+5;Breite der Bekleidung bis 3000 mm;8,0;St;gaeb;Leistungsverzeichnis/26O70220.X83
+6;Breite der Bekleidung bis 3200 mm;81,0;St;gaeb;Leistungsverzeichnis/26O70220.X83
+7;Breite der Bekleidung bis 3400 mm;3,0;St;gaeb;Leistungsverzeichnis/26O70220.X83
+8;Breite der Bekleidung bis 3600 mm;4,0;St;gaeb;Leistungsverzeichnis/26O70220.X83
+9;Breite der Bekleidung bis 3700 mm;1,0;St;gaeb;Leistungsverzeichnis/26O70220.X83
+10;jedoch der vordere Teil der zweiteiligen Untersicht ebenfalls mit vorderer Abkantung mit Gesamthöhe = 330 mm, sodass zwei winkelförmige Sturzbekleidungen mit unterschiedlichen Schenkellängen entstehen, zusätzliche UK an Außenwand und weitere Gehrungsverbindung für hintere Winkelbekleidung  notwendig;6,0;St;gaeb;Leistungsverzeichnis/26O70220.X83
+11;Obere Sichtbekleidung des Fenstersturzes herstellen und montieren, Ausführung in formstabiler Dreischichtplatte Fichte DL, d = 19 mm nach;13,0;St;gaeb;Leistungsverzeichnis/26O70220.X83
+12;Breite der Bekleidung;1,0;St;gaeb;Leistungsverzeichnis/26O70220.X83
+13;Breite der Bekleidung;1,0;St;gaeb;Leistungsverzeichnis/26O70220.X83
+14;Breite der Bekleidung;10,0;St;gaeb;Leistungsverzeichnis/26O70220.X83
+15;Breite der Bekleidung;7,0;St;gaeb;Leistungsverzeichnis/26O70220.X83
+16;Breite der Bekleidung;14,0;St;gaeb;Leistungsverzeichnis/26O70220.X83
+17;jedoch mit vorderer Abkantung mit Gesamthöhe = 140 mm und Abstand zu Betonunterzug von ca. 130 mm;11,0;St;gaeb;Leistungsverzeichnis/26O70220.X83
+18;jedoch mit vorderer Abkantung mit Gesamthöhe = 35 mm und Abstand zu Betonunterzug von ca. 24 mm;6,0;St;gaeb;Leistungsverzeichnis/26O70220.X83
+19;jedoch mit vorderer Abkantung mit Gesamthöhe = 35 mm und Abstand zu Betonunterzug von ca. 24 mm, Breite bis 3600 mm;4,0;St;gaeb;Leistungsverzeichnis/26O70220.X83
+20;Obere Sichtbekleidung des Fenstersturzes in den zwei Treppenhäusern herstellen und montieren, jedoch als Dreischichtplatte Fichte DL, schwerentflammbar (B-s2, d0 gem. EN 13501), d = 19 mm, vordere Abkantung mit Gesamthöhe = 130 mm, vorderer Stoß als Gehrungsverbindung, Schenkellänge zum Blendrahmen ;10,0;St;gaeb;Leistungsverzeichnis/26O70220.X83
+21;Mehraufwand;11,0;St;gaeb;Leistungsverzeichnis/26O70220.X83
+22;jedoch Ausklinkung mit spitzem Winkel von ca. 83,2°, ggf. vor Ort anzupassen.;9,0;St;gaeb;Leistungsverzeichnis/26O70220.X83
+23;jedoch Ausklinkung mit stumpfem Winkel von ca. 96,7°, ggf. vor Ort anzupassen. Ggf. nachträgliche Anpassung vor Ort notwendig.;4,0;St;gaeb;Leistungsverzeichnis/26O70220.X83
+24;Mehraufwand;2,0;St;gaeb;Leistungsverzeichnis/26O70220.X83
+25;Mehraufwand zu Pos. 1.4.1 - 1.4.19;4,0;St;gaeb;Leistungsverzeichnis/26O70220.X83
+26;Mehraufwand;68,0;St;gaeb;Leistungsverzeichnis/26O70220.X83
+27;Mehraufwand zu Pos. 1.4.1 - 1.4.20;160,0;m;gaeb;Leistungsverzeichnis/26O70220.X83
+1;Wandbekleidung, Höhe bis 1,25 m, hinterlüftet,;466,0;m2;gaeb;Leistungsverzeichnis/26O70220.X83
+2;Abstand zwischen Beplankung und Wand bis;38,0;m2;gaeb;Leistungsverzeichnis/26O70220.X83
+3;als Vorsatzschale für Vorwandinstallation, teilhoch, einseitige Wandbefestigung,;22,0;m2;gaeb;Leistungsverzeichnis/26O70220.X83
+4;"Unterkonstruktion Fensterbank hinter Vorsatzschale; bestehend aus geleimter Kantel aus KVH, in mindestens zwei Lagen verleimt zur Verhinderung des Holzverzuges,";660,0;m;gaeb;Leistungsverzeichnis/26O70220.X83
+5;"Unterkonstruktion Fensterbank hinter Vorsatzschale wie vor in Bezugposition; jedoch aus KVH 9/10";84,0;m;gaeb;Leistungsverzeichnis/26O70220.X83
+6;Öffnung herstellen, rund,  einschl. Unterkonstruktion auswechseln,;20,0;St;gaeb;Leistungsverzeichnis/26O70220.X83
+7;Öffnung herstellen, rund wie in Bezugspositon, jedoch über 25mm bis Durchmesser 75mm;20,0;St;gaeb;Leistungsverzeichnis/26O70220.X83
+8;Revisionsklappe, Rahmen aus Aluminium, mit Füllung aus Gipsplatten, Spachtelung Qualitätsstufe Q2 (Standardausführung), Dicke 12,5 mm,;2,0;St;gaeb;Leistungsverzeichnis/26O70220.X83
+1;Aussteifender Rahmen in U-Form als Unterkonstruktion für die Einhausung, eckverschweißt als stabile Grundlage für die Befestigung aller Verkleidungen und Türen;153,0;St;gaeb;Leistungsverzeichnis/26O70220.X83
+2;Frontbekleidung als Tür inkl. Möbelschloss und Scharniere;51,0;St;gaeb;Leistungsverzeichnis/26O70220.X83
+3;Seitliche Bekleidung;98,0;St;gaeb;Leistungsverzeichnis/26O70220.X83
+4;Seitentür zur Revision inkl. Möbelschloss und Scharniere;94,0;St;gaeb;Leistungsverzeichnis/26O70220.X83
+5;Seitliche Bekleidung;4,0;St;gaeb;Leistungsverzeichnis/26O70220.X83
+6;Seitentür zur Revision inkl. Möbelschloss und Scharniere;8,0;St;gaeb;Leistungsverzeichnis/26O70220.X83
+7;Eingerückter Sockel;51,0;St;gaeb;Leistungsverzeichnis/26O70220.X83
+8;Horizontale Teilungen als luftdichte Schotts zwischen Zu- und Abluft, zwei Schotts je Gerät (Abrechnung allerdings einzel);102,0;St;gaeb;Leistungsverzeichnis/26O70220.X83
+1;Handlauf, für 2-läufige Treppe mit einem Haupt- und einem Zwischenpodest je Geschoss, im Innenbereich, im Grundriss mehrfach abgewinkelt, Handlauf aus Esche, grundiert und 2-mal versiegelt, Durchmesser 40 mm, Befestigung über bauseitige Konsolen aus beschichtetem Stahl, Ausladung über 60 bis 70 mm, ;320,0;m;gaeb;Leistungsverzeichnis/26O70220.X83
+2;Handlauf, für Treppe, im Innenbereich, gerader Lauf, 2-läufig, mit einem Podest, Handlauf aus Esche, grundiert und 2-mal versiegelt, Durchmesser 40 mm, Konsolen aus verzinktem Stahl, Ausladung über 60 bis 70 mm, Befestigungsuntergrund Beton, Ausführung gemäß Zeichnung und Einzelbeschreibung,;20,0;m;gaeb;Leistungsverzeichnis/26O70220.X83
+3;Handlauf, für Podest, im Innenbereich, Handlauf aus Esche, grundiert und 2-mal versiegelt, Durchmesser 40 mm, Konsolen aus verzinktem Stahl, Ausladung über 60 bis 70 mm, Befestigungsuntergrund Beton, Ausführung gemäß Zeichnung und Einzelbeschreibung,;1,0;St;gaeb;Leistungsverzeichnis/26O70220.X83
+4;Handlauf, für Treppe, im Innenbereich, gerader Lauf, 2-läufig, mit einem Podest, Handlauf aus Esche, grundiert und 2-mal versiegelt, Durchmesser 40 mm, Konsolen aus verzinktem Stahl, Ausladung über 60 bis 70 mm, Befestigungsuntergrund Beton, Ausführung gemäß Zeichnung und Einzelbeschreibung,;28,0;m;gaeb;Leistungsverzeichnis/26O70220.X83
+5;Gehrungsverbindung als Mehraufwand zu Handläufen bei Richtungs- und Neigungswechsel, sowohl vertikal, horizontal als auch kombiniert, herstellen.;120,0;St;gaeb;Leistungsverzeichnis/26O70220.X83
+6;Endstück 90°, als Mehraufwand zu Handläufen herstellen.;30,0;St;gaeb;Leistungsverzeichnis/26O70220.X83
+7;Endstück ca. 121,3°, als Mehraufwand zu Handläufen herstellen.;2,0;St;gaeb;Leistungsverzeichnis/26O70220.X83
+8;Gerades Endstück, als Mehraufwand zu Handläufen herstellen.;12,0;St;gaeb;Leistungsverzeichnis/26O70220.X83
+9;Handlauf, für Aufzüge zu liefern, im Innenbereich, Handlauf aus Esche, grundiert und 2-mal versiegelt, Durchmesser 40 mm, Montage erfolgt seitens des AN Aufzugsanlagen, Ausführung gemäß Einzelbeschreibung,;1,0;St;gaeb;Leistungsverzeichnis/26O70220.X83
+10;Handlauf gem. Pos. 1.7.8, jedoch Länge = 130 cm;2,0;St;gaeb;Leistungsverzeichnis/26O70220.X83
+11;Handlauf gem. Pos. 1.7.8, jedoch Länge = 230 cm;1,0;St;gaeb;Leistungsverzeichnis/26O70220.X83
+1;Rollo DIN EN 13120 in offener Ausführung, als Einzelanlage, vertikal, am Sturz, Breite 1000 mm, Höhe 2100 mm, Bedienung durch Kugelkette, Rollobehang aus Glasfasergewebe, reflexionsbeschichtet, Baustoffklasse DIN 4102-1 B1 (schwerentflammbar),;422,0;St;gaeb;Leistungsverzeichnis/26O70220.X83
+2;Breite 1100 mm,;212,0;St;gaeb;Leistungsverzeichnis/26O70220.X83
+3;Breite 1600 mm,;2,0;St;gaeb;Leistungsverzeichnis/26O70220.X83
+4;Mehraufwand zu Pos. 2.3.1 - 2.3.2;40,0;m;gaeb;Leistungsverzeichnis/26O70220.X83
+5;Höhe 1800 mm,;10,0;St;gaeb;Leistungsverzeichnis/26O70220.X83
+6;Breite 1100 mm, Höhe 1800 mm,;1,0;St;gaeb;Leistungsverzeichnis/26O70220.X83
+7;Breite 1600 mm, Höhe 1800 mm,;2,0;St;gaeb;Leistungsverzeichnis/26O70220.X83
+1;Rollo DIN EN 13120 in offener Ausführung, als Einzelanlage, vertikal, am Sturz, Breite 600 mm, Höhe 2200 mm, Bedienung durch Kugelkette, Rollobehang aus Glasfasergewebe, Baustoffklasse DIN 4102-1 B1 (schwerentflammbar),;30,0;St;gaeb;Leistungsverzeichnis/26O70220.X83
+1;Rollo DIN EN 13120 in offener Ausführung, als Einzelanlage, vertikal, am Sturz, Breite 1000 mm, Höhe 2100 mm, Antrieb durch Elektromotor, mit Standard Motor Interface (SMI), Rollobehang aus Glasfasergewebe, reflexionsbeschichtet, Baustoffklasse DIN 4102-1 B1 (schwerentflammbar),;19,0;St;gaeb;Leistungsverzeichnis/26O70220.X83
+2;Breite 1100 mm,;10,0;St;gaeb;Leistungsverzeichnis/26O70220.X83
+3;Verschließen des Blendschutz-Schlitzes im Bereich der Rolloanlagen bei Verdunklungsrollos.;35,0;m;gaeb;Leistungsverzeichnis/26O70220.X83
+4;"Hersteller, liefern und montieren einer Unterkonstruktion von 96 x 60 mm, als Übergangsstück zwischen Fensterdeckleisten und Doppelführungsschienen der Vollverdunklung;";21,0;St;gaeb;Leistungsverzeichnis/26O70220.X83
+1;Wärmedämmschicht der Montagewand, aus Mineralwolle MW DIN EN 13162, Bemessungswert der Wärmeleitfähigkeit max. 0,040 W/(mK), Nennwert der Wärmeleitfähigkeit max. 0,039 W/(mK), Baustoffklasse DIN 4102-1 A1 (nichtbrennbar),;16,0;m2;gaeb;Leistungsverzeichnis/26O70220.X83
+2;Wärmedämmschicht der Tischlerbekleidung, aus Mineralwolle MW DIN EN 13162, Bemessungswert der Wärmeleitfähigkeit max. 0,040 W/(mK), Nennwert der Wärmeleitfähigkeit max. 0,039 W/(mK), Baustoffklasse DIN 4102-1 A1 (nichtbrennbar),;8,0;m2;gaeb;Leistungsverzeichnis/26O70220.X83
+3;Anschlussfuge abdichten zwischen Wand aus Putz, Gips-Putzmörtel, geglättet, und Holzwerkstoff, innen, mit elastischem Dichtstoff, Basis Polyurethan, transparent, Fugenbreite über 5 bis 10 mm, Verhältnis Fugenbreite zu Dichtstofftiefe 1:1, einschl. reinigen, einschl. systemgebundenem Primer und Hinte;15,0;m;gaeb;Leistungsverzeichnis/26O70220.X83
+1;Stundenlohnarbeiten durch Baufacharbeiter/-in auf Anordnung des AG ausführen, der Verrechnungssatz für die jeweilige Arbeitskraft umfasst sämtliche Aufwendungen wie Lohn- und Gehaltskosten, Lohn- und Gehaltsnebenkosten, Zuschläge, lohngebundene und lohnabhängige Kosten, sonstige Sozialkosten, Gemein;20,0;h;gaeb;Leistungsverzeichnis/26O70220.X83
+1;Dokumentation elektronisch auf Datenträger einreichen. Die Dokumentation wird zunächst geprüft und ggf. in Nachbesserungsrunden ergänzt, ehe die Freigabe zur Fertigung der Papierexemplare durch die Bauüberwachung erfolgt.;1,0;PSCH;gaeb;Leistungsverzeichnis/26O70220.X83
+2;Dokumentation in Papierform liefern, Preis pro Ausfertigung, Gliederung in Form von beschrifteten Gliederungsblättern, die seitlich greifbar sind. Seitlich lesbare Beschriftung wie in der  elektronischen Ausfertigung die Gliederung durch die Unterordner. Im Ordner mit Ordnerrückenbeschriftung liefer;1,0;St;gaeb;Leistungsverzeichnis/26O70220.X83

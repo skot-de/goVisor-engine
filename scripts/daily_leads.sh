@@ -344,6 +344,33 @@ if [ "${GOVISOR_NEUE_QUELLEN:-1}" = "1" ]; then
   $PY -m govisor.docfetch_netserver --limit 60 \
     || echo "  ⚠ NetServer-Unterlagen unvollstaendig."
 
+  # e-VERGABE DES BUNDES (evergabe-online.de). Die GROESSTE Einzelluecke: 1.026 offene
+  # Leads, bis 2026-08-15 ueberhaupt kein Zugang (die Plattform stand tagelang in Wartung).
+  # Der Download ist frei und ausdruecklich angeboten — „uneingeschraenkter und
+  # vollstaendiger direkter Zugang gebuehrenfrei", ohne Anmeldung.
+  # GEMESSEN 2026-08-15 (Trockenlauf): 30 von 30 bzw. 8 von 8 mit ZIP-Knopf, 18–144 Dateien
+  # je Vergabe. Erwartete Wirkung: DE-Unterlagenabdeckung 68 % → ~77 %.
+  # ⚠ `/xvergabe/services/` (XVergabe-Standard) und `/ws-suche/` existieren laut robots.txt,
+  # sind dort aber fuer automatische Zugriffe gesperrt — wir sprechen sie NICHT an. Die
+  # Anfrage ans Beschaffungsamt liegt in `api-anfragen.md`.
+  step "e-Vergabe des Bundes — Unterlagen (DE, anonym, budgetiert + idempotent)"
+  $PY -m govisor.docfetch_evergabe_online --limit 60 \
+    || echo "  ⚠ e-Vergabe-Unterlagen unvollstaendig."
+
+  # DEUTSCHES AUSSCHREIBUNGSBLATT. 172 offene Leads, ZIP anonym (3 von 3 gemessen).
+  # ⚠ Die Bezahlschranke der Seite gilt der RECHERCHE, nicht den Unterlagen — der
+  # Tarif-Knopf ist im DOM unsichtbar, der Unterlagen-Knopf sichtbar.
+  step "Ausschreibungsblatt-Unterlagen (DE, anonym, budgetiert + idempotent)"
+  $PY -m govisor.docfetch_ausschreibungsblatt --limit 40 \
+    || echo "  ⚠ Ausschreibungsblatt-Unterlagen unvollstaendig."
+
+  # bi-medien.de. 110 offene Leads. Sammel-ZIP je Vergabe ueber einen eigenen Dienst
+  # (publictender.bi-medien.de/api/Part/<uuid>), anonym http 200 (2 von 2 gemessen).
+  # ⚠ Die Links stehen zugeklappt im DOM — auslesen, nicht klicken (Klick = Timeout).
+  step "bi-medien-Unterlagen (DE, anonym, budgetiert + idempotent)"
+  $PY -m govisor.docfetch_bimedien --limit 40 \
+    || echo "  ⚠ bi-medien-Unterlagen unvollstaendig."
+
   # Healy-Hudson-UNTERLAGEN. 508 offene Leads. ⚠ Pro Instanz verschieden: Bahn und Hamburg
   # geben heraus, `bieterzugang.deutsche-evergabe.de` leitet auf ein Dashboard ohne Dateien.
   # Das Manifest schluesselt nach Host auf, damit das sichtbar bleibt.
@@ -689,7 +716,7 @@ for eintrag in \
   "data/gold/DE/lead_export.parquet:1:Leads (Frontend-Quelle)" \
   "data/gold/DE/notice_duplicates.parquet:2:Dubletten-Firewall" \
   "data/docs/DE/doc_text.parquet:7:Volltext-Index der Unterlagen" \
-  "data/gold/DE/doc_signals.parquet:7:Anforderungs-Signale" \
+  "data/docs/DE/doc_signals.parquet:7:Anforderungs-Signale" \
   "web/data/leads-bau.json:1:Frontend-Daten" \
   "web/data/marktpuls.json:2:Marktpuls"
 do

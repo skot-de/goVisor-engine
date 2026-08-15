@@ -1,0 +1,334 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+1;Zutrittskontrolle Grundsoftware;1,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+2;Pentest Zertifikat für das geamte Softwarepaket.;1,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+3;SW-Modul Mandantenverwaltung mit gemeinsamer Hardware;1,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+4;SW-Modul REST WEB Service API Schnittstelle;1,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+5;Abfrage nach DSGVO zur Verwendung der;1,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+6;Integration Manager Import/Export GUI;1,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+7;SW-Modul Zutrittsworkflow;1,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+8;SW-Modul Türüberwachung-Visualisierung;1,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+9;SW-Modul Listenkonfigurator;1,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+10;SW-Modul Raum- und Arbeitsplatzverwaltung;1,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+11;SW-Modul, Funkanbindung;1,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+12;Softwaremodul zur Freigabe von Stockwerken eines Aufzuges für einzelne Personen. Dabei können der Person einzelne Stockwerke oder alle verfügbaren Stockwerke oder keine Stockwerke als Zutrittsberechtigung zugeordnet werden.;1,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+1;MIFARE DESFire EV3 8K Transponderanhänger;1700,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+2;ZKZ für Wandmontage;8,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+3;ZKZ Hutschiene wie vorgenannter Zutrittscontroller (Zutrittskontrollzentrale) jedoch für Hutschienenmontage für 24 V/DC Anschluss, für Ethernetanschluss, mit 1xRS485 Schnittstelle zum Anschluss von mindestens 15x Zutrittslesern;2,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+4;Erweiterungsmodul Outputmodul;1,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+5;Gehäuse für ZKZ/Zutrittscontroller Hutschiene;1,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+6;Zutrittsleser IP54;26,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+7;Zutrittsleser IP54, Einbau in Behnke-Sprechanlage System 20;10,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+8;Zutrittsleser IP66;6,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+9;Aufputzrahmen für Zutrittsleser IP66, erhöhter Aufputz-/Distanzrahmen für Zutrittsleser IP66 zur komfortablen Montage des Zutrittsleser IP66 auf der Wand oder Fronten aus Metall gemäß Bohrraster des angebotenen Lesers inkl. der Herstellung der Kabeldurchführung;6,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+10;Digitalzylinder Standard 40x40;250,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+11;Ausführung wie zuvor beschrieben, jedoch Digitalzylinder mit Antipanikfunktion, zum Einbau in ein SVP-Schloss (selbst verriegelbares Panikschloss);1,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+12;Digitalzylinder mit Hebelverschluss;4,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+13;Digitalzylinder Dual beidseitig 40x40;1,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+14;Digitalzylinder als Halbzylinder 30x10;6,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+15;Anpassung der Digitalschließzylinder;1,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+16;Wireless Gateway, Stromversorgung über PoE (Power over Ethernet);64,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+17;Batteriewechsel- und Demontagewerkzeug;1,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+18;Tischleser mit USB-Anschluss;1,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+19;Programmiergerät Set;1,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+20;Programmier- und/oder Sicherheitskarten;1,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+1;Installation ZKZ/Zutrittscontroller;8,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+2;Installation ZKZ/Zutrittscontroller;2,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+3;Demontage der ZKZ, Bestandssystem;9,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+4;Montage Leser an den Standorten im Haus;42,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+5;Montage und betriebsbereite Anschaltung der Wireless Gateway.;64,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+6;Aufmaß der Türblätter mit Beschlägen;260,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+7;Digitale Schließzylinder montieren in den Türen;260,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+8;Installation Software auf Server;1,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+9;Inbetriebnahme;376,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+10;Schulung Mitarbeiter;2,0;Tage;gaeb;LV_KVS_ZKA_Korrektur.X83
+11;Administrator Schulung;1,0;Tage;gaeb;LV_KVS_ZKA_Korrektur.X83
+12;Reise- und Transportkosten;1,0;Psch;gaeb;LV_KVS_ZKA_Korrektur.X83
+13;Projektleitung des Auftragnehmers;1,0;Psch;gaeb;LV_KVS_ZKA_Korrektur.X83
+1;Dokumentation;1,0;Paus;gaeb;LV_KVS_ZKA_Korrektur.X83
+2;Projektleiter/Bauleiter;10,0;h;gaeb;LV_KVS_ZKA_Korrektur.X83
+3;Systemtechniker/Programmierer;15,0;h;gaeb;LV_KVS_ZKA_Korrektur.X83
+4;Fachmonteur;15,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+1;"Zutrittskontrollzentrale (ZKZ)19ldquo; Rackversion";4,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+2;Zutrittsleser IP54;18,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+3;Zutrittsleser IP54, Einbau in Behnke-Sprechanlage System 20;19,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+4;Zutrittsleser IP54 mit PIN-Codetastatur;4,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+5;Digitalzylinder Standard 40x40;223,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+6;Ausführung wie zuvor beschrieben, jedoch Digitalzylinder mit Antipanikfunktion, zum Einbau in ein SVP-Schloss (selbst verriegelbares Panikschloss);1,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+7;Digitalzylinder Dual beidseitig 40x40;1,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+8;Batteriewechsel- und Demontagewerkzeug;1,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+9;Anpassung der Digitalschließzylinder;1,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+10;Wireless Gateway, Stromversorgung über PoE (Power over Ethernet);47,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+11;Tischleser mit USB-Anschluss;1,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+12;Programmier- und/oder Sicherheitskarten;1,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+13;Programmiergerät-Set;1,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+1;Installation ZKZ/Zutrittscontroller;4,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+2;Installation ZKZ/Zutrittscontroller;1,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+3;Demontage der ZKZ, Bestandssystem;5,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+4;Montage Leser an den Standorten im Haus;41,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+5;Busdurchschaltung;3,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+6;Busdurchschaltung;2,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+7;Busdurchschaltung;2,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+8;Montage und betriebsbereite Anschaltung der Wireless-Gateway;47,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+9;Aufmaß der Türblätter mit Beschlägen;223,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+10;Digitale Schließzylinder montieren in den Türen;223,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+11;Inbetriebnahme;318,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+12;Schulung Mitarbeiter;2,0;Tage;gaeb;LV_KVS_ZKA_Korrektur.X83
+13;Reise- und Transportkosten;1,0;Psch;gaeb;LV_KVS_ZKA_Korrektur.X83
+14;Projektleitung des Auftragnehmers;1,0;Psch;gaeb;LV_KVS_ZKA_Korrektur.X83
+1;Dokumentation;1,0;Psch;gaeb;LV_KVS_ZKA_Korrektur.X83
+2;Projektleiter/Bauleiter;10,0;h;gaeb;LV_KVS_ZKA_Korrektur.X83
+3;Systemtechniker/Programmierer;15,0;h;gaeb;LV_KVS_ZKA_Korrektur.X83
+4;Fachmonteur;15,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+1;"Zutrittskontrollzentrale (ZKZ)19ldquo; Rackversion";3,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+2;ZKZ für Wandmontage;2,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+3;Zutrittsleser IP54;23,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+4;Zutrittsleser IP54, Einbau in Behnke-Sprechanlage System 20;12,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+5;Zutrittsleser IP54 mit PIN-Codetastatur;1,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+6;Digitalzylinder Standard 40x40;210,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+7;Ausführung wie zuvor beschrieben, jedoch Digitalzylinder mit Antipanikfunktion, zum Einbau in ein SVP-Schloss (selbst verriegelbares Panikschloss);1,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+8;Anpassung der Digitalschließzylinder;1,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+9;Wireless Gateway, Stromversorgung über PoE (Power over Ethernet);87,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+10;Batteriewechsel- und Demontagewerkzeug;1,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+11;Tischleser mit USB-Anschluss;1,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+12;Programmier- und/oder Sicherheitskarten;1,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+13;Programmiergerät-Set;1,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+1;Installation ZKZ/Zutrittscontroller;3,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+2;Installation ZKZ/Zutrittscontroller;2,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+3;Demontage der ZKZ, Bestandssystem;11,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+4;Busdurchschaltung Haus 2/Verbinderbau, 2.OG;1,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+5;Busdurchschaltung Haus 1;4,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+6;Montage Leser an den Standorten im Haus;36,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+7;Montage und betriebsbereite Anschaltung der Wireless Gateway;87,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+8;Aufmaß der Türblätter mit Beschlägen;210,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+9;Digitale Schließzylinder montieren in den Türen;210,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+10;Inbetriebnahme;338,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+11;Schulung Mitarbeiter;2,0;Tage;gaeb;LV_KVS_ZKA_Korrektur.X83
+12;Reise- und Transportkosten;1,0;Psch;gaeb;LV_KVS_ZKA_Korrektur.X83
+13;Projektleitung des Auftragnehmers;1,0;Psch;gaeb;LV_KVS_ZKA_Korrektur.X83
+1;Dokumentation;1,0;Psch;gaeb;LV_KVS_ZKA_Korrektur.X83
+2;Projektleiter/Bauleiter;10,0;h;gaeb;LV_KVS_ZKA_Korrektur.X83
+3;Systemtechniker/Programmierer;15,0;h;gaeb;LV_KVS_ZKA_Korrektur.X83
+4;Fachmonteur;15,0;St;gaeb;LV_KVS_ZKA_Korrektur.X83
+1;D;36,0;Mona;gaeb;LV_KVS_ZKA_Korrektur.X83
+1;Zutrittskontrolle Grundsoftware;1,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+2;Pentest Zertifikat für das geamte Softwarepaket.;1,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+3;SW-Modul Mandantenverwaltung mit gemeinsamer Hardware;1,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+4;SW-Modul REST WEB Service API Schnittstelle;1,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+5;Abfrage nach DSGVO zur Verwendung der;1,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+6;Integration Manager Import/Export GUI;1,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+7;SW-Modul Zutrittsworkflow;1,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+8;SW-Modul Türüberwachung-Visualisierung;1,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+9;SW-Modul Listenkonfigurator;1,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+10;SW-Modul Raum- und Arbeitsplatzverwaltung;1,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+11;SW-Modul, Funkanbindung;1,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+12;Softwaremodul zur Freigabe von Stockwerken eines Aufzuges für einzelne Personen. Dabei können der Person einzelne Stockwerke oder alle verfügbaren Stockwerke oder keine Stockwerke als Zutrittsberechtigung zugeordnet werden.;1,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+1;MIFARE DESFire EV3 8K Transponderanhänger;1700,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+2;ZKZ für Wandmontage;8,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+3;ZKZ Hutschiene wie vorgenannter Zutrittscontroller (Zutrittskontrollzentrale) jedoch für Hutschienenmontage für 24 V/DC Anschluss, für Ethernetanschluss, mit 1xRS485 Schnittstelle zum Anschluss von mindestens 15x Zutrittslesern;2,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+4;Erweiterungsmodul Outputmodul;1,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+5;Gehäuse für ZKZ/Zutrittscontroller Hutschiene;1,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+6;Zutrittsleser IP54;26,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+7;Zutrittsleser IP54, Einbau in Behnke-Sprechanlage System 20;10,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+8;Zutrittsleser IP66;6,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+9;Aufputzrahmen für Zutrittsleser IP66, erhöhter Aufputz-/Distanzrahmen für Zutrittsleser IP66 zur komfortablen Montage des Zutrittsleser IP66 auf der Wand oder Fronten aus Metall gemäß Bohrraster des angebotenen Lesers inkl. der Herstellung der Kabeldurchführung;6,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+10;Digitalzylinder Standard 40x40;250,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+11;Ausführung wie zuvor beschrieben, jedoch Digitalzylinder mit Antipanikfunktion, zum Einbau in ein SVP-Schloss (selbst verriegelbares Panikschloss);1,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+12;Digitalzylinder mit Hebelverschluss;4,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+13;Digitalzylinder Dual beidseitig 40x40;1,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+14;Digitalzylinder als Halbzylinder 30x10;6,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+15;Anpassung der Digitalschließzylinder;1,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+16;Wireless Gateway, Stromversorgung über PoE (Power over Ethernet);64,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+17;Batteriewechsel- und Demontagewerkzeug;1,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+18;Tischleser mit USB-Anschluss;1,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+19;Programmiergerät Set;1,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+20;Programmier- und/oder Sicherheitskarten;1,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+1;Installation ZKZ/Zutrittscontroller;8,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+2;Installation ZKZ/Zutrittscontroller;2,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+3;Demontage der ZKZ, Bestandssystem;9,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+4;Montage Leser an den Standorten im Haus;42,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+5;Montage und betriebsbereite Anschaltung der Wireless Gateway.;64,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+6;Aufmaß der Türblätter mit Beschlägen;260,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+7;Digitale Schließzylinder montieren in den Türen;260,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+8;Installation Software auf Server;1,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+9;Inbetriebnahme;376,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+10;Schulung Mitarbeiter;2,0;Tage;gaeb;LV_KVS_ZKA_Korrektur.X81
+11;Administrator Schulung;1,0;Tage;gaeb;LV_KVS_ZKA_Korrektur.X81
+12;Reise- und Transportkosten;1,0;Psch;gaeb;LV_KVS_ZKA_Korrektur.X81
+13;Projektleitung des Auftragnehmers;1,0;Psch;gaeb;LV_KVS_ZKA_Korrektur.X81
+1;Dokumentation;1,0;Paus;gaeb;LV_KVS_ZKA_Korrektur.X81
+2;Projektleiter/Bauleiter;10,0;h;gaeb;LV_KVS_ZKA_Korrektur.X81
+3;Systemtechniker/Programmierer;15,0;h;gaeb;LV_KVS_ZKA_Korrektur.X81
+4;Fachmonteur;15,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+1;"Zutrittskontrollzentrale (ZKZ)19ldquo; Rackversion";4,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+2;Zutrittsleser IP54;18,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+3;Zutrittsleser IP54, Einbau in Behnke-Sprechanlage System 20;19,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+4;Zutrittsleser IP54 mit PIN-Codetastatur;4,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+5;Digitalzylinder Standard 40x40;223,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+6;Ausführung wie zuvor beschrieben, jedoch Digitalzylinder mit Antipanikfunktion, zum Einbau in ein SVP-Schloss (selbst verriegelbares Panikschloss);1,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+7;Digitalzylinder Dual beidseitig 40x40;1,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+8;Batteriewechsel- und Demontagewerkzeug;1,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+9;Anpassung der Digitalschließzylinder;1,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+10;Wireless Gateway, Stromversorgung über PoE (Power over Ethernet);47,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+11;Tischleser mit USB-Anschluss;1,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+12;Programmier- und/oder Sicherheitskarten;1,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+13;Programmiergerät-Set;1,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+1;Installation ZKZ/Zutrittscontroller;4,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+2;Installation ZKZ/Zutrittscontroller;1,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+3;Demontage der ZKZ, Bestandssystem;5,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+4;Montage Leser an den Standorten im Haus;41,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+5;Busdurchschaltung;3,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+6;Busdurchschaltung;2,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+7;Busdurchschaltung;2,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+8;Montage und betriebsbereite Anschaltung der Wireless-Gateway;47,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+9;Aufmaß der Türblätter mit Beschlägen;223,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+10;Digitale Schließzylinder montieren in den Türen;223,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+11;Inbetriebnahme;318,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+12;Schulung Mitarbeiter;2,0;Tage;gaeb;LV_KVS_ZKA_Korrektur.X81
+13;Reise- und Transportkosten;1,0;Psch;gaeb;LV_KVS_ZKA_Korrektur.X81
+14;Projektleitung des Auftragnehmers;1,0;Psch;gaeb;LV_KVS_ZKA_Korrektur.X81
+1;Dokumentation;1,0;Psch;gaeb;LV_KVS_ZKA_Korrektur.X81
+2;Projektleiter/Bauleiter;10,0;h;gaeb;LV_KVS_ZKA_Korrektur.X81
+3;Systemtechniker/Programmierer;15,0;h;gaeb;LV_KVS_ZKA_Korrektur.X81
+4;Fachmonteur;15,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+1;"Zutrittskontrollzentrale (ZKZ)19ldquo; Rackversion";3,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+2;ZKZ für Wandmontage;2,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+3;Zutrittsleser IP54;23,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+4;Zutrittsleser IP54, Einbau in Behnke-Sprechanlage System 20;12,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+5;Zutrittsleser IP54 mit PIN-Codetastatur;1,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+6;Digitalzylinder Standard 40x40;210,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+7;Ausführung wie zuvor beschrieben, jedoch Digitalzylinder mit Antipanikfunktion, zum Einbau in ein SVP-Schloss (selbst verriegelbares Panikschloss);1,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+8;Anpassung der Digitalschließzylinder;1,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+9;Wireless Gateway, Stromversorgung über PoE (Power over Ethernet);87,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+10;Batteriewechsel- und Demontagewerkzeug;1,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+11;Tischleser mit USB-Anschluss;1,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+12;Programmier- und/oder Sicherheitskarten;1,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+13;Programmiergerät-Set;1,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+1;Installation ZKZ/Zutrittscontroller;3,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+2;Installation ZKZ/Zutrittscontroller;2,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+3;Demontage der ZKZ, Bestandssystem;11,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+4;Busdurchschaltung Haus 2/Verbinderbau, 2.OG;1,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+5;Busdurchschaltung Haus 1;4,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+6;Montage Leser an den Standorten im Haus;36,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+7;Montage und betriebsbereite Anschaltung der Wireless Gateway;87,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+8;Aufmaß der Türblätter mit Beschlägen;210,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+9;Digitale Schließzylinder montieren in den Türen;210,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+10;Inbetriebnahme;338,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+11;Schulung Mitarbeiter;2,0;Tage;gaeb;LV_KVS_ZKA_Korrektur.X81
+12;Reise- und Transportkosten;1,0;Psch;gaeb;LV_KVS_ZKA_Korrektur.X81
+13;Projektleitung des Auftragnehmers;1,0;Psch;gaeb;LV_KVS_ZKA_Korrektur.X81
+1;Dokumentation;1,0;Psch;gaeb;LV_KVS_ZKA_Korrektur.X81
+2;Projektleiter/Bauleiter;10,0;h;gaeb;LV_KVS_ZKA_Korrektur.X81
+3;Systemtechniker/Programmierer;15,0;h;gaeb;LV_KVS_ZKA_Korrektur.X81
+4;Fachmonteur;15,0;St;gaeb;LV_KVS_ZKA_Korrektur.X81
+1;D;36,0;Mona;gaeb;LV_KVS_ZKA_Korrektur.X81
+1;Zutrittskontrolle Grundsoftware;1,0;St;gaeb;LV_KVS_ZKZ.X81
+2;Pentest Zertifikat für das geamte Softwarepaket.;1,0;St;gaeb;LV_KVS_ZKZ.X81
+3;SW-Modul Mandantenverwaltung mit gemeinsamer Hardware;1,0;St;gaeb;LV_KVS_ZKZ.X81
+4;SW-Modul REST WEB Service API Schnittstelle;1,0;St;gaeb;LV_KVS_ZKZ.X81
+5;Abfrage nach DSGVO zur Verwendung der;1,0;St;gaeb;LV_KVS_ZKZ.X81
+6;Integration Manager Import/Export GUI;1,0;St;gaeb;LV_KVS_ZKZ.X81
+7;SW-Modul Zutrittsworkflow;1,0;St;gaeb;LV_KVS_ZKZ.X81
+8;SW-Modul Türüberwachung-Visualisierung;1,0;St;gaeb;LV_KVS_ZKZ.X81
+9;SW-Modul Listenkonfigurator;1,0;St;gaeb;LV_KVS_ZKZ.X81
+10;SW-Modul Raum- und Arbeitsplatzverwaltung;1,0;St;gaeb;LV_KVS_ZKZ.X81
+11;SW-Modul, Funkanbindung;1,0;St;gaeb;LV_KVS_ZKZ.X81
+12;Softwaremodul zur Freigabe von Stockwerken eines Aufzuges für einzelne Personen. Dabei können der Person einzelne Stockwerke oder alle verfügbaren Stockwerke oder keine Stockwerke als Zutrittsberechtigung zugeordnet werden.;1,0;St;gaeb;LV_KVS_ZKZ.X81
+1;MIFARE DESFire EV3 8K Transponderanhänger;1700,0;St;gaeb;LV_KVS_ZKZ.X81
+2;ZKZ für Wandmontage;8,0;St;gaeb;LV_KVS_ZKZ.X81
+3;ZKZ Hutschiene wie vorgenannter Zutrittscontroller (Zutrittskontrollzentrale) jedoch für Hutschienenmontage für 24 V/DC Anschluss, für Ethernetanschluss, mit 1xRS485 Schnittstelle zum Anschluss von mindestens 15x Zutrittslesern;2,0;St;gaeb;LV_KVS_ZKZ.X81
+4;Erweiterungsmodul Outputmodul;1,0;St;gaeb;LV_KVS_ZKZ.X81
+5;Gehäuse für ZKZ/Zutrittscontroller Hutschiene;1,0;St;gaeb;LV_KVS_ZKZ.X81
+6;Zutrittsleser IP54;26,0;St;gaeb;LV_KVS_ZKZ.X81
+7;Zutrittsleser IP54, Einbau in Behnke-Sprechanlage System 20;10,0;St;gaeb;LV_KVS_ZKZ.X81
+8;Zutrittsleser IP66;6,0;St;gaeb;LV_KVS_ZKZ.X81
+9;Aufputzrahmen für Zutrittsleser IP66, erhöhter Aufputz-/Distanzrahmen für Zutrittsleser IP66 zur komfortablen Montage des Zutrittsleser IP66 auf der Wand oder Fronten aus Metall gemäß Bohrraster des angebotenen Lesers inkl. der Herstellung der Kabeldurchführung;6,0;St;gaeb;LV_KVS_ZKZ.X81
+10;Digitalzylinder Standard 40x40;250,0;St;gaeb;LV_KVS_ZKZ.X81
+11;Ausführung wie zuvor beschrieben, jedoch Digitalzylinder mit Antipanikfunktion, zum Einbau in ein SVP-Schloss (selbst verriegelbares Panikschloss);1,0;St;gaeb;LV_KVS_ZKZ.X81
+12;Digitalzylinder mit Hebelverschluss;4,0;St;gaeb;LV_KVS_ZKZ.X81
+13;Digitalzylinder Dual beidseitig 40x40;1,0;St;gaeb;LV_KVS_ZKZ.X81
+14;Digitalzylinder als Halbzylinder 30x10;6,0;St;gaeb;LV_KVS_ZKZ.X81
+15;Anpassung der Digitalschließzylinder;1,0;St;gaeb;LV_KVS_ZKZ.X81
+16;Wireless Gateway, Stromversorgung über PoE (Power over Ethernet);64,0;St;gaeb;LV_KVS_ZKZ.X81
+17;Batteriewechsel- und Demontagewerkzeug;1,0;St;gaeb;LV_KVS_ZKZ.X81
+18;Tischleser mit USB-Anschluss;1,0;St;gaeb;LV_KVS_ZKZ.X81
+19;Programmiergerät Set;1,0;St;gaeb;LV_KVS_ZKZ.X81
+20;Programmier- und/oder Sicherheitskarten;1,0;St;gaeb;LV_KVS_ZKZ.X81
+1;Installation ZKZ/Zutrittscontroller;8,0;St;gaeb;LV_KVS_ZKZ.X81
+2;Installation ZKZ/Zutrittscontroller;2,0;St;gaeb;LV_KVS_ZKZ.X81
+3;Demontage der ZKZ, Bestandssystem;9,0;St;gaeb;LV_KVS_ZKZ.X81
+4;Montage Leser an den Standorten im Haus;42,0;St;gaeb;LV_KVS_ZKZ.X81
+5;Montage und betriebsbereite Anschaltung der Wireless Gateway.;64,0;St;gaeb;LV_KVS_ZKZ.X81
+6;Aufmaß der Türblätter mit Beschlägen;260,0;St;gaeb;LV_KVS_ZKZ.X81
+7;Digitale Schließzylinder montieren in den Türen;260,0;St;gaeb;LV_KVS_ZKZ.X81
+8;Installation Software auf Server;1,0;St;gaeb;LV_KVS_ZKZ.X81
+9;Inbetriebnahme;376,0;St;gaeb;LV_KVS_ZKZ.X81
+10;Schulung Mitarbeiter;2,0;Tage;gaeb;LV_KVS_ZKZ.X81
+11;Administrator Schulung;1,0;Tage;gaeb;LV_KVS_ZKZ.X81
+12;Reise- und Transportkosten;1,0;Psch;gaeb;LV_KVS_ZKZ.X81
+13;Projektleitung des Auftragnehmers;1,0;Psch;gaeb;LV_KVS_ZKZ.X81
+1;Dokumentation;0,0;;gaeb;LV_KVS_ZKZ.X81
+2;Projektleiter/Bauleiter;10,0;h;gaeb;LV_KVS_ZKZ.X81
+3;Systemtechniker/Programmierer;15,0;h;gaeb;LV_KVS_ZKZ.X81
+4;Fachmonteur;15,0;St;gaeb;LV_KVS_ZKZ.X81
+1;"Zutrittskontrollzentrale (ZKZ)19ldquo; Rackversion";4,0;St;gaeb;LV_KVS_ZKZ.X81
+2;Zutrittsleser IP54;18,0;St;gaeb;LV_KVS_ZKZ.X81
+3;Zutrittsleser IP54, Einbau in Behnke-Sprechanlage System 20;19,0;St;gaeb;LV_KVS_ZKZ.X81
+4;Zutrittsleser IP54 mit PIN-Codetastatur;4,0;St;gaeb;LV_KVS_ZKZ.X81
+5;Digitalzylinder Standard 40x40;223,0;St;gaeb;LV_KVS_ZKZ.X81
+6;Ausführung wie zuvor beschrieben, jedoch Digitalzylinder mit Antipanikfunktion, zum Einbau in ein SVP-Schloss (selbst verriegelbares Panikschloss);1,0;St;gaeb;LV_KVS_ZKZ.X81
+7;Digitalzylinder Dual beidseitig 40x40;1,0;St;gaeb;LV_KVS_ZKZ.X81
+8;Batteriewechsel- und Demontagewerkzeug;1,0;St;gaeb;LV_KVS_ZKZ.X81
+9;Anpassung der Digitalschließzylinder;1,0;St;gaeb;LV_KVS_ZKZ.X81
+10;Wireless Gateway, Stromversorgung über PoE (Power over Ethernet);47,0;St;gaeb;LV_KVS_ZKZ.X81
+11;Tischleser mit USB-Anschluss;1,0;St;gaeb;LV_KVS_ZKZ.X81
+12;Programmier- und/oder Sicherheitskarten;1,0;St;gaeb;LV_KVS_ZKZ.X81
+13;Programmiergerät-Set;1,0;St;gaeb;LV_KVS_ZKZ.X81
+1;Installation ZKZ/Zutrittscontroller;4,0;St;gaeb;LV_KVS_ZKZ.X81
+2;Installation ZKZ/Zutrittscontroller;1,0;St;gaeb;LV_KVS_ZKZ.X81
+3;Demontage der ZKZ, Bestandssystem;5,0;St;gaeb;LV_KVS_ZKZ.X81
+4;Montage Leser an den Standorten im Haus;41,0;St;gaeb;LV_KVS_ZKZ.X81
+5;Busdurchschaltung;3,0;St;gaeb;LV_KVS_ZKZ.X81
+6;Busdurchschaltung;2,0;St;gaeb;LV_KVS_ZKZ.X81
+7;Busdurchschaltung;2,0;St;gaeb;LV_KVS_ZKZ.X81
+8;Montage und betriebsbereite Anschaltung der Wireless-Gateway;47,0;St;gaeb;LV_KVS_ZKZ.X81
+9;Aufmaß der Türblätter mit Beschlägen;223,0;St;gaeb;LV_KVS_ZKZ.X81
+10;Digitale Schließzylinder montieren in den Türen;223,0;St;gaeb;LV_KVS_ZKZ.X81
+11;Inbetriebnahme;318,0;St;gaeb;LV_KVS_ZKZ.X81
+12;Schulung Mitarbeiter;2,0;Tage;gaeb;LV_KVS_ZKZ.X81
+13;Reise- und Transportkosten;1,0;Psch;gaeb;LV_KVS_ZKZ.X81
+14;Projektleitung des Auftragnehmers;1,0;Psch;gaeb;LV_KVS_ZKZ.X81
+1;Dokumentation;1,0;Psch;gaeb;LV_KVS_ZKZ.X81
+2;Projektleiter/Bauleiter;10,0;h;gaeb;LV_KVS_ZKZ.X81
+3;Systemtechniker/Programmierer;15,0;h;gaeb;LV_KVS_ZKZ.X81
+4;Fachmonteur;15,0;St;gaeb;LV_KVS_ZKZ.X81
+1;"Zutrittskontrollzentrale (ZKZ)19ldquo; Rackversion";3,0;St;gaeb;LV_KVS_ZKZ.X81
+2;ZKZ für Wandmontage;2,0;St;gaeb;LV_KVS_ZKZ.X81
+3;Zutrittsleser IP54;23,0;St;gaeb;LV_KVS_ZKZ.X81
+4;Zutrittsleser IP54, Einbau in Behnke-Sprechanlage System 20;12,0;St;gaeb;LV_KVS_ZKZ.X81
+5;Zutrittsleser IP54 mit PIN-Codetastatur;1,0;St;gaeb;LV_KVS_ZKZ.X81
+6;Digitalzylinder Standard 40x40;210,0;St;gaeb;LV_KVS_ZKZ.X81
+7;Ausführung wie zuvor beschrieben, jedoch Digitalzylinder mit Antipanikfunktion, zum Einbau in ein SVP-Schloss (selbst verriegelbares Panikschloss);1,0;St;gaeb;LV_KVS_ZKZ.X81
+8;Anpassung der Digitalschließzylinder;1,0;St;gaeb;LV_KVS_ZKZ.X81
+9;Wireless Gateway, Stromversorgung über PoE (Power over Ethernet);87,0;St;gaeb;LV_KVS_ZKZ.X81
+10;Batteriewechsel- und Demontagewerkzeug;1,0;St;gaeb;LV_KVS_ZKZ.X81
+11;Tischleser mit USB-Anschluss;1,0;St;gaeb;LV_KVS_ZKZ.X81
+12;Programmier- und/oder Sicherheitskarten;1,0;St;gaeb;LV_KVS_ZKZ.X81
+13;Programmiergerät-Set;1,0;St;gaeb;LV_KVS_ZKZ.X81
+1;Installation ZKZ/Zutrittscontroller;3,0;St;gaeb;LV_KVS_ZKZ.X81
+2;Installation ZKZ/Zutrittscontroller;2,0;St;gaeb;LV_KVS_ZKZ.X81
+3;Demontage der ZKZ, Bestandssystem;11,0;St;gaeb;LV_KVS_ZKZ.X81
+4;Busdurchschaltung Haus 2/Verbinderbau, 2.OG;1,0;St;gaeb;LV_KVS_ZKZ.X81
+5;Busdurchschaltung Haus 1;4,0;St;gaeb;LV_KVS_ZKZ.X81
+6;Montage Leser an den Standorten im Haus;36,0;St;gaeb;LV_KVS_ZKZ.X81
+7;Montage und betriebsbereite Anschaltung der Wireless Gateway;87,0;St;gaeb;LV_KVS_ZKZ.X81
+8;Aufmaß der Türblätter mit Beschlägen;210,0;St;gaeb;LV_KVS_ZKZ.X81
+9;Digitale Schließzylinder montieren in den Türen;210,0;St;gaeb;LV_KVS_ZKZ.X81
+10;Inbetriebnahme;338,0;St;gaeb;LV_KVS_ZKZ.X81
+11;Schulung Mitarbeiter;2,0;Tage;gaeb;LV_KVS_ZKZ.X81
+12;Reise- und Transportkosten;1,0;Psch;gaeb;LV_KVS_ZKZ.X81
+13;Projektleitung des Auftragnehmers;1,0;Psch;gaeb;LV_KVS_ZKZ.X81
+1;Dokumentation;1,0;Psch;gaeb;LV_KVS_ZKZ.X81
+2;Projektleiter/Bauleiter;10,0;h;gaeb;LV_KVS_ZKZ.X81
+3;Systemtechniker/Programmierer;15,0;h;gaeb;LV_KVS_ZKZ.X81
+4;Fachmonteur;15,0;St;gaeb;LV_KVS_ZKZ.X81
+1;D;36,0;Mona;gaeb;LV_KVS_ZKZ.X81

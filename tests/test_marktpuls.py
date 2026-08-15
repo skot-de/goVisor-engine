@@ -993,13 +993,37 @@ def test_simap_bricht_ohne_zugangsdaten_ab_statt_anonym_zu_laufen():
     assert '.secrets" / "simap.txt"' in S, "Zugangsdaten gehören nach .secrets/, nicht in den Code"
 
 
-def test_simap_erkennt_eine_nicht_greifende_sitzung():
-    """Wenn die Anmeldung nicht greift, zeigt simap.ch weiter „registriert und eingeloggt".
-    Das als `leer` zu führen würde eine kaputte Sitzung wie eine Vergabe ohne Unterlagen
-    aussehen lassen — und niemand käme auf die Idee, die Anmeldung zu prüfen."""
+def test_simap_belegt_die_anmeldung_am_token_nicht_an_der_url():
+    """Die Anmeldung gilt erst als geglückt, wenn ein **Zugriffstoken** vorliegt.
+
+    Die erste Fassung prüfte stattdessen, ob wir den Keycloak-Pfad verlassen haben — das war
+    ein Fehlalarm: sie meldete „angemeldet", während die Oberfläche weiter einen Login-Knopf
+    zeigte, und der Lauf lief in lauter 401. Gemessen gilt: die `/api/`-Ebene nimmt **kein**
+    Sitzungs-Cookie, nur `Authorization: Bearer`. Der Test hält deshalb die Eigenschaft fest
+    (Beleg = Token), nicht den Weg dorthin.
+    """
     S = (ROOT / "govisor" / "simap_docs.py").read_text(encoding="utf-8")
     assert '"nicht_angemeldet"' in S
-    assert '"/auth/realms/" in pg.url' in S, "fehlgeschlagener Login bleibt auf Keycloak stehen"
+    assert "code_challenge" in S and "authorization_code" in S, "dokumentierter PKCE-Fluss"
+    assert "'Bearer ' + tk" in S, "/api/ braucht ein Token, Cookies genügen nicht"
+    assert '"/auth/realms/" in pg.url' not in S, (
+        "URL-Prüfung als Anmeldebeleg ist ein Fehlalarm — sie meldete Erfolg ohne Sitzung")
+
+
+def test_simap_bekundet_interesse_nur_auf_ausdrueckliche_anweisung():
+    """Die Unterlagen hängen an einer Interessensbekundung — und die ist eine Aussenwirkung.
+
+    `PUT /publications/v1/project/{id}/interest` trägt uns beim Auftraggeber mit Firmenname,
+    Adresse und Zeitstempel in `involved-vendors` ein; er sieht zusätzlich, welche Dateien wir
+    gezogen haben. Auf 889 CH-Vergaben wäre das eine Bieter-Anmeldung bei fast jeder Schweizer
+    Vergabestelle. Der Schritt darf deshalb **nie** stiller Nebeneffekt des Holens sein.
+    """
+    S = (ROOT / "govisor" / "simap_docs.py").read_text(encoding="utf-8")
+    assert "interesse: bool = False" in S, "Standard ist AUS"
+    assert '"interesse_noetig"' in S, "403 ohne Freigabe wird ehrlich benannt, nicht geholt"
+    assert "--interesse-bekunden" in S
+    # Ein „Probelauf", der eine bleibende Anmeldung hinterlässt, wäre das falsche Wort.
+    assert "schliessen sich aus" in S
 
 
 def _simap():
@@ -1008,6 +1032,233 @@ def _simap():
         sys.path.insert(0, str(ROOT))
     from govisor import simap_docs
     return simap_docs
+
+
+def test_simap_entfernt_nur_abgeschlossene_und_verschont_fremde_leads():
+    """Der Filter darf NUR vergebene simap-Vorgänge treffen — sonst nichts.
+
+    Beim ersten Lauf löschte er **859 statt 3** Zeilen. Grund: `_simap_pid()` gibt bei jeder
+    Nicht-simap-URL NULL zurück, `NULL IN (…)` ist NULL, und `NOT (TRUE AND NULL)` ist NULL —
+    die Zeile fällt also aus dem `WHERE`. Getroffen hat es jeden offenen Lead ohne
+    simap-Link, also gerade die, mit denen der Filter nichts zu tun hat.
+
+    Bösartig war, dass die Zählabfrage schwieg: sie fragte positiv (`WHERE trifft`), und dort
+    zählt NULL nicht mit. Zählung und Löschung waren zwei verschiedene Aussagen. Dieser Test
+    prüft deshalb die **Überlebenden**, nicht die Zahl der Entfernten — eine Zählung, die aus
+    derselben schiefen Bedingung stammt, bestätigt sich sonst selbst.
+    """
+    import duckdb
+
+    from govisor.simap_docs import projekt_id
+
+    con = duckdb.connect()
+    con.create_function("_simap_pid", lambda u: projekt_id(u) or "", ["VARCHAR"], "VARCHAR")
+    con.execute("CREATE TEMP TABLE erledigt(pid VARCHAR)")
+    con.execute("INSERT INTO erledigt VALUES ('d8235438-b3bb-4fd9-b36d-f5467ba1f38f')")
+    con.execute("""CREATE TEMP TABLE le(lead_id VARCHAR, phase VARCHAR, documents_url VARCHAR)""")
+    con.executemany("INSERT INTO le VALUES (?, ?, ?)", [
+        # vergeben, simap → muss weg
+        ("vergeben", "open", "https://www.simap.ch/de/project-detail/"
+                             "d8235438-b3bb-4fd9-b36d-f5467ba1f38f"),
+        # offen, simap, anderes Projekt → bleibt
+        ("offen_simap", "open", "https://www.simap.ch/de/project-detail/"
+                                "aaaaaaaa-0000-0000-0000-000000000000"),
+        # offen, TED-CHE ohne simap-Link → bleibt (das war der Kollateralschaden)
+        ("offen_ted", "open", "https://ted.europa.eu/udl?uri=TED:NOTICE:1-2026"),
+        # offen, gar keine URL → bleibt (NULL ist kein Treffer)
+        ("offen_ohne_url", "open", None),
+        # dasselbe Projekt, aber Auslauf-Lead → bleibt, der Filter greift nur bei 'open'
+        ("auslauf", "expiring", "https://www.simap.ch/de/project-detail/"
+                                "d8235438-b3bb-4fd9-b36d-f5467ba1f38f"),
+    ])
+    TRIFFT = ("phase = 'open' AND coalesce(_simap_pid(documents_url) "
+              "IN (SELECT pid FROM erledigt), FALSE)")
+    ueberlebt = {r[0] for r in
+                 con.execute(f"SELECT lead_id FROM le WHERE NOT ({TRIFFT})").fetchall()}
+    con.close()
+    assert ueberlebt == {"offen_simap", "offen_ted", "offen_ohne_url", "auslauf"}, (
+        f"Filter trifft die Falschen: überlebt haben {sorted(ueberlebt)}")
+
+
+def test_registry_addiert_die_beiden_ebenen_nicht():
+    """Dokument-Abrufer dürfen die Quellen-Zahlen NICHT aufblähen.
+
+    Die Registry argumentiert in ihrem eigenen Docstring gegen die Vanity-Metrik „200+
+    Quellen". Die 13 Dokument-Abrufer einfach mitzuzählen wäre genau das: aus 8 Connectoren
+    würden 21, ohne dass eine einzige Bekanntmachung mehr hereinkäme. Und in `dach_matrix()`
+    gewänne sonst ein Abrufer die Zeile „CH unterschwellig", obwohl er null Bekanntmachungen
+    liefert — die Matrix behauptete Abdeckung, wo keine ist.
+    """
+    from govisor import sources
+
+    s = sources.summary()
+    assert s["connectors"] == len(sources.CONNECTORS)
+    assert s["quellen_total"] == len(sources.bekanntmachungen())
+    assert s["unterlagen_total"] == len(sources.unterlagen()) == len(sources.DOC_REGISTRY)
+    # Die beiden Mengen überschneiden sich nicht und ergeben zusammen die Registry.
+    assert not ({x.id for x in sources.bekanntmachungen()}
+                & {x.id for x in sources.unterlagen()})
+    assert len(sources.bekanntmachungen()) + len(sources.unterlagen()) == len(sources.REGISTRY)
+    # Kein Abrufer taucht in der Bekanntmachungs-Matrix auf.
+    namen = {n for _, _, n, _ in sources.dach_matrix()}
+    assert not (namen & {x.name for x in sources.unterlagen()})
+
+
+def test_registry_dokument_eintraege_sind_vollstaendig():
+    """Jeder Abrufer trägt Ertrag, Modul und einen bekannten Connector — und das Modul gibt es.
+
+    Ein Eintrag ohne `modul` wäre Dekoration: man könnte nicht nachsehen, wer ihn ausführt.
+    Ein Tippfehler im Modulnamen fällt sonst erst auf, wenn jemand ihn braucht.
+    """
+    import importlib.util
+
+    from govisor import sources
+
+    for s in sources.unterlagen():
+        assert s.ertrag in sources.ERTRAEGE, f"{s.id}: Ertrag '{s.ertrag}'"
+        assert s.connector in sources.DOC_CONNECTORS, f"{s.id}: Connector '{s.connector}'"
+        assert s.status in sources.STATUSES, f"{s.id}: Status '{s.status}'"
+        assert s.modul.startswith("govisor."), f"{s.id}: Modul fehlt"
+        assert importlib.util.find_spec(s.modul) is not None, f"{s.id}: {s.modul} gibt es nicht"
+    # Jeder deklarierte Doc-Connector wird auch benutzt — sonst verrottet die Liste.
+    benutzt = {s.connector for s in sources.unterlagen()}
+    assert benutzt == set(sources.DOC_CONNECTORS), (
+        f"unbenutzt: {set(sources.DOC_CONNECTORS) - benutzt}")
+
+
+def test_ausschreibungsblatt_holt_je_vergabe_eine_frische_sitzung():
+    """`/lookup/download/getZip` trägt KEINE Kennung — es kennt die Vergabe aus der Sitzung.
+
+    Das ist die eine Eigenschaft, an der dieser Abrufer still falsch werden kann: wer den
+    Browser-Kontext über mehrere Vergaben wiederverwendet, bekommt beim zweiten Vorgang die
+    Unterlagen des ersten — mit korrektem Dateinamen, korrekter Grösse, ohne Fehler. Ein
+    Datenschaden, den keine Statuszeile zeigt. Deshalb: `new_context` INNERHALB der Schleife.
+    """
+    S = (ROOT / "govisor" / "docfetch_ausschreibungsblatt.py").read_text(encoding="utf-8")
+    rumpf = S.split('"""', 2)[2]
+    schleife = rumpf[rumpf.index("for i, (lead_id, url, ziel) in enumerate"):]
+    assert "b.new_context(" in schleife, (
+        "frischer Kontext je Vergabe — sonst liefert getZip die vorige Ausschreibung")
+    assert "ctx.close()" in schleife
+    # Und: aufgelöst statt geklickt (Consent-Banner fängt Klicks ab).
+    assert "redirect: 'follow'" in rumpf and "initiateDownload" in rumpf
+
+
+def test_bimedien_liest_die_zugeklappten_links_statt_zu_klicken():
+    """Die Download-Links stehen im DOM, nur unsichtbar — Klicken läuft in einen Timeout.
+
+    Beim ersten Anlauf hielt ich das Portal für gesperrt, weil `ElementHandle.click` auf den
+    Reiter „Unterlagen" 30 s lang nichts tat. Die `href`-Attribute waren die ganze Zeit da.
+    Der Test hält fest, dass der Abrufer die Adressen ausliest und den Sammel-Link nimmt.
+    """
+    S = (ROOT / "govisor" / "docfetch_bimedien.py").read_text(encoding="utf-8")
+    rumpf = S.split('"""', 2)[2]
+    assert "getAttribute('href')" in rumpf, "Links werden gelesen"
+    assert "/api/Part/" in rumpf and "/api/Document/" in rumpf
+    assert ".click()" not in rumpf.replace("a.click()", ""), (
+        "kein Klick auf Seitenelemente — nur der synthetische Anker für den Download")
+
+
+def test_neue_abrufer_erkennen_ihre_hosts_trennscharf():
+    """Jedes Prädikat muss NUR seinen Host treffen — sonst greifen zwei Abrufer dieselben
+    Leads ab und das Manifest zählt doppelt."""
+    from govisor.docfetch_ausschreibungsblatt import ist_ausschreibungsblatt, kennung as k_dab
+    from govisor.docfetch_bimedien import ist_bimedien, kennung as k_bi
+
+    DAB = "https://www.deutsches-ausschreibungsblatt.de/VN/X-SWDEL-SWD-2026-0015"
+    BI = "https://bi-medien.de/ausschreibungsdienste/ausschreibungen/D462233471"
+    assert ist_ausschreibungsblatt(DAB) and not ist_bimedien(DAB)
+    assert ist_bimedien(BI) and not ist_ausschreibungsblatt(BI)
+    assert k_dab(DAB) == "X-SWDEL-SWD-2026-0015"
+    assert k_bi(BI) == "D462233471"
+    # Fremde und kaputte URLs geben None, nicht irgendetwas Halbes
+    for u in (None, "", "https://www.vergabe24.de/vergabeunterlagen/54321-Tender-abc",
+              "https://www.deutsches-ausschreibungsblatt.de/", "https://bi-medien.de/"):
+        assert k_dab(u) is None and k_bi(u) is None, u
+
+
+def test_evergabe_online_normalisiert_beide_urlformen_und_meidet_gesperrtes():
+    """Beide URL-Formen tragen dieselbe `id` — der Umweg über die Vorgangsseite entfällt.
+
+    Im Bestand: 519× `tenderdocuments.html?id=N`, 512× `tenderdetails.html?id=N`. Statt auf
+    der Detailseite den Knopf „Ausschreibungsunterlagen einsehen" zu suchen, wird schlicht
+    auf die Unterlagenseite normalisiert — ein Seitenaufruf weniger je Vergabe.
+
+    ⚠ `/tenderer/…` bleibt aussen vor: die `robots.txt` sperrt diesen Zweig ausdrücklich.
+    Es sind nur 2 von 1.034 Leads, aber die Regel gehört an eine Stelle, nicht in den Kopf.
+    """
+    from govisor.docfetch_evergabe_online import ist_evergabe_online, unterlagen_url
+
+    Z = "https://www.evergabe-online.de/tenderdocuments.html?id=823901"
+    assert unterlagen_url("https://www.evergabe-online.de/tenderdocuments.html?id=823901") == Z
+    assert unterlagen_url("https://www.evergabe-online.de/tenderdetails.html?id=823901") == Z
+    assert unterlagen_url("https://www.evergabe-online.de/tenderdetails.html?7&id=823901") == Z
+    # robots.txt-Sperre und Müll geben None, nicht irgendetwas Halbes
+    assert unterlagen_url(
+        "https://www.evergabe-online.de/tenderer/awardingauthorityinfo.html?0&id=45") is None
+    assert unterlagen_url("https://www.evergabe-online.de") is None
+    assert unterlagen_url("https://www.evergabe.de/unterlagen/xy") is None
+    assert unterlagen_url(None) is None
+    assert ist_evergabe_online("https://www.evergabe-online.de/x") is True
+    assert ist_evergabe_online("https://www.evergabe.de/x") is False
+
+
+def test_evergabe_online_liest_den_zip_link_statt_ihn_zu_bauen():
+    """Der ZIP-Link trägt Wicket-Sitzungszustand — er ist nicht konstruierbar.
+
+    Die Form ist `?0--documentsTableContainer-zipDownloadButton&id=…`; die führende Zahl
+    ist ein Versionszähler der Sitzung. Eine selbst zusammengesetzte URL läuft ins Leere.
+    Der Test hält fest, dass der Code den `href` aus der gerenderten Seite liest und ihn
+    nirgends selbst zusammensetzt — genau die Abkürzung, die man später „aufräumend"
+    einbaut und die dann still nichts mehr holt.
+    """
+    S = (ROOT / "govisor" / "docfetch_evergabe_online.py").read_text(encoding="utf-8")
+    assert "zipDownloadButton" not in S.split('"""', 2)[2], (
+        "der Link darf nur gelesen werden — im Code steht er nur im Doktext")
+    assert "a.href" in S and "querySelectorAll('a')" in S, (
+        "der Knopf wird im DOM gesucht und sein href gelesen")
+    # Und die gesperrten Dienste bleiben unangetastet.
+    rumpf = S.split('"""', 2)[2]
+    for gesperrt in ("/xvergabe/services/", "/axis2/services/", "/ws-suche/"):
+        assert gesperrt not in rumpf, f"{gesperrt} ist laut robots.txt gesperrt"
+
+
+def test_simap_dokument_flagge_nimmt_die_juengste_publikation():
+    """`hasProjectDocuments` hängt an der Publikation, nicht am Projekt — jüngste gewinnt.
+
+    Der naheliegende Griff (Maximum über alle Publikationen) ist messbar schlechter: gegen
+    928 einzeln abgefragte Wahrheitswerte 33 Fehlalarme statt 12. Typischer Fall: die alte
+    Ausschreibung hatte Unterlagen, die aktuelle Zuschlagsmeldung hat keine — mit dem Maximum
+    behaupteten wir „Unterlagen vorhanden", wo längst nichts mehr zu holen ist.
+
+    Ausserdem festgehalten: fehlt das simap-Geschwister ganz, bleibt der bisherige Wert
+    stehen (`coalesce`) — die Brücke darf nichts überschreiben, was sie nicht weiss.
+    """
+    import duckdb
+
+    from govisor.simap_docs import projekt_id
+
+    con = duckdb.connect()
+    con.create_function("_simap_pid", lambda u: projekt_id(u) or "", ["VARCHAR"], "VARCHAR")
+    P = "https://www.simap.ch/de/project-detail/"
+    ALT, NEU = "aaaaaaaa-0000-0000-0000-000000000001", "bbbbbbbb-0000-0000-0000-000000000002"
+    con.execute("CREATE TEMP TABLE flagge(pid VARCHAR, hat BOOLEAN)")
+    con.executemany("INSERT INTO flagge VALUES (?, ?)", [(ALT, False), (NEU, True)])
+    con.execute("CREATE TEMP TABLE le(lead_id VARCHAR, documents_url VARCHAR, "
+                "has_documents BOOLEAN)")
+    con.executemany("INSERT INTO le VALUES (?, ?, ?)", [
+        ("vergeben_keine_docs", P + ALT, True),   # jüngste sagt nein → wird false
+        ("laufend_mit_docs",    P + NEU, False),  # jüngste sagt ja  → wird true
+        ("kein_geschwister",    P + "cccccccc-0000-0000-0000-000000000003", True),
+        ("gar_kein_simap",      "https://ted.europa.eu/x", True),
+        ("ohne_url",            None, False),
+    ])
+    got = dict(con.execute("""
+        SELECT l.lead_id, coalesce(f.hat, l.has_documents)
+        FROM le l LEFT JOIN flagge f ON f.pid = _simap_pid(l.documents_url)""").fetchall())
+    con.close()
+    assert got == {"vergeben_keine_docs": False, "laufend_mit_docs": True,
+                   "kein_geschwister": True, "gar_kein_simap": True, "ohne_url": False}, got
 
 
 def test_simap_projekt_id_ohne_netzaufruf():

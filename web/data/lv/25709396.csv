@@ -1,0 +1,124 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+001;Vorschaltgefäß/ Vakuumbehälter-Hebeanlage;1,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+002;Vakuumpumpen für Erzeugung des Vakuum;2,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+003;Homogenisator-/ Förderpumpen;2,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+004;Stahlrahmenkonstruktion;2,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+005;Kompensator;2,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+006;Kompensator;2,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+007;Auffang-/ Abklingbehälter;10,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+008;Auftriebssicherung;10,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+009;TÜV-Abnahme;10,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+010;Umflutungssystem DN50;10,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+011;Kontinuierliche Füllstandmessung;11,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+012;Überfüllsicherung nach WHG;11,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+013;Schwimmerschalter;12,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+014;Kreiselpumpe für Fäkalabwasser;11,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+015;Trockenlaufschutz;13,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+016;Stahlrahmenkonstruktion;11,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+017;Manometer;12,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+018;Probe-Entnahme-Vorrichtung;11,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+019;Abmessgefäß;11,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+020;Ansaugeinheit für Frisch- und Mischluft;1,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+021;Luftfilter;2,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+022;Differenzdruckwächter;1,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+023;Elektro-Rippenrohr-Heizkörper (Trockner);1,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+024;Radialgebläse;1,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+025;Filterdruckminderer;1,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+026;Druckschalter;1,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+027;Sicherheitsventil;2,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+028;Leckagesonde nach WHG,;2,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+029;Flachsauger-Sumpfpumpe;2,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+030;Pn. Membran-Absperrventil DN100;2,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+031;Pn. Membran-Absperrventil DN80;4,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+032;Pn. Membran-Absperrventil DN65;11,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+033;Pn. Membran-Absperrventil DN50;48,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+034;Hand-Membran-Absperrventil DN65;5,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+035;Hand-Membran-Absperrventil DN50;18,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+036;Hand-Membran-Absperrventil DN32;11,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+037;Hand-Membran-Absperrventil DN20;14,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+038;Hand-Membran-Absperrventil DN15;7,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+039;Zwei-Wege-Kugelhahn;14,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+040;Rückschlagventil DN50;11,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+041;Rohrleitungssystem;1,0;Psch;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+042;Baugruppe Schaltschrank;3,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+043;Baugruppe Seitenwand;1,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+044;Baugruppe Kabelverschraubung M32;2,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+045;Baugruppe Kabelverschraubung M20;8,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+046;Baugruppe Kabelverschraubung M16;8,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+047;Baugruppe Schaltschrankleuchte;2,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+048;Baugruppe Schaltschranklüfter;1,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+049;Baugruppe Netzeinspeisung;2,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+050;Baugruppe Netzeinspeisung;2,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+051;Baugruppe Sammelschienensystem;2,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+052;Baugruppe Überspannungsschutz,;1,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+053;Baugruppe Netzspannungsüberwachung;2,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+054;Baugruppe Sicherungsautomat;1,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+055;Baugruppe Sicherungsabgang;3,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+056;Baugruppe Spannungsversorgung 24 VDC;2,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+057;Baugruppe elektronischer Schutzschalter;12,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+058;Baugruppe Sicherungsabgang;4,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+059;Baugruppe Motorsteuerung 4 kW;18,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+060;Baugruppe Koppelrelais;20,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+061;Baugruppe Koppelrelais;16,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+062;Meldeleuchten;8,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+063;Taster;2,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+064;Baugruppe Abgang 230 V;55,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+065;Baugruppe Summer;1,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+066;Reihenklemmen 16 mm²;10,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+067;Reihenklemmen 2,5 mm²;570,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+068;Reihenklemmen Quattro;60,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+069;Schirmschellen;16,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+070;Erdungsschiene mit Halter;1,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+071;Baugruppe Switch;1,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+072;Baugruppe Patch Kabel;3,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+073;Freiprogrammierbare Steuereinheit;2,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+074;Profilschienen zur Aufnahme der;2,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+075;Baugruppe Eingabemodul DE;5,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+076;Baugruppe Eingabemodul DA;4,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+077;Baugruppe Eingabemodul AE;3,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+078;Baugruppe Eingabemodul AA;2,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+079;Unterbrechungsfreie Stromversorgung;1,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+080;"19"" Touchscreen-Multipanel, in der";1,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+081;Schaltschränke mit ET200;4,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+082;Niveauschaltgerät;10,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+083;Software-Programmblock;1,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+084;Prozessvisualisierungssoftware;1,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+085;Graphische Bildprogrammierung;25,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+086;Dokumentation Stromlaufplan,;1,0;Psch;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+087;VPN Schnittstelle;1,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+088;BACnet/IP-Kommunikationsprozessor;1,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+089;Anlageninterne Elektro-Montage;1,0;Psch;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+090;Profilstahlkonstruktion;500,0;kg;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+091;Resopalschilder;125,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+092;Farbringe;160,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+093;PET-Schlauch 8/6;320,0;m;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+094;Bestands- und Revisionspläne;1,0;Psch;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+095;Ständige Koordination;1,0;Psch;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+096;Mobil Kran zum Einbringen der Bauteile ins UG;1,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+097;An- und Abreise;6,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+098;An- und Abreise eines Servicetechnikers;8,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+099;Inbetriebnahme;5,0;Psch;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+001;Werk- und Montageplanung;1,0;Psch;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+002;Koordinationmit anderen Gewerken wie Sanitär, Elektro;1,0;Psch;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+003;Stunde(n) eines Facharbeiters für nicht erfasste Leistungen, nach ausdrücklicher Anordnung und gegen besonderen Nachweis, einschließlich aller Lohnnebenkosten.;100,0;h;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+004;Stunde(n) eines Fachhelfers für nicht erfasste Leistungen, nach ausdrücklicher Anordnung und gegen besonderen Nachweis, einschließlich aller Lohnnebenkosten;100,0;h;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+005;Einrichten, Sichern und Vorhalten über die gesamte Ausführungszeit. Ver- und Entsorgungsanschlüsse inkl. Verbrauch sind zu Lasten des AN herzustellen und abzurechnen. (Alternativ: Unabhängige Versorgung mit Strom (Stromaggregat) und Wasser (Wassertank) durch den AN). Maßnahmen zum Auffangen oder fil;1,0;psch;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+006;Fachgerechter Aufbau, Abbau, Vorhaltung und Versetzung von Rollgerüst. Im Bedarfsfall ist ein Spritzschutz aus Kunststofffolie anzubringen und in den EP einzurechnen. (Alternativ: Einsatz einer motorisierten Arbeitsbühne nach Wahl des AN.);116,0;Wo;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+007;Schutzabdeckung von Fenstern, Türen, Bau- und Anlagenteile einschließlich Abkleben, Unterhaltung und späterer Entfernung und Entsorgung. Abdeckung bestehend aus Abdeckfolie und Klebeband nach Wahl des AN;100,0;m²;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+008;Schwierige Einbringung mit Hilfsmitteln wie;8,0;t;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+001;Demontage von 2 Alttanks;2,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+002;Demontage von 3 Alttanks;2,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+003;Demontage der Schaltschränke;1,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+004;Demontage der alten Vakuumtechnik;1,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+005;Demontage der alten Be-/ Entlüftungsanlage der Anlage;1,0;Stüc;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+006;Reinigung von Alttanks und Entsorgung;5,0;St;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+001;innen und außen mit einer hochgradig;100,0;m;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+002;, innen und außen mit einer voll-;60,0;St;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+003;Muffenlose, gusseiserne Abflussform-;35,0;St;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+004;Ringraumdichtung;4,0;St;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+005;Ringraumdichtung;4,0;St;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+006;Sanpress-Rohr;100,0;m;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+001;Einrichtung aller aufzuschaltender Datenpunkte auf der MBE;100,0;St;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+002;Anlagenbilderstellung, Startbild und Topologie;2,0;St;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+003;Anlagenbilderstellung, Dynamische Einblendungen;100,0;St;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83
+004;Lizenzerweiterung DESIGO CC;1,0;psch;gaeb;leistungsbeschreibungen/LV_Sanierung Abklinganlage_V33.X83

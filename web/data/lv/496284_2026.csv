@@ -1,0 +1,50 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+10;Gerüstplanung mit Verankerung für alle nachfolgend beschriebenen Gerüstarbeiten;1,0;psch;gaeb;3929357.x83
+20;Statische Berechnung DIN EN 12811-1 einschliesslich erforderlicher Ausführungszeichnungen für alle nachfolgend beschriebene Gerüste anfertigen.;1,0;psch;gaeb;3929357.x83
+10;Auf- und Abbauen von Arbeits- und Schutzgerüsten;2100,0;m2;gaeb;3929357.x83
+20;Gebrauchsüberlassung des zuletzt in vollem Wortlaut beschriebenen Fassadengerüstes;50400,0;m2Wo;gaeb;3929357.x83
+30;Auf- und Abbauen von Belagsverbreiterungen auf der Gerüstinnenseite/ wandseitig passend zu vorbeschriebenem Fassadengerüst.;750,0;m;gaeb;3929357.x83
+40;Gebrauchsüberlassung der zuletzt in vollem Wortlaut beschriebenen wandseitigen Belagsverbreiterungen 0,3m;9000,0;mWo;gaeb;3929357.x83
+50;Auf- und Abbau eines zweiteiligen inneren Seitenschutzes auf der Gerüstinnenseite/ wandseitig passend zu vorbeschriebenem Fassadengerüst.;750,0;m;gaeb;3929357.x83
+60;Gebrauchsüberlassung des zuletzt in vollem Wortlaut beschriebenen zweiteiligen inneren Seitenschutzes.;9000,0;mWo;gaeb;3929357.x83
+70;Auf- und Abbauen von Dachfangelementen passend zu vorbeschriebenem Fassadengerüst.;180,0;m;gaeb;3929357.x83
+80;Fassadengerüst, Dachfang, Gebrauchsüberlassung;4320,0;mWo;gaeb;3929357.x83
+90;Auf- und Abbauen von Überbrückungen passend zu vorbeschriebenem Fassadengerüst.;2,0;Stk;gaeb;3929357.x83
+100;Gebrauchsüberlassung;48,0;StWo;gaeb;3929357.x83
+110;Auf- und Abbauen von Überbrückungen passend zu vorbeschriebenem Fassadengerüst.;2,0;Stk;gaeb;3929357.x83
+120;Gebrauchsüberlassung;48,0;StWo;gaeb;3929357.x83
+130;Auf- und Abbauen von Überbrückungen passend zu vorbeschriebenem Fassadengerüst.;2,0;Stk;gaeb;3929357.x83
+140;Gebrauchsüberlassung;48,0;StWo;gaeb;3929357.x83
+150;Auf- und Abbau eines Längsverbandes aus Stahlrohren an der Gerüstinnenseite zur Verankerung des Gerüstes unabhängig von den Gerüstständern und Gerüstankern am Rohbau;300,0;m;gaeb;3929357.x83
+160;"Gebrauchsüberlassung für Längsverband;";7200,0;mWo;gaeb;3929357.x83
+170;Zulage zu vorbeschriebenem, längenorientiertem Fassadengerüst L3, w09;1,0;psch;gaeb;3929357.x83
+180;Zulage zu vorbeschriebenem, längenorientiertem Fassadengerüst L3, w09;2,0;Stk;gaeb;3929357.x83
+190;Umankern, temporäre Anker auf Dauergerüstanker;220,0;Stk;gaeb;3929357.x83
+200;Auf- und Abbau Gerüsttreppenturm nach DIN EN 12811-1;1,0;Stk;gaeb;3929357.x83
+210;Gebrauchsüberlassung für vorbeschriebenen Gerüsttreppenturm mit H ca. 13m;24,0;StWo;gaeb;3929357.x83
+220;Auf- und Abbau Gerüsttreppenturm wie zuletzt in vollem Wortlaut beschrieben, jedoch:;1,0;Stk;gaeb;3929357.x83
+230;Gebrauchsüberlassung für vorbeschriebenen Gerüsttreppenturm mit H ca. 15m;24,0;StWo;gaeb;3929357.x83
+240;Auf- und Abbau Gerüsttreppenturm wie zuletzt in vollem Wortlaut beschrieben, jedoch:;1,0;Stk;gaeb;3929357.x83
+250;Gebrauchsüberlassung für vorbeschriebenen Gerüsttreppenturm mit H ca. 9m;24,0;StWo;gaeb;3929357.x83
+260;Auf- und Abbau eines gesicherten Übergangs vom;4,0;Stk;gaeb;3929357.x83
+270;Gebrauchsüberlassung Übergang zum Flachdach;96,0;StWo;gaeb;3929357.x83
+280;Auf- und Abbau Lastenaufzug / Transportbühne;2,0;Stk;gaeb;3929357.x83
+290;In der Vorposition beschreibene Transportbühne / Lastenaufzug;48,0;StWo;gaeb;3929357.x83
+10;Anbringen und Abnehmen der Gerüstbekleidung;1500,0;m2;gaeb;3929357.x83
+20;Gebrauchsüberlassung für Gerüstbekleidung der Vorposition;36000,0;m2Wo;gaeb;3929357.x83
+10;Auf- und Abbauen von Arbeits- und Schutzgerüsten;1,0;Stk;gaeb;3929357.x83
+20;Gebrauchsüberlassung für Raumgerüst Verbindungsbau gemäß vorstehender LV-Position;7,0;StWo;gaeb;3929357.x83
+30;Auf- und Abbauen von Arbeits- und Schutzgerüsten;240,0;m2;gaeb;3929357.x83
+40;Gebrauchsüberlassung des zuletzt in vollem Wortlaut beschriebenen Fassadengerüstes L2, w06 im Innenraum;960,0;m2Wo;gaeb;3929357.x83
+10;Auf- und Abbauen von Arbeits- und Schutzgerüsten;1,0;Stk;gaeb;3929357.x83
+20;Gebrauchsüberlassung für Raumgerüste Treppenhaus OG2 gemäß vorstehender LV-Position;4,0;StWo;gaeb;3929357.x83
+10;Auf- und Abbauen von Arbeits- und Schutzgerüsten;1,0;Stk;gaeb;3929357.x83
+20;Gebrauchsüberlassung für Raumgerüste Treppenhaus OG2 gemäß vorstehender LV-Position;4,0;StWo;gaeb;3929357.x83
+10;Auf- und Abbauen von Arbeits- und Schutzgerüsten;1,0;Stk;gaeb;3929357.x83
+20;Gebrauchsüberlassung für Raumgerüst Verbindungsbau gemäß vorstehender LV-Position;7,0;StWo;gaeb;3929357.x83
+30;Auf- und Abbauen von Arbeits- und Schutzgerüsten;95,0;m2;gaeb;3929357.x83
+40;Gebrauchsüberlassung des zuletzt in vollem Wortlaut beschriebenen Fassadengerüstes L2, w06 im Innenraum;665,0;m2Wo;gaeb;3929357.x83
+10;Stundenlohnarbeiten durch Vorarbeiter/-in;10,0;h;gaeb;3929357.x83
+20;Stundenlohnarbeiten durch Facharbeiter/-in;40,0;h;gaeb;3929357.x83
+30;Stundenlohnarbeiten durch Helfer/-in;40,0;h;gaeb;3929357.x83
+40;Anfahrtskosten für geforderte Durchführung von Tätigkeiten nach Aufforderung des AG;5,0;Stk;gaeb;3929357.x83

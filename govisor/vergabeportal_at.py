@@ -60,6 +60,8 @@ import json
 import re
 from pathlib import Path
 
+from . import docfetch_queue as _queue
+
 ROOT = Path(__file__).resolve().parent.parent
 
 # Beide Formen derselben Software. Der Pfad ist das Merkmal, nicht der Host — die Lehre aus
@@ -173,6 +175,14 @@ def lauf(limit: int | None = None, dry_run: bool = False, country: str = "AT",
         rows = [r for r in rows if r[0] not in bekannt]
         if vorher != len(rows):
             print(f"vergabeportal.at: {vorher - len(rows)} bereits erfasst, übersprungen")
+    # Zweite Erinnerung, andere Frage. `bekannt` oben ueberspringt, was ERFASST wurde;
+    # die Warteschlange ueberspringt, was GESCHEITERT ist. Ohne sie liefen genau die
+    # Vorgaenge ewig mit, die unten per `continue` gar keinen Satz hinterlassen.
+    _mroot = out.parent
+    rows, _weg = _queue.filtere(rows, _queue.frueher(_mroot, "vergabeportal"))
+    if _weg:
+        print(_queue.bericht(_weg))
+    _manifest: list[dict] = []
     if limit:
         rows = rows[:limit]
     print(f"vergabeportal.at: {len(rows)} offene Vergaben zu prüfen")
@@ -189,6 +199,8 @@ def lauf(limit: int | None = None, dry_run: bool = False, country: str = "AT",
                 r = hole_liste(url, pg)
             except Exception as e:                       # noqa: BLE001
                 print(f"  [{i}/{len(rows)}] {lead_id}: Fehler ({type(e).__name__})", flush=True)
+                _manifest.append({"lead_id": lead_id, "status": "fehler",
+                                  "note": f"{type(e).__name__}"})
                 continue
             dateien = r["dateien"]
             aktiv = [d for d in dateien if d["aktiv"]]
@@ -206,6 +218,10 @@ def lauf(limit: int | None = None, dry_run: bool = False, country: str = "AT",
                 # hinter einem CAPTCHA, das bewusst nicht angeruehrt wird.
                 "status": r["status"],
             })
+            # Schlank ins Manifest (Status + Zahl), die Dateiliste bleibt in
+            # `doc_listing_vergabeportal.parquet` — eine Datei je Frage.
+            _manifest.append({"lead_id": lead_id, "url": url, "status": r["status"],
+                              "note": f"{len(aktiv)} aktiv von {len(dateien)}"})
             print(f"  [{i}/{len(rows)}] {lead_id}: {len(aktiv)} aktiv von {len(dateien)}"
                   + (f" · {', '.join(prio)}" if prio else ""), flush=True)
             pg.wait_for_timeout(_HOEFLICH_MS)
@@ -223,6 +239,14 @@ def lauf(limit: int | None = None, dry_run: bool = False, country: str = "AT",
             print("   ", json.dumps({k: v for k, v in s.items() if k != "detail"},
                                     ensure_ascii=False)[:220])
         return {"geprüft": len(saetze), "mit_liste": mit}
+
+    # Das Manifest wird VOR dem frühen Ausstieg unten geschrieben. Ein Lauf, in dem jeder
+    # Versuch scheiterte, hat `saetze == []` — und genau seine Fehlschläge sind die, die
+    # man beim nächsten Mal überspringen will. Stünde das Schreiben dahinter, wäre der
+    # schlechteste Lauf der einzige ohne Gedächtnis.
+    if _manifest:
+        _mroot.mkdir(parents=True, exist_ok=True)
+        _queue.schreibe(_mroot, "vergabeportal", _manifest)
 
     if not saetze and not altbestand:
         print("nichts zu schreiben.")

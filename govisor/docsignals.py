@@ -261,13 +261,78 @@ def extract_signals(text: str) -> dict:
     return out
 
 
-def build_signals(cfg, country: str = "DE") -> dict:
+# ══ ENDE DER REGELN ══ Alles OBERHALB dieser Marke bestimmt, WAS extrahiert wird, und geht in
+# den Regel-Fingerabdruck ein; alles darunter ist Mechanik (lesen, stapeln, mischen, schreiben).
+# Wer eine Regel ändert, löst damit automatisch einen Voll-Lauf aus — wer nur die Stapelgröße
+# anfasst, nicht. Die Marke darf NICHT umformuliert werden, `_regel_version` schneidet an ihr.
+_REGEL_MARKE = "# ══ ENDE DER REGELN ══"
+
+
+def _regel_version() -> str:
+    """Fingerabdruck der EXTRAKTIONSREGELN — alles oberhalb von ``_REGEL_MARKE``.
+
+    Ändert sich eine Regel, ist jeder gespeicherte Signalsatz überholt und muss neu — ändert
+    sich nur die Mechanik, wäre ein Voll-Lauf über 1,4 Mrd. Zeichen reine Verschwendung.
+    Diese Unterscheidung ist der Grund, warum der Schritt überhaupt inkrementell sein DARF:
+    ohne sie müsste man nach jeder Änderung raten, ob der Bestand noch gilt — und die ehrliche
+    Antwort auf ein Raten wäre „immer alles neu".
+    """
+    import hashlib
+    import pathlib
+
+    quelle = pathlib.Path(__file__).read_text(encoding="utf-8")
+    kopf, marke, _ = quelle.partition("\n" + _REGEL_MARKE)
+    # Ohne Marke lieber ein Voll-Lauf als ein stiller Fehl-Fingerabdruck: eine umbenannte
+    # Marke würde sonst dauerhaft dieselbe Version melden, egal wie sich die Regeln ändern.
+    if not marke:
+        raise RuntimeError("_REGEL_MARKE fehlt in docsignals.py — Regel-Version nicht bestimmbar")
+    return hashlib.sha256(kopf.encode("utf-8")).hexdigest()[:16]
+
+
+# Wie viele Vorgänge auf einmal in den Speicher geholt werden. Ein Vorgang trägt im Mittel
+# ~400.000 Zeichen; der ganze Bestand sind 1,38 Mrd. Die alte Fassung zog ihn in EINEM
+# `fetchall()` — bei einem Voll-Lauf also gut ein Gigabyte Python-Strings gleichzeitig.
+_STAPEL = 40
+
+_STAND = "doc_signals_stand.parquet"
+
+
+def _fingerabdruecke(con, src) -> dict[str, str]:
+    """Je Vorgang ein billiger Abdruck seines Text-Eingangs — OHNE den Text zu lesen.
+
+    `n_chars` und `file` stehen als eigene Spalten in der Parquet; ein Spalten-Scan darüber
+    kostet unter einer Sekunde, während `text` (312 MB komprimiert) gar nicht angefasst wird.
+    Der Abdruck ändert sich, wenn Dateien dazukommen, wegfallen, umbenannt werden oder ihre
+    Länge sich ändert — genau die Fälle, in denen die Signale neu gerechnet gehören.
+    """
+    return {nid: fp for nid, fp in con.execute(
+        f"""SELECT notice_id,
+                   count(*) || ':' || coalesce(sum(n_chars), 0) || ':'
+                   || md5(string_agg(file, '|' ORDER BY file)) AS fp
+            FROM read_parquet('{src.as_posix()}') WHERE status='ok'
+            GROUP BY notice_id""").fetchall()}
+
+
+def build_signals(cfg, country: str = "DE", neu_aufbauen: bool = False) -> dict:
     """``docs/<country>/doc_text.parquet`` → ``doc_signals.parquet`` (ein Datensatz je notice_id,
-    Volltext aller Dokumente des Vorgangs zusammengefasst). Gibt eine Abdeckungs-Zusammenfassung."""
+    Volltext aller Dokumente des Vorgangs zusammengefasst). Gibt eine Abdeckungs-Zusammenfassung.
+
+    **Inkrementell.** Gerechnet wird nur, was neu oder verändert ist; der Rest wird aus dem
+    letzten Lauf übernommen. Gemessen am 2026-08-15 brauchte der Voll-Lauf **232 Minuten** —
+    40 % des gesamten Tageslaufs — obwohl sich pro Tag nur eine Handvoll Vorgänge ändert.
+    Die Kosten stecken nicht in der Menge der Vorgänge (3.437), sondern in ihrer Textmasse:
+    ~30 Regexe mit `DOTALL` über 1,38 Mrd. Zeichen.
+
+    Ein Voll-Lauf passiert weiterhin automatisch, sobald sich die Regeln ändern (s.
+    `_regel_version`) — oder auf Ansage per ``neu_aufbauen=True``. Das ist wichtig: ein
+    inkrementeller Schritt, der eine Regeländerung verschläft, trüge halb altes, halb neues
+    Verhalten, und das fiele niemandem auf.
+    """
     import json
 
     import duckdb
     import pyarrow as pa
+    import pyarrow.compute as pc
     import pyarrow.parquet as pq
 
     root = cfg.data_dir / "docs" / country
@@ -275,44 +340,86 @@ def build_signals(cfg, country: str = "DE") -> dict:
     if not src.exists():
         print(f"docsignals: kein {src} — erst `index-docs` laufen lassen.")
         return {}
+    out = root / "doc_signals.parquet"
+    stand_datei = root / _STAND
+
     con = duckdb.connect()
-    # Volltext je Vorgang (alle Dateien konkatenieren, Reihenfolge stabil).
-    rows = con.execute(
-        f"""SELECT notice_id, string_agg(text, '\n\n' ORDER BY file) AS full
-            FROM read_parquet('{src.as_posix()}') WHERE status='ok' GROUP BY notice_id""").fetchall()
+    version = _regel_version()
+    jetzt = _fingerabdruecke(con, src)
+
+    # ── Was ist zu tun? ────────────────────────────────────────────────────────────────────
+    frueher: dict[str, str] = {}
+    grund = "Neuaufbau erzwungen" if neu_aufbauen else None
+    if not neu_aufbauen and stand_datei.exists() and out.exists():
+        alt = pq.read_table(stand_datei)
+        if alt.num_rows and alt.column("regel_version")[0].as_py() != version:
+            grund = "Regeln geändert → alles neu"
+        else:
+            frueher = dict(zip(alt.column("notice_id").to_pylist(),
+                               alt.column("fingerabdruck").to_pylist()))
+    elif not neu_aufbauen:
+        grund = "kein früherer Stand"
+
+    todo = sorted(nid for nid, fp in jetzt.items() if frueher.get(nid) != fp)
+    behalten = [nid for nid in frueher if nid in jetzt and nid not in set(todo)]
+    verschwunden = len(frueher) - len(behalten) - sum(1 for n in todo if n in frueher)
+
+    if grund:
+        print(f"docsignals {country}: {grund} — {len(todo):,} Vorgänge")
+    else:
+        print(f"docsignals {country}: {len(todo):,} neu/geändert, {len(behalten):,} übernommen"
+              + (f", {verschwunden:,} entfallen" if verschwunden else ""))
+
+    if not todo and out.exists():
+        # Nichts zu rechnen. Der Zwischenstand wird trotzdem geschrieben, damit entfallene
+        # Vorgänge auch aus der Ausgabe fallen — sonst hinge eine Zeile ohne Beleg herum.
+        alt_t = pq.read_table(out)
+        if verschwunden:
+            alt_t = alt_t.filter(pc.is_in(alt_t.column("notice_id"), pa.array(behalten)))
+            pq.write_table(alt_t, out, compression="zstd")
+        _schreibe_stand(stand_datei, jetzt, version)
+        print(f"  unverändert: {alt_t.num_rows:,} Vorgänge mit Signalen")
+        return {"docs": alt_t.num_rows, "coverage": _abdeckung(alt_t), "gerechnet": 0}
+
+    # ── Nur die fälligen Vorgänge rechnen ──────────────────────────────────────────────────
     out_rows = []
-    cov: dict[str, int] = {}
-    for nid, full in rows:
-        sig = extract_signals(full or "")
-        if not sig:
-            continue
-        for k in ("guarantee_required", "binding_days", "binding_until", "eligibility_count",
-                  "award_weights", "variants_allowed", "framework", "site_visit",
-                  "site_visit_mandatory", "presentation_required", "penalty_pct", "skonto_pct"):
-            if sig.get(k) is not None:
-                cov[k] = cov.get(k, 0) + 1
-        out_rows.append({
-            "notice_id": nid,
-            "guarantee_required": sig.get("guarantee_required"),
-            "binding_days": sig.get("binding_days"),
-            # Regelform der Bindefrist ist ein DATUM, nicht eine Tageszahl (gemessen 424:5).
-            "binding_until": sig.get("binding_until"),
-            "eligibility_count": sig.get("eligibility_count"),
-            "certificates": ",".join(sig.get("certificates", [])) or None,
-            "variants_allowed": sig.get("variants_allowed"),
-            "framework": sig.get("framework"),
-            "award_weights": json.dumps(sig.get("award_weights"), ensure_ascii=False) if sig.get("award_weights") else None,
-            # Pflichttermine und Geld-Signale — am Korpus gemessen, nicht geraten.
-            "site_visit": sig.get("site_visit"),
-            "site_visit_mandatory": sig.get("site_visit_mandatory"),
-            "presentation_required": sig.get("presentation_required"),
-            "penalty_pct": sig.get("penalty_pct"),
-            "skonto_pct": sig.get("skonto_pct"),
-            "evidence": json.dumps({k: v for k, v in sig.items() if k.endswith("_evidence")}, ensure_ascii=False),
-        })
-    if not out_rows:
-        print("docsignals: keine Signale extrahiert.")
-        return {}
+    for i in range(0, len(todo), _STAPEL):
+        stapel = todo[i:i + _STAPEL]
+        # Registriertes Arrow-Tabellchen statt einer zusammengebauten IN-Liste: die
+        # notice_id kommt aus fremden Quellen (DÖE-UUIDs u. a.) und gehört nie in SQL-Text.
+        con.register("_faellig", pa.table({"notice_id": pa.array(stapel, pa.string())}))
+        rows = con.execute(
+            f"""SELECT d.notice_id, string_agg(d.text, '\n\n' ORDER BY d.file) AS full
+                FROM read_parquet('{src.as_posix()}') d
+                JOIN _faellig f USING (notice_id)
+                WHERE d.status='ok' GROUP BY d.notice_id""").fetchall()
+        con.unregister("_faellig")
+        for nid, full in rows:
+            sig = extract_signals(full or "")
+            if not sig:
+                continue
+            out_rows.append({
+                "notice_id": nid,
+                "guarantee_required": sig.get("guarantee_required"),
+                "binding_days": sig.get("binding_days"),
+                # Regelform der Bindefrist ist ein DATUM, nicht eine Tageszahl (gemessen 424:5).
+                "binding_until": sig.get("binding_until"),
+                "eligibility_count": sig.get("eligibility_count"),
+                "certificates": ",".join(sig.get("certificates", [])) or None,
+                "variants_allowed": sig.get("variants_allowed"),
+                "framework": sig.get("framework"),
+                "award_weights": json.dumps(sig.get("award_weights"), ensure_ascii=False) if sig.get("award_weights") else None,
+                # Pflichttermine und Geld-Signale — am Korpus gemessen, nicht geraten.
+                "site_visit": sig.get("site_visit"),
+                "site_visit_mandatory": sig.get("site_visit_mandatory"),
+                "presentation_required": sig.get("presentation_required"),
+                "penalty_pct": sig.get("penalty_pct"),
+                "skonto_pct": sig.get("skonto_pct"),
+                "evidence": json.dumps({k: v for k, v in sig.items() if k.endswith("_evidence")}, ensure_ascii=False),
+            })
+        if len(todo) > _STAPEL:
+            print(f"  … {min(i + _STAPEL, len(todo)):,}/{len(todo):,} Vorgänge gerechnet", flush=True)
+
     # ACHTUNG: feste Spaltenliste. Sie ist der Grund, warum neue Signale zweimal eingetragen
     # werden muessen — einmal oben in `out_rows`, einmal hier. Wer das vergisst, baut Regeln,
     # die messbar greifen und deren Werte trotzdem nie in der Parquet landen (heute passiert,
@@ -335,8 +442,57 @@ def build_signals(cfg, country: str = "DE") -> dict:
         ("skonto_pct", pa.float64()),
         ("evidence", pa.string()),
     ])
-    out = root / "doc_signals.parquet"
-    pq.write_table(pa.Table.from_pylist(out_rows, schema=schema), out, compression="zstd")
-    print(f"docsignals {country}: {len(out_rows):,} Vorgänge mit Signalen → {out.name}")
+    neu = pa.Table.from_pylist(out_rows, schema=schema)
+
+    # ── Alt + neu zusammenführen ───────────────────────────────────────────────────────────
+    # Übernommen wird nur, was noch im Eingang steht UND nicht gerade neu gerechnet wurde.
+    # Beide Bedingungen sind nötig: die erste wirft entfallene Vorgänge raus, die zweite
+    # verhindert Doppelzeilen für einen Vorgang, dessen Dokumente sich geändert haben.
+    tabelle = neu
+    if behalten and out.exists():
+        alt = pq.read_table(out, schema=schema)
+        alt = alt.filter(pc.is_in(alt.column("notice_id"), pa.array(behalten, pa.string())))
+        tabelle = pa.concat_tables([alt, neu]) if neu.num_rows else alt
+
+    if not tabelle.num_rows:
+        print("docsignals: keine Signale extrahiert.")
+        return {}
+
+    pq.write_table(tabelle, out, compression="zstd")
+    _schreibe_stand(stand_datei, jetzt, version)
+    cov = _abdeckung(tabelle)
+    print(f"docsignals {country}: {tabelle.num_rows:,} Vorgänge mit Signalen → {out.name} "
+          f"({len(out_rows):,} davon in diesem Lauf gerechnet)")
     print("  Abdeckung: " + " | ".join(f"{k}={v}" for k, v in sorted(cov.items())))
-    return {"docs": len(out_rows), "coverage": cov}
+    return {"docs": tabelle.num_rows, "coverage": cov, "gerechnet": len(out_rows)}
+
+
+def _schreibe_stand(pfad, abdruecke: dict[str, str], version: str) -> None:
+    """Merkzettel für den nächsten Lauf: welcher Eingang lag vor, unter welchen Regeln.
+
+    Er führt bewusst ALLE Vorgänge, auch die ohne einen einzigen Signalfund. Stünden nur die
+    Fundstellen drin, würde jeder signalfreie Vorgang bei jedem Lauf erneut durch alle Regexe
+    geschickt — und genau die sind oft die textreichsten (Plansätze, Fotoanhänge).
+    """
+    import pyarrow as pa
+    import pyarrow.parquet as pq
+
+    ids = sorted(abdruecke)
+    pq.write_table(pa.table({
+        "notice_id": pa.array(ids, pa.string()),
+        "fingerabdruck": pa.array([abdruecke[i] for i in ids], pa.string()),
+        "regel_version": pa.array([version] * len(ids), pa.string()),
+    }), pfad, compression="zstd")
+
+
+def _abdeckung(tabelle) -> dict[str, int]:
+    """Wie oft trägt jedes Signal einen Wert — über die GANZE Ausgabe, nicht nur den Zulauf.
+
+    Wichtig fürs Inkrementelle: würde die Abdeckung nur die frisch gerechneten Vorgänge
+    zählen, fiele sie von Lauf zu Lauf auf eine Handvoll und sähe aus wie ein Einbruch.
+    """
+    felder = ("guarantee_required", "binding_days", "binding_until", "eligibility_count",
+              "award_weights", "variants_allowed", "framework", "site_visit",
+              "site_visit_mandatory", "presentation_required", "penalty_pct", "skonto_pct")
+    return {f: tabelle.column(f).length() - tabelle.column(f).null_count
+            for f in felder if f in tabelle.schema.names}

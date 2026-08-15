@@ -1,0 +1,32 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+1;Erstellung vollständiger, prüffähiger Werk- und Montagepläne gemäß den anerkannten Regeln der Technik sowie den einschlägigen Normen und Richtlinien (u. a. DIN EN 1090, DIN EN 1993, DIN EN ISO 2553, DIN EN ISO 7200).;1,0;PSCH;gaeb;sonstiges/LV_300_BA3_5_04 Schlosser.X83
+1;Handlaufkonstruktion aus Flachstahl für Saaltreppe, gefertigt und montiert gemäß DIN 18065 und Detailplanung.;20,0;St;gaeb;sonstiges/LV_300_BA3_5_04 Schlosser.X83
+1;Fahrbares Gerüst nach DIN 4420-3 aufbauen, umbauen, abbauen, als Arbeitsgerüst mit einer Arbeitslage, Seitenschutz und Zugang, Standflächen eben, inklusive notwendiger Umbauten, ggf. seitlichen Abstützungen und Abbau. Nur für die eigene Leistung.;1,0;Stk;gaeb;sonstiges/LV_300_BA3_5_04 Schlosser.X83
+1;Herstellen, Liefern und Montieren einer;2,0;St;gaeb;sonstiges/LV_300_BA3_5_04 Schlosser.X83
+1;Lieferung, Montage und Demontage eines Arbeitsgerüsts, nach DIN 12811-1, im Innenbereich entlang der breiten Treppen im Foyer UG / EG zur Durchführung der eigenen Arbeiten an der Treppenbrüstung, sowie der Foyer Sitzbank (sh. nächster LV-Bereich: 5 - Foyer Sitzbank);1,0;PSCH;gaeb;sonstiges/LV_300_BA3_5_04 Schlosser.X83
+2;Vorhalten des Arbeitsgerüstes der Vorposition 4.1.01 ,;12,0;Wo;gaeb;sonstiges/LV_300_BA3_5_04 Schlosser.X83
+3;Gebrauchsüberlassung des Arbeitsgerüstes, Pos. 4.1.01,;12,0;Wo;gaeb;sonstiges/LV_300_BA3_5_04 Schlosser.X83
+1;Fertigung, Lieferung und Montage einer;7,6;m;gaeb;sonstiges/LV_300_BA3_5_04 Schlosser.X83
+1;Herstellen, liefern und montieren eines durchgehenden, beleuchteten Handlaufs vom Untergeschoss bis ins Erdgeschoss gemäß;7,0;m;gaeb;sonstiges/LV_300_BA3_5_04 Schlosser.X83
+2;Herstellen, liefern und montieren eines;10,0;St;gaeb;sonstiges/LV_300_BA3_5_04 Schlosser.X83
+3;Zulage zur Pos. 4.3.01,;8,0;St;gaeb;sonstiges/LV_300_BA3_5_04 Schlosser.X83
+1;Herstellen, liefern und montieren eines durchgehenden Handlaufs vom Untergeschoss bis ins Erdgeschoss gemäß Ausführungsplänen. Handlauf aus Massivholz mit leicht gerundeten Kanten und ergonomischer Greifform. Ausführung in mehreren Segmenten mit verdeckten Verbindern. Material: Eiche Massivholz, ruh;15,8;m;gaeb;sonstiges/LV_300_BA3_5_04 Schlosser.X83
+2;Herstellen, Liefern und Montieren abgewinkelter Handlaufhalter gemäß;22,0;St;gaeb;sonstiges/LV_300_BA3_5_04 Schlosser.X83
+3;Zulage;8,0;St;gaeb;sonstiges/LV_300_BA3_5_04 Schlosser.X83
+1;Fertigung, Lieferung und Montage einer;9,4;m;gaeb;sonstiges/LV_300_BA3_5_04 Schlosser.X83
+2;Zulage;2,0;St;gaeb;sonstiges/LV_300_BA3_5_04 Schlosser.X83
+3;Zulage;1,0;St;gaeb;sonstiges/LV_300_BA3_5_04 Schlosser.X83
+1;Herstellen, Liefern und Montieren eines einzeln gefertigten Steckgeländers gemäß;8,0;m;gaeb;sonstiges/LV_300_BA3_5_04 Schlosser.X83
+1;Fertigen, Liefern und Montieren einer besonders stabilen,;3,0;St;gaeb;sonstiges/LV_300_BA3_5_04 Schlosser.X83
+3;Revisionklappe wie in Position 6.1.01,;3,0;St;gaeb;sonstiges/LV_300_BA3_5_04 Schlosser.X83
+5;Zulage;6,0;St;gaeb;sonstiges/LV_300_BA3_5_04 Schlosser.X83
+1;Fertigen, Liefern und Montieren;8,0;St;gaeb;sonstiges/LV_300_BA3_5_04 Schlosser.X83
+3;Revisionsklappe wie in Position 6.1.01,;1,0;St;gaeb;sonstiges/LV_300_BA3_5_04 Schlosser.X83
+4;Revisionsklappe wie in Position 6.1.01,;2,0;St;gaeb;sonstiges/LV_300_BA3_5_04 Schlosser.X83
+6;Zulage;11,0;St;gaeb;sonstiges/LV_300_BA3_5_04 Schlosser.X83
+1;Herstellen, liefern und fachgerechtes Montieren einer dreiseitigen Eckbekleidung aus;2,0;St;gaeb;sonstiges/LV_300_BA3_5_04 Schlosser.X83
+1;Arbeiten, welche nicht in den Positionen erfasst sind und gegen Nachweis zur Ausführung kommen:;1,0;Std;gaeb;sonstiges/LV_300_BA3_5_04 Schlosser.X83
+2;Arbeiten, welche nicht in den Positionen erfasst sind und gegen Nachweis zur Ausführung kommen:;1,0;Std;gaeb;sonstiges/LV_300_BA3_5_04 Schlosser.X83
+3;Arbeiten, welche nicht in den Positionen erfasst sind und gegen Nachweis zur Ausführung kommen:;1,0;Std;gaeb;sonstiges/LV_300_BA3_5_04 Schlosser.X83
+4;Arbeiten, welche nicht in den Positionen erfasst sind und gegen Nachweis zur Ausführung kommen:;1,0;Std;gaeb;sonstiges/LV_300_BA3_5_04 Schlosser.X83
+1;Erstellen der kompletten Dokumentationsunterlagen für die beauftragten Leistungen.;1,0;PSCH;gaeb;sonstiges/LV_300_BA3_5_04 Schlosser.X83

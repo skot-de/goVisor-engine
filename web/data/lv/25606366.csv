@@ -1,0 +1,266 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+10;Baustelle für sämtliche, in der Leistungsbeschreibung aufgeführten Leistungen einrichten und räumen.;1,0;psch;gaeb;Grimma_Bahnhofspark_LV.X83
+20;Baustelleneinrichtung für sämtliche, in der Leistungsbeschreibung aufgeführten Leistungen über die Dauer der Bauzeit vorhalten.;1,0;psch;gaeb;Grimma_Bahnhofspark_LV.X83
+30;Einholen von Schachtscheinen bei den zuständigen;1,0;psch;gaeb;Grimma_Bahnhofspark_LV.X83
+40;Beweissicherung durchführen zur Feststellung des Zustandes der im Baubereich vorhandenen baulichen und sonstigen Anlagen und der Baustellenzufahrt. Die Beweissicherung ist vor Beginn der Bauarbeiten durchzuführen und dem AG zu übergeben. Zu erfassen sind insbesondere alle Zufahrtswege, Hecken, Mauer;1,0;psch;gaeb;Grimma_Bahnhofspark_LV.X83
+50;Einmessung und Kennzeichnung;1,0;psch;gaeb;Grimma_Bahnhofspark_LV.X83
+60;Bauzaun standsicher;375,0;m;gaeb;Grimma_Bahnhofspark_LV.X83
+70;Bauzaun abbauen.;375,0;m;gaeb;Grimma_Bahnhofspark_LV.X83
+80;Stammschutz durch Ummantelung aus Brettern einschl. Polsterung gegen den Baum, herstellen, Polsterung aus Schaumstoff, Stammdurchmesser über 40 bis 60 cm, Mindesthöhe 2 m.;24,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+90;Verkehrszeichen nach StVO, temporär, spezifischer Rückstrahlwert RA2 DIN EN 12899-1, Größe 2 nach Verkehrszeichenkatalog, mit Aufstellvorrichtung, mit Standsicherheitsnachweis, neben der Fahrbahn, aufbauen und abbauen.;2,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+100;Arbeitsstellenzaun aus schlagfesten Kunststoff (HDPE);8,0;m;gaeb;Grimma_Bahnhofspark_LV.X83
+110;Verkehrssichere Instandhaltung der privaten und öffentlichen Verkehrsflächen über die gesamte Bauzeit;1,0;psch;gaeb;Grimma_Bahnhofspark_LV.X83
+10;Bank aus Stahl, inkl. Fundament abbrechen, sortieren und laden. Bestehend aus 12 Einzelsitzen, miteinander verbunden, die als eine Metallkonstruktion gesehen werden können. 6 Fundamente (aller zwei Sitze eine Verankerung im Boden) Durchmesser ca. 3m um den Baum herum. Anfallende Stoffe laden. Entsor;1,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+20;Bank aus Stahl, inkl. Fundament abbrechen, sortieren und laden. Bestehend aus 6 Sitzen die als eine Metallkonstruktion gesehen werden können. 4 Fundamente Durchmesser ca. 3m um den Baum herum. Anfallende Stoffe laden. Entsorung in gesonderter Position.;1,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+30;Stange aus Stahl, Höhe ca. 2m, Durchmesser ca.  5cm inkl. Fundament abbrechen und anfallende Stoffe laden. Entsorung in gesonderter Position.;1,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+40;Geländer aus Metall an Treppe, Handlauf und Stützen aufnehmen;3,0;lfm;gaeb;Grimma_Bahnhofspark_LV.X83
+50;aus Waschbeton, Höhe ca. 60 cm, Durchmesser ca. 40 cm inkl. Fundament abbrechen und laden. Entsorung in gesonderter Position.;5,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+60;Verkehrszeichen Gehweg abbauen inkl. Fundament abbrechen. Sortieren und laden. Entsorgung erfolgt in gesonderter Position.;1,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+70;aus Stahl, inkl. Fundament abbrechen. Höhe ca. 4 - 5 m, Durchmesser Mast ca. 8 cm. Nicht mehr benötigte Stoffe laden. Einlagerung der Leuchten im Bauhof der Stadt. Entsorgung/Einlagerung in gesonderter Position.;2,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+80;aus Beton, inkl. Fundament abbrechen, Stoffe sortieren und laden.  Höhe ca. 4 m, Durchmesser Mast ca. 15 cm. Entsorung in gesonderter Position.;3,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+90;aus Beton, Höhe ca. 3m, Durchmesser ca. 2 m. inkl. Fundament abbrechen, Stoffe sortieren und laden. Entsorung in gesonderter Position.;1,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+100;Abbruch der Asphaltschicht aus Gussasphalt, Dicke ca. 15 cm in Gehwegen, nicht schadstoffbelastet,;350,0;m2;gaeb;Grimma_Bahnhofspark_LV.X83
+110;Abbruch Gehwegplatten 40 x 40 x 5 cm Betonplatten, einschl. Bettung aus Brechsand-Splitt-Gemisch, sortieren, säubern, sammeln und zum Wiedereinbau (ca. 65m²)  lagern, nicht benötigte Platten laden. Entsorgung erfolgt in gesonderter Position.;1070,0;m2;gaeb;Grimma_Bahnhofspark_LV.X83
+120;Abbruch Pflaster Beton 10 x 20 x 10 cm, einschl. Bettung aus Brechsand-Splitt-Gemisch, aufgenommene Stoffe zur Entsorgung sortieren, sammeln und laden. Entsorgung in gesonderter Position.;3,0;m2;gaeb;Grimma_Bahnhofspark_LV.X83
+130;Abbruch des Plattenbelages aus Natursteinplatten unterschiedliche Formate, Material: Schiefer, einschl. Bettung aus Brechsand-Splitt-Gemisch, aufgenommene Stoffe zur Entsorgung sortieren, sammeln und laden. Transport zur Lagerfläche in gesonderter Position.;40,0;m2;gaeb;Grimma_Bahnhofspark_LV.X83
+140;Abbruch aller Tragschichten, aus Schotter-Splitt-Brechsand-Gemisch, Dicke ca. 40 cm, nicht schadstoffbelastet, aufgenommene Stoffe zur Entsorgung sortieren, sammeln und laden. Entsorgung in gesonderter Position.;2260,0;m2;gaeb;Grimma_Bahnhofspark_LV.X83
+150;Abbruch Baustoffgemisch für ungebundene Schicht für wassergebundene Wege abbrechen. Aufgenommene Stoffe zur Entsorgung sortieren, sammeln und laden. Entsorgung in gesonderter Position.;680,0;m2;gaeb;Grimma_Bahnhofspark_LV.X83
+160;Granitborde, TB, RB, HB einschl. Bettung;70,0;m;gaeb;Grimma_Bahnhofspark_LV.X83
+170;Betonborde, TB, RB, HB einschl. Bettung;455,0;m;gaeb;Grimma_Bahnhofspark_LV.X83
+180;Zweizeiler Naturstein Granit Kleinsteinpflaster einschl. Bettung;150,0;m;gaeb;Grimma_Bahnhofspark_LV.X83
+190;Abbruch Pflasterrinne Naturstein Kleinpflaster Granit in Beton verlegt einschl. Bettung, Leipziger Straße zum Bord absenken, Breite ca. 30 cm.;5,0;m;gaeb;Grimma_Bahnhofspark_LV.X83
+200;Abbruch Treppe aus Blockstufen aus Beton rot, einschließlich Fundament aus Beton;1,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+210;Abbruch Treppe aus Blockstufen aus Beton rot, einschließlich Fundament aus Beton bestehend aus einer Stufe;1,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+220;Abbruch Treppe aus Blockstufen aus Beton, einschließlich Fundament aus Beton bestehend aus 5 Stufen;2,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+230;Abbruch Treppe aus Granitborden Naturstein, einschließlich Fundament aus Beton;1,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+240;Abbruch Porphyrplatten am Ehrenmal und Mauern;380,0;m²;gaeb;Grimma_Bahnhofspark_LV.X83
+250;Mauern abbrechen, bestehend aus Betonschalungssteinen, Mauerziegeln und Klinker (ca. 25 x 12 x 6,5 cm) gemauert, Höhe 23 bis 54 cm,  Breite ca. 40 cm einschl. Fundament aus Beton, Abdeckplatten aus Beton und Porphyr, in verschiedenen Maßen:;330,0;m;gaeb;Grimma_Bahnhofspark_LV.X83
+260;Abbruch Ehrenmal;130,0;m³;gaeb;Grimma_Bahnhofspark_LV.X83
+270;Gedenkplatte bergen.;1,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+280;sowjetischer Stern abnehmen und lagern.;1,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+290;Sockel Stern abbrechen.;3,0;m³;gaeb;Grimma_Bahnhofspark_LV.X83
+300;Abbruch von Beton und Fundamenten im Untergrund;5,0;m³;gaeb;Grimma_Bahnhofspark_LV.X83
+310;Baum fällen, als Einzelbaum, Laubbaum, Stammdurchmesser über 10 bis 35 cm, Schnittstelle auf Höhe der Geländeoberfläche, Wurzelstock ausfräsen bis 50 cm unter OKG, Baumhöhe über 20 bis 25 m, Stamm und Astwerk, anfallende Stoffe auf LKW des AN laden, Entsorgung wird gesondert vergütet.;6,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+320;Baum fällen, als Einzelbaum, Laubbaum, Stammdurchmesser über 40 bis 60 cm, Schnittstelle auf Höhe der Geländeoberfläche, Wurzelstock ausfräsen bis 50 cm unter OKG, Baumhöhe über 20 bis 25 m, Stamm und Astwerk, anfallende Stoffe auf LKW des AN laden, Entsorgung wird gesondert vergütet.;19,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+330;Baum fällen, als Einzelbaum, Laubbaum, Stammdurchmesser über 70 bis 80 cm, Schnittstelle auf Höhe der Geländeoberfläche, Wurzelstock ausfräsen bis 50 cm unter OKG, Baumhöhe über 20 bis 25 m, Stamm und Astwerk, anfallende Stoffe auf LKW des AN laden, Entsorgung wird gesondert vergütet.;5,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+340;Baum fällen, Stammdurchmesser über 100 bis 125 cm, Schnittstelle auf Höhe der Geländeoberfläche, Wurzelstock ausfräsen bis 50 cm unter OKG,;1,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+350;Wurzelstock roden, fräsen, Rodungstiefe über 40 bis 50 cm, gerodete Stoffe auf LKW des AN laden, Entsorgung wird gesondert vergütet.;10,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+360;Sträucher roden bis 500 cm, Rodungstiefe über 20 bis 30 cm, gerodete Stoffe sammeln und laden.;220,0;m²;gaeb;Grimma_Bahnhofspark_LV.X83
+10;Pflanzliche Bodendecke, Rasen, abräumen, laden, Schichtdicke über 5 cm bis 10 cm.;3100,0;m2;gaeb;Grimma_Bahnhofspark_LV.X83
+20;Oberboden, abtragen, Abtragdicke über 20 cm bis 30 cm, in Teilflächen, lagern in Mieten bis zu 2m aufsetzen, nicht mehr verwendbaren OB laden, Entsorgung in gesonderter Position;70,0;m³;gaeb;Grimma_Bahnhofspark_LV.X83
+30;Oberboden, abtragen, Abtragdicke über 20 cm bis 30 cm, in Teilflächen,  lagern in Mieten bis zu 2m, nicht mehr verwendbaren OB laden, Entsorgung in gesonderter Position;410,0;m³;gaeb;Grimma_Bahnhofspark_LV.X83
+40;Boden liefern, Abbruchfläche/Böschung schichtenweise verfüllen, einschl. Stoffe verdichten,;25,0;m³;gaeb;Grimma_Bahnhofspark_LV.X83
+50;Boden gemäß Homogenbereiche lösen, nach Abtrag Oberboden und der Oberflächenbefestigung, profilgerecht lösen, in Mieten bis zu 2 m zur Wiederverwednung lagern und vor Feuchtigkeit schützen, nicht mehr benötigten Boden direkt laden, auf LKW des AN laden, Aushubtiefe bis 0,45 m, die Entsorgung wird ge;126,0;m³;gaeb;Grimma_Bahnhofspark_LV.X83
+60;Oberboden, zwischengelagert, auftragen, Auftragsdicke variiert. Auftragen in Teilflächen;460,0;m³;gaeb;Grimma_Bahnhofspark_LV.X83
+70;Boden im Baugelände lagernd einbauen, schichtenweise einschl. Stoffe verdichten, Verdichtungsgrad durch Eigenlast der Geräte,;143,0;m3;gaeb;Grimma_Bahnhofspark_LV.X83
+80;Planum herstellen und verdichten, für Verkehrsflächen,;1250,0;m2;gaeb;Grimma_Bahnhofspark_LV.X83
+90;Boden der Gräben für Elektrokabel gemäß Homogenbereiche;140,0;m3;gaeb;Grimma_Bahnhofspark_LV.X83
+100;Natursand profilgerecht einbauen und verdichten, für;350,0;m;gaeb;Grimma_Bahnhofspark_LV.X83
+110;Natursand profilgerecht einbauen und verdichten, für;350,0;m;gaeb;Grimma_Bahnhofspark_LV.X83
+120;Kabeltrasse markieren mit Trassenwarnband aus;350,0;m;gaeb;Grimma_Bahnhofspark_LV.X83
+10;Sickergraben;3,0;m³;gaeb;Grimma_Bahnhofspark_LV.X83
+20;Horizontale Dränschicht aus Kies liefern und einbauen,;47,0;m2;gaeb;Grimma_Bahnhofspark_LV.X83
+30;Auskleidung der Sohle und der Wände des Drängrabens mit;59,0;m2;gaeb;Grimma_Bahnhofspark_LV.X83
+40;Dränleitung aus Kunststoff-Vollsickerrohr, DN 110, Anschluss an Unterflurverteiler in Kiessicker.;1,0;m;gaeb;Grimma_Bahnhofspark_LV.X83
+10;ungebundene Tragschicht ZTV SoB-StB herstellen,;1200,0;m2;gaeb;Grimma_Bahnhofspark_LV.X83
+20;Pflasterdecke, aus Natursteinen DIN EN 1342, ungebundene Bauweise, Granit, grau, Oberfläche naturrau, Maße L/B/H 100/100/100 mm, seitlich lagernd, Altsteine können verwendet werden (ca. 45 m² aufegnommen und gelagert), Dickenabweichung Klasse 1, verlegen in Passé, Tragschicht wird gesondert vergütet;50,0;m2;gaeb;Grimma_Bahnhofspark_LV.X83
+30;Dynamische Schicht als wasserregulierende Funktionslage,;910,0;m2;gaeb;Grimma_Bahnhofspark_LV.X83
+40;Wassergebundene Deckschicht 0/8 mit Bindemittel, in Geh- und Radweg,;910,0;m2;gaeb;Grimma_Bahnhofspark_LV.X83
+50;Fallschutzbelag DIN EN 1176-1 aus Kies Körnung 2/8, Schichtdicke 40 cm liefern und herstellen.;47,0;m2;gaeb;Grimma_Bahnhofspark_LV.X83
+60;Pflastermulde aus Naturstein herstellen, Ausführung der Pflastermulde nach Anzahl der Zeilen, 5-zeilig, Natursteinpflaster DIN EN 1342, Gesteinsart Granit, grau, gebrauchte Steine können verwendet werden,;10,0;m;gaeb;Grimma_Bahnhofspark_LV.X83
+70;Einfassung aus verzinktem Stahlband, Höhe 120 mm, Dicke 6 mm, 30 x 5 mm, Länge 20 cm nach unten, im Abstand von 1m in Bögen enger setzen, in gerader Strecke und Bogen einbauen, einschl. Punktfundament Beton C20/25, Bettungsdicke 20 cm, 10 cm Sauberkeitsschicht Kies 0/32.;570,0;m;gaeb;Grimma_Bahnhofspark_LV.X83
+80;Zulage für Stahlband, Ecken und Radien.;150,0;m;gaeb;Grimma_Bahnhofspark_LV.X83
+90;Plattenbelag aus Platten aus Beton, ungebundene Bauweise, 40 x 40 x 5 cm, Farbton grau, gebrauchte Platten, im Baufeld lagernd, Bettung 0/5 (Brechsand-Splitt-Gemisch), Dicke 5 +/- 1 cm;145,0;m;gaeb;Grimma_Bahnhofspark_LV.X83
+100;Zulage zu vorgenannter Position, Betonplatten, Dicke 50 mm, schneiden.;25,0;m;gaeb;Grimma_Bahnhofspark_LV.X83
+110;Einfassung aus Kleinstein Natursteinpflaster Granit, gebundene Bauweise, einzeilig, Natursteinpflaster, DIN EN 1342, Gesteinsart Granit, Oberfläche naturrau, Farbton grau, Altsteine können verwednet werden. Maße L/B/H 100/100/100 mm, Dickenabweichung Klasse 1, einschl. 10 cm Sauberkeitsschicht Kies ;110,0;m;gaeb;Grimma_Bahnhofspark_LV.X83
+120;Herstellung Pflasterrinne 3-zeilig Naturstein Kleinpflaster Granit;5,0;m;gaeb;Grimma_Bahnhofspark_LV.X83
+130;Bordstein aus Beton herstellen, Form TB 08/25, einschließlich Fundament und 2-seitiger;38,0;m;gaeb;Grimma_Bahnhofspark_LV.X83
+140;Bordstein aus Beton herstellen, Form HB 15/30, einschließlich Fundament und 2-seitiger;3,0;m;gaeb;Grimma_Bahnhofspark_LV.X83
+150;2 Absenker Bordstein aus Beton herstellen, Form HB 15/30, einschl.;2,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+160;Umpflasterung Betonplatten Telefonsäule an neue Wegeführung anpassen;5,0;m²;gaeb;Grimma_Bahnhofspark_LV.X83
+170;Kontrollprüfung ZTV LW auf besondere Anordnung des AG, für Tragschicht ohne Bindemittel, Prüfung für Verformungsmodul, mit dynamischem Lastplattendruckversuch TP BF-StB.;12,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+10;Standabfallbehälter am Pfosten inkl. Einsatzbehälter, 50 Liter,;5,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+20;Stil- und Kettenpfosten mit Halbkugelkopf liefern und montieren;25,0;St.;gaeb;Grimma_Bahnhofspark_LV.X83
+30;Absperrkette aus Stahl mit hoher Zerreißlast;50,0;m;gaeb;Grimma_Bahnhofspark_LV.X83
+40;Kettenglied mit Schraubgewinde;50,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+50;Handlauf für steilen Weg herstellen, aus Stahl feuerverzinkt;1,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+60;Bank mit Lehne mit Sitzauflage aus Acryl-Kunststoffbohlen liefern und montieren.;9,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+70;Bank ohne Lehne mit Sitzauflage aus Acryl-Kunststoffbohlen liefern und montieren.;5,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+80;Stahl-Holz-Pergola;1,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+90;Fundamente Pergola herstellen;8,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+100;Werkplanung Pergola;1,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+110;Permanente Anti-Graffiti-Schutzschicht entsprechend Herstellerangaben auf Pulverbeschichtung aufbringen.;6,0;m2;gaeb;Grimma_Bahnhofspark_LV.X83
+120;Permanente Anti-Graffiti-Schutzschicht entsprechend Herstellerangaben auf Kunststoff aufbringen.;5,0;m2;gaeb;Grimma_Bahnhofspark_LV.X83
+130;Graffiti-Schutz auf Naturstein (Porphyr);32,0;m2;gaeb;Grimma_Bahnhofspark_LV.X83
+140;Graffiti-Schutz auf Betonabdeckplatten;26,0;m2;gaeb;Grimma_Bahnhofspark_LV.X83
+150;Mauerwerk für Hochbeet herstellen;12,0;m³;gaeb;Grimma_Bahnhofspark_LV.X83
+160;Herstellung Fundament Hochbeet;12,0;m³;gaeb;Grimma_Bahnhofspark_LV.X83
+170;Verkleidung Mauerwerk Hochbeet herstellen;18,0;m²;gaeb;Grimma_Bahnhofspark_LV.X83
+180;Zulage zu Positionen Verkleiden mit Porphyplatten, Porphyrplatten, Dicke 50 - 70 mm, schneiden.;25,0;m;gaeb;Grimma_Bahnhofspark_LV.X83
+190;Musterfläche Porphyrplattenverblendung herstellen;1,5;m²;gaeb;Grimma_Bahnhofspark_LV.X83
+200;Abdeckplatte Beton für Hochbeet herstellen;1,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+210;Musterplatte Abdeckplatte Beton herstellen;2,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+220;senkrechte Schutzlage für Abdichtung Hochbeet erdberührter und durch wassergebundener Wegedecke berührter Mauerwerkswände, Höhe: Innen 65 cm, Außen 15 cm, aus Noppenbahn mit Gleit-, Schutz- und Lastverteilungsschicht, Schichtdicke 10 mm, lose verlegen.;17,0;m2;gaeb;Grimma_Bahnhofspark_LV.X83
+230;Druckplatten für Informationstafel auf Hochbeet herstellen, liefern und montieren;1,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+240;Gedenktafel auf Hochbeet montieren.;1,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+250;sowjetischen Stern auf Hochbeet montieren.;1,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+260;Mauerwerk für Sitzmauer herstellen;2,1;m³;gaeb;Grimma_Bahnhofspark_LV.X83
+270;Herstellung Fundament Sitzmauer;4,5;m³;gaeb;Grimma_Bahnhofspark_LV.X83
+280;senkrechte Verkleidung Mauerwerk Sitzmauer herstellen;13,0;m²;gaeb;Grimma_Bahnhofspark_LV.X83
+290;Abdeckplatte Beton für Sitzmauer;1,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+300;senkrechte Schutzlage für Abdichtung Hochbeet erdberührter und durch wassergebundener Wegedecke berührter Mauerwerkswände, zu allen Seiten Höhe 15 cm, aus Noppenbahn mit Gleit-, Schutz- und Lastverteilungsschicht, Schichtdicke 10 mm, lose verlegen.;3,5;m2;gaeb;Grimma_Bahnhofspark_LV.X83
+310;Bankauflage aus Recycling-Kunststoffprofilen liefern und montieren, bestehend aus 3;3,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+320;Bankauflage aus Recycling-Kunststoffprofilen liefern, herstellen und montieren, bestehend aus 3;3,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+330;Netzstruktur mit Rotationsfunktion liefern und montieren.;1,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+340;Stufenreck liefern und montieren.;1,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+350;Slackbar liefern und montieren.;1,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+360;Stehkarussell liefern und montieren;1,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+370;Trittsteine Balancierelemente liefern und montieren.;1,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+380;Sicherheitstechnische Erstabnahme der Spielgeräte und der Sicherheitsbereiche, Fallschutzflächen durch qualifizierten Spielplatzprüfer durchführen lassen;5,0;Stk;gaeb;Grimma_Bahnhofspark_LV.X83
+390;Mastaufsatzleuchte liefern und montieren.;15,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+400;Mast zylindrisch abgesetzt liefern und montieren.;15,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+410;Fundament für Mastleuchte erstellen;15,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+10;Calamagrostis x acutiflora 'Overdam' Gestreiftes Reitgras;6,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+20;Salvia nemorosa 'Merleau Rose' (Blüten-Salbei) P 0,5, nur liefern, einpflanzen wird gesondert vergütet.;35,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+30;Sedum telephium 'Matrona' (Hohes-Fettblatt 'Matrona' ) P 0,5, nur liefern, einpflanzen wird gesondert vergütet.;12,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+40;Geranium macrorrhizum 'White Ness' (Storchschnabel 'White Ness') P 0,5, nur liefern, einpflanzen wird gesondert vergütet.;26,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+50;Sesleria autumnalis (Adria-Kopfgras) P 0,5, nur liefern, einpflanzen wird gesondert vergütet.;33,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+60;Aster Dum.-Hybr. 'Apollo' (Kissen-Aster 'Apollo') P 0,5, nur liefern, einpflanzen wird gesondert vergütet.;35,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+70;Nepeta x faassenii 'Gletschereis' (blaue Katzen-Minze) P 0,5, nur liefern, einpflanzen wird gesondert vergütet.;22,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+80;Narcissus pseudonarcissus 'Bravoure'  Zwiebel/Knolle, nur liefern, einpflanzen wird gesondert vergütet.;27,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+90;Narcissus pseudonarcissus 'Bravoure'  Zwiebel/Knolle, nur liefern, einpflanzen wird gesondert vergütet.;27,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+100;Narcissus pseudonarcissus 'Bravoure'  Zwiebel/Knolle, nur liefern, einpflanzen wird gesondert vergütet.;27,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+110;Crocus speciosus ssp. speciosus Zwiebel/Knolle, nur liefern, einpflanzen wird gesondert vergütet.;1600,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+120;Crocus flavus (Goldkrokus) Zwiebel/Knolle, nur liefern, einpflanzen wird gesondert vergütet.;1600,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+130;Muscari armeniacum Zwiebel/Knolle, nur liefern, einpflanzen wird gesondert vergütet.;800,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+140;Narcisse Akle Zwiebel/Knolle, nur liefern, einpflanzen wird gesondert vergütet.;600,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+150;Multiflora Hyazinthe Weiß Zwiebel/Knolle, nur liefern, einpflanzen wird gesondert vergütet.;400,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+160;Multiflora Hyazinthe Rosa Zwiebel/Knolle, nur liefern, einpflanzen wird gesondert vergütet.;400,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+170;Galanthus elwesii Zwiebel/Knolle, nur liefern, einpflanzen wird gesondert vergütet.;1000,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+180;Scilla bifolia (Blausternchen) Zwiebel/Knolle, nur liefern, einpflanzen wird gesondert vergütet.;1400,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+190;Scilla sibirica (Blausternchen) Zwiebel/Knolle, nur liefern, einpflanzen wird gesondert vergütet.;1400,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+200;"Acer platanoides ""Cleveland"" (Kegelförmiger Spitz-Ahorn ""Cleveland"") H 3xv mDb, StU. 16 bis 18 cm, nur liefern, einpflanzen wird gesondert vergütet.";1,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+210;"Acer platanoides ""Allerhasuen"" (Spitz-Ahorn ""Allerhasuen"") H 3xv mDb, StU. 16 bis 18 cm, nur liefern, einpflanzen wird gesondert vergütet.";2,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+220;"Aesculus carnea ""Briotii"" (Scharlachkastanie) H 3xv mDb, StU. 16 bis 18 cm, nur liefern, einpflanzen wird gesondert vergütet.";3,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+230;Amelanchier lamarckii (Kupfer-Felsenbirne) mehrstämmig 4xv mDb, br 100 bis 150 cm, h 200 bis 250 cm, nur liefern, einpflanzen wird gesondert vergütet.;1,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+240;Cornus mas (Kornelkirsche) mehrstämmig Sol 4xv mDb, h 200 bis 250 cm, nur liefern, einpflanzen wird gesondert vergütet.;4,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+250;Fraxinus ornus (Blumen-Esche) H 3xv mDb, StU. 16 bis 18 cm, nur liefern, einpflanzen wird gesondert vergütet.;1,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+260;"Fraxinus pennsylvanica ""Cimmzam"" (Rotesche ""Cimmzam"") H 3xv mDb, StU. 16 bis 18 cm, nur liefern, einpflanzen wird gesondert vergütet.";3,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+270;Koelreuteria paniculata (Rispiger Blasenbaum) H 4xv mDb, h 175 bis 200 cm, nur liefern, einpflanzen wird gesondert vergütet.;6,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+280;Liquidambar styraciflua (Amerikanischer Amberbaum) H 3xv mDb, StU. 16 bis 18 cm, Pflanzgrubenbauweise 1 (nicht überbaubar), nur liefern, einpflanzen wird gesondert vergütet.;3,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+290;Magnolia kobus (Kobushi-Magnolie) H 3xv mDb, StU. 16 bis 18 cm, nur liefern, einpflanzen wird gesondert vergütet.;3,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+300;"Malus ""Eleyi""  (Zierapfel ""Eleyi"" ) H 3xv mDb, StU. 16 bis 18 cm, nur liefern, einpflanzen wird gesondert vergütet.";2,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+310;Morus nigra (Roter Maulbeerbaum) H 3xv mDb, StU. 16 bis 18 cm, nur liefern, einpflanzen wird gesondert vergütet.;1,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+320;Ostrya carpinifolia (Gewöhnliche Hopfenbuche), H 3xv mDb, StU. 16 bis 18 cm, nur liefern, einpflanzen wird gesondert vergütet.;7,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+330;Parrotia persica (Parrotie) Sol mehrstämmig 4xv mDb, br 150 bis 200 cm, h 175 bis 200 cm, nur liefern, einpflanzen wird gesondert vergütet.;7,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+340;Platanus x hispanica (Ahornblättrige Platane) H 3xv mDb, StU. 16 bis 18 cm, nur liefern, einpflanzen wird gesondert vergütet.;2,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+350;"Prunus serrulata ""Shirofugen"" (Weiße Zierkirsche) H 3xv mDb, StU. 16 bis 18 cm, nur liefern, einpflanzen wird gesondert vergütet.";3,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+360;Quercus cerris (Zerr-Eiche) H 3xv mDb, StU. 16 bis 18 cm, nur liefern, einpflanzen wird gesondert vergütet.;7,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+370;Quercus petraea (Trauben-Eiche) H 3xv mDb, StU. 16 bis 18 cm, nur liefern, einpflanzen wird gesondert vergütet.;2,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+380;Sophora japonica (Schnurbaum) H 3xv mDb, StU. 16 bis 18 cm, nur liefern, einpflanzen wird gesondert vergütet.;7,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+390;"Syringa vulgaris ""Alba"" (Gewöhnlicher Flieder ""Alba"") Sol 3xv mB, nur liefern, einpflanzen wird gesondert vergütet.";18,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+400;"Tilia x flavescens ""Glenleven"" (Kegel-Linde ""Glenleven"") H 3xv mDb, StU. 16 bis 18 cm, nur liefern, einpflanzen wird gesondert vergütet.";2,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+410;Tilia x euchlora (Krim-Linde) H 3xv mDb, StU. 18 bis 20 cm, nur liefern, einpflanzen wird gesondert vergütet.;3,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+420;"Cotinus coggygria ""Smokey Joe"" (Europäischer Perückenstrauch ""Smokey Joe"") Sol 3xv C, h 80 bis 100 cm, nur liefern, einpflanzen wird gesondert vergütet.";4,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+430;"Cotinus coggygria ""Young Lady"" (Europäischer Perückenstrauch ""Young Lady"") Sol 3xv C, h 80 bis 100 cm, nur liefern, einpflanzen wird gesondert vergütet.";4,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+440;Spiraea decumbens (Zwerg-Spiere) 2xv C, h 20 bis 30 cm, nur liefern, einpflanzen wird gesondert vergütet.;98,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+450;"Weigela florida ""Minor Black""  (Weigelie ""Minor Black"") Str 3xv C, h 80 bis 100 cm, nur liefern, einpflanzen wird gesondert vergütet.";4,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+460;"Spiraea japonica ""Albiflora"" (Japanischer Spierstrauch ""Albiflora"") 2xv C, h 15 bis 20 cm, nur liefern, einpflanzen wird gesondert vergütet.";7,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+470;Deutzia elegantissima 'Rosealind'  (Sternchenstrauch 'Rosealind') Str 3xv C, h 180-100cm, nur liefern, einpflanzen wird gesondert vergütet.;9,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+480;"Lonicera japonica ""Hall´s Prolific"" (Japanisches Geißblatt ""Hall´s Prolific"") C 3, nur liefern, einpflanzen wird gesondert vergütet.";4,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+10;Feinplanum für Rasenfläche, zulässige Abweichung von;2050,0;m2;gaeb;Grimma_Bahnhofspark_LV.X83
+20;Feinplanum für Pflanzfläche im Hochbeet, herstellen zwischen Stahlbandabtrennung in ca, 1,15 m² großen Flächen, zulässige Abweichung von;27,0;m2;gaeb;Grimma_Bahnhofspark_LV.X83
+30;Rasen ansäen, Gebrauchsrasen, RSM 2.3 Gebrauchsrasen, Saatgutmenge 25 g/m2.;2050,0;m2;gaeb;Grimma_Bahnhofspark_LV.X83
+40;Staude, Ziergras im Hochbeet pflanzen DIN 18916, in herzustellendes Pflanzloch, Lieferung der Pflanzen wird gesondert vergütet.;169,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+50;Staude, Ziergras im Hochbeet pflanzen DIN 18916, in herzustellendes Pflanzloch, Lieferung der Pflanzen wird gesondert vergütet.;4,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+60;Blumenzwiebel und Knolle, in 3er oder 5er Tuffs pflanzen DIN 18916 in vorbereitete und wieder zu verfüllende Pflanzgrube, wieder verfüllen, Lieferung der Pflanzen wird gesondert vergütet.;9281,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+70;Pflanzgrube für Sträucher ausheben, 60/60 cm, Tiefe 50 25cm,  Sohle 10 cm tief lockern, Aushub seitlich lagern;126,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+80;Verpflanzter Strauch, Höhe über 60 bis 100 cm, pflanzen;21,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+90;Verpflanzter Strauch, Höhe bis 40 cm,;105,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+100;Pflanzgrube für Bäume ausheben, 150/150 cm, Tiefe 100 cm, Aushub seitlich lagern, Sohle 20 cm tief lockern;88,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+110;Solitärgehölz/mehrstämmiges Gehölz, Höhe über 100 bis 250 cm, mit Ballen, pflanzen DIN 18916 in vorbereitete und wieder zu verfüllende Pflanzgrube, wieder verfüllen (siehe gesonderte Position), Bodengruppe 1 DIN 18915 (organisch), Lieferung der Pflanzen wird gesondert vergütet.;39,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+120;Hochstamm, Stammumfang über 16-20 cm, mit Drahtballen,;49,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+130;Pflanzgrube für Hochstäme und Solitärgehölze verfüllen, verfüllen mit: 20 cm Unterboden;88,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+140;Mulchen der Pflanzfläche der Staudenpflanzung mit;27,0;m2;gaeb;Grimma_Bahnhofspark_LV.X83
+150;Mulchen der Baumscheiben Baumscheibe Hochstamm, Solitär, Durchmesser: 100 -150 cm mit Rindenmulch, gütegesichert, Dicke der Mulchdecke über 5 bis 8 cm,;88,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+160;Mulchen der Pflanzfläche der Strauchgehölze mit;70,0;m2;gaeb;Grimma_Bahnhofspark_LV.X83
+170;Feinplanum für Blumenwiesenmischungen herstellen auf Bodenflächen ohne Oberboden,  5 cm Sand liefern, auftragen und einarbeiten, zulässige Abweichung von;1280,0;m2;gaeb;Grimma_Bahnhofspark_LV.X83
+180;Vegetationstragschicht für die Anlage von Blumenwiesen lockern, pflügen, Lockerungstiefe 10 cm, Steine ab 5 cm Durchmesser, Fremdkörper und schwer verrottbare Pflanzenteile und Wurzelunkräuter ablesen, zur Abfuhr auf Haufen setzen, Entsorgung in gesonderter Position, Bodengruppe 3b DIN 18915 (schwac;1280,0;m2;gaeb;Grimma_Bahnhofspark_LV.X83
+190;Blumenwiesenmischung liefern und ansäen,;1280,0;m²;gaeb;Grimma_Bahnhofspark_LV.X83
+200;Kronenpflege, Kroneneinkürzung, einstämmig, anfallende Stoffe seitlich lagern und laden, Entsorgung wird gesondert vergütet.;4,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+210;Pflanzenverankerung mit Pfahl-Dreibock mit Rahmen aus;49,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+220;Pflanzenverankerung mit Baumpfahl, schräg, Pfahl, weißgeschält, Pfahllänge 300 cm, Bindegurt aus Gewebegurtband, Breite 50 mm, Rindenschutz mit Gummimanschette.;39,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+230;Wässern der Blumenwiesenflächen, Wasser liefern, Menge je Arbeitsgang ca. 10 l/m2, ein Arbeitsgang.;1280,0;m2;gaeb;Grimma_Bahnhofspark_LV.X83
+240;Wässern der Pflanzung, Stauden im Hochbeet, Wasser liefern, Mindestwassermenge je Arbeitsgang 15 l/m2, ein Arbeitsgang.;27,0;m2;gaeb;Grimma_Bahnhofspark_LV.X83
+250;Wässern der Bäume und Solitäre, Wasser liefern,;88,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+260;Wässern der Kletterpflanzen, Wasser liefern, Mindestwassermenge je Arbeitsgang 15 l/m2, ein Arbeitsgang.;4,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+270;Wässern Sträucher 25 l/St,  Wasser liefern,;126,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+10;Mähen von Gebrauchsrasen, Wuchshöhe 15 bis 30 cm,;2050,0;m2;gaeb;Grimma_Bahnhofspark_LV.X83
+20;Mähen von Gebrauchsrasen,;450,0;m2;gaeb;Grimma_Bahnhofspark_LV.X83
+30;Mähen von Blumenwiesen, zur Bekämpfung der aufkommenden Ackerunkräuter;1280,0;m2;gaeb;Grimma_Bahnhofspark_LV.X83
+40;Durchputzen der Pflanzung, Pflanzfläche, Stauden;27,0;m2;gaeb;Grimma_Bahnhofspark_LV.X83
+50;Durchputzen der Pflanzung, Pflanzfläche, Stauden;1280,0;m2;gaeb;Grimma_Bahnhofspark_LV.X83
+60;Durchputzen der Pflanzung, Pflanzfläche,;150,0;m2;gaeb;Grimma_Bahnhofspark_LV.X83
+70;Wässern der Strauchgehölze,;126,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+80;Wässern der Pflanzung, Hochbeet, Wasser liefern,;27,0;m2;gaeb;Grimma_Bahnhofspark_LV.X83
+90;Wässern der Pflanzung und Solitäre, Großgehölz, Wasser liefern,;88,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+100;Wässern der Blumenwiesenflächen, Wasser;1280,0;m2;gaeb;Grimma_Bahnhofspark_LV.X83
+110;Wässern der Kletterpflanzen, Wasser liefern, Mindestwassermenge je Arbeitsgang 15 l/m2, ein Arbeitsgang.;4,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+120;Düngen der Strauchflächen und der Baumstandorte, Menge;30,0;kg;gaeb;Grimma_Bahnhofspark_LV.X83
+10;Mähen von Gebrauchsrasen, Wuchshöhe 15 bis 30 cm,;2050,0;m2;gaeb;Grimma_Bahnhofspark_LV.X83
+20;Mähen von Blumenwiesen,;1280,0;m2;gaeb;Grimma_Bahnhofspark_LV.X83
+30;Mähen von Gebrauchsrasen,;450,0;m2;gaeb;Grimma_Bahnhofspark_LV.X83
+40;Durchputzen der Pflanzung, Pflanzfläche, Wildstauden;27,0;m2;gaeb;Grimma_Bahnhofspark_LV.X83
+50;Wässern der Pflanzung, Hochbeet, Wasser liefern,;27,0;m2;gaeb;Grimma_Bahnhofspark_LV.X83
+60;Wässern der Großgehölze und Solitäre, Wasser liefern,;88,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+70;Wässern der Strauchgehölze,;126,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+80;Wässern der Kletterpflanzen, Wasser liefern, Mindestwassermenge je Arbeitsgang 15 l/m2, ein Arbeitsgang.;4,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+90;Mulchen der Pflanzfläche der Strauchgehölze mit;70,0;m2;gaeb;Grimma_Bahnhofspark_LV.X83
+100;Mulchen der Pflanzfläche der Staudenpflanzung mit;27,0;m2;gaeb;Grimma_Bahnhofspark_LV.X83
+110;Nachmulchen der Baumscheiben mit;88,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+10;Aufbruch aus Verkehrsflächen,;1200,0;t;gaeb;Grimma_Bahnhofspark_LV.X83
+20;Siedlungsabfälle, Garten- und Parkabfälle,;310,0;t;gaeb;Grimma_Bahnhofspark_LV.X83
+30;Siedlungsabfälle, Garten- und Parkabfälle,;210,0;t;gaeb;Grimma_Bahnhofspark_LV.X83
+40;Siedlungsabfälle, Garten- und Parkabfälle,;514,0;kg;gaeb;Grimma_Bahnhofspark_LV.X83
+50;Siedlungsabfälle, Garten- und Parkabfälle,;51,0;t;gaeb;Grimma_Bahnhofspark_LV.X83
+60;Bau- und Abbruchabfälle, Boden und Steine 170504,;10,0;t;gaeb;Grimma_Bahnhofspark_LV.X83
+70;Aufbruch aus Verkehrsflächen,;130,0;t;gaeb;Grimma_Bahnhofspark_LV.X83
+80;Beton/ Stahlbeton;950,0;t;gaeb;Grimma_Bahnhofspark_LV.X83
+90;Metall, Gußteile, nicht schadstoffbelasteter nicht gefährlicher Abfall, nicht überwachungsbedürftig, Abfallschlüssel nach EWC 200140 (Abfallverzeichnisverordnung AVV) Metalle, der stofflichen Verwertung zuführen, die Gebühren der Verwertung werden vom AN übernommen, Teile auf der Baustelle gelagert,;2,0;t;gaeb;Grimma_Bahnhofspark_LV.X83
+100;Leuchten aus Stahl zur Bauhoffläche der Stadt transportieren und abladen;2,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+110;Natursteinborde auf Palette zur Bauhoffläche der Stadt transportieren und abladen;3,6;t;gaeb;Grimma_Bahnhofspark_LV.X83
+120;Porphyrplatten;44,5;t;gaeb;Grimma_Bahnhofspark_LV.X83
+130;Schiefer;10,0;t;gaeb;Grimma_Bahnhofspark_LV.X83
+140;Verkehrszeichen Gehweg zur Bauhoffläche der Stadt transportieren und abladen;1,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+150;Untersuchung zur Abfalldeklaration nach LAGA-Merkblatt;3,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+160;Untersuchung nach EBV 2023, Anlage 1, Tabelle 3 für Boden und Baggergut.;3,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+170;Bau- und Abbruchabfälle, Beton,;100,0;t;gaeb;Grimma_Bahnhofspark_LV.X83
+10;Außenverteiler mit Wandlermessung 250 A als GFK-Schrank, nach TAB des örtlichen Netzbetreibers (Mitnetz);1,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+20;Unterflurverteiler als Marktplatzverteiler mit robustem Kunststoffschacht LW 550 x 800 mm und klappbarer Edelstahl-Abdeckung mit Tauchhaube sowie Elektroeinbauten. Werkseitig anschlussfertiges Gerät zum Einbau im Boden in befahrbaren Bereichen der Prüfklasse D400 .;1,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+30;Vorhandenen SBL Verteiler als Außenverteiler reinigen, überprüfen und für den Anschluss zwei neuer Abgänge NYY-J 5x15 mm² vorbereiten.;1,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+10;Kabel DIN VDE 0276-603 (VDE 0276-603) NAYY-J 5 x 70 RM, Al-Zahl 1015, in vorh. Rohre/Unterflurkanäle.;150,0;m;gaeb;Grimma_Bahnhofspark_LV.X83
+20;Kabel DIN VDE 0276-603 (VDE 0276-603) NAYY-J 5 x 70 RM, Al-Zahl 1015, nur anschließen an beigestellte Betriebsmittel, einschl. Verbindungsmittel.;4,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+30;Kabel DIN VDE 0276-603 (VDE 0276-603) NAYY-J 5 x 70 RM, Al-Zahl 1015, nur kennzeichnen je Ende.;4,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+40;Endmuffe, spannungsfest mit Einzeladerisolation in Schrumpftechnik,;1,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+50;Kabel DIN VDE 0276-603 (VDE 0276-603) NYY-J 5 x 16 RE, Cu-Zahl 768, in vorh. Rohre/Unterflurkanäle.;480,0;m;gaeb;Grimma_Bahnhofspark_LV.X83
+60;Kabel DIN VDE 0276-603 (VDE 0276-603) NYY-J 5 x 16 RE, Cu-Zahl 768, nur anschließen an beigestellte Betriebsmittel, einschl. Verbindungsmittel.;33,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+70;Kabel DIN VDE 0276-603 (VDE 0276-603) NYY-J 5 x 16 RE, Cu-Zahl 768, nur kennzeichnen je Ende.;35,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+80;Kabel DIN VDE 0276-603 (VDE 0276-603) NYY-J 5 x 16 RE, Cu-Zahl 768, nur abklemmen von Betriebsmittel, aus dem Gehäuse zurückziehen,;2,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+90;Verbindungsmuffe 0,6/1 kV, in Schrumpftechnik, für 1 Kabel, NYY-J 5 x 16 RE, einschl. systemgebundenem Zubehör und Quetschverbindern, zur Verbindung mit einem Kabel, NYY-J 5 x 16 RE, Montage im Freien.;2,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+100;Endmuffe, spannungsfest mit Einzeladerisolation in Schrumpftechnik,;2,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+10;Erdung als Strahlenerder, einstrahlig, DIN EN IEC 62561-2 (VDE 0185-561-2), aus nichtrostendem Stahl, Rd 10, Werkstoff-Nr 1.4404, in Teillängen in vorh. Graben einlegen und jeweils ein Ende in Betriebsmittel einführen.;30,0;m;gaeb;Grimma_Bahnhofspark_LV.X83
+20;Vorhandenen Erder aus nichtrostendem Stahl, Rd 10, Werkstoff-Nr 1.4404 einführen und anschließen an beigestellte Betriebsmittel (Außenverteiler, Pollerleuchte, Elektrant), einschl. Verbindungsmittel Werkstoff-Nr 1.4404.;6,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+10;Erstellung der Anmeldung zum Netzanschluss (ANA) beim örtlichen Netzbetreiber, einschließlich aller nötigen Koordinierungs- und Abstimmungsleistungen zur Herstellung des Netzanschlusses, Begleitung der Maßnahme bis zur Fertigstellung und Inbetriebnahme und Montage der Messstelle, durch den Versorger;1,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+20;Sanddichtes Verschließen eines Kabelschutzrohrs nach Kabeleinzug mit alterungsbeständigem Material, Rohr bis DN 110.;40,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+30;Prüfung der neu errichteten Gesamtanlage nach DIN VDE 0100-600;1,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+10;Fläche der Markierung auf Anordnung des AG reinigen.;145,0;m2;gaeb;Grimma_Bahnhofspark_LV.X83
+20;Fläche für Markierung auf Anordnung des AG schonend;145,0;m2;gaeb;Grimma_Bahnhofspark_LV.X83
+30;Fahrbahnmarkierung ZTV-M 13, Längsmarkierung Typ II als;22,0;m;gaeb;Grimma_Bahnhofspark_LV.X83
+40;Fahrbahnmarkierung ZTV-M als Haltelinie, Typ II, Breite 50 cm, aus Kaltplastik, Überrollbarkeitsklasse T4, Klasse Q4 (Qd größer gleich 160 mcd/m2/lx) DIN EN 1436, Retroreflexion bei Trockenheit mind. Klasse R4 (RL größer gleich 200 mcd/m2/lx) DIN EN 1436, Retroreflexion bei Feuchtigkeit mind. Klasse;46,0;m;gaeb;Grimma_Bahnhofspark_LV.X83
+50;Fahrbahnmarkierung ZTV-M als Richtungspfeil, Typ II, linksweisend, Länge 5 m, aus Kaltplastik, Verkehrsklasse P7, Farbton weiß, auf Asphaltdeckschicht.;1,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+60;Fahrbahnmarkierung ZTV-M als Richtungspfeil, Typ II, rechtsweisend, Länge 5 m, aus Kaltplastik, Farbton weiß, auf Asphaltdeckschicht.;1,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+70;Fahrbahnmarkierung ZTV-M 13 als Sperrflächenumrandung, Typ;82,0;m;gaeb;Grimma_Bahnhofspark_LV.X83
+80;Fahrbahnmarkierung ZTV-M als Sperrfläche, Typ II, Breite 50 cm, aus Kaltplastik, Verkehrsklasse P7, Farbton weiß, auf Asphaltdeckschicht, abgerechnet wird das die markierte Fläche umschreibende kleinste Rechteck.;142,0;m2;gaeb;Grimma_Bahnhofspark_LV.X83
+90;Verkehrspoller liefern;3,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+100;Befestigungsmöglichkeit Bodenteil Verkehrspoller;3,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
+110;Verkehrspoller montieren;3,0;St;gaeb;Grimma_Bahnhofspark_LV.X83
