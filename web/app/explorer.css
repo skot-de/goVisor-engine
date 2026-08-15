@@ -1986,3 +1986,9 @@ a.lb-kachel{text-decoration:none}
    Layout beim Umschalten nicht springt — Springen liest sich als Fehler. */
 .hinweis-beleg { min-height: 2.4em; margin: .45rem 0 0; font-size: .8rem;
                  color: var(--muted, #6b7280); line-height: 1.4; }
+
+/* Werkzeuge des Bereichs IN der Kopfleiste (Reiter, Knoepfe) — nicht in einer zweiten
+   Zeile darunter. Die gab es kurz und war im Normalfall leer; s. AppTop. */
+.top-werkzeuge{display:flex;align-items:center;gap:var(--s2);min-width:0;
+               padding-left:var(--s3);overflow-x:auto}
+.top-werkzeuge .un-tabs{border:0;margin:0;padding:0}

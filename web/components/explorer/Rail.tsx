@@ -182,28 +182,34 @@ export function AppRail({
 
 /* Schlanke Kopfleiste für die eigenständigen Seiten: dieselbe Marke, derselbe Rahmen wie
  * im Explorer. Ohne sie sieht die Seite trotz Rail aus wie ein fremdes Werkzeug. */
+
 /**
- * Der Kopf der eigenstaendigen Seiten — dieselbe Hoehe wie in der Shell.
+ * Der Kopf der eigenstaendigen Seiten — EINE Leiste, ueberall gleich hoch.
  *
- * **Ohne Titel (Entscheidung vom 2026-08-15).** Vorher stand hier „Unser Unternehmen" bzw.
- * „Bausteine", waehrend die vier Shell-Bereiche gar keine Ueberschrift haben. Zwei von
- * sechs Bereichen beschriftet zu haben ist uneinheitlicher als keiner — welcher Bereich
- * aktiv ist, sagt das hervorgehobene Symbol in der Leiste links.
+ * **Ohne Titel** (2026-08-15): zwei von sechs beschriftete Bereiche sind uneinheitlicher als
+ * keiner. Welcher Bereich aktiv ist, sagt das hervorgehobene Symbol links.
  *
- * `leiste` ist die zweite Zeile des Rahmens (s. `.bereichsleiste` in explorer.css). Sie ist
- * PFLICHT im Aufbau, auch wenn ein Bereich nichts hineinzustellen hat: ihre Hoehe haelt den
- * Inhalt an derselben Stelle. Wer sie weglaesst, bringt das Springen zurueck.
+ * **Und ohne zweite Leiste** — das ist die Ruecknahme eines eigenen Fehlers vom selben Tag.
+ * Um den 45-px-Sprung zwischen den Bereichen zu beseitigen, hatte ich hier eine dauerhafte
+ * `.bereichsleiste` eingezogen. Das Problem war echt, der Preis lag an der falschen Stelle:
+ * nachgemessen war sie auf `/leads` (dem Hauptbildschirm im Normalzustand) und auf
+ * `/intern/lauf` LEER — 45 px leeres Chrom auf fast jedem Schirm.
+ *
+ * Der Denkfehler dahinter: **ein Sprung, den der Nutzer selbst ausloest, ist lesbar; einer
+ * beim Bereichswechsel ist es nicht.** Die Token-Zeile darf also kommen und gehen, wenn
+ * gesucht wird — sie erklaert sich durch die Handlung. Was NICHT springen darf, ist der
+ * Rahmen beim blossen Umschalten.
+ *
+ * Deshalb: die Werkzeuge des Bereichs stehen IN dieser Leiste (`werkzeuge`), nicht darunter.
  */
-export function AppTop({ leiste }: { leiste?: React.ReactNode }) {
+export function AppTop({ werkzeuge }: { werkzeuge?: React.ReactNode }) {
   return (
-    <>
-      <header className="topbar topbar-schlank">
-        <div className="brandcell">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/govisor-wordmark.png" alt="goVisor" className="brandlogo" />
-        </div>
-      </header>
-      <div className="bereichsleiste">{leiste}</div>
-    </>
+    <header className="topbar topbar-schlank">
+      <div className="brandcell">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src="/govisor-wordmark.png" alt="goVisor" className="brandlogo" />
+      </div>
+      {werkzeuge ? <div className="top-werkzeuge">{werkzeuge}</div> : null}
+    </header>
   );
 }

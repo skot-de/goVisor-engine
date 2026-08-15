@@ -13,7 +13,7 @@ export default function UnternehmenPage() {
   const [tab, setTab] = useState<UnTab>("profil");
   return (
     <div className="app">
-      <AppTop leiste={<UnternehmenTabs tab={tab} onTab={setTab} />} />
+      <AppTop werkzeuge={<UnternehmenTabs tab={tab} onTab={setTab} />} />
       <div className="body">
         <AppRail current="unternehmen" />
         <div className="main seitenmain">

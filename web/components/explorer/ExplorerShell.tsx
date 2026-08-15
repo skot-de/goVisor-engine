@@ -1034,6 +1034,11 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
           traegt die Leiste in jedem Bereich das, was dort oben hingehoert: hier die
           Suchtoken, im Unternehmen die Reiter. Gleiche Hoehe, gleicher Ort, anderer
           Inhalt — das ist ein Rahmen und keine Polsterung. */}
+      {/* NUR BEI AKTIVER SUCHE. Vorher stand die Leiste immer da — und war im Normalfall
+          leer (`<div class="filterbar empty">`), also 45 px Chrom ohne Aussage.
+          Ein Sprung, den der Nutzer selbst ausloest (er sucht), ist lesbar; einer beim
+          Bereichswechsel nicht. Nur den zweiten galt es zu beseitigen. */}
+      {tokens.length > 0 ? (
       <div className="bereichsleiste">
         <FilterBar
           tokens={tokens}
@@ -1044,6 +1049,7 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
           onSetRadius={setRadius}
         />
       </div>
+      ) : null}
 
       <div className="body">
         <AppRail

@@ -260,15 +260,26 @@ def test_rahmenmasse_stehen_an_einer_stelle():
     assert "height:var(--leiste)" in css
 
 
-def test_apptop_bringt_die_leiste_immer_mit():
-    """Die Bereichsleiste ist PFLICHT im Aufbau, auch wenn ein Bereich nichts hineinstellt:
-    ihre Hoehe haelt den Inhalt an derselben Stelle. Wer sie weglaesst, holt das Springen
-    zurueck — und es faellt erst beim Wechseln auf, nie beim Bauen der einzelnen Seite."""
+def test_apptop_hat_nur_EINE_leiste():
+    """RUECKNAHME meines eigenen Entwurfs vom selben Tag — auf Svens Frage „warum diese
+    zweite top bar?".
+
+    Um den 45-px-Sprung zwischen den Bereichen zu beseitigen, hatte ich eine DAUERHAFTE
+    zweite Leiste eingezogen. Der Sprung war echt, der Preis lag falsch: nachgemessen war
+    sie auf `/leads` (dem Hauptbildschirm im Normalzustand) und auf `/intern/lauf` LEER —
+    45 px Chrom ohne Aussage auf fast jedem Schirm. Genau die Polsterung, gegen die ich
+    einen Tag vorher argumentiert hatte.
+
+    Der Denkfehler: **ein Sprung, den der Nutzer selbst ausloest, ist lesbar; einer beim
+    Bereichswechsel ist es nicht.** Nur den zweiten galt es zu beseitigen.
+
+    Jetzt: die Werkzeuge des Bereichs stehen IN der einen Leiste (`werkzeuge`).
+    """
     quelle = (ROOT / "web" / "components" / "explorer" / "Rail.tsx").read_text(encoding="utf-8")
-    assert 'className="bereichsleiste"' in quelle
-    assert "titel" not in quelle.split("export function AppTop")[1].split("\n}")[0], (
-        "AppTop darf keinen Titel mehr fuehren — zwei von sechs beschriftete Bereiche sind "
-        "uneinheitlicher als keiner")
+    block = quelle.split("export function AppTop")[1].split("\n}")[0]
+    assert "bereichsleiste" not in block, "AppTop darf keine zweite Leiste mehr aufspannen"
+    assert "werkzeuge" in block, "die Werkzeuge gehoeren IN die Kopfleiste"
+    assert "titel" not in block, "zwei von sechs beschriftete Bereiche sind uneinheitlicher als keiner"
 
 
 def test_filterleiste_haengt_nicht_mehr_im_kopf():
@@ -280,17 +291,23 @@ def test_filterleiste_haengt_nicht_mehr_im_kopf():
     assert 'className="bereichsleiste"' in shell
 
 
-def test_beide_eigenstaendigen_seiten_fuellen_ihre_leiste():
-    """Eine Leiste, die nur Hoehe haelt, ist Polsterung — genau das, wogegen der Rahmen
-    gebaut wurde. Beide eigenstaendigen Seiten stellen deshalb ihre Werkzeuge hinein:
-    Unternehmen die Reiter, Bausteine den Import-Knopf.
-
-    Beides waren Umzuege aus dem INHALT nach oben. Sie lagen dort falsch: Reiter sind
-    Navigation, ein Import-Knopf ist eine Werkzeugleiste — keins von beidem ist Inhalt.
-    """
+def test_beide_eigenstaendigen_seiten_zeigen_ihre_werkzeuge_im_kopf():
+    """Reiter und Import-Knopf sind Navigation bzw. Werkzeug — kein Inhalt. Sie standen
+    urspruenglich MITTEN im Inhalt; der Umzug nach oben bleibt richtig. Nur ihr Ziel hat
+    sich geaendert: die eine Kopfleiste statt einer zweiten Zeile darunter."""
     for seite, erwartet in (("unternehmen", "UnternehmenTabs"), ("bausteine", "BausteineLeiste")):
         quelle = (ROOT / "web" / "app" / seite / "page.tsx").read_text(encoding="utf-8")
-        assert f"leiste={{<{erwartet}" in quelle, f"{seite}: Leiste bleibt leer"
+        assert f"werkzeuge={{<{erwartet}" in quelle, f"{seite}: Werkzeuge nicht im Kopf"
+
+
+def test_tokenzeile_erscheint_nur_bei_aktiver_suche():
+    """Sie ist der EINZIGE Grund fuer eine zweite Zeile — und nur, wenn wirklich gesucht
+    wird. Im Browser geprueft: ohne Suche Inhalt bei y=48, nach „Berlin" bei y=93 mit dem
+    Token in der Leiste. Diese Verschiebung erklaert sich durch die Handlung."""
+    shell = (ROOT / "web" / "components" / "explorer" / "ExplorerShell.tsx").read_text(encoding="utf-8")
+    assert "tokens.length > 0 ? (" in shell, "die Leiste darf nicht dauerhaft stehen"
+    i = shell.index("tokens.length > 0 ? (")
+    assert 'className="bereichsleiste"' in shell[i:i + 400]
 
 
 def test_leisten_knoepfe_tragen_die_rahmen_klasse():

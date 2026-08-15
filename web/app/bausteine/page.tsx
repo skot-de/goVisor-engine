@@ -13,7 +13,7 @@ export default function BausteinePage() {
   const [importOpen, setImportOpen] = useState(false);
   return (
     <div className="app">
-      <AppTop leiste={<BausteineLeiste importOpen={importOpen} onImport={setImportOpen} />} />
+      <AppTop werkzeuge={<BausteineLeiste importOpen={importOpen} onImport={setImportOpen} />} />
       <div className="body">
         <AppRail current="bausteine" />
         {/* `.baust-page` traegt saemtliche Styles der Bibliothek (alle Regeln sind
