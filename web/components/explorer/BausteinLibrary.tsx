@@ -93,10 +93,58 @@ export function BausteinLibrary({ importOpen, onImport }: {
       {!importOpen && msg && <div className="ii-msg" style={{ marginBottom: 12 }}>{msg}</div>}
 
       {blocks.length === 0 ? (
-        <div className="empty">
-          <div className="eh">Noch keine Bausteine</div>
-          <p>Hak in einer Unterlagen-Checkliste „Kopieren &amp; abhaken" an — der Textbaustein landet hier. Oder fülle die Bibliothek aus euren alten Angeboten.</p>
-          <button className="btn btn-p" onClick={() => onImport(true)}>Aus alten Angeboten füllen</button>
+        /* LEERZUSTAND: das ZIEL zeigen, nicht die Luecke.
+           Vorher stand hier ein umrandeter Kasten von 263x330 px, zu 90 % leer, mit dem
+           Text schwebend in der Mitte — das liest sich als „kaputt", nicht als „bereit zum
+           Fuellen". Und man erfuhr nirgends, WIE ein Baustein aussieht.
+           Jetzt: die zwei Wege als Schritte, daneben zwei Beispielkarten in derselben Form
+           wie die echten. Die Beispiele sind ausdruecklich als solche beschriftet — eine
+           Vorschau, die man fuer eigene Daten halten koennte, waere eine Luege. */
+        <div className="baust-leer">
+          <div className="bl-text">
+            <h3>Einmal schreiben, immer wieder verwenden</h3>
+            <p>Jedes Angebot verlangt dieselben Passagen — Referenzen, Zertifikate,
+              Datenschutz, Projektorganisation. Hier sammelt ihr sie einmal und setzt das
+              nächste Angebot daraus zusammen.</p>
+            <ol className="bl-wege">
+              <li>
+                <b>Beim Prüfen einer Ausschreibung</b>
+                <span>In der Unterlagen-Checkliste „Kopieren &amp; abhaken" antippen — der
+                  Textbaustein landet hier, mit Herkunft und Stichworten.</span>
+              </li>
+              <li>
+                <b>Oder aus alten Angeboten</b>
+                <span>Text einfügen, goVisor schneidet die wiederverwendbaren Passagen
+                  heraus. Personenbezogene Angaben werden dabei ersetzt.</span>
+                <button className="btn btn-p" onClick={() => onImport(true)}>
+                  Aus alten Angeboten füllen
+                </button>
+              </li>
+            </ol>
+          </div>
+
+          <div className="bl-vorschau" aria-hidden="true">
+            <div className="bl-vk">So sieht die Bibliothek aus, wenn sie gefüllt ist</div>
+            {[
+              { t: "Referenzen", m: "aus altem Angebot · 12.03.2026",
+                x: "Für die Stadtwerke Musterstadt haben wir zwischen 2023 und 2025 die "
+                 + "Wartung von 140 Trafostationen übernommen — Reaktionszeit unter vier "
+                 + "Stunden, Verfügbarkeit 99,4 %.",
+                k: ["Wartung", "Energie", "SLA"] },
+              { t: "Zertifikate & QM", m: "aus Checkliste · Lead 512883_2026",
+                x: "Unser Qualitätsmanagement ist nach DIN EN ISO 9001:2015 zertifiziert "
+                 + "(Zertifikat-Nr. 12 100 45678 TMS), gültig bis 08/2027.",
+                k: ["ISO 9001", "QM"] },
+            ].map((b, i) => (
+              <div className="bcard bl-muster" key={i}>
+                <div className="bh">
+                  <div><div className="bt">{b.t}</div><div className="bm">{b.m}</div></div>
+                </div>
+                <div className="bx">{b.x}</div>
+                <div className="bf">{b.k.map((k) => <span className="chip" key={k}>{k}</span>)}</div>
+              </div>
+            ))}
+          </div>
         </div>
       ) : (
         <div className="libgrid">

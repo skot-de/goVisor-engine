@@ -606,3 +606,51 @@ def test_fehlendes_tesseract_bricht_den_index_nicht():
         import importlib
         from govisor import docpipe as dp2
         importlib.reload(dp2)
+
+
+# ── Einstiegsseiten: Bausteine und Unternehmen ────────────────────────────────────────
+
+def test_btn_klassen_greifen_nicht_ausserhalb_ihrer_seite():
+    """DRITTES MAL AN EINEM TAG. `.btn-p`/`.btn-s`/`.btn-t` sehen aus wie ein globales
+    Knopf-System, sind aber unter `.baust-page .btn` bzw. `.va-checklist .btn` gescopt.
+    Wer sie woanders benutzt, bekommt nackten Text:
+
+      · Bausteine-Import in der Bereichsleiste  → als Text gerendert
+      · /unternehmen, alle drei Gate-Knoepfe    → `background: transparent`, `border: 0`
+        (auch der „primaere") — also gar keine Rangfolge
+
+    Der Test haelt fest, dass die Gate-Knoepfe EIGENE Klassen tragen, die dort auch
+    definiert sind. Ein Knopf, dessen Aussehen von der Seite abhaengt, auf der er zufaellig
+    steht, ist kein Knopf."""
+    v = (ROOT / "web" / "components" / "unternehmen" / "UnternehmenView.tsx").read_text(encoding="utf-8")
+    gate = v.split('className="un-gate-btns"')[1][:400]
+    assert "btn-haupt" in gate and "btn-zweit" in gate
+    assert 'className="btn btn-p"' not in gate, "verlaesst sich auf fremd gescopte Klassen"
+    css = (ROOT / "web" / "app" / "unternehmen" / "unternehmen.css").read_text(encoding="utf-8")
+    assert ".btn-haupt{" in css and ".btn-zweit{" in css
+
+
+def test_leerzustand_zeigt_das_ziel_nicht_die_luecke():
+    """Vorher: ein umrandeter Kasten von 263x330 px, zu 90 % leer, Text schwebend in der
+    Mitte — das liest sich als „kaputt", nicht als „bereit zum Fuellen". Und man erfuhr
+    nirgends, WIE ein Baustein aussieht.
+
+    Jetzt zwei Musterkarten in derselben Form wie die echten — ausdruecklich beschriftet
+    und `aria-hidden`. Eine Vorschau, die man fuer eigene Daten halten koennte, waere eine
+    Luege."""
+    q = (ROOT / "web" / "components" / "explorer" / "BausteinLibrary.tsx").read_text(encoding="utf-8")
+    assert "bl-vorschau" in q and "bl-muster" in q
+    vorschau = q[q.index('className="bl-vorschau"'):][:200]
+    assert 'aria-hidden' in vorschau, "Muster duerfen nicht vorgelesen werden"
+    css = (ROOT / "web" / "app" / "explorer.css").read_text(encoding="utf-8")
+    assert "pointer-events: none" in css.split(".bl-muster")[1][:120], "Muster nicht anklickbar"
+
+
+def test_einstieg_nennt_die_WIRKUNG_nicht_nur_die_aufgabe():
+    """„Hier pflegt ihr Referenzen, Zertifikate, Nachweise" beschreibt eine AUFGABE. Ein
+    Grund, sie zu erledigen, ist es nicht. Drei Wirkungen, jede an einer Stelle im Produkt,
+    die es schon gibt."""
+    v = (ROOT / "web" / "components" / "unternehmen" / "UnternehmenView.tsx").read_text(encoding="utf-8")
+    assert "un-wirkt" in v
+    for wort in ("Relevanz", "Anforderungsabgleich", "Textbausteine"):
+        assert wort in v.split("un-wirkt")[1][:1200], f"{wort} fehlt"

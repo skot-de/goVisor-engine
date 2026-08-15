@@ -86,12 +86,34 @@ export function UnternehmenView({ tab, onTab }: { tab: UnTab; onTab: (t: UnTab) 
               {t("Hier pflegt ihr eure Eignungsangaben — Referenzen, Zertifikate, Nachweise. Sie liegen in eurem Konto und werden für Anforderungsabgleich, Textbausteine und Relevanz verwendet.")}
             </p>
           )}
+          {/* WAS DAS PROFIL BEWIRKT — vorher stand hier nur, WAS man eintraegt
+              („Referenzen, Zertifikate, Nachweise"). Das ist eine Aufgabe, kein Grund.
+              Drei Wirkungen, jede an einer Stelle im Produkt, die es schon gibt. */}
+          <ul className="un-wirkt">
+            <li>
+              <b>{t("Relevanz statt Vollständigkeit")}</b>
+              <span>{t("Die Lead-Liste sortiert nach eurem Feld und eurem Umkreis, statt alles zu zeigen.")}</span>
+            </li>
+            <li>
+              <b>{t("Anforderungsabgleich")}</b>
+              <span>{t("Aus den Vergabeunterlagen gelesene Nachweise werden gegen eure gehalten — was fehlt, steht sofort da.")}</span>
+            </li>
+            <li>
+              <b>{t("Textbausteine, die schon ausgefüllt sind")}</b>
+              <span>{t("Eure Angaben fließen in die Bausteinbibliothek, statt bei jedem Angebot neu getippt zu werden.")}</span>
+            </li>
+          </ul>
+
           <div className="un-gate-btns">
-            <Link className="btn btn-p" href="/login">{t("Anmelden")}</Link>
-            <Link className="btn btn-t" href="/onboarding">{t("Konto anlegen")}</Link>
-            <Link className="btn btn-t" href="/leads">{t("Zurück zu den Leads")}</Link>
+            <Link className="btn-haupt" href="/login">{t("Anmelden")}</Link>
+            <Link className="btn-zweit" href="/onboarding">{t("Konto anlegen")}</Link>
           </div>
-          <p className="un-muted">{t("Eure lokale Einstellung bleibt dabei erhalten.")}</p>
+          {/* „Zurueck" ist keine gleichwertige Handlung — vorher sahen alle drei gleich aus.
+              Ein Ausgang gehoert nicht neben den Eingang gestellt. */}
+          <p className="un-muted">
+            {t("Eure lokale Einstellung bleibt dabei erhalten.")}{" "}
+            <Link href="/leads" className="un-zurueck">{t("Zurück zu den Leads")}</Link>
+          </p>
         </div>
       </div>
     );

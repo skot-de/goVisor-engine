@@ -2018,3 +2018,32 @@ a.lb-kachel{text-decoration:none}
 .dok-gesperrt { color: var(--muted, #9ca3af); font-size: 13px; text-decoration: line-through; }
 .dok-meta { margin-left: auto; flex: none; font-size: 11px; color: var(--muted, #9ca3af);
             font-variant-numeric: tabular-nums; }
+
+/* BAUSTEINE — Leerzustand. Er zeigt das ZIEL, nicht die Luecke: links die zwei Wege als
+   Schritte, rechts zwei Beispielkarten in derselben Form wie die echten.
+   Die Beispiele sind beschriftet und `aria-hidden` — eine Vorschau, die man fuer eigene
+   Daten halten koennte, waere eine Luege. */
+.baust-leer { display: grid; grid-template-columns: minmax(300px, 1fr) minmax(280px, 420px);
+              gap: 44px; align-items: start; max-width: 1000px; margin: 8px 0 0; }
+.bl-text h3 { margin: 0 0 8px; font-size: 19px; letter-spacing: -.01em; }
+.bl-text > p { margin: 0 0 22px; color: var(--ink-700, #374151); font-size: 14px;
+               line-height: 1.6; max-width: 46ch; }
+.bl-wege { list-style: none; margin: 0; padding: 0; display: grid; gap: 18px;
+           counter-reset: weg; }
+.bl-wege li { counter-increment: weg; padding-left: 34px; position: relative; }
+.bl-wege li::before { content: counter(weg); position: absolute; left: 0; top: 0;
+                      width: 22px; height: 22px; border-radius: 50%;
+                      background: var(--surface-2, #f1f5f9); color: var(--ink-700, #374151);
+                      font-size: 12px; font-weight: 600; display: grid; place-items: center; }
+.bl-wege b { display: block; font-size: 14px; margin-bottom: 2px; }
+.bl-wege span { display: block; color: var(--ink-700, #374151); font-size: 13px;
+                line-height: 1.55; max-width: 44ch; }
+.bl-wege .btn { margin-top: 10px; }
+
+.bl-vorschau { display: grid; gap: 10px; }
+.bl-vk { font-size: 11px; text-transform: uppercase; letter-spacing: .05em;
+         color: var(--muted, #9ca3af); }
+/* Gedimmt und nicht anklickbar: es sind Muster, keine Daten. */
+.bl-muster { opacity: .62; pointer-events: none; }
+
+@media (max-width: 900px) { .baust-leer { grid-template-columns: 1fr; gap: 28px; } }

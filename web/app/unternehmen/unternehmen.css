@@ -204,3 +204,29 @@
 .un-gate h1{font-size:22px;font-weight:700;margin-bottom:10px}
 .un-gate p{font-size:14px;line-height:1.6;color:var(--ink-600);margin-bottom:14px}
 .un-gate-btns{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+
+/* WAS DAS PROFIL BEWIRKT. Vorher stand auf dieser Seite nur, WAS man eintraegt —
+   „Referenzen, Zertifikate, Nachweise". Das ist eine Aufgabe, kein Grund. */
+.un-wirkt{list-style:none;margin:0 0 22px;padding:0;display:grid;gap:13px}
+.un-wirkt li{padding-left:20px;position:relative}
+.un-wirkt li::before{content:"";position:absolute;left:0;top:7px;width:7px;height:7px;
+  border-radius:50%;background:var(--signal,#10b981)}
+.un-wirkt b{display:block;font-size:14px;margin-bottom:1px}
+.un-wirkt span{display:block;font-size:13px;line-height:1.55;color:var(--ink-600)}
+
+/* EIGENE KNOEPFE, weil `.btn-p`/`.btn-t` hier NICHT greifen: ihre Gestaltung haengt an
+   `.baust-page .btn` bzw. `.va-checklist .btn`, und diese Seite liegt ausserhalb.
+   Gemessen 2026-08-15: alle drei Knoepfe hatten `background: transparent` und `border: 0` —
+   auch der „primaere". Sie sahen aus wie Text und untereinander gleich, es gab also gar
+   keine Rangfolge. */
+.un-gate-btns{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+.btn-haupt,.btn-zweit{display:inline-flex;align-items:center;justify-content:center;
+  padding:9px 18px;border-radius:7px;font-size:13px;font-weight:600;
+  text-decoration:none;transition:.15s;border:1px solid transparent}
+.btn-haupt{background:var(--signal-deep,#047857);color:#fff}
+.btn-haupt:hover{filter:brightness(1.08)}
+.btn-zweit{background:var(--surface,#fff);color:var(--ink-900,#111827);
+  border-color:var(--line,#e5e7eb)}
+.btn-zweit:hover{background:var(--surface-2,#f8fafc)}
+/* Der Ausgang gehoert nicht neben den Eingang: leiser Link statt dritter Knopf. */
+.un-zurueck{color:var(--ink-600);text-decoration:underline;text-underline-offset:2px}
