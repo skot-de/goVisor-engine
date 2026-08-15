@@ -111,13 +111,134 @@ def _txt(data: bytes) -> str:
     return data.decode("utf-8", "replace")
 
 
+def _gaeb_text(data: bytes) -> str:
+    """GAEB → durchsuchbarer Text der Leistungsverzeichnis-Positionen.
+
+    **Der Parser lag fertig daneben und wurde nie gerufen.** `govisor/docparse.py` kann GAEB
+    seit Ticket 23 (`parse_gaeb`, `parse_gaeb_flat`), aber `_EXTRACT` kannte die Endungen
+    nicht — 2.082 Dateien (.x83 1.392 · .d83 557 · .p83 133) liefen deshalb als
+    `unknown_type` durch, gemessen 2026-08-15.
+
+    Das ist der teuerste Posten im ganzen Index gewesen: ein GAEB ist das
+    LEISTUNGSVERZEICHNIS — Position, Menge, Einheit, Text. Genau das, wonach ein Bieter
+    sucht, und genau das, was wir als „unbekanntes Format" verworfen haben.
+    """
+    from .docparse import parse_gaeb, parse_gaeb_flat
+    d = None
+    try:
+        d = parse_gaeb(data) or parse_gaeb_flat(data)
+    except Exception:                                     # noqa: BLE001
+        return ""
+    if not d:
+        # RUECKFALLEBENE FUER DEN T-DIALEKT. Gemessen 2026-08-15: die `.d83`/`.p83` in
+        # unseren Archiven beginnen mit `T0`/`T1`, nicht mit `00` — `parse_gaeb_flat`
+        # lehnt sie deshalb korrekt ab (es ist nicht DA 90). Die `T1`-Saetze tragen aber
+        # lesbaren Beschreibungstext ab Spalte 3.
+        #
+        # Wir holen ihn als TEXT, nicht als Positionen: die Satzstruktur dieses Dialekts
+        # kennen wir nicht, und geratene Mengen waeren schlimmer als keine. 690 Dateien
+        # (.d83 557 · .p83 133), die bisher gar nichts lieferten.
+        try:
+            roh = data.decode("cp850", "replace")
+        except Exception:                                 # noqa: BLE001
+            return ""
+        # GAEB-KLAMMERFORMAT (`.p83`): `#begin[GAEB]` mit `[Tag]Wert[end]`. Wieder nur
+        # TEXT, keine Positionen — die Tag-Bedeutungen kennen wir nicht, und geratene
+        # Mengen waeren schlimmer als keine. 133 Dateien.
+        if roh.lstrip().startswith("#begin"):
+            import re as _re2
+            werte = _re2.findall(r"\]([^\[\]]{3,})\[end\]", roh)
+            return "\n".join(w.strip() for w in werte if any(c.isalpha() for c in w))
+        if not roh.lstrip().startswith("T"):
+            return ""
+        zeilen = [z[2:].rstrip() for z in roh.splitlines()
+                  if len(z) > 2 and z[0] == "T"]
+        return "\n".join(z for z in zeilen if z.strip())
+    zeilen = []
+    for pos in (d.get("positions") or []):
+        # Menge und Einheit gehoeren dazu: „4 St Hausnummernschild" ist suchbar,
+        # „Hausnummernschild" allein verliert die Groessenordnung.
+        teile = [pos.get("rno"), pos.get("qty"), pos.get("unit"), pos.get("text")]
+        zeilen.append(" ".join(str(t) for t in teile if t))
+    return "\n".join(zeilen)
+
+
+def _odt_text(data: bytes) -> str:
+    """ODT ist ein ZIP mit `content.xml` — braucht keine Bibliothek, nur zwei Zeilen."""
+    import io
+    import zipfile
+    try:
+        with zipfile.ZipFile(io.BytesIO(data)) as zf:
+            roh = zf.read("content.xml")
+    except Exception:                                     # noqa: BLE001
+        return ""
+    return _html_text(roh)
+
+
+def _rtf_text(data: bytes) -> str:
+    """RTF -> Text, ohne Abhaengigkeit.
+
+    561 Dateien und damit der groesste Posten unter `unsupported` (gemessen 2026-08-15) —
+    mehr als `.doc` (205) und `.xls` (86) zusammen. RTF ist im Kern lesbarer Text mit
+    Steuerworten; ein Stripper reicht und spart eine Bibliothek, die sonst nur hierfuer
+    im Projekt laege.
+
+    DIE KOPFTABELLEN BRAUCHEN EINEN KLAMMERZAEHLER, kein Muster. Der erste Versuch war ein
+    Regex auf `{\\fonttbl...}` — der scheitert, weil RTF-Tabellen VERSCHACHTELTE Klammern
+    enthalten (`{\\f0\\froman Times New Roman;}`): das nicht-gierige Ende trifft die erste
+    INNERE Klammer, der Rest der Tabelle bleibt stehen. Gemessen begann der Text danach mit
+    „Symbol; Times New Roman; sans-serif; Courier;" — nicht suchbar, und jede Zeichenzahl
+    verfaelscht. Verschachtelte Klammern sind mit regulaeren Ausdruecken grundsaetzlich
+    nicht zu fassen; der Zaehler ist hier kein Luxus, sondern die einzige richtige Loesung.
+    """
+    import re as _re
+    try:
+        t = data.decode("cp1252", "replace")
+    except Exception:                                     # noqa: BLE001
+        return ""
+
+    for gruppe in ("fonttbl", "colortbl", "stylesheet", "info", "listtable",
+                   "listoverridetable", "generator", "pict", "themedata", "rsidtbl"):
+        marke = "{" + chr(92) + gruppe
+        i = t.find(marke)
+        while i != -1:
+            tiefe, j = 0, i
+            while j < len(t):
+                if t[j] == "{":
+                    tiefe += 1
+                elif t[j] == "}":
+                    tiefe -= 1
+                    if tiefe == 0:
+                        break
+                j += 1
+            t = t[:i] + " " + t[j + 1:]
+            i = t.find(marke)
+
+    t = _re.sub(r"\{\\\*.*?\}", " ", t, flags=_re.S)       # Steuergruppen ganz weg
+    t = _re.sub(r"\\'([0-9a-fA-F]{2})",
+                lambda m: bytes([int(m.group(1), 16)]).decode("cp1252", "replace"), t)
+    t = _re.sub(r"\\par[d]?\b", "\n", t)                   # Absaetze erhalten
+    t = _re.sub(r"\\[a-zA-Z]+-?\d* ?", " ", t)              # uebrige Steuerworte
+    t = t.replace("{", " ").replace("}", " ")
+    return _re.sub(r"[ \t]{2,}", " ", t).strip()
+
+
 _EXTRACT = {
     ".pdf": _pdf_text, ".docx": _docx_text, ".xlsx": _xlsx_text,
     ".htm": _html_text, ".html": _html_text, ".xml": _html_text,
     ".txt": _txt, ".csv": _txt,
+    # `.docm` ist DOCX mit Makros — dieselbe Struktur, derselbe Extraktor (83 Dateien).
+    ".docm": _docx_text, ".xlsm": _xlsx_text,
+    ".rtf": _rtf_text, ".odt": _odt_text,
+    # GAEB — der Parser lag seit Ticket 23 ungenutzt daneben, s. `_gaeb_text`.
+    ".x83": _gaeb_text, ".x81": _gaeb_text, ".x86": _gaeb_text,
+    ".d83": _gaeb_text, ".d81": _gaeb_text, ".p83": _gaeb_text, ".gaeb": _gaeb_text,
 }
-# bekannt, aber ohne einfachen Extraktor (Alt-Office/Binär) → geflaggt, nicht ignoriert
-_KNOWN_NOEXTRACT = {".doc", ".xls", ".ppt", ".rtf", ".odt", ".p7s", ".zip"}
+# bekannt, aber ohne einfachen Extraktor (Alt-Office/Binär) → geflaggt, nicht ignoriert.
+# `.doc` und `.xls` bleiben: beide sind Binaerformate, fuer die es keine sinnvolle Loesung
+# ohne zusaetzliche Abhaengigkeit gibt (LibreOffice/antiword sind auf dieser Maschine nicht
+# vorhanden). 291 Dateien — bewusst offen, nicht uebersehen.
+_KNOWN_NOEXTRACT = {".doc", ".xls", ".ppt", ".p7s", ".zip"}
 
 
 # GROESSEN-SPERRE JE DATEI. Gemessen 2026-08-14 an echten Paketen (je 6 Proben):

@@ -458,3 +458,47 @@ def test_leeres_archiv_hinterlaesst_eine_zeile():
     quelle = (ROOT / "govisor" / "docworker.py").read_text(encoding="utf-8")
     assert '"leeres_archiv"' in quelle
     assert "if not zeilen:" in quelle, "der Fall muss ausdruecklich behandelt sein"
+
+
+# ── Formate, die der Index bisher verwarf ─────────────────────────────────────────────
+
+def test_gaeb_parser_ist_verdrahtet():
+    """DER TEUERSTE FUND DES TAGES: `govisor/docparse.py` kann GAEB seit Ticket 23 —
+    `docpipe._EXTRACT` kannte die Endungen nur nicht. 2.082 Dateien (.x83 1.392 · .d83 557
+    · .p83 133) liefen als `unknown_type` durch, waehrend der fertige Parser danebenlag.
+
+    Ein GAEB IST das Leistungsverzeichnis: Position, Menge, Einheit, Text — genau das,
+    wonach ein Bieter sucht. Wir haben es als „unbekanntes Format" verworfen."""
+    from govisor.docpipe import _EXTRACT
+    for e in (".x83", ".d83", ".p83", ".x81", ".gaeb"):
+        assert e in _EXTRACT, f"{e} fehlt"
+
+
+def test_rtf_war_der_groesste_unsupported_posten():
+    """561 Dateien — mehr als `.doc` (205) und `.xls` (86) zusammen. Ohne Bibliothek
+    geloest, weil sie sonst nur hierfuer im Projekt laege."""
+    from govisor.docpipe import _EXTRACT, _KNOWN_NOEXTRACT
+    assert ".rtf" in _EXTRACT and ".rtf" not in _KNOWN_NOEXTRACT
+    assert ".odt" in _EXTRACT
+    # `.doc`/`.xls` bleiben bewusst offen: Binaerformate ohne Loesung ohne Zusatzpaket.
+    assert ".doc" in _KNOWN_NOEXTRACT and ".xls" in _KNOWN_NOEXTRACT
+
+
+def test_rtf_wirft_die_schrifttabelle_weg():
+    """Verschachtelte Klammern sind mit regulaeren Ausdruecken NICHT zu fassen. Der erste
+    Versuch nutzte `{\\\\fonttbl.*?}` — das nicht-gierige Ende traf die erste INNERE Klammer,
+    und der Text begann mit „Symbol; Times New Roman; sans-serif; Courier;".
+
+    Der Klammerzaehler ist hier kein Luxus, sondern die einzige richtige Loesung."""
+    from govisor.docpipe import _rtf_text
+    roh = (r"{\rtf1\ansi{\fonttbl{\f0\froman Times New Roman;}{\f1\fswiss Arial;}}"
+           r"{\colortbl;\red0\green0\blue0;}\f0\fs24 Angebotsschreiben Los 3\par}")
+    t = _rtf_text(roh.encode("cp1252"))
+    assert "Angebotsschreiben" in t
+    assert "Times New Roman" not in t and "Arial" not in t, f"Schrifttabelle blieb: {t[:80]}"
+
+
+def test_docm_nutzt_den_docx_extraktor():
+    """`.docm` ist DOCX mit Makros — dieselbe Struktur. 83 Dateien fuer eine Zeile."""
+    from govisor.docpipe import _EXTRACT, _docx_text
+    assert _EXTRACT[".docm"] is _docx_text
