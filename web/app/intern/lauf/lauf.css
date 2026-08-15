@@ -51,3 +51,25 @@
 .lauf-fehlerliste { margin: 0; padding-left: 18px; font-size: 13px; line-height: 1.6;
                     color: var(--ink-700, #374151); }
 .lauf-fehlerliste li { margin-bottom: 3px; }
+
+/* FORTSCHRITT. Der Balken ist bewusst schlicht: er beantwortet „wie weit" und sonst nichts. */
+.lauf-fortschritt { margin-top: 14px; padding-top: 14px;
+                    border-top: 1px solid var(--line, #e5e7eb); }
+.lf-kopf { display: flex; justify-content: space-between; align-items: baseline;
+           font-size: 13px; color: var(--ink-700, #374151); margin-bottom: 6px; }
+.lf-rest { color: var(--muted, #6b7280); font-variant-numeric: tabular-nums; }
+.lf-bahn { height: 8px; border-radius: 999px; background: var(--surface-2, #f1f5f9);
+           overflow: hidden; }
+.lf-fuell { height: 100%; background: #10b981; border-radius: 999px;
+            transition: width .5s ease; }
+.lf-aktuell { margin: 8px 0 0; font-size: 13px; font-weight: 600;
+              color: var(--ink-900, #111827); }
+.lf-fuss { margin: 4px 0 0; font-size: 11px; color: var(--muted, #9ca3af); }
+
+/* LOG. Monospace und feste Hoehe — es soll im Blick bleiben, nicht die Seite sprengen.
+   `column-reverse` haelt die juengste Zeile unten sichtbar, ohne Scroll-Akrobatik. */
+.lauf-log { margin: 0; max-height: 340px; overflow: auto; display: flex;
+            flex-direction: column-reverse;
+            font: 11px/1.55 ui-monospace, SFMono-Regular, Menlo, monospace;
+            white-space: pre-wrap; word-break: break-word;
+            background: #0f1115; color: #c8ccd4; padding: 12px 14px; border-radius: 8px; }

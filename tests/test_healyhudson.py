@@ -402,3 +402,25 @@ def test_dashboard_sieht_laeufe_die_vor_dem_eigenen_log_sterben():
     assert "LAUNCHD_ERR" in r and "govisor-launchd.err.log" in r
     seite = (ROOT / "web" / "app" / "intern" / "lauf" / "page.tsx").read_text(encoding="utf-8")
     assert "vorLog" in seite
+
+
+def test_fortschritt_misst_gegen_den_letzten_lauf_nicht_gegen_das_skript():
+    """Gemessen 2026-08-15: das Skript enthaelt 30 `step`-Aufrufe, der vollstaendige Lauf
+    vom 14.08. meldete 20 — zehn Schritte haengen an Bedingungen (neue Quellen,
+    Supabase-Creds, Phase).
+
+    Ein Balken gegen die statische 30 stuende bei einem SAUBEREN Lauf fuer immer bei 67 %.
+    Ein Fortschritt, der nie 100 % erreicht, wird nicht geglaubt — und dann auch der Rest
+    der Seite nicht."""
+    r = (ROOT / "web" / "app" / "api" / "intern" / "lauf" / "route.ts").read_text(encoding="utf-8")
+    assert "function massstab" in r
+    assert "Tageslauf fertig in" in r.split("function massstab")[1][:900], (
+        "als Massstab taugt nur ein VOLLSTAENDIGER Lauf")
+    assert "Math.max(mass.schritte, fertig)" in r, (
+        "laeuft der aktuelle Lauf laenger, ist der Massstab veraltet — nicht der Lauf kaputt")
+
+
+def test_restzeit_nur_mit_grundlage():
+    """Eine Restzeit ohne Massstab waere geraten — und nach ihr wird der Tag geplant."""
+    r = (ROOT / "web" / "app" / "api" / "intern" / "lauf" / "route.ts").read_text(encoding="utf-8")
+    assert 'mass && mass.dauerSek && lauf.ergebnis === "laeuft"' in r

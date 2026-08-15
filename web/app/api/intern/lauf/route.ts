@@ -38,6 +38,8 @@ type Lauf = {
   alterStunden: number | null;
   fehlerZeilen: string[];
   letzterSchritt: string | null;
+  schrittListe: { zeit: string; name: string }[];
+  logZeilen: string[];
 };
 
 /** Zählt Archive auf der Platte — ohne sie zu öffnen. */
@@ -68,7 +70,8 @@ function leseLauf(): Lauf {
   const datei = letzteLogdatei();
   if (!datei) {
     return { datum: null, ergebnis: "keiner", dauerSek: null, endeUm: null,
-             alterStunden: null, fehlerZeilen: [], letzterSchritt: null };
+             alterStunden: null, fehlerZeilen: [], letzterSchritt: null,
+             schrittListe: [], logZeilen: [] };
   }
   const voll = path.join(LOGS, datei);
   const datum = datei.slice(6, 16);
@@ -91,6 +94,10 @@ function leseLauf(): Lauf {
 
   const schritte = zeilen.filter((z) => /^▶ \d{2}:\d{2}:\d{2}/.test(z));
   const letzterSchritt = schritte.length ? schritte[schritte.length - 1].replace(/^▶ \S+\s+/, "") : null;
+  const schrittListe = schritte.map((z) => {
+    const m = z.match(/^▶ (\d{2}:\d{2}:\d{2})\s+(.*)$/);
+    return { zeit: m ? m[1] : "", name: m ? m[2].trim() : z.trim() };
+  });
 
   let stand: fs.Stats | null = null;
   try { stand = fs.statSync(voll); } catch { /* ignorieren */ }
@@ -106,7 +113,40 @@ function leseLauf(): Lauf {
     alterStunden: stand ? Math.round((Date.now() - stand.mtimeMs) / 36e5 * 10) / 10 : null,
     fehlerZeilen,
     letzterSchritt,
+    schrittListe,
+    // Die letzten Zeilen roh — beim Zusehen will man wissen, WAS gerade passiert, nicht nur
+    // welcher Schritt laeuft. Ein Schritt kann 40 Minuten dauern.
+    logZeilen: zeilen.filter(Boolean).slice(-60).map((z) => z.replace(/\s+$/, "")),
   };
+}
+
+/** Der letzte VOLLSTAENDIGE Lauf als Massstab — nicht die `step`-Zeilen im Skript.
+ *
+ * Gemessen 2026-08-15: das Skript enthaelt 30 `step`-Aufrufe, der vollstaendige Lauf vom
+ * 14.08. meldete 20. Zehn Schritte haengen an Bedingungen (neue Quellen, Supabase-Creds,
+ * Phase). Ein Balken gegen die statische 30 stuende bei einem sauberen Lauf fuer immer bei
+ * 67 % — und ein Fortschritt, der nie 100 % erreicht, wird nicht geglaubt.
+ *
+ * Deshalb der empirische Massstab: was hier zuletzt WIRKLICH gelaufen ist. Er kann daneben
+ * liegen, wenn sich der Umfang aendert (heute sind die neuen Quellen dazugekommen) — darum
+ * wird er nach oben nachgezogen, statt bei 100 % zu kleben.
+ */
+function massstab(ausser: string | null): { schritte: number; dauerSek: number } | null {
+  let dateien: string[];
+  try { dateien = fs.readdirSync(LOGS).filter((f) => /^daily-\d{4}-\d{2}-\d{2}\.log$/.test(f)); }
+  catch { return null; }
+  dateien.sort().reverse();
+  for (const f of dateien) {
+    if (ausser && f === ausser) continue;
+    let t = "";
+    try { t = fs.readFileSync(path.join(LOGS, f), "utf8"); } catch { continue; }
+    const ende = t.split("\n").reverse().find((z) => z.includes("Tageslauf fertig in"));
+    if (!ende) continue;                       // unvollstaendig → taugt nicht als Massstab
+    const m = ende.match(/fertig in (\d+)s/);
+    const n = (t.match(/^▶ \d{2}:\d{2}:\d{2}/gm) || []).length;
+    if (n > 0) return { schritte: n, dauerSek: m ? Number(m[1]) : 0 };
+  }
+  return null;
 }
 
 /** Die letzten Zeilen des launchd-Fehlerlogs — nur, wenn sie NEUER sind als der letzte
@@ -156,9 +196,23 @@ export async function GET() {
   if (letzte) { try { eigenerStand = fs.statSync(path.join(LOGS, letzte)).mtimeMs; } catch { /* egal */ } }
   const vorLog = launchdFehler(eigenerStand);
 
+  const mass = massstab(letzte);
+  const fertig = lauf.schrittListe.length;
+  // Nach oben nachziehen: laeuft der aktuelle Lauf laenger als der Massstab, ist der
+  // Massstab veraltet — nicht der Lauf kaputt.
+  const erwartet = mass ? Math.max(mass.schritte, fertig) : fertig;
+  const anteil = erwartet ? Math.min(1, fertig / erwartet) : 0;
+  // Restzeit nur schaetzen, wenn es einen Massstab gibt UND der Lauf laeuft. Eine Zahl
+  // ohne Grundlage waere hier besonders schaedlich: nach ihr wird der Tag geplant.
+  const verbleibendSek = mass && mass.dauerSek && lauf.ergebnis === "laeuft"
+    ? Math.max(0, Math.round(mass.dauerSek * (1 - anteil)))
+    : null;
+
   return NextResponse.json({
     erzeugt: new Date().toISOString(),
     lauf,
+    fortschritt: { fertig, erwartet, anteil, verbleibendSek,
+                   massstabAus: mass ? "letzter vollstaendiger Lauf" : null },
     // Startversuche, die es nicht bis zum eigenen Log geschafft haben.
     vorLog,
     dokumente: {

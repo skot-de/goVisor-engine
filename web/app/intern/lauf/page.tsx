@@ -28,7 +28,11 @@ type Antwort = {
     alterStunden: number | null;
     fehlerZeilen: string[];
     letzterSchritt: string | null;
+    schrittListe: { zeit: string; name: string }[];
+    logZeilen: string[];
   };
+  fortschritt: { fertig: number; erwartet: number; anteil: number;
+                 verbleibendSek: number | null; massstabAus: string | null };
   /** Startversuche, die es nicht bis zum eigenen Log geschafft haben (z. B. gesperrte
    *  Datenplatte). Ohne sie waere ein Lauf, der sofort stirbt, unsichtbar. */
   vorLog: { zeit: number; zeilen: string[] } | null;
@@ -65,7 +69,9 @@ export default function LaufPage() {
     holen();
     // Alle 60 s nachladen: der Index laeuft stundenlang, und man will den Rueckstand
     // schrumpfen sehen, ohne die Seite anzufassen.
-    const t = setInterval(holen, 60_000);
+    // Waehrend eines Laufs alle 10 s, sonst jede Minute. Ein Log, das man beim Zusehen
+    // manuell neu laden muss, wird nicht angesehen.
+    const t = setInterval(holen, 10_000);
     return () => clearInterval(t);
   }, []);
 
@@ -112,7 +118,48 @@ export default function LaufPage() {
                 {d.lauf.ergebnis === "abgebrochen" && d.lauf.letzterSchritt ? (
                   <p className="lauf-hinweis">Zuletzt begonnen: <code>{d.lauf.letzterSchritt}</code></p>
                 ) : null}
+
+                {/* FORTSCHRITT. Der Massstab ist der letzte VOLLSTAENDIGE Lauf, nicht die
+                    `step`-Zeilen im Skript: davon gibt es 30, gelaufen sind zuletzt 20 (der
+                    Rest haengt an Bedingungen). Ein Balken, der nie 100 % erreicht, wird
+                    nicht geglaubt. */}
+                {d.fortschritt.erwartet > 0 ? (
+                  <div className="lauf-fortschritt">
+                    <div className="lf-kopf">
+                      <span>Schritt <b>{d.fortschritt.fertig}</b> von ~{d.fortschritt.erwartet}</span>
+                      {d.fortschritt.verbleibendSek != null ? (
+                        <span className="lf-rest">noch ~{dauer(d.fortschritt.verbleibendSek)}</span>
+                      ) : null}
+                    </div>
+                    <div className="lf-bahn" role="progressbar"
+                         aria-valuenow={Math.round(d.fortschritt.anteil * 100)}
+                         aria-valuemin={0} aria-valuemax={100}>
+                      <div className="lf-fuell" style={{ width: `${d.fortschritt.anteil * 100}%` }} />
+                    </div>
+                    {d.lauf.letzterSchritt ? (
+                      <p className="lf-aktuell">{d.lauf.letzterSchritt}</p>
+                    ) : null}
+                    {d.fortschritt.massstabAus ? (
+                      <p className="lf-fuss">Restzeit geschätzt aus dem letzten vollständigen Lauf —
+                        ändert sich der Umfang, stimmt sie nicht.</p>
+                    ) : null}
+                  </div>
+                ) : null}
               </section>
+
+              {d.lauf.logZeilen.length ? (
+                <section className="lauf-karte">
+                  <div className="lauf-kopf">
+                    <b>Log — die letzten {d.lauf.logZeilen.length} Zeilen</b>
+                    <span className="lauf-urteil">
+                      aktualisiert {new Date(d.erzeugt).toLocaleTimeString("de-DE")}
+                    </span>
+                  </div>
+                  {/* Von unten nach oben lesbar: `column-reverse` haelt die JUENGSTE Zeile
+                      im Blick, ohne bei jeder Aktualisierung scrollen zu muessen. */}
+                  <pre className="lauf-log">{d.lauf.logZeilen.join("\n")}</pre>
+                </section>
+              ) : null}
 
               <section className="lauf-karte">
                 <div className="lauf-kopf"><b>Vergabeunterlagen — Rückstand beim Auspacken</b></div>
