@@ -441,3 +441,20 @@ def test_restzeit_nur_mit_grundlage():
     """Eine Restzeit ohne Massstab waere geraten — und nach ihr wird der Tag geplant."""
     r = (ROOT / "web" / "app" / "api" / "intern" / "lauf" / "route.ts").read_text(encoding="utf-8")
     assert 'mass && mass.dauerSek && lauf.ergebnis === "laeuft"' in r
+
+
+def test_leeres_archiv_hinterlaesst_eine_zeile():
+    """Gemessen 2026-08-15 nach dem Neuaufbau: 3.311 Archive auf der Platte, 3.222 im Index.
+    Von den 89 fehlenden waren 60 gueltige, aber LEERE ZIPs (0 Eintraege). `process_zip`
+    liefert dafuer nichts — und ohne Zeile gilt das Archiv als nie bearbeitet.
+
+    Zwei leise Schaeden: die Projektregel „markieren statt filtern" ist verletzt, und der
+    Rueckstand im Dashboard erreicht nie null. Eine Kennzahl, die nie aufgeht, wird
+    ignoriert — und dann faellt auch ein echter Rueckstand nicht mehr auf.
+
+    (Die restlichen 29 waren waehrend des Laufs geladen worden, als die Arbeitsliste stand.
+    Kein Defekt, sondern Inkrementalitaet — deshalb steht hier keine Regel dagegen.)
+    """
+    quelle = (ROOT / "govisor" / "docworker.py").read_text(encoding="utf-8")
+    assert '"leeres_archiv"' in quelle
+    assert "if not zeilen:" in quelle, "der Fall muss ausdruecklich behandelt sein"

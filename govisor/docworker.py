@@ -64,6 +64,26 @@ def main(argv: list[str] | None = None) -> int:
         zeilen = [{"notice_id": notice_id, "archive": zp.name, "file": "", "filetype": "",
                    "n_chars": 0, "status": "fehler", "text": type(e).__name__}]
 
+    # EIN ARCHIV OHNE DATEIEN MUSS TROTZDEM EINE ZEILE HINTERLASSEN.
+    #
+    # Gemessen 2026-08-15 nach dem Neuaufbau: 3.311 Archive lagen auf der Platte, 3.222
+    # standen im Index. Von den 89 fehlenden waren 60 gueltige, aber LEERE ZIPs (0 Eintraege,
+    # 706 Byte aufwaerts). `process_zip` liefert dafuer keine Zeile — und ohne Zeile ist das
+    # Archiv aus Sicht des Index nie bearbeitet worden.
+    #
+    # Zwei Schaeden daraus, beide leise:
+    #  · Die Projektregel „markieren statt filtern" ist verletzt: ein Fall verschwindet,
+    #    statt gezaehlt zu werden.
+    #  · Der Rueckstand im Betriebs-Dashboard erreicht nie null. Eine Kennzahl, die nie
+    #    aufgeht, wird irgendwann ignoriert — und dann faellt auch ein echter Rueckstand
+    #    nicht mehr auf.
+    #
+    # (Die restlichen 29 fehlenden waren waehrend des Laufs heruntergeladen worden, als die
+    # Arbeitsliste laengst stand. Das ist kein Defekt, sondern Inkrementalitaet.)
+    if not zeilen:
+        zeilen = [{"notice_id": notice_id, "archive": zp.name, "file": "", "filetype": "",
+                   "n_chars": 0, "status": "leeres_archiv", "text": ""}]
+
     tabelle = pa.Table.from_pylist([{k: r.get(k) for k in SPALTEN} for r in zeilen],
                                    schema=_schema())
     pq.write_table(tabelle, ziel, compression="zstd")
