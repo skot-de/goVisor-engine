@@ -311,3 +311,45 @@ def test_leisten_knoepfe_tragen_die_rahmen_klasse():
     import re as _re
     klassen = _re.findall(r'className="([^"]*)"', quelle)
     assert not [k for k in klassen if "btn-s" in k], f"Leisten-Knopf mit Seiten-Klasse: {klassen}"
+
+
+# ── Betriebs-Dashboard (/intern/lauf) ─────────────────────────────────────────────────
+
+def test_dashboard_liest_live_und_nicht_aus_einer_statusdatei():
+    """Die naheliegende Loesung waere, den Tageslauf am Ende eine JSON schreiben zu lassen.
+    Genau die versagt im wichtigsten Fall: laeuft er gar nicht erst an, schreibt er auch
+    nichts — und das Dashboard zeigt vergnuegt den Stand von vorgestern.
+
+    Gelesen wird deshalb, was UNABHAENGIG vom Lauf existiert: die Logdatei (oder ihr Fehlen)
+    und die Archive auf der Platte."""
+    r = (ROOT / "web" / "app" / "api" / "intern" / "lauf" / "route.ts").read_text(encoding="utf-8")
+    assert 'dynamic = "force-dynamic"' in r, "eine gecachte Ueberwachung ueberwacht nichts"
+    assert "readdirSync" in r and "daily-" in r
+
+
+def test_ausbleibender_lauf_ist_rot_und_nicht_still():
+    """Der gefaehrlichste Zustand ist der, der sich als Ruhe tarnt. Fehlt die Schlusszeile
+    im Log, ist der Lauf abgebrochen — und das muss als eigener, roter Zustand erscheinen."""
+    r = (ROOT / "web" / "app" / "api" / "intern" / "lauf" / "route.ts").read_text(encoding="utf-8")
+    assert '"abgebrochen"' in r
+    seite = (ROOT / "web" / "app" / "intern" / "lauf" / "page.tsx").read_text(encoding="utf-8")
+    assert 'abgebrochen: { farbe: "bad"' in seite
+    css = (ROOT / "web" / "app" / "intern" / "lauf" / "lauf.css").read_text(encoding="utf-8")
+    assert ".lauf-bad" in css
+
+
+def test_unbekannter_rueckstand_wird_nicht_geschaetzt():
+    """Ohne Indexstand gibt es keine Zahl, nur Unwissen. Der erste Entwurf rechnete mit 0
+    indizierten Archiven weiter und meldete einen Rueckstand von 3.282 — eine Zahl, die nach
+    Alarm aussieht und nur bedeutet, dass noch nie ein Index mit Stand lief. Nach einer
+    erfundenen Kennzahl wird gehandelt."""
+    r = (ROOT / "web" / "app" / "api" / "intern" / "lauf" / "route.ts").read_text(encoding="utf-8")
+    assert "indiziert == null ? null" in r
+
+
+def test_dashboard_ist_in_production_gesperrt():
+    """Die Antwort enthaelt Logauszuege: Pfade, Fehlermeldungen, Schrittnamen. Das ist
+    Betriebswissen und gehoert nicht ins offene Netz — dieselbe Sperre wie die anderen
+    /api/intern-Routen."""
+    r = (ROOT / "web" / "app" / "api" / "intern" / "lauf" / "route.ts").read_text(encoding="utf-8")
+    assert 'INTERN_ENABLED' in r and 'NODE_ENV === "production"' in r

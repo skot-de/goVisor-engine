@@ -1,0 +1,53 @@
+/* Betriebs-Dashboard. Bewusst nüchtern: es wird im Vorbeigehen gelesen, nicht studiert.
+   Die Farbe trägt die Aussage — wer hier etwas Buntes sieht, muss hinsehen. */
+
+/* Eigener Wrapper — bewusst OHNE die Klasse `main`. Die traegt das Drei-Zeilen-Raster der
+   Lead-Ansicht; wer sie fuer einen generischen Inhaltsbereich haelt (so wie ich beim ersten
+   Entwurf), bekommt seine Karten in fremde Zeilen gequetscht. */
+.lauf-page { padding: 24px 32px 60px; overflow: auto; min-width: 0; }
+.lauf-laedt { color: var(--muted, #6b7280); }
+.lauf-fehler { padding: 12px 14px; border-radius: 8px; background: #fef2f2;
+               border: 1px solid #fecaca; color: #991b1b; margin-bottom: 16px; }
+
+.lauf-karte { max-width: 760px; margin: 0 0 16px; padding: 16px 18px;
+              border: 1px solid var(--line, #e5e7eb); border-radius: 10px;
+              background: var(--surface, #fff); }
+
+.lauf-kopf { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+.lauf-kopf b { font-size: 15px; }
+.lauf-urteil { font-size: 13px; color: var(--muted, #6b7280); }
+
+/* Der Punkt ist die Ampel. Ein ausbleibender Lauf ist ROT, nicht grau — Grau liest sich als
+   „egal", und genau das ist der gefährlichste Zustand: er tarnt sich als Ruhe. */
+.lauf-punkt { width: 10px; height: 10px; border-radius: 50%; flex: none;
+              background: var(--muted, #9ca3af); }
+.lauf-gut  .lauf-punkt { background: #10b981; }
+.lauf-warn .lauf-punkt { background: #f59e0b; }
+.lauf-info .lauf-punkt { background: #3b82f6; }
+.lauf-bad  .lauf-punkt { background: #ef4444; }
+.lauf-bad  { border-color: #fecaca; background: #fffbfb; }
+.lauf-bad  .lauf-urteil { color: #b91c1c; font-weight: 600; }
+.lauf-warn { border-color: #fde68a; background: #fffdf7; }
+
+.lauf-werte { display: flex; flex-wrap: wrap; gap: 28px; margin: 0; }
+.lauf-werte dt { font-size: 11px; text-transform: uppercase; letter-spacing: .04em;
+                 color: var(--muted, #6b7280); margin-bottom: 2px; }
+.lauf-werte dd { margin: 0; font-size: 20px; font-weight: 600; font-variant-numeric: tabular-nums; }
+.lauf-werte dd.ist-alt { color: #b91c1c; }
+.lauf-werte dd.ist-offen { color: #b45309; }
+
+.lauf-hinweis { margin: 12px 0 0; font-size: 13px; color: var(--ink-700, #374151); }
+.lauf-hinweis code { font-size: 12px; background: var(--surface-2, #f3f4f6);
+                     padding: 1px 5px; border-radius: 4px; }
+.lauf-fuss { margin: 12px 0 0; font-size: 12px; color: var(--muted, #6b7280); }
+
+.lauf-status { list-style: none; margin: 12px 0 0; padding: 0;
+               display: flex; flex-wrap: wrap; gap: 6px; }
+.lauf-status li { display: inline-flex; align-items: baseline; gap: 5px;
+                  font-size: 12px; padding: 3px 9px; border-radius: 999px;
+                  background: var(--surface-2, #f3f4f6); color: var(--muted, #6b7280); }
+.lauf-status b { color: var(--ink-900, #111827); font-variant-numeric: tabular-nums; }
+
+.lauf-fehlerliste { margin: 0; padding-left: 18px; font-size: 13px; line-height: 1.6;
+                    color: var(--ink-700, #374151); }
+.lauf-fehlerliste li { margin-bottom: 3px; }

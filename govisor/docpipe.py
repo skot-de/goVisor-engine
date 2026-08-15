@@ -16,6 +16,7 @@ Robust: Fehler je Datei werden gefangen (eine kaputte PDF kippt nicht den Lauf).
 from __future__ import annotations
 
 import io
+import datetime as _dt
 import os
 import re
 import zipfile
@@ -647,6 +648,25 @@ def build_index(cfg: Config, country: str = "DE", neu_aufbauen: bool = False,
     if abgeschnitten:
         print(f"  ⏳ Zeitbudget ({zeit_budget}s) erreicht — {abgeschnitten} Archive bleiben "
               f"fuer den naechsten Lauf (dringendste zuerst abgearbeitet)", flush=True)
+    # STAND HINTERLASSEN. Ohne diese Datei ist „wie gross ist der Rueckstand?" nur ueber
+    # eine Parquet-Abfrage zu beantworten — und damit nicht aus dem Frontend heraus, das
+    # kein DuckDB hat. Die Datei ist klein, wird bei jedem Lauf neu geschrieben und ist die
+    # einzige Stelle, an der steht, was der Index WIRKLICH geschafft hat.
+    try:
+        import json as _json
+        (root / "_index_stand.json").write_text(_json.dumps({
+            "stand": _dt.datetime.now().isoformat(timespec="seconds"),
+            "vorgaenge": n_notices,
+            "archive_bearbeitet": fertig,
+            "archive_uebersprungen": uebersprungen,
+            "zeilen": n_zeilen,
+            "zeichen": total_chars,
+            "status": status_counts,
+            "offen": abgeschnitten,
+        }, ensure_ascii=False, indent=1), encoding="utf-8")
+    except Exception:                                     # noqa: BLE001
+        pass          # ein fehlender Stand ist ein blindes Dashboard, kein kaputter Index
+
     print(f"docpipe {country}: {n_notices} Vorgänge, {n_zeilen} Zeilen im Index, "
           f"{total_chars/1e6:.1f} Mio. Zeichen neu → {out.name}")
     print("  Status: " + " | ".join(f"{k}={v}" for k, v in sorted(status_counts.items())))
