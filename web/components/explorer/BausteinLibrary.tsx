@@ -24,10 +24,20 @@ function load(): Block[] {
 }
 function save(b: Block[]) { try { localStorage.setItem(KEY, JSON.stringify(b)); } catch { /* voll */ } }
 
-export function BausteinLibrary() {
+/**
+ * `importOpen`/`onImport` kommen seit 2026-08-15 von AUSSEN — derselbe Grund wie bei den
+ * Unternehmens-Reitern: der Knopf ist eine Werkzeugleiste, kein Inhalt, und gehoert in die
+ * Bereichsleiste des Rahmens. Damit er dort stehen kann, muss der Zustand eine Ebene hoeher
+ * liegen; sonst haette die Leiste keinen Zugriff darauf.
+ *
+ * Das aufklappende Feld selbst bleibt hier im Inhalt: es ist ein Arbeitsbereich mit
+ * Textfeld, kein Werkzeug. In eine 45 px hohe Leiste passt es ohnehin nicht.
+ */
+export function BausteinLibrary({ importOpen, onImport }: {
+  importOpen: boolean; onImport: (offen: boolean) => void;
+}) {
   const [blocks, setBlocks] = useState<Block[]>([]);
   const [theme, setTheme] = useState<string>("");
-  const [importOpen, setImportOpen] = useState(false);
   const [text, setText] = useState("");
   const [busy, setBusy] = useState(false);
   const [msg, setMsg] = useState<string>("");
@@ -51,7 +61,7 @@ export function BausteinLibrary() {
       const fresh: Block[] = (d.blocks || []).map((b: Block) => ({ ...b, origin: "import",
         saved_at: new Date().toISOString() }));
       const merged = [...fresh, ...blocks];
-      save(merged); setBlocks(merged); setText(""); setImportOpen(false);
+      save(merged); setBlocks(merged); setText(""); onImport(false);
       setMsg(`${fresh.length} Bausteine angelegt${d.skipped_personal ? ` · ${d.skipped_personal} Passagen übersprungen (überwiegend Personendaten)` : ""}.`);
     } catch { setMsg("Import fehlgeschlagen."); }
     setBusy(false);
@@ -67,9 +77,6 @@ export function BausteinLibrary() {
     <div className="libwrap">
       <div className="sechead">
         <div><h1>Bausteine</h1><p>Eure Textbausteine für Angebote — gehören dem Unternehmen, nicht der einzelnen Person.</p></div>
-        <div style={{ display: "flex", gap: 9 }}>
-          <button className="btn btn-s" onClick={() => setImportOpen((v) => !v)}>Aus alten Angeboten importieren</button>
-        </div>
       </div>
 
       {importOpen && (
@@ -89,7 +96,7 @@ export function BausteinLibrary() {
         <div className="empty">
           <div className="eh">Noch keine Bausteine</div>
           <p>Hak in einer Unterlagen-Checkliste „Kopieren &amp; abhaken" an — der Textbaustein landet hier. Oder fülle die Bibliothek aus euren alten Angeboten.</p>
-          <button className="btn btn-p" onClick={() => setImportOpen(true)}>Aus alten Angeboten füllen</button>
+          <button className="btn btn-p" onClick={() => onImport(true)}>Aus alten Angeboten füllen</button>
         </div>
       ) : (
         <div className="libgrid">

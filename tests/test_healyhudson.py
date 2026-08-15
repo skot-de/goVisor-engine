@@ -278,3 +278,36 @@ def test_filterleiste_haengt_nicht_mehr_im_kopf():
     kopf = shell.split("<header className=\"topbar\">")[1].split("</header>")[0]
     assert "<FilterBar" not in kopf, "die Filterleiste gehoert in die Bereichsleiste, nicht in den Kopf"
     assert 'className="bereichsleiste"' in shell
+
+
+def test_beide_eigenstaendigen_seiten_fuellen_ihre_leiste():
+    """Eine Leiste, die nur Hoehe haelt, ist Polsterung — genau das, wogegen der Rahmen
+    gebaut wurde. Beide eigenstaendigen Seiten stellen deshalb ihre Werkzeuge hinein:
+    Unternehmen die Reiter, Bausteine den Import-Knopf.
+
+    Beides waren Umzuege aus dem INHALT nach oben. Sie lagen dort falsch: Reiter sind
+    Navigation, ein Import-Knopf ist eine Werkzeugleiste — keins von beidem ist Inhalt.
+    """
+    for seite, erwartet in (("unternehmen", "UnternehmenTabs"), ("bausteine", "BausteineLeiste")):
+        quelle = (ROOT / "web" / "app" / seite / "page.tsx").read_text(encoding="utf-8")
+        assert f"leiste={{<{erwartet}" in quelle, f"{seite}: Leiste bleibt leer"
+
+
+def test_leisten_knoepfe_tragen_die_rahmen_klasse():
+    """`.btn-s` sieht in der Bereichsleiste nach NICHTS aus: sein Aussehen haengt an
+    `.baust-page .btn-s`, und die Leiste liegt ausserhalb dieses Wrappers — der Knopf stand
+    als nackter Text da (gesehen 2026-08-15).
+
+    Die Lehre ist nicht „Regel nachziehen": was in der Leiste steht, gehoert zum RAHMEN und
+    soll in jedem Bereich gleich aussehen. Deshalb `colbtn`, dieselbe Klasse wie
+    Filter/Spalten/Export.
+    """
+    quelle = (ROOT / "web" / "components" / "explorer" / "BausteineLeiste.tsx").read_text(encoding="utf-8")
+    assert 'className="colbtn"' in quelle
+    # Nur die tatsaechlich gesetzten Klassen pruefen, nicht den Dateitext: der erste Entwurf
+    # dieses Tests verbot die Zeichenfolge `btn-s` UEBERALL — und schlug damit an dem
+    # Kommentar an, der erklaert, warum sie hier nichts taugt. Ein Test, der die Begruendung
+    # verbietet, zwingt dazu, sie zu loeschen.
+    import re as _re
+    klassen = _re.findall(r'className="([^"]*)"', quelle)
+    assert not [k for k in klassen if "btn-s" in k], f"Leisten-Knopf mit Seiten-Klasse: {klassen}"
