@@ -502,3 +502,52 @@ def test_docm_nutzt_den_docx_extraktor():
     """`.docm` ist DOCX mit Makros — dieselbe Struktur. 83 Dateien fuer eine Zeile."""
     from govisor.docpipe import _EXTRACT, _docx_text
     assert _EXTRACT[".docm"] is _docx_text
+
+
+# ── Vergabeunterlagen anzeigen ────────────────────────────────────────────────────────
+
+def test_dateipfad_wird_nie_zum_oeffnen_benutzt():
+    """Der Pfad kommt aus dem Browser. Er wird NICHT an ein Verzeichnis gehaengt, sondern
+    nur mit den Eintraegen des Archivs VERGLICHEN — damit gibt es gar keine
+    Pfad-Verkettung, an der ein `../` etwas erreichen koennte.
+
+    Zusaetzlich prueft die Route die Lead-Kennung gegen ein enges Muster, und der Helfer
+    tut es noch einmal: doppelt, weil ein Loch hier Dateien ausserhalb des
+    Datenverzeichnisses erreichbar machte."""
+    h = (ROOT / "scripts" / "lead_dokumente.py").read_text(encoding="utf-8")
+    assert "i.filename != datei" in h, "Vergleich statt Verkettung"
+    assert "_lead_ok" in h
+    r = (ROOT / "web" / "app" / "api" / "lead" / "datei" / "route.ts").read_text(encoding="utf-8")
+    assert "LEAD_RE" in r
+
+
+def test_aktive_inhalte_werden_nicht_ausgeliefert():
+    """`.exe`, `.js` und Verwandte gar nicht. SVG nur als Download — SVG kann Skripte
+    tragen, und ein inline gerendertes SVG aus fremder Quelle waere eine XSS-Luecke mitten
+    im Produkt."""
+    h = (ROOT / "scripts" / "lead_dokumente.py").read_text(encoding="utf-8")
+    assert '".exe"' in h and '".js"' in h
+    assert 'ext != ".svg"' in h, "SVG darf nicht inline"
+    r = (ROOT / "web" / "app" / "api" / "lead" / "datei" / "route.ts").read_text(encoding="utf-8")
+    assert "nosniff" in r and "Content-Security-Policy" in r
+
+
+def test_dateiname_kann_den_header_nicht_spalten():
+    """Der Name stammt aus einem fremden Archiv. Unkodiert im `Content-Disposition` koennte
+    ein Anfuehrungszeichen oder Zeilenumbruch den Header spalten."""
+    r = (ROOT / "web" / "app" / "api" / "lead" / "datei" / "route.ts").read_text(encoding="utf-8")
+    assert "encodeURIComponent(name)" in r and "filename*=UTF-8''" in r
+
+
+def test_fehlende_unterlagen_sind_leer_und_nicht_kaputt():
+    """Auf einem Deployment ohne `data/docs` gibt es keine Archive. Ein 500 waere dort
+    irrefuehrend — die Liste ist leer und sagt WARUM."""
+    r = (ROOT / "web" / "app" / "api" / "lead" / "dokumente" / "route.ts").read_text(encoding="utf-8")
+    assert "dateien: []" in r and "grund" in r
+
+
+def test_dokumente_stehen_vor_der_analyse():
+    """Wer den Unterlagen-Reiter oeffnet, sucht meist das Dokument — die Auswertung liest
+    man, wenn man weiss, worueber sie spricht."""
+    d = (ROOT / "web" / "components" / "explorer" / "DetailPanel.tsx").read_text(encoding="utf-8")
+    assert 'activeTab === "docs"' in d and "<Dokumente" in d

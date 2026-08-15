@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { Hinweise } from "./Hinweise";
+import { Dokumente } from "./Dokumente";
 import {
   LEADS, WF, STAR, applyState,
   renderUebersicht, renderTeilnahme, renderAnalyse, renderMarkt, renderBuyer,
@@ -282,6 +283,13 @@ export function DetailPanel({
 
           Fehlen die Felder (der Export liefert sie noch nicht), rendert die Komponente nichts —
           kein leerer Kasten, keine Fehlermeldung. */}
+      {/* Die ECHTEN Dateien — als React-Geschwister vor dem Reiter-Inhalt, aus demselben
+          Grund wie die Hinweise: der Reiter-Inhalt kommt verbatim aus dem Prototyp-Renderer,
+          und ihn anzufassen hiesse, jede kuenftige Aenderung dort nachzuziehen.
+          Sie stehen VOR der Analyse: wer den Reiter oeffnet, sucht meist das Dokument —
+          die Auswertung liest man, wenn man weiss, worueber sie spricht. */}
+      {activeTab === "docs" && l?.id ? <Dokumente leadId={String(l.id)} /> : null}
+
       {activeTab === "uebersicht" && (
         <Hinweise
           felder={{
