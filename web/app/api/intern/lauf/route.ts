@@ -21,6 +21,13 @@ export const dynamic = "force-dynamic";   // niemals cachen: der Sinn ist Aktual
 
 const WURZEL = path.resolve(process.cwd(), "..");
 const LOGS = path.join(WURZEL, "data", "logs");
+// launchd lenkt stderr hierher. DIESE Datei ist die einzige, die noch beschreibbar ist,
+// wenn die Datenplatte gesperrt ist — und genau dann faellt der Lauf aus. Ohne sie hat das
+// Dashboard einen blinden Fleck an der wichtigsten Stelle: ein Lauf, der stirbt, BEVOR er
+// sein eigenes Log anlegen kann, waere unsichtbar (gemessen 2026-08-15: genau so lief es
+// seit Tagen).
+const LAUNCHD_ERR = path.join(process.env.HOME || "", "Library", "Logs",
+                              "govisor-launchd.err.log");
 const DOCS = path.join(WURZEL, "data", "docs", "DE");
 
 type Lauf = {
@@ -102,6 +109,19 @@ function leseLauf(): Lauf {
   };
 }
 
+/** Die letzten Zeilen des launchd-Fehlerlogs — nur, wenn sie NEUER sind als der letzte
+ *  eigene Lauf-Log. Sonst zeigt das Dashboard alte Fehler, die laengst behoben sind. */
+function launchdFehler(seit: number | null): { zeit: number; zeilen: string[] } | null {
+  let st: fs.Stats;
+  try { st = fs.statSync(LAUNCHD_ERR); } catch { return null; }
+  if (seit != null && st.mtimeMs <= seit) return null;
+  try {
+    const zeilen = fs.readFileSync(LAUNCHD_ERR, "utf8")
+      .split("\n").map((z) => z.trim()).filter(Boolean).slice(-10);
+    return zeilen.length ? { zeit: st.mtimeMs, zeilen } : null;
+  } catch { return null; }
+}
+
 export async function GET() {
   // GLEICHE SPERRE WIE DIE ANDEREN /api/intern-ROUTEN. Diese Antwort enthaelt Auszuege aus
   // Logdateien (Pfade, Fehlermeldungen, Schrittnamen) — das ist Betriebswissen und gehoert
@@ -128,9 +148,19 @@ export async function GET() {
     : null;
   const status = (indexStand?.status ?? {}) as Record<string, number>;
 
+  // Der eigene Lauf-Log ist die Hauptquelle. Ist das launchd-Log JUENGER, hat ein Lauf
+  // gestartet und ist gescheitert, ohne bis zum eigenen Log zu kommen — das ist der Fall,
+  // der ohne diese Zeile unsichtbar bliebe.
+  let eigenerStand: number | null = null;
+  const letzte = letzteLogdatei();
+  if (letzte) { try { eigenerStand = fs.statSync(path.join(LOGS, letzte)).mtimeMs; } catch { /* egal */ } }
+  const vorLog = launchdFehler(eigenerStand);
+
   return NextResponse.json({
     erzeugt: new Date().toISOString(),
     lauf,
+    // Startversuche, die es nicht bis zum eigenen Log geschafft haben.
+    vorLog,
     dokumente: {
       aufPlatte,
       indiziert,

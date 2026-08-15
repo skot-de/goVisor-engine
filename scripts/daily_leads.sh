@@ -61,6 +61,44 @@ TODAY="$(date +%Y-%m-%d)"
 # (2) ABBRUCH MELDETE ERFOLG. `exit 0` heisst fuer launchd „Lauf war erfolgreich". Ein
 #     blockierter Lauf ist aber KEIN erfolgreicher — die Daten veralten, und niemand sieht
 #     es. Jetzt `exit 75` (EX_TEMPFAIL): „nicht gelaufen, spaeter erneut versuchen".
+# ── SCHREIBTEST AUF DIE DATENPLATTE — VOR ALLEM ANDEREN ───────────────────────────────
+#
+# Gefunden am 2026-08-15, nachdem Sven fragte, ob der Tageslauf sauber laeuft. Er lief seit
+# Tagen ueberhaupt nicht — und zwar unsichtbar. Das launchd-Fehlerlog sagte:
+#
+#   2026-08-14 13:00:03 ⚠ Verwaister Lock — uebernommen.
+#   rm: .../data/.daily_leads.lock: Operation not permitted
+#   Lock nicht uebernehmbar.
+#
+# Nicht „Lock haengt", sondern „Operation not permitted". `data/` ist ein Symlink auf die
+# externe SSD, und macOS verweigert HINTERGRUNDDIENSTEN den Zugriff auf externe Volumes,
+# solange die Freigabe fehlt. Aus einem Terminal geht es (die App hat die Freigabe), aus
+# launchd nicht.
+#
+# ZWEI FEHLER MACHTEN DAS UNSICHTBAR:
+#  · Der Lock liegt SELBST auf der Platte — der Lauf starb an ihm, bevor er irgendetwas
+#    pruefen konnte, und die Meldung sprach von einem Lock-Problem statt von Rechten.
+#  · Der vorhandene Daten-Guard weiter unten prueft nur, ob eine Datei LESBAR ist (`-e`).
+#    Lesen war erlaubt, Schreiben nicht — er schlug also nie an.
+#
+# Deshalb steht der Schreibtest jetzt VOR dem Lock und prueft, was wirklich gebraucht wird.
+# Ausgabe auf stderr, weil launchd sie nach ~/Library/Logs/govisor-launchd.err.log lenkt —
+# die einzige Datei, die noch beschreibbar ist, wenn die Platte gesperrt ist.
+_PROBE="$ROOT/data/.schreibtest.$$"
+if ! mkdir "$_PROBE" 2>/dev/null; then
+  {
+    echo "$(date '+%F %T') FEHLER: In data/ kann nicht geschrieben werden — abgebrochen."
+    echo "  Pfad:  $(readlink "$ROOT/data" 2>/dev/null || echo "$ROOT/data")"
+    echo "  Grund: sehr wahrscheinlich fehlende macOS-Freigabe fuer externe Volumes."
+    echo "         Aus einem Terminal funktioniert es, aus launchd nicht — das ist das Muster."
+    echo "  Fix:   Systemeinstellungen → Datenschutz & Sicherheit → Festplattenvollzugriff"
+    echo "         → /bin/bash hinzufuegen (der Dienst laeuft als bash-Skript)."
+    echo "         Danach: launchctl kickstart -k gui/\$UID/de.skot.govisor.daily"
+  } >&2
+  exit 77                       # EX_NOPERM — nicht 75: hier hilft kein spaeterer Versuch
+fi
+rmdir "$_PROBE" 2>/dev/null || true
+
 if ! mkdir "$LOCK" 2>/dev/null; then
   _alt="$(cat "$LOCK/pid" 2>/dev/null | tr -d '[:space:]')"
   if [ -n "$_alt" ] && kill -0 "$_alt" 2>/dev/null; then
@@ -565,14 +603,29 @@ if [ -n "${SUPABASE_URL:-}" ] && [ -n "${SUPABASE_SERVICE_KEY:-}" ]; then
   step "Supabase-Schema-Migration (DDL aus aktuellem Parquet, idempotent via psql)"
   $PY scripts/export_supabase.py --table all --ddl-only
   REF="$(echo "$SUPABASE_URL" | sed -E 's#https?://([a-z0-9]+)\.supabase\.co.*#\1#')"
-  if [ -f "$ROOT/.secrets/supabase_db.txt" ] && command -v psql >/dev/null 2>&1; then
-    if PGPASSWORD="$(tr -d '[:space:]' < "$ROOT/.secrets/supabase_db.txt")" psql \
+  # PSQL SELBST FINDEN, nicht auf den PATH verlassen. Gemessen 2026-08-15: psql liegt unter
+  # /opt/homebrew/bin, und der launchd-PATH (in der plist fest verdrahtet) kennt nur
+  # /usr/local/bin, /usr/bin, /bin, /usr/sbin, /sbin. Unter launchd waere die Migration also
+  # STILL uebersprungen worden — mit dem Hinweis „im Dashboard ausfuehren", den nachts
+  # niemand liest. Aus dem Terminal lief sie, weil dort Homebrew im PATH steht: genau die
+  # Sorte Unterschied, die man erst im Ausfall bemerkt.
+  PSQL="$(command -v psql || true)"
+  for _p in /opt/homebrew/bin/psql /usr/local/bin/psql /Applications/Postgres.app/Contents/Versions/latest/bin/psql; do
+    [ -n "$PSQL" ] && break
+    [ -x "$_p" ] && PSQL="$_p"
+  done
+  if [ -z "$PSQL" ]; then
+    echo "  ⚠ psql nicht gefunden — Schema-Migration uebersprungen. Das DDL liegt in"
+    echo "    docs/supabase_schema.sql und muss im Supabase-Dashboard laufen."
+  fi
+  if [ -f "$ROOT/.secrets/supabase_db.txt" ] && [ -n "$PSQL" ]; then
+    if PGPASSWORD="$(tr -d '[:space:]' < "$ROOT/.secrets/supabase_db.txt")" "$PSQL" \
          -h "db.$REF.supabase.co" -p 5432 -U postgres -d postgres \
          -v ON_ERROR_STOP=1 -q -f docs/supabase_schema.sql >/dev/null; then
       # PostgREST hält einen eigenen Schema-Cache. Nach DDL kennt es neue Spalten erst
       # nach einem Reload — sonst PGRST204 („column not found in the schema cache"),
       # obwohl die Spalte in der Datenbank längst existiert (genau der Fehler am 09.08.).
-      PGPASSWORD="$(tr -d '[:space:]' < "$ROOT/.secrets/supabase_db.txt")" psql \
+      PGPASSWORD="$(tr -d '[:space:]' < "$ROOT/.secrets/supabase_db.txt")" "$PSQL" \
         -h "db.$REF.supabase.co" -p 5432 -U postgres -d postgres -q \
         -c "NOTIFY pgrst, 'reload schema';" >/dev/null 2>&1 || true
       sleep 2

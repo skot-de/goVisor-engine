@@ -353,3 +353,52 @@ def test_dashboard_ist_in_production_gesperrt():
     /api/intern-Routen."""
     r = (ROOT / "web" / "app" / "api" / "intern" / "lauf" / "route.ts").read_text(encoding="utf-8")
     assert 'INTERN_ENABLED' in r and 'NODE_ENV === "production"' in r
+
+
+# ── Warum der Tageslauf tagelang nicht lief ───────────────────────────────────────────
+#
+# Gefunden am 2026-08-15. Der Lauf war seit Tagen tot, und zwar UNSICHTBAR:
+#
+#   2026-08-14 13:00:03 ⚠ Verwaister Lock — uebernommen.
+#   rm: .../data/.daily_leads.lock: Operation not permitted
+#   Lock nicht uebernehmbar.
+#
+# Nicht „Lock haengt", sondern EPERM: `data/` ist ein Symlink auf die externe SSD, und macOS
+# verweigert Hintergrunddiensten den Zugriff auf externe Volumes ohne Freigabe. Aus einem
+# Terminal ging es (die App hat sie), aus launchd nicht.
+
+def test_schreibtest_steht_vor_dem_lock():
+    """Der Lock liegt SELBST auf der Datenplatte. Steht die Pruefung dahinter, stirbt der
+    Lauf an ihm — mit einer Meldung ueber Locks statt ueber Rechte, und niemand sucht an
+    der richtigen Stelle."""
+    lauf = (ROOT / "scripts" / "daily_leads.sh").read_text(encoding="utf-8")
+    assert "_PROBE=" in lauf, "es muss einen Schreibtest geben"
+    assert lauf.index("_PROBE=") < lauf.index('if ! mkdir "$LOCK"'), (
+        "der Schreibtest muss VOR dem Lock stehen")
+    assert "exit 77" in lauf, "EX_NOPERM — hier hilft kein spaeterer Versuch (kein 75)"
+
+
+def test_daten_guard_prueft_schreiben_nicht_nur_lesen():
+    """Der vorhandene Guard testete `-e` auf eine Datei. Lesen war erlaubt, Schreiben nicht —
+    er schlug also nie an, obwohl genau das der Ausfall war."""
+    lauf = (ROOT / "scripts" / "daily_leads.sh").read_text(encoding="utf-8")
+    block = lauf.split("_PROBE=")[1].split("fi")[0]
+    assert "mkdir" in block, "ein Lesetest beantwortet die Frage nicht"
+
+
+def test_psql_wird_selbst_gefunden():
+    """psql liegt unter /opt/homebrew/bin; der launchd-PATH kennt es nicht. Unter launchd
+    waere die Schema-Migration STILL uebersprungen worden — mit einem Hinweis, den nachts
+    niemand liest. Aus dem Terminal lief sie, weil dort Homebrew im PATH steht."""
+    lauf = (ROOT / "scripts" / "daily_leads.sh").read_text(encoding="utf-8")
+    assert "/opt/homebrew/bin/psql" in lauf
+    assert '"$PSQL"' in lauf, "die Aufrufe muessen den gefundenen Pfad nutzen"
+
+
+def test_dashboard_sieht_laeufe_die_vor_dem_eigenen_log_sterben():
+    """Ein Lauf, der an der gesperrten Platte stirbt, kann seine eigene Logdatei gar nicht
+    anlegen — er waere im Dashboard unsichtbar. Genau der Fall lief tagelang."""
+    r = (ROOT / "web" / "app" / "api" / "intern" / "lauf" / "route.ts").read_text(encoding="utf-8")
+    assert "LAUNCHD_ERR" in r and "govisor-launchd.err.log" in r
+    seite = (ROOT / "web" / "app" / "intern" / "lauf" / "page.tsx").read_text(encoding="utf-8")
+    assert "vorLog" in seite

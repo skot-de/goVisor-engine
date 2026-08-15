@@ -29,6 +29,9 @@ type Antwort = {
     fehlerZeilen: string[];
     letzterSchritt: string | null;
   };
+  /** Startversuche, die es nicht bis zum eigenen Log geschafft haben (z. B. gesperrte
+   *  Datenplatte). Ohne sie waere ein Lauf, der sofort stirbt, unsichtbar. */
+  vorLog: { zeit: number; zeilen: string[] } | null;
   dokumente: {
     aufPlatte: number; indiziert: number | null; rueckstand: number | null;
     stand: string | null; zeichen: number;
@@ -149,6 +152,23 @@ export default function LaufPage() {
                   </ul>
                 ) : null}
               </section>
+
+              {d.vorLog ? (
+                <section className="lauf-karte lauf-bad">
+                  <div className="lauf-kopf">
+                    <span className="lauf-punkt" aria-hidden="true" />
+                    <b>Startversuch gescheitert — vor dem ersten Logeintrag</b>
+                  </div>
+                  <p className="lauf-hinweis">
+                    Ein geplanter Lauf ist angesprungen und sofort gestorben. Er hat es nicht
+                    bis zu seiner eigenen Logdatei geschafft; das hier kommt aus dem
+                    launchd-Fehlerlog und ist <b>neuer</b> als der letzte richtige Lauf.
+                  </p>
+                  <ul className="lauf-fehlerliste">
+                    {d.vorLog.zeilen.map((z, i) => <li key={i}>{z}</li>)}
+                  </ul>
+                </section>
+              ) : null}
 
               {d.lauf.fehlerZeilen.length ? (
                 <section className="lauf-karte">
