@@ -111,6 +111,79 @@ def _txt(data: bytes) -> str:
     return data.decode("utf-8", "replace")
 
 
+# ── OCR FUER BILDREINE PDFs ───────────────────────────────────────────────────────────
+#
+# Gemessen 2026-08-15 an je fuenf Proben aus drei Gruppen:
+#
+#   Gruppe                  Ø Zeichen   Ø Sek.   fachlich brauchbar
+#   Leistungsverzeichnis        1.734      2,6              3 von 5
+#   Plan / Bild                 1.283      2,1              0 von 5
+#   nicht erkannt               1.579      1,8              1 von 5
+#
+# ZWEI ERKENNTNISSE, beide gegen meine eigene Erwartung:
+#
+#  (1) OCR ist BILLIG. 1,8–2,6 s fuer drei Seiten — ich hatte „teuer, Rechenzeit" gesagt.
+#      Alle 2.267 bildreinen PDFs sind einkernig in gut einer Stunde durch.
+#
+#  (2) DIE ZEICHENZAHL SAGT NICHTS. Ein Luftbild liefert 1.283 Zeichen und sieht damit wie
+#      ein Erfolg aus — es sind Kartenbeschriftungen mit Erkennungsfehlern
+#      („Böschunaskörper", „Hemuonıg"). Haette ich nur gezaehlt, waere der Index mit 741
+#      Plaenen voller Rauschen geflutet worden.
+#
+# Deshalb wird NACH dem Erkennen gefiltert, nicht davor: vorher zu entscheiden ginge ueber
+# den Dateinamen, und der hat mich am selben Tag zweimal in die Irre gefuehrt (erst Ordner-
+# statt Dateiname, dann 229 statt 23 Leistungsverzeichnisse). 57 % der Dateien heissen so,
+# dass man ihnen nichts ansieht.
+#
+# Was NICHT durchkommt, wird MARKIERT (`ocr_ohne_inhalt`), nicht verworfen — und die Plaene
+# sind ohnehin ueber die Unterlagen-Anzeige sichtbar. OCR und Anzeige loesen zwei
+# verschiedene Haelften desselben Problems.
+_OCR_AN = os.environ.get("GOVISOR_OCR", "1") == "1"
+_OCR_SEITEN = int(os.environ.get("GOVISOR_OCR_SEITEN", "3"))
+_OCR_MAX_MB = 25          # groessere Scans kosten Minuten und bringen selten mehr
+_OCR_ZEIT = 120           # Notbremse je Datei
+
+# Woran man eine Vergabeunterlage erkennt — NICHT am Vorhandensein von Buchstaben.
+_FACH = re.compile(
+    r"leistung|position|menge|einheit|angebot|bieter|vergabe|frist|eignung|nachweis|"
+    r"vertrag|zuschlag|pauschal|einheitspreis|gesamtpreis|umsatzsteuer|nebenangebot",
+    re.I)
+_OCR_MINDEST = 3          # so viele Fachtreffer, sonst gilt es als Rauschen
+
+
+def _ocr_verfuegbar() -> bool:
+    """Einmal pruefen, dann merken. Fehlt tesseract, ist das kein Fehler — der Index laeuft
+    weiter wie bisher und die Datei bleibt `image_only`."""
+    if not hasattr(_ocr_verfuegbar, "_ja"):
+        import shutil
+        _ocr_verfuegbar._ja = bool(shutil.which("tesseract") and shutil.which("pdftoppm"))
+    return _ocr_verfuegbar._ja
+
+
+def _ocr_pdf(data: bytes) -> str:
+    """Erste Seiten rastern und durch tesseract schicken. Leerer String bei jedem Problem."""
+    import subprocess
+    import tempfile
+    if not _OCR_AN or not _ocr_verfuegbar() or len(data) > _OCR_MAX_MB * 1024 ** 2:
+        return ""
+    try:
+        with tempfile.TemporaryDirectory() as d:
+            quelle = Path(d) / "s.pdf"
+            quelle.write_bytes(data)
+            # 200 dpi: darunter leidet die Erkennung, darueber explodiert die Zeit.
+            subprocess.run(["pdftoppm", "-r", "200", "-l", str(_OCR_SEITEN), "-png",
+                            str(quelle), str(Path(d) / "b")],
+                           capture_output=True, timeout=_OCR_ZEIT)
+            teile = []
+            for bild in sorted(Path(d).glob("b-*.png")):
+                r = subprocess.run(["tesseract", str(bild), "stdout", "-l", "deu"],
+                                   capture_output=True, text=True, timeout=_OCR_ZEIT)
+                teile.append(r.stdout)
+            return "\n".join(teile)
+    except Exception:                                     # noqa: BLE001
+        return ""
+
+
 def _gaeb_text(data: bytes) -> str:
     """GAEB → durchsuchbarer Text der Leistungsverzeichnis-Positionen.
 
@@ -361,6 +434,19 @@ def process_zip(path: Path) -> list[dict]:
         if fn:
             text = (fn(data) or "")[:_MAX_TEXT]
             status = "ok" if text.strip() else ("image_only" if ext == ".pdf" else "empty")
+            # BILDREINE PDF → OCR, und danach der Vokabeltest. Die Reihenfolge ist der
+            # ganze Trick: die Zeichenzahl unterscheidet einen Lageplan nicht von einem
+            # Leistungsverzeichnis (beide ~1.300–1.700), das Fachvokabular schon
+            # (Plaene 0 von 5, Leistungsverzeichnisse 3 von 5 — gemessen 2026-08-15).
+            if status == "image_only":
+                erkannt = _ocr_pdf(data)
+                if len(_FACH.findall(erkannt)) >= _OCR_MINDEST:
+                    text, status = erkannt[:_MAX_TEXT], "ocr"
+                elif erkannt.strip():
+                    # Text da, aber ohne Substanz: Kartenbeschriftungen, Stempel,
+                    # Erkennungsfehler. Gezaehlt statt verworfen — sonst sieht ein Plan
+                    # aus wie eine Datei, die OCR gar nicht erreicht hat.
+                    status = "ocr_ohne_inhalt"
             if len(text) > rest:
                 text, status = text[:max(rest, 0)], "budget"
             rest -= len(text)

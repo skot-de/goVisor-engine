@@ -551,3 +551,58 @@ def test_dokumente_stehen_vor_der_analyse():
     man, wenn man weiss, worueber sie spricht."""
     d = (ROOT / "web" / "components" / "explorer" / "DetailPanel.tsx").read_text(encoding="utf-8")
     assert 'activeTab === "docs"' in d and "<Dokumente" in d
+
+
+# ── OCR fuer bildreine PDFs ───────────────────────────────────────────────────────────
+
+def test_ocr_filtert_NACH_dem_erkennen_nicht_davor():
+    """DIE ENTSCHEIDENDE REIHENFOLGE. Gemessen 2026-08-15 an je fuenf Proben:
+
+        Gruppe                  Ø Zeichen   fachlich brauchbar
+        Leistungsverzeichnis        1.734              3 von 5
+        Plan / Bild                 1.283              0 von 5
+        nicht erkannt               1.579              1 von 5
+
+    Die ZEICHENZAHL unterscheidet einen Lageplan nicht von einem Leistungsverzeichnis —
+    ein Luftbild liefert 1.283 Zeichen Kartenbeschriftung mit Erkennungsfehlern
+    („Böschunaskörper", „Hemuonıg") und sieht damit wie ein Erfolg aus. Haette ich nur
+    gezaehlt, waere der Index mit 741 Plaenen voller Rauschen geflutet worden.
+
+    VORHER zu filtern ginge nur ueber den Dateinamen — und der hat am selben Tag zweimal
+    in die Irre gefuehrt (Ordner- statt Dateiname; 229 statt 23 Leistungsverzeichnisse).
+    57 % der Dateien heissen so, dass man ihnen nichts ansieht.
+    """
+    q = (ROOT / "govisor" / "docpipe.py").read_text(encoding="utf-8")
+    assert "_FACH" in q and "_OCR_MINDEST" in q
+    block = q.split('if status == "image_only":')[1][:600]
+    assert "_ocr_pdf(data)" in block, "erst erkennen"
+    assert "_FACH.findall" in block, "dann filtern"
+
+
+def test_ocr_ohne_inhalt_wird_gezaehlt_nicht_verworfen():
+    """Sonst sieht ein Plan aus wie eine Datei, die OCR gar nicht erreicht hat — und
+    niemand kann sagen, ob das Verfahren lief."""
+    q = (ROOT / "govisor" / "docpipe.py").read_text(encoding="utf-8")
+    assert '"ocr_ohne_inhalt"' in q
+
+
+def test_fehlendes_tesseract_bricht_den_index_nicht():
+    """Ohne tesseract laeuft der Index weiter wie bisher; die Datei bleibt `image_only`.
+    Ein Werkzeug, das nicht da ist, ist kein Fehler des Bestands."""
+    q = (ROOT / "govisor" / "docpipe.py").read_text(encoding="utf-8")
+    assert "_ocr_verfuegbar" in q and "shutil.which" in q
+    from govisor.docpipe import _ocr_pdf
+    import os as _os
+    alt = _os.environ.get("GOVISOR_OCR")
+    _os.environ["GOVISOR_OCR"] = "0"
+    try:
+        import importlib
+        from govisor import docpipe as dp
+        importlib.reload(dp)
+        assert dp._ocr_pdf(b"%PDF-1.4 kaputt") == "", "abgeschaltet muss leer liefern"
+    finally:
+        if alt is None: _os.environ.pop("GOVISOR_OCR", None)
+        else: _os.environ["GOVISOR_OCR"] = alt
+        import importlib
+        from govisor import docpipe as dp2
+        importlib.reload(dp2)
