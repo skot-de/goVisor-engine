@@ -460,12 +460,31 @@ export default function OnboardingPage() {
                   </div>
                 )}
               </div>
+              {/*
+                Hier stand „Zum Ausprobieren: cancom, bechtle, müller" — eine Notiz an uns
+                selbst, die jeder Kunde zu sehen bekam. Ein Hinweis unter einem Pflichtfeld
+                soll beim Ausfüllen helfen, nicht Testdaten nennen.
+              */}
               <span className="hint">{vomToken
                 ? t("Aus eurer Übersicht übernommen — ihr könnt den Namen ändern.")
-                : t("Zum Ausprobieren: „cancom\", „bechtle\" oder „müller\".")}</span>
+                : t("Am besten der Name, unter dem ihr Aufträge bekommt.")}</span>
             </div>
+            {/*
+              Hieß „Suchen". Gesucht wird aber schon beim Tippen — die Vorschlagsliste steht
+              darüber. Der Knopf tut das, was jeder Knopf in einem vierstufigen Ablauf tut:
+              er führt weiter. „Suchen" benannte die Mechanik statt den Schritt und stand
+              damit quer zur Fortschrittsanzeige daneben.
+            */}
             <div className="btnrow">
-              <button className="btn btn-p" disabled={!eingabe.trim() || busy} onClick={() => { setAcOpen(false); zumMatch(); }}>{t("Suchen")}</button>
+              <button className="btn btn-p" disabled={!eingabe.trim() || busy} onClick={() => { setAcOpen(false); zumMatch(); }}>{t("Weiter")}</button>
+            </div>
+            {/*
+              Der Ausweg ist ein ANDERER Weg, kein Abbruch — er überspringt den Schritt.
+              Als grauer Text unmittelbar neben dem Hauptknopf las er sich wie eine Fußnote
+              zu ihm. Er steht jetzt unter einer Trennlinie und sagt vorher, wofür er da ist.
+            */}
+            <div className="ausweg">
+              <span className="ausweg-f">{t("Ihr findet euch hier nicht?")}</span>
               {/*
                 Hieß früher „Wir haben noch nie öffentlich geboten" — eine Behauptung, die
                 wir gar nicht prüfen können und die den häufigsten Fall falsch benennt.

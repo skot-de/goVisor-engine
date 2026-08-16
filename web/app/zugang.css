@@ -57,6 +57,20 @@
 .zugang .btnrow{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:24px}
 .zugang .btnrow.split{justify-content:space-between}
 
+/* Ausweg — der Weg AN diesem Schritt vorbei, nicht die zweite Hälfte davon.
+   Vorher stand er als .btn-t direkt neben dem Hauptknopf, mit 12px Abstand und ohne
+   Rahmen: optisch eine Fußnote zum Hauptknopf, obwohl er einen ganz anderen Zweig
+   öffnet. Die Trennlinie ist hier die eigentliche Aussage — sie sagt „ab hier etwas
+   anderes", bevor irgendein Text gelesen wird. */
+.zugang .ausweg{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;
+  margin-top:22px;padding-top:16px;border-top:1px solid var(--line)}
+.zugang .ausweg-f{font-size:14px;color:var(--ink-500)}
+/* Unterstrichen und in Textfarbe: als Verweis erkennbar, ohne mit dem Hauptknopf um
+   Aufmerksamkeit zu ringen. Das Padding von .btn-t (11px) würde die Grundlinie gegen
+   den Vorspann verschieben. */
+.zugang .ausweg .btn-t{padding:0;font-size:14px;color:var(--ink-900);text-decoration:underline}
+.zugang .ausweg .btn-t:hover{color:var(--accent,var(--ink-900))}
+
 .zugang .suggest{border:1px solid var(--line);border-radius:8px;background:var(--surface);overflow:hidden}
 .zugang .sg-head{padding:16px;border-bottom:1px solid var(--line)}
 .zugang .sg-name{font-size:19px;font-weight:700;letter-spacing:-.02em;line-height:1.25}

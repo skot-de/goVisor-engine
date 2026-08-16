@@ -1435,7 +1435,6 @@
   "Zuletzt gewonnen": "Recently won",
   "Zuletzt vergeben": "Last awarded",
   "Zum Aufwand wissen wir zu wenig — die Bekanntmachung nennt weder Bürgschaft noch Bindefrist.": "We know too little about the effort — the notice states neither guarantee nor bid validity.",
-  "Zum Ausprobieren: „cancom\", „bechtle\" oder „müller\".": "To try it out: “cancom”, “bechtle” or “müller”.",
   "Zum Bestand hinzufügen": "Add to your portfolio",
   "Zum Login": "Go to login",
   "Zum Netzwerk": "To the network",
@@ -1946,5 +1945,7 @@
   "Erst nach der Anmeldung": "Available after sign-in",
   "Free-Zugang nach der Anmeldung: Lead-Liste und alle Eckdaten dauerhaft unbegrenzt, drei ausführliche Bewertungen je 30 Tage.": "Free access after sign-up: lead list and all key data permanently unlimited, three detailed assessments every 30 days.",
   "Aus eurer Übersicht übernommen — ihr könnt den Namen ändern.": "Taken from your overview — you can change the name.",
-  "Wir sind noch nicht in eurer Datenbank": "We are not in your database yet"
+  "Wir sind noch nicht in eurer Datenbank": "We are not in your database yet",
+  "Am besten der Name, unter dem ihr Aufträge bekommt.": "Best use the name you win contracts under.",
+  "Ihr findet euch hier nicht?": "Can't find yourselves here?"
 }

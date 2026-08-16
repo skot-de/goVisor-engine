@@ -1435,7 +1435,6 @@
   "Zuletzt gewonnen": "Gagnés récemment",
   "Zuletzt vergeben": "Dernière attribution",
   "Zum Aufwand wissen wir zu wenig — die Bekanntmachung nennt weder Bürgschaft noch Bindefrist.": "Nous en savons trop peu sur la charge — l'avis n'indique ni garantie ni délai de validité.",
-  "Zum Ausprobieren: „cancom\", „bechtle\" oder „müller\".": "Pour essayer : « cancom », « bechtle » ou « müller ».",
   "Zum Bestand hinzufügen": "Ajouter au portefeuille",
   "Zum Login": "Se connecter",
   "Zum Netzwerk": "Vers le réseau",
@@ -1946,5 +1945,7 @@
   "Erst nach der Anmeldung": "Disponible après connexion",
   "Free-Zugang nach der Anmeldung: Lead-Liste und alle Eckdaten dauerhaft unbegrenzt, drei ausführliche Bewertungen je 30 Tage.": "Accès gratuit après inscription : liste des marchés et données clés en illimité, trois évaluations détaillées par 30 jours.",
   "Aus eurer Übersicht übernommen — ihr könnt den Namen ändern.": "Repris de votre aperçu — vous pouvez modifier le nom.",
-  "Wir sind noch nicht in eurer Datenbank": "Nous ne sommes pas encore dans votre base"
+  "Wir sind noch nicht in eurer Datenbank": "Nous ne sommes pas encore dans votre base",
+  "Am besten der Name, unter dem ihr Aufträge bekommt.": "De préférence le nom sous lequel vous remportez des marchés.",
+  "Ihr findet euch hier nicht?": "Vous ne vous trouvez pas ici ?"
 }
