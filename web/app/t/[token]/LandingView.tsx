@@ -57,6 +57,35 @@ function Vertragstabelle({ zeilen }: { zeilen: Zeile[] }) {
   );
 }
 
+/**
+ * Schrittweise Eingrenzung auf die Firma.
+ *
+ * Sven zur flachen Marktzahl: „8.080 offene ausschreibungen, schön und gut, aber wie
+ * viele genau für klostermann?" Genau das zeigt der Trichter. Die letzte Stufe bleibt
+ * offen und ist der Grund für das Profil: was Eignung und Kapazität hergeben, steht in
+ * keiner Bekanntmachung.
+ */
+function Trichter({ stufen }: { stufen: NonNullable<Baustein["trichter"]> }) {
+  const { t } = useSprache();
+  const max = Math.max(...stufen.map((s) => s.n), 1);
+  return (
+    <div className="lg-trichter">
+      {stufen.map((s, i) => (
+        <div className="lg-stufe" key={i}>
+          <div className="n">{s.n.toLocaleString("de-DE")}</div>
+          <div className="bar"><span style={{ width: `${Math.max(2, (s.n / max) * 100)}%` }} /></div>
+          <div className="lb">{s.label}{s.hinweis ? <em>{s.hinweis}</em> : null}</div>
+        </div>
+      ))}
+      <div className="lg-stufe lg-offen">
+        <div className="n">?</div>
+        <div className="bar" />
+        <div className="lb">{t("wie viele davon wirklich passen, sagt euer Profil")}</div>
+      </div>
+    </div>
+  );
+}
+
 /** Kennzahlen-Leiste: je Baustein eine Kachel mit der tragenden Zahl. */
 function KennzahlenLeiste({ teile }: { teile: Baustein[] }) {
   return (
@@ -158,6 +187,9 @@ export function LandingView({ d, token }: { d: Landing; token: string }) {
           <h2>{t("Und das können wir für euch finden")}</h2>
           <p className="lg-wende-lede">{t("Was davon zu euch passt, entscheidet euer Profil. Je schärfer es ist, desto weniger müsst ihr selbst durchsehen.")}</p>
           <KennzahlenLeiste teile={kacheln(fuerEuch)} />
+          {fuerEuch.filter((b) => b.trichter?.length).map((b) => (
+            <Trichter key={b.id} stufen={b.trichter!} />
+          ))}
         </div>
       )}
 

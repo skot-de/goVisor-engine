@@ -366,33 +366,90 @@ def baustein_wettbewerber(con, ctx):
 
 
 def baustein_offene_im_feld(con, ctx):
-    """Was die Firma NICHT weiss: fremde Ausschreibungen in ihrem Fachgebiet.
+    """Was die Firma NICHT weiss: fremde Ausschreibungen, schrittweise auf sie zugeschnitten.
 
-    Der stärkste Baustein für den Verkauf, weil er als einziger nichts über den Empfänger
-    behauptet, sondern etwas zeigt, das er nicht hat. Die Prämisse der alten Seite lag
-    genau andersherum: sie erzählte ihm von seinen eigenen Verträgen — dem, was er besser
-    weiss als wir und wo unsere Daten am dünnsten sind.
+    **Warum ein Trichter und nicht eine Zahl.** Der Baustein zeigte „8.080 offene
+    Ausschreibungen in eurem Fachgebiet". Sven: „schön und gut, aber wie viele genau für
+    klostermann?" — zu Recht: 8.080 ist die ganze CPV-Division 45, also jede
+    Bauausschreibung in Deutschland. Für einen Bahninfrastruktur-Bauer ist das keine
+    Auskunft, sondern eine Marktgrösse.
+
+    Zwei Stufen lassen sich aus dem belegen, was wir ohnehin über die Firma wissen:
+    ihre CPV-KLASSEN (4-stellig, aus den eigenen Zuschlägen) und die Gegenden, in denen
+    sie bisher gebaut hat. Bei Klostermann: 8.080 -> 948 -> 194.
+
+    **Die Falle, in die der erste Anlauf lief.** Die Regionsstufe zuerst über
+    `buyer_nuts` gebaut, also über den Sitz der Vergabestelle. Ergebnis: 104 statt 194,
+    alles in Hessen. Gemessen: ALLE 30 Vergaben von Klostermann tragen Vergabestelle
+    „Hessen" (das Beschaffungsbüro von DB Netz in Frankfurt), gebaut wird aber in
+    Brandenburg, Hamburg, Sachsen, bei Rostock, in Krefeld und Münster. Die Stufe hätte
+    also nach dem Briefkasten des Auftraggebers gefiltert. Richtig ist `market_nuts3`,
+    der Leistungsort. Dieselbe Verwechslung steckt im Projekt schon als zwei getrennte
+    Achsen in `geo.search(axis=...)`.
+
+    Die letzte Stufe bleibt bewusst OFFEN: wie viele wirklich passen, hängt an Eignung,
+    Kapazität und Zuschnitt, und das steht in keinem öffentlichen Datensatz. Genau dafür
+    gibt es das Profil.
     """
     LE = f"read_parquet('{G}/lead_export.parquet')"
-    div = con.execute(f"""SELECT substr(cpv_code, 1, 2) d, count(*) FROM {LE}
+    CL = f"read_parquet('{G}/dim_cpv_label.parquet')"
+    fremd = "(incumbent_group_id IS NULL OR incumbent_group_id <> ?)"
+
+    div = con.execute(f"""SELECT substr(cpv_code, 1, 2) FROM {LE}
       WHERE incumbent_group_id = ? AND cpv_code IS NOT NULL
-      GROUP BY 1 ORDER BY 2 DESC LIMIT 1""", [ctx["id"]]).fetchone()
+      GROUP BY 1 ORDER BY count(*) DESC LIMIT 1""", [ctx["id"]]).fetchone()
     if not div:
         return None
-    r = con.execute(f"""SELECT count(*), count(DISTINCT buyer_name) FROM {LE}
-      WHERE phase = 'open' AND substr(cpv_code, 1, 2) = ?
-        AND (incumbent_group_id IS NULL OR incumbent_group_id <> ?)""",
-      [div[0], ctx["id"]]).fetchone()
-    if not r or not r[0]:
+    klassen = [r[0] for r in con.execute(f"""SELECT substr(cpv_code, 1, 4) FROM {LE}
+      WHERE incumbent_group_id = ? AND cpv_code IS NOT NULL GROUP BY 1""", [ctx["id"]]).fetchall()]
+    # Leistungsort, NICHT Sitz der Vergabestelle. Siehe Docstring.
+    laender = [r[0] for r in con.execute(f"""SELECT substr(market_nuts3, 1, 3) FROM {LE}
+      WHERE incumbent_group_id = ? AND market_nuts3 IS NOT NULL GROUP BY 1""", [ctx["id"]]).fetchall()]
+
+    def zaehl(bed, par):
+        return con.execute(f"SELECT count(*) FROM {LE} WHERE phase='open' AND {bed}", par).fetchone()[0]
+
+    breit = zaehl(f"substr(cpv_code,1,2) = ? AND {fremd}", [div[0], ctx["id"]])
+    if not breit:
         return None
+    stufen = [{"n": breit, "label": "im selben CPV-Bereich"}]
+
+    eng = breit
+    if klassen:
+        ph = ",".join("?" * len(klassen))
+        eng = zaehl(f"substr(cpv_code,1,4) IN ({ph}) AND {fremd}", klassen + [ctx["id"]])
+        # Die Spalte heisst `cpv_code`, nicht `code`, und traegt die volle 8-stellige
+        # Form ("45230000"). Die Klassen-Ebene ist die Zeile, deren Rest Nullen sind.
+        namen = [r[0] for r in con.execute(
+            f"SELECT label FROM {CL} WHERE substr(cpv_code,1,4) IN ({ph}) "
+            f"AND substr(cpv_code,5,4) = '0000'", klassen).fetchall() if r[0]]
+        stufen.append({"n": eng, "label": "in euren Fachklassen",
+                       "hinweis": ", ".join(n[:44] for n in namen[:3]) or None})
+
+    # Regionsstufe nur, wenn sie ueberhaupt einschraenkt. Wer bundesweit baut, bekommt
+    # hier keine Stufe vorgegaukelt, die nichts wegnimmt.
+    if klassen and laender and len(laender) < 14:
+        ph, ph2 = ",".join("?" * len(klassen)), ",".join("?" * len(laender))
+        eng2 = zaehl(f"substr(cpv_code,1,4) IN ({ph}) AND substr(market_nuts3,1,3) IN ({ph2}) "
+                     f"AND {fremd}", klassen + laender + [ctx["id"]])
+        if eng2 < eng:
+            stufen.append({"n": eng2, "label": "dort, wo ihr bisher gebaut habt"})
+            eng = eng2
+
+    stellen = con.execute(f"""SELECT count(DISTINCT buyer_name) FROM {LE}
+      WHERE phase='open' AND substr(cpv_code,1,2) = ? AND {fremd}""",
+      [div[0], ctx["id"]]).fetchone()[0]
+
     return {
         "id": "offene_im_feld", "staerke": 80, "gruppe": "fuer_euch", "form": "kpi",
-        "kern": f"{r[0]:,} Ausschreibungen in eurem Fachgebiet sind gerade offen.".replace(",", "."),
+        "kern": f"{eng:,}".replace(",", ".") + " offene Ausschreibungen passen zu dem, was ihr baut.",
         "titel": "Was gerade offen ist, in eurem Fachgebiet",
-        "zahlen": [{"wert": f"{r[0]:,}".replace(",", "."), "label": "offene Ausschreibungen"},
-                   {"wert": f"{r[1]:,}".replace(",", "."), "label": "Vergabestellen"}],
-        "grenze": ("Alle offenen Verfahren im selben CPV-Bereich, ohne eure eigenen. "
-                   "Ob sie zu euch passen, entscheidet das Profil."),
+        "zahlen": [{"wert": f"{eng:,}".replace(",", "."), "label": "passen zu eurem Zuschnitt"},
+                   {"wert": f"{stellen:,}".replace(",", "."), "label": "Vergabestellen im Bereich"}],
+        "trichter": stufen,
+        "grenze": ("Eingegrenzt über eure eigenen Zuschläge: Fachklassen und Leistungsorte. "
+                   "Ob eine Ausschreibung wirklich passt, hängt an Eignung und Kapazität, "
+                   "und das steht in keiner Bekanntmachung."),
         "bruecke": {"produkt": "Planung", "text": "Die Liste, gefiltert auf euer Profil"},
     }
 
