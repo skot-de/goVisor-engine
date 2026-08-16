@@ -22,6 +22,14 @@ export type Baustein = {
   id: string; staerke: number; titel: string;
   zahlen?: Zahl[]; zeilen?: Zeile[]; namen?: string[];
   n_auslauf?: number; n_fertigstellung?: number;
+  /** Ein Satz, der ohne Umgebung trägt. Speist den Kernbefund im Seitenkopf. */
+  kern?: string | null;
+  /** Anteil 0..1 für den Balken (nur wo eine Konzentration gemessen wurde). */
+  anteil?: number;
+  /** Schlussfolgerung aus der Tabelle, ersetzt die frühere Spalte „Art". */
+  befund?: string | null;
+  /** Einordnung, wo kein Einzelwert veröffentlicht ist (CPV-Vergleichswert). */
+  vergleich?: string | null;
   /** Was diese Zahlen NICHT abdecken. Pflichtfeld, kein Beiwerk. */
   grenze: string;
   /** Anschluss an einen Produktbereich (Strategie, Unternehmen, Planung). */
@@ -29,6 +37,8 @@ export type Baustein = {
 };
 export type Landing = {
   id: string; name: string; stand: string;
+  /** Die eine Aussage für den Seitenkopf, aus dem überraschendsten Baustein. */
+  kern: string | null;
   bausteine: Baustein[];
   belegt: string[];
 };

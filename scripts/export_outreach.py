@@ -120,11 +120,17 @@ def _vertragszeilen(con, identity_id, limit=8):
                else "fertigstellung" if kind in ARTEN_FERTIGSTELLUNG else "unklar")
         zeilen.append({
             "titel": t, "buyer": b,
-            # Der Wert steht NUR da, wenn er belegt ist. Vorher stand die CPV-Median-
-            # Imputation dort mit einem Sternchen daneben — technisch gekennzeichnet,
-            # praktisch als Zahl gelesen. Eine geschätzte Zahl neben einem echten
-            # Vertragstitel liest niemand als Schätzung.
+            # Schätzwerte stehen wieder da, aber als Schätzung ERKENNBAR („ca."), nicht
+            # als nackte Zahl mit einem Sternchen daneben.
+            #
+            # Erst ganz weggelassen, weil die Vorfassung 14x dieselbe CPV-Median-Zahl
+            # zeigte und in der Überschrift zu „3,4 Mio €" aufsummierte. Sven beim
+            # Ansehen: „nun stehen gar keine volumen mehr da" — zu Recht. Das Problem
+            # war nie das Schätzen, sondern dass die Schätzung wie eine Tatsache aussah
+            # und in eine Summe einging. Beides ist behoben: die Zahl trägt „ca.", und
+            # summiert wird sie nirgends.
             "vol": eur(v) if vs == "actual" else None,
+            "_roh": v, "_quelle": vs,
             "ende": ende.strftime("%m/%Y") if ende and hasattr(ende, "strftime") else None,
             "art": art,
         })
@@ -164,6 +170,7 @@ def baustein_transparenz(con, ctx):
         return None
     return {
         "id": "transparenz", "staerke": 100,
+        "kern": f"{r[0]:,}".replace(",", ".") + f" eurer Zuschläge stehen öffentlich, zurück bis {r[2]}.",
         "titel": "Das steht öffentlich über euch",
         "zahlen": [
             {"wert": f"{r[0]:,}".replace(",", "."), "label": "Zuschläge benannt"},
@@ -248,6 +255,10 @@ def baustein_abhaengigkeit(con, ctx):
     wer = namen[0] if k == 1 else f"von {k} Auftraggebern"
     return {
         "id": "abhaengigkeit", "staerke": 90,
+        "kern": (f"{anteil*100:.0f} % eurer öffentlichen Zuschläge kommen von einem "
+                 f"einzigen Auftraggeber." if k == 1 else
+                 f"{anteil*100:.0f} % eurer öffentlichen Zuschläge kommen von {k} Auftraggebern."),
+        "anteil": round(anteil, 3),
         "titel": "Woher eure Aufträge kommen",
         "zahlen": [{"wert": f"{anteil*100:.0f} %", "label": (f"von {wer}" if k == 1 else wer)},
                    {"wert": str(len(rows)), "label": "Auftraggeber insgesamt"}],
@@ -266,13 +277,53 @@ def baustein_vertraege(con, ctx):
         return None
     n_aus = sum(1 for z in zeilen if z["art"] == "auslauf")
     n_fertig = sum(1 for z in zeilen if z["art"] == "fertigstellung")
+
+    # EIN Satz über die Mischung, statt „wird fertig" achtmal untereinander.
+    # Sven: „die wissen doch woran sie gerade arbeiten?" — stimmt. Dass ein Bauvorhaben
+    # fertig wird, ist für den Empfänger keine Nachricht. Interessant ist erst die
+    # Bilanz darüber: ob aus diesem Bestand überhaupt etwas zurückkommt.
+    if n_aus and not n_fertig:
+        befund = f"Alle {n_aus} werden neu ausgeschrieben, wenn sie auslaufen."
+    elif n_fertig and not n_aus:
+        befund = (f"Keines dieser {n_fertig} Vorhaben kommt als Neuvergabe zurück, es sind "
+                  "einmalige Bauleistungen. Nachschub muss von woanders kommen.")
+    elif n_aus:
+        befund = (f"{n_aus} davon werden neu ausgeschrieben, {n_fertig} sind einmalige "
+                  "Bauleistungen und kommen nicht zurück.")
+    else:
+        befund = None
+
+    # Ein Schätzwert je Zeile NUR, wenn die Schätzungen sich überhaupt unterscheiden.
+    #
+    # Bei Klostermann trugen alle acht dieselbe Zahl (250.114 €): der CPV-Median. Acht
+    # gleiche „ca."-Beträge untereinander behaupten, jedes Vorhaben sei ungefähr gleich
+    # groß, und das ist schlechter als gar keine Angabe. Wo die Schätzung für alle
+    # dieselbe ist, ist sie keine Aussage über den einzelnen Vertrag, sondern über das
+    # Fachgebiet. Also steht sie EINMAL unter der Tabelle und heisst, was sie ist.
+    geschaetzte = {z["_roh"] for z in zeilen if z["_quelle"] != "actual" and z["_roh"]}
+    vergleich = None
+    if len(geschaetzte) == 1:
+        vergleich = ("Für die übrigen ist kein Volumen veröffentlicht. Vergleichbare "
+                     f"Vergaben in diesem CPV-Bereich liegen bei rund {eur(geschaetzte.pop())}.")
+    elif len(geschaetzte) > 1:
+        for z in zeilen:
+            if not z["vol"] and z["_roh"]:
+                z["vol"] = "ca. " + eur(z["_roh"])
+    for z in zeilen:
+        z.pop("_roh", None); z.pop("_quelle", None)
+
     return {
         "id": "vertraege", "staerke": 95,
+        "vergleich": vergleich,
         "titel": "Eure laufenden Vorhaben, aus öffentlichen Bekanntmachungen",
-        "zeilen": zeilen,
+        "zeilen": zeilen, "befund": befund, "kern": befund,
         "n_auslauf": n_aus, "n_fertigstellung": n_fertig,
-        "grenze": ("Volumen steht nur dort, wo es in der Bekanntmachung beziffert ist. "
-                   "Wo es fehlt, lassen wir das Feld leer statt zu schätzen."),
+        # Diese Zeile stand einmal auf „wo es fehlt, lassen wir das Feld leer statt zu
+        # schätzen" — direkt unter der Vergleichszeile, die genau das tut. Zwei Sätze,
+        # die sich widersprechen, und der Leser hat keine Möglichkeit zu entscheiden,
+        # welcher gilt. Die Grenze dieses Bausteins ist eine andere: der Ausschnitt.
+        "grenze": ("Nur was öffentlich bekanntgemacht wurde. Aufträge ausserhalb "
+                   "öffentlicher Vergabeverfahren und Nachträge fehlen hier."),
         "bruecke": {"produkt": "Planung",
                     "text": "Fristen und Termine als Kalender, mit Erinnerung"},
     }
@@ -303,6 +354,7 @@ def baustein_wettbewerber(con, ctx):
         return None
     return {
         "id": "wettbewerber", "staerke": 85,
+        "kern": f"{Z.clean_name(name)} hat euch {int(row[1])}-mal verdrängt.",
         "titel": "Wer euch bisher verdrängt hat",
         "zahlen": [{"wert": Z.clean_name(name), "label": "häufigster Gegner"},
                    {"wert": str(int(row[1])), "label": "belegte Verdrängungen"}],
@@ -335,6 +387,7 @@ def baustein_offene_im_feld(con, ctx):
         return None
     return {
         "id": "offene_im_feld", "staerke": 80,
+        "kern": f"{r[0]:,} Ausschreibungen in eurem Fachgebiet sind gerade offen.".replace(",", "."),
         "titel": "Was gerade offen ist, in eurem Fachgebiet",
         "zahlen": [{"wert": f"{r[0]:,}".replace(",", "."), "label": "offene Ausschreibungen"},
                    {"wert": f"{r[1]:,}".replace(",", "."), "label": "Vergabestellen"}],
@@ -359,6 +412,8 @@ def baustein_zweitversuche(con, ctx):
         return None
     return {
         "id": "zweitversuche", "staerke": 75,
+        "kern": (f"{r[0]:,} Bedarfe in eurem Fachgebiet werden seit Jahren erfolglos "
+                 "ausgeschrieben.").replace(",", "."),
         "titel": "Wo wiederholt niemand geboten hat",
         "zahlen": [{"wert": f"{r[0]:,}".replace(",", "."), "label": "chronische Bedarfe"},
                    {"wert": f"bis {int(r[1])} Jahre", "label": "erfolglos in Folge"}],
@@ -367,6 +422,9 @@ def baustein_zweitversuche(con, ctx):
         "bruecke": {"produkt": "Strategie", "text": "Die Segmente, sortiert nach Chance"},
     }
 
+
+KERN_RANG = ["abhaengigkeit", "wettbewerber", "zweitversuche", "vertraege",
+             "offene_im_feld", "transparenz"]
 
 BAUSTEINE = [baustein_transparenz, baustein_vertraege, baustein_abhaengigkeit,
              baustein_wettbewerber, baustein_offene_im_feld, baustein_zweitversuche]
@@ -391,8 +449,13 @@ def build_payload(con, identity_id, now):
         return None
     gebaut.sort(key=lambda t: -t["staerke"])
 
+    nach_id = {t["id"]: t for t in gebaut}
+    kern = next((nach_id[i]["kern"] for i in KERN_RANG
+                 if i in nach_id and nach_id[i].get("kern")), None)
+
     return {
         "id": identity_id, "name": Z.clean_name(b[0]), "stand": str(now),
+        "kern": kern,
         "bausteine": gebaut,
         "belegt": [t["id"] for t in gebaut],
     }

@@ -1,6 +1,7 @@
 import { loadLanding } from "@/lib/outreach";
 import { LandingMissing, LandingView } from "./LandingView";
-import "../../outreach.css";
+import "../../explorer.css";
+import "../../landing.css";
 
 // Outreach-Landing: personalisierte, token-adressierte Auswertung je Zielfirma.
 // Öffentlich (kein Konto nötig) — der Einstieg in den Vertriebs-Funnel. On-demand gerendert
