@@ -1665,7 +1665,7 @@
   "laufende Ausschreibungen": "open tenders",
   "letzte 12 Monate": "last 12 months",
   "liegen über oder unter der Spanne, die ihr angegeben habt.": "are above or below the range you gave.",
-  "läuft aus": "expiring",
+  "läuft aus": "expires",
   "läuft aus — Folgeausschreibung": "expiring — follow-on tender",
   "läuft bald aus (geschätzt)": "expiring soon (estimated)",
   "läuft dieses Jahr aus (geschätzt)": "expires this year (estimated)",
@@ -1947,5 +1947,15 @@
   "Aus eurer Übersicht übernommen — ihr könnt den Namen ändern.": "Taken from your overview — you can change the name.",
   "Wir sind noch nicht in eurer Datenbank": "We are not in your database yet",
   "Am besten der Name, unter dem ihr Aufträge bekommt.": "Best use the name you win contracts under.",
-  "Ihr findet euch hier nicht?": "Can't find yourselves here?"
+  "Ihr findet euch hier nicht?": "Can't find yourselves here?",
+  "wird fertig": "completes",
+  "endet": "ends",
+  "Vorhaben": "Project",
+  "Art": "Type",
+  "Endet": "Ends",
+  "Das ist alles öffentlich. Wir haben es nur zusammengetragen.": "All of this is public. We only put it together.",
+  "Aus öffentlichen Vergabebekanntmachungen. Keine Daten von Ihnen, kein Konto nötig.": "From public contract notices. No data from you, no account needed.",
+  "Mit einem Konto bleibt sie erhalten, wird täglich fortgeschrieben und um die Ausschreibungen ergänzt, die zu Ihrem Profil passen.": "With an account it is kept, updated daily and extended with the tenders that match your profile.",
+  "Konto anlegen, kostenlos": "Create account, free",
+  "· erstellt aus öffentlichen Vergabedaten. Noch kein Konto.": "· compiled from public procurement data. No account yet."
 }
