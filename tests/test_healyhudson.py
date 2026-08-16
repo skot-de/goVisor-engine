@@ -282,32 +282,125 @@ def test_apptop_hat_nur_EINE_leiste():
     assert "titel" not in block, "zwei von sechs beschriftete Bereiche sind uneinheitlicher als keiner"
 
 
-def test_filterleiste_haengt_nicht_mehr_im_kopf():
-    """Sie war der Grund fuer die 93 px. Kaeme sie zurueck in den `<header>`, waere der
-    Kopf wieder hoeher als auf den eigenstaendigen Seiten."""
+def test_es_gibt_genau_EINE_kopfzeile_im_ganzen_produkt():
+    """Der Ursprung fast aller „Inseln": zwei Kopfzeilen nebeneinander.
+
+    Bis 2026-08-16 rendete `ExplorerShell` ihren eigenen `<header className="topbar">`, die
+    uebrigen Seiten `AppTop`. Nur die erste trug Profil-Knopf und Sprachwahl — nicht als
+    Entscheidung, sondern weil ihr Zustand zufaellig in dieser Komponente lag. Jede spaetere
+    Aenderung musste an zwei Stellen gemacht werden, und beim ersten Vergessen driftete es.
+
+    Der Test prueft die STRUKTUR, nicht das Aussehen: gaebe es wieder eine zweite Kopfzeile,
+    faellt es hier auf und nicht erst, wenn jemand zwischen den Bereichen hin- und herklickt.
+    """
+    web = ROOT / "web"
+    eigene = []
+    for f in list(web.glob("components/**/*.tsx")) + list(web.glob("app/**/*.tsx")):
+        text = f.read_text(encoding="utf-8")
+        if '<header className="topbar' in text and f.name != "Rail.tsx":
+            eigene.append(str(f.relative_to(web)))
+    assert not eigene, f"eigene Kopfzeile ausserhalb von AppTop: {eigene}"
+
+    rail = (web / "components" / "explorer" / "Rail.tsx").read_text(encoding="utf-8")
+    assert rail.count('<header className="topbar') == 1, "AppTop ist die einzige Kopfzeile"
+
+
+def test_kopfzeile_traegt_profil_und_sprache_auf_jeder_seite():
+    """Beides gehoert zu JEDER Seite — wer auf „Unternehmen" ist, sucht sein Profil dort."""
+    rail = (ROOT / "web" / "components" / "explorer" / "Rail.tsx").read_text(encoding="utf-8")
+    assert "profilbtn" in rail, "der Profil-Knopf gehoert in die gemeinsame Kopfzeile"
+    assert "sprachcell" in rail, "die Sprachwahl gehoert in die gemeinsame Kopfzeile"
+    assert "useProfil" in rail, "das Profil kommt aus dem gemeinsamen Hook, nicht aus einer Seite"
+
+
+def test_strategie_zeigt_keine_listen_werkzeuge():
+    """Filter, Spalten und Export wirken dort auf nichts — es gibt keine Tabelle.
+
+    Sie standen trotzdem da, und der Export lieferte die Lead-Liste, die man gar nicht sah.
+    """
     shell = (ROOT / "web" / "components" / "explorer" / "ExplorerShell.tsx").read_text(encoding="utf-8")
-    kopf = shell.split("<header className=\"topbar\">")[1].split("</header>")[0]
+    assert 'werkzeuge={view === "potenzial" ? null : (' in shell, \
+        "in der Strategie-Ansicht duerfen keine Listen-Werkzeuge im Kopf stehen"
+
+
+def test_werkzeugkasten_schneidet_die_aufklappmenues_nicht_ab():
+    """`overflow-x` auf `.top-werkzeuge` macht den Kasten zum Ausschnitt.
+
+    Die Menues fuer Spalten, Export und Sprache haengen absolut positioniert DARIN und
+    wuerden unterhalb der Kopfzeile abgeschnitten. Im Browser geprueft: das Spalten-Menue
+    ist 669 px hoch und reicht weit unter den Kopf.
+    """
+    css = (ROOT / "web" / "app" / "explorer.css").read_text(encoding="utf-8")
+    block = css.split(".top-werkzeuge{")[1].split("}")[0]
+    assert "overflow" not in block, "`.top-werkzeuge` darf keinen Ausschnitt erzeugen"
+
+
+def test_filterleiste_haengt_nicht_mehr_im_kopf():
+    """Sie war der Grund fuer die 93 px. Kaeme sie in die Kopfzeile zurueck, waere der Kopf
+    wieder hoeher als auf den eigenstaendigen Seiten."""
+    shell = (ROOT / "web" / "components" / "explorer" / "ExplorerShell.tsx").read_text(encoding="utf-8")
+    kopf = shell.split("<AppTop")[1].split("/>")[0]
     assert "<FilterBar" not in kopf, "die Filterleiste gehoert in die Bereichsleiste, nicht in den Kopf"
     assert 'className="bereichsleiste"' in shell
 
 
-def test_beide_eigenstaendigen_seiten_zeigen_ihre_werkzeuge_im_kopf():
-    """Reiter und Import-Knopf sind Navigation bzw. Werkzeug — kein Inhalt. Sie standen
-    urspruenglich MITTEN im Inhalt; der Umzug nach oben bleibt richtig. Nur ihr Ziel hat
-    sich geaendert: die eine Kopfleiste statt einer zweiten Zeile darunter."""
-    for seite, erwartet in (("unternehmen", "UnternehmenTabs"), ("bausteine", "BausteineLeiste")):
-        quelle = (ROOT / "web" / "app" / seite / "page.tsx").read_text(encoding="utf-8")
-        assert f"werkzeuge={{<{erwartet}" in quelle, f"{seite}: Werkzeuge nicht im Kopf"
+def test_abschnitte_stehen_in_der_leiste_aktionen_im_kopf():
+    """Die Trennlinie, die den Bereichen ihre Einheitlichkeit gibt.
+
+    ABSCHNITTE (wo bin ich?) gehoeren in die Bereichsleiste, AKTIONEN (was tue ich?) in
+    die Kopfzeile. Vorher lagen die Unternehmen-Reiter im Kopf, die Strategie-Abschnitte in
+    einer zweiten Spalte links, die Bausteine-Themen in einer dritten Spalte links — drei
+    Bauformen fuer dieselbe Frage, plus die Rail fuer die Lead-Ansichten.
+
+    Der Import-Knopf bei Bausteinen bleibt bewusst oben: er waehlt nichts aus, er tut etwas.
+    """
+    web = ROOT / "web"
+    unt = (web / "app" / "unternehmen" / "page.tsx").read_text(encoding="utf-8")
+    assert "BereichsNav" in unt and 'className="bereichsleiste"' in unt, \
+        "Unternehmen: Abschnitte gehoeren in die Bereichsleiste"
+    assert "werkzeuge={<UnternehmenTabs" not in unt, "die Reiter duerfen nicht mehr im Kopf stehen"
+
+    bau = (web / "app" / "bausteine" / "page.tsx").read_text(encoding="utf-8")
+    assert "BereichsNav" in bau and 'className="bereichsleiste"' in bau, \
+        "Bausteine: Themen gehoeren in die Bereichsleiste"
+    assert "werkzeuge={<BausteineLeiste" in bau, "der Import-Knopf ist eine AKTION und bleibt im Kopf"
+
+    # Keine der frueheren senkrechten Zweitspalten darf zurueckkommen.
+    for datei, klasse in (("components/explorer/StrategieView.tsx", 'className="stnav"'),
+                          ("components/explorer/BausteinLibrary.tsx", 'className="themes"')):
+        text = (web / datei).read_text(encoding="utf-8")
+        assert klasse not in text, f"{datei}: eigene Abschnittsspalte ist zurueck"
 
 
-def test_tokenzeile_erscheint_nur_bei_aktiver_suche():
-    """Sie ist der EINZIGE Grund fuer eine zweite Zeile — und nur, wenn wirklich gesucht
-    wird. Im Browser geprueft: ohne Suche Inhalt bei y=48, nach „Berlin" bei y=93 mit dem
-    Token in der Leiste. Diese Verschiebung erklaert sich durch die Handlung."""
+def test_es_gibt_genau_eine_bauform_fuer_abschnitte():
+    """`BereichsNav` ist die einzige. Faende jemand sie unpassend und baute daneben eine
+    zweite, waere das genau der Zustand, aus dem wir gerade herausgekommen sind."""
+    web = ROOT / "web"
+    nutzer = [f.name for f in list(web.glob("app/**/*.tsx")) + list(web.glob("components/**/*.tsx"))
+              if "BereichsNav" in f.read_text(encoding="utf-8") and f.name != "BereichsNav.tsx"]
+    assert len(nutzer) >= 3, f"zu wenige Bereiche nutzen die gemeinsame Bauform: {nutzer}"
+
+
+def test_die_bereichsleiste_steht_immer_und_traegt_ueberall_etwas():
+    """UMGEKEHRTE REGEL seit 2026-08-16 — die alte ist entfallen, nicht gebrochen.
+
+    Vorher stand die Leiste NUR bei aktiver Suche. Der Grund war richtig: sie konnte nur
+    Suchtoken tragen, war also im Normalfall leer, und 45 px Chrom ohne Aussage sind
+    schlechter als ein Sprung, den der Nutzer selbst ausloest.
+
+    Seit die Abschnitte ALLER Bereiche hier liegen, traegt sie ueberall etwas — Trefferzahl
+    und Token in den Listen, neun Abschnitte in der Strategie, drei im Unternehmen, die
+    Themen bei den Bausteinen. Damit ist die Voraussetzung der alten Regel weg, und die
+    feste Hoehe wird zum Gewinn: im Browser gemessen sitzt der Inhalt in ALLEN sechs
+    Bereichen bei y=93 (Kopf 48 + Leiste 45).
+    """
     shell = (ROOT / "web" / "components" / "explorer" / "ExplorerShell.tsx").read_text(encoding="utf-8")
-    assert "tokens.length > 0 ? (" in shell, "die Leiste darf nicht dauerhaft stehen"
-    i = shell.index("tokens.length > 0 ? (")
-    assert 'className="bereichsleiste"' in shell[i:i + 400]
+    assert "{tokens.length > 0 ? (\n      <div className=\"bereichsleiste\">" not in shell, \
+        "die Leiste darf nicht mehr an der Suche haengen"
+    i = shell.index('<div className="bereichsleiste">')
+    block = shell[i:i + 1400]
+    assert "BereichsNav" in block, "in der Strategie-Ansicht traegt die Leiste die Abschnitte"
+    assert "tcount" in block, "in den Listen traegt sie die Trefferzahl — nie leer"
 
 
 def test_leisten_knoepfe_tragen_die_rahmen_klasse():
@@ -708,3 +801,154 @@ def test_marktpanel_zeigt_echte_zahlen_oder_nichts():
     m = (ROOT / "web" / "components" / "unternehmen" / "MarktPanel.tsx").read_text(encoding="utf-8")
     assert '"/api/branchen"' in m, "dieselbe Quelle wie die Akquise-Zaehler"
     assert "if (!zahlen) return null;" in m, "keine Platzhalter, keine geratene Zahl"
+
+
+# ══ Frage-Suche (2026-08-16) ═══════════════════════════════════════════════════════════
+
+def test_fragesuche_erkennt_svens_frage_und_setzt_einen_benannten_filter():
+    """„zeig mir die aufträge mit den niedrigsten bietern in der vergangenheit".
+
+    Im Browser gemessen: 6.786 → **2.430** — dieselbe Zahl wie das Häkchen „Nur mit wenig
+    Wettbewerb" im Detailfilter. Genau das ist der Anspruch: die Frage darf nichts anderes
+    tun als ein vorhandener Filter, sonst wäre das Ergebnis nicht nachprüfbar.
+    """
+    import re
+    quelle = (ROOT / "web" / "lib" / "frageSuche.ts").read_text(encoding="utf-8")
+    m = re.search(r'id: "wenig-bieter",.*?muster: (/.*?/i),', quelle, re.S)
+    assert m, "die Regel für „wenig Bieter\" fehlt"
+    # Python und JS teilen die Syntax dieses Musters — es ist bewusst einfach gehalten.
+    muster = re.compile(m.group(1)[1:-2].replace(r"\w", "[a-zA-Z0-9_]"), re.I)
+    for frage in ("zeig mir die aufträge mit den niedrigsten bietern in der vergangenheit",
+                  "wenigste bieter", "wenig wettbewerb", "kaum konkurrenz"):
+        assert muster.search(frage), f"nicht erkannt: {frage}"
+    for kein in ("berlin", "bieterportal", "IT-Dienstleistungen"):
+        assert not muster.search(kein), f"faelschlich als Frage erkannt: {kein}"
+
+
+def test_fragesuche_raet_nicht():
+    """Erkennt keine Regel etwas, MUSS `null` herauskommen — die Suche faellt dann auf
+    Ort/PLZ/Volltext zurueck. Eine Frage halb zu verstehen und stillschweigend einen Teil
+    zu filtern waere schlimmer, als sie nicht zu verstehen."""
+    quelle = (ROOT / "web" / "lib" / "frageSuche.ts").read_text(encoding="utf-8")
+    assert "return null;" in quelle
+    assert "if (t.length < 4) return null;" in quelle, \
+        "kurze Eingaben wie „Bau\" oder „IT\" gehoeren in die Volltextsuche"
+
+
+def test_fragetoken_geht_nicht_in_die_volltextsuche():
+    """Der Fehler beim ersten Versuch: das Frage-Token landete ZUSAETZLICH als Suchbegriff
+    in der Kernlogik. Die suchte dann nach der Zeichenfolge „wenig-bieter" im Titel — und
+    fand nichts. Gemessen: „0 von 0" statt 2.430."""
+    shell = (ROOT / "web" / "components" / "explorer" / "ExplorerShell.tsx").read_text(encoding="utf-8")
+    assert 'tokens.filter((t) => t.type !== "frage")' in shell
+    assert "searchTokens: suchToken" in shell
+
+
+def test_fragetoken_nimmt_seinen_filter_beim_entfernen_zurueck():
+    """Sonst bliebe nach dem Wegklicken eine unsichtbare Einschraenkung stehen — die Sorte
+    Rest, die man erst bemerkt, wenn Zahlen nicht mehr zusammenpassen. Im Browser geprueft:
+    2.430 → 6.786, Filterzaehler zurueck auf 0."""
+    shell = (ROOT / "web" / "components" / "explorer" / "ExplorerShell.tsx").read_text(encoding="utf-8")
+    assert "weg?.advKeys?.length" in shell, "removeToken muss den gesetzten Filter zuruecknehmen"
+    assert "if (tokens.some((t) => t.advKeys?.length)) setAdv(emptyAdv);" in shell, \
+        "auch „alles loeschen\" muss die Frage-Filter mitnehmen"
+
+
+# ══ Lauf-Dashboard (2026-08-16) ════════════════════════════════════════════════════════
+
+def test_dashboard_liest_nur_den_letzten_lauf():
+    """Verteidigung fuer die Altbestaende: Logs von VOR der Umstellung enthalten weiter
+    zwei Laeufe. Ein Anzeigefehler, der „laeuft" als „fertig" ausgibt, ist genau der, den
+    niemand bemerkt — deshalb schneidet die Route zusaetzlich an der letzten Start-Marke."""
+    r = (ROOT / "web" / "app" / "api" / "intern" / "lauf" / "route.ts").read_text(encoding="utf-8")
+    assert 'z.startsWith("goVisor Tageslauf  ")' in r
+    assert "startZeilen[startZeilen.length - 1]" in r
+
+
+def test_schrittnamen_werden_am_festen_teil_verglichen():
+    """Schrittnamen tragen veraenderliche Klammer-Teile: die NetServer-Portalliste waechst,
+    und „Gold-Rebuild (Leads mit Stichtag 2026-08-14)" enthaelt das Datum.
+
+    Ein Vergleich auf den vollen Namen fand deshalb nie eine Uebereinstimmung — bereits
+    gelaufene Schritte standen im Dashboard als „offen". Gemessen im Browser, nicht
+    vermutet: die Liste zeigte NetServer-Bekanntmachungen als ausstehend, obwohl der
+    Schritt Stunden vorher gelaufen war.
+    """
+    r = (ROOT / "web" / "app" / "api" / "intern" / "lauf" / "route.ts").read_text(encoding="utf-8")
+    assert 'const kern = (n: string) => n.split(" (")[0].trim();' in r
+    assert "gemacht.has(kern(n))" in r
+
+
+def test_beide_lognamen_werden_gefunden():
+    """Die Historie darf nicht verschwinden, nur weil das Namensschema sich geaendert hat."""
+    r = (ROOT / "web" / "app" / "api" / "intern" / "lauf" / "route.ts").read_text(encoding="utf-8")
+    assert r.count(r"/^daily-\d{4}-\d{2}-\d{2}(-\d{4})?\.log$/") >= 2, \
+        "sowohl die Lauf-Suche als auch der Massstab muessen beide Formen kennen"
+
+
+# ══ Interne Seiten (2026-08-16) ════════════════════════════════════════════════════════
+
+def test_interne_seiten_sind_serverseitig_gesperrt():
+    """Bis 2026-08-16 pruefte KEINE `/intern`-Seite und auch die API nichts.
+
+    Geschuetzt hat sie allein die Coming-Soon-Sperre — ein LAUNCH-Gate, keine
+    Zugriffskontrolle. Am Tag der Freischaltung waeren `/intern/lauf` und
+    `/api/intern/lauf` oeffentlich gewesen, samt Logzeilen und Dateisystempfaden.
+
+    Im Browser geprueft: ohne Anmeldung antworten /intern, /intern/lauf, /intern/claims,
+    /api/intern/lauf und /api/intern/wer alle mit 404, waehrend /leads, /unternehmen und
+    /api/branchen normal mit 200 antworten.
+    """
+    m = (ROOT / "web" / "middleware.ts").read_text(encoding="utf-8")
+    assert "function istIntern" in m
+    # `istAdmin` liegt seit der Trennung in `lib/admin.ts` — EINE Quelle fuer Sperre und
+    # Anzeige. Zwei Implementierungen derselben Regel laufen auseinander, und zwar in die
+    # gefaehrliche Richtung: Anzeige sagt „nein", Sperre denkt „ja".
+    assert 'from "@/lib/admin"' in m
+    assert 'pfad.startsWith("/api/intern")' in m, "die API muss mitgesperrt sein, nicht nur die Seiten"
+    # Zwei Zweige (Produktion + lokal) — die Sperre muss in BEIDEN stehen, sonst faende sie
+    # ihren ersten Ernstfall in der Produktion.
+    assert m.count("istIntern(pfad) && !istAdmin(email)") == 2
+
+
+def test_admin_pruefung_ist_fail_closed_und_nicht_faelschbar():
+    """Zwei Eigenschaften, ohne die die Sperre Sicherheit nur vortaeuschen wuerde.
+
+    1. FAIL-CLOSED: ohne konfigurierte Adresse kommt NIEMAND rein — nicht „alle".
+    2. Die E-Mail stammt aus `supabase.auth.getUser()`, das das Token GEGEN SUPABASE
+       prueft. Ein blosses Auslesen des Cookies waere faelschbar.
+    """
+    a = (ROOT / "web" / "lib" / "admin.ts").read_text(encoding="utf-8")
+    assert "if (!ADMINS.length || !email) return false;" in a, "fail-closed fehlt"
+    mw = (ROOT / "web" / "lib" / "supabase" / "middleware.ts").read_text(encoding="utf-8")
+    assert "await supabase.auth.getUser()" in mw
+    assert "data.user?.email" in mw, "die E-Mail muss aus der GEPRUEFTEN Sitzung kommen"
+
+
+def test_admin_adresse_steht_nicht_im_browser_bundle():
+    """`NEXT_PUBLIC_`-Variablen landen im ausgelieferten JavaScript — die Admin-Adresse
+    dort abzulegen wuerde veroeffentlichen, wer Admin ist. Die Oberflaeche fragt deshalb
+    den Server (`/api/intern/wer`) und liest die Antwort aus dem Statuscode."""
+    a = (ROOT / "web" / "lib" / "admin.ts").read_text(encoding="utf-8")
+    assert "NEXT_PUBLIC_ADMIN" not in a
+    rail = (ROOT / "web" / "components" / "explorer" / "Rail.tsx").read_text(encoding="utf-8")
+    assert "sk@skot.de" not in rail, "keine Adresse im Client-Code"
+    # `/api/wer` liegt AUSSERHALB der Sperre — sonst koennte die Auskunft nur „ja" sagen
+    # oder schweigen, und bei „schweigen" wuesste niemand, ob die Sitzung fehlt, die
+    # Adresse nicht passt oder die Sperre klemmt. Genau das trat am 2026-08-16 ein.
+    assert '/api/wer' in rail
+
+
+def test_404_statt_403_fuer_interna():
+    """Ein 403 bestaetigt, dass es die Seite gibt. Fuer eine interne Oberflaeche ist schon
+    diese Auskunft zu viel."""
+    m = (ROOT / "web" / "middleware.ts").read_text(encoding="utf-8")
+    assert "function nichtGefunden" in m and "status: 404" in m
+def test_ein_lauf_eine_logdatei():
+    """Zwei Laeufe am selben Tag schrieben in DIESELBE Datei — das Dashboard las beide als
+    einen, fand das Ende des ersten und meldete „durchgelaufen", waehrend der zweite noch
+    arbeitete. Im Browser gesehen am 2026-08-16, mitten in einem laufenden Lauf."""
+    sh = (ROOT / "scripts" / "daily_leads.sh").read_text(encoding="utf-8")
+    assert 'daily-$TODAY-$(date' in sh, "der Logname braucht die Startzeit"
+
+

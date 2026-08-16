@@ -1,0 +1,87 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+1;Werkzeug- / Material-/ Aufenthaltscontainer,;5,0;StMt;gaeb;ESC24B28-23_LV_Maler_Bodenbelag.X83
+1;Ger;1,0;psch;gaeb;ESC24B28-23_LV_Maler_Bodenbelag.X83
+2;Schutzabdeckung als besonderen Schutz;500,0;m²;gaeb;ESC24B28-23_LV_Maler_Bodenbelag.X83
+3;Schutzabdeckung als besonderen Schutz;550,0;m²;gaeb;ESC24B28-23_LV_Maler_Bodenbelag.X83
+4;Betonwarzen und Grate in Stahlbetonw;30,0;m;gaeb;ESC24B28-23_LV_Maler_Bodenbelag.X83
+5;Fehlstellen im Kalk- Zementputz ausbessern;100,0;m;gaeb;ESC24B28-23_LV_Maler_Bodenbelag.X83
+1;Fl;3300,0;m²;gaeb;ESC24B28-23_LV_Maler_Bodenbelag.X83
+2;Trennmittelr;195,0;m²;gaeb;ESC24B28-23_LV_Maler_Bodenbelag.X83
+3;Ü;100,0;m;gaeb;ESC24B28-23_LV_Maler_Bodenbelag.X83
+4;Risse ohne Rissbreiten;10,0;m;gaeb;ESC24B28-23_LV_Maler_Bodenbelag.X83
+5;Spachtelung;173,0;m²;gaeb;ESC24B28-23_LV_Maler_Bodenbelag.X83
+6;Spachtelung;22,0;m²;gaeb;ESC24B28-23_LV_Maler_Bodenbelag.X83
+7;Spachtelung und Schleifen von Leibungen;8,0;m;gaeb;ESC24B28-23_LV_Maler_Bodenbelag.X83
+8;Grundbeschichtung (Tiefgrund) als Vorbehandlung von Fl;3300,0;m²;gaeb;ESC24B28-23_LV_Maler_Bodenbelag.X83
+9;Grundierung von Leibungen (Tiefengrund),;320,0;m;gaeb;ESC24B28-23_LV_Maler_Bodenbelag.X83
+10;Gipskarton-/ Zementbauplattenw;1580,0;m²;gaeb;ESC24B28-23_LV_Maler_Bodenbelag.X83
+11;Beschichtung;3300,0;m²;gaeb;ESC24B28-23_LV_Maler_Bodenbelag.X83
+12;Beschichtung von Leibungen;320,0;m;gaeb;ESC24B28-23_LV_Maler_Bodenbelag.X83
+1;Fl;350,0;m²;gaeb;ESC24B28-23_LV_Maler_Bodenbelag.X83
+2;Trennmittelr;182,0;m²;gaeb;ESC24B28-23_LV_Maler_Bodenbelag.X83
+3;Risse ohne Rissbreiten;20,0;m;gaeb;ESC24B28-23_LV_Maler_Bodenbelag.X83
+4;Spachtelung von Betonfl;42,0;m²;gaeb;ESC24B28-23_LV_Maler_Bodenbelag.X83
+5;Grundbeschichtung (Tiefgrund) als Vorbehandlung von Putzfl;350,0;m²;gaeb;ESC24B28-23_LV_Maler_Bodenbelag.X83
+6;Gipskartondecken;165,0;m²;gaeb;ESC24B28-23_LV_Maler_Bodenbelag.X83
+7;Beschichtung;308,0;m²;gaeb;ESC24B28-23_LV_Maler_Bodenbelag.X83
+8;Zulage;10,0;m²;gaeb;ESC24B28-23_LV_Maler_Bodenbelag.X83
+9;Beschichtung;42,0;m²;gaeb;ESC24B28-23_LV_Maler_Bodenbelag.X83
+1;Wiederholte Messung der Estrichfeuchte je nach Erfordernis;5,0;St;gaeb;ESC24B28-23_LV_Maler_Bodenbelag.X83
+2;Ü;90,0;m;gaeb;ESC24B28-23_LV_Maler_Bodenbelag.X83
+3;Untergrundvorbereitung vor Aufbringen;111,0;m²;gaeb;ESC24B28-23_LV_Maler_Bodenbelag.X83
+4;Arbeitsfugen und Schwindrisse im Estrich mind. zu 1/2;15,0;m;gaeb;ESC24B28-23_LV_Maler_Bodenbelag.X83
+5;Zulage zur Vorposition;15,0;m;gaeb;ESC24B28-23_LV_Maler_Bodenbelag.X83
+6;1-K-PUR Schnellsperrgrundierung,;30,0;m²;gaeb;ESC24B28-23_LV_Maler_Bodenbelag.X83
+7;Schlie;5,0;m²;gaeb;ESC24B28-23_LV_Maler_Bodenbelag.X83
+8;Beschichtung mit Epoxidharz auf Zementestrich im Innenbereich;111,0;m²;gaeb;ESC24B28-23_LV_Maler_Bodenbelag.X83
+9;Sockelleiste aus vorbeschriebener Beschichtung,;90,0;m;gaeb;ESC24B28-23_LV_Maler_Bodenbelag.X83
+10;Nach Herstellervorschrift gesetzten Bodenablauf;3,0;St;gaeb;ESC24B28-23_LV_Maler_Bodenbelag.X83
+1;Vollfl;50,0;m²;gaeb;ESC24B28-23_LV_Maler_Bodenbelag.X83
+2;Vollfl;100,0;m²;gaeb;ESC24B28-23_LV_Maler_Bodenbelag.X83
+3;Spachtelung von Putzfl;250,0;m²;gaeb;ESC24B28-23_LV_Maler_Bodenbelag.X83
+4;Vollfl;35,0;m;gaeb;ESC24B28-23_LV_Maler_Bodenbelag.X83
+5;Elasto-plastische Verfugung der Anschl;1000,0;m;gaeb;ESC24B28-23_LV_Maler_Bodenbelag.X83
+6;Elastische Verfugung der Anschl;500,0;m;gaeb;ESC24B28-23_LV_Maler_Bodenbelag.X83
+7;Elasto-plastische Verfugung von Bauteilanschl;50,0;m;gaeb;ESC24B28-23_LV_Maler_Bodenbelag.X83
+8;Kantenschutzschienen;20,0;m;gaeb;ESC24B28-23_LV_Maler_Bodenbelag.X83
+1;Ger;1,0;psch;gaeb;ESC24B28-23_LV_Maler_Bodenbelag.X83
+2;Schutzabdeckung als besonderen Schutz;500,0;m²;gaeb;ESC24B28-23_LV_Maler_Bodenbelag.X83
+1;Fl;710,0;m²;gaeb;ESC24B28-23_LV_Maler_Bodenbelag.X83
+2;Trennmittelr;4,0;m²;gaeb;ESC24B28-23_LV_Maler_Bodenbelag.X83
+3;Spachtelung;4,0;m²;gaeb;ESC24B28-23_LV_Maler_Bodenbelag.X83
+4;Ü;10,0;m;gaeb;ESC24B28-23_LV_Maler_Bodenbelag.X83
+5;Grundbeschichtung (Tiefgrund) als Vorbehandlung von Fl;710,0;m²;gaeb;ESC24B28-23_LV_Maler_Bodenbelag.X83
+6;Gipskarton-/ Zementbauplattenw;52,0;m²;gaeb;ESC24B28-23_LV_Maler_Bodenbelag.X83
+7;Beschichtung;710,0;m²;gaeb;ESC24B28-23_LV_Maler_Bodenbelag.X83
+8;Zulage;52,0;m²;gaeb;ESC24B28-23_LV_Maler_Bodenbelag.X83
+9;Fugenabdeckung;36,0;m;gaeb;ESC24B28-23_LV_Maler_Bodenbelag.X83
+10;Elasto-plastische Verfugung der Anschl;200,0;m;gaeb;ESC24B28-23_LV_Maler_Bodenbelag.X83
+11;Elastische Verfugung der Anschl;200,0;m;gaeb;ESC24B28-23_LV_Maler_Bodenbelag.X83
+12;Kantenschutzschienen;10,0;m;gaeb;ESC24B28-23_LV_Maler_Bodenbelag.X83
+1;Fl;15,0;m²;gaeb;ESC24B28-23_LV_Maler_Bodenbelag.X83
+2;Grundbeschichtung (Tiefgrund) als Vorbehandlung von Fl;15,0;m²;gaeb;ESC24B28-23_LV_Maler_Bodenbelag.X83
+3;Gipskartondecken;15,0;m²;gaeb;ESC24B28-23_LV_Maler_Bodenbelag.X83
+4;Beschichtung;15,0;m²;gaeb;ESC24B28-23_LV_Maler_Bodenbelag.X83
+1;Wiederholte Messung der Estrichfeuchte je nach Erfordernis;10,0;St;gaeb;ESC24B28-23_LV_Maler_Bodenbelag.X83
+2;Reinigen des Untergrundes von haftungsmindernden Schichten wie Gips, M;534,0;m²;gaeb;ESC24B28-23_LV_Maler_Bodenbelag.X83
+3;Anschleifen und Absaugen von neuem Zementestrich,;534,0;m²;gaeb;ESC24B28-23_LV_Maler_Bodenbelag.X83
+4;Ü;445,0;m;gaeb;ESC24B28-23_LV_Maler_Bodenbelag.X83
+5;Arbeitsfugen und Schwindrisse im Estrich mind. zu 1/2;50,0;m;gaeb;ESC24B28-23_LV_Maler_Bodenbelag.X83
+6;Zulage zur Vorposition;50,0;m;gaeb;ESC24B28-23_LV_Maler_Bodenbelag.X83
+7;1-K-PUR Schnellsperrgrundierung;100,0;m²;gaeb;ESC24B28-23_LV_Maler_Bodenbelag.X83
+8;Spachteln der Estrichfl;534,0;m²;gaeb;ESC24B28-23_LV_Maler_Bodenbelag.X83
+9;Zulage zu vorbeschriebener Position f;64,0;m;gaeb;ESC24B28-23_LV_Maler_Bodenbelag.X83
+10;Haftgrundvoranstrich auf Unterboden f;534,0;m²;gaeb;ESC24B28-23_LV_Maler_Bodenbelag.X83
+11;Bodenbelag aus PVC,;197,0;m²;gaeb;ESC24B28-23_LV_Maler_Bodenbelag.X83
+12;H;30,0;m;gaeb;ESC24B28-23_LV_Maler_Bodenbelag.X83
+13;Anschluss des Bodenbelages an Bodentank;2,0;St;gaeb;ESC24B28-23_LV_Maler_Bodenbelag.X83
+14;Ü;10,0;m;gaeb;ESC24B28-23_LV_Maler_Bodenbelag.X83
+15;Anschluss des Bodenbelages;30,0;St;gaeb;ESC24B28-23_LV_Maler_Bodenbelag.X83
+16;Sockelleiste aus Vinyl, auf Holzfaserkern;165,0;m;gaeb;ESC24B28-23_LV_Maler_Bodenbelag.X83
+17;Textilbelag, vollsynthetisch,;337,0;m²;gaeb;ESC24B28-23_LV_Maler_Bodenbelag.X83
+18;Sockelleiste aus Kunststoff,;280,0;m;gaeb;ESC24B28-23_LV_Maler_Bodenbelag.X83
+19;Fugenprofil aus Aluminium;6,0;m;gaeb;ESC24B28-23_LV_Maler_Bodenbelag.X83
+20;H;12,0;m;gaeb;ESC24B28-23_LV_Maler_Bodenbelag.X83
+21;Anschluss des Textilbelages an Bodentank;4,0;St;gaeb;ESC24B28-23_LV_Maler_Bodenbelag.X83
+22;Ü;20,0;m;gaeb;ESC24B28-23_LV_Maler_Bodenbelag.X83
+23;Schutzabdeckung von Bodenbel;534,0;m²;gaeb;ESC24B28-23_LV_Maler_Bodenbelag.X83

@@ -1,0 +1,101 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+01.1;Baustelleneinrichtung einrichten;1,0;psch;gaeb-flat;Leistungsverzeichnis_Sportfläche_Osterhausen_ Gaeb1.D83
+01.2;Mobilbauzaun H >= 2,00 m;122,0;m;gaeb-flat;Leistungsverzeichnis_Sportfläche_Osterhausen_ Gaeb1.D83
+01.3;Baustelle räumen und genutzte Flächen wiederherstellen;1,0;psch;gaeb-flat;Leistungsverzeichnis_Sportfläche_Osterhausen_ Gaeb1.D83
+02.1;Absteckung und Höhenübertragung;1,0;psch;gaeb-flat;Leistungsverzeichnis_Sportfläche_Osterhausen_ Gaeb1.D83
+02.2;Vegetationsdecke abschälen;1000,0;m²;gaeb-flat;Leistungsverzeichnis_Sportfläche_Osterhausen_ Gaeb1.D83
+02.3;Vorhandenen Baum innerhalb des Grundstücks verpflanzen;3,0;psch;gaeb-flat;Leistungsverzeichnis_Sportfläche_Osterhausen_ Gaeb1.D83
+02.4;Bestands-Gehwegplatten aufnehmen, reinigen und lagern;66,0;m²;gaeb-flat;Leistungsverzeichnis_Sportfläche_Osterhausen_ Gaeb1.D83
+02.5;Natursteineinfassung aufnehmen und lagern;20,0;m;gaeb-flat;Leistungsverzeichnis_Sportfläche_Osterhausen_ Gaeb1.D83
+02.6;Boden des Homogenbereichs H1 lösen und laden;206,0;m³;gaeb-flat;Leistungsverzeichnis_Sportfläche_Osterhausen_ Gaeb1.D83
+02.7;Boden getrennt zwischenlagern und sichern;206,0;m³;gaeb-flat;Leistungsverzeichnis_Sportfläche_Osterhausen_ Gaeb1.D83
+02.8;Boden transportieren und verwerten / entsorgen;206,0;m³;gaeb-flat;Leistungsverzeichnis_Sportfläche_Osterhausen_ Gaeb1.D83
+02.9;Mineralisches Auffüllmaterial liefern und einbauen;150,0;m³;gaeb-flat;Leistungsverzeichnis_Sportfläche_Osterhausen_ Gaeb1.D83
+02.10;Erdplanum herstellen und verdichten;1030,0;m²;gaeb-flat;Leistungsverzeichnis_Sportfläche_Osterhausen_ Gaeb1.D83
+02.11;Untere ungebundene Tragschicht Sportflächen, d = 25 cm;679,67;m²;gaeb-flat;Leistungsverzeichnis_Sportfläche_Osterhausen_ Gaeb1.D83
+02.12;Obere ungebundene Tragschicht / Feinplanie Sportflächen, d = 2-3 cm;679,67;m²;gaeb-flat;Leistungsverzeichnis_Sportfläche_Osterhausen_ Gaeb1.D83
+02.13;Untere ungebundene Tragschicht Freizeit-Kunstrasen, d = 25 cm;220,0;m²;gaeb-flat;Leistungsverzeichnis_Sportfläche_Osterhausen_ Gaeb1.D83
+02.14;Obere ungebundene Tragschicht Freizeit-Kunstrasen, d = 2-3 cm;220,0;m²;gaeb-flat;Leistungsverzeichnis_Sportfläche_Osterhausen_ Gaeb1.D83
+02.15;Betontiefbord 8/30 cm liefern und setzen;220,0;m;gaeb-flat;Leistungsverzeichnis_Sportfläche_Osterhausen_ Gaeb1.D83
+02.16;Betontiefbord schneiden / Passstücke herstellen;5,0;St;gaeb-flat;Leistungsverzeichnis_Sportfläche_Osterhausen_ Gaeb1.D83
+02.17;Natursteineinfassung wieder einbauen;20,0;m;gaeb-flat;Leistungsverzeichnis_Sportfläche_Osterhausen_ Gaeb1.D83
+03.1;Vorgefertigte wasserdurchlässige Elastikschicht / Shockpad min. 9 mm;679,67;m²;gaeb-flat;Leistungsverzeichnis_Sportfläche_Osterhausen_ Gaeb1.D83
+03.2;Kurzflor-Kunststoffrasen - Lauf- und Bewegungsbahn;267,68;m²;gaeb-flat;Leistungsverzeichnis_Sportfläche_Osterhausen_ Gaeb1.D83
+03.3;Kurzflor-Kunststoffrasen - großes Multifunktionsfeld;250,0;m²;gaeb-flat;Leistungsverzeichnis_Sportfläche_Osterhausen_ Gaeb1.D83
+03.4;Kurzflor-Kunststoffrasen - Innenfeld 18 x 9 m;162,0;m²;gaeb-flat;Leistungsverzeichnis_Sportfläche_Osterhausen_ Gaeb1.D83
+03.5;Linierung Lauf- und Bewegungsbahn, eingelegt;1,0;psch;gaeb-flat;Leistungsverzeichnis_Sportfläche_Osterhausen_ Gaeb1.D83
+03.6;Linierung großes Multifunktionsfeld, eingelegt;1,0;psch;gaeb-flat;Leistungsverzeichnis_Sportfläche_Osterhausen_ Gaeb1.D83
+03.7;Linierung Innenfeld 18 x 9 m, eingelegt;1,0;psch;gaeb-flat;Leistungsverzeichnis_Sportfläche_Osterhausen_ Gaeb1.D83
+03.8;Wasserdurchlässiger Freizeit-Kunstrasen;220,0;m²;gaeb-flat;Leistungsverzeichnis_Sportfläche_Osterhausen_ Gaeb1.D83
+04.1;Schottertragschicht unter neuer Pflasterfläche, d = 20 cm;185,87;m²;gaeb-flat;Leistungsverzeichnis_Sportfläche_Osterhausen_ Gaeb1.D83
+04.2;Betonpflasterdecke 10 x 20 x 8 cm, grau;185,87;m²;gaeb-flat;Leistungsverzeichnis_Sportfläche_Osterhausen_ Gaeb1.D83
+04.3;Betonpflaster scharfkantig trennen;10,0;m;gaeb-flat;Leistungsverzeichnis_Sportfläche_Osterhausen_ Gaeb1.D83
+04.4;Bestands-Gehwegplatten wieder verlegen;66,0;m²;gaeb-flat;Leistungsverzeichnis_Sportfläche_Osterhausen_ Gaeb1.D83
+05.1;Fundament für kombinierte Tor-/Basketballanlage;4,0;St;gaeb-flat;Leistungsverzeichnis_Sportfläche_Osterhausen_ Gaeb1.D83
+05.2;Kombinierte Kleinfeldtor- und Basketballanlage;2,0;St;gaeb-flat;Leistungsverzeichnis_Sportfläche_Osterhausen_ Gaeb1.D83
+05.3;Hockersitzbank ohne Rückenlehne;8,0;St;gaeb-flat;Leistungsverzeichnis_Sportfläche_Osterhausen_ Gaeb1.D83
+06.1;Aushub und Planum Weitsprunggrube;46,03;m²;gaeb-flat;Leistungsverzeichnis_Sportfläche_Osterhausen_ Gaeb1.D83
+06.2;Filtervlies unter Weitsprungsand;46,03;m²;gaeb-flat;Leistungsverzeichnis_Sportfläche_Osterhausen_ Gaeb1.D83
+06.3;Elastische Randeinfassung Weitsprunggrube;21,5;m;gaeb-flat;Leistungsverzeichnis_Sportfläche_Osterhausen_ Gaeb1.D83
+06.4;Außenecke 90° für elastische Randeinfassung;4,0;St;gaeb-flat;Leistungsverzeichnis_Sportfläche_Osterhausen_ Gaeb1.D83
+06.5;Weitsprungsand liefern und einbauen;14,5;m³;gaeb-flat;Leistungsverzeichnis_Sportfläche_Osterhausen_ Gaeb1.D83
+06.6;Absprungbalken mit Einbaukasten und Blindbalken;1,0;St;gaeb-flat;Leistungsverzeichnis_Sportfläche_Osterhausen_ Gaeb1.D83
+07.1;Volleyballanlage für den Außenbereich, komplett;1,0;psch;gaeb-flat;Leistungsverzeichnis_Sportfläche_Osterhausen_ Gaeb1.D83
+08.1;Lichtmast einschließlich Fundament;2,0;St;gaeb-flat;Leistungsverzeichnis_Sportfläche_Osterhausen_ Gaeb1.D83
+08.2;LED-Fluter für Sport- und Bewegungsfläche;2,0;St;gaeb-flat;Leistungsverzeichnis_Sportfläche_Osterhausen_ Gaeb1.D83
+08.3;Kabelschutzrohr verlegen;70,0;m;gaeb-flat;Leistungsverzeichnis_Sportfläche_Osterhausen_ Gaeb1.D83
+08.4;Erdkabel für Außenbeleuchtung liefern und einziehen Leistung: Für die Anschlussleistung dimensioniertes Erdkabel;70,0;m;gaeb-flat;Leistungsverzeichnis_Sportfläche_Osterhausen_ Gaeb1.D83
+08.5;Anschluss an Haustechnik und Steuerung;1,0;psch;gaeb-flat;Leistungsverzeichnis_Sportfläche_Osterhausen_ Gaeb1.D83
+09.1;Pflegeunterlagen und Einweisung;1,0;psch;gaeb-flat;Leistungsverzeichnis_Sportfläche_Osterhausen_ Gaeb1.D83
+09.2;Revisionsunterlagen und Bestandsdokumentation;1,0;psch;gaeb-flat;Leistungsverzeichnis_Sportfläche_Osterhausen_ Gaeb1.D83
+10.1;Hersteller / Fabrikat Kunststoffrasen :;0,0;;gaeb-flat;Leistungsverzeichnis_Sportfläche_Osterhausen_ Gaeb1.D83
+1;Leistung:;1,0;psch;gaeb;Leistungsverzeichnis_Sportfläche_Osterhausen_Gaeb2.X83
+2;Leistung:;122,0;m;gaeb;Leistungsverzeichnis_Sportfläche_Osterhausen_Gaeb2.X83
+3;Leistung:;1,0;psch;gaeb;Leistungsverzeichnis_Sportfläche_Osterhausen_Gaeb2.X83
+1;Leistung:;1,0;psch;gaeb;Leistungsverzeichnis_Sportfläche_Osterhausen_Gaeb2.X83
+2;Leistung:;1000,0;m²;gaeb;Leistungsverzeichnis_Sportfläche_Osterhausen_Gaeb2.X83
+3;Leistung:;3,0;psch;gaeb;Leistungsverzeichnis_Sportfläche_Osterhausen_Gaeb2.X83
+4;Leistung:;66,0;m²;gaeb;Leistungsverzeichnis_Sportfläche_Osterhausen_Gaeb2.X83
+5;Leistung:;20,0;m;gaeb;Leistungsverzeichnis_Sportfläche_Osterhausen_Gaeb2.X83
+6;Leistung:;206,0;m³;gaeb;Leistungsverzeichnis_Sportfläche_Osterhausen_Gaeb2.X83
+7;Leistung:;206,0;m³;gaeb;Leistungsverzeichnis_Sportfläche_Osterhausen_Gaeb2.X83
+8;Diese Position wird nur benötigt wenn der Zwischengelagerte Boden nicht den Anforderungen an eine Weiterverarbeitung entspricht.;206,0;m³;gaeb;Leistungsverzeichnis_Sportfläche_Osterhausen_Gaeb2.X83
+9;Leistung:;150,0;m³;gaeb;Leistungsverzeichnis_Sportfläche_Osterhausen_Gaeb2.X83
+10;Leistung:;1030,0;m²;gaeb;Leistungsverzeichnis_Sportfläche_Osterhausen_Gaeb2.X83
+11;Leistung:;679,67;m²;gaeb;Leistungsverzeichnis_Sportfläche_Osterhausen_Gaeb2.X83
+12;Leistung:;679,67;m²;gaeb;Leistungsverzeichnis_Sportfläche_Osterhausen_Gaeb2.X83
+13;Leistung:;220,0;m²;gaeb;Leistungsverzeichnis_Sportfläche_Osterhausen_Gaeb2.X83
+14;Leistung:;220,0;m²;gaeb;Leistungsverzeichnis_Sportfläche_Osterhausen_Gaeb2.X83
+15;Leistung:;220,0;m;gaeb;Leistungsverzeichnis_Sportfläche_Osterhausen_Gaeb2.X83
+16;Leistung:;5,0;St;gaeb;Leistungsverzeichnis_Sportfläche_Osterhausen_Gaeb2.X83
+17;Leistung:;20,0;m;gaeb;Leistungsverzeichnis_Sportfläche_Osterhausen_Gaeb2.X83
+1;Leistung:;679,67;m²;gaeb;Leistungsverzeichnis_Sportfläche_Osterhausen_Gaeb2.X83
+2;Nutzung / Farbe:;267,68;m²;gaeb;Leistungsverzeichnis_Sportfläche_Osterhausen_Gaeb2.X83
+3;Nutzung / Farbe:;250,0;m²;gaeb;Leistungsverzeichnis_Sportfläche_Osterhausen_Gaeb2.X83
+4;Nutzung / Farbe:;162,0;m²;gaeb;Leistungsverzeichnis_Sportfläche_Osterhausen_Gaeb2.X83
+5;Leistung:;1,0;psch;gaeb;Leistungsverzeichnis_Sportfläche_Osterhausen_Gaeb2.X83
+6;Leistung:;1,0;psch;gaeb;Leistungsverzeichnis_Sportfläche_Osterhausen_Gaeb2.X83
+7;Leistung:;1,0;psch;gaeb;Leistungsverzeichnis_Sportfläche_Osterhausen_Gaeb2.X83
+8;Leistung:;220,0;m²;gaeb;Leistungsverzeichnis_Sportfläche_Osterhausen_Gaeb2.X83
+1;Leistung:;185,87;m²;gaeb;Leistungsverzeichnis_Sportfläche_Osterhausen_Gaeb2.X83
+2;Leistung:;185,87;m²;gaeb;Leistungsverzeichnis_Sportfläche_Osterhausen_Gaeb2.X83
+3;Leistung:;10,0;m;gaeb;Leistungsverzeichnis_Sportfläche_Osterhausen_Gaeb2.X83
+4;Leistung:;66,0;m²;gaeb;Leistungsverzeichnis_Sportfläche_Osterhausen_Gaeb2.X83
+1;Leistung:;4,0;St;gaeb;Leistungsverzeichnis_Sportfläche_Osterhausen_Gaeb2.X83
+2;Leistung:;2,0;St;gaeb;Leistungsverzeichnis_Sportfläche_Osterhausen_Gaeb2.X83
+3;Leistung:;8,0;St;gaeb;Leistungsverzeichnis_Sportfläche_Osterhausen_Gaeb2.X83
+1;Leistung:;46,03;m²;gaeb;Leistungsverzeichnis_Sportfläche_Osterhausen_Gaeb2.X83
+2;Leistung:;46,03;m²;gaeb;Leistungsverzeichnis_Sportfläche_Osterhausen_Gaeb2.X83
+3;Leistung:;21,5;m;gaeb;Leistungsverzeichnis_Sportfläche_Osterhausen_Gaeb2.X83
+4;Leistung:;4,0;St;gaeb;Leistungsverzeichnis_Sportfläche_Osterhausen_Gaeb2.X83
+5;Leistung:;14,5;m³;gaeb;Leistungsverzeichnis_Sportfläche_Osterhausen_Gaeb2.X83
+6;Leistung:;1,0;St;gaeb;Leistungsverzeichnis_Sportfläche_Osterhausen_Gaeb2.X83
+1;Leistung:;1,0;psch;gaeb;Leistungsverzeichnis_Sportfläche_Osterhausen_Gaeb2.X83
+1;Leistung:;2,0;St;gaeb;Leistungsverzeichnis_Sportfläche_Osterhausen_Gaeb2.X83
+2;Leistung:;2,0;St;gaeb;Leistungsverzeichnis_Sportfläche_Osterhausen_Gaeb2.X83
+3;Leistung:;70,0;m;gaeb;Leistungsverzeichnis_Sportfläche_Osterhausen_Gaeb2.X83
+4;Leistung:;70,0;m;gaeb;Leistungsverzeichnis_Sportfläche_Osterhausen_Gaeb2.X83
+5;Leistung:;1,0;psch;gaeb;Leistungsverzeichnis_Sportfläche_Osterhausen_Gaeb2.X83
+1;Leistung:;1,0;psch;gaeb;Leistungsverzeichnis_Sportfläche_Osterhausen_Gaeb2.X83
+2;Leistung:;1,0;psch;gaeb;Leistungsverzeichnis_Sportfläche_Osterhausen_Gaeb2.X83
+1;Hersteller / Fabrikat Kunststoffrasen :;0,0;;gaeb;Leistungsverzeichnis_Sportfläche_Osterhausen_Gaeb2.X83

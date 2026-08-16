@@ -3,7 +3,8 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { logout } from "@/lib/supabase/auth";
-import { useSprache } from "@/lib/i18n";
+import { SPRACHEN, sprachName, useSprache } from "@/lib/i18n";
+import { useProfil } from "@/lib/useProfil";
 import { SeitenSuche } from "./SeitenSuche";
 
 /* Die Hauptnavigation — EINE Quelle für alle Seiten.
@@ -74,6 +75,25 @@ const IN_APP: RailId[] = ["akquise", "merkliste", "netzwerk", "strategie"];
 
 type Plan = "free" | "paid" | "cancelled";
 
+/** Sind die internen Seiten fuer diesen Nutzer erreichbar?
+ *
+ * Gefragt wird der SERVER, nicht eine Variable im Bundle: die Admin-Adresse gehoert nicht
+ * ins ausgelieferte JavaScript. Die Middleware antwortet Nicht-Admins mit 404 — dieses 404
+ * ist die Antwort „nein", ohne dass die Oberflaeche je erfaehrt, wer Admin waere.
+ */
+function useIntern(): boolean {
+  const [ja, setJa] = useState(false);
+  useEffect(() => {
+    let weg = false;
+    fetch("/api/wer", { cache: "no-store" })
+      .then((r) => r.json())
+      .then((d) => { if (!weg) setJa(!!d.admin); })
+      .catch(() => { if (!weg) setJa(false); });
+    return () => { weg = true; };
+  }, []);
+  return ja;
+}
+
 export function AppRail({
   current, merkN = 0, onSwitch, plan: planProp, userEmail: mailProp, onLogout,
 }: {
@@ -87,6 +107,7 @@ export function AppRail({
   onLogout?: () => void;
 }) {
   const { t } = useSprache();
+  const intern = useIntern();
   const [planOpen, setPlanOpen] = useState(false);
   // Die Shell reicht ihren bereits geladenen Kontostand durch; eigenständige Seiten
   // haben keinen — die holen ihn hier selbst, damit das Konto überall erreichbar bleibt.
@@ -170,6 +191,22 @@ export function AppRail({
               <Link className="pm-item" href="/settings" onClick={() => setPlanOpen(false)}>Einstellungen</Link>
               <Link className="pm-item" href="/settings?sek=zahlung" onClick={() => setPlanOpen(false)}>Zahlung &amp; Rechnungen</Link>
               <Link className="pm-item" href="/unternehmen" onClick={() => setPlanOpen(false)}>Unser Unternehmen</Link>
+              {/* Interna stehen im KONTO-Menue, nicht in der Rail: die hat sechs Punkte,
+                  und jeder weitere kostet Klarheit fuer alle Nutzer. Hier ist auch die
+                  ehrlichere Einordnung — es gehoert nicht zum Produkt, sondern zum Betrieb. */}
+              {intern ? (
+                <Link className="pm-item" href="/intern" onClick={() => setPlanOpen(false)}>
+                  Intern · Betrieb
+                </Link>
+              ) : null}
+              {/* Der Profil-Wechsler unter /start gab es laengst — er war nur von keiner
+                  Seite aus erreichbar. Eine Funktion, die man ueber die Adresszeile
+                  aufrufen muss, ist fuer alle ausser dem Autor nicht vorhanden. */}
+              {intern ? (
+                <Link className="pm-item" href="/start" onClick={() => setPlanOpen(false)}>
+                  Profil wechseln
+                </Link>
+              ) : null}
               {userEmail
                 ? <button className="pm-item pm-out" onClick={() => { setPlanOpen(false); abmelden(); }}>Abmelden</button>
                 : <Link className="pm-item" href="/login" onClick={() => setPlanOpen(false)}>Anmelden</Link>}
@@ -203,19 +240,78 @@ export function AppRail({
  *
  * Deshalb: die Werkzeuge des Bereichs stehen IN dieser Leiste (`werkzeuge`), nicht darunter.
  */
-export function AppTop({ werkzeuge, ohneSuche }: {
-  werkzeuge?: React.ReactNode; ohneSuche?: boolean;
+export function AppTop({ suche, werkzeuge, ohneSuche }: {
+  /** Eigene Suche der Seite. Fehlt sie, steht die seitenuebergreifende `SeitenSuche`. */
+  suche?: React.ReactNode;
+  /** Werkzeuge, die NUR zu dieser Seite gehoeren (Filter, Spalten, Export, Reiter). */
+  werkzeuge?: React.ReactNode;
+  ohneSuche?: boolean;
 }) {
+  const { t, lang, setLang } = useSprache();
+  const profil = useProfil();
+  const [sprOffen, setSprOffen] = useState(false);
+
+  // Klick daneben schliesst das Sprachmenue. Das lag frueher in `closeAllPops` der Shell —
+  // ein Menue, dessen Schliess-Logik in einer FREMDEN Komponente wohnt, funktioniert genau
+  // so lange, wie es dort gerendert wird. Jetzt bringt es sie selbst mit.
+  useEffect(() => {
+    if (!sprOffen) return;
+    function daneben(e: MouseEvent) {
+      if (!(e.target as HTMLElement).closest(".sprachcell")) setSprOffen(false);
+    }
+    document.addEventListener("mousedown", daneben);
+    return () => document.removeEventListener("mousedown", daneben);
+  }, [sprOffen]);
+
   return (
     <header className="topbar topbar-schlank">
       <div className="brandcell">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src="/govisor-wordmark.png" alt="goVisor" className="brandlogo" />
       </div>
-      {/* GRUNDAUFBAU UEBERALL GLEICH: Logo und Suche tragen alle Seiten, die
-          Listen-Werkzeuge (Filter, Spalten, Export) nur die Listen. */}
-      {ohneSuche ? null : <SeitenSuche />}
+
+      {/* GRUNDAUFBAU UEBERALL GLEICH: Logo · Profil · Suche · (Werkzeuge) · Sprache.
+          Profil und Sprache stehen FEST, weil sie zu jeder Seite gehoeren — wer auf
+          „Unternehmen" ist, sucht sein Profil eher dort als in der Lead-Liste. Bis
+          2026-08-16 gab es beide nur im Explorer, weil ihr Zustand zufaellig in dessen
+          Komponente lag; das war keine Entscheidung, sondern eine Nebenwirkung. */}
+      <Link className={`colbtn profilbtn ${profil ? "colbtn-on" : ""}`} href="/onboarding"
+        title={profil
+          ? t("{firma} — ansehen/bearbeiten", { firma: profil.firma || t("Profil") })
+          : t("Profil einrichten — schaltet echte Relevanz frei")}>
+        <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor"
+          strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
+          <path d="M12 12a4 4 0 100-8 4 4 0 000 8ZM4 21a8 8 0 0116 0" />
+        </svg>
+        <span className="pb-name">
+          {profil ? (profil.firma || t("Profil")) : t("Profil einrichten")}
+        </span>
+      </Link>
+
+      {ohneSuche ? null : (suche ?? <SeitenSuche />)}
       {werkzeuge ? <div className="top-werkzeuge">{werkzeuge}</div> : null}
+
+      {/* Sprache ganz rechts, auf JEDER Seite. Sie betrifft die Anzeige, nicht das Konto —
+          deshalb hier und nicht im Konto-Menue der Rail. */}
+      <div className="colcfg sprachcell">
+        <button className="colbtn" type="button" aria-haspopup="menu" aria-expanded={sprOffen}
+          onClick={() => setSprOffen((o) => !o)} title={t("sprache.app")}>
+          <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" strokeWidth={2}>
+            <circle cx="12" cy="12" r="9" /><path d="M3 12h18M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18" />
+          </svg>
+          {lang.toUpperCase()}
+        </button>
+        <div className="colmenu" data-open={sprOffen ? "" : undefined} role="menu">
+          {SPRACHEN.map((sp) => (
+            <div key={sp} className="ci" role="menuitemradio" aria-checked={sp === lang}
+              data-on={sp === lang ? "" : undefined}
+              onClick={() => { setLang(sp); setSprOffen(false); }}>
+              <span className="box" />
+              <span>{sprachName(sp, t)}</span>
+            </div>
+          ))}
+        </div>
+      </div>
     </header>
   );
 }

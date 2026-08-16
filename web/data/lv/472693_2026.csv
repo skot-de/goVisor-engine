@@ -1,0 +1,33 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+1;Baustelle einrichten einschl. Anfahrkosten für das Montagepersonal für die gesamte Ausführungszeit.;1,0;Psch;gaeb;02_QSA_LV_VE10-2 Doppelboden-Arbeiten.X83
+2;Besenrein übergebene Rohbodenflächen mit Industriestaubsauger absaugen als Vorbereitung für die Rohbodenversiegelung /-anstrich.;355,0;m²;gaeb;02_QSA_LV_VE10-2 Doppelboden-Arbeiten.X83
+3;Gereinigte Rohbodenfläche mit einem staubbindenden Anstrich versehen. Die Verträglichkeit mit dem Stützenkleber ist sichergestellt. Für Luftführung geeignet.;355,0;m²;gaeb;02_QSA_LV_VE10-2 Doppelboden-Arbeiten.X83
+1;Liefern und montieren eines Doppelbodensystems mit Doppelbodenplatten in nichtbrennbarer Ausführung der Baustoffklasse A2. Die Bodenplatten bestehen aus zellfaserverstärktem Kalziumsulfat mit umlaufendem Kantenschutz.;90,0;m²;gaeb;02_QSA_LV_VE10-2 Doppelboden-Arbeiten.X83
+2;Elastischen Bodenbelag als Linoleumbelag Liefern und im Werk fachgerecht auf Doppelbodenplatten Verkleben unter beachtung der Plattenmaße zum nachträglichen öffen.;90,0;m²;gaeb;02_QSA_LV_VE10-2 Doppelboden-Arbeiten.X83
+3;Liefern und Montieren von Weich-PVC-Sockelleisten.;145,0;m;gaeb;02_QSA_LV_VE10-2 Doppelboden-Arbeiten.X83
+4;Liefern und montieren eines Doppelbodensystems mit Doppelbodenplatten in nichtbrennbarer Ausführung der Baustoffklasse A2. Die Bodenplatten bestehen aus zellfaserverstärktem Kalziumsulfat mit umlaufendem Kantenschutz.;270,0;m²;gaeb;02_QSA_LV_VE10-2 Doppelboden-Arbeiten.X83
+5;Zulage für erschwerte Montage in Bereichen mit unebenem Rohboden außerhalb der Toleranzen der DIN 18 202, Zeile 2, einschließlich Vorhalten von Stützen unterschiedlicher Nennhöhe.;25,0;m²;gaeb;02_QSA_LV_VE10-2 Doppelboden-Arbeiten.X83
+6;Zulage für den Einbau von oberflächenbündigen Baudehnfugen im Doppelboden. Die Stützen werden in diesem Bereich mit dem Rohboden verdübelt. Ab einer Bodenhöhe von 170 mm wird jede 2. Stütze zusätzlich abgespannt.;6,5;m;gaeb;02_QSA_LV_VE10-2 Doppelboden-Arbeiten.X83
+7;Zulage für das Anarbeiten des Doppelbodens an aufgehenden Bauteilen bei geraden Anschnitten sowie das Einlegen eines Wandanschlussbandes. Die Plattenanschnitte werden versiegelt.;275,0;m;gaeb;02_QSA_LV_VE10-2 Doppelboden-Arbeiten.X83
+8;Zulage für das Anarbeiten des Doppelbodens an aufgehenden Bauteilen bei runden/schrägen Anschnitten sowie das Einlegen eines Wandanschlussbandes. Die Plattenanschnitte werden versiegelt.;78,0;m;gaeb;02_QSA_LV_VE10-2 Doppelboden-Arbeiten.X83
+9;Zulage für das Anarbeiten des Doppelbodens an Pfeiler und Stützenvorlagen sowie das Einlegen eines Wandanschlussbandes. Die Plattenanschnitte werden versiegelt. Abwicklungsmaß ca. 2100 mm;3,0;Stk;gaeb;02_QSA_LV_VE10-2 Doppelboden-Arbeiten.X83
+10;Überbrückungsträger aus verzinkten Stahlprofilen für Bereiche, in denen ein Auftstellen von Stützen nicht möglich ist. Die Laststufe entspricht dem gewählten Doppelbodentyp.;10,0;Stk;gaeb;02_QSA_LV_VE10-2 Doppelboden-Arbeiten.X83
+11;Überbrückungsträger aus verzinkten Stahlprofilen für Bereiche, in denen ein Aufstellen von Stützen nicht möglich ist. Die Laststufe entspricht dem gewählten Doppelbodentyp.;10,0;Stk;gaeb;02_QSA_LV_VE10-2 Doppelboden-Arbeiten.X83
+12;Zulage zur Doppelbodenposition für die Herstellung eines Plattenausschnittes im Werk.;15,0;Stk;gaeb;02_QSA_LV_VE10-2 Doppelboden-Arbeiten.X83
+13;Zulage zur Doppelbodenposition für die Herstellung von Ausschnitten auf der Baustelle.;20,0;Stk;gaeb;02_QSA_LV_VE10-2 Doppelboden-Arbeiten.X83
+14;Zulage zur Doppelbodenposition für die Herstellung von Ausschnitten auf der Baustelle.;20,0;Stk;gaeb;02_QSA_LV_VE10-2 Doppelboden-Arbeiten.X83
+15;Zulage für die Erstellung von runden Durchbrüche im Doppelboden.;15,0;Stk;gaeb;02_QSA_LV_VE10-2 Doppelboden-Arbeiten.X83
+16;Zulage für die Erstellung von runden Durchbrüche im Doppelboden.;15,0;Stk;gaeb;02_QSA_LV_VE10-2 Doppelboden-Arbeiten.X83
+17;Brandabtrennung aus Porenbeton Feuerwiderstandsklasse;1,0;m;gaeb;02_QSA_LV_VE10-2 Doppelboden-Arbeiten.X83
+18;Liefern und Montieren von Frontverkleidungen aus Holzwerkstoffplatten als Abschluss eines frei endenden Doppelbodens. Standardmäßig ist die Oberfläche melaminbeschichtet und der Übergang zum Doppelboden ist mit einem Treppenkantenprofil aus Aluminium versehen.;15,0;m;gaeb;02_QSA_LV_VE10-2 Doppelboden-Arbeiten.X83
+1;Plattenkennzeichnung mit vorgegebener Gravur, d = 70 mm. Gravur nach Vorgabe, 3 Zeichen. Lagesichere Ankettung der Bodenplatten.;15,0;Stk;gaeb;02_QSA_LV_VE10-2 Doppelboden-Arbeiten.X83
+2;Reserveplatten mit Belag Lino aus Position 02.01 und 02.02 liefern.;10,0;Stk;gaeb;02_QSA_LV_VE10-2 Doppelboden-Arbeiten.X83
+3;Saugheber mit 2 Näpfen zum Aufnehmen von Doppelbodenplatten mit elastischen Belägen oder Hartbelägen liefern.;2,0;Stk;gaeb;02_QSA_LV_VE10-2 Doppelboden-Arbeiten.X83
+4;Krallenheber zum Aufnehmen von Doppelbodenplatten mit textilen Belägen liefern.;2,0;Stk;gaeb;02_QSA_LV_VE10-2 Doppelboden-Arbeiten.X83
+5;Zulage zum Doppelboden für das vollständige verdübeln der Stützen auf dem Rohboden.;150,0;m²;gaeb;02_QSA_LV_VE10-2 Doppelboden-Arbeiten.X83
+6;Zulage zum Doppelboden für das vollständige verdübeln des Plattenbelages mit Stützen auf dem Rohboden.;90,0;m²;gaeb;02_QSA_LV_VE10-2 Doppelboden-Arbeiten.X83
+7;Zulage zum Doppelboden für das vollständige verdübeln des Plattenbelages mit dem Stützen auf dem Rohboden.;267,0;m²;gaeb;02_QSA_LV_VE10-2 Doppelboden-Arbeiten.X83
+8;Liefern und Verlegen einer Schutzabdeckung für Doppelböden mit elastischen Belägen.;90,0;m²;gaeb;02_QSA_LV_VE10-2 Doppelboden-Arbeiten.X83
+1;Stundensatz für Fachwerker;15,0;h;gaeb;02_QSA_LV_VE10-2 Doppelboden-Arbeiten.X83
+2;Stundensatz für Helfer;15,0;h;gaeb;02_QSA_LV_VE10-2 Doppelboden-Arbeiten.X83
+3;Material auf Nachweis, welches im Zusammenhang mit den Stundenlohnarbeiten benötigt wird.;1,0;psch;gaeb;02_QSA_LV_VE10-2 Doppelboden-Arbeiten.X83

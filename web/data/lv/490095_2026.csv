@@ -1,0 +1,319 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+10;Physikalische Ein-/Ausgabefunktion, Binäre Ausgabe;82,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+20;Physikalische Ein-/Ausgabefunktion, Analoge Ausgabe;103,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+30;Physikalische Ein-/Ausgabefunktion, Binäre Eingabe;228,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+40;Physikalische Ein-/Ausgabefunktion, Binäre Eingabe;1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+50;Physikalische Ein-/Ausgabefunktion, Analoge Eingabe;197,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+60;Gemeinsame Ein-/Ausgabefunktion, Ausgabe Schalten gemäß;93,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+70;Gemeinsame Ein-/Ausgabefunktion, Ausgabe;10,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+80;Gemeinsame Ein-/Ausgabefunktion, Eingabe Melden gemäß;198,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+90;Gemeinsame Ein-/Ausgabefunktion, Eingabe Zählen gemäß;12,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+100;Gemeinsame Ein-/Ausgabefunktion, Eingabe Messwert gemäß;87,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+110;Verarbeitungsfunktion Überwachen, VDI 3814 Blatt 1, für Grenzwert fest gemäß Funktion 3.1 GA-Funktionsliste Beiblatt 070-5, pro Überprüfung eines physikalischen, kommunikativen oder berechneten Mess- oder Zählwertes, auf die Einhaltung einer vorzugebenden festen Grenze.;117,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+120;Verarbeitungsfunktion Überwachen, VDI 3814 Blatt 1, für Grenzwert gleitend gemäß Funktion 3.2 GA-Funktionsliste Beiblatt 070-5, je Überprüfung eines physikalischen, kommunikativen oder berechneten Messwertes, auf die Einhaltung einer vorzugebenden gleitenden Grenze.;240,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+130;Verarbeitungsfunktion Überwachen, VDI 3814 Blatt 1, für Betriebsstundenerfassung gemäß Funktion 3.3 GA-Funktionsliste Beiblatt 070-5, pro Betriebszustand, einschl. parametrierbarem Anfangswert, ohne Grenzwertüberwachung.;82,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+140;Verarbeitungsfunktion Überwachen, VDI 3814 Blatt 1, für Ereigniszählung gemäß Funktion 3.4 GA-Funktionsliste Beiblatt 070-5, pro Zählung, ohne Grenzwertüberwachung.;48,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+150;Verarbeitungsfunktion Überwachen, VDI 3814 Blatt 1, für Befehlsausführkontrolle gemäß Funktion 3.5 GA-Funktionsliste Beiblatt 070-5, pro Benutzeradresse.;165,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+160;Verarbeitungsfunktion Überwachen, VDI 3814 Blatt 1, für Meldungsbearbeitung gemäß Funktion 3.6 GA-Funktionsliste Beiblatt 070-5, pro Benutzeradresse.;192,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+170;Verarbeitungsfunktion Steuern, VDI 3814 Blatt 1, für Anlagensteuerung gemäß Funktion 4.1 GA-Funktionsliste Beiblatt 070-5.;4,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+180;Verarbeitungsfunktion Steuern, VDI 3814 Blatt 1, für Motorsteuerung gemäß Funktion 4.2 GA-Funktionsliste Beiblatt 070-5.;269,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+190;Verarbeitungsfunktion Steuern, VDI 3814 Blatt 1, für Folgesteuerung je Aggregat gemäß Funktion 4.4 GA-Funktionsliste Beiblatt 070-5.;26,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+200;Verarbeitungsfunktion Steuern, VDI 3814 Blatt 1, Sicherheits-/Frostschutzsteuerung gemäß Funktion 4.5 GA-Funktionsliste Beiblatt 070-5, pro Steuerungsablauf.;100,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+210;Verarbeitungsfunktion Regeln, VDI 3814 Blatt 1, für PI-/PID-Regelung gemäß Funktion 5.2 GA-Funktionsliste Beiblatt 070-5.;64,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+220;Verarbeitungsfunktion Regeln, VDI 3814 Blatt 1, für Sollwertführung/-kennlinie gemäß Funktion 5.3 GA-Funktionsliste Beiblatt 070-5.;64,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+230;Verarbeitungsfunktion Regeln, VDI 3814 Blatt 1, für Stellausgabe stetig gemäß Funktion 5.4 GA-Funktionsliste Beiblatt 070-5.;61,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+240;Verarbeitungsfunktion Regeln, VDI 3814 Blatt 1, für Stellausgabe 2 Punkt gemäß Funktion 5.5 GA-Funktionsliste Beiblatt 070-5.;1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+250;Verarbeitungsfunktion Rechnen/Optimieren, VDI 3814 Blatt 1, für Arithmetische Berechnung gemäß Funktion 6.2 GA-Funktionsliste Beiblatt 070-5, pro Eingangs-Benutzeradresse.;1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+260;Verarbeitungsfunktion Rechnen/Optimieren, VDI 3814 Blatt 1, für Ereignisabhängiges Schalten gemäß Funktion 6.3 GA-Funktionsliste Beiblatt 070-5, pro Ausgabe-Benutzeradresse.;5,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+270;Verarbeitungsfunktion Rechnen/Optimieren, VDI 3814 Blatt 1, für Gleitendes Ein-/Ausschalten gemäß Funktion 6.5 GA-Funktionsliste Beiblatt 070-5, je Ausgabe-Benutzeradresse, für einen der Programmart zugeordneten Ein-/Auszyklus.;15,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+280;Native BACnet-Automationsstation als Modularsystem;1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+290;Native BACnet-Automationsstation als Modularsystem;1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+300;Bedien- und Anzeigeeinrichtung für die Informationsschwerpunkte, Anzeige farbig und grafikfähig, Bildschirmdiagonalemind. 15,6 Zoll, Physikalische Auflösung minimal: 1200x780, berührungssensitiv (Touchpanel), für;2,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+310;M-Bus Master zur Erfassung von Verbrauchsdaten über M-;1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+320;Dienstleistungen BACnet/IP-Schnittstellen RLT Anlagen;2,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+330;Mitwirkung bei der Inbetriebnahme und Parametrierung;2,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+340;Dienstleistung zur Vorbereitung der Zählwertübergabe an;3,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+350;Außenfühler Temperatur und Feuchte;1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+360;Einsatzbereich 0 bis 100% r.F., für Aufputzmontage, mit;1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+370;Raumfeuchte-Messwertgeber wie vor, jedoch Farbton weiß;1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+380;Einsatzbereich 0 bis + 40 °C, Wiederholgenauigkeit;5,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+390;Raumtemperatur-Messwertgeber wie vor, jedoch Farbton weiß;6,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+400;Tauchtemperatur-Messwertgeber +10 bis +60 °C in;1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+410;Tauchtemperatur-Messwertgeber -10 bis +120 °C PN16 in;10,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+420;Tauchtemperatur-Messwertgeber wie vor, jedoch Einbaulänge bis 150mm;2,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+430;Tauchtemperatur-Messwertgeber wie vor, jedoch Einbaulänge;4,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+440;Tauchtemperatur-Messwertgeber  -10 bis +120 °C PN16 in;3,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+450;Tauchtemperatur-Messwertgeber niro wie vor, jedoch;6,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+460;Tauchtemperatur-Messwertgeber niro wie vor, jedoch;3,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+470;Einschraubtauchtemperaturwächter Heizwasser;2,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+480;Sicherheitstemperaturbegrenzer mit einpoligem Ausschaltkontakt, verstellbarem Schaltpunkt, mechan. Verriegelung bei STB, zum Einbau in Tauchhülse, Fühler- und Tauchrohrlänge mind.200 mm, Anschlußgehäuse mit PG-Verschraubung, Schutzart IP 54. Technische Daten: Sollwertbereiche:40..95 °C bis 160..180 ;1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+490;Druckwächter Heizwasser als min Drucküberwachung für FW_STation im sekundärkreis, für Rohrleitungseinbau in;1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+500;Luftqualitäts-Messwertgeber, für AP-Montage, für Einzelgaserfassung, Messgröße CO2, Einsatzbereich 0 bis 2000 ppm, relativer Fehler bei 1000 ppm +/- 10 %, Umgebungstemperatur 5 bis 40 Grad C, Umgebungsfeuchte 30 bis 70 % relative Feuchte, Schutzart IP 3X DIN EN 60529 (VDE 0470-1), mit Messsignal pas;2,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+510;Luftqualitäts-Messwertgeber wie vor, jedoch Farbton weiß;4,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+520;Luftqualitäts-Messwertgeber, für Luftleitungseinbau, für Einzelgaserfassung, Messgröße CO2, Einsatzbereich 0 bis 2000 ppm, relativer Fehler bei 1000 ppm +/- 10 %, Umgebungstemperatur 5 bis 40 Grad C, Umgebungsfeuchte 30 bis 70 % relative Feuchte, Schutzart IP 3X DIN EN 60529 (VDE 0470-1), mit Messsi;1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+530;Temperatur-Feuchte-Messwertgeber für Luftleitungen, Einsatzbereich - 30 bis 60 Grad C und 10 bis 100 % relative Feuchte, mit 250 mm langem Messstab und Einbauflansch, Ausführung Ausgänge Feldgerät mit Messsignal passend zum Automationssystem, relativer Fehler max. 1,6 % vom Einsatzbereich.;2,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+540;DiBT Rauchmelder für Lüftungskanäle im Venturi-Prinzip für Lüftungskanäle, mit DiBT-Zulassung, mit Empfindlichkeitsnachführung, im schlagfesten Kunststoffgehäuse mit elektronischer;4,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+550;"Klein-DG-Vent; PN16; DN15; G3/4A; kvs1,0 mit  Kleinventilantrieb; 24V NC Durchgangsregelarmatur mit";3,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+560;"Klein-DG-Vent; wie vor, jedoch kvs3,5";11,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+570;3-Wege-Regelventil, Nennweite DN25, Gehäuse aus Grauguß, mit Gewindeanschlüssen nach DIN und Innengarnitur aus Niro-Stahl, einfach geführter Kegel, einschl. stetigem Stellantrieb, stetige Stellungsrückmeldung als Potentiometer oder Normsignal, im Antrieb bzw. am Ventil montiert, Startpunkt und Arbei;1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+580;3-Wege-Regelventil wie vor, jedoch DN32, kvs4,0;1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+590;3-Wege-Regelventil wie vor, jedoch DN32, kvs16;2,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+600;3-Wege-Regelventil wie vor, jedoch DN40, kvs10;1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+610;3-Wege-Regelventil wie vor, jedoch DN40, kvs25;1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+620;Durchgangsregelventil, Nennweite DN15, Gehäuse aus Grauguß, mit Gewindeanschlüssen nach DIN und;7,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+630;Durchgangsregelventil wie vor, jedoch DN20;2,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+640;Durchgangsregelventil wie vor, jedoch DN25;3,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+650;Durchgangsregelventil wie vor, jedoch DN32;1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+660;Durchgangsregelventil wie vor, jedoch DN40;1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+670;Durchgangsregelventil wie vor, jedoch DN50;1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+680;Wärmemengenzähler, für Heizwasser, Nenndurchfluss Qn 3,5 m3/h, PN 6, Messprinzip Ultraschall, mit digitaler Messwertanzeige am Einbauort, für Wärmemenge, Durchfluss, Vor- und Rücklauftemperaturen und Wärmeleistung, Ausführung Kommunikationsschnittstelle Feldgerät M-Bus Normprotokoll DIN EN 1434-3, e;1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+690;"Reparaturschalter 400 V als AP-Gerät IP54;";4,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+700;"Reparaturschalter wie vor, jedoch 230 V; 16A";8,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+710;Raum-Bediengerät mit integriertem Temp.-Sensor und;6,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+720;Raum-Bedeingerät wie vor, jedoch Farbton weiß;17,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+730;Mitwirkung bei der Inbetriebnahme und Parametrierung;8,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+740;Klappen-BUS-Controller mit Display modular mit;1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+750;Eingabebaustein Controller - Binäre Eingabe BE Melden;1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+760;Meldemodule für Schaltschrankeinbau zur;2,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+770;BSK - Motor -Modul 2 mot. Brandschutzklappen und;49,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+780;BSK - Meldemodul bis zu 6 mech. Brandschutzklappen/;12,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+790;vollständige Projektierung Brandschutzklappen-;1,0;PSCH;gaeb;Leistungsverzeichnis/26O20144.X83
+800;Raumdruckregelsystem als mikroprozessorgesteuertes;1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+810;Luftmengenbilanzierungs-Master;1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+820;Dienstleistungsaufwand Abstimmung/;1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+830;Differenzdrucksensor für gasförmige Medien, zum Messen;1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+840;Werksprüfzeugnis-Kalibrierzertifikat 3-Punkt;1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+850;Referenzdruckbehälter und -verteiler zur Dämpfung;1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+860;Raumdruck Filterelement zur Filterung gefährlicher;2,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+870;Druckmessleitung Edelstahl gereinigt, einschließlich;55,0;m;gaeb;Leistungsverzeichnis/26O20144.X83
+880;Anschlusstück Druckmessleitung als lösbares Verbindungsstück zum Wechsel von Druckmesssensoren, Referenzdruckbehältern und verteilern ohne die kommende/ gehende Druckmessleitung zu beschädigen. Bestehend aus;6,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+890;Bediengerät Raumschießanlage als Bediendisplay zum Einbau in bauseitigen 19 Zoll Schrank, Einbau auf blindblende, Blinblende mit drei Höheneinheiten, inkl. Gravuren und erforderlichem Betriebszubehör.;1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+10;Schrankfeld, als Einzelschrank,;3,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+20;Hutschienen Steckdose nach DIN VDE 0620 für;1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+30;Schaltschrankbelüftung ausgeführt als Axiallüfter zum;1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+40;Lasttrennschalter für Schaltschrankfronteinbau;1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+50;Baugruppe zur Überwachung und Anzeige der;1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+60;Baugruppe zur Überwachung der Phasenqualität;1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+70;Baugruppe zur Signalisierung und Quittierung der;1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+80;Prüfschaltung für alle optischen Anzeigen des ISP;1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+90;Entsperrschaltung für Netzwiederkehrprogramm;1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+100;Potentialausgleich für den gesamten ASP zum Anschluss;1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+110;Überspannungsschutz-Ableiter Typ 2 nach EN 61643-11,;4,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+120;Überspannungsschutz-Ableiter Typ 2 nach EN 61643-11,;2,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+130;Überspannungsschutz-Ableiter Typ 2 nach EN 61643-11,;2,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+140;Überspannungsschutz-Ableiter Typ 3 nach EN 61643-11,;3,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+150;Trenntransformator 400 VAC / 230 VAC;1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+160;Trenntransformator 230 VAC / 230 VAC;2,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+170;Trenntransformator 230 VAC / 24 VAC;2,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+180;Schaltnetzteil 230 VAC / 24 VDC für;4,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+190;Differenzstromüberwachungsgerät Typ B allstromsensitiv;1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+200;Sicherungsabgang als Versorgungsabgang 24 VDC;8,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+210;Sicherungsabgang als Versorgungsabgang 24 VDC;7,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+220;Sicherungsabgang als Versorgungsabgang 24V/ 230 V;8,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+230;Sicherungsabgang als Versorgungsabgang 24V/ 230 V;5,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+240;Sicherungsabgang als Versorgungsabgang 400 V;3,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+250;Sicherungsabgang als Versorgungsabgang 400 V;1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+260;Leistungsbaugruppe 230 V direkt, eine Drehzahl;3,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+270;Leistungsbaugruppe 400 V für;2,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+280;Sicherheitssteuerung Brandfall als verriegelnde;1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+290;Sicherheitssteuerung Brand- und Testfall BSK;2,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+300;Steuerbaugruppe Antriebe 2-Punkt LVB mit Kontakten für;70,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+310;Steuerbaugruppe Antriebe 2-Punkt LVB mit Kontakten für;8,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+320;Steuerbaugruppe Antriebe stufenlos LVB mit Kontakten;25,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+330;Steuerung Temperaturwächter zur Temperaturbegrenzung;3,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+340;Meldegruppe zur Meldungs-Aufnahme von autarken Anlagen;18,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+350;Koppelrelais als Hilfs-, Koppel- und;56,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+360;Koppelrelais;44,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+370;Datenanschlussdose, symmetrisch, Kategorie 7 DIN EN;1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+380;Montageleistung Automationseinrichtung mit Netzteil und;1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+390;Montageleistung Ethernet Switch mit bis zu 4 Ports;2,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+400;Montageleistung Bedienpanel, touchfähig;1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+410;Schrankfeld, als Einzelschrank,;4,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+420;Hutschienen Steckdose nach DIN VDE 0620 für;1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+430;Schaltschrankbelüftung ausgeführt als Axiallüfter zum;1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+440;Lasttrennschalter für Schaltschrankfronteinbau;1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+450;Baugruppe zur Überwachung und Anzeige der;1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+460;Baugruppe zur Überwachung der Phasenqualität;1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+470;Baugruppe zur Signalisierung und Quittierung der;1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+480;Prüfschaltung für alle optischen Anzeigen des ISP;1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+490;Entsperrschaltung für Netzwiederkehrprogramm;1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+500;Potentialausgleich für den gesamten ASP zum Anschluss;1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+510;Überspannungsschutz-Ableiter Typ 2 nach EN 61643-11,;3,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+520;Überspannungsschutz-Ableiter Typ 2 nach EN 61643-11,;2,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+530;Überspannungsschutz-Ableiter Typ 2 nach EN 61643-11,;1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+540;Überspannungsschutz-Ableiter Typ 3 nach EN 61643-11,;2,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+550;Trenntransformator 400 VAC / 230 VAC;1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+560;Trenntransformator 230 VAC / 230 VAC;1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+570;Trenntransformator 230 VAC / 24 VAC;1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+580;Schaltnetzteil 230 VAC / 24 VDC für;3,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+590;Differenzstromüberwachungsgerät Typ B allstromsensitiv;1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+600;Sicherungsabgang als Versorgungsabgang 24 VDC;12,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+610;Sicherungsabgang als Versorgungsabgang 24 VDC;6,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+620;Sicherungsabgang als Versorgungsabgang 24V/ 230 V;2,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+630;Sicherungsabgang als Versorgungsabgang 24V/ 230 V;5,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+640;Sicherungsabgang als Versorgungsabgang 400 V;1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+650;Sicherungsabgang als Versorgungsabgang 400 V;2,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+660;Thyristor-Leistungssteller 1-phasig;1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+670;Leistungsbaugruppe 230 V direkt, eine Drehzahl;7,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+680;Steuerbaugruppe Antriebe 2-Punkt LVB mit Kontakten für;23,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+690;Steuerbaugruppe Antriebe 2-Punkt LVB mit Kontakten für;8,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+700;Steuerbaugruppe Antriebe stufenlos LVB mit Kontakten;22,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+710;Steuerung Temperaturwächter zur Temperaturbegrenzung;1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+720;Meldegruppe zur Meldungs-Aufnahme von autarken Anlagen;8,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+730;Koppelrelais als Hilfs-, Koppel- und;72,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+740;Koppelrelais;58,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+750;Datenanschlussdose, symmetrisch, Kategorie 7 DIN EN;2,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+760;Spleißbox für Glasfaserverbindung mindestens 8;1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+770;Montage und Verdrahtung des Pegelwandler's;1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+780;Montageleistung Automationseinrichtung mit Netzteil und;1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+790;Montageleistung Ethernet Switch mit bis zu 4 Ports;1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+800;Montageleistung Bedienpanel, touchfähig;1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+810;Aufputz-Gehäuse als Rangier-/Klemmverteiler, 12;1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+820;Netzwerkschrank;1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+830;Server SAS, RAID5, 5x 900GB, 8x 16GBRack-Server;1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+840;"17,3"" LCD-Konsole,1HE f. Netzwerkschrank LCD Panel";1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+850;"19""Gigabit Switch, 24 Port, 8SFP Combo P";1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+860;Gigabit Ethernet Switch unmanaged;2,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+870;Fast Ethernet Switch 4TX/1 FX SC Singlemode;1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+880;RJ-45 Modul Hutschiene, symmetrisch, Kategorie 7 DIN EN;4,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+890;RJ-45 Modul Wandmontage IP44, symmetrisch, Kategorie 7;2,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+10;Installationsleitung DIN VDE 0250-204 (VDE 0250-204) NYM-J 3 x 1,5, Cu-Zahl 43.;4950,0;m;gaeb;Leistungsverzeichnis/26O20144.X83
+20;Installationsleitung DIN VDE 0250-204 (VDE 0250-204) NYM-J 3 x 2,5, Cu-Zahl 72.;3795,0;m;gaeb;Leistungsverzeichnis/26O20144.X83
+30;Installationsleitung DIN VDE 0250-204 (VDE 0250-204) NYM-J 5 x 2,5, Cu-Zahl 120.;1850,0;m;gaeb;Leistungsverzeichnis/26O20144.X83
+40;Installationsleitung DIN VDE 0250-204 (VDE 0250-204) NYM-J 5 x 4, Cu-Zahl 192.;910,0;m;gaeb;Leistungsverzeichnis/26O20144.X83
+50;Installationskabel, symmetrisch, DIN VDE 0815 (VDE 0815), J-Y(St)Y, 2 x 2 x 0,8 Bd.;7470,0;m;gaeb;Leistungsverzeichnis/26O20144.X83
+60;Installationskabel, symmetrisch, DIN VDE 0815 (VDE 0815), J-Y(St)Y, 4 x 2 x 0,8 Bd.;5630,0;m;gaeb;Leistungsverzeichnis/26O20144.X83
+70;geschirmte Steuerleitung   HSLCH-OZ 2 x 0,75 mm²,;930,0;m;gaeb;Leistungsverzeichnis/26O20144.X83
+80;wie vor, jedoch geschirmte Steuerleitung HSLCH-OZ 2 x 1,0 mm²;640,0;m;gaeb;Leistungsverzeichnis/26O20144.X83
+90;wie vor, jedoch geschirmte Steuerleitung HSLCH-OZ 4 x 1,0 mm²;1060,0;m;gaeb;Leistungsverzeichnis/26O20144.X83
+100;wie vor, jedoch geschirmte Steuerleitung HSLCH-OZ 7 x 1,0 mm²;390,0;m;gaeb;Leistungsverzeichnis/26O20144.X83
+110;wie vor, jedoch geschirmte Steuerleitung HSLCH-OZ 10 x 1,0 mm²;70,0;m;gaeb;Leistungsverzeichnis/26O20144.X83
+120;geschirmte Steuerleitung HSLH-JB 5 x 1,5 mm²,;170,0;m;gaeb;Leistungsverzeichnis/26O20144.X83
+130;geschirmte Steuerleitung LiHCH TP 2x2x0,75 mm²,;515,0;m;gaeb;Leistungsverzeichnis/26O20144.X83
+140;Kunststoffaderleitung DIN VDE 0276-604 N2XH-O 1 x 6,;65,0;m;gaeb;Leistungsverzeichnis/26O20144.X83
+150;Installationskabel, symmetrisch, anschließen je Ende, an Klemme, in Schraubtechnik, einschl. Verbindungsmittell, 2x2x0,8;76,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+160;wie vor, jedoch 4x2x0,8;12,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+170;wie vor, jedoch für Steuerleitung DIN EN 50525-2-51 (VDE 0285-525-2-51) bis 2 G 1,0;162,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+180;wie vor, jedoch für Steuerleitung DIN EN 50525-2-51 (VDE 0285-525-2-51) bis 7 G 1,0;39,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+190;wie vor, jedoch für Steuerleitung DIN EN 50525-2-51 (VDE 0285-525-2-51) bis 10 G 1,0;8,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+200;wie vor, jedoch 3x1,5;221,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+210;wie vor, jedoch 3x2,5;16,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+220;wie vor, jedoch 5x1,5;32,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+230;wie vor, jedoch 5x2,5;14,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+240;wie vor, jedoch 5x4;6,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+250;wie vor, jedoch 1x6;8,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+260;Datenkabel für den Horizontal- und Steigbereich DIN EN;240,0;m;gaeb;Leistungsverzeichnis/26O20144.X83
+270;Patchkabel, CAT7, 1 m, Ethernet-Patchkabel CAT 7, S-FTP,;4,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+280;Patchkabel, CAT7, wie vor, jedoch Länge 2m;3,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+290;Patchkabel, CAT7, wie vor, jedoch Länge 3m;1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+300;Datenkabel auflegen/anklemmen;6,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+310;4 Fasern (Duplex) 50µm, als LWL - Universalkabel zum;160,0;m;gaeb;Leistungsverzeichnis/26O20144.X83
+320;LWL Verbindungs-Spleissbox für Consolidation;2,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+330;als Lichtbogenspleiß für Innenkabel 1x4 Singlemode 50/125 LWL-Kabel auflegen und ausreichend Zugentlasten, Anschluß aller Fasern eines Kabelendes als Lichtbogenspleiß für Innenoder Universalkabel 1 x 4 G 50/125 in in anderen Positionen beschriebene Spleißkassette an Pigtail,;2,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+340;Transmissionsmessung für ein LWL Kabel 4Fasern;1,0;PSCH;gaeb;Leistungsverzeichnis/26O20144.X83
+350;Gerätedose DIN VDE 0606 als Unterputzdose DIN 49073 für;5,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+360;Gerätedose DIN VDE 0606 als Unterputzdose DIN 49073 für;18,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+370;Verbindungsdose DIN EN 60670-1 (VDE 0606-1) als;132,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+380;Verbindungsdose DIN EN 60670-1 (VDE 0606-1) als;25,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+390;Bezeichnungsschild für Kabel/Leitungen, Farbe und;619,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+400;Bezeichnungsschild, ALU-Kunststofffolie, Farbe und;294,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+410;Bezeichnungsschild, Farbe und Beschriftung nach Angaben;3,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+420;Installationsrohr DIN EN 61386 (VDE 0605) PVC starr;40,0;m;gaeb;Leistungsverzeichnis/26O20144.X83
+430;wie vor, jedoch 25mm;75,0;m;gaeb;Leistungsverzeichnis/26O20144.X83
+440;wie vor, jedoch 32mm;40,0;m;gaeb;Leistungsverzeichnis/26O20144.X83
+450;wie vor, jedoch 40mm;25,0;m;gaeb;Leistungsverzeichnis/26O20144.X83
+460;Elektroinstallationskanal DIN EN 50085-2-1 (VDE 0604-2-;30,0;m;gaeb;Leistungsverzeichnis/26O20144.X83
+470;wie vor, jedoch  Außenmaße H/B mind. 40/57 mm;40,0;m;gaeb;Leistungsverzeichnis/26O20144.X83
+480;Gitterrinne Breite 100 mm U-förmig, aus galvanisch;20,0;m;gaeb;Leistungsverzeichnis/26O20144.X83
+490;Gitterrinne wie vor, jedoch Breite mind. 200 mm.;10,0;m;gaeb;Leistungsverzeichnis/26O20144.X83
+500;Kabelrinne für Kabelträgersystem DIN EN 61537 (VDE;18,0;m;gaeb;Leistungsverzeichnis/26O20144.X83
+510;Kabelrinne wie vor, jedoch Breite mind. 200 mm.;12,0;m;gaeb;Leistungsverzeichnis/26O20144.X83
+520;Kabelrinne wie vor, jedoch Breite mind. 300 mm.;6,0;m;gaeb;Leistungsverzeichnis/26O20144.X83
+530;Kabelrinne wie vor, jedoch Breite mind. 400 mm.;3,0;m;gaeb;Leistungsverzeichnis/26O20144.X83
+540;Weitspannkabelrinne für Kabeltrgersysteme DIN EN 61537;12,0;m;gaeb;Leistungsverzeichnis/26O20144.X83
+550;Bogen, für Kabelrinne, 90 Grad, waagerecht, aus;3,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+560;Bogen wie vor, jedoch Breite mind. 200 mm.;6,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+570;Bogen wie vor, jedoch Breite mind. 400 mm.;1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+580;T-Abzweig, für Kabelrinne, aus bandverzinktem Stahl;2,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+590;T-Abzweig wie vor, jedoch Breite mind. 200 mm.;1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+600;T-Abzweig wie vor, jedoch Breite mind. 400 mm.;1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+610;Reduzierstück, für Kabelrinne, aus bandverzinktem;1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+620;wie vor, jedoch Breite mind. 400 mm.;2,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+630;Stiel für Ausleger aus bandverzinktem Stahl DIN EN ISO;4,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+640;Stiel für Ausleger wie vor, jedoch Stiellänge bis;2,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+650;Ausleger aus bandverzinktem Stahl DIN EN ISO 1461,;2,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+660;Ausleger aus bandverzinktem Stahl DIN EN ISO 1461,;3,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+670;Ausleger aus bandverzinktem Stahl DIN EN ISO 1461,;2,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+680;Ausleger aus bandverzinktem Stahl DIN EN ISO 1461,;4,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+690;Ausleger aus bandverzinktem Stahl DIN EN ISO 1461,;4,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+700;Ausleger aus bandverzinktem Stahl DIN EN ISO 1461,;6,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+710;Potentialausgleichsschiene aus Messing, als;2,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+720;Erdungsbandrohrschelle aus nichtrostendem Stahl, mit;7,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+730;Erdungsbandrohrschelle aus nichtrostendem Stahl, mit;3,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+740;Sammelhalterung für Verwendung mit Verkabelung ohne;35,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+750;Sammelhalterung wie vor, jedoch für 30 Kabel;45,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+760;C-Profilschiene 50 x 25 verzahnt, abrutschsicher;40,0;m;gaeb;Leistungsverzeichnis/26O20144.X83
+770;Bügelschelle 8-12 mm;100,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+780;Bügelschelle wie vor, jedoch 16-22 mm;100,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+790;Bügelschelle wie vor, jedoch 28-34 mm;150,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+800;Bügelschelle wie vor, jedoch 40-46 mm;150,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+810;Bügelschelle wie vor, jedoch 52-58 mm;80,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+820;Kunststoffverschraubung mit Dichtung Ausführung M16 bis;33,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+830;Aluminium-Panzer-Rohr DN 20;85,0;m;gaeb;Leistungsverzeichnis/26O20144.X83
+840;Aluminium-Panzer-Rohr wie vor, jedoch DN 32;50,0;m;gaeb;Leistungsverzeichnis/26O20144.X83
+850;Aluminium-Panzer-Rohr wie vor, jedoch DN 50;30,0;m;gaeb;Leistungsverzeichnis/26O20144.X83
+860;Elektroinstallationsrohr DIN EN 61386 (VDE 0605), Maße DIN EN 60423, aus verzinktem Stahl, Außendurchmesser 25 mm, Druckfestigkeit Klasse 1 - sehr leicht (125 N) DIN EN 61386-1 (VDE 0605-1), Klasse Schlagbeanspruchung 3 - mittel DIN EN 61386-1 (VDE 0605-1), max. Gebrauchstemperatur Klasse 1 (60 Grad;60,0;m;gaeb;Leistungsverzeichnis/26O20144.X83
+870;Elektroinstallationsrohr wie vor, jedoch Außendurchmesser 32mm;30,0;m;gaeb;Leistungsverzeichnis/26O20144.X83
+880;Elektroinstallationsrohr wie vor, jedoch Außendurchmesser 50mm;15,0;m;gaeb;Leistungsverzeichnis/26O20144.X83
+890;Elektroinstallationsrohr wie vor, jedoch Außendurchmesser 25mm, Ausführung im Farbton schwarz;60,0;m;gaeb;Leistungsverzeichnis/26O20144.X83
+900;Elektroinstallationsrohr wie vor, jedoch Außendurchmesser 32mm, Ausführung im Farbton schwarz;30,0;m;gaeb;Leistungsverzeichnis/26O20144.X83
+910;Elektroinstallationsrohr wie vor, jedoch Außendurchmesser 50mm, Ausführung im Farbton schwarz;15,0;m;gaeb;Leistungsverzeichnis/26O20144.X83
+920;Elektroinstallationsrohr wie vor, jedoch Außendurchmesser 25mm, Ausführung im Farbton weiß;80,0;m;gaeb;Leistungsverzeichnis/26O20144.X83
+930;Elektroinstallationsrohr wie vor, jedoch Außendurchmesser 32mm, Ausführung im Farbton weiß;40,0;m;gaeb;Leistungsverzeichnis/26O20144.X83
+940;Elektroinstallationsrohr wie vor, jedoch Außendurchmesser 50mm, Ausführung im Farbton weiß;20,0;m;gaeb;Leistungsverzeichnis/26O20144.X83
+950;Bogen, 90Grad passend zu vor beschriebenen Elektroinstallationsrohr, AD 25mm;15,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+960;Bogen, 90Grad passend zu vor beschriebenen Elektroinstallationsrohr, AD 32mm;10,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+970;Bogen, 90Grad passend zu vor beschriebenen Elektroinstallationsrohr, AD 50mm;5,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+980;Bogen, 90Grad passend zu vor beschriebenen Elektroinstallationsrohr, AD 25mm, Farbton schwarz;15,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+990;Bogen, 90Grad passend zu vor beschriebenen Elektroinstallationsrohr, AD 32mm, Farbton schwarz;10,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+1000;Bogen, 90Grad passend zu vor beschriebenen Elektroinstallationsrohr, AD 50mm, Farbton schwarz;5,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+1010;Bogen, 90Grad passend zu vor beschriebenen Elektroinstallationsrohr, AD 25mm, Farbton weiß;20,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+1020;Bogen, 90Grad passend zu vor beschriebenen Elektroinstallationsrohr, AD 32mm, Farbton weiß;15,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+1030;Bogen, 90Grad passend zu vor beschriebenen Elektroinstallationsrohr, AD 50mm, Farbton weiß;5,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+10;Managementfunktion, Kommunikation Ein-/Ausgabefunktion;1368,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+20;Managementfunktion, Kommunikation Block/Datei gemäß;404,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+30;Managementfunktion, Ereignis-Langzeitspeicherung gemäß;53,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+40;Managementfunktion, Historisierung in Datenbank gemäß;118,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+50;Bedienfunktion, Grafik/Anlagenbild zur Darstellung von;4,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+60;Bedienfunktion, Grafik/Anlagenbild gemäß Funktion 8.1;61,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+70;Bedienfunktion, Dynamische Einblendung gemäß Funktion;1368,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+80;Bedienfunktion, Ereignis-Anweisungstext gemäß Funktion;145,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+90;Bedienfunktion, Nachricht an externer Stelle;5,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+100;Inbetriebnahme und 1:1-Datenpunkttest;1011,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+110;Mehraufwand für Integration von Modbus-Geräten in das;2,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+120;Mehraufwand für Integration von M-Bus-Geräten in das;4,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+130;Mehraufwand Anwendung Kennzeichnungsschlüssel;1,0;PSCH;gaeb;Leistungsverzeichnis/26O20144.X83
+10;Werkstattcontainer, aufstellen und räumen, Stahl, mit Fußboden aus PVC, Einzelcontainer-Länge max. 6 m, Einzelcontainer-Breite bis max. 2,5 m, Standplatz auf vorh. tragfähigen ebenen Untergrund.;1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+20;Werkstattcontainer, vorhalten,;60,0;Wo;gaeb;Leistungsverzeichnis/26O20144.X83
+30;Einmaliges Umsetzen des Werkstattcontainers während der Bauzeit;1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+40;Hubarbeitsbühne für Arbeiten;1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+50;Diese Position umfasst nur diejenigen Leistungen, die über die Nebenleistungen nach VOB hinausgehen.;1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+60;Übergabedokumentation gemäß Vorgaben AG;1,0;PSCH;gaeb;Leistungsverzeichnis/26O20144.X83
+70;Baubegleitende Prüfung und Dokumentation der;1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+80;Provisorischer Betrieb der Gebäudeautomation vor der Abnahme/Übergabe an den AG, mit provisorischen Programmen/Parametern, einschl. der erforderlichen Instandhaltungsarbeiten. Probebetrieb mit Baustrom.;1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+90;Beistellen von Personal für die Sachverständigenabnahme der Gebäude- und Anlagenautomation, Vergütung des Sachverständigen durch gesonderten Vertrag. Zeitaufwand max. acht Stunden.;1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+100;Das Bedienpersonal ist in die Regelung und Steuerung der vor;2,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+110;"Baustellenbegleitende Abstimmung mit Fremdgewerk (Sanitärtechnik, Heizungs-/Kältetechnik, Raumlufttechnik) über die Koordinationspflicht nach VOB hinausgehend. Koordination zu besonderen Themen (z.B. Übergabe Datenblätter; Einstellen und parametrieren von Feldgeräten).";1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+120;Koordination M-Bus;1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+130;Nachregulierung zur Inbetriebnahme, einschl.;1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+140;Verschließen und Kennzeichnung von installierten Wand-;30,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+150;Verschließen und Kennzeichnung wie vor, jedoch Wand-;22,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+160;Verschließen und Kennzeichnung wie vor, jedoch Wand-;10,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+170;Anzeichnen von Wand- und Deckendurchbrüchen bei Herstellung durch Fremdgewerk.;13,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+180;Kernbohrung in Mauerwerk, waagerecht, Bohrdurchmesser;6,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+190;Kernbohrung in Mauerwerk, waagerecht, Bohrdurchmesser;20,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+200;Kernbohrung in Stahlbeton , waagerecht, Bohrdurchmesser;5,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+210;Stemm-, Bohr- und Fräsarbeiten für die Befestigung von Konsolen und Halterungen. Arbeiten im Gebäude, Behinderung durch technische Einbauten, Höhe bis 3,50m üOKFF.;1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+220;Verschluss von umlaufenden Spaltöffnungen in Mauerwerk bzw. Trockenbauwänden, Schottgröße bis 0,05m².;12,0;St;gaeb;Leistungsverzeichnis/26O20144.X83
+230;Profistahlkonstruktion als Stütz-, Hänge- und Tragkonstruktion, im Gebäude, Höhe bis 3,50m üOKFF.;100,0;kg;gaeb;Leistungsverzeichnis/26O20144.X83
+240;Die gesamten vor beschriebenen technischen Anlagen sind;1,0;St;gaeb;Leistungsverzeichnis/26O20144.X83

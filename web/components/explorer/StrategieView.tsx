@@ -114,7 +114,7 @@ function Q({ q, suffix = "" }: { q: Quote; suffix?: string }) {
   return <span className="v-num">{q.pct} %{suffix}</span>;
 }
 
-const SEKTIONEN = [
+export const SEKTIONEN = [
   { group: "Markt", items: [
     { key: "pipeline", label: "Pipeline", frage: "Was kommt in 12/24/36 Monaten?" },
     { key: "felder", label: "Felder", frage: "Wo ist Platz, wo ist es eng?" },
@@ -823,13 +823,20 @@ function NochNicht({ label, frage }: { label: string; frage: string }) {
 
 export function StrategieView({
   aktiveBranche, potTab, profilStufe, offenerPicker, accountLimit, tick, onBodyAction,
+  aktiveSektion,
 }: {
   aktiveBranche: string; potTab: string; profilStufe: string; offenerPicker: string | null;
+  /** Der gewaehlte Abschnitt — gefuehrt von der Shell, weil die Navigation in der
+   *  Bereichsleiste steht und damit ausserhalb dieser Komponente. */
+  aktiveSektion: string;
   accountLimit: boolean; tick: number;
   onBodyAction: (action: string, value: string, el: HTMLElement) => void;
 }) {
   const { t } = useSprache();
-  const [sektion, setSektion] = useState("pipeline");
+  // Der Abschnitt wird von der Shell gefuehrt, weil die Navigation in der Bereichsleiste
+  // steht — also AUSSERHALB dieser Komponente. Ihn hier zu halten und nach oben zu melden
+  // waere zwei Quellen fuer denselben Wert.
+  const sektion = aktiveSektion;
   const [strat, setStrat] = useState<Record<string, Strat> | null>(null);
   const [offeneStelle, setOffeneStelle] = useState<Stelle | null>(null);
 
@@ -858,19 +865,9 @@ export function StrategieView({
 
   return (
     <div className="stwrap">
-      <nav className="stnav" aria-label={t("Strategie-Abschnitte")}>
-        {SEKTIONEN.map((g) => (
-          <div key={g.group} className="stnav-g">
-            <span className="stnav-gt">{t(g.group)}</span>
-            {g.items.map((i) => (
-              <button key={i.key} className={`stnav-i ${sektion === i.key ? "on" : ""}`}
-                onClick={() => { setSektion(i.key); setOffeneStelle(null); }}>
-                {t(i.label)}
-              </button>
-            ))}
-          </div>
-        ))}
-      </nav>
+      {/* Die Abschnittsnavigation stand hier als zweite Spalte links — neben der Rail,
+          also eine Leiste neben der Leiste, und in einer Bauform, die kein anderer Bereich
+          benutzte. Sie liegt jetzt in der Bereichsleiste (s. ExplorerShell). */}
 
       <div className="stmain">
         {sektion === "pipeline"

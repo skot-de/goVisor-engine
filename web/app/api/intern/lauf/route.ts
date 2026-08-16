@@ -39,6 +39,8 @@ type Lauf = {
   fehlerZeilen: string[];
   letzterSchritt: string | null;
   schrittListe: { zeit: string; name: string }[];
+  /** Dauer je ABGESCHLOSSENEM Schritt dieses Laufs (aus den `⏱`-Zeilen). */
+  schrittDauern: Record<string, number>;
   logZeilen: string[];
 };
 
@@ -59,10 +61,18 @@ function zaehleArchive(wurzel: string): number {
 
 function letzteLogdatei(): string | null {
   let dateien: string[];
-  try { dateien = fs.readdirSync(LOGS).filter((f) => /^daily-\d{4}-\d{2}-\d{2}\.log$/.test(f)); }
-  catch { return null; }
+  // Zwei Namensformen: `daily-2026-08-16.log` (alt, ein Lauf je TAG) und
+  // `daily-2026-08-16-2200.log` (neu, ein Lauf je START). Beide muessen gelesen werden —
+  // die Historie soll nicht verschwinden, nur weil das Schema sich geaendert hat.
+  try {
+    dateien = fs.readdirSync(LOGS)
+      .filter((f) => /^daily-\d{4}-\d{2}-\d{2}(-\d{4})?\.log$/.test(f));
+  } catch { return null; }
   if (!dateien.length) return null;
-  dateien.sort();                       // Dateiname ist ISO-Datum → sortiert chronologisch
+  // Alphabetisch sortiert stimmt die Reihenfolge fuer BEIDE Formen: `…-16.log` kommt vor
+  // `…-16-0900.log`, und innerhalb eines Tages sortiert die Uhrzeit korrekt. Die Altform
+  // landet damit VOR den Laeufen desselben Tages — richtig, sie ist die aeltere.
+  dateien.sort();
   return dateien[dateien.length - 1];
 }
 
@@ -71,13 +81,27 @@ function leseLauf(): Lauf {
   if (!datei) {
     return { datum: null, ergebnis: "keiner", dauerSek: null, endeUm: null,
              alterStunden: null, fehlerZeilen: [], letzterSchritt: null,
-             schrittListe: [], logZeilen: [] };
+             schrittListe: [], schrittDauern: {}, logZeilen: [] };
   }
   const voll = path.join(LOGS, datei);
   const datum = datei.slice(6, 16);
   let text = "";
   try { text = fs.readFileSync(voll, "utf8"); } catch { /* leer behandeln */ }
-  const zeilen = text.split("\n");
+  const alleZeilen = text.split("\n");
+
+  // NUR DER LETZTE LAUF. Bis 2026-08-16 hiess die Logdatei nur `daily-<datum>.log` —
+  // zwei Laeufe am selben Tag landeten also hintereinander in DERSELBEN Datei. Das
+  // Dashboard las beide als einen: es fand das Ende des ERSTEN und meldete
+  // „durchgelaufen", waehrend der zweite noch arbeitete.
+  //
+  // Der Dateiname traegt jetzt die Startzeit, das Problem entsteht also nicht neu. Dieser
+  // Schnitt bleibt trotzdem: die Altbestaende sind noch da, und ein Anzeigefehler, der
+  // „laeuft" als „fertig" ausgibt, ist genau der, den man nicht bemerkt.
+  const startZeilen: number[] = [];
+  alleZeilen.forEach((z, i) => { if (z.startsWith("goVisor Tageslauf  ")) startZeilen.push(i); });
+  const zeilen = startZeilen.length > 1
+    ? alleZeilen.slice(startZeilen[startZeilen.length - 1])
+    : alleZeilen;
 
   // Der Lauf meldet sein Ende selbst. Fehlt die Zeile, ist er abgebrochen — das ist der
   // Fall, den man am dringendsten sehen will und der sich sonst als „alles ruhig" tarnt.
@@ -94,6 +118,14 @@ function leseLauf(): Lauf {
 
   const schritte = zeilen.filter((z) => /^▶ \d{2}:\d{2}:\d{2}/.test(z));
   const letzterSchritt = schritte.length ? schritte[schritte.length - 1].replace(/^▶ \S+\s+/, "") : null;
+  // Dauern des LAUFENDEN Laufs. Der Schritt schreibt seine Dauer erst, wenn der naechste
+  // beginnt — der aktuelle steht deshalb nie hier drin, und genau das ist richtig: seine
+  // Dauer laeuft ja noch.
+  const schrittDauern: Record<string, number> = {};
+  for (const z of zeilen) {
+    const dm = z.match(/^  ⏱ (.+?) — (\d+)s$/);
+    if (dm) schrittDauern[dm[1].trim()] = Number(dm[2]);
+  }
   const schrittListe = schritte.map((z) => {
     const m = z.match(/^▶ (\d{2}:\d{2}:\d{2})\s+(.*)$/);
     return { zeit: m ? m[1] : "", name: m ? m[2].trim() : z.trim() };
@@ -113,7 +145,7 @@ function leseLauf(): Lauf {
     alterStunden: stand ? Math.round((Date.now() - stand.mtimeMs) / 36e5 * 10) / 10 : null,
     fehlerZeilen,
     letzterSchritt,
-    schrittListe,
+    schrittListe, schrittDauern,
     // Die letzten Zeilen roh — beim Zusehen will man wissen, WAS gerade passiert, nicht nur
     // welcher Schritt laeuft. Ein Schritt kann 40 Minuten dauern.
     logZeilen: zeilen.filter(Boolean).slice(-60).map((z) => z.replace(/\s+$/, "")),
@@ -131,10 +163,13 @@ function leseLauf(): Lauf {
  * liegen, wenn sich der Umfang aendert (heute sind die neuen Quellen dazugekommen) — darum
  * wird er nach oben nachgezogen, statt bei 100 % zu kleben.
  */
-function massstab(ausser: string | null): { schritte: number; dauerSek: number } | null {
+function massstab(ausser: string | null):
+    { schritte: number; dauerSek: number; namen: string[]; dauern: Record<string, number> } | null {
   let dateien: string[];
-  try { dateien = fs.readdirSync(LOGS).filter((f) => /^daily-\d{4}-\d{2}-\d{2}\.log$/.test(f)); }
-  catch { return null; }
+  try {
+    dateien = fs.readdirSync(LOGS)
+      .filter((f) => /^daily-\d{4}-\d{2}-\d{2}(-\d{4})?\.log$/.test(f));
+  } catch { return null; }
   dateien.sort().reverse();
   for (const f of dateien) {
     if (ausser && f === ausser) continue;
@@ -143,8 +178,19 @@ function massstab(ausser: string | null): { schritte: number; dauerSek: number }
     const ende = t.split("\n").reverse().find((z) => z.includes("Tageslauf fertig in"));
     if (!ende) continue;                       // unvollstaendig → taugt nicht als Massstab
     const m = ende.match(/fertig in (\d+)s/);
-    const n = (t.match(/^▶ \d{2}:\d{2}:\d{2}/gm) || []).length;
-    if (n > 0) return { schritte: n, dauerSek: m ? Number(m[1]) : 0 };
+    const namen = (t.match(/^▶ \d{2}:\d{2}:\d{2}  (.+)$/gm) || [])
+      .map((z) => z.replace(/^▶ \d{2}:\d{2}:\d{2}  /, "").trim());
+    // Dauer je Schritt aus dem Vergleichslauf — daraus wird die Restzeit je Schritt
+    // geschaetzt statt einer einzigen Gesamtzahl. „Noch 3 h" hilft niemandem, „subreport
+    // dauert normal 88 min" schon.
+    const dauern: Record<string, number> = {};
+    for (const z of t.split("\n")) {
+      const dm = z.match(/^  ⏱ (.+?) — (\d+)s$/);
+      if (dm) dauern[dm[1].trim()] = Number(dm[2]);
+    }
+    if (namen.length > 0) {
+      return { schritte: namen.length, dauerSek: m ? Number(m[1]) : 0, namen, dauern };
+    }
   }
   return null;
 }
@@ -208,8 +254,60 @@ export async function GET() {
     ? Math.max(0, Math.round(mass.dauerSek * (1 - anteil)))
     : null;
 
+  // ── ERTRAGSBERICHT ──────────────────────────────────────────────────────────────────
+  // Vom Tageslauf geschrieben (`govisor/ertrag.py`). Er wird hier nur DURCHGEREICHT, nicht
+  // nachgerechnet: die Zahlen stammen aus DuckDB ueber Parquet, das kann eine Route nicht
+  // — und zwei Rechenwege fuer dieselbe Kennzahl waeren zwei Wahrheiten.
+  //
+  // Fehlt die Datei, fehlt die Kachel. Ein Dashboard, das bei fehlender Nebengroesse
+  // komplett ausfaellt, wird beim ersten Mal geschlossen.
+  let ertrag: Record<string, unknown> | null = null;
+  try {
+    ertrag = JSON.parse(fs.readFileSync(path.join(LOGS, "ertrag.json"), "utf8"));
+  } catch {
+    ertrag = null;
+  }
+
+  // ── SCHRITTLISTE: wo genau steht der Lauf? ──────────────────────────────────────────
+  // Ein Balken sagt „64 von 64" und damit fast nichts. Was man wissen will, ist WELCHER
+  // Schritt gerade laeuft, wie lange er schon braucht und was noch kommt.
+  //
+  // Die erledigten Schritte stehen im eigenen Log, die noch kommenden nur im Massstab —
+  // deshalb werden beide Listen zusammengefuehrt. Fehlt der Massstab, zeigt die Liste
+  // ehrlich nur das Erledigte statt eine erfundene Zukunft.
+  // Schrittnamen tragen VERAENDERLICHE Teile in Klammern: die Portalliste von NetServer
+  // waechst, und „Gold-Rebuild (Leads mit Stichtag 2026-08-14)" enthaelt das Datum. Ein
+  // Vergleich auf den vollen Namen findet deshalb nie eine Uebereinstimmung — im Browser
+  // gesehen: bereits gelaufene Schritte standen als „offen" in der Liste.
+  //
+  // Verglichen wird deshalb der Teil VOR der ersten Klammer. Der ist im Skript fest.
+  const kern = (n: string) => n.split(" (")[0].trim();
+  const gemacht = new Set(lauf.schrittListe.map((x) => kern(x.name)));
+  const dauern = mass?.dauern ?? {};
+  const schritte: { name: string; zeit: string | null; dauerSek: number | null;
+                    normalSek: number | null; zustand: "fertig" | "laeuft" | "offen" }[] = [];
+  lauf.schrittListe.forEach((x, i) => {
+    const laeuft = i === lauf.schrittListe.length - 1 && lauf.ergebnis === "laeuft";
+    schritte.push({
+      name: x.name, zeit: x.zeit,
+      dauerSek: lauf.schrittDauern?.[x.name] ?? null,
+      normalSek: dauern[x.name] ?? null,
+      zustand: laeuft ? "laeuft" : "fertig",
+    });
+  });
+  // Was der Massstab kennt und dieser Lauf noch nicht angefasst hat. Reihenfolge wie im
+  // Vergleichslauf — sie ist im Skript fest, also belastbar.
+  for (const n of mass?.namen ?? []) {
+    if (!gemacht.has(kern(n))) {
+      schritte.push({ name: n, zeit: null, dauerSek: null,
+                      normalSek: dauern[n] ?? null, zustand: "offen" });
+    }
+  }
+
   return NextResponse.json({
     erzeugt: new Date().toISOString(),
+    ertrag,
+    schritte,
     lauf,
     fortschritt: { fertig, erwartet, anteil, verbleibendSek,
                    massstabAus: mass ? "letzter vollstaendiger Lauf" : null },

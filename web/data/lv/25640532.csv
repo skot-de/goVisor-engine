@@ -1,0 +1,171 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+1;Photovoltaikmodul, Nennleistung bis 0,5 kWp, aus monokristallinen Zellen, Schutzklasse II.;240,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+2;Bodenschiene 2280 mm;150,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+3;Endstück Bodenschiene 61 mm;146,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+4;Bodenschienenverbinder;77,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+5;Fußplatte Kies zur Positionierung und Lastverteilung der Bodenschienen auf unebenem Untergrund;450,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+6;Querstrebe Module;100,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+7;Querstrebenverbinder Module;30,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+8;Ballaststein 40 x 40 x 4 cm;870,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+9;Untere Aufnahme Module;300,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+10;Obere Aufnahme Module;300,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+11;Seitenblech rechts;60,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+12;Seitenblech links;60,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+13;Modulhalter schwarz eloxiert;480,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+14;Endhalter schwarz eloxiert;480,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+15;Schraube Edelstahl M8 x 16;700,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+16;Schraube Edelstahl M8 x 30;300,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+17;Kantenclips zur Befestigung von Kabeln, Drähten und Rohren an Kunststoff- und Metallprofilen.;300,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+18;Kabelkanal Deckel 600 mm;35,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+19;Kabelkanal Deckel 280 mm;20,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+20;Solar-Wechselrichter 50 kW;2,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+21;Dachaufständerungssystem zur freistehenden sicheren Aufstellung eines Wechselrichters auf Flachdach mittels Ballastierung;2,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+22;Verteilerkasten zum Einbau von Komponenten zur Anlagensteuerung der Photovoltaikanlage. Montage im Innenraum;1,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+23;Energiemanager zur Überwachung, Steuerung sowie netzkonformer Leistungsregelung in dezentralen Solaranlagen in Verbindung mit einem Monitoringportal.;1,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+24;NA-Schutzgerät Netzentkupplungsrelais;1,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+25;Rundsteuerempfänger entsprechenden Vorgaben des örtlichen Versorgungsnetzbetreibers SachsenEnergie, Montage im Steuerschrank Datamanager, inkl. Anschluss/Verkabelung zum Datamanager;1,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+26;Gateway Modbus-RTU/Ethernet;1,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+27;Ethernet Switch, 6 Ports;1,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+28;Steckdosenleiste im Steuerschrank zur Versorgung aller Verbraucher, Festanschluss der Steckdosenleiste;1,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+29;Anlieferung Kran;1,0;PSCH;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+30;Gehwegplatten in Dachbekiesung verlegt aufnehmen, seitlich auf Dach lagern und nach Beendigung der Arbeiten neu verlegen.;50,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+31;Ausbringung zusätzlicher Bekiesung zur Begradigung und zum Höhenausgleich der Bestandsbekiesung.;250,0;kg;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+32;Abstimmung und Durchführung aller notwendigen Formalitäten mit dem örtlichen Versorgungsnetzbetreiber.;1,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+33;Erstprüfung der Photovoltaikanlage nach DIN VDE 0126-23-1/2;1,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+34;Kennzeichnung PV-Anlage;1,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+35;Prüfung PV-Anlage;1,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+1;Gebäudehauptverteilung im Bestand komplett öffnen und vorbereiten für Anschluss neue Abgänge, Abstimmung Abschaltung mit Nutzer, Ab-/Zuschaltung an vorgelagerter Hauptverteilung, Verteilung nach Abschluss der Arbeiten schließen.;1,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+2;Herstellen Anschluss Kabel bis NYCWY-J 4x35/16 mm² an bestehende Verteilung, Abgang Sicherungslasttrennschalter NH00 160 A. Arbeiten erfolgen unter Spannung! inkl. Sicherungseinsätze;3,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+3;Herstellen Anschluss Kabel bis NYCWY-J 4x16/16 mm² an bestehende Verteilung, Abgang Sicherungslasttrennschalter;1,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+4;Neuerstellung digitaler Verteilerplan Gebäudehaupt- und Unterverteilung (Basis DWG) und Stromkreisbelegungsliste (Basis Excel) je Elt-Verteilung unter Einbezug Bestandsunterlagen und zwischenzeitlicher Änderungen (handschriftlich in Unterlagen vor Ort verfügbar);1,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+5;Installationsverteiler als Niederspannungs-Schaltgerätekombination DIN EN 61439-1 (VDE 0660-500), mit Seitenwänden, Rückwand, Tragschienen DIN EN 60715, Berührungsschutzabdeckungen DIN EN 50274 (VDE 0660-514), Rangier- und Verdrahtungskanäle, Kabeleinführungen, Zugentlastung für alle eingeführten Ka;1,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+6;Sicherungslasttrennschalter DIN EN IEC 60947-3 (VDE 0660-107), als Reiheneinbaugerät, Maße DIN 43880, einschl. Passeinsatz, bedingter Bemessungskurzschlussstrom 50 kA, fingersicher DIN EN 50274 (VDE 0660-514), zur Montage auf Tragschiene DIN EN 60715 (VDE 0660-520), Baugröße D 02, Bemessungsbetriebs;1,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+7;Dx/D0x Sicherungssockel (Sicherungsunterteil) DIN VDE 0636-3 (VDE 0636-3), einschl. Passeinsatz und Schraubkappe, Baugröße D 01, zur Montage auf Tragschiene DIN EN 60715 (VDE 0660-520), mit Sicherungseinsatz, Bemessungsstrom 16 A, 3-polig mit Abdeckung.;1,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+8;Leitungsschutzschalter DIN EN 60898-1 (VDE 0641-11), als Reiheneinbaugerät, Maße DIN 43880, fingersicher DIN EN 50274 (VDE 0660-514),;1,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+9;Anschluss Endstromkreis 230V an bestehendem Verteilerabgang inkl. Öffnen und Schließen der Verteilung;1,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+10;Neuerstellung digitaler Verteilerplan Gebäudehaupt- und Unterverteilung (Basis CAD) und Stromkreisbelegungsliste (Basis Excel) je Elt-Verteilung unter Einbezug Bestandsunterlagen und zwischenzeitlicher Änderungen (handschriftlich in Unterlagen vor Ort verfügbar);1,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+11;Meldung Überspannungsschutz ausgelöst potentialfrei auf vorhandenen Binäreingang KNX in UV Neubau Nord OG6 auflegen. Die Arbeiten am KNX erfolgen separat.;4,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+12;Anschluss Endstromkreis 230V an bestehendem Verteilerabgang inkl. Öffnen und Schließen der Verteilung;1,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+13;Neuerstellung digitaler Verteilerplan Gebäudehaupt- und Unterverteilung (Basis CAD) und Stromkreisbelegungsliste (Basis Excel) je Elt-Verteilung unter Einbezug Bestandsunterlagen und zwischenzeitlicher Änderungen (handschriftlich in Unterlagen vor Ort verfügbar);1,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+1;Gummischlauchleitung DIN EN 50618 (VDE 0283-618) H1Z2Z2-K 1 x 10, Cu-Zahl 96, auf vorh. Kabelrinnen oder in offene Kanäle.;1500,0;m;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+2;Kabel DIN VDE 0276-603 (VDE 0276-603) NYCWY 4 x 25 RM/16, Cu-Zahl 1142, auf vorh. Kabelrinnen oder in offene Kanäle.;5,0;m;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+3;Kabel DIN VDE 0276-603 (VDE 0276-603) NYCWY 4 x 25 RM/16, Cu-Zahl 1142, mit Bügelschellen auf vorh. Ankerschienen oder Kabelleiter.;10,0;m;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+4;Kabel DIN VDE 0276-603 (VDE 0276-603) NYCWY 4 x 35 SM/16, Cu-Zahl 1526, auf vorh. Kabelrinnen oder in offene Kanäle.;20,0;m;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+5;Kabel DIN VDE 0276-603 (VDE 0276-603) NYCWY 4 x 35 SM/16, Cu-Zahl 1526, mit Bügelschellen auf vorh. Ankerschienen oder Kabelleiter.;40,0;m;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+6;Gummischlauchleitung DIN EN 50525-2-21 (VDE 0285-525-2-21) H07RN-F 5 G 25, Cu-Zahl 1142, auf vorh. Kabelrinnen oder in offene Kanäle, Arbeitshöhe bis 3,5 m.;10,0;m;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+7;Gummischlauchleitung DIN EN 50525-2-21 (VDE 0285-525-2-21) H07RN-F 5 G 35, Cu-Zahl 3082, auf vorh. Kabelrinnen oder in offene Kanäle, Arbeitshöhe bis 3,5 m.;60,0;m;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+8;Installationsleitung DIN VDE 0250-204 (VDE 0250-204) NYM-J 1 x 6, Cu-Zahl 58, auf vorh. Kabelrinnen oder in offene Kanäle.;50,0;m;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+9;Installationsleitung DIN VDE 0250-204 (VDE 0250-204) NYM-J 1 x 25, Cu-Zahl 240, auf vorh. Kabelrinnen oder in offene Kanäle.;50,0;m;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+10;Installationsleitung DIN VDE 0250-204 (VDE 0250-204) NYM-J 3 x 1,5, Cu-Zahl 43, auf vorh. Kabelrinnen oder in offene Kanäle.;10,0;m;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+11;Installationsleitung DIN VDE 0250-204 (VDE 0250-204) NYM-J 3 x 1,5, Cu-Zahl 43, in vorh. Rohre/Unterflurkanäle.;10,0;m;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+12;Installationsleitung DIN VDE 0250-204 (VDE 0250-204) NYM-J 3 x 2,5, Cu-Zahl 72, auf vorh. Kabelrinnen oder in offene Kanäle.;15,0;m;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+13;Installationsleitung DIN VDE 0250-204 (VDE 0250-204) NYM-J 3 x 2,5, Cu-Zahl 72, in vorh. Rohre/Unterflurkanäle.;15,0;m;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+14;Installationsleitung DIN VDE 0250-204 (VDE 0250-204);15,0;m;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+15;Außenkabel, symmetrisch, DIN VDE 0816-1 (VDE 0816-1), A-2Y(L)2Y, 4 x 2 x 0,6 STIII BD, auf vorhandene Kabelleiter oder -rinnen oder in offene Kanäle.;5,0;m;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+16;Außenkabel, symmetrisch, DIN VDE 0816-1 (VDE 0816-1), A-2Y(L)2Y, 4 x 2 x 0,6 STIII BD, in vorh. Rohre/Unterflurkanäle.;5,0;m;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+17;Außenkabel, symmetrisch, DIN VDE 0816-1 (VDE 0816-1), A-2Y(L)2Y, 4 x 2 x 0,6 STIII BD, auf vorhandene Steigleiter inkl. Bügelschellen;5,0;m;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+18;Installationskabel DIN VDE 0815, J-Y(St)Y, 2 x 2 x 0,8;20,0;m;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+19;Installationskabel DIN VDE 0815, J-Y(St)Y, 2 x 2 x 0,8;20,0;m;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+20;Installationskabel DIN VDE 0815, J-Y(St)Y, 2 x 2 x 0,8;10,0;m;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+21;Installationskabel DIN VDE 0815, J-Y(St)Y, 4 x 2 x 0,8;35,0;m;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+22;Installationskabel DIN VDE 0815, J-Y(St)Y, 4 x 2 x 0,8;75,0;m;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+23;Installationskabel DIN VDE 0815, J-Y(St)Y, 4 x 2 x 0,8;25,0;m;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+24;Installationskabel DIN VDE 0815, J-Y(St)Y, 10 x 2 x 0,8;5,0;m;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+25;Installationskabel DIN VDE 0815, J-Y(St)Y, 10 x 2 x 0,8;5,0;m;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+26;Installationskabel DIN VDE 0815, J-Y(St)Y, 10 x 2 x 0,8;5,0;m;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+1;Schutzkontaktsteckdose DIN VDE 0620-1 (VDE 0620-1), 250 V AC, 16 A, in Gerätedose, einschl. Zentralplatte, mit Beschriftungsfeld, Einsatz mit Schrauben befestigen.;1,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+2;Schutzkontaktsteckdose DIN VDE 0620-1, 16 A, 250 V AC,;1,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+3;Verbindungsdose DIN EN 60670-1 (VDE 0606-1) als Abzweigkasten, aus Kunststoff, Grundfläche mind. 80/80 mm, Tiefe mind. 50 mm, mit Deckel, Schutzart IP 54 DIN EN 60529 (VDE 0470-1), mit 5 Klemmen 4 mm2, Aufputz, auf Mauerwerk.;10,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+4;Geräteverbindungsdose DINVDE0606-1 und DIN49073;2,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+5;Geräteverbindungsdose DINVDE0606-1 und DIN49073, aus;1,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+6;Anschließen von Kabeln oder Leitungen, an beigestellten;5,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+7;Bauseits beigestelltes Gerät 230V anschließen und in Betrieb nehmen;5,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+8;Anpassung Installation Bestand;15,0;Std;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+9;Räumlich begrenzte Verlegung von Bestandskomponenten, da diese der vorgesehenen Nachinstallation im Weg sind.;25,0;Std;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+10;Einrichtung provisorische Baustromversorgung mittels Schuko-Verlängerung auf Dach über vorhandene Dachdurchführung, Nutzung Steckdose im Technikraum OG6;1,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+1;Kabelrinne für Kabelträgersystem DIN EN 61537 (VDE 0639), ungelocht, einschl. Abdeckung mit Drehriegelverschluss, aus bandverzinktem Stahl DIN EN 10346, Seitenhöhe mind. 60 mm, Breite mind. 200 mm, auf Gehwegplatte auf Dach befestigen;200,0;m;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+2;Brandschutzkanal aus Metall mit intumeszierender Innenbeschichtung zur brandsicheren Verlegung von Kabeln und Leitungen im Außenbereich. Kanal und Zubehör aus korrosionsbeständigem Edelstahl. Geeignet für Montage auf Betonsteinen. Es dürfen ausschließlich zugelassene vorkonfektionierte Formteile zur;5,0;m;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+3;Trittschutz Stahlblech für Querung Kabelkanal über Gehweg Dach, komplett verzinkt für dauerhaften Verbleib im Außenbereich, deutliche farbige Markierung der Stolperstelle;5,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+4;Kabelleiter für Kabelträgersystem DIN EN 61537 (VDE 0639), Sprossenabstand 300 mm, einschl. aller systembedingten Form- und Verbindungsstücke, aus bandverzinktem Stahl DIN EN 10346, Dicke 1,5 mm, Seitenhöhe mind. 60 mm, Breite mind. 200 mm.;5,0;m;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+5;Kabelleiter für Kabelträgersystem DIN EN 61537 (VDE 0639), Sprossenabstand 300 mm, einschl. aller systembedingten Form- und Verbindungsstücke, aus bandverzinktem Stahl DIN EN 10346, Dicke 1,5 mm, Seitenhöhe mind. 60 mm, Breite mind. 300 mm.;2,0;m;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+6;Kabelrinne für Kabelträgersystem DIN EN 61537 (VDE 0639), gelocht, aus bandverzinktem Stahl DIN EN 10346, Dicke 0,9 mm, Seitenhöhe mind. 60 mm, Breite mind. 200 mm.;10,0;m;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+7;Kabelrinne für Kabelträgersystem DIN EN 61537 (VDE 0639), gelocht, aus bandverzinktem Stahl DIN EN 10346, Dicke 0,9 mm, Seitenhöhe mind. 60 mm, Breite mind. 300 mm.;5,0;m;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+8;Gitterrinne für Kabelträgersystem DIN EN 61537 (VDE 0639), mit einem Trennsteg, einschl. aller systembedingten Form- und Verbindungsstücke, aus bandverzinktem Stahl DIN EN 10346, Seitenhöhe mind. 60 mm, Breite mind. 300 mm, Arbeitshöhe des Montageortes bis 3,5 m über der Standfläche des hierfür erfo;5,0;m;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+9;Anpassung der zu installierenden Kabelrinnen auf die;10,0;Std;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+10;Stiel für Ausleger aus bandverzinktem Stahl DIN EN 10346, Dicke 2,5 mm, als U-Profil, Tragfähigkeit bis 3 kN, an Decke befestigen mit bauaufsichtlich zugelassenen Dübeln, mit angeschweißter Kopfplatte, Stiellänge bis 400 mm.;10,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+11;Ausleger aus bandverzinktem Stahl DIN EN 10346, Dicke 2,5 mm, Tragfähigkeit bis 2,5 kN, Länge 200 mm, an Stielen, einseitig, Stiele werden gesondert vergütet.;5,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+12;Ausleger aus bandverzinktem Stahl DIN EN 10346, Dicke 2,5 mm, Tragfähigkeit bis 2,5 kN, Länge 300 mm, an Stielen, einseitig, Stiele werden gesondert vergütet.;5,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+13;Ausleger aus bandverzinktem Stahl DIN EN 10346, Dicke 2,5 mm, Tragfähigkeit bis 2,5 kN, Länge 200 mm, an der Wand aus Mauerwerk, befestigen mit bauaufsichtlich zugelassenen Dübeln.;5,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+14;Ausleger aus bandverzinktem Stahl DIN EN 10346, Dicke 2,5 mm, Tragfähigkeit bis 2,5 kN, Länge 300 mm, an der Wand aus Mauerwerk, befestigen mit bauaufsichtlich zugelassenen Dübeln.;5,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+15;Ankerschiene aus Stahl, verzinkt DIN EN 10142, an Wand;5,0;m;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+16;Stabile Unterkonstruktion aus Stahlprofilen komplett;50,0;kg;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+17;Stoßschutz für Stiel/Ausleger-Kombination im Kopfbereich anbringen (schmerzlindernde Polsterung und farbliche Kennzeichnung);2,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+18;Estrichbündiger Kanal Deckel öffnen/schließen (Deckel ohne Bodenbelag);8,0;m;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+19;Rammschutz Steiger de-/remontieren, neuen Ausschnitt in Blechverkleidung bis 25x25 cm herstellen und mit Kantenschutz versehen;5,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+20;Aufständerung auf Dach mittel Deckenstiel bis Höhe 50 cm auf Gehwegplatte herstellen für Befestigung Kabelführung;10,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+21;Kabelrinne Bestand mit verschraubtem Deckel für Kabelnachverlegung öffnen und nach Kabelzug schließen;10,0;m;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+22;Elektroinstallationsrohr DIN EN 61386 (VDE 0605), Maße DIN EN 60423, aus PVC-U, einwandig, glatt, starr, mit angeformter Muffe, Außendurchmesser 40 mm, Druckfestigkeit Klasse 1 - sehr leicht (125 N) DIN EN 61386-1 (VDE 0605-1), Klasse Schlagbeanspruchung 3 - mittel DIN EN 61386-1 (VDE 0605-1), max. ;6,0;m;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+23;Unbelegte Gummipressdichtung Fabrikat UGA ausbauen, für Nachverlegung zwei Leitung bis Durchmesser 50 mm anpassen und nach Leitungsnachverlegung wieder dichtschließend einbauen;1,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+24;Unbelegte Gummipressdichtung Fabrikat UGA ausbauen, für Nachverlegung von bis zu 6 Leitungen bis Durchmesser 15 anpassen und nach Leitungsnachverlegung wieder dichtschließend einbauen;1,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+25;Stahlblechkanal, bandverzinkt, I90 gemäß DIN 4102 Teil 11 mit intumeszierender Innenbeschichtung zur aktiven Brandlastkapselung und sicheren Verhinderung von Brandweiterleitung.;6,0;m;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+1;Dachleitungshalter demontieren, trennen, nach Werkstoffen sortieren, in Behälter des AN laden, Demontagehöhe über 20 bis 30 m, befestigt auf Flachdach.;100,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+2;Fangleitung demontieren, trennen, nach Werkstoffen sortieren, in Behälter des AN laden, Demontagehöhe über 20 bis 30 m.;85,0;m;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+3;Fangstange 0,5m, mit Standfuß demontieren, trennen, nach Werkstoffen sortieren, in Behälter des AN laden, Demontagehöhe über 20 bis 30 m.;7,0;St.;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+4;Fangstange 1,0m, mit Standfuß demontieren, trennen, nach Werkstoffen sortieren, in Behälter des AN laden, Demontagehöhe über 20 bis 30 m.;1,0;St.;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+5;Fangstange 1,5m, mit Standfuß demontieren, trennen, nach Werkstoffen sortieren, in Behälter des AN laden, Demontagehöhe über 20 bis 30 m.;1,0;St.;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+6;Fangstange DIN EN IEC 62561-2 (VDE 0185-561-2), aus nichtrostendem Stahl, Rd 16, Länge 2000 mm, auf der Dachkonstruktion, Werkstoff-Nr 1.4301, mit Standfuß aus Beton, mit Kunststoff-Unterlegplatte, Standfußmasse 20 kg.;40,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+7;Fangstange DIN EN IEC 62561-2 (VDE 0185-561-2), aus nichtrostendem Stahl, Rd 16, Länge 1500 mm, auf der Dachkonstruktion, Werkstoff-Nr 1.4301, mit Standfuß aus Beton, mit Kunststoff-Unterlegplatte, Standfußmasse 16 kg.;1,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+8;Befestigung Fangstange an Attika;40,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+9;Fangleitung DIN EN IEC 62561-2 (VDE 0185-561-2), aus nichtrostendem Stahl, Rd 10, auf flachem Dach, Werkstoff-Nr 1.4301.;100,0;m;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+10;Verbinder DIN EN 62561-1 (VDE 0185-561-1), Klasse H für hohe Belastung, für Parallelverbindungen, aus feuerverzinktem Stahl, für Rd 8 bis 10 mit Rd 8 bis 10, mit Zwischenplatte.;20,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+11;Verbinder DIN EN 62561-1 (VDE 0185-561-1), Klasse H für hohe Belastung, für T-Verbindungen, aus feuerverzinktem Stahl, für Rd 8 bis 10 mit Rd 8 bis 10, mit Zwischenplatte.;20,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+12;Verbinder DIN EN 62561-1 (VDE 0185-561-1), Klasse H für hohe Belastung, für Kreuzverbindungen, aus feuerverzinktem Stahl, für Rd 8 bis 10 mit Rd 8 bis 10, mit Zwischenplatte.;20,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+13;Dachleitungshalter aus Kunststoff, für Dachfläche mit Bitumen-/Kunststoffbahnen, flach, mit Betonstein, für Rundleiter.;100,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+14;Anpassung Übersichtsplan Dach Blitzschutz (Grundlagen auf Datenträger im PDF-und DWG Format vorhanden).;1,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+15;Überspannungsschutz kompakter Blitzstrom-Ableiter der;2,0;St.;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+16;Kompakter Blitzstromableiter;3,0;St.;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+17;Überspannungsschutzgerät DIN EN 61643-11 (VDE 0675-6-11), Typ 1 und 2, mit Gehäuse, Montage in der Zuleitung vom Wechselrichter am Gebäudeeintritt, Modulbauweise aus Basis- und Schutzmodul, als Reiheneinbaugerät, Maße DIN 43880, mit Funktionsanzeige und potentialfreiem Kontakt für Fernanzeige, Bemes;2,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+18;Potentialausgleichsschiene DIN VDE 0618-1 (VDE 0618-1), UV-Stab., aus verzinktem Stahl, Klasse H DIN EN 62561-1 (VDE 0185-561-1), mit Anschluss für 8 x 1,5 bis 25 mm2, ein Flachband bis 40 mm x 4 mm, und Massivrundleiter, Durchmesser 8 bis 10 mm.;1,0;St.;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+19;Kabel DIN VDE 0276-603 (VDE 0276-603) NYY 1 x 16 RE zum Potentialausgleich, Cu-Zahl 154, mit Befestigung gemäß bauaufsichtlicher Zulassung.;250,0;m;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+20;Potentialausgleichsanschluss an Bauteil herstellen;25,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+21;Anpassung der Bestandsunterlage Blitzschutz mit den vorgenommenen Änderungen an der Fanganlage;1,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+1;Brandschott Bestand öffnen/entfernen:;10,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+2;Brandschott Bestand öffnen/entfernen:;5,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+3;Brandschutzabschottung an Kabel-/Leitungsanlagen als flexibles Schott bestehend aus vorgefertigten flexiblen Brandschutzsteinen, mit allgemeiner bauaufsichtlicher Zulassung, Feuerwiderstandsklasse S90 DIN 4102-9, in Gebäuden, Oberkante Abschottung über Gelände/Fußboden bis 3,5 m, Wand/Decke aus Stah;2,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+4;Brandschutzabschottung an Kabel-/Leitungsanlagen als flexibles Schott bestehend aus vorgefertigten flexiblen Brandschutzsteinen, mit allgemeiner bauaufsichtlicher Zulassung, Feuerwiderstandsklasse S90 DIN 4102-9, in Gebäuden, Oberkante Abschottung über Gelände/Fußboden bis 3,5 m, Wand/Decke aus Stah;5,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+5;Brandschutzabschottung an Kabel-/Leitungsanlagen als;2,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+6;Brandschutzabschottung an Kabel-/Leitungsanlagen als;5,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+7;Brandschutzabschottung an Kabel-/Leitungsanlagen als;5,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+1;Vorhandene Durchbrüche ohne Brandschott bis 20x50 cm öffnen und nach Abschluss der Leitungsverlegung wieder fachgerecht verschließen;5,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+2;Verkleidung Steiger de-/remontieren (Blechverkleidung als Rammschutz);5,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+3;Ausschnitt Trockenbauverkleidung rund oder eckig bis;10,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+4;Fädelöffnung im Trockenbau herstellen. Das Herstellen der Fädelöffnungen hat so zu erfolgen, dass ein nachfolgendes Schließen durch den Trockenbauer problemlos und ohne großen Aufwand ermöglicht wird.;15,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+5;Revisionsöffnung Bestand im Trockenbau (Wand/Decke) bis 60x100 cm öffnen und arbeitstäglich schließen;15,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+6;Doppelboden Bestand öffnen/schließen;10,0;m²;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+7;Gehwegplatten Dach Beton ergänzen bis Format 50x50x4 cm;50,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+1;Aufnahme des bestehenden Stromversorgungssystems inkl. aller für die Montageplanung und spätere Installation relevanten Details.;5,0;Std;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+2;Schaffung Baufreiheit zur Ausführung der Leistungen Gewerk Elt:;15,0;Std;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+3;Steckgerüst für Standhöhe bis 6 m für die Ausführung der Installationsleistungen beistellen inkl. sämtlicher Nebenarbeiten wie z. B. mehrfaches Auf- und Abbauen, Umsetzen, Transport zur und von der Baustelle;1,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+4;Zugschacht der Leerrohrtrassierung im Außenbereich (massive Deckel) für die Leitungsverlegung mit Deckelhubgerät öffnen und nach Abschluss der Arbeiten wieder schließen;5,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+5;Sicherung offen stehender Zugschacht LxB ca. 1,20 x1,20;5,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+6;Rauchmelder BMA ab-/zuschalten (Organisation über Wach- und Kontrollraum). Abdeckung des jeweiligen Rauchmelders zu Staubschutzzwecken.;5,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+7;Entfernen von Resten der Abdeckung und Feinreinigung durch Wischen oder Staubsaugen je nach Bodenbelag. Putzmittel sind im Angebot einzurechnen.;200,0;m²;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+8;Anbringen einer dauerhaften, kratz- und abriebfesten;1,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+9;Prüfung der Neuanlage mit Bemessungsspannung bis 1000V,;1,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+10;Erstellung der Revisionsunterlagen KGR 440 und KGR 450 nach DIN 276, Leistungsumfang gemäß Vorbemerkungen, in 3facher Ausfertigung, als Druckerzeugnis/Papierzeichnung/ Plotterausdruck, farbig, auf DIN A4-Format gefaltet. sowie in 3facher Ausfertigung in digitaler Form auf Datenträger.;1,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+1;Stundenlohnarb. Obermonteur/-in;10,0;h;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+2;Stundenlohnarb. Monteur/-in;10,0;h;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+1;Datenkabel für Außenanwendung EN 50288-4-11, Kategorie 7 DIN EN 50173-1, geschirmt, Trennklasse b DIN EN 50174-2 (VDE 0800-174-2), Link-Klasse DIN EN 50173-1 F Index A tiefgestellt, 4 x 2 x AWG 22, Schutzmantel PE, Wdd. 1,0 mm, geeignet für direkte Erdverlegung, UV-beständig, in vorhandene Rohre;50,0;m;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+2;Datenkabel für Außenanwendung EN 50288-4-11, Kategorie 7 DIN EN 50173-1, geschirmt, Trennklasse b DIN EN 50174-2 (VDE 0800-174-2), Link-Klasse DIN EN 50173-1 F Index A tiefgestellt, 4 x 2 x AWG 22, Schutzmantel PE, Wdd. 1,0 mm, geeignet für direkte Erdverlegung, UV-beständig, in vorhandene Kabelrinn;100,0;m;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+3;Datenkabel für Außenanwendung EN 50288-4-11, Kategorie 7 DIN EN 50173-1, geschirmt, Trennklasse b DIN EN 50174-2 (VDE 0800-174-2), Link-Klasse DIN EN 50173-1 F Index A tiefgestellt, 4 x 2 x AWG 22, Schutzmantel PE, Wdd. 1,0 mm, geeignet für direkte Erdverlegung, UV-beständig, auf vorhandene Steiglei;50,0;m;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+4;Datenkabel für den Horizontal- und Steigbereich DIN EN 50288-9-1 (VDE 0819-9-1), Kategorie 7 Index A tiefgestellt DIN EN 50173-1, geschirmt, Trennklasse d DIN EN 50174-2 (VDE 0800-174-2), Link-Klasse DIN EN 50173-1 E Index A tiefgestellt, 4 x 2 x AWG 22, halogenfrei, flammwidrig, in vorhandene Rohre;10,0;m;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+5;Datenkabel für den Horizontal- und Steigbereich DIN EN 50288-9-1 (VDE 0819-9-1), Kategorie 7 Index A tiefgestellt DIN EN 50173-1, geschirmt, Trennklasse d DIN EN 50174-2 (VDE 0800-174-2), Link-Klasse DIN EN 50173-1 E Index A tiefgestellt, 4 x 2 x AWG 22, halogenfrei, flammwidrig, auf vorh. Kabelrinn;20,0;m;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+6;Datenkabel für den Horizontal- und Steigbereich DIN EN 50288-9-1 (VDE 0819-9-1), Kategorie 7 Index A tiefgestellt DIN EN 50173-1, geschirmt, Trennklasse d DIN EN 50174-2 (VDE 0800-174-2), Link-Klasse DIN EN 50173-1 E Index A tiefgestellt, 4 x 2 x AWG 22, halogenfrei, flammwidrig, auf Steigleiter ink;20,0;m;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+7;Daten-Anschlusskabel, symmetrisch, Kategorie 6 Index A tiefgestellt DIN EN 50173-1, Link-Klasse E Index A tiefgestellt DIN EN 50173-1,;5,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+8;RJ45-Anschlussdose, 1fach, gesch.,;6,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+9;Stecker, dienstneutral, RJ45 DIN EN 60603-7-51 (VDE 0687-603-7-51), Kategorie 6 Index A tiefgestellt DIN EN 50173-1 (VDE 0800-173-1), zum Anschluss von massivem Datenkabel.;10,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+10;Zuschlag Nachrüstung Port an Patchfeld Bestand;2,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+11;"RJ45-Anschlussdose/-einheit beschriften nach den Vorgaben des Auftraggebers und mit einer dauerhaften, kratz-und abriebfesten Beschriftung ausführen, Aufdruck mit computergeschriebener schwarzer Druckschrift ""Arial"", Die Ausführung der Beschriftung ist dem Auftraggeber zur Bemusterung vorzulegen.";12,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+12;Anschluss an v. g. Stecker dienstneutral;12,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+13;Klasse EA, Permanent-Link, Messung der Kupferverkabelung nach ISO/IEC 11801   Anwendungsklasse EA[tiefgestellt].;6,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83
+14;Ergänzung Bestandsunterlage Datenverteiler im DWG-Format im Umfang der vorgenannten Nachrüstung;1,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_26A40265.X83

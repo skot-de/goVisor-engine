@@ -1,0 +1,12 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+0101010;Baustelleneinrichtung;1,0;psch;gaeb-flat;3934315.d83
+0101020;Montage- und Werkstattplanung;1,0;psch;gaeb-flat;3934315.d83
+0101030;Bestandsdokumentation;1,0;psch;gaeb-flat;3934315.d83
+0102010;Mobile Trennwandanlage Typ 1;1,0;psch;gaeb-flat;3934315.d83
+0102020;Mobile Trennwandanlage Typ 2;1,0;psch;gaeb-flat;3934315.d83
+0102030;Transluzenter Klebestreifen;15,0;m;gaeb-flat;3934315.d83
+0103010;Stundensatz Vorarbeiter;1,0;h;gaeb-flat;3934315.d83
+0103020;Stundensatz Facharbeiter;3,0;h;gaeb-flat;3934315.d83
+0103030;Stundensatz Bauwerker;3,0;h;gaeb-flat;3934315.d83
+0103040;Wartungsvertrag;4,0;St;gaeb-flat;3934315.d83
+0103050;Wartung 5. Jahr;1,0;St;gaeb-flat;3934315.d83

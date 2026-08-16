@@ -1,0 +1,860 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+1;für Stahlrohr DN 25 (d = 33,7 mm), Dämmdicke 60 mm,;30,0;m;gaeb;3928155.x83
+2;für Stahlrohr DN 65 (d = 76,1 mm), Dämmdicke 160 mm,;12,0;m;gaeb;3928155.x83
+3;Passstück DN 25, bis 500 mm Länge, als Zulage.;22,0;St;gaeb;3928155.x83
+4;Passstück DN 65, bis 500 mm Länge, als Zulage.;8,0;St;gaeb;3928155.x83
+5;Segment-Bogen DN 25, 45 - 90°, als Zulage.;22,0;St;gaeb;3928155.x83
+6;Segment-Bogen DN 65, 45 - 90°, als Zulage.;16,0;St;gaeb;3928155.x83
+7;Stutzen (Abzweig) DN 25, als Zulage.;4,0;St;gaeb;3928155.x83
+8;Stutzen (Abzweig) DN 65, als Zulage.;4,0;St;gaeb;3928155.x83
+9;Konus DN 25, als Zulage.;8,0;St;gaeb;3928155.x83
+10;Konus DN 65, als Zulage.;4,0;St;gaeb;3928155.x83
+11;Endstelle DN 25, als Zulage.;12,0;St;gaeb;3928155.x83
+12;Endstelle DN 65, als Zulage.;8,0;St;gaeb;3928155.x83
+13;Ausschnitt DN 25, als Zulage.;30,0;St;gaeb;3928155.x83
+14;Ausschnitt DN 65, als Zulage.;12,0;St;gaeb;3928155.x83
+15;Blende (Rosette) DN 25, als Zulage.;14,0;St;gaeb;3928155.x83
+16;Blende (Rosette) DN 65, als Zulage.;8,0;St;gaeb;3928155.x83
+17;Einsatz an Rohrleitungen DN 25, als Zulage.;2,0;St;gaeb;3928155.x83
+18;Einsatz an Rohrleitungen DN 65, als Zulage.;2,0;St;gaeb;3928155.x83
+19;Zusätzliche Teilung in Längsrichtung, für Rohrleitungen DN 25,;2,0;St;gaeb;3928155.x83
+20;Zusätzliche Teilung in Längsrichtung, für Rohrleitungen DN 65,;2,0;St;gaeb;3928155.x83
+21;Endstelle an Abflachungen herstellen, Umfang bis 600 mm,;4,0;St;gaeb;3928155.x83
+1;für Stahlrohr DN 15 (d = 21,3 mm), Dämmdicke 20 mm,;3,0;m;gaeb;3928155.x83
+2;für Stahlrohr DN 20 (d = 26,9 mm), Dämmdicke 20 mm,;3,0;m;gaeb;3928155.x83
+3;für Stahlrohr DN 25 (d = 33,7 mm), Dämmdicke 30 mm,;5,0;m;gaeb;3928155.x83
+4;für Stahlrohr DN 32 (d = 42,4 mm), Dämmdicke 40 mm,;5,0;m;gaeb;3928155.x83
+5;für Stahlrohr DN 40 (d = 48,3 mm), Dämmdicke 50 mm,;6,0;m;gaeb;3928155.x83
+6;für Stahlrohr DN 50 (d = 60,3 mm), Dämmdicke 60 mm,;4,0;m;gaeb;3928155.x83
+7;für Stahlrohr DN 65 (d = 76,1 mm), Dämmdicke 70 mm,;2,0;m;gaeb;3928155.x83
+8;für Kupfer-, Edelstahl- und C-Stahlrohr DN 12 (d = 15 mm), Dämmdicke 30 mm,;2,0;m;gaeb;3928155.x83
+9;für Kupfer-, Edelstahl- und C-Stahlrohr DN 15 (d = 18 mm), Dämmdicke 30 mm,;2,0;m;gaeb;3928155.x83
+10;für Kupfer-, Edelstahl- und C-Stahlrohr DN 20 (d = 22 mm), Dämmdicke 30 mm,;2,0;m;gaeb;3928155.x83
+11;für Kupfer-, Edelstahl- und C-Stahlrohr DN 25 (d = 28 mm), Dämmdicke 30 mm,;3,0;m;gaeb;3928155.x83
+12;für Kupfer-, Edelstahl- und C-Stahlrohr DN 32 (d = 35 mm), Dämmdicke 30 mm,;3,0;m;gaeb;3928155.x83
+13;für Kupfer-, Edelstahl- und C-Stahlrohr DN 40 (d = 42 mm), Dämmdicke 40 mm,;4,0;m;gaeb;3928155.x83
+14;für Kupfer-, Edelstahl- und C-Stahlrohr DN 50 (d = 54 mm), Dämmdicke 50 mm,;2,0;m;gaeb;3928155.x83
+15;Mehrpreis als Aufpreis für die technische Dämmung der vorgenannten;10,0;m;gaeb;3928155.x83
+16;Mehrpreis als Aufpreis für die technische Dämmung der vorgenannten;3,0;m;gaeb;3928155.x83
+17;Passstück DN 12, bis 500 mm Länge, als Zulage.;1,0;St;gaeb;3928155.x83
+18;Passstück DN 15, bis 500 mm Länge, als Zulage.;2,0;St;gaeb;3928155.x83
+19;Passstück DN 20, bis 500 mm Länge, als Zulage.;2,0;St;gaeb;3928155.x83
+20;Passstück DN 25, bis 500 mm Länge, als Zulage.;3,0;St;gaeb;3928155.x83
+21;Passstück DN 32, bis 500 mm Länge, als Zulage.;3,0;St;gaeb;3928155.x83
+22;Passstück DN 40, bis 500 mm Länge, als Zulage.;3,0;St;gaeb;3928155.x83
+23;Passstück DN 50, bis 500 mm Länge, als Zulage.;2,0;St;gaeb;3928155.x83
+24;Passstück DN 65, bis 500 mm Länge, als Zulage.;1,0;St;gaeb;3928155.x83
+25;Bogen DN 12, 45 - 90°, als Zulage.;2,0;St;gaeb;3928155.x83
+26;Bogen DN 15, 45 - 90°, als Zulage.;2,0;St;gaeb;3928155.x83
+27;Bogen DN 20, 45 - 90°, als Zulage.;2,0;St;gaeb;3928155.x83
+28;Bogen DN 25, 45 - 90°, als Zulage.;3,0;St;gaeb;3928155.x83
+29;Bogen DN 32, 45 - 90°, als Zulage.;4,0;St;gaeb;3928155.x83
+30;Bogen DN 40, 45 - 90°, als Zulage.;3,0;St;gaeb;3928155.x83
+31;Bogen DN 50, 45 - 90°, als Zulage.;4,0;St;gaeb;3928155.x83
+32;Bogen DN 65, 45 - 90°, als Zulage.;2,0;St;gaeb;3928155.x83
+33;Stutzen (Abzweig) DN 12, als Zulage.;1,0;St;gaeb;3928155.x83
+34;Stutzen (Abzweig) DN 15, als Zulage.;1,0;St;gaeb;3928155.x83
+35;Stutzen (Abzweig) DN 20, als Zulage.;1,0;St;gaeb;3928155.x83
+36;Stutzen (Abzweig) DN 25, als Zulage.;2,0;St;gaeb;3928155.x83
+37;Stutzen (Abzweig) DN 32, als Zulage.;2,0;St;gaeb;3928155.x83
+38;Stutzen (Abzweig) DN 40, als Zulage.;2,0;St;gaeb;3928155.x83
+39;Stutzen (Abzweig) DN 50, als Zulage.;2,0;St;gaeb;3928155.x83
+40;Stutzen (Abzweig) DN 65, als Zulage.;2,0;St;gaeb;3928155.x83
+41;Konus DN 15, als Zulage.;1,0;St;gaeb;3928155.x83
+42;Konus DN 20, als Zulage.;1,0;St;gaeb;3928155.x83
+43;Konus DN 25, als Zulage.;1,0;St;gaeb;3928155.x83
+44;Konus DN 32, als Zulage.;1,0;St;gaeb;3928155.x83
+45;Konus DN 40, als Zulage.;2,0;St;gaeb;3928155.x83
+46;Konus DN 50, als Zulage.;2,0;St;gaeb;3928155.x83
+47;Konus DN 65, als Zulage.;2,0;St;gaeb;3928155.x83
+48;Endstelle DN 12, als Zulage.;1,0;St;gaeb;3928155.x83
+49;Endstelle DN 15, als Zulage.;1,0;St;gaeb;3928155.x83
+50;Endstelle DN 20, als Zulage.;1,0;St;gaeb;3928155.x83
+51;Endstelle DN 25, als Zulage.;1,0;St;gaeb;3928155.x83
+52;Endstelle DN 32, als Zulage.;2,0;St;gaeb;3928155.x83
+53;Endstelle DN 40, als Zulage.;2,0;St;gaeb;3928155.x83
+54;Endstelle DN 50, als Zulage.;2,0;St;gaeb;3928155.x83
+55;Endstelle DN 65, als Zulage.;2,0;St;gaeb;3928155.x83
+56;Ausschnitt DN 12, als Zulage.;2,0;St;gaeb;3928155.x83
+57;Ausschnitt DN 15, als Zulage.;5,0;St;gaeb;3928155.x83
+58;Ausschnitt DN 20, als Zulage.;5,0;St;gaeb;3928155.x83
+59;Ausschnitt DN 25, als Zulage.;8,0;St;gaeb;3928155.x83
+60;Ausschnitt DN 32, als Zulage.;8,0;St;gaeb;3928155.x83
+61;Ausschnitt DN 40, als Zulage.;10,0;St;gaeb;3928155.x83
+62;Ausschnitt DN 50, als Zulage.;4,0;St;gaeb;3928155.x83
+63;Ausschnitt DN 65, als Zulage.;2,0;St;gaeb;3928155.x83
+64;Mehrpreis als Aufpreis zu vorgenannter Rohrleitungsisolierung,;1,0;m;gaeb;3928155.x83
+65;Mehrpreis als Aufpreis zu vorgenannter Rohrleitungsisolierung,;1,0;m;gaeb;3928155.x83
+66;Mehrpreis als Aufpreis zu vorgenannter Rohrleitungsisolierung,;2,0;m;gaeb;3928155.x83
+67;Mehrpreis als Aufpreis zu vorgenannter Rohrleitungsisolierung,;3,0;m;gaeb;3928155.x83
+68;Mehrpreis als Aufpreis zu vorgenannter Rohrleitungsisolierung,;2,0;m;gaeb;3928155.x83
+69;Mehrpreis als Aufpreis zu vorgenannter Rohrleitungsisolierung,;2,0;m;gaeb;3928155.x83
+70;Mehrpreis als Aufpreis zu vorgenannter Rohrleitungsisolierung,;3,0;m;gaeb;3928155.x83
+71;Mehrpreis als Aufpreis zu vorgenannter Rohrleitungsisolierung,;2,0;m;gaeb;3928155.x83
+72;Mehrpreis als Aufpreis zu vorgenannter Formstück-Isolierung, jegliche Art,;2,0;St;gaeb;3928155.x83
+73;Mehrpreis als Aufpreis zu vorgenannter Formstück-Isolierung, jegliche Art,;3,0;St;gaeb;3928155.x83
+74;Mehrpreis als Aufpreis zu vorgenannter Formstück-Isolierung, jegliche Art,;4,0;St;gaeb;3928155.x83
+75;Mehrpreis als Aufpreis zu vorgenannter Formstück-Isolierung, jegliche Art,;6,0;St;gaeb;3928155.x83
+76;Mehrpreis als Aufpreis zu vorgenannter Formstück-Isolierung, jegliche Art,;4,0;St;gaeb;3928155.x83
+77;Mehrpreis als Aufpreis zu vorgenannter Formstück-Isolierung, jegliche Art,;8,0;St;gaeb;3928155.x83
+78;Mehrpreis als Aufpreis zu vorgenannter Formstück-Isolierung, jegliche Art,;4,0;St;gaeb;3928155.x83
+79;Mehrpreis als Aufpreis zu vorgenannter Formstück-Isolierung, jegliche Art,;2,0;St;gaeb;3928155.x83
+80;Dämmkappe einschl. Ummantelung nach DIN 4140, zweiteilig, aus;1,0;St;gaeb;3928155.x83
+81;desgl., jedoch für Flanschen-Absperrklappe DN 20,;1,0;St;gaeb;3928155.x83
+82;desgl., jedoch für Flanschen-Absperrklappe DN 25,;2,0;St;gaeb;3928155.x83
+83;desgl., jedoch für Flanschen-Absperrklappe DN 32,;4,0;St;gaeb;3928155.x83
+84;desgl., jedoch für Flanschen-Absperrklappe DN 40,;4,0;St;gaeb;3928155.x83
+85;desgl., jedoch für Flanschen-Absperrklappe DN 50,;2,0;St;gaeb;3928155.x83
+86;desgl., jedoch für Flanschen-Absperrklappe DN 65,;2,0;St;gaeb;3928155.x83
+87;desgl., jedoch für Flanschen-Absperrventil DN 15, Kurz- und Normalbaulänge,;1,0;St;gaeb;3928155.x83
+88;desgl., jedoch für Flanschen-Absperrventil DN 20, Kurz- und Normalbaulänge,;1,0;St;gaeb;3928155.x83
+89;desgl., jedoch für Flanschen-Absperrventil DN 25, Kurz- und Normalbaulänge,;2,0;St;gaeb;3928155.x83
+90;desgl., jedoch für Flanschen-Absperrventil DN 32, Kurz- und Normalbaulänge,;2,0;St;gaeb;3928155.x83
+91;desgl., jedoch für Flanschen-Absperrventil DN 40, Kurz- und Normalbaulänge,;2,0;St;gaeb;3928155.x83
+92;desgl., jedoch für Flanschen-Absperrventil DN 50, Kurz- und Normalbaulänge,;4,0;St;gaeb;3928155.x83
+93;desgl., jedoch für Flanschen-Absperrventil DN 65, Kurz- und Normalbaulänge,;2,0;St;gaeb;3928155.x83
+94;desgl., jedoch für Flanschen-Schmutzfänger DN 15;1,0;St;gaeb;3928155.x83
+95;desgl., jedoch für Flanschen-Schmutzfänger DN 20;1,0;St;gaeb;3928155.x83
+96;desgl., jedoch für Flanschen-Schmutzfänger DN 25;2,0;St;gaeb;3928155.x83
+97;desgl., jedoch für Flanschen-Schmutzfänger DN 32;2,0;St;gaeb;3928155.x83
+98;desgl., jedoch für Flanschen-Schmutzfänger DN 40;1,0;St;gaeb;3928155.x83
+99;desgl., jedoch für Flanschen-Schmutzfänger DN 50;2,0;St;gaeb;3928155.x83
+100;desgl., jedoch für Flanschen-Schmutzfänger DN 65;2,0;St;gaeb;3928155.x83
+101;desgl., jedoch für Flanschen-Übergang DN 15, ohne Armaturenanschluss;2,0;St;gaeb;3928155.x83
+102;desgl., jedoch für Flanschen-Übergang DN 20, ohne Armaturenanschluss;2,0;St;gaeb;3928155.x83
+103;desgl., jedoch für Flanschen-Übergang DN 25, ohne Armaturenanschluss;4,0;St;gaeb;3928155.x83
+104;desgl., jedoch für Flanschen-Übergang DN 32, ohne Armaturenanschluss;2,0;St;gaeb;3928155.x83
+105;desgl., jedoch für Flanschen-Übergang DN 40, ohne Armaturenanschluss;2,0;St;gaeb;3928155.x83
+106;desgl., jedoch für Flanschen-Übergang DN 50, ohne Armaturenanschluss;6,0;St;gaeb;3928155.x83
+107;desgl., jedoch für Flanschen-Übergang DN 65, ohne Armaturenanschluss;4,0;St;gaeb;3928155.x83
+108;"desgl., jedoch für Lufttopf; Nenninhalt 1 Liter (DN 65 - DN 80),";1,0;St;gaeb;3928155.x83
+109;"desgl., jedoch für Lufttopf; Nenninhalt 3 Liter (DN 100 - DN 125),";1,0;St;gaeb;3928155.x83
+110;"desgl., jedoch für Lufttopf; Nenninhalt 5 Liter (DN 150),";1,0;St;gaeb;3928155.x83
+111;Zusätzliche Teilung an der Dämmkappe herstellen,;6,0;St;gaeb;3928155.x83
+112;Zusätzliche Teilung an der Dämmkappe herstellen,;4,0;St;gaeb;3928155.x83
+113;Zusätzliche Teilung an der Dämmkappe herstellen,;2,0;St;gaeb;3928155.x83
+114;Dämmkappe einschl. Ummantelung nach DIN 4140, zweiteilig, aus;1,0;St;gaeb;3928155.x83
+115;desgl., jedoch für Muffen-Armatur DN 20, (Regulier- und Absperrorgane, etc.),;1,0;St;gaeb;3928155.x83
+116;desgl., jedoch für Muffen-Armatur DN 25, (Regulier- und Absperrorgane, etc.),;4,0;St;gaeb;3928155.x83
+117;desgl., jedoch für Muffen-Armatur DN 32, (Regulier- und Absperrorgane, etc.),;2,0;St;gaeb;3928155.x83
+118;desgl., jedoch für Muffen-Armatur DN 40, (Regulier- und Absperrorgane, etc.),;2,0;St;gaeb;3928155.x83
+119;desgl., jedoch für Muffen-Armatur DN 50, (Regulier- und Absperrorgane, etc.),;4,0;St;gaeb;3928155.x83
+120;desgl., jedoch für Verschraubung DN 15, ohne Armaturenanschluss,;2,0;St;gaeb;3928155.x83
+121;desgl., jedoch für Verschraubung DN 20, ohne Armaturenanschluss,;2,0;St;gaeb;3928155.x83
+122;desgl., jedoch für Verschraubung DN 25, ohne Armaturenanschluss,;6,0;St;gaeb;3928155.x83
+123;desgl., jedoch für Verschraubung DN 32, ohne Armaturenanschluss,;2,0;St;gaeb;3928155.x83
+124;desgl., jedoch für Verschraubung DN 40, ohne Armaturenanschluss,;2,0;St;gaeb;3928155.x83
+125;desgl., jedoch für Verschraubung DN 50, ohne Armaturenanschluss,;4,0;St;gaeb;3928155.x83
+126;Dämmkappe einschl. Ummantelung nach DIN 4140, zweiteilig, mit Kunststoffmantel, leicht abnehmbar mit Bändern und Hebelverschlüssen bzw. Spannringen, formstabil mittels PUR-Hartschaumkern, FCKW-frei, schwer entflammbar nach DIN 4102 (Baustoffklasse B1),;2,0;St;gaeb;3928155.x83
+127;desgl., jedoch für Muffen-Armatur DN 20, (Regulier- und Absperrorgane, etc.),;2,0;St;gaeb;3928155.x83
+128;desgl., jedoch für Muffen-Armatur DN 25, (Regulier- und Absperrorgane, etc.),;4,0;St;gaeb;3928155.x83
+129;desgl., jedoch für Muffen-Armatur DN 32, (Regulier- und Absperrorgane, etc.),;3,0;St;gaeb;3928155.x83
+130;desgl., jedoch für Muffen-Armatur DN 40, (Regulier- und Absperrorgane, etc.),;2,0;St;gaeb;3928155.x83
+131;desgl., jedoch für Muffen-Armatur DN 50, (Regulier- und Absperrorgane, etc.),;1,0;St;gaeb;3928155.x83
+132;Mehrpreis als Aufpreis für die technische Dämmung der vorgenannten;6,0;St;gaeb;3928155.x83
+133;Mehrpreis als Aufpreis für die technische Dämmung der vorgenannten;2,0;St;gaeb;3928155.x83
+1;für Kupfer-, Edelstahl- und C-Stahlrohr DN 12 (d = 15 mm), Dämmdicke 20 mm,;8,0;m;gaeb;3928155.x83
+2;für Kupfer-, Edelstahl- und C-Stahlrohr DN 15 (d = 18 mm), Dämmdicke 20 mm,;8,0;m;gaeb;3928155.x83
+3;für Kupfer-, Edelstahl- und C-Stahlrohr DN 20 (d = 22 mm), Dämmdicke 20 mm,;10,0;m;gaeb;3928155.x83
+4;für Kupfer-, Edelstahl- und C-Stahlrohr DN 25 (d = 28 mm), Dämmdicke 30 mm,;6,0;m;gaeb;3928155.x83
+5;für Kupfer-, Edelstahl- und C-Stahlrohr DN 32 (d = 35 mm), Dämmdicke 30 mm,;4,0;m;gaeb;3928155.x83
+6;für Kupfer-, Edelstahl- und C-Stahlrohr DN 40 (d = 42 mm), Dämmdicke 40 mm,;3,0;m;gaeb;3928155.x83
+7;für Kupfer-, Edelstahl- und C-Stahlrohr DN 50 (d = 54 mm), Dämmdicke 50 mm,;2,0;m;gaeb;3928155.x83
+8;Mehrpreis als Aufpreis für die technische Dämmung der vorgenannten;8,0;m;gaeb;3928155.x83
+9;Mehrpreis als Aufpreis für die technische Dämmung der vorgenannten;2,0;m;gaeb;3928155.x83
+10;Passstück DN 12, bis 500 mm Länge, als Zulage.;3,0;St;gaeb;3928155.x83
+11;Passstück DN 15, bis 500 mm Länge, als Zulage.;3,0;St;gaeb;3928155.x83
+12;Passstück DN 20, bis 500 mm Länge, als Zulage.;4,0;St;gaeb;3928155.x83
+13;Passstück DN 25, bis 500 mm Länge, als Zulage.;2,0;St;gaeb;3928155.x83
+14;Passstück DN 32, bis 500 mm Länge, als Zulage.;2,0;St;gaeb;3928155.x83
+15;Passstück DN 40, bis 500 mm Länge, als Zulage.;1,0;St;gaeb;3928155.x83
+16;Passstück DN 50, bis 500 mm Länge, als Zulage.;1,0;St;gaeb;3928155.x83
+17;Bogen DN 12, 45 - 90°, als Zulage.;10,0;St;gaeb;3928155.x83
+18;Bogen DN 15, 45 - 90°, als Zulage.;12,0;St;gaeb;3928155.x83
+19;Bogen DN 20, 45 - 90°, als Zulage.;6,0;St;gaeb;3928155.x83
+20;Bogen DN 25, 45 - 90°, als Zulage.;4,0;St;gaeb;3928155.x83
+21;Bogen DN 32, 45 - 90°, als Zulage.;3,0;St;gaeb;3928155.x83
+22;Bogen DN 40, 45 - 90°, als Zulage.;2,0;St;gaeb;3928155.x83
+23;Bogen DN 50, 45 - 90°, als Zulage.;2,0;St;gaeb;3928155.x83
+24;Stutzen (Abzweig) DN 12, als Zulage.;1,0;St;gaeb;3928155.x83
+25;Stutzen (Abzweig) DN 15, als Zulage.;1,0;St;gaeb;3928155.x83
+26;Stutzen (Abzweig) DN 20, als Zulage.;2,0;St;gaeb;3928155.x83
+27;Stutzen (Abzweig) DN 25, als Zulage.;2,0;St;gaeb;3928155.x83
+28;Stutzen (Abzweig) DN 32, als Zulage.;1,0;St;gaeb;3928155.x83
+29;Stutzen (Abzweig) DN 40, als Zulage.;1,0;St;gaeb;3928155.x83
+30;Stutzen (Abzweig) DN 50, als Zulage.;1,0;St;gaeb;3928155.x83
+31;Konus DN 15, als Zulage.;1,0;St;gaeb;3928155.x83
+32;Konus DN 20, als Zulage.;1,0;St;gaeb;3928155.x83
+33;Konus DN 25, als Zulage.;2,0;St;gaeb;3928155.x83
+34;Konus DN 32, als Zulage.;2,0;St;gaeb;3928155.x83
+35;Konus DN 40, als Zulage.;2,0;St;gaeb;3928155.x83
+36;Konus DN 50, als Zulage.;2,0;St;gaeb;3928155.x83
+37;Endstelle DN 12, als Zulage.;2,0;St;gaeb;3928155.x83
+38;Endstelle DN 15, als Zulage.;2,0;St;gaeb;3928155.x83
+39;Endstelle DN 20, als Zulage.;2,0;St;gaeb;3928155.x83
+40;Endstelle DN 25, als Zulage.;2,0;St;gaeb;3928155.x83
+41;Endstelle DN 32, als Zulage.;2,0;St;gaeb;3928155.x83
+42;Endstelle DN 40, als Zulage.;2,0;St;gaeb;3928155.x83
+43;Endstelle DN 50, als Zulage.;2,0;St;gaeb;3928155.x83
+44;Ausschnitt DN 12, als Zulage.;8,0;St;gaeb;3928155.x83
+45;Ausschnitt DN 15, als Zulage.;8,0;St;gaeb;3928155.x83
+46;Ausschnitt DN 20, als Zulage.;10,0;St;gaeb;3928155.x83
+47;Ausschnitt DN 25, als Zulage.;6,0;St;gaeb;3928155.x83
+48;Ausschnitt DN 32, als Zulage.;4,0;St;gaeb;3928155.x83
+49;Ausschnitt DN 40, als Zulage.;3,0;St;gaeb;3928155.x83
+50;Ausschnitt DN 50, als Zulage.;2,0;St;gaeb;3928155.x83
+1;für Stahlrohr DN 15 (d = 21,3 mm),;10,0;m;gaeb;3928155.x83
+2;für Stahlrohr DN 20 (d = 26,9 mm),;2,0;m;gaeb;3928155.x83
+3;für Stahlrohr DN 25 (d = 33,7 mm),;6,0;m;gaeb;3928155.x83
+4;für Stahlrohr DN 32 (d = 42,4 mm),;15,0;m;gaeb;3928155.x83
+5;für Stahlrohr DN 40 (d = 48,3 mm),;10,0;m;gaeb;3928155.x83
+6;für Stahlrohr DN 50 (d = 60,3 mm),;15,0;m;gaeb;3928155.x83
+7;für Stahlrohr DN 65 (d = 76,1 mm),;20,0;m;gaeb;3928155.x83
+8;für Kupfer-, Edelstahl- und C-Stahlrohr DN 12 (d = 15 mm),;6,0;m;gaeb;3928155.x83
+9;für Kupfer-, Edelstahl- und C-Stahlrohr DN 15 (d = 18 mm),;10,0;m;gaeb;3928155.x83
+10;für Kupfer-, Edelstahl- und C-Stahlrohr DN 20 (d = 22 mm),;20,0;m;gaeb;3928155.x83
+11;für Kupfer-, Edelstahl- und C-Stahlrohr DN 25 (d = 28 mm),;40,0;m;gaeb;3928155.x83
+12;für Kupfer-, Edelstahl- und C-Stahlrohr DN 32 (d = 35 mm),;35,0;m;gaeb;3928155.x83
+13;für Kupfer-, Edelstahl- und C-Stahlrohr DN 40 (d = 42 mm),;6,0;m;gaeb;3928155.x83
+14;für Kupfer-, Edelstahl- und C-Stahlrohr DN 50 (d = 54 mm),;4,0;m;gaeb;3928155.x83
+15;Mehrpreis als Aufpreis für die technische Dämmung der vorgenannten;20,0;m;gaeb;3928155.x83
+16;Mehrpreis als Aufpreis für die technische Dämmung der vorgenannten;5,0;m;gaeb;3928155.x83
+17;Passstück DN 12, bis 500 mm Länge, als Zulage.;2,0;St;gaeb;3928155.x83
+18;Passstück DN 15, bis 500 mm Länge, als Zulage.;6,0;St;gaeb;3928155.x83
+19;Passstück DN 20, bis 500 mm Länge, als Zulage.;7,0;St;gaeb;3928155.x83
+20;Passstück DN 25, bis 500 mm Länge, als Zulage.;15,0;St;gaeb;3928155.x83
+21;Passstück DN 32, bis 500 mm Länge, als Zulage.;16,0;St;gaeb;3928155.x83
+22;Passstück DN 40, bis 500 mm Länge, als Zulage.;5,0;St;gaeb;3928155.x83
+23;Passstück DN 50, bis 500 mm Länge, als Zulage.;10,0;St;gaeb;3928155.x83
+24;Passstück DN 65, bis 500 mm Länge, als Zulage.;16,0;St;gaeb;3928155.x83
+25;Bogen DN 12, 45 - 90°, als Zulage.;5,0;St;gaeb;3928155.x83
+26;Bogen DN 15, 45 - 90°, als Zulage.;15,0;St;gaeb;3928155.x83
+27;Bogen DN 20, 45 - 90°, als Zulage.;10,0;St;gaeb;3928155.x83
+28;Bogen DN 25, 45 - 90°, als Zulage.;25,0;St;gaeb;3928155.x83
+29;Bogen DN 32, 45 - 90°, als Zulage.;20,0;St;gaeb;3928155.x83
+30;Bogen DN 40, 45 - 90°, als Zulage.;30,0;St;gaeb;3928155.x83
+31;Bogen DN 50, 45 - 90°, als Zulage.;8,0;St;gaeb;3928155.x83
+32;Bogen DN 65, 45 - 90°, als Zulage.;10,0;St;gaeb;3928155.x83
+33;Stutzen (Abzweig) DN 12, als Zulage.;2,0;St;gaeb;3928155.x83
+34;Stutzen (Abzweig) DN 15, als Zulage.;6,0;St;gaeb;3928155.x83
+35;Stutzen (Abzweig) DN 20, als Zulage.;8,0;St;gaeb;3928155.x83
+36;Stutzen (Abzweig) DN 25, als Zulage.;15,0;St;gaeb;3928155.x83
+37;Stutzen (Abzweig) DN 32, als Zulage.;15,0;St;gaeb;3928155.x83
+38;Stutzen (Abzweig) DN 40, als Zulage.;6,0;St;gaeb;3928155.x83
+39;Stutzen (Abzweig) DN 50, als Zulage.;4,0;St;gaeb;3928155.x83
+40;Stutzen (Abzweig) DN 65, als Zulage.;6,0;St;gaeb;3928155.x83
+41;Konus DN 15, als Zulage.;2,0;St;gaeb;3928155.x83
+42;Konus DN 20, als Zulage.;2,0;St;gaeb;3928155.x83
+43;Konus DN 25, als Zulage.;6,0;St;gaeb;3928155.x83
+44;Konus DN 32, als Zulage.;8,0;St;gaeb;3928155.x83
+45;Konus DN 40, als Zulage.;10,0;St;gaeb;3928155.x83
+46;Konus DN 50, als Zulage.;4,0;St;gaeb;3928155.x83
+47;Konus DN 65, als Zulage.;4,0;St;gaeb;3928155.x83
+48;Endstelle DN 12, als Zulage.;2,0;St;gaeb;3928155.x83
+49;Endstelle DN 15, als Zulage.;2,0;St;gaeb;3928155.x83
+50;Endstelle DN 20, als Zulage.;4,0;St;gaeb;3928155.x83
+51;Endstelle DN 25, als Zulage.;8,0;St;gaeb;3928155.x83
+52;Endstelle DN 32, als Zulage.;6,0;St;gaeb;3928155.x83
+53;Endstelle DN 40, als Zulage.;15,0;St;gaeb;3928155.x83
+54;Endstelle DN 50, als Zulage.;8,0;St;gaeb;3928155.x83
+55;Endstelle DN 65, als Zulage.;6,0;St;gaeb;3928155.x83
+56;Ausschnitt DN 12, als Zulage.;6,0;St;gaeb;3928155.x83
+57;Ausschnitt DN 15, als Zulage.;20,0;St;gaeb;3928155.x83
+58;Ausschnitt DN 20, als Zulage.;25,0;St;gaeb;3928155.x83
+59;Ausschnitt DN 25, als Zulage.;45,0;St;gaeb;3928155.x83
+60;Ausschnitt DN 32, als Zulage.;50,0;St;gaeb;3928155.x83
+61;Ausschnitt DN 40, als Zulage.;15,0;St;gaeb;3928155.x83
+62;Ausschnitt DN 50, als Zulage.;15,0;St;gaeb;3928155.x83
+63;Ausschnitt DN 65, als Zulage.;20,0;St;gaeb;3928155.x83
+64;Überbau von Rohrhalterungen in Rohrleitungen DN 12, inkl. zwei Endstellen, Überlappung nach DIN 4140, einschl. Ausschnitt für Gewindestab, als Zulage.;4,0;St;gaeb;3928155.x83
+65;Überbau von Rohrhalterungen in Rohrleitungen DN 15, inkl. zwei Endstellen, Überlappung nach DIN 4140, einschl. Ausschnitt für Gewindestab, als Zulage.;14,0;St;gaeb;3928155.x83
+66;Überbau von Rohrhalterungen in Rohrleitungen DN 20, inkl. zwei Endstellen, Überlappung nach DIN 4140, einschl. Ausschnitt für Gewindestab, als Zulage.;16,0;St;gaeb;3928155.x83
+67;Überbau von Rohrhalterungen in Rohrleitungen DN 25, inkl. zwei Endstellen, Überlappung nach DIN 4140, einschl. Ausschnitt für Gewindestab, als Zulage.;30,0;St;gaeb;3928155.x83
+68;Überbau von Rohrhalterungen in Rohrleitungen DN 32, inkl. zwei Endstellen, Überlappung nach DIN 4140, einschl. Ausschnitt für Gewindestab, als Zulage.;34,0;St;gaeb;3928155.x83
+69;Überbau von Rohrhalterungen in Rohrleitungen DN 40, inkl. zwei Endstellen, Überlappung nach DIN 4140, einschl. Ausschnitt für Gewindestab, als Zulage.;10,0;St;gaeb;3928155.x83
+70;Überbau von Rohrhalterungen in Rohrleitungen DN 50, inkl. zwei Endstellen, Überlappung nach DIN 4140, einschl. Ausschnitt für Gewindestab, als Zulage.;6,0;St;gaeb;3928155.x83
+71;Überbau von Rohrhalterungen in Rohrleitungen DN 65, inkl. zwei Endstellen, Überlappung nach DIN 4140, einschl. Ausschnitt für Gewindestab, als Zulage.;18,0;St;gaeb;3928155.x83
+72;Mehrpreis als Aufpreis zu vorgenannter Rohrleitungsisolierung,;5,0;m;gaeb;3928155.x83
+73;Mehrpreis als Aufpreis zu vorgenannter Rohrleitungsisolierung,;5,0;m;gaeb;3928155.x83
+74;Mehrpreis als Aufpreis zu vorgenannter Rohrleitungsisolierung,;10,0;m;gaeb;3928155.x83
+75;Mehrpreis als Aufpreis zu vorgenannter Rohrleitungsisolierung,;15,0;m;gaeb;3928155.x83
+76;Mehrpreis als Aufpreis zu vorgenannter Rohrleitungsisolierung,;10,0;m;gaeb;3928155.x83
+77;Mehrpreis als Aufpreis zu vorgenannter Rohrleitungsisolierung,;5,0;m;gaeb;3928155.x83
+78;Mehrpreis als Aufpreis zu vorgenannter Rohrleitungsisolierung,;10,0;m;gaeb;3928155.x83
+79;Mehrpreis als Aufpreis zu vorgenannter Rohrleitungsisolierung,;15,0;m;gaeb;3928155.x83
+80;Mehrpreis als Aufpreis zu vorgenannter Formstück-Isolierung, jegliche Art,;10,0;St;gaeb;3928155.x83
+81;Mehrpreis als Aufpreis zu vorgenannter Formstück-Isolierung, jegliche Art,;15,0;St;gaeb;3928155.x83
+82;Mehrpreis als Aufpreis zu vorgenannter Formstück-Isolierung, jegliche Art,;35,0;St;gaeb;3928155.x83
+83;Mehrpreis als Aufpreis zu vorgenannter Formstück-Isolierung, jegliche Art,;45,0;St;gaeb;3928155.x83
+84;Mehrpreis als Aufpreis zu vorgenannter Formstück-Isolierung, jegliche Art,;20,0;St;gaeb;3928155.x83
+85;Mehrpreis als Aufpreis zu vorgenannter Formstück-Isolierung, jegliche Art,;45,0;St;gaeb;3928155.x83
+86;Mehrpreis als Aufpreis zu vorgenannter Formstück-Isolierung, jegliche Art,;20,0;St;gaeb;3928155.x83
+87;Mehrpreis als Aufpreis zu vorgenannter Formstück-Isolierung, jegliche Art,;26,0;St;gaeb;3928155.x83
+88;Dämmkappe einschl. Ummantelung nach DIN 4140, zweiteilig, aus;1,0;St;gaeb;3928155.x83
+89;desgl., jedoch für Flanschen-Absperrklappe DN 20,;1,0;St;gaeb;3928155.x83
+90;desgl., jedoch für Flanschen-Absperrklappe DN 25;6,0;St;gaeb;3928155.x83
+91;desgl., jedoch für Flanschen-Absperrklappe DN 32,;2,0;St;gaeb;3928155.x83
+92;desgl., jedoch für Flanschen-Absperrklappe DN 40,;10,0;St;gaeb;3928155.x83
+93;desgl., jedoch für Flanschen-Absperrklappe DN 50,;8,0;St;gaeb;3928155.x83
+94;desgl., jedoch für Flanschen-Absperrklappe DN 65,;6,0;St;gaeb;3928155.x83
+95;desgl., jedoch für Flanschen-Absperrventil DN 15, Kurz- und Normalbaulänge;1,0;St;gaeb;3928155.x83
+96;desgl., jedoch für Flanschen-Absperrventil DN 20, Kurz- und Normalbaulänge;1,0;St;gaeb;3928155.x83
+97;desgl., jedoch für Flanschen-Absperrventil DN 25, Kurz- und Normalbaulänge;4,0;St;gaeb;3928155.x83
+98;desgl., jedoch für Flanschen-Absperrventil DN 32, Kurz- und Normalbaulänge;2,0;St;gaeb;3928155.x83
+99;desgl., jedoch für Flansch-Absperrventil DN 40, Kurz- und Normalbaulänge;4,0;St;gaeb;3928155.x83
+100;desgl., jedoch für Flanschen-Absperrventil DN 50, Kurz- und Normalbaulänge;4,0;St;gaeb;3928155.x83
+101;desgl., jedoch für Flanschen-Absperrventil DN 65, Kurz- und Normalbaulänge;2,0;St;gaeb;3928155.x83
+102;desgl., jedoch für Flanschen-Schmutzfänger DN 25,;3,0;St;gaeb;3928155.x83
+103;desgl., jedoch für Flanschen-Schmutzfänger DN 32,;2,0;St;gaeb;3928155.x83
+104;desgl., jedoch für Flanschen-Schmutzfänger DN 40,;2,0;St;gaeb;3928155.x83
+105;desgl., jedoch für Flanschen-Schmutzfänger DN 50,;2,0;St;gaeb;3928155.x83
+106;desgl., jedoch für Flanschen-Schmutzfänger DN 65,;2,0;St;gaeb;3928155.x83
+107;desgl., jedoch für Flanschen-Dreiwegeventil DN 15 mit Stellantrieb,;1,0;St;gaeb;3928155.x83
+108;desgl., jedoch für Flanschen-Dreiwegeventil DN 20 mit Stellantrieb,;2,0;St;gaeb;3928155.x83
+109;desgl., jedoch für Flanschen-Dreiwegeventil DN 25 mit Stellantrieb,;3,0;St;gaeb;3928155.x83
+110;desgl., jedoch für Flanschen-Dreiwegeventil DN 32 mit Stellantrieb,;2,0;St;gaeb;3928155.x83
+111;desgl., jedoch für Flanschen-Dreiwegeventil DN 40 mit Stellantrieb,;1,0;St;gaeb;3928155.x83
+112;desgl., jedoch für Flanschen-Übergang DN 15, ohne Armaturenanschluss,;2,0;St;gaeb;3928155.x83
+113;desgl., jedoch für Flanschen-Übergang DN 20, ohne Armaturenanschluss,;2,0;St;gaeb;3928155.x83
+114;desgl., jedoch für Flanschen-Übergang DN 25, ohne Armaturenanschluss,;4,0;St;gaeb;3928155.x83
+115;desgl., jedoch für Flanschen-Übergang DN 32, ohne Armaturenanschluss,;2,0;St;gaeb;3928155.x83
+116;desgl., jedoch für Flanschen-Übergang DN 40, ohne Armaturenanschluss,;2,0;St;gaeb;3928155.x83
+117;desgl., jedoch für Flanschen-Übergang DN 50, ohne Armaturenanschluss,;4,0;St;gaeb;3928155.x83
+118;desgl., jedoch für Flanschen-Übergang DN 65, ohne Armaturenanschluss,;6,0;St;gaeb;3928155.x83
+119;"desgl., jedoch für Lufttopf; Nenninhalt 1 Liter (DN 65 - DN 80),";4,0;St;gaeb;3928155.x83
+120;"desgl., jedoch für Lufttopf; Nenninhalt 3 Liter (DN 100 - DN 125),";6,0;St;gaeb;3928155.x83
+121;"desgl., jedoch für Lufttopf; Nenninhalt 5 Liter (DN 150),";2,0;St;gaeb;3928155.x83
+122;Dämmkappe einschl. Ummantelung nach DIN 4140, zweiteilig, aus;1,0;St;gaeb;3928155.x83
+123;desgl., jedoch für Muffen-Armatur DN 20, (Regulier- und Absperrorgane, etc.),;1,0;St;gaeb;3928155.x83
+124;desgl., jedoch für Muffen-Armatur DN 25, (Regulier- und Absperrorgane, etc.),;4,0;St;gaeb;3928155.x83
+125;desgl., jedoch für Muffen-Armatur DN 32, (Regulier- und Absperrorgane, etc.),;2,0;St;gaeb;3928155.x83
+126;desgl., jedoch für Muffen-Armatur DN 40, (Regulier- und Absperrorgane, etc.),;2,0;St;gaeb;3928155.x83
+127;desgl., jedoch für Muffen-Armatur DN 50, (Regulier- und Absperrorgane, etc.),;4,0;St;gaeb;3928155.x83
+128;desgl., jedoch für Verschraubung DN 15, ohne Armaturenanschluss,;2,0;St;gaeb;3928155.x83
+129;desgl., jedoch für Verschraubung DN 20, ohne Armaturenanschluss,;2,0;St;gaeb;3928155.x83
+130;desgl., jedoch für Verschraubung DN 25, ohne Armaturenanschluss,;6,0;St;gaeb;3928155.x83
+131;desgl., jedoch für Verschraubung DN 32, ohne Armaturenanschluss,;2,0;St;gaeb;3928155.x83
+132;desgl., jedoch für Verschraubung DN 40, ohne Armaturenanschluss,;2,0;St;gaeb;3928155.x83
+133;desgl., jedoch für Verschraubung DN 50, ohne Armaturenanschluss,;4,0;St;gaeb;3928155.x83
+134;zusätzliche Teilung an der Dämmkappe herstellen,;4,0;St;gaeb;3928155.x83
+135;zusätzliche Teilung an der Dämmkappe herstellen,;2,0;St;gaeb;3928155.x83
+136;Dämmkappe einschl. Ummantelung nach DIN 4140, zweiteilig, mit Kunststoffmantel, leicht abnehmbar mit Bändern und Hebelverschlüssen bzw. Spannringen, formstabil mittels PUR-Hartschaumkern, FCKW-frei, schwer entflammbar nach DIN 4102 (Baustoffklasse B1),;6,0;St;gaeb;3928155.x83
+137;desgl., jedoch für Muffen-Armatur DN 20, (Regulier- und Absperrorgane),;4,0;St;gaeb;3928155.x83
+138;desgl., jedoch für Muffen-Armatur DN 25, (Regulier- und Absperrorgane),;8,0;St;gaeb;3928155.x83
+139;desgl., jedoch für Muffen-Armatur DN 32, (Regulier- und Absperrorgane),;6,0;St;gaeb;3928155.x83
+140;desgl., jedoch für Muffen-Armatur DN 40, (Regulier- und Absperrorgane),;4,0;St;gaeb;3928155.x83
+141;desgl., jedoch für Muffen-Armatur DN 50, (Regulier- und Absperrorgane),;4,0;St;gaeb;3928155.x83
+142;Mehrpreis als Aufpreis für die technische Dämmung der vorgenannten;12,0;St;gaeb;3928155.x83
+143;Mehrpreis als Aufpreis für die technische Dämmung der vorgenannten;10,0;St;gaeb;3928155.x83
+1;für Stahlrohr DN 15 (d = 21,3 mm),;20,0;m;gaeb;3928155.x83
+2;für Stahlrohr DN 20 (d = 26,9 mm),;5,0;m;gaeb;3928155.x83
+3;für Stahlrohr DN 25 (d = 33,7 mm),;10,0;m;gaeb;3928155.x83
+4;für Stahlrohr DN 32 (d = 42,4 mm),;20,0;m;gaeb;3928155.x83
+5;für Stahlrohr DN 40 (d = 48,3 mm),;6,0;m;gaeb;3928155.x83
+6;für Stahlrohr DN 50 (d = 60,3 mm),;10,0;m;gaeb;3928155.x83
+7;für Stahlrohr DN 65 (d = 76,1 mm),;45,0;m;gaeb;3928155.x83
+8;für Kupfer-, Edelstahl- und C-Stahlrohr DN 12 (d = 15 mm),;55,0;m;gaeb;3928155.x83
+9;für Kupfer-, Edelstahl- und C-Stahlrohr DN 15 (d = 18 mm),;90,0;m;gaeb;3928155.x83
+10;für Kupfer-, Edelstahl- und C-Stahlrohr DN 20 (d = 22 mm),;65,0;m;gaeb;3928155.x83
+11;für Kupfer-, Edelstahl- und C-Stahlrohr DN 25 (d = 28 mm),;145,0;m;gaeb;3928155.x83
+12;für Kupfer-, Edelstahl- und C-Stahlrohr DN 32 (d = 35 mm),;260,0;m;gaeb;3928155.x83
+13;für Kupfer-, Edelstahl- und C-Stahlrohr DN 40 (d = 42 mm),;220,0;m;gaeb;3928155.x83
+14;für Kupfer-, Edelstahl- und C-Stahlrohr DN 50 (d = 54 mm),;55,0;m;gaeb;3928155.x83
+15;Mehrpreis als Aufpreis für die technische Dämmung der vorgenannten;480,0;m;gaeb;3928155.x83
+16;Mehrpreis als Aufpreis für die technische Dämmung der vorgenannten;10,0;m;gaeb;3928155.x83
+17;Passstück DN 12, bis 500 mm Länge, als Zulage.;25,0;St;gaeb;3928155.x83
+18;Passstück DN 15, bis 500 mm Länge, als Zulage.;30,0;St;gaeb;3928155.x83
+19;Passstück DN 20, bis 500 mm Länge, als Zulage.;20,0;St;gaeb;3928155.x83
+20;Passstück DN 25, bis 500 mm Länge, als Zulage.;40,0;St;gaeb;3928155.x83
+21;Passstück DN 32, bis 500 mm Länge, als Zulage.;60,0;St;gaeb;3928155.x83
+22;Passstück DN 40, bis 500 mm Länge, als Zulage.;50,0;St;gaeb;3928155.x83
+23;Passstück DN 50, bis 500 mm Länge, als Zulage.;18,0;St;gaeb;3928155.x83
+24;Passstück DN 65, bis 500 mm Länge, als Zulage.;16,0;St;gaeb;3928155.x83
+25;Bogen DN 12, 45 - 90°, als Zulage.;35,0;St;gaeb;3928155.x83
+26;Bogen DN 15, 45 - 90°, als Zulage.;90,0;St;gaeb;3928155.x83
+27;Bogen DN 20, 45 - 90°, als Zulage.;40,0;St;gaeb;3928155.x83
+28;Bogen DN 25, 45 - 90°, als Zulage.;45,0;St;gaeb;3928155.x83
+29;Bogen DN 32, 45 - 90°, als Zulage.;55,0;St;gaeb;3928155.x83
+30;Bogen DN 40, 45 - 90°, als Zulage.;30,0;St;gaeb;3928155.x83
+31;Bogen DN 50, 45 - 90°, als Zulage.;28,0;St;gaeb;3928155.x83
+32;Bogen DN 65, 45 - 90°, als Zulage.;14,0;St;gaeb;3928155.x83
+33;Stutzen (Abzweig) DN 12, als Zulage.;2,0;St;gaeb;3928155.x83
+34;Stutzen (Abzweig) DN 15, als Zulage.;10,0;St;gaeb;3928155.x83
+35;Stutzen (Abzweig) DN 20, als Zulage.;25,0;St;gaeb;3928155.x83
+36;Stutzen (Abzweig) DN 25, als Zulage.;20,0;St;gaeb;3928155.x83
+37;Stutzen (Abzweig) DN 32, als Zulage.;25,0;St;gaeb;3928155.x83
+38;Stutzen (Abzweig) DN 40, als Zulage.;30,0;St;gaeb;3928155.x83
+39;Stutzen (Abzweig) DN 50, als Zulage.;12,0;St;gaeb;3928155.x83
+40;Stutzen (Abzweig) DN 65, als Zulage.;8,0;St;gaeb;3928155.x83
+41;Konus DN 15, als Zulage.;5,0;St;gaeb;3928155.x83
+42;Konus DN 20, als Zulage.;10,0;St;gaeb;3928155.x83
+43;Konus DN 25, als Zulage.;15,0;St;gaeb;3928155.x83
+44;Konus DN 32, als Zulage.;20,0;St;gaeb;3928155.x83
+45;Konus DN 40, als Zulage.;25,0;St;gaeb;3928155.x83
+46;Konus DN 50, als Zulage.;10,0;St;gaeb;3928155.x83
+47;Konus DN 65, als Zulage.;8,0;St;gaeb;3928155.x83
+48;Endstelle DN 12, als Zulage.;5,0;St;gaeb;3928155.x83
+49;Endstelle DN 15, als Zulage.;10,0;St;gaeb;3928155.x83
+50;Endstelle DN 20, als Zulage.;15,0;St;gaeb;3928155.x83
+51;Endstelle DN 25, als Zulage.;20,0;St;gaeb;3928155.x83
+52;Endstelle DN 32, als Zulage.;25,0;St;gaeb;3928155.x83
+53;Endstelle DN 40, als Zulage.;20,0;St;gaeb;3928155.x83
+54;Endstelle DN 50, als Zulage.;8,0;St;gaeb;3928155.x83
+55;Endstelle DN 65, als Zulage.;6,0;St;gaeb;3928155.x83
+56;Ausschnitt DN 12, als Zulage.;55,0;St;gaeb;3928155.x83
+57;Ausschnitt DN 15, als Zulage.;110,0;St;gaeb;3928155.x83
+58;Ausschnitt DN 20, als Zulage.;70,0;St;gaeb;3928155.x83
+59;Ausschnitt DN 25, als Zulage.;155,0;St;gaeb;3928155.x83
+60;Ausschnitt DN 32, als Zulage.;280,0;St;gaeb;3928155.x83
+61;Ausschnitt DN 40, als Zulage.;226,0;St;gaeb;3928155.x83
+62;Ausschnitt DN 50, als Zulage.;65,0;St;gaeb;3928155.x83
+63;Ausschnitt DN 65, als Zulage.;40,0;St;gaeb;3928155.x83
+64;Überbau von Rohrhalterungen in Rohrleitungen DN 12, inkl. zwei Endstellen, Überlappung nach DIN 4140, einschl. Ausschnitt für Gewindestab, als Zulage.;30,0;St;gaeb;3928155.x83
+65;Überbau von Rohrhalterungen in Rohrleitungen DN 15, inkl. zwei Endstellen, Überlappung nach DIN 4140, einschl. Ausschnitt für Gewindestab, als Zulage.;74,0;St;gaeb;3928155.x83
+66;Überbau von Rohrhalterungen in Rohrleitungen DN 20, inkl. zwei Endstellen, Überlappung nach DIN 4140, einschl. Ausschnitt für Gewindestab, als Zulage.;46,0;St;gaeb;3928155.x83
+67;Überbau von Rohrhalterungen in Rohrleitungen DN 25, inkl. zwei Endstellen, Überlappung nach DIN 4140, einschl. Ausschnitt für Gewindestab, als Zulage.;104,0;St;gaeb;3928155.x83
+68;Überbau von Rohrhalterungen in Rohrleitungen DN 32, inkl. zwei Endstellen, Überlappung nach DIN 4140, einschl. Ausschnitt für Gewindestab, als Zulage.;186,0;St;gaeb;3928155.x83
+69;Überbau von Rohrhalterungen in Rohrleitungen DN 40, inkl. zwei Endstellen, Überlappung nach DIN 4140, einschl. Ausschnitt für Gewindestab, als Zulage.;150,0;St;gaeb;3928155.x83
+70;Überbau von Rohrhalterungen in Rohrleitungen DN 50, inkl. zwei Endstellen, Überlappung nach DIN 4140, einschl. Ausschnitt für Gewindestab, als Zulage.;44,0;St;gaeb;3928155.x83
+71;Überbau von Rohrhalterungen in Rohrleitungen DN 65, inkl. zwei Endstellen, Überlappung nach DIN 4140, einschl. Ausschnitt für Gewindestab, als Zulage.;14,0;St;gaeb;3928155.x83
+1;für Edelstahlrohr DN 12 (d = 15 mm), Dämmdicke ca. 17,0 mm.;25,0;m;gaeb;3928155.x83
+2;für Edelstahlrohr DN 15 (d = 18 mm), Dämmdicke ca. 17,5 mm.;20,0;m;gaeb;3928155.x83
+3;für Edelstahlrohr DN 20 (d = 22 mm), Dämmdicke ca. 18,0 mm.;15,0;m;gaeb;3928155.x83
+4;für Edelstahlrohr DN 25 (d = 28 mm), Dämmdicke ca. 19,0 mm.;40,0;m;gaeb;3928155.x83
+5;für Edelstahlrohr DN 32 (d = 35 mm), Dämmdicke ca. 19,5 mm.;25,0;m;gaeb;3928155.x83
+6;für Edelstahlrohr DN 40 (d = 42 mm), Dämmdicke ca. 20,5 mm.;8,0;m;gaeb;3928155.x83
+7;für Edelstahlrohr DN 50 (d = 54 mm), Dämmdicke ca. 21,0 mm.;18,0;m;gaeb;3928155.x83
+8;Mehrpreis als Aufpreis für die technische Dämmung der vorgenannten;14,0;m;gaeb;3928155.x83
+9;Mehrpreis als Aufpreis für die technische Dämmung der vorgenannten;6,0;m;gaeb;3928155.x83
+10;Passstück DN 12, bis 500 mm Länge, als Zulage.;8,0;St;gaeb;3928155.x83
+11;Passstück DN 15, bis 500 mm Länge, als Zulage.;7,0;St;gaeb;3928155.x83
+12;Passstück DN 20, bis 500 mm Länge, als Zulage.;5,0;St;gaeb;3928155.x83
+13;Passstück DN 25, bis 500 mm Länge, als Zulage.;7,0;St;gaeb;3928155.x83
+14;Passstück DN 32, bis 500 mm Länge, als Zulage.;16,0;St;gaeb;3928155.x83
+15;Passstück DN 40, bis 500 mm Länge, als Zulage.;3,0;St;gaeb;3928155.x83
+16;Passstück DN 50, bis 500 mm Länge, als Zulage.;5,0;St;gaeb;3928155.x83
+17;Bogen DN 12, 45 - 90°, als Zulage.;16,0;St;gaeb;3928155.x83
+18;Bogen DN 15, 45 - 90°, als Zulage.;18,0;St;gaeb;3928155.x83
+19;Bogen DN 20, 45 - 90°, als Zulage.;12,0;St;gaeb;3928155.x83
+20;Bogen DN 25, 45 - 90°, als Zulage.;8,0;St;gaeb;3928155.x83
+21;Bogen DN 32, 45 - 90°, als Zulage.;12,0;St;gaeb;3928155.x83
+22;Bogen DN 40, 45 - 90°, als Zulage.;4,0;St;gaeb;3928155.x83
+23;Bogen DN 50, 45 - 90°, als Zulage.;4,0;St;gaeb;3928155.x83
+24;Stutzen (Abzweig) DN 12, als Zulage.;2,0;St;gaeb;3928155.x83
+25;Stutzen (Abzweig) DN 15, als Zulage.;2,0;St;gaeb;3928155.x83
+26;Stutzen (Abzweig) DN 20, als Zulage.;3,0;St;gaeb;3928155.x83
+27;Stutzen (Abzweig) DN 25, als Zulage.;5,0;St;gaeb;3928155.x83
+28;Stutzen (Abzweig) DN 32, als Zulage.;6,0;St;gaeb;3928155.x83
+29;Stutzen (Abzweig) DN 40, als Zulage.;2,0;St;gaeb;3928155.x83
+30;Stutzen (Abzweig) DN 50, als Zulage.;3,0;St;gaeb;3928155.x83
+31;Konus DN 15, als Zulage.;2,0;St;gaeb;3928155.x83
+32;Konus DN 20, als Zulage.;4,0;St;gaeb;3928155.x83
+33;Konus DN 25, als Zulage.;6,0;St;gaeb;3928155.x83
+34;Konus DN 32, als Zulage.;8,0;St;gaeb;3928155.x83
+35;Konus DN 40, als Zulage.;2,0;St;gaeb;3928155.x83
+36;Konus DN 50, als Zulage.;2,0;St;gaeb;3928155.x83
+37;Endstelle DN 12, als Zulage.;2,0;St;gaeb;3928155.x83
+38;Endstelle DN 15, als Zulage.;2,0;St;gaeb;3928155.x83
+39;Endstelle DN 20, als Zulage.;4,0;St;gaeb;3928155.x83
+40;Endstelle DN 25, als Zulage.;6,0;St;gaeb;3928155.x83
+41;Endstelle DN 32, als Zulage.;8,0;St;gaeb;3928155.x83
+42;Endstelle DN 40, als Zulage.;2,0;St;gaeb;3928155.x83
+43;Endstelle DN 50, als Zulage.;2,0;St;gaeb;3928155.x83
+44;Ausschnitt DN 12, als Zulage.;25,0;St;gaeb;3928155.x83
+45;Ausschnitt DN 15, als Zulage.;20,0;St;gaeb;3928155.x83
+46;Ausschnitt DN 20, als Zulage.;15,0;St;gaeb;3928155.x83
+47;Ausschnitt DN 25, als Zulage.;20,0;St;gaeb;3928155.x83
+48;Ausschnitt DN 32, als Zulage.;40,0;St;gaeb;3928155.x83
+49;Ausschnitt DN 40, als Zulage.;8,0;St;gaeb;3928155.x83
+50;Ausschnitt DN 50, als Zulage.;18,0;St;gaeb;3928155.x83
+51;Überbau von Rohrhalterungen in Rohrleitungen DN 12, inkl. zwei Endstellen, Überlappung nach DIN 4140, einschl. Ausschnitt für Gewindestab, als Zulage.;16,0;St;gaeb;3928155.x83
+52;Überbau von Rohrhalterungen in Rohrleitungen DN 15, inkl. zwei Endstellen, Überlappung nach DIN 4140, einschl. Ausschnitt für Gewindestab, als Zulage.;14,0;St;gaeb;3928155.x83
+53;Überbau von Rohrhalterungen in Rohrleitungen DN 20, inkl. zwei Endstellen, Überlappung nach DIN 4140, einschl. Ausschnitt für Gewindestab, als Zulage.;10,0;St;gaeb;3928155.x83
+54;Überbau von Rohrhalterungen in Rohrleitungen DN 25, inkl. zwei Endstellen, Überlappung nach DIN 4140, einschl. Ausschnitt für Gewindestab, als Zulage.;14,0;St;gaeb;3928155.x83
+55;Überbau von Rohrhalterungen in Rohrleitungen DN 32, inkl. zwei Endstellen, Überlappung nach DIN 4140, einschl. Ausschnitt für Gewindestab, als Zulage.;26,0;St;gaeb;3928155.x83
+56;Überbau von Rohrhalterungen in Rohrleitungen DN 40, inkl. zwei Endstellen, Überlappung nach DIN 4140, einschl. Ausschnitt für Gewindestab, als Zulage.;6,0;St;gaeb;3928155.x83
+57;Überbau von Rohrhalterungen in Rohrleitungen DN 50, inkl. zwei Endstellen, Überlappung nach DIN 4140, einschl. Ausschnitt für Gewindestab, als Zulage.;12,0;St;gaeb;3928155.x83
+58;Mehrpreis als Aufpreis zu vorgenannter Rohrleitungsisolierung,;5,0;m;gaeb;3928155.x83
+59;Mehrpreis für Ausführung der Schutzummantelung mit verzinktem Stahlblech anstelle PVC-Folie, für Nennweite DN 15, als Zulage.;5,0;m;gaeb;3928155.x83
+60;Mehrpreis für Ausführung der Schutzummantelung mit verzinktem Stahlblech anstelle PVC-Folie, für Nennweite DN 20, als Zulage.;8,0;m;gaeb;3928155.x83
+61;Mehrpreis für Ausführung der Schutzummantelung mit verzinktem Stahlblech anstelle PVC-Folie, für Nennweite DN 25, als Zulage.;12,0;m;gaeb;3928155.x83
+62;Mehrpreis für Ausführung der Schutzummantelung mit verzinktem Stahlblech anstelle PVC-Folie, für Nennweite DN 32, als Zulage.;16,0;m;gaeb;3928155.x83
+63;Mehrpreis für Ausführung der Schutzummantelung mit verzinktem Stahlblech anstelle PVC-Folie, für Nennweite DN 40, als Zulage.;4,0;m;gaeb;3928155.x83
+64;Mehrpreis für Ausführung der Schutzummantelung mit verzinktem Stahlblech anstelle PVC-Folie, für Nennweite DN 50, als Zulage.;10,0;m;gaeb;3928155.x83
+65;Mehrpreis als Aufpreis zu vorgenannter Formstück-Isolierung, jegliche Art,;6,0;St;gaeb;3928155.x83
+66;Mehrpreis als Aufpreis zu vorgenannter Formstück-Isolierung, jegliche Art,;8,0;St;gaeb;3928155.x83
+67;Mehrpreis als Aufpreis zu vorgenannter Formstück-Isolierung, jegliche Art,;16,0;St;gaeb;3928155.x83
+68;Mehrpreis als Aufpreis zu vorgenannter Formstück-Isolierung, jegliche Art,;24,0;St;gaeb;3928155.x83
+69;Mehrpreis als Aufpreis zu vorgenannter Formstück-Isolierung, jegliche Art,;28,0;St;gaeb;3928155.x83
+70;Mehrpreis als Aufpreis zu vorgenannter Formstück-Isolierung, jegliche Art,;45,0;St;gaeb;3928155.x83
+71;Mehrpreis als Aufpreis zu vorgenannter Formstück-Isolierung, jegliche Art,;30,0;St;gaeb;3928155.x83
+1;für Edelstahlrohr DN 12 (d = 15 mm), Dämmdicke ca. 17,0 mm.;95,0;m;gaeb;3928155.x83
+2;für Edelstahlrohr DN 15 (d = 18 mm), Dämmdicke ca.17,5 mm.;85,0;m;gaeb;3928155.x83
+3;für Edelstahlrohr DN 20 (d = 22 mm), Dämmdicke ca. 18,0 mm.;110,0;m;gaeb;3928155.x83
+4;für Edelstahlrohr DN 25 (d = 28 mm), Dämmdicke ca. 19,0 mm.;130,0;m;gaeb;3928155.x83
+5;für Edelstahlrohr DN 32 (d = 35 mm), Dämmdicke 19,5 mm.;40,0;m;gaeb;3928155.x83
+6;Mehrpreis als Aufpreis für die technische Dämmung der vorgenannten;30,0;m;gaeb;3928155.x83
+7;Passstück DN 12, bis 500 mm Länge, als Zulage.;22,0;St;gaeb;3928155.x83
+8;Passstück DN 15, bis 500 mm Länge, als Zulage.;24,0;St;gaeb;3928155.x83
+9;Passstück DN 20, bis 500 mm Länge, als Zulage.;32,0;St;gaeb;3928155.x83
+10;Passstück DN 25, bis 500 mm Länge, als Zulage.;40,0;St;gaeb;3928155.x83
+11;Passstück DN 32, bis 500 mm Länge, als Zulage.;14,0;St;gaeb;3928155.x83
+12;Bogen DN 12, 45 - 90°, als Zulage.;80,0;St;gaeb;3928155.x83
+13;Bogen DN 15, 45 - 90°, als Zulage.;56,0;St;gaeb;3928155.x83
+14;Bogen DN 20, 45 - 90°, als Zulage.;68,0;St;gaeb;3928155.x83
+15;Bogen DN 25, 45 - 90°, als Zulage.;74,0;St;gaeb;3928155.x83
+16;Bogen DN 32, 45 - 90°, als Zulage.;18,0;St;gaeb;3928155.x83
+17;Stutzen (Abzweig) DN 12, als Zulage.;2,0;St;gaeb;3928155.x83
+18;Stutzen (Abzweig) DN 15, als Zulage.;8,0;St;gaeb;3928155.x83
+19;Stutzen (Abzweig) DN 20, als Zulage.;18,0;St;gaeb;3928155.x83
+20;Stutzen (Abzweig) DN 25, als Zulage.;16,0;St;gaeb;3928155.x83
+21;Stutzen (Abzweig) DN 32, als Zulage.;12,0;St;gaeb;3928155.x83
+22;Konus DN 15, als Zulage.;6,0;St;gaeb;3928155.x83
+23;Konus DN 20, als Zulage.;12,0;St;gaeb;3928155.x83
+24;Konus DN 25, als Zulage.;18,0;St;gaeb;3928155.x83
+25;Konus DN 32, als Zulage.;8,0;St;gaeb;3928155.x83
+26;Endstelle DN 12, als Zulage.;2,0;St;gaeb;3928155.x83
+27;Endstelle DN 15, als Zulage.;8,0;St;gaeb;3928155.x83
+28;Endstelle DN 20, als Zulage.;12,0;St;gaeb;3928155.x83
+29;Endstelle DN 25, als Zulage.;22,0;St;gaeb;3928155.x83
+30;Endstelle DN 32, als Zulage.;4,0;St;gaeb;3928155.x83
+31;Ausschnitt DN 12, als Zulage.;65,0;St;gaeb;3928155.x83
+32;Ausschnitt DN 15, als Zulage.;85,0;St;gaeb;3928155.x83
+33;Ausschnitt DN 20, als Zulage.;110,0;St;gaeb;3928155.x83
+34;Ausschnitt DN 25, als Zulage.;130,0;St;gaeb;3928155.x83
+35;Ausschnitt DN 32, als Zulage.;40,0;St;gaeb;3928155.x83
+36;Überbau von Rohrhalterungen in Rohrleitungen DN 12, inkl. zwei Endstellen, Überlappung nach DIN 4140, einschl. Ausschnitt für Gewindestab, als Zulage.;44,0;St;gaeb;3928155.x83
+37;Überbau von Rohrhalterungen in Rohrleitungen DN 15, inkl. zwei Endstellen, Überlappung nach DIN 4140, einschl. Ausschnitt für Gewindestab, als Zulage.;52,0;St;gaeb;3928155.x83
+38;Überbau von Rohrhalterungen in Rohrleitungen DN 20, inkl. zwei Endstellen, Überlappung nach DIN 4140, einschl. Ausschnitt für Gewindestab, als Zulage.;72,0;St;gaeb;3928155.x83
+39;Überbau von Rohrhalterungen in Rohrleitungen DN 25, inkl. zwei Endstellen, Überlappung nach DIN 4140, einschl. Ausschnitt für Gewindestab, als Zulage.;86,0;St;gaeb;3928155.x83
+40;Überbau von Rohrhalterungen in Rohrleitungen DN 32, inkl. zwei Endstellen, Überlappung nach DIN 4140, einschl. Ausschnitt für Gewindestab, als Zulage.;26,0;St;gaeb;3928155.x83
+41;"Dämmhaube nach DIN 4140 mit Dämmung aus synthetischem Kautschuk mit geschlossenzelliger Materialstruktur, Farbe schwarz, schwer entflammbar nach DIN 4102 (Baustoffklasse B1); Wärmeleitfähigkeitswert: 0,036 W/(mK) bei einer Mitteltemperatur von 0°C.";4,0;St;gaeb;3928155.x83
+42;desgl., jedoch für Muffen-Armatur DN 20,;3,0;St;gaeb;3928155.x83
+43;desgl., jedoch für Muffen-Armatur DN 25,;5,0;St;gaeb;3928155.x83
+44;desgl., jedoch für Muffen-Armatur DN 32,;2,0;St;gaeb;3928155.x83
+45;desgl., jedoch für Muffen-Armatur DN 40,;1,0;St;gaeb;3928155.x83
+46;desgl., jedoch für Muffen-Armatur DN 50,;2,0;St;gaeb;3928155.x83
+47;desgl., jedoch für Flanschen-Armatur DN 25,;1,0;St;gaeb;3928155.x83
+48;desgl., jedoch für Flanschen-Armatur DN 32,;1,0;St;gaeb;3928155.x83
+49;desgl., jedoch für Flanschen-Armatur DN 40,;1,0;St;gaeb;3928155.x83
+50;desgl., jedoch für Flanschen-Armatur DN 50,;1,0;St;gaeb;3928155.x83
+51;Mehrpreis als Aufpreis zu vorgenannter Muffen-Armaturenisolierung,;2,0;St;gaeb;3928155.x83
+52;Mehrpreis als Aufpreis zu vorgenannter Muffen-Armaturenisolierung,;2,0;St;gaeb;3928155.x83
+53;Mehrpreis als Aufpreis zu vorgenannter Muffen-Armaturenisolierung,;2,0;St;gaeb;3928155.x83
+54;Mehrpreis als Aufpreis zu vorgenannter Muffen-Armaturenisolierung,;2,0;St;gaeb;3928155.x83
+55;Mehrpreis als Aufpreis zu vorgenannter Muffen-Armaturenisolierung,;2,0;St;gaeb;3928155.x83
+56;Mehrpreis als Aufpreis zu vorgenannter Muffen-Armaturenisolierung,;2,0;St;gaeb;3928155.x83
+57;Mehrpreis als Aufpreis zu vorgenannter Flanschen-Armaturenisolierung,;1,0;St;gaeb;3928155.x83
+58;Mehrpreis als Aufpreis zu vorgenannter Flanschen-Armaturenisolierung,;1,0;St;gaeb;3928155.x83
+59;Mehrpreis als Aufpreis zu vorgenannter Flanschen-Armaturenisolierung,;1,0;St;gaeb;3928155.x83
+60;Mehrpreis als Aufpreis zu vorgenannter Flanschen-Armaturenisolierung,;1,0;St;gaeb;3928155.x83
+61;Mehrpreis als Aufpreis für die technische Dämmung der vorgenannten;4,0;St;gaeb;3928155.x83
+62;Mehrpreis als Aufpreis für die technische Dämmung der vorgenannten;2,0;St;gaeb;3928155.x83
+1;für Edelstahlrohr DN 12 (d = 15 mm), Dämmdicke 30 mm.;15,0;m;gaeb;3928155.x83
+2;für Edelstahlrohr DN 15 (d = 18 mm), Dämmdicke 30 mm.;20,0;m;gaeb;3928155.x83
+3;für Edelstahlrohr DN 20 (d = 22 mm), Dämmdicke 30 mm.;10,0;m;gaeb;3928155.x83
+4;für Edelstahlrohr DN 25 (d = 28 mm), Dämmdicke 30 mm,;2,0;m;gaeb;3928155.x83
+5;Mehrpreis als Aufpreis für die technische Dämmung der vorgenannten;8,0;m;gaeb;3928155.x83
+6;Passstück DN 12, bis 500 mm Länge, als Zulage.;5,0;St;gaeb;3928155.x83
+7;Passstück DN 15, bis 500 mm Länge, als Zulage.;6,0;St;gaeb;3928155.x83
+8;Passstück DN 20, bis 500 mm Länge, als Zulage.;4,0;St;gaeb;3928155.x83
+9;Passstück DN 25, bis 500 mm Länge, als Zulage.;1,0;St;gaeb;3928155.x83
+10;Bogen DN 12, 45 - 90°, als Zulage.;20,0;St;gaeb;3928155.x83
+11;Bogen DN 15, 45 - 90°, als Zulage.;12,0;St;gaeb;3928155.x83
+12;Bogen DN 20, 45 - 90°, als Zulage.;6,0;St;gaeb;3928155.x83
+13;Bogen DN 25, 45 - 90°, als Zulage.;2,0;St;gaeb;3928155.x83
+14;Stutzen (Abzweig) DN 12, als Zulage.;2,0;St;gaeb;3928155.x83
+15;Stutzen (Abzweig) DN 15, als Zulage.;4,0;St;gaeb;3928155.x83
+16;Stutzen (Abzweig) DN 20, als Zulage.;2,0;St;gaeb;3928155.x83
+17;Stutzen (Abzweig) DN 25, als Zulage.;2,0;St;gaeb;3928155.x83
+18;Konus DN 15, als Zulage.;3,0;St;gaeb;3928155.x83
+19;Konus DN 20, als Zulage.;4,0;St;gaeb;3928155.x83
+20;Konus DN 25, als Zulage.;2,0;St;gaeb;3928155.x83
+21;Endstelle DN 12, als Zulage.;4,0;St;gaeb;3928155.x83
+22;Endstelle DN 15, als Zulage.;2,0;St;gaeb;3928155.x83
+23;Endstelle DN 20, als Zulage.;2,0;St;gaeb;3928155.x83
+24;Endstelle DN 25, als Zulage.;2,0;St;gaeb;3928155.x83
+25;Ausschnitt DN 12, als Zulage.;15,0;St;gaeb;3928155.x83
+26;Ausschnitt DN 15, als Zulage.;20,0;St;gaeb;3928155.x83
+27;Ausschnitt DN 20, als Zulage.;10,0;St;gaeb;3928155.x83
+28;Ausschnitt DN 25, als Zulage.;2,0;St;gaeb;3928155.x83
+29;Mehrpreis für Ausführung der Schutzummantelung mit zusätzlicher PVC-Folie,;5,0;m;gaeb;3928155.x83
+30;Mehrpreis für Ausführung der Schutzummantelung mit zusätzlicher PVC-Folie,;5,0;m;gaeb;3928155.x83
+31;Mehrpreis für Ausführung der Schutzummantelung mit zusätzlicher PVC-Folie,;3,0;m;gaeb;3928155.x83
+32;für Schmutzwasserentlüftungsleitungen DN 70/80, Isolierdicke 30 mm.;12,0;m;gaeb;3928155.x83
+33;für Schmutzwasserentlüftungsleitungen DN 90, Isolierdicke 30 mm.;7,0;m;gaeb;3928155.x83
+34;für Schmutzwasserentlüftungsleitungen DN 100, Isolierdicke 30 mm.;10,0;m;gaeb;3928155.x83
+35;Mehrpreis als Aufpreis für die technische Dämmung der vorgenannten;14,0;m;gaeb;3928155.x83
+1;"für Trinkwasserleitungen aus Edelstahl; DN 12 (d=15 mm), Dämmdicke 25 mm.";2,0;m;gaeb;3928155.x83
+2;"für Trinkwasserleitungen aus Edelstahl; DN 15 (d=18 mm), Dämmdicke 25 mm.";4,0;m;gaeb;3928155.x83
+3;"für Trinkwasserleitungen aus Edelstahl; DN 20 (d=22 mm), Dämmdicke 25 mm.";5,0;m;gaeb;3928155.x83
+4;"für Trinkwasserleitungen aus Edelstahl; DN 25 (d=28 mm), Dämmdicke 25 mm.";6,0;m;gaeb;3928155.x83
+5;"für Trinkwasserleitungen aus Edelstahl; DN 32 (d=35 mm), Dämmdicke 25 mm.";4,0;m;gaeb;3928155.x83
+6;"für Trinkwasserleitungen aus Edelstahl; DN 40 (d=42 mm), Dämmdicke 25 mm.";2,0;m;gaeb;3928155.x83
+7;Mehrpreis als Aufpreis für die technische Dämmung der vorgenannten;4,0;m;gaeb;3928155.x83
+8;Passstück DN 12, bis 500 mm Länge, als Zulage.;1,0;St;gaeb;3928155.x83
+9;Passstück DN 15, bis 500 mm Länge, als Zulage.;1,0;St;gaeb;3928155.x83
+10;Passstück DN 20, bis 500 mm Länge, als Zulage.;2,0;St;gaeb;3928155.x83
+11;Passstück DN 25, bis 500 mm Länge, als Zulage.;2,0;St;gaeb;3928155.x83
+12;Passstück DN 32, bis 500 mm Länge, als Zulage.;1,0;St;gaeb;3928155.x83
+13;Passstück DN 40, bis 500 mm Länge, als Zulage.;1,0;St;gaeb;3928155.x83
+14;Bogen DN 12, 45 - 90°, als Zulage.;2,0;St;gaeb;3928155.x83
+15;Bogen DN 15, 45 - 90°, als Zulage.;4,0;St;gaeb;3928155.x83
+16;Bogen DN 20, 45 - 90°, als Zulage.;6,0;St;gaeb;3928155.x83
+17;Bogen DN 25, 45 - 90°, als Zulage.;3,0;St;gaeb;3928155.x83
+18;Bogen DN 32, 45 - 90°, als Zulage.;2,0;St;gaeb;3928155.x83
+19;Bogen DN 40, 45 - 90°, als Zulage.;1,0;St;gaeb;3928155.x83
+20;Stutzen (Abzweig) DN 12, als Zulage.;1,0;St;gaeb;3928155.x83
+21;Stutzen (Abzweig) DN 15, als Zulage.;1,0;St;gaeb;3928155.x83
+22;Stutzen (Abzweig) DN 20, als Zulage.;2,0;St;gaeb;3928155.x83
+23;Stutzen (Abzweig) DN 25, als Zulage.;2,0;St;gaeb;3928155.x83
+24;Stutzen (Abzweig) DN 32, als Zulage.;1,0;St;gaeb;3928155.x83
+25;Stutzen (Abzweig) DN 40, als Zulage.;1,0;St;gaeb;3928155.x83
+26;Konus DN 15, als Zulage.;1,0;St;gaeb;3928155.x83
+27;Konus DN 20, als Zulage.;1,0;St;gaeb;3928155.x83
+28;Konus DN 25, als Zulage.;3,0;St;gaeb;3928155.x83
+29;Konus DN 32, als Zulage.;2,0;St;gaeb;3928155.x83
+30;Konus DN 40, als Zulage.;1,0;St;gaeb;3928155.x83
+31;Endstelle DN 12, als Zulage.;1,0;St;gaeb;3928155.x83
+32;Endstelle DN 15, als Zulage.;1,0;St;gaeb;3928155.x83
+33;Endstelle DN 20, als Zulage.;2,0;St;gaeb;3928155.x83
+34;Endstelle DN 25, als Zulage.;4,0;St;gaeb;3928155.x83
+35;Endstelle DN 32, als Zulage.;2,0;St;gaeb;3928155.x83
+36;Endstelle DN 40, als Zulage.;1,0;St;gaeb;3928155.x83
+37;Ausschnitt DN 12, als Zulage.;2,0;St;gaeb;3928155.x83
+38;Ausschnitt DN 15, als Zulage.;4,0;St;gaeb;3928155.x83
+39;Ausschnitt DN 20, als Zulage.;5,0;St;gaeb;3928155.x83
+40;Ausschnitt DN 25, als Zulage.;6,0;St;gaeb;3928155.x83
+41;Ausschnitt DN 32, als Zulage.;4,0;St;gaeb;3928155.x83
+42;Ausschnitt DN 40, als Zulage.;2,0;St;gaeb;3928155.x83
+43;Überbau von Rohrhalterungen in Rohrleitungen DN 12, inkl. zwei Endstellen, Überlappung nach DIN 4140, einschl. Ausschnitt für Gewindestab, als Zulage.;2,0;St;gaeb;3928155.x83
+44;Überbau von Rohrhalterungen in Rohrleitungen DN 15, inkl. zwei Endstellen, Überlappung nach DIN 4140, einschl. Ausschnitt für Gewindestab, als Zulage.;2,0;St;gaeb;3928155.x83
+45;Überbau von Rohrhalterungen in Rohrleitungen DN 20, inkl. zwei Endstellen, Überlappung nach DIN 4140, einschl. Ausschnitt für Gewindestab, als Zulage.;4,0;St;gaeb;3928155.x83
+46;Überbau von Rohrhalterungen in Rohrleitungen DN 25, inkl. zwei Endstellen, Überlappung nach DIN 4140, einschl. Ausschnitt für Gewindestab, als Zulage.;4,0;St;gaeb;3928155.x83
+47;Überbau von Rohrhalterungen in Rohrleitungen DN 32, inkl. zwei Endstellen, Überlappung nach DIN 4140, einschl. Ausschnitt für Gewindestab, als Zulage.;2,0;St;gaeb;3928155.x83
+48;Rohrhalterungen an gedämmten Rohrleitungen DN 12, als Kälteschelle,;2,0;St;gaeb;3928155.x83
+49;Rohrhalterungen an gedämmten Rohrleitungen DN 15, als Kälteschelle,;2,0;St;gaeb;3928155.x83
+50;Rohrhalterungen an gedämmten Rohrleitungen DN 20, als Kälteschelle,;4,0;St;gaeb;3928155.x83
+51;Rohrhalterungen an gedämmten Rohrleitungen DN 25, als Kälteschelle,;4,0;St;gaeb;3928155.x83
+52;Rohrhalterungen an gedämmten Rohrleitungen DN 32, als Kälteschelle,;2,0;St;gaeb;3928155.x83
+53;Rohrhalterungen an gedämmten Rohrleitungen DN 40, als Kälteschelle,;2,0;St;gaeb;3928155.x83
+1;für unter Putz liegende Abwasserleitung aus Kunststoff, DN 40.;10,0;m;gaeb;3928155.x83
+2;für unter Putz liegende Abwasserleitung aus Kunststoff, DN 50.;25,0;m;gaeb;3928155.x83
+3;für unter Putz liegende Abwasserleitung aus Kunststoff, DN 70.;12,0;m;gaeb;3928155.x83
+4;für unter Putz liegende Abwasserleitung aus Kunststoff, DN 90.;6,0;m;gaeb;3928155.x83
+5;für unter Putz liegende Abwasserleitung aus Kunststoff, DN 100.;8,0;m;gaeb;3928155.x83
+6;Mehrpreis als Aufpreis für die technische Dämmung der vorgenannten;8,0;m;gaeb;3928155.x83
+7;Mehrpreis als Aufpreis für die technische Dämmung der vorgenannten;6,0;m;gaeb;3928155.x83
+8;Passstück DN 40, bis 500 mm Länge, als Zulage.;3,0;St;gaeb;3928155.x83
+9;Passstück DN 50, bis 500 mm Länge, als Zulage.;8,0;St;gaeb;3928155.x83
+10;Passstück DN 70, bis 500 mm Länge, als Zulage.;4,0;St;gaeb;3928155.x83
+11;Passstück DN 90, bis 500 mm Länge, als Zulage.;2,0;St;gaeb;3928155.x83
+12;Passstück DN 100, bis 500 mm Länge, als Zulage.;3,0;St;gaeb;3928155.x83
+13;Bogen DN 40, 45 - 90°, als Zulage.;8,0;St;gaeb;3928155.x83
+14;Bogen DN 50, 45 - 90°, als Zulage.;32,0;St;gaeb;3928155.x83
+15;Bogen DN 70, 45 - 90°, als Zulage.;14,0;St;gaeb;3928155.x83
+16;Bogen DN 90, 45 - 90°, als Zulage.;2,0;St;gaeb;3928155.x83
+17;Bogen DN 100, 45 - 90°, als Zulage.;4,0;St;gaeb;3928155.x83
+18;Stutzen (Abzweig) DN 40, als Zulage.;2,0;St;gaeb;3928155.x83
+19;Stutzen (Abzweig) DN 50, als Zulage.;8,0;St;gaeb;3928155.x83
+20;Stutzen (Abzweig) DN 70, als Zulage.;5,0;St;gaeb;3928155.x83
+21;Stutzen (Abzweig) DN 100, als Zulage.;2,0;St;gaeb;3928155.x83
+22;Stutzen (Abzweig) DN 100, als Zulage.;1,0;St;gaeb;3928155.x83
+23;Konus DN 50, als Zulage.;2,0;St;gaeb;3928155.x83
+24;Konus DN 70, als Zulage.;3,0;St;gaeb;3928155.x83
+25;Konus DN 90, als Zulage.;2,0;St;gaeb;3928155.x83
+26;Konus DN 100, als Zulage.;2,0;St;gaeb;3928155.x83
+27;Endstelle DN 40, als Zulage.;2,0;St;gaeb;3928155.x83
+28;Endstelle DN 50, als Zulage.;6,0;St;gaeb;3928155.x83
+29;Endstelle DN 70, als Zulage.;3,0;St;gaeb;3928155.x83
+30;Endstelle DN 90, als Zulage.;2,0;St;gaeb;3928155.x83
+31;Endstelle DN 100, als Zulage.;3,0;St;gaeb;3928155.x83
+32;Ausschnitt DN 40, als Zulage.;10,0;St;gaeb;3928155.x83
+33;Ausschnitt DN 50, als Zulage.;25,0;St;gaeb;3928155.x83
+34;Ausschnitt DN 70, als Zulage.;12,0;St;gaeb;3928155.x83
+35;Ausschnitt DN 90, als Zulage.;6,0;St;gaeb;3928155.x83
+36;Ausschnitt DN 100, als Zulage.;8,0;St;gaeb;3928155.x83
+37;Überbau von Rohrhalterungen in Rohrleitungen DN 40, inkl. zwei Endstellen, Überlappung nach DIN 4140, einschl. Ausschnitt für Gewindestab, als Zulage.;6,0;St;gaeb;3928155.x83
+38;Überbau von Rohrhalterungen in Rohrleitungen DN 50, inkl. zwei Endstellen, Überlappung nach DIN 4140, einschl. Ausschnitt für Gewindestab, als Zulage.;16,0;St;gaeb;3928155.x83
+39;Überbau von Rohrhalterungen in Rohrleitungen DN 70, inkl. zwei Endstellen, Überlappung nach DIN 4140, einschl. Ausschnitt für Gewindestab, als Zulage.;8,0;St;gaeb;3928155.x83
+40;Überbau von Rohrhalterungen in Rohrleitungen DN 90, inkl. zwei Endstellen, Überlappung nach DIN 4140, einschl. Ausschnitt für Gewindestab, als Zulage.;4,0;St;gaeb;3928155.x83
+41;Überbau von Rohrhalterungen in Rohrleitungen DN 100, inkl. zwei Endstellen, Überlappung nach DIN 4140, einschl. Ausschnitt für Gewindestab, als Zulage.;4,0;St;gaeb;3928155.x83
+1;für Kunststoffrohr DN 100 (da = 110,0 mm),;5,0;m;gaeb;3928155.x83
+2;für Kunststoffrohr DN 125 (da = 125,0 bzw. 135,0mm),;8,0;m;gaeb;3928155.x83
+3;Mehrpreis als Aufpreis für die technische Dämmung der vorgenannten;1,0;m;gaeb;3928155.x83
+4;Mehrpreis als Aufpreis für die technische Dämmung der vorgenannten;2,0;m;gaeb;3928155.x83
+5;Passstück DN 100, bis 500 mm Länge, als Zulage.;2,0;St;gaeb;3928155.x83
+6;Passstück DN 125, bis 500 mm Länge, als Zulage.;4,0;St;gaeb;3928155.x83
+7;Bogen DN 100, 45 - 90°, als Zulage.;8,0;St;gaeb;3928155.x83
+8;Bogen DN 125, 45 - 90°, als Zulage.;3,0;St;gaeb;3928155.x83
+9;Stutzen (Abzweig) DN 100, als Zulage.;1,0;St;gaeb;3928155.x83
+10;Stutzen (Abzweig) DN 125, als Zulage.;1,0;St;gaeb;3928155.x83
+11;Konus DN 125, als Zulage.;1,0;St;gaeb;3928155.x83
+12;Endstelle DN 100, als Zulage.;1,0;St;gaeb;3928155.x83
+13;Endstelle DN 125, als Zulage.;2,0;St;gaeb;3928155.x83
+14;Reinigungsstück DN 100, mit runden Deckel, als Zulage.;1,0;St;gaeb;3928155.x83
+15;Reinigungsstück DN 100, mit ovalem Deckel, als Zulage.;1,0;St;gaeb;3928155.x83
+16;Reinigungsstück DN 125, mit ovalen Deckel, als Zulage.;1,0;St;gaeb;3928155.x83
+17;Ausschnitt DN 100, als Zulage.;5,0;St;gaeb;3928155.x83
+18;Ausschnitt DN 125, als Zulage.;8,0;St;gaeb;3928155.x83
+19;Überbau von Rohrhalterungen (z. B. Rohrschelle mit Einlage) in Rohrleitungen;3,0;St;gaeb;3928155.x83
+20;Überbau von Rohrhalterungen (z. B. Rohrschelle mit Einlage) in Rohrleitungen;5,0;St;gaeb;3928155.x83
+1;für rechteckige Luftkanäle, mit folgenden Merkmalen:;145,0;m2;gaeb;3928155.x83
+2;für rechteckige Luftkanäle, mit folgenden Merkmalen:;60,0;m2;gaeb;3928155.x83
+3;für rechteckige Luftkanal-Formteile, mit folgenden Merkmalen:;165,0;m2;gaeb;3928155.x83
+4;für rechteckige Luftkanal-Formteile, mit folgenden Merkmalen:;55,0;m2;gaeb;3928155.x83
+5;Mehrpreis als Aufpreis für die technische Dämmung der vorgenannten eckigen;160,0;m2;gaeb;3928155.x83
+6;für NW 80/100, Dämmdicke 30 mm.;43,0;m;gaeb;3928155.x83
+7;für NW 125, Dämmdicke 30 mm.;40,0;m;gaeb;3928155.x83
+8;für NW 160, Dämmdicke 30 mm.;70,0;m;gaeb;3928155.x83
+9;für NW 200, Dämmdicke 30 mm.;90,0;m;gaeb;3928155.x83
+10;für NW 250, Dämmdicke 30 mm.;16,0;m;gaeb;3928155.x83
+11;für NW 315, Dämmdicke 30 mm.;24,0;m;gaeb;3928155.x83
+12;Mehrpreis als Aufpreis für die technische Dämmung der vorgenannten runden;8,0;m;gaeb;3928155.x83
+13;Mehrpreis als Aufpreis für die technische Dämmung der vorgenannten runden;14,0;m;gaeb;3928155.x83
+14;Mehrpreis als Aufpreis für die technische Dämmung der vorgenannten runden;4,0;m;gaeb;3928155.x83
+15;Mehrpreis als Aufpreis für die technische Dämmung der vorgenannten runden;8,0;m;gaeb;3928155.x83
+16;Passstück NW 80/100, bis 500 mm Länge, als Zulage.;14,0;St;gaeb;3928155.x83
+17;Passstück NW 125, bis 500 mm Länge, als Zulage.;12,0;St;gaeb;3928155.x83
+18;Passstück NW 160, bis 500 mm Länge, als Zulage.;22,0;St;gaeb;3928155.x83
+19;Passstück NW 200, bis 500 mm Länge, als Zulage.;26,0;St;gaeb;3928155.x83
+20;Passstück NW 250, bis 500 mm Länge, als Zulage.;5,0;St;gaeb;3928155.x83
+21;Passstück NW 315, bis 500 mm Länge, als Zulage.;6,0;St;gaeb;3928155.x83
+22;Bogen NW 80/100, 15 - 90°, als Zulage.;18,0;St;gaeb;3928155.x83
+23;Bogen NW 125, 15 - 90°, als Zulage.;36,0;St;gaeb;3928155.x83
+24;Bogen NW 160, 15 - 90°, als Zulage.;48,0;St;gaeb;3928155.x83
+25;Bogen NW 200, 15 - 90°, als Zulage.;26,0;St;gaeb;3928155.x83
+26;Bogen NW 250, 15 - 90°, als Zulage.;8,0;St;gaeb;3928155.x83
+27;Bogen NW 315, 15 - 90°, als Zulage.;14,0;St;gaeb;3928155.x83
+28;Stutzen (Abzweig) NW 80/100, alle Winkelgrade, als Zulage.;2,0;St;gaeb;3928155.x83
+29;Stutzen (Abzweig) NW 125, alle Winkelgrade, als Zulage.;6,0;St;gaeb;3928155.x83
+30;Stutzen (Abzweig) NW 160, alle Winkelgrade, als Zulage.;26,0;St;gaeb;3928155.x83
+31;Stutzen (Abzweig) NW 200, alle Winkelgrade, als Zulage.;58,0;St;gaeb;3928155.x83
+32;Stutzen (Abzweig) NW 250, alle Winkelgrade, als Zulage.;12,0;St;gaeb;3928155.x83
+33;Stutzen (Abzweig) NW 315, alle Winkelgrade, als Zulage.;14,0;St;gaeb;3928155.x83
+34;Konus NW 100, als Zulage.;4,0;St;gaeb;3928155.x83
+35;Konus NW 125, als Zulage.;8,0;St;gaeb;3928155.x83
+36;Konus NW 160, als Zulage.;12,0;St;gaeb;3928155.x83
+37;Konus NW 200, als Zulage.;10,0;St;gaeb;3928155.x83
+38;Konus NW 250, als Zulage.;4,0;St;gaeb;3928155.x83
+39;Konus NW 315, als Zulage.;6,0;St;gaeb;3928155.x83
+40;Endstelle NW 100, als Zulage.;2,0;St;gaeb;3928155.x83
+41;Endstelle NW 125, als Zulage.;2,0;St;gaeb;3928155.x83
+42;Endstelle NW 160, als Zulage.;4,0;St;gaeb;3928155.x83
+43;Endstelle NW 200, als Zulage.;2,0;St;gaeb;3928155.x83
+44;Endstelle NW 250, als Zulage.;1,0;St;gaeb;3928155.x83
+45;Endstelle NW 315, als Zulage.;1,0;St;gaeb;3928155.x83
+46;Ausschnitt NW 80/100, als Zulage.;43,0;St;gaeb;3928155.x83
+47;Ausschnitt NW 125, als Zulage.;40,0;St;gaeb;3928155.x83
+48;Ausschnitt DN 160, als Zulage.;70,0;St;gaeb;3928155.x83
+49;Ausschnitt DN 200, als Zulage.;90,0;St;gaeb;3928155.x83
+50;Ausschnitt DN 250, als Zulage.;16,0;St;gaeb;3928155.x83
+51;Ausschnitt DN 315, als Zulage.;24,0;St;gaeb;3928155.x83
+1;für rechteckige Luftkanäle, mit folgenden Merkmalen:;15,0;m2;gaeb;3928155.x83
+2;für rechteckige Luftkanäle, mit folgenden Merkmalen:;20,0;m2;gaeb;3928155.x83
+3;für rechteckige Luftkanäle, mit folgenden Merkmalen:;10,0;m2;gaeb;3928155.x83
+4;für rechteckige Luftkanal-Formteile, mit folgenden Merkmalen:;15,0;m2;gaeb;3928155.x83
+5;für rechteckige Luftkanal-Formteile, mit folgenden Merkmalen:;25,0;m2;gaeb;3928155.x83
+6;für rechteckige Luftkanal-Formteile, mit folgenden Merkmalen:;5,0;m2;gaeb;3928155.x83
+7;Mehrpreis als Aufpreis für die technische Dämmung der vorgenannten eckigen;12,0;m2;gaeb;3928155.x83
+8;Dämmhaube, an der durchgehende Luftkanaldämmung aufbauend,;2,0;St;gaeb;3928155.x83
+9;Dämmhauben wie zuvor beschrieben, jedoch:;5,0;St;gaeb;3928155.x83
+10;Dämmhauben wie zuvor beschrieben, jedoch:;3,0;St;gaeb;3928155.x83
+11;Dämmhauben wie zuvor beschrieben, jedoch:;1,0;St;gaeb;3928155.x83
+12;Dämmhauben wie zuvor beschrieben, jedoch:;1,0;St;gaeb;3928155.x83
+13;Abklappbare Revisionsöffnung, bündig in die Dämmung eingebaut,;2,0;St;gaeb;3928155.x83
+14;bündig eingebaute Revisionsklappen wie zuvor beschrieben, jedoch:;4,0;St;gaeb;3928155.x83
+15;bündig eingebaute Revisionsklappen wie zuvor beschrieben, jedoch:;4,0;St;gaeb;3928155.x83
+16;Herstellen einer inneren Laibung in Stärke der Dämmdicke, unter Einbau eines;2,0;St;gaeb;3928155.x83
+17;Herstellen innere Laibung wie zuvor beschrieben, jedoch:;6,0;St;gaeb;3928155.x83
+18;Herstellen innere Laibung wie zuvor beschrieben, jedoch:;4,0;St;gaeb;3928155.x83
+19;Herstellen innere Laibung wie zuvor beschrieben, jedoch:;2,0;St;gaeb;3928155.x83
+1;für rechteckige Luftkanäle, mit folgenden Merkmalen:;8,0;m2;gaeb;3928155.x83
+2;für rechteckige Luftkanäle, mit folgenden Merkmalen:;10,0;m2;gaeb;3928155.x83
+3;für rechteckige Luftkanal-Formteile, mit folgenden Merkmalen:;12,0;m2;gaeb;3928155.x83
+4;für rechteckige Luftkanal-Formteile, mit folgenden Merkmalen:;14,0;m2;gaeb;3928155.x83
+5;Überbau von Kanalflansche in rechteckigen Luftkanälen,;40,0;m;gaeb;3928155.x83
+6;Mehrpreis als Aufpreis für die technische Dämmung der vorgenannten eckigen;30,0;m2;gaeb;3928155.x83
+7;"für Lüftungsleitungen aus Wickelfalzrohr; DN 160, Dämmdicke 25 mm,";12,0;m;gaeb;3928155.x83
+8;"für Lüftungsleitungen aus Wickelfalzrohr; DN 200, Dämmdicke 25 mm,";34,0;m;gaeb;3928155.x83
+9;"für Lüftungsleitungen aus Wickelfalzrohr; DN 250, Dämmdicke 25 mm,";8,0;m;gaeb;3928155.x83
+10;"für Lüftungsleitungen aus Wickelfalzrohr; DN 315, Dämmdicke 25 mm,";12,0;m;gaeb;3928155.x83
+11;Mehrpreis als Aufpreis für die technische Dämmung der vorgenannten runden;6,0;m;gaeb;3928155.x83
+12;Mehrpreis als Aufpreis für die technische Dämmung der vorgenannten runden;2,0;m;gaeb;3928155.x83
+13;Mehrpreis als Aufpreis für die technische Dämmung der vorgenannten runden;1,0;m;gaeb;3928155.x83
+14;Passstück DN 160, bis 500 mm Länge, als Zulage.;4,0;St;gaeb;3928155.x83
+15;Passstück DN 200, bis 500 mm Länge, als Zulage.;12,0;St;gaeb;3928155.x83
+16;Passstück DN 250, bis 500 mm Länge, als Zulage.;3,0;St;gaeb;3928155.x83
+17;Passstück DN 315, bis 500 mm Länge, als Zulage.;4,0;St;gaeb;3928155.x83
+18;Bogen DN 160, 15 - 90°, als Zulage.;12,0;St;gaeb;3928155.x83
+19;Bogen DN 200, 15 - 90°, als Zulage.;16,0;St;gaeb;3928155.x83
+20;Bogen DN 250, 15 - 90°, als Zulage.;4,0;St;gaeb;3928155.x83
+21;Bogen DN 315, 15 - 90°, als Zulage.;14,0;St;gaeb;3928155.x83
+22;Stutzen (Abzweig) NW 160, alle Winkelgrade, als Zulage.;2,0;St;gaeb;3928155.x83
+23;Stutzen (Abzweig) NW 180, alle Winkelgrade, als Zulage.;2,0;St;gaeb;3928155.x83
+24;Stutzen (Abzweig) NW 200, alle Winkelgrade, als Zulage.;4,0;St;gaeb;3928155.x83
+25;Stutzen (Abzweig) NW 250, alle Winkelgrade, als Zulage.;1,0;St;gaeb;3928155.x83
+26;Stutzen (Abzweig) NW 315, alle Winkelgrade, als Zulage.;1,0;St;gaeb;3928155.x83
+27;Konus DN 200, als Zulage.;16,0;St;gaeb;3928155.x83
+28;Konus DN 250, als Zulage.;2,0;St;gaeb;3928155.x83
+29;Konus DN 315, 15 - 90°, als Zulage.;1,0;St;gaeb;3928155.x83
+30;Endstelle DN 160, als Zulage.;2,0;St;gaeb;3928155.x83
+31;Endstelle DN 200, als Zulage.;8,0;St;gaeb;3928155.x83
+32;Endstelle DN 250, als Zulage.;1,0;St;gaeb;3928155.x83
+33;Endstelle DN 315, als Zulage.;1,0;St;gaeb;3928155.x83
+34;Ausschnitt DN 160, als Zulage.;12,0;St;gaeb;3928155.x83
+35;Ausschnitt DN 200, als Zulage.;34,0;St;gaeb;3928155.x83
+36;Ausschnitt DN 250, als Zulage.;8,0;St;gaeb;3928155.x83
+37;Ausschnitt DN 315, als Zulage.;12,0;St;gaeb;3928155.x83
+38;Überbau von Rohrhalterungen in Lüftungsleitungen DN 160,;8,0;St;gaeb;3928155.x83
+39;Überbau von Rohrhalterungen in Lüftungsleitungen DN 200,;22,0;St;gaeb;3928155.x83
+40;Überbau von Rohrhalterungen in Lüftungsleitungen DN 250,;6,0;St;gaeb;3928155.x83
+41;Überbau von Rohrhalterungen in Lüftungsleitungen DN 315,;8,0;St;gaeb;3928155.x83
+42;Isolierung der Zu- und Abluftleitungen im Bereich von Wanddurchführungen,;20,0;m2;gaeb;3928155.x83
+1;für rechteckige Luftkanäle, mit folgenden Merkmalen:;1,0;m2;gaeb;3928155.x83
+2;für rechteckige Luftkanäle, mit folgenden Merkmalen:;2,0;m2;gaeb;3928155.x83
+3;für rechteckige Luftkanal-Formteile, mit folgenden Merkmalen:;3,0;m2;gaeb;3928155.x83
+4;für rechteckige Luftkanal-Formteile, mit folgenden Merkmalen:;2,0;m2;gaeb;3928155.x83
+5;Überbau von Kanalflansche in rechteckigen Luftkanälen,;6,0;m;gaeb;3928155.x83
+6;Mehrpreis als Aufpreis für die technische Dämmung der vorgenannten eckigen;2,0;m2;gaeb;3928155.x83
+7;"für Lüftungsleitungen aus Wickelfalzrohr; DN 160, Dämmdicke 40 mm,";3,0;m;gaeb;3928155.x83
+8;"für Lüftungsleitungen aus Wickelfalzrohr; DN 200, Dämmdicke 40 mm,";2,0;m;gaeb;3928155.x83
+9;"für Lüftungsleitungen aus Wickelfalzrohr; DN 250, Dämmdicke 40 mm,";2,0;m;gaeb;3928155.x83
+10;"für Lüftungsleitungen aus Wickelfalzrohr; DN 315, Dämmdicke 40 mm,";1,0;m;gaeb;3928155.x83
+11;Mehrpreis als Aufpreis für die technische Dämmung der vorgenannten runden;2,0;m;gaeb;3928155.x83
+12;Mehrpreis als Aufpreis für die technische Dämmung der vorgenannten runden;1,0;m;gaeb;3928155.x83
+13;Mehrpreis als Aufpreis für die technische Dämmung der vorgenannten runden;1,0;m;gaeb;3928155.x83
+14;Passstück DN 160, bis 500 mm Länge, als Zulage.;1,0;St;gaeb;3928155.x83
+15;Passstück DN 200, bis 500 mm Länge, als Zulage.;1,0;St;gaeb;3928155.x83
+16;Passstück DN 250, bis 500 mm Länge, als Zulage.;1,0;St;gaeb;3928155.x83
+17;Passstück DN 315, bis 500 mm Länge, als Zulage.;1,0;St;gaeb;3928155.x83
+18;Bogen DN 160, 15 - 90°, als Zulage.;3,0;St;gaeb;3928155.x83
+19;Bogen DN 200, 15 - 90°, als Zulage.;2,0;St;gaeb;3928155.x83
+20;Bogen DN 250, 15 - 90°, als Zulage.;2,0;St;gaeb;3928155.x83
+21;Bogen DN 315, 15 - 90°, als Zulage.;1,0;St;gaeb;3928155.x83
+22;Konus DN 200, als Zulage.;1,0;St;gaeb;3928155.x83
+23;Konus DN 250, als Zulage.;1,0;St;gaeb;3928155.x83
+24;Konus DN 315, 15 - 90°, als Zulage.;1,0;St;gaeb;3928155.x83
+25;Endstelle DN 160, als Zulage.;2,0;St;gaeb;3928155.x83
+26;Endstelle DN 200, als Zulage.;1,0;St;gaeb;3928155.x83
+27;Endstelle DN 250, als Zulage.;1,0;St;gaeb;3928155.x83
+28;Endstelle DN 315, als Zulage.;1,0;St;gaeb;3928155.x83
+29;Ausschnitt DN 160, als Zulage.;3,0;St;gaeb;3928155.x83
+30;Ausschnitt DN 200, als Zulage.;2,0;St;gaeb;3928155.x83
+31;Ausschnitt DN 250, als Zulage.;2,0;St;gaeb;3928155.x83
+32;Ausschnitt DN 315, als Zulage.;1,0;St;gaeb;3928155.x83
+1;Wochenmiete (7 Kalendertage) für die Bereitstellung einer Gelenkteleskop-;1,0;St;gaeb;3928155.x83
+2;Wochenmiete (7 Kalendertage) für die Bereitstellung einer Gelenkteleskop-;1,0;St;gaeb;3928155.x83
+3;Wochenmiete (7 Kalendertage) für die Bereitstellung eines Rollgerüstes,;12,0;St;gaeb;3928155.x83
+4;Brandschutzzement MG III (DIN 1053-1) klassifiziert als Baustoff A 1 gemäß DIN 4102-4, zum vollvolumigen Ausgießen bzw. Verpressen von Wand- und Deckendurchbrüchen, standfest bei größeren Aufbauhöhen, dicht gegen Feuer- und Rauchgase, temperaturabbauend, raumabschließend, spritz- und löschwasserstra;2,0;St;gaeb;3928155.x83
+5;desgl., jedoch mit folgenden Daten:;4,0;St;gaeb;3928155.x83
+6;desgl., jedoch mit folgenden Daten:;2,0;St;gaeb;3928155.x83
+7;Zulage für das Auf- und Abrüsten einer Hochdruckmörtelpresse, einschl.;3,0;St;gaeb;3928155.x83
+1;Einrichten der Baustelle, für sämtliche in der Leistungsbeschreibung aufge-;1,0;psch;gaeb;3928155.x83
+2;Vorhalten der Baustelle während der gesamten Bauzeit, für sämtliche in der Leistungsbeschreibung aufgeführten Materialien und Leistungen, inkl. Umsetzen von Baustellentüren, eventuell Umstellung von Bau-WC, Koordinierung mit der Rohbaufirma und Bauleitung bezüglich des Umbaues von Bauwasser,;1,0;psch;gaeb;3928155.x83
+3;Räumen der Baustelle, für sämtliche in der Leistungsbeschreibung aufgeführten Materialien und Leistungen, einschl. Abbau von Baustellentüren, eventuell;1,0;psch;gaeb;3928155.x83
+1;Erstellung von  B e s t a n d s u n t e r l a g e n für den Bereich:;1,0;psch;gaeb;3928155.x83
+1;Obermonteur;10,0;h;gaeb;3928155.x83
+2;Monteur;20,0;h;gaeb;3928155.x83
+3;Helfer;2,0;h;gaeb;3928155.x83
+4;Auszubildende (Verrechnungsstundensatz über alle Lehrjahre);5,0;h;gaeb;3928155.x83

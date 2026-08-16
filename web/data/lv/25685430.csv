@@ -1,0 +1,14 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+00000001;Baustelle einrichten Sämtl.LV-Abschn.*Zufahrt vorh.;1,0;Psch;gaeb-flat;Leistungsverzeichnis\VOB 5.D83
+00000002;Baustelle räumen Sämtl. LV-Abschn.;1,0;Psch;gaeb-flat;Leistungsverzeichnis\VOB 5.D83
+00010001;Asphaltbefestigung trennen ... Freitext ...*schneiden ... Freitext ...;12,4;m;gaeb-flat;Leistungsverzeichnis\VOB 5.D83
+00010002;Asphalt fräsen ADS*... Freitext ... Fahrbahn*... Freitext ... ... Freitext ...*Unebenheit 6 mm;5100,0;m2;gaeb-flat;Leistungsverzeichnis\VOB 5.D83
+00010003;Unterlage reinigen gefr. Asphaltsch.*lose Teile aufn. selb.aufn.Kehrm.;5100,0;m2;gaeb-flat;Leistungsverzeichnis\VOB 5.D83
+00010004;Bitumenemulsion aufsprühen ... Freitext ...*Asphalt gefräst Rampenspritzgerät*C60BP4-S Menge 300 g/m2*... Freitext ...;5100,0;m2;gaeb-flat;Leistungsverzeichnis\VOB 5.D83
+00010005;Asphalttragd. aus AC 16 TD herst. ... Freitext ...*... Freitext ... ... Freitext ...*Abböschung 2 zu 1;5100,0;m2;gaeb-flat;Leistungsverzeichnis\VOB 5.D83
+00010006;Asphalttragd. aus AC 16 TD herst. ... Freitext ...*Profilausgleich ... Freitext ...;25,0;t;gaeb-flat;Leistungsverzeichnis\VOB 5.D83
+00010007;Abstumpfungsmaßnahme durchführen LFK 1/3*Menge 1 kg/m2 maschinell;5100,0;m2;gaeb-flat;Leistungsverzeichnis\VOB 5.D83
+00010008;Anschluss a. Fuge m. Fugenm. herst. Längs-/Querfuge*Deckschicht Tiefe 40 mm*Breite 15 mm Fugenmasse N2;12,4;m;gaeb-flat;Leistungsverzeichnis\VOB 5.D83
+00010009;Verkehrsfläche kehren Walzasphalt*... Freitext ...;5100,0;m2;gaeb-flat;Leistungsverzeichnis\VOB 5.D83
+00020001;Probegefäß liefern 10-l-Blecheimer*Mithilfe Kprüf.;2,0;St;gaeb-flat;Leistungsverzeichnis\VOB 5.D83
+00030001;Gegenpole für Kontrollpr. verlegen AL 30x70cm, 0,1mm*Fräsfläche;65,0;St;gaeb-flat;Leistungsverzeichnis\VOB 5.D83

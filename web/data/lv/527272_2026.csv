@@ -1,0 +1,27 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+01010001;Baustelleneinrichtung;1,0;psch;gaeb-flat;3934306.d83
+01010002;Montage- und Werkstattplanung;1,0;psch;gaeb-flat;3934306.d83
+01010003;Bestandsdokumentation;1,0;psch;gaeb-flat;3934306.d83
+01020001;Stabgeländer H=1,20 m, gerade, Gallerie;21,0;m;gaeb-flat;3934306.d83
+01020002;Zulage Kleinteilig;2,5;m2;gaeb-flat;3934306.d83
+01020003;Zulage Eckausbildung;3,0;St;gaeb-flat;3934306.d83
+01020004;Stabtreppengeländer H=1,20 m, gerade, TRH;2,0;m;gaeb-flat;3934306.d83
+01020005;Stabreppengeländer H=1,20 m, schräg, TRH;7,0;m;gaeb-flat;3934306.d83
+01020006;Zulage Zwischenpodest;2,0;St;gaeb-flat;3934306.d83
+01020007;Handlauf für Erwachsene;28,0;m;gaeb-flat;3934306.d83
+01020008;Handlauf für Kinder;28,0;m;gaeb-flat;3934306.d83
+01020009;Zulage Handlauf;8,0;St;gaeb-flat;3934306.d83
+01030001;Stabgeländer H=1,20 m, gerade, Terrasse;24,0;m;gaeb-flat;3934306.d83
+01030002;Zulage Eckausbildung;1,0;St;gaeb-flat;3934306.d83
+01040001;Gitterroste für Lichtschächte,;2,0;Stck;gaeb-flat;3934306.d83
+01040002;Gitterroste für Lichtschächte,;2,0;Stck;gaeb-flat;3934306.d83
+01040003;Schachtabdeck. begehbar 1000/1000mm 200kN/m2;2,0;St;gaeb-flat;3934306.d83
+01040004;Schachtabdeck. begehbar 1000/500mm 200kN/m2;2,0;St;gaeb-flat;3934306.d83
+01040005;Kleineisenteile, ST 37-2, feuerverzinkt, 5-10 kg / St.;20,0;kg;gaeb-flat;3934306.d83
+01040006;wie Pos vorher, jedoch in Edelstahl;10,0;kg;gaeb-flat;3934306.d83
+01040007;Kleineisenteile, ST 37-2, feuerverzinkt, 10-20 kg / St.;20,0;kg;gaeb-flat;3934306.d83
+01040008;Kleineisenteile, ST 37-2, feuerverzinkt 20-50 kg / St.;20,0;kg;gaeb-flat;3934306.d83
+01040009;Kleineisenteile, ST 37-2, feuerverzinkt 50-100 kg / St.;20,0;kg;gaeb-flat;3934306.d83
+01050001;Stundensatz Vorarbeiter;5,0;h;gaeb-flat;3934306.d83
+01050002;Stundensatz Facharbeiter;10,0;h;gaeb-flat;3934306.d83
+01050003;Stundensatz Bauwerker;10,0;h;gaeb-flat;3934306.d83

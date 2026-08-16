@@ -1,0 +1,34 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+10;Erdung als Fundamenterder, Fundament mit erhöhtem Erdübergangswiderstand DIN 18014, Ringerder wird gesondert vergütet, DIN EN IEC 62561-2 (VDE 0185-561-2), aus feuerverzinktem Stahl, Fl 30, mit der Bewehrung des Fundamentes verbinden, einschl. Klemmverbinder, mit Erdungsfestpunkt, Erdungsfestpunkt w;2500,0;m;gaeb;Vergabeunterlagen/26 E 0263.X83
+20;Verbinder, DIN EN IEC 62561-1 (VDE 0185-561-1), Klasse N für normale Belastung, für Kreuzverbindungen, aus feuerverzinktem Stahl, für Fl 30 mit Rd 8 bis 10, mit Zwischenplatte.;120,0;St;gaeb;Vergabeunterlagen/26 E 0263.X83
+30;Verbinder, DIN EN IEC 62561-1 (VDE 0185-561-1), Klasse N für normale Belastung, für Längsverbindungen, aus feuerverzinktem Stahl, für Fl 30 mit Fl 30, mit Zwischenplatte.;80,0;St;gaeb;Vergabeunterlagen/26 E 0263.X83
+40;Erdungsfestpunkt mit Abdeckung, DIN EN IEC 62561-1 (VDE 0185-561-1), aus nichtrostendem Stahl, Werkstoff-Nr 1.4571, einschl. Klemmverbinder, Anschluss an Erdungseinrichtung.;62,0;St;gaeb;Vergabeunterlagen/26 E 0263.X83
+50;Überbrückungsbauteil von Bewegungsfugen bei Erdung, mit nichtrostendem Stahlband im Polystyrol-Körper für den Betoneinbau.;30,0;St;gaeb;Vergabeunterlagen/26 E 0263.X83
+10;Korrosionsschutz an Anschluss- und Verbindungsstellen im Erdreich mit Korrosionsschutzbinde DIN 30672-1 und DIN 30672-2.;143,0;St;gaeb;Vergabeunterlagen/26 E 0263.X83
+20;Korrosionsschutz an den Erdeinführungen, 30 cm über und 30 cm unter Oberfläche Erdreich, mit Korrosionsschutzbinde DIN 30672-1 und DIN 30672-2.;48,0;St;gaeb;Vergabeunterlagen/26 E 0263.X83
+30;Verbinder, DIN EN IEC 62561-1 (VDE 0185-561-1), Klasse N für normale Belastung, für Kreuzverbindungen, aus nichtrostendem Stahl, Werkstoff-Nr 1.4571, für Fl 30 mit Rd 8 bis 10, mit Zwischenplatte.;83,0;St;gaeb;Vergabeunterlagen/26 E 0263.X83
+40;Verbinder, DIN EN IEC 62561-1 (VDE 0185-561-1), Klasse N für normale Belastung, für Längsverbindungen, aus nichtrostendem Stahl, Werkstoff-Nr 1.4571, für Fl 30 mit Fl 30, mit Zwischenplatte.;60,0;St;gaeb;Vergabeunterlagen/26 E 0263.X83
+50;Erdung als Ringerder, DIN EN IEC 62561-2 (VDE 0185-561-2), aus nichtrostendem Stahl, Fl 30, Werkstoff-Nr 1.4571, in vorh. Graben einlegen, Tiefe mind. 0,5 m.;1100,0;m;gaeb;Vergabeunterlagen/26 E 0263.X83
+60;Erdung als Ringerder, DIN EN IEC 62561-2 (VDE 0185-561-2), aus nichtrostendem Stahl, Rd 10, Werkstoff-Nr 1.4571, in vorh. Graben einlegen, Tiefe mind. 0,5 m.;100,0;m;gaeb;Vergabeunterlagen/26 E 0263.X83
+70;Trennstellenkasten mit Trennstelle DIN EN IEC 62561-1 (VDE 0185-561-1), mit Deckel (Unterflurmontage) DIN EN IEC 62561-5 (VDE 0185-561-5), aus Grauguss.;48,0;St;gaeb;Vergabeunterlagen/26 E 0263.X83
+10;Anschluss von Metallkonstruktionen;40,0;St;gaeb;Vergabeunterlagen/26 E 0263.X83
+20;Nummernschild mit dauerhafter witterungsbeständiger Beschriftung.;48,0;St;gaeb;Vergabeunterlagen/26 E 0263.X83
+30;Fangleitung DIN EN IEC 62561-2 (VDE 0185-561-2), aus Aluminium, Rd 8, über dem Dachfirst, Winkel zur Senkrechten über 10 bis 30 Grad, Stehfalzdeckung, für Halter auf Firstziegel, Halter wird gesondert vergütet.;160,0;m;gaeb;Vergabeunterlagen/26 E 0263.X83
+40;Fangleitung DIN EN IEC 62561-2 (VDE 0185-561-2), aus Aluminium, Rd 8, über geneigten Dachflächen, Winkel zur Senkrechten über 10 bis 30 Grad, Stehfalzdeckung, für Halter auf Firstziegel, Halter wird gesondert vergütet.;120,0;m;gaeb;Vergabeunterlagen/26 E 0263.X83
+50;Fangleitung DIN EN IEC 62561-2 (VDE 0185-561-2), aus Aluminium, Rd 8, über Graten, Winkel zur Senkrechten über 10 bis 30 Grad, Stehfalzdeckung, für Halter auf Firstziegel, Halter wird gesondert vergütet.;40,0;m;gaeb;Vergabeunterlagen/26 E 0263.X83
+60;Fangstange DIN EN IEC 62561-2 (VDE 0185-561-2), aus Aluminiumlegierung, Länge 1000 mm, auf der Dachkonstruktion, Stehfalzdeckung, äquivalenter Trennungsabstand in Luft mind. 0,45 m, mit Distanzhalter aus GFK, befestigen an Stehfalz.;50,0;St;gaeb;Vergabeunterlagen/26 E 0263.X83
+70;Ableitung DIN EN IEC 62561-2 (VDE 0185-561-2), aus Aluminium, Rd 8, an Wänden, aus Stahlbeton, unter der Verblendung.;390,0;m;gaeb;Vergabeunterlagen/26 E 0263.X83
+80;Anschluss- und Verbindungsleitung, DIN EN IEC 62561-2 (VDE 0185-561-2), aus nichtrostendem Stahl, Rd 16, Werkstoff-Nr 1.4571, einschl. Halter, an Erdern, auf Gebäudeaußenflächen, auf Putz.;70,0;m;gaeb;Vergabeunterlagen/26 E 0263.X83
+90;Dachleitungshalter aus nichtrostendem Stahl, für Dachfläche mit Metalldeckung, für Rundleiter.;180,0;St;gaeb;Vergabeunterlagen/26 E 0263.X83
+100;Dachleitungshalter aus nichtrostendem Stahl, für First und Grat mit Metalldeckung, der Fangstange, für Rundleiter.;20,0;St;gaeb;Vergabeunterlagen/26 E 0263.X83
+110;Dachleitungshalter aus nichtrostendem Stahl, für First und Grat mit Metalldeckung, für Rundleiter.;200,0;St;gaeb;Vergabeunterlagen/26 E 0263.X83
+120;Überbrückungsbauteil, DIN EN IEC 62561-1 (VDE 0185-561-1), Klasse H für hohe Belastung, als Band aus Aluminium, Länge über 200 bis 300 mm, mit Bohrungen, befestigen mit Schrauben.;25,0;St;gaeb;Vergabeunterlagen/26 E 0263.X83
+10;Flachband aus V4A (Werkst. Nr. 1.4571);300,0;m;gaeb;Vergabeunterlagen/26 E 0263.X83
+20;Runddraht d=10 mm V4A;50,0;m;gaeb;Vergabeunterlagen/26 E 0263.X83
+30;T- und Kreuzverbinder;30,0;St;gaeb;Vergabeunterlagen/26 E 0263.X83
+40;Anschlüsse von Flachband aus V4A an Konstruktionen;10,0;St;gaeb;Vergabeunterlagen/26 E 0263.X83
+50;Korrosionsschutz an Anschluss- und Verbindungsstellen im Erdreich mit Korrosionsschutzbinde DIN 30672-1 und DIN 30672-2.;40,0;St;gaeb;Vergabeunterlagen/26 E 0263.X83
+10;Prüfbuch Blitzschutz- und Erdungsanlage;1,0;St;gaeb;Vergabeunterlagen/26 E 0263.X83
+20;Messbericht DIN EN 62305-3 Beiblatt 3 (VDE 0185-305-3 Beiblatt 3).;1,0;St;gaeb;Vergabeunterlagen/26 E 0263.X83
+30;Prüfung DIN EN 62305-3 Beiblatt 3 (VDE 0185-305-3 Beiblatt 3).;1,0;St;gaeb;Vergabeunterlagen/26 E 0263.X83
+40;Messbericht/Dokumentation DIN 18014 und DIN EN 62305-3 Beiblatt 3 (VDE 0185-305-3 Beiblatt 3).;1,0;St;gaeb;Vergabeunterlagen/26 E 0263.X83

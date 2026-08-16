@@ -208,6 +208,10 @@ def push(url, key, table, batch=500, parquet=None, pk=("lead_id",)):
             os.unlink(tmp)
         body = out.stdout.strip()
         code = body[-3:] if body[-3:].isdigit() else "???"
+        # `000` heisst: curl kam gar nicht bis zu einer Antwort — hier die `--max-time 180`.
+        # Der Ausstieg 28 ist curls Zeitgrenze; beide bedeuten dasselbe wie ein
+        # Statement-Timeout, nur ohne Antworttext, in dem `57014` stehen koennte.
+        zeitueberschreitung = code == "000" or out.returncode == 28
         if code not in ("200", "201", "204"):
             # STATEMENT-TIMEOUT IST KEIN FEHLER, SONDERN EINE MENGENFRAGE.
             #
@@ -221,15 +225,32 @@ def push(url, key, table, batch=500, parquet=None, pk=("lead_id",)):
             # Antwort: denselben Stapel halbiert erneut schicken, bis er durchgeht oder zu
             # klein zum Halbieren ist. Ein Timeout heisst „zu viel auf einmal", nicht
             # „geht nicht" — und ein halber Stapel ist in aller Regel schnell genug.
-            if "57014" in body and len(buf) > 1:
+            # DIESELBE URSACHE, ZWEI SYMPTOME — und bisher nur eines behandelt.
+            #
+            # Ist der Stapel zu gross, kann die Datenbank ihn abbrechen (`57014`, mit
+            # Antworttext) ODER so lange brauchen, dass curl vorher aufgibt (`000`, ohne
+            # Antworttext). Der Halbierungs-Zweig kannte nur den ersten Fall; der zweite
+            # riss den ganzen Lauf ab — gemessen am 2026-08-15 UND 2026-08-16, beide Male
+            # endete der Tageslauf „MIT Fehler beim Supabase-Upload".
+            #
+            # Ein Timeout heisst „zu viel auf einmal", nicht „geht nicht" — unabhaengig
+            # davon, wer zuerst aufgibt.
+            if ("57014" in body or zeitueberschreitung) and len(buf) > 1:
                 haelfte = len(buf) // 2
-                print(f"  ⚠ Zeitgrenze bei {len(buf)} Zeilen — halbiert erneut", flush=True)
+                woher = "curl" if zeitueberschreitung else "Datenbank"
+                print(f"  ⚠ Zeitgrenze ({woher}) bei {len(buf)} Zeilen — halbiert erneut", flush=True)
                 rest, buf[:] = buf[haelfte:], buf[:haelfte]
                 flush()
                 buf.extend(rest)
                 flush()
                 return
-            raise RuntimeError(f"HTTP {code}: {body[:300]}")
+            # Fehlermeldung von curl MITGEBEN. Vorher stand im Log nur „HTTP 000: 000" —
+            # das sagt nicht, ob es die Zeitgrenze, ein Netzfehler oder ein Zertifikat war,
+            # und genau diese Unterscheidung braucht man beim naechsten Mal.
+            hinweis = (out.stderr or "").strip()[:200]
+            raise RuntimeError(
+                f"HTTP {code} (curl-Ausstieg {out.returncode}): {body[:200]}"
+                + (f" | curl: {hinweis}" if hinweis else ""))
         total += len(buf)
         print(f"  … {total:,} Zeilen upserted", flush=True)
         buf.clear()

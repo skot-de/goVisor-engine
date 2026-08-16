@@ -1,5 +1,6 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { updateSession } from "@/lib/supabase/middleware";
+import { istAdmin } from "@/lib/admin";
 
 /**
  * Pre-Launch-Blackout — FAIL-CLOSED.
@@ -22,6 +23,30 @@ const BLACKOUT = process.env.NODE_ENV === "production" && process.env.LAUNCH_LIV
 const PREVIEW_KEY = process.env.PREVIEW_KEY ?? "";
 const PREVIEW_COOKIE = "gv_preview";
 
+/* ── INTERNE SEITEN ────────────────────────────────────────────────────────────────────
+ *
+ * Bis 2026-08-16 pruefte KEINE der `/intern`-Seiten und auch die API nichts. Geschuetzt
+ * hat sie allein die Coming-Soon-Sperre oben — und die ist ein LAUNCH-Gate, keine
+ * Zugriffskontrolle: am Tag der Freischaltung waeren `/intern/lauf` und `/api/intern/lauf`
+ * oeffentlich gewesen, samt Logzeilen, Pfaden und Fehlermeldungen aus dem Dateisystem.
+ *
+ * WARUM HIER UND NICHT IN DEN SEITEN: einen Link zu verstecken ist keine Absicherung. Die
+ * URL ist raterbar, die API direkt aufrufbar. Die Sperre gehoert an die eine Stelle, die
+ * JEDE Anfrage sieht.
+ *
+ * WARUM 404 UND NICHT 403: ein 403 bestaetigt, dass es die Seite gibt. Fuer eine interne
+ * Oberflaeche ist schon diese Auskunft zu viel.
+ *
+ * WARUM UMGEBUNGSVARIABLE UND NICHT DATENBANK-ROLLE: fuer eine Person ist ein Rollenmodell
+ * mehr Angriffsflaeche als Nutzen. Ein Datenbankfeld kann man versehentlich setzen; eine
+ * Vercel-Umgebungsvariable nicht.
+ */
+
+function istIntern(pfad: string): boolean {
+  return pfad === "/intern" || pfad.startsWith("/intern/") || pfad.startsWith("/api/intern");
+}
+
+
 /**
  * VORHANG-PFAD — der zweite, sanftere Weg hinein.
  *
@@ -43,6 +68,16 @@ const PREVIEW_COOKIE = "gv_preview";
 const ZUGANG_PFAD = process.env.ZUGANG_PFAD ?? "";
 const VORHANG_COOKIE = "gv_vorhang";
 
+/** Antwort fuer gesperrte Interna. Bewusst 404 statt 403 und ohne Hinweistext: ein 403
+ *  bestaetigt, dass es die Seite gibt, und genau das soll niemand erfahren. */
+function nichtGefunden() {
+  return new NextResponse("Not found", {
+    status: 404,
+    headers: { "content-type": "text/plain; charset=utf-8",
+               "cache-control": "no-store", "x-robots-tag": "noindex, nofollow" },
+  });
+}
+
 function blackPage() {
   return new NextResponse(BLACK_PAGE, {
     status: 200,
@@ -55,6 +90,7 @@ function blackPage() {
 }
 
 export async function middleware(request: NextRequest) {
+  const pfad = new URL(request.url).pathname;
   if (BLACKOUT) {
     // Bypass nur, wenn ein PREVIEW_KEY gesetzt ist UND per Query/Cookie exakt getroffen wird.
     const q = new URL(request.url).searchParams.get("preview");
@@ -64,7 +100,6 @@ export async function middleware(request: NextRequest) {
     // Zweiter Weg: der Vorhang-Pfad. Er fuehrt auf /login und setzt ein Cookie, damit die
     // Folgeseiten (Anmeldung, Registrierung, App) nicht wieder schwarz werden. Was danach
     // sichtbar ist, entscheidet die Supabase-Session — nicht dieser Pfad.
-    const pfad = new URL(request.url).pathname;
     const vorhangCookie = request.cookies.get(VORHANG_COOKIE)?.value;
     const vorhangAuf = ZUGANG_PFAD.length > 0 && vorhangCookie === ZUGANG_PFAD;
     if (ZUGANG_PFAD.length > 0 && pfad === `/${ZUGANG_PFAD}`) {
@@ -76,7 +111,8 @@ export async function middleware(request: NextRequest) {
     }
     if (!unlocked && !vorhangAuf) return blackPage();
     // Schlüssel gültig → volle App; bei frischem ?preview den Cookie setzen (Folgeseiten ohne Query).
-    const res = await updateSession(request);
+    const { response: res, email } = await updateSession(request);
+    if (istIntern(pfad) && !istAdmin(email)) return nichtGefunden();
     if (q === PREVIEW_KEY) {
       res.cookies.set(PREVIEW_COOKIE, PREVIEW_KEY, {
         httpOnly: true, sameSite: "lax", secure: true, path: "/", maxAge: 60 * 60 * 24 * 30,
@@ -84,8 +120,12 @@ export async function middleware(request: NextRequest) {
     }
     return res;
   }
-  // Lokal: Auth-Session frisch halten wie gehabt, volle App.
-  return await updateSession(request);
+  // Lokal: Auth-Session frisch halten wie gehabt, volle App. Die Interna sind aber AUCH
+  // lokal gesperrt — sonst waere die Sperre nie ausprobiert und faende ihren ersten
+  // Ernstfall in der Produktion.
+  const { response, email } = await updateSession(request);
+  if (istIntern(pfad) && !istAdmin(email)) return nichtGefunden();
+  return response;
 }
 
 export const config = {

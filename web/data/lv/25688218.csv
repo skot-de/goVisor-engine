@@ -1,0 +1,91 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+0001;Geräte, Werkzeuge und sonstige Betriebsmittel, die zur;1,0;Psch;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83
+0002;Baustelle von allen Geräten, Anlagen, Einrichtungen und;1,0;Psch;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83
+0003;Kontrolle der Verkehrssicherung an Arbeitsstellen;63,0;d;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83
+0004;Zuarbeit für den SIGEKO bzw. für den SIGE-Plan;1,0;Psch;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83
+0005;Alarmplan erstellen.;1,0;Psch;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83
+0006;Vergütung für ein zusätzliches An_ und Abrücken der;4,0;St;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83
+0007;Vergütung für ein zusätzliches An_ und Abrücken der;4,0;St;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83
+0008;Zusätzliche Verkehrszeichen innerhalb und außerhalb der;8,0;St;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83
+0009;Zusätzliche Verkehrszeichen innerhalb und außerhalb der;8,0;St;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83
+0010;Zusätzliche Verkehrszeichen innerhalb und außerhalb der;8,0;St;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83
+0011;Verkehrszeichen ausser Kraft setzen.;8,0;St;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83
+0012;Verkehrszeichen ausser Kraft setzen.;8,0;St;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83
+0013;Absperrgerät oder Warneinrichtung betriebsfertig auf-;6,0;St;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83
+0014;Absperrgerät oder Warneinrichtung vorhalten, warten,;378,0;Std;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83
+0015;Absperrgerät oder Warneinrichtung betriebsfertig auf-;40,0;St;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83
+0016;Absperrgerät oder Warneinrichtung vorhalten, warten,;2520,0;Std;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83
+0017;Verkehrsschild aufbauen und abbauen. Vorhalten, Kon-;3,0;St;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83
+0018;Verkehrsschild vorhalten, warten und instand setzen.;189,0;Std;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83
+0001;Verkehrssicherung an Arbeitsstellen von kürzerer Dauer;8,0;St;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83
+0002;Verkehrssicherung längerer Dauer betriebsfertig aufbau-;4,0;St;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83
+0003;Verkehrssicherung längerer Dauer vorhalten, warten, in-;14,0;d;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83
+0001;Verkehrssicherung längerer Dauer einschließlich Ver-;1,0;Psch;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83
+0002;Verkehrssicherung längerer Dauer vorhalten, warten, in-;7,0;d;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83
+0003;Verkehrssicherung an Arbeitsstellen von längerer Dauer;1,0;Psch;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83
+0004;Verkehrssicherung längerer Dauer vorhalten, warten, in-;7,0;d;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83
+0005;Verkehrssicherung an Arbeitsstellen von längerer Dauer;1,0;Psch;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83
+0006;Verkehrssicherung längerer Dauer vorhalten, warten, in-;7,0;d;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83
+0007;Verkehrssicherung an Arbeitsstellen von längerer Dauer;1,0;Psch;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83
+0008;Verkehrssicherung längerer Dauer vorhalten, warten, in-;10,0;d;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83
+0009;Verkehrssicherung an Arbeitsstellen längerer Dauer ab-;1,0;Psch;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83
+0001;Transportable Schutzeinrichtung einschl. systembeding-;10000,0;m;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83
+0002;Transportable Schutzeinrichtung vorhalten, warten und;630000,0;md;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83
+0003;Transportable Schutzeinrichtung einschl. systembeding-;250,0;m;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83
+0004;Transportable Schutzeinrichtung vorhalten, warten und;15750,0;md;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83
+0005;Anfangs-/Endkonstruktion (AEK) für transportable;2,0;St;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83
+0006;Adapter als mechanische kraftschlüssige Verbindung für;2,0;St;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83
+0007;Adapter als mechanische kraftschlüssige Verbindung für;126,0;Std;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83
+0008;Transportable Schutzeinrichtung T3,W2 auf Flächen des;60,0;m;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83
+0009;Transportable Schutzeinrichtung vorhalten, warten und;3780,0;md;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83
+0010;Fahrbahnreinigung mit Saugkehrmaschine nach Demontage;10500,0;m;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83
+0011;Transportable Schutzeinrichtung innerhalb des Arbeits-;5000,0;m;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83
+0012;Transportable Schutzeinrichtung innerhalb des Arbeits-;5000,0;m;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83
+0013;Transportable Schutzeinrichtung innerhalb des Arbeits-;5000,0;m;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83
+0001;Fläche der Markierung reinigen.;3700,0;m2;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83
+0002;Fläche für Markierung auf Anordnung des AG schonend;3700,0;m2;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83
+0003;Längsmarkierung Typ II einschl. evtl. Sperrflächenum-;16500,0;m;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83
+0004;Längsmarkierung Typ II einschl. evtl. Sperrflächenum-;5500,0;m;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83
+0005;Längsmarkierung Typ II einschl. evtl. Sperrflächenum-;1000,0;m;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83
+0006;Längsmarkierung Typ II einschl. evtl. Sperrflächenum-;200,0;m;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83
+0007;Längsmarkierung Typ II einschl. evtl. Sperrflächenum-;100,0;m;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83
+0008;Längsmarkierung Typ II einschl. evtl. Sperrflächenum-;400,0;m;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83
+0009;Längsmarkierung als vorübergehende Markierung einschl.;5500,0;m;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83
+0010;Längsmarkierung als vorübergehende Markierung einschl.;1000,0;m;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83
+0011;Längsmarkierung als vorübergehende Markierung einschl.;80,0;m;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83
+0012;Längsmarkierung als vorübergehende Markierung einschl.;100,0;m;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83
+0013;Fläche der Markierung reinigen.;850,0;m2;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83
+0014;Fläche für Markierung auf Anordnung des AG schonend;850,0;m2;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83
+0015;Längsmarkierung Typ II einschl. evtl. Sperrflächenum-;5500,0;m;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83
+0016;Längsmarkierung als vorübergehende Markierung einschl.;5300,0;m;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83
+0017;Längsmarkierung als vorübergehende Markierung einschl.;5300,0;m;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83
+0018;Fläche der Markierung reinigen.;1650,0;m2;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83
+0019;Fläche für Markierung auf Anordnung des AG schonend;1650,0;m2;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83
+0020;Längsmarkierung Typ II einschl. evtl. Sperrflächenum-;5300,0;m;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83
+0021;Längsmarkierung Typ II einschl. evtl. Sperrflächenum-;5300,0;m;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83
+0022;Längsmarkierung Typ II einschl. evtl. Sperrflächenum-;100,0;m;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83
+0023;Längsmarkierung Typ II einschl. evtl. Sperrflächenum-;70,0;m;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83
+0024;Längsmarkierung Typ II einschl. evtl. Sperrflächenum-;150,0;m;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83
+0025;Längsmarkierung als vorübergehende Markierung einschl.;5300,0;m;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83
+0026;Fläche der Markierung reinigen.;800,0;m2;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83
+0027;Fläche für Markierung auf Anordnung des AG schonend;800,0;m2;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83
+0028;Längsmarkierung Typ II einschl. evtl. Sperrflächenum-;5300,0;m;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83
+0029;Längsmarkierung als vorübergehende Markierung einschl.;16500,0;m;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83
+0030;Längsmarkierung als vorübergehende Markierung einschl.;5500,0;m;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83
+0031;Längsmarkierung als vorübergehende Markierung einschl.;1000,0;m;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83
+0032;Längsmarkierung als vorübergehende Markierung einschl.;200,0;m;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83
+0033;Längsmarkierung als vorübergehende Markierung einschl.;100,0;m;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83
+0034;Längsmarkierung als vorübergehende Markierung einschl.;100,0;m;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83
+0035;Quermarkierung Typ II als vorübergehende Markierung;7,0;m;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83
+0036;A;5,0;St;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83
+0001;Baustelleninformationsschild einschließlich;2,0;St;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83
+0002;Baustelleninformationsschild und Aufstellvorrichtung;2,0;St;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83
+0001;Zentraleinheit für Überwachung und Steuerung der mobi-;1,0;Psch;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83
+0002;Zentraleinheit der mobilen Stauwarnanlage vorhalten,;63,0;d;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83
+0003;Zentraleinheit außer Betrieb nehmen.;1,0;Psch;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83
+0004;Anzeigeeinheit für Anzeigequerschnitt (AQ) aufbauen und;4,0;St;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83
+0005;Anzeigeeinheit für Anzeigequerschnitt (AQ) vorhalten,;252,0;Std;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83
+0006;Anzeigeeinheit von Anzeigequerschnitt (AQ) außer Be-;4,0;St;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83
+0007;Messeinheit für Messquerschnitt (MQ) aufbauen und in;4,0;St;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83
+0008;Messeinheit für Messquerschnitt (MQ)vorhalten, warten,;252,0;Std;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83
+0009;Messeinheit von Messquerschnitt (MQ) außer Betrieb neh-;4,0;St;gaeb;Leistungsverzeichnis/LV_A07392204_Version3.X83

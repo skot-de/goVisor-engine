@@ -1993,8 +1993,13 @@ a.lb-kachel{text-decoration:none}
 
 /* Werkzeuge des Bereichs IN der Kopfleiste (Reiter, Knoepfe) — nicht in einer zweiten
    Zeile darunter. Die gab es kurz und war im Normalfall leer; s. AppTop. */
+/* KEIN `overflow-x:auto` hier. Es stand einmal drin, damit die Reiter auf schmalen
+   Fenstern scrollen — seit die Listen-Werkzeuge (Spalten, Export) in denselben Steckplatz
+   wandern, ist es ein Fehler: `overflow-x` macht den Kasten zum Ausschnitt, und die
+   Aufklappmenues haengen absolut positioniert DARIN. Sie waeren unterhalb der Kopfzeile
+   abgeschnitten worden. Statt zu scrollen schrumpft jetzt die Suche (min-width 90px). */
 .top-werkzeuge{display:flex;align-items:center;gap:var(--s2);min-width:0;
-               padding-left:var(--s3);overflow-x:auto}
+               padding-left:var(--s3)}
 .top-werkzeuge .un-tabs{border:0;margin:0;padding:0}
 
 /* VERGABEUNTERLAGEN — die echten Dateien im Unterlagen-Reiter, vor der Analyse. */
@@ -2055,3 +2060,54 @@ a.lb-kachel{text-decoration:none}
 /* Suchleiste der eigenstaendigen Seiten — dieselbe Form wie in der Shell, damit die
    Topbar im Grundaufbau ueberall gleich ist. */
 .seitensuche{flex:1;max-width:520px;margin-left:var(--s4)}
+
+
+/* ── EINE KOPFZEILE, UEBERALL (2026-08-16) ─────────────────────────────────────────────
+   Profil und Sprache stehen auf JEDER Seite, weil sie zu jeder Seite gehoeren. Vorher
+   trug sie nur die Explorer-Shell — nicht als Entscheidung, sondern weil ihr Zustand dort
+   lag. Der Grundaufbau ist jetzt ueberall: Logo · Profil · Suche · (Werkzeuge) · Sprache. */
+.profilbtn{flex:none;text-decoration:none}
+.profilbtn .pb-name{max-width:min(28ch,18vw)}
+/* Die Sprache sitzt am rechten Rand; dorthin schiebt sie die Suche, die den Rest nimmt. */
+.sprachcell{flex:none;margin-right:var(--s4)}
+/* Auf schmalen Fenstern faellt zuerst der Firmenname weg, nicht die Suche: den Namen
+   traegt der `title`, die Suche traegt gar nichts, wenn sie fehlt. */
+@media (max-width:900px){
+  .profilbtn .pb-name{display:none}
+}
+
+/* ── ABSCHNITTE EINES BEREICHS, EINE BAUFORM (2026-08-16) ──────────────────────────────
+   Vorher viermal verschieden: Reiter im Kopf (Unternehmen), senkrechte Liste in einer
+   zweiten Spalte (Strategie), noch eine senkrechte Liste in einer anderen zweiten Spalte
+   (Bausteine), Rail (Lead-Ansichten). Jetzt immer waagerecht in der Bereichsleiste.
+
+   Gemessen vor dem Umbau: die neun Strategie-Abschnitte brauchen waagerecht 796 px. In der
+   Leiste stehen ~1540 zur Verfuegung, in der Kopfzeile waeren daneben nur Reste fuer die
+   Suche geblieben — deshalb die zweite Zeile und nicht der Kopf. */
+.bnav{display:flex;align-items:center;gap:2px;min-width:0;overflow-x:auto;
+      scrollbar-width:none}
+.bnav::-webkit-scrollbar{display:none}
+.bnav-g{display:flex;align-items:center;gap:2px;flex:none}
+.bnav-gt{font-size:10.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+         color:var(--ink-500,#8a938f);padding:0 6px 0 0;flex:none}
+.bnav-trenner{width:1px;height:18px;background:var(--line);margin:0 10px;flex:none}
+.bnav-i{appearance:none;border:0;background:none;cursor:pointer;flex:none;
+        font-size:12.5px;font-weight:500;color:var(--ink-700);
+        padding:6px 10px;border-radius:6px;display:flex;align-items:center;gap:6px;
+        white-space:nowrap;transition:background .12s,color .12s}
+.bnav-i:hover{background:var(--surface-2)}
+/* Der aktive Abschnitt traegt Flaeche, keinen Unterstrich: die Leiste hat schon eine
+   Trennlinie nach unten, ein zweiter waagerechter Strich darueber liest sich als Fehler. */
+.bnav-i.on{background:var(--signal-weak,rgba(16,122,86,.10));color:var(--signal);font-weight:650}
+.bnav-n{font-size:11px;font-weight:600;color:var(--ink-500,#8a938f);
+        background:var(--surface-2);border-radius:20px;padding:1px 6px;min-width:18px;text-align:center}
+.bnav-i.on .bnav-n{background:rgba(255,255,255,.65);color:var(--signal)}
+.bnav-hinweis{margin-left:auto;padding-left:16px;font-size:12px;color:var(--ink-500,#8a938f);
+              white-space:nowrap;flex:none}
+
+/* Der Trefferzaehler steht seit 2026-08-16 in der Bereichsleiste statt in der Kopfzeile:
+   er beschreibt, WAS man gerade sieht — dieselbe Frage, die in den anderen Bereichen die
+   Abschnittsnavigation beantwortet. In der Kopfzeile stand er neben Werkzeugen, die etwas
+   TUN; das ist eine andere Art von Element. */
+.bereichsleiste .tcount{flex:none;margin-right:14px}
+.bereichsleiste .filterbar{min-width:0}

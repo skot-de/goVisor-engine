@@ -1,0 +1,592 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+1;Sole/Wasser-W;2,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+2;Kommunikationsmodul LON Elektronikleiterplatte zum Einbau in die Regelung f;1,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+3;Kommunikationsmodul LON Elektronikleiterplatte zum;1,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+4;LON-Verbindungsleitung f;1,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+5;Abschlusswiderstand;1,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+6;Internet-Schnittstelle zum Fernbedienen von Anlagen;1,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+7;BACnet oder Modbus Gateway konfigurierbar und einsetzbar zur Aufschaltung von Heizungsanlagen mit Regelung in ein Geb;1,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+8;Funktionserweiterung im Geh;1,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+9;Druckw;1,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+10;Membran-Sicherheitsventil  Typ MS 3/4 mit Ansprechdruck 3 bar. F;1,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+11;Ausdehnungsgef;2,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+12;Umw;2,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+13;Sicherheitsgruppe bestehend aus:;2,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+14;Membran-Druckausdehnungsgef;2,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+15;Kappenventil R 3/4;2,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+16;Umw;2,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+17;Pumpenkugelh;2,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+18;Heizwasser-Pufferspeicher f;1,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+19;Thermometer analog zum Einbau in die W;4,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+20;W;2,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+21;Tauchtemperatursensor (NTC 10 kOhm) Zur Erfassung einer Temperatur in einer Tauchh;1,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+22;Elektro-Heizeinsatz-EHE;2,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+23;Hilfssch;2,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+24;Erweiterungssatz bestehend aus:;1,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+25;Erweiterungssatz Mischer (Wandmontage, KM-BUS-Teilnehmer) F;1,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+26;Hochleistungs-Plattenw;1,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+27;3-Wege-Mischer  aus Messing.;1,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+28;Kompakter Stellmotor zum Betrieb des 3-Wege-Mischer.;1,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+29;Hocheffizienz-Nassl;1,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+30;3-Wege-Mischer aus Messing.;1,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+31;Kompakter Stellmotor zum Betrieb des 3-Wege-Mischer.;1,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+32;Anlegetemperatursensor (NTC 10 kOhm);1,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+33;Feuchteanbauschalter 24 V;1,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+34;Frostschutzthermostatz:;1,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+35;Hocheffizienz-Nassl;1,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+36;Motorkugelhahn mit Stellantrieb Kompakter Motorkugelhahn, einsetzbar in Heiz- bzw. K;1,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+37;Verschraubung (1 St;2,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+38;KM-BUS-Verteiler;1,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+39;Anlegetemperatursensor (NTC 10 kOhm) Zur Erfassung einer Temperatur an einem Rohr. Mit Anschlussleitung (5,8 m lang);1,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+40;Erweiterungssatz Mischer (Wandmontage, KM-BUS-Teilnehmer) F;1,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+41;Heizung besteht aus F;1,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+42;Luft und Schlammabscheider bestehend aus:;1,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+43;Inbetriebnahmen der W;1,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+44;F;1,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+45;Kompakte Basisarmatur zur Aufbereitung von F;1,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+46;Kationenharzpatrone zur F;4,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+47;Mischbettharzpatrone zur F;4,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+48;Aufsatzverschneidearmatur zur Einstellung eines w;1,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+1;Erdw;1000,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+2;Installations - Set 5er Tichelmann bestehend aus:;20,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+3;PP-Rohr SDR 11, 40x3,7 mm , als Anbindeleitung (Absorber zu Verteiler).;16,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+4;PP-R  Socket Schwei;80,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+5;Verteilerschacht (20PP Anschl;1,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+6;Monoethylenglykol-Fertiggemisch zum Nachstellen der Konzentration ( F;14,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+7;"Trassenwarnband ""ACHTUNG ERDW";8,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+8;PE100-RC Rohr, schwarz Trinkwasserqualit;4,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+9;PE100-RC Muffe, schwarz Trinkwasserqualit;6,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+10;PE100-RC Winkel, schwarz Trinkwasserqualit;2,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+11;PVC-Kugelhahn;2,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+12;Ü;2,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+13;Ringraumdichtung (f;2,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+14;Druckpr;1,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+15;Bef;1,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+16;Drucksp;1,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+17;Erstellen von Pr;1,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+18;Kernbohrung schr;2,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+19;Kernbohrung horizontal f;2,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+1;Kombinierter Heizungsverteiler f;1,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+2;Fertigisolierung f;1,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+3;Wandkonsole schallged;1,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+4;Bezeichnungsschild (VE=2 St;3,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+5;Membran-Druckausdehnungsgef;1,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+6;Kappenventil f;1,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+7;Membran-Sicherheitsventil nach TRD 721;1,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+8;Schmutz- und Schlammabscheider f;2,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+9;W;1,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+10;Hocheffizienz-Nassl;3,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+11;Dreiwegventil (Heizung) PN 16, kvs = 25 m3/h;3,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+12;Kugelhahn;4,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+13;Kugelhahn wie zuletzt in vollem Wortlaut beschrieben, jedoch:;4,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+14;Kugelhahn wie zuletzt in vollem Wortlaut beschrieben, jedoch:;4,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+15;Kugelhahn wie zuletzt in vollem Wortlaut beschrieben, jedoch:;18,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+16;Muffen-R;3,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+17;Schmutzf;3,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+18;Zeigerthermometer,;8,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+19;Manometer, als R;1,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+20;Automatischer Schnellentl;8,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+21;Entleerungs-Kugelhahn,;15,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+1;Halogenfreie Fernmeldeleitung J-H(ST)H;120,0;m;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+2;Halogenfreie Fernmeldeleitung J-H(ST)H;160,0;m;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+3;Steuerleitung;200,0;m;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+4;Steuerleitung;110,0;m;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+5;Steuerleitung;140,0;m;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+6;Anklemmen von Leitungen wie in den vorherigen Positionen beschrieben, beidseitig.;60,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+7;Kabelbezeichnungsschilder am Feldger;40,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+8;Kabelrinne nach DIN EN 61537 VDE-zertifizierte und;10,0;m;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+9;Kunststoffpanzerrohr FPKu-EM-F, M 20;25,0;m;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+10;Kunststoffpanzerrohr FPKu-EM-F, M 25;15,0;m;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+11;Abzweigdose ca. 90 x 90 mm;20,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+12;Flexschlauch M20 f;30,0;m;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+13;Flexschlauch M25 f;10,0;m;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+1;Noppenplatte 30-2, g;1700,0;m²;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+2;Randd;68,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+3;PE-Xc-Rohr f;8900,0;m;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+4;D;6,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+5;Rohrf;282,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+6;Fugenschutzrohr, aus PE, schwarz, geschlitzt;2,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+7;Dehnungsfugenprofil 10/80, mit Klebefu;80,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+8;Messstellenmakierung;30,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+9;Estrichzusatzmittel, Zusatz f;13,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+10;Heizkreisverteiler DN25, aus Edelstahl, mit R 3/4 Eurokonus zur Aufnahme von Verschraubungen d12-d20, mit Durchfluss- mengenz;1,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+11;Heizkreisverteiler DN25, aus Edelstahl, mit R 3/4 Eurokonus zur Aufnahme von Verschraubungen d12-d20, mit Durchfluss- mengenz;1,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+12;Heizkreisverteiler DN25, aus Edelstahl, mit R 3/4 Eurokonus zur Aufnahme von Verschraubungen d12-d20, mit Durchfluss- mengenz;2,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+13;Heizkreisverteiler DN25, aus Edelstahl, mit R 3/4 Eurokonus zur Aufnahme von Verschraubungen d12-d20, mit Durchfluss- mengenz;4,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+14;Heizkreisverteiler DN25, aus Edelstahl, mit R 3/4 Eurokonus zur Aufnahme von Verschraubungen d12-d20, mit Durchfluss- mengenz;5,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+15;Kugelhahnset geeeignet f;13,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+16;Strangregulier- und Absperrventil f;13,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+17;Thermometer f;26,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+18;Anschlussverschraubung f;282,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+19;Unterputz-Verteilerschrank mit T;13,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+20;Zylinderschloss f;13,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+21;Klemmverbinder f;20,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+22;Raumthermostat 230 V zur Einzelraumregelung der;69,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+23;Basiseinheit 230 V ohne Pumpenmodul.;13,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+24;Thermischer Stellantrieb zur automatischen Bet;141,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+25;Sicherheitstemperaturbegrenzer;3,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+26;Druckprobe der FBH nach DIN EN 1264.;1,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+27;Funktionsheizen nach DIN EN 1264;1,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+28;Elektroverdrahtung der Raumregelungen (FBH);1,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+29;Halogenfreie Mantelleitung;1250,0;m;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+30;Halogenfreie Mantelleitung;500,0;m;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+31;Feuchtraum-Abzweigdose als Abzweigdose nach;20,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+32;Unterputzdose als Ger;69,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+33;Unterputzdose als Abzweigdose f;10,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+34;Einseitiger;46,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+35;Beidseitiger;69,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+1;Kupferrohr nach DIN EN 1057, Dimension: 15 x 1,0 mm;15,0;m;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+2;Kupferrohr nach DIN EN 1057, Dimension: 22 x 1,0 mm;10,0;m;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+3;Kupferrohr nach DIN EN 1057, Dimension: 28 x 1,5 mm;40,0;m;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+4;Kupferrohr nach DIN EN 1057, Dimension: 35 x 1,5 mm;165,0;m;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+5;Kupferrohr nach DIN EN 1057, Dimension: 42 x 1,5 mm;95,0;m;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+6;Kupferrohr nach DIN EN 1057, Dimension: 54 x 2,0 mm;192,0;m;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+7;Bogen in den erforderlichen Winkelgraden,;23,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+8;Bogen;17,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+9;Bogen;38,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+10;Bogen;86,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+11;Bogen;26,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+12;Bogen;61,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+13;T-St;6,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+14;T-St;5,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+15;T-St;6,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+16;T-St;10,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+17;T-St;8,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+18;T-St;23,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+19;T-St;8,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+20;T-St;6,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+21;T-St;6,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+22;T-St;6,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+23;T-St;12,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+24;Muffe aus Kupfer mit SC-Contur;8,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+25;Muffe wie zuletzt im vollen Wortlaut beschrieben, jedoch:;6,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+26;Muffe wie zuletzt im vollen Wortlaut beschrieben, jedoch:;25,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+27;Muffe wie zuletzt im vollen Wortlaut beschrieben, jedoch:;44,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+28;Muffe wie zuletzt im vollen Wortlaut beschrieben, jedoch:;23,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+29;Muffe wie zuletzt im vollen Wortlaut beschrieben, jedoch:;10,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+30;Reduzierung aus Kupfer mit SC-Contur;4,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+31;Reduzierung;14,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+32;Reduzierung;14,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+33;Reduzierung;8,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+34;Reduzierung;12,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+35;Ü;4,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+36;Ü;4,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+37;Ü;46,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+38;Ü;12,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+39;Ü;12,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+40;Ü;22,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+41;Verschraubung, flachdichtend, mit SC-Contur,;6,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+42;Verschraubung wie zuletzt im vollen Wortlaut beschrieben, jedoch:;10,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+43;Verschraubung wie zuletzt im vollen Wortlaut beschrieben, jedoch:;6,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+44;Verschraubung wie zuletzt im vollen Wortlaut beschrieben, jedoch:;6,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+45;Profilstahlkonstruktion als Sondertragkonstruktion;100,0;kg;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+46;Bezeichnungsschild,;25,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+47;Zweischraubige Rohrschelle;10,0;Stk;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+48;Zweischraubige Rohrschelle;10,0;Stk;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+49;Zweischraubige Rohrschelle;10,0;Stk;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+50;Zweischraubige Rohrschelle;10,0;Stk;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+51;Zweischraubige Rohrschelle;18,0;Stk;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+52;Zweischraubige Rohrschelle;18,0;Stk;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+53;Zweischraubige Rohrschelle;50,0;Stk;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+1;Schlauchisolierung aus quadratisch extrudiertem,;10,0;m;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+2;Isolierschlauch wie zuletzt im vollen Wortlaut beschrieben, jedoch:;8,0;m;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+3;Isolierschlauch wie zuletzt im vollen Wortlaut beschrieben, jedoch:;30,0;m;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+4;Isolierschlauch wie zuletzt im vollen Wortlaut beschrieben, jedoch:;150,0;m;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+5;Isolierschlauch wie zuletzt im vollen Wortlaut beschrieben, jedoch:;80,0;m;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+6;Isolierschlauch wie zuletzt im vollen Wortlaut beschrieben, jedoch:;160,0;m;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+7;Rohrleitungsd;5,0;m;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+8;Rohrleitungsd;2,0;m;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+9;Rohrleitungsd;10,0;m;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+10;Rohrleitungsd;25,0;m;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+11;Rohrleitungsd;20,0;m;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+12;Rohrleitungsd;40,0;m;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+13;Armaturen - Isolierung, Isolierkappe aus zwei gleichen Halbschalen mit Rasterfaltenbalg zum Ausgleich unterschiedlicher Spindelausf;8,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+14;Armaturen - Isolierung, wie zuletzt in vollem Wortlaut;6,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+15;Armaturen - Isolierung, wie zuletzt in vollem Wortlaut;8,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+16;Armaturen - Isolierung, wie zuletzt in vollem Wortlaut;16,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+17;Armaturen - Isolierung, wie zuletzt in vollem Wortlaut;14,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+18;Brandschutzisolierung wie zuletzt in vollem Wortlaut;10,0;m;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+1;Heizseitigen Anschluss (VL/RL) DN 50 an Pufferspeicher erstellen.;2,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+2;Kernbohrungen durch Mauerwerk d= bis 240 mm erstellen.;30,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+3;Kernbohrungen durch Mauerwerk d= bis 240 mm erstellen.;20,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+4;Erstellen von Wandschlitzen f;15,0;m;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+1;Wartungsvertrag f;1,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+2;Mobile-Wasseraufbereitungsanlage Typ 150 als Leihger;1,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+3;Rohrnetz durchsp;1,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+4;Hydraulischer Abgleich und Einregulierung der gesamten Heizungsanlage.;1,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+5;Inbetriebnahme der Heizungsanlage. Durchf;1,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+1;Kompaktl;2,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+2;Kompaktl;1,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+3;Kompaktl;1,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+4;Kompaktl;1,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+5;Gleitschienenset f;3,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+6;Jalousieklappe f;6,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+7;Jalousieklappe f;2,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+8;Jalousieklappe f;2,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+9;Segeltuchstutzen, rechteckig. Segeltuchstutzen bestehen aus verzinktem Stahl und Neoprengewebe. Die flexiblen Segeltuchstutzen reduzieren die;16,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+10;Raumbedieneinheit f;5,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+11;Revisionsschalter (schwarz/grau) aus UV- und witterungsbest;5,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+12;CO2 und Temperatursensor f;5,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+13;Kanalrauchmelder 230V AC inklusive Entnahmerohr 0,6 m.;10,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+14;Elektroverdrahtung der L;5,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+15;Halogenfreie Mantelleitung;200,0;m;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+16;Halogenfreie Mantelleitung;80,0;m;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+17;J-H(ST)H  4x2x0,8 mm;50,0;m;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+18;Halogenfreies Elektro-Installationsrohr nach DIN EN 50086;20,0;m;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+19;Halogenfreies Elektro-Installationsrohr nach DIN EN 50086;10,0;m;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+20;Installationskanal 60x 100 mm;10,0;m;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+21;Abzweigdose ca. 90 x 90 mm;28,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+22;Flexschlauch M20 f;10,0;m;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+23;Flexschlauch M25 f;6,0;m;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+24;Metall Kabelsammelhalter zur Aufnahme von bis zu;80,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+25;Potentialausgleich;20,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+26;Beidseitiger Anschlu;50,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+1;Luftleitung als Rechteckkanal, mit verzinkter Tragkonstruktion aus Profilstahl, zur Auflage/Aufh;65,0;m²;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+2;Formst;55,0;m²;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+3;Luftleitung als Rundrohr wie in der Ausf;95,0;m;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+4;Luftleitung als Rundrohr wie in der Ausf;98,0;m;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+5;Luftleitung als Rundrohr wie in der Ausf;164,0;m;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+6;Luftleitung als Rundrohr wie in der Ausf;92,0;m;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+7;Luftleitung als Rundrohr wie in der Ausf;35,0;m;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+8;Luftleitung als Rundrohr wie in der Ausf;45,0;m;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+9;Luftleitung als Rundrohr wie in der Ausf;80,0;m;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+10;Luftleitung als Rundrohr wie in der Ausf;55,0;m;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+11;Luftleitung als Rundrohr wie in der Ausf;40,0;m;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+12;Luftleitung als Rundrohr wie in der Ausf;30,0;m;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+13;Luftleitung als Rundrohr wie in der Ausf;15,0;m;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+14;Luftleitung als Rundrohr wie in der Ausf;20,0;m;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+15;Bogen, wie in der Ausf;55,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+16;Bogen, wie in der Ausf;40,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+17;Bogen, wie in der Ausf;60,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+18;Bogen, wie in der Ausf;25,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+19;Bogen, wie in der Ausf;22,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+20;Bogen, wie in der Ausf;15,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+21;Bogen, wie in der Ausf;12,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+22;Bogen, wie in der Ausf;8,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+23;Bogen, wie in der Ausf;15,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+24;Bogen, wie in der Ausf;12,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+25;Bogen, wie in der Ausf;4,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+26;Bogen, wie in der Ausf;4,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+27;Ü;4,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+28;Ü;7,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+29;Ü;2,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+30;Ü;24,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+31;Ü;11,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+32;Ü;2,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+33;Ü;2,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+34;Ü;8,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+35;Ü;6,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+36;Ü;2,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+37;Ü;2,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+38;Ü;4,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+39;Ü;2,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+40;Ü;2,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+41;Ü;2,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+42;Ü;6,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+43;Ü;2,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+44;Ü;2,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+45;Ü;2,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+46;Ü;2,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+47;Ü;8,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+48;Ü;6,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+49;Ü;6,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+50;Ü;2,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+51;Ü;2,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+52;Ü;2,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+53;Ü;2,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+54;Abzweig , wie in der Ausf;1,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+55;Abzweig , wie in der Ausf;2,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+56;Abzweig , wie in der Ausf;5,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+57;Abzweig , wie in der Ausf;12,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+58;Abzweig , wie in der Ausf;8,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+59;Abzweig , wie in der Ausf;7,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+60;Abzweig , wie in der Ausf;2,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+61;Abzweig , wie in der Ausf;1,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+62;Abzweig , wie in der Ausf;8,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+63;Abzweig , wie in der Ausf;8,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+64;Abzweig , wie in der Ausf;2,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+65;Abzweig , wie in der Ausf;2,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+66;Abzweig , wie in der Ausf;5,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+67;Abzweig , wie in der Ausf;2,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+68;Abzweig , wie in der Ausf;2,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+69;Abzweig , wie in der Ausf;2,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+70;Abzweig , wie in der Ausf;2,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+71;Abzweig , wie in der Ausf;6,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+72;Abzweig , wie in der Ausf;2,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+73;Abzweig , wie in der Ausf;2,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+74;Abzweig , wie in der Ausf;4,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+75;Abzweig , wie in der Ausf;4,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+76;Abzweig , wie in der Ausf;2,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+77;Abzweig , wie in der Ausf;6,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+78;Abzweig , wie in der Ausf;2,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+79;Abzweig , wie in der Ausf;2,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+80;Abzweig , wie in der Ausf;2,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+81;Abzweig , wie in der Ausf;4,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+82;Abzweig , wie in der Ausf;2,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+83;Abzweig , wie in der Ausf;2,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+84;Abzweig , wie in der Ausf;6,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+85;Abzweig , wie in der Ausf;2,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+86;Abzweig , wie in der Ausf;1,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+87;Abzweig , wie in der Ausf;2,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+88;Abzweig , wie in der Ausf;1,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+89;Abzweig , wie in der Ausf;1,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+90;Abzweig , wie in der Ausf;1,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+91;Luftleitung als Steckverbinder wie in der Ausf;12,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+92;Luftleitung als Steckverbinder wie in der Ausf;12,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+93;Luftleitung als Steckverbinder wie in der Ausf;20,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+94;Luftleitung als Steckverbinder wie in der Ausf;30,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+95;Luftleitung als Steckverbinder wie in der Ausf;40,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+96;Luftleitung als Steckverbinder wie in der Ausf;30,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+97;Luftleitung als Steckverbinder wie in der Ausf;24,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+98;Luftleitung als Steckverbinder wie in der Ausf;20,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+99;Luftleitung als Steckverbinder wie in der Ausf;16,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+100;Luftleitung als Steckverbinder wie in der Ausf;8,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+101;Luftleitung als Steckverbinder wie in der Ausf;8,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+102;Luftleitung als Steckverbinder wie in der Ausf;8,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+103;Luftleitung als Steckverbinder wie in der Ausf;8,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+104;Luftleitung als Steckverbinder wie in der Ausf;8,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+105;Bundkragen, Stahlblech verzinkt Bundkragen, ohne Radius. Ausf;10,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+106;Bundkragen, Stahlblech verzinkt Bundkragen, ohne Radius. Ausf;12,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+107;Bundkragen, Stahlblech verzinkt Bundkragen, ohne Radius. Ausf;10,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+108;Bundkragen, Stahlblech verzinkt Bundkragen, ohne Radius. Ausf;14,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+109;Bundkragen, Stahlblech verzinkt Bundkragen, ohne Radius. Ausf;6,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+110;Bundkragen, Stahlblech verzinkt Bundkragen, ohne Radius. Ausf;8,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+111;Bundkragen, Stahlblech verzinkt Bundkragen, ohne Radius. Ausf;4,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+112;Bundkragen, Stahlblech verzinkt Bundkragen, ohne Radius. Ausf;4,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+113;Bundkragen, Stahlblech verzinkt Bundkragen, ohne Radius. Ausf;6,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+114;Bundkragen, Stahlblech verzinkt Bundkragen, ohne Radius. Ausf;6,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+115;Luftleitung als Rundrohr wie in der Ausf;8,0;m;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+116;Luftleitung als Rundrohr wie in der Ausf;30,0;m;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+117;Luftleitung als Rundrohr wie in der Ausf;35,0;m;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+118;Luftleitung als Rundrohr wie in der Ausf;25,0;m;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+119;Telefonieschalld;28,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+120;Telefonieschalld;4,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+121;Telefonieschalld;45,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+122;Telefonieschalld;34,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+123;Telefonieschalld;7,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+124;Telefonieschalld;4,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+125;Telefonieschalld;4,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+126;Telefonieschalld;18,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+127;Telefonieschalld;2,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+128;Volumenstrombegrenzer wie vor beschrieben, jedoch:;26,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+129;Volumenstrombegrenzer wie vor beschrieben, jedoch:;43,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+130;Volumenstrombegrenzer wie vor beschrieben, jedoch:;35,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+131;Volumenstrombegrenzer wie vor beschrieben, jedoch:;7,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+132;Brandschutzklappen in runder Bauform zum Absperren von Luftleitungen zwischen zwei Brandabschnitten. Brandschutztechnisch gepr;4,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+133;Brandschutzklappe DN 300;2,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+134;Revisionsdeckel f;30,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+135;Revisionsdeckel f;30,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+136;Revisionsdeckel f;20,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+137;Bezeichnungsschild,;40,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+138;Profilstahlkonstruktion als Sondertragkonstruktion;250,0;kg;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+139;Dachhaube f;8,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+140;Dachdurchf;8,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+141;Zweischraubige Rohrschelle;10,0;Stk;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+142;Zweischraubige Rohrschelle;10,0;Stk;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+143;Zweischraubige Rohrschelle;95,0;Stk;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+144;Zweischraubige Rohrschelle;100,0;Stk;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+145;Zweischraubige Rohrschelle;160,0;Stk;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+146;Zweischraubige Rohrschelle;90,0;Stk;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+147;Zweischraubige Rohrschelle;35,0;Stk;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+148;Zweischraubige Rohrschelle;45,0;Stk;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+149;Zweischraubige Rohrschelle;80,0;Stk;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+150;Zweischraubige Rohrschelle;55,0;Stk;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+151;Zweischraubige Rohrschelle;40,0;Stk;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+152;Zweischraubige Rohrschelle;30,0;Stk;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+153;Zweischraubige Rohrschelle;15,0;Stk;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+154;Zweischraubige Rohrschelle;20,0;Stk;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+1;W;450,0;m2;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+2;D;45,0;m2;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+1;Metalltellerventil DN 125 (Zuluft);28,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+2;Metalltellerventil DN 140 (Zuluft);24,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+3;Metalltellerventil DN 160 (Zuluft);16,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+4;Tellerventil wie zuletzt in vollem Wortlaut beschrieben, jedoch:;28,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+5;Tellerventil wie zuletzt in vollem Wortlaut beschrieben, jedoch:;24,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+6;Tellerventil wie zuletzt in vollem Wortlaut beschrieben, jedoch:;16,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+7;Ventilator-Einsatz mit integriertem Nachlauf,;1,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+8;Unterputzgeh;1,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+9;Universal-Montagehalterung, zur UP-Geh;1,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+10;Wetterschutzgitter in runder Bauform zum Schutz;2,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+1;Wartungsvertrag f;1,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+2;Erstellen von Wanddurchbruch in Au;8,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+3;Erstellen von Wanddurchbruch in KS-Wand 250 mm;8,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+4;Ausm;6,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+5;Anschluss der Wickelfalz-Rohrleitung DN 355 an die;8,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+6;Inbetriebnahme der Entl;5,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+1;Abflussrohr wie zuvor in vollem Wortlaut beschrieben, jedoch: DN 100;75,0;m;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+2;Abflussrohr wie zuvor in vollem Wortlaut beschrieben, jedoch: DN 70;20,0;m;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+3;Abflussrohr wie zuvor in vollem Wortlaut beschrieben, jedoch: DN 50;132,0;m;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+4;Form- und Verbindungsst;12,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+5;Form- und Verbindungsst;2,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+6;Form- und Verbindungsst;17,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+7;Form- und Verbindungsst;15,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+8;Bogen aller Winkelgrade, wie zuvor in vollem Wortlaut beschrieben,;95,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+9;Bogen aller Winkelgrade wie zuvor in vollem Wortlaut beschrieben,;25,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+10;Bogen aller Winkelgrade wie zuvor in vollem Wortlaut beschrieben,;165,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+11;Form- und Verbindungsst;4,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+12;Form- und Verbindungsst;35,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+13;Form- und Verbindungsst;5,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+14;Sifon- Anschlu;10,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+15;Anschlu;30,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+16;Anschlu;4,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+17;Anschlu;12,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+18;Anschlu;9,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+19;Anschlu;1,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+20;Wandeinbau-Fertigablauf f;2,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+21;Wandeinbau - Geruchsverschlu;1,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+22;Komplettablauf nach DIN 1253 und DIN 18534 konform in durchst;7,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+23;Bodenablauf DN 100 aus Kunststoff als Grundk;7,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+24;Aufstockelement f;7,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+25;Aufsatz 150x 150 mm mit Rahmen aus Edelstahl. Abdeckroste aus Edelstahl, Belastungsklasse K=300kg.;7,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+26;Edelstahl-Bodeneinlauf DN 100 mit Glocken- geruchverschlu;1,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+1;Cu- Rohr 42/1.5 ( DN 40 ) wie vor:;260,0;m;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+2;Cu- Rohr 35/1.5 ( DN 32 ) wie vor:;240,0;m;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+3;Cu- Rohr 28/1.5 ( DN 25 ) wie vor:;30,0;m;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+4;Cu- Rohr 22/1 ( DN 20 ) wie vor:;65,0;m;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+5;Cu- Rohr 18/1 ( DN 15 ) wie vor:;45,0;m;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+6;Cu- Rohr 15/1 ( DN 12 ) wie vor:;150,0;m;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+7;Press-Bogen in den erforderlichen Winkelgraden 45;195,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+8;Press-Bogen wie zuletzt im vollen Wortlaut beschrieben, jedoch:;70,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+9;Press-Bogen wie zuletzt im vollen Wortlaut beschrieben, jedoch:;45,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+10;Press-Bogen wie zuletzt im vollen Wortlaut beschrieben, jedoch:;47,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+11;Press-Bogen wie zuletzt im vollen Wortlaut beschrieben, jedoch:;192,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+12;Press-Bogen wie zuletzt im vollen Wortlaut beschrieben, jedoch:;276,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+13;Press-T-St;35,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+14;Press-T-St;15,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+15;Press-T-St;10,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+16;Press-T-St;12,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+17;Press-T-St;55,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+18;Press-T-St;58,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+19;Press-T-St;5,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+20;Press-T-St;10,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+21;Press-T-St;10,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+22;Press-T-St;5,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+23;Press-T-St;25,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+24;Press-Muffe, aus Kupfer, mit Anschlag, SC-Contur;40,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+25;Profipress-Muffe wie zuletzt im vollen Wortlaut beschrieben, jedoch:;20,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+26;Profipress-Muffe wie zuletzt im vollen Wortlaut beschrieben, jedoch:;15,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+27;Profipress-Muffe wie zuletzt im vollen Wortlaut beschrieben, jedoch:;10,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+28;Profipress-Muffe wie zuletzt im vollen Wortlaut beschrieben, jedoch:;30,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+29;Profipress-Muffe wie zuletzt im vollen Wortlaut beschrieben, jedoch:;35,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+30;Press-Reduzierst;30,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+31;Profipress-Reduzierst;50,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+32;Profipress-Reduzierst;20,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+33;Press-Reduzierst;30,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+34;Press-Reduzierst;35,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+35;Press-Reduzierst;45,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+36;Wandscheibe aus Rotgu;140,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+37;Press-;40,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+38;Press-;15,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+39;Press-;20,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+40;Press-;10,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+41;Press-;10,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+42;Press-;10,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+43;Profilstahlkonstruktion als Sondertragkonstruktion;50,0;kg;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+44;Zweischraubige Rohrschelle;30,0;Stk;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+45;Zweischraubige Rohrschelle;15,0;Stk;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+46;Zweischraubige Rohrschelle;20,0;Stk;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+47;Zweischraubige Rohrschelle;10,0;Stk;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+48;Zweischraubige Rohrschelle;18,0;Stk;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+49;Zweischraubige Rohrschelle;21,0;Stk;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+1;Isolierschlauch - wie zuvor in vollem Wortlaut beschrieben;130,0;m;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+2;Isolierschlauch - wie zuvor in vollem Wortlaut beschrieben;10,0;m;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+3;Isolierschlauch - wie zuvor in vollem Wortlaut beschrieben;25,0;m;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+4;Isolierschlauch - wie zuvor in vollem Wortlaut beschrieben;10,0;m;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+5;Isolierschlauch - wie zuvor in vollem Wortlaut beschrieben;40,0;m;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+6;Isolierschlauch - wie zuvor in vollem Wortlaut beschrieben;10,0;m;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+7;Isolierschlauch - wie zuvor in vollem Wortlaut beschrieben;20,0;m;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+8;Isolierschlauch - wie zuvor in vollem Wortlaut beschrieben;35,0;m;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+9;Isolierschlauch - wie zuvor in vollem Wortlaut beschrieben;40,0;m;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+10;Isolierschlauch - wie zuvor in vollem Wortlaut beschrieben;20,0;m;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+11;Isolierschlauch - wie zuvor in vollem Wortlaut beschrieben;200,0;m;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+12;Isolierschlauch - wie zuvor in vollem Wortlaut beschrieben;250,0;m;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+13;Rohrleitungsd;10,0;m;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+14;Rohrleitungsd;10,0;m;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+15;Rohrleitungsd;15,0;m;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+16;Rohrleitungsd;15,0;m;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+17;Abwasserleitung DN 100, wie zuvor in vollem Wortlaut beschrieben isolieren.;75,0;m;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+18;Abwasserleitung DN 70, wie zuvor in vollem Wortlaut beschrieben isolieren.;20,0;m;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+19;Abwasserleitung DN 50, wie zuvor in vollem Wortlaut beschrieben isolieren.;132,0;m;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+20;Brandschutzisolierung wie zuletzt in vollem Wortlaut;5,0;m;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+21;Brandschutzisolierung wie zuletzt in vollem Wortlaut;5,0;m;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+22;Brandschutzmanschette f;1,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+23;Brandschutzmanschette f;11,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+24;Brandschutzmanschette f;2,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+1;Ger;4,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+2;Ger;2,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+3;Ger;2,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+4;Ger;2,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+5;Anschlu;1,0;psch;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+6;Hauswasserstation HS 10 S;1,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+7;Frostsichere Aussenarmatur mit automatischer Entleerfunktion, als Bausatz auch f;9,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+8;Probenahmeventil aus Rotguss, Figur 187 00, zur Probenahme von Trinkwasser, Bestimmung mikrobiologischer Parameter nach TrinkwV, mediumber;8,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+9;Systemtrenner zur Absicherung von Trinkwasser gegen Nichttrinkwasser bis einschl. Fl;1,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+10;Wasserversorgungsleitung 25 mm aus Kunststoff, als Ring mit 25 m L;2,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+11;Wandeinbauschrank,;1,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+12;Hygienesp;2,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+13;Inbetriebnahme, Parametrierung und Einweisung Hygienesp;2,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+1;WC-Installationsbaustein;14,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+2;Montageelement f;1,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+3;Bet;15,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+4;WC- Drucksp;3,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+5;Abdeckplatte f;3,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+6;Wandh;1,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+7;Wandh;5,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+8;WC-Sitz passend f;5,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+9;Kinder- WC als Tiefsp;9,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+10;WC-Sitz mit Deckel in wei;9,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+11;Tiefsp;3,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+12;WC-Sitzring, grau;3,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+13;Waschtischanlage 650 x 555 mm barriefrei bestehend aus:;1,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+14;"Waschtischbatterie 1/2"" (BF)";1,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+15;Waschtischanlage bestehend aus:;4,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+16;Montageelement f;4,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+17;"Waschtischbatterie 1/2"", M- Size";4,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+18;Spiel- und Waschlandschaft f;3,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+19;Spiel- und Waschlandschaft f;3,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+20;Schaftsiebventil mit Kreuzsteg und 100 mm Staurohr aus messing verchromt f;6,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+21;Plus-Sifon-R;12,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+22;Plus-Sifon-R;3,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+23;2-Griff Waschtischarmatur mit Zugstangen-Ablaufgarnitur;9,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+24;Einhebel-Waschtischmischer mit Zugstangen-Ablaufgarnitur;12,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+25;Sp;2,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+26;Ab- und;2,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+27;Eingriff-Mischbatterie DN 15 verchromt f;2,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+28;Einbaubecken, oval, 600 x 500mm, innen und au;6,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+29;Wickeltisch Krippe;6,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+30;"Thermostat-Duschbatterie 1/2 "" verchromt f";6,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+31;Brausegarnitur bestehend aus:;6,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+32;Untertisch-Einzelthermostat DN 10 zur Warmwasserversorgung von Waschtischarmaturen beziehungsweise als thermischer Verbr;30,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+33;"Auslaufventil 1/2"" mit Bel";4,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+34;Eckventil 1/2;64,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+35;Kombinations-Eckventil 1/2;9,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+36;Einhand-Sp;2,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+37;Einhand-Sp;8,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+38;Ab- und;8,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+39;Anschluss der bauseits gelieferten Sp;8,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+40;Elektronisch geregelter Durchlauferhitzer zur bedarfsgerechten Trinkwassererw;12,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+41;Elektronisch geregelter Kompakt-Durchlauferhitzer zur dezentralen Trinkwassererw;5,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+42;Offener, 5 Liter Warmwasserspeicher (drucklos) in Untertischausf;9,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+43;St;2,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+44;Papierrollenhalter aus Nylon zur nachtr;1,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+45;Toilettenpapierhalter, aus Nylon, 20 mm;18,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+46;Reservepapierhalter, aus Nylon, 33 mm;18,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+47;WC- B;18,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+48;Kippspiegel f;1,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+49;Einzelhaken  aus Nylon, verdeckte Verschraubung, T = 44 mm;10,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+1;Trinkwasserleitung durchsp;1,0;psch;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+2;Desinfektion des Trinkwasserrohrnetzes;1,0;psch;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+3;Erstellen von Wanddurchbruch in Kalksandsteinwand 115 bis 245 mm;30,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+4;Einstemmen von Kreuzpunkten mit den Rohrleitungen in der Betonsohle;40,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+5;Kernbohrung durch Beton oder Mauerwerk D = 240 mm erstellen.;10,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+6;Dauerelastische Versieglung am Wandanschlu;35,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+7;Inbetriebnahme der sanit;1,0;psch;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+1;Baustelleneinrichtung und R;1,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+2;Bereitstellung eines Autokrans zum Transport d;1,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+3;Ein fahrbares Ger;1,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+4;Aufbau des fahrbaren Ger;12,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+5;Abbbau des fahrbaren Ger;12,0;Stk.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+6;Planungsfortschreibung w;1,0;psch;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+7;Projektleiterstunde f;5,0;Std.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+8;Monteurstunde;5,0;Std.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83
+9;Helferstunde;5,0;Std.;gaeb;2026-071074111 K-LKV-2026-0151_V1_LV.X83

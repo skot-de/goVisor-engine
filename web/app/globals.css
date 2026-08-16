@@ -99,16 +99,11 @@ img,svg{display:block;max-width:100%}
 .brandlogo{height:19px;width:auto;display:block}
 
 /* ── Strategie-Bereich (Ticket #10) ──────────────────────────────────────── */
-.stwrap{display:grid;grid-template-columns:190px minmax(0,1fr);gap:var(--s6);
-  padding:var(--s5) var(--s6) 64px;max-width:1120px}
-.stnav{position:sticky;top:var(--s4);align-self:start;display:flex;flex-direction:column;gap:var(--s4)}
-.stnav-g{display:flex;flex-direction:column;gap:1px}
-.stnav-gt{font-family:var(--mono);font-size:9px;font-weight:600;letter-spacing:.09em;
-  text-transform:uppercase;color:var(--ink-400);padding:0 10px var(--s2)}
-.stnav-i{text-align:left;font-size:var(--t-body);color:var(--ink-500);padding:6px 10px;
-  border-radius:var(--r);border-left:2px solid transparent;transition:.14s}
-.stnav-i:hover{background:var(--surface-3);color:var(--ink-900)}
-.stnav-i.on{background:var(--signal-wash);color:var(--ink-900);font-weight:600;border-left-color:var(--signal)}
+/* EINE Spalte, nicht zwei. Die 190-px-Spalte trug die Abschnittsnavigation; die steht
+   seit 2026-08-16 in der Bereichsleiste, wie in jedem anderen Bereich auch. Bliebe das
+   Raster stehen, saesse der Inhalt weiterhin in der schmalen zweiten Spalte — genau das
+   ist beim Umbau passiert und im Browser aufgefallen. */
+.stwrap{padding:var(--s5) var(--s6) 64px;max-width:1120px}
 .stmain{min-width:0}
 .st-head{display:flex;align-items:flex-start;justify-content:space-between;gap:var(--s4);
   flex-wrap:wrap;margin-bottom:var(--s4)}
@@ -324,10 +319,7 @@ img,svg{display:block;max-width:100%}
   text-transform:uppercase;color:var(--flag);background:var(--flag-wash);
   padding:1px 6px;border-radius:100px;margin-left:8px}
 
-@media (max-width:820px){
-  .stwrap{grid-template-columns:1fr;gap:var(--s4)}
-  .stnav{position:static;flex-direction:row;flex-wrap:wrap;gap:var(--s3)}
-}
+
 
 /* Filter-Panel — schiebt von rechts ein */
 .filt-n{display:inline-grid;place-items:center;min-width:15px;height:15px;padding:0 4px;margin-left:5px;

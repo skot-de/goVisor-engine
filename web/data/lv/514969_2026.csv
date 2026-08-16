@@ -1,0 +1,328 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+0001;USV Abgangsfeld für neue IT-Verteilung;2,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0002;NSGAFÖU 1x240 mm² (Tr/St/Ka/Ro);2,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0003;USV Einspeisung Stromschienen;2,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0004;Umbau ULK-Verteiler;2,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0005;Umbau EN UVT 1 Verteiler;1,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0006;Umbau EN UVT 2 Verteiler;1,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0007;Leitungsschutzschalter nachrüsten;4,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0008;Verteiler Rückkühlwerke Standschrank TL212G;2,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0009;Umbau Verteiler Rückkühlwerke / Kaltwasserpumpen;6,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0010;Verteiler Kältemaschine Standschrank R314T4;2,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0011;Umbau Verteiler Kältemaschinen;3,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0012;Nachrüstung von Sicherungslasttrennschalter 63A/ 400V 3-Polig;1,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0013;Austausch NH Trennleisten;2,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0014;Austausch Einspeiseschalter 3200 A;2,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0015;Stromschienenanschlusskopf 3200 A Bestand unten;2,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0016;Stromschienenanschlusskopf 3200 A Bestand oben;2,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0017;Austausch Einspeiseschalter nach USV 1000 A;2,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0018;Austausch Abgangslasttrennschalter von USV 1000 A;2,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0019;Nachrüstung Ansteuerung Rückeinspeiseschutz;8,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0020;Überspannungsschutz 400 V im Kleinverteiler;8,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0021;Überspannungsschutz 230 V im Kleinverteiler;4,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0022;Überspannungsschutz Netzersatzanlage;2,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0023;Überspannungsschutz Janitza NSHV-A + B, Feld 2 und Feld 6;2,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0024;Überspannungsschutz Kaltwassersatz 1 + 2;1,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0025;Überspannungsschutz Übergang NSHV Verteiler 2;2,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0026;Überspannungsschutz 400 V im Kleinverteiler umziehen;1,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0027;Modularer Energieanalysator ohne RCM & Strommessung;2,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0028;Strommessmodul 333mV mit 8 Messeingängen;10,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0029;Abgesetzte Anzeige für modularen Mehrkanal-Netzanalysator;2,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0030;Low Power Aufsteckstromwandler 9,0mm 50A;3,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0031;Low Power Umbaustromwandler 21x51mm 600A;54,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0032;Abklemmen und wieder anschließen von 2 Adern 120 mm²;36,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0033;UMG 605-PRO 24V (UL) in NSHV nachrüsten;2,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0034;Verdrahtungskanal 40mm x 40mm;8,0;m;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0035;Programmierung der Parameter des Messgerätes;24,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0036;Automatisierter monatlicher Kapazitätsreport;1,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0037;Erweitern vorhandene Dashboard-Startseite RZ mit Übersicht ERZ/EIT/EKälte (Energie) eund  PRZ/PIT/PKälte (Leistung). Beinhaltet Summenwerte mit VDs  MS/Trafo/USV/Kälte PUE-Berechnung Level 2 Sekundärverteiler;1,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0038;GridVis® Expert Erweiterungspaket 50;1,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0039;NH-Sicherung Größe 1, 200 A;10,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0040;NH-Sicherung Größe 2, 250 A;13,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0041;NH-Sicherung Größe 2, 315 A;36,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0042;NH-Sicherung Größe 2, 400 A;12,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0043;NH-Sicherung Größe 3, 500 A;29,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0044;NH-Sicherung Größe 3, 630 A;33,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0045;NH-Sicherung Größe 4, 800 A;184,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0046;D02 Sicherungseinsatz 6A inklusive Passhülse;9,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0047;D02 Sicherungseinsatz 10A inklusive Passhülse;120,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0048;D02 Sicherungseinsatz 16A inklusive Passhülse;120,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0049;D02 Sicherungseinsatz 20A inklusive Passhülse;120,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0050;D02 Sicherungseinsatz 25A inklusive Passhülse;12,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0051;D02 Sicherungseinsatz 50A inklusive Passhülse;30,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0052;Überarbeiten Bestandsdokumentation;1,0;psch;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0053;Neuzeichnen einer Seite Bestandsdokumentation;10,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0001;Notstromanlagen - ISO-Stahl Container;2,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0002;Dieselmotor;2,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0003;Synchrongenerator;2,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0004;Grundrahmen;2,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0005;Tischkühlanlage;2,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0006;Kühlwasser-Rohrleitungssystem;2,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0007;Zuluftschalldämpfer;2,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0008;Zuluftjalousie;2,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0009;Zuluftwetterschutzgitter;2,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0010;Zuluftventilator;2,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0011;Abluftanlage;2,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0012;Abluftjalousie;2,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0013;Abluftwetterschutzgitter;2,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0014;Abgasanlage;2,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0015;Starterbatterie;2,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0016;Steuerbatterie;2,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0017;Kraftstofftank;2,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0018;Kraftstoffleitungssystem zwischen Vorratstank und neuen Notstrom - Containeranlagen;2,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0019;Inbetriebsetzung und Abnahme Vorratstanksystem;1,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0020;Aggregatezubehör;2,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0021;Montage und Anlieferung;1,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0022;Kraftstoffbefüllung für die Inbetriebnahme der Generatoren;10000,0;l;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0023;Aggregatesteuerfeld;2,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0024;Generator - Leistungsteil;2,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0025;230V Spannungsversorgung Zentralfeld anpassen;2,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0026;Vorhandener Überspannungsschutz Überwachung im ZAS-Feld nachrüsten;2,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0027;Update Zentralfeld;2,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0028;Update Kraftstoffsteuerfeld;2,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0029;Austausch Aggregate Automatik für Bestandsaggregate;2,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0030;Umbau Lastschalter im Container zum Generatorschalter;2,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0031;Verkabelung und Stromschienenanbindung;2,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0032;Dokumentation;1,0;psch;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0033;Inbetriebnahme, Abnahme und Übergabe je Aggregat;2,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0034;Lastbank 3500 KW System A;1,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0035;Lastbank 3500 KW System B;1,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0001;Modulares USV System Multi Power2 MP2 600 VE PC0 zur Ausstattung mit maximal 9 Modulen zu je 67 kW mit cos φ 1;8,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0002;Tragekonstruktion für USV-Anlage;8,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0003;MP2 BLUE Powermodul 67 kW mit cos φ 1;58,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0004;NetMan 208 SNMP Interface-Karte;8,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0005;Parallel-Interface für USV-Anlagen vom Typ Multi Power2;8,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0006;Temperaturfühler Multi Power2;8,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0007;Isolieren von einem USV-Block aus einem dreier Parallelverbund. Es handelt sich um eine MGE Galaxy 7000 mit einer Scheinleistung von 500 kVA.;2,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0008;Batteriegestell extern;2,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0009;Tragekonstruktion für Batteriegestell;2,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0010;Bleibatteriesystem;8,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0011;Batteriemontage Neu;2,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0012;Batteriemontage Bestand;6,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0013;BACS WEBMANAGER BUDGET;2,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0014;Modul BACS C20;240,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0015;BACS AC & DC Stromsensor für DIN-RAIL-Montage;3,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0016;BACS-SPLITTING BOX;1,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0017;BACS-Busschnittstelle;1,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0018;BACS WEBMANAGER BUDGET;6,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0019;Überwachung Leistungsschalter USV-Anlagen;8,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0020;BAE Batterie-Anschluss-Einheit;8,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0021;Inbetriebnahme der USV-Anlagen;1,0;psch;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0022;Demontage USV-Anlage und Entsorgung von einer USV-Anlage Fabrikat MGE Galaxy 7000 500 kVA. Bei der Demontage ist darauf zu achten das die 400 V Verkabelung (Ein- und Ausgangsseite) für die Verkabelung der neuen USV-Anlagen wieder verwendet werden.;6,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0023;Demontage Kabelanschluss 1 x 240 mm²;108,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0024;Demontage und Entsorgung einer Batterieanlage bestehend aus 288 Batterieblöcken Typ Enersys/Data Safe 12HX300-FR. Bei der Demontage ist darauf zu achten das die bestehende Einzelbatterieüberwachen wieder verwendet wird. Für die Entsorgung der Batterien ist ein Entsorgungsnachweis von einem Fachunter;6,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0001;Verteileranschlussstück Sonderschenkel 579mm;1,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0002;Mehrpreis für Mehrfachwinkelkasten mit Sonderlängen;1,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0003;Mehrpreis für Z-Kasten vertikalen Versatz 423mm;1,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0004;Meterpreis Stromschiene 3200 A ohne Abgangsstellen in;33,0;m;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0005;Mehrpreis für Richtungsänderung 90° horizontal;4,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0006;Meterpreis Stromschiene 3200 A ohne Abgangsstellen in;9,0;m;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0007;Mehrpreis für Richtungsänderung 90° horizontal mit Sonderlänge 646mm;1,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0008;Mehrpreis für Richtungsänderung 90° vertikal;2,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0009;Mehrpreis für Richtungsänderung 90° horizontal 1720mm;1,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0010;Mehrpreis für Richtungsänderung 90° vertikal Sonder 1470mm;1,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0011;Mehrpreis für Richtungsänderung 90° vertikal Sonder C=641 O=495mm;1,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0012;Verteileranschlussstück;1,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0013;Mehrpreis für Brandabschottung DIN 4102 EI 90;3,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0014;Permanentes Wetterschutzdach inkl. Planung und Anfahrt Stahlbauer;1,0;psch;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0015;Universalbefestigung auf Bestandshalter Dach;13,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0016;Systembefestigung Abhängung;9,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0017;Aufständerung Standard;13,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0018;Verteileranschlussstück Sonderschenkel 579mm;1,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0019;Mehrpreis für Mehrfachwinkelkasten mit Sonderlängen;1,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0020;Mehrpreis für Z-Kasten vertikalen Versatz 423mm;1,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0021;Meterpreis Stromschiene 3200 A ohne Abgangsstellen in;35,0;m;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0022;Mehrpreis für Richtungsänderung 90° horizontal;4,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0023;Meterpreis Stromschiene 3200 A ohne Abgangsstellen in;9,0;m;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0024;Mehrpreis für Richtungsänderung 90° horizontal mit Sonderlänge 646mm;1,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0025;Mehrpreis für Richtungsänderung 90° vertikal;2,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0026;Mehrpreis für Richtungsänderung 90° horizontal 1720mm;1,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0027;Mehrpreis für Richtungsänderung 90° vertikal Sonder 1470mm;1,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0028;Mehrpreis für Richtungsänderung 90° vertikal Sonder C=641 O=495mm;1,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0029;Verteileranschlussstück;1,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0030;Mehrpreis für Brandabschottung DIN 4102 EI 90;3,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0031;Permanentes Wetterschutzdach inkl. Planung und Anfahrt Stahlbauer;1,0;psch;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0032;Universalbefestigung auf Bestandshalter Dach;13,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0033;Systembefestigung Abhängung;9,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0034;Aufständerung Standard;13,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0035;Verteileranschlussstück Winkel 472mm;1,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0036;Meterpreis Stromschiene 3200 A ohne Abgangsstellen in;21,0;m;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0037;Mehrpreis für Richtungsänderung 90° horizontal;2,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0038;Mehrpreis für Richtungsänderung 90° horizontal mit Sonderlänge 647mm;1,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0039;Verteileranschlussstück Winkel 472mm;1,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0040;Mehrpreis für Brandabschottung DIN 4102 EI 90;5,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0041;Aufständerung Standard;18,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0042;Verteileranschlussstück Winkel Sonderschenkel 472mm;1,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0043;Meterpreis Stromschiene 800 A ohne Abgangsstellen in;16,0;m;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0044;Mehrpreis für Richtungsänderung 90° horizontal;6,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0045;Mehrpreis für Sonder Z-Kasten vertikalen Versatz 197mm;2,0;m;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0046;Meterpreis Stromschiene 800 A ohne Abgangsstellen in;21,0;m;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0047;Mehrpreis für Sonder Z-Kasten vertikalen Versatz 197mm;1,0;m;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0048;Mehrpreis für Richtungsänderung 90° horizontal Sonder 1300mm;1,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0049;Mehrpreis für Richtungsänderung 90° horizontal Sonder 510mm;1,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0050;Verteileranschlussstück Winkel Sonderschenkel 472mm;1,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0051;Mehrpreis für Brandabschottung DIN 4102 EI 90;2,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0052;Aufständerung Standard;28,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0053;Verteileranschlussstück Winkel;1,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0054;Meterpreis Stromschiene 800 A ohne Abgangsstellen in;34,0;m;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0055;Mehrpreis für Richtungsänderung 90° horizontal;4,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0056;Mehrpreis für Sonder Z-Kasten vertikalen Versatz von 250mm;1,0;m;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0057;Mehrpreis für Richtungsänderung 90° horizontal Sonder 1200mm;1,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0058;Mehrpreis für Richtungsänderung 90° horizontal Sonder 1330mm;1,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0059;Mehrpreis für Sonder Z-Kasten vertikalen Versatz von 190mm;2,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0060;Mehrpreis für Z-Kasten vertikalen Versatz 150mm;1,0;m;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0061;Mehrpreis für Z-Kasten vertikalen Versatz 240mm;1,0;m;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0062;Mehrpreis für Mehrfachwinkelkasten;1,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0063;Verteileranschlussstück Winkel;1,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0064;Mehrpreis für Brandabschottung DIN 4102 EI 90;2,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0065;Aufständerung Standard;25,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0066;Erstellung der kompletten Dokumentation inkl. Maßaufnahme;1,0;psch;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0067;Montagebühnen;2,0;Wo;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0068;Demontage 3200 A Stromschiene Aluminium Nobaduct HCC2-3200 A;1,0;psch;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0069;"Einspeisekasten mit Leitungseinführung für Mehrleiterkabel inkusive Kabelverschaubungen für 2 x N2XH-J 4x120/70 mm². Die Kabeleinführung erfolgt über die Stirnseite. Bolzenanschluss (Bolzen im Lieferumfang enthalten); PE-Lage veränderbar.";2,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0070;L-Kasten Rechts Standart;1,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0071;L-Kasten Links Sonderlänge;1,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0072;Z-Kasten Links;1,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0073;Wahllänge Stromschiene ohne Abgangskasten 0,85 cm;1,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0074;Wahllänge Stromschiene ohne Abgangskasten 2,05 cm;1,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0075;Bewegliche Richtungsänderung mit Klemmblock;1,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0076;Endflansch;2,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0077;Demontage von Bestandsstromschiene Siemens Stromschiene;24,0;m;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0078;Montage von Bestandsstromschiene Siemens Stromschiene;24,0;m;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0079;Aufständerung Standard;21,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0001;Steuerleitung (geschirmt) LAPP ÖLFLEX CLASSIC 100 3x2,5 mm²,;139,0;m;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0002;Steuerleitung (geschirmt) LAPP ÖLFLEX CLASSIC 100 CY 5x2,5 mm², 450/750V, 00350123/50;190,0;m;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0003;Kabel wie vor, jedoch;395,0;m;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0004;Kabel wie vor, jedoch;165,0;m;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0005;Kabel wie vor, jedoch;247,0;m;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0006;Kabel wie vor, jedoch;195,0;m;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0007;Kabel wie vor, jedoch;939,0;m;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0008;Kabel wie vor, jedoch;76,0;m;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0009;Kabel wie vor, jedoch;88,0;m;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0010;Kabel wie vor, jedoch;184,0;m;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0011;Kabel wie vor, jedoch;24,0;m;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0012;Kabel wie vor, jedoch;260,0;m;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0013;Kabel wie vor, jedoch;260,0;m;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0014;Kabel wie vor, jedoch;34,0;m;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0015;Kabel wie vor, jedoch;69,4;m;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0016;Kabel wie vor, jedoch;299,0;m;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0017;Kabel wie vor, jedoch;245,0;m;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0018;Demontage von NHXMH-J 3x2,5 mm² (Tr/St/Ka/Ro);395,0;m;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0019;Demontage von NHXMH-J 5x4 mm² (Tr/St/Ka/Ro);320,0;m;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0020;Demontage von NYY-J 5x10 mm² (Tr/St/Ka/Ro);174,0;m;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0021;Demontage von N2XCH 4x95/50 mm² (Tr/St/Ka/Ro);15,0;m;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0022;Demontage von N2XCH 4x120/70 mm² (Tr/St/Ka/Ro);15,0;m;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0023;LWL Kabel OM4 LC-LC, 4 Fasern;60,0;m;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0024;LWL Kabel OM4 LC-LC, 4 Fasern;60,0;m;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0025;LWL Kabel OM4 LC-LC, 4 Fasern;40,0;m;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0026;Anschluß bis 3 x 2,5 mm²;36,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0027;Anschluß bis 5 x 2,5 mm²;28,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0028;Anschluß 5 x 2,5 mm², geschirmt;20,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0029;Anschluß bis 5 x 4 mm²;70,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0030;Anschluß bis 5 x 6 mm²;22,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0031;Anschluß bis 5 x 10 mm²;18,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0032;Anschluß bis 5 x 25 mm²;2,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0033;Anschluß bis 4x95/50 mm²;36,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0034;Anschluß bis 4x120/70 mm²;14,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0035;wie vor, jedoch;54,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0036;wie vor, jedoch;180,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0037;Abklemmen NHXMH-J 3x2,5 mm²;20,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0038;Abklemmen NHXMH-J 5x4 mm²;24,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0039;Abklemmen NHXMH-J 5x10 mm²;10,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0040;Abklemmen N2XCH 4x95/50 mm²;14,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0041;Abklemmen N2XCH 4x120/70 mm²;6,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0042;Provisorische Einspeisung Umluftkühlgeräte NHXMH-J 5x4 mm²;24,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0043;N2XCH 4x70/50 EN UVT 1 mm² zurückziehen und neu anschließen;2,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0044;N2XCH 4x70/50 EN UVT 2 mm² zurückziehen und neu anschließen;2,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0045;N2XCH 4x25/16 EN-UVT1-N01 -F107 mm² zurückziehen und an Überspannungsschutz im Batterieraum A neu anschließen.;2,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0046;N2XCH 4x120/70 mm² zurückziehen und neu anschließen;2,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0047;Datenkabel Hirolink 4 x 0,34 zurückziehen und verbinden;1,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0048;Datenkabel Modbus Kältemaschinen und Rückkühlwerke,  2 x AWG24 zurückziehen und verbinden;1,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0049;J-H(ST)H 2x2x0,6;1155,0;m;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0050;J-H(ST)H 6x2x0,6;310,0;m;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0051;J-H(ST)H 10x2x0,6;54,0;m;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0052;Datenkabel 2x24 AWG, Belden Typ 9841;325,0;m;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0053;Datenkabel für die strukturierter Gebäudeverkabelung,;2520,0;m;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0054;Anschluß von Kunststoffkabeln/-leitungen J-H(ST)H 2x2x0,6;138,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0055;Anschluß von Kunststoffkabeln/-leitungen J-H(ST)H 6x2x0,6;44,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0056;Anschluß von Kunststoffkabeln/-leitungen J-H(ST)H 10x2x0,6;8,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0057;Anschluß von Kunststoffkabeln/-leitungen 2xAWG24;36,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0058;Netzwerkkabel, Datenkabel 8-adrig am Patchfeld anschließen.;107,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0059;Netzwerkanschlussdose Cat 6a, 1-fach Aufputz;15,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0060;EG-Adapter MS-K IP20 mit 1 RJ45-Modul MS-K 1/8 für Hutschienenmontage;97,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0061;Netzwerkstecker RJ45, Kat 7 liefern und Datenkabel 8-adrig  anschließen.;30,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0062;Patchkabel bis 0,6 m  liefern und montieren.;180,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0063;Patchkabel bis 2 m  liefern und montieren.;30,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0064;VX 5303154 vormontierter Netzwerkwandschrank, 24 HE;3,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0065;"Switch, 19"" Gigabit Ethernet";3,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0066;"19"", 1HE Kategorie 6/E Patchfeld, 24 Steckplätze, mit";6,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0067;"19"", 1HE Kategorie Patchfeld, 12 LC-Duplex";3,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0068;APC Rack Automatic Transfer Switch, Transferschalter für die Rackmontage, Rackhöhe 1U, 230V, 208V, Modell: AP4421A;3,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0069;Schutzart IP 44, mit 12 Einführungen, komplett mit;10,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0070;Schutzart IP 54, mit Verschraubung Pg 16 oder;5,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0071;Länge bis 0,2 m;20,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0072;wie vor, jedoch;10,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0073;aus Hart-PVC, halogenfrei;6,0;m;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0074;wie vor, jedoch;9,0;m;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0075;wie vor, jedoch;12,0;m;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0076;Nach VDE 0605, DIN EN 50086, halogenfrei, starr, glatt, starkwandig, mit verstärkter Wandung für schwere Druckfestigkeit, einschl. Muffen, mit Iso-Abstandschellen (alle 1,0 m) für a.P.-Montage.;20,0;m;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0077;wie vor, jedoch;15,0;m;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0078;Aluminiumrohr 50 mm, ohne Gewinde;24,0;m;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0079;Aluminium-Rohrbogen, ohne Gewinde;8,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0080;Funktionserhalt Kabelrinne Breite 200 mm;10,0;m;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0081;E90 Sammelhalter;15,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0082;Kabelleiter in Seitenhöhe 60 mm mit eingeschweißten, nach oben offenen C30 Profilsprossen. Eingerollter Seitenholm zur Verstärkung und als Kantenschutz. Die Befestigung auf dem Ausleger erfolgt mit Klemmstücken Typ LKS 40. Das Schlitzmaß der Sprosse beträgt 16,5 mm, die passende Bügelschelle ist der;47,5;m;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0083;Weitspannkabelrinne WKSG 160 FS 200 mm mit Deckel;32,0;m;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0084;Weitspannkabelrinne WKSG 160 FS 300 mm mit Deckel;21,0;m;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0085;Mittelschwere gelochte Kabelrinne zur horizontalen Verlegung von Kabeln und Leitungen. Zertifiziert nach DIN EN 61537 VDE. Einsetzbar im Innenbereich. Zeitsparende schraublose Montage durch Rastfunktion. Geeignet für direkte und erhöhte Bodenmontage sowie Wand- und Deckenmontage auf Tragsystem. Durc;20,0;m;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0086;Mittelschwere gelochte Kabelrinne zur horizontalen Verlegung von Kabeln und Leitungen. Zertifiziert nach DIN EN 61537 VDE. Einsetzbar im Innenbereich. Zeitsparende schraublose Montage durch Rastfunktion. Geeignet für direkte und erhöhte Bodenmontage sowie Wand- und Deckenmontage auf Tragsystem. Durc;57,5;m;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0087;Steigetrassen, 300 mm, schwere Ausführung, Teillänge 6 m;10,0;m;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0088;Bügelschelle 1-fach 12 mm;20,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0089;Bügelschelle 1-fach 25 mm;30,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0090;Bügelschelle 1-fach 46 mm;60,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0091;Bohrung Durchm. 100 mm in 40 cm starke Betonwand bzw.;1,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0092;Bohrung Durchm. 50 mm, im 45° Winkel;1,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0093;Bohrung Durchm. 32 mm, in 30 cm starke Betonwand bzw.;12,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0094;Kabelbrandschottung (Mineralwollenplattenschotts);6,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0095;Öffnung;8,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0096;Öffnung;8,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0097;Öffnung;2,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0098;Öffnung bis Durchm. 100 mm,;1,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0099;Öffnung bis Durchm. 50 mm, sonst wie;12,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0100;Öffnung bis Durchm. 32 mm, sonst wie;1,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0001;Pot-Schiene Industrie CU;1,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0002;Metall-Anschlüsse;22,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0003;Überbrückungen;60,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0004;Überbrückungen wie vor, jedoch;50,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0005;"Kabel 0,6 / 1 kV, als Kunststoffkabel mit runden Leiter nach VDE 0276-604, Farbe VDE 0293; mehr als 5 Adern: gn-ge + Ziffern";10,0;m;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0006;"Kabel 0,6 / 1 kV, als Kunststoffkabel mit runden Leiter nach VDE 0276-604, Farbe VDE 0293; mehr als 5 Adern: gn-ge + Ziffern";255,0;m;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0007;"Kabel 0,6 / 1 kV, als Kunststoffkabel mit runden Leiter nach VDE 0276-604, Farbe VDE 0293; mehr als 5 Adern: gn-ge + Ziffern";190,0;m;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0008;"Kabel 0,6 / 1 kV, als Kunststoffkabel mit runden Leiter nach VDE 0276-604, Farbe VDE 0293; mehr als 5 Adern: gn-ge + Ziffern";110,0;m;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0009;"Kabel 0,6 / 1 kV, als Kunststoffkabel mit runden Leiter nach VDE 0276-604, Farbe VDE 0293; mehr als 5 Adern: gn-ge + Ziffern";369,0;m;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0010;Anschluß 1 x 6 mm²;10,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0011;Anschluß 1 x 10 mm²;78,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0012;Anschluß 1 x 16 mm²;48,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0013;Anschluß 1 x 25 mm²;36,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0014;Anschluß 1 x 35 mm²;84,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0001;Bezeichnungsschild DIN 825, aus mehrschichtigem;10,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0002;Bezeichnungsschild 74 / 120;12,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0003;Bezeichnungsschild 52 /105mm;8,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0004;Bezeichnungsschild DIN 825, aus mehrschichtigem;20,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0005;Bezeichnungsschild 74 / 120;10,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0006;Bezeichnungsschild 52 /105mm;11,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0007;Vorhandenes SLD der Niederspannungsanlage austauschen;9,0;St;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0008;Montage- und Werkstattplanung (Elektro);1,0;psch;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0009;Mitzuliefernde Unterlagen Elektrotechnik - Starkstrom;1,0;psch;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0010;liefern der Bestandsunterlagen in 3-facher farbiger;1,0;psch;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0011;Obermonteur(in);200,0;h;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0012;Monteur(in);200,0;h;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0013;Helfer(in);150,0;h;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0014;Inbetriebnahme-Techniker / Programmierer;120,0;h;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0015;Planung der Arbeitsabläufe;1,0;psch;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0016;Anlagenkennzeichnung / Adressierungssystem;1,0;psch;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0001;Fachkompetente Person an Werktagen;7,0;d;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0002;Fachkompetente Person an Sonntagen;7,0;d;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0001;Jährliche Vergütung für die Wartung der beschriebenen Notstrom- und USV-Anlagen;1,0;psch;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0002;Jährliche Vergütung für die Wartung der beschriebenen Notstrom- und USV-Anlagen;1,0;psch;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0003;Jährliche Vergütung für die Wartung der beschriebenen Notstrom- und USV-Anlagen;1,0;psch;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83
+0004;Jährliche Vergütung für die Wartung der beschriebenen Notstrom- und USV-Anlagen;1,0;psch;gaeb;06_LV Erweiterung RZ Elektroversorgung_2026-07-22.x83

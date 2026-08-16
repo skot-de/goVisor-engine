@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { UnternehmenView, type UnTab } from "@/components/unternehmen/UnternehmenView";
-import { UnternehmenTabs } from "@/components/unternehmen/UnternehmenTabs";
+import { BereichsNav } from "@/components/explorer/BereichsNav";
 import { AppRail, AppTop } from "@/components/explorer/Rail";
 import "../explorer.css";
 import "./unternehmen.css";
@@ -13,7 +13,21 @@ export default function UnternehmenPage() {
   const [tab, setTab] = useState<UnTab>("profil");
   return (
     <div className="app">
-      <AppTop werkzeuge={<UnternehmenTabs tab={tab} onTab={setTab} />} />
+      <AppTop />
+      {/* Die Abschnitte stehen in der Bereichsleiste — derselben Zeile, in der die
+          Lead-Ansichten ihre Suchtoken und Bausteine seine Themen zeigen. Vorher lagen
+          sie in der Kopfzeile und damit an einem Ort, den kein anderer Bereich benutzte. */}
+      <div className="bereichsleiste">
+        <BereichsNav
+          aktiv={tab}
+          onWechsel={(k) => setTab(k as UnTab)}
+          gruppen={[{ punkte: [
+            { key: "profil", label: "Eignungsprofil" },
+            { key: "bilanz", label: "Unsere Bilanz" },
+            { key: "chancen", label: "Chancen" },
+          ] }]}
+        />
+      </div>
       <div className="body">
         <AppRail current="unternehmen" />
         <div className="main seitenmain">

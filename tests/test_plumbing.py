@@ -1872,3 +1872,94 @@ def test_skripte_finden_govisor_ohne_pythonpath():
     assert not fehlend, (
         "Skripte importieren `govisor`, setzen aber den Projektpfad nicht — sie brechen "
         f"unter launchd ab: {fehlend}")
+
+
+def test_ertragsbericht_misst_den_trichter_nicht_nur_summen():
+    """Die Frage ist nicht „wie viel", sondern „wo reisst es ab".
+
+    Gemessen 2026-08-16: 92,3 % der Dateien sind lesbar, aber nur 21,6 % der offenen Leads
+    haben ueberhaupt Unterlagen. Zwei Zahlen, die einzeln beide harmlos aussehen und
+    zusammen die eigentliche Schwaeche zeigen — die REICHWEITE, nicht die Ausbeute.
+    """
+    import pathlib
+    quelle = (pathlib.Path(__file__).resolve().parent.parent / "govisor" / "ertrag.py"
+              ).read_text(encoding="utf-8")
+    for stufe in ("offene Leads", "mit Archiv", "mit lesbarem Text", "mit Signalen"):
+        assert stufe in quelle, f"Trichterstufe fehlt: {stufe}"
+    assert "blockiert_nach_grund" in quelle, "die Reichweiten-Arbeitsliste fehlt"
+
+
+def test_ertragsbericht_trennt_gewollte_grenzen_von_luecken():
+    """`.zip` steht mit 0 % lesbar in der Statistik — aber alle 1.021 sind
+    `datei_zu_gross`, also die eigene 10-MB-Grenze und kein fehlender Parser.
+
+    Beides in einer Liste zu zeigen las sich als „.zip koennen wir nicht". Der Bericht
+    muss unterscheiden, sonst erzeugt er Arbeitslisten, auf denen nichts zu tun ist.
+    """
+    import pathlib
+    quelle = (pathlib.Path(__file__).resolve().parent.parent / "govisor" / "ertrag.py"
+              ).read_text(encoding="utf-8")
+    assert "GEWOLLT" in quelle and "datei_zu_gross" in quelle
+    assert "FEHLENDE PARSER" in quelle and "BEWUSST AUSGESCHLOSSEN" in quelle
+
+
+def test_ertragsbericht_kennt_das_vokabular_jedes_feldes():
+    """Jedes `*_source`-Feld hat ein EIGENES Vokabular. Beim ersten Anlauf habe ich
+    ueberall `actual` erwartet und bekam „Wert 0 %, Kategorie 0 %" — was nach Totalausfall
+    aussah und in Wahrheit ein Messfehler war (`category_source` heisst `cpv`).
+
+    `competition_source` fehlt bewusst: bei offenen Vergaben ist es strukturell `na`, eine
+    Kennzahl die immer 0 % zeigt erzieht dazu, den Block zu ueberlesen.
+    """
+    import pathlib
+    quelle = (pathlib.Path(__file__).resolve().parent.parent / "govisor" / "ertrag.py"
+              ).read_text(encoding="utf-8")
+    assert '"category_source", ("cpv",)' in quelle, "Kategorie braucht ihr eigenes Vokabular"
+    assert '"competition_source"' not in quelle.split("belegt_pct")[1].split("# ──")[0], \
+        "competition_source gehoert nicht in die Belegt-Quote offener Leads"
+
+
+def test_kein_skript_ruft_psql_ueber_den_blossen_namen():
+    """`psql` liegt unter `/opt/homebrew/bin` — und der PATH, den **launchd** einem Agenten
+    gibt, kennt Homebrew nicht.
+
+    Am 2026-08-16 fielen dadurch ZWEI Tageslauf-Schritte aus: die Supabase-Schema-Migration
+    und die nächtliche `gap_effects`-Vorberechnung, beide mit `FileNotFoundError: 'psql'`.
+    Aus dem Terminal lief alles — der Fehler trat nur im geplanten Lauf auf, also dort, wo
+    niemand zusieht. Genau deshalb braucht es einen Test statt eines guten Vorsatzes.
+    """
+    import pathlib
+    import re
+
+    wurzel = pathlib.Path(__file__).resolve().parent.parent
+    treffer = []
+    for f in list((wurzel / "scripts").glob("*.py")) + list((wurzel / "govisor").glob("*.py")):
+        if f.name == "psql.py":
+            continue                                # die Fundstelle selbst
+        text = f.read_text(encoding="utf-8", errors="replace")
+        # Nur der AUFRUF zählt (`["psql", …]`), nicht Wort-Erwähnungen in Kommentaren.
+        if re.search(r'\[\s*"psql"\s*,', text):
+            treffer.append(f.name)
+    assert not treffer, (
+        "rufen `psql` über den blossen Namen auf und scheitern unter launchd: " + ", ".join(treffer))
+
+
+def test_psql_wird_auch_ohne_homebrew_im_pfad_gefunden():
+    """Gegenprobe zum Test darüber: die Suche muss den echten Ort kennen, nicht nur den PATH."""
+    import os
+    import sys
+    import pathlib
+    sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent.parent))
+    from govisor.psql import KANDIDATEN, finde_psql
+
+    assert "/opt/homebrew/bin/psql" in KANDIDATEN, "der Homebrew-Pfad ist der Regelfall auf diesem Mac"
+    alt = os.environ.get("PATH")
+    try:
+        os.environ["PATH"] = "/usr/bin:/bin"        # so sieht launchd es
+        os.environ.pop("PSQL", None)
+        # Nur prüfen, WENN psql installiert ist — auf einer frischen CI gibt es keins.
+        if any(os.path.exists(k) for k in KANDIDATEN):
+            assert finde_psql(), "psql liegt auf der Platte, wird aber nicht gefunden"
+    finally:
+        if alt is not None:
+            os.environ["PATH"] = alt

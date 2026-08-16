@@ -1,0 +1,497 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+010101001;Baustelle einrichten räumen;1,0;psch;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+010101002;WC-Kabine;1,0;St;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+010101003;WC-Kabine, über Grundvorhaltezeit;4,0;StWo;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+010101004;Magazincontainer;1,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+010201001;Außerbetriebnahme, elektrisch Abklemmen, Entleeren des kompletten Kessels;1,0;St;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+010201002;"Demontage Gasleitung 1"" incl. Formstücken";1,0;St;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+010201003;Demontage Warmwasserspeicher;1,0;St;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+010201004;Demontage alter Gaskessel 90 kW;1,0;St;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+010201005;Demontage Ausdehnungsgefäß;1,0;St;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+010201006;Demontage Abgasrohr;1,0;St;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+010201007;Demontage Stahlrohr DN 20-40;64,0;m;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+010201008;Demontage Einbauteilen in den Rohrleitungen DN 20-40;32,0;St;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+010201009;Demontage Wasserleitungen DN 15-40;136,0;m;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+010201010;Demontage Einbauteilen in den Wasserleitungen DN 15-40;14,0;St;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+010202001;Außerbetriebnahme, elektrisch Abklemmen, Entleeren des kompletten Kessels;1,0;St;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+010202002;"Demontage Gasleitung 1"" incl. Formstücken";1,0;St;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+010202003;Demontage Warmwasserspeicher;2,0;St;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+010202004;Demontage alter Gaskessel 65 kW;1,0;St;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+010202005;Demontage Ausdehnungsgefäß;1,0;St;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+010202006;Demontage Abgasrohr;1,0;St;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+010202007;Demontage Stahlrohr DN 20-40;64,0;m;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+010202008;Demontage Einbauteilen in den Rohrleitungen DN 20-40;26,0;St;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+010202009;Demontage Wasserleitungen DN 15-40;136,0;m;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+010202010;Demontage Einbauteilen in den Wasserleitungen DN 15-40;14,0;St;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+010203001;Außerbetriebnahme, elektrisch Abklemmen, Entleeren des kompletten Kessels;1,0;St;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+010203002;"Demontage Gasleitung 1"" incl. Formstücken";1,0;St;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+010203003;Demontage Warmwasserspeicher;1,0;St;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+010203004;Demontage alter Gaskessel 35 kW;1,0;St;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+010203005;Demontage Ausdehnungsgefäß;1,0;St;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+010203006;Demontage Abgasrohr;1,0;St;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+010203007;Demontage Stahlrohr DN 20-40;64,0;m;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+010203008;Demontage Einbauteilen in den Rohrleitungen DN 20-40;18,0;St;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+010203009;Demontage Wasserleitungen DN 15-40;136,0;m;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+010203010;Demontage Einbauteilen in den Wasserleitungen DN 15-40;14,0;St;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+010204001;Entsorgung Absetzcontainer;2,0;St;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020101001;Wandhängendes Gas-Brennwertgerät Ausführung H;1,0;St;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020101002;Anschlussgruppe;1,0;St;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020101003;Gas-Durchgangshahn Rp 3/4I X 22mm MOP 5;1,0;St;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020101004;Außenfühler NTC 2k kpl.m. Befestigungs-;1,0;St;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020101005;Erweiterungsmodul-Set;1,0;St;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020101006;Temperaturfühler-Set NTC5k 5000mm lang;2,0;St;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020101007;"Hydraulik Übergangs-Set 1""";1,0;St;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020101008;Systemtrennung;1,0;St;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020101009;"Schlammabscheider Rp 1 1/4""IG mit Magnet";1,0;St;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020101010;Pumpengruppe;1,0;St;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020101011;Inbetriebnahme und Einregulierung;1,0;St;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020101012;Wandhängendes Gas-Brennwertgerät Ausführung H;2,0;St;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020101013;Anschlussgruppe;2,0;St;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020101014;Gas-Durchgangshahn Rp 1/2I X 18mm MOP 5;2,0;St;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020101015;Außenfühler NTC 2k kpl.m. Befestigungs-;1,0;St;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020101016;Erweiterungsmodul;2,0;St;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020101017;Bus Systemleitung  3000lg 6-pol.;2,0;St;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020101018;Systemtrennung;1,0;St;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020101019;Temperaturfühler-Set NTC5k 5000mm lang;2,0;St;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020101020;Pumpengruppe;1,0;St;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020101021;"Schlammabscheider Rp 1 1/2""IG mit Magnet";1,0;St;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020101022;Inbetriebnahme und Einregulierung;2,0;St;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020101023;Wandhängendes Gas-Brennwertgerät Ausführung H mit;2,0;St;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020101024;Anschlussgruppe;2,0;St;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020101025;Gas-Durchgangshahn Rp 3/4I X 22mm MOP 5;2,0;St;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020101026;Außenfühler NTC 2k kpl.m. Befestigungsset;1,0;St;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020101027;Erweiterungsmodul-Set;1,0;St;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020101028;Erweiterungsmodul-Set;3,0;St;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020101029;Set Systemtrennung-Plattenwärmetauscher;1,0;St;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020101030;Temperaturfühler-Set NTC5k 5000mm lang;2,0;St;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020101031;Pumpengruppe;1,0;St;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020101032;"Schlammabscheider Rp 1 1/2""IG mit Magnet";1,0;St;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020101033;Inbetriebnahme und Einregulierung;2,0;St;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020102001;Schutzmaßnahmen;3,0;psch;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020102002;Schornstein öffnen;3,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020102003;Abbruchmaterial aufnehmen und entsorgen;3,0;psch;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020102004;Schornstein wieder vermauern;3,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020102005;Putzarbeiten;4,5;m²;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020102006;Endreinigung;3,0;psch;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020102007;Abgas-Luft-System, WAL PP Grundbausatz;1,0;St;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020102008;Abgas-Luft-System, WAL PP Erweiterungs-Set;1,0;St;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020102009;Rohr PP  DN110  2,0 m  (5 p.Ktn);6,0;St;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020102010;Abgas-Luft-System, WAL PP Grundbausatz Kaskade in Linie für;1,0;St;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020102011;Abgas-Luft-System, WAL PP Erweiterungs-Set;1,0;St;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020102012;Rohr PP  DN125  2,0 m  (5 p.Ktn);6,0;St;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020102013;Abgas-Luft-System, WAL PP Grundbausatz Kaskade in Linie für;1,0;St;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020102014;Abgas-Luft-System, WAL PP Erweiterungs-Set;1,0;St;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020102015;Rohr PP  DN125  2,0 m  (5 p.Ktn);6,0;St;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020201001;Verteiler 60/60;1,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020201002;Standkonsole 85 höhenverstellbar;1,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020201003;Fertigisolierung für HV 60/60;1,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020201004;Verteiler 85/85;1,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020201005;Standkonsole 85 höhenverstellbar;1,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020201006;Fertigisolierung für HV 85/85;1,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020201007;Verteiler 85/85;1,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020201008;Standkonsole 85 höhenverstellbar;1,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020201009;Fertigisolierung für HV 85/85;1,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020201010;Pumpengruppe DN 40;6,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020201011;Pumpengruppe DN 50;1,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020201012;Umwälzpumpe DN 50;1,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020201013;Umwälzpumpe DN 40;6,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020201014;3-Wege-Flanschenmischer DR GG 20, PN 6, gerade DN 40, Grau;6,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020201015;Stellmotor 24 V DN40/50 (0-10V);6,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020201016;Kugelhahn DN 15;6,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020201017;Kugelhahn DN 20;6,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020201018;Kugelhahn DN 25;12,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020201019;Kugelhahn DN 32;12,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020201020;Kugelhahn DN 40;12,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020201021;Kugelhahn DN 50;4,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020201022;Wärmedämmschale DN 15;6,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020201023;Wärmedämmschale DN 20;6,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020201024;Wärmedämmschale DN 25;12,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020201025;Wärmedämmschale DN 32;12,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020201026;Wärmedämmschale DN 40;12,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020201027;Wärmedämmschale DN 50;4,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020201028;Differenzdruckregler Rg PN16 250-700mbar DN32;1,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020201029;Differenzdruckregler Rg PN16 250-700mbar DN40;3,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020201030;Strangregulierventil Rg PN16 DN32;1,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020201031;Entleerungsarmatur Kugelhahn Ms PN10 DN15;3,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020201032;Be-/Entlüfter Schwimmer Ms PN25 DN15;6,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020202001;Rohrleitung, Stahl, D=22 mm;48,0;m;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020202002;Rohrleitung, Stahl, D=28 mm;72,0;m;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020202003;Rohrleitung, Stahl, D=35 mm;72,0;m;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020202004;Rohrleitung, Stahl, D=42 mm;72,0;m;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020202005;Bogen, Stahl, Pressverbindung, 45°/90°, D=22 mm;24,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020202006;Bogen, Stahl, Pressverbindung, 45°/90°, D=28 mm;36,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020202007;Bogen, Stahl, Pressverbindung, 45°/90°, D=35 mm;36,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020202008;Bogen, Stahl, Pressverbindung, 45°/90°, D=42 mm;36,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020202009;T-Stück, Stahl, Pressverbindung, D=22 mm;6,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020202010;T-Stück, Stahl, Pressverbindung, D=28 mm;6,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020202011;T-Stück, Stahl, Pressverbindung, D=28/22 mm;6,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020202012;T-Stück, Stahl, Pressverbindung, D=35 mm;6,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020202013;T-Stück, Stahl, Pressverbindung, D=35/22 mm;6,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020202014;T-Stück, Stahl, Pressverbindung, D=35/28 mm;6,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020202015;T-Stück, Stahl, Pressverbindung, D=42 mm;6,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020202016;T-Stück, Stahl, Pressverbindung, D=42/22 mm;6,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020202017;T-Stück, Stahl, Pressverbindung, D=42/28 mm;6,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020202018;Muffe, Stahl, Pressverbindung, D=22 mm;12,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020202019;Muffe, Stahl, Pressverbindung, D=28 mm;12,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020202020;Muffe, Stahl, Pressverbindung, D=35 mm;12,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020202021;Muffe, Stahl, Pressverbindung, D=42 mm;12,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020202022;Stahlkonstruktion verzinkt;12,0;kg;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020202023;Distanzstück Wärmezähler G 1 1/4 B;6,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020202024;Tauchhülse MSR;6,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020203001;Wärmedämmung Rohrleitung DN 20;48,0;m;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020203002;Wärmedämmung Rohrleitung DN 25;72,0;m;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020203003;Wärmedämmung Rohrleitung DN 32;72,0;m;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+020203004;Wärmedämmung Rohrleitung DN 40;72,0;m;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+030101001;Rohrleitung, PP, mit Muffe, DN 50, Abwasser;18,0;m;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+030101002;Rohrleitung, PP, mit Muffe, DN 100, Abwasser;9,0;m;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+030101003;Bogen, 15-90 Grad, DN/OD 50;16,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+030101004;Bogen, 15 - 90 Grad, DN/OD 100.;6,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+030101005;Abzweig, reduziert, 45 - 90 Grad, DN/OD 100, 2. DN/OD 50.;4,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+030101006;DN/OD 100, 2. DN/OD 50.;2,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+030101007;Trichtersiphon;4,0;St;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+030102001;Schalldämmung an Rohrleitung 6 mm DN 90-125;2,0;m;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+030102002;Isolierschlauch 5 mm DN 50-70;2,0;m;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+030201001;Rohrleitung aus nichtrostenden Stahlrohren, D=15 mm;36,0;m;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+030201002;Rohrleitung aus nichtrostenden Stahlrohren, D=22 mm;144,0;m;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+030201003;Rohrleitung aus nichtrostenden Stahlrohren, D=28 mm;108,0;m;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+030201004;Rohrleitung aus nichtrostenden Stahlrohren, D=35 mm;72,0;m;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+030201005;Rohrleitung aus nichtrostenden Stahlrohren, D=42 mm;48,0;m;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+030201006;Bogen, aus nichtrostendem Stahl, 45 oder 90 Grad,Außendurchmesser 15 mm;9,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+030201007;Bogen, aus nichtrostendem Stahl, 45 oder 90 Grad,Außendurchmesser 22 mm;36,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+030201008;Bogen, aus nichtrostendem Stahl, 40 oder 90 Grad,Außendurchmesser 28 mm;27,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+030201009;Bogen, aus nichtrostendem Stahl, 45 oder 90 Grad, Außendurchmesser 35 mm.;18,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+030201010;Bogen, aus nichtrostendem Stahl, 45 oder 90 Grad, Außendurchmesser 42 mm.;12,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+030201011;T-Stück, aus nichtrostendem Stahl, Außendurchmesser 22 mm.;29,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+030201012;T-Stück, aus nichtrostendem Stahl, Außendurchmesser 28 mm.;22,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+030201013;T-Stück, aus nichtrostendem Stahl, Außendurchmesser 35 mm.;15,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+030201014;T-Stück, aus nichtrostendem Stahl, Außendurchmesser 42 mm.;10,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+030201015;Muffe, aus nichtrostendem Stah, 22 mm.;15,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+030201016;Muffe, aus nichtrostendem Stahl, 28 mm.;11,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+030201017;Muffe, aus nichtrostendem Stahl, 35 mm.;8,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+030201018;Muffe, aus nichtrostendem Stahl, 42 mm.;5,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+030201019;Reduzierstück, aus nichtrostendem Stahl, 28 mm x 22 mm.;12,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+030201020;Reduzierstück, aus nichtrostendem Stahl, 35 mm x 22 mm.;12,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+030201021;Reduzierstück, aus nichtrostendem Stahl, 35 mm x 28 mm.;12,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+030201022;Reduzierstück, aus nichtrostendem Stahl, 42 mm x 28 mm.;12,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+030201023;Reduzierstück, aus nichtrostendem Stahl, 42 mm x 35 mm.;12,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+030202001;Rohrdämmung Hausanschluss DN 40;6,0;m;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+030202002;Wärmedämmung Rohrleitung, DN 15;36,0;m;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+030202003;Wärmedämmung Rohrleitung, DN 20;144,0;m;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+030202004;Wärmedämmung Rohrleitung, DN 25;108,0;m;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+030202005;Wärmedämmung Rohrleitung, DN 32;72,0;m;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+030202006;Wärmedämmung Rohrleitung , DN 40;48,0;m;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+030203001;Hauswasserstation;3,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+030203002;Probenahmeventil f. TW;3,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+030203003;Sicherheitscenter;3,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+030203004;Absperrventil mit Rückflussverhinderer;3,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+030203005;Mikrobiologische Untersuchung Trinkwasser, warm;3,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+030203006;Mikrobiologische Untersuchung Trinkwasser, kalt;3,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+030204001;Elektronisch geregelte Frischwasserstation;1,0;St;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+030204002;Zirkulation für Frischwasserstation;1,0;St;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+030204003;Probenahmeventil G 1/4A;2,0;St;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+030204004;Elektronisch geregelte Frischwasserstation;1,0;St;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+030204005;Zirkulation für Frischwasserstation;1,0;St;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+030204006;Probenahmeventil G 1/4A;2,0;St;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+030204007;Elektronisch geregelte Frischwasserstation;1,0;St;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+030204008;Zirkulation für Frischwasserstation;1,0;St;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+030204009;Probenahmeventil G 1/4A;2,0;St;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+030205001;Zirkulations-Regulierventil autom. absperrbar Rotguss Geradsitz Entleerung PN16 DN15;6,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+030205002;Absperrventil DN 15;12,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+030205003;Entleerungsventil DN 25;12,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+030205004;Absperrventil DN 25;12,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+030205005;Entleerungsventil DN 32;12,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+030205006;Entleerungsventil DN 40;6,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+030205007;Absperrventil mit Rückflussverhinderer DN 40;6,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+030205008;Dämmschale universell Schrägsitz DN15;12,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+030205009;Dämmschale universell Schrägsitz DN25;24,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+030205010;Dämmschale universell Schrägsitz DN32;12,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+030205011;Dämmschale universell Schrägsitz DN40;12,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+030205012;Entleerungvorrichtung DN12;6,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+030205013;Auslaufventil DN15 mit Schlauchtülle;6,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+030205014;Bezeichnungsschilder als Aufkleber;36,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+030205015;Magnet-Revisionsrahmen;3,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+030301001;Gasleitung DN 25;9,0;m;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+030301002;Gasleitung DN 20;6,0;m;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+030301003;Gasgerätehahn DN 25 mit TAE;3,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+030301004;Gasgerätehahn DN 20 mit TAE;2,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+030301005;Rohrbogen DN 25;12,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+030301006;Rohrbogen DN 20;8,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+030301007;Anschlussverschraubung Gasgerät DN 25;3,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+030301008;Anschlussverschraubung Gasgerät DN 20;2,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+030301009;Belastungs- und Dichtheitsprüfung Heizraum 1;1,0;psch;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+030301010;Belastungs- und Dichtheitsprüfung Heizraum 2;1,0;psch;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+030301011;Belastungs- und Dichtheitsprüfung Heizraum 3;1,0;psch;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+030301012;Kennzeichnung und Dokumentation;1,0;psch;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+0401.001;Entleeren der für den Umbau erforderlichen wasserführenden Anlagen;1,0;psch;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+0401.002;Teilbefüllung der Heizungsanlage mit entsalztem Wasser;1,0;psch;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+0401.003;Dichtheitsprüfung und Spülen Trinkwasseranlage;1,0;psch;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+0401.004;Funktionsprüfung / Inbetriebnahme Sanitäranlage;1,0;psch;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+0401.005;Inbetriebnahme und Einregulierung;1,0;psch;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+0401.006;Ersteinweisung Bedienpersonal;1,0;psch;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+0401.007;Füllen und Druckprüfung;1,0;psch;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+0401.008;Druck- bzw. Dichtheitsprüfung AW;1,0;psch;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+0401.009;Funktionsprüfung / Inbetriebnahme Heizungsanlage;1,0;psch;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+0402.001;Elektroheizung mobil 15 kW Miete Verlängerung;1,0;Mt;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+0501.001;Wartungsvertrag über 5 Jahre/ jährliche Wartung;5,0;Jahr;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+0502.001;Anlagendokumentation;1,0;psch;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+0503.001;Obermonteurstunde / A- Monteur;10,0;h;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+0503.002;Monteurstunde;10,0;h;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+0503.003;Helferstunde;10,0;h;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+0504.001;Außerbetriebnahme von Gas Kesselanlage;3,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+0504.002;Verlegesystem;3,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+0504.003;Leitungen ELT J-Y(St)Y 2×2×0,8 mm;90,0;m;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+0504.004;Leitungen ELT NYM-J 5 × 1,5 mm²;120,0;m;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+0504.005;Anschlussleitung Pumpen 3 × 1,5 mm²;60,0;m;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+0504.006;Anschlussleitung Mischerantriebe 5 × 1,5 mm²;60,0;m;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+0504.007;Störmeldeleitung Pumpen  Kleinspannung 2 × 2 × 0,8 mm;60,0;m;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+0504.008;"Steuerleitung ""Extern Aus"" für Pumpen 2 × 0,75 mm²";60,0;m;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+0504.009;Einzelabsicherung einer Heizungsumwälzpumpe;6,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+0504.010;Reparaturschalter für Heizungsumwälzpumpe;6,0;Stk;gaeb-flat;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring.D83
+001;Baustelle einrichten, vorhalten & räumen;1,0;psch;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+002;WC-Kabine antransportieren, aufstellen und nach Beendigung aller Bauarbeiten beseitigen. Nutzung durch die am Bau beteiligten Firmen.;1,0;St;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+003;wie vor beschrieben, über geplante Grundvorhaltung hinau vorhalten;4,0;StWo;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+004;Magazincontainer aufstellen räumen L 6m B 2,5m;1,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+001;Außerbetriebnahme einschl. Entleeren und Entsorgen der Rohrleitungen;1,0;St;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+002;"Demontage Gasleitung 1""";1,0;St;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+003;siehe beigefügte Fotodokumentation;1,0;St;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+004;siehe beigefügter Fotodokumentation;1,0;St;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+005;siehe beigefügter Fotodokumentation;1,0;St;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+006;Demontage und Entsorgung Abgasrohr;1,0;St;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+007;Demontage und Entsorgung Stahlrohr DN 20-40;64,0;m;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+008;Demontage und Entsorgung von Einbauteilen in den Rohrleitungen, wie Ventile, Klappen, Pumpen, Schmutzfänger, Sicherheitsventilen, Mischer, Antriebe,;32,0;St;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+009;Demontage Wasserleitungen, Rohrleitungen aus nicht rosteten Stahl DN 15-40;136,0;m;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+010;Demontage und Entsorgung von Einbauteilen in den Rohrleitungen, wie Ventile, Klappen, Pumpen, Schmutzfänger, Sicherheitsventilen, Mischer, Antriebe,;14,0;St;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+001;Außerbetriebnahme einschl. Entleeren und Entsorgen der Rohrleitungen;1,0;St;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+002;"Demontage Gasleitung 1""";1,0;St;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+003;siehe beigefügte Fotodokumentation;2,0;St;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+004;siehe beigefügter Fotodokumentation;1,0;St;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+005;siehe beigefügter Fotodokumentation;1,0;St;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+006;Demontage und Entsorgung Abgasrohr;1,0;St;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+007;Demontage und Entsorgung Stahlrohr DN 20-40;64,0;m;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+008;Demontage und Entsorgung von Einbauteilen in den Rohrleitungen, wie Ventile, Klappen, Pumpen, Schmutzfänger, Sicherheitsventilen, Mischer, Antriebe,;26,0;St;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+009;Demontage Wasserleitungen, Rohrleitungen aus nicht rosteten Stahl DN 15-40;136,0;m;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+010;Demontage und Entsorgung von Einbauteilen in den Rohrleitungen, wie Ventile, Klappen, Pumpen, Schmutzfänger, Sicherheitsventilen, Mischer, Antriebe,;14,0;St;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+001;Außerbetriebnahme einschl. Entleeren und Entsorgen der Rohrleitungen;1,0;St;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+002;"Demontage Gasleitung 1""";1,0;St;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+003;siehe beigefügte Fotodokumentation;1,0;St;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+004;siehe beigefügter Fotodokumentation;1,0;St;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+005;siehe beigefügter Fotodokumentation;1,0;St;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+006;Demontage und Entsorgung Abgasrohr;1,0;St;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+007;Demontage und Entsorgung Stahlrohr DN 20-40;64,0;m;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+008;Demontage und Entsorgung von Einbauteilen in den Rohrleitungen, wie Ventile, Klappen, Pumpen, Schmutzfänger, Sicherheitsventilen, Mischer, Antriebe,;18,0;St;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+009;Demontage Wasserleitungen, Rohrleitungen aus nicht rosteten Stahl DN 15-40;136,0;m;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+010;Demontage und Entsorgung von Einbauteilen in den Rohrleitungen, wie Ventile, Klappen, Pumpen, Schmutzfänger, Sicherheitsventilen, Mischer, Antriebe,;14,0;St;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+001;5 cbm Absetzcontainer;2,0;St;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+001;Wandhängendes Gas-Brennwertgerät Ausführung H;1,0;St;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+002;Anschlussgruppe mit Schwerkraftbremse in Verbindung mit einer;1,0;St;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+003;Gas-Durchgangshahn Rp 3/4I X 22mm MOP 5;1,0;St;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+004;Außenfühler NTC 2k kpl.m. Befestigungs-;1,0;St;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+005;Erweiterungsmodul-Set;1,0;St;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+006;Temperaturfühler-Set NTC5k 5000mm lang;2,0;St;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+007;"Hydraulik Übergangs-Set 1""";1,0;St;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+008;Systemtrennung;1,0;St;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+009;"Schlammabscheider Rp 1 1/4""IG mit Magnet";1,0;St;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+010;Pumpengruppe mit Hocheffizienzpumpe 25-70;1,0;St;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+011;Inbetriebnahme und Einregulierung;1,0;St;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+012;Wandhängendes Gas-Brennwertgerät Ausführung H;2,0;St;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+013;Anschlussgruppe Heizung;2,0;St;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+014;Gas-Durchgangshahn Rp 1/2I X 18mm MOP 5;2,0;St;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+015;Außenfühler NTC 2k kpl.m. Befestigungs-;1,0;St;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+016;Erweiterungsmodul;2,0;St;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+017;Bus Systemleitung  3000lg 6-pol.;2,0;St;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+018;Set Systemtrennung-Plattenwärmetauscher;1,0;St;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+019;Temperaturfühler-Set NTC5k 5000mm lang;2,0;St;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+020;Pumpengruppe;1,0;St;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+021;"Schlammabscheider Rp 1 1/2""IG mit Magnet";1,0;St;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+022;Inbetriebnahme und Einregulierung;2,0;St;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+023;Wandhängendes Gas-Brennwertgerät Ausführung H mit folgenden integrierten hydraulischen Komponenten:;2,0;St;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+024;Anschlussgruppe für mit Schwerkraftbremse in Verbindung mit einer;2,0;St;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+025;Gas-Durchgangshahn Rp 3/4I X 22mm MOP 5;2,0;St;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+026;Außenfühler NTC 2k kpl.m. Befestigungs-;1,0;St;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+027;Erweiterungsmodul-Set;1,0;St;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+028;Erweiterungsmodul-Set;3,0;St;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+029;Set Systemtrennung-Plattenwärmetauscher;1,0;St;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+030;Temperaturfühler-Set NTC5k 5000mm lang;2,0;St;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+031;Pumpengruppe;1,0;St;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+032;"Schlammabscheider Rp 1 1/2""IG mit Magnet";1,0;St;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+033;Inbetriebnahme und Einregulierung;2,0;St;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+001;Arbeitsbereich im Heizraum und am Schornstein gegen Verschmutzung schützen.;3,0;psch;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+002;Schornstein aus Leichtbeton mit einem Außenmaß von ca. 40 × 40 cm im Bereich zwischen Reinigungsöffnung und Kesselanschluss vorsichtig öffnen.;3,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+003;Sämtlichen beim Öffnen des Schornsteins anfallenden Bauschutt aufnehmen, verladen, transportieren und fachgerecht entsorgen.;3,0;psch;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+004;Nach Einbau der neuen Kunststoff-Abgasleitung den geöffneten Schornstein fachgerecht wieder schließen.;3,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+005;Außenflächen des geöffneten Schornsteins nach Abschluss der Mauerarbeiten wieder herstellen.;4,5;m²;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+006;Arbeitsbereich vollständig reinigen.;3,0;psch;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+007;Abgas-Luft-System, WAL PP Grundbausatz;1,0;St;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+008;Abgas-Luft-System, WAL PP Erweiterungs-Set;1,0;St;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+009;Rohr PP  DN110  2,0 m  (5 p.Ktn);6,0;St;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+010;Abgas-Luft-System, WAL PP Grundbausatz Kaskade in Linie für;1,0;St;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+011;Abgas-Luft-System, WAL PP Erweiterungs-Set;1,0;St;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+012;Rohr PP  DN125  2,0 m  (5 p.Ktn);6,0;St;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+013;Abgas-Luft-System, WAL PP Grundbausatz Kaskade in Linie für;1,0;St;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+014;Abgas-Luft-System, WAL PP Erweiterungs-Set;1,0;St;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+015;Rohr PP  DN125  2,0 m  (5 p.Ktn);6,0;St;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+001;Verteiler 60/60;1,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+002;Standkonsole 85 höhenverstellbar;1,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+003;Fertigisolierung für HV 60/60;1,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+004;Verteiler 85/85;1,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+005;Standkonsole 85 höhenverstellbar;1,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+006;Fertigisolierung für HV 85/85;1,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+007;Verteiler 85/85;1,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+008;Standkonsole 85 höhenverstellbar;1,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+009;Fertigisolierung für HV 85/85;1,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+010;Pumpengruppe DN 40;6,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+011;Pumpengruppe DN 50;1,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+012;Umwälzpumpe;1,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+013;Umwälzpumpe;6,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+014;3-Wege-Flanschenmischer DR GG 20, PN 6, gerade DN 40, Grau;6,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+015;Stellmotor 24 V DN40/50 (0-10V);6,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+016;Kugelhahn, Durchgangsform, mit Innengewinde, Gehäuse aus Rotguss, Betätigung mit Hebel, Nenndruck 1,6 MPa (16 bar), DN 15.;6,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+017;Kugelhahn, Durchgangsform, mit Innengewinde, Gehäuse aus Rotguss,  Betätigung mit Hebel, Nenndruck 1,6 MPa (16 bar), DN 20.;6,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+018;Kugelhahn, Durchgangsform, mit Innengewinde, Gehäuse aus Rotguss, Betätigung mit Hebel, Nenndruck 1,6 MPa (16 bar), DN 25.;12,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+019;Kugelhahn, Durchgangsform, mit Innengewinde, Gehäuse aus Rotguss, Betätigung mit Hebel, Nenndruck 1,6 MPa (16 bar), DN 32.;12,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+020;Kugelhahn, Durchgangsform, mit Innengewinde, Gehäuse aus Rotguss, Betätigung mit Hebel, Nenndruck 1,6 MPa (16 bar), DN 40.;12,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+021;Kugelhahn, Durchgangsform, mit Innengewinde, Gehäuse aus Rotguss, Betätigung mit Hebel, Nenndruck 1,6 MPa (16 bar), DN 50.;4,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+022;Wärmedämmschale DN 15;6,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+023;Wärmedämmschale DN 20;6,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+024;Wärmedämmschale DN 25;12,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+025;Wärmedämmschale DN 32;12,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+026;Wärmedämmschale DN 40;12,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+027;Wärmedämmschale DN 50;4,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+028;Nennweite: DN 32;1,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+029;Nennweite: DN 40;3,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+030;Strangregulierventil Rg PN16 DN32;1,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+031;Entleerungsarmatur, als Kugelhahn, für Wasser bis 120 Grad C, mit Verschlusskappe und Kette, Gehäuse aus Messing, PN 10, DN 15.;3,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+032;Be- und Entlüfter, für Wasser, max. Betriebstemperatur bis 120 Grad C, max. Betriebsüberdruck 10 bar, mit Schwimmer aus nichtrostendem Stahl, Gehäuse aus Messing, mit Gewindeanschluss, PN 25, DN 15.;6,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+001;Rohrleitung aus Präzisionsstahlrohr DIN EN 10305-1, nahtlos,  mit werkseitigem Korrosionsschutz, für Heizungswasser, Außendurchmesser 22 mm, Wanddicke 2,5 mm, einschl. Schweiß- bzw. Löt- und Dichtungsmittel, sowie Herstellen der Verbindungen, Form- und Verbindungsstücke werden gesondert vergütet, Ve;48,0;m;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+002;Rohrleitung aus Präzisionsstahlrohr DIN EN 10305-1, nahtlos,  mit werkseitigem Korrosionsschutz, für Heizungswasser, Außendurchmesser 28 mm, Wanddicke 2,5 mm, einschl. Schweiß- bzw. Löt- und Dichtungsmittel, sowie Herstellen der Verbindungen, Form- und Verbindungsstücke werden gesondert vergütet, Ve;72,0;m;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+003;Rohrleitung aus Präzisionsstahlrohr DIN EN 10305-1, nahtlos,  mit werkseitigem Korrosionsschutz, für Heizungswasser, Außendurchmesser 35 mm, Wanddicke 2,5 mm, einschl. Schweiß- bzw. Löt- und Dichtungsmittel, sowie Herstellen der Verbindungen, Form- und Verbindungsstücke werden gesondert vergütet, Ve;72,0;m;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+004;Rohrleitung aus Präzisionsstahlrohr DIN EN 10305-1, nahtlos,  mit werkseitigem Korrosionsschutz, für Heizungswasser, Außendurchmesser 42 mm, Wanddicke 2,5 mm, einschl. Schweiß- bzw. Löt- und Dichtungsmittel, sowie Herstellen der Verbindungen, Form- und Verbindungsstücke werden gesondert vergütet, Ve;72,0;m;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+005;Bogen, aus Kohlenstoffstahl, Pressverbindung, für Rohrleitung aus Präzisionsstahlrohr DIN EN 10305-1, nahtlos,  für Heizungswasser, Außendurchmesser 22 mm.;24,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+006;Bogen, aus Kohlenstoffstahl, Pressverbindung, für Rohrleitung aus Präzisionsstahlrohr DIN EN 10305-1, nahtlos,  für Heizungswasser, Außendurchmesser 28 mm.;36,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+007;Bogen, aus Kohlenstoffstahl, Pressverbindung, für Rohrleitung aus Präzisionsstahlrohr DIN EN 10305-1, nahtlos,  für Heizungswasser, Außendurchmesser 35 mm.;36,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+008;Bogen, aus Kohlenstoffstahl, Pressverbindung, für Rohrleitung aus Präzisionsstahlrohr DIN EN 10305-1, nahtlos,  für Heizungswasser, Außendurchmesser 42 mm.;36,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+009;T-Stück, aus Kohlenstoffstahl, Pressverbindung, für Rohrleitung aus Präzisionsstahlrohr DIN EN 10305-1, nahtlos,  für Heizungswasser, Außendurchmesser 22 mm.;6,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+010;T-Stück, aus Kohlenstoffstahl, Pressverbindung, für Rohrleitung aus Präzisionsstahlrohr DIN EN 10305-1, nahtlos,  für Heizungswasser, Außendurchmesser 28 mm.;6,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+011;T-Stück, reduziert, aus Kohlenstoffstahl, Pressverbindung, für Rohrleitung aus Präzisionsstahlrohr DIN EN 10305-1, nahtlos,  für Heizungswasser, Außendurchmesser 28 mm, 2. Durchmesser 22 mm.;6,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+012;T-Stück, aus Kohlenstoffstahl, Pressverbindung, für Rohrleitung aus Präzisionsstahlrohr DIN EN 10305-1, nahtlos,  für Heizungswasser, Außendurchmesser 35 mm.;6,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+013;T-Stück, reduziert, aus Kohlenstoffstahl, Pressverbindung, für Rohrleitung aus Präzisionsstahlrohr DIN EN 10305-1, nahtlos,  für Heizungswasser, Außendurchmesser 35 mm, 2. Durchmesser 22 mm..;6,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+014;T-Stück, reduziert, aus Kohlenstoffstahl, Pressverbindung, für Rohrleitung aus Präzisionsstahlrohr DIN EN 10305-1, nahtlos,  für Heizungswasser, Außendurchmesser 35 mm, 2. Durchmesser 28 mm.;6,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+015;T-Stück, aus Kohlenstoffstahl, Pressverbindung, für Rohrleitung aus Präzisionsstahlrohr DIN EN 10305-1, nahtlos,  für Heizungswasser, Außendurchmesser 42 mm.;6,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+016;T-Stück, reduziert, aus Kohlenstoffstahl, Pressverbindung, für Rohrleitung aus Präzisionsstahlrohr DIN EN 10305-1, nahtlos,  für Heizungswasser, Außendurchmesser 42 mm, 2. Durchmesser 22 mm.;6,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+017;T-Stück, reduziert, aus Kohlenstoffstahl, Pressverbindung, für Rohrleitung aus Präzisionsstahlrohr DIN EN 10305-1, nahtlos,  für Heizungswasser, Außendurchmesser 42 mm, 2. Durchmesser 28 mm.;6,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+018;Muffe, aus Kohlenstoffstahl, Pressverbindung, für Rohrleitung aus Präzisionsstahlrohr DIN EN 10305-1, nahtlos,  für Heizungswasser, Außendurchmesser 22 mm.;12,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+019;Muffe, aus Kohlenstoffstahl, Pressverbindung, für Rohrleitung aus Präzisionsstahlrohr DIN EN 10305-1, nahtlos,  für Heizungswasser, Außendurchmesser 28 mm.;12,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+020;Muffe, aus Kohlenstoffstahl, Pressverbindung, für Rohrleitung aus Präzisionsstahlrohr DIN EN 10305-1, nahtlos,  für Heizungswasser, Außendurchmesser 35 mm.;12,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+021;Muffe, aus Kohlenstoffstahl, Pressverbindung, für Rohrleitung aus Präzisionsstahlrohr DIN EN 10305-1, nahtlos,  für Heizungswasser, Außendurchmesser 42 mm.;12,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+022;Stahlkonstruktion verzinkt;12,0;kg;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+023;Distanzstück Wärmezähler, G 1 1/4 B.;6,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+024;Tauchhülsen für Messelemente;6,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+001;Wärmedämmung ohne Ummantelung DIN 4140 an haus- und betriebstechnischen Anlagen, an Rohrleitung, DN 20, im Gebäude, Dämmung aus Mineralwolle DIN EN 14303, als Rohrschale, Dämmschichtdicke 40 mm, Brandverhaltensklasse DIN EN 13501-1 A1 (nichtbrennbar),  Wärmeleitfähigkeit 0,035 W/(mK) bei 40 Grad C M;48,0;m;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+002;Wärmedämmung ohne Ummantelung DIN 4140 an haus- und betriebstechnischen Anlagen, an Rohrleitung, DN 25, im Gebäude, Dämmung aus Mineralwolle DIN EN 14303, als Rohrschale, Dämmschichtdicke 40 mm, Brandverhaltensklasse DIN EN 13501-1 A1 (nichtbrennbar),  Wärmeleitfähigkeit 0,035 W/(mK) bei 40 Grad C M;72,0;m;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+003;Wärmedämmung ohne Ummantelung DIN 4140 an haus- und betriebstechnischen Anlagen, an Rohrleitung, DN 32, im Gebäude, Dämmung aus Mineralwolle DIN EN 14303, als Rohrschale, Dämmschichtdicke 40 mm, Brandverhaltensklasse DIN EN 13501-1 A1 (nichtbrennbar),  Wärmeleitfähigkeit 0,035 W/(mK) bei 40 Grad C M;72,0;m;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+004;Wärmedämmung ohne Ummantelung DIN 4140 an haus- und betriebstechnischen Anlagen, an Rohrleitung, DN 40, im Gebäude, Dämmung aus Mineralwolle DIN EN 14303, als Rohrschale, Dämmschichtdicke 40 mm, Brandverhaltensklasse DIN EN 13501-1 A1 (nichtbrennbar),  Wärmeleitfähigkeit 0,035 W/(mK) bei 40 Grad C M;72,0;m;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+001;Abwasserleitung aus PP-Rohr DIN EN 1451-1, heißwasserbeständig (bis 95 Grad C), DN/OD 50, Verbindung mit Steckmuffe, einschl. Dichtringen, Verlegung in Gebäuden, Form- und Verbindungsstücke werden gesondert vergütet, Arbeitshöhe des Montageortes bis 3,5 m über der Standfläche des hierfür erforderlic;18,0;m;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+002;Abwasserleitung aus PP-Rohr DIN EN 1451-1, heißwasserbeständig (bis 95 Grad C), DN/OD 100, Verbindung mit Steckmuffe, einschl. Dichtringen, Verlegung in Gebäuden, Form- und Verbindungsstücke werden gesondert vergütet, Arbeitshöhe des Montageortes bis 3,5 m über der Standfläche des hierfür erforderli;9,0;m;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+003;Bogen, 15-90 Grad, DN/OD 50;16,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+004;Bogen, 15 - 90 Grad, für Abwasserleitung, aus PP-Rohr DIN EN 1451-1, heißwasserbeständig (bis 95 Grad C), DN/OD 100.;6,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+005;Abzweig, reduziert, 45 - 90 Grad, für Abwasserleitung, aus PP-Rohr DIN EN 1451-1, heißwasserbeständig (bis 95 Grad C), DN/OD 100, 2. DN/OD 50.;4,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+006;Reduzierstück, für Abwasserleitung, aus PP-Rohr DIN EN 1451-1, heißwasserbeständig (bis 95 Grad C), DN/OD 75, 2. DN/OD 50.;2,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+007;Trichtersiphon für den freien Auslauf von Tropf- und Kondenswasser, geeignet zur Aufnahme von Ablaufleitungen aus Sicherheitsventilen, Klima- und Kältegeräten, Wärmepumpen oder Enthärtungsanlagen.;4,0;St;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+001;Schalldämmung an Rohrleitung, aus Schaumstoff, als Schlauch, Dicke 6 mm, Baustoffklasse DIN 4102-1 B2 (normalentflammbar),  DN 125.;2,0;m;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+002;Isolierschlauch 5 mm DN 50-70;2,0;m;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+001;Rohrleitung aus nichtrostenden Stahlrohren DVGW GW 541, geschweißt, für Trinkwasser DIN 1988-200, Außendurchmesser 22 mm, einschl. Dichtungsmittel und Herstellen der Verbindungen, Form- und Verbindungsstücke werden gesondert vergütet, Verlegung in Gebäuden, Arbeitshöhe des Montageortes bis 3,5 m übe;36,0;m;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+002;Rohrleitung aus nichtrostenden Stahlrohren  DVGW GW 541, geschweißt, für Trinkwasser DIN 1988-200, Außendurchmesser 28 mm, einschl. Dichtungsmittel und Herstellen der Verbindungen, Form- und Verbindungsstücke werden gesondert vergütet, Verlegung in Gebäuden, Arbeitshöhe des Montageortes bis 3,5 m üb;144,0;m;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+003;Rohrleitung aus nichtrostenden Stahlrohren DVGW GW 541, geschweißt, für Trinkwasser DIN 1988-200, Außendurchmesser 22 mm, einschl. Dichtungsmittel und Herstellen der Verbindungen, Form- und Verbindungsstücke werden gesondert vergütet, Verlegung in Gebäuden, Arbeitshöhe des Montageortes bis 3,5 m übe;108,0;m;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+004;Rohrleitung aus nichtrostenden Stahlrohren DVGW GW 541, geschweißt, für Trinkwasser DIN 1988-200, Außendurchmesser 35 mm, einschl. Dichtungsmittel und Herstellen der Verbindungen, Form- und Verbindungsstücke werden gesondert vergütet, Verlegung in Gebäuden, Arbeitshöhe des Montageortes bis 3,5 m übe;72,0;m;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+005;Rohrleitung aus nichtrostenden Stahlrohren DVGW GW 541, geschweißt, für Trinkwasser DIN 1988-200, Außendurchmesser 42 mm, einschl. Dichtungsmittel und Herstellen der Verbindungen, Form- und Verbindungsstücke werden gesondert vergütet, Verlegung in Gebäuden, Arbeitshöhe des Montageortes bis 3,5 m übe;48,0;m;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+006;Bogen, aus nichtrostendem Stahl, 45 oder 90 Grad,;9,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+007;Bogen, aus nichtrostendem Stahl, 45 oder 90 Grad,;36,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+008;Bogen, aus nichtrostendem Stahl, 40 oder 90 Grad,;27,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+009;Bogen, aus nichtrostendem Stahl, 45 oder 90 Grad, für Rohrleitung aus nichtrostendem Stahl, für Trinkwasser DIN 1988-200, als Pressverbindung mit DVGW-Zertifizierung, Außendurchmesser 35 mm.;18,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+010;Bogen, aus nichtrostendem Stahl, 45 oder 90 Grad, für Rohrleitung aus nichtrostendem Stahl, für Trinkwasser DIN 1988-200, als Pressverbindung mit DVGW-Zertifizierung, Außendurchmesser 42 mm.;12,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+011;T-Stück, aus nichtrostendem Stahl, für Rohrleitung aus nichtrostendem Stahl, für Trinkwasser DIN 1988-200, als Pressverbindung mit DVGW-Zertifizierung, Außendurchmesser 22 mm.;29,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+012;T-Stück, aus nichtrostendem Stahl, für Rohrleitung aus nichtrostendem Stahl, für Trinkwasser DIN 1988-200, als Pressverbindung mit DVGW-Zertifizierung, Außendurchmesser 28 mm.;22,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+013;T-Stück, aus nichtrostendem Stahl, für Rohrleitung aus nichtrostendem Stahl, für Trinkwasser DIN 1988-200, als Pressverbindung mit DVGW-Zertifizierung, Außendurchmesser 35 mm.;15,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+014;T-Stück, aus nichtrostendem Stahl, für Rohrleitung aus nichtrostendem Stahl, für Trinkwasser DIN 1988-200, als Pressverbindung mit DVGW-Zertifizierung, Außendurchmesser 42 mm.;10,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+015;Muffe, aus nichtrostendem Stahl, für Rohrleitung aus nichtrostendem Stahl, für Trinkwasser DIN 1988-200, als Pressverbindung mit DVGW-Zertifizierung, Außendurchmesser 22 mm.;15,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+016;Muffe, aus nichtrostendem Stahl, für Rohrleitung aus nichtrostendem Stahl, für Trinkwasser DIN 1988-200, als Pressverbindung mit DVGW-Zertifizierung, Außendurchmesser 28 mm.;11,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+017;Muffe, aus nichtrostendem Stahl, für Rohrleitung aus nichtrostendem Stahl, für Trinkwasser DIN 1988-200, als Pressverbindung mit DVGW-Zertifizierung, Außendurchmesser 35 mm.;8,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+018;Muffe, aus nichtrostendem Stahl, für Rohrleitung aus nichtrostendem Stahl, für Trinkwasser DIN 1988-200, als Pressverbindung mit DVGW-Zertifizierung, Außendurchmesser 42 mm.;5,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+019;Reduzierstück, aus nichtrostendem Stahl, für Rohrleitung aus nichtrostendem Stahl, für Trinkwasser DIN 1988-200, als Pressverbindung mit DVGW-Zertifizierung, Außendurchmesser 28 mm, 2. Durchmesser 22 mm.;12,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+020;Reduzierstück, aus nichtrostendem Stahl, für Rohrleitung aus nichtrostendem Stahl, für Trinkwasser DIN 1988-200, als Pressverbindung mit DVGW-Zertifizierung, Außendurchmesser 35 mm, 2. Durchmesser 22 mm.;12,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+021;Reduzierstück, aus nichtrostendem Stahl, für Rohrleitung aus nichtrostendem Stahl, für Trinkwasser DIN 1988-200, als Pressverbindung mit DVGW-Zertifizierung, Außendurchmesser 35 mm, 2. Durchmesser 28 mm.;12,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+022;Reduzierstück, aus nichtrostendem Stahl, für Rohrleitung aus nichtrostendem Stahl, für Trinkwasser DIN 1988-200, als Pressverbindung mit DVGW-Zertifizierung, Außendurchmesser 42 mm, 2. Durchmesser 28 mm.;12,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+023;Reduzierstück, aus nichtrostendem Stahl, für Rohrleitung aus nichtrostendem Stahl, für Trinkwasser DIN 1988-200, als Pressverbindung mit DVGW-Zertifizierung, Außendurchmesser 42 mm, 2. Durchmesser 35 mm.;12,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+001;Rohrdämmung Hausanschluss DN 40;6,0;m;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+002;Wärmedämmung ohne Ummantelung DIN 4140 an haus- und betriebstechnischen Anlagen, an Rohrleitung, DN 40, im Gebäude, Dämmung aus Mineralwolle DIN EN 14303, als Rohrschale, Dämmschichtdicke 40 mm, Baustoffklasse DIN 4102-1 A2 (nichtbrennbar),  Wärmeleitfähigkeit 0,035 W/(mK) bei 40 Grad C Mitteltemper;36,0;m;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+003;Wärmedämmung ohne Ummantelung DIN 4140 an haus- und betriebstechnischen Anlagen, an Rohrleitung, DN 20, im Gebäude, Dämmung aus Mineralwolle DIN EN 14303, als Rohrschale, Dämmschichtdicke 40 mm, Baustoffklasse DIN 4102-1 A2 (nichtbrennbar),  Wärmeleitfähigkeit 0,035 W/(mK) bei 40 Grad C Mitteltemper;144,0;m;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+004;Wärmedämmung ohne Ummantelung DIN 4140 an haus- und betriebstechnischen Anlagen, an Rohrleitung, DN 25, im Gebäude, Dämmung aus Mineralwolle DIN EN 14303, als Rohrschale, Dämmschichtdicke 40 mm, Baustoffklasse DIN 4102-1 A2 (nichtbrennbar),  Wärmeleitfähigkeit 0,035 W/(mK) bei 40 Grad C Mitteltemper;108,0;m;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+005;Wärmedämmung ohne Ummantelung DIN 4140 an haus- und betriebstechnischen Anlagen, an Rohrleitung, DN 32, im Gebäude, Dämmung aus Mineralwolle DIN EN 14303, als Rohrschale, Dämmschichtdicke 40 mm, Baustoffklasse DIN 4102-1 A2 (nichtbrennbar),  Wärmeleitfähigkeit 0,035 W/(mK) bei 40 Grad C Mitteltemper;72,0;m;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+006;Wärmedämmung ohne Ummantelung DIN 4140 an haus- und betriebstechnischen Anlagen, an Rohrleitung, DN 20, im Gebäude, Dämmung aus Mineralwolle DIN EN 14303, als Rohrschale, Dämmschichtdicke 40 mm, Baustoffklasse DIN 4102-1 A2 (nichtbrennbar),  Wärmeleitfähigkeit 0,035 W/(mK) bei 40 Grad C Mitteltemper;48,0;m;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+001;Filter, rückspülbar, Nenndurchfluss Qn 25 m3/h, für Trinkwasserleitung DIN 1988-200, DIN EN 13443-1, Filterfeinheit 80 bis 150 mym, mit lichtundurchlässiger Filtertasse, Monatswartungsanzeige und differenzdruckgesteuerter Anzeige bei Verschmutzung, mit Anschlussverschraubung, Gehäuse aus Rotguss, mi;3,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+002;Probenahmeventil zum Anschluss an Eckventil, DN 10;3,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+003;Sicherheitscenter 4807, für den Anschluss von;3,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+004;Absperrventil mit Schallschutzprüfzeichen DIN EN ISO DN 40;3,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+005;"Mikrobiologische Untersuchung des Trinkwassers kalt auf Einhaltung der Grenzwerte gemäß TrinkwV 2001 durch ein akkreditiertes Institut; Dokumentation.";3,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+006;"Mikrobiologische Untersuchung des Trinkwassers kalt auf Einhaltung der Grenzwerte gemäß TrinkwV 2001 durch ein akkreditiertes Institut; Dokumentation.";3,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+001;Elektronisch geregelte Frischwasserstation;1,0;St;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+002;Zirkulation für Frischwasserstation;1,0;St;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+003;Probenahmeventil G 1/4A;2,0;St;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+004;Elektronisch geregelte Frischwasserstation;1,0;St;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+005;Zirkulation für Frischwasserstation;1,0;St;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+006;Probenahmeventil G 1/4A;2,0;St;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+007;Elektronisch geregelte Frischwasserstation;1,0;St;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+008;Zirkulation für Frischwasserstation;1,0;St;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+009;Probenahmeventil G 1/4A;2,0;St;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+001;Zirkulations-Regulierventil automatisch regelbar,;6,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+002;Absperrventil DN 15;12,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+003;Entleerungsventil DN 25;12,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+004;Absperrventil DN 25;12,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+005;Entleerungsventil DN 32;12,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+006;Entleerungsventil DN 40;6,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+007;Absperrventil mit Rückflussverhinderer DN 40;6,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+008;Dämmschale universell Schrägsitz inkl. Verschlussclipse, DN15;12,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+009;Dämmschale universell Schrägsitz inkl. Verschlussclipse, DN25;24,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+010;Dämmschale universell Schrägsitz inkl. Verschlussclipse, DN32;12,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+011;Dämmschale universell Schrägsitz inkl. Verschlussclipse, DN40;12,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+012;Entleerungvorrichtung DN12;6,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+013;Auslaufventil DN15 mit Schlauchtülle;6,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+014;Bezeichnungsschilder als Aufkleber;36,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+015;Magnet-Revisionsrahmen für Fliesen bis 500 / 300 mm;3,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+001;Gasleitung zur Versorgung eines wandhängenden Gas-Brennwertgerätes liefern und montieren.;9,0;m;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+002;Gasleitung zur Versorgung eines wandhängenden Gas-Brennwertgerätes liefern und montieren.;6,0;m;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+003;DVGW-zugelassenen Gasgeräte-Kugelhahn DN 25 einschließlich integrierter thermisch auslösender Absperreinrichtung  TAE  liefern und unmittelbar vor dem Gas-Brennwertgerät montieren.;3,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+004;DVGW-zugelassenen Gasgeräte-Kugelhahn DN 20 einschließlich integrierter thermisch auslösender Absperreinrichtung  TAE  liefern und unmittelbar vor dem Gas-Brennwertgerät montieren.;2,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+005;DVGW-zugelassenen Pressbogen 90 Grad DN 25 aus C-Stahl, passend zum ausgeschriebenen Gasrohrsystem, liefern und montieren.;12,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+006;DVGW-zugelassenen Pressbogen 90 Grad DN 20 aus C-Stahl, passend zum ausgeschriebenen Gasrohrsystem, liefern und montieren.;8,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+007;Lösbare, DVGW-zugelassene Anschlussverschraubung einschließlich Übergangsstück zum Gasanschluss des Wärmeerzeugers liefern und montieren.;3,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+008;Lösbare, DVGW-zugelassene Anschlussverschraubung einschließlich Übergangsstück zum Gasanschluss des Wärmeerzeugers liefern und montieren.;2,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+009;Belastungs- und Dichtheitsprüfung der neu errichteten Gasleitungsanlage im Heizraum 1 nach DVGW-TRGI durchführen.;1,0;psch;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+010;Belastungs- und Dichtheitsprüfung der neu errichteten Gasleitungsanlage im Heizraum 2 nach DVGW-TRGI durchführen.;1,0;psch;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+011;Belastungs- und Dichtheitsprüfung der neu errichteten Gasleitungsanlage im Heizraum 3 nach DVGW-TRGI durchführen.;1,0;psch;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+012;"Sämtliche neu errichteten Gasleitungen dauerhaft und gut sichtbar mit gelben Kennzeichnungsbändern beziehungsweise Rohrleitungsaufklebern ""Gas"" kennzeichnen.";1,0;psch;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+001;Entleeren der für den Umbau erforderlichen wasserführenden Anlagen;1,0;psch;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+002;Teilbefüllung der Heizungsanlage mit entsalztem Wasser;1,0;psch;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+003;Dichtheitsprüfung nach DVGW DIN 1988 TRWI Teil 2 mit Luft oder inerten Gasen bestehend aus Festigkeits- und Dichtheitsprüfung.;1,0;psch;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+004;Funktionsprüfung und Inbetriebnahme der gesamten Sanitäranlage nach Fertigstellung der Arbeiten einschl. Regel-, Steuer- und Sicherheitseinrichtungen.;1,0;psch;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+005;Inbetriebnahme und Einregulierung der im LV beschriebenen Anlage, einschließlich der gesetzlichen Überprüfung nach DIN. Zum Einregulieren der Gesamtanlagen hat der Auftragnehmer alle erforderlichen Fach- und Hilfskräfte sowie Werkzeuge und Messgeräte zu stellen. Für die Einregulierungsarbeiten müsse;1,0;psch;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+006;Ersteinweisung Bedienpersonal;1,0;psch;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+007;Füllen und Druckprüfung der gesamten im LV beschriebenen Anlagen.;1,0;psch;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+008;Druck- bzw. Dichtheitsprüfung AW;1,0;psch;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+009;Funktionsprüfung und Inbetriebnahme nach Fertigstellung der Arbeiten einschl. hydraulischer Abgleich der gesamten Heizungsanlage mit Messung der Differenzdrücke an den Strangregulierventilen, Einstellung der Regel-,;1,0;psch;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+001;Verlängerung der Mietdauer vorgenannter Elektroheizung.;1,0;Mt;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+001;"Wartungsvertrag für die jährliche Wartung für den Anlagenbetrieb gemäß AMEV ""Wartung, Inspektion und damit verbundene kleine Instandsetzungsarbeiten von technischen Anlagen und Einrichtungen in Gebäuden";5,0;Jahr;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+001;Erstellen der Anlagendokumentation gemäß VDI 6026 und Übergabe bei der Abnahme. Die Anlagendokumentation soll den Auftraggeber, Nutzer und Betreiber in die Lage versetzen, die Anlagen sicher zu nutzen und zu;1,0;psch;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+001;Obermonteurstunde / A- Monteur;10,0;h;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+002;Monteurstunde;10,0;h;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+003;Helferstunde;10,0;h;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+001;Außerbetriebnahme von Gas Kesselanlage;3,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+002;Verlegesystem;3,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+003;Leitungen ELT J‑Y(St)Y 2×2×0,8 mm;90,0;m;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+004;Leitungen ELT NYM-J 5 × 1,5 mm²;120,0;m;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+005;Anschlussleitung Pumpen 3 × 1,5 mm²;60,0;m;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+006;Anschlussleitung Mischerantriebe 5 × 1,5 mm²;60,0;m;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+007;Störmeldeleitung Pumpen  Kleinspannung 2 × 2 × 0,8 mm;60,0;m;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+008;"Steuerleitung ""Extern Aus"" für Pumpen 2 × 0,75 mm²";60,0;m;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+009;Einzelabsicherung einer Heizungsumwälzpumpe;6,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83
+010;Reparaturschalter für Heizungsumwälzpumpe;6,0;Stk;gaeb;Vergabeunterlagen/04_Leistungsverzeichnis Heizungstausch Schmölln Ahornring_V33.X83

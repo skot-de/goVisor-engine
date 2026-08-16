@@ -1,0 +1,45 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+0201.1;Baustelle einrichten;1,0;Psch;gaeb-flat;Vergabeunterlagen/Sanierung Wirtschaftsweg Kananohe.D83
+0201.2;Baustelle räumen;1,0;Psch;gaeb-flat;Vergabeunterlagen/Sanierung Wirtschaftsweg Kananohe.D83
+0201.3;Schutz für Baumstamm herstellen;2,0;St;gaeb-flat;Vergabeunterlagen/Sanierung Wirtschaftsweg Kananohe.D83
+0202.1;Verkehrsrechtliche Anordnung einh. Geb.ü.100b.200Eu.;1,0;Psch;gaeb-flat;Vergabeunterlagen/Sanierung Wirtschaftsweg Kananohe.D83
+0202.2;Verkehrssicherung läng.Dauer durchf Arbeitsstelle ... Freitext ... ... Freitext ... über 7 b. 14 Tage;1,0;Psch;gaeb-flat;Vergabeunterlagen/Sanierung Wirtschaftsweg Kananohe.D83
+0203.1;Asphaltbefestigung trennen;40,0;m;gaeb-flat;Vergabeunterlagen/Sanierung Wirtschaftsweg Kananohe.D83
+0203.2;Bankett schälen ... Freitext ... Dicke bis 5cm 12 tief+ 6 hoch SG Bösch verteil.;3045,0;m;gaeb-flat;Vergabeunterlagen/Sanierung Wirtschaftsweg Kananohe.D83
+0203.3;Betondecke entspannen bewehrt Dicke ü. 15-20 cm erschütterungsarm Abstand R. bis 1m;4890,0;m2;gaeb-flat;Vergabeunterlagen/Sanierung Wirtschaftsweg Kananohe.D83
+0203.4;Betondecke aufnehmen;30,0;m2;gaeb-flat;Vergabeunterlagen/Sanierung Wirtschaftsweg Kananohe.D83
+0203.5;Betondecke aufnehmen Fahrbahn Betondecke auf Unterl. ToB m.einf.Bewehrung Tiefe ü. 15-20 cm erschütterungsarm ... Freitext ...;120,0;m2;gaeb-flat;Vergabeunterlagen/Sanierung Wirtschaftsweg Kananohe.D83
+0204.1;Unterlage profilieren Unt.gebr. Gestein EV2 mind. 120 MPa Unebenheit 3 cm;150,0;m2;gaeb-flat;Vergabeunterlagen/Sanierung Wirtschaftsweg Kananohe.D83
+0204.2;Bankett profilgerecht herstellen;3045,0;m;gaeb-flat;Vergabeunterlagen/Sanierung Wirtschaftsweg Kananohe.D83
+0204.3;Schottertragschicht 0/32 liefern;100,0;t;gaeb-flat;Vergabeunterlagen/Sanierung Wirtschaftsweg Kananohe.D83
+0204.4;N.gefährl. Abfall aus Abbruch ent. Beton Entsorgung AN Gebühr einrechn.;60,0;t;gaeb-flat;Vergabeunterlagen/Sanierung Wirtschaftsweg Kananohe.D83
+0205.1;Bitumenemulsion aufsprühen ländliche Wege ... Freitext ... C40B5-S Menge 250 g/m2 ... Freitext ...;4890,0;m2;gaeb-flat;Vergabeunterlagen/Sanierung Wirtschaftsweg Kananohe.D83
+0205.2;Asphalttragdeckschicht AC 16 TD;1000,0;t;gaeb-flat;Vergabeunterlagen/Sanierung Wirtschaftsweg Kananohe.D83
+0205.3;Randabdichtung herstellen Randmasse bis 5 cm;3045,0;m;gaeb-flat;Vergabeunterlagen/Sanierung Wirtschaftsweg Kananohe.D83
+0205.4;Anschluss a. Fuge m. Fugenm. herst. Längs-/Querfuge ... Freitext ... Tiefe 40 mm Breite 12 mm Fugenmasse N2;40,0;m;gaeb-flat;Vergabeunterlagen/Sanierung Wirtschaftsweg Kananohe.D83
+0205.5;Bohrkern entnehmen Kern-DU 10 cm Tiefe bis 10 cm Asphaltschicht Verfül. Asphalt;4,0;St;gaeb-flat;Vergabeunterlagen/Sanierung Wirtschaftsweg Kananohe.D83
+0206.1;Vorh. Pflasterbefestigung aufnehmen u. neu verlegen;10,0;m2;gaeb-flat;Vergabeunterlagen/Sanierung Wirtschaftsweg Kananohe.D83
+0207.1;Facharbeiter;10,0;Std;gaeb-flat;Vergabeunterlagen/Sanierung Wirtschaftsweg Kananohe.D83
+0207.2;Radlader, 45 -55kw, inkl. Bedienung;5,0;Std;gaeb-flat;Vergabeunterlagen/Sanierung Wirtschaftsweg Kananohe.D83
+1;Geräte, Werkzeuge und sonstige Betriebsmittel, die zur;1,0;Psch;gaeb;Vergabeunterlagen/Sanierung Wirtschaftsweg Kananohe_V33.X83
+2;Baustelle von allen Geräten, Anlagen, Einrichtungen und;1,0;Psch;gaeb;Vergabeunterlagen/Sanierung Wirtschaftsweg Kananohe_V33.X83
+3;Schutz für Baumstamm durch Mantel mit Polsterung her-;2,0;St;gaeb;Vergabeunterlagen/Sanierung Wirtschaftsweg Kananohe_V33.X83
+1;Verkehrsrechtliche Anordnung für Einrichtung und Be-;1,0;Psch;gaeb;Vergabeunterlagen/Sanierung Wirtschaftsweg Kananohe_V33.X83
+2;Verkehrssicherung längerer Dauer betriebsfertig aufbau-;1,0;Psch;gaeb;Vergabeunterlagen/Sanierung Wirtschaftsweg Kananohe_V33.X83
+1;Asphaltbefestigung geradlinig trennen.;40,0;m;gaeb;Vergabeunterlagen/Sanierung Wirtschaftsweg Kananohe_V33.X83
+2;Bankett einschließlich Vegetationsdecke schälen durch;3045,0;m;gaeb;Vergabeunterlagen/Sanierung Wirtschaftsweg Kananohe_V33.X83
+3;Betondecke entspannen und durch Walzen einebnen.;4890,0;m2;gaeb;Vergabeunterlagen/Sanierung Wirtschaftsweg Kananohe_V33.X83
+4;Betondecke aufnehmen.;30,0;m2;gaeb;Vergabeunterlagen/Sanierung Wirtschaftsweg Kananohe_V33.X83
+5;Betondecke ausbauen und aufnehmen. Dicke der Beton-;120,0;m2;gaeb;Vergabeunterlagen/Sanierung Wirtschaftsweg Kananohe_V33.X83
+1;Unterlage aus Schicht ohne Bindemittel auf Sollhöhe;150,0;m2;gaeb;Vergabeunterlagen/Sanierung Wirtschaftsweg Kananohe_V33.X83
+2;Bankett gemäß ZTV E-StB profilgerecht herstellen.;3045,0;m;gaeb;Vergabeunterlagen/Sanierung Wirtschaftsweg Kananohe_V33.X83
+3;Baustoff für Profilausgleich liefern.;100,0;t;gaeb;Vergabeunterlagen/Sanierung Wirtschaftsweg Kananohe_V33.X83
+4;Nicht gefährlichen Abfall aus Abbruch laden, fördern;60,0;t;gaeb;Vergabeunterlagen/Sanierung Wirtschaftsweg Kananohe_V33.X83
+1;Bitumenemulsion zur Herstellung des Schichtenverbundes;4890,0;m2;gaeb;Vergabeunterlagen/Sanierung Wirtschaftsweg Kananohe_V33.X83
+2;Asphalttragdeckschicht aus Asphalttragdeckschichtmisch-;1000,0;t;gaeb;Vergabeunterlagen/Sanierung Wirtschaftsweg Kananohe_V33.X83
+3;Flankenfläche des hochliegenden Randes der Asphalt-;3045,0;m;gaeb;Vergabeunterlagen/Sanierung Wirtschaftsweg Kananohe_V33.X83
+4;Anschluss als Fuge mit Fugenmasse herstellen.;40,0;m;gaeb;Vergabeunterlagen/Sanierung Wirtschaftsweg Kananohe_V33.X83
+5;Bohrkern für Kontrollprüfungen nach Angabe des AG ent-;4,0;St;gaeb;Vergabeunterlagen/Sanierung Wirtschaftsweg Kananohe_V33.X83
+1;Vorhandene Pflasterbefestigung aller Art (z. B. Rechteckpflaster, SF Pflaster, Waschbetonplatten usw.) in Teilflächen aufnehmen, säubern, lagern, nass schneiden und entsprechend der neuen Höhenlage und Querneigung mit neu profilierter Bettung wieder verlegen und verfugen.;10,0;m2;gaeb;Vergabeunterlagen/Sanierung Wirtschaftsweg Kananohe_V33.X83
+1;Stundenlohnarbeiten durch Arbeitskräfte auf Anordnung des AG ausführen.;10,0;Std;gaeb;Vergabeunterlagen/Sanierung Wirtschaftsweg Kananohe_V33.X83
+2;Radlader, 45-55kw, inkl. Bedienung und Zubehör.;5,0;Std;gaeb;Vergabeunterlagen/Sanierung Wirtschaftsweg Kananohe_V33.X83

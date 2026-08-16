@@ -11,7 +11,9 @@ import { buildProfile, brancheFromProfile } from "@/lib/profileEngine";
 import { FilterPanel, emptyAdv, advCount, type Adv, type Segment } from "./FilterPanel";
 import { LeadTable } from "./LeadTable";
 import { DetailPanel } from "./DetailPanel";
-import { StrategieView } from "./StrategieView";
+import { StrategieView, SEKTIONEN } from "./StrategieView";
+import { BereichsNav } from "./BereichsNav";
+import { deuteFrage } from "@/lib/frageSuche";
 import { ExportMenu } from "./ExportMenu";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
@@ -21,15 +23,21 @@ import { syncWatchlist } from "@/lib/supabase/watchlist";
 import { Kalender } from "./Kalender";
 import { Cockpit } from "./Cockpit";
 import { getOrCreateCalendarFeed } from "@/lib/supabase/calendar";
-import { SPRACHEN, sprachName, useSprache } from "@/lib/i18n";
+import { useSprache } from "@/lib/i18n";
+import { profilGeaendert } from "@/lib/useProfil";
 
 type Profile = ReturnType<typeof buildProfile>;
 const PROFILE_KEY = "govisor.profile.v1";
 import { ColumnMenu, FilterBar, Suggestions, HeaderFilterPopover } from "./parts";
-import { AppRail, type RailId } from "./Rail";
+import { AppRail, AppTop, type RailId } from "./Rail";
 
 type Lead = { id: string; branche?: string; merk?: unknown; [k: string]: unknown };
-type Token = { type: string; value: string; label: string; radius?: number | null; coord?: number[] };
+type Token = { type: string; value: string; label: string; radius?: number | null; coord?: number[];
+  /** Nur bei Frage-Token: WELCHE Filterfelder diese Frage gesetzt hat. Ohne diese Notiz
+   *  koennte das Entfernen des Tokens den Filter nicht zuruecknehmen — das Token waere
+   *  weg und die Liste bliebe gefiltert. Genau die Sorte stiller Rest, die man erst
+   *  bemerkt, wenn Zahlen nicht mehr zusammenpassen. */
+  advKeys?: string[] };
 type Filters = { ungesichtet: boolean; gemerkt: boolean; kandidaten: boolean; netz: boolean; relevant: boolean };
 type View = "angriff" | "merkliste" | "netzwerk" | "potenzial";
 
@@ -143,6 +151,9 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
   const [panelOpen, setPanelOpen] = useState(false);
   const accountLimit = false; // Pro; §9: kommt später aus dem echten Account-Status
   const [aktiveBranche, setAktiveBranche] = useState("it");
+  // Der Strategie-Abschnitt liegt HIER, nicht in `StrategieView`: seine Navigation steht
+  // in der Bereichsleiste, also ausserhalb jener Komponente.
+  const [stratSektion, setStratSektion] = useState("pipeline");
   // Grundraum aus dem Profil (CPV) — nicht mehr hart „it". Fällt auf „it" zurück, solange kein Profil da ist.
   const profilBranche = brancheFromProfile(realProfile as unknown as Parameters<typeof brancheFromProfile>[0]) || "it";
   const brancheManual = useRef(false);   // true, sobald der Nutzer den Grundraum selbst umschaltet
@@ -153,7 +164,6 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
 
   // Popover-/Menü-Zustand
   const [colMenuOpen, setColMenuOpen] = useState(false);
-  const [sprMenuOpen, setSprMenuOpen] = useState(false);
 
   // Sprachwechsel: die geladenen Leads tragen zwischengespeicherte Labels (Phase, Leistung,
   // Wert-Herkunft). Ohne dieses Nachziehen bliebe die Liste in der Altsprache stehen —
@@ -195,6 +205,7 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
       if (remote) {
         setRealProfile(remote);
         try { localStorage.setItem(PROFILE_KEY, JSON.stringify(remote)); } catch { /* Quota */ }
+        profilGeaendert();
         return;
       }
       try {
@@ -216,6 +227,7 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
     await logout().catch(() => {});
     try { localStorage.removeItem(PROFILE_KEY); } catch { /* egal */ }
     setRealProfile(null); setUserEmail(null); brancheManual.current = false; setPlan("free");
+    profilGeaendert();   // sonst behaelt der Kopf den Firmennamen des Abgemeldeten
     bump();
   }
 
@@ -378,7 +390,12 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
   // unveränderte Filter-/Sortier-Logik nutzen.
   // Vollständige, gefilterte Liste INKLUSIVE Zuschläge — Basis für Zähler und das Zuschlags-Band.
   const alleRows: Lead[] = useMemo(() => {
-    applyState({ aktiveBranche, profilBranche, sortKey, sortDir, searchTokens: tokens, filters });
+    // Frage-Token gehoeren NICHT in die Volltextsuche. Sie haben ihre Wirkung schon
+    // entfaltet (sie setzen einen Filter); als Suchtoken wuerde die Kernlogik zusaetzlich
+    // nach der Zeichenfolge „wenig-bieter" im Titel suchen — und die gibt es nirgends.
+    // Gemessen beim ersten Versuch: „0 von 0" statt 2.430.
+    const suchToken = tokens.filter((t) => t.type !== "frage");
+    applyState({ aktiveBranche, profilBranche, sortKey, sortDir, searchTokens: suchToken, filters });
     setProfile(realProfile);
     syncLocationColumn();
     return postFilter(sorted(visible()), adv);
@@ -508,7 +525,8 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
 
   // ── Aktionen ──────────────────────────────────────────────────────────────
   const closeAllPops = useCallback(() => {
-    setColMenuOpen(false); setSprMenuOpen(false); setHeadFilter(null); setOpenRadius(null);
+    // Das Sprachmenue schliesst sich selbst — es lebt seit 2026-08-16 in `AppTop`.
+    setColMenuOpen(false); setHeadFilter(null); setOpenRadius(null);
   }, []);
 
   const autoSort = useRef(true);   // solange true: Sortierung wird automatisch verwaltet
@@ -814,6 +832,19 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
 
   // Such-Tokens
   function commitSearch(pick?: number | "raw") {
+    // FRAGE VOR STICHWORT. Erkennt eine Regel eine Absicht („wenigste Bieter"), wird sie zu
+    // einem Filter statt zu einem Volltext-Token — sonst suchte die Anwendung nach dem Wort
+    // „Bieter" im Titel und faende nichts. Greift keine Regel, laeuft alles wie bisher.
+    const absicht = typeof pick === "number" || suggIdx >= 0 ? null : deuteFrage(query);
+    if (absicht) {
+      if (tokens.some((x) => x.type === "frage" && x.value === absicht.id)) { setQuery(""); return; }
+      const keys = Object.keys(absicht.adv || {});
+      if (absicht.adv) setAdv((a) => ({ ...a, ...absicht.adv }));
+      if (absicht.sort) { setSortKey(absicht.sort.key); setSortDir(absicht.sort.dir); autoSort.current = false; }
+      setTokens((ts) => [...ts, { type: "frage", value: absicht.id, label: absicht.label, advKeys: keys }]);
+      setQuery(""); setSuggIdx(-1);
+      return;
+    }
     let tok: Token | null = null;
     if (typeof pick === "number") tok = suggestions[pick] as Token;
     else if (pick === "raw") tok = classifyQuery(query) as Token;
@@ -826,8 +857,23 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
     }
     setQuery(""); setSuggIdx(-1);
   }
-  function removeToken(i: number) { setTokens((ts) => ts.filter((_, k) => k !== i)); }
+  function removeToken(i: number) {
+    const weg = tokens[i];
+    // Ein Frage-Token hat einen Filter GESETZT — beim Entfernen muss er zurueck auf den
+    // Ausgangswert, nicht einfach stehenbleiben.
+    if (weg?.advKeys?.length) {
+      setAdv((a) => {
+        const n = { ...a } as Record<string, unknown>;
+        for (const k of weg.advKeys!) n[k] = (emptyAdv as unknown as Record<string, unknown>)[k];
+        return n as Adv;
+      });
+    }
+    setTokens((ts) => ts.filter((_, k) => k !== i));
+  }
   function clearAll() {
+    // Auch hier: die von Fragen gesetzten Filter muessen mit weg, sonst bleibt nach
+    // „alles loeschen" eine unsichtbare Einschraenkung stehen.
+    if (tokens.some((t) => t.advKeys?.length)) setAdv(emptyAdv);
     setTokens([]); setQuery("");
     setFilters((f) => ({ ...f, ungesichtet: false, gemerkt: false }));
   }
@@ -922,7 +968,7 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
   useEffect(() => {
     function onDown(e: MouseEvent) {
       const ziel = e.target as HTMLElement;
-      if (!ziel.closest(".colcfg")) { setColMenuOpen(false); setSprMenuOpen(false); }
+      if (!ziel.closest(".colcfg")) setColMenuOpen(false);
       if (!ziel.closest(".has-filter") && !ziel.closest(".headpop")) setHeadFilter(null);
       if (!ziel.closest(".ftoken")) setOpenRadius(null);
     }
@@ -945,47 +991,42 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
 
   return (
     <div className="app" data-view={view === "netzwerk" ? "angriff" : "angriff"}>
-      <header className="topbar">
-        <div className="brandcell">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/govisor-wordmark.png" alt="goVisor" className="brandlogo" />
-        </div>
-        <div className="maincol">
-          <div className="toolbar">
-            <div className="colcfg">
-              <button className={`colbtn ${realProfile ? "colbtn-on" : ""}`} type="button"
-                onClick={() => router.push("/onboarding")}
-                title={realProfile
-                  ? t("{firma} — ansehen/bearbeiten", { firma: realProfile.firma || t("Profil") })
-                  : t("Profil einrichten — schaltet echte Relevanz frei")}>
-                <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M12 12a4 4 0 100-8 4 4 0 000 8ZM4 21a8 8 0 0116 0" />
-                </svg>
-                {/* Kein Zeichen-Limit: Namen sind median 24 Zeichen, aber der längste im
-                    Bestand hat 400 (eine ARGE-Auflistung). Die Breite begrenzt der Platz
-                    (CSS max-width + Ellipse), der volle Name steht im title. */}
-                <span className="pb-name">{realProfile ? (realProfile.firma || t("Profil")) : t("Profil einrichten")}</span>
-              </button>
-            </div>
-            <div className="searchwrap">
-              <label className="tsearch">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round">
-                  <circle cx="11" cy="11" r="7" />
-                  <path d="m20 20-3.4-3.4" />
-                </svg>
-                <input
-                  ref={searchRef}
-                  value={query}
-                  onChange={(e) => { setQuery(e.target.value); setSuggIdx(-1); }}
-                  onKeyDown={onSearchKey}
-                  placeholder={t("Suchen — Ort, PLZ, Auftraggeber, Stichwort")}
-                  aria-label={t("Suchen")}
-                  autoComplete="off"
-                />
-                <kbd className="tkbd">/</kbd>
-              </label>
-              <Suggestions query={query} list={suggestions as never} suggIdx={suggIdx} onPick={commitSearch} />
-            </div>
+      {/* EINE Kopfzeile fuer die ganze Anwendung — dieselbe wie auf „Unternehmen",
+          „Bausteine" und „Einstellungen". Bis 2026-08-16 hatte die Shell ihre eigene,
+          und nur sie trug Profil und Sprachwahl; die uebrigen Seiten hatten beides nicht.
+          Das war keine Gestaltungsentscheidung, sondern eine Folge davon, wo der Zustand
+          lag. Jetzt kann keine Seite mehr abweichen, weil es nichts mehr gibt, wovon sie
+          abweichen koennte.
+
+          Was die Shell hineinreicht, ist nur, was IHR gehoert: ihre Suche (filtert die
+          Tabelle, statt wie die Seitensuche wegzuspringen) und die Listen-Werkzeuge.
+          In der Strategie-Ansicht faellt zweiteres weg — dort gibt es keine Tabelle, auf
+          die Filter, Spalten oder Export wirken koennten. Sie standen dort trotzdem und
+          der Export lieferte die Lead-Liste, die man gar nicht sah. */}
+      <AppTop
+        suche={
+          <div className="searchwrap">
+            <label className="tsearch">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round">
+                <circle cx="11" cy="11" r="7" />
+                <path d="m20 20-3.4-3.4" />
+              </svg>
+              <input
+                ref={searchRef}
+                value={query}
+                onChange={(e) => { setQuery(e.target.value); setSuggIdx(-1); }}
+                onKeyDown={onSearchKey}
+                placeholder={t("Suchen — Ort, PLZ, Auftraggeber, Stichwort")}
+                aria-label={t("Suchen")}
+                autoComplete="off"
+              />
+              <kbd className="tkbd">/</kbd>
+            </label>
+            <Suggestions query={query} list={suggestions as never} suggIdx={suggIdx} onPick={commitSearch} />
+          </div>
+        }
+        werkzeuge={view === "potenzial" ? null : (
+          <>
             <div className="colcfg">
               <button className="colbtn" type="button" onClick={() => setPanelOpen(true)} title={t("Detailfilter")}>
                 <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
@@ -1004,38 +1045,9 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
               <ColumnMenu open={colMenuOpen} onToggleCol={toggleCol} />
             </div>
             <ExportMenu rows={rows} view={filters.relevant ? "passend" : "alle"} />
-            {/* Sprache steht bei den ANZEIGE-Einstellungen (Filter · Spalten · Export), nicht
-                im Konto-Menue: sie betrifft die Ansicht, nicht das Konto. Kompakt als Kuerzel,
-                weil man sie einmal setzt und dann nie wieder anfasst. */}
-            <div className="colcfg">
-              <button className="colbtn" type="button" aria-haspopup="menu" aria-expanded={sprMenuOpen}
-                onClick={() => setSprMenuOpen((o) => !o)} title={t("sprache.app")}>
-                <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" strokeWidth={2}>
-                  <circle cx="12" cy="12" r="9" /><path d="M3 12h18M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18" />
-                </svg>
-                {lang.toUpperCase()}
-              </button>
-              <div className="colmenu" data-open={sprMenuOpen ? "" : undefined} role="menu">
-                {SPRACHEN.map((sp) => (
-                  <div key={sp} className="ci" role="menuitemradio" aria-checked={sp === lang}
-                    data-on={sp === lang ? "" : undefined}
-                    onClick={() => { setLang(sp); setSprMenuOpen(false); }}>
-                    <span className="box" />
-                    <span>{sprachName(sp, t)}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="tstatus">
-              <span className="tcount">
-                {/* Nenner auf DERSELBEN Grundmenge wie die Anzeige — in der
-                    Zuschlags-Sicht sind das die Zuschläge, sonst die offenen. */}
-                <b>{rows.length}</b> {t("von")} <span>{zuschlagsSicht ? alleRows.length : alleRows.filter((l) => l.src !== "award").length}</span>
-              </span>
-            </div>
-          </div>
-        </div>
-      </header>
+          </>
+        )}
+      />
 
       {/* BEREICHSLEISTE — die zweite Zeile des Rahmens, in JEDEM Bereich gleich hoch.
           Sie lag bis 2026-08-15 IM Kopf; dadurch war der Kopf hier 93 px hoch und auf
@@ -1050,18 +1062,45 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
           leer (`<div class="filterbar empty">`), also 45 px Chrom ohne Aussage.
           Ein Sprung, den der Nutzer selbst ausloest (er sucht), ist lesbar; einer beim
           Bereichswechsel nicht. Nur den zweiten galt es zu beseitigen. */}
-      {tokens.length > 0 ? (
+      {/* DIE ZWEITE ZEILE — in JEDEM Bereich vorhanden, gleich hoch, und in JEDEM mit
+          Inhalt: hier Trefferzahl und Suchtoken, in der Strategie die neun Abschnitte, im
+          Unternehmen seine drei, in Bausteinen die Themen.
+
+          Sie stand frueher nur bei aktiver Suche, weil sie sonst leeres Chrom gewesen
+          waere. Das galt, solange sie nur Suchtoken tragen konnte. Seit die Abschnitte
+          aller Bereiche hier liegen, ist der Grund entfallen — und die feste Hoehe ist
+          jetzt der Gewinn: beim Wechsel zwischen Bereichen springt nichts mehr. */}
       <div className="bereichsleiste">
-        <FilterBar
-          tokens={tokens}
-          openRadius={openRadius}
-          onRemove={removeToken}
-          onClear={clearAll}
-          onToggleRadius={(i) => setOpenRadius((r) => (r === i ? null : i))}
-          onSetRadius={setRadius}
-        />
+        {view === "potenzial" ? (
+          <BereichsNav
+            aktiv={stratSektion}
+            onWechsel={setStratSektion}
+            gruppen={SEKTIONEN.map((g) => ({
+              titel: g.group,
+              punkte: g.items.map((i) => ({ key: i.key, label: i.label })),
+            }))}
+            hinweis={SEKTIONEN.flatMap((g) => g.items).find((i) => i.key === stratSektion)?.frage}
+          />
+        ) : (
+          <>
+            <span className="tcount">
+              {/* Nenner auf DERSELBEN Grundmenge wie die Anzeige — in der
+                  Zuschlags-Sicht sind das die Zuschläge, sonst die offenen. */}
+              <b>{rows.length}</b> {t("von")} <span>{zuschlagsSicht ? alleRows.length : alleRows.filter((l) => l.src !== "award").length}</span>
+            </span>
+            {tokens.length > 0 ? (
+              <FilterBar
+                tokens={tokens}
+                openRadius={openRadius}
+                onRemove={removeToken}
+                onClear={clearAll}
+                onToggleRadius={(i) => setOpenRadius((r) => (r === i ? null : i))}
+                onSetRadius={setRadius}
+              />
+            ) : null}
+          </>
+        )}
       </div>
-      ) : null}
 
       <div className="body">
         <AppRail
@@ -1083,6 +1122,7 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
                 aktiveBranche={aktiveBranche}
                 accountLimit={accountLimit}
                 tick={tick}
+                aktiveSektion={stratSektion}
                 onBodyAction={onBodyAction}
               />
             </section>

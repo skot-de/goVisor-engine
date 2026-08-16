@@ -99,6 +99,54 @@ if ! mkdir "$_PROBE" 2>/dev/null; then
 fi
 rmdir "$_PROBE" 2>/dev/null || true
 
+# ── SPEICHER PRUEFEN ──────────────────────────────────────────────────────────────────
+#
+# Ein Playwright-Schritt braucht Luft. Am 2026-08-16 waren beim Start 1,4 GB frei, das
+# Betriebssystem raeumte den Browser eines Abrufers ab, und der Lauf fror ein. Gemessen
+# wird frei + INAKTIV: inaktive Seiten gibt macOS auf Anforderung heraus, sie als belegt
+# zu zaehlen wuerde fast jeden Start verhindern.
+_frei_gb() {
+  vm_stat | awk '/page size of/{ps=$8} /Pages free/{f=$3} /Pages inactive/{i=$3}
+                 END{gsub(/\./,"",f); gsub(/\./,"",i); printf "%.1f", (f+i)*(ps?ps:4096)/1073741824}'
+}
+_MIN_GB=${GOVISOR_MIN_GB:-2.0}
+_hab=$(_frei_gb)
+if awk -v a="$_hab" -v b="$_MIN_GB" 'BEGIN{exit !(a < b)}'; then
+  echo "⛔ Nur ${_hab} GB Speicher frei (noetig: ${_MIN_GB} GB) — Tageslauf NICHT gestartet." >&2
+  echo "   Playwright-Abrufe brauchen Luft; ohne sie friert der Lauf ein statt zu scheitern." >&2
+  exit 75
+fi
+echo "  Speicher beim Start: ${_hab} GB frei"
+
+# ── WARTEN, WENN EIN INDEX-NEUAUFBAU LAEUFT ──────────────────────────────────────────
+#
+# WARUM. Am 2026-08-15 startete dieser Lauf um 22:00 planmaessig, waehrend ein
+# `index-docs --neu-aufbauen` noch bis 23:50 lief. Drei Index-Arbeiter à 2 GB plus die
+# Abrufer dieses Laufs liessen 1,4 GB frei — das Betriebssystem raeumte den Browser eines
+# Abrufers ab, und der Lauf fror 10,5 Stunden ein.
+#
+# Der eigene Lock schuetzt NUR gegen einen zweiten Tageslauf. Gegen alles andere, was auf
+# derselben Maschine dieselben Verzeichnisse und denselben Speicher braucht, schuetzt er
+# nicht — dafuer gibt es `scripts/laeuft_was.sh`, und ausgerechnet der Lauf, der es am
+# noetigsten hat, benutzte es nicht.
+#
+# WARUM WARTEN UND NICHT UEBERSPRINGEN: ein Neuaufbau dauert ~5 h und ist selten. Startet
+# der Lauf danach, ist er nur spaeter. Startet er waehrenddessen, faellt er aus — und zwar
+# nicht sichtbar, sondern als Haenger. Nach der Obergrenze wird bewusst ABGEBROCHEN statt
+# trotzdem gestartet: ein ausgefallener Lauf steht am naechsten Tag im Altersbericht, ein
+# eingefrorener steht dort gar nicht.
+_INDEX_WARTE=${GOVISOR_INDEX_WARTE:-10800}      # 3 h
+_bis=$(( $(date +%s) + _INDEX_WARTE ))
+while pgrep -f "cli index-docs" >/dev/null 2>&1; do
+  if [ "$(date +%s)" -ge "$_bis" ]; then
+    echo "⛔ Index-Neuaufbau laeuft seit ueber $(( _INDEX_WARTE / 3600 )) h — Tageslauf NICHT gestartet." >&2
+    echo "   Grund: gemeinsamer Speicher und derselbe Dokumentbaum (s. 2026-08-16)." >&2
+    exit 75                      # EX_TEMPFAIL — ein spaeterer Versuch kann klappen
+  fi
+  echo "  … Index-Neuaufbau aktiv, warte (Pruefung alle 5 min)"
+  sleep 300
+done
+
 if ! mkdir "$LOCK" 2>/dev/null; then
   _alt="$(cat "$LOCK/pid" 2>/dev/null | tr -d '[:space:]')"
   if [ -n "$_alt" ] && kill -0 "$_alt" 2>/dev/null; then
@@ -109,7 +157,31 @@ if ! mkdir "$LOCK" 2>/dev/null; then
   rm -rf "$LOCK" && mkdir "$LOCK" || { echo "Lock nicht uebernehmbar." >&2; exit 75; }
 fi
 echo $$ > "$LOCK/pid"
-trap 'rm -rf "$LOCK" 2>/dev/null' EXIT
+# ── ABSCHLUSSMELDUNG ──────────────────────────────────────────────────────────────────
+#
+# Sie steht im `trap` und damit an JEDEM Ende — auch bei Abbruch, Zeitgrenze oder Absturz.
+# Genau das fehlte: ein Lauf, der durchlief, hinterliess ein langes Log, und ein Lauf, der
+# einfror, hinterliess GAR NICHTS. Die eine Zeile hier sagt in beiden Faellen, woran man ist,
+# ohne 4.000 Zeilen Log zu lesen.
+abschluss() {
+  local rc=$?
+  local dauer=$(( SECONDS / 60 ))
+  # `$LOG` (nicht LOGFILE) — und KEIN `|| echo 0`: `grep -c` schreibt bei null Treffern
+  # bereits „0" und beendet sich trotzdem mit 1. Das angehaengte echo haette eine zweite
+  # Null erzeugt und die Meldung waere „0\n0 Warnungen" geworden.
+  local warn; warn=$(grep -c '⚠' "${LOG:-/dev/null}" 2>/dev/null); warn=${warn:-0}
+  local zustand="fertig"
+  [ "$rc" -ne 0 ] && zustand="ABGEBROCHEN (Code $rc)"
+  [ -n "$_SCHRITT_NAME" ] && [ "$rc" -ne 0 ] && zustand="$zustand bei: $_SCHRITT_NAME"
+  {
+    printf '%s  %s · %d min · %s Warnungen\n' \
+      "$(date '+%Y-%m-%d %H:%M')" "$zustand" "$dauer" "$warn"
+  } > "$ROOT/data/logs/letzter_lauf.txt"
+  echo ""
+  echo "── $(cat "$ROOT/data/logs/letzter_lauf.txt")"
+  rm -rf "$LOCK" 2>/dev/null
+}
+trap abschluss EXIT
 
 # ── PHASEN ────────────────────────────────────────────────────────────────────────────────
 #
@@ -155,7 +227,14 @@ if [ ! -e "$ROOT/data/gold/DE/lead_export.parquet" ]; then
 fi
 
 mkdir -p "$LOG_DIR"
-LOG="$LOG_DIR/daily-$TODAY.log"
+# STARTZEIT IM NAMEN. Vorher hiess die Datei nur `daily-<datum>.log` — zwei Laeufe am
+# selben Tag (13:00 und 22:00, oder ein Nachlauf von Hand) schrieben also in DIESELBE
+# Datei. Das Dashboard las sie als EINEN Lauf, fand das Ende des ersten und meldete
+# „durchgelaufen", waehrend der zweite noch arbeitete (gesehen 2026-08-16).
+#
+# Ein Lauf = eine Datei. Das trennt auch die Historie: Schrittdauern zu vergleichen ist
+# unmoeglich, solange zwei Laeufe ineinander stehen.
+LOG="$LOG_DIR/daily-$TODAY-$(date '+%H%M').log"
 exec > >(tee -a "$LOG") 2>&1
 echo "════════════════════════════════════════════════════════════════"
 echo "goVisor Tageslauf  $(date '+%F %T')  (Monat $MONTH, Stichtag $TODAY)"
@@ -166,13 +245,85 @@ echo "════════════════════════�
 # herauszufinden. Ein Lauf, der nachts unbeaufsichtigt arbeitet, muss das selbst sagen.
 _SCHRITT_START=0
 _SCHRITT_NAME=""
+# Obergrenze fuer den GANZEN Lauf. Normal braucht er 3-4 h; 8 h heisst, dass etwas nicht
+# stimmt, das keine Einzelgrenze gefangen hat. Geprueft wird an der SCHRITTGRENZE und nicht
+# per Hintergrund-Waechter: seit jeder Netz-Schritt bei 45 min gekappt wird, kommen
+# Schrittgrenzen regelmaessig — ein zweiter Waechterprozess waere Mechanik ohne Mehrwert.
+GRENZE_GESAMT=${GOVISOR_GRENZE_GESAMT:-28800}   # 8 h
+
 step() {
   if [ -n "$_SCHRITT_NAME" ]; then
     printf '  ⏱ %s — %ds\n' "$_SCHRITT_NAME" "$(( SECONDS - _SCHRITT_START ))"
   fi
+  if [ "$SECONDS" -ge "$GRENZE_GESAMT" ]; then
+    echo ""
+    echo "⛔ Gesamtlaufzeit ueber $(( GRENZE_GESAMT / 3600 )) h — Lauf wird hier beendet."
+    echo "   Erledigt bis: ${_SCHRITT_NAME:-nichts}. Der Rest faellt heute aus."
+    exit 75
+  fi
   _SCHRITT_NAME="$*"; _SCHRITT_START=$SECONDS
   echo ""; echo "▶ $(date '+%T')  $*"
 }
+
+# ── ZEITGRENZE JE SCHRITT ─────────────────────────────────────────────────────────────
+#
+# WARUM. Am 2026-08-16 fror der Lauf 10,5 Stunden ein. Der Playwright-Browser des
+# Healy-Hudson-Abrufers wurde vom Betriebssystem wegen Speichermangels abgeraeumt (der
+# Index-Neuaufbau lief parallel); der Python-Client wartete danach unbegrenzt auf eine
+# Verbindung zu einem Prozess, den es nicht mehr gab. Die Zeitgrenzen IM Modul (90 s
+# Standard, 180 s je Download) greifen genau dann nicht: sie setzen voraus, dass der
+# Browser antwortet. Ist er weg, laeuft keine Uhr mehr.
+#
+# Die Grenze gehoert deshalb NACH AUSSEN, wo sie nicht davon abhaengt, dass der
+# ueberwachte Prozess noch gesund ist. `timeout` gibt es auf diesem Mac nicht (kein
+# GNU coreutils), also von Hand — mit Wanduhr, nicht mit Rundenzaehlung.
+mit_grenze() {
+  local grenze=$1; shift
+  "$@" &
+  local kind=$!
+  local ende=$(( $(date +%s) + grenze ))
+  local regung=$(date +%s)
+  local groesse=0
+  while kill -0 "$kind" 2>/dev/null; do
+    local jetzt g grund=""
+    jetzt=$(date +%s)
+    # STILLSTAND. Der eigentliche Waechter: schreibt der Schritt noch? Das Log waechst,
+    # solange er arbeitet — auch langsam. Bleibt es 30 min unveraendert, haengt er.
+    g=$(wc -c < "${LOG:-/dev/null}" 2>/dev/null || echo 0)
+    if [ "$g" != "$groesse" ]; then groesse=$g; regung=$jetzt; fi
+    if [ $(( jetzt - regung )) -ge "$STILLSTAND" ]; then
+      grund="keine Ausgabe seit $(( STILLSTAND / 60 )) min"
+    elif [ "$jetzt" -ge "$ende" ]; then
+      grund="Obergrenze $(( grenze / 60 )) min erreicht"
+    fi
+    if [ -n "$grund" ]; then
+      echo "  ⚠ Schritt abgebrochen — $grund."
+      kill -TERM "$kind" 2>/dev/null
+      sleep 10
+      kill -KILL "$kind" 2>/dev/null
+      # Verwaiste Browser mitnehmen, sonst fressen sie den Speicher des naechsten Schritts.
+      pkill -f "playwright" 2>/dev/null
+      wait "$kind" 2>/dev/null
+      return 124
+    fi
+    sleep 15
+  done
+  wait "$kind"
+}
+
+# ── KALIBRIERUNG ──────────────────────────────────────────────────────────────────────
+#
+# STILLSTAND ist der eigentliche Waechter, die Obergrenze nur der Rueckfall. Die erste
+# Fassung hatte es umgekehrt: 45 min pauschal — gemessen an den Logs haette das
+# `subreport` (87,6 min) und `Healy-Hudson-Unterlagen` (55,6 min) JEDE NACHT abgeschossen,
+# beides gesunde Laeufe. Nach Gefuehl gesetzte Grenzen sind hier besonders teuer, weil ihr
+# Fehlschlag wie ein Portal-Problem aussieht.
+#
+# Der Haenger vom 2026-08-16 lief 719 min OHNE eine einzige Ausgabezeile. Genau das faengt
+# der Stillstands-Waechter — und zwar unabhaengig davon, wie lange ein Schritt normal braucht.
+STILLSTAND=${GOVISOR_STILLSTAND:-1800}          # 30 min ohne Ausgabe = haengt
+GRENZE_ABRUF=${GOVISOR_GRENZE_ABRUF:-7200}      # 2 h  Rueckfall, Regelfall
+GRENZE_LANG=${GOVISOR_GRENZE_LANG:-14400}       # 4 h  subreport (gemessen 87,6 min)
 
 # Zeitlimit fuer einen Schritt. `timeout` gibt es auf macOS nicht von Haus aus, deshalb
 # selbst gebaut: Kind starten, Wecker danebenstellen, wer zuerst kommt gewinnt.
@@ -229,7 +380,7 @@ $PY scripts/fetch_ted_live.py --country CH --workers 3 \
   && echo "  TED-CHE ok." || echo "  ⚠ TED-CHE fehlgeschlagen — CH bleibt auf simap allein."
 
 step "simap.ch (CH)"
-$PY -m govisor.cli ingest-simap --country CH --max-pages 30 --silver \
+mit_grenze "$GRENZE_ABRUF" $PY -m govisor.cli ingest-simap --country CH --max-pages 30 --silver \
   && echo "  simap ok." || echo "  ⚠ simap.ch fehlgeschlagen — CH bleibt auf altem Stand."
 
 # AT bekommt wie CH beide Kanäle: OffeneVergaben.at (national, auch unterschwellig) und
@@ -242,7 +393,7 @@ $PY scripts/fetch_ted_live.py --country AT --workers 3 \
   && echo "  TED-AT ok." || echo "  ⚠ TED-AT fehlgeschlagen — AT bleibt auf OffeneVergaben allein."
 
 step "OffeneVergaben.at (AT)"
-$PY -m govisor.cli ingest-atverg --country AT --silver \
+mit_grenze "$GRENZE_ABRUF" $PY -m govisor.cli ingest-atverg --country AT --silver \
   && echo "  atverg ok." || echo "  ⚠ OffeneVergaben.at fehlgeschlagen — AT bleibt auf altem Stand."
 
 # DTVP (Deutsches Vergabeportal) — WIEDER AKTIV seit 2026-08-13.
@@ -267,7 +418,7 @@ $PY -m govisor.cli ingest-atverg --country AT --silver \
 # NOCH NICHT geholt: der VOL-Bereich (8.640 offene Treffer) braucht CPV-Codes, die die
 # Suche als 2-stellige Division ablehnt; dazu SEKTVO (779), OTHER (214), ExAnte, ExPost.
 step "DTVP-Bekanntmachungen (VOB, unterschwellig)"
-$PY -m govisor.dtvp --regeln VOB --typen Tender --max-seiten 40 --stop-nach-bekannten 40 --silber \
+mit_grenze "$GRENZE_ABRUF" $PY -m govisor.dtvp --regeln VOB --typen Tender --max-seiten 40 --stop-nach-bekannten 40 --silber \
   || echo "  ⚠ DTVP-Import fehlgeschlagen — fremdes Portal, der Lauf geht ohne weiter."
 
 # NETSERVER (Administration Intelligence) — FUENF Laenderportale: Bremen, Sachsen,
@@ -296,7 +447,7 @@ $PY -m govisor.dtvp --regeln VOB --typen Tender --max-seiten 40 --stop-nach-beka
 # nur nicht drin. Erster Lauf: 98 (BE) + 58 (SL) Bekanntmachungen, davon 44 unterschwellig.
 # Sie laufen SOFORT mit, nicht hinter dem Schalter unten: es ist derselbe erprobte Pfad.
 step "NetServer-Bekanntmachungen (HB/SN/MV/BW/HE/BE/SL, ober- und unterschwellig)"
-$PY -m govisor.netserver --portale hb,sn,mv,bw,he,be,sl --kategorien tender,vorinfo,zuschlag --silber \
+mit_grenze "$GRENZE_ABRUF" $PY -m govisor.netserver --portale hb,sn,mv,bw,he,be,sl --kategorien tender,vorinfo,zuschlag --silber \
   || echo "  ⚠ NetServer-Import fehlgeschlagen — fremde Portale, der Lauf geht ohne weiter."
 
 # ── NEUE QUELLEN, SCHARF ────────────────────────────────────────────────────────────────
@@ -325,13 +476,13 @@ if [ "${GOVISOR_NEUE_QUELLEN:-1}" = "1" ]; then
   # kannten wir 508 ueber die Unterlagen-Links. ⚠ Die Liste WUERFELT je Abruf ~25 Zeilen —
   # deshalb Runden mit Dublettenfilter, und der Bestand fuellt sich ueber die Tage.
   step "Healy-Hudson-Bekanntmachungen (alle 16 Laender, rotierende Liste)"
-  $PY -m govisor.healyhudson --alle --runden 12 \
+  mit_grenze "$GRENZE_ABRUF" $PY -m govisor.healyhudson --alle --runden 12 \
     || echo "  ⚠ Healy-Hudson-Import unvollstaendig."
   # Bronze → Silber. Ohne diesen Schritt sammelt healyhudson nur JSONL und es entsteht
   # KEIN einziger Lead — genau der Zustand, in dem die Quelle bis zum 2026-08-14 war.
   # Eigener Aufruf statt Teil des Imports: der Abruf kann unvollstaendig sein (die Liste
   # wuerfelt je Seitenaufruf), das Silber soll trotzdem aus allem gebaut werden, was da ist.
-  $PY -m govisor.healyhudson --silber \
+  mit_grenze "$GRENZE_ABRUF" $PY -m govisor.healyhudson --silber \
     || echo "  ⚠ Healy-Hudson-Silber nicht gebaut — die Vorgaenge bleiben in Bronze liegen."
 
   # NetServer-UNTERLAGEN. Die zweitgroesste Dokumentenluecke: 1.055 offene Leads auf
@@ -341,7 +492,7 @@ if [ "${GOVISOR_NEUE_QUELLEN:-1}" = "1" ]; then
   # ⚠ Diese Pakete sind gross (gemessen 10–65 MB, ein Ausreisser 335 MB); der Lauf ist
   # deshalb auf 2 GB gedeckelt und arbeitet den Rest ueber die Tage ab.
   step "NetServer-Unterlagen (DE, anonym, budgetiert + idempotent)"
-  $PY -m govisor.docfetch_netserver --limit 60 \
+  mit_grenze "$GRENZE_ABRUF" $PY -m govisor.docfetch_netserver --limit 60 \
     || echo "  ⚠ NetServer-Unterlagen unvollstaendig."
 
   # e-VERGABE DES BUNDES (evergabe-online.de). Die GROESSTE Einzelluecke: 1.026 offene
@@ -354,21 +505,21 @@ if [ "${GOVISOR_NEUE_QUELLEN:-1}" = "1" ]; then
   # sind dort aber fuer automatische Zugriffe gesperrt — wir sprechen sie NICHT an. Die
   # Anfrage ans Beschaffungsamt liegt in `api-anfragen.md`.
   step "e-Vergabe des Bundes — Unterlagen (DE, anonym, budgetiert + idempotent)"
-  $PY -m govisor.docfetch_evergabe_online --limit 60 \
+  mit_grenze "$GRENZE_ABRUF" $PY -m govisor.docfetch_evergabe_online --limit 60 \
     || echo "  ⚠ e-Vergabe-Unterlagen unvollstaendig."
 
   # DEUTSCHES AUSSCHREIBUNGSBLATT. 172 offene Leads, ZIP anonym (3 von 3 gemessen).
   # ⚠ Die Bezahlschranke der Seite gilt der RECHERCHE, nicht den Unterlagen — der
   # Tarif-Knopf ist im DOM unsichtbar, der Unterlagen-Knopf sichtbar.
   step "Ausschreibungsblatt-Unterlagen (DE, anonym, budgetiert + idempotent)"
-  $PY -m govisor.docfetch_ausschreibungsblatt --limit 40 \
+  mit_grenze "$GRENZE_ABRUF" $PY -m govisor.docfetch_ausschreibungsblatt --limit 40 \
     || echo "  ⚠ Ausschreibungsblatt-Unterlagen unvollstaendig."
 
   # bi-medien.de. 110 offene Leads. Sammel-ZIP je Vergabe ueber einen eigenen Dienst
   # (publictender.bi-medien.de/api/Part/<uuid>), anonym http 200 (2 von 2 gemessen).
   # ⚠ Die Links stehen zugeklappt im DOM — auslesen, nicht klicken (Klick = Timeout).
   step "bi-medien-Unterlagen (DE, anonym, budgetiert + idempotent)"
-  $PY -m govisor.docfetch_bimedien --limit 40 \
+  mit_grenze "$GRENZE_ABRUF" $PY -m govisor.docfetch_bimedien --limit 40 \
     || echo "  ⚠ bi-medien-Unterlagen unvollstaendig."
 
   # Healy-Hudson-UNTERLAGEN. 508 offene Leads. ⚠ Pro Instanz verschieden: Bahn und Hamburg
@@ -380,7 +531,7 @@ if [ "${GOVISOR_NEUE_QUELLEN:-1}" = "1" ]; then
   # heisst ~12 echte Vorgaenge je Lauf, nicht 60. Wer die Ausbeute heben will, muss NICHT
   # den Fetcher anfassen, sondern die Warteschlange: deutsche-evergabe braucht Anmeldung.
   step "Healy-Hudson-Unterlagen (DE, anonym, idempotent)"
-  $PY -m govisor.docfetch_healyhudson --limit 60 \
+  mit_grenze "$GRENZE_ABRUF" $PY -m govisor.docfetch_healyhudson --limit 60 \
     || echo "  ⚠ Healy-Hudson-Unterlagen unvollstaendig."
 
   # aumass-UNTERLAGEN. Der sauberste Zugang von allen: ein Link, der woertlich „Ohne
@@ -388,7 +539,7 @@ if [ "${GOVISOR_NEUE_QUELLEN:-1}" = "1" ]; then
   # 269 verschiedene Vergaben (Geschwister teilen sich den Abruf).
   # ⚠ Die Pakete sind gross (13–188 MB gemessen); Lauf auf 2 GB gedeckelt.
   step "aumass-Unterlagen (DE, anonym, budgetiert + idempotent)"
-  $PY -m govisor.docfetch_aumass --limit 40 \
+  mit_grenze "$GRENZE_ABRUF" $PY -m govisor.docfetch_aumass --limit 40 \
     || echo "  ⚠ aumass-Unterlagen unvollstaendig."
 
   # staatsanzeiger-UNTERLAGEN. 211 Leads, davon 153 ueber die funktionierende URL-Form.
@@ -396,7 +547,7 @@ if [ "${GOVISOR_NEUE_QUELLEN:-1}" = "1" ]; then
   # einem anderen Host. ⚠ Die restlichen 56 tragen ein Frameset, dessen Inhalts-Frame
   # ohne Sitzung leer bleibt — eigener Status `frameset`, kein Fehler.
   step "Staatsanzeiger-Unterlagen (DE, anonym, budgetiert + idempotent)"
-  $PY -m govisor.docfetch_staatsanzeiger --limit 40 \
+  mit_grenze "$GRENZE_ABRUF" $PY -m govisor.docfetch_staatsanzeiger --limit 40 \
     || echo "  ⚠ Staatsanzeiger-Unterlagen unvollstaendig."
 
   # ÖSTERREICH — der erste AT-Schritt ueberhaupt. `vergabeportal.at` + `wien.gv.at` (dieselbe
@@ -407,7 +558,7 @@ if [ "${GOVISOR_NEUE_QUELLEN:-1}" = "1" ]; then
   # Aenderungsdatum, „Inaktiv"-Kennzeichen und SHA — daraus kommt „gibt es ein
   # Leistungsverzeichnis, welche Nachweise, wurde nachgebessert".
   step "vergabeportal.at-Dateilisten (AT, ohne CAPTCHA, idempotent)"
-  $PY -m govisor.vergabeportal_at --limit 60 \
+  mit_grenze "$GRENZE_ABRUF" $PY -m govisor.vergabeportal_at --limit 60 \
     || echo "  ⚠ AT-Dateilisten unvollstaendig."
 
 else
@@ -511,7 +662,7 @@ fi   # Ende Phase „leads"
 
 if phase_an dokumente; then
 step "Vergabeunterlagen holen (DE/cosinex, höflich + idempotent)"
-$PY -m govisor.cli fetch-docs --country DE || echo "  ⚠ Fetch unvollständig — Auswertung läuft über den vorhandenen Bestand."
+mit_grenze "$GRENZE_ABRUF" $PY -m govisor.cli fetch-docs --country DE || echo "  ⚠ Fetch unvollständig — Auswertung läuft über den vorhandenen Bestand."
 # ⚠ DIESER SCHRITT FEHLTE (gemessen 2026-08-13: 2.114 Vorgänge heruntergeladen, 241 mit Text).
 #   `signals-docs` liest doc_text.parquet — das erzeugt AUSSCHLIESSLICH `index-docs`. Ohne
 #   diese Zeile lief der Tageslauf formal durch: Fetch grün, Signale grün, aber die Signale
@@ -529,7 +680,7 @@ $PY -m govisor.cli fetch-docs --country DE || echo "  ⚠ Fetch unvollständig �
 # eine Stunde. Idempotent — bereits geholte Vergaben fallen raus, der Rueckstand arbeitet
 # sich ueber die Tage ab.
 step "evergabe.de-Unterlagen (DE, anonym, gedeckelt + idempotent)"
-$PY -m govisor.docfetch_evergabe --limit 40 || echo "  ⚠ evergabe.de-Abruf unvollständig."
+mit_grenze "$GRENZE_ABRUF" $PY -m govisor.docfetch_evergabe --limit 40 || echo "  ⚠ evergabe.de-Abruf unvollständig."
 
 # subreport ELViS: DATEILISTEN, keine Dateien. Der Download reagiert dort ohne Anmeldung
 # nicht (gemessen ueber drei Vergaben und alle Knopfpositionen; der eine Knopf, der liefert,
@@ -540,7 +691,7 @@ $PY -m govisor.docfetch_evergabe --limit 40 || echo "  ⚠ evergabe.de-Abruf unv
 # Gedeckelt, weil jede Vergabe ~14 s braucht (clientseitiges Rendern); idempotent, bekannte
 # Vorgaenge fallen raus — der Rueckstand arbeitet sich ueber die Tage ab.
 step "subreport-Dateilisten (DE, gedeckelt + idempotent)"
-$PY -m govisor.subreport --limit 120 || echo "  ⚠ subreport-Listen unvollständig."
+mit_grenze "$GRENZE_LANG" $PY -m govisor.subreport --limit 120 || echo "  ⚠ subreport-Listen unvollständig."
 
 step "Unterlagen entpacken → Volltext-Index"
 # ⚠ ZWEI SCHUTZE, beide am 2026-08-14 durch Schaden gelernt:
@@ -691,6 +842,11 @@ fi
 if [ -n "$_SCHRITT_NAME" ]; then
   printf '  ⏱ %s — %ds\n' "$_SCHRITT_NAME" "$(( SECONDS - _SCHRITT_START ))"
 fi
+
+step "Ertragsbericht (Trichter, Reichweite, Auslesequalitaet)"
+# Rein lesend und schnell — deshalb ohne Zeitgrenze und ohne `||`-Abfangen an dieser
+# Stelle nicht noetig: faellt er aus, fehlt eine Anzeige, keine Daten.
+$PY -m govisor.ertrag --country DE || echo "  ⚠ Ertragsbericht nicht geschrieben."
 
 # ── ALTERSBERICHT ────────────────────────────────────────────────────────────────────────
 #

@@ -1,0 +1,47 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+1;Pfosten-Riegel-Fassadenkonstruktion;1,0;St;gaeb;3935645.x83
+2;Pfosten-Riegel-Fassadenkonstruktion;1,0;St;gaeb;3935645.x83
+3;Pfosten-Riegel-Fassadenkonstruktion;1,0;St;gaeb;3935645.x83
+4;Zulage zu vorbeschriebener Position;1,0;St;gaeb;3935645.x83
+5;Zulage zu vorbeschriebenen Fassadenkonstruktionen;9,0;m;gaeb;3935645.x83
+6;Zulage zu vorbeschriebenen Fassadenkonstruktionen;1,0;St;gaeb;3935645.x83
+7;Zulage;1,0;St;gaeb;3935645.x83
+8;Zulage f;1,0;St;gaeb;3935645.x83
+9;Ger;10,0;St;gaeb;3935645.x83
+10;Hinweisschild an Automatikt;2,0;St;gaeb;3935645.x83
+11;Glasfl;30,0;m;gaeb;3935645.x83
+12;Vogelschutzfolie;23,0;m²;gaeb;3935645.x83
+1;Innenger;1,0;psch;gaeb;3935645.x83
+2;AF-U.06a-AL, AF-U.06b-AL, AF-U.08-AL;3,0;St;gaeb;3935645.x83
+3;AF-U.10-AL, AF-U.14-AL;2,0;St;gaeb;3935645.x83
+4;AF-U.09a-AL, AF-U.11-AL, AF-U.15-AL, AF-U.18-AL;4,0;St;gaeb;3935645.x83
+5;AF-E.04-AL, AF-E.08-AL;2,0;St;gaeb;3935645.x83
+6;AF-E.05-AL, AF-E.09-AL;2,0;St;gaeb;3935645.x83
+7;AF-E.03a-AL;1,0;St;gaeb;3935645.x83
+8;AF-E.01a-AL, AF-E.01d-AL, AF-E.01e-AL, AF-E.01g-AL;4,0;St;gaeb;3935645.x83
+9;AF-E.01c-AL;1,0;St;gaeb;3935645.x83
+10;AF-E.01b-AL, AF-E.01f-AL;2,0;St;gaeb;3935645.x83
+11;AF-E.02a-AL;1,0;St;gaeb;3935645.x83
+12;AF-E.02b1-AL;1,0;St;gaeb;3935645.x83
+13;AF-E.02c1-AL, AF-E.02d2-AL;2,0;St;gaeb;3935645.x83
+14;AF-E.02c2-AL, AF-E.02d1-AL, AF-E.02e1-AL, AF-E.02e2-AL;4,0;St;gaeb;3935645.x83
+15;AF-E.02b2-AL;1,0;St;gaeb;3935645.x83
+16;Fensterbank f;26,0;m;gaeb;3935645.x83
+17;Position wie vor beschrieben,;56,0;m;gaeb;3935645.x83
+1;Aufh;40,0;St;gaeb;3935645.x83
+2;W;28,0;m;gaeb;3935645.x83
+3;Raffstoreanlage;8,0;St;gaeb;3935645.x83
+4;Zulage zu vorbeschriebener Position,;8,0;St;gaeb;3935645.x83
+5;Raffstoreanlage;1,0;St;gaeb;3935645.x83
+6;Zulage zu vorbeschriebener Position,;1,0;St;gaeb;3935645.x83
+7;Zulage f;9,0;St;gaeb;3935645.x83
+1;AT-E.02-AL;1,0;St;gaeb;3935645.x83
+2;AT-U.07-AL,;1,0;St;gaeb;3935645.x83
+3;AT-E.15-ST,;1,0;St;gaeb;3935645.x83
+4;Zulage f;1,0;St;gaeb;3935645.x83
+5;Zulage f;1,0;St;gaeb;3935645.x83
+1;Werkplanung  f;1,0;psch;gaeb;3935645.x83
+2;Inbetriebnahme und sachkundige Abnahme;1,0;psch;gaeb;3935645.x83
+3;Werkzeug- / Material-/ Aufenthaltscontainer,;1,0;psch;gaeb;3935645.x83
+4;Bodent;5,0;St;gaeb;3935645.x83
+5;T;2,0;St;gaeb;3935645.x83

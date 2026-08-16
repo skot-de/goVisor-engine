@@ -1,0 +1,1365 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+02.1;Normkabelverteilerschrank HxBxT 1300x1465x320 inkl. Sockel;1,0;St;gaeb-flat;3929114.d83
+02.2;Normkabelverteilerschrank HxBxT:1300x1135x320 inkl. Sockel;1,0;St;gaeb-flat;3929114.d83
+02.3;Zählerwechselplatte, Messfeld, mit Zählerkreuz,;1,0;St;gaeb-flat;3929114.d83
+02.4;Sammelschiene 630A, 5 polig L/N/PE 50 kA;3,0;St;gaeb-flat;3929114.d83
+02.5;NH-2 Sicherungslastschaltleiste mit Sicherungen 3-polig,;6,0;St;gaeb-flat;3929114.d83
+02.6;NH-Sicherungseinsatz 690V Betriebskl.gL Gr.2 630A;3,0;St;gaeb-flat;3929114.d83
+02.7;Leitungsschutzschalter B10 A, 1-polig;4,0;St;gaeb-flat;3929114.d83
+02.8;Blitzstrom-/Überspannungsableiter Kombi-Ableiter TN-S-Systeme;4,0;St;gaeb-flat;3929114.d83
+02.9;D01-Einbausicherungssockel 3- polig DIN VDE 0636 Teil 1;4,0;St;gaeb-flat;3929114.d83
+02.10;D01-Einbausicherungssockel 1-polig DIN VDE 0636 Teil 1;1,0;St;gaeb-flat;3929114.d83
+02.11;Installationsschütz 24V, 20A;1,0;St;gaeb-flat;3929114.d83
+02.12;Relais 8-230V UC, 16A 1S;1,0;St;gaeb-flat;3929114.d83
+02.13;IP-Patchmodul;3,0;St;gaeb-flat;3929114.d83
+02.14;LWL Anschlussdose;1,0;St;gaeb-flat;3929114.d83
+02.15;Netzteil mit Akkupufferung (DC-USV);1,0;St;gaeb-flat;3929114.d83
+02.16;Anmeldung Niederspannungsnetz und Montage Wandler;1,0;Psch;gaeb-flat;3929114.d83
+02.17;Netzeinspeiseüberwachungssrelais Netz- und Anlagenschutz;1,0;St;gaeb-flat;3929114.d83
+02.18;Erstellen und Einreichen Antragsstellung Bayernwerk;1,0;Psch;gaeb-flat;3929114.d83
+02.19;Standschrank als Energie-Schaltgerätekombination Abmessungen: H/B/T=1850/800/400 mm;2,0;St;gaeb-flat;3929114.d83
+02.20;Standschrank als Energie-Schaltgerätekombination Abmessungen: H/B/T=1850/550/400 mm;2,0;St;gaeb-flat;3929114.d83
+02.21;Sammelschiene, 3 Hauptleiter 50 kA;2,0;St;gaeb-flat;3929114.d83
+02.22;Messwandlerzähler M-Bus, 3 Phasen, Wandleranschluss 6A;1,0;St;gaeb-flat;3929114.d83
+02.23;Leistungsschalter, 4-polig 630A mit Drehantrieb;1,0;St;gaeb-flat;3929114.d83
+02.24;Multifunktionales Messgerät;1,0;St;gaeb-flat;3929114.d83
+02.25;Stromwandler 630/5A nach DIN EN 60044-1;3,0;St;gaeb-flat;3929114.d83
+02.26;LWL Anschlussdose;1,0;St;gaeb-flat;3929114.d83
+02.27;IP-Patchmodul;1,0;St;gaeb-flat;3929114.d83
+02.28;Netzanalysegerät;1,0;St;gaeb-flat;3929114.d83
+02.29;D01-Einbausicherungssockel 1 polig DIN VDE 0636 Teil 1;1,0;St;gaeb-flat;3929114.d83
+02.30;D01-Einbausicherungssockel 3 polig,  DIN VDE 0636 Teil 1;1,0;St;gaeb-flat;3929114.d83
+02.31;Reiter-Lasttrennschalter 3polig;2,0;St;gaeb-flat;3929114.d83
+02.32;NH-00 Sicherungslasttrennleiste mit Sicherungen 3-polig,;10,0;St;gaeb-flat;3929114.d83
+02.33;NH-01 Sicherungslasttrennleiste mit Sicherungen 3-polig,;3,0;St;gaeb-flat;3929114.d83
+02.34;NH-Sicherungseinsatz 690V Betriebskl.gL Gr.00 35A;3,0;St;gaeb-flat;3929114.d83
+02.35;NH-Sicherungseinsatz 690V Betriebskl.gL Gr.00 50A;6,0;St;gaeb-flat;3929114.d83
+02.36;NH-Sicherungseinsatz 690V Betriebskl.gL Gr.00 63A;8,0;St;gaeb-flat;3929114.d83
+02.37;NH-Sicherungseinsatz 690V Betriebskl.gL Gr.00 100A;3,0;St;gaeb-flat;3929114.d83
+02.38;Leistungsschalter 250A 3-polig Kuppelschalter;1,0;St;gaeb-flat;3929114.d83
+02.39;Fehlerstromschutzschalter B 40A Fehlerstrom 300mA 3-polig+N 400VAC;1,0;St;gaeb-flat;3929114.d83
+02.40;Leitungsschutzschalter C16 A, 3-polig;1,0;St;gaeb-flat;3929114.d83
+02.41;Bliststrom-/Überspannungsableiter Kombi-Ableiter;1,0;St;gaeb-flat;3929114.d83
+02.42;Netzteil In: 100-240VAC Out: 24VDC/2.5A;2,0;St;gaeb-flat;3929114.d83
+02.43;Reihenklemme 10 mm2 bis 25mm2;15,0;St;gaeb-flat;3929114.d83
+02.44;Reihenklemme 35mm2 bis 50mm2,;6,0;St;gaeb-flat;3929114.d83
+02.45;Reihenklemme 70 mm2 bis 95 mm2,;9,0;St;gaeb-flat;3929114.d83
+02.46;Reihenklemme 120 mm2 bis 150 mm2,;6,0;St;gaeb-flat;3929114.d83
+02.47;Neutralleiter-Reihenklemme 10 mm2 bis 25 mm2,;5,0;St;gaeb-flat;3929114.d83
+02.48;Neutralleiter-Reihenklemme 35 mm2 bis 50 mm2,;3,0;St;gaeb-flat;3929114.d83
+02.49;Neutralleiter-Reihenklemme 70 mm2 bis 95mm2;3,0;St;gaeb-flat;3929114.d83
+02.50;Neutralleiter-Reihenklemme 120 mm2 bis 150 mm2;6,0;St;gaeb-flat;3929114.d83
+02.51;Schutzleiter-Reihenklemme 10mm2 bis 25mm2;7,0;St;gaeb-flat;3929114.d83
+02.52;Schutzleiter-Reihenklemme 35 mm2 bis 50mm2;1,0;St;gaeb-flat;3929114.d83
+02.53;Schutzleiter-Reihenklemme 70mm2 bis 95 mm2;2,0;St;gaeb-flat;3929114.d83
+02.54;Schutzleiter-Reihenklemme 120 mm2 bis 150 mm2;6,0;St;gaeb-flat;3929114.d83
+03.1;NYCWY 1x150 qmm, auf vorhandene Kabelleiter oder -rinnen;396,0;m;gaeb-flat;3929114.d83
+03.2;NYCWY 1x150 qmm, auf vorhandene Ankerschienen;49,5;m;gaeb-flat;3929114.d83
+03.3;NYCWY 1x150 qmm, Einziehen in Kabelzugrohr;445,5;m;gaeb-flat;3929114.d83
+03.4;NYCWY 4 x 10/10 qmm auf vorhandene Kabelleiter oder -rinnen;198,0;m;gaeb-flat;3929114.d83
+03.5;NYCWY 4 x 10/10, mit Bügelschellen auf vorhandene Ankerschienen;49,5;m;gaeb-flat;3929114.d83
+03.6;NYCWY 4 x 25/25 qmm auf vorhandene Kabelleiter oder -rinnen;57,2;m;gaeb-flat;3929114.d83
+03.7;NYCWY 4 x 25/25, mit Bügelschellen auf vorhandene Ankerschienen;14,3;m;gaeb-flat;3929114.d83
+03.8;NYCWY 4 x 35/16 qmm auf vorhandene Kabelleiter oder -rinnen;38,5;m;gaeb-flat;3929114.d83
+03.9;NYCWY 4 x 35/16, mit Bügelschellen auf vorhandene Ankerschienen;11,0;m;gaeb-flat;3929114.d83
+03.10;NYCWY 4 x 50/25 qmm auf vorhandene Kabelleiter oder -rinnen;44,0;m;gaeb-flat;3929114.d83
+03.11;NYCWY 4 x 50/25, mit Bügelschellen auf vorhandene Ankerschienen;16,5;m;gaeb-flat;3929114.d83
+03.12;NYCWY 4 x 70/35 qmm auf vorhandene Kabelleiter oder -rinnen;33,0;m;gaeb-flat;3929114.d83
+03.13;NYCWY 4 x 70/35 qmm auf vorhandene Ankerschienen;11,0;m;gaeb-flat;3929114.d83
+03.14;NYCWY 4 x 70/35 qmm Einziehen in Kabelzugrohr;71,5;m;gaeb-flat;3929114.d83
+03.15;Anschließen von Kabel/Leitungen  NYCWY 1x150;45,0;St;gaeb-flat;3929114.d83
+03.16;Anschließen von Kabel/Leitungen NYCWY 4x35/16 bis 4 x 50/25;6,0;St;gaeb-flat;3929114.d83
+03.17;Anschließen von Kabel/Leitungen NYCWY 4x10/10 bis 4x16/16;8,0;St;gaeb-flat;3929114.d83
+03.18;Anschließen von Kabel/Leitungen NYCWY 4x50/25 bis 4x95/50mm2,;6,0;St;gaeb-flat;3929114.d83
+04.1;Installationsverteiler 2-reihig, Abmessungen: H/B/T=1850/550/225mm;1,0;St;gaeb-flat;3929114.d83
+04.2;Installationsverteiler 3-reihig als Standschrank  H/B/T=1850/800/225mm;3,0;St;gaeb-flat;3929114.d83
+04.3;Sockel 100 mm für vorgenannten Installationsverteiler;3,0;St;gaeb-flat;3929114.d83
+04.4;Installationsverteiler 4-reihig als Standschrank H/B/T=1850/1050/225mm;3,0;St;gaeb-flat;3929114.d83
+04.5;Sockel 100 mm für vorgenannten Installationsverteiler;3,0;St;gaeb-flat;3929114.d83
+04.6;Installationsverteiler 5-reihig als Standschrank H/B/T=1850/1300/225mm;1,0;St;gaeb-flat;3929114.d83
+04.7;Sammelschiene IN 250 A / IK 20 kA 3-pol./N/PE;28,0;St;gaeb-flat;3929114.d83
+04.8;D01-Einbausicherungssockel 1 polig DIN VDE 0636 Teil 1;6,0;St;gaeb-flat;3929114.d83
+04.9;D01-Einbausicherungssockel 3 polig,  DIN VDE 0636 Teil 1;6,0;St;gaeb-flat;3929114.d83
+04.10;Lasttrennschalter 4-polig 80 A;3,0;St;gaeb-flat;3929114.d83
+04.11;Lasttrennschalter 4-polig 200 A;1,0;St;gaeb-flat;3929114.d83
+04.12;Überspannungs-Ableiter 4 polig;4,0;St;gaeb-flat;3929114.d83
+04.13;Reiter-Lasttrennschalter 3polig D02 63A, einschl. Sammelschienenanteil;75,0;St;gaeb-flat;3929114.d83
+04.14;Sicherungslasttrennschalter Baugröße D 02 1-polig;6,0;St;gaeb-flat;3929114.d83
+04.15;Sicherungslasttrennschalter Baugröße D 02 3-polig;2,0;St;gaeb-flat;3929114.d83
+04.16;Fehlerstromschutzschalter, allstromsensitive Typ B, 40A/30mA;2,0;St;gaeb-flat;3929114.d83
+04.17;Fehlerstromschutzschalter A 25A Fehlerstrom 300mA 3-polig+N 400VAC;13,0;St;gaeb-flat;3929114.d83
+04.18;Fehlerstromschutzschalter A 40A Fehlerstrom 300mA 3-polig+N 400VAC;12,0;St;gaeb-flat;3929114.d83
+04.19;Fehlerstromschutzschalter A 25A Fehlerstrom 30mA 3-polig+N 400VAC;2,0;St;gaeb-flat;3929114.d83
+04.20;Fehlerstromschutzschalter A 40A Fehlerstrom 30mA 3-polig+N 400VAC;42,0;St;gaeb-flat;3929114.d83
+04.21;Fehlerstromschutzschalter A 63A Fehlerstrom 30mA 3-polig+N 400VAC;3,0;St;gaeb-flat;3929114.d83
+04.22;Fehlerstromschutzschalter B 40A Fehlerstrom 30mA 3-polig+N 400VAC;3,0;St;gaeb-flat;3929114.d83
+04.23;Fehlerstromschutzschalter B 100A Fehlerstrom 30mA 3-polig+N 400VAC;3,0;St;gaeb-flat;3929114.d83
+04.24;Hilfskontakt für Fehlerstromschutzschalter;5,0;St;gaeb-flat;3929114.d83
+04.25;Fehlerstrom - Leitungsschutzschalter, 2-pol. B10A/30mA;6,0;St;gaeb-flat;3929114.d83
+04.26;Fehlerstrom - Leitungsschutzschalter, 2-pol. B16A/30 mA;10,0;St;gaeb-flat;3929114.d83
+04.27;Fehlerstrom- Leitungsschutzschalter, 3x 1-pol. B16A/30 mA;2,0;St;gaeb-flat;3929114.d83
+04.28;Fehlerstrom - Leitungsschutzschalter, 2-pol. C10A/30 mA;2,0;St;gaeb-flat;3929114.d83
+04.29;Fehlerstrom - Leitungsschutzschalter, 2-pol. C13A/30 mA;2,0;St;gaeb-flat;3929114.d83
+04.30;Fehlerstrom - Leitungsschutzschalter, 2-pol. C16A/30 mA;2,0;St;gaeb-flat;3929114.d83
+04.31;Leitungsschutzschalter B6 A , 1-polig;18,0;St;gaeb-flat;3929114.d83
+04.32;Leitungsschutzschalter B10 A, 1-polig;207,0;St;gaeb-flat;3929114.d83
+04.33;Leitungsschutzschalter B16 A. 1-polig;105,0;St;gaeb-flat;3929114.d83
+04.34;Leitungsschutzschalter B20 A. 1-polig;1,0;St;gaeb-flat;3929114.d83
+04.35;Leitungsschutzschalter B10 A, 3-polig;1,0;St;gaeb-flat;3929114.d83
+04.36;Leitungsschutzschalter B16 A, 3-polig,;2,0;St;gaeb-flat;3929114.d83
+04.37;Leitungsschutzschalter B20 A, 3-polig,;1,0;St;gaeb-flat;3929114.d83
+04.38;Leitungsschutzschalter B25 A, 3-polig,;1,0;St;gaeb-flat;3929114.d83
+04.39;Leitungsschutzschalter C16 A, 1-polig;62,0;St;gaeb-flat;3929114.d83
+04.40;Leitungsschutzschalter C20 A, 1-polig;1,0;St;gaeb-flat;3929114.d83
+04.41;Leitungsschutzschalter C16 A, 3-polig;17,0;St;gaeb-flat;3929114.d83
+04.42;Leitungsschutzschalter C32 A, 3-polig;7,0;St;gaeb-flat;3929114.d83
+04.43;Leitungsschutzschalter C100 A, 3-polig;3,0;St;gaeb-flat;3929114.d83
+04.44;Installationsschütz brummfrei 25A 4 Schließer 230V Schütz brummfrei nach EN 61095 und DIN VDE 0637-3 sowie Ber;2,0;St;gaeb-flat;3929114.d83
+04.45;Installationsschütz brummfrei 40A 4 Schließer 230V;2,0;St;gaeb-flat;3929114.d83
+04.46;Netzteil 230V AC - 24 V DC;4,0;St;gaeb-flat;3929114.d83
+04.47;Teilbarer Überspannungsableiter;4,0;St;gaeb-flat;3929114.d83
+04.48;Überspannungsfeinschutz für 1 Adernpaar;2,0;St;gaeb-flat;3929114.d83
+04.49;Überspannungsfeinschutz für 2 Einzeladern;2,0;St;gaeb-flat;3929114.d83
+04.50;Einbaugerät 1polig Ausschalter;4,0;St;gaeb-flat;3929114.d83
+04.51;Einbaugerät 2polig, Ausschalter;4,0;St;gaeb-flat;3929114.d83
+04.52;Gruppenschalter 16 A, 1polig;4,0;St;gaeb-flat;3929114.d83
+04.53;Steuerleitungsklemme 7-polig;5,0;St;gaeb-flat;3929114.d83
+04.54;Reihenklemme 3-stöckig, bis 4 mm2;500,0;St;gaeb-flat;3929114.d83
+04.55;Reihenklemme bis 4mm2;70,0;St;gaeb-flat;3929114.d83
+04.56;Reihenklemme bis 6mm2;10,0;St;gaeb-flat;3929114.d83
+04.57;Reihenklemme bis 10mm2;15,0;St;gaeb-flat;3929114.d83
+04.58;Reihenklemme bis 16mm2;6,0;St;gaeb-flat;3929114.d83
+04.59;Reihenklemme bis 25 mm2;12,0;St;gaeb-flat;3929114.d83
+04.60;Reihenklemme bis 50 mm2;9,0;St;gaeb-flat;3929114.d83
+04.61;Reihenklemme bis 70 mm2;6,0;St;gaeb-flat;3929114.d83
+04.62;Neutralleiter-Reihenklemme bis 4mm2;6,0;St;gaeb-flat;3929114.d83
+04.63;Neutralleiter-Reihenklemme bis 6mm2;6,0;St;gaeb-flat;3929114.d83
+04.64;Neutralleiter-Reihenklemme bis 10mm2;5,0;St;gaeb-flat;3929114.d83
+04.65;Neutralleiter-Reihenklemme bis 16mm2;4,0;St;gaeb-flat;3929114.d83
+04.66;Neutralleiter-Reihentrennklemme 25 mm2,;5,0;St;gaeb-flat;3929114.d83
+04.67;Neutralleiter-Reihentrennklemme 50 mm2,;4,0;St;gaeb-flat;3929114.d83
+04.68;Neutralleiter-Reihentrennklemme 70 mm2,;1,0;St;gaeb-flat;3929114.d83
+04.69;Schutzleiter-Reihenklemme bis 4mm2;6,0;St;gaeb-flat;3929114.d83
+04.70;Schutzleiter-Reihenklemme bis 6mm2;6,0;St;gaeb-flat;3929114.d83
+04.71;Schutzleiter-Reihenklemme bis 10mm2;5,0;St;gaeb-flat;3929114.d83
+04.72;Schutzleiter-Reihenklemme bis 16mm2;9,0;St;gaeb-flat;3929114.d83
+04.73;Schutzl.Reihenkl. bis 25 mm2;5,0;St;gaeb-flat;3929114.d83
+04.74;Schutzl.Reihenkl. bis 50 mm2;2,0;St;gaeb-flat;3929114.d83
+04.75;Schutzl.Reihenkl. bis 70 mm2;1,0;St;gaeb-flat;3929114.d83
+04.76;IP-Patchmodul;3,0;St;gaeb-flat;3929114.d83
+05.1;Ltg. NYM-J 3x1,5 UP Fräsen;267,0;m;gaeb-flat;3929114.d83
+05.2;Ltg. NYM-J 5x1,5 UP Fräsen;733,0;m;gaeb-flat;3929114.d83
+05.3;Ltg. NYM-J 3x2,5 UP Fräsen;668,0;m;gaeb-flat;3929114.d83
+05.4;Ltg. NYM-J 5x2,5 UP Fräsen;38,0;m;gaeb-flat;3929114.d83
+05.5;Ltg. NYM-J 5x4 UP Fräsen;26,0;m;gaeb-flat;3929114.d83
+05.6;Ltg. NYM-J 5x6 UP Fräsen;16,0;m;gaeb-flat;3929114.d83
+05.7;Ltg. NYM-J 7x1,5 UP Fräsen;3,0;m;gaeb-flat;3929114.d83
+05.8;Ltg. NYM-J 3x1,5 oberhalb Zwischendecke / Ständerwand;967,0;m;gaeb-flat;3929114.d83
+05.9;Ltg. NYM-J 3x2,5 oberhalb Zwischendecke / Ständerwand;2480,0;m;gaeb-flat;3929114.d83
+05.10;Ltg. NYM-J 5x1,5 oberhalb Zwischendecke / Ständerwand;2740,0;m;gaeb-flat;3929114.d83
+05.11;Ltg. NYM-J 5x2,5 oberhalb Zwischendecke / Ständerwand;143,0;m;gaeb-flat;3929114.d83
+05.12;Ltg. NYM-J 5x4 oberhalb Zwischendecke / Ständerwand;97,0;m;gaeb-flat;3929114.d83
+05.13;Ltg. NYM-J 5x6 oberhalb Zwischendecke / Ständerwand;57,0;m;gaeb-flat;3929114.d83
+05.14;Ltg. NYM-J 7x1,5 oberhalb Zwischendecke / Ständerwand;27,0;m;gaeb-flat;3929114.d83
+05.15;Ltg. NYM-J 3x1,5 vorh.Kabelrinne/Kanal;967,0;m;gaeb-flat;3929114.d83
+05.16;Ltg. NYM-J 3x2,5 vorh.Kabelrinne/Kanal;2480,0;m;gaeb-flat;3929114.d83
+05.17;Ltg. NYM-J 5x1,5 vorh.Kabelrinne/Kanal;2740,0;m;gaeb-flat;3929114.d83
+05.18;Ltg. NYM-J 5x2,5 vorh.Kabelrinne/Kanal;143,0;m;gaeb-flat;3929114.d83
+05.19;Ltg. NYM-J 5x4 vorh.Kabelrinne/Kanal;97,0;m;gaeb-flat;3929114.d83
+05.20;Ltg. NYM-J 5x6 vorh.Kabelrinne/Kanal;57,0;m;gaeb-flat;3929114.d83
+05.21;Ltg. NYM-J 7x1,5 vorh.Kabelrinne/Kanal;27,0;m;gaeb-flat;3929114.d83
+05.22;Ltg. NYM-J 3x1,5 mit Bügelschellen auf Ankerschienen;134,0;m;gaeb-flat;3929114.d83
+05.23;Ltg. NYM-J 3x2,5 Bügelschellen auf Ankerschienen;334,0;m;gaeb-flat;3929114.d83
+05.24;Ltg. NYM-J 5x1,5 Bügelschellen auf Ankerschienen;386,0;m;gaeb-flat;3929114.d83
+05.25;Ltg. NYM-J 5x2,5 Bügelschellen auf Ankerschienen;19,0;m;gaeb-flat;3929114.d83
+05.26;Ltg. NYM-J 5x4 Bügelschellen auf Ankerschienen;13,0;m;gaeb-flat;3929114.d83
+05.27;Ltg. NYM-J 5x6 Bügelschellen auf Ankerschienen;9,0;m;gaeb-flat;3929114.d83
+05.28;Ltg. NYM-J 7x1,5 Bügelsschellen auf Ankerschienen;3,0;m;gaeb-flat;3929114.d83
+05.29;Ltg. NYM-J 3x1,5 vorh.Rohr/Unterflurkanal;260,0;m;gaeb-flat;3929114.d83
+05.30;Ltg. NYM-J 3x2,5 vorh.Rohr/Unterflurkanal;668,0;m;gaeb-flat;3929114.d83
+05.31;Ltg. NYM-J 5x1,5 vorh. Rohr/Unterflurkanal;986,0;m;gaeb-flat;3929114.d83
+05.32;Ltg. NYM-J 5x2,5 vorh. Rohr/Unterflurkanal;336,0;m;gaeb-flat;3929114.d83
+05.33;Ltg. NYM-J 5x4 vorh. Rohr/Unterflurkanal;27,0;m;gaeb-flat;3929114.d83
+05.34;Ltg. NYM-J 5x6 vorh. Rohr/Unterflurkanal;16,0;m;gaeb-flat;3929114.d83
+05.35;Ltg. NYM-J 7x1,5 vorh. Rohr/Unterflurkanal;3,0;m;gaeb-flat;3929114.d83
+05.36;Installationskabel J-Y(St)Y 2x2x0,8 auf vorhandene Kabelleiter;929,0;m;gaeb-flat;3929114.d83
+05.37;Installationskabel J-Y(St)Y 2x2x0,8, auf vorhandene Ankerschienen;179,0;m;gaeb-flat;3929114.d83
+05.38;Installationskabel J-Y(ST)Y 2x2x0,8 in vorhandene Sammelbefestigung;1787,0;m;gaeb-flat;3929114.d83
+05.39;Installationskabel J-Y(St)Y 2x2x0,8 in vorhandene Rohre, Unterflurkanäle;637,5;m;gaeb-flat;3929114.d83
+05.40;Installationskabel J-Y(St)Y 4x2x0,8 auf vorhandene Kabelleiter;12,5;m;gaeb-flat;3929114.d83
+05.41;Installationskabel J-Y(St)Y 4x2x0,8, auf vorhandene Ankerschienen;12,5;m;gaeb-flat;3929114.d83
+05.42;Installationskabel J-Y(St)Y 4x2x0,8  in vorhandene Sammelbefestigung;12,5;m;gaeb-flat;3929114.d83
+05.43;Installationskabel J-Y(St)Y 4x2x0,8 in vorhandene Rohre, Unterflurkanäle;12,5;m;gaeb-flat;3929114.d83
+05.44;Fernmeldekabel A-2YF(L)2Y 4x2x0,8 auf vorhanden Ankerschiene;56,0;m;gaeb-flat;3929114.d83
+05.45;Fernmeldekabel A-2YF(L)2Y 4x2x0,8 in Lehrror;112,5;m;gaeb-flat;3929114.d83
+05.46;Lautsprecherkabel 2x2,5 oberhalb Zwischendecke/Ständerwand;60,0;m;gaeb-flat;3929114.d83
+05.47;Lautsprecherkabel 2x2,5 in Lehrrohr;60,0;m;gaeb-flat;3929114.d83
+05.48;Niederspannungs-Verbindungsmuffen Adernzahl 3, Querschnitt 1,5 bis 16qmm;1,0;St;gaeb-flat;3929114.d83
+05.49;Niederspannungs-Verbindungsmuffen Schrumpfen Adernzahl 5, Querschnitt 1,5 bis 6qmm;1,0;St;gaeb-flat;3929114.d83
+05.50;Muffen für Fernmeldekabel als Verbindungs- und Abzweigmuffen;1,0;St;gaeb-flat;3929114.d83
+05.51;Busleitung 2-paarig auf vorhandene Kabelleiter;225,0;m;gaeb-flat;3929114.d83
+05.52;Busleitung 2-paarig auf Ankerschienen;712,5;m;gaeb-flat;3929114.d83
+05.53;Busleitung 2-paarig, Zwischendecken mit Sammelbefestigung;812,5;m;gaeb-flat;3929114.d83
+05.54;Busleitung 2-paarig in vorhandene Rohre, Unterflurkanäle;125,0;m;gaeb-flat;3929114.d83
+06.1;Kabelrinne Breite 100 mm;10,0;m;gaeb-flat;3929114.d83
+06.2;Kabelrinne Breite 200 mm;30,0;m;gaeb-flat;3929114.d83
+06.3;Kabelrinnendeckel Breite 200mm;20,0;m;gaeb-flat;3929114.d83
+06.4;Kabelrinne Breite 300 mm;130,0;m;gaeb-flat;3929114.d83
+06.5;Kabelrinne Breite 400 mm;10,0;m;gaeb-flat;3929114.d83
+06.6;Kabelrinne Breite 500 mm;141,0;m;gaeb-flat;3929114.d83
+06.7;Bogen 90 Grad, waagerecht, Breite 100 mm.;1,0;St;gaeb-flat;3929114.d83
+06.8;Bogen 90 Grad, waagerecht, Breite 200 mm.;1,0;St;gaeb-flat;3929114.d83
+06.9;Bogen 90 Grad, waagerecht, Breite 300 mm.;1,0;St;gaeb-flat;3929114.d83
+06.10;Bogen 90 Grad, waagerecht, Breite 400 mm.;1,0;St;gaeb-flat;3929114.d83
+06.11;Bogen 90 Grad, waagerecht, Breite 500 mm.;11,0;St;gaeb-flat;3929114.d83
+06.12;T-Abzweig Breite 300 mm.;1,0;St;gaeb-flat;3929114.d83
+06.13;T-Abzweig Breite 400 mm.;1,0;St;gaeb-flat;3929114.d83
+06.14;T-Abzweig Breite 500 mm.;3,0;St;gaeb-flat;3929114.d83
+06.15;Ausleger Länge 100 mm, an Stielen, einseitig.;2,0;St;gaeb-flat;3929114.d83
+06.16;Ausleger Länge 200 mm, an Stielen, einseitig.;2,0;St;gaeb-flat;3929114.d83
+06.17;Ausleger Länge 300 mm, an Stielen, einseitig.;200,0;St;gaeb-flat;3929114.d83
+06.18;Ausleger Länge 400 mm, an Stielen, einseitig.;2,0;St;gaeb-flat;3929114.d83
+06.19;Ausleger Länge 500 mm, an Stielen, einseitig.;180,0;St;gaeb-flat;3929114.d83
+06.20;Ausleger Länge 100 mm, an der Wand;2,0;St;gaeb-flat;3929114.d83
+06.21;Ausleger Länge 200 mm, an der Wand;2,0;St;gaeb-flat;3929114.d83
+06.22;Ausleger Länge 300 mm, an der Wand;2,0;St;gaeb-flat;3929114.d83
+06.23;Ausleger Länge 400 mm, an der Wand;2,0;St;gaeb-flat;3929114.d83
+06.24;Ausleger Länge 500 mm, an der Wand;2,0;St;gaeb-flat;3929114.d83
+06.25;Stiel für Ausleger als U-Profil, an Decke 300 mm.;380,0;St;gaeb-flat;3929114.d83
+06.26;Mehrpreis für je 100 mm  Stiellänge;50,0;St;gaeb-flat;3929114.d83
+06.27;Tragkonsole zur Wand- und Deckenmontage L=161 mm;5,0;St;gaeb-flat;3929114.d83
+06.28;Tragkonsole zur Wand- und Deckenmontage L=261 mm;5,0;St;gaeb-flat;3929114.d83
+06.29;Tragkonsole zur Wand- und Deckenmontage L=361 mm;5,0;St;gaeb-flat;3929114.d83
+06.30;Gewindestäbe M 10, verzinkt, bis 0,3 m;16,0;m;gaeb-flat;3929114.d83
+06.31;Kabelleiter für Kabelträgersystem  Breite 300 mm Sprossenabstand 300 mm;2,0;m;gaeb-flat;3929114.d83
+06.32;Kabelleiter für Kabelträgersystem Breite 400 mm Sprossenabstand 300 mm;15,0;m;gaeb-flat;3929114.d83
+06.33;Montageplatte an Kabelrinne B/H= 65/110 mm;10,0;St;gaeb-flat;3929114.d83
+06.34;Montageplatte an Kabelrinne B/H=90/140 mm;10,0;St;gaeb-flat;3929114.d83
+06.35;Dämpfungssockel für Dächer;20,0;St;gaeb-flat;3929114.d83
+06.36;Ankerschiene 28/15 Teillängen von 20 cm bis 200 cm ablängen;10,0;m;gaeb-flat;3929114.d83
+06.37;Bügelschelle für Steigleitersystem Spannbereich 8 - 12;28,0;St;gaeb-flat;3929114.d83
+06.38;Bügelschelle für Steigleitersystem Spannbereich 12 - 16;46,0;St;gaeb-flat;3929114.d83
+06.39;Bügelschelle für Steigleitersystem Spannbereich 16 - 22;32,0;St;gaeb-flat;3929114.d83
+06.40;Bügelschelle für Steigleitersystem Spannbereich 22 - 28;24,0;St;gaeb-flat;3929114.d83
+06.41;Bügelschelle für Steigleitersystem Spannbereich 28 - 34;12,0;St;gaeb-flat;3929114.d83
+06.42;Bügelschelle für Steigleitersystem Spannbereich 34 - 40;8,0;St;gaeb-flat;3929114.d83
+06.43;Bügelschelle für Steigleitersystem Spannbereich 40 - 46;12,0;St;gaeb-flat;3929114.d83
+06.44;Bügelschelle für Steigleitersystem Spannbereich 46 - 52;8,0;St;gaeb-flat;3929114.d83
+06.45;Sammelhalter aus Metall bis zu 15 Leitungen NYM 3 x 1,5;1440,0;St;gaeb-flat;3929114.d83
+06.46;Sammelhalter aus Metall bis zu 30 Leitungen NYM 3 x 1,5;360,0;St;gaeb-flat;3929114.d83
+06.47;Kabelklammer aus Metall, bis zu 15 Leitungen NYM 3 x 1,5;10,0;St;gaeb-flat;3929114.d83
+06.48;Geräteeinbaukanal aus PVC hart, H/B=85/130mm,;10,0;m;gaeb-flat;3929114.d83
+06.49;Leitungsführungskanal 15/15 mm aus PVC auf Stahlbetonwand.;10,0;m;gaeb-flat;3929114.d83
+06.50;Leitungsführungskanal 20/35 mm aus PVC auf Stahlbetonwand.;10,0;m;gaeb-flat;3929114.d83
+06.51;Leitungsführungskanal 40/60 mm aus PVC auf Stahlbetonwand;10,0;m;gaeb-flat;3929114.d83
+06.52;Leitungsführungskanal 60/110 mm aus PVC auf Stahlbetonwand;10,0;m;gaeb-flat;3929114.d83
+06.53;Leitungsführungskanal 15/15 mm aus Stahlblech auf Stahlbetonwand.;10,0;m;gaeb-flat;3929114.d83
+06.54;Leitungsführungskanal 20/35 mm aus Stahlblech auf Stahlbetonwand.;10,0;m;gaeb-flat;3929114.d83
+06.55;Elektroinstallationsrohr EN 25 PVC hart auf Putz.;30,0;m;gaeb-flat;3929114.d83
+06.56;Elektroinstallationsrohr EN 40 PVC hart auf Putz.;10,0;m;gaeb-flat;3929114.d83
+06.57;Elektroinstallationsrohr EN 25 PVC biegsam verlegen Unterputz.;255,0;m;gaeb-flat;3929114.d83
+06.58;Elektroinstallationsrohr EN 40 PVC biegsam verlegen Unterputz.;10,0;m;gaeb-flat;3929114.d83
+06.59;Elektroinstallationsrohr EN 32 PVC biegsam verlegen auf Rohboden;80,0;m;gaeb-flat;3929114.d83
+06.60;Elektroinstallationsrohr EN 40 PVC biegsam verlegen auf Rohboden. Decken- und Wanddurchbrüche;40,0;m;gaeb-flat;3929114.d83
+06.61;Decken-/Wanddurchbruch in Stahlbeton, Dicke über 20 bis 25 cm, d  bis 25 mm;5,0;St;gaeb-flat;3929114.d83
+06.62;Decken-/Wanddurchbruch in Stahlbeton, Dicke über 20 bis 25 cm, d  bis 50 mm;5,0;St;gaeb-flat;3929114.d83
+06.63;Decken-/Wanddurchbruch in Stahlbeton, Dicke 15 - 20 cm, d bis 50 mm;5,0;St;gaeb-flat;3929114.d83
+06.64;Decken-/Wanddurchbruch in Stahlbeton Dicke über 25 bis 50 cm,als Kernbohrung bis 100 mm,;5,0;St;gaeb-flat;3929114.d83
+06.65;Decken-/Wanddurchbruch in Stahlbeton Dicke über 25 bis 50cm, als Kernbohrung bis 150 mm,;5,0;St;gaeb-flat;3929114.d83
+07.1;Wippschalter einpolig Aus/Wechsel, 10A, 250V IP 2X;1,0;St;gaeb-flat;3929114.d83
+07.2;1-fach Wippe ohne Bedruckung;1,0;St;gaeb-flat;3929114.d83
+07.3;Schutzkontaktsteckdose 16 A, 250 V AC, zum Einbau in Gerätedose;265,0;St;gaeb-flat;3929114.d83
+07.4;Schutzkontaktsteckdose 16 A, 250 V AC IP 44, zum Einbau in Gerätedose mit Klappdeckel;32,0;St;gaeb-flat;3929114.d83
+07.5;CEE-Steckdose 5polig, 400/230 V AC, 16 A, IP 44 zum Einbau in Gerätedose;1,0;St;gaeb-flat;3929114.d83
+07.6;CEE-Steckdose 5polig, 400/230 V AC, 32 A, IP 44 zum Einbau in Gerätedose;1,0;St;gaeb-flat;3929114.d83
+07.7;Kabelauslasszentralplatte zum Einbau in Gerätedose,;80,0;St;gaeb-flat;3929114.d83
+07.8;Blindabdeckplatte zum Einbau in Gerätedose,;6,0;St;gaeb-flat;3929114.d83
+07.9;Geräteanschlussdose bis 2,5 mm² 5-polig 400V/16A, AC zum Einbau in Gerätedose;88,0;St;gaeb-flat;3929114.d83
+07.10;Geräteanschlussdose bis 4,0 mm² 5-polig 400V/32A, AC zum Einbau in Gerätedose;7,0;St;gaeb-flat;3929114.d83
+07.11;Bodentank mit Steckdosen und Datenanschlussdose RJ45;2,0;St;gaeb-flat;3929114.d83
+07.12;1-fach Aufbaugehäuse;5,0;St;gaeb-flat;3929114.d83
+07.13;2-fach Aufbaugehäuse;5,0;St;gaeb-flat;3929114.d83
+07.14;1- fach Schutzkontaktsteckdose AP-Ausführung IP44;8,0;St;gaeb-flat;3929114.d83
+07.15;2-fach Schutzkontaktsteckdose  AP-Ausführung IP44;5,0;St;gaeb-flat;3929114.d83
+07.16;Herdanschlussdose für Herdanschluß, 400 V alpinweiß;4,0;St;gaeb-flat;3929114.d83
+07.17;Abschließbare Außensteckdose IP55, inkl. Befestigung;1,0;St;gaeb-flat;3929114.d83
+07.18;Multimediadose HDMI;50,0;St;gaeb-flat;3929114.d83
+07.19;HDMI KABEL 10 m;15,0;St;gaeb-flat;3929114.d83
+07.20;Gerätedose H/B/T=70/71/54mm  in Geräteeinbaukanal;3,0;St;gaeb-flat;3929114.d83
+07.21;Gerätedose H/B/T=80/140/54mm in Geräteeinbaukanal;3,0;St;gaeb-flat;3929114.d83
+07.22;Gerätedose d=60 mm, Tiefe 40mm in Mauerwerk.;145,0;St;gaeb-flat;3929114.d83
+07.23;Geräteverbindungsdose  D=60 mm, Tiefe 60 mm, in Mauerwerk,;236,0;St;gaeb-flat;3929114.d83
+07.24;Geräteverbindungsdose als Electronicdose in Mauerwerk;88,0;St;gaeb-flat;3929114.d83
+07.25;Wandleuchtenanschlußdose;25,0;St;gaeb-flat;3929114.d83
+07.26;Teleskop-Gerätedose zur sicheren Befestigung von Steckdosen in Außendämmung;2,0;St;gaeb-flat;3929114.d83
+07.27;Teleskop-Geräteträger zur sicheren Befestigung Bewegungsmelder;25,0;St;gaeb-flat;3929114.d83
+07.28;Universal Geräteträger zur Befestigung von Türsprechstellte in Außendämmung;2,0;St;gaeb-flat;3929114.d83
+07.29;Putzausgleichring D=60 mm, H=12mm;36,0;St;gaeb-flat;3929114.d83
+07.30;Gerätedose in Hohlwand.;52,0;St;gaeb-flat;3929114.d83
+07.31;Geräteverbindungsdose in Hohlwand.;98,0;St;gaeb-flat;3929114.d83
+07.32;Geräteverbindungsdose als Electronicdose in Hohlwand;15,0;St;gaeb-flat;3929114.d83
+07.33;Schalldichtung Aussparung 150/150mm bis 200/150mm;0,0;St;gaeb-flat;3929114.d83
+07.34;Verbindungsdose DIN VDE 0606 aus Isolierstoff, bis 100 mm x 100 mm;5,0;St;gaeb-flat;3929114.d83
+07.35;Verbindungsdose DIN VDE 0606 aus Isolierstoff, bis 150 mm x 150 mm;5,0;St;gaeb-flat;3929114.d83
+07.36;Nebenuhr 12-60 V für innen, Ø 300 mm,;21,0;St;gaeb-flat;3929114.d83
+08.1;Kabelabschottung Mauerwerk, bis 0,01 m2, Dicke über 20-25 cm, S90;3,0;St;gaeb-flat;3929114.d83
+08.2;Kabelabschottung Mauerwerk, über 0,01 m2 bis 0,02 m2, Dicke über 20-25 cm, S90;6,0;St;gaeb-flat;3929114.d83
+08.3;Kabelabschottung Mauerwerk, über 0,02 m2 bis 0,05 m2, Dicke über 20-25 cm, S90;12,0;St;gaeb-flat;3929114.d83
+08.4;Brandabschottung EI30 - EI90 aus Schottzylinder mit Dämmschichtbildendem Material;3,0;St;gaeb-flat;3929114.d83
+08.5;Kabelabschottung in belegten Kernbohrungen 50-100mm, Stahlbetondecken Dicke über 20 cm bis 25;3,0;St;gaeb-flat;3929114.d83
+08.6;Kabelabschottung in belegten Kernbohrungen 100 bis 150mm, Stahlbetondecken Dicke über 20 cm bis 25;3,0;St;gaeb-flat;3929114.d83
+08.7;Kabelabschottung in belegten Kabelzugrohrauslässen, bis 50 mm,;3,0;St;gaeb-flat;3929114.d83
+08.8;Brandschutzkanal aus Stahlblech I30 Abmessungen: H/B=40/70mm;2,0;m;gaeb-flat;3929114.d83
+08.9;Brandschutzkanal aus Stahlblech I30 Abmessungen: H/B=70/110mm;2,0;m;gaeb-flat;3929114.d83
+08.10;Brandschutzkanal aus Stahlblech I30 Abmessungen: H/B=100/260mm;32,0;m;gaeb-flat;3929114.d83
+08.11;Formteil Flachwinkel für Brandschutzkanalsystem Abmessungen:H/B=100/260mm;2,0;St;gaeb-flat;3929114.d83
+08.12;Formteil T-Stück für Brandschutzkanalsystem Abmessungen:H/B=100/260mm;1,0;St;gaeb-flat;3929114.d83
+08.13;Formteil Wandanschluss  für Brandschutzkanalsystem Abmessungen: B=260mm;7,0;St;gaeb-flat;3929114.d83
+08.14;Trassenverkleidung I30 4-seitig;4,0;m²;gaeb-flat;3929114.d83
+08.15;Trennsteg zur Trennung von Kabeln und Leitungen zum Einbau in Brandschutzkanälen;32,0;m;gaeb-flat;3929114.d83
+08.16;Dokumentation der Brandschutzmaßnahmen;1,0;Psch;gaeb-flat;3929114.d83
+09.1;Netzteil In: 100-240VAC Out: 24VDC/2.5A;2,0;St;gaeb-flat;3929114.d83
+09.2;Busspannungsversorgung 640 mA, REG;7,0;St;gaeb-flat;3929114.d83
+09.3;IP-Router, REG;1,0;St;gaeb-flat;3929114.d83
+09.4;Gateway für die KNX Installation;1,0;St;gaeb-flat;3929114.d83
+09.5;Linienkoppler;7,0;St;gaeb-flat;3929114.d83
+09.6;USB-Schnittstelle, REG;1,0;St;gaeb-flat;3929114.d83
+09.7;4-fach Binäreingang mit Kontaktabfrage, REG;2,0;St;gaeb-flat;3929114.d83
+09.8;4-fach Schaltaktor 16A, REG;1,0;St;gaeb-flat;3929114.d83
+09.9;8-fach Schaltaktor 16 A, REG;1,0;St;gaeb-flat;3929114.d83
+09.10;1-fach DALI-Gateway 64 Teilnehmer, 16 Gruppen REG;12,0;St;gaeb-flat;3929114.d83
+09.11;1/2-fach Tasterankopplung UP, mit integriertem Busankoppler;70,0;St;gaeb-flat;3929114.d83
+09.12;2/4-fach Tasterankopplung UP, mit integriertem Busankoppler;14,0;St;gaeb-flat;3929114.d83
+09.13;2-fach Wippe links/rechts;13,0;St;gaeb-flat;3929114.d83
+09.14;1-fach Wippe ohne Bedruckung;69,0;St;gaeb-flat;3929114.d83
+09.15;Präsenzmelder Corridor 30 m;14,0;St;gaeb-flat;3929114.d83
+09.16;Präsenzmelder Mini, 12m;52,0;St;gaeb-flat;3929114.d83
+09.17;Präsenzmelder Mini, 8 Meter;4,0;St;gaeb-flat;3929114.d83
+09.18;Bediendisplay Mensa;1,0;St;gaeb-flat;3929114.d83
+09.19;Einbaugehäuse Heizungssteuerung;1,0;St;gaeb-flat;3929114.d83
+09.20;Aufputzinstallationsgehäuse;7,0;St;gaeb-flat;3929114.d83
+09.21;Heizungsaktor 8-fach;7,0;St;gaeb-flat;3929114.d83
+09.22;Raumcontroller Sonnenschutzsteuerung;48,0;St;gaeb-flat;3929114.d83
+09.23;2/1-fach Schalt/Jalousie  Binäreingänge UP;38,0;St;gaeb-flat;3929114.d83
+09.24;"2-fach links/rechts, mit Symbol ""Jalousie""";38,0;St;gaeb-flat;3929114.d83
+09.25;8-fach Schalt-/Jalousieaktor 6 A, REG;11,0;St;gaeb-flat;3929114.d83
+09.26;12-fach Schalt-/Jalousieaktor 6 A, REG;2,0;St;gaeb-flat;3929114.d83
+09.27;Wetterstation KNX-GPS;1,0;St;gaeb-flat;3929114.d83
+09.28;Anschluss der beigestellten Kupplungstecker;70,0;St;gaeb-flat;3929114.d83
+09.29;Bohrungen in der Außenwand für Leitungsverlegung,;70,0;St;gaeb-flat;3929114.d83
+09.30;Inbetriebnahme mit dem Errichterfirma der Sonnen- schutzbehänge;6,0;h;gaeb-flat;3929114.d83
+09.31;Programmierung DALI-Gateway je DALI-Teilnehmer;546,0;St;gaeb-flat;3929114.d83
+09.32;Programmierung KNX je Busteilnehmer;240,0;St;gaeb-flat;3929114.d83
+09.33;Visualisierung;1,0;St;gaeb-flat;3929114.d83
+10.1;Steuer- und Anschlusskabel 2×0,75  in vorhandene Rohre, Unterflurkanäle;450,0;m;gaeb-flat;3929114.d83
+10.2;Steuer- und Anschlusskabel 2×0,75 auf vorhandene Kabelleiter oder -rinnen;960,0;m;gaeb-flat;3929114.d83
+10.3;Steuer- und Anschlusskabel 2×0,75  auf vorhandene Ankerschienen, Kabelleiter oder -rinnen;850,0;m;gaeb-flat;3929114.d83
+10.4;Steuer- und Anschlusskabel 5×0,75  in vorhandene Rohre, Unterflurkanäle;40,0;m;gaeb-flat;3929114.d83
+10.5;Steuer- und Anschlusskabel 5×0,75 auf vorhandene Kabelleiter oder -rinnen;220,0;m;gaeb-flat;3929114.d83
+10.6;Steuer- und Anschlusskabel 5×0,75  auf vorhandene Ankerschienen, Kabelleiter oder -rinnen;25,0;m;gaeb-flat;3929114.d83
+10.7;Steuer- und Anschlusskabel 7×0,75  in vorhandene Rohre, Unterflurkanäle;15,0;m;gaeb-flat;3929114.d83
+10.8;Steuer- und Anschlusskabel 7×0,75 auf vorhandene Kabelleiter oder -rinnen;40,0;m;gaeb-flat;3929114.d83
+10.9;Steuer- und Anschlusskabel 7×0,75  auf vorhandene Ankerschienen, Kabelleiter oder -rinnen;35,0;m;gaeb-flat;3929114.d83
+10.10;Steuer- und Anschlusskabel 4×1,0  in vorhandene Rohre, Unterflurkanäle;8,0;m;gaeb-flat;3929114.d83
+10.11;Steuer- und Anschlusskabel 4×1,0 auf vorhandene Kabelleiter oder -rinnen;20,0;m;gaeb-flat;3929114.d83
+10.12;Steuer- und Anschlusskabel 4×1,0  auf vorhandene Ankerschienen, Kabelleiter oder -rinnen;18,0;m;gaeb-flat;3929114.d83
+10.13;Steuer- und Anschlusskabel 5×1,0  in vorhandene Rohre, Unterflurkanäle;80,0;m;gaeb-flat;3929114.d83
+10.14;Steuer- und Anschlusskabel 5×1,0 auf vorhandene Kabelleiter oder -rinnen;165,0;m;gaeb-flat;3929114.d83
+10.15;Steuer- und Anschlusskabel 5×1,0  auf vorhandene Ankerschienen, Kabelleiter oder -rinnen;150,0;m;gaeb-flat;3929114.d83
+10.16;Steuer- und Anschlusskabel 7×1,0  in vorhandene Rohre, Unterflurkanäle;20,0;m;gaeb-flat;3929114.d83
+10.17;Steuer- und Anschlusskabel 7×1,0 auf vorhandene Kabelleiter oder -rinnen;43,0;m;gaeb-flat;3929114.d83
+10.18;Steuer- und Anschlusskabel 7×1,0  auf vorhandene Ankerschienen, Kabelleiter oder -rinnen;39,0;m;gaeb-flat;3929114.d83
+10.19;Steuer- und Anschlusskabel 12×1,0  in vorhandene Rohre, Unterflurkanäle;65,0;m;gaeb-flat;3929114.d83
+10.20;Steuer- und Anschlusskabel 12×1,0 auf vorhandene Kabelleiter oder -rinnen;100,0;m;gaeb-flat;3929114.d83
+10.21;Steuer- und Anschlusskabel 12×1,0  auf vorhandene Ankerschienen, Kabelleiter oder -rinnen;120,0;m;gaeb-flat;3929114.d83
+10.22;NYY-J 3x1,5 in vorhandene Rohre, Unterflurkanäle.;450,0;m;gaeb-flat;3929114.d83
+10.23;NYY-J 3x1,5 auf vorhandene Kabelleiter oder -rinnen;950,0;m;gaeb-flat;3929114.d83
+10.24;NYY-J 3x1,5, auf vorhandene Ankerschienen, Kabelleiter oder -rinnen.;850,0;m;gaeb-flat;3929114.d83
+10.25;NYY-J 5x1,5 in vorhandene Rohre, Unterflurkanäle.;225,0;m;gaeb-flat;3929114.d83
+10.26;NYY-J 5x1,5 auf vorhandene Kabelleiter oder -rinnen;460,0;m;gaeb-flat;3929114.d83
+10.27;NYY-J 5x1,5 auf vorhandene Ankerschienen, Kabelleiter oder -rinnen.;420,0;m;gaeb-flat;3929114.d83
+10.28;Steuer- und Anschlusskabel 5×1,5  in vorhandene Rohre, Unterflurkanäle;80,0;m;gaeb-flat;3929114.d83
+10.29;Steuer- und Anschlusskabel 5×1,5 auf vorhandene Kabelleiter oder -rinnen;170,0;m;gaeb-flat;3929114.d83
+10.30;Steuer- und Anschlusskabel 5×1,5  auf vorhandene Ankerschienen, Kabelleiter oder -rinnen;150,0;m;gaeb-flat;3929114.d83
+10.31;Gummischlauchleitung H07RN-F 7x1,5 in vorhandene Rohre, Unterflurkanäle.;5,0;m;gaeb-flat;3929114.d83
+10.32;Gummischlauchleitung H07RN-F 7x1,5 auf vorhandene Kabelleiter oder -rinnen;10,0;m;gaeb-flat;3929114.d83
+10.33;Gummischlauchleitung H07RN-F 7x1,5 auf vorhandene Ankerschienen, Kabelleiter oder -rinnen.;10,0;m;gaeb-flat;3929114.d83
+10.34;NYY-J 5x2,5 in vorhandene Rohre, Unterflurkanäle.;100,0;m;gaeb-flat;3929114.d83
+10.35;NYY-J 5x2,5 auf vorhandene Kabelleiter oder -rinnen;200,0;m;gaeb-flat;3929114.d83
+10.36;NYY-J 5x2,5 auf vorhandene Ankerschienen, Kabelleiter oder -rinnen.;180,0;m;gaeb-flat;3929114.d83
+10.37;Gummischlauchleitung H07RN-F 5x2,5 in vorhandene Rohre, Unterflurkanäle.;25,0;m;gaeb-flat;3929114.d83
+10.38;Gummischlauchleitung H07RN-F 5x2,5 auf vorhandene Kabelleiter oder -rinnen;50,0;m;gaeb-flat;3929114.d83
+10.39;Gummischlauchleitung H07RN-F 5x2,5 auf vorhandene Ankerschienen, Kabelleiter oder -rinnen.;50,0;m;gaeb-flat;3929114.d83
+10.40;NYY-J 5x4 in vorhandene Rohre, Unterflurkanäle.;70,0;m;gaeb-flat;3929114.d83
+10.41;NYY-J 5x4 auf vorhandene Kabelleiter oder -rinnen;150,0;m;gaeb-flat;3929114.d83
+10.42;NYY-J 5x4 auf vorhandene Ankerschienen, Kabelleiter oder -rinnen.;140,0;m;gaeb-flat;3929114.d83
+10.43;Installationskabel J-Y(St)Y 2x2x0,6 in vorhandene Rohre, Unterflurkanäle;10,0;m;gaeb-flat;3929114.d83
+10.44;Installationskabel J-Y(St)Y 2x2x0,6 auf vorhandene Kabelleiter;4,0;m;gaeb-flat;3929114.d83
+10.45;Installationskabel J-Y(St)Y 2x2x0,6 auf vorhandene Ankerschienen,;2,0;m;gaeb-flat;3929114.d83
+10.46;Installationskabel  JY(St)Y 2x2x0,6 Zwischendecken mit Sammelbefestigung.;10,0;m;gaeb-flat;3929114.d83
+10.47;Installationskabel J-Y(St)Y 2x2x0,8 in vorhandene Rohre, Unterflurkanäle;650,0;m;gaeb-flat;3929114.d83
+10.48;Installationskabel J-Y(St)Y 2x2x0,8 auf vorhandene Kabelleiter;360,0;m;gaeb-flat;3929114.d83
+10.49;Installationskabel J-Y(St)Y 2x2x0,8 auf vorhandene Ankerschienen,;150,0;m;gaeb-flat;3929114.d83
+10.50;Installationskabel  JY(St)Y 2x2x0,8 Zwischendecken mit Sammelbefestigung.;925,0;m;gaeb-flat;3929114.d83
+10.51;Installationskabel J-Y(St)Y 4x2x0,8 in vorhandene Rohre, Unterflurkanäle;65,0;m;gaeb-flat;3929114.d83
+10.52;Installationskabel J-Y(St)Y 4x2x0,8 auf vorhandene Kabelleiter;20,0;m;gaeb-flat;3929114.d83
+10.53;Installationskabel J-Y(St)Y 4x2x0,8, auf vorhandene Ankerschienen,;8,0;m;gaeb-flat;3929114.d83
+10.54;Installationskabel  JY(St)Y 4x2x0,8 Zwischendecken mit Sammel;20,0;m;gaeb-flat;3929114.d83
+10.55;Steuerleitung LiYCY 2x0,75 in vorhandene Rohre, Unterflurkanäle.;50,0;m;gaeb-flat;3929114.d83
+10.56;Steuerleitung LiYCY 2x0,75auf vorhandene Kabelleiter;15,0;m;gaeb-flat;3929114.d83
+10.57;Steuerleitung LiYCY 2x0,75 auf vorhandene Ankerschienen;6,0;m;gaeb-flat;3929114.d83
+10.58;Steuerleitung LiYCY 2x0,75 Zwischendecken mit Sammel;50,0;m;gaeb-flat;3929114.d83
+10.59;Busleitung 4-paarig in vorhandene Rohre, Unterflurkanäle;600,0;m;gaeb-flat;3929114.d83
+10.60;Busleitung 4-paarig auf vorhandene Kabelleiter;180,0;m;gaeb-flat;3929114.d83
+10.61;Busleitung 4-paarig auf Ankerschienen;75,0;m;gaeb-flat;3929114.d83
+10.62;Busleitung 4-paarig, Zwischendecken mit Sammelbefestigung;600,0;m;gaeb-flat;3929114.d83
+10.63;CAN-Busleitung 2-paarig in vorhandene Rohre, Unterflurkanäle;50,0;m;gaeb-flat;3929114.d83
+10.64;CAN-Busleitung 2-paarig auf vorhandene Kabelleiter;50,0;m;gaeb-flat;3929114.d83
+10.65;CAN-Busleitung 2-paarig auf Ankerschienen;20,0;m;gaeb-flat;3929114.d83
+10.66;CAN-Busleitung 2-paarig Zwischendecken mit Sammelbefestigung;50,0;m;gaeb-flat;3929114.d83
+11.1;Werkstatt- und Montageplanung nach VOB Teil C, DIN 18382;1,0;St;gaeb-flat;3929114.d83
+11.2;Dokumentation nach VOB Teil C, DIN 18382.;1,0;St;gaeb-flat;3929114.d83
+11.3;Prüfgebühr für die baubegleitende Prüfung der sicherheitstechnischen Anlagen durch verantwortliche Sachverstän;1,0;Psch;gaeb-flat;3929114.d83
+11.4;Prüfgebühr für die Prüfung der Elektrischen Anlagen durch verantwortlichen Sachverständigen (vSV) nach §16 SVBau Stundenlohnarbeiten;1,0;Psch;gaeb-flat;3929114.d83
+11.5;Stundenlohnarbeiten Auszubildender;30,0;h;gaeb-flat;3929114.d83
+11.6;Helfer (Entgeltgruppe A und B);40,0;h;gaeb-flat;3929114.d83
+11.7;Stundenlohnarb. Monteur/-in  Entgeltgruppe G;60,0;h;gaeb-flat;3929114.d83
+11.8;Stundenlohnarb. Obermonteur/-in  Entgeltgruppe H;50,0;h;gaeb-flat;3929114.d83
+11.9;Stundenlohnarb. Objektleiter/-in  Entgeltgruppe I;30,0;h;gaeb-flat;3929114.d83
+11.10;Für Schwachstrommonteur;45,0;h;gaeb-flat;3929114.d83
+12.1;LED Deckeneinbauleuchte D=333mm, 3040lm;88,0;St;gaeb-flat;3929114.d83
+12.2;LED Deckenanbauleuchte D=500mm, 4284lm;37,0;St;gaeb-flat;3929114.d83
+12.3;LED Deckeneinbauleuchte D=316mm, 1800lm;50,0;St;gaeb-flat;3929114.d83
+12.4;3-Phasen Stromschiene;1,0;St;gaeb-flat;3929114.d83
+12.5;LED Strahler, D=90mm, 5670lm;5,0;St;gaeb-flat;3929114.d83
+12.6;LED Flächenleuchte D=435mm, 3750lm;19,0;St;gaeb-flat;3929114.d83
+12.7;LED Flächenleuchte D=620mm, 8250lm;24,0;St;gaeb-flat;3929114.d83
+12.8;LED Anbauleuchte L/B/H=1194/212/70, 2400lm;36,0;St;gaeb-flat;3929114.d83
+12.9;LED Spiegelleuchte Anbau L/B/H=600/40/90, 1400lm;28,0;St;gaeb-flat;3929114.d83
+12.10;LED Pendelleuchte L/B/H=1195/295/28, 4550/4650lm;30,0;St;gaeb-flat;3929114.d83
+12.11;LED Einlegeleuchte L/B/H=1195/295/30, 3672lm;200,0;St;gaeb-flat;3929114.d83
+12.12;LED Einbauleuchte L/B/H=622/622/81, 4461lm;15,0;St;gaeb-flat;3929114.d83
+12.13;LED Einbauleuchte, L/B/H=622/622/13, 4115lm;14,0;St;gaeb-flat;3929114.d83
+12.14;Bemusterung der Leuchten;12,0;St;gaeb-flat;3929114.d83
+13.1;Vollautomatisches Prüfsystem für batteriebetriebene Sicherheitsbeleuchtung gem. DIN EN 6203;1,0;St;gaeb-flat;3929114.d83
+13.2;LED Deckenanbau-Rettungszeichenleuchte mit Einzelbatterie Erkennungsweite: 20 m;18,0;St;gaeb-flat;3929114.d83
+13.3;Leuchtenkennzeichnungsschilder;18,0;St.;gaeb-flat;3929114.d83
+13.4;Prüfgebühr Sachkundigenprüfung Rettungswegkennzeichnung;1,0;Psch;gaeb-flat;3929114.d83
+14.1;Rangierverteiler mit Reihenklemmen;3,0;St;gaeb-flat;3929114.d83
+14.2;Handmelder Gehäuse Blau Hausalarm;3,0;St;gaeb-flat;3929114.d83
+14.3;IP-Außensprechstellen mit Video;1,0;St;gaeb-flat;3929114.d83
+14.4;IP-Außensprechstellen;2,0;St;gaeb-flat;3929114.d83
+14.5;Standsäule aus Edelstahl;1,0;St;gaeb-flat;3929114.d83
+14.6;Abdeckblenden-Set 1 aus Edelstahl;1,0;St;gaeb-flat;3929114.d83
+14.7;Modul Info mit Beschriftungsfeld hinterleuchtet;1,0;St;gaeb-flat;3929114.d83
+14.8;Einbau-Ruftaste beleuchtet weiß;1,0;St;gaeb-flat;3929114.d83
+14.9;Sicherheitsrelais trennt bei Sabotage den Türöffner;1,0;St;gaeb-flat;3929114.d83
+14.10;LAN-Secure Adapter sperrt bei Sabotage die LAN-Verbindung;1,0;St;gaeb-flat;3929114.d83
+14.11;Deckeneinbaulautsprecher 100V 6W;85,0;St;gaeb-flat;3929114.d83
+14.12;Wandanbaulautsprecher außen 100V 6W;5,0;St;gaeb-flat;3929114.d83
+14.13;Installationskabel DIN VDE 0815 J-Y(St)Y 2x2x0,8 Rohre,;468,6;m;gaeb-flat;3929114.d83
+14.14;Installationskabel DIN VDE 0815 J-Y(St)Y 2x2x0,8 Kabelleiter;175,56;m;gaeb-flat;3929114.d83
+14.15;Installationskabel DIN VDE 0815 J-Y(St)Y 2x2x0,8, Ankerschienen;72,6;m;gaeb-flat;3929114.d83
+14.16;Installationskabel DIN VDE 0815 J-Y(St)Y 2x2x0,8 Zwischendecken,;732,6;m;gaeb-flat;3929114.d83
+14.17;Installationskabel DIN VDE 0815 J-Y(St)Y 6x2x0,8 Rohre;39,6;m;gaeb-flat;3929114.d83
+14.18;Installationskabel DIN VDE 0815 J-Y(St)Y 6x2x0,8 Kabelleiter;14,52;m;gaeb-flat;3929114.d83
+14.19;Installationskabel DIN VDE 0815 J-Y(St)Y 6x2x0,8 Ankerschienen;6,6;m;gaeb-flat;3929114.d83
+14.20;Installationskabel DIN VDE 0815 J-Y(St)Y 6x2x0,8 Zwischendecke;59,4;m;gaeb-flat;3929114.d83
+14.21;Fernmeldekabel A-2YF(L)2Y 20x2x0,8 auf vorhanden Ankerschiene;54,0;m;gaeb-flat;3929114.d83
+14.22;Fernmeldekabel A-2YF(L)2Y 20x2x0,8 in Lehrror;108,0;m;gaeb-flat;3929114.d83
+14.23;Anschluß je Ende für Installationskabel J-Y(St)Y 2x2x0,8 an Rangierverteiler;12,0;St;gaeb-flat;3929114.d83
+14.24;Anschluß je Ende für Installationskabel J-Y(St)Y 2x2x0,8 an Lautsprechern;94,0;St;gaeb-flat;3929114.d83
+14.25;Sprachverständlichkeitsmessung;1,0;Psch;gaeb-flat;3929114.d83
+14.26;Messung aller Lautsprecher auf richtige Phasenlage und Impedanz;1,0;St;gaeb-flat;3929114.d83
+14.27;Dokumentation ELA;2,0;St;gaeb-flat;3929114.d83
+14.28;Prüfgebühr für die Prüfung der Alamierungsanlage (ELA)  durch verantwortlichen Sachverständigen (vSV) nach §16 SVBau;1,0;Psch;gaeb-flat;3929114.d83
+15.1;Aufbaulautsprecher Front;2,0;St;gaeb-flat;3929114.d83
+15.2;Digitalmixer (19 Inputs to Mix) mit Touchscreen, WLAN und Multitrack-Recording;1,0;St;gaeb-flat;3929114.d83
+15.3;Aufbaulautsprecher Delay;2,0;St;gaeb-flat;3929114.d83
+15.4;"19"" Systemrack 12HE";1,0;St;gaeb-flat;3929114.d83
+15.5;"19"" Multicolor Racklight 1HE";1,0;St;gaeb-flat;3929114.d83
+15.6;"19"" 16-Kanal Patchbay XLR";1,0;St;gaeb-flat;3929114.d83
+15.7;"19"" Digitaler 2-Kanal-Funkempfänger";1,0;St;gaeb-flat;3929114.d83
+15.8;Digitaler Handmikrofon Sender (kabellos);2,0;St;gaeb-flat;3929114.d83
+15.9;"19"" Rackschublade 4HE";1,0;St;gaeb-flat;3929114.d83
+15.10;1200 W 4-Kanal-Leistungsverstärker;1,0;St;gaeb-flat;3929114.d83
+15.11;Digitaler Signalprozessor (DSP);1,0;St;gaeb-flat;3929114.d83
+15.12;"19"" Steckdosenleiste mit Schalter";1,0;St;gaeb-flat;3929114.d83
+15.13;"19"" Steckdosenleiste";1,0;St;gaeb-flat;3929114.d83
+15.14;XLR Patchkabel 0,5m;5,0;St;gaeb-flat;3929114.d83
+15.15;XLR Patchkabel 1,5m;5,0;St;gaeb-flat;3929114.d83
+15.16;XLR Kabel 10m;2,0;St;gaeb-flat;3929114.d83
+15.17;Einmessen und Programmieren;1,0;psch;gaeb-flat;3929114.d83
+15.18;Beamer mit Halterung;1,0;St;gaeb-flat;3929114.d83
+15.19;Wandanbau Motorleinwand;1,0;St;gaeb-flat;3929114.d83
+15.20;Leinwandschalter;1,0;St;gaeb-flat;3929114.d83
+16.1;Thermischer Fusionsspleiß;52,0;St;gaeb-flat;3929114.d83
+16.2;LWL-Universalkabel 1x12 Fasern G50/125 OM4 in Rohre, Unterflurkanäle.;90,0;m;gaeb-flat;3929114.d83
+16.3;LWL-Universalkabel 1x12 Fasern G50/125 OM4 auf Kabelleiter oder -rinnen;105,0;m;gaeb-flat;3929114.d83
+16.4;LWL-Universalkabel 1x12 Fasern G50/125 OM4 Befestigungsschellen auf Ankerschienen;50,0;m;gaeb-flat;3929114.d83
+16.5;LWL-Universalkabel 1x4 Fasern G50/125 OM4 in Rohre, Unterflurkanäle.;10,0;m;gaeb-flat;3929114.d83
+16.6;LWL-Universalkabel 1x4 Fasern G50/125OM4 auf Kabelleiter oder -rinnen;30,0;m;gaeb-flat;3929114.d83
+16.7;LWL-Universalkabel 1x4 Fasern G50/125 OM4 Befestigungsschellen auf Ankerschienen,;20,0;m;gaeb-flat;3929114.d83
+16.8;LWL Patchkabel;6,0;St;gaeb-flat;3929114.d83
+16.9;Meßprotokoll der Herstellerfirma über die werkseitige Prüfung;1,0;St;gaeb-flat;3929114.d83
+16.10;Messen und Prüfen einer LWL-Strecke;24,0;St;gaeb-flat;3929114.d83
+16.11;19 Zoll-Stand-Netzwerkschrank 21 HE, H/B/T=1100/800/800mm;3,0;St;gaeb-flat;3929114.d83
+16.12;19-Zoll-Frontplatte als Kabeldurchführungsplatte.1 HE;8,0;St;gaeb-flat;3929114.d83
+16.13;19-Zoll-Frontplatte als Kabelführungsplatte 1 HE;4,0;St;gaeb-flat;3929114.d83
+16.14;19-Zoll-Frontplatte als Blindplatte.1 HE;3,0;St;gaeb-flat;3929114.d83
+16.15;19-Zoll-Frontplatte mit 24 Ports, RJ 45  Kat 6,1 HE;8,0;St;gaeb-flat;3929114.d83
+16.16;19-Zoll-Frontplatte mit 16 Ports, RJ 45  Kat 6,1 HE;4,0;St;gaeb-flat;3929114.d83
+16.17;19 Zoll ausziehbare LWL-Spleissbox 24LCD, Ausbau 12LCD 1 HE;3,0;St;gaeb-flat;3929114.d83
+16.18;Erdungsschiene mit 6 Anschlüssen bis 16 qmm;3,0;St;gaeb-flat;3929114.d83
+16.19;19-Zoll-Installationsschiene 230 V mit Überspannungsschutz;3,0;St;gaeb-flat;3929114.d83
+16.20;19-Zoll-Frontplatte als Tastatur-Schublade, 2 HE;1,0;St;gaeb-flat;3929114.d83
+16.21;19-Zoll-Frontplatte als Dokumenten - Schublade 2 HE;3,0;St;gaeb-flat;3929114.d83
+16.22;Messen des Potentialausgleichs;1,0;St;gaeb-flat;3929114.d83
+16.23;Fachboden Mindestbelastbarkeit 100 kg 1 HE;1,0;St;gaeb-flat;3929114.d83
+16.24;FTTH-Anschlussdose E9/125;1,0;St;gaeb-flat;3929114.d83
+16.25;FTTH-Anschlussdose G50/125 OM4;2,0;St;gaeb-flat;3929114.d83
+16.26;1-fach Datenanschlußdose RJ 45, 1 x 8polig, geschirmt Kat 6 UP;15,0;St;gaeb-flat;3929114.d83
+16.27;1-fach Datenanschlußdose RJ 45, 1 x 8polig, geschirmt Kat 6 AP;62,0;St;gaeb-flat;3929114.d83
+16.28;2-fach Datenanschlußdose RJ 45, 2 x 8polig, geschirmt Kat 6 UP;72,0;St;gaeb-flat;3929114.d83
+16.29;Patch- und Anschlusskabel 8-adrig CAT 7A, geschirmt L=1,5 m;120,0;St;gaeb-flat;3929114.d83
+16.30;Patch- und Anschlusskabel 8-adrig CAT 7A, geschirmt L=2,0 bis3,0m;46,0;St;gaeb-flat;3929114.d83
+16.31;RJ45-Modul geschirmt, Kategorie 6/EA Modul KS-T 1/8;2,0;St;gaeb-flat;3929114.d83
+16.32;Datenkabel S-FTP 4x2xAWG22/1, Kat 7A in Rohre, Unterflurkanäle.;1047,0;m;gaeb-flat;3929114.d83
+16.33;Datenkabel S-FTP 4x2xAWG22/1, Kat 7A auf Kabelleiter oder -rinnen;1254,0;m;gaeb-flat;3929114.d83
+16.34;Datenkabel S-FTP 4x2xAWG22/1, Kat 7A Befestigungsschellen auf Ankerschienen,;177,244;m;gaeb-flat;3929114.d83
+16.35;Datenkabel S-FTP 4x2xAWG22/1, Kat 7A oberhalb von Zwischendecken;1798,31;m;gaeb-flat;3929114.d83
+16.36;Duplex-Datenkabel S-FTP 2(4x2xAWG22/1), Kat 7A in Rohre, Unterflurkanäle.;1005,0;m;gaeb-flat;3929114.d83
+16.37;Duplex-Datenkabell S-FTP 2(4x2xAWG22/1), Kat 7A auf Kabelleiter oder -rinnen;1112,0;m;gaeb-flat;3929114.d83
+16.38;Duplex-Datenkabel S-FTP 2(4x2xAWG22/1), Kat 7A Befestigungsschellen auf Ankerschienen,;207,0;m;gaeb-flat;3929114.d83
+16.39;Duplex-Datenkabel S-FTP 2(4x2xAWG22/1), Kat 7A oberhalb von Zwischendecken;1719,39;m;gaeb-flat;3929114.d83
+16.40;Kabelverbinder für 4-paarige Datenkabel der Kat 7A.;8,0;St;gaeb-flat;3929114.d83
+16.41;Auflegen von Datenkabel S-FTP 4x2xAWG22/1;80,0;St;gaeb-flat;3929114.d83
+16.42;Auflegen von Duplex-Datenkabel S-FTP 2x(4x2xAWG22/1);75,0;St;gaeb-flat;3929114.d83
+16.43;Messen und Prüfen einer Kupferkabel-Strecke;200,0;St;gaeb-flat;3929114.d83
+16.44;Dokumentation des  Kupferkabelnetz;1,0;St;gaeb-flat;3929114.d83
+16.45;Beschriftung aller passiven Komponenten;1,0;St;gaeb-flat;3929114.d83
+16.46;Bestandsunterlagen  Datenübertragungsnetzes;1,0;St;gaeb-flat;3929114.d83
+17.1;Potentialausgleichsschiene mit Anschluß für 7 x 2,5 bis 25 mm2, 2x2,;4,0;St;gaeb-flat;3929114.d83
+17.2;Potentialausgleichskasten H/B/T = 100 x 100 x 50 mm,;1,0;St;gaeb-flat;3929114.d83
+17.3;Überbrückungsbauteil;60,0;St;gaeb-flat;3929114.d83
+17.4;Bandrohrschelle für 1 Leiter 16 mm2, RD bis 50 mm.;32,0;St;gaeb-flat;3929114.d83
+17.5;Bandrohrschelle für 1 Leiter 16 mm2, RD bis 100 mm.;24,0;St;gaeb-flat;3929114.d83
+17.6;Bandrohrschelle für 1 Leiter 16 mm2, RD bis 200 mm.;10,0;St;gaeb-flat;3929114.d83
+17.7;NYM-J 1 x 6, RE, Cu-Zahl 58, mit Abstandsschellen, bzw. Befestigungsschellen;5,0;m;gaeb-flat;3929114.d83
+17.8;NYM-J 1 x 6, RE Cu-Zahl 58, auf vorhandene Kabelleiter;5,0;m;gaeb-flat;3929114.d83
+17.9;NYM-J 1 x 6 RE, Cu-Zahl 58, oberhalb von Zwischendecken;5,0;m;gaeb-flat;3929114.d83
+17.10;NYM-J 1 x 16 RM, Cu-Zahl 154, mit Abstandsschellen, bzw. Befestigungsschellen;10,0;m;gaeb-flat;3929114.d83
+17.11;NYM-J 1 x 16 RM, Cu-Zahl 154, in vorhandene Rohre, Unterflurkanäle.;5,0;m;gaeb-flat;3929114.d83
+17.12;NYM-J 1 x 16 RM, Cu-Zahl 154 auf vorhandene Kabelleiter;45,0;m;gaeb-flat;3929114.d83
+17.13;NYM-J 1 x 16 RM, Cu-Zahl 154, oberhalb von Zwischendecken;5,0;m;gaeb-flat;3929114.d83
+17.14;NYM-J 1 x 25 RM, Cu-Zahl 240, mit Abstandsschellen, bzw. Befestigungsschellen;5,0;m;gaeb-flat;3929114.d83
+17.15;NYM-J 1 x 25 RM, Cu-Zahl 240, in vorhandene Rohre, Unterflurkanäle.;5,0;m;gaeb-flat;3929114.d83
+17.16;NYM-J 1 x 25 RM, Cu-Zahl 240, auf vorhandene Kabelleiter;5,0;m;gaeb-flat;3929114.d83
+17.17;NYM-J 1 x 25 RM, Cu-Zahl 240,, oberhalb von Zwischendecken;5,0;m;gaeb-flat;3929114.d83
+17.18;Anschließen von Kabel/Leitungen an Stromkreisverteilern, 10 bis 16qmm,;20,0;St;gaeb-flat;3929114.d83
+17.19;Anschließen von Kabel/Leitungen an Kabelrinnen, 10 bis 16qmm,;25,0;St;gaeb-flat;3929114.d83
+17.20;Anschließen von Kabel/Leitungen an Stromkreisverteilern, 25 bis 35qmm,;20,0;St;gaeb-flat;3929114.d83
+17.21;Messen/Prüfen von Potentialausgleich;1,0;St;gaeb-flat;3929114.d83
+18.1;Baustelle einrichten;1,0;Psch;gaeb-flat;3929114.d83
+18.2;Endverteiler 22kVA mit Anbaugerätestecker 32A;2,0;St;gaeb-flat;3929114.d83
+18.3;Endverteiler Miete pro Monat;14,0;St;gaeb-flat;3929114.d83
+18.4;Endverteiler 22kVA mit Anbaugerätestecker 32A;4,0;St;gaeb-flat;3929114.d83
+18.5;Endverteiler Miete pro Monat;28,0;St;gaeb-flat;3929114.d83
+18.6;Gummischlauchleitung 5 x 50;10,0;m;gaeb-flat;3929114.d83
+18.7;Gummischlauchleitung 5 x 35;10,0;m;gaeb-flat;3929114.d83
+18.8;Gummischlauchleitung 5 x 16;60,0;m;gaeb-flat;3929114.d83
+18.9;Gummischlauchleitung 5 x 6;40,0;m;gaeb-flat;3929114.d83
+18.10;CEE-Stecker/Kupplung, 63 A;1,0;St;gaeb-flat;3929114.d83
+18.11;CEE-Stecker/Kupplung, 32 A;6,0;St;gaeb-flat;3929114.d83
+18.12;CEE-Stecker/Kupplung, 16 A;1,0;St;gaeb-flat;3929114.d83
+18.13;Betriebserde für Baustromversorgung;1,0;St;gaeb-flat;3929114.d83
+18.14;Erdleitung NYY-J 1 x 16 qmm;60,0;m;gaeb-flat;3929114.d83
+18.15;Umsetzen Baustromverteilung;4,0;St;gaeb-flat;3929114.d83
+18.16;Allgemeine Beleuchtung im Gebäude vorhalten;12,0;mt;gaeb-flat;3929114.d83
+18.17;LED Feuchtraumleuchte 25 Watt, Schutzart IP 54;2,0;St;gaeb-flat;3929114.d83
+18.18;LED-Strahler für Aussenbereich mit integriertem;2,0;St;gaeb-flat;3929114.d83
+18.19;FlexLED Lichtband 25m;12,0;St;gaeb-flat;3929114.d83
+18.20;Verbindungsdose als Abzweigkasten aus Isolierstoff,  100 mm x 100 mm;8,0;St;gaeb-flat;3929114.d83
+18.21;ISO-Wandanbau-Kleinverteiler IP 54;1,0;St;gaeb-flat;3929114.d83
+18.22;NYY-J 5 x 1,5 qmm Cu. demontieren und transport.;80,0;m;gaeb-flat;3929114.d83
+18.23;NYY-J 3 x 1.5 qmm Cu. leihweise Anschluss liefern;60,0;m;gaeb-flat;3929114.d83
+18.24;Umsetzen Baubeleuchtung;8,0;St;gaeb-flat;3929114.d83
+19.1;Freischaltung Teilabschnitt 1.OG;1,0;psch;gaeb-flat;3929114.d83
+19.2;Demontage Entsorgung Installationsanlagen;1,0;psch;gaeb-flat;3929114.d83
+19.3;Decken öffnen;3,0;m²;gaeb-flat;3929114.d83
+19.4;Wippschalter einpolig Aus/Wechsel, 10A, 250V IP 2X;6,0;St;gaeb-flat;3929114.d83
+19.5;Aufpreis für Auswahl Ausstattung;1,0;psch;gaeb-flat;3929114.d83
+19.6;Gerätedose in Hohlwand;24,0;St;gaeb-flat;3929114.d83
+19.7;Wandanbaulautsprecher 100V 6W;2,0;St;gaeb-flat;3929114.d83
+19.8;Schutzkontaktsteckdose 16 A, 250 V AC, zum Einbau in Gerätedose;12,0;St;gaeb-flat;3929114.d83
+19.9;Datenanschlußdose RJ 45, 1 x 8polig, geschirmt Kat 6 HD, UP;2,0;St;gaeb-flat;3929114.d83
+19.10;Datenkabel S-FTP 4x2xAWG22/1, Kat 7 auf Kabelleiter oder -rinnen;4,0;m;gaeb-flat;3929114.d83
+19.11;Datenkabel S-FTP 4x2xAWG22/1, Kat 7 Befestigungsschellen auf Ankerschienen,;16,0;m;gaeb-flat;3929114.d83
+19.12;Datenkabel S-FTP 4x2xAWG22/1, Kat 7 oberhalb von Zwischendecken;40,0;m;gaeb-flat;3929114.d83
+19.13;Installationskabel DIN VDE 0815 J-Y(St)Y 2x2x0,8 Zwischendecken,;50,0;m;gaeb-flat;3929114.d83
+19.14;Ltg. NYM-J 3x1,5 UP Fräsen;36,0;m;gaeb-flat;3929114.d83
+19.15;Ltg. NYM-J 3x1,5 oberhalb Zwischendecke / Ständerwand;100,0;m;gaeb-flat;3929114.d83
+19.16;Ltg. NYM-J 3x1,5 vorh.Kabelrinne/Kanal;25,0;m;gaeb-flat;3929114.d83
+19.17;Anschlussarbeiten Bestandsverteiler;1,0;psch;gaeb-flat;3929114.d83
+19.18;Dokumentation in Bestandsunterlagen;1,0;psch;gaeb-flat;3929114.d83
+19.19;Kabelabschottung Mauerwerk, über 0,01 m2 bis 0,02 m2, Dicke über , S90;2,0;St;gaeb-flat;3929114.d83
+20.1;LED Lichtsäule IP66 D=170mm;8,0;St;gaeb-flat;3929114.d83
+20.2;LED Wandaufbauleuchte IP 55;23,0;St;gaeb-flat;3929114.d83
+20.3;LED Sensor-Außenleuchte IP 44;2,0;St;gaeb-flat;3929114.d83
+20.4;LED-Außen-Langfeldleuchte / Feuchtraum-Wannenleuchte zur;3,0;St;gaeb-flat;3929114.d83
+20.5;NYY-J 3x1,5 qmm, in Leerrohr verlegen.;30,0;m;gaeb-flat;3929114.d83
+20.6;NYY-J 5x2,5 qmm, in Leerrohr verlegen.;200,0;m;gaeb-flat;3929114.d83
+20.7;Überspannungs-Ableiter Aussenbeleuchtung;4,0;St;gaeb-flat;3929114.d83
+20.8;NYY-J 5x4 qmm, in Leerrohr verlegen.;10,0;m;gaeb-flat;3929114.d83
+20.9;Kabelschutzrohr flexibel EN 110 mm in Kabelgraben;10,0;m;gaeb-flat;3929114.d83
+20.10;Ringraumdichtung EN110 als geteilter Dichteinsatz;2,0;St;gaeb-flat;3929114.d83
+20.11;Individuelle Ringraumdichtung;2,0;St;gaeb-flat;3929114.d83
+20.12;Stahldraht verzinkt min D=1,5 mm;10,0;m;gaeb-flat;3929114.d83
+20.13;Kabelmarkierband aus PE,;10,0;m;gaeb-flat;3929114.d83
+20.14;Grabenaushub für Kabeltrasse 40 cm;8,0;m;gaeb-flat;3929114.d83
+20.15;Grabenaushub für Kabeltrasse 60 cm;8,0;m;gaeb-flat;3929114.d83
+20.16;Zulage Handschachtung;0,5;m³;gaeb-flat;3929114.d83
+20.17;Liefern und Einbauen von Sand;0,5;m³;gaeb-flat;3929114.d83
+20.18;Entsorgung Aushub;0,5;to;gaeb-flat;3929114.d83
+20.19;Kleinverteiler 2-reihig IP 65;2,0;St;gaeb-flat;3929114.d83
+20.20;LED Feuchtraum Wannenleuchte 5100lm;6,0;St;gaeb-flat;3929114.d83
+20.21;Wippschalter einpolig Aus/Wechsel 10A 250V AP-Ausführung IP44;4,0;St;gaeb-flat;3929114.d83
+20.22;Verbindungsdose DIN VDE 0606 aus Isolierstoff, bis 100 mm x 100 mm;10,0;St;gaeb-flat;3929114.d83
+20.23;Verbindungsdose DIN VDE 0606 aus Isolierstoff, bis 150 mm x 150 mm;2,0;St;gaeb-flat;3929114.d83
+20.24;1-fach Schutzkontaktsteckdose AP-Ausführung IP44;4,0;St;gaeb-flat;3929114.d83
+20.25;CEE-Steckdose 5-polig 230/400VAC 16A u.P. IP44;3,0;St;gaeb-flat;3929114.d83
+21.1;Autokran für Dacheinbringung;1,0;St;gaeb-flat;3929114.d83
+21.2;PV Module 450 Wp;200,0;St;gaeb-flat;3929114.d83
+21.3;Solar-Wechselrichter;1,0;St;gaeb-flat;3929114.d83
+21.4;Basisschiene für Flachdachmontage;111,0;St;gaeb-flat;3929114.d83
+21.5;Aufständerungs-/Systemelement für Flachdachmontagesystem;488,0;St;gaeb-flat;3929114.d83
+21.6;Modulauflager-/Systemelement für Flachdachmontagesystem;488,0;St;gaeb-flat;3929114.d83
+21.7;Auflagepad zur Flachdachmontage;558,0;St;gaeb-flat;3929114.d83
+21.8;Montageschiene mit seitlicher Anbindung;40,0;St;gaeb-flat;3929114.d83
+21.9;Kreuzverbinder;220,0;St;gaeb-flat;3929114.d83
+21.10;Kabelhalter/Kabelclip;244,0;St;gaeb-flat;3929114.d83
+21.11;Modulklemmen für gerahmte PV-Module;973,0;St;gaeb-flat;3929114.d83
+21.12;Ballastaufnahmen;158,0;St;gaeb-flat;3929114.d83
+21.13;Ballaststeine/-platten für PV-Unterkonstruktion;443,0;kg;gaeb-flat;3929114.d83
+21.14;Ballastiertes Wechselrichtergestell;1,0;St;gaeb-flat;3929114.d83
+21.15;Steuergerät & Überwachungsportal;1,0;St;gaeb-flat;3929114.d83
+21.16;Funkrundsteuerung (FRE);1,0;St;gaeb-flat;3929114.d83
+21.17;Verbindung Potentialausgleich;130,0;m;gaeb-flat;3929114.d83
+21.18;Potentialausgleichschiene NIRO 12 Anschlüsse;1,0;St;gaeb-flat;3929114.d83
+21.19;Feuerwehrschalter Freischaltung EG;1,0;St;gaeb-flat;3929114.d83
+21.20;DC-Kabel 1x6qmm;820,0;m;gaeb-flat;3929114.d83
+21.21;PV- Kupplungsbuchse;12,0;St;gaeb-flat;3929114.d83
+21.22;PV- Kupplungsstecker;12,0;St;gaeb-flat;3929114.d83
+21.23;DC Anschlussarbeiten;12,0;St;gaeb-flat;3929114.d83
+21.24;Kabel NYY 5x70SM/70 vorh.Kabelrinne/Kanal;80,0;m;gaeb-flat;3929114.d83
+21.25;Werkstatt- und Montageplanung PV;1,0;psch;gaeb-flat;3929114.d83
+21.26;Erstellung Mess- und Prüfprotokolle;1,0;St;gaeb-flat;3929114.d83
+21.27;Einholung einer Windlast - Statikberechnung;1,0;St;gaeb-flat;3929114.d83
+21.28;Erstellung der Anlagendokumentation;1,0;St;gaeb-flat;3929114.d83
+21.29;Anmeldung Netzbetreiber;1,0;St;gaeb-flat;3929114.d83
+22.1;Trennstück Kl.H Stahl niro Rd8-10/Rd8-10;20,0;St;gaeb-flat;3929114.d83
+22.2;Nummernschild;20,0;St;gaeb-flat;3929114.d83
+22.3;Fangleitung Rd8-Al auf flachem Flachdach;55,0;m;gaeb-flat;3929114.d83
+22.4;Überbrückungslaschen zum Anschließen und Verbinden von Metallverkleidungen;15,0;St;gaeb-flat;3929114.d83
+22.5;Dachleitungshalter;25,0;St;gaeb-flat;3929114.d83
+22.6;Überbrückungsbänd zum Verbinden von Metallverkleidungen;10,0;St;gaeb-flat;3929114.d83
+22.7;Fangstangen freistehend 3000 mm mit Dreibeinstativ;5,0;St;gaeb-flat;3929114.d83
+22.8;Mehrzweck-Verbindungsklemme Alu;30,0;St;gaeb-flat;3929114.d83
+22.9;Ableitung als Runddraht AlMgSi mit Kunststoff-Mantel;5,0;St;gaeb-flat;3929114.d83
+22.10;Anschlußklemmen Stahlkonstruktionen;4,0;St;gaeb-flat;3929114.d83
+22.11;Anschlüsse Dachrinnen;15,0;St;gaeb-flat;3929114.d83
+22.12;Anschlüsse Dachaufbauten;5,0;St;gaeb-flat;3929114.d83
+22.13;Anschlüsse Regenrohr;15,0;St;gaeb-flat;3929114.d83
+22.14;Messen und Prüfen der Blitzschutzanlage;1,0;St;gaeb-flat;3929114.d83
+22.15;Dokumentation der Blitzschutzanlage;1,0;St;gaeb-flat;3929114.d83
+22.16;Prüfgebühr für die Prüfung der Blitzschutzanlage durch Sachkundigen;1,0;Psch;gaeb-flat;3929114.d83
+23.1;Besenrein übergebene Rohbodenflächen mit;9,2;qm;gaeb-flat;3929114.d83
+23.2;Doppelbodensystem verschraubt;9,2;qm;gaeb-flat;3929114.d83
+23.3;Zulage für das Anarbeiten des Doppelbodens an;8,0;m;gaeb-flat;3929114.d83
+23.4;Zulage für die Herstellung von Ausschnitten bis 10/10cm;7,0;St;gaeb-flat;3929114.d83
+23.5;Wandwinkel und  Sockelleisten aus Weich-PVC,;13,0;m;gaeb-flat;3929114.d83
+23.6;Verlegen einer Schutzabdeckung;9,2;qm;gaeb-flat;3929114.d83
+23.7;Reserveplatten für zu beschriebenen Doppelbodensystem;2,0;St;gaeb-flat;3929114.d83
+23.8;Saugheber mit zwei Saugnäpfen;1,0;St;gaeb-flat;3929114.d83
+1;Liefern und montieren eines freistehenden Normkabelverteilerschrankes zur Aufnahme von Kabelverteil- und Verbindungstechnik im Niederspannungsbereich, geeignet für den dauerhaften Einsatz im Außenbereich.;1,0;St;gaeb;3929115.x83
+2;Liefern und montieren eines freistehenden Normkabelverteilerschrankes zur Aufnahme von Kabelverteil- und Verbindungstechnik im Niederspannungsbereich, geeignet für den dauerhaften Einsatz im Außenbereich.;1,0;St;gaeb;3929115.x83
+3;Zählerwechselplatte, Messfeld, mit Zählerkreuzen,;1,0;St;gaeb;3929115.x83
+4;Sammelschiene 630A, 5 polig L/N/PE 50 kA;3,0;St;gaeb;3929115.x83
+5;NH-2 Sicherungslastschaltleiste mit Sicherungen 3-polig,;6,0;St;gaeb;3929115.x83
+6;NH-Sicherungseinsatz mit Kontaktmesser DIN 43620-1 und DIN VDE 0636-2, Bemessungsbetriebsspannung 690 V AC, für Betriebsklasse gL, Baugröße 2,;3,0;St;gaeb;3929115.x83
+7;Leitungsschutzschalter DIN EN 60898-1, als Reiheneinbaugerät, Maße DIN 43880, fingersicher DIN EN 50274, Bemessungsbetriebsspannung 230/400 V AC, Bemessungsausschaltvermögen 25 kA, einpolig, Auslösecharakteristik B, Bemessungsstrom 10 A.;4,0;St;gaeb;3929115.x83
+8;1-poliger Kombi-Ableiter mit integrierter;4,0;St;gaeb;3929115.x83
+9;D01-Einbausicherungssockel DIN VDE 0636 Teil 1;4,0;St;gaeb;3929115.x83
+10;D01-Einbausicherungssockel DIN VDE 0636 Teil 1;1,0;St;gaeb;3929115.x83
+11;Installationsschütz (Schließer) 20 A - 2 NO - 0 NC - 24 V - Steuerstromkreis DC;1,0;St;gaeb;3929115.x83
+12;Reiheneinbaugeräte für Montage auf Tragschiene DIN-EN 60715 TH35;1,0;St;gaeb;3929115.x83
+13;Patchmodul (Modul und Montageadapter) für DIN - Schienenmontage,;3,0;St;gaeb;3929115.x83
+14;Glasfaser Anschlussdose für FTTH Anwendungen;1,0;St;gaeb;3929115.x83
+15;Energie 600 J;1,0;St;gaeb;3929115.x83
+16;Die Anmeldung an das Niederspannungsnetz, Beschaffung und Montage der Netzbetreiber - Wandler;1,0;Psch;gaeb;3929115.x83
+17;Netzeinspeiseüberwachungssrelais zur Überwachung der Spannung und Frequenz in Dreiphasennetz für den NA-Schutz nach VDE-AR-N 4105,  L-N=0-312V/AC, mit Display, Anzeige der Messwerte, Status Ausgangsrelais und Steuereingänge, Betriebszustandsanzeige mit LEDs und Bedientasten.;1,0;St;gaeb;3929115.x83
+18;Erstellen und Einreichen der Antragsstellungs- /Prüfberichtformulare zur PV-Erzeugungsanlagen PAmax kleiner 135 kW nach VDE -ARN 4105, wie E.1 Antragstellung, E.5 Prüfbericht Netzrückwirkungen,, E.7 Prüfbericht zum NA-Schutz bei Bayernwerk;1,0;Psch;gaeb;3929115.x83
+19;Standschrank als Energie-Schaltgerätekombination;2,0;St;gaeb;3929115.x83
+20;Standschrank als Energie-Schaltgerätekombination;2,0;St;gaeb;3929115.x83
+21;Sammelschiene mit störlichtbogensicherer;2,0;St;gaeb;3929115.x83
+22;Drehstromzähler zur Messung eines Dreileiter- oder;1,0;St;gaeb;3929115.x83
+23;Leistungsschalter, 4-polig mit Drehantrieb direkt am;1,0;St;gaeb;3929115.x83
+24;Multifunktionales Messgerät für die Messung und;1,0;St;gaeb;3929115.x83
+25;Stromwandler 630/5A nach DIN EN 60044-1;3,0;St;gaeb;3929115.x83
+26;Glasfaser Anschlussdose für FTTH Anwendungen;1,0;St;gaeb;3929115.x83
+27;Patchmodul (Modul und Montageadapter) für DIN - Schienenmontage,;1,0;St;gaeb;3929115.x83
+28;Netzanalysegerätist ein Multimessgerät als;1,0;St;gaeb;3929115.x83
+29;D01-Einbausicherungssockel DIN VDE 0636 Teil 1;1,0;St;gaeb;3929115.x83
+30;D01-Einbausicherungssockel DIN VDE 0636 Teil 1;1,0;St;gaeb;3929115.x83
+31;Reiter-Lasttrennschalter  DIN VDE 0636-301,;2,0;St;gaeb;3929115.x83
+32;NH-00 Sicherungslasttrennleiste mit Sicherungen 3-polig,;10,0;St;gaeb;3929115.x83
+33;NH-01 Sicherungslasttrennleiste mit Sicherungen 3-polig,;3,0;St;gaeb;3929115.x83
+34;NH-Sicherungseinsatz mit Kontaktmesser DIN 43620-1 und DIN VDE 0636-2, Bemessungsbetriebsspannung 690 V AC, für Betriebsklasse gL, Baugröße 00,;3,0;St;gaeb;3929115.x83
+35;NH-Sicherungseinsatz mit Kontaktmesser DIN 43620-1 und DIN VDE 0636-2, Bemessungsbetriebsspannung 690 V AC, für Betriebsklasse gL, Baugröße 00,;6,0;St;gaeb;3929115.x83
+36;NH-Sicherungseinsatz mit Kontaktmesser DIN 43620-1 und DIN VDE 0636-2, Bemessungsbetriebsspannung 690 V AC, für Betriebsklasse gL, Baugröße 00,;8,0;St;gaeb;3929115.x83
+37;NH-Sicherungseinsatz mit Kontaktmesser DIN 43620-1 und DIN VDE 0636-2, Bemessungsbetriebsspannung 690 V AC, für Betriebsklasse gL, Baugröße 00,;3,0;St;gaeb;3929115.x83
+38;Mot. Leistungsschalter 250 A 3-polig Kuppelschalter nach VDE-AR-N 4105;1,0;St;gaeb;3929115.x83
+39;Fehlerstromschutzschalter DIN EN 61008-1 (VDE 0664-10), als Reiheneinbaugerät, Maße DIN 43880, fingersicher DIN EN 50274 (VDE 0660-514), Typ B allstromsensitiv, Bemessungsstrom 40 A, Bemessungsfehlerstrom 300 mA, 3-polig + N, 400 V AC, Kurzschlussfestigkeit 10 kA, stoßstromfest bis 250 A, mit Handbe;1,0;St;gaeb;3929115.x83
+40;Leitungsschutzschalter DIN EN 60898-1, als Reiheneinbaugerät, Maße DIN 43880, fingersicher DIN EN 50274, Bemessungsbetriebsspannung 230/400 V AC, Bemessungsausschaltvermögen 10 kA, 3-polig, Auslösecharakteristik C, Bemessungsstrom 16 A.;1,0;St;gaeb;3929115.x83
+41;Blitzstrom- / Überspannungsableiter als 4-poliger,;1,0;St;gaeb;3929115.x83
+42;Netzteil In: 100-240VAC Out: 24VDC/2.5A;2,0;St;gaeb;3929115.x83
+43;Reihenklemme DIN EN 60947-7-1, Bemessungsisolationsspannung 690 V AC, Isolationsgruppe C, einstöckig, für Leiterquerschnitt 10mm2 bis 25mm2, Klemmenträger aus selbstlöschendem oder nichtbrennbarem Isolierstoff, zur Montage auf Tragschiene DIN EN 60715, einschl. systemgebundenem Zubehör mit dauerhaft;15,0;St;gaeb;3929115.x83
+44;Reihenklemme DIN EN 60947-7-1, Bemessungsisolationsspannung 690 V AC, Isolationsgruppe C, einstöckig, für Leiterquerschnitt 35mm2 bis 50mm2, Klemmenträger aus selbstlöschendem oder nichtbrennbarem Isolierstoff, zur Montage auf Tragschiene DIN EN 60715, einschl. systemgebundenem Zubehör mit dauerhaft;6,0;St;gaeb;3929115.x83
+45;Reihenklemme DIN EN 60947-7-1, Bemessungsisolationsspannung 690 V AC, Isolationsgruppe C, einstöckig, für Leiterquerschnitt 70 mm2 bis 95 mm2, Klemmenträger aus selbstlöschendem oder nichtbrennbarem Isolierstoff, zur Montage auf Tragschiene DIN EN 60715, einschl. systemgebundenem Zubehör mit dauerha;9,0;St;gaeb;3929115.x83
+46;Reihenklemme DIN EN 60947-7-1, Bemessungsisolationsspannung 690 V AC, Isolationsgruppe C, einstöckig, für Leiterquerschnitt 120 mm2 bis 150 mm2, Klemmenträger aus selbstlöschendem oder nichtbrennbarem Isolierstoff, zur Montage auf Tragschiene DIN EN 60715, einschl. systemgebundenem Zubehör mit dauer;6,0;St;gaeb;3929115.x83
+47;Neutralleiter-Reihenklemme DIN EN 60947-7-1, Bemessungsisolationsspannung 690 V AC, für Leiterquerschnitt 10 mm2 bis 25 mm2, Klemmenträger aus selbstlöschendem oder nichtbrennbarem Isolierstoff, zur Montage auf Tragschiene DIN EN 60715, einschl. systemgebundenem Zubehör mit dauerhafter Anschlussbeze;5,0;St;gaeb;3929115.x83
+48;Neutralleiter-Reihenklemme DIN EN 60947-7-1, Bemessungsisolationsspannung 690 V AC, für Leiterquerschnitt 35 mm2 bis 50 mm2, Klemmenträger aus selbstlöschendem oder nichtbrennbarem Isolierstoff, zur Montage auf Tragschiene DIN EN 60715, einschl. systemgebundenem Zubehör mit dauerhafter Anschlussbeze;3,0;St;gaeb;3929115.x83
+49;Neutralleiter-Reihenklemme DIN EN 60947-7-1, Bemessungsisolationsspannung 690 V AC, für Leiterquerschnitt 70 mm2 bis 95mm2, Klemmenträger aus selbstlöschendem oder nichtbrennbarem Isolierstoff, zur Montage auf Tragschiene DIN EN 60715, einschl. systemgebundenem Zubehör mit dauerhafter Anschlussbezei;3,0;St;gaeb;3929115.x83
+50;Neutralleiter-Reihenklemme DIN EN 60947-7-1, Bemessungsisolationsspannung 690 V AC, für Leiterquerschnitt120 mm2 bis 150 mm2, Klemmenträger aus selbstlöschendem oder nichtbrennbarem Isolierstoff, zur Montage auf Tragschiene DIN EN 60715, einschl. systemgebundenem Zubehör mit dauerhafter Anschlussbez;6,0;St;gaeb;3929115.x83
+51;Schutzleiter-Reihenklemme DIN EN 60947-7-2, für Leiterquerschnitt 10 mm2 bis 25 mm2, Klemmenträger aus selbstlöschendem oder nichtbrennbarem Isolierstoff, zur Montage auf Tragschiene DIN EN 60715, einschl. systemgebundenem Zubehör mit dauerhafter Anschlussbezeichnung.;7,0;St;gaeb;3929115.x83
+52;Schutzleiter-Reihenklemme DIN EN 60947-7-2, für Leiterquerschnitt 335 mm2 bis 50 mm2, Klemmenträger aus selbstlöschendem oder nichtbrennbarem Isolierstoff, zur Montage auf Tragschiene DIN EN 60715, einschl. systemgebundenem Zubehör mit dauerhafter Anschlussbezeichnung.;1,0;St;gaeb;3929115.x83
+53;Schutzleiter-Reihenklemme DIN EN 60947-7-2, für Leiterquerschnitt 70 mm2 bis 95 mm2, Klemmenträger aus selbstlöschendem oder nichtbrennbarem Isolierstoff, zur Montage auf Tragschiene DIN EN 60715, einschl. systemgebundenem Zubehör mit dauerhafter Anschlussbezeichnung.;2,0;St;gaeb;3929115.x83
+54;Schutzleiter-Reihenklemme DIN EN 60947-7-2, für Leiterquerschnitt 120 mm2 bis 150 mm2, Klemmenträger aus selbstlöschendem oder nichtbrennbarem Isolierstoff, zur Montage auf Tragschiene DIN EN 60715, einschl. systemgebundenem Zubehör mit dauerhafter Anschlussbezeichnung.;6,0;St;gaeb;3929115.x83
+1;Kabel DIN VDE 0276-603 NYY 1x150 rm Cu-Zahl 1440,;396,0;m;gaeb;3929115.x83
+2;Kabel DIN VDE 0276-603 NYY 1x150 rm Cu-Zahl 1440,;49,5;m;gaeb;3929115.x83
+3;NYY 1x150 qmm, Einziehen in Kabelzugrohr;445,5;m;gaeb;3929115.x83
+4;Kabel DIN VDE 0276-603 NYCWY;198,0;m;gaeb;3929115.x83
+5;Kabel DIN VDE 0276-603 NYCWY;49,5;m;gaeb;3929115.x83
+6;Kabel DIN VDE 0276-603 NYCWY;57,2;m;gaeb;3929115.x83
+7;Kabel DIN VDE 0276-603 NYCWY;14,3;m;gaeb;3929115.x83
+8;Kabel DIN VDE 0276-603 NYCWY;38,5;m;gaeb;3929115.x83
+9;Kabel DIN VDE 0276-603 NYCWY;11,0;m;gaeb;3929115.x83
+10;Kabel DIN VDE 0276-603 NYCWY;44,0;m;gaeb;3929115.x83
+11;Kabel DIN VDE 0276-603 NYCWY;16,5;m;gaeb;3929115.x83
+12;Kabel DIN VDE 0276-603 NYCWY;33,0;m;gaeb;3929115.x83
+13;Kabel DIN VDE 0276-603 NYCWY;11,0;m;gaeb;3929115.x83
+14;Kabel DIN VDE 0276-603 NYCWY;71,5;m;gaeb;3929115.x83
+15;Anschließen von Kabel/Leitungen;45,0;St;gaeb;3929115.x83
+16;Anschließen von Kabel/Leitungen;6,0;St;gaeb;3929115.x83
+17;Anschließen von Kabel/Leitungen;8,0;St;gaeb;3929115.x83
+18;Anschließen von Kabel/Leitungen;6,0;St;gaeb;3929115.x83
+1;Installationsverteiler 2-reihig als Niederspannungs- Schaltgerätekombination für den Innenraum, hergestellt nach DIN EN 61439-1/-2 (DIN VDE 0660 Teil 600) , Stoßfestigkeitsgrad Gehäuse und Türe IK08;1,0;St;gaeb;3929115.x83
+2;Installationsverteiler 3-reihig als Niederspannungs- Schaltgerätekombination für den Innenraum, hergestellt nach DIN EN 61439-1/-2 (DIN VDE 0660 Teil 600) , Stoßfestigkeitsgrad Gehäuse und Türe IK08;3,0;St;gaeb;3929115.x83
+3;Sockel 100 mm für vorgenannten Installationsverteiler;3,0;St;gaeb;3929115.x83
+4;Ínstallationsverteiler 4-reihig als Niederspannungs- Schaltgerätekombination für den Innenraum, hergestellt nach DIN EN 61439-1/-2 (DIN VDE 0660 Teil 600) , Stoßfestigkeitsgrad Gehäuse und Türe IK08;3,0;St;gaeb;3929115.x83
+5;Sockel 100 mm für vorgenannten Installationsverteiler;3,0;St;gaeb;3929115.x83
+6;Installationsverteiler 5-reihig als Niederspannungs-Schaltgerätekombination für den Innenraum,;1,0;St;gaeb;3929115.x83
+7;Sammelschienensatz mit 3 Hauptleitern,;28,0;St;gaeb;3929115.x83
+8;D01-Einbausicherungssockel DIN VDE 0636 Teil 1;6,0;St;gaeb;3929115.x83
+9;D01-Einbausicherungssockel DIN VDE 0636 Teil 1;6,0;St;gaeb;3929115.x83
+10;Lasttrennschalter DIN EN 60947-3, mit Schnellein- und Schnellausschaltung, 4-polig, Bemessungsbetriebsspannung 690 V AC, in Festeinbautechnik, mit Handantrieb, zur Montage auf Tragschiene DIN EN 60715, abschließbar, fingersicher DIN EN 50274, Gebrauchskategorie AC 21, Bemessungsbetriebsstrom 80 A.;3,0;St;gaeb;3929115.x83
+11;Lasttrennschalter DIN EN 60947-3, mit Schnellein- und Schnellausschaltung, 4-polig, Bemessungsbetriebsspannung 690 V AC, in Festeinbautechnik, mit Handantrieb, zur Montage auf Tragschiene DIN EN 60715, abschließbar, fingersicher DIN EN 50274, Gebrauchskategorie AC 21, Bemessungsbetriebsstrom 200 A.;1,0;St;gaeb;3929115.x83
+12;Überspannungs-Ableiter 4-polig modular zum Schutz von Niederspannungs-Verbraucheranlagen vor Überspannungen,;4,0;St;gaeb;3929115.x83
+13;Reiter-Lasttrennschalter  DIN VDE 0636-301,;75,0;St;gaeb;3929115.x83
+14;Sicherungslasttrennschalter DIN EN 60947-3, als Reiheneinbaugerät, Maße DIN 43880, Bemessungsisolationsspannung 440 V AC, einschl. Passeinsatz und Schraubkappe, bedingter Bemessungskurzschlussstrom 50 kA, fingersicher DIN EN 50274, zur Montage auf Tragschiene DIN EN 60715, Baugröße D 02, Bemessungsb;6,0;St;gaeb;3929115.x83
+15;Sicherungslasttrennschalter DIN EN 60947-3, als Reiheneinbaugerät, Maße DIN 43880, Bemessungsisolationsspannung 440 V AC, einschl. Passeinsatz und Schraubkappe, bedingter Bemessungskurzschlussstrom 50 kA, fingersicher DIN EN 50274, zur Montage auf Tragschiene DIN EN 60715, Baugröße D 02, Bemessungsb;2,0;St;gaeb;3929115.x83
+16;Fehlerstromschutzschalter allstromsensitive Typ B,;2,0;St;gaeb;3929115.x83
+17;Fehlerstromschutzschalter DIN EN 61008-1 (VDE 0664-10), als Reiheneinbaugerät, Maße DIN 43880, fingersicher DIN EN 50274 (VDE 0660-514), Typ A pulsstromsensitiv, Bemessungsstrom 25 A, Bemessungsfehlerstrom 300 mA, 3-polig + N, 400 V AC, Kurzschlussfestigkeit 10 kA, stoßstromfest bis 250 A, mit Handb;13,0;St;gaeb;3929115.x83
+18;Fehlerstromschutzschalter DIN EN 61008-1 (VDE 0664-10), als Reiheneinbaugerät, Maße DIN 43880, fingersicher DIN EN 50274 (VDE 0660-514), Typ A pulsstromsensitiv, Bemessungsstrom 40 A, Bemessungsfehlerstrom 300 mA, 3-polig + N, 400 V AC, Kurzschlussfestigkeit 10 kA, stoßstromfest bis 250 A, mit Handb;12,0;St;gaeb;3929115.x83
+19;Fehlerstromschutzschalter DIN EN 61008-1 (VDE 0664-10), als Reiheneinbaugerät, Maße DIN 43880, fingersicher DIN EN 50274 (VDE 0660-514), Typ A pulsstromsensitiv, Bemessungsstrom 25 A, Bemessungsfehlerstrom 30 mA, 3-polig + N, 400 V AC, Kurzschlussfestigkeit 10 kA, stoßstromfest bis 250 A, mit Handbe;2,0;St;gaeb;3929115.x83
+20;Fehlerstromschutzschalter DIN EN 61008-1 (VDE 0664-10), als Reiheneinbaugerät, Maße DIN 43880, fingersicher DIN EN 50274 (VDE 0660-514), Typ A pulsstromsensitiv, Bemessungsstrom 40 A, Bemessungsfehlerstrom 30 mA, 3-polig + N, 400 V AC, Kurzschlussfestigkeit 10 kA, stoßstromfest bis 250 A, mit Handbe;42,0;St;gaeb;3929115.x83
+21;Fehlerstromschutzschalter DIN EN 61008-1 (VDE 0664-10), als Reiheneinbaugerät, Maße DIN 43880, fingersicher DIN EN 50274 (VDE 0660-514), Typ A pulsstromsensitiv, Bemessungsstrom 63 A, Bemessungsfehlerstrom 30 mA, 3-polig + N, 400 V AC, Kurzschlussfestigkeit 10 kA, stoßstromfest bis 250 A, mit Handbe;3,0;St;gaeb;3929115.x83
+22;Fehlerstromschutzschalter DIN EN 61008-1 (VDE 0664-10), als Reiheneinbaugerät, Maße DIN 43880, fingersicher DIN EN 50274 (VDE 0660-514), Typ B allstromsensitiv, Bemessungsstrom 40 A, Bemessungsfehlerstrom 30 mA, 3-polig + N, 400 V AC, Kurzschlussfestigkeit 10 kA, stoßstromfest bis 250 A, mit Handbet;3,0;St;gaeb;3929115.x83
+23;Fehlerstromschutzschalter DIN EN 61008-1 (VDE 0664-10), als Reiheneinbaugerät, Maße DIN 43880, fingersicher DIN EN 50274 (VDE 0660-514), Typ B allstromsensitiv, Bemessungsstrom 100 A, Bemessungsfehlerstrom 30 mA, 3-polig + N, 400 V AC, Kurzschlussfestigkeit 10 kA, stoßstromfest bis 250 A, mit Handbe;3,0;St;gaeb;3929115.x83
+24;Hilfskontakt für Fehlerstromschutzschalter,;5,0;St;gaeb;3929115.x83
+25;Fehlerstrom-  Leitungsschutzschalter, Maße DIN 43880,;6,0;St;gaeb;3929115.x83
+26;Fehlerstrom-  Leitungsschutzschalter, Maße DIN 43880,;10,0;St;gaeb;3929115.x83
+27;Fehlerstrom-Leitungsschutzschalter, Maße DIN 43880,;2,0;St;gaeb;3929115.x83
+28;Fehlerstrom-  Leitungsschutzschalter, Maße DIN 43880,;2,0;St;gaeb;3929115.x83
+29;Fehlerstrom-  Leitungsschutzschalter, Maße DIN 43880,;2,0;St;gaeb;3929115.x83
+30;Fehlerstrom-  Leitungsschutzschalter, Maße DIN 43880,;2,0;St;gaeb;3929115.x83
+31;Leitungsschutzschalter DIN EN 60898-1, als Reiheneinbaugerät, Maße DIN 43880, fingersicher DIN EN 50274, Bemessungsbetriebsspannung 230/400 V AC, Bemessungsausschaltvermögen 10 kA, einpolig, Auslösecharakteristik B, Bemessungsstrom 6 A;18,0;St;gaeb;3929115.x83
+32;Leitungsschutzschalter DIN EN 60898-1, als Reiheneinbaugerät, Maße DIN 43880, fingersicher DIN EN 50274, Bemessungsbetriebsspannung 230/400 V AC, Bemessungsausschaltvermögen 10 kA, einpolig, Auslösecharakteristik B, Bemessungsstrom 10 A.;207,0;St;gaeb;3929115.x83
+33;Leitungsschutzschalter DIN EN 60898-1, als Reiheneinbaugerät, Maße DIN 43880, fingersicher DIN EN 50274, Bemessungsbetriebsspannung 230/400 V AC, Bemessungsausschaltvermögen 10 kA, einpolig, Auslösecharakteristik B, Bemessungsstrom 16 A.;105,0;St;gaeb;3929115.x83
+34;Leitungsschutzschalter DIN EN 60898-1, als Reiheneinbaugerät, Maße DIN 43880, fingersicher DIN EN 50274, Bemessungsbetriebsspannung 230/400 V AC, Bemessungsausschaltvermögen 10 kA, einpolig, Auslösecharakteristik B, Bemessungsstrom 20 A.;1,0;St;gaeb;3929115.x83
+35;Leitungsschutzschalter DIN EN 60898-1, als Reiheneinbaugerät, Maße DIN 43880, fingersicher DIN EN 50274, Bemessungsbetriebsspannung 230/400 V AC, Bemessungsausschaltvermögen 10 kA, einpolig, Auslösecharakteristik B, Bemessungsstrom 10 A.;1,0;St;gaeb;3929115.x83
+36;Leitungsschutzschalter DIN EN 60898-1, als Reiheneinbaugerät, Maße DIN 43880, fingersicher DIN EN 50274, Bemessungsbetriebsspannung 230/400 V AC, Bemessungsausschaltvermögen 10 kA, 3-polig, Auslösecharakteristik B, Bemessungsstrom 16 A.;2,0;St;gaeb;3929115.x83
+37;Leitungsschutzschalter DIN EN 60898-1, als Reiheneinbaugerät, Maße DIN 43880, fingersicher DIN EN 50274, Bemessungsbetriebsspannung 230/400 V AC, Bemessungsausschaltvermögen 10 kA, 3-polig, Auslösecharakteristik B, Bemessungsstrom 20 A.;1,0;St;gaeb;3929115.x83
+38;Leitungsschutzschalter DIN EN 60898-1, als Reiheneinbaugerät, Maße DIN 43880, fingersicher DIN EN 50274, Bemessungsbetriebsspannung 230/400 V AC, Bemessungsausschaltvermögen 10 kA, 3-polig, Auslösecharakteristik B, Bemessungsstrom 25 A.;1,0;St;gaeb;3929115.x83
+39;Leitungsschutzschalter DIN EN 60898-1, als Reiheneinbaugerät, Maße DIN 43880, fingersicher DIN EN 50274, Bemessungsbetriebsspannung 230/400 V AC, Bemessungsausschaltvermögen 10 kA, einpolig, Auslösecharakteristik C, Bemessungsstrom 16 A.;62,0;St;gaeb;3929115.x83
+40;Leitungsschutzschalter DIN EN 60898-1, als Reiheneinbaugerät, Maße DIN 43880, fingersicher DIN EN 50274, Bemessungsbetriebsspannung 230/400 V AC, Bemessungsausschaltvermögen 10 kA, einpolig, Auslösecharakteristik C, Bemessungsstrom 20 A.;1,0;St;gaeb;3929115.x83
+41;Leitungsschutzschalter DIN EN 60898-1, als Reiheneinbaugerät, Maße DIN 43880, fingersicher DIN EN 50274, Bemessungsbetriebsspannung 230/400 V AC, Bemessungsausschaltvermögen 10 kA, 3-polig, Auslösecharakteristik C, Bemessungsstrom 16 A.;17,0;St;gaeb;3929115.x83
+42;Leitungsschutzschalter DIN EN 60898-1, als Reiheneinbaugerät, Maße DIN 43880, fingersicher DIN EN 50274, Bemessungsbetriebsspannung 230/400 V AC, Bemessungsausschaltvermögen 10 kA, 3-polig, Auslösecharakteristik C, Bemessungsstrom 32 A.;7,0;St;gaeb;3929115.x83
+43;Leitungsschutzschalter DIN EN 60898-1, als Reiheneinbaugerät, Maße DIN 43880, fingersicher DIN EN 50274, Bemessungsbetriebsspannung 230/400 V AC, Bemessungsausschaltvermögen 10 kA, 3-polig, Auslösecharakteristik C, Bemessungsstrom 100 A.;3,0;St;gaeb;3929115.x83
+44;Installationsschütz brummfrei 25A 4 Schließer 230V Schütz brummfrei nach EN 61095 und DIN VDE 0637-3 sowie Berührungsschutz nach DIN VDE 0106 Teil 100. Reiheneinbaugerät mit Kontaktstellungsanzeige durch Anzeigefenster, integriertes Beschriftungsfeld und geeignet zum nachträglichen Anbau von Zusatze;2,0;St;gaeb;3929115.x83
+45;Installationsschütz brummfrei 40A 4 Schließer 230V Schütz brummfrei nach EN 61095 und DIN VDE 0637-3 sowie Berührungsschutz nach DIN VDE 0106 Teil 100. Reiheneinbaugerät mit Kontaktstellungsanzeige durch Anzeigefenster, integriertes Beschriftungsfeld und geeignet zum nachträglichen Anbau von Zusatze;2,0;St;gaeb;3929115.x83
+46;Netzteil DIN EN 60669-1, Maße DIN 43880,;4,0;St;gaeb;3929115.x83
+47;Teilbarer Überspannungsableiter mit;4,0;St;gaeb;3929115.x83
+48;Überspannungsfeinschutz;2,0;St;gaeb;3929115.x83
+49;Überspannungsfeinschutz;2,0;St;gaeb;3929115.x83
+50;Installationseinbaugerät DIN 43 880;4,0;St;gaeb;3929115.x83
+51;Installationseinbaugerät DIN 43 880;4,0;St;gaeb;3929115.x83
+52;Gruppenschalter DIN EN 60669-1, Maße DIN 43880,;4,0;St;gaeb;3929115.x83
+53;Steuerleitungsklemme, 7-polig,;5,0;St;gaeb;3929115.x83
+54;Reihenklemme DIN EN 60947-7-1, Bemessungsisolationsspannung 690 V AC,;500,0;St;gaeb;3929115.x83
+55;Reihenklemme DIN EN 60947-7-1, Bemessungsisolationsspannung 690 V AC, Isolationsgruppe C, einstöckig, für Leiterquerschnitt bis 4 mm2, Klemmenträger aus selbstlöschendem oder nichtbrennbarem Isolierstoff, zur Montage auf Tragschiene DIN EN 60715, einschl. systemgebundenem Zubehör mit dauerhafter Ans;70,0;St;gaeb;3929115.x83
+56;Reihenklemme DIN EN 60947-7-1, Bemessungsisolationsspannung 690 V AC, Isolationsgruppe C, einstöckig, für Leiterquerschnitt bis 6 mm2, Klemmenträger aus selbstlöschendem oder nichtbrennbarem Isolierstoff, zur Montage auf Tragschiene DIN EN 60715, einschl. systemgebundenem Zubehör mit dauerhafter Ans;10,0;St;gaeb;3929115.x83
+57;Reihenklemme DIN EN 60947-7-1, Bemessungsisolationsspannung 690 V AC, Isolationsgruppe C, einstöckig, für Leiterquerschnitt bis 10 mm2, Klemmenträger aus selbstlöschendem oder nichtbrennbarem Isolierstoff, zur Montage auf Tragschiene DIN EN 60715, einschl. systemgebundenem Zubehör mit dauerhafter An;15,0;St;gaeb;3929115.x83
+58;Reihenklemme DIN EN 60947-7-1, Bemessungsisolationsspannung 690 V AC, Isolationsgruppe C, einstöckig, für Leiterquerschnitt bis 16 mm2, Klemmenträger aus selbstlöschendem oder nichtbrennbarem Isolierstoff, zur Montage auf Tragschiene DIN EN 60715, einschl. systemgebundenem Zubehör mit dauerhafter An;6,0;St;gaeb;3929115.x83
+59;Reihenklemme DIN EN 60947-7-2,;12,0;St;gaeb;3929115.x83
+60;Reihenklemme DIN EN 60947-7-2,;9,0;St;gaeb;3929115.x83
+61;Reihenklemme DIN EN 60947-7-2,;6,0;St;gaeb;3929115.x83
+62;Neutralleiter-Reihenklemme DIN EN 60947-7-1, Bemessungsisolationsspannung 690 V AC, für Leiterquerschnitt bis 4 mm2, Klemmenträger aus selbstlöschendem oder nichtbrennbarem Isolierstoff, zur Montage auf Tragschiene DIN EN 60715, einschl. systemgebundenem Zubehör mit dauerhafter Anschlussbezeichnung.;6,0;St;gaeb;3929115.x83
+63;Neutralleiter-Reihenklemme DIN EN 60947-7-1, Bemessungsisolationsspannung 690 V AC, für Leiterquerschnitt bis 6 mm2, Klemmenträger aus selbstlöschendem oder nichtbrennbarem Isolierstoff, zur Montage auf Tragschiene DIN EN 60715, einschl. systemgebundenem Zubehör mit dauerhafter Anschlussbezeichnung.;6,0;St;gaeb;3929115.x83
+64;Neutralleiter-Reihenklemme DIN EN 60947-7-1, Bemessungsisolationsspannung 690 V AC, für Leiterquerschnitt bis 10 mm2, Klemmenträger aus selbstlöschendem oder nichtbrennbarem Isolierstoff, zur Montage auf Tragschiene DIN EN 60715, einschl. systemgebundenem Zubehör mit dauerhafter Anschlussbezeichnung;5,0;St;gaeb;3929115.x83
+65;Neutralleiter-Reihenklemme DIN EN 60947-7-1 Bemessungsisolationsspannung 690 V AC, für Leiterquerschnitt bis 16 mm2, Klemmenträger aus selbstlöschendem oder nichtbrennbarem Isolierstoff, zur Montage auf Tragschiene DIN EN 60715, einschl. systemgebundenem Zubehör mit dauerhafter Anschlussbezeichnung.;4,0;St;gaeb;3929115.x83
+66;Neutralleiter-Reihenklemme DIN VDE 0611-1,;5,0;St;gaeb;3929115.x83
+67;Neutralleiter-Reihenklemme DIN VDE 0611-1,;4,0;St;gaeb;3929115.x83
+68;Neutralleiter-Reihenklemme DIN VDE 0611-1,;1,0;St;gaeb;3929115.x83
+69;Schutzleiter-Reihenklemme DIN EN 60947-7-2 (VDE 0611-3), für Leiterquerschnitt bis 4 mm2, Klemmenträger aus selbstlöschendem oder nichtbrennbarem Isolierstoff, zur Montage auf Tragschiene DIN EN 60715, einschl. systemgebundenem Zubehör mit dauerhafter Anschlussbezeichnung.;6,0;St;gaeb;3929115.x83
+70;Schutzleiter-Reihenklemme DIN EN 60947-7-2 (VDE 0611-3), für Leiterquerschnitt bis 6 mm2, Klemmenträger aus selbstlöschendem oder nichtbrennbarem Isolierstoff, zur Montage auf Tragschiene DIN EN 60715, einschl. systemgebundenem Zubehör mit dauerhafter Anschlussbezeichnung.;6,0;St;gaeb;3929115.x83
+71;Schutzleiter-Reihenklemme DIN EN 60947-7-2  für Leiterquerschnitt bis 10 mm2, Klemmenträger aus selbstlöschendem oder nichtbrennbarem Isolierstoff, zur Montage auf Tragschiene DIN EN 60715, einschl. systemgebundenem Zubehör mit dauerhafter Anschlussbezeichnung.;5,0;St;gaeb;3929115.x83
+72;Schutzleiter-Reihenklemme DIN EN 60947-7-2 (VDE 0611-3), für Leiterquerschnitt bis 16 mm2, Klemmenträger aus selbstlöschendem oder nichtbrennbarem Isolierstoff, zur Montage auf Tragschiene DIN EN 60715, einschl. systemgebundenem Zubehör mit dauerhafter Anschlussbezeichnung.;9,0;St;gaeb;3929115.x83
+73;Schutzleiter-Reihenklemme DIN EN 60947-7-2,;5,0;St;gaeb;3929115.x83
+74;Schutzleiter-Reihenklemme DIN EN 60947-7-2,;2,0;St;gaeb;3929115.x83
+75;Schutzleiter-Reihenklemme DIN EN 60947-7-2,;1,0;St;gaeb;3929115.x83
+76;IP-Patchmodul, RJ45-Modul mit Adapter zur Hutschienenmontage Nennmaß außen Breite: 18 mm;3,0;St;gaeb;3929115.x83
+1;Installationsleitung DIN VDE 0250-204;267,0;m;gaeb;3929115.x83
+2;Installationsleitung DIN VDE 0250-204;733,0;m;gaeb;3929115.x83
+3;Installationsleitung DIN VDE 0250-204;668,0;m;gaeb;3929115.x83
+4;Installationsleitung DIN VDE 0250-204;38,0;m;gaeb;3929115.x83
+5;Installationsleitung DIN VDE 0250-204;26,0;m;gaeb;3929115.x83
+6;Installationsleitung DIN VDE 0250-204;16,0;m;gaeb;3929115.x83
+7;Installationsleitung DIN VDE 0250-204;3,0;m;gaeb;3929115.x83
+8;Installationsleitung DIN VDE 0250-204;967,0;m;gaeb;3929115.x83
+9;Installationsleitung DIN VDE 0250-204;2480,0;m;gaeb;3929115.x83
+10;Installationsleitung DIN VDE 0250-204;2740,0;m;gaeb;3929115.x83
+11;Installationsleitung DIN VDE 0250-204;143,0;m;gaeb;3929115.x83
+12;Installationsleitung DIN VDE 0250-204;97,0;m;gaeb;3929115.x83
+13;Installationsleitung DIN VDE 0250-204;57,0;m;gaeb;3929115.x83
+14;Leitung DIN VDE 0250-204;27,0;m;gaeb;3929115.x83
+15;Installationsleitung DIN VDE 0250-204;967,0;m;gaeb;3929115.x83
+16;Installationsleitung DIN VDE 0250-204;2480,0;m;gaeb;3929115.x83
+17;Installationsleitung DIN VDE 0250-204;2740,0;m;gaeb;3929115.x83
+18;Installationsleitung DIN VDE 0250-204;143,0;m;gaeb;3929115.x83
+19;Installationsleitung DIN VDE 0250-204;97,0;m;gaeb;3929115.x83
+20;Installationsleitung DIN VDE 0250-204;57,0;m;gaeb;3929115.x83
+21;Installationsleitung DIN VDE 0250-204;27,0;m;gaeb;3929115.x83
+22;Installationsleitung DIN VDE 0250-204;134,0;m;gaeb;3929115.x83
+23;Installationsleitung DIN VDE 0250-204;334,0;m;gaeb;3929115.x83
+24;Installationsleitung DIN VDE 0250-204;386,0;m;gaeb;3929115.x83
+25;Installationsleitung DIN VDE 0250-204;19,0;m;gaeb;3929115.x83
+26;Installationsleitung DIN VDE 0250-204;13,0;m;gaeb;3929115.x83
+27;Installationsleitung DIN VDE 0250-204;9,0;m;gaeb;3929115.x83
+28;Installationsleitung DIN VDE 0250-204;3,0;m;gaeb;3929115.x83
+29;Installationsleitung DIN VDE 0250-204;260,0;m;gaeb;3929115.x83
+30;Installationsleitung DIN VDE 0250-204;668,0;m;gaeb;3929115.x83
+31;Installationsleitung DIN VDE 0250-204;986,0;m;gaeb;3929115.x83
+32;Installationsleitung DIN VDE 0250-204;336,0;m;gaeb;3929115.x83
+33;Installationsleitung DIN VDE 0250-204;27,0;m;gaeb;3929115.x83
+34;Installationsleitung DIN VDE 0250-204;16,0;m;gaeb;3929115.x83
+35;Installationsleitung DIN VDE 0250-204;3,0;m;gaeb;3929115.x83
+36;Installationskabel DIN VDE 0815;929,0;m;gaeb;3929115.x83
+37;Installationskabel DIN VDE 0815;179,0;m;gaeb;3929115.x83
+38;Installationskabel DIN VDE 0815;1787,0;m;gaeb;3929115.x83
+39;Installationskabel DIN VDE 0815;637,5;m;gaeb;3929115.x83
+40;Installationskabel DIN VDE 0815;12,5;m;gaeb;3929115.x83
+41;Installationskabel  DIN VDE 0815;12,5;m;gaeb;3929115.x83
+42;Installationskabel DIN VDE 0815;12,5;m;gaeb;3929115.x83
+43;Installationskabel DIN VDE 0815;12,5;m;gaeb;3929115.x83
+44;Fernmeldekabel DIN VDE 0815;56,0;m;gaeb;3929115.x83
+45;Fernmeldekabel DIN VDE 0815;112,5;m;gaeb;3929115.x83
+46;Lautsprecherkabel;60,0;m;gaeb;3929115.x83
+47;Innenleitermaterial: Kupfer/Alu (CCA);60,0;m;gaeb;3929115.x83
+48;Niederspannungs-Verbindungsmuffen zum Schrumpfen;1,0;St;gaeb;3929115.x83
+49;Niederspannungs-Verbindungsmuffen zum Schrumpfen;1,0;St;gaeb;3929115.x83
+50;Muffen für Fernmeldekabel als;1,0;St;gaeb;3929115.x83
+51;KNX-Busleitung 2-paarig nach EIB/KNX-Norm,;225,0;m;gaeb;3929115.x83
+52;KNX-Busleitung 2-paarig nach EIB/KNX-Norm,;712,5;m;gaeb;3929115.x83
+53;KNX-Busleitung 2-paarig nach EIB/KNX-Norm,;812,5;m;gaeb;3929115.x83
+54;KNX-Busleitung 2-paarig nach EIB/KNX-Norm,;125,0;m;gaeb;3929115.x83
+1;Kabelrinne für Kabelträgersystem DIN VDE 0639-1,;10,0;m;gaeb;3929115.x83
+2;Kabelrinne für Kabelträgersystem DIN VDE 0639-1,;30,0;m;gaeb;3929115.x83
+3;Kabelrinnendeckel für Kabelträgersystem nach DIN EN 61537 / DIN VDE 0639, passend zu Kabelrinne Breite 200 mm, ungelocht, aus Stahl, verzinkt, Blechstärke mind. 1,0 mm, Länge ca. 3.000 mm.;20,0;m;gaeb;3929115.x83
+4;Kabelrinne für Kabelträgersystem DIN VDE 0639-1,;130,0;m;gaeb;3929115.x83
+5;Kabelrinne für Kabelträgersystem DIN VDE 0639-1,;10,0;m;gaeb;3929115.x83
+6;Kabelrinne für Kabelträgersystem DIN VDE 0639-1,;141,0;m;gaeb;3929115.x83
+7;Bogen 90 Grad, waagerecht,;1,0;St;gaeb;3929115.x83
+8;Bogen 90 Grad, waagerecht,;1,0;St;gaeb;3929115.x83
+9;Bogen 90 Grad, waagerecht,;1,0;St;gaeb;3929115.x83
+10;Bogen 90 Grad, waagerecht,;1,0;St;gaeb;3929115.x83
+11;Bogen 90 Grad, waagerecht,;11,0;St;gaeb;3929115.x83
+12;T-Abzweig aus Stahl, verzinkt DIN EN 10142,;1,0;St;gaeb;3929115.x83
+13;T-Abzweig aus Stahl, verzinkt DIN EN 10142,;1,0;St;gaeb;3929115.x83
+14;T-Abzweig aus Stahl, verzinkt DIN EN 10142,;3,0;St;gaeb;3929115.x83
+15;Ausleger aus Stahl, verzinkt DIN EN 10142,;2,0;St;gaeb;3929115.x83
+16;Ausleger aus Stahl, verzinkt DIN EN 10142,;2,0;St;gaeb;3929115.x83
+17;Ausleger aus Stahl, verzinkt DIN EN 10142,;200,0;St;gaeb;3929115.x83
+18;Ausleger aus Stahl, verzinkt DIN EN 10142,;2,0;St;gaeb;3929115.x83
+19;Ausleger aus Stahl, verzinkt DIN EN 10142,;180,0;St;gaeb;3929115.x83
+20;Ausleger aus Stahl, verzinkt DIN EN 10142,;2,0;St;gaeb;3929115.x83
+21;Ausleger aus Stahl, verzinkt DIN EN 10142,;2,0;St;gaeb;3929115.x83
+22;Ausleger aus Stahl, verzinkt DIN EN 10142,;2,0;St;gaeb;3929115.x83
+23;Ausleger aus Stahl, verzinkt DIN EN 10142,;2,0;St;gaeb;3929115.x83
+24;Ausleger aus Stahl, verzinkt DIN EN 10142,;2,0;St;gaeb;3929115.x83
+25;Stiel für Ausleger als U-Profil, an Decke;380,0;St;gaeb;3929115.x83
+26;Mehrpreis für;50,0;St;gaeb;3929115.x83
+27;Tragkonsole zur Wand- und Deckenmontage;5,0;St;gaeb;3929115.x83
+28;Tragkonsole zur Wand- und Deckenmontage;5,0;St;gaeb;3929115.x83
+29;Tragkonsole zur Wand- und Deckenmontage;5,0;St;gaeb;3929115.x83
+30;Gewindestäbe M 10, verzinkt,;16,0;m;gaeb;3929115.x83
+31;Kabelleiter für Kabelträgersystem DIN VDE 0639-1,;2,0;m;gaeb;3929115.x83
+32;Kabelleiter für Kabelträgersystem DIN VDE 0639-1,;15,0;m;gaeb;3929115.x83
+33;Montageplatte an Kabelrinne B/H= 65/110 mm;10,0;St;gaeb;3929115.x83
+34;Montageplatte an Kabelrinne B/H=90/140 mm;10,0;St;gaeb;3929115.x83
+35;Dämpfungssockel für Dächer;20,0;St;gaeb;3929115.x83
+36;Ankerschiene aus Stahl feuerverzinkt, Profil 28/15;10,0;m;gaeb;3929115.x83
+37;Bügelschelle für Steigleitersystem Spannbereich 8 - 12 mm, einschl. Kunststoffdruckwanne und Gegenstück;28,0;St;gaeb;3929115.x83
+38;Bügelschelle für Steigleitersystem Spannbereich 12 - 16 mm, einschl. Kunststoffdruckwanne und Gegenstück;46,0;St;gaeb;3929115.x83
+39;Bügelschelle für Steigleitersystem Spannbereich 16 - 22 mm. einschl. Kunststoffdruckwanne und Gegenstück;32,0;St;gaeb;3929115.x83
+40;Bügelschelle für Steigleitersystem Spannbereich 22 - 28 mm, einschl. Kunststoffdruckwanne und Gegenstück;24,0;St;gaeb;3929115.x83
+41;Bügelschelle für Steigleitersystem Spannbereich 28 - 34 mm, einschl. Kunststoffdruckwanne und Gegenstück;12,0;St;gaeb;3929115.x83
+42;Bügelschelle für Steigleitersystem Spannbereich 34 - 40 mm, einschl. Kunststoffdruckwanne und Gegenstück;8,0;St;gaeb;3929115.x83
+43;Bügelschelle für Steigleitersystem Spannbereich 40 - 46 mm, einschl. Kunststoffdruckwanne und Gegenstück;12,0;St;gaeb;3929115.x83
+44;Bügelschelle für Steigleitersystem Spannbereich 46 - 52 mm, einschl. Kunststoffdruckwanne und Gegenstück;8,0;St;gaeb;3929115.x83
+45;Sammelhalter aus Metall für hohe mechanische Standfestigkeit, zur  Montage oberhalb von Zwischendecken, für Wand- und Deckenmontage. Verschluss ohne Werkzeuge zu öffnen.;1440,0;St;gaeb;3929115.x83
+46;Sammelhalter aus Metall für hohe mechanische Standfestigkeit, zur  Montage oberhalb von Zwischendecken, für Wand- und Deckenmontage.;360,0;St;gaeb;3929115.x83
+47;Kabelklammer aus Metall,;10,0;St;gaeb;3929115.x83
+48;Elektroinstallationskanal DIN VDE 0604 /EN 50085;10,0;m;gaeb;3929115.x83
+49;Elektroinstallationskanal DIN VDE 0604;10,0;m;gaeb;3929115.x83
+50;Elektroinstallationskanal DIN VDE 0604;10,0;m;gaeb;3929115.x83
+51;Elektroinstallationskanal DIN VDE 0604;10,0;m;gaeb;3929115.x83
+52;Elektroinstallationskanal DIN VDE 0604;10,0;m;gaeb;3929115.x83
+53;Elektroinstallationskanal DIN VDE 0604;10,0;m;gaeb;3929115.x83
+54;Elektroinstallationskanal DIN VDE 0604;10,0;m;gaeb;3929115.x83
+55;Elektroinstallationsrohr VDE 0605, DIN EN 61386-21;30,0;m;gaeb;3929115.x83
+56;Elektroinstallationsrohr VDE 0605, DIN EN 61386-21;10,0;m;gaeb;3929115.x83
+57;Elektroinstallationsrohr VDE 0605, DIN EN 61386-22,;255,0;m;gaeb;3929115.x83
+58;Elektroinstallationsrohr VDE 0605, DIN EN 61386-22,;10,0;m;gaeb;3929115.x83
+59;Elektroinstallationsrohr VDE 0605, DIN EN 61386-22,;80,0;m;gaeb;3929115.x83
+60;Elektroinstallationsrohr VDE 0605, DIN EN 61386-22,;40,0;m;gaeb;3929115.x83
+61;Decken-/Wanddurchbruch in Stahlbeton;5,0;St;gaeb;3929115.x83
+62;Decken-/Wanddurchbruch in Stahlbeton,;5,0;St;gaeb;3929115.x83
+63;Decken-/Wanddurchbruch in Stahlbeton;5,0;St;gaeb;3929115.x83
+64;Decken-/Wanddurchbruch in Stahlbeton,;5,0;St;gaeb;3929115.x83
+65;Decken-/Wanddurchbruch in Stahlbeton,;5,0;St;gaeb;3929115.x83
+1;Wippschalter DIN EN 60669-1;1,0;St;gaeb;3929115.x83
+2;1-fach Wippe ohne Bedruckung;1,0;St;gaeb;3929115.x83
+3;Schutzkontaktsteckdose DIN VDE 0620, 16 A, 250 V AC,;265,0;St;gaeb;3929115.x83
+4;Schutzkontaktsteckdose DIN VDE 0620, 16 A, 250 V AC,;32,0;St;gaeb;3929115.x83
+5;CEE-Steckdose DIN EN 60309,;1,0;St;gaeb;3929115.x83
+6;CEE-Steckdose DIN EN 60309,;1,0;St;gaeb;3929115.x83
+7;Kabelauslasszentralplatte,;80,0;St;gaeb;3929115.x83
+8;Blindabdeckplatte,;6,0;St;gaeb;3929115.x83
+9;Geräteanschlussdose DIN VDE 0606;88,0;St;gaeb;3929115.x83
+10;Geräteanschlussdose DIN VDE 0606;7,0;St;gaeb;3929115.x83
+11;Quadratischer Bodentank mit einem schwenkbaren Schnurauslass zur Leitungsausführung und einem Deckel mit Bodenbelagsaussparung. Für den Einsatz im System- oder Estrichboden in trockenen Räumen im Innenbereich mit trocken gepflegten Böden. Leergehäuse für bis zu 2 Universalträger UT3 für bis zu 6 Mod;2,0;St;gaeb;3929115.x83
+12;1-fach Aufbaugehäuse;5,0;St;gaeb;3929115.x83
+13;2-fach Aufbaugehäuse;5,0;St;gaeb;3929115.x83
+14;1-fach Schutzkontaktsteckdose DIN VDE 0620-1 (VDE 0620-1), 16 A, 250 V AC, in Aufputzausführung, Schutzart IP 44 DIN EN 60529 (VDE 0470-1).;8,0;St;gaeb;3929115.x83
+15;2-fach Schutzkontaktsteckdose DIN VDE 0620-1 (VDE 0620-1), 16 A, 250 V AC, in Aufputzausführung, Schutzart IP 44 DIN EN 60529 (VDE 0470-1).;5,0;St;gaeb;3929115.x83
+16;Herdanschlussdose für Herdanschluß, 400 V alpinweiß;4,0;St;gaeb;3929115.x83
+17;Abschließbare Außensteckdose zur Installation im Außenbereich;1,0;St;gaeb;3929115.x83
+18;HDMI-Anschlussdose;50,0;St;gaeb;3929115.x83
+19;HDMI KABEL 10 m;15,0;St;gaeb;3929115.x83
+20;Gerätedose DIN VDE 0606 und DIN 49073,;3,0;St;gaeb;3929115.x83
+21;Gerätedose DIN VDE 0606 und DIN 49073,;3,0;St;gaeb;3929115.x83
+22;Gerätedose DIN VDE 0606 und DIN 49073,;145,0;St;gaeb;3929115.x83
+23;Geräteverbindungsdose DIN VDE 0606 und DIN 49073,;236,0;St;gaeb;3929115.x83
+24;Geräteverbindungsdose als Electronicdose DIN VDE 0606-1 und DIN 49073, aus Kunststoff, Durchmesser 60 mm, Tiefe 60 mm, mit einem;88,0;St;gaeb;3929115.x83
+25;Wandleuchtenanschlußdose DIN VDE 0606,;25,0;St;gaeb;3929115.x83
+26;Teleskop-Gerätedose zur sicheren Befestigung von Steckdosen in Außendämmung von Wänden und Decken;2,0;St;gaeb;3929115.x83
+27;Teleskop-Geräteträger zur sicheren Befestigung von Leuchten und Bewegungsmelder bei Außendämmung von Wänden und Decken. Montagefläche zur dübellosen Geräteinstallation;25,0;St;gaeb;3929115.x83
+28;Universal Geräteträger bei Außendämmung von Wänden;2,0;St;gaeb;3929115.x83
+29;Putzausgleichring für Gerätedose DIN 49073,;36,0;St;gaeb;3929115.x83
+30;Gerätedose DIN VDE 0606 und DIN 49073,;52,0;St;gaeb;3929115.x83
+31;Geräteverbindungsdose DIN VDE 0606 und DIN 49073,;98,0;St;gaeb;3929115.x83
+32;Geräteverbindungsdose als Electronicdose DIN VDE 0606-1 und DIN 49073, aus Kunststoff, Durchmesser 60 mm, Tiefe 60 mm, mit einem;15,0;St;gaeb;3929115.x83
+33;Schalldichtung im Bereich von belegten Aussparungen mit Kabel und Leitungen, Dämmung um mind. 50 dB, für Aussparungs-, bzw. Durchbruchsgrößen 150/150 mm bis;0,0;St;gaeb;3929115.x83
+34;Verbindungsdose DIN VDE 0606 aus Isolierstoff,;5,0;St;gaeb;3929115.x83
+35;Verbindungsdose DIN VDE 0606 aus Isolierstoff,;5,0;St;gaeb;3929115.x83
+36;Innenuhr, rund, einseitig, hochwertig beschichtetes Metallgehäuse anthrazit-metallic (Eisenglimmer DB 703), gewölbtes blendarmes Mineralglas. Silbereloxiertes Metallzifferblatt, mit schwarzen arabischen Zahlen. Zifferblattdruck nach DIN 41091. Schwarze Balkenzeiger für Stunden- und Minutenanzeige. N;21,0;St;gaeb;3929115.x83
+1;Brandschutzabschottung an Kabel-/Leitungsanlagen,;3,0;St;gaeb;3929115.x83
+2;Brandschutzabschottung an Kabel-/Leitungsanlagen,;6,0;St;gaeb;3929115.x83
+3;Brandschutzabschottung an Kabel-/Leitungsanlagen,;12,0;St;gaeb;3929115.x83
+4;Brandabschottung EI30, EI60, EI90;3,0;St;gaeb;3929115.x83
+5;Brandschutzabschottung an Kabel-/Leitungsanlagen,;3,0;St;gaeb;3929115.x83
+6;Brandschutzabschottung an Kabel-/Leitungsanlagen,;3,0;St;gaeb;3929115.x83
+7;Brandschutzabschottung an Kabel-/Leitungsanlagen,;3,0;St;gaeb;3929115.x83
+8;Stahlblechkanal mit intumeszierender Innenbeschichtung Verhindert im Brandfall aktiv die Brandweiterleitung im Kanal und schützt Flucht- und Rettungswege vor den Auswirkungen eines Kabelbrands. Das Kanaloberteil rastet innenliegend auf dem Kanalunterteil ein und ist über die selbstkontaktierenden, p;2,0;m;gaeb;3929115.x83
+9;Stahlblechkanal mit intumeszierender Innenbeschichtung Verhindert im Brandfall aktiv die Brandweiterleitung im Kanal und schützt Flucht- und Rettungswege vor den Auswirkungen eines Kabelbrands. Das Kanaloberteil rastet innenliegend auf dem Kanalunterteil ein und ist über die selbstkontaktierenden, p;2,0;m;gaeb;3929115.x83
+10;Stahlblechkanal mit intumeszierender Innenbeschichtung Verhindert im Brandfall aktiv die Brandweiterleitung im Kanal und schützt Flucht- und Rettungswege vor den Auswirkungen eines Kabelbrands. Das Kanaloberteil rastet innenliegend auf dem Kanalunterteil ein und ist über die selbstkontaktierenden, p;32,0;m;gaeb;3929115.x83
+11;Formteil Flachwinkel für Brandschutzkanalsystem für Feuerwiderstandsklassen I30  gemäß DIN 4102 Teil 11. Ausführung als Haube zur Abdeckung von 2 Kanalenden BKSM.;2,0;St;gaeb;3929115.x83
+12;Formteil T-Stück für Brandschutzkanalsystem für Feuerwiderstandsklassen I30  gemäß DIN 4102 Teil 11.;1,0;St;gaeb;3929115.x83
+13;Formteil Wandanschluss  für Brandschutzkanalsystem für Feuerwiderstandsklasse I30 gemäß DIN 4102 Teil 11.;7,0;St;gaeb;3929115.x83
+14;Trassenverkleidung I30 wie vor;4,0;m²;gaeb;3929115.x83
+15;Trennsteg zur Trennung von Kabeln und Leitungen, zum Einbau in Brandschutzkanälen einschl. Befestigungszubehör mit zugelassenen Brandschutzschraubankern.;32,0;m;gaeb;3929115.x83
+16;Dokumentation der Brandschutzmaßnahmen bstehende aus:;1,0;Psch;gaeb;3929115.x83
+1;Netzteil In: 100-240VAC Out: 24VDC/2.5A;2,0;St;gaeb;3929115.x83
+2;EIB-Spannungsversorgung;7,0;St;gaeb;3929115.x83
+3;IP-Router, REG bildet die Schnittstelle zwischen KNX;1,0;St;gaeb;3929115.x83
+4;KNX-Visualisierungs- und Logikserver;1,0;St;gaeb;3929115.x83
+5;Linienkoppler, REG;7,0;St;gaeb;3929115.x83
+6;USB-Schnittstelle, REG ist ein KNX Reiheneinbaugerät;1,0;St;gaeb;3929115.x83
+7;4-fach Binäreingang mit Kontaktabfrage, REG;2,0;St;gaeb;3929115.x83
+8;Schaltaktor, 4-fach, 16 A, REG schaltet mit potenzialfreien Kontakten Stromkreise mit elektrischen Verbrauchern über KNX und/oder manuell ohne zusätzlicher Hilfsspannung. - Integrierter KNX Busankoppler - Keine externe Spannungsversorgung notwendig - Beschriftungsmöglichkeit auf Gerät - Manuelle Bed;1,0;St;gaeb;3929115.x83
+9;Schaltaktor, 8-fach, 16 A, REG;1,0;St;gaeb;3929115.x83
+10;1-fach DALI Gateway REG für Installationsbus KNX;12,0;St;gaeb;3929115.x83
+11;1/2-fach Tasterankopplung UP, mit integriertem;70,0;St;gaeb;3929115.x83
+12;2/4-fach Tasterankopplung,;14,0;St;gaeb;3929115.x83
+13;2-fach Wippe links/rechts;13,0;St;gaeb;3929115.x83
+14;1-fach Wippe ohne Bedruckung;69,0;St;gaeb;3929115.x83
+15;Präsenzmelder Corridor KNX, 30 Meter, studioweiß matt;14,0;St;gaeb;3929115.x83
+16;Präsenzmelder Mini Standard für KNX;52,0;St;gaeb;3929115.x83
+17;Präsenzmelder Mini, 8 Meter;4,0;St;gaeb;3929115.x83
+18;Für Busch-balance® SI.;1,0;St;gaeb;3929115.x83
+19;Einbaugehäuse;1,0;St;gaeb;3929115.x83
+20;Aufputz-Kleinverteilers zur Aufnahme eines KNX-Ventilantriebs-Controllers zur Ansteuerung thermoelektrischer 230-V-Stellantriebe.;7,0;St;gaeb;3929115.x83
+21;Heizungsaktor zur Steuerung von elektrothermischen Stellantrieben, mit LED Anzeige je Kanal;7,0;St;gaeb;3929115.x83
+22;Bedienelement mit Raumtemperaturreglerfunktion und CO2-/Feuchte-/Luftdrucksensor.;48,0;St;gaeb;3929115.x83
+23;2/1-fach Schalt/Jalousie Binäreingänge UP;38,0;St;gaeb;3929115.x83
+24;"2-fach links/rechts, mit Symbol ""Jalousie""";38,0;St;gaeb;3929115.x83
+25;Combi Schaltaktor/Jalousieaktor, 8-fach, 6 A, REG;11,0;St;gaeb;3929115.x83
+26;Zur Steuerung von bis zu 12 unabhängigen Jalousie- und Rollladenmotoren;2,0;St;gaeb;3929115.x83
+27;Wetterstation KNX-GPS;1,0;St;gaeb;3929115.x83
+28;Anschluss der beigestellten Kupplungstecker;70,0;St;gaeb;3929115.x83
+29;Bohrungen in der Außenwand für Leitungsverlegung,;70,0;St;gaeb;3929115.x83
+30;Inbetriebnahme mit dem Errichterfirma der Sonnenschutzbehänge;6,0;h;gaeb;3929115.x83
+31;Programmierung des DALI-Gateways je DALI-Teilnehmer, inklusive Adressierung, Zuordnung zu Gruppen/Szenen sowie Parametrierung gemäß Planung und Funktionsprüfung.;546,0;St;gaeb;3929115.x83
+32;Vergabe der physikalischen Adressen und der;240,0;St;gaeb;3929115.x83
+33;Erstellen einer grafischen Bedienoberfläche;1,0;St;gaeb;3929115.x83
+1;Mehradriges, geschirmtes Steuer- und Anschlusskabel für flexible und feste Verlegung, Spannung 300/500 V, Temperaturbereich -40°C bis +80 C (flexibel) bzw. -50°C bis +80 C (fest verlegt). Feindrähtige Leiter nach VDE0295/IEC60228 Klasse5, Adern nummeriert nach VDE0293-1, Schirmung verzinntes Kupferg;450,0;m;gaeb;3929115.x83
+2;Mehradriges, geschirmtes Steuer- und Anschlusskabel für flexible und feste Verlegung, Spannung 300/500 V, Temperaturbereich -40°C bis +80 C (flexibel) bzw. -50°C bis +80 C (fest verlegt). Feindrähtige Leiter nach VDE0295/IEC60228 Klasse5, Adern nummeriert nach VDE0293-1, Schirmung verzinntes Kupferg;960,0;m;gaeb;3929115.x83
+3;Mehradriges, geschirmtes Steuer- und Anschlusskabel für flexible und feste Verlegung, Spannung 300/500 V, Temperaturbereich -40°C bis +80 C (flexibel) bzw. -50°C bis +80 C (fest verlegt). Feindrähtige Leiter nach VDE0295/IEC60228 Klasse5, Adern nummeriert nach VDE0293-1, Schirmung verzinntes Kupferg;850,0;m;gaeb;3929115.x83
+4;Mehradriges, geschirmtes Steuer- und Anschlusskabel für flexible und feste Verlegung, Spannung 300/500 V, Temperaturbereich -40°C bis +80 C (flexibel) bzw. -50°C bis +80 C (fest verlegt). Feindrähtige Leiter nach VDE0295/IEC60228 Klasse5, Adern nummeriert nach VDE0293-1, Schirmung verzinntes Kupferg;40,0;m;gaeb;3929115.x83
+5;Mehradriges, geschirmtes Steuer- und Anschlusskabel für flexible und feste Verlegung, Spannung 300/500 V, Temperaturbereich -40°C bis +80 C (flexibel) bzw. -50°C bis +80 C (fest verlegt). Feindrähtige Leiter nach VDE0295/IEC60228 Klasse5, Adern nummeriert nach VDE0293-1, Schirmung verzinntes Kupferg;220,0;m;gaeb;3929115.x83
+6;Mehradriges, geschirmtes Steuer- und Anschlusskabel für flexible und feste Verlegung, Spannung 300/500 V, Temperaturbereich -40°C bis +80 C (flexibel) bzw. -50°C bis +80 C (fest verlegt). Feindrähtige Leiter nach VDE0295/IEC60228 Klasse5, Adern nummeriert nach VDE0293-1, Schirmung verzinntes Kupferg;25,0;m;gaeb;3929115.x83
+7;Mehradriges, geschirmtes Steuer- und Anschlusskabel für flexible und feste Verlegung, Spannung 300/500 V, Temperaturbereich -40°C bis +80 C (flexibel) bzw. -50°C bis +80 C (fest verlegt). Feindrähtige Leiter nach VDE0295/IEC60228 Klasse5, Adern nummeriert nach VDE0293-1, Schirmung verzinntes Kupferg;15,0;m;gaeb;3929115.x83
+8;Mehradriges, geschirmtes Steuer- und Anschlusskabel für flexible und feste Verlegung, Spannung 300/500 V, Temperaturbereich -40°C bis +80 C (flexibel) bzw. -50°C bis +80 C (fest verlegt). Feindrähtige Leiter nach VDE0295/IEC60228 Klasse5, Adern nummeriert nach VDE0293-1, Schirmung verzinntes Kupferg;40,0;m;gaeb;3929115.x83
+9;Mehradriges, geschirmtes Steuer- und Anschlusskabel für flexible und feste Verlegung, Spannung 300/500 V, Temperaturbereich -40°C bis +80 C (flexibel) bzw. -50°C bis +80 C (fest verlegt). Feindrähtige Leiter nach VDE0295/IEC60228 Klasse5, Adern nummeriert nach VDE0293-1, Schirmung verzinntes Kupferg;35,0;m;gaeb;3929115.x83
+10;Mehradriges Steuer- und Anschlusskabel für feste Verlegung und gelegentliche Bewegung, Nennspannung 300/500 V. Feindrähtige Kupferleiter nach VDE 0295/IEC 60228 Klasse 5, Aderisolation PVC, Adern farbig nach VDE 0293, Außenmantel PVC grau. Temperaturbereich -5 °C bis +70 °C (bewegt) bzw. -40 °C bis ;8,0;m;gaeb;3929115.x83
+11;Mehradriges Steuer- und Anschlusskabel für feste Verlegung und gelegentliche Bewegung, Nennspannung 300/500 V. Feindrähtige Kupferleiter nach VDE 0295/IEC 60228 Klasse 5, Aderisolation PVC, Adern farbig nach VDE 0293, Außenmantel PVC grau. Temperaturbereich -5 °C bis +70 °C (bewegt) bzw. -40 °C bis ;20,0;m;gaeb;3929115.x83
+12;Mehradriges Steuer- und Anschlusskabel für feste Verlegung und gelegentliche Bewegung, Nennspannung 300/500 V. Feindrähtige Kupferleiter nach VDE 0295/IEC 60228 Klasse 5, Aderisolation PVC, Adern farbig nach VDE 0293, Außenmantel PVC grau. Temperaturbereich -5 °C bis +70 °C (bewegt) bzw. -40 °C bis ;18,0;m;gaeb;3929115.x83
+13;Mehradriges, geschirmtes Steuer- und Anschlusskabel für flexible und feste Verlegung, Spannung 300/500 V, Temperaturbereich -40°C bis +80 C (flexibel) bzw. -50°C bis +80 C (fest verlegt). Feindrähtige Leiter nach VDE0295/IEC60228 Klasse5, Adern nummeriert nach VDE0293-1, Schirmung verzinntes Kupferg;80,0;m;gaeb;3929115.x83
+14;Mehradriges, geschirmtes Steuer- und Anschlusskabel für flexible und feste Verlegung, Spannung 300/500 V, Temperaturbereich -40°C bis +80 C (flexibel) bzw. -50°C bis +80 C (fest verlegt). Feindrähtige Leiter nach VDE0295/IEC60228 Klasse5, Adern nummeriert nach VDE0293-1, Schirmung verzinntes Kupferg;165,0;m;gaeb;3929115.x83
+15;Mehradriges, geschirmtes Steuer- und Anschlusskabel für flexible und feste Verlegung, Spannung 300/500 V, Temperaturbereich -40°C bis +80 C (flexibel) bzw. -50°C bis +80 C (fest verlegt). Feindrähtige Leiter nach VDE0295/IEC60228 Klasse5, Adern nummeriert nach VDE0293-1, Schirmung verzinntes Kupferg;150,0;m;gaeb;3929115.x83
+16;Mehradriges, geschirmtes Steuer- und Anschlusskabel für flexible und feste Verlegung, Spannung 300/500 V, Temperaturbereich -40°C bis +80 C (flexibel) bzw. -50°C bis +80 C (fest verlegt). Feindrähtige Leiter nach VDE0295/IEC60228 Klasse5, Adern nummeriert nach VDE0293-1, Schirmung verzinntes Kupferg;20,0;m;gaeb;3929115.x83
+17;Mehradriges, geschirmtes Steuer- und Anschlusskabel für flexible und feste Verlegung, Spannung 300/500 V, Temperaturbereich -40°C bis +80 C (flexibel) bzw. -50°C bis +80 C (fest verlegt). Feindrähtige Leiter nach VDE0295/IEC60228 Klasse5, Adern nummeriert nach VDE0293-1, Schirmung verzinntes Kupferg;43,0;m;gaeb;3929115.x83
+18;Mehradriges, geschirmtes Steuer- und Anschlusskabel für flexible und feste Verlegung, Spannung 300/500 V, Temperaturbereich -40°C bis +80 C (flexibel) bzw. -50°C bis +80 C (fest verlegt). Feindrähtige Leiter nach VDE0295/IEC60228 Klasse5, Adern nummeriert nach VDE0293-1, Schirmung verzinntes Kupferg;39,0;m;gaeb;3929115.x83
+19;Mehradriges, geschirmtes Steuer- und Anschlusskabel für flexible und feste Verlegung, Spannung 300/500 V, Temperaturbereich -40°C bis +80 C (flexibel) bzw. -50°C bis +80 C (fest verlegt). Feindrähtige Leiter nach VDE0295/IEC60228 Klasse5, Adern nummeriert nach VDE0293-1, Schirmung verzinntes Kupferg;65,0;m;gaeb;3929115.x83
+20;Mehradriges, geschirmtes Steuer- und Anschlusskabel für flexible und feste Verlegung, Spannung 300/500 V, Temperaturbereich -40°C bis +80 C (flexibel) bzw. -50°C bis +80 C (fest verlegt). Feindrähtige Leiter nach VDE0295/IEC60228 Klasse5, Adern nummeriert nach VDE0293-1, Schirmung verzinntes Kupferg;100,0;m;gaeb;3929115.x83
+21;Mehradriges, geschirmtes Steuer- und Anschlusskabel für flexible und feste Verlegung, Spannung 300/500 V, Temperaturbereich -40°C bis +80 C (flexibel) bzw. -50°C bis +80 C (fest verlegt). Feindrähtige Leiter nach VDE0295/IEC60228 Klasse5, Adern nummeriert nach VDE0293-1, Schirmung verzinntes Kupferg;120,0;m;gaeb;3929115.x83
+22;Leitung DIN VDE 0250-204;450,0;m;gaeb;3929115.x83
+23;Leitung DIN VDE 0250-204;950,0;m;gaeb;3929115.x83
+24;Leitung DIN VDE 0250-204;850,0;m;gaeb;3929115.x83
+25;Leitung DIN VDE 0250-204;225,0;m;gaeb;3929115.x83
+26;Leitung DIN VDE 0250-204;460,0;m;gaeb;3929115.x83
+27;Leitung DIN VDE 0250-204;420,0;m;gaeb;3929115.x83
+28;Mehradriges, geschirmtes Steuer- und Anschlusskabel für flexible und feste Verlegung, Spannung 300/500 V, Temperaturbereich -40°C bis +80 C (flexibel) bzw. -50°C bis +80 C (fest verlegt). Feindrähtige Leiter nach VDE0295/IEC60228 Klasse5, Adern nummeriert nach VDE0293-1, Schirmung verzinntes Kupferg;80,0;m;gaeb;3929115.x83
+29;Mehradriges, geschirmtes Steuer- und Anschlusskabel für flexible und feste Verlegung, Spannung 300/500 V, Temperaturbereich -40°C bis +80 C (flexibel) bzw. -50°C bis +80 C (fest verlegt). Feindrähtige Leiter nach VDE0295/IEC60228 Klasse5, Adern nummeriert nach VDE0293-1, Schirmung verzinntes Kupferg;170,0;m;gaeb;3929115.x83
+30;Mehradriges, geschirmtes Steuer- und Anschlusskabel für flexible und feste Verlegung, Spannung 300/500 V, Temperaturbereich -40°C bis +80 C (flexibel) bzw. -50°C bis +80 C (fest verlegt). Feindrähtige Leiter nach VDE0295/IEC60228 Klasse5, Adern nummeriert nach VDE0293-1, Schirmung verzinntes Kupferg;150,0;m;gaeb;3929115.x83
+31;Leitung DIN VDE 0298-3;5,0;m;gaeb;3929115.x83
+32;Leitung DIN VDE 0298-3;10,0;m;gaeb;3929115.x83
+33;Leitung DIN VDE 0298-3;10,0;m;gaeb;3929115.x83
+34;Leitung DIN VDE 0250-204;100,0;m;gaeb;3929115.x83
+35;Leitung DIN VDE 0250-204;200,0;m;gaeb;3929115.x83
+36;Leitung DIN VDE 0250-204;180,0;m;gaeb;3929115.x83
+37;Leitung nach DIN VDE 0298-3;25,0;m;gaeb;3929115.x83
+38;Leitung DIN VDE 0298-3;50,0;m;gaeb;3929115.x83
+39;Leitung DIN VDE 0298-3;50,0;m;gaeb;3929115.x83
+40;Leitung DIN VDE 0250-204;70,0;m;gaeb;3929115.x83
+41;Leitung DIN VDE 0250-204;150,0;m;gaeb;3929115.x83
+42;Leitung DIN VDE 0250-204;140,0;m;gaeb;3929115.x83
+43;Installationskabel DIN VDE 0815;10,0;m;gaeb;3929115.x83
+44;Installationskabel DIN VDE 0815;4,0;m;gaeb;3929115.x83
+45;Installationskabel DIN VDE 0815;2,0;m;gaeb;3929115.x83
+46;Installationskabel DIN VDE 0815;10,0;m;gaeb;3929115.x83
+47;Installationskabel DIN VDE 0815;650,0;m;gaeb;3929115.x83
+48;Installationskabel DIN VDE 0815;360,0;m;gaeb;3929115.x83
+49;Installationskabel DIN VDE 0815;150,0;m;gaeb;3929115.x83
+50;Installationskabel DIN VDE 0815;925,0;m;gaeb;3929115.x83
+51;Installationskabel DIN VDE 0815;65,0;m;gaeb;3929115.x83
+52;Installationskabel DIN VDE 0815;20,0;m;gaeb;3929115.x83
+53;Installationskabel DIN VDE 0815;8,0;m;gaeb;3929115.x83
+54;Installationskabel DIN VDE 0815;20,0;m;gaeb;3929115.x83
+55;PVC-Steuerleitung LIYCY 2x0,75;50,0;m;gaeb;3929115.x83
+56;PVC-Steuerleitung LiYCY 2x0,75;15,0;m;gaeb;3929115.x83
+57;PVC-Steuerleitung LiYCY 2x0,75, mit Bügelschellen;6,0;m;gaeb;3929115.x83
+58;PVC-Steuerleitung LiYCY 2x0,75;50,0;m;gaeb;3929115.x83
+59;KNX-Busleitung 4-paarig nach EIB/KNX-Norm,;600,0;m;gaeb;3929115.x83
+60;KNX-Busleitung 4-paarig nach EIB/KNX-Norm,;180,0;m;gaeb;3929115.x83
+61;KNX-Busleitung 4-paarig nach EIB/KNX-Norm,;75,0;m;gaeb;3929115.x83
+62;KNX-Busleitung 2-paarig nach EIB/KNX-Norm,;600,0;m;gaeb;3929115.x83
+63;CAN-Busleitung 2-paarig (CAN FD P);50,0;m;gaeb;3929115.x83
+64;CAN-Busleitung 2-paarig (CAN FD P);50,0;m;gaeb;3929115.x83
+65;CAN-Busleitung 2-paarig (CAN FD P);20,0;m;gaeb;3929115.x83
+66;CAN-Busleitung 2-paarig (CAN FD P);50,0;m;gaeb;3929115.x83
+1;Werkstatt- und Montageplanung;1,0;St;gaeb;3929115.x83
+2;Dokumentation nach VOB Teil C, DIN 18382.;1,0;St;gaeb;3929115.x83
+3;Prüfgebühr für die baubegleitende Prüfung der sicherheitstechnischen Anlagen durch verantwortlichen Sachverständigen (vSV) nach §16 SVBau;1,0;Psch;gaeb;3929115.x83
+4;Prüfgebühr für die Prüfung der Elektrischen Anlagen;1,0;Psch;gaeb;3929115.x83
+5;Stundenlohnarbeiten durch Arbeitskräfte;30,0;h;gaeb;3929115.x83
+6;Helfer (Entgeltgruppe A und B);40,0;h;gaeb;3929115.x83
+7;Stundenlohnarbeiten durch Arbeitskräfte;60,0;h;gaeb;3929115.x83
+8;Stundenlohnarbeiten durch Arbeitskräfte auf;50,0;h;gaeb;3929115.x83
+9;Stundenlohnarbeiten durch Arbeitskräfte auf;30,0;h;gaeb;3929115.x83
+10;Stundenlohnarbeiten durch Arbeitskräfte auf;45,0;h;gaeb;3929115.x83
+1;Leuchten-Nr.1;88,0;St;gaeb;3929115.x83
+2;Leuchte-Nr. 2;37,0;St;gaeb;3929115.x83
+3;Leuchte-Nr.3;50,0;St;gaeb;3929115.x83
+4;* Montage:;1,0;St;gaeb;3929115.x83
+5;Leuchte Nr. 33;5,0;St;gaeb;3929115.x83
+6;Leuchte-Nr.4;19,0;St;gaeb;3929115.x83
+7;Leuchte-Nr. 28;24,0;St;gaeb;3929115.x83
+8;Leuchten-Nr.5;36,0;St;gaeb;3929115.x83
+9;Leuchte-Nr. 06;28,0;St;gaeb;3929115.x83
+10;Leuchte-Nr. 07;30,0;St;gaeb;3929115.x83
+11;Leuchte Nr.08;200,0;St;gaeb;3929115.x83
+12;Leuchte Nr. 09;15,0;St;gaeb;3929115.x83
+13;Leuchte Nr.29;14,0;St;gaeb;3929115.x83
+14;Bemusterung von Leuchten einschl.;12,0;St;gaeb;3929115.x83
+1;Vollautomatisches Prüfsystem für batteriebetriebene Sicherheitsbeleuchtung gem. DIN EN 62034 zur Programmierung und Überwachung;1,0;St;gaeb;3929115.x83
+2;LED Deckenanbau-Rettungszeichenleuchte;18,0;St;gaeb;3929115.x83
+3;Leuchtenkennzeichnungsschilder,;18,0;St.;gaeb;3929115.x83
+4;Prüfgebühr für die Prüfung der be- und hinterleuchteten Rettungswegkennzeichnung mit Einzelbatterieversorgung einschließlich zentraler Überwachungs-/Prüfeinrichtung durch eine sachkundige Person im Sinne § 2 Abs. 3 SPrüfV.;1,0;Psch;gaeb;3929115.x83
+1;Rangierverteiler für ELA-Verteilung, bestehend aus Reihenklemmen zur übersichtlichen und normgerechten Verdrahtung der Lautsprecher- und Steuerleitungen. Inklusive Beschriftungsmöglichkeit, Endhalter, Brücken sowie erforderlichem Montagezubehör. Montage im Verteilerfeld, vollständig betriebsfertig i;3,0;St;gaeb;3929115.x83
+2;Handfeuermelder Schaltungseinsatz,;3,0;St;gaeb;3929115.x83
+3;Lieferung, Montage und Inbetriebnahme einer modularen Türsprechanlage mit integrierter Videofunktion für Gebäudeeingänge, einschließlich Sprechstelle, beleuchteter Ruftasten, Beschriftungsfeld und Türöffnerfunktion.;1,0;St;gaeb;3929115.x83
+4;Lieferung, Montage und Inbetriebnahme einer modularen Türsprechanlage für Gebäudeeingang, inklusive Sprechstelle, Ruftasten, Beschriftungsfeld und Türöffnerfunktion.;2,0;St;gaeb;3929115.x83
+5;Standsäule aus Edelstahl;1,0;St;gaeb;3929115.x83
+6;Abdeckblenden-Set 1 aus Edelstahl;1,0;St;gaeb;3929115.x83
+7;Modul Info mit Beschriftungsfeld hinterleuchtet,;1,0;St;gaeb;3929115.x83
+8;Einbau-Ruftaste beleuchtet weiß,;1,0;St;gaeb;3929115.x83
+9;Sicherheitsrelais trennt bei Sabotage den Türöffner;1,0;St;gaeb;3929115.x83
+10;LAN-Secure Adapter sperrt bei Sabotage die LAN-Verbindung zur Türstation, trennt den Türöffner von der Türstation,;1,0;St;gaeb;3929115.x83
+11;"Decken-Einbaulautsprecher für 100-V-Beschallungssysteme zur Sprach- und Musikübertragung. Nennleistung 6 W, mit Leistungsabgriffen. Breitbandlautsprecher ca. 6"", integrierter 100-V-Übertrager. Anschluss über Klemme. Einbau in abgehängte Decken, Befestigung mittels Feder- oder Schraubklemmen. Schutzg";85,0;St;gaeb;3929115.x83
+12;Liefern und montieren eines wetterfesten Außenlautsprechers für 100-V-Beschallungsanlagen, geeignet für Sprachdurchsagen.;5,0;St;gaeb;3929115.x83
+13;Installationskabel DIN VDE 0815;468,6;m;gaeb;3929115.x83
+14;Installationskabel DIN VDE 0815;175,56;m;gaeb;3929115.x83
+15;Installationskabel DIN VDE 0815;72,6;m;gaeb;3929115.x83
+16;Installationskabel DIN VDE 0815;732,6;m;gaeb;3929115.x83
+17;Installationskabel DIN VDE 0815;39,6;m;gaeb;3929115.x83
+18;Installationskabel DIN VDE 0815;14,52;m;gaeb;3929115.x83
+19;Installationskabel DIN VDE 0815;6,6;m;gaeb;3929115.x83
+20;Installationskabel DIN VDE 0815;59,4;m;gaeb;3929115.x83
+21;Fernmeldekabel DIN VDE 0815;54,0;m;gaeb;3929115.x83
+22;Fernmeldekabel DIN VDE 0815;108,0;m;gaeb;3929115.x83
+23;Anschluß je Ende;12,0;St;gaeb;3929115.x83
+24;Anschluß je Ende;94,0;St;gaeb;3929115.x83
+25;Sprachverständlichkeitsmessung;1,0;Psch;gaeb;3929115.x83
+26;Messung aller Lautsprecher auf richtige Phasenlage und Impedanz;1,0;St;gaeb;3929115.x83
+27;Dokumentation ELA bestehend aus,;2,0;St;gaeb;3929115.x83
+28;Prüfgebühr für die Prüfung der Alamierungsanlage (ELA) durch verantwortlichen Sachverständigen (vSV) nach §16 SVBau;1,0;Psch;gaeb;3929115.x83
+1;Wetterfester Fullrange Aufbaulautsprecher mit Kompressionstreiber;2,0;St;gaeb;3929115.x83
+2;Digitalmixer (19 Inputs to Mix) mit Touchscreen, WLAN und Multitrack-Recording;1,0;St;gaeb;3929115.x83
+3;Wetterfester Fullrange Aufbaulautsprecher mit Kompressionstreiber;2,0;St;gaeb;3929115.x83
+4;"Lieferung eines stationären 19""-Systemracks mit einer Höhe von 12 Höheneinheiten (HE) zur sicheren Aufbewahrung eines Mischpults sowie weiterer Komponenten der Veranstaltungstechnik.";1,0;St;gaeb;3929115.x83
+5;"19"" / 1 HE Multicolor Racklight";1,0;St;gaeb;3929115.x83
+6;16-Kanal Patchbay;1,0;St;gaeb;3929115.x83
+7;Lieferung eines professionellen, digitalen Zweikanal-Funkempfängers für den Einsatz in Beschallungs-, Veranstaltungs-, Theater- und Konferenztechnik. Das Gerät muss eine zuverlässige, latenzarme Audioübertragung in Studio- und Live-Qualität gewährleisten und für den rackbasierten Betrieb geeignet se;1,0;St;gaeb;3929115.x83
+8;Lieferung eines professionellen, digitalen Handfunkmikrofonsenders für den Einsatz in Beschallungs-, Veranstaltungs-, Theater- und Konferenztechnik. Das Gerät muss eine zuverlässige, latenzarme Audioübertragung in Studio- oder Live-Qualität gewährleisten und für den Betrieb mit dem Digitalen 2-Kanal;2,0;St;gaeb;3929115.x83
+9;4 HE;1,0;St;gaeb;3929115.x83
+10;Konfigurierbarer 1200 W 4-Kanal-Leistungsverstärker mit integriertem DSP mit Powersharing Technologie zur Nutzung in fest installierten Anwendungen.;1,0;St;gaeb;3929115.x83
+11;Digitaler Signalprozessor (DSP);1,0;St;gaeb;3929115.x83
+12;mit zweipoligem beleuchtetem Schalter;1,0;St;gaeb;3929115.x83
+13;8 Steckplätze;1,0;St;gaeb;3929115.x83
+14;XLR-Patchkabel mit einer Länge von 0,5 m, ausgestattet mit beidseitigen 3-poligen XLR-Steckverbindern (male/female). Robuste, professionelle Ausführung für Audio- und Lichtanwendungen, geeignet für den zuverlässigen Einsatz im Studio- und Veranstaltungsbereich.;5,0;St;gaeb;3929115.x83
+15;XLR-Patchkabel mit einer Länge von 1,5 m, ausgestattet mit beidseitigen 3-poligen XLR-Steckverbindern (male/female). Robuste, professionelle Ausführung für Audio- und Lichtanwendungen, geeignet für den zuverlässigen Einsatz im Studio- und Veranstaltungsbereich.;5,0;St;gaeb;3929115.x83
+16;XLR-Kabel mit einer Länge von 10 m, ausgestattet mit beidseitigen 3-poligen XLR-Steckverbindern (male/female). Robuste, professionelle Ausführung für Audio- und Lichtanwendungen, geeignet für den zuverlässigen Einsatz im Studio- und Veranstaltungsbereich.;2,0;St;gaeb;3929115.x83
+17;Einmessen / Inbetriebnahme;1,0;psch;gaeb;3929115.x83
+18;Lieferung eines Laserprojektors für Konferenz- und Veranstaltungsräume, inklusive Deckenhalterung zur festen Installation.;1,0;St;gaeb;3929115.x83
+19;Leistungsbeschreibung:;1,0;St;gaeb;3929115.x83
+20;Leistungsbeschreibung:;1,0;St;gaeb;3929115.x83
+1;Thermischer Fusionsspleiß zum Verbinden;52,0;St;gaeb;3929115.x83
+2;LWL-Universalkabel, Euroklasse B2ca;90,0;m;gaeb;3929115.x83
+3;LWL-Universalkabel, Euroklasse B2ca;105,0;m;gaeb;3929115.x83
+4;LWL-Universalkabel, Euroklasse B2ca;50,0;m;gaeb;3929115.x83
+5;"LWL-Universalkabel ; Euroklasse B2ca";10,0;m;gaeb;3929115.x83
+6;"LWL-Universalkabel ; Euroklasse B2ca";30,0;m;gaeb;3929115.x83
+7;"LWL-Universalkabel ; Euroklasse B2ca";20,0;m;gaeb;3929115.x83
+8;LWL-Patchkabel, Multimode OM4, 50/125 µm, Duplex, halogenfrei/LSZH, Länge 2 m, Steckertyp beidseitig passend zu Patchfeld und aktiver Netzwerktechnik, z. B. LC-Duplex/LC-Duplex oder LC-Duplex/SC-Duplex.;6,0;St;gaeb;3929115.x83
+9;Meßprotokoll der Herstellerfirma;1,0;St;gaeb;3929115.x83
+10;Messen und Prüfen einer LWL-Strecke, wie zuvor beschrieben;24,0;St;gaeb;3929115.x83
+11;19 Zoll-Stand-Netzwerkschrank,;3,0;St;gaeb;3929115.x83
+12;19-Zoll-Frontplatte, 1 Höheneinheit,;8,0;St;gaeb;3929115.x83
+13;19-Zoll-Frontplatte, 1 Höheneinheit,;4,0;St;gaeb;3929115.x83
+14;19-Zoll-Frontplatte,1 Höheneinheit,;3,0;St;gaeb;3929115.x83
+15;19-Zoll-Frontplatte, 1 Höheneinheit aus Stahlblech,;8,0;St;gaeb;3929115.x83
+16;19-Zoll-Frontplatte, 1 Höheneinheit aus Stahlblech,;4,0;St;gaeb;3929115.x83
+17;LWL-Spleissbox ausziehbare zur Montage des LWL-Kabels, mit Zugentlastung des LWL-Kabels Verschraubung. Gehäuse 19 Zoll-Chassis, Vollmetall;3,0;St;gaeb;3929115.x83
+18;Erdungsschiene mit isolierten Stützen,;3,0;St;gaeb;3929115.x83
+19;Installationsschiene 230 V AC, mit Abzweigdose,;3,0;St;gaeb;3929115.x83
+20;19-Zoll-Frontplatte,;1,0;St;gaeb;3929115.x83
+21;19-Zoll-Frontplatte, 2 Höheneinheiten,;3,0;St;gaeb;3929115.x83
+22;Messen des Potentialausgleichs für einen;1,0;St;gaeb;3929115.x83
+23;Fachboden 1 HE,;1,0;St;gaeb;3929115.x83
+24;FTTH-Anschlussdose für 1 bis 4 Fasern,;1,0;St;gaeb;3929115.x83
+25;FTTH-Anschlussdose für 1 bis 4 Fasern,;2,0;St;gaeb;3929115.x83
+26;Datenanschlußdose RJ 45, 1 x 8polig,;15,0;St;gaeb;3929115.x83
+27;Datenanschlußdose RJ 45, 1 x 8polig,;62,0;St;gaeb;3929115.x83
+28;Datenanschlußdose RJ 45, 2 x 8polig,;72,0;St;gaeb;3929115.x83
+29;Patch- und Anschlusskabel 8-adrig, geschirmt, mit geschirmten RJ45-Stecker, einer Umspritzung und einer Knickschutztülle in der Kabelmantelfarbe sowie Rastnasenschutz auf beiden Seiten. Kabeltyp Kategorie 7A, bis 10 Gbit/s;120,0;St;gaeb;3929115.x83
+30;Patch- und Anschlusskabel 8-adrig, geschirmt, mit geschirmten RJ45-Stecker, einer Umspritzung und einer Knickschutztülle in der Kabelmantelfarbe sowie Rastnasenschutz auf beiden Seiten. Kabeltyp Kategorie 7A bis 10 Gbit/s;46,0;St;gaeb;3929115.x83
+31;RJ45-Modul geschirmt, Kategorie 6/EA Modul KS-T 1/8 werkzeuglos, nach IEC 60603-7-5 für die Kategorie 6 bis 250 MHz, die Übertragung von 10-Gigabit Ethernet gemäss IEEE 802.3an geeignet. Werkzeuglose Adernkontaktierung durch zwei integrierte bewegliche Gehäuseflügel,;2,0;St;gaeb;3929115.x83
+32;Datenkabel S-FTP 4x2xAWG22/1, Kat 7A, bis 1000 MHz,;1047,0;m;gaeb;3929115.x83
+33;Datenkabel S-FTP 4x2xAWG22/1, Kat 7A, bis 1000 MHz,;1254,0;m;gaeb;3929115.x83
+34;Datenkabel S-FTP 4x2xAWG22/1, Kat 7A, bis 1000 MHz,;177,244;m;gaeb;3929115.x83
+35;Datenkabel S-FTP 4x2xAWG22/1, Kat 7A, bis 1000 MHz,;1798,313;m;gaeb;3929115.x83
+36;Duplex-Datenkabel S-FTP 2x(4x2xAWG22/1), Kat 7A, bis 1000 MHz,;1005,0;m;gaeb;3929115.x83
+37;Duplex-Datenkabel S-FTP 2(4x2xAWG22/1), Kat 7A, bis 1000 MHz, gemäß Vorbemerkungen;1112,0;m;gaeb;3929115.x83
+38;Duplex-Datenkabel S-FTP 4x2xAWG22/1, Kat 7A, bis 1000 MHz,;207,0;m;gaeb;3929115.x83
+39;Duplex-Datenkabel S-FTP 2x(4x2xAWG22/1), Kat 7A, bis 1000 MHz,;1719,394;m;gaeb;3929115.x83
+40;Kabelverbinder für 4-paarige Datenkabel der Kat 7A.;8,0;St;gaeb;3929115.x83
+41;Auflegen von Datenkabel;80,0;St;gaeb;3929115.x83
+42;Auflegen von Duplex-Datenkabel S-FTP 2x(4x2xAWG22/1),;75,0;St;gaeb;3929115.x83
+43;Messen und Prüfen einer Kupferkabel-Strecke;200,0;St;gaeb;3929115.x83
+44;Dokumentation des Kupferkabelnetz;1,0;St;gaeb;3929115.x83
+45;Beschriftung aller passiven Komponenten wie zuvor;1,0;St;gaeb;3929115.x83
+46;Bestandsunterlagen für das Datenübertragungsnetzes;1,0;St;gaeb;3929115.x83
+1;Potentialausgleichsschiene;4,0;St;gaeb;3929115.x83
+2;Potentialausgleichskasten;1,0;St;gaeb;3929115.x83
+3;Überbrückungsbauteil nach DIN EN 50164,;60,0;St;gaeb;3929115.x83
+4;Erdungsbandrohrschelle VDE 0190;32,0;St;gaeb;3929115.x83
+5;Erdungsbandrohrschelle VDE 0190;24,0;St;gaeb;3929115.x83
+6;Erdungsbandrohrschelle VDE 0190 aus nichtrostendem;10,0;St;gaeb;3929115.x83
+7;Leitung DIN VDE 0250-204 NYM-J;5,0;m;gaeb;3929115.x83
+8;Leitung DIN VDE 0250-204 NYM-J;5,0;m;gaeb;3929115.x83
+9;Leitung DIN VDE 0250-204 NYM-J;5,0;m;gaeb;3929115.x83
+10;Leitung DIN VDE 0250-204 NYM-J;10,0;m;gaeb;3929115.x83
+11;Leitung DIN VDE 0250-204 NYM-J;5,0;m;gaeb;3929115.x83
+12;Leitung DIN VDE 0250-204 NYM-J;45,0;m;gaeb;3929115.x83
+13;Leitung DIN VDE 0250-204 NYM-J;5,0;m;gaeb;3929115.x83
+14;Leitung DIN VDE 0250-204 NYM-J;5,0;m;gaeb;3929115.x83
+15;Leitung DIN VDE 0250-204 NYM-J;5,0;m;gaeb;3929115.x83
+16;Leitung DIN VDE 0250-204 NYM-J;5,0;m;gaeb;3929115.x83
+17;Leitung DIN VDE 0250-204 NYM-J;5,0;m;gaeb;3929115.x83
+18;Anschließen von Kabel/Leitungen;20,0;St;gaeb;3929115.x83
+19;Anschließen von Kabel/Leitungen;25,0;St;gaeb;3929115.x83
+20;Anschließen von Kabel/Leitungen;20,0;St;gaeb;3929115.x83
+21;Messen und Prüfen;1,0;St;gaeb;3929115.x83
+1;Baustelle einrichten, Vorhalten der Baustelleneinrichtung und Baustelle räumen, für Leistungen des AN. Eingeschlossen sind die für die vertraglichen Leistungen erforderlichen Aufenthalts- und Lagerräume, sowie alle für den Transport der Bauteile an die jeweilige Einbaustelle erforderlichen Hebezeuge;1,0;Psch;gaeb;3929115.x83
+2;Endverteiler 22kVA mit Anbaugerätestecker 32A als Phasenwender, RCD Typ B und RCD Typ A, 9 LS, 3 CEE-Abgänge 16-32A und 6 Schukos;2,0;St;gaeb;3929115.x83
+3;Endverteiler Miete pro Monat;14,0;St;gaeb;3929115.x83
+4;Endverteiler 22kVA mit Anbaugerätestecker 32A als Phasenwender, RCD Typ B und RCD Typ A, 9 LS, 4 CEE-Abgang 16-32A und 6 Schukos;4,0;St;gaeb;3929115.x83
+5;Endverteiler Miete pro Monat;28,0;St;gaeb;3929115.x83
+6;Gummischlauchleitung 5 x 70;10,0;m;gaeb;3929115.x83
+7;Gummischlauchleitung 5 x 35;10,0;m;gaeb;3929115.x83
+8;Gummischlauchleitung 5 x 16;60,0;m;gaeb;3929115.x83
+9;Gummischlauchleitung 5 x 6;40,0;m;gaeb;3929115.x83
+10;CEE-Stecker oder Kupplung, 63 A, mit betriebsfertigem;1,0;St;gaeb;3929115.x83
+11;CEE-Stecker oder Kupplung, 32 A, mit betriebsfertigem;6,0;St;gaeb;3929115.x83
+12;CEE-Stecker oder Kupplung, 16 A, mit betriebsfertigem;1,0;St;gaeb;3929115.x83
+13;Betriebserde für Baustromversorgung;1,0;St;gaeb;3929115.x83
+14;Erdleitung NYY-J 1 x 16 qmm;60,0;m;gaeb;3929115.x83
+15;Stundenlohnarbeiten Umsetzen von Baustromverteilern;4,0;St;gaeb;3929115.x83
+16;Allgemeine Beleuchtung der vorgenannten Position über;12,0;mt;gaeb;3929115.x83
+17;LED Feuchtraumleuchte 25 Watt mit Wanne oder Lampenschutzrohr, Schutzart IP 54;2,0;St;gaeb;3929115.x83
+18;LED Fluter mit Sensor 20W - 2200 Lumen - 6500K;2,0;St;gaeb;3929115.x83
+19;FlexLED Lichtband;12,0;St;gaeb;3929115.x83
+20;Verbindungsdose DIN VDE 0606 aus Isolierstoff,;8,0;St;gaeb;3929115.x83
+21;ISO-Wandanbau-Kleinverteiler IP 54 bestückt mit:;1,0;St;gaeb;3929115.x83
+22;NYY-J 5 x 1,5 qmm Cu.;80,0;m;gaeb;3929115.x83
+23;NYY-J 3 x 1.5 qmm Cu.;60,0;m;gaeb;3929115.x83
+24;Umsetzen der Baustellenbeleuchtung;8,0;St;gaeb;3929115.x83
+1;Freischaltung Teilabschnitt 1.OG;1,0;psch;gaeb;3929115.x83
+2;Demontage Entsorgung Installationsanlagen;1,0;psch;gaeb;3929115.x83
+3;Öffnung/Schließen bestehender OWA Revisionsdecke für Kabelverlegung.;3,0;m²;gaeb;3929115.x83
+4;Wippschalter DIN EN 60669-1;6,0;St;gaeb;3929115.x83
+5;Niederspannungsinstallation (Wippschalter) entsprechend dem Bestand auswählen und bemustern.;1,0;psch;gaeb;3929115.x83
+6;Gerätedose DIN VDE 0606 und DIN 49073,;24,0;St;gaeb;3929115.x83
+7;Wandanbaulautsprecher 100V 6W;2,0;St;gaeb;3929115.x83
+8;Schutzkontaktsteckdose DIN VDE 0620, 16 A, 250 V AC,;12,0;St;gaeb;3929115.x83
+9;Datenanschlußdose RJ 45, 1 x 8polig,;2,0;St;gaeb;3929115.x83
+10;Datenkabel S-FTP 4x2xAWG22/1, Kat 7, bis 1000 MHz,;4,0;m;gaeb;3929115.x83
+11;Datenkabel S-FTP 4x2xAWG22/1, Kat 7, bis 1000 MHz,;16,0;m;gaeb;3929115.x83
+12;Datenkabel S-FTP 4x2xAWG22/1, Kat 7, bis 600 MHz,;40,0;m;gaeb;3929115.x83
+13;Installationskabel DIN VDE 0815;50,0;m;gaeb;3929115.x83
+14;Installationsleitung DIN VDE 0250-204;36,0;m;gaeb;3929115.x83
+15;Installationsleitung DIN VDE 0250-204;100,0;m;gaeb;3929115.x83
+16;Installationsleitung DIN VDE 0250-204;25,0;m;gaeb;3929115.x83
+17;Anschlussarbeiten Bestandsverteiler;1,0;psch;gaeb;3929115.x83
+18;Dokumentation in Bestandsunterlagen;1,0;psch;gaeb;3929115.x83
+19;Brandschutzabschottung an Kabel-/Leitungsanlagen,;2,0;St;gaeb;3929115.x83
+1;Leuchte Nr. 10;8,0;St;gaeb;3929115.x83
+2;Leuchte Nr. 11;23,0;St;gaeb;3929115.x83
+3;Leuchte Nr. 31;2,0;St;gaeb;3929115.x83
+4;LED-Außen-Langfeldleuchte / Feuchtraum-Wannenleuchte zur Beleuchtung der provisorischen Gerüstfluchttreppe, geeignet für den Einsatz in ungeschützten Außenbereichen.;3,0;St;gaeb;3929115.x83
+5;NYY-J 3x1,5qmm- Erdkabel 0,6 / 1 KV, VDE-geprüft;30,0;m;gaeb;3929115.x83
+6;NYY-J 5x2,5qmm- Erdkabel 0,6 / 1 KV, VDE-geprüft;200,0;m;gaeb;3929115.x83
+7;Überspannungs-Ableiter;4,0;St;gaeb;3929115.x83
+8;NYY-J 5x4qmm - Erdkabel 0,6 / 1 KV, VDE-geprüft;10,0;m;gaeb;3929115.x83
+9;Kabelschutzrohr flexibel EN 110, außen gewellt,;10,0;m;gaeb;3929115.x83
+10;Ringraumdichtung HRD als geteilter;2,0;St;gaeb;3929115.x83
+11;Individuelle Ringraumdichtung;2,0;St;gaeb;3929115.x83
+12;Stahldraht verzinkt min D=1,5 mm in zuvor beschriebene;10,0;m;gaeb;3929115.x83
+13;Trassenwarnband aus PE,;10,0;m;gaeb;3929115.x83
+14;Grabenaushub für Kabeltrasse profilgerecht ab Oberkante Gelände ausheben, seitlich lagern, später wieder  verfüllen und verdichten.;8,0;m;gaeb;3929115.x83
+15;Grabenaushub für Kabeltrasse profilgerecht ab Oberkante Gelände ausheben, seitlich lagern, später wieder  verfüllen und verdichten.;8,0;m;gaeb;3929115.x83
+16;Zulage zu vorbeschriebener Bodenbewegung;0,5;m³;gaeb;3929115.x83
+17;Liefern und Einbauen von Mainsand Körnung 0-2 mm, als Einbettung der Zugrohre und Kabelzugschächte im Kabelgraben, ca. 15 cm hoch.;0,5;m³;gaeb;3929115.x83
+18;Entsorgung Ausbhubmaterial nach LAGA;0,5;to;gaeb;3929115.x83
+19;Installationskleinverteiler aus Polycarbonat (UV-beständig), nach DIN EN 60670-24, nach DIN 43871. Zum Einbau von Geräten bis 63 A nach Maßnorm DIN 43 880 mit 70 mm oder 85 mm Einbautiefe, Bemessungsspannung AC 400 V/50 Hz. Bestehend aus Kunststoffunterteil mit Hutprofilschiene aus verzinktem Stahlb;2,0;St;gaeb;3929115.x83
+20;Leuchte Nr. 13;6,0;St;gaeb;3929115.x83
+21;Wippschalter DIN EN 60669-1 (VDE 0632-1) einpolig, Aus/Wechsel, 10 A, 250 V AC, in Aufputzausführung, Schutzart IP 44 DIN EN 60529 (VDE 0470-1).;4,0;St;gaeb;3929115.x83
+22;Verbindungsdose DIN VDE 0606 aus Isolierstoff,;10,0;St;gaeb;3929115.x83
+23;Verbindungsdose DIN VDE 0606 aus Isolierstoff,;2,0;St;gaeb;3929115.x83
+24;1-fach Schutzkontaktsteckdose DIN VDE 0620-1 (VDE 0620-1), 16 A, 250 V AC, in Aufputzausführung, Schutzart IP 44 DIN EN 60529 (VDE 0470-1).;4,0;St;gaeb;3929115.x83
+25;CEE-Steckdose DIN EN 60309-2 (VDE 0623-2), 5-polig, Bemessungsbetriebsspannung 230/400 V AC, 16 A, u.P. einschl. Gerätedose, Zentralplatte und anteiligem Abdeckrahmen, Schutzart IP 44 DIN EN 60529 (VDE 0470-1), Einsatz mit Schrauben befestigen.;3,0;St;gaeb;3929115.x83
+1;Autokran mit Teleskopausleger für Dacheinbringung PV-Anlage;1,0;St;gaeb;3929115.x83
+2;PV Module 450 Wp;200,0;St;gaeb;3929115.x83
+3;String-Wechselrichter für Photovoltaikanlage, 3-phasig, AC-Bemessungsleistung ca. 125 kW / 125 kVA, geeignet für PV-Generatorleistung ca. 87 kWp, mit mindestens 12 unabhängigen MPP-Trackern und mindestens 24 Stringeingängen, DC-Lasttrennschalter integriert, DC-Überspannungsschutz Typ 1+2 und AC-Über;1,0;St;gaeb;3929115.x83
+4;Montageschiene aus Aluminium zur Aufnahme von Unterkonstruktionen auf Flachdächern.;111,0;St;gaeb;3929115.x83
+5;Aufständerungs- bzw. Systemelement zur Ausbildung der Modulneigung innerhalb eines ballastierten, aerodynamischen Flachdach-Montagesystems.;488,0;St;gaeb;3929115.x83
+6;Modulauflager- bzw. Systemelement als Bestandteil des ballastierten, aerodynamischen Flachdach-Montagesystems.;488,0;St;gaeb;3929115.x83
+7;Auflagepad zum Schutz der Dachhaut sowie zur Entkopplung und Lastverteilung der Systemkräfte zwischen Montagesystem und Dachfläche.;558,0;St;gaeb;3929115.x83
+8;Montageschiene aus Aluminium zur Aufnahme von Unterkonstruktionen bei Flachdachsystemen.;40,0;St;gaeb;3929115.x83
+9;Verbindungselement zur rechtwinkligen Kreuzverbindung von Montageschienen innerhalb eines Unterkonstruktionssystems.;220,0;St;gaeb;3929115.x83
+10;Kabelhalter bzw. Kabelclip mit Aufsteck- oder Clipbefestigung zur ordentlichen und dauerhaften Führung von PV-Leitungen am Montagesystem.;244,0;St;gaeb;3929115.x83
+11;Modulklemmen zur Befestigung gerahmter PV-Module am angebotenen Flachdach-Montagesystem.;973,0;St;gaeb;3929115.x83
+12;Befestigungselemente zur Aufnahme von Ballaststeinen auf Montageschienen von Flachdachsystemen.;158,0;St;gaeb;3929115.x83
+13;Zusatzballast aus Betonplatten, Betonsteinen oder gleichwertigen geeigneten Ballastelementen für ballastiertes, aerodynamisches PV-Flachdach-Montagesystem liefern, auf die Dachfläche transportieren, verteilen, einlegen bzw. befestigen und gegen Verschieben sichern.;443,0;kg;gaeb;3929115.x83
+14;Ballastiertes Wechselrichtergestell zur dachdurchdringungsfreien Montage eines PV-Stringwechselrichters;1,0;St;gaeb;3929115.x83
+15;Steuergerät & Überwachungsportal;1,0;St;gaeb;3929115.x83
+16;Funkrundsteuerung (FRE);1,0;St;gaeb;3929115.x83
+17;Verbindung Potentialausgleich;130,0;m;gaeb;3929115.x83
+18;Potentialausgleichsschiene NIRO 12 Anschlüsse;1,0;St;gaeb;3929115.x83
+19;Feuerwehr-Abschaltelement zur externen Abschaltung der Photovoltaikanlage im Einsatzfall, ausgeführt als Unterputz-Bedienelement mit Schlüsselschalter und optischer Zustandsanzeige, zur Ansteuerung der herstellerseitig freigegebenen Schnell-Stopp-Schnittstelle des PV-Wechselrichters.;1,0;St;gaeb;3929115.x83
+20;DC-Kabel;820,0;m;gaeb;3929115.x83
+21;PV- Kupplungsbuchse;12,0;St;gaeb;3929115.x83
+22;PV- Kupplungsstecker;12,0;St;gaeb;3929115.x83
+23;DC Anschlussarbeiten;12,0;St;gaeb;3929115.x83
+24;Kabel DIN VDE 0276-603 (VDE 0276-603) NYY-J 5 x 70 RM, Cu-Zahl 3360;80,0;m;gaeb;3929115.x83
+25;Werkstatt- und Montageplanung;1,0;psch;gaeb;3929115.x83
+26;Erstellung Mess- und Prüfprotokolle;1,0;St;gaeb;3929115.x83
+27;Einholung einer Windlast - Statikberechnung zur;1,0;St;gaeb;3929115.x83
+28;Bestandsdokumentation der gesamten installierten PV-Anlage;1,0;St;gaeb;3929115.x83
+29;Anmeldung der PV-Anlage beim;1,0;St;gaeb;3929115.x83
+1;Trennstück DIN EN 50164-1, Klasse H für hohe Belastung, aus nichtrostendem Stahl, Werkstoff-Nr. 1.4301, Klemmbereich Rd 8-10/Rd 8-10.;20,0;St;gaeb;3929115.x83
+2;Nummernschild DIN 48 821.;20,0;St;gaeb;3929115.x83
+3;Fangleitung DIN EN 50164-2, aus Aluminium, Rd 8,;55,0;m;gaeb;3929115.x83
+4;Überbrückungslaschen zum Anschließen und Verbinden;15,0;St;gaeb;3929115.x83
+5;Dachleitungshalter zur Befestigung von Rundleitern und Bändern (mit Adapter) auf Flachdächern.;25,0;St;gaeb;3929115.x83
+6;Überbrückungsbänd zum Verbinden von Metallverkleidungen oder als Dehnungsausgleichsstück, zum Nieten oder Schrauben, mit Mittelbohrung für Kreuzungspunkte;10,0;St;gaeb;3929115.x83
+7;Fangstangen freistehend mit Dreibeinstativ;5,0;St;gaeb;3929115.x83
+8;Mehrzweck-Verbindungsklemme;30,0;St;gaeb;3929115.x83
+9;Ableitung als Runddraht mit Kunststoff-Mantel;5,0;St;gaeb;3929115.x83
+10;Anschlussklemmen an Stahlkonstruktionen;4,0;St;gaeb;3929115.x83
+11;Anschlüsse für Dachrinnen, Traufbleche usw.;15,0;St;gaeb;3929115.x83
+12;Anschlüsse für metallene Dachaufbauten;5,0;St;gaeb;3929115.x83
+13;Anschlüsse für Regenfallrohre;15,0;St;gaeb;3929115.x83
+14;Messen und Prüfen der gesamten installierten Blitzschutzanlage,;1,0;St;gaeb;3929115.x83
+15;Dokumentation der Blitzschutzanlage;1,0;St;gaeb;3929115.x83
+16;Prüfgebühr für die Prüfung der Blitzschutzanlage durch Sachkundigen;1,0;Psch;gaeb;3929115.x83
+1;Besenrein übergebene Rohbodenflächen mit Industriestaubsauger absaugen als Vorbereitung für die Rohbodenversiegelung /-anstrich.;9,2;qm;gaeb;3929115.x83
+2;Doppelbodensystem verschraubt;9,2;qm;gaeb;3929115.x83
+3;Zulage für das Anarbeiten des Doppelbodens an aufgehenden Bauteilen bei geraden Anschnitten sowie das Einlegen eines Wandanschlussbandes. Die Plattenanschnitte werden versiegelt.;8,0;m;gaeb;3929115.x83
+4;Zulage für die Herstellung von Ausschnitten bis 10/10cm im Doppelbodensystem auf der Baustelle.;7,0;St;gaeb;3929115.x83
+5;Wandwinkel und Sockelleisten aus Weich-PVC,;13,0;m;gaeb;3929115.x83
+6;Verlegen einer Schutzabdeckung für Doppelböden;9,2;qm;gaeb;3929115.x83
+7;Reserveplatten für zu beschriebenen Doppelbodensystem;2,0;St;gaeb;3929115.x83
+8;Saugheber mit zwei Saugnäpfen für zuvor beschriebene Doppelbodenplatten.;1,0;St;gaeb;3929115.x83

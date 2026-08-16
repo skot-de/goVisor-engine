@@ -2,7 +2,7 @@
 import { createClient } from "./client";
 import type { buildProfile } from "@/lib/profileEngine";
 
-type Profile = ReturnType<typeof buildProfile> & {
+export type Profile = ReturnType<typeof buildProfile> & {
   identityId?: string; confirmedEntities?: string[]; branche?: string;
 };
 

@@ -18,7 +18,25 @@ import { AppRail, AppTop } from "@/components/explorer/Rail";
 import "../../explorer.css";
 import "./lauf.css";
 
+/** Ertragsbericht aus `govisor/ertrag.py`. Bewusst locker typisiert: der Bericht waechst
+ *  mit jeder neuen Kennzahl, und eine ANZEIGE darf nicht am naechsten Feld zerbrechen. */
+type Ertrag = {
+  stand?: string;
+  trichter?: { stufe: string; n: number | null; pct: number | null }[];
+  auslesen?: { lesbar_pct?: number | null; dateien?: number | null };
+  belegt_pct?: Record<string, number | null>;
+  blockiert_nach_grund?: Record<string, number>;
+  veraenderung?: Record<string, number>;
+};
+
+type Schritt = {
+  name: string; zeit: string | null; dauerSek: number | null;
+  normalSek: number | null; zustand: "fertig" | "laeuft" | "offen";
+};
+
 type Antwort = {
+  ertrag?: Ertrag | null;
+  schritte?: Schritt[];
   erzeugt: string;
   lauf: {
     datum: string | null;
@@ -57,6 +75,14 @@ function dauer(sek: number | null): string {
   return h ? `${h} h ${m} min` : `${m} min`;
 }
 
+/** Sekunden lesbar. Unter einer Minute bleibt es bei Sekunden — „0 min" fuer einen
+ *  Schritt, der 12 s brauchte, liest sich wie ein Fehler. */
+function minuten(sek: number): string {
+  if (sek < 60) return `${sek} s`;
+  if (sek < 5400) return `${Math.round(sek / 60)} min`;
+  return `${(sek / 3600).toFixed(1).replace(".", ",")} h`;
+}
+
 export default function LaufPage() {
   const [d, setD] = useState<Antwort | null>(null);
   const [fehler, setFehler] = useState<string | null>(null);
@@ -75,6 +101,9 @@ export default function LaufPage() {
     return () => clearInterval(t);
   }, []);
 
+  const ertrag = d?.ertrag ?? null;
+  const schritte = d?.schritte ?? [];
+  const [alleSchritte, setAlleSchritte] = useState(false);
   const ampel = d ? AMPEL[d.lauf.ergebnis] : null;
   // Der Lauf ist fuer 13:00 und 22:00 eingeplant — aelter als 14 h heisst, einer ist
   // ausgefallen, selbst wenn der letzte sauber war.
@@ -214,6 +243,115 @@ export default function LaufPage() {
                   <ul className="lauf-fehlerliste">
                     {d.vorLog.zeilen.map((z, i) => <li key={i}>{z}</li>)}
                   </ul>
+                </section>
+              ) : null}
+
+              {/* ── ERTRAG ─────────────────────────────────────────────────────────
+                  Der Trichter steht ZUERST und als groesstes Element. Er beantwortet die
+                  einzige Frage, an der sich entscheidet, ob das Produkt traegt: wie viele
+                  offene Ausschreibungen koennen wir ueberhaupt inhaltlich beurteilen?
+                  Gemessen 2026-08-16 sind das 21 % — die Auslesequalitaet liegt bei 92 %,
+                  aber an vier von fuenf Vergaben kommen wir gar nicht heran. Die beiden
+                  Zahlen einzeln sehen harmlos aus; nebeneinander zeigen sie die Schwaeche. */}
+              {ertrag?.trichter?.length ? (
+                <section className="lauf-karte">
+                  <div className="lauf-kopf">
+                    <b>Ertrag</b>
+                    <span className="lauf-neben">
+                      Stand {(ertrag.stand || "").replace("T", " ").slice(0, 16)}
+                    </span>
+                  </div>
+
+                  <ol className="ert-trichter">
+                    {ertrag.trichter.map((s) => {
+                      const d2 = ertrag.veraenderung?.[`trichter.${s.stufe}`];
+                      return (
+                        <li key={s.stufe}>
+                          <span className="ert-t-name">{s.stufe}</span>
+                          <span className="ert-t-bahn">
+                            <span className="ert-t-fuell" style={{ width: `${s.pct ?? 0}%` }} />
+                          </span>
+                          <span className="ert-t-n">{(s.n ?? 0).toLocaleString("de-DE")}</span>
+                          <span className="ert-t-p">{s.pct != null ? `${s.pct} %` : "—"}</span>
+                          {/* Veraenderung nur zeigen, wenn es eine gibt. Ein ewiges „±0"
+                              trainiert das Auge, die Spalte zu ueberspringen. */}
+                          <span className={`ert-t-d ${(d2 ?? 0) > 0 ? "auf" : (d2 ?? 0) < 0 ? "ab" : ""}`}>
+                            {d2 ? (d2 > 0 ? `+${d2}` : `${d2}`) : ""}
+                          </span>
+                        </li>
+                      );
+                    })}
+                  </ol>
+
+                  <div className="ert-zeilen">
+                    <div>
+                      <span className="ert-k">Dateien lesbar</span>
+                      <span className="ert-v">{ertrag.auslesen?.lesbar_pct ?? "—"} %</span>
+                      <span className="ert-n">
+                        von {(ertrag.auslesen?.dateien ?? 0).toLocaleString("de-DE")}
+                      </span>
+                    </div>
+                    {Object.entries(ertrag.belegt_pct || {}).map(([k, v]) => (
+                      <div key={k}>
+                        <span className="ert-k">{k} belegt</span>
+                        <span className="ert-v">{v ?? "—"} %</span>
+                      </div>
+                    ))}
+                  </div>
+
+                  {Object.keys(ertrag.blockiert_nach_grund || {}).length ? (
+                    <p className="ert-block">
+                      <b>Blockiert:</b>{" "}
+                      {Object.entries(ertrag.blockiert_nach_grund ?? {}).map(([g, n], i) => (
+                        <span key={g}>{i ? " · " : ""}{g} {(n as number).toLocaleString("de-DE")}</span>
+                      ))}
+                      <em>— Vorgänge, an deren Unterlagen wir ohne Zugang nicht herankommen.</em>
+                    </p>
+                  ) : null}
+                </section>
+              ) : null}
+
+              {/* ── WO STEHT DER LAUF ─────────────────────────────────────────────
+                  Der Balken allein sagt „64 von 64" und damit fast nichts. Diese Liste
+                  beantwortet die eigentliche Frage: WELCHER Schritt laeuft, seit wann,
+                  und was kommt noch. Die Normaldauer daneben stammt aus dem letzten
+                  vollstaendigen Lauf — „subreport dauert normal 88 min" ist eine
+                  Auskunft, „noch 3 h" ist eine Zahl. */}
+              {schritte.length ? (
+                <section className="lauf-karte">
+                  <div className="lauf-kopf">
+                    <b>Schritte</b>
+                    <span className="lauf-neben">
+                      {schritte.filter((x) => x.zustand === "fertig").length} von {schritte.length}
+                      {schritte.some((x) => x.zustand === "offen")
+                        ? "" : " · keine Vergleichsdaten für Offenes"}
+                    </span>
+                  </div>
+                  <ol className="schrittliste">
+                    {(alleSchritte ? schritte : schritte.filter(
+                        (x, i) => x.zustand !== "fertig" || i >= schritte.length - 40))
+                      .map((x, i) => (
+                      <li key={`${x.name}-${i}`} className={`sl-${x.zustand}`}>
+                        <span className="sl-mark" aria-hidden="true" />
+                        <span className="sl-zeit">{x.zeit || ""}</span>
+                        <span className="sl-name">{x.name}</span>
+                        <span className="sl-dauer">
+                          {x.dauerSek != null ? minuten(x.dauerSek) : ""}
+                        </span>
+                        {/* Normaldauer nur bei dem, was noch aussteht oder gerade laeuft —
+                            bei Erledigtem steht die ECHTE Dauer daneben und ein Vergleich
+                            waere Beiwerk. */}
+                        <span className="sl-normal">
+                          {x.zustand !== "fertig" && x.normalSek ? `normal ${minuten(x.normalSek)}` : ""}
+                        </span>
+                      </li>
+                    ))}
+                  </ol>
+                  {schritte.length > 40 ? (
+                    <button className="sl-mehr" onClick={() => setAlleSchritte((v) => !v)}>
+                      {alleSchritte ? "weniger zeigen" : `alle ${schritte.length} Schritte zeigen`}
+                    </button>
+                  ) : null}
                 </section>
               ) : null}
 

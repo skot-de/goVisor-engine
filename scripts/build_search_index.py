@@ -93,9 +93,23 @@ def db_url() -> str:
     return f"postgresql://postgres:{pw}@db.{ref}.supabase.co:5432/postgres"
 
 
+def _psql_pfad() -> str:
+    """`psql`-Pfad — NICHT der blosse Name.
+
+    Am 2026-08-16 fielen zwei Tageslauf-Schritte mit `FileNotFoundError: 'psql'` aus. Das
+    Programm ist installiert (`/opt/homebrew/bin`), aber der PATH, den launchd einem
+    Agenten gibt, kennt Homebrew nicht. Aus dem Terminal lief alles — der Fehler tritt nur
+    im geplanten Lauf auf, also dort, wo niemand zusieht.
+    """
+    import sys as _sys, pathlib as _pl
+    _sys.path.insert(0, str(_pl.Path(__file__).resolve().parent.parent))
+    from govisor.psql import psql_oder_fehler
+    return psql_oder_fehler()
+
+
 def psql(uri: str, sql: str, stop_on_error=True) -> str:
     env = {**os.environ, "PGCONNECT_TIMEOUT": "20"}
-    cmd = ["psql", uri, "-P", "pager=off"]
+    cmd = [_psql_pfad(), uri, "-P", "pager=off"]
     if stop_on_error:
         cmd += ["-v", "ON_ERROR_STOP=1"]
     out = subprocess.run(cmd, input=sql, capture_output=True, text=True, env=env)

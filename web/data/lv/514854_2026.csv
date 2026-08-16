@@ -1,0 +1,101 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+1;Umwehrungen / Absturzsicherungen aller Art,;285,0;m;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+2;wie vor, jedoch Umwehrungen / Absturzsicherungen als temporäres Treppengeländer, einschl. Handlauf;80,0;m;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+3;Erstellen einer Werk- /Werkstattplanung und Statische Nachweise,;1,0;psch;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+4;Die Windsogberechnung für Holzwände und zugehörige Dachkonstruktionen ist ein wesentlicher Bestandteil des baulichen Holzschutzes und der Standsicherheit, insbesondere nach DIN EN 1991-1-4. Sie;1,0;psch;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+5;Mit dieser Position zur Baustelleneinrichtung des AN sind alle über die Bestimmungen nach ATV DIN 18 299, hinausgehenden Leistungen pauschal abgegolten insbesondere für folgend genannte Leistungen:;1,0;psch;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+6;Witterungsschutz mit Plane aus Kunststoff mit Gewebeeinlage;2550,0;m²;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+1;Schallschutzauflager;50,0;m²;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+2;Decke CLT 140mm 5-lagig (5s);265,0;m²;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+3;Decke CLT 160mm 5-lagig (5s);175,0;m²;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+4;Decke CLT 120mm 5-lagig (5s);105,0;m²;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+5;Decke CLT versetzen über 3,2m Holz;545,0;m²;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+6;Decke ausschneiden/anarbeiten bis DN 300mm;20,0;St;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+7;Decke CLT Aussparung/Durchbr.rechteckig bis 1m2;15,0;St;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+8;Decke CLT Aussparung/Durchbr.rund b.100mm;25,0;St;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+9;Decke CLT, schließen Aussparung/Durchbruch;15,0;St;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+10;Decke CLT schließen Aussparung/Durchbr.rund b.300mm;10,0;St;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+11;Rippenplattendecke BSH;1250,0;m²;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+12;Rippenplattendecke wie vor, jedoch Rippenquerschnitt bxh 20 cm x 16 cm;155,0;m²;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+13;Rippenplattendecke wie vor, jedoch Rippenquerschnitt bxh 20 cm x 22 cm.;975,0;m²;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+14;Rippenplattendecke wie vor, jedoch Rippenquerschnitt bxh 22 cm x 24 cm;215,0;m²;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+15;Rippenplattendecke wie vor, jedoch Rippenquerschnitt bxh 32 cm x 44 cm;1025,0;m²;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+16;Rippenpl.versetzen ü.3,2m Beton;1970,0;m²;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+17;Rippendeckenplatte, Untergrund Holzdecke,;1640,0;m²;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+18;Rippenpl. ausschn./anarb.b.DN 300mm;30,0;St;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+19;Rippenpl. ausschn./anarb.b.0,1m2;20,0;St;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+20;Rippenl.ausschn./anarb.ü.0,1-0,5m2;15,0;St;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+21;Decke Rippendecke, schließen Aussparung/Durchbruch;15,0;St;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+22;Decke, Rippendecke schließen Aussparung/Durchbruch rund bis 300 mm;10,0;St;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+23;Seitliche Abschlüsse (Stirnseite Decke) ausbilden mittels Randbohle, Ausführung gehobelt,;150,0;m;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+24;Mineralwolldämmung -Anschluss Holzwand an Stahlbetonwand Trennfugenplatte aus Steinwolle nach DIN EN 13162. Mit RAL-Gütezeichen der Gütegemeinschaft Mineralwolle e.V. (freigezeichnet gemäß deutscher Gefahrstoffverordnung und europäischer Verordnung Nr. 1272/2008 (CLP-VO) Nota Q).;20,0;m²;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+25;Brandbeschichtung als lösungsmittelfreie Beschichtung auf Dispersionsbasis mit endotherm wirkenden Pigmentanteilen.;120,0;m²;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+26;Lieferung Stahlträger S235, warmgewalzt,;10,0;t;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+27;Stahlträger der Vorposition montieren, L 150x150x12 mm;278,0;m;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+28;Konstruktionsvollholz für den nicht sichtbaren Bereich.;1,5;m³;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+29;Abbund KSV,Unterzüge unter Decken 2.-3.OG;100,0;m;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+30;BS-Holz, BauBuche, BSH GL28h;100,0;m³;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+31;Zulage zur Vorpos. für Ausführung GL32H;55,0;m³;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+32;Abbund, BS-Holz, Unterzüge unter Decke 3.OG;250,0;m;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+33;Abbund, BS-Holz, Stützen;1110,0;m;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+34;Unterzüge/ Haupträger aus Furnierschichtholz gemäß allgemein bauaufsichtlicher Zulassung,;124,0;m³;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+35;Unterzug aus Furnierschichtholz gemäß allgemein bauaufsichtlicher Zulassung.;750,0;m;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+36;Auswechslung aus  Furnierschichtholz gemäß allgemein bauaufsichtlicher Zulassung,;150,0;m;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+37;Lieferung Stahlträger S355, warmgewalzt, HEB 200-300;5,0;t;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+38;Stahlträger der Vorposition montieren, HEB 200-300;15,0;m;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+39;Kleineisenteile, Schraub- und Nagelverbindungen  feuerverzinkt, für Bauteile aller Art, in diversen Abmessungen  für liefern und einbauen.;3500,0;kg;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+40;Bolzen, Gewindestangen aus feuerverzinktem Stahl für Holzverbindungen liefern und einbauen.;3500,0;kg;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+41;Dübelanschlüsse Mauerwerk (Wand und Decke);3000,0;St;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+42;Dübelanschlüsse Stahlbeton;7500,0;St;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+43;Anker liefern und einkleben D12 bis D16;350,0;St;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+44;Holzverbindungsmittel, Schrauben gemäß Statischer Vorgaben;2000,0;kg;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+1;Holztafelwand als Außenwand;700,0;m²;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+2;Holztafelwand als Außenwand;215,0;m²;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+3;Zulage zu Holztafel-Außenwänden der Pos. 1;296,0;St;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+4;Zulage zu Holztafelwänden;75,0;St;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+5;Zulage zu Holztafelwänden;120,0;St;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+6;Zulage zu Holztafelwänden;1,0;St;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+7;Sturz- und Leibungsausbildungen mit 1x15mm Spezial-Gipsfaserplatte,vliesarmiert nach DIN EN 15283-1, hoch beständig gegen Feuchtigkeit und Schimmel und mit beschichteter Oberfläche,;2250,0;m;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+8;Anschluss der Holzständerwände an Stirnseiten  durch Rückverankerung gemäß statischer Bemessung aus der Werks- und Montageplanung der Wände und Decken in Holzbauweise.;425,0;m;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+9;Holztafelwand als Außenwand zum Lichthof;460,0;m²;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+10;Sturz- und Leibungsausbildungen mit 2x12,5mm Spezial-Gipsfaserplatte,vliesarmiert nach DIN EN 15283-1, hoch beständig gegen Feuchtigkeit und Schimmel und mit beschichteter Oberfläche,;420,0;m;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+11;Holztafelwand als Außenwand, Attika Lichthof;100,0;m²;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+12;Zulage zu Holztafelwänden;75,0;St;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+13;Zulage zu Holztafelwänden für die Ausbildungen von Verbindungen zwischen zwei Stoß an Stoß treffende Holztafelwände mit Passstücken.;120,0;St;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+14;Zulage zu Holztafelwänden;1,0;St;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+15;Anschluss der Holzständerwände durch Rückverankerung;425,0;m;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+16;Wand CLT 120mm 5-lagig (5s);110,0;m²;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+17;Wand CLT versetzen ü.3,2m Holz;110,0;m²;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+18;Zulage zu Holztafelwänden für die Ausbidungen von Eck, Innen und Außenecken, mit Passstücken.;20,0;St;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+19;Zulage zu Holztafelwänden;30,0;St;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+20;Zulage zu Holztafelwänden;1,0;St;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+21;Sturz- und Leibungsausbildungen analog der Wandbekleidung;20,0;m;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+22;Wand CLT Installationsbohrung DM 50 mm schmals.;10,0;St;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+23;Wand CLT Installationsschlitz BSP bis 100x30mm schli.;20,0;m;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+24;Wand CLT Bohrung i.BSP ü.51-100mm;10,0;St;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+25;Wand CLT einlegen Elastomerlager;15,0;m;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+26;Wand CLT 150mm 5-lagig (5s);30,0;m²;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+27;Wand CLT versetzen ü.3,2m Holz;30,0;m²;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+28;Zulage zu Holztafelwänden für die Ausbidungen von Eck, Innen und Außenecken, mit Passstücken.;10,0;St;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+29;Zulale Holztafelwänden;10,0;St;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+30;Zulage zu Holztafelwänden;1,0;St;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+31;Sturz- und Leibungsausbildungen analog der Wandbekleidung;24,0;m;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+32;Wand CLT Installationsbohrung DM 50 mm schmals.;5,0;St;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+33;Wand CLT Installationsschlitz BSP bis 100x30mm schli.;1,0;m;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+34;Wand CLT Bohrung i.BSP ü.51-100mm;5,0;St;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+35;Wand CLT einlegen Elastomerlager;18,0;m;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+36;Wand CLT 200mm 5-lagig (5s);85,0;m²;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+37;Wand CLT versetzen ü.3,2m Holz;85,0;m²;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+38;Zulage zu Holztafelwänden für die Ausbidungen von Eck, Innen und Außenecken, mit Passstücken.;10,0;St;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+39;Zulale Holztafelwänden;10,0;St;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+40;Zulage zu Holztafelwänden;1,0;St;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+41;Sturz- und Leibungsausbildungen analog der Wandbekleidung,;24,0;m;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+42;Wand CLT Installationsbohrung DM 50 mm schmals.;5,0;St;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+43;Wand CLT Installationsschlitz BSP bis 100x30mm schli.;1,0;m;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+44;Wand CLT Bohrung i.BSP ü.51-100mm;5,0;St;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+45;Wand CLT einlegen Elastomerlager;18,0;m;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+46;Verdübelung mit Zugelassenem Holzverbindersystem M12  37x45 mm, geeignet zur Montage vorgefertigter Fertigteile aus Holz auf Betonuntergrund,;150,0;St;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+47;Quellmörtel als quellfähigen Zementmörtel zum Unterfüttern von Wänden und Auflagern im Holzbau auf massivem Untergrund (Quellmaß beträgt ca. 5%).;20,0;m;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+1;Stundenlohnarbeit Bauleiter/Polier,;5,0;Std;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+2;Facharbeiter-Stundenlohnarbeit, sonst wie vor;5,0;Std;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83
+3;Helfer-Stundenlohnarbeit, sonst wie vor;5,0;Std;gaeb;Vergabeunterlagen/20260715_LV_VE 10 Holzbau_korrigiert.X83

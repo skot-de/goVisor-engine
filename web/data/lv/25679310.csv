@@ -1,0 +1,191 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+00000001;Baustelle einrichten Sämtl.LV-Abschn.*Zufahrt vorh.;1,0;Psch;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+00000002;Baustelle räumen Sämtl. LV-Abschn.;1,0;Psch;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+00010001;Probegefäß liefern 10-l-Blecheimer*Mithilfe Kprüf.;8,0;St;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+00010002;Bohrkern entnehmen Kern-DU 15 cm*... Freitext ... Asphaltschicht*Verfül. Asphalt;12,0;St;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+00010003;Vermessungsarbeiten durchführen;1,0;Psch;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+00010004;Deckenbuch erstellen;1,0;Psch;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+00020001;Beweissicherung;1,0;Psch;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+00030001;Mülltransport Siedlungsabfall;1,0;Psch;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+00040001;Anrampungen für Zufahrten;7,0;St;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+01000001;Verkehrstafel aufb., abb., vorh. ... Freitext ...*Tafel ü. 1,1-2 m2 Typ RA2*Höhe 1,50 m ... Freitext ...;2,0;St;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+01000002;Kontrolle d. Verkehrss. an Arb.st. zwei bzw. einmal*elektron. Gerät;7,0;d;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+01010001;Verkehrssich. läng. Dauer aufbauen Arb.st.u. Uml.str*Verk.konzept AG auß. Kraft setzen*... Freitext ... Anordnung Unt. AG;1,0;Psch;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+01010002;Verkehrssich. läng. Dauer vorhalten wie Vorposition*... Freitext ...;14,0;d;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+01010003;Verkehrssich. läng. Dauer abbauen Verk.konzept AG*in Kraft setzen ... Freitext ...;1,0;Psch;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+01010004;Kontrolle d. Verkehrss. an Arb.st. zwei bzw. einmal*elektron. Gerät;14,0;d;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+01010005;Kontrolle d. Verkehrss. a. Uml.str. zwei bzw. einmal*elektron. Gerät;14,0;d;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+01020001;Verkehrssich. läng. Dauer aufbauen Arb.st.u. Uml.str*Verk.konzept AG auß. Kraft setzen*... Freitext ... ... Freitext ...*Anordnung Unt. AG;1,0;Psch;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+01020002;Verkehrssich. läng. Dauer vorhalten wie Vorposition*... Freitext ...;11,0;d;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+01020003;Längsmarkierung Typ II herstellen durchg. Fb.begr.*Breite 0,12 m Folie,Gew.o.Kunst*mind. P 5 grobstr. Decke*Markierung entf.;100,0;m;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+01020004;Kontrolle d. Verkehrss. an Arb.st. zwei bzw. einmal*elektron. Gerät;11,0;d;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+01020005;Kontrolle d. Verkehrss. a. Uml.str. zwei bzw. einmal*elektron. Gerät;11,0;d;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+01030001;Verkehrssicherung umbauen ... Freitext ...*... Freitext ... Um.n.Verk.konz.AG*außer/in Kraft s. Anordnung Unt. AG;1,0;Psch;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+01030002;Verkehrssich. läng. Dauer vorhalten wie Vorposition*... Freitext ...;10,0;d;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+01030003;Transp. LSA f. Engst. aufb. u. abb. LSA Typ C*Verbind. Wahl AN Entf.ü.150bis200m*Versorg. Wahl AN 2 SZP*VTU erstellen;1,0;St;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+01030004;Transport. Lichtsignalanlage vorh. wie Vorposition;10,0;Std;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+01030005;Längsmarkierung Typ II herstellen durchg. Fb.begr.*Breite 0,12 m Folie,Gew.o.Kunst*mind. P 5 grobstr. Decke*Markierung entf.;125,0;m;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+01030006;Quermarkierung Typ II herstellen Haltlinie*Folie,Gew.o.Kunst P 7*grobstr. Decke Deckenerneuerung;6,0;m;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+01030007;Verkehrssich. läng. Dauer abbauen Verk.konzept AG*in Kraft setzen ... Freitext ...;1,0;Psch;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+01040001;Verkehrssich. läng. Dauer aufbauen Arb.st.u. Uml.str*Verk.konzept AG auß. Kraft setzen*... Freitext ... Anordnung Unt. AG;1,0;Psch;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+01040002;Verkehrssich. läng. Dauer vorhalten wie Vorposition*... Freitext ...;21,0;d;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+01040003;Verkehrssich. läng. Dauer abbauen Verk.konzept AG*in Kraft setzen ... Freitext ...;1,0;Psch;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+01040004;Kontrolle d. Verkehrss. an Arb.st. zwei bzw. einmal*elektron. Gerät;21,0;d;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+01040005;Kontrolle d. Verkehrss. a. Uml.str. zwei bzw. einmal*elektron. Gerät;21,0;d;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+01050001;Verkehrssich. läng. Dauer aufbauen Arbeitsstelle*Verk.konzept AG ... Freitext ...*... Freitext ... Anordnung Unt. AG;1,0;Psch;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+01050002;Verkehrssich. läng. Dauer vorhalten wie Vorposition*... Freitext ...;11,0;d;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+01050003;Längsmarkierung Typ II herstellen durchg. Fb.begr.*Breite 0,12 m Folie,Gew.o.Kunst*mind. P 5 grobstr. Decke*Markierung entf.;125,0;m;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+01050004;Quermarkierung Typ II herstellen Haltlinie*Folie,Gew.o.Kunst P 7*grobstr. Decke Deckenerneuerung;12,0;m;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+01050005;Transp. LSA Typ D aufb. u. abb. Einmündungsverk.*Versorg. n. Wahl Steuer.fest 2SZP*VTU erstellen;1,0;St;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+01050006;Transport. Lichtsignalanlage vorh. wie Vorposition;11,0;Std;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+01050007;Kontrolle d. Verkehrss. an Arb.st. zwei bzw. einmal*elektron. Gerät;11,0;d;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+01060001;Verkehrssicherung umbauen ... Freitext ...*... Freitext ... Um.n.Verk.konz.AG*außer/in Kraft s. Anordnung Unt. AG;1,0;Psch;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+01060002;Verkehrssich. läng. Dauer vorhalten wie Vorposition*... Freitext ...;10,0;d;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+01060003;Längsmarkierung Typ II herstellen durchg. Fb.begr.*Breite 0,12 m Folie,Gew.o.Kunst*mind. P 5 grobstr. Decke*Markierung entf.;125,0;m;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+01060004;Quermarkierung Typ II herstellen Haltlinie*Folie,Gew.o.Kunst P 7*grobstr. Decke Deckenerneuerung;6,0;m;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+01060005;Transp. LSA f. Engst. aufb. u. abb. LSA Typ C*Verbind. Wahl AN Entf.ü.100bis150m*Versorg. Wahl AN 2 SZP*VTU erstellen;1,0;St;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+01060006;Transport. Lichtsignalanlage vorh. wie Vorposition;11,0;Std;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+01060007;Verkehrssich. läng. Dauer abbauen Verk.konzept AG*in Kraft setzen ... Freitext ...*... Freitext ...;1,0;Psch;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+01060008;Kontrolle d. Verkehrss. an Arb.st. zwei bzw. einmal*elektron. Gerät;10,0;d;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+02000001;Asphaltbefestigung trennen Anbauber. quer*schneiden Dicke ü. 18-24 cm;15,0;m;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+02000002;Erschwernis infolge Einfassungen Erschwer. gesamt*Asphaltbefestig. ... Freitext ...;100,0;m;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+02000003;Asphaltbefestigung trennen Anbauber. längs*schneiden Dicke ü. 6-12 cm;100,0;m;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+02000004;Bordstein aufnehmen. Hochbord Beton*Fund.ü10-20/R-St. ... Freitext ...;100,0;m;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+02000005;Asphalt fräsen ADS*Asphaltbeton*... Freitext ... Fahrbahn*... Freitext ... ... Freitext ...;500,0;m2;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+02000006;Unterlage reinigen gefr. Asphaltsch.*selb.aufn.Kehrm.;500,0;m2;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+02000007;Bitumenemulsion aufsprühen Bk100-Bk3,2*Asphalt gefräst C40B5-S*Menge 300 g/m2 vor A.bindersch.;500,0;m2;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+02000008;Asphaltbinderschicht AC 16 B S SG herstellen;500,0;m2;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+02000009;Bitumenemulsion aufsprühen Bk100-Bk3,2*Asphalt frisch C60BP4-S*Menge 300 g/m2 vor A.deckschicht;500,0;m2;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+02000010;Asphaltdeckschicht AC 11 DS SP herstellen;500,0;m2;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+02000011;Abstumpfungsmaßnahme durchführen LFK 1/3*... Freitext ... Menge 1 kg/m2*maschinell;500,0;m2;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+02000012;Verkehrsfläche kehren Walzasphalt*... Freitext ...;500,0;m2;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+02000013;Anschluss a. Fuge m. Fugenm. herst. Längs-/Querfuge*Deckschicht Tiefe 40 mm*Breite 10 mm Fugenmasse N2;115,0;m;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+02000014;Randabdichtung herstellen Randmasse*ein Arbeitsgang über 12-14 cm;40,0;m;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+02010001;Bankett schälen Breite bis 1,00 m*Dicke 5-10cm 12 tief+ 6 hoch*Bankett, Leitpf. Abschieben*... Freitext ...;80,0;m;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+02010002;Bankett profilgerecht herstellen Neben Fahrbahn*... Freitext ... URA+Einbaudoku*Breite 1,00 m ... Freitext ...*12 tief+ 6 hoch 3cm tiefer;80,0;m;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+02020001;Leitpfosten abbauen Eingrableitpfost.*erf. Erdarbeiten ... Freitext ...;7,0;St;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+02020002;Leitpfosten des AG aufstellen Eingrableitpf.*Pfosten abholen HB 1;7,0;St;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+03000001;Asphaltbefestigung trennen Anbauber. längs*schneiden Dicke ü. 18-24 cm;350,0;m;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+03000002;Asphaltbefestigung trennen ... Freitext ...*schneiden Dicke ü. 18-24 cm;30,0;m;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+03000003;Asphaltbefestigung trennen Anbauber. quer*schneiden Dicke ü. 18-24 cm;18,0;m;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+03000004;Pflasterd.m.Betonpfl.-steinen aufn. Dicke bis 6 cm*ungeb. Fugenmat. ungeb. Bettung*... Freitext ...;15,0;m2;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+03000005;Asphalt fräsen ADS*Asphaltbeton*... Freitext ... Fahrbahn*... Freitext ... ... Freitext ...;1400,0;m2;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+03000006;Schicht ohne Bindemittel aufnehmen SfM*... Freitext ... Fahrbahn*... Freitext ... Abrechng. Abtrag;60,0;m3;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+03000007;Unterlage profilieren Unt.gebr. Gestein*EV2 mind. 45 MPa Unebenheit 2 cm;1400,0;m2;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+03000008;Baustoff f. Profilausgleich liefern SfM;120,0;t;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+03000009;Überschüssigen Baustoff entfernen Abrechn. Abtrag;50,0;m3;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+03000010;Plattendruckversuch;4,0;St;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+03000011;Erschwernis infolge Einbauten Erschwer. gesamt*Asphaltbefestig. Hydranten+Schieb;7,0;St;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+03000012;Erschwernis infolge Einbauten Erschwer. gesamt*Asphaltbefestig. Straßenabläufe;6,0;St;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+03000013;Erschwernis infolge Einbauten Erschwer. gesamt*Asphaltbefestig. Schächte;2,0;St;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+03000014;Erschwernis infolge Einfassungen Erschwer. gesamt*Asphaltbefestig. ... Freitext ...;540,0;m;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+03010001;Asphalttragsch. aus AC 22 T S herst Bk10*Dicke 10 cm*... Freitext ...;1400,0;m2;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+03010002;Bitumenemulsion aufsprühen Bk100-Bk3,2*Asphalt gefräst C40B5-S*Menge 300 g/m2 vor A.bindersch.;1400,0;m2;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+03010003;Asphaltbinderschicht AC 16 B S SG herstellen;1400,0;m2;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+03010004;Bitumenemulsion aufsprühen Bk100-Bk3,2*Asphalt frisch C60BP4-S*Menge 300 g/m2 vor A.deckschicht;1400,0;m2;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+03010005;Asphaltdeckschicht AC 11 DS SP herstellen;1400,0;m2;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+03010006;Abstumpfungsmaßnahme durchführen LFK 1/3*... Freitext ... Menge 1 kg/m2*maschinell;1400,0;m2;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+03010007;Verkehrsfläche kehren Walzasphalt*... Freitext ...;1400,0;m2;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+03010008;Anschluss a. Fuge m. Fugenm. herst. Längs-/Querfuge*Deckschicht Tiefe 40 mm*Breite 10 mm Fugenmasse N2;398,0;m;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+03020001;Unterbeton schneiden;270,0;m;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+03020002;Rinne aus Betonformst. aufnehmen Rinnenpl. bis 8cm*Breite 20-30 cm ... Freitext ...*Fund.bet. ü.10-20 ... Freitext ...;270,0;m;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+03020003;Bordstein aufnehmen. Hochbord Beton*Fund. b. 10/R-St. ... Freitext ...;7,0;m;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+03020004;Bordstein aus Beton setzen BSt. RB 18x22 cm*gerader Stein bis 10 cm unt. OK*F-beton 12 MPa;7,0;m;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+03020005;Pflasterd.m.Betonpfl.-steinen aufn. Dicke bis 6 cm*ungeb. Fugenmat. ungeb. Bettung*... Freitext ...;5,0;m2;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+03020006;Pflasterd. a. Betonst. d. AG herst. ... Freitext ...*Flächen bis 2 m2 Pflaster gelagert*... Freitext ... SZ18/LA20*Bett.0/4 30 v. H. Fuge 0/4*Ellenbogenverband;5,0;m2;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+03020007;Rinne mit Pflast. aus Beton herst. Bordrinne*Pfst.160/160/140 m.F., o. Vorsatz.*2-zeilig Fundamentbeton*Fuge Typ B;270,0;m;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+03020008;Pflastersteine zuarbeiten aus Beton*Dicke ü. 10-14 cm;15,0;m;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+03020009;Aufsatz für Straßenabl. anpassen ... Freitext ...*ADicke ü.20-30 cm ... Freitext ...;3,0;St;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+03020010;Straßenablauf ausbauen Betonfertigteile*Tiefe bis 1,25 m StrA in bef. Fl.*Ausbau verwerten;4,0;St;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+03020011;Straßenablauf einbauen mit Erdarb. Schaft Form 5b*Aufl. C 8/10,10cm Tiefe bis 1,25 m*eing. verd. Bod.;4,0;St;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+03020012;Aufsatz f. Straßenablauf aufsetzen 300x500, D,34,5mm*Zinkeimer A 4 Höhe planmäßig*Mörtel M20;4,0;St;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+03020013;Flachbordsteine sanieren;92,0;m;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+03030001;Bankett schälen Breite bis 1,00 m*Dicke 5-10cm 12 tief+ 6 hoch*Bankett, Leitpf. Abschieben*... Freitext ...;40,0;m;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+03030002;Bankett profilgerecht herstellen Neben Fahrbahn*... Freitext ... URA+Einbaudoku*Breite 1,00 m ... Freitext ...*12 tief+ 6 hoch 3cm tiefer;40,0;m;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+03030003;Erschwernis infolge Einfassungen Erschwer. gesamt*Asphaltbefestig. ... Freitext ...;40,0;m;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+03040001;Schachtteil ausbauen bis OK Schachth.*Schacht sichern Ausbau verwerten;3,0;St;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+03040002;Betonauflagering einbauen ... Freitext ...*Mörtel M20;3,0;St;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+03040003;Schachtabdeckung aufsetzen ... Freitext ...*m. Schmutzfänger Deckel/Einlage*Höhe Zug um Zug;3,0;St;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+04000001;Asphaltbefestigung trennen Anbauber. längs*schneiden Dicke ü. 18-24 cm;275,0;m;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+04000002;Asphaltbefestigung trennen ... Freitext ...*schneiden Dicke ü. 18-24 cm;16,0;m;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+04000003;Asphaltbefestigung trennen Anbauber. quer*schneiden Dicke ü. 18-24 cm;19,0;m;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+04000004;Asphalt fräsen ADS*Asphaltbeton*... Freitext ... Fahrbahn*... Freitext ... ... Freitext ...;2300,0;m2;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+04000005;Schicht ohne Bindemittel aufnehmen SfM*... Freitext ... Fahrbahn*... Freitext ... Abrechng. Abtrag;100,0;m3;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+04000006;Unterlage profilieren Unt.gebr. Gestein*EV2 mind. 45 MPa Unebenheit 2 cm;2300,0;m2;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+04000007;Baustoff f. Profilausgleich liefern SfM;200,0;t;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+04000008;Überschüssigen Baustoff entfernen Abrechn. Abtrag;50,0;m3;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+04000009;Plattendruckversuch;2,0;St;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+04000010;Erschwernis infolge Einfassungen Erschwer. gesamt*Asphaltbefestig. ... Freitext ...;322,0;m;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+04000011;Erschwernis infolge Einbauten Erschwer. gesamt*Asphaltbefestig. Straßenabläufe;10,0;St;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+04000012;Erschwernis infolge Einbauten Erschwer. gesamt*Asphaltbefestig. Hydranten+Schieb;5,0;St;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+04000013;Erschwernis infolge Einbauten Erschwer. gesamt*Asphaltbefestig. Schächte;4,0;St;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+04010001;Asphalttragsch. aus AC 22 T S herst Bk10*Dicke 10 cm*... Freitext ...;2300,0;m2;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+04010002;Bitumenemulsion aufsprühen Bk100-Bk3,2*Asphalt gefräst C40B5-S*Menge 300 g/m2 vor A.bindersch.;2300,0;m2;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+04010003;Asphaltbinderschicht AC 16 B S SG herstellen;2300,0;m2;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+04010004;Bitumenemulsion aufsprühen Bk100-Bk3,2*Asphalt frisch C60BP4-S*Menge 300 g/m2 vor A.deckschicht;2300,0;m2;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+04010005;Asphaltdeckschicht AC 11 DS SP herstellen;2300,0;m2;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+04010006;Abstumpfungsmaßnahme durchführen LFK 1/3*... Freitext ... Menge 1 kg/m2*maschinell;2300,0;m2;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+04010007;Verkehrsfläche kehren Walzasphalt*... Freitext ...;2300,0;m2;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+04010008;Anschluss a. Fuge m. Fugenm. herst. Längs-/Querfuge*Deckschicht Tiefe 40 mm*Breite 10 mm Fugenmasse N2;310,0;m;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+04020001;Unterbeton schneiden;550,0;m;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+04020002;Rinne aus Betonformst. aufnehmen Rinnenpl. bis 8cm*Breite 20-30 cm ... Freitext ...*Fund.bet. ü.10-20 ... Freitext ...;550,0;m;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+04020003;Planum herstellen;40,0;m2;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+04020004;Frostschutzschicht herstellen ... Freitext ...*Feinanteil UF 3 0/32*URA+Einbaudoku ... Freitext ...*Abrechng. Auftrag;10,0;m3;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+04020005;Bordstein aufnehmen. Hochbord Beton*Fund. b. 10/R-St. ... Freitext ...;20,0;m;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+04020006;Bordstein aus Beton setzen BSt. RB 18x22 cm*gerader Stein bis 10 cm unt. OK*F-beton 12 MPa;20,0;m;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+04020007;Pflasterd.m.Betonpfl.-steinen aufn. Dicke bis 6 cm*ungeb. Fugenmat. ungeb. Bettung*... Freitext ...;10,0;m2;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+04020008;Pflasterd. a. Betonst. d. AG herst. ... Freitext ...*Flächen bis 2 m2 Pflaster gelagert*... Freitext ... SZ18/LA20*Bett.0/4 30 v. H. Fuge 0/4*Ellenbogenverband;10,0;m2;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+04020009;Rinne mit Pflast. aus Beton herst. Bordrinne*Pfst.160/160/140 m.F., o. Vorsatz.*2-zeilig Fundamentbeton*Fuge Typ B;550,0;m;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+04020010;Aufsatz für Straßenabl. anpassen ... Freitext ...*ADicke ü.20-30 cm ... Freitext ...;4,0;St;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+04020011;Straßenablauf ausbauen Betonfertigteile*Tiefe bis 1,25 m StrA in bef. Fl.*Ausbau verwerten;7,0;St;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+04020012;Straßenablauf einbauen mit Erdarb. Schaft Form 5b*Aufl. C 8/10,10cm Tiefe bis 1,25 m*eing. verd. Bod.;7,0;St;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+04020013;Aufsatz f. Straßenablauf aufsetzen 300x500, D,34,5mm*Zinkeimer A 4 Höhe planmäßig*Mörtel M20;7,0;St;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+04020014;Flachbordsteine sanieren;17,0;m;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+04030001;Schachtteil ausbauen bis OK Schachth.*Schacht sichern Ausbau verwerten;4,0;St;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+04030002;Betonauflagering einbauen ... Freitext ...*Mörtel M20;4,0;St;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+04030003;Schachtabdeckung aufsetzen ... Freitext ...*Deckel/Einlage Höhe Zug um Zug;4,0;St;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+05000001;Asphaltbefestigung trennen Anbauber. längs*schneiden Dicke ü. 18-24 cm;150,0;m;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+05000002;Asphaltbefestigung trennen ... Freitext ...*schneiden Dicke ü. 18-24 cm;16,0;m;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+05000003;Asphaltbefestigung trennen Anbauber. quer*schneiden Dicke ü. 18-24 cm;19,0;m;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+05000004;Asphalt fräsen ADS*Asphaltbeton*... Freitext ... Fahrbahn*... Freitext ... ... Freitext ...;1100,0;m2;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+05000005;Schicht ohne Bindemittel aufnehmen SfM*... Freitext ... Fahrbahn*... Freitext ... Abrechng. Abtrag;50,0;m3;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+05000006;Unterlage profilieren Unt.gebr. Gestein*EV2 mind. 45 MPa Unebenheit 2 cm;1100,0;m2;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+05000007;Baustoff f. Profilausgleich liefern SfM;100,0;t;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+05000008;Überschüssigen Baustoff entfernen Abrechn. Abtrag;30,0;m3;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+05000009;Plattendruckversuch;2,0;St;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+05000010;Erschwernis infolge Einfassungen Erschwer. gesamt*Asphaltbefestig. ... Freitext ...;150,0;m;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+05000011;Erschwernis infolge Einbauten Erschwer. gesamt*Asphaltbefestig. Straßenabläufe;4,0;St;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+05000012;Erschwernis infolge Einbauten Erschwer. gesamt*Asphaltbefestig. Hydranten+Schieb;5,0;St;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+05000013;Erschwernis infolge Einbauten Erschwer. gesamt*Asphaltbefestig. Schächte;6,0;St;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+05010001;Asphalttragsch. aus AC 22 T S herst Bk10*Dicke 10 cm*... Freitext ...;1100,0;m2;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+05010002;Bitumenemulsion aufsprühen Bk100-Bk3,2*Asphalt gefräst C40B5-S*Menge 300 g/m2 vor A.bindersch.;1100,0;m2;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+05010003;Asphaltbinderschicht AC 16 B S SG herstellen;1100,0;m2;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+05010004;Bitumenemulsion aufsprühen Bk100-Bk3,2*Asphalt frisch C60BP4-S*Menge 300 g/m2 vor A.deckschicht;1100,0;m2;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+05010005;Asphaltdeckschicht AC 11 DS SP herstellen;1100,0;m2;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+05010006;Abstumpfungsmaßnahme durchführen LFK 1/3*... Freitext ... Menge 1 kg/m2*maschinell;1100,0;m2;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+05010007;Verkehrsfläche kehren Walzasphalt*... Freitext ...;1100,0;m2;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+05010008;Anschluss a. Fuge m. Fugenm. herst. Längs-/Querfuge*Deckschicht Tiefe 40 mm*Breite 10 mm Fugenmasse N2;185,0;m;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+05020001;Unterbeton schneiden;200,0;m;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+05020002;Rinne aus Betonformst. aufnehmen Rinnenpl. bis 8cm*Breite 20-30 cm ... Freitext ...*Fund.bet. ü.10-20 ... Freitext ...;200,0;m;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+05020003;Bordstein aufnehmen. Hochbord Beton*Fund. b. 10/R-St. ... Freitext ...;12,0;m;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+05020004;Bordstein aus Beton setzen BSt. RB 18x22 cm*gerader Stein bis 10 cm unt. OK*F-beton 12 MPa;12,0;m;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+05020005;Pflasterd.m.Betonpfl.-steinen aufn. Dicke bis 6 cm*ungeb. Fugenmat. ungeb. Bettung*... Freitext ...;7,0;m2;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+05020006;Pflasterd. a. Betonst. d. AG herst. ... Freitext ...*Flächen bis 2 m2 Pflaster gelagert*... Freitext ... SZ18/LA20*Bett.0/4 30 v. H. Fuge 0/4*Ellenbogenverband;7,0;m2;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+05020007;Rinne mit Pflast. aus Beton herst. Bordrinne*Pfst.160/160/140 m.F., o. Vorsatz.*2-zeilig Fundamentbeton*Fuge Typ B;200,0;m;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+05020008;Aufsatz für Straßenabl. anpassen ... Freitext ...*ADicke ü.20-30 cm ... Freitext ...;3,0;St;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+05020009;Straßenablauf ausbauen Betonfertigteile*Tiefe bis 1,25 m StrA in bef. Fl.*Ausbau verwerten;4,0;St;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+05020010;Straßenablauf einbauen mit Erdarb. Schaft Form 5b*Aufl. C 8/10,10cm Tiefe bis 1,25 m*eing. verd. Bod.;4,0;St;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+05020011;Aufsatz f. Straßenablauf aufsetzen 300x500, D,34,5mm*Zinkeimer A 4 Höhe planmäßig*Mörtel M20;4,0;St;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+05020012;Flachbordsteine sanieren;17,0;m;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+05030001;Schachtteil ausbauen bis OK Schachth.*Schacht sichern Ausbau verwerten;6,0;St;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+05030002;Betonauflagering einbauen ... Freitext ...*Mörtel M20;6,0;St;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+05030003;Schachtabdeckung aufsetzen ... Freitext ...*Deckel/Einlage Höhe Zug um Zug;6,0;St;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+06000001;Längsmarkierung Typ II herstellen durchg.Fb.begr.*Breite 0,12 m mit Vormarkierung*mehrkomp. Farbe mind. P 6*grobstr. Decke;80,0;m;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+06000002;Längsmarkierung Typ II herstellen ... Freitext ...*Breite 0,12 m mit Vormarkierung*Heißplastikmasse mind. P 6*grobstr. Decke;264,0;m;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+06000003;Längsmarkierung Typ II herstellen durchg.Fb.begr.*Breite 0,12 m mit Vormarkierung*Heißplastikmasse mind. P 6*grobstr. Decke;348,0;m;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+06000004;Längsmarkierung Typ II herstellen Blockmark. 1 zu 1*Breite 0,25 m mit Vormarkierung*Heißplastikmasse mind. P 6*grobstr. Decke;33,0;m;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+06000005;Längsmarkierung Typ II herstellen durchg.Fb.begr.*Breite 0,25 m mit Vormarkierung*Heißplastikmasse mind. P 6*grobstr. Decke;10,0;m;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+06000006;Quermarkierung Typ II herstellen Wartelinie*mit Vormarkierung Heißplastikmasse*grobstr. Decke;7,5;m;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+06000007;Pfeilmarkierung Typ II herstellen geradeaus*mit Vormarkierung Länge 5,00 m*Heißplastikmasse grobstr. Decke;6,0;St;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+06000008;Pfeilmarkierung Typ II herstellen li.o.re. ab*mit Vormarkierung Länge 5,00 m*Heißplastikmasse grobstr. Decke;6,0;St;gaeb-flat;Leistungsverzeichnis\28705_B456.D83
+06000009;Pfeilmarkierung Typ II herstellen Vorankünd.pfeil*mit Vormarkierung Länge 5,00 m*Heißplastikmasse grobstr. Decke;1,0;St;gaeb-flat;Leistungsverzeichnis\28705_B456.D83

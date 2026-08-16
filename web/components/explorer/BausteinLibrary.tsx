@@ -33,11 +33,18 @@ function save(b: Block[]) { try { localStorage.setItem(KEY, JSON.stringify(b)); 
  * Das aufklappende Feld selbst bleibt hier im Inhalt: es ist ein Arbeitsbereich mit
  * Textfeld, kein Werkzeug. In eine 45 px hohe Leiste passt es ohnehin nicht.
  */
-export function BausteinLibrary({ importOpen, onImport }: {
+export function BausteinLibrary({ importOpen, onImport, theme, onTheme, onThemen }: {
   importOpen: boolean; onImport: (offen: boolean) => void;
+  /** Das gewaehlte Thema — gefuehrt von der Seite, weil die Auswahl in der Bereichsleiste
+   *  steht und damit ausserhalb dieser Komponente. */
+  theme: string;
+  onTheme: (t: string) => void;
+  /** Meldet die Themen mit Anzahl nach oben, damit die Leiste sie beschriften kann.
+   *  Die Zaehlung bleibt hier, weil hier die Bausteine liegen — eine zweite Zaehlung
+   *  in der Seite waere eine zweite Wahrheit. */
+  onThemen: (liste: { key: string; label: string; anzahl: number }[]) => void;
 }) {
   const [blocks, setBlocks] = useState<Block[]>([]);
-  const [theme, setTheme] = useState<string>("");
   const [text, setText] = useState("");
   const [busy, setBusy] = useState(false);
   const [msg, setMsg] = useState<string>("");
@@ -47,6 +54,14 @@ export function BausteinLibrary({ importOpen, onImport }: {
   const counts: Record<string, number> = {};
   blocks.forEach((b) => { counts[b.theme] = (counts[b.theme] || 0) + 1; });
   const shown = theme ? blocks.filter((b) => b.theme === theme) : blocks;
+
+  // Die Leiste oben braucht dieselben Zahlen. Gemeldet wird nur bei Aenderung des
+  // Bestands — sonst laeuft die Seite in eine Endlosschleife aus Rendern und Melden.
+  useEffect(() => {
+    onThemen([{ key: "", label: "Alle", anzahl: blocks.length },
+              ...THEMES.filter(([id]) => counts[id])
+                       .map(([id, lbl]) => ({ key: id, label: lbl, anzahl: counts[id] }))]);
+  }, [blocks]);   // eslint-disable-line react-hooks/exhaustive-deps
 
   async function runImport() {
     if (text.trim().length < 40) { setMsg("Zu wenig Text."); return; }
@@ -148,12 +163,9 @@ export function BausteinLibrary({ importOpen, onImport }: {
         </div>
       ) : (
         <div className="libgrid">
-          <nav className="themes">
-            <a className={theme === "" ? "on" : ""} onClick={() => setTheme("")}>Alle <span>{blocks.length}</span></a>
-            {THEMES.filter(([id]) => counts[id]).map(([id, lbl]) => (
-              <a key={id} className={theme === id ? "on" : ""} onClick={() => setTheme(id)}>{lbl} <span>{counts[id]}</span></a>
-            ))}
-          </nav>
+          {/* Die Themenliste stand hier als zweite Spalte — die dritte Bauform fuer
+              „Abschnitt waehlen" im selben Produkt. Sie liegt jetzt in der
+              Bereichsleiste, wie bei Strategie und Unternehmen. */}
           <div>
             {shown.map((b, i) => (
               <div className="bcard" key={i}>

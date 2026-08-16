@@ -348,6 +348,18 @@ export default function OnboardingPage() {
             </span>
           ))}
         </nav>
+
+        {/* AUSGANG. Bis 2026-08-16 gab es keinen: das Onboarding hatte „Zurueck" zwischen
+            seinen eigenen Schritten, aber keinen Weg HINAUS. Wer hier landete — auch nur
+            um etwas nachzusehen — kam nur ueber die Browser-Zurueck-Taste wieder weg.
+            Eine Seite ohne Ausgang liest sich als „du musst das jetzt zu Ende bringen",
+            und genau das soll ein Profil nicht sein.
+
+            Ab dem Konto-Schritt sichtbar: davor gibt es noch keine Sitzung, ein Sprung in
+            die App waere dann ein Sprung ins Leere. */}
+        {screen !== "mail" ? (
+          <Link className="ob-raus" href="/leads">{t("Später einrichten")} →</Link>
+        ) : null}
       </header>
 
       <main className="stage">
