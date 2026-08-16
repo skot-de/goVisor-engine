@@ -12,7 +12,9 @@
  */
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import { EinstiegShell } from "@/components/EinstiegShell";
+import { AppRail, AppTop } from "@/components/explorer/Rail";
+import "../explorer.css";
+import "../zugang.css";
 import { currentUser, logout } from "@/lib/supabase/auth";
 import {
   TESTPROFILE, PROFIL_COOKIE, darfSchreiben, type Testprofil,
@@ -44,11 +46,15 @@ export default function StartSeite() {
   // Auch der Ladezustand bekommt den Rahmen. Eine Seite, die erst nackt erscheint und
   // dann einen Kopf bekommt, sieht beim Laden nach Fehler aus.
   if (laedt) {
-    return <EinstiegShell titel="Profil wechseln"><div className="card"><p>…</p></div></EinstiegShell>;
+    return <div className="app"><AppTop /><div className="body"><AppRail gesperrt /><div className="main seitenmain zugang"><div className="card"><p>…</p></div></div></div></div>;
   }
 
   return (
-    <EinstiegShell titel="Profil wechseln">
+    <div className="app">
+      <AppTop />
+      <div className="body">
+        <AppRail gesperrt />
+        <div className="main seitenmain zugang">
     <div className="card">
       <p className="start-status">
         {email ? <>Angemeldet als <strong>{email}</strong></> : "Nicht angemeldet"}
@@ -108,6 +114,8 @@ export default function StartSeite() {
         </>
       )}
     </div>
-    </EinstiegShell>
+        </div>
+      </div>
+    </div>
   );
 }

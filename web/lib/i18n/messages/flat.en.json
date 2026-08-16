@@ -520,7 +520,6 @@
   "Frankfurt am Main": "Frankfurt am Main",
   "Free": "Free",
   "Free — Liste und Eckdaten unbegrenzt, 3 Bewertungen je 30 Tage": "Free — list and key data unlimited, 3 assessments every 30 days",
-  "Free-Zugang: Lead-Liste und alle Eckdaten dauerhaft unbegrenzt, drei ausführliche Bewertungen je 30 Tage.": "Free plan: lead list and all key data unlimited for good, three detailed assessments every 30 days.",
   "Freischalten": "Unlock",
   "Frequenz": "Frequency",
   "Frische Verlierer": "Recent losers",
@@ -1382,7 +1381,6 @@
   "Wir": "Us",
   "Wir finden unter eurem Namen noch keine gewonnene Vergabe.": "We find no won award under your name yet.",
   "Wir haben euer Profil aus euren bisherigen Vergaben gebaut.": "We built your profile from the contracts you have won so far.",
-  "Wir haben noch nie öffentlich geboten": "We have never bid on a public contract",
   "Wir haben versucht, eure Firma an der Adresse": "We tried to identify your company from the address",
   "Wir kennen euch in diesem Browser bereits als": "In this browser we already know you as",
   "Wir konnten euch zuordnen: {grund}.": "We were able to match you: {grund}.",
@@ -1944,5 +1942,9 @@
   "✓ angesprochen": "✓ contacted",
   "🇦🇹 nur Österreich": "🇦🇹 Austria only",
   "🇨🇭 nur Schweiz": "🇨🇭 Switzerland only",
-  "Später einrichten": "Set up later"
+  "Später einrichten": "Set up later",
+  "Erst nach der Anmeldung": "Available after sign-in",
+  "Free-Zugang nach der Anmeldung: Lead-Liste und alle Eckdaten dauerhaft unbegrenzt, drei ausführliche Bewertungen je 30 Tage.": "Free access after sign-up: lead list and all key data permanently unlimited, three detailed assessments every 30 days.",
+  "Aus eurer Übersicht übernommen — ihr könnt den Namen ändern.": "Taken from your overview — you can change the name.",
+  "Wir sind noch nicht in eurer Datenbank": "We are not in your database yet"
 }

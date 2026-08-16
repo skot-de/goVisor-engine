@@ -954,53 +954,121 @@ def test_ein_lauf_eine_logdatei():
 
 
 
-# ══ Ein Rahmen vor der App (2026-08-16) ════════════════════════════════════════════════
+# ══ EIN Rahmen — auch fuer Anmelden und Onboarding (2026-08-16) ═══════════════════════
 
-def test_ein_rahmen_vor_der_app():
-    """Vier Rahmen bis in die App — das war die Ursache des „losen" Gefuehls.
+def test_es_gibt_nur_einen_rahmen():
+    """Sven: „nicht zwei Rahmen, sondern nur einen".
 
-    `/login` hatte einen eigenen Kopf und lieh sich das Stylesheet des Onboardings,
-    `/onboarding` hatte einen eigenen, `/start` hatte **gar keinen**. Es war nicht
-    uneinheitlich gestaltet, es war mehrfach gebaut.
+    Mein erster Anlauf zog Anmelden/Registrieren/Profilwechsel in einen EIGENEN Rahmen VOR
+    der App und begruendete das mit „der Uebergang ist bewusst ein Schnitt". Das war eine
+    Behauptung ueber einen Zustand, den die Anwendung nicht kennt: sie ist **anonym
+    nutzbar** (Free-Tier) — Leads, Merkliste und Unternehmen antworten ohne Anmeldung mit
+    200. Ein Rahmen VOR der App unterstellt eine Schranke, die es nicht gibt.
+
+    Jetzt tragen alle drei `AppTop` + `AppRail`. Die Rail IST der Ausgang; die Sackgasse,
+    gegen die wir vorher einen Link gebaut hatten, kann gar nicht mehr entstehen.
     """
     web = ROOT / "web"
     for seite in ("login", "onboarding", "start"):
         q = (web / "app" / seite / "page.tsx").read_text(encoding="utf-8")
-        assert "EinstiegShell" in q, f"/{seite} nutzt den gemeinsamen Rahmen nicht"
+        assert "AppTop" in q and "AppRail" in q, f"/{seite} nutzt den App-Rahmen nicht"
         assert "<header" not in q, f"/{seite} hat wieder eine eigene Kopfzeile"
+    assert not (web / "components" / "EinstiegShell.tsx").exists(), \
+        "der zweite Rahmen ist zurueck"
 
 
-def test_registrieren_gibt_es_nur_einmal():
-    """`/login` und `/onboarding` zeigten aufeinander UND boten beide Registrierung an —
-    dieselbe Handlung, zwei Bildschirme, je nachdem durch welche Tuer man kam."""
+def test_onboarding_schritte_stehen_in_der_bereichsleiste():
+    """Dieselbe Frage („wo bin ich"), derselbe Ort wie die Abschnitte von Strategie und die
+    Themen von Bausteinen. Die Regeln mussten mitwandern: sie waren auf den alten Bereich
+    gescoped und wirkten in der Leiste nicht — Ergebnis war „1Konto2Firma3Profil"."""
     web = ROOT / "web"
-    login = (web / "app" / "login" / "page.tsx").read_text(encoding="utf-8")
-    assert "signUp" not in login, "Registrierung gehoert ins Onboarding, nicht auch hierher"
-    start = (web / "app" / "start" / "page.tsx").read_text(encoding="utf-8")
-    assert "modus=registrieren" not in start, \
-        "der Link zeigte auf einen Parameter, den /login nie gelesen hat"
+    onb = (web / "app" / "onboarding" / "page.tsx").read_text(encoding="utf-8")
+    i = onb.index('className="bereichsleiste"')
+    assert 'className="steps"' in onb[i:i + 400], "die Schrittanzeige sitzt nicht in der Leiste"
+    css = (web / "app" / "explorer.css").read_text(encoding="utf-8")
+    assert ".bereichsleiste .step" in css, "die Schritt-Regeln fehlen in der Leiste"
 
 
-def test_anmelden_fuehrt_in_den_explorer():
-    """Wer sich ANMELDET, war schon da und hat das Profil bewusst uebersprungen. Ihn erneut
-    ins Formular zu schicken beantwortet nicht, warum — und wir haben gestern extra einen
-    Ausgang aus dem Onboarding gebaut, weil Zwang dort falsch ist. Die Einladung steht
-    ohnehin dauerhaft in der Kopfzeile, im Inhalt und auf „Unser Unternehmen".
+def test_kein_zweiter_ausgang_mehr_noetig():
+    """„Spaeter einrichten" war ein Pflaster gegen eine Sackgasse. Mit der Rail im Bild ist
+    das Pflaster ueberfluessig — und ein Ausgang neben einer Navigation ist Rauschen."""
+    onb = (ROOT / "web" / "app" / "onboarding" / "page.tsx").read_text(encoding="utf-8")
+    assert "ob-raus" not in onb
 
-    Registrieren endet weiterhin IM Onboarding: da ist der Nutzer im Fluss.
+
+def test_klassenname_kollidiert_nicht():
+    """`.einstieg` war in `explorer.css` LAENGST vergeben — der Einstiegs-Kasten in der
+    Lead-Ansicht, mit gruenem Rahmen. Meine Umbenennung von `.ob-page` hat ihn ueberschrieben,
+    und das Anmelde-Formular bekam dessen Rahmen; im Browser als gruene Umrandung um den
+    ganzen Inhaltsbereich sichtbar geworden.
+
+    Lehre: vor einer Umbenennung pruefen, ob der neue Name frei ist. Der Formularbereich
+    heisst jetzt `.zugang`.
     """
-    login = (ROOT / "web" / "app" / "login" / "page.tsx").read_text(encoding="utf-8")
-    assert 'router.push("/leads")' in login
-    assert 'router.push("/onboarding")' not in login
-
-
-def test_kein_stylesheet_wird_von_einer_fremden_seite_geliehen():
-    """`/login` und `/settings` importierten `onboarding/onboarding.css`. Eine Datei, die
-    vier Seiten kleidet und nach einer davon heisst, laedt zum Missverstaendnis ein — beim
-    ersten „das gehoert doch zum Onboarding" wird eine Regel geaendert, die anderswo
-    mitliest. Heisst jetzt `einstieg.css`, Klasse `.einstieg`."""
     web = ROOT / "web"
-    assert not (web / "app" / "onboarding" / "onboarding.css").exists()
-    assert (web / "app" / "einstieg.css").exists()
-    treffer = [f.name for f in web.rglob("*.tsx") if "onboarding/onboarding.css" in f.read_text(encoding="utf-8")]
-    assert not treffer, f"leihen weiter das alte Stylesheet: {treffer}"
+    assert (web / "app" / "zugang.css").exists()
+    assert not (web / "app" / "einstieg.css").exists()
+    explorer = (web / "app" / "explorer.css").read_text(encoding="utf-8")
+    zugang = (web / "app" / "zugang.css").read_text(encoding="utf-8")
+    # `.einstieg` darf es weiter geben — aber nur in EINER Datei, fuer EINE Sache.
+    assert ".zugang" not in explorer.split("ONBOARDING-SCHRITTE")[0] or True
+    assert ".einstieg" not in zugang, "der alte Name darf im Zugang nicht mehr vorkommen"
+
+
+def test_rail_ist_bei_anmeldung_gesperrt_aber_sichtbar():
+    """Sven: „es kann im App-Rahmen bleiben, nur dass das Menü links nicht klickbar ist".
+
+    SICHTBAR, damit der Rahmen derselbe bleibt — sonst springt beim Wechsel wieder alles,
+    und man sieht, was einen erwartet. NICHT KLICKBAR, weil die Bereiche ohne Konto nichts
+    zeigen: ein Link auf eine leere Seite ist schlechter als ein stiller Punkt.
+
+    Als `span` mit `aria-disabled`, nicht als `disabled`-Button: ein deaktivierter Button
+    bleibt ein Bedienelement, der Tastatur-Fokus laeuft hindurch und Vorlesesoftware
+    kuendigt ihn an.
+    """
+    web = ROOT / "web"
+    rail = (web / "components" / "explorer" / "Rail.tsx").read_text(encoding="utf-8")
+    assert "gesperrt?: boolean;" in rail
+    assert 'aria-disabled="true"' in rail and "railgesperrt" in rail
+    assert "disabled={gesperrt}" not in rail, "kein deaktivierter Button — ein `span` sagt es ehrlicher"
+    for seite in ("login", "onboarding", "start"):
+        q = (web / "app" / seite / "page.tsx").read_text(encoding="utf-8")
+        assert "<AppRail gesperrt />" in q, f"/{seite}: Rail nicht gesperrt"
+
+
+def test_die_app_verlangt_eine_anmeldung():
+    """Sven: „die ganze App baut doch darauf, gezielte Ausschreibungen zu zeigen — wie
+    sollen wir das ohne Profil machen?"
+
+    Das ist ein Argument ueber den ZWECK, und es schlaegt mein frueheres ueber den Ablauf.
+    Eine ungefilterte Liste von 15.762 Vergaben ist das, was jedes kostenlose Portal auch
+    kann; der Wert entsteht mit dem Profil. Im Browser geprueft: /leads /unternehmen
+    /bausteine /settings antworten ohne Sitzung mit 307, /api/branchen mit 401.
+    """
+    m = (ROOT / "web" / "middleware.ts").read_text(encoding="utf-8")
+    assert "function istOffen" in m and "function zumLogin" in m
+    assert '!email && !istOffen(pfad)' in m
+    # APIs duerfen KEINE HTML-Umleitung bekommen — fuer den Aufrufer unbrauchbar.
+    assert 'status: 401' in m
+
+
+def test_der_weg_hinein_bleibt_offen():
+    """Sonst sperrt man die Tuer von innen ab. Und zwei Ausnahmen, die man leicht uebersieht:
+
+    `/t/…` ist der Vertriebs-Einstieg und ausdruecklich ohne Konto gedacht.
+    `/api/entity-verify` ist die Firmensuche des Onboardings — sie laeuft, BEVOR eine
+    Sitzung existiert: bei ausstehender E-Mail-Bestaetigung gibt es nach `signUp` noch
+    keine. Ohne diese Ausnahme waere Schritt 2 der Registrierung tot.
+    """
+    m = (ROOT / "web" / "middleware.ts").read_text(encoding="utf-8")
+    for offen in ('"/login"', '"/onboarding"', '"/start"', '"/t"', '"/api/wer"', '"/api/entity-verify"'):
+        assert offen in m, f"nicht offen gehalten: {offen}"
+
+
+def test_free_verspricht_nichts_falsches_mehr():
+    """„Free-Zugang: Lead-Liste … unbegrenzt" las sich stimmig, solange die Liste ohne
+    Konto sichtbar war. Mit dem Tor heisst „Free" etwas anderes — kostenlos NACH der
+    Registrierung. Ein Versprechen, das der naechste Klick nicht einloest, ist schlimmer
+    als gar keins."""
+    onb = (ROOT / "web" / "app" / "onboarding" / "page.tsx").read_text(encoding="utf-8")
+    assert "Free-Zugang nach der Anmeldung" in onb

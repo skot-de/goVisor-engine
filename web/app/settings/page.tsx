@@ -14,7 +14,7 @@ import { BANDS } from "@/lib/billing";
 import { useSprache } from "@/lib/i18n";
 import { AppRail, AppTop } from "@/components/explorer/Rail";
 import "../explorer.css";
-import "../einstieg.css";
+import "../zugang.css";
 import "./settings.css";
 
 const BRANCHEN: [string, string][] = [
@@ -57,7 +57,7 @@ export default function SettingsPage() {
         {/* Einstellungen sind kein Rail-Ziel (sie hängen am Konto-Menü) — deshalb ohne
             aktiven Punkt, aber MIT Navigation: sonst wäre es wieder eine Sackgasse. */}
         <AppRail />
-        <div className="main seitenmain einstieg set-page">
+        <div className="main seitenmain zugang set-page">
       <div className="set-wrap">
         <nav className="set-nav">
           {SEKTIONEN.map(([k, l]) => (

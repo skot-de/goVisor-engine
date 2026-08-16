@@ -44,7 +44,7 @@ body[data-view="verteidigung"] .band.risk[data-level="mittel"] .segs i:nth-child
 /* Eigenständige Seiten (Unternehmen, Bausteine) im selben Gerüst: Rail links,
    Inhalt rechts scrollbar — ohne die Spalten-/Detail-Mechanik der Lead-Ansicht. */
 .seitenmain{overflow:auto;min-width:0}
-.seitenmain.baust-page,.seitenmain.einstieg{min-height:0}   /* im Raster scrollt der Rahmen, nicht die Seite */
+.seitenmain.baust-page,.seitenmain.zugang{min-height:0}   /* im Raster scrollt der Rahmen, nicht die Seite */
 .seitenmain.set-page{padding:var(--s6) var(--s6) 60px}
 .topbar-schlank{gap:var(--s4)}   /* Hoehe kommt aus `.topbar` — eine Quelle, kein zweiter Wert */
 /* DIE ZWEITE ZEILE DES RAHMENS — in jedem Bereich vorhanden und gleich hoch, damit der
@@ -2111,3 +2111,26 @@ a.lb-kachel{text-decoration:none}
    TUN; das ist eine andere Art von Element. */
 .bereichsleiste .tcount{flex:none;margin-right:14px}
 .bereichsleiste .filterbar{min-width:0}
+
+/* ── ONBOARDING-SCHRITTE IN DER BEREICHSLEISTE (2026-08-16) ────────────────────────────
+   Die Schrittanzeige sass in einer eigenen Kopfzeile des Onboardings. Seit es nur noch
+   EINEN Rahmen gibt, wohnt sie in derselben zweiten Zeile wie die Abschnitte von Strategie
+   und die Themen von Bausteinen — dieselbe Frage („wo bin ich"), derselbe Ort.
+
+   Die Regeln kommen unveraendert aus `zugang.css` herueber; dort wirkten sie nicht mehr,
+   weil die Leiste ausserhalb jenes Bereichs liegt. Ergebnis war „1Konto2Firma3Profil". */
+.bereichsleiste .steps{display:flex;align-items:center;gap:8px}
+.bereichsleiste .step{display:flex;align-items:center;gap:6px;font-size:11px;color:var(--ink-400)}
+.bereichsleiste .step i{width:18px;height:18px;border-radius:50%;border:1.5px solid var(--line-strong);
+  display:grid;place-items:center;font-family:var(--mono);font-size:9px;font-weight:600;font-style:normal}
+.bereichsleiste .step.on{color:var(--ink-900);font-weight:600}
+.bereichsleiste .step.on i{border-color:var(--signal);background:var(--signal-wash);color:var(--signal-deep)}
+.bereichsleiste .step.done i{background:var(--signal);border-color:var(--signal);color:#fff}
+.bereichsleiste .step-sep{width:14px;height:1px;background:var(--line-strong)}
+
+/* Gesperrte Rail — sichtbar, damit der Rahmen derselbe bleibt, aber ohne Versprechen.
+   Kein `pointer-events:none` allein: das versteckt nur den Klick und laesst das Element
+   aussehen wie immer. Die Daempfung IST die Aussage. */
+.rail .railgesperrt{opacity:.38;cursor:default}
+.rail .railgesperrt:hover{background:none}
+.rail .railgesperrt .vb-lbl{display:none}

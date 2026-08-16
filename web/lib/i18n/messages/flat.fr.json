@@ -520,7 +520,6 @@
   "Frankfurt am Main": "Francfort-sur-le-Main",
   "Free": "Gratuit",
   "Free — Liste und Eckdaten unbegrenzt, 3 Bewertungen je 30 Tage": "Gratuit — liste et données clés en illimité, 3 analyses tous les 30 jours",
-  "Free-Zugang: Lead-Liste und alle Eckdaten dauerhaft unbegrenzt, drei ausführliche Bewertungen je 30 Tage.": "Accès gratuit : liste de leads et données clés en illimité, trois analyses détaillées tous les 30 jours.",
   "Freischalten": "Débloquer",
   "Frequenz": "Fréquence",
   "Frische Verlierer": "Perdants récents",
@@ -1382,7 +1381,6 @@
   "Wir": "Nous",
   "Wir finden unter eurem Namen noch keine gewonnene Vergabe.": "Nous ne trouvons encore aucun marché remporté à votre nom.",
   "Wir haben euer Profil aus euren bisherigen Vergaben gebaut.": "Nous avons construit votre profil à partir des marchés que vous avez remportés.",
-  "Wir haben noch nie öffentlich geboten": "Nous n'avons jamais répondu à un marché public",
   "Wir haben versucht, eure Firma an der Adresse": "Nous avons essayé d'identifier votre entreprise à partir de l'adresse",
   "Wir kennen euch in diesem Browser bereits als": "Dans ce navigateur, nous vous connaissons déjà sous le nom de",
   "Wir konnten euch zuordnen: {grund}.": "Nous avons pu vous identifier : {grund}.",
@@ -1944,5 +1942,9 @@
   "✓ angesprochen": "✓ contactée",
   "🇦🇹 nur Österreich": "🇦🇹 Autriche uniquement",
   "🇨🇭 nur Schweiz": "🇨🇭 Suisse uniquement",
-  "Später einrichten": "Configurer plus tard"
+  "Später einrichten": "Configurer plus tard",
+  "Erst nach der Anmeldung": "Disponible après connexion",
+  "Free-Zugang nach der Anmeldung: Lead-Liste und alle Eckdaten dauerhaft unbegrenzt, drei ausführliche Bewertungen je 30 Tage.": "Accès gratuit après inscription : liste des marchés et données clés en illimité, trois évaluations détaillées par 30 jours.",
+  "Aus eurer Übersicht übernommen — ihr könnt den Namen ändern.": "Repris de votre aperçu — vous pouvez modifier le nom.",
+  "Wir sind noch nicht in eurer Datenbank": "Nous ne sommes pas encore dans votre base"
 }

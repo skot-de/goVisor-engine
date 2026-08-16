@@ -2003,3 +2003,46 @@ def test_dichte_zaehlt_nicht_einfach_vorhandene_felder():
 def ROOT_WEB():
     import pathlib
     return pathlib.Path(__file__).resolve().parent.parent / "web"
+
+
+def test_outreach_landing_fuehrt_ins_onboarding():
+    """Die Knöpfe der Vertriebs-Landing dürfen nicht auf die Anmeldeseite zeigen.
+
+    Sie zeigten auf ``/login?t=<token>`` — eine Seite, die den Parameter gar nicht liest
+    und „Willkommen zurück" sagt. Ein kalter Kontakt, der noch nie ein Konto hatte, landete
+    also im Wiedersehen. Derselbe Fehler wie damals bei ``?modus=registrieren``: ein Link
+    auf einen Parameter, den das Ziel nicht kennt. Das fällt beim Lesen des Codes nicht auf,
+    weil beide Seiten für sich korrekt sind — nur die Verbindung stimmt nicht.
+    """
+    from pathlib import Path
+    p = Path(__file__).resolve().parent.parent / "web/app/t/[token]/LandingView.tsx"
+    quelle = p.read_text(encoding="utf-8")
+    assert "/onboarding?t=${encodeURIComponent(token)}" in quelle
+    # Nur echte Verlinkungen prüfen — der Kommentar nennt den alten Pfad absichtlich.
+    code = "\n".join(z for z in quelle.splitlines() if not z.lstrip().startswith("//"))
+    assert "/login?t=" not in code
+
+
+def test_onboarding_verwirft_token_vorbelegung_nicht():
+    """Der Domain-Stamm darf die Firma aus dem Outreach-Token nicht überschreiben.
+
+    ``erkennen()`` läuft direkt nach der Konto-Anlage und leitete die Firma bis dahin
+    ausschliesslich aus der E-Mail-Domain ab. Bei gesetztem Token hätte das die aufgelöste
+    Entität gegen eine aus der Adresse geschnittene Zeichenkette getauscht — und zwar
+    lautlos, weil beide Wege denselben Screen erreichen.
+    """
+    from pathlib import Path
+    p = Path(__file__).resolve().parent.parent / "web/app/onboarding/page.tsx"
+    quelle = p.read_text(encoding="utf-8")
+    assert "/api/outreach-firma?t=" in quelle, "Vorbelegung wird gar nicht erst geholt"
+    assert "const ausToken = vomToken" in quelle, "Weiche in erkennen() fehlt"
+    assert "const frage = ausToken ? eingabe.trim() : domainStamm(email)" in quelle
+
+    # Die unbelegbare Behauptung darf nicht zurückkehren: wir kennen namentlich nur
+    # GEWINNER (1.233.126 in `notice_parties`), keinen einzigen unterlegenen Bieter.
+    # „Noch nie geboten" ist aus unseren Daten grundsätzlich nicht feststellbar.
+    # Auf den VERDRAHTETEN Text prüfen, nicht auf das Vorkommen der Wörter: der Kommentar
+    # daneben nennt die alte Fassung absichtlich beim Namen. Ein Test, der die eigene
+    # Begründung als Verstoss liest, zwingt dazu, die Begründung zu löschen.
+    assert 't("Wir haben noch nie öffentlich geboten")' not in quelle
+    assert 't("Wir sind noch nicht in eurer Datenbank")' in quelle

@@ -8,7 +8,9 @@ import { register, saveProfile, currentUser } from "@/lib/supabase/auth";
 import { track, EV } from "@/lib/analytics";
 import { useSprache } from "@/lib/i18n";
 import Link from "next/link";
-import { EinstiegShell } from "@/components/EinstiegShell";
+import { AppRail, AppTop } from "@/components/explorer/Rail";
+import "../explorer.css";
+import "../zugang.css";
 
 /* Onboarding — portiert aus INPUT/Design/govisor-onboarding-v1.4.html.
    Registrierung + Firmen-Matching + Profil in einem ganzseitigen Flow. Die Demo-ENTITIES
@@ -188,10 +190,36 @@ export default function OnboardingPage() {
   const [beleg, setBeleg] = useState<Beleg | null>(null);       // Ergebnis des Domain-Abgleichs
   const [antragText, setAntragText] = useState("");             // Freitext für die manuelle Prüfung
   const [antragGesendet, setAntragGesendet] = useState(false);
+  const [vomToken, setVomToken] = useState(false);      // Firma kam aus der Outreach-Landing
   const pwStatus = pwPruefung(pw, email);
   const pwOk = pwStatus.ok;
 
   const acRef = useRef<HTMLDivElement>(null);
+
+  /**
+   * Kam der Besuch über eine Outreach-Landing (`/t/<token>`)? Dann ist die Firma bereits
+   * bekannt — sie stand gerade groß auf dem Bildschirm, mitsamt ihren Verträgen.
+   *
+   * Sie hier neu eintippen zu lassen wäre der Moment, in dem ein kalter Kontakt abspringt:
+   * wir fragen nach etwas, das wir selbst gerade vorgerechnet haben.
+   *
+   * Über `window.location` statt `useSearchParams`, weil letzteres in Next 15 eine
+   * Suspense-Grenze um die ganze Seite verlangt — für einen optionalen Parameter, der nur
+   * einen Vorschlag füllt, wäre das die falsche Reihenfolge von Aufwand und Wirkung.
+   */
+  useEffect(() => {
+    const tok = new URLSearchParams(window.location.search).get("t");
+    if (!tok) return;
+    fetch(`/api/outreach-firma?t=${encodeURIComponent(tok)}`)
+      .then((r) => r.json())
+      .then((d) => {
+        // NUR vorschlagen, nie festschreiben: das Feld bleibt frei änderbar, und der
+        // Treffer wird ganz normal über die Firmensuche bestätigt. Ein Token ist ein
+        // Hinweis darauf, wen wir angeschrieben haben — kein Beleg, wer da tippt.
+        if (d?.name) { setEingabe(d.name); setVomToken(true); }
+      })
+      .catch(() => {});
+  }, []);
 
   // Schon eingeloggt (z. B. „Profil bearbeiten")? → Konto-/Registrierungs-Screen überspringen.
   useEffect(() => {
@@ -259,13 +287,26 @@ export default function OnboardingPage() {
 
   // E-Mail → Domain-Stamm ableiten und matchen (Ticket #7 Stufe 1)
   async function erkennen() {
-    setAusDomain(true);
-    const stamm = domainStamm(email);
-    if (!stamm) { setScreen("firma"); return; }
+    /*
+      Liegt eine Vorbelegung aus dem Outreach-Token vor, ist SIE die bessere Ausgangsfrage
+      als der Domain-Stamm: der Token benennt eine in unseren Daten aufgelöste Entität, der
+      Stamm ist nur eine aus einer Adresse geschnittene Zeichenkette („mail@kloster-bau.de"
+      → „kloster-bau"). Ohne diese Weiche hätte der Stamm die Vorbelegung an genau zwei
+      Stellen wieder zunichte gemacht: unten per `setEingabe(frage)`, und davor schon,
+      indem die Kandidaten-Suche nach dem falschen Namen fragt.
+
+      Was NICHT passiert: überspringen. Bestätigt wird über dieselben Screens wie sonst.
+      Ein Token sagt, wen wir angeschrieben haben — nicht, wer gerade tippt; ein
+      weitergeleiteter Link ist der Normalfall, nicht die Ausnahme.
+    */
+    const ausToken = vomToken && eingabe.trim().length > 1;
+    setAusDomain(!ausToken);
+    const frage = ausToken ? eingabe.trim() : domainStamm(email);
+    if (!frage) { setScreen("firma"); return; }
     setBusy(true);
-    const treffer = await suche(stamm);
+    const treffer = await suche(frage);
     setBusy(false);
-    if (!treffer.length) { setEingabe(stamm); setScreen("firma"); return; }
+    if (!treffer.length) { setEingabe(frage); setScreen("firma"); return; }
     const beste = treffer[0];
     if (beste.strong && treffer.length <= 3) { setMatched(beste); setScreen("vorschlag"); }
     else { setMatches(treffer); setOffen(treffer[0]?.id ?? null); setKeineDavon(false); setScreen("kandidaten"); }
@@ -332,10 +373,18 @@ export default function OnboardingPage() {
   const winsAktiv = members.filter((_, i) => aktiv.has(String(i))).reduce((a, m) => a + m.wins, 0);
   const unsicher = members.some((m, i) => m.conf === "unsicher" && aktiv.has(String(i)));
 
+  // EIN Rahmen — derselbe wie in der App. Die Schrittanzeige sitzt in der BEREICHSLEISTE,
+  // derselben zweiten Zeile, in der Strategie ihre Abschnitte und Bausteine seine Themen
+  // zeigt. Genau dafuer haben wir sie gebaut.
+  //
+  // Der Ausgang „Spaeter einrichten" ist entfallen: die Rail IST der Ausgang. Eine
+  // Sackgasse kann so gar nicht mehr entstehen — das war der eigentliche Fehler, nicht der
+  // fehlende Link dagegen.
   return (
-    <EinstiegShell
-      titel={t("Onboarding")}
-      schritte={<nav className="steps">
+    <div className="app">
+      <AppTop />
+      <div className="bereichsleiste">
+        <nav className="steps">
           {SCHRITTE.map(([k, l], i) => (
             <span key={k} style={{ display: "contents" }}>
               <span className={`step ${i < cur ? "done" : i === cur ? "on" : ""}`}>
@@ -344,11 +393,11 @@ export default function OnboardingPage() {
               {i < SCHRITTE.length - 1 ? <span className="step-sep" /> : null}
             </span>
           ))}
-        </nav>}
-      aktion={screen !== "mail" ? (
-        <Link className="ob-raus" href="/leads">{t("Später einrichten")} →</Link>
-      ) : null}
-    >
+        </nav>
+      </div>
+      <div className="body">
+        <AppRail gesperrt />
+        <div className="main seitenmain zugang">
         {/* 0 · Konto */}
         {screen === "mail" && (
           <div className="card">
@@ -381,7 +430,7 @@ export default function OnboardingPage() {
               </button>
               <Link className="btn btn-t" href="/login">{t("Ich habe schon ein Konto")}</Link>
             </div>
-            <div className="note note-i">{t("Free-Zugang: Lead-Liste und alle Eckdaten dauerhaft unbegrenzt, drei ausführliche Bewertungen je 30 Tage.")}</div>
+            <div className="note note-i">{t("Free-Zugang nach der Anmeldung: Lead-Liste und alle Eckdaten dauerhaft unbegrenzt, drei ausführliche Bewertungen je 30 Tage.")}</div>
           </div>
         )}
 
@@ -411,11 +460,23 @@ export default function OnboardingPage() {
                   </div>
                 )}
               </div>
-              <span className="hint">{t("Zum Ausprobieren: „cancom\", „bechtle\" oder „müller\".")}</span>
+              <span className="hint">{vomToken
+                ? t("Aus eurer Übersicht übernommen — ihr könnt den Namen ändern.")
+                : t("Zum Ausprobieren: „cancom\", „bechtle\" oder „müller\".")}</span>
             </div>
             <div className="btnrow">
               <button className="btn btn-p" disabled={!eingabe.trim() || busy} onClick={() => { setAcOpen(false); zumMatch(); }}>{t("Suchen")}</button>
-              <button className="btn btn-t" onClick={() => setScreen("branche")}>{t("Wir haben noch nie öffentlich geboten")}</button>
+              {/*
+                Hieß früher „Wir haben noch nie öffentlich geboten" — eine Behauptung, die
+                wir gar nicht prüfen können und die den häufigsten Fall falsch benennt.
+                Gemessen 2026-08-16 an `notice_parties`: wir kennen 1.233.126 GEWINNER
+                namentlich und keinen einzigen unterlegenen Bieter. Angebote werden nur
+                gezählt (259.299 in 51.466 Vergaben), nicht benannt. Wer zehnmal geboten
+                und zehnmal verloren hat, ist in unseren Daten also genauso unsichtbar wie
+                jemand, der nie angetreten ist.
+                Der Knopf sagt jetzt, was wir wirklich wissen: dass wir sie nicht finden.
+              */}
+              <button className="btn btn-t" onClick={() => setScreen("branche")}>{t("Wir sind noch nicht in eurer Datenbank")}</button>
             </div>
           </div>
         )}
@@ -617,6 +678,8 @@ export default function OnboardingPage() {
             </div>
           </div>
         )}
-    </EinstiegShell>
+        </div>
+      </div>
+    </div>
   );
 }

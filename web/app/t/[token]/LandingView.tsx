@@ -44,7 +44,10 @@ export function LandingMissing() {
 
 export function LandingView({ d, token }: { d: Landing; token: string }) {
   const { t } = useSprache();
-  const signup = `/login?t=${encodeURIComponent(token)}`;
+  // „Konto anlegen" fuehrt ins ONBOARDING, nicht auf die Anmeldeseite. Vorher zeigte es auf
+  // `/login?t=…` — eine Seite, die „Willkommen zurueck" begruesst und den Parameter gar nicht
+  // liest. Ein kalter Kontakt, der noch nie ein Konto hatte, landete also im Wiedersehen.
+  const signup = `/onboarding?t=${encodeURIComponent(token)}`;
   const anyEst = d.vertraege.some((c) => c.geschaetzt) || (d.wettbewerber?.vertraege.some((c) => c.geschaetzt) ?? false);
 
   return (

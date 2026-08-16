@@ -95,13 +95,20 @@ function useIntern(): boolean {
 }
 
 export function AppRail({
-  current, merkN = 0, onSwitch, plan: planProp, userEmail: mailProp, onLogout,
+  current, merkN = 0, onSwitch, plan: planProp, userEmail: mailProp, onLogout, gesperrt,
 }: {
   /** Fehlt, wenn die Seite kein Rail-Ziel ist (z. B. Einstellungen) — dann leuchtet nichts. */
   current?: RailId;
   merkN?: number;
   /** Nur die Shell kann in-app umschalten. Fehlt der Handler, werden alle Punkte zu Links. */
   onSwitch?: (id: RailId) => void;
+  /** Sichtbar, aber nicht anklickbar — fuer Anmelden, Registrieren und Onboarding.
+   *
+   *  WARUM SICHTBAR STATT WEG: der Rahmen soll derselbe sein, sonst springt beim Wechsel
+   *  wieder alles. Und man SIEHT, was einen erwartet, statt vor einer leeren Seite zu
+   *  stehen. Nicht klickbar, weil die Bereiche ohne Konto nichts zeigen — ein Link, der
+   *  auf eine leere Seite fuehrt, ist schlechter als ein stiller Punkt. */
+  gesperrt?: boolean;
   plan?: Plan;
   userEmail?: string | null;
   onLogout?: () => void;
@@ -147,6 +154,17 @@ export function AppRail({
           {n.id === "merkliste" && merkN ? <span className="railcount">{merkN}</span> : null}
         </>);
         const aktiv = current === n.id ? "true" : undefined;
+        // GESPERRT: als `span` rendern, nicht als deaktivierter Knopf. Ein `disabled`
+        // Button bleibt ein Bedienelement, das nicht reagiert — der Tastatur-Fokus laeuft
+        // hindurch und Vorlesesoftware kuendigt ihn an. Ein `span` mit `aria-disabled`
+        // sagt beides ehrlich: da ist etwas, es geht gerade nicht.
+        if (gesperrt) {
+          const el = (
+            <span key={n.id} className="viewbtn railgesperrt" aria-disabled="true"
+              title={t("Erst nach der Anmeldung")}>{inner}</span>
+          );
+          return n.sep ? [el, <span key={n.id + "-sep"} className="railsep" />] : el;
+        }
         const btn = onSwitch && IN_APP.includes(n.id) ? (
           <button key={n.id} className="viewbtn" aria-label={label} aria-current={aktiv}
             onClick={() => onSwitch(n.id)}>{inner}</button>

@@ -42,6 +42,30 @@ const PREVIEW_COOKIE = "gv_preview";
  * Vercel-Umgebungsvariable nicht.
  */
 
+/* ── ANMELDE-TOR ───────────────────────────────────────────────────────────────────────
+ *
+ * WARUM. Die ganze Anwendung beruht darauf, GEZIELTE Ausschreibungen zu zeigen. Ohne Profil
+ * ist die Liste eine ungefilterte Aufzaehlung von 15.762 Vergaben — genau das, was jedes
+ * kostenlose Portal auch kann. Der Wert entsteht erst mit dem Profil, also gibt es die App
+ * erst nach der Anmeldung. „Free" heisst kostenlos NACH der Registrierung, nicht ohne.
+ *
+ * WAS BEWUSST OFFEN BLEIBT:
+ *   /login /onboarding /start   der Weg hinein — sonst sperrt man die Tuer von innen ab
+ *   /t/…                        der Vertriebs-Einstieg, ausdruecklich ohne Konto gedacht
+ *   /api/wer                    die Selbstauskunft; sie MUSS „nein" sagen koennen
+ *   /api/outreach-firma         der Firmenname zum Outreach-Token, fuer die Vorbelegung
+ *   /api/entity-verify          die Firmensuche des Onboardings. Sie laeuft, BEVOR eine
+ *                               Sitzung existiert: bei ausstehender E-Mail-Bestaetigung
+ *                               gibt es nach `signUp` noch keine. Ohne diese Ausnahme
+ *                               waere Schritt 2 der Registrierung tot.
+ */
+const OFFEN = ["/login", "/onboarding", "/start", "/t", "/api/wer", "/api/entity-verify", "/api/outreach-firma"];
+
+function istOffen(pfad: string): boolean {
+  if (pfad === "/") return false;             // die Wurzel fuehrt in die App
+  return OFFEN.some((o) => pfad === o || pfad.startsWith(o + "/"));
+}
+
 function istIntern(pfad: string): boolean {
   return pfad === "/intern" || pfad.startsWith("/intern/") || pfad.startsWith("/api/intern");
 }
@@ -70,6 +94,19 @@ const VORHANG_COOKIE = "gv_vorhang";
 
 /** Antwort fuer gesperrte Interna. Bewusst 404 statt 403 und ohne Hinweistext: ein 403
  *  bestaetigt, dass es die Seite gibt, und genau das soll niemand erfahren. */
+/** Ohne Sitzung zum Anmelden. APIs bekommen 401 statt einer Umleitung — eine HTML-Seite als
+ *  Antwort auf einen Datenabruf ist fuer den Aufrufer unbrauchbar und erzeugt Folgefehler,
+ *  die nach etwas ganz anderem aussehen. */
+function zumLogin(request: NextRequest, pfad: string) {
+  if (pfad.startsWith("/api/")) {
+    return NextResponse.json({ error: "Anmeldung erforderlich" }, { status: 401 });
+  }
+  const ziel = new URL("/login", request.url);
+  // Wohin der Nutzer WOLLTE — damit er nach dem Anmelden dort landet und nicht irgendwo.
+  if (pfad && pfad !== "/") ziel.searchParams.set("weiter", pfad);
+  return NextResponse.redirect(ziel);
+}
+
 function nichtGefunden() {
   return new NextResponse("Not found", {
     status: 404,
@@ -113,6 +150,7 @@ export async function middleware(request: NextRequest) {
     // Schlüssel gültig → volle App; bei frischem ?preview den Cookie setzen (Folgeseiten ohne Query).
     const { response: res, email } = await updateSession(request);
     if (istIntern(pfad) && !istAdmin(email)) return nichtGefunden();
+    if (!email && !istOffen(pfad)) return zumLogin(request, pfad);
     if (q === PREVIEW_KEY) {
       res.cookies.set(PREVIEW_COOKIE, PREVIEW_KEY, {
         httpOnly: true, sameSite: "lax", secure: true, path: "/", maxAge: 60 * 60 * 24 * 30,
@@ -125,6 +163,7 @@ export async function middleware(request: NextRequest) {
   // Ernstfall in der Produktion.
   const { response, email } = await updateSession(request);
   if (istIntern(pfad) && !istAdmin(email)) return nichtGefunden();
+  if (!email && !istOffen(pfad)) return zumLogin(request, pfad);
   return response;
 }
 
