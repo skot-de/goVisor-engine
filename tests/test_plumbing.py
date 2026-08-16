@@ -2046,3 +2046,35 @@ def test_onboarding_verwirft_token_vorbelegung_nicht():
     # Begründung als Verstoss liest, zwingt dazu, die Begründung zu löschen.
     assert 't("Wir haben noch nie öffentlich geboten")' not in quelle
     assert 't("Wir sind noch nicht in eurer Datenbank")' in quelle
+
+
+def test_landing_klassen_sind_praefixiert():
+    """Jede CSS-Klasse der Outreach-Landing traegt `lg-`.
+
+    Grund, zweimal am selben Tag gelernt: kurze Klassennamen kollidieren mit dem
+    App-Stylesheet, und zwar LAUTLOS. `.einstieg` war in `explorer.css` schon der
+    Einstiegs-Kasten der Lead-Ansicht (gruener Rahmen ums Anmeldeformular). `.lb` ist
+    dort ein Layout-Container mit `max-width:1560px` und `padding:var(--s6)` — als
+    Beschriftung im Trichter benutzt, blies er jede Zeile von 39 auf 92 Pixel auf.
+
+    Beide Male sah der Code richtig aus und das Ergebnis falsch, und beide Male war die
+    Ursache erst nach dem Ausmessen im Browser zu sehen. Ein Praefix kostet nichts und
+    macht die ganze Fehlerklasse unmoeglich.
+    """
+    from pathlib import Path
+    import re
+    w = Path(__file__).resolve().parent.parent / "web"
+
+    tsx = (w / "app/t/[token]/LandingView.tsx").read_text(encoding="utf-8")
+    # Klassen des App-Rahmens sind erlaubt — die kommen aus `Rail`/`explorer.css`.
+    rahmen = {"app", "body", "main", "seitenmain", "landing"}
+    fremd = sorted({k for treffer in re.findall(r'className="([^"{]+)"', tsx)
+                    for k in treffer.split()
+                    if not k.startswith("lg-") and k not in rahmen})
+    assert not fremd, f"ungepraefixte Klassen im Markup: {fremd}"
+
+    css = (w / "app/landing.css").read_text(encoding="utf-8")
+    css = re.sub(r"/\*.*?\*/", "", css, flags=re.S)          # Kommentare erwaehnen alte Namen
+    sel = sorted({m for m in re.findall(r"\.([a-zA-Z][\w-]*)", css)
+                  if not m.startswith("lg-") and m != "landing"})
+    assert not sel, f"ungepraefixte Selektoren in landing.css: {sel}"

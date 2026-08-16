@@ -38,8 +38,8 @@ function Vertragstabelle({ zeilen }: { zeilen: Zeile[] }) {
           <tr>
             <th>{t("Vorhaben")}</th>
             <th>{t("Vergabestelle")}</th>
-            {mitVolumen && <th className="r">{t("Volumen")}</th>}
-            <th className="r">{t("Endet")}</th>
+            {mitVolumen && <th className="lg-r">{t("Volumen")}</th>}
+            <th className="lg-r">{t("Endet")}</th>
           </tr>
         </thead>
         <tbody>
@@ -47,8 +47,8 @@ function Vertragstabelle({ zeilen }: { zeilen: Zeile[] }) {
             <tr key={i} className={z.art === "auslauf" ? "lg-auslauf" : ""}>
               <td className="lg-titel">{z.titel || t("(ohne Titel)")}</td>
               <td className="lg-buyer">{z.buyer}</td>
-              {mitVolumen && <td className="r m">{z.vol ?? ""}</td>}
-              <td className="r m">{z.ende ?? ""}</td>
+              {mitVolumen && <td className="lg-r lg-m">{z.vol ?? ""}</td>}
+              <td className="lg-r lg-m">{z.ende ?? ""}</td>
             </tr>
           ))}
         </tbody>
@@ -68,19 +68,33 @@ function Vertragstabelle({ zeilen }: { zeilen: Zeile[] }) {
 function Trichter({ stufen }: { stufen: NonNullable<Baustein["trichter"]> }) {
   const { t } = useSprache();
   const max = Math.max(...stufen.map((s) => s.n), 1);
+  /*
+    Dritter Anlauf, und der Grund fuers Umbauen steckt in den ersten beiden:
+      1. Zahl | Balken | Beschriftung in drei festen Spalten. Dazwischen klaffte eine
+         Luecke, die Zeilen standen weit auseinander: eine Tabelle mit Loechern.
+      2. Balken vorn, Beschriftung direkt dahinter. Damit WANDERTE die Beschriftung mit
+         dem Balken nach links und stand auf keiner Linie mehr. Sven: „sieht kacke aus."
+    Jetzt liegt der Balken als FLAECHE unter der Zeile. Beschriftung links, Zahl rechts,
+    beide auf fester Linie; die Verengung zeigt sich als schrumpfende Unterlegung. Das
+    ist der uebliche Bau eines Balkendiagramms, und er ist hier ueblich, weil er
+    funktioniert.
+  */
   return (
     <div className="lg-trichter">
       {stufen.map((s, i) => (
         <div className="lg-stufe" key={i}>
-          <div className="n">{s.n.toLocaleString("de-DE")}</div>
-          <div className="bar"><span style={{ width: `${Math.max(2, (s.n / max) * 100)}%` }} /></div>
-          <div className="lb">{s.label}{s.hinweis ? <em>{s.hinweis}</em> : null}</div>
+          <span className="lg-fuell" style={{ width: `${Math.max(3, (s.n / max) * 100)}%` }} />
+          <span className="lg-lb">
+            {s.label}
+            {s.hinweis && <em>{s.hinweis}</em>}
+          </span>
+          <span className="lg-n">{s.n.toLocaleString("de-DE")}</span>
         </div>
       ))}
+      {/* Die offene Stufe: keine Flaeche, keine Zahl. Sie ist der Grund fuers Profil. */}
       <div className="lg-stufe lg-offen">
-        <div className="n">?</div>
-        <div className="bar" />
-        <div className="lb">{t("wie viele davon wirklich passen, sagt euer Profil")}</div>
+        <span className="lg-lb">{t("wie viele davon wirklich passen, sagt euer Profil")}</span>
+        <span className="lg-n">?</span>
       </div>
     </div>
   );
@@ -96,8 +110,8 @@ function KennzahlenLeiste({ teile }: { teile: Baustein[] }) {
           if (!erste) return null;
           return (
             <div className="lg-kachel" key={b.id}>
-              <div className="v">{erste.wert}</div>
-              <div className="k">{erste.label}</div>
+              <div className="lg-v">{erste.wert}</div>
+              <div className="lg-k">{erste.label}</div>
               {typeof b.anteil === "number" && (
                 <div className="lg-balken"><span style={{ width: `${Math.round(b.anteil * 100)}%` }} /></div>
               )}
