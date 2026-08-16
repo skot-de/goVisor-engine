@@ -583,7 +583,9 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
     setActiveTab("uebersicht");
     setMode("read");
     bump();
-    recordLeadClick(id);   // Attribution: erster Detail-Klick (Success-Fee-Gate #6)
+    // `l` mitgeben, nicht nur die Kennung: die Dichte muss im MOMENT des Klicks
+    // festgehalten werden — sie aendert sich, sobald Unterlagen nachkommen.
+    recordLeadClick(id, l);   // Attribution: erster Detail-Klick (Success-Fee-Gate #6)
     // Schwere Felder (Beschreibung + Vergabestellen-Profil) einmalig nachladen.
     if (l && !detailLoaded.current.has(id)) {
       detailLoaded.current.add(id);

@@ -1963,3 +1963,43 @@ def test_psql_wird_auch_ohne_homebrew_im_pfad_gefunden():
     finally:
         if alt is not None:
             os.environ["PATH"] = alt
+
+
+def test_dichte_regel_ist_eine_quelle_und_wird_beim_klick_festgehalten():
+    """Die Dichte muss im MOMENT des Klicks gespeichert werden, nicht beim Auswerten.
+
+    Sie ändert sich, sobald die Unterlagen eines Leads ankommen — wer sie später berechnet,
+    misst den Stand von heute gegen einen Klick von letzter Woche. Genau deshalb reicht es
+    nicht, `lead_id` zu speichern und die Dichte hinterher zu joinen.
+
+    Hintergrund: gemessen 2026-08-16 sind **58 % der Leads dünn** (nur Kopfdaten). Ob das
+    jemanden stört, weiss NIEMAND — die Interaktionstabelle hatte 3 Zeilen. Statt ein Symbol
+    gegen ein vermutetes Problem zu bauen, wird erst gemessen.
+    """
+    web = ROOT_WEB()
+    a = (web / "lib" / "analytics.ts").read_text(encoding="utf-8")
+    assert "dichte: d, merkmale: m" in a, "Dichte muss mit in die Interaktionszeile"
+    assert "recordLeadClick(leadId: string, lead?" in a, "der Lead selbst muss uebergeben werden"
+    shell = (web / "components" / "explorer" / "ExplorerShell.tsx").read_text(encoding="utf-8")
+    assert "recordLeadClick(id, l)" in shell, "die Aufrufstelle gibt den Lead nicht mit"
+
+
+def test_dichte_zaehlt_nicht_einfach_vorhandene_felder():
+    """Ein naives Zählen führt in die Irre — und das ist gemessen, nicht vermutet.
+
+    Einen Unterlagen-LINK haben 74,6 % der Leads, Lose 56,0 % — beides sagt nichts darüber,
+    ob man die Vergabe beurteilen kann. Das einzige Merkmal, das das bedeutet, ist „Signale
+    aus den Unterlagen gelesen": 20,5 %. Eine Punktzahl hätte diese eine wichtige
+    Eigenschaft unter fünf billigen begraben.
+    """
+    d = (ROOT_WEB() / "lib" / "dichte.ts").read_text(encoding="utf-8")
+    assert "unterlagenAusgewertet" in d, "die entscheidende Frage braucht einen eigenen Namen"
+    # `unterlagen` (der blosse Link) darf die Stufe NICHT bestimmen.
+    kern = d.split("export function dichte")[1].split("export function merkmale")[0]
+    assert "unterlagen" not in kern.replace("unterlagenAusgewertet", ""), \
+        "der Unterlagen-LINK darf die Dichte nicht bestimmen — er sagt nichts ueber den Inhalt"
+
+
+def ROOT_WEB():
+    import pathlib
+    return pathlib.Path(__file__).resolve().parent.parent / "web"

@@ -1,5 +1,6 @@
 "use client";
 import { createClient } from "./supabase/client";
+import { dichte, merkmale } from "./dichte";
 
 /* Analytics (Ticket #8) — eine dünne, pluggbare Event-Schicht. Sink-Reihenfolge:
  *  1) PostHog, falls `window.posthog` initialisiert ist (Integrationspunkt — braucht Key/Init,
@@ -23,14 +24,24 @@ export function track(event: string, props: Props = {}) {
 
 /* Attribution (Grundlage für Success-Fee #6 + North-Star „Wins Detected"): erster Detail-Klick
  * und erster Bewertungs-Tab-Klick je Lead. Nur bei aktiver Session, RLS-gebunden. No-op sonst. */
-export async function recordLeadClick(leadId: string) {
-  track("lead_opened", { lead_id: leadId });
+export async function recordLeadClick(leadId: string, lead?: Parameters<typeof dichte>[0]) {
+  // DICHTE MITSCHREIBEN. Ohne sie beantwortet die Tabelle nur „welcher Lead wurde
+  // geoeffnet", nicht die Frage, um die es geht: werden duenne Leads ueberhaupt geklickt?
+  // Gemessen 2026-08-16 sind 58 % der Leads duenn — ob das jemanden stoert, weiss niemand.
+  //
+  // Nachtraeglich ist das NICHT rekonstruierbar: die Dichte eines Leads aendert sich, sobald
+  // seine Unterlagen ankommen. Wer sie erst beim Auswerten berechnet, misst den Stand von
+  // heute gegen einen Klick von letzter Woche.
+  const d = lead ? dichte(lead) : null;
+  const m = lead ? merkmale(lead) : null;
+  track("lead_opened", { lead_id: leadId, dichte: d, merkmale: m });
   try {
     const sb = createClient();
     const { data: { user } } = await sb.auth.getUser();
     if (!user) return;
     await sb.from("user_lead_interactions").upsert(
-      { user_id: user.id, lead_id: leadId }, { onConflict: "user_id,lead_id", ignoreDuplicates: true });
+      { user_id: user.id, lead_id: leadId, dichte: d, merkmale: m },
+      { onConflict: "user_id,lead_id", ignoreDuplicates: true });
   } catch { /* still no-op */ }
 }
 
