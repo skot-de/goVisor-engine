@@ -952,3 +952,55 @@ def test_ein_lauf_eine_logdatei():
     assert 'daily-$TODAY-$(date' in sh, "der Logname braucht die Startzeit"
 
 
+
+
+# ══ Ein Rahmen vor der App (2026-08-16) ════════════════════════════════════════════════
+
+def test_ein_rahmen_vor_der_app():
+    """Vier Rahmen bis in die App — das war die Ursache des „losen" Gefuehls.
+
+    `/login` hatte einen eigenen Kopf und lieh sich das Stylesheet des Onboardings,
+    `/onboarding` hatte einen eigenen, `/start` hatte **gar keinen**. Es war nicht
+    uneinheitlich gestaltet, es war mehrfach gebaut.
+    """
+    web = ROOT / "web"
+    for seite in ("login", "onboarding", "start"):
+        q = (web / "app" / seite / "page.tsx").read_text(encoding="utf-8")
+        assert "EinstiegShell" in q, f"/{seite} nutzt den gemeinsamen Rahmen nicht"
+        assert "<header" not in q, f"/{seite} hat wieder eine eigene Kopfzeile"
+
+
+def test_registrieren_gibt_es_nur_einmal():
+    """`/login` und `/onboarding` zeigten aufeinander UND boten beide Registrierung an —
+    dieselbe Handlung, zwei Bildschirme, je nachdem durch welche Tuer man kam."""
+    web = ROOT / "web"
+    login = (web / "app" / "login" / "page.tsx").read_text(encoding="utf-8")
+    assert "signUp" not in login, "Registrierung gehoert ins Onboarding, nicht auch hierher"
+    start = (web / "app" / "start" / "page.tsx").read_text(encoding="utf-8")
+    assert "modus=registrieren" not in start, \
+        "der Link zeigte auf einen Parameter, den /login nie gelesen hat"
+
+
+def test_anmelden_fuehrt_in_den_explorer():
+    """Wer sich ANMELDET, war schon da und hat das Profil bewusst uebersprungen. Ihn erneut
+    ins Formular zu schicken beantwortet nicht, warum — und wir haben gestern extra einen
+    Ausgang aus dem Onboarding gebaut, weil Zwang dort falsch ist. Die Einladung steht
+    ohnehin dauerhaft in der Kopfzeile, im Inhalt und auf „Unser Unternehmen".
+
+    Registrieren endet weiterhin IM Onboarding: da ist der Nutzer im Fluss.
+    """
+    login = (ROOT / "web" / "app" / "login" / "page.tsx").read_text(encoding="utf-8")
+    assert 'router.push("/leads")' in login
+    assert 'router.push("/onboarding")' not in login
+
+
+def test_kein_stylesheet_wird_von_einer_fremden_seite_geliehen():
+    """`/login` und `/settings` importierten `onboarding/onboarding.css`. Eine Datei, die
+    vier Seiten kleidet und nach einer davon heisst, laedt zum Missverstaendnis ein — beim
+    ersten „das gehoert doch zum Onboarding" wird eine Regel geaendert, die anderswo
+    mitliest. Heisst jetzt `einstieg.css`, Klasse `.einstieg`."""
+    web = ROOT / "web"
+    assert not (web / "app" / "onboarding" / "onboarding.css").exists()
+    assert (web / "app" / "einstieg.css").exists()
+    treffer = [f.name for f in web.rglob("*.tsx") if "onboarding/onboarding.css" in f.read_text(encoding="utf-8")]
+    assert not treffer, f"leihen weiter das alte Stylesheet: {treffer}"

@@ -389,11 +389,11 @@ img,svg{display:block;max-width:100%}
 .th-resize{position:absolute;top:0;right:0;width:7px;height:100%;cursor:col-resize;z-index:3}
 .th-resize:hover,.th-resize:active{box-shadow:inset -2px 0 0 var(--signal)}
 
-/* ── Startpunkt hinter dem Vorhang + Kundensicht-Hinweis ────────────────────────────────
+/* ── Startpunkt (/start) + Kundensicht-Hinweis ─
+   `.startseite` ist am 2026-08-16 entfallen: die Seite nutzt jetzt die gemeinsame
+   Karte des Einstieg-Rahmens. Der Rest gilt unveraendert weiter. ────────────────────────────────
    Bewusst nüchtern: die Startseite ist ein Werkzeug, kein Schaufenster. Der Banner nutzt
    Farbe als Bedeutung — Bernstein „volle Rechte, Vorsicht", Blaugrau „nur lesen". */
-.startseite { max-width: 46rem; margin: 0 auto; padding: 3rem 1.5rem; }
-.startseite h1 { font-size: 1.5rem; margin: 0 0 .25rem; }
 .start-status { color: var(--muted, #6b7280); margin: 0 0 2rem; }
 .start-block { border-top: 1px solid var(--line, #e5e7eb); padding: 1.25rem 0; }
 .start-block h2 { font-size: 1rem; margin: 0 0 .5rem; }

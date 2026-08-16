@@ -1,4 +1,4 @@
-/* Settings-Seite (Ticket #10) — nutzt ob-page-Rahmen + Tokens. */
+/* Settings-Seite (Ticket #10) — nutzt den Einstieg-Rahmen + Tokens. */
 .set-page .set-wrap{flex:1;display:grid;grid-template-columns:200px minmax(0,1fr);gap:var(--s6);
   max-width:900px;width:100%;margin:0 auto;padding:var(--s6) var(--s5) 64px}
 .set-nav{display:flex;flex-direction:column;gap:2px;align-self:start;position:sticky;top:var(--s5)}

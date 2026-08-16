@@ -8,7 +8,7 @@ import { register, saveProfile, currentUser } from "@/lib/supabase/auth";
 import { track, EV } from "@/lib/analytics";
 import { useSprache } from "@/lib/i18n";
 import Link from "next/link";
-import "./onboarding.css";
+import { EinstiegShell } from "@/components/EinstiegShell";
 
 /* Onboarding — portiert aus INPUT/Design/govisor-onboarding-v1.4.html.
    Registrierung + Firmen-Matching + Profil in einem ganzseitigen Flow. Die Demo-ENTITIES
@@ -333,12 +333,9 @@ export default function OnboardingPage() {
   const unsicher = members.some((m, i) => m.conf === "unsicher" && aktiv.has(String(i)));
 
   return (
-    <div className="ob-page">
-      <header className="top">
-        <div style={{ display: "flex", alignItems: "baseline", gap: 10 }}>
-          <span className="brand">go<span>V</span>isor</span><span className="ver">{t("Onboarding")}</span>
-        </div>
-        <nav className="steps">
+    <EinstiegShell
+      titel={t("Onboarding")}
+      schritte={<nav className="steps">
           {SCHRITTE.map(([k, l], i) => (
             <span key={k} style={{ display: "contents" }}>
               <span className={`step ${i < cur ? "done" : i === cur ? "on" : ""}`}>
@@ -347,22 +344,11 @@ export default function OnboardingPage() {
               {i < SCHRITTE.length - 1 ? <span className="step-sep" /> : null}
             </span>
           ))}
-        </nav>
-
-        {/* AUSGANG. Bis 2026-08-16 gab es keinen: das Onboarding hatte „Zurueck" zwischen
-            seinen eigenen Schritten, aber keinen Weg HINAUS. Wer hier landete — auch nur
-            um etwas nachzusehen — kam nur ueber die Browser-Zurueck-Taste wieder weg.
-            Eine Seite ohne Ausgang liest sich als „du musst das jetzt zu Ende bringen",
-            und genau das soll ein Profil nicht sein.
-
-            Ab dem Konto-Schritt sichtbar: davor gibt es noch keine Sitzung, ein Sprung in
-            die App waere dann ein Sprung ins Leere. */}
-        {screen !== "mail" ? (
-          <Link className="ob-raus" href="/leads">{t("Später einrichten")} →</Link>
-        ) : null}
-      </header>
-
-      <main className="stage">
+        </nav>}
+      aktion={screen !== "mail" ? (
+        <Link className="ob-raus" href="/leads">{t("Später einrichten")} →</Link>
+      ) : null}
+    >
         {/* 0 · Konto */}
         {screen === "mail" && (
           <div className="card">
@@ -631,7 +617,6 @@ export default function OnboardingPage() {
             </div>
           </div>
         )}
-      </main>
-    </div>
+    </EinstiegShell>
   );
 }

@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { login } from "@/lib/supabase/auth";
-import "../onboarding/onboarding.css";
+import { EinstiegShell } from "@/components/EinstiegShell";
 
 export default function LoginPage() {
   const router = useRouter();
@@ -18,17 +18,13 @@ export default function LoginPage() {
     const { error } = await login(email, pw);
     setBusy(false);
     if (error) { setFehler(error.message === "Invalid login credentials" ? "E-Mail oder Passwort stimmt nicht." : error.message); return; }
-    router.push("/");
+    router.push("/leads");   // Explorer, nicht Onboarding — s. Kommentar oben
   }
 
+  // KEINE Schrittanzeige hier: beim Anmelden gibt es keine Schritte. Das ist der einzige
+  // erlaubte Unterschied zum Registrieren — alles andere kommt aus dem gemeinsamen Rahmen.
   return (
-    <div className="ob-page">
-      <header className="top">
-        <div style={{ display: "flex", alignItems: "baseline", gap: 10 }}>
-          <span className="brand">go<span>V</span>isor</span><span className="ver">Anmelden</span>
-        </div>
-      </header>
-      <main className="stage">
+    <EinstiegShell titel="Anmelden">
         <div className="card">
           <h1>Willkommen zurück.</h1>
           <p className="lede">Meldet euch an, um eure Merkliste, euer Profil und eure Bewertungen wiederzusehen.</p>
@@ -52,7 +48,6 @@ export default function LoginPage() {
             <Link className="btn btn-t" href="/onboarding">Noch kein Konto? Kostenlos starten</Link>
           </div>
         </div>
-      </main>
-    </div>
+    </EinstiegShell>
   );
 }

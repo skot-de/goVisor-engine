@@ -12,6 +12,7 @@
  */
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import { EinstiegShell } from "@/components/EinstiegShell";
 import { currentUser, logout } from "@/lib/supabase/auth";
 import {
   TESTPROFILE, PROFIL_COOKIE, darfSchreiben, type Testprofil,
@@ -40,11 +41,15 @@ export default function StartSeite() {
     router.push("/");
   }
 
-  if (laedt) return <main className="startseite"><p>…</p></main>;
+  // Auch der Ladezustand bekommt den Rahmen. Eine Seite, die erst nackt erscheint und
+  // dann einen Kopf bekommt, sieht beim Laden nach Fehler aus.
+  if (laedt) {
+    return <EinstiegShell titel="Profil wechseln"><div className="card"><p>…</p></div></EinstiegShell>;
+  }
 
   return (
-    <main className="startseite">
-      <h1>goVisor</h1>
+    <EinstiegShell titel="Profil wechseln">
+    <div className="card">
       <p className="start-status">
         {email ? <>Angemeldet als <strong>{email}</strong></> : "Nicht angemeldet"}
       </p>
@@ -53,8 +58,8 @@ export default function StartSeite() {
         <section className="start-block">
           <h2>Zugang</h2>
           <div className="start-knopfreihe">
-            <button onClick={() => router.push("/login")}>Anmelden</button>
-            <button onClick={() => router.push("/login?modus=registrieren")}>Registrieren</button>
+            <button className="btn btn-p" onClick={() => router.push("/login")}>Anmelden</button>
+            <button className="btn btn-t" onClick={() => router.push("/onboarding")}>Registrieren</button>
           </div>
         </section>
       )}
@@ -64,7 +69,7 @@ export default function StartSeite() {
           <section className="start-block">
             <h2>Direkt in die App</h2>
             <p className="start-hinweis">Mit dem eigenen Konto und dem eigenen Profil.</p>
-            <button onClick={() => starte(null)}>App öffnen</button>
+            <button className="btn btn-p" onClick={() => starte(null)}>App öffnen</button>
           </section>
 
           <section className="start-block">
@@ -102,6 +107,7 @@ export default function StartSeite() {
           </section>
         </>
       )}
-    </main>
+    </div>
+    </EinstiegShell>
   );
 }
