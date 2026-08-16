@@ -4,9 +4,11 @@
  * Wortzeichen als <span>, eigene Farbwerte. Der erste Eindruck sah dadurch nach einem
  * anderen Produkt aus als das, in das er fuehrt.
  *
- * Gestaltungsregel hier: EIN Blickfang je Karte. Vorher standen alle Zahlen gleich gross
- * in einem gleichmaessigen Raster; dadurch trug keine. Jetzt traegt die erste Zahl den
- * Baustein, alles andere ordnet sich unter.                                            */
+ * Der Bogen: „Das wissen wir bereits ueber euch" -> die laufenden Vorhaben -> „Und das
+ * koennen wir fuer euch finden" -> Profil einrichten. Zahlen stehen in Leisten
+ * (.lg-leiste), nicht je in einer eigenen Karte: vier gleich aussehende Karten mit je
+ * einer Zahl sind Rahmen ohne Inhalt. Eine eigene Karte bekommt nur, was wirklich Inhalt
+ * hat — die Vertragstabelle.                                                           */
 
 /* `display:block` ist hier KEINE Kosmetik, sondern Pflicht: `.main` ist im App-Rahmen ein
    Grid (fuer das Explorer-Layout). Ohne diese Zeile werden die Karten zu Grid-Zellen und
@@ -36,20 +38,12 @@
 .lg-kt { font-size: 14px; font-weight: 650; letter-spacing: -.01em;
   padding: 13px 18px; border-bottom: 1px solid var(--line); margin: 0; }
 
-.lg-zahlen { display: flex; align-items: baseline; flex-wrap: wrap; gap: 30px;
-  padding: 18px 18px 14px; }
-.lg-gross .v { font-family: var(--mono, ui-monospace, monospace); font-size: 40px;
-  font-weight: 700; letter-spacing: -.035em; line-height: 1; color: var(--signal-deep, #0b7a52); }
-.lg-gross .k, .lg-klein .k { font-size: 11.5px; color: var(--ink-400); margin-top: 6px; }
-.lg-klein .v { font-family: var(--mono, ui-monospace, monospace); font-size: 19px;
-  font-weight: 600; letter-spacing: -.02em; color: var(--ink-700); }
 
 /* Ein Balken sagt „fast alles" schneller als jede Zahl daneben. */
 .lg-balken { height: 5px; margin: 0 18px 16px; border-radius: 3px; background: var(--line); }
 .lg-balken span { display: block; height: 100%; border-radius: 3px;
   background: var(--signal, #16a06b); }
 
-.lg-namen { font-size: 12.5px; color: var(--ink-500); padding: 0 18px 15px; }
 
 /* ── Tabelle ────────────────────────────────────────────────────────────────────── */
 .lg-tblwrap { overflow-x: auto; border-top: 1px solid var(--line); }
@@ -77,13 +71,6 @@
 .lg-grenze { font-size: 11.5px; line-height: 1.55; color: var(--ink-400);
   padding: 11px 18px; border-top: 1px solid var(--line); }
 
-.lg-bruecke { display: flex; align-items: baseline; gap: 10px; text-decoration: none;
-  color: inherit; padding: 12px 18px; border-top: 1px solid var(--line); }
-.lg-bruecke:hover { background: var(--wash, rgba(0,0,0,.03)); }
-.lg-bruecke .bp { font-family: var(--mono, ui-monospace, monospace); font-size: 10px;
-  letter-spacing: .1em; text-transform: uppercase; color: var(--signal-deep, #0b7a52); flex: none; }
-.lg-bruecke .bt { font-size: 13px; }
-.lg-bruecke .bt::after { content: " \2192"; color: var(--ink-400); }
 
 .lg-schluss { margin-top: 30px; padding: 24px 0 0; border-top: 1px solid var(--line); }
 .lg-schluss h3 { font-size: 18px; font-weight: 700; letter-spacing: -.02em; margin: 0; }
@@ -95,5 +82,37 @@
   .landing { padding: 20px 16px 60px; }
   .lg-hero h1 { font-size: 24px; }
   .lg-kern { font-size: 17px; }
-  .lg-gross .v { font-size: 32px; }
 }
+
+/* ── Kennzahlenleiste ───────────────────────────────────────────────────────────────
+   Vier Bausteine hatten dieselbe Gestalt (Ueberschrift, eine Zahl, Grenz-Satz, Bruecke)
+   und standen als vier gleich aussehende Karten untereinander. Sven: „gefuehlt kann man
+   die erste KPI, 3,4,5 alle nebeneinander in eine KPI bar bringen." Stimmt: eine Karte
+   je Zahl ist Rahmen ohne Inhalt.                                                     */
+.lg-leiste { display: grid; gap: 1px; margin-top: 20px; background: var(--line);
+  border: 1px solid var(--line); border-radius: 10px; overflow: hidden;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); }
+.lg-kachel { background: var(--surface); padding: 17px 18px 16px; }
+.lg-kachel .v { font-family: var(--mono, ui-monospace, monospace); font-size: 34px;
+  font-weight: 700; letter-spacing: -.035em; line-height: 1;
+  color: var(--signal-deep, #0b7a52); }
+.lg-kachel .k { font-size: 11.5px; color: var(--ink-400); margin-top: 7px; }
+.lg-neben { display: flex; flex-wrap: wrap; gap: 4px 14px; margin-top: 10px;
+  font-size: 11.5px; color: var(--ink-500); }
+.lg-kachel .lg-balken { margin: 11px 0 0; }
+
+/* Die Grenz-Saetze der Leiste, gebuendelt. Klein, aber SICHTBAR: in ein Aufklapp-Symbol
+   verschoben waeren sie abgeschafft. */
+.lg-grenzen { margin-top: 9px; }
+.lg-grenzen p { font-size: 11.5px; line-height: 1.55; color: var(--ink-400); margin: 4px 0; }
+
+/* ── Die Wende: von „ueber euch" zu „fuer euch" ─────────────────────────────────── */
+.lg-wende { margin-top: 34px; padding-top: 26px; border-top: 2px solid var(--line); }
+.lg-wende h2 { font-size: 22px; font-weight: 700; letter-spacing: -.025em; margin: 0; }
+.lg-wende-lede { font-size: 14px; line-height: 1.6; color: var(--ink-600); margin: 8px 0 0;
+  max-width: 620px; }
+
+.lg-bereiche { font-family: var(--mono, ui-monospace, monospace); font-size: 10.5px;
+  letter-spacing: .09em; text-transform: uppercase; color: var(--ink-400); margin-top: 14px; }
+
+@media (max-width: 820px) { .lg-kachel .v { font-size: 28px; } .lg-wende h2 { font-size: 19px; } }

@@ -20,6 +20,10 @@ export type Zeile = {
 };
 export type Baustein = {
   id: string; staerke: number; titel: string;
+  /** „was wir über euch wissen" vs. „was wir für euch finden". Trägt den Bogen der Seite. */
+  gruppe?: "ueber_euch" | "fuer_euch";
+  /** Kachel in der Kennzahlenleiste oder eigene Karte (nur die Vertragstabelle). */
+  form?: "kpi" | "karte";
   zahlen?: Zahl[]; zeilen?: Zeile[]; namen?: string[];
   n_auslauf?: number; n_fertigstellung?: number;
   /** Ein Satz, der ohne Umgebung trägt. Speist den Kernbefund im Seitenkopf. */
@@ -41,6 +45,8 @@ export type Landing = {
   kern: string | null;
   bausteine: Baustein[];
   belegt: string[];
+  /** Produktbereiche, in die diese Firma konkret führt. Gebündelt im Abschluss. */
+  bereiche?: string[];
 };
 
 let CACHE: Record<string, Landing> | null = null;

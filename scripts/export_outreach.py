@@ -169,7 +169,7 @@ def baustein_transparenz(con, ctx):
     if not r or not r[0]:
         return None
     return {
-        "id": "transparenz", "staerke": 100,
+        "id": "transparenz", "staerke": 100, "gruppe": "ueber_euch", "form": "kpi",
         "kern": f"{r[0]:,}".replace(",", ".") + f" eurer Zuschläge stehen öffentlich, zurück bis {r[2]}.",
         "titel": "Das steht öffentlich über euch",
         "zahlen": [
@@ -254,7 +254,7 @@ def baustein_abhaengigkeit(con, ctx):
     namen = [nm for nm, _ in rows[:k]]
     wer = namen[0] if k == 1 else f"von {k} Auftraggebern"
     return {
-        "id": "abhaengigkeit", "staerke": 90,
+        "id": "abhaengigkeit", "staerke": 90, "gruppe": "ueber_euch", "form": "kpi",
         "kern": (f"{anteil*100:.0f} % eurer öffentlichen Zuschläge kommen von einem "
                  f"einzigen Auftraggeber." if k == 1 else
                  f"{anteil*100:.0f} % eurer öffentlichen Zuschläge kommen von {k} Auftraggebern."),
@@ -313,7 +313,7 @@ def baustein_vertraege(con, ctx):
         z.pop("_roh", None); z.pop("_quelle", None)
 
     return {
-        "id": "vertraege", "staerke": 95,
+        "id": "vertraege", "staerke": 95, "gruppe": "ueber_euch", "form": "karte",
         "vergleich": vergleich,
         "titel": "Eure laufenden Vorhaben, aus öffentlichen Bekanntmachungen",
         "zeilen": zeilen, "befund": befund, "kern": befund,
@@ -353,7 +353,7 @@ def baustein_wettbewerber(con, ctx):
     if not name:
         return None
     return {
-        "id": "wettbewerber", "staerke": 85,
+        "id": "wettbewerber", "staerke": 85, "gruppe": "ueber_euch", "form": "kpi",
         "kern": f"{Z.clean_name(name)} hat euch {int(row[1])}-mal verdrängt.",
         "titel": "Wer euch bisher verdrängt hat",
         "zahlen": [{"wert": Z.clean_name(name), "label": "häufigster Gegner"},
@@ -386,7 +386,7 @@ def baustein_offene_im_feld(con, ctx):
     if not r or not r[0]:
         return None
     return {
-        "id": "offene_im_feld", "staerke": 80,
+        "id": "offene_im_feld", "staerke": 80, "gruppe": "fuer_euch", "form": "kpi",
         "kern": f"{r[0]:,} Ausschreibungen in eurem Fachgebiet sind gerade offen.".replace(",", "."),
         "titel": "Was gerade offen ist, in eurem Fachgebiet",
         "zahlen": [{"wert": f"{r[0]:,}".replace(",", "."), "label": "offene Ausschreibungen"},
@@ -411,7 +411,7 @@ def baustein_zweitversuche(con, ctx):
     if not r or not r[0]:
         return None
     return {
-        "id": "zweitversuche", "staerke": 75,
+        "id": "zweitversuche", "staerke": 75, "gruppe": "fuer_euch", "form": "kpi",
         "kern": (f"{r[0]:,} Bedarfe in eurem Fachgebiet werden seit Jahren erfolglos "
                  "ausgeschrieben.").replace(",", "."),
         "titel": "Wo wiederholt niemand geboten hat",
@@ -458,6 +458,9 @@ def build_payload(con, identity_id, now):
         "kern": kern,
         "bausteine": gebaut,
         "belegt": [t["id"] for t in gebaut],
+        # Die Produktbereiche, in die diese Firma konkret fuehrt — entdoppelt, in der
+        # Reihenfolge der Baustein-Staerke.
+        "bereiche": list(dict.fromkeys(t["bruecke"]["produkt"] for t in gebaut)),
     }
 
 

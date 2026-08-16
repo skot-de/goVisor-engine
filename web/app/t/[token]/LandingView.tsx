@@ -8,15 +8,19 @@ import type { Baustein, Landing, Zeile } from "@/lib/outreach";
 /* Client-Hälfte der Outreach-Landing (die Server-Hälfte liegt in `page.tsx`).
  *
  * **Warum geteilt.** `page.tsx` liest die vorberechnete `outreach.json` vom Dateisystem
- * und muss Server-Komponente bleiben. Die Oberflächensprache steht im `localStorage`,
- * und `useSprache` ist ein Hook, den es auf dem Server nicht gibt.
+ * und muss Server-Komponente bleiben. `useSprache` ist ein Hook, den es dort nicht gibt.
  *
- * **Warum im App-Rahmen.** Die Seite trug bis zum 2026-08-16 eine eigene Hülle mit
- * eigenem Wortzeichen (ein `<span>govisor</span>` statt der Bildmarke). Sven beim
- * Durchsehen: „das govisor logo ist ein anderes." Es war nicht nur das Logo, sondern
- * die ganze zweite Hülle: der erste Eindruck sah aus wie ein anderes Produkt als das,
- * in das er führt. Jetzt derselbe Rahmen wie Anmeldung und Onboarding, Rail sichtbar
- * aber gesperrt.
+ * **Der Bogen der Seite** (Sven, 2026-08-16): „das wissen wir bereits über euch, schärfe
+ * dein profil und wir helfen dir die ausschreibungen mit dem besten fit zu finden".
+ * Daraus folgen zwei Gruppen, nicht eine:
+ *
+ *     ÜBER EUCH   was öffentlich über die Firma dasteht (Zuschläge, Konzentration,
+ *                 laufende Vorhaben). Der Beleg dafür, dass wir hinsehen können.
+ *     FÜR EUCH    was im Markt offen ist. Der Beleg dafür, wofür sich das lohnt.
+ *
+ * Beides in EINE Kennzahlenleiste zu legen wäre kürzer und würde den Bogen zerstören:
+ * „507 Zuschläge" und „8.080 offene Ausschreibungen" sind Aussagen über verschiedene
+ * Dinge, und dazwischen liegt der ganze Grund für ein Konto.
  *
  * Nicht übersetzt und mit Absicht: Baustein-Titel, Kern- und Grenz-Sätze, Firmen- und
  * Vergabestellen-Namen, Beträge, Daten. Das ist generierter Befund, keine Oberfläche.
@@ -26,7 +30,6 @@ import type { Baustein, Landing, Zeile } from "@/lib/outreach";
 
 function Vertragstabelle({ zeilen }: { zeilen: Zeile[] }) {
   const { t } = useSprache();
-  // Volumenspalte nur, wenn irgendwo ein belegter Wert steht.
   const mitVolumen = zeilen.some((z) => z.vol);
   return (
     <div className="lg-tblwrap">
@@ -54,53 +57,37 @@ function Vertragstabelle({ zeilen }: { zeilen: Zeile[] }) {
   );
 }
 
-function BausteinKarte({ b, signup }: { b: Baustein; signup: string }) {
-  // Die erste Zahl trägt den Baustein und wird gross gesetzt, der Rest steht daneben.
-  // Vorher waren alle Zahlen gleich gross in einem Raster: gleichmässig und dadurch
-  // ohne Aussage. Sven: „optisch ist die seite echt langweilig. keine highlights."
-  const [erste, ...weitere] = (b.zahlen ?? []).filter((z) => z.wert);
+/** Kennzahlen-Leiste: je Baustein eine Kachel mit der tragenden Zahl. */
+function KennzahlenLeiste({ teile }: { teile: Baustein[] }) {
   return (
-    <section className="lg-karte">
-      <h2 className="lg-kt">{b.titel}</h2>
-
-      {erste && (
-        <div className="lg-zahlen">
-          <div className="lg-gross">
-            <div className="v">{erste.wert}</div>
-            <div className="k">{erste.label}</div>
-          </div>
-          {weitere.map((z, i) => (
-            <div className="lg-klein" key={i}>
-              <div className="v">{z.wert}</div>
-              <div className="k">{z.label}</div>
+    <>
+      <div className="lg-leiste">
+        {teile.map((b) => {
+          const [erste, ...weitere] = (b.zahlen ?? []).filter((z) => z.wert);
+          if (!erste) return null;
+          return (
+            <div className="lg-kachel" key={b.id}>
+              <div className="v">{erste.wert}</div>
+              <div className="k">{erste.label}</div>
+              {typeof b.anteil === "number" && (
+                <div className="lg-balken"><span style={{ width: `${Math.round(b.anteil * 100)}%` }} /></div>
+              )}
+              {weitere.length > 0 && (
+                <div className="lg-neben">
+                  {weitere.map((z, i) => <span key={i}>{z.wert} {z.label}</span>)}
+                </div>
+              )}
             </div>
-          ))}
-        </div>
-      )}
-
-      {/* Ein Balken sagt „fast alles" schneller als die Zahl daneben. */}
-      {typeof b.anteil === "number" && (
-        <div className="lg-balken"><span style={{ width: `${Math.round(b.anteil * 100)}%` }} /></div>
-      )}
-
-      {b.namen && b.namen.length > 1 && <div className="lg-namen">{b.namen.join(" · ")}</div>}
-
-      {b.zeilen && b.zeilen.length > 0 && <Vertragstabelle zeilen={b.zeilen} />}
-
-      {/* Der Befund ist die Schlussfolgerung aus der Tabelle und darf sie überstrahlen.
-          Er ersetzt die frühere Spalte „Art", die achtmal „wird fertig" sagte. Sven:
-          „die wissen doch woran sie gerade arbeiten?" */}
-      {b.befund && <div className="lg-befund">{b.befund}</div>}
-      {b.vergleich && <div className="lg-vergleich">{b.vergleich}</div>}
-
-      {/* Was die Zahlen NICHT abdecken. Im Baustein, nicht als Fussnote am Seitenende. */}
-      <div className="lg-grenze">{b.grenze}</div>
-
-      <Link className="lg-bruecke" href={signup}>
-        <span className="bp">{b.bruecke.produkt}</span>
-        <span className="bt">{b.bruecke.text}</span>
-      </Link>
-    </section>
+          );
+        })}
+      </div>
+      {/* Die Grenz-Sätze bleiben sichtbar, gebündelt unter der Leiste. Sie in ein
+          Sprechblasen-Symbol zu verstecken hiesse, sie abzuschaffen: eine Einschränkung,
+          die man aufklappen muss, wird nach der Schlussfolgerung gelesen oder nie. */}
+      <div className="lg-grenzen">
+        {teile.map((b) => <p key={b.id}>{b.grenze}</p>)}
+      </div>
+    </>
   );
 }
 
@@ -121,10 +108,10 @@ export function LandingMissing() {
   const { t } = useSprache();
   return (
     <Rahmen>
-      <section className="lg-karte">
-        <h2 className="lg-kt">{t("Auswertung nicht gefunden")}</h2>
-        <div className="lg-grenze">{t("Dieser Link ist ungültig oder abgelaufen.")}</div>
-      </section>
+      <div className="lg-hero">
+        <h1>{t("Auswertung nicht gefunden")}</h1>
+        <p className="lg-quelle">{t("Dieser Link ist ungültig oder abgelaufen.")}</p>
+      </div>
     </Rahmen>
   );
 }
@@ -135,27 +122,57 @@ export function LandingView({ d, token }: { d: Landing; token: string }) {
   // `/login?t=…`, eine Seite, die den Parameter nicht liest und „Willkommen zurück" sagt.
   const signup = `/onboarding?t=${encodeURIComponent(token)}`;
 
+  const ueberEuch = d.bausteine.filter((b) => b.gruppe === "ueber_euch");
+  const fuerEuch = d.bausteine.filter((b) => b.gruppe === "fuer_euch");
+  const kacheln = (bs: Baustein[]) => bs.filter((b) => b.form === "kpi");
+  const karten = (bs: Baustein[]) => bs.filter((b) => b.form !== "kpi");
+
   return (
     <Rahmen>
       <div className="lg-hero">
         <div className="lg-eyebrow">{t("Auswertung · Stand {datum}", { datum: d.stand })}</div>
-        <h1>{d.name}</h1>
-        {/* Der Kernbefund ist die eine Aussage, die ohne Umgebung trägt. Er kommt aus dem
-            ÜBERRASCHENDSTEN Baustein, nicht aus dem belegtesten: „507 Zuschläge seit 2010"
-            ist gut belegt und langweilig, „99 % von zwei Auftraggebern" ist dieselbe
-            Datenlage und eine Nachricht. */}
+        <h1>{t("Das wissen wir bereits über {firma}", { firma: d.name })}</h1>
+        {/* Der Kernbefund kommt aus dem ÜBERRASCHENDSTEN Baustein, nicht dem belegtesten:
+            „507 Zuschläge seit 2010" ist gut belegt und langweilig, „99 % von zwei
+            Auftraggebern" ist dieselbe Datenlage und eine Nachricht. */}
         {d.kern && <p className="lg-kern">{d.kern}</p>}
         <p className="lg-quelle">{t("Alles aus öffentlichen Vergabebekanntmachungen. Keine Daten von Ihnen, kein Konto nötig.")}</p>
-        <Link className="lg-cta" href={signup}>{t("Konto anlegen, kostenlos")}</Link>
       </div>
 
-      {d.bausteine.map((b) => <BausteinKarte key={b.id} b={b} signup={signup} />)}
+      {kacheln(ueberEuch).length > 0 && <KennzahlenLeiste teile={kacheln(ueberEuch)} />}
+
+      {karten(ueberEuch).map((b) => (
+        <section className="lg-karte" key={b.id}>
+          <h2 className="lg-kt">{b.titel}</h2>
+          {b.zeilen && b.zeilen.length > 0 && <Vertragstabelle zeilen={b.zeilen} />}
+          {/* Der Befund ist die Schlussfolgerung aus der Tabelle. Er ersetzt die frühere
+              Spalte „Art", die achtmal „wird fertig" sagte. */}
+          {b.befund && <div className="lg-befund">{b.befund}</div>}
+          {b.vergleich && <div className="lg-vergleich">{b.vergleich}</div>}
+          <div className="lg-grenze">{b.grenze}</div>
+        </section>
+      ))}
+
+      {fuerEuch.length > 0 && (
+        <div className="lg-wende">
+          <h2>{t("Und das können wir für euch finden")}</h2>
+          <p className="lg-wende-lede">{t("Was davon zu euch passt, entscheidet euer Profil. Je schärfer es ist, desto weniger müsst ihr selbst durchsehen.")}</p>
+          <KennzahlenLeiste teile={kacheln(fuerEuch)} />
+        </div>
+      )}
 
       <div className="lg-schluss">
-        <h3>{t("Diese Auswertung gehört Ihnen")}</h3>
-        <p>{t("Mit einem Konto bleibt sie erhalten, wird täglich fortgeschrieben und um die Ausschreibungen ergänzt, die zu Ihrem Profil passen.")}</p>
-        <Link className="lg-cta" href={signup}>{t("Konto anlegen, kostenlos")}</Link>
-        <div className="lg-fein">{t("Kostenlos dauerhaft nutzbar · keine Zahlungsdaten · Auswertung bereits eingerichtet")}</div>
+        <h3>{t("Schärft euer Profil, dann übernehmen wir das Suchen")}</h3>
+        <p>{t("Das Konto ist kostenlos. Die Auswertung oben ist bereits eingerichtet, ihr ergänzt nur, was wir aus öffentlichen Daten nicht sehen können.")}</p>
+        {/* Ein Weg nach vorn, nicht sechs. Die Produktbereiche stehen als Ausblick
+            darunter, statt als konkurrierende Verweise an jeder einzelnen Karte. */}
+        <Link className="lg-cta" href={signup}>{t("Profil einrichten, kostenlos")}</Link>
+        {d.bereiche && d.bereiche.length > 0 && (
+          <div className="lg-bereiche">
+            {t("Danach offen:")} {d.bereiche.join(" · ")}
+          </div>
+        )}
+        <div className="lg-fein">{t("Kostenlos dauerhaft nutzbar · keine Zahlungsdaten · keine Angaben, die nicht ohnehin öffentlich sind")}</div>
       </div>
     </Rahmen>
   );
