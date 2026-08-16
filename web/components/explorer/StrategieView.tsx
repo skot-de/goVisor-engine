@@ -98,7 +98,7 @@ function Q({ q, suffix = "" }: { q: Quote; suffix?: string }) {
   if (!q || q.n === 0) return <span style={{ color: "var(--ink-300)" }}>—</span>;
   if (q.n <= 2) {
     return (
-      <span className="val" data-src="duenn" title={t("Dünn · gemessen, aber nur {n} Fälle — für eine Quote zu wenig", { n: q.n })}>
+      <span className="val" data-src="duenn" title={t("Dünn · gemessen, aber nur {n} Fälle, für eine Quote zu wenig", { n: q.n })}>
         {t("{treffer} von {n}", { treffer: q.treffer, n: q.n })}
       </span>
     );
@@ -125,7 +125,7 @@ export const SEKTIONEN = [
     { key: "position", label: "Position", frage: "Wo stehen wir?" },
     { key: "faehigkeiten", label: "Fähigkeiten", frage: "Was blockiert uns?" },
     { key: "bindung", label: "Bindung", frage: "Was ist uns verschlossen?" },
-    { key: "trefferguete", label: "Treffergüte", frage: "Warum passt manches nicht — und was ändert das?" },
+    { key: "trefferguete", label: "Treffergüte", frage: "Warum passt manches nicht, und was ändert das?" },
     { key: "profil", label: "Profil", frage: "Wer sind wir?" },
   ]},
 ];
@@ -188,7 +188,7 @@ function Pipeline({ data }: { data: Strat }) {
         <div className="bstat bstat-wide">
           <span className="bstat-k">{t("Ohne Wertangabe")}</span>
           <span className="bstat-v"><span className="v-num">{sum.unbekannt.toLocaleString("de-DE")}</span> {t("Verträge")}</span>
-          <span className="bstat-flag">{t("Diese drei Klassen werden nicht addiert — der Gesamtwert ist unbekannt, nicht die Summe der belegten.")}</span>
+          <span className="bstat-flag">{t("Diese drei Klassen werden nicht addiert. Der Gesamtwert ist unbekannt, nicht die Summe der belegten.")}</span>
         </div>
       </div>
 
@@ -226,7 +226,7 @@ function Pipeline({ data }: { data: Strat }) {
         <div className="bhero-lbl">
           <span className="bhero-title">{t("davon in")} <b>{t("Rahmenvereinbarungen ohne erneuten Wettbewerb")}</b></span>
           <span className="bhero-note">
-            {t("Volumen, das zwar ausläuft, aber nur für bereits Gelistete abrufbar ist. Wer nicht gelistet ist, kommt hier nicht zum Zug — unabhängig vom Angebot.")}
+            {t("Volumen, das zwar ausläuft, aber nur für bereits Gelistete abrufbar ist. Wer nicht gelistet ist, kommt hier nicht zum Zug, unabhängig vom Angebot.")}
           </span>
         </div>
       </div>
@@ -355,7 +355,7 @@ function StelleDetail({ s, onBack }: { s: Stelle; onBack: () => void }) {
           <span className="bstat-v"><Q q={s.preis} /></span></div>
         <div className="bstat"><span className="bstat-k">{t("Wechsel bei Nachfolgevergaben")}</span>
           <span className="bstat-v"><Q q={s.wechsel} /></span>
-          <span className="bstat-m">{t("braucht verkettete Vorgänger — oft dünn")}</span></div>
+          <span className="bstat-m">{t("braucht verkettete Vorgänger, oft dünn")}</span></div>
       </div>
 
       {konz ? (
@@ -375,7 +375,7 @@ function StelleDetail({ s, onBack }: { s: Stelle; onBack: () => void }) {
       <section className="bsec" style={{ marginTop: "var(--s5)" }}>
         <h4>{t("Wer gewinnt dort?")}</h4>
         <div className="bwinners">
-          <span className="bwin-k">{t("Zuschlagsanteil der stärksten Anbieter — keine Aussage über Beziehung, nur gezählte Zuschläge")}</span>
+          <span className="bwin-k">{t("Zuschlagsanteil der stärksten Anbieter. Keine Aussage über Beziehung, nur gezählte Zuschläge")}</span>
           <div className="bwin-list">
             {s.top.length ? s.top.map((w, i) => (
               <div key={i} className="bwin-row">
@@ -460,7 +460,7 @@ function Felder({ data }: { data: Strat }) {
       <section className="bsec" style={{ marginTop: "var(--s5)" }}>
         <h4>{t("Benachbarte Felder")}</h4>
         <p className="st-frage" style={{ marginBottom: "var(--s3)" }}>
-          {t("Bereiche, die dieselben Anbieter zusätzlich bedienen — abgeleitet daraus, welche Felder gemeinsam abgedeckt werden.")}
+          {t("Bereiche, die dieselben Anbieter zusätzlich bedienen. Abgeleitet daraus, welche Felder gemeinsam abgedeckt werden.")}
         </p>
         <div className="st-table st-nachbarn">
           <div className="st-row st-row-h"><span>{t("Feld")}</span><span>{t("Nähe")}</span><span>{t("gemeinsame Anbieter")}</span></div>
@@ -477,7 +477,7 @@ function Felder({ data }: { data: Strat }) {
       <section className="bsec" style={{ marginTop: "var(--s5)" }}>
         <h4>{t("Einstiegsfreundlich")}</h4>
         <p className="st-frage" style={{ marginBottom: "var(--s3)" }}>
-          {t("Offene Ausschreibungen mit kleinem Volumen. Die Bieterzahl ist der historische Median des Fachgebiets — bei laufenden Verfahren hat noch niemand geboten.")}
+          {t("Offene Ausschreibungen mit kleinem Volumen. Die Bieterzahl ist der historische Median des Fachgebiets, bei laufenden Verfahren hat noch niemand geboten.")}
         </p>
         <div className="st-table st-einstieg">
           <div className="st-row st-row-h"><span>{t("Ausschreibung")}</span><span>{t("Wert")}</span><span>{t("Bieter (Feld)")}</span><span>{t("Frist")}</span></div>
@@ -517,7 +517,7 @@ function Bindung({ data }: { data: Strat }) {
             {t("gebunden in")} <b>{b.belegtGesperrt.toLocaleString("de-DE")} {t("Rahmenvereinbarungen ohne erneuten Wettbewerb")}</b>
           </span>
           <span className="bhero-note">
-            {t("Diese Aufträge laufen noch, werden aber nicht neu ausgeschrieben — sie werden aus dem Rahmen abgerufen. Wer nicht gelistet ist, kann hier nicht anbieten, egal wie gut das Angebot wäre.")}
+            {t("Diese Aufträge laufen noch, werden aber nicht neu ausgeschrieben. Sie werden aus dem Rahmen abgerufen. Wer nicht gelistet ist, kann hier nicht anbieten, egal wie gut das Angebot wäre.")}
           </span>
         </div>
       </div>
@@ -531,7 +531,7 @@ function Bindung({ data }: { data: Strat }) {
         <div className="bstat">
           <span className="bstat-k">{t("Gelistete unbekannt")}</span>
           <span className="bstat-v"><span className="val" data-src="unsicher"><span className="v-num">{b.gelisteteUnbekannt.toLocaleString("de-DE")}</span></span></span>
-          <span className="bstat-flag">{t("Rahmen ohne Wettbewerb, aber wir wissen nicht wer gelistet ist — wir nehmen nicht an, dass ihr draußen seid.")}</span>
+          <span className="bstat-flag">{t("Rahmen ohne Wettbewerb, aber wir wissen nicht wer gelistet ist. Wir nehmen nicht an, dass ihr draußen seid.")}</span>
         </div>
         <div className="bstat">
           <span className="bstat-k">{t("Volumen belegt")}</span>
@@ -543,7 +543,7 @@ function Bindung({ data }: { data: Strat }) {
       <section className="bsec" style={{ marginTop: "var(--s5)" }}>
         <h4>{t("Nächste Einstiegsfenster")}</h4>
         <p className="st-frage" style={{ marginBottom: "var(--s3)" }}>
-          {t("Wann ihr euch bewegen müsst, um beim Auslaufen dabei zu sein — Vertragsende minus üblichem Vorlauf (Median Bekanntmachung→Zuschlag 87 Tage, plus Positionierung).")}
+          {t("Wann ihr euch bewegen müsst, um beim Auslaufen dabei zu sein. Vertragsende minus üblichem Vorlauf (Median Bekanntmachung→Zuschlag 87 Tage, plus Positionierung).")}
         </p>
         <div className="st-table st-fenster">
           <div className="st-row st-row-h">
@@ -568,7 +568,7 @@ function Bindung({ data }: { data: Strat }) {
       <section className="bsec" style={{ marginTop: "var(--s5)" }}>
         <h4>{t("Euer eigener Vertragsbestand")}</h4>
         <p className="st-frage" style={{ marginBottom: "var(--s3)" }}>
-          {t("Eure laufenden (Rahmen-)Verträge binden beim Auslaufen wieder Kapazität und müssen verteidigt werden. Pflegt sie hier — „Als gewonnen markieren\" an einem Lead legt automatisch eine Zeile an.")}
+          {t("Eure laufenden (Rahmen-)Verträge binden beim Auslaufen wieder Kapazität und müssen verteidigt werden. Pflegt sie hier, „Als gewonnen markieren\" an einem Lead legt automatisch eine Zeile an.")}
         </p>
         <ContractsEditor />
       </section>
@@ -626,7 +626,7 @@ function Wettbewerb({ data }: { data: Strat }) {
         <section className="bsec">
           <h4>{t("Zuschlagsanteil je Stelle")}</h4>
           <p className="st-frage" style={{ marginBottom: "var(--s3)" }}>
-            {t("Wie groß der Anteil dieses Anbieters an den Zuschlägen der Stelle ist, gegen den Marktdurchschnitt (1 geteilt durch die Zahl aktiver Anbieter dort). Ein hoher Anteil kann Beziehung, fachliche Passung oder einen Rahmenvertrag bedeuten — die Deutung bleibt euch.")}
+            {t("Wie groß der Anteil dieses Anbieters an den Zuschlägen der Stelle ist, gegen den Marktdurchschnitt (1 geteilt durch die Zahl aktiver Anbieter dort). Ein hoher Anteil kann Beziehung, fachliche Passung oder einen Rahmenvertrag bedeuten, die Deutung bleibt euch.")}
           </p>
           <div className="st-table st-profil">
             <div className="st-row st-row-h"><span>{t("Vergabestelle")}</span><span>{t("Zuschläge")}</span><span>{t("Anteil")}</span><span>{t("vs. Markt")}</span></div>
@@ -752,13 +752,13 @@ function Faehigkeiten({ data }: { data: Strat }) {
       </div></div>
 
       <div className="mnote" style={{ marginBottom: "var(--s4)" }}>
-        {t("Eignungsanforderungen stehen überwiegend im Freitext der Vergabeunterlagen (rund ein Drittel maschinell erfasst). Jede Zahl hier ist deshalb eine")} <b>{t("Untergrenze")}</b> {t("— „mindestens so viele\", nie „genau so viele\". Ob ihr die Anforderungen erfüllt, prüfen wir, sobald euer Firmenprofil steht.")}
+        {t("Eignungsanforderungen stehen überwiegend im Freitext der Vergabeunterlagen (rund ein Drittel maschinell erfasst). Jede Zahl hier ist deshalb eine")} <b>{t("Untergrenze")}</b> {t("„mindestens so viele\", nie „genau so viele\". Ob ihr die Anforderungen erfüllt, prüfen wir, sobald euer Firmenprofil steht.")}
       </div>
 
       <section className="bsec">
         <h4>{t("Formaler Rahmen")}</h4>
         <p className="st-frage" style={{ marginBottom: "var(--s3)" }}>
-          {t("Nach welchem Vergaberecht ausgeschrieben wird — bestimmt Nachweispflichten, Fristen und Präqualifikation.")}{" "}
+          {t("Nach welchem Vergaberecht ausgeschrieben wird. Bestimmt Nachweispflichten, Fristen und Präqualifikation.")}{" "}
           {t("{n} Ausschreibungen im Feld.", { n: f.nLeads.toLocaleString("de-DE") })}
         </p>
         <div className="st-table st-regime">
@@ -780,7 +780,7 @@ function Faehigkeiten({ data }: { data: Strat }) {
             <b>{t("Mindestens {n}", { n: b.treffer })}</b> {t("Ausschreibungen fordern eine")} <b>{t("Bürgschaft")}</b>{b.n ? ` ${t("({pct} % der belegten)", { pct: buergPct })}` : ""}
           </span>
           <span className="bhero-note">
-            {t("Kapitalhürde: wer keine Bürgschaft stellen kann, ist von diesem Volumen ausgeschlossen. Erfasst aus dem strukturierten Feld — die Dunkelziffer im Freitext liegt darüber.")}
+            {t("Kapitalhürde: wer keine Bürgschaft stellen kann, ist von diesem Volumen ausgeschlossen. Erfasst aus dem strukturierten Feld, die Dunkelziffer im Freitext liegt darüber.")}
           </span>
         </div>
       </div>
@@ -788,7 +788,7 @@ function Faehigkeiten({ data }: { data: Strat }) {
       <section className="bsec" style={{ marginTop: "var(--s5)" }}>
         <h4>{t("Geforderte Nachweise")}</h4>
         <p className="st-frage" style={{ marginBottom: "var(--s3)" }}>
-          {t("Maschinell erfasste Eignungsnachweise im Feld. Dünn — das meiste steht im Freitext.")}
+          {t("Maschinell erfasste Eignungsnachweise im Feld. Dünn, das meiste steht im Freitext.")}
         </p>
         {f.nachweise.length ? (
           <div className="st-table st-nachweis">
@@ -815,7 +815,7 @@ function NochNicht({ label, frage }: { label: string; frage: string }) {
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.6} strokeLinecap="round" strokeLinejoin="round">
           <path d="M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z" />
         </svg>
-        <span><b>{t("Diese Sektion ist noch nicht gebaut.")}</b> {t("Sie braucht eigene Aggregate über Vergabestellen und Anbieter. Wir zeigen hier nichts Vorläufiges — lieber leer als falsch.")}</span>
+        <span><b>{t("Diese Sektion ist noch nicht gebaut.")}</b> {t("Sie braucht eigene Aggregate über Vergabestellen und Anbieter. Wir zeigen hier nichts Vorläufiges, lieber leer als falsch.")}</span>
       </div>
     </>
   );

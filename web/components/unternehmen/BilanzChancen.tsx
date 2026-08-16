@@ -40,7 +40,7 @@ export function BilanzTab() {
         </div>
         {d.echte_quote == null
           ? <div className="un-hint-box">{t("Für eine belastbare Quote fehlen noch")} <strong>{d.fehlend_bis_quote}</strong> {t("Meldungen (ab 10). Meldet weitere Ergebnisse in der Treffergüte.")}</div>
-          : <div className="un-hint-box">{t("Diese Quote beruht auf {n} gemeldeten Teilnahmen. Verfahren, die ihr nicht gemeldet habt, fehlen — die tatsächliche Quote kann abweichen.", { n: d.beworben })}</div>}
+          : <div className="un-hint-box">{t("Diese Quote beruht auf {n} gemeldeten Teilnahmen. Verfahren, die ihr nicht gemeldet habt, fehlen, die tatsächliche Quote kann abweichen.", { n: d.beworben })}</div>}
       </section>
 
       {/* Die nützlichste Aussage: bekannte vs neue Stellen (§2.3) */}
@@ -71,7 +71,7 @@ export function BilanzTab() {
       {d.volumen_jahre.length > 0 && (
         <section className="un-card">
           <div className="un-sec-head"><h2>{t("Volumen öffentlicher Aufträge")}</h2>
-            <p className="un-sec-hint">{t("Aus euren öffentlichen Zuschlägen berechnet — nicht abgefragt. Volumen nur, wo ein EUR-Wert veröffentlicht wurde.")}</p></div>
+            <p className="un-sec-hint">{t("Aus euren öffentlichen Zuschlägen berechnet. Nicht abgefragt. Volumen nur, wo ein EUR-Wert veröffentlicht wurde.")}</p></div>
           <VolChart rows={d.volumen_jahre} />
         </section>
       )}
@@ -130,7 +130,7 @@ export function ChancenTab({ profil }: { profil: Profil }) {
     <div className="un-chancen">
       <section className="un-card">
         <div className="un-sec-head"><h2>{t("Eure Anforderungs-Abdeckung")}</h2>
-          <p className="un-sec-hint">{t("Was euer Segment üblicherweise fordert, mit eurem Status. „Nicht erfüllt\" und häufig zuerst — das ist die Investitionsfrage.")}</p></div>
+          <p className="un-sec-hint">{t("Was euer Segment üblicherweise fordert, mit eurem Status. „Nicht erfüllt\" und häufig zuerst, das ist die Investitionsfrage.")}</p></div>
         <div className="un-chrows">
           {rows.map(({ it, status }) => (
             <div key={it.id} className={`un-chrow ${status}`}>
@@ -144,10 +144,10 @@ export function ChancenTab({ profil }: { profil: Profil }) {
       {/* Anforderungshäufigkeit im Markt (§3.2) — braucht die Korpus-Analyse (#23). Ehrlich benannt. */}
       <section className="un-card">
         <div className="un-sec-head"><h2>{t("Häufigkeit im Markt")}</h2>
-          <p className="un-sec-hint">{t("Wie oft euer Segment einen Anforderungstyp fordert — aus analysierten Vergabeunterlagen (#23).")}</p></div>
+          <p className="un-sec-hint">{t("Wie oft euer Segment einen Anforderungstyp fordert, aus analysierten Vergabeunterlagen (#23).")}</p></div>
         <div className="un-hint-box">
           <strong>{t("Diese Auswertung nennt nie die Ausstattung anderer Firmen")}</strong>{" "}
-          {t("— nur, wie oft eine Anforderung in euren Verfahren vorkommt. Sie braucht genügend analysierte Unterlagen im Segment; die Korpus-Abdeckung reicht dafür aktuell noch nicht (Mindestfallzahl 10). Sie erscheint, sobald genug Verfahren analysiert sind — keine Aussage ohne belegte Fallzahl, keine Investitionsempfehlung, nur die Zahl.")}
+          {t("nur, wie oft eine Anforderung in euren Verfahren vorkommt. Sie braucht genügend analysierte Unterlagen im Segment; die Korpus-Abdeckung reicht dafür aktuell noch nicht (Mindestfallzahl 10). Sie erscheint, sobald genug Verfahren analysiert sind. Keine Aussage ohne belegte Fallzahl, keine Investitionsempfehlung, nur die Zahl.")}
         </div>
         <a className="un-link" href="/bausteine">{t("→ Vergabeunterlagen analysieren")}</a>
       </section>

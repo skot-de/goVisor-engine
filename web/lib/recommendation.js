@@ -151,7 +151,7 @@ function evaluate(lead, profile, ctx) {
 
 // ── Kaskade A · Einordnung (§3.3 A) ──
 export function einordnung(e) {
-  if (e.E8 === "eigen") return { label: "Bestandsvertrag", cls: "blau", gruende: ["läuft aus — Folgeausschreibung"] };
+  if (e.E8 === "eigen") return { label: "Bestandsvertrag", cls: "blau", gruende: ["läuft aus. Folgeausschreibung"] };
   if (e.E2 != null && e.E2 < T.E2_mittel) return { label: "Geringe Passung", cls: "gedaempft", gruende: ["wenig Überschneidung mit euren Feldern"] };
   if (e.E5 === "unzureichend") return { label: "Frist zu knapp", cls: "gedaempft", gruende: [tk("nur {n} Tage", { n: e.E5tage })] };
   if (e.E2 != null && e.E2 >= T.E2_hoch && e.E3 === "guenstig") return { label: "Hohe Passung", cls: "gruen", gruende: ["hohe Passung", "Amtsinhaber angreifbar"] };
@@ -170,7 +170,7 @@ export function handlungsempfehlung(e, partnerMoeglich) {
   if (e.E5 === "unzureichend") return { label: "Nicht bewerben", cls: "gedaempft", gruende: ["Frist reicht für den Aufwand nicht"], schritt: "überspringen und weitersuchen" };
   if (e.E2 != null && e.E2 < T.E2_mittel) return { label: "Nicht bewerben", cls: "gedaempft", gruende: ["geringe Passung zum Profil"], schritt: "überspringen und weitersuchen" };
   if (e.E4 === "unverhaeltnismaessig") {
-    if (e.E10_teilbar) return { label: "Noch zu klären", cls: "neutral", frage: "Aufwand hoch fürs Gesamtvolumen — Bewerbung auf ein einzelnes Los prüfen?", gruende: ["Aufwand/Wert unausgewogen"], schritt: "Einzel-Los prüfen" };
+    if (e.E10_teilbar) return { label: "Noch zu klären", cls: "neutral", frage: "Aufwand hoch fürs Gesamtvolumen. Bewerbung auf ein einzelnes Los prüfen?", gruende: ["Aufwand/Wert unausgewogen"], schritt: "Einzel-Los prüfen" };
     return { label: "Nicht bewerben", cls: "gedaempft", gruende: ["Aufwand steht nicht im Verhältnis zum Auftragswert"], schritt: "überspringen und weitersuchen" };
   }
   if (e.E1 === "unbekannt") {
@@ -194,7 +194,7 @@ export function handlungsempfehlung(e, partnerMoeglich) {
   }
   if (unguenstig.length === 1) return { label: "Noch zu klären", cls: "neutral", frage: unguenstig[0].t, gruende: [unguenstig[0].t], schritt: "diesen Punkt klären, dann entscheiden" };
   if (unguenstig.length >= 2) return { label: "Nicht bewerben", cls: "gedaempft", gruende: unguenstig.map((u) => u.t), schritt: "überspringen und weitersuchen" };
-  return { label: "Noch zu klären", cls: "neutral", frage: "Prüft Frist, Aufwand und Wettbewerbslage — einer der Punkte trägt die Entscheidung.", gruende: [], schritt: "diesen Punkt klären, dann entscheiden" };
+  return { label: "Noch zu klären", cls: "neutral", frage: "Prüft Frist, Aufwand und Wettbewerbslage, einer der Punkte trägt die Entscheidung.", gruende: [], schritt: "diesen Punkt klären, dann entscheiden" };
 }
 
 // ── Zusätze (§3.4), max. 2 in der Liste, feste Rangfolge ──

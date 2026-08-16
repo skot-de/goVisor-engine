@@ -226,14 +226,14 @@ BIETER_MIN_ABDECKUNG = 40.0
 # `laender = "*"` gilt für alle, sonst eine Liste.
 REGEL_BRUECHE = (
     {"jahr": 2006, "code": "eu_standardformulare", "laender": "*",
-     "beleg": "Verordnung (EG) Nr. 1564/2005 — erste einheitlichen EU-Standardformulare, "
+     "beleg": "Verordnung (EG) Nr. 1564/2005. Erste einheitlichen EU-Standardformulare, "
               "anwendbar ab 01.02.2006"},
     {"jahr": 2016, "code": "eu_vergaberichtlinien_2014", "laender": "*",
      "beleg": "Richtlinien 2014/24/EU und 2014/25/EU, Umsetzungsfrist 18.04.2016 (in DE das "
               "Vergaberechtsmodernisierungsgesetz, GWB/VgV/SektVO/KonzVgV); neue "
               "Standardformulare nach Durchführungsverordnung (EU) 2015/1986"},
     {"jahr": 2024, "code": "eforms_pflicht", "laender": "*",
-     "beleg": "Verordnung (EU) 2019/1780 (eForms) i. d. F. der Verordnung (EU) 2022/2303 — "
+     "beleg": "Verordnung (EU) 2019/1780 (eForms) i. d. F. der Verordnung (EU) 2022/2303. "
               "Übergang 2023, verbindliches TED-Format ab 2024"},
 )
 

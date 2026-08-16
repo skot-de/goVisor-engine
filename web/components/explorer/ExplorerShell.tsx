@@ -468,9 +468,9 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
     // wird an der Render-Stelle (`t(PHASEN[i].titel)`); dieses useMemo hängt nicht an der
     // Sprache, hier übersetzt wäre sie bis zum nächsten Datenwechsel eingefroren.
     return [
-      { key: "jetzt", titel: "Jetzt bewerben", hinweis: "Frist läuft — hier zählt Tempo", rows: jetzt },
+      { key: "jetzt", titel: "Jetzt bewerben", hinweis: "Frist läuft, hier zählt Tempo", rows: jetzt },
       { key: "bald", titel: "Bahnt sich an", hinweis: "angekündigt oder Vertrag endet bald", rows: bald },
-      { key: "offen", titel: "Jederzeit beitretbar", hinweis: "Open House — kein Wettbewerb, keine Frist",
+      { key: "offen", titel: "Jederzeit beitretbar", hinweis: "Open House. Kein Wettbewerb, keine Frist",
         rows: basis.filter((l) => passt(l) && offenesHaus(l)) },
       { key: "lang", titel: "Langfristig", hinweis: "Verträge, die in ein bis zwei Jahren auslaufen", rows: lang },
     ];
@@ -758,7 +758,7 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
             // §5-4: Käufer nicht in den Unterlagen gefunden → Rückfrage (Analyse trotzdem gezeigt).
             const mm = (d as { leadMismatch?: { expected_buyer?: string } }).leadMismatch;
             if (statusEl) statusEl.innerHTML = mm
-              ? `<span style="color:#b91c1c">${t("⚠ Diese Unterlagen erwähnen den Auftraggeber „{buyer}\" nicht — gehören sie wirklich zu diesem Lead? Die Analyse ist unten trotzdem angezeigt.", { buyer: (mm.expected_buyer || "").replace(/[<>&]/g, "") })}</span>`
+              ? `<span style="color:#b91c1c">${t("⚠ Diese Unterlagen erwähnen den Auftraggeber „{buyer}\" nicht, gehören sie wirklich zu diesem Lead? Die Analyse ist unten trotzdem angezeigt.", { buyer: (mm.expected_buyer || "").replace(/[<>&]/g, "") })}</span>`
               : "";
             bump();
           } catch {
@@ -1018,7 +1018,7 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
                 value={query}
                 onChange={(e) => { setQuery(e.target.value); setSuggIdx(-1); }}
                 onKeyDown={onSearchKey}
-                placeholder={t("Suchen — Ort, PLZ, Auftraggeber, Stichwort")}
+                placeholder={t("Suchen. Ort, PLZ, Auftraggeber, Stichwort")}
                 aria-label={t("Suchen")}
                 autoComplete="off"
               />
@@ -1238,7 +1238,7 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
                             const p = realProfile as unknown as { regionLabels?: string[]; regions?: string[] } | null;
                             if (!p?.regions?.length) return null;
                             const wo = (p.regionLabels?.length ? p.regionLabels : p.regions).slice(0, 3).join(", ");
-                            return t("gefiltert auf {wo} — aus euren Zuschlägen abgeleitet", { wo });
+                            return t("gefiltert auf {wo}, aus euren Zuschlägen abgeleitet", { wo });
                           })()}
                         </span>
                         <button className="vor-btn" onClick={() => setVorauswahl(false)}>{t("Alle {n} anzeigen", { n: alleRows.filter((l) => l.src !== "award").length.toLocaleString("de-DE") })}</button>
@@ -1246,7 +1246,7 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
                     ) : (
                       <>
                         {t("Alle")} <b>{rows.length.toLocaleString("de-DE")}</b> {t("Ausschreibungen in {branche}", { branche: t((BRANCHEN as Record<string, string>)[aktiveBranche]) })}
-                        <span className="vor-x">{t("ungefiltert — auch Ankündigungen und weniger passende")}</span>
+                        <span className="vor-x">{t("ungefiltert, auch Ankündigungen und weniger passende")}</span>
                         <button className="vor-btn" onClick={() => setVorauswahl(true)}>{t("Wieder vorsortieren")}</button>
                       </>
                     )}

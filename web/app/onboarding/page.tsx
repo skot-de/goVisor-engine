@@ -158,11 +158,11 @@ function FirmaFakten({ m }: { m: Match }) {
 
       {m.regionTyp && m.regions?.length ? (
         <p className="fk-fuss">
-          {t("Schwerpunkt {wo} — aus euren Zuschlägen abgeleitet.",
+          {t("Schwerpunkt {wo}, aus euren Zuschlägen abgeleitet.",
              { wo: m.regionTyp === "regional" ? t("regional") : t("in mehreren Regionen") })}
         </p>
       ) : m.regionTyp === "bundesweit" ? (
-        <p className="fk-fuss">{t("Bundesweit tätig — aus euren Zuschlägen abgeleitet.")}</p>
+        <p className="fk-fuss">{t("Bundesweit tätig, aus euren Zuschlägen abgeleitet.")}</p>
       ) : null}
     </div>
   );
@@ -281,7 +281,7 @@ export default function OnboardingPage() {
     const { error } = await register(email, pw);
     setBusy(false);
     if (error && !/already registered|already exists/i.test(error.message)) { setAuthFehler(error.message); return; }
-    if (error) { setAuthFehler("Diese E-Mail hat schon ein Konto — bitte anmelden."); return; }
+    if (error) { setAuthFehler("Diese E-Mail hat schon ein Konto, bitte anmelden."); return; }
     await erkennen();   // signUp ok (mit oder ohne sofortige Session) → weiter im Flow
   }
 
@@ -417,10 +417,10 @@ export default function OnboardingPage() {
               <div className="pw-bar" aria-hidden><i data-stufe={pwStatus.stufe} /></div>
               <div className="pw-hint" id="pw-hinweis">
                 {pw.length === 0
-                  ? t("Länge zählt mehr als Sonderzeichen — eine Passphrase aus vier Wörtern ist sicherer als „P@ssw0rt!“.")
+                  ? t("Länge zählt mehr als Sonderzeichen, eine Passphrase aus vier Wörtern ist sicherer als „P@ssw0rt!“.")
                   : pwStatus.maengel.length
                     ? <>{t("Es fehlt noch:")} {pwStatus.maengel.map((mg) => t(mg)).join(" · ")}</>
-                    : pwStatus.stufe === 3 ? t("Stark.") : t("Ausreichend — länger wäre besser.")}
+                    : pwStatus.stufe === 3 ? t("Stark.") : t("Ausreichend, länger wäre besser.")}
               </div>
             </div>
             {authFehler && <div className="note note-w">{t(authFehler)} {/existiert|angemeldet/.test(authFehler) ? <Link href="/login" style={{ textDecoration: "underline" }}>{t("Zum Login")}</Link> : null}</div>}
@@ -440,7 +440,7 @@ export default function OnboardingPage() {
             <h1>{t("Wie heißt eure Firma?")}</h1>
             <p className="lede">{ausDomain
               ? (domainStamm(email)
-                ? <>{t("Wir haben versucht, eure Firma an der Adresse")} <b>{email}</b> {t("zu erkennen — unter „{stamm}“ finden wir aber kein Unternehmen in den Vergabedaten.", { stamm: domainStamm(email) ?? "" })}</>
+                ? <>{t("Wir haben versucht, eure Firma an der Adresse")} <b>{email}</b> {t("zu erkennen, unter „{stamm}“ finden wir aber kein Unternehmen in den Vergabedaten.", { stamm: domainStamm(email) ?? "" })}</>
                 : <>{t("Eure Adresse ist eine Freemail-Adresse, daraus lässt sich keine Firma ableiten.")}</>)
               : t("Damit wir euer Profil bauen können, brauchen wir den Firmennamen.")}</p>
             <div className="field">
@@ -466,7 +466,7 @@ export default function OnboardingPage() {
                 soll beim Ausfüllen helfen, nicht Testdaten nennen.
               */}
               <span className="hint">{vomToken
-                ? t("Aus eurer Übersicht übernommen — ihr könnt den Namen ändern.")
+                ? t("Aus eurer Übersicht übernommen, ihr könnt den Namen ändern.")
                 : t("Am besten der Name, unter dem ihr Aufträge bekommt.")}</span>
             </div>
             {/*
@@ -503,9 +503,9 @@ export default function OnboardingPage() {
         {/* 2 · Starker Vorschlag */}
         {screen === "vorschlag" && matched && (
           <div className="card">
-            <h1>{ausDomain ? t("Moment — arbeitest du bei {firma}?", { firma: matched.name }) : t("Das wissen wir über euch.")}</h1>
+            <h1>{ausDomain ? t("Moment, arbeitest du bei {firma}?", { firma: matched.name }) : t("Das wissen wir über euch.")}</h1>
             <p className="lede">{ausDomain
-              ? <>{t("Eure Adresse endet auf")} <b>{domainStamm(email)}</b> {t("— und unter diesem Namen finden wir ein Unternehmen in den öffentlichen Vergabedaten. Falls das ihr seid, wissen wir schon einiges:")}</>
+              ? <>{t("Eure Adresse endet auf")} <b>{domainStamm(email)}</b> {t("und unter diesem Namen finden wir ein Unternehmen in den öffentlichen Vergabedaten. Falls das ihr seid, wissen wir schon einiges:")}</>
               : t("Aus den öffentlichen Vergabedaten der letzten Jahre.")}</p>
             <div className="suggest">
               <div className="sg-head">
@@ -526,11 +526,11 @@ export default function OnboardingPage() {
             ) : null}
             {beleg?.conf === "unbestaetigt" ? (
               antragGesendet ? (
-                <div className="note note-p">{t("Prüfantrag ist raus. Ihr könnt sofort weiterarbeiten — wir melden uns, sobald jemand draufgeschaut hat.")}</div>
+                <div className="note note-p">{t("Prüfantrag ist raus. Ihr könnt sofort weiterarbeiten. Wir melden uns, sobald jemand draufgeschaut hat.")}</div>
               ) : (
                 <div className="note note-w antrag">
                   <b>{t("Wir können nicht automatisch prüfen, ob ihr zu dieser Firma gehört.")}</b>
-                  <span>{t(beleg.grund)}. {t("Ihr könnt trotzdem sofort loslegen — die Zuordnung bleibt so lange")}
+                  <span>{t(beleg.grund)}. {t("Ihr könnt trotzdem sofort loslegen, die Zuordnung bleibt so lange")}
                     <b> {t("unbestätigt")}</b>{t(", und die Erfolgsprämie samt Abrechnung bleibt gesperrt.")}</span>
                   {/* Statt einer Sackgasse ein Weg: Kurznachricht, die jemand von Hand prüft.
                       Gemessen betrifft das 5,8 % der Zielgruppe — knapp die Hälfte davon
@@ -554,7 +554,7 @@ export default function OnboardingPage() {
         {screen === "kandidaten" && (
           <div className="card wide">
             <h1>{t("Welche davon seid ihr?")}</h1>
-            <p className="lede">{t("Der Name allein war nicht eindeutig. Klickt auf eure Firma — dann zeigen wir direkt hier, was in den Vergabedaten über euch steht.")}</p>
+            <p className="lede">{t("Der Name allein war nicht eindeutig. Klickt auf eure Firma. Dann zeigen wir direkt hier, was in den Vergabedaten über euch steht.")}</p>
             <div className="cands">
               {matches.length ? matches.map((m) => (
                 <div key={m.id} className={`cand-box ${offen === m.id ? "auf" : ""}`}>
@@ -574,7 +574,7 @@ export default function OnboardingPage() {
                     </div>
                   ) : null}
                 </div>
-              )) : <div className="note note-i">{t("Kein Treffer. Das ist normal — nur Unternehmen, die schon eine öffentliche Vergabe gewonnen haben, stehen in unseren Daten.")}</div>}
+              )) : <div className="note note-i">{t("Kein Treffer. Das ist normal. Nur Unternehmen, die schon eine öffentliche Vergabe gewonnen haben, stehen in unseren Daten.")}</div>}
             </div>
 
             {/* „Keine davon" öffnet die Eingabe HIER, statt auf einen weiteren fast leeren
@@ -592,7 +592,7 @@ export default function OnboardingPage() {
                     {busy ? t("Suche …") : t("Nochmal suchen")}
                   </button>
                   <button className="btn btn-t" onClick={() => setScreen("branche")}>
-                    {t("Wir sind nicht dabei — ohne Vergabehistorie starten")}
+                    {t("Wir sind nicht dabei, ohne Vergabehistorie starten")}
                   </button>
                 </div>
               </div>
@@ -608,7 +608,7 @@ export default function OnboardingPage() {
         {screen === "profil" && matched && (
           <div className="card wide">
             <h1>{t("Gehören diese Einheiten zu euch?")}</h1>
-            <p className="lede">{t("Öffentliche Auftraggeber schreiben denselben Konzern unterschiedlich. Wir rechnen Siege aller aktiven Einheiten zusammen — sonst übersehen wir eure eigenen Aufträge.")}</p>
+            <p className="lede">{t("Öffentliche Auftraggeber schreiben denselben Konzern unterschiedlich. Wir rechnen Siege aller aktiven Einheiten zusammen, sonst übersehen wir eure eigenen Aufträge.")}</p>
             {members.length ? (
               <div className="ents">
                 {members.map((m, i) => (
@@ -621,7 +621,7 @@ export default function OnboardingPage() {
               </div>
             ) : <div className="spin">{t("Lade Einheiten …")}</div>}
             {aktiv.size === 0 && <div className="note note-w">{t("Mindestens eine Einheit muss aktiv bleiben.")}</div>}
-            {unsicher && <div className="note note-w">{t("Eine aktive Einheit wurde")} <b>{t("nur über den Namen")}</b> {t("erkannt. Wir zeigen ihre Zahlen, kennzeichnen sie aber als unbestätigt — und rechnen sie nicht in die Erfolgsprämie ein, solange die Zuordnung nicht belegt ist.")}</div>}
+            {unsicher && <div className="note note-w">{t("Eine aktive Einheit wurde")} <b>{t("nur über den Namen")}</b> {t("erkannt. Wir zeigen ihre Zahlen, kennzeichnen sie aber als unbestätigt, und rechnen sie nicht in die Erfolgsprämie ein, solange die Zuordnung nicht belegt ist.")}</div>}
             <div className="note note-p">{t("Mit der Bestätigung merken wir uns diese Einheiten als eure Identität. Nur so erkennen wir später, dass ihr eine Ausschreibung gewonnen habt.")} <b>{t("{n} Siege", { n: winsAktiv })}</b> {t("fließen in euer Profil.")}</div>
             <div className="btnrow split">
               <button className="btn btn-p" disabled={!aktiv.size} onClick={() => setScreen("fertig")}>{t("Profil bestätigen")}</button>
@@ -634,7 +634,7 @@ export default function OnboardingPage() {
         {screen === "branche" && (
           <div className="card wide">
             <h1>{t("In welchem Bereich seid ihr unterwegs?")}</h1>
-            <p className="lede">{t("Eure Firma taucht in unseren Daten noch nicht als Auftragnehmer auf. Das ist kein Nachteil — wir starten mit eurem Feld und schärfen das Profil, je mehr ihr goVisor nutzt.")}</p>
+            <p className="lede">{t("Eure Firma taucht in unseren Daten noch nicht als Auftragnehmer auf. Das ist kein Nachteil. Wir starten mit eurem Feld und schärfen das Profil, je mehr ihr goVisor nutzt.")}</p>
             <div className="grid2">
               {BRANCHEN.map((b) => (
                 <button key={b.k} className={`pick ${branche === b.k ? "on" : ""}`} onClick={() => setBranche(b.k)}>
@@ -653,13 +653,13 @@ export default function OnboardingPage() {
         {screen === "region" && (
           <div className="card wide">
             <h1>{t("Wo wollt ihr Aufträge gewinnen?")}</h1>
-            <p className="lede">{t("Mehrfachauswahl. Wir filtern nach dem")} <b>{t("Leistungsort")}</b>{t(", nicht nach dem Sitz der Vergabestelle — sonst zeigten wir euch Ausschreibungen in der falschen Gegend.")}</p>
+            <p className="lede">{t("Mehrfachauswahl. Wir filtern nach dem")} <b>{t("Leistungsort")}</b>{t(", nicht nach dem Sitz der Vergabestelle, sonst zeigten wir euch Ausschreibungen in der falschen Gegend.")}</p>
             <div className="chips">
               {REGIONEN.map((r) => (
                 <button key={r} className={`chip ${regionen.includes(r) ? "on" : ""}`} onClick={() => toggleRegion(r)}>{t(r)}</button>
               ))}
             </div>
-            <div className="note note-i">{t("Bei etwa jeder zehnten Ausschreibung ist der Leistungsort nicht kreisgenau bekannt. Diese zeigen wir trotzdem, aber ohne Regionsfilter — lieber einmal zu viel als einen passenden Auftrag verschweigen.")}</div>
+            <div className="note note-i">{t("Bei etwa jeder zehnten Ausschreibung ist der Leistungsort nicht kreisgenau bekannt. Diese zeigen wir trotzdem, aber ohne Regionsfilter, lieber einmal zu viel als einen passenden Auftrag verschweigen.")}</div>
             <div className="btnrow split">
               <button className="btn btn-p" disabled={!regionen.length} onClick={() => setScreen("fertig")}>{t("Fertig")}</button>
               <button className="btn btn-t" onClick={() => setScreen("branche")}>{t("Zurück")}</button>
@@ -676,7 +676,7 @@ export default function OnboardingPage() {
             <h1>{t("Alles bereit.")}</h1>
             <p className="lede">{matched
               ? t("Wir haben euer Profil aus euren bisherigen Vergaben gebaut.")
-              : t("Wir starten mit eurem Bereich und eurer Region — das Profil wächst mit der Nutzung.")}</p>
+              : t("Wir starten mit eurem Bereich und eurer Region, das Profil wächst mit der Nutzung.")}</p>
             <div className="sum">
               {matched ? <>
                 <div className="sum-r"><span className="sum-k">{t("Firma")}</span><span className="sum-v">{matched.name}</span></div>
@@ -689,7 +689,7 @@ export default function OnboardingPage() {
                 <div className="sum-r"><span className="sum-k">{t("Regionen")}</span><span className="sum-v">{regionen.map((r) => t(r)).join(" · ") || "—"}</span></div>
                 <div className="sum-r"><span className="sum-k">{t("Identität")}</span><span className="sum-v">{t("noch offen")}</span></div>
               </>}
-              <div className="sum-r"><span className="sum-k">{t("Zugang")}</span><span className="sum-v">{t("Free — Liste und Eckdaten unbegrenzt, 3 Bewertungen je 30 Tage")}</span></div>
+              <div className="sum-r"><span className="sum-k">{t("Zugang")}</span><span className="sum-v">{t("Free. Liste und Eckdaten unbegrenzt, 3 Bewertungen je 30 Tage")}</span></div>
             </div>
             {!matched && <div className="note note-i">{t("Sobald ihr eine Vergabe gewinnt, erkennen wir das und fragen, ob wir euer Profil ergänzen dürfen.")}</div>}
             <div className="btnrow">

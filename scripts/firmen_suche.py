@@ -82,13 +82,13 @@ _KONSORTIUM = ("firmenname NOT LIKE 'BG %' AND firmenname NOT LIKE '%ARGE%' "
 # Vertriebsziel-Segmente A–G (govisor-vertriebsziele-spec.md) — deutschlandweite Kohorten.
 # Reihenfolge = Ansprache-Priorität §8 (F akutester Schmerz zuerst, B größte/kälteste Gruppe zuletzt).
 SEGMENTS = {
-    "F": ("Frische Verlierer", "Verlust ≤6 Monate — akut, kürzestes Zeitfenster"),
-    "E": ("Verteidiger unter Druck", "Bestand läuft in 6–18 Monaten aus (≥250k)"),
+    "F": ("Frische Verlierer", "Verlust ≤6 Monate. Akut, kürzestes Zeitfenster"),
+    "E": ("Verteidiger unter Druck", "Bestand läuft in 6 bis 18 Monaten aus (≥250k)"),
     "C": ("Absteiger", "Zuschlagszahl fällt über 3 Jahre"),
-    "A": ("High Roller", "≥24 Zuschläge in 12 Monaten — Verdrängungsverkauf"),
+    "A": ("High Roller", "≥24 Zuschläge in 12 Monaten. Verdrängungsverkauf"),
     "D": ("Aussteiger", "früher aktiv, ≥18 Monate kein Zuschlag mehr"),
     "G": ("Aufsteiger", "Zuschlagszahl steigt ≥40 % über 3 Jahre"),
-    "B": ("Gelegenheitsbieter", "1–5 Zuschläge in 24 Monaten — größte Gruppe"),
+    "B": ("Gelegenheitsbieter", "1 bis 5 Zuschläge in 24 Monaten, größte Gruppe"),
 }
 
 

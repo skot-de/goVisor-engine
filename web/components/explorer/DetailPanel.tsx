@@ -160,7 +160,7 @@ export function DetailPanel({
               </>
             ) : null}
             <button className={`dbtn dbtn-won ${wonState === "done" ? "on" : ""}`}
-              title={t(wonState === "done" ? "Als Vertrag hinterlegt — im Strategie-Tab pflegbar" : "Als gewonnen markieren (legt einen Vertrag an)")}
+              title={t(wonState === "done" ? "Als Vertrag hinterlegt, im Strategie-Tab pflegbar" : "Als gewonnen markieren (legt einen Vertrag an)")}
               onClick={async () => {
                 if (wonState === "done") return;
                 setWonState("saving");
@@ -378,7 +378,7 @@ function LeerBriefing({ rows, alle = [], onPick, onGoto }: {
         text: t("fordern eine Bürgschaft. Ohne euren Rahmen können wir nicht sagen, ob ihr sie stemmt.") },
       { key: "allein", n: imFeld.filter((l) => blockerArt(l, "partner")).length,
         titel: t("Über eurer Alleingrenze"),
-        text: t("sind größer, als ihr allein stemmt — mit Partner wären sie erreichbar.") },
+        text: t("sind größer, als ihr allein stemmt, mit Partner wären sie erreichbar.") },
       { key: "region", n: imFeld.filter((l) => teilStatus(l, "region") === "no").length,
         titel: t("Außerhalb eurer Regionen"),
         text: t("passen fachlich, liegen aber außerhalb. Arbeitet ihr dort doch?") },
@@ -427,7 +427,7 @@ function LeerBriefing({ rows, alle = [], onPick, onGoto }: {
     <div className="lb">
       <div className="lb-head">
         <p className="lb-h">{t("Euer Überblick")}</p>
-        <p className="lb-l">{t("Wählt links eine Ausschreibung — oder steigt hier ein.")}</p>
+        <p className="lb-l">{t("Wählt links eine Ausschreibung, oder steigt hier ein.")}</p>
       </div>
 
       <div className="lb-drei">
@@ -444,7 +444,7 @@ function LeerBriefing({ rows, alle = [], onPick, onGoto }: {
             return <Zeile key={l.id} l={l}
               sub={tage === 0 ? t("läuft heute ab") : tage === 1 ? t("läuft morgen ab")
                    : t("noch {n} Tage", { n: tage ?? 0 })} />;
-          }) : <p className="lb-nix">{t("Gerade nichts Dringendes — gut so.")}</p>}
+          }) : <p className="lb-nix">{t("Gerade nichts Dringendes, gut so.")}</p>}
         </section>
 
         {/* ── bald ──────────────────────────────────────────────── */}
@@ -472,7 +472,7 @@ function LeerBriefing({ rows, alle = [], onPick, onGoto }: {
             ))}
           </>) : (
             <p className="lb-nix">{b.imFeld.length
-              ? t("Nichts blockiert euch gerade — euer Profil ist vollständig genug.")
+              ? t("Nichts blockiert euch gerade, euer Profil ist vollständig genug.")
               : t("Legt unter „Unternehmen“ euer Profil an, dann zeigen wir hier, was euch Aufträge kostet.")}</p>
           )}
         </section>
@@ -483,14 +483,14 @@ function LeerBriefing({ rows, alle = [], onPick, onGoto }: {
           <button className="lb-kachel" onClick={() => onGoto?.("netzwerk")}>
             <b>{b.netz.length.toLocaleString("de-DE")}</b>
             <span>{b.netzKaeufer.length
-              ? <>{t("Mehrlos-Vergaben, u.a. bei")} <i>{b.netzKaeufer.join(t(" und "))}</i> {t("— hier lohnt ein Partner")}</>
-              : t("Vergaben mit mehreren Losen — hier lohnt ein Partner")}</span>
+              ? <>{t("Mehrlos-Vergaben, u.a. bei")} <i>{b.netzKaeufer.join(t(" und "))}</i> {t("hier lohnt ein Partner")}</>
+              : t("Vergaben mit mehreren Losen, hier lohnt ein Partner")}</span>
           </button>
           <button className="lb-kachel" onClick={() => onGoto?.("award")}>
             <b>{b.zuschlaege.length.toLocaleString("de-DE")}</b>
             <span>{b.gewinner.length
-              ? <>{t("frische Zuschläge, u.a. an")} <i>{b.gewinner.join(t(" und "))}</i> {t("— wer gewonnen hat, kauft jetzt ein")}</>
-              : t("frische Zuschläge — wer gewonnen hat, kauft jetzt ein")}</span>
+              ? <>{t("frische Zuschläge, u.a. an")} <i>{b.gewinner.join(t(" und "))}</i> {t("wer gewonnen hat, kauft jetzt ein")}</>
+              : t("frische Zuschläge. Wer gewonnen hat, kauft jetzt ein")}</span>
           </button>
           <button className="lb-kachel" onClick={() => onGoto?.("strategie")}>
             <b>→</b>

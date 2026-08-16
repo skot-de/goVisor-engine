@@ -125,7 +125,7 @@ export function Trefferguete({ aktiveBranche }: { aktiveBranche: string }) {
     <div className="tg-wrap">
       <div className="tg-head">
         <h4>{t("Treffergüte")}</h4>
-        <p className="st-frage">{t("Warum passt manches nicht — und was ändert das?")}</p>
+        <p className="st-frage">{t("Warum passt manches nicht, und was ändert das?")}</p>
         <p className="tg-count">{gaps.length === 1
           ? t("{leads} Leads in eurer Liste · {n} offene Angabe mit spürbarer Wirkung", { leads: leads.length, n: gaps.length })
           : t("{leads} Leads in eurer Liste · {n} offene Angaben mit spürbarer Wirkung", { leads: leads.length, n: gaps.length })}</p>
@@ -137,7 +137,7 @@ export function Trefferguete({ aktiveBranche }: { aktiveBranche: string }) {
       <section className="tg-block">
         <h5>{t("Was eure Liste jetzt ändern würde")}</h5>
         {!profile ? (
-          <p className="tg-muted">{t("Noch kein Profil hinterlegt. Legt Schwerpunkte und Regionen an — dann rechnen wir die Wirkung offener Angaben gegen eure Liste.")}</p>
+          <p className="tg-muted">{t("Noch kein Profil hinterlegt. Legt Schwerpunkte und Regionen an, dann rechnen wir die Wirkung offener Angaben gegen eure Liste.")}</p>
         ) : gaps.length === 0 ? (
           <p className="tg-muted">{t("Keine offenen Angaben mit spürbarer Wirkung. Was jetzt noch streut, liegt an der Datenlage der Vergabestellen (siehe unten).")}</p>
         ) : gaps.map((g) => (
@@ -200,7 +200,7 @@ function GemessenErklaert({ profile, decls, zuBestaetigen, onConfirm }: { profil
       <div className="tg-ge-col">
         <span className="tg-ge-t">{t("Gemessen")} <em>{t("aus euren gewonnenen Vergaben")}</em></span>
         {felder.length === 0 && regionen.length === 0
-          ? <p className="tg-muted">{t("Noch keine Historie zugeordnet — das Profil funktioniert auch ohne.")}</p>
+          ? <p className="tg-muted">{t("Noch keine Historie zugeordnet, das Profil funktioniert auch ohne.")}</p>
           : <ul className="tg-ge-list">
               {felder.map((f) => <li key={f}>{f}</li>)}
               {regionen.length > 0 && <li>{t("Regionen")}: {regionen.join(", ")}</li>}
@@ -220,9 +220,9 @@ function GemessenErklaert({ profile, decls, zuBestaetigen, onConfirm }: { profil
         {zuBestaetigen.length > 0 && (
           <div className="tg-confirm">
             <span>{zuBestaetigen.length === 1
-              ? t("Stand älter als 6 Monate — {n} Angabe. Stimmt das noch?", { n: zuBestaetigen.length })
-              : t("Stand älter als 6 Monate — {n} Angaben. Stimmt das noch?", { n: zuBestaetigen.length })}</span>
-            <button onClick={onConfirm}>{t("Stimmt so — alle bestätigen")}</button>
+              ? t("Stand älter als 6 Monate, {n} Angabe. Stimmt das noch?", { n: zuBestaetigen.length })
+              : t("Stand älter als 6 Monate, {n} Angaben. Stimmt das noch?", { n: zuBestaetigen.length })}</span>
+            <button onClick={onConfirm}>{t("Stimmt so, alle bestätigen")}</button>
           </div>
         )}
       </div>
@@ -238,7 +238,7 @@ function PrivatesTracking({ outcomes, onChange }: { outcomes: UserOutcome[]; onC
   const b = useMemo(() => computeBilanz(outcomes), [outcomes]);
   return (
     <div className="tg-track">
-      <p className="tg-track-lead">{t("Ein privater Überblick über eure Bewerbungen — beworben, gewonnen, verloren. Nur für euch sichtbar, unabhängig von anderen.")}</p>
+      <p className="tg-track-lead">{t("Ein privater Überblick über eure Bewerbungen. Beworben, gewonnen, verloren. Nur für euch sichtbar, unabhängig von anderen.")}</p>
 
       <div className="tg-bilanz">
         <div><span className="tg-b-n">{b.beworben}</span><span className="tg-b-l">{t("beworben")}</span></div>
@@ -250,7 +250,7 @@ function PrivatesTracking({ outcomes, onChange }: { outcomes: UserOutcome[]; onC
 
       <div className="tg-recip">
         <span className="tg-ge-t">{t("Wettbewerbsdaten")} <em>{t("{n} von 3 Meldungen", { n: b.gemeldet })}</em></span>
-        <p className="tg-muted">{t("Meldet ihr eure Ergebnisse, seht ihr ab 3 Meldungen die Wettbewerbsmenge eurer Vergabestellen, ab 10 eure Rangverteilung im Marktvergleich. Solange der Markt zu dünn meldet, bleibt dieser Teil leer — euer privates Tracking oben funktioniert trotzdem.")}</p>
+        <p className="tg-muted">{t("Meldet ihr eure Ergebnisse, seht ihr ab 3 Meldungen die Wettbewerbsmenge eurer Vergabestellen, ab 10 eure Rangverteilung im Marktvergleich. Solange der Markt zu dünn meldet, bleibt dieser Teil leer, euer privates Tracking oben funktioniert trotzdem.")}</p>
         <p className="tg-note">{t("Eine Meldung löst nie eine Erfolgsprämie aus. Wer einen Verlust meldet, zahlt nichts; wer gewinnt, zahlt nicht mehr als ohne Meldung.")}</p>
       </div>
 

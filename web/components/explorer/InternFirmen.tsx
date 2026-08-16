@@ -21,13 +21,13 @@ type Firma = {
 // erst an der Render-Stelle durch `t()`. Ein `t()` in der Modul-Konstante fröre die Sprache
 // beim Import ein.
 const SEGS: { key: string; tab: string; title: string }[] = [
-  { key: "F", tab: "Frische Verlierer", title: "Verlust ≤6 Monate — akut, kürzestes Zeitfenster" },
-  { key: "E", tab: "Verteidiger", title: "Bestand läuft in 6–18 Monaten aus (≥250k)" },
+  { key: "F", tab: "Frische Verlierer", title: "Verlust ≤6 Monate. Akut, kürzestes Zeitfenster" },
+  { key: "E", tab: "Verteidiger", title: "Bestand läuft in 6 bis 18 Monaten aus (≥250k)" },
   { key: "C", tab: "Absteiger", title: "Zuschlagszahl fällt über 3 Jahre" },
-  { key: "A", tab: "High Roller", title: "≥24 Zuschläge in 12 Monaten — Verdrängungsverkauf" },
+  { key: "A", tab: "High Roller", title: "≥24 Zuschläge in 12 Monaten. Verdrängungsverkauf" },
   { key: "D", tab: "Aussteiger", title: "früher aktiv, ≥18 Monate kein Zuschlag mehr" },
   { key: "G", tab: "Aufsteiger", title: "Zuschlagszahl steigt ≥40 % über 3 Jahre" },
-  { key: "B", tab: "Gelegenheitsbieter", title: "1–5 Zuschläge in 24 Monaten — größte Gruppe" },
+  { key: "B", tab: "Gelegenheitsbieter", title: "1 bis 5 Zuschläge in 24 Monaten, größte Gruppe" },
 ];
 type Exp = { titel: string; buyer: string; vol: number | null; ende: string | null; mte: number | null; vsrc?: string; art?: string | null; artcat?: string | null; url?: string | null; seit?: number | null };
 type Loss = { titel: string; vol: number | null; datum: string | null; gewinner: string | null };
@@ -283,7 +283,7 @@ export function InternFirmen() {
     <div className="in-wrap">
       <div className="in-head">
         <h1>{t("Firmen-Radar")} <span className="in-tag">{t("intern")}</span></h1>
-        <p>{t("Zielfirmen nach Sitz oder Name — mit Schmerz-Signalen (verlorene & auslaufende Verträge) für die Erstansprache. Enthält Kontaktdaten aus öffentlichen Bekanntmachungen; nur intern.")}</p>
+        <p>{t("Zielfirmen nach Sitz oder Name, mit Schmerz-Signalen (verlorene & auslaufende Verträge) für die Erstansprache. Enthält Kontaktdaten aus öffentlichen Bekanntmachungen; nur intern.")}</p>
       </div>
 
       <form className="in-search" onSubmit={search}>
@@ -357,7 +357,7 @@ export function InternFirmen() {
                   <option value="metric">{t("Signalstärke")}</option>
                   <option value="rahmen">{t("Rahmen-Quote")}</option>
                   <option value="wert">{t("Median-Wert")}</option>
-                  <option value="name">{t("Name (A–Z)")}</option>
+                  <option value="name">{t("Name (A bis Z)")}</option>
                   <option value="sitz">{t("PLZ / Sitz")}</option>
                 </select>
               </label>
@@ -370,7 +370,7 @@ export function InternFirmen() {
         <div className="in-count">
           {segMode
            ? `${firmen.length} ${t("Treffer")} — ${t(SEGS.find((s) => s.key === segMode)?.tab || segMode)} (${segGeo ? `${t("Sitz")} ${segGeo}` : t("deutschlandweit")}${firmen.length >= 100 ? ", Top 100" : ""})`
-           : t("{sichtbar} von {gesamt} Firmen — nach Schmerz-Volumen sortiert", { sichtbar: visible.length, gesamt: firmen.length })}
+           : t("{sichtbar} von {gesamt} Firmen, nach Schmerz-Volumen sortiert", { sichtbar: visible.length, gesamt: firmen.length })}
         </div>
       )}
       <div className="in-list">
@@ -396,8 +396,8 @@ export function InternFirmen() {
                     {f.s1.n > 0 && <span className="in-sig s1" title={t("verlorene Verträge (letzter {datum})", { datum: f.s1.letzter ?? "?" })}>{t("▼ {n} verloren · {wert}", { n: f.s1.n, wert: eur(f.s1.vol) })}</span>}
                     {f.s2.n > 0 && <span className="in-sig s2" title={t("nächstes Ende {datum}", { datum: f.s2.naechstes ?? "?" })}>{t("◷ {n} laufen aus · {wert}", { n: f.s2.n, wert: eur(f.s2.vol) })}</span>}
                     {f.s1.n === 0 && f.s2.n === 0 && (f.wins36 >= AKTIV_MIN
-                      ? <span className="in-sig aktiv" title={t("aktiv, aber kein frischer Verlust und nichts läuft in 6–18 Monaten aus")}>{t("⚡ aktiv · ≈{n}/Jahr", { n: perJahr(f.wins36) })}</span>
-                      : <span className="in-sig none" title={t("kein frischer Verlust, kein Vertrag läuft in 6–18 Monaten aus — die Firma kann trotzdem laufende Aufträge halten")}>{t("ruhig")}</span>)}
+                      ? <span className="in-sig aktiv" title={t("aktiv, aber kein frischer Verlust und nichts läuft in 6 bis 18 Monaten aus")}>{t("⚡ aktiv · ≈{n}/Jahr", { n: perJahr(f.wins36) })}</span>
+                      : <span className="in-sig none" title={t("kein frischer Verlust, kein Vertrag läuft in 6 bis 18 Monaten aus, die Firma kann trotzdem laufende Aufträge halten")}>{t("ruhig")}</span>)}
                   </>}
               </div>
             </button>
@@ -419,7 +419,7 @@ export function InternFirmen() {
                       {f.email && <span>✉ {f.email}</span>}
                       <a className="in-link" href={`/firma?id=${encodeURIComponent(f.id)}&from=intern`}>{t("Vollständiges Firmenprofil →")}</a>
                       {cooldown[f.id]
-                        ? <span className="in-locked" title={t("12-Monats-Sperre — segmentübergreifend keine Doppelansprache")}>🔒 {t("angesprochen {datum}", { datum: cooldown[f.id] })}</span>
+                        ? <span className="in-locked" title={t("12-Monats-Sperre, segmentübergreifend keine Doppelansprache")}>🔒 {t("angesprochen {datum}", { datum: cooldown[f.id] })}</span>
                         : <span className="in-logbtns">
                             <span className="in-logl">{t("protokollieren:")}</span>
                             {(["angesprochen", "interessiert", "gewonnen", "kein_interesse"] as const).map((oc) => (
@@ -427,14 +427,14 @@ export function InternFirmen() {
                             ))}
                           </span>}
                       {landing[f.id]?.url
-                        ? <a className="in-link" href={landing[f.id].url} target="_blank" rel="noreferrer">{landing[f.id].copied ? t("Landing-Link kopiert ✓ — öffnen ↗") : t("Landing öffnen ↗")}</a>
+                        ? <a className="in-link" href={landing[f.id].url} target="_blank" rel="noreferrer">{landing[f.id].copied ? t("Landing-Link kopiert ✓, öffnen ↗") : t("Landing öffnen ↗")}</a>
                         : <button className="in-done-btn" disabled={landing[f.id]?.busy} onClick={() => makeLanding(f.id)}>
                             {landing[f.id]?.busy ? t("erzeuge …") : t("Landing erzeugen + Link kopieren")}
                           </button>}
                       <button className={`in-done-btn ${pitchCopied === f.id ? "on" : ""}`} onClick={() => copyPitch(f.id, pitchFor(f, detail))}>
                         {pitchCopied === f.id ? t("Pitch kopiert ✓") : t("Pitch kopieren")}
                       </button>
-                      <span className="in-note">{t("Kontakt aus Bekanntmachung — vor Nutzung prüfen (oft Vergabeportal statt Firma).")}</span>
+                      <span className="in-note">{t("Kontakt aus Bekanntmachung, vor Nutzung prüfen (oft Vergabeportal statt Firma).")}</span>
                     </div>
 
                     <textarea className="in-notiz" placeholder={t("Notiz zu dieser Firma (nur lokal gespeichert)…")}
@@ -451,12 +451,12 @@ export function InternFirmen() {
 
                     {/* Gesprächsaufhänger: laufende Verträge, die demnächst enden (Amtsinhaber-Position) */}
                     {detail.expiring.length > 0 && <div className="in-block">
-                      <h3>{t("◷ Läuft aus — Gesprächsaufhänger")} <span className="in-h3n">{detail.expiring.length}</span></h3>
+                      <h3>{t("◷ Läuft aus. Gesprächsaufhänger")} <span className="in-h3n">{detail.expiring.length}</span></h3>
                       {(() => {
                         const total = detail.expiring.reduce((s, e) => s + (e.vol || 0), 0);
                         const rahmen = detail.expiring.filter((e) => e.artcat === "rahmen").reduce((s, e) => s + (e.vol || 0), 0);
                         return total > 0 ? (
-                          <div className="in-rq" title={t("Anteil Rahmen-/wiederkehrende Verträge am auslaufenden Volumen — wiederkehrend = wird neu ausgeschrieben")}>
+                          <div className="in-rq" title={t("Anteil Rahmen-/wiederkehrende Verträge am auslaufenden Volumen, wiederkehrend = wird neu ausgeschrieben")}>
                             {t("Auslaufendes Volumen {wert} · davon", { wert: eur(total) })} <strong>{t("{pct}% Rahmen/wiederkehrend", { pct: Math.round(rahmen / total * 100) })}</strong>
                           </div>
                         ) : null;
@@ -523,7 +523,7 @@ export function InternFirmen() {
 
                     {/* Legende: erklärt die Vertragsart-Labels + den Schätz-Marker einmal zentral */}
                     <div className="in-legende">
-                      <span><span className="in-art rahmen">{t("Rahmen")}</span> {t("wird neu ausgeschrieben — lohnt Dranbleiben")}</span>
+                      <span><span className="in-art rahmen">{t("Rahmen")}</span> {t("wird neu ausgeschrieben, lohnt Dranbleiben")}</span>
                       <span><span className="in-art einmal">{t("Einmal")}</span> {t("einmalige Leistung, danach erledigt")}</span>
                       <span><span className="in-art neutral">{t("Einzel")}</span> {t("Vergabeart unbestimmt")}</span>
                       <span className="in-legende-star">{t("* Wert geschätzt (CPV-Median), nicht veröffentlicht")}</span>

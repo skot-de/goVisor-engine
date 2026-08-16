@@ -71,7 +71,7 @@ export function MarktPanel() {
 
       {/* Der Satz, der die Zahlen zur Aussage macht. Ohne ihn ist es eine Statistik. */}
       <p className="mk-fuss">
-        {t("Ohne Profil sind das alles gleich weite Treffer. Mit Profil sortiert goVisor nach eurem Fachgebiet und eurem Umkreis — und hält die Eignungsnachweise gegen das, was in den Unterlagen verlangt wird.")}
+        {t("Ohne Profil sind das alles gleich weite Treffer. Mit Profil sortiert goVisor nach eurem Fachgebiet und eurem Umkreis, und hält die Eignungsnachweise gegen das, was in den Unterlagen verlangt wird.")}
       </p>
     </section>
   );

@@ -295,8 +295,8 @@ export function AppTop({ suche, werkzeuge, ohneSuche }: {
           Komponente lag; das war keine Entscheidung, sondern eine Nebenwirkung. */}
       <Link className={`colbtn profilbtn ${profil ? "colbtn-on" : ""}`} href="/onboarding"
         title={profil
-          ? t("{firma} — ansehen/bearbeiten", { firma: profil.firma || t("Profil") })
-          : t("Profil einrichten — schaltet echte Relevanz frei")}>
+          ? t("{firma}, ansehen/bearbeiten", { firma: profil.firma || t("Profil") })
+          : t("Profil einrichten, schaltet echte Relevanz frei")}>
         <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor"
           strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
           <path d="M12 12a4 4 0 100-8 4 4 0 000 8ZM4 21a8 8 0 0116 0" />

@@ -146,7 +146,7 @@ export function VergabeblickView() {
         <div className="vb-onboard">
           <h2>{t("Vergabeblick")}</h2>
           <p className="vb-lead">
-            {t("Der Blick Ihrer Vergabestelle auf den eigenen Markt — wen Sie erreichen, wie Sie mehr Bieter bekommen, ob Sie marktüblich vergeben. Wählen Sie zuerst Ihre Stelle.")}
+            {t("Der Blick Ihrer Vergabestelle auf den eigenen Markt. Wen Sie erreichen, wie Sie mehr Bieter bekommen, ob Sie marktüblich vergeben. Wählen Sie zuerst Ihre Stelle.")}
           </p>
           <input className="vb-search" autoFocus placeholder={t("Ihre Vergabestelle suchen …")}
             value={suche} onChange={(e) => setSuche(e.target.value)} />
@@ -155,11 +155,11 @@ export function VergabeblickView() {
               <button key={s.id} className="vb-pick" onClick={() => setStelleId(s.id)}>
                 <span className="vb-pick-n">{s.name}</span>
                 <span className="vb-pick-m">{t("{n} Vergaben · {vol}", { n: nf.format(s.vergaben36), vol: eur(s.volEcht) })}
-                  {s.id.startsWith("unresolved:") && <span className="vb-frag" title={t("Diese Stelle liegt in den Daten fragmentiert vor — wir zeigen den größten zusammengeführten Teil, nicht garantiert die volle Historie.")}> · {t("Teilbild")}</span>}
+                  {s.id.startsWith("unresolved:") && <span className="vb-frag" title={t("Diese Stelle liegt in den Daten fragmentiert vor. Wir zeigen den größten zusammengeführten Teil, nicht garantiert die volle Historie.")}> · {t("Teilbild")}</span>}
                 </span>
               </button>
             ))}
-            {!treffer.length && <div className="vb-empty">{t("Keine Stelle gefunden. Öffentliche Stellen liegen oft fragmentiert vor — versuchen Sie einen kürzeren Namensteil.")}</div>}
+            {!treffer.length && <div className="vb-empty">{t("Keine Stelle gefunden. Öffentliche Stellen liegen oft fragmentiert vor, versuchen Sie einen kürzeren Namensteil.")}</div>}
           </div>
         </div>
       </div>
@@ -194,7 +194,7 @@ export function VergabeblickView() {
 
       {sektion === "dashboard" ? (
         <div className="vb-main">
-          <p className="vb-frage">{t("Wie steht Ihre Stelle da? — rollierend 36 Monate, alle Werte mit Fallzahl.")}</p>
+          <p className="vb-frage">{t("Wie steht Ihre Stelle da?. Rollierend 36 Monate, alle Werte mit Fallzahl.")}</p>
           <div className="vb-tiles">
             <div className="vb-tile">
               <span className="vb-t-num">{nf.format(stelle.vergaben36)}</span>
@@ -246,7 +246,7 @@ export function VergabeblickView() {
         </div>
       ) : sektion === "markt" ? (
         <div className="vb-main">
-          <p className="vb-frage">{t("Wen erreichen Sie? — Ihr Anbieter-Umfeld und die Wettbewerbsdichte in Ihren Feldern.")}</p>
+          <p className="vb-frage">{t("Wen erreichen Sie?. Ihr Anbieter-Umfeld und die Wettbewerbsdichte in Ihren Feldern.")}</p>
 
           {/* A.4 Markt-Vitalität */}
           {(() => {
@@ -262,7 +262,7 @@ export function VergabeblickView() {
                 <span className="vb-vital-k">{t("Markt-Vitalität")}</span>
                 <p><b>{t("Bei Ihren Nachfolgevergaben gewinnt zu {pct} % wieder derselbe Anbieter.", { pct: retention })}</b>
                   {feldMed != null && <> {t("Marktüblich in Ihrer Branche: {pct} %.", { pct: feldMed })}</>}
-                  {fest ? ` ${t("Das ist festgefahren — hier lohnt aktive Marktansprache.")}` : ` ${t("Ihr Markt bewegt sich.")}`}</p>
+                  {fest ? ` ${t("Das ist festgefahren, hier lohnt aktive Marktansprache.")}` : ` ${t("Ihr Markt bewegt sich.")}`}</p>
                 {stelle.top1 != null && <p className="vb-note">{t("Ihr stärkster Anbieter hält {pct} % aller Ihrer Vergaben (Konzentration).", { pct: stelle.top1 })}</p>}
               </div>
             );
@@ -316,7 +316,7 @@ export function VergabeblickView() {
         </div>
       ) : sektion === "controlling" ? (
         <div className="vb-main">
-          <p className="vb-frage">{t("Haben Sie marktüblich vergeben? — Ihre Werte gegen den Median vergleichbarer Stellen Ihrer Branche.")}</p>
+          <p className="vb-frage">{t("Haben Sie marktüblich vergeben?. Ihre Werte gegen den Median vergleichbarer Stellen Ihrer Branche.")}</p>
           {(() => {
             const med = (pick: (s: Stelle) => number | null | undefined) => {
               const v = (markt?.stellen || []).map(pick).filter((x): x is number => x != null).sort((a, b) => a - b);
@@ -331,7 +331,7 @@ export function VergabeblickView() {
                   goodHigh note={t("Mehr Bieter = mehr Wettbewerb = bessere Angebote. Unter Median bedeutet: Sie erreichen weniger Markt als vergleichbare Stellen.")} />
                 <Bench label={t("Vergabevolumen (belegt, 36 Mon.)")} mine={stelle.volEcht} med={volMed}
                   fmt={eur} scale={Math.max(stelle.volEcht, volMed || 0)}
-                  note={t("Nur veröffentlichte Auftragswerte — die tatsächliche Kaufkraft liegt höher. Untergrenze, kein Vollbild.")} />
+                  note={t("Nur veröffentlichte Auftragswerte. Die tatsächliche Kaufkraft liegt höher. Untergrenze, kein Vollbild.")} />
                 <h4 className="vb-h">{t("Vergleichbare Stellen (Comps)")}</h4>
                 <div className="vb-anb">
                   <div className="vb-anb-h" style={{ gridTemplateColumns: "1fr 90px 80px 90px" }}><span>{t("Stelle")}</span><span>{t("Vergaben")}</span><span>{t("Ø Bieter")}</span><span>{t("Volumen")}</span></div>
@@ -344,7 +344,7 @@ export function VergabeblickView() {
                     </div>
                   ))}
                 </div>
-                <p className="vb-note">{t("Verteilung statt Punktschätzung — wo Ihre Stelle im Feld steht. Keine Wertung, nur Faktenvergleich.")}</p>
+                <p className="vb-note">{t("Verteilung statt Punktschätzung. Wo Ihre Stelle im Feld steht. Keine Wertung, nur Faktenvergleich.")}</p>
                 {stelle.vorschau?.length ? (
                   <>
                     <h4 className="vb-h">{t("Ihre nächsten Auslauftermine")}</h4>
@@ -356,7 +356,7 @@ export function VergabeblickView() {
                         </div>
                       ))}
                     </div>
-                    <p className="vb-note">{t("Ihre eigenen bald auslaufenden Verträge (≤ 24 Mon.) — Planungshilfe für kommende Verfahren. Nur öffentlich sichtbare, oberschwellige.")}</p>
+                    <p className="vb-note">{t("Ihre eigenen bald auslaufenden Verträge (≤ 24 Mon.). Planungshilfe für kommende Verfahren. Nur öffentlich sichtbare, oberschwellige.")}</p>
                   </>
                 ) : null}
               </>
@@ -365,7 +365,7 @@ export function VergabeblickView() {
         </div>
       ) : sektion === "pflichten" ? (
         <div className="vb-main">
-          <p className="vb-frage">{t("KMU-Förderung (§ 97 GWB) und wie stark Sie rein über den Preis vergeben — gegen vergleichbare Stellen.")}</p>
+          <p className="vb-frage">{t("KMU-Förderung (§ 97 GWB) und wie stark Sie rein über den Preis vergeben, gegen vergleichbare Stellen.")}</p>
           {(() => {
             const med = (pick: (s: Stelle) => number | null | undefined) => {
               const v = (markt?.stellen || []).map(pick).filter((x): x is number => x != null).sort((a, b) => a - b);
@@ -382,18 +382,18 @@ export function VergabeblickView() {
                   note={`${t("§ 97 GWB fordert Losaufteilung zur Mittelstandsförderung.")} ${kmuThin ? t("Zu wenige Fälle ({n}) für eine Quote.", { n: stelle.kmu?.n ?? 0 }) : t("Unter Median = Andockpunkt für die Begründungspflicht bei Nicht-Losaufteilung.")}`} />
                 <Bench label={t("Rein über niedrigsten Preis")} mine={preisThin ? null : stelle.preis.pct} med={preisMed}
                   fmt={(v) => (v != null ? v + " %" : "—")} scale={100}
-                  note={`${preisThin ? t("Zu wenige Fälle ({n}) für eine Quote.", { n: stelle.preis?.n ?? 0 }) + " " : ""}${t("Ehrlich als Preis-Benchmark benannt, nicht als Nachhaltigkeit — echte Nachhaltigkeitsdaten tragen in den Vergabedaten nicht (0–1,2 %).")}`} />
+                  note={`${preisThin ? t("Zu wenige Fälle ({n}) für eine Quote.", { n: stelle.preis?.n ?? 0 }) + " " : ""}${t("Ehrlich als Preis-Benchmark benannt, nicht als Nachhaltigkeit. Echte Nachhaltigkeitsdaten tragen in den Vergabedaten nicht (0 bis 1,2 %).")}`} />
               </>
             );
           })()}
         </div>
       ) : (
         <div className="vb-main">
-          <p className="vb-frage">{t("Prüfen Sie einen Entwurf gegen die Marktdaten — bevor das Verfahren startet. Ein Gutachten, kein Eingriff in Ihren Prozess.")}</p>
+          <p className="vb-frage">{t("Prüfen Sie einen Entwurf gegen die Marktdaten. Bevor das Verfahren startet. Ein Gutachten, kein Eingriff in Ihren Prozess.")}</p>
           <div className="vb-check-form">
             <label>{t("Feld (CPV)")}
               <select value={ckFeld} onChange={(e) => setCkFeld(e.target.value)}>
-                <option value="">{t("— wählen —")}</option>
+                <option value="">{t("wählen")}</option>
                 {(markt?.felder || []).map((f) => <option key={f.cpv4} value={f.cpv4}>{f.label}</option>)}
               </select>
             </label>
@@ -446,7 +446,7 @@ export function VergabeblickView() {
           </div>
           {(() => {
             const f = (markt?.felder || []).find((x) => x.cpv4 === ckFeld);
-            if (!f) return <div className="vb-check-empty">{t("Wählen Sie ein Feld — dann prüfen wir Ihren Entwurf gegen vergleichbare Verfahren.")}</div>;
+            if (!f) return <div className="vb-check-empty">{t("Wählen Sie ein Feld, dann prüfen wir Ihren Entwurf gegen vergleichbare Verfahren.")}</div>;
             const bm = f.bieterMedian;
             const bmT = bm != null ? bm.toLocaleString("de-DE") : t("wenigen");
             // `t` heißt hier bewusst NICHT `t` — das Feld des Hinweises heißt `text`,
@@ -455,20 +455,20 @@ export function VergabeblickView() {
             const hints: H[] = [];
             if (bm != null) hints.push({ sev: bm < 2.5 ? "risk" : bm < 4 ? "warn" : "ok",
               text: bm < 2.5
-                ? t("Vergleichbare Verfahren in „{feld}\" erreichen im Median nur {n} Bieter — akute Ein-Bieter-Gefahr.", { feld: f.label, n: bmT })
+                ? t("Vergleichbare Verfahren in „{feld}\" erreichen im Median nur {n} Bieter, akute Ein-Bieter-Gefahr.", { feld: f.label, n: bmT })
                 : t("Vergleichbare Verfahren erreichen im Median {n} Bieter.", { n: bmT }) });
             hints.push(ckLose === 1
-              ? { sev: "warn", text: `${t("Mit nur 1 Los erreichen Sie tendenziell weniger Bieter.")}${f.kleinstesLos ? ` ${t("Vergleichbare Aufträge werden aufgeteilt — das kleinste Los liegt bei ~{wert}.", { wert: eur(f.kleinstesLos) })}` : ""} ${t("Eine Aufteilung öffnet das Verfahren für kleinere Anbieter.")}` }
+              ? { sev: "warn", text: `${t("Mit nur 1 Los erreichen Sie tendenziell weniger Bieter.")}${f.kleinstesLos ? ` ${t("Vergleichbare Aufträge werden aufgeteilt, das kleinste Los liegt bei ~{wert}.", { wert: eur(f.kleinstesLos) })}` : ""} ${t("Eine Aufteilung öffnet das Verfahren für kleinere Anbieter.")}` }
               : { sev: "ok", text: t("Aufteilung in mehrere Lose erhöht erfahrungsgemäß Bieterzahl und KMU-Beteiligung.") });
-            if (ckBuerg) hints.push({ sev: "warn", text: t("Eine Bürgschaft schließt kleinere und regionale Anbieter aus — bei im Median {n} Bietern im Feld erhöht das die Ein-Bieter-Gefahr.", { n: bmT }) });
+            if (ckBuerg) hints.push({ sev: "warn", text: t("Eine Bürgschaft schließt kleinere und regionale Anbieter aus, bei im Median {n} Bietern im Feld erhöht das die Ein-Bieter-Gefahr.", { n: bmT }) });
             if (ckPreis) hints.push({ sev: "warn", text: t("Reine Preisvergabe schreckt spezialisierte Anbieter ab und senkt den Qualitätswettbewerb.") });
             // Ticket #23 §B.2 — Nachweisdichte des hochgeladenen Entwurfs gegen den Korpus-Median.
             if (draftNw && draftNw.median != null) {
               const over = draftNw.count > draftNw.median * 1.5;
               hints.push({ sev: over ? "warn" : "ok",
                 text: over
-                  ? t("Ihr Entwurf fordert {n} Nachweisarten — vergleichbare Verfahren im Median {median}. Hohe Nachweisdichte erhöht den Bearbeitungsaufwand und schreckt kleinere Anbieter ab.", { n: draftNw.count, median: draftNw.median })
-                  : t("Ihr Entwurf fordert {n} Nachweisarten — im Rahmen des Üblichen (Feld-Median {median}).", { n: draftNw.count, median: draftNw.median }) });
+                  ? t("Ihr Entwurf fordert {n} Nachweisarten, vergleichbare Verfahren im Median {median}. Hohe Nachweisdichte erhöht den Bearbeitungsaufwand und schreckt kleinere Anbieter ab.", { n: draftNw.count, median: draftNw.median })
+                  : t("Ihr Entwurf fordert {n} Nachweisarten, im Rahmen des Üblichen (Feld-Median {median}).", { n: draftNw.count, median: draftNw.median }) });
             }
             const krit = hints.filter((h) => h.sev !== "ok").length;
             // B.2 Zuschnitt-Simulation: Feld-Median als Basis, Zuschnitt als DIREKTIONALE Richtung.
@@ -489,7 +489,7 @@ export function VergabeblickView() {
                 {proj != null && bm != null && (
                   <div className={`vb-proj ${proj < 2.5 ? "risk" : ""}`}>
                     <div className="vb-proj-nums">
-                      <div className="vb-proj-cell"><span className="vb-proj-n">{proj.toLocaleString("de-DE")}</span><span className="vb-proj-l">{t("Bieter — Prognose Ihres Zuschnitts")}</span></div>
+                      <div className="vb-proj-cell"><span className="vb-proj-n">{proj.toLocaleString("de-DE")}</span><span className="vb-proj-l">{t("Bieter. Prognose Ihres Zuschnitts")}</span></div>
                       <span className="vb-proj-vs">↔</span>
                       <div className="vb-proj-cell"><span className="vb-proj-n muted">{bm.toLocaleString("de-DE")}</span><span className="vb-proj-l">{t("Feld-Median heute")}</span></div>
                     </div>
@@ -501,7 +501,7 @@ export function VergabeblickView() {
                     ? (krit > 1
                        ? t("{n} Hinweise, die Ihre Bieterzahl senken können", { n: krit })
                        : t("{n} Hinweis, der Ihre Bieterzahl senken kann", { n: krit }))
-                    : t("Keine kritischen Hinweise — der Zuschnitt sieht wettbewerbsoffen aus.")}
+                    : t("Keine kritischen Hinweise, der Zuschnitt sieht wettbewerbsoffen aus.")}
                 </div>
                 {hints.map((h, i) => <div className={`vb-hint ${h.sev}`} key={i}><span className="vb-hint-i" />{h.text}</div>)}
                 {(ckUmsatz > 0 || ckReferenzen > 0 || ckISO) && markt?.wettbewerb?.anbieter?.length ? (() => {
@@ -524,22 +524,22 @@ export function VergabeblickView() {
                   const eng = (krit.length > 0 && kombPct < 40) || (med != null && alle.length <= Math.ceil(med));
                   return (
                     <div className={`vb-eignung ${eng ? "warn" : ""}`}>
-                      <div className="vb-eig-h">{t("Eignungswirkung — wie viele Anbieter erfüllen?")}</div>
+                      <div className="vb-eig-h">{t("Eignungswirkung, wie viele Anbieter erfüllen?")}</div>
                       <table className="vb-eig-tab"><tbody>
                         {krit.map((k) => (
                           <tr key={k.label}><td>{k.label}</td><td className="vb-dots">{dots(k.pct)}</td>
                             <td>~{k.pct} %{k.pct < 15 ? <b className="vb-eng"> {t("⚠ stark einschränkend")}</b> : null}</td></tr>
                         ))}
-                        {ckISO && <tr><td>{t("ISO 27001 zwingend")}</td><td className="vb-dots">—</td><td><i>{t("Datenlage dünn — nicht belastbar quantifiziert")}</i></td></tr>}
+                        {ckISO && <tr><td>{t("ISO 27001 zwingend")}</td><td className="vb-dots">—</td><td><i>{t("Datenlage dünn, nicht belastbar quantifiziert")}</i></td></tr>}
                       </tbody></table>
                       {krit.length > 0 && (
                         <div className="vb-eig-komb">{t("Kombiniert erfüllen alle")} {krit.length > 1 ? t("{n} Kriterien", { n: krit.length }) : t("das Kriterium")}:
                           <b> ~{t("{n} Anbieter", { n: alle.length })}</b> ({kombPct} %){med != null ? ` · ${t("Median-Bieterfeld: {n}", { n: med })}` : ""}</div>
                       )}
                       <p>{eng
-                        ? t("Jede Hürde einzeln wirkt harmlos — zusammen bleiben wenige Anbieter. Das erhöht die Ein-Bieter-Gefahr.")
+                        ? t("Jede Hürde einzeln wirkt harmlos, zusammen bleiben wenige Anbieter. Das erhöht die Ein-Bieter-Gefahr.")
                         : t("Der Markt bleibt auch kumulativ breit genug.")}</p>
-                      <p className="vb-note">{t("Umsatz-/Referenz-Anteile aus 3-Jahres-Auftragsvolumen bzw. Zuschlagszahl der {n} aktiven Anbieter (Größen-/Erfahrungs-Proxy, kein bilanzieller Umsatz). Benannte Zertifikate: Datenlage dünn (0,1–0,4 %), hier nicht quantifiziert. Faktische Marktwirkung, keine Weglass-Empfehlung.", { n: N })}</p>
+                      <p className="vb-note">{t("Umsatz-/Referenz-Anteile aus 3-Jahres-Auftragsvolumen bzw. Zuschlagszahl der {n} aktiven Anbieter (Größen-/Erfahrungs-Proxy, kein bilanzieller Umsatz). Benannte Zertifikate: Datenlage dünn (0,1 bis 0,4 %), hier nicht quantifiziert. Faktische Marktwirkung, keine Weglass-Empfehlung.", { n: N })}</p>
                     </div>
                   );
                 })() : null}
@@ -555,9 +555,9 @@ export function VergabeblickView() {
                         <div><span>{t("Ihr Schätzwert")}</span><b>{eur(v)}</b></div>
                         <div><span>{t("Vergleichbare Verfahren")}</span><b>{t("Band {band} €", { band: f.wertband! })}</b> <i>(n={f.wertN}{thin ? `, ${t("dünn")}` : ""})</i></div>
                       </div>
-                      {status === "unter" && <p className="vb-wert-warn">⚠ {t("Ihr Schätzwert liegt")} <b>{t("unter")}</b> {t("dem üblichen Band — prüfen, ob er das Verfahren trägt, sonst Aufhebungsrisiko.")}</p>}
-                      {status === "über" && <p className="vb-wert-warn">{t("Ihr Schätzwert liegt")} <b>{t("über")}</b> {t("dem üblichen Band — plausibel, ggf. Schwellenwerte/Verfahrensart prüfen.")}</p>}
-                      {status === "im" && <p>{t("Ihr Schätzwert liegt im üblichen Band — plausibel.")}</p>}
+                      {status === "unter" && <p className="vb-wert-warn">⚠ {t("Ihr Schätzwert liegt")} <b>{t("unter")}</b> {t("dem üblichen Band. Prüfen, ob er das Verfahren trägt, sonst Aufhebungsrisiko.")}</p>}
+                      {status === "über" && <p className="vb-wert-warn">{t("Ihr Schätzwert liegt")} <b>{t("über")}</b> {t("dem üblichen Band. Plausibel, ggf. Schwellenwerte/Verfahrensart prüfen.")}</p>}
+                      {status === "im" && <p>{t("Ihr Schätzwert liegt im üblichen Band, plausibel.")}</p>}
                       <p className="vb-note">{t("Nur Bandorientierung, kein Punktpreis (Wertdaten sind dünn). Keine Preisorientierung.")}</p>
                     </div>
                   );

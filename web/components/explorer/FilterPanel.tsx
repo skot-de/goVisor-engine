@@ -145,7 +145,7 @@ export function FilterPanel({
           </section>
 
           <section className="fp-sec">
-            <h5>{t("Frist / Vertragsende — in den nächsten …")}</h5>
+            <h5>{t("Frist / Vertragsende, in den nächsten …")}</h5>
             <div className="fp-chips">
               <button className={`fp-chip ${adv.horizon == null ? "on" : ""}`} onClick={() => set({ horizon: null })}>{t("egal")}</button>
               {HORIZONTE.map(([m, l]) => (

@@ -86,7 +86,7 @@ export function dossierMarkdown(l: Lead): string {
   out.push("---",
     `${tk("Quelle")}: [${tk("In goVisor öffnen")}](${govisorUrl(l.id)}) · [${tk("Bekanntmachung auf TED")}](${tedUrl(l.id)})`
     + ` · ${tk("Datenstand {datum}", { datum: heute() })} · ${tk("erstellt mit goVisor")}`,
-    `*${tk("Volumen- und Timing-Angaben sind, wo gekennzeichnet, geschätzt — nicht veröffentlichte Werte werden nicht geraten.")}*`);
+    `*${tk("Volumen- und Timing-Angaben sind, wo gekennzeichnet, geschätzt, nicht veröffentlichte Werte werden nicht geraten.")}*`);
   return out.join("\n");
 }
 
@@ -106,7 +106,7 @@ export function dossierDocHtml(l: Lead): string {
 <h2 style="font-size:13pt;color:#067a55">${esc(tk("Bewertung"))}</h2>${tbl(bewertung(l))}
 ${anf ? `<h2 style="font-size:13pt;color:#067a55">${esc(tk("Anforderungs-Check"))}</h2>${tbl(anf)}` : ""}
 <hr><p style="font-size:9pt;color:#8c9b95">${esc(tk("Quelle"))}: <a href="${govisorUrl(l.id)}">${esc(tk("In goVisor öffnen"))}</a> · ${esc(tk("Bekanntmachung auf TED"))} (${tedUrl(l.id)}) · ${esc(tk("Datenstand {datum}", { datum: heute() }))} · ${esc(tk("erstellt mit goVisor"))}.<br>
-${esc(tk("Volumen- und Timing-Angaben sind, wo gekennzeichnet, geschätzt — nicht veröffentlichte Werte werden nicht geraten."))}</p>
+${esc(tk("Volumen- und Timing-Angaben sind, wo gekennzeichnet, geschätzt, nicht veröffentlichte Werte werden nicht geraten."))}</p>
 </body></html>`;
 }
 

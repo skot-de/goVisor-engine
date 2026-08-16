@@ -113,7 +113,7 @@ export function FirmaProfil() {
             <svg viewBox="0 0 24 24" style={{ width: 15, height: 15, stroke: "currentColor", fill: "none", strokeWidth: 1.8, color: "var(--ink-400)" }}>
               <circle cx="11" cy="11" r="7" /><path d="M20 20l-3.5-3.5" />
             </svg>
-            <input autoFocus placeholder={t("Firma suchen — Name")} value={q} onChange={(e) => search(e.target.value)} />
+            <input autoFocus placeholder={t("Firma suchen. Name")} value={q} onChange={(e) => search(e.target.value)} />
           </div>
           {matches.length > 0 && (
             <div className="fp-results">
@@ -195,7 +195,7 @@ export function FirmaProfil() {
           <div><b>{k.verteidigung > k.markt_verteidigung
               ? t("{firma} verteidigt überdurchschnittlich.", { firma: data.name })
               : t("{firma} verteidigt unterdurchschnittlich.", { firma: data.name })}</b>{" "}
-            {t("{pct} % der Verträge, die auslaufen, holt das Unternehmen zurück — marktüblich sind {markt} %.", { pct: k.verteidigung, markt: k.markt_verteidigung })}
+            {t("{pct} % der Verträge, die auslaufen, holt das Unternehmen zurück, marktüblich sind {markt} %.", { pct: k.verteidigung, markt: k.markt_verteidigung })}
             {k.verteidigung > k.markt_verteidigung ? " " + t("Angriffe lohnen dort, wo die Bindung schwach ist.") : " " + t("Hier sind auslaufende Verträge eher angreifbar.")}
             <div className="fp-mini">{t("Basis: {n} auswertbare Nachfolgen · head_to_head", { n: k.verteidigung_base })}</div></div>
         </div>
@@ -255,7 +255,7 @@ export function FirmaProfil() {
           <div className="fp-ch"><h2>{t("Kopf an Kopf")}</h2><span className="fp-pro">Pro</span></div>
           <div className="fp-cb">
             <div className="fp-empty">{t("Noch keine gemeinsamen Verfahren bekannt.")}<br />
-              <span style={{ color: "var(--ink-400)", fontSize: 12 }}>{t("Meldet ihr eure Teilnahmen im Cockpit, entsteht dieser Vergleich mit der Zeit — aus euren Meldungen und den öffentlichen Zuschlägen dieser Firma.")}</span></div>
+              <span style={{ color: "var(--ink-400)", fontSize: 12 }}>{t("Meldet ihr eure Teilnahmen im Cockpit, entsteht dieser Vergleich mit der Zeit, aus euren Meldungen und den öffentlichen Zuschlägen dieser Firma.")}</span></div>
           </div>
         </div>
 
@@ -303,8 +303,8 @@ export function FirmaProfil() {
               <div className="fp-note fp-note-n" style={{ height: "100%" }}>
                 <Icon d={I_INFO} />
                 <div>{data.signale.subcontracting > data.signale.subcontracting_total / 3
-                  ? t("{firma} vergibt bei einem Teil der Aufträge Unteraufträge geregelt — mögliche Anknüpfung für ergänzende Leistungen.", { firma: data.name.split(" ")[0] })
-                  : t("{firma} vergibt selten Unteraufträge weiter — hier ist eher Wettbewerb als Zusammenarbeit zu erwarten.", { firma: data.name.split(" ")[0] })}
+                  ? t("{firma} vergibt bei einem Teil der Aufträge Unteraufträge geregelt, mögliche Anknüpfung für ergänzende Leistungen.", { firma: data.name.split(" ")[0] })
+                  : t("{firma} vergibt selten Unteraufträge weiter, hier ist eher Wettbewerb als Zusammenarbeit zu erwarten.", { firma: data.name.split(" ")[0] })}
                   <div className="fp-mini">{t("Abgeleitet · „geregelt\" heißt: im Verfahren vorgesehen, kein Hinweis auf konkreten Bedarf")}</div></div>
               </div>
             </div>

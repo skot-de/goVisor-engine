@@ -78,13 +78,13 @@ export function UnternehmenView({ tab, onTab }: { tab: UnTab; onTab: (t: UnTab) 
           {lokaleFirma ? (
             <p>
               {t("Wir kennen euch in diesem Browser bereits als")} <b>{lokaleFirma}</b>{" "}
-              {t("— die Lead-Liste ist darauf eingestellt. Das Eignungsprofil (Referenzen, Zertifikate, Nachweise) liegt aber in eurem")}{" "}
+              {t("die Lead-Liste ist darauf eingestellt. Das Eignungsprofil (Referenzen, Zertifikate, Nachweise) liegt aber in eurem")}{" "}
               <b>{t("Konto")}</b>
               {t(", nicht im Browser: nur so steht es auf jedem Gerät und dem ganzen Team zur Verfügung.")}
             </p>
           ) : (
             <p>
-              {t("Hier pflegt ihr eure Eignungsangaben — Referenzen, Zertifikate, Nachweise. Sie liegen in eurem Konto und werden für Anforderungsabgleich, Textbausteine und Relevanz verwendet.")}
+              {t("Hier pflegt ihr eure Eignungsangaben. Referenzen, Zertifikate, Nachweise. Sie liegen in eurem Konto und werden für Anforderungsabgleich, Textbausteine und Relevanz verwendet.")}
             </p>
           )}
           {/* DER MARKT IN ZAHLEN. Svens Vorschlag: allgemeine Marktdaten zeigen, solange
@@ -103,7 +103,7 @@ export function UnternehmenView({ tab, onTab }: { tab: UnTab; onTab: (t: UnTab) 
             </li>
             <li>
               <b>{t("Anforderungsabgleich")}</b>
-              <span>{t("Aus den Vergabeunterlagen gelesene Nachweise werden gegen eure gehalten — was fehlt, steht sofort da.")}</span>
+              <span>{t("Aus den Vergabeunterlagen gelesene Nachweise werden gegen eure gehalten. Was fehlt, steht sofort da.")}</span>
             </li>
             <li>
               <b>{t("Textbausteine, die schon ausgefüllt sind")}</b>
@@ -134,7 +134,7 @@ export function UnternehmenView({ tab, onTab }: { tab: UnTab; onTab: (t: UnTab) 
     <div className="un-wrap" id="un-print-root">
       <div className="un-head">
         <h1>{t("Unser Unternehmen")}</h1>
-        <p>{t("Die Eignungsangaben eures Betriebs — einmal erfasst, überall verwendet: Anforderungsabgleich, Textbausteine und Relevanz greifen darauf zu.")}</p>
+        <p>{t("Die Eignungsangaben eures Betriebs. Einmal erfasst, überall verwendet: Anforderungsabgleich, Textbausteine und Relevanz greifen darauf zu.")}</p>
       </div>
 
       {tab === "profil" ? (
@@ -172,7 +172,7 @@ function WirkungBanner({ w }: { w: ReturnType<typeof wirkung> }) {
   if (w.ablaufend > 0) parts.push(w.ablaufend === 1
     ? t("{n} Zertifikat läuft in ≤ 90 Tagen ab", { n: w.ablaufend })
     : t("{n} Zertifikate laufen in ≤ 90 Tagen ab", { n: w.ablaufend }));
-  if (parts.length === 0) return <div className="un-wirkung ok">{t("Profil vollständig gepflegt — alle Pflicht-Anforderungen beantwortet.")}</div>;
+  if (parts.length === 0) return <div className="un-wirkung ok">{t("Profil vollständig gepflegt, alle Pflicht-Anforderungen beantwortet.")}</div>;
   return <div className="un-wirkung"><strong>{t("Zu erledigen:")}</strong> {parts.join(" · ")}</div>;
 }
 
@@ -185,7 +185,7 @@ function IdentitaetSektion({ profil, ctx, setProfil, toast, refresh }: SecP & { 
   const [showKorr, setShowKorr] = useState(false);
 
   async function loadPrefill() {
-    if (!ctx.identityId) { setErr(t("Keine Firma zugeordnet — bitte zuerst die Zuordnung wählen.")); return; }
+    if (!ctx.identityId) { setErr(t("Keine Firma zugeordnet, bitte zuerst die Zuordnung wählen.")); return; }
     setBusy(true); setErr(null);
     const r = await fetchVorbefuellung(ctx.identityId);
     setBusy(false);
@@ -200,13 +200,13 @@ function IdentitaetSektion({ profil, ctx, setProfil, toast, refresh }: SecP & { 
     const r1 = await saveReferences(refs);
     const cpv = Array.from(new Set([...profil.branchen.cpv, ...prefill.cpv_schwerpunkte.map((c) => c.code)]));
     await saveBranchen(cpv);
-    if (r1.ok) { toast(t("{n} Referenzen als „abgeleitet\" übernommen — bitte bestätigen.", { n: prefill.references.length })); await refresh(); }
+    if (r1.ok) { toast(t("{n} Referenzen als „abgeleitet\" übernommen, bitte bestätigen.", { n: prefill.references.length })); await refresh(); }
     else toast(t("Übernahme fehlgeschlagen."));
   }
 
   const conf = ctx.entityConfidence;
   return (
-    <Section title={t("Zuordnung & Vorbefüllung")} hint={t("Eure Firma im Vergabegraph — Grundlage für die Vorbefüllung aus eigenen Zuschlägen.")}>
+    <Section title={t("Zuordnung & Vorbefüllung")} hint={t("Eure Firma im Vergabegraph. Grundlage für die Vorbefüllung aus eigenen Zuschlägen.")}>
       <div className="un-ident">
         <span className="un-firm">{ctx.companyName || t("Unternehmen noch nicht zugeordnet")}</span>
         {conf && <span className={`un-conf ${conf === "belegt" ? "ok" : "warn"}`}>{conf === "belegt" ? t("Zuordnung gesichert") : t("Zuordnung unsicher")}</span>}
@@ -230,7 +230,7 @@ function IdentitaetSektion({ profil, ctx, setProfil, toast, refresh }: SecP & { 
             <div><span className="un-k">{t("Umsatz-Näherung")}</span><span className="un-v">{prefill.umsatz_naeherung ? eur(prefill.umsatz_naeherung) : "—"} <em className="un-note">{t("≈ Auftragsvol., {p}% belegt", { p: prefill.umsatz_coverage })}</em></span></div>
           </div>
           <button className="un-btn" onClick={uebernehmen}>{t("Referenzen + Schwerpunkte übernehmen (abgeleitet)")}</button>
-          <p className="un-note">{t("Übernommene Angaben zählen erst nach Bestätigung (§7.1) — sie erscheinen unten als „abgeleitet\".")}</p>
+          <p className="un-note">{t("Übernommene Angaben zählen erst nach Bestätigung (§7.1), sie erscheinen unten als „abgeleitet\".")}</p>
         </div>
       )}
 
@@ -254,12 +254,12 @@ function EntityKorrektur({ ctx, toast, refresh }: SecP & { ctx: ProfilContext; r
   }
   async function choose(m: { id: string; name: string; strong: boolean }) {
     const r = await saveIdentityCorrection(m.id, m.name, m.strong ? "belegt" : "unsicher");
-    if (r.ok) { toast(t("Zuordnung auf „{name}\" korrigiert — Vorbefüllung neu berechenbar.", { name: m.name })); await refresh(); }
+    if (r.ok) { toast(t("Zuordnung auf „{name}\" korrigiert. Vorbefüllung neu berechenbar.", { name: m.name })); await refresh(); }
     else toast(t("Korrektur fehlgeschlagen."));
   }
   return (
     <div className="un-korr">
-      <p className="un-note">{t("Falsche Gesellschaft zugeordnet? Firma suchen und richtige Identität wählen — die Korrektur wirkt auch auf den Entity-Graph (§7.3).")}</p>
+      <p className="un-note">{t("Falsche Gesellschaft zugeordnet? Firma suchen und richtige Identität wählen, die Korrektur wirkt auch auf den Entity-Graph (§7.3).")}</p>
       <div className="un-searchrow">
         <input placeholder={t("Firmenname suchen …")} value={q} onChange={(e) => setQ(e.target.value)}
           onKeyDown={(e) => e.key === "Enter" && search()} />
@@ -288,11 +288,11 @@ function StammdatenSektion({ profil, setProfil, toast, refresh }: SecP & { refre
     if (r.ok) { toast(t("Stammdaten gespeichert.")); await refresh(); } else toast(t("Speichern fehlgeschlagen."));
   }
   return (
-    <Section title={t("Stammdaten")} hint={t("Rechtsform, Kennzahlen — Basis für Schwellenprüfung, KMU-Status und Textbausteine.")}>
+    <Section title={t("Stammdaten")} hint={t("Rechtsform, Kennzahlen. Basis für Schwellenprüfung, KMU-Status und Textbausteine.")}>
       <div className="un-grid">
         <label className="un-field"><span>{t("Rechtsform")}</span>
           <select value={sd.rechtsform || ""} onChange={(e) => set("rechtsform", (e.target.value || null) as Rechtsform | null)}>
-            <option value="">{t("– wählen –")}</option>{RECHTSFORMEN.map((r) => <option key={r} value={r}>{r}</option>)}
+            <option value="">{t("wählen")}</option>{RECHTSFORMEN.map((r) => <option key={r} value={r}>{r}</option>)}
           </select></label>
         <label className="un-field"><span>{t("Gründungsjahr")}</span>
           <input type="number" inputMode="numeric" placeholder={t("z. B. 1998")} value={sd.gruendungsjahr ?? ""}
@@ -324,7 +324,7 @@ function StammdatenSektion({ profil, setProfil, toast, refresh }: SecP & { refre
  * Deutsch definiert, beim Rendern übersetzt (`t(z.label)`) — s. Kopfkommentar. */
 const ZIELE: { k: Zielrichtung; label: string; hint: string }[] = [
   { k: "bestand", label: "Bestand halten", hint: "Gewichtung auf bekannte Vergabestellen und Felder; Auslauf-Radar priorisiert." },
-  { k: "ausgewogen", label: "Ausgewogen", hint: "Standard — keine Verschiebung." },
+  { k: "ausgewogen", label: "Ausgewogen", hint: "Standard, keine Verschiebung." },
   { k: "expandieren", label: "Expandieren", hint: "Zusätzliche CPV-Felder und Regionen, auch ohne Zuschläge dort." },
 ];
 function ZielrichtungSektion({ profil, setProfil, toast }: SecP) {
@@ -334,7 +334,7 @@ function ZielrichtungSektion({ profil, setProfil, toast }: SecP) {
     const r = await saveZielrichtung(z); toast(r.ok ? t("Zielrichtung gespeichert.") : t("Speichern fehlgeschlagen."));
   }
   return (
-    <Section title={t("Zielrichtung")} hint={t("Wer expandiert, braucht andere Leads als wer verteidigt — wirkt auf Relevanz und Empfehlung (#2/#26).")}>
+    <Section title={t("Zielrichtung")} hint={t("Wer expandiert, braucht andere Leads als wer verteidigt, wirkt auf Relevanz und Empfehlung (#2/#26).")}>
       <div className="un-ziele">
         {ZIELE.map((z) => (
           <button key={z.k} className={`un-ziel ${profil.zielrichtung === z.k ? "on" : ""}`} onClick={() => pick(z.k)}>
@@ -354,9 +354,9 @@ function BranchenSektion({ profil, setProfil, toast }: SecP) {
   function add() { const c = neu.replace(/\D/g, "").slice(0, 4); if (c.length >= 2 && !profil.branchen.cpv.includes(c)) { persist([...profil.branchen.cpv, c]); setNeu(""); } }
   function remove(c: string) { persist(profil.branchen.cpv.filter((x) => x !== c)); }
   return (
-    <Section title={t("Branchenzuordnung (CPV)")} hint={t("Vorschlag aus der eigenen Zuschlagshistorie, änderbar — steuert den Anforderungskatalog.")}>
+    <Section title={t("Branchenzuordnung (CPV)")} hint={t("Vorschlag aus der eigenen Zuschlagshistorie, änderbar, steuert den Anforderungskatalog.")}>
       <div className="un-chips">
-        {profil.branchen.cpv.length === 0 && <span className="un-muted">{t("Noch keine CPV-Schwerpunkte — über „Aus eigenen Zuschlägen befüllen\" oben oder manuell.")}</span>}
+        {profil.branchen.cpv.length === 0 && <span className="un-muted">{t("Noch keine CPV-Schwerpunkte, über „Aus eigenen Zuschlägen befüllen\" oben oder manuell.")}</span>}
         {profil.branchen.cpv.map((c) => <span key={c} className="un-chip">CPV {c}<button onClick={() => remove(c)} aria-label={t("entfernen")}>×</button></span>)}
       </div>
       <div className="un-searchrow">
@@ -384,7 +384,7 @@ function KatalogSektion({ profil, catalog, setProfil, toast, refresh }: SecP & {
     }
   }
   return (
-    <Section title={t("Anforderungskatalog")} hint={t("{n} branchenübliche Anforderungen — je Punkt eine Angabe (ja/nein/Wert). Ein „trifft nicht zu\" ist genauso verwertbar.", { n: catalog.length })}>
+    <Section title={t("Anforderungskatalog")} hint={t("{n} branchenübliche Anforderungen, je Punkt eine Angabe (ja/nein/Wert). Ein „trifft nicht zu\" ist genauso verwertbar.", { n: catalog.length })}>
       <div className="un-kat">
         {catalog.map((it) => <KatalogZeile key={it.id} it={it} profil={profil} derived={derived(it)} setProfil={setProfil} toast={toast} refresh={refresh} />)}
       </div>
@@ -443,12 +443,12 @@ function ReferenzenSektion({ profil, setProfil, toast, refresh }: SecP & { refre
   function add() { setList((l) => [{ id: nid(), quelle: "angegeben", projekt: "", auftraggeber: "", wert: null, von: null, bis: null, cpv: null }, ...l]); }
   function remove(id: string) { setList((l) => l.filter((r) => r.id !== id)); }
   async function save() { const r = await saveReferences(list); toast(r.ok ? t("Referenzen gespeichert.") : t("Speichern fehlgeschlagen.")); if (r.ok) await refresh(); }
-  async function confirm(id: string) { const r = await confirmReference(id); if (r.ok) { toast(t("Referenz bestätigt — zählt jetzt.")); await refresh(); } }
+  async function confirm(id: string) { const r = await confirmReference(id); if (r.ok) { toast(t("Referenz bestätigt, zählt jetzt.")); await refresh(); } }
 
   return (
     <Section title={t("Referenzen")} hint={t("Einmal erfasst, überall genutzt: Anforderungsprüfung, Referenz-Textbaustein, Relevanz.")}>
       <div className="un-actions"><button className="un-btn ghost" onClick={add}>{t("+ Referenz")}</button></div>
-      {list.length === 0 && <p className="un-muted">{t("Noch keine Referenzen — oben aus eigenen Zuschlägen vorbefüllen oder manuell anlegen.")}</p>}
+      {list.length === 0 && <p className="un-muted">{t("Noch keine Referenzen, oben aus eigenen Zuschlägen vorbefüllen oder manuell anlegen.")}</p>}
       {list.map((r) => (
         <div key={r.id} className={`un-ref ${r.quelle === "abgeleitet" && !r.bestaetigt ? "derived" : ""}`}>
           <div className="un-refgrid">
@@ -487,7 +487,7 @@ function ZertifikateSektion({ profil, setProfil, toast, refresh }: SecP & { refr
   // Auto-Persist nach Upload/Entfernen, damit die Nachweis-Referenz nicht verloren geht.
   async function persist(next: Certificate[]) { setList(next); await saveCertificates(next); }
   return (
-    <Section title={t("Zertifikate & Nachweise")} hint={t("Ablaufdatum pflichtig — abgelaufene zählen nicht als erfüllt; Erinnerung 90 Tage vorher (§9). Nachweis optional, verschlüsselt und profilgebunden.")}>
+    <Section title={t("Zertifikate & Nachweise")} hint={t("Ablaufdatum pflichtig. Abgelaufene zählen nicht als erfüllt; Erinnerung 90 Tage vorher (§9). Nachweis optional, verschlüsselt und profilgebunden.")}>
       <div className="un-actions"><button className="un-btn ghost" onClick={add}>{t("+ Zertifikat")}</button></div>
       {list.length === 0 && <p className="un-muted">{t("Noch keine Zertifikate erfasst.")}</p>}
       {list.map((c) => {
@@ -560,7 +560,7 @@ function AusschluesseSektion({ profil, setProfil, toast }: SecP) {
   function set<K extends keyof Exclusions>(k: K, v: Exclusions[K]) { setEx((p) => ({ ...p, [k]: v })); }
   async function save() { const r = await saveExclusions(ex); toast(r.ok ? t("Ausschlüsse gespeichert.") : t("Speichern fehlgeschlagen.")); }
   return (
-    <Section title={t("Ausschlusskriterien")} hint={t("Was bewusst nicht in Frage kommt — wenige Angaben, große Wirkung auf die Listenqualität.")}>
+    <Section title={t("Ausschlusskriterien")} hint={t("Was bewusst nicht in Frage kommt. Wenige Angaben, große Wirkung auf die Listenqualität.")}>
       <div className="un-grid">
         <label className="un-field"><span>{t("Mindest-Auftragswert (€)")}</span><input inputMode="numeric" value={ex.wert_min ?? ""} onChange={(e) => set("wert_min", numIn(e.target.value))} /></label>
         <label className="un-field"><span>{t("Höchst-Auftragswert (€)")}</span><input inputMode="numeric" value={ex.wert_max ?? ""} onChange={(e) => set("wert_max", numIn(e.target.value))} /></label>
@@ -587,11 +587,11 @@ function RolleSektion({ profil, setProfil, toast }: SecP) {
   useEffect(() => setRole(profil.role), [profil.role]);
   async function save() { const r = await saveRole(role); toast(r.ok ? t("Rolle gespeichert.") : t("Speichern fehlgeschlagen.")); }
   return (
-    <Section title={t("Meine Rolle")} hint={t("Adressat der Alerts (#9) — nur für Sie, keine Erfassung Dritter (§4).")}>
+    <Section title={t("Meine Rolle")} hint={t("Adressat der Alerts (#9). Nur für Sie, keine Erfassung Dritter (§4).")}>
       <div className="un-grid">
         <label className="un-field"><span>{t("Rolle im Vergabeprozess")}</span>
           <select value={role.rolle || ""} onChange={(e) => setRole((p) => ({ ...p, rolle: (e.target.value || null) as Role["rolle"] }))}>
-            <option value="">{t("– wählen –")}</option>{ROLLEN.map((r) => <option key={r.k} value={r.k}>{t(r.label)}</option>)}
+            <option value="">{t("wählen")}</option>{ROLLEN.map((r) => <option key={r.k} value={r.k}>{t(r.label)}</option>)}
           </select></label>
         <label className="un-field"><span>{t("Zuständige Regionen (kommagetrennt)")}</span>
           <input value={(role.regionen || []).join(", ")} onChange={(e) => setRole((p) => ({ ...p, regionen: e.target.value.split(",").map((s) => s.trim()).filter(Boolean) }))} placeholder={t("optional")} /></label>
@@ -605,7 +605,7 @@ function RolleSektion({ profil, setProfil, toast }: SecP) {
 function ExportSektion({ profil, ctx }: { profil: Profil; ctx: ProfilContext }) {
   const { t } = useSprache();
   return (
-    <Section title={t("Export")} hint={t("Eignungsübersicht mitnehmen — JSON (Datenmitnahme) und PDF (Nachweis bei Bewerbungen).")}>
+    <Section title={t("Export")} hint={t("Eignungsübersicht mitnehmen. JSON (Datenmitnahme) und PDF (Nachweis bei Bewerbungen).")}>
       <div className="un-actions">
         <button className="un-btn ghost" onClick={() => exportProfilJson(profil, ctx)}>{t("JSON exportieren")}</button>
         <button className="un-btn ghost" onClick={() => exportProfilPdf(profil, ctx)}>{t("PDF (Druckansicht)")}</button>

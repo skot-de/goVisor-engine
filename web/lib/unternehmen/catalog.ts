@@ -33,21 +33,21 @@ export const STARTKATALOG: CatalogItem[] = [
   { id: "ausschluss_123_124", label: "Keine Ausschlussgründe nach §§ 123/124 GWB", art: "binaer", branchen: ["*"], ko: true,
     hinweis: "Zwingende und fakultative Ausschlussgründe (u. a. Straftaten, Steuern, Sozialabgaben)." },
   { id: "sanktion_5k", label: "Keine Russland-Bezüge nach Art. 5k VO (EU) 833/2014", art: "binaer", branchen: ["*"], ko: true,
-    hinweis: "Sanktions-Eigenerklärung — in nahezu jedem Verfahren gefordert." },
+    hinweis: "Sanktions-Eigenerklärung, in nahezu jedem Verfahren gefordert." },
   { id: "tariftreue", label: "Tariftreue- / Mindestlohnerklärung abgebbar", art: "binaer", branchen: ["*"],
     hinweis: "Landesspezifische Tariftreuegesetze; Erklärung meist Pflicht." },
 
   // ── Wirtschaftliche Leistungsfähigkeit ──
   { id: "mindestumsatz", label: "Jahresumsatz (jüngstes Geschäftsjahr)", art: "schwelle", einheit: "€", branchen: ["*"],
-    quelleStammdaten: "umsatz", hinweis: "Gegen geforderten Mindestumsatz geprüft — aus Stammdaten." },
-  { id: "berufshaftpflicht", label: "Berufs-/Betriebshaftpflicht — Deckungssumme", art: "schwelle", einheit: "€", branchen: ["*"],
-    hinweis: "Deckungssumme je Schadensfall; oft ≥ 1–3 Mio € gefordert." },
+    quelleStammdaten: "umsatz", hinweis: "Gegen geforderten Mindestumsatz geprüft, aus Stammdaten." },
+  { id: "berufshaftpflicht", label: "Berufs-/Betriebshaftpflicht. Deckungssumme", art: "schwelle", einheit: "€", branchen: ["*"],
+    hinweis: "Deckungssumme je Schadensfall; oft ≥ 1 bis 3 Mio € gefordert." },
 
   // ── Technische Leistungsfähigkeit ──
   { id: "referenzen", label: "Vergleichbare Referenzen", art: "sammlung", branchen: ["*"], quelleStammdaten: "referenzen",
     hinweis: "Anzahl und Wert werden aus den erfassten Referenzen gerechnet (#26 §3.2a)." },
   { id: "mitarbeiterzahl", label: "Beschäftigte", art: "schwelle", einheit: "Personen", branchen: ["*"],
-    quelleStammdaten: "mitarbeiter", hinweis: "Gegen geforderte Mindest-Mitarbeiterzahl — aus Stammdaten." },
+    quelleStammdaten: "mitarbeiter", hinweis: "Gegen geforderte Mindest-Mitarbeiterzahl, aus Stammdaten." },
   { id: "jahre_am_markt", label: "Jahre am Markt", art: "schwelle", einheit: "Jahre", branchen: ["*"],
     quelleStammdaten: "jahre", hinweis: "Aus dem Gründungsjahr berechnet." },
 
@@ -55,7 +55,7 @@ export const STARTKATALOG: CatalogItem[] = [
   { id: "praequalifikation", label: "Präqualifikation (PQ-VOB / PQ-VOL)", art: "kennung", branchen: ["*"],
     hinweis: "PQ-Nummer eintragen = vorhanden; leer = nein. Bei Bau meist PQ-VOB." },
   { id: "verbandsmitgliedschaft", label: "Verbandsmitgliedschaft", art: "kennung", branchen: ["*"],
-    hinweis: "Fachverband/Innung — teils als Eignungsindiz gefordert." },
+    hinweis: "Fachverband/Innung, teils als Eignungsindiz gefordert." },
 
   // ── Zertifikate (branchenabhängig; als binär hier, Details in der Zertifikate-Sektion) ──
   { id: "iso_9001", label: "ISO 9001 (Qualitätsmanagement)", art: "binaer", branchen: ["*"] },

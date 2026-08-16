@@ -32,7 +32,7 @@ function Prov({ state }: { state?: string }) {
   };
   const [cls, lbl] = m[state] || ["", state];
   return <span className={`ck-prov ${cls}`} title={
-    state === "abgeleitet" ? t("Aus öffentlichen Daten abgeleitet — bitte prüfen")
+    state === "abgeleitet" ? t("Aus öffentlichen Daten abgeleitet, bitte prüfen")
     : state === "bestaetigt" ? t("Von Ihnen bestätigt") : t("Von Ihnen ergänzt/korrigiert")}>{t(lbl)}</span>;
 }
 
@@ -87,7 +87,7 @@ export function Cockpit({
 
   return (
     <div className="ck-wrap">
-      <Area k="beob" title={t("Beobachtet")} unter={t("Zukunft — was ich angehen will")} n={beob.length}>
+      <Area k="beob" title={t("Beobachtet")} unter={t("Zukunft, was ich angehen will")} n={beob.length}>
         {beob.length ? beob.map((l) => (
           <Row key={l.id} l={l}>
             {l.frist?.tage != null && (
@@ -99,7 +99,7 @@ export function Cockpit({
         )) : <div className="ck-empty">{t("Noch nichts beobachtet. Merkt euch Ausschreibungen (☆) in der Akquise.")}</div>}
       </Area>
 
-      <Area k="aktiv" title={t("Aktiv")} unter={t("Gegenwart — woran ich gerade dran bin")} n={aktiv.length}>
+      <Area k="aktiv" title={t("Aktiv")} unter={t("Gegenwart, woran ich gerade dran bin")} n={aktiv.length}>
         {aktiv.length ? aktiv.map((l) => (
           <Row key={l.id} l={l}>
             <span className={`ck-status ${l.pipe === "wartet" ? "wait" : ""}`}>{t(PIPE_LABEL[l.pipe!] || l.pipe!)}</span>
@@ -110,7 +110,7 @@ export function Cockpit({
         )) : <div className="ck-empty">{t("Keine laufenden Bewerbungen. Aus „Beobachtet\" wandert ein Lead hierher, sobald Sie sich bewerben.")}</div>}
       </Area>
 
-      <Area k="hist" title={t("Historie")} unter={t("Vergangenheit — was war, und was daraus folgt")} n={hist.length}>
+      <Area k="hist" title={t("Historie")} unter={t("Vergangenheit. Was war, und was daraus folgt")} n={hist.length}>
         {(() => {
           // Ableitungen (#17 §5): Stammkunden + bald auslaufende Verträge (Verteidigungsbedarf).
           const kunden = new Set(hist.filter((l) => l.outcome !== "verloren").map((l) => l.buyerShort || l.buyer)).size;
@@ -119,14 +119,14 @@ export function Cockpit({
           return (
             <div className="ck-abl">
               <span className="ck-abl-i"><b>{kunden}</b> {t("Stammkunden")}</span>
-              {baldAus > 0 && <span className="ck-abl-i warn"><b>{baldAus}</b> {baldAus > 1 ? t("Verträge laufen") : t("Vertrag läuft")} {t("bald aus — Verteidigungsbedarf")}</span>}
+              {baldAus > 0 && <span className="ck-abl-i warn"><b>{baldAus}</b> {baldAus > 1 ? t("Verträge laufen") : t("Vertrag läuft")} {t("bald aus. Verteidigungsbedarf")}</span>}
             </div>
           );
         })()}
         {abgeleitet > 0 && (
           <div className="ck-note">
             <b>{t("{n} Verträge aus öffentlichen Daten vorbefüllt.", { n: abgeleitet })}</b>{" "}
-            {t("Das sind eure öffentlich sichtbaren (oberschwelligen) Zuschläge — Unterschwelliges und Niederlagen fehlen. Bestätigen oder ergänzen Sie, um das Bild zu vervollständigen (und goVisor etwas beizubringen, das es nicht wusste).")}
+            {t("Das sind eure öffentlich sichtbaren (oberschwelligen) Zuschläge. Unterschwelliges und Niederlagen fehlen. Bestätigen oder ergänzen Sie, um das Bild zu vervollständigen (und goVisor etwas beizubringen, das es nicht wusste).")}
           </div>
         )}
         {hist.length ? hist.map((l) => (
@@ -136,12 +136,12 @@ export function Cockpit({
                   {(l.cockpitProv ?? "abgeleitet") === "abgeleitet" && <button className="ck-btn ghost" onClick={() => onConfirm(l.id)}>{t("Stimmt ✓")}</button>}</>}
             {l.incumbent?.seit && <span className="ck-since">{t("seit {jahr}", { jahr: l.incumbent.seit })}</span>}
             {l.endTage != null && l.endTage >= 0 && l.endTage <= 540 && l.endet &&
-              <span className="ck-since warn" title={t("Euer Vertrag läuft bald aus — hier droht Verdrängung, Verteidigung nötig")}>{t("läuft {datum} aus", { datum: l.endet })}</span>}
+              <span className="ck-since warn" title={t("Euer Vertrag läuft bald aus. Hier droht Verdrängung, Verteidigung nötig")}>{t("läuft {datum} aus", { datum: l.endet })}</span>}
           </Row>
         )) : <div className="ck-empty">{t("Keine Historie. Eure öffentlichen Zuschläge erscheinen hier automatisch, sobald euer Firmenprofil bestätigt ist.")}</div>}
       </Area>
 
-      <p className="ck-foot">{t("goVisor verwaltet den")} <b>{t("Status der Ausschreibung")}</b>{t(", nicht die Vertriebsbeziehung — kein CRM.")}</p>
+      <p className="ck-foot">{t("goVisor verwaltet den")} <b>{t("Status der Ausschreibung")}</b>{t(", nicht die Vertriebsbeziehung, kein CRM.")}</p>
     </div>
   );
 }

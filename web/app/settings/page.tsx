@@ -101,7 +101,7 @@ function ProfilSektion({ acc, setAcc, melde }: { acc: AccountRow; setAcc: (a: Ac
       vol_min: vMin ? Number(vMin) : null, vol_max: vMax ? Number(vMax) : null,
     };
     const { ok } = await saveProfileFields(fields);
-    if (ok) { setAcc({ ...acc, ...fields }); melde(t("Profil gespeichert — wirkt beim nächsten Laden auf die Relevanz.")); }
+    if (ok) { setAcc({ ...acc, ...fields }); melde(t("Profil gespeichert, wirkt beim nächsten Laden auf die Relevanz.")); }
     else melde(t("Speichern fehlgeschlagen."));
   }
 
@@ -113,7 +113,7 @@ function ProfilSektion({ acc, setAcc, melde }: { acc: AccountRow; setAcc: (a: Ac
         <input className="inp" value={name} onChange={(e) => setName(e.target.value)} /></div>
       <div className="field"><label className="lbl">{t("Bereich")}</label>
         <select className="inp" value={branche} onChange={(e) => setBranche(e.target.value)}>
-          <option value="">{t("— wählen —")}</option>
+          <option value="">{t("wählen")}</option>
           {BRANCHEN.map(([k, l]) => <option key={k} value={k}>{t(l)}</option>)}
         </select></div>
       <div className="field"><label className="lbl">{t("Schwerpunkte")} <em style={{ color: "var(--ink-400)", fontWeight: 400 }}>{t("im Onboarding bearbeitbar")}</em></label>
@@ -167,7 +167,7 @@ function ZahlungSektion({ acc, melde }: { acc: AccountRow; melde: (m: string) =>
     const band = bandSel[inv.id] || inv.anchor_band || BANDS[2];
     const r = await confirmBand(inv.id, band);
     if (!r.ok) return melde(t("Bestätigung fehlgeschlagen."));
-    melde(r.flagged ? t("Angabe weicht stark vom Schätzwert ab — geht in Prüfung (Beleg nötig).") : t("Band bestätigt · Gebühr {fee} €.", { fee: r.fee }));
+    melde(r.flagged ? t("Angabe weicht stark vom Schätzwert ab, geht in Prüfung (Beleg nötig).") : t("Band bestätigt · Gebühr {fee} €.", { fee: r.fee }));
     setInvoices(await loadInvoices());
   }
 
@@ -180,7 +180,7 @@ function ZahlungSektion({ acc, melde }: { acc: AccountRow; melde: (m: string) =>
         <span className="set-v">{acc.grace_until ? t("bis {datum}", { datum: new Date(acc.grace_until).toLocaleDateString("de-DE") }) : "—"}</span></div>
 
       <h3 className="set-h3">{t("Rechnungen")}</h3>
-      <p className="set-x">{t("Erfolgsprämien werden nie automatisch abgebucht — ihr bekommt eine Rechnung mit Widerspruchsfrist. Wo kein Auftragswert veröffentlicht ist, bestätigt ihr das Band selbst.")}</p>
+      <p className="set-x">{t("Erfolgsprämien werden nie automatisch abgebucht. Ihr bekommt eine Rechnung mit Widerspruchsfrist. Wo kein Auftragswert veröffentlicht ist, bestätigt ihr das Band selbst.")}</p>
       {invoices.length ? (
         <div className="set-invlist">
           {invoices.map((inv) => (
@@ -218,10 +218,10 @@ function AlertSektion({ alerts, setAlerts, melde }: { alerts: AlertSettings; set
   const set = (patch: Partial<AlertSettings>) => setAlerts({ ...alerts, ...patch });
   async function speichern() { const { ok } = await saveAlertSettings(alerts); melde(ok ? t("Benachrichtigungen gespeichert.") : t("Speichern fehlgeschlagen.")); }
   const TOG: [keyof AlertSettings, string, string][] = [
-    ["deadline_warning_enabled", "Angebotsfrist naht", "14 und 3 Tage vor der Frist — der wichtigste Alert."],
+    ["deadline_warning_enabled", "Angebotsfrist naht", "14 und 3 Tage vor der Frist, der wichtigste Alert."],
     ["expiry_warning_enabled", "Vertrag läuft aus", "Nur wo ein echtes Vertragsende bekannt ist."],
     ["award_notify_enabled", "Zuschlag erteilt", "Wenn eine beobachtete Ausschreibung vergeben wird."],
-    ["new_leads_digest_enabled", "Neue passende Leads", "Digest neuer Treffer (Marketing — abbestellbar)."],
+    ["new_leads_digest_enabled", "Neue passende Leads", "Digest neuer Treffer (Marketing, abbestellbar)."],
   ];
   return (
     <>

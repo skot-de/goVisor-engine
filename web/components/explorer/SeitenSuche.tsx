@@ -37,7 +37,7 @@ export function SeitenSuche() {
       <input
         value={wert}
         onChange={(e) => setWert(e.target.value)}
-        placeholder={t("Suchen — Ort, PLZ, Auftraggeber, Stichwort")}
+        placeholder={t("Suchen. Ort, PLZ, Auftraggeber, Stichwort")}
         aria-label={t("Suchen")}
         autoComplete="off"
       />

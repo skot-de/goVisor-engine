@@ -44,7 +44,7 @@ export const copy = {
   hero: {
     get kicker() { return ueb("Lead-Engine für öffentliche Vergaben"); },
     // Die Antwort auf „warum sollte ich das benutzen" (Übergabenotiz §12)
-    get headline() { return ueb("Jede Ausschreibung, die zu euch passt — und die Wahrheit darüber, was drinsteht."); },
+    get headline() { return ueb("Jede Ausschreibung, die zu euch passt, und die Wahrheit darüber, was drinsteht."); },
     get sub() {
       return ueb(
         "Öffentliche Vergaben stehen alle in TED. Vollständig, und praktisch unbenutzbar: " +
