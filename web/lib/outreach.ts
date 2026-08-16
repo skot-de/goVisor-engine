@@ -27,6 +27,8 @@ export type Baustein = {
   zahlen?: Zahl[]; zeilen?: Zeile[]; namen?: string[];
   /** Schrittweise Eingrenzung auf die Firma. Beantwortet „wie viele genau fuer uns?". */
   trichter?: { n: number; label: string; hinweis?: string | null }[];
+  /** Der Kettensatz ueber der Kette: „X sagt der Markt. Wir sagen Y …". */
+  kette?: string | null;
   n_auslauf?: number; n_fertigstellung?: number;
   /** Ein Satz, der ohne Umgebung trägt. Speist den Kernbefund im Seitenkopf. */
   kern?: string | null;

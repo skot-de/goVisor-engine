@@ -65,37 +65,36 @@ function Vertragstabelle({ zeilen }: { zeilen: Zeile[] }) {
  * offen und ist der Grund für das Profil: was Eignung und Kapazität hergeben, steht in
  * keiner Bekanntmachung.
  */
-function Trichter({ stufen }: { stufen: NonNullable<Baustein["trichter"]> }) {
+function Kette({ stufen, satz }: {
+  stufen: NonNullable<Baustein["trichter"]>; satz?: string | null;
+}) {
   const { t } = useSprache();
-  const max = Math.max(...stufen.map((s) => s.n), 1);
   /*
-    Dritter Anlauf, und der Grund fuers Umbauen steckt in den ersten beiden:
-      1. Zahl | Balken | Beschriftung in drei festen Spalten. Dazwischen klaffte eine
-         Luecke, die Zeilen standen weit auseinander: eine Tabelle mit Loechern.
-      2. Balken vorn, Beschriftung direkt dahinter. Damit WANDERTE die Beschriftung mit
-         dem Balken nach links und stand auf keiner Linie mehr. Sven: „sieht kacke aus."
-    Jetzt liegt der Balken als FLAECHE unter der Zeile. Beschriftung links, Zahl rechts,
-    beide auf fester Linie; die Verengung zeigt sich als schrumpfende Unterlegung. Das
-    ist der uebliche Bau eines Balkendiagramms, und er ist hier ueblich, weil er
-    funktioniert.
+    Vierter Anlauf, und der letzte Umbau kam nicht von der Optik, sondern vom Inhalt.
+    Sven: „den trichter sollten wir als kette zeigen: '8.080 Ausschreibungen sagt der
+    Markt, wir sagen 194 und weniger die wirklich zu euch passen'."
+
+    Ein gestapeltes Balkendiagramm laesst sich ansehen; eine Kette liest man. Und weil
+    der Satz darueber dieselbe Aussage in Worten macht, traegt die Grafik nicht mehr die
+    ganze Last: wer nur den Satz liest, hat es trotzdem verstanden.
   */
   return (
-    <div className="lg-trichter">
-      {stufen.map((s, i) => (
-        <div className="lg-stufe" key={i}>
-          <span className="lg-fuell" style={{ width: `${Math.max(3, (s.n / max) * 100)}%` }} />
-          <span className="lg-lb">
-            {s.label}
-            {s.hinweis && <em>{s.hinweis}</em>}
-          </span>
-          <span className="lg-n">{s.n.toLocaleString("de-DE")}</span>
-        </div>
-      ))}
-      {/* Die offene Stufe: keine Flaeche, keine Zahl. Sie ist der Grund fuers Profil. */}
-      <div className="lg-stufe lg-offen">
-        <span className="lg-lb">{t("wie viele davon wirklich passen, sagt euer Profil")}</span>
-        <span className="lg-n">?</span>
-      </div>
+    <div className="lg-kettewrap">
+      {satz && <p className="lg-kettesatz">{satz}</p>}
+      <ol className="lg-kette">
+        {stufen.map((s, i) => (
+          <li className={`lg-glied${i === stufen.length - 1 ? " lg-letzte" : ""}`} key={i}>
+            <span className="lg-n">{s.n.toLocaleString("de-DE")}</span>
+            <span className="lg-lb">{s.label}</span>
+            {s.hinweis && <span className="lg-hw">{s.hinweis}</span>}
+          </li>
+        ))}
+        {/* Das offene Glied: keine Zahl. Es ist der Grund fuers Profil. */}
+        <li className="lg-glied lg-offen">
+          <span className="lg-n">?</span>
+          <span className="lg-lb">{t("die wirklich zu euch passen")}</span>
+        </li>
+      </ol>
     </div>
   );
 }
@@ -166,8 +165,10 @@ export function LandingView({ d, token }: { d: Landing; token: string }) {
   const signup = `/onboarding?t=${encodeURIComponent(token)}`;
 
   const ueberEuch = d.bausteine.filter((b) => b.gruppe === "ueber_euch");
-  const fuerEuch = d.bausteine.filter((b) => b.gruppe === "fuer_euch");
-  const kacheln = (bs: Baustein[]) => bs.filter((b) => b.form === "kpi");
+  const fuerEuch = d.bausteine.filter((b) => b.gruppe === "fuer_euch");   // auch im Kopf gebraucht
+  // Ein Baustein mit Kette bekommt KEINE Kachel: die Kette nennt dieselbe Zahl und
+  // erklaert sie dazu. Beides nebeneinander liest sich wie zwei verschiedene Befunde.
+  const kacheln = (bs: Baustein[]) => bs.filter((b) => b.form === "kpi" && !b.kette);
   const karten = (bs: Baustein[]) => bs.filter((b) => b.form !== "kpi");
 
   return (
@@ -180,6 +181,19 @@ export function LandingView({ d, token }: { d: Landing; token: string }) {
             Auftraggebern" ist dieselbe Datenlage und eine Nachricht. */}
         {d.kern && <p className="lg-kern">{d.kern}</p>}
         <p className="lg-quelle">{t("Alles aus öffentlichen Vergabebekanntmachungen. Keine Daten von Ihnen, kein Konto nötig.")}</p>
+        {/*
+          Sven: „was ist, wenn der nutzer nicht scrollt, weil er denkt die seite ist
+          zuende?" Genau das droht: die Überschrift „Das wissen wir bereits über euch"
+          klingt abgeschlossen, und der erste Bildschirm sieht aus wie die ganze Seite.
+          Der Wegweiser nennt den zweiten Teil beim Namen UND führt hin. Ein blosser
+          Pfeil hätte nur gesagt, dass da noch etwas ist, nicht was.
+        */}
+        {fuerEuch.length > 0 && (
+          <a className="lg-weiter" href="#finden">
+            <span>{t("Weiter unten: was wir für euch finden")}</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6" /></svg>
+          </a>
+        )}
       </div>
 
       {kacheln(ueberEuch).length > 0 && <KennzahlenLeiste teile={kacheln(ueberEuch)} />}
@@ -197,12 +211,12 @@ export function LandingView({ d, token }: { d: Landing; token: string }) {
       ))}
 
       {fuerEuch.length > 0 && (
-        <div className="lg-wende">
+        <div className="lg-wende" id="finden">
           <h2>{t("Und das können wir für euch finden")}</h2>
           <p className="lg-wende-lede">{t("Was davon zu euch passt, entscheidet euer Profil. Je schärfer es ist, desto weniger müsst ihr selbst durchsehen.")}</p>
           <KennzahlenLeiste teile={kacheln(fuerEuch)} />
           {fuerEuch.filter((b) => b.trichter?.length).map((b) => (
-            <Trichter key={b.id} stufen={b.trichter!} />
+            <Kette key={b.id} stufen={b.trichter!} satz={b.kette} />
           ))}
         </div>
       )}

@@ -170,17 +170,20 @@ def baustein_transparenz(con, ctx):
         return None
     return {
         "id": "transparenz", "staerke": 100, "gruppe": "ueber_euch", "form": "kpi",
-        "kern": f"{r[0]:,}".replace(",", ".") + f" eurer Zuschläge stehen öffentlich, zurück bis {r[2]}.",
+        # Sven: „'507 zuschläge bekannt' aha, warum nicht: '507 gewonnene Ausschreibungen
+        # zwischen 2010 und 2026.'" Die Beschriftung sagt jetzt den ganzen Satz. Das
+        # Telegramm sparte drei Wörter und kostete die Aussage.
+        "kern": f"Wir kennen {r[0]:,}".replace(",", ".") +
+                f" Ausschreibungen, die ihr zwischen {r[2]} und {r[3]} gewonnen habt.",
         "titel": "Das steht öffentlich über euch",
         "zahlen": [
-            {"wert": f"{r[0]:,}".replace(",", "."), "label": "Zuschläge benannt"},
-            {"wert": f"{r[1]:,}".replace(",", "."), "label": "Vergabestellen"},
-            {"wert": f"{r[2]} bis {r[3]}" if r[2] and r[3] else None, "label": "Zeitraum"},
+            {"wert": f"{r[0]:,}".replace(",", "."),
+             "label": f"gewonnene Ausschreibungen zwischen {r[2]} und {r[3]}"},
+            {"wert": f"{r[1]:,}".replace(",", "."), "label": "verschiedene Auftraggeber"},
         ],
         # Diese Zeile ist der Grund, warum der Baustein trägt statt zu prahlen.
-        "grenze": ("Was hier nicht steht: eure verlorenen Angebote. Öffentlich benannt "
-                   "wird nur, wer den Zuschlag bekommt. Angebote werden gezählt, nicht "
-                   "namentlich genannt."),
+        "grenze": ("Eure verlorenen Angebote stehen hier nicht. Öffentlich genannt wird "
+                   "nur, wer gewinnt."),
         "bruecke": {"produkt": "Unternehmen",
                     "text": "Das vollständige Profil, mit euren Korrekturen"},
     }
@@ -255,16 +258,22 @@ def baustein_abhaengigkeit(con, ctx):
     wer = namen[0] if k == 1 else f"von {k} Auftraggebern"
     return {
         "id": "abhaengigkeit", "staerke": 90, "gruppe": "ueber_euch", "form": "kpi",
-        "kern": (f"{anteil*100:.0f} % eurer öffentlichen Zuschläge kommen von einem "
-                 f"einzigen Auftraggeber." if k == 1 else
-                 f"{anteil*100:.0f} % eurer öffentlichen Zuschläge kommen von {k} Auftraggebern."),
+        "kern": (f"{anteil*100:.0f} % eurer Aufträge kommen von einem einzigen Auftraggeber."
+                 if k == 1 else
+                 f"{anteil*100:.0f} % eurer Aufträge kommen von zwei Auftraggebern."
+                 if k == 2 else
+                 f"{anteil*100:.0f} % eurer Aufträge kommen von {k} Auftraggebern."),
         "anteil": round(anteil, 3),
         "titel": "Woher eure Aufträge kommen",
-        "zahlen": [{"wert": f"{anteil*100:.0f} %", "label": (f"von {wer}" if k == 1 else wer)},
-                   {"wert": str(len(rows)), "label": "Auftraggeber insgesamt"}],
+        # Die zweite Zahl war „Auftraggeber insgesamt" und stand damit ein zweites Mal
+        # auf der Seite — sie steht schon im Transparenz-Baustein. Eine Kachel, die
+        # etwas wiederholt, kostet Aufmerksamkeit und gibt nichts zurück.
+        "zahlen": [{"wert": f"{anteil*100:.0f} %",
+                    "label": (f"eurer Aufträge kommen von {namen[0]}" if k == 1
+                              else f"eurer Aufträge kommen von {k} Auftraggebern")}],
         "namen": namen,
-        "grenze": (f"Gezählt über {ges} öffentliche Zuschläge. Aufträge ausserhalb "
-                   "öffentlicher Vergabeverfahren sind hier nicht enthalten."),
+        "grenze": (f"Gezählt über {ges} öffentliche Zuschläge. Was ihr ausserhalb "
+                   "öffentlicher Vergaben macht, sehen wir nicht."),
         "bruecke": {"produkt": "Strategie",
                     "text": "Wo ihr ausserhalb dieser Konzentration anschlussfähig seid"},
     }
@@ -412,7 +421,7 @@ def baustein_offene_im_feld(con, ctx):
     breit = zaehl(f"substr(cpv_code,1,2) = ? AND {fremd}", [div[0], ctx["id"]])
     if not breit:
         return None
-    stufen = [{"n": breit, "label": "im selben CPV-Bereich"}]
+    stufen = [{"n": breit, "label": "sagt der Markt"}]
 
     eng = breit
     if klassen:
@@ -423,7 +432,7 @@ def baustein_offene_im_feld(con, ctx):
         namen = [r[0] for r in con.execute(
             f"SELECT label FROM {CL} WHERE substr(cpv_code,1,4) IN ({ph}) "
             f"AND substr(cpv_code,5,4) = '0000'", klassen).fetchall() if r[0]]
-        stufen.append({"n": eng, "label": "in euren Fachklassen",
+        stufen.append({"n": eng, "label": "in eurem Fach",
                        "hinweis": ", ".join(n[:44] for n in namen[:3]) or None})
 
     # Regionsstufe nur, wenn sie ueberhaupt einschraenkt. Wer bundesweit baut, bekommt
@@ -433,7 +442,7 @@ def baustein_offene_im_feld(con, ctx):
         eng2 = zaehl(f"substr(cpv_code,1,4) IN ({ph}) AND substr(market_nuts3,1,3) IN ({ph2}) "
                      f"AND {fremd}", klassen + laender + [ctx["id"]])
         if eng2 < eng:
-            stufen.append({"n": eng2, "label": "dort, wo ihr bisher gebaut habt"})
+            stufen.append({"n": eng2, "label": "wo ihr baut"})
             eng = eng2
 
     stellen = con.execute(f"""SELECT count(DISTINCT buyer_name) FROM {LE}
@@ -444,12 +453,20 @@ def baustein_offene_im_feld(con, ctx):
         "id": "offene_im_feld", "staerke": 80, "gruppe": "fuer_euch", "form": "kpi",
         "kern": f"{eng:,}".replace(",", ".") + " offene Ausschreibungen passen zu dem, was ihr baut.",
         "titel": "Was gerade offen ist, in eurem Fachgebiet",
-        "zahlen": [{"wert": f"{eng:,}".replace(",", "."), "label": "passen zu eurem Zuschnitt"},
-                   {"wert": f"{stellen:,}".replace(",", "."), "label": "Vergabestellen im Bereich"}],
+        "zahlen": [{"wert": f"{eng:,}".replace(",", "."),
+                    "label": "offene Ausschreibungen passen zu dem, was ihr baut"},
+                   {"wert": f"{stellen:,}".replace(",", "."),
+                    "label": "Vergabestellen schreiben in eurem Bereich aus"}],
         "trichter": stufen,
-        "grenze": ("Eingegrenzt über eure eigenen Zuschläge: Fachklassen und Leistungsorte. "
-                   "Ob eine Ausschreibung wirklich passt, hängt an Eignung und Kapazität, "
-                   "und das steht in keiner Bekanntmachung."),
+        # Sven: „den trichter sollten wir als kette zeigen: '8.080 Ausschreibungen sagt
+        # der Markt, wir sagen 194 und weniger die wirklich zu euch passen'." Der Satz
+        # steht ueber der Kette, damit sie gelesen wird und nicht nur angesehen.
+        "kette": (f"{breit:,}".replace(",", ".") + " Ausschreibungen sagt der Markt. Wir sagen "
+                  + f"{eng:,}".replace(",", ".") + ", und mit eurem Profil werden es noch "
+                  "weniger, die wirklich zu euch passen."),
+        "grenze": ("Eingegrenzt über eure eigenen Zuschläge. Ob eine Ausschreibung wirklich "
+                   "passt, hängt an Eignung und Kapazität, und das steht in keiner "
+                   "Bekanntmachung."),
         "bruecke": {"produkt": "Planung", "text": "Die Liste, gefiltert auf euer Profil"},
     }
 
@@ -472,10 +489,10 @@ def baustein_zweitversuche(con, ctx):
         "kern": (f"{r[0]:,} Bedarfe in eurem Fachgebiet werden seit Jahren erfolglos "
                  "ausgeschrieben.").replace(",", "."),
         "titel": "Wo wiederholt niemand geboten hat",
-        "zahlen": [{"wert": f"{r[0]:,}".replace(",", "."), "label": "chronische Bedarfe"},
-                   {"wert": f"bis {int(r[1])} Jahre", "label": "erfolglos in Folge"}],
-        "grenze": ("Bedarfe, die dieselbe Stelle über mehrere Jahre erfolglos "
-                   "ausgeschrieben hat. Dort ist der Wettbewerb am dünnsten."),
+        "zahlen": [{"wert": f"{r[0]:,}".replace(",", "."),
+                    "label": "Aufträge, die schon mehrfach erfolglos ausgeschrieben wurden"},
+                   {"wert": f"bis zu {int(r[1])} Jahre", "label": "sucht dieselbe Stelle schon"}],
+        "grenze": "Dort ist der Wettbewerb am dünnsten, weil kaum jemand bietet.",
         "bruecke": {"produkt": "Strategie", "text": "Die Segmente, sortiert nach Chance"},
     }
 

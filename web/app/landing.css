@@ -117,37 +117,44 @@
 
 @media (max-width: 820px) { .lg-kachel .lg-v { font-size: 28px; } .lg-wende h2 { font-size: 19px; } }
 
-/* ── Trichter: „wie viele genau fuer uns?" ───────────────────────────────────────────
-   Der Balken liegt als FLAECHE unter der Zeile, nicht neben ihr. Beschriftung links,
-   Zahl rechts, beide auf fester Linie — die Verengung zeigt sich als schrumpfende
-   Unterlegung. Zwei Fassungen davor scheiterten daran, dass der Balken die Beschriftung
-   verschob (sie stand auf keiner Linie) oder von ihr getrennt in einer eigenen Spalte
-   stand (Luecke dazwischen).                                                          */
-.lg-trichter { margin-top: 14px; border: 1px solid var(--line); border-radius: 10px;
-  background: var(--surface); padding: 10px; }
-.lg-stufe { position: relative; display: flex; align-items: baseline; gap: 12px;
-  padding: 8px 11px; border-radius: 5px; }
-/* Die Flaeche zeigt den Anteil UNGESCHOENT: 194 von 8.080 sind 2,4 %, und so schmal
-   erscheint sie auch. Eine Log-Skala waere lesbarer und wuerde die Verengung kleinreden,
-   also genau das verstecken, was die Stufe aussagt. Damit ein 2-%-Streifen trotzdem
-   nicht wie ein Rendering-Unfall aussieht, bekommt JEDE Stufe dieselbe feste Kante
-   links — die traegt keine Information und behauptet deshalb auch keine. */
-.lg-stufe .lg-fuell { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 5px;
-  background: color-mix(in srgb, var(--signal, #16a06b) 15%, transparent);
-  box-shadow: inset 3px 0 0 var(--signal, #16a06b); }
-.lg-stufe .lg-lb { position: relative; flex: 1 1 auto; min-width: 0; font-size: 13px;
-  color: var(--ink-800); }
-.lg-stufe .lg-lb em { font-style: normal; color: var(--ink-400); font-size: 11.5px;
-  margin-left: 8px; }
-.lg-stufe .lg-n { position: relative; flex: none; font-family: var(--mono, ui-monospace, monospace);
-  font-size: 15px; font-weight: 700; letter-spacing: -.02em; color: var(--ink-900); }
-/* Jede Stufe blasser: die Spur wird schwaecher, waehrend sie schmaler wird. */
-.lg-stufe:nth-child(2) .lg-fuell { background: color-mix(in srgb, var(--signal, #16a06b) 22%, transparent); }
-.lg-stufe:nth-child(3) .lg-fuell { background: color-mix(in srgb, var(--signal, #16a06b) 30%, transparent); }
 
-.lg-offen { margin-top: 4px; border-top: 1px dashed var(--line); border-radius: 0;
-  padding-top: 12px; }
-.lg-offen .lg-lb { color: var(--ink-500); }
-.lg-offen .lg-n { color: var(--signal-deep, #0b7a52); }
+/* ── Wegweiser in die zweite Haelfte ─────────────────────────────────────────────────
+   Der erste Bildschirm sieht ohne ihn abgeschlossen aus: die Ueberschrift „Das wissen
+   wir bereits ueber euch" klingt nach einem fertigen Satz. Der Wegweiser nennt den
+   zweiten Teil beim Namen und fuehrt hin.                                              */
+.lg-weiter { display: inline-flex; align-items: center; gap: 8px; margin-top: 18px;
+  padding: 9px 15px; border: 1px solid var(--line); border-radius: 999px;
+  background: var(--surface); font-size: 13.5px; font-weight: 550;
+  color: var(--ink-800); text-decoration: none; }
+.lg-weiter:hover { border-color: var(--signal, #16a06b); color: var(--signal-deep, #0b7a52); }
+.lg-weiter svg { width: 15px; height: 15px; fill: none; stroke: currentColor;
+  stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 
-@media (max-width: 640px) { .lg-stufe .lg-lb em { display: block; margin: 2px 0 0; } }
+/* ── Kette: „X sagt der Markt, wir sagen Y" ─────────────────────────────────────────
+   Vorgaenger war ein gestapeltes Balkendiagramm. Das liess sich ansehen; eine Kette
+   liest man. Der Satz darueber macht dieselbe Aussage in Worten, damit die Grafik nicht
+   die ganze Last traegt: wer nur den Satz liest, hat es trotzdem verstanden.          */
+.lg-kettewrap { margin-top: 16px; }
+.lg-kettesatz { font-size: 15.5px; line-height: 1.5; color: var(--ink-800);
+  max-width: 640px; margin: 0 0 14px; }
+.lg-kette { display: flex; flex-wrap: wrap; align-items: stretch; gap: 0;
+  list-style: none; margin: 0; padding: 0;
+  border: 1px solid var(--line); border-radius: 10px; background: var(--surface);
+  overflow: hidden; }
+.lg-glied { flex: 1 1 130px; min-width: 0; padding: 14px 16px;
+  border-left: 1px solid var(--line); }
+.lg-glied:first-child { border-left: 0; }
+.lg-glied .lg-n { display: block; font-family: var(--mono, ui-monospace, monospace);
+  font-size: 24px; font-weight: 700; letter-spacing: -.03em; line-height: 1;
+  color: var(--ink-500); }
+.lg-glied .lg-lb { display: block; font-size: 12px; color: var(--ink-500); margin-top: 7px; }
+.lg-glied .lg-hw { display: block; font-size: 10.5px; color: var(--ink-400); margin-top: 4px;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+/* „Wir sagen 194" ist die Aussage der Kette, also traegt dieses Glied die Farbe. */
+.lg-letzte .lg-n { color: var(--signal-deep, #0b7a52); font-size: 30px; }
+.lg-letzte .lg-lb { color: var(--ink-700); }
+.lg-offen { background: color-mix(in srgb, var(--signal, #16a06b) 6%, transparent); }
+.lg-offen .lg-n { color: var(--signal, #16a06b); }
+
+@media (max-width: 640px) { .lg-glied { flex-basis: 100%; border-left: 0;
+  border-top: 1px solid var(--line); } .lg-glied:first-child { border-top: 0; } }
