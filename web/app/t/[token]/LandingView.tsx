@@ -91,10 +91,17 @@ function Kette({ stufen, satz }: {
             {s.hinweis && <span className="lg-hw">{s.hinweis}</span>}
           </li>
         ))}
-        {/* Das offene Glied: keine Zahl. Es ist der Grund fuers Profil. */}
+        {/* Das letzte Glied trug ein Fragezeichen. Gemeint war Ehrlichkeit: wie viele
+            wirklich passen, haengt an Eignung und Kapazitaet und steht in keiner
+            Bekanntmachung. Gelesen wurde etwas anderes. Wir belegen eine Seite lang, dass
+            wir etwas ueber diese Firma wissen, und schliessen dann ausgerechnet bei der
+            einen Zahl, die den Empfaenger interessiert, mit „?". Das entwertet alles
+            davor.
+            Jetzt steht dort, was wir tatsaechlich anbieten: die Auswahl uebernehmen wir.
+            Kein erfundener Wert, aber auch keine Ratlosigkeit. */}
         <li className="lg-glied lg-offen">
-          <span className="lg-n">?</span>
-          <span className="lg-lb">{t("die wirklich zu euch passen")}</span>
+          <span className="lg-n">→</span>
+          <span className="lg-lb">{t("die Auswahl übernehmen wir")}</span>
         </li>
       </ol>
     </div>
@@ -179,6 +186,10 @@ export function LandingView({ d, token }: { d: Landing; token: string }) {
     zwei Ereignissen im Nachhinein abzuleiten, welches das andere ausgeloest hat, geht
     schief, sobald jemand erst klickt, hochscrollt und wieder herunterkommt.
   */
+  // Die Folge haengt am Abhaengigkeits-Baustein, gehoert aber in den Seitenkopf unter
+  // den Kernbefund. Gesucht wird ueber das FELD, nicht ueber die Baustein-Id: welcher
+  // Baustein eine Folge traegt, ist eine Sache des Generators.
+  const folge = d.bausteine.find((b) => b.folge)?.folge ?? null;
   const [sicht, setSicht] = useState<"heute" | "morgen">("heute");
   const wegweiserBenutzt = useRef(false);
   const findenGemeldet = useRef(false);
@@ -222,10 +233,18 @@ export function LandingView({ d, token }: { d: Landing; token: string }) {
           <span className="lg-h-firma">{d.name}</span>
         </h1>
         {/* Der Kernbefund kommt aus dem ÜBERRASCHENDSTEN Baustein, nicht dem belegtesten:
-            „507 Zuschläge seit 2010" ist gut belegt und langweilig, „99 % von zwei
-            Auftraggebern" ist dieselbe Datenlage und eine Nachricht. */}
+            „507 Zuschläge seit 2010" ist gut belegt und langweilig.
+            Seit der Umstellung führt `vertraege`: dass von den laufenden Vorhaben keines
+            als Neuvergabe zurückkommt, kann sich der Empfänger nicht selbst beschaffen —
+            die Konzentration auf zwei Auftraggeber kennt er dagegen längst. */}
         {d.kern && <p className="lg-kern">{d.kern}</p>}
-        <p className="lg-quelle">{t("Alles aus öffentlichen Vergabebekanntmachungen. Keine Daten von Ihnen, kein Konto nötig.")}</p>
+        {/* Die FOLGE, direkt unter dem Befund. Ein Vertriebsleiter liest „99 % von zwei
+            Auftraggebern" als Beobachtung, die er kennt. Erst „fällt der grösste aus,
+            fehlen 50 %" macht daraus einen Grund zu handeln. */}
+        {folge && <p className="lg-folge">{folge}</p>}
+        {/* „Keine Daten von Ihnen" stand zwei Zeilen unter „eurer Aufträge". Wer eine
+            Firma so genau analysiert hat, sollte sich beim Duzen entscheiden können. */}
+        <p className="lg-quelle">{t("Alles aus öffentlichen Vergabebekanntmachungen. Keine Daten von euch, kein Konto nötig.")}</p>
         {/*
           Sven: „was ist, wenn der nutzer nicht scrollt, weil er denkt die seite ist
           zuende?" Genau das droht: die Überschrift „Das wissen wir bereits über euch"
@@ -255,7 +274,17 @@ export function LandingView({ d, token }: { d: Landing; token: string }) {
         )}
       </div>
 
-      {sicht === "heute" && kacheln(ueberEuch).length > 0 && (
+      {/* LEISTE ODER KARTE ZUERST — entscheidet die Stärke, nicht die Bauform.
+          Vorher stand die Kennzahlenleiste immer oben und die Karten darunter. Seit
+          `vertraege` (die Karte mit den auslaufenden Vorhaben) den Seitenkopf führt, war
+          das falsch herum: die eigene Historie des Empfängers stand optisch vor der
+          Dringlichkeit. Ein Vertriebsleiter liest von oben, und oben stand „507
+          gewonnene Ausschreibungen" — seine eigene Zahl.
+          Jetzt gewinnt, was der Generator als stärker bewertet hat. Damit wandert die
+          Reihenfolge mit der Datenlage: bei einer Firma ohne auslaufende Vorhaben führt
+          wieder die Leiste, ganz ohne Sonderfall in der Oberfläche. */}
+      {sicht === "heute" && kacheln(ueberEuch).length > 0
+        && (karten(ueberEuch)[0]?.staerke ?? 0) <= (kacheln(ueberEuch)[0]?.staerke ?? 0) && (
         <KennzahlenLeiste teile={kacheln(ueberEuch)} />
       )}
 
@@ -273,6 +302,13 @@ export function LandingView({ d, token }: { d: Landing; token: string }) {
           <div className="lg-grenze">{b.grenze}</div>
         </section>
       ))}
+
+      {/* Nachzügler-Leiste: die Kennzahlen, wenn eine Karte sie überholt hat. Sie fällt
+          nicht weg, sie rückt nur hinter das Dringlichere. */}
+      {sicht === "heute" && kacheln(ueberEuch).length > 0
+        && (karten(ueberEuch)[0]?.staerke ?? 0) > (kacheln(ueberEuch)[0]?.staerke ?? 0) && (
+        <KennzahlenLeiste teile={kacheln(ueberEuch)} />
+      )}
 
       {sicht === "heute" && d.muster && (
         <p className="lg-muster">{d.muster}</p>

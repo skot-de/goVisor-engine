@@ -187,3 +187,12 @@
 .lg-muster { font-size: 15.5px; line-height: 1.55; color: var(--ink-800);
   margin: 22px 0 0; padding-left: 14px; max-width: 620px;
   border-left: 3px solid var(--signal, #16a06b); }
+
+/* Die Folge des Kernbefunds. Bewusst kleiner als der Befund und trotzdem betont:
+   sie erklaert ihn, sie ersetzt ihn nicht. */
+.lg-folge {
+  margin: calc(var(--s2) * -1) 0 var(--s3);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--warn, #b45309);
+}

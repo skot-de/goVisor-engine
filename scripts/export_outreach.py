@@ -83,6 +83,18 @@ BRANCHE_AUS_DIMCPV = {
 }
 
 
+
+def zahl(n) -> str:
+    """Tausendertrenner für EINE Zahl.
+
+    ⚠ Nicht auf ganze Sätze anwenden. Genau das ist am 2026-08-17 passiert: ein
+    ``f"…{n:,}…".replace(",", ".")`` über einem mehrteiligen Satz machte aus jedem Komma
+    im Fliesstext einen Punkt — „von 108 Vergabestellen. mit denen ihr noch nie gearbeitet
+    habt." Der Trick gilt der Zahl, nicht der Sprache drumherum.
+    """
+    return f"{int(n):,}".replace(",", ".")
+
+
 def token_of(identity_id):
     return hashlib.sha1(identity_id.encode()).hexdigest()[:10]
 
@@ -186,7 +198,7 @@ def baustein_transparenz(con, ctx):
     if not r or not r[0]:
         return None
     return {
-        "id": "transparenz", "staerke": 100, "gruppe": "ueber_euch", "form": "kpi",
+        "id": "transparenz", "staerke": 60, "gruppe": "ueber_euch", "form": "kpi",
         # Sven: „'507 zuschläge bekannt' aha, warum nicht: '507 gewonnene Ausschreibungen
         # zwischen 2010 und 2026.'" Die Beschriftung sagt jetzt den ganzen Satz. Das
         # Telegramm sparte drei Wörter und kostete die Aussage.
@@ -272,14 +284,31 @@ def baustein_abhaengigkeit(con, ctx):
     k, anteil = treffer
 
     namen = [nm for nm, _ in rows[:k]]
+    # Fuer `baustein_andere_auftraggeber`: der Kontext wird zwischen den Bausteinen
+    # geteilt, und dieser hier hat die Namen ohnehin berechnet. Sie ein zweites Mal zu
+    # ermitteln hiesse, die Schwellenlogik oben zu verdoppeln — und beim naechsten
+    # Feinschliff wuerden beide Stellen auseinanderlaufen.
+    ctx["dominante"] = namen
+
+    # DIE FOLGE, NICHT NUR DER BEFUND.
+    #
+    # „99 % kommen von zwei Auftraggebern" ist eine Beobachtung, die ein Vertriebsleiter
+    # laengst kennt. Was fehlt, ist der Satz danach: was passiert, wenn einer wegfaellt.
+    # Erst der macht aus einer Zahl einen Grund zu handeln. Der Anteil des GROESSTEN
+    # Einzelnen ist dabei die ehrliche Groesse — er beziffert den Ausfall, den ein
+    # einziger Auftraggeber ausloesen kann.
+    groesster = rows[0][1] / ges
+    folge = (f"Fällt der grösste aus, fehlen {groesster*100:.0f} % eures "
+             "öffentlichen Geschäfts.")
     wer = namen[0] if k == 1 else f"von {k} Auftraggebern"
     return {
-        "id": "abhaengigkeit", "staerke": 90, "gruppe": "ueber_euch", "form": "kpi",
+        "id": "abhaengigkeit", "staerke": 95, "gruppe": "ueber_euch", "form": "kpi",
         "kern": (f"{anteil*100:.0f} % eurer Aufträge kommen von einem einzigen Auftraggeber."
                  if k == 1 else
                  f"{anteil*100:.0f} % eurer Aufträge kommen von zwei Auftraggebern."
                  if k == 2 else
                  f"{anteil*100:.0f} % eurer Aufträge kommen von {k} Auftraggebern."),
+        "folge": folge,
         "anteil": round(anteil, 3),
         "titel": "Woher eure Aufträge kommen",
         # Die zweite Zahl war „Auftraggeber insgesamt" und stand damit ein zweites Mal
@@ -368,7 +397,7 @@ def baustein_vertraege(con, ctx):
         z.pop("_roh", None); z.pop("_quelle", None)
 
     return {
-        "id": "vertraege", "staerke": 95, "gruppe": "ueber_euch", "form": "karte",
+        "id": "vertraege", "staerke": 100, "gruppe": "ueber_euch", "form": "karte",
         "vergleich": vergleich,
         "titel": ("Eure laufenden Vorhaben" if belegt else
                   "Was aus euren laufenden Vorhaben zurückkommt"),
@@ -382,7 +411,22 @@ def baustein_vertraege(con, ctx):
              "deshalb listen wir sie hier nicht auf. Lieber weniger als ungenau."
              if not belegt else
              f"{verschwiegen} weitere zeigen wir nicht, weil uns dort Angaben fehlen.")),
-        "befund": befund, "kern": befund,
+        "befund": befund,
+        # KOPFSATZ ≠ KARTENSATZ.
+        #
+        # Beide standen auf `befund`, und seit `vertraege` den Seitenkopf fuehrt, stand
+        # derselbe Satz wortgleich zweimal untereinander auf dem Bildschirm. Genau das
+        # hatte die vorige Fassung schon einmal getan (Kernbefund und Kachel sagten beide
+        # „99 % von zwei Auftraggebern"), und es kostet zweimal Aufmerksamkeit fuer eine
+        # Aussage.
+        #
+        # Der Kopf traegt die kuerzeste Form des Lochs: eine Zahl und die Folge. Die
+        # Begruendung („es sind einmalige Bauleistungen") steht in der Karte, wo die
+        # Vorhaben aufgelistet sind und der Satz belegt werden kann.
+        "kern": (f"{n_fertig} eurer laufenden Vorhaben enden, ohne dass eines davon neu "
+                 "ausgeschrieben wird." if n_fertig and not n_aus else
+                 f"{n_aus + n_fertig} eurer laufenden Vorhaben enden, nur {n_aus} davon "
+                 "werden neu ausgeschrieben." if n_aus and n_fertig else None),
         "n_auslauf": n_aus, "n_fertigstellung": n_fertig,
         # Diese Zeile stand einmal auf „wo es fehlt, lassen wir das Feld leer statt zu
         # schätzen" — direkt unter der Vergleichszeile, die genau das tut. Zwei Sätze,
@@ -528,8 +572,84 @@ def baustein_offene_im_feld(con, ctx):
     }
 
 
+def baustein_andere_auftraggeber(con, ctx):
+    """Offene Ausschreibungen von Auftraggebern AUSSERHALB der Konzentration.
+
+    **Warum es diesen Baustein gibt.** Die Seite diagnostizierte „99 % eurer Aufträge
+    kommen von zwei Auftraggebern" und lieferte danach eine nach Fach und Region gefilterte
+    Ausschreibungsliste. Die beantwortet die Diagnose aber nicht: in diesen 200 stecken
+    dieselben zwei Auftraggeber wieder mit drin. Wer Klumpenrisiko feststellt, muss zeigen,
+    wo der Ersatz liegt — sonst bricht der Bogen genau da, wo er tragen soll.
+
+    Gemessen an Klostermann: von 200 offenen Ausschreibungen in Fach und Region kommen
+    **171 von 108 anderen Vergabestellen**. Das ist die Zahl, die der Diagnose antwortet.
+
+    **Abgegrenzt wird über den Namen, nicht die Entität.** `lead_export` führt keine
+    `buyer_entity`-Spalte, nur `buyer_name`. Das ist gröber (Schreibvarianten desselben
+    Hauses zählen als verschieden) und irrt damit zu unseren Ungunsten: die Zahl ist eher
+    zu niedrig als zu hoch. Bei einer Verkaufsaussage ist das die richtige Richtung.
+
+    Hängt an `ctx["dominante"]` aus `baustein_abhaengigkeit` — ohne festgestellte
+    Konzentration gibt es hier nichts zu erzählen, und der Baustein fällt aus.
+    """
+    dominante = ctx.get("dominante")
+    if not dominante:
+        return None
+    LE = f"read_parquet('{G}/lead_export.parquet')"
+    fremd = "(incumbent_group_id IS NULL OR incumbent_group_id <> ?)"
+
+    klassen = [r[0] for r in con.execute(f"""SELECT DISTINCT substr(cpv_code, 1, 4) FROM {LE}
+      WHERE incumbent_group_id = ? AND cpv_code IS NOT NULL""", [ctx["id"]]).fetchall()]
+    laender = [r[0] for r in con.execute(f"""SELECT DISTINCT substr(market_nuts3, 1, 3) FROM {LE}
+      WHERE incumbent_group_id = ? AND market_nuts3 IS NOT NULL""", [ctx["id"]]).fetchall()]
+    if not klassen:
+        return None
+
+    bed, par = [f"substr(cpv_code,1,4) IN ({','.join('?' * len(klassen))})", list(klassen)]
+    if laender and len(laender) < 14:
+        bed += f" AND substr(market_nuts3,1,3) IN ({','.join('?' * len(laender))})"
+        par += laender
+    par.append(ctx["id"])
+    gesamt = con.execute(f"SELECT count(*) FROM {LE} WHERE phase='open' AND {bed} AND {fremd}",
+                         par).fetchone()[0]
+    ph = ",".join("?" * len(dominante))
+    r = con.execute(f"""SELECT count(*), count(DISTINCT buyer_name) FROM {LE}
+      WHERE phase='open' AND {bed} AND {fremd}
+        AND (buyer_name IS NULL OR buyer_name NOT IN ({ph}))""", par + dominante).fetchone()
+    if not r or not r[0] or not gesamt:
+        return None
+    n, stellen = r
+
+    return {
+        "id": "andere_auftraggeber", "staerke": 88, "gruppe": "fuer_euch", "form": "kpi",
+        "kern": (f"{zahl(n)} offene Ausschreibungen kommen von {zahl(stellen)} "
+                 "Vergabestellen, mit denen ihr noch nie gearbeitet habt."),
+        "titel": "Wo eure Aufträge herkommen könnten, ausserhalb der zwei",
+        "zahlen": [{"wert": zahl(n),
+                    "label": "offene Ausschreibungen von anderen Auftraggebern"},
+                   {"wert": zahl(stellen),
+                    "label": "verschiedene Vergabestellen dahinter"}],
+        "grenze": (f"Von {zahl(gesamt)} offenen Ausschreibungen in eurem Fach und eurer "
+                   "Gegend. Abgegrenzt über den Namen der Vergabestelle, Schreibvarianten "
+                   "desselben Hauses zählen also getrennt."),
+        "bruecke": {"produkt": "Strategie",
+                    "text": "Wo ihr ausserhalb dieser Konzentration anschlussfähig seid"},
+    }
+
+
 def baustein_zweitversuche(con, ctx):
-    """Chronisch erfolglose Bedarfe im Fachgebiet — das stärkste Einstiegssignal."""
+    """Chronisch erfolglose Bedarfe — eingegrenzt auf das, was die Firma wirklich baut.
+
+    **Die Zahl stand vorher ungefiltert da.** Gefiltert wurde nur auf die CPV-DIVISION,
+    also „Bau" insgesamt, bundesweit: 1.419. Direkt daneben stand ein mühsam auf Fach und
+    Region verengter Trichter mit 200. Als Leser kann man die grosse Zahl nicht einordnen
+    und liest sie im Zweifel klein — neben einer sauber hergeleiteten wirkt eine
+    ungefilterte wie ein Blender.
+
+    Gemessen: über die eigenen CPV-KLASSEN sind es 173 statt 1.419. Eine weitere Stufe
+    über die Region bringt nichts (173 bleibt 173) und wird deshalb NICHT gezeigt — eine
+    Stufe, die nichts wegnimmt, täuscht Präzision vor, die es nicht gibt.
+    """
     LE = f"read_parquet('{G}/lead_export.parquet')"
     RS = f"read_parquet('{G}/retender_signal.parquet')"
     div = con.execute(f"""SELECT substr(cpv_code, 1, 2) FROM {LE}
@@ -537,27 +657,58 @@ def baustein_zweitversuche(con, ctx):
       GROUP BY 1 ORDER BY count(*) DESC LIMIT 1""", [ctx["id"]]).fetchone()
     if not div:
         return None
-    r = con.execute(f"""SELECT count(*), max(fail_years) FROM {RS}
-      WHERE still_open AND substr(cpv_class, 1, 2) = ?""", [div[0]]).fetchone()
+    klassen = [r[0] for r in con.execute(f"""SELECT DISTINCT substr(cpv_code, 1, 4) FROM {LE}
+      WHERE incumbent_group_id = ? AND cpv_code IS NOT NULL""", [ctx["id"]]).fetchall()]
+
+    breit = con.execute(f"""SELECT count(*) FROM {RS}
+      WHERE still_open AND substr(cpv_class, 1, 2) = ?""", [div[0]]).fetchone()[0]
+    if klassen:
+        ph = ",".join("?" * len(klassen))
+        r = con.execute(f"""SELECT count(*), max(fail_years) FROM {RS}
+          WHERE still_open AND substr(cpv_class, 1, 4) IN ({ph})""", klassen).fetchone()
+    else:
+        r = con.execute(f"""SELECT count(*), max(fail_years) FROM {RS}
+          WHERE still_open AND substr(cpv_class, 1, 2) = ?""", [div[0]]).fetchone()
     if not r or not r[0]:
         return None
+    n, jahre = r[0], int(r[1] or 0)
+
     return {
         "id": "zweitversuche", "staerke": 75, "gruppe": "fuer_euch", "form": "kpi",
-        "kern": (f"{r[0]:,} Bedarfe in eurem Fachgebiet werden seit Jahren erfolglos "
-                 "ausgeschrieben.").replace(",", "."),
+        "kern": (f"{zahl(n)} Bedarfe in genau eurem Fach werden seit Jahren erfolglos "
+                 "ausgeschrieben."),
         "titel": "Wo wiederholt niemand geboten hat",
-        "zahlen": [{"wert": f"{r[0]:,}".replace(",", "."),
-                    "label": "Aufträge, die schon mehrfach erfolglos ausgeschrieben wurden"},
-                   {"wert": f"bis zu {int(r[1])} Jahre", "label": "sucht dieselbe Stelle schon"}],
-        "grenze": "Dort ist der Wettbewerb am dünnsten, weil kaum jemand bietet.",
+        "zahlen": [{"wert": zahl(n),
+                    "label": "Aufträge in eurem Fach, mehrfach erfolglos ausgeschrieben"},
+                   {"wert": f"bis zu {jahre} Jahre", "label": "sucht dieselbe Stelle schon"}],
+        "grenze": (f"Eingegrenzt auf eure eigenen CPV-Klassen, aus {zahl(breit)} in der "
+                   "ganzen Bauwirtschaft. Dort ist der Wettbewerb am dünnsten, weil kaum "
+                   "jemand bietet."),
         "bruecke": {"produkt": "Strategie", "text": "Die Segmente, sortiert nach Chance"},
     }
 
 
-KERN_RANG = ["abhaengigkeit", "wettbewerber", "zweitversuche", "vertraege",
-             "offene_im_feld", "transparenz"]
+# WELCHER SATZ IN DEN SEITENKOPF KOMMT — und die Reihenfolge ist eine Verkaufsentscheidung.
+#
+# Vorher stand `abhaengigkeit` vorn: „99 % eurer Auftraege kommen von zwei Auftraggebern."
+# Ein Vertriebsleiter weiss das laengst; es ist eine Beobachtung, kein Grund zu handeln.
+#
+# `vertraege` sagt dagegen etwas, das er sich NICHT selbst beschaffen kann: dass von seinen
+# laufenden Vorhaben keines als Neuvergabe zurueckkommt. Das ist ein Loch in der Pipeline,
+# und es ist der Satz, der zum Telefon greifen laesst. Deshalb steht er jetzt vorn — die
+# Konzentration folgt als Verschaerfung, nicht als Aufmacher.
+#
+# `transparenz` (507 gewonnene Ausschreibungen) ist zuletzt gerueckt und in der Staerke
+# gefallen: es ist die eigene Zahl des Empfaengers. Sie beweist, dass wir Daten haben, und
+# schafft keinen Wert — sie hatte den teuersten Platz der Seite belegt.
+KERN_RANG = ["vertraege", "abhaengigkeit", "andere_auftraggeber", "wettbewerber",
+             "zweitversuche", "offene_im_feld", "transparenz"]
 
+# Reihenfolge des AUFRUFS, nicht der Anzeige (die macht `staerke`). `andere_auftraggeber`
+# muss NACH `abhaengigkeit` laufen: es liest die dominanten Auftraggeber aus dem geteilten
+# Kontext, statt die Schwellenlogik ein zweites Mal zu bauen.
 BAUSTEINE = [baustein_transparenz, baustein_vertraege, baustein_abhaengigkeit,
+             baustein_andere_auftraggeber,
              baustein_wettbewerber, baustein_offene_im_feld, baustein_zweitversuche]
 
 

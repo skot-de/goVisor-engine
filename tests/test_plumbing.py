@@ -2336,3 +2336,41 @@ def test_zustellquittung_belegt_ohne_firmendomain():
 
     # 4. Freemail-Domains taugen nicht als Firmenbeleg und stehen gar nicht erst drin.
     assert "_FREEMAIL" in gen and "zustell_dom = None if d in _FREEMAIL else d" in gen
+
+
+def test_outreach_texte_sind_nicht_zerschossen():
+    """Kein Kleinbuchstabe direkt nach einem Satzpunkt.
+
+    Der Generator setzt deutsche Tausendertrenner per ``f"{n:,}".replace(",", ".")``. Wird
+    das versehentlich auf einen GANZEN Satz angewandt statt auf die Zahl, macht es aus
+    jedem Komma im Fliesstext einen Punkt. Am 2026-08-17 stand so auf der Landing:
+    „von 108 Vergabestellen. mit denen ihr noch nie gearbeitet habt."
+
+    Diese Sorte Fehler rutscht durch jede Syntax- und Typprüfung — der Code ist korrekt,
+    nur die Sprache ist zerstört. Auffallen kann es nur beim Lesen, und genau dafür ist
+    dieser Test da. `govisor/impressum.py` hat für Zahlen inzwischen `zahl()`.
+    """
+    import json as _json
+    import re as _re
+    from pathlib import Path as _P
+    p = _P(__file__).resolve().parent.parent / "web" / "data" / "outreach.json"
+    if not p.exists():
+        pytest.skip("keine Landings erzeugt")
+
+    def texte(o, pfad=""):
+        if isinstance(o, str):
+            yield pfad, o
+        elif isinstance(o, dict):
+            for k, v in o.items():
+                yield from texte(v, f"{pfad}.{k}")
+        elif isinstance(o, list):
+            for i, v in enumerate(o):
+                yield from texte(v, f"{pfad}[{i}]")
+
+    # Abkuerzungen enden regulaer auf einen Punkt und gehen klein weiter.
+    ok = _re.compile(r"\b(z\. ?B|u\. ?a|ca|bzw|inkl|evtl|ggf|Nr|St|Bd)\.")
+    kaputt = [(p_, t) for p_, t in texte(_json.loads(p.read_text(encoding="utf-8")))
+              if _re.search(r"[a-zäöüß]\. [a-zäöüß]", t) and not ok.search(t)]
+    assert not kaputt, (
+        "Fliesstext mit Kleinbuchstabe nach Satzpunkt — vermutlich ein Komma, das der "
+        f"Tausendertrenner erwischt hat:\n" + "\n".join(f"  {a}: {b[:90]}" for a, b in kaputt[:5]))

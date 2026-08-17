@@ -32,6 +32,9 @@ export type Baustein = {
   n_auslauf?: number; n_fertigstellung?: number;
   /** Ein Satz, der ohne Umgebung trägt. Speist den Kernbefund im Seitenkopf. */
   kern?: string | null;
+  /** Die FOLGE des Befunds („fällt der grösste aus, fehlen 50 %"). Ohne sie ist der
+   *  Befund eine Beobachtung, die der Empfänger längst kennt, und kein Grund zu handeln. */
+  folge?: string | null;
   /** Anteil 0..1 für den Balken (nur wo eine Konzentration gemessen wurde). */
   anteil?: number;
   /** Schlussfolgerung aus der Tabelle, ersetzt die frühere Spalte „Art". */
