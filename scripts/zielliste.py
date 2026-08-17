@@ -164,8 +164,8 @@ def build_entity_location(con):
     # NICHT mode() je Spalte einzeln (das mischte PLZ aus einer, Ort aus anderer Notice → "Hamm/10…").
     con.execute(f"""CREATE OR REPLACE TEMP TABLE eloc AS
       WITH wp AS (
-        SELECT ei.identity_id, np.postal_code AS plz, np.town AS ort, np.nuts AS nuts,
-               np.email, np.phone
+        SELECT ei.identity_id, np.notice_id, np.postal_code AS plz, np.town AS ort,
+               np.nuts AS nuts, np.email, np.phone
         FROM {NP} np
         JOIN {PE} pe ON pe.notice_id = np.notice_id AND pe.role = np.role AND pe.seq = np.seq
         JOIN {EI} ei ON ei.entity_id = pe.entity_id
@@ -174,10 +174,33 @@ def build_entity_location(con):
         SELECT identity_id, plz, ort, nuts, count(*) c,
                row_number() OVER (PARTITION BY identity_id ORDER BY count(*) DESC) rn
         FROM wp GROUP BY 1,2,3,4),
+      -- ⚠ NICHT JEDE „Gewinner-Adresse" GEHOERT DEM GEWINNER.
+      -- Gemessen 2026-08-17: von 410.046 Gewinner-Zeilen mit Mailadresse tragen 30.926
+      -- (7,5 %) die Domain der VERGABESTELLE — die Stelle traegt ihre eigene
+      -- Kontaktadresse ins Formular ein, und sie landet in der Gewinner-Zeile.
+      -- `deutschebahn.com` allein steht 30.111-mal dort.
+      --
+      -- Konkreter Schaden ohne diesen Filter: fuer H. Klostermann Baugesellschaft haetten
+      -- wir `bieterportal-alt@deutschebahn.com` vorgeschlagen — der Vertriebsbrief waere
+      -- an die Bahn gegangen, nicht an die Firma.
+      --
+      -- Zwei Ausschluesse, beide belegbar statt geraten:
+      --   1. Domain identisch mit der des Auftraggebers derselben Bekanntmachung.
+      --   2. Bekannte Portal-Domains, die als Gewinner-Kontakt nie stimmen koennen.
+      kaeufer AS (
+        SELECT notice_id, lower(split_part(email, '@', 2)) dom
+        FROM {NP} WHERE role = 'buyer' AND email IS NOT NULL),
+      sauber AS (
+        SELECT wp.identity_id, wp.email, wp.phone
+        FROM wp LEFT JOIN kaeufer k ON k.notice_id = wp.notice_id
+        WHERE wp.email IS NULL
+           OR (coalesce(lower(split_part(wp.email, '@', 2)) <> k.dom, TRUE)
+               AND lower(split_part(wp.email, '@', 2)) NOT IN
+                   ('deutschebahn.com', 'bieterportal.noncd.db.de'))),
       contact AS (
         SELECT identity_id, any_value(email) FILTER (WHERE email IS NOT NULL) email,
                any_value(phone) FILTER (WHERE phone IS NOT NULL) phone
-        FROM wp GROUP BY 1)
+        FROM sauber GROUP BY 1)
       SELECT l.identity_id, l.plz, l.ort, l.nuts, c.email, c.phone
       FROM loc l LEFT JOIN contact c USING (identity_id)
       WHERE l.rn = 1""")

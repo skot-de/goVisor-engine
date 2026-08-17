@@ -207,7 +207,7 @@ con.execute(f"""CREATE OR REPLACE TEMP TABLE domains AS
 # er nicht — das kann er ohne geheimen Schlüssel auch nicht, und dafür ist er nicht da.
 con.execute(f"""CREATE OR REPLACE TEMP TABLE mailhashes AS
   WITH kauf AS (
-    SELECT lead_id, lower(trim(email)) AS e FROM read_parquet('{G}/lead_party.parquet')
+    SELECT lead_id, lower(split_part(email, '@', 2)) AS dom FROM read_parquet('{G}/lead_party.parquet')
     WHERE party_role = 'buyer' AND email LIKE '%@%'),
   m AS (
     SELECT DISTINCT w.identity_id, lower(trim(lp.email)) AS mail
@@ -215,7 +215,17 @@ con.execute(f"""CREATE OR REPLACE TEMP TABLE mailhashes AS
            LEFT JOIN kauf k ON k.lead_id = w.notice_id
     WHERE lower(lp.party_role) LIKE '%win%' AND lp.email LIKE '%@%'
       AND w.identity_id IN (SELECT identity_id FROM tops)
-      AND (k.e IS NULL OR lower(trim(lp.email)) <> k.e)      -- Käufer-Kontakt raus (14 %)
+      -- ⚠ AUF DIE DOMAIN vergleichen, nicht auf die Adresse. Der Abgleich stand bis
+      -- 2026-08-17 auf der exakten Adresse und ging deshalb an genau den Faellen vorbei,
+      -- die zaehlen: die Vergabestelle traegt EINE Adresse als eigenen Kontakt ein und
+      -- eine ANDERE ihrer Domain in die Gewinner-Zeile. Beide sind nicht identisch, also
+      -- griff der Filter nicht.
+      --
+      -- Konkret: H. Klostermann Baugesellschaft trug als einzige „eigene" Adresse
+      -- `bieterportal-alt@deutschebahn.com`. Wer bei der Bahn diese Adresse hat, waere
+      -- als belegter Klostermann durch die Identitaetspruefung gekommen.
+      -- Gemessen betrifft das 12.246 von 87.310 Gewinner-Adressen (14,0 %).
+      AND (k.dom IS NULL OR lower(split_part(lp.email, '@', 2)) <> k.dom)
       AND lower(split_part(lp.email, '@', 2)) NOT IN ('emailaddress.given', 'example.com'))
   -- ORDER BY ist Pflicht: ohne ihn liefert die Aggregation die Hashes in wechselnder
   -- Reihenfolge, und die Datei aendert sich bei jedem Lauf ohne Datenaenderung.
