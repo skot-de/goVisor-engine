@@ -158,3 +158,32 @@
 
 @media (max-width: 640px) { .lg-glied { flex-basis: 100%; border-left: 0;
   border-top: 1px solid var(--line); } .lg-glied:first-child { border-top: 0; } }
+
+/* ── Kopf: Firmenname ohne Bruch ─────────────────────────────────────────────────────
+   „Unsere Sicht auf H. Klostermann Baugesellschaft mbH" brach als EIN Satz mitten im
+   Namen um. Ein zerrissener Firmenname im ersten Bildschirm sagt dem Empfaenger, wie
+   sorgfaeltig der Rest wohl ist. Der Name steht deshalb allein und schrumpft lieber,
+   als zu brechen.                                                                     */
+.lg-h-vor { display: block; font-size: 17px; font-weight: 500; letter-spacing: -.01em;
+  color: var(--ink-500); }
+.lg-h-firma { display: block; margin-top: 3px; white-space: nowrap; overflow: hidden;
+  text-overflow: ellipsis; font-size: clamp(19px, 3.6vw, 34px); line-height: 1.1; }
+
+/* ── Umschalter: „heute" gegen „morgen" ──────────────────────────────────────────────
+   Loest den Pfeil nach unten ab. Der setzte voraus, dass jemand scrollt; zwei benannte
+   Schalter zeigen beide Haelften als Wahl und sagen in vier Woertern, worum es geht.   */
+.lg-umschalter { display: inline-flex; margin-top: 20px; padding: 3px; gap: 3px;
+  border: 1px solid var(--line); border-radius: 999px; background: var(--surface); }
+.lg-umschalter button { border: 0; border-radius: 999px; padding: 8px 16px;
+  font-size: 13.5px; font-weight: 550; color: var(--ink-500); background: none;
+  cursor: pointer; white-space: nowrap; }
+.lg-umschalter button:hover { color: var(--ink-900); }
+.lg-umschalter button.lg-an { background: var(--signal, #16a06b); color: #fff; }
+@media (max-width: 560px) { .lg-umschalter { display: flex; width: 100%; }
+  .lg-umschalter button { flex: 1; padding: 8px 6px; font-size: 12.5px; } }
+
+/* Was die Zahlen bedeuten — schliesst die HEUTE-Haelfte ab. Bewusst OHNE eigene Zahl:
+   der Satz soll das Gesehene deuten, nicht noch eine Behauptung danebenstellen. */
+.lg-muster { font-size: 15.5px; line-height: 1.55; color: var(--ink-800);
+  margin: 22px 0 0; padding-left: 14px; max-width: 620px;
+  border-left: 3px solid var(--signal, #16a06b); }

@@ -36,6 +36,9 @@ export type Baustein = {
   anteil?: number;
   /** Schlussfolgerung aus der Tabelle, ersetzt die frühere Spalte „Art". */
   befund?: string | null;
+  /** Fertig formulierter Hinweis auf das, was wir NICHT zeigen. Vom Generator,
+   *  weil nur er weiss, ob ueberhaupt Zeilen dastehen. */
+  verschwiegen_text?: string | null;
   /** Einordnung, wo kein Einzelwert veröffentlicht ist (CPV-Vergleichswert). */
   vergleich?: string | null;
   /** Was diese Zahlen NICHT abdecken. Pflichtfeld, kein Beiwerk. */
@@ -51,6 +54,8 @@ export type Landing = {
   belegt: string[];
   /** Produktbereiche, in die diese Firma konkret führt. Gebündelt im Abschluss. */
   bereiche?: string[];
+  /** Was die Zahlen fuer den Empfaenger bedeuten. Schliesst die HEUTE-Haelfte ab. */
+  muster?: string | null;
 };
 
 let CACHE: Record<string, Landing> | null = null;

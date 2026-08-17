@@ -284,6 +284,33 @@ def baustein_vertraege(con, ctx):
     zeilen = _vertragszeilen(con, ctx["id"])
     if not zeilen:
         return None
+
+    # NUR BELEGTE ZEILEN. Sven: „die qualität der daten ist so naja. wir sollten nur die
+    # aufträge anzeigen, wo wir auch eine hohe qualität an informationen haben. ich vermute
+    # die werden wissen, wann ihre aufträge enden und welche gerade laufen."
+    #
+    # Genau das ist der Punkt: der Empfaenger kennt seine eigenen Vertraege. Eine Liste,
+    # die er ueberpruefen kann, ist kein Beleg fuer unsere Faehigkeit, sondern eine
+    # Einladung, unsere Luecken zu finden. Gemessen bei Klostermann: Enddatum bei ALLEN
+    # zehn echt (`timing_source=actual`, im Bestand 15.754 von 15.762), Wert nur bei zwei.
+    #
+    # Die Tabelle traegt deshalb nicht mehr die Aussage, sondern belegt sie — und zwar mit
+    # den Zeilen, die vollstaendig sind. Der Rest wird gezaehlt, nicht gezeigt.
+    belegt = [z for z in zeilen if z["vol"] and z["ende"]]
+    verschwiegen = len(zeilen) - len(belegt)
+
+    # UNTER DREI ZEILEN GAR KEINE TABELLE. Bei Klostermann ueberlebt genau eine den
+    # Filter — eine Tabelle mit einer Zeile ist schwaecher als keine: sie sieht aus, als
+    # waere das alles, was wir haben, und lenkt von der Aussage ab, die traegt.
+    #
+    # Sven: „es ist dann eher ein wow effekt zu sagen '507 aufträge gesamt', '99 % von
+    # zwei auftraggebern', daraus ableiten: wir erkennen muster, die euch helfen bessere
+    # entscheidungen zu treffen." Genau so: das Muster ist die Nachricht, die Liste
+    # hoechstens ihr Beleg. Traegt der Beleg nicht, faellt er weg — nicht die Nachricht.
+    if len(belegt) < 3:
+        verschwiegen = len(zeilen)
+        belegt = []
+        vergleich = None
     n_aus = sum(1 for z in zeilen if z["art"] == "auslauf")
     n_fertig = sum(1 for z in zeilen if z["art"] == "fertigstellung")
 
@@ -311,6 +338,8 @@ def baustein_vertraege(con, ctx):
     # Fachgebiet. Also steht sie EINMAL unter der Tabelle und heisst, was sie ist.
     geschaetzte = {z["_roh"] for z in zeilen if z["_quelle"] != "actual" and z["_roh"]}
     vergleich = None
+    # Der Vergleichswert erklaert eine LEERE Spalte in der Tabelle. Ohne Tabelle erklaert
+    # er nichts und steht als vierte Fussnote unter einer Karte, die schon zwei hat.
     if len(geschaetzte) == 1:
         vergleich = ("Für die übrigen ist kein Volumen veröffentlicht. Vergleichbare "
                      f"Vergaben in diesem CPV-Bereich liegen bei rund {eur(geschaetzte.pop())}.")
@@ -324,8 +353,19 @@ def baustein_vertraege(con, ctx):
     return {
         "id": "vertraege", "staerke": 95, "gruppe": "ueber_euch", "form": "karte",
         "vergleich": vergleich,
-        "titel": "Eure laufenden Vorhaben, aus öffentlichen Bekanntmachungen",
-        "zeilen": zeilen, "befund": befund, "kern": befund,
+        "titel": ("Eure laufenden Vorhaben" if belegt else
+                  "Was aus euren laufenden Vorhaben zurückkommt"),
+        "zeilen": belegt,
+        # Den Satz baut der Generator, nicht die Oberflaeche: nur hier ist bekannt, ob
+        # ueberhaupt Zeilen stehen. „8 WEITERE Vorhaben" waere falsch, wenn keine erste
+        # dasteht — und genau solche Kleinigkeiten liest ein Empfaenger als Schlamperei.
+        "verschwiegen_text": (
+            None if not verschwiegen else
+            (f"Zu euren {verschwiegen} laufenden Vorhaben fehlen uns einzelne Angaben, "
+             "deshalb listen wir sie hier nicht auf. Lieber weniger als ungenau."
+             if not belegt else
+             f"{verschwiegen} weitere zeigen wir nicht, weil uns dort Angaben fehlen.")),
+        "befund": befund, "kern": befund,
         "n_auslauf": n_aus, "n_fertigstellung": n_fertig,
         # Diese Zeile stand einmal auf „wo es fehlt, lassen wir das Feld leer statt zu
         # schätzen" — direkt unter der Vergleichszeile, die genau das tut. Zwei Sätze,
@@ -528,8 +568,16 @@ def build_payload(con, identity_id, now):
                  if i in nach_id and nach_id[i].get("kern")), None)
 
     return {
-        "id": identity_id, "name": Z.clean_name(b[0]), "stand": str(now),
+        "id": identity_id, "name": Z.clean_name(b[0]),
+        # TT.MM.JJJJ statt ISO. `str(now)` lieferte 2026-08-16 — korrekt, aber in einem
+        # deutschen Vertriebsdokument liest das niemand als Datum, sondern als Kennung.
+        "stand": now.strftime("%d.%m.%Y") if hasattr(now, "strftime") else str(now),
         "kern": kern,
+        # Sven: „daraus ableiten: wir erkennen muster, die euch helfen bessere
+        # entscheidungen zu treffen." Der Satz gehoert ans Ende der HEUTE-Haelfte: er
+        # sagt, wozu die Zahlen darueber gut sind, ohne eine weitere Zahl zu behaupten.
+        "muster": ("Aus solchen Mustern leiten wir ab, welche Ausschreibungen zu euch "
+                   "passen und welche ihr euch sparen könnt."),
         "bausteine": gebaut,
         "belegt": [t["id"] for t in gebaut],
         # Die Produktbereiche, in die diese Firma konkret fuehrt — entdoppelt, in der

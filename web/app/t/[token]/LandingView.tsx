@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { EV, track } from "@/lib/analytics";
 import { AppRail, AppTop } from "@/components/explorer/Rail";
 import { useSprache } from "@/lib/i18n";
@@ -179,6 +179,7 @@ export function LandingView({ d, token }: { d: Landing; token: string }) {
     zwei Ereignissen im Nachhinein abzuleiten, welches das andere ausgeloest hat, geht
     schief, sobald jemand erst klickt, hochscrollt und wieder herunterkommt.
   */
+  const [sicht, setSicht] = useState<"heute" | "morgen">("heute");
   const wegweiserBenutzt = useRef(false);
   const findenGemeldet = useRef(false);
 
@@ -186,22 +187,16 @@ export function LandingView({ d, token }: { d: Landing; token: string }) {
     track(EV.LANDING_GESEHEN, { token, bausteine: d.belegt.length, belegt: d.belegt });
   }, [token, d.belegt]);
 
+  // Gemessen wird, sobald die zweite Haelfte WIRKLICH sichtbar ist. Der fruehere
+  // IntersectionObserver auf `#finden` passte zum Scrollen; bei Reitern ist die Frage
+  // dieselbe, die Antwort steht aber schon im Zustand. `viaWegweiser` bleibt mitgeschickt:
+  // ohne es waere im Nachhinein nicht zu trennen, ob jemand den Schalter benutzt hat oder
+  // ob die Seite gar keine zweite Haelfte hatte.
   useEffect(() => {
-    const ziel = document.getElementById("finden");
-    // Ohne zweiten Teil gibt es nichts zu beobachten; aeltere Browser ohne
-    // IntersectionObserver melden schlicht nichts, statt die Seite zu kosten.
-    if (!ziel || typeof IntersectionObserver === "undefined") return;
-    const beobachter = new IntersectionObserver((eintraege) => {
-      for (const e of eintraege) {
-        if (!e.isIntersecting || findenGemeldet.current) continue;
-        findenGemeldet.current = true;
-        track(EV.LANDING_FINDEN, { token, viaWegweiser: wegweiserBenutzt.current });
-        beobachter.disconnect();
-      }
-    }, { threshold: 0.25 });
-    beobachter.observe(ziel);
-    return () => beobachter.disconnect();
-  }, [token]);
+    if (sicht !== "morgen" || findenGemeldet.current) return;
+    findenGemeldet.current = true;
+    track(EV.LANDING_FINDEN, { token, viaWegweiser: wegweiserBenutzt.current });
+  }, [sicht, token]);
 
   const ueberEuch = d.bausteine.filter((b) => b.gruppe === "ueber_euch");
   const fuerEuch = d.bausteine.filter((b) => b.gruppe === "fuer_euch");   // auch im Kopf gebraucht
@@ -214,7 +209,18 @@ export function LandingView({ d, token }: { d: Landing; token: string }) {
     <Rahmen>
       <div className="lg-hero">
         <div className="lg-eyebrow">{t("Auswertung · Stand {datum}", { datum: d.stand })}</div>
-        <h1>{t("Das wissen wir bereits über {firma}", { firma: d.name })}</h1>
+        {/*
+          Zweizeilig, und das ist keine Typografie-Laune: „Unsere Sicht auf H. Klostermann
+          Baugesellschaft mbH" als EIN Satz brach mitten im Firmennamen um. Ein zerrissener
+          Firmenname im ersten Bildschirm ist genau die Sorte Schlamperei, die einem
+          Empfaenger sagt, wie sorgfaeltig der Rest wohl ist.
+          Der Name steht deshalb allein, `nowrap`, und die Schriftgroesse schrumpft per
+          `clamp` mit — lieber kleiner als gebrochen.
+        */}
+        <h1>
+          <span className="lg-h-vor">{t("Unsere Sicht auf")}</span>
+          <span className="lg-h-firma">{d.name}</span>
+        </h1>
         {/* Der Kernbefund kommt aus dem ÜBERRASCHENDSTEN Baustein, nicht dem belegtesten:
             „507 Zuschläge seit 2010" ist gut belegt und langweilig, „99 % von zwei
             Auftraggebern" ist dieselbe Datenlage und eine Nachricht. */}
@@ -227,30 +233,52 @@ export function LandingView({ d, token }: { d: Landing; token: string }) {
           Der Wegweiser nennt den zweiten Teil beim Namen UND führt hin. Ein blosser
           Pfeil hätte nur gesagt, dass da noch etwas ist, nicht was.
         */}
+        {/*
+          UMSCHALTER statt Wegweiser (Sven, 2026-08-17). Der Pfeil nach unten setzte
+          voraus, dass jemand scrollt; zwei benannte Schalter zeigen beide Haelften als
+          Wahl. Und sie sagen in vier Woertern, worum es geht: was ihr HEUTE seid, was
+          MORGEN moeglich ist.
+          Der Tracking-Name bleibt `LANDING_WEGWEISER` — sonst reisst die Zeitreihe, und
+          gemessen werden soll dieselbe Frage („kommt jemand in die zweite Haelfte?").
+        */}
         {fuerEuch.length > 0 && (
-          <a className="lg-weiter" href="#finden"
-             onClick={() => { wegweiserBenutzt.current = true; track(EV.LANDING_WEGWEISER, { token }); }}>
-            <span>{t("Weiter unten: was wir für euch finden")}</span>
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6" /></svg>
-          </a>
+          <div className="lg-umschalter" role="tablist">
+            <button role="tab" aria-selected={sicht === "heute"}
+                    className={sicht === "heute" ? "lg-an" : ""}
+                    onClick={() => setSicht("heute")}>{t("Euer Profil heute")}</button>
+            <button role="tab" aria-selected={sicht === "morgen"}
+                    className={sicht === "morgen" ? "lg-an" : ""}
+                    onClick={() => { setSicht("morgen"); wegweiserBenutzt.current = true;
+                                     track(EV.LANDING_WEGWEISER, { token }); }}>
+              {t("Euer Potenzial morgen")}</button>
+          </div>
         )}
       </div>
 
-      {kacheln(ueberEuch).length > 0 && <KennzahlenLeiste teile={kacheln(ueberEuch)} />}
+      {sicht === "heute" && kacheln(ueberEuch).length > 0 && (
+        <KennzahlenLeiste teile={kacheln(ueberEuch)} />
+      )}
 
-      {karten(ueberEuch).map((b) => (
+      {sicht === "heute" && karten(ueberEuch).map((b) => (
         <section className="lg-karte" key={b.id}>
           <h2 className="lg-kt">{b.titel}</h2>
           {b.zeilen && b.zeilen.length > 0 && <Vertragstabelle zeilen={b.zeilen} />}
           {/* Der Befund ist die Schlussfolgerung aus der Tabelle. Er ersetzt die frühere
               Spalte „Art", die achtmal „wird fertig" sagte. */}
           {b.befund && <div className="lg-befund">{b.befund}</div>}
+          {/* Was NICHT dasteht, gehoert dazu. Eine gefilterte Liste ohne diesen Satz
+              behauptet Vollstaendigkeit, die sie nicht hat. */}
+          {b.verschwiegen_text && <div className="lg-vergleich">{b.verschwiegen_text}</div>}
           {b.vergleich && <div className="lg-vergleich">{b.vergleich}</div>}
           <div className="lg-grenze">{b.grenze}</div>
         </section>
       ))}
 
-      {fuerEuch.length > 0 && (
+      {sicht === "heute" && d.muster && (
+        <p className="lg-muster">{d.muster}</p>
+      )}
+
+      {sicht === "morgen" && fuerEuch.length > 0 && (
         <div className="lg-wende" id="finden">
           <h2>{t("Und das können wir für euch finden")}</h2>
           <p className="lg-wende-lede">{t("Was davon zu euch passt, entscheidet euer Profil. Je schärfer es ist, desto weniger müsst ihr selbst durchsehen.")}</p>
