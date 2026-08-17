@@ -251,14 +251,15 @@ export default function OnboardingPage() {
     return () => clearTimeout(timer);
   }, [eingabe, screen]);
 
-  const ladeMitglieder = useCallback(async (m: Match) => {
+  const ladeMitglieder = useCallback(async (m: Match): Promise<number> => {
     try {
       const d = await fetch(`/api/entity-group?id=${encodeURIComponent(m.id)}`).then((r) => r.json());
       const ms: Member[] = d.members || [];
       setMembers(ms);
       // Nach Index keyen — gleichnamige Schwester-Entities (mehrere „CANCOM Public GmbH") kollabieren sonst.
       setAktiv(new Set(ms.map((_, i) => String(i))));
-    } catch { setMembers([]); setAktiv(new Set()); }
+      return ms.length;
+    } catch { setMembers([]); setAktiv(new Set()); return 0; }
   }, []);
 
   // Der Abgleich läuft, sobald eine Firma angezeigt wird — nicht erst beim Abschluss,
@@ -331,9 +332,14 @@ export default function OnboardingPage() {
       const b = await pruefeBeleg(tokenFirma.id, email);
       setBeleg(b);
       if (b.conf !== "fremd") {
-        setMatched({ id: tokenFirma.id, name: tokenFirma.name } as Match);
-        await ladeMitglieder({ id: tokenFirma.id, name: tokenFirma.name } as Match);
-        setScreen("profil");
+        const m = { id: tokenFirma.id, name: tokenFirma.name } as Match;
+        setMatched(m);
+        const anzahl = await ladeMitglieder(m);
+        // „Gehoeren diese Einheiten zu euch?" ist nur dann eine Frage, wenn es MEHRERE
+        // gibt. Bei Klostermann ist es genau eine — der Screen haette einen Klick
+        // gekostet und nichts entschieden. Bei CANCOM mit vielen Schwestern ist die
+        // Frage echt und bleibt stehen.
+        setScreen(anzahl > 1 ? "profil" : "fertig");
         return;
       }
       // Fremde Domain: Vorbelegung faellt weg, es geht den normalen Weg weiter.
@@ -429,8 +435,21 @@ export default function OnboardingPage() {
         <nav className="steps">
           {SCHRITTE.map(([k, l], i) => (
             <span key={k} style={{ display: "contents" }}>
-              <span className={`step ${i < cur ? "done" : i === cur ? "on" : ""}`}>
-                <i>{i < cur ? "✓" : i + 1}</i>{t(l)}
+              {/*
+                WARUM BIN ICH SCHON BEI SCHRITT 3? Genau die Frage hatte Sven beim
+                Durchklicken (2026-08-17): der warme Weg ueberspringt „Firma", die Leiste
+                sagte aber nur „1 2 3 4" und liess offen, was mit Schritt 2 passiert ist.
+                Ein uebersprungener Schritt, der aussieht wie ein ausstehender, ist eine
+                offene Frage im Kopf des Nutzers — und zwar an der Stelle, an der er
+                gerade Vertrauen fassen soll.
+                Er steht deshalb als ERLEDIGT da, mit dem Grund darunter.
+              */}
+              <span className={`step ${k === "firma" && tokenFirma ? "done"
+                                       : i < cur ? "done" : i === cur ? "on" : ""}`}>
+                <i>{(k === "firma" && tokenFirma) || i < cur ? "✓" : i + 1}</i>{t(l)}
+                {k === "firma" && tokenFirma && (
+                  <em className="step-grund">{t("über euren Link erkannt")}</em>
+                )}
               </span>
               {i < SCHRITTE.length - 1 ? <span className="step-sep" /> : null}
             </span>

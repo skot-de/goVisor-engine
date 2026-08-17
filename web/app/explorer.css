@@ -2123,6 +2123,11 @@ a.lb-kachel{text-decoration:none}
 .bereichsleiste .step{display:flex;align-items:center;gap:6px;font-size:11px;color:var(--ink-400)}
 .bereichsleiste .step i{width:18px;height:18px;border-radius:50%;border:1.5px solid var(--line-strong);
   display:grid;place-items:center;font-family:var(--mono);font-size:9px;font-weight:600;font-style:normal}
+/* Grund fuer einen uebersprungenen Schritt. Steht in der Leiste, nicht in einer Fussnote:
+   die Frage „warum bin ich schon bei 3?" entsteht GENAU dort und nirgendwo sonst. */
+.bereichsleiste .step-grund{font-style:normal;font-size:10px;color:var(--ink-400);
+  margin-left:4px;white-space:nowrap}
+@media (max-width:640px){.bereichsleiste .step-grund{display:none}}
 .bereichsleiste .step.on{color:var(--ink-900);font-weight:600}
 .bereichsleiste .step.on i{border-color:var(--signal);background:var(--signal-wash);color:var(--signal-deep)}
 .bereichsleiste .step.done i{background:var(--signal);border-color:var(--signal);color:#fff}

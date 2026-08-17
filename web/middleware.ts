@@ -53,13 +53,19 @@ const PREVIEW_COOKIE = "gv_preview";
  *   /login /onboarding /start   der Weg hinein — sonst sperrt man die Tuer von innen ab
  *   /t/…                        der Vertriebs-Einstieg, ausdruecklich ohne Konto gedacht
  *   /api/wer                    die Selbstauskunft; sie MUSS „nein" sagen koennen
+ *   /api/entity-search          die Firmensuche des Onboardings — sie laeuft VOR der
+ *                               Anmeldung. Ich hatte sie beim Bau des Tors vergessen; der
+ *                               Firma-Schritt lieferte dadurch „Anmeldung erforderlich"
+ *                               und die Kandidatenliste blieb leer, ohne Fehlermeldung.
+ *   /api/entity-group           die Mitglieder einer Firmengruppe, gleicher Grund.
  *   /api/outreach-firma         der Firmenname zum Outreach-Token, fuer die Vorbelegung
  *   /api/entity-verify          die Firmensuche des Onboardings. Sie laeuft, BEVOR eine
  *                               Sitzung existiert: bei ausstehender E-Mail-Bestaetigung
  *                               gibt es nach `signUp` noch keine. Ohne diese Ausnahme
  *                               waere Schritt 2 der Registrierung tot.
  */
-const OFFEN = ["/login", "/onboarding", "/start", "/t", "/api/wer", "/api/entity-verify", "/api/outreach-firma"];
+const OFFEN = ["/login", "/onboarding", "/start", "/t", "/api/wer", "/api/entity-verify", "/api/entity-search",
+                     "/api/entity-group", "/api/outreach-firma"];
 
 function istOffen(pfad: string): boolean {
   if (pfad === "/") return false;             // die Wurzel fuehrt in die App
