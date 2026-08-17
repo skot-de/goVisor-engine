@@ -2172,3 +2172,43 @@ def test_dedupe_fenster_nimmt_saetze_ohne_datum_mit():
     lauf = (Path(__file__).resolve().parent.parent / "scripts/daily_leads.sh").read_text(encoding="utf-8")
     assert "--fenster-tage 190" in lauf
     assert '[ "$(date +%u)" = "7" ]' in lauf, "Sonntags-Vollauf fehlt"
+
+
+def test_rueckstau_werkzeug_sperrt_gegen_tageslauf():
+    """Das Rückstau-Werkzeug darf nicht neben dem Tageslauf laufen.
+
+    Beide schreiben in dieselben Manifeste und denselben Dokumentenbaum. Der Tageslauf
+    schützt sich per Lock; Aufrufe von Hand tun das nicht, und genau die sind im Projekt
+    schon einmal kollidiert (`index-docs` gegen einen laufenden Abruf, 2026-08-15).
+
+    Ausserdem festgehalten: es baut die Abrufer-Liste aus `sources.DOC_REGISTRY` und
+    nicht aus einer zweiten Liste daneben. Eine Kopie hier wäre beim nächsten neuen
+    Connector still veraltet.
+    """
+    import importlib.util
+    from pathlib import Path
+    p = Path(__file__).resolve().parent.parent / "scripts" / "rueckstau.py"
+    spec = importlib.util.spec_from_file_location("rueckstau", p)
+    m = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(m)
+
+    from govisor import sources as S
+    reg = m.abrufer()
+    erwartet = {q.modul for q in S.DOC_REGISTRY if q.modul}
+    assert set(reg.values()) == erwartet, "Abrufer-Liste weicht von der Registry ab"
+
+    # Der Lock-Wächter: existiert die Datei, ist die Antwort nein.
+    m.LOCK.parent.mkdir(parents=True, exist_ok=True)
+    schon_da = m.LOCK.exists()
+    if not schon_da:
+        m.LOCK.mkdir()
+    try:
+        ok, grund = m.frei()
+        assert not ok and "Tageslauf" in grund
+    finally:
+        if not schon_da:
+            m.LOCK.rmdir()
+
+    # Und die Zeile, an der der Reststand abgelesen wird — sie kommt aus den Abrufern.
+    assert m._REST.search("NetServer-Unterlagen: 1.055 Vergaben zu holen (von 2 offenen)")
+    assert m._zahl("1.055") == 1055
