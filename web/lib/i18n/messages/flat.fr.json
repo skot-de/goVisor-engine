@@ -1969,5 +1969,9 @@
   "Euer Profil heute": "Votre profil aujourd'hui",
   "Euer Potenzial morgen": "Votre potentiel demain",
   "{n} weitere Vorhaben zeigen wir nicht, weil uns dort Angaben fehlen. Lieber weniger als ungenau.": "Nous n'affichons pas {n} autres projets faute d'informations. Moins, mais exact.",
-  "über euren Link erkannt": "reconnu via votre lien"
+  "über euren Link erkannt": "reconnu via votre lien",
+  "Testlauf: Ablauf durchspielen, ohne Konto und ohne E-Mail": "Essai : parcourir le flux sans compte ni e-mail",
+  "Bestätigt": "Confirmé",
+  "Achtung": "Attention",
+  "Nicht bestätigt": "Non confirmé"
 }

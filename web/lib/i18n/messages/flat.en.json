@@ -1969,5 +1969,9 @@
   "Euer Profil heute": "Your profile today",
   "Euer Potenzial morgen": "Your potential tomorrow",
   "{n} weitere Vorhaben zeigen wir nicht, weil uns dort Angaben fehlen. Lieber weniger als ungenau.": "We are not showing {n} more projects because details are missing. Fewer, but accurate.",
-  "über euren Link erkannt": "recognised from your link"
+  "über euren Link erkannt": "recognised from your link",
+  "Testlauf: Ablauf durchspielen, ohne Konto und ohne E-Mail": "Dry run: walk the flow without an account or email",
+  "Bestätigt": "Confirmed",
+  "Achtung": "Careful",
+  "Nicht bestätigt": "Not confirmed"
 }

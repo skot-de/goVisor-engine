@@ -192,7 +192,21 @@ export default function OnboardingPage() {
   const [antragText, setAntragText] = useState("");             // Freitext für die manuelle Prüfung
   const [antragGesendet, setAntragGesendet] = useState(false);
   const [vomToken, setVomToken] = useState(false);
-  const [tokenFirma, setTokenFirma] = useState<{ id: string; name: string } | null>(null);      // Firma kam aus der Outreach-Landing
+  const [tokenFirma, setTokenFirma] = useState<{ id: string; name: string } | null>(null);
+  /* TESTLAUF — den Ablauf durchspielen, ohne Konto und ohne Mail.
+   *
+   * Meine erste Fassung sperrte fremde Domains und verhinderte damit genau den Test, um
+   * den es geht. Sven: „ich will da trotzdem gerne peter@gmail.com, peter@cancom.de und
+   * peter@klostermann.de eintippen, um zu sehen wie sich die anmeldung verhält — darum
+   * geht es doch gerade."
+   *
+   * Der Denkfehler war meiner: Registrierung und Belegprüfung hingen aneinander, obwohl
+   * die Prüfung gar kein Konto braucht. Sie ist eine reine Funktion von (Firma, Adresse).
+   * Im Testlauf entfällt nur das `register()` — alles andere läuft ECHT, samt Prüfung
+   * gegen die Vergabedaten. Damit sind alle drei Fälle durchspielbar, ohne dass eine
+   * einzige Mail eine echte Firma erreicht. */
+  const testbetrieb = process.env.NODE_ENV !== "production";
+  const [probe, setProbe] = useState(false);      // Firma kam aus der Outreach-Landing
   const pwStatus = pwPruefung(pw, email);
   const pwOk = pwStatus.ok;
 
@@ -210,7 +224,9 @@ export default function OnboardingPage() {
    * einen Vorschlag füllt, wäre das die falsche Reihenfolge von Aufwand und Wirkung.
    */
   useEffect(() => {
-    const tok = new URLSearchParams(window.location.search).get("t");
+    const q = new URLSearchParams(window.location.search);
+    if (q.get("probe") === "1") setProbe(true);
+    const tok = q.get("t");
     if (!tok) return;
     fetch(`/api/outreach-firma?t=${encodeURIComponent(tok)}`)
       .then((r) => r.json())
@@ -341,6 +357,15 @@ function testMailErlaubt(mail: string): boolean {
 
   async function kontoAnlegen() {
     setAuthFehler(null);
+    // Testlauf: kein Konto, keine Mail — der Rest des Ablaufs laeuft unveraendert weiter.
+    // Die Domain-Sperre entfaellt hier bewusst: es wird ja nichts verschickt, und genau
+    // die fremden Domains sind das Interessante am Test.
+    if (probe && testbetrieb) {
+      setBusy(true);
+      await erkennen();
+      setBusy(false);
+      return;
+    }
     if (!testMailErlaubt(email)) {
       setAuthFehler(
         `Testbetrieb: an ${email.split("@")[1]} wird nichts verschickt. Diese Domain gehört `
@@ -386,6 +411,7 @@ function testMailErlaubt(mail: string): boolean {
         fremd         -> hier NICHT durchwinken. Wer mit @bechtle.de das Klostermann-
                          Profil oeffnet, ist kein Grenzfall. Zurueck in den kalten Weg.
     */
+    let fremdErkannt = false;
     if (tokenFirma) {
       const b = await pruefeBeleg(tokenFirma.id, email);
       setBeleg(b);
@@ -401,13 +427,23 @@ function testMailErlaubt(mail: string): boolean {
         return;
       }
       // Fremde Domain: Vorbelegung faellt weg, es geht den normalen Weg weiter.
+      //
+      // ⚠ `fremdErkannt` als LOKALE Variable, nicht ueber den Zustand. `setVomToken(false)`
+      // wirkt erst beim naechsten Rendern — die Zeile darunter las noch `true` und suchte
+      // brav weiter nach der Token-Firma. Ergebnis im Testlauf am 2026-08-17: Adresse
+      // `peter@cancom.de`, Urteil „gehoert zu Cancom SE", angezeigt trotzdem
+      // H. Klostermann. Der Befund war richtig, die Folge daraus nicht.
       setTokenFirma(null);
       setVomToken(false);
+      fremdErkannt = true;
+      setEingabe("");          // sonst sucht der Fallback nach dem Token-Firmennamen
     }
 
-    const ausToken = vomToken && eingabe.trim().length > 1;
+    const ausToken = !fremdErkannt && vomToken && eingabe.trim().length > 1;
     setAusDomain(!ausToken);
     const frage = ausToken ? eingabe.trim() : domainStamm(email);
+    // Bei fremder Domain ist der Domain-Stamm genau richtig: er fuehrt zu DER Firma,
+    // zu der die Adresse gehoert — im Testfall von „cancom.de" also zu Cancom SE.
     if (!frage) { setScreen("firma"); return; }
     setBusy(true);
     const treffer = await suche(frage);
@@ -544,6 +580,14 @@ function testMailErlaubt(mail: string): boolean {
             </div>
             {authFehler && <div className="note note-w">{t(authFehler)} {/existiert|angemeldet/.test(authFehler) ? <Link href="/login" style={{ textDecoration: "underline" }}>{t("Zum Login")}</Link> : null}</div>}
             <div className="btnrow">
+              {/* Nur ausserhalb der Produktion. Sichtbar und beschriftet, nicht versteckt:
+                   ein Schalter, der Konten unterdrueckt, darf niemanden ueberraschen. */}
+              {testbetrieb && (
+                <label className="probe-schalter">
+                  <input type="checkbox" checked={probe} onChange={(e) => setProbe(e.target.checked)} />
+                  <span>{t("Testlauf: Ablauf durchspielen, ohne Konto und ohne E-Mail")}</span>
+                </label>
+              )}
               <button className="btn btn-p" disabled={!email.includes("@") || !pwOk || busy} onClick={kontoAnlegen}>
                 {busy ? t("Lege Konto an …") : t("Konto anlegen")}
               </button>
@@ -631,7 +675,9 @@ function testMailErlaubt(mail: string): boolean {
                 <div className="sg-name">{matched.name}</div>
                 <div className="sg-meta">
                   <span className={`conf conf-${beleg?.conf ?? "unsicher"}`}>
-                    {beleg ? (beleg.conf === "belegt" ? t("belegt") : t("unbestätigt")) : t("wird geprüft …")}
+                    {beleg ? (beleg.conf === "belegt" ? t("belegt")
+                              : beleg.conf === "fremd" ? t("andere Firma")
+                              : t("unbestätigt")) : t("wird geprüft …")}
                   </span>
                   <span>{t(beleg?.grund ?? "gleichen eure Adresse mit den Vergabedaten ab")}</span>
                 </div>
@@ -793,6 +839,17 @@ function testMailErlaubt(mail: string): boolean {
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.2} strokeLinecap="round" strokeLinejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
             </div>
             <h1>{t("Alles bereit.")}</h1>
+            {/* Das Prüfergebnis SICHTBAR machen. Im warmen Weg lief die Belegprüfung
+                still im Hintergrund — für einen Test ist ein unsichtbares Ergebnis
+                wertlos, und für einen echten Nutzer ist „wir haben euch über eure
+                Firmen-Domain bestätigt" eine gute Nachricht, keine interne Notiz. */}
+            {beleg && (
+              <div className={`beleg-kasten beleg-${beleg.conf}`}>
+                <b>{beleg.conf === "belegt" ? t("Bestätigt")
+                    : beleg.conf === "fremd" ? t("Achtung") : t("Nicht bestätigt")}</b>
+                <span>{beleg.grund}</span>
+              </div>
+            )}
             <p className="lede">{matched
               ? t("Wir haben euer Profil aus euren bisherigen Vergaben gebaut.")
               : t("Wir starten mit eurem Bereich und eurer Region, das Profil wächst mit der Nutzung.")}</p>
