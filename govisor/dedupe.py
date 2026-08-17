@@ -59,6 +59,28 @@ Gemessen (Paarung, ``--alle-arten``, ab 2004), Fenster gegen Vollauf:
 
 In allen drei Faellen fand das Fenster **kein Paar, das der Vollauf nicht auch fand**.
 
+**⚠ WAS DAS FENSTER NICHT ERKLAERT.** Die Versuchung war, die 188 min dem Vollabgleich
+zuzuschreiben. Nachgemessen stimmt das nicht:
+
+    DE Paarung voll   13,1 min      AT 0,7 min      CH 0,1 min
+    Anreicherung DE    0,0 min      (sechs Joins, aber gegen eine winzige Dublettentabelle)
+
+Zusammen rund 14 min gegen 188 im Nachtlauf. Die fehlenden 174 min erklaert der Algorithmus
+NICHT. Was sie erklaert, ist die Nachbarschaft: unmittelbar davor liefen fuenf Stunden
+Dokumentendownload (aumass 52, Staatsanzeiger 133, vergabeportal.at 108 min) und haben den
+Dateicache mit Gigabyte an ZIPs geflutet. Die Messungen hier sind Warm-Cache-Werte, der
+Nachtlauf las kalt — fuenfmal ueber 2,2 Mio Zeilen.
+
+Das ist eine begruendete Vermutung, kein Beweis. Zwei Dinge folgen daraus:
+
+* Das Fenster hilft genau hier am meisten: es liest 7,3 % der Daten, und Kaltlesen ist
+  das, was ein kleiner Ausschnitt am staerksten spart.
+* Der eigentliche Fix war der UMBAU DER REIHENFOLGE (2026-08-17, `daily_leads.sh`): die
+  Firewall laeuft jetzt VOR den Abrufern, auf einem Cache, den niemand zugemuellt hat.
+  Das war beim Bauen nicht der Grund, ist aber vermutlich der groessere Effekt.
+
+Belegen wird es der naechste Nachtlauf. Wer die Zahl nachtraegt, schreibt sie hierher.
+
 **Warum trotzdem sonntags voll.** Nicht aus Misstrauen gegen die Rechnung, sondern gegen
 ihre Annahmen: ruecklaufende Korrekturen an alten Saetzen, ein geaenderter Schwellwert,
 eine neue Quelle, die Altbestand mitbringt. Der Wochenlauf faengt das ein.
