@@ -53,7 +53,8 @@
    eines kalt angeschriebenen Empfängers („woher habt ihr das?"). */
 .ds-absender { font-size: var(--t-sm); color: var(--ink-500); flex: 1 1 320px; }
 
-.ds-blatt { max-width: var(--mass); margin: 0 auto; padding: var(--s6) var(--s5) var(--s5); }
+/* Die Breite liegt jetzt bei `.ds-inhalt` in jedem Slide. */
+.ds-blatt { }
 
 .ds-fuss {
   display: flex; justify-content: space-between; gap: var(--s4);
@@ -309,3 +310,55 @@
 }
 .lg-stufe li::before { content: "·"; position: absolute; left: 4px; color: var(--ink-400); }
 .lg-stufe-pro li { color: var(--ink-900); }
+
+/* ═══ DAS DECK ═══════════════════════════════════════════════════════════════════
+   Ein Gedanke pro Bildschirm. Eingerastet wird beim SCROLLEN, nicht geklickt — bei
+   einer kalten Ansprache ist ein Klick eine Entscheidung und Scrollen keine.
+
+   ⚠ `proximity`, nicht `mandatory`. Ein Abschnitt, der höher als der Bildschirm ist
+   (die Chancenliste auf einem Laptop), liesse sich mit `mandatory` nicht mehr frei
+   scrollen — man käme an sein Ende nicht heran. */
+html { scroll-snap-type: y proximity; scroll-behavior: smooth; }
+
+.ds-slide {
+  scroll-snap-align: start;
+  /* ⚠ Der ERSTE Abschnitt rastet NICHT ein. Sonst zieht ihn der Browser an den oberen
+     Rand und schiebt den Seitenkopf darüber hinaus — und mit ihm den Absendersatz, der
+     bei einer kalten Ansprache die erste Frage beantwortet („woher habt ihr das?").
+     Ausgerechnet die Zeile, die Vertrauen schafft, wäre unsichtbar gewesen. */
+  min-height: 100svh;
+  display: flex; align-items: center;
+  padding: var(--s6) var(--s5);
+  border-bottom: 1px solid var(--line);
+}
+.ds-slide:first-of-type { scroll-snap-align: none; min-height: calc(100svh - 92px); }
+.ds-slide:last-child { border-bottom: 0; }
+.ds-inhalt { max-width: var(--mass); margin: 0 auto; width: 100%; }
+
+/* Der Hinweis, dass es weitergeht. Ohne ihn sieht ein bildschirmfüllender Abschnitt
+   aus wie das Ende der Seite — genau die Sorge, die den Umschalter überhaupt erst
+   gebracht hat. */
+.ds-weiter {
+  margin-top: var(--s6); padding-top: var(--s4); border-top: 1px solid var(--line);
+  font-size: var(--t-sm); color: var(--ink-500);
+}
+.ds-weiter::after { content: " ↓"; }
+
+/* Fortschritt: schmale Striche am Rand. Kein Zähler, keine Punkte — nur die Auskunft
+   „so viel liegt noch vor dir". */
+.ds-fortschritt {
+  position: fixed; right: var(--s4); top: 50%; transform: translateY(-50%);
+  display: flex; flex-direction: column; gap: var(--s2); z-index: 5;
+}
+.ds-fortschritt span {
+  display: block; width: 2px; height: 18px; border-radius: 1px;
+  background: var(--line-strong); transition: background .2s;
+}
+.ds-fortschritt .ds-an { background: var(--ink-900); }
+
+@media (max-width: 900px) { .ds-fortschritt { display: none; } }
+@media (max-height: 620px) {
+  /* Auf flachen Fenstern ist ein bildschirmhoher Abschnitt eine Falle. */
+  html { scroll-snap-type: none; }
+  .ds-slide { min-height: 0; }
+}

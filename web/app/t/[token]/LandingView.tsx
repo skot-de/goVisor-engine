@@ -278,7 +278,28 @@ export function LandingView({ d, token }: { d: Landing; token: string }) {
      meisten Firmen), fällt der Abschnitt aus und die Seite bleibt trotzdem vollständig:
      erklären, zeigen was wir wissen, einladen. */
   const aufmacher = fuerEuch.find((b) => (b.zeilen?.length ?? 0) > 0) ?? null;
+  const kette = fuerEuch.find((b) => (b.trichter?.length ?? 0) > 0) ?? null;
   const uebrigeFuerEuch = fuerEuch.filter((b) => b !== aufmacher);
+
+  const slides = ["was", aufmacher && "fuer", ueberEuch.length > 0 && "ueber",
+                  kette && "markt", "konto"].filter(Boolean) as string[];
+  const [aktiv, setAktiv] = useState(slides[0]);
+
+  /* Fortschrittsanzeige: welcher Abschnitt gerade im Bild ist. Ein Beobachter statt
+     eines Scroll-Zaehlers — der haette bei jedem Pixel gerechnet. */
+  useEffect(() => {
+    const ziele = Array.from(document.querySelectorAll<HTMLElement>("[data-slide]"));
+    if (!ziele.length) return;
+    const beob = new IntersectionObserver(
+      (eintraege) => {
+        const sichtbar = eintraege.filter((e) => e.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+        if (sichtbar) setAktiv((sichtbar.target as HTMLElement).dataset.slide!);
+      },
+      { threshold: [0.35, 0.6] });
+    ziele.forEach((z) => beob.observe(z));
+    return () => beob.disconnect();
+  }, [slides.length]);
 
   const naechste = fuerEuch
     .flatMap((b) => b.zeilen ?? [])
@@ -287,111 +308,122 @@ export function LandingView({ d, token }: { d: Landing; token: string }) {
 
   return (
     <Rahmen>
-      {/* ── 1. WAS GOVISOR IST ───────────────────────────────────────────────────
-          Sven: „was ist, wenn man die seite so aufbaut, dass sie für sich selbst
-          spricht. erklärt was goVisor ist, was es kann, was es bietet. dann ein
-          leckerlie mit passenden ausschreibungen und ein bisschen schau mal was wir
-          über dich wissen."
+      {/* ── DIE SEITE ALS DECK ────────────────────────────────────────────────────
+          Sven: „was ist wenn man das zum durchklicken macht? wie ein slide deck?"
 
-          Das löst, woran beide Vorfassungen scheiterten: eine Diagnose über das
-          Unternehmen eines Fremden ist anmassend, eine Liste ohne Absender unerklärt.
-          Wer kalt angeschrieben wird, muss zuerst wissen, WAS das hier ist. Erst danach
-          ist die personalisierte Hälfte ein Beweis statt einer Zumutung. */}
-      <div className="lg-hero">
-        <h1 className="lg-h1">{t("Jede öffentliche Ausschreibung in Deutschland, gelesen und sortiert.")}</h1>
-        <p className="lg-lede">{t("goVisor wertet die öffentlichen Vergabebekanntmachungen aus und sagt euch, welche davon zu eurem Betrieb passen. Ihr müsst sie nicht mehr selbst durchsehen.")}</p>
-        <ul className="lg-kann">
-          <li><b>{t("Passende Ausschreibungen finden")}</b>
-            <span>{t("Zugeschnitten auf euer Fach, eure Gegend und eure Auftraggeber.")}</span></li>
-          <li><b>{t("Fristen im Blick behalten")}</b>
-            <span>{t("Ihr seht, wie lange ihr noch bieten könnt, bevor es zu spät ist.")}</span></li>
-          <li><b>{t("Wissen, wer sonst bietet")}</b>
-            <span>{t("Wer den Auftrag bisher hatte, wie oft gewechselt wurde, wie dünn der Wettbewerb ist.")}</span></li>
-        </ul>
+          Übernommen ist die REGEL, nicht die Klickmechanik: ein Gedanke pro Bildschirm,
+          und jeder Abschnitt darf kräftig sein, weil nichts mehr mit ihm konkurriert.
+          Genau daran scheiterten die Vorfassungen („nichts hervorgehoben, einfach
+          überladen").
+
+          Eingerastet wird beim SCROLLEN, nicht geklickt. Bei einer kalten Ansprache ist
+          ein Klick eine Entscheidung und Scrollen keine: wer den Link eines Fremden
+          öffnet, arbeitet sich nicht durch ein Deck, um herauszufinden, ob es sich lohnt.
+          Ausserdem bliebe das Leckerli hinter Slide 1 verborgen, und ein weitergeleiteter
+          Link landete wieder am Anfang. `proximity` statt `mandatory`, damit ein
+          Abschnitt, der höher als der Bildschirm ist, trotzdem frei scrollt. */}
+
+      <div className="ds-fortschritt" aria-hidden="true">
+        {slides.map((k) => <span key={k} className={k === aktiv ? "ds-an" : ""} />)}
       </div>
 
-      {/* ── 2. DAS LECKERLI ─────────────────────────────────────────────────────── */}
+      {/* 1 — was das hier ist */}
+      <section className="ds-slide" id="s-was" data-slide="was">
+        <div className="ds-inhalt">
+          <h1 className="lg-h1">{t("Jede öffentliche Ausschreibung in Deutschland, gelesen und sortiert.")}</h1>
+          <p className="lg-lede">{t("goVisor wertet die öffentlichen Vergabebekanntmachungen aus und sagt euch, welche davon zu eurem Betrieb passen. Ihr müsst sie nicht mehr selbst durchsehen.")}</p>
+          <ul className="lg-kann">
+            <li><b>{t("Passende Ausschreibungen finden")}</b>
+              <span>{t("Zugeschnitten auf euer Fach, eure Gegend und eure Auftraggeber.")}</span></li>
+            <li><b>{t("Fristen im Blick behalten")}</b>
+              <span>{t("Ihr seht, wie lange ihr noch bieten könnt, bevor es zu spät ist.")}</span></li>
+            <li><b>{t("Wissen, wer sonst bietet")}</b>
+              <span>{t("Wer den Auftrag bisher hatte, wie oft gewechselt wurde, wie dünn der Wettbewerb ist.")}</span></li>
+          </ul>
+          {aufmacher && <div className="ds-weiter">{t("Für {firma} haben wir das schon gemacht", { firma: d.name })}</div>}
+        </div>
+      </section>
+
+      {/* 2 — das Leckerli */}
       {aufmacher && (
-        <section className="lg-karte lg-aufmacher">
-          <div className="lg-eyebrow">{t("Für euch schon gemacht")} · {t("Stand")} {d.stand}</div>
-          <h2 className="lg-kt lg-kt-gross">{aufmacher.kern}</h2>
-          <Vertragstabelle zeilen={aufmacher.zeilen!} spalte="Frist" />
-          <div className="lg-grenze">{aufmacher.grenze}</div>
-        </section>
-      )}
-
-      {/* ── 3. SCHAU MAL, WAS WIR ÜBER EUCH WISSEN ──────────────────────────────── */}
-      {ueberEuch.length > 0 && (
-        <section className="lg-ueber">
-          <h2 className="lg-kt">{t("Das steht öffentlich über euch")}</h2>
-          {d.kern && <p className="lg-kern-zwei">{d.kern}</p>}
-          {folge && <p className="lg-folge">{folge}</p>}
-          {kacheln(ueberEuch).length > 0 && <KennzahlenLeiste teile={kacheln(ueberEuch)} />}
-          {karten(ueberEuch).map((b) => (
-            <div className="lg-karte" key={b.id}>
-              <h3 className="lg-kt3">{b.titel}</h3>
-              {b.zeilen && b.zeilen.length > 0 && <Vertragstabelle zeilen={b.zeilen} />}
-              {b.befund && <div className="lg-befund">{b.befund}</div>}
-              {b.verschwiegen_text && <div className="lg-vergleich">{b.verschwiegen_text}</div>}
-              <div className="lg-grenze">{b.grenze}</div>
-            </div>
-          ))}
-        </section>
-      )}
-
-      {/* Der Rest als Ausblick auf die Tiefe im Konto, nicht als eigenes Kapitel. */}
-      {uebrigeFuerEuch.map((b) => (
-        <section className="lg-karte" key={b.id}>
-          <h2 className="lg-kt">{b.titel}</h2>
-          {b.trichter?.length
-            ? <Kette stufen={b.trichter} satz={b.kette} />
-            : (b.zahlen?.length ? <KennzahlenLeiste teile={[b]} />
-                                : <div className="lg-grenze">{b.grenze}</div>)}
-        </section>
-      ))}
-
-      {/* ── 4. DIE BRÜCKE ──────────────────────────────────────────────────────
-          Sven: „fokus brücke schlagen um leute in die app zu bringen und pro/premium zu
-          nutzen." Zwei Stufen, ehrlich getrennt: was das kostenlose Konto kann, und was
-          Pro dazulegt. Die Angaben stammen aus dem Produkt (lib/redact.ts,
-          app/onboarding), nicht aus einem Versprechen. */}
-      <div className="lg-schluss">
-        <h2>{t("Weiter im Konto")}</h2>
-        {naechste && (
-          <p className="lg-dringend">
-            {t("Die nächste Frist läuft am")} <strong>{naechste.ende}</strong>{" "}
-            {t("ab:")} {naechste.titel} ({naechste.buyer}).{" "}
-            <Restfrist iso={naechste.endeISO} />
-          </p>
-        )}
-        <div className="lg-stufen">
-          <div className="lg-stufe">
-            <div className="lg-stufe-k">{t("Kostenlos")}</div>
-            <ul>
-              <li>{t("Die volle Lead-Liste mit allen Eckdaten, dauerhaft")}</li>
-              <li>{t("Fristen und Auftraggeber zu jeder Ausschreibung")}</li>
-              <li>{t("Drei ausführliche Bewertungen je 30 Tage")}</li>
-            </ul>
-            <Link className="lg-cta" href={signup}
-                  onClick={() => track(EV.LANDING_CTA, { token, erreicht: findenGemeldet.current })}>
-              {t("Konto anlegen, kostenlos")}
-            </Link>
-            <div className="lg-klein">{t("Keine Zahlungsdaten. Keine Angaben, die nicht ohnehin öffentlich sind.")}</div>
+        <section className="ds-slide" id="s-fuer" data-slide="fuer">
+          <div className="ds-inhalt">
+            <div className="lg-eyebrow">{t("Für euch schon gemacht")} · {t("Stand")} {d.stand}</div>
+            <h2 className="lg-kt-gross">{aufmacher.kern}</h2>
+            <Vertragstabelle zeilen={aufmacher.zeilen!} spalte="Frist" />
+            <div className="lg-grenze">{aufmacher.grenze}</div>
           </div>
-          <div className="lg-stufe lg-stufe-pro">
-            <div className="lg-stufe-k">{t("Mit Pro")}</div>
-            <ul>
-              <li>{t("Jede Ausschreibung ausführlich bewertet, ohne Monatsgrenze")}</li>
-              <li>{t("Wettbewerb und Strategie: wer bisher gewann, wie dünn das Feld ist")}</li>
-              <li>{t("E-Mail, sobald etwas Passendes veröffentlicht wird")}</li>
-            </ul>
-            <div className="lg-klein">{t("Im Konto jederzeit umschaltbar. Erst ausprobieren, dann entscheiden.")}</div>
+        </section>
+      )}
+
+      {/* 3 — was öffentlich über sie dasteht */}
+      {ueberEuch.length > 0 && (
+        <section className="ds-slide" id="s-ueber" data-slide="ueber">
+          <div className="ds-inhalt">
+            <div className="lg-eyebrow">{t("Das steht öffentlich über euch")}</div>
+            {d.kern && <h2 className="lg-kt-gross">{d.kern}</h2>}
+            {folge && <p className="lg-folge">{folge}</p>}
+            {kacheln(ueberEuch).length > 0 && <KennzahlenLeiste teile={kacheln(ueberEuch)} />}
+            {/* NUR der stärkste Befund. Alles Weitere ist der Grund für ein Konto —
+                fünf Blöcke hintereinander waren wieder die Textwüste, nur weiter unten. */}
+            {karten(ueberEuch).slice(0, 1).map((b) => (
+              <div key={b.id}>
+                {b.befund && <div className="lg-befund">{b.befund}</div>}
+                <div className="lg-grenze">{b.grenze}</div>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* 4 — wie weit der Markt reicht */}
+      {kette && (
+        <section className="ds-slide" id="s-markt" data-slide="markt">
+          <div className="ds-inhalt">
+            <div className="lg-eyebrow">{t("Wie wir eingrenzen")}</div>
+            <Kette stufen={kette.trichter!} satz={kette.kette} />
+            <div className="lg-grenze">{kette.grenze}</div>
+          </div>
+        </section>
+      )}
+
+      {/* 5 — die Brücke */}
+      <section className="ds-slide" id="s-konto" data-slide="konto">
+        <div className="ds-inhalt">
+          <h2 className="lg-kt-gross">{t("Weiter im Konto")}</h2>
+          {naechste && (
+            <p className="lg-dringend">
+              {t("Die nächste Frist läuft am")} <strong>{naechste.ende}</strong>{" "}
+              {t("ab:")} {naechste.titel} ({naechste.buyer}).{" "}
+              <Restfrist iso={naechste.endeISO} />
+            </p>
+          )}
+          <div className="lg-stufen">
+            <div className="lg-stufe">
+              <div className="lg-stufe-k">{t("Kostenlos")}</div>
+              <ul>
+                <li>{t("Die volle Lead-Liste mit allen Eckdaten, dauerhaft")}</li>
+                <li>{t("Fristen und Auftraggeber zu jeder Ausschreibung")}</li>
+                <li>{t("Drei ausführliche Bewertungen je 30 Tage")}</li>
+              </ul>
+              <Link className="lg-cta" href={signup}
+                    onClick={() => track(EV.LANDING_CTA, { token, erreicht: findenGemeldet.current })}>
+                {t("Konto anlegen, kostenlos")}
+              </Link>
+              <div className="lg-klein">{t("Keine Zahlungsdaten. Keine Angaben, die nicht ohnehin öffentlich sind.")}</div>
+            </div>
+            <div className="lg-stufe lg-stufe-pro">
+              <div className="lg-stufe-k">{t("Mit Pro")}</div>
+              <ul>
+                <li>{t("Jede Ausschreibung ausführlich bewertet, ohne Monatsgrenze")}</li>
+                <li>{t("Wettbewerb und Strategie: wer bisher gewann, wie dünn das Feld ist")}</li>
+                <li>{t("E-Mail, sobald etwas Passendes veröffentlicht wird")}</li>
+              </ul>
+              <div className="lg-klein">{t("Im Konto jederzeit umschaltbar. Erst ausprobieren, dann entscheiden.")}</div>
+            </div>
           </div>
         </div>
-        {d.bereiche && d.bereiche.length > 0 && (
-          <div className="lg-bereiche">{t("Danach offen:")} {d.bereiche.join(" · ")}</div>
-        )}
-      </div>
+      </section>
     </Rahmen>
   );
 }
