@@ -72,9 +72,81 @@ export function falte(s: string): string {
     .replace(/[^a-z0-9]+/g, " ");
 }
 
-export function kerne(name: string): string[] {
-  return [...new Set(falte(name).split(" ")
-    .filter((w) => w.length >= 4 && !RECHTSFORM.test(w)))];
+/* „Bärmann" → „baermann". Deutsche Firmen schreiben ihren Namen im Web häufig in
+ * Umschrift, weil Domains keine Umlaute vertragen: baermann-partner.de, mueller.de.
+ * Die Faltung allein macht daraus `barmann` und trifft nie. Gemessen: einer von elf
+ * falsch Widerlegten — und es betrifft jede Firma mit Umlaut im Namen. */
+export function umschrift(s: string): string {
+  return falte(s.toLowerCase().replace(/ä/g, "ae").replace(/ö/g, "oe")
+    .replace(/ü/g, "ue").replace(/ß/g, "ss"));
+}
+
+/* ⚠ Untergrenze DREI Zeichen, nicht vier. Gemessen am 2026-08-17: bei vier fielen genau
+ * die Kürzel weg, die eine Firma ausmachen — „NEC Deutschland GmbH" behielt nur
+ * `deutschland`, „BFT Planung GmbH" nur `planung`. Beide wurden daraufhin auf einer
+ * wildfremden Domain zu 100 % bestätigt. Die Regel warf das Unterscheidende weg und
+ * behielt das Beliebige. */
+/* Organisationszusätze. Was DAHINTER steht, benennt eine Untereinheit, keine Firma:
+ * „Ed. Züblin AG Bereich Bonn", „MAN … GmbH - Verkauf Nutzfahrzeuge", „… Inh. Florian
+ * Gripp". Gemessen die Ursache eines Teils der falsch Widerlegten: der Zusatz ist im
+ * Namensbestand SELTENER als der Markenname und wurde deshalb zum Trägerwort — auf der
+ * Firmenwebsite steht er aber nicht. */
+const ZUSATZ = /\b(bereich|direktion|niederlassung|zweigniederlassung|werk|filiale|standort|geschaftsstelle|geschaeftsstelle|verkauf|vertrieb|region|abteilung|inh|inhaber|betriebsstatte|betriebsstaette|division|branch|succursale)\b/;
+
+export function stamm(name: string, wie = falte): string {
+  const f = wie(name);
+  const m = f.match(ZUSATZ);
+  return (m && m.index ? f.slice(0, m.index).trim() : f) || f;
+}
+
+export function kerne(name: string, wie = falte): string[] {
+  return [...new Set(stamm(name, wie).split(" ")
+    .filter((w) => w.length >= 3 && !RECHTSFORM.test(w) && !/^\d+$/.test(w)))];
+}
+
+/* Wie oft kommt ein Wort in 317.146 Firmennamen vor? Gemessen, nicht geraten — eine
+ * handgeschriebene Stoppwortliste wäre sofort veraltet und gälte nur für Deutsch.
+ * Gespeichert sind nur Wörter ab 20 Vorkommen; alles Seltenere fehlt und gilt damit
+ * automatisch als unterscheidend. */
+let HAEUFIG: Record<string, number> | null = null;
+async function haeufigkeit(w: string): Promise<number> {
+  if (!HAEUFIG) {
+    try {
+      const { readFile } = await import("node:fs/promises");
+      const path = await import("node:path");
+      HAEUFIG = JSON.parse(await readFile(
+        path.join(process.cwd(), "data", "namenswoerter.json"), "utf-8")).zaehler;
+    } catch { HAEUFIG = {}; }
+  }
+  return HAEUFIG?.[w] ?? 0;
+}
+
+/* Das Wort, das die Identität trägt: das seltenste im Firmennamen.
+ *
+ * Eine Quote von „die Hälfte der Wörter steht auf der Seite" ist wertlos, wenn die
+ * getroffene Hälfte aus Allerweltswörtern besteht. Gemessen an 200 verwürfelten Paaren
+ * kamen so 5,5 % durch — jedes einzelne über `planung`, `deutschland`, `technik`,
+ * `systeme`, `solution`. Mit dieser Regel: 0,0 %. */
+export async function traeger(k: string[]): Promise<string | null> {
+  if (!k.length) return null;
+  const mit = await Promise.all(k.map(async (w) => [w, await haeufigkeit(w)] as const));
+  mit.sort((a, b) => a[1] - b[1] || b[0].length - a[0].length);
+  return mit[0][0];
+}
+
+/* Alle Verweise, die zur Anbieterkennung führen. Warum Raten nicht reicht: gemessen
+ * führt `matuczak.de` sein Impressum unter `/about/`, und keine noch so lange Pfadliste
+ * hätte das getroffen. Ein Mensch braucht sie auch nicht — er liest den Fussbereich. */
+const LINK = /<a\b[^>]*href\s*=\s*["\']([^"\']+)["\'][^>]*>([\s\S]{0,80}?)<\/a>/gi;
+export function impressumLinks(html: string): string[] {
+  const out: string[] = [];
+  for (const m of html.matchAll(LINK)) {
+    const [, ziel, text] = m;
+    if (/^(mailto:|tel:|javascript:|#)/i.test(ziel)) continue;
+    if (KENNUNG.test(ziel) || KENNUNG.test(text.replace(/<[^>]+>/g, " "))) out.push(ziel);
+    if (out.length >= 4) break;
+  }
+  return out;
 }
 
 /* Die Domain stammt aus der Mailadresse, die der Nutzer eintippt — aus fremder Eingabe.
@@ -179,34 +251,71 @@ export async function pruefeImpressum(
   if (!(await zieltOeffentlich(domain))) {
     return leer(NICHT_PRUEFBAR, "Domain löst nicht auf oder zeigt nicht ins öffentliche Netz");
   }
-  const kandidaten = liste.map(kerne).filter((k) => k.length > 0);
-  if (!kandidaten.length) {
+  // Zwei Lesarten je Name: gefaltet („barmann") und in Umschrift („baermann").
+  const lesarten = liste.flatMap((n) => [kerne(n), kerne(n, umschrift)])
+    .filter((k) => k.length > 0);
+  if (!lesarten.length) {
     return leer(NICHT_PRUEFBAR, "Firmenname trägt nur Rechtsform, nichts Unterscheidendes");
   }
+  const traegerWorte = new Set((await Promise.all(lesarten.map(traeger))).filter(Boolean) as string[]);
 
   const ac = new AbortController();
   const uhr = setTimeout(() => ac.abort(), FRIST_MS);
-  let bester: Befund | null = null;
-  let kennungGesehen = false;
-  try {
-    const seiten = await Promise.all(PFADE.map(async (p) => [p, await hole(domain, p, ac.signal)] as const));
-    for (const [pfad, text] of seiten) {
-      if (!text) continue;
-      const istKennung = KENNUNG.test(text);
-      if (!istKennung) continue;              // auch die Startseite zählt nur mit Kennung
-      kennungGesehen = true;
-      const flach = falte(text);
-      let gefunden: string[] = [], quote = 0;
-      for (const k of kandidaten) {
-        const g = k.filter((w) => flach.includes(w));
-        if (g.length / k.length > quote) { quote = g.length / k.length; gefunden = g; }
-      }
-      if (!bester || quote > bester.quote) {
-        bester = {
+  // Explizite Annotation und Zuweisung ueber eine Funktion: TypeScript verengt eine
+  // nur in einer Closure gesetzte Variable sonst auf `never`.
+  const halten: { b: Befund | null } = { b: null };
+  let kennungGelesen = false;          // ⚠ NUR echte Impressumsseiten, nie die Startseite
+  let wegweiser: string[] = [];
+
+  const bewerte = (pfad: string, text: string, istStartseite: boolean) => {
+    /* Die Startseite darf BESTÄTIGEN, aber niemals WIDERLEGEN.
+     *
+     * Bestätigen: nur wenn sie selbst eine Anbieterkennung trägt. Ein Firmenname auf
+     * irgendeiner Seite wäre sonst schon ein Beleg — das kann auch eine Referenz- oder
+     * Partnerliste sein. Gemessen an 200 verwürfelten Paaren kam so KEIN einziges durch,
+     * weil zusätzlich das seltene Trägerwort passen muss.
+     *
+     * Widerlegen: nie. Wer „Impressum" im Menü sieht und daraus schliesst, die Firma stehe
+     * nicht drin, urteilt über eine Seite, die er nie gelesen hat — gemessen die Ursache
+     * mehrerer Fehlurteile gegen echte Firmen. Dafür ist die Link-Verfolgung da. */
+    if (istStartseite && !KENNUNG.test(text)) return;
+    const flach = falte(text);
+    const worte = new Set(flach.split(" "));
+    for (const lesart of lesarten) {
+      const gefunden = lesart.filter((w) => worte.has(w));
+      // Ohne ein Trägerwort zählt der Treffer NICHT, egal wie hoch die Quote ist.
+      if (!gefunden.some((w) => traegerWorte.has(w))) continue;
+      const quote = gefunden.length / lesart.length;
+      if (!halten.b || quote > halten.b.quote) {
+        halten.b = {
           urteil: BELEGT, domain, firma, sekunden: 0, pfad, quote,
           ortBelegt: !!ort && flach.includes(falte(ort).trim()),
           registerBelegt: REGISTER.test(text), worte: gefunden, grund: "",
         };
+      }
+    }
+    /* Eine Startseite ist KEIN Impressum, auch wenn „Impressum" im Menü steht. Wer sie
+     * als gelesene Kennung wertet, urteilt WIDERLEGT, ohne je eine Anbieterkennung
+     * gesehen zu haben — gemessen die Ursache mehrerer Fehlurteile gegen echte Firmen
+     * (matuczak.de führt sein Impressum unter `/about/`). */
+    if (!istStartseite && KENNUNG.test(text)) kennungGelesen = true;
+  };
+
+  try {
+    const seiten = await Promise.all(
+      PFADE.map(async (p) => [p, await hole(domain, p, ac.signal)] as const));
+    for (const [pfad, text] of seiten) {
+      if (!text) continue;
+      if (pfad === "/") { wegweiser = impressumLinks(text); bewerte(pfad, text, true); }
+      else bewerte(pfad, text, false);
+    }
+    // Dem Wegweiser folgen. Das ersetzt das Raten von Pfaden.
+    if (!kennungGelesen && wegweiser.length) {
+      const ziele = wegweiser.slice(0, 3).map((z) =>
+        z.startsWith("/") ? z : "/" + z.split("/").slice(3).join("/"));
+      for (const [i, text] of (await Promise.all(
+        ziele.map((z) => hole(domain, z, ac.signal)))).entries()) {
+        if (text) bewerte(ziele[i], text, false);
       }
     }
   } finally {
@@ -214,15 +323,16 @@ export async function pruefeImpressum(
   }
 
   const sek = (Date.now() - t0) / 1000;
-  if (bester && bester.quote >= schwelle) {
-    bester.sekunden = sek;
-    bester.grund = `Firmenname zu ${Math.round(bester.quote * 100)} % im Impressum unter ${bester.pfad}`;
-    return bester;
+  const treffer = halten.b;
+  if (treffer && treffer.quote >= schwelle) {
+    treffer.sekunden = sek;
+    treffer.grund = `Firmenname zu ${Math.round(treffer.quote * 100)} % im Impressum unter ${treffer.pfad}`;
+    return treffer;
   }
-  if (kennungGesehen) {
+  if (kennungGelesen) {
     // Impressum da, nennt aber jemand anderen. DAS ist die Aussage, die Sicherheit
     // bringt, und der Fall, der die Portaladressen der Auftraggeber abfängt.
-    const b = bester ?? leer(WIDERLEGT, "");
+    const b = treffer ?? leer(WIDERLEGT, "");
     b.urteil = WIDERLEGT; b.sekunden = sek;
     b.grund = "Impressum gefunden, nennt diese Firma aber nicht";
     return b;
