@@ -68,4 +68,23 @@ export const EV = {
   FEE_DRAFTED: "success_fee_invoice_drafted",
   FEE_SENT: "success_fee_invoice_sent",
   FEE_PAID: "success_fee_paid",
+
+  /* Outreach-Landing (`/t/<token>`).
+   *
+   * DREI Ereignisse, nicht eines. Die Frage ist „liest jemand die zweite Haelfte der
+   * Seite", und der Klick auf den Wegweiser allein beantwortet sie NICHT: wenige Klicks
+   * koennen heissen „niemand kommt dorthin" oder „alle scrollen ohnehin von selbst".
+   * Das sind gegenteilige Befunde mit gegenteiligen Konsequenzen.
+   *
+   * Deshalb zusaetzlich `LANDING_FINDEN`, sobald der zweite Teil wirklich im Bild war.
+   * Erst das Verhaeltnis traegt:
+   *     FINDEN / GESEHEN            kommt ueberhaupt jemand an?
+   *     WEGWEISER / FINDEN          hat der Wegweiser sie hingebracht?
+   *
+   * Mitgeschickt wird der TOKEN, nicht der Firmenname: der Token steht ohnehin in der
+   * URL, der Name waere eine zusaetzliche Preisgabe an den Auswertungsdienst. */
+  LANDING_GESEHEN: "landing_viewed",
+  LANDING_WEGWEISER: "landing_signpost_clicked",
+  LANDING_FINDEN: "landing_second_half_seen",
+  LANDING_CTA: "landing_cta_clicked",
 } as const;

@@ -1,6 +1,8 @@
 "use client";
 
 import Link from "next/link";
+import { useEffect, useRef } from "react";
+import { EV, track } from "@/lib/analytics";
 import { AppRail, AppTop } from "@/components/explorer/Rail";
 import { useSprache } from "@/lib/i18n";
 import type { Baustein, Landing, Zeile } from "@/lib/outreach";
@@ -164,6 +166,43 @@ export function LandingView({ d, token }: { d: Landing; token: string }) {
   // `/login?t=…`, eine Seite, die den Parameter nicht liest und „Willkommen zurück" sagt.
   const signup = `/onboarding?t=${encodeURIComponent(token)}`;
 
+  /*
+    MESSUNG (Sven, 2026-08-16): „was ist, wenn der nutzer nicht scrollt, weil er denkt
+    die seite ist zuende?" Der Wegweiser ist die Antwort darauf, aber ob er wirkt, ist
+    eine Behauptung, solange es niemand zaehlt.
+
+    Drei Ereignisse, weil der Klick allein nicht deutbar ist: wenige Klicks koennen
+    heissen „niemand kommt in die zweite Haelfte" oder „alle scrollen ohnehin". Erst
+    `finden` (der zweite Teil war wirklich im Bild) trennt die beiden Faelle.
+
+    `viaWegweiser` wird MITGESCHICKT statt spaeter aus der Reihenfolge erschlossen. Aus
+    zwei Ereignissen im Nachhinein abzuleiten, welches das andere ausgeloest hat, geht
+    schief, sobald jemand erst klickt, hochscrollt und wieder herunterkommt.
+  */
+  const wegweiserBenutzt = useRef(false);
+  const findenGemeldet = useRef(false);
+
+  useEffect(() => {
+    track(EV.LANDING_GESEHEN, { token, bausteine: d.belegt.length, belegt: d.belegt });
+  }, [token, d.belegt]);
+
+  useEffect(() => {
+    const ziel = document.getElementById("finden");
+    // Ohne zweiten Teil gibt es nichts zu beobachten; aeltere Browser ohne
+    // IntersectionObserver melden schlicht nichts, statt die Seite zu kosten.
+    if (!ziel || typeof IntersectionObserver === "undefined") return;
+    const beobachter = new IntersectionObserver((eintraege) => {
+      for (const e of eintraege) {
+        if (!e.isIntersecting || findenGemeldet.current) continue;
+        findenGemeldet.current = true;
+        track(EV.LANDING_FINDEN, { token, viaWegweiser: wegweiserBenutzt.current });
+        beobachter.disconnect();
+      }
+    }, { threshold: 0.25 });
+    beobachter.observe(ziel);
+    return () => beobachter.disconnect();
+  }, [token]);
+
   const ueberEuch = d.bausteine.filter((b) => b.gruppe === "ueber_euch");
   const fuerEuch = d.bausteine.filter((b) => b.gruppe === "fuer_euch");   // auch im Kopf gebraucht
   // Ein Baustein mit Kette bekommt KEINE Kachel: die Kette nennt dieselbe Zahl und
@@ -189,7 +228,8 @@ export function LandingView({ d, token }: { d: Landing; token: string }) {
           Pfeil hätte nur gesagt, dass da noch etwas ist, nicht was.
         */}
         {fuerEuch.length > 0 && (
-          <a className="lg-weiter" href="#finden">
+          <a className="lg-weiter" href="#finden"
+             onClick={() => { wegweiserBenutzt.current = true; track(EV.LANDING_WEGWEISER, { token }); }}>
             <span>{t("Weiter unten: was wir für euch finden")}</span>
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6" /></svg>
           </a>
@@ -226,7 +266,10 @@ export function LandingView({ d, token }: { d: Landing; token: string }) {
         <p>{t("Das Konto ist kostenlos. Die Auswertung oben ist bereits eingerichtet, ihr ergänzt nur, was wir aus öffentlichen Daten nicht sehen können.")}</p>
         {/* Ein Weg nach vorn, nicht sechs. Die Produktbereiche stehen als Ausblick
             darunter, statt als konkurrierende Verweise an jeder einzelnen Karte. */}
-        <Link className="lg-cta" href={signup}>{t("Profil einrichten, kostenlos")}</Link>
+        <Link className="lg-cta" href={signup}
+              onClick={() => track(EV.LANDING_CTA, { token, erreicht: findenGemeldet.current })}>
+          {t("Profil einrichten, kostenlos")}
+        </Link>
         {d.bereiche && d.bereiche.length > 0 && (
           <div className="lg-bereiche">
             {t("Danach offen:")} {d.bereiche.join(" · ")}
