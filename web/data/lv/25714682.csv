@@ -1,0 +1,123 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+1;Liefern und einrichten auf dafür zugewiesenen Flächen,;1,0;psch;gaeb;leistungsbeschreibungen/LV_4602-O.x83
+2;Für alle relevanten Positionen dieses Leistungsverzeichnisses;1,0;psch;gaeb;leistungsbeschreibungen/LV_4602-O.x83
+3;Durchführung und Protokollierung von Dübelzugversuchen;25,0;St;gaeb;leistungsbeschreibungen/LV_4602-O.x83
+1;Schutz von angrenzenden Bauteilen (Verunreinigungen);236,0;m²;gaeb;leistungsbeschreibungen/LV_4602-O.x83
+2;Untergrundreinigung Hochdruck;762,0;m²;gaeb;leistungsbeschreibungen/LV_4602-O.x83
+3;Altputz abstemmen;50,0;m²;gaeb;leistungsbeschreibungen/LV_4602-O.x83
+4;Beiputzarbeiten;50,0;m²;gaeb;leistungsbeschreibungen/LV_4602-O.x83
+5;Außenwände für die Dämmarbeiten mit mineralischem Tiefengrund vorstreichen.;762,0;m²;gaeb;leistungsbeschreibungen/LV_4602-O.x83
+1;Mineralwoll-Dämmplatten MW 035 DIN EN 13162 für die Fassade liefern und fachgerecht nach Herstellervorgabe montieren.;552,0;m²;gaeb;leistungsbeschreibungen/LV_4602-O.x83
+2;wie vor, jedoch Mineralwoll-Dämmplatten im Bereich von Stützen aufbringen. d = 12 cm;210,0;m²;gaeb;leistungsbeschreibungen/LV_4602-O.x83
+3;Herstellen von Aussparungen 0,25m² bis 0,5 m² in MW;10,0;St;gaeb;leistungsbeschreibungen/LV_4602-O.x83
+4;Zulage schwach saugende Untergründe;100,0;m²;gaeb;leistungsbeschreibungen/LV_4602-O.x83
+5;Zulage Ausklinkungen;86,0;m;gaeb;leistungsbeschreibungen/LV_4602-O.x83
+6;Zulage Ausklinkungen von Elektroleitungen, welche auf Roh geführt werden.;50,0;m;gaeb;leistungsbeschreibungen/LV_4602-O.x83
+7;Anarbeiten an Dauergerüstanker;152,0;St;gaeb;leistungsbeschreibungen/LV_4602-O.x83
+8;Anarbeiten an Fensterbänke unterseitig;2,4;m;gaeb;leistungsbeschreibungen/LV_4602-O.x83
+9;Leibungen, Mineralwoll-Dämmplatten MW 035;411,0;m;gaeb;leistungsbeschreibungen/LV_4602-O.x83
+10;Montage einer Verstärkung für Beleuchtung an der Fassade;33,0;m;gaeb;leistungsbeschreibungen/LV_4602-O.x83
+1;Verdübelung;762,0;m²;gaeb;leistungsbeschreibungen/LV_4602-O.x83
+2;Dübelteller Durchmesser 90 mm;6096,0;St;gaeb;leistungsbeschreibungen/LV_4602-O.x83
+1;Schutz von angrenzenden Bauteilen (Verunreinigungen);832,0;m²;gaeb;leistungsbeschreibungen/LV_4602-O.x83
+2;Untergrundreinigung/ prüfen;832,0;m²;gaeb;leistungsbeschreibungen/LV_4602-O.x83
+3;Hohlstellen verspachteln.;200,0;m²;gaeb;leistungsbeschreibungen/LV_4602-O.x83
+4;Tiefengrundierung;832,0;m²;gaeb;leistungsbeschreibungen/LV_4602-O.x83
+5;Haftbrücke;832,0;m²;gaeb;leistungsbeschreibungen/LV_4602-O.x83
+1;Deckendämmung inkl. vollflächig Mörtelkleber, zuschneiden, absaugen und abständern mittels Teleskopstange bis 3,20m Höhe.;722,0;m²;gaeb;leistungsbeschreibungen/LV_4602-O.x83
+2;Deckendämmung wie vor, jedoch d = 80 mm im Bereich von Sektionaltoren.;82,5;m²;gaeb;leistungsbeschreibungen/LV_4602-O.x83
+3;Deckendämmung wie vor, jedoch d = 30 mm im Bereich von Sektionaltoren.;27,5;m²;gaeb;leistungsbeschreibungen/LV_4602-O.x83
+4;Herstellen von Aussparungen 0,25m² bis 0,5 m² in MW;100,0;St;gaeb;leistungsbeschreibungen/LV_4602-O.x83
+5;Zulage Unterzüge, Deckendämmung;94,0;m;gaeb;leistungsbeschreibungen/LV_4602-O.x83
+1;Stundenlohnarbeiten eines Facharbeiters für nicht erfasste Leistungen gegen besonderen Nachweis einschließlich aller Lohnnebenkosten auf Anordnung der Bauleitung.;10,0;h;gaeb;leistungsbeschreibungen/LV_4602-O.x83
+2;Stundenlohnarbeiten eines Helfers für nicht erfasste Leistungen gegen besonderen Nachweis einschließlich aller Lohnnebenkosten auf Anordnung der Bauleitung.;10,0;h;gaeb;leistungsbeschreibungen/LV_4602-O.x83
+1;Statischer Nachweis für die profilierte Alu-Fassadenbekleidung;1,0;Psch;gaeb;leistungsbeschreibungen/LV_4602-O.x83
+2;Anfertigung von Verlegeplänen für die Fassadenbekleidung sowie Detailpläne.;1,0;Psch;gaeb;leistungsbeschreibungen/LV_4602-O.x83
+3;Justierbare Aluminium - Unterkonstruktion, horizontal verlegt;722,0;m²;gaeb;leistungsbeschreibungen/LV_4602-O.x83
+4;Lieferung und fachgerechte Montage von;722,0;m²;gaeb;leistungsbeschreibungen/LV_4602-O.x83
+5;Zulage für den nachträglichen Einbau des profilierten Alu Fassadenpaneels;1,0;psch;gaeb;leistungsbeschreibungen/LV_4602-O.x83
+6;der Aluminium-Profiltafeln;70,0;m;gaeb;leistungsbeschreibungen/LV_4602-O.x83
+7;Ausführung: Aussenecke im Winkel von 90°;30,0;m;gaeb;leistungsbeschreibungen/LV_4602-O.x83
+8;als vertikaler Abschluss;15,0;m;gaeb;leistungsbeschreibungen/LV_4602-O.x83
+9;als horizontaler Abschluss;5,0;m;gaeb;leistungsbeschreibungen/LV_4602-O.x83
+10;Fassadenabschlussblech;120,0;m;gaeb;leistungsbeschreibungen/LV_4602-O.x83
+11;Lochblech;120,0;m;gaeb;leistungsbeschreibungen/LV_4602-O.x83
+12;als vertikaler Abschluss;10,0;m;gaeb;leistungsbeschreibungen/LV_4602-O.x83
+1;Statischer Nachweis für die glatte Alu-Fassadenbekleidung;1,0;Psch;gaeb;leistungsbeschreibungen/LV_4602-O.x83
+2;Anfertigung von Verlegeplänen für die Fassadenbekleidung;1,0;Psch;gaeb;leistungsbeschreibungen/LV_4602-O.x83
+3;Justierbare Aluminium - Unterkonstruktion, horizontal verlegt;120,0;m²;gaeb;leistungsbeschreibungen/LV_4602-O.x83
+4;Rasterklickschienen mit eingelegtem glasfaserverstärktem Inlay zur ungehinderten thermischen Längenausdehnung und geräuscharmen Arretierung sowie zur richtungsfreien Montage und rückbaufreiem Austausch von einzelnen Alu-Paneelen, flucht- und lotrecht auf vorbeschriebener Unterkonstruktion befestigt.;120,0;m²;gaeb;leistungsbeschreibungen/LV_4602-O.x83
+5;als hinterlüftete Außenwandbekleidung;120,0;m²;gaeb;leistungsbeschreibungen/LV_4602-O.x83
+6;im Bereich von Fenstern, Türen, Toren;10,0;m;gaeb;leistungsbeschreibungen/LV_4602-O.x83
+7;Zulage für den nachträglichen Einbau des Alu Fassadenpaneels;1,0;psch;gaeb;leistungsbeschreibungen/LV_4602-O.x83
+8;als horizontales Auflager zur Aufnahme der;180,0;m;gaeb;leistungsbeschreibungen/LV_4602-O.x83
+9;der glatten Alu-Paneele;20,0;m;gaeb;leistungsbeschreibungen/LV_4602-O.x83
+10;Versteifungsblech;20,0;m;gaeb;leistungsbeschreibungen/LV_4602-O.x83
+11;Lisenenprofil;20,0;m;gaeb;leistungsbeschreibungen/LV_4602-O.x83
+12;Eckausbildung mit Lisene;20,0;m;gaeb;leistungsbeschreibungen/LV_4602-O.x83
+13;als horizontaler Abschluss;15,0;m;gaeb;leistungsbeschreibungen/LV_4602-O.x83
+14;Abschlussblech gelocht;20,0;m;gaeb;leistungsbeschreibungen/LV_4602-O.x83
+15;Zulage für den direkten Druck ab Werk vom Hersteller einer bauseitigen Zeichnung auf die glatten Alu-Fassadenpaneele gem. beiliegendem Foto.;1,0;psch;gaeb;leistungsbeschreibungen/LV_4602-O.x83
+1;Hilfskraft des Klempnerhandwerks;10,0;Std;gaeb;leistungsbeschreibungen/LV_4602-O.x83
+2;Fachkraft des Klempnerhandwerks;10,0;Std;gaeb;leistungsbeschreibungen/LV_4602-O.x83
+1;Liefern und einrichten auf dafür zugewiesenen Flächen,;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_4602-O.x83
+2;Für alle relevanten Positionen dieses Leistungsverzeichnisses;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_4602-O.x83
+3;Durchführung und Protokollierung von Dübelzugversuchen;25,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_4602-O.x83
+1;Schutz von angrenzenden Bauteilen (Verunreinigungen);236,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_4602-O.x83
+2;Untergrundreinigung Hochdruck;762,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_4602-O.x83
+3;Altputz abstemmen;50,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_4602-O.x83
+4;Beiputzarbeiten;50,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_4602-O.x83
+5;Außenwände für die Dämmarbeiten mit mineralischem Tiefengrund vorstreichen.;762,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_4602-O.x83
+1;Mineralwoll-Dämmplatten MW 035 DIN EN 13162 für die Fassade liefern und fachgerecht nach Herstellervorgabe montieren.;552,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_4602-O.x83
+2;wie vor, jedoch Mineralwoll-Dämmplatten im Bereich von Stützen aufbringen. d = 12 cm;210,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_4602-O.x83
+3;Herstellen von Aussparungen 0,25m² bis 0,5 m² in MW;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_4602-O.x83
+4;Zulage schwach saugende Untergründe;100,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_4602-O.x83
+5;Zulage Ausklinkungen;86,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_4602-O.x83
+6;Zulage Ausklinkungen von Elektroleitungen, welche auf Roh geführt werden.;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_4602-O.x83
+7;Anarbeiten an Dauergerüstanker;152,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_4602-O.x83
+8;Anarbeiten an Fensterbänke unterseitig;2,4;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_4602-O.x83
+9;Leibungen, Mineralwoll-Dämmplatten MW 035;411,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_4602-O.x83
+10;Montage einer Verstärkung für Beleuchtung an der Fassade;33,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_4602-O.x83
+1;Verdübelung;762,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_4602-O.x83
+2;Dübelteller Durchmesser 90 mm;6096,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_4602-O.x83
+1;Schutz von angrenzenden Bauteilen (Verunreinigungen);832,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_4602-O.x83
+2;Untergrundreinigung/ prüfen;832,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_4602-O.x83
+3;Hohlstellen verspachteln.;200,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_4602-O.x83
+4;Tiefengrundierung;832,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_4602-O.x83
+5;Haftbrücke;832,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_4602-O.x83
+1;Deckendämmung inkl. vollflächig Mörtelkleber, zuschneiden, absaugen und abständern mittels Teleskopstange bis 3,20m Höhe.;722,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_4602-O.x83
+2;Deckendämmung wie vor, jedoch d = 80 mm im Bereich von Sektionaltoren.;82,5;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_4602-O.x83
+3;Deckendämmung wie vor, jedoch d = 30 mm im Bereich von Sektionaltoren.;27,5;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_4602-O.x83
+4;Herstellen von Aussparungen 0,25m² bis 0,5 m² in MW;100,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_4602-O.x83
+5;Zulage Unterzüge, Deckendämmung;94,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_4602-O.x83
+1;Stundenlohnarbeiten eines Facharbeiters für nicht erfasste Leistungen gegen besonderen Nachweis einschließlich aller Lohnnebenkosten auf Anordnung der Bauleitung.;10,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_4602-O.x83
+2;Stundenlohnarbeiten eines Helfers für nicht erfasste Leistungen gegen besonderen Nachweis einschließlich aller Lohnnebenkosten auf Anordnung der Bauleitung.;10,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_4602-O.x83
+1;Statischer Nachweis für die profilierte Alu-Fassadenbekleidung;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_4602-O.x83
+2;Anfertigung von Verlegeplänen für die Fassadenbekleidung sowie Detailpläne.;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_4602-O.x83
+3;Justierbare Aluminium - Unterkonstruktion, horizontal verlegt;722,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_4602-O.x83
+4;Lieferung und fachgerechte Montage von;722,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_4602-O.x83
+5;Zulage für den nachträglichen Einbau des profilierten Alu Fassadenpaneels;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_4602-O.x83
+6;der Aluminium-Profiltafeln;70,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_4602-O.x83
+7;Ausführung: Aussenecke im Winkel von 90°;30,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_4602-O.x83
+8;als vertikaler Abschluss;15,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_4602-O.x83
+9;als horizontaler Abschluss;5,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_4602-O.x83
+10;Fassadenabschlussblech;120,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_4602-O.x83
+11;Lochblech;120,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_4602-O.x83
+12;als vertikaler Abschluss;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_4602-O.x83
+1;Statischer Nachweis für die glatte Alu-Fassadenbekleidung;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_4602-O.x83
+2;Anfertigung von Verlegeplänen für die Fassadenbekleidung;1,0;Psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_4602-O.x83
+3;Justierbare Aluminium - Unterkonstruktion, horizontal verlegt;120,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_4602-O.x83
+4;Rasterklickschienen mit eingelegtem glasfaserverstärktem Inlay zur ungehinderten thermischen Längenausdehnung und geräuscharmen Arretierung sowie zur richtungsfreien Montage und rückbaufreiem Austausch von einzelnen Alu-Paneelen, flucht- und lotrecht auf vorbeschriebener Unterkonstruktion befestigt.;120,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_4602-O.x83
+5;als hinterlüftete Außenwandbekleidung;120,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_4602-O.x83
+6;im Bereich von Fenstern, Türen, Toren;10,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_4602-O.x83
+7;Zulage für den nachträglichen Einbau des Alu Fassadenpaneels;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_4602-O.x83
+8;als horizontales Auflager zur Aufnahme der;180,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_4602-O.x83
+9;der glatten Alu-Paneele;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_4602-O.x83
+10;Versteifungsblech;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_4602-O.x83
+11;Lisenenprofil;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_4602-O.x83
+12;Eckausbildung mit Lisene;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_4602-O.x83
+13;als horizontaler Abschluss;15,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_4602-O.x83
+14;Abschlussblech gelocht;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_4602-O.x83
+15;Zulage für den direkten Druck ab Werk vom Hersteller einer bauseitigen Zeichnung auf die glatten Alu-Fassadenpaneele gem. beiliegendem Foto.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_4602-O.x83
+1;Hilfskraft des Klempnerhandwerks;10,0;Std;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_4602-O.x83
+2;Fachkraft des Klempnerhandwerks;10,0;Std;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_4602-O.x83

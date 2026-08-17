@@ -1,0 +1,89 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+1.1;Anschluss Baustromverteiler an Verteilung;1,0;Stk;gaeb-flat;Vergabeunterlagen/LV_NBB-2026-0323.D83
+1.2;Anschlussverteiler 44 kVA;365,0;Tage;gaeb-flat;Vergabeunterlagen/LV_NBB-2026-0323.D83
+1.3;Baustrom-Endverteiler 24 kVA BSV 1;365,0;Tage;gaeb-flat;Vergabeunterlagen/LV_NBB-2026-0323.D83
+1.4;Baustrom-Endverteiler 24 kVA BSV 2;365,0;Tage;gaeb-flat;Vergabeunterlagen/LV_NBB-2026-0323.D83
+1.5;Kabelabzweigkasten,a.P./, feucht, 5x25mm²;5,0;Stk;gaeb-flat;Vergabeunterlagen/LV_NBB-2026-0323.D83
+1.6;Steckdosenverteiler / A.P.;3,0;Stk;gaeb-flat;Vergabeunterlagen/LV_NBB-2026-0323.D83
+1.7;PN-Schalter;1,0;Stk;gaeb-flat;Vergabeunterlagen/LV_NBB-2026-0323.D83
+1.8;Kabelabzweigkasten,a.P./, feucht, 1,5-6mm²;5,0;Stk;gaeb-flat;Vergabeunterlagen/LV_NBB-2026-0323.D83
+1.9;Baustellenleuchten;20,0;Stk;gaeb-flat;Vergabeunterlagen/LV_NBB-2026-0323.D83
+1.10;Gummischlauchleitung, 5 x 35 mm²;25,0;m;gaeb-flat;Vergabeunterlagen/LV_NBB-2026-0323.D83
+1.11;Gummischlauchleitung, 5 x 25mm²;150,0;m;gaeb-flat;Vergabeunterlagen/LV_NBB-2026-0323.D83
+1.12;Gummischlauchleitung, 5 x 6 mm²;50,0;m;gaeb-flat;Vergabeunterlagen/LV_NBB-2026-0323.D83
+1.13;Gummischlauchleitung, 3 x 2,5mm²;250,0;m;gaeb-flat;Vergabeunterlagen/LV_NBB-2026-0323.D83
+1.14;Mantelleitg.-PVC,NYM-J 5x2,5mm²;150,0;m;gaeb-flat;Vergabeunterlagen/LV_NBB-2026-0323.D83
+1.15;Anschluss Sanitärcontainer;1,0;Stk;gaeb-flat;Vergabeunterlagen/LV_NBB-2026-0323.D83
+1.16;Anschluss Bauleitungscontainer;1,0;Stk;gaeb-flat;Vergabeunterlagen/LV_NBB-2026-0323.D83
+1.17;Kabelschutzrohr flexibel 110 mm;50,0;lfm;gaeb-flat;Vergabeunterlagen/LV_NBB-2026-0323.D83
+1.18;Kabel, NYY-J 5x2,5 mm²;100,0;m;gaeb-flat;Vergabeunterlagen/LV_NBB-2026-0323.D83
+1.19;Kabel, NYY-J 5x10 mm²;50,0;m;gaeb-flat;Vergabeunterlagen/LV_NBB-2026-0323.D83
+1.20;Kabel bis NYY-J 5x10 mm² in Kabelkanal fixieren;40,0;m;gaeb-flat;Vergabeunterlagen/LV_NBB-2026-0323.D83
+1.21;Mantelleitung/Kabel,5x2,5mm²,anschließen;5,0;Stk;gaeb-flat;Vergabeunterlagen/LV_NBB-2026-0323.D83
+1.22;Mantelleitung/Kabel,5x16mm²,anschließen;5,0;Stk;gaeb-flat;Vergabeunterlagen/LV_NBB-2026-0323.D83
+1.23;Handschachtung;10,0;m;gaeb-flat;Vergabeunterlagen/LV_NBB-2026-0323.D83
+1.24;Bettungssand;2,0;cbm;gaeb-flat;Vergabeunterlagen/LV_NBB-2026-0323.D83
+1.25;Markieren der Kabeltrasse;50,0;m;gaeb-flat;Vergabeunterlagen/LV_NBB-2026-0323.D83
+1.26;Kabel, NYY-J 5x25 mm²;25,0;m;gaeb-flat;Vergabeunterlagen/LV_NBB-2026-0323.D83
+1.27;Anschluss 5x25 mm²;2,0;Stk;gaeb-flat;Vergabeunterlagen/LV_NBB-2026-0323.D83
+1.28;LED-Flächenstrahler Baustelle;8,0;Stk;gaeb-flat;Vergabeunterlagen/LV_NBB-2026-0323.D83
+2.1;Mastleuchte demontieren;1,0;Stk;gaeb-flat;Vergabeunterlagen/LV_NBB-2026-0323.D83
+2.2;Mastleuchte vorhanden wieder montieren;1,0;Stk;gaeb-flat;Vergabeunterlagen/LV_NBB-2026-0323.D83
+2.3;Kabelschutzrohr schw. Belast NS-Kabel 50 mm;50,0;m;gaeb-flat;Vergabeunterlagen/LV_NBB-2026-0323.D83
+2.4;Außenkabel, A-2Y(L)2Y 10 x 2 x 0,8;50,0;m;gaeb-flat;Vergabeunterlagen/LV_NBB-2026-0323.D83
+2.5;Außenkabel, A-2Y(L)2Y 20 x 2 x 0,8;50,0;m;gaeb-flat;Vergabeunterlagen/LV_NBB-2026-0323.D83
+2.6;Außenkabel, A-2Y(L)2Y 10 x 2 x 0,8 freiklemmen;5,0;Stk;gaeb-flat;Vergabeunterlagen/LV_NBB-2026-0323.D83
+2.7;Außenkabel, A-2Y(L)2Y 20 x 2 x 0,8 freiklemmen;5,0;Stk;gaeb-flat;Vergabeunterlagen/LV_NBB-2026-0323.D83
+2.8;Außenkabel, A-2Y(L)2Y 10 x 2 x 0,8 muffen;10,0;Stk;gaeb-flat;Vergabeunterlagen/LV_NBB-2026-0323.D83
+2.9;Außenkabel, A-2Y(L)2Y 20 x 2 x 0,8 muffen;10,0;Stk;gaeb-flat;Vergabeunterlagen/LV_NBB-2026-0323.D83
+2.10;Demontage von Anschlüssen bis 5x2,5 mm²;10,0;Stk;gaeb-flat;Vergabeunterlagen/LV_NBB-2026-0323.D83
+2.11;Demontage von Anschlüssen bis 5x35 mm²;5,0;Stk;gaeb-flat;Vergabeunterlagen/LV_NBB-2026-0323.D83
+2.12;Feuchtraum-Abzweigk./A.P.-5x2,5,dem.;5,0;Stk;gaeb-flat;Vergabeunterlagen/LV_NBB-2026-0323.D83
+2.13;Mantelleitung-PVC,bis 5x2,5mm²,dem.;50,0;m;gaeb-flat;Vergabeunterlagen/LV_NBB-2026-0323.D83
+2.14;Fernmeldeleitungen bis 10x2x0,8mm;100,0;m;gaeb-flat;Vergabeunterlagen/LV_NBB-2026-0323.D83
+2.15;Auprüfen von Leitungen bis 5x2,5mm²;25,0;Stk;gaeb-flat;Vergabeunterlagen/LV_NBB-2026-0323.D83
+2.16;Auprüfen von Leitungen bis 5x25mm²;5,0;Stk;gaeb-flat;Vergabeunterlagen/LV_NBB-2026-0323.D83
+1;Anschluss Baustromverteiler an;1,0;Stk;gaeb;Vergabeunterlagen/LV_NBB-2026-0323.X83
+2;Anschlussverteiler 44kVA;365,0;Tage;gaeb;Vergabeunterlagen/LV_NBB-2026-0323.X83
+3;Baustrom-Endverteilerschrank;365,0;Tage;gaeb;Vergabeunterlagen/LV_NBB-2026-0323.X83
+4;Baustrom-Endverteilerschrank;365,0;Tage;gaeb;Vergabeunterlagen/LV_NBB-2026-0323.X83
+5;Kabelabzweigkasten a.P.;5,0;Stk;gaeb;Vergabeunterlagen/LV_NBB-2026-0323.X83
+6;Steckdosenverteiler;3,0;Stk;gaeb;Vergabeunterlagen/LV_NBB-2026-0323.X83
+7;PN-Schalter;1,0;Stk;gaeb;Vergabeunterlagen/LV_NBB-2026-0323.X83
+8;Kabelabzweigkasten a.P.;5,0;Stk;gaeb;Vergabeunterlagen/LV_NBB-2026-0323.X83
+9;Baustellenleuchten;20,0;Stk;gaeb;Vergabeunterlagen/LV_NBB-2026-0323.X83
+10;Gummischlauchleitung, 5 x 35mm²;25,0;m;gaeb;Vergabeunterlagen/LV_NBB-2026-0323.X83
+11;Gummischlauchleitung, 5 x 25mm²;150,0;m;gaeb;Vergabeunterlagen/LV_NBB-2026-0323.X83
+12;Gummischlauchleitung, 5 x 6 mm²;50,0;m;gaeb;Vergabeunterlagen/LV_NBB-2026-0323.X83
+13;Gummischlauchleitung, 3 x 2,5mm²;250,0;m;gaeb;Vergabeunterlagen/LV_NBB-2026-0323.X83
+14;Mantelleitung (PVC) nach DIN VDE 0250 einschließlich;150,0;m;gaeb;Vergabeunterlagen/LV_NBB-2026-0323.X83
+15;Anschluss Sanitärcontainer;1,0;Stk;gaeb;Vergabeunterlagen/LV_NBB-2026-0323.X83
+16;Anschluss Bauleitungscontainer;1,0;Stk;gaeb;Vergabeunterlagen/LV_NBB-2026-0323.X83
+17;Kabelschutzrohr flexibel;50,0;lfm;gaeb;Vergabeunterlagen/LV_NBB-2026-0323.X83
+18;Kabel 0,6/1 KV (Kunststoffkabel) nach;100,0;m;gaeb;Vergabeunterlagen/LV_NBB-2026-0323.X83
+19;Kabel 0,6/1 KV (Kunststoffkabel) nach;50,0;m;gaeb;Vergabeunterlagen/LV_NBB-2026-0323.X83
+20;Kabel bis NYY-J 5x10 mm² in Kabelkanal fixieren;40,0;m;gaeb;Vergabeunterlagen/LV_NBB-2026-0323.X83
+21;Mantelleitung oder Kabel absetzen, in;5,0;Stk;gaeb;Vergabeunterlagen/LV_NBB-2026-0323.X83
+22;Mantelleitung oder Kabel absetzen, in;5,0;Stk;gaeb;Vergabeunterlagen/LV_NBB-2026-0323.X83
+23;Handschachtung;10,0;m;gaeb;Vergabeunterlagen/LV_NBB-2026-0323.X83
+24;Bettungssand steinfrei liefern und;2,0;cbm;gaeb;Vergabeunterlagen/LV_NBB-2026-0323.X83
+25;Markieren der Kabeltrasse;50,0;m;gaeb;Vergabeunterlagen/LV_NBB-2026-0323.X83
+26;Kabel 0,6/1 KV (Kunststoffkabel) nach DIN VDE 0271;25,0;m;gaeb;Vergabeunterlagen/LV_NBB-2026-0323.X83
+27;Anschluss 5x25 mm²;2,0;Stk;gaeb;Vergabeunterlagen/LV_NBB-2026-0323.X83
+28;LED-Flächenstrahler;8,0;Stk;gaeb;Vergabeunterlagen/LV_NBB-2026-0323.X83
+1;Mastleuchte demontieren;1,0;Stk;gaeb;Vergabeunterlagen/LV_NBB-2026-0323.X83
+2;Mastleuchte vorhanden wieder montieren;1,0;Stk;gaeb;Vergabeunterlagen/LV_NBB-2026-0323.X83
+3;Kabelschutzrohr schwere Beanspr.,;50,0;m;gaeb;Vergabeunterlagen/LV_NBB-2026-0323.X83
+4;Außenkabel als Fernmeldekabel nach DIN VDE 0816-1;50,0;m;gaeb;Vergabeunterlagen/LV_NBB-2026-0323.X83
+5;Außenkabel als Fernmeldekabel nach DIN VDE 0816-1;50,0;m;gaeb;Vergabeunterlagen/LV_NBB-2026-0323.X83
+6;Außenkabel als Fernmeldekabel nach DIN VDE 0816-1;5,0;Stk;gaeb;Vergabeunterlagen/LV_NBB-2026-0323.X83
+7;Außenkabel als Fernmeldekabel nach DIN VDE 0816-1;5,0;Stk;gaeb;Vergabeunterlagen/LV_NBB-2026-0323.X83
+8;Außenkabel als Fernmeldekabel nach DIN VDE 0816-1;10,0;Stk;gaeb;Vergabeunterlagen/LV_NBB-2026-0323.X83
+9;Außenkabel als Fernmeldekabel nach DIN VDE 0816-1;10,0;Stk;gaeb;Vergabeunterlagen/LV_NBB-2026-0323.X83
+10;Demontage von Anschlüssen bis 5x2,5mm²;10,0;Stk;gaeb;Vergabeunterlagen/LV_NBB-2026-0323.X83
+11;Demontage von Anschlüssen bis 5x35mm²;5,0;Stk;gaeb;Vergabeunterlagen/LV_NBB-2026-0323.X83
+12;Feuchtraum-Abzweigkasten, Schutzart IP 54 mit;5,0;Stk;gaeb;Vergabeunterlagen/LV_NBB-2026-0323.X83
+13;Mantelleitung (PVC) abklemmen, mit;50,0;m;gaeb;Vergabeunterlagen/LV_NBB-2026-0323.X83
+14;Fernmeldeleitungen mit;100,0;m;gaeb;Vergabeunterlagen/LV_NBB-2026-0323.X83
+15;Auprüfen von Leitungen bis 5x2,5mm²;25,0;Stk;gaeb;Vergabeunterlagen/LV_NBB-2026-0323.X83
+16;Auprüfen von Leitungen bis 5x25mm²;5,0;Stk;gaeb;Vergabeunterlagen/LV_NBB-2026-0323.X83

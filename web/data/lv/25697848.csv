@@ -1,0 +1,32 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+1;Montagegestell, Abluftmotor, Montagmaterial und Wetterschutzhaube auf das ca. 16 m hohe Flachdach bringen.;1,0;psch;gaeb;Abluftanlage_HHG.x83
+1;Direktgekuppelte Ausführung,;1,0;St;gaeb;Abluftanlage_HHG.x83
+2;Anschl.: d=250;1,0;St;gaeb;Abluftanlage_HHG.x83
+3;angebaut und verdrahtet,;1,0;St;gaeb;Abluftanlage_HHG.x83
+4;Material: PPs;1,0;St;gaeb;Abluftanlage_HHG.x83
+5;Material: PPs;1,0;St;gaeb;Abluftanlage_HHG.x83
+6;Montagegestell für Radialventilatoren mit saugseitigem Schalldämpfer,;1,0;St;gaeb;Abluftanlage_HHG.x83
+7;Montagesockel zur Montage von Rohrleitungen auf Flachdächern oder Ebenen mit leichtem Gefälle.;2,0;St;gaeb;Abluftanlage_HHG.x83
+8;für 1 Antrieb und 3 Motorklappen in belüfteten Schaltschrank;1,0;St;gaeb;Abluftanlage_HHG.x83
+9;Eingang: 230V Wechselstrom 50 Hz;1,0;St;gaeb;Abluftanlage_HHG.x83
+10;Integration von zusätzlichen potentialfreien Kontakten für die GLT / Zuluftanlage / Wäscher / etc. (Betrieb / Störung);5,0;St;gaeb;Abluftanlage_HHG.x83
+11;Für die Einbindung von zusätzlichen potentialfreien Freigabekontakt für die Abluftanlage in das zuvor beschriebene Schalt- und Steuergerät.;1,0;psch;gaeb;Abluftanlage_HHG.x83
+12;Elektroinstallation zwischen dem Steuerschrank und den mitgelieferten Feldgeräten (Lieferung, Verlegung und beidseitiges Auflegen der Leitungen);1,0;psch;gaeb;Abluftanlage_HHG.x83
+13;Erstellen der Bedien- und Wartungsunterlagen, der Ersatzteillisten und der;1,0;psch;gaeb;Abluftanlage_HHG.x83
+14;PPs-Drosselklappe, d=250mm, mit 24V AC/DC Stellantrieb und beiderseitigen Anschlußmuffen.;3,0;St;gaeb;Abluftanlage_HHG.x83
+15;Durchmesser 250mm;3,0;m;gaeb;Abluftanlage_HHG.x83
+16;aus Edelstahl;6,0;St;gaeb;Abluftanlage_HHG.x83
+17;Abluftkanal aus PPs zum Anschluss an Abzug der Fortluftleitung.;3,0;St;gaeb;Abluftanlage_HHG.x83
+18;Inklusive Befestigungs- und Montagehilfsmaterial und Rohrschellen;2,0;m;gaeb;Abluftanlage_HHG.x83
+19;Inklusive Befestigungs- und Montagehilfsmaterial und Rohrschellen;22,0;m;gaeb;Abluftanlage_HHG.x83
+20;Inklusive Befestigungs- und Montagehilfsmaterial und Rohrschellen;2,0;St;gaeb;Abluftanlage_HHG.x83
+21;Inklusive Befestigungs- und Montagehilfsmaterial und Rohrschellen;2,0;St;gaeb;Abluftanlage_HHG.x83
+22;Inklusive Befestigungs- und Montagehilfsmaterial und Rohrschellen;4,0;St;gaeb;Abluftanlage_HHG.x83
+23;Inklusive Befestigungs- und Montagehilfsmaterial und Rohrschellen;12,0;St;gaeb;Abluftanlage_HHG.x83
+24;Inklusive Befestigungs- und Montagehilfsmaterial und Rohrschellen;2,0;St;gaeb;Abluftanlage_HHG.x83
+25;Inklusive Befestigungs- und Montagehilfsmaterial und Rohrschellen;3,0;St;gaeb;Abluftanlage_HHG.x83
+26;für die Steigleitung an der Außenwand zum Ventilator auf dem Dach,;3,0;St;gaeb;Abluftanlage_HHG.x83
+27;mit Kugelhahn für die Steigleitung,;1,0;St;gaeb;Abluftanlage_HHG.x83
+28;für Kulissenschalldämpfer;1,0;St;gaeb;Abluftanlage_HHG.x83
+1;Stundenlohnarbeiten Monteur;15,0;h;gaeb;Abluftanlage_HHG.x83
+2;Leistung wie zuletzt in vollem Wortlaut beschrieben,;15,0;h;gaeb;Abluftanlage_HHG.x83

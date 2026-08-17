@@ -1,0 +1,32 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+10;Solarmodul mit Anschlusskabel und Stecker.;12,0;kWp;gaeb;03_Errichtung Photovoltaikanlage.x83
+20;Unterkonstruktion für die Installation der Photovoltaikmodule auf dem vorgegebenem Dachtyp;12,0;kWp;gaeb;03_Errichtung Photovoltaikanlage.x83
+30;Solar-Wechselrichter für die Einspeisung von Solarstrom. Es muss durch den AN sichergestellt werden, dass der oder die Wechselrichter auf die verwendeten Photovoltaikmodule und den Energiespeicher abgestimmt ist.;1,0;Psch;gaeb;03_Errichtung Photovoltaikanlage.x83
+40;Es muss durch den AN sichergestellt werden, dass das Energiespeichersystem kompatibel mit den verwendeten Photovoltaikmodulen und dem Wechselrichter ist. Weist das Energiespeichersystem eine Netzanschlussleistung von mehr als 4,2 kW auf, so ist nach §14a EnWG eine technische Einrichtung zur Steuerun;9,6;kWh;gaeb;03_Errichtung Photovoltaikanlage.x83
+50;Erdungskabel und Kabelschuhe für Potentialausgleichsbrücken des Solargestells und den Anschluss an die Haupterdungsschiene sowie der Anlage entsprechende Erdungs- / Solarkabel.;1,0;Psch;gaeb;03_Errichtung Photovoltaikanlage.x83
+60;Lieferung und fachgerechte Verlegung von Solarkabeln zur elektrischen Verbindung der PV-Module mit den Wechselrichtern.;500,0;m;gaeb;03_Errichtung Photovoltaikanlage.x83
+70;Als Kabeltyp ist eine flammwidrige Installationsleitung zu verwenden (z. B. NYM-J oder gleichwertig, bei Außenverlegung NYY-J oder gleichwertig).;20,0;m;gaeb;03_Errichtung Photovoltaikanlage.x83
+80;Stecker zur Verkabelung der Solarmodule mit den Wechselrichtern.;1,0;Psch;gaeb;03_Errichtung Photovoltaikanlage.x83
+90;Der AC-seitige Überspannungsschutz ist in der Nähe des Netzverknüpfungspunktes der Photovoltaikanlage, vorzugsweise in der Niederspannungshauptverteilung (NSHV) bzw. in der PV-Unterverteilung, zu installieren.;1,0;Stk;gaeb;03_Errichtung Photovoltaikanlage.x83
+100;Lieferung und Installation eines DC-seitigen Überspannungsschutzes (SPD Typ 1+2 oder Typ 2 gemäß Anlagenkonzept) für Photovoltaikanlagen gemäß DIN VDE 0100-443, DIN VDE 0100-534 und DIN VDE 0100-712.;1,0;Stk;gaeb;03_Errichtung Photovoltaikanlage.x83
+110;Lieferung und Installation eines Erzeugungszählers zum einfachen Ablesen des durch die PV-Anlage produzierten Stroms. Der Erzeugungszähler soll betriebsfertig im Zählerschrank verbaut werden. Dabei sind die Vorgaben des Versorgungsnetzbetreibers, die entsprechenden technischen Anschlussbedingungen u;1,0;Stk;gaeb;03_Errichtung Photovoltaikanlage.x83
+120;Lieferung und Installation von geeigneten Überwachungseinrichtungen inkl. des dazu notwendigen Zubehörs (Kommunikationsmodule, Leistungsmesser o. ä.) zur Messung und Übertragung von Verbrauchs- und Nutzungsdaten. Die angebotenen Monitoring-Komponenten müssen vollständig mit dem beim Betreiber vorhan;1,0;Stk;gaeb;03_Errichtung Photovoltaikanlage.x83
+130;Die Mess- und Regelungstechnik der Photovoltaikanlage ist entsprechend der Anlagengröße sowie den Vorgaben des zuständigen Netzbetreibers auszuführen.;1,0;Psch;gaeb;03_Errichtung Photovoltaikanlage.x83
+140;Lieferung und Verwendung sämtlicher für die Installation der Photovoltaikanlage erforderlichen Klein-, Befestigungs- und Verdrahtungsmaterialien, soweit diese nicht in anderen Positionen gesondert aufgeführt sind.;1,0;Psch;gaeb;03_Errichtung Photovoltaikanlage.x83
+150;Lieferung und Installation eines PV-Feuerwehrschalters zur allpoligen Abschaltung der DC-Leitungen der Photovoltaikanlage im Brandfall.;1,0;Stk;gaeb;03_Errichtung Photovoltaikanlage.x83
+160;Lieferung und Verlegung einer Versorgungsleitung zur Spannungsversorgung des PV-Feuerwehrschalters bzw. der zugehörigen DC-Abschalteinheit.;20,0;m;gaeb;03_Errichtung Photovoltaikanlage.x83
+170;Lieferung und Installation einer Steuer- bzw. Datenleitung zur Ansteuerung der PV-Abschalteinheit durch den Feuerwehrschalter.;20,0;m;gaeb;03_Errichtung Photovoltaikanlage.x83
+10;Leistungsbeschreibung:;1,0;Psch;gaeb;03_Errichtung Photovoltaikanlage.x83
+20;Montage der gelieferten Unterkonstruktion;1,0;Psch;gaeb;03_Errichtung Photovoltaikanlage.x83
+30;Anschluss und Installation des Wechselrichters und des Energiespeichersystems;1,0;Psch;gaeb;03_Errichtung Photovoltaikanlage.x83
+40;Die Dokumentation (Revisionsunterlagen) ist jeweils 2-fach in Papierform und 1-fach auf einem USB-Speicherstick gemäß den Vorbemerkungen zusammenzustellen.;1,0;Psch;gaeb;03_Errichtung Photovoltaikanlage.x83
+50;Der Auftragnehmer übernimmt sämtliche erforderlichen Antrags-, Abstimmungs- und Meldeverfahren im Zusammenhang mit der Netzeinspeisung der Photovoltaikanlage. Hierzu zählen insbesondere:;1,0;Psch;gaeb;03_Errichtung Photovoltaikanlage.x83
+10;Fallschutzvorrichtungen nach den Erfordernissen der Bau-BG und den derzeit gültigen UVV liefern, aufbauen und vorhalten. Nach Beendigung der Arbeiten und der Abnahme des AGs wieder demontieren und abfahren.;1,0;Psch;gaeb;03_Errichtung Photovoltaikanlage.x83
+20;Gitterträger in einer Länge von  Metern zur temporären Überbrückung von Eingängen, Verkehrswegen oder sonstigen Bereichen, in denen eine Volleinrüstung nicht gestellt werden kann, zur sicheren Montage der Photovoltaikanlage.;4,0;m;gaeb;03_Errichtung Photovoltaikanlage.x83
+30;Lieferung, Aufstellung, Vorhaltung für die Dauer der Bauzeit sowie Rückbau und Abtransport eines mobilen Bauzauns zur Absicherung des Arbeitsbereiches (Gerüst und PV-Montagebereich) gegen unbefugten Zutritt. Der Bauzaun ist standsicher aufzustellen (Fußplatten/Beschwerung), einbruchhemmend zu verbin;1,0;Psch;gaeb;03_Errichtung Photovoltaikanlage.x83
+10;Meisterstunden für Rangier-, Verlege- und unvorhersehbare Arbeiten.;5,0;Std;gaeb;03_Errichtung Photovoltaikanlage.x83
+20;Monteurstunden für Rangier-, Verlege- und unvorhersehbare Arbeiten.;5,0;Std;gaeb;03_Errichtung Photovoltaikanlage.x83
+30;Auszubildenden- / Helferstunden für Rangier-, Verlege- und unvorhersehbare Arbeiten.;5,0;Std;gaeb;03_Errichtung Photovoltaikanlage.x83
+10;Lieferung, Anschluss und Installation von einem Erdspieß zur Erdung der Photovoltaikanlage.;1,0;Psch;gaeb;03_Errichtung Photovoltaikanlage.x83
+10;Liefern, montieren und betriebsfertig anschließen einer separaten Unterverteilung für die Photovoltaikanlage, sofern die vorhandene elektrische Verteilung vor Ort nicht über ausreichende Platzreserven für die Aufnahme der erforderlichen PV-Schutz- und Schaltgeräte verfügt.;1,0;Stk;gaeb;03_Errichtung Photovoltaikanlage.x83
+10;Eine jährliche Wartung über den Zeitraum von 4 Jahren ist anzubieten.;4,0;Stk;gaeb;03_Errichtung Photovoltaikanlage.x83

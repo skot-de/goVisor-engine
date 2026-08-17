@@ -1,0 +1,60 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+10;"Der Aufzug wird installiert in dem Schachtgerüst entsprechender Pläne;";1,0;St;gaeb;leistungsbeschreibungen/KMP-TGA-6-E15-ANL-260731-F-LV.X83
+20;"Der Aufzug wird installiert in dem Schachtgerüst entsprechender Pläne;";1,0;St;gaeb;leistungsbeschreibungen/KMP-TGA-6-E15-ANL-260731-F-LV.X83
+40;"Der Aufzug wird installiert in dem Schachtgerüst entsprechender Pläne;";1,0;St;gaeb;leistungsbeschreibungen/KMP-TGA-6-E15-ANL-260731-F-LV.X83
+50;"Der Aufzug wird installiert in dem Schachtgerüst entsprechender Pläne;";1,0;St;gaeb;leistungsbeschreibungen/KMP-TGA-6-E15-ANL-260731-F-LV.X83
+60;Schachtentrauchungssystem bestehend aus einer zentralen Steuerungseinheit, Rauchansaugsystem, Lift-Status-Überwachung und einer RWA Klappe mit min. 2,5% freier Lüftungsfläche ( bezogen auf die Schachtgrundfläche ), und maluellen Auslösetwaster, Abmessungen DD B480*H660mm. mit Dachhaube ( Dachhaube i;1,0;St;gaeb;leistungsbeschreibungen/KMP-TGA-6-E15-ANL-260731-F-LV.X83
+70;Schachtentrauchungssystem bestehend aus einer zentralen Steuerungseinheit, Rauchansaugsystem, Lift-Status-Überwachung und einer RWA Klappe mit min. 2,5% freier Lüftungsfläche ( bezogen auf die Schachtgrundfläche ), und maluellen Auslösetwaster, Abmessungen DD B480*H560mm. mit Dachhaube ( Dachhaube i;1,0;St;gaeb;leistungsbeschreibungen/KMP-TGA-6-E15-ANL-260731-F-LV.X83
+90;Schachtentrauchungssystem bestehend aus einer zentralen Steuerungseinheit, Rauchansaugsystem, Lift-Status-Überwachung und einer RWA Klappe mit min. 2,5% freier Lüftungsfläche ( bezogen auf die Schachtgrundfläche ), und maluellen Auslösetwaster, Abmessungen DD B7800*H860mm, Dachhaube ( Dachhaube ist ;1,0;St;gaeb;leistungsbeschreibungen/KMP-TGA-6-E15-ANL-260731-F-LV.X83
+100;Schachtentrauchungssystem bestehend aus einer zentralen Steuerungseinheit, Rauchansaugsystem, Lift-Status-Überwachung und einer RWA Klappe mit min. 2,5% freier Lüftungsfläche ( bezogen auf die Schachtgrundfläche ), und maluellen Auslösetwaster, Abmessungen DD B780*H1160mm. Dachhaube ( Dachhaube ist ;1,0;St;gaeb;leistungsbeschreibungen/KMP-TGA-6-E15-ANL-260731-F-LV.X83
+530;Stundenverrechnungssatz Servicetechniker;100,0;h;gaeb;leistungsbeschreibungen/KMP-TGA-6-E15-ANL-260731-F-LV.X83
+540;Anfahrtpauschale;20,0;St;gaeb;leistungsbeschreibungen/KMP-TGA-6-E15-ANL-260731-F-LV.X83
+550;Notdienstapauschale;5,0;St;gaeb;leistungsbeschreibungen/KMP-TGA-6-E15-ANL-260731-F-LV.X83
+110;Notwendige Lieferung und Montaeleistung für PA1:;1,0;PSCH;gaeb;leistungsbeschreibungen/KMP-TGA-6-E15-ANL-260731-F-LV.X83
+120;Notwendige Lieferung und Montaeleistung für PA1:;1,0;PSCH;gaeb;leistungsbeschreibungen/KMP-TGA-6-E15-ANL-260731-F-LV.X83
+130;Notwendige Lieferung und Montaeleistung für PA1:;1,0;PSCH;gaeb;leistungsbeschreibungen/KMP-TGA-6-E15-ANL-260731-F-LV.X83
+140;Organisation, Durchführung und Dokumentation der Inverkehrbringungsprüfung und der Prüfung vor Inbetriebnahme.;1,0;PSCH;gaeb;leistungsbeschreibungen/KMP-TGA-6-E15-ANL-260731-F-LV.X83
+150;Organisation, Durchführung und Dokumentation der Inverkehrbringungsprüfung und der Prüfung vor Inbetriebnahme.;1,0;PSCH;gaeb;leistungsbeschreibungen/KMP-TGA-6-E15-ANL-260731-F-LV.X83
+160;Organisation, Durchführung und Dokumentation der Inverkehrbringungsprüfung und der Prüfung vor Inbetriebnahme.;1,0;PSCH;gaeb;leistungsbeschreibungen/KMP-TGA-6-E15-ANL-260731-F-LV.X83
+170;Während dem Bauaufzugsbetrieb ist ein mal wöchentlich eine Aufzugswärterprüfung gemäß TRBS3121 durchzuführen.;180,0;Wo;gaeb;leistungsbeschreibungen/KMP-TGA-6-E15-ANL-260731-F-LV.X83
+180;Für einen Zeitraum von 43 Monaten ( vorgesehene Bauaufzugsphase ) ist einmal monatlich;43,0;St;gaeb;leistungsbeschreibungen/KMP-TGA-6-E15-ANL-260731-F-LV.X83
+190;Für einen Zeitraum von 43 Monaten ( vorgesehene Bauaufzugsphase ) ist einmal monatlich;43,0;St;gaeb;leistungsbeschreibungen/KMP-TGA-6-E15-ANL-260731-F-LV.X83
+200;Für einen Zeitraum von 43 Monaten ( vorgesehene Bauaufzugsphase ) ist einmal monatlich;43,0;St;gaeb;leistungsbeschreibungen/KMP-TGA-6-E15-ANL-260731-F-LV.X83
+210;Während der Bauaufzugsbetriebsphase von 43 Monaten ist der Notruf über das in der Hauptposition beschriebene Notrufgerät abzuwickeln. Die anfallenden Kosten für;43,0;St;gaeb;leistungsbeschreibungen/KMP-TGA-6-E15-ANL-260731-F-LV.X83
+220;Während der Bauaufzugsbetriebsphase von 43 Monaten ist der Notruf über das in der Hauptposition beschriebene Notrufgerät abzuwickeln. Die anfallenden Kosten für;43,0;St;gaeb;leistungsbeschreibungen/KMP-TGA-6-E15-ANL-260731-F-LV.X83
+230;Während der Bauaufzugsbetriebsphase von 43 Monaten ist der Notruf über das in der Hauptposition beschriebene Notrufgerät abzuwickeln. Die anfallenden Kosten für;43,0;St;gaeb;leistungsbeschreibungen/KMP-TGA-6-E15-ANL-260731-F-LV.X83
+240;Notbefreiung eingeschlossener Personen während der Bauaufzugsphase nach meldung über das Notrufsystem;1,0;PSCH;gaeb;leistungsbeschreibungen/KMP-TGA-6-E15-ANL-260731-F-LV.X83
+250;Am Ende der Bauaufzugsbetriebsphase nach finalem Rückbau der Schutzausstattung ist eine Endreinigung durchzuführen;1,0;PSCH;gaeb;leistungsbeschreibungen/KMP-TGA-6-E15-ANL-260731-F-LV.X83
+260;Am Ende der Bauaufzugsbetriebsphase nach finalem Rückbau der Schutzausstattung ist eine Endreinigung durchzuführen;1,0;PSCH;gaeb;leistungsbeschreibungen/KMP-TGA-6-E15-ANL-260731-F-LV.X83
+270;Am Ende der Bauaufzugsbetriebsphase nach finalem Rückbau der Schutzausstattung ist eine Endreinigung durchzuführen;1,0;PSCH;gaeb;leistungsbeschreibungen/KMP-TGA-6-E15-ANL-260731-F-LV.X83
+280;Am Ende der Bauaufzugsbetriebsphase ist gemeinsam mit einem Vertreter des AG eine Zustandsfeststellung zu treffen. Dabei wird der durch den Bauaufzugsbetrieb entstandene Verschleiß der Anlage dokumentiert und Abstimmung über die zu ersetzenden Teile getroffen.;1,0;PSCH;gaeb;leistungsbeschreibungen/KMP-TGA-6-E15-ANL-260731-F-LV.X83
+290;Am Ende der Bauaufzugsbetriebsphase ist gemeinsam mit einem Vertreter des AG eine Zustandsfeststellung zu treffen. Dabei wird der durch den Bauaufzugsbetrieb entstandene Verschleiß der Anlage dokumentiert und Abstimmung über die zu ersetzenden Teile getroffen.;1,0;PSCH;gaeb;leistungsbeschreibungen/KMP-TGA-6-E15-ANL-260731-F-LV.X83
+300;Am Ende der Bauaufzugsbetriebsphase ist gemeinsam mit einem Vertreter des AG eine Zustandsfeststellung zu treffen. Dabei wird der durch den Bauaufzugsbetrieb entstandene Verschleiß der Anlage dokumentiert und Abstimmung über die zu ersetzenden Teile getroffen.;1,0;PSCH;gaeb;leistungsbeschreibungen/KMP-TGA-6-E15-ANL-260731-F-LV.X83
+310;Türkontakt in der gleichen Qualität / Ausführung wie in der Hauptposition;15,0;St;gaeb;leistungsbeschreibungen/KMP-TGA-6-E15-ANL-260731-F-LV.X83
+320;Türrolle ( Laufrolle ) in der gleichen Qualität / Ausführung wie in der Hauptposition;35,0;St;gaeb;leistungsbeschreibungen/KMP-TGA-6-E15-ANL-260731-F-LV.X83
+330;Türrolle ( Gegenrolle ) in der gleichen Qualität / Ausführung wie in der Hauptposition;35,0;St;gaeb;leistungsbeschreibungen/KMP-TGA-6-E15-ANL-260731-F-LV.X83
+340;Türrolle ( Gegenrolle ) in der gleichen Qualität / Ausführung wie in der Hauptposition;3,0;St;gaeb;leistungsbeschreibungen/KMP-TGA-6-E15-ANL-260731-F-LV.X83
+350;Lichtgitter in der gleichen Qualität / Ausführung wie in der Hauptposition;3,0;St;gaeb;leistungsbeschreibungen/KMP-TGA-6-E15-ANL-260731-F-LV.X83
+360;Geschwindigkeitsbegrenzer komplett mit Spanngewichtsrolle und Begrenzerseil in der gleichen Qualität / Ausführung wie in der Hauptposition.;3,0;St;gaeb;leistungsbeschreibungen/KMP-TGA-6-E15-ANL-260731-F-LV.X83
+370;Rollenführung Kabine der gleichen Qualität / Ausführung wie in der Hauptposition.;8,0;St;gaeb;leistungsbeschreibungen/KMP-TGA-6-E15-ANL-260731-F-LV.X83
+380;Rollenführung Gegengewicht in der gleichen Qualität / Ausführung wie in der Hauptposition;8,0;St;gaeb;leistungsbeschreibungen/KMP-TGA-6-E15-ANL-260731-F-LV.X83
+390;Gewährleistungsrückstellung PA1;1,0;PSCH;gaeb;leistungsbeschreibungen/KMP-TGA-6-E15-ANL-260731-F-LV.X83
+400;Gewährleistungsrückstellung PA2;1,0;PSCH;gaeb;leistungsbeschreibungen/KMP-TGA-6-E15-ANL-260731-F-LV.X83
+410;Gewährleistungsrückstellung LA1;1,0;PSCH;gaeb;leistungsbeschreibungen/KMP-TGA-6-E15-ANL-260731-F-LV.X83
+420;Instandhaltungsvertrag für die Dauer von fünf Jahren;1,0;St;gaeb;leistungsbeschreibungen/KMP-TGA-6-E15-ANL-260731-F-LV.X83
+430;Instandhaltungsvertrag für die Dauer von fünf Jahren;1,0;St;gaeb;leistungsbeschreibungen/KMP-TGA-6-E15-ANL-260731-F-LV.X83
+450;Instandhaltungsvertrag für die Dauer von fünf Jahren;1,0;St;gaeb;leistungsbeschreibungen/KMP-TGA-6-E15-ANL-260731-F-LV.X83
+460;Instandhaltungsvertrag für die Dauer von fünf Jahren;1,0;St;gaeb;leistungsbeschreibungen/KMP-TGA-6-E15-ANL-260731-F-LV.X83
+470;Instandhaltungsvertrag für die Dauer von fünf  Jahren;4,0;St;gaeb;leistungsbeschreibungen/KMP-TGA-6-E15-ANL-260731-F-LV.X83
+480;Notrufvertrag für die Dauer von fünf Jahren;1,0;St;gaeb;leistungsbeschreibungen/KMP-TGA-6-E15-ANL-260731-F-LV.X83
+490;Notrufvertrag für die Dauer von fünf Jahren;1,0;St;gaeb;leistungsbeschreibungen/KMP-TGA-6-E15-ANL-260731-F-LV.X83
+510;Notrufvertrag für die Dauer von fünf Jahren;1,0;St;gaeb;leistungsbeschreibungen/KMP-TGA-6-E15-ANL-260731-F-LV.X83
+520;Notrufvertrag für die Dauer von fünf Jahren;1,0;St;gaeb;leistungsbeschreibungen/KMP-TGA-6-E15-ANL-260731-F-LV.X83
+30;"Der Aufzug wird installiert in dem Schachtgerüst entsprechender Pläne;";1,0;St;gaeb;leistungsbeschreibungen/KMP-TGA-6-E15-ANL-260731-F-LV.X83
+80;Schachtentrauchungssystem bestehend aus einer zentralen Steuerungseinheit, Rauchansaugsystem, Lift-Status-Überwachung und einer RWA Klappe mit min. 2,5% freier Lüftungsfläche ( bezogen auf die Schachtgrundfläche ), und maluellen Auslösetwaster, Abmessungen DD B480*H560mm. mit Dachhaube ( Dachhaube i;1,0;St;gaeb;leistungsbeschreibungen/KMP-TGA-6-E15-ANL-260731-F-LV.X83
+530;Stundenverrechnungssatz Servicetechniker;5,0;h;gaeb;leistungsbeschreibungen/KMP-TGA-6-E15-ANL-260731-F-LV.X83
+540;Anfahrtpauschale;1,0;St;gaeb;leistungsbeschreibungen/KMP-TGA-6-E15-ANL-260731-F-LV.X83
+550;Notdienstapauschale;1,0;St;gaeb;leistungsbeschreibungen/KMP-TGA-6-E15-ANL-260731-F-LV.X83
+440;Instandhaltungsvertrag für die Dauer von fünf Jahren;1,0;St;gaeb;leistungsbeschreibungen/KMP-TGA-6-E15-ANL-260731-F-LV.X83
+470;Instandhaltungsvertrag für die Dauer von fünf  Jahren;1,0;St;gaeb;leistungsbeschreibungen/KMP-TGA-6-E15-ANL-260731-F-LV.X83
+500;Notrufvertrag für die Dauer von fünf Jahren;1,0;St;gaeb;leistungsbeschreibungen/KMP-TGA-6-E15-ANL-260731-F-LV.X83

@@ -1,0 +1,124 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+00000001;Baustelle einrichten ... Freitext ...*Zufahrt vorh.;1,0;Psch;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+00000002;Baustelle räumen Sämtl. LV-Abschn.;1,0;Psch;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+00010001;Vorankündigung erstellen;1,0;Psch;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+00010002;SiGe-Koordinator stellen.;1,0;Psch;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+00010003;SiGe-Plan erstellen;1,0;Psch;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+00020001;Bohrkern entnehmen ... Freitext ...*... Freitext ... Asphaltschicht*... Freitext ...;8,0;St;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+00020002;Materialprobe entn. und übergeben ... Freitext ...*... Freitext ...;5,0;St;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+00020003;Probegefäß liefern 10-l-Blecheimer*Mithilfe Kprüf.;5,0;St;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+00020004;Bestimmung Verformungsverhalten;1,0;Psch;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+00020005;Nachweis Kälteflexibilität;1,0;Psch;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+00020006;Gegenpole für Kontrollpr. verlegen ... Freitext ...*Asphalt;250,0;St;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+01000001;Verkehrsfläche kehren Fahrbahn;22000,0;m2;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+01000002;Unterlage reinigen Fahrbahn;11000,0;m2;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+01010001;Vegetationsfläche mähen ... Freitext ...*Böschungen ... Freitext ...;8900,0;m2;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+01020001;Verkehrsschild abbauen Größe bis 1,1 m2*Rohrpf. bis 76,1 Fundament entf.*neben d. Fahrbahn ... Freitext ...*Boden a.Bst.verf.;20,0;St;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+01020002;Leitpfosten abbauen Eingrableitpfost.*erf. Erdarbeiten ... Freitext ...;90,0;St;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+01030001;Längsmarkierung entfernen ... Freitext ...*Breite 0,12 m Plastik*a.Asphaltdecksch. Deckenerneuerung*... Freitext ...;3000,0;m;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+01040001;Suchgraben herstellen;5,0;m2;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+01050001;Erschwernis infolge Schächte im Bankett/ Mulde;25,0;St;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+01050002;Erschwernis infolge Schächte  in Feldwegen;5,0;St;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+01050003;Erschwernis infolge Leitpfosten in Abschnitt 1;60,0;St;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+01050004;Erschwernis infolge Verkehrsschilder in Abschnitt 1;20,0;St;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+01050005;Erschwernis infolge Masten mit Oberleitung - Abschnitt 2;10,0;St;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+02000001;Asphalt fräsen ADS*... Freitext ... ... Freitext ...*... Freitext ... ... Freitext ...*... Freitext ... Unebenheit 6 mm;274,0;m2;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+02000002;Asphalt fräsen ADS*... Freitext ... ... Freitext ...*... Freitext ... ... Freitext ...*... Freitext ... Unebenheit 6 mm;10400,0;m2;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+02000003;Asphalt fräsen ADS*... Freitext ... ... Freitext ...*... Freitext ... ... Freitext ...*Unebenheit 4 mm;190,0;m2;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+02000004;Asphalt fräsen ADS*... Freitext ... ... Freitext ...*... Freitext ... ... Freitext ...*Unebenheit 4 mm;240,0;m2;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+02010001;Asphaltbefestigung trennen ... Freitext ...*schneiden Dicke ü. 6-12 cm;15,0;m;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+02010002;Asphaltbefestigung trennen Einzelfl.*... Freitext ... Dicke ü. 12-18 cm;70,0;m;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+02010003;Asphaltbefestigung trennen ... Freitext ...*schneiden Dicke ü. 6-12 cm;90,0;m;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+02020001;Bankett aufnehmen/bearbeiten Breite 70 - 120 cm Tiefe 4-6 cm;2350,0;m;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+02020002;Bankett aufnehmen/bearbeiten Breite 50-70 cm Tiefe 13 cm;3900,0;m;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+02020003;Fundamentgraben herstellen Breite 50-70 cm Tiefe 25 cm;590,0;m3;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+02020004;Grabenprofil wiederherstellen Aushub -0,10 m3/m*... Freitext ...;4700,0;m;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+03000001;Fahrdraht spannen;3900,0;m;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+03000002;Bitumenemulsion aufsprühen Bk1,8-Bk0,3*Asphalt gefräst C40B5-S*Menge 350 g/m2 ... Freitext ...;10400,0;m2;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+03000003;Bitumenemulsion aufsprühen Bk1,8-Bk0,3*Asphalt frisch C40B5-S*Menge 250 g/m2 vor A.deckschicht;10400,0;m2;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+03000004;Bitumenemulsion aufsprühen Bk1,8-Bk0,3*Asphalt frisch C40B5-S*Menge 250 g/m2 ... Freitext ...;274,0;m2;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+03000005;Bitumenemulsion aufsprühen Bk1,8-Bk0,3*Asphalt frisch C40B5-S*Menge 250 g/m2 ... Freitext ...;190,0;m2;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+03010001;Frostschutzschicht herstellen Bk100 b.1,0 o.F.*0/32 URA+Einbaudoku*DPr min. 100 v.H. ... Freitext ...*Abrechng. Auftrag;310,0;m3;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+03010002;Deckschicht ohne Bindem. herst. ... Freitext ...*... Freitext ... URA+Einbaudoku*... Freitext ...;30,0;m2;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+03020001;Asphalttragsch. aus AC 22 T N herst ... Freitext ...*Dicke 12 cm ... Freitext ...*... Freitext ...;274,0;m2;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+03020002;Asphalttragsch. aus AC 22 T N herst ... Freitext ...*Dicke 8 cm ... Freitext ...*mit Beschicker;10400,0;m2;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+03020003;Asphalttragsch. aus AC 22 T N herst Bk1,8-Bk0,3*... Freitext ... ... Freitext ...*mit Beschicker;550,0;t;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+03020004;Asphalttragsch. aus AC 22 T N herst Bk1,8-Bk0,3*... Freitext ... ... Freitext ...*... Freitext ...;190,0;m2;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+03030001;Asphaltdecksch. aus AC 11 D N herst Bk1,8-Bk0,3*Dicke 4,0 cm ... Freitext ...*... Freitext ... ... Freitext ...;274,0;m2;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+03030002;Abstumpfungsmaßnahme durchführen bit.LFK 1/3*Gestein wie Aufh. Menge 1 kg/m2;274,0;m2;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+03030003;Asphaltdecksch. aus AC 11 D N herst ... Freitext ...*Dicke 4,0 cm ... Freitext ...*... Freitext ... mit Beschicker;10400,0;m2;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+03030004;Abstumpfungsmaßnahme durchführen ... Freitext ...*Gestein wie Aufh. Menge 1 kg/m2*maschinell;10400,0;m2;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+03030005;Asphaltdecksch. aus AC 11 D N herst Bk1,8-Bk0,3*Dicke 4,0 cm ... Freitext ...*... Freitext ... ... Freitext ...;190,0;m2;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+03030006;Abstumpfungsmaßnahme durchführen bit.LFK 1/3*Gestein wie Aufh. Menge 1 kg/m2;190,0;m2;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+03040001;Anschluss a. Fuge m. Fugenm. herst. Längs-/Querfuge*Deckschicht Tiefe 40 mm*Breite 15 mm ... Freitext ...*Fugenmasse N2;15,0;m;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+03040002;Anschluss a. Fuge m. Fugenm. herst. Längs-/Querfuge*Deckschicht Tiefe 40 mm*Breite 15 mm ... Freitext ...*Fugenmasse N2;70,0;m;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+03040003;Anschluss a. Fuge m. Fugenm. herst. Längs-/Querfuge*Deckschicht Tiefe 40 mm*Breite 15 mm ... Freitext ...*Fugenmasse N2;90,0;m;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+03040004;Randabdichtung herstellen Flankenfl. rein.*Abd. 70/100 ein Arbeitsgang*über 12-14 cm;1980,0;m;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+03050001;Bankett herstellen, obere Lage ... Freitext ...*12 tief+ 6 hoch ... Freitext ...*DPR 100;6200,0;m;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+03050002;Bankettstein mit Verfüllung Breite 40cm;32,0;m;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+03050003;Bankettstein mit Verfüllung Breite 60cm;30,0;m;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+03050004;Rasenansaat herstellen;3720,0;m2;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+03050005;Durchlässe unter Feldwegen spülen;23,0;St;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+03060001;Rohrpfosten des AG aufstellen L bis 2 m D76-108*Boden Unterl. AG Fundament Typ B*Aushub i.Bst.vert ab Lagerplatz;20,0;St;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+03060002;Leitpfosten des AG aufstellen Eingrableitpf.*Ku.eigrab.sockel Pfosten abholen*HB 1;90,0;St;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+04000001;Baustelle einrichten ... Freitext ...*Zufahrt vorh.;1,0;Psch;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+04000002;Baustelle räumen Sämtl. LV-Abschn.;1,0;Psch;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+04010001;Vorankündigung erstellen;1,0;Psch;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+04010002;SiGe-Koordinator stellen.;1,0;Psch;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+04010003;SiGe-Plan erstellen;1,0;Psch;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+04020001;Bohrkern entnehmen ... Freitext ...*... Freitext ... Asphaltschicht*... Freitext ...;4,0;St;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+04020002;Materialprobe entn. und übergeben ... Freitext ...*... Freitext ...;4,0;St;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+04020003;Probegefäß liefern 10-l-Blecheimer*Mithilfe Kprüf.;4,0;St;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+04020004;Bestimmung Verformungsverhalten;1,0;Psch;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+04020005;Nachweis Kälteflexibilität;1,0;Psch;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+04020006;Gegenpole für Kontrollpr. verlegen ... Freitext ...*Asphalt;54,0;St;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+05000001;Verkehrsfläche kehren Fahrbahn;8560,0;m2;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+05000002;Unterlage reinigen Fahrbahn;4280,0;m2;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+05010001;Vegetationsfläche mähen ... Freitext ...*Böschungen ... Freitext ...;1700,0;m2;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+05020001;Längsmarkierung entfernen ... Freitext ...*Breite 0,12 m Plastik*a.Asphaltdecksch. Deckenerneuerung*... Freitext ...;1530,0;m;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+05020002;Markierungszeichen entfernen Plastikmasse*a.Asphaltdecksch. Deckenerneuerung*... Freitext ...;100,0;m2;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+05020003;Sonstige Markierung entfernen Sperrfläche*Breite 0,12 m Plastik*a.Asphaltdecksch. Deckenerneuerung*... Freitext ...;7,0;m;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+05030001;Erschwernisse BA Kreuzung, Wochenendarbeit;1,0;Psch;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+05030002;Erschwernis infolge FRS;360,0;m;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+05030003;Erschwernis durch Einbauten;45,0;St;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+05030004;Erschw. infolge Einfassungen;415,0;m;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+05030005;Erschw. infolge Einfassungen;10,0;m;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+05030006;Erschwernis Fahrbahnteiler ..Freitext ..*Aufbruch-/Herst.arb.;110,0;m;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+05030007;Erschwernis Fahrbahnteiler ..Freitext ..*Aufbruch-/Herst.arb.;400,0;m;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+06000001;Asphalt fräsen ... Freitext ...*Splittmastixasph. ... Freitext ...*Fahrbahn ... Freitext ...*Unebenheit 4 mm;1680,0;m2;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+06000002;Asphalt fräsen ADS*Tiefe ü.8-10 cm Fahrbahn*... Freitext ... Unebenheit 4 mm;2850,0;m2;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+06010001;Asphaltbefestigung trennen ... Freitext ...*schneiden Dicke ü. 6-12 cm;130,0;m;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+06020000;Bankett freilegen;580,0;m;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+07000001;Bitumenemulsion aufsprühen ... Freitext ...*Asphalt gefräst C60BP4-S*Menge 250 g/m2 vor A.bindersch.;2850,0;m2;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+07000002;Bitumenemulsion aufsprühen ... Freitext ...*Asphalt gefräst C60BP4-S*Menge 250 g/m2 vor A.deckschicht;1500,0;m2;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+07000003;Bitumenemulsion aufsprühen ... Freitext ...*Asphalt frisch C60BP4-S*Menge 250 g/m2 vor A.deckschicht;2850,0;m2;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+07000004;Bitumenemulsion aufsprühen ... Freitext ...*Asphalt gefräst manuell*C60BP4-S*Menge 250 g/m2 vor A.deckschicht;180,0;m2;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+07010001;Asphaltbindersch.a. AC 16 B S herst Bk10*Dicke 6 cm*... Freitext ... ... Freitext ...*Gestein SZ 18 ... Freitext ...*... Freitext ... mit Beschicker;2850,0;m2;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+07020001;Asphaltdecksch. aus AC 11 D N herst Bk1,8-Bk0,3*Dicke 4,0 cm ... Freitext ...*... Freitext ... ... Freitext ...;1500,0;m2;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+07020002;Asphaltdecksch. aus AC 11 D N herst Bk1,8-Bk0,3*Dicke 4,0 cm ... Freitext ...*... Freitext ... ... Freitext ...;180,0;m2;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+07020003;Asphaltdecksch. aus AC 11 D S herst Bk10*Dicke 4 cm*... Freitext ... ... Freitext ...*... Freitext ...;2850,0;m2;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+07020004;Abstumpfungsmaßnahme durchführen bit.LFK 1/3*Gestein wie Aufh. Menge 1 kg/m2*maschinell;4350,0;m2;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+07020005;Abstumpfungsmaßnahme durchführen bit.LFK 1/3*Gestein wie Aufh. Menge 1 kg/m2;180,0;m2;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+07030001;Anschluss a. Fuge m. Fugenm. herst. Längs-/Querfuge*Deckschicht Tiefe 40 mm*Breite 15 mm ... Freitext ...*Fugenmasse N2;432,6;m;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+07030002;Randabdichtung herstellen Flankenfl. rein.*Abd. 70/100 ein Arbeitsgang*über 12-14 cm;340,0;m;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+07030003;Naht in Asphaltschicht herst. ... Freitext ...*... Freitext ... ... Freitext ...*PmB heiß Dicke ü.2,5-4,5cm;25,0;m;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+07040003;Rasenansaat herstellen;370,0;m2;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+07040004;Provisorische Fußgängerquerung;2,0;St;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+08000001;Verkehrsfläche kehren Fahrbahn;460,0;m2;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+08000002;Unterlage reinigen Fahrbahn;230,0;m2;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+08000003;Vegetationsfläche mähen ... Freitext ...*Böschungen ... Freitext ...;135,0;m2;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+08000004;Erschwernis infolge FRS;30,0;m;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+08000005;Erschwernis durch Einbauten;20,0;St;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+08000006;Erschw. infolge Einfassungen;65,0;m;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+08000007;Erschwernis Fahrbahnteiler ..Freitext ..*Aufbruch-/Herst.arb.;40,0;m;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+08010001;Markierungszeichen entfernen Plastikmasse*a.Asphaltdecksch. Deckenerneuerung*... Freitext ...;45,0;m2;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+08010002;Asphalt fräsen ADS*Tiefe ü.8-10 cm Fahrbahn*... Freitext ... Unebenheit 4 mm;230,0;m2;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+08010003;Asphaltbefestigung trennen ... Freitext ...*schneiden Dicke ü. 6-12 cm;16,0;m;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+08010004;Bankett schälen Breite bis 1,00 m*Dicke 5-10cm 12 tief+ 6 hoch*Bankett m. Bäumen Abfräsen*Wurzelb. von Hand ... Freitext ...;30,0;m;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+08020001;Bitumenemulsion aufsprühen ... Freitext ...*Asphalt gefräst manuell*C60BP4-S*Menge 250 g/m2 vor A.deckschicht;460,0;m2;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+08020002;Asphaltbindersch.a. AC 16 B S herst Bk10*Dicke 6 cm*... Freitext ... ... Freitext ...*Gestein SZ 18 ... Freitext ...*... Freitext ... ... Freitext ...;230,0;m2;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+08020003;Asphaltdecksch. aus AC 11 D S herst Bk10*Dicke 4 cm*... Freitext ... ... Freitext ...*... Freitext ...;230,0;m2;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+08020004;Abstumpfungsmaßnahme durchführen bit.LFK 1/3*Gestein wie Aufh. Menge 1 kg/m2;230,0;m2;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+08020005;Anschluss a. Fuge m. Fugenm. herst. Längs-/Querfuge*Deckschicht Tiefe 40 mm*Breite 15 mm ... Freitext ...*Fugenmasse N2;40,0;m;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+08020006;Randabdichtung herstellen Flankenfl. rein.*Abd. 70/100 ein Arbeitsgang*über 12-14 cm;55,0;m;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83
+08020007;Bankett herstellen, obere Lage ... Freitext ...*12 tief+ 6 hoch ... Freitext ...*DPR 100;30,0;m;gaeb-flat;Leistungsverzeichnis\20260806_29426_L3009_Hütt.-Langenselbold.D83

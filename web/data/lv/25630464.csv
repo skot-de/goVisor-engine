@@ -1,0 +1,89 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+01010010;Baustelle einrichten Sämtl.LV-Abschn. Zufahrt vorh.;1,0;Psch;gaeb-flat;Leistungsverzeichnis\A205270104 24.07.2026.D83
+01010020;Baustelle räumen Sämtl. LV-Abschn;1,0;Psch;gaeb-flat;Leistungsverzeichnis\A205270104 24.07.2026.D83
+01020010;Verkehrsrechtliche Anordnung einh.;1,0;Psch;gaeb-flat;Leistungsverzeichnis\A205270104 24.07.2026.D83
+01020020;Verkehrssch.komb. aufb.,abb.,vorh. 2 VSch über 7 b. 14 Tage;1,0;St;gaeb-flat;Leistungsverzeichnis\A205270104 24.07.2026.D83
+01020030;Verkehrssch.komb. aufb.,abb.,vorh. 2 VSch bis 2 Tage;7,0;St;gaeb-flat;Leistungsverzeichnis\A205270104 24.07.2026.D83
+01020040;Verkehrssch.komb. aufb.,abb.,vorh. 2 VSch über 2 b. 7 Tage;1,0;St;gaeb-flat;Leistungsverzeichnis\A205270104 24.07.2026.D83
+01020050;Kontrolle d. Verkehrss. an Arb.st.;20,0;d;gaeb-flat;Leistungsverzeichnis\A205270104 24.07.2026.D83
+01030010;Strauchbestand nicht heim. Arten roden Höhe bis 5 m verfüll/Bodenab;855,0;m2;gaeb-flat;Leistungsverzeichnis\A205270104 24.07.2026.D83
+01030020;Maßnahmenfläche entkusseln nichtheim. Arten Aufw. bis 15 v.H Höhe<=5 m;180,0;m2;gaeb-flat;Leistungsverzeichnis\A205270104 24.07.2026.D83
+01030030;Pflanzstellen kennzeichnen bis Abnahme;1,0;Psch;gaeb-flat;Leistungsverzeichnis\A205270104 24.07.2026.D83
+01030040;Vegetationsfläche mähen Grünland/Sukzession Mähgut als Mulch;8381,0;m2;gaeb-flat;Leistungsverzeichnis\A205270104 24.07.2026.D83
+01030050;Verfestigte Bodenfläche aufreißen Unterb./Oberb. Tiefe ca. 60 cm;3785,0;m2;gaeb-flat;Leistungsverzeichnis\A205270104 24.07.2026.D83
+01030060;Vegetationsfläche vorbereiten Grünland gesch.Pflanzdeck grubbern, fräs;3785,0;m2;gaeb-flat;Leistungsverzeichnis\A205270104 24.07.2026.D83
+01040010;Acer campestre liefern l.Hei 80-100 VkG 1;40,0;St;gaeb-flat;Leistungsverzeichnis\A205270104 24.07.2026.D83
+01040020;Sorbus aucuparia liefern l.Hei 100-150 VkG 1;40,0;St;gaeb-flat;Leistungsverzeichnis\A205270104 24.07.2026.D83
+01040030;Corylus avellana liefern l.Str 2Tr. 70-90 VkG 1;65,0;St;gaeb-flat;Leistungsverzeichnis\A205270104 24.07.2026.D83
+01040040;Crataegus laevigata liefern l.Str 2Tr. 70-90 VkG 1;35,0;St;gaeb-flat;Leistungsverzeichnis\A205270104 24.07.2026.D83
+01040050;Crataegus monogyna liefern l.Str 2Tr. 70-90 VkG 1;60,0;St;gaeb-flat;Leistungsverzeichnis\A205270104 24.07.2026.D83
+01040060;Euonymus europaeus liefern l.Str 2Tr. 70-90 VkG 1;35,0;St;gaeb-flat;Leistungsverzeichnis\A205270104 24.07.2026.D83
+01040070;Prunus spinosa liefern l.Str 2Tr. 70-90 VkG 1;60,0;St;gaeb-flat;Leistungsverzeichnis\A205270104 24.07.2026.D83
+01040080;Rosa canina liefern l.Str 2Tr. 70-90 VkG 1;40,0;St;gaeb-flat;Leistungsverzeichnis\A205270104 24.07.2026.D83
+01040090;Sambucus nigra liefern l.Str 2Tr. 70-90 VkG 1;40,0;St;gaeb-flat;Leistungsverzeichnis\A205270104 24.07.2026.D83
+01040100;Acer campestre liefern 2j.v.S 1/1 50-80 VkG 1;400,0;St;gaeb-flat;Leistungsverzeichnis\A205270104 24.07.2026.D83
+01040110;Betula pendula liefern 2j.v.S 1/1 50-80 VkG 1 HkG 804 01;215,0;St;gaeb-flat;Leistungsverzeichnis\A205270104 24.07.2026.D83
+01040120;Carpinus betulus liefern 3j.v.S. 1/2 50-8 VkG 1 HkG 806 01;400,0;St;gaeb-flat;Leistungsverzeichnis\A205270104 24.07.2026.D83
+01040130;Sorbus aucuparia liefern 2j.v.S 1/1 50-80 VkG 1;390,0;St;gaeb-flat;Leistungsverzeichnis\A205270104 24.07.2026.D83
+01040140;Corylus avellana liefern 2j.v.S 1/1 50-80 VkG 1;380,0;St;gaeb-flat;Leistungsverzeichnis\A205270104 24.07.2026.D83
+01040150;Crataegus laevigata liefern 2j.v.S 1/1 50-80 VkG 1;380,0;St;gaeb-flat;Leistungsverzeichnis\A205270104 24.07.2026.D83
+01040160;Crataegus monogyna liefern 2j.v.S 1/1 50-80 VkG 1;380,0;St;gaeb-flat;Leistungsverzeichnis\A205270104 24.07.2026.D83
+01040170;Euonymus europaeus liefern 2j.v.S 1/1 50-80 VkG 1;380,0;St;gaeb-flat;Leistungsverzeichnis\A205270104 24.07.2026.D83
+01040180;Prunus spinosa liefern 2j.v.S 1/1 50-80 VkG 1;380,0;St;gaeb-flat;Leistungsverzeichnis\A205270104 24.07.2026.D83
+01040190;Rosa canina liefern 2jv.S. 1/1 50-80 VkG 1;380,0;St;gaeb-flat;Leistungsverzeichnis\A205270104 24.07.2026.D83
+01040200;Sambucus nigra liefern 2j.v.S 1/1 50-80 VkG 1;205,0;St;gaeb-flat;Leistungsverzeichnis\A205270104 24.07.2026.D83
+01050010;Einschlagplatz f. Gehölze einricht. Fläche AN;1,0;Psch;gaeb-flat;Leistungsverzeichnis\A205270104 24.07.2026.D83
+01050020;Gehölze ohne Ballen einschlagen J, l.Hei, Str;4305,0;St;gaeb-flat;Leistungsverzeichnis\A205270104 24.07.2026.D83
+01060010;Zul.Herstell.u.Pflege.a.st.Flächen Böschung/Senke E 1-1;1,0;Psch;gaeb-flat;Leistungsverzeichnis\A205270104 24.07.2026.D83
+01060020;Bodenverb.stoff Wasserspeichergranulat m. Hydrogelen liefern;220,0;kg;gaeb-flat;Leistungsverzeichnis\A205270104 24.07.2026.D83
+01060030;Dünger für Gehölze liefern J, lStr, lHei Hornspäne;270,0;kg;gaeb-flat;Leistungsverzeichnis\A205270104 24.07.2026.D83
+01060040;Gehölzwurzeln in Schutzlös. tauchen Natriumalginat l.Hei, l.Str, J;4305,0;St;gaeb-flat;Leistungsverzeichnis\A205270104 24.07.2026.D83
+01060050;Gehölz pflanzen l.Hei, l.Str.,J. Loch 20x20x30 cm Bodenverbess./Dünger;3890,0;St;gaeb-flat;Leistungsverzeichnis\A205270104 24.07.2026.D83
+01060060;Gehölz pflanzen l.Hei, l.Str.,J. Loch 30x30x30 cm Bodenverbess./Dünger;415,0;St;gaeb-flat;Leistungsverzeichnis\A205270104 24.07.2026.D83
+01060070;Rindenmulch liefern, RAL-GZ 250/1-1;27,0;m3;gaeb-flat;Leistungsverzeichnis\A205270104 24.07.2026.D83
+01060080;Pflanzscheibe mulchen Pflanzsch. DU 40 Nadelholzrinde Dicke 5 cm;4305,0;St;gaeb-flat;Leistungsverzeichnis\A205270104 24.07.2026.D83
+01070010;Zaun aufnehmen Biotopschutzzaun Höhe 1,50-2,00 m Pfosten Metall;185,0;m;gaeb-flat;Leistungsverzeichnis\A205270104 24.07.2026.D83
+01070020;Zul. stark eingewachsenen Biotopschutzzaun aufnehmen;40,0;m;gaeb-flat;Leistungsverzeichnis\A205270104 24.07.2026.D83
+01070030;Wildschutzzaun herstellen H.2,0m Pf.L.2,6m Pfahlabst. 3 m Ku.pf.D80;240,0;m;gaeb-flat;Leistungsverzeichnis\A205270104 24.07.2026.D83
+01070040;Pfostenverstrebung herstellen Strebe f.H.2,00 Kunstst.D8-10grau;20,0;St;gaeb-flat;Leistungsverzeichnis\A205270104 24.07.2026.D83
+01070050;Pfosten in Beton setzen (Zulage) Böschungen D.30/60cm Bodenklasse 3-5;36,0;St;gaeb-flat;Leistungsverzeichnis\A205270104 24.07.2026.D83
+01070060;Tor für Wildschutzzaun herstellen Rahmenhöhe 2,00m Rohr D48zweifl.4 Ge;1,0;St;gaeb-flat;Leistungsverzeichnis\A205270104 24.07.2026.D83
+01070070;Zaun aufnehmen Wildschutzzaun Höhe 1,50-2,00 m Pfost.Kunststoff;245,0;m;gaeb-flat;Leistungsverzeichnis\A205270104 24.07.2026.D83
+01070080;Verbissschutzzaun herst.u.unterh. Kn.gefl.25 Dräht Gefl. umkl. u. bef.;270,0;m;gaeb-flat;Leistungsverzeichnis\A205270104 24.07.2026.D83
+01070090;Tor herstellen u. unterhalten 1-2 Schwebepfähl Zaunfeldlänge;2,0;St;gaeb-flat;Leistungsverzeichnis\A205270104 24.07.2026.D83
+01070100;Verbissschutzzaun abbauen Höhe Gefl. 2,00 m Metall Pfahl 2,50 m Pfahla;270,0;m;gaeb-flat;Leistungsverzeichnis\A205270104 24.07.2026.D83
+01070110;Verbiss-/Fegeschutz herst.u.unterh. Drahthose m. H. Höhe 1,50 m eingra;10,0;St;gaeb-flat;Leistungsverzeichnis\A205270104 24.07.2026.D83
+01070120;Verbiss-/Fegeschutz herst.u.unterh. Drahthose m. H. Höhe 1,00 m eingra;40,0;St;gaeb-flat;Leistungsverzeichnis\A205270104 24.07.2026.D83
+01070130;Schutzvorrichtung entfernen Drahth./K.mansch;50,0;St;gaeb-flat;Leistungsverzeichnis\A205270104 24.07.2026.D83
+01070140;Begrenzungspfähle setzen Stieleiche Pfahl 2,00 m Zopf-DU 12-16 cm;54,0;St;gaeb-flat;Leistungsverzeichnis\A205270104 24.07.2026.D83
+01070150;Wundstreifen anlegen geschl.Pflanzendecke/Rohboden grubbern u. fräsen;700,0;m2;gaeb-flat;Leistungsverzeichnis\A205270104 24.07.2026.D83
+01080010;Bestandsunterlagen liefern Bestandspläne;1,0;Psch;gaeb-flat;Leistungsverzeichnis\A205270104 24.07.2026.D83
+01090010;Gehölzfläche pflegen über 0,5-1 St/m2 1. Pflegegang Fertigst.pflege Zw;6431,0;m2;gaeb-flat;Leistungsverzeichnis\A205270104 24.07.2026.D83
+01090020;Gehölzfläche pflegen über 0,5-1 St/m2 2. Pflegegang Fertigst.pflege Zw;6431,0;m2;gaeb-flat;Leistungsverzeichnis\A205270104 24.07.2026.D83
+01090030;Extensivfläche mähen Krautsaum ganzflächig 1. Pflegegang Balkenmäher;610,0;m2;gaeb-flat;Leistungsverzeichnis\A205270104 24.07.2026.D83
+01090040;Extensivfläche mähen Krautsaum ganzflächig 2. Pflegegang Balkenmäher;610,0;m2;gaeb-flat;Leistungsverzeichnis\A205270104 24.07.2026.D83
+01090050;Extensivfläche mähen Bösch./Senke ganzflächig 1. Pflegegang Freischnei;900,0;m2;gaeb-flat;Leistungsverzeichnis\A205270104 24.07.2026.D83
+01090060;Extensivfläche mähen Bösch./Senke ganzflächig 1. Pflegegang Freischnei;900,0;m2;gaeb-flat;Leistungsverzeichnis\A205270104 24.07.2026.D83
+01090070;Wässerungsgang durchführen Jungpfl.+Sträche F.-pflege >=10 l je Pflanz;8,0;St;gaeb-flat;Leistungsverzeichnis\A205270104 24.07.2026.D83
+01090080;Düngungsgang durchführen Hornspäne 20g je Gehölz;1,0;St;gaeb-flat;Leistungsverzeichnis\A205270104 24.07.2026.D83
+01090090;Mäusebekämpfung in Gehölzflächen;6431,0;m2;gaeb-flat;Leistungsverzeichnis\A205270104 24.07.2026.D83
+01100010;Wundstreifen unterhalten grubbern u. fräsen;700,0;m2;gaeb-flat;Leistungsverzeichnis\A205270104 24.07.2026.D83
+01100020;Gehölzfläche pflegen über 0,5-1 St/m2 1. Pflegegang E.-pflege 1. Jah Z;6431,0;m2;gaeb-flat;Leistungsverzeichnis\A205270104 24.07.2026.D83
+01100030;Gehölzfläche pflegen über 0,5-1 St/m2 2. Pflegegang E.-pflege 1. Jah Z;6431,0;m2;gaeb-flat;Leistungsverzeichnis\A205270104 24.07.2026.D83
+01100040;Extensivfläche mähen Krautsaum ganzflächig 1. Pflegegang Balkenmäher;610,0;m2;gaeb-flat;Leistungsverzeichnis\A205270104 24.07.2026.D83
+01100050;Extensivfläche mähen Krautsaum ganzflächig 2. Pflegegang Balkenmäher;610,0;m2;gaeb-flat;Leistungsverzeichnis\A205270104 24.07.2026.D83
+01100060;Extensivfläche mähen Bösch./Senke ganzflächig 1. Pflegegang Freischnei;900,0;m2;gaeb-flat;Leistungsverzeichnis\A205270104 24.07.2026.D83
+01100070;Extensivfläche mähen Bösch./Senke ganzflächig 1. Pflegegang Freischnei;900,0;m2;gaeb-flat;Leistungsverzeichnis\A205270104 24.07.2026.D83
+01100080;Wässerungsgang durchführen Jungpfl.+Sträche E.-pflege 1. Jah >=10 l je;8,0;St;gaeb-flat;Leistungsverzeichnis\A205270104 24.07.2026.D83
+01100090;Mäusebekämpfung in Gehölzflächen;6431,0;m2;gaeb-flat;Leistungsverzeichnis\A205270104 24.07.2026.D83
+01110010;Wundstreifen unterhalten grubbern u. fräsen;700,0;m2;gaeb-flat;Leistungsverzeichnis\A205270104 24.07.2026.D83
+01110020;Gehölzfläche pflegen über 0,5-1 St/m2 1. Pflegegang E.-pflege 2. Jah Z;6431,0;m2;gaeb-flat;Leistungsverzeichnis\A205270104 24.07.2026.D83
+01110030;Gehölzfläche pflegen über 0,5-1 St/m2 2. Pflegegang E.-pflege 2. Jah Z;6431,0;m2;gaeb-flat;Leistungsverzeichnis\A205270104 24.07.2026.D83
+01110040;Extensivfläche mähen Krautsaum ganzflächig 1. Pflegegang Balkenmäher;610,0;m2;gaeb-flat;Leistungsverzeichnis\A205270104 24.07.2026.D83
+01110050;Extensivfläche mähen Krautsaum ganzflächig 2. Pflegegang Balkenmäher;610,0;m2;gaeb-flat;Leistungsverzeichnis\A205270104 24.07.2026.D83
+01110060;Extensivfläche mähen Bösch./Senke ganzflächig 1. Pflegegang Freischnei;900,0;m2;gaeb-flat;Leistungsverzeichnis\A205270104 24.07.2026.D83
+01110070;Extensivfläche mähen Bösch./Senke ganzflächig 1. Pflegegang Freischnei;900,0;m2;gaeb-flat;Leistungsverzeichnis\A205270104 24.07.2026.D83
+01110080;Wässerungsgang durchführen Jungpfl.+Sträche E.-pflege 2. Jah >=10 l je;5,0;St;gaeb-flat;Leistungsverzeichnis\A205270104 24.07.2026.D83
+01110090;Düngungsgang durchführen Hornspäne 20g je Gehölz;1,0;St;gaeb-flat;Leistungsverzeichnis\A205270104 24.07.2026.D83
+01110100;Mäusebekämpfung in Gehölzflächen;6431,0;m2;gaeb-flat;Leistungsverzeichnis\A205270104 24.07.2026.D83
+01110110;Maßnahmenfläche entkusseln nichtheim. Arten Aufw. bis 15 v.H Höhe<=5 m;9627,0;m2;gaeb-flat;Leistungsverzeichnis\A205270104 24.07.2026.D83

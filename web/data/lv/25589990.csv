@@ -1,0 +1,19 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+11.10;Baustelleneinrichtung und -räumung;1,0;psch;gaeb-flat;Leistungsverzeichnis\gaeb_datei.D83
+11.20;Stahltragwerk - Lieferung und Montage;22,0;t;gaeb-flat;Leistungsverzeichnis\gaeb_datei.D83
+11.30;Zulage Stahltragkonstruktion, verzinkt;4,0;t;gaeb-flat;Leistungsverzeichnis\gaeb_datei.D83
+11.40;Verankerung der Stahlkonstruktion an Betonbauteilen;1,0;psch;gaeb-flat;Leistungsverzeichnis\gaeb_datei.D83
+11.50;Brandschutzbeschichtung Stahltragwerk R30;215,0;m²;gaeb-flat;Leistungsverzeichnis\gaeb_datei.D83
+11.60;Brandschutz - Nacharbeiten auf der Baustelle;1,0;psch;gaeb-flat;Leistungsverzeichnis\gaeb_datei.D83
+11.70;Korrosionsschutz für nicht brandschutzbeschichtete Bauteile;100,0;m²;gaeb-flat;Leistungsverzeichnis\gaeb_datei.D83
+11.80;Anbauteile konstruktiv außerhalb Statik;2,8;t;gaeb-flat;Leistungsverzeichnis\gaeb_datei.D83
+11.90;Thermische Trennung Profilstahl QRO 80 und 60;18,0;St;gaeb-flat;Leistungsverzeichnis\gaeb_datei.D83
+11100;Statik/Werkzeichnungen;1,0;psch;gaeb-flat;Leistungsverzeichnis\gaeb_datei.D83
+12.10;Wandhandläufe;35,0;m;gaeb-flat;Leistungsverzeichnis\gaeb_datei.D83
+12.20;Bögen, Zulage;6,0;St;gaeb-flat;Leistungsverzeichnis\gaeb_datei.D83
+12.30;Geländer;6,0;m;gaeb-flat;Leistungsverzeichnis\gaeb_datei.D83
+12.40;Bögen, Zulage;1,0;St;gaeb-flat;Leistungsverzeichnis\gaeb_datei.D83
+13.10;Helferstunden;5,0;h;gaeb-flat;Leistungsverzeichnis\gaeb_datei.D83
+13.20;Facharbeiterstunden;5,0;h;gaeb-flat;Leistungsverzeichnis\gaeb_datei.D83
+13.30;Kernbohrung Beton;4,0;St;gaeb-flat;Leistungsverzeichnis\gaeb_datei.D83
+13.40;Doku- und Revisionsunterlagen;1,0;St;gaeb-flat;Leistungsverzeichnis\gaeb_datei.D83

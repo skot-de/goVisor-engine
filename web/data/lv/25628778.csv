@@ -1,0 +1,51 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+00000001;Baustelle einrichten Sämtl.LV-Abschn.*Zufahrt vorh.;1,0;Psch;gaeb-flat;Leistungsverzeichnis\LV Bau.D83
+00000002;Baustelle räumen Sämtl. LV-Abschn.;1,0;Psch;gaeb-flat;Leistungsverzeichnis\LV Bau.D83
+00010001;Absteckung der Flächen;1,0;Psch;gaeb-flat;Leistungsverzeichnis\LV Bau.D83
+00010002;digitales Aufmaß;1,0;Psch;gaeb-flat;Leistungsverzeichnis\LV Bau.D83
+00010003;Statischer Plattendruckversuch;10,0;St;gaeb-flat;Leistungsverzeichnis\LV Bau.D83
+00010004;Bestandsplan und Abrechnungsplan;1,0;Psch;gaeb-flat;Leistungsverzeichnis\LV Bau.D83
+00020001;VAO/ Verkehrszeichenpläne;1,0;Psch;gaeb-flat;Leistungsverzeichnis\LV Bau.D83
+00020002;Verkehrssich. läng. Dauer aufbauen Arbeitsstelle*... Freitext ... auß. Kraft setzen*Anordnung Unt. AG;1,0;Psch;gaeb-flat;Leistungsverzeichnis\LV Bau.D83
+00020003;Verkehrssicherung umbauen außer/in Kraft s.*Anordnung Unt. AG;1,0;Psch;gaeb-flat;Leistungsverzeichnis\LV Bau.D83
+00020004;Verkehrssich. läng. Dauer vorhalten wie Vorposition;21,0;d;gaeb-flat;Leistungsverzeichnis\LV Bau.D83
+00020005;Verkehrssich. läng. Dauer abbauen ... Freitext ...*in Kraft setzen;1,0;Psch;gaeb-flat;Leistungsverzeichnis\LV Bau.D83
+01000001;Oberboden abtragen ... Freitext ...*... Freitext ... Oberb.Verw. AN*Abrechnung Abtrag;550,0;m3;gaeb-flat;Leistungsverzeichnis\LV Bau.D83
+01000002;Boden bzw. Fels lösen und verwerten ... Freitext ...*profilg. lösen Planum gesondert*... Freitext ... Abrechnung Abtrag;5000,0;m3;gaeb-flat;Leistungsverzeichnis\LV Bau.D83
+01000003;Boden bzw. Fels lösen und einbauen ... Freitext ...*... Freitext ... Planum gesondert*Abrechnung Abtrag;250,0;m3;gaeb-flat;Leistungsverzeichnis\LV Bau.D83
+01000004;Planum herstellen Ev2 = 45 MPa;2700,0;m2;gaeb-flat;Leistungsverzeichnis\LV Bau.D83
+01000005;Böschung herstellen;750,0;m2;gaeb-flat;Leistungsverzeichnis\LV Bau.D83
+01010001;Frostschutzschicht herstellen ... Freitext ...*Feinanteil UF 3 ... Freitext ...*URA+Einbaudoku ... Freitext ...*... Freitext ... Abrechng. Auftrag;550,0;m3;gaeb-flat;Leistungsverzeichnis\LV Bau.D83
+01010002;Geotextil als Trennschicht verlegen Nutz.Dauer temp.*pH 4-9 ... Freitext ...*GRK 5 verlegen quer*verl. bis 8 v.H. Abr. Überdeckung;2700,0;m2;gaeb-flat;Leistungsverzeichnis\LV Bau.D83
+01020001;Bauzaun aufstellen und  entfernen Zaunhöhe 2,0 m*Stahlgitter-FT;350,0;m;gaeb-flat;Leistungsverzeichnis\LV Bau.D83
+01020002;Bauzauntor mit Rolle 2x2,2m für PKW;2,0;St;gaeb-flat;Leistungsverzeichnis\LV Bau.D83
+01020003;Bauzauntor 2x1,2m;2,0;St;gaeb-flat;Leistungsverzeichnis\LV Bau.D83
+01020004;Natodraht auf Bauzaun;350,0;m;gaeb-flat;Leistungsverzeichnis\LV Bau.D83
+01020005;Bauzaun vorhalten;6,0;Mt;gaeb-flat;Leistungsverzeichnis\LV Bau.D83
+01020006;Beschädigte Bauzaunelemente;10,0;m;gaeb-flat;Leistungsverzeichnis\LV Bau.D83
+01030001;Frostschutzschicht herstellen ... Freitext ...*Feinanteil UF 3 ... Freitext ...*URA+Einbaudoku ... Freitext ...*... Freitext ... Abrechng. Auftrag;75,0;m3;gaeb-flat;Leistungsverzeichnis\LV Bau.D83
+01030002;Oberboden abtragen ... Freitext ...*... Freitext ... Oberb.Verw. AN*Abrechnung Abtrag;75,0;m3;gaeb-flat;Leistungsverzeichnis\LV Bau.D83
+01030003;Geotextil als Trennschicht verlegen Nutz.Dauer temp.*pH 4-9 GRK 5*verlegen quer Abr. Überdeckung;250,0;m2;gaeb-flat;Leistungsverzeichnis\LV Bau.D83
+02000001;Oberboden abtragen ... Freitext ...*... Freitext ... Oberb.Verw. AN*Abrechnung Abtrag;120,0;m3;gaeb-flat;Leistungsverzeichnis\LV Bau.D83
+02000002;Boden bzw. Fels lösen und verwerten ... Freitext ...*profilg. lösen Planum gesondert*... Freitext ... Abrechnung Abtrag*Verwertung nachw.;120,0;m3;gaeb-flat;Leistungsverzeichnis\LV Bau.D83
+02000003;Planum herstellen Ev2 = 45 MPa;600,0;m2;gaeb-flat;Leistungsverzeichnis\LV Bau.D83
+02000004;Frostschutzschicht herstellen ... Freitext ...*Feinanteil UF 3 ... Freitext ...*URA+Einbaudoku ... Freitext ...*... Freitext ... Abrechng. Auftrag;180,0;m3;gaeb-flat;Leistungsverzeichnis\LV Bau.D83
+02000005;Geotextil als Trennschicht verlegen Nutz.Dauer temp.*pH 4-9 ... Freitext ...*GRK 5 verlegen quer*verl. bis 8 v.H. Abr. Überdeckung;400,0;m2;gaeb-flat;Leistungsverzeichnis\LV Bau.D83
+02000006;Frostschutzschicht herstellen ... Freitext ...*Feinanteil UF 3 ... Freitext ...*URA+Einbaudoku DPr min. 100 v.H.*... Freitext ... Abrechng. Auftrag;180,0;m3;gaeb-flat;Leistungsverzeichnis\LV Bau.D83
+02000007;Baustoff an Aufstellfläche einbauen;550,0;m3;gaeb-flat;Leistungsverzeichnis\LV Bau.D83
+02010001;Frostschutzschicht herstellen ... Freitext ...*Feinanteil UF 3 0/45*URA+Einbaudoku ... Freitext ...*... Freitext ... Abrechng. Auftrag;120,0;m3;gaeb-flat;Leistungsverzeichnis\LV Bau.D83
+02010002;Geotextil als Trennschicht verlegen Nutz.Dauer temp.*pH 4-9 ... Freitext ...*GRK 5 verlegen quer*verl. bis 8 v.H. Abr. Überdeckung;400,0;m2;gaeb-flat;Leistungsverzeichnis\LV Bau.D83
+02010003;Frostschutzschicht herstellen ... Freitext ...*Feinanteil UF 3 ... Freitext ...*URA+Einbaudoku DPr min. 100 v.H.*... Freitext ... Abrechng. Auftrag;120,0;m3;gaeb-flat;Leistungsverzeichnis\LV Bau.D83
+02010004;Oberboden abtragen ... Freitext ...*... Freitext ... Oberb.Verw. AN*Abrechnung Abtrag;110,0;m3;gaeb-flat;Leistungsverzeichnis\LV Bau.D83
+02010005;Planum herstellen Ev2 = 45 MPa;400,0;m2;gaeb-flat;Leistungsverzeichnis\LV Bau.D83
+02010006;Betonrohrleitung herstellen Rohr DN 1000*Stahlbeton-RohrKF Dichtung*Bettung Typ 1 ... Freitext ...*... Freitext ...;12,0;m;gaeb-flat;Leistungsverzeichnis\LV Bau.D83
+02010007;Böschungsstück einbauen (Zul.) Rohr DN 1000*Stahlbeton-Rohr Anlauf 1 zu 2;2,0;St;gaeb-flat;Leistungsverzeichnis\LV Bau.D83
+02010008;Entwässerungsrohrleitung abbrechen Rohr DN ü.250-500*Stahlbeton-Rohr Tiefe bis 1,25 m*Ausb. verwerten;4,0;m;gaeb-flat;Leistungsverzeichnis\LV Bau.D83
+03000001;Planum herstellen Ev2 = 45 MPa;3000,0;m2;gaeb-flat;Leistungsverzeichnis\LV Bau.D83
+03000002;Boden bzw. Fels lösen und verwerten ... Freitext ...*profilg. lösen Planum gesondert*... Freitext ... Abrechnung Abtrag*Verwertung nachw.;600,0;m3;gaeb-flat;Leistungsverzeichnis\LV Bau.D83
+03000003;Geotextil als Trennschicht verlegen Nutz.Dauer temp.*pH 4-9 ... Freitext ...*GRK 5 verlegen quer*verl. bis 8 v.H. Abr. Überdeckung;3000,0;m2;gaeb-flat;Leistungsverzeichnis\LV Bau.D83
+03000004;Frostschutzschicht herstellen ... Freitext ...*Feinanteil UF 3 0/45*URA+Einbaudoku ... Freitext ...*... Freitext ... Abrechng. Auftrag;600,0;m3;gaeb-flat;Leistungsverzeichnis\LV Bau.D83
+03010001;Planum herstellen Ev2 = 45 MPa;1300,0;m2;gaeb-flat;Leistungsverzeichnis\LV Bau.D83
+03010002;Boden bzw. Fels lösen und verwerten ... Freitext ...*profilg. lösen Planum gesondert*... Freitext ... Abrechnung Abtrag*Verwertung nachw.;300,0;m3;gaeb-flat;Leistungsverzeichnis\LV Bau.D83
+03010003;Geotextil als Trennschicht verlegen Nutz.Dauer temp.*pH 4-9 ... Freitext ...*GRK 5 verlegen quer*verl. bis 8 v.H. Abr. Überdeckung;1300,0;m2;gaeb-flat;Leistungsverzeichnis\LV Bau.D83
+03010004;Frostschutzschicht herstellen ... Freitext ...*Feinanteil UF 3 0/45*URA+Einbaudoku ... Freitext ...*... Freitext ... Abrechng. Auftrag;260,0;m3;gaeb-flat;Leistungsverzeichnis\LV Bau.D83

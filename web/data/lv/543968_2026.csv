@@ -1,0 +1,91 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+1.1.10;Baustelleneinrichtung;1,0;psch;gaeb-flat;LV Abdichtung_Altbau_.D83
+1.1.20;Mobiltoilette;1,0;Stck;gaeb-flat;LV Abdichtung_Altbau_.D83
+1.1.30;Vorhalten Mobiltoiletten inkl. Reinigung;10,0;StWo;gaeb-flat;LV Abdichtung_Altbau_.D83
+1.2.10;Bauzaun, H= 2,0m;80,0;m;gaeb-flat;LV Abdichtung_Altbau_.D83
+1.2.20;Verlängerung Vorhaltung Bauzaun;800,0;mWo;gaeb-flat;LV Abdichtung_Altbau_.D83
+1.2.30;Bauzaun-Tor;1,0;Stck;gaeb-flat;LV Abdichtung_Altbau_.D83
+1.2.40;Verlängerung Vorhaltung Bauzaun-Tor;10,0;StWo;gaeb-flat;LV Abdichtung_Altbau_.D83
+1.2.50;Bauzaun umsetzen;25,0;m;gaeb-flat;LV Abdichtung_Altbau_.D83
+1.2.60;Baustellenbeschilderung;1,0;psch;gaeb-flat;LV Abdichtung_Altbau_.D83
+1.2.70;Bauzaunsicherung mit Schloss und Kette;1,0;Stck;gaeb-flat;LV Abdichtung_Altbau_.D83
+1.2.80;Wegesicherung mit Warn- und Blinkleuchten;1,0;Stck;gaeb-flat;LV Abdichtung_Altbau_.D83
+1.2.90;Vorhalten Warn- und Blinkleuchten;10,0;StWo;gaeb-flat;LV Abdichtung_Altbau_.D83
+1.3.10;Genehmigung für Fußwegsperrung;1,0;psch;gaeb-flat;LV Abdichtung_Altbau_.D83
+2.1.10;Hecken und Buschwerk roden;50,0;m²;gaeb-flat;LV Abdichtung_Altbau_.D83
+2.1.20;Pflaster aufnehmen, lagern;100,0;m²;gaeb-flat;LV Abdichtung_Altbau_.D83
+2.2.10;Aushub, Baugrube, Bkl 3-4;250,0;m³;gaeb-flat;LV Abdichtung_Altbau_.D83
+2.2.20;Zulage Aushub am Bauwerk;100,0;m²;gaeb-flat;LV Abdichtung_Altbau_.D83
+2.2.30;Zulage Handschachtung;25,0;m³;gaeb-flat;LV Abdichtung_Altbau_.D83
+2.2.40;Böschungen sichern, PE-Folie;100,0;m²;gaeb-flat;LV Abdichtung_Altbau_.D83
+2.2.50;Bodenentsorgung, Z0;1,0;to;gaeb-flat;LV Abdichtung_Altbau_.D83
+2.2.60;Bodenentsorgung, Z1.1;1,0;to;gaeb-flat;LV Abdichtung_Altbau_.D83
+2.2.70;Bodenentsorgung, Z1.2;1,0;to;gaeb-flat;LV Abdichtung_Altbau_.D83
+2.2.80;Bodenentsorgung, Z2;1,0;to;gaeb-flat;LV Abdichtung_Altbau_.D83
+2.2.90;Arbeitsraumverfüllung, Lagermaterial;250,0;m³;gaeb-flat;LV Abdichtung_Altbau_.D83
+2.2.100;Arbeitsraumverfüllung, Liefermaterial, Kiessand;1,0;m³;gaeb-flat;LV Abdichtung_Altbau_.D83
+2.2.110;Arbeitsraumverfüllung, Liefermat. Mineralgemisch 0/45;1,0;m³;gaeb-flat;LV Abdichtung_Altbau_.D83
+2.2.120;Arbeitsraumverfüllung, Liefermat. FSS-Schotter 0/45;1,0;m³;gaeb-flat;LV Abdichtung_Altbau_.D83
+2.2.130;Noppenschutzbahn mit Drainagevlies;220,0;m²;gaeb-flat;LV Abdichtung_Altbau_.D83
+2.3.10;Fläche Feinplanum;30,0;m²;gaeb-flat;LV Abdichtung_Altbau_.D83
+2.3.20;Klinker-,Betonsteinpflaster wiedereinbau;30,0;m²;gaeb-flat;LV Abdichtung_Altbau_.D83
+2.3.30;Nachsandung der Fugen;30,0;m²;gaeb-flat;LV Abdichtung_Altbau_.D83
+2.3.40;Nasstrennschnitte an Pflastersteinen;20,0;m;gaeb-flat;LV Abdichtung_Altbau_.D83
+2.3.50;Kiesstreifen;20,0;m;gaeb-flat;LV Abdichtung_Altbau_.D83
+3.1.10;Untergrund reinigen;220,0;m²;gaeb-flat;LV Abdichtung_Altbau_.D83
+3.1.20;Spezialgrundierung;220,0;m²;gaeb-flat;LV Abdichtung_Altbau_.D83
+3.1.30;Hohlkehle, außen;90,0;m;gaeb-flat;LV Abdichtung_Altbau_.D83
+3.1.40;Egalisierungs- und Abdichtungsspachtel;220,0;m²;gaeb-flat;LV Abdichtung_Altbau_.D83
+3.1.50;Sockelabdichtung/Dichtungsschlämme;220,0;m;gaeb-flat;LV Abdichtung_Altbau_.D83
+3.1.60;Kratzspachtelung/Kontaktschicht;220,0;m²;gaeb-flat;LV Abdichtung_Altbau_.D83
+3.1.70;Wandabdichtung;220,0;m²;gaeb-flat;LV Abdichtung_Altbau_.D83
+4.1.10;Stundenlohnarbeiten, Vorarbeiter;5,0;h;gaeb-flat;LV Abdichtung_Altbau_.D83
+4.1.20;Stundenlohnarbeiten, Facharbeiter;10,0;h;gaeb-flat;LV Abdichtung_Altbau_.D83
+4.1.30;Stundenlohnarbeiten, Helfer;10,0;h;gaeb-flat;LV Abdichtung_Altbau_.D83
+4.1.40;Std Bagger bis 0,6 cbm;1,0;h;gaeb-flat;LV Abdichtung_Altbau_.D83
+4.1.50;Std Bagger über 0,6 cbm;1,0;h;gaeb-flat;LV Abdichtung_Altbau_.D83
+10;Für alle Arbeiten und Titel gilt für das Einrichten der Baustelle die VOB DIN 18299 Pkt. 4.1.1, wenn nicht anders beschrieben.;1,0;psch;gaeb;LV Abdichtung_Altbau__V32.X83
+20;Lieferung, Aufstellung und Abholung von Mobiltoiletten.;1,0;Stck;gaeb;LV Abdichtung_Altbau__V32.X83
+30;Vorhalten von Mobiltoiletten inkl. wöchentlicher Reinigung und Leerung nach erfordernis.;10,0;StWo;gaeb;LV Abdichtung_Altbau__V32.X83
+10;Bauzaun aus mobilen Stahlrahmenelementen mit Rundstahlfüllstäben, Stützfüßen aus Beton, inkl. sämtlicher Verbindungen, Kupplungen etc..;80,0;m;gaeb;LV Abdichtung_Altbau__V32.X83
+20;Verlängerung der Vorhaltung des Bauzaunes 1 Woche/Meter.;800,0;mWo;gaeb;LV Abdichtung_Altbau__V32.X83
+30;Bauzaun-Tor, verschließbar, zweiflügelig, passend zum Bauzaun, verschließbar z.B. mit Zahlenschloss,;1,0;Stck;gaeb;LV Abdichtung_Altbau__V32.X83
+40;Verlängerung der Vorhaltung des Bauzaun-Tores 1 Stück/Woche.;10,0;StWo;gaeb;LV Abdichtung_Altbau__V32.X83
+50;Bauzaun während der Ausführungszeit der vertraglichen Leistungen des AN nach besonderer Anordnung des AG umsetzen.;25,0;m;gaeb;LV Abdichtung_Altbau__V32.X83
+60;Lieferung, Montage und Vorhaltung einer Baustellenbeschilderung bestehend aus:;1,0;psch;gaeb;LV Abdichtung_Altbau__V32.X83
+70;Vorhängeschloss mit Kette und Zahlencode zur Sicherung des Bauzaunes liefern und montieren.;1,0;Stck;gaeb;LV Abdichtung_Altbau__V32.X83
+80;Warn und Blinkleuchten an Bauzaun zus Sicherun der Baustelle im öffentlichen Wegebereich, austellen und später abbauen.;1,0;Stck;gaeb;LV Abdichtung_Altbau__V32.X83
+90;Vorhalten von Warn- und Blinkleuchten, abrechnung pro Stück pro Woche.;10,0;StWo;gaeb;LV Abdichtung_Altbau__V32.X83
+10;Einholung und Errichtung notwendiger Wegsperrung für arbeiten im Fußwegbereich.;1,0;psch;gaeb;LV Abdichtung_Altbau__V32.X83
+10;Hecken und Buschwerk jeder Art mit Wurzelwerk roden.;50,0;m²;gaeb;LV Abdichtung_Altbau__V32.X83
+20;Klinker-,Betonsteinpflaster, D= bis 10cm einschl. Bettungsmaterial aufnehmen und seitlich lagern zum wiedereinbau.;100,0;m²;gaeb;LV Abdichtung_Altbau__V32.X83
+10;Profilgerechter Aushub der anstehenden Bödenunter verdichtetem Oberbelag bis auf eine Tiefe von 3,50m, Bodenklasse 3-4.;250,0;m³;gaeb;LV Abdichtung_Altbau__V32.X83
+20;Zulage für die Erschwernis des Baugrubenaushubes an einer Kellerwand. Abrechung nach Fläche der Außenwand.;100,0;m²;gaeb;LV Abdichtung_Altbau__V32.X83
+30;Zulage für die Ausführung des Bodenaushubs in Handschachtung im Bereich von vorhandenen Leitungen oder zur Auskofferungen am Bestand.;25,0;m³;gaeb;LV Abdichtung_Altbau__V32.X83
+40;Böschungen mit PE-Folie abdecken und Erdankern und Latten sichern.;100,0;m²;gaeb;LV Abdichtung_Altbau__V32.X83
+50;Aufnehmen, Verladen und Transport zu passender Entsorgungsanlage, inkl. Entsorgungsgebühren LAGA Z0, von Fremdbestandteilen bis zu 15% muss ausgegangen werden.;1,0;to;gaeb;LV Abdichtung_Altbau__V32.X83
+60;Aufnehmen, Verladen und Transport zu passender Entsorgungsanlage, inkl. Entsorgungsgebühren LAGA Z1.1, von Fremdbestandteilen bis zu 15% muss ausgegangen werden.;1,0;to;gaeb;LV Abdichtung_Altbau__V32.X83
+70;Aufnehmen, Verladen und Transport zu passender Entsorgungsanlage gemäß Gutachten, inkl. Entsorgungsgebühren LAGA Z1.2, von Fremdbestandteilen bis zu 15% muss ausgegangen werden.;1,0;to;gaeb;LV Abdichtung_Altbau__V32.X83
+80;Aufnehmen, Verladen und Transport zu passender Entsorgungsanlage gemäß Gutachten, inkl. Entsorgungsgebühren LAGA Z2, von Fremdbestandteilen bis zu 15% muss ausgegangen werden.;1,0;to;gaeb;LV Abdichtung_Altbau__V32.X83
+90;Verfüllen von Arbeitsräumen mit gelagertem Material, lagenseisem Verdichten.;250,0;m³;gaeb;LV Abdichtung_Altbau__V32.X83
+100;Verfüllen von Arbeitsräumen mit anzulieferndem, geeigneten verdichtungsfähigen Bodenmaterial, Sand oder Kies, einschl. lagenseisem Verdichten.;1,0;m³;gaeb;LV Abdichtung_Altbau__V32.X83
+110;Arbeitsraumverfüllung, Liefermat. Mineralgemisch 0/45;1,0;m³;gaeb;LV Abdichtung_Altbau__V32.X83
+120;Arbeitsraumverfüllung, Liefermat. FSS-Schotter 0/45;1,0;m³;gaeb;LV Abdichtung_Altbau__V32.X83
+130;Liefern und Anbringen einer Noppenschutzbahn mit;220,0;m²;gaeb;LV Abdichtung_Altbau__V32.X83
+10;Fläche Feinplanum, Abweichung von der Sollhöhe ± 1 cm,;30,0;m²;gaeb;LV Abdichtung_Altbau__V32.X83
+20;Bauseitig gelagertes Klinker-,Betonsteinpflaster wiedereinbauen, auf 3-5 cm Pflasterkies 0/8 mm;30,0;m²;gaeb;LV Abdichtung_Altbau__V32.X83
+30;Nachsandung der Fugen in mehreren Abschnitten;30,0;m²;gaeb;LV Abdichtung_Altbau__V32.X83
+40;Nasstrennschnitte an Pflastersteinen im Bereich von;20,0;m;gaeb;LV Abdichtung_Altbau__V32.X83
+50;Kiesstreifen am Gebäude herstellen;20,0;m;gaeb;LV Abdichtung_Altbau__V32.X83
+10;Eventuell vorhandenen Wandputz, Bitumen- oder Teeranstrich oder sonstigebehindernde Stoffe entfernen.;220,0;m²;gaeb;LV Abdichtung_Altbau__V32.X83
+20;Sulfatbeständige, mineralische;220,0;m²;gaeb;LV Abdichtung_Altbau__V32.X83
+30;Sulfatbeständige, mineralische;90,0;m;gaeb;LV Abdichtung_Altbau__V32.X83
+40;Egalisierungs-und Abdichtungsspachtel Offene Fugen, Mörteltaschen und Ausbruchstellen mit schwindkompensiertem und wasserundurchlässigem Egalisierungsspachtel vollflächig verschließen.;220,0;m²;gaeb;LV Abdichtung_Altbau__V32.X83
+50;Sockelabdichtung aus flexibler oder starrer Dichtungsschlämme im Spachtelverfahren auftragen.;220,0;m;gaeb;LV Abdichtung_Altbau__V32.X83
+60;2. Abdichtungslage Kontaktschicht aus 1-komp., flexibler oder starrer Dichtungsschlämme auf vorhandenem, fest auf dem Untergrund haftenden Egalisierungs- spachtel im Spritz- oder Spachtelverfahren auftragen.;220,0;m²;gaeb;LV Abdichtung_Altbau__V32.X83
+70;Nachträgliche Bauwerksabdichtung der Wandflächen gegen aufstauendes Sickerwasser mit 2-komp., kunststoff- modifizierter Bitumendickbeschichtung in 2 Arbeitsgängen unter mittiger Einarbeitung des Glasseidengewebes auftragen.;220,0;m²;gaeb;LV Abdichtung_Altbau__V32.X83
+10;Stundenlohnarbeiten für unvorhergesehene und zusätzliche Leistungen auf Anweisung des Bauherren.;5,0;h;gaeb;LV Abdichtung_Altbau__V32.X83
+20;Stundenlohnarbeiten für unvorhergesehene und zusätzliche Leistungen auf Anweisung des Bauherren.;10,0;h;gaeb;LV Abdichtung_Altbau__V32.X83
+30;Stundenlohnarbeiten für unvorhergesehene und zusätzliche Leistungen auf Anweisung des Bauherren.;10,0;h;gaeb;LV Abdichtung_Altbau__V32.X83
+40;Stundenlohnarbeit für Bagger;1,0;h;gaeb;LV Abdichtung_Altbau__V32.X83
+50;Stundenlohnarbeit für Bagger;1,0;h;gaeb;LV Abdichtung_Altbau__V32.X83

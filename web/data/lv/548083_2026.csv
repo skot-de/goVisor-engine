@@ -1,0 +1,148 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+0010;Zentrales RLT- Gerät für Küchenlüftung;1,0;St;gaeb;3938217.x83
+0020;Zentrales RLT- Gerät für Lüftung Mehrzweckraum;1,0;St;gaeb;3938217.x83
+0030;Inbetriebnahmen für die beiden vorgenannten Lüftungsgeräte;1,0;psch;gaeb;3938217.x83
+0040;Ersatz-Kassettenfilter F7 passen zu;2,0;St;gaeb;3938217.x83
+0050;Ersatz-Kassettenfilter M5 passen zu;2,0;St;gaeb;3938217.x83
+0060;Teleskopladereinsatz für Einbringung der Lüftungsgeräte;1,0;psch;gaeb;3938217.x83
+0070;Universeller EC-Lüfter mit integrierter Rückschlagklappe und;53,0;St;gaeb;3938217.x83
+0080;Zusatzplatine mit Feuchtesensor;53,0;St;gaeb;3938217.x83
+0090;Unterputzgehäuse für vorgenannten Lüfter;53,0;St;gaeb;3938217.x83
+0100;Montagebügel für vorgenanntes Unterputzgehäuse;53,0;St;gaeb;3938217.x83
+0110;Inbertriebnahme der vorgenannten Einzelraumlüfter.;1,0;psch;gaeb;3938217.x83
+0010;Flexibler Telefonieschalldämpfer;52,0;St;gaeb;3938217.x83
+0020;Rohrschalldämpfer DN 200 x 900;5,0;St;gaeb;3938217.x83
+0030;Rohrschalldämpfer DN 250 x 900;3,0;St;gaeb;3938217.x83
+0040;Regelungsbox DN 200 WH Küche allgemein;1,0;St;gaeb;3938217.x83
+0050;Regelungsbox DN 250 WH Küche AbL- Haube Spüler;1,0;St;gaeb;3938217.x83
+0060;Regelungsbox DN 250 WH Küche AbL- Haube Dämpfer;1,0;St;gaeb;3938217.x83
+0010;Außengerät R32, 12,3kW;1,0;St;gaeb;3938217.x83
+0020;Revisionsschalter (schwarz/grau) aus UV- und;1,0;St;gaeb;3938217.x83
+0030;Schwingungsdämpfer / Sockel;1,0;St;gaeb;3938217.x83
+0040;Ölprotektor;1,0;St;gaeb;3938217.x83
+0050;VRF-AHU connecting box 9-20kW, IPX4;1,0;St;gaeb;3938217.x83
+0060;Inbetriebnahme Kälteanlage durch den Hersteller;1,0;St;gaeb;3938217.x83
+0070;Hochwertiges, vorisoliertes Kupferrohr in Ringen für Klimainstallation.;43,0;m;gaeb;3938217.x83
+0080;Rohrbefestigung mit Kälteschelle,;86,0;St;gaeb;3938217.x83
+0090;Betonplatten mit einer Mindeststärke von 8 cm.;3,0;m2;gaeb;3938217.x83
+0010;Brandschutzklappe DN 160;1,0;St;gaeb;3938217.x83
+0020;Brandschutzklappe DN 200;3,0;St;gaeb;3938217.x83
+0030;Brandschutzklappe Rechteckig 500x250x305;2,0;St;gaeb;3938217.x83
+0040;Brandschutzklappe Rechteckig 500x250x305;2,0;St;gaeb;3938217.x83
+0050;Decken- und Schachtwandschott Brandschott DN 100;35,0;St;gaeb;3938217.x83
+0060;Decken- und Schachtwandschott Brandschott DN 125;16,0;St;gaeb;3938217.x83
+0070;Brandschutzklappe für Wandabschluss in;2,0;St;gaeb;3938217.x83
+0080;Brandschutzklappe für Wandabschluss in;2,0;St;gaeb;3938217.x83
+0090;Schließen von Fugen um Brandschutzklappen, gemäß;45,0;m;gaeb;3938217.x83
+0010;Schlitzauslass mit Enddeckel Abluft;2,0;St;gaeb;3938217.x83
+0020;Schlitzauslass ohne Enddeckel Abluft;8,0;St;gaeb;3938217.x83
+0030;Schlitzauslass mit Enddeckel Zuluft;2,0;St;gaeb;3938217.x83
+0040;Schlitzauslass ohne Enddeckel Zuluft;8,0;St;gaeb;3938217.x83
+0050;Schlitzauslass mit Enddeckel Zuluft;1,0;St;gaeb;3938217.x83
+0060;Schlitzauslass mit Enddeckel Zuluft;2,0;St;gaeb;3938217.x83
+0070;Deckenluftdurchlass mit quadratischem;1,0;St;gaeb;3938217.x83
+0080;Ablufthaube Haubenspülmaschine 1050x1100x300;1,0;St;gaeb;3938217.x83
+0090;Ablufthaube Kombidämpfer 1260x1070x300;1,0;St;gaeb;3938217.x83
+0100;Wetterschutzgitter in Schrägdachausführung;2,0;St;gaeb;3938217.x83
+0110;Wetterschutzgitter in Schrägdachausführung;2,0;St;gaeb;3938217.x83
+0010;Wickelfalzrohr verz.Stahl DN 100;282,0;m;gaeb;3938217.x83
+0020;Wickelfalzrohr verz.Stahl DN 125;5,0;m;gaeb;3938217.x83
+0030;Wickelfalzrohr verz.Stahl DN 150;16,0;m;gaeb;3938217.x83
+0040;Wickelfalzrohr verz.Stahl DN 160;6,0;m;gaeb;3938217.x83
+0050;Wickelfalzrohr verz.Stahl DN 200;23,0;m;gaeb;3938217.x83
+0060;Wickelfalzrohr verz.Stahl DN 250;7,0;m;gaeb;3938217.x83
+0070;Bogen 15° / 45° / 90° DN 100;218,0;St;gaeb;3938217.x83
+0080;Bogen 15° / 45° / 90° DN 125;6,0;St;gaeb;3938217.x83
+0090;Bogen 15° / 45° / 90° DN 150;16,0;St;gaeb;3938217.x83
+0100;Bogen 15° / 45° / 90° DN 160;7,0;St;gaeb;3938217.x83
+0110;Bogen 15° / 45° / 90° DN 200;35,0;St;gaeb;3938217.x83
+0120;Bogen 15° / 45° / 90° DN 250;2,0;St;gaeb;3938217.x83
+0130;Abzweigstück, 90 Grad, größter DN 100;68,0;St;gaeb;3938217.x83
+0140;Abzweigstück, 90 Grad, größter DN 125;2,0;St;gaeb;3938217.x83
+0150;Abzweigstück, 90 Grad, größter DN 150;12,0;St;gaeb;3938217.x83
+0160;Übergangsstück, konisch, größter Durchmesser DN 125;4,0;St;gaeb;3938217.x83
+0170;Übergangsstück, konisch, größter Durchmesser DN 150;26,0;St;gaeb;3938217.x83
+0180;Übergangsstück, konisch, größter Durchmesser DN 200;3,0;St;gaeb;3938217.x83
+0190;Übergangsstück, konisch, größter Durchmesser DN 250;4,0;St;gaeb;3938217.x83
+0200;Muffe, DN 100;15,0;St;gaeb;3938217.x83
+0210;Muffe, DN 125;9,0;St;gaeb;3938217.x83
+0220;Muffe, DN 150;10,0;St;gaeb;3938217.x83
+0230;Muffe, DN 160;10,0;St;gaeb;3938217.x83
+0240;Muffe, DN 200;4,0;St;gaeb;3938217.x83
+0250;Muffe, DN 250;10,0;St;gaeb;3938217.x83
+0260;Steckverbinder DN 100;15,0;St;gaeb;3938217.x83
+0270;Steckverbinder DN 125;9,0;St;gaeb;3938217.x83
+0280;Steckverbinder DN 150;10,0;St;gaeb;3938217.x83
+0290;Steckverbinder DN 160;10,0;St;gaeb;3938217.x83
+0300;Steckverbinder DN 200;4,0;St;gaeb;3938217.x83
+0310;Steckverbinder DN 250;10,0;St;gaeb;3938217.x83
+0320;Sattelstutzen DN 100;68,0;St;gaeb;3938217.x83
+0330;Sattelstutzen DN 125;2,0;St;gaeb;3938217.x83
+0340;Sattelstutzen DN 150;12,0;St;gaeb;3938217.x83
+0350;Sattelstutzen DN 160;2,0;St;gaeb;3938217.x83
+0360;Sattelstutzen DN 200;2,0;St;gaeb;3938217.x83
+0370;Sattelstutzen DN 250;2,0;St;gaeb;3938217.x83
+0380;Enddeckel DN 80;2,0;St;gaeb;3938217.x83
+0390;Enddeckel DN 100;2,0;St;gaeb;3938217.x83
+0400;Enddeckel DN 125;2,0;St;gaeb;3938217.x83
+0410;Enddeckel DN 150;2,0;St;gaeb;3938217.x83
+0420;Enddeckel DN 200;2,0;St;gaeb;3938217.x83
+0430;Reinigungsstück DN 100;8,0;St;gaeb;3938217.x83
+0440;Reinigungsstück DN 160;2,0;St;gaeb;3938217.x83
+0450;Reinigungsstück DN 200;6,0;St;gaeb;3938217.x83
+0460;Luftleitung, rund, flexibel, DN 100;50,0;m;gaeb;3938217.x83
+0470;Luftleitung, rund, flexibel, DN 125;10,0;m;gaeb;3938217.x83
+0480;Rohrbefestigung, DN 100;282,0;St;gaeb;3938217.x83
+0490;Rohrbefestigung, DN 125;5,0;St;gaeb;3938217.x83
+0500;Rohrbefestigung, DN 150;18,0;St;gaeb;3938217.x83
+0510;Rohrbefestigung, DN 160;6,0;St;gaeb;3938217.x83
+0520;Rohrbefestigung, DN 200;23,0;St;gaeb;3938217.x83
+0530;Rohrbefestigung, DN 250;7,0;St;gaeb;3938217.x83
+0010;Luftleitung, rechteckig, aus verzinktem Stahl, gefalzt,;86,0;m2;gaeb;3938217.x83
+0020;Luftleitung, rechteckig, aus verzinktem Stahl, gefalzt,;1,0;m2;gaeb;3938217.x83
+0030;Formstück für Luftleitung, rechteckig, aus verzinktem;265,0;m2;gaeb;3938217.x83
+0040;Formstück für Luftleitung, rechteckig, aus verzinktem;15,0;m2;gaeb;3938217.x83
+0050;Sonderformstück für Luftleitung, rechteckig, aus verzinktem Stahl,;2,0;m2;gaeb;3938217.x83
+0060;Sonderformstück für Luftleitung, rechteckig, aus verzinktem Stahl,;23,0;m2;gaeb;3938217.x83
+0070;Schutzfolie aus PE, zum Verschließen von offenen;50,0;m2;gaeb;3938217.x83
+0080;Tragkonstruktion als Aufhänge- und Stützkonstruktion,;68,0;St;gaeb;3938217.x83
+0090;Tragkonstruktion als Aufhänge- und Stützkonstruktion,;10,0;St;gaeb;3938217.x83
+0100;Inspektions- und Wartungsöffnung als Deckel mit;6,0;St;gaeb;3938217.x83
+0110;Inspektions- und Wartungsöffnung als Deckel mit;2,0;St;gaeb;3938217.x83
+0120;Inspektions- und Wartungsöffnung als Deckel mit;1,0;St;gaeb;3938217.x83
+0010;Wärmedämmung, geschlossenzelliger Weichschaum;65,0;m2;gaeb;3938217.x83
+0020;Wärmedämmung, geschlossenzelliger Weichschaum;162,0;m2;gaeb;3938217.x83
+0030;Dämmfilz, selbstklebend, zur Schallentkopplung bei Durchfahren;3,0;St;gaeb;3938217.x83
+0010;Baustelleneinrichtung für sämtliche, in der Leistungs-;1,0;psch;gaeb;3938217.x83
+0020;Fahrbares Arbeitsgerüst,;1,0;St;gaeb;3938217.x83
+0030;Fahrbares Arbeitsgerüst,;1,0;St;gaeb;3938217.x83
+0010;Mauerdurchbruch 10 x 10 cm, Mauerwerk bis 30 cm,;4,0;St;gaeb;3938217.x83
+0020;Mauerdurchbruch 20 x 20 cm, Mauerwerk bis 30 cm,;4,0;St;gaeb;3938217.x83
+0030;Herstellen von Kernbohrungen;16,0;St;gaeb;3938217.x83
+0040;Mehr- bzw. Minderpreis vorbeschriebener Bohrung;1,0;St;gaeb;3938217.x83
+0050;Herstellen von Kernbohrungen;4,0;St;gaeb;3938217.x83
+0060;Mehr- bzw. Minderpreis vorbeschriebener Bohrung;1,0;St;gaeb;3938217.x83
+0070;Herstellen von Kernbohrungen;25,0;St;gaeb;3938217.x83
+0080;Mehr- bzw. Minderpreis vorbeschriebener Bohrung;1,0;St;gaeb;3938217.x83
+0090;Herstellen von Kernbohrungen;20,0;St;gaeb;3938217.x83
+0100;Mehr- bzw. Minderpreis vorbeschriebener Bohrung;1,0;St;gaeb;3938217.x83
+0110;Herstellen von Kernbohrungen;8,0;St;gaeb;3938217.x83
+0120;Mehr- bzw. Minderpreis vorbeschriebener Bohrung;1,0;St;gaeb;3938217.x83
+0130;Herstellen von Kernbohrungen;8,0;St;gaeb;3938217.x83
+0140;Mehr- bzw. Minderpreis vorbeschriebener Bohrung;1,0;St;gaeb;3938217.x83
+0150;Herstellen von Kernbohrungen;5,0;St;gaeb;3938217.x83
+0160;Mehr- bzw. Minderpreis vorbeschriebener Bohrung;1,0;St;gaeb;3938217.x83
+0010;Anschlussverdrahtung aller in diesem LV enthaltenen;1,0;psch;gaeb;3938217.x83
+0020;Inbetriebnahme;1,0;psch;gaeb;3938217.x83
+0030;Einweisung des Hauspersonals;1,0;psch;gaeb;3938217.x83
+0040;Bezeichnungsschild, Kunststoff, bedruckt,;5,0;St;gaeb;3938217.x83
+0050;Luftrichtungspfeil, selbstklebend,;10,0;St;gaeb;3938217.x83
+0060;Abnahme der Brandschutzklappen;1,0;psch;gaeb;3938217.x83
+0070;Kraneinsatz zur Einbringung des Lüftungsgerätes;1,0;St;gaeb;3938217.x83
+0010;Stundenlohnarbeiten Obermonteur/-in;60,0;h;gaeb;3938217.x83
+0020;Stundenlohnarbeiten Monteur/-in;60,0;h;gaeb;3938217.x83
+0030;Stundenlohnarbeiten Helfer/-in;60,0;h;gaeb;3938217.x83
+0040;Stundenlohnarbeiten Auszubildende/r;20,0;h;gaeb;3938217.x83
+0010;Bestandsunterlagen;1,0;psch;gaeb;3938217.x83
+0020;Bestandsunterlagen;1,0;psch;gaeb;3938217.x83
+0010;Wartungsvertrag gemäß AMEV nach Wartungskarten;4,0;Jr;gaeb;3938217.x83

@@ -1,0 +1,75 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+1;Einrichten und Räumen der Baustelle, Vorhalten der;1,0;psch;gaeb;leistungsbeschreibungen/Maler.X83
+2;Abdecken und besondere Maßnahmen zum Schutz von;1500,0;m2;gaeb;leistungsbeschreibungen/Maler.X83
+3;Abkleben von Übergängen zu nicht gestrichenen;1200,0;m;gaeb;leistungsbeschreibungen/Maler.X83
+4;Gerüst liefern, aufbauen und abbauen auf Treppenstufen;2,0;St;gaeb;leistungsbeschreibungen/Maler.X83
+5;Erstellen einer Musterfläche für nach beschriebene;1,0;St;gaeb;leistungsbeschreibungen/Maler.X83
+6;Liefern und Abdecken von fertigen Oberflächen mit;200,0;m2;gaeb;leistungsbeschreibungen/Maler.X83
+7;Verkleben des Malervlies durchgehend links und rechts;300,0;m;gaeb;leistungsbeschreibungen/Maler.X83
+1;Lose Teile und Verunreinigungen trocken mit geeignetem;240,0;m2;gaeb;leistungsbeschreibungen/Maler.X83
+2;Liefern und Auftragen einer Grundbeschichtung zum;240,0;m2;gaeb;leistungsbeschreibungen/Maler.X83
+3;Schlussebeschichtung mit Silikatfarbe nach DIN EN;240,0;m2;gaeb;leistungsbeschreibungen/Maler.X83
+4;Zulage für leicht getönte Farbe, (Pastell).;200,0;m2;gaeb;leistungsbeschreibungen/Maler.X83
+5;Zulage für mittlere getönte Ausführung.;50,0;m2;gaeb;leistungsbeschreibungen/Maler.X83
+6;Liefern und Aufbringen einer Projektionsfarbe in 2;15,0;m2;gaeb;leistungsbeschreibungen/Maler.X83
+7;Abfugen der Übergänge an angrenzende Bauteile;250,0;m;gaeb;leistungsbeschreibungen/Maler.X83
+1;Imprägnierung von Holzoberflächen, Fichte mit 1-maligem;2800,0;m2;gaeb;leistungsbeschreibungen/Maler.X83
+2;Zulage zu vor für einen 2. Auftrag inkl. vollflächigem;350,0;m2;gaeb;leistungsbeschreibungen/Maler.X83
+3;jedoch Unterzüge, Stützen;400,0;m2;gaeb;leistungsbeschreibungen/Maler.X83
+4;wie vor, jedoch Decken und 1-maliger Auftrag!;2000,0;m2;gaeb;leistungsbeschreibungen/Maler.X83
+5;Liefern und aufbringen einer Holzsiegelbeschichtung als;20,0;m2;gaeb;leistungsbeschreibungen/Maler.X83
+6;Herstellen eines Reinigungsschliff mittels Wand- und;500,0;m2;gaeb;leistungsbeschreibungen/Maler.X83
+1;Beschichtung eines Vordaches aus Holz, inkl. Stützen;65,0;m2;gaeb;leistungsbeschreibungen/Maler.X83
+1;Lose Teile und Verunreinigungen trocken mit feinem;300,0;m2;gaeb;leistungsbeschreibungen/Maler.X83
+2;Vollflächiges Spachteln von Betonwänden im;100,0;m2;gaeb;leistungsbeschreibungen/Maler.X83
+3;Zulage zu Pos. vor für das Spachteln;20,0;m2;gaeb;leistungsbeschreibungen/Maler.X83
+4;Aufbringen einer Einkomponentenfarbe auf;300,0;m2;gaeb;leistungsbeschreibungen/Maler.X83
+5;Zulage zu vor für Preissgruppe II mittelgetönt;300,0;m2;gaeb;leistungsbeschreibungen/Maler.X83
+6;Zulage Lasuranstrich Leibung.;70,0;m2;gaeb;leistungsbeschreibungen/Maler.X83
+7;Je nach gewünschtem Lasureffekt Lasurvorgang;300,0;m2;gaeb;leistungsbeschreibungen/Maler.X83
+8;Zulage zu vor für Preissgruppe II mittelgetönt;300,0;m2;gaeb;leistungsbeschreibungen/Maler.X83
+9;Lose Teile und Verunreinigungen trocken mit Drahtbürste;150,0;m2;gaeb;leistungsbeschreibungen/Maler.X83
+10;Vollflächiges Spachteln von Betonwänden im;50,0;m2;gaeb;leistungsbeschreibungen/Maler.X83
+11;Einspachteln eines Abschlußprofiles an Ecken bzw.;50,0;m;gaeb;leistungsbeschreibungen/Maler.X83
+12;Grundanstrich auf gespachtelte Flächen Wand/Decke.;150,0;m2;gaeb;leistungsbeschreibungen/Maler.X83
+13;Schlußanstrich auf gespachtelte Flächen Wand/Decke.;150,0;m2;gaeb;leistungsbeschreibungen/Maler.X83
+14;Imprägnieren von Sichtbetontreppen, Tritt- und;50,0;m2;gaeb;leistungsbeschreibungen/Maler.X83
+1;Verrechnungssatz für evtl. erforderliche Arbeiten, die;50,0;h;gaeb;leistungsbeschreibungen/Maler.X83
+2;wie vor jedoch für Facharbeiter.;50,0;h;gaeb;leistungsbeschreibungen/Maler.X83
+1;Einrichten und Räumen der Baustelle, Vorhalten der;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/Maler.X83
+2;Abdecken und besondere Maßnahmen zum Schutz von;1500,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/Maler.X83
+3;Abkleben von Übergängen zu nicht gestrichenen;1200,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Maler.X83
+4;Gerüst liefern, aufbauen und abbauen auf Treppenstufen;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Maler.X83
+5;Erstellen einer Musterfläche für nach beschriebene;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/Maler.X83
+6;Liefern und Abdecken von fertigen Oberflächen mit;200,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/Maler.X83
+7;Verkleben des Malervlies durchgehend links und rechts;300,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Maler.X83
+1;Lose Teile und Verunreinigungen trocken mit geeignetem;240,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/Maler.X83
+2;Liefern und Auftragen einer Grundbeschichtung zum;240,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/Maler.X83
+3;Schlussebeschichtung mit Silikatfarbe nach DIN EN;240,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/Maler.X83
+4;Zulage für leicht getönte Farbe, (Pastell).;200,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/Maler.X83
+5;Zulage für mittlere getönte Ausführung.;50,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/Maler.X83
+6;Liefern und Aufbringen einer Projektionsfarbe in 2;15,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/Maler.X83
+7;Abfugen der Übergänge an angrenzende Bauteile;250,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Maler.X83
+1;Imprägnierung von Holzoberflächen, Fichte mit 1-maligem;2800,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/Maler.X83
+2;Zulage zu vor für einen 2. Auftrag inkl. vollflächigem;350,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/Maler.X83
+3;jedoch Unterzüge, Stützen;400,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/Maler.X83
+4;wie vor, jedoch Decken und 1-maliger Auftrag!;2000,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/Maler.X83
+5;Liefern und aufbringen einer Holzsiegelbeschichtung als;20,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/Maler.X83
+6;Herstellen eines Reinigungsschliff mittels Wand- und;500,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/Maler.X83
+1;Beschichtung eines Vordaches aus Holz, inkl. Stützen;65,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/Maler.X83
+1;Lose Teile und Verunreinigungen trocken mit feinem;300,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/Maler.X83
+2;Vollflächiges Spachteln von Betonwänden im;100,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/Maler.X83
+3;Zulage zu Pos. vor für das Spachteln;20,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/Maler.X83
+4;Aufbringen einer Einkomponentenfarbe auf;300,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/Maler.X83
+5;Zulage zu vor für Preissgruppe II mittelgetönt;300,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/Maler.X83
+6;Zulage Lasuranstrich Leibung.;70,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/Maler.X83
+7;Je nach gewünschtem Lasureffekt Lasurvorgang;300,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/Maler.X83
+8;Zulage zu vor für Preissgruppe II mittelgetönt;300,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/Maler.X83
+9;Lose Teile und Verunreinigungen trocken mit Drahtbürste;150,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/Maler.X83
+10;Vollflächiges Spachteln von Betonwänden im;50,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/Maler.X83
+11;Einspachteln eines Abschlußprofiles an Ecken bzw.;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/Maler.X83
+12;Grundanstrich auf gespachtelte Flächen Wand/Decke.;150,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/Maler.X83
+13;Schlußanstrich auf gespachtelte Flächen Wand/Decke.;150,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/Maler.X83
+14;Imprägnieren von Sichtbetontreppen, Tritt- und;50,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/Maler.X83
+1;Verrechnungssatz für evtl. erforderliche Arbeiten, die;50,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/Maler.X83
+2;wie vor jedoch für Facharbeiter.;50,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/Maler.X83

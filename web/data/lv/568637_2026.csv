@@ -1,0 +1,63 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+10;Wartung Lastenaufzug nach dem 1. Betriebsjahr;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/330_23_009_VET051_LV_260506_Förderanlagen_Wartung_ohne Preise.D83
+20;Wartung Lastenaufzug nach dem 2. Betriebsjahr;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/330_23_009_VET051_LV_260506_Förderanlagen_Wartung_ohne Preise.D83
+30;Wartung Lastenaufzug nach dem 3. Betriebsjahr;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/330_23_009_VET051_LV_260506_Förderanlagen_Wartung_ohne Preise.D83
+40;Wartung Lastenaufzug nach dem 4. Betriebsjahr Personenaufzug;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/330_23_009_VET051_LV_260506_Förderanlagen_Wartung_ohne Preise.D83
+50;Wartung Personenaufzug nach dem 1. Betriebsjahr;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/330_23_009_VET051_LV_260506_Förderanlagen_Wartung_ohne Preise.D83
+60;Wartung Personenaufzug nach dem 2. Betriebsjahr;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/330_23_009_VET051_LV_260506_Förderanlagen_Wartung_ohne Preise.D83
+70;Wartung Personenaufzug nach dem 3. Betriebsjahr;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/330_23_009_VET051_LV_260506_Förderanlagen_Wartung_ohne Preise.D83
+80;Wartung Personenaufzug nach dem 4. Betriebsjahr Kleingüteraufzug;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/330_23_009_VET051_LV_260506_Förderanlagen_Wartung_ohne Preise.D83
+90;Wartung Kleingüteraufzug nach dem 1. Betriebsjahr;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/330_23_009_VET051_LV_260506_Förderanlagen_Wartung_ohne Preise.D83
+100;Wartung Kleingüteraufzug nach dem 2. Betriebsjahr;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/330_23_009_VET051_LV_260506_Förderanlagen_Wartung_ohne Preise.D83
+110;Wartung Kleingüteraufzug nach dem 3. Betriebsjahr;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/330_23_009_VET051_LV_260506_Förderanlagen_Wartung_ohne Preise.D83
+120;Wartung Kleingüteraufzug nach dem 4. Betriebsjahr;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/330_23_009_VET051_LV_260506_Förderanlagen_Wartung_ohne Preise.D83
+10;Personen-/Lastenaufzug 3.000 kg / 40 Personen;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/330_23_009_VET05_LV_260417_Förderanlagen_ohne Preise_V33.X83
+20;Dynamische Brandfallsteuerung;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/330_23_009_VET05_LV_260417_Förderanlagen_ohne Preise_V33.X83
+30;Fern-Notruf-System;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/330_23_009_VET05_LV_260417_Förderanlagen_ohne Preise_V33.X83
+40;Kleinverteiler 6DA;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/330_23_009_VET05_LV_260417_Förderanlagen_ohne Preise_V33.X83
+50;Steuerungsfunktion Gefahrgutfahrt;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/330_23_009_VET05_LV_260417_Förderanlagen_ohne Preise_V33.X83
+60;Befestigungspunkte Gefahrstofftransport;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/330_23_009_VET05_LV_260417_Förderanlagen_ohne Preise_V33.X83
+70;Einbau Transponderleser in Etagenbedientableau;7,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/330_23_009_VET05_LV_260417_Förderanlagen_ohne Preise_V33.X83
+80;Brandschutzgehäuse;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/330_23_009_VET05_LV_260417_Förderanlagen_ohne Preise_V33.X83
+90;Aufsetzvorrichtung;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/330_23_009_VET05_LV_260417_Förderanlagen_ohne Preise_V33.X83
+10;Kleingüteraufzug 300 kg;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/330_23_009_VET05_LV_260417_Förderanlagen_ohne Preise_V33.X83
+20;Kabinenlüfter;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/330_23_009_VET05_LV_260417_Förderanlagen_ohne Preise_V33.X83
+30;Einbau Transponderleser in Etagenbedientableau.;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/330_23_009_VET05_LV_260417_Förderanlagen_ohne Preise_V33.X83
+10;Personenaufzug 1.000 kg / 13 Personen;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/330_23_009_VET05_LV_260417_Förderanlagen_ohne Preise_V33.X83
+20;Dynamische Brandfallsteuerung;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/330_23_009_VET05_LV_260417_Förderanlagen_ohne Preise_V33.X83
+30;Fern-Notruf-System;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/330_23_009_VET05_LV_260417_Förderanlagen_ohne Preise_V33.X83
+40;Kleinverteiler 6DA;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/330_23_009_VET05_LV_260417_Förderanlagen_ohne Preise_V33.X83
+50;Brandschutzverkleidung Aufzugssteuerungen;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/330_23_009_VET05_LV_260417_Förderanlagen_ohne Preise_V33.X83
+10;Kernbohrung, senkrecht zur Untergrundfläche, Untergrundfläche senkrecht, aus Stahlbeton, Normalbeton, Bohrdurchmesser über 25 bis 50 mm, Bohrtiefe über 30 bis 35 cm, einschl. Lösen des Bohrkerns aus dem Gefüge, nicht schadstoffbelastet,;40,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/330_23_009_VET05_LV_260417_Förderanlagen_ohne Preise_V33.X83
+20;Kernbohrung, senkrecht zur Untergrundfläche, Untergrundfläche senkrecht, aus Stahlbeton, Normalbeton, Bohrdurchmesser über 50 bis 100 mm, Bohrtiefe über 30 bis 35 cm, einschl. Lösen des Bohrkerns aus dem Gefüge, nicht schadstoffbelastet,;12,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/330_23_009_VET05_LV_260417_Förderanlagen_ohne Preise_V33.X83
+30;Demontage Montagegerüste Lastenaufzug;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/330_23_009_VET05_LV_260417_Förderanlagen_ohne Preise_V33.X83
+40;Demontage Montagegerüste Personenaufzug;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/330_23_009_VET05_LV_260417_Förderanlagen_ohne Preise_V33.X83
+10;Dokumentation / Revisionsunterlagen;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/330_23_009_VET05_LV_260417_Förderanlagen_ohne Preise_V33.X83
+20;Prüfung vor Inbetriebnahme Lastenaufzug;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/330_23_009_VET05_LV_260417_Förderanlagen_ohne Preise_V33.X83
+30;Prüfung vor Inbetriebnahme Personenaufzug;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/330_23_009_VET05_LV_260417_Förderanlagen_ohne Preise_V33.X83
+40;Prüfung vor Inbetriebnahme Kleingüteraufzug;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/330_23_009_VET05_LV_260417_Förderanlagen_ohne Preise_V33.X83
+50;Sachverständigenabnahme;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/330_23_009_VET05_LV_260417_Förderanlagen_ohne Preise_V33.X83
+60;Sachverständigenabnahme Personenaufzug;3,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/330_23_009_VET05_LV_260417_Förderanlagen_ohne Preise_V33.X83
+70;Sachverständigenabnahme Kleingüteraufzug;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/330_23_009_VET05_LV_260417_Förderanlagen_ohne Preise_V33.X83
+80;Diese Position kommt zum Tragen, wenn die rechtsgeschäftliche Abnahme aus Gründen, die der AN nicht zu vertreten hat, verhindert wird, obwohl die Leistungen des AN abgeschlossen sind oder auf Anordnung des Bauherrn.;1,0;Mt;gaeb;vom_unternehmen_auszufuellende_dokumente/330_23_009_VET05_LV_260417_Förderanlagen_ohne Preise_V33.X83
+90;"Verlängerungsmonat zu vor genannter Position ""Betrieb der Anlagen vor VOB Abnahme"".";1,0;Mt;gaeb;vom_unternehmen_auszufuellende_dokumente/330_23_009_VET05_LV_260417_Förderanlagen_ohne Preise_V33.X83
+100;Zur Umsetzung des Inbetriebnahmemanagements sind, separat zur Baubesprechung, unregelmäßige Inbetriebnahme Besprechungen erforderlich.;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/330_23_009_VET05_LV_260417_Förderanlagen_ohne Preise_V33.X83
+110;Erstellung von Detail-Inbetriebnahmeterminplänen für Anlagen bzw. Systeme im Leistungsumfang des AN.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/330_23_009_VET05_LV_260417_Förderanlagen_ohne Preise_V33.X83
+120;Der hier abgefragte Preis bezieht sich auf die Teilnahme und Mitwirkung bei der gewerkeübergreifenden Inbetriebnahme der technischen Anlagen unter der verantwortlichen Führung eines Fremdgewerkes:;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/330_23_009_VET05_LV_260417_Förderanlagen_ohne Preise_V33.X83
+130;Der Probebetrieb wird für einen Zeitraum von 3 Wochen (21 Tage, 24h pro Tag /7 Tage die Woche) durchgeführt.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/330_23_009_VET05_LV_260417_Förderanlagen_ohne Preise_V33.X83
+140;Der Auftragnehmer hat das Bedienungs- und Wartungspersonal des Auftraggebers und / oder Betreibers (ca. 10 Personen) in die Bedienung aller technischen Anlagen vor Ort einzuweisen.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/330_23_009_VET05_LV_260417_Förderanlagen_ohne Preise_V33.X83
+10;Stundenlohnarbeiten durch Helfer/-in;8,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/330_23_009_VET05_LV_260417_Förderanlagen_ohne Preise_V33.X83
+20;Stundenlohnarbeiten durch Monteur/-in;8,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/330_23_009_VET05_LV_260417_Förderanlagen_ohne Preise_V33.X83
+30;Stundenlohnarbeiten durch Obermonteur/-in;8,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/330_23_009_VET05_LV_260417_Förderanlagen_ohne Preise_V33.X83
+10;Wartung Lastenaufzug nach dem 1. Betriebsjahr.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/330_23_009_VET051_LV_260506_Förderanlagen_Wartung_ohne Preise_V33.X83
+20;Wartung Lastenaufzug nach dem 2. Betriebsjahr.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/330_23_009_VET051_LV_260506_Förderanlagen_Wartung_ohne Preise_V33.X83
+30;Wartung Lastenaufzug nach dem 3. Betriebsjahr.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/330_23_009_VET051_LV_260506_Förderanlagen_Wartung_ohne Preise_V33.X83
+40;Wartung Lastenaufzug nach dem 4. Betriebsjahr.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/330_23_009_VET051_LV_260506_Förderanlagen_Wartung_ohne Preise_V33.X83
+50;Wartung Personenaufzug nach dem 1. Betriebsjahr.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/330_23_009_VET051_LV_260506_Förderanlagen_Wartung_ohne Preise_V33.X83
+60;Wartung Personenaufzug nach dem 2. Betriebsjahr.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/330_23_009_VET051_LV_260506_Förderanlagen_Wartung_ohne Preise_V33.X83
+70;Wartung Personenaufzug nach dem 3. Betriebsjahr.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/330_23_009_VET051_LV_260506_Förderanlagen_Wartung_ohne Preise_V33.X83
+80;Wartung Personenaufzug nach dem 4. Betriebsjahr.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/330_23_009_VET051_LV_260506_Förderanlagen_Wartung_ohne Preise_V33.X83
+90;Wartung Kleingüteraufzug nach dem 1. Betriebsjahr.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/330_23_009_VET051_LV_260506_Förderanlagen_Wartung_ohne Preise_V33.X83
+100;Wartung Kleingüteraufzug nach dem 2. Betriebsjahr.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/330_23_009_VET051_LV_260506_Förderanlagen_Wartung_ohne Preise_V33.X83
+110;Wartung Kleingüteraufzug nach dem 3. Betriebsjahr.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/330_23_009_VET051_LV_260506_Förderanlagen_Wartung_ohne Preise_V33.X83
+120;Wartung Kleingüteraufzug nach dem 4. Betriebsjahr.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/330_23_009_VET051_LV_260506_Förderanlagen_Wartung_ohne Preise_V33.X83

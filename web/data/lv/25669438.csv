@@ -1,0 +1,106 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+10;Einrichten, Vorhalten über die vereinbarte Leistungszeit.;1,0;psch;gaeb;260727_LV-Rohbau.X83
+20;WC Container für Damen und Herren,;1,0;St;gaeb;260727_LV-Rohbau.X83
+30;WC Container unterhalten.;40,0;StWo;gaeb;260727_LV-Rohbau.X83
+40;Toilettenkabine, chemisch, mobil ohne;1,0;St;gaeb;260727_LV-Rohbau.X83
+50;Chemie-Toiletten unterhalten.;16,0;StWo;gaeb;260727_LV-Rohbau.X83
+60;Baucontainer als Baubüro für den;1,0;St;gaeb;260727_LV-Rohbau.X83
+70;Baustromanschluss mit Messsatz, auch für;1,0;psch;gaeb;260727_LV-Rohbau.X83
+80;Baustromverteiler als End - Verteiler, nach DIN VDE 0100;2,0;St;gaeb;260727_LV-Rohbau.X83
+90;Sollte es aus Gründen des Bauablaufs erforderlich;1,0;St;gaeb;260727_LV-Rohbau.X83
+100;Wartung und Prüfung der gesamten Baustromanlage;1,0;psch;gaeb;260727_LV-Rohbau.X83
+110;Baustromanschluss mit provisorischer Leitung;150,0;m;gaeb;260727_LV-Rohbau.X83
+120;Bauwasseranschluss als Leitung an vorh.;1,0;St;gaeb;260727_LV-Rohbau.X83
+130;Maschendraht Bauzaun aufstellen;300,0;m;gaeb;260727_LV-Rohbau.X83
+140;Bauzaun-Tor, zweiflügelig, verschließbar, passend zum;1,0;St;gaeb;260727_LV-Rohbau.X83
+150;Räumen der vorh. Baustelle nach Beendigung;1,0;psch;gaeb;260727_LV-Rohbau.X83
+10;Oberboden über tragfähiger Bodenschicht, brauchbar,;1500,0;qm;gaeb;260727_LV-Rohbau.X83
+20;Bodenaushub auf LKW des AN gelagert, transportieren;350,0;cbm;gaeb;260727_LV-Rohbau.X83
+30;Boden der Baugrube gemäß Bodengutachten bis;700,0;cbm;gaeb;260727_LV-Rohbau.X83
+40;Boden (Homogenbereich) abfahren und verwerten.;700,0;cbm;gaeb;260727_LV-Rohbau.X83
+50;Boden der Einzel- und Streifenfundamente;135,0;cbm;gaeb;260727_LV-Rohbau.X83
+60;Abgestuftes Bettungspolster gemäß Bodengutachten;1300,0;cbm;gaeb;260727_LV-Rohbau.X83
+70;Arbeitsraum nach Angabe der Bauleitung;200,0;cbm;gaeb;260727_LV-Rohbau.X83
+80;Plattendruckversuch zum Nachweis der;4,0;St;gaeb;260727_LV-Rohbau.X83
+90;Geotextilen Vliesstoff als Trenn- und Filterschicht (oder Schutzlage);1500,0;qm;gaeb;260727_LV-Rohbau.X83
+100;Winkelstütze;15,0;m;gaeb;260727_LV-Rohbau.X83
+10;Oberboden über tragfähiger Bodenschicht, brauchbar,;700,0;qm;gaeb;260727_LV-Rohbau.X83
+20;Bodenaushub auf LKW des AN gelagert, transportieren;150,0;cbm;gaeb;260727_LV-Rohbau.X83
+30;Boden in der Zufahrtsfläche gemäß Bodengutachten bis;225,0;cbm;gaeb;260727_LV-Rohbau.X83
+40;Bodenaushub der Position;225,0;cbm;gaeb;260727_LV-Rohbau.X83
+50;abgestuftes Bettungspolster gemäß Bodengutachten;500,0;cbm;gaeb;260727_LV-Rohbau.X83
+10;Ortbeton des Einzel  oder Streifenfundaments,;90,0;cbm;gaeb;260727_LV-Rohbau.X83
+20;Ortbeton des Einzel  oder Streifenfundaments,;55,0;cbm;gaeb;260727_LV-Rohbau.X83
+30;Magerbetonauffüllung unter Fundamenten zum;30,0;cbm;gaeb;260727_LV-Rohbau.X83
+40;Rauhe Schalung für Fundamentseiten, Sohlplatte,;345,0;qm;gaeb;260727_LV-Rohbau.X83
+50;Ortbeton der Sauberkeitsschicht,;1300,0;qm;gaeb;260727_LV-Rohbau.X83
+60;Perimeterdämmung auf Außenwand und Fundamenten;100,0;qm;gaeb;260727_LV-Rohbau.X83
+70;Ortbeton der Bodenplatte,;435,0;qm;gaeb;260727_LV-Rohbau.X83
+80;Ortbeton der Bodenplatte ,;815,0;qm;gaeb;260727_LV-Rohbau.X83
+90;Durchbrüche im Fundament für;10,0;St;gaeb;260727_LV-Rohbau.X83
+100;Bewehrung aus Betonstabstahl BSt500S (A) DIN488;24,5;t;gaeb;260727_LV-Rohbau.X83
+110;Betonstahlmatten BSt500M (A) als Lager- und;36,5;t;gaeb;260727_LV-Rohbau.X83
+120;Stahlbetontorsturz in Fahrzeughalle über;5,0;St;gaeb;260727_LV-Rohbau.X83
+130;Stahlbetonwand in Fahrzeughalle;410,0;qm;gaeb;260727_LV-Rohbau.X83
+140;Elementwände Pos. 1.4.13 für;4,0;St;gaeb;260727_LV-Rohbau.X83
+150;Stahlbeton Kragstützen in Ortbeton mit rechteckigem;6,0;St;gaeb;260727_LV-Rohbau.X83
+160;Öffnungen eckig, als Türöffnung;1,0;St;gaeb;260727_LV-Rohbau.X83
+170;Öffnungen eckig, als Türöffnung;4,0;St;gaeb;260727_LV-Rohbau.X83
+180;Öffnungen eckig, als Türöffnung;1,0;St;gaeb;260727_LV-Rohbau.X83
+190;Mehrspartenhauseinführung;1,0;St;gaeb;260727_LV-Rohbau.X83
+200;Lastabtragende Perimeter-Dämmung aus Hartschaum-Platte;435,0;qm;gaeb;260727_LV-Rohbau.X83
+210;Trennlage aus PE Folie 0,3 mm;435,0;qm;gaeb;260727_LV-Rohbau.X83
+220;Sand liefern und als Sandplanum unterhalb;435,0;qm;gaeb;260727_LV-Rohbau.X83
+230;TF Fugenbandprofil aus thermoplastischem Elastomer (TPE), einseitig aufklebbar und einseitig einbetonierbar in Form KFmod (KFV) mit Systemkleber Sikadur-Combiflex CF Adhesive liefern und gemäß den Verarbeitungsvorgaben des Herstellers montieren.;85,0;m;gaeb;260727_LV-Rohbau.X83
+240;Herstellen einer Arbeitsfuge in der Bodenplatte,;25,0;m;gaeb;260727_LV-Rohbau.X83
+250;Grundierten, sauberen Untergrund mit einer 2-komponentigen;55,0;qm;gaeb;260727_LV-Rohbau.X83
+260;Winkelstützwand gemäß Statik;45,0;qm;gaeb;260727_LV-Rohbau.X83
+270;Fuß unter Wand Position 1.4.27;25,5;m;gaeb;260727_LV-Rohbau.X83
+10;SW Leitungen NW 100 unter Sohle;190,0;m;gaeb;260727_LV-Rohbau.X83
+20;SW Leitungen NW 125 unter Sohle;20,0;m;gaeb;260727_LV-Rohbau.X83
+30;SW Leitungen NW 100 außerhalb des Gebäudes;10,0;m;gaeb;260727_LV-Rohbau.X83
+40;SW Leitungen NW 125 außerhalb des Gebäudes;60,0;m;gaeb;260727_LV-Rohbau.X83
+50;RW Leitungen NW 100 außerhalb des Gebäudes;125,0;m;gaeb;260727_LV-Rohbau.X83
+60;RW Leitungen NW 125 außerhalb des Gebäudes;25,0;m;gaeb;260727_LV-Rohbau.X83
+70;RW Leitungen NW 150 außerhalb des Gebäudes;50,0;m;gaeb;260727_LV-Rohbau.X83
+80;RW Leitungen NW 250 außerhalb des Gebäudes;100,0;m;gaeb;260727_LV-Rohbau.X83
+90;RW Leitungen NW 250 außerhalb des Gebäudes;12,0;m;gaeb;260727_LV-Rohbau.X83
+100;Rohrgraben- und Schachtaushub einschl. Verfüllung mit Füllkies.;130,0;cbm;gaeb;260727_LV-Rohbau.X83
+110;Rohrgraben- und Schachtaushub einschl. Verfüllung mit Füllkies.;100,0;cbm;gaeb;260727_LV-Rohbau.X83
+120;Leerrohre für die Aufnahme;50,0;m;gaeb;260727_LV-Rohbau.X83
+130;Der KG-Mauerkragen dient als Wassersperre zwischen dem;30,0;St;gaeb;260727_LV-Rohbau.X83
+140;Der KG-Mauerkragen dient als Wassersperre zwischen dem;5,0;St;gaeb;260727_LV-Rohbau.X83
+150;Druck- bzw. Dichtheitsprüfung,;1,0;psch;gaeb;260727_LV-Rohbau.X83
+160;Druck- bzw. Dichtheitsprüfung,;1,0;psch;gaeb;260727_LV-Rohbau.X83
+170;Spülen und Reinigen;1,0;psch;gaeb;260727_LV-Rohbau.X83
+180;Bestandsunterlagen vom AN sind;1,0;psch;gaeb;260727_LV-Rohbau.X83
+190;Anschluss an vorh. Grundleitungen wie nachstehend;2,0;St;gaeb;260727_LV-Rohbau.X83
+200;Vorh. Grundleitungen / Felddrainagen wie nachstehend;10,0;St;gaeb;260727_LV-Rohbau.X83
+210;Ringdrainage NW 100 incl. Formteile;180,0;m;gaeb;260727_LV-Rohbau.X83
+220;Kontrollschacht wasserdicht herstellen, bestehend aus:;3,0;St;gaeb;260727_LV-Rohbau.X83
+230;Kontrollschacht wasserdicht herstellen, bestehend aus:;3,0;St;gaeb;260727_LV-Rohbau.X83
+240;Kontrollschacht wasserdicht herstellen, bestehend aus:;2,0;St;gaeb;260727_LV-Rohbau.X83
+250;Schachtabdeckung aus Stahlbeton nach DIN;8,0;St;gaeb;260727_LV-Rohbau.X83
+260;Ausgleichsring, passend zu vor;5,0;St;gaeb;260727_LV-Rohbau.X83
+270;Verfallung, Höhe ca. 1,50 m,;2,0;St;gaeb;260727_LV-Rohbau.X83
+280;Sand liefern und als Sandauflager mit einer;60,0;cbm;gaeb;260727_LV-Rohbau.X83
+290;Einsatz einer Grundwasserpumpe einschl. Vorhalten;3,0;St;gaeb;260727_LV-Rohbau.X83
+300;Pumpensumpf als Betonfertigteil (Brunnenring);3,0;St;gaeb;260727_LV-Rohbau.X83
+310;Spül-, Kontroll- und Sammelschacht aus PVC-U;4,0;St;gaeb;260727_LV-Rohbau.X83
+320;Formstücke - Bogen  NW 100;290,0;St;gaeb;260727_LV-Rohbau.X83
+330;Formstücke - Bogen  NW 125;45,0;St;gaeb;260727_LV-Rohbau.X83
+340;Formstücke - Bogen NW 150;20,0;St;gaeb;260727_LV-Rohbau.X83
+350;Formstücke - Bogen NW 250;10,0;St;gaeb;260727_LV-Rohbau.X83
+360;Formstücke - Bogen NW 250;5,0;St;gaeb;260727_LV-Rohbau.X83
+370;Formstücke - Abzweige  NW 100 / 100;55,0;St;gaeb;260727_LV-Rohbau.X83
+380;Formstücke - Abzweige  NW 100 / 125;5,0;St;gaeb;260727_LV-Rohbau.X83
+390;Formstücke - Abzweige  NW 100 / 250;12,0;St;gaeb;260727_LV-Rohbau.X83
+400;Formstücke  Überschiebmuffe   NW 100 bis 250;10,0;St;gaeb;260727_LV-Rohbau.X83
+410;Formstücke  Doppelmuffe   NW 100 bis 250;25,0;St;gaeb;260727_LV-Rohbau.X83
+420;Formstücke  Muffenstopfen   NW 100 bis 150;50,0;St;gaeb;260727_LV-Rohbau.X83
+430;Formstücke  Reduktion  exzentrisch -    NW 125 / 100;10,0;St;gaeb;260727_LV-Rohbau.X83
+440;Formstücke  Reduktion  exzentrisch -    NW 150 / 100;10,0;St;gaeb;260727_LV-Rohbau.X83
+450;Einbau von NBR- Dichtungen in den;50,0;St;gaeb;260727_LV-Rohbau.X83
+10;Für evtl. erforderliche Arbeiten im Rahmen;1,0;h;gaeb;260727_LV-Rohbau.X83
+20;Für evtl. erforderliche Arbeiten im Rahmen;1,0;h;gaeb;260727_LV-Rohbau.X83
+30;Für evtl. erforderliche Arbeiten im Rahmen;1,0;h;gaeb;260727_LV-Rohbau.X83

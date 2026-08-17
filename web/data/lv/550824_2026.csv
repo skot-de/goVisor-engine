@@ -1,0 +1,104 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+10;Sämtliche Anlagen, Geräte, Maschinen, Werkzeuge und sonstige Betriebsmittel, die zur vertragsgemäßen Durchführung der eigenen Bauleistungen erforderlich sind, zur Baustelle liefern, in das Untergeschoss verbringen, bereitstellen und  soweit der Geräteeinsatz nicht gesondert ausgeschrieben und vergü;1,0;PSCH;gaeb;3939276.x83
+20;Zuvor genannte Baustelleneinrichtung mit allen Geräten, Anlagen, Einrichtungen, Schutzmaßnahmen und Abschottungen vorhalten, einschließlich aller laufenden Kosten für:;8,0;Wo;gaeb;3939276.x83
+30;Baustelle nach Fertigstellung der Leistungen von allen Geräten, Anlagen und Einrichtungen des Auftragnehmers räumen.;1,0;PSCH;gaeb;3939276.x83
+10;Oberflächennaher Trennschnitt in horizontalen;175,0;m;gaeb;3939276.x83
+20;Sägeschnitte in horizontalen Bauteilen aus Stahlbeton;45,0;m2;gaeb;3939276.x83
+30;Abbruch und Entsorgung von Stahlbeton-Bodenplatten;26,5;m3;gaeb;3939276.x83
+40;Raue Fuge nach DIN EN 1992-1-1 6.2.5 (2), Aufrauhen von Kontaktflächen, rauhe Oberfläche herstellen,;45,0;m2;gaeb;3939276.x83
+50;Ortbeton der Auffüllungen;11,0;m3;gaeb;3939276.x83
+60;Ortbeton der Sauberkeitsschicht;101,0;m2;gaeb;3939276.x83
+70;Perimeterdämmung liefern und auf die;101,0;m2;gaeb;3939276.x83
+80;Einkleben von Betonstahl als nachträgliche Bewehrungsanschlüsse mit Injektionsmörtel;630,0;St;gaeb;3939276.x83
+90;Einkleben von Betonstahl als nachträgliche Bewehrungsanschlüsse mit Injektionsmörtel;70,0;St;gaeb;3939276.x83
+100;Ortbeton der Bodenplatte,;21,0;m3;gaeb;3939276.x83
+110;Ortbeton Einzelfläche bis 1 m2 in der Bodenplatte,;3,0;m3;gaeb;3939276.x83
+120;Zulage zu Vorpositionen Bodenplatte und Einzelflächen;101,0;m2;gaeb;3939276.x83
+130;Ortbeton der Absenkungen unter Bodenplatte;4,5;m3;gaeb;3939276.x83
+140;Schalung von vertieft liegenden Bauteile;30,0;m2;gaeb;3939276.x83
+150;Raue Fuge, Aufrauhen von Kontaktflächen,;3,6;m2;gaeb;3939276.x83
+160;Beschichtes Fugenblech als einbaufertiges System,;11,0;m;gaeb;3939276.x83
+170;Beschichtes Fugenblech als einbaufertiges System,;11,0;m;gaeb;3939276.x83
+180;Zulage zu Bau- und Abbruchabfälle, Beton, Ziegel, Fliesen und Keramik,;4,8;t;gaeb;3939276.x83
+190;Zulage zu Bau- und Abbruchabfälle, Beton, Ziegel, Fliesen und Keramik,;20,5;t;gaeb;3939276.x83
+200;Zulage zu Bau- und Abbruchabfälle, Beton, Ziegel, Fliesen und Keramik,;3,8;t;gaeb;3939276.x83
+210;Zulage zu Bau- und Abbruchabfälle, Beton, Ziegel, Fliesen und Keramik,;2,5;t;gaeb;3939276.x83
+220;Zulage zu Bau- und Abbruchabfälle, Dämmstoff,;1,0;t;gaeb;3939276.x83
+230;Bewehrung aus Betonstabstahl B500B DIN 488-1, DIN 488-2,;1,2;t;gaeb;3939276.x83
+240;Bewehrung aus Betonstahlmatten B500A DIN 488-1,;1,6;t;gaeb;3939276.x83
+250;Zulage zu Bewehrungspositionen Rundstahl;0,4;t;gaeb;3939276.x83
+260;Zulage zu Bewehrungspositionen,;0,4;t;gaeb;3939276.x83
+10;Schützen von an die Kernbohrung angrenzenden Wandflächen mit Folie während der Kernbohrung. Abgrenzung mind. 0,5 m breit umlaufend um Kernbrohung.;75,0;m2;gaeb;3939276.x83
+20;Schützen von an die Kernbohrung angrenzenden Deckenflächen mit Folie während der Kernbohrung. Abgrenzung mind. 0,5 m breit umlaufend um Kernbrohung.;50,0;m2;gaeb;3939276.x83
+30;Stemmen von Durchbrüchen;5,0;St;gaeb;3939276.x83
+40;Querschnitt des Durchbruches;5,0;St;gaeb;3939276.x83
+50;Querschnitt des Durchbruches;7,0;St;gaeb;3939276.x83
+60;Deckendurchbruch mittels Kernbohrungen,;2,5;m2;gaeb;3939276.x83
+70;Bohren von Löchern (Kernbohrungen);750,0;cm;gaeb;3939276.x83
+80;Durchmesser über 150 bis 300 mm.;500,0;cm;gaeb;3939276.x83
+90;Zulage zu vorbeschriebenen Kernbohrungen;1,0;d;gaeb;3939276.x83
+100;Zulage zu Kernbohrungen (Vorpositionen);200,0;cm;gaeb;3939276.x83
+10;Erstellung der Rohbauplanung;1,0;PSCH;gaeb;3939276.x83
+20;Erstellung eines Statischen Nachweises;1,0;PSCH;gaeb;3939276.x83
+30;Erstellung der Bestandsdokumentation für sämtliche Leistungen;1,0;PSCH;gaeb;3939276.x83
+40;Mehraufwand für die Anwendung des PKMS wie im vollen Wortlaut beschrieben in den Vorbemerkungen, Teil:;1,0;PSCH;gaeb;3939276.x83
+10;Rohrgraben-Aushub nach DIN 18300 bis 0,8 m Tiefe;78,0;m3;gaeb;3939276.x83
+20;für Gräben bis 1,25 m Mittlere-Tiefe;10,0;m3;gaeb;3939276.x83
+30;Mehrpreis für Transport und Lagerung auf dem Gelände.;20,0;m3;gaeb;3939276.x83
+40;Mehrpreis Handaushub für Rohrgrabenaushub;5,0;m3;gaeb;3939276.x83
+50;Abfuhr von unbrauchbarem Aushubmaterial nach Absprache mit der Bauleitung;15,0;m3;gaeb;3939276.x83
+60;Liefern und Einbringen von verdichtbarem Auffüllkies;14,0;m3;gaeb;3939276.x83
+70;Einbau von Füllmaterial für Auflager von Rohrleitungen;190,0;m;gaeb;3939276.x83
+80;Einbau von Füllmaterial für Einbettung von Rohrleitungen;190,0;m;gaeb;3939276.x83
+90;Einbau von Füllmaterial für Überdeckung von Rohrleitungen;190,0;m;gaeb;3939276.x83
+100;Unterlags- und Stützbeton;1,0;m3;gaeb;3939276.x83
+10;Vollwandabwasserrohre KG-2000 Rohr DN 110 als Grundleitung;137,0;m;gaeb;3939276.x83
+20;DN 160;50,0;m;gaeb;3939276.x83
+30;Bögen alle Winkel als Zulage zur oben beschriebenen Rohrleitungen: (KG2000) DN 110;72,0;St;gaeb;3939276.x83
+40;DN 160;10,0;St;gaeb;3939276.x83
+50;Abzweig für alle Richtungen auch reduziert zur oben beschriebenen Rohrleitungen: (KG2000) DN 110;4,0;St;gaeb;3939276.x83
+60;DN 160;8,0;St;gaeb;3939276.x83
+70;Reduktionsstücke als Zulage zur oben beschriebenen Rohrleitungen: (KG2000);4,0;St;gaeb;3939276.x83
+80;Paßstück bis 50 cm Länge zur oben beschriebenen Rohrleitungen: (KG2000) DN 110;24,0;St;gaeb;3939276.x83
+90;DN 160;6,0;St;gaeb;3939276.x83
+100;Verschlußteller für Rohrleitungen der Entwässerung als Vorhaltung bis Verlegungsfortführung. zur oben beschriebenen Rohrleitungen: (KG2000) DN 110;14,0;St;gaeb;3939276.x83
+110;DN 160;4,0;St;gaeb;3939276.x83
+120;Fachgerechtes Trennen von Bestehenden Steinzeugrohren, bis DN 200;6,0;St;gaeb;3939276.x83
+130;Erstellen eines Anschlusses, bis DN 160;2,0;St;gaeb;3939276.x83
+140;Anschluß von Rohren KG 2000 DN 100 an bestehende, fachgerecht getrennte Leitung DN 100 STZ. Einschl. Anschluss- und Übergangsstücke;2,0;St;gaeb;3939276.x83
+150;Anschluss KG 2000 DN 100 an KG 2000 DN100;2,0;St;gaeb;3939276.x83
+160;PE 100 Abwasserrohr DN80;3,0;m;gaeb;3939276.x83
+170;DN 40;3,0;m;gaeb;3939276.x83
+180;PE100 Heizwendelschweißmuffen, DN80 SDR 11;4,0;St;gaeb;3939276.x83
+190;DN 40;4,0;St;gaeb;3939276.x83
+200;PE100 E-Winkel DN 80 alle Grade;2,0;St;gaeb;3939276.x83
+210;DN 40;2,0;St;gaeb;3939276.x83
+220;PE100 Vorschweißbund, DN 80 SDR 11;1,0;St;gaeb;3939276.x83
+230;DN 40;1,0;St;gaeb;3939276.x83
+240;Losflansch für vorgenannte Vorschweißbunde, DN 80;1,0;St;gaeb;3939276.x83
+250;Kabelschutzrohr;4,0;m;gaeb;3939276.x83
+10;Bodenablauf DN 100;3,0;St;gaeb;3939276.x83
+20;Verlängerungsstück für zuvor beschriebenen Bodenablauf DN 100;3,0;St;gaeb;3939276.x83
+30;Reinigungsverschluss DN 150 aus Gusseisen;1,0;St;gaeb;3939276.x83
+10;Mauerkragen, DN 100;17,0;St;gaeb;3939276.x83
+20;DN 160;1,0;St;gaeb;3939276.x83
+30;DN 70;2,0;St;gaeb;3939276.x83
+40;DN 80;2,0;St;gaeb;3939276.x83
+50;Druckfreies Überbauen eines Vollwandabwasserrohr, DN 110;6,0;m;gaeb;3939276.x83
+60;für Rohr DN 160;3,0;m;gaeb;3939276.x83
+70;Verschließen, einmessen und kennzeichnen von Leitungsenden;14,0;St;gaeb;3939276.x83
+80;Erschwerniszuschlag;2,0;St;gaeb;3939276.x83
+90;Dose Brunnenschaum;1,0;St;gaeb;3939276.x83
+100;Vollummantelung mit Beton, Rohrleitung DN 100;4,0;m;gaeb;3939276.x83
+110;für Rohr DN 150;1,0;m;gaeb;3939276.x83
+120;Betonsohle für Rohre DN 100 - 150;4,0;m;gaeb;3939276.x83
+130;Kamerabefahrung, DN 100 - 160;1,0;PSCH;gaeb;3939276.x83
+140;Dichtheit prüfen, DN 100 - DN 200 Druck- und Wasserdichtheitsprüfung;1,0;PSCH;gaeb;3939276.x83
+150;Mehrpreis für Druckprüfung je zusätzlich benötigter Haltung.;4,0;St;gaeb;3939276.x83
+160;Dokumentation der Dichtheitsprüfung je Haltung/Leitung,;12,0;St;gaeb;3939276.x83
+170;Bestandsunterlagen;1,0;PSCH;gaeb;3939276.x83
+10;Polier / Schachtmeister;5,0;h;gaeb;3939276.x83
+20;Vorarbeiter;5,0;h;gaeb;3939276.x83
+30;Spezialfacharbeiter;5,0;h;gaeb;3939276.x83
+40;Bauwerker;5,0;h;gaeb;3939276.x83
+50;Baumaschinenführer;5,0;h;gaeb;3939276.x83

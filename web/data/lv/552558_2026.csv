@@ -1,0 +1,194 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+0001;RLT-1 Zuluft 32.500m³/h;1,0;St;gaeb;3940652.x83
+0002;RLT Abluft 32.500m³/h;1,0;St;gaeb;3940652.x83
+0003;KVS-Hydraulikmodul;1,0;St;gaeb;3940652.x83
+0004;Sylomer-Streife SM SR28 blau B: 50mm;5,0;St;gaeb;3940652.x83
+0005;Sylomer-Streife SM SR42 rosa B: 50mm;12,0;St;gaeb;3940652.x83
+0006;Sylomer-Streife SM SR55 grün B: 50mm;18,0;St;gaeb;3940652.x83
+0007;Sylomer-Streife SM SR110 braun B: 50mm;20,0;St;gaeb;3940652.x83
+0008;Sylomer-Streife SM SR42 rosa B:100mm;2,0;St;gaeb;3940652.x83
+0009;Sylomer-Streife SM SR55 grün B:100mm;3,0;St;gaeb;3940652.x83
+0010;Sylomer-Streife SM SR110 braun B:100mm;2,0;St;gaeb;3940652.x83
+0001;Batterieraumventilator;1,0;St;gaeb;3940652.x83
+0002;Havarieventilator;1,0;St;gaeb;3940652.x83
+0001;Luftleitung, rechteckig, Luftdichtheitsklasse ATC3 DIN EN 16798-3, Druckklasse 2 DIN EN 1507, aus verzinktem Stahl, gefalzt, Maße DIN EN 1505, Kantenlänge bis 500 mm, Wanddicke 0,6 mm, Verbindung mit Winkelflansch, aus verzinktem Stahl, mit Schrauben aus nichtrostendem Stahl und Dichtung, Form- und ;500,0;m2;gaeb;3940652.x83
+0002;Luftleitung, rechteckig, Luftdichtheitsklasse ATC3 DIN EN 16798-3, Druckklasse 2 DIN EN 1507, aus verzinktem Stahl, gefalzt, Maße DIN EN 1505, Kantenlänge über 500 bis 1000 mm, Wanddicke 0,8 mm, Verbindung mit Winkelflansch, aus verzinktem Stahl, mit Schrauben aus nichtrostendem Stahl und Dichtung, ;500,0;m2;gaeb;3940652.x83
+0003;Luftleitung, rechteckig, Luftdichtheitsklasse ATC3 DIN EN 16798-3, Druckklasse 2 DIN EN 1507, aus verzinktem Stahl, gefalzt, Maße DIN EN 1505, Kantenlänge über 1000 bis 1500 mm, Wanddicke 1 mm, Verbindung mit Winkelflansch, aus verzinktem Stahl, mit Schrauben aus nichtrostendem Stahl und Dichtung, F;100,0;m2;gaeb;3940652.x83
+0004;Luftleitung, rechteckig, Luftdichtheitsklasse ATC3 DIN EN 16798-3, Druckklasse 2 DIN EN 1507, aus verzinktem Stahl, gefalzt, Maße DIN EN 1505, Kantenlänge über 1500 bis 2000 mm, Wanddicke 1 mm, Verbindung mit Winkelflansch, aus verzinktem Stahl, mit Schrauben aus nichtrostendem Stahl und Dichtung, F;80,0;m2;gaeb;3940652.x83
+0005;Luftleitung, rechteckig, Luftdichtheitsklasse ATC3 DIN EN 16798-3, Druckklasse 2 DIN EN 1507, aus verzinktem Stahl, gefalzt, Maße DIN EN 1505, Kantenlänge über 2000 , Wanddicke 1 mm, Verbindung mit Winkelflansch, aus verzinktem Stahl, mit Schrauben aus nichtrostendem Stahl und Dichtung, Form- und Ve;30,0;m2;gaeb;3940652.x83
+0006;Formstück für Luftleitung, rechteckig, Luftdichtheitsklasse ATC3 DIN EN 16798-3, Druckklasse 2 DIN EN 1507, aus verzinktem Stahl, gefalzt, Maße DIN EN 1505, Kantenlänge bis 500 mm, Wanddicke 0,6 mm, Verbindung mit Winkelflansch, aus verzinktem Stahl, mit Schrauben aus nichtrostendem Stahl und Dichtu;950,0;m2;gaeb;3940652.x83
+0007;Formstück für Luftleitung, rechteckig, Luftdichtheitsklasse ATC3 DIN EN 16798-3, Druckklasse 2 DIN EN 1507, aus verzinktem Stahl, gefalzt, Maße DIN EN 1505, Kantenlänge über 500 bis 1000 mm, Wanddicke 0,8 mm, Verbindung mit Winkelflansch, aus verzinktem Stahl, mit Schrauben aus nichtrostendem Stahl ;550,0;m2;gaeb;3940652.x83
+0008;Formstück für Luftleitung, rechteckig, Luftdichtheitsklasse ATC3 DIN EN 16798-3, Druckklasse 2 DIN EN 1507, aus verzinktem Stahl, gefalzt, Maße DIN EN 1505, Kantenlänge über 1000 bis 1500 mm, Wanddicke 1 mm, Verbindung mit Winkelflansch, aus verzinktem Stahl, mit Schrauben aus nichtrostendem Stahl u;80,0;m2;gaeb;3940652.x83
+0009;Formstück für Luftleitung, rechteckig, Luftdichtheitsklasse ATC3 DIN EN 16798-3, Druckklasse 2 DIN EN 1507, aus verzinktem Stahl, gefalzt, Maße DIN EN 1505, Kantenlänge über 1500 bis 2000 mm, Wanddicke 1 mm, Verbindung mit Winkelflansch, aus verzinktem Stahl, mit Schrauben aus nichtrostendem Stahl u;90,0;m2;gaeb;3940652.x83
+0010;Formstück für Luftleitung, rechteckig, Luftdichtheitsklasse ATC3 DIN EN 16798-3, Druckklasse 2 DIN EN 1507, aus verzinktem Stahl, gefalzt, Maße DIN EN 1505, Kantenlänge über 2000 mm, Wanddicke 1 mm, Verbindung mit Winkelflansch, aus verzinktem Stahl, mit Schrauben aus nichtrostendem Stahl und Dichtu;60,0;m2;gaeb;3940652.x83
+0011;Wickelfalzrohr aus verzinktem Stahl, Luftdichtheitsklasse ATC3 DIN EN 16798-3, Maße DIN EN 1506, DN 100, mit Einsteckende, mit Lippendichtung, Form- und Verbindungsstücke werden gesondert vergütet, min./max. Temperatur der geförderten Luft -15 bis 80 Grad C, Druckbereich von -750 bis 1000 Pa, Montag;550,0;m;gaeb;3940652.x83
+0012;Wickelfalzrohr aus verzinktem Stahl, Luftdichtheitsklasse ATC3 DIN EN 16798-3, Maße DIN EN 1506, DN 125, mit Einsteckende, mit Lippendichtung, Form- und Verbindungsstücke werden gesondert vergütet, min./max. Temperatur der geförderten Luft -15 bis 80 Grad C, Druckbereich von -750 bis 1000 Pa, Montag;180,0;m;gaeb;3940652.x83
+0013;Wickelfalzrohr aus verzinktem Stahl, Luftdichtheitsklasse ATC3 DIN EN 16798-3, Maße DIN EN 1506, DN 160, mit Einsteckende, mit Lippendichtung, Form- und Verbindungsstücke werden gesondert vergütet, min./max. Temperatur der geförderten Luft -15 bis 80 Grad C, Druckbereich von -750 bis 1000 Pa, Montag;230,0;m;gaeb;3940652.x83
+0014;Wickelfalzrohr aus verzinktem Stahl, Luftdichtheitsklasse ATC3 DIN EN 16798-3, Maße DIN EN 1506, DN 200, mit Einsteckende, mit Lippendichtung, Form- und Verbindungsstücke werden gesondert vergütet, min./max. Temperatur der geförderten Luft -15 bis 80 Grad C, Druckbereich von -750 bis 1000 Pa, Montag;350,0;m;gaeb;3940652.x83
+0015;Flexrohr DN 100;70,0;m;gaeb;3940652.x83
+0016;Flexrohr DN 125;65,0;m;gaeb;3940652.x83
+0017;Flexrohr DN 160;30,0;m;gaeb;3940652.x83
+0018;Flexrohr DN 200;75,0;m;gaeb;3940652.x83
+0019;Bogen, für Luftleitung, rund, Luftdichtheitsklasse ATC3 DIN EN 16798-3, 90 Grad, aus verzinktem Stahl, DN 100, glatt, mit Einsteckenden, mit Lippendichtung, geschraubt/genietet, mit Dichtungsband, min./max. Temperatur der geförderten Luft -15 bis 80 Grad C, Druckbereich von -750 bis 1000 Pa, Montage;350,0;St;gaeb;3940652.x83
+0020;Bogen, für Luftleitung, rund, Luftdichtheitsklasse ATC3 DIN EN 16798-3, 90 Grad, aus verzinktem Stahl, DN 125, glatt, mit Einsteckenden, geschraubt/genietet, mit Dichtungsband, min./max. Temperatur der geförderten Luft -15 bis 80 Grad C, Druckbereich von -750 bis 1000 Pa, Montagehöhe über Gelände/Fu;180,0;St;gaeb;3940652.x83
+0021;Bogen, für Luftleitung, rund, Luftdichtheitsklasse ATC3 DIN EN 16798-3, 90 Grad, aus verzinktem Stahl, DN 160, glatt, mit Einsteckenden, geschraubt/genietet, mit Dichtungsband, min./max. Temperatur der geförderten Luft -15 bis 80 Grad C, Druckbereich von -750 bis 1000 Pa, Montagehöhe über Gelände/Fu;115,0;St;gaeb;3940652.x83
+0022;Bogen, für Luftleitung, rund, Luftdichtheitsklasse ATC3 DIN EN 16798-3, 90 Grad, aus verzinktem Stahl, DN 200, glatt, mit Einsteckenden, geschraubt/genietet, mit Dichtungsband, min./max. Temperatur der geförderten Luft -15 bis 80 Grad C, Druckbereich von -750 bis 1000 Pa, Montagehöhe über Gelände/Fu;200,0;St;gaeb;3940652.x83
+0023;Abzweigstück, für Luftleitung, rund, Luftdichtheitsklasse ATC3 DIN EN 16798-3, 90 Grad, Maße DIN EN 1506, aus verzinktem Stahl, größter DN 100, mit Einsteckenden, mit Lippendichtung, geschraubt/genietet, mit Dichtungsband, min./max. Temperatur der geförderten Luft -15 bis 80 Grad C, Druckbereich von;22,0;St;gaeb;3940652.x83
+0024;Abzweigstück, für Luftleitung, rund, Luftdichtheitsklasse ATC3 DIN EN 16798-3, 90 Grad, Maße DIN EN 1506, aus verzinktem Stahl, größter DN 125, mit Einsteckenden, mit Lippendichtung, geschraubt/genietet, mit Dichtungsband, min./max. Temperatur der geförderten Luft -15 bis 80 Grad C, Druckbereich von;14,0;St;gaeb;3940652.x83
+0025;Abzweigstück, für Luftleitung, rund, Luftdichtheitsklasse ATC3 DIN EN 16798-3, 90 Grad, Maße DIN EN 1506, aus verzinktem Stahl, größter DN 160, mit Einsteckenden, mit Lippendichtung, geschraubt/genietet, mit Dichtungsband, min./max. Temperatur der geförderten Luft -15 bis 80 Grad C, Druckbereich von;50,0;St;gaeb;3940652.x83
+0026;Abzweigstück, für Luftleitung, rund, Luftdichtheitsklasse ATC3 DIN EN 16798-3, 90 Grad, Maße DIN EN 1506, aus verzinktem Stahl, größter DN 200, mit Einsteckenden, mit Lippendichtung, geschraubt/genietet, mit Dichtungsband, min./max. Temperatur der geförderten Luft -15 bis 80 Grad C, Druckbereich von;62,0;St;gaeb;3940652.x83
+0027;Bundkragen, für Luftleitung, rund, Luftdichtheitsklasse ATC3 DIN EN 16798-3, aus verzinktem Stahl, DN 100, zum Einstecken, mit Lippendichtung, min./max. Temperatur der geförderten Luft -15 bis 80 Grad C, Druckbereich von -750 bis 1000 Pa.;58,0;St;gaeb;3940652.x83
+0028;Bundkragen, für Luftleitung, rund, Luftdichtheitsklasse ATC3 DIN EN 16798-3, aus verzinktem Stahl, DN 125, zum Einstecken, mit Lippendichtung, min./max. Temperatur der geförderten Luft -15 bis 80 Grad C, Druckbereich von -750 bis 1000 Pa.;72,0;St;gaeb;3940652.x83
+0029;Bundkragen, für Luftleitung, rund, Luftdichtheitsklasse ATC3 DIN EN 16798-3, aus verzinktem Stahl, DN 160, zum Einstecken, mit Lippendichtung, min./max. Temperatur der geförderten Luft -15 bis 80 Grad C, Druckbereich von -750 bis 1000 Pa.;44,0;St;gaeb;3940652.x83
+0030;Bundkragen, für Luftleitung, rund, Luftdichtheitsklasse ATC3 DIN EN 16798-3, aus verzinktem Stahl, DN 200, zum Einstecken, mit Lippendichtung, min./max. Temperatur der geförderten Luft -15 bis 80 Grad C, Druckbereich von -750 bis 1000 Pa.;89,0;St;gaeb;3940652.x83
+0031;Enddeckel, für Luftleitung, rund Luftdichtheitsklasse ATC3 DIN EN 16798-3, Maße DIN EN 1506, aus verzinktem Stahl, DN 160, zum Einstecken, mit Lippendichtung, min./max. Temperatur der geförderten Luft -15 bis 80 Grad C, Druckbereich von -750 bis 1000 Pa.;13,0;St;gaeb;3940652.x83
+0032;Enddeckel, für Luftleitung, rund Luftdichtheitsklasse ATC3 DIN EN 16798-3, Maße DIN EN 1506, aus verzinktem Stahl, DN 200, zum Einstecken, mit Lippendichtung, min./max. Temperatur der geförderten Luft -15 bis 80 Grad C, Druckbereich von -750 bis 1000 Pa.;7,0;St;gaeb;3940652.x83
+0033;Muffe, für Luftleitung, rund aerosolatdicht, Luftdichtheitsklasse ATC3 DIN EN 16798-3, Maße DIN EN 1506, aus verzinktem Stahl, DN 100, mit Lippendichtung, min./max. Temperatur der geförderten Luft -15 bis 80 Grad C, Druckbereich von -750 bis 1000 Pa.;55,0;St;gaeb;3940652.x83
+0034;Muffe, für Luftleitung, rund aerosolatdicht, Luftdichtheitsklasse ATC3 DIN EN 16798-3, Maße DIN EN 1506, aus verzinktem Stahl, DN 125, mit Lippendichtung, min./max. Temperatur der geförderten Luft -15 bis 80 Grad C, Druckbereich von -750 bis 1000 Pa.;50,0;St;gaeb;3940652.x83
+0035;Muffe, für Luftleitung, rund aerosolatdicht, Luftdichtheitsklasse ATC3 DIN EN 16798-3, Maße DIN EN 1506, aus verzinktem Stahl, DN 160, mit Lippendichtung, min./max. Temperatur der geförderten Luft -15 bis 80 Grad C, Druckbereich von -750 bis 1000 Pa.;75,0;St;gaeb;3940652.x83
+0036;Muffe, für Luftleitung, rund aerosolatdicht, Luftdichtheitsklasse ATC3 DIN EN 16798-3, Maße DIN EN 1506, aus verzinktem Stahl, DN 200, mit Lippendichtung, min./max. Temperatur der geförderten Luft -15 bis 80 Grad C, Druckbereich von -750 bis 1000 Pa.;84,0;St;gaeb;3940652.x83
+0037;Enddeckel Luftleitg rund DN200 H bis 4m;20,0;St;gaeb;3940652.x83
+0038;Übergangsstück, für Luftleitung, rund, Luftdichtheitsklasse ATC3 DIN EN 16798-3, konisch, Maße DIN EN 1506, aus verzinktem Stahl, größter DN 125, symmetrisch, mit Einsteckenden, mit Lippendichtung, geschraubt/genietet, mit Dichtungsband, min./max. Temperatur der geförderten Luft -15 bis 80 Grad C, D;17,0;St;gaeb;3940652.x83
+0039;Übergangsstück, für Luftleitung, rund, Luftdichtheitsklasse ATC3 DIN EN 16798-3, konisch, Maße DIN EN 1506, aus verzinktem Stahl, größter DN 160, symmetrisch, mit Einsteckenden, mit Lippendichtung, geschraubt/genietet, mit Dichtungsband, min./max. Temperatur der geförderten Luft -15 bis 80 Grad C, D;25,0;St;gaeb;3940652.x83
+0040;Übergangsstück, für Luftleitung, rund, Luftdichtheitsklasse ATC3 DIN EN 16798-3, konisch, Maße DIN EN 1506, aus verzinktem Stahl, größter DN 200, symmetrisch, mit Einsteckenden, mit Lippendichtung, geschraubt/genietet, mit Dichtungsband, min./max. Temperatur der geförderten Luft -15 bis 80 Grad C, D;56,0;St;gaeb;3940652.x83
+0041;Inspektions- und Wartungsöffnung als Deckel mit Einbaurahmen und Dichtung, oval, aus verzinktem Stahl, Maße 400/200 mm, für Einbau in rechteckige Luftleitung, mit Kantenschutz, mit Schraubverschluss und Rändelmutter, Luftdichtheitsklasse ATC3 DIN EN 16798-3.;50,0;St;gaeb;3940652.x83
+0042;Inspektions- und Wartungsöffnung als Deckel mit Einbaurahmen und Dichtung, oval, aus verzinktem Stahl, Maße 500/400 mm, für Einbau in rechteckige Luftleitung, mit Kantenschutz, mit Schraubverschluss und Rändelmutter, Luftdichtheitsklasse ATC3 DIN EN 16798-3.;30,0;St;gaeb;3940652.x83
+0043;Inspektions- und Wartungsöffnung als Deckel mit Einbaurahmen und Dichtung, oval, aus verzinktem Stahl, Maße 180/80 mm, für Einbau in runde Luftleitung, mit Kantenschutz, mit Schraubverschluss und Rändelmutter, Luftdichtheitsklasse ATC3 DIN EN 16798-3.;50,0;St;gaeb;3940652.x83
+0044;Inspektions- und Wartungsöffnung als Deckel mit Einbaurahmen und Dichtung, oval, aus verzinktem Stahl, Maße 200/100 mm, für Einbau in runde Luftleitung, mit Kantenschutz, mit Schraubverschluss und Rändelmutter, Luftdichtheitsklasse ATC3 DIN EN 16798-3.;50,0;St;gaeb;3940652.x83
+0045;Anschluss an vorhandenen Lüftungskanal herstellen;1,0;psch;gaeb;3940652.x83
+0001;Brandschutzklappe DIN EN 15650, Funktion prüfbar im eingebauten Zustand, Klassifizierung EI 90 S DIN EN 13501-3, beidseitig geprüft DIN EN 1366-2, für vertikalen und horizontalen Einbau, Achslage waagerecht oder senkrecht, rauchdicht, Gehäuse aus verzinktem Stahl, eckig, Nennbreite 200 mm, Nennhöhe ;3,0;St;gaeb;3940652.x83
+0002;Brandschutzklappe DIN EN 15650, Funktion prüfbar im eingebauten Zustand, Klassifizierung EI 90 S DIN EN 13501-3, beidseitig geprüft DIN EN 1366-2, für vertikalen und horizontalen Einbau, Achslage waagerecht oder senkrecht, rauchdicht, Gehäuse aus verzinktem Stahl, eckig, Nennbreite 300 mm, Nennhöhe ;6,0;St;gaeb;3940652.x83
+0003;Brandschutzklappe DIN EN 15650, Funktion prüfbar im eingebauten Zustand, Klassifizierung EI 90 S DIN EN 13501-3, beidseitig geprüft DIN EN 1366-2, für vertikalen und horizontalen Einbau, Achslage waagerecht oder senkrecht, rauchdicht, Gehäuse aus verzinktem Stahl, eckig, Nennbreite 400 mm, Nennhöhe ;3,0;St;gaeb;3940652.x83
+0004;Brandschutzklappe DIN EN 15650, Funktion prüfbar im eingebauten Zustand, Klassifizierung EI 90 S DIN EN 13501-3, beidseitig geprüft DIN EN 1366-2, für vertikalen und horizontalen Einbau, Achslage waagerecht oder senkrecht, rauchdicht, Gehäuse aus verzinktem Stahl, eckig, Nennbreite 450 mm, Nennhöhe ;1,0;St;gaeb;3940652.x83
+0005;Brandschutzklappe DIN EN 15650, Funktion prüfbar im eingebauten Zustand, Klassifizierung EI 90 S DIN EN 13501-3, beidseitig geprüft DIN EN 1366-2, für vertikalen und horizontalen Einbau, Achslage waagerecht oder senkrecht, rauchdicht, Gehäuse aus verzinktem Stahl, eckig, Nennbreite 500 mm, Nennhöhe ;3,0;St;gaeb;3940652.x83
+0006;Brandschutzklappe DIN EN 15650, Funktion prüfbar im eingebauten Zustand, Klassifizierung EI 90 S DIN EN 13501-3, beidseitig geprüft DIN EN 1366-2, für vertikalen und horizontalen Einbau, Achslage waagerecht oder senkrecht, rauchdicht, Gehäuse aus verzinktem Stahl, eckig, Nennbreite 600 mm, Nennhöhe ;1,0;St;gaeb;3940652.x83
+0007;Brandschutzklappe DIN EN 15650, Funktion prüfbar im eingebauten Zustand, Klassifizierung EI 90 S DIN EN 13501-3, beidseitig geprüft DIN EN 1366-2, für vertikalen und horizontalen Einbau, Achslage waagerecht oder senkrecht, rauchdicht, Gehäuse aus verzinktem Stahl, eckig, Nennbreite 700 mm, Nennhöhe ;2,0;St;gaeb;3940652.x83
+0008;Brandschutzklappe DIN EN 15650, Funktion prüfbar im eingebauten Zustand, Klassifizierung EI 90 S DIN EN 13501-3, beidseitig geprüft DIN EN 1366-2, für vertikalen und horizontalen Einbau, Achslage waagerecht oder senkrecht, rauchdicht, Gehäuse aus verzinktem Stahl, eckig, Nennbreite 800 mm, Nennhöhe ;3,0;St;gaeb;3940652.x83
+0009;Brandschutzklappe DIN EN 15650, Funktion prüfbar im eingebauten Zustand, Klassifizierung EI 90 S DIN EN 13501-3, beidseitig geprüft DIN EN 1366-2, für vertikalen und horizontalen Einbau, Achslage waagerecht oder senkrecht, rauchdicht, Gehäuse aus verzinktem Stahl, eckig, Nennbreite 500 mm, Nennhöhe ;1,0;St;gaeb;3940652.x83
+0010;Brandschutzklappe DIN EN 15650, Funktion prüfbar im eingebauten Zustand, Klassifizierung EI 90 S DIN EN 13501-3, beidseitig geprüft DIN EN 1366-2, für vertikalen und horizontalen Einbau, Achslage waagerecht oder senkrecht, rauchdicht, Gehäuse aus verzinktem Stahl, eckig, Nennbreite 600 mm, Nennhöhe ;2,0;St;gaeb;3940652.x83
+0011;Brandschutzklappe DIN EN 15650, Funktion prüfbar im eingebauten Zustand, Klassifizierung EI 90 S DIN EN 13501-3, beidseitig geprüft DIN EN 1366-2, für vertikalen und horizontalen Einbau, Achslage waagerecht oder senkrecht, rauchdicht, Gehäuse aus verzinktem Stahl, eckig, Nennbreite 650 mm, Nennhöhe ;2,0;St;gaeb;3940652.x83
+0012;Brandschutzklappe DIN EN 15650, Funktion prüfbar im eingebauten Zustand, Klassifizierung EI 90 S DIN EN 13501-3, beidseitig geprüft DIN EN 1366-2, für vertikalen und horizontalen Einbau, Achslage waagerecht oder senkrecht, rauchdicht, Gehäuse aus verzinktem Stahl, eckig, Nennbreite 700 mm, Nennhöhe ;2,0;St;gaeb;3940652.x83
+0013;Brandschutzklappe DIN EN 15650, Funktion prüfbar im eingebauten Zustand, Klassifizierung EI 90 S DIN EN 13501-3, beidseitig geprüft DIN EN 1366-2, für vertikalen und horizontalen Einbau, Achslage waagerecht oder senkrecht, rauchdicht, Gehäuse aus verzinktem Stahl, eckig, Nennbreite 800 mm, Nennhöhe ;1,0;St;gaeb;3940652.x83
+0014;Brandschutzklappe DIN EN 15650, Funktion prüfbar im eingebauten Zustand, Klassifizierung EI 90 S DIN EN 13501-3, beidseitig geprüft DIN EN 1366-2, für vertikalen und horizontalen Einbau, Achslage waagerecht oder senkrecht, rauchdicht, Gehäuse aus verzinktem Stahl, eckig, Nennbreite 900 mm, Nennhöhe ;6,0;St;gaeb;3940652.x83
+0015;Brandschutzklappe DIN EN 15650, Funktion prüfbar im eingebauten Zustand, Klassifizierung EI 90 S DIN EN 13501-3, beidseitig geprüft DIN EN 1366-2, für vertikalen und horizontalen Einbau, Achslage waagerecht oder senkrecht, rauchdicht, Gehäuse aus verzinktem Stahl, eckig, Nennbreite 1000 mm, Nennhöhe;2,0;St;gaeb;3940652.x83
+0016;Brandschutzklappe DIN EN 15650, Funktion prüfbar im eingebauten Zustand, Klassifizierung EI 90 S DIN EN 13501-3, beidseitig geprüft DIN EN 1366-2, für vertikalen und horizontalen Einbau, Achslage waagerecht oder senkrecht, rauchdicht, Gehäuse aus verzinktem Stahl, eckig, Nennbreite 350 mm, Nennhöhe ;2,0;St;gaeb;3940652.x83
+0017;Brandschutzklappe DIN EN 15650, Funktion prüfbar im eingebauten Zustand, Klassifizierung EI 90 S DIN EN 13501-3, beidseitig geprüft DIN EN 1366-2, für vertikalen und horizontalen Einbau, Achslage waagerecht oder senkrecht, rauchdicht, Gehäuse aus verzinktem Stahl, eckig, Nennbreite 700 mm, Nennhöhe ;2,0;St;gaeb;3940652.x83
+0018;Brandschutzklappe DIN EN 15650, Funktion prüfbar im eingebauten Zustand, Klassifizierung EI 90 S DIN EN 13501-3, beidseitig geprüft DIN EN 1366-2, für vertikalen und horizontalen Einbau, Achslage waagerecht oder senkrecht, rauchdicht, Gehäuse aus verzinktem Stahl, eckig, Nennbreite 900 mm, Nennhöhe ;2,0;St;gaeb;3940652.x83
+0019;Brandschutzklappe DIN EN 15650, Funktion prüfbar im eingebauten Zustand, Klassifizierung EI 90 S DIN EN 13501-3, beidseitig geprüft DIN EN 1366-2, für vertikalen und horizontalen Einbau, Achslage waagerecht oder senkrecht, rauchdicht, Gehäuse aus verzinktem Stahl, eckig, Nennbreite 200 mm, Nennhöhe ;1,0;St;gaeb;3940652.x83
+0020;Brandschutzklappe DIN EN 15650, Funktion prüfbar im eingebauten Zustand, Klassifizierung EI 90 S DIN EN 13501-3, beidseitig geprüft DIN EN 1366-2, für vertikalen und horizontalen Einbau, Achslage waagerecht oder senkrecht, rauchdicht, Gehäuse aus verzinktem Stahl, eckig, Nennbreite 400 mm, Nennhöhe ;2,0;St;gaeb;3940652.x83
+0021;Brandschutzklappe DIN EN 15650, Funktion prüfbar im eingebauten Zustand, Klassifizierung EI 90 S DIN EN 13501-3, beidseitig geprüft DIN EN 1366-2, für vertikalen und horizontalen Einbau, Achslage waagerecht oder senkrecht, rauchdicht, Gehäuse aus verzinktem Stahl, eckig, Nennbreite 600 mm, Nennhöhe ;2,0;St;gaeb;3940652.x83
+0022;Brandschutzklappe DIN EN 15650, Funktion prüfbar im eingebauten Zustand, Klassifizierung EI 90 S DIN EN 13501-3, beidseitig geprüft DIN EN 1366-2, für vertikalen und horizontalen Einbau, Achslage waagerecht oder senkrecht, rauchdicht, Gehäuse aus verzinktem Stahl, eckig, Nennbreite 800 mm, Nennhöhe ;2,0;St;gaeb;3940652.x83
+0023;Brandschutzklappe DIN EN 15650, Funktion prüfbar im eingebauten Zustand, Klassifizierung EI 90 S DIN EN 13501-3, beidseitig geprüft DIN EN 1366-2, für vertikalen und horizontalen Einbau, Achslage waagerecht oder senkrecht, rauchdicht, Gehäuse aus verzinktem Stahl, eckig, Nennbreite 800 mm, Nennhöhe ;2,0;St;gaeb;3940652.x83
+0024;Brandschutzklappe DIN EN 15650, Funktion prüfbar im eingebauten Zustand, Klassifizierung EI 90 S DIN EN 13501-3, beidseitig geprüft DIN EN 1366-2, für vertikalen und horizontalen Einbau, Achslage waagerecht oder senkrecht, rauchdicht, Gehäuse aus verzinktem Stahl, eckig, Nennbreite 1000 mm, Nennhöhe;2,0;St;gaeb;3940652.x83
+0025;Brandschutzklappe DIN EN 15650, Funktion prüfbar im eingebauten Zustand, Klassifizierung EI 90 S DIN EN 13501-3, beidseitig geprüft DIN EN 1366-2, für vertikalen und horizontalen Einbau, Achslage waagerecht oder senkrecht, rauchdicht, Gehäuse aus verzinktem Stahl, eckig, Nennbreite 400 mm, Nennhöhe ;1,0;St;gaeb;3940652.x83
+0026;Brandschutzklappe DIN EN 15650, Funktion prüfbar im eingebauten Zustand, Klassifizierung EI 90 S DIN EN 13501-3, beidseitig geprüft DIN EN 1366-2, für vertikalen und horizontalen Einbau, Achslage waagerecht oder senkrecht, rauchdicht, Gehäuse aus verzinktem Stahl, eckig, Nennbreite 1500 mm, Nennhöhe;2,0;St;gaeb;3940652.x83
+0027;Brandschutzklappe DIN EN 15650, Funktion prüfbar im eingebauten Zustand, Klassifizierung EI 90 S DIN EN 13501-3, beidseitig geprüft DIN EN 1366-2, für vertikalen und horizontalen Einbau, Achslage waagerecht oder senkrecht, rauchdicht, Gehäuse aus verzinktem Stahl, rund, DN 100, Luftdichtheitsklasse ;14,0;St;gaeb;3940652.x83
+0028;Brandschutzklappe DIN EN 15650, Funktion prüfbar im eingebauten Zustand, Klassifizierung EI 90 S DIN EN 13501-3, beidseitig geprüft DIN EN 1366-2, für vertikalen und horizontalen Einbau, Achslage waagerecht oder senkrecht, rauchdicht, Gehäuse aus verzinktem Stahl, rund, DN 125, Luftdichtheitsklasse ;3,0;St;gaeb;3940652.x83
+0029;Brandschutzklappe DIN EN 15650, Funktion prüfbar im eingebauten Zustand, Klassifizierung EI 90 S DIN EN 13501-3, beidseitig geprüft DIN EN 1366-2, für vertikalen und horizontalen Einbau, Achslage waagerecht oder senkrecht, rauchdicht, Gehäuse aus verzinktem Stahl, rund, DN 160, Luftdichtheitsklasse ;6,0;St;gaeb;3940652.x83
+0030;Brandschutzklappe DIN EN 15650, Funktion prüfbar im eingebauten Zustand, Klassifizierung EI 90 S DIN EN 13501-3, beidseitig geprüft DIN EN 1366-2, für vertikalen und horizontalen Einbau, Achslage waagerecht oder senkrecht, rauchdicht, Gehäuse aus verzinktem Stahl, rund, DN 200, Luftdichtheitsklasse ;2,0;St;gaeb;3940652.x83
+0031;Brandschutzklappe DIN EN 15650, Funktion prüfbar im eingebauten Zustand, Klassifizierung EI 90 S DIN EN 13501-3, beidseitig geprüft DIN EN 1366-2, für vertikalen und horizontalen Einbau, Achslage waagerecht oder senkrecht, rauchdicht, Gehäuse aus verzinktem Stahl, rund, DN 125, Luftdichtheitsklasse ;2,0;St;gaeb;3940652.x83
+0032;Brandschutzklappe DIN EN 15650, Funktion prüfbar im eingebauten Zustand, Klassifizierung EI 90 S DIN EN 13501-3, beidseitig geprüft DIN EN 1366-2, für vertikalen und horizontalen Einbau, Achslage waagerecht oder senkrecht, rauchdicht, Gehäuse aus verzinktem Stahl, rund, DN 160, Luftdichtheitsklasse ;1,0;St;gaeb;3940652.x83
+0033;Brandschutzklappe DIN EN 15650, Funktion prüfbar im eingebauten Zustand, Klassifizierung EI 90 S DIN EN 13501-3, beidseitig geprüft DIN EN 1366-2, für vertikalen und horizontalen Einbau, Achslage waagerecht oder senkrecht, rauchdicht, Gehäuse aus verzinktem Stahl, rund, DN 200, Luftdichtheitsklasse ;2,0;St;gaeb;3940652.x83
+0034;Brandschutztellerventil DIN EN 15650, Klassifizierung EI 90 S DIN EN 13501-3, beidseitig geprüft DIN EN 1366-2, für vertikalen und horizontalen Einbau, rauchdicht, Nenndurchmesser 100, Einbau in massive Wand, mit Einbaurohr, mit Schmelzlot mit einer Nennauslösetemperatur von max. 72 Grad C, mit elek;2,0;St;gaeb;3940652.x83
+0035;Brandschutztellerventil DIN EN 15650, Klassifizierung EI 90 S DIN EN 13501-3, beidseitig geprüft DIN EN 1366-2, für vertikalen und horizontalen Einbau, rauchdicht, Nenndurchmesser 200, Einbau in Einlegedecke, mit Einbaurohr, mit Schmelzlot mit einer Nennauslösetemperatur von max. 72 Grad C, mit elek;4,0;St;gaeb;3940652.x83
+0036;Einmörtelung - Nasseinbau-BSK (bis 0,10 m²);35,0;St;gaeb;3940652.x83
+0037;Einmörtelung - Nasseinbau-BSK (0,10 m² bis 0,30 m²);18,0;St;gaeb;3940652.x83
+0038;Einmörtelung - Nasseinbau-BSK (> 0,30 m² bis 0,80 m² );17,0;St;gaeb;3940652.x83
+0039;Einmörtelung - Nasseinbau-BSK ( > 0,80 m²);4,0;St;gaeb;3940652.x83
+0040;Trockeneinbau BSK (bis 0,30 m²);7,0;St;gaeb;3940652.x83
+0041;Trockeneinbau BSK (> 0,30 m²);7,0;St;gaeb;3940652.x83
+0042;Verschluss von Ringspalten an Luftkanaldurchführungen;200,0;St;gaeb;3940652.x83
+0043;Elastisches Verbindungsstück, Baustoffklasse DIN 4102-1 A2 (nichtbrennbar), Luftdichtheitsklasse ATC3 DIN EN 16798-3, Druckklasse 2 DIN EN 1507, flexibler Bereich 100 mm, mit Potentialausgleich, für rechteckige Luftleitung, größte Kantenlänge über 250 bis 500 mm, mit Anschlussrahmen aus verzinktem S;42,0;St;gaeb;3940652.x83
+0044;Elastisches Verbindungsstück, Baustoffklasse DIN 4102-1 A2 (nichtbrennbar), Luftdichtheitsklasse ATC3 DIN EN 16798-3, Druckklasse 2 DIN EN 1507, flexibler Bereich 100 mm, mit Potentialausgleich, für rechteckige Luftleitung, größte Kantenlänge über 500 bis 1000 mm, mit Anschlussrahmen aus verzinktem ;42,0;St;gaeb;3940652.x83
+0045;Elastisches Verbindungsstück, Baustoffklasse DIN 4102-1 A2 (nichtbrennbar), Luftdichtheitsklasse ATC3 DIN EN 16798-3, Druckklasse 2 DIN EN 1507, flexibler Bereich 100 mm, mit Potentialausgleich, für rechteckige Luftleitung, größte Kantenlänge über 1500 bis 2000 mm, mit Anschlussrahmen aus verzinktem;4,0;St;gaeb;3940652.x83
+0001;Volumenstromregler - Konstant (KVR) DN 100;117,0;St;gaeb;3940652.x83
+0002;Volumenstromregler - Konstant (KVR) DN 125;105,0;St;gaeb;3940652.x83
+0003;Volumenstromregler - Konstant (KVR) DN 160;66,0;St;gaeb;3940652.x83
+0004;Volumenstromregler - Konstant (KVR) DN 200;62,0;St;gaeb;3940652.x83
+0005;Volumenstromregler - Konstant (KVR) 300x200;21,0;St;gaeb;3940652.x83
+0006;Volumenstromregler - Konstant (KVR) 400x200;3,0;St;gaeb;3940652.x83
+0007;Volumenstromregler - Konstant (KVR) 500x200;1,0;St;gaeb;3940652.x83
+0008;Volumenstromregler - Variable(VSR) 400x200;2,0;St;gaeb;3940652.x83
+0009;Volumenstromregler - Variable(VSR) 400x400;2,0;St;gaeb;3940652.x83
+0010;Volumenstromregler - Variable(VSR) 800x500;2,0;St;gaeb;3940652.x83
+0011;Volumenstromregler - Variable(VSR) 1000x500;2,0;St;gaeb;3940652.x83
+0001;Rohrschalldämpfer DN100;22,0;St;gaeb;3940652.x83
+0002;Rohrschalldämpfer DN125;85,0;St;gaeb;3940652.x83
+0003;Rohrschalldämpfer DN160;44,0;St;gaeb;3940652.x83
+0004;Rohrschalldämpfer DN200;60,0;St;gaeb;3940652.x83
+0005;Rohrschalldämpfer DN100;96,0;St;gaeb;3940652.x83
+0006;Rohrschalldämpfer DN125;20,0;St;gaeb;3940652.x83
+0007;Rohrschalldämpfer DN160;22,0;St;gaeb;3940652.x83
+0008;Rohrschalldämpfer DN200;2,0;St;gaeb;3940652.x83
+0009;Schalldämpfer - eckig - 300x200;21,0;St;gaeb;3940652.x83
+0010;Schalldämpfer - eckig - 400x200;2,0;St;gaeb;3940652.x83
+0011;Schalldämpfer - eckig - 400x400;2,0;St;gaeb;3940652.x83
+0012;Schalldämpfer - eckig - 500x250;2,0;St;gaeb;3940652.x83
+0013;Schalldämpfer - eckig - 800x500;2,0;St;gaeb;3940652.x83
+0014;Schalldämpfer - eckig - 1000x500;2,0;St;gaeb;3940652.x83
+0001;Abluft-Tellerventil DN100;93,0;St;gaeb;3940652.x83
+0002;Abluft-Tellerventil DN125;12,0;St;gaeb;3940652.x83
+0003;Abluft-Tellerventil DN160;8,0;St;gaeb;3940652.x83
+0004;Abluft-Tellerventil DN200;8,0;St;gaeb;3940652.x83
+0005;Zuluft-Tellerventil DN100;72,0;St;gaeb;3940652.x83
+0006;Zuluft-Tellerventil DN125;8,0;St;gaeb;3940652.x83
+0007;Zuluft-Tellerventil DN160;4,0;St;gaeb;3940652.x83
+0008;Zuluft-Tellerventil DN200;16,0;St;gaeb;3940652.x83
+0009;Deckendralldurchlässe 310x310;63,0;St;gaeb;3940652.x83
+0010;Deckendralldurchlässe 400x400;1,0;St;gaeb;3940652.x83
+0011;Deckendralldurchlässe 500x500;44,0;St;gaeb;3940652.x83
+0012;Deckendralldurchlässe 310x310;62,0;St;gaeb;3940652.x83
+0013;Deckendralldurchlässe 400x400;3,0;St;gaeb;3940652.x83
+0014;Deckendralldurchlässe 500x500;47,0;St;gaeb;3940652.x83
+0015;Lüftungsgitter 515x65;38,0;St;gaeb;3940652.x83
+0016;Wetterschutzgitter 1400x2000;1,0;St;gaeb;3940652.x83
+0017;Wetterschutzgitter 1200x2000;1,0;St;gaeb;3940652.x83
+0018;Fortluftturm FOL 1300x1300;1,0;St;gaeb;3940652.x83
+0019;Fortlufthaube, rund, DN200;2,0;St;gaeb;3940652.x83
+0001;Einregulierung der Lüftungsanlagen;1,0;St;gaeb;3940652.x83
+0002;Messung der Luftvolumenströme;120,0;St;gaeb;3940652.x83
+0003;Messungen der Stromaufnahme;2,0;St;gaeb;3940652.x83
+0004;Messungen des Schalldruckpegels;12,0;St;gaeb;3940652.x83
+0005;Energetischer SFP-Nachweis;2,0;St;gaeb;3940652.x83
+0006;Messung des Drucks und Differenzdrucks;10,0;St;gaeb;3940652.x83
+0007;Druckprüfung / Messung der Leckluftrate;5,0;St;gaeb;3940652.x83
+0008;Probebetrieb der RLT-Anlagen;1,0;St;gaeb;3940652.x83
+0009;Inbetriebnahme RLT-Anlagen;1,0;St;gaeb;3940652.x83
+0010;Sachverständigenabnahme;1,0;St;gaeb;3940652.x83
+0001;Koordination;1,0;St;gaeb;3940652.x83
+0002;Geräteschild - RLT-Anlagenschema;1,0;St;gaeb;3940652.x83
+0003;Beschilderung;300,0;St;gaeb;3940652.x83
+0004;Fotodokumentation Brandschutz;150,0;St;gaeb;3940652.x83
+0005;Klebe-Kennzeichnungsschilder;120,0;St;gaeb;3940652.x83
+0006;W+M Planung;1,0;St;gaeb;3940652.x83
+0007;Einbindung und Berücksichtigung des Anlagenkennzeichnungssystems (AKS);1,0;St;gaeb;3940652.x83
+0008;Hygiene-Erstinspektion;1,0;St;gaeb;3940652.x83
+0009;Dokumentation;1,0;psch;gaeb;3940652.x83
+0010;Elektrische Verkabelung der RLT-Anlage;1,0;St;gaeb;3940652.x83
+0011;Ersatzfiltersatz;1,0;St;gaeb;3940652.x83
+0012;Baustellendokumentation;1,0;psch;gaeb;3940652.x83
+0001;Transport Lüftungsturm vom Hersteller zur Baustelle;1,0;St;gaeb;3940652.x83
+0002;Transport, Einbringung und Montage der RLT-Anlage;1,0;St;gaeb;3940652.x83
+0003;Kranarbeiten für Montage Lüftungsturm;1,0;St;gaeb;3940652.x83
+0004;in Form von Winkeleisen, T-Eisen, Doppel-T-Eisen usw. in ver- schiedener Stärke und Abmessung für Aufhänge-, Unterstüt- zungs-, Befestigungs- und Fixpunkt-Konstruktionen und dergl. in der erforderlichen Zurichtung einschl. des erforderlichen Zu- schnittes mit den notwendigen Bohrungen, Schweißungen,;2500,0;kg;gaeb;3940652.x83
+0005;wie vor, jedoch  feuerverzinkt,  für Außenbereich geeignet.;500,0;kg;gaeb;3940652.x83
+0006;Zulage für das staubdichte Verschließen;1,0;psch;gaeb;3940652.x83
+0001;Meister;20,0;h;gaeb;3940652.x83
+0002;Obermonteur;20,0;h;gaeb;3940652.x83
+0003;Monteur;20,0;h;gaeb;3940652.x83
+0004;Helfer;20,0;h;gaeb;3940652.x83
+0001;Aufbauen fahrbares Gerüst,;6,0;St;gaeb;3940652.x83
+0002;Abbauen fahrbares Gerüst,;6,0;St;gaeb;3940652.x83
+0003;Umsetzen fahrbares Gerüst,;6,0;St;gaeb;3940652.x83
+0004;Gebrauchsüberlassung für fahrbares Gerüst,;120,0;StWo;gaeb;3940652.x83
+0001;Kernbohrung, Untergrundfläche waagerecht, Bohrkern ist gegen Absturz zu sichern, aus Stahlbeton, Normalbeton, Bohrdurchmesser über 100 bis 150 mm, Bohrtiefe über 25 bis 30 cm, einschl. Lösen des Bohrkerns aus dem Gefüge, nicht schadstoffbelastet, Abfall ist nicht gefährlich, Zuordnung LAGA Z 0 (unei;2,0;St;gaeb;3940652.x83
+0002;Kernbohrung, Untergrundfläche waagerecht, Bohrkern ist gegen Absturz zu sichern, aus Stahlbeton, Normalbeton, Bohrdurchmesser über 150 bis 200 mm, Bohrtiefe über 25 bis 30 cm, einschl. Lösen des Bohrkerns aus dem Gefüge, Wichte des Abbruchstoffes DIN EN 1991-1-1 24 kN/m3, Arbeitshöhe bis 4 m über de;2,0;St;gaeb;3940652.x83
+0003;Kernbohrung, Untergrundfläche senkrecht, aus Stahlbeton, Normalbeton, Bohrdurchmesser über 250 bis 300 mm, Bohrtiefe über 25 bis 30 cm, einschl. Lösen des Bohrkerns aus dem Gefüge, nicht schadstoffbelastet, Abfall ist nicht gefährlich, Zuordnung LAGA Z 0 (uneingeschränkter Einbau), Wichte des Abbruc;6,0;St;gaeb;3940652.x83
+0004;Einmessen und Kennzeichnen von Durchbrüchen, Ausführung gemäß Zeichnung und Einzelbeschreibung.;10,0;St;gaeb;3940652.x83
+0005;Durchbruch schließen, Ausführung in Wandfläche,;10,0;St;gaeb;3940652.x83
+0006;Durchbruch schließen, Ausführung in Wandfläche,;15,0;St;gaeb;3940652.x83
+0001;Einrichtung & Räumung;1,0;St;gaeb;3940652.x83
+0002;Vorhalten/Betrieb;12,0;StMt;gaeb;3940652.x83
+0003;Container/Lager;20,0;Wo;gaeb;3940652.x83
+0004;Entsorgung;20,0;Wo;gaeb;3940652.x83
+0005;Materialtransporte;20,0;Wo;gaeb;3940652.x83

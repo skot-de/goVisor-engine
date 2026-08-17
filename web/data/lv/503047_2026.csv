@@ -1,0 +1,821 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+0001;Baustelle für sämtliche aufgeführte Leistungen, einrichten, herstellen der dazu erforderlichen Lager- und Arbeitsplätze, Flächen sind im Lageplan ausgewiesen.;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0002;Baustelle für sämtliche aufgeführte Leistungen umsetzen, hierzu auch neu einrichten, -herstellen der dazu erforderlichen Lager- und Arbeitsplätze, Flächen werden durch die Bauleitung ausgewiesen. Anzahl der Umzüge 2x.;3,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0003;Baustelleneinrichtung für sämtliche, in der Leistungsbeschreibung aufgeführten Leistungen vorhalten, über die Zeit im Bauzeitenplan hinaus.;1,0;Mt;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0004;Baustelle für sämtliche aufgeführte Leistungen, räumen, Geländeflächen, auf denen sich Baustelleneinrichtungen befunden haben, dem früheren Zustand entsprechend herstellen, im Baugrund befindliche Teile der Baustelleneinrichtung (z. B. Fundamente, Pfähle, Leitungen, Kanäle) räumen.;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0001;Frischwasserstation Zapfleistung 43 l/min, Plattentauscher VA;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0002;Pufferspeicher für Frischwasserstation ca. 1000 Liter Inhalt, mit Dämmung;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0003;Inbetriebnahme Warmwasserbereitung;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0004;Prüfung der Steuerung Warmwasserbereitung;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0001;Rohr schwarz, geschweißt, DN 32;25,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0002;Rohr schwarz geschweißt, DN 40;30,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0003;Rohr schwarz geschweißt DN 50;25,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0004;Rohr schwarz geschweißt DN 65;115,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0005;Rohr schwarz geschweißt DN 80;110,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0006;Rohr schwarz geschweißt DN 100;90,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0007;Einschweißbogen, aus Kohlenstoffstahl, für Rohrleitung aus mittelschwerem Stahlrohr DIN EN 10255, für Heizungswasser, Außendurchmesser 42,4 mm.;10,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0008;Einschweißbogen, aus Kohlenstoffstahl, für Rohrleitung aus mittelschwerem Stahlrohr DIN EN 10255, für Heizungswasser, Außendurchmesser 48,3 mm.;14,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0009;Einschweißbogen, aus Kohlenstoffstahl, für Rohrleitung aus mittelschwerem Stahlrohr DIN EN 10255, für Heizungswasser, Außendurchmesser 60,3 mm.;12,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0010;Einschweißbogen, aus Kohlenstoffstahl, für Rohrleitung aus mittelschwerem Stahlrohr DIN EN 10255, für Heizungswasser, Außendurchmesser 76,1 mm.;16,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0011;Einschweißbogen, aus Kohlenstoffstahl, für Rohrleitung aus mittelschwerem Stahlrohr DIN EN 10255, für Heizungswasser, Außendurchmesser 88,9 mm.;16,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0012;Einschweißbogen, aus Kohlenstoffstahl, für Rohrleitung aus mittelschwerem Stahlrohr DIN EN 10255, für Heizungswasser, Außendurchmesser 114,3 mm.;38,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0013;T-Stück, aus Kohlenstoffstahl, Verbindung durch Schweißen, für Rohrleitung aus mittelschwerem Stahlrohr DIN EN 10255, für Heizungswasser, Außendurchmesser 42,4 mm.;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0014;T-Stück, aus Kohlenstoffstahl, Verbindung durch Schweißen, für Rohrleitung aus mittelschwerem Stahlrohr DIN EN 10255, für Heizungswasser, Außendurchmesser 48,3 mm.;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0015;T-Stück, aus Kohlenstoffstahl, Verbindung durch Schweißen, für Rohrleitung aus mittelschwerem Stahlrohr DIN EN 10255, für Heizungswasser, Außendurchmesser 60,3 mm.;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0016;T-Stück, aus Kohlenstoffstahl, Verbindung durch Schweißen, für Rohrleitung aus mittelschwerem Stahlrohr DIN EN 10255, für Heizungswasser, Außendurchmesser 76,1 mm.;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0017;T-Stück, aus Kohlenstoffstahl, Verbindung durch Schweißen, für Rohrleitung aus mittelschwerem Stahlrohr DIN EN 10255, für Heizungswasser, Außendurchmesser 114,3 mm.;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0018;Reduzierstück, aus Kohlenstoffstahl, Verbindung durch Schweißen, für Rohrleitung aus mittelschwerem Stahlrohr DIN EN 10255, für Heizungswasser, Außendurchmesser 42,4 mm, 2. Durchmesser 33,7 mm.;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0019;Reduzierstück, aus Kohlenstoffstahl, Verbindung durch Schweißen, für Rohrleitung aus mittelschwerem Stahlrohr DIN EN 10255, für Heizungswasser, Außendurchmesser 48,3 mm, 2. Durchmesser 42,4 mm.;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0020;Reduzierstück, aus Kohlenstoffstahl, Verbindung durch Schweißen, für Rohrleitung aus mittelschwerem Stahlrohr DIN EN 10255, für Heizungswasser, Außendurchmesser 60,3 mm, 2. Durchmesser 48,3 mm.;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0021;Reduzierstück, aus Kohlenstoffstahl, Verbindung durch Schweißen, für Rohrleitung aus mittelschwerem Stahlrohr DIN EN 10255, für Heizungswasser, Außendurchmesser 76,1 mm, 2. Durchmesser 48,3 mm.;6,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0022;Reduzierstück, aus Kohlenstoffstahl, Verbindung durch Schweißen, für Rohrleitung aus mittelschwerem Stahlrohr DIN EN 10255, für Heizungswasser, Außendurchmesser 76,1 mm, 2. Durchmesser 60,3 mm.;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0023;Reduzierstück, aus Kohlenstoffstahl, Verbindung durch Schweißen, für Rohrleitung aus mittelschwerem Stahlrohr DIN EN 10255, für Heizungswasser, Außendurchmesser 88,9 mm, 2. Durchmesser 76,1 mm.;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0024;Reduzierstück, aus Kohlenstoffstahl, Verbindung durch Schweißen, für Rohrleitung aus mittelschwerem Stahlrohr DIN EN 10255, für Heizungswasser, Außendurchmesser 114,3 mm, 2. Durchmesser 88,9 mm.;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0025;Übergangsverschraubung, aus Kohlenstoffstahl, für Rohrleitung aus mittelschwerem Stahlrohr DIN EN 10255, für Heizungswasser, Außendurchmesser 42,4 mm.;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0026;Übergangsverschraubung, aus Kohlenstoffstahl, für Rohrleitung aus mittelschwerem Stahlrohr DIN EN 10255, für Heizungswasser, Außendurchmesser 48,3 mm.;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0027;Einschweißmuffe, mit zylindrischem Innengewinde, aus Kohlenstoffstahl, Verbindung durch Schweißen, für Rohrleitung aus mittelschwerem Stahlrohr DIN EN 10255, für Heizungswasser, Länge über 50 bis 100 mm, Gewindeanschluss Rp 1/2.;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0028;Einschweißmuffe, mit zylindrischem Innengewinde, aus Kohlenstoffstahl, Verbindung durch Schweißen, für Rohrleitung aus mittelschwerem Stahlrohr DIN EN 10255, für Heizungswasser, Länge über 50 bis 100 mm, Gewindeanschluss Rp 3/4.;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0029;Einschweißmuffe, mit zylindrischem Innengewinde, aus Kohlenstoffstahl, Verbindung durch Schweißen, für Rohrleitung aus mittelschwerem Stahlrohr DIN EN 10255, für Heizungswasser, Länge über 50 bis 100 mm, Gewindeanschluss Rp 1.;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0030;Vorschweißflansch DIN EN 1092-1 PN 16, aus Stahl, einschl. Schrauben und Dichtung, für Wasser, DN 20.;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0031;Vorschweißflansch DIN EN 1092-1 PN 16, aus Stahl, einschl. Schrauben und Dichtung, für Wasser, DN 25.;6,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0032;Vorschweißflansch DIN EN 1092-1 PN 16, aus Stahl, einschl. Schrauben und Dichtung, für Wasser, DN 32.;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0033;Vorschweißflansch DIN EN 1092-1 PN 16, aus Stahl, einschl. Schrauben und Dichtung, für Wasser, DN 40.;8,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0034;Vorschweißflansch DIN EN 1092-1 PN 16, aus Stahl, einschl. Schrauben und Dichtung, für Wasser, DN 50.;6,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0035;Vorschweißflansch DIN EN 1092-1 PN 16, aus Stahl, einschl. Schrauben und Dichtung, für Wasser, DN 65.;60,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0036;Vorschweißflansch DIN EN 1092-1 PN 16, aus Stahl, einschl. Schrauben und Dichtung, für Wasser, DN 80.;6,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0037;Vorschweißflansch DIN EN 1092-1 PN 16, aus Stahl, einschl. Schrauben und Dichtung, für Wasser, DN 100.;40,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0038;Blindflansch Form B (glatte Ausführung) DIN EN 1092-1 PN 16, aus Stahl, einschl. Schrauben und Dichtung, für Wasser, DN 65.;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0039;Blindflansch Form B (glatte Ausführung) DIN EN 1092-1 PN 16, aus Stahl, einschl. Schrauben und Dichtung, für Wasser, DN 100.;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0040;Rohrleitung aus Präzisionsstahlrohr DIN EN 10305-3, geschweißt, außen verzinkt, Stahlsorte E195 (Werkstoff-Nr 1.0034), DIN EN 10305, für Heizungswasser, Außendurchmesser 15 mm, Wanddicke 1,2 mm, Verbindung durch Pressen, Form- und Verbindungsstücke werden gesondert vergütet, Verlegung in Gebäuden, A;195,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0041;Außendurchmesser 18 mm,;45,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0042;Außendurchmesser 22 mm, Wanddicke 1,5 mm,;50,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0043;Außendurchmesser 28 mm, Wanddicke 1,5 mm,;85,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0044;Außendurchmesser 35 mm, Wanddicke 1,5 mm,;110,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0045;Außendurchmesser 42 mm, Wanddicke 1,5 mm,;85,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0046;Außendurchmesser 54 mm, Wanddicke 1,5 mm,;35,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0047;Bogen, aus Kohlenstoffstahl, Pressverbindung, 90 Grad, für Rohrleitung aus Präzisionsstahlrohr DIN EN 10305-3, geschweißt, für Heizungswasser, Außendurchmesser 15 mm.;85,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0048;mit Einsteckende, Außendurchmesser 18 mm.;65,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0049;mit Einsteckende, Außendurchmesser 22 mm.;51,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0050;mit Einsteckende, Außendurchmesser 28 mm.;53,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0051;mit Einsteckende, Außendurchmesser 35 mm.;22,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0052;mit Einsteckende, Außendurchmesser 42 mm.;27,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0053;mit Einsteckende, Außendurchmesser 54 mm.;8,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0054;T-Stück, aus Kohlenstoffstahl, Pressverbindung, für Rohrleitung aus Präzisionsstahlrohr DIN EN 10305-3, geschweißt, für Heizungswasser, Außendurchmesser 15 mm.;12,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0055;mit Einsteckende, Außendurchmesser 18 mm.;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0056;mit Einsteckende, Außendurchmesser 22 mm.;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0057;mit Einsteckende, Außendurchmesser 28 mm.;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0058;mit Einsteckende, Außendurchmesser 35 mm.;3,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0059;mit Einsteckende, Außendurchmesser 42 mm.;3,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0060;mit Einsteckende, Außendurchmesser 54 mm.;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0061;T-Stück, reduziert, aus Kohlenstoffstahl, Pressverbindung, für Rohrleitung aus Präzisionsstahlrohr DIN EN 10305-3, geschweißt, für Heizungswasser, Außendurchmesser 18 mm, 2. Durchmesser 15 mm.;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0062;mit Einsteckende, Außendurchmesser 22 mm, 2. Durchmesser 18 mm.;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0063;mit Einsteckende, Außendurchmesser 28 mm, 2. Durchmesser 22 mm.;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0064;mit Einsteckende, Außendurchmesser 35 mm, 2. Durchmesser 28 mm.;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0065;mit Einsteckende, Außendurchmesser 42 mm, 2. Durchmesser 28 mm.;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0066;mit Einsteckende, Außendurchmesser 42 mm, 2. Durchmesser 35 mm.;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0067;mit Einsteckende, Außendurchmesser 54 mm, 2. Durchmesser 42 mm.;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0068;Reduzierstück, aus Kohlenstoffstahl, Pressverbindung, für Rohrleitung aus Präzisionsstahlrohr DIN EN 10305-3, geschweißt, für Heizungswasser, Außendurchmesser 18 mm, 2. Durchmesser 15 mm.;3,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0069;Außendurchmesser 22 mm, 2. Durchmesser 18 mm.;6,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0070;Außendurchmesser 28 mm, 2. Durchmesser 22 mm.;8,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0071;Außendurchmesser 35 mm, 2. Durchmesser 28 mm.;5,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0072;Außendurchmesser 42 mm, 2. Durchmesser 35 mm.;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0073;Außendurchmesser 54 mm, 2. Durchmesser 42 mm.;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0074;Muffe, aus Kohlenstoffstahl, Pressverbindung, für Rohrleitung aus Präzisionsstahlrohr DIN EN 10305-3, geschweißt, für Heizungswasser, Außendurchmesser 15 mm.;33,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0075;Außendurchmesser 88,9 mm.;12,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0076;Außendurchmesser 18 mm.;7,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0077;Außendurchmesser 22 mm.;7,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0078;Außendurchmesser 28 mm.;12,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0079;Außendurchmesser 35 mm.;8,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0080;Außendurchmesser 42 mm.;3,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0081;Außendurchmesser 54 mm.;11,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0082;Kappe, aus Kohlenstoffstahl, Pressverbindung, für Rohrleitung aus Präzisionsstahlrohr DIN EN 10305-3, geschweißt, für Heizungswasser, Außendurchmesser 15 mm.;3,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0083;Außendurchmesser 18 mm.;3,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0084;Außendurchmesser 22 mm.;6,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0085;Außendurchmesser 28 mm.;7,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0086;Außendurchmesser 35 mm.;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0087;Außendurchmesser 42 mm.;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0088;Außendurchmesser 54 mm.;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0089;Übergangsverschraubung, aus Kohlenstoffstahl, für Rohrleitung aus Präzisionsstahlrohr DIN EN 10305-3, geschweißt, für Heizungswasser, Außendurchmesser 15 mm.;40,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0090;Außendurchmesser 18 mm.;8,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0091;Außendurchmesser 22 mm.;7,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0092;Außendurchmesser 28 mm.;14,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0093;Außendurchmesser 35 mm.;20,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0094;Außendurchmesser 42 mm.;17,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0095;Außendurchmesser 54 mm.;5,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0096;Konstruktion aus Winkelkonsolen, Knotenblechen und Abschlussverbindungsprofilen, aus verzinktem Stahl, für Stütz-, Hänge-, Trag- und Sonderbefestigung, Feuerwiderstandsklasse F 90 DIN 4102-2, Ausladung über 250 bis 300 mm, der rechnerische Nachweis der Tragfähigkeit ist auf Verlangen vorzulegen, für;16,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0097;Ausladung über 300 bis 350 mm,;8,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0098;C-Profilschiene (Ankerschiene), aus verzinktem Stahl, für Stütz-, Hänge-, Trag- und Sonderbefestigung, Feuerwiderstandsklasse F 90 DIN 4102-2, Profilbreite 30 mm, Profildicke mind. 2 mm, der rechnerische Nachweis der Tragfähigkeit ist auf Verlangen vorzulegen, für Heizungswasser, Arbeitshöhe des Mon;6,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0099;Form-/Hohlprofilstahlkonstruktion, aus verzinktem Stahl, für Stütz-, Hänge-, Trag- und Sonderbefestigung, schallentkoppelt gelagert, Feuerwiderstandsklasse F 90 DIN 4102-2, der rechnerische Nachweis der Tragfähigkeit ist auf Verlangen vorzulegen, für Heizungswasser, Arbeitshöhe des Montageortes bis ;80,0;kg;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0100;Montagewinkel, aus verzinktem Stahl, für Festpunktausführung, Feuerwiderstandsklasse F 90 DIN 4102-2, der rechnerische Nachweis der Tragfähigkeit ist auf Verlangen vorzulegen, für Heizungswasser, Arbeitshöhe des Montageortes bis 3,5 m über der Standfläche des hierfür erforderlichen Gerüstes.;40,0;kg;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0101;Rohraufhängung als Rohrschelle DN 12;30,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0102;Rohraufhängung als Rohrschelle DN 15;8,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0103;Rohraufhängung als Rohrschelle DN 20;9,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0104;Rohraufhängung als Rohrschelle DN 25;18,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0105;Rohraufhängung als Rohrschelle DN 32;22,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0106;Rohraufhängung als Rohrschelle DN 40;20,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0107;Rohraufhängung als Rohrschelle DN 50;10,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0108;Rohraufhängung als Rohrschelle DN 65;30,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0109;Rohraufhängung als Rohrschelle DN 80;30,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0110;Rohraufhängung als Rohrschelle DN 100;30,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0111;Rohraufhängung als Rohrschelle DN 12 , F 90;30,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0112;Rohraufhängung als Rohrschelle DN 15 , F 90;8,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0113;Rohraufhängung als Rohrschelle DN 20, F 90;9,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0114;Rohraufhängung als Rohrschelle DN 25, F 90;15,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0115;Rohraufhängung als Rohrschelle DN 32, F 90;25,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0116;Rohraufhängung als Rohrschelle DN 40, F 90;21,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0117;Rohraufhängung als Rohrschelle DN 50, F 90;7,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0118;Rohraufhängung als Rohrschelle DN 65, F 90;30,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0119;Rohraufhängung als Rohrschelle DN 80, F 90;30,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0120;Rohraufhängung als Rohrschelle DN 100, F 90;30,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0001;Hydraulische Weiche;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0002;Dämmung hydr. Weiche;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0003;Luftgefäß mit 2 gewölbten Böden, max. zulässige Betriebstemperatur bis 120 Grad C, PN 16, aus Stahlrohren, bis DN 100, Gesamtlänge 300 mm, mit 2 Leitungsanschlüssen mit Flansch einschl. Gegenflansch, Dichtungen und Schrauben, mit Entlüftungsleitung, Länge 2 m und Entlüftungshahn.;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0004;Heizungsverteiler 200/200, als kombinierter Vor- und Rücklaufverteiler,;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0005;Fertigdämmung Verteiler Mineralwolle und Blechmantel;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0006;Standkonsohlen für vorstehenden Verteiler;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0007;Hydraulische Weiche;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0008;Dämmung hydr. Weiche;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0009;Luftgefäß mit 2 gewölbten Böden, max. zulässige Betriebstemperatur bis 120 Grad C, PN 16, aus Stahlrohren, bis DN 100, Gesamtlänge 300 mm, mit 2 Leitungsanschlüssen mit Flansch einschl. Gegenflansch, Dichtungen und Schrauben, mit Entlüftungsleitung, Länge 2 m und Entlüftungshahn.;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0010;Heizungsverteiler 160/160, als kombinierter Vor- und Rücklaufverteiler,;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0011;Fertigdämmung Verteiler Mineralwolle und Blechmantel;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0012;Standkonsohlen für vorstehenden Verteiler;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0013;Kreiselpumpe, als Nassläufer, DN 65;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0014;Kreiselpumpe, als Nassläufer, DN 50;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0015;Kreiselpumpe, als Nassläufer, DN 32;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0016;Kreiselpumpe, als Nassläufer, DN 15;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0017;Kreiselpumpe, als Nassläufer, DN 40;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0018;Kreiselpumpe, als Nassläufer, DN 32;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0019;Erweiterungsmodul zur Potentialfreie Sammelstörmeldung zur Aufschaltung auf GLT;6,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0020;Mischventile, vom AG beigestellt, einbauen, mit Muffenanschluss, DN 15.;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0021;DN 20.;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0022;DN 32.;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0023;Durchgangsventile, vom AG beigestellt, einbauen, mit Flanschanschluss, DN 100.;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0024;DN 65.;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0025;DN 50.;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0026;mit Muffenanschluss, DN 32.;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0027;mit Muffenanschluss, DN 40.;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0028;Zeigerthermometer DIN EN 13190, Messsystem Bimetall, glattes Messelement, Einbaulänge 50 mm, Gehäusenenndurchmesser 63 mm, Anzeigebereich 0 bis 120 Grad C, Genauigkeitsklasse 1.;20,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0029;Tauchhülse für Thermometer-Messelement, Einbaulänge 50 mm, mit Feststellschraube seitlich.;20,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0030;Druckmessgerät, Messsystem Rohrfeder DIN EN 837-1, mit Dämpfungsflüssigkeit und zusätzlich verstellbarem Markenzeiger, Nenndruck 0,6 MPa (6 bar), Gehäuse aus nichtrostendem Stahl, ohne Rand, Gehäusenenngröße 80, Güteklasse 1, Anzeigebereich 0 bis 4 bar, Anschluss G 1/2 unten, mediumberührte Teile au;10,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0031;Druckmessgeräteventil, mit Entlüftungsschraube, mit Prüfzapfen, M 20/1,5 mm, für Wasser, aus Messing, Nenndruck 0,6 MPa (6 bar), Rp 1/2.;10,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0032;Absperrventil für Druckmessgerät DIN 16271, mit Prüfzapfen, Nenndruck 0,6 MPa (6 bar), aus Messing, Anschlussgewinde G 1/2.;10,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0033;Wassersackrohr DIN 16282, Nenndruck 0,6 MPa (6 bar), aus Stahl, Anschluss Anschweißende-Spannmuffe, Anschlussgewinde G 1/2.;10,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0034;Schmutzfänger, DN 20, für Wasser, max. Betriebstemperatur bis 120 Grad C, Nenndruck 1,6 MPa (16 bar), in Schrägsitzform, mit Gewindeanschluss, Gehäuse aus nichtrostendem Stahl, mit Normalsieb.;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0035;DN 32,;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0036;DN 40,;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0037;DN 65, mit Flanschanschluss,;3,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0038;Rückschlagventil für Wasser bis 120 Grad C, Geradsitz-Durchgangsform, mit Innengewinde, Gehäuse aus nichtrostendem Stahl, Nenndruck 1,6 MPa (16 bar), DN 20.;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0039;DN 32.;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0040;DN 40.;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0041;DN 50.;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0042;DN 65.;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0043;Absperrventil, für Wasser bis 120 Grad C, mit Muffenanschluss, Gehäuse aus Rotguss, in Geradsitz-Durchgangsform, mit Handrad, mit wartungsfreier Spindelabdichtung, Sitz metallisch dichtend, Nenndruck 1,6 MPa (16 bar), DN 15, mit Dämmschalen.;11,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0044;DN 20,;9,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0045;DN 25,;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0046;DN 32,;5,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0047;DN 40,;6,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0048;DN 50,;10,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0049;mit Flanschanschluss, DN 65,;6,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0050;mit Flanschanschluss, DN 80,;6,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0051;mit Flanschanschluss, DN 100,;6,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0052;Kugelhahn, für Wasser, max. Betriebstemperatur bis 120 Grad C, Durchgangsform, mit Muffenanschluss und Verschraubung, mit Schwerkraftbremse, Gehäuse aus Rotguss, Betätigung mit Hebel, Nenndruck 1,6 MPa (16 bar), DN 15, mit Dämmschalen.;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0053;DN 20,;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0054;DN 25,;6,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0055;DN 32,;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0056;DN 40,;6,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0057;DN 50,;6,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0058;Strangventil, mit gesicherter Voreinstellung, mit Gewindeanschluss für Kapillarrohr, Stopfen und Stellungsanzeige, für Wasser, max. Betriebstemperatur bis 120 Grad C, mit Entleerung und Messanschluss, mit Innengewinde, Gehäuse aus Rotguss, Nenndruck 1,6 MPa (16 bar), DN 15.;9,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0059;DN 20.;5,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0060;DN 25.;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0061;Abgleichventil mit Voreinstellung und Absperrung, für Wasser, max. Betriebstemperatur bis 120 Grad C, mit Gewindeanschluss und Verschraubung, Gehäuse aus Rotguss, Nenndruck 1,6 MPa (16 bar), DN 15.;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0062;DN 20.;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0063;DN 25.;3,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0064;Be- und Entlüfter, für Wasser, max. Betriebstemperatur bis 120 Grad C, max. Betriebsüberdruck 0,6 MPa (6 bar), mit Schwimmer aus Kupfer, weich dichtend, Gehäuse aus Messing, mit Gewindeanschluss, Nenndruck 1,6 MPa (16 bar), DN 15.;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0065;DN 20.;6,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0066;DN 25.;6,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0067;Luftgefäß mit 2 gewölbten Böden, max. zulässige Betriebstemperatur bis 120 Grad C, max. Betriebsüberdruck 1,6 MPa (16 bar), aus Stahlrohren, mit Werkszeugnis 2.2 DIN EN 10204, bis DN 40, Gesamtlänge 200 mm, mit einem Leitungsanschluss mit Gewinde, Anschluss DN 20, mit Entlüftungsleitung, Länge 2 m u;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0068;bis DN 50,;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0069;bis DN 80, Gesamtlänge 250 mm, mit einem Leitungsanschluss mit Schweißverbindung, Anschluss DN 40,;6,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0070;Entleerungsarmatur, als Kugelhahn, für Wasser bis 120 Grad C, mit Steckschlüsselaufsatz, Durchgangsform, mit Verschlusskappe und Kette, Gehäuse aus Rotguss, weich dichtend, mit Gewindeanschluss, Nenndruck 1,6 MPa (16 bar), DN 15.;20,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0071;Füllschlauch, aus Gummi mit Gewebeeinlage, max. Betriebsüberdruck 1 MPa (10 bar), temperaturbeständig bis 90 Grad C, R 1/2, mit eingebundenen Verschraubungen, einschl. Schlauchhalter aus verzinktem Stahlblech, Schlauchlänge 20 m.;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0001;Mineralwolldämmung, EnEV 100%, für Rohrleitungen DN 15;20,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0002;Mineralwolldämmung, EnEV 100%, für Rohrleitungen DN 20;20,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0003;Mineralwolldämmung, EnEV 100%, für Rohrleitungen DN 25;20,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0004;Mineralwolldämmung, EnEV 100%, für Rohrleitungen DN 32;20,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0005;Mineralwolldämmung, EnEV 100%, für Rohrleitungen DN 40;20,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0006;Mineralwolldämmung, EnEV 100%, für Rohrleitungen DN 50;20,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0007;Mineralwolldämmung, EnEV 100%, für Rohrleitungen DN 65;20,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0008;Wand-/Deckendurchführung R90 für nichtbr. Rohrleitung DN 15;5,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0009;Wand-/Deckendurchführung R90 für nichtbr. Rohrleitung DN 20;5,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0010;Wand-/Deckendurchführung R90 für nichtbr. Rohrleitung DN 25;5,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0011;Wand-/Deckendurchführung R90 für nichtbr. Rohrleitung DN 32;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0012;Wand-/Deckendurchführung R90 für nichtbr. Rohrleitung DN 40;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0013;Wand-/Deckendurchführung R90 für nichtbr. Rohrleitung DN 50;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0014;Wand-/Deckendurchführung R90 für nichtbr. Rohrleitung DN 65;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0015;Wand-/Deckendurchführung R90 für nichtbr. Rohrleitung DN 80;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0016;Wand-/Deckendurchführung R90 für nichtbr. Rohrleitung DN 100;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0017;Aluklebeband, diffusionsdicht;49,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0018;Dämmschlauch für Rohr DN 15;50,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0019;Dämmschlauch für Rohr DN 20;50,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0020;Dämmschlauch für Rohr DN 25;20,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0021;Brandschutzschaum;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0022;Brandschutzmörtel;0,1;m3;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0023;Brandschutzwolle;20,0;kg;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0024;Schließen von Fugen Umfang bis 1000 mm;10,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0025;Schließen von Fugen Umfang 1000 - 2500 mm;10,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0001;Fußbodenheizung 14 x 2,0 mm VA 220 mm;1840,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0002;Fußbodenheizung 14 x 2,0 mm VA 160 mm;290,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0003;Fußbodenheizung 14 x 2,0 mm VA 110 mm;45,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0004;PE-Xc Rohr 14 x 2,0 mm, als Rolle für Anbindeleitung der Heizkreise;1600,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0005;Randdämmstreifen H 200 mm;1000,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0006;Presskupplung 14x2,0;10,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0007;Bewegungsfugenprofil 10/100;360,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0008;Rohrführungsbogen für Rohr 14-17;192,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0009;Rohrschutzklebestreifen;300,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0010;Estrichmessstelle;40,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0011;Heizkreisverteiler für Fußbodenheizungen, max. Betriebstemperatur 60 Grad C, max. Betriebsüberdruck 0,6 MPa (6 bar), für 4 Heizkreise, Gewindeanschluss;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0012;Heizkreisverteiler für Fußbodenheizungen, max. Betriebstemperatur 60 Grad C, max. Betriebsüberdruck 0,6 MPa (6 bar), für 6 Heizkreise, Gewindeanschluss;5,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0013;Heizkreisverteiler für Fußbodenheizungen, max. Betriebstemperatur 60 Grad C, max. Betriebsüberdruck 0,6 MPa (6 bar), für 7 Heizkreise, Gewindeanschluss;3,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0014;Heizkreisverteiler für Fußbodenheizungen, max. Betriebstemperatur 60 Grad C, max. Betriebsüberdruck 0,6 MPa (6 bar), für 8 Heizkreise, Gewindeanschluss;3,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0015;Heizkreisverteiler für Fußbodenheizungen, max. Betriebstemperatur 60 Grad C, max. Betriebsüberdruck 0,6 MPa (6 bar), für 9 Heizkreise, Gewindeanschluss;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0016;Heizkreisverteiler für Fußbodenheizungen, max. Betriebstemperatur 60 Grad C, max. Betriebsüberdruck 0,6 MPa (6 bar), für 11 Heizkreise, Gewindeanschluss;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0017;Heizkreisverteiler für Fußbodenheizungen, max. Betriebstemperatur 60 Grad C, max. Betriebsüberdruck 0,6 MPa (6 bar), für 12 Heizkreise, Gewindeanschluss;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0018;Verteilerschrank für Heizkreisverteiler, höhenverstellbar bis 150 mm, für 4 Heizkreise, Gehäuse aus verzinktem Stahl, für Wandeinbau, mit Tür und höhenverstellbarem Sockel, aus beschichtetem Stahl, zur Aufnahme der Anschlussgarnitur für Verteiler, mit Zylinderschloss.;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0019;Verteilerschrank für Heizkreisverteiler, höhenverstellbar bis 150 mm, für 6 Heizkreise, Gehäuse aus verzinktem Stahl, für Wandaufbau, mit Tür und höhenverstellbarem Sockel, aus beschichtetem Stahl, zur Aufnahme der Anschlussgarnitur für Verteiler, mit Zylinderschloss.;5,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0020;Verteilerschrank für Heizkreisverteiler, höhenverstellbar bis 150 mm, für 7 Heizkreise, Gehäuse aus verzinktem Stahl, für Wandaufbau, mit Tür und höhenverstellbarem Sockel, aus beschichtetem Stahl, zur Aufnahme der Anschlussgarnitur für Verteiler, mit Zylinderschloss.;3,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0021;Verteilerschrank für Heizkreisverteiler, höhenverstellbar bis 150 mm, für 8 Heizkreise, Gehäuse aus verzinktem Stahl, für Wandeinbau, mit Tür und höhenverstellbarem Sockel, aus beschichtetem Stahl, zur Aufnahme der Anschlussgarnitur für Verteiler, mit Zylinderschloss.;3,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0022;Verteilerschrank für Heizkreisverteiler, höhenverstellbar bis 150 mm, für 9 Heizkreise, Gehäuse aus verzinktem Stahl, für Wandeinbau, mit Tür und höhenverstellbarem Sockel, aus beschichtetem Stahl, zur Aufnahme der Anschlussgarnitur für Verteiler, mit Zylinderschloss.;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0023;Verteilerschrank für Heizkreisverteiler, höhenverstellbar bis 150 mm, für 11 Heizkreise, Gehäuse aus verzinktem Stahl, für Wandeinbau, mit Tür und höhenverstellbarem Sockel, aus beschichtetem Stahl, zur Aufnahme der Anschlussgarnitur für Verteiler, mit Zylinderschloss.;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0024;Verteilerschrank für Heizkreisverteiler, höhenverstellbar bis 150 mm, für 12 Heizkreise, Gehäuse aus verzinktem Stahl, für Wandaufbau, mit Tür und höhenverstellbarem Sockel, aus beschichtetem Stahl, zur Aufnahme der Anschlussgarnitur für Verteiler, mit Zylinderschloss.;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0025;Beschriftung der Heizkreise am Verteiler, selbstklebend, 47 mm x 10 mm,;200,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0026;Thermoantrieb;200,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0027;Leistungsnachweis vor Ort/Thermografie;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0028;Durchführung einer Druckprobe;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0029;Fußbodenheizung Einregulieren und Aufheizen;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0030;Fußbodenheizung Belegreifheizen;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0001;Flachheizkörper profiliert, weiß Typ 12 / BH  900 / BL 400;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0002;Flachheizkörper profiliert, weiß Typ 12 / BH  900 / BL 500;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0003;Röhrenradiatorglieder, BH 2000 x 10 GL;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0004;Röhrenradiatorglieder, BH 2000 x 16 GL;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0005;Zulage für HK-Befestigung nach VDI 6036, AWK3, je HK;9,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0006;Mehrpreis für Befestigung Heizkörper an bauseitiger Trockenbauwand;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0007;Heizkörperanschlussblock aus Messing, vernickelt, für Doppelanschluss, DN 15;9,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0008;Durchgangsventil, kvs 1,6 PN16, DN10;9,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0009;Heizkörper zum Zwecke bauseitiger Arbeiten (Putz, Fliesen, Anstrich etc.) abnehmen und unter Beigabe neuer Dichtungen wieder montieren, gleichzeitig sind alle Rohrleitungsanschlüsse und alle Konsolen gegen Verschmutzung bei den Putzarbeiten durch Abkleben dauerhaft zu schützen.;9,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0010;Doppelrosette, altweiß, für Rohrdurchmesser 26 mm, variabler Rohrabstand von 35-55 mm, einschl. Klappmanschette als Verbindung zwischen FB-Oberfläche und HK-Anschluss liefern und montieren;9,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0011;Steckschlüssel für Heizkörperentlüftungsventil sind dem Bauherrn oder THV bei Einweisung oder Abnahme zu übergeben;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0001;Kernbohrung, Untergrundfläche senkrecht, aus Stahlbeton, Normalbeton, Bohrdurchmesser über 25 bis 50 mm, Bohrtiefe über 25 bis 30 cm, einschl. Lösen des Bohrkerns aus dem Gefüge, Wichte des Abbruchstoffes DIN EN 1991-1-1 24 kN/m3, Arbeitshöhe bis 4,5 m,;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0002;Kernbohrung senkrecht Stahlbeton Durchm. 50-100mm T 25-30cm nicht schadstoffbelastet;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0003;Kernbohrung senkrecht Stahlbeton Durchm. 150-200mm T 25-30cm nicht schadstoffbelastet;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0004;Zuschlag KB Sichtbeton;3,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0005;Fehlende Kernbohrungen / Wand- oder Deckenöffnungen anzeichnen.;5,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0006;Schließen bauseitiger Durchbrüche, mit Durchdringungen, bis 250 cm²;5,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0007;Schließen bauseitiger Durchbrüche, mit Durchdringungen, bis 500 cm²;5,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0008;Schließen bauseitiger Durchbrüche, mit Durchdringungen, bis 1000 cm²;3,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0009;Abfall nicht gefährlich AVV170107 Z0 LKW AN transp. entsorgen Verwertungsanlage bis 20km Vergüt.Entsorg. AN;100,0;kg;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0010;Einmessen und Kennzeichnen von Durchbrüchen.;47,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0011;Bestandsdokumentation mind. 10 Tage vor Abnahme vorzulegen;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0012;Werkstatt- und Montageplanung des Auftragnehmers;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0013;Koordination mit Fremdgewerken;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0014;Anlagenschema Technikraum;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0015;Fahrbares Montagegerüst, bis 3,5 Meter;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0016;Druckprobe Heizungsanlage;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0017;Füllen des kompletten Heiznetzes, Entlüften und;6400,0;l;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0018;Nachentlüften nach 4 Wochen nach Erstfüllung;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0019;Wasseranalyse und Einstellung der Wasserwerte;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0020;Erstmalige Inbetriebnahme der Anlagen;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0021;Hydraulische Einregulierung der Heizungsanlage;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0022;Schulung des Bedienpersonals;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0023;Wiederholte Einweisung;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0024;Selbstklebende Folie zur Medienkennzeichnung;50,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0025;Bezeichnungsschild, 52 x 100 mm;100,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0001;Stundenlohnarbeiten durch Objektleiter/-in;10,0;h;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0002;Stundenlohnarbeiten durch Obermonteur/-in;10,0;h;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0003;Stundenlohnarbeiten durch Monteur/-in;20,0;h;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0004;Stundenlohnarbeiten durch Helfer/-in;20,0;h;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0005;Stundenlohnarbeiten durch Elektriker/in;10,0;h;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0006;Anfahrtpauschale für gesonderte Arbeitseinsatz auf der Baustelle;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0001;Arbeitskarte und Bestandsliste;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0002;Wartungspauschale – 1. Wartungsjahr;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0003;für 2. Jahr.;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0004;für 3. Jahr.;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0005;für 4.Jahr.;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0001;Baustelle für sämtliche aufgeführte Leistungen, einrichten, herstellen der dazu erforderlichen Lager- und Arbeitsplätze, Flächen sind im Lageplan ausgewiesen.;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0002;Baustelle für sämtliche aufgeführte Leistungen umsetzen, hierzu auch neu einrichten, -herstellen der dazu erforderlichen Lager- und Arbeitsplätze, Flächen werden durch die Bauleitung ausgewiesen. Anzahl der Umzüge 2x.;3,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0003;Baustelleneinrichtung für sämtliche, in der Leistungsbeschreibung aufgeführten Leistungen vorhalten, über die Zeit im Bauzeitenplan hinaus.;1,0;Mt;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0004;Baustelle für sämtliche aufgeführte Leistungen, räumen, Geländeflächen, auf denen sich Baustelleneinrichtungen befunden haben, dem früheren Zustand entsprechend herstellen, im Baugrund befindliche Teile der Baustelleneinrichtung (z. B. Fundamente, Pfähle, Leitungen, Kanäle) räumen.;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0001;Frischwasserstation Zapfleistung 43 l/min, Plattentauscher VA;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0002;Pufferspeicher für Frischwasserstation ca. 1.500 Liter Inhalt;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0003;Inbetriebnahme Warmwasserbereitung;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0004;Prüfung der Steuerung Warmwasserbereitung;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0001;Rohr schwarz geschweißt, DN 40;13,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0002;Rohr schwarz geschweißt DN 50;49,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0003;Rohr schwarz geschweißt DN 65;16,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0004;Einschweißbogen, aus Kohlenstoffstahl, für Rohrleitung aus mittelschwerem Stahlrohr DIN EN 10255, für Heizungswasser, Außendurchmesser 48,3 mm.;6,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0005;Einschweißbogen, aus Kohlenstoffstahl, für Rohrleitung aus mittelschwerem Stahlrohr DIN EN 10255, für Heizungswasser, Außendurchmesser 60,3 mm.;26,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0006;Einschweißbogen, aus Kohlenstoffstahl, für Rohrleitung aus mittelschwerem Stahlrohr DIN EN 10255, für Heizungswasser, Außendurchmesser 76,1 mm.;10,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0007;Reduzierstück, aus Kohlenstoffstahl, Verbindung durch Schweißen, für Rohrleitung aus mittelschwerem Stahlrohr DIN EN 10255, für Heizungswasser, Außendurchmesser 48,3 mm, 2. Durchmesser 42,4 mm.;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0008;Reduzierstück, aus Kohlenstoffstahl, Verbindung durch Schweißen, für Rohrleitung aus mittelschwerem Stahlrohr DIN EN 10255, für Heizungswasser, Außendurchmesser 60,3 mm, 2. Durchmesser 48,3 mm.;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0009;Reduzierstück, aus Kohlenstoffstahl, Verbindung durch Schweißen, für Rohrleitung aus mittelschwerem Stahlrohr DIN EN 10255, für Heizungswasser, Außendurchmesser 76,1 mm, 2. Durchmesser 48,3 mm.;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0010;Übergangsverschraubung, aus Kohlenstoffstahl, für Rohrleitung aus mittelschwerem Stahlrohr DIN EN 10255, für Heizungswasser, Außendurchmesser 48,3 mm.;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0011;Einschweißmuffe, mit zylindrischem Innengewinde, aus Kohlenstoffstahl, Verbindung durch Schweißen, für Rohrleitung aus mittelschwerem Stahlrohr DIN EN 10255, für Heizungswasser, Länge bis 50 mm, Gewindeanschluss Rp 1/2.;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0012;Einschweißmuffe, mit zylindrischem Innengewinde, aus Kohlenstoffstahl, Verbindung durch Schweißen, für Rohrleitung aus mittelschwerem Stahlrohr DIN EN 10255, für Heizungswasser, Länge bis 50 mm, Gewindeanschluss Rp 3/4.;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0013;Vorschweißflansch DIN EN 1092-1 PN 16, aus Stahl, einschl. Schrauben und Dichtung, für Wasser, DN 40.;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0014;Vorschweißflansch DIN EN 1092-1 PN 16, aus Stahl, einschl. Schrauben und Dichtung, für Wasser, DN 50.;6,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0015;Vorschweißflansch DIN EN 1092-1 PN 16, aus Stahl, einschl. Schrauben und Dichtung, für Wasser, DN 65.;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0016;Blindflansch Form A (glatte Ausführung) DIN EN 1092-1 PN 16, aus Stahl, einschl. Schrauben und Dichtung, für Wasser, DN 50.;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0017;Rohrleitung aus Präzisionsstahlrohr DIN EN 10305-3, geschweißt, außen verzinkt, Stahlsorte E195 (Werkstoff-Nr 1.0034), DIN EN 10305, für Heizungswasser, Außendurchmesser 15 mm, Wanddicke 1,2 mm, Verbindung durch Pressen, Form- und Verbindungsstücke werden gesondert vergütet, Verlegung in Gebäuden, A;195,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0018;Außendurchmesser 18 mm,;130,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0019;Außendurchmesser 22 mm, Wanddicke 1,5 mm,;50,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0020;Außendurchmesser 28 mm, Wanddicke 1,5 mm,;5,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0021;Bogen, aus Kohlenstoffstahl, Pressverbindung, 90 Grad, für Rohrleitung aus Präzisionsstahlrohr DIN EN 10305-3, geschweißt, für Heizungswasser, Außendurchmesser 15 mm.;187,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0022;mit Einsteckende, Außendurchmesser 18 mm.;14,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0023;mit Einsteckende, Außendurchmesser 22 mm.;26,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0024;mit Einsteckende, Außendurchmesser 28 mm.;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0025;T-Stück, aus Kohlenstoffstahl, Pressverbindung, für Rohrleitung aus Präzisionsstahlrohr DIN EN 10305-3, geschweißt, für Heizungswasser, Außendurchmesser 15 mm.;12,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0026;mit Einsteckende, Außendurchmesser 18 mm.;3,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0027;mit Einsteckende, Außendurchmesser 22 mm.;3,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0028;mit Einsteckende, Außendurchmesser 28 mm.;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0029;T-Stück, reduziert, aus Kohlenstoffstahl, Pressverbindung, für Rohrleitung aus Präzisionsstahlrohr DIN EN 10305-3, geschweißt, für Heizungswasser, Außendurchmesser 18 mm, 2. Durchmesser 15 mm.;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0030;mit Einsteckende, Außendurchmesser 22 mm, 2. Durchmesser 18 mm.;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0031;Reduzierstück, aus Kohlenstoffstahl, Pressverbindung, für Rohrleitung aus Präzisionsstahlrohr DIN EN 10305-3, geschweißt, für Heizungswasser, Außendurchmesser 18 mm, 2. Durchmesser 15 mm.;3,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0032;Außendurchmesser 22 mm, 2. Durchmesser 18 mm.;3,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0033;Außendurchmesser 28 mm, 2. Durchmesser 22 mm.;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0034;Muffe, aus Kohlenstoffstahl, Pressverbindung, für Rohrleitung aus Präzisionsstahlrohr DIN EN 10305-3, geschweißt, für Heizungswasser, Außendurchmesser 15 mm.;33,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0035;Außendurchmesser 88,9 mm.;34,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0036;Außendurchmesser 18 mm.;10,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0037;Außendurchmesser 22 mm.;10,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0038;Kappe, aus Kohlenstoffstahl, Pressverbindung, für Rohrleitung aus Präzisionsstahlrohr DIN EN 10305-3, geschweißt, für Heizungswasser, Außendurchmesser 15 mm.;11,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0039;Außendurchmesser 18 mm.;9,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0040;Außendurchmesser 22 mm.;3,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0041;Außendurchmesser 28 mm.;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0042;Übergangsverschraubung, aus Kohlenstoffstahl, für Rohrleitung aus Präzisionsstahlrohr DIN EN 10305-3, geschweißt, für Heizungswasser, Außendurchmesser 15 mm.;40,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0043;Außendurchmesser 18 mm.;25,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0044;Außendurchmesser 22 mm.;7,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0045;Außendurchmesser 28 mm.;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0046;Konstruktion aus Winkelkonsolen, Knotenblechen und Abschlussverbindungsprofilen, aus verzinktem Stahl, für Stütz-, Hänge-, Trag- und Sonderbefestigung, Feuerwiderstandsklasse F 90 DIN 4102-2, Ausladung über 250 bis 300 mm, der rechnerische Nachweis der Tragfähigkeit ist auf Verlangen vorzulegen, für;20,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0047;Ausladung über 300 bis 350 mm,;20,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0048;C-Profilschiene (Ankerschiene), aus verzinktem Stahl, für Stütz-, Hänge-, Trag- und Sonderbefestigung, Feuerwiderstandsklasse F 90 DIN 4102-2, Profilbreite 30 mm, Profildicke mind. 2 mm, der rechnerische Nachweis der Tragfähigkeit ist auf Verlangen vorzulegen, für Heizungswasser, Arbeitshöhe des Mon;50,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0049;Form-/Hohlprofilstahlkonstruktion, aus verzinktem Stahl, für Stütz-, Hänge-, Trag- und Sonderbefestigung, schallentkoppelt gelagert, Feuerwiderstandsklasse F 90 DIN 4102-2, der rechnerische Nachweis der Tragfähigkeit ist auf Verlangen vorzulegen, für Heizungswasser, Arbeitshöhe des Montageortes bis ;100,0;kg;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0050;Montagewinkel, aus verzinktem Stahl, für Festpunktausführung, Feuerwiderstandsklasse F 90 DIN 4102-2, der rechnerische Nachweis der Tragfähigkeit ist auf Verlangen vorzulegen, für Heizungswasser, Arbeitshöhe des Montageortes bis 3,5 m über der Standfläche des hierfür erforderlichen Gerüstes.;50,0;kg;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0051;Rohraufhängung als Rohrschelle DN 12;35,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0052;Rohraufhängung als Rohrschelle DN 15;30,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0053;Rohraufhängung als Rohrschelle DN 20;10,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0054;Rohraufhängung als Rohrschelle DN 25;5,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0055;Rohraufhängung als Rohrschelle DN 40;5,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0056;Rohraufhängung als Rohrschelle DN 50;10,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0057;Rohraufhängung als Rohrschelle DN 65;5,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0058;Rohraufhängung als Rohrschelle DN 12 , F 90;30,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0059;Rohraufhängung als Rohrschelle DN 15 , F 90;20,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0060;Rohraufhängung als Rohrschelle DN 20, F 90;10,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0061;Rohraufhängung als Rohrschelle DN 25, F 90;5,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0062;Rohraufhängung als Rohrschelle DN 40, F 90;10,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0063;Rohraufhängung als Rohrschelle DN 50, F 90;25,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0064;Rohraufhängung als Rohrschelle DN 65, F 90;5,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0001;Hydraulische Weiche;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0002;Dämmung hydr. Weiche;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0003;Luftgefäß mit 2 gewölbten Böden, max. zulässige Betriebstemperatur bis 120 Grad C, PN 16, aus Stahlrohren, bis DN 100, Gesamtlänge 300 mm, mit 2 Leitungsanschlüssen mit Flansch einschl. Gegenflansch, Dichtungen und Schrauben, mit Entlüftungsleitung, Länge 2 m und Entlüftungshahn.;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0004;Heizungsverteiler 160/160, als kombinierter Vor- und Rücklaufverteiler,;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0005;Fertigdämmung Verteiler Mineralwolle und Blechmantel;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0006;Standkonsohlen für vorstehenden Verteiler;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0007;Kreiselpumpe, als Nassläufer, DN 32;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0008;Kreiselpumpe, als Nassläufer, DN 40;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0009;Kreiselpumpe, als Nassläufer, DN 50;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0010;Erweiterungsmodul zur Potentialfreie Sammelstörmeldung zur Aufschaltung auf GLT;3,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0011;Mischventile, vom AG beigestellt, einbauen, mit Muffenanschluss, DN 25.;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0012;DN 20.;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0013;Durchgangsventile, vom AG beigestellt, einbauen, mit Flanschanschluss, DN 65.;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0014;DN 20.;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0015;Zeigerthermometer DIN EN 13190, Messsystem Bimetall, glattes Messelement, Einbaulänge 50 mm, Gehäusenenndurchmesser 63 mm, Anzeigebereich 0 bis 120 Grad C, Genauigkeitsklasse 1.;10,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0016;Tauchhülse für Thermometer-Messelement, Einbaulänge 50 mm, mit Feststellschraube seitlich.;10,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0017;Druckmessgerät, Messsystem Rohrfeder DIN EN 837-1, mit Dämpfungsflüssigkeit und zusätzlich verstellbarem Markenzeiger, Nenndruck 0,6 MPa (6 bar), Gehäuse aus nichtrostendem Stahl, ohne Rand, Gehäusenenngröße 80, Güteklasse 1, Anzeigebereich 0 bis 4 bar, Anschluss G 1/2 unten, mediumberührte Teile au;5,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0018;Druckmessgeräteventil, mit Entlüftungsschraube, mit Prüfzapfen, M 20/1,5 mm, für Wasser, aus Messing, Nenndruck 0,6 MPa (6 bar), Rp 1/2.;5,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0019;Absperrventil für Druckmessgerät DIN 16271, mit Prüfzapfen, Nenndruck 0,6 MPa (6 bar), aus Messing, Anschlussgewinde G 1/2.;5,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0020;Wassersackrohr DIN 16282, Nenndruck 0,6 MPa (6 bar), aus Stahl, Anschluss Anschweißende-Spannmuffe, Anschlussgewinde G 1/2.;5,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0021;Schmutzfänger, DN 25, für Wasser, max. Betriebstemperatur bis 120 Grad C, Nenndruck 1,6 MPa (16 bar), in Schrägsitzform, mit Gewindeanschluss, Gehäuse aus nichtrostendem Stahl, mit Normalsieb.;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0022;DN 40,;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0023;Rückschlagventil für Wasser bis 120 Grad C, Geradsitz-Durchgangsform, mit Innengewinde, Gehäuse aus nichtrostendem Stahl, Nenndruck 1,6 MPa (16 bar), DN 25.;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0024;DN 40.;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0025;Absperrventil, für Wasser bis 120 Grad C, mit Muffenanschluss, Gehäuse aus Rotguss, in Geradsitz-Durchgangsform, mit Handrad, mit wartungsfreier Spindelabdichtung, Sitz metallisch dichtend, Nenndruck 1,6 MPa (16 bar), DN 15, mit Dämmschalen.;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0026;DN 20,;3,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0027;DN 25,;8,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0028;DN 40,;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0029;DN 50,;6,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0030;Kugelhahn, für Wasser, max. Betriebstemperatur bis 120 Grad C, Durchgangsform, mit Muffenanschluss und Verschraubung, mit Schwerkraftbremse, Gehäuse aus Rotguss, Betätigung mit Hebel, Nenndruck 1,6 MPa (16 bar), DN 15, mit Dämmschalen.;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0031;DN 20,;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0032;DN 25,;6,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0033;DN 40,;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0034;Strangventil, mit gesicherter Voreinstellung, mit Gewindeanschluss für Kapillarrohr, Stopfen und Stellungsanzeige, für Wasser, max. Betriebstemperatur bis 120 Grad C, mit Entleerung und Messanschluss, mit Innengewinde, Gehäuse aus Rotguss, Nenndruck 1,6 MPa (16 bar), DN 15.;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0035;DN 20.;3,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0036;DN 25.;8,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0037;DN 40.;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0038;DN 50.;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0039;Be- und Entlüfter, für Wasser, max. Betriebstemperatur bis 120 Grad C, max. Betriebsüberdruck 0,6 MPa (6 bar), mit Schwimmer aus Kupfer, weich dichtend, Gehäuse aus Messing, mit Gewindeanschluss, Nenndruck 1,6 MPa (16 bar), DN 15.;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0040;DN 20.;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0041;DN 25.;6,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0042;Luftgefäß mit 2 gewölbten Böden, max. zulässige Betriebstemperatur bis 120 Grad C, max. Betriebsüberdruck 1,6 MPa (16 bar), aus Stahlrohren, mit Werkszeugnis 2.2 DIN EN 10204, bis DN 40, Gesamtlänge 200 mm, mit einem Leitungsanschluss mit Gewinde, Anschluss DN 20, mit Entlüftungsleitung, Länge 2 m u;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0043;bis DN 50,;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0044;Entleerungsarmatur, als Kugelhahn, für Wasser bis 120 Grad C, mit Steckschlüsselaufsatz, Durchgangsform, mit Verschlusskappe und Kette, Gehäuse aus Rotguss, weich dichtend, mit Gewindeanschluss, Nenndruck 1,6 MPa (16 bar), DN 15.;10,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0045;Füllschlauch, aus Gummi mit Gewebeeinlage, max. Betriebsüberdruck 1 MPa (10 bar), temperaturbeständig bis 90 Grad C, R 1/2, mit eingebundenen Verschraubungen, einschl. Schlauchhalter aus verzinktem Stahlblech, Schlauchlänge 20 m.;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0046;Absperrventil, für Wasser bis 120 Grad C, mit Muffenanschluss, Gehäuse aus Rotguss, mit Handrad, mit wartungsfreier Spindelabdichtung, Sitz metallisch dichtend, Nenndruck 0,6 MPa (6 bar), DN 15.;29,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0047;DN 20.;11,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0048;DN 25.;11,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0049;DN 32.;10,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0050;DN 40.;3,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0051;DN 50.;3,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0052;Absperrklappe, als Zwischenflanscharmatur, Gehäuse aus Gusseisen EN-GJS-400-15, DN 20, Nenndruck 1,6 MPa (16 bar), für Wasser, weich dichtend, mit Rasterhebel.;3,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0053;DN 25.;6,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0054;DN 32.;5,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0055;DN 40.;3,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0056;DN 50.;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0057;DN 65.;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0058;DN 80.;6,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0059;DN 100.;3,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0060;Strangventil, mit gesicherter Voreinstellung, mit Gewindeanschluss für Kapillarrohr, Stopfen und Stellungsanzeige, für Wasser, max. Betriebstemperatur bis 120 Grad C, mit Entleerung und Messanschluss, mit Innengewinde, Gehäuse aus Rotguss, Nenndruck 0,6 MPa (6 bar), DN 15.;41,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0061;DN 20.;14,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0062;DN 25.;14,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0063;DN 32.;12,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0064;DN 40.;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0065;DN 50.;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0066;Schmutzfänger, DN 20, für Wasser, max. Betriebstemperatur bis 120 Grad C, Nenndruck 1,6 MPa (16 bar), in Schrägsitzform, mit Flanschanschluss, Gehäuse aus Gusseisen EN-GJL-250, mit Normalsieb.;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0067;DN 25.;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0068;DN 32.;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0069;DN 40.;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0070;DN 50.;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0071;Schmutzfänger, DN 65, für Wasser, max. Betriebstemperatur bis 120 Grad C, Nenndruck 1,6 MPa (16 bar), in Schrägsitzform, mit Flanschanschluss, Gehäuse aus Gusseisen EN-GJL-250, mit Normalsieb.;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0072;DN 80.;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0073;DN 100.;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0074;Rückschlagventil für Wasser bis 120 Grad C, in Zwischenflanschausführung, mit Flanschanschluss, Gehäuse aus Rotguss, Sitz weich dichtend, Nenndruck 1,6 MPa (16 bar), DN 20.;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0075;DN 25.;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0076;DN 32.;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0077;DN 40.;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0078;DN 50.;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0079;DN 65.;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0080;DN 80.;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0081;DN 100.;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0082;Entleerungsarmatur, als Kugelhahn, für Wasser bis 120 Grad C, mit Steckschlüsselaufsatz, Durchgangsform, mit Verschlusskappe und Kette, Gehäuse aus Rotguss, mit Gewindeanschluss, Nenndruck 0,6 MPa (6 bar), DN 15.;36,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0083;Luftgefäß mit 2 gewölbten Böden, max. zulässige Betriebstemperatur bis 120 Grad C, PN 16, aus Stahlrohren, bis DN 40, Gesamtlänge 150 mm, mit 2 Leitungsanschlüssen mit Flansch einschl. Gegenflansch, Dichtungen und Schrauben, mit Entlüftungsleitung, Länge 2 m und Entlüftungshahn.;7,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0084;bis DN 50, Gesamtlänge 200 mm.;8,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0085;bis DN 65, Gesamtlänge 250 mm.;3,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0086;bis DN 80, Gesamtlänge 250 mm.;3,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0087;bis DN 100, Gesamtlänge 300 mm.;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0088;bis DN 125, Gesamtlänge 300 mm.;3,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0001;Mineralwolldämmung, EnEV 100%, für Rohrleitungen DN 15;20,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0002;Mineralwolldämmung, EnEV 100%, für Rohrleitungen DN 20;20,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0003;Mineralwolldämmung, EnEV 100%, für Rohrleitungen DN 25;20,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0004;Mineralwolldämmung, EnEV 100%, für Rohrleitungen DN 40;20,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0005;Mineralwolldämmung, EnEV 100%, für Rohrleitungen DN 50;20,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0006;Mineralwolldämmung, EnEV 100%, für Rohrleitungen DN 65;20,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0007;Wand-/Deckendurchführung R90 für nichtbr. Rohrleitung DN 15;5,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0008;Wand-/Deckendurchführung R90 für nichtbr. Rohrleitung DN 20;5,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0009;Wand-/Deckendurchführung R90 für nichtbr. Rohrleitung DN 25;5,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0010;Wand-/Deckendurchführung R90 für nichtbr. Rohrleitung DN 40;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0011;Wand-/Deckendurchführung R90 für nichtbr. Rohrleitung DN 50;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0012;Wand-/Deckendurchführung R90 für nichtbr. Rohrleitung DN 65;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0013;Aluklebeband, diffusionsdicht;49,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0014;Dämmschlauch für Rohr DN 15;50,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0015;Dämmschlauch für Rohr DN 20;50,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0016;Dämmschlauch für Rohr DN 25;20,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0017;Brandschutzschaum;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0018;Brandschutzmörtel;0,1;m3;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0019;Brandschutzwolle;20,0;kg;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0020;Schließen von Fugen Umfang bis 1000 mm;10,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0021;Schließen von Fugen Umfang 1000 - 2500 mm;10,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0001;Flachheizkörper profiliert, weiß Typ 12 / BH  900 / BL 400;3,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0002;Flachheizkörper profiliert, weiß Typ 12 / BH  900 / BL 800;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0003;Flachheizkörper profiliert, weiß Typ 12 / BH  900 / BL 1000;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0004;Flachheizkörper profiliert, weiß Typ 22 / BH  900 / BL 900;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0005;Flachheizkörper profiliert, weiß Typ 12 / BH  900 / BL 400;3,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0006;Flachheizkörper profiliert, weiß Typ 12 / BH  900 / BL 500;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0007;Flachheizkörper profiliert, weiß Typ 12 / BH  900 / BL 800;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0008;Flachheizkörper profiliert, weiß Typ 12 / BH  900 / BL 900;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0009;Flachheizkörper profiliert, weiß Typ 2 / BH  900 / BL 1000;3,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0010;Röhrenradiatorglieder, BH 2000 x 19 GL;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0011;Röhrenradiatorglieder, BH 2200 x 13 GL;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0012;Zulage für HK-Befestigung nach VDI 6036, AWK3, je HK;18,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0013;Mehrpreis für Befestigung Heizkörper an bauseitiger Trockenbauwand;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0014;Heizkörperanschlussblock aus Messing, vernickelt, für Doppelanschluss, DN 15;18,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0015;Durchgangsventil, kvs 1,6 PN16, DN10;18,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0016;Heizkörper zum Zwecke bauseitiger Arbeiten (Putz, Fliesen, Anstrich etc.) abnehmen und unter Beigabe neuer Dichtungen wieder montieren, gleichzeitig sind alle Rohrleitungsanschlüsse und alle Konsolen gegen Verschmutzung bei den Putzarbeiten durch Abkleben dauerhaft zu schützen.;18,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0017;Doppelrosette, altweiß, für Rohrdurchmesser 26 mm, variabler Rohrabstand von 35-55 mm, einschl. Klappmanschette als Verbindung zwischen FB-Oberfläche und HK-Anschluss liefern und montieren;18,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0018;Steckschlüssel für Heizkörperentlüftungsventil sind dem Bauherrn oder THV bei Einweisung oder Abnahme zu übergeben;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0001;Deckenstrahlplatte mit Kopfstücken, Anschlussmuffen, Aufhängeachsen, Abdeck-, Stirn- und Umlenkblechen, Wärmeleistung geprüft DIN EN 14037,;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0002;Spülen, Befüllen und Entlüften;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0003;Dichtigkeitsprüfung, Füllen und Spülen;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0004;Leistungsnachweis vor Ort/ Thermografie;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0005;Bezeichnungsschilder;8,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0001;Kernbohrung, Untergrundfläche senkrecht, aus Stahlbeton, Normalbeton, Bohrdurchmesser über 25 bis 50 mm, Bohrtiefe über 25 bis 30 cm, einschl. Lösen des Bohrkerns aus dem Gefüge, Wichte des Abbruchstoffes DIN EN 1991-1-1 24 kN/m3, Arbeitshöhe bis 4,5 m,;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0002;Kernbohrung senkrecht Stahlbeton Durchm. 50-100mm T 25-30cm nicht schadstoffbelastet;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0003;Kernbohrung senkrecht Stahlbeton Durchm. 150-200mm T 25-30cm nicht schadstoffbelastet;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0004;Zuschlag KB Sichtbeton;3,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0005;Fehlende Kernbohrungen / Wand- oder Deckenöffnungen anzeichnen.;5,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0006;Schließen bauseitiger Durchbrüche, mit Durchdringungen, bis 250 cm²;5,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0007;Schließen bauseitiger Durchbrüche, mit Durchdringungen, bis 500 cm²;5,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0008;Schließen bauseitiger Durchbrüche, mit Durchdringungen, bis 1000 cm²;3,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0009;Abfall nicht gefährlich AVV170107 Z0 LKW AN transp. entsorgen Verwertungsanlage bis 20km Vergüt.Entsorg. AN;100,0;kg;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0010;Einmessen und Kennzeichnen von Durchbrüchen.;47,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0011;Bestandsdokumentation mind. 10 Tage vor Abnahme vorzulegen;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0012;Werkstatt- und Montageplanung des Auftragnehmers;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0013;Koordination mit Fremdgewerken;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0014;Anlagenschema Technikraum;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0015;Fahrbares Montagegerüst, bis 3,5 Meter;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0016;Druckprobe Heizungsanlage;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0017;Füllen des kompletten Heiznetzes, Entlüften und;6400,0;l;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0018;Nachentlüften nach 4 Wochen nach Erstfüllung;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0019;Wasseranalyse und Einstellung der Wasserwerte;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0020;Erstmalige Inbetriebnahme der Anlagen;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0021;Hydraulische Einregulierung der Heizungsanlage;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0022;Schulung des Bedienpersonals;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0023;Wiederholte Einweisung;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0024;Selbstklebende Folie zur Medienkennzeichnung;50,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0025;Bezeichnungsschild, 52 x 100 mm;100,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0001;Stundenlohnarbeiten durch Objektleiter/-in;10,0;h;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0002;Stundenlohnarbeiten durch Obermonteur/-in;10,0;h;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0003;Stundenlohnarbeiten durch Monteur/-in;20,0;h;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0004;Stundenlohnarbeiten durch Helfer/-in;20,0;h;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0005;Stundenlohnarbeiten durch Elektriker/in;10,0;h;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0006;Anfahrtpauschale für gesonderte Arbeitseinsatz auf der Baustelle;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0001;Arbeitskarte und Bestandsliste;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0002;Wartungspauschale – 1. Wartungsjahr;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0003;für 2. Jahr.;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0004;für 3. Jahr.;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0005;für 4.Jahr.;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0001;Baustelle für sämtliche aufgeführte Leistungen, einrichten, herstellen der dazu erforderlichen Lager- und Arbeitsplätze, Flächen sind im Lageplan ausgewiesen.;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0002;Baustelle für sämtliche aufgeführte Leistungen umsetzen, hierzu auch neu einrichten, -herstellen der dazu erforderlichen Lager- und Arbeitsplätze, Flächen werden durch die Bauleitung ausgewiesen. Anzahl der Umzüge 2x.;3,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0003;Baustelleneinrichtung für sämtliche, in der Leistungsbeschreibung aufgeführten Leistungen vorhalten, über die Zeit im Bauzeitenplan hinaus.;1,0;Mt;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0004;Baustelle für sämtliche aufgeführte Leistungen, räumen, Geländeflächen, auf denen sich Baustelleneinrichtungen befunden haben, dem früheren Zustand entsprechend herstellen, im Baugrund befindliche Teile der Baustelleneinrichtung (z. B. Fundamente, Pfähle, Leitungen, Kanäle) räumen.;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0001;Schubstange;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0002;Abdeckung;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0003;Einlegeprofil UNP 220;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0004;Einlegeprofil HEM 240;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0005;Profilstahlwinkel 100 x 65 x 10 mm;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0006;Hydraulikzylinder D 180;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0007;Hydraulikaggregat;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0008;Anschlussset Hydraulik;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0009;Querförder-Sammelschnecke;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0010;Transportschnecke;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0011;Dosierschnecke;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0012;Fallschacht;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0013;Brandschutzschieber;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0014;Doppel-Stokerschnecke;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0015;Rückbrandsicherung;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0016;Kesselanlage Hackschnitzel 500kW;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0017;Kesselanlage Hackscnitzel 340kW;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0018;Glutbettüberwachung;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0019;Kesselbypass;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0020;Verdrängungsstäbe / Turbulatoren;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0021;Thermische Ablaufsicherung 300kW;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0022;Thermische Ablaufsicherung 500kW;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0023;Druckluftkompressor;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0024;Kesselsicherheitskette;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0025;Digitale Kamera;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0026;Zündung;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0027;Wassermangelsicherung;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0028;Rauchgasrezirkulations-Einrichtung;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0029;Abgasventilator freistehend für Kesel 300 kW;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0030;Abgasventilator freistehend für Kesel 500 kW;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0031;Automatische Entaschungseinrichtung;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0032;Aschecontainer 240 Liter für Multizyklonasche;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0033;Aschecontainer 240 Liter für Rostasche;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0034;Elektrofilter für Kessel 500 kW;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0035;Elektrofilter für Kessel 300 kW;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0036;Elektronische Steuerung inkl. Schaltschrank für Biomasse-Kaskadenanlage;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0037;Inbetriebnahme durch den Herstellerkundendienst;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0038;Einbringung, Positionierung und Montage;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0039;Heizungs-Pufferspeicher 12.000 liter;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0040;Wärmedämmung als Sonderanfertigung;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0041;Einbringen der beiden vorbeschriebenen Pufferspeicher;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0001;Steuereinheit zur Druckhaltung;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0002;Membran-Ausdehnungsgefäß kompressorgesteuerte Druckhaltestation;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0003;Membran-Ausdehnungsgefäß kompressorgesteuerte Druckhaltestation;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0004;Membran-Druckausdehnungsgefäß für geschlossene Heiz- und Kühlwassersysteme.;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0005;Membran-Druckausdehnungsgefäß für geschlossene Heiz- und Kühlwassersysteme.;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0006;Kappenventil DN 25;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0007;Vakuum-Sprührohrentgasung zur System- und Nachspeisewasserentgasung;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0008;Inbetriebnahme durch Herstellerkundendienst;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0009;Schmutz- und Schlammabscheider;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0010;Wärmedämmung für vorstehenden Schlammabscheider.;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0011;Hochenergie-Dauermagnet zum Einbau in Schlamm- und Schmutzabscheider.;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0012;Armatur mit Montagebügel zur direkten Verbindung von Nachspeiseeinrichtungen;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0013;Verschneideeinrichtung mit Armatur und Partonnen;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0014;Kationenharzpatrone als Erstfüllung;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0015;Bedienschlüssel für Patronenwechsel;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0016;Sicherheitsventil DN25/PN16,  3,5 bar;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0017;"Automatischer Schnell-/Großentlüfter 1/2""";2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0018;Sicherheitstemperaturbegrenzer K1;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0019;Maximaldruckbegrenzer;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0001;Abgasformstück Kesselanschlussstück;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0002;Abgasformstück Bogen 90 Grad mit Prüföffnung FU;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0003;Abgasformstück Bogen 90 Grad mit Prüföffnung FU mit 2 x Sickenseite;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0004;Abgasformstück Bogen 87° mit Prüföffnung;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0005;Abgasformstück Übergang DN 300 Sicke / E- Filter;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0006;Abgasformstück Prüföffnung mit Deckel 0,6mm ø300 (M-Sicke) P-POR;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0007;Abgasleitung DN300 Länge 1000mm;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0008;Abgasleitung DN300 Länge 500mm;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0009;Abgasleitung DN300 Länge 250mm;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0010;Wandhalterung;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0011;Klemmband mit Gewebeaussendichtband DN300;12,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0012;Abgasformstück  Anschlußstück E- Filter;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0013;Abgasformstück Bogen 90 Grad mit Prüföffnung FU;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0014;Abgasformstück Bogen 90 Grad mit Prüföffnung FU mit 2 x Sickenseite;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0015;Abgasformstück Bogen 87° mit Prüföffnung;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0016;Abgasformstück Übergang DN 300 Sicke / E- Filter;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0017;Abgasleitung DN300 Länge 1000mm;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0018;Abgasleitung DN300 Länge 500mm;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0019;Abgasleitung DN300 Länge 250mm;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0020;Wandhalterung;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0021;Klemmband mit Gewebeaussendichtband DN300;9,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0022;Anschlußstück E- Filter Bundkragen DN 300 / da Bund 316 / 350 Muffe;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0023;Abgasformstück Bogen 90 Grad mit Prüföffnung FU;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0024;Abgasleitung DN300 Länge 1000mm;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0025;Abgasleitung DN300 Länge 500mm;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0026;Abgasleitung DN300 Länge 250mm;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0027;Abgasformstück Erweiterung 300 auf 350 Sicke / di 402 / exzentrisch;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0028;Wandhalterung;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0029;Klemmband mit Gewebeaussendichtband DN300;9,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0030;Abgasformstück Kesselanschlussstück;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0031;Abgasformstück Bogen 90 Grad mit Prüföffnung FU;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0032;Abgasformstück Bogen 90 Grad mit Prüföffnung FU mit 2 x Sickenseite;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0033;Abgasformstück Bogen 87° mit Prüföffnung;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0034;Abgasformstück Übergang DN 250 Sicke / E- Filter;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0035;Abgasformstück Prüföffnung mit Deckel 0,6mm ø300 (M-Sicke) P-POR;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0036;Abgasleitung DN250  Länge 1000mm;3,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0037;Abgasleitung DN250  Länge 500mm;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0038;Abgasleitung DN250  Länge 250mm;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0039;Wandhalterung;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0040;Klemmband mit Gewebeaussendichtband DN250;14,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0041;Anschlußstück als Bundkragen DN 250 / da Bund 266 / 250 Muffe;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0042;Abgasformstück Bogen 90 Grad mit Prüföffnung FU;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0043;Abgasformstück Bogen 90 Grad mit Prüföffnung FU mit 2 x Sickenseite;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0044;Abgasformstück Bogen 87° mit Prüföffnung;3,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0045;Abgasformstück Übergang DN 250 Sicke / E- Filter;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0046;Abgasformstück Prüföffnung mit Deckel 0,6mm ø300 (M-Sicke) P-POR;3,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0047;Abgasleitung DN250  Länge 1000mm;8,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0048;Abgasleitung DN250  Länge 500mm;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0049;Abgasleitung DN250  Länge 250mm;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0050;Wandhalterung;6,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0051;Klemmband mit Gewebeaussendichtband DN250;20,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0052;Anschlußstück als Bundkragen DN 250 / da Bund 266 / 250 Muffe;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0053;Abgasformstück Bogen 90 Grad mit Prüföffnung FU;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0054;Abgasleitung DN250  Länge 1000mm;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0055;Abgasleitung DN250  Länge 500mm;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0056;Abgasleitung DN250  Länge 250mm;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0057;Abgasformstück Übergang DN 300 Sicke/ di 304;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0058;Wandhalterung;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0059;Klemmband mit Gewebeaussendichtband DN250;6,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0060;Einbringung passend für nachfolgend beschriebenen Abgasschornstein;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0061;Tragrohr aus Stahl S235JR Gesamthöhe: 22.000 mm;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0062;Sicherheitssteigleiter;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0063;Ankerkorb;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0064;Abgasrohr 1;17,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0065;Isolierung für Abgasrohr 1;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0066;Anschluss für Abgasrohr 1;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0067;Abgasrohr 2;17,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0068;Isolierung für Abgasrohr 2;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0069;Anschluss für Abgasrohr 2;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0070;Abstimmung Abgasschornstein;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0001;Heizungsverteiler 200/200, als kombinierter Vor- und Rücklaufverteiler,;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0002;Fertigdämmung MIneralwolle und Blechmantel;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0003;Standkonsohlen für vorstehenden Verteiler;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0004;Kugelhahn mit Dämmschale DN 15;6,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0005;Kugelhahn mit Dämmschale DN 20;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0006;Kugelhahn mit Dämmschale DN 25;6,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0007;Kugelhahn mit Dämmschale DN 32;6,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0008;Kugelhahn mit Dämmschale DN 40;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0009;Kugelhahn mit Dämmschale DN 50;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0010;Zeigerthermometer DIN EN 13190, Messsystem Bimetall, Austritt des Messelements nach hinten, glattes Messelement, Einbaulänge 100 mm, Gehäuse aus nichtrostendem Stahl, Gehäusenenndurchmesser 63 mm, Anzeigebereich 0 bis 120 Grad C.;20,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0011;Rohrfedermanometer;10,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0012;Tauchhülse für Thermometer-Messelement, Einbaulänge 50 mm, mit Feststellschraube seitlich.;10,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0013;Einbaulänge 100 mm,;10,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0014;Einbaulänge 130 mm,;10,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0015;Einbau beigestellter Armaturen und Geräte,;40,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0016;Kreiselpumpe, als Nassläufer, DN 80, Pumpe Zubringer Fernwärme;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0017;Erweiterungsmodul zur Potentialfreie Sammelstörmeldung zur Aufschaltung auf GLT;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0018;Füll- u. Entleerungs-Kugelventil, mit Griff, DN 15;5,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0019;Füll- u. Entleerungs-Kugelventil, ohne Griff, DN 15;10,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0020;Steckschlüssel für Füll- u. Entleerungs-Kugelventil, DN 15;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0021;Einbau baus. 3-Wege-ventil DN 50;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0022;Einbau baus. 3-Wege-ventil DN 65;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0023;Absperrventil, für Wasser bis 120 Grad C, mit Muffenanschluss, Gehäuse aus Rotguss, mit Handrad, mit wartungsfreier Spindelabdichtung, Sitz metallisch dichtend, Nenndruck 0,6 MPa (6 bar), DN 15.;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0024;Absperrventil, für Wasser bis 120 Grad C, mit Muffenanschluss, Gehäuse aus Rotguss, mit Handrad, mit wartungsfreier Spindelabdichtung, Sitz metallisch dichtend, Nenndruck 0,6 MPa (6 bar), DN 32.;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0025;Absperrventil, für Wasser bis 120 Grad C, mit Muffenanschluss, Gehäuse aus Rotguss, mit Handrad, mit wartungsfreier Spindelabdichtung, Sitz metallisch dichtend, Nenndruck 0,6 MPa (6 bar), DN 50.;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0026;Absperrventil, für Wasser bis 120 Grad C, mit Flanschanschluss, Gehäuse aus Rotguss, mit Handrad, mit wartungsfreier Spindelabdichtung, Sitz metallisch dichtend, Nenndruck 0,6 MPa (6 bar), DN 65.;8,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0027;Absperrventil, für Wasser bis 120 Grad C, mit Flanschanschluss, Gehäuse aus Rotguss, mit Handrad, mit wartungsfreier Spindelabdichtung, Sitz metallisch dichtend, Nenndruck 0,6 MPa (6 bar), DN 80.;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0028;Absperrventil, für Wasser bis 120 Grad C, mit Flanschanschluss, Gehäuse aus Rotguss, mit Handrad, mit wartungsfreier Spindelabdichtung, Sitz metallisch dichtend, Nenndruck 0,6 MPa (6 bar), DN 100.;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0029;Absperrklappe, als Zwischenflanscharmatur, Gehäuse aus Gusseisen EN-GJS-400-15, DN 50, Nenndruck 1,6 MPa (16 bar), für Wasser, weich dichtend, mit Rasterhebel.;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0030;Absperrklappe, als Zwischenflanscharmatur, Gehäuse aus Gusseisen EN-GJS-400-15, DN 65, Nenndruck 1,6 MPa (16 bar), für Wasser, weich dichtend, mit Rasterhebel.;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0031;Absperrklappe, als Zwischenflanscharmatur, Gehäuse aus Gusseisen EN-GJS-400-15, DN 80, Nenndruck 1,6 MPa (16 bar), für Wasser, weich dichtend, mit Rasterhebel.;8,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0032;Absperrklappe, als Zwischenflanscharmatur, Gehäuse aus Gusseisen EN-GJS-400-15, DN 100, Nenndruck 1,6 MPa (16 bar), für Wasser, weich dichtend, mit Rasterhebel.;16,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0033;Schmutzfänger, DN 100, für Wasser, max. Betriebstemperatur bis 120 Grad C, Nenndruck 1,6 MPa (16 bar), in Schrägsitzform, mit Flanschanschluss, Gehäuse aus Gusseisen EN-GJL-250, mit Normalsieb.;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0034;Rückschlagventil Zwischenflansch DN 80;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0035;Rückschlagventil Zwischenflansch DN 100;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0036;Membransicherheitsventil, bauteilgeprüft, federbelastet, für geschlossene Wasserheizungsanlagen DIN EN 12828, für Wasser, max. Betriebstemperatur bis 120 Grad C,;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0037;Be- und Entlüfter, für Wasser, max. Betriebstemperatur bis 120 Grad C, max. Betriebsüberdruck 6 bar, Gehäuse aus Messing, mit Gewindeanschluss, Nenndruck 0,6 MPa (6 bar), DN 32.;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0038;Entleerungsarmatur, als Kugelhahn, für Wasser bis 120 Grad C, mit Steckschlüsselaufsatz, Durchgangsform, mit Verschlusskappe und Kette, Gehäuse aus Rotguss, mit Gewindeanschluss, Nenndruck 0,6 MPa (6 bar), DN 15.;6,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0039;Kugelhahn, für Wasser, max. Betriebstemperatur bis 120 Grad C, Durchgangsform, mit Muffenanschluss und Verschraubung, mit Schwerkraftbremse, Gehäuse aus Rotguss, Betätigung mit Hebel, Nenndruck 0,6 MPa (6 bar), DN 15.;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0040;Kugelhahn, für Wasser, max. Betriebstemperatur bis 120 Grad C, Durchgangsform, mit Muffenanschluss und Verschraubung, mit Schwerkraftbremse, Gehäuse aus Rotguss, Betätigung mit Hebel, Nenndruck 0,6 MPa (6 bar), DN 20.;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0041;Kugelhahn, für Wasser, max. Betriebstemperatur bis 120 Grad C, Durchgangsform, mit Muffenanschluss und Verschraubung, mit Schwerkraftbremse, Gehäuse aus Rotguss, Betätigung mit Hebel, Nenndruck 0,6 MPa (6 bar), DN 25.;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0042;Kugelhahn, für Wasser, max. Betriebstemperatur bis 120 Grad C, Durchgangsform, mit Muffenanschluss und Verschraubung, mit Schwerkraftbremse, Gehäuse aus Rotguss, Betätigung mit Hebel, Nenndruck 0,6 MPa (6 bar), DN 32.;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0043;Kugelhahn, für Wasser, max. Betriebstemperatur bis 120 Grad C, Durchgangsform, mit Muffenanschluss und Verschraubung, mit Schwerkraftbremse, Gehäuse aus Rotguss, Betätigung mit Hebel, Nenndruck 0,6 MPa (6 bar), DN 40.;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0044;Kugelhahn, für Wasser, max. Betriebstemperatur bis 120 Grad C, Durchgangsform, mit Muffenanschluss und Verschraubung, mit Schwerkraftbremse, Gehäuse aus Rotguss, Betätigung mit Hebel, Nenndruck 0,6 MPa (6 bar), DN 50.;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0045;Luftgefäß mit 2 gewölbten Böden, max. zulässige Betriebstemperatur bis 120 Grad C, PN 16, aus Stahlrohren, bis DN 65, Gesamtlänge 250 mm, mit 2 Leitungsanschlüssen mit Flansch einschl. Gegenflansch, Dichtungen und Schrauben, mit Entlüftungsleitung, Länge 2 m und Entlüftungshahn.;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0046;Luftgefäß mit 2 gewölbten Böden, max. zulässige Betriebstemperatur bis 120 Grad C, PN 16, aus Stahlrohren, bis DN 100, Gesamtlänge 300 mm, mit 2 Leitungsanschlüssen mit Flansch einschl. Gegenflansch, Dichtungen und Schrauben, mit Entlüftungsleitung, Länge 2 m und Entlüftungshahn.;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0001;Rohr schwarz, geschweißt, DN 15;20,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0002;Rohr schwarz, geschweißt DN 20;20,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0003;Rohr schwarz geschweißt DN 65;10,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0004;Rohr schwarz geschweißt DN 80;20,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0005;Rohr schwarz geschweißt DN 100;35,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0006;Einschweißbogen, aus Kohlenstoffstahl, für Rohrleitung aus mittelschwerem Stahlrohr DIN EN 10255, für Heizungswasser, Außendurchmesser 21,3 mm.;20,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0007;Einschweißbogen, aus Kohlenstoffstahl, für Rohrleitung aus mittelschwerem Stahlrohr DIN EN 10255, für Heizungswasser, Außendurchmesser 26,9 mm.;10,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0008;Einschweißbogen, aus Kohlenstoffstahl, für Rohrleitung aus mittelschwerem Stahlrohr DIN EN 10255, für Heizungswasser, Außendurchmesser 76,1 mm.;10,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0009;Einschweißbogen, aus Kohlenstoffstahl, für Rohrleitung aus mittelschwerem Stahlrohr DIN EN 10255, für Heizungswasser, Außendurchmesser 88,9 mm.;10,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0010;Einschweißbogen, aus Kohlenstoffstahl, für Rohrleitung aus mittelschwerem Stahlrohr DIN EN 10255, für Heizungswasser, Außendurchmesser 114,3 mm.;20,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0011;T-Stück, aus Kohlenstoffstahl, Verbindung durch Schweißen, für Rohrleitung aus mittelschwerem Stahlrohr DIN EN 10255, für Heizungswasser, Außendurchmesser 21,3 mm.;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0012;T-Stück, aus Kohlenstoffstahl, Verbindung durch Schweißen, für Rohrleitung aus mittelschwerem Stahlrohr DIN EN 10255, für Heizungswasser, Außendurchmesser 26,9 mm.;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0013;T-Stück, aus Kohlenstoffstahl, Verbindung durch Schweißen, für Rohrleitung aus mittelschwerem Stahlrohr DIN EN 10255, für Heizungswasser, Außendurchmesser 76,1 mm.;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0014;T-Stück, aus Kohlenstoffstahl, Verbindung durch Schweißen, für Rohrleitung aus mittelschwerem Stahlrohr DIN EN 10255, für Heizungswasser, Außendurchmesser 88,9 mm.;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0015;T-Stück, aus Kohlenstoffstahl, Verbindung durch Schweißen, für Rohrleitung aus mittelschwerem Stahlrohr DIN EN 10255, für Heizungswasser, Außendurchmesser 114,3 mm.;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0016;Reduzierstück, aus Kohlenstoffstahl, Verbindung durch Schweißen, für Rohrleitung aus mittelschwerem Stahlrohr DIN EN 10255, für Heizungswasser, Außendurchmesser 26,9 mm, 2. Durchmesser 21,3 mm.;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0017;Reduzierstück, aus Kohlenstoffstahl, Verbindung durch Schweißen, für Rohrleitung aus mittelschwerem Stahlrohr DIN EN 10255, für Heizungswasser, Außendurchmesser 76,1 mm, 2. Durchmesser 60,3 mm.;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0018;Reduzierstück, aus Kohlenstoffstahl, Verbindung durch Schweißen, für Rohrleitung aus mittelschwerem Stahlrohr DIN EN 10255, für Heizungswasser, Außendurchmesser 114,3 mm, 2. Durchmesser 88,9 mm.;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0019;Sattelstutzen, aus Kohlenstoffstahl, Verbindung durch Schweißen, für Rohrleitung aus mittelschwerem Stahlrohr DIN EN 10255, für Heizungswasser, Außendurchmesser 76,1 mm.;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0020;Sattelstutzen, aus Kohlenstoffstahl, Verbindung durch Schweißen, für Rohrleitung aus mittelschwerem Stahlrohr DIN EN 10255, für Heizungswasser, Außendurchmesser 88,9 mm.;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0021;Sattelstutzen, aus Kohlenstoffstahl, Verbindung durch Schweißen, für Rohrleitung aus mittelschwerem Stahlrohr DIN EN 10255, für Heizungswasser, Außendurchmesser 114,3 mm.;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0022;Übergangsverschraubung, aus Kohlenstoffstahl, für Rohrleitung aus mittelschwerem Stahlrohr DIN EN 10255, für Heizungswasser, Außendurchmesser 21,3 mm.;6,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0023;Übergangsverschraubung, aus Kohlenstoffstahl, für Rohrleitung aus mittelschwerem Stahlrohr DIN EN 10255, für Heizungswasser, Außendurchmesser 26,9 mm.;6,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0024;Übergangsverschraubung, aus Kohlenstoffstahl, für Rohrleitung aus mittelschwerem Stahlrohr DIN EN 10255, für Heizungswasser, Außendurchmesser 33,7 mm.;6,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0025;Übergangsverschraubung, aus Kohlenstoffstahl, für Rohrleitung aus mittelschwerem Stahlrohr DIN EN 10255, für Heizungswasser, Außendurchmesser 42,4 mm.;6,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0026;Übergangsverschraubung, aus Kohlenstoffstahl, für Rohrleitung aus mittelschwerem Stahlrohr DIN EN 10255, für Heizungswasser, Außendurchmesser 48,3 mm.;6,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0027;Einschweißmuffe, mit zylindrischem Innengewinde, aus Kohlenstoffstahl, Verbindung durch Schweißen, für Rohrleitung aus mittelschwerem Stahlrohr DIN EN 10255, für Heizungswasser, Länge bis 50 mm, Gewindeanschluss Rp 1/2.;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0028;Einschweißmuffe, mit zylindrischem Innengewinde, aus Kohlenstoffstahl, Verbindung durch Schweißen, für Rohrleitung aus mittelschwerem Stahlrohr DIN EN 10255, für Heizungswasser, Länge bis 50 mm, Gewindeanschluss Rp 3/4.;10,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0029;Einschweißmuffe, mit zylindrischem Innengewinde, aus Kohlenstoffstahl, Verbindung durch Schweißen, für Rohrleitung aus mittelschwerem Stahlrohr DIN EN 10255, für Heizungswasser, Länge bis 50 mm, Gewindeanschluss Rp 1.;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0030;Einschweißmuffe, mit zylindrischem Innengewinde, aus Kohlenstoffstahl, Verbindung durch Schweißen, für Rohrleitung aus mittelschwerem Stahlrohr DIN EN 10255, für Heizungswasser, Länge über 50 bis 100 mm, Gewindeanschluss Rp 1/2.;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0031;Einschweißmuffe, mit zylindrischem Innengewinde, aus Kohlenstoffstahl, Verbindung durch Schweißen, für Rohrleitung aus mittelschwerem Stahlrohr DIN EN 10255, für Heizungswasser, Länge über 50 bis 100 mm, Gewindeanschluss Rp 3/4.;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0032;Einschweißmuffe, mit zylindrischem Innengewinde, aus Kohlenstoffstahl, Verbindung durch Schweißen, für Rohrleitung aus mittelschwerem Stahlrohr DIN EN 10255, für Heizungswasser, Länge über 50 bis 100 mm, Gewindeanschluss Rp 1.;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0033;Vorschweißflansch DIN EN 1092-1 PN 16, aus Stahl, einschl. Schrauben und Dichtung, für Wasser, DN 65.;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0034;Vorschweißflansch DIN EN 1092-1 PN 16, aus Stahl, einschl. Schrauben und Dichtung, für Wasser, DN 80.;8,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0035;Vorschweißflansch DIN EN 1092-1 PN 16, aus Stahl, einschl. Schrauben und Dichtung, für Wasser, DN 100.;24,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0036;Blindflansch Form A (glatte Ausführung) DIN EN 1092-1 PN 16, aus Stahl, einschl. Schrauben und Dichtung, für Wasser, DN 50.;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0037;Blindflansch Form B (glatte Ausführung) DIN EN 1092-1 PN 16, aus Stahl, einschl. Schrauben und Dichtung, für Wasser, DN 100.;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0038;Rohrdoppelnippel, aus Kohlenstoffstahl, für Rohrleitung aus mittelschwerem Stahlrohr DIN EN 10255, für Heizungswasser, Länge bis 50 mm, Außendurchmesser 21,3 mm.;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0039;Rohrdoppelnippel, aus Kohlenstoffstahl, für Rohrleitung aus mittelschwerem Stahlrohr DIN EN 10255, für Heizungswasser, Länge bis 50 mm, Außendurchmesser 26,9 mm.;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0040;Rohrdoppelnippel, aus Kohlenstoffstahl, für Rohrleitung aus mittelschwerem Stahlrohr DIN EN 10255, für Heizungswasser, Länge bis 50 mm, Außendurchmesser 76,1 mm.;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0041;Rohrdoppelnippel, aus Kohlenstoffstahl, für Rohrleitung aus mittelschwerem Stahlrohr DIN EN 10255, für Heizungswasser, Länge bis 50 mm, Außendurchmesser 88,9 mm.;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0042;Rohrdoppelnippel, aus Kohlenstoffstahl, für Rohrleitung aus mittelschwerem Stahlrohr DIN EN 10255, für Heizungswasser, Länge bis 50 mm, Außendurchmesser 114,3 mm.;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0043;Rohraufhängung als Rohrschelle, aus verzinktem Stahl, mit schalldämmenden Einlagen, Anforderungen entsprechend DIN 4109-1, Länge Aufhängung bis 0,5 m, Befestigung an Metallkonstruktion, Befestigungsuntergrund Beton, Rohr aus Stahl, DN 15, Arbeitshöhe des Montageortes bis 3,5 m über der Standfläche d;20,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0044;Rohraufhängung als Rohrschelle, aus verzinktem Stahl, mit schalldämmenden Einlagen, Anforderungen entsprechend DIN 4109-1, Länge Aufhängung bis 0,5 m, Befestigung an Metallkonstruktion, Befestigungsuntergrund Beton, Rohr aus Stahl, DN 20, Arbeitshöhe des Montageortes bis 3,5 m über der Standfläche d;20,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0045;Rohraufhängung als Rohrschelle, aus verzinktem Stahl, mit schalldämmenden Einlagen, Anforderungen entsprechend DIN 4109-1, Länge Aufhängung bis 0,5 m, Befestigung an Metallkonstruktion, Befestigungsuntergrund Beton, Rohr aus Stahl, DN 65, Arbeitshöhe des Montageortes bis 3,5 m über der Standfläche d;10,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0046;Rohraufhängung als Rohrschelle, aus verzinktem Stahl, mit schalldämmenden Einlagen, Anforderungen entsprechend DIN 4109-1, Länge Aufhängung bis 0,5 m, Befestigung an Metallkonstruktion, Befestigungsuntergrund Beton, Rohr aus Stahl, DN 80, Arbeitshöhe des Montageortes bis 3,5 m über der Standfläche d;10,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0047;Rohraufhängung als Rohrschelle, aus verzinktem Stahl, mit schalldämmenden Einlagen, Anforderungen entsprechend DIN 4109-1, Länge Aufhängung bis 0,5 m, Befestigung an Metallkonstruktion, Befestigungsuntergrund Beton, Rohr aus Stahl, DN 100, Arbeitshöhe des Montageortes bis 3,5 m über der Standfläche ;30,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0048;C-Profilschiene Stahl verz B 30mm;250,0;kg;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0049;C-Profilschiene Stahl verz B 40mm;150,0;kg;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0050;Form-/Hohlprofilstahlkonstruktion,;50,0;kg;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0051;Aufhänge- und Stützkonstruktion für Leitungen der Technischen Gebäudeausrüstung (TGA), aus verzinktem Stahl, mit schalldämmender Zwischenlage aus Profilgummi, einschl. Decken-/Mauerwerksbefestigung, befestigen mit Befestigungsmitteln mit bauaufsichtlichem Verwendbarkeitsnachweis einschl. Bohrungen, ;20,0;kg;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0052;Anschluss an Bestand oder bauseitige Einrichtungen DN 65;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0053;Druckprobe und Dichtheitsprüfung Heizhaus;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0001;Flexible Kunststoffmantelrohrleitung, selbstkompensierend, für Erdverlegung, mit PE-Außenmantel, mit Wärmedämmung aus PUR-Schaum, Wärmeleitfähigkeit 0,032 W/(mK), bei einer Mitteltemperatur von 50 Grad C, glattes Innenrohr aus Polyethylen PE-X mit Diffusionssperre, Nenndruck 0,6 MPa (6 bar), Einzelr;70,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0002;Endabschluss mit PE-Schrumpfendkappe, für Einzelrohrleitung, für flexible Kunststoffmantelrohrleitung, selbstkompensierend, für Erdverlegung, mit PE-Außenmantel mit Wärmedämmung aus PUR-Schaum, Wärmeleitfähigkeit 0,032 W/(mK), bei einer Mitteltemperatur von 50 Grad C, max. Betriebstemperatur 90 Grad;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0003;Übergangsverbindung von PE-X-Innenrohr auf bauwerksinterne Installation, mit Klemmverschraubung aus Messing, mit geradem Anschweißende, für Einzelrohrleitung, für flexible Kunststoffmantelrohrleitung, selbstkompensierend, für Erdverlegung, mit PE-Außenmantel mit Wärmedämmung aus PUR-Schaum, Wärmelei;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0004;Flexible Kunststoffmantelrohrleitung, selbstkompensierend, für Erdverlegung, mit PE-Außenmantel, mit Wärmedämmung aus PUR-Schaum, Wärmeleitfähigkeit 0,032 W/(mK), bei einer Mitteltemperatur von 50 Grad C, glattes Innenrohr aus Polyethylen PE-X mit Diffusionssperre, Nenndruck 0,6 MPa (6 bar), Doppelr;35,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0005;Endabschluss mit PE-Schrumpfendkappe, für Doppelrohrleitung, für flexible Kunststoffmantelrohrleitung, selbstkompensierend, für Erdverlegung, mit PE-Außenmantel mit Wärmedämmung aus PUR-Schaum, Wärmeleitfähigkeit 0,032 W/(mK), bei einer Mitteltemperatur von 50 Grad C, max. Betriebstemperatur 90 Grad;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0006;Durchgangsverbindung mit Doppelklemmverschraubung, PE-HD-Muffen-Set, für Doppelrohrleitung, für flexible Kunststoffmantelrohrleitung, selbstkompensierend, für Erdverlegung, mit PE-Außenmantel mit Wärmedämmung aus PUR-Schaum, Wärmeleitfähigkeit 0,032 W/(mK), bei einer Mitteltemperatur von 50 Grad C, ;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0007;Übergangsverbindung von PE-X-Innenrohr auf bauwerksinterne Installation, mit Klemmverschraubung aus Messing, mit geradem Anschweißende, für Doppelrohrleitung, für flexible Kunststoffmantelrohrleitung, selbstkompensierend, für Erdverlegung, mit PE-Außenmantel mit Wärmedämmung aus PUR-Schaum, Wärmelei;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0008;T-Stück mit Klemmverschraubungs-T-Stück aus Messing, GFK-T-Stück-Halbschalen, im Durchgang reduziert, DN 40, im Abgang reduziert, DN 40, für Doppelrohrleitung, für flexible Kunststoffmantelrohrleitung, selbstkompensierend, für Erdverlegung, mit PE-Außenmantel mit Wärmedämmung aus PUR-Schaum, Wärmele;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0009;Flexible Kunststoffmantelrohrleitung, selbstkompensierend, für Erdverlegung, mit PE-Außenmantel, mit Wärmedämmung aus PUR-Schaum, Wärmeleitfähigkeit 0,032 W/(mK), bei einer Mitteltemperatur von 50 Grad C, glattes Innenrohr aus Polyethylen PE-X mit Diffusionssperre, Nenndruck 0,6 MPa (6 bar), Doppelr;170,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0010;Endabschluss mit PE-Schrumpfendkappe, für Doppelrohrleitung, für flexible Kunststoffmantelrohrleitung, selbstkompensierend, für Erdverlegung, mit PE-Außenmantel mit Wärmedämmung aus PUR-Schaum, Wärmeleitfähigkeit 0,032 W/(mK), bei einer Mitteltemperatur von 50 Grad C, max. Betriebstemperatur 90 Grad;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0011;Durchgangsverbindung mit Doppelklemmverschraubung, PE-HD-Muffen-Set, für Doppelrohrleitung, für flexible Kunststoffmantelrohrleitung, selbstkompensierend, für Erdverlegung, mit PE-Außenmantel mit Wärmedämmung aus PUR-Schaum, Wärmeleitfähigkeit 0,032 W/(mK), bei einer Mitteltemperatur von 50 Grad C, ;8,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0012;Übergangsverbindung von PE-X-Innenrohr auf bauwerksinterne Installation, mit Klemmverschraubung aus Messing, mit geradem Anschweißende, für Doppelrohrleitung, für flexible Kunststoffmantelrohrleitung, selbstkompensierend, für Erdverlegung, mit PE-Außenmantel mit Wärmedämmung aus PUR-Schaum, Wärmelei;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0013;Übergangsverbindung von PE-X-Innenrohr auf bauwerksinterne Installation, mit Klemmverschraubung aus Messing, mit Außengewinde, für Doppelrohrleitung, für flexible Kunststoffmantelrohrleitung, selbstkompensierend, für Erdverlegung, mit PE-Außenmantel mit Wärmedämmung aus PUR-Schaum, Wärmeleitfähigkei;8,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0014;Absperrventil, für Wasser bis 120 Grad C, mit Muffenanschluss, Gehäuse aus Rotguss, mit Handrad, mit wartungsfreier Spindelabdichtung, Sitz metallisch dichtend, Nenndruck 0,6 MPa (6 bar), DN 40.;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0015;Trassenwarnband;275,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0016;Ausladung über 300 bis 350 mm,;10,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0017;C-Profilschiene (Ankerschiene), aus verzinktem Stahl, für Stütz-, Hänge-, Trag- und Sonderbefestigung, Profilbreite 30 mm, Profildicke mind. 2 mm, der rechnerische Nachweis der Tragfähigkeit ist auf Verlangen vorzulegen, für Trinkwasser DIN 1988-200, Arbeitshöhe des Montageortes bis 3,5 m über der S;20,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0018;Form-/Hohlprofilstahlkonstruktion, aus verzinktem Stahl, für Stütz-, Hänge-, Trag- und Sonderbefestigung, schallentkoppelt gelagert, der rechnerische Nachweis der Tragfähigkeit ist auf Verlangen vorzulegen.;100,0;kg;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0019;Montagewinkel, aus verzinktem Stahl, für Festpunktausführung, der rechnerische Nachweis der Tragfähigkeit ist auf Verlangen vorzulegen.;100,0;kg;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0020;Rohraufhängung als Rohrschelle, aus verzinktem Stahl, Länge Aufhängung über 0,5 bis 1 m, Befestigung an Metallkonstruktion, Feuerwiderstandsklasse F 90 DIN 4102-2, Befestigungsuntergrund Beton, mind. C 20/25, Rohr aus Kunststoff, DN 160, für Heizungswasser, Arbeitshöhe des Montageortes bis 3,5 m übe;5,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0001;Bestandsdokumentation mind. 10 Tage vor Abnahme vorzulegen;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0002;Werkstatt- und Montageplanung des Auftragnehmers;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0003;Koordination mit Fremdgewerken;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0004;Anlagenschema Technikraum;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0005;Fahrbares Montagegerüst, bis 3,5 Meter;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0006;Druckprobe Heizungsanlage;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0007;Füllen des kompletten Heiznetzes, Entlüften und;6400,0;l;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0008;Nachentlüften nach 4 Wochen nach Erstfüllung;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0009;Wasseranalyse und Einstellung der Wasserwerte;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0010;Erstmalige Inbetriebnahme der Anlagen;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0011;Hydraulische Einregulierung der Heizungsanlage;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0012;Schulung des Bedienpersonals;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0013;Wiederholte Einweisung;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0014;Selbstklebende Folie zur Medienkennzeichnung;50,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0015;Bezeichnungsschild, 52 x 100 mm;100,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0001;Stundenlohnarbeiten durch Objektleiter/-in;10,0;h;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0002;Stundenlohnarbeiten durch Obermonteur/-in;10,0;h;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0003;Stundenlohnarbeiten durch Monteur/-in;20,0;h;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0004;Stundenlohnarbeiten durch Helfer/-in;20,0;h;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0005;Stundenlohnarbeiten durch Elektriker/in;10,0;h;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0006;Anfahrtpauschale für gesonderte Arbeitseinsatz auf der Baustelle;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0001;Arbeitskarte und Bestandsliste;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0002;Wartungspauschale – 1. Wartungsjahr;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0003;für 2. Jahr.;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0004;für 3. Jahr.;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83
+0005;für 4.Jahr.;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260716-OBR-Heizungsanlage.x83

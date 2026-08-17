@@ -1,0 +1,73 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+010;Ausführungs-, Bestands- und Montagezeichnungen;1,0;Psch;gaeb;leistungsbeschreibungen/mt351305_v33.x83
+020;Das Engineering umfasst:;1,0;psch;gaeb;leistungsbeschreibungen/mt351305_v33.x83
+030;Inbetriebnahme der Pumpanlage;1,0;Psch;gaeb;leistungsbeschreibungen/mt351305_v33.x83
+010;Stationäre, einstufige Tauchmotorpumpe für Nassaufstellung zum selbsttätigen Einkuppeln in einem Flanschkrümmer mit mit vollüberflutbarem Antriebsmotor mit Eigenkühlung als kompaktes Blockaggregat.;4,0;Stck;gaeb;leistungsbeschreibungen/mt351305_v33.x83
+020;Spezielle Saugrohr-Einlaufdüse zur Erhöhung der Wirtschaftlichkeit und Kavitationssicherheit durch Verminderung der Eintrittsverluste sowie zur Verhinderung der frühzeitigen Luftwirbelbildung in der  Pumpensaugleitung;4,0;Stk;gaeb;leistungsbeschreibungen/mt351305_v33.x83
+030;Selbstkuppelnde Einhängevorrichtung bestehend aus:;4,0;Stck;gaeb;leistungsbeschreibungen/mt351305_v33.x83
+040;Kellerentwässerungspumpe.;1,0;St;gaeb;leistungsbeschreibungen/mt351305_v33.x83
+010;Rohr DN 300 (323,9 x 5,6), Werkstoff P235TR2 verzinkt,;20,0;m;gaeb;leistungsbeschreibungen/mt351305_v33.x83
+020;Rohr DN 300 (323,9 x 2,9),;20,0;m;gaeb;leistungsbeschreibungen/mt351305_v33.x83
+030;Rohr DN 450 (457,0 x 3,2), Werkstoff P235TR2 verzinkt,;1,2;m;gaeb;leistungsbeschreibungen/mt351305_v33.x83
+040;Rohr DN 450 (457,0 x 6,3),;1,2;m;gaeb;leistungsbeschreibungen/mt351305_v33.x83
+050;Rohr DN 600 (610 x;0,8;m;gaeb;leistungsbeschreibungen/mt351305_v33.x83
+060;Rohr DN 600 (610,0 x 6,3),;0,8;m;gaeb;leistungsbeschreibungen/mt351305_v33.x83
+070;Rohr DN 800 (813,0 x 5,6), Werkstoff P235TR2 verzinkt,;0,85;m;gaeb;leistungsbeschreibungen/mt351305_v33.x83
+080;Rohr DN 800 (813,0 x 8),;0,85;m;gaeb;leistungsbeschreibungen/mt351305_v33.x83
+090;Rohrbogen 90°, DN 300, Werkstoff;5,0;Stk;gaeb;leistungsbeschreibungen/mt351305_v33.x83
+100;Rohrbogen 90°, DN 300,;5,0;St;gaeb;leistungsbeschreibungen/mt351305_v33.x83
+110;Rohrbogen 90°, DN 300, Werkstoff;4,0;Stk;gaeb;leistungsbeschreibungen/mt351305_v33.x83
+120;Rohrbogen 90°, DN 300,;4,0;St;gaeb;leistungsbeschreibungen/mt351305_v33.x83
+130;Einschweißbogen DN 300 DIN 2619, Werkstoff;3,0;Stk;gaeb;leistungsbeschreibungen/mt351305_v33.x83
+140;Einschweißbogen DN 300 DIN 2619, Werkstoff 1.4541, Wandstärke passend zum Rohr DN 300;3,0;St;gaeb;leistungsbeschreibungen/mt351305_v33.x83
+150;Vorschweißflansch n;17,0;Stk;gaeb;leistungsbeschreibungen/mt351305_v33.x83
+160;Vorschweißflansch n;17,0;St;gaeb;leistungsbeschreibungen/mt351305_v33.x83
+170;Vorschweißflansch n;2,0;Stk;gaeb;leistungsbeschreibungen/mt351305_v33.x83
+180;Vorschweißflansch n;2,0;St;gaeb;leistungsbeschreibungen/mt351305_v33.x83
+190;Vorschweißflansch n;2,0;Stk;gaeb;leistungsbeschreibungen/mt351305_v33.x83
+200;Vorschweißflansch n;2,0;St;gaeb;leistungsbeschreibungen/mt351305_v33.x83
+210;Vorschweißflansch n;1,0;Stk;gaeb;leistungsbeschreibungen/mt351305_v33.x83
+220;Vorschweißflansch n;1,0;St;gaeb;leistungsbeschreibungen/mt351305_v33.x83
+230;Lose Flansche mit glattem Bund DN 300 nach EN 1092-1 Typ 02 und Typ 32, PN 10, Werkstofff;17,0;Stk;gaeb;leistungsbeschreibungen/mt351305_v33.x83
+240;Lose Flansche mit glattem Bund DN 300 nach EN 1092-1 Typ 02 und Typ 32, PN 10, Werkstofff;17,0;St;gaeb;leistungsbeschreibungen/mt351305_v33.x83
+250;Flanschverbindung DN 300 herstellen, bestehend aus;34,0;Stk;gaeb;leistungsbeschreibungen/mt351305_v33.x83
+260;Flanschverbindung DN 300 herstellen, bestehend aus;34,0;St;gaeb;leistungsbeschreibungen/mt351305_v33.x83
+270;Flanschverbindung DN 450 herstellen, bestehend aus;1,0;Stk;gaeb;leistungsbeschreibungen/mt351305_v33.x83
+280;Flanschverbindung DN 450 herstellen, bestehend aus;1,0;St;gaeb;leistungsbeschreibungen/mt351305_v33.x83
+290;Flanschverbindung DN 600 herstellen, bestehend aus;1,0;Stk;gaeb;leistungsbeschreibungen/mt351305_v33.x83
+300;Flanschverbindung DN 600 herstellen, bestehend aus;1,0;St;gaeb;leistungsbeschreibungen/mt351305_v33.x83
+310;Flanschverbindung DN 800 herstellen, bestehend aus;1,0;Stk;gaeb;leistungsbeschreibungen/mt351305_v33.x83
+320;Flanschverbindung DN 800 herstellen, bestehend aus;1,0;St;gaeb;leistungsbeschreibungen/mt351305_v33.x83
+330;Konzentrische;1,0;Stk;gaeb;leistungsbeschreibungen/mt351305_v33.x83
+340;Konzentrische;1,0;St;gaeb;leistungsbeschreibungen/mt351305_v33.x83
+350;Konzentrische;1,0;Stk;gaeb;leistungsbeschreibungen/mt351305_v33.x83
+360;Konzentrische;1,0;St;gaeb;leistungsbeschreibungen/mt351305_v33.x83
+370;Konzentrische;1,0;Stk;gaeb;leistungsbeschreibungen/mt351305_v33.x83
+380;Konzentrische;1,0;St;gaeb;leistungsbeschreibungen/mt351305_v33.x83
+390;bestehend aus:;4,0;Stk;gaeb;leistungsbeschreibungen/mt351305_v33.x83
+400;bestehend aus:;4,0;St;gaeb;leistungsbeschreibungen/mt351305_v33.x83
+410;Rohrstutzen für MID-Prüfstutzen bestehend aus:;4,0;Stc;gaeb;leistungsbeschreibungen/mt351305_v33.x83
+420;Rohrstutzen für MID-Prüfstutzen bestehend aus:;4,0;St;gaeb;leistungsbeschreibungen/mt351305_v33.x83
+430;Schlauchleitung beidseitig Storz 52-C Anschluss;1,0;Stk;gaeb;leistungsbeschreibungen/mt351305_v33.x83
+440;Schlauchleitung beidseitig Storz 52-C Anschluss;1,0;St;gaeb;leistungsbeschreibungen/mt351305_v33.x83
+450;Festkupplung Storz 52-C Übergansstück auf Flansch DN 50;1,0;Stk;gaeb;leistungsbeschreibungen/mt351305_v33.x83
+460;Festkupplung Storz 52-C Übergansstück auf Flansch DN 50;1,0;St;gaeb;leistungsbeschreibungen/mt351305_v33.x83
+470;Flanschverbindung DN 50 herstellen, bestehend aus;7,0;Stk;gaeb;leistungsbeschreibungen/mt351305_v33.x83
+480;Flanschverbindung DN 50 herstellen, bestehend aus;7,0;St;gaeb;leistungsbeschreibungen/mt351305_v33.x83
+490;Vorschweißflansch n;1,0;Stk;gaeb;leistungsbeschreibungen/mt351305_v33.x83
+500;Vorschweißflansch n;1,0;St;gaeb;leistungsbeschreibungen/mt351305_v33.x83
+510;Rohr DN 50 (60,3 x 2,3), Werkstoff;3,0;m;gaeb;leistungsbeschreibungen/mt351305_v33.x83
+520;Rohr DN 50 (60,3 x 2,0), Werkstoff;3,0;m;gaeb;leistungsbeschreibungen/mt351305_v33.x83
+530;Rohrbogen 90°, DN 50, Werkstoff;2,0;Stck;gaeb;leistungsbeschreibungen/mt351305_v33.x83
+540;Rohrbogen 90°, DN 50, Werkstoff;2,0;St;gaeb;leistungsbeschreibungen/mt351305_v33.x83
+010;Weichdichtender Plattenschieber;4,0;Stck;gaeb;leistungsbeschreibungen/mt351305_v33.x83
+020;Gummikompensator DN 300;4,0;Stk;gaeb;leistungsbeschreibungen/mt351305_v33.x83
+030;Rückschlagklappe mit Gewichtshebel;4,0;Stk;gaeb;leistungsbeschreibungen/mt351305_v33.x83
+040;Weichdichtende Rückschlagklappe nach EN 12334;1,0;Stk;gaeb;leistungsbeschreibungen/mt351305_v33.x83
+050;Flanschkugelhahn DN 50 mit vollem Durchgang aus;1,0;Stk;gaeb;leistungsbeschreibungen/mt351305_v33.x83
+010;Höhenverstellbare Rohrstütze ausgeführt als Bodenstütze mit Fußplatte und Halbschale auf bauseitiger Schachtsohle für den Sammler Rohr DN 450 und DN 600 aus S235 verzinkt nach Wahl AN.;650,0;kg;gaeb;leistungsbeschreibungen/mt351305_v33.x83
+020;Zweischraubenschelle für Rohr DN 50 aus Stahl verzinkt mit Gummieinlage;4,0;Stk;gaeb;leistungsbeschreibungen/mt351305_v33.x83
+030;Schwere Tragkonstruktion / Wandkonsole zur vertikalen Lastabtragung und Führung der Steigleitung DN 300 an einer Spundwand, gemäß Zeichnung 22080-01-001-C-Entwurfszeichnung Grundriss und Schnitte des Statikers Diekmann.;520,0;kg;gaeb;leistungsbeschreibungen/mt351305_v33.x83
+040;Höhenverstellbarer Rohrhalter zur Vertikalunterstützung einer Rohrleitung bzw. Armatur DN 300 bei einer Montagehöhe von UK = 2,20 m.;200,0;kg;gaeb;leistungsbeschreibungen/mt351305_v33.x83
+010;Magnetisch-induktives Durchflussmessgerät;4,0;Stk;gaeb;leistungsbeschreibungen/mt351305_v33.x83
+010;Demontage und Entsorgung der oben beschriebenen Bauteile, Rohrleitungen, Armaturen, Unterkonstruktionen;1,0;Psch;gaeb;leistungsbeschreibungen/mt351305_v33.x83

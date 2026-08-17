@@ -1,0 +1,171 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+01.1;Baustelle einrichten;1,0;Psch;gaeb-flat;LV Kranbahn Trimodal.D83
+01.2;Baustelleneinrichtung vor- und unterhalten;4,0;Mona;gaeb-flat;LV Kranbahn Trimodal.D83
+01.3;Baustelle räumen;1,0;Psch;gaeb-flat;LV Kranbahn Trimodal.D83
+01.4;Bauzäune;1000,0;m;gaeb-flat;LV Kranbahn Trimodal.D83
+01.5;Tore;5,0;St;gaeb-flat;LV Kranbahn Trimodal.D83
+01.6;Baustelleneinrichtungsplan;1,0;Psch;gaeb-flat;LV Kranbahn Trimodal.D83
+01.7;Bestandsunterlagen herst. und lief.;1,0;Psch;gaeb-flat;LV Kranbahn Trimodal.D83
+01.8;Baudokumentation - Bauablauf;1,0;Psch;gaeb-flat;LV Kranbahn Trimodal.D83
+01.9;Lichtbilder herstellen und liefern;1,0;psch;gaeb-flat;LV Kranbahn Trimodal.D83
+01.10;Angaben für Vorankündigung;1,0;Psch;gaeb-flat;LV Kranbahn Trimodal.D83
+01.11;Angaben für SiGe-Plan;1,0;Psch;gaeb-flat;LV Kranbahn Trimodal.D83
+01.12;Kontrolle und Sicherung der übergebenen Festpunkte;1,0;psch;gaeb-flat;LV Kranbahn Trimodal.D83
+01.13;Durchführung aller benötigten Vermessungsleistungen;1,0;Psch;gaeb-flat;LV Kranbahn Trimodal.D83
+01.14;Absteckung der Hauptachsen der zu erstellenden Verkehrsanlage;1,0;psch;gaeb-flat;LV Kranbahn Trimodal.D83
+02.1;Sicherungsaufsichtskraft (Sakra Bahn) Zulage;10,0;h;gaeb-flat;LV Kranbahn Trimodal.D83
+02.2;Sicherheitsposten (Sipo Bahn) normal;100,0;h;gaeb-flat;LV Kranbahn Trimodal.D83
+02.3;Sipo (Bahn) Zulage Nachtstunden;20,0;h;gaeb-flat;LV Kranbahn Trimodal.D83
+02.4;Sipo (Bahn) Zulage Wochenende;20,0;h;gaeb-flat;LV Kranbahn Trimodal.D83
+02.5;Sipo (Bahn) Zulage Nachtstunden;20,0;h;gaeb-flat;LV Kranbahn Trimodal.D83
+02.6;Sicherungsaufsichtskraft (Sakra Bahn) normal;50,0;h;gaeb-flat;LV Kranbahn Trimodal.D83
+02.7;Sicherungsaufsichtskraft (Sakra Bahn) Zulage;10,0;h;gaeb-flat;LV Kranbahn Trimodal.D83
+02.8;Sicherungsaufsichtskraft (Sakra Bahn) Zulage;10,0;h;gaeb-flat;LV Kranbahn Trimodal.D83
+03.1;Ausbau des LED-Leuchtstreifen;600,0;m;gaeb-flat;LV Kranbahn Trimodal.D83
+03.2;Standsicherheitsnachweis aufstellen;1,0;Psch;gaeb-flat;LV Kranbahn Trimodal.D83
+03.3;Ausführungszeichnungen herstellen;1,0;Psch;gaeb-flat;LV Kranbahn Trimodal.D83
+03.4;Ausführungszeichnungen herstellen Bauwerk;1,0;Psch;gaeb-flat;LV Kranbahn Trimodal.D83
+03.5;Schutzgerüst herstellen;1,0;Psch;gaeb-flat;LV Kranbahn Trimodal.D83
+03.6;Schiene trennen;100,0;St;gaeb-flat;LV Kranbahn Trimodal.D83
+03.7;Schiene aufnehmen und entsorgen;575,0;m;gaeb-flat;LV Kranbahn Trimodal.D83
+03.8;Auftrennen von Schweißnähten;100,0;m;gaeb-flat;LV Kranbahn Trimodal.D83
+03.9;Befestigungspunkte abbrechen;575,0;St;gaeb-flat;LV Kranbahn Trimodal.D83
+03.10;Klemmsysteme lösen;250,0;St;gaeb-flat;LV Kranbahn Trimodal.D83
+03.11;Reinigen der Oberfläche des Betonholmes;600,0;m;gaeb-flat;LV Kranbahn Trimodal.D83
+03.12;Bestandsschiene für den Anschluss an die neue Schiene vorbereiten;1,0;Psch;gaeb-flat;LV Kranbahn Trimodal.D83
+03.13;Anschluss neue Schiene an Bestandsschiene - UIC 60;1,0;St;gaeb-flat;LV Kranbahn Trimodal.D83
+03.14;Höhenverstellbares Klemmsystem zur Schienenbefestigung liefern;575,0;St;gaeb-flat;LV Kranbahn Trimodal.D83
+03.15;Einbau des höhenverstellbaren Klemmsystems zur Schienenbefestigung;575,0;St;gaeb-flat;LV Kranbahn Trimodal.D83
+03.16;Bauteile eines höhenverstellbaren Klemmsystems zur Schienenbefestigung liefern;250,0;St;gaeb-flat;LV Kranbahn Trimodal.D83
+03.17;Einbau der Bauteile eines höhenverstellbaren Klemmsystems zur Schienenbefestigung;250,0;St;gaeb-flat;LV Kranbahn Trimodal.D83
+03.18;Herstellung, Lieferung von Zwischenplatten;75,0;St;gaeb-flat;LV Kranbahn Trimodal.D83
+03.19;Liefern von Gewindeankern zur Befestigung der Zwischenplatten;300,0;St;gaeb-flat;LV Kranbahn Trimodal.D83
+03.20;Einbau der Zwischenplatten;75,0;St;gaeb-flat;LV Kranbahn Trimodal.D83
+03.21;Höhenverstellbares Klemmsystem zur Schienenbefestigung an Zwischenplatten ohne Gewindeanker) liefern;75,0;Stk;gaeb-flat;LV Kranbahn Trimodal.D83
+03.22;Montage der höhenverstellbaren Klemmsysteme zur Schienenbefestigung;75,0;St;gaeb-flat;LV Kranbahn Trimodal.D83
+03.23;Sonderlösungen der Schienenbefestigung herstellen und liefern;25,0;St;gaeb-flat;LV Kranbahn Trimodal.D83
+03.24;Sonderlösungen der Schienenbefestigung einbauen;25,0;St;gaeb-flat;LV Kranbahn Trimodal.D83
+03.25;Sondierung nach Bewehrung;100,0;St;gaeb-flat;LV Kranbahn Trimodal.D83
+03.26;Schiene UIC 60 liefern;580,0;m;gaeb-flat;LV Kranbahn Trimodal.D83
+03.27;Schiene UIC 60 einbauen;580,0;m;gaeb-flat;LV Kranbahn Trimodal.D83
+03.28;Erstellen einer Kontrollmessung;1,0;Psch;gaeb-flat;LV Kranbahn Trimodal.D83
+03.29;Einbau des LED-Leuchtstreifen;600,0;m;gaeb-flat;LV Kranbahn Trimodal.D83
+04.1;Lösen der Schiene vom Grundblech der Festpunktkonstruktion;1,0;St;gaeb-flat;LV Kranbahn Trimodal.D83
+04.2;Wiederherstellung der Festpunktkonstruktion;1,0;St;gaeb-flat;LV Kranbahn Trimodal.D83
+05.1;Standsicherheitsnachweis aufstellen;1,0;Psch;gaeb-flat;LV Kranbahn Trimodal.D83
+05.2;Ausführungszeichnungen herstellen;1,0;Psch;gaeb-flat;LV Kranbahn Trimodal.D83
+05.3;Ausführungszeichnungen herstellen Bauwerk;1,0;Psch;gaeb-flat;LV Kranbahn Trimodal.D83
+05.4;Arbeitsgerüst herstellen;1,0;Psch;gaeb-flat;LV Kranbahn Trimodal.D83
+05.5;Unbefestigte Oberfläche aufbrechen/aufnehmen/transportieren;4,0;m3;gaeb-flat;LV Kranbahn Trimodal.D83
+05.6;Boden, ausheben/laden/transportieren;20,0;m3;gaeb-flat;LV Kranbahn Trimodal.D83
+05.7;Hartsteinkalkschotter der Körnung 0/32 mm liefern/einbauen;25,0;m3;gaeb-flat;LV Kranbahn Trimodal.D83
+05.8;Ausführungszeichnungen herstellen Bauwerk;1,0;Psch;gaeb-flat;LV Kranbahn Trimodal.D83
+05.9;Stahlkonstruktionen herstellen - Abstützkonstruktionen (Ertüchtigung 1);3,0;Stck;gaeb-flat;LV Kranbahn Trimodal.D83
+05.10;Stahlkonstruktionen einbauen - Abstützkonstruktionen (Ertüchtigung 1);3,0;St;gaeb-flat;LV Kranbahn Trimodal.D83
+05.11;Schweißnähte herstellen;10,0;St;gaeb-flat;LV Kranbahn Trimodal.D83
+06.1;Ausbau eines Puffers, seitlich lagern;1,0;St;gaeb-flat;LV Kranbahn Trimodal.D83
+06.2;Einbau eines Puffers, seitlich lagernd;1,0;St;gaeb-flat;LV Kranbahn Trimodal.D83
+06.3;Schiene trennen;100,0;St;gaeb-flat;LV Kranbahn Trimodal.D83
+06.4;Schiene aufnehmen und entsorgen;575,0;m;gaeb-flat;LV Kranbahn Trimodal.D83
+06.5;Auftrennen von Schweißnähten;100,0;m;gaeb-flat;LV Kranbahn Trimodal.D83
+06.6;Befestigungspunkte abbrechen;575,0;St;gaeb-flat;LV Kranbahn Trimodal.D83
+06.7;Klemmsysteme lösen;250,0;St;gaeb-flat;LV Kranbahn Trimodal.D83
+06.8;Reinigen der Oberfläche des Betonholmes;600,0;m;gaeb-flat;LV Kranbahn Trimodal.D83
+06.9;Höhenverstellbares Klemmsystem zur Schienenbefestigung liefern;575,0;St;gaeb-flat;LV Kranbahn Trimodal.D83
+06.10;Einbau des höhenverstellbaren Klemmsystems zur Schienenbefestigung;575,0;St;gaeb-flat;LV Kranbahn Trimodal.D83
+06.11;Bauteile eines höhenverstellbaren Klemmsystems zur Schienenbefestigung liefern;250,0;St;gaeb-flat;LV Kranbahn Trimodal.D83
+06.12;Einbau der Bauteile eines höhenverstellbares Klemmsystems zur Schienenbefestigung;250,0;St;gaeb-flat;LV Kranbahn Trimodal.D83
+06.13;Schiene UIC 60 liefern;580,0;m;gaeb-flat;LV Kranbahn Trimodal.D83
+06.14;Schiene UIC 60 einbauen;580,0;m;gaeb-flat;LV Kranbahn Trimodal.D83
+06.15;Lösen der Schiene vom Grundblech einer Festpunktkonstruktion;1,0;St;gaeb-flat;LV Kranbahn Trimodal.D83
+06.16;Schiene Zu A74 liefern;9,0;m;gaeb-flat;LV Kranbahn Trimodal.D83
+06.17;Schiene Zu A74 im Überfahrbereich einbauen;1,0;St;gaeb-flat;LV Kranbahn Trimodal.D83
+06.18;Erstellen einer Kontrollmessung;1,0;Psch;gaeb-flat;LV Kranbahn Trimodal.D83
+06.19;2-K Epoxidharz Rampe;1,0;m3;gaeb-flat;LV Kranbahn Trimodal.D83
+07.1;Lösen der Schiene vom Grundblech der Festpunktkonstruktion;1,0;St;gaeb-flat;LV Kranbahn Trimodal.D83
+07.2;Wiederherstellung einer Festpunktkonstruktion;1,0;St;gaeb-flat;LV Kranbahn Trimodal.D83
+1;Geräte, Werkzeuge und sonstige Betriebsmittel, die zur;1,0;Psch;gaeb;LV Kranbahn Trimodal_V32.X83
+2;Vor- und Unterhaltung der unter OZ 01.1;4,0;Mona;gaeb;LV Kranbahn Trimodal_V32.X83
+3;Baustelle von allen Geräten, Anlagen, Einrichtungen;1,0;Psch;gaeb;LV Kranbahn Trimodal_V32.X83
+4;Bauzäune nach den Erfordernissen des AN bzw. nach;1000,0;m;gaeb;LV Kranbahn Trimodal_V32.X83
+5;Tore nach den Erfordernissen des AN bzw. nach Angaben;5,0;St;gaeb;LV Kranbahn Trimodal_V32.X83
+6;Es ist zu erstellen und zu liefern:;1,0;Psch;gaeb;LV Kranbahn Trimodal_V32.X83
+7;Bestandsunterlagen gemäß ZTV-Ing,;1,0;Psch;gaeb;LV Kranbahn Trimodal_V32.X83
+8;Es ist zu erstellen und zu liefern:;1,0;Psch;gaeb;LV Kranbahn Trimodal_V32.X83
+9;Lichtbilder über den wesentlichen;1,0;psch;gaeb;LV Kranbahn Trimodal_V32.X83
+10;Angaben für Vorankündigung gemäß;1,0;Psch;gaeb;LV Kranbahn Trimodal_V32.X83
+11;Angaben und Mitwirkung für den;1,0;Psch;gaeb;LV Kranbahn Trimodal_V32.X83
+12;Die auf Veranlassung des AG dem AN übergebenen;1,0;psch;gaeb;LV Kranbahn Trimodal_V32.X83
+13;Durchführung aller in;1,0;Psch;gaeb;LV Kranbahn Trimodal_V32.X83
+14;Absteckung der Hauptachsen der neu;1,0;psch;gaeb;LV Kranbahn Trimodal_V32.X83
+1;Zulage für Nachtstunden am Wochende;10,0;h;gaeb;LV Kranbahn Trimodal_V32.X83
+2;Stellen eines Sicherheitspostens (Sipo);100,0;h;gaeb;LV Kranbahn Trimodal_V32.X83
+3;Zulage für Nachtstunden in der Woche;20,0;h;gaeb;LV Kranbahn Trimodal_V32.X83
+4;Zulage Wochenende (tagsüber);20,0;h;gaeb;LV Kranbahn Trimodal_V32.X83
+5;Zulage für Nachtstunden am Wochenende;20,0;h;gaeb;LV Kranbahn Trimodal_V32.X83
+6;Stellen einer Sicherungsaufsichtskraft (Sakra).;50,0;h;gaeb;LV Kranbahn Trimodal_V32.X83
+7;Zulage für Nachtstunden in der Woche;10,0;h;gaeb;LV Kranbahn Trimodal_V32.X83
+8;Zulage für Wochende (tagsüber);10,0;h;gaeb;LV Kranbahn Trimodal_V32.X83
+1;Am Steg der wasserseitig verlegten;600,0;m;gaeb;LV Kranbahn Trimodal_V32.X83
+2;Standsicherheitsnachweis aufstellen.;1,0;Psch;gaeb;LV Kranbahn Trimodal_V32.X83
+3;Ausführungszeichnungen herstellen.;1,0;Psch;gaeb;LV Kranbahn Trimodal_V32.X83
+4;Ausführungszeichnungen herstellen.;1,0;Psch;gaeb;LV Kranbahn Trimodal_V32.X83
+5;Schutzgerüst, einschließlich ggf. erforderlicher;1,0;Psch;gaeb;LV Kranbahn Trimodal_V32.X83
+6;Die vorhandene Schiene auf dem;100,0;St;gaeb;LV Kranbahn Trimodal_V32.X83
+7;Schiene aufnehmen und entsorgen.;575,0;m;gaeb;LV Kranbahn Trimodal_V32.X83
+8;Stellenweise ist die Schiene mit den;100,0;m;gaeb;LV Kranbahn Trimodal_V32.X83
+9;Im Falle, dass ein vorhandener;575,0;St;gaeb;LV Kranbahn Trimodal_V32.X83
+10;Im Falle, dass ein vorhandener;250,0;St;gaeb;LV Kranbahn Trimodal_V32.X83
+11;Reinigen der Oberfläche des;600,0;m;gaeb;LV Kranbahn Trimodal_V32.X83
+12;Bei der Vorbereitung der;1,0;Psch;gaeb;LV Kranbahn Trimodal_V32.X83
+13;Am Übergang der Bestandsschiene;1,0;St;gaeb;LV Kranbahn Trimodal_V32.X83
+14;Höhenverstellbares Klemmsystem;575,0;St;gaeb;LV Kranbahn Trimodal_V32.X83
+15;Einbau des höhenverstellbaren;575,0;St;gaeb;LV Kranbahn Trimodal_V32.X83
+16;Im Falle, dass ein vorhandener;250,0;St;gaeb;LV Kranbahn Trimodal_V32.X83
+17;Einbau der folgenden Bauteile eines;250,0;St;gaeb;LV Kranbahn Trimodal_V32.X83
+18;Sollte beim Einbau der;75,0;St;gaeb;LV Kranbahn Trimodal_V32.X83
+19;Gewindanker:;300,0;St;gaeb;LV Kranbahn Trimodal_V32.X83
+20;Beim Einbau der Zwischenplatten sind;75,0;St;gaeb;LV Kranbahn Trimodal_V32.X83
+21;Höhenverstellbares Klemmsystem zur;75,0;Stk;gaeb;LV Kranbahn Trimodal_V32.X83
+22;Die höhenverstellbaren;75,0;St;gaeb;LV Kranbahn Trimodal_V32.X83
+23;Die Schiene ist teilweise sehr nahe;25,0;St;gaeb;LV Kranbahn Trimodal_V32.X83
+24;Beim Einbau der Sonderlösungen;25,0;St;gaeb;LV Kranbahn Trimodal_V32.X83
+25;An den Stellen, an denen die;100,0;St;gaeb;LV Kranbahn Trimodal_V32.X83
+26;Schiene - UIC 60 - ggf. vorgebogen;580,0;m;gaeb;LV Kranbahn Trimodal_V32.X83
+27;Schiene - UIC 60 - einbauen (verlegen;580,0;m;gaeb;LV Kranbahn Trimodal_V32.X83
+28;Nach dem Einabau der Schiene ist;1,0;Psch;gaeb;LV Kranbahn Trimodal_V32.X83
+29;Einbau des im Bereich der;600,0;m;gaeb;LV Kranbahn Trimodal_V32.X83
+1;Im Vorfeld der Erneuerung der;1,0;St;gaeb;LV Kranbahn Trimodal_V32.X83
+2;Die vorhandene Festpunktkonstruktion;1,0;St;gaeb;LV Kranbahn Trimodal_V32.X83
+1;Standsicherheitsnachweis aufstellen.;1,0;Psch;gaeb;LV Kranbahn Trimodal_V32.X83
+2;Ausführungszeichnungen herstellen.;1,0;Psch;gaeb;LV Kranbahn Trimodal_V32.X83
+3;Ausführungszeichnungen herstellen.;1,0;Psch;gaeb;LV Kranbahn Trimodal_V32.X83
+4;Arbeitsgerüste, einschließlich ggf.;1,0;Psch;gaeb;LV Kranbahn Trimodal_V32.X83
+5;Unbefestigte Oberfläche aus Kies,;4,0;m3;gaeb;LV Kranbahn Trimodal_V32.X83
+6;Boden für Baugrube profilgemäß;20,0;m3;gaeb;LV Kranbahn Trimodal_V32.X83
+7;Hartsteinkalkschotter der Körnung;25,0;m3;gaeb;LV Kranbahn Trimodal_V32.X83
+8;Ausführungszeichnungen herstellen.;1,0;Psch;gaeb;LV Kranbahn Trimodal_V32.X83
+9;Stahlkonstruktionen entsprechend statischen und;3,0;Stck;gaeb;LV Kranbahn Trimodal_V32.X83
+10;Stahlkonstruktionen der Vorposition einbauen.;3,0;St;gaeb;LV Kranbahn Trimodal_V32.X83
+11;Spundwandbohlen auf einer Länge von jeweils 60 cm im;10,0;St;gaeb;LV Kranbahn Trimodal_V32.X83
+1;Der vorhandene Puffer ist einschließlich der Halterung;1,0;St;gaeb;LV Kranbahn Trimodal_V32.X83
+2;Seitlich gelagerter Puffer ist einschließlich der;1,0;St;gaeb;LV Kranbahn Trimodal_V32.X83
+3;Die vorhandene Schiene auf dem;100,0;St;gaeb;LV Kranbahn Trimodal_V32.X83
+4;Schiene aufnehmen und entsorgen.;575,0;m;gaeb;LV Kranbahn Trimodal_V32.X83
+5;Stellenweise ist die Schiene mit den;100,0;m;gaeb;LV Kranbahn Trimodal_V32.X83
+6;Vorhandene Befestigungspunkte;575,0;St;gaeb;LV Kranbahn Trimodal_V32.X83
+7;Vorhandene Klemmsysteme lösen.;250,0;St;gaeb;LV Kranbahn Trimodal_V32.X83
+8;Reinigen der Oberfläche des;600,0;m;gaeb;LV Kranbahn Trimodal_V32.X83
+9;Klemmsystem bestehend aus jeweils:;575,0;St;gaeb;LV Kranbahn Trimodal_V32.X83
+10;Einbau des Klemmsystems zur Schienenbefestigung gemäß;575,0;St;gaeb;LV Kranbahn Trimodal_V32.X83
+11;Im Falle, dass ein vorhandener;250,0;St;gaeb;LV Kranbahn Trimodal_V32.X83
+12;Einbau der folgenden Bauteile eines;250,0;St;gaeb;LV Kranbahn Trimodal_V32.X83
+13;Schiene - UIC 60 - ggf. vorgebogen;580,0;m;gaeb;LV Kranbahn Trimodal_V32.X83
+14;Schiene - UIC 60 - einbauen (verlegen;580,0;m;gaeb;LV Kranbahn Trimodal_V32.X83
+15;Im Rahmen der Erneuerung der;1,0;St;gaeb;LV Kranbahn Trimodal_V32.X83
+16;Schiene - Zu A74 - ggf. vorgebogen liefern;9,0;m;gaeb;LV Kranbahn Trimodal_V32.X83
+17;Im Rahmen der Erneuerung der;1,0;St;gaeb;LV Kranbahn Trimodal_V32.X83
+18;Nach dem Einbau der Schiene ist;1,0;Psch;gaeb;LV Kranbahn Trimodal_V32.X83
+19;Im Bereich der Überfahrt ist der;1,0;m3;gaeb;LV Kranbahn Trimodal_V32.X83
+1;Im Vorfeld der Erneuerung der;1,0;St;gaeb;LV Kranbahn Trimodal_V32.X83
+2;Die vorhandene;1,0;St;gaeb;LV Kranbahn Trimodal_V32.X83

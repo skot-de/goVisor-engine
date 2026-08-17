@@ -1,0 +1,16 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+1;Alu-Brandschutz-Element T-30 RS / F 30,;1,0;St;gaeb;LV-Brandschutztüren.X83
+2;Alu-Innenelement Tür, System;1,0;St;gaeb;LV-Brandschutztüren.X83
+3;Alu-Brandschutz-Element T-30 RS / F 30,;1,0;St;gaeb;LV-Brandschutztüren.X83
+4;Alu-Brandschutz-Element T-30 RS / F 30,;1,0;St;gaeb;LV-Brandschutztüren.X83
+5;Alu-Brandschutz-Element T-30 RS / F 30,;1,0;St;gaeb;LV-Brandschutztüren.X83
+6;Alu-Brandschutz-Element T-30 RS / F 30,;1,0;St;gaeb;LV-Brandschutztüren.X83
+7;Alu-Brandschutz-Element T-30 RS / F 30,;1,0;St;gaeb;LV-Brandschutztüren.X83
+8;Alu-Brandschutz-Element T-30 RS / F 30,;1,0;St;gaeb;LV-Brandschutztüren.X83
+9;Alu-Brandschutz-Element T-30 RS / F 30,;1,0;St;gaeb;LV-Brandschutztüren.X83
+10;Alu-Brandschutz-Element T-30 RS / F 30,;1,0;St;gaeb;LV-Brandschutztüren.X83
+11;Kosten für die Inbetriebnahme und die Abnahmeprüfung der Feststellanlagen;1,0;psch;gaeb;LV-Brandschutztüren.X83
+1;Kosten für die in Abständen von maximal zwölf Monaten erforderliche Prüfung der Feststellanlagen auf ordnungsgemäßes und störungsfreies Zusammenwirken aller Geräte sowie eine Wartung.;4,0;psch;gaeb;LV-Brandschutztüren.X83
+1;Stundenlohnarbeiten durch Bauhelfer/-in auf Anordnung des AG ausführen, der Verrechnungssatz für die jeweilige Arbeitskraft umfasst sämtliche Aufwendungen wie Lohn- und Gehaltskosten, Lohn und Gehaltsnebenkosten, Zuschläge, lohngebundene und lohnabhängige Kosten, sonstige Sozialkosten, Gemeinkosten,;10,0;h;gaeb;LV-Brandschutztüren.X83
+2;wie vor jedoch Facharbeiter/-in;10,0;h;gaeb;LV-Brandschutztüren.X83
+3;wie vor jedoch Fachvorarbeiter;5,0;h;gaeb;LV-Brandschutztüren.X83

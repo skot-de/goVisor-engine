@@ -1,0 +1,189 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+0101.1;Baustelleneinrichtungsplanung;1,0;psch;gaeb-flat;3941925.d83
+0101.2;Einrichten der Baustelle;1,0;St;gaeb-flat;3941925.d83
+0101.3;Meterrisse;20,0;St;gaeb-flat;3941925.d83
+0101.4;Bautüren, ein- und ausbauen;2,0;St;gaeb-flat;3941925.d83
+0101.5;Bautüren vorhalten;10,0;StWo;gaeb-flat;3941925.d83
+0101.6;Bauzaun aus Stahlrahmen;50,0;m;gaeb-flat;3941925.d83
+0101.7;Bauzaun vorhalten;400,0;mWo;gaeb-flat;3941925.d83
+0101.8;Tor im Bauzaun;1,0;St;gaeb-flat;3941925.d83
+0101.9;Tor im Bauzaun vorhalten;4,0;StWo;gaeb-flat;3941925.d83
+0101.10;Schotterschicht für Baustellenzufahrt;25,0;m³;gaeb-flat;3941925.d83
+0101.11;Auslegen von Stahlplatten;100,0;m²;gaeb-flat;3941925.d83
+0101.12;Baumschutz , 5 m;4,0;St;gaeb-flat;3941925.d83
+0101.13;Baumschutz, 8m;4,0;St;gaeb-flat;3941925.d83
+0101.14;Baumschutz;8,0;St;gaeb-flat;3941925.d83
+0101.15;Säubern der Baustelle;1,0;St;gaeb-flat;3941925.d83
+0101.16;Restmüll - Container 5 m³;1,0;St;gaeb-flat;3941925.d83
+0101.17;Sondermüll - Container 5 m³;1,0;St;gaeb-flat;3941925.d83
+0101.18;Bauschutt - Container 5 m³;1,0;St;gaeb-flat;3941925.d83
+0201.1;Betonschneidearbeiten Bodenplatten/Fundamenten;220,0;m;gaeb-flat;3941925.d83
+0201.2;Raue Fuge herstellen;220,0;m;gaeb-flat;3941925.d83
+0201.3;Betonschneidearbeiten Fundamenten;20,0;m;gaeb-flat;3941925.d83
+0201.4;Betonschneidearbeiten Stahlbetondecke;15,0;m;gaeb-flat;3941925.d83
+0201.5;Abbruch Bodenplatte im Bestand;16,0;m³;gaeb-flat;3941925.d83
+0201.6;Abbruch und Entsorgung von Bestandsfundamenten;2,5;m³;gaeb-flat;3941925.d83
+0201.7;Kernbohrungen für spätere Leitungsführung Abwasser;15,0;St;gaeb-flat;3941925.d83
+0201.8;Abbruch Stahlbetondecke;2,0;m³;gaeb-flat;3941925.d83
+0201.9;Abbruch Stahlbetonüberzüge und Ringbalken, Unterzüge;0,5;m³;gaeb-flat;3941925.d83
+0201.10;Abbruch tragende Außenwände d = 30-40cm;5,5;m³;gaeb-flat;3941925.d83
+0201.11;Abbruch tragende Innenwände;15,5;m³;gaeb-flat;3941925.d83
+0201.12;Abbruch nichttragende Innenwände d=11,5;5,0;m³;gaeb-flat;3941925.d83
+0201.13;Fugenschnitt / Flexschnitt Mauerwerk;120,0;m²;gaeb-flat;3941925.d83
+0201.14;Herstellen von senkrechten Wandschlitzen;20,0;m;gaeb-flat;3941925.d83
+0201.15;Herstellen von Deckendurchbrüchen in der Stb-Decke;3,0;St;gaeb-flat;3941925.d83
+0202.1;Abbruch Eingangspodeste inkl. Unterbau;4,0;m³;gaeb-flat;3941925.d83
+0202.2;Wurzelstock roden, D über 50-70cm;2,0;St;gaeb-flat;3941925.d83
+0202.3;Rückbau Terrassenplatten inkl. Unterbau;5,0;m²;gaeb-flat;3941925.d83
+0202.4;Rückbau eines vorhandenen Kiestreifens (Traufstreifens);45,0;m²;gaeb-flat;3941925.d83
+0301.1;Aushub  innerhalb des Bestandsgebäudes;8,0;m³;gaeb-flat;3941925.d83
+0301.2;Planum Baugrube innerhalb des Gebäudes;110,0;m²;gaeb-flat;3941925.d83
+0301.3;Zulage Handaushub;15,0;m³;gaeb-flat;3941925.d83
+0301.4;Zulage Baugrubenaushub Deponiegebühr;68,0;m³;gaeb-flat;3941925.d83
+0301.5;Zulage Belasteten Boden verwerten Z1.1;5,0;m³;gaeb-flat;3941925.d83
+0301.6;Zulage Belasteten Boden verwerten Z1.2;2,0;m³;gaeb-flat;3941925.d83
+0301.7;Zulage Belasteten Boden verwerten Z2;2,0;m³;gaeb-flat;3941925.d83
+0301.8;Zulage für Bauschuttverunreinigung;20,0;m³;gaeb-flat;3941925.d83
+0301.9;Baugrubenaushub, Bkl.3-5, freilegen des Gebäudesockels;85,0;m³;gaeb-flat;3941925.d83
+0301.10;Austausch örtlicher Weichschichten mit Betonauffüllung;1,0;m³;gaeb-flat;3941925.d83
+0301.11;Tragschicht aus Mineralgemisch herstellen,;25,0;m³;gaeb-flat;3941925.d83
+0301.12;Mineralbeton;5,0;m³;gaeb-flat;3941925.d83
+0301.13;Seitlich gelagerter Boden wiedereinfüllen;50,0;m³;gaeb-flat;3941925.d83
+0301.14;Auffüllen Arbeitsraum nichtbindiger Boden;5,0;m³;gaeb-flat;3941925.d83
+0302.1;Graben Abwasser Innen, BK 3-5, T bis 1,0 m, B 0,5-0,6m;40,0;m³;gaeb-flat;3941925.d83
+0302.2;Kopie von Graben Abwasser Innen, BK 3-5, T bis 1,75 m, B 0,8-2,0m;20,0;m³;gaeb-flat;3941925.d83
+0302.3;Abstecken vor Installation;1,0;psch;gaeb-flat;3941925.d83
+04.1.1;Demontage Abwasserrohr DN 100 - DN 150;36,0;m;gaeb-flat;3941925.d83
+04.1.2;Demontage Revisionsöffnungen / Bodenabläufe DN 100 - DN 150;5,0;St;gaeb-flat;3941925.d83
+04.2.1;PP-Rohrleitung DN 100;96,0;m;gaeb-flat;3941925.d83
+04.2.2;PP-Rohrleitung DN 125;4,0;m;gaeb-flat;3941925.d83
+04.2.3;PP-Passstück DN 100;42,0;St;gaeb-flat;3941925.d83
+04.2.4;PP-Passstück DN 125;2,0;St;gaeb-flat;3941925.d83
+04.2.5;PP-Bogen DN 100 45°;95,0;St;gaeb-flat;3941925.d83
+04.2.6;PP-Bogen DN 125 45°;4,0;St;gaeb-flat;3941925.d83
+04.2.7;PP-Abzweig DN 100;20,0;St;gaeb-flat;3941925.d83
+04.2.8;PP-Abzweig DN 125;2,0;St;gaeb-flat;3941925.d83
+04.2.9;PP-Übergangsstück DN 125;4,0;St;gaeb-flat;3941925.d83
+04.2.10;PP2000 Übergang KG Rohr DN100;6,0;St;gaeb-flat;3941925.d83
+04.2.11;PP2000 Übergang KG Rohr DN125;1,0;St;gaeb-flat;3941925.d83
+04.2.12;PP2000 Übergang KG Rohr DN100;4,0;St;gaeb-flat;3941925.d83
+04.2.13;PP2000 Übergang KG Rohr DN125;1,0;St;gaeb-flat;3941925.d83
+04.2.14;PP2000 Übergang Steinzeug DN100;1,0;St;gaeb-flat;3941925.d83
+04.2.15;PP2000 Übergang Steinzeug DN125;2,0;St;gaeb-flat;3941925.d83
+04.2.16;PP2000 Übergang Steinzeug DN100;1,0;St;gaeb-flat;3941925.d83
+04.2.17;PP2000 Übergang Steinzeug DN125;2,0;St;gaeb-flat;3941925.d83
+04.2.18;Muffenstopfen PP glatt profiliert Abwasserkanal DN100 SN8;10,0;St;gaeb-flat;3941925.d83
+04.2.19;Doppelmuffe PP Abwasserkanal DN100 SN8;10,0;St;gaeb-flat;3941925.d83
+04.2.20;Wie vor Doppelmuffen DN 125;2,0;St;gaeb-flat;3941925.d83
+04.2.21;Überschiebemuffe PP Abwasserkanal DN100 SN8;8,0;St;gaeb-flat;3941925.d83
+04.2.22;Wie vor Überschiebmuffen DN 125;2,0;St;gaeb-flat;3941925.d83
+04.2.23;Anschluss an vorhandene Abwasserleitung herstellen DN 100;10,0;St;gaeb-flat;3941925.d83
+04.2.24;Anschluss an vorhandene Abwasserleitung herstellen DN 125;3,0;St;gaeb-flat;3941925.d83
+04.2.25;Rückbau von Bestandsleitungen.;10,0;St;gaeb-flat;3941925.d83
+04.2.27;Austausch einer Bestandsleitungen.;3,0;St;gaeb-flat;3941925.d83
+04.2.28;Ablaufkörper  320x180 mm DN 100, 90 Grad,;4,0;St;gaeb-flat;3941925.d83
+04.2.29;Dichtungskragen für Bodeneinlauf 140 mm;4,0;St;gaeb-flat;3941925.d83
+04.2.30;Dichtungskragen für Abwasserrohr DN 100;22,0;St;gaeb-flat;3941925.d83
+04.2.31;Dichtungskragen für Abwasserrohr DN 125;1,0;St;gaeb-flat;3941925.d83
+04.2.32;Dichtheitsprüfung Abwasserkanal;200,0;m;gaeb-flat;3941925.d83
+04.2.33;Leitungsspülung;1,0;psch;gaeb-flat;3941925.d83
+04.2.34;Anschluss an vorhandenen Kanal DN 125 (Ende);2,0;St;gaeb-flat;3941925.d83
+04.3.1;Keilflachschieber F4 DN 125;1,0;St;gaeb-flat;3941925.d83
+04.3.2;Kombi Bedienschlüssel VA;1,0;St;gaeb-flat;3941925.d83
+04.3.3;Teleskop-Einbaugarnitur für Netzarmaturen DN 100 - 150;1,0;St;gaeb-flat;3941925.d83
+04.3.4;Strassenkappe aus Gusseisen;1,0;St;gaeb-flat;3941925.d83
+04.3.5;Flansch-Muffenstück DN 125;2,0;St;gaeb-flat;3941925.d83
+04.3.6;6K-Schraube Edelstahl A2-70 M20x 70;16,0;St;gaeb-flat;3941925.d83
+04.3.7;U-Scheibe A2 Edelstahl M20/A21,0;32,0;St;gaeb-flat;3941925.d83
+04.3.8;6K-Mutter A4-70 M20 AD-W2 Edelstahl;16,0;St;gaeb-flat;3941925.d83
+04.3.9;Flanschdichtung Gummi-Stahl DN 150;2,0;St;gaeb-flat;3941925.d83
+04.3.10;Anschluss an bestehende Abwasserleitung DN 150;1,0;St;gaeb-flat;3941925.d83
+04.3.11;Doppelmuffe PP Abwasserkanal DN150 SN8;2,0;St;gaeb-flat;3941925.d83
+04.3.12;Betonpolster zur Fixierung des Schiebers;0,2;m3;gaeb-flat;3941925.d83
+04.4.1;PEHD-Rohr 25x2,3 mm;10,0;m;gaeb-flat;3941925.d83
+04.4.2;"Übergangsverschraubung 25x3/4""";1,0;St;gaeb-flat;3941925.d83
+04.4.3;Dichtungskragen aus EPDM für Rohraußendurchmesser;1,0;St;gaeb-flat;3941925.d83
+04.4.4;Provisorischer Verschluß herstellen;1,0;St;gaeb-flat;3941925.d83
+04.4.5;Trassenwarnband gelb, bestehend aus 40 mm breiten und;10,0;m;gaeb-flat;3941925.d83
+04.5.1;Bestandsunterlagen;1,0;psch;gaeb-flat;3941925.d83
+04.5.2;Bestandsunterlagen Datenträger;1,0;psch;gaeb-flat;3941925.d83
+0501.1;Ortbeton der Sauberkeitsschicht;100,0;m²;gaeb-flat;3941925.d83
+0501.2;Trennlage PE-Folie, 1-lagig, auf Sauberkeitsschicht;100,0;m²;gaeb-flat;3941925.d83
+0501.3;Ortbeton Streifenfundamente , B 50 cm;5,0;m³;gaeb-flat;3941925.d83
+0501.4;Zulage zu Vorposition für Fixierung und Anarbeiten Abwasserrohrdurchführungen etc.;35,0;St;gaeb-flat;3941925.d83
+0501.5;Flächenvorbereitung für Ergänzung der Bodenplatte herstellen;100,0;m²;gaeb-flat;3941925.d83
+0501.6;Kraftschlüssigen Anschluss an bestehende Bodenplatte;690,0;St;gaeb-flat;3941925.d83
+0501.7;Betonergänzung innerhalb der bestehenden Bodenplatte;16,0;m³;gaeb-flat;3941925.d83
+0502.1;Ortbeton Stützen, rechteckig, Stahlbeton Q=500-1500cm²;1,5;m³;gaeb-flat;3941925.d83
+0502.2;Schalung Stütze, rechteckig, H=3,50m, Q=500-1000cm²;15,0;m²;gaeb-flat;3941925.d83
+0502.3;Ausbetonieren von Vorsatzschalen;3,5;m³;gaeb-flat;3941925.d83
+0502.4;Schalung Vorsatzschale;20,0;m²;gaeb-flat;3941925.d83
+0503.1;Decke Ergänzung  d = 20 cm im Gebäude;3,0;m³;gaeb-flat;3941925.d83
+0503.2;Schalung Deckenplatte, Randschalung H = 20cm;5,0;m²;gaeb-flat;3941925.d83
+0503.3;Vorbereitung Deckenanschluss an bestehende Stahlbetondecke;5,0;m²;gaeb-flat;3941925.d83
+0504.1;Stb. Ringbalken/Schwelle 11,5/24cm;1,0;m³;gaeb-flat;3941925.d83
+0504.2;Ringbalken 24/24 cm;0,8;m³;gaeb-flat;3941925.d83
+0504.3;Schalung Ringbalken rechteckig;35,0;m²;gaeb-flat;3941925.d83
+0506.1;Aussparungen herstellen, Decke, bis 0,1 m²;5,0;St;gaeb-flat;3941925.d83
+0506.2;Aussparung herstellen, Decke, >0,1 bis 0,30 m²;5,0;St;gaeb-flat;3941925.d83
+0507.1;BSt 500 S(A);1,2;t;gaeb-flat;3941925.d83
+0507.2;BSt 500 M(A);0,8;t;gaeb-flat;3941925.d83
+0507.3;Hilti HIT HY 200, d = 10 mm;33,0;St;gaeb-flat;3941925.d83
+0507.4;AFB Bodenplatte;220,0;m;gaeb-flat;3941925.d83
+0507.5;Hilti HIT HY 150, d = 12 mm;33,0;St;gaeb-flat;3941925.d83
+0601.1;Waagr. Mauerwerksabdichtung auf Bodenplatte;40,0;m²;gaeb-flat;3941925.d83
+0601.2;Waagr. Mauerwerksabdichtung in Mauerwerksschicht Aussenwand;40,0;m²;gaeb-flat;3941925.d83
+0601.3;Mauerwerk Außenwand, D = 36,5 cm;5,0;m²;gaeb-flat;3941925.d83
+0601.4;Mauerwerk Innenwand D = 36,5cm;28,0;m²;gaeb-flat;3941925.d83
+0601.5;Mauerwerk Innenwand D = 24 cm;65,0;m²;gaeb-flat;3941925.d83
+0601.6;Mauerwerk Innenwand D = 17,5 cm;17,0;m²;gaeb-flat;3941925.d83
+0601.7;Mauerwerk Innenwand D = 11,5 cm;85,0;m²;gaeb-flat;3941925.d83
+0601.8;Mauerwerk Vorwand D = 20 cm;17,0;m²;gaeb-flat;3941925.d83
+0601.9;Mauerwerk Vorwand D = 17,5 cm;15,0;m²;gaeb-flat;3941925.d83
+0601.10;Mauerwerk Vorwand D = 11,5 cm;15,0;m²;gaeb-flat;3941925.d83
+0601.11;Mauerwerk Innenwand D=30cm;25,0;m²;gaeb-flat;3941925.d83
+0601.12;Mauerwerk Innenwand D=24cm;15,0;m²;gaeb-flat;3941925.d83
+0601.13;Mauerwerk Innenwand D=11,5cm;55,0;m²;gaeb-flat;3941925.d83
+0601.14;Ausmauerung Kleinflächen, Öffnungen 36,5 cm;15,0;m²;gaeb-flat;3941925.d83
+0601.15;Ausmauerung Kleinflächen, Öffnungen 24 cm;5,0;m²;gaeb-flat;3941925.d83
+0601.16;Ausmauerung Kleinflächen, Öffnungen 11,5 cm;7,5;m²;gaeb-flat;3941925.d83
+0601.17;Nachträglicher Einbau Ziegelsturz für Türerhöhung;45,0;m;gaeb-flat;3941925.d83
+0601.18;Herstellung Zementglattstrich Fensteröffnungen;15,0;m²;gaeb-flat;3941925.d83
+0601.19;Herstellen von Wanddurchbrüchen bis 500 cm²;5,0;St;gaeb-flat;3941925.d83
+0601.20;Herstellen von Wanddurchbrüchen bis 1000 cm²;5,0;St;gaeb-flat;3941925.d83
+0601.21;Herstellen von Wanddurchbrüchen bis 1500 cm²;5,0;St;gaeb-flat;3941925.d83
+0601.22;Betonpolster/-kissen;15,0;St;gaeb-flat;3941925.d83
+0601.23;Betonauflagerkissen;3,0;St;gaeb-flat;3941925.d83
+0601.24;Wandschlitz in Mauerwerk herstellen;30,0;m;gaeb-flat;3941925.d83
+0601.25;Wandschlitz in Mauerwerk fräsen;20,0;m;gaeb-flat;3941925.d83
+0601.26;Wandschlitz zumauern;50,0;m;gaeb-flat;3941925.d83
+0601.27;Wandschlitz in Mauerwerk herstellen;5,0;m²;gaeb-flat;3941925.d83
+0601.28;Wanddurchbrüche schließen;20,0;St;gaeb-flat;3941925.d83
+0701.1;Zweilagige mineralische Dichtungsschlämme;300,0;m²;gaeb-flat;3941925.d83
+0901.1;Unterlagen Dokumentation;1,0;psch;gaeb-flat;3941925.d83
+0901.2;Verrechnungssatz für Hilfskräfte / Bauwerker;25,0;h;gaeb-flat;3941925.d83
+0901.3;Verrechnungssatz für Baufachwerker;50,0;h;gaeb-flat;3941925.d83
+0901.4;Verrechnungssatz für Spezialbaufacharbeiter;30,0;h;gaeb-flat;3941925.d83
+0901.5;Verrechnungssatz für Bauvorarbeiter;20,0;h;gaeb-flat;3941925.d83
+0901.6;Verrechnungssatz für Baufachmeister;10,0;h;gaeb-flat;3941925.d83
+0901.7;Verrechnungssatz für Bohrhammer;20,0;h;gaeb-flat;3941925.d83
+0901.8;Verrechnungssatz für Winkelschleifer;20,0;h;gaeb-flat;3941925.d83
+0901.9;Kran mit Bedienung;15,0;h;gaeb-flat;3941925.d83
+0901.10;Kran ohne Bedienung;10,0;h;gaeb-flat;3941925.d83
+0901.11;LKW Gesamtgewicht bis 7,5 t;5,0;h;gaeb-flat;3941925.d83
+0901.12;LKW Gesamtgewicht über 7,5 t mit Bedienung;5,0;h;gaeb-flat;3941925.d83
+0901.13;Minibagger mit Bedienung, inkl. An- und Abtransport;5,0;h;gaeb-flat;3941925.d83
+0901.14;Bagger mit Bedienung, inkl. An- und Abtransport;5,0;h;gaeb-flat;3941925.d83
+0901.15;Kompressor mit Abbauhammer mit Bedienung;5,0;h;gaeb-flat;3941925.d83
+0901.16;Radlader mit Bedienung, 1m³ Schaufel;5,0;h;gaeb-flat;3941925.d83
+0901.17;Gewaschener Sand frei Baustelle liefern;10,0;m³;gaeb-flat;3941925.d83
+0901.18;Mineralbeton frei Baustelle liefern;10,0;m³;gaeb-flat;3941925.d83
+0901.19;Magerbeton liefern frei Baustelle, C12/15;5,0;m³;gaeb-flat;3941925.d83
+0901.20;Beton liefern frei Baustelle, C20/25;5,0;m³;gaeb-flat;3941925.d83
+0901.21;Estrichbeton als Sackware CT-C25-F4;500,0;kg;gaeb-flat;3941925.d83
+0901.22;Verfüllung Füllbeton;5,0;m³;gaeb-flat;3941925.d83
+0901.23;Kernbohrung DN 100;5,0;m;gaeb-flat;3941925.d83
+0901.24;Kernbohrung DN 150;5,0;m;gaeb-flat;3941925.d83
+0901.25;Kernbohrung DN 200;5,0;m;gaeb-flat;3941925.d83
+0901.26;Kunststofffolie zum Schutz der umliegenden Bauteile;100,0;m²;gaeb-flat;3941925.d83
+0901.27;Liefern und Verlegen Schutzabdeckung;20,0;m²;gaeb-flat;3941925.d83

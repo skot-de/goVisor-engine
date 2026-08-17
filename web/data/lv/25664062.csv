@@ -1,0 +1,311 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+10;Geräte, Werkzeuge und sonstige Betriebsmittel, die zur vertragsgemäßen Durchführung der Bauleistungen erforderlich sind, auf die Baustelle bringen, bereitstellen und soweit der Geräteeinsatz nicht gesondert vergütet wird, betriebsfertig aufstellen, einschl. der dafür notwendigen Arbeiten, die erford;1,0;psch;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+20;Baustelle von allen Geräten, Großgeräten, Anlagen, Einrichtungen und dergl. räumen. Benutzte Flächen und Wege entsprechend dem ursprünglichen Zustand unter Wahrung der landschaftspflegerischen Belange ordnungsgemäß herrichten. Verunreinigungen beseitigen.;1,0;psch;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+30;Besprechungscontainer als Doppelanlage, liefern und betriebsbereit aufstellen, nach Fertigstellung der Arbeiten auf Anordnung des AG abbauen und abtransportieren.;1,0;St;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+40;Besprechungscontainer (Doppelcontainer für den AG) vorhalten und unterhalten.;8,0;Mt;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+50;Sanitärcontainer 10 Fuß liefern und betriebsbereit aufstellen, nach Fertigstellung der Baumaßnahme auf nach Anordnung abbauen und abholen.;1,0;St;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+60;"Sanitärcontainer der vorgenannten Position vorhalten;";8,0;Mt;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+70;Bauzaun, auf unbefestigtem Untergrund, aus Einzelelementen mit verzinktem Stahlrohrrahmen und Vergitterung, mit Standfüßen, Zaunoberkante über Oberfläche Gelände 2 m, aufstellen, unterhalten und räumen.;20,0;m;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+80;Transport Anbaustopfaggregat;1,0;Stk;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+90;Transport Zweiwege-Mobilhydraulikbagger ZWB;2,0;Stk;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+100;Transport gleisgebundener Anhänger,;1,0;Stk;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+110;Transport gleisgebundene Gleis und Weichenstopfmaschine;2,0;Stk;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+120;Transport gleisgebundene Schotterplaniermaschine;2,0;Stk;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+10;Gestellung eines Abfallverantwortlichen auf der Baustelle;1,0;St;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+20;Entsorgungskonzept AN Bau und Vorbemerkungen;1,0;St;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+10;Bauzeiten- und Zahlungsplan erstellen und mit dem AG abstimmen.;1,0;psch;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+20;Baustelleneinrichtungsplan konkretisieren,;1,0;psch;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+30;baubegleitende Vermessung während der Ausführungsphase,;1,0;psch;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+10;Einbau der Weichenumstellvorrichtung bestehend aus den Komponenten;4,0;St;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+10;"Kabelschutzrohre aus PE-HD; DN 110";2750,0;m;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+20;Querung DN 110, 1 bis 2 Gleise, liefern und verlegen,;40,0;m;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+30;Kabelkleinschacht, Typ;9,0;Stk;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+40;Kabelabzweigkasten, 630 x 380 mm liefern und einbauen;1,0;Stk;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+50;Kabelaufbauschacht Gr, II,;9,0;Stk;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+60;S;48,0;Stk;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+70;Beleuchtungsmast liefern und auf Fundament montieren.;48,0;Stk;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+80;Statischer Nachweis Beleuchtungsmast und Gründung,;1,0;psch;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+10;Geotextiler Verbundstoff als Trenn- und Filtergeotextil liefern und einbauen;135,0;m²;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+20;Mineralgemisch 0/45 liefern, einbauen und verdichten;310,0;m²;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+30;"Spurrillenschiene ""Bauart Krug"" an Schiene 49E1, S49, befestigen.";60,0;m;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+40;Bohrungen im Schienensteg herstellen;65,0;Stk;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+50;Befestigten Weg als Rettungsweg mit Mineralgemisch ausbilden;1400,0;m²;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+10;"Spurrillenschiene ""Bauart Krug"" für Schiene 49E1 / 54E3";60,0;m;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+10;Schienen von Bahnwagen/LKW auf-/abladen.;840,0;m;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+20;Schienen von Bahnwagen abladen.;840,0;m;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+30;Gleisschwelle Holz/Beton von Bahnwagen/LKW auf- oder abladen.;631,0;Stk;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+40;Weiche ZGV als Rumpfstück, sonst in Einzelteilen auf Bahnwagen/LKW auf- oder abladen;2,0;Stk;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+10;"Trennschnitt; Schiene (alle Formen und Güten) mechanisch trennen";4,0;St;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+20;Gleis, alle Oberbauformen, jochweise zur Verschrottung ausbauen, demontieren;435,0;m;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+30;Weiche zur Verschrottung ausbauen;1,0;St;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+40;Gleisabschluss bis 10 Bremselemente ausbauen;1,0;Stk;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+50;Fahrleitungsmast/Gittermast h ≤ 14,00 m;1,0;Stk;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+10;Bettung als Verlegeplanum herstellen;1635,0;m²;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+20;Schotter in das Gleis einbringen;1635,0;m²;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+30;Gleis Gleis K oder W- Bau, a = 0,63 m in Einzelteilen einbauen;420,0;m;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+40;Gleis K oder W- Bau, a = 0,63 m in Jochen einbauen;405,0;m;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+50;Weiche, Zungenteil montiert sonst in Einzelteilen einbauen,;2,0;St;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+60;"Trennschnitt; Schiene (alle Formen und Güten) mechanisch trennen";6,0;St;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+70;Schotter abziehen;1040,0;m;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+80;Rangierweg herstellen;530,0;m²;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+90;"Signal Ra 12 einbauen; Weichenmerkzeichen auf Betonpfahl";2,0;St;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+100;Gleisabschluss bis 10 Bremselemente einbauen;1,0;Stk;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+10;Bettung im Bereich ausgebauter Gleisanlagen aufnehmen, auf Lkw verladen;195,0;m³;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+20;Aufbereitung des vorhandenen Gleisschotters in einer stationären Aufbereitungsanlage;195,0;m³;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+30;Boden für Bettungplanums ausheben, auf LKW verladen.;560,0;m³;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+40;Boden für Bettungplanums ausheben, auf LKW verladen.;560,0;m³;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+50;Boden für Suchgraben ausheben, seitlich lagern, einbauen;2,0;m³;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+60;Planumsverdichtung Erd- oder Schotterplanum bis Ev2 = 45 MN/m²;1635,0;m²;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+70;Lastplattendruckversuch nach DIN 18134 als Nachweis der Verdichtung / Tragfähigkeit;10,0;Stk;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+80;Beton/Mauerwerk im Bereich vorhandener Gleisanlagen abbrechen.;1,0;m³;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+30;Gleis 1. Stabilisierung mit ZWB u. Anbau-Stopfaggregat;520,0;m;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+40;Gleis 2. Stabilisierung mit ZWB u. Anbau-Stopfaggregat;520,0;m;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+50;Gleis 1. Stabilisierung mit Gleis- /Weichenstopfmaschine;520,0;m;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+60;Gleis 2. Stabilisierung mit Gleis- /Weichenstopfmaschine;520,0;m;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+70;Gleis Belastungsstopfgang mit Gleis- /Weichenstopfmaschine DUA;470,0;m;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+10;Schienenverbindungsschweißung 54E3 / 49E1 im weiteren S49 / S54 SmW-F als Verbindungsschweißung an Schienenprofilen herstellen.;38,0;Stk;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+20;Schienenverbindungsschweißung 54E3 / 49E1 im weiteren S49 / S54 SmW-F als Verbindungsschweißung an Schienenprofilen herstellen.;54,0;Stk;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+30;Spannungsausgleich (natürliche Wärme);1,0;Stk;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+40;Spannungsausgleich (Soll-Temperatur);1,0;Stk;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+50;Spannungsausgleich (natürliche Wärme), zusätzliche Länge;10,0;m;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+60;Spannungsausgleich (Soll-Temperatur), zusätzliche Länge;10,0;m;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+70;Fachbauleitung Spannungsausgleich SpFA;1,0;Stk;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+10;"Boden/Gleisschotter entsorgen; BM-0";45,0;t;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+20;"Boden/Gleisschotter entsorgen; BM-0*";45,0;t;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+30;Boden/Gleisschotter entsorgen entsorgen BM-F0;1,0;t;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+40;"Boden/Gleisschotter entsorgen; BM-F1";45,0;t;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+50;"Boden/Gleisschotter entsorgen; BM-F2";1,0;t;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+60;"Boden/Gleisschotter entsorgen; BM-F3";955,0;t;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+70;Bauschutt aus Rückbauten/Abbruch entsorgen;1,0;t;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+80;Altschottermischbeprobung;2,0;Stk;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+90;am Zwischenlager gesammeltes Kleineisen, charierte Stahlschwellen und Schienen verladen und einem Entsorgungsbetrieb zuführen,;32,0;t;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+100;HH schwellen am Zwischenlager gesammelt verladen und einem Entsorgungsbetrieb zuführen;60,0;t;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+10;Schotter 25/60 nach TL DBS 918 061 liefern.;950,0;t;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+20;"Weichenumstellvorrichtung als Handumstelleung;";2,0;Stk;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+10;Schienen von Bahnwagen/LKW auf-/abladen.;780,0;m;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+20;Schienen von Bahnwagen abladen.;780,0;m;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+30;Gleisschwelle Holz/Beton von Bahnwagen/LKW auf- oder abladen.;605,0;Stk;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+10;"Trennschnitt; Schiene (alle Formen und Güten) mechanisch trennen";2,0;St;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+20;Gleis, alle Oberbauformen, jochweise zur Verschrottung ausbauen, demontieren;125,0;m;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+40;Gleisabschluss bis 10 Bremselemente ausbauen;1,0;Stk;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+50;Fahrleitungsmast/Gittermast h ≤;1,0;Stk;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+10;Bettung als Verlegeplanum herstellen;1450,0;m²;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+20;Schotter in das Gleis einbringen;1450,0;m²;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+30;Gleis Gleis K oder W- Bau, a = 0,63 m in Einzelteilen einbauen;400,0;m;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+40;Gleis K oder W- Bau, a = 0,63 m in Jochen einbauen;400,0;m;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+50;Weiche, Zungenteil montiert sonst in Einzelteilen einbauen,;1,0;St;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+60;"Trennschnitt; Schiene (alle Formen und Güten) mechanisch trennen";4,0;St;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+70;Schotter abziehen;870,0;m;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+80;Rangierweg herstellen;420,0;m²;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+90;"Signal Ra 12 einbauen; Weichenmerkzeichen auf Betonpfahl";1,0;St;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+100;Gleisabschluss bis 10 Bremselemente einbauen;1,0;Stk;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+10;Bettung im Bereich ausgebauter Gleisanlagen aufnehmen, auf Lkw verladen;245,0;m³;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+20;Aufbereitung des vorhandenen Gleisschotters in einer stationären Aufbereitungsanlage;245,0;m³;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+30;Boden für Bettungplanums ausheben, auf LKW verladen.;520,0;m³;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+40;Boden für Bettungplanums ausheben, auf LKW verladen.;520,0;m³;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+50;Boden für Suchgraben ausheben, seitlich lagern, einbauen;2,0;m³;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+60;Planumsverdichtung Erd- oder Schotterplanum bis Ev2 = 45 MN/m²;1450,0;m²;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+70;Lastplattendruckversuch nach DIN 18134 als Nachweis der Verdichtung / Tragfähigkeit;6,0;Stk;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+80;Beton/Mauerwerk im Bereich vorhandener Gleisanlagen abbrechen.;1,0;m³;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+10;Gleis 1. Stabilisierung mit ZWB u. Anbau-Stopfaggregat;415,0;m;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+20;Gleis 2. Stabilisierung mit ZWB u. Anbau-Stopfaggregat;415,0;m;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+30;Gleis 1. Stabilisierung mit Gleis- /Weichenstopfmaschine;415,0;m;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+40;Gleis 2. Stabilisierung mit Gleis- /Weichenstopfmaschine;415,0;m;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+50;Gleis Belastungsstopfgang mit Gleis- /Weichenstopfmaschine DUA;415,0;m;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+10;Schienenverbindungsschweißung 54E3 / 49E1 im weiteren S49 / S54 SmW-F als Verbindungsschweißung an Schienenprofilen herstellen.;22,0;Stk;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+20;Schienenverbindungsschweißung 54E3 / 49E1 im weiteren S49 / S54 SmW-F als Verbindungsschweißung an Schienenprofilen herstellen.;50,0;Stk;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+30;Spannungsausgleich (natürliche Wärme);1,0;Stk;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+40;Spannungsausgleich (Soll-Temperatur);1,0;Stk;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+50;Spannungsausgleich (natürliche Wärme), zusätzliche Länge;1,0;m;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+60;Spannungsausgleich (Soll-Temperatur), zusätzliche Länge;1,0;m;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+70;Fachbauleitung Spannungsausgleich SpFA;1,0;Stk;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+10;"Boden/Gleisschotter entsorgen; BM-0";45,0;t;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+20;"Boden/Gleisschotter entsorgen; BM-0*";45,0;t;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+30;Boden/Gleisschotter entsorgen entsorgen BM-F0;1,0;t;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+40;"Boden/Gleisschotter entsorgen; BM-F1";45,0;t;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+50;"Boden/Gleisschotter entsorgen; BM-F2";1,0;t;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+60;"Boden/Gleisschotter entsorgen; BM-F3";870,0;t;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+70;Bauschutt aus Rückbauten/Abbruch entsorgen;1,0;t;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+80;Altschottermischbeprobung;4,0;Stk;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+90;am Zwischenlager gesammeltes Kleineisen, charierte Stahlschwellen und Schienen verladen und einem Entsorgungsbetrieb zuführen,;8,0;t;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+100;HH schwellen am Zwischenlager gesammelt verladen und einem Entsorgungsbetrieb zuführen;14,0;t;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+10;Schotter 25/60 nach TL DBS 918 061 liefern.;860,0;t;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+10;Schienen von Bahnwagen/LKW auf-/abladen.;1650,0;m;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+20;Schienen von Bahnwagen abladen.;1650,0;m;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+30;Gleisschwelle Holz/Beton von Bahnwagen/LKW auf- oder abladen.;1280,0;Stk;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+10;"Trennschnitt; Schiene (alle Formen und Güten) mechanisch trennen";2,0;St;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+20;Gleis, alle Oberbauformen, jochweise zur Verschrottung ausbauen, demontieren;405,0;m;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+10;Bettung als Verlegeplanum herstellen;2770,0;m²;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+20;Schotter in das Gleis einbringen;2770,0;m²;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+30;Gleis Gleis K oder W- Bau, a = 0,63 m in Einzelteilen einbauen;815,0;m;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+40;Gleis K oder W- Bau, a = 0,63 m in Jochen einbauen;810,0;m;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+60;"Trennschnitt; Schiene (alle Formen und Güten) mechanisch trennen";2,0;St;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+70;Schotter abziehen;1630,0;m;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+80;Rangierweg herstellen;1465,0;m²;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+100;Gleisabschluss bis 10 Bremselemente einbauen;1,0;Stk;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+10;Bettung im Bereich ausgebauter Gleisanlagen aufnehmen, auf Lkw verladen;10,0;m³;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+20;Aufbereitung des vorhandenen Gleisschotters in einer stationären Aufbereitungsanlage;10,0;m³;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+30;Boden für Bettungplanums ausheben, auf LKW verladen.;1275,0;m³;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+40;Boden für Bettungplanums ausheben, auf LKW verladen.;1275,0;m³;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+50;Boden für Suchgraben ausheben, seitlich lagern, einbauen;2,0;m³;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+60;Planumsverdichtung Erd- oder Schotterplanum bis Ev2 = 45 MN/m²;2770,0;m²;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+70;Lastplattendruckversuch nach DIN 18134 als Nachweis der Verdichtung / Tragfähigkeit;6,0;Stk;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+80;Beton/Mauerwerk im Bereich vorhandener Gleisanlagen abbrechen.;1,0;m³;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+30;Gleis 1. Stabilisierung mit ZWB u. Anbau-Stopfaggregat;815,0;m;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+40;Gleis 2. Stabilisierung mit ZWB u. Anbau-Stopfaggregat;815,0;m;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+50;Gleis 1. Stabilisierung mit Gleis- /Weichenstopfmaschine;815,0;m;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+60;Gleis 2. Stabilisierung mit Gleis- /Weichenstopfmaschine;815,0;m;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+70;Gleis Belastungsstopfgang mit Gleis- /Weichenstopfmaschine DUA;815,0;m;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+10;Schienenverbindungsschweißung 54E3 / 49E1 im weiteren S49 / S54 SmW-F als Verbindungsschweißung an Schienenprofilen herstellen.;28,0;Stk;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+20;Schienenverbindungsschweißung 54E3 / 49E1 im weiteren S49 / S54 SmW-F als Verbindungsschweißung an Schienenprofilen herstellen.;108,0;Stk;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+30;Spannungsausgleich (natürliche Wärme);1,0;Stk;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+40;Spannungsausgleich (Soll-Temperatur);1,0;Stk;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+50;Spannungsausgleich (natürliche Wärme), zusätzliche Länge;1,0;m;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+60;Spannungsausgleich (Soll-Temperatur), zusätzliche Länge;1,0;m;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+70;Fachbauleitung Spannungsausgleich SpFA;1,0;Stk;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+10;"Boden/Gleisschotter entsorgen; BM-0";45,0;t;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+20;"Boden/Gleisschotter entsorgen; BM-0*";45,0;t;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+30;Boden/Gleisschotter entsorgen entsorgen BM-F0;1,0;t;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+40;"Boden/Gleisschotter entsorgen; BM-F1";45,0;t;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+50;"Boden/Gleisschotter entsorgen; BM-F2";1,0;t;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+60;"Boden/Gleisschotter entsorgen; BM-F3";2350,0;t;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+70;Bauschutt aus Rückbauten/Abbruch entsorgen;1,0;t;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+80;Altschottermischbeprobung;4,0;Stk;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+90;am Zwischenlager gesammeltes Kleineisen, charierte Stahlschwellen und Schienen verladen und einem Entsorgungsbetrieb zuführen,;26,0;t;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+100;HH schwellen am Zwischenlager gesammelt verladen und einem Entsorgungsbetrieb zuführen;45,0;t;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+10;Schotter 25/60 nach TL DBS 918 061 liefern.;2100,0;t;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+30;Gleisabschluß als Bremsprellbock mit 10 Bremselementen, mit Merkzeichen liefern,;1,0;Stk;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+40;gebrauchten aufgearbeiteten Gleisabschluß als Bremsprellbock mit 10 Bremselementen, mit Merkzeichen liefern,;1,0;Stk;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+10;Schienen von Bahnwagen/LKW auf-/abladen.;1680,0;m;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+20;Schienen von Bahnwagen abladen.;1680,0;m;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+30;Gleisschwelle Holz/Beton von Bahnwagen/LKW auf- oder abladen.;1329,0;Stk;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+10;"Trennschnitt; Schiene (alle Formen und Güten) mechanisch trennen";2,0;St;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+20;Gleis, alle Oberbauformen, jochweise zur Verschrottung ausbauen, demontieren;540,0;m;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+30;Weiche zur Verschrottung ausbauen;3,0;St;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+10;Bettung als Verlegeplanum herstellen;3010,0;m²;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+20;Schotter in das Gleis einbringen;3010,0;m²;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+30;Gleis Gleis K oder W- Bau, a = 0,63 m in Einzelteilen einbauen;855,0;m;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+40;Gleis K oder W- Bau, a = 0,63 m in Jochen einbauen;825,0;m;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+50;Weiche, Zungenteil montiert sonst in Einzelteilen einbauen,;1,0;St;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+60;"Trennschnitt; Schiene (alle Formen und Güten) mechanisch trennen";4,0;St;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+70;Schotter abziehen;1810,0;m;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+80;Rangierweg herstellen;2435,0;m²;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+90;"Signal Ra 12 einbauen; Weichenmerkzeichen auf Betonpfahl";1,0;St;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+100;Gleisabschluss bis 10 Bremselemente einbauen;1,0;Stk;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+10;Bettung im Bereich ausgebauter Gleisanlagen aufnehmen, auf Lkw verladen;10,0;m³;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+20;Aufbereitung des vorhandenen Gleisschotters in einer stationären Aufbereitungsanlage;10,0;m³;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+30;Boden für Bettungplanums ausheben, auf LKW verladen.;1410,0;m³;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+40;Boden für Bettungplanums ausheben, auf LKW verladen.;1410,0;m³;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+50;Boden für Suchgraben ausheben, seitlich lagern, einbauen;2,0;m³;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+60;Planumsverdichtung Erd- oder Schotterplanum bis Ev2 = 45 MN/m²;3010,0;m²;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+70;Lastplattendruckversuch nach DIN 18134 als Nachweis der Verdichtung / Tragfähigkeit;14,0;Stk;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+80;Beton/Mauerwerk im Bereich vorhandener Gleisanlagen abbrechen.;1,0;m³;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+30;Gleis 1. Stabilisierung mit ZWB u. Anbau-Stopfaggregat;910,0;m;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+40;Gleis 2. Stabilisierung mit ZWB u. Anbau-Stopfaggregat;910,0;m;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+50;Gleis 1. Stabilisierung mit Gleis- /Weichenstopfmaschine;910,0;m;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+60;Gleis 2. Stabilisierung mit Gleis- /Weichenstopfmaschine;910,0;m;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+70;Gleis Belastungsstopfgang mit Gleis- /Weichenstopfmaschine DUA;910,0;m;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+10;Schienenverbindungsschweißung 54E3 / 49E1 im weiteren S49 / S54 SmW-F als Verbindungsschweißung an Schienenprofilen herstellen.;36,0;Stk;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+20;Schienenverbindungsschweißung 54E3 / 49E1 im weiteren S49 / S54 SmW-F als Verbindungsschweißung an Schienenprofilen herstellen.;110,0;Stk;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+30;Spannungsausgleich (natürliche Wärme);1,0;Stk;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+40;Spannungsausgleich (Soll-Temperatur);1,0;Stk;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+50;Spannungsausgleich (natürliche Wärme), zusätzliche Länge;1,0;m;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+60;Spannungsausgleich (Soll-Temperatur), zusätzliche Länge;1,0;m;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+70;Fachbauleitung Spannungsausgleich SpFA;1,0;Stk;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+10;"Boden/Gleisschotter entsorgen; BM-0";45,0;t;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+20;"Boden/Gleisschotter entsorgen; BM-0*";45,0;t;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+30;Boden/Gleisschotter entsorgen entsorgen BM-F0;1,0;t;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+40;"Boden/Gleisschotter entsorgen; BM-F1";45,0;t;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+50;"Boden/Gleisschotter entsorgen; BM-F2";1,0;t;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+60;"Boden/Gleisschotter entsorgen; BM-F3";2600,0;t;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+70;Bauschutt aus Rückbauten/Abbruch entsorgen;1,0;t;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+80;Altschottermischbeprobung;4,0;Stk;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+90;am Zwischenlager gesammeltes Kleineisen, charierte Stahlschwellen und Schienen verladen und einem Entsorgungsbetrieb zuführen,;50,0;t;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+100;HH schwellen am Zwischenlager gesammelt verladen und einem Entsorgungsbetrieb zuführen;95,0;t;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+10;Schotter 25/60 nach TL DBS 918 061 liefern.;2285,0;t;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+10;Schienen von Bahnwagen/LKW auf-/abladen.;1680,0;m;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+20;Schienen von Bahnwagen abladen.;1680,0;m;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+30;Gleisschwelle Holz/Beton von Bahnwagen/LKW auf- oder abladen.;1320,0;Stk;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+10;Bettung als Verlegeplanum herstellen;2900,0;m²;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+20;Schotter in das Gleis einbringen;2900,0;m²;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+30;Gleis Gleis K oder W- Bau, a = 0,63 m in Einzelteilen einbauen;840,0;m;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+40;Gleis K oder W- Bau, a = 0,63 m in Jochen einbauen;840,0;m;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+60;"Trennschnitt; Schiene (alle Formen und Güten) mechanisch trennen";2,0;St;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+70;Schotter abziehen;1680,0;m;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+80;Rangierweg herstellen;2350,0;m²;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+100;Gleisabschluss bis 10 Bremselemente einbauen;1,0;Stk;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+30;Boden für Bettungplanums ausheben, auf LKW verladen.;1350,0;m³;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+40;Boden für Bettungplanums ausheben, auf LKW verladen.;1350,0;m³;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+50;Boden für Suchgraben ausheben, seitlich lagern, einbauen;2,0;m³;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+60;Planumsverdichtung Erd- oder Schotterplanum bis Ev2 = 45 MN/m²;2900,0;m²;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+70;Lastplattendruckversuch nach DIN 18134 als Nachweis der Verdichtung / Tragfähigkeit;6,0;Stk;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+80;Beton/Mauerwerk im Bereich vorhandener Gleisanlagen abbrechen.;1,0;m³;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+30;Gleis 1. Stabilisierung mit ZWB u. Anbau-Stopfaggregat;840,0;m;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+40;Gleis 2. Stabilisierung mit ZWB u. Anbau-Stopfaggregat;840,0;m;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+50;Gleis 1. Stabilisierung mit Gleis- /Weichenstopfmaschine;840,0;m;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+60;Gleis 2. Stabilisierung mit Gleis- /Weichenstopfmaschine;840,0;m;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+70;Gleis Belastungsstopfgang mit Gleis- /Weichenstopfmaschine DUA;840,0;m;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+10;Schienenverbindungsschweißung 54E3 / 49E1 im weiteren S49 / S54 SmW-F als Verbindungsschweißung an Schienenprofilen herstellen.;28,0;Stk;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+20;Schienenverbindungsschweißung 54E3 / 49E1 im weiteren S49 / S54 SmW-F als Verbindungsschweißung an Schienenprofilen herstellen.;110,0;Stk;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+30;Spannungsausgleich (natürliche Wärme);1,0;Stk;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+40;Spannungsausgleich (Soll-Temperatur);1,0;Stk;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+50;Spannungsausgleich (natürliche Wärme), zusätzliche Länge;1,0;m;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+60;Spannungsausgleich (Soll-Temperatur), zusätzliche Länge;1,0;m;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+70;Fachbauleitung Spannungsausgleich SpFA;1,0;Stk;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+10;"Boden/Gleisschotter entsorgen; BM-0";100,0;t;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+20;"Boden/Gleisschotter entsorgen; BM-0*";100,0;t;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+30;Boden/Gleisschotter entsorgen entsorgen BM-F0;1,0;t;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+40;"Boden/Gleisschotter entsorgen; BM-F1";100,0;t;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+50;"Boden/Gleisschotter entsorgen; BM-F2";1,0;t;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+60;"Boden/Gleisschotter entsorgen; BM-F3";2300,0;t;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+70;Bauschutt aus Rückbauten/Abbruch entsorgen;1,0;t;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+80;Altschottermischbeprobung;4,0;Stk;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+90;am Zwischenlager gesammeltes Kleineisen, charierte Stahlschwellen und Schienen verladen und einem Entsorgungsbetrieb zuführen,;0,5;t;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+100;HH schwellen am Zwischenlager gesammelt verladen und einem Entsorgungsbetrieb zuführen;0,5;t;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+10;Schotter 25/60 nach TL DBS 918 061 liefern.;2200,0;t;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+30;Gleisabschluß als Bremsprellbock mit 10 Bremselementen, mit Merkzeichen liefern,;1,0;Stk;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+40;gebrauchten aufgearbeiteten Gleisabschluß als Bremsprellbock mit 10 Bremselementen, mit Merkzeichen liefern,;1,0;Stk;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+10;Schienen von Bahnwagen/LKW auf-/abladen.;855,0;m;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+20;Schienen von Bahnwagen abladen.;855,0;m;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+30;Gleisschwelle Holz/Beton von Bahnwagen/LKW auf- oder abladen.;2010,0;Stk;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+40;Herstellung, Vorhaltung und Rückbau einer Schutzfläche für eine stationären Gleisschotteraufbereitungsanlage zum Schutz des Untergrundes vor Verunreinigungen durch anfallende Abfallstoffe, Feinanteile und potenziell schadstoffbelastete Materialien.;400,0;m²;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+50;mobile Schotteraufbereitungsanlage antransportieren aufbauen, unterhalten / betreiben, abbauen und abtransportieren.;1,0;psch;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+10;"Trennschnitt; Schiene (alle Formen und Güten) mechanisch trennen";2,0;St;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+20;Gleis, alle Oberbauformen, jochweise zur Verschrottung ausbauen, demontieren;425,0;m;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+30;Gleisabschluss bis 10 Bremselemente ausbauen;1,0;Stk;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+10;Bettung als Verlegeplanum herstellen;1440,0;m²;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+20;Schotter in das Gleis einbringen;1440,0;m²;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+30;Gleis Gleis K oder W- Bau, a = 0,63 m in Einzelteilen einbauen;425,0;m;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+40;Gleis K oder W- Bau, a = 0,63 m in Jochen einbauen;425,0;m;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+50;"Trennschnitt; Schiene (alle Formen und Güten) mechanisch trennen";2,0;St;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+60;Schotter abziehen;850,0;m;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+70;Rangierweg herstellen;425,0;m²;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+10;Bettung im Bereich ausgebauter Gleisanlagen aufnehmen, auf Lkw verladen;720,0;m³;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+20;Aufbereitung des vorhandenen Gleisschotters in einer stationären Aufbereitungsanlage;720,0;m³;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+30;Boden für Bettungplanums ausheben, auf LKW verladen.;75,0;m³;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+40;Planumsverdichtung Erd- oder Schotterplanum bis Ev2 = 45 MN/m²;1440,0;m²;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+50;Lastplattendruckversuch nach DIN 18134 als Nachweis der Verdichtung / Tragfähigkeit;3,0;Stk;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+30;Gleis 1. Stabilisierung mit ZWB u. Anbau-Stopfaggregat;425,0;m;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+40;Gleis 2. Stabilisierung mit ZWB u. Anbau-Stopfaggregat;425,0;m;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+50;Gleis 1. Stabilisierung mit Gleis- /Weichenstopfmaschine;425,0;m;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+60;Gleis 2. Stabilisierung mit Gleis- /Weichenstopfmaschine;425,0;m;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+70;Gleis Belastungsstopfgang mit Gleis- /Weichenstopfmaschine DUA;425,0;m;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+10;Schienenverbindungsschweißung 54E3 / 49E1 im weiteren S49 / S54 SmW-F als Verbindungsschweißung an Schienenprofilen herstellen.;16,0;Stk;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+20;Schienenverbindungsschweißung 54E3 / 49E1 im weiteren S49 / S54 SmW-F als Verbindungsschweißung an Schienenprofilen herstellen.;56,0;Stk;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+30;Spannungsausgleich (natürliche Wärme);1,0;Stk;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+40;Spannungsausgleich (Soll-Temperatur);1,0;Stk;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+50;Spannungsausgleich (natürliche Wärme), zusätzliche Länge;10,0;m;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+60;Spannungsausgleich (Soll-Temperatur), zusätzliche Länge;10,0;m;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+70;Fachbauleitung Spannungsausgleich SpFA;1,0;Stk;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+10;"Boden/Gleisschotter entsorgen; BM-0";5,0;t;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+20;"Boden/Gleisschotter entsorgen; BM-0*";5,0;t;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+30;Boden/Gleisschotter entsorgen entsorgen BM-F0;1,0;t;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+40;"Boden/Gleisschotter entsorgen; BM-F1";5,0;t;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+50;"Boden/Gleisschotter entsorgen; BM-F2";1,0;t;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+60;"Boden/Gleisschotter entsorgen; BM-F3";345,0;t;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+70;Bauschutt aus Rückbauten/Abbruch entsorgen;1,0;t;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+80;Altschottermischbeprobung;2,0;Stk;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+90;am Zwischenlager gesammeltes Kleineisen, charierte Stahlschwellen und Schienen verladen und einem Entsorgungsbetrieb zuführen,;29,0;t;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+100;HH schwellen am Zwischenlager gesammelt verladen und einem Entsorgungsbetrieb zuführen;51,0;t;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+10;Schotter 25/60 nach TL DBS 918 061 liefern.;75,0;t;gaeb;25-102 LV Gleisbau 2026-08-13.X83
+20;Schotter 25/60 nach TL DBS 918 061 liefern.;1200,0;t;gaeb;25-102 LV Gleisbau 2026-08-13.X83

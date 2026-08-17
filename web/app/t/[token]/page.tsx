@@ -1,6 +1,5 @@
 import { loadLanding } from "@/lib/outreach";
 import { LandingMissing, LandingView } from "./LandingView";
-import "../../explorer.css";
 import "../../landing.css";
 
 // Outreach-Landing: personalisierte, token-adressierte Auswertung je Zielfirma.

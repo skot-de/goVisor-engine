@@ -1,0 +1,30 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+;"Projektmanagement
+Enthält insbesondere Projektmanagement und Projektsteuerung, Kick-off-Termin, Abstimmung der Meilensteine, Einrichtung der Projektorganisation, Projektcontrolling und -dokumentation, Logistik- und Ablaufplanung.";1,0;pauschal;preisblatt;D2 - Preisblatt.xlsx
+;"Technische Einrichtung Datentransfer (SFTP)
+siehe hierzu Kapitel 4 der Leistungsbeschreibung SFTP Server";1,0;pauschal;preisblatt;D2 - Preisblatt.xlsx
+;"Beratung in Bezug auf Aktenplan/Dokumententypliste 
+Stichproben zur Papieraktenstruktur und Beratung zur Gestaltung des digitalen Aktenplans gemäß Anforderung [LB1], Kapitel 3.1 der Leistungsbeschreibung";1,0;pauschal;preisblatt;D2 - Preisblatt.xlsx
+;2.Mengenabhängige Leistungen;;Einheit;preisblatt;D2 - Preisblatt.xlsx
+;"Abholung und Transport 
+Abholung und gesicherter Transport der Papierakten gemäß Kapitel 3 sowie 6.3 der Leistungsbeschreibung. Die angegebenen Mengen basieren auf Anlage 1 der Leistungsbeschreibung (Bestandsaufnahme Papierakten 2025) und sind Schätzwerte. Abrechnung nach tatsächlich erbrachter Blat";565000,0;Blätter;preisblatt;D2 - Preisblatt.xlsx
+;"Aktenverarbeitung und Digitalisierung
+Vorbereitung gemäß Kapitel 3.1 sowie Digitalisierung inkl. OCR gemäß Kapitel 3.2 und 3.3 unter Berücksichtigung der Anforderungen aus Kapitel 6. Enthalten ist die Erstellung der Steuerungsdatei gemäß Kapitel 3.2 (ein Datensatz je digitalisiertem Dokument).
+Farbe";565000,0;Blätter;preisblatt;D2 - Preisblatt.xlsx
+;"QeSiegel
+Aufbringen eines qualifizierten elektronischen Siegels auf allen Dokumentarten.";565000,0;Blätter;preisblatt;D2 - Preisblatt.xlsx
+;"Archivierung der Akten
+Archivierung aller Papierakten gemäß Kapitel 3.4 der Leistungsbeschreibung. Mengen sind Schätzwerte; Umrechnung in „Blätter“, Abrechnung nach Ist-Menge.";565000,0;Blätter;preisblatt;D2 - Preisblatt.xlsx
+;"Vernichtung der Akten
+Datenschutzkonforme Vernichtung gemäß Kapitel 3.4 sowie Kapitel 5 der Leistungsbeschreibung.
+Mengen sind Schätzwerte; Umrechnung in „Blätter“, Abrechnung nach Ist-Menge.";565000,0;Blätter;preisblatt;D2 - Preisblatt.xlsx
+;Platzhalter n;;;preisblatt;D2 - Preisblatt.xlsx
+;Summe Pflichtleistungen**;;;preisblatt;D2 - Preisblatt.xlsx
+;3. optionale Leistungen;;Einheit;preisblatt;D2 - Preisblatt.xlsx
+;Summe optionale Leistungen**;;;preisblatt;D2 - Preisblatt.xlsx
+;"*  Die angegebenen Mengen sind Schätzwerte auf Basis der Anlage 1 zur Leistungsbeschreibung „Bestandsaufnahme Papierakten"" und dienen der Kalkulation und Auswertung. Maßgeblich für die Abrechnung ist die tatsächlich erbrachte Leistung.Abrechnungseinheit „Blatt“ ist ein physisches Papierblatt mit Vor";;;preisblatt;D2 - Preisblatt.xlsx
+;Ausfüllhinweise:;;;preisblatt;D2 - Preisblatt.xlsx
+;1. Bitte verwenden Sie die vorgesehenen Platzhalter für eine sinnvolle Differenzierung der Kostenblöcke in Anlehnung an die Angaben in der Leistungsbeschreibung;;;preisblatt;D2 - Preisblatt.xlsx
+;2. Falls mehr als die vorgesehenen Platzhalter sinnvoll erscheinen, ergänzen Sie bitte die Zeilen durch die Einfügefunktion;;;preisblatt;D2 - Preisblatt.xlsx
+;3. Alle Werte netto ohne Mehrwertsteuer angeben;;;preisblatt;D2 - Preisblatt.xlsx
+;4. Die Grundstruktur dieser Tabelle muss unverändert bleiben;;;preisblatt;D2 - Preisblatt.xlsx

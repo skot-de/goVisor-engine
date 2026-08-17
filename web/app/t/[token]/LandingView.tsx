@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { EV, track } from "@/lib/analytics";
-import { AppRail, AppTop } from "@/components/explorer/Rail";
 import { useSprache } from "@/lib/i18n";
 import type { Baustein, Landing, Zeile } from "@/lib/outreach";
 
@@ -176,14 +175,36 @@ function KennzahlenLeiste({ teile }: { teile: Baustein[] }) {
   );
 }
 
+/* DOKUMENTRAHMEN, NICHT APP-HUELLE.
+ *
+ * Vorher steckte die Seite in `AppTop` + `AppRail gesperrt`: links eine ausgegraute
+ * Navigationsleiste, oben eine Suchzeile ohne Funktion. Der erste Eindruck war „du bist
+ * ausgesperrt", nicht „wir haben etwas fuer dich vorbereitet" — bei einer KALTEN Ansprache
+ * die falsche erste Sekunde.
+ *
+ * Jetzt gibt sich die Seite als das, was sie ist: eine vorbereitete Auswertung. Ein
+ * Dokument mit Kopf, Absender und Kapiteln. Vertrauen durch Nuechternheit, nicht durch
+ * Produktkulisse.
+ */
 function Rahmen({ children }: { children: React.ReactNode }) {
+  const { t } = useSprache();
   return (
-    <div className="app">
-      <AppTop ohneSuche />
-      <div className="body">
-        <AppRail gesperrt />
-        <div className="main seitenmain landing">{children}</div>
-      </div>
+    <div className="dossier">
+      <header className="ds-kopf">
+        <span className="ds-marke">goVisor</span>
+        {/* WER SCHREIBT DA UND WARUM. Bei einer kalten Ansprache ist das keine Fussnote:
+            wer ungefragt eine Auswertung ueber die eigene Firma bekommt, fragt zuerst,
+            woher die Daten stammen. Steht die Antwort erst am Seitenende, ist der
+            Empfaenger vorher weg. */}
+        <span className="ds-absender">
+          {t("Wir werten öffentliche Vergabebekanntmachungen aus. Diese Seite entstand ohne euer Zutun und ohne Daten von euch.")}
+        </span>
+      </header>
+      <main className="ds-blatt">{children}</main>
+      <footer className="ds-fuss">
+        <span>{t("goVisor · Auswertung öffentlicher Vergabedaten")}</span>
+        <Link href="/impressum">{t("Impressum")}</Link>
+      </footer>
     </div>
   );
 }
@@ -249,6 +270,14 @@ export function LandingView({ d, token }: { d: Landing; token: string }) {
   // erklaert sie dazu. Beides nebeneinander liest sich wie zwei verschiedene Befunde.
   const kacheln = (bs: Baustein[]) => bs.filter((b) => b.form === "kpi" && !b.kette);
   const karten = (bs: Baustein[]) => bs.filter((b) => b.form !== "kpi");
+  /* Die früheste noch offene Frist über ALLE Chancen-Bausteine. Sie trägt den Abschluss.
+     Gesucht wird über die Zeilen, nicht über einen bestimmten Baustein: welcher Baustein
+     Chancen mit Fristen liefert, ist eine Sache des Generators und darf hier nicht
+     festverdrahtet sein. */
+  const naechste = fuerEuch
+    .flatMap((b) => b.zeilen ?? [])
+    .filter((z) => z.endeISO && (restTage(z.endeISO) ?? -1) >= 0)
+    .sort((a, b) => (a.endeISO ?? "").localeCompare(b.endeISO ?? ""))[0] ?? null;
 
   return (
     <Rahmen>
@@ -372,8 +401,21 @@ export function LandingView({ d, token }: { d: Landing; token: string }) {
         </div>
       )}
 
+      {/* ABSCHLUSS MIT DER DRINGENDSTEN FRIST.
+          Vorher stand hier ein kleiner grüner Knopf — nach einer Liste mit ablaufenden
+          Fristen. Der Absprung von „hier ist eure Lage" zu „kommt rein und bewerbt euch"
+          braucht den konkreten Anlass, nicht eine allgemeine Einladung. Sven: „ist ein
+          guter absprungpunkt zu 'komm in die app, schau dir die analyse an und bewirb
+          dich'." */}
       <div className="lg-schluss">
-        <h3>{t("Schärft euer Profil, dann übernehmen wir das Suchen")}</h3>
+        <h2>{t("Schärft euer Profil, dann übernehmen wir das Suchen")}</h2>
+        {naechste && (
+          <p className="lg-dringend">
+            {t("Die nächste Frist läuft am")} <strong>{naechste.ende}</strong>{" "}
+            {t("ab:")} {naechste.titel} ({naechste.buyer}).{" "}
+            <Restfrist iso={naechste.endeISO} />
+          </p>
+        )}
         <p>{t("Das Konto ist kostenlos. Die Auswertung oben ist bereits eingerichtet, ihr ergänzt nur, was wir aus öffentlichen Daten nicht sehen können.")}</p>
         {/* Ein Weg nach vorn, nicht sechs. Die Produktbereiche stehen als Ausblick
             darunter, statt als konkurrierende Verweise an jeder einzelnen Karte. */}
@@ -386,7 +428,7 @@ export function LandingView({ d, token }: { d: Landing; token: string }) {
             {t("Danach offen:")} {d.bereiche.join(" · ")}
           </div>
         )}
-        <div className="lg-fein">{t("Kostenlos dauerhaft nutzbar · keine Zahlungsdaten · keine Angaben, die nicht ohnehin öffentlich sind")}</div>
+        <div className="lg-klein">{t("Kostenlos dauerhaft nutzbar · keine Zahlungsdaten · keine Angaben, die nicht ohnehin öffentlich sind")}</div>
       </div>
     </Rahmen>
   );

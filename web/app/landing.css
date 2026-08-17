@@ -1,211 +1,247 @@
-/* Outreach-Landing im App-Rahmen.
- *
- * Loest `outreach.css` ab, das eine ZWEITE Huelle mitbrachte: eigene Topbar, eigenes
- * Wortzeichen als <span>, eigene Farbwerte. Der erste Eindruck sah dadurch nach einem
- * anderen Produkt aus als das, in das er fuehrt.
- *
- * Der Bogen: „Das wissen wir bereits ueber euch" -> die laufenden Vorhaben -> „Und das
- * koennen wir fuer euch finden" -> Profil einrichten. Zahlen stehen in Leisten
- * (.lg-leiste), nicht je in einer eigenen Karte: vier gleich aussehende Karten mit je
- * einer Zahl sind Rahmen ohne Inhalt. Eine eigene Karte bekommt nur, was wirklich Inhalt
- * hat — die Vertragstabelle.                                                           */
+/* ═══════════════════════════════════════════════════════════════════════════════════
+   Outreach-Landing /t/<token> — DAS DOSSIER
+   ═══════════════════════════════════════════════════════════════════════════════════
 
-/* `display:block` ist hier KEINE Kosmetik, sondern Pflicht: `.main` ist im App-Rahmen ein
-   Grid (fuer das Explorer-Layout). Ohne diese Zeile werden die Karten zu Grid-Zellen und
-   auf die Zeilenhoehe des Explorers gequetscht. Gemessen: die Transparenz-Karte war
-   2 px hoch, drei weitere 61 px (nur die Ueberschrift), und nur die Karte mit der
-   Tabelle ueberlebte, weil eine Tabelle ihre Hoehe selbst durchsetzt. Im DOM war alles
-   vorhanden, sichtbar war fast nichts. */
-.landing { display: block; max-width: 860px; padding: 26px 30px 70px; }
+   WAS FÜR EIN DING DIESE SEITE IST. Kein Marketing-Auftritt und kein Dashboard, sondern
+   eine vorbereitete Auswertung über EINE Firma, die sie ungefragt bekommt. Das ist die
+   Grundentscheidung, aus der alles andere folgt: ruhige Typografie, klare Kapitel,
+   Tabellen wie in einem Bericht. Vertrauen entsteht hier durch Nüchternheit — wer bei
+   einer kalten Ansprache laut wird, wird weggeklickt.
 
-/* ── Kopf ───────────────────────────────────────────────────────────────────────── */
-.lg-eyebrow { font-family: var(--mono, ui-monospace, monospace); font-size: 10.5px;
-  letter-spacing: .11em; text-transform: uppercase; color: var(--ink-400); }
-.lg-hero h1 { font-size: 31px; font-weight: 700; letter-spacing: -.03em; line-height: 1.15;
-  margin: 9px 0 0; }
-/* Der Kernbefund ist die Nachricht der Seite und wird auch so gesetzt. */
-.lg-kern { font-size: 20px; line-height: 1.4; font-weight: 600; letter-spacing: -.015em;
-  color: var(--signal-deep, #0b7a52); margin: 14px 0 0; max-width: 640px; }
-.lg-quelle { font-size: 12.5px; color: var(--ink-400); margin: 12px 0 0; }
-.lg-cta { display: inline-block; margin-top: 18px; padding: 10px 18px; border-radius: 7px;
-  background: var(--signal, #16a06b); color: #fff; font-size: 14px; font-weight: 600;
-  text-decoration: none; }
-.lg-cta:hover { background: var(--signal-deep, #0b7a52); }
+   DREI REGELN, die diese Datei durchhält:
 
-/* ── Baustein-Karte ─────────────────────────────────────────────────────────────── */
-.lg-karte { margin-top: 22px; border: 1px solid var(--line); border-radius: 10px;
-  background: var(--surface); overflow: hidden; }
-.lg-kt { font-size: 14px; font-weight: 650; letter-spacing: -.01em;
-  padding: 13px 18px; border-bottom: 1px solid var(--line); margin: 0; }
+   1. EIN GEFÄLLE. Kernbefund gross, Folge darunter, Belege normal, Einschränkungen klein
+      ABER LESBAR. Vorher hatte alles dasselbe Gewicht, das Auge fand keinen Einstieg.
+      Die Einschränkungen standen in 10px Grau und sahen aus wie AGB — dabei sind sie
+      inhaltlich unser stärkstes Ehrlichkeitssignal.
 
+   2. FARBE BEDEUTET ETWAS.
+        `--flag`   (Bernstein) = Frist, Dringlichkeit, Folge eines Befunds
+        `--signal` (Grün)      = Chance und Handlung
+        `--ink-500`(Grau)      = Einschränkung, Herkunft, Metadaten
+      Vorher war alles grün: Zahlen, Knöpfe, Befundkästen, Fortschrittsbalken. Wenn eine
+      Farbe alles markiert, markiert sie nichts, und eine Frist in zwei Tagen sah aus wie
+      eine Fussnote.
 
-/* Ein Balken sagt „fast alles" schneller als jede Zahl daneben. */
-.lg-balken { height: 5px; margin: 0 18px 16px; border-radius: 3px; background: var(--line); }
-.lg-balken span { display: block; height: 100%; border-radius: 3px;
-  background: var(--signal, #16a06b); }
+   3. DAS SCHWERSTE ELEMENT IST DIE CHANCENLISTE. Sie ist der Grund, warum jemand ein
+      Konto anlegt. Vorher war sie das zarteste.
 
+   ⚠ ALLE KLASSEN SIND `lg-`/`ds-`-PRÄFIXIERT. Diese Seite lädt `explorer.css` nicht mehr,
+   aber die Regel bleibt: eine frühere Fassung benutzte `.lb`, das dort ein Layout-Container
+   mit `padding:var(--s6)` ist — Tabellenzeilen wuchsen von 39 auf 92 px.
+   ═══════════════════════════════════════════════════════════════════════════════════ */
 
-/* ── Tabelle ────────────────────────────────────────────────────────────────────── */
-.lg-tblwrap { overflow-x: auto; border-top: 1px solid var(--line); }
-.lg-tbl { width: 100%; border-collapse: collapse; font-size: 13px; }
-.lg-tbl th { font-family: var(--mono, ui-monospace, monospace); font-size: 9.5px;
-  letter-spacing: .09em; text-transform: uppercase; color: var(--ink-400);
-  text-align: left; padding: 9px 18px; border-bottom: 1px solid var(--line); font-weight: 500; }
-.lg-tbl td { padding: 10px 18px; border-bottom: 1px solid var(--line2, var(--line)); vertical-align: top; }
-.lg-tbl tr:last-child td { border-bottom: 0; }
-.lg-tbl .lg-r { text-align: right; }
-.lg-tbl .lg-m { font-family: var(--mono, ui-monospace, monospace); font-size: 12px; white-space: nowrap; }
-.lg-titel { font-weight: 550; }
-.lg-buyer { color: var(--ink-500); }
-/* Nur die Zeilen, die WIEDERKOMMEN, sind hervorgehoben. Eine Bauleistung, die fertig
-   wird, braucht keine Farbe: der Empfaenger weiss, woran er arbeitet. */
-.lg-auslauf .lg-titel { box-shadow: inset 3px 0 0 var(--signal, #16a06b); padding-left: 9px;
-  margin-left: -9px; }
-
-/* ── Schluesse ──────────────────────────────────────────────────────────────────── */
-.lg-befund { font-size: 13.5px; line-height: 1.5; font-weight: 550; padding: 13px 18px;
-  border-top: 1px solid var(--line);
-  background: color-mix(in srgb, var(--signal, #16a06b) 7%, transparent); }
-.lg-vergleich { font-size: 12.5px; line-height: 1.5; color: var(--ink-500);
-  padding: 11px 18px; border-top: 1px solid var(--line); }
-.lg-grenze { font-size: 11.5px; line-height: 1.55; color: var(--ink-400);
-  padding: 11px 18px; border-top: 1px solid var(--line); }
-
-
-.lg-schluss { margin-top: 30px; padding: 24px 0 0; border-top: 1px solid var(--line); }
-.lg-schluss h3 { font-size: 18px; font-weight: 700; letter-spacing: -.02em; margin: 0; }
-.lg-schluss p { font-size: 14px; line-height: 1.6; color: var(--ink-600); margin: 9px 0 0;
-  max-width: 620px; }
-.lg-fein { font-size: 11.5px; color: var(--ink-400); margin-top: 12px; }
-
-@media (max-width: 820px) {
-  .landing { padding: 20px 16px 60px; }
-  .lg-hero h1 { font-size: 24px; }
-  .lg-kern { font-size: 17px; }
+.dossier {
+  --mass: 760px;          /* Lesebreite. Ein Bericht ist schmal, kein Dashboard. */
+  --ds-t-kern: clamp(21px, 2.6vw, 27px);
+  --ds-t-h1: clamp(26px, 3.6vw, 38px);
+  min-height: 100vh;
+  background: var(--paper);
+  color: var(--ink-900);
+  font-family: var(--sans);
 }
 
-/* ── Kennzahlenleiste ───────────────────────────────────────────────────────────────
-   Vier Bausteine hatten dieselbe Gestalt (Ueberschrift, eine Zahl, Grenz-Satz, Bruecke)
-   und standen als vier gleich aussehende Karten untereinander. Sven: „gefuehlt kann man
-   die erste KPI, 3,4,5 alle nebeneinander in eine KPI bar bringen." Stimmt: eine Karte
-   je Zahl ist Rahmen ohne Inhalt.                                                     */
-.lg-leiste { display: grid; gap: 1px; margin-top: 20px; background: var(--line);
-  border: 1px solid var(--line); border-radius: 10px; overflow: hidden;
-  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); }
-.lg-kachel { background: var(--surface); padding: 17px 18px 16px; }
-.lg-kachel .lg-v { font-family: var(--mono, ui-monospace, monospace); font-size: 34px;
-  font-weight: 700; letter-spacing: -.035em; line-height: 1;
-  color: var(--signal-deep, #0b7a52); }
-.lg-kachel .lg-k { font-size: 11.5px; color: var(--ink-400); margin-top: 7px; }
-.lg-neben { display: flex; flex-wrap: wrap; gap: 4px 14px; margin-top: 10px;
-  font-size: 11.5px; color: var(--ink-500); }
-.lg-kachel .lg-balken { margin: 11px 0 0; }
+/* ── Kopf: Marke + Absender ─────────────────────────────────────────────────────── */
+.ds-kopf {
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: var(--s2) var(--s4);
+  max-width: var(--mass); margin: 0 auto;
+  padding: var(--s5) var(--s5) var(--s4);
+  border-bottom: 1px solid var(--line);
+}
+.ds-marke { font-weight: 700; font-size: var(--t-lg); letter-spacing: -.01em; }
+/* Der Absendersatz ist bewusst KEIN Kleingedrucktes: er beantwortet die erste Frage
+   eines kalt angeschriebenen Empfängers („woher habt ihr das?"). */
+.ds-absender { font-size: var(--t-sm); color: var(--ink-500); flex: 1 1 320px; }
 
-/* Die Grenz-Saetze der Leiste, gebuendelt. Klein, aber SICHTBAR: in ein Aufklapp-Symbol
-   verschoben waeren sie abgeschafft. */
-.lg-grenzen { margin-top: 9px; }
-.lg-grenzen p { font-size: 11.5px; line-height: 1.55; color: var(--ink-400); margin: 4px 0; }
+.ds-blatt { max-width: var(--mass); margin: 0 auto; padding: var(--s6) var(--s5) var(--s5); }
 
-/* ── Die Wende: von „ueber euch" zu „fuer euch" ─────────────────────────────────── */
-.lg-wende { margin-top: 34px; padding-top: 26px; border-top: 2px solid var(--line); }
-.lg-wende h2 { font-size: 22px; font-weight: 700; letter-spacing: -.025em; margin: 0; }
-.lg-wende-lede { font-size: 14px; line-height: 1.6; color: var(--ink-600); margin: 8px 0 0;
-  max-width: 620px; }
+.ds-fuss {
+  display: flex; justify-content: space-between; gap: var(--s4);
+  max-width: var(--mass); margin: 0 auto;
+  padding: var(--s5); border-top: 1px solid var(--line);
+  font-size: var(--t-sm); color: var(--ink-500);
+}
+.ds-fuss a { color: inherit; }
 
-.lg-bereiche { font-family: var(--mono, ui-monospace, monospace); font-size: 10.5px;
-  letter-spacing: .09em; text-transform: uppercase; color: var(--ink-400); margin-top: 14px; }
-
-@media (max-width: 820px) { .lg-kachel .lg-v { font-size: 28px; } .lg-wende h2 { font-size: 19px; } }
-
-
-/* ── Wegweiser in die zweite Haelfte ─────────────────────────────────────────────────
-   Der erste Bildschirm sieht ohne ihn abgeschlossen aus: die Ueberschrift „Das wissen
-   wir bereits ueber euch" klingt nach einem fertigen Satz. Der Wegweiser nennt den
-   zweiten Teil beim Namen und fuehrt hin.                                              */
-.lg-weiter { display: inline-flex; align-items: center; gap: 8px; margin-top: 18px;
-  padding: 9px 15px; border: 1px solid var(--line); border-radius: 999px;
-  background: var(--surface); font-size: 13.5px; font-weight: 550;
-  color: var(--ink-800); text-decoration: none; }
-.lg-weiter:hover { border-color: var(--signal, #16a06b); color: var(--signal-deep, #0b7a52); }
-.lg-weiter svg { width: 15px; height: 15px; fill: none; stroke: currentColor;
-  stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
-
-/* ── Kette: „X sagt der Markt, wir sagen Y" ─────────────────────────────────────────
-   Vorgaenger war ein gestapeltes Balkendiagramm. Das liess sich ansehen; eine Kette
-   liest man. Der Satz darueber macht dieselbe Aussage in Worten, damit die Grafik nicht
-   die ganze Last traegt: wer nur den Satz liest, hat es trotzdem verstanden.          */
-.lg-kettewrap { margin-top: 16px; }
-.lg-kettesatz { font-size: 15.5px; line-height: 1.5; color: var(--ink-800);
-  max-width: 640px; margin: 0 0 14px; }
-.lg-kette { display: flex; flex-wrap: wrap; align-items: stretch; gap: 0;
-  list-style: none; margin: 0; padding: 0;
-  border: 1px solid var(--line); border-radius: 10px; background: var(--surface);
-  overflow: hidden; }
-.lg-glied { flex: 1 1 130px; min-width: 0; padding: 14px 16px;
-  border-left: 1px solid var(--line); }
-.lg-glied:first-child { border-left: 0; }
-.lg-glied .lg-n { display: block; font-family: var(--mono, ui-monospace, monospace);
-  font-size: 24px; font-weight: 700; letter-spacing: -.03em; line-height: 1;
-  color: var(--ink-500); }
-.lg-glied .lg-lb { display: block; font-size: 12px; color: var(--ink-500); margin-top: 7px; }
-.lg-glied .lg-hw { display: block; font-size: 10.5px; color: var(--ink-400); margin-top: 4px;
-  overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-/* „Wir sagen 194" ist die Aussage der Kette, also traegt dieses Glied die Farbe. */
-.lg-letzte .lg-n { color: var(--signal-deep, #0b7a52); font-size: 30px; }
-.lg-letzte .lg-lb { color: var(--ink-700); }
-.lg-offen { background: color-mix(in srgb, var(--signal, #16a06b) 6%, transparent); }
-.lg-offen .lg-n { color: var(--signal, #16a06b); }
-
-@media (max-width: 640px) { .lg-glied { flex-basis: 100%; border-left: 0;
-  border-top: 1px solid var(--line); } .lg-glied:first-child { border-top: 0; } }
-
-/* ── Kopf: Firmenname ohne Bruch ─────────────────────────────────────────────────────
-   „Unsere Sicht auf H. Klostermann Baugesellschaft mbH" brach als EIN Satz mitten im
-   Namen um. Ein zerrissener Firmenname im ersten Bildschirm sagt dem Empfaenger, wie
-   sorgfaeltig der Rest wohl ist. Der Name steht deshalb allein und schrumpft lieber,
-   als zu brechen.                                                                     */
-.lg-h-vor { display: block; font-size: 17px; font-weight: 500; letter-spacing: -.01em;
-  color: var(--ink-500); }
-.lg-h-firma { display: block; margin-top: 3px; white-space: nowrap; overflow: hidden;
-  text-overflow: ellipsis; font-size: clamp(19px, 3.6vw, 34px); line-height: 1.1; }
-
-/* ── Umschalter: „heute" gegen „morgen" ──────────────────────────────────────────────
-   Loest den Pfeil nach unten ab. Der setzte voraus, dass jemand scrollt; zwei benannte
-   Schalter zeigen beide Haelften als Wahl und sagen in vier Woertern, worum es geht.   */
-.lg-umschalter { display: inline-flex; margin-top: 20px; padding: 3px; gap: 3px;
-  border: 1px solid var(--line); border-radius: 999px; background: var(--surface); }
-.lg-umschalter button { border: 0; border-radius: 999px; padding: 8px 16px;
-  font-size: 13.5px; font-weight: 550; color: var(--ink-500); background: none;
-  cursor: pointer; white-space: nowrap; }
-.lg-umschalter button:hover { color: var(--ink-900); }
-.lg-umschalter button.lg-an { background: var(--signal, #16a06b); color: #fff; }
-@media (max-width: 560px) { .lg-umschalter { display: flex; width: 100%; }
-  .lg-umschalter button { flex: 1; padding: 8px 6px; font-size: 12.5px; } }
-
-/* Was die Zahlen bedeuten — schliesst die HEUTE-Haelfte ab. Bewusst OHNE eigene Zahl:
-   der Satz soll das Gesehene deuten, nicht noch eine Behauptung danebenstellen. */
-.lg-muster { font-size: 15.5px; line-height: 1.55; color: var(--ink-800);
-  margin: 22px 0 0; padding-left: 14px; max-width: 620px;
-  border-left: 3px solid var(--signal, #16a06b); }
-
-/* Die Folge des Kernbefunds. Bewusst kleiner als der Befund und trotzdem betont:
-   sie erklaert ihn, sie ersetzt ihn nicht. */
+/* ── Der Kopf des Befunds ───────────────────────────────────────────────────────── */
+.lg-eyebrow {
+  font-family: var(--mono); font-size: var(--t-meta); letter-spacing: .08em;
+  text-transform: uppercase; color: var(--ink-400); margin-bottom: var(--s3);
+}
+.lg-hero h1 { margin: 0 0 var(--s4); line-height: 1.12; }
+.lg-h-vor {
+  display: block; font-size: var(--t-lg); font-weight: 500; color: var(--ink-500);
+  letter-spacing: 0; margin-bottom: 2px;
+}
+/* ⚠ `nowrap` + `clamp`: „Unsere Sicht auf H. Klostermann Baugesellschaft mbH" als EIN
+   Satz brach mitten im Firmennamen um. Ein zerrissener Firmenname im ersten Bildschirm
+   ist genau die Schlamperei, die dem Empfänger sagt, wie sorgfältig der Rest wohl ist.
+   Lieber kleiner als gebrochen. */
+.lg-h-firma {
+  display: block; font-size: var(--ds-t-h1); font-weight: 700; letter-spacing: -.02em;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.lg-kern {
+  margin: 0 0 var(--s2); font-size: var(--ds-t-kern); font-weight: 600;
+  line-height: 1.32; letter-spacing: -.01em; max-width: 34ch;
+}
+/* Die FOLGE. Bernstein, weil sie die Dringlichkeit trägt — nicht grün wie eine Chance. */
 .lg-folge {
-  margin: calc(var(--s2) * -1) 0 var(--s3);
-  font-size: 1.05rem;
-  font-weight: 600;
-  color: var(--warn, #b45309);
+  margin: 0 0 var(--s4); padding-left: var(--s3);
+  border-left: 3px solid var(--flag);
+  font-size: var(--t-lg); font-weight: 600; color: var(--flag); line-height: 1.4;
+}
+.lg-quelle { margin: 0 0 var(--s5); font-size: var(--t-body); color: var(--ink-500); }
+
+/* ── Kapitelwechsel ─────────────────────────────────────────────────────────────── */
+/* Vorher sahen die beiden Knöpfe aus wie ein Filter (Pillen mit Füllfarbe). Es sind aber
+   KAPITEL desselben Dokuments — deshalb Reiter mit Unterstrich, die Form, die man aus
+   Berichten kennt. */
+.lg-umschalter {
+  display: flex; gap: var(--s5); margin: 0 0 var(--s6);
+  border-bottom: 1px solid var(--line);
+}
+.lg-umschalter button {
+  appearance: none; background: none; border: 0; cursor: pointer;
+  padding: 0 0 var(--s3); margin-bottom: -1px;
+  font: inherit; font-size: var(--t-lg); font-weight: 600; color: var(--ink-400);
+  border-bottom: 2px solid transparent;
+}
+.lg-umschalter button:hover { color: var(--ink-700); }
+.lg-umschalter .lg-an { color: var(--ink-900); border-bottom-color: var(--ink-900); }
+
+/* ── Abschnitte ─────────────────────────────────────────────────────────────────── */
+.lg-karte { margin: 0 0 var(--s6); }
+.lg-kt {
+  margin: 0 0 var(--s3); font-size: var(--t-title); font-weight: 700;
+  letter-spacing: -.01em;
 }
 
-/* Restfrist. Steht unter dem Datum, nicht daneben: das Datum ist der Fakt, die
-   Restlaufzeit die Einordnung. Unter einer Woche wird sie farbig — nicht als Alarm,
-   sondern weil dann eine Entscheidung ansteht. */
+/* ── Tabellen: das Herz des Dokuments ───────────────────────────────────────────── */
+.lg-tblwrap { overflow-x: auto; margin: 0 0 var(--s3); }
+.lg-tbl { width: 100%; border-collapse: collapse; font-size: var(--t-body); }
+.lg-tbl th {
+  text-align: left; padding: 0 var(--s3) var(--s2) 0;
+  font-family: var(--mono); font-size: var(--t-meta); font-weight: 500;
+  letter-spacing: .06em; text-transform: uppercase; color: var(--ink-400);
+  border-bottom: 1px solid var(--line-strong); white-space: nowrap;
+}
+.lg-tbl td {
+  padding: var(--s3) var(--s3) var(--s3) 0; border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+.lg-tbl tr:last-child td { border-bottom: 0; }
+.lg-tbl .lg-r { text-align: right; padding-right: 0; }
+.lg-titel { font-weight: 600; line-height: 1.35; }
+.lg-buyer { color: var(--ink-500); line-height: 1.35; }
+.lg-m { font-family: var(--mono); font-size: var(--t-sm); white-space: nowrap; }
+/* Auslaufende Verträge (mit Nachfolge) sind der interessante Fall — sie kommen zurück. */
+.lg-auslauf .lg-titel { box-shadow: inset 2px 0 0 var(--signal); padding-left: var(--s2); }
+
+/* Restfrist unter dem Datum: das Datum ist der Fakt, die Restlaufzeit die Einordnung.
+   Unter einer Woche bernsteinfarben — nicht als Alarm, sondern weil dann eine
+   Entscheidung ansteht. */
 .lg-rest {
-  display: block;
-  font-size: .78rem;
-  font-weight: 600;
-  color: var(--muted);
+  display: block; margin-top: 2px;
+  font-family: var(--sans); font-size: var(--t-meta); font-weight: 600;
+  color: var(--ink-400); font-variant-numeric: tabular-nums; white-space: nowrap;
+}
+.lg-rest-eng { color: var(--flag); }
+.lg-rest-weg { color: var(--ink-300); text-decoration: line-through; }
+
+/* ── Befund, Vergleich, Grenze: das Gefälle nach unten ──────────────────────────── */
+.lg-befund {
+  margin: 0 0 var(--s3); padding: var(--s3) var(--s4);
+  background: var(--signal-wash); border-radius: var(--r);
+  font-size: var(--t-lg); font-weight: 600; line-height: 1.45;
+}
+.lg-vergleich { margin: 0 0 var(--s2); font-size: var(--t-body); color: var(--ink-700); }
+/* Einschränkungen: klein, aber LESBAR. Sie in 10px Grau zu setzen hiesse, sie
+   abzuschaffen — und sie sind das Einzige, was diese Seite von Werbung unterscheidet. */
+.lg-grenze, .lg-grenzen p {
+  margin: 0 0 var(--s2); font-size: var(--t-sm); color: var(--ink-500); line-height: 1.5;
+  max-width: 68ch;
+}
+
+/* ── Kennzahlen ─────────────────────────────────────────────────────────────────── */
+.lg-leiste {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: var(--s5); margin: 0 0 var(--s4);
+  padding: var(--s4) 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+}
+.lg-v {
+  font-size: 30px; font-weight: 700; letter-spacing: -.02em; line-height: 1;
   font-variant-numeric: tabular-nums;
 }
-.lg-rest-eng { color: var(--warn, #b45309); }
-.lg-rest-weg { color: var(--muted); text-decoration: line-through; }
+.lg-k { margin-top: var(--s2); font-size: var(--t-sm); color: var(--ink-500); line-height: 1.4; }
+.lg-balken { margin-top: var(--s2); height: 3px; background: var(--surface-3); border-radius: 2px; }
+.lg-balken span { display: block; height: 100%; background: var(--flag); border-radius: 2px; }
+.lg-neben { margin-top: var(--s2); font-size: var(--t-sm); color: var(--ink-500); }
+.lg-grenzen { margin: 0 0 var(--s6); }
+
+/* ── Die Kette ──────────────────────────────────────────────────────────────────── */
+.lg-kettewrap { margin: 0 0 var(--s6); }
+.lg-kettesatz {
+  margin: 0 0 var(--s4); font-size: var(--t-lg); line-height: 1.5; max-width: 60ch;
+}
+.lg-kette {
+  display: flex; flex-wrap: wrap; gap: var(--s2); list-style: none; margin: 0; padding: 0;
+}
+.lg-glied {
+  flex: 1 1 130px; padding: var(--s3) var(--s4) var(--s3) 0;
+  border-left: 2px solid var(--line); padding-left: var(--s3);
+}
+.lg-glied .lg-n {
+  display: block; font-size: 21px; font-weight: 700; letter-spacing: -.01em;
+  font-variant-numeric: tabular-nums;
+}
+.lg-glied .lg-lb { display: block; margin-top: 2px; font-size: var(--t-sm); color: var(--ink-500); }
+.lg-glied .lg-hw { display: block; margin-top: var(--s1); font-size: var(--t-meta); color: var(--ink-400); }
+.lg-letzte { border-left-color: var(--ink-900); }
+/* Das offene Glied trägt die Handlung, also Grün. */
+.lg-offen { border-left-color: var(--signal); }
+.lg-offen .lg-n { color: var(--signal-deep); }
+
+/* ── Wende zur zweiten Hälfte ───────────────────────────────────────────────────── */
+.lg-wende h2 { margin: 0 0 var(--s2); font-size: var(--t-title); font-weight: 700; }
+.lg-wende-lede { margin: 0 0 var(--s5); font-size: var(--t-lg); color: var(--ink-700); max-width: 58ch; }
+.lg-muster {
+  margin: 0 0 var(--s6); padding-left: var(--s4); border-left: 3px solid var(--line-strong);
+  font-size: var(--t-lg); line-height: 1.5; max-width: 58ch;
+}
+
+/* ── Abschluss ──────────────────────────────────────────────────────────────────── */
+/* Vorher: ein kleiner grüner Knopf nach einer Liste mit ablaufenden Fristen. Jetzt ein
+   Handlungsblock, der die dringendste Frist noch einmal aufgreift — der Absprungpunkt
+   von „hier ist eure Lage" zu „kommt rein und bewerbt euch". */
+.lg-schluss {
+  margin: var(--s6) 0 0; padding: var(--s5);
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--r);
+}
+.lg-schluss h2 { margin: 0 0 var(--s2); font-size: var(--t-title); font-weight: 700; }
+.lg-schluss p { margin: 0 0 var(--s4); font-size: var(--t-body); color: var(--ink-700); max-width: 56ch; }
+.lg-dringend {
+  margin: 0 0 var(--s4); padding: var(--s3) var(--s4);
+  background: var(--flag-wash); border-radius: var(--r);
+  font-size: var(--t-body); line-height: 1.5;
+}
+.lg-dringend strong { color: var(--flag); }
+.lg-cta {
+  display: inline-block; padding: var(--s3) var(--s5);
+  background: var(--signal-deep); color: #fff; border-radius: var(--r);
+  font-size: var(--t-lg); font-weight: 600; text-decoration: none;
+}
+.lg-cta:hover { filter: brightness(1.08); }
+.lg-bereiche {
+  margin: var(--s4) 0 var(--s2);
+  font-family: var(--mono); font-size: var(--t-meta); letter-spacing: .06em;
+  text-transform: uppercase; color: var(--ink-400);
+}
+.lg-klein { margin: 0; font-size: var(--t-sm); color: var(--ink-500); }
+
+@media (max-width: 640px) {
+  .ds-blatt { padding: var(--s5) var(--s4); }
+  .ds-kopf, .ds-fuss { padding-left: var(--s4); padding-right: var(--s4); }
+  .lg-h-firma { white-space: normal; }   /* auf dem Handy ist Umbruch besser als Ellipse */
+  .lg-umschalter { gap: var(--s4); }
+}

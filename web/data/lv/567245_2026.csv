@@ -1,0 +1,46 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+10;Dokumentation aller Arbeiten unter Zugrundelegung der Dokumentationsrichtlinie;1,0;psch;gaeb;leistungsbeschreibungen/2.1_Leistungsverzeichhnis_Fliesenarbeiten.X83
+20;Baustelle für sämtliche, in der Leistungsbeschreibung aufgeführten Leistungen einrichten.;2,0;psch;gaeb;leistungsbeschreibungen/2.1_Leistungsverzeichhnis_Fliesenarbeiten.X83
+30;Baustelle für sämtliche, in der Leistungsbeschreibung aufgeführten Leistungen vorhalten und unterhalten;10,0;Wo;gaeb;leistungsbeschreibungen/2.1_Leistungsverzeichhnis_Fliesenarbeiten.X83
+40;Baustelle für sämtliche, in der Leistungsbeschreibung aufgeführten Leistungen räumen;2,0;psch;gaeb;leistungsbeschreibungen/2.1_Leistungsverzeichhnis_Fliesenarbeiten.X83
+50;Unterkunftscontainer, aufstellen und räumen,;1,0;psch;gaeb;leistungsbeschreibungen/2.1_Leistungsverzeichhnis_Fliesenarbeiten.X83
+60;Unterkunftscontainer wie vor beschrieben, vorhalten;10,0;Wo;gaeb;leistungsbeschreibungen/2.1_Leistungsverzeichhnis_Fliesenarbeiten.X83
+70;Magazincontainer, aufstellen und räumen,;1,0;psch;gaeb;leistungsbeschreibungen/2.1_Leistungsverzeichhnis_Fliesenarbeiten.X83
+80;Magazincontainer;10,0;Wo;gaeb;leistungsbeschreibungen/2.1_Leistungsverzeichhnis_Fliesenarbeiten.X83
+10;zur Bemusterungen der nachbeschriebenen Fliesen, Verfugung, dauerelastische Fugen,;1,0;psch;gaeb;leistungsbeschreibungen/2.1_Leistungsverzeichhnis_Fliesenarbeiten.X83
+20;Ausgleichen unzulässiger Toleranzen des Untergrundes;60,0;m²;gaeb;leistungsbeschreibungen/2.1_Leistungsverzeichhnis_Fliesenarbeiten.X83
+30;Reinigung und Haftgrundierung Bodenflächen,Untergrund aus unbehandeltem Zementestrich,;197,0;m²;gaeb;leistungsbeschreibungen/2.1_Leistungsverzeichhnis_Fliesenarbeiten.X83
+40;Abdichtung der Innenwandflächen von Innenräumen im Verbund (AIV-F) DIN 18534-1 und DIN 18534-3, Wassereinwirkungsklasse W1-I (mäßig), Rissklasse R1-I (Rissbreitenänderung/-neubildung nach Aufbringen der Abdichtung bis 0,2 mm), mit Polymerdispersion DM DIN EN 14891, Mindesttrockenschichtdicke 0,5 mm,;197,0;m²;gaeb;leistungsbeschreibungen/2.1_Leistungsverzeichhnis_Fliesenarbeiten.X83
+50;Anschluss an aufgehende Bauteile in der Abdichtung der Innenwandflächen von Innenräumen im Verbund (AIV-F) DIN 18534-1 und DIN 18534-3, mit Dichtband, Breite 100 mm, Wassereinwirkungsklasse W1-I (mäßig), Rissklasse R1-I (Rissbreitenänderung/-neubildung nach Aufbringen der Abdichtung bis 0,2 mm).;260,0;m;gaeb;leistungsbeschreibungen/2.1_Leistungsverzeichhnis_Fliesenarbeiten.X83
+60;Zulage für vorbeschriebenen Anschluss an aufgehende, AIV-F DIN 18534-1 und DIN 18534-3, mit Dichtband, Wassereinwirkungsklasse W1-I (mäßig),;155,0;St;gaeb;leistungsbeschreibungen/2.1_Leistungsverzeichhnis_Fliesenarbeiten.X83
+70;Feuchtigkeitsmessung nach dem CM-Verfahren DIN 18560-1,;15,0;St;gaeb;leistungsbeschreibungen/2.1_Leistungsverzeichhnis_Fliesenarbeiten.X83
+80;Bodenbelag aus trockengepressten Fliesen/Platten, (Steinzeugfliesen), DIN EN 14411 Gruppe BIIa, unglasiert, Bewertungsgruppe Rutschgefahr R 10 ASR A1.5/1,2,;197,0;m²;gaeb;leistungsbeschreibungen/2.1_Leistungsverzeichhnis_Fliesenarbeiten.X83
+90;trockengepreste Fliesen 20/20cm, grün, R10, wie vorbeschrieben,;40,0;St;gaeb;leistungsbeschreibungen/2.1_Leistungsverzeichhnis_Fliesenarbeiten.X83
+100;Abschneiden von Randstreifen aus PE-Schaum, höhengerecht,;257,0;m;gaeb;leistungsbeschreibungen/2.1_Leistungsverzeichhnis_Fliesenarbeiten.X83
+110;Löcher für Installationsdurchführungen aller Art;20,0;St.;gaeb;leistungsbeschreibungen/2.1_Leistungsverzeichhnis_Fliesenarbeiten.X83
+120;Trennschiene bei Belagswechsel aus nichtrostendem Stahl,;18,5;m;gaeb;leistungsbeschreibungen/2.1_Leistungsverzeichhnis_Fliesenarbeiten.X83
+130;Ganzflächige rutschsichere Schutzabdeckung von Bodenflächen;197,0;m²;gaeb;leistungsbeschreibungen/2.1_Leistungsverzeichhnis_Fliesenarbeiten.X83
+10;Reinigung und Haftgrundierung Wandfllächen,;472,0;m²;gaeb;leistungsbeschreibungen/2.1_Leistungsverzeichhnis_Fliesenarbeiten.X83
+20;Reinigung und Haftgrundierung Wandfllächen,Untergrund aus Betonwänden,;238,0;m²;gaeb;leistungsbeschreibungen/2.1_Leistungsverzeichhnis_Fliesenarbeiten.X83
+30;Bekleidung an Wänden, auf Zementbauplatten, aus trockengepressten Fliesen/Platten, DIN EN 14411 Gruppe BIb,;472,0;m²;gaeb;leistungsbeschreibungen/2.1_Leistungsverzeichhnis_Fliesenarbeiten.X83
+40;Bekleidung an Wänden, auf Beton, aus trockengepressten Fliesen/Platten, DIN EN 14411 Gruppe BIb,;238,0;m²;gaeb;leistungsbeschreibungen/2.1_Leistungsverzeichhnis_Fliesenarbeiten.X83
+50;trockengepreste Fliesen 20/20cm, grün, R10, wie vorbeschrieben,;40,0;St;gaeb;leistungsbeschreibungen/2.1_Leistungsverzeichhnis_Fliesenarbeiten.X83
+60;Bekleidung an Wänden, auf Gipskarton, aus trockengepressten Fliesen/Platten, DIN EN 14411 Gruppe BIb,;64,6;m²;gaeb;leistungsbeschreibungen/2.1_Leistungsverzeichhnis_Fliesenarbeiten.X83
+70;trockengepreste Fliesen 5/5cm, als Mosaiktafen mit rückseitigem Glasfasernetz, glasiert, wie vorbeschrieben,;20,0;St;gaeb;leistungsbeschreibungen/2.1_Leistungsverzeichhnis_Fliesenarbeiten.X83
+10;Bewegungs- und Anschlussfugen in vorbeschriebenen Wandbelägen, fachgerecht anlegen, säubern und füllen,;477,6;m;gaeb;leistungsbeschreibungen/2.1_Leistungsverzeichhnis_Fliesenarbeiten.X83
+20;Bewegungs- und Anschlussfugen in vorbeschriebenen Bodenbelägen,;258,0;m;gaeb;leistungsbeschreibungen/2.1_Leistungsverzeichhnis_Fliesenarbeiten.X83
+30;Eckschienen aus Edelstahl V4a, gebürstet,;19,7;m;gaeb;leistungsbeschreibungen/2.1_Leistungsverzeichhnis_Fliesenarbeiten.X83
+40;Abschlussprofil aus Edelstahl V4a, gebürstet,;37,5;m;gaeb;leistungsbeschreibungen/2.1_Leistungsverzeichhnis_Fliesenarbeiten.X83
+50;Herstellen von Löchern für Installationsdurchführungen aller Art;176,0;St.;gaeb;leistungsbeschreibungen/2.1_Leistungsverzeichhnis_Fliesenarbeiten.X83
+60;Herstellen von Löchern für Installationsdurchführungen aller Art;97,0;St.;gaeb;leistungsbeschreibungen/2.1_Leistungsverzeichhnis_Fliesenarbeiten.X83
+70;Herstellen von Löchern für Installationsdurchführungen aller Art;43,0;St.;gaeb;leistungsbeschreibungen/2.1_Leistungsverzeichhnis_Fliesenarbeiten.X83
+80;Herstellen von Rechteckigen Ausschnitten bis 0,1m²,;61,0;St;gaeb;leistungsbeschreibungen/2.1_Leistungsverzeichhnis_Fliesenarbeiten.X83
+90;Zulage, für das Anarbeiten, an zu befliesende Revisionsklappem, umlaufend mit sauberen Abschluss und vollflächig sauber Vermörtelter Fliesenkante.;6,0;St;gaeb;leistungsbeschreibungen/2.1_Leistungsverzeichhnis_Fliesenarbeiten.X83
+100;Zulage, für das Anarbeiten, an zu befliesende Revisionsklappem, umlaufend mit sauberen Abschluss und vollflächig sauber Vermörtelter Fliesenkante.;2,0;St;gaeb;leistungsbeschreibungen/2.1_Leistungsverzeichhnis_Fliesenarbeiten.X83
+110;Zulage, für das Anarbeiten, an zu befliesende Revisionsklappem, umlaufend mit sauberen Abschluss und vollflächig sauber Vermörtelter Fliesenkante.;2,0;St;gaeb;leistungsbeschreibungen/2.1_Leistungsverzeichhnis_Fliesenarbeiten.X83
+120;Zulage, für das Anarbeiten, an zu befliesende Revisionsklappem, umlaufend mit sauberen Abschluss und vollflächig sauber Vermörtelter Fliesenkante.;1,0;St;gaeb;leistungsbeschreibungen/2.1_Leistungsverzeichhnis_Fliesenarbeiten.X83
+130;VSG-Sicherheitsspiegel liefern und gemäß Fliesenspiegel in die neuen Wandflächen einfliesen,;17,0;St.;gaeb;leistungsbeschreibungen/2.1_Leistungsverzeichhnis_Fliesenarbeiten.X83
+140;VSG-Sicherheitsspiegel liefern und gemäß Fliesenspiegel in die neuen Wandflächen einfliesen,;3,0;St.;gaeb;leistungsbeschreibungen/2.1_Leistungsverzeichhnis_Fliesenarbeiten.X83
+150;Fugenabdichtung von Sanitärbojekten/Ausstattung, umlaufend, mit elastischem Dichtstoff DIN EN 15651-3,;169,4;m;gaeb;leistungsbeschreibungen/2.1_Leistungsverzeichhnis_Fliesenarbeiten.X83
+10;Stundenlohnarbeiten für evtl. erforderliche Arbeiten,;40,0;h;gaeb;leistungsbeschreibungen/2.1_Leistungsverzeichhnis_Fliesenarbeiten.X83
+20;Stundenlohnarbeiten für evtl. erforderliche Arbeiten,;50,0;h;gaeb;leistungsbeschreibungen/2.1_Leistungsverzeichhnis_Fliesenarbeiten.X83

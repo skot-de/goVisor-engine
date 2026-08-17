@@ -1,0 +1,106 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+1;Kompaktlüftungsgerät mit Gegenstrom-Wärmeübertrager zur horizontalen, bodenstehenden Außenaufstellung. Das Gerät ist als betriebsfertige Einheit mit integrierter, vorprogrammierter und fertig verdrahteter Regelung sowie integriertem Schaltkasten auszuführen.Verwendungszwecke und Anforderungen:;1,0;Stk;gaeb;11 Lüftungstechnik.X83
+2;Bedieneinheit zur Bedienung und Anzeige eines Lüftungsregelsystems, geeignet zur mobilen Verwendung oder zur Montage am Lüftungsgerät beziehungsweise an der Wand.Verwendungszwecke und Anforderungen:;1,0;Stk;gaeb;11 Lüftungstechnik.X83
+3;Revisionsschalter für Lüftungsgeräte und technische Anlagen, zur allpoligen Abschaltung und sicheren Trennung der elektrischen Versorgung.Verwendungszwecke und Anforderungen:;1,0;Stk;gaeb;11 Lüftungstechnik.X83
+4;Motorisch betätigte Jalousieklappe zur Regelung und Absperrung des Luftstroms in lufttechnischen Anlagen, insbesondere für den Einsatz in Lüftungsgeräten und Lüftungszentralen.Verwendungszwecke und Anforderungen:;2,0;Stk;gaeb;11 Lüftungstechnik.X83
+5;Flexibler Verbindungsstutzen zur schwingungs- und montagegerechten Verbindung rechteckiger Luftleitungen und Geräteanschlüsse.Verwendungszwecke und Anforderungen:;4,0;Stk;gaeb;11 Lüftungstechnik.X83
+6;Siphon zur Ableitung von Kondensat aus Kompaktlüftungsgeräten.Verwendungszwecke und Anforderungen:;1,0;Stk;gaeb;11 Lüftungstechnik.X83
+7;Wetterschutzhaube zur direkten Montage am Lüftungsgerät, zur Vermeidung der Vermischung von Außen- und Fortluft sowie zum Schutz vor eindringendem Wasser.Verwendungszwecke und Anforderungen:;1,0;Stk;gaeb;11 Lüftungstechnik.X83
+8;Wetterschutzhaube für Außenluft, zur GerätemontageWetterschutzhaube zur direkten Montage am Lüftungsgerät, zur Vermeidung der Vermischung von Außen- und Fortluft sowie zum Schutz vor eindringendem Wasser.Verwendungszwecke und Anforderungen:;1,0;Stk;gaeb;11 Lüftungstechnik.X83
+9;Aufstellsystem zur sicheren Aufstellung eines Lüftungsgerätes auf einem Flachdach, ausgelegt für eine Gebäudehöhe bis 20 m in Windzone 1.Verwendungszwecke und Anforderungen:;1,0;Stk;gaeb;11 Lüftungstechnik.X83
+10;VAV-Set zur Umrüstung von Kompaktlüftungsgeräten auf eine druckkonstante Volumenstromregelung.Verwendungszwecke und Anforderungen:;1,0;Stk;gaeb;11 Lüftungstechnik.X83
+11;3-Wege-Ventil mit gleichprozentiger Durchflusscharakteristik zur Regelung von Wasser und Wasser-Glykol-Gemischen. Das Ventil ist mit einem geeigneten Stellantrieb zu verwenden.Verwendungszwecke und Anforderungen:;1,0;Stk;gaeb;11 Lüftungstechnik.X83
+12;Elektrischer Ventilstellantrieb zur Ansteuerung von 3-Wege-Ventilen mit einem kvs-Wert bis 6,0. Geeignet für Ventile mit einem Eingangssignal von 0-10 V DC.Verwendungszwecke und Anforderungen:;1,0;Stk;gaeb;11 Lüftungstechnik.X83
+13;Kanalrauchmelder zur Rauchdetektion in Lüftungskanälen, bestehend aus einem Rauchmelder mit speziell angepasstem Messrohr- und Gehäusesystem zur optimierten Luftstromführung durch die Messkammer.Verwendungszwecke und Anforderungen:;2,0;Stk;gaeb;11 Lüftungstechnik.X83
+14;Montagekonsole zur Befestigung eines Kanalrauchmelders an runden Lüftungskanälen, einschließlich Gummidichtung zur luftdichten Durchführung des Entnahmerohrs.Verwendungszwecke und Anforderungen:;2,0;Stk;gaeb;11 Lüftungstechnik.X83
+15;Spritzwassergeschütztes Schutzgehäuse für Kanalrauchmelder, geeignet zur Montage im Freien oder in kalten Umgebungen.Verwendungszwecke und Anforderungen:;2,0;Stk;gaeb;11 Lüftungstechnik.X83
+1;Kanalsystem;85,0;m²;gaeb;11 Lüftungstechnik.X83
+2;Kanalsystem;36,0;m²;gaeb;11 Lüftungstechnik.X83
+3;Kanalformteil;76,0;m²;gaeb;11 Lüftungstechnik.X83
+4;Material: Stahl verzinkt (DIN 17Teil 2);42,0;m²;gaeb;11 Lüftungstechnik.X83
+5;DN 100, sonst wie zuvor beschrieben;3,0;m;gaeb;11 Lüftungstechnik.X83
+6;DN 125, sonst wie zuvor beschrieben;3,0;m;gaeb;11 Lüftungstechnik.X83
+7;DN 160, sonst wie zuvor beschrieben;5,0;m;gaeb;11 Lüftungstechnik.X83
+8;DN 180, sonst wie zuvor beschrieben;4,0;m;gaeb;11 Lüftungstechnik.X83
+9;DN 200, sonst wie zuvor beschrieben;10,0;m;gaeb;11 Lüftungstechnik.X83
+10;DN 224, sonst wie zuvor beschrieben;5,0;m;gaeb;11 Lüftungstechnik.X83
+11;DN 250, sonst wie zuvor beschrieben;4,0;m;gaeb;11 Lüftungstechnik.X83
+12;DN 100, sonst wie zuvor beschrieben;2,0;m;gaeb;11 Lüftungstechnik.X83
+13;DN 160, sonst wie zuvor beschrieben;1,0;m;gaeb;11 Lüftungstechnik.X83
+14;DN 200, sonst wie zuvor beschrieben;3,0;m;gaeb;11 Lüftungstechnik.X83
+15;Bogen DN 100, sonst wie zuvor beschrieben;5,0;Stk;gaeb;11 Lüftungstechnik.X83
+16;Bogen DN 125, sonst wie zuvor beschrieben;5,0;Stk;gaeb;11 Lüftungstechnik.X83
+17;Bogen DN 160, sonst wie zuvor beschrieben;8,0;Stk;gaeb;11 Lüftungstechnik.X83
+18;Bogen DN 200, sonst wie zuvor beschrieben;3,0;Stk;gaeb;11 Lüftungstechnik.X83
+19;Bogen DN 224, sonst wie zuvor beschrieben;1,0;Stk;gaeb;11 Lüftungstechnik.X83
+20;Bogen DN 250, sonst wie zuvor beschrieben;1,0;Stk;gaeb;11 Lüftungstechnik.X83
+21;T-Stück DN 125, sonst wie zuvor beschrieben;1,0;Stk;gaeb;11 Lüftungstechnik.X83
+22;T-Stück DN 160, sonst wie zuvor beschrieben;2,0;Stk;gaeb;11 Lüftungstechnik.X83
+23;T-Stück DN 250, sonst wie zuvor beschrieben;1,0;Stk;gaeb;11 Lüftungstechnik.X83
+24;WF- Übergangsstücke DN 125, sonst wie zuvor beschrieben;3,0;Stk;gaeb;11 Lüftungstechnik.X83
+25;WF- Übergangsstücke DN 160, sonst wie zuvor beschrieben;1,0;Stk;gaeb;11 Lüftungstechnik.X83
+26;WF- Übergangsstücke DN 180, sonst wie zuvor beschrieben;1,0;Stk;gaeb;11 Lüftungstechnik.X83
+27;WF- Übergangsstücke DN 200, sonst wie zuvor beschrieben;2,0;Stk;gaeb;11 Lüftungstechnik.X83
+28;WF- Übergangsstücke DN 224, sonst wie zuvor beschrieben;4,0;Stk;gaeb;11 Lüftungstechnik.X83
+29;WF- Übergangsstücke DN 250, sonst wie zuvor beschrieben;4,0;Stk;gaeb;11 Lüftungstechnik.X83
+30;WF- Steckverbinder DN 160, sonst wie zuvor beschrieben;3,0;Stk;gaeb;11 Lüftungstechnik.X83
+31;WF- Steckverbinder DN 180, sonst wie zuvor beschrieben;3,0;Stk;gaeb;11 Lüftungstechnik.X83
+32;WF- Steckverbinder DN 200, sonst wie zuvor beschrieben;3,0;Stk;gaeb;11 Lüftungstechnik.X83
+33;WF- Steckverbinder DN 250, sonst wie zuvor beschrieben;2,0;Stk;gaeb;11 Lüftungstechnik.X83
+34;Bundkragen DN 100, sonst wie zuvor beschrieben;4,0;Stk;gaeb;11 Lüftungstechnik.X83
+35;Bundkragen DN 125, sonst wie zuvor beschrieben;1,0;Stk;gaeb;11 Lüftungstechnik.X83
+36;Bundkragen DN 160, sonst wie zuvor beschrieben;2,0;Stk;gaeb;11 Lüftungstechnik.X83
+37;Bundkragen DN 180, sonst wie zuvor beschrieben;1,0;Stk;gaeb;11 Lüftungstechnik.X83
+38;Bundkragen DN 200, sonst wie zuvor beschrieben;5,0;Stk;gaeb;11 Lüftungstechnik.X83
+39;Bundkragen DN 224, sonst wie zuvor beschrieben;2,0;Stk;gaeb;11 Lüftungstechnik.X83
+40;Bundkragen DN 250, sonst wie zuvor beschrieben;1,0;Stk;gaeb;11 Lüftungstechnik.X83
+41;Flachdach Dachdurchführung, für Warmdächer;2,0;Stk;gaeb;11 Lüftungstechnik.X83
+42;DN 100/125, sonst wie zuvor beschrieben;4,0;Stk;gaeb;11 Lüftungstechnik.X83
+43;DN 160/180, sonst wie zuvor beschrieben;8,0;Stk;gaeb;11 Lüftungstechnik.X83
+44;DN 200/250, sonst wie zuvor beschrieben;6,0;Stk;gaeb;11 Lüftungstechnik.X83
+45;für Luftkanal 200x100 mm, sonst wie zuvor beschrieben;4,0;Stk;gaeb;11 Lüftungstechnik.X83
+46;für Luftkanal 350x150 mm, sonst wie zuvor beschrieben;4,0;Stk;gaeb;11 Lüftungstechnik.X83
+47;Enddeckel DN 180, sonst wie zuvor beschrieben;3,0;Stk;gaeb;11 Lüftungstechnik.X83
+48;Enddeckel DN 224, sonst wie zuvor beschrieben;3,0;Stk;gaeb;11 Lüftungstechnik.X83
+49;Enddeckel DN 250, sonst wie zuvor beschrieben;2,0;Stk;gaeb;11 Lüftungstechnik.X83
+1;DN 250, sonst wie zuvor beschrieben;6,0;Stk;gaeb;11 Lüftungstechnik.X83
+2;Drahtschutzkorb Stahl;6,0;Stk;gaeb;11 Lüftungstechnik.X83
+3;DN 100, sonst wie zuvor beschrieben;1,0;Stk;gaeb;11 Lüftungstechnik.X83
+4;DN 125, sonst wie zuvor beschrieben;2,0;Stk;gaeb;11 Lüftungstechnik.X83
+5;DN 160, sonst wie zuvor beschrieben;4,0;d;gaeb;11 Lüftungstechnik.X83
+6;1025x125, sonst wie zuvor beschrieben;14,0;Stk;gaeb;11 Lüftungstechnik.X83
+7;Lüftungsgitter 525x225 mm;2,0;Stk;gaeb;11 Lüftungstechnik.X83
+8;Lüftungsgitter 1025x125 mm;18,0;Stk;gaeb;11 Lüftungstechnik.X83
+9;Lüftungsgitter 1025x225 mm;4,0;Stk;gaeb;11 Lüftungstechnik.X83
+10;1025x225 mm, sonst wie zuvor beschrieben;6,0;Stk;gaeb;11 Lüftungstechnik.X83
+11;DN 100, sonst wie zuvor beschrieben;2,0;Stk;gaeb;11 Lüftungstechnik.X83
+12;DN 125, sonst wie zuvor beschrieben;2,0;Stk;gaeb;11 Lüftungstechnik.X83
+13;DN 160, sonst wie zuvor beschrieben;2,0;Stk;gaeb;11 Lüftungstechnik.X83
+14;DN 180, sonst wie zuvor beschrieben;1,0;Stk;gaeb;11 Lüftungstechnik.X83
+15;DN 224, sonst wie zuvor beschrieben;1,0;Stk;gaeb;11 Lüftungstechnik.X83
+16;DN 250, sonst wie zuvor beschrieben;2,0;Stk;gaeb;11 Lüftungstechnik.X83
+17;500x300x1500, sonst wie zuvor beschrieben;1,0;Stk;gaeb;11 Lüftungstechnik.X83
+18;1000x500x1500, sonst wie zuvor beschrieben;2,0;Stk;gaeb;11 Lüftungstechnik.X83
+19;DN 125, sonst wie zuvor beschrieben;2,0;Stk;gaeb;11 Lüftungstechnik.X83
+20;DN 160, sonst wie zuvor beschrieben;2,0;Stk;gaeb;11 Lüftungstechnik.X83
+21;DN 200, sonst wie zuvor beschrieben;2,0;Stk;gaeb;11 Lüftungstechnik.X83
+22;DN 250, sonst wie zuvor beschrieben;4,0;Stk;gaeb;11 Lüftungstechnik.X83
+1;Luftkanalisolierung für gerade Luftkanäle und Formteile in runder und eckiger Ausführung, bestehend aus alukaschierten Mineralfaserplatten, 60 mm stark, mit stabiler reißfester Alufolie, auf dem Luftkanal geklebt und durch eine ausreichende Anzahl von Metallplättchen mit Stiften befestigt, alle Stöß;78,0;m²;gaeb;11 Lüftungstechnik.X83
+1;Obermonteurstunden;10,0;h;gaeb;11 Lüftungstechnik.X83
+2;Monteurstunden;10,0;h;gaeb;11 Lüftungstechnik.X83
+3;Helferstunden;10,0;h;gaeb;11 Lüftungstechnik.X83
+4;Inbetriebnahme und Einregulierung;1,0;psch;gaeb;11 Lüftungstechnik.X83
+5;Kernbohrung durch Wände aus Beton bzw. Mauerwerk oder Betondecke bis 27 cm Stärke inkl. absuagen des Spülwassers erstellen und nach Montage der Einbauten fachgerecht schließen;2,0;Stk;gaeb;11 Lüftungstechnik.X83
+6;Kernbohrung durch Wände aus Beton bzw. Mauerwerk oder Betondecke bis 27 cm Stärke inkl. absuagen des Spülwassers erstellen und nach Montage der Einbauten fachgerecht schließen;7,0;Stk;gaeb;11 Lüftungstechnik.X83
+7;Kernbohrung durch Wände aus Beton bzw. Mauerwerk oder Betondecke bis 27 cm Stärke inkl. absuagen des Spülwassers erstellen und nach Montage der Einbauten fachgerecht schließen;9,0;Stk;gaeb;11 Lüftungstechnik.X83
+8;Durchbruch 600x300, sonst wie zuvor beschrieben;4,0;Stk;gaeb;11 Lüftungstechnik.X83
+9;Durchbruch 600x350, sonst wie zuvor beschrieben;3,0;Stk;gaeb;11 Lüftungstechnik.X83
+10;Durchbruch 650x400, sonst wie zuvor beschrieben;1,0;Stk;gaeb;11 Lüftungstechnik.X83
+11;Durchbruch 700x400, sonst wie zuvor beschrieben;1,0;Stk;gaeb;11 Lüftungstechnik.X83
+12;Stemmarbeiten an Porotonmauerwerk bis 14,5 cm;2,0;m²;gaeb;11 Lüftungstechnik.X83
+13;Profilstahl aller Art und Größe für Befestigungen;80,0;kg;gaeb;11 Lüftungstechnik.X83
+14;Hygiene- Erstinspektion der Lüftungsanlagen gemäß den Vorgaben der VDI 6022.;1,0;Stk;gaeb;11 Lüftungstechnik.X83
+15;zur Kennzeichnung der Einbauteile und Armaturen;20,0;Stk;gaeb;11 Lüftungstechnik.X83
+16;Durchführung der Wartung der vorbeschriebenen Anlagen über den Zeitraum von einem Jahr.;1,0;psch;gaeb;11 Lüftungstechnik.X83
+17;Teilnahme und Koordienierung der Sachverständigen- prüfung gem. Landesbauordnung durch einen vom Land zugelassen Sachverständigen für die beschriebenen Anlagen wie folgt:;1,0;Stk;gaeb;11 Lüftungstechnik.X83
+18;Erstellen von Dokumentations- und Revisionsunterlagen für das gesamte Bauvorhaben, bestehend aus:;1,0;psch;gaeb;11 Lüftungstechnik.X83

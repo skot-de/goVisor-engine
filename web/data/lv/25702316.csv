@@ -1,0 +1,48 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+01.1;Dachrinne ausbauen D 0,7mm vorbewittert Gr.200;6,0;m;gaeb-flat;LV 02 Zimmererarbeiten.D83
+01.2;Dachziegeldeckung Flachdachziegel 0,5kN/m2 abbrechen v.Hand nicht schadstoffbelastet;40,0;m²;gaeb-flat;LV 02 Zimmererarbeiten.D83
+01.3;Traglattung Konterlattung Dach Holz abbrechen B/H 40/60mm B/H 30/50mm Abstand 700mm Abstand 310mm 5kN/m3 im Freien Geräteeinsatz mgl. laden transp. LKW AN nicht schadstoffbelastet;40,0;m2;gaeb-flat;LV 02 Zimmererarbeiten.D83
+01.4;Bekleidungspl. Decke Gipspl. abbrechen 10kN/m3 D 1,25 cm v.Hand laden LKW AN nicht schadstoffbelastet ges.Vergüt.Entsorg.;36,0;m2;gaeb-flat;LV 02 Zimmererarbeiten.D83
+01.5;Dämmung zw. Deckenbalken Mineralwolle abbrechen 2,5kN/m3 D 14 cm v.Hand laden LKW AN nicht schadstoffbelastet ges.Vergüt.Entsorg.;36,0;m2;gaeb-flat;LV 02 Zimmererarbeiten.D83
+01.6;Bauplatten Trennwand Gips-Wandbaupl. 2-schalig abbrechen 3,5kN/m3 D 12,5 cm v.Hand laden transp. LKW AN entsorgen bis 8km nicht schadstoffbelastet AVV170904 Entsorg.-geb. AN;20,0;m2;gaeb-flat;LV 02 Zimmererarbeiten.D83
+01.7;Abbruch vorh. Dachüberstände;8,0;m²;gaeb-flat;LV 02 Zimmererarbeiten.D83
+01.8;Abbruch der Fenster ( Dachflächenfenster );2,0;m2;gaeb-flat;LV 02 Zimmererarbeiten.D83
+01.9;Einfachständerwerk Trennwand Holz/Holzwerkstoff abbrechen nicht schadstoffbelastet Ständerachsabst. 625 mm B/H 40/60mm 7,5kN/m3 im Bauwerk v.Hand Stoffe laden LKW AN ges.Vergüt.Entsorg.;20,0;m2;gaeb-flat;LV 02 Zimmererarbeiten.D83
+01.10;Balken Holz/Holzwerkstoff abbrechen nicht schadstoffbelastet 7,5kN/m3 Geräteeinsatz mgl. Stoffe laden LKW AN ges.Vergüt.Entsorg.;0,5;t;gaeb-flat;LV 02 Zimmererarbeiten.D83
+01.11;Traglattung Konterlattung Decke Holz/Holzwerkstoff abbrechen nicht schadstoffbelastet B/H 30/50mm B/H 24/48mm Abst. 500mm Abst. 320mm 7,5kN/m3 im Bauwerk v.Hand Stoffe laden LKW AN ges.Vergüt.Entsorg.;20,0;m2;gaeb-flat;LV 02 Zimmererarbeiten.D83
+01.12;Behälter bereitstellen geschlossen Schadstoff AVV170603*;2,0;St;gaeb-flat;LV 02 Zimmererarbeiten.D83
+02.1;Keilgezinktes Vollholz für tragende Zwecke nach DIN EN 15497 Si, S10/C24;11,5;m3;gaeb-flat;LV 02 Zimmererarbeiten.D83
+02.2;Abbinden Aufstellen/Verlegen des Keilgezinktem Vollholz , S10/C24 bis 18/24cm Dachgaube;80,0;m;gaeb-flat;LV 02 Zimmererarbeiten.D83
+02.3;Zulage  für das Abbinden, Austellen von Dachgauben;1,0;St;gaeb-flat;LV 02 Zimmererarbeiten.D83
+02.4;Abbinden, Austellen und Verlegen Hauptdach, Pultdach;900,0;m;gaeb-flat;LV 02 Zimmererarbeiten.D83
+02.5;Windrispenband;75,0;m;gaeb-flat;LV 02 Zimmererarbeiten.D83
+02.6;Sparrenpfettenanker;60,0;St;gaeb-flat;LV 02 Zimmererarbeiten.D83
+02.7;Balkenschuhe;60,0;St;gaeb-flat;LV 02 Zimmererarbeiten.D83
+02.8;Winkelverbinder;60,0;St;gaeb-flat;LV 02 Zimmererarbeiten.D83
+02.9;Lochblech;30,0;St;gaeb-flat;LV 02 Zimmererarbeiten.D83
+02.10;Keilbohle;55,0;m;gaeb-flat;LV 02 Zimmererarbeiten.D83
+02.11;Gefällekeile für Flachdach ( Durchgang Flur );10,0;St;gaeb-flat;LV 02 Zimmererarbeiten.D83
+02.12;Auswechselungen;2,0;St;gaeb-flat;LV 02 Zimmererarbeiten.D83
+02.13;Schalung auf Balkenlage;30,0;m2;gaeb-flat;LV 02 Zimmererarbeiten.D83
+02.14;Unterspannbahn, diffusionsoffen;360,0;m2;gaeb-flat;LV 02 Zimmererarbeiten.D83
+02.15;Lattung 3/5;360,0;m2;gaeb-flat;LV 02 Zimmererarbeiten.D83
+02.16;Konterlattung;360,0;m2;gaeb-flat;LV 02 Zimmererarbeiten.D83
+02.17;Liefern und Einbau von Kehlbohlen;12,0;m;gaeb-flat;LV 02 Zimmererarbeiten.D83
+02.18;Proilbrettschalung - Kunststoff unter Dachüberstände grau ( anthrazit );59,0;m2;gaeb-flat;LV 02 Zimmererarbeiten.D83
+02.19;Proilbrettschalung - Kunststoff unter Betondecken;2,0;m2;gaeb-flat;LV 02 Zimmererarbeiten.D83
+02.20;Stirnbrett - Kunststoff grau( anthrazit );130,0;m;gaeb-flat;LV 02 Zimmererarbeiten.D83
+02.21;Schalung der Stirnbretter und Ortgänge;42,0;m2;gaeb-flat;LV 02 Zimmererarbeiten.D83
+03.1;Baustelleneinrichtung;1,0;Stck;gaeb-flat;LV 02 Zimmererarbeiten.D83
+03.2;Statische Berechnung;1,0;Stck;gaeb-flat;LV 02 Zimmererarbeiten.D83
+03.3;Verlegepläne;1,0;Stck;gaeb-flat;LV 02 Zimmererarbeiten.D83
+03.4;Aluminium-Basis Unterkonstruktion nach DIN 4113 - Senkrechte Befestigung - Ausladung ca.160- 220mm;75,5;m²;gaeb-flat;LV 02 Zimmererarbeiten.D83
+03.5;Hartschaumdämmung im Sockelbereich d = 160 mm;6,0;m²;gaeb-flat;LV 02 Zimmererarbeiten.D83
+03.6;Fassaden-Wärmedämmung 80+80 mm;75,5;m²;gaeb-flat;LV 02 Zimmererarbeiten.D83
+03.7;Dämmstoffbefestiger;75,5;m²;gaeb-flat;LV 02 Zimmererarbeiten.D83
+03.8;Außenwandbekl. Harzkompositpl.faserverstärkt Außenwand D 8mm;75,5;m²;gaeb-flat;LV 02 Zimmererarbeiten.D83
+03.9;Außenecke;33,0;lfdm;gaeb-flat;LV 02 Zimmererarbeiten.D83
+03.10;Fassadenabschluss unten;4,0;lfdm;gaeb-flat;LV 02 Zimmererarbeiten.D83
+03.11;Leibung- und Sturzverkleidung Materialstärke: 8 mm;33,0;lfdm;gaeb-flat;LV 02 Zimmererarbeiten.D83
+03.12;Tropfprofil über Öffnungen;0,0;lfdm;gaeb-flat;LV 02 Zimmererarbeiten.D83
+03.13;Attikaabdeckung Zuschnitt: bis 950 mm;13,0;lfdm;gaeb-flat;LV 02 Zimmererarbeiten.D83
+03.14;Eckausbildung als Zulage;4,0;Stck;gaeb-flat;LV 02 Zimmererarbeiten.D83

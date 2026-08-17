@@ -1,0 +1,29 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+01.1;Statischer Nachweis;1,0;psch;gaeb-flat;leistungsbeschreibungen/260811_WITT_LV_Los37_Absturzsicherung.D83
+01.2;Aufmaß Treppenraum 1 und 2;2,0;Stk;gaeb-flat;leistungsbeschreibungen/260811_WITT_LV_Los37_Absturzsicherung.D83
+01.3;Auszugsversuch, inkl. Dokumentation;5,0;Stk;gaeb-flat;leistungsbeschreibungen/260811_WITT_LV_Los37_Absturzsicherung.D83
+01.4;Unterkonstruktion, TH1 (Nord);1,0;Stk;gaeb-flat;leistungsbeschreibungen/260811_WITT_LV_Los37_Absturzsicherung.D83
+01.5;Unterkonstruktion, TH2 (Süd);1,0;Stk;gaeb-flat;leistungsbeschreibungen/260811_WITT_LV_Los37_Absturzsicherung.D83
+02.1;Absturzsicherung, TH1 (Nord);34,0;m2;gaeb-flat;leistungsbeschreibungen/260811_WITT_LV_Los37_Absturzsicherung.D83
+02.2;Absturzsicherung, TH2 (Süd);31,0;m2;gaeb-flat;leistungsbeschreibungen/260811_WITT_LV_Los37_Absturzsicherung.D83
+1;Prüffähiger statischer Nachweis der maximalen Seil- und Netzkräfte an einem exemplarischen Regelfeld zur Bestätigung bzw. Korrektur der gewünschten Maschenweite und Seilstärke des Netzes sowie des Spannseil-Durchmessers.;1,0;psch;gaeb;leistungsbeschreibungen/260811_WITT_LV_Los37_Absturzsicherung_V33.X83
+2;3D-Aufmaß der Bestandstreppenhäuser.;2,0;Stk;gaeb;leistungsbeschreibungen/260811_WITT_LV_Los37_Absturzsicherung_V33.X83
+3;Durchführung und Dokumentation einer Probebelastung bzw. eines Auszugsversuches in kN.;5,0;Stk;gaeb;leistungsbeschreibungen/260811_WITT_LV_Los37_Absturzsicherung_V33.X83
+4;Ausführungsort: Treppenhaus 1 (TH1, Nord);1,0;Stk;gaeb;leistungsbeschreibungen/260811_WITT_LV_Los37_Absturzsicherung_V33.X83
+5;Ausführungsort: Treppenhaus 2 (TH2, Nord);1,0;Stk;gaeb;leistungsbeschreibungen/260811_WITT_LV_Los37_Absturzsicherung_V33.X83
+1;Ausführungsort: Treppenhaus 1 (TH1, Nord);34,0;m2;gaeb;leistungsbeschreibungen/260811_WITT_LV_Los37_Absturzsicherung_V33.X83
+2;Ausführungsort: Treppenhaus 2 (TH2, Süd);31,0;m2;gaeb;leistungsbeschreibungen/260811_WITT_LV_Los37_Absturzsicherung_V33.X83
+01.1;Statischer Nachweis;1,0;psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260811_WITT_LV_Los37_Absturzsicherung (1).D83
+01.2;Aufmaß Treppenraum 1 und 2;2,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260811_WITT_LV_Los37_Absturzsicherung (1).D83
+01.3;Auszugsversuch, inkl. Dokumentation;5,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260811_WITT_LV_Los37_Absturzsicherung (1).D83
+01.4;Unterkonstruktion, TH1 (Nord);1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260811_WITT_LV_Los37_Absturzsicherung (1).D83
+01.5;Unterkonstruktion, TH2 (Süd);1,0;Stk;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260811_WITT_LV_Los37_Absturzsicherung (1).D83
+02.1;Absturzsicherung, TH1 (Nord);34,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260811_WITT_LV_Los37_Absturzsicherung (1).D83
+02.2;Absturzsicherung, TH2 (Süd);31,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/260811_WITT_LV_Los37_Absturzsicherung (1).D83
+1;Prüffähiger statischer Nachweis der maximalen Seil- und Netzkräfte an einem exemplarischen Regelfeld zur Bestätigung bzw. Korrektur der gewünschten Maschenweite und Seilstärke des Netzes sowie des Spannseil-Durchmessers.;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/260811_WITT_LV_Los37_Absturzsicherung_V33 (1).X83
+2;3D-Aufmaß der Bestandstreppenhäuser.;2,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/260811_WITT_LV_Los37_Absturzsicherung_V33 (1).X83
+3;Durchführung und Dokumentation einer Probebelastung bzw. eines Auszugsversuches in kN.;5,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/260811_WITT_LV_Los37_Absturzsicherung_V33 (1).X83
+4;Ausführungsort: Treppenhaus 1 (TH1, Nord);1,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/260811_WITT_LV_Los37_Absturzsicherung_V33 (1).X83
+5;Ausführungsort: Treppenhaus 2 (TH2, Nord);1,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/260811_WITT_LV_Los37_Absturzsicherung_V33 (1).X83
+1;Ausführungsort: Treppenhaus 1 (TH1, Nord);34,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/260811_WITT_LV_Los37_Absturzsicherung_V33 (1).X83
+2;Ausführungsort: Treppenhaus 2 (TH2, Süd);31,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/260811_WITT_LV_Los37_Absturzsicherung_V33 (1).X83

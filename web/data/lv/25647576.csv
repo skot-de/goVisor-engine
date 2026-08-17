@@ -1,0 +1,267 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+1101;Reparatur Schadstellen aus Wühltätigkeit;5,0;Stk;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-1.d83
+1102;Oberboden liefern und lagern;10,0;m³;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-1.d83
+1103;Unterboden liefern und lagern;50,0;m³;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-1.d83
+1104;Boden laden, fördern, einbauen;60,0;m³;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-1.d83
+1105;Schotterrasen, liefern und lagern;5,0;m³;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-1.d83
+1106;Schotterrasen laden, fördern und einbauen;5,0;m³;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-1.d83
+1107;Lieferung u. Einbau von Geotextil,;30,0;m²;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-1.d83
+1108;Beseitigung von Sedimentablagerungen und Krautbewuchs aus Fließgewässer;200,0;m³;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-1.d83
+1109;Flächen absammeln;1000,0;m²;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-1.d83
+1110;Zusätzlichen Schutz (Splitterschutz) des Baggers;1,0;psch;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-1.d83
+1201;Beseitigung von mehrjährigen Bewuchs;200,0;m²;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-1.d83
+1202;Grasansaat auf Reparaturflächen;200,0;m²;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-1.d83
+1203;Bäume d = 10 bis 30 cm, fällen und entsorgen;8,0;Stk;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-1.d83
+1204;Bäume d = 31 bis 60 cm, fällen und entsorgen;5,0;Stk;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-1.d83
+1205;Bäume d = 61 bis 90 cm, fällen und entsorgen;3,0;Stk;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-1.d83
+1206;Bäume d = 91 bis 150 cm, fällen und entsorgen;2,0;Stk;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-1.d83
+1207;Bäume d = 10 bis 30 cm fällen und aufarbeiten;8,0;Stk;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-1.d83
+1208;Bäume d = 31 bis 60 cm fällen und aufarbeiten;5,0;Stk;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-1.d83
+1209;Bäume d = 61 bis 90 cm fällen und aufarbeiten;3,0;Stk;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-1.d83
+1210;Bäume d = 91 bis 150 cm fällen und aufarbeiten;1,0;Stk;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-1.d83
+1211;Strauch- und Buschwerk bis d = 9 cm holzen und entsorgen;150,0;m²;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-1.d83
+1212;Strauch- und Buschwerk bis d =9 cm, holzen und aufarbeiten;150,0;m²;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-1.d83
+1301;Wasserpflanzenmaterial entnehmen und entsorgen;5,0;t;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-1.d83
+1302;Sammelgut entsorgen;15,0;t;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-1.d83
+1303;Krautsperren setzen;2,0;Stk;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-1.d83
+1304;Treibsel aus Sohlgleiten und Wehranlagen;10,0;t;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-1.d83
+1401;Stundenlohnarbeiten Baufacharbeiter;16,0;Std;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-1.d83
+1402;Stundenlohnarbeiten Handarbeitskräfte;32,0;Std;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-1.d83
+1403;Stundenlohnarbeiten LKW-Kipper mit Allradantrieb bis 12 t;24,0;Std;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-1.d83
+1404;Stundenlohnarbeiten Radlader 1 m³;8,0;Std;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-1.d83
+1405;Stundenlohnarbeiten Mobilbagger 8 t;16,0;Std;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-1.d83
+1406;Stundenlohnarbeiten Raupenbagger 12 t;24,0;Std;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-1.d83
+1407;Stundenlohnarbeiten Arbeitsboot;12,0;Std;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-1.d83
+1408;Stundenlohnarbeiten LKW mit Tieflader;24,0;Std;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-1.d83
+01;Schadstellen aus Wühltätigkeit von Nagetieren;5,0;Stk;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-1.x83
+02;Oberboden nach DIN 18915 zum Auffüllen von Fehlstellen;10,0;m³;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-1.x83
+03;Zur Böschungs- oder Uferreparatur geeigneten;50,0;m³;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-1.x83
+04;gemäß Pos. 1.1.02 und 1.1.03 gelieferten Boden ab;60,0;m³;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-1.x83
+05;Schotterrasen zur Reparatur von Böschungen und/oder;5,0;m³;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-1.x83
+06;gemäß Pos. 1.1.05 gelieferten Schotterrasen ab;5,0;m³;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-1.x83
+07;Lieferung und Einbau von Geotextil auf unterschiedlich;30,0;m²;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-1.x83
+08;Beseitigung von Sedimentablagerungen und Krautbewuchs;200,0;m³;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-1.x83
+09;Flächen auf denen Baggergut aufgetragen wurde;1000,0;m²;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-1.x83
+10;Für die Erdarbeiten (Sedimententnahme) auf dem;1,0;psch;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-1.x83
+01;Wurzelausschläge / Buschreihe im Uferschutzstreifen;200,0;m²;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-1.x83
+02;nach erfolgtem Bodenauftrag oder anderen Maßnahmen;200,0;m²;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-1.x83
+03;Fällen von Starkbäumen im Bereich von Gewässern;8,0;Stk;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-1.x83
+04;wie vor, jedoch;5,0;Stk;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-1.x83
+05;wie vor, jedoch;3,0;Stk;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-1.x83
+06;wie vor, jedoch;2,0;Stk;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-1.x83
+07;Bäume 10 bis 30 cm Durchmesser im schwer zugänglichen;8,0;Stk;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-1.x83
+08;wie vor jedoch:;5,0;Stk;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-1.x83
+09;wie vor jedoch:;3,0;Stk;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-1.x83
+10;wie vor jedoch:;1,0;Stk;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-1.x83
+11;Strauch- und Buschwerk bis d = 9 cm;150,0;m²;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-1.x83
+12;Holzung von Strauchwerk bis 9 cm Durchmesser an;150,0;m²;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-1.x83
+01;Vor Bauwerken und Krautsperren angesammeltes;5,0;t;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-1.x83
+02;Sammelgut von einplanierten Flächen entsorgen. Material;15,0;t;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-1.x83
+03;Krautsperren bis 20 m Länge setzen, während der;2,0;Stk;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-1.x83
+04;Treibsel aus Sohlgleiten und Wehranlagen entsorgen.;10,0;t;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-1.x83
+01;Stundenlohnarbeiten durch Arbeitskräfte auf Anordnung;16,0;Std;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-1.x83
+02;Einsatz von Handarbeitskräften zur Beseitigung von;32,0;Std;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-1.x83
+03;Stundenlohnarbeiten durch LKW- Kipper 12 t auf;24,0;Std;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-1.x83
+04;Stundenlohnarbeiten durch Radlader 1 m³ auf Anordnung;8,0;Std;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-1.x83
+05;Stundenlohnarbeiten durch Mobilbagger bis 8 t;16,0;Std;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-1.x83
+06;Stundenlohnarbeiten durch Raupenbagger bis 12 t;24,0;Std;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-1.x83
+07;Einsatz eines Arbeitsbootes im Rahmen der Beseitigung;12,0;Std;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-1.x83
+08;Stundenlohnarbeiten durch LKW mit Tieflader mindestens;24,0;Std;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-1.x83
+210101;Reparatur Schadstellen aus Wühltätigkeit;4,0;Stk;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.d83
+210102;Beseitigung von Wildschäden durch Schwarzwild;20,0;m²;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.d83
+210103;Oberboden liefern und lagern;15,0;m³;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.d83
+210104;Unterboden liefern und lagern;45,0;m³;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.d83
+210105;Boden laden, fördern, einbauen;60,0;m³;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.d83
+210106;Schotterrasen, liefern und lagern;5,0;m³;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.d83
+210107;Schotterrasen laden, fördern und einbauen;5,0;m³;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.d83
+210108;Wasserbausteine liefern und lagern;5,0;m³;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.d83
+210109;Wasserbausteine laden, fördern und einbauen;5,0;m³;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.d83
+210110;Lieferung u. Einbau von Geotextil,;50,0;m²;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.d83
+210111;Beseitigung von Sedimentablagerungen und Krautbewuchs aus Fließgewässer;2000,0;m³;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.d83
+210112;Flächen absammeln;10000,0;m²;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.d83
+210201;Beseitigung von mehrjährigen Bewuchs;100,0;m²;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.d83
+210202;Grasansaat auf Reparaturflächen;200,0;m²;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.d83
+210203;Bäume d = 10 bis 30 cm, fällen und entsorgen;10,0;Stk;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.d83
+210204;Bäume d = 31 bis 60 cm, fällen und entsorgen;4,0;Stk;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.d83
+210205;Bäume d = 61 bis 90 cm, fällen und entsorgen;2,0;Stk;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.d83
+210206;Bäume d = 91 bis 150 cm, fällen und entsorgen;2,0;Stk;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.d83
+210207;Bäume d = 10 bis 30 cm fällen und aufarbeiten;10,0;Stk;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.d83
+210208;Bäume d = 31 bis 60 cm fällen und aufarbeiten;4,0;Stk;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.d83
+210209;Bäume d = 61 bis 90 cm fällen und aufarbeiten;2,0;Stk;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.d83
+210210;Bäume d = 91 bis 150 cm fällen und aufarbeiten;2,0;Stk;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.d83
+210211;Strauch- und Buschwerk bis d = 9 cm holzen und entsorgen;100,0;m²;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.d83
+210212;Strauch- und Buschwerk bis d =9 cm, holzen und aufarbeiten;100,0;m²;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.d83
+210301;Wasserpflanzenmaterial entnehmen und entsorgen;25,0;t;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.d83
+210302;Sammelgut entsorgen;50,0;t;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.d83
+210303;Krautsperren setzen;2,0;Stk;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.d83
+210304;Ökologische Baubeleitung;5,0;Tag;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.d83
+210401;Stundenlohnarbeiten Baufacharbeiter;8,0;Std;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.d83
+210402;Stundenlohnarbeiten Handarbeitskräfte;16,0;Std;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.d83
+210403;Stundenlohnarbeiten LKW-Kipper mit Allradantrieb bis 12 t;8,0;Std;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.d83
+210404;Stundenlohnarbeiten Radlader 1 m³;8,0;Std;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.d83
+210405;Stundenlohnarbeiten Mobilbagger 8 t;8,0;Std;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.d83
+210406;Stundenlohnarbeiten Raupenbagger 12 t;16,0;Std;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.d83
+210407;Stundenlohnarbeiten Arbeitsboot;8,0;Std;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.d83
+210408;Stundenlohnarbeiten LKW mit Tieflader;30,0;Std;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.d83
+220101;Reparatur Schadstellen aus Wühltätigkeit;1,0;Stk;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.d83
+220102;Beseitigung von Wildschäden durch Schwarzwild;30,0;m²;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.d83
+220103;Oberboden liefern und lagern;10,0;m³;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.d83
+220104;Unterboden liefern und lagern;30,0;m³;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.d83
+220105;Boden laden, fördern, einbauen;40,0;m³;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.d83
+220106;Beseitigung von Sedimentablagerungen und Krautbewuchs aus Fließgewässer;8,0;Std;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.d83
+220201;Beseitigung von mehrjährigen Bewuchs;100,0;m²;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.d83
+220202;Grasansaat auf Reparaturflächen;80,0;m²;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.d83
+220203;Bäume d = 10 bis 30 cm, fällen und entsorgen;2,0;Stk;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.d83
+220204;Bäume d = 31 bis 60 cm, fällen und entsorgen;1,0;Stk;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.d83
+220205;Bäume d = 10 bis 30 cm fällen und aufarbeiten;2,0;Stk;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.d83
+220206;Bäume d = 31 bis 60 cm fällen und aufarbeiten;1,0;Stk;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.d83
+220207;Strauch- und Buschwerk bis d = 9 cm holzen und entsorgen;60,0;m²;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.d83
+220301;Stundenlohnarbeiten Baufacharbeiter;8,0;Std;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.d83
+220302;Stundenlohnarbeiten Handarbeitskräfte;16,0;Std;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.d83
+220303;Stundenlohnarbeiten LKW-Kipper mit Allradantrieb bis 12 t;8,0;Std;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.d83
+220304;Stundenlohnarbeiten Radlader 1 m³;8,0;Std;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.d83
+220305;Stundenlohnarbeiten Mobilbagger 8 t;8,0;Std;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.d83
+220306;Stundenlohnarbeiten Raupenbagger 12 t;8,0;Std;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.d83
+220307;Stundenlohnarbeiten Arbeitsboot;8,0;Std;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.d83
+220308;Stundenlohnarbeiten LKW mit Tieflader;60,0;Std;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.d83
+220401;Sohlkrautung mit Krautboot;24,0;Std;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.d83
+220402;Krautsperren setzen;2,0;Stk;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.d83
+220403;Entsorgung Mähgut aus der Bootskrautung;25,0;t;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.d83
+01;Schadstellen aus Wühltätigkeit von Nagetieren und;4,0;Stk;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.x83
+02;Wühlstellen durch Schwarzwild bis 40 cm Tiefe und;20,0;m²;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.x83
+03;Oberboden nach DIN 18915 zum Auffüllen von Fehlstellen;15,0;m³;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.x83
+04;Zur Böschungs- oder Uferreparatur geeigneten;45,0;m³;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.x83
+05;gemäß Pos. 2.1.01.03 und 2.1.01.04 gelieferten Boden ab;60,0;m³;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.x83
+06;Schotterrasen zur Reparatur von Böschungen und/oder;5,0;m³;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.x83
+07;gemäß Pos. 2.1.01.06 gelieferten Schotterrasen ab;5,0;m³;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.x83
+08;Lieferung von Wasserbausteinen Steinklasse CP 90/250;5,0;m³;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.x83
+09;gemäß Pos. 2.1.01.08 gelieferte Wasserbausteine ab;5,0;m³;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.x83
+10;Lieferung und Einbau von Geotextil auf unterschiedlich;50,0;m²;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.x83
+11;Beseitigung von Sedimentablagerungen und Krautbewuchs;2000,0;m³;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.x83
+12;Flächen auf denen Baggergut aufgetragen wurde absammeln.;10000,0;m²;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.x83
+01;Wurzelausschläge/Buschreihe im Uferschutzstreifen;100,0;m²;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.x83
+02;nach erfolgtem Bodenauftrag oder anderen Maßnahmen;200,0;m²;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.x83
+03;Fällen von Starkbäumen im Bereich von Gewässern;10,0;Stk;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.x83
+04;wie vor, jedoch;4,0;Stk;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.x83
+05;wie vor, jedoch;2,0;Stk;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.x83
+06;wie vor, jedoch;2,0;Stk;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.x83
+07;Bäume 10 bis 30 cm Durchmesser im schwer zugänglichen;10,0;Stk;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.x83
+08;wie vor jedoch:;4,0;Stk;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.x83
+09;wie vor jedoch:;2,0;Stk;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.x83
+10;wie vor jedoch:;2,0;Stk;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.x83
+11;Strauch- und Buschwerk bis d = 9 cm (Brombeeren,;100,0;m²;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.x83
+12;Holzung von Strauchwerk bis 9 cm Durchmesser an;100,0;m²;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.x83
+01;Vor Bauwerken und Krautsperren angesammeltes;25,0;t;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.x83
+02;Sammelgut (aus Pos. 2.1.01.12) von einplanierten;50,0;t;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.x83
+03;Krautsperren bis 20 m Länge setzen, während der;2,0;Stk;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.x83
+04;Leistungsbeschreibung zur ökologischen Baubegleitung;5,0;Tag;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.x83
+01;Stundenlohnarbeiten durch Arbeitskräfte auf Anordnung;8,0;Std;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.x83
+02;Einsatz von Handarbeitskräften zur Beseitigung von;16,0;Std;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.x83
+03;Stundenlohnarbeiten durch LKW- Kipper 12 t auf;8,0;Std;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.x83
+04;Stundenlohnarbeiten durch Radlader 1 m³ auf Anordnung;8,0;Std;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.x83
+05;Stundenlohnarbeiten durch Mobilbagger bis 8 t;8,0;Std;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.x83
+06;Stundenlohnarbeiten durch Raupenbagger bis 12 t;16,0;Std;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.x83
+07;Einsatz eines Arbeitsbootes im Rahmen der Beseitigung;8,0;Std;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.x83
+08;Stundenlohnarbeiten LKW mit Tieflader;30,0;Std;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.x83
+01;Schadstellen aus Wühltätigkeit von Nagetieren und;1,0;Stk;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.x83
+02;Wühlstellen durch Schwarzwild bis 40 cm Tiefe und;30,0;m²;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.x83
+03;Oberboden nach DIN 18915 zum Auffüllen von Fehlstellen;10,0;m³;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.x83
+04;Zur Böschungs- oder Uferreparatur geeigneten;30,0;m³;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.x83
+05;gemäß Pos. 2.2.01.03 und 2.2.01.04 gelieferten Boden ab;40,0;m³;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.x83
+06;Beseitigung von Sedimentablagerungen und Krautbewuchs;8,0;Std;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.x83
+01;Wurzelausschläge/Buschreihe im Uferschutzstreifen;100,0;m²;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.x83
+02;nach erfolgtem Bodenauftrag oder anderen Maßnahmen;80,0;m²;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.x83
+03;Fällen von Starkbäumen im Bereich von Gewässern;2,0;Stk;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.x83
+04;wie vor, jedoch;1,0;Stk;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.x83
+05;Bäume 10 bis 30 cm Durchmesser im schwer zugänglichen;2,0;Stk;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.x83
+06;wie vor jedoch:;1,0;Stk;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.x83
+07;Strauch- und Buschwerk bis d = 9 cm (Brombeeren,;60,0;m²;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.x83
+01;Stundenlohnarbeiten durch Arbeitskräfte auf Anordnung;8,0;Std;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.x83
+02;Einsatz von Handarbeitskräften (2 Personen)zur;16,0;Std;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.x83
+03;Stundenlohnarbeiten durch LKW- Kipper 12 t auf;8,0;Std;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.x83
+04;Stundenlohnarbeiten durch Radlader 1 m³ auf Anordnung;8,0;Std;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.x83
+05;Stundenlohnarbeiten durch Mobilbagger bis 8 t;8,0;Std;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.x83
+06;Stundenlohnarbeiten durch Raupenbagger bis 12 t;8,0;Std;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.x83
+07;Einsatz eines Arbeitsbootes im Rahmen der Beseitigung;8,0;Std;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.x83
+08;Stundenlohnarbeiten LKW mit Tieflader;60,0;Std;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.x83
+01;Sohlkrautung des Gewässerlaufes mit Krautboot;24,0;Std;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.x83
+02;Krautsperren vor der Mahd setzen, vorhalten und;2,0;Stk;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.x83
+03;Das an den Krautstauen zwischengelagerte Mähgut der;25,0;t;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-2.x83
+3101;Reparatur Schadstellen aus Wühltätigkeit;3,0;Stk;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-3.d83
+3102;Beseitigung von Wildschäden durch Schwarzwild;30,0;m²;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-3.d83
+3103;Oberboden liefern und lagern;50,0;m³;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-3.d83
+3104;Unterboden liefern und lagern;20,0;m³;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-3.d83
+3105;Boden laden, fördern, einbauen;70,0;m³;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-3.d83
+3106;Schotterrasen, liefern und lagern;5,0;m³;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-3.d83
+3107;Schotterrasen laden, fördern und einbauen;5,0;m³;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-3.d83
+3108;Wasserbausteine liefern und lagern;25,0;m³;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-3.d83
+3109;Wasserbausteine laden, fördern und einbauen;25,0;m³;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-3.d83
+3110;Lieferung u. Einbau von Geotextil,;250,0;m²;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-3.d83
+3111;Beseitigung von Sedimentablagerungen und Krautbewuchs aus Fließgewässer;250,0;m³;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-3.d83
+3112;Flächen absammeln;1250,0;m²;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-3.d83
+3201;Beseitigung von mehrjährigen Bewuchs;500,0;m²;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-3.d83
+3202;Grasansaat auf Reparaturflächen;150,0;m²;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-3.d83
+3203;Bäume d = 10 bis 30 cm, fällen und entsorgen;55,0;Stk;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-3.d83
+3204;Bäume d = 31 bis 60 cm, fällen und entsorgen;15,0;Stk;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-3.d83
+3205;Bäume d = 61 bis 90 cm, fällen und entsorgen;3,0;Stk;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-3.d83
+3206;Bäume d = 91 bis 150 cm, fällen und entsorgen;3,0;Stk;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-3.d83
+3207;Bäume d = 10 bis 30 cm fällen und aufarbeiten;25,0;Stk;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-3.d83
+3208;Bäume d = 31 bis 60 cm fällen und aufarbeiten;13,0;Stk;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-3.d83
+3209;Bäume d = 61 bis 90 cm fällen und aufarbeiten;5,0;Stk;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-3.d83
+3210;Bäume d = 91 bis 150 cm fällen und aufarbeiten;3,0;Stk;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-3.d83
+3211;Strauch- und Buschwerk bis d = 9 cm holzen und entsorgen;200,0;m²;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-3.d83
+3212;Strauch- und Buschwerk bis d =9 cm, holzen und aufarbeiten;400,0;m²;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-3.d83
+3213;Lichtraumprofil manuell freischneiden;2000,0;m;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-3.d83
+3214;Lichtraumprofil maschinell freischneiden;1000,0;m;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-3.d83
+3301;Wasserpflanzenmaterial entnehmen und entsorgen;50,0;t;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-3.d83
+3302;Sammelgut entsorgen;100,0;t;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-3.d83
+3303;Krautsperren setzen;2,0;Stk;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-3.d83
+3304;Ökologische Baubeleitung;3,0;Tag;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-3.d83
+3401;Stundenlohnarbeiten Baufacharbeiter;8,0;Std;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-3.d83
+3402;Stundenlohnarbeiten Handarbeitskräfte;100,0;Std;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-3.d83
+3403;Stundenlohnarbeiten LKW-Kipper mit Allradantrieb bis 12 t;12,0;Std;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-3.d83
+3404;Stundenlohnarbeiten Radlader 1 m³;12,0;Std;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-3.d83
+3405;Stundenlohnarbeiten Mobilbagger 8 t;16,0;Std;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-3.d83
+3406;Stundenlohnarbeiten Raupenbagger 12 t;88,0;Std;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-3.d83
+3407;Stundenlohnarbeiten Arbeitsboot;16,0;Std;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-3.d83
+3408;Stundenlohnarbeiten Traktor mit Mähgerät;24,0;Std;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-3.d83
+3409;Stundenlohnarbeiten LKW mit Tieflader;32,0;Std;gaeb-flat;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-3.d83
+01;Schadstellen aus Wühltätigkeit von Nagetieren und;3,0;Stk;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-3.x83
+02;Wühlstellen durch Schwarzwild bis 40 cm Tiefe und;30,0;m²;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-3.x83
+03;Oberboden nach DIN 18915 zum Auffüllen von Fehlstellen;50,0;m³;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-3.x83
+04;Zur Böschungs- oder Uferreparatur geeigneten;20,0;m³;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-3.x83
+05;gemäß Pos. 3.1.03 und 3.1.04 gelieferten Boden ab;70,0;m³;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-3.x83
+06;Schotterrasen zur Reparatur von Böschungen und/oder;5,0;m³;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-3.x83
+07;gemäß Pos. 3.1.06 gelieferten Schotterrasen ab;5,0;m³;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-3.x83
+08;Lieferung von Wasserbausteinen Steinklasse CP 90/250;25,0;m³;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-3.x83
+09;gemäß Pos. 3.1.08 gelieferte Wasserbausteine ab;25,0;m³;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-3.x83
+10;Lieferung und Einbau von Geotextil auf unterschiedlich;250,0;m²;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-3.x83
+11;Beseitigung von Sedimentablagerungen und Krautbewuchs;250,0;m³;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-3.x83
+12;Flächen auf denen Baggergut aufgetragen wurde;1250,0;m²;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-3.x83
+01;Wurzelausschläge/Buschreihe im Uferschutzstreifen;500,0;m²;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-3.x83
+02;nach erfolgtem Bodenauftrag oder anderen Maßnahmen;150,0;m²;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-3.x83
+03;Fällen von Starkbäumen im Bereich von Gewässern;55,0;Stk;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-3.x83
+04;wie vor, jedoch;15,0;Stk;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-3.x83
+05;wie vor, jedoch;3,0;Stk;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-3.x83
+06;wie vor, jedoch;3,0;Stk;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-3.x83
+07;Bäume 10 bis 30 cm Durchmesser im schwer zugänglichen;25,0;Stk;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-3.x83
+08;wie vor jedoch:;13,0;Stk;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-3.x83
+09;wie vor jedoch:;5,0;Stk;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-3.x83
+10;wie vor jedoch:;3,0;Stk;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-3.x83
+11;Strauch- und Buschwerk bis d = 9 cm;200,0;m²;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-3.x83
+12;Holzung von Strauchwerk bis 9 cm Durchmesser an;400,0;m²;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-3.x83
+13;in Lichtraumprofil einragende Äste bis in 5 m Höhe;2000,0;m;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-3.x83
+14;in Lichtraumprofil einragende Äste bis in 5 m Höhe;1000,0;m;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-3.x83
+01;Vor Bauwerken und Krautsperren angesammeltes;50,0;t;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-3.x83
+02;Sammelgut (aus Pos. 3.1.12) von einplanierten Flächen;100,0;t;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-3.x83
+03;Krautsperren bis 20 m Länge setzen, während der;2,0;Stk;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-3.x83
+04;Leistungsbeschreibung zur ökologischen Baubegleitung;3,0;Tag;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-3.x83
+01;Stundenlohnarbeiten durch Arbeitskräfte auf Anordnung;8,0;Std;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-3.x83
+02;Einsatz von Handarbeitskräften zur Beseitigung von;100,0;Std;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-3.x83
+03;Stundenlohnarbeiten durch LKW- Kipper 12 t auf;12,0;Std;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-3.x83
+04;Stundenlohnarbeiten durch Radlader 1 m³ auf Anordnung;12,0;Std;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-3.x83
+05;Stundenlohnarbeiten durch Mobilbagger bis 8 t;16,0;Std;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-3.x83
+06;Stundenlohnarbeiten durch Raupenbagger bis 12 t;88,0;Std;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-3.x83
+07;Einsatz eines Arbeitsbootes im Rahmen der Beseitigung;16,0;Std;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-3.x83
+08;Stundenlohnarbeiten Traktor mit Mähgerät auf Anordnung;24,0;Std;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-3.x83
+09;Stundenlohnarbeiten durch LKW mit Tieflader mindestens;32,0;Std;gaeb;Leistungsverzeichnis/Ramenvertrag GU 2026_27_Los-3.x83

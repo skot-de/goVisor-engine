@@ -1,0 +1,39 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+1;Einrichten, Vorhalten von Maschinen, Geräten, Hilfsmitteln usw. über die gesamte Bauzeit sowie Räumung der Baustelle für sämtliche in der Leistungsbeschreibung aufgeführten Leistungen.;1,0;St;gaeb;LV 10 Gerustbau.x83
+1;Erstellen einer prüffähigen Gerüststatik für nachfolgend beschriebene Arbeits- und Schutzgerüste.;1,0;St;gaeb;LV 10 Gerustbau.x83
+2;Montage eines Stahlrohrrahmengerüstes der Lastklasse 4, 3,0 KN/m², Breitenklasse W 09, tatsächliche Belagsbreite 1,00 m,;290,0;m2;gaeb;LV 10 Gerustbau.x83
+3;Demontage des in Pos. 2.2 beschriebenen Arbeits- und Schutzgerüstes einschließlich Gerüstbauteile, Verankerungen, Aussteifungen, Beläge und Seitenschutzeinrichtungen sowie Abtransport des Materials.;290,0;m2;gaeb;LV 10 Gerustbau.x83
+4;Gebrauchsüberlassung Stahlrohrrahmengerüst des unter Pos. 2.2 beschriebenen  Stahlrohrrahmengerüstes.;7540,0;m2Wo;gaeb;LV 10 Gerustbau.x83
+5;Montage der innenliegenden Gerüstkonsolen 70 cm zur Gerüstverbreiterung, passend zum in Pos. 2.2 beschriebenen Arbeits- und Schutzgerüst.;100,0;Lfm;gaeb;LV 10 Gerustbau.x83
+6;Demontage der in Pos. 2.5 beschriebenen innenliegenden Gerüstkonsolen.;100,0;Lfm;gaeb;LV 10 Gerustbau.x83
+7;Gebrauchsüberlassung der  in Pos. 2.5 beschriebenen, innenliegenden Gerüstkonsolen.;2600,0;LfmW;gaeb;LV 10 Gerustbau.x83
+8;Verbreiterung des in Pos. 2.2 beschriebenen Arbeits- und Schutzgerüstes auf eine Gesamtbreite inkl. innenliegende Gerüstkonsole von 2,70 m einschließlich aller erforderlichen  Gerüstbauteile, Verankerungen, Aussteifungen, Beläge und Seitenschutzeinrichtungen.;290,0;m2;gaeb;LV 10 Gerustbau.x83
+9;Demontage der in Pos. 2.8 beschriebenen Verbreiterung des Arbeits- und Schutzgerüstes einschließlich Gerüstbauteile, Verankerungen, Aussteifungen, Beläge und Seitenschutzeinrichtungen sowie Abtransport des Materials.;290,0;m2;gaeb;LV 10 Gerustbau.x83
+10;Gebrauchsüberlassung Stahlrohrrahmengerüst des unter Pos. 2.8 beschriebenen  Stahlrohrrahmengerüstes.;7540,0;m2Wo;gaeb;LV 10 Gerustbau.x83
+11;Montage eines innenliegenden Rückenschutzes im Bereich der Umkleidekabinen an der nördlichen- sowie südlichen Längsseite bei einer Absturzhöhe von mehr als 1,0 m. Hierbei sind die UVV der DGUV zu beachten.;35,0;Lfm;gaeb;LV 10 Gerustbau.x83
+12;Demontage des unter Pos. 2.11 beschriebenen innenliegenden Rückenschutzes nach Freigabe durch die Bauleitung.;35,0;Lfm;gaeb;LV 10 Gerustbau.x83
+13;Gebrauchsüberlassung des vollständig montierten, gebrauchsfertigen innenliegenden Rückenschutzes gemäß Pos. 2.11. Die Gebrauchsüberlassung umfasst die Vorhaltung der Rückenschutzelemente über die Dauer der Nutzung. Die Abrechnung erfolgt je Lfm, je angefangene Kalenderwoche.;910,0;LfmW;gaeb;LV 10 Gerustbau.x83
+14;Montage eines Stahlrohrrahmengerüstes der Lastklasse 4, 3,0 KN/m², Breitenklasse W 09, tatsächliche Belagsbreite 1,00 m,;65,0;m2;gaeb;LV 10 Gerustbau.x83
+15;Demontage des in Pos. 2.14 beschriebenen Arbeits- und Schutzgerüstes einschließlich Gerüstbauteile, Verankerungen, Aussteifungen, Beläge und Seitenschutzeinrichtungen sowie Abtransport des Materials.;65,0;m2;gaeb;LV 10 Gerustbau.x83
+16;Gebrauchsüberlassung Stahlrohrrahmengerüst des unter Pos. 2.14 beschriebenen  Stahlrohrrahmengerüstes.;1690,0;m2Wo;gaeb;LV 10 Gerustbau.x83
+17;Montage eines Stahlrohrrahmengerüstes der Lastklasse 4, 3,0 KN/m², Breitenklasse W 09, tatsächliche Belagsbreite 1,00 m,;205,0;m2;gaeb;LV 10 Gerustbau.x83
+18;Demontage des in Pos. 2.17 beschriebenen Arbeits- und Schutzgerüstes einschließlich Gerüstbauteile, Verankerungen, Aussteifungen, Beläge und Seitenschutzeinrichtungen sowie Abtransport des Materials.;205,0;m2;gaeb;LV 10 Gerustbau.x83
+19;Gebrauchsüberlassung Stahlrohrrahmengerüst des unter Pos. 2.17 beschriebenen  Stahlrohrrahmengerüstes.;5330,0;m2Wo;gaeb;LV 10 Gerustbau.x83
+20;Montage der innenliegenden Gerüstkonsolen 70 cm zur Gerüstverbreiterung, passend zum in Pos. 2.17 beschriebenen Arbeits- und Schutzgerüst.;100,0;Lfm;gaeb;LV 10 Gerustbau.x83
+21;Demontage der in Pos. 2.20 beschriebenen innenliegenden Gerüstkonsolen.;100,0;Lfm;gaeb;LV 10 Gerustbau.x83
+22;Gebrauchsüberlassung der  in Pos. 2.20 beschriebenen, innenliegenden Gerüstkonsolen.;2600,0;LfmW;gaeb;LV 10 Gerustbau.x83
+23;Montage eines Stahlrohrrahmengerüstes der Lastklasse 4, 3,0 KN/m², Breitenklasse W 09, tatsächliche Belagsbreite 1,00 m,;65,0;m2;gaeb;LV 10 Gerustbau.x83
+24;Demontage des in Pos. 2.23 beschriebenen Arbeits- und Schutzgerüstes einschließlich Gerüstbauteile, Verankerungen, Aussteifungen, Beläge und Seitenschutzeinrichtungen sowie Abtransport des Materials.;65,0;m2;gaeb;LV 10 Gerustbau.x83
+25;Gebrauchsüberlassung Stahlrohrrahmengerüst des unter Pos. 2.23 beschriebenen  Stahlrohrrahmengerüstes.;1690,0;m2Wo;gaeb;LV 10 Gerustbau.x83
+26;Montage einer Gitterträgerüberbauung im Bereich Treppe sowie Leitungsgräben.;4,0;St;gaeb;LV 10 Gerustbau.x83
+27;Demontage der unter Pos. 2.26 beschriebenen Gitterträgerüberbauung.;4,0;St;gaeb;LV 10 Gerustbau.x83
+28;Gebrauchsüberlassung der vollständig montierten Gitterträgerüberbauung gemäß Pos. 2.26.;104,0;StWo;gaeb;LV 10 Gerustbau.x83
+29;Montage eines aussenliegenden Treppenturms nach gültiger DIN mit Stahlrohrrahmengerüst der Lastklasse 3, 3,0 KN/m², Breitenklasse W 09, als Zugangsturm für das Fassadengerüst.;2,0;St;gaeb;LV 10 Gerustbau.x83
+30;Demontage des unter Pos. 2.29 beschriebenen außenliegenden Treppenturms.;2,0;St;gaeb;LV 10 Gerustbau.x83
+31;Gebrauchsüberlassung des unter der Pos. 2.29 beschriebenen, vollständig montierten, gebrauchsfertigen Treppenturms.;52,0;StWo;gaeb;LV 10 Gerustbau.x83
+32;Montage eines Dachdeckerfangnetzes 2,0 m hoch umlaufend als Absturzsicherung für Dachdecker, Zimmermann und andere Bauarbeiten.;120,0;Lfm;gaeb;LV 10 Gerustbau.x83
+33;Demontage des unter Pos. 2.32 montierten Dachdeckerfangnetzes.;120,0;Lfm;gaeb;LV 10 Gerustbau.x83
+34;Gebrauchsüberlassung des vollständig montierten Dachdeckerfangnetzes gemäß Pos. 2.32.;3120,0;LfmW;gaeb;LV 10 Gerustbau.x83
+1;Zusätzliche An- und Abfahrt, bei nicht vorhergsehenen Arbeiten, bestehend aus einen Gerüstbautrupp mit 3 Monteuren.  Sämtliche Kosten sind in den Einheitspreis mit einzukalkulieren. Nur auf Anweisung der Bauleitung.;2,0;St;gaeb;LV 10 Gerustbau.x83
+2;Stundenlohnarbeiten Facharbeiter für unvorhergesehene Arbeiten nur auf Anweisung der Bauleitung. Die Stunden sind mit entsprechenden Stundenzetteln nachzuweisen.;8,0;h;gaeb;LV 10 Gerustbau.x83
+3;Stundenlohnarbeiten Helfer für unvorhergesehene Arbeiten nur auf Anweisung der Bauleitung. Die Stunden sind mit entsprechenden Stundenzetteln nachzuweisen.;8,0;h;gaeb;LV 10 Gerustbau.x83

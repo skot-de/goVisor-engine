@@ -1,0 +1,72 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+00000001;Baustelle einrichten Sämtl.LV-Abschn.*Zufahrt vorh.;1,0;Psch;gaeb-flat;Vergabeunterlagen/Version 1/20_07_2026_L172.D83
+00000002;Baustelle räumen Sämtl. LV-Abschn.;1,0;Psch;gaeb-flat;Vergabeunterlagen/Version 1/20_07_2026_L172.D83
+00000003;Säuberung von Fahrbahnen;1,0;Psch;gaeb-flat;Vergabeunterlagen/Version 1/20_07_2026_L172.D83
+00010001;Bauvermessung durchführen;1,0;Psch;gaeb-flat;Vergabeunterlagen/Version 1/20_07_2026_L172.D83
+00010002;Deckenbuch erstellen;1,0;Psch;gaeb-flat;Vergabeunterlagen/Version 1/20_07_2026_L172.D83
+00020001;Fräsgutanalyse Deck-, Binder- und / oder Tragschicht;5,0;St;gaeb-flat;Vergabeunterlagen/Version 1/20_07_2026_L172.D83
+01000001;Erst. d. Verkehrskonzeptes;1,0;Psch;gaeb-flat;Vergabeunterlagen/Version 1/20_07_2026_L172.D83
+01000002;Einholen der Verkehrsrechtlichen Anordnung;1,0;Psch;gaeb-flat;Vergabeunterlagen/Version 1/20_07_2026_L172.D83
+01000003;Verteilung Anwohnerinformation bis 12 Haushalte;1,0;Psch;gaeb-flat;Vergabeunterlagen/Version 1/20_07_2026_L172.D83
+01010001;Deaktivieren VZ und Wegweiser;30,0;St;gaeb-flat;Vergabeunterlagen/Version 1/20_07_2026_L172.D83
+01020001;VZ n. Detailplan aufstellen, betr. u. abbauen - 1 VZ am Schilderpf. bis 3 Fußplatten bzw. K3;280,0;Std;gaeb-flat;Vergabeunterlagen/Version 1/20_07_2026_L172.D83
+01020002;VZ n. Detailplan aufstellen, betr. u. abb. - 1 bis 2 VZ am Schilderpf. inkl. Fußplattentr. bis K6;280,0;Std;gaeb-flat;Vergabeunterlagen/Version 1/20_07_2026_L172.D83
+01020003;VZ n. Detailplan aufstellen, betr. u. abb. - 1 bis 3 VZ am Schilderpf. inkl. Fußplattentr. lange Bauform größer K6 bis 2 x K9;280,0;Std;gaeb-flat;Vergabeunterlagen/Version 1/20_07_2026_L172.D83
+01020004;VZ n. Detailplan aufstellen, betr. u. abb. - 1 VZ bis 0,60 m2 Fläche am Schilderpf. - Erdanker / Einschlagfuß;280,0;Std;gaeb-flat;Vergabeunterlagen/Version 1/20_07_2026_L172.D83
+01020005;VZ Plantafel n. Detailplan herst., aufstellen, betreiben und abbauen Fußplattenträger lange Bauform bis 2 x K9;168,0;Std;gaeb-flat;Vergabeunterlagen/Version 1/20_07_2026_L172.D83
+01020006;VZ Zusatzzeichen n. Detailplan herst., anbringen, betr. u. abb. an vorh. Schilderpfosten;280,0;Std;gaeb-flat;Vergabeunterlagen/Version 1/20_07_2026_L172.D83
+01030001;Absperrschranke Typ RA2 Aufbau B;260,0;Std;gaeb-flat;Vergabeunterlagen/Version 1/20_07_2026_L172.D83
+01030002;Leitbaken doppelseitig Typ RA2 Aufbau B;280,0;Std;gaeb-flat;Vergabeunterlagen/Version 1/20_07_2026_L172.D83
+01040001;Warnleuchte WL1 Rotlicht auf Absperrschranke anbringen, betreiben, abbauen;400,0;Std;gaeb-flat;Vergabeunterlagen/Version 1/20_07_2026_L172.D83
+01040002;Warnleuchten WL2 Gelblicht auf doppelseitige Leitbake anbr., betr. u. abb.;280,0;Std;gaeb-flat;Vergabeunterlagen/Version 1/20_07_2026_L172.D83
+01050001;Transp. LSA f. Engstellen Typ C;28,0;Std;gaeb-flat;Vergabeunterlagen/Version 1/20_07_2026_L172.D83
+01060001;Kontrolle nach ZTV-SA durchf. Dok. mittels Echtzeitkontrollsystem;28,0;d;gaeb-flat;Vergabeunterlagen/Version 1/20_07_2026_L172.D83
+02000001;Bankett im Randbereich d. Asphaltschichten abtragen;3700,0;m;gaeb-flat;Vergabeunterlagen/Version 1/20_07_2026_L172.D83
+02010001;Längsmarkierung entfernen durchg.Fb.begr.*Breite 0,12 m Farbe*a.Asphaltdecksch. Deckenerneuerung*feinstfräsen Abf.d. Verw.zuf.;4030,0;m;gaeb-flat;Vergabeunterlagen/Version 1/20_07_2026_L172.D83
+02010002;Längsmarkierung entfernen Leitlinie 1zu2*Breite 0,12 m ... Freitext ...*a.Asphaltdecksch. Deckenerneuerung*feinstfräsen Abf.d. Verw.zuf.;570,0;m;gaeb-flat;Vergabeunterlagen/Version 1/20_07_2026_L172.D83
+02010003;Markierungszeichen entfernen sonst.Markierung*a.Asphaltdecksch. Deckenerneuerung*feinstfräsen Abf.d. Verw.zuf.;15,0;m2;gaeb-flat;Vergabeunterlagen/Version 1/20_07_2026_L172.D83
+02010004;Asphalt fräsen ... Freitext ...*... Freitext ... ... Freitext ...*Fahrbahn Fräsasph. verw.*Unebenheit 4 mm;12700,0;m2;gaeb-flat;Vergabeunterlagen/Version 1/20_07_2026_L172.D83
+02010005;Asphalt fräsen ... Freitext ...*... Freitext ... ... Freitext ...*Fahrbahn Fräsasph. verw.*Unebenheit 4 mm;3200,0;m2;gaeb-flat;Vergabeunterlagen/Version 1/20_07_2026_L172.D83
+02020001;Unterlage reinigen gefr. Asphaltsch.*lose Teile aufn. zus. Flächen*selb.aufn.Kehrm.;12700,0;m2;gaeb-flat;Vergabeunterlagen/Version 1/20_07_2026_L172.D83
+02020002;Unterl. reinigen gefr. Asphaltsch. mind. 2,30 m breite Hochdr.- Dreh-Jet-Wasch-Sauganlage;12700,0;m2;gaeb-flat;Vergabeunterlagen/Version 1/20_07_2026_L172.D83
+02020003;Unterlage reinigen gefr. Asphaltsch.*lose Teile aufn. Flächen 400 bis 600 m2 selb.aufn.Kehrm.;3200,0;m2;gaeb-flat;Vergabeunterlagen/Version 1/20_07_2026_L172.D83
+02020004;Unterl. reinigen gefr. Asphaltsch. mind. 2,30 m breite Hochdr.- Dreh-Jet-Wasch-Sauganlage Flächen 400 bis 600  m2;3200,0;m2;gaeb-flat;Vergabeunterlagen/Version 1/20_07_2026_L172.D83
+02030001;Bitumenemulsion aufsprühen ... Freitext ...*Asphalt gefräst Rampenspritzgerät*C60BP4-S Menge 300 g/m2*vor A.deckschicht;9500,0;m2;gaeb-flat;Vergabeunterlagen/Version 1/20_07_2026_L172.D83
+02030002;Bitumenemulsion aufsprühen ... Freitext ...*Asphalt gefräst Rampenspritzgerät*C60BP4-S Menge 300 g/m2*... Freitext ...;3200,0;m2;gaeb-flat;Vergabeunterlagen/Version 1/20_07_2026_L172.D83
+02030003;Bitumenemulsion aufsprühen ... Freitext ...*Asphalt frisch Rampenspritzgerät*C60BP4-S Menge 250 g/m2*... Freitext ...;3200,0;m2;gaeb-flat;Vergabeunterlagen/Version 1/20_07_2026_L172.D83
+02040001;Asphaltbindersch.a. AC 16 B N herst Bk1,8*... Freitext ... Bitumen 50/70*... Freitext ...;470,0;t;gaeb-flat;Vergabeunterlagen/Version 1/20_07_2026_L172.D83
+02040002;Asphaltdecksch. aus AC 11 D N herst ... Freitext ...*... Freitext ... Bitumen 50/70*... Freitext ... ... Freitext ...*... Freitext ...;1270,0;t;gaeb-flat;Vergabeunterlagen/Version 1/20_07_2026_L172.D83
+02040003;Abstumpfungsmaßnahme durchführen LFK 1/3*... Freitext ... Menge 1 kg/m2*maschinell;12700,0;m2;gaeb-flat;Vergabeunterlagen/Version 1/20_07_2026_L172.D83
+02050001;Naht in Asphaltschicht herst. Naht ABS*Längs-/Quernaht Trennscheibe*PmB heiß Dicke ü.4,5-7,5cm;100,0;m;gaeb-flat;Vergabeunterlagen/Version 1/20_07_2026_L172.D83
+02050002;Anschluss a. Fuge m. Fugenm. herst. ... Freitext ...*Deckschicht Tiefe 40 mm*Breite 15 mm ... Freitext ...*Fugenmasse N2;150,0;m;gaeb-flat;Vergabeunterlagen/Version 1/20_07_2026_L172.D83
+02050003;Randabdichtung herstellen Abd. 25/55-55 A*ein Arbeitsgang bis 5 cm;500,0;m;gaeb-flat;Vergabeunterlagen/Version 1/20_07_2026_L172.D83
+02050004;Randabdichtung herstellen Flankenfl. rein.*Abd. 25/55-55 A ein Arbeitsgang*... Freitext ...;150,0;m;gaeb-flat;Vergabeunterlagen/Version 1/20_07_2026_L172.D83
+02060001;Fräs-Verguss-Verfahren Quer- und Längsrisse Vollsperrung;100,0;m;gaeb-flat;Vergabeunterlagen/Version 1/20_07_2026_L172.D83
+02070001;Zulage für den Einbau von Asphalt von Hand im Bereich v. Einbauten u. Zwickeln 0,50 m2 bis 2,50 m2;1,0;St;gaeb-flat;Vergabeunterlagen/Version 1/20_07_2026_L172.D83
+02070002;Erschw. für das Entfernen von Asphaltresten von Hand an Borden / Rinnen mit Vergussmassen;50,0;m;gaeb-flat;Vergabeunterlagen/Version 1/20_07_2026_L172.D83
+02070003;Erschwernisse für das Aufn. der Asphaltbefestigung Breite 20 cm u. Dicke 4 cm;10,0;m;gaeb-flat;Vergabeunterlagen/Version 1/20_07_2026_L172.D83
+02080001;Kontrollprüfst. z. Bohrkernentn.;3,0;St;gaeb-flat;Vergabeunterlagen/Version 1/20_07_2026_L172.D83
+03000001;Bankett im Randbereich d. Asphaltschichten abtragen;3500,0;m;gaeb-flat;Vergabeunterlagen/Version 1/20_07_2026_L172.D83
+03010001;Längsmarkierung entfernen durchg.Fb.begr.*Breite 0,12 m Farbe*a.Asphaltdecksch. Deckenerneuerung*feinstfräsen Abf.d. Verw.zuf.;4250,0;m;gaeb-flat;Vergabeunterlagen/Version 1/20_07_2026_L172.D83
+03010002;Längsmarkierung entfernen Leitlinie 1zu2*Breite 0,12 m ... Freitext ...*a.Asphaltdecksch. Deckenerneuerung*feinstfräsen Abf.d. Verw.zuf.;360,0;m;gaeb-flat;Vergabeunterlagen/Version 1/20_07_2026_L172.D83
+03010003;Markierungszeichen entfernen sonst.Markierung*a.Asphaltdecksch. Deckenerneuerung*feinstfräsen Abf.d. Verw.zuf.;25,0;m2;gaeb-flat;Vergabeunterlagen/Version 1/20_07_2026_L172.D83
+03010004;Asphalt fräsen ... Freitext ...*... Freitext ... ... Freitext ...*Fahrbahn Fräsasph. verw.*Unebenheit 4 mm;12000,0;m2;gaeb-flat;Vergabeunterlagen/Version 1/20_07_2026_L172.D83
+03010005;Asphalt fräsen ... Freitext ...*... Freitext ... ... Freitext ...*Fahrbahn Fräsasph. verw.*Unebenheit 4 mm;3000,0;m2;gaeb-flat;Vergabeunterlagen/Version 1/20_07_2026_L172.D83
+03020001;Unterlage reinigen gefr. Asphaltsch.*lose Teile aufn. zus. Flächen*selb.aufn.Kehrm.;12000,0;m2;gaeb-flat;Vergabeunterlagen/Version 1/20_07_2026_L172.D83
+03020002;Unterl. reinigen gefr. Asphaltsch. mind. 2,30 m breite Hochdr.- Dreh-Jet-Wasch-Sauganlage;12000,0;m2;gaeb-flat;Vergabeunterlagen/Version 1/20_07_2026_L172.D83
+03020003;Unterlage reinigen gefr. Asphaltsch.*lose Teile aufn. Flächen 400 bis 600 m2 selb.aufn.Kehrm.;3000,0;m2;gaeb-flat;Vergabeunterlagen/Version 1/20_07_2026_L172.D83
+03020004;Unterl. reinigen gefr. Asphaltsch. mind. 2,30 m breite Hochdr.- Dreh-Jet-Wasch-Sauganlage Flächen 400 bis 600  m2;3000,0;m2;gaeb-flat;Vergabeunterlagen/Version 1/20_07_2026_L172.D83
+03030001;Bitumenemulsion aufsprühen ... Freitext ...*Asphalt gefräst Rampenspritzgerät*C60BP4-S Menge 300 g/m2*vor A.deckschicht;9000,0;m2;gaeb-flat;Vergabeunterlagen/Version 1/20_07_2026_L172.D83
+03030002;Bitumenemulsion aufsprühen ... Freitext ...*Asphalt gefräst Rampenspritzgerät*C60BP4-S Menge 300 g/m2*... Freitext ...;3000,0;m2;gaeb-flat;Vergabeunterlagen/Version 1/20_07_2026_L172.D83
+03030003;Bitumenemulsion aufsprühen ... Freitext ...*Asphalt frisch Rampenspritzgerät*C60BP4-S Menge 250 g/m2*... Freitext ...;3000,0;m2;gaeb-flat;Vergabeunterlagen/Version 1/20_07_2026_L172.D83
+03040001;Asphaltbindersch.a. AC 16 B N herst Bk1,8*... Freitext ... Bitumen 50/70*... Freitext ...;440,0;t;gaeb-flat;Vergabeunterlagen/Version 1/20_07_2026_L172.D83
+03040002;Asphaltdecksch. aus AC 11 D N herst ... Freitext ...*... Freitext ... Bitumen 50/70*... Freitext ... ... Freitext ...*... Freitext ...;1200,0;t;gaeb-flat;Vergabeunterlagen/Version 1/20_07_2026_L172.D83
+03040003;Abstumpfungsmaßnahme durchführen LFK 1/3*... Freitext ... Menge 1 kg/m2*maschinell;12000,0;m2;gaeb-flat;Vergabeunterlagen/Version 1/20_07_2026_L172.D83
+03050001;Naht in Asphaltschicht herst. Naht ABS*Längs-/Quernaht Trennscheibe*PmB heiß Dicke ü.4,5-7,5cm;100,0;m;gaeb-flat;Vergabeunterlagen/Version 1/20_07_2026_L172.D83
+03050002;Anschluss a. Fuge m. Fugenm. herst. ... Freitext ...*Deckschicht Tiefe 40 mm*Breite 15 mm ... Freitext ...*Fugenmasse N2;150,0;m;gaeb-flat;Vergabeunterlagen/Version 1/20_07_2026_L172.D83
+03050003;Randabdichtung herstellen Abd. 25/55-55 A*ein Arbeitsgang bis 5 cm;500,0;m;gaeb-flat;Vergabeunterlagen/Version 1/20_07_2026_L172.D83
+03050004;Randabdichtung herstellen Flankenfl. rein.*Abd. 25/55-55 A ein Arbeitsgang*... Freitext ...;150,0;m;gaeb-flat;Vergabeunterlagen/Version 1/20_07_2026_L172.D83
+03060001;Fräs-Verguss-Verfahren Quer- und Längsrisse Vollsperrung;100,0;m;gaeb-flat;Vergabeunterlagen/Version 1/20_07_2026_L172.D83
+03070001;Zulage für den Einbau von Asphalt von Hand im Bereich v. Einbauten u. Zwickeln 0,50 m2 bis 2,50 m2;1,0;St;gaeb-flat;Vergabeunterlagen/Version 1/20_07_2026_L172.D83
+03070002;Erschwernisse für das Aufn. der Asphaltbefestigung Breite 20 cm u. Dicke 4 cm;25,0;m;gaeb-flat;Vergabeunterlagen/Version 1/20_07_2026_L172.D83
+03080001;Kontrollprüfst. z. Bohrkernentn.;2,0;St;gaeb-flat;Vergabeunterlagen/Version 1/20_07_2026_L172.D83

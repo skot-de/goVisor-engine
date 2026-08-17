@@ -1,0 +1,131 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+01.10;Baustelleneinrichtung;1,0;psch;gaeb-flat;leistungsbeschreibungen/300.09_LV_Vorhangfassade.D83
+01.20;Baustelleneinrichtung vorhalten;14,0;StWo;gaeb-flat;leistungsbeschreibungen/300.09_LV_Vorhangfassade.D83
+01.30;Örtliches Aufmaß;1,0;psch;gaeb-flat;leistungsbeschreibungen/300.09_LV_Vorhangfassade.D83
+01.40;Erstellen der Werk- und Montageplanung;1,0;psch;gaeb-flat;leistungsbeschreibungen/300.09_LV_Vorhangfassade.D83
+01.50;Prüffähige statische Berechnung;1,0;psch;gaeb-flat;leistungsbeschreibungen/300.09_LV_Vorhangfassade.D83
+01.60;Nachweise Wärmedurchgangskoeffizient;1,0;St;gaeb-flat;leistungsbeschreibungen/300.09_LV_Vorhangfassade.D83
+01.70;Fassadenmuster 5 m²;1,0;St;gaeb-flat;leistungsbeschreibungen/300.09_LV_Vorhangfassade.D83
+01.80;Handmuster Lüftungsblech Laibungen;1,0;St;gaeb-flat;leistungsbeschreibungen/300.09_LV_Vorhangfassade.D83
+01.90;Handmuster Lüftungsgitter Fassade;1,0;St;gaeb-flat;leistungsbeschreibungen/300.09_LV_Vorhangfassade.D83
+01.100;Endreinigung Fassade;1,0;Psch;gaeb-flat;leistungsbeschreibungen/300.09_LV_Vorhangfassade.D83
+0201.10;Mineralische Wärmedämmung, d = 160mm Bereich Brettschichtholzwände- CLT;345,0;m²;gaeb-flat;leistungsbeschreibungen/300.09_LV_Vorhangfassade.D83
+0201.20;Mineralische Wärmedämmung, d = 200mm Bereich Stahlbetonwände;1035,0;m²;gaeb-flat;leistungsbeschreibungen/300.09_LV_Vorhangfassade.D83
+0201.30;Sockeldämmung XPS 140mm;55,0;m²;gaeb-flat;leistungsbeschreibungen/300.09_LV_Vorhangfassade.D83
+0201.40;Mineralische Wärmedämmung, d = 160mm Bereich: Notausstieg und Montageschacht Hubbühne;68,0;m²;gaeb-flat;leistungsbeschreibungen/300.09_LV_Vorhangfassade.D83
+0201.50;Nachkaschierung Dämmung Eckbereich;70,0;m²;gaeb-flat;leistungsbeschreibungen/300.09_LV_Vorhangfassade.D83
+0202.10;UK Metall = Edelstahl-Wandwinkel + Aluminium-Tragprofil;1380,0;m²;gaeb-flat;leistungsbeschreibungen/300.09_LV_Vorhangfassade.D83
+0202.20;UK Holz für VHF an CLT-Aussenwand;345,0;m²;gaeb-flat;leistungsbeschreibungen/300.09_LV_Vorhangfassade.D83
+0202.30;UK Holz für VHF an STB-Außenwand;1035,0;m²;gaeb-flat;leistungsbeschreibungen/300.09_LV_Vorhangfassade.D83
+0202.40;Ausfälzung Konterlattung;55,0;m²;gaeb-flat;leistungsbeschreibungen/300.09_LV_Vorhangfassade.D83
+0202.50;UK Schwärzen Fassadenbekleidung (3),  Bereich Eternitfassade;110,0;m²;gaeb-flat;leistungsbeschreibungen/300.09_LV_Vorhangfassade.D83
+0202.60;Verstärkung der Holz-UK;12,0;St;gaeb-flat;leistungsbeschreibungen/300.09_LV_Vorhangfassade.D83
+0203.10;Fassadenbekleidung (1) Holz mit UV- und Witterungsschutz (Umkleideriegel), braun;415,0;m²;gaeb-flat;leistungsbeschreibungen/300.09_LV_Vorhangfassade.D83
+0203.20;Fassadenbekleidung (2) Holz mit Vergrauungslasur - Badehalle;900,0;m²;gaeb-flat;leistungsbeschreibungen/300.09_LV_Vorhangfassade.D83
+0203.30;Befestigung Holzverkleidung, Startklammern;1,0;psch;gaeb-flat;leistungsbeschreibungen/300.09_LV_Vorhangfassade.D83
+0203.50;Anarbeiten Holzfassade an PR-Fassade (horizontal und vertikal);150,0;m;gaeb-flat;leistungsbeschreibungen/300.09_LV_Vorhangfassade.D83
+0203.60;Anarbeiten Holzfassade an Fassadenöffnungen horizontal;40,0;m;gaeb-flat;leistungsbeschreibungen/300.09_LV_Vorhangfassade.D83
+0203.70;Anarbeiten Holzfassade an Fassadenöffnungen vertikal;100,0;m;gaeb-flat;leistungsbeschreibungen/300.09_LV_Vorhangfassade.D83
+0203.80;Anarbeiten Holzfassade an PR-Fassade/ Fassadenöffnungen, Schrägschnitte;25,0;m;gaeb-flat;leistungsbeschreibungen/300.09_LV_Vorhangfassade.D83
+0203.90;Anarbeiten Holzfassade an Attika;280,0;m;gaeb-flat;leistungsbeschreibungen/300.09_LV_Vorhangfassade.D83
+0203.100;Anarbeiten Holzfassade an Fensterbank;22,0;m;gaeb-flat;leistungsbeschreibungen/300.09_LV_Vorhangfassade.D83
+0203.110;Anarbeiten Holzfassade an Sockelbereich;95,0;m;gaeb-flat;leistungsbeschreibungen/300.09_LV_Vorhangfassade.D83
+0203.120;Anarbeiten Holzfassade an Übergangsprofil Fassadenteilung;80,0;m;gaeb-flat;leistungsbeschreibungen/300.09_LV_Vorhangfassade.D83
+0203.130;Fassadenbekleidung (3) Faserzement - Sockelbereich und Fassade;110,0;m²;gaeb-flat;leistungsbeschreibungen/300.09_LV_Vorhangfassade.D83
+0203.140;Nieten/Verbindungsmittel Sockelbekleidung;110,0;m²;gaeb-flat;leistungsbeschreibungen/300.09_LV_Vorhangfassade.D83
+0203.150;Zulage zu Fassadenbekleidung (3) Faserzement, Ausschnitte herstellen;10,0;m²;gaeb-flat;leistungsbeschreibungen/300.09_LV_Vorhangfassade.D83
+0203.160;EPDM Dichtungsbahn;120,0;m²;gaeb-flat;leistungsbeschreibungen/300.09_LV_Vorhangfassade.D83
+0203.170;EPDM Dichtungsband;170,0;m;gaeb-flat;leistungsbeschreibungen/300.09_LV_Vorhangfassade.D83
+0203.180;Fassaden-Eckprofil vertikal mit Unterkonstruktion;55,0;m;gaeb-flat;leistungsbeschreibungen/300.09_LV_Vorhangfassade.D83
+0203.190;Fassadenbekleidung nachträglich auf Tapetentür anbringen;3,0;St;gaeb-flat;leistungsbeschreibungen/300.09_LV_Vorhangfassade.D83
+0203.200;Nachbeschichtung der Fassadenbekleidung (1) Holz mit UV- und Witterungsschutz (Umkleideriegel), inkl. Vorbehandlung;50,0;m²;gaeb-flat;leistungsbeschreibungen/300.09_LV_Vorhangfassade.D83
+0203.210;Nachbeschichtung Fassadenbekleidung (2) Holz mit Vergrauungslasur - Badehalle, inkl. Vorbehandlung;100,0;m²;gaeb-flat;leistungsbeschreibungen/300.09_LV_Vorhangfassade.D83
+0204.10;Sockelabschluss Holzverkleidung = Aluminium-Lüftungsblech;110,0;m;gaeb-flat;leistungsbeschreibungen/300.09_LV_Vorhangfassade.D83
+0204.20;Sockelabschluss Faserzementverkleidung = Aluminium-Lüftungsblech;110,0;m;gaeb-flat;leistungsbeschreibungen/300.09_LV_Vorhangfassade.D83
+0204.30;Übergangsprofil Fassadenteilung/ Abschluss;80,0;m;gaeb-flat;leistungsbeschreibungen/300.09_LV_Vorhangfassade.D83
+0204.40;oberer PR-Fassadenanschluss = Aluminium-Lüftungsblech;115,0;m;gaeb-flat;leistungsbeschreibungen/300.09_LV_Vorhangfassade.D83
+0204.50;seitlicher PR-Fassadenanschluss = Aluminiumblech;35,0;m;gaeb-flat;leistungsbeschreibungen/300.09_LV_Vorhangfassade.D83
+0204.60;seitliche Laibungsverkleidung = Aluminiumblech;90,0;m;gaeb-flat;leistungsbeschreibungen/300.09_LV_Vorhangfassade.D83
+0204.70;seitliche Fassadenverkleidung (Lüftungsblech)= Aluminiumblech;5,0;m;gaeb-flat;leistungsbeschreibungen/300.09_LV_Vorhangfassade.D83
+0204.80;Fassaden-Tropfblech aus Aluminium;115,0;m;gaeb-flat;leistungsbeschreibungen/300.09_LV_Vorhangfassade.D83
+0204.90;Lüftungsgitter Fassade mit vorgesetzten Holzlamellen, Abmessung ca. 2,00m x 2,60;2,0;St;gaeb-flat;leistungsbeschreibungen/300.09_LV_Vorhangfassade.D83
+0204.100;Lüftungsgitter Fassade mit vorgesetzten Holzlamellen, Abmessung ca. 3,50m x 1,50;2,0;St;gaeb-flat;leistungsbeschreibungen/300.09_LV_Vorhangfassade.D83
+0205.10;"Fassadenteilung für Außentüren als ""Tapetentür""";3,0;St;gaeb-flat;leistungsbeschreibungen/300.09_LV_Vorhangfassade.D83
+0205.20;Fassadendurchdringungen rund bis d = 50mm;12,0;St;gaeb-flat;leistungsbeschreibungen/300.09_LV_Vorhangfassade.D83
+0205.30;Fassadendurchdringungen rund bis d = 100mm;28,0;St;gaeb-flat;leistungsbeschreibungen/300.09_LV_Vorhangfassade.D83
+0205.40;Fassadendurchdringungen rund bis d = 200mm;2,0;St;gaeb-flat;leistungsbeschreibungen/300.09_LV_Vorhangfassade.D83
+0205.50;Rechteckige Ausschnitte bis Größe 0,05 m²;1,0;St;gaeb-flat;leistungsbeschreibungen/300.09_LV_Vorhangfassade.D83
+0205.60;Rechteckige Ausschnitte bis Größe 0,10 m²;1,0;St;gaeb-flat;leistungsbeschreibungen/300.09_LV_Vorhangfassade.D83
+0205.70;Schrägschnitte;25,0;m;gaeb-flat;leistungsbeschreibungen/300.09_LV_Vorhangfassade.D83
+0205.80;Rechteckige Ausschnitte bis Öffnungsgröße ca. 200 x 100mm;10,0;St;gaeb-flat;leistungsbeschreibungen/300.09_LV_Vorhangfassade.D83
+0205.90;Rechteckige Ausschnitte bis Größe ca. 2,0m x 1,0m für digitale Anzeige (STeele);1,0;St;gaeb-flat;leistungsbeschreibungen/300.09_LV_Vorhangfassade.D83
+0205.100;Rechteckige Aussparung Fassade bis ca. 2,00m x 2,60m für Lüftungsgitter;2,0;St;gaeb-flat;leistungsbeschreibungen/300.09_LV_Vorhangfassade.D83
+0205.110;Rechteckige Ausschnitte Fassade bis ca. 3,50 x 1,50m für Lüftungsgitter;2,0;St;gaeb-flat;leistungsbeschreibungen/300.09_LV_Vorhangfassade.D83
+0205.120;Rechteckige Aussparung bis Größe 1,25 x 0,30m für Anschluss Aussentreppe Tapetentür Lüftung;1,0;St;gaeb-flat;leistungsbeschreibungen/300.09_LV_Vorhangfassade.D83
+03.1;Helfer;10,0;h;gaeb-flat;leistungsbeschreibungen/300.09_LV_Vorhangfassade.D83
+03.2;Facharbeiter;10,0;h;gaeb-flat;leistungsbeschreibungen/300.09_LV_Vorhangfassade.D83
+10;Baustelle einrichten, räumen.;1,0;psch;gaeb;leistungsbeschreibungen/300.09_LV_Vorhangfassade_V32.X83
+20;Baustelleneinrichtung aus Vorposition;14,0;StWo;gaeb;leistungsbeschreibungen/300.09_LV_Vorhangfassade_V32.X83
+30;Die Abmessungen der gesamten Fassade und Konstruktionen sind durch den AN vor Ort in eigener Veranwortung durch ein Aufmaß mit einen geeigneten Messverfahren zu nehmen und in einem Planwerk einschl. der Stahl-Glas-Fassadenelemente (AN Metallbau) darzustellen. Die Planunterlagen des AN Metallbau werd;1,0;psch;gaeb;leistungsbeschreibungen/300.09_LV_Vorhangfassade_V32.X83
+40;Erstellen einer kompletten Werk- und Montageplanung für;1,0;psch;gaeb;leistungsbeschreibungen/300.09_LV_Vorhangfassade_V32.X83
+50;Basierend auf den Werk-und Detailplanung des Architekten Erstellen von prüffähigen statischen Berechnungen;1,0;psch;gaeb;leistungsbeschreibungen/300.09_LV_Vorhangfassade_V32.X83
+60;Aufstellen des Nachweises für die Einhaltung des mind.;1,0;St;gaeb;leistungsbeschreibungen/300.09_LV_Vorhangfassade_V32.X83
+70;Herstellen eines Fassadenmusters im Maßstab 1:1 mit einer;1,0;St;gaeb;leistungsbeschreibungen/300.09_LV_Vorhangfassade_V32.X83
+80;Herstellen eines Handmusters im Maßstab 1:1;1,0;St;gaeb;leistungsbeschreibungen/300.09_LV_Vorhangfassade_V32.X83
+90;Herstellen eines Handmusters im Maßstab 1:1 mit einer;1,0;St;gaeb;leistungsbeschreibungen/300.09_LV_Vorhangfassade_V32.X83
+100;Mit dieser Position werden die Kosten für die Reinigungs- arbeiten an der Fassade gemäß gemäß Beschreibung ZTV  A7.2.7 - Ausführung und Montage, abgegolten.;1,0;Psch;gaeb;leistungsbeschreibungen/300.09_LV_Vorhangfassade_V32.X83
+10;Fassadendämmplatten aus Steinwolle gem. DIN EN 13162, nicht brennbar A1, für vorgehängte Fassadenkonstruktionen mit folgenden Eigenschaften:;345,0;m²;gaeb;leistungsbeschreibungen/300.09_LV_Vorhangfassade_V32.X83
+20;Fassadendämmplatten aus Steinwolle gem. DIN EN 13162, nicht brennbar A1, für vorgehängte Fassadenkonstruktionen mit folgenden Eigenschaften:;1035,0;m²;gaeb;leistungsbeschreibungen/300.09_LV_Vorhangfassade_V32.X83
+30;"Liefern und Einbauen einer Perimeterdämmung, einlagig als außenliegende Dämmung von senkrechten Wänden gegen Erdreich gem. den allgemeinen bauaufsichtlichen Zulassungen;";55,0;m²;gaeb;leistungsbeschreibungen/300.09_LV_Vorhangfassade_V32.X83
+40;Fassadendämmung für Vorhangfassade:;68,0;m²;gaeb;leistungsbeschreibungen/300.09_LV_Vorhangfassade_V32.X83
+50;Nachkaschierung im Bereich der Fassadenecken.;70,0;m²;gaeb;leistungsbeschreibungen/300.09_LV_Vorhangfassade_V32.X83
+10;Metallunterkonstruktion für die Befestigung der Holzunterkonstruktion aus Folgeposition;1380,0;m²;gaeb;leistungsbeschreibungen/300.09_LV_Vorhangfassade_V32.X83
+20;Holzunterkonstruktion für die Befestigung der Vorhangfassade im Bereich der Brettsperrholz-Außenwände, bestehend aus:;345,0;m²;gaeb;leistungsbeschreibungen/300.09_LV_Vorhangfassade_V32.X83
+30;im Bereich der Stahlbeton-Außenwände;1035,0;m²;gaeb;leistungsbeschreibungen/300.09_LV_Vorhangfassade_V32.X83
+40;im Bereich VHF vor Stahlbeton-Aussenwand für Befestigung Sockelbekleidung.;55,0;m²;gaeb;leistungsbeschreibungen/300.09_LV_Vorhangfassade_V32.X83
+50;Nachträgliche Beschichtung der Holzunterkonstruktion ,;110,0;m²;gaeb;leistungsbeschreibungen/300.09_LV_Vorhangfassade_V32.X83
+60;zur Befestigung aller Fallleitungenmittels Rohrschelle,;12,0;St;gaeb;leistungsbeschreibungen/300.09_LV_Vorhangfassade_V32.X83
+10;Hinterlüftete Außenwandbekleidung nach DIN 18516:;415,0;m²;gaeb;leistungsbeschreibungen/300.09_LV_Vorhangfassade_V32.X83
+20;Hinterlüftete Außenwandbekleidung nach DIN 18516:;900,0;m²;gaeb;leistungsbeschreibungen/300.09_LV_Vorhangfassade_V32.X83
+30;"Befestigung der Holzverkleidungen aus Vorpositionen;";1,0;psch;gaeb;leistungsbeschreibungen/300.09_LV_Vorhangfassade_V32.X83
+50;Exakte Anarbeitung der Fassadenbekleidung aus Holz an Pfosten-Riegelkonstruktionen.;150,0;m;gaeb;leistungsbeschreibungen/300.09_LV_Vorhangfassade_V32.X83
+60;Exakte horizontale Anarbeitung der Fassadenbekleidung aus Holz an Fassadenöffnungen.;40,0;m;gaeb;leistungsbeschreibungen/300.09_LV_Vorhangfassade_V32.X83
+70;Exakte vertikale Anarbeitung der Fassadenbekleidung aus Holz an Fassadenöffnungen.;100,0;m;gaeb;leistungsbeschreibungen/300.09_LV_Vorhangfassade_V32.X83
+80;Schrägschnitt der Fassadenprofile inkl. UK,;25,0;m;gaeb;leistungsbeschreibungen/300.09_LV_Vorhangfassade_V32.X83
+90;Exakte Anarbeitung der Fassadenbekleidung aus Holz an Attikakonstruktionen.;280,0;m;gaeb;leistungsbeschreibungen/300.09_LV_Vorhangfassade_V32.X83
+100;Exakte Anarbeitung der Fassadenbekleidung aus Holz an Fensterbank.;22,0;m;gaeb;leistungsbeschreibungen/300.09_LV_Vorhangfassade_V32.X83
+110;Unterer Abschluss der Fassadenbekleidung aus Holz als exakte horizontale Anarbeitung an Sockelbereich.;95,0;m;gaeb;leistungsbeschreibungen/300.09_LV_Vorhangfassade_V32.X83
+120;Brettenden der Holzfassade sind 15° zu Hinterschneiden,;80,0;m;gaeb;leistungsbeschreibungen/300.09_LV_Vorhangfassade_V32.X83
+130;Hinterlüftete Sockelbekleidung aus großformatigen, dekorativen Fassadentafeln aus Faserzement, d = 12mm, Brandverhalten A2-s1 nicht brennbar, Beschichtung als Graffitti-Schutz gegen Farb- und Sprühlacke, vertikale/ horizontale Tafelanordnung an Traglattung aus Vorposition (siehe Einteilung in den Fa;110,0;m²;gaeb;leistungsbeschreibungen/300.09_LV_Vorhangfassade_V32.X83
+140;sichtbare Befestigung auf Holz-UK für Fassadenbekleidung aus Vorposition;110,0;m²;gaeb;leistungsbeschreibungen/300.09_LV_Vorhangfassade_V32.X83
+150;Zulage für die Herstellung von Ausschnitten in die Fassadenbekleidung aus Faserzement,;10,0;m²;gaeb;leistungsbeschreibungen/300.09_LV_Vorhangfassade_V32.X83
+160;Äußere Abdichtung im Sockelbereich mittels dampfdiffusionsoffener, wind-u. regendichter Dichtungsbahn aus EPDM mit folgenden Eigenschaften:;120,0;m²;gaeb;leistungsbeschreibungen/300.09_LV_Vorhangfassade_V32.X83
+170;Äußere Abdichtung mittels dampfdiffusionsoffener, wind- u. regendichter Dichtungsbahn aus EPDM Kautschuk mit folgenden Eigenschaften:;170,0;m;gaeb;leistungsbeschreibungen/300.09_LV_Vorhangfassade_V32.X83
+180;Als 45° gekantetes Aluminium-Blech,;55,0;m;gaeb;leistungsbeschreibungen/300.09_LV_Vorhangfassade_V32.X83
+190;"Fassadenbekleidung aus Vorposition ""Fassadenbekleidung Holz""";3,0;St;gaeb;leistungsbeschreibungen/300.09_LV_Vorhangfassade_V32.X83
+200;Nachbeschichtung mit:;50,0;m²;gaeb;leistungsbeschreibungen/300.09_LV_Vorhangfassade_V32.X83
+210;Nachbeschichtung mit:;100,0;m²;gaeb;leistungsbeschreibungen/300.09_LV_Vorhangfassade_V32.X83
+10;"Aluminium-Lüftungsblech für den unteren Abschluss der Holzverkleidung im Sockelbereich; Oberfläche pulverbeschichtet im RAL-Farbton nach Wahl des AG; inkl. Voranodisierung; d = 2 mm";110,0;m;gaeb;leistungsbeschreibungen/300.09_LV_Vorhangfassade_V32.X83
+20;"Aluminium-Lüftungsblech für unteren Abschluss der Faserzementverkleidung im Sockelbereich; Oberfläche pulverbeschichtet im RAL-Farbton nach Wahl des AG; inkl. Voranodisierung; d = 3 mm";110,0;m;gaeb;leistungsbeschreibungen/300.09_LV_Vorhangfassade_V32.X83
+30;Aluminiumprofil;80,0;m;gaeb;leistungsbeschreibungen/300.09_LV_Vorhangfassade_V32.X83
+40;"Aluminium-Lüftungsblech für den oberen Anschluss an die Pfosten-Riegel-Fassade; Oberfläche pulverbeschichtet im RAL-Farbton nach Wahl des AG; inkl. Voranodisierung; Hinterlüft./Querschnitt > 50 cm²/m; gemäß DIN 18516-1";115,0;m;gaeb;leistungsbeschreibungen/300.09_LV_Vorhangfassade_V32.X83
+50;"Aluminiumblech für den seitlichen Anschluss an die Pfosten-Riegel-Fassade; Oberfläche: pulverbeschichtet im RAL-Farbton nach Wahl des AG, inkl. Voranodisierung; UK durch Winkel an Pfosten-Riegel-Fassade zusätzlich seitlich über Niete befestigt";35,0;m;gaeb;leistungsbeschreibungen/300.09_LV_Vorhangfassade_V32.X83
+60;"Aluminiumblech für den seitlichen Fensteranschluss; Oberfläche pulverbeschichtet im RAL-Farbton nach Wahl des AG; inkl. Voranodisierung";90,0;m;gaeb;leistungsbeschreibungen/300.09_LV_Vorhangfassade_V32.X83
+70;"Aluminiumblech für den seitlichen Fassadenanschluss; Oberfläche pulverbeschichtet im RAL-Farbton nach Wahl des AG; inkl. Voranodisierung";5,0;m;gaeb;leistungsbeschreibungen/300.09_LV_Vorhangfassade_V32.X83
+80;Aluminiumprofil;115,0;m;gaeb;leistungsbeschreibungen/300.09_LV_Vorhangfassade_V32.X83
+90;Außenluftgitter bestehend aus  Maschendrahtblech oder Fliegengitter zur Sicherung RLT-Kanal vor Insekten, Ausführung und Luftwiederstand gemäß Angaben TGA,;2,0;St;gaeb;leistungsbeschreibungen/300.09_LV_Vorhangfassade_V32.X83
+100;Fortluftgitter bestehend aus  Maschendrahtblech oder Fliegengitter zur Sicherung RLT-Kanal vor Insekten, Ausführung und Luftwiederstand gemäß Angaben TGA,;2,0;St;gaeb;leistungsbeschreibungen/300.09_LV_Vorhangfassade_V32.X83
+10;Abrechnung: 1 Stück = alle notwendigen Schnitte für 1 Tür;3,0;St;gaeb;leistungsbeschreibungen/300.09_LV_Vorhangfassade_V32.X83
+20;"Erstellen runder Ausschnitte (Aussparungen) in der Fassadenfläche bis 50mm Durchmesser für bauseitige Leistungen; Die Ausschnitte müssen min. 5mm größer als das durchdringende Bauteil sein.";12,0;St;gaeb;leistungsbeschreibungen/300.09_LV_Vorhangfassade_V32.X83
+30;bis 100mm Durchmesser;28,0;St;gaeb;leistungsbeschreibungen/300.09_LV_Vorhangfassade_V32.X83
+40;bis 200mm Durchmesser;2,0;St;gaeb;leistungsbeschreibungen/300.09_LV_Vorhangfassade_V32.X83
+50;"Erstellen rechteckiger Ausschnitte bis Größe 0,05 m² in der Fassadenfläche; Die Ausschnitte müssen min. 5 mm größer als das durchdringende Bauteil sein.";1,0;St;gaeb;leistungsbeschreibungen/300.09_LV_Vorhangfassade_V32.X83
+60;bis Größe 0,10 m²;1,0;St;gaeb;leistungsbeschreibungen/300.09_LV_Vorhangfassade_V32.X83
+70;Schrägschnitt der Fassadenprofile inkl. UK,;25,0;m;gaeb;leistungsbeschreibungen/300.09_LV_Vorhangfassade_V32.X83
+80;Erstellen rechteckiger Ausschnitte bis;10,0;St;gaeb;leistungsbeschreibungen/300.09_LV_Vorhangfassade_V32.X83
+90;Erstellen eines rechteckigen Ausschnitts bis;1,0;St;gaeb;leistungsbeschreibungen/300.09_LV_Vorhangfassade_V32.X83
+100;Erstellen einer rechteckigen Aussparung bis;2,0;St;gaeb;leistungsbeschreibungen/300.09_LV_Vorhangfassade_V32.X83
+110;Erstellen einer rechteckigen Aussparung bis;2,0;St;gaeb;leistungsbeschreibungen/300.09_LV_Vorhangfassade_V32.X83
+120;Erstellen eines rechteckigen Ausschnitts/ Aussparung bis  max.: Größe ca.: 1,25m x 0,30m;1,0;St;gaeb;leistungsbeschreibungen/300.09_LV_Vorhangfassade_V32.X83
+1;Stundenlohnsatz Helfer;10,0;h;gaeb;leistungsbeschreibungen/300.09_LV_Vorhangfassade_V32.X83
+2;Stundenlohnsatz Facharbeiter;10,0;h;gaeb;leistungsbeschreibungen/300.09_LV_Vorhangfassade_V32.X83

@@ -1,0 +1,15 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+10;Vorhandene Verkleidung aus Aluminiumblech im Sturzbereich oberhalb der bestehenden Pfosten-Riegel-Fassade vollst;190,0;m;gaeb;3941717.x83
+10;Neue Sturzverkleidung im Bereich oberhalb der bestehenden Pfosten-Riegel-Fassade liefern und fachgerecht montieren.;190,0;m;gaeb;3941717.x83
+10;Au;460,0;m2;gaeb;3941717.x83
+10;Hubarbeitsb;2,0;St;gaeb;3941717.x83
+10;Meister / Vorarbeiter / -in;20,0;h;gaeb;3941717.x83
+20;Facharbeiter / in;20,0;h;gaeb;3941717.x83
+30;Helfer / -in;20,0;h;gaeb;3941717.x83
+1.10;Demontage Sturzverkleidung aus Aluminiumblech;190,0;m;gaeb-flat;3941718.d83
+2.10;Sturzverkleidung Aluminiumblech mit Austritt Zip-Screen;190,0;m;gaeb-flat;3941718.d83
+3.10;ZIP-Screen -? außenliegender textiler Sonnenschutz;460,0;m2;gaeb-flat;3941718.d83
+4.10;Hubarbeitsbühne / Steiger, Ausladung mind. 20 m;2,0;St;gaeb-flat;3941718.d83
+5.10;Meister / Vorarbeiter / -in;20,0;h;gaeb-flat;3941718.d83
+5.20;Facharbeiter / -in;20,0;h;gaeb-flat;3941718.d83
+5.30;Helfer / -in;20,0;h;gaeb-flat;3941718.d83

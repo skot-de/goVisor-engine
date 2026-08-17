@@ -1,0 +1,50 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+0001;Bereitstellung, Betrieb, Vorhaltung und Rückbau aller für die;1,0;psch;gaeb;3936889.x83
+0001;Glas/Glas-Modul, min. 2x2mm antireflexbeschichtetes Glas,;161,0;St;gaeb;3936889.x83
+0002;3-phasiger Wechselrichter mit folgenden technischen Daten:;1,0;St;gaeb;3936889.x83
+0003;3-phasiger Hybrid-Wechselrichter mit folgenden technischen Daten:;1,0;St;gaeb;3936889.x83
+0004;Hochvolt Batteriespeicher mit einer nutzbaren Speicherkapazität von mindestens 60 kWh.;1,0;St;gaeb;3936889.x83
+0005;Automatisch EIN- und AUS-schaltender Feuerwehrschalter für 4 MPPT;2,0;St;gaeb;3936889.x83
+0006;PV-Steckverbindersatz (1 Paar, bestehend aus Stecker und Buchse) passend und zugelassen für Modulstecker/ -buchse zur Verbindung der Solarmodule mit den Stringleitungen.;40,0;St;gaeb;3936889.x83
+0001;Schutzisolierte, typgeprüfte Niederspannungs-Schaltanlage als a.P. Wandverteilung nach DIN EN 61 439 Teil 3.;1,0;St;gaeb;3936889.x83
+0002;Lasttrennschalter DIN EN IEC 60947-3 (VDE 0660-107), als Hauptschalter, gekapselt, 4-polig, Bemessungsbetriebsspannung 690 V AC, in Festeinbautechnik, mit Handantrieb, zur Montage auf Tragschiene DIN EN 60715 (VDE 0660-520), fingersicher DIN EN 50274 (VDE 0660-514), Gebrauchskategorie AC-21, Bemessu;1,0;St;gaeb;3936889.x83
+0003;Anschlussblockklemme, 5-polig, für Leiterquerschnitt bis 16 mm2, mit Schraubbefestigung, mit Berührungsschutzabdeckung, einschl. systemgebundenem Zubehör mit dauerhafter Anschlussbezeichnung.;2,0;St;gaeb;3936889.x83
+0004;Anschlussblockklemme, 5-polig, für Leiterquerschnitt bis 50 mm2, mit Schraubbefestigung, mit Berührungsschutzabdeckung, einschl. systemgebundenem Zubehör mit dauerhafter Anschlussbezeichnung.;1,0;St;gaeb;3936889.x83
+0005;Überspannungsschutzgerät DIN EN 61643-11 (VDE 0675-6-11), Typ 2, Einbauort am oder in der Nähe des Speisepunktes der elektrischen Anlage, Modulbauweise aus Basis- und Schutzmodul, als Reiheneinbaugerät, Maße DIN 43880, mit Funktionsanzeige und potentialfreiem Kontakt für Fernanzeige, Bemessungsbetri;1,0;St;gaeb;3936889.x83
+0006;Leistungsschalter in Kompaktbauweise zum Schutz von Leitungen, Kabeln und elektrischen Anlagen gegen Überlast und Kurzschluss, einschließlich passendem Unterspannungsauslöser. Der Unterspannungsauslöser bewirkt das automatische Ausschalten des Leistungsschalters bei Ausfall oder Unterschreitung der ;1,0;St;gaeb;3936889.x83
+0007;Netzgerät zur Versorgung des Unterspannungsauslösers eines Leistungsschalters mit 24 V DC Steuerspannung. Ausführung für Montage auf DIN-Tragschiene in Niederspannungsverteilungen. Geeignet für Dauerbetrieb mit stabilisierter Ausgangsspannung und integrierten Schutzfunktionen.;1,0;St;gaeb;3936889.x83
+0008;Fehlerstrom-Schutzschalter zur Erfassung von Wechsel- und pulsierenden Gleichfehlerströmen gemäß Typ A. Gerät zum Schutz von Personen, Anlagen und Sachwerten bei Fehlerströmen gegen Erde sowie zur Reduzierung des Brandrisikos durch Isolationsfehler.;2,0;St;gaeb;3936889.x83
+0009;Leitungsschutzschalter DIN EN 60898-1, als Reiheneinbaugerät, Maße DIN 43880, fingersicher DIN EN 50274,;1,0;St;gaeb;3936889.x83
+0010;Leitungsschutzschalter DIN EN 60898-1,;1,0;St;gaeb;3936889.x83
+0011;Leitungsschutzschalter DIN EN 60898-1, als Reiheneinbaugerät, Maße DIN 43880, fingersicher DIN EN 50274,;2,0;St;gaeb;3936889.x83
+0012;Lieferung, Montage und betriebsfertige Inbetriebnahme eines Energiemanagementsystems (EMS) für die datenbasierte, Steuerung und Optimierung des Energiesystems mit Stromspeicher und Wechselrichter.;1,0;St;gaeb;3936889.x83
+0013;Netzentkupplungsrelais zum NA-Schutz nach VDE-AR-N 4105:2011-06 und 4105:2018-11, VDE-AR-N 4110:2018-11, VDE-AR-N 4120:2018-11, bdew-Richtlinie und DIN V VDE 0126-1-1;1,0;St;gaeb;3936889.x83
+0001;Gummischlauchleitung DIN EN 50618 (VDE 0283-618);900,0;m;gaeb;3936889.x83
+0002;Gummischlauchleitung DIN EN 50525-2-21 (VDE 0285-525-2-21) H07RN-F 5 G 16, Cu-Zahl 768.;15,0;m;gaeb;3936889.x83
+0003;Kabel DIN VDE 0276-603 (VDE 0276-603) NYCWY 4 x 50 SM/25, Cu-Zahl 2203.;12,0;m;gaeb;3936889.x83
+0004;Kunststoffaderleitung DIN EN 50525-2-31 (VDE 0285-525-2-31), H07V-K 1 x 6, Cu-Zahl 58;40,0;m;gaeb;3936889.x83
+0005;Kunststoffaderleitung DIN EN 50525-2-31 (VDE 0285-525-2-31), H07V-K 1 x 16, Cu-Zahl 154;200,0;m;gaeb;3936889.x83
+0006;Mantelleitung NYM-J 3 x 1,5 mm² nach DIN VDE 0250-204 (VDE 0250-204),;10,0;m;gaeb;3936889.x83
+0007;Datenkabel für den Horizontal- und Steigbereich DIN EN 50288-9-1 (VDE 0819-9-1), Kategorie 7 Index A tiefgestellt DIN EN 50173-1 (VDE 0800-173-1), geschirmt, Trennklasse d DIN EN 50174-2 (VDE 0800-174-2), für PoE, Typ 3, Leitungswiderstand 0,065 Ohm/m und Kabeldurchmesser 0,007 m DIN EN 50174-2 (VDE;30,0;m;gaeb;3936889.x83
+0008;Patchkabel bis 2m;1,0;St;gaeb;3936889.x83
+0001;Bereitstellung und Montage eines Funk-Rundsteuer-Empfängers des EVU, inkl. Anforderung und ggf. Abholung beim EVU. Realisierung und Parametrierung der Wirkleistungsbegrenzung nach Vorgaben des EVU inkl. Funktionstest und Protokollführung.;1,0;psch;gaeb;3936889.x83
+0001;Herstellen des Potentialausgleichs der bauseitigen PV-Unterkonstruktion auf Gründach. Alle Modulreihen sind dauerhaft leitfähig miteinander zu verbinden. Einschließlich aller erforderlichen Klemmen, Verbinder und Befestigungsmaterialien. Erdungs- und Potentialausgleichsleitungen sind nicht Bestandte;30,0;St;gaeb;3936889.x83
+0002;Geteilte Kabelabdichtung, auf die Schwanenhalsdurchführung abgestimmte und entsprechend der Kabelbelegung angefertigte Ringraumdichtung, zur nachträglichen Abdichtung.;1,0;St;gaeb;3936889.x83
+0003;Profilschiene;5,0;St;gaeb;3936889.x83
+0004;Profilschiene;5,0;St;gaeb;3936889.x83
+0005;Bügelschelle;10,0;St;gaeb;3936889.x83
+0006;Bügelschelle;80,0;St;gaeb;3936889.x83
+0007;Bügelschelle;80,0;St;gaeb;3936889.x83
+0008;Bügelschelle;10,0;St;gaeb;3936889.x83
+0009;Kabelrinne für Kabelträgersystem DIN EN 61537 (VDE 0639), gelocht, aus bandverzinktem Stahl DIN EN 10346, Seitenhöhe mind. 60 mm, Breite mind. 200 mm. Einschl. Wandausleger.;5,0;m;gaeb;3936889.x83
+0010;Gitterrinne in U-Form aus punktgeschweißten Stahldrähten, zur horizontalen Verlegung von leichten Kabeln und Leitungen. Zertifiziert nach DIN EN 61537 VDE. Einsetzbar im Innen- und Außenbereich. Zeitsparende schraublose Montage durch Rastfunktion. Geeignet für direkte und erhöhte Bodenmontage sowie ;70,0;m;gaeb;3936889.x83
+0011;Elektroinstallationsrohr 25mm, UV-beständig;50,0;m;gaeb;3936889.x83
+0012;Elektroinstallationsrohr 32mm, UV-beständig;50,0;m;gaeb;3936889.x83
+0013;Kabel in bauseitiger Verteilung (NSHV) einführen, abfangen und auflegen;1,0;St;gaeb;3936889.x83
+0001;Anmeldung der Photvoltaikanlage bei dem EVU, Sicherstellung der technischen Anschlussbestimmungen, Fertigmeldung der Anlage.;1,0;psch;gaeb;3936889.x83
+0002;Messung und Prüfung der PV-Anlage gemäß DIN VDE 0100-600 und DIN VDE 0126-23-1 inkl. Protokollierung.;1,0;psch;gaeb;3936889.x83
+0003;Folgende Daten sollen über das Online-Portal eingesehen werden können:;1,0;psch;gaeb;3936889.x83
+0004;Einweisung von max. 3 Personen, folgender Einweisungsumfang:;1,0;psch;gaeb;3936889.x83
+0005;Erstellung der Bestandsunterlagen für die Gesamtanlage, bestehend aus:;1,0;psch;gaeb;3936889.x83
+0001;Stund.lohnarb. OM;5,0;h;gaeb;3936889.x83
+0002;Stund.lohnarb. M;5,0;h;gaeb;3936889.x83

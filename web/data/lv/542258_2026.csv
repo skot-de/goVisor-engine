@@ -1,0 +1,331 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+0010;Luft-Wasser-Wärmpumpe zum Heizen, Kühlen sowie;3,0;St;gaeb;3936469.x83
+0020;Kranösen für Transport / Einbringung von;1,0;St;gaeb;3936469.x83
+0030;Kondensatablaufheizung passend für vorgenannte;3,0;St;gaeb;3936469.x83
+0040;Nichtdurchdringendes Flachdach-Montageset,;3,0;St;gaeb;3936469.x83
+0050;Ballastierungssystem, für vorg. Dachmontagesystem.;3,0;St;gaeb;3936469.x83
+0060;Bereitstellung Mobilkran / Autokran für Dachmontage;2,0;St;gaeb;3936469.x83
+0070;Doppelbalg-Gummikompensator zur Körperschall-;3,0;St;gaeb;3936469.x83
+0080;Hocheffiziente Nassläuferpumpe mit integrieter;3,0;St;gaeb;3936469.x83
+0090;"Pumpenanschlussverschraubungen, TG 1 1/4x2""";3,0;St;gaeb;3936469.x83
+0100;Rückschlagventil,;3,0;St;gaeb;3936469.x83
+0110;Kugelhahn mit vollem Durchgang, Messing;12,0;St;gaeb;3936469.x83
+0120;Isolierung für vorg. Kugelhahn, besteht aus 2 Hälften;12,0;St;gaeb;3936469.x83
+0130;Kessel-Füll- und Entleerungshahn, KFE-Hahn,;12,0;St;gaeb;3936469.x83
+0140;Bi-Metall-Zeigerthermom.;10,0;St;gaeb;3936469.x83
+0150;Montageeinheit f. geschlossene Heizungsanlagen,;3,0;St;gaeb;3936469.x83
+0160;Kaskadensteuerung, wandmontiert für vorgenannte;1,0;St;gaeb;3936469.x83
+0170;Kabel CANbus, 30m 2x2x0,75mm²;3,0;St;gaeb;3936469.x83
+0180;Temperaturfühler NTC mit Metallhülse, zum;3,0;St;gaeb;3936469.x83
+0190;Datenbus-Steckkarte für den vorgenannten;1,0;St;gaeb;3936469.x83
+0200;Modulares, digitales Regelgerät, in Verwendung als;1,0;St;gaeb;3936469.x83
+0210;Funktionsmodul zur Einbindung zweier Heizkreis-;3,0;St;gaeb;3936469.x83
+0220;Vorlauftemperaturfühler Durchmesser, 9,7 mm;2,0;St;gaeb;3936469.x83
+0230;Funktionsmodul zur Einbindung eines alternativen;1,0;St;gaeb;3936469.x83
+0240;Stecker, zur potentialfreien Anforderung;5,0;St;gaeb;3936469.x83
+0250;VPN Router als IP-Gateway zur Nutzung des;1,0;St;gaeb;3936469.x83
+0260;Hutschienenmodul, zur Montage von;1,0;St;gaeb;3936469.x83
+0270;Leitung Ethernet RJ45, 10m;1,0;St;gaeb;3936469.x83
+0280;Hydraulikmodul, für einen gemischten Heizkreis.;2,0;St;gaeb;3936469.x83
+0290;Hydraulikmodul, für einen gemischten Heizkreis.;1,0;St;gaeb;3936469.x83
+0300;Hydraulikmodul, für einen gemischten Heizkreis.;2,0;St;gaeb;3936469.x83
+0310;Mehrpreis für vorg. Hydraulikmodul, für die Verdrahtung;5,0;St;gaeb;3936469.x83
+0320;Pufferspeicher, mit Wärmedämmung;1,0;St;gaeb;3936469.x83
+0330;Pufferspeicher, mit Wärmedämmung;1,0;St;gaeb;3936469.x83
+0340;Flansch-Stutzen für Pufferspeicher, als Zubehör;1,0;St;gaeb;3936469.x83
+0350;Flansch-Stutzen für Pufferspeicher, als Zubehör;1,0;St;gaeb;3936469.x83
+0360;Montageeinheit f. geschlossene Heizungsanlagen,;1,0;St;gaeb;3936469.x83
+0370;Sensortaschen Set 400mm;1,0;St;gaeb;3936469.x83
+0380;Elektro-Heizgerät zur Kombination mit anderen;1,0;St;gaeb;3936469.x83
+0390;Speicherfühler 10K für vorgenanntes Elektroheizgerät;1,0;St;gaeb;3936469.x83
+0400;Flex Anschlussleitungen für VL/RL für vorgenanntes;1,0;St;gaeb;3936469.x83
+0410;"Wartungshähne (2 Stück) DN20, 3/4"" zur AP-montage";1,0;St;gaeb;3936469.x83
+0420;Funktionsmodul 0-10V für vorg. Elektroheizgerät;1,0;St;gaeb;3936469.x83
+0430;Inbetriebnahme der kpl. Wärmeerzeugungsanlage;1,0;psch;gaeb;3936469.x83
+0440;Inbetriebnahme der kpl. Regler, Module,;1,0;psch;gaeb;3936469.x83
+0450;Frischwasserstation, mit Edelstahlwärmetauscher;2,0;St;gaeb;3936469.x83
+0460;2-Wege-Ventil zur Kaskadierung für den Einbau in;2,0;St;gaeb;3936469.x83
+0470;Bedieneinheit zur Regelung einer autarken, von;1,0;St;gaeb;3936469.x83
+0480;Verrohrungssatz für 2er Frischwasserkaskade.;1,0;St;gaeb;3936469.x83
+0490;Montageständer für die Montage einer Frischwasserstation;1,0;St;gaeb;3936469.x83
+0500;Erweiterungssatz für Montageständer, bestehend aus:;1,0;St;gaeb;3936469.x83
+0510;Sensor Set Temperaturfühler NTC, 12K, 6mm;1,0;St;gaeb;3936469.x83
+0520;3-Wege Mischer, mit dreh- und wendbarem;1,0;St;gaeb;3936469.x83
+0530;Mischermotor für vorg. 3-Wege Mischer,;1,0;St;gaeb;3936469.x83
+0540;Pufferspeicher, mit Wärmedämmung;1,0;St;gaeb;3936469.x83
+0550;Flansch-Stutzen für Pufferspeicher, als Zubehör;1,0;St;gaeb;3936469.x83
+0560;Flansch-Stutzen für Pufferspeicher, als Zubehör;1,0;St;gaeb;3936469.x83
+0570;Flansch-Stutzen für Pufferspeicher, als Zubehör;1,0;St;gaeb;3936469.x83
+0580;Montageeinheit f. geschlossene Heizungsanlagen,;1,0;St;gaeb;3936469.x83
+0590;Sensortaschen Set 400mm;1,0;St;gaeb;3936469.x83
+0600;Elektro-Heizgerät zur Kombination mit anderen;1,0;St;gaeb;3936469.x83
+0610;Speicherfühler 10K für vorgenanntes Elektroheizgerät;1,0;St;gaeb;3936469.x83
+0620;Flex Anschlussleitungen für VL/RL für vorgenanntes;1,0;St;gaeb;3936469.x83
+0630;"Wartungshähne (2 Stück) DN20, 3/4"" zur AP-montage";1,0;St;gaeb;3936469.x83
+0640;Hocheffizienz Nassläuferpumpe mit integrierter;1,0;St;gaeb;3936469.x83
+0650;"Pumpenanschlussverschraubungen, TG 1 1/4x2""";1,0;St;gaeb;3936469.x83
+0660;Rückschlagventil,;1,0;St;gaeb;3936469.x83
+0670;Inbetriebnahme der kpl. Trinkwassererwärmungs-;1,0;psch;gaeb;3936469.x83
+0010;PE-Xe-Rohr zur Heizungsinstallation,;17640,0;m;gaeb;3936469.x83
+0020;Schutzrohr geschlitzt als Schutz im Bereich der;492,0;m;gaeb;3936469.x83
+0030;Messstelle für Restfeuchte;20,0;St;gaeb;3936469.x83
+0040;Tackerplatte, Trittschalldämmplatte als Rollisolierung;2409,0;m2;gaeb;3936469.x83
+0050;Mehrpreis für vorg. Tackerplatte, Trittschalldämmplatte;250,0;m2;gaeb;3936469.x83
+0060;Randdämmstreifen profiliert für die normgerechte;2410,0;m;gaeb;3936469.x83
+0070;Dehnfugenprofil, für die normgerechte Herstellung;330,0;m;gaeb;3936469.x83
+0080;Rohrführungsbogen 90 Grad, für die geschützte;392,0;St;gaeb;3936469.x83
+0090;Tackernadel, für die Rohrfußbodenheizung,;77100,0;St;gaeb;3936469.x83
+0100;Abdeckfolie PE, als Baufolie zur Abdeckung von;1100,0;m2;gaeb;3936469.x83
+0110;Estrichzusatz, zu zementgebundenen Heizestrichen;460,0;kg;gaeb;3936469.x83
+0120;Klebeband, zur normgemäßen Verklebung der;41,0;St;gaeb;3936469.x83
+0130;Klemmringverschraubung, zum Anschluss an den;392,0;St;gaeb;3936469.x83
+0140;Abdeckstreifen für Fussbodenheizungsrohre in der;2400,0;m;gaeb;3936469.x83
+0150;Digitaler Raumtemperaturregler mit flachem Gehäuse,;125,0;St;gaeb;3936469.x83
+0160;Verteilerschrank, UP,;5,0;St;gaeb;3936469.x83
+0170;Verteilerschrank, UP,;8,0;St;gaeb;3936469.x83
+0180;Verteilerschrank, UP,;5,0;St;gaeb;3936469.x83
+0190;"Regelverteiler für die Anwendung ""Heizen"",";7,0;St;gaeb;3936469.x83
+0200;"Regelverteiler für die Anwendung ""Heizen"",";11,0;St;gaeb;3936469.x83
+0210;Thermischer Stellantrieb als Zweipunktantrieb zur;196,0;St;gaeb;3936469.x83
+0220;Verteiler HKV-Edelstahl, als Verteiler und Sammler;1,0;St;gaeb;3936469.x83
+0230;Verteiler HKV-Edelstahl, als Verteiler und Sammler;2,0;St;gaeb;3936469.x83
+0240;Verteiler HKV-Edelstahl, als Verteiler und Sammler;1,0;St;gaeb;3936469.x83
+0250;Verteiler HKV-Edelstahl, als Verteiler und Sammler;3,0;St;gaeb;3936469.x83
+0260;Verteiler HKV-Edelstahl, als Verteiler und Sammler;2,0;St;gaeb;3936469.x83
+0270;Verteiler HKV-Edelstahl, als Verteiler und Sammler;2,0;St;gaeb;3936469.x83
+0280;Verteiler HKV-Edelstahl, als Verteiler und Sammler;5,0;St;gaeb;3936469.x83
+0290;Eckkugelhahn-Set G1, zum absperrbaren Anschluss;16,0;St;gaeb;3936469.x83
+0300;Mehrpreis für vorg. Eckkugelhahn-Set, jedoch als;16,0;St;gaeb;3936469.x83
+0310;Anlegethermometer zur Temperaturanzeige an;16,0;St;gaeb;3936469.x83
+0320;Beschriften der Heizkreise in vorg. Fußbodenheizkreis-;16,0;St;gaeb;3936469.x83
+0010;Schmutz- und Schlammabscheider,;2,0;St;gaeb;3936469.x83
+0020;Schmutz- und Schlammabscheider,;2,0;St;gaeb;3936469.x83
+0030;Armatur zur direkten Verbindung von Nachspeise-;1,0;St;gaeb;3936469.x83
+0040;Wandhalterung für die Füllarmatur,;1,0;St;gaeb;3936469.x83
+0050;Stellmotor, zur Montage auf die Füllarmatur.;1,0;St;gaeb;3936469.x83
+0060;Manometer für die Überwachung des Systemdrucks.;1,0;St;gaeb;3936469.x83
+0070;Patronengehäuse, kompakte Basisarmatur zur;1,0;St;gaeb;3936469.x83
+0080;Mischbettharzpatrone zur Füll- und Ergänzungswasser-;2,0;St;gaeb;3936469.x83
+0090;Wasserzähler zur Überwachung von Enthärtungs-;1,0;St;gaeb;3936469.x83
+0100;Anschlusskabel mit 8 poligen Anschlussstecker zur;1,0;St;gaeb;3936469.x83
+0110;Gesamthärtemessbesteck zur Bestimmung der;1,0;St;gaeb;3936469.x83
+0120;Inbetriebnahme aller Füll-/ Prüf-/ Wasserenthärtungsgeräte;1,0;St;gaeb;3936469.x83
+0130;Membrandruckausdehnungsgefäß für geschlossene;1,0;St;gaeb;3936469.x83
+0140;Membrandruckausdehnungsgefäß für geschlossene;2,0;St;gaeb;3936469.x83
+0150;Membrandruckausdehnungsgefäß für geschlossene;3,0;St;gaeb;3936469.x83
+0160;Membrandruckausdehnungsgefäß für geschlossene;2,0;St;gaeb;3936469.x83
+0170;Anschlußgruppe, zur einfachen, fachgerechten;3,0;St;gaeb;3936469.x83
+0180;Anschlußgruppe, zur einfachen, fachgerechten;5,0;St;gaeb;3936469.x83
+0190;Wandhalterung mit Spannband und Konsole für;5,0;St;gaeb;3936469.x83
+0200;Vakuum-Sprührohrentgasung;1,0;St;gaeb;3936469.x83
+0210;Inbetriebnahme für eine Standardanlage als Vakuum-;1,0;St;gaeb;3936469.x83
+0220;Automatischer Schnell-/Großentlüfter;16,0;St;gaeb;3936469.x83
+0230;Automatischer Schnell-/Großentlüfter;6,0;St;gaeb;3936469.x83
+0240;Automatischer Schnell-/Großentlüfter;6,0;St;gaeb;3936469.x83
+0250;"Heizungskugelhahn, DN 15 (1/2"")";16,0;St;gaeb;3936469.x83
+0260;"Heizungskugelhahn, DN 20 (3/4"")";8,0;St;gaeb;3936469.x83
+0270;"Heizungskugelhahn, DN 25 (1"")";12,0;St;gaeb;3936469.x83
+0280;"Heizungs-Kugelhahn, DN 32 (11/4"")";8,0;St;gaeb;3936469.x83
+0290;"Heizungs-Kugelhahn, DN 40 (11/2"")";4,0;St;gaeb;3936469.x83
+0300;Absperrventil;4,0;St;gaeb;3936469.x83
+0310;"Rückschlagklappe, DN 25, ( R 1"" )";3,0;St;gaeb;3936469.x83
+0320;"Rückschlagklappe, DN 32, ( R 11/4"" )";3,0;St;gaeb;3936469.x83
+0330;"Entleerungsarmatur, DN 10 (3/8"")";10,0;St;gaeb;3936469.x83
+0340;"Entleerungsarmatur, DN 15 (1/2"")";10,0;St;gaeb;3936469.x83
+0350;Strangregulierventil,;16,0;St;gaeb;3936469.x83
+0360;Strangabsperrventil,;16,0;St;gaeb;3936469.x83
+0370;Membranregler für die Differenzdruckregelung durch einfaches;16,0;St;gaeb;3936469.x83
+0380;Zeigerthermometer, Messelement Bimetall,;16,0;St;gaeb;3936469.x83
+0390;Manometer 0 - 10 bar, Gehäuse bis max. 64 mm,;3,0;St;gaeb;3936469.x83
+0400;Bezeichnungsschild, mehrschichtig, aus Kunststoff,;26,0;St;gaeb;3936469.x83
+0410;Einbau beigestellter Armaturen, DN10 bis DN 15;6,0;St;gaeb;3936469.x83
+0420;Einbau beigestellter Armaturen, DN20 bis DN 32;12,0;St;gaeb;3936469.x83
+0010;Systemrohr aus nicht rostenden Stahl,;18,0;m;gaeb;3936469.x83
+0020;Systemrohr aus nicht rostenden Stahl,;42,0;m;gaeb;3936469.x83
+0030;Systemrohr aus nicht rostenden Stahl,;48,0;m;gaeb;3936469.x83
+0040;Systemrohr aus nicht rostenden Stahl,;197,0;m;gaeb;3936469.x83
+0050;Systemrohr aus nicht rostenden Stahl,;299,0;m;gaeb;3936469.x83
+0060;Systemrohr aus nicht rostenden Stahl,;25,0;m;gaeb;3936469.x83
+0070;Systemrohr aus nicht rostenden Stahl,;30,0;m;gaeb;3936469.x83
+0080;Systemrohr aus nicht rostenden Stahl,;40,0;m;gaeb;3936469.x83
+0090;Muffe, aus nicht rostenden Stahl, DN 12;6,0;St;gaeb;3936469.x83
+0100;Muffe, aus nicht rostenden Stahl, DN 15;12,0;St;gaeb;3936469.x83
+0110;Muffe, aus nicht rostenden Stahl, DN 20;12,0;St;gaeb;3936469.x83
+0120;Muffe, aus nicht rostenden Stahl, DN 25;24,0;St;gaeb;3936469.x83
+0130;Muffe, aus nicht rostenden Stahl, DN 32;48,0;St;gaeb;3936469.x83
+0140;Muffe, aus nicht rostenden Stahl, DN 40;10,0;St;gaeb;3936469.x83
+0150;Muffe, aus nicht rostenden Stahl, DN 50;10,0;St;gaeb;3936469.x83
+0160;Muffe, aus nicht rostenden Stahl, DN 65;5,0;St;gaeb;3936469.x83
+0170;Bogen, 45 - 90 Grad, aus nicht rostenden Stahl, DN 12;6,0;St;gaeb;3936469.x83
+0180;Bogen, 45 - 90 Grad, aus nicht rostenden Stahl, DN 15;12,0;St;gaeb;3936469.x83
+0190;Bogen, 45 - 90 Grad, aus nicht rostenden Stahl, DN 20;18,0;St;gaeb;3936469.x83
+0200;Bogen, 45 - 90 Grad, aus nicht rostenden Stahl, DN 25;133,0;St;gaeb;3936469.x83
+0210;Bogen, 45 - 90 Grad, aus nicht rostenden Stahl, DN 32;199,0;St;gaeb;3936469.x83
+0220;Bogen, 45 - 90 Grad, aus nicht rostenden Stahl, DN 40;12,0;St;gaeb;3936469.x83
+0230;Bogen, 45 - 90 Grad, aus nicht rostenden Stahl, DN 50;10,0;St;gaeb;3936469.x83
+0240;Bogen, 45 - 90 Grad, aus nicht rostenden Stahl, DN 65;14,0;St;gaeb;3936469.x83
+0250;T-Stück, Gleich, Abgang gleich oder reduziert,;2,0;St;gaeb;3936469.x83
+0260;T-Stück, Gleich, Abgang gleich oder reduziert,;4,0;St;gaeb;3936469.x83
+0270;T-Stück, Gleich, Abgang gleich oder reduziert,;6,0;St;gaeb;3936469.x83
+0280;T-Stück, Gleich, Abgang gleich oder reduziert,;12,0;St;gaeb;3936469.x83
+0290;T-Stück, Gleich, Abgang gleich oder reduziert,;12,0;St;gaeb;3936469.x83
+0300;T-Stück, Gleich, Abgang gleich oder reduziert,;6,0;St;gaeb;3936469.x83
+0310;T-Stück, Gleich, Abgang gleich oder reduziert,;6,0;St;gaeb;3936469.x83
+0320;T-Stück, Gleich, Abgang gleich oder reduziert,;6,0;St;gaeb;3936469.x83
+0330;T-Stück, Gleich, Abgang gl. oder red., Abgang mit IG;2,0;St;gaeb;3936469.x83
+0340;T-Stück, Gleich, Abgang gl. oder red., Abgang mit IG;4,0;St;gaeb;3936469.x83
+0350;T-Stück, Gleich, Abgang gl. oder red., Abgang mit IG;6,0;St;gaeb;3936469.x83
+0360;T-Stück, Gleich, Abgang gl. oder red., Abgang mit IG;8,0;St;gaeb;3936469.x83
+0370;T-Stück, Gleich, Abgang gl. oder red., Abgang mit IG;6,0;St;gaeb;3936469.x83
+0380;T-Stück, Gleich, Abgang gl. oder red., Abgang mit IG;2,0;St;gaeb;3936469.x83
+0390;T-Stück, Gleich, Abgang gl. oder red., Abgang mit IG;3,0;St;gaeb;3936469.x83
+0400;T-Stück, Gleich, Abgang gl. oder red., Abgang mit IG;6,0;St;gaeb;3936469.x83
+0410;Reduzierung mit Einschubende;4,0;St;gaeb;3936469.x83
+0420;Reduzierung mit Einschubende;4,0;St;gaeb;3936469.x83
+0430;Reduzierung mit Einschubende;8,0;St;gaeb;3936469.x83
+0440;Reduzierung mit Einschubende;8,0;St;gaeb;3936469.x83
+0450;Übergang, mit IG oder AG, aus nicht rostenden Stahl, DN 15;4,0;St;gaeb;3936469.x83
+0460;Übergang, mit IG oder AG, aus nicht rostenden Stahl, DN 20;10,0;St;gaeb;3936469.x83
+0470;Übergang, mit IG oder AG, aus nicht rostenden Stahl, DN 25;14,0;St;gaeb;3936469.x83
+0480;Übergang, mit IG oder AG, aus nicht rostenden Stahl, DN 32;16,0;St;gaeb;3936469.x83
+0490;Übergang, mit IG oder AG, aus nicht rostenden Stahl, DN 40;8,0;St;gaeb;3936469.x83
+0500;Übergangsverschraubung, mit IG oder AG,;4,0;St;gaeb;3936469.x83
+0510;Übergangsverschraubung, mit IG oder AG,;6,0;St;gaeb;3936469.x83
+0520;Übergangsverschraubung, mit IG oder AG,;8,0;St;gaeb;3936469.x83
+0530;Übergangsverschraubung, mit IG oder AG,;8,0;St;gaeb;3936469.x83
+0540;Flansch PN 6, mit Pressmuffe;12,0;St;gaeb;3936469.x83
+0550;Flansch PN 6, mit Pressmuffe;8,0;St;gaeb;3936469.x83
+0560;Flansch PN 6, mit Pressmuffe;10,0;St;gaeb;3936469.x83
+0570;Flansch PN 6, mit Pressmuffe;10,0;St;gaeb;3936469.x83
+0580;Rohraufhängung, aus Stahl, verzinkt, mit Rohrschelle,;46,0;St;gaeb;3936469.x83
+0590;Rohraufhängung, aus Stahl, verzinkt, mit Rohrschelle,;48,0;St;gaeb;3936469.x83
+0600;Rohraufhängung, aus Stahl, verzinkt, mit Rohrschelle,;197,0;St;gaeb;3936469.x83
+0610;Rohraufhängung, aus Stahl, verzinkt, mit Rohrschelle,;349,0;St;gaeb;3936469.x83
+0620;Rohraufhängung, aus Stahl, verzinkt, mit Rohrschelle,;30,0;St;gaeb;3936469.x83
+0630;Rohraufhängung, aus Stahl, verzinkt, mit Rohrschelle,;35,0;St;gaeb;3936469.x83
+0640;Rohraufhängung, aus Stahl, verzinkt, mit Rohrschelle,;40,0;St;gaeb;3936469.x83
+0650;Rohraufhängung, Montageschienen,;46,0;St;gaeb;3936469.x83
+0660;Rohraufhängung, Montageschienen,;48,0;St;gaeb;3936469.x83
+0670;Rohraufhängung, Montageschienen,;197,0;St;gaeb;3936469.x83
+0680;Rohraufhängung, Montageschienen,;349,0;St;gaeb;3936469.x83
+0690;C-Schiene Montageprofil, zur Aufnahme von;295,0;m;gaeb;3936469.x83
+0700;Profilstahlkonstruktion, für Stütz-, Hänge-, Trag- und;50,0;kg;gaeb;3936469.x83
+0710;Einbau beigestellter Armaturen, DN 10 bis DN 15;8,0;St;gaeb;3936469.x83
+0720;Einbau beigestellter Armaturen, DN 20 bis DN 32;14,0;St;gaeb;3936469.x83
+0730;Einbau beigestellter Armaturen, DN 40 bis DN 65;4,0;St;gaeb;3936469.x83
+0740;Rohrleitungsmontage-Set zur Aufständerung von;40,0;St;gaeb;3936469.x83
+0750;3-lagige Trennschicht zur Unterlage zwischen;80,0;St;gaeb;3936469.x83
+0760;C-Schiene Montageprofil, zur Aufnahme von;150,0;kg;gaeb;3936469.x83
+0770;Rohraufhängung, Montageschienen,;70,0;St;gaeb;3936469.x83
+0780;Systemrohr aus nicht rostenden Stahl,;96,0;m;gaeb;3936469.x83
+0790;Muffe, aus nicht rostenden Stahl, DN 32;18,0;St;gaeb;3936469.x83
+0800;Bogen, 45 - 90 Grad, aus nicht rostenden Stahl,;48,0;St;gaeb;3936469.x83
+0810;T-Stück, Gleich, Abgang gleich oder reduziert,;6,0;St;gaeb;3936469.x83
+0820;Übergang, mit IG oder AG, aus nicht rostenden Stahl,;12,0;St;gaeb;3936469.x83
+0830;Übergangsverschraubung, mit IG oder AG,;12,0;St;gaeb;3936469.x83
+0840;Kabelrinne gelocht zur horizontalen Verlegung von;30,0;m;gaeb;3936469.x83
+0850;Mehrpreis für Paßstück, Kabelrinne Stahl verzink;12,0;St;gaeb;3936469.x83
+0860;Mehrpreis für Paßstück, Kabelrinne Stahl verzink;12,0;St;gaeb;3936469.x83
+0870;Längsverbinder, als Schraub- oder Steckverbinder für;12,0;St;gaeb;3936469.x83
+0880;Deckel für Kabelrinnen im Außenbereich, zum Schutz;30,0;m;gaeb;3936469.x83
+0890;Mehrpreis für Paßstück, Deckel Stahl verzink;12,0;St;gaeb;3936469.x83
+0900;Mehrpreis für Paßstück, Deckel Stahl verzink;12,0;St;gaeb;3936469.x83
+0910;Zinkausbesserungsspray zur Nachbehandlung von;4,0;St;gaeb;3936469.x83
+0920;Montage-/Profilstahl, für Form-/Verbindungsstücke,;80,0;kg;gaeb;3936469.x83
+0930;Ringraumdichtung zur Abdichtung von Kabeln/Medienrohren;8,0;St;gaeb;3936469.x83
+0940;Mehrpreis für vorg. Ringraumdichtung in teilbarer;6,0;St;gaeb;3936469.x83
+0950;Mehrpreis für das Nachbearbeiten/Vorbehandeln einer;2,0;St;gaeb;3936469.x83
+0010;Steinwolleschale für Rohr,;5,0;m;gaeb;3936469.x83
+0020;Steinwolleschale für Rohr,;24,0;m;gaeb;3936469.x83
+0030;Steinwolleschale für Rohr,;22,0;m;gaeb;3936469.x83
+0040;Steinwolleschale für Rohr,;120,0;m;gaeb;3936469.x83
+0050;Steinwolleschale für Rohr,;200,0;m;gaeb;3936469.x83
+0060;Zulage, Steinwolleschale für Bogen, T-Stück, Reduzierung,;6,0;St;gaeb;3936469.x83
+0070;Zulage, Steinwolleschale für Bogen, T-Stück, Reduzierung,;12,0;St;gaeb;3936469.x83
+0080;Zulage, Steinwolleschale für Bogen, T-Stück, Reduzierung,;14,0;St;gaeb;3936469.x83
+0090;Zulage, Steinwolleschale für Bogen, T-Stück, Reduzierung,;122,0;St;gaeb;3936469.x83
+0100;Zulage, Steinwolleschale für Bogen, T-Stück, Reduzierung,;142,0;St;gaeb;3936469.x83
+0110;Steinwolleschale für Rohr,;10,0;m;gaeb;3936469.x83
+0120;Steinwolleschale für Rohr,;20,0;m;gaeb;3936469.x83
+0130;Steinwolleschale für Rohr,;20,0;m;gaeb;3936469.x83
+0140;Steinwolleschale für Rohr,;75,0;m;gaeb;3936469.x83
+0150;Steinwolleschale für Rohr,;90,0;m;gaeb;3936469.x83
+0160;Steinwolleschale für Rohr,;25,0;m;gaeb;3936469.x83
+0170;Steinwolleschale für Rohr,;30,0;m;gaeb;3936469.x83
+0180;Steinwolleschale für Rohr,;35,0;m;gaeb;3936469.x83
+0190;Zulage, Steinwolleschale für Bogen, T-Stück, Reduzierung,;6,0;St;gaeb;3936469.x83
+0200;Zulage, Steinwolleschale für Bogen, T-Stück, Reduzierung,;8,0;St;gaeb;3936469.x83
+0210;Zulage, Steinwolleschale für Bogen, T-Stück, Reduzierung,;12,0;St;gaeb;3936469.x83
+0220;Zulage, Steinwolleschale für Bogen, T-Stück, Reduzierung,;30,0;St;gaeb;3936469.x83
+0230;Zulage, Steinwolleschale für Bogen, T-Stück, Reduzierung,;50,0;St;gaeb;3936469.x83
+0240;Zulage, Steinwolleschale für Bogen, T-Stück, Reduzierung,;12,0;St;gaeb;3936469.x83
+0250;Zulage, Steinwolleschale für Bogen, T-Stück, Reduzierung,;12,0;St;gaeb;3936469.x83
+0260;Zulage, Steinwolleschale für Bogen, T-Stück, Reduzierung,;12,0;St;gaeb;3936469.x83
+0270;Fließrichtungspfeil Heizung mit Text zur Kennzeichnung;20,0;St;gaeb;3936469.x83
+0280;Brandschutzabschottung von Heizungsleitungen,;4,0;St;gaeb;3936469.x83
+0290;Brandschutzabschottung von Heizungsleitungen,;4,0;St;gaeb;3936469.x83
+0300;Brandschutzabschottung von Heizungsleitungen,;4,0;St;gaeb;3936469.x83
+0310;Brandschutzabschottung von Heizungsleitungen,;30,0;St;gaeb;3936469.x83
+0320;Brandschutzabschottung von Heizungsleitungen,;30,0;St;gaeb;3936469.x83
+0330;Brandschutzkitt, der speziell für den Einsatz in;15,0;St;gaeb;3936469.x83
+0340;Fotodokumentation über den fachgerechten Einbau;72,0;St;gaeb;3936469.x83
+0350;Dämmschlauch 4 mm,;15,0;m;gaeb;3936469.x83
+0360;Dämmschlauch 4 mm,;15,0;m;gaeb;3936469.x83
+0370;Dämmschlauch 4 mm,;15,0;m;gaeb;3936469.x83
+0380;Dämmschlauch 4 mm,;5,0;m;gaeb;3936469.x83
+0390;Kompaktdämmhülse,;12,0;m;gaeb;3936469.x83
+0400;Kompaktdämmhülse,;12,0;m;gaeb;3936469.x83
+0410;Kompaktdämmhülse,;12,0;m;gaeb;3936469.x83
+0420;Dämmkappe, Flansch-Absperrventil-/Hahn, DN 65;4,0;St;gaeb;3936469.x83
+0430;Steinwolleschale für Rohr,;96,0;m;gaeb;3936469.x83
+0440;Zulage, Steinwolleschale für Bogen, T-Stück, Reduzierung,;54,0;St;gaeb;3936469.x83
+0450;Ummantelung für Steinwolleschale für Rohr, DN 32,;96,0;m;gaeb;3936469.x83
+0460;Zulage, Ummantelung, verz. Blech für Bogen,;54,0;St;gaeb;3936469.x83
+0470;Zulage, Ummantelung, verz. Blech, Durchdringung der;180,0;St;gaeb;3936469.x83
+0010;Baustelleneinrichtung für sämtliche,;1,0;psch;gaeb;3936469.x83
+0010;Herstellen von Kernbohrungen;30,0;St;gaeb;3936469.x83
+0020;Mehr- bzw. Minderpreis vorbeschriebener Bohrung 60 mm Ø,;1,0;St;gaeb;3936469.x83
+0030;Herstellen von Kernbohrungen;30,0;St;gaeb;3936469.x83
+0040;Mehr- bzw. Minderpreis vorbeschriebener Bohrung 80 mm Ø,;1,0;St;gaeb;3936469.x83
+0050;Herstellen von Kernbohrungen;8,0;St;gaeb;3936469.x83
+0060;Mehr- bzw. Minderpreis vorbeschriebener Bohrung 100 mm Ø,;1,0;cm;gaeb;3936469.x83
+0070;Herstellen von Kernbohrungen;2,0;St;gaeb;3936469.x83
+0080;Mehr- bzw. Minderpreis vorbeschriebener Bohrung 150 mm Ø,;1,0;cm;gaeb;3936469.x83
+0090;Herstellen von Kernbohrungen;28,0;St;gaeb;3936469.x83
+0100;Mehr- bzw. Minderpreis vorbeschriebener Bohrung 60 mm Ø,;1,0;St;gaeb;3936469.x83
+0110;Herstellen von Kernbohrungen;28,0;St;gaeb;3936469.x83
+0120;Mehr- bzw. Minderpreis vorbeschriebener Bohrung 80 mm Ø,;1,0;St;gaeb;3936469.x83
+0130;Herstellen von Kernbohrungen;10,0;St;gaeb;3936469.x83
+0140;Mehr- bzw. Minderpreis vorbeschriebener Bohrung 100 mm Ø,;1,0;St;gaeb;3936469.x83
+0150;Herstellen von Kernbohrungen;4,0;St;gaeb;3936469.x83
+0160;Mehr- bzw. Minderpreis vorbeschriebener Bohrung 125 mm Ø,;1,0;St;gaeb;3936469.x83
+0170;Wandschlitz fräsen für Anschlussleitungen,;10,0;m;gaeb;3936469.x83
+0180;Herstellen von Kernbohrungen;15,0;St;gaeb;3936469.x83
+0190;Mehr- bzw. Minderpreis vorbeschriebener Bohrung 60 mm Ø,;1,0;St;gaeb;3936469.x83
+0200;Herstellen von Kernbohrungen;15,0;St;gaeb;3936469.x83
+0210;Mehr- bzw. Minderpreis vorbeschriebener Bohrung 80 mm Ø,;1,0;St;gaeb;3936469.x83
+0220;Herstellen von Kernbohrungen;4,0;St;gaeb;3936469.x83
+0230;Mehr- bzw. Minderpreis vorbeschriebener Bohrung 100 mm Ø,;1,0;St;gaeb;3936469.x83
+0010;Mietpreis pro Woche, einschl. aller Nebenkosten,;12,0;Wo;gaeb;3936469.x83
+0020;Mietpreis pro Verlängerungs- Woche,;1,0;Wo;gaeb;3936469.x83
+0030;Lieferpauschale für Heizöl je Lieferung,;12,0;St;gaeb;3936469.x83
+0040;Wartungsservice der mobilen Heizungsanlage durch;12,0;St;gaeb;3936469.x83
+0050;Selbstregulierendes Heizband;40,0;m;gaeb;3936469.x83
+0060;Wärmedämmung, der im Außenbereich durch den AN;40,0;m;gaeb;3936469.x83
+0070;Mietpreis pro Woche, einschl. aller Nebenkosten,;12,0;Wo;gaeb;3936469.x83
+0080;Mietpreis pro Woche, einschl. aller Nebenkosten,;12,0;Wo;gaeb;3936469.x83
+0090;Mietpreis pro Verlängerungs- Woche,;1,0;Wo;gaeb;3936469.x83
+0100;Mietpreis für Luftverteilerschlauch für vorgenannte;12,0;Wo;gaeb;3936469.x83
+0010;Anschlussverdrahtung durch den AN;1,0;psch;gaeb;3936469.x83
+0020;Geräteschutz;1,0;psch;gaeb;3936469.x83
+0030;Inbetriebnahme;1,0;psch;gaeb;3936469.x83
+0040;Füllen und entlüften der gesamten Heizungsanlage,;1,0;psch;gaeb;3936469.x83
+0050;Einweisung des Hauspersonals;1,0;psch;gaeb;3936469.x83
+0060;Montageplanung;1,0;psch;gaeb;3936469.x83
+0070;Anlagenschema als Farbplott, hinter Glas oder;1,0;St;gaeb;3936469.x83
+0010;Stundenlohnarbeiten Obermonteur/-in;50,0;h;gaeb;3936469.x83
+0020;Stundenlohnarbeiten Monteur/-in;50,0;h;gaeb;3936469.x83
+0030;Stundenlohnarbeiten Helfer/-in;50,0;h;gaeb;3936469.x83
+0010;Bestandsunterlagen;1,0;psch;gaeb;3936469.x83
+0020;Bestandsunterlagen,;1,0;psch;gaeb;3936469.x83
+0010;Wartungsvertrag gemäß AMEV nach Wartungskarten;4,0;Jr;gaeb;3936469.x83

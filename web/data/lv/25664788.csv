@@ -1,0 +1,92 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+10;Baustelleneinrichtung herstellen,;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+20;Baustelleneinrichtung vorhalten.;1,5;Mt;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+30;Baustelleneinrichtung unterhalten und;40,0;d;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+40;Räumen der Baustelle von allen Geräten,;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+50;Erfassung und Dokumentation des Zustands von;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+60;Vermessungsarbeiten für die Absteckung von;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+70;Verkehrsflächen zur Aufrechterhaltung;40,0;d;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+80;Verkehrslenkung mit transportabler Lichtsignal-;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+90;Transportable Lichtsignalanlagen der OZ;40,0;d;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+100;Verkehrssicherung für Arbeitsstellen von längerer;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+110;Kontrolle der Verkehrssicherung durchführen.;40,0;St;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+120;Verkehrsrechtliche Anordnung;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+130;Bestandsunterlagen herstellen.;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+10;Flächen mulchen;1500,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+20;Hecken, Buschwerk auf Stock setzen und Bäume;180,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+30;Äste mit Astdurchmesser an der Schnittstelle bis 30 cm;25,0;h;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+40;Baum fällen und Wurzelstock roden.;20,0;St;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+50;Baum fällen und Wurzelstock roden.;5,0;St;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+60;Beton brechen und entsorgen;0,5;m3;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+10;Oberboden des/der Homogenbereiche(s);55,0;m3;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+20;Oberboden des/der Homogenbereiche(s);60,0;m3;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+30;Oberboden einschließlich leicht verrottbarer;40,0;m3;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+40;Überschüssiges Material;25,0;m3;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+50;Überschüssiges Material;50,0;m3;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+10;Boden bzw. Fels profilgerecht oder nach Unterlagen;70,0;m3;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+20;Belasteten Boden / Fels profilgerecht oder nach;90,0;m3;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+30;Überschüssiges Material;90,0;m3;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+40;Belasteten Boden / Fels profilgerecht oder nach;50,0;m3;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+50;Überschüssiges Material;90,0;m3;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+60;Boden oder Baustoff liefern und nach Unterlagen;180,0;m3;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+70;Zulage zum Einbau von Erdbaustoffen oder;400,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+80;Mehraufwand bei der Ausführung der Abtrags-;6,0;m;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+90;Trennschicht aus Geotextilien und Verbundstoffen;400,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+100;Planum profilgerecht herstellen;400,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+110;Leitungsgraben einschließlich Verbau, für Rohrleitungen;12,0;m3;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+120;Leitungsgraben einschließlich Verbau, für Rohrleitungen;25,0;m3;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+130;Leitungsgrabenverfüllung oberhalb der;25,0;m3;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+140;Suchschlitz zur Feststellung der Lage von Kabeln,;2,0;m3;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+150;Liefern und verlegen einer selbstklebenden Asphaltarmierung mit rissbewehrender Funktion aus Glasfasergitter mit auflaminierter Polymerbitumenbahn. Selbstklebende Schicht aus hochmodifiziertem Bitumen mit starker Klebekraft.;180,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+10;Rohrleitung aus Beton-, Kunststoff-, Asbestzement-,;2,0;m;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+20;Rohrleitung aus Stahlbetonrohren, DIN EN 1916;5,0;m;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+30;Böschungsformstück herstellen und einbauen.;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+40;Sickerstrang mit Rohrleitung aus Kunststoff-;190,0;m;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+10;Bankett einschließlich Vegetationsdecke;180,0;m;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+20;Bankett schälen,;380,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+30;Überschüssiges Material;50,0;m3;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+40;Bankett profilgerecht herstellen;100,0;m3;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+50;Bankett profilgerecht herstellen;20,0;m3;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+60;Frostschutzschicht (FSS) herstellen,;210,0;m3;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+10;Asphalt fräsen und Material aufnehmen.;2500,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+20;Gebundenen Oberbau aufbrechen und auf-;15,0;m3;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+30;Gebundenen Oberbau aufbrechen und auf-;7,0;m3;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+40;Asphaltoberbau geradlinig trennen;35,0;m;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+50;Asphaltoberbau geradlinig trennen;30,0;m;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+60;Oberfläche der vorhandenen Tragschicht ohne;400,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+70;Vorhandene Unterlage reinigen.;2500,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+80;Schichtenverbund durch Ansprühen der Unter-;2500,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+90;Asphalttragschicht aus Asphalttragschichtmischgut;380,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+100;Asphaltdeckschicht aus Asphaltbeton AC 11 D N;2500,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+110;Abdichtung des hochliegenden Randes von Asphalt-;180,0;m;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+120;Anschluss von Asphaltdecken als Fuge herstellen.;350,0;m;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+130;Abstumpfung maschinell herstellen.;2500,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+140;Zulage für Mehraufwendungen durch Erschwer-;40,0;m;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+10;Pflasterdecke aus Granitkleinpflastersteinen;30,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+20;Bord aus Betonbordsteinen;12,0;m;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+30;Bord aus Betonbordsteinen;4,0;m;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+40;Bord aus Betonbordsteinen;12,0;m;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+50;Wasserbausteine aus Granit mit einer Kantenlänge von ca. 15 cm liefern und als Kolksicherung im Auslaufbereich des Regenwasserkanals DN 600 und der Sickerleitung DN 100 (2 Ausläufe) im Böschungsbereich auf einer mindestens 20 cm starken Bettung aus Beton C 12/15 in unregelmäßigem Verbund einbauen un;5,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+10;Längsmarkierung Typ II weiß herstellen.;650,0;m;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+20;Längsmarkierung Typ II weiß herstellen.;45,0;m;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+30;Längsmarkierung Typ II weiß herstellen.;36,0;m;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+40;Längsmarkierung Typ II weiß herstellen.;40,0;m;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+50;Längsmarkierung Typ II weiß herstellen.;240,0;m;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+60;Längsmarkierung Typ II weiß herstellen.;80,0;m;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+70;Sperrflächenmarkierung Typ II weiß herstellen.;50,0;m;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+80;Quermarkierung Typ II weiß  herstellen;2,0;m;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+90;Quermarkierung Typ II weiß  herstellen;25,0;m;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+100;Pfeilmarkierung Typ II weiß  herstellen.;3,0;St;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+110;Pfeilmarkierung Typ II weiß  herstellen.;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+120;Pfeilmarkierung Typ II weiß  herstellen.;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+130;Pfeilmarkierung Typ II weiß  herstellen.;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+10;Schild mit Zeichen nach StVO, ggf. mit;8,0;St;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+20;Rohrpfosten Durchmesser bis einschl. 108 mm,;7,0;St;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+30;Fundament für Rohrpfosten/-rahmen aus;0,5;m3;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+10;Rasenansaat (Normalsaat) herstellen.;280,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+10;Verrechnungssatz für Stundenlohnarbeiten als;10,0;h;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+20;Hydraulikbagger mit Fahrer,;20,0;h;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+30;Radlader 37 - 55 kW;10,0;h;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+40;LKW mit Fahrer, Nutzlast 12 bis 20 t, Allradantrieb;5,0;h;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+50;LKW mit Fahrer, Nutzlast 8 bis 12 t;5,0;h;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83
+60;Kleintransporter mit Fahrer, ca. 1,5 t Nutzlast;5,0;h;gaeb;Zwingend erforderliche Angebotsdateien/61-03-2026_LV.X83

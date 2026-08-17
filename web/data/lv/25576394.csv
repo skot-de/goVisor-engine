@@ -1,0 +1,122 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+00000001;Baustelle einrichten Sämtl.LV-Abschn.*Zufahrt herst.AG;1,0;Psch;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+00000002;Baustelle räumen Sämtl. LV-Abschn.;1,0;Psch;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+00000003;Baubüro für AG auf- und abbauen Fläche 25 m2*Stahlschrank Obod.abheb.,Aufw.*Zuf+Platz Wahl AN ... Freitext ...;1,0;Psch;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+00000004;Baubüro für AG vorhalten;6,0;Mt;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+00000005;Bauzaun aufstellen und  entfernen ... Freitext ...*... Freitext ...;400,0;m;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+00000006;Bauzaun umsetzen ... Freitext ...*... Freitext ...;150,0;m;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+00000007;Fläche abräumen Aufwuchs*Wurzelstöcke Astwerk*Steine/Mauer/Zaun Neigung über 1:4*Wst. Verwert. AN S.Abr.Verwert.AN*... Freitext ...;1,0;Psch;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+00000008;Wurzelstöcke roden DU über 0,3-0,5 m*verfüll/Boden AG Wst.Verw. AN;10,0;St;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+00000009;Wegenetz reinigen;1,0;Psch;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+00000010;Sichtschutzzaun aufstell u. entfern;60,0;m;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+00000011;Vegetationsfläche mähen;90,0;m2;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+00000012;Buschwerk/Hecke schneiden;60,0;m;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+00010001;Video-Überw.aufb.einrichten abbauen;3,0;St;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+00010002;Notruf- und Serviceleitstelle (NSL);11,0;Mt;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+00010003;Autarke Energievers.LTE/5G-Konnekt.;11,0;Mt;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+00010004;Umsetzung der Videoüberwachung;1,0;St;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+00010005;Videoüberwachung vorhalten;11,0;Mt;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+00020001;Standsicherheitsnachweis aufstellen Bauwerk*4-fach;1,0;Psch;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+00020002;Standsicherheitsnachweis aufstellen Baubehelfe*3-fach;1,0;Psch;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+00020003;Ausführungszeichnungen herstellen Bauwerk*... Freitext ...;1,0;Psch;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+00020004;Ausführungszeichnungen herstellen Baubehelfe*... Freitext ...;1,0;Psch;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+00020005;Bauwerk nach MLC bemessen;1,0;Psch;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+00020006;Bauwerksbuch herst. und lief.;1,0;Psch;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+00020007;Bestandunterlagen liefern Standsich.Nachw.*... Freitext ... ... Freitext ...;1,0;Psch;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+00020008;Bauwerksabsteckung;1,0;Psch;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+00020009;Beweissicherung;1,0;Psch;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+00020010;Lichtbilder herst. und liefern;1,0;Psch;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+00020011;Mikrofilmaufnahmen herstellen;1,0;Psch;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+00020012;Dupilkatfilme herstellen;1,0;Psch;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+00030001;Verkehrssich. läng. Dauer aufbauen Arb.st.u. Uml.str*VZ-Plan des AG ... Freitext ...*Anordnung Unt. AG gebührenfrei;1,0;Psch;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+00030002;Verkehrssich. läng. Dauer vorhalten wie Vorposition;200,0;d;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+00030003;Kontrolle d. Verkehrss. an Arb.st. zwei bzw. einmal*elektron. Gerät;200,0;d;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+00030004;Verkehrssich. läng. Dauer abbauen VZ-Plan des AG*in Kraft setzen;1,0;Psch;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+00040001;Traggerüst herstellen Grdg. beseitigen;1,0;Psch;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+00040002;Arbeitsgerüst herstellen ... Freitext ...;1,0;Psch;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+00040003;Trag-, Schutz- und Arbeitsgerüst;1,0;Psch;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+00040004;Absturzsicherung Baugrube;1,0;Psch;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+00050001;Einfache Wasserhaltungsanlage;1,0;Psch;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+00050002;Mobile Absetzanlage aufstellen LF-Abscheider*Volumen bis 8 m3;2,0;St;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+00050003;Mobile Absetzanlage betreiben Abges.St. verwert;80,0;d;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+00050004;Mobile Absetzanlage umsetzen LF-Abscheider*Volumen bis 8 m3;2,0;St;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+01000001;Oberboden abtragen und lagern ... Freitext ...*Abtr.über 10-30cm ... Freitext ...*Abrechnung Abtrag;600,0;m3;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+01000002;Boden bzw. Fels lös. u. wiederverw. ... Freitext ...*Felsvert.B. verf. Boden i. Zw.verd.*Planum gesondert Abrechng. Auftrag;300,0;m3;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+01000003;Planum herstellen Ev2 = 45 MPa;600,0;m2;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+01000004;Geotextil als Trennschicht verlegen Nutz.Dauer<25Jahr*pH 4-9 GRK 5*... Freitext ... Abr. Überdeckung;600,0;m2;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+01000005;Entwässerungrohr  verlegen.;12,0;m;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+01000006;Schottertragschicht herstellen ... Freitext ...*... Freitext ... URA+Einbaudoku*DPr min. 100 v.H. ... Freitext ...;550,0;m2;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+01000007;Frostschutzschicht herstellen ... Freitext ...*0/45 URA+Einbaudoku*... Freitext ... ... Freitext ...*Abrechng. Auftrag;130,0;m3;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+01000008;Baugrube herstellen ... Freitext ...*Bauwerk Tiefe >3,00-5,00m*Aush.i.lagern ... Freitext ...;2900,0;m3;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+01000009;Baugrube herstellen ... Freitext ...*... Freitext ... Tiefe >1,75-3,00m*Aush.i.lagern ... Freitext ...;200,0;m3;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+01000010;Gründungssohle verdichten gesamtes Bauwerk*Dpr 100 v. H.;700,0;m2;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+01000011;Geotextil als Trennschicht verlegen Nutz.Dauer>25Jahr*pH 4-9 GRK 5*... Freitext ... Abr. Überdeckung;750,0;m2;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+01000012;Baustoff liefern und einbauen ... Freitext ...*Wasserschutzgeb. ... Freitext ...*Planum nicht ges. Abrechng. Auftrag;380,0;m3;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+01000013;Dränschicht an Bauwerk herstellen Widerl./Flügelwd.*Matte, RiZ Was 7;250,0;m2;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+01000014;Baust. lief. als BW-Hinterfüll.einb ... Freitext ...*... Freitext ... Entwässerungsber.*Abrechng.Auftrag;320,0;m3;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+01000015;Baust. lief. als BW-Hinterfüll.einb ... Freitext ...*... Freitext ... ohne Entw. Ber.*Abrechng.Auftrag;370,0;m3;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+01000016;Boden AG als BW-Hinterfüllung einb. ... Freitext ...*Boden gelagert Abrechnung Abtrag;1800,0;m3;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+02000001;Beton f. Sauberkeitsschicht herst. C12/15*X0*Dicke min. 10 cm;200,0;m2;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+02000002;Bew. Beton einschl. Schalung herst. ... Freitext ...*Stahlbeton C30/37*... Freitext ... Schaltafeln;135,0;m3;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+02000003;Betonstahl einbauen Fundament*... Freitext ...;22,0;t;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+02000004;Bew. Beton einschl. Schalung herst. ... Freitext ...*Stahlbeton C30/37*XF2, XC4, XD1 ... Freitext ...;230,0;m3;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+02000005;Bauwerksfuge herstellen Widerlager*... Freitext ... Dicke 50-75 cm;11,0;m;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+02000006;Betonstahl einbauen ... Freitext ...*... Freitext ...;40,0;t;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+02000007;Bew. Beton einschl. Schalung herst. Überbau*Stahlbeton C30/37*... Freitext ... ... Freitext ...;55,0;m3;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+02000008;Betonstahl einbauen Überbau*... Freitext ...;15,0;t;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+02000009;Bew. Beton einschl. Schalung herst. ... Freitext ...*Stahlbeton C30/37*... Freitext ... Gestaltung AG*Vertikal Besenstrich;12,0;m3;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+02000010;Bew. Beton einschl. Schalung herst. ... Freitext ...*Stahlbeton C30/37*... Freitext ... Gestaltung AG*Besenstrich;6,0;m3;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+02000011;Betonstahl einbauen ... Freitext ...*... Freitext ...;4,0;t;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+02000012;Kabelschutzrohr in Bauwerk verlegen ... Freitext ...*innen glatt schwarz*Stahldraht einz.;55,0;m;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+02000013;Fahrbahnabschlußprofil einbauen Profil T 90*Ank.blech/-haken Sickerschlitze;16,0;m;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+02000014;Jahreszahl-Matrize einbauen;1,0;St;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+02000015;Unbewehrten Beton herstellen ... Freitext ...*... Freitext ... X0*Ohne Schalung;5,0;m3;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+02010001;Betonunterlage vorbereiten Überbau*Oberfl. waager. strahlen/absaugen*entf. von Zement entsorgen;100,0;m2;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+02010002;Betonunterlage versiegeln Überbau;100,0;m2;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+02010003;Dichtungssch. aus 1 Bitbahn herst. Überbau;100,0;m2;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+02010004;Verstärkungsstreifen einbauen Schrammbord*Schweißbn.kasch. Breite mind.30 cm;17,0;m;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+02010005;Schutzlage herstellen;35,0;m2;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+02010006;Asphaltschutzschicht herstellen zwischen Kappen*MA11S,Bk100-Bk3,2 Dicke 3,5 cm*Bimi 30/45+vvZ;70,0;m2;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+02010007;Oberfl. d. Asphaltschutzsch. bearb. Abstreuung aufbr.*mit Handwalze Menge 2-3 kg/m2*Lieferkörnung 2/5;70,0;m2;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+02010008;Geotextil liefern u. einbauen;75,0;m2;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+02010009;Asphaltdecksch. aus MA 11 S herst. Bauwerk Bk100*Dicke 4,0 cm ... Freitext ...*Handeinbau;70,0;m2;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+02010010;Gussasphaltoberfläche bearbeiten bit.abst.aufbr.*LK 2/5, 5-9kg/m2 ungeb. verwert.;70,0;m2;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+02010011;Anschluss a. Fuge m. Fugenm. herst. Fuge vor Kappen*Schutzschicht Tiefe 40 mm*Breite 20 mm Verf. mit Trstr.*Fugenmasse N1;17,0;m;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+02010012;Anschluss a. Fuge m. Fugenm. herst. Fuge vor Kappen*Deckschicht Tiefe 35 mm*Breite 20 mm Verf. mit Trstr.*Fugenmasse N1;17,0;m;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+02010013;Verstärkungsstreifen einbauen ... Freitext ...*Schweißbn.kasch. Breite mind.30 cm;125,0;m;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+02010014;Verstärkungsstreifen einbauen ... Freitext ...*Schweißbn.kasch. ... Freitext ...;65,0;m;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+02010015;Hydrophobierung gemäß OS-A herst. ... Freitext ...*Oberfl.untersch.;60,0;m2;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+02010016;Fugeneinlage einbauen ... Freitext ...*Hartschaum Dicke 2 cm.;4,0;m2;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+02010017;Fugenfüllung herstellen ... Freitext ...*Kalt, 25 v.H. Flanke Beton*Breite 15-20 mm ... Freitext ...*Füllstoff einb.;6,0;m;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+02020001;Messbolzen einbauen Kappe*Messing*... Freitext ... ... Freitext ...*Vertikal ... Freitext ...*... Freitext ...;14,0;St;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+02020002;Messbolzen einbauen ... Freitext ...*Messing ... Freitext ...*... Freitext ... Horizontal*Mörtel*Höhenmessung;12,0;St;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+02020003;Verankerung einbauen ... Freitext ...*... Freitext ... Stahl, n.rostend*Einsetzen;10,0;St;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+02020004;Prov. Geländer liefern u. montieren;1,0;Psch;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+02020005;Stahlgeländer einbauen ... Freitext ...*Stahl ... Freitext ...*Holmgel. m. 1 ZH ... Freitext ...*... Freitext ...;42,0;m;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+03000001;Lichtraumprofil herstellen;100,0;m;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+03000002;Oberboden abtragen und lagern ... Freitext ...*Abtr. Unterl. AG Oberbod.i.lagern*Abrechnung Abtrag;50,0;m3;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+03000003;Boden zur Rekultivierung aufnehmen Boden steinig*Zwischenlager bis 0,5 km*Abrechnung Abtrag;80,0;m3;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+03000004;Boden bzw. Fels lös. u. wiederverw. ... Freitext ...*Felsvert.B. verf. Boden i. Zw.verd.*Planum gesondert Abrechng. Auftrag;350,0;m3;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+03000005;Rohrdurchlass ausbauen Länge ü. 8-10,5 m*Rohr DN bis 400 Beton o. StB-Rohr*Bettung abbrechen Ausbau verwerten;1,0;St;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+03000006;Geotextil als Trennschicht verlegen Nutz.Dauer<25Jahr*pH 4-9 GRK 5*... Freitext ... Abr. Überdeckung;600,0;m2;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+03000007;Baustoff liefern und einbauen ... Freitext ...*Wasserschutzgeb. ... Freitext ...*Planum nicht ges. Abrechng. Auftrag;300,0;m3;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+03000008;Schottertragschicht herstellen ländliche Wege*0/56 mm CUmind13+Filterst*DPr 100+EV2 120 ... Freitext ...*natürl. Gstk. Abrechng. Auftrag;150,0;m3;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+03000009;Deckschicht ohne Bindemittel herst. ländliche Wege*Sch.-Splitt-Sand 0/16 mm*... Freitext ...;360,0;m2;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+03000010;Bankett profilgerecht herstellen ... Freitext ...*Baustoff. C 90/3 URA+Einbaudoku*... Freitext ... ... Freitext ...*... Freitext ... 3cm tiefer*EV2 mind. 100MPa;150,0;m2;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+03000011;Rasenansaat mit RSM herstellen Neigung 1:4-1:3*Bösch., Trennstr. Feinplanum herst.*... Freitext ... ... Freitext ...;300,0;m2;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+03000012;Betonrohrleitung herstellen Rohr DN 300*Beton-Rohr K Dichtung*Bettung Typ 1 Tiefe bis 1,25 m*Überdeckg.0,5-1 m;10,0;m;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+03000013;Böschungsstück einbauen (Zul.) Rohr DN 300*Beton-Rohr Anlauf 1 zu 1;2,0;St;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+03000014;Umpflasterung von Einbauten herst. ... Freitext ...*... Freitext ... 3-zeilig*... Freitext ... Fundamentbet. XF2*bis 10 cm unt.OK ... Freitext ...;2,0;St;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+03000015;Graben herstellen gewachsener Boden*Breite 0,3 m Tiefe bis 0,5 m*Böschneig. 1:1,5 Boden Verwert. AN;100,0;m;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+04000001;Verbissschutzzaun abbauen Höhe Gefl. 1,60 m*... Freitext ... ... Freitext ...*Pfahlabstand 4 m ... Freitext ...;380,0;m;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+05000001;Vorankündigung erstellen;1,0;Psch;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+05000002;SiGe-Plan des AG fortschreiben;1,0;Psch;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+05000003;SiGe-Koordinator stellen.;1,0;Psch;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+05010001;Probegefäß liefern Alu-Schale25x25x4;2,0;St;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+05010002;Materialprobe entnehm. u. übergeben;2,0;St;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+05010003;Probegefäß liefern 10-l-Blecheimer;4,0;St;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+05010004;Materialprobe entnehm. u. übergeben;4,0;St;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+05010005;Plattendruckversuch durchführen;10,0;St;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+05010006;Belastungsfahrzeug bereitstellen;15,0;h;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+05010007;Dyn. Plattendruckversuch durchf.;4,0;St;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83
+05010008;Prüfung Abreißfestigkeit durchführ. ... Freitext ...*Oberfl.untersch.;6,0;St;gaeb-flat;Leistungsverzeichnis\BW4a_Leistungsverzeichnis_10.07.2026.D83

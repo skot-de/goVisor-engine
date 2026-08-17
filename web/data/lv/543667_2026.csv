@@ -1,0 +1,653 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+1.1.10;Baustelle einrichten Sämtl.LV-Abschn.*Zufahrt herst.AN;1,0;psch;gaeb-flat;3937226.d83
+1.1.20;Baustelle räumen Sämtl. LV-Abschn.;1,0;psch;gaeb-flat;3937226.d83
+1.1.30;Bauzaun aufstellen und  entfernen Zaunhöhe 2,0 m*... Freitext ...;300,0;m;gaeb-flat;3937226.d83
+1.1.40;Vorankündigung erstellen;1,0;psch;gaeb-flat;3937226.d83
+1.1.50;SiGe-Plan erstellen;1,0;psch;gaeb-flat;3937226.d83
+1.1.60;SiGe-Plan des AG fortschreiben;1,0;psch;gaeb-flat;3937226.d83
+1.1.70;SiGe-Koordinator stellen.;1,0;psch;gaeb-flat;3937226.d83
+1.1.80;Beweissicherung durchführen Bestand Unterl.AG*Bew.vorh.u.nachh. Dokument. 3fach;1,0;psch;gaeb-flat;3937226.d83
+1.1.90;Belastungsfahrzeug bereitstellen;1,5;h;gaeb-flat;3937226.d83
+1.1.100;Zuschlag;2,0;St;gaeb-flat;3937226.d83
+1.1.110;Einholen der Bestandspläne;1,0;psch;gaeb-flat;3937226.d83
+1.1.120;Vermessungsarb. durchführen;1,0;psch;gaeb-flat;3937226.d83
+1.1.130;Verkehrsflächen unterhalten;1,0;psch;gaeb-flat;3937226.d83
+1.1.140;Bestandspläne erstellen;1,0;psch;gaeb-flat;3937226.d83
+1.1.150;Koordinierung Sparten;1,0;psch;gaeb-flat;3937226.d83
+1.1.160;Zufahrten, Zugänge;1,0;psch;gaeb-flat;3937226.d83
+1.1.170;Zuschlag;1,0;psch;gaeb-flat;3937226.d83
+1.1.180;Hochwasserschutz-Maßnahmenplan;1,0;psch;gaeb-flat;3937226.d83
+1.1.190;Stilllegen und Sichern der Baustelle;1,0;psch;gaeb-flat;3937226.d83
+1.1.200;Vorhalten stillgelegte Baustelle;1,0;Wo;gaeb-flat;3937226.d83
+1.1.210;Inbetriebnahme stillgelegte Baustelle;1,0;psch;gaeb-flat;3937226.d83
+1.1.220;Standsicherheitsnachweis aufstellen ... Freitext ...*... Freitext ...;1,0;psch;gaeb-flat;3937226.d83
+1.1.230;Ausführungsplanung erstellen Bauwerk/Baubehelf;1,0;psch;gaeb-flat;3937226.d83
+1.1.240;Abbruchplanung erstellen;1,0;psch;gaeb-flat;3937226.d83
+1.1.250;Detailterminplan / Ressourcenplanung;1,0;psch;gaeb-flat;3937226.d83
+1.1.260;Fortschreibung Detailterminplan / Ressourcenplanung;1,0;psch;gaeb-flat;3937226.d83
+1.1.270;Zulage 3-Schicht-Betrieb;1,0;psch;gaeb-flat;3937226.d83
+1.1.280;Schneeräumung;5,0;St;gaeb-flat;3937226.d83
+1.2.10;Pläne für die Verkehrsführung/ -sicherung und Beschilderung;1,0;psch;gaeb-flat;3937226.d83
+1.2.20;Verkehrssicherung;1,0;psch;gaeb-flat;3937226.d83
+1.2.30;Verkehrssicherung läng.Dauer durchf Arbeitsstelle*... Freitext ... ... Freitext ...*über 2 bis 7 Tage ... Freitext ...;1,0;St;gaeb-flat;3937226.d83
+1.2.40;Verkehrssicherung läng.Dauer durchf Arbeitsstelle*... Freitext ... ... Freitext ...*über 2 bis 7 Tage ... Freitext ...;1,0;St;gaeb-flat;3937226.d83
+1.2.50;Transp. LSA f. Engst. aufb. u. abb. LSA Typ B*Verbind. Wahl AN Entf.ü.100bis150m*Versorg. Wahl AN 2 SZP*VTU erstellen;2,0;St;gaeb-flat;3937226.d83
+1.2.60;Transport. Lichtsignalanlage vorh. ... Freitext ...;240,0;Std;gaeb-flat;3937226.d83
+1.2.70;Transportable Lichtsignalanlagen umsetzen;2,0;St;gaeb-flat;3937226.d83
+1.2.80;Absp.g.,Warneinr. aufb.,abb.u.vorh. Schr.bake doppels*Typ RA1 eins. Dauerlicht*Versorg. Wahl AN über 2 bis 7 Tage;10,0;St;gaeb-flat;3937226.d83
+1.2.90;Absp.g.,Warneinr. aufb.,abb.u.vorh. Schr.bake doppels*Typ RA1 zweis. Dauerlicht*Versorg. Wahl AN über 2 bis 7 Tage;5,0;St;gaeb-flat;3937226.d83
+1.2.100;Absp.g.,Warneinr. aufb.,abb.u.vorh. Abspsch. 250x2000*Typ RA1 über 2 bis 7 Tage;5,0;St;gaeb-flat;3937226.d83
+1.2.110;Absp.g.,Warneinr. aufb.,abb.u.vorh. Abspsch. 250x2000*Typ RA1 3 Strah.eins.gelb*Versorg. Wahl AN über 2 bis 7 Tage;1,0;St;gaeb-flat;3937226.d83
+1.2.120;Absperrger. oder Warneinr. umsetzen wie Vorposition;10,0;St;gaeb-flat;3937226.d83
+1.2.130;Verkehrssicherung Baustellenbereich;1,0;psch;gaeb-flat;3937226.d83
+1.2.140;Rückbau Engstelle;1,0;psch;gaeb-flat;3937226.d83
+2.1.10;Gel. Boden bzw. Fels des AG aufn. ... Freitext ...*Bod. i.lag./verd. Abrechng. Auftrag;550,0;m3;gaeb-flat;3937226.d83
+2.1.20;Gel. Boden bzw. Fels des AG aufn. ... Freitext ...*Bod. i.lag./verd. Abrechng. Auftrag;550,0;m3;gaeb-flat;3937226.d83
+2.1.30;Vorschüttung Baustoffe liefern;1350,0;m3;gaeb-flat;3937226.d83
+2.1.40;Vorschüttung  herstellen;1,0;psch;gaeb-flat;3937226.d83
+2.1.50;Vorschüttung  herstellen;1,0;psch;gaeb-flat;3937226.d83
+2.1.60;Vorschüttung zurückbauen und verwerten;1,0;psch;gaeb-flat;3937226.d83
+2.1.70;Vorschüttung Wasserbausteine liefern;300,0;t;gaeb-flat;3937226.d83
+2.1.80;Vorschüttung Sicherung herstellen;1,0;psch;gaeb-flat;3937226.d83
+2.1.90;Vorschüttung Sicherung  herstellen;1,0;psch;gaeb-flat;3937226.d83
+2.1.100;Vorschüttung Sicherung zurückb. und verwerten;1,0;psch;gaeb-flat;3937226.d83
+2.1.110;Ufersicherung herstellen;1350,0;t;gaeb-flat;3937226.d83
+2.1.120;Ufersicherung herstellen Unterbau;450,0;m3;gaeb-flat;3937226.d83
+2.1.130;Steinschüttung aus Naturst. herst. ... Freitext ...*Kantenl. 10-30 ... Freitext ...*Einbau u. Wasser;100,0;t;gaeb-flat;3937226.d83
+2.1.140;Steinschüttung aus Naturst. herst. ... Freitext ...*Kantenl. 20-60 ... Freitext ...*Einbau u. Wasser;100,0;t;gaeb-flat;3937226.d83
+2.1.150;Steinschüttung aus Naturst. herst. ... Freitext ...*Kantenl. 35-100 ... Freitext ...*Einbau u. Wasser;100,0;t;gaeb-flat;3937226.d83
+2.2.10;Baugrube herstellen ... Freitext ...*... Freitext ... ... Freitext ...;1300,0;m3;gaeb-flat;3937226.d83
+2.2.20;Baugrube herstellen ... Freitext ...*... Freitext ... ... Freitext ...;1300,0;m3;gaeb-flat;3937226.d83
+2.3.10;Schachtdeckel ausbauen;2,0;St;gaeb-flat;3937226.d83
+2.3.20;Zugangsleiter ausbauen;2,0;St;gaeb-flat;3937226.d83
+2.3.30;Regeneinlauff ausbauen;8,0;St;gaeb-flat;3937226.d83
+2.3.40;Tropftülle ausbauen Spannbetonüberbau;58,0;St;gaeb-flat;3937226.d83
+2.3.50;Faserzementrohr ausbauen;1,0;psch;gaeb-flat;3937226.d83
+2.3.60;Entwässerungsleitungen ausbauen;20,0;m;gaeb-flat;3937226.d83
+2.4.10;Asphalt fräsen Asphaltbef+Beton*... Freitext ... ... Freitext ...*Bauwerk Fahrbahn*... Freitext ... Fräsasph. verw.;510,0;m2;gaeb-flat;3937226.d83
+2.4.20;Erschwernis infolge Einfassungen Erschwer. fräsen*Asphaltbefestig.;305,0;m;gaeb-flat;3937226.d83
+2.5.10;Bordstein ausbauen;95,0;m;gaeb-flat;3937226.d83
+2.5.20;Bordstein ausbauen;4,0;m;gaeb-flat;3937226.d83
+2.6.10;Betonoberfläche abfräsen;185,0;m2;gaeb-flat;3937226.d83
+2.6.20;Abf.-Container bereitst. u. vorh. ... Freitext ...*min. 5 m3 1 Stück;42,0;d;gaeb-flat;3937226.d83
+2.6.30;Betonoberfläche abfräsen;212,0;m2;gaeb-flat;3937226.d83
+2.6.40;Abf.-Container bereitst. u. vorh. ... Freitext ...*min. 5 m3 1 Stück;42,0;d;gaeb-flat;3937226.d83
+2.6.50;Beton abbrechen Kappe*Stahlbeton*... Freitext ... ... Freitext ...;22,0;m3;gaeb-flat;3937226.d83
+2.6.60;Überschreitung der Betondruckfestigkeiten Kappen*bis 3 Festigkeit;1,0;psch;gaeb-flat;3937226.d83
+2.6.70;Betonbauteil abbrechen Überbau*... Freitext ... ... Freitext ...*Ohne Sprengen ... Freitext ...;1,0;psch;gaeb-flat;3937226.d83
+2.6.80;Überschreitung der Betondruckfestigkeiten Überbau*bis 3 Festigkeit;1,0;psch;gaeb-flat;3937226.d83
+2.6.90;Notstütze ausbauen;2,0;St;gaeb-flat;3937226.d83
+2.6.100;Beton abbrechen ... Freitext ...*Stahlbeton ... Freitext ...*... Freitext ...;3,5;m3;gaeb-flat;3937226.d83
+2.6.110;Überschreitung der Betondruckfestigkeiten ... Freitext ...*bis 3 Festigkeit;1,0;psch;gaeb-flat;3937226.d83
+2.6.120;Beton abbrechen ... Freitext ...*Stahlbeton ... Freitext ...*... Freitext ...;38,0;m3;gaeb-flat;3937226.d83
+2.6.130;Überschreitung der Betondruckfestigkeiten ... Freitext ...*bis 3 Festigkeit;1,0;psch;gaeb-flat;3937226.d83
+2.6.140;Beton abbrechen ... Freitext ...*Stahlbeton ... Freitext ...*... Freitext ...;20,0;m3;gaeb-flat;3937226.d83
+2.6.150;Überschreitung der Betondruckfestigkeiten ... Freitext ...*bis 3 Festigkeit;1,0;psch;gaeb-flat;3937226.d83
+2.6.160;Beton abbrechen ... Freitext ...*... Freitext ... ... Freitext ...;125,0;m3;gaeb-flat;3937226.d83
+2.6.170;Baustützen ausbauen;10,0;St;gaeb-flat;3937226.d83
+2.6.180;Beton abbrechen ... Freitext ...*Stahlbeton ... Freitext ...*... Freitext ...;2,0;m3;gaeb-flat;3937226.d83
+2.6.190;Dichtungsanstrich abfräsen;580,0;m2;gaeb-flat;3937226.d83
+2.6.200;Abf.-Container bereitst. u. vorh. ... Freitext ...*min. 5 m3 2 Stück;42,0;d;gaeb-flat;3937226.d83
+2.6.210;Beton abbrechen Widerlager*Stahlbeton ... Freitext ...*... Freitext ...;275,0;m3;gaeb-flat;3937226.d83
+2.6.220;Überschreitung der Betondruckfestigkeiten Widerlager*bis 3 Festigkeit;1,0;psch;gaeb-flat;3937226.d83
+2.6.230;Beton abbrechen ... Freitext ...*Stahlbeton ... Freitext ...*... Freitext ...;265,0;m3;gaeb-flat;3937226.d83
+2.6.240;Überschreitung der Betondruckfestigkeiten ... Freitext ...*bis 3 Festigkeit;1,0;psch;gaeb-flat;3937226.d83
+2.6.250;Beton abbrechen. ... Freitext ...*Unbewehrter Beton ... Freitext ...*... Freitext ...;240,0;m2;gaeb-flat;3937226.d83
+2.6.260;Stahlspundwand kürzen ... Freitext ...*... Freitext ...;90,0;m;gaeb-flat;3937226.d83
+2.6.270;Atlfundamente abbrechen;1,0;psch;gaeb-flat;3937226.d83
+2.6.280;Spaltzugverstärkung für Abbruch herstellen;224,0;St;gaeb-flat;3937226.d83
+2.6.290;Querschnittsverstärkung für Abbruch herstellen;2,0;St;gaeb-flat;3937226.d83
+2.6.300;Längsfesthaltung für Abbruch herstellen;1,0;St;gaeb-flat;3937226.d83
+2.7.10;Stahlkonstruktion abbrechen ... Freitext ...*Abr.n.Wiegen;30,0;t;gaeb-flat;3937226.d83
+2.7.20;Metallbeschichtung abschaben;170,0;m2;gaeb-flat;3937226.d83
+2.8.10;Lager ausbauen ... Freitext ...*... Freitext ... Rollenlager*Ob.+unt.Ankerpl.;2,0;St;gaeb-flat;3937226.d83
+2.8.20;Lager ausbauen ... Freitext ...*... Freitext ... Rollenlager*Ob.+unt.Ankerpl.;2,0;St;gaeb-flat;3937226.d83
+2.8.30;Fugenprofil Übergngskonstr. ausb.;19,5;m;gaeb-flat;3937226.d83
+2.8.40;Übergangskonstruktion ausbauen Überbaubreite*Hohl-/Faltprofil Unterk.+A.ausb.;19,5;m;gaeb-flat;3937226.d83
+2.8.50;Geländer abbauen Brücke*Stahl*... Freitext ... Pfosten abtr.;82,0;m;gaeb-flat;3937226.d83
+2.8.60;Geländer abbauen Brücke*Stahl*... Freitext ... Pfosten abschrb.;82,0;m;gaeb-flat;3937226.d83
+2.9.10;Fugenmasse ausb.;295,0;m;gaeb-flat;3937226.d83
+2.9.20;Abdichtung aufnehmen Unter Kappen*... Freitext ... Verwerten;212,0;m2;gaeb-flat;3937226.d83
+3.1.10;Bereitstellungsfläche des AG;1,0;psch;gaeb-flat;3937226.d83
+3.1.20;Flächen abräumen, Aufwuchs, Wurzelstöcke, Astwerk;1500,0;m²;gaeb-flat;3937226.d83
+3.1.30;Bäume fällen mit Roden DU über 0,1-0,3 m*verfüll/Boden AG Nutzholz lagern*Wst.Verwert. AN S.Abr.Verwert. AN;25,0;St;gaeb-flat;3937226.d83
+3.1.40;Bäume fällen mit Roden DU über 0,3-0,5 m*verfüll/Boden AG Nutzholz lagern*Wst.Verwert. AN S.Abr.Verwert. AN;10,0;St;gaeb-flat;3937226.d83
+3.1.50;Bäume fällen mit Roden DU über 0,5-0,75m*verfüll/Boden AG Nutzholz lagern*Wst.Verwert. AN S.Abr.Verwert. AN;5,0;St;gaeb-flat;3937226.d83
+3.1.60;Bauliche Anlage abbrechen ... Freitext ...*Beton+Stahlbeton ohne Sprengen*Abbruch bis 1 m Anl. freil./verd.*ges. Abbr. verw.;5,0;m3;gaeb-flat;3937226.d83
+3.1.70;Vegetationsdecke bearbeiten;1400,0;m2;gaeb-flat;3937226.d83
+3.1.80;Oberboden abtragen und lagern ... Freitext ...*Abtr.über 10-30cm Oberbod.i.lagern*Abrechnung Abtrag;200,0;m3;gaeb-flat;3937226.d83
+3.1.90;Oberboden des AG andecken ... Freitext ...*Andeck. ü.15-25cm Boden i. aufnehm.*Abrechng.Auftrag;700,0;m3;gaeb-flat;3937226.d83
+3.1.100;Oberboden liefern und andecken ... Freitext ...*Andeck. ü.15-25cm Abrechng.Auftrag;50,0;m3;gaeb-flat;3937226.d83
+3.1.110;Zulage;265,0;m;gaeb-flat;3937226.d83
+3.1.120;Säubern der Oberfläche;5000,0;m2;gaeb-flat;3937226.d83
+3.1.130;Boden bzw. Fels lösen und einbauen ... Freitext ...*... Freitext ...;2850,0;m3;gaeb-flat;3937226.d83
+3.1.140;Boden bzw. Fels lösen und einbauen ... Freitext ...*... Freitext ...;200,0;m3;gaeb-flat;3937226.d83
+3.1.150;Boden laden;10,0;h;gaeb-flat;3937226.d83
+3.1.160;Gel. Boden bzw. Fels des AG aufn. ... Freitext ...*Bod. i.lag./verd. Abrechng. Auftrag;350,0;m3;gaeb-flat;3937226.d83
+3.1.170;Gel. Boden bzw. Fels des AG aufn. ... Freitext ...*Bod. i.lag./verd. Abrechng. Auftrag;350,0;m3;gaeb-flat;3937226.d83
+3.1.180;Gel. Boden bzw. Fels des AG aufn. ... Freitext ...*Bod. i.lag./verd. Abrechng. Auftrag;150,0;m3;gaeb-flat;3937226.d83
+3.1.190;Planum herstellen ... Freitext ...;1400,0;m2;gaeb-flat;3937226.d83
+3.1.200;Geotextil als Trennschicht verlegen Nutz.Dauer>25Jahr*pH 4-9 GRK 4*... Freitext ... Abr. Abwicklung;1000,0;m2;gaeb-flat;3937226.d83
+3.1.210;Geotextil als Trennschicht verlegen Nutz.Dauer>25Jahr*pH 4-9 GRK 4*... Freitext ... Abr. Überdeckung;450,0;m2;gaeb-flat;3937226.d83
+3.1.220;Mulde herstellen eingeb.verd. Bod.*Einschnitt Breite 1,50 m*... Freitext ... Boden Verwert. AN;100,0;m;gaeb-flat;3937226.d83
+3.1.230;Mulde herstellen gewachsener Boden*Dammfuß Breite 1,50 m*... Freitext ... Boden Verwert. AN;40,0;m;gaeb-flat;3937226.d83
+3.1.240;Mulde herstellen eingeb.verd. Bod.*... Freitext ... ... Freitext ...*... Freitext ... Boden Verwert. AN;80,0;m;gaeb-flat;3937226.d83
+3.1.250;Mulde herstellen eingeb.verd. Bod.*... Freitext ... ... Freitext ...*... Freitext ... Boden Verwert. AN;45,0;m;gaeb-flat;3937226.d83
+3.1.260;Ansaat herstellen;4000,0;m2;gaeb-flat;3937226.d83
+3.1.270;Ansaat herstellen;4000,0;m2;gaeb-flat;3937226.d83
+3.2.10;Leitungsgr. m. Schachtbaugr. herst. eing. verd. Boden*Tiefe bis 1,25 m ... Freitext ...*m.Verb./+10 m3 W. lag. i./ver.o.Lz.*... Freitext ... Abr. senkrecht;20,0;m3;gaeb-flat;3937226.d83
+3.2.20;Leitungsgr. m. Schachtbaugr. herst. eing. verd. Boden*Tiefe bis 1,25 m ... Freitext ...*m.Verb./+10 m3 W. lag. i./ver.o.Lz.*... Freitext ... Abr. senkrecht;55,0;m3;gaeb-flat;3937226.d83
+3.2.30;Leitungsgr. m. Schachtbaugr. herst. eing. verd. Boden*Tiefe bis 1,25 m ... Freitext ...*m.Verb./+10 m3 W. lag. i./ver.o.Lz.*... Freitext ... Abr. senkrecht;30,0;m3;gaeb-flat;3937226.d83
+3.2.40;Boden d. AG in Leitungsgr. einb. Boden gelagert*Tiefe bis 1,25 m ... Freitext ...*oberh.Leitungsz. Abrechnung senkr.;25,0;m3;gaeb-flat;3937226.d83
+3.2.50;Suchgraben herstellen Tiefe bis 1,25 m*mitMasch.unterst. Aufbruch gesond.*Boden einb.u.v. Abrechnung Abtrag;20,0;m3;gaeb-flat;3937226.d83
+3.2.60;Suchgraben herstellen Tiefe >1,25-1,75m*mitMasch.unterst. Aufbruch gesond.*Boden einb.u.v. Abrechnung Abtrag;15,0;m3;gaeb-flat;3937226.d83
+3.2.70;Zuschlag Schacht;1,0;St;gaeb-flat;3937226.d83
+3.2.80;Zuschlag Rohr;1,0;St;gaeb-flat;3937226.d83
+3.2.90;Mehraufwand vorh. Leitungen;10,0;m;gaeb-flat;3937226.d83
+3.2.100;Mehraufwand vorh. Leitungen;20,0;m;gaeb-flat;3937226.d83
+3.3.10;Straßenmulde befestigen ... Freitext ...*Bettg gebr.Minst. Dicke 10 cm*einebnen;120,0;m2;gaeb-flat;3937226.d83
+3.3.20;Sickerstrang herstellen ... Freitext ...*... Freitext ... ... Freitext ...*Sohle=Boden AN ... Freitext ...;80,0;m;gaeb-flat;3937226.d83
+3.3.30;Sickerstrang herstellen ... Freitext ...*... Freitext ... ... Freitext ...*Sohle=Boden AN ... Freitext ...;160,0;m;gaeb-flat;3937226.d83
+3.3.40;Sickerrohrleitung verlegen in Sickerstrang*Rohr DN 200 Teilsickerrohr*PE-HD-Rohr,Typ R2 Tiefe bis 1,25 m;80,0;m;gaeb-flat;3937226.d83
+3.3.50;Sickerrohrleitung verlegen in Sickerstrang*Rohr DN 200 Teilsickerrohr*PE-HD-Rohr,Typ R2 Tiefe bis 1,25 m;160,0;m;gaeb-flat;3937226.d83
+3.3.60;Schachtanschluss herstellen (Zul.) Rohr DN 200*... Freitext ... Kunststoff*Muffe+Gelenk;10,0;St;gaeb-flat;3937226.d83
+3.3.70;Formstück einbauen (Zul.) Teller DN 200*... Freitext ... Rohr DN 200;5,0;St;gaeb-flat;3937226.d83
+3.3.80;Formstück einbauen (Zul.) Bogen DN 200*... Freitext ... Rohr DN 200;5,0;St;gaeb-flat;3937226.d83
+3.3.90;Zulage;50,0;m;gaeb-flat;3937226.d83
+3.3.100;Entwässerungsrohrleitung abbrechen Rohr DN bis 250*Kunststoff-Rohr Tiefe bis 1,25 m*Ausb. verwerten;10,0;m;gaeb-flat;3937226.d83
+3.3.110;Kunststoffrohrleitung herstellen Rohr DN 200*... Freitext ... ... Freitext ...*Bettung Typ 1 Tiefe bis 1,25 m*Überdeckg.ü.1-2 m Ringst. SN 16*LM 1,Sta. prüf.;35,0;m;gaeb-flat;3937226.d83
+3.3.120;Leitungszone verfüllen Boden liefern*Rohr DN 200;35,0;m;gaeb-flat;3937226.d83
+3.3.130;Schachtanschluss herstellen (Zul.) Rohr DN 200*Kunststoff-Rohr Kunststoff*Muffe+Gelenk;4,0;St;gaeb-flat;3937226.d83
+3.3.140;Schacht ausbauen DU bis 1,00 m*Betonfertigteile Tiefe bis 1,25 m*Ausbau verwerten;1,0;St;gaeb-flat;3937226.d83
+3.3.150;Schachtteil a usbauen ... Freitext ...*Baut.s.+lagern Ausbau verwerten;2,0;St;gaeb-flat;3937226.d83
+3.3.160;Fertigteil für Schacht einbauen ... Freitext ...;2,0;St;gaeb-flat;3937226.d83
+3.3.170;Schachtteil ausbauen Abdeckung*Schacht sichern Baut.s.+lagern*Rest verwerten;2,0;St;gaeb-flat;3937226.d83
+3.3.180;Schachtabdeckung des AG aufsetzen Höhe planmäßig*Mörtel M20;2,0;St;gaeb-flat;3937226.d83
+3.3.190;Fertigteil-Schacht herstellen BFT*DU 1000 mm*... Freitext ... T ü.1,00 - 2,00 m*Aufl.gk.Bod 10cm Gleitringdichtung*... Freitext ...;7,0;St;gaeb-flat;3937226.d83
+3.3.200;Schachtabdeckung aufsetzen DIN 19584, C, R*GG-Trich+Eimer B1 Höhe Zug um Zug*Mörtel M20;7,0;St;gaeb-flat;3937226.d83
+3.3.210;Schachtabdeckung anpassen ... Freitext ...*... Freitext ... ... Freitext ...*Mörtel M20;5,0;St;gaeb-flat;3937226.d83
+3.3.220;Betonauflagering einbauen Rg.,verschiebsich*... Freitext ... Mörtel M20;15,0;St;gaeb-flat;3937226.d83
+3.3.230;Dichtheit Rohrleitung prüfen Rohr DN 200*Kunststoff Haltung bis 30 m*Prüf. Wahl AN Prüfung SL.;2,0;St;gaeb-flat;3937226.d83
+3.3.240;Kameradurchfahrung ausführen Rohr DN 200*Kunststoff ... Freitext ...*vor Betrieb SL.*Dokumentation*ISY-Bau/Unterl.AG;193,0;m;gaeb-flat;3937226.d83
+3.4.10;Schicht ohne Bindemittel aufnehmen KTS*Dicke bis 5cm*... Freitext ... ... Freitext ...;520,0;m2;gaeb-flat;3937226.d83
+3.4.20;Schicht ohne Bindemittel aufnehmen STS*Dicke ü.20-30cm ... Freitext ...*... Freitext ...;520,0;m2;gaeb-flat;3937226.d83
+3.4.30;Schicht ohne Bindemittel aufnehmen KTS*... Freitext ... ... Freitext ...*... Freitext ...;1150,0;m2;gaeb-flat;3937226.d83
+3.4.40;Schicht ohne Bindemittel aufnehmen KTS*... Freitext ... ... Freitext ...*Bstoff zw.-lag;450,0;m2;gaeb-flat;3937226.d83
+3.4.50;Schicht ohne Bindemittel aufnehmen KTS*... Freitext ... ... Freitext ...*... Freitext ...;1150,0;m2;gaeb-flat;3937226.d83
+3.4.60;Schicht ohne Bindemittel aufnehmen KTS*... Freitext ... ... Freitext ...*... Freitext ...;450,0;m2;gaeb-flat;3937226.d83
+3.4.70;Schicht ohne Bindemittel aufnehmen KTS*... Freitext ... ... Freitext ...*Bstoff zw.-lag;250,0;m2;gaeb-flat;3937226.d83
+3.4.80;Unterlage profilieren ... Freitext ...*EV2 mind.100 Unebenh. max.2 cm;100,0;m2;gaeb-flat;3937226.d83
+3.4.90;Bankett schälen Breite bis 1,00 m*... Freitext ... 12 tief+ 6 hoch*... Freitext ...;90,0;m;gaeb-flat;3937226.d83
+3.4.100;Bankett schälen Breite bis 1,00 m*... Freitext ... 12 tief+ 6 hoch*... Freitext ...;20,0;m;gaeb-flat;3937226.d83
+3.4.110;Baustoff f. Profilausgleich liefern FSS;25,0;t;gaeb-flat;3937226.d83
+3.4.120;Unterlage profilieren FSS*EV2 mind.120*Unebenh. max.2 cm;20,0;m2;gaeb-flat;3937226.d83
+3.4.130;Frostschutzschicht herstellen ... Freitext ...*0/45 ... Freitext ...*... Freitext ... ... Freitext ...*Abrechng. Auftrag;70,0;m3;gaeb-flat;3937226.d83
+3.4.140;Frostschutzschicht herstellen Bk0,3 o.F.*0/45*... Freitext ... ... Freitext ...*... Freitext ... Abrechng. Auftrag;575,0;m3;gaeb-flat;3937226.d83
+3.4.150;Frostschutzschicht herstellen ... Freitext ...*0/45 ... Freitext ...*... Freitext ... ... Freitext ...*Abrechng. Auftrag;175,0;m3;gaeb-flat;3937226.d83
+3.4.160;Deckschicht ohne Bindem. herst. ... Freitext ...*0/11 ... Freitext ...*Dicke 4 cm;70,0;m2;gaeb-flat;3937226.d83
+3.4.170;Deckschicht ohne Bindem. herst. ... Freitext ...*0/11 ... Freitext ...*Dicke 4 cm;110,0;m2;gaeb-flat;3937226.d83
+3.4.180;Deckschicht ohne Bindem. herst. Gehu.Radw. o.F.*0/11 ... Freitext ...*Dicke 4 cm;330,0;m2;gaeb-flat;3937226.d83
+3.4.190;Bankett profilgerecht herstellen Neben Fahrbahn*Baustoff. C 90/3 ... Freitext ...*Breite 1,00 m Einbaudicke 15 cm*12 tief+ 6 hoch 3cm tiefer*EV2 mind. 100MPa;40,0;m;gaeb-flat;3937226.d83
+3.4.200;Bankett profilgerecht herstellen Neben Geh-Radweg*Baustoff. C 90/3 ... Freitext ...*Breite 0,50 m Einbaudicke 15 cm*... Freitext ... ... Freitext ...*EV2 mind. 100MPa;190,0;m;gaeb-flat;3937226.d83
+3.4.210;Bankett profilgerecht herstellen ... Freitext ...*Baustoff. C 90/3 ... Freitext ...*... Freitext ... Einbaudicke 15 cm*... Freitext ... ... Freitext ...*EV2 mind. 100MPa;460,0;m;gaeb-flat;3937226.d83
+3.4.220;Erschwernis durch Einbauten b.Aufnehmen SoB*Schächte;10,0;St;gaeb-flat;3937226.d83
+3.4.230;Erschwernis durch Einbauten b.Profilieren*Schächte;15,0;St;gaeb-flat;3937226.d83
+3.4.240;Erschwernis durch Einbauten b.Herst. ToB*Schächte;15,0;St;gaeb-flat;3937226.d83
+3.4.250;Zulage zu SoB ausbauen an Einfassungen und dgl.;400,0;m;gaeb-flat;3937226.d83
+3.4.260;Zulage zu Planum wieder herstellen an Einfassungen;130,0;m;gaeb-flat;3937226.d83
+3.4.270;Zulage zu SoB herstellen an Einfassungen und dgl.;130,0;m;gaeb-flat;3937226.d83
+3.5.10;Asphalt fräsen ADS*Asphaltbeton*Tiefe ü.2,5-4,5cm ... Freitext ...*... Freitext ... Fräsasph. verw.;20,0;m2;gaeb-flat;3937226.d83
+3.5.20;Asphalt fräsen ADS*Asphaltbeton*... Freitext ... Geh- und Radwege*... Freitext ... Fräsasph. verw.;90,0;m2;gaeb-flat;3937226.d83
+3.5.30;Asphalt fräsen ATS*... Freitext ... ... Freitext ...*... Freitext ... Fräsasph. verw.;1550,0;m2;gaeb-flat;3937226.d83
+3.5.40;Asphaltbefestigung aufnehmen ... Freitext ...*... Freitext ... ... Freitext ...*Länge max. 25 cm Aufbr. Verw. AN;130,0;m2;gaeb-flat;3937226.d83
+3.5.50;Asphaltbefestigung aufnehmen ... Freitext ...*... Freitext ... ... Freitext ...*Länge max. 25 cm Aufbr. Verw. AN;305,0;m2;gaeb-flat;3937226.d83
+3.5.60;Asphaltbefestigung aufnehmen Zwickel/Streif.*... Freitext ... ... Freitext ...*Länge max. 25 cm Aufbr. Verw. AN;100,0;m2;gaeb-flat;3937226.d83
+3.5.70;Asphaltbefestigung aufnehmen ... Freitext ...*Dicke ü. 6-12 cm ... Freitext ...*Aufbr. Verw. AN;700,0;m2;gaeb-flat;3937226.d83
+3.5.80;Asphaltbefestigung trennen Anbauber. längs*schneiden ... Freitext ...;30,0;m;gaeb-flat;3937226.d83
+3.5.90;Asphaltbefestigung trennen Einzelfl.*schneiden Dicke ü. 6-12 cm;90,0;m;gaeb-flat;3937226.d83
+3.5.100;Unterlage reinigen ... Freitext ...*zus. Flächen selb.aufn.Kehrm.;140,0;m2;gaeb-flat;3937226.d83
+3.5.110;Unterlage reinigen ... Freitext ...*zus. Flächen selb.aufn.Kehrm.;720,0;m2;gaeb-flat;3937226.d83
+3.5.120;Bitumenemulsion aufsprühen Geh- und Radwege*Asphalt gefräst C40B5-S*Menge 250 g/m2 vor A.deckschicht;140,0;m2;gaeb-flat;3937226.d83
+3.5.130;Bitumenemulsion aufsprühen Bk1,8-Bk0,3*Asphalt frisch Rampenspritzgerät*C40B5-S Menge 300 g/m2*vor A.deckschicht;720,0;m2;gaeb-flat;3937226.d83
+3.5.140;Erschwernis infolge Einfassungen ... Freitext ...*Asphaltbefestig. Einfassung;400,0;m;gaeb-flat;3937226.d83
+3.5.150;Erschwernis infolge Einfassungen Erschw.aufsprühen*Asphaltbefestig. Einfassung;130,0;m;gaeb-flat;3937226.d83
+3.5.160;Erschwernis infolge Einfassungen Erschw.herstellen*Asphaltbefestig. Einfassung;130,0;m;gaeb-flat;3937226.d83
+3.5.170;Asphalttragsch. aus AC 32 T N herst ... Freitext ...*Dicke 10 cm Bitumen 50/70;790,0;m2;gaeb-flat;3937226.d83
+3.5.180;Asphalttragsch. aus AC 32 T N als NTA herst;790,0;m2;gaeb-flat;3937226.d83
+3.5.190;Asphaltdecksch. aus AC 11 D N herst ... Freitext ...*Dicke 4,0 cm Bitumen 50/70*Böschung 2 zu 1;790,0;m2;gaeb-flat;3937226.d83
+3.5.200;Asphaltdecksch. aus AC 11 D N als NTA herst;790,0;m2;gaeb-flat;3937226.d83
+3.5.210;Asphaltdecksch. aus AC 8 D N herst. ... Freitext ...*Dicke 3 cm Bitumen 70/100;140,0;m2;gaeb-flat;3937226.d83
+3.5.220;Naht in Asphaltschicht herst. Naht ATS*Quernaht*PmB heiß Dicke ü.7,5-9 cm;25,0;m;gaeb-flat;3937226.d83
+3.5.230;Anschluss a. Fuge m. Fugenm. herst. Querfuge*Deckschicht Tiefe 30 mm*Breite 15 mm Fugenmasse N2;30,0;m;gaeb-flat;3937226.d83
+3.5.240;Anschluss a. Fuge m. Fugenm. herst. Querfuge*Deckschicht Tiefe 40 mm*Breite 15 mm Fugenmasse N2;25,0;m;gaeb-flat;3937226.d83
+3.5.250;Randabdichtung herstellen Flankenfl. rein.*Abd. 25/55-55 A ein Arbeitsgang*über 12-14 cm;190,0;m;gaeb-flat;3937226.d83
+3.5.260;Abstumpfungsmaßnahme durchführen LFK 1/3*Gestein wie Decke Menge 1 kg/m2*maschinell;930,0;m2;gaeb-flat;3937226.d83
+3.5.270;Verkehrsfläche kehren Walzasphalt*VSM durchführen;930,0;m2;gaeb-flat;3937226.d83
+3.5.280;Bohrkern entnehmen Kern-DU 15 cm*Tiefe 15 bis 20cm Asphaltschicht*... Freitext ...;4,0;St;gaeb-flat;3937226.d83
+3.6.10;Bordstein aufnehmen. ... Freitext ...*Fund. ü. 10-20 cm ... Freitext ...*Verwertung AN Anteil WV 75-100;205,0;m;gaeb-flat;3937226.d83
+3.6.20;Bordstein aufnehmen. ... Freitext ...*Fund. ü. 10-20 cm Verwertung AN;175,0;m;gaeb-flat;3937226.d83
+3.6.30;Streifen/Rinne aus Naturstein aufn. Dicke 16 cm*Breite bis 20 cm Granit*Fugenmörtel Fund.bet. ü.10-20*... Freitext ... ... Freitext ...;195,0;m;gaeb-flat;3937226.d83
+3.6.40;Umpflasterung von Einbauten herst. Schacht, DN 625*... Freitext ... 1-zeilig*Nst. 160/160/160 F-beton 12 MPa*bis 10 cm unt.OK Fuge Typ A;13,0;St;gaeb-flat;3937226.d83
+3.6.50;Umpflasterung von Einbauten herst. Schacht, DN 625*... Freitext ... 1-zeilig*Nst. 160/160/160 F-beton 12 MPa*bis 10 cm unt.OK Fuge Typ A;4,0;St;gaeb-flat;3937226.d83
+3.7.10;Zaun aufnehmen ... Freitext ...*Höhe bis 1,00 m Pfosten Holz*Abstand2,00-3,00m Pfosten in Boden*Löcher schließen Material verwert.;50,0;m;gaeb-flat;3937226.d83
+3.7.20;SE aus Stahl abbauen ESP*Profil B*Pfost. A 4,00 m HB 1*Pf.l.b. 1900 mm Teile verwerten;8,0;m;gaeb-flat;3937226.d83
+3.7.30;AEK aus Stahl abbauen Anfangsk.*... Freitext ... Profil B*... Freitext ... ... Freitext ...*... Freitext ... Teile verwerten;1,0;St;gaeb-flat;3937226.d83
+3.7.40;Verkehrsschild abbauen Größe bis 1,1 m2*Rohrpf. bis 76,1 Fundament entf.*neben d. Fahrbahn Stoffe d.Verw.zuf*Geeig.Boden verf.;5,0;St;gaeb-flat;3937226.d83
+4.1.10;Baufeldbegrenzung Fichte-Ranchzaun, H=1,50 m, m. Pfosten;180,0;m;gaeb-flat;3937226.d83
+4.2.10;"Ansaat Regiosaatgut ""Böschung""";2000,0;m2;gaeb-flat;3937226.d83
+4.2.20;Zulage Anspritzbegrünung;535,0;m2;gaeb-flat;3937226.d83
+4.2.30;Schröpfschnitt Ansaatflächen;2000,0;m2;gaeb-flat;3937226.d83
+4.2.40;Mahd Ansaatflächen;4000,0;m2;gaeb-flat;3937226.d83
+4.3.10;Artenschutzrechtliche Kontrolle von Biotopbäumen mittels Endoskop;5,0;St;gaeb-flat;3937226.d83
+5.1.10;Schutzzaun liefern, herstellen, vorhalten und entfernen;40,0;m;gaeb-flat;3937226.d83
+5.1.20;Schutzzaun h=2m, umsetzen;20,0;m;gaeb-flat;3937226.d83
+5.1.30;Schutzzaun h=1,20 m, herstellen, vorhalten und entfernen;10,0;m;gaeb-flat;3937226.d83
+5.2.10;Wurzelstöcke roden DU 0,10- 0,30 m;4,0;St;gaeb-flat;3937226.d83
+5.2.20;Wurzelstöcke roden DU 0,40- 0,60 m;2,0;St;gaeb-flat;3937226.d83
+5.2.30;Hecken und Buschwerk roden Breite untersch. Höhe bis 2,0 m;10,0;m2;gaeb-flat;3937226.d83
+5.2.40;Bodendeckerpflanzung roden, Höhe bis 0,60 m;20,0;m2;gaeb-flat;3937226.d83
+5.2.50;Strauch roden, einschl. Wurzelstock, Höhe bis 2,00 m;2,0;St;gaeb-flat;3937226.d83
+5.2.60;Strauch roden, einschl. Wurzelstock, Höhe bis 5,00 m;2,0;St;gaeb-flat;3937226.d83
+5.2.70;Wurzelstockfräsgut aufnehmen und entsorgen;1,5;m3;gaeb-flat;3937226.d83
+5.3.10;Beton abbrechen, Unbewehrter und bewehrter Beton;3,0;TO;gaeb-flat;3937226.d83
+5.3.20;Jägerzaun aus Holz (H=0,8m) abbrechen und entsorgen, inkl. 1 Tor;31,0;m;gaeb-flat;3937226.d83
+5.3.30;Hoch- und Tiefbord aus Naturstein, Granit, ca. 22/30, mit Einzeiler aus Granit-Großpflaster, lösen, säubern, lagern;10,0;m;gaeb-flat;3937226.d83
+5.3.40;Abbruchgut laden entsorgen;1,0;TO;gaeb-flat;3937226.d83
+5.4.10;Pflanzl.Bodendecke abräumen aufnehmen fördern auf LKW AN laden entsorgen Gras-Kraut-Aufwuchs Wuchs-H bis 20cm;80,0;m2;gaeb-flat;3937226.d83
+5.4.20;Oberboden, Bkl.1, Z0, lösen, lagern;16,0;m3;gaeb-flat;3937226.d83
+5.4.30;Boden lösen und fördern, Homogenbereich A+B, Abtragstiefe D = 80 cm,;69,85;m3;gaeb-flat;3937226.d83
+5.4.40;Boden, brauchbar, auf Baustelle in Haufwerken gelagert, wiedereinbauen;15,0;m3;gaeb-flat;3937226.d83
+5.4.50;Kiesigen Unterbau, brauchbar, D= bis 15 cm lösen, seitlich lagern, wieder einbauen;12,0;m3;gaeb-flat;3937226.d83
+5.4.60;Erdplanum befestigte Flächen gefällerichtig herstellen, verdichten;140,0;m2;gaeb-flat;3937226.d83
+5.4.70;Erdplanum und Feinprofilierung Grün;110,0;m2;gaeb-flat;3937226.d83
+5.4.80;Baugrubenaushub für Fundamente herstellen, T bis 1,25 m;3,0;m3;gaeb-flat;3937226.d83
+5.4.90;Planum Fundamente gefällerichtig herstellen, verdichten;8,25;m2;gaeb-flat;3937226.d83
+5.4.100;Graben f. Kabelleitung, ausheben und wiederverfüllen, T= 0,80 m B= 0,40 m;3,6;m3;gaeb-flat;3937226.d83
+5.4.110;Kabelgraben ausheben u. verfüllen In Handschachtung, T/B 0,8 bis 1,2/0,4 m;2,0;m3;gaeb-flat;3937226.d83
+5.4.120;Verfüllen der Baugruben und Rohrgräben, mit Bodenaustauschmaterial;2,0;m3;gaeb-flat;3937226.d83
+5.5.10;Kabelschutzrohr DN 110, flexibel, mit Zugdraht;15,0;m;gaeb-flat;3937226.d83
+5.5.20;Auflager / Überdeckung Kabel aus Sand, ges. 15 cm stark;1,5;m3;gaeb-flat;3937226.d83
+5.5.30;Einzelfundamente, für Mastleuchten, Lph 3,5 m;2,0;St;gaeb-flat;3937226.d83
+5.5.40;Einzelfundamente, für Mastleuchten, Lph 1,25 m;2,0;St;gaeb-flat;3937226.d83
+5.6.10;Frostschutzschicht, Frostschutzkies 0/56, D=bis 25 cm;5,0;m3;gaeb-flat;3937226.d83
+5.6.20;Sauberkeitsschicht C8/10 X0 10cm;1,5;m3;gaeb-flat;3937226.d83
+5.6.30;Granit Blockstufe L=1,00, 15/40 cm;16,0;St;gaeb-flat;3937226.d83
+5.6.40;Fundamente für Infotafel  0,6x0,6x0,6m;3,0;St;gaeb-flat;3937226.d83
+5.6.50;Fundament Beton-Tiefbord, Maße 10x25x100 cm, grau, flach gelegt, f. Bänke;4,0;St;gaeb-flat;3937226.d83
+5.7.10;Prüfung ZTVT-StB Verdichtungsgrad, Lastplatten Druckprüfung gemäß DIN 18 134;1,0;St;gaeb-flat;3937226.d83
+5.7.20;Wiederherstellen der Tragschicht, +/- 2cm;105,0;m2;gaeb-flat;3937226.d83
+5.7.30;Nachverdichten Fahrbahn und Wege DPr 103 %, EV2 größer 120 MN/m²;105,0;m2;gaeb-flat;3937226.d83
+5.7.40;Planiekies 0/22 für Nachbehandlung für vorhergehende Position;5,25;m3;gaeb-flat;3937226.d83
+5.7.50;Frostschutzschicht, Frostschutzkies 0/56, D=bis 25 cm;30,0;m3;gaeb-flat;3937226.d83
+5.7.60;Kiestragschicht, Frostschutzkies 0/32, D= bis 15 cm;29,7;m3;gaeb-flat;3937226.d83
+5.7.70;Einfassung Beton-Kantenstein, Maße 8x25x100 cm, grau;34,0;m;gaeb-flat;3937226.d83
+5.7.80;Einfassung Granit-Tiefbord, Maße 10x25x100 cm, grau;50,0;m;gaeb-flat;3937226.d83
+5.7.90;Pflasterstreifen Granit, 160x160x160, 1-Zeiler, grau, gesägt-gestockt, in Beton;50,0;m;gaeb-flat;3937226.d83
+5.7.100;Schnittkanten Bordsteine, D= bis 10 cm;11,0;St;gaeb-flat;3937226.d83
+5.7.110;Natursteinpflaster, in Brechsand-Splitt-Bettung verlegen D=10cm, 16x16 cm, 16x24cm, 24x24cm;27,0;m2;gaeb-flat;3937226.d83
+5.7.120;Nachsanden der Pflasterflächen;27,0;m2;gaeb-flat;3937226.d83
+5.7.130;Anschluss gerade/schräg, Pflasterdecke Schnittkante, Belag D=bis 10 cm;20,0;m;gaeb-flat;3937226.d83
+5.7.140;Dynamische Schicht, DIN 18035-5, FLL, 0/16, 6 cm;51,0;m2;gaeb-flat;3937226.d83
+5.7.150;wassergebundene Deckschicht, DIN 18035-5, FLL, 0/5-0/8, 4 cm;51,0;m2;gaeb-flat;3937226.d83
+5.7.160;Kiesdecke Riesel, 8/16, wiederherstellen, d= 5 cm;10,0;m2;gaeb-flat;3937226.d83
+5.8.10;Sitzbank mit Lehne, Serie Eifel, Westeifel Werke;2,0;St;gaeb-flat;3937226.d83
+5.8.20;Infotafel, seitlich gelagert, wieder einbauen;1,0;St;gaeb-flat;3937226.d83
+5.9.10;Konstruktions- und Werkstattpläne erstellen;1,0;psch;gaeb-flat;3937226.d83
+5.9.20;Systempfosten für Rundstabstahlzaun;8,0;St;gaeb-flat;3937226.d83
+5.9.30;Rundstabstahlzaun (Schmiedezaunsystem), Füllfelder herstellen;9,5;m;gaeb-flat;3937226.d83
+5.9.40;Systempfosten für Tor/Tür mit Bändern;2,0;St;gaeb-flat;3937226.d83
+5.9.50;Zweiflügeliges Rundstabstahl-Drehflügeltor (Schmiedezaunsystem), Breite 2,50 m, Höhe 1,20 m;1,0;St;gaeb-flat;3937226.d83
+510.10;Baugrund lockern, einschließl. Erdplanum für Vegetationsflächen;110,0;m2;gaeb-flat;3937226.d83
+510.20;Oberboden liefern und auftragen;13,0;m3;gaeb-flat;3937226.d83
+510.30;Vegetationstragschicht lockern t=20cm, durch Fräsen;110,0;m2;gaeb-flat;3937226.d83
+510.40;Kiessubstrat Ansaatflächen;16,0;m3;gaeb-flat;3937226.d83
+510.50;Kompostdeckschicht liefern und andecken;30,0;m2;gaeb-flat;3937226.d83
+510.60;Bodenverbesserung der Pflanzung;30,0;m2;gaeb-flat;3937226.d83
+510.70;Feinplanum Pflanzflächen;30,0;m2;gaeb-flat;3937226.d83
+510.80;Feinplanum Ansaatflächen;80,0;m2;gaeb-flat;3937226.d83
+510.90;"Ansaat Blumenmischung ""Blumenwiese""";80,0;m2;gaeb-flat;3937226.d83
+510.100;Mulchen der Pflanzflächen, mit Rindenhumus;30,0;m2;gaeb-flat;3937226.d83
+510.110;Grunddüngung Pflanzfläche organ.Dünger aufbringen einarbeiten 50g/m2;30,0;m2;gaeb-flat;3937226.d83
+511.10;Ribes alpinum 'Schmidt' Sol 3xv C 12.0 L Hoe  100-125;93,0;St;gaeb-flat;3937226.d83
+511.20;Carex morrowii 'Variegata';30,0;St;gaeb-flat;3937226.d83
+511.30;Geranium endressii;30,0;St;gaeb-flat;3937226.d83
+511.40;Waldsteinia geoides;30,0;St;gaeb-flat;3937226.d83
+512.10;Lockern, Pflegen der Pflanzflächen;30,0;m2;gaeb-flat;3937226.d83
+512.20;Mulchschicht auftragen, Pflanzflächen;30,0;m2;gaeb-flat;3937226.d83
+512.30;Hecke schneiden, H 1,25-1,50 m, B 0,50-0,60m;20,0;m;gaeb-flat;3937226.d83
+512.40;Wässern der Pflanzflächen;30,0;m2;gaeb-flat;3937226.d83
+512.50;"Ausmähen der Ansaatflächen ""Blumenwiese""";30,0;m2;gaeb-flat;3937226.d83
+513.10;Mittellohn Facharbeiter;4,0;h;gaeb-flat;3937226.d83
+513.20;Explosionsstampfer/Rüttelplatte;2,0;h;gaeb-flat;3937226.d83
+513.30;Trennflex, Abbruchhammer, etc;1,0;h;gaeb-flat;3937226.d83
+513.40;Baugeraet Bagger bis 7,5 to;2,0;h;gaeb-flat;3937226.d83
+513.50;Radlader, Schaufelinhalt bis 1,2 m³;2,0;h;gaeb-flat;3937226.d83
+513.60;Bereitstellung von Container, Absetzmulde offen, 5,5 m³;1,0;St;gaeb-flat;3937226.d83
+513.70;Entsorgungskosten für Bauschutt, Kl. 1 (AVV 17 01 07);1,0;TO;gaeb-flat;3937226.d83
+513.80;Entsorgungskosten für Baumischabfälle (AVV 17 09 04);1,0;TO;gaeb-flat;3937226.d83
+10;Geräte, Werkzeuge und sonstige Betriebsmittel, die zur;1,0;psch;gaeb;3937228.x83
+20;Baustelle von allen Geräten, Anlagen, Einrichtungen und;1,0;psch;gaeb;3937228.x83
+30;Bauzaun nach Unterlagen des AG einschl. der erforderli-;300,0;m;gaeb;3937228.x83
+40;Vorankündigung gemäß Baustellenverordnung erstellen und;1,0;psch;gaeb;3937228.x83
+50;Sicherheits- und Gesundheitsschutzplan (SiGe-Plan) nach;1,0;psch;gaeb;3937228.x83
+60;Sicherheits- und Gesundheitsschutzplan (SiGe-Plan) nach;1,0;psch;gaeb;3937228.x83
+70;Sicherheits- und Gesundheitsschutzkoordinator während;1,0;psch;gaeb;3937228.x83
+80;Beweissicherung des Bestandes im Bereich der Baustelle;1,0;psch;gaeb;3937228.x83
+90;Belastungsfahrzeug als Gegengewicht (z.B. ausreichend;1,5;h;gaeb;3937228.x83
+100;ohne StL-Nr.;2,0;St;gaeb;3937228.x83
+110;ohne StL-Nr.;1,0;psch;gaeb;3937228.x83
+120;ohne StL-Nr.;1,0;psch;gaeb;3937228.x83
+130;ohne StL-Nr.;1,0;psch;gaeb;3937228.x83
+140;ohne StL-Nr.;1,0;psch;gaeb;3937228.x83
+150;ohne StL-Nr.;1,0;psch;gaeb;3937228.x83
+160;ohne StL-Nr.;1,0;psch;gaeb;3937228.x83
+170;ohne StL-Nr.;1,0;psch;gaeb;3937228.x83
+180;ohne StL-Nr.;1,0;psch;gaeb;3937228.x83
+190;ohne StL-Nr.;1,0;psch;gaeb;3937228.x83
+200;ohne StL-Nr.;1,0;Wo;gaeb;3937228.x83
+210;ohne StL-Nr.;1,0;psch;gaeb;3937228.x83
+220;Standsicherheitsnachweis aufstellen.;1,0;psch;gaeb;3937228.x83
+230;ohne StL-Nr.;1,0;psch;gaeb;3937228.x83
+240;ohne StL-Nr.;1,0;psch;gaeb;3937228.x83
+250;ohne StL-Nr.;1,0;psch;gaeb;3937228.x83
+260;ohne StL-Nr.;1,0;psch;gaeb;3937228.x83
+270;ohne StL-Nr.;1,0;psch;gaeb;3937228.x83
+280;ohne StL-Nr.;5,0;St;gaeb;3937228.x83
+10;ohne StL-Nr.;1,0;psch;gaeb;3937228.x83
+20;ohne StL-Nr.;1,0;psch;gaeb;3937228.x83
+30;Verkehrssicherung von längerer Dauer betriebsfertig;1,0;St;gaeb;3937228.x83
+40;Verkehrssicherung von längerer Dauer betriebsfertig;1,0;St;gaeb;3937228.x83
+50;Transportable Lichtsignalanlage (LSA) für Engstelle;2,0;St;gaeb;3937228.x83
+60;Transportable Lichtsignalanlage (LSA) vorhalten, war-;240,0;Std;gaeb;3937228.x83
+70;ohne StL-Nr.;2,0;St;gaeb;3937228.x83
+80;Absperrgerät oder Warneinrichtung betriebsfertig auf-;10,0;St;gaeb;3937228.x83
+90;Absperrgerät oder Warneinrichtung betriebsfertig auf-;5,0;St;gaeb;3937228.x83
+100;Absperrgerät oder Warneinrichtung betriebsfertig auf-;5,0;St;gaeb;3937228.x83
+110;Absperrgerät oder Warneinrichtung betriebsfertig auf-;1,0;St;gaeb;3937228.x83
+120;Absperrgerät oder Warneinrichtung innerhalb des Ar-;10,0;St;gaeb;3937228.x83
+130;Verkehrssicherung Abschnitt 2 - Brückenbau;1,0;psch;gaeb;3937228.x83
+140;ohne StL-Nr.;1,0;psch;gaeb;3937228.x83
+10;Gelagerten Boden bzw. Fels des AG aufnehmen. Beschrei-;550,0;m3;gaeb;3937228.x83
+20;Gelagerten Boden bzw. Fels des AG aufnehmen. Beschrei-;550,0;m3;gaeb;3937228.x83
+30;ohne StL-Nr.;1350,0;m3;gaeb;3937228.x83
+40;ohne StL-Nr.;1,0;psch;gaeb;3937228.x83
+50;ohne StL-Nr.;1,0;psch;gaeb;3937228.x83
+60;ohne StL-Nr.;1,0;psch;gaeb;3937228.x83
+70;ohne StL-Nr.;300,0;t;gaeb;3937228.x83
+80;ohne StL-Nr.;1,0;psch;gaeb;3937228.x83
+90;ohne StL-Nr.;1,0;psch;gaeb;3937228.x83
+100;ohne StL-Nr.;1,0;psch;gaeb;3937228.x83
+110;ohne StL-Nr.;1350,0;t;gaeb;3937228.x83
+120;ohne StL-Nr.;450,0;m3;gaeb;3937228.x83
+130;Steinschüttung aus Natursteinen zur Böschungsfuss-,;100,0;t;gaeb;3937228.x83
+140;Steinschüttung aus Natursteinen zur Böschungsfuss-,;100,0;t;gaeb;3937228.x83
+150;Steinschüttung aus Natursteinen zur Böschungsfuss-,;100,0;t;gaeb;3937228.x83
+10;Baugrube nach Unterlagen des AG herstellen.;1300,0;m3;gaeb;3937228.x83
+20;Baugrube nach Unterlagen des AG herstellen.;1300,0;m3;gaeb;3937228.x83
+10;ohne StL-Nr.;2,0;St;gaeb;3937228.x83
+20;ohne StL-Nr.;2,0;St;gaeb;3937228.x83
+30;ohne StL-Nr.;8,0;St;gaeb;3937228.x83
+40;ohne StL-Nr.;58,0;St;gaeb;3937228.x83
+50;ohne StL-Nr.;1,0;psch;gaeb;3937228.x83
+60;ohne StL-Nr.;20,0;m;gaeb;3937228.x83
+10;Asphalt fräsen und Fräsgut aufnehmen. Anschlusskante;510,0;m2;gaeb;3937228.x83
+20;Erschwernis infolge Einfassungen, Borden und Fahr-;305,0;m;gaeb;3937228.x83
+10;ohne StL-Nr.;95,0;m;gaeb;3937228.x83
+20;ohne StL-Nr.;4,0;m;gaeb;3937228.x83
+10;ohne StL-Nr.;185,0;m2;gaeb;3937228.x83
+20;Stählerner Abfallcontainer mit dichter Abdeckung für;42,0;d;gaeb;3937228.x83
+30;ohne StL-Nr.;212,0;m2;gaeb;3937228.x83
+40;Stählerner Abfallcontainer mit dichter Abdeckung für;42,0;d;gaeb;3937228.x83
+50;Beton nach Unterlagen des AG abbrechen.;22,0;m3;gaeb;3937228.x83
+60;Zulage für die Überschreitung der Betondruckfestigkei-;1,0;psch;gaeb;3937228.x83
+70;Beton nach Unterlagen des AG abbrechen.;1,0;psch;gaeb;3937228.x83
+80;Zulage für die Überschreitung der Betondruckfestigkei-;1,0;psch;gaeb;3937228.x83
+90;ohne StL-Nr.;2,0;St;gaeb;3937228.x83
+100;Beton nach Unterlagen des AG abbrechen.;3,5;m3;gaeb;3937228.x83
+110;Zulage für die Überschreitung der Betondruckfestigkei-;1,0;psch;gaeb;3937228.x83
+120;Beton nach Unterlagen des AG abbrechen.;38,0;m3;gaeb;3937228.x83
+130;Zulage für die Überschreitung der Betondruckfestigkei-;1,0;psch;gaeb;3937228.x83
+140;Beton nach Unterlagen des AG abbrechen.;20,0;m3;gaeb;3937228.x83
+150;Zulage für die Überschreitung der Betondruckfestigkei-;1,0;psch;gaeb;3937228.x83
+160;Beton nach Unterlagen des AG abbrechen.;125,0;m3;gaeb;3937228.x83
+170;ohne StL-Nr.;10,0;St;gaeb;3937228.x83
+180;Beton nach Unterlagen des AG abbrechen.;2,0;m3;gaeb;3937228.x83
+190;ohne StL-Nr.;580,0;m2;gaeb;3937228.x83
+200;Stählerner Abfallcontainer mit dichter Abdeckung für;42,0;d;gaeb;3937228.x83
+210;Beton nach Unterlagen des AG abbrechen.;275,0;m3;gaeb;3937228.x83
+220;Zulage für die Überschreitung der Betondruckfestigkei-;1,0;psch;gaeb;3937228.x83
+230;Beton nach Unterlagen des AG abbrechen.;265,0;m3;gaeb;3937228.x83
+240;Zulage für die Überschreitung der Betondruckfestigkei-;1,0;psch;gaeb;3937228.x83
+250;Beton nach Unterlagen des AG abbrechen.;240,0;m2;gaeb;3937228.x83
+260;Stahlspundwand nach Unterlagen des AG kürzen. Baustoff;90,0;m;gaeb;3937228.x83
+270;ohne StL-Nr.;1,0;psch;gaeb;3937228.x83
+280;ohne StL-Nr.;224,0;St;gaeb;3937228.x83
+290;ohne StL-Nr.;2,0;St;gaeb;3937228.x83
+300;ohne StL-Nr.;1,0;St;gaeb;3937228.x83
+10;Stahlkonstruktion nach Unterlagen des AG abbrechen und;30,0;t;gaeb;3937228.x83
+20;ohne StL-Nr.;170,0;m2;gaeb;3937228.x83
+10;ohne StL-Nr.;2,0;St;gaeb;3937228.x83
+20;ohne StL-Nr.;2,0;St;gaeb;3937228.x83
+30;ohne StL-Nr.;19,5;m;gaeb;3937228.x83
+40;Übergangskonstruktion aus Stahl nach Unterlagen des AG;19,5;m;gaeb;3937228.x83
+50;Geländer nach Unterlagen des AG abbauen und nach Wahl;82,0;m;gaeb;3937228.x83
+60;Geländer nach Unterlagen des AG abbauen und nach Wahl;82,0;m;gaeb;3937228.x83
+10;ohne StL-Nr.;295,0;m;gaeb;3937228.x83
+20;Abdichtung nach Unterlagen des AG aufnehmen. Erforder-;212,0;m2;gaeb;3937228.x83
+10;ohne StL-Nr.;1,0;psch;gaeb;3937228.x83
+20;ohne StL-Nr.;1500,0;m²;gaeb;3937228.x83
+30;Bäume fällen, höchstens 0,25 m über dem Erdboden;25,0;St;gaeb;3937228.x83
+40;Bäume fällen, höchstens 0,25 m über dem Erdboden;10,0;St;gaeb;3937228.x83
+50;Bäume fällen, höchstens 0,25 m über dem Erdboden;5,0;St;gaeb;3937228.x83
+60;Bauliche Anlage abbrechen. Anlage nach Unterlagen des;5,0;m3;gaeb;3937228.x83
+70;Vegetationsdecke vor Oberbodenabtrag mindestens 15 cm;1400,0;m2;gaeb;3937228.x83
+80;Oberboden ggf. einschließlich Vegetationsdecke abtragen;200,0;m3;gaeb;3937228.x83
+90;Gelagerten Oberboden des AG profilgerecht andecken. Ho-;700,0;m3;gaeb;3937228.x83
+100;Oberboden liefern und profilgerecht andecken.;50,0;m3;gaeb;3937228.x83
+110;ohne StL-Nr.;265,0;m;gaeb;3937228.x83
+120;ohne StL-Nr.;5000,0;m2;gaeb;3937228.x83
+130;Boden bzw. Fels profilgerecht nach Unterlagen des AG;2850,0;m3;gaeb;3937228.x83
+140;Boden bzw. Fels profilgerecht nach Unterlagen des AG;200,0;m3;gaeb;3937228.x83
+150;ohne StL-Nr.;10,0;h;gaeb;3937228.x83
+160;Gelagerten Boden bzw. Fels des AG aufnehmen. Beschrei-;350,0;m3;gaeb;3937228.x83
+170;Gelagerten Boden bzw. Fels des AG aufnehmen. Beschrei-;350,0;m3;gaeb;3937228.x83
+180;Gelagerten Boden bzw. Fels des AG aufnehmen. Beschrei-;150,0;m3;gaeb;3937228.x83
+190;Planum herstellen nach Unterlagen des AG.;1400,0;m2;gaeb;3937228.x83
+200;Geotextil als Trenn- und Filterschicht verlegen. Trenn-;1000,0;m2;gaeb;3937228.x83
+210;Geotextil als Trenn- und Filterschicht verlegen. Trenn-;450,0;m2;gaeb;3937228.x83
+220;Mulde nach Unterlagen des AG herstellen.;100,0;m;gaeb;3937228.x83
+230;Mulde nach Unterlagen des AG herstellen.;40,0;m;gaeb;3937228.x83
+240;Mulde nach Unterlagen des AG herstellen.;80,0;m;gaeb;3937228.x83
+250;Mulde nach Unterlagen des AG herstellen.;45,0;m;gaeb;3937228.x83
+260;ohne StL-Nr.;4000,0;m2;gaeb;3937228.x83
+270;ohne StL-Nr.;4000,0;m2;gaeb;3937228.x83
+10;Leitungsgraben einschließlich Schachtbaugruben herstel-;20,0;m3;gaeb;3937228.x83
+20;Leitungsgraben einschließlich Schachtbaugruben herstel-;55,0;m3;gaeb;3937228.x83
+30;Leitungsgraben einschließlich Schachtbaugruben herstel-;30,0;m3;gaeb;3937228.x83
+40;Boden des AG in Leitungsgraben einschließlich Schacht-;25,0;m3;gaeb;3937228.x83
+50;Suchgraben nach Unterlagen des AG einschließlich Hand-;20,0;m3;gaeb;3937228.x83
+60;Suchgraben nach Unterlagen des AG einschließlich Hand-;15,0;m3;gaeb;3937228.x83
+70;ohne StL-Nr.;1,0;St;gaeb;3937228.x83
+80;ohne StL-Nr.;1,0;St;gaeb;3937228.x83
+90;ohne StL-Nr.;10,0;m;gaeb;3937228.x83
+100;ohne StL-Nr.;20,0;m;gaeb;3937228.x83
+10;Straßenmulde befestigen einschließlich Erdarbeiten.;120,0;m2;gaeb;3937228.x83
+20;Sickerstrang durch Einfüllen und Verdichten von Filter-;80,0;m;gaeb;3937228.x83
+30;Sickerstrang durch Einfüllen und Verdichten von Filter-;160,0;m;gaeb;3937228.x83
+40;ohne StL-Nr.;80,0;m;gaeb;3937228.x83
+50;ohne StL-Nr.;160,0;m;gaeb;3937228.x83
+60;Rohrleitung an Schacht anschließen, Anschluss abdich-;10,0;St;gaeb;3937228.x83
+70;Formstück in Rohrleitung einbauen. Vergütet wird der;5,0;St;gaeb;3937228.x83
+80;Formstück in Rohrleitung einbauen. Vergütet wird der;5,0;St;gaeb;3937228.x83
+90;ohne StL-Nr;50,0;m;gaeb;3937228.x83
+100;Entwässerungsrohrleitung abbrechen. Entwässerungsrohr-;10,0;m;gaeb;3937228.x83
+110;Entwässerungsleitung aus Kunststoffrohren nach stati-;35,0;m;gaeb;3937228.x83
+120;Boden in Leitungszone über Bettung einbauen und ver-;35,0;m;gaeb;3937228.x83
+130;Rohrleitung an Schacht anschließen, Anschluss abdich-;4,0;St;gaeb;3937228.x83
+140;Freigelegten Schacht einschließlich Abdeckung vollstän-;1,0;St;gaeb;3937228.x83
+150;Freigelegtes Schachtteil ausbauen. Aufbruch von Stra-;2,0;St;gaeb;3937228.x83
+160;Fertigteil für Schacht einbauen.;2,0;St;gaeb;3937228.x83
+170;Freigelegtes Schachtteil ausbauen. Aufbruch von Stra-;2,0;St;gaeb;3937228.x83
+180;Schachtabdeckung des AG, rund, mit lichter Weite bis DU;2,0;St;gaeb;3937228.x83
+190;Fertigteil-Schacht mit Schachthals einschließlich der;7,0;St;gaeb;3937228.x83
+200;Schachtabdeckung, mit lichter Weite mindestens 610 mm;7,0;St;gaeb;3937228.x83
+210;Schachtabdeckung freilegen und nach Bauablauf an die;5,0;St;gaeb;3937228.x83
+220;Betonauflagering, lichter DU 625 mm, einbauen. Fugen;15,0;St;gaeb;3937228.x83
+230;Entwässerungsrohrleitung auf Dichtheit prüfen. Erfor-;2,0;St;gaeb;3937228.x83
+240;Kameradurchfahrung von Entwässerungsrohrleitungen aus-;193,0;m;gaeb;3937228.x83
+10;Schicht ohne Bindemittel aufnehmen.;520,0;m2;gaeb;3937228.x83
+20;Schicht ohne Bindemittel aufnehmen.;520,0;m2;gaeb;3937228.x83
+30;Schicht ohne Bindemittel aufnehmen.;1150,0;m2;gaeb;3937228.x83
+40;Schicht ohne Bindemittel aufnehmen.;450,0;m2;gaeb;3937228.x83
+50;Schicht ohne Bindemittel aufnehmen.;1150,0;m2;gaeb;3937228.x83
+60;Schicht ohne Bindemittel aufnehmen.;450,0;m2;gaeb;3937228.x83
+70;Schicht ohne Bindemittel aufnehmen.;250,0;m2;gaeb;3937228.x83
+80;Unterlage für Schicht ohne Bindemittel auf Sollhöhe;100,0;m2;gaeb;3937228.x83
+90;Bankett einschließlich Vegetationsdecke schälen durch;90,0;m;gaeb;3937228.x83
+100;Bankett einschließlich Vegetationsdecke schälen durch;20,0;m;gaeb;3937228.x83
+110;Baustoff für Profilausgleich liefern.;25,0;t;gaeb;3937228.x83
+120;Unterlage für Schicht ohne Bindemittel auf Sollhöhe;20,0;m2;gaeb;3937228.x83
+130;Frostschutzschicht herstellen.;70,0;m3;gaeb;3937228.x83
+140;Frostschutzschicht herstellen.;575,0;m3;gaeb;3937228.x83
+150;Frostschutzschicht herstellen.;175,0;m3;gaeb;3937228.x83
+160;Deckschicht ohne Bindemittel herstellen.;70,0;m2;gaeb;3937228.x83
+170;Deckschicht ohne Bindemittel herstellen.;110,0;m2;gaeb;3937228.x83
+180;Deckschicht ohne Bindemittel herstellen.;330,0;m2;gaeb;3937228.x83
+190;Bankett gemäß ZTV E-StB profilgerecht herstellen.;40,0;m;gaeb;3937228.x83
+200;Bankett gemäß ZTV E-StB profilgerecht herstellen.;190,0;m;gaeb;3937228.x83
+210;Bankett gemäß ZTV E-StB profilgerecht herstellen.;460,0;m;gaeb;3937228.x83
+220;Erschwernis durch Einbauten. Abgerechnet wird nach;10,0;St;gaeb;3937228.x83
+230;Erschwernis durch Einbauten. Abgerechnet wird nach;15,0;St;gaeb;3937228.x83
+240;Erschwernis durch Einbauten. Abgerechnet wird nach;15,0;St;gaeb;3937228.x83
+250;ohne StL-Nr.;400,0;m;gaeb;3937228.x83
+260;ohne StL-Nr.;130,0;m;gaeb;3937228.x83
+270;ohne StL-Nr.;130,0;m;gaeb;3937228.x83
+10;Asphalt fräsen und Fräsgut aufnehmen. Anschlusskante;20,0;m2;gaeb;3937228.x83
+20;Asphalt fräsen und Fräsgut aufnehmen. Anschlusskante;90,0;m2;gaeb;3937228.x83
+30;Asphalt fräsen und Fräsgut aufnehmen. Anschlusskante;1550,0;m2;gaeb;3937228.x83
+40;Asphaltbefestigung aufbrechen und aufnehmen.;130,0;m2;gaeb;3937228.x83
+50;Asphaltbefestigung aufbrechen und aufnehmen.;305,0;m2;gaeb;3937228.x83
+60;Asphaltbefestigung aufbrechen und aufnehmen.;100,0;m2;gaeb;3937228.x83
+70;Asphaltbefestigung aufbrechen und aufnehmen.;700,0;m2;gaeb;3937228.x83
+80;Asphaltbefestigung geradlinig trennen.;30,0;m;gaeb;3937228.x83
+90;Asphaltbefestigung geradlinig trennen.;90,0;m;gaeb;3937228.x83
+100;Unterlage reinigen. Anfallendes Kehrgut nach Wahl des;140,0;m2;gaeb;3937228.x83
+110;Unterlage reinigen. Anfallendes Kehrgut nach Wahl des;720,0;m2;gaeb;3937228.x83
+120;Bitumenemulsion zur Herstellung des Schichtenverbundes;140,0;m2;gaeb;3937228.x83
+130;Bitumenemulsion zur Herstellung des Schichtenverbundes;720,0;m2;gaeb;3937228.x83
+140;Erschwernis infolge Einfassungen, Borden und Fahr-;400,0;m;gaeb;3937228.x83
+150;Erschwernis infolge Einfassungen, Borden und Fahr-;130,0;m;gaeb;3937228.x83
+160;Erschwernis infolge Einfassungen, Borden und Fahr-;130,0;m;gaeb;3937228.x83
+170;Asphalttragschicht aus Asphalttragschichtmischgut;790,0;m2;gaeb;3937228.x83
+180;ohne StL-Nr.;790,0;m2;gaeb;3937228.x83
+190;Asphaltdeckschicht aus Asphaltbeton für Asphaltdeck-;790,0;m2;gaeb;3937228.x83
+200;ohne StL-Nr.;790,0;m2;gaeb;3937228.x83
+210;Asphaltdeckschicht aus Asphaltbeton für Asphaltdeck-;140,0;m2;gaeb;3937228.x83
+220;Naht in Asphaltschicht herstellen.;25,0;m;gaeb;3937228.x83
+230;Anschluss als Fuge mit Fugenmasse herstellen.;30,0;m;gaeb;3937228.x83
+240;Anschluss als Fuge mit Fugenmasse herstellen.;25,0;m;gaeb;3937228.x83
+250;Flankenfläche des hochliegenden Randes der Asphalt-;190,0;m;gaeb;3937228.x83
+260;Abstumpfungsmaßnahme zur Erhöhung der Anfangsgriffig-;930,0;m2;gaeb;3937228.x83
+270;Verkehrsfläche mit einer selbstaufnehmenden Kehrmaschi-;930,0;m2;gaeb;3937228.x83
+280;Bohrkern für Kontrollprüfungen nach Angabe des AG ent-;4,0;St;gaeb;3937228.x83
+10;Bordstein aufnehmen.;205,0;m;gaeb;3937228.x83
+20;Bordstein aufnehmen.;175,0;m;gaeb;3937228.x83
+30;Streifen oder Rinne aus Naturstein aufnehmen. Aufbruch;195,0;m;gaeb;3937228.x83
+40;Umpflasterung von Einbauten in unbefestigten Flächen;13,0;St;gaeb;3937228.x83
+50;Umpflasterung von Einbauten in unbefestigten Flächen;4,0;St;gaeb;3937228.x83
+10;Zaun aufnehmen, einschließlich Verstrebungen.;50,0;m;gaeb;3937228.x83
+20;Schutzeinrichtung (SE) aus Stahl einschließlich sämtli-;8,0;m;gaeb;3937228.x83
+30;Anfangs-/Endkonstruktion (AEK) aus Stahl abbauen.;1,0;St;gaeb;3937228.x83
+40;Verkehrsschild ggf. mit Aufstellvorrichtung abbauen.;5,0;St;gaeb;3937228.x83
+10;Gehölze sind gegen mechanische Schäden zu schützen und;180,0;m;gaeb;3937228.x83
+10;"Lieferung und Ansaat Regiosaatgut ""Böschung"",";2000,0;m2;gaeb;3937228.x83
+20;Zulage Mehraufwand für Anspritzbegrünung;535,0;m2;gaeb;3937228.x83
+30;Schröpfschnitt Ansaatflächen Regiosaatgut;2000,0;m2;gaeb;3937228.x83
+40;Mähen von Ansaatflächen Regiosaatgut;4000,0;m2;gaeb;3937228.x83
+10;Artenschutzrechtliche Baumkontrolle zur Untersuchung;5,0;St;gaeb;3937228.x83
+10;Schutzzaun zur Sicherung der Baustelle liefern,;40,0;m;gaeb;3937228.x83
+20;Vorhandenen Schutzzaun aus der Vorposition bzw.;20,0;m;gaeb;3937228.x83
+30;Schutzzaun als Schrankenzaun zur Sicherung der;10,0;m;gaeb;3937228.x83
+10;Durchmesser von 0,1 bis 0,3 m;4,0;St;gaeb;3937228.x83
+20;Durchmesser von 0,4 bis 0,6 m;2,0;St;gaeb;3937228.x83
+30;Hecken und Buschwerk jeder Art mit Wurzelwerk roden.;10,0;m2;gaeb;3937228.x83
+40;Bodendeckerpflanzung und Buschwerk jeder Art mit;20,0;m2;gaeb;3937228.x83
+50;Strauch roden, einschließlich Wurzelstock.;2,0;St;gaeb;3937228.x83
+60;Strauch roden, einschließlich Wurzelstock.;2,0;St;gaeb;3937228.x83
+70;Fräsgut, bestehend aus Holzspänen und vermischtem;1,5;m3;gaeb;3937228.x83
+10;Beton abbrechen. Material: unbewehrter und bewehrter;3,0;TO;gaeb;3937228.x83
+20;Vorhandenen Jägerzaun aus Holz, vorr;31,0;m;gaeb;3937228.x83
+30;Einfassung aus Hoch- und Tiefbord aus Naturstein gemäß;10,0;m;gaeb;3937228.x83
+40;Anfallendes weiteres Abbruchgut aus Beton aufnehmen,;1,0;TO;gaeb;3937228.x83
+10;Pflanzliche Bodendecke abräumen, aufnehmen, fördern,;80,0;m2;gaeb;3937228.x83
+20;Oberboden lösen, aufnehmen und lagern;16,0;m3;gaeb;3937228.x83
+30;Boden aus vorhandenen Tragschichten und Auffüllungen,;69,85;m3;gaeb;3937228.x83
+40;Boden, brauchbar, aus vorhandenen Auffüllungen, in;15,0;m3;gaeb;3937228.x83
+50;Kiesigen Unterbau aus vorhandenen Tragschichten,;12,0;m3;gaeb;3937228.x83
+60;Erdplanum für befestigte Flächen höhen- und;140,0;m2;gaeb;3937228.x83
+70;Erdplanum und Feinprofilierung Grün;110,0;m2;gaeb;3937228.x83
+80;Boden für Baugruben für Fundamente nach Abtrag des;3,0;m3;gaeb;3937228.x83
+90;Erdplanum für Fundamente höhen- und gefällegerecht;8,25;m2;gaeb;3937228.x83
+100;Boden für Kabelgraben lösen, seitlich lagern und;3,6;m3;gaeb;3937228.x83
+110;Boden für Kabelgraben lösen, seitlich lagern und;2,0;m3;gaeb;3937228.x83
+120;Verfüllen der Baugrube und Rohrgräben, mit;2,0;m3;gaeb;3937228.x83
+10;Flexibles Kabelschutzrohr DN 110 liefern und verlegen,;15,0;m;gaeb;3937228.x83
+20;Auflager und Überdeckung aus Sand für Erdkabel und;1,5;m3;gaeb;3937228.x83
+30;Einzelfundament aus Ortbeton für Mastleuchte;2,0;St;gaeb;3937228.x83
+40;Einzelfundament aus Ortbeton für Mastleuchte;2,0;St;gaeb;3937228.x83
+10;Frostschutzschicht als erste Tragschicht herstellen.;5,0;m3;gaeb;3937228.x83
+20;Sauberkeitsschicht aus unbewehrtem Beton C8/10 X0,;1,5;m3;gaeb;3937228.x83
+30;Treppenstufe aus Granitstein liefern und einbauen,;16,0;St;gaeb;3937228.x83
+40;Ausrichten und höhengerechte Herstellung des Fundaments;3,0;St;gaeb;3937228.x83
+50;Tiefbord aus Beton, frost- und tausalzbeständig,;4,0;St;gaeb;3937228.x83
+10;Kontrollprüfung ZTVT-StB auf besondere Anordnung des;1,0;St;gaeb;3937228.x83
+20;Wiederherstellen der ungebundenen Tragschicht,;105,0;m2;gaeb;3937228.x83
+30;Nachverdichten von Verkehrsflächen,;105,0;m2;gaeb;3937228.x83
+40;Planiekies für Nachbehandlung für vorhergehende;5,25;m3;gaeb;3937228.x83
+50;Frostschutzschicht als 1. Tragschicht herstellen, für;30,0;m3;gaeb;3937228.x83
+60;Kiestragschicht als 2. Tragschicht herstellen, für;29,7;m3;gaeb;3937228.x83
+70;Bordstein aus Beton, gemäß DIN EN 1340, einseitig;34,0;m;gaeb;3937228.x83
+80;Tiefbord aus Granit-Naturstein, frost- und;50,0;m;gaeb;3937228.x83
+90;Pflasterstreifen aus Naturstein als Randeinfassung,;50,0;m;gaeb;3937228.x83
+100;Herstellen von Schnittkanten für Bordsteine aus;11,0;St;gaeb;3937228.x83
+110;Natursteinpflaster in Brechsand-Splitt-Bettung,;27,0;m2;gaeb;3937228.x83
+120;Nachsanden von Pflaster- und Plattenflächen,;27,0;m2;gaeb;3937228.x83
+130;Anschluss für Pflasterdecke ZTV P-StB, aus;20,0;m;gaeb;3937228.x83
+140;Dynamische Schicht als wasserregulierende Funktionslage;51,0;m2;gaeb;3937228.x83
+150;Wassergebundene Deckschicht nach DIN 18035-5 und FLL,;51,0;m2;gaeb;3937228.x83
+160;Lose Deckschicht nach DIN 18035-5 und FLL, Kiesdecke;10,0;m2;gaeb;3937228.x83
+10;Sitzbank mit Lehne, mit Armlehnen, liefern und;2,0;St;gaeb;3937228.x83
+20;Infotafel, seitlich gelagert, wieder einbauen, auf;1,0;St;gaeb;3937228.x83
+10;Konstruktions-, Werkstatt- und Montagepläne für den;1,0;psch;gaeb;3937228.x83
+20;Liefern und montieren von systemzugehörigen;8,0;St;gaeb;3937228.x83
+30;Liefern und montieren eines dekorativen;9,5;m;gaeb;3937228.x83
+40;Liefern und montieren von systemzugehörigen Torpfosten;2,0;St;gaeb;3937228.x83
+50;Liefern und betriebsfertiges Montieren eines;1,0;St;gaeb;3937228.x83
+10;Baugrund vor Auftrag der Vegetationsschicht lockern;110,0;m2;gaeb;3937228.x83
+20;Oberboden liefern und profilgerecht auftragen,;13,0;m3;gaeb;3937228.x83
+30;Vegetationstragschicht lockern durch Fräsen,;110,0;m2;gaeb;3937228.x83
+40;Substrat liefern und andecken.;16,0;m3;gaeb;3937228.x83
+50;Kompost liefern und andecken;30,0;m2;gaeb;3937228.x83
+60;Bodenverbesserung der Vegetationstragschicht für;30,0;m2;gaeb;3937228.x83
+70;Feinplanum für Pflanzflächen, zulässige Abweichung von;30,0;m2;gaeb;3937228.x83
+80;Feinplanum für Ansaatflächen, zulässige Abweichung von;80,0;m2;gaeb;3937228.x83
+90;"Ansaat Blumenmischung ""Blumenwiese"",";80,0;m2;gaeb;3937228.x83
+100;Mulchen der Pflanzflächen mit Rindenhumus;30,0;m2;gaeb;3937228.x83
+110;Grunddüngen der Pflanzfläche, organischen Dünger;30,0;m2;gaeb;3937228.x83
+10;Ribes alpinum 'Schmidt' Sol 3xv C 12.0;93,0;St;gaeb;3937228.x83
+20;Carex morrowi Variegata;30,0;St;gaeb;3937228.x83
+30;Geranium endressii,;30,0;St;gaeb;3937228.x83
+40;Waldsteinia geoides, Waldsteinie, St mTb;30,0;St;gaeb;3937228.x83
+10;Lockern und Pflegen der Pflanzflächen, trockene Triebe;30,0;m2;gaeb;3937228.x83
+20;Mulchschicht auftragen, Rindenmulch, gütegesichert,;30,0;m2;gaeb;3937228.x83
+30;Hecke schneiden,;20,0;m;gaeb;3937228.x83
+40;Wässern der Pflanzflächen Wasser bauseits gestellt,;30,0;m2;gaeb;3937228.x83
+50;"Ausmähen der Ansaatfläche ""Blumenwiese""";30,0;m2;gaeb;3937228.x83
+10;Stundenlohnarbeiten auf Anordnung AG durch;4,0;h;gaeb;3937228.x83
+20;Explosionsstampfer/Rüttelplatte, einschließlich;2,0;h;gaeb;3937228.x83
+30;Trennflex, Abbruchhammer, etc.,  einschließlich;1,0;h;gaeb;3937228.x83
+40;Bagger bis 7,5 to. einschließlich Bedienung.;2,0;h;gaeb;3937228.x83
+50;Radlader einschl. Fahrer, Schaufelinhalt bis 1,2 m³,;2,0;h;gaeb;3937228.x83
+60;Bereitstellung von Container für unterschiedliche;1,0;St;gaeb;3937228.x83
+70;Entsorgungskosten für Bauschutt, Kl. 1 (AVV 17 01 07);1,0;TO;gaeb;3937228.x83
+80;Entsorgungskosten für Baumischabfälle (AVV 17 09 04);1,0;TO;gaeb;3937228.x83

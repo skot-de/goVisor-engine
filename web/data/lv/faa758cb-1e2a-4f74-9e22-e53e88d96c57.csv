@@ -1,0 +1,290 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+0010;Kabel DIN VDE 0276-603 (VDE 0276-603) NYY-J 5 x 6 RE.;80,0;m;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0020;Kabel DIN VDE 0276-603 (VDE 0276-603) NYY-J 5 x 6 RE.;40,0;m;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0030;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 5 x 10 RE, Cu-Zahl 480.;30,0;m;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0040;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 5 x 6 RE, Cu-Zahl 288.;30,0;m;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0050;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 5 x 4 RE, Cu-Zahl 192.;60,0;m;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0060;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 5 x 2,5 RE, Cu-Zahl 120.;250,0;m;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0070;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 5 x 1,5 RE, Cu-Zahl 72.;2850,0;m;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0080;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 3 x 6 RE, Cu-Zahl 173.;20,0;m;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0090;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 3 x 4 RE, Cu-Zahl 115.;250,0;m;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0100;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 3 x 2,5 RE.;2800,0;m;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0110;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 3 x 1,5 RE.;1890,0;m;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0120;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 7 x 1,5 RE, Cu-Zahl 101.;120,0;m;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0130;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 7 x 2,5 RE, Cu-Zahl 168.;120,0;m;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0140;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 5 x 2,5 RE, Cu-Zahl 120.;258,0;m;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0150;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 5 x 1,5 RE, Cu-Zahl 72.;327,0;m;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0160;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 3 x 6 RE, Cu-Zahl 173.;20,0;m;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0170;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 3 x 4 RE, Cu-Zahl 115.;150,0;m;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0180;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 3 x 2,5 RE.;342,0;m;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0190;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 3 x 1,5 RE.;110,0;m;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0200;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 7 x 1,5 RE, Cu-Zahl 101.;60,0;m;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0210;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 7 x 2,5 RE, Cu-Zahl 168.;60,0;m;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0220;Halogenfreies Kabel DIN VDE 0266 (VDE 0266) NHXHX-J FE 180 3 x 2,5 RE, Cu-Zahl 72.;50,0;m;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0230;Halogenfreies Kabel DIN VDE 0266 (VDE 0266) NHXHX-J FE 180 3 x 1,5 RE, Cu-Zahl 43.;50,0;m;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0240;Halogenfreies Kabel DIN VDE 0266 (VDE 0266) NHXHX-J FE 180 3 x 2,5 RE, Cu-Zahl 72.;50,0;m;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0250;Halogenfreies Kabel DIN VDE 0266 (VDE 0266) NHXHX-J FE 180 3 x 1,5 RE, Cu-Zahl 43.;50,0;m;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0260;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 4 x 1,5 RE, Cu-Zahl 58.;50,0;m;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0270;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 4 x 1,5 RE, Cu-Zahl 58.;50,0;m;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0010;Trennsteg aus Stahl,;150,0;m;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0020;Kantenschutz;20,0;m;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0030;Runder Geräteeinsatz mit Griffbügel, Schnurauslass und Bodenbelagsaussparung im Klappdeckel. Für den Einsatz in einem Unterflur-Kanalsystem oder im Systemboden in trockenen Räumen im Innenbereich mit trocken gepflegten Böden. Mit einer festen Bauhöhe von 55 mm und zwei Einbaugehäusen zur vertikalen ;1,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0040;Installationsrohr FBY-EL-F 20;150,0;m;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0050;Installationsrohr FBY-EL-F 25;150,0;m;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0060;Installationsrohr FBY-EL-F 32;150,0;m;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0070;Installationsrohr FBY-EL-F 40;50,0;m;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0080;Elektroinstallationsrohr DIN EN 61386 (VDE 0605), Maße DIN EN 60423, aus Kunststoff, halogenfrei, Außendurchmesser 25 mm, Druckfestigkeit Klasse 3 - mittel (750 N) DIN EN 61386-1 (VDE 0605-1), Klasse Schlagbeanspruchung 3 - mittel DIN EN 61386-1 (VDE 0605-1), max. Gebrauchstemperatur Klasse 1 (60 Gr;50,0;m;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0090;Elektroinstallationsrohr DIN EN 61386 (VDE 0605), Maße DIN EN 60423, aus Kunststoff, halogenfrei, Außendurchmesser 32 mm, Druckfestigkeit Klasse 3 - mittel (750 N) DIN EN 61386-1 (VDE 0605-1), Klasse Schlagbeanspruchung 3 - mittel DIN EN 61386-1 (VDE 0605-1), max. Gebrauchstemperatur Klasse 1 (60 Gr;50,0;m;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0100;Elektroinstallationsrohr DIN EN 61386 (VDE 0605), Maße DIN EN 60423, aus Aluminium, Außendurchmesser 25 mm, Druckfestigkeit Klasse 3 - mittel (750 N) DIN EN 61386-1 (VDE 0605-1), Klasse Schlagbeanspruchung 3 - mittel DIN EN 61386-1 (VDE 0605-1), max. Gebrauchstemperatur Klasse 1 (60 Grad C) DIN EN 6;350,0;m;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0110;Elektroinstallationsrohr DIN EN 61386 (VDE 0605), Maße DIN EN 60423, aus Aluminium, Außendurchmesser 32 mm, Druckfestigkeit Klasse 3 - mittel (750 N) DIN EN 61386-1 (VDE 0605-1), Klasse Schlagbeanspruchung 3 - mittel DIN EN 61386-1 (VDE 0605-1), max. Gebrauchstemperatur Klasse 1 (60 Grad C) DIN EN 6;20,0;m;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0120;C-Profilschiene, Breite 35 mm, Höhe 18 mm, gelocht, aus bandverzinktem Stahl DIN EN 10346, an der Wand aus Beton, befestigen mit bauaufsichtlich zugelassenen Dübeln, Einbau im Innenbereich.;35,0;m;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0130;C-Profilschiene, Breite 35 mm, Höhe 18 mm, gelocht, aus bandverzinktem Stahl DIN EN 10346, an Decke befestigen mit bauaufsichtlich zugelassenen Dübeln, Einbau im Innenbereich.;10,0;m;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0140;C-Profilschiene Stahl E90 feuerverz Wand-/Deckenbefestigung;10,0;m;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0150;Zuschneiden vorgenannte C-Profilschiene und;20,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0160;Bügelschellen Dm bis 40 mm mit Gegenwanne aus Metall;220,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0170;Bügelschellen Dm bis 40 mm mit Gegenwanne aus Kunststoff;340,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0180;Bügelschellen Dm bis 70 mm mit Gegenwanne aus Metall;85,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0190;Bügelschellen Dm bis 70 mm mit Gegenwanne aus Kunststoff;85,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0200;Sammelhalter Decke/Wand bis max. 20 Leitungen;650,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0210;Sammelhalter Decke/Wand bis max. 40 Leitungen;100,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0220;Kabelklammer Decke/Wand bis max. 10 Leitungen;250,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0230;Kabelklammer Decke/Wand bis max. 16 Leitungen;250,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0240;Sammelhalter Metall Decke/Wand bis max. 15 Leitungen E30;250,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0250;Sammelhalter Metall Decke/Wand bis max. 30 Leitungen E30;250,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0260;Schwanenhalsdachdurchführung DN150;1,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0270;Ringraumdichtung DN150 Standard-Ringraumdichtung;1,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0280;Ringraumdichtung DN150 Standard 9x6-25;1,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0010;Wippschalter DIN EN 60669-1 (VDE 0632-1) einpolig, Aus/Wechsel, 10 A, 250 V AC, in Gerätedose, einschl. Bedienelement, Einsatz mit Schrauben befestigen.;3,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0020;Wippschalter DIN EN 60669-1 (VDE 0632-1) Wechsel/Wechsel, 10 A, 250 V AC, in Gerätedose, einschl. Bedienelement, Einsatz mit Schrauben befestigen.;10,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0030;Wippschalter DIN EN 60669-1 (VDE 0632-1) einpolig, Serien, 10 A, 250 V AC, in Gerätedose, einschl. Bedienelement, Einsatz mit Schrauben befestigen.;20,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0040;Jalousieschalter 250 V AC, 10 A, als Wipptaster, in Gerätedose, einschl. Bedienelement, Schutzart IP 44 DIN EN 60529 (VDE 0470-1), Einsatz mit Schrauben befestigen.;21,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0050;Doppeltaster Unterputz;5,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0060;Taster ohne Glimmlampe Unterputz;5,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0070;Taster mit Glimmlampe Unterputz;5,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0080;Schutzkontaktsteckdose DIN VDE 0620-1 (VDE 0620-1), 250 V AC, 16 A, mit erhöhtem Berührungsschutz, in Gerätedose, einschl. Zentralplatte, Einsatz mit Schrauben befestigen.;59,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0090;Schutzkontaktsteckdose DIN VDE 0620-1 (VDE 0620-1), 250 V AC, 16 A, mit Klappdeckel, mit erhöhtem Berührungsschutz, in Gerätedose, einschl. Zentralplatte, Einsatz mit Schrauben befestigen.;5,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0100;Schutzkontaktsteckdose DIN VDE 0620-1 (VDE 0620-1), 250 V AC, 16 A, 2-fach, mit erhöhtem Berührungsschutz, in Gerätedose, einschl. Zentralplatte, Einsatz mit Schrauben befestigen.;22,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0110;Schutzkontaktsteckdose DIN VDE 0620-1 (VDE 0620-1), 250 V AC, 16 A, 3-fach, mit erhöhtem Berührungsschutz, in Gerätedose, einschl. Zentralplatte, Einsatz mit Schrauben befestigen.;1,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0120;Schutzkontaktsteckdose DIN VDE 0620-1 (VDE 0620-1), 250 V AC, 16 A, mit erhöhtem Berührungsschutz, in Gerätedose, einschl. Zentralplatte, Schutzart IP 44 DIN EN 60529 (VDE 0470-1), Einsatz mit Schrauben befestigen.;1,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0130;Schutzkontaktsteckdose DIN VDE 0620-1 (VDE 0620-1), 250 V AC, 16 A, USB-A/USB-C, mit erhöhtem Berührungsschutz, in Gerätedose, einschl. Zentralplatte, Einsatz mit Schrauben befestigen.;18,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0140;Geräteanschlussdose DIN EN 60670-1 (VDE 0606-1) in Unterputzausführung, mit Verbindungsklemmen bis 2,5 mm2, 5-polig 400 V AC, mit Schrauben befestigen.;5,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0150;Schnurauslassdose Unterputz;5,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0160;Universalträger , mit Abdeckplatte/ Einbaurahmen für Runden Geräteeinsatz mit Griffbügel ca. d=325mm,;4,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0170;Steckdose 33 Grad, 2-fach, Schutzkontakt;2,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0180;Steckdose 33 Grad, 2-fach, Schutzkontakt;2,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0190;Datentechnikträger für 2 Anschlussmodule Typ RM;4,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0200;Datenanschlussmodul RJ45, Kat.6A (ISO), geschirmt;8,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0210;HDMI Anschluss, 1 Modul, Auslass schräg, mit Anschlusskabel;5,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0220;Abdeckplatte;4,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0230;Aufpreis für Geräte-Verbindungsdose HWD 90, für Brandschutzwände F30 - F90;10,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0240;Aufpreis für Geräte-Verbindungsdose Schallschutz Unterputz;95,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0250;Wippschalter DIN EN 60669-1 (VDE 0632-1) einpolig, Aus/Wechsel, 10 A, 250 V AC, in Aufputzgehäuse, Schutzart IP 44 DIN EN 60529 (VDE 0470-1).;3,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0260;Schutzkontaktsteckdose DIN VDE 0620-1 (VDE 0620-1), 250 V AC, 16 A, mit erhöhtem Berührungsschutz, in Aufputzausführung, mit Beschriftungsfeld, Schutzart IP 44 DIN EN 60529 (VDE 0470-1), Einsatz mit Schrauben befestigen.;3,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0270;CEE-Steckdose DIN EN 60309-2 (VDE 0623-2), 5-polig, Bemessungsbetriebsspannung 230/400 V AC, 16 A, in Aufputzausführung, mit Beschriftungsfeld, Schutzart IP 44 DIN EN 60529 (VDE 0470-1), Einsatz mit Schrauben befestigen.;3,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0280;Verbindungsdose DIN EN IEC 60670-1 (VDE 0606-1) als Abzweigkasten, aus halogenfreiem Kunststoff, Farbton grau, Grundfläche mind. 80/80 mm, Tiefe mind. 37 mm, mit Deckel, Schutzart IP 54 DIN EN 60529 (VDE 0470-1), mit 5 Klemmen 4 mm2, Aufputz.;200,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0290;Verbindungsdose DIN EN IEC 60670-1 (VDE 0606-1) als Abzweigkasten, aus halogenfreiem Kunststoff, Farbton grau, Grundfläche mind. 150/150 mm, Tiefe mind. 37 mm, mit Deckel, Schutzart IP 54 DIN EN 60529 (VDE 0470-1), mit 5 Klemmen 10 mm2, Aufputz.;50,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0300;Verbindungsdose DIN EN IEC 60670-1 (VDE 0606-1) als Abzweigkasten, aus halogenfreiem Kunststoff, Farbton grau, Grundfläche mind. 80/80 mm, Tiefe mind. 37 mm, mit Deckel, Schutzart IP 66 DIN EN 60529 (VDE 0470-1), mit 5 Klemmen 4 mm2, Aufputz.;30,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0310;Deckeneinbau Präsenzmelder Master 2 Kanal;4,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0320;Deckeneinbau Präsenzmelder Master 1 Kanal;10,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0330;Deckeneinbau Präsenzmelder Slave;4,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0340;Deckeneinbau Bewegungsmelder Akustik;1,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0350;Deckeneinbau Präsenzmelder DALI 1 Kanal / max. 24m;1,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0360;Deckeneinbau Präsenzmelder DALI 2 Kanal / max. 24m;1,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0370;Deckeneinbau Präsenzmelder DALI 2 Kanal / max. 24m;1,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0380;Aufputzdose für Präsensmelder IP65;1,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0390;Mehrpreis Präsenzmelder als Aufputz Version;1,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0400;Aufputz Decken-Bewegungsmelder 1 Kanal / 10m;1,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0410;Aufputz Decken-Bewegungsmelder 1 Kanal / 24m;1,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0010;Leitungsschutzschalter DIN EN 60898-1 (VDE 0641-11), als Reiheneinbaugerät, Maße DIN 43880, fingersicher DIN EN 50274 (VDE 0660-514),;18,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0020;Leitungsschutzschalter DIN EN 60898-1 (VDE 0641-11), als Reiheneinbaugerät, Maße DIN 43880, fingersicher DIN EN 50274 (VDE 0660-514),;18,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0030;Leitungsschutzschalter DIN EN 60898-1 (VDE 0641-11), als Reiheneinbaugerät, Maße DIN 43880, fingersicher DIN EN 50274 (VDE 0660-514),;10,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0040;Leitungsschutzschalter DIN EN 60898-1 (VDE 0641-11), als Reiheneinbaugerät, Maße DIN 43880, fingersicher DIN EN 50274 (VDE 0660-514),;1,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0050;Leitungsschutzschalter DIN EN 60898-1 (VDE 0641-11), als Reiheneinbaugerät, Maße DIN 43880, fingersicher DIN EN 50274 (VDE 0660-514),;1,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0060;Leitungsschutzschalter DIN EN 60898-1 (VDE 0641-11), als Reiheneinbaugerät, Maße DIN 43880, fingersicher DIN EN 50274 (VDE 0660-514),;1,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0070;Leitungsschutzschalter DIN EN 60898-1 (VDE 0641-11), als Reiheneinbaugerät, Maße DIN 43880, fingersicher DIN EN 50274 (VDE 0660-514),;4,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0080;Leitungsschutzschalter DIN EN 60898-1 (VDE 0641-11), als Reiheneinbaugerät, Maße DIN 43880, fingersicher DIN EN 50274 (VDE 0660-514),;1,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0090;Leitungsschutzschalter DIN EN 60898-1 (VDE 0641-11), als Reiheneinbaugerät, Maße DIN 43880, fingersicher DIN EN 50274 (VDE 0660-514),;1,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0100;Leitungsschutzschalter DIN EN 60898-1 (VDE 0641-11), als Reiheneinbaugerät, Maße DIN 43880, fingersicher DIN EN 50274 (VDE 0660-514),;4,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0110;Fehlerstromschutzschalter mit Überstromschutz (RCBO) DIN EN 61009-1 (VDE 0664-20), als Reiheneinbaugerät, Maße DIN 43880, fingersicher DIN EN 50274 (VDE 0660-514), Typ A pulsstromsensitiv, Auslösung unverzögert, Auslösecharakteristik C, DIN EN 60898-1 (VDE 0641-11), Bemessungsstrom 40 A, Bemessungsf;4,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0120;D02-Sicherungseinsatz 500VAC Betriebskl.gG 35A;3,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0130;Reihenklemme DIN EN 60947-7-1 (VDE 0611-1), Bemessungsisolationsspannung 690 V AC, Isolationsgruppe C, einstöckig, für Leiterquerschnitt bis 2,5 mm2, mit Schraubanschlüssen, Klemmenträger aus selbstlöschendem oder nichtbrennbarem Isolierstoff, zur Montage auf Tragschiene DIN EN 60715 (VDE 0660-520),;270,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0140;Reihenklemme DIN EN 60947-7-1 (VDE 0611-1), Bemessungsisolationsspannung 690 V AC, Isolationsgruppe C, einstöckig, für Leiterquerschnitt bis 4 mm2, mit Schraubanschlüssen, Klemmenträger aus selbstlöschendem oder nichtbrennbarem Isolierstoff, zur Montage auf Tragschiene DIN EN 60715 (VDE 0660-520), e;10,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0150;Reihenklemme DIN EN 60947-7-1 (VDE 0611-1), Bemessungsisolationsspannung 690 V AC, Isolationsgruppe C, einstöckig, für Leiterquerschnitt bis 6 mm2, mit Schraubanschlüssen, Klemmenträger aus selbstlöschendem oder nichtbrennbarem Isolierstoff, zur Montage auf Tragschiene DIN EN 60715 (VDE 0660-520), e;10,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0160;Reihenklemme DIN EN 60947-7-1 (VDE 0611-1), Bemessungsisolationsspannung 690 V AC, Isolationsgruppe C, einstöckig, für Leiterquerschnitt bis 10 mm2, mit Schraubanschlüssen, Klemmenträger aus selbstlöschendem oder nichtbrennbarem Isolierstoff, zur Montage auf Tragschiene DIN EN 60715 (VDE 0660-520), ;10,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0170;Reihenklemme DIN EN 60947-7-1 (VDE 0611-1), Bemessungsisolationsspannung 690 V AC, Isolationsgruppe C, einstöckig, für Leiterquerschnitt bis 16 mm2, mit Schraubanschlüssen, Klemmenträger aus selbstlöschendem oder nichtbrennbarem Isolierstoff, zur Montage auf Tragschiene DIN EN 60715 (VDE 0660-520), ;10,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0180;Sicherungslasttrennschalter DIN EN IEC 60947-3 (VDE 0660-107), als Reiheneinbaugerät, Maße DIN 43880, einschl. Passeinsatz, bedingter Bemessungskurzschlussstrom 50 kA, fingersicher DIN EN 50274 (VDE 0660-514), zur Montage auf Tragschiene DIN EN 60715 (VDE 0660-520), Baugröße D 01, Bemessungsbetriebs;1,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0190;Sicherungslasttrennschalter DIN EN IEC 60947-3 (VDE 0660-107), als Reiheneinbaugerät, Maße DIN 43880, einschl. Passeinsatz, bedingter Bemessungskurzschlussstrom 50 kA, fingersicher DIN EN 50274 (VDE 0660-514), zur Montage auf Tragschiene DIN EN 60715 (VDE 0660-520), Baugröße D 02, Bemessungsbetriebs;1,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0200;Sicherungslasttrennschalter DIN EN IEC 60947-3 (VDE 0660-107), als Reiheneinbaugerät, Maße DIN 43880, einschl. Passeinsatz, bedingter Bemessungskurzschlussstrom 50 kA, fingersicher DIN EN 50274 (VDE 0660-514), zur Montage auf Tragschiene DIN EN 60715 (VDE 0660-520), Baugröße D 01, Bemessungsbetriebs;1,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0210;Sicherungslasttrennschalter DIN EN IEC 60947-3 (VDE 0660-107), als Reiheneinbaugerät, Maße DIN 43880, einschl. Passeinsatz, bedingter Bemessungskurzschlussstrom 50 kA, fingersicher DIN EN 50274 (VDE 0660-514), zur Montage auf Tragschiene DIN EN 60715 (VDE 0660-520), Baugröße D 02, Bemessungsbetriebs;6,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0220;Spannungsrelais DIN EN 60255-1 (VDE 0435-300), Messwerterfassung für 3-Leitersystem,;10,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0230;Digitale Zeitschaltuhr, als Reiheneinbaugerät, Maße DIN 43880, fingersicher DIN EN 50274 (VDE 0660-514), zur Montage auf Tragschiene DIN EN 60715 (VDE 0660-520), Bemessungsbetriebsspannung 230 V AC, mit Gangreserve 1,5 Jahre, mit Tages- und Wochenprogramm, mit Astroprogrammfunktion, mind. 2 Kanäle, ;2,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0240;Fernschalter DIN EN 60669-2-2 (VDE 0632-2-2), monostabil (Installationsrelais), als Reiheneinbaugerät, Maße DIN 43880, fingersicher DIN EN 50274 (VDE 0660-514), mit Schaltstellungsanzeige, zur Montage auf Tragschiene DIN EN 60715 (VDE 0660-520), Bemessungsbetriebsspannung 230 V AC, Bemessungssteuers;1,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0010;Anschlüsse 1x6²-12x1,5²;125,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0020;Anschlüsse 1x50²-24x2,5²;20,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0030;Anschlüsse 1x150²-30x10²;10,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0040;Anschlüsse 3x120²-5x185²;5,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0050;Anschlüsse 2x2x0,6-20x2x0,8;100,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0060;Anschlüsse 30x2x0,6-100x2x0,8;10,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0070;Anschließen von RS-Türen mit Feststelleinrichtung;2,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0080;Anschließen von Rolläden;2,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0090;Schrupfmuffen Verbindungsset bis 5x2,5mm²;50,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0100;Schrupfmuffen Verbindungsset 3x2,5/5x2,5mm² bis 3x4mm²/ 5x4mm²;10,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0110;Schrupfmuffen Verbindungsset 3x2,5/5x2,5mm² bis 3x6mm²/ 5x6mm²²;10,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0010;Potentialausgleichsschiene DIN VDE 0618-1 (VDE 0618-1), aus nichtrostendem Stahl, als Klemmschiene 10 mm x 10 mm, mit Kunststoffabdeckung, mit Anschluss für 7 x 2,5 bis 25 mm2, 2 x 2,5 bis 95 mm2 und ein Flachband bis 40 mm x 4 mm.;1,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0020;Potentialausgleichsschiene DIN VDE 0618-1 (VDE 0618-1), aus verzinktem Stahl, mit Anschluss für 8 x 1,5 bis 25 mm2, ein Flachband bis 40 mm x 4 mm, und Massivrundleiter, Durchmesser 8 bis 10 mm.;2,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0030;Erdungsbandrohrschelle aus Messing gal/Zn, mit Anschlussmöglichkeit für einen Leiter 2,5 mm2 bis 2 Leiter 16 mm2, für Rohrdurchmesser bis 40 mm.;10,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0040;Erdungsbandrohrschelle aus Messing gal/Zn, mit Anschlussmöglichkeit für einen Leiter 2,5 mm2 bis 2 Leiter 16 mm2, für Rohrdurchmesser bis 100 mm.;10,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0050;Erdung von Metallteilen;150,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0060;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 1 x 6 RE, Cu-Zahl 58.;450,0;m;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0070;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 1 x 10 RE, Cu-Zahl 96.;250,0;m;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0080;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 1 x 16 RM, Cu-Zahl 154.;5,0;m;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0090;Halogenfreie Installationsleitung DIN VDE 0250-214 (VDE 0250-214) NHXMH-J 1 x 25 RM, Cu-Zahl 240.;5,0;m;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0010;3-Phasen Anbau-Stromschiene mit DALI-Ausstattung (6 Leiter) 1000mm.;93,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0020;3-Phasen Anbau-Stromschiene mit DALI-Ausstattung (6 Leiter) 2000mm;24,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0030;3-Phasen Anbau-Stromschiene mit DALI-Ausstattung (6 Leiter) 4000mm;85,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0040;1. Allgemeine Beschreibung;93,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0050;L1.1 - Stromschienen-Leuchte für 3-Phasen-Stromschiene.;110,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0060;L1 - Stromschienen-Leuchte für 3-Phasen-Stromschiene.;177,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0070;L1 - Stromschienen-Leuchte für 3-Phasen-Stromschiene.;12,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0080;Rundes LED-Anbau-Downlight, Aufbauhöhe ca. 60 mm.;4,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0090;LED-Feuchtraumleuchte IP 66;7,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0100;LED-Downlight für Decken mit einem Hohlraummaß ≥ 36 mm.;41,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0110;Kompaktes Steuermodul mit 2 Tastereingängen und 1 Relaisausgang.;40,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0120;Multisensor für DALI-System für zuvorgenannten;40,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0130;Programmierfernbedienung für zuvorgenanntes DALI Steuermodul.;5,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0140;Allgemeine Beschreibung;5,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0150;Gegenstand dieser Ausschreibung ist die Programmierung, Parametrierung, Inbetriebnahme sowie Funktionsprüfung einer DALI-basierten Einzelraum-Lichtsteuerung gemäß aktuellem Stand der Technik. Die DALI-Steuerung dient zur bedarfsgerechten, energieeffizienten Lichtregelung in einzelnen Räumen bzw. Rau;1,0;psch;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0160;LED-Pendel für Deckenmontage;10,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0170;LED-Lampe E27 matt, 3000K 18W 2800lm;10,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0010;Montage und betriebsfertiger Anschluss von bauseits gelieferten Sicherheitsleuchten gemäß den geltenden Vorschriften (u. a. DIN VDE 0100-718, DIN EN 1838, DIN EN 60598-2-22 sowie MLAR und örtlichen Bestimmungen);17,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0020;Leistungsbeschreibung:;5,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0030;zur Kennzeichnung der Notbeleuchtung;22,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0040;Stromkreisbezeichnungsschild zur Kennzeichnung der Notbeleuchtung gemäß DIN VDE 0100-560.;22,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0050;Controller / MTB / MTB;1,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0060;BUS-Netzüberwachung für Hutschienenmontage;2,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0070;Abnahme der Sicherheitsbeleuchtungsanlage;1,0;psch;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0080;Inbetriebnahme und Einweisung;1,0;psch;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0090;Der Auftragnehmer hat die vollständige Überprüfung und Messung der Beleuchtungsstärken der vorhandenen Sicherheitsbeleuchtung gemäß den Anforderungen der ASR A3.4  Sicherheitsbeleuchtung für Rettungswegbereiche durchzuführen.;1,0;psch;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0010;Überspannungsschutzgerät DIN EN 61643-11 (VDE 0675-6-11), leckstromfrei, Typ 1 und 2, mit integrierter Überstromschutzeinrichtung, Einbauort in Verteilungsstromkreisen, zum Schutz von Betriebsmitteln der Schutzklasse I DIN EN 61140 (VDE 0140-1), Modulbauweise aus Basis- und Schutzmodul, als Reihenei;3,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0020;Überspannungsschutzgerät DIN EN 61643-11 (VDE 0675-6-11), leckstromfrei, Typ 2, mit integrierter Überstromschutzeinrichtung, Einbauort in Verteilungsstromkreisen, zum Schutz von Betriebsmitteln der Schutzklasse I DIN EN 61140 (VDE 0140-1), Modulbauweise aus Basis- und Schutzmodul, als Reiheneinbauge;3,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0030;Basisschutzmagazin;1,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0040;Überspannungs-Ableiter-Schutzklemme;1,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0050;Erdungsleiste;1,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0060;Fernmeldeverteiler VKA 4 als Aufputzverteiler;1,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0070;Einbaugehäuse 7 TE Einbauraum IP54;1,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0080;Blitzstrom- Kombiableiter Typ 1+2 / 3-polig+NPE als Kompletteinheit, im Polycarbonat Gehäuse (IP66);1,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0010;Plattenschott S90 in Trockenbauwänden;1,0;m2;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0020;Plattenschott S90 in Massivdecken und Wänden;1,0;m2;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0030;Mörtelschott, S 90 in Massivdecken und Wänden;1,0;m2;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0040;Verschluss von Einzeldurchführungen gemäß MLAR;25,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0050;Brandschutzkissen;25,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0060;1. Allgemeine Beschreibung;1,0;m2;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0070;1. Allgemeine Beschreibung;1,0;psch;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0010;Akustikschott 47dB in GK-Ständerwand,;1,44;m2;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0020;Akustikschott 47dB ifür Unterflurkanäle,,;1,32;m2;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0010;Bohrung, Untergrundfläche senkrecht, aus unbewehrtem Beton, Normalbeton, Bohrdurchmesser über 12 bis 25 mm, Bohrtiefe über 17,5 bis 20 cm, nicht schadstoffbelastet,;20,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0020;Einzelbohrungen Gipskarton bis 30mm;50,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0030;Verschluß von Durchbrüchen in Massivbauteilen mit Mörtel;2,0;m2;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0040;Verschluß von Bohrungen im Massivbauteilen;25,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0050;Schlitz herstellen, Untergrundfläche senkrecht, in unbewehrten Beton, Normalbeton, ohne Bekleidungen und Beschichtungen,;2,0;m;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0060;Schlitz herstellen, Untergrundfläche waagerecht, in unbewehrten Beton, Normalbeton, ohne Bekleidungen und Beschichtungen,;2,0;m;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0010;HDMI Anschlussdose mit Kabelpeitsche;4,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0020;Extender basiert auf der HDBaseT Technologie, die nur ein CAT5e/6/6a/7 Kabel verwendet, um USB 2.0, RS232 und ein DP-Display auf bis zu 100 Meter mit bis zu 4K UHD abzusetzen.;2,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0030;HDMI-Anschlusskabel, mit Verstärker (Aktiv);2,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0040;Blindblende ca. 50 x 50 mm Aluminium eloxiert zum Einbau in Einbaurahmen von verwendeten und passendem;4,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0050;Montagerahmen für Anschlussblenden Passend für;4,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0010;Stundenlohnarbeiten durch Obermonteur/-in;25,0;h;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0020;Stundenlohnarbeiten durch Monteur/-in;100,0;h;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0030;Stundenlohnarbeiten durch Helfer/-in;50,0;h;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0010;Erstellung von M+W Plänen;1,0;psch;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0020;Fortschreibung W+M-Planung Grundrisse planweise;1,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0030;Kurzschluss/Spannungsfall/Lastflussberechng für alle Netzarten;1,0;psch;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0040;Erstellung eine Baufristenplanes;1,0;psch;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0050;Fortschreibung Baufristenplanes;1,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0060;Bestandsdokumentation ELT/ FMT Allgemein;1,0;psch;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0010;Begleitende Sachverständigen Abnahme der Elektrotechnischen Anlagen;1,0;psch;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0020;Mitwirkung bei der Sachverständigen- Prüfung;1,0;psch;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0030;Begleitende Vorbegehung zur Sachverständigen Abnahme der Gesamten;1,0;psch;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0040;Besprechung Werks- und Montageplanung mit Sachverständigen;1,0;psch;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0050;Koordination sämtlicher Schnittstellen des Gewerkes Elektro (ELT) zu angrenzenden Gewerken und Systemen zur Sicherstellung einer funktionsfähigen Gesamtanlage. Der Leistungsumfang ist im We-sentlichen nachfolgend aufgelistet:;1,0;psch;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0060;Abgeltung sämtlicher bauabschnittsbedingter Mehraufwände aufgrund der Ausführung im Bestand unter laufendem Betrieb. Hierzu zählen u.a.;1,0;psch;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0070;Abgeltung sämtlicher auftragnehmerseitiger Baustellen- und Projektgemeinkosten für die Ausführung der brandmeldeanlage im Bestand unter abschnittsweiser Durchführung und laufendem Gebäude-betrieb. Hierzu zählen u.a.;1,0;psch;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0080;Mitwirkung des AN Elektro bei der Inbetriebnahme der durch Dritte ausgeführten Anlagen (BMA und SAA). Der Leistungsumfang ist im Wesentlichen nachfolgend aufgelistet:;1,0;psch;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0090;Abstimmung der elektrotechnischen Infrastruktur mit Betreiber, IT-Abteilung und Herstellern.;1,0;psch;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0100;Durchführung der Nachprüfung gemäß DIN VDE 0100-600. Im Wesentlichen bestehend aus:;1,0;psch;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0110;Durchführung mehrfacher Inbetriebnahmen und Teilinbetriebnahmen aufgrund der abschnittswei-sen Bauausführung.;1,0;psch;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0120;Koordination und technische Abstimmung aller Maßnahmen mit der vom Auftraggeber beauftragten Wartungsfirma zur Sicherstellung eines störungsfreien Anlagenbetriebs. Der Leistungsumfang ist im Wesentlichen nachfolgend aufgelistet:;1,0;psch;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0130;Sicherstellung der Systemfreigabe sowie des Zugriffs auf die erforderlichen Software- und Program-mierwerkzeuge des Herstellers. Hierzu zählen u.a.;1,0;psch;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0010;Erstellen einer Schilderliste;1,0;psch;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0020;Kabelmarker Potentialausgleich;150,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0030;Kabelmarker Kabel/ Leitungen;600,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0040;Kennzeichnungsschild Verteilungen;5,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0050;Beschilderung für Kabeltrassen E 30;10,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0010;"Demontage bestehender Aufputzinstallationen (z. B. Schalter, Steckdosen, Taster, Jalousieschalter, Schlüsselschalter; Bewegungsmelder, Handauslöser BMA, Hupe, o. ä) einschließlich Aufputzgehäusen und Installationsmaterialien, mit einer maximalen Abmessung von 250 × 250 mm.";25,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0020;"Demontage bestehender Unterputzinstallationen (z. B. Schalter, Steckdosen, Taster, Jalousieschalter, Schlüsselschalter; Bewegungsmelder, Handauslöser BMA, Hupe, o. ä.) einschließlich Unterputzdosen in Trockenbauwänden, mit einer maximalen Abmessung von 250 × 250 mm.";150,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0030;Demontage bestehender Kabelpritschen bis zu einer Größe von max. 400 × 60 mm bei einer Montagehöhe bis 3,0 m.;5,0;m;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0040;Demontage von Sammelhaltern, Kabelklammern und Bügelschellen zur Befestigung von Leitungen, ausgeführt in Kunststoff oder Metall, für Belegungen von bis zu 30 Leitungen je Befestigungseinheit.;200,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0050;Demontage von Kabeln und Leitungen bis zu einer Dimension von max. 8 × 8 × 0,8 mm² in vermischten Verlegearten (z. B. auf Trassen, in Sammelhaltern, Installationskanälen oder frei verlegt) einschließliche Befestigungssystme Sammelhalter oder Kabelklammern bei einer Demontagehöhe bis zu 3,0 m.;200,0;m;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0060;Demontage von Kabeln und Leitungen bis zu einem Querschnitt von max. 7 × 2,5 mm² in vermischten Verlegearten (z. B. auf Trassen, in Sammelhaltern, Installationskanälen oder frei verlegt) einschließliche Befestigungssystme Sammelhalter oder Kabelklammern bei einer Demontagehöhe bis zu 3,0 m.;200,0;m;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0070;Demontage von Kabeln und Leitungen mit einem Querschnitt von 5 × 4 mm² bis 5 × 16 mm² in vermischten Verlegearten (z. B. auf Trassen, in Sammelhaltern, Installationskanälen oder frei verlegt) einschließliche Befestigungssystme Sammelhalter oder Kabelklammern bei einer Demontagehöhe bis zu 4,0 m.;50,0;m;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0080;Demontage bestehender Leuchten;5,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0090;Demontage bestehender Leuchten (Anbau-, Pendel- und Einbauleuchten), Ausführung als Langfeldleuchten bis zu einer Länge von 1,7 m.;92,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0100;Demontage bestehender Leuchtenstromschienen bis zu einer Länge von 2,5 m.;44,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0110;Demontage bestehender Piktogramm- und Sicherheitsleuchten in den Ausführungsarten Anbau-, Einbau- und Pendelleuchten, ausgeführt als Zentralbatterie- oder Einzelbatterieleuchten.;15,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0120;Ausbau Bodentank (Ausbaustufe B1);11,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0130;usbau Bodentank (Ausbaustufe B2);1,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0140;usbau Bodentank (Ausbaustufe B3);24,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0150;Leistungsbeschreibung:;11,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0160;Leistungsbeschreibung:;1,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0170;Leistungsbeschreibung:;24,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0180;Leistungsbeschreibung:;36,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0190;Umverlegung vorhandener Jalousieaktoren innerhalb desselben Raumes einschließlich fachgerechtem Abklemmen, Umverlegen der zugehörigen Leitungen sowie Wiederanschluss.;4,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0200;Demontage bestehender Jalousieschalter einschließlich zugehöriger Abdeckungen, Rahmen und Unterputzinstallation für die Vorbereitung einer späteren Wiederverwendung.;26,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0210;Lieferung (sofern nicht bauseits gestellt) und Montage von Jalousieschaltern einschließlich Anschluss an die vorbereiteten und beschrifteten Bestandsleitungen.;26,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0220;Umschwenken und fachgerechte Umverlegung der Steuer- und Versorgungsleitungen bestehender Jalousieschalter innerhalb desselben Raumes (Radius von 5-8m) einschließlich Anpassung der Leitungsführung und Vorbereitung für die Wiederinstallation.;26,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0230;Ermitteln und Kennzeichnen der abzuklemmenden Zuleitungen je Stromkreis;200,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0240;Demontage und Einlagerung im Zuge von Rückbauarbeiten;1,0;psch;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0250;Überprüfung von Bestandsstromkreisen gemäß DIN VDE 0100-600 / 0105 für die geänderten/angepassten Anlagenteile;1,0;psch;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0010;Installationskabel, symmetrisch, DIN VDE 0815 (VDE 0815), J-H(St)H, 2 x 2 x 0,8 Bd.;250,0;m;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0020;Installationskabel, symmetrisch, DIN VDE 0815 (VDE 0815), J-H(St)H, 4 x 2 x 0,8 Bd.;800,0;m;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0030;Installationskabel, symmetrisch, DIN VDE 0815 (VDE 0815), J-Y(St)Y, 4 x 2 x 0,8 Bd.;100,0;m;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0040;Installationskabel, symmetrisch, DIN VDE 0815 (VDE 0815), J-H(St)H, 6 x 2 x 0,8 Bd.;100,0;m;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0050;Installationskabel, symmetrisch, DIN VDE 0815 (VDE 0815), J-H(St)H, 2 x 2 x 0,8 Bd.;200,0;m;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0060;Installationskabel, symmetrisch, DIN VDE 0815 (VDE 0815), J-H(St)H, 4 x 2 x 0,8 Bd.;800,0;m;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0070;Installationskabel, symmetrisch, DIN VDE 0815 (VDE 0815), J-Y(St)Y, 4 x 2 x 0,8 Bd.;60,0;m;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0080;Installationskabel, symmetrisch, DIN VDE 0815 (VDE 0815), J-H(St)H, 6 x 2 x 0,8 Bd.;50,0;m;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0090;TAE-Anschlussdose DIN 41715-1 und DIN 41715-3, symmetrisch, 3x6 NFN, in Schraubtechnik, Unterputzausführung.;1,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0100;Telekommunikationsverteiler als Aufputz Verteiler,;1,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0110;Verteilerkasten TK, VKA 8;1,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0010;Einzeluhr mit automatischer Zeitübernahme, mit internem DCF 77-Funkempfänger, automatische, vorprogrammierte Sommer-/Winterzeitumschaltung, rund, einseitig, an Wand montiert, Zifferblatt mit Balkenziffern, Durchmesser 40 cm, Gehäuse aus beschichtetem Aluminium, weiß, Schutzart IP 44 DIN EN 60529 (VD;3,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0020;Funktionsprüfung, Inbetriebnahme und Abstimmung der Uhrenanlage einschließlich Sicherstellung des ordnungsgemäßen DCF77-Empfangs sowie Übergabe an den Auftraggeber, bestehend im Wesentlichen aus:;1,0;psch;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0010;Installationskabel, symmetrisch, DIN VDE 0815 (VDE 0815), mit Aufdruck -Brandmeldekabel-, JE-H(St)H, 2 x 2 x 0,8 Bd.;100,0;m;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0020;Installationskabel, symmetrisch, DIN VDE 0815 (VDE 0815), mit Aufdruck -Brandmeldekabel-, JE-H(St)H, 2 x 2 x 0,8 Bd.;100,0;m;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0030;Installationskabel, symmetrisch, DIN VDE 0815 (VDE 0815), mit integriertem Funktionserhalt E 30, DIN 4102-12, mit rotem Außenmantel und Aufdruck -Brandmeldekabel-, JE-H(St)H, 8 x 2 x 0,8 Bd.;100,0;m;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0040;Installationskabel, symmetrisch, DIN VDE 0815 (VDE 0815), J-Y(St)Y, 2 x 2 x 0,8 Bd.;1000,0;m;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0050;Installationskabel, symmetrisch, DIN VDE 0815 (VDE 0815), J-Y(St)Y, 2 x 2 x 0,8 Bd.;500,0;m;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0060;Installationskabel, symmetrisch, DIN VDE 0815 (VDE 0815), J-Y(St)Y, 2 x 2 x 0,8 Bd.;200,0;m;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0070;Installationskabel, symmetrisch, DIN VDE 0815 (VDE 0815), J-Y(St)Y, 2 x 2 x 0,8 Bd.;200,0;m;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0010;"19"" Kabelführungspanel 1HE";3,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0020;"19"" Schrägauslass-Patchpanel, für max. 24 Module,";3,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0030;RJ45 Keystone Modul Cat.6A gerade, geschirmt, PVP;74,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0040;E-Stone Blindabdeckung;74,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0050;UAE Tragrahmen Designfähig, unbestückt, mit;28,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0060;UAE Tragrahmen Designfähig, unbestückt, mit;1,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0070;UAE Tragrahmen Designfähig, unbestückt, mit;4,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0080;RJ45 Keystone Modul Cat.6A gewinkelt, geschirmt, PVP;74,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0090;Datenkabel für den Horizontal- und Steigbereich DIN EN 50288-9-1 (VDE 0819-9-1), Kategorie 7 Index A tiefgestellt DIN EN 50173-1 (VDE 0800-173-1), geschirmt, Trennklasse d DIN EN 50174-2 (VDE 0800-174-2), für PoE, Typ 1, Leitungswiderstand 0,065 Ohm/m und Kabeldurchmesser 0,007 m DIN EN 50174-2 (VDE;2200,0;m;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0100;Datenkabel für den Horizontal- und Steigbereich DIN EN 50288-9-1 (VDE 0819-9-1), Kategorie 7 Index A tiefgestellt DIN EN 50173-1 (VDE 0800-173-1), geschirmt, Trennklasse d DIN EN 50174-2 (VDE 0800-174-2), für PoE, Typ 1, Leitungswiderstand 0,065 Ohm/m und Kabeldurchmesser 0,007 m DIN EN 50174-2 (VDE;550,0;m;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0110;Messung einer Kupferkabelstrecke mit dem;420,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0120;OTDR Messung LWL;8,0;St;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0130;Beschriftung der Anlage;1,0;psch;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0140;Erstellen der Dokumentationsunterlagen der gesamten;1,0;psch;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0010;Schnittstellenkoordination ELT / Brandmeldeanlage;1,0;psch;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0020;Prüfung der geplanten und bestehenden Netzstruktur auf technische Umsetzbarkeit und Kompatibili-tät. Der Leistungsumfang ist im Wesentlichen nachfolgend aufgelistet:;1,0;psch;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0030;Abstimmung der Netzwerkinfrastruktur mit Betreiber, IT-Abteilung und ggf. Systemherstellern. Der Leistungsumfang ist im Wesentlichen nachfolgend aufgelistet:;1,0;psch;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0040;Dokumentation und Sicherung vorhandener Netzstrukturen zur Vorbereitung der Erweiterung. Der Leistungsumfang ist im Wesentlichen nachfolgend aufgelistet:;1,0;psch;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0050;Aufgrund der abschnittsweisen Ausführung unter laufendem Betrieb sind sämtliche hieraus resultie-renden organisatorischen, technischen und zeitlichen Mehraufwände durch den Auftragnehmer zu berücksichtigen und mit dieser Position abgegolten. Hierzu zählen u.a.;1,0;psch;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0060;Abgeltung sämtlicher auftragnehmerseitiger Baustellen- und Projektgemeinkosten für die Ausführung der FMT im Bestand unter abschnittsweiser Durchführung und laufendem Gebäudebetrieb. Hierzu zählen u.a.;1,0;psch;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0070;Mitwirkung des Auftragnehmers Elektro bei der Inbetriebnahme der durch Dritte ausgeführten Brandmeldeanlage (BMA) zur Sicherstellung der funktionsfä-higen Gesamtanlage. Hierzu zählen u.a.;1,0;psch;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0080;Koordination und technische Abstimmung aller Maßnahmen mit der vom Auftraggeber beauftragten Wartungsfirma zur Sicherstellung eines störungsfreien Anlagenbetriebs. Der Leistungsumfang ist im Wesentlichen nachfolgend aufgelistet:;1,0;psch;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83
+0090;Sicherstellung der Systemfreigabe sowie des Zugriffs auf die erforderlichen Software- und Program-mierwerkzeuge des Herstellers. Hierzu zählen u.a.;1,0;psch;gaeb;Vergabeunterlagen/Fachunterlagen/11_LV.X83

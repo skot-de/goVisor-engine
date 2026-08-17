@@ -1,0 +1,117 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+001;Baustelleneinrichtung;1,0;psch;gaeb;sonstiges/X83_LV_08_260805_V32.X83
+001;Montage Dammbalken;1,0;St;gaeb;sonstiges/X83_LV_08_260805_V32.X83
+002;Mehraufwand Montagezeit Dammbalken;1,0;psch;gaeb;sonstiges/X83_LV_08_260805_V32.X83
+003;Einbau Regelschieber;1,0;St;gaeb;sonstiges/X83_LV_08_260805_V32.X83
+004;Einbau Drehantrieb Regelschieber;1,0;St;gaeb;sonstiges/X83_LV_08_260805_V32.X83
+005;Demontage vorhandener Regelschieber;1,0;psch;gaeb;sonstiges/X83_LV_08_260805_V32.X83
+006;Gitterrostabdeckung;2,0;m³;gaeb;sonstiges/X83_LV_08_260805_V32.X83
+007;Geländer;1,5;m;gaeb;sonstiges/X83_LV_08_260805_V32.X83
+001;Demontage vorhandener Gerinneschieber Abschlag RÜB;1,0;psch;gaeb;sonstiges/X83_LV_08_260805_V32.X83
+002;Einbau Gerinneschieber Abschlag RÜB;1,0;St;gaeb;sonstiges/X83_LV_08_260805_V32.X83
+003;Einbau Drehantrieb Gerinneschieber Abschlag RÜB;1,0;St;gaeb;sonstiges/X83_LV_08_260805_V32.X83
+001;Demontage vorhandener Gerinneschieber Abschlag Neckar;1,0;psch;gaeb;sonstiges/X83_LV_08_260805_V32.X83
+002;Einbau Gerinneschieber Abschlag Neckar;1,0;St;gaeb;sonstiges/X83_LV_08_260805_V32.X83
+003;Einbau Drehantrieb Gerinneschieber Abschlag Neckar;1,0;St;gaeb;sonstiges/X83_LV_08_260805_V32.X83
+001;Demontage vorhandener Wandschieber Seitenkanal Neckar;1,0;psch;gaeb;sonstiges/X83_LV_08_260805_V32.X83
+002;Einbau Wandschieber Seitenkanal Neckar;1,0;St;gaeb;sonstiges/X83_LV_08_260805_V32.X83
+003;Einbau Drehantrieb Wandschieber Seitenkanal Neckar;1,0;St;gaeb;sonstiges/X83_LV_08_260805_V32.X83
+001;Demontage vorhandene Verteilerzunge Trennbauwerk;1,0;psch;gaeb;sonstiges/X83_LV_08_260805_V32.X83
+002;Einbau Verteilerzunge Trennbauwerk;1,0;St;gaeb;sonstiges/X83_LV_08_260805_V32.X83
+003;Einbau Drehantrieb Verteilerzunge Trennbauwerk;1,0;St;gaeb;sonstiges/X83_LV_08_260805_V32.X83
+001;Demontage vorhandener Schwenkantrieb Entleerung Regenwetterrechen 1;1,0;psch;gaeb;sonstiges/X83_LV_08_260805_V32.X83
+002;Einbau Spindel und Kugelhahn;1,0;psch;gaeb;sonstiges/X83_LV_08_260805_V32.X83
+003;Einbau Schwenkantrieb;1,0;St;gaeb;sonstiges/X83_LV_08_260805_V32.X83
+001;Einbau Spindel und Kugelhahn;1,0;psch;gaeb;sonstiges/X83_LV_08_260805_V32.X83
+001;Demontage vorhandener Gerinneschieber nach Rechen 1 / nach Rechen 2;2,0;psch;gaeb;sonstiges/X83_LV_08_260805_V32.X83
+002;Einbau Gerinneschieber nach Rechen 1 / nach Rechen 2;2,0;St;gaeb;sonstiges/X83_LV_08_260805_V32.X83
+003;Einbau Drehantrieb Gerinneschieber nach Rechen 1 / nach Rechen 2;2,0;St;gaeb;sonstiges/X83_LV_08_260805_V32.X83
+001;Einbau Gerinneschieber Zulauf Umgehung Sandfang;1,0;St;gaeb;sonstiges/X83_LV_08_260805_V32.X83
+002;Einbau Drehantrieb Gerinneschieber Zulauf Umgehung Sandfang;1,0;St;gaeb;sonstiges/X83_LV_08_260805_V32.X83
+003;Demontage vorhandener Gerinneschieber Zulauf Umgehung Sandfang;1,0;psch;gaeb;sonstiges/X83_LV_08_260805_V32.X83
+004;Geländer;2,0;m;gaeb;sonstiges/X83_LV_08_260805_V32.X83
+001;Einbau Gerinneschieber Zulauf Sandfang 1;1,0;St;gaeb;sonstiges/X83_LV_08_260805_V32.X83
+002;Einbau Drehantrieb Gerinneschieber Zulauf Sandfang 1;1,0;St;gaeb;sonstiges/X83_LV_08_260805_V32.X83
+003;Gitterrostabdeckung;1,0;psch;gaeb;sonstiges/X83_LV_08_260805_V32.X83
+004;Demontage vorhandener Gerinneschieber Zulauf Sandfang 1;1,0;psch;gaeb;sonstiges/X83_LV_08_260805_V32.X83
+001;Einbau Gerinneschieber Zulauf Sandfang 2;1,0;St;gaeb;sonstiges/X83_LV_08_260805_V32.X83
+002;Einbau Drehantrieb Gerinneschieber Zulauf Sandfang 2;1,0;St;gaeb;sonstiges/X83_LV_08_260805_V32.X83
+003;Gitterrostabdeckung;1,0;m³;gaeb;sonstiges/X83_LV_08_260805_V32.X83
+004;Demontage vorhandener Gerinneschieber Zulauf Sandfang 2;1,0;psch;gaeb;sonstiges/X83_LV_08_260805_V32.X83
+001;Einbau Gerinneschieber Ablauf Umgehung Sandfang;1,0;St;gaeb;sonstiges/X83_LV_08_260805_V32.X83
+002;Einbau Drehantrieb Gerinneschieber Ablauf Umgehung Sandfang;1,0;St;gaeb;sonstiges/X83_LV_08_260805_V32.X83
+003;Demontage vorhandener Gerinneschieber Ablauf Umgehung Sandfang;1,0;psch;gaeb;sonstiges/X83_LV_08_260805_V32.X83
+004;Geländer;2,0;m;gaeb;sonstiges/X83_LV_08_260805_V32.X83
+001;Einbau Gerinneschieber Ablauf Sandfang 1;1,0;St;gaeb;sonstiges/X83_LV_08_260805_V32.X83
+002;Einbau Drehantrieb Gerinneschieber Ablauf Sandfang 1;1,0;St;gaeb;sonstiges/X83_LV_08_260805_V32.X83
+003;Gitterrostabdeckung;1,0;m³;gaeb;sonstiges/X83_LV_08_260805_V32.X83
+004;Demontage vorhandener Gerinneschieber Ablauf Sandfang 1;1,0;psch;gaeb;sonstiges/X83_LV_08_260805_V32.X83
+001;Einbau Gerinneschieber Ablauf Sandfang 2;1,0;St;gaeb;sonstiges/X83_LV_08_260805_V32.X83
+002;Einbau Drehantrieb Gerinneschieber Ablauf Sandfang 2;1,0;St;gaeb;sonstiges/X83_LV_08_260805_V32.X83
+003;Demontage vorhandener Gerinneschieber Ablauf Sandfang 2;1,0;psch;gaeb;sonstiges/X83_LV_08_260805_V32.X83
+004;Gitterrostabdeckung;1,0;m³;gaeb;sonstiges/X83_LV_08_260805_V32.X83
+001;Demontage vorhandene Verteilerzunge Zulauf Sandfang;1,0;psch;gaeb;sonstiges/X83_LV_08_260805_V32.X83
+002;Einbau Verteilerzunge Zulauf Sandfang;1,0;St;gaeb;sonstiges/X83_LV_08_260805_V32.X83
+003;Einbau Drehantrieb Verteilerzunge Zulauf Sandfang;1,0;St;gaeb;sonstiges/X83_LV_08_260805_V32.X83
+001;Planunterlagen/Technische Dokumentation;1,0;psch;gaeb;sonstiges/X83_LV_08_260805_V32.X83
+001;Obermonteur;40,0;h;gaeb;sonstiges/X83_LV_08_260805_V32.X83
+002;Monteur;40,0;h;gaeb;sonstiges/X83_LV_08_260805_V32.X83
+003;Montagewagen;1000,0;km;gaeb;sonstiges/X83_LV_08_260805_V32.X83
+0101001;Baustelleneinrichtung;1,0;psch;gaeb-flat;sonstiges/X83_LV_08_260805.D83
+0201001;Montage Dammbalken;1,0;St;gaeb-flat;sonstiges/X83_LV_08_260805.D83
+0201002;Mehraufwand Montagezeit Dammbalken;1,0;psch;gaeb-flat;sonstiges/X83_LV_08_260805.D83
+0201003;Einbau Regelschieber;1,0;St;gaeb-flat;sonstiges/X83_LV_08_260805.D83
+0201004;Einbau Drehantrieb Regelschieber;1,0;St;gaeb-flat;sonstiges/X83_LV_08_260805.D83
+0201005;Demontage vorhandener Regelschieber;1,0;psch;gaeb-flat;sonstiges/X83_LV_08_260805.D83
+0201006;Gitterrostabdeckung;2,0;m³;gaeb-flat;sonstiges/X83_LV_08_260805.D83
+0201007;Geländer;1,5;m;gaeb-flat;sonstiges/X83_LV_08_260805.D83
+0202001;Demontage vorhandener Gerinneschieber Abschlag RÜB;1,0;psch;gaeb-flat;sonstiges/X83_LV_08_260805.D83
+0202002;Einbau Gerinneschieber Abschlag RÜB;1,0;St;gaeb-flat;sonstiges/X83_LV_08_260805.D83
+0202003;Einbau Drehantrieb Gerinneschieber Abschlag RÜB;1,0;St;gaeb-flat;sonstiges/X83_LV_08_260805.D83
+0203001;Demontage vorhandener Gerinneschieber Abschlag Neckar;1,0;psch;gaeb-flat;sonstiges/X83_LV_08_260805.D83
+0203002;Einbau Gerinneschieber Abschlag Neckar;1,0;St;gaeb-flat;sonstiges/X83_LV_08_260805.D83
+0203003;Einbau Drehantrieb Gerinneschieber Abschlag Neckar;1,0;St;gaeb-flat;sonstiges/X83_LV_08_260805.D83
+0204001;Demontage vorhandener Wandschieber Seitenkanal Neckar;1,0;psch;gaeb-flat;sonstiges/X83_LV_08_260805.D83
+0204002;Einbau Wandschieber Seitenkanal Neckar;1,0;St;gaeb-flat;sonstiges/X83_LV_08_260805.D83
+0204003;Einbau Drehantrieb Wandschieber Seitenkanal Neckar;1,0;St;gaeb-flat;sonstiges/X83_LV_08_260805.D83
+0205001;Demontage vorhandene Verteilerzunge Trennbauwerk;1,0;psch;gaeb-flat;sonstiges/X83_LV_08_260805.D83
+0205002;Einbau Verteilerzunge Trennbauwerk;1,0;St;gaeb-flat;sonstiges/X83_LV_08_260805.D83
+0205003;Einbau Drehantrieb Verteilerzunge Trennbauwerk;1,0;St;gaeb-flat;sonstiges/X83_LV_08_260805.D83
+0206001;Demontage vorhandener Schwenkantrieb Entleerung Regenwetterrechen 1;1,0;psch;gaeb-flat;sonstiges/X83_LV_08_260805.D83
+0206002;Einbau Spindel und Kugelhahn;1,0;psch;gaeb-flat;sonstiges/X83_LV_08_260805.D83
+0206003;Einbau Schwenkantrieb;1,0;St;gaeb-flat;sonstiges/X83_LV_08_260805.D83
+0207001;Einbau Spindel und Kugelhahn;1,0;psch;gaeb-flat;sonstiges/X83_LV_08_260805.D83
+0301001;Demontage vorhandener Gerinnechieber nach Rechen 1 / nach Rechen 2;2,0;psch;gaeb-flat;sonstiges/X83_LV_08_260805.D83
+0301002;Einbau Gerinneschieber nach Rechen 1 / nach Rechen 2;2,0;St;gaeb-flat;sonstiges/X83_LV_08_260805.D83
+0301003;Einbau Drehantrieb Gerinneschieber nach Rechen 1 / nach Rechen 2;2,0;St;gaeb-flat;sonstiges/X83_LV_08_260805.D83
+0401001;Einbau Gerinneschieber Zulauf Umgehung Sandfang;1,0;St;gaeb-flat;sonstiges/X83_LV_08_260805.D83
+0401002;Einbau Drehantrieb Gerinneschieber Zulauf Umgehung Sandfang;1,0;St;gaeb-flat;sonstiges/X83_LV_08_260805.D83
+0401003;Demontage vorhandener Gerinneschieber Zulauf Umgehung Sandfang;1,0;psch;gaeb-flat;sonstiges/X83_LV_08_260805.D83
+0401004;Geländer;2,0;m;gaeb-flat;sonstiges/X83_LV_08_260805.D83
+0402001;Einbau Gerinneschieber Zulauf Sandfang 1;1,0;St;gaeb-flat;sonstiges/X83_LV_08_260805.D83
+0402002;Einbau Drehantrieb Gerinneschieber Zulauf Sandfang 1;1,0;St;gaeb-flat;sonstiges/X83_LV_08_260805.D83
+0402003;Gitterrostabdeckung;1,0;psch;gaeb-flat;sonstiges/X83_LV_08_260805.D83
+0402004;Demontage vorhandener Gerinneschieber Zulauf Sandfang 1;1,0;psch;gaeb-flat;sonstiges/X83_LV_08_260805.D83
+0403001;Einbau Gerinneschieber Zulauf Sandfang 2;1,0;St;gaeb-flat;sonstiges/X83_LV_08_260805.D83
+0403002;Einbau Drehantrieb Gerinneschieber Zulauf Sandfang 2;1,0;St;gaeb-flat;sonstiges/X83_LV_08_260805.D83
+0403003;Gitterrostabdeckung;1,0;m³;gaeb-flat;sonstiges/X83_LV_08_260805.D83
+0403004;Demontage vorhandener Gerinneschieber Zulauf Sandfang 2;1,0;psch;gaeb-flat;sonstiges/X83_LV_08_260805.D83
+0404001;Einbau Gerinneschieber Ablauf Umgehung Sandfang;1,0;St;gaeb-flat;sonstiges/X83_LV_08_260805.D83
+0404002;Einbau Drehantrieb Gerinneschieber Ablauf Umgehung Sandfang;1,0;St;gaeb-flat;sonstiges/X83_LV_08_260805.D83
+0404003;Demontage vorhandener Gerinneschieber Ablauf Umgehung Sandfang;1,0;psch;gaeb-flat;sonstiges/X83_LV_08_260805.D83
+0404004;Geländer;2,0;m;gaeb-flat;sonstiges/X83_LV_08_260805.D83
+0405001;Einbau Gerinneschieber Ablauf Sandfang 1;1,0;St;gaeb-flat;sonstiges/X83_LV_08_260805.D83
+0405002;Einbau Drehantrieb Gerinneschieber Ablauf Sandfang 1;1,0;St;gaeb-flat;sonstiges/X83_LV_08_260805.D83
+0405003;Gitterrostabdeckung;1,0;m³;gaeb-flat;sonstiges/X83_LV_08_260805.D83
+0405004;Demontage vorhandener Gerinneschieber Ablauf Sandfang 1;1,0;psch;gaeb-flat;sonstiges/X83_LV_08_260805.D83
+0406001;Einbau Gerinneschieber Ablauf Sandfang 2;1,0;St;gaeb-flat;sonstiges/X83_LV_08_260805.D83
+0406002;Einbau Drehantrieb Gerinneschieber Ablauf Sandfang 2;1,0;St;gaeb-flat;sonstiges/X83_LV_08_260805.D83
+0406003;Demontage vorhandener Gerinneschieber Ablauf Sandfang 2;1,0;psch;gaeb-flat;sonstiges/X83_LV_08_260805.D83
+0406004;Gitterrostabdeckung;1,0;m³;gaeb-flat;sonstiges/X83_LV_08_260805.D83
+0407001;Demontage vorhandene Verteilerzunge Zulauf Sandfang;1,0;psch;gaeb-flat;sonstiges/X83_LV_08_260805.D83
+0407002;Einbau Verteilerzunge Zulauf Sandfang;1,0;St;gaeb-flat;sonstiges/X83_LV_08_260805.D83
+0407003;Einbau Drehantrieb Verteilerzunge Zulauf Sandfang;1,0;St;gaeb-flat;sonstiges/X83_LV_08_260805.D83
+0601001;Planunterlagen/Technische Dokumentation;1,0;psch;gaeb-flat;sonstiges/X83_LV_08_260805.D83
+0701001;Obermonteur;40,0;h;gaeb-flat;sonstiges/X83_LV_08_260805.D83
+0701002;Monteur;40,0;h;gaeb-flat;sonstiges/X83_LV_08_260805.D83
+0701003;Montagewagen;1000,0;km;gaeb-flat;sonstiges/X83_LV_08_260805.D83

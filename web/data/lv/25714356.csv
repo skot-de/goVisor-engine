@@ -1,0 +1,35 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+00000001;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst.;1,0;St;gaeb-flat;leistungsbeschreibungen/26-0178SU.D83
+00000002;Verk.sich. kürzerer Dauer umsetzen ... Freitext ...;1,0;St;gaeb-flat;leistungsbeschreibungen/26-0178SU.D83
+00000003;Transp. LSA f. Engst. aufb.u.abb. LSA Typ C*Verbind. Wahl AN Entf.ü.50bis100m*Versorg. n. Wahl VTU n.Unterl. AG;2,0;St;gaeb-flat;leistungsbeschreibungen/26-0178SU.D83
+00000004;Transportable LS-Anlage umsetzen LSB f.Engst.Typ C*Versorg. n. Wahl;1,0;St;gaeb-flat;leistungsbeschreibungen/26-0178SU.D83
+00000005;Transport. Lichtsignalanlage vorh. wie Vorposition;120,0;Std;gaeb-flat;leistungsbeschreibungen/26-0178SU.D83
+00000006;Kontrolle der Arbeitsstellensicherung;15,0;d;gaeb-flat;leistungsbeschreibungen/26-0178SU.D83
+01000001;Vorankündigung erstellen;1,0;Psch;gaeb-flat;leistungsbeschreibungen/26-0178SU.D83
+01000002;SiGe-Plan erstellen;1,0;Psch;gaeb-flat;leistungsbeschreibungen/26-0178SU.D83
+01000003;SiGe-Koordinator stellen.;1,0;Psch;gaeb-flat;leistungsbeschreibungen/26-0178SU.D83
+02000001;Baustelle einrichten Sämtl.LV-Abschn.*Zufahrt herst.AG;1,0;Psch;gaeb-flat;leistungsbeschreibungen/26-0178SU.D83
+02000002;Baustelle räumen Sämtl. LV-Abschn.;1,0;Psch;gaeb-flat;leistungsbeschreibungen/26-0178SU.D83
+03000001;Beseitigung von Bewuchs,Grünschnitt;200,0;m2;gaeb-flat;leistungsbeschreibungen/26-0178SU.D83
+03000002;Beräumung der Felsböschung;100,0;m2;gaeb-flat;leistungsbeschreibungen/26-0178SU.D83
+03000003;Herauslösen Felsblock;1,0;Psch;gaeb-flat;leistungsbeschreibungen/26-0178SU.D83
+03010001;Oberboden abtragen Auf Waldflächen*Abtrag 10 -30 cm Aufmaß Fahrzeug*Verw.AG;10,0;m3;gaeb-flat;leistungsbeschreibungen/26-0178SU.D83
+03010002;Baugelände abräumen / Angleichen Böschungsoberfläche;1,0;Psch;gaeb-flat;leistungsbeschreibungen/26-0178SU.D83
+03010003;Erosionsschutz;200,0;m²;gaeb-flat;leistungsbeschreibungen/26-0178SU.D83
+03020001;Mikropfahl aus Gewindestahl;40,0;St;gaeb-flat;leistungsbeschreibungen/26-0178SU.D83
+03020002;Zulage für Mehrlängen Gewindestahl;5,0;m;gaeb-flat;leistungsbeschreibungen/26-0178SU.D83
+03020003;Nagelkopf Netz;25,0;St;gaeb-flat;leistungsbeschreibungen/26-0178SU.D83
+03020004;Nagelkopf Spritzbeton;15,0;St;gaeb-flat;leistungsbeschreibungen/26-0178SU.D83
+03020005;Entwässerungsbohrungen;10,0;St;gaeb-flat;leistungsbeschreibungen/26-0178SU.D83
+03020006;Dränmatten;30,0;m²;gaeb-flat;leistungsbeschreibungen/26-0178SU.D83
+03020007;Geotextilstrumpf einbauen;30,0;m;gaeb-flat;leistungsbeschreibungen/26-0178SU.D83
+03020008;Mehrverbrauch Zementsuspension;3,0;t;gaeb-flat;leistungsbeschreibungen/26-0178SU.D83
+03020009;Zugversuche;3,0;St;gaeb-flat;leistungsbeschreibungen/26-0178SU.D83
+03030001;Seilanker;8,0;St;gaeb-flat;leistungsbeschreibungen/26-0178SU.D83
+03030002;Randseile;40,0;m;gaeb-flat;leistungsbeschreibungen/26-0178SU.D83
+03030003;Drahtseilklemmen;32,0;St;gaeb-flat;leistungsbeschreibungen/26-0178SU.D83
+03030004;Kausche;8,0;St;gaeb-flat;leistungsbeschreibungen/26-0178SU.D83
+03030005;Steinschlag-Schutznetze einbauen;45,0;m2;gaeb-flat;leistungsbeschreibungen/26-0178SU.D83
+03040001;Spritzbeton herstellen Außenschale*Profilgerecht Mind. 50 cm;25,0;m3;gaeb-flat;leistungsbeschreibungen/26-0178SU.D83
+03040002;Betonstahl einbauen;0,5;t;gaeb-flat;leistungsbeschreibungen/26-0178SU.D83
+04000001;Oberboden nicht schadstoffbelastet EWC200202 Verwertung zuführen;20,0;t;gaeb-flat;leistungsbeschreibungen/26-0178SU.D83

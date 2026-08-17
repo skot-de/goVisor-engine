@@ -1,0 +1,433 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+10;Der AN hat bei Auftragserteilung einen mit entsprechenden Vollmachten ausgestatteten Koordinator mit Ingenieur- oder vergleichbarer Ausbildung sowie einen ständigen mit ausreichenden Vollmachten versehenen Vertreter zu benennen.;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+20;Digitale Werkstatt - und Montageplanung prüffähig durch den;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+30;Digitale Ausführungszeichnungen für den Ersatz des Treppenlaufs als Grundlage für die Werkplanung für die Treppe prüffähig aufstellen, ggf. fortschreiben und zur Prüfung einreichen. Grundlage bilden die Unterlagen der Ausschreibung sowie das durch den AN durchzuführende Aufmaß.;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+40;Elektrofachplanung für die Neuinstallation der  Treppenhausbeleuchtung inkl. Leitungsverlegung gem. DIN VDE und den anerkannten Regeln der Technik aufstellen. Planung der Anschlüsse, Leuchtenanordnung, Auslegung der Stromkreise, Planung der Schalt- und Steuerungstechnik mittels Tastern inkl. Erstell;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+50;Ausführungsstatik für CPC-Treppenlauf prüffähig aufstellen und zur Prüfung einreichen, inkl. Durchführung der stat. Prüfung.;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+60;Fortschreibung der erstellten Statikunterlagen für die CPC-Elemente für eine ggf. erforderliche Einholung einer ZiE für die Treppenkonstruktion.;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+70;Entwurf, Ausführungszeichnungen und Statik/Standsicherheits- nachweise für sämtliche Gerüste, Bauzustände und Baubehelfe, schwimmende Arbeitsebenen, Übergangs-/ Übergabekonstruktion Leitwerk, Sicherheitseinrichtungen, Kranstellfläche, jeweils unter Berücksichtigung des vom AN gewählten Gerätes etc. ;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+80;Bauzeitenplan mit einer Aufgliederung in Planung,;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+90;Baustelleneinrichtungsplan mit Darstellung;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+100;Konzepte inkl. Material und Personal gem. Baubeschreibung;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+110;Ausführungskonzept für Putz- und Spritzputzarbeiten;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+120;Betonierpläne gem. ZTV- W LB 219 für jede Betonage und Betoniertagebuch aufstellen und fortschreiben und dem AG 10 Werktage vor dem jeweiligen Ausführungsbeginn zur Abstimmung vorlegen.;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+130;Ausführungspläne für Mörtel- (RM) und Spritzmörtelarbeiten (SRM) gemäß ZTV-W LB 219 aufstellen und fortschreiben und dem AG 10 Werktage vor dem jeweiligen Ausführungsbeginn zur Abstimmung vorlegen.;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+140;Ausführungspläne für Putz- und Spritzputzarbeiten;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+150;Ausführungspläne für Rissinjektion gemäß ZTV-W LB 219;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+160;Ausführungspläne für Mauerwerksinjektion gemäß WTA Merkblatt 4-10-24 aufstellen und fortschreiben und dem AG 10 Werktage vor dem jeweiligen Ausführungsbeginn zur Abstimmung vorlegen.;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+170;Ausführungspläne für OS-Systeme gemäß ZTV-W LB 219 aufstellen und fortschreiben und dem AG 10 Werktage vor dem jeweiligen Ausführungsbeginn zur Abstimmung vorlegen.;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+180;Korrosionsschutzpläne für jede Baugruppe gemäß ZTV-W LB 218 aufstellen und fortschreiben und dem AG 10 Werktage vor dem jeweiligen Ausführungsbeginn zur Abstimmung vorlegen.;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+190;Schweißpläne gem. DIN EN 1090-2 für jede Baugruppe aufstellen und fortschreiben und dem AG 10 Werktage vor dem jeweiligen Ausführungsbeginn zur Abstimmung vorlegen.;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+200;Prüfanweisung/Schweißprüfpläne für die Schweißnahtprüfung;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+210;Gefälleplan für Entwässerung sämtlicher Bauteile und Aufbauschichten inkl. Drainage- und Entwässerungsleitungen forschreiben und dem AG 10 Werktage vor dem jeweiligen Ausführungsbeginn zur Abstimmung vorlegen.;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+220;Bestandsunterlagen aus den Ausführungszeichnungen/;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+230;Qualitätssicherungsplan für die Erst- oder Eignungs-;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+240;Dokumentation für Qualitätssicherung liefern.;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+250;Die Baustelle ist vom AN bei den zuständigen Stellen der;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+260;Durchführung der Betonprüfungen entsprechend der Überwachungsklasse 2 einschl. Dokumentation für Qualitätssicherung liefern.;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+270;Einholen sämtlicher Genehmigungen, es sei denn sie sind in einzelnen Positionen explizit mit aufgeführt, bei den zuständigen Behörden, die für die Durchführung der Bauarbeiten erforderlich sind.;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+280;Erstellung und Übergabe eines Dokumentationsordners in zweifacher Ausführung (Papierausführung und digital als PDF auf Datenträger (USB-Stick)). Hierin sind als Druckexemplare sämtliche für die Maßnahme relevanten Dokumente anzuführen, mindestens jedoch:;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+10;Vorankündigung nach Baustellenverordnung Par. 2, Abs. 2;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+20;Fachbeitrag als Grundlage zur Erstellung des;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+10;Fotodokumentation aus digitalen Lichtbildern vom Bau-;1000,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+20;Zu Beginn der Baumaßnahme ist im Beisein des AG eine fotografische Dokumentation im Sinne einer Beweissicherung der durch den AN genutzten Flächen (Wege, Grünflächen, Bauwerke, etc.) zu erstellen.;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+30;Vorhandene Kabel und Leitungen im Baufeld sind in Höhe und;115,0;m;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+40;Zum Leistungsumfang dieser Position gehören alle zur;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+10;Baustelle für die vertragsgemäße Durchführung der;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+20;Baustelleneinrichtung vorhalten, unterhalten und be-;15,0;Mt;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+30;Baustelle räumen. Soweit nicht für bestimmte Leistungen;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+40;Einmalige und zeitunabhängige Gemeinkosten der Bau-;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+50;Zeitabhängige Gemeinkosten der Baustelle ausweisen.;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+60;Bauzaun einschl. der erforderlichen Tore und Pfosten;528,0;m;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+70;Bauzaun einschl. der Tore und Pfosten abbauen und;528,0;m;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+80;Baucontainer zur Nutzung durch den AG aufbauen und abbauen. Standplatz einschl. der erf. Einzelfundamente und Erdarbeiten anlegen und herrichten. Ver- und Entsorgungsanschlüsse herstellen, anschließen und nach Abschluss der Baumaßnahme zurückbauen.;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+90;Baucontainer für den AG mit allen Einrichtungen unterhalten und betreiben, wie z. B. mit Strom und Wasser versorgen und heizen. Ver- und Entsorgung sicherstellen. 2 mal wöchentlich reinigen. Zufahrt und befestigte Flächen unterhalten.;15,0;Mt;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+100;Anlage zur Erfassung, Förderung, Behandlung und Ein-;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+110;Längervorhaltung der erforderlichen Auffang- und;2,0;Wo;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+120;Anfallendes Wasser aus dem Abbruchvorgang (z.B. mit;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+130;Behandeltes, für den Abbruchvorgang nicht wiederver-;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+140;Einrichten, vorhalten und rückbauen einer Peripherie zur Beschickung/Versorgung der Materialeinbaustellen für die Umsetzung der Beton-/ Mörtel- und Putzarbeiten im Treppenhaus und Mittelbau mit entsprechendem Material u.a. über Leitungskonstruktionen, Pumpen etc.;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+150;Intensive Reinigung der Baustelle sowie alle an das Baufeld angrenzende Geh- und Fahrwege (auch auf der Brücke) nach Beendigung der Instandsetzungsarbeiten. Die Reinigung beinhaltet alle Bauteile bzw. Bauteilbereiche und Ausrüstungen (bspw. Beleuchtung, Beschilderung) des Löwenkäfigs.;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+160;Stillstand der Baustelle bei ungünstigen Witterungsbedingungen  in den Wintermonaten nach Rücksprache mit dem AG und Anweisung durch den AG.;14,0;d;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+170;Maßnahmen zur Einhaltung der Mindestfrischbetontemperatur;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+180;Maßnahmen zur Einhaltung der Frischbetontemperatur von;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+190;Maßnahmen zur Einhaltung der zulässigen Luft- und Bauteiltemperatur bei der Applikation von Mörtel / Spritzmörtel  (RM / SRM) gemäß ZTV-W LB219 bzw. Herstellerangaben an der Einbaustelle herstellen, betreiben und entfernen. Maßnahmen zur Einhaltung der Grenztemperatur im Sommer nach Wahl des AN.;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+200;Maßnahmen zur Einhaltung der zulässigen Luft- und Bauteiltemperatur bei der Applikation von Mörtel / Spritzmörtel (RM / SRM) gemäß ZTV-W LB219 bzw. Herstellerangaben an der Einbaustelle herstellen, betreiben und entfernen. Maßnahmen zur Einhaltung der Grenztemperatur im Winter nach Wahl des AN.;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+210;Maßnahmen zur Einhaltung der zulässigen Luft- und Bauteiltemperatur bei der Applikation von Putz / Spritzputz gem.  Herstellerangaben an der Einbaustelle herstellen, betreiben und entfernen. Maßnahmen zur Einhaltung der Grenztemperatur im Sommer nach Wahl des AN.;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+220;Maßnahmen zur Einhaltung der zulässigen Luft- und Bauteiltemperatur bei der Applikation von Putz / Spritzputz gem.  Herstellerangaben an der Einbaustelle herstellen, betreiben und entfernen. Maßnahmen zur Einhaltung der Grenztemperatur im Winter nach Wahl des AN.;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+230;Maßnahmen zur Einhaltung der zulässigen Luft- und Bauteiltemperatur bei der Applikation von OS-Systemen gemäß ZTV-W LB219 bzw. Herstellerangaben an der Einbaustelle herstellen, betreiben und entfernen. Maßnahmen zur Einhaltung der Grenztemperatur im Sommer nach Wahl des AN.;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+240;Maßnahmen zur Einhaltung der zulässigen Luft- und Bauteiltemperatur bei der Applikation von OS-Systemen gemäß ZTV-W LB219 bzw. Herstellerangaben an der Einbaustelle herstellen, betreiben und entfernen. Maßnahmen zur Einhaltung der Grenztemperatur im Winter nach Wahl des AN.;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+250;Schutz bereits hergestellter Bereiche / Bauteile zur Vermeidung von Verschmutzung und Beschädigung während aller auszuführenden Arbeiten aufstellen, unterhalten und wieder abbauen. Ausführung nach Wahl des AN.;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+260;Schutzmaßnahmen für die verbleibenden Einbauten zur Vermeidung von Verschmutzung und Beschädigung während aller auszuführenden Arbeiten aufstellen, unterhalten und wieder abbauen. Ausführung nach Wahl des AN.;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+270;Schutzmaßnahmen für Brückengeländer inkl. Ansichtsflächen im Bereich des Treppenturms und Lastenaufzugs zur Vermeidung von Verschmutzung und Beschädigung während aller auszuführenden Arbeiten aufstellen, unterhalten und wieder abbauen. Ausführung nach Wahl des AN.;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+280;Kabeltrassen und Kabel während der Baumaßnahme nach Wahl des AN vor Beschädigung, Verunreinigung u.dgl. sichern.;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+290;Kabelkanäle / Schächte während der Baumaßnahme nach Wahl des AN vor Beschädigung, Verunreinigung u.dgl. sichern.;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+300;Auf- und Abbau eines wirksamen Strahl- und;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+310;Auf- und Abbau eines wirksamen Strahl- und;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+10;Schwimmendes Gerät inkl. Arbeits- und Gerätearbeitsebene für das Ein- und Ausheben von Materialien und Geräten liefern und abtransportieren.;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+20;Schwimmende Umschlags- / Lagerebene (Schute o.ä.) für das An- und Abfördern und (Zwischen-)Lagern von Materialien und Geräten liefern und abtransportieren.;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+30;Übergangs-/Übergabekonstruktion auf dem Leitwerk als Stahlkonstruktion herstellen und nach Ende der Arbeiten wieder zurückbauen. Dimensionierung für die durch den AN vorgesehenen Belastungen. Sämtliche Schutzmaßnahmen und Absturzsicherungen für Arbeiten auf der Fläche sind einzukalkulieren.;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+40;Übergangs-/Übergabekonstruktion auf Leitwerk vorhalten, unterhalten und betreiben.;15,0;Mt;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+50;Geeigneten mobilen Teleskopkran, inkl. Fahrer/Bedienpersonal auf einem ausgewiesenen Kranstellplatz/Übergabepunkt aufstellen und abfahren.;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+60;Aufbauen und Abbauen einer Hebevorrichtung innerhalb des Mittelbaus und/oder Treppenhauses einschließlich Gründung/ Verankerung nach statischen, konstruktiven und sicherheitstechnischen Erfordernissen.;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+70;Hebevorrichtung vorhalten, unterhalten und;15,0;Mt;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+80;Einsatz eines geländegängigen Teleskopladers (starr oder drehbar/Roto) im Bauwerk inklusive fachkundigem Bediener für diverse Hebe-, Transport- und Stapelarbeiten. Die Maschine dient als multifunktionales Hebegerät und Logistikmaschine zur Beschleunigung der Bauabläufe, zur Reduzierung des manuellen;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+90;Teleskoplader vorhalten, vorhalten, unterhalten und;15,0;Mt;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+100;Aufbauen und Abbauen eines Gerüsttreppenturms nach DIN EN 12811-1, als Aufstieg zum Erreichen der Arbeitsplätze auf Ebene der Pflasterfläche als zusätzliche Zuwegung zum Treppenhaus.;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+110;Gerüstturm der Vorposition vorhalten, unterhalten und;15,0;Mt;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+120;Aufbauen und Abbauen eines Lastenaufzuges einschließlich Gründung nach statischen, konstruktiven und sicherheits-;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+130;Lastenaufzug der Vorposition vorhalten, unterhalten und;15,0;Mt;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+140;Erstellen, mehrmaliges Umbauen und Abbauen eines Arbeitsgerüsts.;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+150;Arbeitsgerüst der Vorposition vorhalten, unterhalten und;45,0;Wo;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+160;Erstellen, mehrmaliges Umbauen und Abbauen eines Arbeitsgerüsts.;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+170;Arbeitsgerüst der Vorposition vorhalten, unterhalten und;45,0;Wo;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+180;Erstellen, mehrmaliges Umbauen und Abbauen eines Arbeitsgerüsts.;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+190;Arbeitsgerüst der Vorposition vorhalten, unterhalten und;35,0;Wo;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+10;Verkehrssicherungseinrichtungen zur Aufrechterhaltung des öffentlichen Verkehrs sowie für die verkehrsgerechte Sicherung von Arbeitsstellen aufbauen, ggf. umsetzen und nach Beendigung der Arbeiten abbauen. Nach den Richtlinien zur Sicherung von Arbeitsstellen an Straßen (RSA).;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+20;Verkehrssicherung vorhalten und regelmäßig kontrollieren.;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+30;Informationstafel mit Bauschildgestell nach Vorgabe des AG beschaffen, in der Nähe des Baubereichs aufstellen, vorhalten und rückbauen. Inkl. Ballastierung und Befestigung.;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+10;Stundenlohnarbeiten durch Arbeitskräfte auf Anordnung;10,0;h;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+20;Stundenlohnarbeiten durch Arbeitskräfte auf Anordnung;10,0;h;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+30;Stundenlohnarbeiten durch Arbeitskräfte auf Anordnung;10,0;h;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+40;Stundenlohnarbeiten durch Arbeitskräfte auf Anordnung;10,0;h;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+50;Stundenlohnarbeiten durch Arbeitskräfte auf Anordnung;10,0;h;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+60;Stundenlohnarbeiten durch Arbeitskräfte auf Anordnung;10,0;h;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+70;Stundenlohnarbeiten durch Arbeitskräfte auf Anordnung;10,0;h;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+80;Stundenlohnarbeiten durch Baugeräte auf Anordnung des AG;10,0;h;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+90;Stundenlohnarbeiten durch Baugeräte auf Anordnung des AG;10,0;h;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+10;Nachweis der Verwendbarkeit (Eignungsnachweis) für Spritzmörtel/Spritzbeton (unverankert, unbewehrt) gemäß ZTV-W 219, Abschnitte 5.4 und 5.6.1.1 und entsprechender tabellarischer Aufstellung gemäß Baubeschreibung erbringen.;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+20;Nachweise zur Bestätigung der Übereinstimmung (Gütenachweis) für Spritzmörtel (unverankert, unbewehrt) gemäß Baubeschreibung und Gütenachweise im Rahmen der Ausführung und der ausgeführten Leistungen gemäß ZTV-W LB 219, Abschnitte 5.5, 5.6.1.2, 5.6.2 und 5.6.3 und entsprechender tabellarischer Aufst;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+10;Nachweis der Verwendbarkeit für Betonersatz im Hand-;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+20;Nachweise zur Bestätigung der Übereinstimmung für;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+10;Nachweis der Verwendbarkeit für Beton/Stahlbeton nach;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+20;Zusätzliche Eignungsnachweise nach ZTV-W 215, Teil 2,;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+30;Nachweise zur Bestätigung der Übereinstimmung für Beton;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+40;Zusätzliche Gütenachweise nach ZTV-W 215 Teil 3, Anhang;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+10;Nachweis der Verwendbarkeit für Putzsystem gemäß;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+20;Nachweise zur Bestätigung der Übereinstimmung für Putzsystem gemäß Leistungsbeschreibung und Gütenachweise;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+10;Nachweis der Verwendbarkeit für Oberflächenschutzsystem;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+20;Nachweise zur Bestätigung der Übereinstimmung für;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+10;Nachweis der Verwendbarkeit für Feinmörtel;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+20;Nachweise zur Bestätigung der Übereinstimmung für;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+10;Nachweis der Verwendbarkeit für Rissfüllstoff gemäß;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+20;Nachweise zur Bestätigung der Übereinstimmung für Riss-;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+10;Nachweis der Verwendbarkeit für Rissfüllstoff gemäß;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+20;Nachweise zur Bestätigung der Übereinstimmung für Riss-;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+10;Nachweis der Verwendbarkeit nach ZTV-W LB 219 für sämtliche Verfüllmaterialien im Rahmen der Ausführung und entsprechender tabellarischer Aufstellung gemäß Baubeschreibung erbringen. Die Leistung umfasst alle besonderen Leistungen im Sinne der VOB/C für die Erbringung der Verwendbarkeit.;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+20;Nachweise zur Bestätigung der Übereinstimmung für sämtliche;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+10;Abreißfestigkeit des Betonuntergrundes nach Abschluss;10,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+20;Verbundfestigkeit des Betonersatzsystems mit Schicht-;10,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+10;Herstellen einer Probefläche an einem repräsentativ ausgewählten Stahlbetonprüffeld für flächigen Betonabtrag;3,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+10;Vorbereiteten Betonuntergrund im Beisein des Auftrag-;290,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+20;Betonuntergrund gemäß Leistungsbeschreibung mit;7,0;m3;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+30;Betonuntergrund gemäß Leistungsbeschreibung mit;10,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+40;Betonuntergrund gemäß Leistungsbeschreibung mit;10,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+50;Betonuntergrund gemäß Leistungsbeschreibung mit;10,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+60;Betonuntergrund gemäß Leistungsbeschreibung mit;5,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+70;Betonuntergrund gemäß Leistungsbeschreibung mit;3,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+80;Betonuntergrund gemäß Leistungsbeschreibung mit;3,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+90;Betonuntergrund gemäß Leistungsbeschreibung mit;1,5;m3;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+100;Untergrund für die Montage der Drainagematte vorbereiten.;130,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+110;Untergrund für die Montage von Edelstahlrippenstreckmetall und den Auftrag des Putzsystems vorbereiten.;160,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+10;Fremdschichten gemäß Leistungsbeschreibung mit;51,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+20;Bauteil aus Beton abbrechen. Herstellen einer Wandtasche durch Abbruch der Emporenplatten bis in die Wandfläche hinein. Die Anschlussbewehrung zum Bestand ist zu erhalten. Der vorherige Ausbau des Bestandsgeländers sowie der Speier wird gesondert vergütet. Anfallende Stoffe aufnehmen. Fördern und en;10,0;m3;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+30;Betonuntergrund im Bereich der hergestellten Wandtaschen für die Anschlussherstellung der neuen Emporenplatten (Ortbeton) gemäß Leistungsbeschreibung mit Zeichnung(en) vorbehandeln. Anfallende Stoffe aufnehmen. Entsorgung wird gesondert vergütet.;7,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+10;Vorbereiteten Betonuntergrund im Beisein des Auftrag-;245,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+20;Fremdschichten für den Auftrag eines neuen Farbanstrichs gem. Herstellerangaben von Beton entfernen.;70,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+30;Untergrund für den Auftrag von Spritz-/Reprofilierungsmörtel (SRM/RM) vorbereiten. Anfallende Stoffe aufnehmen.;34,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+40;Vorhandenen Putz nach Leistungsbeschreibung des AG inkl. Putzträger ausbauen, inkl. aller notwendigen Schneid- und Stemmarbeiten. Anfallende Stoffe aufnehmen. Fördern und entsorgen wird gesondert vergütet.;175,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+50;Vorhandene Drainagebahn nach Leistungsbeschreibung des AG ausbauen, inkl. aller notwendigen Schneid- und Stemmarbeiten. Verankerungen entfernen. Anfallende Stoffe aufnehmen. Fördern und entsorgen wird gesondert vergütet.;10,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+60;Vorhandene Drainagebahn nach Leistungsbeschreibung des AG ausbauen, inkl. aller notwendigen Schneid- und Stemmarbeiten. Verankerungen entfernen. Anfallende Stoffe aufnehmen. Fördern und entsorgen wird gesondert vergütet.;165,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+70;Untergrund im Bereich tiefer Ausbruchstellen für den lokalen Auftrag von Reprofilierungsmörtel (RM) vorbereiten.;25,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+80;Untergrund für die Montage der Drainagematte vorbereiten.;175,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+10;Fremdschichten gemäß Leistungsbeschreibung mit;62,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+20;Bauteil aus Beton abbrechen. Herstellen einer Wandtasche durch Abbruch der Podestplatten bis in die Wandfläche hinein. Anschlussbewehrung ist zu erhalten. Anfallende Stoffe aufnehmen. Fördern und entsorgen wird gesondert vergütet.;8,0;m3;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+30;Betonuntergrund im Bereich der hergestellten Wandtaschen für die Anschlussherstellung der neuen Treppenhauspodestplatten (Ortbeton) gemäß Leistungsbeschreibung mit Zeichnung(en) vorbehandeln. Anfallende Stoffe aufnehmen. Entsorgung wird gesondert vergütet.;6,5;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+10;Fremdschichten gemäß Leistungsbeschreibung mit;45,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+20;Bauteil aus Beton abbrechen. Herstellen einer Wandtasche durch Abbruch der Zwischenpodestplatten bis in die Wandfläche hinein. Anschlussbewehrung ist zu erhalten. Treppenläufe (Sockel) sind bündig an Wand und Treppenwangen / Ober- und Unterzügen abzubrechen.;6,5;m3;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+30;Betonuntergrund im Bereich der hergestellten Wandtaschen für die Anschlussherstellung der neuen Zwischenpodestplatten (Ortbeton) gemäß Leistungsbeschreibung mit Zeichnung(en) vorbehandeln. Anfallende Stoffe aufnehmen. Entsorgung wird gesondert vergütet.;1,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+10;Vorbereiteten Betonuntergrund im Beisein des Auftrag-;83,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+20;Fremdschichten gemäß Leistungsbeschreibung mit;83,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+30;Betonuntergrund gemäß Leistungsbeschreibung mit;100,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+40;Betonuntergrund gemäß Leistungsbeschreibung mit;80,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+50;Betonuntergrund gemäß Leistungsbeschreibung mit;30,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+60;Untergrund für den Auftrag von Mörtel/Spritzmörtel (RM/SRM)  vorbereiten.;83,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+10;Mauerwerkspfeiler nach Abtrag äußerer Schichten im Beisein;195,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+20;Betonuntergrund gemäß Leistungsbeschreibung mit;10,0;m3;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+30;Fugenmörtel der schadhaften Mauerwerksfugen ausräumen.;195,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+40;Beschädigte Steine der Mauerwerkspfeiler, Stürze nach Anweisung des AG aus dem Verband ausbrechen.;10,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+50;Untergrund für den Auftrag von Putzsystem vorbereiten.;195,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+10;Betonuntergrund gemäß Leistungsbeschreibung mit;0,5;m3;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+20;Untergrund für den Auftrag von Feinmörtel vorbereiten.;19,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+10;Probeinjektion in einem repräsentativ ausgewählten Stahlbetonprüffeld zur Prüfung und wenn notwendig Anpassung von gewählten Bohrlochabständen und Neigungen ausführen. Nach Injektion mittig aus Injektionszone Probe entnehmen (Bohrung geringen Durchmessers oder Ausstemmen nach Wahl AN). Probe spalten;3,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+20;Bohrung in Bauteil/Bauwerk aus Beton gemäß Leistungsbe-;600,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+30;Vergütung der Fehlbohrungen sowie fachgerechter Verschluss.;50,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+40;Verdämmung auf Bauteil/Bauwerk aus Beton für das Fül-;140,0;m;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+50;Lamellenschlagpacker 18x110 mm liefern, inkl. Verschlußstück zur Druckbefüllung (Injektionsdruck max. 5 bar), in das gesäuberte Bohrloch mit geeignetem Setzwerkzeug einbauen und fest verankern.;600,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+60;Füllstoff gemäß ZTV-W LB 219, Abschnitt 8 und;80,0;kg;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+70;Riss mit Wirkungszone t > 0,6 m gemäß ZTV-W LB 219,;160,0;m;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+80;Riss mit Wirkungszone t > 0,6 m gemäß ZTV-W LB 219,;160,0;m;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+90;Mehrverbrauch an Füllstoff durch erhöhte Aufnahme bei;10,0;kg;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+100;Risszone nach dem Entfernen der Verdämmung gemäß ZTV-W;140,0;m;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+10;Probeinjektion in einem repräsentativ ausgewählten Stahlbetonprüffeld zur Prüfung und wenn notwendig Anpassung von gewählten Bohrlochabständen und Neigungen ausführen. Nach Injektion mittig aus Injektionszone Probe entnehmen (Bohrung geringen Durchmessers oder Ausstemmen nach Wahl AN). Probe spalten;2,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+20;Riss mit Wirkungszone t <= 0,6 m gemäß ZTV-W LB 219,;20,0;m;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+30;Mehrverbrauch an Füllstoff durch erhöhte Aufnahme bei;10,0;kg;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+40;Risszone nach dem Entfernen der Verdämmung gemäß ZTV-W;20,0;m;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+10;Abzudichtende mineralische Flächen für den Auftrag eines Vorputzes reinigen. Zementleim, Staub, Mörtelreste und Grate durch einen mechanischen Abtrag wie Schleifen, Strahlen oder Fräsen entfernen. Staubfreien und tragfähigen Untergrund gemäß Herstellerangaben herstellen.;135,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+20;Geeigneten Vorputz als Indikator für den Injektionserfolg der nachträglichen Horizontal-/Vertikalsperre auf dem Mauerwerk entlang der späteren Mauerwerksinjektion aufbringen.;135,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+30;Probeinjektion in einem repräsentativ ausgewählten Mauerwerksprüffeld zur Prüfung und wenn notwendig Anpassung von gewählten Bohrlochabständen und Neigungen ausführen. Nach Injektion mittig aus Injektionszone Probe entnehmen (Bohrung geringen Durchmessers oder Ausstemmen nach Wahl AN). Probe spalten;2,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+40;Bohrlöcher für Mauerwerksinjektion in einer Höhe von ca. 20cm;1350,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+50;Lamellenschlagpacker 18x110 mm liefern, inkl. Verschlußstück zur Druckbefüllung (Injektionsdruck max. 5 bar), in das gesäuberte Bohrloch mit geeignetem Setzwerkzeug einbauen und fest verankern.;1350,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+60;Mauerwerksinjektion zur nachträglichen Reduzierung kapillarer Feuchte mit nach WTA Merkblatt 4-10-24 zertifizierten Injektionsstoffen als Horizontalsperre durchführen.;135,0;m;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+70;Mehrverbrauch an Füllstoff durch erhöhte Aufnahme bei;10,0;kg;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+80;Vorputz nach Abschluss der Maßnahme wieder entfernen.;135,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+10;Bohrung für Bewehrungsverankerung gemäß;236,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+20;Vergütung der Fehlbohrungen der Pos. 6.1.10 sowie;24,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+30;Verbundanker nach Leistungsbeschreibung entsprechend;126,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+40;Verbundanker nach Leistungsbeschreibung entsprechend;76,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+50;Verbundanker nach Leistungsbeschreibung entsprechend;35,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+10;Bohrung für Bewehrungsverankerung gemäß;513,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+20;Vergütung der Fehlbohrungen der Pos. 6.2.10 sowie;52,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+30;Verbundanker nach Leistungsbeschreibung entsprechend;513,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+10;Bohrung für Bewehrungsverankerung gemäß;59,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+20;Vergütung der Fehlbohrungen der;6,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+30;Verbundanker nach Leistungsbeschreibung entsprechend;59,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+10;Freiliegende Bewehrung entrosten. Anfallende Stoffe;30,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+20;Freiliegende Bewehrung entrosten. Anfallende Stoffe;20,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+30;Freiliegende Bewehrung entrosten. Anfallende Stoffe;10,0;m;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+10;Bewehrung in Absprache mit der örtlichen Bauüberwachung ersetzen/ergänzen. Anfallende Stoffe aufnehmen. Fördern und entsorgen wird gesondert vergütet.;30,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+20;Bewehrung in Absprache mit der örtlichen Bauüberwachung ersetzen/ergänzen. Anfallende Stoffe aufnehmen. Fördern und entsorgen wird gesondert vergütet.;20,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+30;Bewehrung in Absprache mit der örtlichen Bauüberwachung ersetzen/ergänzen. Anfallende Stoffe aufnehmen. Fördern und entsorgen wird gesondert vergütet.;10,0;m;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+10;Freiliegende Bewehrung entrosten. Anfallende Stoffe;15,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+20;Freiliegende Bewehrung entrosten. Anfallende Stoffe;10,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+30;Freiliegende Bewehrung entrosten. Anfallende Stoffe;5,0;m;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+10;Bewehrung in Absprache mit der örtlichen Bauüberwachung ersetzen/ergänzen. Anfallende Stoffe aufnehmen. Fördern und entsorgen wird gesondert vergütet.;15,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+20;Bewehrung in Absprache mit der örtlichen Bauüberwachung ersetzen/ergänzen. Anfallende Stoffe aufnehmen. Fördern und entsorgen wird gesondert vergütet.;10,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+30;Bewehrung in Absprache mit der örtlichen Bauüberwachung ersetzen/ergänzen. Anfallende Stoffe aufnehmen. Fördern und entsorgen wird gesondert vergütet.;5,0;m;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+10;Bewehrungsstahl liefern und nach Statik, Zeichnung oder Angaben der örtlichen Bauüberwachung biegen, einbauen und schwingungsfrei befestigen. Inklusive Lieferung von Montage- und Befestigungsmaterial sowie Abstandshalter.;1,0;t;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+10;Bewehrungsstahl liefern und nach Statik, Zeichnung oder Angaben der örtlichen Bauüberwachung biegen, einbauen und schwingungsfrei befestigen. Inklusive Lieferung von Montage- und Befestigungsmaterial sowie Abstandshalter.;0,85;t;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+10;Bewehrungsstahl liefern und nach Statik, Zeichnung oder Angaben der örtlichen Bauüberwachung biegen, einbauen und schwingungsfrei befestigen. Inklusive Lieferung von Montage- und Befestigungsmaterial sowie Abstandshalter.;0,15;t;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+10;Schalung für in Leistungsbeschreibung dargestelltes;93,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+10;Schalung für in Leistungsbeschreibung dargestelltes;52,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+10;Schalung für in Leistungsbeschreibung dargestelltes;8,8;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+10;Kantenschalung für Auftrag von Instandsetzungs-;25,5;m;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+10;Der AN hat an einer Einweisung durch den Lieferanten vor der Ausführung der Putzarbeiten teilzunehmen. Dies ist zeitlich einzuplanen und einzukalkulieren. Dem AG bzw. der öBÜ ist die Teilnahme an diesem Termin durch eine rechtzeitige Terminabstimmung durch den AN zu ermöglichen.;2,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+20;Betonersatz im Handauftrag (unverankert, unbewehrt);100,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+30;Betonersatz im Handauftrag (unverankert, unbewehrt);50,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+40;Betonersatz im Handauftrag (unverankert, unbewehrt);20,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+50;Betonersatz- oder Oberflächenschutzsystem gemäß ZTV-W;56,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+10;Druckstabiles Drainagegitter, bestehend aus einem gitterförmigen Dränkörper aus PEHD und beidseitig auflaminierten Filtervliesstoffen, frei Baustelle liefern und schwingungsfrei nach Herstellerangabe einbauen, inkl. Zuschnitt und Befestigung. Überlappungen und Verschnitt, werden nicht gesondert verg;130,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+20;"Putzträger zum Schutz des Putzes vor Spannungen liefern und einbauen. Befestigung mittels Edelstahlschrauben und Dübel, 10 - 15 Stk/m²; je nach Bereich anzupassen.";290,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+30;Streckmetall mit Putzmaterial „vorfüllen“/vorspritzen. Anwerfen einer dünnen Schicht (10 - 15 mm) „Frisch in Frisch“ und mit Zahntraufel 8 mm verzahnen.;130,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+40;Putzoberfläche zur Herstellung einer möglichst offenen und rauen Oberfläche rabbottieren.;130,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+50;Unterseitigen Putzabschluss über dem Wand-Boden-Übergang im Bereich der Emporen sowie der Planie fachgerecht nach Wahl des AN herstellen und wieder rückbauen. Abschlusskante bspw. mittels Stellbrett, Holzlatte etc. lot- und fluchtgerecht ausbilden. Inkl. Schutz des Wandabschnittes unterhalb des Putz;54,0;m;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+60;Trennschnitte zum Schutz des Putzes vor auftretenden;17,0;m;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+70;Frisch applizierten Putz vor dem zu schnellen Austrocknen und vor ungünstigen Witterungseinflüssen wie Frost, Zugluft, direkter Sonneneinstrahlung sowie vor direkter Schlagregeneinwirkung schützen.;130,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+80;"Putzträger zum Schutz des Putzes vor Spannungen liefern und einbauen. Befestigung mittels Edelstahlschrauben und Dübel, 10 - 15 Stk/m²; je nach Bereich anzupassen.";160,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+90;Vorspritzputz auf Untergrund mit einer Schichtdicke von 5 bis 8 mm aufbringen. Unmittelbar vor dem Aufbringen des;160,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+100;Oberputz auf den Untergrund anwerfen. Unmittelbar vor dem Aufbringen des Putzes den Untergrund erneut vornässen.;160,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+110;Putzoberfläche zur Herstellung einer möglichst offenen und rauen Oberfläche rabbottieren.;160,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+120;Unterseitigen Putzabschluss über dem Wand-Boden-Übergang im Bereich der Emporen sowie der Planie fachgerecht nach Wahl des AN herstellen und wieder rückbauen. Abschlusskante bspw. mittels Stellbrett, Holzlatte etc. lot- und fluchtgerecht ausbilden. Inkl. Schutz des Wandabschnittes unterhalb des Putz;12,0;m;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+130;Trennschnitte zum Schutz des Putzes vor auftretenden;50,0;m;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+140;Frisch applizierten Putz vor dem zu schnellen Austrocknen und vor ungünstigen Witterungseinflüssen wie Frost, Zugluft, direkter Sonneneinstrahlung sowie vor direkter Schlagregeneinwirkung schützen.;160,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+10;Applikation eines Farbanstrichs auf die vorbereitete Oberfläche der aufgehenden Treppenhauswände oberhalb des vierten Obergeschosses. Schutz und Abklebenmaßnahmen sind einzukalkulieren.;70,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+20;Spritzmörtel/Spritzbeton (unverankert, unbewehrt) mit;30,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+30;Spritzmörtel/Spritzbeton (unbewehrt) gemäß ZTV-W;3,0;m3;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+40;Betonersatz- oder Oberflächenschutzsystem gemäß ZTV-W;30,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+50;Zulage zu Spritzmörtel herstellen für Lieferung in Sonderfarbton.;30,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+60;Betonersatz- oder Oberflächenschutzsystem gemäß ZTV-W;30,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+70;Haftbrücke auf vorbereiteter Betonunterlage nach Unter-;4,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+80;Betonersatz im Handauftrag (unverankert, unbewehrt);4,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+90;Betonersatz- oder Oberflächenschutzsystem gemäß ZTV-W;4,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+100;Zulage zu Mörtel herstellen für Lieferung in Sonderfarbton.;4,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+110;Druckstabiles Drainagegitter, bestehend aus einem gitterförmigen Dränkörper aus PEHD und beidseitig auflaminierten Filtervliesstoffen, frei Baustelle liefern und schwingungsfrei nach Herstellerangabe einbauen, inkl. Zuschnitt und Befestigung. Überlappungen und Verschnitt, werden nicht gesondert verg;245,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+120;"Putzträger zum Schutz des Putzes vor Spannungen liefern und vollflächig einbauen. Befestigung mittels Edelstahlschrauben und Dübel, 10 - 15 Stk/m²; je nach Bereich anzupassen.";245,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+130;Streckmetall mit Putzmaterial „vorfüllen“/vorspritzen. Anwerfen einer dünnen Schicht (10 - 15 mm) „Frisch in Frisch“ und mit Zahntraufel 8 mm verzahnen.;245,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+140;Die Putzoberfläche an Innenflächen mit schwarzem Moosgummi oder Filzbrett (nicht mit Schwamm) zur Erzielung einer möglichst glatten Oberfläche abreiben.;245,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+150;Unterseitigen Putzabschluss über dem Wand-Boden-Übergang im Bereich der Emporen sowie der Planie fachgerecht nach Wahl des AN herstellen und wieder rückbauen. Abschlusskante bspw. mittels Stellbrett, Holzlatte etc. lot- und fluchtgerecht ausbilden. Inkl. Schutz des Wandabschnittes unterhalb des Putz;52,0;m;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+160;Trennschnitte zum Schutz des Putzes vor auftretenden;60,0;m;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+170;Frisch applizierten Putz vor dem zu schnellen Austrocknen und vor ungünstigen Witterungseinflüssen wie Frost, Zugluft, direkter Sonneneinstrahlung sowie vor direkter Schlagregeneinwirkung schützen.;245,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+10;Haftbrücke auf vorbereiteter Betonunterlage nach Unter-;7,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+20;Stahlbeton gemäß ZTV-W LB215 zur Herstellung der Emporen;11,2;m3;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+30;Zulage zur Herstellung von Aussparungen in Platten gem. Ausschreibungsunterlagen des AG. Öffnungen für das Durchführen der Speier. Kanten mittels Dreikantleisten brechen.;8,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+40;Bauteil aus Beton gemäß ZTV-W LB 215,;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+50;Betonuntergrund für den Auftrag einer Sockelabdichtung im Übergangsbereich Wand/Sohle gem. Herstellervorgaben mittels eines geeigneten Verfahrens vorbereiten. Gründliche Reinigung der Betonoberfläche. Anfallende Stoffe aufnehmen. Entsorgung wird gesondert vergütet.;13,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+60;Herstellung Dichtungskehle (Hohlkehle) am Wand-Platten-Anschluss zur Aufnahme von Bauwerksabdichtungen.;46,0;m;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+70;Sockelabdichtung mittels Feinspachtel im Übergangsbereich Wand/Sohle herstellen. Feinspachtel aus ECC-Basis auf untergrundvorbereitete Betonoberfläche auftragen, an Wand hochziehen und verwaren bzw. auf horizontaler Fläche auslaufen lassen. Inkl. Herstellung Verwahrnut.;13,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+80;Applikation eines Farbanstrichs auf die Ansichtsflächen und Unteransichten der Emporen auftragen. Schutz und Abklebemaßnahmen sind einzukalkulieren.;65,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+10;Herstellung und Prüfung von je 12 Begleitprobekörpern pro;4,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+20;Haftbrücke auf vorbereiteter Betonunterlage nach Unter-;6,5;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+30;Stahlbeton gemäß ZTV-W LB215 zur Herstellung der Emporen;8,5;m3;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+40;Zulage zur Herstellung von Aussparungen in Platten gem. Ausschreibungsunterlagen des AG. Öffnungen für das Durchführen des Fallrohrs im Eckbereich. Kanten mittels Dreikantleisten brechen.;3,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+50;Zulage zur Herstellung von Aussparungen in Platten gem. Ausschreibungsunterlagen des AG. Öffnungen für das  Durchführen von Zulaufrohren in Eckbereichen für die unterseitige Wasserabführung in Fallrohr. Kanten mittels Dreikantleisten brechen.;6,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+60;Zulage zur Herstellung von Aussparungen in Platten gem. Ausschreibungsunterlagen des AG. Öffnungen für das  Durchführen des Installationskanals im Eckbereich. Kanten mittels Dreikantleisten brechen.;3,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+70;Bauteil aus Beton gemäß ZTV-W LB 215,;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+80;Betonuntergrund für den Auftrag einer Sockelabdichtung im Übergangsbereich Wand/Sohle gem. Herstellervorgaben mittels eines geeigneten Verfahrens vorbereiten. Gründliche Reinigung der Betonoberfläche. Anfallende Stoffe aufnehmen. Entsorgung wird gesondert vergütet.;15,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+90;Sockelabdichtung mittels Feinspachtel im Übergangsbereich Wand/Sohle herstellen. Feinspachtel aus ECC-Basis auf untergrundvorbereitete Betonoberfläche auftragen, an Wand hochziehen und Verwaren bzw. auf horizontaler Fläche auslaufen lassen. Inkl. Herstellung Verwahrnut.;15,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+100;Haftbrücke auf vorbereiteter Betonunterlage nach Unter-;1,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+110;Stahlbeton gemäß ZTV-W LB215 zur Herstellung der Emporen;1,6;m3;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+120;Bauteil aus Beton gemäß ZTV-W LB 215,;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+130;Betonuntergrund für den Auftrag einer Sockelabdichtung im Übergangsbereich Wand/Sohle gem. Herstellervorgaben mittels eines geeigneten Verfahrens vorbereiten. Gründliche Reinigung der Betonoberfläche. Anfallende Stoffe aufnehmen. Entsorgung wird gesondert vergütet.;2,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+140;Herstellen einer Dichtungskehle (Hohlkehle) am Wand-Podest-Anschluss zur Aufnahme von Bauwerksabdichtungen.;6,4;m;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+150;Sockelabdichtung mittels Feinspachtel im Übergangsbereich Wand/Sohle herstellen. Feinspachtel aus ECC-Basis auf untergrundvorbereitete Betonoberfläche auftragen, an Wand hochziehen und verwaren bzw. auf horizontaler Fläche auslaufen lassen. Inkl. Herstellung Verwahrnut.;2,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+10;Haftbrücke auf vorbereiteter Betonunterlage nach Unter-;19,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+20;Auftrag Feinmörtel gemäß ZTV-W LB215 mit  Ausbildung von Rinnen im Bereich der aufgehenden Bauteile. Oberseitige Gefälleausbildung von mind. 0,5% gem. Planunterlagen. Modellierung einer Abflussrinne im Anschlussbereich Treppenhauswände / Sohle gem. Planunterlagen.;19,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+30;Zulage zur Herstellung von Aussparungen in der Bauteilsohle gem. Ausschreibungsunterlagen des AG. Öffnungen für das Durchführen des Installationskanals im Eckbereich sowie für den bestehenden Kabelschacht. Kanten mittels Dreikantleisten brechen.;2,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+40;Herstellung Dichtungskehle (Hohlkehle) am Wand-Sohlen-Anschluss zur Aufnahme von Bauwerksabdichtungen.;13,0;m;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+50;Feinmörtel gemäß ZTV-W LB 215 bzw. Herstellerangaben nachbehandeln/schützen.;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+60;Mörteluntergrund für den Auftrag eines OS-Systems gem.  TR-Instandhaltung bzw. Herstellervorgaben mittels eines geeigneten Verfahrens vorbereiten. Gründliche Reinigung der Betonoberfläche. Anfallende Stoffe aufnehmen. Entsorgung wird gesondert vergütet.;19,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+70;Beschichtungssystem mit erhöhter dynamischer  Rissüberbrückungsfähigkeit für begeh- und befahrbare Flächen;19,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+80;Anarbeiten der einzelnen Beschichtungslagen an Fallrohr,;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+10;Bohrungen im Bestand (Stb.-Wand und Stb.-Stützen) für Verankerung der Konsolen herstellen inkl.;32,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+20;Vergütung der Fehlbohrungen der Pos. 9.7.10 sowie;6,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+30;Konsolen als Auflagerpunkte für Treppenwangen liefern und mittels Ankersystem in Bestand montieren. Herstellung Bohrungen wird gesondert vergütet.;8,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+40;Lieferung und Einbau Treppenlauf in CPC-Bauweise (Carbon-Prestressed Concrete) mit beidseitigen Treppenwangen und innenliegenden Trittstufen. Ausführung zweimal viertelgewendelt.;35,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+50;Lieferung und Einbau Treppenlauf in CPC-Bauweise (Carbon-Prestressed Concrete) mit beidseitigen Treppenwangen und innenliegenden Trittstufen. Ausführung zweimal viertelgewendelt.;25,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+10;Spritzmörtel/Spritzbeton (unverankert, unbewehrt) mit;56,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+20;Spritzmörtel/Spritzbeton (unbewehrt) gemäß ZTV-W;4,0;m3;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+30;Zulage zu Spritzmörtel herstellen für Lieferung in Sonderfarbton.;56,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+40;Betonersatz- oder Oberflächenschutzsystem gemäß ZTV-W;56,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+50;Haftbrücke auf vorbereiteter Betonunterlage nach Unter-;6,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+60;Betonersatz im Handauftrag (unverankert, unbewehrt);6,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+70;Zulage zu Mörtel herstellen für Lieferung in Sonderfarbton.;6,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+80;Betonersatz- oder Oberflächenschutzsystem gemäß ZTV-W;6,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+10;Beschädigte Steine der Mauerwerkspfeiler, Stürze nach Anweisung des AG ersetzen. Austauschsteine gemäß Bestand liefern, einsetzen und kraftschlüssig verschließen. An Einzelsteinen anschließende, ausgekratzte Fugen reinigen, anschließend wieder verfugen.;10,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+20;Untergrund 24 Stunden vor der Instandsetzungsmaßnahme zur Vermeidung von zu schnellem Entziehen des Wassers aus dem Putzsystem durch starkes Saugverhalten des Untergrundes sorgfältig vornässen.;195,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+30;Größere Vertiefungen sind oberflächenbündig unter Verwendung eines Salztransportputzes ausgleichen.;19,5;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+40;Fugen mit Fugentiefe von 1,0 bis zu 2,5 cm mit Salztransportputz vorab verfüllen. Die Fugen mit einem;195,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+50;Fugen ab 2,5 cm Tiefe mit Fugenmörtel vorab verfüllen.;195,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+60;Der Vorspritzputz wird auf das gesamte Mauerwerk mit;195,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+70;Ausgleichsputz vollflächig in einer Schichtdicke von mindestens 10 mm auf das Mauerwerk aufbringen. Unmittelbar vor dem Aufbringen der Egalisierung Fläche erneut vornässen.;100,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+80;Oberputz auf den Untergrund anwerfen. Unmittelbar vor dem Aufbringen des Putzes den Untergrund erneut vornässen.;75,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+90;Oberputz auf den Untergrund anwerfen. Unmittelbar vor dem Aufbringen des Putzes den Untergrund erneut vornässen.;120,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+100;Die Putzoberfläche an Innenflächen mit schwarzem Moosgummi oder Filzbrett (nicht mit Schwamm) zur Erzielung einer möglichst glatten Oberfläche abreiben.;75,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+110;Putzoberfläche an der Außenseite sowie in den Laibungen zur Herstellung einer möglichst offenen und rauen Oberfläche rabbottieren.;120,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+120;Unterseitigen Putzabschluss über dem Wand-Boden-Übergang im Bereich der Emporen sowie der Planie fachgerecht nach Wahl des AN herstellen und wieder rückbauen. Abschlusskante bspw. mittels Stellbrett, Holzlatte etc. lot- und fluchtgerecht ausbilden. Inkl. Schutz des Wandabschnittes unterhalb des Putz;57,0;m;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+130;Trennschnitte zum Schutz des Putzes vor auftretenden;57,0;m;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+140;Frisch applizierten Putz vor dem zu schnellen Austrocknen und vor ungünstigen Witterungseinflüssen wie Frost, Zugluft, direkter Sonneneinstrahlung sowie vor direkter Schlagregeneinwirkung schützen.;195,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+10;Gerüst- und Schalungslöcher unter Verwendung von geeignetem Verfüllmaterial füllen.;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+10;Pflasterdecke mit Pflastersteinen aus Beton aufnehmen.;268,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+20;Wassergesättigte Sandtragschicht unter der abgetragenen Pflasterfläche im Mittelbau ausbauen. Entsorgung wird gesondert vergütet.;268,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+30;Einfache Pumpenanlage zur  Trockenlegung der freigelegten  Betonoberfläche einrichten. Sofern erforderlich inkl. Herstellung Pumpensumpf. Der Einsatz umfasst das betriebsbereite Aufbauen, das Abbauen sowie das Herstellen und Beseitigen der Ableitung. Pumpe betreiben wird gesondert vergütet.;2,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+40;Einfache Pumpenanlage zur Trockenlegung des Untergrunds (Betonoberfläche) betreiben.;100,0;h;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+10;Entwässerungsrinne als Flachrinne mit Rinnenkörper aus Polymerbeton mit Kantenschutz aus verzinktem Stahl liefern und fachgerecht einbauen, einschließlich aller erforderlichen Beton-, Anschluss- und Nebenarbeiten. Zur Ableitung des anfallenden Wassers in die Bestandsschächte.;29,0;m;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+20;Wie Pos. 10.2.10;2,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+30;Schnitt Entwässerungsrinne inkl. Rost zur Anpassung an örtliche Gegebenheiten.;4,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+40;Stirnwand für  Rinnensystem aus Pos. 10.2.10 liefern und als Rinnenabschluss einbauen.;2,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+50;PVC Rohre als Stangenware für die Verbindung zwischen Entwässerungsrinne und Entwässerungsschacht liefern;5,0;m;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+60;Öffnung für Rohranschluss durch Kernbohrung;2,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+70;Rohrleitung an Schacht anschließen. Schachtfutter setzen.;4,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+80;Schächte EL1 und EL2 mit Beton verfüllen. Beton verdichten.;2,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+90;Vorhandene Schächte aus Ziegelmauerwerk an die geplante Höhen- und Gefällesituation anpassen.;4,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+100;Vorhandene Schächte aus Ziegelmauerwerk an die geplante Höhen- und Gefällesituation anpassen.;6,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+10;Betonuntergrund gemäß Leistungsbeschreibung mit;1,6;m3;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+20;Perforierte PVC-Drainagerohre in Stangenware liefern;79,0;m;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+30;Bettung als Verfüllung der Mulden des Drainagesystems liefern und einbauen. Inkl. Ummantelung mit Filtervlies.;1,6;m3;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+40;Betonfläche vor verlegen der Trenn- und Gleitlage besenrein säubern.;268,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+50;Trenn- und Gleitlage liefern und mit 10 cm Überlappung auf der freigelegten Betonoberfläche verlegen.;268,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+60;Flächendrainagematte einbauen. Zweilagige Drainagebahn. Geotextil und Noppenbahn. Liefern und nach Herstellerangaben einbauen.;268,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+70;Öffnung für Drainagerohranschluss durch Kernbohrung;7,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+80;Drainageleitung an Schacht anschließen. Schachtfutter setzen.;7,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+10;Frostschutzschicht inkl. Gefälle gem. Gefälleplanung herstellen. Erschwernisse durch Einbauten sind einzukalkulieren.;54,0;m3;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+20;Dynamischen Lastplattendruckversuch mit leichtem  Fallgewicht zur Überprüfung der Verdichtung von Boden, Verfüllung, Frostschutz- oder Tragschichten durchführen.;4,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+30;Pflasterdecke aus Betonsteinen des AG herstellen.;268,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+40;Höhen- und fluchtgerechtes Anarbeiten sowie Einbetonieren von vorhandenen bzw. neuen Pflastersteinen im Bereich von den Schächten EL4 und 5.;4,0;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+50;Betonsteinpflaster in geeignetem Diamantschnittverfahren schneiden. Es sind nur Nassschneidegeräte zugelassen.;10,0;m;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+60;Fehlende oder beschädigte Betonpflastersteine gem. Bestand nach DIN EN 1338 und Unterlagen des AG beschaffen und liefern.;13,4;m2;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+10;Provisorische Konstruktion zur Wasseraufnahme und Energieableitung erstellen.;2,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+10;Geländerverankerungen aus Stahl nach Unterlagen des AG durch Stemmen ausbauen.;8,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+20;Geländerverankerungen aus Stahl nach Unterlagen des AG durch Stemmen ausbauen (s. Fotodokumentation).;36,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+30;Vorh. Geländer an Trennstellen als Vorbereitung der Trennarbeiten vor Ort entschichten.;2,0;m;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+40;Geländer aus Stahl zur Herstellung der Transportfähigkeit ins Werk für Aufbereitungsarbeiten mittels geeignetem Verfahren an Geländerholmen in Abstimmung mit dem AG auftrennen. Trennflächen sind im Zuge des Einbaus wieder zu verbinden.;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+50;Richten oder austauschen einzelner z.B. verbogener oder teilweise beschädigter Geländerteile.;5,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+60;Vorh. Geländer in einer hierfür geeigneten und zugelassenen Entschichtungshalle entschichten und vorbereiten;41,2;m;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+70;Stahlkonstruktion nach Leistungsbeschreibung des AG mit;41,2;m;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+80;Korrosionsschutz Pos. 11.1.70 nach Wiedereinbau an Fügestellen lokal überarbeiten.;2,0;m;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+90;Bestandsgeländer auf die Baustelle transportieren, temporär zwischenlagern und gem. Bestand einbauen. Inkl.;41,2;m;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+100;Herstellung einer Schweißverbindung zwischen den Elementen des wiedereingebauten Geländers. Herstellung mit geschweißten Vollstößen.;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+110;Bauteilöffnungen in Wand und Emporenplatten mittels Betonersatz nach Einbau verfüllen.;44,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+10;Stahlgeländer durch Stemmen ausbauen. Sofern erforderlich, inkl. Schneidarbeiten. Entsorgung wird gesondert vergütet.;8,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+20;Geländer mit Verankerungs- und Befestigungsteilen;8,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+30;Bauteilöffnungen in Wand und Emporenplatten mittels Betonersatz nach Einbau verfüllen.;32,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+10;Vorh. Geländerstäbe vor Ort entschichten und vorbereiten.;12,0;m;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+20;Stahlkonstruktion nach Leistungsbeschreibung des AG mit;12,0;m;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+10;Geländerverankerungen aus Stahl nach Unterlagen des AG durch Stemmen ausbauen.;7,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+20;Vorh. Geländer an Trennstellen als Vorbereitung der Trennarbeiten vor Ort entschichten.;1,0;m;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+30;Geländer aus Stahl zur Herstellung der Transportfähigkeit ins Werk für Aufbereitungsarbeiten mittels geeignetem Verfahren an Geländerholmen in Abstimmung mit dem AG auftrennen. Trennflächen sind im Zuge des Einbaus wieder zu verbinden.;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+40;Richten oder austauschen einzelner z.B. verbogener oder teilweise beschädigter Geländerteile.;5,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+50;Vorh. Geländer in einer hierfür geeigneten und zugelassenen Entschichtungshalle entschichten und vorbereiten;6,5;m;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+60;Stahlkonstruktion nach Leistungsbeschreibung des AG mit;6,5;m;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+70;Korrosionsschutz gemäß Pos. 11.4.60 nach Wiedereinbau an Fügestellen lokal überarbeiten.;1,0;m;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+80;Bestandsgeländer auf die Baustelle transportieren, temporär zwischenlagern und gem. Bestand einbauen. Inkl.;6,5;m;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+90;Herstellung einer Schweißverbindung zwischen den Elementen des wiedereingebauten Geländers. Herstellung mit geschweißten Vollstößen.;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+100;Bauteilöffnungen in Wand und Podestplatten mittels Betonersatz nach Einbau verfüllen.;5,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+110;Tore aus Stahl ausbauen und für den Transport ins Werk für Aufbereitungsarbeiten vorbereiten und transportieren.;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+120;Richten oder austauschen einzelner z.B. verbogener oder teilweise beschädigter Teile der Zugangstore.;5,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+130;Vorh. Zugangstore aus Einzelstreben in einer hierfür geeigneten und zugelassenen Entschichtungshalle entschichten und vorbereiten;115,0;m;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+140;Stahlkonstruktion nach Leistungsbeschreibung des AG mit;115,0;m;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+150;Bestandstore auf die Baustelle transportieren, temporär zwischenlagern und gem. Bestand einbauen. Inkl.;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+10;Endstücke des Handlaufs demontieren. Kunststoffüberzug von Stahlbauteil für Entsorgung lösen. Entsorgung wird gesondert vergütet.;40,0;m;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+20;Handlauf-Endstücke für den Innen- und Außenbereich inkl. PVC-Kunststoffüberzug liefern und montieren. Inkl.;40,0;m;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+10;Geländer mit Verankerungs- und Befestigungsteilen auf der Pflasterfläche Mittelbau sowie auf dem Leitwerk für die Herstellung der Übergangskonstruktion auf dem Leitwerk sowie des Treppenturms/Lastenaufzugs demontieren, auf Baustelleneinrichtungsfläche vor Beschädigung geschützt lagern und nach Absch;20,0;m;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+10;Vorhandene einbetonierte Konstruktion im Zuge des Abbruchs der Emporen ausbauen. Entsorgung wird gesondert vergütet.;8,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+20;Entwässerungsspeier aus Edelstahl mit Edelstahlrost, Nennweite DN 100 liefern und fachgerecht in Beton einbauen, inklusive Lagesicherung während der Betonage. Ausbildung gem. Bestand mit senkrechtem Einlauf und abgewinkeltem Rohr mit Schrägschnitt. Mit Siebrost als Schmutzfänger, Befestigungsmitteln;8,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+30;Fallrohr (DN200) am Mauerwerkspfeiler im Mittelbau für die Dauer der Durchführung der Abbruch- und Reprofilierungsarbeiten am betroffenen Wandbereich rückbauen und entsorgen. Entsorgung wird gesondert vergütet.;1,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+40;Regenfallrohr, rund, aus feuerverzinktem Stahl mit stumpf geschweißter Längstnaht, einseitig mit Muffe, inkl. aller Anschlüsse, Verbindungen, Befestigungsmittel und Formteile liefern und montieren.;1,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+50;Horizontales Zulaufrohr, rund, aus feuerverzinktem Stahl mit stumpf geschweißter Längstnaht, einseitig mit Muffe, inkl. aller Anschlüsse, Verbindungen, Befestigungsmittel und Formteile liefern und montieren.;3,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+60;Lieferung und Neueinbau von Bodeneinläufen gemäß Einbauanleitung des Herstellers inkl. fachgerechter Anschluss an das Entwässerungssystem.;6,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+70;Kernbohrung durch die vorhandenen Mauerwerkspfeiler zur Ableitung des im TRH anfallenden Wassers in die Rinne auf der Planie.;1,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+80;Provisorische Entwässerung durch Umlegen des Rohres, Fallrohrschlauch, o.ä. als temporärer Ersatz des Entwässerungsrohres an dem Mauerwerkspfeiler im Mittelbau zur Entwässerung der Dachfläche montieren und demontieren.;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+90;Provisorische Entwässerung aus vorheriger Position vorhalten und regelmäßig auf deren Dichtheit überprüfen.;30,0;Wo;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+100;Mutmaßliche Entwässerungsrohre in den vorderen Wänden zur visuellen Inspektion zwecks Feststellung der Funktion endoskopieren. Als Videoendoskopie.;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+110;Ausführung nur nach vorheriger Abstimmung mit dem AG.;1,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+10;Kabel und Lichtschalter für Beleuchtung inkl. Kabelrohre abklemmen, demontieren und entsorgen. Entsorgung wird gesondert vergütet.;115,0;m;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+20;Kabel und Lichtschalter für Beleuchtung inkl. Kabelrohre beschaffen und einbauen. Stromkabel der Beleuchtung durch Treppenhausplatten hindurchführen. Ringspalt mit Dichtmasse füllen.;115,0;m;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+30;Öffnungen für das vertikale Durchführen von Kabeln für die Beleuchtung im Treppenhaus mittels Bohrung herstellen.;8,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+40;Vorh. Beleuchtung einschl. Leuchtmittel mit Verankerungs- und Befestigungsteilen demontieren und entsorgen. Entsorgung wird gesondert vergütet.;1,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+50;Beschaffung, Lieferung und lagegenaue Montage LED-Strahler. Inkl. betriebsfertigem Anschluss.;1,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+60;Vorh. Beleuchtung einschl. Leuchtmittel mit Verankerungs- und Befestigungsteilen demontieren und entsorgen. Entsorgung wird gesondert vergütet.;7,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+70;Beschaffung, Lieferung und lagegenaue Montage LED-Wannenleuchte. Inkl. betriebsfertigem Anschluss.;7,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+80;Laternenmast;1,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+10;Vorh. Kabelschutzrohre im Treppenhaus abbrechen.;1,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+20;Liefern und Einbau eines geschlossenen Installationskanals zum Aufbau von Kabelwegen mit etagenweiser vollflächigen Zugänglichkeit bspw. durch Revisionsöffnung oder mit abnehmbaren U-Profilen. Inkl. integrierter Erdungsanbindung, mit galvanisch vollverzinktem Stahldraht, vollständigem Kabelschutz du;1,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+30;Stahlrahmen Schachtabdeckung aus Betonsohle ausbauen und entsorgen. Entsorgung wird gesondert vergütet.;1,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+40;Begehbare Schachtabdeckung aus Stahl beschaffen und in Bestandsöffnung in Betonsohle einbauen.;1,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+10;Schachtabdeckungen inkl. Rahmen ausbauen und zum Wiedereinbau lagern.;13,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+20;Remontage der gelagerten Schachtabdeckung, inkl. Rahmen. Einarbeiten in neue Pflasterfläche.;13,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+30;Kernbohrung durch vorhandene Schachtwände zur Herstellung von Seitenzuläufen für den Anschluss der Drainagerohre durchführen.;7,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+10;Vorh. Winkelprofile an den Trittkanten der Treppenstufen vor Abbruch der Treppenläufe demontieren. Entsorgung wird gesondert vergütet.;72,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+20;Metallblechabdeckung am Übergangsbereich zwischen Sockelfuß und Flachdachabdichtung an der Außenwand des Zugangshauses für die Dauer der Bearbeitung des Sockelbereichs demontieren, seitlich lagern und wiedereinbauen.;8,0;m;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+30;Die im Löwenkäfig (EG, Mittelbau) liegenden Stahlbauteile der Gegengewichtsschächte seitlich lagern, schützen und nach Abschluss der Arbeiten wieder an ihren ursprünglichen Ort transportieren. Lagerort seitlich im Baubereich.;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+10;Beprobung Abbruchmaterial gemäß LAGA PN 98.;1,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+20;Notwendige Analysen zur Deklaration von anfallendem;1,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+30;Analyse des Probenmaterials im Feststoff und im Eluat gem. Deponieverordnung (DepV) bei Überschreitung der Einbauklasse RC3 zur Ermittlung der Deponieklasse (DK 0 - III).;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+40;Probe aus Haufwerken gemäß LAGA PN98 nach Unterlagen;1,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+50;Deklarationsanalyse von Strahlschutt nach Unterlagen des AG durchführen. Inkl. Bildung der Laborprobe nach LAGA PN98.;1,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+60;Beprobung ausgehobenes Bodenmaterial gemäß LAGA PN 98.;1,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+70;Deklarationsanalyse Unterbau (Sand);1,0;St;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+80;Zulage für chemische Analyse von anfallendem;1,0;Psch;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+10;Nicht gefährlichen Abfall aufnehmen, fördern in ein Transportgefäß umschlagen, zur Umschlagstelle im Baubereich fördern und auf dem Landweg zur Entsorgungsstelle fördern und entsorgen. Sofern durch den AN andere Entsorgungswege vorgesehen sind, Vergütung der damit verbundenen Aufwände.;56,0;t;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+20;Zulage für Abbruchgut, Klasse RC 2, AVV;10,0;t;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+30;Zulage für Abbruchgut, Klasse RC 3, AVV;5,0;t;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+40;Nicht gefährlichen Abfall aufnehmen, fördern in ein Transportgefäß umschlagen, zur Umschlagstelle im Baubereich fördern und auf dem Landweg zur Entsorgungsstelle fördern und entsorgen. Sofern durch den AN andere Entsorgungswege vorgesehen sind, Vergütung der damit verbundenen Aufwände.;1,0;t;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+50;Nicht gefährlichen Abfall aufnehmen, fördern in ein Transportgefäß umschlagen, zur Umschlagstelle im Baubereich fördern und auf dem Landweg zur Entsorgungsstelle fördern und entsorgen. Sofern durch den AN andere Entsorgungswege vorgesehen sind, Vergütung der damit verbundenen Aufwände.;30,0;t;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+60;Zulage für Abbruchgut, Klasse RC 2, AVV;5,0;t;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+70;Zulage für Abbruchgut, Klasse RC 3, AVV;2,0;t;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+80;Nicht gefährlichen Abfall aufnehmen, fördern in ein Transportgefäß umschlagen, zur Umschlagstelle im Baubereich fördern und auf dem Landweg zur Entsorgungsstelle fördern und entsorgen. Sofern durch den AN andere Entsorgungswege vorgesehen sind, Vergütung der damit verbundenen Aufwände.;0,2;t;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+90;Gefährlichen Abfall aufnehmen, fördern in ein Transportgefäß umschlagen, zur Umschlagstelle im Baubereich fördern und auf dem Landweg zur Entsorgungsstelle fördern und entsorgen. Sofern durch den AN andere Entsorgungswege vorgesehen sind, Vergütung der damit verbundenen Aufwände.;0,5;t;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+100;Nicht gefährlichen Abfall aufnehmen, fördern in ein Transportgefäß umschlagen, zur Umschlagstelle im Baubereich fördern und auf dem Landweg zur Entsorgungsstelle fördern und entsorgen. Sofern durch den AN andere Entsorgungswege vorgesehen sind, Vergütung der damit verbundenen Aufwände.;1,0;t;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+110;Gefährlichen Abfall aufnehmen, fördern in ein Transportgefäß umschlagen, zur Umschlagstelle im Baubereich fördern und auf dem Landweg zur Entsorgungsstelle fördern und entsorgen. Sofern durch den AN andere Entsorgungswege vorgesehen sind, Vergütung der damit verbundenen Aufwände.;0,3;t;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+120;Gefährlichen Abfall aufnehmen, fördern in ein Transportgefäß umschlagen, zur Umschlagstelle im Baubereich fördern und auf dem Landweg zur Entsorgungsstelle fördern und entsorgen. Sofern durch den AN andere Entsorgungswege vorgesehen sind, Vergütung der damit verbundenen Aufwände.;0,3;t;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+130;Nicht gefährlichen Abfall aufnehmen, fördern in ein Transportgefäß umschlagen, zur Umschlagstelle im Baubereich fördern und auf dem Landweg zur Entsorgungsstelle fördern und entsorgen. Sofern durch den AN andere Entsorgungswege vorgesehen sind, Vergütung der damit verbundenen Aufwände.;0,3;t;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+140;Nicht gefährlichen Bodenaushub aufnehmen, fördern in ein Transportgefäß umschlagen, zur Umschlagstelle im Baubereich fördern und auf dem Landweg zur Entsorgungsstelle fördern und entsorgen. Sofern durch den AN andere Entsorgungswege vorgesehen sind, Vergütung der damit verbundenen Aufwände.;80,0;m3;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+150;Zulage für Materialwert BM-F1.;5,0;m3;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+160;Zulage für Materialwert BM-F2.;2,5;m3;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+170;Zulage für Materialwert BM-F3.;2,0;m3;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+180;Zulage für Zuordnungswert DepV = DK 0.;1,0;m3;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+190;Zulage für Zuordnungswert DepV = DK 1.;0,5;m3;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+200;Gefährlichen Bodenaushub aufnehmen, fördern in ein Transportgefäß umschlagen, zur Umschlagstelle im Baubereich fördern und auf dem Landweg zur Entsorgungsstelle fördern und entsorgen. Sofern durch den AN andere Entsorgungswege vorgesehen sind, Vergütung der damit verbundenen Aufwände.;0,5;m3;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+210;Nicht gefährlichen Abfall aus Abbruch fördern in ein Transportgefäß umschlagen, zur Umschlagstelle im Baubereich fördern und auf dem Landweg zur Entsorgungsstelle fördern und entsorgen. Sofern durch den AN andere Entsorgungswege vorgesehen sind, Vergütung der damit verbundenen Aufwände.;6,0;t;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+220;Nicht gefährlichen Abfall aus Abbruch fördern in ein Transportgefäß umschlagen, zur Umschlagstelle im Baubereich fördern und auf dem Landweg zur Entsorgungsstelle fördern und entsorgen. Sofern durch den AN andere Entsorgungswege vorgesehen sind, Vergütung der damit verbundenen Aufwände.;0,1;t;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+230;Nicht gefährlichen Abfall aus Abbruch fördern in ein Transportgefäß umschlagen, zur Umschlagstelle im Baubereich fördern und auf dem Landweg zur Entsorgungsstelle fördern und entsorgen. Sofern durch den AN andere Entsorgungswege vorgesehen sind, Vergütung der damit verbundenen Aufwände.;0,3;t;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+240;Nicht gefährliche Strahlmittelabfälle bestehend aus verbrauchten Strahlmitteln, Korrosionsprodukten und Altbeschichtungen aufnehmen, fördern in ein Transportgefäß umschlagen, zur Umschlagstelle im Baubereich fördern und auf dem Landweg zur Entsorgungsstelle fördern und entsorgen. Sofern durch den AN;0,5;t;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83
+250;Gefährliche Strahlmittelabfälle mit schädlichen Verunreinigungen bestehend aus verbrauchten Strahlmitteln, Korrosionsprodukten und Altbeschichtungen aufnehmen,  fördern in ein Transportgefäß umschlagen, zur Umschlagstelle im Baubereich fördern und auf dem Landweg zur Entsorgungsstelle fördern und en;0,8;t;gaeb;Vergabeunterlagen/10_LV_Löwenkäfig_REV1.X83

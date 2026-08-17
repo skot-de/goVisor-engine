@@ -1,0 +1,26 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+00000001;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat.Arb.st. ums. ... Freitext ...*bei Tageslicht Anordnung n. Unt.;15,0;St;gaeb-flat;Leistungsverzeichnis/47-26-0522.D83
+00000002;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat.Arb.st. ums. ... Freitext ...*bei Tageslicht Anordnung n. Unt.;75,0;St;gaeb-flat;Leistungsverzeichnis/47-26-0522.D83
+00000003;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat.Arb.st. ums. ... Freitext ...*Anordnung n. Unt.;75,0;St;gaeb-flat;Leistungsverzeichnis/47-26-0522.D83
+00000004;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. über 4 bis 8 Std.*bei Tageslicht Anordnung n. Unt.*... Freitext ...;15,0;St;gaeb-flat;Leistungsverzeichnis/47-26-0522.D83
+00010001;Halteverbotszone einrichten;15,0;St;gaeb-flat;Leistungsverzeichnis/47-26-0522.D83
+00010002;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat.Arb.st. ums. ... Freitext ...*bei Tageslicht Anordnung n. Unt.*... Freitext ...;10,0;St;gaeb-flat;Leistungsverzeichnis/47-26-0522.D83
+00010003;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat.Arb.st. ums. ... Freitext ...*bei Tageslicht Anordnung n. Unt.*... Freitext ...;8,0;St;gaeb-flat;Leistungsverzeichnis/47-26-0522.D83
+00010004;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat.Arb.st. ums. ... Freitext ...*bei Tageslicht Anordnung n. Unt.*... Freitext ...;8,0;St;gaeb-flat;Leistungsverzeichnis/47-26-0522.D83
+00010005;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat.Arb.st. ums. ... Freitext ...*bei Tageslicht Anordnung n. Unt.*... Freitext ...;8,0;St;gaeb-flat;Leistungsverzeichnis/47-26-0522.D83
+00010006;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat.Arb.st. ums. ... Freitext ...*bei Tageslicht Anordnung n. Unt.*... Freitext ...;8,0;St;gaeb-flat;Leistungsverzeichnis/47-26-0522.D83
+01000001;Baum im Bestand fällen ... Freitext ...*DU über 0,1-0,3 m ... Freitext ...*... Freitext ...;275,0;St;gaeb-flat;Leistungsverzeichnis/47-26-0522.D83
+01000002;Baum im Bestand fällen ... Freitext ...*DU über 0,3-0,5 m ... Freitext ...*... Freitext ...;275,0;St;gaeb-flat;Leistungsverzeichnis/47-26-0522.D83
+01000003;Baum im Bestand fällen ... Freitext ...*DU über 0,5-0,75m ... Freitext ...*... Freitext ...;225,0;St;gaeb-flat;Leistungsverzeichnis/47-26-0522.D83
+01000004;Baum im Bestand fällen ... Freitext ...*DU über 0,75-1 m ... Freitext ...*... Freitext ...;20,0;St;gaeb-flat;Leistungsverzeichnis/47-26-0522.D83
+01000005;Baum im Bestand fällen ... Freitext ...*DU über 1-1,25 m ... Freitext ...*... Freitext ...;5,0;St;gaeb-flat;Leistungsverzeichnis/47-26-0522.D83
+01010001;Baum im Bestand fällen ... Freitext ...*DU über 0,1-0,3 m ... Freitext ...*... Freitext ...;275,0;St;gaeb-flat;Leistungsverzeichnis/47-26-0522.D83
+01010002;Baum im Bestand fällen ... Freitext ...*DU über 0,3-0,5 m ... Freitext ...*... Freitext ...;275,0;St;gaeb-flat;Leistungsverzeichnis/47-26-0522.D83
+01010003;Baum im Bestand fällen ... Freitext ...*DU über 0,5-0,75m ... Freitext ...*... Freitext ...;225,0;St;gaeb-flat;Leistungsverzeichnis/47-26-0522.D83
+01010004;Baum im Bestand fällen ... Freitext ...*DU über 0,75-1 m ... Freitext ...*... Freitext ...;20,0;St;gaeb-flat;Leistungsverzeichnis/47-26-0522.D83
+01010005;Baum im Bestand fällen ... Freitext ...*DU über 1-1,25 m ... Freitext ...*... Freitext ...;5,0;St;gaeb-flat;Leistungsverzeichnis/47-26-0522.D83
+02000001;Zulage Sonn- & Feiertage;30,0;St;gaeb-flat;Leistungsverzeichnis/47-26-0522.D83
+02010001;Zulage für Ausführung innerhalb 48h;75,0;St;gaeb-flat;Leistungsverzeichnis/47-26-0522.D83
+02020001;Seilklettertechnik (SKT);50,0;h;gaeb-flat;Leistungsverzeichnis/47-26-0522.D83
+02030001;Hinweistafel des AN stellen;1,0;Psch;gaeb-flat;Leistungsverzeichnis/47-26-0522.D83
+02040001;Entsorgung Rußrindekrankheit;10,0;t;gaeb-flat;Leistungsverzeichnis/47-26-0522.D83

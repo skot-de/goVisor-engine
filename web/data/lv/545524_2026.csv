@@ -1,0 +1,523 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+0010;Abwasserleitung mit Muffe, DN 50 -- Länge 150 - 500 mm;96,0;m;gaeb;3938131.x83
+0020;Abwasserleitung mit Muffe, DN 70 -- Länge 150 - 500 mm;30,0;m;gaeb;3938131.x83
+0030;Abwasserleitung mit Muffe, DN 90 -- Länge 150 - 500 mm;40,0;m;gaeb;3938131.x83
+0040;Abwasserleitung mit Muffe, DN 100 -- Länge 150 - 500 mm;140,0;m;gaeb;3938131.x83
+0050;Abwasserleitung mit Muffe, DN 125 -- Länge 150 - 500 mm;25,0;m;gaeb;3938131.x83
+0060;Abwasserleitung mit Muffe, DN 50 -- Länge 1000 - 3000 mm --;10,0;m;gaeb;3938131.x83
+0070;Abwasserleitung mit Muffe, DN 70 -- Länge 1000 - 3000 mm --;80,0;m;gaeb;3938131.x83
+0080;Abwasserleitung mit Muffe, DN 90 -- Länge 1000 - 3000 mm --;40,0;m;gaeb;3938131.x83
+0090;Abwasserleitung mit Muffe, DN 100 -- Länge 1000 - 3000 mm --;220,0;m;gaeb;3938131.x83
+0100;Abzweig mit Muffe(n) 45° und 88½°, DN 50;7,0;St;gaeb;3938131.x83
+0110;Abzweig mit Muffe(n) 45° und 88½°, DN 70;22,0;St;gaeb;3938131.x83
+0120;Abzweig mit Muffe(n) 45° und 88½°, DN 90;8,0;St;gaeb;3938131.x83
+0130;Abzweig mit Muffe(n) 45° und 88½°, DN 100;70,0;St;gaeb;3938131.x83
+0140;Bogen mit Muffe, 15° - 88 1/2°, DN 50;450,0;St;gaeb;3938131.x83
+0150;Bogen mit Muffe, 15° - 88 1/2°, DN 70;60,0;St;gaeb;3938131.x83
+0160;Bogen mit Muffe, 15° - 88 1/2°, DN 90;45,0;St;gaeb;3938131.x83
+0170;Bogen mit Muffe, 15° - 88 1/2°, DN 100;250,0;St;gaeb;3938131.x83
+0180;Bogen mit Muffe, 15° - 88 1/2°, DN 125;11,0;St;gaeb;3938131.x83
+0190;Schachtbogenabzweig für schallged.;4,0;St;gaeb;3938131.x83
+0200;Schachtbogenabzweig für schallged.;10,0;St;gaeb;3938131.x83
+0210;Parallelabzweig 45°, DN 100/100;5,0;St;gaeb;3938131.x83
+0220;Bogenabzweig mit Muffe(n) 87,5° - einfach, DN 90/90;10,0;St;gaeb;3938131.x83
+0230;Bogenabzweig mit Muffe(n) 87,5° - einfach, DN 100/90;10,0;St;gaeb;3938131.x83
+0240;Bogenabzweig mit Muffe(n) 87,5° - einfach, DN 100/100;60,0;St;gaeb;3938131.x83
+0250;Bogenabzweig mit Muffe(n) 87,5° - zweifach, DN 90/90/90;2,0;St;gaeb;3938131.x83
+0260;Bogenabzweig mit Muffe(n) 87,5° - zweifach, DN 100/100/100;10,0;St;gaeb;3938131.x83
+0270;"Kombi-Bogenabzweig mit Muffe(n) 87,5°; DN 90/90/50";2,0;St;gaeb;3938131.x83
+0280;"Kombi-Bogenabzweig mit Muffe(n) 87,5°; DN 100/90/50";2,0;St;gaeb;3938131.x83
+0290;"Kombi-Bogenabzweig mit Muffe(n) 87,5°; DN 100/100/50";2,0;St;gaeb;3938131.x83
+0300;"Eckabzweig mit Muffe(n) 87,5°; DN 100/90/90";1,0;St;gaeb;3938131.x83
+0310;"Eckabzweig mit Muffe(n) 87,5°; DN 100/100/100";1,0;St;gaeb;3938131.x83
+0320;Kombibogen-Eckabzweig mit Muffe(n) (rechts/links);3,0;St;gaeb;3938131.x83
+0330;Reinigungsöffnung mit Muffe, DN 100;10,0;St;gaeb;3938131.x83
+0340;Reinigungsöffnung mit Muffe, DN 125;2,0;St;gaeb;3938131.x83
+0350;Übergangsstück, exzentrisch für Abwasserleitung.;10,0;St;gaeb;3938131.x83
+0360;Übergangsstück, exzentrisch für Abwasserleitung.;40,0;St;gaeb;3938131.x83
+0370;Übergangsstück, exzentrisch für Abwasserleitung.;4,0;St;gaeb;3938131.x83
+0380;Enddeckel / Muffenstopfen, DN 50;10,0;St;gaeb;3938131.x83
+0390;Enddeckel / Muffenstopfen, DN 70;10,0;St;gaeb;3938131.x83
+0400;Enddeckel / Muffenstopfen, DN 90;10,0;St;gaeb;3938131.x83
+0410;Enddeckel / Muffenstopfen, DN 100;40,0;St;gaeb;3938131.x83
+0420;Langmuffe, DN 50;10,0;St;gaeb;3938131.x83
+0430;Langmuffe, DN 70;4,0;St;gaeb;3938131.x83
+0440;Langmuffe, DN 90;4,0;St;gaeb;3938131.x83
+0450;Langmuffe, DN 100;20,0;St;gaeb;3938131.x83
+0460;Doppelsteckmuffe, DN 50;10,0;St;gaeb;3938131.x83
+0470;Doppelsteckmuffe, DN 70;4,0;St;gaeb;3938131.x83
+0480;Doppelsteckmuffe, DN 90;2,0;St;gaeb;3938131.x83
+0490;Doppelsteckmuffe, DN 100;20,0;St;gaeb;3938131.x83
+0500;Überschiebmuffe, DN 50;4,0;St;gaeb;3938131.x83
+0510;Überschiebmuffe, DN 70;1,0;St;gaeb;3938131.x83
+0520;Überschiebmuffe, DN 90;1,0;St;gaeb;3938131.x83
+0530;Überschiebmuffe, DN 100;20,0;St;gaeb;3938131.x83
+0540;Rohrschott90 Plus EN;20,0;St;gaeb;3938131.x83
+0550;Rohrschott90 Plus EN;15,0;St;gaeb;3938131.x83
+0560;Rohrschott90 Plus EN;10,0;St;gaeb;3938131.x83
+0570;Rohrschott90 Plus EN;60,0;St;gaeb;3938131.x83
+0580;Anschlussbogen 90Grad, DN 50;20,0;St;gaeb;3938131.x83
+0590;Rohraufhängung, DN 56.;100,0;St;gaeb;3938131.x83
+0600;Rohraufhängung, DN 70.;80,0;St;gaeb;3938131.x83
+0610;Rohraufhängung, DN 100.;220,0;St;gaeb;3938131.x83
+0620;Rohraufhängung, Montageschienen, DN 56.;20,0;St;gaeb;3938131.x83
+0630;Rohraufhängung, Montageschienen, DN 70.;30,0;St;gaeb;3938131.x83
+0640;Rohraufhängung, Montageschienen, DN 100.;80,0;St;gaeb;3938131.x83
+0650;Belüftungsventil, DN 50;10,0;St;gaeb;3938131.x83
+0660;Belüftungsventil, DN 100;4,0;St;gaeb;3938131.x83
+0670;Anschluß  DN 70/100 an Dunstrohr herstellen,;4,0;St;gaeb;3938131.x83
+0680;Anschluß  DN 90/100 an Dunstrohr herstellen,;4,0;St;gaeb;3938131.x83
+0690;Anschluß  DN 100/100 an Dunstrohr herstellen,;16,0;St;gaeb;3938131.x83
+0700;Anschluß  DN 125/125 an Dunstrohr herstellen,;3,0;St;gaeb;3938131.x83
+0710;Leckwasser-Ablauf mit Trichter, DN 50;4,0;St;gaeb;3938131.x83
+0720;Anschluß DN 100 an vorh. Grundleitung herstellen;35,0;St;gaeb;3938131.x83
+0730;Druck- und Dichtheitsprüfung DINEN1610,;400,0;m;gaeb;3938131.x83
+0740;Ausspritzen sämtlicher Rohranschlüsse zwischen;200,0;St;gaeb;3938131.x83
+0750;Montagekonstruktion, aus Stahl, verzinkt, für Stütz-,;110,0;m;gaeb;3938131.x83
+0760;Reinigen/säubern eins während der Rohbauarbeiten;15,0;St;gaeb;3938131.x83
+0770;Aufsatzstück mit Designrost aus V2A,;15,0;St;gaeb;3938131.x83
+0780;Verlängerungsstück passend für Bodenabläufe;15,0;St;gaeb;3938131.x83
+0790;Ablauf-Grundkörper, Auslauf seitlich aus Kunststoff;2,0;St;gaeb;3938131.x83
+0800;Vlies-Streifen verrottungsfest, mit Dampfsperre;50,0;m;gaeb;3938131.x83
+0810;Aufsatzstück mit Designrost aus V2A,;2,0;St;gaeb;3938131.x83
+0820;Verlängerungsstück passend für Bodenabläufe;2,0;St;gaeb;3938131.x83
+0830;Ablauf-Grundkörper, Auslauf senkrecht aus Kunststoff;17,0;St;gaeb;3938131.x83
+0840;Ablauf-Grundkörper, Auslauf senkrecht aus Kunststoff;2,0;St;gaeb;3938131.x83
+0850;Aufsatzstück mit Designrost aus V2A,;16,0;St;gaeb;3938131.x83
+0860;Verlängerungsstück passend für Bodenabläufe;16,0;St;gaeb;3938131.x83
+0870;Durchgangsdichtung mit Brandschutzeinlage für;19,0;St;gaeb;3938131.x83
+0880;Aufsatzstück, 300x300, Gitterrost für einen Bodenablauf,;3,0;St;gaeb;3938131.x83
+0890;Zwischenstück für vorgenanntes Aufsatzstück;3,0;St;gaeb;3938131.x83
+0900;Schlammeimer aus Edelstahl für vorgenanntes Aufsatzstück;3,0;St;gaeb;3938131.x83
+0010;Metallverbundrohr als Stangenmaterial, formstabil,;1187,0;m;gaeb;3938131.x83
+0020;Metallverbundrohr als Stangenmaterial, formstabil,;372,0;m;gaeb;3938131.x83
+0030;Metallverbundrohr als Stangenmaterial, formstabil,;233,0;m;gaeb;3938131.x83
+0040;Metallverbundrohr als Stangenmaterial, formstabil,;164,0;m;gaeb;3938131.x83
+0050;Metallverbundrohr als Stangenmaterial, formstabil,;145,0;m;gaeb;3938131.x83
+0060;Metallverbundrohr als Stangenmaterial, formstabil,;54,0;m;gaeb;3938131.x83
+0070;Metallverbundrohr als Stangenmaterial, formstabil,;10,0;m;gaeb;3938131.x83
+0080;Kupplung DN 12 - d16;25,0;St;gaeb;3938131.x83
+0090;Kupplung DN 15 - d20;50,0;St;gaeb;3938131.x83
+0100;Kupplung DN 20 - d25;50,0;St;gaeb;3938131.x83
+0110;Kupplung DN 25 - d32;30,0;St;gaeb;3938131.x83
+0120;Kupplung DN 32 - d40;5,0;St;gaeb;3938131.x83
+0130;Kupplung DN 40 - d50;20,0;St;gaeb;3938131.x83
+0140;Kupplung DN 50 - d63;2,0;St;gaeb;3938131.x83
+0150;Langkupplung DN 12 - d16;1,0;St;gaeb;3938131.x83
+0160;Langkupplung DN 15 - d20;1,0;St;gaeb;3938131.x83
+0170;Langkupplung DN 20 - d25;1,0;St;gaeb;3938131.x83
+0180;Langkupplung DN 25 - d32;1,0;St;gaeb;3938131.x83
+0190;Langkupplung DN 32 - d40;1,0;St;gaeb;3938131.x83
+0200;Langkupplung DN 40 - d50;1,0;St;gaeb;3938131.x83
+0210;Reduktion;75,0;St;gaeb;3938131.x83
+0220;Reduktion;25,0;St;gaeb;3938131.x83
+0230;Reduktion;25,0;St;gaeb;3938131.x83
+0240;Reduktion;10,0;St;gaeb;3938131.x83
+0250;Reduktion;10,0;St;gaeb;3938131.x83
+0260;Reduktion;10,0;St;gaeb;3938131.x83
+0270;Reduktion;8,0;St;gaeb;3938131.x83
+0280;Reduktion;8,0;St;gaeb;3938131.x83
+0290;Reduktion;10,0;St;gaeb;3938131.x83
+0300;Reduktion;10,0;St;gaeb;3938131.x83
+0310;Reduktion;10,0;St;gaeb;3938131.x83
+0320;Reduktion;1,0;St;gaeb;3938131.x83
+0330;Reduktion;1,0;St;gaeb;3938131.x83
+0340;Bogen 45° DN 20 - d25;30,0;St;gaeb;3938131.x83
+0350;Bogen 45° DN 25 - d32;45,0;St;gaeb;3938131.x83
+0360;Bogen 45° DN 32 - d40;20,0;St;gaeb;3938131.x83
+0370;Bogen 45° DN 40 - d50;10,0;St;gaeb;3938131.x83
+0380;Bogen 45° DN 50 - d63;4,0;St;gaeb;3938131.x83
+0390;Bogen 90° DN 12 - d16;1200,0;St;gaeb;3938131.x83
+0400;Bogen 90° DN 15 - d20;300,0;St;gaeb;3938131.x83
+0410;Bogen 90° DN 20 - d25;110,0;St;gaeb;3938131.x83
+0420;Bogen 90° DN 25 - d32;130,0;St;gaeb;3938131.x83
+0430;Bogen 90° DN 32 - d40;60,0;St;gaeb;3938131.x83
+0440;Bogen 90° DN 40 - d50;24,0;St;gaeb;3938131.x83
+0450;Bogen 90° DN 50 - d63;2,0;St;gaeb;3938131.x83
+0460;T-Stück egal DN 12 - d16;65,0;St;gaeb;3938131.x83
+0470;T-Stück egal DN 15 - d20;15,0;St;gaeb;3938131.x83
+0480;T-Stück egal DN 20 - d25;20,0;St;gaeb;3938131.x83
+0490;T-Stück egal DN 25 - d32;15,0;St;gaeb;3938131.x83
+0500;T-Stück egal DN 32 - d40;12,0;St;gaeb;3938131.x83
+0510;T-Stück egal DN 40 - d50;2,0;St;gaeb;3938131.x83
+0520;T-Stück reduziert DN 12-15-12 /;2,0;St;gaeb;3938131.x83
+0530;T-Stück reduziert DN 15-12-12 /;22,0;St;gaeb;3938131.x83
+0540;T-Stück reduziert DN 15-12-15 /;42,0;St;gaeb;3938131.x83
+0550;T-Stück reduziert DN 15-15-12 /;5,0;St;gaeb;3938131.x83
+0560;T-Stück reduziert DN 15-20-15 /;2,0;St;gaeb;3938131.x83
+0570;T-Stück reduziert DN 20-12-12 /;2,0;St;gaeb;3938131.x83
+0580;T-Stück reduziert DN 20-12-15 /;2,0;St;gaeb;3938131.x83
+0590;T-Stück reduziert DN 2;5,0;St;gaeb;3938131.x83
+0600;T-Stück reduziert DN 20-15-15 /;32,0;St;gaeb;3938131.x83
+0610;T-Stück reduziert DN 20-12-20 /;2,0;St;gaeb;3938131.x83
+0620;T-Stück reduziert DN 20-20-15 /;18,0;St;gaeb;3938131.x83
+0630;T-Stück reduziert DN 25-12-25 /;4,0;St;gaeb;3938131.x83
+0640;T-Stück reduziert DN 25-15-20 /;8,0;St;gaeb;3938131.x83
+0650;T-Stück reduziert DN 25-15-25 /;4,0;St;gaeb;3938131.x83
+0660;T-Stück reduziert DN 25-20-20 /;9,0;St;gaeb;3938131.x83
+0670;T-Stück reduziert DN 25-20-25 /;20,0;St;gaeb;3938131.x83
+0680;T-Stück reduziert DN 32-15-32 /;3,0;St;gaeb;3938131.x83
+0690;T-Stück reduziert DN 32-20-32 /;2,0;St;gaeb;3938131.x83
+0700;T-Stück reduziert DN 32-25-32 /;12,0;St;gaeb;3938131.x83
+0710;T-Stück reduziert DN 40-20-40 /;2,0;St;gaeb;3938131.x83
+0720;T-Stück reduziert DN 40-25-40 /;2,0;St;gaeb;3938131.x83
+0730;T-Stück reduziert DN 40-32-32 /;10,0;St;gaeb;3938131.x83
+0740;T-Stück reduziert DN 40-32-40 /;1,0;St;gaeb;3938131.x83
+0750;T-Stück reduziert DN 50-20-50 /;1,0;St;gaeb;3938131.x83
+0760;T-Stück reduziert DN 50-25-50 /;2,0;St;gaeb;3938131.x83
+0770;T-Stück reduziert DN 50-32-50 /;2,0;St;gaeb;3938131.x83
+0780;T-Stück reduziert DN 50-40-50 /;1,0;St;gaeb;3938131.x83
+0790;Übergang mit Außengewinde, SiBr d20 / R1 bzw. DN 15 / DN 25;10,0;St;gaeb;3938131.x83
+0800;Übergang mit Außengewinde, SiBr d25 / R1/2 bzw. DN 20 / DN 15;10,0;St;gaeb;3938131.x83
+0810;Übergang mit Außengewinde, SiBr d32 / R3/4 bzw. DN 25 / DN 20;10,0;St;gaeb;3938131.x83
+0820;Übergang mit Außengewinde, SiBr d32 / R1 bzw. DN 25 / DN 25;4,0;St;gaeb;3938131.x83
+0830;Übergang mit Außengewinde, SiBr d40 / R1 bzw. DN 32 / DN 25;4,0;St;gaeb;3938131.x83
+0840;Übergang mit Außengewinde, SiBr d50 / R1 1/2 bzw. DN 40 / DN 40;4,0;St;gaeb;3938131.x83
+0850;Übergang mit Innengewinde, SiBr d25 / R3/4 bzw. DN 20/ DN 20;10,0;St;gaeb;3938131.x83
+0860;Übergang mit Innengewinde, SiBr d32 / R 1 bzw. DN 25 / DN 25;10,0;St;gaeb;3938131.x83
+0870;Übergang mit Innengewinde, SiBr d40 / R 1 bzw. DN 32 / DN 25;5,0;St;gaeb;3938131.x83
+0880;Übergang mit Innengewinde, SiBr d50 / R 1 1/2 bzw. DN 40 / DN 40;4,0;St;gaeb;3938131.x83
+0890;Übergangsbogen 90° Grad mit AG, Rg+ 90°;4,0;St;gaeb;3938131.x83
+0900;Übergangsbogen 90° Grad mit AG, Rg+ 90°;4,0;St;gaeb;3938131.x83
+0910;Übergangsbogen 90° Grad mit AG, Rg+ 90°;4,0;St;gaeb;3938131.x83
+0920;Übergangsbogen 90° Grad mit AG, Rg+ 90°;4,0;St;gaeb;3938131.x83
+0930;Übergangsbogen 90° Grad mit AG, Rg+ 90°;4,0;St;gaeb;3938131.x83
+0940;Übergangsbogen 90° Grad mit AG, Rg+ 90°;4,0;St;gaeb;3938131.x83
+0950;Übergangsbogen 90° Grad mit AG, Rg+ 90°;4,0;St;gaeb;3938131.x83
+0960;Übergangsbogen 90° Grad mit AG, Rg+ 90°;4,0;St;gaeb;3938131.x83
+0970;Übergangsbogen 90° Grad mit AG, Rg+ 90°;4,0;St;gaeb;3938131.x83
+0980;Übergangsbogen 90° Grad mit AG -- lang --, Rg+ 90°;4,0;St;gaeb;3938131.x83
+0990;Übergangsbogen 90° Grad mit AG -- lang --, Rg+ 90°;4,0;St;gaeb;3938131.x83
+1000;Übergangsbogen 90° Grad mit AG -- lang --, Rg+ 90°;4,0;St;gaeb;3938131.x83
+1010;Übergangsbogen 90° Grad mit AG -- lang --, Rg+ 90°;4,0;St;gaeb;3938131.x83
+1020;Übergangsbogen 90° Grad mit AG -- lang --, Rg+ 90°;4,0;St;gaeb;3938131.x83
+1030;Übergangsbogen 90° Grad mit AG -- lang --, Rg+ 90°;4,0;St;gaeb;3938131.x83
+1040;Übergangsbogen 90° Grad mit AG -- lang --, Rg+ 90°;4,0;St;gaeb;3938131.x83
+1050;Übergangsbogen 90° Grad mit IG, Rg+ 90°;6,0;St;gaeb;3938131.x83
+1060;Übergangsbogen 90° Grad mit IG, Rg+ 90°;6,0;St;gaeb;3938131.x83
+1070;Übergangsbogen 90° Grad mit IG, Rg+ 90°;4,0;St;gaeb;3938131.x83
+1080;Übergangsbogen 90° Grad mit IG, Rg+ 90°;4,0;St;gaeb;3938131.x83
+1090;Übergangsbogen 90° Grad mit IG, Rg+ 90°;4,0;St;gaeb;3938131.x83
+1100;Übergangsbogen 90° Grad mit IG, Rg+ 90°;6,0;St;gaeb;3938131.x83
+1110;Übergangsbogen 90° Grad mit IG, Rg+ 90°;6,0;St;gaeb;3938131.x83
+1120;Übergangsbogen 90° Grad mit IG, Rg+ 90°;4,0;St;gaeb;3938131.x83
+1130;Übergangsbogen 90° Grad mit IG, Rg+ 90°;2,0;St;gaeb;3938131.x83
+1140;Übergang mit MasterFix PPSU, d16;20,0;St;gaeb;3938131.x83
+1150;Übergang mit MasterFix PPSU, d20;10,0;St;gaeb;3938131.x83
+1160;Übergangswinkel 90° mit MasterFix PPSU, d16;10,0;St;gaeb;3938131.x83
+1170;Übergangswinkel 90° mit MasterFix PPSU, d20;10,0;St;gaeb;3938131.x83
+1180;Übergangs-T-Stück mit MasterFix, --DURCHGANG--;10,0;St;gaeb;3938131.x83
+1190;Übergangs-T-Stück mit MasterFix, --DURCHGANG--;10,0;St;gaeb;3938131.x83
+1200;Übergangs-T-Stück mit MasterFix, --DURCHGANG--;10,0;St;gaeb;3938131.x83
+1210;Übergangs-T-Stück mit MasterFix, --DURCHGANG--;10,0;St;gaeb;3938131.x83
+1220;Übergangs-T-Stück mit MasterFix, --DURCHGANG--;10,0;St;gaeb;3938131.x83
+1230;Übergangs-T-Stück mit MasterFix, --ABZWEIG--;10,0;St;gaeb;3938131.x83
+1240;Übergangs-T-Stück mit MasterFix, --AZWIEG--;10,0;St;gaeb;3938131.x83
+1250;Übergangsverschraubung mit AG, SiBr;8,0;St;gaeb;3938131.x83
+1260;Übergangsverschraubung mit AG, SiBr;8,0;St;gaeb;3938131.x83
+1270;Übergangsverschraubung mit AG, SiBr;10,0;St;gaeb;3938131.x83
+1280;Übergangsverschraubung mit AG, SiBr;10,0;St;gaeb;3938131.x83
+1290;Übergangsverschraubung mit AG, SiBr;10,0;St;gaeb;3938131.x83
+1300;Übergangsverschraubung mit AG, SiBr;4,0;St;gaeb;3938131.x83
+1310;Übergangsverschraubung mit AG, SiBr;4,0;St;gaeb;3938131.x83
+1320;Übergangsverschraubung mit AG, SiBr;4,0;St;gaeb;3938131.x83
+1330;Übergangsverschraubung mit AG, SiBr;4,0;St;gaeb;3938131.x83
+1340;Übergangsverschraubung mit AG, SiBr;4,0;St;gaeb;3938131.x83
+1350;Übergangsverschraubung mit IG, SiBr;10,0;St;gaeb;3938131.x83
+1360;Übergangsverschraubung mit IG, SiBr;10,0;St;gaeb;3938131.x83
+1370;Übergangsverschraubung mit IG, SiBr;10,0;St;gaeb;3938131.x83
+1380;Übergangsverschraubung mit IG, SiBr;10,0;St;gaeb;3938131.x83
+1390;Übergangsverschraubung mit IG, SiBr;6,0;St;gaeb;3938131.x83
+1400;Übergangsverschraubung mit IG, SiBr;6,0;St;gaeb;3938131.x83
+1410;Übergangsverschraubung mit IG, SiBr;4,0;St;gaeb;3938131.x83
+1420;Übergangsverschraubung mit IG, SiBr;4,0;St;gaeb;3938131.x83
+1430;Übergangsverschraubung mit IG, SiBr;2,0;St;gaeb;3938131.x83
+1440;Übergang mit Überwurfmutter, SiBr;2,0;St;gaeb;3938131.x83
+1450;Übergang mit Überwurfmutter, SiBr;2,0;St;gaeb;3938131.x83
+1460;Übergang mit Überwurfmutter, SiBr;2,0;St;gaeb;3938131.x83
+1470;Übergang mit Überwurfmutter, SiBr;2,0;St;gaeb;3938131.x83
+1480;Übergang mit Überwurfmutter, SiBr;2,0;St;gaeb;3938131.x83
+1490;Übergang mit Überwurfmutter, SiBr;2,0;St;gaeb;3938131.x83
+1500;Anschlusswinkel 90°;4,0;St;gaeb;3938131.x83
+1510;Anschlusswinkel 90°;4,0;St;gaeb;3938131.x83
+1520;Anschlusswinkel 90°;6,0;St;gaeb;3938131.x83
+1530;Anschlusswinkel 90°;6,0;St;gaeb;3938131.x83
+1540;Anschlusswinkel 90°;2,0;St;gaeb;3938131.x83
+1550;Doppelanschlusswinkel 90°;30,0;St;gaeb;3938131.x83
+1560;Doppelanschlusswinkel 90°;30,0;St;gaeb;3938131.x83
+1570;Doppelanschlusswinkel 90°;15,0;St;gaeb;3938131.x83
+1580;Doppelanschlusswinkel 90°;15,0;St;gaeb;3938131.x83
+1590;Doppelanschlusswinkel 90°;5,0;St;gaeb;3938131.x83
+1600;Doppelanschlusswinkel 90°;5,0;St;gaeb;3938131.x83
+1610;Doppelanschlusswinkel 90°;5,0;St;gaeb;3938131.x83
+1620;Anschlusswinkel 90° für UP-Spülkasten;20,0;St;gaeb;3938131.x83
+1630;Anschlusswinkel 90° für UP-Spülkasten;10,0;St;gaeb;3938131.x83
+1640;Bogenwanddurchführung 90°;4,0;St;gaeb;3938131.x83
+1650;Bogenwanddurchführung 90°;4,0;St;gaeb;3938131.x83
+1660;T-Wanddurchführung 90;2,0;St;gaeb;3938131.x83
+1670;Eckwanddurchführung 90°;1,0;St;gaeb;3938131.x83
+1680;Eckwanddurchführung 90°;1,0;St;gaeb;3938131.x83
+0010;Innendruckprüfung wie vor beschrieben;1800,0;m;gaeb;3938131.x83
+0020;Spülen der Leitungsanlage gemäß DIN 1988-2;1,0;psch;gaeb;3938131.x83
+0030;Bescheinigung von einwandfreiem Trinkwasser durch;1,0;psch;gaeb;3938131.x83
+0040;Bescheinigung von einwandfreiem Trinkwasser durch;1,0;psch;gaeb;3938131.x83
+0050;Protokollierte Nutzungsübergabe an den Betreiber;1,0;psch;gaeb;3938131.x83
+0060;Untersuchung des Trinkwassers auf Legionellen in;4,0;St;gaeb;3938131.x83
+0070;Mikrobiologische Grunduntersuchung folgender;4,0;St;gaeb;3938131.x83
+0080;Spülen der Leitungen mit hygienisch einwandfreiem;5,0;St;gaeb;3938131.x83
+0010;Frostsichere Außenarmatur mit automatischer;3,0;St;gaeb;3938131.x83
+0020;Wandauslaufventil DIN EN 200 DN15, aus Metall,;4,0;St;gaeb;3938131.x83
+0030;Absperrventil mit Schallschutzprüfzeichen;20,0;St;gaeb;3938131.x83
+0040;Absperrventil mit Schallschutzprüfzeichen;10,0;St;gaeb;3938131.x83
+0050;Absperrventil mit Schallschutzprüfzeichen;10,0;St;gaeb;3938131.x83
+0060;Absperrventil mit Schallschutzprüfzeichen;20,0;St;gaeb;3938131.x83
+0070;Freistrom-Absperrventil mit Entleerung;10,0;St;gaeb;3938131.x83
+0080;Probenahmeventil, zur Probenahme von Trink-;6,0;St;gaeb;3938131.x83
+0090;Wandeinbauventil, als Unterputzventil, in Behördenausführung;2,0;St;gaeb;3938131.x83
+0100;Wandeinbauventil, als Unterputzventil, in Behördenausführung;2,0;St;gaeb;3938131.x83
+0110;Wandeinbauventil, als Unterputzventil, in Behördenausführung;2,0;St;gaeb;3938131.x83
+0120;Automatisches Zirkulations-Regulierventil,;4,0;St;gaeb;3938131.x83
+0130;Automatisches Zirkulations-Regulierventil,;4,0;St;gaeb;3938131.x83
+0140;Automatisches Zirkulations-Regulierventil,;4,0;St;gaeb;3938131.x83
+0150;Automatisches Zirkulations-Regulierventil, 56 °C bis 58 °C, AG;6,0;St;gaeb;3938131.x83
+0160;Automatisches Zirkulations-Regulierventil, 56 °C bis 58 °C, IG;6,0;St;gaeb;3938131.x83
+0170;Dynamischer Strömunsgsteiler, DN 15;2,0;St;gaeb;3938131.x83
+0180;Durchgangs-Rückflussverhinderer,;1,0;St;gaeb;3938131.x83
+0190;Durchgangs-Rückflussverhinderer,;1,0;St;gaeb;3938131.x83
+0200;Durchgangs-Rückflussverhinderer,;1,0;St;gaeb;3938131.x83
+0210;Durchgangs-Rückflussverhinderer,;4,0;St;gaeb;3938131.x83
+0220;Durchgangs-Rückflussverhinderer,;2,0;St;gaeb;3938131.x83
+0230;Entleerungsventil Rotguss/Kunststoff,;4,0;St;gaeb;3938131.x83
+0240;Druckminderer-Filter-Kombination, DN 40;1,0;St;gaeb;3938131.x83
+0250;Manometer,;3,0;St;gaeb;3938131.x83
+0260;Zeigerthermometer, Tauchrohr axial,;3,0;St;gaeb;3938131.x83
+0270;Kugelhahn, für Wasserleitung, mit Anschluss-;3,0;St;gaeb;3938131.x83
+0280;Druckmeßgerät,;2,0;St;gaeb;3938131.x83
+0290;Druckmessgeräteventil,;2,0;St;gaeb;3938131.x83
+0300;Hygiene UP Spülgerät, für Kaltwasser;2,0;St;gaeb;3938131.x83
+0310;Anschluss an bauseits verlegten Rohrleitungen/Geräte,;10,0;St;gaeb;3938131.x83
+0320;Anschluss an bauseits verlegten Rohrleitungen/Geräte,;10,0;St;gaeb;3938131.x83
+0330;Anschluss an bauseits verlegten Rohrleitungen/Geräte,;10,0;St;gaeb;3938131.x83
+0340;Vorschriftsmäßige Bezeichnungsschilder Gr. 50 / 100 mm,;60,0;St;gaeb;3938131.x83
+0350;Entleerungsventil, für Trinkwasserleitung, mit Eignungs-;1,0;St;gaeb;3938131.x83
+0360;Wasserzähler-Anschlussgarnitur mit Bügel;1,0;St;gaeb;3938131.x83
+0370;Automatik-Rückspül-Schutzfilter;1,0;St;gaeb;3938131.x83
+0380;Kabelset, zur Übertragung der potenzialfreien;1,0;St;gaeb;3938131.x83
+0390;"Sicherungsblock 1 ½"" - 2""";1,0;St;gaeb;3938131.x83
+0400;Zeigerthermometer, Tauchrohr axial, Schutzrohr aus;7,0;St;gaeb;3938131.x83
+0410;Kugelhahn, für Wasserleitung,;4,0;St;gaeb;3938131.x83
+0420;Druckmeßgerät,;1,0;St;gaeb;3938131.x83
+0430;Druckmessgeräteventil,;1,0;St;gaeb;3938131.x83
+0440;Systemtrenner-Auslaufventil BA, zur Absicherung von;1,0;St;gaeb;3938131.x83
+0450;Zirkulationsset für Frischwassermodul;3,0;St;gaeb;3938131.x83
+0010;Steinwolleschale für Rohr,;700,0;m;gaeb;3938131.x83
+0020;Steinwolleschale für Rohr,;250,0;m;gaeb;3938131.x83
+0030;Steinwolleschale für Rohr,;300,0;m;gaeb;3938131.x83
+0040;Steinwolleschale für Rohr,;150,0;m;gaeb;3938131.x83
+0050;Steinwolleschale für Rohr,;16,0;m;gaeb;3938131.x83
+0060;Steinwolleschale für Rohr,;20,0;m;gaeb;3938131.x83
+0070;Steinwolleschale für Rohr,;43,0;m;gaeb;3938131.x83
+0080;Zulage, Steinwolleschale für Bogen, T-Stück, Reduzierung,;600,0;St;gaeb;3938131.x83
+0090;Zulage, Steinwolleschale für Bogen, T-Stück, Reduzierung,;400,0;St;gaeb;3938131.x83
+0100;Zulage, Steinwolleschale für Bogen, T-Stück, Reduzierung,;400,0;St;gaeb;3938131.x83
+0110;Zulage, Steinwolleschale für Bogen, T-Stück, Reduzierung,;200,0;St;gaeb;3938131.x83
+0120;Zulage, Steinwolleschale für Bogen, T-Stück, Reduzierung,;200,0;St;gaeb;3938131.x83
+0130;Steinwolleschale für Rohr,;20,0;m;gaeb;3938131.x83
+0140;Steinwolleschale für Rohr,;20,0;m;gaeb;3938131.x83
+0150;Steinwolleschale für Rohr,;40,0;m;gaeb;3938131.x83
+0160;Steinwolleschale für Rohr,;30,0;m;gaeb;3938131.x83
+0170;Steinwolleschale für Rohr,;30,0;m;gaeb;3938131.x83
+0180;Steinwolleschale für Rohr,;30,0;m;gaeb;3938131.x83
+0190;Steinwolleschale für Rohr,;43,0;m;gaeb;3938131.x83
+0200;Zulage, Steinwolleschale für Bogen, T-Stück, Reduzierung,;40,0;St;gaeb;3938131.x83
+0210;Zulage, Steinwolleschale für Bogen, T-Stück, Reduzierung,;40,0;St;gaeb;3938131.x83
+0220;Zulage, Steinwolleschale für Bogen, T-Stück, Reduzierung,;20,0;St;gaeb;3938131.x83
+0230;Zulage, Steinwolleschale für Bogen, T-Stück, Reduzierung,;20,0;St;gaeb;3938131.x83
+0240;Wärmedämmung Rohr bis d= 110/20 mm,;40,0;m;gaeb;3938131.x83
+0250;Isolierung Armaflex DN 100/19 mm;40,0;m;gaeb;3938131.x83
+0260;Isolierung Armaflex Zulage für Bogen DN 100/19 mm;20,0;St;gaeb;3938131.x83
+0270;Isolierung Armaflex Erweiterung für Verbinder + Rohrschelle;20,0;St;gaeb;3938131.x83
+0280;Kompaktdämmhülse,;250,0;m;gaeb;3938131.x83
+0290;Schallentkoppelte Systembefestigung für die;60,0;St;gaeb;3938131.x83
+0300;Dämmschlauch 4 mm,;200,0;m;gaeb;3938131.x83
+0310;Dämmschlauch 4 mm,;150,0;m;gaeb;3938131.x83
+0320;Dämmschlauch 4 mm,;100,0;m;gaeb;3938131.x83
+0330;Rohrschott90 Plus für Abwasserleitungen,;20,0;St;gaeb;3938131.x83
+0340;Rohrschott90 Plus für Abwasserleitungen,;20,0;St;gaeb;3938131.x83
+0350;Rohrschott90 Plus für Abwasserleitungen,;20,0;St;gaeb;3938131.x83
+0360;Rohrschott90 Plus für Abwasserleitungen,;30,0;St;gaeb;3938131.x83
+0370;Rohrabschottung für brennbare Versorgungsleitungen in;15,0;St;gaeb;3938131.x83
+0380;Rohrabschottung für brennbare Versorgungsleitungen in;15,0;St;gaeb;3938131.x83
+0390;Rohrabschottung für brennbare Versorgungsleitungen in;10,0;St;gaeb;3938131.x83
+0400;Rohrabschottung für brennbare Versorgungsleitungen in;10,0;St;gaeb;3938131.x83
+0410;Rohrabschottung für brennbare Versorgungsleitungen in;10,0;St;gaeb;3938131.x83
+0420;Brandschutzkitt für den Verschluss von Ringspalten;10,0;St;gaeb;3938131.x83
+0430;Schlauch für Körperschalldämmung von;40,0;m;gaeb;3938131.x83
+0440;Schlauch für Körperschalldämmung von;60,0;m;gaeb;3938131.x83
+0450;Schlauch für Körperschalldämmung von;20,0;m;gaeb;3938131.x83
+0460;Schlauch für Körperschalldämmung von;80,0;m;gaeb;3938131.x83
+0470;Brandschutzschaum, Kartusche a 300 ml, Tangit FP 550,;1,0;St;gaeb;3938131.x83
+0010;Installationselement für Waschtisch mit UP-Geruchs-;23,0;St;gaeb;3938131.x83
+0020;Set Wandanker, für Einzelmontage;23,0;St;gaeb;3938131.x83
+0030;Ständer für Trockenbauwand, raumhoch, H:220-280 cm;46,0;St;gaeb;3938131.x83
+0040;Fertigbauset für WT mit, UP-Geruchsverschluss;23,0;St;gaeb;3938131.x83
+0050;Schallschutz Set, für Waschtische, bis 65 cm;23,0;St;gaeb;3938131.x83
+0060;Waschtisch aus Mineralguß mit Überlauf, mit 1 Hahnloch;23,0;St;gaeb;3938131.x83
+0070;Waschtischbatterie, mit Einhandbedienhebel/Griff, als;23,0;St;gaeb;3938131.x83
+0080;Installationselement,;12,0;St;gaeb;3938131.x83
+0090;Set Wandanker, für Einzelmontage;12,0;St;gaeb;3938131.x83
+0100;Ständer für Trockenbauwand, raumhoch, H:220-280 cm;24,0;St;gaeb;3938131.x83
+0110;"Röhrengeruchverschluss 1 1/4"", güteüberwacht nach";12,0;St;gaeb;3938131.x83
+0120;Schallschutz Set, für Waschtische, bis 65 cm;12,0;St;gaeb;3938131.x83
+0130;Waschtisch, mit Hahnloch, mit Überlauf, mit runden;12,0;St;gaeb;3938131.x83
+0140;Waschtischbatterie, mit Einhandbedienhebel/Griff, als;12,0;St;gaeb;3938131.x83
+0150;Installationselement,;4,0;St;gaeb;3938131.x83
+0160;Set Wandanker, für Einzelmontage;4,0;St;gaeb;3938131.x83
+0170;Ständer für Trockenbauwand, raumhoch, H:220-280 cm;8,0;St;gaeb;3938131.x83
+0180;"Röhrengeruchverschluss 1 1/4"", güteüberwacht nach";4,0;St;gaeb;3938131.x83
+0190;Schallschutz Set, für Waschtische, bis 65 cm;4,0;St;gaeb;3938131.x83
+0200;Waschtisch, mit Hahnloch, mit Überlauf, mit runden;4,0;St;gaeb;3938131.x83
+0210;Waschtischbatterie, mit Einhandbedienhebel,;4,0;St;gaeb;3938131.x83
+0220;Waschtisch Ablaufgarnitur Push-Open für Waschtisch-;39,0;St;gaeb;3938131.x83
+0230;Eckventil mit Regulierfunktion und gesicherter Betätigung;69,0;St;gaeb;3938131.x83
+0240;Probenahme-Eckventil, zur Entnahme von;9,0;St;gaeb;3938131.x83
+0250;Kombi-Eckventil, mit Entriegelungselement des;8,0;St;gaeb;3938131.x83
+0260;Doppelhaken mit Befestigungsrosette,;78,0;St;gaeb;3938131.x83
+0270;Einzelhaken mit Befestigungsrosette,;10,0;St;gaeb;3938131.x83
+0280;Element für Ausgussbecken, 130 cm Wandarmatur AP;7,0;St;gaeb;3938131.x83
+0290;Set Wandanker, für Einzelmontage;7,0;St;gaeb;3938131.x83
+0300;Ständer für Trockenbauwand, raumhoch, H:220-280 cm;14,0;St;gaeb;3938131.x83
+0310;Geruchverschluss für Ausgussbecken,;7,0;St;gaeb;3938131.x83
+0320;Ausgussbecken, aus Stahl, emailliert,;7,0;St;gaeb;3938131.x83
+0330;Einhebelmischer als Wandbatterie zur;7,0;St;gaeb;3938131.x83
+0340;Installationselement für Behinderten - WC;23,0;St;gaeb;3938131.x83
+0350;Set Wandanker, für Einzelmontage;23,0;St;gaeb;3938131.x83
+0360;Ständer für Trockenbauwand, raumhoch, H:220-280 cm;46,0;St;gaeb;3938131.x83
+0370;Behindertengerechtes wandhängendes Tiefspül-WC,;23,0;St;gaeb;3938131.x83
+0380;WC-Sitz barrierefrei, eckiges Design, Befestigung von;23,0;St;gaeb;3938131.x83
+0390;WC Betätigungsplatte, rund, 2-Mengen-Spülung,;23,0;St;gaeb;3938131.x83
+0400;Schallschutz Set, für WC,;23,0;St;gaeb;3938131.x83
+0410;Rohbauset mit Netzteil, für WC-Steuerungen mit;23,0;St;gaeb;3938131.x83
+0420;WC-Steuerung elektronisch, Netzbetrieb, für vorgenannten;23,0;St;gaeb;3938131.x83
+0430;Stützklappgriff aus zwei parallele, übereinander;23,0;St;gaeb;3938131.x83
+0440;Aufrüstsatz WC-Papierhalter, als rechtwinklig;23,0;St;gaeb;3938131.x83
+0450;Stützklappgriff, drehbar , mit integrierter Spülauslösung,;23,0;St;gaeb;3938131.x83
+0460;Installationselement für Wand-WC-;11,0;St;gaeb;3938131.x83
+0470;Set Wandanker, für Einzelmontage;11,0;St;gaeb;3938131.x83
+0480;Ständer für Trockenbauwand, raumhoch, H:220-280 cm;22,0;St;gaeb;3938131.x83
+0490;Wandhängendes Tiefspül-WC, mit WC-Sitz,;11,0;St;gaeb;3938131.x83
+0500;WC Betätigungsplatte, rund, 2-Mengen-Spülung,;11,0;St;gaeb;3938131.x83
+0510;Schallschutz Set, für WC,;11,0;St;gaeb;3938131.x83
+0520;Rohbauset für WC-Steuerung mit mechanischer;11,0;St;gaeb;3938131.x83
+0530;Montageplatte aus Holz für Trockenbau zum Einbau;10,0;St;gaeb;3938131.x83
+0540;Element für Stütz- und Haltegriffe,;12,0;St;gaeb;3938131.x83
+0550;Montageplatte mit Abdeckung der mobilen Stützklapp-;22,0;St;gaeb;3938131.x83
+0560;Mobiler Stützklappgriff, drehbar zwei parallele,;2,0;St;gaeb;3938131.x83
+0570;Installationselement für Wand-WC-;5,0;St;gaeb;3938131.x83
+0580;Set Wandanker, für Einzelmontage;5,0;St;gaeb;3938131.x83
+0590;Ständer für Trockenbauwand, raumhoch, H:220-280 cm;10,0;St;gaeb;3938131.x83
+0600;Wandhängendes Tiefspül-WC, verkürzte Ausladung;5,0;St;gaeb;3938131.x83
+0610;WC-Sitz, Deckel überlappend,;5,0;St;gaeb;3938131.x83
+0620;WC Betätigungsplatte, rund, 2-Mengen-Spülung,;5,0;St;gaeb;3938131.x83
+0630;Schallschutz Set, für WC,;5,0;St;gaeb;3938131.x83
+0640;WC-Bürstengarnitur, als kegelförmig zulaufender;39,0;St;gaeb;3938131.x83
+0650;WC-Papierhalter, rechtwinklig gebogener, U-förmiger;16,0;St;gaeb;3938131.x83
+0660;Reservepapierhalter, als zylindrischer Papierhalter;39,0;St;gaeb;3938131.x83
+0670;Doppelhaken mit Befestigungsrosette,;39,0;St;gaeb;3938131.x83
+0680;Einzelhaken mit Befestigungsrosette,;10,0;St;gaeb;3938131.x83
+0690;Traversenelement für Wandarmatur Aufputz;17,0;St;gaeb;3938131.x83
+0700;Brausebatterie für Wandmontage, mit Thermostatkartusche;17,0;St;gaeb;3938131.x83
+0710;Handbrause, mit Anti-Kalk-Technik, Aerosolarm,;17,0;St;gaeb;3938131.x83
+0720;Montageplatte aus Holz für Trockenbau zum Einbau;68,0;St;gaeb;3938131.x83
+0730;Ständer für Trockenbauwand, raumhoch, H:220-280 cm;17,0;St;gaeb;3938131.x83
+0740;Dusch-, Wannenhandlauf mit verschiebbarer;17,0;St;gaeb;3938131.x83
+0750;Einhängesitz, zum Einhängen in Duschhandläufe,;10,0;St;gaeb;3938131.x83
+0760;Traversenelement für Wandarmatur Aufputz;11,0;St;gaeb;3938131.x83
+0770;Brausebatterie für Wandmontage, mit Thermostatkartusche;11,0;St;gaeb;3938131.x83
+0780;Handbrause, mit Anti-Kalk-Technik, Aerosolarm,;11,0;St;gaeb;3938131.x83
+0790;Montageplatte aus Holz für Trockenbau zum Einbau;44,0;St;gaeb;3938131.x83
+0800;Ständer für Trockenbauwand, raumhoch, H:220-280 cm;22,0;St;gaeb;3938131.x83
+0810;Dusch-, Wannenhandlauf mit verschiebbarer;11,0;St;gaeb;3938131.x83
+0820;Traversenelement für Wandarmatur Aufputz;3,0;St;gaeb;3938131.x83
+0830;Brausebatterie für Wandmontage, mit Thermostat;3,0;St;gaeb;3938131.x83
+0840;Brausestangenset bestehend aus Brausestange;3,0;St;gaeb;3938131.x83
+0850;Ständer für Trockenbauwand, raumhoch, H:220-280 cm;6,0;St;gaeb;3938131.x83
+0860;Duschkabine für bodengleichen Einbau, Eckdusche;3,0;St;gaeb;3938131.x83
+0870;Brauseschlauch-Entleerventil, zur Montage zwischen;31,0;St;gaeb;3938131.x83
+0880;Brauseschlauch-Steckkupplung, zur Montage zwischen;31,0;St;gaeb;3938131.x83
+0890;Traversenelement für Wandarmatur Aufputz;4,0;St;gaeb;3938131.x83
+0900;Pflegehubwanne;4,0;St;gaeb;3938131.x83
+0910;Sicherheits-Handgriffe (VPE = 1 Paar = 2 Stück);4,0;St;gaeb;3938131.x83
+0920;Pflegekombination Reinigungs- und Desinfektionsgerät;4,0;St;gaeb;3938131.x83
+0930;Einhebelmischer als Wandbatterie zur;4,0;St;gaeb;3938131.x83
+0940;Eckventil mit Regulierfunktion und gesicherter Betätigung;2,0;St;gaeb;3938131.x83
+0950;Wandpaneel über der Anlage aus Edelstahl;4,0;St;gaeb;3938131.x83
+0960;Montageplatte aus Holz für Trockenbau zum Einbau;8,0;St;gaeb;3938131.x83
+0970;Küchenarmatur, Standmontage, mit schwenk-/ und;8,0;St;gaeb;3938131.x83
+0980;Eckventil mit Regulierfunktion und gesicherter Betätigung;8,0;St;gaeb;3938131.x83
+0990;Kombi-Eckventil, mit Entriegelungselement des;8,0;St;gaeb;3938131.x83
+1000;Ab- und Überlaufgarnitur für Einzelbecken mit;6,0;St;gaeb;3938131.x83
+1010;Ab- und Überlaufgarnitur für Doppelbecken mit;2,0;St;gaeb;3938131.x83
+1020;Mehrpreis für Hahnlochbohrungen bis D= 35mm,;16,0;St;gaeb;3938131.x83
+1030;Bauseits durch den Küchenbauer gelieferte Ab- und;1,0;St;gaeb;3938131.x83
+1040;Geruchverschluss für Spültisch, mit Geräteanschluss,;1,0;St;gaeb;3938131.x83
+1050;Waschgeräte-Siphon, Wandeinbau DN 40/DN 50;4,0;St;gaeb;3938131.x83
+1060;Waschtischbatterie, Sensortechnologie, berührungslose;2,0;St;gaeb;3938131.x83
+1070;Eckventil mit Regulierfunktion und gesicherter Betätigung;4,0;St;gaeb;3938131.x83
+1080;E- Moduldurchlauferhitzer, vollelektronisch geregelt.;6,0;St;gaeb;3938131.x83
+1090;E- Moduldurchlauferhitzer, vollelektronisch geregelt.;6,0;St;gaeb;3938131.x83
+1100;Funkfernbedienung, mit kontrastreichem E-Paper-;12,0;St;gaeb;3938131.x83
+1110;Unterputz-Einbauschrank;12,0;St;gaeb;3938131.x83
+1120;E-Kleindurchlauferhitzer elektronisch geregelt,;5,0;St;gaeb;3938131.x83
+1130;E-Kleindurchlauferhitzer elektronisch geregelt,;5,0;St;gaeb;3938131.x83
+1140;Strahlreglereinsatz für Mundstück M 22 / 24 an der;10,0;St;gaeb;3938131.x83
+1150;Großraum-Papierkorb aus Stahldraht weiß;15,0;St;gaeb;3938131.x83
+1160;Falthandtuchspender aus Metall für V- oder C-gefalzte;15,0;St;gaeb;3938131.x83
+1170;Eurospender mit Pumpenfrontentnahme für Seifen-;30,0;St;gaeb;3938131.x83
+1180;Schalenhalter für vorg. Seifen-/und Desinfektionsmittel-;30,0;St;gaeb;3938131.x83
+1190;Silikonarbeiten an Sanitärgegenständen als elastische;40,0;m;gaeb;3938131.x83
+1200;Einstellen von automatischen Spülauslösungen;2,0;St;gaeb;3938131.x83
+0010;Baustelleneinrichtung für sämtliche, in der;1,0;psch;gaeb;3938131.x83
+0010;Herstellen von Kernbohrungen;15,0;St;gaeb;3938131.x83
+0020;Mehr- bzw. Minderpreis vorbeschriebener Bohrung 60 mm Ø,;1,0;St;gaeb;3938131.x83
+0030;Herstellen von Kernbohrungen;20,0;St;gaeb;3938131.x83
+0040;Mehr- bzw. Minderpreis vorbeschriebener Bohrung 80 mm Ø,;1,0;St;gaeb;3938131.x83
+0050;Herstellen von Kernbohrungen;40,0;St;gaeb;3938131.x83
+0060;Mehr- bzw. Minderpreis vorbeschriebener Bohrung 100 mm Ø,;1,0;cm;gaeb;3938131.x83
+0070;Herstellen von Kernbohrungen;18,0;St;gaeb;3938131.x83
+0080;Mehr- bzw. Minderpreis vorbeschriebener Bohrung 150 mm Ø,;1,0;cm;gaeb;3938131.x83
+0090;Herstellen von Kernbohrungen;10,0;St;gaeb;3938131.x83
+0100;Mehr- bzw. Minderpreis vorbeschriebener Bohrung 200 mm Ø,;1,0;cm;gaeb;3938131.x83
+0110;Herstellen von Kernbohrungen;35,0;St;gaeb;3938131.x83
+0120;Mehr- bzw. Minderpreis vorbeschriebener Bohrung 60 mm Ø,;1,0;St;gaeb;3938131.x83
+0130;Herstellen von Kernbohrungen;45,0;St;gaeb;3938131.x83
+0140;Mehr- bzw. Minderpreis vorbeschriebener Bohrung 80 mm Ø,;1,0;St;gaeb;3938131.x83
+0150;Herstellen von Kernbohrungen;40,0;St;gaeb;3938131.x83
+0160;Mehr- bzw. Minderpreis vorbeschriebener Bohrung 100 mm Ø,;1,0;St;gaeb;3938131.x83
+0170;Herstellen von Kernbohrungen;10,0;St;gaeb;3938131.x83
+0180;Mehr- bzw. Minderpreis vorbeschriebener Bohrung 125 mm Ø,;1,0;St;gaeb;3938131.x83
+0190;Herstellen von Kernbohrungen;10,0;St;gaeb;3938131.x83
+0200;Mehr- bzw. Minderpreis vorbeschriebener Bohrung 150 mm Ø,;1,0;St;gaeb;3938131.x83
+0210;Herstellen von Kernbohrungen;40,0;St;gaeb;3938131.x83
+0220;Mehr- bzw. Minderpreis vorbeschriebener Bohrung 60 mm Ø,;1,0;St;gaeb;3938131.x83
+0230;Herstellen von Kernbohrungen;40,0;St;gaeb;3938131.x83
+0240;Mehr- bzw. Minderpreis vorbeschriebener Bohrung 80 mm Ø,;1,0;St;gaeb;3938131.x83
+0250;Herstellen von Kernbohrungen;40,0;St;gaeb;3938131.x83
+0260;Mehr- bzw. Minderpreis vorbeschriebener Bohrung 100 mm Ø,;1,0;St;gaeb;3938131.x83
+0270;Herstellen von Kernbohrungen;10,0;St;gaeb;3938131.x83
+0280;Mehr- bzw. Minderpreis vorbeschriebener Bohrung 150 mm Ø,;1,0;St;gaeb;3938131.x83
+0290;Deckenschott F90;50,0;St;gaeb;3938131.x83
+0300;Zubehörset, zu Deckenschott F90;30,0;St;gaeb;3938131.x83
+0310;Mineralische Vergussmasse 25 kg (Sackware);60,0;St;gaeb;3938131.x83
+0010;Reinigung aller Anlagenteile;1,0;psch;gaeb;3938131.x83
+0020;Montageplanung;1,0;psch;gaeb;3938131.x83
+0030;Anschlussverdrahtung aller in diesem LV enthaltenen;1,0;psch;gaeb;3938131.x83
+0040;Inbetriebnahme;1,0;psch;gaeb;3938131.x83
+0050;Einweisung des Hauspersonals;1,0;psch;gaeb;3938131.x83
+0010;Stundenlohnarbeiten Obermonteur/-in;40,0;h;gaeb;3938131.x83
+0020;Stundenlohnarbeiten Monteur/-in;40,0;h;gaeb;3938131.x83
+0030;Stundenlohnarbeiten Helfer/-in;40,0;h;gaeb;3938131.x83
+0040;Stundenlohnarbeiten Auszubildende/r;40,0;h;gaeb;3938131.x83
+0010;Bestandsunterlagen;1,0;psch;gaeb;3938131.x83
+0020;Bestandsunterlagen,;1,0;psch;gaeb;3938131.x83
+0010;Wartungsvertrag gemäß AMEV nach Wartungskarten;4,0;Jr;gaeb;3938131.x83

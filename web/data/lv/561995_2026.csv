@@ -1,0 +1,99 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+01.1;Baustelle einrichten;1,0;psch;gaeb-flat;3941892.d83
+01.2;Restmüll - Container 8m³;1,0;St;gaeb-flat;3941892.d83
+01.3;Baumischabfälle - Container 5m³;1,0;St;gaeb-flat;3941892.d83
+02.1;Schutzabdeckungen Öffnungen bis 0,25 m²;5,0;St;gaeb-flat;3941892.d83
+02.2;Schutzabdeckungen Öffnungen > 0,25 m² bis 0,5m²;3,0;St;gaeb-flat;3941892.d83
+02.3;Schutz verbleibender Fenster bei Abbrucharbeiten;65,0;m²;gaeb-flat;3941892.d83
+02.4;Sutz verbleibender Fenster nur Folie;110,0;m²;gaeb-flat;3941892.d83
+03.1;Demontage beschichteter Holz-/ Holzwerkstofftüren;22,0;St;gaeb-flat;3941892.d83
+03.2;Demontage beschichteter Holz-/ Holzwerkstofftüren mit Glasausschnitt;3,0;St;gaeb-flat;3941892.d83
+03.3;Demontage beschichteter Holz-/ Holzwerkstofftüren mit Glasausschnitt zweiflügelig;2,0;St;gaeb-flat;3941892.d83
+03.4;Demontage Holz/Alu-Türen mit Glasausschnitt;2,0;St;gaeb-flat;3941892.d83
+03.5;Demontage einflügeliger beschichteter Holz-/ Holzwerkstofftüren mit festen Seitenteilen;3,0;St;gaeb-flat;3941892.d83
+03.6;Demontage beschichteter Holzschiebetüren;1,0;St;gaeb-flat;3941892.d83
+03.7;Demontage Holz/Alu-Glas-Fensterelemente (innen);10,0;m²;gaeb-flat;3941892.d83
+03.8;Demontage Holzfensterelemente (innen);2,0;Stck;gaeb-flat;3941892.d83
+03.9;Demontage Holz/Alu-Glas-Außentürelement, bis 5 m²;15,0;m²;gaeb-flat;3941892.d83
+03.10;Demontage Holz/Alu-Glas-Fensterelemente;10,0;m²;gaeb-flat;3941892.d83
+03.11;Demontage von Sonnenschutzeinrichtung, außen;85,0;m²;gaeb-flat;3941892.d83
+03.12;Demontage Innenfensterbänke, Naturstein;10,0;m;gaeb-flat;3941892.d83
+03.13;Demontage Innenfensterbänke, Holz;20,0;m;gaeb-flat;3941892.d83
+03.14;Demontage Außenfensterbänke, Aluminium;25,0;m;gaeb-flat;3941892.d83
+03.15;Demontage Gardinenleisten, Vorhangschienen/-stangen, etc.;25,0;Stck;gaeb-flat;3941892.d83
+03.16;Abbruch Bodenbelag, keramische Fliesen im Mörtelbett;190,0;m²;gaeb-flat;3941892.d83
+03.17;Abbruch Bodenbelag, Linoleum/PVC/Kautschuk (unbelastet);635,0;m²;gaeb-flat;3941892.d83
+03.18;Abbruch Bodenbelag Holzdielen Dachboden;15,0;m²;gaeb-flat;3941892.d83
+03.19;Abbruch von Sauberläufen im Boden;1,0;Stck;gaeb-flat;3941892.d83
+03.20;Demontage Sockelleisten Nadelfilz/Holz;465,0;m;gaeb-flat;3941892.d83
+03.21;Abbruch Zementestrich EG Anbau 2009;175,0;m²;gaeb-flat;3941892.d83
+03.22;Abbruch Zementestrich EG 1996;385,0;m²;gaeb-flat;3941892.d83
+03.23;Abbruch Zementestrich OG;260,0;m²;gaeb-flat;3941892.d83
+03.24;Rückbau / Aufnahme von Bitumenabdichtung;560,0;m²;gaeb-flat;3941892.d83
+03.25;Abbruch Innentreppe;1,0;psch;gaeb-flat;3941892.d83
+03.26;Abbruch Galerien;1,0;psch;gaeb-flat;3941892.d83
+03.27;Abbruch Spielpodest im EG;1,0;psch;gaeb-flat;3941892.d83
+03.28;Abschlagen Alt-Putz (innen), d ca 20 mm;1750,0;m²;gaeb-flat;3941892.d83
+03.29;Zulage Tapete;800,0;m²;gaeb-flat;3941892.d83
+03.30;Abbruch von Streckmetall mit Putzanhaftungen;30,0;m²;gaeb-flat;3941892.d83
+03.31;Abbruch Wandbelag, Fliesen;140,0;m²;gaeb-flat;3941892.d83
+03.32;Abbruch nichttragende Innewände d=11,5 cm;30,0;m³;gaeb-flat;3941892.d83
+03.33;Abbruch Innenwände d=30cm;10,0;m³;gaeb-flat;3941892.d83
+03.34;Abbruch Innenwände d=40cm;20,0;m³;gaeb-flat;3941892.d83
+03.35;Abbruch Innenwände d > 50cm;1,0;m³;gaeb-flat;3941892.d83
+03.36;Abbruch Kamin;3,0;m³;gaeb-flat;3941892.d83
+03.37;Dach schließen;1,0;psch;gaeb-flat;3941892.d83
+03.38;Abbruch Wände aus Gipskarton (Trockenbauwände);25,0;m²;gaeb-flat;3941892.d83
+03.39;Räumung Sperrmüll und lose Einrichtungsgegenstände (Grobmüll);7,5;m³;gaeb-flat;3941892.d83
+03.40;Entsorgung und Entsorgungsgebühr für Sperrmüll (Grobmüll);2,0;t;gaeb-flat;3941892.d83
+03.41;Räumung, loser Restmüll / nicht verwertbares Material (Baumischabfälle);7,0;m³;gaeb-flat;3941892.d83
+03.42;Entsorgung und Entsorgungsgebühr für Baumischabfälle;4,0;t;gaeb-flat;3941892.d83
+03.43;Abbruch Korkwände/Pinnwände;5,0;Stck;gaeb-flat;3941892.d83
+03.44;Abbruch Sprossenwand;1,0;psch;gaeb-flat;3941892.d83
+03.45;Abbruch Garderoben;1,0;psch;gaeb-flat;3941892.d83
+03.46;Abbruch Holzbrüstungen/Raumtrennungen;3,0;Stck;gaeb-flat;3941892.d83
+03.47;Abbruch WC-Trennwände;15,0;m²;gaeb-flat;3941892.d83
+03.48;Abbruch Küche;1,0;psch;gaeb-flat;3941892.d83
+03.49;Abbruch Teeküchen;1,0;psch;gaeb-flat;3941892.d83
+03.50;Abbruch abgehängte Decke, Gipskarton glatt/loch;260,0;m²;gaeb-flat;3941892.d83
+03.51;Abbruch  Putz;140,0;m²;gaeb-flat;3941892.d83
+03.52;Zulage Tapete;50,0;m²;gaeb-flat;3941892.d83
+03.53;Abbruch abgehängte Decke, OWA Optik;500,0;m²;gaeb-flat;3941892.d83
+03.54;Ausbau vorhandene KMF-Dämmungen Decken;850,0;m²;gaeb-flat;3941892.d83
+03.55;Zulage Mehrstärke KMF;200,0;m²;gaeb-flat;3941892.d83
+03.56;Zulage, Abzug  Minderstärke;100,0;m²;gaeb-flat;3941892.d83
+03.57;Abbruch und fachgerechtes Entsorgen von Holzschalungen;50,0;m²;gaeb-flat;3941892.d83
+03.58;Abbruch und fachgerechtes Entsorgen von Akkustikelementen;24,0;Stck;gaeb-flat;3941892.d83
+03.59;Abbruch Schuppen;1,0;psch;gaeb-flat;3941892.d83
+04.1;Heizungsrohrleitungen aus Stahlrohr, DN 15-50 demontieren o.WD.;225,0;m;gaeb-flat;3941892.d83
+04.2;Durchstemmen v. Heizungsleitungen DN 15 - DN 32;60,0;St;gaeb-flat;3941892.d83
+04.3;Demontage von Wasserleitungen DN 15-40 (Stahlrohr);70,0;m;gaeb-flat;3941892.d83
+04.4;Demontage von Wasserleitungen DN 50-80 (Stahlrohr);20,0;m;gaeb-flat;3941892.d83
+04.5;Demontage von Kupferleitungen DN 10-40 (Kupferrohr);25,0;m;gaeb-flat;3941892.d83
+04.6;Demontage PE-Leitung D=32 mm;12,0;m;gaeb-flat;3941892.d83
+04.7;Abwasserleitung bis DN 100, Polypropylen;2,0;m;gaeb-flat;3941892.d83
+04.8;Durchstemmen v. AW-Ltg. Gußrohr DN 70-100;2,0;St;gaeb-flat;3941892.d83
+04.9;Durchstemmen v. verz. KW-Ltg. DN 15-50;12,0;St;gaeb-flat;3941892.d83
+04.10;Demontage WC Erwachsene;2,0;St;gaeb-flat;3941892.d83
+04.11;Demontage WC Kinder;8,0;St;gaeb-flat;3941892.d83
+04.12;Demontage WC Baby;1,0;St;gaeb-flat;3941892.d83
+04.13;Demontage Waschbecken;14,0;St;gaeb-flat;3941892.d83
+04.14;Demontage Waschlandschaft Krippe;1,0;St;gaeb-flat;3941892.d83
+04.15;Demontage Ausgussbecken;1,0;St;gaeb-flat;3941892.d83
+04.16;Demontage Dusche 90x90;1,0;St;gaeb-flat;3941892.d83
+04.17;Sanitär-Accessiores demontieren;60,0;St;gaeb-flat;3941892.d83
+04.18;Grundleitungsanschluss verschließen (Enddeckel);4,0;St;gaeb-flat;3941892.d83
+04.19;Grundleitungsanschluss verschließen (Brunnenschaum + Mörtel);2,0;St;gaeb-flat;3941892.d83
+05.1;Demontage Leuchten;150,0;St;gaeb-flat;3941892.d83
+05.2;Demontage PVC-Kanal oder Brüstungskanal;150,0;m;gaeb-flat;3941892.d83
+05.3;Demontage Mantelleitung;1000,0;m;gaeb-flat;3941892.d83
+05.4;Demontage Schalter, Steckdosen etc.;130,0;St;gaeb-flat;3941892.d83
+06.1;Verrechnungssatz für Bauvorarbeiter;20,0;h;gaeb-flat;3941892.d83
+06.2;Verrechnungssatz für Baufacharbeiter;20,0;h;gaeb-flat;3941892.d83
+06.3;Verrechnungssatz für Bauwerker;40,0;h;gaeb-flat;3941892.d83
+06.4;Verrechnungssatz für Hilfskräfte;40,0;h;gaeb-flat;3941892.d83
+06.5;Verrechnungssatz für Bohrhammer;10,0;h;gaeb-flat;3941892.d83
+06.6;Verrechnungssatz für Winkelschleifer;8,0;h;gaeb-flat;3941892.d83
+06.7;Verrechnungssatz für Kettensäge;2,0;h;gaeb-flat;3941892.d83
+06.8;Verrechnungssatz für Naßschneidegerät;2,0;h;gaeb-flat;3941892.d83
+06.9;Verrechnungsatz für Hebebühne;2,0;h;gaeb-flat;3941892.d83

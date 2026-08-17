@@ -1,0 +1,545 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+1;Baustelle einrichten, räumen der Rohbauarbeiten mit Kranstellungen nach Wahl des AN.;1,0;psch;gaeb;3937550.x83
+2;Baustelleneinrichtung für die Dauer der Baumeisterarbeiten;46,0;Wo;gaeb;3937550.x83
+3;Erstellen eines detaillierten Bauablaufplans einschl. Angaben der Vertragsfristen auf der Basis der vorgegebenen Rahmentermine. Der Bauablaufplan wird entsprechend dem Baufortschritt vom AN aktualisiert und fortgeschrieben und ist binnen 14 Tagen nach Auftragseingang bei der Objektüberwachung einzur;1,0;psch;gaeb;3937550.x83
+4;Dokumentation aller Arbeiten unter Zugrundelegung der Dokumentationsrichtlinie (DRL) des Bundesamtes für Bauwesen und Raumordnung als Mindestanforderung an Inhalt/ Umfang und Strukturierung der Dokumentation.;1,0;psch;gaeb;3937550.x83
+5;Dokumentation der Leistungen zum Nachweis der vollständigen Umsetzung des Brandschutzkonzeptes und der Auflagen aus dem Prüfbericht.;1,0;psch;gaeb;3937550.x83
+6;Einbauen Höhenfestpunkte aus Metallplatten;30,0;St;gaeb;3937550.x83
+7;Ausbauen und Abfahren vorbeschriebene Höhenfestpunkte;30,0;St;gaeb;3937550.x83
+8;Ausführung aller zur Herstellung des Rohbaus;1,0;psch;gaeb;3937550.x83
+9;Herstellen eines Schnurgerüst;1,0;psch;gaeb;3937550.x83
+10;Böschungstreppe aus Holz,;2,0;St;gaeb;3937550.x83
+1;Treppenschutzgeländern;54,0;m;gaeb;3937550.x83
+2;Treppenschutzgeländer wie vor beschrieben,;2484,0;mWo;gaeb;3937550.x83
+3;Abbauen und Abfahren der vorbeschriebenen;54,0;m;gaeb;3937550.x83
+4;Absturzsicherungen an freien Deckenrändern herstellen,;12,0;m;gaeb;3937550.x83
+5;wie vor, jedoch im Bereich von Schacht-;6,0;m;gaeb;3937550.x83
+6;Sicherungen an Deckenrändern und Schächten,;438,0;mWo;gaeb;3937550.x83
+7;Vorbeschriebene Absturzsicherung nach Baufortschritt;18,0;m;gaeb;3937550.x83
+8;Auf- und Abbauen, sowie Vorhalten und Warten von;20,0;St;gaeb;3937550.x83
+9;Auf- und Abbauen, sowie Vorhalten und Warten von;30,0;St;gaeb;3937550.x83
+10;Auf- und Abbauen, sowie Vorhalten und Warten von;15,0;St;gaeb;3937550.x83
+11;Auf- und Abbauen, sowie Vorhalten und Warten von begehbaren Abdeckungen für Schacht- und Deckenaussparungen, inkl. Sicherung gegen Verschieben;10,0;St;gaeb;3937550.x83
+12;Auf- und Abbauen, sowie Vorhalten und Warten von begehbaren Abdeckungen für Schacht- und Deckenaussparungen, inkl. Sicherung gegen Verschieben;53,0;m2;gaeb;3937550.x83
+13;Abdeckung auf vorbeschriebenen Decken- und Bodenöffnungen;75,0;St;gaeb;3937550.x83
+14;Witterungsschutz als Abdeckung;53,0;m2;gaeb;3937550.x83
+15;Provisorische   Bodenaufkantungen;75,0;m;gaeb;3937550.x83
+1;Geotextil 150-200 g/m² als Trennlage zwischen;1200,0;m2;gaeb;3937550.x83
+2;Baustraße aus verdichtetem Kies herstellen;1200,0;m2;gaeb;3937550.x83
+3;Aufbau Baustraße im Bereich von Grundleitungen ist um ca. 40cm zu erhöhen um die Grundleitungen zu schützen,;90,0;m2;gaeb;3937550.x83
+4;Abdeckung Stahlplatten, provisorisch;90,0;m2;gaeb;3937550.x83
+5;Baustraße aus verdichtetem Kies vorhalten;30,0;Mt;gaeb;3937550.x83
+6;Geotextil und Baustraße der vorbeschriebenen Positionen;1200,0;m2;gaeb;3937550.x83
+1;Provisorischen Ablauf DN 100 mit Anschluss an weiterführendes flexibles Anschlussrohr in vorhandene Aussparung STB- Decke oder STB- Attika für vorübergehende Entwässerung der Dachfläche einbauen und in der Fläche witterungsbeständig und windsicher andichten, Material nach Wahl des Bieters z.B. Bitum;38,0;St;gaeb;3937550.x83
+2;Fallrohre aus flexiblen Kunststoffrohr/-schlauch an provisorischen Ablauf;192,0;m;gaeb;3937550.x83
+1;Unterboden profilgerecht lösen;410,0;m3;gaeb;3937550.x83
+2;Unterboden profilgerecht lösen;175,0;m3;gaeb;3937550.x83
+3;Unterboden profilgerecht lösen;500,0;m3;gaeb;3937550.x83
+4;Unterboden profilgerecht lösen;60,0;m3;gaeb;3937550.x83
+5;Unterboden abtragen;35,0;m3;gaeb;3937550.x83
+6;Baugrund waagerecht planieren;700,0;m2;gaeb;3937550.x83
+7;Baugrund vor Bodenauftrag kreuzweise lockern;120,0;m2;gaeb;3937550.x83
+8;Frostschutzkies 0/32 profilgerecht;810,0;m3;gaeb;3937550.x83
+9;Randböschungen von Sickerbecken;820,0;m2;gaeb;3937550.x83
+10;Baugrund planieren und verdichten;670,0;m2;gaeb;3937550.x83
+11;Frostschutzkies 0/32 profilgerecht einbauen;400,0;m3;gaeb;3937550.x83
+12;Verdichtungskontrollen;5,0;St;gaeb;3937550.x83
+1;Unterboden laden, abfahren, verwerten;38,0;t;gaeb;3937550.x83
+2;Unterboden laden, abfahren, verwerten;38,0;t;gaeb;3937550.x83
+3;Unterboden laden, abfahren, verwerten;38,0;t;gaeb;3937550.x83
+1;Vorarbeiter: Landschaftsgärtner;10,0;h;gaeb;3937550.x83
+2;Facharbeiter: Landschaftsgärtner;20,0;h;gaeb;3937550.x83
+3;Arbeiter: Gartenhelfer;20,0;h;gaeb;3937550.x83
+4;Kleintransporter, inkl. Bedienung;5,0;h;gaeb;3937550.x83
+5;LKW-Kipper über 5 - 8 t Nutzlast;5,0;h;gaeb;3937550.x83
+6;LKW-Kipper über 8-12 t Nutzlast;5,0;h;gaeb;3937550.x83
+7;LKW mit Selbstlader;5,0;h;gaeb;3937550.x83
+8;Mobilbagger bis 88KW;5,0;h;gaeb;3937550.x83
+9;Minibagger bis 15 KW;5,0;h;gaeb;3937550.x83
+1;Erstellung eines Höhennivelliments des Urgeländes vor;1,0;psch;gaeb;3937550.x83
+2;Ausführung Baugrube mit geböschten Wänden,;5123,0;m3;gaeb;3937550.x83
+3;Ausführung Baugrube mit geböschten Wänden,;250,0;m3;gaeb;3937550.x83
+4;Böschungssicherung als Erosionsschutz, windsicher befestigen,;1322,0;m2;gaeb;3937550.x83
+5;Erstellung eines Höhennivelliments des Urgeländes vor;1,0;psch;gaeb;3937550.x83
+6;Ausführung Baugrube mit geböschten Wänden,;834,0;m3;gaeb;3937550.x83
+7;Böschungssicherung als Erosionsschutz, windsicher befestigen,;402,0;m2;gaeb;3937550.x83
+1;Mindestens folgende Leistungen:;1,0;psch;gaeb;3937550.x83
+2;Entsorgungsdokumentation;1,0;psch;gaeb;3937550.x83
+3;Management der Haufwerke und Entsorgung durch den AN mit allen erforderlichen Leistungen gemäß ZTV, einschl. Abplanen von Haufwerken bis 500 m3;1,0;psch;gaeb;3937550.x83
+4;Bodenmaterial BM-F0 gemäß den Vorgaben der Ersatzbaustoffverordnung (EBV) und der Abfallverzeichnis-Verordnung (AVV) aufnehmen, verladen und mit zugelassenen Fahrzeugen zu einer vom Auftragnehmer (AN) zu benennenden, zugelassenen Verwertungs- oder Entsorgungsanlage transportieren;8760,0;t;gaeb;3937550.x83
+5;Entsorgung Aushubmaterial der Deponieklassen DK I gem. DepV/ AbfAblV;450,0;t;gaeb;3937550.x83
+6;Bodenmaterial BM-0 (gewachsener oder umgelagerter Boden) gemäß den Vorgaben der Ersatzbaustoffverordnung (EBV) und der Abfallverzeichnis-Verordnung (AVV) aufnehmen, verladen und mit zugelassenen Fahrzeugen zu einer vom Auftragnehmer (AN) zu benennenden, zugelassenen Verwertungs- oder Entsorgungsanla;834,0;t;gaeb;3937550.x83
+7;Entsorgung Aushubmaterial der Deponieklassen DK I gem. DepV/ AbfAblV;1,0;t;gaeb;3937550.x83
+1;An- und Abtransport sowie Vorhaltung der kompletten;1,0;psch;gaeb;3937550.x83
+2;Elektroversorgung für die Wasserhaltung aufbauen und;1,0;psch;gaeb;3937550.x83
+3;Elektroanschluss einschl. Haupt- und Unterverteiler vorhalten;4,0;Wo;gaeb;3937550.x83
+4;Notstromaggregat;1,0;St;gaeb;3937550.x83
+5;Notstromaggregat vorhalten;4,0;Wo;gaeb;3937550.x83
+6;Abflussleitungen zum Vorfluter einschl. Armaturen, Form- und;157,0;m;gaeb;3937550.x83
+7;Drainagerohre;172,0;m;gaeb;3937550.x83
+8;Pumpensumpf innerhalb der Baugrube ab Aushubsohle herstellen, aus Holzverbau, lichte Grundfläche bis 2 m2, Tiefe bis 1 m.;6,0;St;gaeb;3937550.x83
+9;Wassermengenmess-Vorrichtung einbauen und ausbauen.;4,0;St;gaeb;3937550.x83
+10;Absetzbecken;2,0;St;gaeb;3937550.x83
+11;Pumpe Elektromotor ein- ausbauen 10-30m3/h Förder-H 5-7,5m;4,0;St;gaeb;3937550.x83
+12;Pumpe Elektromotor betreiben 10-30m3/h Förder-H 5-7,5m;1,0;St;gaeb;3937550.x83
+13;Wasserrechtliche Genehmigung;1,0;psch;gaeb;3937550.x83
+1;Gründungssohle verdichten, in Baugruben,;9000,0;m2;gaeb;3937550.x83
+2;Sauberkeitsschicht unbewehrt unter Bodenplatten;8639,0;m2;gaeb;3937550.x83
+3;Kontrollprüfung ZTV LW auf besondere Anordnung des AG, für Unterbau/Planum, Prüfung für Verformungsmodul, mit dynamischem Lastplattendruckversuch TP BF-StB.;6,0;St;gaeb;3937550.x83
+4;Kontrollprüfung ZTV LW auf besondere Anordnung des AG, für Unterbau/Planum, Prüfung für Verformungsmodul, mit statischem Lastplattendruckversuch DIN 18134.;6,0;St;gaeb;3937550.x83
+5;Planum herstellen in Baugrube für Baugrubensohle;8693,0;m2;gaeb;3937550.x83
+6;Planum herstellen in Baugrube für Baugrubensohle;84,0;m2;gaeb;3937550.x83
+7;Gründungspolster unter Fundamenten profilgerecht einbauen,Lagenweises aufbringen eines Kiespolsters größer gleich 20 cm je Lage, bestehend aus gebrochener Gesteinskörnung (z.B. Kies 0/45 bis 0/56). Verdichten der einzelnen Lagen  auf mindestens 103% der einfachen Proctordichte (Ev2 größer 120 MN/m2);6300,0;m3;gaeb;3937550.x83
+8;Gründungspolster unter mehrgeschossigem Zentralgebäude profilgerecht einbauen,Lagenweises aufbringen eines Kiespolsters größer gleich 40 cm, in 2 Lagen, bestehend aus gebrochener Gesteinskörnung (z.B. Kies 0/45 bis 0/56). Verdichten der einzelnen Lagen  auf mindestens 103% der einfachen Proctordicht;286,0;m3;gaeb;3937550.x83
+9;Hinterfüllung / Auffüllung des Baukörper mit angeliefertem Kies;7758,0;m3;gaeb;3937550.x83
+10;Gründungssohle verdichten, in Baugruben,;1107,0;m2;gaeb;3937550.x83
+11;Sauberkeitsschicht unbewehrt unter Bodenplatten;213,0;m2;gaeb;3937550.x83
+12;Kontrollprüfung ZTV LW auf besondere Anordnung des AG, für Unterbau/Planum, Prüfung für Verformungsmodul, mit dynamischem Lastplattendruckversuch TP BF-StB.;3,0;St;gaeb;3937550.x83
+13;Kontrollprüfung ZTV LW auf besondere Anordnung des AG, für Unterbau/Planum, Prüfung für Verformungsmodul, mit statischem Lastplattendruckversuch DIN 18134.;3,0;St;gaeb;3937550.x83
+14;Planum herstellen in Baugrube für Baugrubensohle;1107,0;m2;gaeb;3937550.x83
+15;Gründungspolster unter Fundamenten profilgerecht einbauen, Lagenweises aufbringen eines Kiespolsters größer gleich 20 cm, je Lage, bestehend aus gebrochener Gesteinskörnung (z.B. Kies 0/45 bis 0/56). Verdichten der einzelnen Lagen  auf mindestens 103% der einfachen Proctordichte (Ev2 größer 120 MN/m;830,0;m3;gaeb;3937550.x83
+16;Hinterfüllung / Auffüllung des Baukörper mit angeliefertem Kies;2586,0;m3;gaeb;3937550.x83
+1;Verkehrsflächen zur Aufrechterhaltung des öffentlichen und Anlieger-Verkehrs sowie des Baustellenverkehrs innerhalb des Baubereiches einschließlich zwischenzeitlich benutzter Behelfsfahrstreifen verkehrssicher unterhalten.;120,0;d;gaeb;3937550.x83
+1;Boden der Gräben für Abwasserkanäle, nach Abtrag des Oberbodens, profilgerecht lösen, laden, fördern, lagern, Förderweg bis 1 km, Abfall ist nicht gefährlich, Zuordnung nach Haufwerksbeprobung, Verbau wird gesondert vergütet, Breite der Sohle über 0,8 bis 0,9 m, Aushubtiefe bis 3 m,;1100,0;m3;gaeb;3937550.x83
+2;Boden der Gräben für Abwasserkanäle, nach Abtrag des Oberbaus, profilgerecht lösen, laden, fördern, lagern, Förderweg bis 1 km, Arbeiten von Hand, Abfall ist nicht gefährlich, nicht schadstoffbelastet, Zuordnung nach Haufwerksbeprobung, Verbau wird gesondert vergütet, mit Behinderung durch Versorgun;40,0;m3;gaeb;3937550.x83
+3;Boden der Gräben für Abwasserkanäle, nach Abtrag des Oberbaus, profilgerecht lösen, laden, fördern, lagern, Förderweg bis 1 km, Abfall ist nicht gefährlich, Zuordnung nach Haufwerksbeprobung, Verbau wird gesondert vergütet, mit Behinderung durch Versorgungs-, Entsorgungsleitungen und Kabel, Sicherun;1200,0;m3;gaeb;3937550.x83
+4;Boden, auf der Baustelle gelagert, für Abdeckung von Rohrleitungen, DIN EN 1610, profilgerecht einbauen und verdichten, in Graben, Schichtdicke über 15 bis 20 cm,;1200,0;m3;gaeb;3937550.x83
+5;Boden, auf der Baustelle gelagert, für Abdeckung von Rohrleitungen, DIN EN 1610, profilgerecht einbauen und verdichten, in Graben, Schichtdicke über 10 bis 15 cm,;200,0;m3;gaeb;3937550.x83
+6;Bau- und Abbruchabfälle, Boden, Steine und Baggergut,;1300,0;t;gaeb;3937550.x83
+7;Sand, natürliche Gesteinskörnung TL Gestein, liefern, für Seitenverfüllung und Abdeckung von Rohrleitungen, DIN EN 1610, profilgerecht einbauen und verdichten, in Graben für Abwasserkanäle, mit Verbau (der Verbau wird im Zuge der Arbeiten zurückgebaut), Verdichtungsgrad mind. DPr 0,95, Schichtdicke ;410,0;m3;gaeb;3937550.x83
+8;Kies-Sand-Gemisch, natürliche Gesteinskörnung TL Gestein, liefern, für Leitungszone von Rohrleitungen, bestehend aus Bettung, Seitenverfüllung und Abdeckung, DIN EN 1610, profilgerecht einbauen und verdichten, in Graben für Abwasserkanäle, mit Verbau (der Verbau wird im Zuge der Arbeiten zurückgebau;650,0;m3;gaeb;3937550.x83
+9;Regelausführung des Senkrechten Verbaus (Senkrechter Normverbau) DIN 4124 für Graben, herstellen und wieder rückbauen, Höhe über 1,75 bis 2 m, Breite der Sohle zwischen den Bekleidungen über 1 bis 1,5 m, 5 Bodengruppen, Bodengruppe 1 SE DIN 18196 (enggestufter Sand), Bodengruppe 2 SW DIN 18196 (weit;2000,0;m2;gaeb;3937550.x83
+10;Regelausführung des Senkrechten Verbaus (Senkrechter Normverbau) DIN 4124 für Graben, herstellen und wieder rückbauen, Höhe über 1 bis 1,5 m, Breite der Sohle zwischen den Bekleidungen über 1 bis 1,5 m, 5 Bodengruppen, Bodengruppe 1 SE DIN 18196 (enggestufter Sand), Bodengruppe 2 SW DIN 18196 (weitg;200,0;m2;gaeb;3937550.x83
+11;Regelausführung des Senkrechten Verbaus (Senkrechter Normverbau) DIN 4124 für Graben, herstellen und wieder rückbauen, Höhe über 1,5 bis 1,75 m, Breite der Sohle zwischen den Bekleidungen über 1 bis 1,5 m, 5 Bodengruppen, Bodengruppe 1 SE DIN 18196 (enggestufter Sand), Bodengruppe 2 SW DIN 18196 (we;200,0;m2;gaeb;3937550.x83
+12;Regelausführung des Senkrechten Verbaus (Senkrechter Normverbau) DIN 4124 für Graben, herstellen und wieder rückbauen, Höhe über 2 bis 2,5 m, Breite der Sohle zwischen den Bekleidungen bis 1 m, 5 Bodengruppen, Bodengruppe 1 SE DIN 18196 (enggestufter Sand), Bodengruppe 2 SW DIN 18196 (weitgestuftes ;1600,0;m2;gaeb;3937550.x83
+13;Regelausführung des Senkrechten Verbaus (Senkrechter Normverbau) DIN 4124 für Graben, herstellen und wieder rückbauen, Höhe über 2,5 bis 3 m, Breite der Sohle zwischen den Bekleidungen bis 1 m, 5 Bodengruppen, Bodengruppe 1 SE DIN 18196 (enggestufter Sand), Bodengruppe 2 SW DIN 18196 (weitgestuftes ;1000,0;m2;gaeb;3937550.x83
+14;Regelausführung des Senkrechten Verbaus (Senkrechter Normverbau) DIN 4124 für Graben, herstellen und wieder rückbauen, Höhe über 3 bis 3,5 m, Breite der Sohle zwischen den Bekleidungen bis 1 m, 5 Bodengruppen, Bodengruppe 1 SE DIN 18196 (enggestufter Sand), Bodengruppe 2 SW DIN 18196 (weitgestuftes ;800,0;m2;gaeb;3937550.x83
+15;Stirnverbau für Grabenverbaugerät DIN 4124, Höhe Verbau über 1,75 bis 2 m, Breite der Sohle zwischen den Bekleidungen über 1 bis 1,5 m, 5 Bodengruppen, Bodengruppe 1 SE DIN 18196 (enggestufter Sand), Bodengruppe 2 SW DIN 18196 (weitgestuftes Sand-Kies-Gemisch), Bodengruppe 3 GE DIN 18196 (enggestuft;20,0;m2;gaeb;3937550.x83
+16;Stirnverbau für Grabenverbaugerät DIN 4124, Höhe Verbau über 2 bis 2,5 m, Breite der Sohle zwischen den Bekleidungen bis 1 m, 5 Bodengruppen, Bodengruppe 1 SE DIN 18196 (enggestufter Sand), Bodengruppe 2 SW DIN 18196 (weitgestuftes Sand-Kies-Gemisch), Bodengruppe 3 GE DIN 18196 (enggestufter Kies), ;20,0;m2;gaeb;3937550.x83
+17;Stirnverbau für Grabenverbaugerät DIN 4124, Höhe Verbau über 2,5 bis 3 m, Breite der Sohle zwischen den Bekleidungen bis 1 m, 5 Bodengruppen, Bodengruppe 1 SE DIN 18196 (enggestufter Sand), Bodengruppe 2 SW DIN 18196 (weitgestuftes Sand-Kies-Gemisch), Bodengruppe 3 GE DIN 18196 (enggestufter Kies), ;20,0;m2;gaeb;3937550.x83
+18;Stirnverbau für Grabenverbaugerät DIN 4124, Höhe Verbau über 3 bis 3,5 m, Breite der Sohle zwischen den Bekleidungen bis 1 m, 5 Bodengruppen, Bodengruppe 1 SE DIN 18196 (enggestufter Sand), Bodengruppe 2 SW DIN 18196 (weitgestuftes Sand-Kies-Gemisch), Bodengruppe 3 GE DIN 18196 (enggestufter Kies), ;20,0;m2;gaeb;3937550.x83
+19;Heizleitung aus PP (mit glatter Außenoberfläche), unter Druck, Mantel aus PE, einschl. Dämmung, Tiefe der Leitungsachse unter Gelände bis 1,25 m, sichern.;20,0;m;gaeb;3937550.x83
+20;Kabel in Betrieb, Fernmeldekabel,;20,0;m;gaeb;3937550.x83
+21;Kabel unter Spannung, Niederspannungskabel, Tiefe der Leitungsachse unter Gelände bis 1,25 m, sichern.;20,0;m;gaeb;3937550.x83
+22;Versorgungsleitung aus PE, trinkwasserführend, unter Druck, bis DN 150, Tiefe der Leitungsachse unter Gelände bis 1,25 m, sichern.;20,0;m;gaeb;3937550.x83
+23;Auskleidung der Sohle und der Wände des/der Drängrabens/Sickergruben mit geotextilem Filter, Durchlässigkeitsbeiwert kv mind. 0,1 cm/s, Überlappungsbreite 20 cm, Überdeckung der Graben-/Grubenränder mind. 30 cm, Abrechnung nach bedeckter Fläche.;1350,0;m2;gaeb;3937550.x83
+24;Sicherung mit Steinen, als Uferbefestigung im Sohl- und Böschungsbereich, aus Wasserbausteinen DIN EN 13383-1 als Steinschüttung, Größenklasse CP 90/250, Gesteinsart Grauwacke, auf Schutzschicht, Einbaudicke 30 cm.;200,0;t;gaeb;3937550.x83
+25;Sicherungsbeton, grobgeschalt, für Entwässerungsbauwerk, aus Beton C 12/15 DIN 1045-2.;30,0;m3;gaeb;3937550.x83
+1;Abwasserkanal aus PP (Polypropylen)-Rohren DIN EN 1852-1, homogenes Vollwandrohr, für Regenwasser, mit Steckverbindung, Rohrende mit Muffe, DN/OD 315, Nenn-Ringsteifigkeit SN 16 DIN EN ISO 9969, Verlegung DIN EN 1610 in vorh. verbautem Graben, einschl. Bettung Typ 1, Dicke der unteren Bettungsschich;115,0;m;gaeb;3937550.x83
+2;Abwasserkanal aus PP (Polypropylen)-Rohren DIN EN 1852-1, homogenes Vollwandrohr, für Regenwasser, mit Steckverbindung, Rohrende mit Muffe, DN/OD 400, Nenn-Ringsteifigkeit SN 16 DIN EN ISO 9969, Verlegung DIN EN 1610 in vorh. verbautem Graben, einschl. Bettung Typ 1, Dicke der unteren Bettungsschich;70,0;m;gaeb;3937550.x83
+3;Abwasserkanal aus PP (Polypropylen)-Rohren DIN EN 1852-1, homogenes Vollwandrohr, für Regenwasser, mit Steckverbindung, Rohrende mit Muffe, DN/OD 250, Nenn-Ringsteifigkeit SN 16 DIN EN ISO 9969, Verlegung DIN EN 1610 in vorh. verbautem Graben, einschl. Bettung Typ 1, Dicke der unteren Bettungsschich;500,0;m;gaeb;3937550.x83
+4;Abwasserkanal aus PP (Polypropylen)-Rohren DIN EN 1852-1, homogenes Vollwandrohr, für Schmutzwasser, mit Steckverbindung, Rohrende mit Muffe, DN/OD 200, Nenn-Ringsteifigkeit SN 16 DIN EN ISO 9969, Verlegung DIN EN 1610 in vorh. verbautem Graben, einschl. Bettung Typ 1, Dicke der unteren Bettungsschi;750,0;m;gaeb;3937550.x83
+5;Abwasserkanal aus PP (Polypropylen)-Rohren DIN EN 1852-1, homogenes Vollwandrohr, für Mischwasser, mit Steckverbindung, Rohrende mit Muffe, DN/OD 160, Nenn-Ringsteifigkeit SN 16 DIN EN ISO 9969, Verlegung DIN EN 1610 in vorh. verbautem Graben, einschl. Bettung Typ 1, Dicke der unteren Bettungsschich;260,0;m;gaeb;3937550.x83
+6;Anschluss von Abwasserkanal aus PP DIN EN 1852-1 (homogene Vollwandrohre), DN 200, an vorh. Kanal aus Steinzeug, DN 400, einschl. Herstellen der Anschlussöffnung und der Dichtungsarbeiten, Anschlusswinkel 90 Grad, vorh. Anlage ist nicht in Betrieb.;1,0;St;gaeb;3937550.x83
+7;Abzweig, Formstück aus PP (Polypropylen) DIN EN 1852-1, homogenes Vollwandrohr, für Abwasserkanal, Steckverbindung, Rohrende mit Muffe, DN/OD 160.;5,0;St;gaeb;3937550.x83
+8;Abzweig mit Reduzierung, zentrisch, Formstück aus PP (Polypropylen) DIN EN 1852-1, homogenes Vollwandrohr, für Abwasserkanal, Steckverbindung, Rohrende mit Muffe, DN/OD 250, 2. DN 160, Nenn-Ringsteifigkeit SN 16 DIN EN ISO 9969.;15,0;St;gaeb;3937550.x83
+9;Abzweig mit Reduzierung, zentrisch, Formstück aus PP (Polypropylen) DIN EN 1852-1, homogenes Vollwandrohr, für Abwasserkanal, Steckverbindung, Rohrende mit Muffe, DN/OD 200, 2. DN 160, Nenn-Ringsteifigkeit SN 16 DIN EN ISO 9969.;11,0;St;gaeb;3937550.x83
+10;Abzweig mit Reduzierung, zentrisch, Formstück aus PP (Polypropylen) DIN EN 1852-1, homogenes Vollwandrohr, für Abwasserkanal, Steckverbindung, Rohrende mit Muffe, DN/OD 315, 2. DN 160, Nenn-Ringsteifigkeit SN 16 DIN EN ISO 9969.;15,0;St;gaeb;3937550.x83
+11;Bogen, Formstück aus PP (Polypropylen) DIN EN 1852-1, homogenes Vollwandrohr, für Abwasserkanal, Steckverbindung, Rohrende mit Muffe, DN/OD 160, Nenn-Ringsteifigkeit SN 16 DIN EN ISO 9969.;15,0;St;gaeb;3937550.x83
+12;Muffenstopfen, Formstück aus PP (Polypropylen) DIN EN 1852-1, homogenes Vollwandrohr, für Abwasserkanal, Steckverbindung, Rohrende mit Muffe, DN/OD 160, Nenn-Ringsteifigkeit SN 16 DIN EN ISO 9969.;5,0;St;gaeb;3937550.x83
+13;Absperrblase einbauen, vorhalten und ausbauen,;1,0;St;gaeb;3937550.x83
+14;Absperrblase einbauen, vorhalten und ausbauen,;1,0;St;gaeb;3937550.x83
+15;Kontrollschacht, nicht begehbar, als Reinigungs- und Inspektionsöffnung, DIN EN 13598-2, Ausführung Schacht in Einzelbauteilen, Schachtrohr aus PP, DN 400, Schachtabdeckung mit Teleskop, Klasse D 400 DIN EN 124-1, Berme in Kämpferhöhe, lichte Schachttiefe bis 1,5 m,;18,0;St;gaeb;3937550.x83
+16;Kontrollschacht, nicht begehbar, als Reinigungs- und Inspektionsöffnung, DIN EN 13598-2, Ausführung Schacht in Einzelbauteilen, Schachtrohr aus PP, DN 600, Schachtabdeckung mit Teleskop, Klasse D 400 DIN EN 124-1, Berme in Kämpferhöhe, lichte Schachttiefe bis 1,5 m,;9,0;St;gaeb;3937550.x83
+17;Kontrollschacht, nicht begehbar, als Reinigungs- und Inspektionsöffnung, DIN EN 13598-2, Ausführung Schacht in Einzelbauteilen, Schachtrohr aus PP, DN 600, Schachtabdeckung mit Teleskop, Klasse D 400 DIN EN 124-1, Berme in Kämpferhöhe, lichte Schachttiefe bis 1,5 m,;2,0;St;gaeb;3937550.x83
+18;Kontrollschacht, nicht begehbar, als Reinigungs- und Inspektionsöffnung, DIN EN 13598-2, Ausführung Schacht in Einzelbauteilen, Schachtrohr aus PP, DN 600, Schachtabdeckung mit Teleskop, Klasse D 400 DIN EN 124-1, Berme in Kämpferhöhe, lichte Schachttiefe über 1,5 bis 1,75 m,;3,0;St;gaeb;3937550.x83
+19;Kontrollschacht, nicht begehbar, als Reinigungs- und Inspektionsöffnung, DIN EN 13598-2, Ausführung Schacht in Einzelbauteilen, Schachtrohr aus PP, DN 600, Schachtabdeckung mit Teleskop, Klasse D 400 DIN EN 124-1, Berme in Kämpferhöhe, lichte Schachttiefe über 1,75 bis 2 m,;2,0;St;gaeb;3937550.x83
+20;Kontrollschacht, nicht begehbar, als Reinigungs- und Inspektionsöffnung, DIN EN 13598-2, Ausführung Schacht in Einzelbauteilen, Schachtrohr aus PP, DN 600, Schachtabdeckung mit Teleskop, Klasse D 400 DIN EN 124-1, Berme in Kämpferhöhe, lichte Schachttiefe über 2 bis 2,25 m,;1,0;St;gaeb;3937550.x83
+21;Kontrollschacht, nicht begehbar, als Reinigungs- und Inspektionsöffnung, DIN EN 13598-2, Ausführung Schacht in Einzelbauteilen, Schachtrohr aus PP, DN 600, Schachtabdeckung mit Teleskop, Klasse D 400 DIN EN 124-1, Berme in Kämpferhöhe, lichte Schachttiefe über 2,25 bis 2,5 m,;1,0;St;gaeb;3937550.x83
+22;Kontrollschacht, nicht begehbar, als Reinigungs- und Inspektionsöffnung, DIN EN 13598-2, Ausführung Schacht in Einzelbauteilen, Schachtrohr aus PP, DN 600, Schachtabdeckung mit Teleskop, Klasse D 400 DIN EN 124-1, Berme in Kämpferhöhe, lichte Schachttiefe über 2,5 bis 2,75 m,;2,0;St;gaeb;3937550.x83
+23;Kontrollschacht, nicht begehbar, als Reinigungs- und Inspektionsöffnung, DIN EN 13598-2, Ausführung Schacht in Einzelbauteilen, Schachtrohr aus PP, DN 600, Schachtabdeckung mit Teleskop, Klasse D 400 DIN EN 124-1, Berme in Kämpferhöhe, lichte Schachttiefe über 2,75 bis 3 m,;1,0;St;gaeb;3937550.x83
+24;Kontrollschacht, nicht begehbar, als Reinigungs- und Inspektionsöffnung, DIN EN 13598-2, Ausführung Schacht in Einzelbauteilen, Schachtrohr aus PP, DN 600, Schachtabdeckung mit Teleskop, Klasse D 400 DIN EN 124-1, Berme in Kämpferhöhe, lichte Schachttiefe über 3 bis 3,5 m,;1,0;St;gaeb;3937550.x83
+25;Schachtunterteil mit Muffe (SU-M), als Beton-/Stahlbetonfertigteil DIN EN 1917, DIN 4034-1, Typ 2, rund, DN 1000, Bauteilverbindung mit Dichtungen aus Elastomeren DIN EN 681-1 und DIN 4060 als Kompressionsdichtung, Dichtungen werkseitig fest eingebaut, Lastübertragung durch Lastübertragungselement, ;1,0;St;gaeb;3937550.x83
+26;Schachthals mit Muffe (SH-M) DIN EN 1917, DIN 4034-1, Typ 2, DN 1000/625, Bauhöhe 600 mm, Bauteilverbindung mit Dichtungen aus Elastomeren DIN EN 681-1 und DIN 4060 als Kompressionsdichtung, Dichtungen werkseitig fest eingebaut, Lastübertragung durch Lastübertragungselement, werkseitig fest eingebau;1,0;St;gaeb;3937550.x83
+27;Auflagering, zum Einbau in waagerechte Oberfläche, Betonfertigteil (AR-V) DIN EN 1917, DIN 4034-1, Typ 2, lichte Weite 625 mm, Bauhöhe 60 mm.;1,0;St;gaeb;3937550.x83
+28;Auflagering, zum Einbau in waagerechte Oberfläche, Betonfertigteil (AR-V) DIN EN 1917, DIN 4034-1, Typ 2, lichte Weite 625 mm, Bauhöhe 80 mm.;1,0;St;gaeb;3937550.x83
+29;Auflagering, zum Einbau in waagerechte Oberfläche, Betonfertigteil (AR-V) DIN EN 1917, DIN 4034-1, Typ 2, lichte Weite 625 mm, Bauhöhe 100 mm.;1,0;St;gaeb;3937550.x83
+30;Schachtabdeckung, für Schacht DIN EN 1917 und DIN 4034-1 mit Schachthals DN 625, Klasse D 400 DIN EN 124-1, Deckel rund aus Gusseisen DIN EN 124-2, mit dämpfender Einlage, Rahmen rund aus Gusseisen, höhengerecht in WW-Schachtkopfmörtel DIN 19573 setzen.;1,0;St;gaeb;3937550.x83
+31;Schachtabdeckung, für Schacht DIN EN 1917 und DIN 4034-1 mit Schachthals DN 625, Klasse D 400 DIN EN 124-1, Deckel rund aus Gusseisen DIN EN 124-2, mit dämpfender Einlage, Rahmen rund aus Gusseisen, höhengerecht in WW-Schachtkopfmörtel DIN 19573 setzen.;1,0;St;gaeb;3937550.x83
+32;Fußauflagering (FAR-M) DIN EN 1917, DIN 4034-1, Typ 2, DN 400, Bauhöhe 250 mm.;20,0;St;gaeb;3937550.x83
+33;Fußauflagering (FAR-M) DIN EN 1917, DIN 4034-1, Typ 2, DN 600, Bauhöhe 250 mm.;20,0;St;gaeb;3937550.x83
+34;Schmutzfänger DIN 1221 Form F für Schachtabdeckung.;1,0;St;gaeb;3937550.x83
+35;Dichtheitsprüfung DIN EN 1610 mit Luft, als Abnahmeprüfung, des Abwasserkanales aus Kunststoff, DN 250,;590,0;m;gaeb;3937550.x83
+36;Dichtheitsprüfung DIN EN 1610 mit Luft, als Abnahmeprüfung, des Abwasserkanales aus Kunststoff, DN 200,;720,0;m;gaeb;3937550.x83
+37;Dichtheitsprüfung DIN EN 1610 mit Luft, als Abnahmeprüfung, des Abwasserkanales aus Kunststoff, DN 150,;260,0;m;gaeb;3937550.x83
+38;DN 300,;115,0;m;gaeb;3937550.x83
+39;Dichtheitsprüfung DIN EN 1610 mit Luft, als Abnahmeprüfung, des Abwasserkanales aus Kunststoff, DN 400,;70,0;m;gaeb;3937550.x83
+40;Dichtheitsprüfung DIN EN 1610 mit Luft, als Abnahmeprüfung, des Schachtes aus Beton, DN 1000, im Regenwasserkanal mit Zu- und Ablauf, Zulauf über DN 200 bis DN 400, Ablauf über DN 200 bis DN 400, Tiefe bis 2 m, mit offenem Gerinne, einschl. aller erforderlichen Anlagen (Geräte und Maschinen), Abdich;4,0;St;gaeb;3937550.x83
+41;Auslaufstück mit Froschklappe für Dränleitung aus PVC-U DIN 1187, Form A, DN 160.;6,0;St;gaeb;3937550.x83
+42;Regenwasserablauf aus Gusseisen mit Eimer, zum Anschluss einer Regenfallleitung, DN 125, Auslauf 30 Grad, mit Geruchverschluss, mit Zwischenstück für frostfreie Tiefe 800 mm, setzen in Beton C 12/15, Bettungsdicke 10 cm.;40,0;St;gaeb;3937550.x83
+43;Abwasserkanal reinigen, Regenwasserkanal, Kreisquerschnitt, DN 150, aus Kunststoff, im Hochdruckstrahlverfahren, Haltungslänge bis 30 m, Verschmutzungsgrad bis 15 %, Abfall aufsaugen und laden, Transport und Entsorgung der Abfälle werden gesondert vergütet.;200,0;m;gaeb;3937550.x83
+44;Abwasserkanal reinigen, Schmutzwasserkanal, Kreisquerschnitt, DN 150, aus Kunststoff, im Hochdruckstrahlverfahren, Haltungslänge bis 30 m, Verschmutzungsgrad bis 15 %, Abfall aufsaugen und laden, Transport und Entsorgung der Abfälle werden gesondert vergütet.;60,0;m;gaeb;3937550.x83
+45;Abwasserkanal reinigen, Schmutzwasserkanal, Kreisquerschnitt, DN 200, aus Kunststoff, im Hochdruckstrahlverfahren, Haltungslänge bis 30 m, Verschmutzungsgrad bis 15 %, Abfall aufsaugen und laden, Transport und Entsorgung der Abfälle werden gesondert vergütet.;750,0;m;gaeb;3937550.x83
+46;Abwasserkanal reinigen, Regenwasserkanal, Kreisquerschnitt, DN 250, aus Kunststoff, im Hochdruckstrahlverfahren, Haltungslänge bis 30 m, Verschmutzungsgrad bis 15 %, Abfall aufsaugen und laden, Transport und Entsorgung der Abfälle werden gesondert vergütet.;500,0;m;gaeb;3937550.x83
+47;Abwasserkanal reinigen, Regenwasserkanal, Kreisquerschnitt, DN 315, aus Kunststoff, im Hochdruckstrahlverfahren, Haltungslänge bis 30 m, Verschmutzungsgrad bis 15 %, Abfall aufsaugen und laden, Transport und Entsorgung der Abfälle werden gesondert vergütet.;115,0;m;gaeb;3937550.x83
+48;Abwasserkanal reinigen, Regenwasserkanal, Kreisquerschnitt, DN 400, aus Kunststoff, im Hochdruckstrahlverfahren, Haltungslänge bis 30 m, Verschmutzungsgrad bis 15 %, Abfall aufsaugen und laden, Transport und Entsorgung der Abfälle werden gesondert vergütet.;70,0;m;gaeb;3937550.x83
+49;Versickeranlage reinigen, im Hochdruckstrahlverfahren, Abfall aufsaugen und laden, mit Wasserrückgewinnung, Transport und Entsorgung der Abfälle werden gesondert vergütet, Verschmutzungshöhe über 15 bis 20 cm, für Regenwasser, quaderförmig, Zugang über Schacht direkt in die Speicher-/Versickeranlage;2,0;St;gaeb;3937550.x83
+50;Optische Inspektion des Abwasserkanales, DIN EN 13508-2, DWA-M 149-2, DWA-M 149-5, Regenwasserkanal, Kreisquerschnitt, mit TV-Kamera mit flexiblem Schiebegestänge, mit Drehschwenkkopf, mit aufrechtem und seitenrichtigem Bild, Dokumentation wird gesondert vergütet, bis DN 200, Haltungslänge bis 30 m.;200,0;m;gaeb;3937550.x83
+51;Optische Inspektion des Abwasserkanales, DIN EN 13508-2, DWA-M 149-2, DWA-M 149-5, Schmutzwasserkanal, Kreisquerschnitt, mit TV-Kamera mit flexiblem Schiebegestänge, mit Drehschwenkkopf, mit aufrechtem und seitenrichtigem Bild, Dokumentation wird gesondert vergütet, bis DN 200, Haltungslänge über 30;810,0;m;gaeb;3937550.x83
+52;Optische Inspektion des Abwasserkanales, DIN EN 13508-2, DWA-M 149-2, DWA-M 149-5, Regenwasserkanal, Kreisquerschnitt, mit Satellitenkamera auf Fahrwagen, mit Drehschwenkkopf, mit aufrechtem und seitenrichtigem Bild, Dokumentation wird gesondert vergütet, über DN 200 bis DN 400, Haltungslänge über 6;685,0;m;gaeb;3937550.x83
+53;Optische Inspektion des Schachtes, DIN EN 13508-2, DWA-M 149-2, DWA-M 149-5, in Schmutzwasserkanal, durch Sichtprüfung von Geländeoberkante, Dokumentation wird gesondert vergütet, runder Schacht, DN 1000, Tiefe über 2 bis 4 m, Einstiegsöffnung rund, Durchmesser 625 mm, Deckel verschraubt, Klasse D 4;1,0;St;gaeb;3937550.x83
+54;Optische Inspektion des Schachtes, DIN EN 13508-2, DWA-M 149-2, DWA-M 149-5, in Schmutzwasserkanal, durch Sichtprüfung von Geländeoberkante, Dokumentation wird gesondert vergütet, runder Schacht, Tiefe über 2 bis 4 m, Einstiegsöffnung rund, Durchmesser 625 mm, Deckel verschraubt, Klasse D 400 DIN EN;10,0;St;gaeb;3937550.x83
+55;Optische Inspektion des Schachtes, DIN EN 13508-2, DWA-M 149-2, DWA-M 149-5, in Schmutzwasserkanal, durch Sichtprüfung von Geländeoberkante, Dokumentation wird gesondert vergütet, runder Schacht, Tiefe bis 2 m, Einstiegsöffnung rund, Durchmesser 625 mm, Deckel verschraubt, Klasse D 400 DIN EN 124-1.;10,0;St;gaeb;3937550.x83
+56;Optische Inspektion des Schachtes, DIN EN 13508-2, DWA-M 149-2, DWA-M 149-5, in Regenwasserkanal, durch Sichtprüfung von Geländeoberkante, Dokumentation wird gesondert vergütet, runder Schacht, Tiefe bis 2 m, Einstiegsöffnung rund, Deckel verschraubt, Klasse D 400 DIN EN 124-1.;20,0;St;gaeb;3937550.x83
+57;Dokumentation der Inspektion als Untersuchungsbericht mit Bildern, gemäß BFR Abwasser des BImA und BMVg, je Haltung/Leitung, als schriftlicher Bericht, einschl. Überspielen der Dateien auf Datenträger, Datenträger wird gesondert vergütet, Format PDF, Abrechnung nach Anzahl Haltungen/Leitungen.;80,0;St;gaeb;3937550.x83
+1;Pumpe für offene Wasserhaltung liefern, betriebs-;2,0;St;gaeb;3937550.x83
+2;Pumpe unterhalten und betriebsbereit vorhalten.;120,0;d;gaeb;3937550.x83
+3;Pumpe betreiben.;600,0;h;gaeb;3937550.x83
+4;Dränleitung aus Kunststoff-Vollsickerrohr, Form A, PVC-U DIN 1187, DN 100, mit Ummantelung aus Geotextil, in vorh. Graben, Tiefe bis 0,3 m, Höhe über Grabensohle 5 cm.;200,0;m;gaeb;3937550.x83
+5;Pumpensumpf herstellen und räumen, aus Filterrohren, lichter Durchmesser 600 mm, Tiefe bis 4 m.;2,0;St;gaeb;3937550.x83
+1;Stundenlohnarbeiten durch Vorarbeiter/-in;10,0;h;gaeb;3937550.x83
+2;Stundenlohnarbeiten durch Baufacharbeiter/-in;40,0;h;gaeb;3937550.x83
+3;Stundenlohnarbeiten durch Bauhelfer/-in;40,0;h;gaeb;3937550.x83
+1;LKW, mit Fahrer/-in, einsetzen,;20,0;h;gaeb;3937550.x83
+2;Nutzlast 20 bis 30 t.;10,0;h;gaeb;3937550.x83
+3;Abbruchhammer, einsetzen,;15,0;h;gaeb;3937550.x83
+4;Hydraulikbagger, mit Fahrer/-in, einsetzen,;25,0;h;gaeb;3937550.x83
+5;Rüttelplatte, mit Bedienungspersonal, einsetzen,;15,0;h;gaeb;3937550.x83
+1;Trennlage aus PE-Folie Dicke 0,2 mm, 2lagig, Stöße überlappen,;8639,0;m2;gaeb;3937550.x83
+2;Perimeter-Dämmung;716,0;m2;gaeb;3937550.x83
+3;Perimeter-Dämmung;6924,0;m2;gaeb;3937550.x83
+4;Perimeterdämmung auf Bodenplatte;37,0;m2;gaeb;3937550.x83
+5;Perimeter-Dämmung;670,0;m2;gaeb;3937550.x83
+6;Perimeter-Dämmung;325,0;m2;gaeb;3937550.x83
+7;Perimeter-Dämmung;12,0;m2;gaeb;3937550.x83
+8;Perimeter-Dämmung;26,0;m2;gaeb;3937550.x83
+9;Perimeter-Dämmung;9,0;m2;gaeb;3937550.x83
+10;Perimeter-Dämmung;40,0;m2;gaeb;3937550.x83
+11;Perimeterdämmung auf Fundamenten;398,0;m2;gaeb;3937550.x83
+12;Perimeter-Dämmung;580,0;m2;gaeb;3937550.x83
+1;Dämmkeil aus Polystyrol- Hartschaum, DIN EN 13163 EPS,;550,0;m;gaeb;3937550.x83
+2;Liefern und fachgerechtes Herstellen einer vollflächigen Bauwerksabdichtung oberseitig an erdberührten Fundamenten und Bodenplatten gemäß DIN 18533-1 und DIN 18533-3 gegen Bodenfeuchte und nicht drückendes Wasser, Wassereinwirkungsklasse W1.1-E.;440,0;m2;gaeb;3937550.x83
+3;Liefern und fachgerechtes Herstellen einer vollflächigen Bauwerksabdichtung seitlich an erdberührten Fundamenten und aufgehenden Bauteilen gemäß DIN 18533-1 und DIN 18533-3 gegen Bodenfeuchte und nicht drückendes Wasser, Wassereinwirkungsklasse W1.1-E.;1280,0;m2;gaeb;3937550.x83
+4;Liefern und fachgerechtes Herstellen einer vollflächigen Bauwerksabdichtung seitlich an erdberührten Fundamenten und aufgehenden Bauteilen gemäß DIN 18533-1 und DIN 18533-3 gegen Bodenfeuchte und nicht drückendes Wasser, Wassereinwirkungsklasse W2.1-E.;360,0;m2;gaeb;3937550.x83
+5;Liefern und verlegen einer Schutz- und Dränbahn mit aufkaschiertem Filtervlies, zum Schutz der Bauwerksabdichtung und Perimeterdämmung an erdberührten Bauteilen. Einschließlich Ausbildung aller Stöße, Anschlüsse und Befestigungen gemäß Herstellerangaben.;1720,0;m2;gaeb;3937550.x83
+6;Liefern und fachgerechtes Einbauen eines beidseitig beschichteten Fugenbleches zur Abdichtung von Arbeitsfugen in wasserbeanspruchten Stahlbetonbauteilen. Wassereinwirkungsklasse W2.1-E in WU-Bauteilen mit Beanspruchungsklasse 1 der DAfStb-Richtlinie;86,0;m;gaeb;3937550.x83
+1;Anfertigen der technischen Ausführungsunterlagen;1,0;psch;gaeb;3937550.x83
+2;Frischbetonverbundsystem mit Hybridverbundtechnologie auf Basis einer hochflexiblen Kunststoffdichtungsbahn aus flexiblen Polyolefinen liefern und auf einem den Herstellervorgaben entsprechenden Untergrund in horizontalen Bereichen der Bodenplatte sach- und fachgerecht nach den Verarbeitungsrichtlin;1,0;psch;gaeb;3937550.x83
+1;Teilnahme des BBQ-Koordinators einschließlich fachkundiger Person an einem BBQ-Ausführungsverlaufsgespräch gemäß DIN 1045-1000 einschließlich Vor- und Nachbereitung sowie Protokollbearbeitung.;3,0;St;gaeb;3937550.x83
+2;Erstellen des BBQ-Konzeptes gemäß DIN 1045-1000 einschließlich Abstimmung mit Auftraggeber, Objektüberwachung und Prüfingenieur sowie Einarbeitung der Erstkorrekturen.;1,0;psch;gaeb;3937550.x83
+3;Fortschreibung des BBQ-Konzeptes infolge des Bauablaufs bis zur Schlussrevision einschließlich Aktualisierung der Dokumente.;3,0;St;gaeb;3937550.x83
+4;Erstellung und Übergabe der vollständigen Bestandsdokumentation zum BBQ-Konzept einschließlich sämtlicher Nachweise, Prüfprotokolle, Freigaben und Revisionsunterlagen.;1,0;psch;gaeb;3937550.x83
+5;gem. ZTV,;1,0;psch;gaeb;3937550.x83
+6;Werkstattplanung des AN für Betonfertigteile;1,0;psch;gaeb;3937550.x83
+7;Erstellen statischer Nachweise durch den AN  zu vorbeschriebener;1,0;psch;gaeb;3937550.x83
+8;Überwachung des Einbaus von Beton der Überwachungsklasse 2 DIN 1045-3 durch eine anerkannte Überwachungsstelle.;1,0;St;gaeb;3937550.x83
+9;Gebäude gem. Planung,  - Wandartiger Träger,;1,0;psch;gaeb;3937550.x83
+10;Temporäre Abstützungsmaßnahmen;32,0;m;gaeb;3937550.x83
+11;Vorhaltung, ggf.  1 - 2 malige Umsetzung zur Schaffung von Baufreiheit,;383,0;mMt;gaeb;3937550.x83
+12;Zulage für Verwendung von Beton mit Größtkorn 8 mm;412,0;m3;gaeb;3937550.x83
+1;Ortbeton Bodenplatte,;12,0;m3;gaeb;3937550.x83
+2;Einhäuptige Randschalung;12,0;m2;gaeb;3937550.x83
+3;Ortbeton Bodenplatte,;509,0;m3;gaeb;3937550.x83
+4;Herstellen partielle Bodenplattenschwächung umlaufend oberseitig,;75,0;m2;gaeb;3937550.x83
+5;Einhäuptige Randschalung;96,0;m2;gaeb;3937550.x83
+6;Ortbeton Bodenplatte,;33,0;m3;gaeb;3937550.x83
+7;Einhäuptige Randschalung;40,0;m2;gaeb;3937550.x83
+8;Ortbeton Bodenplatte Waschplatz,;12,0;m3;gaeb;3937550.x83
+9;Einhäuptige Randschalung;10,0;m2;gaeb;3937550.x83
+10;Ortbeton Bodenplatte Grube Sinkstoffabscheider;3,0;m3;gaeb;3937550.x83
+11;Einhäuptige Randschalung;4,0;m2;gaeb;3937550.x83
+12;Ortbeton Bodenplatte Haustechnik;27,0;m3;gaeb;3937550.x83
+13;Einhäuptige Randschalung;13,0;m2;gaeb;3937550.x83
+14;Ortbeton Bodenplatte d=25cm, Oberfläche flügelgeglätttet;151,0;m3;gaeb;3937550.x83
+15;Einhäuptige Randschalung;64,0;m2;gaeb;3937550.x83
+16;Ortbeton Bodenplatte Lager Bauhallen, Oberfläche flügelgeglätttet;228,0;m3;gaeb;3937550.x83
+17;Herstellen, Liefern und Einbauen einer verlorenen Randschalung für die Betonage der Bodenplatte als Zulage zu Vorposition;49,0;m2;gaeb;3937550.x83
+18;Herstellen, Liefern und Einbauen eines Kantenschutzprofils gem. Bodenspiegel;160,0;m;gaeb;3937550.x83
+19;Ortbeton Bodenplatte,;754,0;m3;gaeb;3937550.x83
+20;Einhäuptige Randschalung;173,0;m2;gaeb;3937550.x83
+21;Ortbeton Bodenplatte,;749,0;m3;gaeb;3937550.x83
+22;Einhäuptige Randschalung;125,0;m2;gaeb;3937550.x83
+23;Ortbeton Bodenplatte Grube Lackierkabine;12,0;m3;gaeb;3937550.x83
+24;Einhäuptige Randschalung;7,0;m2;gaeb;3937550.x83
+25;Ortbeton Bodenplatte Hauseinführungen Trinkwasser / Gas und Elektro;2,0;m3;gaeb;3937550.x83
+26;Einhäuptige Randschalung;4,0;m2;gaeb;3937550.x83
+27;Ortbeton Bodenplatte Außenlage, Oberfläche Besenstrich;59,0;m3;gaeb;3937550.x83
+28;Einhäuptige Randschalung;31,0;m2;gaeb;3937550.x83
+29;Herstellen, Liefern und Einbauen einer verlorenen Randschalung für die Betonage der Bodenplatte als Zulage zu Vorposition;25,0;m2;gaeb;3937550.x83
+30;Ortbeton Streifenfundament,;15,552;m3;gaeb;3937550.x83
+31;Schalung der vorbeschriebenen Streifenfundamente,;77,76;m2;gaeb;3937550.x83
+32;Ortbeton Streifenfundament,;7,776;m3;gaeb;3937550.x83
+33;Schalung der vorbeschriebenen Streifenfundamente,;38,88;m2;gaeb;3937550.x83
+34;Ortbeton Streifenfundament,;48,308;m3;gaeb;3937550.x83
+35;Schalung der vorbeschriebenen Streifenfundamente,;193,232;m2;gaeb;3937550.x83
+36;Ortbeton Streifenfundament,;119,051;m3;gaeb;3937550.x83
+37;Schalung der vorbeschriebenen Streifenfundamente,;297,627;m2;gaeb;3937550.x83
+38;Ortbeton Streifenfundament,;490,632;m3;gaeb;3937550.x83
+39;Schalung der vorbeschriebenen Streifenfundamente,;981,264;m2;gaeb;3937550.x83
+40;Ortbeton Streifenfundament,;162,048;m3;gaeb;3937550.x83
+41;Schalung der vorbeschriebenen Streifenfundamente,;270,08;m2;gaeb;3937550.x83
+42;Ortbeton Streifenfundament,;25,2;m3;gaeb;3937550.x83
+43;Schalung der vorbeschriebenen Streifenfundamente,;100,8;m2;gaeb;3937550.x83
+44;Ortbeton Streifenfundament,;25,776;m3;gaeb;3937550.x83
+45;Schalung der vorbeschriebenen Streifenfundamente,;64,44;m2;gaeb;3937550.x83
+46;Ortbeton Streifenfundament,;25,272;m3;gaeb;3937550.x83
+47;Schalung der vorbeschriebenen Streifenfundamente,;42,12;m2;gaeb;3937550.x83
+48;Ortbeton Streifenfundament,;2,716;m3;gaeb;3937550.x83
+49;Schalung der vorbeschriebenen Streifenfundamente,;13,58;m2;gaeb;3937550.x83
+50;Ortbeton Streifenfundament,;7,35;m3;gaeb;3937550.x83
+51;Schalung der vorbeschriebenen Streifenfundamente,;18,375;m2;gaeb;3937550.x83
+52;Ortbeton Streifenfundament,;18,393;m3;gaeb;3937550.x83
+53;Schalung der vorbeschriebenen Streifenfundamente,;36,785;m2;gaeb;3937550.x83
+54;Ortbeton Streifenfundament,;13,104;m3;gaeb;3937550.x83
+55;Schalung der vorbeschriebenen Streifenfundamente,;25,2;m2;gaeb;3937550.x83
+56;Ortbeton Fundament,;156,6;m3;gaeb;3937550.x83
+57;Schalung der vorbeschriebenen Fundamente,;391,5;m2;gaeb;3937550.x83
+58;Ortbeton Fundament,;3,9;m3;gaeb;3937550.x83
+59;Schalung der vorbeschriebenen Fundamente,;10,0;m2;gaeb;3937550.x83
+60;Ortbeton Fundament,;11,8;m3;gaeb;3937550.x83
+61;Schalung der vorbeschriebenen Fundamente,;30,0;m2;gaeb;3937550.x83
+62;Ortbeton Fundament, Spanabsaugung Zimmerer;41,04;m3;gaeb;3937550.x83
+63;Schalung der vorbeschriebenen Fundamente,;37,0;m2;gaeb;3937550.x83
+64;Ortbeton Auffüllung Untergrund geneigt, obere Betonfläche waagerecht,;75,0;m3;gaeb;3937550.x83
+65;Zulage für oberseitigen Versprung der Bodenplatte, umlaufend;760,0;m;gaeb;3937550.x83
+66;Mehraufwand Bodenplattensprung;569,0;m;gaeb;3937550.x83
+67;Bodenplatte Ortbeton, d: bis 80 cm,;80,0;St;gaeb;3937550.x83
+68;Liefern und Einbauen einer Trennlage aus;120,0;m2;gaeb;3937550.x83
+69;Ortbeton Stahlbeton-Streifenfundament;134,753;m3;gaeb;3937550.x83
+70;Schalung der vorbeschriebenen Streifenfundamente,;539,01;m2;gaeb;3937550.x83
+71;Ortbeton Stahlbeton-Streifenfundament;6,05;m3;gaeb;3937550.x83
+72;Schalung der vorbeschriebenen Streifenfundamente,;24,2;m2;gaeb;3937550.x83
+73;Ortbeton Stahlbeton-Streifenfundament;8,35;m3;gaeb;3937550.x83
+74;Schalung der vorbeschriebenen Streifenfundamente,;24,2;m2;gaeb;3937550.x83
+75;Ortbeton Bodenplatte,;120,0;m3;gaeb;3937550.x83
+76;Einhäuptige Randschalung;37,0;m2;gaeb;3937550.x83
+77;Mehraufwand Bodenplattensprung, oberseitig, ca. 5,4m x 0,5m x 0,20m;3,0;m2;gaeb;3937550.x83
+78;Bodenplatte Ortbeton, d: bis 25 cm;2,0;St;gaeb;3937550.x83
+1;Ortbeton Außenwand aus Stahlbeton, in Sandwichbauweise ausgeführt, inkl. druckfeste Dämmung XPS d=20cm, inkl. Ankersystem , Vorsatz-Schale Ortbeton, d=15cm, SB3;213,0;m2;gaeb;3937550.x83
+2;Ortbeton tragende Wände,;2727,0;m2;gaeb;3937550.x83
+3;Ortbeton tragende Wände,;7079,0;m2;gaeb;3937550.x83
+4;Schalung Außenwand, Schalungshaut geeignet für sichtbar;19612,0;m2;gaeb;3937550.x83
+5;Liefern, aufbauen, vorhalten und nach Abschluss der Arbeiten abbauen sämtlicher erforderlicher Arbeits- und Schalungsgerüste für die Herstellung der im Leistungsverzeichnis beschriebenen Stahlbetonwände bis 9,00 m Höhe einschließlich aller Nebenleistungen.;19612,0;m2;gaeb;3937550.x83
+6;Schalung Schalhaut SB2 wie beschrieben,;7880,0;m2;gaeb;3937550.x83
+7;Hydrophobierung gemäß 	  DIN EN 1504-2 der vorbeschriebenen;7880,0;m2;gaeb;3937550.x83
+8;Außenwand Innenseiten mit Oberfläche wie beschrieben,;3,0;St;gaeb;3937550.x83
+9;Außenwand Innenseiten mit Oberfläche wie beschrieben,;1,0;St;gaeb;3937550.x83
+10;Außenwand Innenseiten mit Oberfläche wie beschrieben,;12,0;St;gaeb;3937550.x83
+11;Außenwand Innenseiten mit Oberfläche wie beschrieben,;4,0;St;gaeb;3937550.x83
+12;Außenwand Innenseiten mit Oberfläche wie beschrieben,;4,0;St;gaeb;3937550.x83
+13;Außenwand Innenseiten mit Oberfläche wie beschrieben,;15,0;St;gaeb;3937550.x83
+14;Außenwand Innenseiten mit Oberfläche wie beschrieben,;6,0;St;gaeb;3937550.x83
+15;Außenwand Innenseiten mit Oberfläche wie beschrieben,;29,0;St;gaeb;3937550.x83
+16;Außenwand Innenseiten mit Oberfläche wie beschrieben,;10,0;St;gaeb;3937550.x83
+17;Außenwand Innenseiten mit Oberfläche wie beschrieben,;72,0;St;gaeb;3937550.x83
+18;Außenwand Innenseiten mit Oberfläche wie beschrieben,;3,0;St;gaeb;3937550.x83
+19;Außenwand Innenseiten mit Oberfläche wie beschrieben,;3,0;St;gaeb;3937550.x83
+20;Innenwand  mit SB 2 Oberfläche wie beschrieben,;33,0;St;gaeb;3937550.x83
+21;Gebäudetrennfuge schallbrückenfrei anlegen, mit;64,0;m;gaeb;3937550.x83
+22;Ankerlöcher schließen Brandschutzmörtel;939,0;St;gaeb;3937550.x83
+23;Stb-Aufzugsschacht 25 cm, EG- 3.OG, 1,775x2,70 m;162,0;m2;gaeb;3937550.x83
+24;Aufzugsunterfahrt 1,775x2,70m;1,0;St;gaeb;3937550.x83
+25;Ortbeton Außenwand,;59,0;m2;gaeb;3937550.x83
+26;Ortbeton Unterzug, als Stahlbeton, Normalbeton C 25/30 DIN EN 206,;145,0;m;gaeb;3937550.x83
+27;Schalung Außenwand, Stirnabschalung wird gesondert vergütet, Schalungshaut geeignet für das Aufbringen von Dünnputz auf erhärtete Betonflächen, als Rahmenschalung, für scharfkantige Betonkanten, Hüllrohr aus Kunststoff, Verschluss der Ankerstellen durch Faserzementstopfen, Gestaltung der Ankerstelle;118,0;m2;gaeb;3937550.x83
+1;Ortbeton Deckenplatte,;2,0;m3;gaeb;3937550.x83
+2;Ortbeton Deckenplatte, d=18cm,;14,0;m3;gaeb;3937550.x83
+3;Schalung zu vorbeschriebenem Kragarm,;54,0;m2;gaeb;3937550.x83
+4;Ortbeton Deckenplatte,;2556,0;m2;gaeb;3937550.x83
+5;Ortbeton Deckenplatte,;4289,0;m2;gaeb;3937550.x83
+6;Ortbeton Deckenplatte,;84,0;m2;gaeb;3937550.x83
+7;Ortbeton Deckenplatte,;43,0;m2;gaeb;3937550.x83
+8;Liefern, Vorhalten, Umsetzen und Räumen der Schalung einschließlich aller erforderlichen Traggerüste, Unterstützungen, Aussteifungen, Joche, Randabschalungen und Nebenleistungen für Stahlbetondecken.;7036,0;m2;gaeb;3937550.x83
+9;Liefern, Vorhalten, Umsetzen und Räumen der Schalung einschließlich aller erforderlichen Traggerüste, Unterstützungen, Aussteifungen, Joche, Randabschalungen und Nebenleistungen für Stahlbetondecken.;40,0;m2;gaeb;3937550.x83
+10;Schalung Deckenplatte als Randschalung,;1162,0;m;gaeb;3937550.x83
+11;Zulage zu vorbeschriebenen Decken zur Aufnahme von;2556,0;m2;gaeb;3937550.x83
+12;Dehnfugenabstellung Decke 25 cm,;60,0;m;gaeb;3937550.x83
+13;Schalung Decke Abstellung;120,0;m;gaeb;3937550.x83
+14;Hilfsgründung Durchstützung Stahlsprieße;1860,0;m2;gaeb;3937550.x83
+15;ZwischenpodesteTRH Ortbeton C30/37 XF2 XC1 F3 D= 25cm;50,0;m2;gaeb;3937550.x83
+16;Ortbeton Attika,;170,0;m3;gaeb;3937550.x83
+17;Schalung zu vorbeschriebener Attika, Bauteilhöhe 0,55m bis ca. 1,35m;636,0;m2;gaeb;3937550.x83
+1;Normalbeton C 40/50 DIN EN 206-1, DIN 1045-2,;76,3;m;gaeb;3937550.x83
+2;Normalbeton C 40/50 DIN EN 206-1, DIN 1045-2,;22,75;m;gaeb;3937550.x83
+3;Normalbeton C 40/50 DIN EN 206-1, DIN 1045-2,;49,5;m;gaeb;3937550.x83
+4;Normalbeton C 40/50 DIN EN 206-1, DIN 1045-2,;92,4;m;gaeb;3937550.x83
+5;Ortbeton Unterzug, als Stahlbeton, Normalbeton C 30/37 DIN EN 206,;14,35;m;gaeb;3937550.x83
+6;Ortbeton Unterzug, als Stahlbeton, Normalbeton C 30/37 DIN EN 206,;113,18;m;gaeb;3937550.x83
+7;Ortbeton Unterzug, als Stahlbeton, Normalbeton C 30/37 DIN EN 206,;7,75;m;gaeb;3937550.x83
+8;Ortbeton Unterzug, als Stahlbeton, Normalbeton C 30/37 DIN EN 206,;10,375;m;gaeb;3937550.x83
+9;Ortbeton Unterzug, als Stahlbeton, Normalbeton C 30/37 DIN EN 206,;78,4;m;gaeb;3937550.x83
+10;Ortbeton Unterzug, als Stahlbeton, Normalbeton C 30/37 DIN EN 206,;102,05;m;gaeb;3937550.x83
+11;Ortbeton Unterzug, als Stahlbeton, Normalbeton C 30/37 DIN EN 206,;6,575;m;gaeb;3937550.x83
+12;Ortbeton Unterzug, als Stahlbeton, Normalbeton C 30/37 DIN EN 206,;182,95;m;gaeb;3937550.x83
+13;Ortbeton Unterzug, als Stahlbeton, Normalbeton C 30/37 DIN EN 206,;3,75;m;gaeb;3937550.x83
+14;Ortbeton Unterzug, als Stahlbeton, Normalbeton C 30/37 DIN EN 206,;7,5;m;gaeb;3937550.x83
+15;Ortbeton Unterzug, als Stahlbeton, Normalbeton C 30/37 DIN EN 206,;195,85;m;gaeb;3937550.x83
+16;Ortbeton Unterzug, als Stahlbeton, Normalbeton C 30/37 DIN EN 206,;95,2;m;gaeb;3937550.x83
+17;Ortbeton Unterzug, als Stahlbeton, Normalbeton C 30/37 DIN EN 206,;715,07;m;gaeb;3937550.x83
+18;Ortbeton Unterzug, als Stahlbeton, Normalbeton C 30/37 DIN EN 206,;65,725;m;gaeb;3937550.x83
+19;Ortbeton Unterzug, als Stahlbeton, Normalbeton C 30/37 DIN EN 206,;23,9;m;gaeb;3937550.x83
+20;Ortbeton Unterzug, als Stahlbeton, Normalbeton C 30/37 DIN EN 206,;15,15;m;gaeb;3937550.x83
+21;Ortbeton Unterzug, als Stahlbeton, Normalbeton C 30/37 DIN EN 206,;16,575;m;gaeb;3937550.x83
+22;Ortbeton Unterzug, als Stahlbeton, Normalbeton C 30/37 DIN EN 206,;15,95;m;gaeb;3937550.x83
+23;Ortbeton Unterzug, als Stahlbeton, Normalbeton C 30/37 DIN EN 206,;31,9;m;gaeb;3937550.x83
+24;Ortbeton Unterzug, als Stahlbeton, Normalbeton C 30/37 DIN EN 206,;30,8;m;gaeb;3937550.x83
+25;Ortbeton Bandkonsole, als Stahlbeton, Normalbeton C 30/37 DIN EN 206,;14,35;m;gaeb;3937550.x83
+26;Ortbeton Bandkonsole, als Stahlbeton, Normalbeton C 30/37 DIN EN 206,;7,85;m;gaeb;3937550.x83
+27;Traggerüst Bemessungsklasse B Unterzug;1740,0;m;gaeb;3937550.x83
+1;Elementplanung für Stahlbetonfertigteile, einschließlich Stahl- und Stücklisten sowie Elementübersichts- und Verlegepläne inklusive statischer Berechnungen der Elemente auf Grundlage der Objektstatik. Sämtliche Randbedingungen wie Transport- und Montagezustände sind durch den AN zu berücksichtigen u;1,0;St;gaeb;3937550.x83
+2;Erstellung von den erforderlichen statischen Berechnungen des AN ergänzend zu Vorposition auf Basis der anzufertigenden Werkstattzeichnungen, einschließlich Abstimmung mit dem Prüfingenieur.;1,0;psch;gaeb;3937550.x83
+3;Imprägnierung  an Betonfertigteil,  innen,  Untergrund Sichtbeton - Anforderungen Klasse SB 2 gemäß DBV-Merkblatt, glatt;188,0;m2;gaeb;3937550.x83
+4;"Fertigteiltreppe  C 30/37 DIN EN 206; DIN 1045-2,";2,0;St;gaeb;3937550.x83
+5;"Fertigteiltreppe  C 30/37 DIN EN 206; DIN 1045-2,";4,0;St;gaeb;3937550.x83
+6;"Fertigteiltreppe  C 30/37 DIN EN 206; DIN 1045-2,";8,0;St;gaeb;3937550.x83
+7;Podestausklinkungen für die Auflagerung FT-Treppen,;44,8;m;gaeb;3937550.x83
+8;Fugenplatte zwischen FT-Treppen, Podesten und;53,76;m;gaeb;3937550.x83
+9;Liefern und einbauen Elastomerlager als linienförmiges;45,0;m;gaeb;3937550.x83
+10;Elastomerlager Anschluss Fußpunkt Bodenplatte;1,58;m;gaeb;3937550.x83
+11;Liefern und herstellen von Schutzabdeckung für die Treppen;94,0;m2;gaeb;3937550.x83
+12;Nachträgliches Schließen der Einbring- Öffnung in einer Stahlbetondecke;1,0;St;gaeb;3937550.x83
+13;Nachträgliches Schließen der Einbring- Öffnung in einer Stahlbetondecke;1,0;St;gaeb;3937550.x83
+14;"Fertigteil C 30/37 DIN EN 206; DIN 1045-2,";12,0;St;gaeb;3937550.x83
+15;für fachgerechte Fugenabdichtungen;103,0;m;gaeb;3937550.x83
+16;Liefern und fachgerechtes Montieren von Aufsatzattika-Fertigteilen aus Stahlbeton auf vorhandener Stahlbetondecke ,;100,0;m;gaeb;3937550.x83
+1;für Installationsdurchführungen;80,0;St;gaeb;3937550.x83
+2;für Installationsdurchführungen;20,0;St;gaeb;3937550.x83
+3;für Installationsdurchführungen;20,0;St;gaeb;3937550.x83
+4;für Installationsdurchführungen;20,0;St;gaeb;3937550.x83
+5;für Installationsdurchführungen;5,0;m2;gaeb;3937550.x83
+6;Stahlbetondeckenplatten aus Ortbeton wie beschrieben,;2,0;St;gaeb;3937550.x83
+7;Stahlbetondeckenplatten aus Ortbeton wie beschrieben,;44,0;St;gaeb;3937550.x83
+8;nach Angabe/ Freigabe Tragwerksplaner;25,0;St;gaeb;3937550.x83
+9;nach Angabe/ Freigabe Tragwerksplaner;5,0;St;gaeb;3937550.x83
+10;nach Angabe/ Freigabe Tragwerksplaner;5,0;St;gaeb;3937550.x83
+11;Stahlbetondeckenplatten aus Ortbeton wie beschrieben,;80,0;St;gaeb;3937550.x83
+12;Stahlbetondeckenplatten aus Ortbeton wie beschrieben,;20,0;St;gaeb;3937550.x83
+13;Stahlbetondeckenplatten aus Ortbeton wie beschrieben,;20,0;St;gaeb;3937550.x83
+14;Stahlbetondeckenplatten aus Ortbeton wie beschrieben,;20,0;St;gaeb;3937550.x83
+15;Stahlbetondeckenplatten aus Ortbeton wie beschrieben,;5,0;St;gaeb;3937550.x83
+16;für Installationsdurchführungen;190,0;St;gaeb;3937550.x83
+17;für Installationsdurchführungen;60,0;St;gaeb;3937550.x83
+18;für Installationsdurchführungen;25,0;St;gaeb;3937550.x83
+19;für Installationsdurchführungen;10,0;St;gaeb;3937550.x83
+20;für Installationsdurchführungen;10,0;m2;gaeb;3937550.x83
+21;für Installationsdurchführungen;100,0;St;gaeb;3937550.x83
+22;nach Angabe/ Freigabe Tragwerksplaner;100,0;St;gaeb;3937550.x83
+23;nach Angabe/ Freigabe Tragwerksplaner;30,0;St;gaeb;3937550.x83
+24;Stahlbetonwände aus Ortbeton wie beschrieben,;190,0;St;gaeb;3937550.x83
+25;Stahlbetonwände aus Ortbeton wie beschrieben,;60,0;St;gaeb;3937550.x83
+26;Stahlbetonwände aus Ortbeton wie beschrieben,;25,0;St;gaeb;3937550.x83
+27;Stahlbetonwände aus Ortbeton wie beschrieben,;10,0;St;gaeb;3937550.x83
+28;Stahlbetonwände aus Ortbeton wie beschrieben,;10,0;m2;gaeb;3937550.x83
+29;alle Geschosse,;40,0;m;gaeb;3937550.x83
+30;Bodenplatten, Deckenplatte,. Wände aus Stahlbeton;80,0;m;gaeb;3937550.x83
+1;Profilleiste für Kantenausbildung, dreieckig, aus Kunststoff, Leistenbreite bis 12 mm, Leistendicke bis 12 mm.;500,0;m;gaeb;3937550.x83
+2;Profilleiste für Kantenausbildung, trapezförmig, aus Kunststoff, Leistenbreite bis 12 mm, Leistendicke bis 12 mm.;250,0;m;gaeb;3937550.x83
+3;Ankerplatten aus S235 JR mit Korrosionsschutz für Atmosphäre S;140,0;St;gaeb;3937550.x83
+4;Elastomerlager für statische Bauteillagerung und Trittschalldämmg;10,0;m;gaeb;3937550.x83
+5;Liefern und fachgerechtes einbauen von Rückbiegeanschlüssen zur kraftschlüssigen Verbindung zweier zeitlich getrennt hergestellter Stahlbetonbauteile in den Treppenhäusern 1 und 2;23,0;St;gaeb;3937550.x83
+6;Liefern und fachgerechtes einbauen von Rückbiegeanschlüssen zur kraftschlüssigen Verbindung zweier zeitlich getrennt hergestellter Stahlbetonbauteile in den Bauhallen 1-4;44,0;St;gaeb;3937550.x83
+7;Liefern und fachgerechtes einbauen von Rückbiegeanschlüssen zum nachträglichen Schließen der Attika im Bereich der Binderauflager in den Zimmererhallen;46,0;St;gaeb;3937550.x83
+8;Liefern und fachgerechtes einbauen von Rückbiegeanschlüssen  in Wand und Decke zum nachträglichen Schließen der Brüstungen;20,0;St;gaeb;3937550.x83
+9;Liefern und fachgerecht einbauen von mechanischen Bewehrungsanschlüssen als Schraubmuffenverbindung zur kraftschlüssigen Verbindung von Betonstabstahl für eine zukünftige Aufstockung;64,0;St;gaeb;3937550.x83
+10;Liefern und fachgerecht einbauen von mechanischen Bewehrungsanschlüssen als Schraubmuffenverbindung zur kraftschlüssigen Verbindung von Betonstabstahl für eine zukünftige Aufstockung;88,0;St;gaeb;3937550.x83
+11;Liefern und fachgerecht einbauen von mechanischen Bewehrungsanschlüssen als Schraubmuffenverbindung zur kraftschlüssigen Verbindung von Betonstabstahl für eine zukünftige Aufstockung,;212,0;St;gaeb;3937550.x83
+12;Liefern und fachgerecht einbauen von Bewehrungsankern mit aufgestauchtem Ankerkopf zur Herstellung einer nachträglich betonierten Stahlbetonkonsole als Auflager für Kranbahnträger.;26,0;St;gaeb;3937550.x83
+13;Bewehrung für sämtliche Stahlbetonbauteile aus Ortbeton;865,0;t;gaeb;3937550.x83
+1;Nachinstallationsmauerwerk;22,0;m2;gaeb;3937550.x83
+2;Gleitender Anschluss F90 an Stb. Decke;8,1;m;gaeb;3937550.x83
+3;Anschluss von Mauerwerk an Stahlbauteile mittels;32,7;m;gaeb;3937550.x83
+4;Wände aus Kalksandsteinmauerwerk wie beschrieben,;2,0;St;gaeb;3937550.x83
+5;Wände aus Kalksandsteinmauerwerk wie beschrieben,;1,0;St;gaeb;3937550.x83
+6;nichttragendes Sichtmauerwerk;350,85;m2;gaeb;3937550.x83
+7;Anschluss von Mauerwerk an Stahlbauteile mittels;341,9;m;gaeb;3937550.x83
+1;Einheben und Einbau des Fundamentrahmens Hebebühne;12,0;St;gaeb;3937550.x83
+2;Einheben und Einbau des Senkrahmens der Hebebühne;12,0;St;gaeb;3937550.x83
+1;Kanalrohr mit Stecksystem, DN 110;55,0;m;gaeb;3937550.x83
+2;Kanalrohrbögen DN 110;45,0;St;gaeb;3937550.x83
+3;Bodendurchführung DN 110;13,0;St;gaeb;3937550.x83
+4;Muffenstopfen DN 110;13,0;St;gaeb;3937550.x83
+5;Dichtheitsprüfung n. DIN EN 1610 v. Leitungen bis DN 400;55,0;m;gaeb;3937550.x83
+6;Wanddurchführung DN 110;13,0;St;gaeb;3937550.x83
+7;Dokumentation der Dichtheitsprüfung;1,0;St;gaeb;3937550.x83
+8;Revisionsunterlagen, 2-fach;1,0;St;gaeb;3937550.x83
+9;Mauerkragen-Set für Kabuflex NW 110;1,0;St;gaeb;3937550.x83
+10;Universal Ringraumdichtung DN110;2,0;St;gaeb;3937550.x83
+11;Übergangsmuffe Leerrohr DN110;1,0;St;gaeb;3937550.x83
+12;Kabelschutzrohr DN 110 aus PE;22,0;m;gaeb;3937550.x83
+1;Ankerplatte für die Aufnahme von Kranbahnauflager liefern und lage-, höhen- und fluchtgerecht in die Stahlbetonkonsolen einbauen, max. Neigung 0,5°. Einschließlich Rückverankerung, Befestigung in der Schalung, Einbauhilfen, Schutz der Anschlussflächen sowie aller Nebenleistungen. Ausführung schweißg;20,0;St;gaeb;3937550.x83
+2;Wie vor beschrieben, jedoch Abmessungen: mind. 300mm x 200mm;20,0;St;gaeb;3937550.x83
+1;Abwasser-Kanalrohr mit Stecksystem DN 100;330,0;m;gaeb;3937550.x83
+2;Abwasser-Kanalrohr mit Stecksystem DN 125;220,0;m;gaeb;3937550.x83
+3;Abwasser-Kanalrohr mit Stecksystem DN 150;25,0;m;gaeb;3937550.x83
+4;Regenwasser-Kanalrohr mit Stecksystem DN 100;100,0;m;gaeb;3937550.x83
+5;Regenwasser-Kanalrohr mit Stecksystem DN 150;15,0;m;gaeb;3937550.x83
+6;Abwasser - Rohrbögen DN 100;135,0;St;gaeb;3937550.x83
+7;Abwasser - Rohrbögen DN 125;55,0;St;gaeb;3937550.x83
+8;Abwasser - Rohrbögen DN 150;5,0;St;gaeb;3937550.x83
+9;Abwasser - Abzweige 45° DN 100;20,0;St;gaeb;3937550.x83
+10;Abwasser - Abzweige 45° DN 125;20,0;St;gaeb;3937550.x83
+11;Abwasser - Abzweige 45° DN 150;5,0;St;gaeb;3937550.x83
+12;Abwasser - Muffenstopfen DN 100;5,0;St;gaeb;3937550.x83
+13;Abwasser - Muffenstopfen DN 125;5,0;St;gaeb;3937550.x83
+14;Abwasser - Muffenstopfen DN 150;5,0;St;gaeb;3937550.x83
+15;Abwasser - Doppelmuffe DN 100;5,0;St;gaeb;3937550.x83
+16;Abwasser - Doppelmuffe DN 125;5,0;St;gaeb;3937550.x83
+17;Abwasser - Doppelmuffe DN 150;5,0;St;gaeb;3937550.x83
+18;Abwasser - Überschiebmuffe DN 100;5,0;St;gaeb;3937550.x83
+19;Abwasser - Überschiebmuffe DN 125;5,0;St;gaeb;3937550.x83
+20;Abwasser - Überschiebmuffe DN 150;5,0;St;gaeb;3937550.x83
+21;Abwasser - Reduktionsstücke DN 125/100;5,0;St;gaeb;3937550.x83
+22;Regenwasser - Rohrbögen DN 100;20,0;St;gaeb;3937550.x83
+23;Regenwasser - Rohrbögen DN 150;5,0;St;gaeb;3937550.x83
+24;Regenwasser - Abzweige 45° DN 150;5,0;St;gaeb;3937550.x83
+25;Regenwasser - Muffenstopfen DN 100;5,0;St;gaeb;3937550.x83
+26;Regenwasser - Muffenstopfen DN 150;3,0;St;gaeb;3937550.x83
+27;Regenwasser - Doppelmuffe DN 100;3,0;St;gaeb;3937550.x83
+28;Regenwasser - Doppelmuffe DN 150;3,0;St;gaeb;3937550.x83
+29;Regenwasser - Überschiebmuffe DN 100;3,0;St;gaeb;3937550.x83
+30;Regenwasser - Überschiebmuffe DN 150;3,0;St;gaeb;3937550.x83
+31;Regenwasser - Reduktionsstücke DN 150/100;3,0;St;gaeb;3937550.x83
+32;KG 2000 Rohr mit Steckmuffe, DN 110, Öl-/ Kraftstoff;50,0;m;gaeb;3937550.x83
+33;KG 2000 Bogen, DN 110, Öl-/ Kraftstoff;15,0;St;gaeb;3937550.x83
+34;KG 2000 Abzweig, DN 110, Öl-/ Kraftstoff;5,0;St;gaeb;3937550.x83
+35;KG 2000 Doppelmuffe, DN 110, Öl-/ Kraftstoff;5,0;St;gaeb;3937550.x83
+36;KG 2000 Muffenstopfen, DN 110, Öl-/ Kraftstoff;3,0;St;gaeb;3937550.x83
+37;KG 2000 Rohr mit Steckmuffe, DN 110 Fettbeständig;75,0;m;gaeb;3937550.x83
+38;KG 2000 Rohr mit Steckmuffe, DN 125 Fettbeständig;5,0;m;gaeb;3937550.x83
+39;KG 2000 Bogen, DN 110, fettbeständig;45,0;St;gaeb;3937550.x83
+40;KG 2000 Abzweig, DN 100, fettbeständig;15,0;St;gaeb;3937550.x83
+41;KG 2000 Abzweig, DN 125, fettbeständig;2,0;St;gaeb;3937550.x83
+42;KG 2000 Doppelmuffe, DN 110, fettbeständig;5,0;St;gaeb;3937550.x83
+43;KG 2000 Doppelmuffe, DN 125, Fettbeständig;5,0;St;gaeb;3937550.x83
+44;KG 2000 Muffenstopfen, DN 110, Öl-/ Kraftstoff;3,0;St;gaeb;3937550.x83
+45;KG 2000 Muffenstopfen, DN 125, Fettbeständig;3,0;St;gaeb;3937550.x83
+46;KG 2000 Reduktionsstücke DN 125/110, Fettbeständig;3,0;St;gaeb;3937550.x83
+1;Universaltrichter DN 110 mit integrierter Steckmuffe;97,0;St;gaeb;3937550.x83
+2;Mauerkragen-Set, DN 125;5,0;St;gaeb;3937550.x83
+3;Bodenablauf DN 100 mit Vierstegdichtung;15,0;St;gaeb;3937550.x83
+4;Bodenablauf DN 100 mit Vierstegdichtung im Werkstattbereich ohne Geruchsverschluß;4,0;St;gaeb;3937550.x83
+1;Futterrohr aus Spezialfaserzement DN 150, Länge 300 mm;2,0;St;gaeb;3937550.x83
+2;Gas- und Wasserdichte Hauseinführung, für Heizungsrohre DN80;2,0;St;gaeb;3937550.x83
+3;Futterrohr aus Spezialfaserzement DN 125, Länge 300 mm;1,0;St;gaeb;3937550.x83
+4;Gas- und Wasserdichte Hauseinführung, für Trinkwasser DN50;1,0;St;gaeb;3937550.x83
+1;Dichtheitsprüfung Wasser Abwasserleitung bis DN 200;820,0;m;gaeb;3937550.x83
+2;Dokumentation der Dichtheitsprüfung;1,0;St;gaeb;3937550.x83
+3;Erstellung des Verlegeplans;1,0;St;gaeb;3937550.x83
+4;Revisionsunterlagen;1,0;St;gaeb;3937550.x83
+5;Rüsthülsen montieren;16,0;St;gaeb;3937550.x83
+6;Lastschlaufen / Lastösen montieren;3,0;St;gaeb;3937550.x83
+1;Bandstahl 30 x 3,5 mm;1800,0;m;gaeb;3937550.x83
+2;Flachleiter Edelstahl 30 x 3,5 mm;3000,0;m;gaeb;3937550.x83
+3;Anschlussfahnen;58,0;St;gaeb;3937550.x83
+4;Schutzkappe für Anschlussfahnen;60,0;St;gaeb;3937550.x83
+5;Erdungsdurchführung (weiße Wanne);115,0;St;gaeb;3937550.x83
+6;Erdungsfestpunkt mit Innengewinde;8,0;St;gaeb;3937550.x83
+7;Dichtmanschette Betonbau;115,0;St;gaeb;3937550.x83
+8;Runddrahterder RD 10 V4A in Schalung/Rohboden;150,0;m;gaeb;3937550.x83
+9;Korrosionsschutz nach DIN VDE 0185;4,0;St;gaeb;3937550.x83
+10;Messung;6,0;St;gaeb;3937550.x83
+11;Montageunterlagen Erdungsanlage;1,0;St;gaeb;3937550.x83
+12;Revisionsunterlagen Erdungsanlage;1,0;St;gaeb;3937550.x83
+1;Dichtpackung doppelt (weiße Wanne);1,0;St;gaeb;3937550.x83
+2;Dichtpackung Systemdeckel Leerrohr glatt DN100;3,0;St;gaeb;3937550.x83
+3;Dichtpackung Systemdeckel 3 Kabel 22-56 mm ø;3,0;St;gaeb;3937550.x83
+4;Einfach-Dichtpackung;1,0;St;gaeb;3937550.x83
+5;Mehrsparten-Rohbauteil Reihenanordnung 2-fach;2,0;St;gaeb;3937550.x83
+1;Endtülle  20mm bis 32mm;40,0;St;gaeb;3937550.x83
+2;Großrohr-Geräte-Verbindungsdose;20,0;St;gaeb;3937550.x83
+3;Doppel-Geräte-Verbindungsdose;6,0;St;gaeb;3937550.x83
+4;Panzerrohr, Klassifizierung 33412, Type 32 zur Verlegung im Beton;200,0;m;gaeb;3937550.x83
+1;Stundenlohnarbeiten durch Spezialbaufacharbeiter/-in;10,0;h;gaeb;3937550.x83
+2;Stundenlohnarbeiten durch Bauvorarbeiter/-in;20,0;h;gaeb;3937550.x83
+3;Stundenlohnarbeiten durch Baufacharbeiter/-in;50,0;h;gaeb;3937550.x83
+4;Stundenlohnarbeiten durch Bauwerker/-in;50,0;h;gaeb;3937550.x83

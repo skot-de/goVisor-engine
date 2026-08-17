@@ -1,0 +1,40 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+10;Baustelleneinrichtungs-Fläche herstellen. Lage und Orientierung der herzustellenden Fläche gemäß Leistungsbeschreibung, dargestellt in Anlage 2.;1,0;psch;gaeb;FW1_BOT_VE202_Kampfmittelbeseitung..x83
+20;Geräte, Werkzeuge und sonstige Betriebsmittel, die zur vertragsgemäßen Ausführung der Bauleistungen erforderlich sind, auf die Baustelle bringen, bereitstellen und betriebsfertig aufstellen, einschl. der dafür notwendigen Arbeiten.;1,0;psch;gaeb;FW1_BOT_VE202_Kampfmittelbeseitung..x83
+30;Vorhalten der Position 01.01.010 je Kalendertag.;7,0;Tag;gaeb;FW1_BOT_VE202_Kampfmittelbeseitung..x83
+40;Vorhalten der Position 01.01.020 je Kalendertag.;7,0;Tag;gaeb;FW1_BOT_VE202_Kampfmittelbeseitung..x83
+50;Teilnahme an einem Besprechungstermin vor Ort. Vorstellung und Abstimmung der geplanten Arbeiten. Koordination findet durch den Auftraggeber statt.;1,0;Stck;gaeb;FW1_BOT_VE202_Kampfmittelbeseitung..x83
+60;Stillstand der Bauarbeiten infolge von Verzögerungen oder Behinderungen durch Versorgerarbeiten. Mit;1,0;Tag;gaeb;FW1_BOT_VE202_Kampfmittelbeseitung..x83
+10;Suchschachtung, 0,5 m Breite und 1,25 m Tiefe gemäß Leistungsbeschreibung und wie dargestellt in Anlage 2 als Handschachtung und/oder mit geeigneten Geräten zur Erkundung von Leitungen etc., zur Vermeidung von Schäden an Leitungen, bedarfsweise unter Einsatz von Ortungstechnik.;40,0;m;gaeb;FW1_BOT_VE202_Kampfmittelbeseitung..x83
+20;Mittels Markierungsspray anzeichnen der erkundeten Kabel-/Leitungsverläufe. Die Markierung muss sich sichtbar vom jeweiligen Untergrund abheben.;1,0;psch;gaeb;FW1_BOT_VE202_Kampfmittelbeseitung..x83
+10;Verfüllen der Bohrlöcher mittels Bohrgut und ergänzend Füllsanden, falls notwendig. Während des Prozesses ist das Füllgut nachzuverdichten. Verfüllung ab Endteufe bis 40 cm unter ursprüngliche GOK. Anzuwenden für die Bohrlöcher des VPs 2029, gemäß Lageplan (Anlage 2).;37,0;Stck;gaeb;FW1_BOT_VE202_Kampfmittelbeseitung..x83
+20;Verfüllen der Bohrlöcher mittels Schotter 0/16 oder 0/8. Die Verfüllung ist nachzuverdichten. Verfüllung ab 40 cm unter GOK bis 26 cm unter ursprüngliche GOK. Die Mächtigkeit der Schotterschicht beträgt somit 14 cm je Bohrloch. Anzuwenden für die Bohrlöcher des VPs 2029, gemäß Lageplan (Anlage 2).;37,0;Stck;gaeb;FW1_BOT_VE202_Kampfmittelbeseitung..x83
+30;Verfüllen der Bohrlöcher mittels Bohrgut und ergänzend Füllsanden, falls notwendig. Während des Prozesses ist das Füllgut nachzuverdichten. Verfüllung ab Endteufe bis 12 cm unter ursprüngliche GOK.;20,0;Stck;gaeb;FW1_BOT_VE202_Kampfmittelbeseitung..x83
+40;Verfüllen der Bohrlöcher mit Schotter 0/16 oder 0/8. Die Verfüllung ist nachzuverdichten. Verfüllung ab 12 cm unter ursprünglicher GOK  bis 4 cm unter ursprüngliche GOK. Die Mächtigkeit der Schotterschicht beträgt somit 8 cm.;20,0;Stck;gaeb;FW1_BOT_VE202_Kampfmittelbeseitung..x83
+50;Verfüllen der Bohrlöcher mittels Bohrgut.;50,0;Stck;gaeb;FW1_BOT_VE202_Kampfmittelbeseitung..x83
+60;Verfüllen der Bohrlöcher mittels Quellton. Verfüllung bis 4 cm unter ursprüngliche GOK.;4,0;Stck;gaeb;FW1_BOT_VE202_Kampfmittelbeseitung..x83
+10;Asphaltbefestigung geradlinig trennen,  im Anbaubereich quer zur Fahrbahnachse. Trennen durch Schneiden. Dicke der Asphaltbefestigung 26 cm.;37,0;m;gaeb;FW1_BOT_VE202_Kampfmittelbeseitung..x83
+20;Tiefe: 26 cm;28,0;m³;gaeb;FW1_BOT_VE202_Kampfmittelbeseitung..x83
+30;Asphaltbinder AC 22 B S für Straßen der Belastungsklasse BK 10 in Fahrbahn einbauen und verdichten.;9,0;m³;gaeb;FW1_BOT_VE202_Kampfmittelbeseitung..x83
+40;Asphalttragschicht aus Asphalttragschichtmischgut AC 22 T S herstellen. Anlieferung des Asphaltmischguts in thermoisolierten Transportbehältern. In Verkehrsflächen der Belastungsklasse Bk10. Einbaudicke = 10 cm. 2-lagig. Bindemittel = 50/70.;11,0;m³;gaeb;FW1_BOT_VE202_Kampfmittelbeseitung..x83
+50;Anschluss der neuen Decke an vorh. Fahrbahndecken  mit schmelzbarem Bitumen-Dichtungsband herstellen.;40,0;m;gaeb;FW1_BOT_VE202_Kampfmittelbeseitung..x83
+60;Asphaltdeckschicht aus Gussasphalt MA 11 S einbauen und verdichten. In Verkehrsflächen der Belastungsklasse Bk 10. Einbaudicke = 4 cm einschließlich Abstreukörnung. Bindemittel: Viskositätsverändertes 30/45.;100,0;m²;gaeb;FW1_BOT_VE202_Kampfmittelbeseitung..x83
+70;Fahrbahnmarkierung wie in Ausgangszustand wiederherstellen. Heißplatik weiß, gestrichelt oder durchgezogen. Einschl. aller Nebenarbeiten, Säuberung der Untergründe, Vormarkierung, Verkehrssicherung etc..;20,0;m;gaeb;FW1_BOT_VE202_Kampfmittelbeseitung..x83
+10;Verfüllen der hergestellten Suchschachtung im Radweg  mit Schotter 0/16 oder 0/8. Die Verfüllung ist nachzuverdichten. Verfüllung ab 12 cm unter ursprünglicher GOK  bis 4 cm unter ursprüngliche GOK. Die Mächtigkeit der Schotterschicht beträgt somit 8 cm.;1,0;m³;gaeb;FW1_BOT_VE202_Kampfmittelbeseitung..x83
+20;Tiefe: 4 cm;4,0;m³;gaeb;FW1_BOT_VE202_Kampfmittelbeseitung..x83
+30;Anschluss der neuen Decke an vorh. Radweg mit schmelzbarem Bitumen-Dichtungsband herstellen.;10,0;m;gaeb;FW1_BOT_VE202_Kampfmittelbeseitung..x83
+40;Asphaltdeckschicht aus Gussasphalt MA 11 S einbauen und verdichten. Einbaubreiten nach Unterlage AG. In Radweg neben Landesstr. gemäß Vorgaben Straßen.NRW. Einbaudicke = 4 cm einschließlich Abstreukörnung. Bindemittel: Viskositätsverändertes 30/45.;100,0;m²;gaeb;FW1_BOT_VE202_Kampfmittelbeseitung..x83
+10;Bohrlöcher mit  Gussasphalt MA 11 S verdichten, verschließen. In Verkehrsflächen der Josef-Albers-Straße gemäß Lageplan (Anlage 2).;4,0;Stck;gaeb;FW1_BOT_VE202_Kampfmittelbeseitung..x83
+10;Leitbake inkl. Bakenleuchte anliefern, aufstellen und abbauen.;1,0;psch;gaeb;FW1_BOT_VE202_Kampfmittelbeseitung..x83
+20;Vorhaltung und Betrieb der Position 02.01.010 je Kalendertag.;1,0;psch;gaeb;FW1_BOT_VE202_Kampfmittelbeseitung..x83
+30;Schrankenzaun inklusive Bakenbeleuchtung anliefern, aufstellen und abbauen.;1,0;psch;gaeb;FW1_BOT_VE202_Kampfmittelbeseitung..x83
+40;Vorhaltung und Betrieb der Position 02.01.030 je Kalendertag.;1,0;psch;gaeb;FW1_BOT_VE202_Kampfmittelbeseitung..x83
+50;Schild mit Verkehrszeichen nach StVO und VwV- StVO liefern und an vorh . Mast bzw . vom AN zu liefernden mobilen standfesten Pfosten inkl. Fußplatte montieren.;1,0;psch;gaeb;FW1_BOT_VE202_Kampfmittelbeseitung..x83
+60;Vorhaltung und Betrieb der Position 02.01.050 je Kalendertag.;1,0;psch;gaeb;FW1_BOT_VE202_Kampfmittelbeseitung..x83
+70;Fahrspurtafeln herstellen, anliefern, montieren und entfernen.;1,0;psch;gaeb;FW1_BOT_VE202_Kampfmittelbeseitung..x83
+80;Vorhaltung und Betrieb der Position 02.01.070 je Kalendertag.;1,0;psch;gaeb;FW1_BOT_VE202_Kampfmittelbeseitung..x83
+90;Auskreuzen / Außerbetriebnahme vorhandener Beschilderung durch Auskreuzvorrichtung (retroreflektierend) nach Verkehrszeichenplänen des AGs. Lieferung und Montage, nach Beendigung der Maßnahme schadlos zurücknehmen und beseitigen.;1,0;psch;gaeb;FW1_BOT_VE202_Kampfmittelbeseitung..x83
+100;Vorhaltung und Betrieb der Position 02.01.090 je Kalendertag.;1,0;psch;gaeb;FW1_BOT_VE202_Kampfmittelbeseitung..x83
+110;Parkverbotszone anliefern, einrichten, entfernen.;1,0;psch;gaeb;FW1_BOT_VE202_Kampfmittelbeseitung..x83
+120;Vorhalten der LV Position 02.01.110  je Kalendertag.;1,0;psch;gaeb;FW1_BOT_VE202_Kampfmittelbeseitung..x83
+10;Prüfen der Funktion und Vollständigkeit der Verkehrssicherungseinrichtungen gemäß verkehrsrechtlicher Anordnung, Dokumentation des Ergebnisses, des;1,0;psch;gaeb;FW1_BOT_VE202_Kampfmittelbeseitung..x83

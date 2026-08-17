@@ -1,0 +1,179 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+10;Wärmepumpe R290;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+20;Pufferspeicher 1000l;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+30;Zulage Pufferspeicher Einbringen in KG;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+40;Elektro-Heizstab;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+10;Eisspeicher;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+20;Energie-Absorber;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+30;Storz B Kupplung mit Deckkapsel;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+40;Polyesterkabelverteiler ca. 1200x950x350mm;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+50;Hochwassersockel;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+60;Hydraulikmodul;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+70;Inbetriebnahme Eisspeichersystem;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+80;Inbetriebnahme von Regelungstechniken der Wärmepumpe;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+10;Sekundärseite abdrücken und spülen;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+20;Füllen des Eisspeichers mit Wasser;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+30;Befüllen mit Wasser-Ethylenglykol 28-30%;5000,0;l;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+40;IBC-Container als Glykolspeicher;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+50;Verbindungsset IBC-Container;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+60;Auffangwanne Glykol;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+70;Druckprobe des Glykol-Kreises und Bescheinigung durch den Sachkundigen;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+10;3-Weg Umschaltventil;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+20;Kommunikativer elektromotorischer Hubantrieb für Hubventile;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+30;"Einbau Fühler, Sensoren bis 3/4""";20,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+40;Einbau von Ventilen/ Kugelhähne bis DN 32,;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+50;Einbau von Ventilen von DN50,;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+60;Einbau von Ventilen von DN65,;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+70;Manometer DN 15;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+80;Kugelhahn aus Rotguss DN15;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+90;Kugelhahn aus Rotguss DN20;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+100;Kugelhahn aus Rotguss DN25;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+110;Kugelhahn aus Rotguss DN32;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+120;Kugelhahn aus Rotguss DN40;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+130;Kugelhahn aus Rotguss DN50;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+140;Kugelhahn aus Rotguss DN65;7,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+150;"KFE-Kugelhahn 1/2""";8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+160;Membran-Druckausdehnungsgefäß 250 l,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+170;Membran-Druckausdehnungsgefäß 300 l,;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+180;Vakuum-Sprührohrentgasung;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+190;Inbetriebnahme Vakuum-Sprühentgasung;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+200;Ultraschall-Wärmezähler DN 40;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+210;Ultraschall-Kaltwasserzähler Q 2,5m³/h;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+220;Tauchhülsen WMZ VA Ø 5,0 mm 40-60 mm;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+10;Rohrleitung Edelstahl 22mm,;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+20;Rohrleitung Edelstahl 28mm;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+30;Rohrleitung Edelstahl 54mm;30,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+40;Rohrleitung Edelstahl 76mm;35,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+50;Bogen 45 - 90° f. Edelstahlrohr, 22mm;20,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+60;Bogen 45 - 90° f. Edelstahlrohr, 28mm;20,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+70;Bogen 45 - 90° f. Edelstahlrohr 54mm;20,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+80;Bogen 45 - 90° f. Edelstahlrohr 76mm;40,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+90;"Übergang f. Edelstahlrohr 1/2""-1""x22mm";2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+100;"Übergang f. Edelstahlrohr, 3/4""-1""x28mm";2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+110;"Übergang f. Edelstahlrohr, 2""x54mm";2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+120;"Übergang f. Edelstahlrohr, 2 1/2""x76mm";2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+130;"Flansch f. Edelstahlrohr, 2""x54mm";4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+140;"Flansch f. Edelstahlrohr, 2 1/2""x76mm";12,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+150;T- Stück f. Edelstahlrohr 22mm;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+160;T- Stück f. Edelstahlrohr 28mm;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+170;T- Stück f. Edelstahlrohr 54mm;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+180;"T- Stück f. Edelstahlrohr 54 mm x 1/2"" x 54 mm";6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+190;T- Stück f. Edelstahlrohr 76mm;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+200;"T- Stück f. Edelstahlrohr 76 mm x 3/4"" x 76 mm";2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+210;Reduzier. f. Edelstahlrohr 28 bis 15-22mm;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+220;Reduzier. f. Edelstahlrohr 76 bis 54mm;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+230;Muffe/Kappe f. Edelstahlrohr 22mm;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+240;Muffe/Kappe f. Edelstahlrohr 28mm;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+250;Muffe/Kappe f. Edelstahlrohr 54mm;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+260;Muffe/Kappe f. Edelstahlrohr 76mm;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+10;PE100/GF-HE, 75 x 6,8 mm;100,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+20;Winkel/Bogen 90° für PE100/GF-HE Rohr, 75 mm;60,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+30;Winkel/Bogen 45° für PE100/GF-HE Rohr, 75 mm;20,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+40;T- Stück für PE100/GF-HE Rohr, 75 mm;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+50;"T- Stück für PE100/GF-HE Rohr, 75 x 2"" Edelstahl";4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+60;Installationsfitting für Sensoren, 75mm;13,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+70;Muffe für PE100/GF-HE Rohr, 75 mm;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+80;Schiebemuffe für PE100/GF-HE Rohr, 75 mm;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+90;Übergangskappe für PE100/GF-HE Rohr, 75 mm;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+100;Doppelnippel für PE100/GF-HE Rohr, 75 mm;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+110;Rohr-Nippel für PE100/GF-HE Rohr, 75 mm;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+120;"Einschweiß-Nippel 1/2""";2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+130;"Einschweiß-Nippel 3/4""";2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+140;"Einschweiß-Nippel 1""";2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+150;Übergang Flansch für PE100/GF-HE Rohr, 75 mm;30,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+160;Festpunkt, 75mm;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+170;Absperrung 75mm;16,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+180;Reduktion für PE100/GF-HE, 75 x 63 mm;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+190;Flex Schlauch, 63mm;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+10;PE-HD-Rohr AD50;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+20;PE-HD-Rohr AD75;70,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+30;Schw.-Fitting für PE- Rohre , Muffe für AD50;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+40;Schw.-Fitting für PE- Rohre , Muffe für AD75;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+50;Schw.-Fitting für PE- Rohre , Winkel für AD50;25,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+60;Schw.-Fitting für PE- Rohre , Winkel für AD75;25,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+70;Schw.-Fitting für PE- Rohre , T-Stück für AD50;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+80;Schw.-Fitting für PE- Rohre , T-Stück für AD75;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+90;Schw.-Fitting für PE- Rohre , Reduktion 75/ 63;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+100;Schw.-Fitting für PE- Rohre , Festflansch AD 50/ DN40;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+110;Schw.-Fitting für PE- Rohre , Festflansch AD 75/ DN65;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+120;Schw.-Fitting für PE- Rohre, PE Endkappe, AD50;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+130;Schw.-Fitting für PE- Rohre , PE Endkappe, AD75;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+10;"Rotguss Gewindefitting Doppelnippel 2"",";2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+20;"Stopfen 2"",";2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+30;"Kappe 2"",";2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+40;Flex-Schlauch, DN15;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+50;Flex Schlauch, DN65;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+10;Tauchtemperatur-Messwertgeber;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+20;MS-Fühlertasche für TVD(B)15, TDN(B)15;10,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+30;Temperatur-Messwertgeber;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+40;Drucktransmitter 0-10 bar;1,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+50;Reparatur- und Sicherheitsschalter;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+10;ALU-Rohr M 16;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+20;ALU-Rohr M 20;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+30;ALU-Rohr M 25;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+40;ALU-Rohr M 32;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+50;Isolierstoffrohr starr DIN VDE 0605, Nenngröße M20,;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+60;Isolierstoffrohr starr DIN VDE 0605, Nenngröße M25,;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+70;Isolierstoffrohr starr DIN VDE 0605, Nenngröße M32,;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+80;NHXMH 3 x 1,5 mm²;80,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+90;NHXMH 5 x 1,5 mm²;80,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+100;NHXMH 5 x 2,5 mm²;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+110;J-H(ST)H 2 x 2 x 0,8 mm;150,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+120;J-H(ST)H 4 x 2 x 0,8 mm;150,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+130;EDV-Verlegekabel Cat.7 simplex;25,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+140;EDV-Verlegekabel Cat.7 duplex;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+150;HSLH FRNC-J 4 x 0,75 mm²;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+160;Klemm- und Anschlussarbeiten an beigestellten Betriebsmitteln (z. B. Pumpen, Fühler, Sensoren).;15,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+170;Verbindungsdose 100 x 100 mm;8,0;Stk;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+180;Verbindungsdose 80 x 80 mm;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+190;Halogenfreier Flexschlauch D = 20MM;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+200;Herstellen einer zugelassenen Kabelabschottung in Feuerwiderstandsklasse F90 für die Durchführung von Kabeln durch vorhandene Mauerdurchbrüche bis maximal 10 × 10 cm.;5,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+210;Kabelanschluss Typ1 beidseitig;150,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+220;Kabelanschluss Typ2 beidseitig;40,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+230;Bezeichnungsschilder aus Resopal- Kunststoff für Feldgeräte,;70,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+10;Patchkabels mit einer Länge bis 0,5 m, beidseitig konfektioniert mit RJ45-Steckern, geeignet für eine Übertragungsrate von bis zu 1 Gbit/s.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+20;Datenanschlussdose 2 RJ 45;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+30;Universalschalter AP;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+40;2-fach Steckdose AP;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+50;Geräteanschlussdose 2,5 mm²;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+60;Ethernet-Switch 5-fach RJ45-Port 10/100 TX Autokonfiguration;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+10;Isolierschlauch Kälte für AD 22mm, s=18mm;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+20;Isolierschlauch Kälte für AD 28mm, s=19mm;20,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+30;Isolierschlauch Kälte für AD 63mm, s=25mm;35,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+40;Isolierschlauch Kälte für AD 76mm, s=32mm;40,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+50;Isolierung Ventil usw., DN 12-20;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+60;Isolierung Ventil usw., DN 25;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+70;Isolierung Ventil usw., DN 32;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+80;Isolierung Ventil usw., DN 40;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+90;Isolierung Ventil usw., DN 50,;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+100;Isolierung Ventil usw., DN 65,;6,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+10;BS f. nicht brennbares Rohr AD63;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+20;BS f. nicht brennbares Rohr AD75;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+30;Brandschutzmanschette AD63;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+40;Brandschutzmanschette AD75;8,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+10;Revisionsunterlagen;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+20;Durchbrüche bis AD50;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+30;Durchbrüche  AD100mm;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+40;Durchbrüche  AD150mm;1,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+50;Durchbrüche  AD200mm;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+60;Durchbrüche AD 200 mm in Wänden bis 36 cm und Decken bis 20 cm Dicke sind in der Grundposition enthalten.;2,0;cm;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+70;Vermörteln von Durchbrüchen und Ringspalten in Wänden und Decken.;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+80;Vermörteln von Durchbrüchen in Wänden und Decken.;4,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+90;Bezeichnungsschild,;30,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+100;Rohrleitungskennzeichner mit Pfeilspitze;20,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+110;Einbau von Feldgeräten;15,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+120;Dichteinsatz 110 DD;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+130;Dichteinsatz 200 DD;2,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+140;Profilstahl,;400,0;kg;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+150;Leerohr, flexibel, ND100,;50,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+160;Koordination und Abklärung Schnittstellen;5,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+170;Koordination und Abklärung Kabel;5,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+180;Abstimmung mit dem Gewerk MSR;8,0;Std;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+190;Teilnahme an MSR Inbetriebnahme;16,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+200;Wartungsvertrag Heizung/ Kälte;4,0;Jahr;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+10;Stemmstunden allgemein;15,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+20;Stundenlohnarbeiten Facharbeiter;20,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+30;Stundenlohnarbeiten Helfer;20,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+40;Stundenlohnarbeiten Programmierer;25,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+50;Stundenlohnarbeiten MSR-Techniker;25,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83
+60;Stundenlohnarbeiten Service-Techniker;25,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/RHStolberg_Wärmeerzeugung_12_08_2026.x83

@@ -1,0 +1,27 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+01000001;Baustelle einrichten Sämtl.LV-Abschn.*Zufahrt vorh.;1,0;Psch;gaeb-flat;Leistungsverzeichnis/2026-0220_1.D83
+01000002;Baustelle räumen Sämtl. LV-Abschn.;1,0;Psch;gaeb-flat;Leistungsverzeichnis/2026-0220_1.D83
+01000003;Abrückpauschale 3 h;2,0;St;gaeb-flat;Leistungsverzeichnis/2026-0220_1.D83
+01000004;Abrückpauschale 6 h;2,0;St;gaeb-flat;Leistungsverzeichnis/2026-0220_1.D83
+01010001;Verkehrsrechtliche Anordnung einh. Geb. auf Nachweis;1,0;Psch;gaeb-flat;Leistungsverzeichnis/2026-0220_1.D83
+01010002;Verk.sich. kürzerer Dauer durchf. D IV/3+2*mod*stat.Arb.st. ums. 3000 m*Nachtarbeit;1,0;Psch;gaeb-flat;Leistungsverzeichnis/2026-0220_1.D83
+01010003;LED-Hänger aufstellen;1,0;Psch;gaeb-flat;Leistungsverzeichnis/2026-0220_1.D83
+01010004;Zusätzl. Vorwarnanlage;10,0;St;gaeb-flat;Leistungsverzeichnis/2026-0220_1.D83
+01020001;Fugenfüllung ersetzen Längs-/Querfuge*n.gefährl. Abfall Tiefe bis 4 cm*Breite ü. 8-12mm Fugenmasse;46100,0;m;gaeb-flat;Leistungsverzeichnis/2026-0220_1.D83
+01020002;Wie Pos.0001 jedoch ü .12 bis 20 mm.;550,0;m;gaeb-flat;Leistungsverzeichnis/2026-0220_1.D83
+01020003;Wie Pos. 0001 jedoch bis 8 mm.;300,0;m;gaeb-flat;Leistungsverzeichnis/2026-0220_1.D83
+01020004;Fugenfüllung ersetzen u. aufweiten Längs-/Querfuge*n.gefährl. Abfall Schneiden*NHB;180,0;m;gaeb-flat;Leistungsverzeichnis/2026-0220_1.D83
+01020005;Riss aufweiten und verfüllen bis 5,00 m*T:2,5 cm B: 10mm N2 verfüllen;20,0;m;gaeb-flat;Leistungsverzeichnis/2026-0220_1.D83
+01030001;Kanten- und Eckabbruch ausbessern Anzahl Unterl.AG*Breite ü. 5-10 cm;1,0;m;gaeb-flat;Leistungsverzeichnis/2026-0220_1.D83
+01030002;Wie Pos. 01.03, jedoch ü. 10-20 cm;1,0;m;gaeb-flat;Leistungsverzeichnis/2026-0220_1.D83
+01030003;Wie Pos. 01.03, jedoch ü. 20-30 cm;1,0;m;gaeb-flat;Leistungsverzeichnis/2026-0220_1.D83
+01030004;Reparaturbaustoff liefern PC-Mörtel;125,0;kg;gaeb-flat;Leistungsverzeichnis/2026-0220_1.D83
+02000001;Kanten- und Eckabbruch ausbessern Anzahl Unterl.AG*Breite ü. 5-10 cm;150,0;m;gaeb-flat;Leistungsverzeichnis/2026-0220_1.D83
+02000002;Wie Pos. 01.03, jedoch ü. 10-20 cm;25,0;m;gaeb-flat;Leistungsverzeichnis/2026-0220_1.D83
+02000003;Wie Pos. 01.03, jedoch ü. 20-30 cm;10,0;m;gaeb-flat;Leistungsverzeichnis/2026-0220_1.D83
+02000004;Reparaturbaustoff liefern PC-Mörtel;4200,0;kg;gaeb-flat;Leistungsverzeichnis/2026-0220_1.D83
+02010001;Fugenfüllung ersetzen Längs-/Querfuge*n.gefährl. Abfall Tiefe bis 4 cm*Breite ü. 8-12mm Fugenmasse;3800,0;m;gaeb-flat;Leistungsverzeichnis/2026-0220_1.D83
+03000001;Verkehrstafel aufb., abb., vorh. ... Freitext ...*Tafel über 2-4 m2 Typ RA3, C*Höhe 2,00 m über 7 b. 14 Tage;2,0;St;gaeb-flat;Leistungsverzeichnis/2026-0220_1.D83
+03000002;Kontrolle d. Verkehrss. a. Uml.str. einmal täglich*elektron. Gerät;16,0;d;gaeb-flat;Leistungsverzeichnis/2026-0220_1.D83
+03000003;Absp.g.,Warneinr. aufb.,abb.u.vorh. Abspsch. 250x2000*Typ RA2 zweis. Dauerlicht*Versorg. Wahl AN über 2 bis 7 Tage;100,0;St;gaeb-flat;Leistungsverzeichnis/2026-0220_1.D83
+03000004;Absperrger. oder Warneinr. umsetzen wie Vorposition;100,0;St;gaeb-flat;Leistungsverzeichnis/2026-0220_1.D83

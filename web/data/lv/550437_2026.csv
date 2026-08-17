@@ -1,0 +1,484 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+0001;Wassergekühlter Flüssigkeitskühler für Innenaufstellung;1,0;St;gaeb;3940630.x83
+0002;Starterschrank mit Leistungsschalter;1,0;St;gaeb;3940630.x83
+0003;Schallisolierendes Gehäuse;1,0;St;gaeb;3940630.x83
+0004;Paddelströmungswächter;1,0;St;gaeb;3940630.x83
+0005;Externe Sollwertvorgabe und Strombegrenzung;1,0;St;gaeb;3940630.x83
+0006;Programmierbare Relais für Alarm- und Statusmeldungen;1,0;St;gaeb;3940630.x83
+0007;Doppelsicherheitsventil für Verdampfer und Verflüssiger;1,0;St;gaeb;3940630.x83
+0008;Schwingungsdämpfer, kompletter Satz;1,0;St;gaeb;3940630.x83
+0009;Datenschnittstelle BACnet MS/TP;1,0;St;gaeb;3940630.x83
+0010;Wasseranschluss-Kit;1,0;St;gaeb;3940630.x83
+0011;Isolierung Verflüssiger;1,0;St;gaeb;3940630.x83
+0012;Kältetechnische Inbetriebnahme;1,0;psch;gaeb;3940630.x83
+0013;Plattenwärmetauscher, geschraubte Ausführung;1,0;St;gaeb;3940630.x83
+0014;Trockener Flüssigkeitskühler zur Freikühlung und Verflüssigerwärmeabfuhr;1,0;St;gaeb;3940630.x83
+0015;Öl- und Glykolrückhaltesystem;1,0;St;gaeb;3940630.x83
+0016;Glykoldetektor für Auffangwanne;1,0;St;gaeb;3940630.x83
+0017;Montage-Set für Sockelfixierung;2,0;St;gaeb;3940630.x83
+0018;Montagesystem für Rückkühleraufstellung;1,0;St;gaeb;3940630.x83
+0001;Schaltschrank mit Anlagensteuerung;1,0;St;gaeb;3940630.x83
+0002;Not Handbedienebene;1,0;St;gaeb;3940630.x83
+0003;Visualisierung der Anlagenparameter;1,0;St;gaeb;3940630.x83
+0004;Feldgeräte;1,0;St;gaeb;3940630.x83
+0005;Datenschnittstelle BACnet/IP;1,0;St;gaeb;3940630.x83
+0006;Programmierung der Anlagenfunktion;1,0;St;gaeb;3940630.x83
+0007;Programmierung Anlagenvisualisierung;1,0;St;gaeb;3940630.x83
+0008;Projektierung;1,0;St;gaeb;3940630.x83
+0009;Beschriftung der Feldgeräte und Anlagenelemente;1,0;St;gaeb;3940630.x83
+0010;Einführen und Anklemmen der Feldgeräte;1,0;St;gaeb;3940630.x83
+0011;Hardware-Inbetriebnahme;1,0;St;gaeb;3940630.x83
+0012;Software-Inbetriebnahme;1,0;St;gaeb;3940630.x83
+0013;Einregulierung;1,0;St;gaeb;3940630.x83
+0014;1:1 Datenpunkttest;1,0;St;gaeb;3940630.x83
+0015;Dokumentation;1,0;St;gaeb;3940630.x83
+0016;Gaswarnanlage für Kältemittel R515B;1,0;St;gaeb;3940630.x83
+0017;Montage und Anschluss der Gaswarnanlage;1,0;St;gaeb;3940630.x83
+0018;Sicherheitseinrichtungen für Kälteanlage;1,0;psch;gaeb;3940630.x83
+0019;Sicherheitseinrichtungen für A2L-Kältemittel;1,0;psch;gaeb;3940630.x83
+0020;Fernüberwachung und Anlagenmonitoring;1,0;St;gaeb;3940630.x83
+0021;Fernüberwachung und Anlagenmonitoring;1,0;St;gaeb;3940630.x83
+0022;Laufende Kosten für Datenkommunikation und Datenspeicherung;1,0;psch;gaeb;3940630.x83
+0001;Sicherheitstechnische Anpassungen für A2L-Kältemittel;1,0;St;gaeb;3940630.x83
+0002;Montage und Anschluss der Gaswarnanlage;1,0;St;gaeb;3940630.x83
+0003;Geräuschgekapselter Radialventilator,;1,0;St;gaeb;3940630.x83
+0001;Anschluss Fernwärmeübergabestation;1,0;St;gaeb;3940630.x83
+0002;Plattenwärmeübertrager 240 kW;1,0;St;gaeb;3940630.x83
+0003;Pufferspeicher Heizung 5000l;2,0;St;gaeb;3940630.x83
+0004;Pufferspeicher Kälte  2000l;1,0;St;gaeb;3940630.x83
+0005;Heizungsverteiler, thermisch getrennt;1,0;St;gaeb;3940630.x83
+0006;Kälteverteiler, thermisch getrennt;1,0;St;gaeb;3940630.x83
+0001;Kreiselpumpe als Umwälzpumpe, als Nassläufer, stufenlos regelbar, differenzdruckgeregelt, Kommunikationsschnittstelle BACnet MS/TP DIN EN ISO 16484-5, einschl. Erfassung von Betriebs- und Störmeldungen, ausgerüstet zum Anschluss an die Gebäudeautomation (GA) DIN EN ISO 16484-3,;1,0;St;gaeb;3940630.x83
+0002;Kreiselpumpe als Umwälzpumpe, als Nassläufer, stufenlos regelbar, differenzdruckgeregelt, Kommunikationsschnittstelle BACnet MS/TP DIN EN ISO 16484-5, einschl. Erfassung von Betriebs- und Störmeldungen, ausgerüstet zum Anschluss an die Gebäudeautomation (GA) DIN EN ISO 16484-3,;1,0;St;gaeb;3940630.x83
+0003;Kreiselpumpe als Umwälzpumpe, als Nassläufer, stufenlos regelbar, differenzdruckgeregelt, Kommunikationsschnittstelle BACnet MS/TP DIN EN ISO 16484-5, einschl. Erfassung von Betriebs- und Störmeldungen, ausgerüstet zum Anschluss an die Gebäudeautomation (GA) DIN EN ISO 16484-3,;1,0;St;gaeb;3940630.x83
+0004;Kreiselpumpe als Umwälzpumpe, als Nassläufer, stufenlos regelbar, differenzdruckgeregelt, Kommunikationsschnittstelle BACnet MS/TP DIN EN ISO 16484-5, einschl. Erfassung von Betriebs- und Störmeldungen, ausgerüstet zum Anschluss an die Gebäudeautomation (GA) DIN EN ISO 16484-3,;1,0;St;gaeb;3940630.x83
+0005;Kreiselpumpe als Umwälzpumpe, als Nassläufer, stufenlos regelbar, differenzdruckgeregelt, Kommunikationsschnittstelle BACnet MS/TP DIN EN ISO 16484-5, einschl. Erfassung von Betriebs- und Störmeldungen, ausgerüstet zum Anschluss an die Gebäudeautomation (GA) DIN EN ISO 16484-3,;1,0;St;gaeb;3940630.x83
+0006;Kreiselpumpe als Umwälzpumpe, als Nassläufer, stufenlos regelbar, differenzdruckgeregelt, Kommunikationsschnittstelle BACnet MS/TP DIN EN ISO 16484-5, einschl. Erfassung von Betriebs- und Störmeldungen, ausgerüstet zum Anschluss an die Gebäudeautomation (GA) DIN EN ISO 16484-3,;1,0;St;gaeb;3940630.x83
+0007;Kreiselpumpe als Umwälzpumpe, als Nassläufer, stufenlos regelbar, differenzdruckgeregelt, Kommunikationsschnittstelle BACnet MS/TP DIN EN ISO 16484-5, einschl. Erfassung von Betriebs- und Störmeldungen, ausgerüstet zum Anschluss an die Gebäudeautomation (GA) DIN EN ISO 16484-3,;1,0;St;gaeb;3940630.x83
+0008;Kreiselpumpe als Umwälzpumpe, als Nassläufer, stufenlos regelbar, signalgeregelt, Kommunikationsschnittstelle BACnet MS/TP DIN EN ISO 16484-5, einschl. Erfassung von Betriebs- und Störmeldungen, ausgerüstet zum Anschluss an die Gebäudeautomation (GA) DIN EN ISO 16484-3,;1,0;St;gaeb;3940630.x83
+0009;Kreiselpumpe als Umwälzpumpe, als Nassläufer, stufenlos regelbar, signalgeregelt, Kommunikationsschnittstelle BACnet MS/TP DIN EN ISO 16484-5, einschl. Erfassung von Betriebs- und Störmeldungen, ausgerüstet zum Anschluss an die Gebäudeautomation (GA) DIN EN ISO 16484-3,;1,0;St;gaeb;3940630.x83
+0001;Druckhalteanlage mit Membran-Druckausdehnungsgefäß mit Abnahmebescheinigung, DIN EN 13831, für Heizungswasser, mit Kompressor, angebaut, Nennvolumen mind. 300 l, einstellbarer Betriebsdruck bis 6 bar, Ausdehnungsgefäß aus Stahl mit äußerer Grundbeschichtung, Pumpendruckhalteanlage, intern verrohrt, ;2,0;St;gaeb;3940630.x83
+0002;Membran-Druckausdehnungsgefäß mit Abnahmebescheinigung, DIN EN 13831, für Heizungswasser, Nennvolumen 50 l, zulässiger Betriebsüberdruck 6 bar, Vordruck 1,5 bar, aus Stahl, mit äußerer Grundbeschichtung, einschl. Standkonsolen aus Stahl.;1,0;St;gaeb;3940630.x83
+0003;Membran-Druckausdehnungsgefäß mit Abnahmebescheinigung, DIN EN 13831, für Heizungswasser, Nennvolumen 50 l, zulässiger Betriebsüberdruck 10 bar, Vordruck 1,5 bar, aus Stahl, mit äußerer Grundbeschichtung, einschl. Standkonsolen aus Stahl.;1,0;St;gaeb;3940630.x83
+0004;Membran-Druckausdehnungsgefäß mit Abnahmebescheinigung, DIN EN 13831, für Wasser-Glycol-Gemisch, Nennvolumen 50 l, zulässiger Betriebsüberdruck 10 bar, Vordruck 1,5 bar, aus Stahl, mit äußerer Grundbeschichtung, einschl. Standkonsolen aus Stahl.;1,0;St;gaeb;3940630.x83
+0005;Membran-Druckausdehnungsgefäß mit Abnahmebescheinigung, DIN EN 13831, für Wasser-Glycol-Gemisch, Nennvolumen 100 l, zulässiger Betriebsüberdruck 10 bar, Vordruck 1,5 bar, aus Stahl, mit äußerer Grundbeschichtung, einschl. Standkonsolen aus Stahl.;1,0;St;gaeb;3940630.x83
+0006;Entlüftungsarmatur, für Wasser, max. Betriebstemperatur bis 120 Grad C, Gehäuse aus Messing, mit Gewindeanschluss, Nenndruck 1 MPa (10 bar), DN 15.;6,0;St;gaeb;3940630.x83
+0007;Patronengehäuse zur Wasseraufbereitung;2,0;St;gaeb;3940630.x83
+0008;Mischbettharzpatrone;2,0;St;gaeb;3940630.x83
+0009;Mischbettharzpatrone Ersatz;2,0;St;gaeb;3940630.x83
+0010;Membransicherheitsventil, bauteilgeprüft, federbelastet, für geschlossene Wasserheizungsanlagen DIN EN 12828, für Wasser-Glycol-Gemisch, max. Betriebstemperatur bis 70 Grad C,;1,0;St;gaeb;3940630.x83
+0011;Membransicherheitsventil, bauteilgeprüft, federbelastet, für geschlossene Wasserheizungsanlagen DIN EN 12828, für Wasser, max. Betriebstemperatur bis 90 Grad C,;2,0;St;gaeb;3940630.x83
+0012;Membransicherheitsventil, bauteilgeprüft, federbelastet, für geschlossene Wasserheizungsanlagen DIN EN 12828, für Klimakaltwasser, max. Betriebstemperatur bis 20 Grad C,;1,0;St;gaeb;3940630.x83
+0013;Kappenventil;3,0;St;gaeb;3940630.x83
+0014;Kappenventil;1,0;St;gaeb;3940630.x83
+0001;Wärmeträgermedium;1100,0;l;gaeb;3940630.x83
+0002;Nachfüllstation;1,0;St;gaeb;3940630.x83
+0001;Rohrleitung aus Stahlrohr DIN EN 10217-1, Maße DIN EN 10220, geschweißt, schwarz, Stahlsorte DIN EN 10027-1, für Heizungswasser, Außendurchmesser 60,3 mm, Wanddicke 3,6 mm, Verbindung durch Schweißen, einschl. Schweiß- bzw. Löt- und Dichtungsmittel, sowie Herstellen der Verbindungen, Form- und Verbi;6,0;m;gaeb;3940630.x83
+0002;Rohrleitung aus Stahlrohr DIN EN 10217-1, Maße DIN EN 10220, geschweißt, schwarz, Stahlsorte DIN EN 10027-1, für Heizungswasser, Außendurchmesser 76,1 mm, Wanddicke 3,6 mm, Verbindung durch Schweißen, einschl. Schweiß- bzw. Löt- und Dichtungsmittel, sowie Herstellen der Verbindungen, Form- und Verbi;48,0;m;gaeb;3940630.x83
+0003;Rohrleitung aus Stahlrohr DIN EN 10217-1, Maße DIN EN 10220, geschweißt, schwarz, Stahlsorte DIN EN 10027-1, für Heizungswasser, Außendurchmesser 88,9 mm, Wanddicke 4 mm, Verbindung durch Schweißen, einschl. Schweiß- bzw. Löt- und Dichtungsmittel, sowie Herstellen der Verbindungen, Form- und Verbind;82,0;m;gaeb;3940630.x83
+0004;Rohrleitung aus Stahlrohr DIN EN 10217-1, Maße DIN EN 10220, geschweißt, schwarz, Stahlsorte DIN EN 10027-1, für Heizungswasser, Außendurchmesser 114,3 mm, Wanddicke 4 mm, Verbindung durch Schweißen, einschl. Schweiß- bzw. Löt- und Dichtungsmittel, sowie Herstellen der Verbindungen, Form- und Verbin;43,0;m;gaeb;3940630.x83
+0005;Rohrleitung aus Stahlrohr DIN EN 10217-1, Maße DIN EN 10220, geschweißt, schwarz, Stahlsorte DIN EN 10027-1, für Heizungswasser, Außendurchmesser 139,7 mm, Wanddicke 4 mm, Verbindung durch Schweißen, einschl. Schweiß- bzw. Löt- und Dichtungsmittel, sowie Herstellen der Verbindungen, Form- und Verbin;50,0;m;gaeb;3940630.x83
+0006;Rohrleitung aus Stahlrohr DIN EN 10217-1, Maße DIN EN 10220, geschweißt, schwarz, Stahlsorte DIN EN 10027-1, für Heizungswasser, Außendurchmesser 168,3 mm, Wanddicke 4 mm, Verbindung durch Schweißen, einschl. Schweiß- bzw. Löt- und Dichtungsmittel, sowie Herstellen der Verbindungen, Form- und Verbin;86,0;m;gaeb;3940630.x83
+0007;Bogen, aus Kohlenstoffstahl, Verbindung durch Schweißen, über 45 bis 90 Grad, für Rohrleitung aus Stahlrohr DIN EN 10217-1, Maße DIN EN 10220, geschweißt, für Heizungswasser, Außendurchmesser 60,3 mm.;2,0;St;gaeb;3940630.x83
+0008;Bogen, aus Kohlenstoffstahl, Verbindung durch Schweißen, über 45 bis 90 Grad, für Rohrleitung aus Stahlrohr DIN EN 10217-1, Maße DIN EN 10220, geschweißt, für Heizungswasser, Außendurchmesser 76,1 mm.;14,0;St;gaeb;3940630.x83
+0009;Bogen, aus Kohlenstoffstahl, Verbindung durch Schweißen, über 45 bis 90 Grad, für Rohrleitung aus Stahlrohr DIN EN 10217-1, Maße DIN EN 10220, geschweißt, für Heizungswasser, Außendurchmesser 88,9 mm.;19,0;St;gaeb;3940630.x83
+0010;Bogen, aus Kohlenstoffstahl, Verbindung durch Schweißen, über 45 bis 90 Grad, für Rohrleitung aus Stahlrohr DIN EN 10217-1, Maße DIN EN 10220, geschweißt, für Heizungswasser, Außendurchmesser 114,3 mm.;8,0;St;gaeb;3940630.x83
+0011;Bogen, aus Kohlenstoffstahl, Verbindung durch Schweißen, über 45 bis 90 Grad, für Rohrleitung aus Stahlrohr DIN EN 10217-1, Maße DIN EN 10220, geschweißt, für Heizungswasser, Außendurchmesser 139,7 mm.;9,0;St;gaeb;3940630.x83
+0012;Bogen, aus Kohlenstoffstahl, Verbindung durch Schweißen, über 45 bis 90 Grad, für Rohrleitung aus Stahlrohr DIN EN 10217-1, Maße DIN EN 10220, geschweißt, für Heizungswasser, Außendurchmesser 168,3 mm.;25,0;St;gaeb;3940630.x83
+0013;T-Stück, aus Kohlenstoffstahl, Verbindung durch Schweißen, für Rohrleitung aus Stahlrohr DIN EN 10217-1, Maße DIN EN 10220, geschweißt, für Heizungswasser, Außendurchmesser 76,1 mm.;8,0;St;gaeb;3940630.x83
+0014;T-Stück, aus Kohlenstoffstahl, Verbindung durch Schweißen, für Rohrleitung aus Stahlrohr DIN EN 10217-1, Maße DIN EN 10220, geschweißt, für Heizungswasser, Außendurchmesser 88,9 mm.;1,0;St;gaeb;3940630.x83
+0015;T-Stück, aus Kohlenstoffstahl, Verbindung durch Schweißen, für Rohrleitung aus Stahlrohr DIN EN 10217-1, Maße DIN EN 10220, geschweißt, für Heizungswasser, Außendurchmesser 114,3 mm.;4,0;St;gaeb;3940630.x83
+0016;T-Stück, aus Kohlenstoffstahl, Verbindung durch Schweißen, für Rohrleitung aus Stahlrohr DIN EN 10217-1, Maße DIN EN 10220, geschweißt, für Heizungswasser, Außendurchmesser 139,7 mm.;1,0;St;gaeb;3940630.x83
+0017;T-Stück, aus Kohlenstoffstahl, Verbindung durch Schweißen, für Rohrleitung aus Stahlrohr DIN EN 10217-1, Maße DIN EN 10220, geschweißt, für Heizungswasser, Außendurchmesser 168,3 mm.;2,0;St;gaeb;3940630.x83
+0018;Reduzierstück, aus Kohlenstoffstahl, Verbindung durch Schweißen, für Rohrleitung aus Stahlrohr DIN EN 10217-1, Maße DIN EN 10220, geschweißt, für Heizungswasser, Außendurchmesser 76,1 mm, 2. Durchmesser 33,7 mm.;1,0;St;gaeb;3940630.x83
+0019;Reduzierstück, aus Kohlenstoffstahl, Verbindung durch Schweißen, für Rohrleitung aus Stahlrohr DIN EN 10217-1, Maße DIN EN 10220, geschweißt, für Heizungswasser, Außendurchmesser 76,1 mm, 2. Durchmesser 42,4 mm.;3,0;St;gaeb;3940630.x83
+0020;Reduzierstück, aus Kohlenstoffstahl, Verbindung durch Schweißen, für Rohrleitung aus Stahlrohr DIN EN 10217-1, Maße DIN EN 10220, geschweißt, für Heizungswasser, Außendurchmesser 76,1 mm, 2. Durchmesser 48,3 mm.;4,0;St;gaeb;3940630.x83
+0021;Reduzierstück, aus Kohlenstoffstahl, Verbindung durch Schweißen, für Rohrleitung aus Stahlrohr DIN EN 10217-1, Maße DIN EN 10220, geschweißt, für Heizungswasser, Außendurchmesser 76,1 mm, 2. Durchmesser 60,3 mm.;2,0;St;gaeb;3940630.x83
+0022;Reduzierstück, aus Kohlenstoffstahl, Verbindung durch Schweißen, für Rohrleitung aus Stahlrohr DIN EN 10217-1, Maße DIN EN 10220, geschweißt, für Heizungswasser, Außendurchmesser 88,9 mm, 2. Durchmesser 60,3 mm.;1,0;St;gaeb;3940630.x83
+0023;Reduzierstück, aus Kohlenstoffstahl, Verbindung durch Schweißen, für Rohrleitung aus Stahlrohr DIN EN 10217-1, Maße DIN EN 10220, geschweißt, für Heizungswasser, Außendurchmesser 88,9 mm, 2. Durchmesser 76,1 mm.;4,0;St;gaeb;3940630.x83
+0024;Reduzierstück, aus Kohlenstoffstahl, Verbindung durch Schweißen, für Rohrleitung aus Stahlrohr DIN EN 10217-1, Maße DIN EN 10220, geschweißt, für Heizungswasser, Außendurchmesser 114,3 mm, 2. Durchmesser 76,1 mm.;3,0;St;gaeb;3940630.x83
+0025;Reduzierstück, aus Kohlenstoffstahl, Verbindung durch Schweißen, für Rohrleitung aus Stahlrohr DIN EN 10217-1, Maße DIN EN 10220, geschweißt, für Heizungswasser, Außendurchmesser 114,3 mm, 2. Durchmesser 88,9 mm.;6,0;St;gaeb;3940630.x83
+0026;Reduzierstück, aus Kohlenstoffstahl, Verbindung durch Schweißen, für Rohrleitung aus Stahlrohr DIN EN 10217-1, Maße DIN EN 10220, geschweißt, für Heizungswasser, Außendurchmesser 139,7 mm, 2. Durchmesser 88,9 mm.;2,0;St;gaeb;3940630.x83
+0027;Reduzierstück, aus Kohlenstoffstahl, Verbindung durch Schweißen, für Rohrleitung aus Stahlrohr DIN EN 10217-1, Maße DIN EN 10220, geschweißt, für Heizungswasser, Außendurchmesser 139,7 mm, 2. Durchmesser 114,3 mm.;2,0;St;gaeb;3940630.x83
+0028;Reduzierstück, aus Kohlenstoffstahl, Verbindung durch Schweißen, für Rohrleitung aus Stahlrohr DIN EN 10217-1, Maße DIN EN 10220, geschweißt, für Heizungswasser, Außendurchmesser 168,3 mm, 2. Durchmesser 114,3 mm.;6,0;St;gaeb;3940630.x83
+0029;Reduzierstück, aus Kohlenstoffstahl, Verbindung durch Schweißen, für Rohrleitung aus Stahlrohr DIN EN 10217-1, Maße DIN EN 10220, geschweißt, für Heizungswasser, Außendurchmesser 168,3 mm, 2. Durchmesser 139,7 mm.;3,0;St;gaeb;3940630.x83
+0030;Rohrleitung aus nichtrostenden Stahlrohren DIN EN 10296-2, geschweißt, Werkstoff-Nr 1.4301, für Heizungswasser, Außendurchmesser 18 mm, Wanddicke 1 mm, Verbindung durch Pressen, mit Verpresstkennzeichnung und Prüfsicherheit, Form- und Verbindungsstücke werden gesondert vergütet, Verlegung in Gebäude;132,0;m;gaeb;3940630.x83
+0031;Rohrleitung aus nichtrostenden Stahlrohren DIN EN 10296-2, geschweißt, Werkstoff-Nr 1.4301, für Heizungswasser, Außendurchmesser 22 mm, Wanddicke 1,2 mm, Verbindung durch Pressen, mit Verpresstkennzeichnung und Prüfsicherheit, Form- und Verbindungsstücke werden gesondert vergütet, Verlegung in Gebäu;127,0;m;gaeb;3940630.x83
+0032;Rohrleitung aus nichtrostenden Stahlrohren DIN EN 10296-2, geschweißt, Werkstoff-Nr 1.4301, für Heizungswasser, Außendurchmesser 28 mm, Wanddicke 1,2 mm, Verbindung durch Pressen, mit Verpresstkennzeichnung und Prüfsicherheit, Form- und Verbindungsstücke werden gesondert vergütet, Verlegung in Gebäu;353,0;m;gaeb;3940630.x83
+0033;Rohrleitung aus nichtrostenden Stahlrohren DIN EN 10296-2, geschweißt, Werkstoff-Nr 1.4301, für Heizungswasser, Außendurchmesser 35 mm, Wanddicke 1,5 mm, Verbindung durch Pressen, mit Verpresstkennzeichnung und Prüfsicherheit, Form- und Verbindungsstücke werden gesondert vergütet, Verlegung in Gebäu;209,0;m;gaeb;3940630.x83
+0034;Rohrleitung aus nichtrostenden Stahlrohren DIN EN 10296-2, geschweißt, Werkstoff-Nr 1.4301, für Heizungswasser, Außendurchmesser 42 mm, Wanddicke 1,5 mm, Verbindung durch Pressen, mit Verpresstkennzeichnung und Prüfsicherheit, Form- und Verbindungsstücke werden gesondert vergütet, Verlegung in Gebäu;58,0;m;gaeb;3940630.x83
+0035;Rohrleitung aus nichtrostenden Stahlrohren DIN EN 10296-2, geschweißt, Werkstoff-Nr 1.4301, für Heizungswasser, Außendurchmesser 54 mm, Wanddicke 1,5 mm, Verbindung durch Pressen, mit Verpresstkennzeichnung und Prüfsicherheit, Form- und Verbindungsstücke werden gesondert vergütet, Verlegung in Gebäu;9,0;m;gaeb;3940630.x83
+0036;Bogen, aus nichtrostendem Stahl, Pressverbindung, mit Verpresstkennzeichnung und Prüfsicherheit, über 45 bis 90 Grad, Außendurchmesser 18 mm, für Heizungswasser, für Rohrleitung aus nichtrostenden Stahlrohren DIN EN 10296-2, geschweißt.;59,0;St;gaeb;3940630.x83
+0037;Bogen, aus nichtrostendem Stahl, Pressverbindung, mit Verpresstkennzeichnung und Prüfsicherheit, über 45 bis 90 Grad, Außendurchmesser 22 mm, für Heizungswasser, für Rohrleitung aus nichtrostenden Stahlrohren DIN EN 10296-2, geschweißt.;62,0;St;gaeb;3940630.x83
+0038;Bogen, aus nichtrostendem Stahl, Pressverbindung, mit Verpresstkennzeichnung und Prüfsicherheit, über 45 bis 90 Grad, Außendurchmesser 28 mm, für Heizungswasser, für Rohrleitung aus nichtrostenden Stahlrohren DIN EN 10296-2, geschweißt.;80,0;St;gaeb;3940630.x83
+0039;Bogen, aus nichtrostendem Stahl, Pressverbindung, mit Verpresstkennzeichnung und Prüfsicherheit, über 45 bis 90 Grad, Außendurchmesser 35 mm, für Heizungswasser, für Rohrleitung aus nichtrostenden Stahlrohren DIN EN 10296-2, geschweißt.;50,0;St;gaeb;3940630.x83
+0040;Bogen, aus nichtrostendem Stahl, Pressverbindung, mit Verpresstkennzeichnung und Prüfsicherheit, über 45 bis 90 Grad, Außendurchmesser 42 mm, für Heizungswasser, für Rohrleitung aus nichtrostenden Stahlrohren DIN EN 10296-2, geschweißt.;15,0;St;gaeb;3940630.x83
+0041;Bogen, aus nichtrostendem Stahl, Pressverbindung, mit Verpresstkennzeichnung und Prüfsicherheit, über 45 bis 90 Grad, Außendurchmesser 54 mm, für Heizungswasser, für Rohrleitung aus nichtrostenden Stahlrohren DIN EN 10296-2, geschweißt.;1,0;St;gaeb;3940630.x83
+0042;T-Stück, aus nichtrostendem Stahl, Pressverbindung, mit Verpresstkennzeichnung und Prüfsicherheit, Außendurchmesser 18 mm, für Heizungswasser, für Rohrleitung aus nichtrostenden Stahlrohren DIN EN 10296-2, geschweißt.;2,0;St;gaeb;3940630.x83
+0043;T-Stück, aus nichtrostendem Stahl, Pressverbindung, mit Verpresstkennzeichnung und Prüfsicherheit, Außendurchmesser 22 mm, für Heizungswasser, für Rohrleitung aus nichtrostenden Stahlrohren DIN EN 10296-2, geschweißt.;2,0;St;gaeb;3940630.x83
+0044;T-Stück, aus nichtrostendem Stahl, Pressverbindung, mit Verpresstkennzeichnung und Prüfsicherheit, Außendurchmesser 28 mm, für Heizungswasser, für Rohrleitung aus nichtrostenden Stahlrohren DIN EN 10296-2, geschweißt.;9,0;St;gaeb;3940630.x83
+0045;T-Stück, aus nichtrostendem Stahl, Pressverbindung, mit Verpresstkennzeichnung und Prüfsicherheit, Außendurchmesser 35 mm, für Heizungswasser, für Rohrleitung aus nichtrostenden Stahlrohren DIN EN 10296-2, geschweißt.;12,0;St;gaeb;3940630.x83
+0046;T-Stück, aus nichtrostendem Stahl, Pressverbindung, mit Verpresstkennzeichnung und Prüfsicherheit, Außendurchmesser 42 mm, für Heizungswasser, für Rohrleitung aus nichtrostenden Stahlrohren DIN EN 10296-2, geschweißt.;5,0;St;gaeb;3940630.x83
+0047;T-Stück, aus nichtrostendem Stahl, Pressverbindung, mit Verpresstkennzeichnung und Prüfsicherheit, Außendurchmesser 54 mm, für Heizungswasser, für Rohrleitung aus nichtrostenden Stahlrohren DIN EN 10296-2, geschweißt.;2,0;St;gaeb;3940630.x83
+0048;Reduzierstück, aus nichtrostendem Stahl, Pressverbindung, mit Verpresstkennzeichnung und Prüfsicherheit, Außendurchmesser 22 mm, 2. Durchmesser 18 mm, für Heizungswasser, für Rohrleitung aus nichtrostenden Stahlrohren DIN EN 10296-2, geschweißt.;2,0;St;gaeb;3940630.x83
+0049;Reduzierstück, aus nichtrostendem Stahl, Pressverbindung, mit Verpresstkennzeichnung und Prüfsicherheit, Außendurchmesser 28 mm, 2. Durchmesser 18 mm, für Heizungswasser, für Rohrleitung aus nichtrostenden Stahlrohren DIN EN 10296-2, geschweißt.;6,0;St;gaeb;3940630.x83
+0050;Reduzierstück, aus nichtrostendem Stahl, Pressverbindung, mit Verpresstkennzeichnung und Prüfsicherheit, Außendurchmesser 28 mm, 2. Durchmesser 22 mm, für Heizungswasser, für Rohrleitung aus nichtrostenden Stahlrohren DIN EN 10296-2, geschweißt.;7,0;St;gaeb;3940630.x83
+0051;Reduzierstück, aus nichtrostendem Stahl, Pressverbindung, mit Verpresstkennzeichnung und Prüfsicherheit, Außendurchmesser 35 mm, 2. Durchmesser 18 mm, für Heizungswasser, für Rohrleitung aus nichtrostenden Stahlrohren DIN EN 10296-2, geschweißt.;1,0;St;gaeb;3940630.x83
+0052;Reduzierstück, aus nichtrostendem Stahl, Pressverbindung, mit Verpresstkennzeichnung und Prüfsicherheit, Außendurchmesser 35 mm, 2. Durchmesser 22 mm, für Heizungswasser, für Rohrleitung aus nichtrostenden Stahlrohren DIN EN 10296-2, geschweißt.;4,0;St;gaeb;3940630.x83
+0053;Reduzierstück, aus nichtrostendem Stahl, Pressverbindung, mit Verpresstkennzeichnung und Prüfsicherheit, Außendurchmesser 35 mm, 2. Durchmesser 28 mm, für Heizungswasser, für Rohrleitung aus nichtrostenden Stahlrohren DIN EN 10296-2, geschweißt.;12,0;St;gaeb;3940630.x83
+0054;Reduzierstück, aus nichtrostendem Stahl, Pressverbindung, mit Verpresstkennzeichnung und Prüfsicherheit, Außendurchmesser 42 mm, 2. Durchmesser 22 mm, für Heizungswasser, für Rohrleitung aus nichtrostenden Stahlrohren DIN EN 10296-2, geschweißt.;1,0;St;gaeb;3940630.x83
+0055;Reduzierstück, aus nichtrostendem Stahl, Pressverbindung, mit Verpresstkennzeichnung und Prüfsicherheit, Außendurchmesser 42 mm, 2. Durchmesser 28 mm, für Heizungswasser, für Rohrleitung aus nichtrostenden Stahlrohren DIN EN 10296-2, geschweißt.;4,0;St;gaeb;3940630.x83
+0056;Reduzierstück, aus nichtrostendem Stahl, Pressverbindung, mit Verpresstkennzeichnung und Prüfsicherheit, Außendurchmesser 42 mm, 2. Durchmesser 35 mm, für Heizungswasser, für Rohrleitung aus nichtrostenden Stahlrohren DIN EN 10296-2, geschweißt.;5,0;St;gaeb;3940630.x83
+0057;Reduzierstück, aus nichtrostendem Stahl, Pressverbindung, mit Verpresstkennzeichnung und Prüfsicherheit, Außendurchmesser 54 mm, 2. Durchmesser 35 mm, für Heizungswasser, für Rohrleitung aus nichtrostenden Stahlrohren DIN EN 10296-2, geschweißt.;1,0;St;gaeb;3940630.x83
+0058;Reduzierstück, aus nichtrostendem Stahl, Pressverbindung, mit Verpresstkennzeichnung und Prüfsicherheit, Außendurchmesser 54 mm, 2. Durchmesser 42 mm, für Heizungswasser, für Rohrleitung aus nichtrostenden Stahlrohren DIN EN 10296-2, geschweißt.;3,0;St;gaeb;3940630.x83
+0059;Anschluss an vorhandene Heizungsleitungen herstellen;4,0;St;gaeb;3940630.x83
+0001;Rohrleitung aus Stahlrohr DIN EN 10217-1, Maße DIN EN 10220, geschweißt, mit werkseitigem Korrosionsschutz nach AGI Q 151, Beschichtungssystem 1.2, Stahlsorte DIN EN 10027-1, für Klimakaltwasser, Außendurchmesser 60,3 mm, Wanddicke 3,6 mm, Verbindung durch Schweißen, einschl. Schweiß- bzw. Löt- und ;6,0;m;gaeb;3940630.x83
+0002;Rohrleitung aus Stahlrohr DIN EN 10217-1, Maße DIN EN 10220, geschweißt, mit werkseitigem Korrosionsschutz nach AGI Q 151, Beschichtungssystem 1.2, Stahlsorte DIN EN 10027-1, für Klimakaltwasser, Außendurchmesser 76,1 mm, Wanddicke 3,6 mm, Verbindung durch Schweißen, einschl. Schweiß- bzw. Löt- und ;27,0;m;gaeb;3940630.x83
+0003;Rohrleitung aus Stahlrohr DIN EN 10217-1, Maße DIN EN 10220, geschweißt, mit werkseitigem Korrosionsschutz nach AGI Q 151, Beschichtungssystem 1.2, Stahlsorte DIN EN 10027-1, für Klimakaltwasser, Außendurchmesser 88,9 mm, Wanddicke 4 mm, Verbindung durch Schweißen, einschl. Schweiß- bzw. Löt- und Di;66,0;m;gaeb;3940630.x83
+0004;Rohrleitung aus Stahlrohr DIN EN 10217-1, Maße DIN EN 10220, geschweißt, mit werkseitigem Korrosionsschutz nach AGI Q 151, Beschichtungssystem 1.2, Stahlsorte DIN EN 10027-1, für Klimakaltwasser, Außendurchmesser 114,3 mm, Wanddicke 4 mm, Verbindung durch Schweißen, einschl. Schweiß- bzw. Löt- und D;52,0;m;gaeb;3940630.x83
+0005;Rohrleitung aus Stahlrohr DIN EN 10217-1, Maße DIN EN 10220, geschweißt, mit werkseitigem Korrosionsschutz nach AGI Q 151, Beschichtungssystem 1.2, Stahlsorte DIN EN 10027-1, für Klimakaltwasser, Außendurchmesser 139,7 mm, Wanddicke 4 mm, Verbindung durch Schweißen, einschl. Schweiß- bzw. Löt- und D;77,0;m;gaeb;3940630.x83
+0006;Rohrleitung aus Stahlrohr DIN EN 10217-1, Maße DIN EN 10220, geschweißt, mit werkseitigem Korrosionsschutz nach AGI Q 151, Beschichtungssystem 1.2, Stahlsorte DIN EN 10027-1, für Klimakaltwasser, Außendurchmesser 168,3 mm, Wanddicke 4 mm, Verbindung durch Schweißen, einschl. Schweiß- bzw. Löt- und D;80,0;m;gaeb;3940630.x83
+0007;Bogen, aus Kohlenstoffstahl, mit werkseitigem Korrosionsschutz nach AGI Q 151, Verbindung durch Schweißen, über 45 bis 90 Grad, für Rohrleitung aus Stahlrohr DIN EN 10217-1, Maße DIN EN 10220, geschweißt, für Klimakaltwasser, Außendurchmesser 60,3 mm.;2,0;St;gaeb;3940630.x83
+0008;Bogen, aus Kohlenstoffstahl, mit werkseitigem Korrosionsschutz nach AGI Q 151, Verbindung durch Schweißen, über 45 bis 90 Grad, für Rohrleitung aus Stahlrohr DIN EN 10217-1, Maße DIN EN 10220, geschweißt, für Klimakaltwasser, Außendurchmesser 76,1 mm.;4,0;St;gaeb;3940630.x83
+0009;Bogen, aus Kohlenstoffstahl, mit werkseitigem Korrosionsschutz nach AGI Q 151, Verbindung durch Schweißen, über 45 bis 90 Grad, für Rohrleitung aus Stahlrohr DIN EN 10217-1, Maße DIN EN 10220, geschweißt, für Klimakaltwasser, Außendurchmesser 88,9 mm.;12,0;St;gaeb;3940630.x83
+0010;Bogen, aus Kohlenstoffstahl, mit werkseitigem Korrosionsschutz nach AGI Q 151, Verbindung durch Schweißen, über 45 bis 90 Grad, für Rohrleitung aus Stahlrohr DIN EN 10217-1, Maße DIN EN 10220, geschweißt, für Klimakaltwasser, Außendurchmesser 114,3 mm.;16,0;St;gaeb;3940630.x83
+0011;Bogen, aus Kohlenstoffstahl, mit werkseitigem Korrosionsschutz nach AGI Q 151, Verbindung durch Schweißen, über 45 bis 90 Grad, für Rohrleitung aus Stahlrohr DIN EN 10217-1, Maße DIN EN 10220, geschweißt, für Klimakaltwasser, Außendurchmesser 139,7 mm.;32,0;St;gaeb;3940630.x83
+0012;Bogen, aus Kohlenstoffstahl, mit werkseitigem Korrosionsschutz nach AGI Q 151, Verbindung durch Schweißen, über 45 bis 90 Grad, für Rohrleitung aus Stahlrohr DIN EN 10217-1, Maße DIN EN 10220, geschweißt, für Klimakaltwasser, Außendurchmesser 168,3 mm.;16,0;St;gaeb;3940630.x83
+0013;T-Stück, aus Kohlenstoffstahl, mit werkseitigem Korrosionsschutz nach AGI Q 151, Verbindung durch Schweißen, für Rohrleitung aus Stahlrohr DIN EN 10217-1, Maße DIN EN 10220, geschweißt, für Klimakaltwasser, Außendurchmesser 76,1 mm.;8,0;St;gaeb;3940630.x83
+0014;T-Stück, aus Kohlenstoffstahl, mit werkseitigem Korrosionsschutz nach AGI Q 151, Verbindung durch Schweißen, für Rohrleitung aus Stahlrohr DIN EN 10217-1, Maße DIN EN 10220, geschweißt, für Klimakaltwasser, Außendurchmesser 88,9 mm.;1,0;St;gaeb;3940630.x83
+0015;T-Stück, aus Kohlenstoffstahl, mit werkseitigem Korrosionsschutz nach AGI Q 151, Verbindung durch Schweißen, für Rohrleitung aus Stahlrohr DIN EN 10217-1, Maße DIN EN 10220, geschweißt, für Klimakaltwasser, Außendurchmesser 114,3 mm.;4,0;St;gaeb;3940630.x83
+0016;T-Stück, aus Kohlenstoffstahl, mit werkseitigem Korrosionsschutz nach AGI Q 151, Verbindung durch Schweißen, für Rohrleitung aus Stahlrohr DIN EN 10217-1, Maße DIN EN 10220, geschweißt, für Klimakaltwasser, Außendurchmesser 139,7 mm.;1,0;St;gaeb;3940630.x83
+0017;T-Stück, aus Kohlenstoffstahl, mit werkseitigem Korrosionsschutz nach AGI Q 151, Verbindung durch Schweißen, für Rohrleitung aus Stahlrohr DIN EN 10217-1, Maße DIN EN 10220, geschweißt, für Klimakaltwasser, Außendurchmesser 168,3 mm.;2,0;St;gaeb;3940630.x83
+0018;Reduzierstück, aus Kohlenstoffstahl, mit werkseitigem Korrosionsschutz nach AGI Q 151, Verbindung durch Schweißen, für Rohrleitung aus Stahlrohr DIN EN 10217-1, Maße DIN EN 10220, geschweißt, für Klimakaltwasser, Außendurchmesser 76,1 mm, 2. Durchmesser 33,7 mm.;1,0;St;gaeb;3940630.x83
+0019;Reduzierstück, aus Kohlenstoffstahl, mit werkseitigem Korrosionsschutz nach AGI Q 151, Verbindung durch Schweißen, für Rohrleitung aus Stahlrohr DIN EN 10217-1, Maße DIN EN 10220, geschweißt, für Klimakaltwasser, Außendurchmesser 76,1 mm, 2. Durchmesser 42,4 mm.;3,0;St;gaeb;3940630.x83
+0020;Reduzierstück, aus Kohlenstoffstahl, mit werkseitigem Korrosionsschutz nach AGI Q 151, Verbindung durch Schweißen, für Rohrleitung aus Stahlrohr DIN EN 10217-1, Maße DIN EN 10220, geschweißt, für Klimakaltwasser, Außendurchmesser 76,1 mm, 2. Durchmesser 48,3 mm.;4,0;St;gaeb;3940630.x83
+0021;Reduzierstück, aus Kohlenstoffstahl, mit werkseitigem Korrosionsschutz nach AGI Q 151, Verbindung durch Schweißen, für Rohrleitung aus Stahlrohr DIN EN 10217-1, Maße DIN EN 10220, geschweißt, für Klimakaltwasser, Außendurchmesser 76,1 mm, 2. Durchmesser 60,3 mm.;2,0;St;gaeb;3940630.x83
+0022;Reduzierstück, aus Kohlenstoffstahl, mit werkseitigem Korrosionsschutz nach AGI Q 151, Verbindung durch Schweißen, für Rohrleitung aus Stahlrohr DIN EN 10217-1, Maße DIN EN 10220, geschweißt, für Klimakaltwasser, Außendurchmesser 88,9 mm, 2. Durchmesser 60,3 mm.;1,0;St;gaeb;3940630.x83
+0023;Reduzierstück, aus Kohlenstoffstahl, mit werkseitigem Korrosionsschutz nach AGI Q 151, Verbindung durch Schweißen, für Rohrleitung aus Stahlrohr DIN EN 10217-1, Maße DIN EN 10220, geschweißt, für Klimakaltwasser, Außendurchmesser 88,9 mm, 2. Durchmesser 76,1 mm.;4,0;St;gaeb;3940630.x83
+0024;Reduzierstück, aus Kohlenstoffstahl, mit werkseitigem Korrosionsschutz nach AGI Q 151, Verbindung durch Schweißen, für Rohrleitung aus Stahlrohr DIN EN 10217-1, Maße DIN EN 10220, geschweißt, für Klimakaltwasser, Außendurchmesser 114,3 mm, 2. Durchmesser 76,1 mm.;3,0;St;gaeb;3940630.x83
+0025;Reduzierstück, aus Kohlenstoffstahl, mit werkseitigem Korrosionsschutz nach AGI Q 151, Verbindung durch Schweißen, für Rohrleitung aus Stahlrohr DIN EN 10217-1, Maße DIN EN 10220, geschweißt, für Klimakaltwasser, Außendurchmesser 114,3 mm, 2. Durchmesser 88,9 mm.;6,0;St;gaeb;3940630.x83
+0026;Reduzierstück, aus Kohlenstoffstahl, mit werkseitigem Korrosionsschutz nach AGI Q 151, Verbindung durch Schweißen, für Rohrleitung aus Stahlrohr DIN EN 10217-1, Maße DIN EN 10220, geschweißt, für Klimakaltwasser, Außendurchmesser 139,7 mm, 2. Durchmesser 88,9 mm.;2,0;St;gaeb;3940630.x83
+0027;Reduzierstück, aus Kohlenstoffstahl, mit werkseitigem Korrosionsschutz nach AGI Q 151, Verbindung durch Schweißen, für Rohrleitung aus Stahlrohr DIN EN 10217-1, Maße DIN EN 10220, geschweißt, für Klimakaltwasser, Außendurchmesser 139,7 mm, 2. Durchmesser 114,3 mm.;2,0;St;gaeb;3940630.x83
+0028;Reduzierstück, aus Kohlenstoffstahl, mit werkseitigem Korrosionsschutz nach AGI Q 151, Verbindung durch Schweißen, für Rohrleitung aus Stahlrohr DIN EN 10217-1, Maße DIN EN 10220, geschweißt, für Klimakaltwasser, Außendurchmesser 168,3 mm, 2. Durchmesser 114,3 mm.;6,0;St;gaeb;3940630.x83
+0029;Reduzierstück, aus Kohlenstoffstahl, mit werkseitigem Korrosionsschutz nach AGI Q 151, Verbindung durch Schweißen, für Rohrleitung aus Stahlrohr DIN EN 10217-1, Maße DIN EN 10220, geschweißt, für Klimakaltwasser, Außendurchmesser 168,3 mm, 2. Durchmesser 139,7 mm.;3,0;St;gaeb;3940630.x83
+0030;Rohrleitung aus nichtrostenden Stahlrohren DIN EN 10296-2, geschweißt, Werkstoff-Nr 1.4301, für Klimakaltwasser, Außendurchmesser 18 mm, Wanddicke 1 mm, Verbindung durch Pressen, mit Verpresstkennzeichnung und Prüfsicherheit, Form- und Verbindungsstücke werden gesondert vergütet, Verlegung in Gebäud;71,0;m;gaeb;3940630.x83
+0031;Rohrleitung aus nichtrostenden Stahlrohren DIN EN 10296-2, geschweißt, Werkstoff-Nr 1.4301, für Klimakaltwasser, Außendurchmesser 22 mm, Wanddicke 1,2 mm, Verbindung durch Pressen, mit Verpresstkennzeichnung und Prüfsicherheit, Form- und Verbindungsstücke werden gesondert vergütet, Verlegung in Gebä;140,0;m;gaeb;3940630.x83
+0032;Rohrleitung aus nichtrostenden Stahlrohren DIN EN 10296-2, geschweißt, Werkstoff-Nr 1.4301, für Klimakaltwasser, Außendurchmesser 28 mm, Wanddicke 1,2 mm, Verbindung durch Pressen, mit Verpresstkennzeichnung und Prüfsicherheit, Form- und Verbindungsstücke werden gesondert vergütet, Verlegung in Gebä;230,0;m;gaeb;3940630.x83
+0033;Rohrleitung aus nichtrostenden Stahlrohren DIN EN 10296-2, geschweißt, Werkstoff-Nr 1.4301, für Klimakaltwasser, Außendurchmesser 35 mm, Wanddicke 1,5 mm, Verbindung durch Pressen, mit Verpresstkennzeichnung und Prüfsicherheit, Form- und Verbindungsstücke werden gesondert vergütet, Verlegung in Gebä;47,0;m;gaeb;3940630.x83
+0034;Rohrleitung aus nichtrostenden Stahlrohren DIN EN 10296-2, geschweißt, Werkstoff-Nr 1.4301, für Klimakaltwasser, Außendurchmesser 42 mm, Wanddicke 1,5 mm, Verbindung durch Pressen, mit Verpresstkennzeichnung und Prüfsicherheit, Form- und Verbindungsstücke werden gesondert vergütet, Verlegung in Gebä;10,0;m;gaeb;3940630.x83
+0035;Rohrleitung aus nichtrostenden Stahlrohren DIN EN 10296-2, geschweißt, Werkstoff-Nr 1.4301, für Klimakaltwasser, Außendurchmesser 54 mm, Wanddicke 1,5 mm, Verbindung durch Pressen, mit Verpresstkennzeichnung und Prüfsicherheit, Form- und Verbindungsstücke werden gesondert vergütet, Verlegung in Gebä;46,0;m;gaeb;3940630.x83
+0036;Bogen, aus nichtrostendem Stahl, Pressverbindung, mit Verpresstkennzeichnung und Prüfsicherheit, über 45 bis 90 Grad, Außendurchmesser 18 mm, für Klimakaltwasser, für Rohrleitung aus nichtrostenden Stahlrohren DIN EN 10296-2, geschweißt.;41,0;St;gaeb;3940630.x83
+0037;Bogen, aus nichtrostendem Stahl, Pressverbindung, mit Verpresstkennzeichnung und Prüfsicherheit, über 45 bis 90 Grad, Außendurchmesser 22 mm, für Klimakaltwasser, für Rohrleitung aus nichtrostenden Stahlrohren DIN EN 10296-2, geschweißt.;76,0;St;gaeb;3940630.x83
+0038;Bogen, aus nichtrostendem Stahl, Pressverbindung, mit Verpresstkennzeichnung und Prüfsicherheit, über 45 bis 90 Grad, Außendurchmesser 28 mm, für Klimakaltwasser, für Rohrleitung aus nichtrostenden Stahlrohren DIN EN 10296-2, geschweißt.;55,0;St;gaeb;3940630.x83
+0039;Bogen, aus nichtrostendem Stahl, Pressverbindung, mit Verpresstkennzeichnung und Prüfsicherheit, über 45 bis 90 Grad, Außendurchmesser 35 mm, für Klimakaltwasser, für Rohrleitung aus nichtrostenden Stahlrohren DIN EN 10296-2, geschweißt.;10,0;St;gaeb;3940630.x83
+0040;Bogen, aus nichtrostendem Stahl, Pressverbindung, mit Verpresstkennzeichnung und Prüfsicherheit, über 45 bis 90 Grad, Außendurchmesser 42 mm, für Klimakaltwasser, für Rohrleitung aus nichtrostenden Stahlrohren DIN EN 10296-2, geschweißt.;8,0;St;gaeb;3940630.x83
+0041;Bogen, aus nichtrostendem Stahl, Pressverbindung, mit Verpresstkennzeichnung und Prüfsicherheit, über 45 bis 90 Grad, Außendurchmesser 54 mm, für Klimakaltwasser, für Rohrleitung aus nichtrostenden Stahlrohren DIN EN 10296-2, geschweißt.;8,0;St;gaeb;3940630.x83
+0042;T-Stück, aus nichtrostendem Stahl, Pressverbindung, mit Verpresstkennzeichnung und Prüfsicherheit, Außendurchmesser 22 mm, für Klimakaltwasser, für Rohrleitung aus nichtrostenden Stahlrohren DIN EN 10296-2, geschweißt.;2,0;St;gaeb;3940630.x83
+0043;T-Stück, aus nichtrostendem Stahl, Pressverbindung, mit Verpresstkennzeichnung und Prüfsicherheit, Außendurchmesser 28 mm, für Klimakaltwasser, für Rohrleitung aus nichtrostenden Stahlrohren DIN EN 10296-2, geschweißt.;20,0;St;gaeb;3940630.x83
+0044;T-Stück, aus nichtrostendem Stahl, Pressverbindung, mit Verpresstkennzeichnung und Prüfsicherheit, Außendurchmesser 35 mm, für Klimakaltwasser, für Rohrleitung aus nichtrostenden Stahlrohren DIN EN 10296-2, geschweißt.;8,0;St;gaeb;3940630.x83
+0045;T-Stück, aus nichtrostendem Stahl, Pressverbindung, mit Verpresstkennzeichnung und Prüfsicherheit, Außendurchmesser 42 mm, für Klimakaltwasser, für Rohrleitung aus nichtrostenden Stahlrohren DIN EN 10296-2, geschweißt.;4,0;St;gaeb;3940630.x83
+0046;T-Stück, aus nichtrostendem Stahl, Pressverbindung, mit Verpresstkennzeichnung und Prüfsicherheit, Außendurchmesser 54 mm, für Klimakaltwasser, für Rohrleitung aus nichtrostenden Stahlrohren DIN EN 10296-2, geschweißt.;1,0;St;gaeb;3940630.x83
+0047;Reduzierstück, aus nichtrostendem Stahl, Pressverbindung, mit Verpresstkennzeichnung und Prüfsicherheit, Außendurchmesser 22 mm, 2. Durchmesser 18 mm, für Klimakaltwasser, für Rohrleitung aus nichtrostenden Stahlrohren DIN EN 10296-2, geschweißt.;2,0;St;gaeb;3940630.x83
+0048;Reduzierstück, aus nichtrostendem Stahl, Pressverbindung, mit Verpresstkennzeichnung und Prüfsicherheit, Außendurchmesser 28 mm, 2. Durchmesser 18 mm, für Klimakaltwasser, für Rohrleitung aus nichtrostenden Stahlrohren DIN EN 10296-2, geschweißt.;7,0;St;gaeb;3940630.x83
+0049;Reduzierstück, aus nichtrostendem Stahl, Pressverbindung, mit Verpresstkennzeichnung und Prüfsicherheit, Außendurchmesser 28 mm, 2. Durchmesser 22 mm, für Klimakaltwasser, für Rohrleitung aus nichtrostenden Stahlrohren DIN EN 10296-2, geschweißt.;20,0;St;gaeb;3940630.x83
+0050;Reduzierstück, aus nichtrostendem Stahl, Pressverbindung, mit Verpresstkennzeichnung und Prüfsicherheit, Außendurchmesser 35 mm, 2. Durchmesser 18 mm, für Klimakaltwasser, für Rohrleitung aus nichtrostenden Stahlrohren DIN EN 10296-2, geschweißt.;2,0;St;gaeb;3940630.x83
+0051;Reduzierstück, aus nichtrostendem Stahl, Pressverbindung, mit Verpresstkennzeichnung und Prüfsicherheit, Außendurchmesser 35 mm, 2. Durchmesser 22 mm, für Klimakaltwasser, für Rohrleitung aus nichtrostenden Stahlrohren DIN EN 10296-2, geschweißt.;4,0;St;gaeb;3940630.x83
+0052;Reduzierstück, aus nichtrostendem Stahl, Pressverbindung, mit Verpresstkennzeichnung und Prüfsicherheit, Außendurchmesser 35 mm, 2. Durchmesser 28 mm, für Klimakaltwasser, für Rohrleitung aus nichtrostenden Stahlrohren DIN EN 10296-2, geschweißt.;6,0;St;gaeb;3940630.x83
+0053;Reduzierstück, aus nichtrostendem Stahl, Pressverbindung, mit Verpresstkennzeichnung und Prüfsicherheit, Außendurchmesser 42 mm, 2. Durchmesser 22 mm, für Klimakaltwasser, für Rohrleitung aus nichtrostenden Stahlrohren DIN EN 10296-2, geschweißt.;2,0;St;gaeb;3940630.x83
+0054;Reduzierstück, aus nichtrostendem Stahl, Pressverbindung, mit Verpresstkennzeichnung und Prüfsicherheit, Außendurchmesser 42 mm, 2. Durchmesser 28 mm, für Klimakaltwasser, für Rohrleitung aus nichtrostenden Stahlrohren DIN EN 10296-2, geschweißt.;2,0;St;gaeb;3940630.x83
+0055;Reduzierstück, aus nichtrostendem Stahl, Pressverbindung, mit Verpresstkennzeichnung und Prüfsicherheit, Außendurchmesser 42 mm, 2. Durchmesser 35 mm, für Klimakaltwasser, für Rohrleitung aus nichtrostenden Stahlrohren DIN EN 10296-2, geschweißt.;2,0;St;gaeb;3940630.x83
+0056;Reduzierstück, aus nichtrostendem Stahl, Pressverbindung, mit Verpresstkennzeichnung und Prüfsicherheit, Außendurchmesser 54 mm, 2. Durchmesser 28 mm, für Klimakaltwasser, für Rohrleitung aus nichtrostenden Stahlrohren DIN EN 10296-2, geschweißt.;2,0;St;gaeb;3940630.x83
+0057;Reduzierstück, aus nichtrostendem Stahl, Pressverbindung, mit Verpresstkennzeichnung und Prüfsicherheit, Außendurchmesser 54 mm, 2. Durchmesser 35 mm, für Klimakaltwasser, für Rohrleitung aus nichtrostenden Stahlrohren DIN EN 10296-2, geschweißt.;2,0;St;gaeb;3940630.x83
+0058;Reduzierstück, aus nichtrostendem Stahl, Pressverbindung, mit Verpresstkennzeichnung und Prüfsicherheit, Außendurchmesser 54 mm, 2. Durchmesser 42 mm, für Klimakaltwasser, für Rohrleitung aus nichtrostenden Stahlrohren DIN EN 10296-2, geschweißt.;2,0;St;gaeb;3940630.x83
+0001;Rohrleitung aus nichtrostenden Stahlrohren DIN EN 10296-2, geschweißt, für Wasser-Glycol-Gemisch, Außendurchmesser 42 mm, Wanddicke 1,5 mm, Verbindung durch Pressen, mit Verpresstkennzeichnung und Prüfsicherheit, Form- und Verbindungsstücke werden gesondert vergütet, Verlegung in Gebäuden, Arbeitshö;40,0;m;gaeb;3940630.x83
+0002;Bogen, aus nichtrostendem Stahl, Pressverbindung, mit Verpresstkennzeichnung und Prüfsicherheit, über 45 bis 90 Grad, Außendurchmesser 42 mm, für Wasser-Glycol-Gemisch, für Rohrleitung aus nichtrostenden Stahlrohren DIN EN 10296-2, geschweißt.;31,0;St;gaeb;3940630.x83
+0003;Rohrleitung aus Stahlrohr DIN EN 10217-1, Maße DIN EN 10220, geschweißt, schwarz, Stahlsorte DIN EN 10027-1, für Wasser mit Wechseltemperaturen, Außendurchmesser 76,1 mm, Wanddicke 3,6 mm, Verbindung durch Schweißen, einschl. Schweiß- bzw. Löt- und Dichtungsmittel, sowie Herstellen der Verbindungen,;10,0;m;gaeb;3940630.x83
+0004;Rohrleitung aus Stahlrohr DIN EN 10217-1, Maße DIN EN 10220, geschweißt, schwarz, Stahlsorte DIN EN 10027-1, für Wasser mit Wechseltemperaturen, Außendurchmesser 114,3 mm, Wanddicke 4 mm, Verbindung durch Schweißen, einschl. Schweiß- bzw. Löt- und Dichtungsmittel, sowie Herstellen der Verbindungen, ;129,0;m;gaeb;3940630.x83
+0005;Rohrleitung aus Stahlrohr DIN EN 10217-1, Maße DIN EN 10220, geschweißt, schwarz, Stahlsorte DIN EN 10027-1, für Wasser mit Wechseltemperaturen, Außendurchmesser 168,3 mm, Wanddicke 4 mm, Verbindung durch Schweißen, einschl. Schweiß- bzw. Löt- und Dichtungsmittel, sowie Herstellen der Verbindungen, ;129,0;m;gaeb;3940630.x83
+0006;Bogen, aus Kohlenstoffstahl, Verbindung durch Schweißen, über 45 bis 90 Grad, für Rohrleitung aus Stahlrohr DIN EN 10217-1, Maße DIN EN 10220, geschweißt, für Wasser mit Wechseltemperaturen, Außendurchmesser 76,1 mm.;6,0;St;gaeb;3940630.x83
+0007;Bogen, aus Kohlenstoffstahl, Verbindung durch Schweißen, über 45 bis 90 Grad, für Rohrleitung aus Stahlrohr DIN EN 10217-1, Maße DIN EN 10220, geschweißt, für Wasser mit Wechseltemperaturen, Außendurchmesser 114,3 mm.;29,0;St;gaeb;3940630.x83
+0008;Bogen, aus Kohlenstoffstahl, Verbindung durch Schweißen, über 45 bis 90 Grad, für Rohrleitung aus Stahlrohr DIN EN 10217-1, Maße DIN EN 10220, geschweißt, für Wasser mit Wechseltemperaturen, Außendurchmesser 168,3 mm.;29,0;St;gaeb;3940630.x83
+0009;T-Stück, aus Kohlenstoffstahl, Verbindung durch Schweißen, für Rohrleitung aus Stahlrohr DIN EN 10217-1, Maße DIN EN 10220, geschweißt, für Wasser mit Wechseltemperaturen, Außendurchmesser 114,3 mm.;2,0;St;gaeb;3940630.x83
+0010;T-Stück, aus Kohlenstoffstahl, Verbindung durch Schweißen, für Rohrleitung aus Stahlrohr DIN EN 10217-1, Maße DIN EN 10220, geschweißt, für Wasser mit Wechseltemperaturen, Außendurchmesser 168,3 mm.;2,0;St;gaeb;3940630.x83
+0011;Reduzierstück, aus Kohlenstoffstahl, Verbindung durch Schweißen, für Rohrleitung aus Stahlrohr DIN EN 10217-1, Maße DIN EN 10220, geschweißt, für Wasser mit Wechseltemperaturen, Außendurchmesser 114,3 mm, 2. Durchmesser 76,1 mm.;1,0;St;gaeb;3940630.x83
+0012;Reduzierstück, aus Kohlenstoffstahl, Verbindung durch Schweißen, für Rohrleitung aus Stahlrohr DIN EN 10217-1, Maße DIN EN 10220, geschweißt, für Wasser mit Wechseltemperaturen, Außendurchmesser 168,3 mm, 2. Durchmesser 114,3 mm.;1,0;St;gaeb;3940630.x83
+0001;Kugelhahn, für Wasser, max. Betriebstemperatur bis 90 Grad C, Durchgangsform, mit Innengewinde, Betätigung mit Hebel mit verlängerter Spindel, Nenndruck 0,6 MPa (6 bar), DN 15.;6,0;St;gaeb;3940630.x83
+0002;Kugelhahn, für Wasser, max. Betriebstemperatur bis 90 Grad C, Durchgangsform, mit Innengewinde, Betätigung mit Hebel mit verlängerter Spindel, Nenndruck 0,6 MPa (6 bar), DN 20.;4,0;St;gaeb;3940630.x83
+0003;Kugelhahn, für Wasser, max. Betriebstemperatur bis 90 Grad C, Durchgangsform, mit Innengewinde, Betätigung mit Hebel mit verlängerter Spindel, Nenndruck 0,6 MPa (6 bar), DN 25.;6,0;St;gaeb;3940630.x83
+0004;Kugelhahn, für Wasser, max. Betriebstemperatur bis 90 Grad C, Durchgangsform, mit Innengewinde, Betätigung mit Hebel mit verlängerter Spindel, Nenndruck 0,6 MPa (6 bar), DN 32.;10,0;St;gaeb;3940630.x83
+0005;Kugelhahn, für Wasser, max. Betriebstemperatur bis 90 Grad C, Durchgangsform, mit Innengewinde, Betätigung mit Hebel mit verlängerter Spindel, Nenndruck 0,6 MPa (6 bar), DN 40.;14,0;St;gaeb;3940630.x83
+0006;Kugelhahn, für Klimakaltwasser, max. Betriebstemperatur bis 20 Grad C, Durchgangsform, mit Innengewinde, Betätigung mit Hebel mit verlängerter Spindel, Nenndruck 1 MPa (10 bar), DN 15.;12,0;St;gaeb;3940630.x83
+0007;Kugelhahn, für Klimakaltwasser, max. Betriebstemperatur bis 20 Grad C, Durchgangsform, mit Innengewinde, Betätigung mit Hebel mit verlängerter Spindel, Nenndruck 1 MPa (10 bar), DN 20.;26,0;St;gaeb;3940630.x83
+0008;Kugelhahn, für Klimakaltwasser, max. Betriebstemperatur bis 20 Grad C, Durchgangsform, mit Innengewinde, Betätigung mit Hebel mit verlängerter Spindel, Nenndruck 1 MPa (10 bar), DN 25.;6,0;St;gaeb;3940630.x83
+0009;Kugelhahn, für Klimakaltwasser, max. Betriebstemperatur bis 20 Grad C, Durchgangsform, mit Innengewinde, Betätigung mit Hebel mit verlängerter Spindel, Nenndruck 1 MPa (10 bar), DN 50.;2,0;St;gaeb;3940630.x83
+0010;Wärmezähler, konformitätsbewertet gemäß MessEV, Kompaktgerät mit 2 Temperaturfühlern, Messelement-Leitungen, Länge 1 m, mit Netzanschluss, für Wasser, Nenndruck 1,6 MPa (16 bar), Nenndurchfluss Qn 3,5 m3/h, max. Betriebstemperatur bis 90 Grad C, Einbau in Vorlaufleitung, waagerecht, Messwerterfassun;3,0;St;gaeb;3940630.x83
+0011;Wärmezähler, konformitätsbewertet gemäß MessEV, Kompaktgerät mit 2 Temperaturfühlern, Messelement-Leitungen, Länge 1 m, mit Netzanschluss, für Wasser, Nenndruck 1,6 MPa (16 bar), Nenndurchfluss Qn 3,5 m3/h, max. Betriebstemperatur bis 90 Grad C, Einbau in Vorlaufleitung, waagerecht, Messwerterfassun;2,0;St;gaeb;3940630.x83
+0012;Wärmezähler, konformitätsbewertet gemäß MessEV, Kompaktgerät mit 2 Temperaturfühlern und Tauchhülsen, Messelement-Leitungen, Länge 1 m, mit Netzanschluss, für Wasser, Nenndruck 1,6 MPa (16 bar), Nenndurchfluss Qn 6 m3/h, max. Betriebstemperatur bis 90 Grad C, Einbau in Vorlaufleitung, waagerecht, Me;1,0;St;gaeb;3940630.x83
+0013;Wärmezähler, konformitätsbewertet gemäß MessEV, Kompaktgerät mit 2 Temperaturfühlern und Tauchhülsen, Messelement-Leitungen, Länge 1 m, mit Netzanschluss, für Wasser, Nenndruck 1,6 MPa (16 bar), Nenndurchfluss Qn 40 m3/h, max. Betriebstemperatur bis 90 Grad C, Einbau in Vorlaufleitung, waagerecht, M;2,0;St;gaeb;3940630.x83
+0014;Wärmezähler, konformitätsbewertet gemäß MessEV, Kompaktgerät mit 2 Temperaturfühlern und Tauchhülsen, Messelement-Leitungen, Länge 1 m, mit Netzanschluss, für Wasser, Nenndruck 1,6 MPa (16 bar), Nenndurchfluss Qn 40 m3/h, max. Betriebstemperatur bis 90 Grad C, Einbau in Vorlaufleitung, waagerecht, M;2,0;St;gaeb;3940630.x83
+0015;Wärmezähler, konformitätsbewertet gemäß MessEV, Kompaktgerät mit 2 Temperaturfühlern, Messelement-Leitungen, Länge 1 m, mit Netzanschluss, für Klimakaltwasser, Nenndruck 1,6 MPa (16 bar), Nenndurchfluss Qn 3,5 m3/h, max. Betriebstemperatur bis 40 Grad C, Einbau in Vorlaufleitung, waagerecht, Messwer;1,0;St;gaeb;3940630.x83
+0016;Wärmezähler, konformitätsbewertet gemäß MessEV, Kompaktgerät mit 2 Temperaturfühlern, Messelement-Leitungen, Länge 1 m, mit Netzanschluss, für Klimakaltwasser, Nenndruck 1,6 MPa (16 bar), Nenndurchfluss Qn 3,5 m3/h, max. Betriebstemperatur bis 40 Grad C, Einbau in Vorlaufleitung, waagerecht, Messwer;1,0;St;gaeb;3940630.x83
+0017;Wärmezähler, konformitätsbewertet gemäß MessEV, Kompaktgerät mit 2 Temperaturfühlern, Messelement-Leitungen, Länge 1 m, mit Netzanschluss, für Klimakaltwasser, Nenndruck 1,6 MPa (16 bar), Nenndurchfluss Qn 3,5 m3/h, max. Betriebstemperatur bis 40 Grad C, Einbau in Vorlaufleitung, waagerecht, Messwer;2,0;St;gaeb;3940630.x83
+0018;Wärmezähler, konformitätsbewertet gemäß MessEV, Kompaktgerät mit 2 Temperaturfühlern, Messelement-Leitungen, Länge 1 m, mit Netzanschluss, für Klimakaltwasser, Nenndruck 1,6 MPa (16 bar), Nenndurchfluss Qn 6 m3/h, max. Betriebstemperatur bis 40 Grad C, Einbau in Vorlaufleitung, waagerecht, Messwerte;2,0;St;gaeb;3940630.x83
+0019;Wärmezähler, konformitätsbewertet gemäß MessEV, Kompaktgerät mit 2 Temperaturfühlern, Messelement-Leitungen, Länge 1 m, mit Netzanschluss, für Klimakaltwasser, Nenndruck 1,6 MPa (16 bar), Nenndurchfluss Qn 20 m3/h, max. Betriebstemperatur bis 40 Grad C, Einbau in Vorlaufleitung, waagerecht, Messwert;1,0;St;gaeb;3940630.x83
+0020;Wärmezähler, konformitätsbewertet gemäß MessEV, Kompaktgerät mit 2 Temperaturfühlern und Tauchhülsen, Messelement-Leitungen, Länge 1 m, mit Netzanschluss, für Klimakaltwasser, Nenndruck 1,6 MPa (16 bar), Nenndurchfluss Qn 40 m3/h, max. Betriebstemperatur bis 40 Grad C, Einbau in Vorlaufleitung, waag;2,0;St;gaeb;3940630.x83
+0021;Distanzstück für Wärmezähler, Nenndruck 1,6 MPa (16 bar), mit Gewindeanschluss, G 1 B, Baulänge 130 mm.;26,0;St;gaeb;3940630.x83
+0022;Absperrklappe DIN EN 593, weich dichtend, aus Gusseisen, mit Flanschen, geeignet für Handbetätigung, Nenndruck 1 MPa (10 bar), DN 100, für Wasser.;25,0;St;gaeb;3940630.x83
+0023;Absperrklappe DIN EN 593, weich dichtend, aus Gusseisen, mit Flanschen, geeignet für Handbetätigung, Nenndruck 1 MPa (10 bar), DN 80, für Wasser.;8,0;St;gaeb;3940630.x83
+0024;Absperrklappe DIN EN 593, weich dichtend, aus Gusseisen, mit Flanschen, geeignet für Handbetätigung, Nenndruck 1 MPa (10 bar), DN 50, für Wasser.;4,0;St;gaeb;3940630.x83
+0025;Absperrklappe DIN EN 593, weich dichtend, aus Gusseisen, mit Flanschen, geeignet für Handbetätigung, Nenndruck 0,6 MPa (6 bar), DN 50, für Wasser.;4,0;St;gaeb;3940630.x83
+0026;Absperrklappe DIN EN 593, weich dichtend, aus Gusseisen, mit Flanschen, geeignet für Handbetätigung, Nenndruck 0,6 MPa (6 bar), DN 100, für Wasser.;21,0;St;gaeb;3940630.x83
+0027;Absperrklappe DIN EN 593, weich dichtend, aus Gusseisen, mit Flanschen, geeignet für Handbetätigung, Nenndruck 0,6 MPa (6 bar), DN 125, für Wasser.;16,0;St;gaeb;3940630.x83
+0028;Muffe, aus Kohlenstoffstahl, Gewindeverbindung, für Rohrleitung aus mittelschwerem Stahlrohr DIN EN 10255, für Heizungswasser, Außendurchmesser 21,3 mm.;2,0;St;gaeb;3940630.x83
+0029;Muffe, aus Kohlenstoffstahl, Gewindeverbindung, für Rohrleitung aus mittelschwerem Stahlrohr DIN EN 10255, für Heizungswasser, Außendurchmesser 26,9 mm.;4,0;St;gaeb;3940630.x83
+0030;Muffe, aus Kohlenstoffstahl, Gewindeverbindung, für Rohrleitung aus mittelschwerem Stahlrohr DIN EN 10255, für Heizungswasser, Außendurchmesser 33,7 mm.;10,0;St;gaeb;3940630.x83
+0031;Muffe, aus Kohlenstoffstahl, Gewindeverbindung, für Rohrleitung aus mittelschwerem Stahlrohr DIN EN 10255, für Heizungswasser, Außendurchmesser 42,4 mm.;4,0;St;gaeb;3940630.x83
+0032;Muffe, aus Kohlenstoffstahl, mit werkseitigem Korrosionsschutz nach AGI Q 151, Gewindeverbindung, für Rohrleitung aus mittelschwerem Stahlrohr DIN EN 10255, für Klimakaltwasser, Außendurchmesser 21,3 mm.;2,0;St;gaeb;3940630.x83
+0033;Muffe, aus Kohlenstoffstahl, mit werkseitigem Korrosionsschutz nach AGI Q 151, Gewindeverbindung, für Rohrleitung aus mittelschwerem Stahlrohr DIN EN 10255, für Klimakaltwasser, Außendurchmesser 26,9 mm.;4,0;St;gaeb;3940630.x83
+0034;Muffe, aus Kohlenstoffstahl, mit werkseitigem Korrosionsschutz nach AGI Q 151, Gewindeverbindung, für Rohrleitung aus mittelschwerem Stahlrohr DIN EN 10255, für Klimakaltwasser, Außendurchmesser 33,7 mm.;10,0;St;gaeb;3940630.x83
+0035;Muffe, aus Kohlenstoffstahl, mit werkseitigem Korrosionsschutz nach AGI Q 151, Gewindeverbindung, für Rohrleitung aus mittelschwerem Stahlrohr DIN EN 10255, für Klimakaltwasser, Außendurchmesser 42,4 mm.;4,0;St;gaeb;3940630.x83
+0036;Einschweißmuffe, mit zylindrischem Innengewinde, aus Kohlenstoffstahl, Verbindung durch Schweißen, für Rohrleitung aus mittelschwerem Stahlrohr DIN EN 10255, für Wasser mit Wechseltemperaturen, Länge bis 50 mm, Gewindeanschluss Rp 1/2.;20,0;St;gaeb;3940630.x83
+0037;Einschweißmuffe, mit zylindrischem Innengewinde, aus Kohlenstoffstahl, Verbindung durch Schweißen, für Rohrleitung aus mittelschwerem Stahlrohr DIN EN 10255, für Wasser mit Wechseltemperaturen, Länge über 50 bis 100 mm, Gewindeanschluss Rp 1/2.;50,0;St;gaeb;3940630.x83
+0038;Einschweißmuffe, mit zylindrischem Innengewinde, aus Kohlenstoffstahl, mit werkseitigem Korrosionsschutz nach AGI Q 151, Verbindung durch Schweißen, für Rohrleitung aus mittelschwerem Stahlrohr DIN EN 10255, für Wasser mit Wechseltemperaturen, Länge bis 50 mm, Gewindeanschluss Rp 3/4.;4,0;St;gaeb;3940630.x83
+0039;Einschweißmuffe, mit zylindrischem Innengewinde, aus Kohlenstoffstahl, mit werkseitigem Korrosionsschutz nach AGI Q 151, Verbindung durch Schweißen, für Rohrleitung aus mittelschwerem Stahlrohr DIN EN 10255, für Wasser mit Wechseltemperaturen, Länge bis 50 mm, Gewindeanschluss Rp 1.;4,0;St;gaeb;3940630.x83
+0040;Verschraubung, aus Kohlenstoffstahl, mit werkseitigem Korrosionsschutz nach AGI Q 151, Gewindeverbindung, für Rohrleitung aus mittelschwerem Stahlrohr DIN EN 10255, für Wasser mit Wechseltemperaturen, Außendurchmesser 21,3 mm.;4,0;St;gaeb;3940630.x83
+0041;Verschraubung, aus Kohlenstoffstahl, mit werkseitigem Korrosionsschutz nach AGI Q 151, Gewindeverbindung, für Rohrleitung aus mittelschwerem Stahlrohr DIN EN 10255, für Wasser mit Wechseltemperaturen, Außendurchmesser 26,9 mm.;6,0;St;gaeb;3940630.x83
+0042;Verschraubung, aus Kohlenstoffstahl, mit werkseitigem Korrosionsschutz nach AGI Q 151, Gewindeverbindung, für Rohrleitung aus mittelschwerem Stahlrohr DIN EN 10255, für Wasser mit Wechseltemperaturen, Außendurchmesser 33,7 mm.;10,0;St;gaeb;3940630.x83
+0043;Verschraubung, aus Kohlenstoffstahl, mit werkseitigem Korrosionsschutz nach AGI Q 151, Gewindeverbindung, für Rohrleitung aus mittelschwerem Stahlrohr DIN EN 10255, für Wasser mit Wechseltemperaturen, Außendurchmesser 42,4 mm.;6,0;St;gaeb;3940630.x83
+0044;Verschraubung, aus Kohlenstoffstahl, mit werkseitigem Korrosionsschutz nach AGI Q 151, Gewindeverbindung, für Rohrleitung aus mittelschwerem Stahlrohr DIN EN 10255, für Wasser mit Wechseltemperaturen, Außendurchmesser 48,3 mm.;8,0;St;gaeb;3940630.x83
+0045;Entleerungsarmatur, für Klimakaltwasser bis 20 Grad C, mit Flügelgriff, mit Verschlusskappe und Kette, mit Gewindeanschluss, Nenndruck 1 MPa (10 bar), DN 15.;30,0;St;gaeb;3940630.x83
+0046;Entleerungsarmatur, für Wasser bis 90 Grad C, mit Flügelgriff, mit Verschlusskappe und Kette, mit Gewindeanschluss, Nenndruck 0,6 MPa (6 bar), DN 15.;40,0;St;gaeb;3940630.x83
+0047;Entleerungsarmatur, für Wasser bis 90 Grad C, mit Flügelgriff, mit Verschlusskappe und Kette, mit Gewindeanschluss, Nenndruck 1 MPa (10 bar), DN 15.;10,0;St;gaeb;3940630.x83
+0048;Rückschlagklappe, Gehäuse aus Rotguss, DN 50, Nenndruck 1 MPa (10 bar), für Klimakaltwasser, max. Betriebstemperatur bis 20 Grad C, mit Flanschanschluss, als Zwischenflanschausführung.;1,0;St;gaeb;3940630.x83
+0049;Rückschlagklappe, Gehäuse aus Rotguss, DN 80, Nenndruck 1 MPa (10 bar), für Klimakaltwasser, max. Betriebstemperatur bis 20 Grad C, mit Flanschanschluss, als Zwischenflanschausführung.;1,0;St;gaeb;3940630.x83
+0050;Rückschlagklappe, Gehäuse aus Rotguss, DN 100, Nenndruck 1 MPa (10 bar), für Klimakaltwasser, max. Betriebstemperatur bis 20 Grad C, mit Flanschanschluss, als Zwischenflanschausführung.;1,0;St;gaeb;3940630.x83
+0051;Rückschlagklappe, Gehäuse aus Rotguss, DN 50, Nenndruck 0,6 MPa (6 bar), für Wasser, max. Betriebstemperatur bis 90 Grad C, mit Flanschanschluss, als Zwischenflanschausführung.;1,0;St;gaeb;3940630.x83
+0052;Rückschlagklappe, Gehäuse aus Rotguss, DN 100, Nenndruck 0,6 MPa (6 bar), für Wasser, max. Betriebstemperatur bis 90 Grad C, mit Flanschanschluss, als Zwischenflanschausführung.;3,0;St;gaeb;3940630.x83
+0053;Rückschlagklappe, Gehäuse aus Rotguss, DN 125, Nenndruck 0,6 MPa (6 bar), für Wasser, max. Betriebstemperatur bis 90 Grad C, mit Flanschanschluss, als Zwischenflanschausführung.;1,0;St;gaeb;3940630.x83
+0054;Rückschlagklappe, Gehäuse aus Rotguss, DN 100, Nenndruck 0,6 MPa (6 bar), für Sole, mit Flanschanschluss, als Zwischenflanschausführung.;1,0;St;gaeb;3940630.x83
+0055;Abscheider für Schmutz mit Magneten zur Magnetitabscheidung, für Klimakaltwasser, mit Flanschanschluss, max. Betriebstemperatur bis 20 Grad C, Nenndruck 1 MPa (10 bar), DN 100.;5,0;St;gaeb;3940630.x83
+0056;Abscheider für Schmutz mit Magneten zur Magnetitabscheidung, für Wasser-Glycol-Gemisch, mit Flanschanschluss, max. Betriebstemperatur bis 20 Grad C, Nenndruck 1 MPa (10 bar), DN 100.;1,0;St;gaeb;3940630.x83
+0057;Abscheider für Schmutz mit Magneten zur Magnetitabscheidung, Einbau senkrecht, für Klimakaltwasser, mit Flanschanschluss, max. Betriebstemperatur bis 20 Grad C, Nenndruck 1 MPa (10 bar), DN 50.;1,0;St;gaeb;3940630.x83
+0058;Abscheider für Schmutz mit Magneten zur Magnetitabscheidung, Einbau waagerecht, für Wasser, mit Flanschanschluss, max. Betriebstemperatur bis 90 Grad C, Nenndruck 0,6 MPa (6 bar), DN 100.;3,0;St;gaeb;3940630.x83
+0059;Abscheider für Schmutz mit Magneten zur Magnetitabscheidung, Einbau waagerecht, für Wasser, mit Flanschanschluss, max. Betriebstemperatur bis 90 Grad C, Nenndruck 0,6 MPa (6 bar), DN 125.;2,0;St;gaeb;3940630.x83
+0060;Abscheider für Schmutz mit Magneten zur Magnetitabscheidung, Einbau senkrecht, für Wasser, mit Flanschanschluss, max. Betriebstemperatur bis 90 Grad C, Nenndruck 0,6 MPa (6 bar), DN 50.;1,0;St;gaeb;3940630.x83
+0061;Strangdifferenzdruckregler, mit Volumenstrombegrenzung, mit Kapillarrohr, über 1 bis 2 m und Verschraubungen, mit einstellbarem Sollwert, mit Einstellanzeige, für Wasser, max. Betriebstemperatur bis 90 Grad C, mit Innengewinde, Gehäuse aus Rotguss, Nenndruck 1 MPa (10 bar), DN 32.;3,0;St;gaeb;3940630.x83
+0062;Strangdifferenzdruckregler, mit Volumenstrombegrenzung, mit Kapillarrohr, über 1 bis 2 m und Verschraubungen, mit einstellbarem Sollwert, mit Einstellanzeige, für Wasser, max. Betriebstemperatur bis 90 Grad C, mit Innengewinde, Gehäuse aus Rotguss, Nenndruck 1 MPa (10 bar), DN 40.;2,0;St;gaeb;3940630.x83
+0063;Strangdifferenzdruckregler, mit Volumenstrombegrenzung, mit Kapillarrohr, über 1 bis 2 m und Verschraubungen, mit einstellbarem Sollwert, mit Einstellanzeige, für Klimakaltwasser, max. Betriebstemperatur bis 40 Grad C, mit Innengewinde, Gehäuse aus Rotguss, Nenndruck 1 MPa (10 bar), DN 15.;1,0;St;gaeb;3940630.x83
+0064;Strangdifferenzdruckregler, mit Volumenstrombegrenzung, mit Kapillarrohr, über 1 bis 2 m und Verschraubungen, mit einstellbarem Sollwert, mit Einstellanzeige, für Klimakaltwasser, max. Betriebstemperatur bis 40 Grad C, mit Innengewinde, Gehäuse aus Rotguss, Nenndruck 1 MPa (10 bar), DN 20.;1,0;St;gaeb;3940630.x83
+0065;Strangdifferenzdruckregler, mit Volumenstrombegrenzung, mit Kapillarrohr, über 1 bis 2 m und Verschraubungen, mit einstellbarem Sollwert, mit Einstellanzeige, für Klimakaltwasser, max. Betriebstemperatur bis 40 Grad C, mit Innengewinde, Gehäuse aus Rotguss, Nenndruck 1 MPa (10 bar), DN 25.;2,0;St;gaeb;3940630.x83
+0066;Strangdifferenzdruckregler, mit Volumenstrombegrenzung, mit Kapillarrohr, über 1 bis 2 m und Verschraubungen, mit einstellbarem Sollwert, mit Einstellanzeige, für Klimakaltwasser, max. Betriebstemperatur bis 40 Grad C, mit Innengewinde, Gehäuse aus Rotguss, Nenndruck 1 MPa (10 bar), DN 50.;1,0;St;gaeb;3940630.x83
+0067;Abgleichventil mit Voreinstellung, Absperrung und Durchflussmesser, für Klimakaltwasser, max. Betriebstemperatur bis 20 Grad C, mit Gewindeanschluss, Gehäuse aus Rotguss, Nenndruck 1 MPa (10 bar), DN 25.;1,0;St;gaeb;3940630.x83
+0068;Abgleichventil mit Voreinstellung, Absperrung und Durchflussmesser, für Wasser, max. Betriebstemperatur bis 90 Grad C, mit Gewindeanschluss, Gehäuse aus Rotguss, Nenndruck 1 MPa (10 bar), DN 25.;1,0;St;gaeb;3940630.x83
+0069;Druckunabhängiges Regelventil DN 15,;3,0;St;gaeb;3940630.x83
+0070;Druckunabhängiges Regelventil DN 20,;8,0;St;gaeb;3940630.x83
+0071;Druckunabhängiges Regelventil DN 25,;8,0;St;gaeb;3940630.x83
+0072;Absperrklappe DN 100, zur Aufnahme eines durch das Gewerk Gebäudeautomation gelieferten Stellantriebes.;2,0;St;gaeb;3940630.x83
+0073;Absperrklappe DN 125, zur Aufnahme eines durch das Gewerk Gebäudeautomation gelieferten Stellantriebes.;2,0;St;gaeb;3940630.x83
+0074;Absperrklappe DN 100, zur Aufnahme eines durch das Gewerk Gebäudeautomation gelieferten Stellantriebes.;6,0;St;gaeb;3940630.x83
+0075;Übernahme und Montage eines bauseits gelieferten Energieventils DN 32.;1,0;St;gaeb;3940630.x83
+0076;Übernahme und Montage eines bauseits gelieferten Energieventils DN 40.;1,0;St;gaeb;3940630.x83
+0077;Übernahme und Montage eines bauseits gelieferten Energieventils DN 65.;2,0;St;gaeb;3940630.x83
+0078;Übernahme und Montage eines bauseits gelieferten Temperaturfühlers einschließlich Tauchhülse.;6,0;St;gaeb;3940630.x83
+0079;Übernahme und Montage eines bauseits gelieferten Temperaturfühlers einschließlich Tauchhülse.;40,0;St;gaeb;3940630.x83
+0080;Übernahme und Montage eines bauseits gelieferten Temperaturfühlers einschließlich Tauchhülse.;6,0;St;gaeb;3940630.x83
+0081;Übernahme und Montage eines bauseits gelieferten Temperaturfühlers einschließlich Tauchhülse.;4,0;St;gaeb;3940630.x83
+0082;Übernahme und Montage eines bauseits gelieferten Drucksensors.;4,0;St;gaeb;3940630.x83
+0083;Übernahme und Montage eines bauseits gelieferten Drucksensors.;1,0;St;gaeb;3940630.x83
+0084;Übernahme und Montage eines bauseits gelieferten Sicherheitstemperaturbegrenzers einschließlich Tauchhülse.;2,0;St;gaeb;3940630.x83
+0085;Druckmessgerät, Messsystem Rohrfeder DIN EN 837-1, ohne Zusatzeinrichtungen, Nenndruck 0,6 MPa (6 bar), Gehäuse aus nichtrostendem Stahl, ohne Rand, Gehäusenenngröße 63, Güteklasse 1,6, Anzeigebereich -1 bis 3 bar, mediumberührte Teile aus Messing.;10,0;St;gaeb;3940630.x83
+0086;Wassersackrohr DIN 16282, B-Form, Nenndruck 1 MPa (10 bar), aus Stahl, Anschlussgewinde G 1/2.;10,0;St;gaeb;3940630.x83
+0087;Zeigerthermometer DIN EN 13190, glattes Messelement, Einbaulänge 50 mm, einschl. Tauchhülse, aus nichtrostendem Stahl, Gehäuse aus nichtrostendem Stahl, Gehäusenenndurchmesser 63 mm, Anzeigebereich -30 bis 50 Grad C.;4,0;St;gaeb;3940630.x83
+0088;Zeigerthermometer DIN EN 13190, glattes Messelement, Einbaulänge 100 mm, einschl. Tauchhülse, aus nichtrostendem Stahl, Gehäuse aus nichtrostendem Stahl, Gehäusenenndurchmesser 63 mm, Anzeigebereich -30 bis 50 Grad C.;30,0;St;gaeb;3940630.x83
+0089;Manometerhahn aus Messing zur Absperrung, Prüfung und Entlastung von Manometern.;10,0;St;gaeb;3940630.x83
+0090;Tauchhülse für Thermometer-Messelement, Einbaulänge 100 mm, aus Messing, zum Einschrauben G 1/2.;10,0;St;gaeb;3940630.x83
+0091;Tauchhülse für Thermometer-Messelement, Einbaulänge 130 mm, aus Messing, zum Einschrauben G 1/2.;20,0;St;gaeb;3940630.x83
+0092;Vorschweißflansch DIN EN 1092-1 PN 6, aus Stahl, einschl. Schrauben und Dichtung, DN 32.;2,0;St;gaeb;3940630.x83
+0093;Vorschweißflansch DIN EN 1092-1 PN 6, aus Stahl, einschl. Schrauben und Dichtung, DN 40.;4,0;St;gaeb;3940630.x83
+0094;Vorschweißflansch DIN EN 1092-1 PN 6, aus Stahl, einschl. Schrauben und Dichtung, DN 50.;4,0;St;gaeb;3940630.x83
+0095;Vorschweißflansch DIN EN 1092-1 PN 6, aus Stahl, einschl. Schrauben und Dichtung, DN 80.;2,0;St;gaeb;3940630.x83
+0096;Vorschweißflansch DIN EN 1092-1 PN 6, aus Stahl, einschl. Schrauben und Dichtung, DN 100.;12,0;St;gaeb;3940630.x83
+0097;Vorschweißflansch DIN EN 1092-1 PN 6, aus Stahl, einschl. Schrauben und Dichtung, DN 125.;10,0;St;gaeb;3940630.x83
+0098;Vorschweißflansch DIN EN 1092-1 PN 10, aus Stahl, einschl. Schrauben und Dichtung, DN 32.;2,0;St;gaeb;3940630.x83
+0099;Vorschweißflansch DIN EN 1092-1 PN 10, aus Stahl, einschl. Schrauben und Dichtung, DN 40.;2,0;St;gaeb;3940630.x83
+0100;Vorschweißflansch DIN EN 1092-1 PN 10, aus Stahl, einschl. Schrauben und Dichtung, DN 50.;6,0;St;gaeb;3940630.x83
+0101;Vorschweißflansch DIN EN 1092-1 PN 10, aus Stahl, einschl. Schrauben und Dichtung, DN 80.;10,0;St;gaeb;3940630.x83
+0102;Vorschweißflansch DIN EN 1092-1 PN 10, aus Stahl, einschl. Schrauben und Dichtung, DN 100.;20,0;St;gaeb;3940630.x83
+0103;Vorschweißflansch DIN EN 1092-1 PN 10, aus Stahl, einschl. Schrauben und Dichtung, DN 125.;4,0;St;gaeb;3940630.x83
+0104;Vorschweißflansch DIN EN 1092-1 PN 16, aus Stahl, einschl. Schrauben und Dichtung, DN 65.;4,0;St;gaeb;3940630.x83
+0105;Luftgefäß mit 2 gewölbten Böden, max. zulässige Betriebstemperatur bis 90 Grad C, max. Betriebsüberdruck 0,6 MPa (6 bar), aus Stahlrohren, mit Werkszeugnis 2.2 DIN EN 10204, bis DN 150, Gesamtlänge 350 mm, mit 2 Leitungsanschlüssen mit Flansch, Anschluss DN 125, mit Entlüftungsleitung, Länge 2 m und;4,0;St;gaeb;3940630.x83
+0106;Luftgefäß mit 2 gewölbten Böden, max. zulässige Betriebstemperatur bis 90 Grad C, max. Betriebsüberdruck 0,6 MPa (6 bar), aus Stahlrohren, mit Werkszeugnis 2.2 DIN EN 10204, bis DN 125, Gesamtlänge 300 mm, mit 2 Leitungsanschlüssen mit Flansch, Anschluss DN 100, mit Entlüftungsleitung, Länge 2 m und;6,0;St;gaeb;3940630.x83
+0107;Luftgefäß mit 2 gewölbten Böden, max. zulässige Betriebstemperatur bis 90 Grad C, max. Betriebsüberdruck 0,6 MPa (6 bar), aus Stahlrohren, mit Werkszeugnis 2.2 DIN EN 10204, bis DN 80, Gesamtlänge 250 mm, mit 2 Leitungsanschlüssen mit Flansch, Anschluss DN 50, mit Entlüftungsleitung, Länge 2 m und E;2,0;St;gaeb;3940630.x83
+0108;Luftgefäß mit 2 gewölbten Böden, max. zulässige Betriebstemperatur bis 20 Grad C, max. Betriebsüberdruck 1 MPa (10 bar), aus Stahlrohren, mit werkseitigem Korrosionsschutz nach AGI Q 151, Beschichtungssystem 1.2, mit Werkszeugnis 2.2 DIN EN 10204, bis DN 125, Gesamtlänge 300 mm, mit 2 Leitungsanschl;6,0;St;gaeb;3940630.x83
+0109;Luftgefäß mit 2 gewölbten Böden, max. zulässige Betriebstemperatur bis 20 Grad C, max. Betriebsüberdruck 1 MPa (10 bar), aus Stahlrohren, mit werkseitigem Korrosionsschutz nach AGI Q 151, Beschichtungssystem 1.2, mit Werkszeugnis 2.2 DIN EN 10204, bis DN 100, Gesamtlänge 300 mm, mit 2 Leitungsanschl;4,0;St;gaeb;3940630.x83
+0110;Luftgefäß mit 2 gewölbten Böden, max. zulässige Betriebstemperatur bis 20 Grad C, max. Betriebsüberdruck 1 MPa (10 bar), aus Stahlrohren, mit werkseitigem Korrosionsschutz nach AGI Q 151, Beschichtungssystem 1.2, mit Werkszeugnis 2.2 DIN EN 10204, bis DN 80, Gesamtlänge 250 mm, mit 2 Leitungsanschlü;2,0;St;gaeb;3940630.x83
+0111;Luftgefäß mit 2 gewölbten Böden, max. zulässige Betriebstemperatur bis 70 Grad C, max. Betriebsüberdruck 1 MPa (10 bar), aus Stahlrohren, mit werkseitigem Korrosionsschutz nach AGI Q 151, Beschichtungssystem 1.4, mit Werkszeugnis 2.2 DIN EN 10204, bis DN 125, Gesamtlänge 300 mm, mit 2 Leitungsanschl;2,0;St;gaeb;3940630.x83
+0112;Rohrleitung aus nichtrostenden Stahlrohren DIN EN 10217-7, für Nichttrinkwasser, Außendurchmesser 22 mm, Wanddicke 1,2 mm, Verbindung durch Pressen, einschl. Dichtungsmittel und Herstellen der Verbindungen, inkl. Formstücke, Arbeitshöhe des Montageortes bis 3,5 m über der Standfläche des hierfür erf;20,0;m;gaeb;3940630.x83
+0113;Rohrleitung aus nichtrostenden Stahlrohren DIN EN 10217-7, für Nichttrinkwasser, Außendurchmesser 35 mm, Wanddicke 1,5 mm, Verbindung durch Pressen, einschl. Dichtungsmittel und Herstellen der Verbindungen, inkl. Formstücke, Arbeitshöhe des Montageortes bis 3,5 m über der Standfläche des hierfür erf;30,0;m;gaeb;3940630.x83
+0001;Flachheizkörper (Plattenheizkörper), aus Stahl, liefern, montieren und anschließen,;2,0;St;gaeb;3940630.x83
+0002;Thermostatisches Heizkörperventil, DIN EN 215, für 2-Rohr-Installation, Durchgangsausführung, mit Gewindeanschluss, für Wasser bis 120 Grad C, Nenndruck 1 MPa (10 bar), mit Feinstvoreinstellung, DN 20.;2,0;St;gaeb;3940630.x83
+0003;Thermostatkopf, DIN EN 215, mit eingebautem Messelement, Medium Flüssigkeit, bis 120 Grad C, mit Frostschutzstellung, begrenzbar, als Behördenmodell, Temperatur mit Spezialwerkzeug einstellbar, Temperaturbereich 5 bis 26 Grad, diebstahlgesichert, nicht lösbar.;2,0;St;gaeb;3940630.x83
+0004;Heizkörperverschraubung, für Durchgangsausführung, für Wasser bis 120 Grad C, Nenndruck 1 MPa (10 bar), mit Absperrung, DN 20.;2,0;St;gaeb;3940630.x83
+0005;Heizkörperblindstopfen, bis 120 Grad C, Nenndruck 1 MPa (10 bar), R 3/4.;2,0;St;gaeb;3940630.x83
+0006;Heizkörperentlüftung, bis 120 Grad C, Nenndruck 1 MPa (10 bar), R 3/4.;2,0;St;gaeb;3940630.x83
+0001;Heizrohr 17 mm für Flächenheizungssystem;14226,78;m;gaeb;3940630.x83
+0002;Tackerklips für Heizrohre 14-20 mm;44,0;St;gaeb;3940630.x83
+0003;System-Verbundrolle EPS DES sg 30 mm,;2722,82;m2;gaeb;3940630.x83
+0004;Klebeband 50 mm für Systemdämmung;47,0;St;gaeb;3940630.x83
+0005;Systemplatte für Durchgangsbereiche 30 mm,;24,0;St;gaeb;3940630.x83
+0006;Klebeband 48 mm für Systemplatten;24,0;St;gaeb;3940630.x83
+0007;Rohrmanschette 15-30 mm;314,0;St;gaeb;3940630.x83
+0008;Randdämmstreifen 160 x 10 mm;2928,45;m;gaeb;3940630.x83
+0009;Schutzrohr 19/25 mm für Dehnungsfugen;188,4;m;gaeb;3940630.x83
+0010;Dehnungsfugenprofil 1800 mm;111,0;St;gaeb;3940630.x83
+0011;Messstellenset für Heizestriche;28,0;St;gaeb;3940630.x83
+0012;PE-Abdeckfolie 0,2 mm;238,12;m2;gaeb;3940630.x83
+0013;Verteilerstation HK 2, Unterputz,;2,0;St;gaeb;3940630.x83
+0014;Verteilerstation HK 3, Unterputz,;1,0;St;gaeb;3940630.x83
+0015;Verteilerstation HK 4, Unterputz,;1,0;St;gaeb;3940630.x83
+0016;Verteilerstation HK 5, Unterputz,;4,0;St;gaeb;3940630.x83
+0017;Verteilerstation HK 6, Unterputz,;6,0;St;gaeb;3940630.x83
+0018;Verteilerstation HK 7, Unterputz,;2,0;St;gaeb;3940630.x83
+0019;Verteilerstation HK 8, Unterputz,;3,0;St;gaeb;3940630.x83
+0020;Verteilerstation HK 9, Unterputz,;1,0;St;gaeb;3940630.x83
+0021;Verteilerstation HK 10, Unterputz,;2,0;St;gaeb;3940630.x83
+0022;Verteilerstation HK 11, Unterputz,;1,0;St;gaeb;3940630.x83
+0023;Verteilerstation HK 12, Unterputz,;1,0;St;gaeb;3940630.x83
+0024;Klemmverschraubung 17 mm mit Eurokonus;314,0;St;gaeb;3940630.x83
+0025;Rohrführungsbogen 14-17 mm;314,0;St;gaeb;3940630.x83
+0026;Stellantrieb NO 24 V, stromlos geöffnet;157,0;St;gaeb;3940630.x83
+0001;Decken-Ventilatorkonvektor bis 3kW;5,0;St;gaeb;3940630.x83
+0002;Decken-Ventilatorkonvektor bis 2,0kW;6,0;St;gaeb;3940630.x83
+0003;Decken-Ventilatorkonvektor bis 1,5kW;3,0;St;gaeb;3940630.x83
+0004;Decken-Ventilatorkonvektor bis 2,0kW;3,0;St;gaeb;3940630.x83
+0005;Decken-Ventilatorkonvektor bis 1,5kW;1,0;St;gaeb;3940630.x83
+0006;Decken-Ventilatorkonvektor bis 1,0kW;3,0;St;gaeb;3940630.x83
+0007;Bedien- und Anzeigeeinrichtung, als stationäre Einheit, für Aufputzmontage, passend zu Schalter-/Steckdosenprogramm, Netzspannung 230 V AC, für Umgebungsbedingungen 0 bis 45 Grad C, relative Umgebungsfeuchte 5 bis 90 % (nicht kondensierend), mit Bedien-/Anzeigefunktion:;21,0;St;gaeb;3940630.x83
+0001;Brandschutzabschottung von Rohrleitung aus Stahl, mit allgemeinem bauaufsichtlichen Prüfzeugnis/allgemeiner bauaufsichtlicher Zulassung, Feuerwiderstandsklasse R 90 DIN 4102-11,;4,0;St;gaeb;3940630.x83
+0002;Brandschutzabschottung von Rohrleitung aus Stahl, mit allgemeinem bauaufsichtlichen Prüfzeugnis/allgemeiner bauaufsichtlicher Zulassung, Feuerwiderstandsklasse R 90 DIN 4102-11,;10,0;St;gaeb;3940630.x83
+0003;Brandschutzabschottung von Rohrleitung aus Stahl, mit allgemeinem bauaufsichtlichen Prüfzeugnis/allgemeiner bauaufsichtlicher Zulassung, Feuerwiderstandsklasse R 90 DIN 4102-11,;10,0;St;gaeb;3940630.x83
+0004;Brandschutzabschottung von Rohrleitung aus Stahl, mit allgemeinem bauaufsichtlichen Prüfzeugnis/allgemeiner bauaufsichtlicher Zulassung, Feuerwiderstandsklasse R 90 DIN 4102-11,;14,0;St;gaeb;3940630.x83
+0005;Brandschutzabschottung von Rohrleitung aus Stahl, mit allgemeinem bauaufsichtlichen Prüfzeugnis/allgemeiner bauaufsichtlicher Zulassung, Feuerwiderstandsklasse R 90 DIN 4102-11,;4,0;St;gaeb;3940630.x83
+0006;Brandschutzabschottung von Rohrleitung aus Stahl, mit allgemeinem bauaufsichtlichen Prüfzeugnis/allgemeiner bauaufsichtlicher Zulassung, Feuerwiderstandsklasse R 90 DIN 4102-11,;4,0;St;gaeb;3940630.x83
+0007;Brandschutzabschottung von Rohrleitung aus Stahl, mit allgemeinem bauaufsichtlichen Prüfzeugnis/allgemeiner bauaufsichtlicher Zulassung, Feuerwiderstandsklasse R 90 DIN 4102-11,;4,0;St;gaeb;3940630.x83
+0008;Brandschutzabschottung von Rohrleitung aus Stahl, mit allgemeinem bauaufsichtlichen Prüfzeugnis/allgemeiner bauaufsichtlicher Zulassung, Feuerwiderstandsklasse R 90 DIN 4102-11,;6,0;St;gaeb;3940630.x83
+0009;Brandschutzabschottung von Rohrleitung aus Stahl, mit allgemeinem bauaufsichtlichen Prüfzeugnis/allgemeiner bauaufsichtlicher Zulassung, Feuerwiderstandsklasse R 90 DIN 4102-11,;14,0;St;gaeb;3940630.x83
+0010;Brandschutzabschottung von Rohrleitung aus Stahl, mit allgemeinem bauaufsichtlichen Prüfzeugnis/allgemeiner bauaufsichtlicher Zulassung, Feuerwiderstandsklasse R 90 DIN 4102-11,;4,0;St;gaeb;3940630.x83
+0011;Brandschutzabschottung von Rohrleitung aus Stahl, mit allgemeinem bauaufsichtlichen Prüfzeugnis/allgemeiner bauaufsichtlicher Zulassung, Feuerwiderstandsklasse R 90 DIN 4102-11,;4,0;St;gaeb;3940630.x83
+0012;Brandschutzabschottung von Rohrleitung aus Stahl, mit allgemeinem bauaufsichtlichen Prüfzeugnis/allgemeiner bauaufsichtlicher Zulassung, Feuerwiderstandsklasse R 90 DIN 4102-11,;8,0;St;gaeb;3940630.x83
+0013;Brandschutzabschottung von Rohrleitung aus Stahl, mit allgemeinem bauaufsichtlichen Prüfzeugnis/allgemeiner bauaufsichtlicher Zulassung, Feuerwiderstandsklasse R 90 DIN 4102-11,;10,0;St;gaeb;3940630.x83
+0014;Brandschutzabschottung von Rohrleitung aus Stahl, mit allgemeinem bauaufsichtlichen Prüfzeugnis/allgemeiner bauaufsichtlicher Zulassung, Feuerwiderstandsklasse R 90 DIN 4102-11,;6,0;St;gaeb;3940630.x83
+0015;Brandschutzabschottung von Rohrleitung aus Stahl, mit allgemeinem bauaufsichtlichen Prüfzeugnis/allgemeiner bauaufsichtlicher Zulassung, Feuerwiderstandsklasse R 90 DIN 4102-11,;8,0;St;gaeb;3940630.x83
+0016;Brandschutzabschottung von Rohrleitung aus Stahl, mit allgemeinem bauaufsichtlichen Prüfzeugnis/allgemeiner bauaufsichtlicher Zulassung, Feuerwiderstandsklasse R 90 DIN 4102-11,;4,0;St;gaeb;3940630.x83
+0017;Brandschutzabschottung von Rohrleitung aus Stahl, mit allgemeinem bauaufsichtlichen Prüfzeugnis/allgemeiner bauaufsichtlicher Zulassung, Feuerwiderstandsklasse R 90 DIN 4102-11,;6,0;St;gaeb;3940630.x83
+0018;Brandschutzabschottung von Rohrleitung aus Stahl, mit allgemeinem bauaufsichtlichen Prüfzeugnis/allgemeiner bauaufsichtlicher Zulassung, Feuerwiderstandsklasse R 90 DIN 4102-11,;10,0;St;gaeb;3940630.x83
+0019;Brandschutzabschottung von Rohrleitung aus Stahl, mit allgemeinem bauaufsichtlichen Prüfzeugnis/allgemeiner bauaufsichtlicher Zulassung, Feuerwiderstandsklasse R 90 DIN 4102-11,;10,0;St;gaeb;3940630.x83
+0020;Brandschutzabschottung von Rohrleitung aus Stahl, mit allgemeinem bauaufsichtlichen Prüfzeugnis/allgemeiner bauaufsichtlicher Zulassung, Feuerwiderstandsklasse R 90 DIN 4102-11,;4,0;St;gaeb;3940630.x83
+0021;Brandschutzabschottung von Rohrleitung aus Stahl, mit allgemeinem bauaufsichtlichen Prüfzeugnis/allgemeiner bauaufsichtlicher Zulassung, Feuerwiderstandsklasse R 90 DIN 4102-11,;6,0;St;gaeb;3940630.x83
+0022;Brandschutzabschottung von Rohrleitung aus Stahl, mit allgemeinem bauaufsichtlichen Prüfzeugnis/allgemeiner bauaufsichtlicher Zulassung, Feuerwiderstandsklasse R 90 DIN 4102-11,;16,0;St;gaeb;3940630.x83
+0023;Brandschutzabschottung von Rohrleitung aus Stahl, mit allgemeinem bauaufsichtlichen Prüfzeugnis/allgemeiner bauaufsichtlicher Zulassung, Feuerwiderstandsklasse R 90 DIN 4102-11,;6,0;St;gaeb;3940630.x83
+0024;Brandschutzabschottung von Rohrleitung aus Stahl, mit allgemeinem bauaufsichtlichen Prüfzeugnis/allgemeiner bauaufsichtlicher Zulassung, Feuerwiderstandsklasse R 90 DIN 4102-11,;6,0;St;gaeb;3940630.x83
+0025;Brandschutzkissen zur provisorischen Brandschutzabschottung an Kabel-/Leitungsanlagen, mit;10,0;St;gaeb;3940630.x83
+0026;Brandschutzkissen S90 groß;10,0;St;gaeb;3940630.x83
+0001;Durchbruch schließen, Ausführung in Wandfläche,;10,0;St;gaeb;3940630.x83
+0002;Durchbruch schließen, Ausführung in Wandfläche,;10,0;St;gaeb;3940630.x83
+0003;Durchbruch schließen, Ausführung in Wandfläche,;8,0;St;gaeb;3940630.x83
+0004;Durchbruch schließen, Ausführung in Wandfläche,;10,0;St;gaeb;3940630.x83
+0005;Durchbruch schließen, Ausführung in Wandfläche,;10,0;St;gaeb;3940630.x83
+0001;Kernbohrung, Untergrundfläche waagerecht, Bohrkern ist gegen Absturz zu sichern, aus Stahlbeton, Normalbeton, Bohrdurchmesser über 50 bis 100 mm, Bohrtiefe über 25 bis 30 cm, einschl. Lösen des Bohrkerns aus dem Gefüge, nicht schadstoffbelastet,;8,0;St;gaeb;3940630.x83
+0002;Kernbohrung, Untergrundfläche waagerecht, Bohrkern ist gegen Absturz zu sichern, aus Stahlbeton, Normalbeton, Bohrdurchmesser über 100 bis 150 mm, Bohrtiefe über 25 bis 30 cm, einschl. Lösen des Bohrkerns aus dem Gefüge, nicht schadstoffbelastet,;6,0;St;gaeb;3940630.x83
+0003;Kernbohrung, Untergrundfläche waagerecht, Bohrkern ist gegen Absturz zu sichern, aus Stahlbeton, Normalbeton, Bohrdurchmesser über 150 bis 200 mm, Bohrtiefe über 25 bis 30 cm, einschl. Lösen des Bohrkerns aus dem Gefüge, Wichte des Abbruchstoffes DIN EN 1991-1-1 24 kN/m3, Arbeitshöhe bis 3,5 m über ;6,0;St;gaeb;3940630.x83
+0004;Kernbohrung, Untergrundfläche senkrecht, aus Stahlbeton, Normalbeton, Bohrdurchmesser über 50 bis 100 mm, Bohrtiefe über 25 bis 30 cm, einschl. Lösen des Bohrkerns aus dem Gefüge, nicht schadstoffbelastet,;8,0;St;gaeb;3940630.x83
+0005;Kernbohrung, Untergrundfläche senkrecht, aus Stahlbeton, Normalbeton, Bohrdurchmesser über 100 bis 150 mm, Bohrtiefe über 25 bis 30 cm, einschl. Lösen des Bohrkerns aus dem Gefüge, nicht schadstoffbelastet,;6,0;St;gaeb;3940630.x83
+0006;Kernbohrung, Untergrundfläche senkrecht, aus Stahlbeton, Normalbeton, Bohrdurchmesser über 150 bis 200 mm, Bohrtiefe über 25 bis 30 cm, einschl. Lösen des Bohrkerns aus dem Gefüge, nicht schadstoffbelastet,;6,0;St;gaeb;3940630.x83
+0007;Einmessen und Kennzeichnen von Durchbrüchen, Ausführung gemäß Zeichnung und Einzelbeschreibung.;40,0;St;gaeb;3940630.x83
+0001;Rohraufhängung als Rohrschelle, aus verzinktem Stahl, mit schalldämmenden Einlagen, Anforderungen entsprechend DIN 4109-1, Temperaturbereich - 40 bis 110 Grad C, Länge Aufhängung bis 0,5 m, Befestigung an Metallkonstruktion, Befestigungsuntergrund Beton, Rohr aus nichtrostendem Stahl, DN 15, Arbeits;132,0;St;gaeb;3940630.x83
+0002;Rohraufhängung als Rohrschelle, aus verzinktem Stahl, mit schalldämmenden Einlagen, Anforderungen entsprechend DIN 4109-1, Temperaturbereich - 40 bis 110 Grad C, Länge Aufhängung bis 0,5 m, Befestigung an Metallkonstruktion, Befestigungsuntergrund Beton, Rohr aus nichtrostendem Stahl, DN 20, Arbeits;127,0;St;gaeb;3940630.x83
+0003;Rohraufhängung als Rohrschelle, aus verzinktem Stahl, mit schalldämmenden Einlagen, Anforderungen entsprechend DIN 4109-1, Temperaturbereich - 40 bis 110 Grad C, Länge Aufhängung bis 0,5 m, Befestigung an Metallkonstruktion, Befestigungsuntergrund Beton, Rohr aus nichtrostendem Stahl, DN 25, Arbeits;353,0;St;gaeb;3940630.x83
+0004;Rohraufhängung als Rohrschelle, aus verzinktem Stahl, mit schalldämmenden Einlagen, Anforderungen entsprechend DIN 4109-1, Temperaturbereich - 40 bis 110 Grad C, Länge Aufhängung bis 0,5 m, Befestigung an Metallkonstruktion, Befestigungsuntergrund Beton, Rohr aus nichtrostendem Stahl, DN 32, Arbeits;209,0;St;gaeb;3940630.x83
+0005;Rohraufhängung als Rohrschelle, aus verzinktem Stahl, mit schalldämmenden Einlagen, Anforderungen entsprechend DIN 4109-1, Temperaturbereich - 40 bis 110 Grad C, Länge Aufhängung bis 0,5 m, Befestigung an Metallkonstruktion, Befestigungsuntergrund Beton, Rohr aus nichtrostendem Stahl, DN 40, Arbeits;58,0;St;gaeb;3940630.x83
+0006;Rohraufhängung als Rohrschelle, aus verzinktem Stahl, mit schalldämmenden Einlagen, Anforderungen entsprechend DIN 4109-1, Temperaturbereich - 40 bis 110 Grad C, Länge Aufhängung bis 0,5 m, Befestigung an Metallkonstruktion, Befestigungsuntergrund Beton, Rohr aus nichtrostendem Stahl, DN 50, Arbeits;9,0;St;gaeb;3940630.x83
+0007;Rohraufhängung als Rohrschelle, aus verzinktem Stahl, mit schalldämmenden Einlagen, Anforderungen entsprechend DIN 4109-1, Temperaturbereich - 40 bis 110 Grad C, Länge Aufhängung bis 0,5 m, Befestigung an Metallkonstruktion, Befestigungsuntergrund Beton, Rohr aus Stahl, DN 50, Arbeitshöhe des Montag;6,0;St;gaeb;3940630.x83
+0008;Rohraufhängung als Rohrschelle, aus verzinktem Stahl, mit schalldämmenden Einlagen, Anforderungen entsprechend DIN 4109-1, Temperaturbereich - 40 bis 110 Grad C, Länge Aufhängung bis 0,5 m, Befestigung an Metallkonstruktion, Befestigungsuntergrund Beton, Rohr aus Stahl, DN 65, Arbeitshöhe des Montag;48,0;St;gaeb;3940630.x83
+0009;Rohraufhängung als Rohrschelle, aus verzinktem Stahl, mit schalldämmenden Einlagen, Anforderungen entsprechend DIN 4109-1, Temperaturbereich - 40 bis 110 Grad C, Länge Aufhängung bis 0,5 m, Befestigung an Metallkonstruktion, Befestigungsuntergrund Beton, Rohr aus Stahl, DN 80, Arbeitshöhe des Montag;82,0;St;gaeb;3940630.x83
+0010;Rohraufhängung als Rohrschelle, aus verzinktem Stahl, mit schalldämmenden Einlagen, Anforderungen entsprechend DIN 4109-1, Temperaturbereich - 40 bis 110 Grad C, Länge Aufhängung bis 0,5 m, Befestigung an Metallkonstruktion, Befestigungsuntergrund Beton, Rohr aus nichtrostendem Stahl, DN 100, Arbeit;43,0;St;gaeb;3940630.x83
+0011;Rohraufhängung als Rohrschelle, aus verzinktem Stahl, mit schalldämmenden Einlagen, Anforderungen entsprechend DIN 4109-1, Temperaturbereich - 40 bis 110 Grad C, Länge Aufhängung bis 0,5 m, Befestigung an Metallkonstruktion, Befestigungsuntergrund Beton, Rohr aus nichtrostendem Stahl, DN 125, Arbeit;50,0;St;gaeb;3940630.x83
+0012;Rohraufhängung als Rohrschelle, aus verzinktem Stahl, mit schalldämmenden Einlagen, Anforderungen entsprechend DIN 4109-1, Temperaturbereich - 40 bis 110 Grad C, Länge Aufhängung bis 0,5 m, Befestigung an Metallkonstruktion, Befestigungsuntergrund Beton, Rohr aus nichtrostendem Stahl, DN 150, Arbeit;86,0;St;gaeb;3940630.x83
+0013;Kälteschelle DN 15, Dämmstärke 20 mm;71,0;St;gaeb;3940630.x83
+0014;Kälteschelle DN 20, Dämmstärke 20 mm;140,0;St;gaeb;3940630.x83
+0015;Kälteschelle DN 25, Dämmstärke 20 mm;230,0;St;gaeb;3940630.x83
+0016;Kälteschelle DN 32, Dämmstärke 20 mm;47,0;St;gaeb;3940630.x83
+0017;Kälteschelle DN 40, Dämmstärke 20 mm;10,0;St;gaeb;3940630.x83
+0018;Kälteschelle DN 50, Dämmstärke 20 mm;46,0;St;gaeb;3940630.x83
+0019;Kälteschelle DN 50, Dämmstärke 20 mm;6,0;St;gaeb;3940630.x83
+0020;Kälteschelle DN 65, Dämmstärke 20 mm;27,0;St;gaeb;3940630.x83
+0021;Kälteschelle DN 80, Dämmstärke 20 mm;66,0;St;gaeb;3940630.x83
+0022;Kälteschelle DN 100, Dämmstärke 20 mm;52,0;St;gaeb;3940630.x83
+0023;Kälteschelle DN 125, Dämmstärke 20 mm;77,0;St;gaeb;3940630.x83
+0024;Kälteschelle DN 150, Dämmstärke 20 mm;80,0;St;gaeb;3940630.x83
+0025;Aufhänge- und Stützkonstruktion für Leitungen der Technischen Gebäudeausrüstung (TGA), aus verzinktem Stahl, mit schalldämmender Zwischenlage, einschl. Decken-/Mauerwerksbefestigung, befestigen mit Befestigungsmitteln mit bauaufsichtlichem Nachweis einschl. Bohrungen, Befestigungsuntergrund Stahlbet;300,0;kg;gaeb;3940630.x83
+0026;Aufhänge- und Stützkonstruktion F30 für Leitungen der Technischen Gebäudeausrüstung (TGA), aus verzinktem Stahl, mit schalldämmender Zwischenlage, einschl. Decken-/Mauerwerksbefestigung, befestigen mit Befestigungsmitteln mit bauaufsichtlichem Nachweis einschl. Bohrungen, Befestigungsuntergrund Stah;50,0;kg;gaeb;3940630.x83
+0027;Stützkonstruktion für Leitungen der Technischen Gebäudeausrüstung (TGA), aus Stahl, korrosionsgeschützt, einschl. Decken-/Mauerwerksbefestigung, befestigen mit Befestigungsmitteln mit bauaufsichtlichem Nachweis einschl. Bohrungen, Befestigungsuntergrund Stahlbeton.;50,0;kg;gaeb;3940630.x83
+0001;Aufbauen fahrbares Gerüst,;6,0;St;gaeb;3940630.x83
+0002;Abbauen fahrbares Gerüst,;6,0;St;gaeb;3940630.x83
+0003;Umsetzen fahrbares Gerüst,;6,0;St;gaeb;3940630.x83
+0004;Gebrauchsüberlassung für fahrbares Gerüst,;120,0;StWo;gaeb;3940630.x83
+0001;Vor Ausführung sind Werk- und Montagepläne sowie Werk- und Montagezeichnungen für die Gesamtanlage, bestehend aus allen beschriebenen Anlagen, Anlagenteilen, Schaltschränken, Installationen und Bauteilen bezogen auf die angebotenen und beauftragten Fabrikate zu erstellen und in Zusammenarbeit mit de;1,0;psch;gaeb;3940630.x83
+0002;Information zur Gebäudeautomation an den AG übergeben, die Informationen werden mit den AN der beteiligten Leistungsbereiche abgestimmt und bearbeitet nach Auftragserteilung innerhalb eines Kalendertages, die Informationsunterlagen bestehen aus Grund- und Verfahrensfließschemata, Funktionsbeschreibu;1,0;St;gaeb;3940630.x83
+0003;Einbindung und Berücksichtigung des Anlagenkennzeichnungssystems (AKS) des ANs Gebäudeautomation in sämtlichen Planunterlagen für alle durch die Gebäudeautomation benannten Bauteile, einschließlich der Anpassung und Aktualisierung der Dokumentation;1,0;St;gaeb;3940630.x83
+0004;Vorleistungsprüfung vor Inbetriebnahmen;1,0;psch;gaeb;3940630.x83
+0005;Probebetrieb;1,0;St;gaeb;3940630.x83
+0006;Füllen-, Spülen und Entlüften des Wärmeträgermediums;1,0;St;gaeb;3940630.x83
+0007;Zusätzliche Druck- und Dichtheitsprüfung von Rohrleitungen, aus Stahlrohr DIN EN 10217-1, Maße DIN EN 10220, geschweißt, Betriebsmedium Heizungswasser, Außendurchmesser bis 63 mm,;1,0;St;gaeb;3940630.x83
+0008;Zusätzliche Druck- und Dichtheitsprüfung von Rohrleitungen, aus nichtrostendem Stahl DIN EN 10296-2, geschweißt, Betriebsmedium Heizungswasser, Außendurchmesser bis 63 mm,;9,0;St;gaeb;3940630.x83
+0009;Zusätzliche Druck- und Dichtheitsprüfung von Rohrleitungen, aus Stahlrohr DIN EN 10217-1, Maße DIN EN 10220, geschweißt, Betriebsmedium Heizungswasser, Außendurchmesser über 63 bis 110 mm,;2,0;St;gaeb;3940630.x83
+0010;Zusätzliche Druck- und Dichtheitsprüfung von Rohrleitungen, aus Stahlrohr DIN EN 10217-1, Maße DIN EN 10220, geschweißt, Betriebsmedium Heizungswasser, Außendurchmesser über 110 bis 160 mm,;1,0;St;gaeb;3940630.x83
+0011;Zusätzliche Druck- und Dichtheitsprüfung von Rohrleitungen, aus Stahlrohr DIN EN 10217-1, Maße DIN EN 10220, geschweißt, Betriebsmedium Heizungswasser, Außendurchmesser über 160 bis 210 mm,;1,0;St;gaeb;3940630.x83
+0012;Zusätzliche Druck- und Dichtheitsprüfung von Rohrleitungen, aus Stahlrohr DIN EN 10217-1, Maße DIN EN 10220, geschweißt, Betriebsmedium Klimakaltwasser, Außendurchmesser bis 63 mm,;1,0;St;gaeb;3940630.x83
+0013;Zusätzliche Druck- und Dichtheitsprüfung von Rohrleitungen, aus nichtrostendem Stahl DIN EN 10296-2, geschweißt, Betriebsmedium Klimakaltwasser, Außendurchmesser bis 63 mm,;6,0;St;gaeb;3940630.x83
+0014;Zusätzliche Druck- und Dichtheitsprüfung von Rohrleitungen, aus Stahlrohr DIN EN 10217-1, Maße DIN EN 10220, geschweißt, Betriebsmedium Klimakaltwasser, Außendurchmesser über 63 bis 110 mm,;1,0;St;gaeb;3940630.x83
+0015;Zusätzliche Druck- und Dichtheitsprüfung von Rohrleitungen, aus Stahlrohr DIN EN 10217-1, Maße DIN EN 10220, geschweißt, Betriebsmedium Klimakaltwasser, Außendurchmesser über 110 bis 160 mm,;2,0;St;gaeb;3940630.x83
+0016;Zusätzliche Druck- und Dichtheitsprüfung von Rohrleitungen, aus Stahlrohr DIN EN 10217-1, Maße DIN EN 10220, geschweißt, Betriebsmedium Klimakaltwasser, Außendurchmesser über 160 bis 210 mm,;1,0;St;gaeb;3940630.x83
+0017;Zusätzliche Druck- und Dichtheitsprüfung von Rohrleitungen, aus nichtrostendem Stahl DIN EN 10296-2, geschweißt, Betriebsmedium Wasser-Glycol-Gemisch, Außendurchmesser bis 63 mm,;1,0;St;gaeb;3940630.x83
+0018;Zusätzliche Druck- und Dichtheitsprüfung von Rohrleitungen, aus Stahlrohr DIN EN 10217-1, Maße DIN EN 10220, geschweißt, Betriebsmedium Wasser-Glycol-Gemisch, Außendurchmesser über 63 bis 110 mm,;1,0;St;gaeb;3940630.x83
+0019;Zusätzliche Druck- und Dichtheitsprüfung von Rohrleitungen, aus Stahlrohr DIN EN 10217-1, Maße DIN EN 10220, geschweißt, Betriebsmedium Wasser-Glycol-Gemisch, Außendurchmesser über 110 bis 160 mm,;3,0;St;gaeb;3940630.x83
+0020;Zusätzliche Druck- und Dichtheitsprüfung von Rohrleitungen, aus Stahlrohr DIN EN 10217-1, Maße DIN EN 10220, geschweißt, Betriebsmedium Wasser-Glycol-Gemisch, Außendurchmesser über 160 bis 210 mm,;3,0;St;gaeb;3940630.x83
+0021;Anlage nach Druck- und Dichtheitsprüfung entleeren, Betriebsmedium Heizungswasser,;1,0;St;gaeb;3940630.x83
+0022;Anlage nach Druck- und Dichtheitsprüfung entleeren, Betriebsmedium Klimakaltwasser,;1,0;St;gaeb;3940630.x83
+0023;Erstbefüllung der Heizungsanlage;1,0;psch;gaeb;3940630.x83
+0024;Erstbefüllung der Kaltwasseranlage;1,0;psch;gaeb;3940630.x83
+0025;Erstbefüllung des Rückkühl- und Wärmerückgewinnungssystems mit Wasser-Glykol-Gemisch;1,0;psch;gaeb;3940630.x83
+0026;Wasseranalyse erstellen, zur Verwendung des zur Verfügung stehenden Wassers für die Wärmeversorgungsanlage.;1,0;St;gaeb;3940630.x83
+0027;Wasseranalyse erstellen, zur Verwendung des zur Verfügung stehenden Wassers für die Kühlwasserversorgung.;1,0;St;gaeb;3940630.x83
+0028;Analyse Wasser-Glykol-Gemisch;1,0;St;gaeb;3940630.x83
+0029;Inbetriebnahme Druckhaltestation;2,0;St;gaeb;3940630.x83
+0030;Inbetriebnahme Kältemaschine;1,0;St;gaeb;3940630.x83
+0031;Gemeinsam durchgeführter Funktionsstest der Umluftkühlgeräte mit dem Gewerek Gebäudeautomation;21,0;St;gaeb;3940630.x83
+0032;Bezeichnungsschilder;100,0;St;gaeb;3940630.x83
+0033;Schulung und Einweisung des technischen Bedienpersonal zur sachgerechten Bedienung und Wartung des Automatisierungssystems, auf Grundlage der Erstinbetriebnahme nach Anforderung, vor Ort, mit praktischen Übungen, Teilnehmer erhalten ein Zertifikat, mit Schulungsunterlagen für jeden Teilnehmer, aus d;1,0;St;gaeb;3940630.x83
+0034;Wiederholte Einweisung des Bedienungs- und Wartungspersonals;1,0;St;gaeb;3940630.x83
+0035;Bedienungs- und Wartungsanweisungen als Benutzerhandbuch für die Gesamtanlage, bestehend aus allen vor beschriebenen Anlagen, Anlagenteilen, Aggregaten, Schaltschränken, Bauteilen etc., in übersichtlicher Darstellung, in Kunststofffolie eingeschweißt, angebracht in jeder Technikzentrale.;1,0;St;gaeb;3940630.x83
+0036;Dokumentation Brandschutz-Durchführungen;1,0;St;gaeb;3940630.x83
+0037;Durchführen des hydraulischen Abgleichs der Heizungsanlage und Prüfung der vorliegenden Ausführungsplanung. Ermittlung der erforderlichen Volumenströme für sämtliche Heizflächen und Anlagenteile sowie Einstellen und Justieren der vorhandenen Abgleicharmaturen. Kontrolle der Anlagenparameter, Funktio;1,0;St;gaeb;3940630.x83
+0038;Liefern Betriebskennwerte Pumpen / Ventilatoren;1,0;St;gaeb;3940630.x83
+0039;Alle Bestandsunterlagen sind 1-fach auf digitalem Datenträger (USB-Stick) mit gleicher, nachstehender Ordnerstruktur rechtzeitig vor Abnahme (14 Tage vor Abnahme!) an die zuständige Objektüberwachung zur Prüfung zu übergeben.;1,0;psch;gaeb;3940630.x83
+0040;Bearbeitung der Baustellendokumentation und Kommunikation im Rahmen der Bauüberwachung bis zur Abnahme und Mängelbeseitigung mit der Software PlanRadar. Es muss keine Lizenz beschafft werden, die Bearbeitung und Kommunikation kann auch durch die Bauüberwachung durch hinzufügen zum Projekt erfolgen. ;1,0;psch;gaeb;3940630.x83
+0001;Baustelle für sämtliche, in der Leistungsbeschreibung aufgeführten Leistungen einrichten.;1,0;St;gaeb;3940630.x83
+0002;Baustelleneinrichtung für sämtliche aufgeführte Leistungen vorhalten und betreiben.;55,0;Wo;gaeb;3940630.x83
+0003;Baustelleneinrichtung für sämtliche aufgeführte Leistungen, innerhalb der ausgewiesenen Flächen umsetzen.;1,0;St;gaeb;3940630.x83
+0004;Baustelle für sämtliche, in der Leistungsbeschreibung aufgeführten Leistungen räumen.;1,0;St;gaeb;3940630.x83
+0005;Container/Lager;55,0;Wo;gaeb;3940630.x83
+0006;Einbringung aller Großkomponenten des Titels 01 Wärme- / Kälteerzeugung über die oben beschriebenen bauseitigen Einbringöffnungen.;1,0;psch;gaeb;3940630.x83
+0001;Liefern, betriebsfertig aufstellen, anschließen,;3,2;Mt;gaeb;3940630.x83
+0002;An- und Abtransport, Aufstellung,;1,0;psch;gaeb;3940630.x83
+0003;Temporärer Warmwasser-Lufterhitzer;12,0;St;gaeb;3940630.x83
+0004;Temporäre Wärmeübergabestation zur Bauheizung;3,2;Mt;gaeb;3940630.x83
+0005;An- und Abtransport, Aufstellung,;1,0;psch;gaeb;3940630.x83
+0006;Rückbau und Entsorgung vorhandener Rohrleitungsanlagen;1,0;psch;gaeb;3940630.x83
+0007;Provisorische Wärmeverteilung Bauheizung;1,0;psch;gaeb;3940630.x83
+0008;Liefern und Befüllen der mobilen Heizzentrale;1,0;psch;gaeb;3940630.x83
+0009;Lieferung und Nachfüllung von Heizöl für den Betrieb der temporären Bauheizung während der gesamten Vorhalte- und Betriebszeit.;5000,0;l;gaeb;3940630.x83
+0001;Meister;20,0;h;gaeb;3940630.x83
+0002;Obermonteur;30,0;h;gaeb;3940630.x83
+0003;Monteur;40,0;h;gaeb;3940630.x83
+0004;Helfer;60,0;h;gaeb;3940630.x83

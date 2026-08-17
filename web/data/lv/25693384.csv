@@ -1,0 +1,43 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+0010;Baustelleneinrichtung;1,0;psch;gaeb;Leistungsverzeichnis/EK-B_I-2026-0148.x83
+0020;Endreinigung;1,0;psch;gaeb;Leistungsverzeichnis/EK-B_I-2026-0148.x83
+0030;Projektabwicklung;1,0;psch;gaeb;Leistungsverzeichnis/EK-B_I-2026-0148.x83
+0040;Gefährdungsbeurteilung;1,0;psch;gaeb;Leistungsverzeichnis/EK-B_I-2026-0148.x83
+0050;Gaswarngeräte;1,0;psch;gaeb;Leistungsverzeichnis/EK-B_I-2026-0148.x83
+0010;Demontage und Entsorgung;1,0;psch;gaeb;Leistungsverzeichnis/EK-B_I-2026-0148.x83
+0010;Lieferung USV-Anlage;2,0;St;gaeb;Leistungsverzeichnis/EK-B_I-2026-0148.x83
+0020;Beidseitige Beschichtung / Lackierung der Leiterplatten;2,0;St;gaeb;Leistungsverzeichnis/EK-B_I-2026-0148.x83
+0030;Tiefentladungsschutz mit Überwachungs- und Schaltgeräten;2,0;St;gaeb;Leistungsverzeichnis/EK-B_I-2026-0148.x83
+0040;Batterieladekreisüberwachung;2,0;St;gaeb;Leistungsverzeichnis/EK-B_I-2026-0148.x83
+0050;NH-Sicherungslasttrennschalter Batterieschrank;4,0;St;gaeb;Leistungsverzeichnis/EK-B_I-2026-0148.x83
+0060;Batterieleistungsschalter Batterieschrank;2,0;St;gaeb;Leistungsverzeichnis/EK-B_I-2026-0148.x83
+0070;Reihenklemmen Batterieschrank;12,0;St;gaeb;Leistungsverzeichnis/EK-B_I-2026-0148.x83
+0080;Kabel;1,0;psch;gaeb;Leistungsverzeichnis/EK-B_I-2026-0148.x83
+0010;Messungen / Prüfungen E-Anlage;1,0;psch;gaeb;Leistungsverzeichnis/EK-B_I-2026-0148.x83
+0020;Durchführung der IBS und Funktionsprüfungen;1,0;psch;gaeb;Leistungsverzeichnis/EK-B_I-2026-0148.x83
+0010;Dokumentation;1,0;psch;gaeb;Leistungsverzeichnis/EK-B_I-2026-0148.x83
+0010;Schulung / Einweisung des AG Personals;1,0;psch;gaeb;Leistungsverzeichnis/EK-B_I-2026-0148.x83
+0010;Wartungsvertrag 1.Jahr;1,0;psch;gaeb;Leistungsverzeichnis/EK-B_I-2026-0148.x83
+0020;Wartungsvertrag 2.Jahr;1,0;psch;gaeb;Leistungsverzeichnis/EK-B_I-2026-0148.x83
+0030;Wartungsvertrag 3.Jahr;1,0;psch;gaeb;Leistungsverzeichnis/EK-B_I-2026-0148.x83
+0040;Wartungsvertrag 4.Jahr;1,0;psch;gaeb;Leistungsverzeichnis/EK-B_I-2026-0148.x83
+0010;Baustelleneinrichtung;1,0;psch;gaeb;Leistungsverzeichnis/EK-B_I-2026-0148.x83
+0020;Endreinigung;1,0;psch;gaeb;Leistungsverzeichnis/EK-B_I-2026-0148.x83
+0030;Projektabwicklung;1,0;psch;gaeb;Leistungsverzeichnis/EK-B_I-2026-0148.x83
+0040;Gefährdungsbeurteilung;1,0;psch;gaeb;Leistungsverzeichnis/EK-B_I-2026-0148.x83
+0050;Gaswarngeräte;1,0;psch;gaeb;Leistungsverzeichnis/EK-B_I-2026-0148.x83
+0010;Demontage und Entsorgung;1,0;psch;gaeb;Leistungsverzeichnis/EK-B_I-2026-0148.x83
+0010;Lieferung USV-Anlage;1,0;St;gaeb;Leistungsverzeichnis/EK-B_I-2026-0148.x83
+0020;Beidseitige Beschichtung / Lackierung der Leiterplatten;1,0;St;gaeb;Leistungsverzeichnis/EK-B_I-2026-0148.x83
+0030;Tiefentladungsschutz mit Überwachungs- und Schaltgeräten;1,0;St;gaeb;Leistungsverzeichnis/EK-B_I-2026-0148.x83
+0040;Batterieladekreisüberwachung;1,0;St;gaeb;Leistungsverzeichnis/EK-B_I-2026-0148.x83
+0050;NH-Sicherungslasttrennschalter Batterieschrank;1,0;St;gaeb;Leistungsverzeichnis/EK-B_I-2026-0148.x83
+0060;Kabel;1,0;psch;gaeb;Leistungsverzeichnis/EK-B_I-2026-0148.x83
+0010;Messungen / Prüfungen E-Anlage;1,0;psch;gaeb;Leistungsverzeichnis/EK-B_I-2026-0148.x83
+0020;Durchführung der IBS und Funktionsprüfungen;1,0;psch;gaeb;Leistungsverzeichnis/EK-B_I-2026-0148.x83
+0010;Dokumentation;1,0;psch;gaeb;Leistungsverzeichnis/EK-B_I-2026-0148.x83
+0010;Schulung / Einweisung des AG Personals;1,0;psch;gaeb;Leistungsverzeichnis/EK-B_I-2026-0148.x83
+0010;Wartungsvertrag 1.Jahr;1,0;psch;gaeb;Leistungsverzeichnis/EK-B_I-2026-0148.x83
+0020;Wartungsvertrag 2.Jahr;1,0;psch;gaeb;Leistungsverzeichnis/EK-B_I-2026-0148.x83
+0030;Wartungsvertrag 3.Jahr;1,0;psch;gaeb;Leistungsverzeichnis/EK-B_I-2026-0148.x83
+0040;Wartungsvertrag 4.Jahr;1,0;psch;gaeb;Leistungsverzeichnis/EK-B_I-2026-0148.x83

@@ -1,0 +1,8 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+00000001;Baustelle einrichten Sämtl.LV-Abschn.*Zufahrt vorh.;1,0;Psch;gaeb-flat;Leistungsverzeichnis/Los 3 236-26-0042.D83
+00000002;Baustelle räumen Sämtl. LV-Abschn.;1,0;Psch;gaeb-flat;Leistungsverzeichnis/Los 3 236-26-0042.D83
+00010001;Mehraufwand Baustelle mit mehreren;1,0;Psch;gaeb-flat;Leistungsverzeichnis/Los 3 236-26-0042.D83
+01000001;SE aus Stahl abbauen ... Freitext ...*Profil B Pfost. A 2,00 m*Pfost.in bef.Fl. Teile verwerten;180,0;m;gaeb-flat;Leistungsverzeichnis/Los 3 236-26-0042.D83
+01000002;SE aus Stahl abbauen ... Freitext ...*Profil B Pfost. A 2,00 m*HB 1 Teile verwerten;338,0;m;gaeb-flat;Leistungsverzeichnis/Los 3 236-26-0042.D83
+01000003;SE herstellen ... Freitext ...*Profil B Pf.Abstand 2m*bef. Fläche Erdarbeiten ausf.;30,0;m;gaeb-flat;Leistungsverzeichnis/Los 3 236-26-0042.D83
+01000004;AEK herstellen ... Freitext ...*Profil B Regelabs. 12 m*bef. Fläche Erdarb. ausf.;4,0;St;gaeb-flat;Leistungsverzeichnis/Los 3 236-26-0042.D83

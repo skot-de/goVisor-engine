@@ -1,0 +1,715 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+0001;Baustelle für sämtliche aufgeführte Leistungen, einrichten, herstellen der dazu erforderlichen Lager- und Arbeitsplätze, Flächen sind im Lageplan ausgewiesen.;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0002;Baustelle umsetzten, neu herstellen Lager- und Aufenthaltsplätze;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0003;Baustelleneinrichtung vorhalten;12,0;Mt;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0004;Baustelle für sämtliche aufgeführte Leistungen, räumen, Geländeflächen, auf denen sich Baustelleneinrichtungen befunden haben, dem früheren Zustand entsprechend herstellen, im Baugrund befindliche Teile der Baustelleneinrichtung (z. B. Fundamente, Pfähle, Leitungen, Kanäle) räumen.;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0001;Außen-Feuchtefühler inklusive Temperatursensor;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0002;Sonnen- und Ballwurfschutz;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0003;Bemusterung der Raumtemperatursensoren;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0004;Raumfühler zur Temperaturmessung passiv;45,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0005;Mehrpreis Raumfühler;45,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0006;Mehrpreis Raumfühler auf Sichtbeton;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0007;Raumfühler zur Temperaturmessung mit Sollwertsteller aktiv;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0008;Mehrpreis Raumfühler;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0009;Einschraubfühler zur Messung der Temperatur, PN10, L=150 mm Messing;6,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0010;Einschraubfühler zur Messung der Temperatur, PN10, L=200 mm Messing;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0011;Einschraubfühler zur Messung der Temperatur, PN10, L=250 mm Messing;10,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0012;Einschraubfühler zur Messung der Temperatur, PN10, L=300 mm Messing;6,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0013;Einschraubfühler zur Messung der Temperatur, PN10, L=100 mm Edelstahl V4A;3,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0014;Einschraubtemperaturregler, PN10, L=200 mm Messing 0-90°C;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0015;Leckagedetektor mit Meldekontakt;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0016;Leckagedetektor mit Fühlerrute 2m;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0017;Temperaturbegrenzer, Kanaleinbau PN10, L=150 mm;3,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0018;Kanal-Feuchtefühler inklusive Temperatursensor L=270mm;6,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0019;Kanalfühler zur Temperaturmessung L=250mm;10,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0020;Kanalrauchmelder 230V AC DIBt inklusive Entnahmerohr bis 1,5 m.;6,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0021;Frostschutzthermostat, L=3000mm;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0022;Differenzdruck-Schalter für Luft;3,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0023;Differenzdruck-Messumformer Luft;7,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0024;Druckunabhängiger 2-Weg-Regelkugelhahn Energieventil DN25 PN25 Vnom = 3,49 m3/h;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0025;Druckunabhängiger 2-Weg-Regelkugelhahn Energieventil DN80 PN16 Vnom = 39,6 m3/h;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0026;Druckunabhängiger 3-Weg-Regelkugelhahn Energieventil DN15 PN25 Vnom = 1,51 m3/h;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0027;Druckunabhängiger 3-Weg-Regelkugelhahn Energieventil DN20 PN25 Vnom = 2,48 m3/h;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0028;Druckunabhängiger 3-Weg-Regelkugelhahn Energieventil DN40 PN25 Vnom = 10,0 m3/h;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0029;Druckunabhängiger 3-Weg-Regelkugelhahn Energieventil DN50 PN25 Vnom = 15,0 m3/h;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0030;Drehantrieb mit Notstellfunktion NC, bis 20 Nm, 230 V, 3-Punkt;6,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0031;Drehantrieb bis 10 Nm, Stetig Klappenantrieb;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0032;Drehantrieb bis 20 Nm, Stetig Klappenantrieb;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0033;Dreiphasiger Leistungsregler für Elektroheizregister;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0034;Doppel-M-Verschraubung bis M25 – Durchführung;15,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0035;Thermoelektrischer Stellantrieb 24V;10,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0036;Reparaturschalter 3/4-polig, bis 2,2 kW;6,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0037;Bedien- und Anzeigetableau Ausführung aus Edelstahl;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0001;Automationsstation Hardware;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0002;Analog-Eingänge (AE);120,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0003;Binär-Eingänge (BE);203,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0004;Analog-Ausgänge (AA), stetig;21,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0005;Binär-Ausgänge (BA);84,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0006;Datenschnittstelleneinheit M-Bus bis zu 60 Zähler;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0007;Erweiterung der Automationsstation um Modbus-Funktionalität und Datenpunkte;100,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0008;Erweiterung der Automationsstation um BACnet-Client-Funktionalität und Datenpunkte;82,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0009;BACnet MS/TP auf BACnet/IP Gateway;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0010;Modbus RTU auf TCP/IP-Umsetzer;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0011;I/O-Modul Dezentral inkl. Gehäuse 230V;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0012;Bediengerät zur stationären Integration;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0013;MiniPC;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0014;Fernzugriffssystem/Netzwerkgateway zur;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0015;Bereitstellung eines Fernzugriffs auf die Gebäudeautomationsanlage;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0001;Analoge Eingabe - AI (1.1.1);221,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0002;Binäre Eingabe - BI/MI (1.1.2);367,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0003;Analoge Ausgabe - AO (1.1.3);25,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0004;Binäre Ausgabe- BI/MI (1.1.4);91,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0005;Analogwert - AV (1.2.1);141,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0006;Binärwert - BV/MV (1.2.2);149,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0007;Zeitplan- SCH (1.3.1);3,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0008;Kalender- CAL (1.3.2);2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0009;Alarm-/Ereignismeldung - NC (1.3.3);45,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0010;Datenaufzeichnung - LOG (1.3.4);385,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0011;Sonstige komplexe Objekte (1.3.5);240,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0012;Grenzwertüberwachung (2.2.1);97,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0013;Betriebsstundenüberwachung (2.2.2);20,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0014;Ereignisüberwachung (2.2.3);340,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0015;Befehlsausführüberwachung (2.2.4);15,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0016;Anlagen-/Gerätestatus  (2.2.5);200,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0017;Motorsteuerung (2.2.6);33,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0018;Blockierschutz (2.2.7);10,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0019;Umschaltung (Analogwert)  (2.2.8);10,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0020;Folgesteuerung (2.2.9);223,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0021;Frostschutzsteuerung (2.2.10);3,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0022;Sicherheitssteuerung (2.2.11);33,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0023;Prioritätssteuerung (2.2.12);156,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0024;P-/PI-/PID-Regler (Loop) (2.3.1);138,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0025;Sollwertführung/-kennlinie (2.3.2);250,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0026;Stellausgabe stetig (2.3.3);111,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0027;Stellausgabe 2-Punkt (2.3.4);22,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0028;Stellausgabe 3-Punkt (2.3.5);1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0029;Stellausgabe 3-Punkt mit variabler Impulslänge (2.3.6);1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0030;Stellausgabe Pulsweitenmodulation (2.3.7);25,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0031;Begrenzung Sollwert/Stellwert  (2.3.8);1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0032;Parameterumschaltung (2.3.9);88,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0033;Abstimmungsgespräche mit dem Lieferanten der;3,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0034;1:1 Check mit Lieferanten der Regelung Lüftungstechnik;3,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0035;Inbetriebsetzung Ein -/Ausgabefunktion (Spalte 1);704,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0001;Montage und Transport Schaltschrank;6,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0002;Standschrank als Reihenschrankfeld BxHxT=800x1800x400 mm;6,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0003;Schaltschrank Be und Entlüftung;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0004;Sichtfenster;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0005;Schaltplantasche;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0006;Frontplatten-Schnittstellenmodul;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0007;Sammelschienensystem bis 50 A;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0008;Sammelschienensystem für Hilfsspannung;3,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0009;Einspeisung 50 A, mit Hauptschalter;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0010;Phasenüberwachung;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0011;Hilfsspannungsversorgung 1,0 KVA, 230/24 V;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0012;Unterbrechungsfreie Stromversorgung (USV) – Online-System;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0013;Hilfsspannung 24 DC / 20 A;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0014;Elektronischer Schutzschalter mit 8 Kanälen 24V DC;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0015;Netzmessinstrument-Zähler;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0016;Leistungsbaugruppe 230 V bis 2,2 kW Geräte mit Zusatzmodul;6,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0017;Leistungsbaugruppe 230 V bis 2,2 kW, Geräte mit Direktanlauf;3,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0018;Leistungsabgang für 230 V bis 16A;10,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0019;Leistungsabgang für 400 V bis 16A;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0020;Leistungsabgang für 400 V bis 32A;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0021;Fehlerstrom- und Leitungsschutzschalter (FI/LS, RCBO),;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0022;Fehlerstromschutzschalter RCCB, Typ A, 1polig+N, 230V;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0023;Fehlerstromschutzschalter RCCB, Typ A, 3 polig+N, 400V;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0024;Fehlerstromschutzschalter RCCB, Typ B, 3 polig+N, 400V;6,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0025;Motorschutzschalter bis 16 A;7,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0026;Elektronischer Drehzahlsteller;5,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0027;Sammelstörmeldeeinrichtung;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0028;Lampenprüfeinrichtung;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0029;Verdrahtete Steuerung 1 Hilfsschütz (4S + 4Ö);25,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0030;Hilfs-/Koppelrelais AC/DC 24 V/230 V, 2 Wechsler;36,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0031;Hilfs-/Koppelrelais AC/DC 24 V/230 V, 4 Wechsler;12,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0032;Überspannungsschutz Einspeisung Schaltschrank;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0033;Klemmenkasten Überspannungsschutz BxHxT 500x300x120 mm;3,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0034;Überpsannung Monitoring-System LifeCheck FM-Einheit;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0035;Überspannungs-Kombi-Ableiter 24V;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0036;Überspannungs-Kombi-Ableiter 0-10V/Passiv;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0037;Überspannungs-Kombi-Ableiter Bus RS485;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0038;Überspannungsschutzgerät Ethernet,;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0039;Bedieneinrichtung (Drucktaster);8,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0040;Anzeigeeinrichtung, Schaltschrank;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0041;Bedien- und Anzeigeeinrichtung;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0042;Einbau der Automationstation ASP;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0043;Montage von beigestellten Teilen;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0044;Thermografische Protokollierung;6,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0001;Zentralserver mit Bedieneinheit;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0002;MBE als On-Premise-Lösung gem. den Vortexten für die Erfassung und Verarbeitung von;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0003;MBE-Erweiterung zur Weiterleitung von Ereignissen über eine Vielzahl an Kommunikationsdiensten an Empfänger;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0004;MBE-Erweiterung zur Konfiguration benutzerspezifischer Ansichten;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0001;Konfiguration BACnet/SC Netzwerk;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0002;Abbildungen zur übergeordneten Strukturierung und Navigation im Graphiksystem sowie zur Auflistung bzw. Auswahl von Anlagenbildern.;10,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0003;Automatikfunktion und Parameter (Spalte 3.1.1);1637,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0004;Anlagengrafiken (Spalte 3.1.2);45,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0005;Dynamische Einblendung (Spalte 3.1.3);1374,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0006;Handlungsanweisung (Spalte 3.1.4);456,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0007;Nachricht an externe Stelle (Spalte 3.1.5);600,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0008;Historisierung in Datenbank (Spalte 3.1.6);661,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0009;GLT/MBE-Einweisung;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0010;Langzeit Trend-Darstellung, 10 Funktionen;30,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0001;zur Anbindung von Anlagen (herstellerneutral), Automationstationen sowie GLT/MBEs über BACnet, Modbus oder M-Bus an eine IoT-Plattform.;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0002;Betriebskosten für die IoT-Plattform 1Jahr,;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0003;Anbindung;125,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0004;Dahsboard;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0005;Nutzerspezifischer Bericht;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0006;Einrichtung und Inbetriebnahme API;50,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0001;Flexibles Kunststoff-Panzerrohr M20;150,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0002;Flexibles Kunststoffpanzerrohr M32;50,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0003;Alu-Schutz-Panzerrohr M25;50,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0004;Alu-Schutz-Panzerrohr M32;25,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0005;Installationskanal 100x60mm,;10,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0006;Kabelrinne B/H 100/60 mm;10,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0007;Kabelrinne B/H 200/60 mm;10,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0008;Kabelrinne B/H 400/60 mm;5,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0009;Trennsteg H = 60 mm;25,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0010;Ausleger 100 mm für Hängestiele;10,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0011;Ausleger 200 mm für Hängestiele;10,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0012;Ausleger 400 mm für Hängestiele;5,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0013;Ausleger 100 mm für Wandmontage;6,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0014;Ausleger 200 mm für Wandmontage;6,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0015;Ausleger 400 mm für Wandmontage;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0016;Stiel für Ausleger , L=1000 mm;25,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0017;Stiel für Ausleger , L=500 mm;10,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0018;Kabelleiter B/H 500/60mm;10,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0019;C-Profilschiene H/B 18/35 mm;15,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0020;Bügelschelle 8 bis 16 mm;50,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0021;Bügelschelle 28 bis 40 mm;50,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0022;Befestigungskonstruktion, verzinkt;20,0;kg;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0023;Kabelsammelhalter;200,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0024;Kabelbezeichnungsschilder, 10 - 25 mm;720,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0025;Gerätedose Kunststoff,;5,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0026;Kabelabzweigdose 80 x 80 x 40 mm;30,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0027;Bezeichnungsschilder 30 x 70 Resopal nach DIN 825,;300,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0001;Steuerleitung Ölflex 3x1,5mm2;100,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0002;Steuerleitung Ölflex 5x1,5mm2;100,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0003;geschirmte Energie- und Steuerleitung;450,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0004;geschirmte Energie- und Steuerleitung;100,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0005;Mantelleitung NYM-J 3 x 1,5 mm2.;1000,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0006;Mantelleitung NYM-J 3 x 2,5 mm2.;500,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0007;Mantelleitung NYM-J 5 x 1,5 mm2,;1000,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0008;Mantelleitung NYM-J 5 x 2,5 mm2,;1000,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0009;Mantelleitung NYM-J 5 x 4 mm2,;50,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0010;Kabel RS485 (Modbus) 1×2×22 AWG,;200,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0011;Installationskabel J-Y(ST)Y 2 x 2 x 0,8 mm2;4500,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0012;Installationskabel J-Y(ST)Y 4 x 2 x 0,8 mm2,;1000,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0013;Installationskabel J-Y(ST)Y 6 x 2 x 0,8 mm2,;500,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0014;Installationskabel  LiYCY (TP) 2x2x0,75 mm2;1000,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0015;Installationskabel  LiYCY (TP) 4x2x0,75 mm2,;500,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0016;Installationskabel CAT-7;500,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0017;Erdkabel 3 x 1,5 mm2.;100,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0018;Erdkabel 5 x 1,5 mm2.;100,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0019;Außenkabel, symmetrisch, A-2Y(L)2Y, 2 x 2 x 0,8 STIIIBD.;100,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0020;Außenkabel, symmetrisch, A-2Y(L)2Y, 4 x 2 x 0,8 STIIIBD.;100,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0001;Kabelanschluss einseitig bis 3 x 1,5 mm2;60,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0002;Kabelanschluss für Querschnitt bis 5 x 1,5 mm2,;50,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0003;Kabelanschluss für Querschnitt bis 5 x 2,5 mm2,;10,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0004;Kabelanschluss für Querschnitt bis 5 x 4 mm2,;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0005;Kabelanschluss für Querschnitt bis 2x2x0,8 mm2,;430,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0006;Kabelanschluss für Querschnitt bis 4x2x0,8 mm2,;50,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0007;Kabelanschluss für Querschnitt bis 8x2x0,8 mm2,;10,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0008;Kabelanschluss für Querschnitt bis 1 x 6 mm2,;15,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0009;Kabelanschluss für Querschnitt bis 1 x 10 mm2,;15,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0010;Kabelanschluss für Querschnitt bis 1 x 16 mm2,;15,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0011;Kabelanschluss Datenkabel, Ethernet;10,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0012;Kabelanschluss Datenkabel, M-Bus;20,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0013;Kabelanschluss Datenkabel, BACnet MS/TP;20,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0001;Mantelleitung NYM-J 1 x 6 mm2,;20,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0002;Mantelleitung NYM-J  1 x 10 mm2,;50,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0003;Mantelleitung NYM-J  1 x 16 mm2,;10,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0004;Potentialausgleichs-Cu-Schiene;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0005;Erdungsbandrohrschelle, DN10 bis DN50;20,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0006;Erdungsbandrohrschelle, DN65 bis DN100;10,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0007;Überbrückung Potentialausgleich;12,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0008;Erstellung Messprotokoll Pot.-Ausgleich;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0001;Netzwerk Pflichtenheft;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0002;Detaillierte Absprache;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0003;Koordination Netzwerk;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0004;Schnittstellen-Check;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0005;Gemeinsamer Funktionstest;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0006;PC Schrank mit Sichttür, Tastatur-Schublade und Geräteboden;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0007;Managed Netzwerkswitch, 24x RJ45 10/100/1000Base-T Ports mit PoE+;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0008;SFP-Modul (Small Form-factor Pluggable), LWL Multimode, 1 Gbit/s;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0009;LWL-Kabel OM3, 25 m, nagetierfest, inkl. LC-Stecker;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0010;Mehrpreis je zusätzlicher lfd. Meter LWL-Kabel OM3, nagetierfest;50,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0011;Patchkabel CAT 7 / 3m;10,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0012;Patchkabel CAT 7/ 1m;20,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0013;"Patchpanel 24 Port Cat. 7 19""";1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0014;Patchpanel 1 Port Cat. 7 Hutschiene;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0015;RJ 45 Modul Cat 6A;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0016;E-DAT Industry IP20 RJ45 field plug black;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0017;Messung LAN Kabel CAT 7 / 4x2xAWG;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0001;Durchbruch durch Mauerwerk,;10,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0002;Durchmesser bis 22mm, in Mauerwerk oder Beton-;5,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0003;Brandschutzabschottung an Kabel-/Leitungsanlagen;10,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0004;Kernbohrung senkrecht Stahlbeton Durchm. 50-100mm T 25-30cm nicht schadstoffbelastet;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0005;Zuschlag KB Sichtbeton;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0001;Ausführungs- und Montageunterlagen Gebäudeautomation;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0002;Schnittstellenkoordination Gebäudeautomation zu RLT / HZG / KLT / SAN / ELT;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0003;Schulung des Bedienpersonals;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0004;Durchführung des Probebetriebs und Betriebsunterstützung – Gebäudeautomation;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0005;Prüfung Brandschutzklappen;12,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0006;Prüfung Volumenstromregler;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0007;Prüfung Pumpen;6,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0008;Prüfung Autarke Steuerungen;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0009;Erstellung der Bestandsdokumentation;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0010;Erstellung der Ausführung-Bestandsunterlagen Inbetriebnahme (in digitaler Form);1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0011;Erweiterte Enddokumentationsunterlagen;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0012;Teilnahme an Abnahmebegehung Brandschutz;4,0;Std;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0013;Ergänzende Aufmaßunterlagen – Gebäudeautomation;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0001;Stundenlohnarbeiten durch Projektleiter/-in;10,0;h;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0002;Stundenlohnarbeiten Programmierer/-in;10,0;h;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0003;Stundenlohnarbeiten MSR-Techniker/-in;10,0;h;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0004;Wiederholte An- und Abfahrt, einschl. aller anfallenden Nebenkosten;10,0;h;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0001;Arbeitskarte und aktuelle Bestandsliste;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0002;Wartungspauschale, 1. Jahr.;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0003;für 2. Jahr.;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0004;für 3. Jahr.;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0005;für 4.Jahr.;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0001;Baustelle für sämtliche aufgeführte Leistungen, einrichten, herstellen der dazu erforderlichen Lager- und Arbeitsplätze, Flächen sind im Lageplan ausgewiesen.;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0002;Baustelle umsetzten, neu herstellen Lager- und Aufenthaltsplätze;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0003;Baustelleneinrichtung vorhalten;12,0;Mt;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0004;Baustelle für sämtliche aufgeführte Leistungen, räumen, Geländeflächen, auf denen sich Baustelleneinrichtungen befunden haben, dem früheren Zustand entsprechend herstellen, im Baugrund befindliche Teile der Baustelleneinrichtung (z. B. Fundamente, Pfähle, Leitungen, Kanäle) räumen.;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0001;Außen-Feuchtefühler inklusive Temperatursensor;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0002;Sonnen- und Ballwurfschutz;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0003;Bemusterung der Raumtemperatursensoren;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0004;Raumfühler zur Temperaturmessung passiv;21,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0005;Mehrpreis Raumfühler;21,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0006;Mehrpreis Raumfühler auf Sichtbeton;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0007;Raumfühler zur Temperaturmessung aktiv;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0008;Mehrpreis Raumfühler;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0009;Einschraubfühler zur Messung der Temperatur, PN10, L=100 mm Messing;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0010;Einschraubfühler zur Messung der Temperatur, PN10, L=150 mm Messing;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0011;Einschraubfühler zur Messung der Temperatur, PN10, L=200 mm Messing;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0012;Einschraubfühler zur Messung der Temperatur, PN10, L=250 mm Messing;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0013;Einschraubfühler zur Messung der Temperatur, PN10, L=300 mm Messing;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0014;Einschraubfühler zur Messung der Temperatur, PN10, L=100 mm Edelstahl V4A;3,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0015;Leckagedetektor mit Meldekontakt;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0016;Kanal-Feuchtefühler inklusive Temperatursensor L=270mm;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0017;Kanalrauchmelder 230V AC DIBt inklusive Entnahmerohr bis 1,5 m.;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0018;Druckunabhängiges 2-Weg-Zonenventil DN20 PN25 Vnom 0,98 m3/h;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0019;Druckunabhängiger 2-Weg-Regelkugelhahn Energieventil DN25 PN25 Vnom = 3,49 m3/h;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0020;Druckunabhängiger 2-Weg-Regelkugelhahn Energieventil DN40 PN25 Vnom = 10,0 m3/h;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0021;Druckunabhängiger 3-Weg-Regelkugelhahn Energieventil DN15 PN25 Vnom = 1,51 m3/h;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0022;Reparaturschalter 3/4-polig, bis 2,2 kW;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0023;Thermoelektrischer Stellantrieb 24V;20,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0001;Automationsstation Hardware;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0002;Analog-Eingänge (AE);50,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0003;Binär-Eingänge (BE);63,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0004;Analog-Ausgänge (AA), stetig;8,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0005;Binär-Ausgänge (BA);50,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0006;Datenschnittstelleneinheit M-Bus bis zu 60 Zähler;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0007;Erweiterung der Automationsstation um Modbus-Funktionalität und Datenpunkte;120,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0008;Erweiterung der Automationsstation um BACnet-Client-Funktionalität und Datenpunkte;41,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0009;BACnet MS/TP auf BACnet/IP Gateway;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0010;Modbus RTU auf TCP/IP-Umsetzer;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0011;Bediengerät zur stationären Integration;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0012;MiniPC;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0001;Analoge Eingabe - AI (1.1.1);111,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0002;Binäre Eingabe - BI/MI (1.1.2);126,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0003;Analoge Ausgabe - AO (1.1.3);9,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0004;Binäre Ausgabe- BI/MI (1.1.4);50,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0005;Analogwert - AV (1.2.1);67,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0006;Binärwert - BV/MV (1.2.2);67,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0007;Zeitplan- SCH (1.3.1);1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0008;Kalender- CAL (1.3.2);2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0009;Alarm-/Ereignismeldung - NC (1.3.3);28,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0010;Datenaufzeichnung - LOG (1.3.4);170,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0011;Sonstige komplexe Objekte (1.3.5);72,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0012;Grenzwertüberwachung (2.2.1);46,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0013;Betriebsstundenüberwachung (2.2.2);5,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0014;Ereignisüberwachung (2.2.3);111,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0015;Befehlsausführüberwachung (2.2.4);7,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0016;Anlagen-/Gerätestatus  (2.2.5);38,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0017;Motorsteuerung (2.2.6);8,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0018;Blockierschutz (2.2.7);3,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0019;Umschaltung (Analogwert)  (2.2.8);1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0020;Folgesteuerung (2.2.9);71,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0021;Frostschutzsteuerung (2.2.10);1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0022;Sicherheitssteuerung (2.2.11);8,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0023;Prioritätssteuerung (2.2.12);73,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0024;P-/PI-/PID-Regler (Loop) (2.3.1);58,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0025;Sollwertführung/-kennlinie (2.3.2);108,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0026;Stellausgabe stetig (2.3.3);38,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0027;Stellausgabe 2-Punkt (2.3.4);9,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0028;Stellausgabe Pulsweitenmodulation (2.3.7);19,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0029;Begrenzung Sollwert/Stellwert  (2.3.8);1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0030;Parameterumschaltung (2.3.9);32,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0031;Abstimmungsgespräche mit dem Lieferanten der;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0032;1:1 Check mit Lieferanten der Regelung Lüftungstechnik;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0033;Inbetriebsetzung Ein -/Ausgabefunktion (Spalte 1);275,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0001;Montage und Transport Schaltschrank;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0002;Standschrank als Reihenschrankfeld BxHxT=800x1800x400 mm;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0003;Schaltschrank Be und Entlüftung;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0004;Sichtfenster;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0005;Schaltplantasche;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0006;Frontplatten-Schnittstellenmodul;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0007;Sammelschienensystem bis 100 A;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0008;Sammelschienensystem für Hilfsspannung;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0009;Einspeisung 80 A, mit Hauptschalter;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0010;Phasenüberwachung;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0011;Hilfsspannungsversorgung 1,0 KVA, 230/24 V;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0012;Unterbrechungsfreie Stromversorgung (USV) – Online-System;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0013;Hilfsspannung 24 DC / 20 A;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0014;Elektronischer Schutzschalter mit 8 Kanälen 24V DC;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0015;Netzmessinstrument-Zähler;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0016;Leistungsbaugruppe 230 V bis 2,2 kW Geräte mit Zusatzmodul;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0017;Leistungsbaugruppe 230 V bis 2,2 kW, Geräte mit Direktanlauf;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0018;Leistungsabgang für 230 V bis 16A;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0019;Leistungsabgang für 400 V bis 16A;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0020;Leistungsabgang für 400 V bis 32A;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0021;Fehlerstrom- und Leitungsschutzschalter (FI/LS, RCBO),;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0022;Fehlerstromschutzschalter RCCB, Typ A, 1polig+N, 230V;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0023;Fehlerstromschutzschalter RCCB, Typ A, 3 polig+N, 400V;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0024;Fehlerstromschutzschalter RCCB, Typ B, 3 polig+N, 400V;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0025;Motorschutzschalter bis 16 A;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0026;Sammelstörmeldeeinrichtung;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0027;Lampenprüfeinrichtung;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0028;Verdrahtete Steuerung 1 Hilfsschütz (4S + 4Ö);10,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0029;Hilfs-/Koppelrelais AC/DC 24 V/230 V, 2 Wechsler;15,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0030;Hilfs-/Koppelrelais AC/DC 24 V/230 V, 4 Wechsler;5,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0031;Überspannungsschutz Einspeisung Schaltschrank;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0032;Klemmenkasten Überspannungsschutz BxHxT 500x300x120 mm;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0033;Überpsannung Monitoring-System LifeCheck FM-Einheit;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0034;Überspannungs-Kombi-Ableiter 24V;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0035;Überspannungs-Kombi-Ableiter 0-10V/Passiv;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0036;Bedieneinrichtung (Drucktaster);1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0037;Anzeigeeinrichtung, Schaltschrank;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0038;Bedien- und Anzeigeeinrichtung;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0039;Einbau der Automationstation ASP;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0040;Montage von beigestellten Teilen;5,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0041;Thermografische Protokollierung;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0001;Konfiguration BACnet/SC Netzwerk;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0002;Abbildungen zur übergeordneten Strukturierung und Navigation im Graphiksystem sowie zur Auflistung bzw. Auswahl von Anlagenbildern.;10,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0003;Automatikfunktion und Parameter (Spalte 3.1.1);689,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0004;Anlagengrafiken (Spalte 3.1.2);28,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0005;Dynamische Einblendung (Spalte 3.1.3);589,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0006;Handlungsanweisung (Spalte 3.1.4);165,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0007;Nachricht an externe Stelle (Spalte 3.1.5);191,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0008;Historisierung in Datenbank (Spalte 3.1.6);273,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0009;GLT/MBE-Einweisung;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0010;Langzeit Trend-Darstellung, 10 Funktionen;30,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0001;Flexibles Kunststoff-Panzerrohr M20;140,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0002;Flexibles Kunststoffpanzerrohr M32;10,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0003;Alu-Schutz-Panzerrohr M25;25,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0004;Alu-Schutz-Panzerrohr M32;10,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0005;Installationskanal 100x60mm,;10,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0006;Kabelrinne B/H 100/60 mm;25,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0007;Kabelrinne B/H 200/60 mm;6,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0008;Kabelrinne B/H 400/60 mm;6,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0009;Trennsteg H = 60 mm;26,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0010;Ausleger 100 mm für Hängestiele;10,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0011;Ausleger 200 mm für Hängestiele;6,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0012;Ausleger 400 mm für Hängestiele;6,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0013;Ausleger 100 mm für Wandmontage;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0014;Ausleger 200 mm für Wandmontage;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0015;Ausleger 400 mm für Wandmontage;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0016;Stiel für Ausleger , L=1000 mm;18,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0017;Stiel für Ausleger , L=500 mm;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0018;Kabelleiter B/H 500/60mm;4,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0019;C-Profilschiene H/B 18/35 mm;10,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0020;Bügelschelle 8 bis 16 mm;30,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0021;Bügelschelle 28 bis 40 mm;30,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0022;Befestigungskonstruktion, verzinkt;10,0;kg;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0023;Kabelsammelhalter;50,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0024;Kabelbezeichnungsschilder, 10 - 25 mm;250,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0025;Halogenfreie Kabelabzweigdose 80 x 80 x 40 mm;20,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0026;Bezeichnungsschilder 30 x 70 Resopal nach DIN 825,;46,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0001;Steuerleitung Ölflex 3x1,5mm2;50,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0002;Steuerleitung Ölflex 5x1,5mm2;50,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0003;geschirmte Energie- und Steuerleitung;50,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0004;geschirmte Energie- und Steuerleitung;480,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0005;Mantelleitung NYM-J 3 x 1,5 mm2.;500,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0006;Mantelleitung NYM-J 3 x 2,5 mm2.;200,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0007;Mantelleitung NYM-J 5 x 1,5 mm2,;500,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0008;Mantelleitung NYM-J 5 x 2,5 mm2,;1000,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0009;Kabel RS485 (Modbus) 1×2×22 AWG,;200,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0010;Installationskabel J-Y(ST)Y 2 x 2 x 0,8 mm2;2600,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0011;Installationskabel J-Y(ST)Y 4 x 2 x 0,8 mm2,;500,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0012;Installationskabel J-Y(ST)Y 6 x 2 x 0,8 mm2,;200,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0013;Installationskabel  LiYCY (TP) 2x2x0,75 mm2;500,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0014;Installationskabel  LiYCY (TP) 4x2x0,75 mm2,;200,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0015;Installationskabel CAT-7;200,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0016;Erdkabel 5 x 4 mm2.;50,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0001;Kabelanschluss einseitig bis 3 x 1,5 mm2;50,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0002;Kabelanschluss für Querschnitt bis 5 x 1,5 mm2,;30,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0003;Kabelanschluss für Querschnitt bis 5 x 2,5 mm2,;10,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0004;Kabelanschluss für Querschnitt bis 5 x 4 mm2,;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0005;Kabelanschluss für Querschnitt bis 1 x 6 mm2,;6,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0006;Kabelanschluss für Querschnitt bis 1 x 10 mm2,;6,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0007;Kabelanschluss für Querschnitt bis 1 x 16 mm2,;6,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0008;Kabelanschluss für Querschnitt bis 2x2x0,8 mm2,;146,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0009;Kabelanschluss für Querschnitt bis 4x2x0,8 mm2,;20,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0010;Kabelanschluss für Querschnitt bis 8x2x0,8 mm2,;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0011;Kabelanschluss Datenkabel, Ethernet;20,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0012;Kabelanschluss Datenkabel, M-Bus;6,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0013;Kabelanschluss Datenkabel, BACnet MS/TP;12,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0001;Mantelleitung NYM-J 1 x 6 mm2,;20,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0002;Mantelleitung NYM-J  1 x 10 mm2,;10,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0003;Mantelleitung NYM-J  1 x 16 mm2,;10,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0004;Potentialausgleichs-Cu-Schiene;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0005;Erdungsbandrohrschelle, DN10 bis DN50;20,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0006;Erdungsbandrohrschelle, DN65 bis DN100;20,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0007;Überbrückung Potentialausgleich;20,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0008;Erstellung Messprotokoll Pot.-Ausgleich;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0001;Netzwerk Pflichtenheft;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0002;Detaillierte Absprache;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0003;Koordination Netzwerk;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0004;Schnittstellen-Check;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0005;Gemeinsamer Funktionstest;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0006;Managed Netzwerkswitch, 8x RJ45 2x SFP Hutschiene;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0007;SFP-Modul (Small Form-factor Pluggable), LWL Multimode, 1 Gbit/s;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0008;LWL-Kabel OM3, 25 m, nagetierfest, inkl. LC-Stecker;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0009;Mehrpreis je zusätzlicher lfd. Meter LWL-Kabel OM3, nagetierfest;50,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0010;Patchkabel CAT 7 / 3m;3,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0011;Patchkabel CAT 7/ 1m;5,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0012;Patchpanel 1 Port Cat. 7 Hutschiene;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0013;RJ 45 Modul Cat 6A;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0014;E-DAT Industry IP20 RJ45 field plug black;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0015;Messung LAN Kabel CAT 7 / 4x2xAWG;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0001;Durchbruch durch Mauerwerk,;5,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0002;Durchmesser bis 22mm, in Mauerwerk oder Beton-;3,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0003;Brandschutzabschottung an Kabel-/Leitungsanlagen;5,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0004;Kernbohrung senkrecht Stahlbeton Durchm. 50-100mm T 25-30cm nicht schadstoffbelastet;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0005;Zuschlag KB Sichtbeton;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0001;Ausführungs- und Montageunterlagen Gebäudeautomation;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0002;Schnittstellenkoordination Gebäudeautomation zu RLT / HZG / KLT / SAN / ELT;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0003;Vorhalten von Gerüsten;1,0;Mt;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0004;Schulung des Bedienpersonals;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0005;Durchführung des Probebetriebs und Betriebsunterstützung – Gebäudeautomation;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0006;Prüfung Brandschutzklappen;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0007;Prüfung Pumpen;3,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0008;Prüfung Autarke Steuerungen;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0009;Erstellung der Bestandsdokumentation;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0010;Erstellung der Ausführung-Bestandsunterlagen Inbetriebnahme (in digitaler Form);1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0011;Erweiterte Enddokumentationsunterlagen;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0012;Teilnahme an Abnahmebegehung Brandschutz;4,0;Std;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0013;Ergänzende Aufmaßunterlagen – Gebäudeautomation;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0001;Stundenlohnarbeiten durch Projektleiter/-in;15,0;h;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0002;Stundenlohnarbeiten Programmierer/-in;15,0;h;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0003;Stundenlohnarbeiten MSR-Techniker/-in;15,0;h;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0004;Wiederholte An- und Abfahrt, einschl. aller anfallenden Nebenkosten;15,0;h;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0001;Arbeitskarte und aktuelle Bestandsliste;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0002;Wartungspauschale, 1. Jahr.;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0003;für 2. Jahr.;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0004;für 3. Jahr.;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0005;für 4.Jahr.;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0001;Baustelle für sämtliche aufgeführte Leistungen, einrichten, herstellen der dazu erforderlichen Lager- und Arbeitsplätze, Flächen sind im Lageplan ausgewiesen.;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0002;Baustelle umsetzten, neu herstellen Lager- und Aufenthaltsplätze;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0003;Baustelleneinrichtung vorhalten;12,0;Mt;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0004;Baustelle für sämtliche aufgeführte Leistungen, räumen, Geländeflächen, auf denen sich Baustelleneinrichtungen befunden haben, dem früheren Zustand entsprechend herstellen, im Baugrund befindliche Teile der Baustelleneinrichtung (z. B. Fundamente, Pfähle, Leitungen, Kanäle) räumen.;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0001;Wetterprognose-Modul;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0002;Außen-Feuchtefühler inklusive Temperatursensor;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0003;Sonnen- und Ballwurfschutz;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0004;Bemusterung der Raumtemperatursensoren;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0005;Raumfühler zur Temperaturmessung aktiv;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0006;Mehrpreis Raumfühler;45,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0007;Mehrpreis Raumfühler auf Sichtbeton;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0008;Einschraubfühler zur Messung der Temperatur, PN10, L=150 mm Messing;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0009;Einschraubfühler zur Messung der Temperatur, PN10, L=200 mm Messing;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0010;Einschraubfühler zur Messung der Temperatur, PN10, L=250 mm Messing;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0011;Differenzdruck-Messumformer flüssige Medien 0-10 Bar;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0012;Leckagedetektor mit Meldekontakt;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0013;Not-Aus-Taster mit Glasscheibe mit Verriegelung;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0001;für 200 Physikalische Datenpunkte und 1000 Kommunikative Datenpunkte.;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0002;Analog-Eingänge (AE);15,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0003;Binär-Eingänge (BE);41,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0004;Analog-Ausgänge (AA), stetig;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0005;Binär-Ausgänge (BA);9,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0006;Datenschnittstelleneinheit M-Bus bis zu 60 Zähler;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0007;Erweiterung der Automationsstation um Modbus-Funktionalität und Datenpunkte;100,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0008;Erweiterung der Automationsstation um BACnet-Client-Funktionalität und Datenpunkte;50,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0009;BACnet MS/TP auf BACnet/IP Gateway;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0010;Modbus RTU auf TCP/IP-Umsetzer;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0001;Analoge Eingabe - AI (1.1.1);240,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0002;Binäre Eingabe - BI/MI (1.1.2);54,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0003;Analoge Ausgabe - AO (1.1.3);4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0004;Binäre Ausgabe- BI/MI (1.1.4);9,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0005;Analogwert - AV (1.2.1);7,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0006;Binärwert - BV/MV (1.2.2);12,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0007;Zeitplan- SCH (1.3.1);1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0008;Kalender- CAL (1.3.2);4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0009;Alarm-/Ereignismeldung - NC (1.3.3);4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0010;Datenaufzeichnung - LOG (1.3.4);64,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0011;Sonstige komplexe Objekte (1.3.5);13,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0012;Grenzwertüberwachung (2.2.1);4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0013;Betriebsstundenüberwachung (2.2.2);4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0014;Ereignisüberwachung (2.2.3);50,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0015;Befehlsausführüberwachung (2.2.4);5,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0016;Anlagen-/Gerätestatus  (2.2.5);18,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0017;Motorsteuerung (2.2.6);2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0018;Blockierschutz (2.2.7);2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0019;Umschaltung (Analogwert)  (2.2.8);1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0020;Folgesteuerung (2.2.9);23,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0021;Frostschutzsteuerung (2.2.10);1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0022;Sicherheitssteuerung (2.2.11);3,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0023;Prioritätssteuerung (2.2.12);18,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0024;P-/PI-/PID-Regler (Loop) (2.3.1);10,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0025;Sollwertführung/-kennlinie (2.3.2);13,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0026;Stellausgabe stetig (2.3.3);9,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0027;Stellausgabe 2-Punkt (2.3.4);4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0028;Begrenzung Sollwert/Stellwert  (2.3.8);2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0029;Parameterumschaltung (2.3.9);5,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0030;Abstimmungsgespräche mit dem Lieferanten der;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0031;Dienstleistung Wetterprognosedaten Gebäudeleittechnik;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0032;Sondersoftware Wetterprognosedatengeführte Regelung;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0033;Systemintegration der Wetterprognosedaten;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0034;Inbetriebnahme wetterdatengeführte Regelung;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0035;Optimierung der Wetterdatengeführten Regelung (Sommer und Winter) (GEG2024);1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0036;Inbetriebsetzung Ein -/Ausgabefunktion (Spalte 1);110,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0001;Montage und Transport Schaltschrank;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0002;Standschrank als Reihenschrankfeld BxHxT=800x1800x400 mm;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0003;Schaltschrank Be und Entlüftung;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0004;Sichtfenster;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0005;Schaltplantasche;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0006;Frontplatten-Schnittstellenmodul;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0007;Sammelschienensystem bis 50 A;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0008;Sammelschienensystem für Hilfsspannung;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0009;Einspeisung 63 A, mit Hauptschalter;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0010;Phasenüberwachung;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0011;Hilfsspannungsversorgung 1,0 KVA, 230/24 V;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0012;Unterbrechungsfreie Stromversorgung (USV) – Online-System;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0013;Hilfsspannung 24 DC / 20 A;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0014;Elektronischer Schutzschalter mit 8 Kanälen 24V DC;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0015;Netzmessinstrument-Zähler;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0016;Leistungsbaugruppe 230 V bis 2,2 kW Geräte mit Zusatzmodul;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0017;Leistungsabgang für 230 V bis 16A;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0018;Leistungsabgang für 400 V bis 16A;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0019;Leistungsabgang für 400 V bis 32A;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0020;Fehlerstrom- und Leitungsschutzschalter (FI/LS, RCBO),;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0021;Fehlerstromschutzschalter RCCB, Typ A, 1polig+N, 230V;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0022;Fehlerstromschutzschalter RCCB, Typ A, 3 polig+N, 400V;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0023;Motorschutzschalter bis 16 A;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0024;Sammelstörmeldeeinrichtung;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0025;Lampenprüfeinrichtung;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0026;Verdrahtete Steuerung 1 Hilfsschütz (4S + 4Ö);4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0027;Hilfs-/Koppelrelais AC/DC 24 V/230 V, 2 Wechsler;10,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0028;Hilfs-/Koppelrelais AC/DC 24 V/230 V, 4 Wechsler;3,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0029;Überspannungsschutz Einspeisung Schaltschrank;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0030;Klemmenkasten Überspannungsschutz BxHxT 500x300x120 mm;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0031;Überpsannung Monitoring-System LifeCheck FM-Einheit;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0032;Überspannungs-Kombi-Ableiter 24V;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0033;Überspannungs-Kombi-Ableiter 0-10V/Passiv;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0034;Bedieneinrichtung (Drucktaster);1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0035;Anzeigeeinrichtung, Schaltschrank;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0036;Bedien- und Anzeigeeinrichtung;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0037;Einbau der Automationstation ASP;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0038;Montage von beigestellten Teilen;6,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0039;Thermografische Protokollierung;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0001;Konfiguration BACnet/SC Netzwerk;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0002;Abbildungen zur übergeordneten Strukturierung und Navigation im Graphiksystem sowie zur Auflistung bzw. Auswahl von Anlagenbildern.;10,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0003;Automatikfunktion und Parameter (Spalte 3.1.1);214,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0004;Anlagengrafiken (Spalte 3.1.2);10,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0005;Dynamische Einblendung (Spalte 3.1.3);350,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0006;Handlungsanweisung (Spalte 3.1.4);50,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0007;Nachricht an externe Stelle (Spalte 3.1.5);62,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0008;Historisierung in Datenbank (Spalte 3.1.6);82,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0009;GLT/MBE-Einweisung;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0010;Langzeit Trend-Darstellung, 10 Funktionen;30,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0001;Alu-Schutz-Panzerrohr M20;25,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0002;Alu-Schutz-Panzerrohr M32;30,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0003;Installationskanal 100x60mm,;6,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0004;Kabelrinne B/H 100/60 mm;10,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0005;Kabelrinne B/H 200/60 mm;10,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0006;Kabelrinne B/H 400/60 mm;6,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0007;Trennsteg H = 60 mm;30,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0008;Ausleger 100 mm für Hängestiele;10,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0009;Ausleger 200 mm für Hängestiele;10,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0010;Ausleger 400 mm für Hängestiele;6,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0011;Ausleger 100 mm für Wandmontage;6,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0012;Ausleger 200 mm für Wandmontage;6,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0013;Ausleger 400 mm für Wandmontage;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0014;Stiel für Ausleger , L=1000 mm;20,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0015;Stiel für Ausleger , L=500 mm;6,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0016;Kabelleiter B/H 500/60mm;4,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0017;C-Profilschiene H/B 18/35 mm;30,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0018;Bügelschelle 8 bis 16 mm;50,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0019;Bügelschelle 28 bis 40 mm;50,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0020;Befestigungskonstruktion, verzinkt;20,0;kg;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0021;Kabelsammelhalter;30,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0022;Kabelbezeichnungsschilder, 10 - 25 mm;100,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0023;Halogenfreie Kabelabzweigdose 80 x 80 x 40 mm;20,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0024;Bezeichnungsschilder 30 x 70 Resopal nach DIN 825,;30,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0001;Steuerleitung Ölflex 3x1,5mm2;100,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0002;Steuerleitung Ölflex 5x1,5mm2;100,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0003;geschirmte Energie- und Steuerleitung;50,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0004;geschirmte Energie- und Steuerleitung;50,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0005;Mantelleitung NYM-J 3 x 1,5 mm2.;100,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0006;Mantelleitung NYM-J 3 x 2,5 mm2.;50,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0007;Mantelleitung NYM-J 5 x 1,5 mm2,;100,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0008;Mantelleitung NYM-J 5 x 2,5 mm2,;50,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0009;Mantelleitung NYM-J 5 x 4 mm2,;50,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0010;Kabel RS485 (Modbus) 1×2×22 AWG,;50,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0011;Installationskabel J-Y(ST)Y 2 x 2 x 0,8 mm2;500,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0012;Installationskabel J-Y(ST)Y 4 x 2 x 0,8 mm2,;100,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0013;Installationskabel J-Y(ST)Y 6 x 2 x 0,8 mm2,;50,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0014;Installationskabel  LiYCY (TP) 2x2x0,75 mm2;100,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0015;Installationskabel  LiYCY (TP) 4x2x0,75 mm2,;50,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0016;Installationskabel CAT-7;100,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0017;Erdkabel 3 x 1,5 mm2.;20,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0018;Erdkabel 5 x 1,5 mm2.;20,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0019;Erdkabel 5 x 2,5 mm2.;20,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0020;Erdkabel 5 x 4 mm2.;30,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0021;Außenkabel, symmetrisch, A-2Y(L)2Y, 2 x 2 x 0,8 STIIIBD.;50,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0022;Außenkabel, symmetrisch, A-2Y(L)2Y, 4 x 2 x 0,8 STIIIBD.;50,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0023;Außenkabel, symmetrisch, A-2Y(L)2Y, 6 x 2 x 0,8 STIIIBD.;20,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0001;Kabelanschluss einseitig bis 3 x 1,5 mm2;10,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0002;Kabelanschluss für Querschnitt bis 5 x 1,5 mm2,;6,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0003;Kabelanschluss für Querschnitt bis 5 x 2,5 mm2,;6,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0004;Kabelanschluss für Querschnitt bis 2x2x0,8 mm2,;70,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0005;Kabelanschluss für Querschnitt bis 4x2x0,8 mm2,;10,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0006;Kabelanschluss für Querschnitt bis 8x2x0,8 mm2,;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0007;Kabelanschluss für Querschnitt bis 1 x 6 mm2,;15,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0008;Kabelanschluss für Querschnitt bis 1 x 10 mm2,;15,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0009;Kabelanschluss für Querschnitt bis 1 x 16 mm2,;15,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0010;Kabelanschluss Datenkabel, Ethernet;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0011;Kabelanschluss Datenkabel, M-Bus;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0012;Kabelanschluss Datenkabel, BACnet MS/TP;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0001;Mantelleitung halogenfrei NHXMH-J 1 x 6 mm2,;30,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0002;Mantelleitung halogenfrei NHXMH-J 1 x 10 mm2,;20,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0003;Mantelleitung halogenfrei NHXMH-J 1 x 16 mm2,;20,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0004;Potentialausgleichs-Cu-Schiene;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0005;Erdungsbandrohrschelle, DN10 bis DN50;20,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0006;Erdungsbandrohrschelle, DN65 bis DN100;10,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0007;Überbrückung Potentialausgleich;20,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0008;Erstellung Messprotokoll Pot.-Ausgleich;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0001;Netzwerk Pflichtenheft;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0002;Detaillierte Absprache;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0003;Koordination Netzwerk;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0004;Schnittstellen-Check;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0005;Gemeinsamer Funktionstest;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0006;Managed Netzwerkswitch, 8x RJ45 2x SFP Hutschiene;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0007;SFP-Modul (Small Form-factor Pluggable), LWL Multimode, 1 Gbit/s;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0008;LWL-Kabel OM3, 25 m, nagetierfest, inkl. LC-Stecker;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0009;Mehrpreis je zusätzlicher lfd. Meter LWL-Kabel OM3, nagetierfest;50,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0010;Patchkabel CAT 7 / 3m;3,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0011;Patchkabel CAT 7/ 1m;5,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0012;Patchpanel 1 Port Cat. 7 Hutschiene;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0013;RJ 45 Modul Cat 6A;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0014;E-DAT Industry IP20 RJ45 field plug black;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0015;Messung LAN Kabel CAT 7 / 4x2xAWG;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0001;Durchbruch durch Mauerwerk,;5,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0002;Durchmesser bis 22mm, in Mauerwerk oder Beton-;3,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0003;Brandschutzabschottung an Kabel-/Leitungsanlagen;5,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0004;Kernbohrung senkrecht Stahlbeton Durchm. 50-100mm T 25-30cm nicht schadstoffbelastet;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0005;Zuschlag KB Sichtbeton;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0001;Ausführungs- und Montageunterlagen Gebäudeautomation;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0002;Schnittstellenkoordination Gebäudeautomation zu RLT / HZG / KLT / SAN / ELT;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0003;Schulung des Bedienpersonals;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0004;Durchführung des Probebetriebs und Betriebsunterstützung – Gebäudeautomation;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0005;Prüfung Pumpen;2,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0006;Prüfung Autarke Steuerungen;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0007;Erstellung der Bestandsdokumentation;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0008;Erstellung der Ausführung-Bestandsunterlagen Inbetriebnahme (in digitaler Form);1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0009;Erweiterte Enddokumentationsunterlagen;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0010;Teilnahme an Abnahmebegehung Brandschutz;4,0;Std;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0011;Ergänzende Aufmaßunterlagen – Gebäudeautomation;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0001;Stundenlohnarbeiten durch Projektleiter/-in;15,0;h;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0002;Stundenlohnarbeiten Programmierer/-in;15,0;h;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0003;Stundenlohnarbeiten MSR-Techniker/-in;15,0;h;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0004;Wiederholte An- und Abfahrt, einschl. aller anfallenden Nebenkosten;15,0;h;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0001;Arbeitskarte und aktuelle Bestandsliste;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0002;Wartungspauschale, 1. Jahr.;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0003;für 2. Jahr.;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0004;für 3. Jahr.;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83
+0005;für 4.Jahr.;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260423-OBR-Gebäudeautomation.x83

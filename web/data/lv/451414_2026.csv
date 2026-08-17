@@ -1,0 +1,876 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+1;Freischaltung Kundenstation 1507;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+2;Demontage/Entsorgung Bestand-MSHV Station A 1507;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+3;Demontage/Entsorgung Bestand-Mittelspannungskabel;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+4;Block 1, 3 Segmente, nicht erweiterbar;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+5;Integriertes kapazitives Spannungsprüfsystem;3,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+6;Kurzschluss-Richtungsanzeiger;2,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+7;Verschlussblech am Lasttrennschalter;2,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+8;Verschlussblech am Erdungsschalter (rot);2,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+9;Wandlerstromgespeistes Überstrom- und Erdschlussrelais;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+10;Meldeschalter am Trennschalter;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+11;Meldeschalter am Erdungsschalter;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+12;Meldeschalter am Leistungsschalter;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+13;Antriebsverschließung Leistungsschalterfeld;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+14;Kabelhalter;9,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+15;Endverschluss N2XS2Y für Kabelschaltfeld;6,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+16;Endverschluss N2XS2Y für Leistungsfeld;3,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+17;luftisoliertes Messfeld;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+18;3 Stück Gießharz-Stromwandler für o. g. Messfeld;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+19;3 Stück Gießharz-Spannungswandler für o. g. Messfeld;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+20;Sekundärseitige Absicherung Spannungswandler;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+21;Verschlussblech zur Verschließung des Messfeldes;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+22;Einbau von beigestellten Stromwandlern;3,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+23;Einbau von beigestellten Spannungswandlern;3,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+24;Kabelhalter;6,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+25;Satz Phasenfestpunkt Ø 25 mm,;2,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+26;Satz MS Kabelverbindung 3 Einleiter NTMCWOEU;2,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+27;Block 2, 5 Segmente, nicht erweiterbar;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+28;Integriertes kapazitives Spannungsprüfsystem;5,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+29;Verschlussblech am Erdungsschalter (rot);1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+30;Wandlerstromgespeistes Überstrom- und Erdschlussrelais;4,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+31;Meldeschalter am Trennschalter;4,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+32;Meldeschalter am Erdungsschalter;4,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+33;Meldeschalter am Leistungsschalter;4,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+34;Antriebsverschließung Leistungsschalterfeld;4,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+35;Kabelhalter;12,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+36;Endverschluss N2XSY für Transformatorschaltfeld;6,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+37;Endverschluss N2XS2Y für Leistungsfeld;6,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+38;Schaltsperre mit Warnschild;8,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+39;Schaltkurbel für Leistungsschalter;2,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+40;Schaltkurbel;2,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+41;Halterung für Schaltkurbel/Hebel;4,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+42;Prüfstifte für Kabelprüfung;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+43;Anlagenbeschriftung;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+44;Baustelleneinrichtung für Umbau MS-Schaltanlage;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+45;Straßen- und Gehwegsperrung für Schwerlasttransporte;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+46;Teleskoplader, leihweise;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+47;Schutzprüfung MS-Anlage inkl. aller Nebenarbeiten / Protokolle;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+48;Lieferung / Ausrüstung (Schilder, Spannungsprüfer + Akkuleuchte) für Stationsgebäude 14;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+49;N2XSY 1x70RM/16 Pritsche Wannen verlegen befestigen;30,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+50;N2XSY 1x70RM/16 Schellen verlegen;30,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+51;Endverschluss N2XSY für Transformator;6,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+52;Verbindungsmuffe DIN VDE 0278-629-1 (VDE 0278-629-1) für Kabel Uo/U 12/20 kV, Um 24 kV, NA2XS2Y 1 x 185 RM/25, einschl. systemgebundenem Zubehör.;3,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+53;Untersuchung Bestand-Schaltwartenboden ELT;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+54;Abdecken von Einrichtungsgegenständen zum Schutz vor Staub. Es müssen in den verschiedenen Räumen in denen Arbeiten durchgeführt werden die Einrichtungsgegenstände abgedeckt werden. Nach erfolgter Arbeit muss die Abdeckung entfernt werden. Die Abdeckung von Einrichtungsgegenständen muss mit dem Nutz;15,0;m²;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+55;Anpassung Bestand- Schaltwartenboden an neue MSHV;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+56;Kernbohrung;12,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+57;Universalringraumdichtung mit Segmentringtechnik;12,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+58;A0 Bilderrahmen mit Strangschema MSHV Station A und MS-Hauptstromversorgung Liegenschaft G-O-K.;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+59;Kommunikation mit Netz Leipzig;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+60;Wiedereinschalten Kundenstation A 1507;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+1;Freischaltung Station B Gebäude 59;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+2;Demontage und Entsorgung Bestand- Betonstation B Gebäude 59;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+3;Betonraumzelle Station B;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+4;Anlieferung/Transport Betonraumzelle Station B;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+5;Autokran, leihweise;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+6;Block 1, 4 Segmente, nicht erweiterbar;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+7;Integriertes kapazitives Spannungsprüfsystem;4,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+8;Verschlussblech am Erdungsschalter (rot);1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+9;Wandlerstromgespeistes Überstrom- und Erdschlussrelais;4,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+10;Meldeschalter am Trennschalter;4,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+11;Meldeschalter am Erdungsschalter;4,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+12;Meldeschalter am Leistungsschalter;4,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+13;Antriebsverschließung Leistungsschalterfeld;4,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+14;Kabelhalter;12,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+15;Endverschluss N2XSY für Transformatorschaltfeld;6,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+16;Endverschluss N2XS2Y für Leistungsfeld;6,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+17;Schaltsperre mit Warnschild;4,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+18;Schaltkurbel für Leistungsschalter;2,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+19;Halterung für Schaltkurbel/Hebel;2,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+20;Prüfstifte für Kabelprüfung;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+21;Anlagenbeschriftung;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+22;Schutzprüfung MS-Anlage inkl. aller Nebenarbeiten / Protokolle;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+23;Lieferung / Ausrüstung (Schilder, Spannungsprüfer + Akkuleuchte) für Stationsgebäude 59;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+24;N2XSY 1x70RM/16 Pritsche Wannen verlegen befestigen;30,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+25;N2XSY 1x70RM/16 Schellen verlegen;30,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+26;Endverschluss N2XSY für Transformator;6,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+27;Transformator in Gießharzausführung 10 kV, 630 kVA;2,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+28;A0 Bilderrahmen mit Strangschema MSHV Station B und MS-Hauptstromversorgung Liegenschaft G-O-K.;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+29;Wiedereinschalten Kundenstation B;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+1;Freischaltung Station C Gebäude 58;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+2;Demontage/Entsorgung Bestand-MSHV Station C Gebäude 58;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+3;Demontage/Entsorgung Bestand-Mittelspannungskabel;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+4;Block 1, 4 Segmente, nicht erweiterbar;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+5;Integriertes kapazitives Spannungsprüfsystem;4,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+6;Verschlussblech am Erdungsschalter (rot);1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+7;Wandlerstromgespeistes Überstrom- und Erdschlussrelais;4,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+8;Meldeschalter am Trennschalter;4,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+9;Meldeschalter am Erdungsschalter;4,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+10;Meldeschalter am Leistungsschalter;4,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+11;Antriebsverschließung Leistungsschalterfeld;4,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+12;Kabelhalter;12,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+13;Endverschluss N2XSY für Transformatorschaltfeld;6,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+14;Endverschluss N2XS2Y für Leistungsfeld;6,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+15;Schaltsperre mit Warnschild;4,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+16;Schaltkurbel für Leistungsschalter;2,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+17;Halterung für Schaltkurbel/Hebel;2,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+18;Prüfstifte für Kabelprüfung;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+19;Anlagenbeschriftung;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+20;Teleskoplader, leihweise;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+21;Schutzprüfung MS-Anlage inkl. aller Nebenarbeiten / Protokolle;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+22;Lieferung / Ausrüstung (Schilder, Spannungsprüfer + Akkuleuchte) für Stationsgebäude 58;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+23;N2XSY 1x70RM/16 Pritsche Wannen verlegen befestigen;30,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+24;N2XSY 1x70RM/16 Schellen verlegen;30,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+25;Endverschluss N2XSY für Transformator;6,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+26;Untersuchung Bestand-Schaltwartenboden ELT;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+27;Abdecken von Einrichtungsgegenständen zum Schutz vor Staub. Es müssen in den verschiedenen Räumen in denen Arbeiten durchgeführt werden die Einrichtungsgegenstände abgedeckt werden. Nach erfolgter Arbeit muss die Abdeckung entfernt werden. Die Abdeckung von Einrichtungsgegenständen muss mit dem Nutz;15,0;m²;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+28;Anpassung Bestand- Schaltwartenboden an neue MSHV;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+29;Kernbohrung;6,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+30;Universalringraumdichtung mit Segmentringtechnik;6,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+31;A0 Bilderrahmen mit Strangschema MSHV Station C und MS-Hauptstromversorgung Liegenschaft G-O-K.;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+32;Wiedereinschalten Kundenstation C;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+1;Betonraumzelle Station D;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+2;Anlieferung/Transport Betonraumzelle Station D;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+3;Autokran, leihweise;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+4;Block 1, 4 Segmente, nicht erweiterbar;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+5;Integriertes kapazitives Spannungsprüfsystem;4,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+6;Verschlussblech am Erdungsschalter (rot);1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+7;Wandlerstromgespeistes Überstrom- und Erdschlussrelais;4,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+8;Meldeschalter am Trennschalter;4,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+9;Meldeschalter am Erdungsschalter;4,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+10;Meldeschalter am Leistungsschalter;4,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+11;Antriebsverschließung Leistungsschalterfeld;4,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+12;Kabelhalter;12,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+13;Endverschluss N2XSY für Transformatorschaltfeld;6,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+14;Endverschluss N2XS2Y für Leistungsfeld;6,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+15;Schaltsperre mit Warnschild;4,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+16;Schaltkurbel für Leistungsschalter;2,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+17;Halterung für Schaltkurbel/Hebel;2,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+18;Prüfstifte für Kabelprüfung;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+19;Anlagenbeschriftung;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+20;Schutzprüfung MS-Anlage inkl. aller Nebenarbeiten / Protokolle;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+21;Lieferung / Ausrüstung (Schilder, Spannungsprüfer + Akkuleuchte) für Stationsgebäude 100;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+22;N2XSY 1x70RM/16 Pritsche Wannen verlegen befestigen;30,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+23;N2XSY 1x70RM/16 Schellen verlegen;30,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+24;Endverschluss N2XSY für Transformator;6,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+25;Transformator in Gießharzausführung 10 kV, 630 kVA;2,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+26;A0 Bilderrahmen mit Strangschema MSHV Station D und MS-Hauptstromversorgung Liegenschaft G-O-K.;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+27;Wiedereinschalten Kundenstation D;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+1;Anlehnung STLB-Bau 04/2022 052;6400,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+2;Kabel DIN VDE 0276-620 (VDE 0276-620), Uo/U 12/20 kV, Bemessungsspannung Um 24 kV, N2XS(F)2Y 1 x 300 RM/25, Cu-Zahl 3163, durch Einziehen in vorh. Rohre oder ungeteilte Kabelformsteine verlegen.;800,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+3;Kabel DIN VDE 0276-620 (VDE 0276-620), Uo/U 12/20 kV, Bemessungsspannung Um 24 kV, N2XS(F)2Y 1 x 300 RM/25, Cu-Zahl 3163, auf vorh. Pritschen und Wannen verlegen und befestigen.;240,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+4;Kabel DIN VDE 0276-620 (VDE 0276-620), Uo/U 12/20 kV, Bemessungsspannung Um 24 kV, N2XS(F)2Y 1 x 300 RM/25, Cu-Zahl 3163, mit Abstandsschellen verlegen.;60,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+5;Erstprüfung Mittelspannungskabel;12,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+1;Stromerzeuger 88 kVA;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+2;Teleskoplader, leihweise;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+3;Anlieferung/Transport Stromerzeuger 88 kVA;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+4;Kabelverteilerschrank Gr.1/1355, mit Montageplatte, 1355x780x315mm (HxBxT);1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+5;Schaltkasten  IP54 INS-Umschalter, vierpolig;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+6;Lasttrennschalter 3polig 160A, sichtbare Trennung für Hutschiene/Montageplatte;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+7;Dx/D0x Sicherungssockel (Sicherungsunterteil) DIN VDE 0636-3 (VDE 0636-3), einschl. Passeinsatz und Schraubkappe, Baugröße D 02, Bemessungsbetriebsspannung 400 V AC/250 V DC, zur Montage auf Tragschiene DIN EN 60715 (VDE 0660-520), mit Sicherungseinsatz, Bemessungsstrom 16 A, 3-polig mit Abdeckung.;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+8;Überspannungs-Ableiter;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+9;Fehlerstromschutzschalter 40 A, 3+N, Maße DIN 43880, fingersicher DIN VDE 0106-100, für Wechsel- und pulsierende;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+10;Leitungsschutzschalter 10 A DIN VDE 0641-11, Maße DIN 43880, fingersicher DIN VDE 0106-100,;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+11;Leitungsschutzschalter 16 A DIN VDE 0641-11, Maße DIN 43880, fingersicher DIN VDE 0106-100,;2,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+12;Steckdose DIN VDE 0620-1 (VDE 0620-1), als Reiheneinbaugerät, Maße DIN 43880, fingersicher DIN EN 50274 (VDE 0660-514), zur Montage auf Tragschiene DIN EN 60715 (VDE 0660-520), Bemessungsbetriebsspannung 230 V AC, Bemessungsstrom 16 A, 1-polig + N + PE.;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+13;Drehstromzähler EM 2389, TCP/IP (MBUS), Multifunktional, 4-Leiter;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+14;Aufsteck-Stromwandler;3,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+15;Messwandler-Trennklemme;3,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+16;D01-Sicherungseinheit bestehend aus:;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+17;Not-AUS-Pilz-Taster;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+18;Abdeckrahmen 1-fach;3,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+19;Aufbaugehäuse 1Installationsgerät;3,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+20;Modulare Anschlussdose RJ45 einfach,;3,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+21;Abdeckung/Zwischenplatte für Datenenddosen, passend zu;3,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+22;Verdrahtung;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+23;Inbetriebnahme und Testlauf;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+1;Kabel DIN VDE 0276-603 (VDE 0276-603) NYCWY 4 x 50 SM/25, Cu-Zahl 2203, in vorh. Gräben oder geteilte Kabelkanalformsteine, ohne Einbettung.;95,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+2;Kabel DIN VDE 0276-603 (VDE 0276-603) NYCWY 4 x 50 SM/25, Cu-Zahl 2203, in vorh. Rohre/Unterflurkanäle.;20,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+3;NYCWY 4x50SM/25 anschließen;4,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+4;Kabel DIN VDE 0276-603 (VDE 0276-603) NYY-J 5 x 25 RM, Cu-Zahl 1200, in vorh. Gräben oder geteilte Kabelkanalformsteine, ohne Einbettung.;30,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+5;Kabel DIN VDE 0276-603 (VDE 0276-603) NYY-J 5 x 25 RM, Cu-Zahl 1200, in vorh. Rohre/Unterflurkanäle.;15,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+6;NYY-J 5 x 25 RM anschließen;2,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+7;Kabel NYY-O 7x4 mm²,;5,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+8;Kabel DIN VDE 0276-603 (VDE 0276-603) NYY-J 5 x 2,5 RE, Cu-Zahl 120, in vorh. Rohre/Unterflurkanäle.;10,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+9;Kabel DIN VDE 0276-603 (VDE 0276-603) NYY-J 5 x 1,5 RE, Cu-Zahl 72.;5,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+10;PVC-Steuerleitung DIN EN 50525-2-51 (VDE 0285-525-2-51) YSLCY-JZ 7 G 1,5, Cu-Zahl 147, in vorh. Rohre/Unterflurkanäle.;10,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+11;PVC-Steuerleitung DIN EN 50525-2-51 (VDE 0285-525-2-51) YSLYCY-JZ 12 x 1,5, in vorh. Rohre/Unterflurkanäle.;10,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+12;A-02YSC2Y 4 x 2 x AWG 23/1 PiMF-100 Ohm. Dieses Kabel basiert auf dem 4-paarigen CAT7-PiMF-Kabel UC900 SS23/1 und ist mit einem für die direkte Erdverlegung geeigneten, Kabel UV-beständig, dickwandigen Polyethylen Außenmantel ausgerüstet. Normen: EIA/TIA 568A, ISO/IEC 11801:2002, EN 50173-1, IEC 611;120,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+13;Außenkabel, symmetrisch, DIN VDE 0816-1 (VDE 0816-1), A-2Y(L)2Y, 6 x 2 x 0,8 STIII BD, in vorh. Gräben oder geteilte Kabelkanalformsteine, Tiefe 80 cm.;100,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+14;Außenkabel, symmetrisch, DIN VDE 0816-1 (VDE 0816-1), A-2Y(L)2Y, 6 x 2 x 0,8 STIII BD, mit Bügelschellen.;10,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+15;Prüfung der Kupfer-Verbindungsstrecke;3,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+16;Verbindungskabel 1,0m Kategorie 7;6,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+1;Kabel-Schutzrohr DN110;50,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+2;Kabelabdichtung für Kabelschutzrohr DN110;4,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+3;NEA-Ausrüstung;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+1;Stationsausrüstung;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+2;Demontage / Entsorgung Bestand- Kompensation Station A Gebäude 24;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+3;Feld 9 Blindstromkompensation;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+4;NYY-J 3x150SM/70 anschließen;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+5;Überprüfung Verteiler und Stromkreise;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+1;Feld 1 - Leistungsschalterfeld, Einspeisefeld 1;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+2;Leistungsschalter 3-polig, 1250A, 50kA;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+3;Universal-Messgerät für den Schalttafeleinbau;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+4;Kombi-Ableiter Typ 1+2, 3-phasig mit Meldekontakt;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+5;Feld 2 Abgangsfeld;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+6;"Lasttrennschalter mit Sicherung in Leistenbauform; Größe 00; Wandler 100/0,2";1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+7;"Lasttrennschalter mit Sicherung in Leistenbauform; Größe 1; Wandler 250/0,2";1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+8;"Lasttrennschalter mit Sicherung in Leistenbauform; Größe 2; Wandler 400/0,2";6,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+9;NH-Sicherungseinsätze f. v. g. Abgänge liefern u. montieren;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+10;Busverbinder;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+11;Stromversorgungsmodul zur Strom- und Spannungsversorgung;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+12;Zentraleinheit zur Energiedatenerfassung und Datenkommunikation;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+13;Terminierung des Bus-Systems;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+14;Messmodul zur Erfassung, Verarbeitung und Überwachung von elektrischen Größen;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+15;Leitungsschutzschalter 6 A DIN VDE 0641-11, Maße DIN 43880, fingersicher DIN VDE 0106-100,;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+16;Verdrahtung;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+17;Geräteeinbaumodul (Abmessungen (BxH) 540x200mm);1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+18;Gerätetür für Geräteeinbaumodul;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+19;Beschriftungsschild;8,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+20;Feld 3 Abgangsfeld;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+21;"Lasttrennschalter mit Sicherung in Leistenbauform; Größe 00; Wandler 100/0,2";1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+22;"Lasttrennschalter mit Sicherung in Leistenbauform; Größe 00; Wandler 150/0,2";2,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+23;"Lasttrennschalter mit Sicherung in Leistenbauform; Größe 2; Wandler 400/0,2";4,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+24;"Lasttrennschalter mit Sicherung in Leistenbauform; Größe 3; Wandler 600/0,2";1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+25;NH-Sicherungseinsätze f. v. g. Abgänge liefern u. montieren;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+26;Busverbinder;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+27;Stromversorgungsmodul zur Strom- und Spannungsversorgung;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+28;Zentraleinheit zur Energiedatenerfassung und Datenkommunikation;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+29;Terminierung des Bus-Systems;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+30;Messmodul zur Erfassung, Verarbeitung und Überwachung von elektrischen Größen;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+31;Leitungsschutzschalter 6 A DIN VDE 0641-11, Maße DIN 43880, fingersicher DIN VDE 0106-100,;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+32;Verdrahtung;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+33;Geräteeinbaumodul (Abmessungen (BxH) 540x200mm);1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+34;Gerätetür für Geräteeinbaumodul;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+35;Beschriftungsschild;8,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+36;Feld 4 Leistungsschalter-Kupplungsfeld;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+37;Feld 5 Abgangsfeld;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+38;"Lasttrennschalter mit Sicherung in Leistenbauform; Größe 00; Wandler 100/0,2";1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+39;"Lasttrennschalter mit Sicherung in Leistenbauform; Größe 00; Wandler 150/0,2";2,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+40;"Lasttrennschalter mit Sicherung in Leistenbauform; Größe 2; Wandler 400/0,2";4,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+41;"Lasttrennschalter mit Sicherung in Leistenbauform; Größe 3; Wandler 600/0,2";1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+42;NH-Sicherungseinsätze f. v. g. Abgänge liefern u. montieren;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+43;Busverbinder;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+44;Stromversorgungsmodul zur Strom- und Spannungsversorgung;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+45;Zentraleinheit zur Energiedatenerfassung und Datenkommunikation;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+46;Terminierung des Bus-Systems;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+47;Messmodul zur Erfassung, Verarbeitung und Überwachung von elektrischen Größen;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+48;Leitungsschutzschalter 6 A DIN VDE 0641-11, Maße DIN 43880, fingersicher DIN VDE 0106-100,;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+49;Verdrahtung;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+50;Geräteeinbaumodul (Abmessungen (BxH) 540x200mm);1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+51;Gerätetür für Geräteeinbaumodul;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+52;Beschriftungsschild;8,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+53;Feld 6 Abgangsfeld;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+54;"Lasttrennschalter mit Sicherung in Leistenbauform; Größe 00; Wandler 100/0,2";1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+55;"Lasttrennschalter mit Sicherung in Leistenbauform; Größe 00; Wandler 150/0,2";2,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+56;"Lasttrennschalter mit Sicherung in Leistenbauform; Größe 2; Wandler 400/0,2";5,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+57;NH-Sicherungseinsätze f. v. g. Abgänge liefern u. montieren;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+58;Busverbinder;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+59;Stromversorgungsmodul zur Strom- und Spannungsversorgung;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+60;Zentraleinheit zur Energiedatenerfassung und Datenkommunikation;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+61;Terminierung des Bus-Systems;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+62;Messmodul zur Erfassung, Verarbeitung und Überwachung von elektrischen Größen;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+63;Leitungsschutzschalter 6 A DIN VDE 0641-11, Maße DIN 43880, fingersicher DIN VDE 0106-100,;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+64;Verdrahtung;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+65;Geräteeinbaumodul (Abmessungen (BxH) 540x200mm);1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+66;Gerätetür für Geräteeinbaumodul;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+67;Beschriftungsschild;8,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+68;Feld 7 - Leistungsschalterfeld, Einspeisefeld 2;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+69;Leistungsschalter 3-polig, 1250A, 50kA;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+70;Universal-Messgerät für den Schalttafeleinbau;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+71;Kombi-Ableiter Typ 1+2, 3-phasig mit Meldekontakt;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+72;Feld 8 Blindstromkompensation;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+73;Installationskleinverteiler Aufputz aus Kunststoff,;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+74;Kippschalter VDE 0632/VDE 0660;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+75;Überspannungs-Ableiter;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+76;Fehlerstromschutzschalter 40 A, 3+N, Maße DIN 43880, fingersicher DIN VDE 0106-100, für Wechsel- und pulsierende;2,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+77;Leitungsschutzschalter 10 A DIN VDE 0641-11, Maße DIN 43880, fingersicher DIN VDE 0106-100,;6,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+78;Leitungsschutzschalter 16 A DIN VDE 0641-11, Maße DIN 43880, fingersicher DIN VDE 0106-100,;3,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+79;Leitungsschutzschalter DIN EN 60898-1 (VDE 0641-11), als Reiheneinbaugerät, Maße DIN 43880, fingersicher DIN EN 50274 (VDE 0660-514), Bemessungsausschaltvermögen 6 kA, 3-polig, Auslösecharakteristik C, Bemessungsstrom 16 A, mit Aufnahmevorrichtung für Beschriftungsschild.;2,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+80;Leitungsschutzschalter DIN EN 60898-1 (VDE 0641-11), als Reiheneinbaugerät, Maße DIN 43880, fingersicher DIN EN 50274 (VDE 0660-514), Bemessungsausschaltvermögen 6 kA, 3-polig, Auslösecharakteristik B, Bemessungsstrom 16 A, mit Aufnahmevorrichtung für Beschriftungsschild.;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+81;Fehlerstromschutzschalter mit Überstromschutz (RCBO) DIN EN 61009-1 (VDE 0664-20), als Reiheneinbaugerät, Maße DIN 43880, fingersicher DIN EN 50274 (VDE 0660-514), Typ A pulsstromsensitiv, Auslösung unverzögert, Auslösecharakteristik B, DIN EN 60898-1 (VDE 0641-11), Bemessungsstrom 16 A, Bemessungsf;2,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+82;Verdrahtung;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+83;Beschriftungsschild;20,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+84;Kabel DIN VDE 0276-603 (VDE 0276-603) NYY-O 1 x 185 RM, Cu-Zahl 1776, mit Bügelschellen auf vorh. Ankerschienen oder Kabelleiter.;120,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+85;Kabel DIN VDE 0276-603 (VDE 0276-603) NYY-O 1 x 185 RM, Cu-Zahl 1776, auf vorh. Kabelrinnen oder in offene Kanäle.;100,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+86;NYY-O 1x185 anschließen;48,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+87;Kabel DIN VDE 0276-603 (VDE 0276-603) NYCWY 4 x 150 SM/70, Cu-Zahl 6540, mit Bügelschellen auf vorh. Ankerschienen oder Kabelleiter.;8,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+88;Kabel DIN VDE 0276-603 (VDE 0276-603) NYCWY 4 x 150 SM/70, Cu-Zahl 6540, auf vorh. Kabelrinnen oder in offene Kanäle.;10,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+89;NYCWY 4x150SM/70 anschließen;4,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+90;Installationsleitung DIN VDE 0250-204 (VDE 0250-204) NYM-J 5 x 16, Cu-Zahl 768, mit Bügelschellen auf vorh. Ankerschienen oder Kabelleiter.;6,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+91;Installationsleitung DIN VDE 0250-204 (VDE 0250-204) NYM-J 5 x 16, Cu-Zahl 768, auf vorh. Kabelrinnen oder in offene Kanäle.;5,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+92;NYM-J 5x16 anschließen;2,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+93;Installationsleitung DIN VDE 0250-204 (VDE 0250-204) NYM-J 3 x 1,5, Cu-Zahl 43, auf vorh. Kabelrinnen oder in offene Kanäle, Arbeitshöhe bis 4 m.;15,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+94;Installationsleitung DIN VDE 0250-204 (VDE 0250-204) NYM-J 3 x 1,5, Cu-Zahl 43, in vorh. Rohre/Unterflurkanäle, Arbeitshöhe bis 4 m.;20,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+95;Installationsleitung DIN VDE 0250-204 (VDE 0250-204) NYM-J 5 x 1,5, Cu-Zahl 72, auf vorh. Kabelrinnen oder in offene Kanäle, Arbeitshöhe bis 4 m.;5,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+96;Installationsleitung DIN VDE 0250-204 (VDE 0250-204) NYM-J 5 x 1,5, Cu-Zahl 72, in vorh. Rohre/Unterflurkanäle, Arbeitshöhe bis 4 m.;10,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+97;Installationsleitung DIN VDE 0250-204 (VDE 0250-204) NYM-J 3 x 2,5, Cu-Zahl 72, auf vorh. Kabelrinnen oder in offene Kanäle, Arbeitshöhe bis 4 m.;20,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+98;Installationsleitung DIN VDE 0250-204 (VDE 0250-204) NYM-J 3 x 2,5, Cu-Zahl 72, in vorh. Rohre/Unterflurkanäle, Arbeitshöhe bis 4 m.;40,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+99;Installationsleitung DIN VDE 0250-204 (VDE 0250-204) NYM-J 5 x 2,5, Cu-Zahl 120, auf vorh. Kabelrinnen oder in offene Kanäle, Arbeitshöhe bis 4 m.;20,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+100;Installationsleitung DIN VDE 0250-204 (VDE 0250-204) NYM-J 5 x 2,5, Cu-Zahl 120, in vorh. Rohre/Unterflurkanäle, Arbeitshöhe bis 4 m.;30,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+101;Kabel DIN VDE 0276-603 (VDE 0276-603) NYY-J 3 x 1,5 RE, Cu-Zahl 43, in vorh. Rohre/Unterflurkanäle.;5,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+102;Kabel DIN VDE 0276-603 (VDE 0276-603) NYY-J 3 x 2,5 RE, Cu-Zahl 72, in vorh. Rohre/Unterflurkanäle.;5,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+103;Kabel DIN VDE 0276-603 (VDE 0276-603) NYY-J 5 x 1,5 RE, Cu-Zahl 72, in vorh. Rohre/Unterflurkanäle.;5,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+104;Kabel DIN VDE 0276-603 (VDE 0276-603) NYY-J 7 x 1,5 RE, Cu-Zahl 101, in vorh. Rohre/Unterflurkanäle.;15,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+105;Installationskabel, symmetrisch, DIN VDE 0815 (VDE 0815), J-Y(St)Y, 4 x 2 x 0,8 Bd, auf vorh. Kabelrinnen oder in offene Kanäle.;90,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+106;Außenkabel, symmetrisch, DIN VDE 0816-1 (VDE 0816-1), A-2Y(L)2Y, 6 x 2 x 0,8 STIII BD, auf vorh. Kabelrinnen oder in offene Kanäle.;40,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+107;Anschluss an beigestellte;5,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+108;Anschluss an beigestellte;2,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+109;Kabelleiter Stahl H 60mm B 500mm;10,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+110;Ausleger 300;8,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+111;Hängestiel für Kabelrinne 300;8,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+112;Stiel für Kabelrinne 300;8,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+113;Kabelrinne Stahl H 60mm B 300mm;8,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+114;C-Schiene;15,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+115;Elektroinstallationsrohr Kunststoff 32mm;15,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+116;Elektroinstallationsrohr Kunststoff 25mm;20,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+117;Elektroinstallationsrohr Kunststoff 20mm;15,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+118;Elektroinstallationsrohr Kunststoff 16mm;5,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+119;Elektroinstallationsrohr 20 gewellt;15,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+120;Elektroinstallationsrohr DIN EN 61386 (VDE 0605), Maße DIN EN 60423, aus bandverzinktem Stahl DIN EN 10346, einwandig, glatt, starr, mit Gewinde beidseitig, Außendurchmesser 20 mm, Druckfestigkeit Klasse 3 - mittel (750 N) DIN EN 61386-1 (VDE 0605-1), Klasse Schlagbeanspruchung 3 - mittel DIN EN 613;5,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+121;Elektroinstallationsrohr DIN EN 61386 (VDE 0605), Maße DIN EN 60423, aus Aluminium, einwandig, glatt, starr, Außendurchmesser 25 mm, Druckfestigkeit Klasse 3 - mittel (750 N) DIN EN 61386-1 (VDE 0605-1), Klasse Schlagbeanspruchung 3 - mittel DIN EN 61386-1 (VDE 0605-1), Verlegung offen, auf Putz, mi;10,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+122;Leitungsführungskanal 15 x 15 mm, weiß;5,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+123;Leitungsführungskanal 40 x 60 mm, weiß;6,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+124;Leitungsführungskanal 40 x 90 mm, weiß;6,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+125;Leitungsführungskanal 60 x 170 mm, weiß;5,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+126;Abdeckrahmen 1-fach;6,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+127;Aufbaugehäuse für Einbau von Unterputz-Installationsgeräten, für ein Gerät, auf Beton.;6,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+128;Schutzkontaktsteckdose IP 44 AP, 1-fach;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+129;Schutzkontaktsteckdose IP 44 AP, 2-fach;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+130;CEE-Steckdose DIN EN 60309-2 (VDE 0623-2), mit Klappdeckel, 5-polig, Bemessungsbetriebsspannung 230/400 V AC, 16 A, in Aufputzausführung, mit Beschriftungsfeld, Schutzart IP 44 DIN EN 60529 (VDE 0470-1), Einsatz mit Schrauben befestigen.;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+131;Kombination Wippschalter 1-polig Aus/Wechsel 10A 250V IP44 u. Schutzkontaktsteckdose;2,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+132;Kombination Wippschalter 1-polig Serienschalter 10A 250V IP44 u. Schutzkontaktsteckdose;2,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+133;Verbindungsdose DIN VDE 0606-1 als Abzweigkasten, aus;15,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+134;Abzweigkasten Kunststoff 80x80mm, UV-beständig;5,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+135;Stationsheizung;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+136;Stationsausrüstung;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+137;Bohrung, durch unbewehrten Beton oder Mauerwerk Normalbeton,Bohrdurchmesser bis 25 mm, Bohrtiefe über 12,5 bis 20cm,  Arbeitshöhe bis 4 m,;15,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+138;Bohrung, durch unbewehrten Beton oder Mauerwerk Normalbeton,Bohrdurchmesser bis 25 mm, Bohrtiefe über 20 bis 100cm,  Arbeitshöhe bis 4 m,;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+139;Kabelabdichtung für Einfachdichtpackung f. Wandstärken bis 150 mm;17,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+140;Ab-/Anklemmen und Umverlegen Bestand NS-Kabel Bereich Station B;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+141;Umverlegen KV im Bereich Bestand Station B;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+142;Demontage/Entsorgung GA-Schrank im Bereich Bestand Station B;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+1;Demontage / Entsorgung Einspeisefeld BHKW Station C;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+2;Stationsausrüstung;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+3;Kabelabdichtung für Einfachdichtpackung f. Wandstärken bis 150 mm;10,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+1;Feld 1 - Leistungsschalterfeld, Einspeisefeld 1;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+2;Leistungsschalter 3-polig, 1250A, 50kA;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+3;Universal-Messgerät für den Schalttafeleinbau;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+4;Kombi-Ableiter Typ 1+2, 3-phasig mit Meldekontakt;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+5;Feld 2 Abgangsfeld;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+6;"Lasttrennschalter mit Sicherung in Leistenbauform; Größe 00; Wandler 100/0,2";1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+7;"Lasttrennschalter mit Sicherung in Leistenbauform; Größe 1; Wandler 250/0,2";1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+8;"Lasttrennschalter mit Sicherung in Leistenbauform; Größe 2; Wandler 400/0,2";6,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+9;NH-Sicherungseinsätze f. v. g. Abgänge liefern u. montieren;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+10;Busverbinder;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+11;Stromversorgungsmodul zur Strom- und Spannungsversorgung;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+12;Zentraleinheit zur Energiedatenerfassung und Datenkommunikation;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+13;Terminierung des Bus-Systems;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+14;Messmodul zur Erfassung, Verarbeitung und Überwachung von elektrischen Größen;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+15;Leitungsschutzschalter 6 A DIN VDE 0641-11, Maße DIN 43880, fingersicher DIN VDE 0106-100,;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+16;Verdrahtung;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+17;Geräteeinbaumodul (Abmessungen (BxH) 540x200mm);1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+18;Gerätetür für Geräteeinbaumodul;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+19;Beschriftungsschild;8,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+20;Feld 3 Abgangsfeld;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+21;"Lasttrennschalter mit Sicherung in Leistenbauform; Größe 00; Wandler 100/0,2";1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+22;"Lasttrennschalter mit Sicherung in Leistenbauform; Größe 00; Wandler 150/0,2";2,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+23;"Lasttrennschalter mit Sicherung in Leistenbauform; Größe 2; Wandler 400/0,2";4,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+24;"Lasttrennschalter mit Sicherung in Leistenbauform; Größe 3; Wandler 600/0,2";1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+25;NH-Sicherungseinsätze f. v. g. Abgänge liefern u. montieren;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+26;Busverbinder;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+27;Stromversorgungsmodul zur Strom- und Spannungsversorgung;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+28;Zentraleinheit zur Energiedatenerfassung und Datenkommunikation;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+29;Terminierung des Bus-Systems;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+30;Messmodul zur Erfassung, Verarbeitung und Überwachung von elektrischen Größen;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+31;Leitungsschutzschalter 6 A DIN VDE 0641-11, Maße DIN 43880, fingersicher DIN VDE 0106-100,;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+32;Verdrahtung;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+33;Geräteeinbaumodul (Abmessungen (BxH) 540x200mm);1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+34;Gerätetür für Geräteeinbaumodul;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+35;Beschriftungsschild;8,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+36;Feld 4 Leistungsschalter-Kupplungsfeld;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+37;Feld 5 Abgangsfeld;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+38;"Lasttrennschalter mit Sicherung in Leistenbauform; Größe 00; Wandler 100/0,2";1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+39;"Lasttrennschalter mit Sicherung in Leistenbauform; Größe 00; Wandler 150/0,2";2,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+40;"Lasttrennschalter mit Sicherung in Leistenbauform; Größe 2; Wandler 400/0,2";4,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+41;"Lasttrennschalter mit Sicherung in Leistenbauform; Größe 3; Wandler 600/0,2";1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+42;NH-Sicherungseinsätze f. v. g. Abgänge liefern u. montieren;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+43;Busverbinder;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+44;Stromversorgungsmodul zur Strom- und Spannungsversorgung;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+45;Zentraleinheit zur Energiedatenerfassung und Datenkommunikation;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+46;Terminierung des Bus-Systems;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+47;Messmodul zur Erfassung, Verarbeitung und Überwachung von elektrischen Größen;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+48;Leitungsschutzschalter 6 A DIN VDE 0641-11, Maße DIN 43880, fingersicher DIN VDE 0106-100,;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+49;Verdrahtung;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+50;Geräteeinbaumodul (Abmessungen (BxH) 540x200mm);1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+51;Gerätetür für Geräteeinbaumodul;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+52;Beschriftungsschild;8,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+53;Feld 6 Abgangsfeld;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+54;"Lasttrennschalter mit Sicherung in Leistenbauform; Größe 00; Wandler 100/0,2";1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+55;"Lasttrennschalter mit Sicherung in Leistenbauform; Größe 00; Wandler 150/0,2";2,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+56;"Lasttrennschalter mit Sicherung in Leistenbauform; Größe 2; Wandler 400/0,2";5,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+57;NH-Sicherungseinsätze f. v. g. Abgänge liefern u. montieren;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+58;Busverbinder;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+59;Stromversorgungsmodul zur Strom- und Spannungsversorgung;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+60;Zentraleinheit zur Energiedatenerfassung und Datenkommunikation;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+61;Terminierung des Bus-Systems;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+62;Messmodul zur Erfassung, Verarbeitung und Überwachung von elektrischen Größen;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+63;Leitungsschutzschalter 6 A DIN VDE 0641-11, Maße DIN 43880, fingersicher DIN VDE 0106-100,;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+64;Verdrahtung;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+65;Geräteeinbaumodul (Abmessungen (BxH) 540x200mm);1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+66;Gerätetür für Geräteeinbaumodul;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+67;Beschriftungsschild;8,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+68;Feld 7 - Leistungsschalterfeld, Einspeisefeld 2;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+69;Leistungsschalter 3-polig, 1250A, 50kA;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+70;Universal-Messgerät für den Schalttafeleinbau;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+71;Kombi-Ableiter Typ 1+2, 3-phasig mit Meldekontakt;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+72;Feld 8 Blindstromkompensation;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+73;Installationskleinverteiler Aufputz aus Kunststoff,;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+74;Kippschalter VDE 0632/VDE 0660;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+75;Überspannungs-Ableiter;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+76;Fehlerstromschutzschalter 40 A, 3+N, Maße DIN 43880, fingersicher DIN VDE 0106-100, für Wechsel- und pulsierende;2,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+77;Leitungsschutzschalter 10 A DIN VDE 0641-11, Maße DIN 43880, fingersicher DIN VDE 0106-100,;6,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+78;Leitungsschutzschalter 16 A DIN VDE 0641-11, Maße DIN 43880, fingersicher DIN VDE 0106-100,;3,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+79;Leitungsschutzschalter DIN EN 60898-1 (VDE 0641-11), als Reiheneinbaugerät, Maße DIN 43880, fingersicher DIN EN 50274 (VDE 0660-514), Bemessungsausschaltvermögen 6 kA, 3-polig, Auslösecharakteristik C, Bemessungsstrom 16 A, mit Aufnahmevorrichtung für Beschriftungsschild.;2,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+80;Leitungsschutzschalter DIN EN 60898-1 (VDE 0641-11), als Reiheneinbaugerät, Maße DIN 43880, fingersicher DIN EN 50274 (VDE 0660-514), Bemessungsausschaltvermögen 6 kA, 3-polig, Auslösecharakteristik B, Bemessungsstrom 16 A, mit Aufnahmevorrichtung für Beschriftungsschild.;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+81;Fehlerstromschutzschalter mit Überstromschutz (RCBO) DIN EN 61009-1 (VDE 0664-20), als Reiheneinbaugerät, Maße DIN 43880, fingersicher DIN EN 50274 (VDE 0660-514), Typ A pulsstromsensitiv, Auslösung unverzögert, Auslösecharakteristik B, DIN EN 60898-1 (VDE 0641-11), Bemessungsstrom 16 A, Bemessungsf;2,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+82;Verdrahtung;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+83;Beschriftungsschild;20,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+84;Kabel DIN VDE 0276-603 (VDE 0276-603) NYY-O 1 x 185 RM, Cu-Zahl 1776, mit Bügelschellen auf vorh. Ankerschienen oder Kabelleiter.;120,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+85;Kabel DIN VDE 0276-603 (VDE 0276-603) NYY-O 1 x 185 RM, Cu-Zahl 1776, auf vorh. Kabelrinnen oder in offene Kanäle.;100,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+86;NYY-O 1x185 anschließen;48,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+87;Kabel DIN VDE 0276-603 (VDE 0276-603) NYCWY 4 x 150 SM/70, Cu-Zahl 6540, mit Bügelschellen auf vorh. Ankerschienen oder Kabelleiter.;8,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+88;Kabel DIN VDE 0276-603 (VDE 0276-603) NYCWY 4 x 150 SM/70, Cu-Zahl 6540, auf vorh. Kabelrinnen oder in offene Kanäle.;10,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+89;NYCWY 4x150SM/70 anschließen;4,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+90;Installationsleitung DIN VDE 0250-204 (VDE 0250-204) NYM-J 5 x 16, Cu-Zahl 768, mit Bügelschellen auf vorh. Ankerschienen oder Kabelleiter.;6,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+91;Installationsleitung DIN VDE 0250-204 (VDE 0250-204) NYM-J 5 x 16, Cu-Zahl 768, auf vorh. Kabelrinnen oder in offene Kanäle.;5,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+92;NYM-J 5x16 anschließen;2,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+93;Installationsleitung DIN VDE 0250-204 (VDE 0250-204) NYM-J 3 x 1,5, Cu-Zahl 43, auf vorh. Kabelrinnen oder in offene Kanäle, Arbeitshöhe bis 4 m.;15,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+94;Installationsleitung DIN VDE 0250-204 (VDE 0250-204) NYM-J 3 x 1,5, Cu-Zahl 43, in vorh. Rohre/Unterflurkanäle, Arbeitshöhe bis 4 m.;20,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+95;Installationsleitung DIN VDE 0250-204 (VDE 0250-204) NYM-J 5 x 1,5, Cu-Zahl 72, auf vorh. Kabelrinnen oder in offene Kanäle, Arbeitshöhe bis 4 m.;5,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+96;Installationsleitung DIN VDE 0250-204 (VDE 0250-204) NYM-J 5 x 1,5, Cu-Zahl 72, in vorh. Rohre/Unterflurkanäle, Arbeitshöhe bis 4 m.;10,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+97;Installationsleitung DIN VDE 0250-204 (VDE 0250-204) NYM-J 3 x 2,5, Cu-Zahl 72, auf vorh. Kabelrinnen oder in offene Kanäle, Arbeitshöhe bis 4 m.;20,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+98;Installationsleitung DIN VDE 0250-204 (VDE 0250-204) NYM-J 3 x 2,5, Cu-Zahl 72, in vorh. Rohre/Unterflurkanäle, Arbeitshöhe bis 4 m.;40,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+99;Installationsleitung DIN VDE 0250-204 (VDE 0250-204) NYM-J 5 x 2,5, Cu-Zahl 120, auf vorh. Kabelrinnen oder in offene Kanäle, Arbeitshöhe bis 4 m.;20,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+100;Installationsleitung DIN VDE 0250-204 (VDE 0250-204) NYM-J 5 x 2,5, Cu-Zahl 120, in vorh. Rohre/Unterflurkanäle, Arbeitshöhe bis 4 m.;30,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+101;Kabel DIN VDE 0276-603 (VDE 0276-603) NYY-J 3 x 1,5 RE, Cu-Zahl 43, in vorh. Rohre/Unterflurkanäle.;5,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+102;Kabel DIN VDE 0276-603 (VDE 0276-603) NYY-J 3 x 2,5 RE, Cu-Zahl 72, in vorh. Rohre/Unterflurkanäle.;5,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+103;Kabel DIN VDE 0276-603 (VDE 0276-603) NYY-J 5 x 1,5 RE, Cu-Zahl 72, in vorh. Rohre/Unterflurkanäle.;5,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+104;Kabel DIN VDE 0276-603 (VDE 0276-603) NYY-J 7 x 1,5 RE, Cu-Zahl 101, in vorh. Rohre/Unterflurkanäle.;15,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+105;Installationskabel, symmetrisch, DIN VDE 0815 (VDE 0815), J-Y(St)Y, 4 x 2 x 0,8 Bd, auf vorh. Kabelrinnen oder in offene Kanäle.;90,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+106;Außenkabel, symmetrisch, DIN VDE 0816-1 (VDE 0816-1), A-2Y(L)2Y, 6 x 2 x 0,8 STIII BD, auf vorh. Kabelrinnen oder in offene Kanäle.;40,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+107;Anschluss an beigestellte;5,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+108;Anschluss an beigestellte;2,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+109;Kabelleiter Stahl H 60mm B 500mm;10,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+110;Ausleger 300;8,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+111;Hängestiel für Kabelrinne 300;8,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+112;Stiel für Kabelrinne 300;8,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+113;Kabelrinne Stahl H 60mm B 300mm;8,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+114;C-Schiene;15,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+115;Elektroinstallationsrohr Kunststoff 32mm;15,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+116;Elektroinstallationsrohr Kunststoff 25mm;20,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+117;Elektroinstallationsrohr Kunststoff 20mm;15,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+118;Elektroinstallationsrohr Kunststoff 16mm;5,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+119;Elektroinstallationsrohr 20 gewellt;15,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+120;Elektroinstallationsrohr DIN EN 61386 (VDE 0605), Maße DIN EN 60423, aus bandverzinktem Stahl DIN EN 10346, einwandig, glatt, starr, mit Gewinde beidseitig, Außendurchmesser 20 mm, Druckfestigkeit Klasse 3 - mittel (750 N) DIN EN 61386-1 (VDE 0605-1), Klasse Schlagbeanspruchung 3 - mittel DIN EN 613;5,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+121;Elektroinstallationsrohr DIN EN 61386 (VDE 0605), Maße DIN EN 60423, aus Aluminium, einwandig, glatt, starr, Außendurchmesser 25 mm, Druckfestigkeit Klasse 3 - mittel (750 N) DIN EN 61386-1 (VDE 0605-1), Klasse Schlagbeanspruchung 3 - mittel DIN EN 61386-1 (VDE 0605-1), Verlegung offen, auf Putz, mi;10,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+122;Leitungsführungskanal 15 x 15 mm, weiß;5,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+123;Leitungsführungskanal 40 x 60 mm, weiß;6,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+124;Leitungsführungskanal 40 x 90 mm, weiß;6,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+125;Leitungsführungskanal 60 x 170 mm, weiß;5,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+126;Abdeckrahmen 1-fach;6,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+127;Aufbaugehäuse für Einbau von Unterputz-Installationsgeräten, für ein Gerät, auf Beton.;6,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+128;Schutzkontaktsteckdose IP 44 AP, 1-fach;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+129;Schutzkontaktsteckdose IP 44 AP, 2-fach;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+130;CEE-Steckdose DIN EN 60309-2 (VDE 0623-2), mit Klappdeckel, 5-polig, Bemessungsbetriebsspannung 230/400 V AC, 16 A, in Aufputzausführung, mit Beschriftungsfeld, Schutzart IP 44 DIN EN 60529 (VDE 0470-1), Einsatz mit Schrauben befestigen.;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+131;Kombination Wippschalter 1-polig Aus/Wechsel 10A 250V IP44 u. Schutzkontaktsteckdose;2,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+132;Kombination Wippschalter 1-polig Serienschalter 10A 250V IP44 u. Schutzkontaktsteckdose;2,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+133;Verbindungsdose DIN VDE 0606-1 als Abzweigkasten, aus;15,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+134;Abzweigkasten Kunststoff 80x80mm, UV-beständig;5,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+135;Stationsheizung;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+136;Stationsausrüstung;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+137;Bohrung, durch unbewehrten Beton oder Mauerwerk Normalbeton,Bohrdurchmesser bis 25 mm, Bohrtiefe über 12,5 bis 20cm,  Arbeitshöhe bis 4 m,;15,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+138;Bohrung, durch unbewehrten Beton oder Mauerwerk Normalbeton,Bohrdurchmesser bis 25 mm, Bohrtiefe über 20 bis 100cm,  Arbeitshöhe bis 4 m,;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+139;Kabelabdichtung für Einfachdichtpackung f. Wandstärken bis 150 mm;10,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+1;Wallbox;2,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+2;Stele;2,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+3;Kabelhalterung;2,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+4;Wetterschutzdach;2,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+5;Erdstück;2,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+6;Integrierbarer Verteiler;2,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+7;Edelstahlstromverteiler;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+8;Kabel DIN VDE 0276-603 (VDE 0276-603) NYY-J 5 x 6 RE, Cu-Zahl 288, in vorh. Gräben oder geteilte Kabelkanalformsteine, ohne Einbettung.;80,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+9;Kabel DIN VDE 0276-603 (VDE 0276-603) NYCWY 4 x 120 SM/70, Cu-Zahl 5388, in vorh. Gräben oder geteilte Kabelkanalformsteine, ohne Einbettung.;130,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+10;Anschließen von Kabeln NYY-J 5x6 mm²;8,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+11;Anschließen von Kabeln NYCWY 4x120/70 mm²;2,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+12;Wallbox;3,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+13;Stele;3,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+14;Kabelhalterung;3,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+15;Wetterschutzdach;3,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+16;Erdstück;3,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+17;Integrierbarer Verteiler;3,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+18;Edelstahlstromverteiler;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+19;Kabel DIN VDE 0276-603 (VDE 0276-603) NYY-J 5 x 6 RE, Cu-Zahl 288, in vorh. Gräben oder geteilte Kabelkanalformsteine, ohne Einbettung.;120,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+20;Kabel DIN VDE 0276-603 (VDE 0276-603) NYY-O 1 x 185 RM, in vorh. Gräben oder geteilte Kabelkanalformsteine, ohne Einbettung.;880,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+21;Kabel DIN VDE 0276-603 (VDE 0276-603) NYY-O 1 x 95 RM, in vorh. Gräben oder geteilte Kabelkanalformsteine, ohne Einbettung.;220,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+22;Anschließen von Kabeln NYY-J 5x6 mm²;12,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+23;Anschließen von Kabeln NYY-O 1x185 mm²;8,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+24;Anschließen von Kabeln NYY-O 1x95 mm²;2,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+25;Wallbox;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+26;Stele;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+27;Kabelhalterung;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+28;Wetterschutzdach;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+29;Erdstück;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+30;Integrierbarer Verteiler;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+31;Edelstahlstromverteiler;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+32;Kabel DIN VDE 0276-603 (VDE 0276-603) NYY-J 5 x 6 RE, Cu-Zahl 288, in vorh. Gräben oder geteilte Kabelkanalformsteine, ohne Einbettung.;30,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+33;Kabel DIN VDE 0276-603 (VDE 0276-603) NYCWY 4 x 50 SM/25, Cu-Zahl 2203, in vorh. Gräben oder geteilte Kabelkanalformsteine, ohne Einbettung.;175,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+34;Anschließen von Kabeln NYY-J 5x6 mm²;4,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+35;Anschließen von Kabeln NYCWY 4x50/25 mm²;2,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+36;Wallbox;2,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+37;Stele;2,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+38;Kabelhalterung;2,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+39;Wetterschutzdach;2,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+40;Erdstück;2,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+41;Integrierbarer Verteiler;2,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+42;Edelstahlstromverteiler;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+43;Kabel DIN VDE 0276-603 (VDE 0276-603) NYY-J 5 x 6 RE, Cu-Zahl 288, in vorh. Gräben oder geteilte Kabelkanalformsteine, ohne Einbettung.;80,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+44;Kabel DIN VDE 0276-603 (VDE 0276-603) NYCWY 4 x 120 SM/70, Cu-Zahl 5388, in vorh. Gräben oder geteilte Kabelkanalformsteine, ohne Einbettung.;260,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+45;Anschließen von Kabeln NYY-J 5x6 mm²;8,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+46;Anschließen von Kabeln NYCWY 4x120/70 mm²;2,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+47;Wallbox;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+48;Stele;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+49;Kabelhalterung;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+50;Wetterschutzdach;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+51;Erdstück;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+52;Integrierbarer Verteiler;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+53;Edelstahlstromverteiler;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+54;Kabel DIN VDE 0276-603 (VDE 0276-603) NYY-J 5 x 6 RE, Cu-Zahl 288, in vorh. Gräben oder geteilte Kabelkanalformsteine, ohne Einbettung.;30,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+55;Kabel DIN VDE 0276-603 (VDE 0276-603) NYCWY 4 x 50 SM/25, Cu-Zahl 2203, in vorh. Gräben oder geteilte Kabelkanalformsteine, ohne Einbettung.;85,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+56;Anschließen von Kabeln NYY-J 5x6 mm²;4,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+57;Anschließen von Kabeln NYCWY 4x50/25 mm²;2,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+58;Wallbox;4,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+59;Stele;4,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+60;Kabelhalterung;4,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+61;Wetterschutzdach;4,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+62;Erdstück;4,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+63;Integrierbarer Verteiler;4,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+64;Edelstahlstromverteiler;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+65;Kabel DIN VDE 0276-603 (VDE 0276-603) NYY-J 5 x 6 RE, Cu-Zahl 288, in vorh. Gräben oder geteilte Kabelkanalformsteine, ohne Einbettung.;200,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+66;Kabel DIN VDE 0276-603 (VDE 0276-603) NYCWY 4 x 120 SM/70, Cu-Zahl 5388, in vorh. Gräben oder geteilte Kabelkanalformsteine, ohne Einbettung.;160,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+67;Anschließen von Kabeln NYY-J 5x6 mm²;8,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+68;Anschließen von Kabeln NYCWY 4x120/70 mm²;2,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+69;zusätzliche;30,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+70;Inbetriebnahme und Programmierung;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+71;Einweisung;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+72;Abstimmungen mit dem Nutzer (BW) und der BWI;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+1;Freischalten von 3-poligen Stromkreisen und abklemmen;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+2;Kabel DIN VDE 0276-603 (VDE 0276-603) NYY-J 4 x 50 SM, Cu-Zahl 1920, in vorh. Gräben oder geteilte Kabelkanalformsteine, ohne Einbettung.;240,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+3;Verbindungsmuffe im Freien, NYY-J 4x50mm²;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+4;NYY-J 4x50 anschließen;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+5;Messen, protokollieren und Wiedereinschalten von 3-poligen Stromkreisen;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+6;Freischalten von 3-poligen Stromkreisen und abklemmen;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+7;Kabel DIN VDE 0276-603 (VDE 0276-603) NYCWY 4 x 70 SM/35, Cu-Zahl 3082, in vorh. Gräben oder geteilte Kabelkanalformsteine, ohne Einbettung.;300,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+8;Verbindungsmuffe im Freien, 4x70SM/35mm²;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+9;NYCWY 4x70SM/35 anschließen;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+10;Messen, protokollieren und Wiedereinschalten von 3-poligen Stromkreisen;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+11;Freischalten von 3-poligen Stromkreisen und abklemmen;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+12;Kabel DIN VDE 0276-603 (VDE 0276-603) NYY-J 5 x 10 RE, Cu-Zahl 480, in vorh. Gräben oder geteilte Kabelkanalformsteine, ohne Einbettung.;500,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+13;Verbindungsmuffe im Freien, NYY-J 5 x 10mm²;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+14;NYY-J 5x10 anschließen;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+15;Messen, protokollieren und Wiedereinschalten von 3-poligen Stromkreisen;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+16;Freischalten von 3-poligen Stromkreisen und abklemmen;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+17;Kabel DIN VDE 0276-603 (VDE 0276-603) NYY-J 5 x 10 RE, Cu-Zahl 480, in vorh. Gräben oder geteilte Kabelkanalformsteine, ohne Einbettung.;250,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+18;Verbindungsmuffe im Freien, NYY-J 5 x 10mm²;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+19;NYY-J 5x10 anschließen;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+20;Messen, protokollieren und Wiedereinschalten von 3-poligen Stromkreisen;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+21;Freischalten von 3-poligen Stromkreisen und abklemmen;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+22;Kabel DIN VDE 0276-603 (VDE 0276-603) NAYY-J 4 x 70 SE, Al-Zahl 812, in vorh. Gräben oder geteilte Kabelkanalformsteine, ohne Einbettung.;200,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+23;Verbindungsmuffe im Freien, NAYY-J 4x70mm²;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+24;NAYY-J 4x70 anschließen;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+25;Messen, protokollieren und Wiedereinschalten von 3-poligen Stromkreisen;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+1;Verbindungsmuffe 0,6/1 kV, in Schrumpftechnik,;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+2;Verbindungsmuffe 0,6/1 kV, in Schrumpftechnik,;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+3;Verbindungsmuffe 0,6/1 kV, in Schrumpftechnik,;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+4;Verbindungsmuffe 0,6/1 kV, in Schrumpftechnik,;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+5;Verbindungsmuffe 0,6/1 kV, in Schrumpftechnik,;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+6;Verbindungsmuffe 0,6/1 kV, in Schrumpftechnik,;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+7;Verbindungsmuffe 0,6/1 kV, in Schrumpftechnik,;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+8;Verbindungsmuffe 0,6/1 kV, in Schrumpftechnik,;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+9;Verbindungsmuffe 0,6/1 kV, in Schrumpftechnik,;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+10;Verbindungsmuffe 0,6/1 kV, in Schrumpftechnik,;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+11;Verbindungsmuffe 0,6/1 kV, in Schrumpftechnik,;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+12;Verbindungsmuffe 0,6/1 kV, in Schrumpftechnik,;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+13;Verbindungsmuffe 0,6/1 kV, in Schrumpftechnik,;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+14;Verbindungsmuffe 0,6/1 kV, in Schrumpftechnik,;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+15;Verbindungsmuffe 0,6/1 kV, in Schrumpftechnik,;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+16;Verbindungsmuffe 0,6/1 kV, in Schrumpftechnik,;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+17;Anschluss an beigestellte;2,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+18;Freischalten von 1-poligen Stromkreisen;30,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+19;Freischalten von 3-poligen Stromkreisen;15,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+20;Nachrücken von REG;50,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+21;Dx/D0x Sicherungssockel (Sicherungsunterteil) DIN VDE 0636-3 (VDE 0636-3), einschl. Passeinsatz und Schraubkappe, Baugröße D 02, Bemessungsbetriebsspannung 400 V AC/250 V DC, zur Montage auf Tragschiene DIN EN 60715 (VDE 0660-520), mit Sicherungseinsatz, Bemessungsstrom 40 A, 3-polig mit Abdeckung.;11,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+22;Leitungsschutzschalter 10 A DIN VDE 0641-11, Maße DIN 43880, fingersicher DIN VDE 0106-100,;11,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+23;Fehlerstromschutzschalter mit Überstromschutz (RCBO) DIN EN 61009-1 (VDE 0664-20), als Reiheneinbaugerät, Maße DIN 43880, fingersicher DIN EN 50274 (VDE 0660-514), Typ A pulsstromsensitiv, Auslösung unverzögert, Auslösecharakteristik B, DIN EN 60898-1 (VDE 0641-11), Bemessungsstrom 16 A, Bemessungsf;22,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+24;Verdrahtung;11,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+25;Abdeckstreifen;11,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+26;Verschlussbolzen, für Berührungsschutzabdeckung;10,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+27;Beschriftungsschild;80,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+28;Elektroinstallationsrohr Kunststoff 32mm;130,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+29;Elektroinstallationsrohr Kunststoff 32mm Stahlkonstruktion m.  Trägerklammern;40,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+30;Installationsleitung DIN VDE 0250-204 (VDE 0250-204) NYM-J 3 x 1,5, Cu-Zahl 43, auf vorh. Kabelrinnen oder in offene Kanäle, Arbeitshöhe bis 4 m.;60,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+31;Installationsleitung DIN VDE 0250-204 (VDE 0250-204) NYM-J 3 x 1,5, Cu-Zahl 43, in vorh. Rohre/Unterflurkanäle, Arbeitshöhe bis 4 m.;110,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+32;Installationsleitung DIN VDE 0250-204 (VDE 0250-204) NYM-J 3 x 2,5, Cu-Zahl 72, auf vorh. Kabelrinnen oder in offene Kanäle, Arbeitshöhe bis 4 m.;120,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+33;Installationsleitung DIN VDE 0250-204 (VDE 0250-204) NYM-J 3 x 2,5, Cu-Zahl 72, in vorh. Rohre/Unterflurkanäle, Arbeitshöhe bis 4 m.;220,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+34;Verbindungsdose DIN VDE 0606-1 als Abzweigkasten, aus;33,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+1;(L1) LED-Feuchtraumleuchte IP 66.;6,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+2;(L2) Ovalleuchte freistrahlend (Kabelkeller);3,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+3;(L3) Runde, LED-Anbauleuchte (Außenleuchte);1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+4;Demontage/Entsorgung Bestand-Beleuchtung;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+5;(S1) LED Sicherheitsleuchte, Deckenaufbau;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+6;Prüfbuch der Sicherheitsbeleuchtung als Ringbuchordner;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+7;Stromkreis- und Adresskennzeichnung für;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+8;Inbetriebnahme, Programmierung und Einweisung;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+1;(L1) LED-Feuchtraumleuchte IP 66.;4,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+2;(L2) Ovalleuchte freistrahlend (Kabelkeller);3,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+3;(L3) Runde, LED-Anbauleuchte (Außenleuchte);2,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+4;(S1) LED Sicherheitsleuchte, Deckenaufbau;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+5;Prüfbuch der Sicherheitsbeleuchtung als Ringbuchordner;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+6;Stromkreis- und Adresskennzeichnung für;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+7;Inbetriebnahme, Programmierung und Einweisung;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+1;(L1) LED-Feuchtraumleuchte IP 66.;4,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+2;(L2) Ovalleuchte freistrahlend (Kabelkeller);3,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+3;(L3) Runde, LED-Anbauleuchte (Außenleuchte);2,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+4;Demontage/Entsorgung Bestand-Beleuchtung;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+5;(S1) LED Sicherheitsleuchte, Deckenaufbau;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+6;Prüfbuch der Sicherheitsbeleuchtung als Ringbuchordner;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+7;Stromkreis- und Adresskennzeichnung für;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+8;Inbetriebnahme, Programmierung und Einweisung;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+1;(L1) LED-Feuchtraumleuchte IP 66.;4,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+2;(L2) Ovalleuchte freistrahlend (Kabelkeller);3,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+3;(L3) Runde, LED-Anbauleuchte (Außenleuchte);2,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+4;(S1) LED Sicherheitsleuchte, Deckenaufbau;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+5;Prüfbuch der Sicherheitsbeleuchtung als Ringbuchordner;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+6;Stromkreis- und Adresskennzeichnung für;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+7;Inbetriebnahme, Programmierung und Einweisung;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+1;Haupt- Potentialausgleich UNI;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+2;Potentialausgleichsschiene;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+3;Anschließen von Potentialausgleichsleitungen mit;15,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+4;Anschließen von Potentialausgleichsleitungen mit;4,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+5;Anschließen von Potentialausgleichsleitungen mit;10,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+6;Anschließen von Potentialausgleichsleitungen mit;10,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+7;Kabel NYY-J 1x6;25,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+8;Kabel NYY-J 1x16;30,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+9;Kabel DIN VDE 0276-603 (VDE 0276-603) NYY-J 1 x 50 RM, Cu-Zahl 480, in vorh. Rohre/Unterflurkanäle.;35,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+10;Kabel DIN VDE 0276-603 (VDE 0276-603) NYY-J 1 x 120 RM, Cu-Zahl 1152, in vorh. Rohre/Unterflurkanäle.;15,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+11;Haupt- Potentialausgleich UNI;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+12;Potentialausgleichsschiene;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+13;Anschließen von Potentialausgleichsleitungen mit;15,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+14;Anschließen von Potentialausgleichsleitungen mit;4,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+15;Anschließen von Potentialausgleichsleitungen mit;10,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+16;Anschließen von Potentialausgleichsleitungen mit;10,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+17;Kabel NYY-J 1x6;25,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+18;Kabel NYY-J 1x16;30,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+19;Kabel DIN VDE 0276-603 (VDE 0276-603) NYY-J 1 x 50 RM, Cu-Zahl 480, in vorh. Rohre/Unterflurkanäle.;35,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+20;Kabel DIN VDE 0276-603 (VDE 0276-603) NYY-J 1 x 120 RM, Cu-Zahl 1152, in vorh. Rohre/Unterflurkanäle.;15,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+21;Potentialausgleichsschiene;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+22;Anschluss leitfähiger Bauteile anderer Gewerke wie Rohrleitungen, metallische Verkleidungen usw.;15,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+23;Anschließen von Potentialausgleichsleitungen mit;15,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+24;Anschließen von Potentialausgleichsleitungen mit;15,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+25;Kabel NYY-J 1x6;15,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+26;Kabel NYY-J 1x16;20,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+27;Potentialausgleichsschiene;11,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+28;Anschluss leitfähiger Bauteile Datenschränke wie CU-Poti-Schienen, metallische Verkleidungen usw.;70,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+29;Anschließen von Potentialausgleichsleitungen mit;120,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+30;Anschließen von Potentialausgleichsleitungen mit;50,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+31;Anschließen von Potentialausgleichsleitungen mit;22,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+32;Installationsleitung DIN VDE 0250-204 (VDE 0250-204) NYM-J 1 x 6, Cu-Zahl 58, auf vorh. Kabelrinnen oder in offene Kanäle.;100,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+33;Installationsleitung DIN VDE 0250-204 (VDE 0250-204) NYM-J 1 x 16, Cu-Zahl 154, auf vorh. Kabelrinnen oder in offene Kanäle.;165,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+34;Installationsleitung DIN VDE 0250-204 (VDE 0250-204) NYM-J 1 x 25, Cu-Zahl 240, auf vorh. Kabelrinnen oder in offene Kanäle.;350,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+1;Ringerder nach DIN 18014,;50,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+2;Tiefenerder;24,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+3;Universal- Verbinder V4A;4,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+4;Anschlussfahne nach DIN EN 50164-2,;4,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+5;Wasserdichte Wanddurchführung;4,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+6;Dehnungsband für Fundamenterder zum Durchführen vom Fundamenterder in ausgedehnten Fundamenten (mehrere Abschnitte) durch die Dehnungs- oder Trennfugen, ohne notwendiges Herausführen des Erders aus der Bodenplatte.;5,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+7;Korrosionsschutz;13,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+8;Prüfung der Erdungsanlage einschließlich Messprotokolle, Installationspläne und Fotodokumentation.;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+9;Auffangleitung Rd 10, einschl. Leitungshalter;26,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+10;Ableitung senkrecht, mit PVC-Mantel;12,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+11;Fangspitze bis 0,5m;4,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+12;Anschluss an Metallkonstruktionen,;5,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+13;Trennstelle;4,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+14;Nummernschild;4,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+15;Laschen;10,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+16;Universal- Verbinder;4,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+17;Anschluss und Verbindung;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+18;Anschluss und Verbindung;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+19;Messen und Prüfen der Blitzschutz- und Potentialausgleichsanlage;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+20;Ringerder nach DIN 18014,;50,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+21;Tiefenerder;24,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+22;Universal- Verbinder V4A;4,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+23;Anschlussfahne nach DIN EN 50164-2,;4,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+24;Wasserdichte Wanddurchführung;4,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+25;Dehnungsband für Fundamenterder zum Durchführen vom Fundamenterder in ausgedehnten Fundamenten (mehrere Abschnitte) durch die Dehnungs- oder Trennfugen, ohne notwendiges Herausführen des Erders aus der Bodenplatte.;5,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+26;Korrosionsschutz;13,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+27;Prüfung der Erdungsanlage einschließlich Messprotokolle, Installationspläne und Fotodokumentation.;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+28;Auffangleitung Rd 10, einschl. Leitungshalter;26,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+29;Ableitung senkrecht, mit PVC-Mantel;12,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+30;Fangspitze bis 0,5m;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+31;Anschluss an Metallkonstruktionen,;5,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+32;Trennstelle;4,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+33;Nummernschild;4,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+34;Laschen;10,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+35;Universal- Verbinder;4,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+36;Anschluss und Verbindung;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+37;Anschluss und Verbindung;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+38;Messen und Prüfen der Blitzschutz- und Potentialausgleichsanlage;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+39;Ringerder nach DIN 18014,;20,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+40;Tiefenerder;8,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+41;Universal- Verbinder V4A;4,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+42;Anschlussfahne nach DIN EN 50164-2,;4,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+43;Wasserdichte Wanddurchführung;4,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+44;Dehnungsband für Fundamenterder zum Durchführen vom Fundamenterder in ausgedehnten Fundamenten (mehrere Abschnitte) durch die Dehnungs- oder Trennfugen, ohne notwendiges Herausführen des Erders aus der Bodenplatte.;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+45;Korrosionsschutz;4,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+46;Prüfung der Erdungsanlage einschließlich Messprotokolle, Installationspläne und Fotodokumentation.;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+1;Datenschrank 19 Zoll 24 HE;10,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+2;Datenschrank 19 Zoll 9 HE;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+3;Erdungsset / zusätzlicher;22,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+4;Steckdosenleiste 6-fach Schutzkontaktsteckdose;22,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+5;Schrankbeleuchtung im System des EDV Schranks;11,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+6;Fachboden, aus Stahlblech, beschichtet, ausziehbar mit Teleskopschiene, als 19-Zoll-Bauteil, eine Höheneinheit.;11,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+7;Doppellagige Anti-Ermüdungsmatte für ESD-Schutzzonen;22,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+8;LWL-Verteilerkasten aus Kunststoff, Schutzart IP 2X DIN EN 60529 (VDE 0470-1), für Montage in trockenen Räumen, mit Kabeleinführung einschl. Staubschutz, Kabelabfang und Kabelführungsbügeln, mit Halteschiene und LWL-Durchführungskupplungen, Einmodenfaser OS 2, DIN EN 50173-1 (VDE 0800-173-1), mit St;3,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+9;LWL-Verteilerkasten aus Kunststoff, Schutzart IP 66 DIN EN 60529 (VDE 0470-1), für Montage im Freien, mit Kabeleinführung einschl. Staubschutz, Kabelabfang und Kabelführungsbügeln, mit Halteschiene und LWL-Durchführungskupplungen, Einmodenfaser OS 2, DIN EN 50173-1 (VDE 0800-173-1), mit Steckgesicht;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+10;Patchfeld ohne Spleißkassette, LWL, eine Höheneinheit, ausziehbar, mit Steckgesicht SCD-Durchführungskupplungen, Ferrulen aus Zirkonia Keramik, Kontakte mit PC, Anzahl Ausbrüche 24, Anzahl Kupplungen 24.;65,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+11;Rangierpanel, waagerecht, eine Höheneinheit.;65,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+12;19“ 3+1HE Spleiß-BGT Leergehäuse silber:;11,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+13;3HE-7TE Spleiß-Einschub-Module silber:;132,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+14;Spleißarbeiten;3072,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+15;Spleißkassette;128,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+16;Pigtail SC;3072,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+17;Patchkabel, LWL, Einmodenfaser OS 2, DIN EN 50173-1 (VDE 0800-173-1), 2 E 9/125,;36,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+18;Patchkabel, LWL, Einmodenfaser OS 2, DIN EN 50173-1 (VDE 0800-173-1), 2 E 9/125,;1000,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+19;Patchkabel, LWL, Einmodenfaser OS 2, DIN EN 50173-1 (VDE 0800-173-1), 2 E 9/125,;500,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+20;OTDR-Messung Singlemode;1536,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+21;LWL-Außenkabel DIN VDE 0888-3 (VDE 0888-3), als Einmodenfaser, Einmodenfaser OS 2, DIN EN 50173-1 (VDE 0800-173-1), metallfrei, bewehrt, A-DQ(ZN)B2Y, 2 x 12 E 9/125, Wellenlänge 1550 nm, auf Putz mit Abstandsschellen.;1100,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+22;LWL-Außenkabel DIN VDE 0888-3 (VDE 0888-3), als Einmodenfaser, Einmodenfaser OS 2, DIN EN 50173-1 (VDE 0800-173-1), metallfrei, bewehrt, A-DQ(ZN)B2Y, 2 x 12 E 9/125, Wellenlänge 1550 nm, auf vorh. Kabelrinnen oder in offene Kanäle.;3150,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+23;LWL-Außenkabel DIN VDE 0888-3 (VDE 0888-3), als Einmodenfaser, Einmodenfaser OS 2, DIN EN 50173-1 (VDE 0800-173-1), metallfrei, bewehrt, A-DQ(ZN)B2Y, 2 x 12 E 9/125, Wellenlänge 1550 nm, in Doppel-/Hohlboden.;640,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+24;LWL-Außenkabel DIN VDE 0888-3 (VDE 0888-3), als Einmodenfaser, Einmodenfaser OS 2, DIN EN 50173-1 (VDE 0800-173-1), metallfrei, bewehrt, A-DQ(ZN)B2Y, 2 x 12 E 9/125, Wellenlänge 1550 nm, in Montagewänden.;490,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+25;STLB-Bau 04/2021 061;36220,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+26;LWL-Außenkabel DIN VDE 0888-3 (VDE 0888-3), als Einmodenfaser, Einmodenfaser OS 2, DIN EN 50173-1 (VDE 0800-173-1), metallfrei, bewehrt, A-DQ(ZN)B2Y, 2 x 12 E 9/125, Wellenlänge 1550 nm, mit Bügelschellen.;450,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+27;LWL-Außenkabel DIN VDE 0888-3 (VDE 0888-3), als Einmodenfaser, Einmodenfaser OS 2, DIN EN 50173-1 (VDE 0800-173-1), metallfrei, bewehrt, A-DQ(ZN)B2Y, 2 x 12 E 9/125, Wellenlänge 1550 nm, oberhalb von Zwischendecken mit Befestigung gemäß bauaufsichtlicher Zulassung.;890,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+28;"Umversetzen von Bestand 19""-Einbaugeräten";1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+29;Außenkabel, symmetrisch, DIN VDE 0816-1 (VDE 0816-1), A-2YF(L)2Y, 20 x 2 x 0,8 STIII BD, auf Putz mit Abstandsschellen.;15,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+30;Außenkabel, symmetrisch, DIN VDE 0816-1 (VDE 0816-1), A-2YF(L)2Y, 20 x 2 x 0,8 STIII BD, auf vorh. Kabelrinnen oder in offene Kanäle.;20,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+31;Außenkabel, symmetrisch, DIN VDE 0816-1 (VDE 0816-1), A-2YF(L)2Y, 20 x 2 x 0,8 STIII BD, in Doppel-/Hohlboden.;10,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+32;Außenkabel, symmetrisch, DIN VDE 0816-1 (VDE 0816-1), A-2YF(L)2Y, 20 x 2 x 0,8 STIII BD, in Montagewänden.;5,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+33;Außenkabel, symmetrisch, DIN VDE 0816-1 (VDE 0816-1), A-2YF(L)2Y, 20 x 2 x 0,8 STIII BD, in vorh. Rohre/Unterflurkanäle.;250,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+34;Außenkabel, symmetrisch, DIN VDE 0816-1 (VDE 0816-1), A-2YF(L)2Y, 20 x 2 x 0,8 STIII BD, mit Bügelschellen.;10,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+35;Außenkabel, symmetrisch, DIN VDE 0816-1 (VDE 0816-1), A-2YF(L)2Y, 20 x 2 x 0,8 STIII BD, oberhalb von Zwischendecken mit Befestigung gemäß bauaufsichtlicher Zulassung.;20,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+36;Anschlussleiste, symmetrisch, für 10 DA, mit farblicher Bedruckung, in löt-, schraub- und abisolierfreier Technik (LSA-Technik), einschl. systembedingtem Zubehör.;4,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+37;Modulschilderrahmen, für 10 DA.;4,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+38;Aufsetzbarer Schilderrahmen, für 10 DA.;4,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+39;Überspannungsschutzgerät für analoge Übertragungstechnik, für Montage auf LSA-Plus-Trennleiste, für 10 DA, Blitzstrom- und Überspannungsableiter Kategorie D1 + C2 + C1 DIN EN 61643-21 (VDE 0845-3-1), erdbezogenes Potential, Nennableitstoßstrom (8/20) je Leiter mind. 0,25 kA.;4,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+40;Überspannungsschutzgerät für analoge Übertragungstechnik, für Montage auf LSA-Plus-Trennleiste, für 10 DA, Blitzstrom- und Überspannungsableiter Kategorie D1 + C2 + C1 DIN EN 61643-21 (VDE 0845-3-1), erdfreies Potential, Nennableitstoßstrom (8/20) je Leiter mind. 0,25 kA.;4,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+41;Trennleiste, symmetrisch, für 10 DA, mit systembedingtem Zubehör, in löt-, schraub- und abisolierfreier Technik (LSA-Technik).;4,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+42;Rangierung an Leiste/Streifen, in löt-, schraub- und abisolierfreier Technik (LSA-Technik).;10,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+43;Auflegen Doppeladern;40,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+44;Verteilerkasten mit Erdungsanschluss DIN 47615, symmetrisch, aus Kunststoff, für Montage in trockenen Räumen, für Anschlussleisten, in löt-, schraub- und abisolierfreier Technik,;2,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+45;Demontage/Wiedermontage Stahlblechabdeckung Bestand-TK-Verteiler;2,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+46;Mess -und Prüfarbeiten Fernmeldekabel;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+47;Abdeckrahmen 1-fach;22,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+48;Aufbaugehäuse für Einbau von Unterputz-Installationsgeräten, für ein Gerät, auf Beton.;22,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+49;Modulare Anschlussdose RJ45 einfach,;17,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+50;Modulare Anschlussdose RJ45 zweifach,;22,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+51;Abdeckung/Zwischenplatte für Datenenddosen, passend zu;39,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+52;Modulares Patchfeld 24 Port Cat.6A;4,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+53;Rangierpanel, waagerecht, eine Höheneinheit.;4,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+54;Netzwerkdose für Standard-Hutschienenmontage.;44,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+55;A-02YSC2Y 4 x 2 x AWG 23/1 PiMF-100 Ohm. Dieses Kabel basiert auf dem 4-paarigen CAT7-PiMF-Kabel UC900 SS23/1 und ist mit einem für die direkte Erdverlegung geeigneten, Kabel UV-beständig, dickwandigen Polyethylen Außenmantel ausgerüstet. Normen: EIA/TIA 568A, ISO/IEC 11801:2002, EN 50173-1, IEC 611;720,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+56;Installationskabel für LAN, Kat.7;300,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+57;Prüfung der Kupfer-Verbindungsstrecke;64,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+58;Verbindungskabel 0,5m Kategorie 6a;50,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+59;Verbindungskabel 1,0m Kategorie 7;15,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+60;Verbindungskabel 2m Kategorie 6a;10,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+61;Switch für Hutschienenmontage;7,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+62;Patchkabel, LWL, Einmodenfaser OS 2, DIN EN 50173-1 (VDE 0800-173-1), 2 E 9/125,;7,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+63;Glasfaser-Anschlussdose zur Montage;7,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+64;LWL-Außenkabel DIN VDE 0888-3 (VDE 0888-3), als Einmodenfaser, Einmodenfaser OS 2, DIN EN 50173-1 (VDE 0800-173-1), metallfrei, bewehrt, A-DQ(ZN)B2Y, 1 x 12 E 9/125, Wellenlänge 1310 nm, auf Putz mit Abstandsschellen.;100,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+65;LWL-Außenkabel DIN VDE 0888-3 (VDE 0888-3), als Einmodenfaser, Einmodenfaser OS 2, DIN EN 50173-1 (VDE 0800-173-1), metallfrei, bewehrt, A-DQ(ZN)B2Y, 1 x 12 E 9/125, Wellenlänge 1310 nm, auf vorh. Kabelrinnen oder in offene Kanäle.;150,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+66;LWL-Außenkabel DIN VDE 0888-3 (VDE 0888-3), als Einmodenfaser, Einmodenfaser OS 2, DIN EN 50173-1 (VDE 0800-173-1), metallfrei, bewehrt, A-DQ(ZN)B2Y, 1 x 12 E 9/125, Wellenlänge 1310 nm, in Doppel-/Hohlboden.;50,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+67;STLB-Bau 04/2021 061;3950,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+68;Spleißarbeiten;240,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+69;Spleißkassette;20,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+70;Pigtail SC;120,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+71;Patchfeld ohne Spleißkassette, LWL, eine Höheneinheit, ausziehbar, mit Steckgesicht SCD-Durchführungskupplungen, Ferrulen aus Zirkonia Keramik, Kontakte mit PC, Anzahl Ausbrüche 24, Anzahl Kupplungen 24.;4,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+72;Rangierpanel, waagerecht, eine Höheneinheit.;4,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+73;Patchkabel, LWL, Einmodenfaser OS 2, DIN EN 50173-1 (VDE 0800-173-1), 2 E 9/125,;20,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+74;OTDR-Messung Singlemode;120,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+75;Absprachen und Abstimmungen mit DV-Administrator BWI;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+1;Elektroinstallationsrohr Kunststoff 32mm;30,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+2;Elektroinstallationsrohr Kunststoff 25mm;60,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+3;Elektroinstallationsrohr Kunststoff 20mm;300,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+4;Elektroinstallationsrohr Kunststoff 16mm;60,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+5;Elektroinstallationsrohr DIN EN 61386 (VDE 0605), Maße DIN EN 60423, aus bandverzinktem Stahl DIN EN 10346, einwandig, glatt, starr, mit Gewinde beidseitig, Außendurchmesser 20 mm, Druckfestigkeit Klasse 3 - mittel (750 N) DIN EN 61386-1 (VDE 0605-1), Klasse Schlagbeanspruchung 3 - mittel DIN EN 613;20,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+6;Leitungsführungskanal 15 x 15 mm, weiß;50,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+7;Leitungsführungskanal 40 x 60 mm, weiß;20,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+8;Leitungsführungskanal 40 x 90 mm, weiß;10,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+9;Leitungsführungskanal 60 x 170 mm, weiß;5,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+10;Gitterrinne für Kabelträgersystem DIN EN 61537 (VDE 0639), einschl. aller systembedingten Form- und Verbindungsstücke, aus galvanisch verzinktem Stahl DIN 50962, Dicke 3 mm, Schlitzbreite 26 mm, Seitenhöhe mind. 50 mm, Breite mind. 100 mm.;5,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+11;Ausleger 200;10,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+12;Elektroinstallationsrohr 20 gewellt;3950,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+1;Verbindungsmuffe für Fernmeldekabel A-2YF(L)2Y 10x2x0,6;15,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+2;Verbindungsmuffe für Fernmeldekabel A-2YF(L)2Y 20x2x0,6;10,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+3;Verbindungsmuffe für Fernmeldekabel A-2YF(L)2Y 50x2x0,6;10,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+4;Verbindungsmuffe für Fernmeldekabel A-2YF(L)2Y 100x2x0,6;10,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+5;Verbindungsmuffe für Fernmeldekabel A-2YF(L)2Y 150x2x0,6;5,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+6;Verbindungsmuffe für Fernmeldekabel A-2YF(L)2Y 200x2x0,6;10,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+7;Mess -und Prüfarbeiten Fernmeldekabel;60,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+8;Verbindungsmuffe, LWL-Außenkabel A-DQ(ZN)B2Y 4G50/125;5,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+9;Verbindungsmuffe, LWL-Außenkabel A-DQ(ZN)B2Y 8G50/125;20,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+10;Verbindungsmuffe, LWL-Außenkabel A-DQ(ZN)B2Y 12G50/125;20,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+11;Verbindungsmuffe, LWL-Außenkabel A-DQ(ZN)B2Y 24G50/125;5,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+12;Verbindungsmuffe, LWL-Außenkabel A-DQ(ZN)B2Y 4E9/125;5,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+13;Verbindungsmuffe, LWL-Außenkabel A-DQ(ZN)B2Y 8E9/125;10,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+14;Verbindungsmuffe, LWL-Außenkabel A-DQ(ZN)B2Y 12E9/125;10,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+15;Verbindungsmuffe, LWL-Außenkabel A-DQ(ZN)B2Y 24E9/125;5,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+16;OTDR-Messung Single-/Multimode;880,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+17;Verbindungsmuffe, koaxial, für Montage im Freien, als Schrumpfmuffe, mit Spleißen durch Verlötungen mit Hülse.;25,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+1;Deckenplatten demontieren, sichern und wieder montieren.;60,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+2;Deckenplatten demontieren, sichern und wieder montieren.;50,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+3;Montagegerüst, leihweise bis 4,0m Montagehöhe;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+4;Untersuchung Steigeschächte/Kabeltrassen ELT;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+5;Demontage und Entsorgung Installationen;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+6;Vorhandene Stromkreise 230V umklemmen bzw. freischalten.;30,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+7;Freischalten und schneiden von Kabeln und Leitungen bis 3x2,5mm² im Brüstungskanal verlegt.;30,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+8;Kabelmuffe NYM-J bis 3x2,5 qmm.;30,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+9;Abdecken von Einrichtungsgegenständen zum Schutz vor Staub. Es müssen in den verschiedenen Räumen in denen Arbeiten durchgeführt werden die Einrichtungsgegenstände abgedeckt werden. Nach erfolgter Arbeit muss die Abdeckung entfernt werden. Die Abdeckung von Einrichtungsgegenständen muss mit dem Nutz;500,0;m²;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+10;Gipskarton Ausschnitt ca. 40x40cm in doppelt beplankte Decke/Wand. Inklusive nachträglicher Installation einer Revisionsklappe 40 x 40 cm. Ohne Brandschutzanforderung.;45,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+11;Erstellen von Fädelöffnung in GK-Wand;135,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+12;Öffnen und verschließen von Zwischendecken-/Wänden;50,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+13;Öffnen und verschließen von Zwischenböden;75,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+14;Öffnen und verschließen von Gitterrost;20,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+15;Bestand Blechverkleidung demontieren/montieren;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+16;Bestand Lochblechverkleidung demontieren/montieren;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+17;Brandschutzabkofferung I30 Öffnen / Schließen;10,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+18;Demontage und Wiedermontage von LED-Langfeldleuchte für Kabelzugarbeiten in UHD.;10,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+19;Bestand Oberteil Brüstungskanal öffnen/schließen;75,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+20;Bohrung in der Wand aus Mauerwerk, Bohrdurchmesser bis;300,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+21;Bohrung in der Wand aus Beton, Bohrdurchmesser bis;50,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+22;Bohrung, Beton bis 20 mm;30,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+23;Schlitze Mauerwerk;60,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+24;Schlitze Beton;30,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+25;Schacht öffnen und nach Abschluss der Arbeiten verschließen;680,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+26;Beschriftungsschild Schachbauwerk;600,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+27;Tauchpumpe und Zubehör, leihweise;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+28;Kernbohrung, Untergrundfläche senkrecht, aus unbewehrtem Beton, Normalbeton, Bohrdurchmesser über 100 bis 150 mm, Bohrtiefe über 55 bis 60 cm, einschl. Lösen des Bohrkerns aus dem Gefüge, Wichte des Abbruchstoffes DIN EN 1991-1-1 24 kN/m3, Arbeitshöhe bis 2 m,;10,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+29;Kabelabdichtung als Ringraumdichtung;71,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+30;Anstrich Wände/Decken mit Dispersionsfarbe;50,0;m²;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+31;Brandschutzabschottung an Kabel-/Leitungsanlagen als;65,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+32;Brandschutzabschottung an Kabel-/Leitungsanlagen als;35,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+33;Brandschutzabschottung an Einzelkabeln nach;50,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+34;Öffnen von Brandschott (Hartschott);15,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+35;Stahlblechkanal mit intumeszierender Innenbeschichtung;10,0;m;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+36;Kabelverschraubung M20 Messing;5,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+37;Kabelverschraubung M25 Messing;5,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+38;Gewindestange M8;15,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+39;Öffnen / Schließen Bestand Brandschutzkanal;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+40;Warnband, Trassenband, Trassenwarnband.;35,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+1;Bereitstellung eines Prüf- und Leseexemplars der Dokumentation. (Vergütet wird mit dieser Position das Prüf- und Leseexemplar, nicht aber die eigentliche Dokumentation!);1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+2;Dokumentationsunterlage;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+3;Absprachen und Abstimmungen mit Bundeswehr;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+4;Inbetriebnahmen;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+5;Einweisung und Schulung Nutzer;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83
+6;Einweisung und Schulung Nutzer, Wiederholung;1,0;St;gaeb;Leistungsverzeichnis/LV_26O60175.X83

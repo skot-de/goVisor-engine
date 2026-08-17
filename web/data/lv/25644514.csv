@@ -1,0 +1,1275 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+00000001;Baustelle einrichten Sämtl.LV-Abschn.*Zufahrt vorh.;1,0;Psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00000002;Baustelle räumen Sämtl. LV-Abschn.;1,0;Psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00010001;Verkehrssich. aufbauen (ID 3014);1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00010002;Verkehrssich. vorhalten (ID 3014);21,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00010003;Kontrolle d. Verkehrss. (ID 3014);21,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00010004;Verkehrssich. abbauen (ID 3014);1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00010005;VRAO einholen;1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00020001;Verkehrsschild vorhalten;1,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00020002;Pfeilbake aufb. u. abb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00020003;Pfeilbake vorhalten;1,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00020004;Pfeilbake m. Licht aufb. u. abb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00020005;Pfeilbake m. Licht vorhalten;1,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00020006;Absperrschr. aufb. u. abb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00020007;Absperrschr. vorhalten;1,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00020008;Absperrschr. m. Licht aufb. u. abb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00020009;Absperrschr. m. Licht vorhalten;1,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00020010;Verkehrsschild aufb. u. abb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00030001;Transp. LSA aufb. u. abb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00030002;Transp. LSA vorhalten;21,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00040001;Fläche trocknen;6,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00040002;Quermark. herst. u. entf.;6,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00040003;Längsmark. herst. u. entf.;15,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00040004;Fläche reinigen;15,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00050001;Anliegerinformation (Handzettel);1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00050002;Fotodokumentation;1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00060001;Dickenmessung DS;3,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00060002;Dickenmessung TS;3,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00060003;Materialprobe entn. u. überg.;2,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00060004;Kontrollprüfung (statische);1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00060005;Belastungsfahrz. bereitst.;1,0;h;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00060006;Dokumentation Straße;1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00070001;Absteckung Straße;1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00080001;BHS-Schild abb. u. lagern;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00090001;Asphalt trennen bis 18 cm;90,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00090002;Asphalt fräsen ADS bis 4,5 cm;140,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00090003;Asphalt fräsen ATS 7-12 cm;140,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00090004;Abtreppung herst.;90,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00090005;Asphaltbefest. aufbr. - Bitukies;140,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00100001;Bordsteine aufnehmen;105,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00100002;Pflaster aufnehmen;95,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00110001;Schicht o. Bindemittel Z1.2 RC-1;70,0;m3;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00110002;Oberboden abtrag. u. andecken;85,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00110003;Boden lösen u. verw.;2,5;m3;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00120001;Baustoff liefern;2,0;m3;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00120002;Bankett herst.;10,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00130001;Zulage Kabelsicherung;3,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00130002;Zulage Kabel umlegen;2,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00130003;Zulage Handschachtung;1,0;m3;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00140001;FSS herstellen;104,0;m3;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00140002;AC 22 T N herst.;120,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00140003;Emulsion v. Einbau TS;315,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00140004;AC 22 T L herst.;195,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00140005;Unterlage reinigen;315,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00140006;Emulsion v. Einbau DS;315,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00140007;AC 11 D N herst.;120,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00140008;AC 8 D L herst.;195,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00140009;Abstumpfung durchf.;315,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00140010;Verkehrsfläche kehren;315,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00140011;Naht an Asphalts. hers.;135,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00140012;Fugenverguss Tiefe 40mm;90,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00140013;Fugenverguss Tiefe 30mm;45,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00140014;Zulage Einfassungen;1,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00140015;Planum herstellen;315,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00150001;TB 8x25 liefern u. setzen;83,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00150002;HB 8x25 liefern u. setzen;73,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00150003;Bewegungsfuge herst.;20,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00150004;Bordstein trennen;6,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00160001;Bord Übergang ÜB 22/19 R;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00160002;Bord Übergang ÜB 22/19 L;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00160003;Bord Übergang ÜB 19/16 R;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00160004;Bord Übergang ÜB 19/16 L;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00160005;Bord Übergang ÜB 16/12 R;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00160006;Bord Übergang ÜB 16/12 L;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00160007;Bord Übergang ÜB 12/6 R;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00160008;Bord Übergang ÜB 12/6 L;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00160009;Dehnscheibe Busbord;19,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00160010;Betonbord;12,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00170001;Bodenindikatoren lief. u einb.;17,7;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00180001;BHS-Schild aufbauen;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00190001;SE aus Stahl abbauen;92,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00190002;AEK aus Stahl abbauen;3,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00190003;AEK Protector M  herstellen;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00190004;SE am äußeren Fahrbahnrand herst.;92,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00190005;ÜK/ÜE an vorhand. FRS herst. (Zul.);1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00190006;Leitpfosten aufstellen;3,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00190007;Pfosten des FRS herstellen;2,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00190008;FRS-Pfosten erschwert einbr. (Zul.);5,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00190009;Verschwenkung des FRS herst. (Zul.);24,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00200001;Markierungsfläche trocknen;8,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00200002;Markierungsfläche reinigen von Hand;8,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00200003;Längsmarkierung Typ II, b=0,12m;58,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+00200004;Längsmarkierung Typ II, Block;2,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+01000001;Baustelle einrichten Sämtl.LV-Abschn.*Zufahrt vorh.;1,0;Psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+01000002;Baustelle räumen Sämtl. LV-Abschn.;1,0;Psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+01010001;Verkehrssich. aufbauen (ID 3015);1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+01010002;Verkehrssich. vorhalten (ID 3015);21,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+01010003;Kontrolle d. Verkehrss. (ID 3015);21,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+01010004;Verkehrssich. abbauen (ID 3015);1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+01010005;VRAO einholen;1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+01020001;Verkehrsschild vorhalten;1,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+01020002;Pfeilbake aufb. u. abb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+01020003;Pfeilbake vorhalten;1,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+01020004;Pfeilbake m. Licht aufb. u. abb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+01020005;Pfeilbake m. Licht vorhalten;1,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+01020006;Absperrschr. aufb. u. abb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+01020007;Absperrschr. vorhalten;1,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+01020008;Absperrschr. m. Licht aufb. u. abb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+01020009;Absperrschr. m. Licht vorhalten;1,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+01020010;Verkehrsschild aufb. u. abb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+01030001;Transp. LSA aufb. u. abb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+01030002;Transp. LSA vorhalten;21,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+01040001;Fläche trocknen;6,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+01040002;Quermark. herst. u. entf.;6,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+01040003;Längsmark. herst. u. entf.;15,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+01040004;Fläche reinigen;15,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+01050001;Anliegerinformation (Handzettel);1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+01050002;Fotodokumentation;1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+01060001;Dickenmessung DS;3,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+01060002;Dickenmessung TS;3,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+01060003;Materialprobe entn. u. überg.;2,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+01060004;Kontrollprüfung (statische);1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+01060005;Belastungsfahrz. bereitst.;1,0;h;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+01060006;Dokumentation Straße;1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+01070001;Absteckung Straße;1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+01080001;BHS-Schild abb. u. lagern;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+01090001;Asphalt trennen bis 18 cm;68,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+01090002;Asphalt fräsen ADS bis 4,5 cm;90,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+01090003;Asphalt fräsen ATS 7-12 cm;90,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+01090004;Abtreppung herst.;68,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+01090005;Asphaltbefest. aufbr. - Bitukies;90,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+01100001;Bordsteine aufnehmen;75,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+01100002;Pflaster aufnehmen;100,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+01110001;Schicht o. Bindemittel Z1.2 RC-1;40,0;m3;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+01110002;Oberboden abtrag. u. andecken;30,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+01110003;Boden lösen u. verw.;2,5;m3;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+01120001;Baustoff liefern;3,0;m3;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+01120002;Bankett herst.;25,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+01130001;FSS herstellen;55,0;m3;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+01130002;AC 22 T N herst.;90,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+01130003;Emulsion v. Einbau TS;165,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+01130004;AC 22 T L herst.;75,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+01130005;Unterlage reinigen;165,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+01130006;Emulsion v. Einbau DS;165,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+01130007;AC 11 D N herst.;90,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+01130008;AC 8 D L herst.;75,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+01130009;Abstumpfung durchf.;165,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+01130010;Verkehrsfläche kehren;165,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+01130011;Naht an Asphalts. hers.;115,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+01130012;Fugenverguss Tiefe 40mm;70,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+01130013;Fugenverguss Tiefe 30mm;45,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+01130014;Zulage Einfassungen;1,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+01130015;Planum herstellen;165,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+01140001;TB 8x25 liefern u. setzen;35,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+01140002;HB 8x25 liefern u. setzen;45,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+01140003;Bewegungsfuge herst.;10,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+01140004;Bordstein trennen;6,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+01150001;Bord Übergang ÜB 22/19 R;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+01150002;Bord Übergang ÜB 22/19 L;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+01150003;Bord Übergang ÜB 19/16 R;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+01150004;Bord Übergang ÜB 19/16 L;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+01150005;Bord Übergang ÜB 16/12 R;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+01150006;Bord Übergang ÜB 16/12 L;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+01150007;Bord Übergang ÜB 12/6 R;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+01150008;Bord Übergang ÜB 12/6 L;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+01150009;Dehnscheibe Busbord;19,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+01150010;Betonbord;12,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+01160001;Bodenindikatoren lief. u einb.;17,7;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+01170001;BHS-Schild aufbauen;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+01180001;Markierungsfläche trocknen;6,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+01180002;Markierungsfläche reinigen von Hand;6,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+01180003;Längsmarkierung Typ II, b=0,12m;42,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+02000001;Baustelle einrichten Sämtl.LV-Abschn.*Zufahrt vorh.;1,0;Psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+02000002;Baustelle räumen Sämtl. LV-Abschn.;1,0;Psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+02010001;Verkehrssich. aufbauen (ID 3016);1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+02010002;Verkehrssich. vorhalten (ID 3016);21,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+02010003;Kontrolle d. Verkehrss. (ID 3016);21,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+02010004;Verkehrssich. abbauen (ID 3016);1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+02010005;VRAO einholen;1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+02020001;Verkehrsschild vorhalten;1,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+02020002;Pfeilbake aufb. u. abb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+02020003;Pfeilbake vorhalten;1,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+02020004;Pfeilbake m. Licht aufb. u. abb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+02020005;Pfeilbake m. Licht vorhalten;1,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+02020006;Absperrschr. aufb. u. abb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+02020007;Absperrschr. vorhalten;1,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+02020008;Absperrschr. m. Licht aufb. u. abb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+02020009;Absperrschr. m. Licht vorhalten;1,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+02020010;Verkehrsschild aufb. u. abb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+02030001;Transp. LSA aufb. u. abb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+02030002;Transp. LSA vorhalten;21,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+02040001;Fläche trocknen;6,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+02040002;Quermark. herst. u. entf.;6,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+02040003;Längsmark. herst. u. entf.;15,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+02040004;Fläche reinigen;15,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+02050001;Anliegerinformation (Handzettel);1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+02050002;Fotodokumentation;1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+02060001;Dickenmessung DS;3,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+02060002;Dickenmessung TS;3,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+02060003;Materialprobe entn. u. überg.;2,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+02060004;Kontrollprüfung (statische);1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+02060005;Belastungsfahrz. bereitst.;1,0;h;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+02060006;Dokumentation Straße;1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+02070001;Absteckung Straße;1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+02080001;BHS-Schild abb. u. lagern;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+02090001;Asphalt fräsen ADS bis 4,5 cm;125,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+02090002;Asphalt fräsen ABS bis 4,5 cm;125,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+02090003;Asphalt fräsen ATS 4,5-7 cm;125,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+02090004;Asphalt trennen bis 18 cm;75,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+02090005;Abtreppung herst.;75,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+02090006;Asphaltbefest. aufbr. - Bitukies;125,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+02100001;Bordsteine aufnehmen;82,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+02100002;Pflaster aufnehmen;106,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+02110001;Schicht o. Bindemittel Z1.1 RC-1;66,0;m3;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+02110002;Oberboden abtrag. u. andecken;25,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+02110003;Boden lösen u. verw.;2,5;m3;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+02120001;Baustoff liefern;3,0;m3;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+02120002;Bankett herst.;20,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+02130001;FSS herstellen;73,0;m3;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+02130002;AC 22 T N herst.;98,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+02130003;Emulsion v. Einbau TS;220,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+02130004;AC 22 T L herst.;122,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+02130005;Unterlage reinigen;220,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+02130006;Emulsion v. Einbau DS;220,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+02130007;AC 11 D N herst.;98,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+02130008;AC 8 D L herst.;122,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+02130009;Abstumpfung durchf.;220,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+02130010;Verkehrsfläche kehren;220,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+02130011;Naht an Asphalts. hers.;120,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+02130012;Fugenverguss Tiefe 40mm;75,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+02130013;Fugenverguss Tiefe 30mm;45,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+02130014;Zulage Einfassungen;5,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+02130015;Planum herstellen;220,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+02130016;Schachtd. a. Höhe;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+02140001;RB 15x22 liefern u. setzen;35,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+02140002;TB 8x25 liefern u. setzen;50,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+02140003;Bewegungsfuge herst.;12,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+02140004;Bordstein trennen;5,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+02150001;Bord Übergang ÜB 22/19 R;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+02150002;Bord Übergang ÜB 22/19 L;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+02150003;Bord Übergang ÜB 19/16 R;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+02150004;Bord Übergang ÜB 19/16 L;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+02150005;Bord Übergang ÜB 16/12 R;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+02150006;Bord Übergang ÜB 16/12 L;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+02150007;Bord Übergang ÜB 12/6 R;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+02150008;Bord Übergang ÜB 12/6 L;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+02150009;Dehnscheibe Busbord;19,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+02150010;Betonbord;12,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+02160001;Bodenindikatoren lief. u einb.;17,7;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+02170001;BHS-Schild aufbauen;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+02180001;Markierungsfläche trocknen;6,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+02180002;Markierungsfläche reinigen von Hand;6,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+02180003;Längsmarkierung Typ II, b=0,12m;49,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+03000001;Baustelle einrichten Sämtl.LV-Abschn.*Zufahrt vorh.;1,0;Psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+03000002;Baustelle räumen Sämtl. LV-Abschn.;1,0;Psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+03010001;Verkehrssich. aufbauen (ID 3017);1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+03010002;Verkehrssich. vorhalten (ID 3017);21,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+03010003;Kontrolle d. Verkehrss. (ID 3017);21,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+03010004;Verkehrssich. abbauen (ID 3017);1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+03010005;VRAO einholen;1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+03020001;Verkehrsschild vorhalten;1,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+03020002;Pfeilbake aufb. u. abb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+03020003;Pfeilbake vorhalten;1,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+03020004;Pfeilbake m. Licht aufb. u. abb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+03020005;Pfeilbake m. Licht vorhalten;1,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+03020006;Absperrschr. aufb. u. abb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+03020007;Absperrschr. vorhalten;1,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+03020008;Absperrschr. m. Licht aufb. u. abb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+03020009;Absperrschr. m. Licht vorhalten;1,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+03020010;Verkehrsschild aufb. u. abb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+03030001;Transp. LSA aufb. u. abb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+03030002;Transp. LSA vorhalten;21,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+03040001;Fläche trocknen;6,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+03040002;Quermark. herst. u. entf.;6,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+03040003;Längsmark. herst. u. entf.;15,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+03040004;Fläche reinigen;15,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+03050001;Anliegerinformation (Handzettel);1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+03050002;Fotodokumentation;1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+03060001;Dickenmessung DS;3,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+03060002;Dickenmessung TS;3,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+03060003;Materialprobe entn. u. überg.;2,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+03060004;Kontrollprüfung (statische);1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+03060005;Belastungsfahrz. bereitst.;1,0;h;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+03060006;Dokumentation Straße;1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+03070001;Absteckung Straße;1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+03080001;BHS-Schild abb. u. lagern;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+03090001;Asphalt trennen bis 18 cm;57,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+03090002;Asphalt fräsen ADS bis 4,5 cm;135,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+03090003;Asphalt fräsen ATS 7-12 cm;135,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+03090004;Abtreppung herst.;57,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+03090005;Asphaltbefest. aufbr. - Bitukies;135,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+03100001;Bordsteine aufnehmen;110,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+03100002;Pflaster aufnehmen;95,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+03110001;Anschlussl. umklemmen;2,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+03120001;Schicht o. Bindemittel Z1.1 RC-1;54,0;m3;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+03120002;Oberboden abtrag. u. andecken;60,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+03120003;Boden lösen u. verw.;2,5;m3;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+03130001;Baustoff liefern;3,0;m3;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+03130002;Bankett herst.;18,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+03140001;FSS herstellen;60,0;m3;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+03140002;AC 22 T N herst.;75,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+03140003;Emulsion v. Einbau TS;180,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+03140004;AC 22 T L herst.;105,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+03140005;Unterlage reinigen;180,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+03140006;Emulsion v. Einbau DS;180,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+03140007;AC 11 D N herst.;75,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+03140008;AC 8 D L herst.;105,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+03140009;Abstumpfung durchf.;180,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+03140010;Verkehrsfläche kehren;180,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+03140011;Naht an Asphalts. hers.;105,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+03140012;Fugenverguss Tiefe 40mm;60,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+03140013;Fugenverguss Tiefe 30mm;45,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+03140014;Zulage Einfassungen;5,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+03140015;Planum herstellen;180,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+03140016;Schachtd. a. Höhe;2,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+03150001;RB 15x22 liefern u. setzen;27,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+03150002;TB 8x25 liefern u. setzen;45,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+03150003;Bewegungsfuge herst.;6,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+03150004;Bordstein trennen;8,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+03160001;Bord Übergang ÜB 22/19 R;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+03160002;Bord Übergang ÜB 22/19 L;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+03160003;Bord Übergang ÜB 19/16 R;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+03160004;Bord Übergang ÜB 19/16 L;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+03160005;Bord Übergang ÜB 16/12 R;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+03160006;Bord Übergang ÜB 16/12 L;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+03160007;Bord Übergang ÜB 12/6 R;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+03160008;Bord Übergang ÜB 12/6 L;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+03160009;Dehnscheibe Busbord;19,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+03160010;Betonbord;12,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+03170001;Aufsatz aufs.;2,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+03170002;Leitung herst.;1,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+03170003;Formstück - Bogen;4,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+03170004;Formstück - Passtück;2,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+03170005;Formstück - Überschiebemuffe;2,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+03170006;Straßenablauf einb.;2,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+03180001;Bodenindikatoren lief. u einb.;17,7;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+03190001;BHS-Schild aufbauen;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+03200001;Markierungsfläche trocknen;5,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+03200002;Markierungsfläche reinigen von Hand;5,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+03200003;Längsmarkierung Typ II, b=0,12m;35,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+04000001;Baustelle einrichten Sämtl.LV-Abschn.*Zufahrt vorh.;1,0;Psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+04000002;Baustelle räumen Sämtl. LV-Abschn.;1,0;Psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+04010001;Verkehrssich. aufbauen (ID 3114);1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+04010002;Verkehrssich. vorhalten (ID 3114);21,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+04010003;Kontrolle d. Verkehrss. (ID 3114);21,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+04010004;Verkehrssich. abbauen (ID 3114);1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+04010005;VRAO einholen;1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+04020001;Verkehrsschild vorhalten;1,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+04020002;Pfeilbake aufb. u. abb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+04020003;Pfeilbake vorhalten;1,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+04020004;Pfeilbake m. Licht aufb. u. abb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+04020005;Pfeilbake m. Licht vorhalten;1,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+04020006;Absperrschr. aufb. u. abb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+04020007;Absperrschr. vorhalten;1,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+04020008;Absperrschr. m. Licht aufb. u. abb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+04020009;Absperrschr. m. Licht vorhalten;1,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+04020010;Verkehrsschild aufb. u. abb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+04030001;Transp. LSA aufb. u. abb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+04030002;Transp. LSA vorhalten;21,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+04040001;Fläche trocknen;6,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+04040002;Quermark. herst. u. entf.;6,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+04040003;Längsmark. herst. u. entf.;15,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+04040004;Fläche reinigen;15,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+04050001;Anliegerinformation (Handzettel);1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+04050002;Fotodokumentation;1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+04060001;Dickenmessung DS;3,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+04060002;Dickenmessung TS;3,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+04060003;Materialprobe entn. u. überg.;2,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+04060004;Kontrollprüfung (statische);1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+04060005;Belastungsfahrz. bereitst.;1,0;h;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+04060006;Dokumentation Straße;1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+04070001;Absteckung Straße;1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+04080001;BHS-Schild abb. u. lagern;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+04090001;Asphalt trennen bis 18 cm;65,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+04090002;Asphalt fräsen ADS bis 4,5 cm;150,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+04090003;Asphalt fräsen ABS bis 4,5 cm;75,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+04090004;Asphalt fräsen ABS 10-12 cm;75,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+04090005;Asphalt fräsen ATS 4,5-7 cm;75,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+04090006;Asphalt fräsen ATS 7-12 cm;75,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+04090007;Teer-/ pechhaltige Befest. aufn.;75,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+04090008;Teer-/ pech. Material ents.;11,0;t;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+04090009;Abtreppung herst.;65,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+04090010;Asphaltbefest. aufbr. - Bitukies;150,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+04100001;Bordsteine aufnehmen;48,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+04110001;Schicht o. Bindemittel Z2 RC-1;48,0;m3;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+04110002;Oberboden abtrag. u. andecken;50,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+04110003;Boden lösen u. verw.;2,5;m3;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+04120001;Baustoff liefern;3,0;m3;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+04120002;Bankett herst.;30,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+04130001;FSS herstellen;53,0;m3;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+04130002;AC 22 T N herst.;85,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+04130003;Emulsion v. Einbau TS;160,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+04130004;AC 22 T L herst.;75,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+04130005;Unterlage reinigen;160,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+04130006;Emulsion v. Einbau DS;160,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+04130007;AC 11 D N herst.;85,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+04130008;AC 8 D L herst.;75,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+04130009;Abstumpfung durchf.;160,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+04130010;Verkehrsfläche kehren;160,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+04130011;Naht an Asphalts. hers.;110,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+04130012;Fugenverguss Tiefe 40mm;65,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+04130013;Fugenverguss Tiefe 30mm;45,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+04130014;Zulage Einfassungen;5,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+04130015;Planum herstellen;160,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+04140001;TB 8x25 liefern u. setzen;23,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+04140002;HB 8x25 liefern u. setzen;18,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+04140003;Bewegungsfuge herst.;5,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+04140004;Bordstein trennen;5,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+04150001;Bord Übergang ÜB 22/19 R;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+04150002;Bord Übergang ÜB 22/19 L;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+04150003;Bord Übergang ÜB 19/16 R;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+04150004;Bord Übergang ÜB 19/16 L;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+04150005;Bord Übergang ÜB 16/12 R;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+04150006;Bord Übergang ÜB 16/12 L;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+04150007;Bord Übergang ÜB 12/6 R;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+04150008;Bord Übergang ÜB 12/6 L;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+04150009;Dehnscheibe Busbord;19,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+04150010;Betonbord;12,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+04160001;Bodenindikatoren lief. u einb.;17,7;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+04170001;BHS-Schild aufbauen;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+04180001;Markierungsfläche trocknen;5,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+04180002;Markierungsfläche reinigen von Hand;5,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+04180003;Längsmarkierung Typ II, b=0,12m;37,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+05000001;Baustelle einrichten Sämtl.LV-Abschn.*Zufahrt vorh.;1,0;Psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+05000002;Baustelle räumen Sämtl. LV-Abschn.;1,0;Psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+05010001;Verkehrssich. aufbauen (ID 3115);1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+05010002;Verkehrssich. vorhalten (ID 3115);21,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+05010003;Kontrolle d. Verkehrss. (ID 3115);21,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+05010004;Verkehrssich. abbauen (ID 3115);1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+05010005;VRAO einholen;1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+05020001;Verkehrsschild vorhalten;1,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+05020002;Pfeilbake aufb. u. abb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+05020003;Pfeilbake vorhalten;1,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+05020004;Pfeilbake m. Licht aufb. u. abb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+05020005;Pfeilbake m. Licht vorhalten;1,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+05020006;Absperrschr. aufb. u. abb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+05020007;Absperrschr. vorhalten;1,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+05020008;Absperrschr. m. Licht aufb. u. abb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+05020009;Absperrschr. m. Licht vorhalten;1,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+05020010;Verkehrsschild aufb. u. abb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+05030001;Transp. LSA aufb. u. abb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+05030002;Transp. LSA vorhalten;21,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+05040001;Fläche trocknen;6,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+05040002;Quermark. herst. u. entf.;6,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+05040003;Längsmark. herst. u. entf.;15,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+05040004;Fläche reinigen;15,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+05050001;Anliegerinformation (Handzettel);1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+05050002;Fotodokumentation;1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+05060001;Dickenmessung DS;3,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+05060002;Dickenmessung TS;3,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+05060003;Materialprobe entn. u. überg.;2,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+05060004;Kontrollprüfung (statische);1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+05060005;Belastungsfahrz. bereitst.;1,0;h;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+05060006;Dokumentation Straße;1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+05070001;Absteckung Straße;1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+05080001;BHS-Schild abb. u. lagern;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+05090001;Asphalt trennen 18-24 cm;50,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+05090002;Asphalt fräsen ADS bis 4,5 cm;195,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+05090003;Asphalt fräsen ABS 4,5-7 cm;135,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+05090004;Asphalt fräsen ABS 10-12 cm;110,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+05090005;Asphalt fräsen ATS bis 4,5 cm;85,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+05090006;Asphalt fräsen ATS 7-12 cm;110,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+05090007;Teer-/ pechhaltige Befest. aufn.;85,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+05090008;Teer-/ pech. Material ents.;17,0;t;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+05090009;Abtreppung herst.;50,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+05090010;Asphaltbefest. aufbr. - Bitukies;195,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+05100001;Bordsteine aufnehmen;45,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+05110001;Schicht o. Bindemittel Z2 RC-1;58,5;m3;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+05110002;Oberboden abtrag. u. andecken;45,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+05110003;Boden lösen u. verw.;2,0;m3;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+05120001;Baustoff liefern;2,0;m3;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+05120002;Bankett herst.;16,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+05130001;FSS herstellen;50,0;m3;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+05130002;AC 22 T N herst.;65,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+05130003;Emulsion v. Einbau TS;150,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+05130004;AC 22 T L herst.;85,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+05130005;Unterlage reinigen;150,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+05130006;Emulsion v. Einbau DS;150,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+05130007;AC 11 D N herst.;65,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+05130008;AC 8 D L herst.;85,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+05130009;Abstumpfung durchf.;150,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+05130010;Verkehrsfläche kehren;150,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+05130011;Naht an Asphalts. hers.;95,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+05130012;Fugenverguss Tiefe 40mm;50,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+05130013;Fugenverguss Tiefe 30mm;45,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+05130014;Zulage Einfassungen;5,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+05130015;Planum herstellen;150,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+05140001;TB 8x25 liefern u. setzen;30,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+05140002;HB 8x25 liefern u. setzen;27,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+05140003;Bewegungsfuge herst.;6,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+05140004;Bordstein trennen;8,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+05150001;Bord Übergang ÜB 22/19 R;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+05150002;Bord Übergang ÜB 22/19 L;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+05150003;Bord Übergang ÜB 19/16 R;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+05150004;Bord Übergang ÜB 19/16 L;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+05150005;Bord Übergang ÜB 16/12 R;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+05150006;Bord Übergang ÜB 16/12 L;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+05150007;Bord Übergang ÜB 12/6 R;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+05150008;Bord Übergang ÜB 12/6 L;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+05150009;Dehnscheibe Busbord;19,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+05150010;Betonbord;12,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+05160001;Bodenindikatoren lief. u einb.;17,7;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+05170001;BHS-Schild aufbauen;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+05180001;Markierungsfläche trocknen;4,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+05180002;Markierungsfläche reinigen von Hand;4,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+05180003;Längsmarkierung Typ II, b=0,25m;13,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+06000001;Baustelle einrichten Sämtl.LV-Abschn.*Zufahrt vorh.;1,0;Psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+06000002;Baustelle räumen Sämtl. LV-Abschn.;1,0;Psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+06010001;Verkehrssich. aufbauen (ID 3117);1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+06010002;Verkehrssich. vorhalten (ID 3117);21,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+06010003;Kontrolle d. Verkehrss. (ID 3117);21,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+06010004;Verkehrssich. abbauen (ID 3117);1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+06010005;VRAO einholen;1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+06020001;Verkehrsschild vorhalten;1,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+06020002;Pfeilbake aufb. u. abb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+06020003;Pfeilbake vorhalten;1,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+06020004;Pfeilbake m. Licht aufb. u. abb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+06020005;Pfeilbake m. Licht vorhalten;1,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+06020006;Absperrschr. aufb. u. abb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+06020007;Absperrschr. vorhalten;1,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+06020008;Absperrschr. m. Licht aufb. u. abb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+06020009;Absperrschr. m. Licht vorhalten;1,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+06020010;Verkehrsschild aufb. u. abb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+06030001;Transp. LSA aufb. u. abb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+06030002;Transp. LSA vorhalten;21,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+06040001;Fläche trocknen;6,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+06040002;Quermark. herst. u. entf.;6,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+06040003;Längsmark. herst. u. entf.;15,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+06040004;Fläche reinigen;15,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+06050001;Fotodokumentation;1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+06060001;Dickenmessung DS;3,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+06060002;Dickenmessung TS;3,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+06060003;Materialprobe entn. u. überg.;2,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+06060004;Kontrollprüfung (statische);1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+06060005;Belastungsfahrz. bereitst.;1,0;h;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+06060006;Dokumentation Straße;1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+06070001;Absteckung Straße;1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+06080001;BHS-Schild abb. u. lagern;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+06090001;Asphalt trennen 24-30 cm;70,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+06090002;Asphalt fräsen ADS bis 4,5 cm;190,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+06090003;Asphalt fräsen ABS 4,5-7 cm;65,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+06090004;Asphalt fräsen ATS 4,5-7 cm;125,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+06090005;Asphalt fräsen ATS 12-15 cm;65,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+06090006;Abtreppung herst.;70,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+06090007;Asphaltbefest. aufbr. - Bitukies;190,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+06100001;Bordsteine aufnehmen;130,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+06100002;Pflaster aufnehmen;105,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+06110001;Schicht o. Bindemittel Z0* RC-1;45,0;m3;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+06110002;Oberboden abtrag. u. andecken;50,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+06110003;Boden lösen u. verw.;2,5;m3;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+06120001;Baustoff liefern;5,0;m3;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+06120002;Bankett herst.;42,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+06130001;FSS herstellen;57,0;m3;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+06130002;AC 22 T N herst.;62,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+06130003;Emulsion v. Einbau TS;150,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+06130004;AC 22 T L herst.;90,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+06130005;Unterlage reinigen;150,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+06130006;Emulsion v. Einbau DS;150,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+06130007;AC 11 D N herst.;62,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+06130008;AC 8 D L herst.;90,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+06130009;Abstumpfung durchf.;150,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+06130010;Verkehrsfläche kehren;150,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+06130011;Naht an Asphalts. hers.;135,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+06130012;Fugenverguss Tiefe 40mm;70,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+06130013;Fugenverguss Tiefe 30mm;45,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+06130014;Zulage Einfassungen;5,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+06130015;Planum herstellen;150,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+06140001;TB 8x25 liefern u. setzen;30,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+06140002;HB 8x25 liefern u. setzen;6,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+06140003;Bewegungsfuge herst.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+06140004;Bordstein trennen;6,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+06150001;Bord Übergang ÜB 22/19 R;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+06150002;Bord Übergang ÜB 22/19 L;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+06150003;Bord Übergang ÜB 19/16 R;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+06150004;Bord Übergang ÜB 19/16 L;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+06150005;Bord Übergang ÜB 16/12 R;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+06150006;Bord Übergang ÜB 16/12 L;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+06150007;Bord Übergang ÜB 12/6 R;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+06150008;Bord Übergang ÜB 12/6 L;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+06150009;Dehnscheibe Busbord;19,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+06150010;Betonbord;12,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+06160001;Bodenindikatoren lief. u einb.;17,7;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+06170001;BHS-Schild aufbauen;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+06180001;Markierungsfläche trocknen;11,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+06180002;Markierungsfläche reinigen von Hand;11,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+06180003;Längsmarkierung Typ II, b=0,12m;46,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+07000001;Baustelle einrichten Sämtl.LV-Abschn.*Zufahrt vorh.;1,0;Psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+07000002;Baustelle räumen Sämtl. LV-Abschn.;1,0;Psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+07010001;Verkehrssich. aufbauen (ID 3117);1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+07010002;Verkehrssich. vorhalten (ID 3117);21,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+07010003;Kontrolle d. Verkehrss. (ID 3117);21,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+07010004;Verkehrssich. abbauen (ID 3117);1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+07010005;VRAO einholen;1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+07020001;Verkehrsschild vorhalten;1,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+07020002;Pfeilbake aufb. u. abb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+07020003;Pfeilbake vorhalten;1,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+07020004;Pfeilbake m. Licht aufb. u. abb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+07020005;Pfeilbake m. Licht vorhalten;1,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+07020006;Absperrschr. aufb. u. abb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+07020007;Absperrschr. vorhalten;1,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+07020008;Absperrschr. m. Licht aufb. u. abb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+07020009;Absperrschr. m. Licht vorhalten;1,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+07020010;Verkehrsschild aufb. u. abb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+07030001;Transp. LSA aufb. u. abb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+07030002;Transp. LSA vorhalten;21,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+07040001;Fläche trocknen;6,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+07040002;Quermark. herst. u. entf.;6,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+07040003;Längsmark. herst. u. entf.;15,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+07040004;Fläche reinigen;15,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+07050001;Fotodokumentation;1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+07060001;Dickenmessung DS;3,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+07060002;Dickenmessung TS;3,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+07060003;Materialprobe entn. u. überg.;2,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+07060004;Kontrollprüfung (statische);1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+07060005;Belastungsfahrz. bereitst.;1,0;h;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+07060006;Dokumentation Straße;1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+07070001;Absteckung Straße;1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+07080001;BHS-Schild abb. u. lagern;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+07090001;Asphalt trennen 24-30 cm;70,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+07090002;Asphalt fräsen ADS bis 4,5 cm;190,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+07090003;Asphalt fräsen ABS 4,5-7 cm;90,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+07090004;Asphalt fräsen ATS 7-12 cm;100,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+07090005;Asphalt fräsen ATS 12-15 cm;95,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+07090006;Abtreppung herst.;190,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+07090007;Asphaltbefest. aufbr. - Bitukies;190,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+07100001;Bordsteine aufnehmen;67,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+07100002;Pflaster aufnehmen;114,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+07110001;Schicht o. Bindemittel Z0* RC-1;50,0;m3;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+07110002;Oberboden abtrag. u. andecken;50,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+07110003;Boden lösen u. verw.;2,5;m3;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+07120001;Baustoff liefern;3,5;m3;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+07120002;Bankett herst.;33,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+07130001;FSS herstellen;55,0;m3;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+07130002;AC 22 T N herst.;90,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+07130003;Emulsion v. Einbau TS;165,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+07130004;AC 22 T L herst.;75,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+07130005;Unterlage reinigen;165,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+07130006;Emulsion v. Einbau DS;165,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+07130007;AC 11 D N herst.;90,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+07130008;AC 8 D L herst.;75,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+07130009;Abstumpfung durchf.;165,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+07130010;Verkehrsfläche kehren;165,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+07130011;Naht an Asphalts. hers.;135,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+07130012;Fugenverguss Tiefe 40mm;90,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+07130013;Fugenverguss Tiefe 30mm;45,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+07130014;Zulage Einfassungen;5,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+07130015;Planum herstellen;165,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+07140001;TB 8x25 liefern u. setzen;38,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+07140002;HB 8x25 liefern u. setzen;17,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+07140003;Bewegungsfuge herst.;4,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+07140004;Bordstein trennen;6,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+07150001;Bord Übergang ÜB 22/19 R;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+07150002;Bord Übergang ÜB 22/19 L;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+07150003;Bord Übergang ÜB 19/16 R;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+07150004;Bord Übergang ÜB 19/16 L;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+07150005;Bord Übergang ÜB 16/12 R;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+07150006;Bord Übergang ÜB 16/12 L;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+07150007;Bord Übergang ÜB 12/6 R;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+07150008;Bord Übergang ÜB 12/6 L;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+07150009;Dehnscheibe Busbord;19,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+07150010;Betonbord;12,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+07160001;Bodenindikatoren lief. u einb.;17,7;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+07170001;BHS-Schild aufbauen;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+07180001;Markierungsfläche trocknen;12,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+07180002;Markierungsfläche reinigen von Hand;12,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+07180003;Längsmarkierung Typ II, b=0,25m;48,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08000001;Baustelle einrichten Sämtl.LV-Abschn.*Zufahrt vorh.;1,0;Psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08000002;Baustelle räumen Sämtl. LV-Abschn.;1,0;Psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08010001;Verkehrssich. aufbauen (ID 2986);1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08010002;Verkehrssich. vorhalten (ID 2986);21,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08010003;Kontrolle d. Verkehrss. (ID 2986);21,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08010004;Verkehrssich. abbauen (ID 2986);1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08010005;VRAO einholen;1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08020001;Verkehrsschild vorhalten;1,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08020002;Pfeilbake aufb. u. abb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08020003;Pfeilbake vorhalten;1,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08020004;Pfeilbake m. Licht aufb. u. abb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08020005;Pfeilbake m. Licht vorhalten;1,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08020006;Absperrschr. aufb. u. abb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08020007;Absperrschr. vorhalten;1,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08020008;Absperrschr. m. Licht aufb. u. abb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08020009;Absperrschr. m. Licht vorhalten;1,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08020010;Verkehrsschild aufb. u. abb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08030001;Fläche trocknen;6,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08030002;Quermark. herst. u. entf.;6,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08030003;Längsmark. herst. u. entf.;15,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08030004;Fläche reinigen;15,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08040001;Fotodokumentation;1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08050001;Dickenmessung DS;3,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08050002;Dickenmessung TS;3,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08050003;Materialprobe entn. u. überg.;2,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08050004;Kontrollprüfung (statische);1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08050005;Belastungsfahrz. bereitst.;1,0;h;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08050006;Rohrdichtheit prüfen;40,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08050007;Kamerabefahrung;40,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08050008;Dokumentation Straße;1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08060001;Absteckung Straße;1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08070001;BHS-Schild abb. u. lagern;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08080001;Asphalt trennen bis 40 cm;60,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08080002;Asphalt fräsen ADS bis 4,5 cm;230,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08080003;Asphalt fräsen ADS 4,5-7 cm;80,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08080004;Asphalt fräsen ABS 4,5-7 cm;155,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08080005;Asphalt fräsen ATS bis 4,5 cm;155,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08080006;Asphalt fräsen ATS 4,5-7 cm;80,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08080007;Asphalt fräsen ATS 7-12 cm;75,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08080008;Asphalt fräsen ATS 12-15 cm;80,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08080009;Abtreppung herst.;60,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08080010;Asphaltbefest. aufbr. - Bitukies;160,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08090001;Bordsteine aufnehmen;55,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08100001;Schicht o. Bindemittel Z0* RC-1;33,0;m3;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08100002;Oberboden abtrag. u. andecken;50,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08100003;Boden lösen u. verw.;4,0;m3;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08110001;Suchgraben herst.;0,5;m3;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08110002;Leitungsgraben herst.;5,0;m3;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08120001;Baustoff liefern;3,0;m3;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08120002;Bankett herst.;30,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08130001;Zulage Leitungssicherung;1,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08130002;Zulage Kabelsicherung;1,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08130003;Zulage Kabel umlegen;1,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08130004;Zulage Handschachtung;0,5;m3;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08140001;FSS herstellen;38,0;m3;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08140002;AC 22 T N herst.;80,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08140003;Emulsion v. Einbau TS;115,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08140004;AC 22 T L herst.;35,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08140005;Unterlage reinigen;115,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08140006;Emulsion v. Einbau DS;115,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08140007;AC 11 D N herst.;80,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08140008;AC 8 D L herst.;35,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08140009;Abstumpfung durchf.;115,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08140010;Verkehrsfläche kehren;115,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08140011;Naht an Asphalts. hers.;105,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08140012;Fugenverguss Tiefe 40mm;60,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08140013;Fugenverguss Tiefe 30mm;45,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08140014;Zulage Einfassungen;5,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08140015;Planum herstellen;115,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08150001;TB 8x25 liefern u. setzen;17,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08150002;HB 8x25 liefern u. setzen;19,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08150003;Bewegungsfuge herst.;3,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08150004;Bordstein trennen;6,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08160001;Bord Übergang ÜB 22/19 R;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08160002;Bord Übergang ÜB 22/19 L;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08160003;Bord Übergang ÜB 19/16 R;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08160004;Bord Übergang ÜB 19/16 L;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08160005;Bord Übergang ÜB 16/12 R;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08160006;Bord Übergang ÜB 16/12 L;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08160007;Bord Übergang ÜB 12/6 R;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08160008;Bord Übergang ÜB 12/6 L;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08160009;Dehnscheibe Busbord;19,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08160010;Betonbord;12,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08170001;Aufsatz aufs.;2,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08170002;Leitung herst.;6,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08170003;Formstück - Bogen;2,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08170004;Formstück - Passtück;2,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08170005;Formstück - Überschiebemuffe;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08170006;Straßenablauf einb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08180001;Bodenindikatoren lief. u einb.;17,7;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08190001;BHS-Schild aufbauen;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08200001;Markierungsfläche trocknen;5,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08200002;Markierungsfläche reinigen von Hand;5,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08200003;Längsmarkierung Typ II, b=0,12m;25,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+08200004;Längsmarkierung Typ II, Agglom.;12,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09000001;Baustelle einrichten Sämtl.LV-Abschn.*Zufahrt vorh.;1,0;Psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09000002;Baustelle räumen Sämtl. LV-Abschn.;1,0;Psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09010001;Verkehrssich. aufbauen (ID 3024);1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09010002;Verkehrssich. vorhalten (ID 3024);21,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09010003;Kontrolle d. Verkehrss. (ID 3024);21,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09010004;Verkehrssich. abbauen (ID 3024);1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09010005;VRAO einholen;1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09020001;Verkehrsschild vorhalten;1,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09020002;Pfeilbake aufb. u. abb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09020003;Pfeilbake vorhalten;1,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09020004;Pfeilbake m. Licht aufb. u. abb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09020005;Pfeilbake m. Licht vorhalten;1,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09020006;Absperrschr. aufb. u. abb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09020007;Absperrschr. vorhalten;1,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09020008;Absperrschr. m. Licht aufb. u. abb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09020009;Absperrschr. m. Licht vorhalten;1,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09020010;Verkehrsschild aufb. u. abb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09030001;Transp. LSA aufb. u. abb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09030002;Transp. LSA vorhalten;21,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09040001;Fläche trocknen;6,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09040002;Quermark. herst. u. entf.;6,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09040003;Längsmark. herst. u. entf.;15,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09040004;Fläche reinigen;15,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09050001;Fotodokumentation;1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09060001;Dickenmessung DS;3,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09060002;Dickenmessung TS;3,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09060003;Materialprobe entn. u. überg.;2,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09060004;Kontrollprüfung (statische);1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09060005;Belastungsfahrz. bereitst.;1,0;h;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09060006;Rohrdichtheit prüfen;40,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09060007;Kamerabefahrung;40,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09060008;Dokumentation Straße;1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09070001;Absteckung Straße;1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09080001;BHS-Schild abb. u. lagern;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09090001;Asphalt trennen bis 18 cm;65,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09090002;Asphalt fräsen ADS 4,5-7 cm;200,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09090003;Asphalt fräsen ATS bis 4,5 cm;200,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09090004;Teer-/ pechhaltige Befest. aufn.;200,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09090005;Teer-/ pech. Material ents.;28,0;t;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09090006;Abtreppung herst.;65,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09090007;Asphaltbefest. aufbr. - Bitukies;200,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09100001;Bordsteine aufnehmen;55,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09110001;Straßenablauf ausb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09110002;Anschlussl. ausb.;3,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09120001;Schicht o. Bindemittel Z0* RC-1;60,0;m3;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09120002;Oberboden abtrag. u. andecken;120,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09120003;Boden lösen u. verw.;5,0;m3;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09130001;Suchgraben herst.;0,5;m3;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09130002;Leitungsgraben herst.;12,0;m3;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09140001;Baustoff liefern;5,0;m3;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09140002;Bankett herst.;45,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09150001;Zulage Leitungssicherung;1,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09150002;Zulage Kabelsicherung;1,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09150003;Zulage Kabel umlegen;1,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09150004;Zulage Handschachtung;0,5;m3;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09160001;FSS herstellen;37,0;m3;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09160002;AC 22 T N herst.;80,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09160003;Emulsion v. Einbau TS;110,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09160004;AC 22 T L herst.;30,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09160005;Unterlage reinigen;110,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09160006;Emulsion v. Einbau DS;110,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09160007;AC 11 D N herst.;80,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09160008;AC 8 D L herst.;30,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09160009;Abstumpfung durchf.;110,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09160010;Verkehrsfläche kehren;110,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09160011;Naht an Asphalts. hers.;110,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09160012;Fugenverguss Tiefe 40mm;65,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09160013;Fugenverguss Tiefe 30mm;45,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09160014;Zulage Einfassungen;5,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09160015;Planum herstellen;110,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09170001;TB 8x25 liefern u. setzen;17,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09170002;HB 8x25 liefern u. setzen;40,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09170003;Bewegungsfuge herst.;6,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09170004;Bordstein trennen;5,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09180001;Bord Übergang ÜB 22/19 R;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09180002;Bord Übergang ÜB 22/19 L;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09180003;Bord Übergang ÜB 19/16 R;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09180004;Bord Übergang ÜB 19/16 L;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09180005;Bord Übergang ÜB 16/12 R;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09180006;Bord Übergang ÜB 16/12 L;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09180007;Bord Übergang ÜB 12/6 R;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09180008;Bord Übergang ÜB 12/6 L;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09180009;Dehnscheibe Busbord;19,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09180010;Betonbord;12,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09190001;Aufsatz aufs.;2,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09190002;Leitung herst.;12,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09190003;Formstück - Bogen;4,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09190004;Formstück - Passtück;2,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09190005;Formstück - Überschiebemuffe;2,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09190006;Straßenablauf einb.;2,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09200001;Bodenindikatoren lief. u einb.;17,7;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09210001;BHS-Schild aufbauen;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09220001;Markierungsfläche trocknen;6,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09220002;Markierungsfläche reinigen von Hand;6,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09220003;Sperrflächenmarkierung Typ II;5,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+09220004;Längsmarkierung Typ II, b=0,12m;27,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10000001;Baustelle einrichten Sämtl.LV-Abschn.*Zufahrt vorh.;1,0;Psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10000002;Baustelle räumen Sämtl. LV-Abschn.;1,0;Psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10010001;Verkehrssich. aufbauen (ID 2990);1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10010002;Verkehrssich. vorhalten (ID 2990);21,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10010003;Kontrolle d. Verkehrss. (ID 2990);21,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10010004;Verkehrssich. abbauen (ID 2990);1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10010005;VRAO einholen;1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10020001;Verkehrsschild vorhalten;1,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10020002;Pfeilbake aufb. u. abb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10020003;Pfeilbake vorhalten;1,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10020004;Pfeilbake m. Licht aufb. u. abb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10020005;Pfeilbake m. Licht vorhalten;1,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10020006;Absperrschr. aufb. u. abb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10020007;Absperrschr. vorhalten;1,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10020008;Absperrschr. m. Licht aufb. u. abb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10020009;Absperrschr. m. Licht vorhalten;1,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10020010;Verkehrsschild aufb. u. abb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10030001;Transp. LSA aufb. u. abb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10030002;Transp. LSA vorhalten;21,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10040001;Fläche trocknen;9,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10040002;Quermark. herst. u. entf.;9,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10040003;Längsmark. herst. u. entf.;15,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10040004;Fläche reinigen;15,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10050001;Fotodokumentation;1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10060001;Dickenmessung DS;3,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10060002;Dickenmessung TS;3,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10060003;Materialprobe entn. u. überg.;2,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10060004;Kontrollprüfung (statische);1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10060005;Belastungsfahrz. bereitst.;1,0;h;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10060006;Rohrdichtheit prüfen;40,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10060007;Kamerabefahrung;40,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10060008;Dokumentation Straße;1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10070001;Absteckung Straße;1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10080001;BHS-Schild abb. u. lagern;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10090001;Asphalt trennen bis 18 cm;85,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10090002;Asphalt fräsen ADS bis 4,5 cm;110,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10090003;Asphalt fräsen ADS 6-8 cm;80,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10090004;Asphalt fräsen ABS 4,5-7 cm;85,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10090005;Asphalt fräsen ATS 4,5-7 cm;110,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10090006;Asphalt fräsen ATS 7-12 cm;80,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10090007;Abtreppung herst.;85,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10090008;Asphaltbefest. aufbr. - Bitukies;190,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10100001;Bordsteine aufnehmen;40,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10110001;Schicht o. Bindemittel Z1.1 RC-1;57,0;m3;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10110002;Oberboden abtrag. u. andecken;25,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10110003;Boden lösen u. verw.;2,5;m3;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10120001;Suchgraben herst.;1,25;m3;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10120002;Leitungsgraben herst.;45,0;m3;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10130001;Baustoff liefern;2,5;m3;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10130002;Bankett herst.;25,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10140001;Zulage Leitungssicherung;1,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10140002;Zulage Kabelsicherung;1,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10140003;Zulage Kabel umlegen;1,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10140004;Zulage Handschachtung;1,0;m3;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10150001;FSS herstellen;32,0;m3;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10150002;AC 22 T N herst.;65,5;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10150003;Emulsion v. Einbau TS;92,5;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10150004;AC 22 T L herst.;27,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10150005;Unterlage reinigen;92,5;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10150006;Emulsion v. Einbau DS;92,5;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10150007;AC 11 D N herst.;65,5;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10150008;AC 8 D L herst.;27,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10150009;Abstumpfung durchf.;92,5;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10150010;Verkehrsfläche kehren;92,5;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10150011;Naht an Asphalts. hers.;123,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10150012;Fugenverguss Tiefe 40mm;83,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10150013;Fugenverguss Tiefe 30mm;40,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10150014;Zulage Einfassungen;5,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10150015;Planum herstellen;92,5;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10160001;TB 8x25 liefern u. setzen;17,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10160002;HB 8x25 liefern u. setzen;24,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10160003;Bewegungsfuge herst.;5,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10160004;Bordstein trennen;5,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10170001;Bord Übergang ÜB 22/19 R;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10170002;Bord Übergang ÜB 22/19 L;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10170003;Bord Übergang ÜB 19/16 R;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10170004;Bord Übergang ÜB 19/16 L;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10170005;Bord Übergang ÜB 16/12 R;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10170006;Bord Übergang ÜB 16/12 L;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10170007;Bord Übergang ÜB 12/6 R;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10170008;Bord Übergang ÜB 12/6 L;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10170009;Dehnscheibe Busbord;19,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10170010;Betonbord;12,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10180001;Aufsatz aufs.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10180002;Leitung herst.;40,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10180003;Formstück - Bogen;4,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10180004;Formstück - Passtück;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10180005;Formstück - Überschiebemuffe;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10180006;Anschluss Kanal;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10180007;Straßenablauf einb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10190001;Bodenindikatoren lief. u einb.;17,7;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10200001;BHS-Schild aufbauen;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10210001;Markierungsfläche trocknen;6,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10210002;Markierungsfläche reinigen von Hand;6,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+10210003;Längsmarkierung Typ II, b=0,12m;42,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+11000001;Baustelle einrichten Sämtl.LV-Abschn.*Zufahrt vorh.;1,0;Psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+11000002;Baustelle räumen Sämtl. LV-Abschn.;1,0;Psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+11010001;Verkehrssich. aufbauen (ID 2991);1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+11010002;Verkehrssich. vorhalten (ID 2991);21,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+11010003;Kontrolle d. Verkehrss. (ID 2991);21,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+11010004;Verkehrssich. abbauen (ID 2991);1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+11010005;VRAO einholen;1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+11020001;Verkehrsschild vorhalten;1,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+11020002;Pfeilbake aufb. u. abb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+11020003;Pfeilbake vorhalten;1,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+11020004;Pfeilbake m. Licht aufb. u. abb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+11020005;Pfeilbake m. Licht vorhalten;1,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+11020006;Absperrschr. aufb. u. abb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+11020007;Absperrschr. vorhalten;1,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+11020008;Absperrschr. m. Licht aufb. u. abb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+11020009;Absperrschr. m. Licht vorhalten;1,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+11020010;Verkehrsschild aufb. u. abb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+11030001;Transp. LSA aufb. u. abb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+11030002;Transp. LSA vorhalten;21,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+11040001;Fläche trocknen;6,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+11040002;Quermark. herst. u. entf.;6,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+11040003;Längsmark. herst. u. entf.;15,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+11040004;Fläche reinigen;15,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+11050001;Fotodokumentation;1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+11060001;Dickenmessung DS;3,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+11060002;Dickenmessung TS;3,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+11060003;Materialprobe entn. u. überg.;2,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+11060004;Kontrollprüfung (statische);1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+11060005;Belastungsfahrz. bereitst.;1,0;h;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+11060006;Dokumentation Straße;1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+11070001;Absteckung Straße;1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+11080001;BHS-Schild abb. u. lagern;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+11090001;Asphalt trennen 18-24 cm;50,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+11090002;Asphalt fräsen ADS bis 4,5 cm;90,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+11090003;Asphalt fräsen ADS 6-8 cm;200,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+11090004;Asphalt fräsen ABS 4,5-7 cm;65,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+11090005;Asphalt fräsen ATS bis 4,5 cm;110,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+11090006;Asphalt fräsen ATS 4,5-7 cm;90,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+11090007;Asphalt fräsen ATS 7-12 cm;100,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+11090008;Asphaltbefest. aufbr. - Bitukies;170,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+11090009;Abtreppung herst.;50,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+11100001;Bordsteine aufnehmen;40,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+11110001;Schicht o. Bindemittel Z1.1 RC-1;27,0;m3;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+11110002;Oberboden abtrag. u. andecken;50,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+11110003;Boden lösen u. verw.;2,5;m3;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+11120001;Baustoff liefern;2,5;m3;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+11120002;Bankett herst.;24,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+11130001;FSS herstellen;35,0;m3;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+11130002;AC 22 T N herst.;65,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+11130003;Emulsion v. Einbau TS;90,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+11130004;AC 22 T L herst.;25,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+11130005;Unterlage reinigen;90,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+11130006;Emulsion v. Einbau DS;90,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+11130007;AC 11 D N herst.;65,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+11130008;AC 8 D L herst.;25,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+11130009;Abstumpfung durchf.;90,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+11130010;Verkehrsfläche kehren;90,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+11130011;Naht an Asphalts. hers.;90,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+11130012;Fugenverguss Tiefe 40mm;50,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+11130013;Fugenverguss Tiefe 30mm;40,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+11130014;Zulage Einfassungen;5,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+11130015;Planum herstellen;90,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+11140001;TB 8x25 liefern u. setzen;17,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+11140002;HB 8x25 liefern u. setzen;2,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+11140003;Bewegungsfuge herst.;2,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+11140004;Bordstein trennen;3,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+11150001;Bord Übergang ÜB 22/19 R;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+11150002;Bord Übergang ÜB 22/19 L;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+11150003;Bord Übergang ÜB 19/16 R;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+11150004;Bord Übergang ÜB 19/16 L;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+11150005;Bord Übergang ÜB 16/12 R;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+11150006;Bord Übergang ÜB 16/12 L;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+11150007;Bord Übergang ÜB 12/6 R;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+11150008;Bord Übergang ÜB 12/6 L;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+11150009;Dehnscheibe Busbord;19,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+11150010;Betonbord;12,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+11160001;Bodenindikatoren lief. u einb.;17,7;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+11170001;BHS-Schild aufbauen;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+11180001;Markierungsfläche trocknen;6,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+11180002;Markierungsfläche reinigen von Hand;6,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+11180003;Längsmarkierung Typ II, b=0,12m;14,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+11180004;Längsmarkierung Typ II, b=0,25m;14,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+12000001;Baustelle einrichten Sämtl.LV-Abschn.*Zufahrt vorh.;1,0;Psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+12000002;Baustelle räumen Sämtl. LV-Abschn.;1,0;Psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+12010001;Verkehrssich. aufbauen (ID 3041);1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+12010002;Verkehrssich. vorhalten (ID 3041);21,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+12010003;Kontrolle d. Verkehrss. (ID 3041);21,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+12010004;Verkehrssich. abbauen (ID 3041);1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+12010005;VRAO einholen;1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+12020001;Verkehrsschild vorhalten;1,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+12020002;Pfeilbake aufb. u. abb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+12020003;Pfeilbake vorhalten;1,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+12020004;Pfeilbake m. Licht aufb. u. abb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+12020005;Pfeilbake m. Licht vorhalten;1,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+12020006;Absperrschr. aufb. u. abb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+12020007;Absperrschr. vorhalten;1,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+12020008;Absperrschr. m. Licht aufb. u. abb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+12020009;Absperrschr. m. Licht vorhalten;1,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+12020010;Verkehrsschild aufb. u. abb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+12030001;Transp. LSA aufb. u. abb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+12030002;Transp. LSA vorhalten;21,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+12040001;Fläche trocknen;6,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+12040002;Quermark. herst. u. entf.;6,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+12040003;Längsmark. herst. u. entf.;15,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+12040004;Fläche reinigen;15,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+12050001;Anliegerinformation (Handzettel);1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+12050002;Fotodokumentation;1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+12060001;Dickenmessung DS;3,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+12060002;Dickenmessung TS;3,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+12060003;Materialprobe entn. u. überg.;2,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+12060004;Kontrollprüfung (statische);1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+12060005;Belastungsfahrz. bereitst.;1,0;h;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+12060006;Dokumentation Straße;1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+12070001;Absteckung Straße;1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+12080001;BHS-Schild abb. u. lagern;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+12090001;Asphalt trennen bis 18 cm;60,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+12090002;Asphalt fräsen ADS bis 4,5 cm;200,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+12090003;Asphalt fräsen ABS bis 4,5 cm;200,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+12090004;Asphalt fräsen ATS 4,5-7 cm;60,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+12090005;Asphalt fräsen ATS 7-12 cm;140,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+12090006;Abtreppung herst.;60,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+12090007;Asphaltbefest. aufbr. - Bitukies;200,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+12100001;Bordsteine aufnehmen;56,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+12110001;Schicht o. Bindemittel Z2 RC-2;45,0;m3;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+12110002;Oberboden abtrag. u. andecken;5,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+12110003;Boden lösen u. verw.;2,0;m3;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+12120001;Baustoff liefern;2,5;m3;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+12120002;Bankett herst.;25,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+12130001;FSS herstellen;52,0;m3;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+12130002;AC 22 T N herst.;80,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+12130003;Emulsion v. Einbau TS;155,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+12130004;AC 22 T L herst.;75,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+12130005;Unterlage reinigen;155,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+12130006;Emulsion v. Einbau DS;155,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+12130007;AC 11 D N herst.;80,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+12130008;AC 8 D L herst.;75,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+12130009;Abstumpfung durchf.;155,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+12130010;Verkehrsfläche kehren;155,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+12130011;Naht an Asphalts. hers.;105,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+12130012;Fugenverguss Tiefe 40mm;60,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+12130013;Fugenverguss Tiefe 30mm;45,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+12130014;Zulage Einfassungen;5,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+12130015;Planum herstellen;155,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+12140001;TB 8x25 liefern u. setzen;17,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+12140002;HB 8x25 liefern u. setzen;36,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+12140003;Bewegungsfuge herst.;3,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+12140004;Bordstein trennen;4,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+12150001;Bord Übergang ÜB 22/19 R;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+12150002;Bord Übergang ÜB 22/19 L;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+12150003;Bord Übergang ÜB 19/16 R;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+12150004;Bord Übergang ÜB 19/16 L;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+12150005;Bord Übergang ÜB 16/12 R;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+12150006;Bord Übergang ÜB 16/12 L;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+12150007;Bord Übergang ÜB 12/6 R;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+12150008;Bord Übergang ÜB 12/6 L;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+12150009;Dehnscheibe Busbord;19,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+12150010;Betonbord;12,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+12160001;Bodenindikatoren lief. u einb.;17,7;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+12170001;BHS-Schild aufbauen;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+12180001;Markierungsfläche trocknen;5,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+12180002;Markierungsfläche reinigen von Hand;5,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+12180003;Längsmarkierung Typ II, b=0,12m;40,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+12180004;Längsmarkierung Typ II, Block;10,57;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+13000001;Baustelle einrichten Sämtl.LV-Abschn.*Zufahrt vorh.;1,0;Psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+13000002;Baustelle räumen Sämtl. LV-Abschn.;1,0;Psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+13010001;Verkehrssich. aufbauen (ID 2995);1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+13010002;Verkehrssich. vorhalten (ID 2995);21,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+13010003;Kontrolle d. Verkehrss. (ID 2995);21,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+13010004;Verkehrssich. abbauen (ID 2995);1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+13010005;VRAO einholen;1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+13020001;Verkehrsschild vorhalten;1,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+13020002;Pfeilbake aufb. u. abb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+13020003;Pfeilbake vorhalten;1,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+13020004;Pfeilbake m. Licht aufb. u. abb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+13020005;Pfeilbake m. Licht vorhalten;1,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+13020006;Absperrschr. aufb. u. abb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+13020007;Absperrschr. vorhalten;1,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+13020008;Absperrschr. m. Licht aufb. u. abb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+13020009;Absperrschr. m. Licht vorhalten;1,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+13020010;Verkehrsschild aufb. u. abb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+13030001;Transp. LSA aufb. u. abb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+13030002;Transp. LSA vorhalten;21,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+13040001;Fläche trocknen;6,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+13040002;Quermark. herst. u. entf.;6,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+13040003;Längsmark. herst. u. entf.;15,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+13040004;Fläche reinigen;15,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+13050001;Anliegerinformation (Handzettel);1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+13050002;Fotodokumentation;1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+13060001;Dickenmessung DS;3,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+13060002;Dickenmessung TS;3,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+13060003;Materialprobe entn. u. überg.;2,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+13060004;Kontrollprüfung (statische);1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+13060005;Belastungsfahrz. bereitst.;1,0;h;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+13060006;Dokumentation Straße;1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+13070001;Absteckung Straße;1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+13080001;BHS-Schild abb. u. lagern;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+13090001;Asphalt trennen 18-24 cm;35,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+13090002;Asphalt fräsen ADS bis 4,5 cm;100,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+13090003;Asphalt fräsen ABS bis 4,5 cm;40,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+13090004;Asphalt fräsen ATS 7-12 cm;70,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+13090005;Teer-/ pechhaltige Befest. aufn.;40,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+13090006;Teer-/ pech. Material ents.;11,0;t;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+13090007;Abtreppung herst.;35,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+13090008;Asphaltbefest. aufbr. - Bitukies;100,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+13100001;Schicht o. Bindemittel Z2 RC-1;60,0;m3;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+13100002;Oberboden abtrag. u. andecken;25,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+13100003;Boden lösen u. verw.;2,5;m3;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+13110001;Baustoff liefern;1,5;m3;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+13110002;Bankett herst.;12,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+13120001;FSS herstellen;24,0;m3;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+13120002;AC 22 T N herst.;40,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+13120003;Emulsion v. Einbau TS;70,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+13120004;AC 22 T L herst.;30,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+13120005;Unterlage reinigen;70,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+13120006;Emulsion v. Einbau DS;70,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+13120007;AC 11 D N herst.;40,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+13120008;AC 8 D L herst.;30,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+13120009;Abstumpfung durchf.;70,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+13120010;Verkehrsfläche kehren;70,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+13120011;Naht an Asphalts. hers.;75,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+13120012;Fugenverguss Tiefe 40mm;35,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+13120013;Fugenverguss Tiefe 30mm;40,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+13120014;Zulage Einfassungen;5,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+13120015;Planum herstellen;70,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+13130001;TB 8x25 liefern u. setzen;17,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+13130002;HB 8x25 liefern u. setzen;2,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+13130003;Bewegungsfuge herst.;2,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+13130004;Bordstein trennen;3,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+13140001;Bord Übergang ÜB 22/19 R;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+13140002;Bord Übergang ÜB 22/19 L;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+13140003;Bord Übergang ÜB 19/16 R;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+13140004;Bord Übergang ÜB 19/16 L;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+13140005;Bord Übergang ÜB 16/12 R;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+13140006;Bord Übergang ÜB 16/12 L;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+13140007;Bord Übergang ÜB 12/6 R;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+13140008;Bord Übergang ÜB 12/6 L;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+13140009;Dehnscheibe Busbord;19,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+13140010;Betonbord;12,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+13150001;Bodenindikatoren lief. u einb.;17,7;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+13160001;BHS-Schild aufbauen;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+13170001;Markierungsfläche trocknen;2,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+13170002;Markierungsfläche reinigen von Hand;2,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+13170003;Längsmarkierung Typ II, b=0,12m;13,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+14000001;Baustelle einrichten Sämtl.LV-Abschn.*Zufahrt vorh.;1,0;Psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+14000002;Baustelle räumen Sämtl. LV-Abschn.;1,0;Psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+14010001;Verkehrssich. aufbauen (ID 2996);1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+14010002;Verkehrssich. vorhalten (ID 2996);21,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+14010003;Kontrolle d. Verkehrss. (ID 2996);21,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+14010004;Verkehrssich. abbauen (ID 2996);1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+14010005;VRAO einholen;1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+14020001;Verkehrsschild vorhalten;1,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+14020002;Pfeilbake aufb. u. abb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+14020003;Pfeilbake vorhalten;1,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+14020004;Pfeilbake m. Licht aufb. u. abb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+14020005;Pfeilbake m. Licht vorhalten;1,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+14020006;Absperrschr. aufb. u. abb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+14020007;Absperrschr. vorhalten;1,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+14020008;Absperrschr. m. Licht aufb. u. abb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+14020009;Absperrschr. m. Licht vorhalten;1,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+14020010;Verkehrsschild aufb. u. abb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+14030001;Transp. LSA aufb. u. abb.;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+14030002;Transp. LSA vorhalten;21,0;d;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+14040001;Fläche trocknen;6,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+14040002;Quermark. herst. u. entf.;6,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+14040003;Längsmark. herst. u. entf.;15,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+14040004;Fläche reinigen;15,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+14050001;Anliegerinformation (Handzettel);1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+14050002;Fotodokumentation;1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+14060001;Dickenmessung DS;3,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+14060002;Dickenmessung TS;3,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+14060003;Materialprobe entn. u. überg.;2,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+14060004;Kontrollprüfung (statische);1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+14060005;Belastungsfahrz. bereitst.;1,0;h;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+14060006;Dokumentation Straße;1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+14070001;Absteckung Straße;1,0;psch;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+14080001;BHS-Schild abb. u. lagern;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+14090001;Asphalt trennen 18-24 cm;38,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+14090002;Asphalt fräsen ADS bis 4,5 cm;90,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+14090003;Asphalt fräsen ABS 4,5-7 cm;50,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+14090004;Asphalt fräsen ATS 4,5-7 cm;40,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+14090005;Teer-/ pechhaltige Befest. aufn.;90,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+14090006;Teer-/ pech. Material ents.;23,0;t;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+14090007;Asphaltbefest. aufbr. - Bitukies;90,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+14090008;Abtreppung herst.;38,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+14100001;Schicht o. Bindemittel Z2 RC-1;27,0;m3;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+14100002;Oberboden abtrag. u. andecken;20,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+14100003;Boden lösen u. verw.;2,5;m3;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+14110001;Baustoff liefern;1,5;m3;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+14110002;Bankett herst.;16,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+14120001;FSS herstellen;27,0;m3;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+14120002;AC 22 T N herst.;50,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+14120003;Emulsion v. Einbau TS;80,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+14120004;AC 22 T L herst.;30,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+14120005;Unterlage reinigen;80,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+14120006;Emulsion v. Einbau DS;80,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+14120007;AC 11 D N herst.;50,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+14120008;AC 8 D L herst.;30,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+14120009;Abstumpfung durchf.;80,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+14120010;Verkehrsfläche kehren;80,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+14120011;Naht an Asphalts. hers.;80,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+14120012;Fugenverguss Tiefe 40mm;40,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+14120013;Fugenverguss Tiefe 30mm;40,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+14120014;Zulage Einfassungen;5,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+14120015;Planum herstellen;80,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+14130001;TB 8x25 liefern u. setzen;17,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+14130002;HB 8x25 liefern u. setzen;2,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+14130003;Bewegungsfuge herst.;2,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+14130004;Bordstein trennen;3,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+14140001;Bord Übergang ÜB 22/19 R;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+14140002;Bord Übergang ÜB 22/19 L;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+14140003;Bord Übergang ÜB 19/16 R;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+14140004;Bord Übergang ÜB 19/16 L;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+14140005;Bord Übergang ÜB 16/12 R;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+14140006;Bord Übergang ÜB 16/12 L;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+14140007;Bord Übergang ÜB 12/6 R;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+14140008;Bord Übergang ÜB 12/6 L;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+14140009;Dehnscheibe Busbord;19,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+14140010;Betonbord;12,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+14150001;Bodenindikatoren lief. u einb.;17,7;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+14160001;BHS-Schild aufbauen;1,0;St;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+14170001;Markierungsfläche trocknen;2,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+14170002;Markierungsfläche reinigen von Hand;2,0;m2;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83
+14170003;Längsmarkierung Typ II, b=0,12m;17,0;m;gaeb-flat;Leistungsverzeichnis\260724_Leistungsverzeichnis_HID30263_P4.D83

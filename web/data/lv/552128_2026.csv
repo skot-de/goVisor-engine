@@ -1,0 +1,29 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+10;Putzgrund mit dem Stahlbesen trocken reinigen. Staub;710,0;m2;gaeb;HUM_123_LV_Akustikputz_Langtext.X83
+20;Schützen von Bodenflächen mit einer PE Folie, 100;642,0;m2;gaeb;HUM_123_LV_Akustikputz_Langtext.X83
+30;Vollflächiges Schützen von Fenstern und Fassadenteilen;1500,0;m2;gaeb;HUM_123_LV_Akustikputz_Langtext.X83
+40;Vollflächiges Schützen von Stahlbeton Rundstützen als;9,0;St;gaeb;HUM_123_LV_Akustikputz_Langtext.X83
+50;Vollflächiges Schützen von Stahlbeton Unterzügen als;187,5;m;gaeb;HUM_123_LV_Akustikputz_Langtext.X83
+60;Dokumentation der ausgeführten Leistungen,;1,0;psch;gaeb;HUM_123_LV_Akustikputz_Langtext.X83
+10;Ausgleichsspachtelung Schichtdicke 2-3 mm.;345,0;m2;gaeb;HUM_123_LV_Akustikputz_Langtext.X83
+20;Liefern und fachgerechter Einbau von Gipskartoplatte,;18,0;St;gaeb;HUM_123_LV_Akustikputz_Langtext.X83
+30;Ausführung wie vor, jedoch:;61,0;St;gaeb;HUM_123_LV_Akustikputz_Langtext.X83
+40;Ausführung wie vor, jedoch:;6,0;St;gaeb;HUM_123_LV_Akustikputz_Langtext.X83
+50;Ausführung wie vor, jedoch:;6,0;St;gaeb;HUM_123_LV_Akustikputz_Langtext.X83
+10;Liefern und fachgerechter Einbau von;660,0;m2;gaeb;HUM_123_LV_Akustikputz_Langtext.X83
+20;Ausführung wie vor, jedoch:;50,0;m2;gaeb;HUM_123_LV_Akustikputz_Langtext.X83
+30;Zulage zu vor genannter Position für die Ausführung an;345,0;m2;gaeb;HUM_123_LV_Akustikputz_Langtext.X83
+40;Zulage zu vor genannter Hauptposition für das;660,0;m2;gaeb;HUM_123_LV_Akustikputz_Langtext.X83
+10;Zulage zu vor genannten Deckenkonstruktionen für das;100,0;St;gaeb;HUM_123_LV_Akustikputz_Langtext.X83
+20;Zulage zu vor genannten Positionen für das Anarbeiten;170,0;m;gaeb;HUM_123_LV_Akustikputz_Langtext.X83
+30;Anarbeiten des Putzes an Gipskarton-Platte von;79,0;St;gaeb;HUM_123_LV_Akustikputz_Langtext.X83
+40;Anarbeiten des Putzes an Gipskarton-Platte von;6,0;St;gaeb;HUM_123_LV_Akustikputz_Langtext.X83
+50;Putzabschlussprofil aus verzinktem Stahlblech, auf;400,0;m;gaeb;HUM_123_LV_Akustikputz_Langtext.X83
+60;Ausbildung von freien Deckenrändern mittels Z-;245,0;m;gaeb;HUM_123_LV_Akustikputz_Langtext.X83
+70;Ausbildung von freien Deckenrändern mittels;50,0;m;gaeb;HUM_123_LV_Akustikputz_Langtext.X83
+80;Zulage zu vor genannten Positionen für Ausführung von;170,0;m;gaeb;HUM_123_LV_Akustikputz_Langtext.X83
+10;Aufbauen fahrbare Arbeitsbühne DIN EN 1004-1 für;2,0;St;gaeb;HUM_123_LV_Akustikputz_Langtext.X83
+20;Gebrauchsüberlassung für fahrbare Arbeitsbühne DIN EN;4,0;StWo;gaeb;HUM_123_LV_Akustikputz_Langtext.X83
+30;Abbauen fahrbare Arbeitsbühne DIN EN 1004-1, Lastklasse;2,0;St;gaeb;HUM_123_LV_Akustikputz_Langtext.X83
+10;Stundenlohnarbeiten Mittellohn für Vor- od.;10,0;h;gaeb;HUM_123_LV_Akustikputz_Langtext.X83
+20;Stundenlohnarbeiten Helfer einschließlich aller;10,0;h;gaeb;HUM_123_LV_Akustikputz_Langtext.X83

@@ -1,0 +1,163 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+1;Witterungsfühler Messelement Ni 1000 Ohm;1,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+2;Raumtemperaturfühler Nickel 1000 Ohm;1,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+3;Tauchtemperaturfühler mit Schutzrohr;9,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+4;Anlege-Temperaturwächter;1,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+5;Tauch-Anlege-Temperaturwächter;1,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+6;Druckfühler für Flüssigkeit / Gase;1,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+7;Druckfühler für Flüssigkeiten/Gase;1,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+8;Druckbegrenzer EB 1...10 bar;1,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+9;Durchgangsventil PN 25 mit Gewinde-;1,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+10;Dreiwegventil PN 16, kvs = 16 m3/h;2,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+11;Dreiwegventil PN 16, kvs = 16 m3/h;1,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+12;Elektrothermischer Antrieb, 100N, 2P;52,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+13;Raumtemperaturfühler Nickel 1000 Ohm;1,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+14;Kanaltemperaturfühler;8,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+15;Kanalfühler für rel. Feuchte/Temperatur;9,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+16;Kanalfühler für Luftqualität CO2/T/r.F;9,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+17;Differenzdruckwächter;6,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+18;Luftkanaldruckdifferenzfühler;8,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+19;Luftkanaldruckdifferenzfühler;4,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+20;Kanalrauchmelder 230V KRM-1X-DZ 0.16;4,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+21;Drehantrieb für Luftklappen, 10 Nm,;2,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+22;Drehantrieb für Luftklappen, 24 V AC/DC;4,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+23;Automationsstation bis 200 DP BACnet/IP;1,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+24;Adress-Stecker, 1-24 + Reset;1,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+25;Adress-Stecker, 25-48 + Reset;1,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+26;Zusatz-Speisungsmodul;2,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+27;Anschlussmodul E/A-Bus;1,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+28;Eingangsmodul Digital 16-Kanal;2,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+29;Ausgangsmodul Digital 6-Kanal, Hand;1,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+30;Universalmodul 8-Kanal;2,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+31;Universalmodul 8-Kanal, Hand und LCD;1,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+32;"Hochwertiges BACnet/ IP Touch Panel 7""";1,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+33;Anschlussmodul E/A-Bus;8,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+34;Universalmodul 8-Kanal;8,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+35;Ausgangsmodul Triac 8-Kanal;11,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+36;Physikalische Ein-/Ausgabe Binär;56,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+37;Physikalische Ein-/Ausgabe Analog;4,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+38;Physikalische Ein-/Ausgabe Binär;20,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+39;Physikalische Ein-/Ausgabe Analog;53,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+40;Kommunikative Ein-/Ausgabe Binär;4,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+41;Kommunikative Ein-/Ausgabe Analog;7,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+42;Kommunikative Ein-/Ausgabe Binär;25,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+43;Kommunikative Ein-/Ausgabe Binär;2,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+44;Kommunikative Ein-/Ausgabe Analog;22,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+45;Automationsstation bis 400 DP BACnet/IP;1,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+46;Eingangsmodul Digital 16-Kanal;6,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+47;Ausgangsmodul Digital 6-Kanal, Hand;5,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+48;Universalmodul 8-Kanal;2,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+49;Universalmodul 8-Kanal, Hand und LCD;2,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+50;Zusatz-Speisungsmodul;1,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+51;Anschlussmodul E/A-Bus;2,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+52;Adress-Stecker, 1-24 + Reset;1,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+53;"Hochwertiges BACnet/ IP Touch Panel 7""";1,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+54;Physikalische Ein-/Ausgabe Binär;27,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+55;Physikalische Ein-/Ausgabe Analog;10,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+56;Physikalische Ein-/Ausgabe Binär;89,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+57;Physikalische Ein-/Ausgabe Analog;21,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+58;Kommunikative Ein-/Ausgabe Binär;36,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+59;Kommunikative Ein-/Ausgabe Analog;36,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+60;Kommunikative Ein-/Ausgabe Binär;36,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+61;Kommunikative Ein-/Ausgabe Analog;72,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+1;Schrankfeld 2000/1200/400;1,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+2;Netzeinspeisung 400 V / 3 x 65 A;1,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+3;Schaltschranklüfter 220V / 50Hz mit;1,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+4;Überspg.-Schutz Einspeisung 1-phasig + N;1,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+5;Sammelstörmeldeeinrichtung mit;1,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+6;Leistungsabgang bis 16 A 230 V;1,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+7;Leistungsbaugruppe elektronische;3,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+8;Steuerspannungsbaugruppe 230/230VAC;1,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+9;Steuerspannungsbaugruppe 230/24VAC;1,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+10;Ansteuerung Stellantrieb stufenlos;4,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+11;Eingang Wächter / Begrenzer pot.frei;3,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+12;Meldeeingang potentialfrei,;7,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+13;Aufschaltung Messwert aktiv / passiv,;13,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+14;Einbau DDC-Steuerung Controller;1,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+15;Einbau DDC-Modul auf Grundplatte;6,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+16;Einbau DDC-Zusatzbaugruppen;1,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+17;Einbau Netzwerkkomponente Switch;1,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+18;Planung, Montage, IBN, 1:1-Test EA,;1,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+19;UP / Einbauverteiler 3-reihig zur;8,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+20;Ansteuerung Stellantrieb 2-Punkt;52,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+21;Aufschaltung Messwert aktiv / passiv,;36,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+22;Einbau DDC-Modul auf Grundplatte;11,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+23;Planung, Montage, IBN, 1:1-Test EA,;8,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+24;Schrankfeld 2000/800/400;2,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+25;Netzeinspeisung 400 V / 3 x 160 A;1,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+26;Schaltschranklüfter 220V / 50Hz mit;1,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+27;Überspg.-Schutz Einspeisung 3-phasig + N;1,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+28;Sammelstörmeldeeinrichtung mit;1,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+29;Leistungsabgang bis 16 A 24 V;2,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+30;Leistungsbaugruppe bis 40 kW 400 V;2,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+31;Stromventil einphasig;4,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+32;Leistungsbaugruppe bis 1,5 kW 400 V;6,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+33;Steuerspannungsbaugruppe 230/230VAC;1,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+34;Steuerspannungsbaugruppe 230/24VAC;1,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+35;Steuerspannungsbaugruppe 230/24VAC;1,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+36;Brandschutzklappensteuerung;16,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+37;Aufschaltung Rauchmelder mit;4,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+38;Ansteuerung Stellantrieb stufenlos;4,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+39;Ansteuerung Stellantrieb 2-Punkt;4,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+40;Eingang Wächter / Begrenzer pot.frei;9,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+41;Meldeeingang potentialfrei,;19,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+42;Aufschaltung Messwert aktiv / passiv,;21,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+43;Einbau DDC-Steuerung Controller;1,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+44;Einbau DDC-Modul auf Grundplatte;15,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+45;Einbau DDC-Zusatzbaugruppen;1,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+46;Einbau Netzwerkkomponente Switch;1,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+47;Planung, Montage, IBN, 1:1-Test EA,;1,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+48;Leitung J-Y(St)Y 2 x 2 x 0,8 anschließen;109,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+49;Leitung J-Y(St)Y 4 x 2 x 0,8 anschließen;9,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+50;Leitung A-2Y(L)2Y...ST III BD 2 x 2 x;1,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+51;Leitung NYM-J 3 x 1,5 anschließen;81,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+52;Leitung NYM-J 3 x 2,5 anschließen;11,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+53;Leitung NYM-J 4 x 2,5 anschließen;6,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+54;Leitung NYM-J 5 x 1,5 anschließen;12,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+55;Leitung NYM-J 5 x 6 anschließen;3,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+56;Leitung Modbus beidseitig anschließen;56,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+57;Leitung Feldbus beidseitig anschließen;8,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+1;Parametrierung Managementsystem;1,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+2;Managementfunktion,;520,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+3;Bedienfunktion, Grafik/Anlagenbild.;12,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+4;Bedienfunktion, Dynamische Einblendung.;780,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+5;Bedienfunktion, Ereignis-Anweisungstext,;26,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+6;Bedienfunktion, Nachricht an externer;8,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+7;Managementfunkt. Grenzwerte fest;72,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+8;Managementfunkt. Grenzwert gleitend;45,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+9;Managementfunkt. Betriebsstunden;16,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+1;Installationskabel symmetrisch J-Y(St)Y;1620,0;m;gaeb;Leistungsverzeichnis/26A90060.X83
+2;Installationskabel symmetrisch J-Y(St)Y;120,0;m;gaeb;Leistungsverzeichnis/26A90060.X83
+3;Installationsleitung NYM-J 3x 1,5;500,0;m;gaeb;Leistungsverzeichnis/26A90060.X83
+4;Installationsleitung NYM-J 3x 2,5;420,0;m;gaeb;Leistungsverzeichnis/26A90060.X83
+5;Installationsleitung NYM-J 4x 2,5;60,0;m;gaeb;Leistungsverzeichnis/26A90060.X83
+6;Installationsleitung NYM-J 5x 1,5;160,0;m;gaeb;Leistungsverzeichnis/26A90060.X83
+7;Installationsleitung NYM-J 5x 6,0;30,0;m;gaeb;Leistungsverzeichnis/26A90060.X83
+8;Außenkabel sym. A-2Y(L)2Y 2x2x0,8;20,0;m;gaeb;Leistungsverzeichnis/26A90060.X83
+9;Verlegesystem Rinne/Kanal;85,0;m;gaeb;Leistungsverzeichnis/26A90060.X83
+10;Verlegesystem Rohr/ Schelle;135,0;m;gaeb;Leistungsverzeichnis/26A90060.X83
+11;Verlegesystem Unterputz mit;40,0;m;gaeb;Leistungsverzeichnis/26A90060.X83
+1;8 Port Industrial Switch;2,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+2;Überspannungsschutz für Datenschnittstellen gemäß Class;2,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+3;Datendose RJ45 für Hutschienenmontage;2,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+4;Ethernet-Patchkabel 1m, Cat 7;4,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+5;Ethernet-Patchkabel 2m, Cat 7;2,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+6;Kombi-Ableiter-Schutzmodul der Ableiterklasse Type 1 /;4,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+7;Überspannungsschutz-Ableiter Fernmeldeleitungen Typ 2;2,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+8;Modbus-Kabel geschirmt (2x2x0,8);600,0;m;gaeb;Leistungsverzeichnis/26A90060.X83
+9;Feldbus-Kabel geschirmt (2x2x0,8);400,0;m;gaeb;Leistungsverzeichnis/26A90060.X83
+10;Netzwerkkabel, Cat. 7 STP/PiMF;95,0;m;gaeb;Leistungsverzeichnis/26A90060.X83
+1;Freischaltung/Abklemmen der Kabel und Leitungen;1,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+2;Demontage Schaltschränke:;6,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+3;Bohrung in der Wand 25 mm aus Mauerwerk,;10,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+4;Bohrung in der Decke;10,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+5;Kernbohrung in der Wand aus Stahlbeton, C 20/25,;5,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+6;Öffnung in Wand verschließen;10,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+7;Brandschutzabschottung an Kabel-/Leitungsanlagen als;2,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+8;Brandschutzabschottung an Einzelkabeln nach Leitungsanlagen-Richtlinie (LAR), Feuerwiderstandsklasse;5,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+9;Inbetriebsetzung / Inbetriebnahme;63,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+10;Einzelprüfung: (1:1-Test);460,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+11;Probebetrieb/ Abnahme für ISP von 150;2,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+12;Einweisung des Betreibers;1,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+13;Nachoptimierung der GA-Anlage;1,0;St;gaeb;Leistungsverzeichnis/26A90060.X83
+14;Übergabedokumentation;1,0;St;gaeb;Leistungsverzeichnis/26A90060.X83

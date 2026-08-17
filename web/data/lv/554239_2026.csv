@@ -1,0 +1,31 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+10;Lagercontainer mit Elektroanschluss Bereitstellung eines Lagercontainers, mit Elektroanschluss, zur Einlagerung von PV-Modulen inkl. An-Abfahrt und Aufstellung vor Ort.;1,0;St;gaeb;3941490.x83
+20;Nachweis Auflast Statischer Nachweis der Auflast für die;1,0;St;gaeb;3941490.x83
+30;Solarmodul;76,0;St;gaeb;3941490.x83
+40;Wechselrichter 15kWp;2,0;St;gaeb;3941490.x83
+50;PV - Controller;1,0;St;gaeb;3941490.x83
+60;Montagesystem Photovoltaikanlage (Dach: Falzblech RIB-Roof);1,0;psch;gaeb;3941490.x83
+10;PV - Anlagen Messung + N/A Schutz;1,0;St;gaeb;3941490.x83
+20;PV-Wechselrichter-Sammler mit Lasttrennschalter;1,0;St;gaeb;3941490.x83
+30;Montagegestell Wechselrichter;1,0;Stk;gaeb;3941490.x83
+40;Beschriftungsschild aus Resopal, weißer Grund mit;2,0;St;gaeb;3941490.x83
+50;Überspannungsableiter DC, Kombi-Ableiter Typ 1 /;1,0;St;gaeb;3941490.x83
+10;Solarleitung 6 qmm, in Teillängen, ozonbeständig nach EN 50396 halogenfrei nach EN 50267, witterungs- und UV beständig nach HD 605/A1, Säuren- und laugenbeständig nach EN 60811 Leiter feindrähtig, Aderfarbe rot bzw. blau;230,0;m;gaeb;3941490.x83
+20;A-2Y(L)2Y 4x2x0,8mm²;70,0;m;gaeb;3941490.x83
+30;NYY - J 5x4 qmm auf Kabelrinne verlegen;10,0;m;gaeb;3941490.x83
+40;NYY - J 5x4 qmm auf Kabelrinne verlegen;50,0;m;gaeb;3941490.x83
+50;Kabelrinne inkl. Deckel 100;25,0;m;gaeb;3941490.x83
+60;Bogen für Kabelrinne inkl. Deckel 100;2,0;Stk;gaeb;3941490.x83
+70;Einführen, Absetzen und Anschließen von halogenfreien;4,0;St;gaeb;3941490.x83
+80;Einführen, Absetzen und Anschließen von halogenfreien;2,0;St;gaeb;3941490.x83
+10;Inbetriebnahme / Übergabe der PV-Anlage;1,0;St;gaeb;3941490.x83
+20;Anfertigen von Revisionszeichnungen und Bestandspläne;1,0;St;gaeb;3941490.x83
+30;Inbetriebsetzung mit Netzbetreiber;1,0;St;gaeb;3941490.x83
+40;Einweisung des Bauherren;1,0;St;gaeb;3941490.x83
+10;Gruppe I, Montageleiter;4,0;Std;gaeb;3941490.x83
+20;Gruppe H, Partie u. Gruppenführer;10,0;Std;gaeb;3941490.x83
+30;Gruppe G, Selbständ. Install-Monteur;5,0;Std;gaeb;3941490.x83
+40;Gruppe F, Install-Monteur;5,0;Std;gaeb;3941490.x83
+50;Gruppe E, Monteur unter Aufsicht;5,0;Std;gaeb;3941490.x83
+60;Gruppe B, Arbeitnehmer ohne Ausbildung;5,0;Std;gaeb;3941490.x83
+70;Auszubild. 4.Lehrjahr;5,0;Std;gaeb;3941490.x83

@@ -1,0 +1,49 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+001;Demontagearbeiten bestehend aus:;1,0;Psch;gaeb;leistungsbeschreibungen/LV Heizungsarbeiten_GAEB.X83
+001;C-Stahl Systemrohr 42x1,5mm;20,0;mtr.;gaeb;leistungsbeschreibungen/LV Heizungsarbeiten_GAEB.X83
+002;C-Stahl Systemrohr 35x1,5mm;15,0;mtr.;gaeb;leistungsbeschreibungen/LV Heizungsarbeiten_GAEB.X83
+003;C-Stahl Systemrohr 28x1,5mm;10,0;mtr.;gaeb;leistungsbeschreibungen/LV Heizungsarbeiten_GAEB.X83
+004;C-Stahl Systemrohr 18x1,2mm;5,0;mtr.;gaeb;leistungsbeschreibungen/LV Heizungsarbeiten_GAEB.X83
+005;C-Stahl Systemrohr 15x1,2mm;5,0;mtr.;gaeb;leistungsbeschreibungen/LV Heizungsarbeiten_GAEB.X83
+006;C-Stahl Bogen 42mm;25,0;Stck;gaeb;leistungsbeschreibungen/LV Heizungsarbeiten_GAEB.X83
+007;C-Stahl Bogen 35mm;25,0;Stck;gaeb;leistungsbeschreibungen/LV Heizungsarbeiten_GAEB.X83
+008;C-Stahl Bogen 28mm;20,0;Stck;gaeb;leistungsbeschreibungen/LV Heizungsarbeiten_GAEB.X83
+009;C-Stahl Bogen 18mm;5,0;Stck;gaeb;leistungsbeschreibungen/LV Heizungsarbeiten_GAEB.X83
+010;C-Stahl Bogen 15mm;5,0;Stck;gaeb;leistungsbeschreibungen/LV Heizungsarbeiten_GAEB.X83
+011;"C-Stahl Übergangsnippel 42x1 1/2""";4,0;Stck;gaeb;leistungsbeschreibungen/LV Heizungsarbeiten_GAEB.X83
+012;"C-Stahl Übergangsnippel 35x1 1/4""";4,0;Stck;gaeb;leistungsbeschreibungen/LV Heizungsarbeiten_GAEB.X83
+013;"C-Stahl Übergangsnippel 35x1""";4,0;Stck;gaeb;leistungsbeschreibungen/LV Heizungsarbeiten_GAEB.X83
+014;"C-Stahl Übergangsnippel 28x1""";10,0;Stck;gaeb;leistungsbeschreibungen/LV Heizungsarbeiten_GAEB.X83
+015;"C-Stahl Übergangsnippel 15x1/2""";4,0;Stck;gaeb;leistungsbeschreibungen/LV Heizungsarbeiten_GAEB.X83
+016;C-Stahl T-Stück 42mm;2,0;Stck;gaeb;leistungsbeschreibungen/LV Heizungsarbeiten_GAEB.X83
+017;C-Stahl T-Stück 35mm;2,0;Stck;gaeb;leistungsbeschreibungen/LV Heizungsarbeiten_GAEB.X83
+018;"Luftabscheider 2"" mit Innengewinde & Isolierung";1,0;Stck;gaeb;leistungsbeschreibungen/LV Heizungsarbeiten_GAEB.X83
+019;"Magnetit-/Schlammabscheider 2"" m. IG & Isol., max. Durchsatz 7,5 cbm/h";1,0;Stck;gaeb;leistungsbeschreibungen/LV Heizungsarbeiten_GAEB.X83
+020;Pauschale zum Einbau des neuen;1,0;Psch;gaeb;leistungsbeschreibungen/LV Heizungsarbeiten_GAEB.X83
+021;"Kugelhahn 2"", Muffenanschluss";2,0;Stck;gaeb;leistungsbeschreibungen/LV Heizungsarbeiten_GAEB.X83
+022;"Kugelhahn 1 1/2"", Muffenanschluss";2,0;Stck;gaeb;leistungsbeschreibungen/LV Heizungsarbeiten_GAEB.X83
+023;"Kugelhahn 1 1/4"", Muffenanschluss";2,0;Stck;gaeb;leistungsbeschreibungen/LV Heizungsarbeiten_GAEB.X83
+024;"Kugelhahn 1"", Muffenanschluss";6,0;Stck;gaeb;leistungsbeschreibungen/LV Heizungsarbeiten_GAEB.X83
+025;Logafix KH-Wärmedämmung 2;2,0;Stck;gaeb;leistungsbeschreibungen/LV Heizungsarbeiten_GAEB.X83
+026;Logafix KH-Wärmedämmung 11/2;2,0;Stck;gaeb;leistungsbeschreibungen/LV Heizungsarbeiten_GAEB.X83
+027;Logafix KH-Wärmedämmung 11/4;2,0;Stck;gaeb;leistungsbeschreibungen/LV Heizungsarbeiten_GAEB.X83
+028;Logafix KH-Wärmedämmung 1;6,0;Stck;gaeb;leistungsbeschreibungen/LV Heizungsarbeiten_GAEB.X83
+029;Schwarzrohradapter mit IG;2,0;Stck;gaeb;leistungsbeschreibungen/LV Heizungsarbeiten_GAEB.X83
+030;Schwarzrohradapter mit IG;6,0;Stck;gaeb;leistungsbeschreibungen/LV Heizungsarbeiten_GAEB.X83
+031;Isolierung für Rohrleitung 46 x 42mm;20,0;mtr.;gaeb;leistungsbeschreibungen/LV Heizungsarbeiten_GAEB.X83
+032;Isolierung für Rohrleitung 36 x 35mm;15,0;mtr.;gaeb;leistungsbeschreibungen/LV Heizungsarbeiten_GAEB.X83
+033;Isolierung für Rohrleitung 24 x 28mm;10,0;mtr.;gaeb;leistungsbeschreibungen/LV Heizungsarbeiten_GAEB.X83
+034;Isolierung für Rohrleitung 24 x 22mm;5,0;mtr.;gaeb;leistungsbeschreibungen/LV Heizungsarbeiten_GAEB.X83
+035;Isolierung für Rohrleitung 20 x 15mm;5,0;mtr.;gaeb;leistungsbeschreibungen/LV Heizungsarbeiten_GAEB.X83
+001;Baustelleneinrichtung  einschließlich An- und Abreise;1,0;Psch;gaeb;leistungsbeschreibungen/LV Heizungsarbeiten_GAEB.X83
+002;Wanddurchbruch in Innenwand erstellen,;2,0;Stck;gaeb;leistungsbeschreibungen/LV Heizungsarbeiten_GAEB.X83
+003;Diamant-Kernbohrung;4,0;Stck;gaeb;leistungsbeschreibungen/LV Heizungsarbeiten_GAEB.X83
+004;Druck- und Dichtheitsprüfung der Heizungsanlage;1,0;Psch;gaeb;leistungsbeschreibungen/LV Heizungsarbeiten_GAEB.X83
+005;Füllen und Entlüften der gesamten im Leistungsverzeichnis aufgeführten Heizungsanlage mit enthärtetem und entsalztem Wasser entsprechend Herstellerangaben bzw.;1,0;Psch;gaeb;leistungsbeschreibungen/LV Heizungsarbeiten_GAEB.X83
+006;Einweisung des Bedienungspersonals in die Heizungsanlage,;1,0;Psch;gaeb;leistungsbeschreibungen/LV Heizungsarbeiten_GAEB.X83
+001;Fachmonteurstunde;10,0;Std.;gaeb;leistungsbeschreibungen/LV Heizungsarbeiten_GAEB.X83
+002;Jungmonteurstunde;10,0;Std.;gaeb;leistungsbeschreibungen/LV Heizungsarbeiten_GAEB.X83
+003;Helferstunde;10,0;Std.;gaeb;leistungsbeschreibungen/LV Heizungsarbeiten_GAEB.X83
+001;Temporäre Bauheizung;1,0;Stck;gaeb;leistungsbeschreibungen/LV Heizungsarbeiten_GAEB.X83
+002;Betrieb und Unterhalt der vorgenannten temporären Bauheizung;40,0;Tage;gaeb;leistungsbeschreibungen/LV Heizungsarbeiten_GAEB.X83
+003;Energieverbrauch;25000,0;kWh;gaeb;leistungsbeschreibungen/LV Heizungsarbeiten_GAEB.X83

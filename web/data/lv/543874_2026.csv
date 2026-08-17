@@ -1,0 +1,60 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+____0001;Hinweis zur Ausschreibung;;;gaeb-flat;3938055.d83
+01__0001;Baustelleneinrichtung;1,0;psch;gaeb-flat;3938055.d83
+01__0002;Verlängerung der Baustelleneinrichtung;4,0;Wo;gaeb-flat;3938055.d83
+01__0003;Zusätzl. Baustelleneinrichtung, Maschinenanfahrt für Vorputzen Technik;1,0;St;gaeb-flat;3938055.d83
+01__0004;Bestandsdokumentation;1,0;psch;gaeb-flat;3938055.d83
+02__0001;Schutzabdeckung von Fenstern, Türen u. Ä.;220,0;m2;gaeb-flat;3938055.d83
+02__0002;Untergrundprüfung;1,0;psch;gaeb-flat;3938055.d83
+02__0003;Entfernen von Fremdkörpern an der Fassade;20,0;St;gaeb-flat;3938055.d83
+02__0004;Wandflächen reinigen;850,0;m2;gaeb-flat;3938055.d83
+02__0005;Untergrund reinigen normal saugend, Putzgrundvorbehandlung, Haftbrücke;650,0;m2;gaeb-flat;3938055.d83
+02__0006;Abwaschen des Untergrunds mit Hochdruckreiniger;100,0;m2;gaeb-flat;3938055.d83
+02__0007;Altputz abschlagen;250,0;m2;gaeb-flat;3938055.d83
+02__0008;Farbschichten entfernen;10,0;m2;gaeb-flat;3938055.d83
+02__0009;Sandende Untergründe vorbereiten;700,0;m2;gaeb-flat;3938055.d83
+02__0010;Absanden;650,0;m2;gaeb-flat;3938055.d83
+02__0011;Einzelrisssanierung Wand B 1-5 mm aufweiten, grundieren, verfüllen;10,0;m;gaeb-flat;3938055.d83
+02__0012;Einzelrisssanierung Wand B 1-5 mm aufweiten, grundieren, verfüllen;20,0;m;gaeb-flat;3938055.d83
+02__0013;Putzfehlstellen füllen;20,0;St;gaeb-flat;3938055.d83
+02__0014;Spritzbewurf - kalkhaltig;400,0;m2;gaeb-flat;3938055.d83
+03__0001;Putzmuster Vorab zur denkmalpflegerischen Abstimmung und Freigabe;1,0;psch;gaeb-flat;3938055.d83
+03__0002;Rückbau des vorbeschriebenen Putzmusters;1,0;psch;gaeb-flat;3938055.d83
+03__0003;Hochleistungsdämmputz;650,0;m2;gaeb-flat;3938055.d83
+03__0004;Mehrstärke Hochleistungsdämmputz;300,0;m2;gaeb-flat;3938055.d83
+03__0005;Nachbehandlung;650,0;m2;gaeb-flat;3938055.d83
+03__0006;Oberflächenstabilisierung;650,0;m2;gaeb-flat;3938055.d83
+03__0007;Armierungslage;300,0;m2;gaeb-flat;3938055.d83
+03__0008;Zusätzliche Armierungslage im Gehwegbereich;100,0;m2;gaeb-flat;3938055.d83
+03__0009;Gewebestreifen als Kantenschutz;100,0;m;gaeb-flat;3938055.d83
+03__0010;Diagonalarmierung an Ecken von Öffnungen;300,0;Stk;gaeb-flat;3938055.d83
+03__0011;Universalgrundierung für Oberputz, Putzgrund;650,0;m2;gaeb-flat;3938055.d83
+03__0012;Oberputz - Edelputz;650,0;m2;gaeb-flat;3938055.d83
+03__0013;Zulage Sockelputz;80,0;m2;gaeb-flat;3938055.d83
+03__0014;Zulage für Lisenen;120,0;m;gaeb-flat;3938055.d83
+03__0015;Zulage für Segmentbogen, Lisene gebogen;6,0;St;gaeb-flat;3938055.d83
+03__0016;Zulage für Segmentbogen, Putzbogen;5,0;St;gaeb-flat;3938055.d83
+03__0017;Zulage für Anarbeiten an Materialübergänge, eben;200,0;m;gaeb-flat;3938055.d83
+03__0018;Zulage für Anarbeiten an Materialübergänge, Phase von 45 Grad;100,0;m;gaeb-flat;3938055.d83
+03__0019;Zulage für Anarbeiten an Fremdkörper in Putzfläche;25,0;St;gaeb-flat;3938055.d83
+03__0020;Zulage für Anputzen an bestehende Putzflächen;20,0;m;gaeb-flat;3938055.d83
+03__0021;Kantenschutz an Gebäudeecken;70,0;m;gaeb-flat;3938055.d83
+03__0022;Anschlussabdichtung Fugendichtband;200,0;m;gaeb-flat;3938055.d83
+04__0001;Beschichtung Wand Putz Silikatfarbe GBS Silikatfarbe;850,0;m2;gaeb-flat;3938055.d83
+04__0002;Zulage für Sockelfarbe;100,0;m2;gaeb-flat;3938055.d83
+04__0003;Leibungen bis 25 cm Tiefe;105,0;m;gaeb-flat;3938055.d83
+04__0004;Leibungen bis 50 cm Tiefe;20,0;m;gaeb-flat;3938055.d83
+04__0005;Zulage für Segmentbogen;11,0;St;gaeb-flat;3938055.d83
+04__0006;Zulage für Lisenen;120,0;m;gaeb-flat;3938055.d83
+04__0007;Zulage für Anarbeiten an Materialübergänge, eben;200,0;m;gaeb-flat;3938055.d83
+04__0008;Zulage für Anarbeiten an Fremdkörper in Putzfläche;25,0;St;gaeb-flat;3938055.d83
+04__0009;Zulage für Anarbeiten, Gerüstdübel, Löcher verschließen;400,0;St;gaeb-flat;3938055.d83
+04__0010;Zulage für mittelsatte Tönung;750,0;m2;gaeb-flat;3938055.d83
+04__0011;Zulage für satte Tönung;150,0;m2;gaeb-flat;3938055.d83
+04__0012;Verfugung, elasto-plastisch;1000,0;m;gaeb-flat;3938055.d83
+04__0013;Beschriftung von Gebäudeteilen, Bereichen;5,0;St;gaeb-flat;3938055.d83
+04__0014;Muster Beschriftung;3,0;St;gaeb-flat;3938055.d83
+04__0015;Schilder 'Vorsicht Dachlawine';4,0;St;gaeb-flat;3938055.d83
+05__0001;Stundensatz Bauwerker;20,0;h;gaeb-flat;3938055.d83
+05__0002;Stundensatz Facharbeiter;20,0;h;gaeb-flat;3938055.d83
+05__0003;Stundensatz Vorarbeiter;20,0;h;gaeb-flat;3938055.d83

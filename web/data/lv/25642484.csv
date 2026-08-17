@@ -1,0 +1,100 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+00000001;Baustelle einrichten Sämtl.LV-Abschn.*Zufahrt vorh.;1,0;Psch;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+00000002;Baustelle räumen Sämtl. LV-Abschn.;1,0;Psch;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+01000001;Vermessungstechnische Aufnahme;1,0;Psch;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+01000002;Beweissicherung;1,0;Psch;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+01010001;Bestandunterlagen liefern Be.üb.zeichn. CAD;1,0;Psch;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+01010002;Erstellen eines Bauzeitenplanes zur;1,0;Psch;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+01010003;Koordination der Arbeitsabläufe mit anderen Unternehmen;1,0;Psch;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+01020001;Vorankündigung erstellen;1,0;Psch;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+01020002;SiGe-Plan erstellen;1,0;Psch;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+01020003;SiGe-Koordinator stellen.;1,0;Psch;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+02000001;Plattendruckversuch nach DIN 18134;2,0;St;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+02000002;Belastungsfahrzeug bereitstellen;10,0;h;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+02000003;Probennahme Walzasphalt;3,0;St;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+02000004;Probegefäß liefern 10-l-Blecheimer;3,0;St;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+02000005;Bohrkern entnehmen Kern-DU 15 cm*... Freitext ... Asphaltschicht*Verfül. Asphalt;5,0;St;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+02000006;Gegenpole für Kontrollpr. verlegen AL 30x50cm, 0,3mm*hydr.geb. Schicht;21,0;St;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+02000007;Gegenpole für Kontrollpr. verlegen AL 30x50cm, 0,1mm*... Freitext ...;21,0;St;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+02000008;Gegenpole für Kontrollpr. verlegen AL 30x50cm, 0,1mm*... Freitext ...;42,0;St;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+03000001;Verdachtsfläche absuchen;3000,0;m2;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+03000002;Verdachtspunkte absuchen;1,0;St;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+03000003;Verdachtspunkte absuchen;1,0;St;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+03000004;Baubegleit. Kampfmittelsondierung;1,0;Psch;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+03000005;Überwachung der Aufgrabungen;10,0;Std;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+03000006;Verrechnungssatz für Baugerät;10,0;h;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+04000001;Strauchbestand roden Höhe über 2-3 m*Wst.Verw.AN S.Abr. Verw. AN;1970,0;m2;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+04000002;Wurzelstöcke roden DU über 0,1-0,3 m*verdicht/Boden AN Wst.Verw. AN;10,0;St;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+04000003;Wurzelstöcke roden DU über 0,3-0,5 m*verdicht/Boden AN Wst.Verw. AN;10,0;St;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+04000004;Oberboden abtragen ... Freitext ...*... Freitext ... Oberb.Verw. AN*Abrechnung Abtrag;1970,0;m2;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+04010001;Suchschachtungen;100,0;m;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+05000001;Asphaltbefestigung trennen Anbauber. längs*schneiden Dicke ü. 24-30 cm;600,0;m;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+05000002;Asphaltbefestigung aufnehmen ... Freitext ...*Dicke ü. 24-30 cm Dicke ü. 40-50 cm*Tiefe ü. 20-30 cm Länge max. 25 cm*... Freitext ...;720,0;m2;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+05000003;Asphaltbefestigung aufnehmen ... Freitext ...*Dicke ü. 24-30 cm Dicke ü. 40-50 cm*Tiefe ü. 20-30 cm Länge max. 25 cm*... Freitext ...;400,0;m2;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+05000004;Boden bzw. Fels lösen und verwerten ... Freitext ...*profilg. lösen Planum nicht ges.*Verwertung nachw.;1300,0;m3;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+05000005;Erschwernis infolge Einbauten Erschwer. gesamt*Asphaltbefestig. ... Freitext ...;22,0;St;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+05000006;Erschwernis infolge Einfassungen Erschw. aufnehmen*Asphaltbefestig. Einfassung;700,0;m;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+05000007;Erschwernis durch Einbauten ... Freitext ...*... Freitext ...;20,0;St;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+05010001;Unterlage profilieren SfM*Unebenh. max.2 cm;3400,0;m2;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+05010002;Baustoff f. Profilausgleich liefern FSS;50,0;t;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+05010003;Erfassung des Temperaturprofils;1,0;Psch;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+05010004;Flächendeckende Verdichtungskontr.;1,0;Psch;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+05010005;Erweiterte Eignungsprüfung;1,0;Psch;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+05010006;Erfassung der Einbaubed Einbaus;1,0;Psch;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+05010007;Frostschutzschicht herstellen Bk100 bis Bk1,0*0/32 URA+Einbaudoku*... Freitext ... Abrechng. Auftrag;650,0;m3;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+05010008;Asphalttragsch. aus AC 22 T S herst Bk100*Dicke 18 cm*... Freitext ...;3400,0;m2;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+05010009;Bitumenemulsion aufsprühen Bk100-Bk3,2*Asphalt frisch Rampenspritzgerät*C60BP4-S Menge 300 g/m2*vor A.bindersch.;3400,0;m2;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+05010010;Asphaltbindersch.a.SMA 16 B S herst Bk100*Dicke 8 cm*... Freitext ... Kategorie C 95/1*... Freitext ...;3400,0;m2;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+05010011;Bitumenemulsion aufsprühen Bk100-Bk3,2*Asphalt frisch Rampenspritzgerät*C60BP4-S Menge 250 g/m2*vor A.deckschicht;3400,0;m2;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+05010012;Asphaltdecksch. aus SMA11 DS herst. Bk100*Dicke 3,5 cm;3400,0;m2;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+05010013;Abstumpfungsmaßnahme durchführen bit.LFK 1/3*Gestein wie Decke ... Freitext ...*maschinell;3400,0;m2;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+05010014;Anschluss a. Fuge m. Fugenm. herst. Längs-/Querfuge*Deckschicht Tiefe 35 mm*Breite 10 mm Fugenmasse N2;600,0;m;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+05010015;Anschluss a. Fuge m. Fugenm. herst. ... Freitext ...*Deckschicht Tiefe 35 mm*Breite 10 mm Fugenmasse N2;200,0;m;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+05010016;Erschwernis infolge Einfassungen Erschwer. gesamt*Asphaltbefestig.;600,0;m;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+05010017;Unterlage reinigen Asphaltbefestig.*selb.aufn.Kehrm.;3000,0;m2;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+05020001;Straßenablauf ausbauen BetonFT, teilw.*Tiefe ü1,25-1,75m StrA in bef. Fl.*Ausbau verwerten;11,0;St;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+05020002;Straßenablauf einbauen Boden 2a/Muffe 3a*Schaft Form 5b Aufl-Ring 10a*Aufl. C 8/10,10cm;2,0;St;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+05020003;Aufsatz f. Straßenablauf aufsetzen 500x500, D, Begu*Scharnier Sicher. dämpf.Einlage*Zinkeimer A 2 Höhe planmäßig*Mörtel M20;2,0;St;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+05020004;Schachtteil ausbauen ... Freitext ...*Schacht sichern Ausbau verwerten;10,0;St;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+05020005;Stahl-Überfahrplatte verlegen.;10,0;St;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+05020006;Schacht ausbauen DU 1,00 - 1,50 m*Betonfertigteile Tiefe bis 1,25 m*Ausbau verwerten;2,0;St;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+05020007;Fertigteil-Schacht herst.,m.Erdarb. BFT Steig. 1212*DU 1000 mm T ü. 1,00-2,00 m*Aufl. C 8/10,10cm Durchlaufrinnen*eing. verd. Bod. ... Freitext ...;2,0;St;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+05020008;Betonauflagering einbauen Höhe 100 mm*Mörtel M20;4,0;St;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+05020009;Betonauflagering einbauen Rg.,verschiebsich*Höhe 60 mm Mörtel M20;2,0;St;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+05020010;Schachtabdeckung aufsetzen DIN 19584, D, G*m. Schmutzfänger Deckel/Einl.+Rieg*Höhe Zug um Zug Mörtel M20;2,0;St;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+05020011;Entwässerungsrohrleitung abbrechen Rohr DN bis 250*Beton-Rohr Tiefe bis 1,25 m*Ausb. verwerten;20,0;m;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+05020012;Entwässerungsrohrleitung verfüllen. DN ü. 150 - 250*FließBn.m.Quellz. Leitung reinigen*Räumg. verwerten;15,0;m;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+05020013;Asphaltaufkantung herstellen Ausf. zusammen*... Freitext ...;100,0;m;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+05020014;Fundamentgraben herstellen SoB*... Freitext ... ... Freitext ...*... Freitext ...;160,0;m;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+05020015;Schlitzrinne mit Innengefälle;380,0;m;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+05020016;Schlitzrinne mit Kontrollöffnung;80,0;m;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+05020017;Endscheiben liefern und einbauen;4,0;St;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+05020018;Zulage - Ablauf PEHD DA 225-SDR 17;20,0;St;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+05020019;Bedienschlüssel  liefern;4,0;St;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+05020020;Anschlussleitung herstellen Rohr DN 200*PE-HD-Rohr Rohrverb.Wahl AN*Bettung Typ 1 T ü. 1,25-1,75 m*Überdeckg.ü.1-2 m LM 1, Sta.prüf.;50,0;m;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+05020021;Leitungszone verfüllen Boden liefern*Rohr DN 200;50,0;m;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+05020022;Schachtanschluss herstellen (Zul.) Rohr DN 200*Kunststoff-Rohr Betonfertigteile*Öffnung herst. Anschluss+Gelenk;8,0;St;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+05020023;Formstück einbauen (Zul.) Abzweig DN 200*Kunststoff-Rohr Rohr DN 200;8,0;St;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+05020024;Formstück einbauen (Zul.) Teller DN 200*Kunststoff-Rohr Rohr DN 200;8,0;St;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+05020025;Formstück einbauen (Zul.) Bogen DN 200*Kunststoff-Rohr Rohr DN 200;20,0;St;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+05020026;Anschluss a. Fuge m. Fugenm. herst. versch.Randfugen*Deckschicht Tiefe 40 mm*Breite 15 mm Verf. mit Ufst.*Fugenmasse N2;920,0;m;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+05030001;Bordsteine aufnehmen. ... Freitext ...*Fund. 10-20/R-St. ... Freitext ...;200,0;m;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+05030002;Fundamentgraben herstellen SOB*F-Breite bis 30cm ... Freitext ...*... Freitext ... Ü-Aush. Verw. AN;20,0;m;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+05030003;Bordstein aus Beton setzen BSt. FB 20x20 cm*gerader Stein bis 10 cm unt. OK*F-beton 12 MPa;20,0;m;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+05030004;Bordsteine trennen 18/30-15/22*BSt. schneiden BSt. trennen;10,0;St;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+06000001;Erfassung Altmarkierung;1,0;Psch;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+06000002;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*Stat. Arbeitsst. Über 4 bis 8 Std.*B. Tageslicht ... Freitext ...;1,0;St;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+06010001;Längsmarkierung entfernen durchg.Fb.begr.*Breite 0,15 m sonst. Markierung*a.Asphaltdecksch. Deckenerneuerung*feinstfräsen ... Freitext ...;500,0;m;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+06010002;Sonstige Markierung entfernen Sperrfläche*... Freitext ... sonst. Markierung*a.Asphaltdecksch. Deckenerneuerung*feinstfräsen ... Freitext ...;80,0;m;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+06020001;Markierungsfläche trocknen;120,0;m2;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+06020002;Markierungsfläche reinigen ... Freitext ...;120,0;m2;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+06030001;Längsmarkierung Typ II herstellen durchg.Fb.begr.*Breite 0,15 m mit Vormarkierung*Kaltplastikmasse Aggl.unregelm.*P 7 grobstr. Decke;500,0;m;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+06030002;Sperrflächenmarkierung Typ II herst Breite 0,50 m*mit Vormarkierung Kaltplastikmasse*P 7 grobstr. Decke;80,0;m;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+06040001;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*Stat. Arbeitsst. Über 4 bis 8 Std.*B. Tageslicht ... Freitext ...;2,0;St;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+06040002;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*Stat. Arbeitsst. Über 4 bis 8 Std.*B. Dunkelheit ... Freitext ...;2,0;St;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+06050001;Prüfung fertige Leistung Neuzustand Typ II*Kaltplastikmasse bis 1 km;2,0;St;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+07000001;Verkehrsschild abbauen Größe bis 1,1 m2*Rohrpf. bis 76,1 Fundament entf.*neben d. Fahrbahn säubern u. lagern*Geeig.Boden verf.;1,0;St;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+07000002;Verkehrsschild abbauen Gr.>1,1  b.5 m2*2Rohrpf.>76,1-108 Fundament entf.*neben d. Fahrbahn säubern u. lagern*Geeig.Boden verf.;1,0;St;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+07000003;Rohrpfosten aufstellen Länge>2000-2500mm*R.St. 76,1/2,9 mm Bodenh.Unterl. AG*... Freitext ... in Bodenhülse;2,0;St;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+07000004;Ausrüstungsteil f. Rohrpf. liefern Bodenhülse Graug.*F.Rohrd. 76,1 mm Verlänger. 700 mm*liefern, ablad.AN;2,0;St;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83
+07000005;Ausrüstungsteil f. Rohrpf. liefern Blindstopfen*F.Rohrd. 76,1 mm liefern, ablad.AN;2,0;St;gaeb-flat;Leistungsverzeichnis/Los 1 FINAL .D83

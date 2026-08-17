@@ -1,0 +1,42 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+00000001;Prüfung fertige Leistung Neuzustand Typ II als Aggl.*Kaltspritzplastik über 1-10 km;1,0;St;gaeb-flat;Leistungsverzeichnis/P-2026-0064 GEAB Datei.D83
+00000002;Prüfung fertige Leistung Neuzustand Typ II als Aggl.*Kaltplastikmasse bis 1 km;1,0;St;gaeb-flat;Leistungsverzeichnis/P-2026-0064 GEAB Datei.D83
+00010001;Koordinierung;1,0;Psch;gaeb-flat;Leistungsverzeichnis/P-2026-0064 GEAB Datei.D83
+00010002;Gefährdungseinschätzung SiGeKo;1,0;Psch;gaeb-flat;Leistungsverzeichnis/P-2026-0064 GEAB Datei.D83
+00010003;Zuarbeit Si-Ge-Plan;1,0;Psch;gaeb-flat;Leistungsverzeichnis/P-2026-0064 GEAB Datei.D83
+00020001;BWS Baufeld vor Bauarbeiten;1,0;Psch;gaeb-flat;Leistungsverzeichnis/P-2026-0064 GEAB Datei.D83
+00020002;BWS Baufeld nach Bauarbeiten;1,0;Psch;gaeb-flat;Leistungsverzeichnis/P-2026-0064 GEAB Datei.D83
+00030001;Bauzeitenplan liefern und fortschreiben;1,0;Psch;gaeb-flat;Leistungsverzeichnis/P-2026-0064 GEAB Datei.D83
+00030002;Suchgraben herstellen Tiefe bis 1,25 m Handschachtung;10,0;m3;gaeb-flat;Leistungsverzeichnis/P-2026-0064 GEAB Datei.D83
+01000001;Baustelle einrichten Sämtl.LV-Abschn.*Zufahrt vorh.;1,0;Psch;gaeb-flat;Leistungsverzeichnis/P-2026-0064 GEAB Datei.D83
+01000002;Aufwendungen zusätzl. Einrichten;1,0;Psch;gaeb-flat;Leistungsverzeichnis/P-2026-0064 GEAB Datei.D83
+01000003;Baustelle räumen Sämtl. LV-Abschn.;1,0;Psch;gaeb-flat;Leistungsverzeichnis/P-2026-0064 GEAB Datei.D83
+01000004;Aufwendungen zusätzl. Räumen;1,0;Psch;gaeb-flat;Leistungsverzeichnis/P-2026-0064 GEAB Datei.D83
+02000001;Verkehrsrechtliche Anordnung;1,0;Psch;gaeb-flat;Leistungsverzeichnis/P-2026-0064 GEAB Datei.D83
+02000002;Kontrolle d. Verkehrss. an Arb.st. zwei bzw. einmal*... Freitext ...;70,0;d;gaeb-flat;Leistungsverzeichnis/P-2026-0064 GEAB Datei.D83
+02010001;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*bew. Arbeitsst. über 4 bis 8 Std.*bei Tageslicht Anordnung n. Unt.;1,0;St;gaeb-flat;Leistungsverzeichnis/P-2026-0064 GEAB Datei.D83
+02010002;Verkehrsschild aufbauen u. abbauen ... Freitext ...*Größe 2 Typ RA2, C*... Freitext ... Höhe 2,00 m;20,0;St;gaeb-flat;Leistungsverzeichnis/P-2026-0064 GEAB Datei.D83
+02010003;Verkehrsschild vorhalten wie Vorposition;1400,0;Std;gaeb-flat;Leistungsverzeichnis/P-2026-0064 GEAB Datei.D83
+03000001;Markierungsfläche reinigen Saugkehrwagen;2030,0;m2;gaeb-flat;Leistungsverzeichnis/P-2026-0064 GEAB Datei.D83
+03000002;Markierungsfläche trocknen;2030,0;m2;gaeb-flat;Leistungsverzeichnis/P-2026-0064 GEAB Datei.D83
+03000003;Längsmarkierung Typ II herstellen durchg.Fb.begr.*Breite 0,12 m mit Vormarkierung*Kaltspritzplastik grobe Nachstreum.*... Freitext ... P 7*... Freitext ...;8430,0;m;gaeb-flat;Leistungsverzeichnis/P-2026-0064 GEAB Datei.D83
+03000004;Längsmarkierung Typ II herstellen Blockmark. 1 zu 1*Breite 0,25 m mit Vormarkierung*Kaltplastikmasse grobe Nachstreum.*... Freitext ... P 7*... Freitext ...;15,0;m;gaeb-flat;Leistungsverzeichnis/P-2026-0064 GEAB Datei.D83
+03010001;Rohrpfosten aufstellen Länge>2000-2500mm*R.St. 60,3/2,0 mm ... Freitext ...*... Freitext ... Aushub i.Bst.vert*Preisänd. Pfosten;6,0;St;gaeb-flat;Leistungsverzeichnis/P-2026-0064 GEAB Datei.D83
+03010002;Rohrpfosten aufstellen Länge>3000-3500mm*R.St. 60,3/2,0 mm ... Freitext ...*... Freitext ... Aushub i.Bst.vert*Preisänd. Pfosten;3,0;St;gaeb-flat;Leistungsverzeichnis/P-2026-0064 GEAB Datei.D83
+03010003;Rohrpfosten aufstellen Länge>3500-4000mm*R.St. 60,3/2,0 mm ... Freitext ...*... Freitext ... Aushub i.Bst.vert*Preisänd. Pfosten;21,0;St;gaeb-flat;Leistungsverzeichnis/P-2026-0064 GEAB Datei.D83
+03010004;Rohrpfosten aufstellen Länge>4000-4500mm*R.St. 76,1/2,0 mm ... Freitext ...*... Freitext ... Aushub i.Bst.vert*Preisänd. Pfosten;2,0;St;gaeb-flat;Leistungsverzeichnis/P-2026-0064 GEAB Datei.D83
+03010005;Grasstopp-Platte liefern und einb. Kunststoff-RC*... Freitext ... DU min.500 mm*Verbundelement;32,0;St;gaeb-flat;Leistungsverzeichnis/P-2026-0064 GEAB Datei.D83
+03010006;Verkehrsschild anbringen ... Freitext ...*... Freitext ... einseitig*... Freitext ... 3 mm dick*St.Rohrsch.PlanII UK Schild ab 2 m;6,0;St;gaeb-flat;Leistungsverzeichnis/P-2026-0064 GEAB Datei.D83
+03010007;Verkehrsschild anbringen ... Freitext ...*... Freitext ... einseitig*... Freitext ... 3 mm dick*St.Rohrsch.PlanII UK Schild ab 2 m;6,0;St;gaeb-flat;Leistungsverzeichnis/P-2026-0064 GEAB Datei.D83
+03010008;Verkehrsschild anbringen ... Freitext ...*... Freitext ... einseitig*... Freitext ... 3 mm dick*St.Rohrsch.PlanII UK Schild ab 2 m;7,0;St;gaeb-flat;Leistungsverzeichnis/P-2026-0064 GEAB Datei.D83
+03010009;Verkehrsschild anbringen ... Freitext ...*Größe 2 einseitig*... Freitext ... 3 mm dick*St.Rohrsch.PlanII UK Schild ab 2 m;4,0;St;gaeb-flat;Leistungsverzeichnis/P-2026-0064 GEAB Datei.D83
+03010010;Verkehrsschild anbringen ... Freitext ...*Größe 2 einseitig*... Freitext ... 3 mm dick*St.Rohrsch.PlanII UK Schild ab 2 m;3,0;St;gaeb-flat;Leistungsverzeichnis/P-2026-0064 GEAB Datei.D83
+03010011;Verkehrsschild anbringen ... Freitext ...*Größe 2 einseitig*... Freitext ... 3 mm dick*St.Rohrsch.PlanII UK Schild ab 2 m;2,0;St;gaeb-flat;Leistungsverzeichnis/P-2026-0064 GEAB Datei.D83
+03010012;Verkehrsschild anbringen ... Freitext ...*Größe 2 einseitig*... Freitext ... 3 mm dick*St.Rohrsch.PlanII UK Schild ab 2 m;3,0;St;gaeb-flat;Leistungsverzeichnis/P-2026-0064 GEAB Datei.D83
+03010013;Verkehrsschild anbringen ... Freitext ...*Größe 2 einseitig*... Freitext ... 3 mm dick*St.Rohrsch.PlanII UK Schild ab 2 m;2,0;St;gaeb-flat;Leistungsverzeichnis/P-2026-0064 GEAB Datei.D83
+03010014;Verkehrsschild anbringen ... Freitext ...*Größe 2 einseitig*... Freitext ... 3 mm dick*St.Rohrsch.PlanII UK Schild ab 2 m;2,0;St;gaeb-flat;Leistungsverzeichnis/P-2026-0064 GEAB Datei.D83
+03010015;Verkehrsschild anbringen ... Freitext ...*Größe 2 einseitig*... Freitext ... 3 mm dick*St.Rohrsch.PlanII UK Schild ab 2 m;1,0;St;gaeb-flat;Leistungsverzeichnis/P-2026-0064 GEAB Datei.D83
+03010016;Verkehrsschild anbringen ... Freitext ...*Größe 2 einseitig*... Freitext ... 3 mm dick*St.Rohrsch.PlanII UK Schild ab 2 m;2,0;St;gaeb-flat;Leistungsverzeichnis/P-2026-0064 GEAB Datei.D83
+03010017;Verkehrsschild anbringen ... Freitext ...*Größe 2 einseitig*... Freitext ... 3 mm dick*St.Rohrsch.PlanII UK Schild ab 2 m;5,0;St;gaeb-flat;Leistungsverzeichnis/P-2026-0064 GEAB Datei.D83
+03010018;Verkehrsschild anbringen ... Freitext ...*Größe 2 einseitig*... Freitext ... 3 mm dick*St.Rohrsch.PlanII UK Schild ab 2 m;1,0;St;gaeb-flat;Leistungsverzeichnis/P-2026-0064 GEAB Datei.D83
+03010019;Verkehrsschild anbringen ... Freitext ...*Größe 2 einseitig*... Freitext ... 3 mm dick*St.Rohrsch.PlanII UK Schild ab 2 m;1,0;St;gaeb-flat;Leistungsverzeichnis/P-2026-0064 GEAB Datei.D83

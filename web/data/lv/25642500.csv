@@ -1,0 +1,27 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+00000001;Verkehrsrechtliche Anordnung einh. gebührenfrei;1,0;Psch;gaeb-flat;Leistungsverzeichnis/Los 2 236-26-0041.D83
+00000002;Verkehrssich. läng. Dauer aufbauen Arbeitsstelle*VZ-Plan des AG ... Freitext ...*... Freitext ... Anordnung Unt. AG;1,0;Psch;gaeb-flat;Leistungsverzeichnis/Los 2 236-26-0041.D83
+00000003;Verkehrssich. läng. Dauer vorhalten wie Vorposition;30,0;d;gaeb-flat;Leistungsverzeichnis/Los 2 236-26-0041.D83
+00000004;Verkehrssich. läng. Dauer abbauen ... Freitext ...;1,0;Psch;gaeb-flat;Leistungsverzeichnis/Los 2 236-26-0041.D83
+00000005;Verkehrsschild aufstellen ... Freitext ...*Retroreflkt.RA 2, Aufbau B Aufstv. Wahl AN;10,0;St;gaeb-flat;Leistungsverzeichnis/Los 2 236-26-0041.D83
+00000006;Verkehrssch.komb. aufb.,abb.,vorh. VSch + ZSch H3*Ronde,Dreie.Quad. Größe 3*Typ RA2*Höhe 1,50 m ... Freitext ...;2,0;St;gaeb-flat;Leistungsverzeichnis/Los 2 236-26-0041.D83
+00000007;Verkehrslenkungst. aufb.,abb.,vorh. Z.501b.551 m.Zus.*Typ RA2 Höhe 1,50 m*... Freitext ...;14,0;St;gaeb-flat;Leistungsverzeichnis/Los 2 236-26-0041.D83
+00000008;Kontrolle d. Verkehrss. an Arb.st. zweimal täglich*elektron. Gerät;31,0;d;gaeb-flat;Leistungsverzeichnis/Los 2 236-26-0041.D83
+00000009;Mehraufwand Baustelle mit mehreren;1,0;Psch;gaeb-flat;Leistungsverzeichnis/Los 2 236-26-0041.D83
+00010001;Markierungsfläche reinigen Wasserhochdruck;420,0;m2;gaeb-flat;Leistungsverzeichnis/Los 2 236-26-0041.D83
+00010002;Markierungsfläche trocknen;420,0;m2;gaeb-flat;Leistungsverzeichnis/Los 2 236-26-0041.D83
+00010003;Längsmarkierung Typ II herstellen durchg. Fb.begr.*Breite 0,15 m Kaltplastikmasse*P 7 grobstr. Decke*... Freitext ...;2000,0;m;gaeb-flat;Leistungsverzeichnis/Los 2 236-26-0041.D83
+00010004;Längsmarkierung Typ II herstellen Str/L 1zu2 Leitl.*Breite 0,15 m Kaltplastikmasse*P 7 grobstr. Decke*... Freitext ...;800,0;m;gaeb-flat;Leistungsverzeichnis/Los 2 236-26-0041.D83
+00020001;Trans.Schutzeinr.aufb.,abb.u.vorh. Arb.st./fl. Verk.*Aufhaltest. T3 Wirkungsber.maxW2*... Freitext ... 2 AEK*... Freitext ...;1500,0;m;gaeb-flat;Leistungsverzeichnis/Los 2 236-26-0041.D83
+00020002;Transport. Schutzeinr. vorhalten wie Vorposition;46500,0;md;gaeb-flat;Leistungsverzeichnis/Los 2 236-26-0041.D83
+00020003;AEK f. transp. Schutzeinr. aufb. ... Freitext ...*Absenkung;6,0;St;gaeb-flat;Leistungsverzeichnis/Los 2 236-26-0041.D83
+00020004;AEK vorhalten wie Vorposition;186,0;Std;gaeb-flat;Leistungsverzeichnis/Los 2 236-26-0041.D83
+00020005;Temporären Anpralldämpfer aufbauen ... Freitext ...;2,0;St;gaeb-flat;Leistungsverzeichnis/Los 2 236-26-0041.D83
+00020006;Temporären Anpralldämpfer vorhalten ... Freitext ...;62,0;Std;gaeb-flat;Leistungsverzeichnis/Los 2 236-26-0041.D83
+00020007;Adapter f.tr.Schutzeinr. aufb.(Zul) ... Freitext ...*... Freitext ... ... Freitext ...;4,0;St;gaeb-flat;Leistungsverzeichnis/Los 2 236-26-0041.D83
+00020008;Adapter vorhalten wie Vorposition;124,0;Std;gaeb-flat;Leistungsverzeichnis/Los 2 236-26-0041.D83
+00030001;Absp.g.,Warneinr. aufb. u. abb. Pfeilbake doppels*Typ RA2 zweis.Dauerlicht*Versorg. Wahl AN;120,0;St;gaeb-flat;Leistungsverzeichnis/Los 2 236-26-0041.D83
+00030002;Absp.g.,Warneinr. vorhalten wie Vorposition;3720,0;Std;gaeb-flat;Leistungsverzeichnis/Los 2 236-26-0041.D83
+00030003;Absp.g.,Warneinr. aufb. u. abb. Pfeilbake doppels*Typ RA2;40,0;St;gaeb-flat;Leistungsverzeichnis/Los 2 236-26-0041.D83
+00030004;Absp.g.,Warneinr. vorhalten wie Vorposition;4800,0;Std;gaeb-flat;Leistungsverzeichnis/Los 2 236-26-0041.D83
+00040001;Videobefahrung durch;1,0;St;gaeb-flat;Leistungsverzeichnis/Los 2 236-26-0041.D83

@@ -1,0 +1,76 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+0001;Kupferrohr, 8 x 1;2,0;m;gaeb;3940719.x83
+0002;Kupferrohr, 12 x 1;338,0;m;gaeb;3940719.x83
+0003;Kupferrohr, 15 x 1;149,0;m;gaeb;3940719.x83
+0004;Kupferrohr, 22 x 1;74,0;m;gaeb;3940719.x83
+0005;Kupferrohr, 28 x 1,5;4,0;m;gaeb;3940719.x83
+0006;Kupferrohr, 35 x 1,5;32,0;m;gaeb;3940719.x83
+0007;Kupferrohr, 42 x 1,5;15,0;m;gaeb;3940719.x83
+0008;Bogen, 8 x 1, 45° bis 90°;3,0;St;gaeb;3940719.x83
+0009;Bogen, 12 x 1, 45° bis 90°;91,0;St;gaeb;3940719.x83
+0010;Bogen, 15 x 1, 45° bis 90°;48,0;St;gaeb;3940719.x83
+0011;Bogen, 22 x 1, 45° bis 90°;30,0;St;gaeb;3940719.x83
+0012;Bogen, 28 x 1,5, 45° bis 90°;4,0;St;gaeb;3940719.x83
+0013;Bogen, 35 x 1,5, 45° bis 90°;6,0;St;gaeb;3940719.x83
+0014;Bogen, 42 x 1,5, 45° bis 90°;5,0;St;gaeb;3940719.x83
+0015;T-Stück, 8 x 1;1,0;St;gaeb;3940719.x83
+0016;T-Stück, 12 x 1;31,0;St;gaeb;3940719.x83
+0017;T-Stück, 15 x 1;12,0;St;gaeb;3940719.x83
+0018;T-Stück, 22 x 1;6,0;St;gaeb;3940719.x83
+0019;T-Stück, 28 x 1,5;1,0;St;gaeb;3940719.x83
+0020;T-Stück, 35 x 1,5;1,0;St;gaeb;3940719.x83
+0021;T-Stück, 42 x 1,5;1,0;St;gaeb;3940719.x83
+0022;Reduzierung, 12 x 1 - 8 x 1;1,0;St;gaeb;3940719.x83
+0023;Reduzierung, 15 x 1 - 12 x 1;23,0;St;gaeb;3940719.x83
+0024;Reduzierung, 22 x 1 - 15 x 1;8,0;St;gaeb;3940719.x83
+0025;Reduzierung, 28 x 1,5 - 22 x 1;1,0;St;gaeb;3940719.x83
+0026;Reduzierung, 35 x 1,5 - 28 x 1,5;2,0;St;gaeb;3940719.x83
+0027;Reduzierung, 42 x 1,5 - 35 x 1,5;2,0;St;gaeb;3940719.x83
+0028;Kennzeichnung des Rohrnetzes;50,0;St;gaeb;3940719.x83
+0029;Kennzeichnungsschild mit Halter;10,0;St;gaeb;3940719.x83
+0030;Anschluss an bestehende med. Gasleitung;2,0;St;gaeb;3940719.x83
+0031;Anschluss an Bestandsverteiler;1,0;psch;gaeb;3940719.x83
+0001;Bereichskontrolleinheit 2-fach Druckgas;3,0;St;gaeb;3940719.x83
+0002;Bereichskontrolleinheit 4-fach Druckgas;3,0;St;gaeb;3940719.x83
+0003;Brandschutzkassette für Bereichskontrolleinheit;6,0;St;gaeb;3940719.x83
+0002;Gasentnahmestelle Sauerstoff (O2) für Wandversorgungseinheit;30,0;St;gaeb;3940719.x83
+0003;Gasentnahmestelle Druckluft (DL) für Wandversorgungseinheit;30,0;St;gaeb;3940719.x83
+0004;Gasentnahmestelle Sauerstoff (O2) für Deckenversorgungseinheit;3,0;St;gaeb;3940719.x83
+0005;Gasentnahmestelle Druckluft (DL) für Deckenversorgungseinheit;6,0;St;gaeb;3940719.x83
+0001;Rohraufhängung als Rohrschelle, aus verzinktem Stahl, mit schalldämmenden Einlagen, Anforderungen entsprechend DIN 4109-1, Länge Aufhängung bis 0,5 m, Befestigung gelenkig, mit Gewindestäben, mit bauaufsichtlich zugelassenen Dübeln, einschl. Bohrarbeiten, Rohr aus Kupfer, DN 6, Arbeitshöhe des Monta;2,0;St;gaeb;3940719.x83
+0002;Rohraufhängung als Rohrschelle, aus verzinktem Stahl, mit schalldämmenden Einlagen, Anforderungen entsprechend DIN 4109-1, Länge Aufhängung bis 0,5 m, Befestigung gelenkig, mit Gewindestäben, mit bauaufsichtlich zugelassenen Dübeln, einschl. Bohrarbeiten, Rohr aus Kupfer, DN 10, Arbeitshöhe des Mont;225,0;St;gaeb;3940719.x83
+0003;Rohraufhängung als Rohrschelle, aus verzinktem Stahl, mit schalldämmenden Einlagen, Anforderungen entsprechend DIN 4109-1, Länge Aufhängung bis 0,5 m, Befestigung gelenkig, mit Gewindestäben, mit bauaufsichtlich zugelassenen Dübeln, einschl. Bohrarbeiten, Rohr aus Kupfer, DN 12, Arbeitshöhe des Mont;99,0;St;gaeb;3940719.x83
+0004;Rohraufhängung als Rohrschelle, aus verzinktem Stahl, mit schalldämmenden Einlagen, Anforderungen entsprechend DIN 4109-1, Länge Aufhängung bis 0,5 m, Befestigung gelenkig, mit Gewindestäben, mit bauaufsichtlich zugelassenen Dübeln, einschl. Bohrarbeiten, Rohr aus Kupfer, DN 20, Arbeitshöhe des Mont;49,0;St;gaeb;3940719.x83
+0005;Rohraufhängung als Rohrschelle, aus verzinktem Stahl, mit schalldämmenden Einlagen, Anforderungen entsprechend DIN 4109-1, Länge Aufhängung bis 0,5 m, Befestigung gelenkig, mit Gewindestäben, mit bauaufsichtlich zugelassenen Dübeln, einschl. Bohrarbeiten, Rohr aus Kupfer, DN 25, Arbeitshöhe des Mont;3,0;St;gaeb;3940719.x83
+0006;Rohraufhängung als Rohrschelle, aus verzinktem Stahl, mit schalldämmenden Einlagen, Anforderungen entsprechend DIN 4109-1, Länge Aufhängung bis 0,5 m, Befestigung gelenkig, mit Gewindestäben, mit bauaufsichtlich zugelassenen Dübeln, einschl. Bohrarbeiten, Rohr aus Kupfer, DN 32, Arbeitshöhe des Mont;21,0;St;gaeb;3940719.x83
+0007;Rohraufhängung als Rohrschelle, aus verzinktem Stahl, mit schalldämmenden Einlagen, Anforderungen entsprechend DIN 4109-1, Länge Aufhängung bis 0,5 m, Befestigung gelenkig, mit Gewindestäben, mit bauaufsichtlich zugelassenen Dübeln, einschl. Bohrarbeiten, Rohr aus Kupfer, DN 40, Arbeitshöhe des Mont;10,0;St;gaeb;3940719.x83
+0001;Notversorgung und Noteinspeisung für medizinische Gase;8,0;h;gaeb;3940719.x83
+0002;Gasartprüfung, Dichtheitsprüfung und Lieferleistungsprüfung medizinischer Gasentnahmestellen;8,0;St;gaeb;3940719.x83
+0003;Konformitätserklärung für die Medizingasanlage;1,0;psch;gaeb;3940719.x83
+0004;Dichtheits- und Festigkeitsprüfung Medizingasleitungen;8,0;St;gaeb;3940719.x83
+0005;Spülung Medizingas-Rohrnetz;8,0;St;gaeb;3940719.x83
+0006;Prüf- und Formiergase für Medizingasanlage;1,0;psch;gaeb;3940719.x83
+0007;Mobile Notversorgungseinheit für medizinische Gase;1,0;St;gaeb;3940719.x83
+0001;Brandschutzabschottung von Rohrleitung aus Kupfer, mit allgemeinem bauaufsichtlichen Prüfzeugnis/allgemeiner bauaufsichtlicher Zulassung, Feuerwiderstandsklasse R 90 DIN 4102-11,;2,0;St;gaeb;3940719.x83
+0002;Brandschutzabschottung von Rohrleitung aus Kupfer, mit allgemeinem bauaufsichtlichen Prüfzeugnis/allgemeiner bauaufsichtlicher Zulassung, Feuerwiderstandsklasse R 90 DIN 4102-11,;2,0;St;gaeb;3940719.x83
+0003;Brandschutzabschottung von Rohrleitung aus Kupfer, mit allgemeinem bauaufsichtlichen Prüfzeugnis/allgemeiner bauaufsichtlicher Zulassung, Feuerwiderstandsklasse R 90 DIN 4102-11,;6,0;St;gaeb;3940719.x83
+0004;Brandschutzabschottung von Rohrleitung aus Kupfer, mit allgemeinem bauaufsichtlichen Prüfzeugnis/allgemeiner bauaufsichtlicher Zulassung, Feuerwiderstandsklasse R 90 DIN 4102-11,;1,0;St;gaeb;3940719.x83
+0001;Kernbohrung, Untergrundfläche senkrecht, aus Stahlbeton, Normalbeton, Bohrdurchmesser über 25 bis 50 mm, Bohrtiefe über 20 bis 25 cm, nicht schadstoffbelastet,;6,0;St;gaeb;3940719.x83
+0002;Kernbohrung, Untergrundfläche senkrecht, aus Stahlbeton, Normalbeton, Bohrdurchmesser über 50 bis 100 mm, Bohrtiefe über 20 bis 25 cm, nicht schadstoffbelastet,;1,0;St;gaeb;3940719.x83
+0001;Durchbruch schließen, Ausführung in Wandfläche,;6,0;St;gaeb;3940719.x83
+0002;Durchbruch schließen, Ausführung in Wandfläche,;1,0;St;gaeb;3940719.x83
+0001;Werk- und Montageplanung;1,0;psch;gaeb;3940719.x83
+0002;Erstellen der Bestandsunterlagen;1,0;psch;gaeb;3940719.x83
+0001;Baustelle für sämtliche, in der Leistungsbeschreibung aufgeführten Leistungen einrichten.;1,0;St;gaeb;3940719.x83
+0002;Baustelleneinrichtung für sämtliche aufgeführte Leistungen vorhalten und betreiben.;5,0;StMt;gaeb;3940719.x83
+0003;Baustelleneinrichtung für sämtliche aufgeführte Leistungen, innerhalb der ausgewiesenen Flächen umsetzen.;1,0;St;gaeb;3940719.x83
+0004;Baustelle für sämtliche, in der Leistungsbeschreibung aufgeführten Leistungen räumen.;1,0;St;gaeb;3940719.x83
+0005;Container/Lager;5,0;Wo;gaeb;3940719.x83
+0001;Meister;5,0;h;gaeb;3940719.x83
+0002;Obermonteur;5,0;h;gaeb;3940719.x83
+0003;Monteur;10,0;h;gaeb;3940719.x83
+0004;Helfer;15,0;h;gaeb;3940719.x83
+0001;Aufbauen fahrbares Gerüst,;1,0;St;gaeb;3940719.x83
+0002;Abbauen fahrbares Gerüst,;1,0;St;gaeb;3940719.x83
+0003;Umsetzen fahrbares Gerüst,;1,0;St;gaeb;3940719.x83
+0004;Gebrauchsüberlassung für fahrbares Gerüst,;4,0;StWo;gaeb;3940719.x83

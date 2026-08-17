@@ -1,0 +1,28 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+10;Monatliche Bereitstellung und Betrieb eines Hauptbaustromverteilers gemäß DIN VDE 0100-704.;20,0;St;gaeb;4551 lv baustrom.x83
+20;Monatliche Bereitstellung und Betrieb von bis zu 3  Baustromverteilern gemäß DIN VDE 0100-704.;36,0;St;gaeb;4551 lv baustrom.x83
+30;Monatliche Bereitstellung und Betrieb von bis zu 3  Baustromverteilern gemäß DIN VDE 0100-704.;74,0;St;gaeb;4551 lv baustrom.x83
+40;Der Hauptbaustromverteiler ist während der gesamten Bauzeit monatlich zu prüfen und bei Bedarf instand zu setzen.;20,0;St;gaeb;4551 lv baustrom.x83
+50;Alle auf der Baustelle eingesetzten Baustromverteiler sind während der gesamten Bauzeit monatlich zu prüfen und bei Bedarf instand zu setzen. Die Prüfung umfasst eine Sichtkontrolle auf Verschmutzungen und äußerliche mechanische Beschädigungen sowie die Überprüfung der Kabeleinführungen. Erforderlic;110,0;St;gaeb;4551 lv baustrom.x83
+60;Der Baustromverteiler ist nach Bedarf im Bauablauf und nach Anweisung der Bauleitung zurückzubauen, an anderer Stelle wieder zu errichten und in Betrieb zu nehmen. Die Position umfasst das fachgerechte Versetzen des Verteilers einschließlich Inbetriebnahme sowie die erforderliche Anpassung der Zulei;5,0;St;gaeb;4551 lv baustrom.x83
+70;Diese Position beinhaltet den fachgerechten Abbau des Hauptbaustromverteilers sowie sämtlicher weiterer Baustromverteiler nach Abschluss der Bauarbeiten.;10,0;St;gaeb;4551 lv baustrom.x83
+80;Gummischlauchleitung, DIN VDE 0250-812, H07RN-F 5x 35mm²;50,0;m;gaeb;4551 lv baustrom.x83
+90;Gummischlauchleitung, DIN VDE 0250-812, H07RN-F 5x 16mm²;250,0;m;gaeb;4551 lv baustrom.x83
+100;Gummischlauchleitung, DIN VDE 0250-812, H07RN-F 5x 10mm²;75,0;m;gaeb;4551 lv baustrom.x83
+110;Gummischlauchleitung, DIN VDE 0250-812, H07RN-F 3x 2,5mm;325,0;m;gaeb;4551 lv baustrom.x83
+120;schraubenlose Schneid-Klemm-Technik;20,0;St;gaeb;4551 lv baustrom.x83
+130;schraubenlose Schneid-Klemm-Technik;20,0;St;gaeb;4551 lv baustrom.x83
+140;schraubenlose Schneid-Klemm-Technik;13,0;St;gaeb;4551 lv baustrom.x83
+150;schraubenlose Schneid-Klemm-Technik;13,0;St;gaeb;4551 lv baustrom.x83
+160;schraubenlose Schneid-Klemm-Technik;2,0;St;gaeb;4551 lv baustrom.x83
+170;schraubenlose Schneid-Klemm-Technik;2,0;St;gaeb;4551 lv baustrom.x83
+180;Lieferung, Montage und Inbetriebnahme eines LED-Lichtbandes für die temporäre Baustellenbeleuchtung.;7,0;St;gaeb;4551 lv baustrom.x83
+190;Lieferung, Montage und Inbetriebnahme eines LED-Lichtbandes für die temporäre Baustellenbeleuchtung.;7,0;St;gaeb;4551 lv baustrom.x83
+200;Die Baubeleuchtung ist während der gesamten Bauzeit monatlich zu prüfen und bei Bedarf instand zu setzen. Die Prüfung umfasst eine Sichtkontrolle auf starke Verschmutzungen und äußerliche mechanische Beschädigungen sowie die Überprüfung der Kabeleinführungen. Erforderliche Maßnahmen zur Sicherstellu;20,0;St;gaeb;4551 lv baustrom.x83
+210;Versetzen eines LED-Lichtbandes bis zu 25 m Länge.;8,0;St;gaeb;4551 lv baustrom.x83
+220;Versetzen eines LED-Lichtbandes bis zu 50 m Länge.;4,0;St;gaeb;4551 lv baustrom.x83
+230;Demontage der gesamten temporären Baubeleuchtung einschließlich aller Befestigungen und Zuleitungen. Entsorgung nicht wiederverwendbarer Teile gemäß den geltenden Vorschriften.;1,0;psch;gaeb;4551 lv baustrom.x83
+240;für die Baubeleuchtung. 4 Klemmen, 2,5 mm²;10,0;St;gaeb;4551 lv baustrom.x83
+250;Liefern, montieren und betriebsfertig anschließen eines Wippschalters IP44 mit Beleuchtung, geeignet für die Aufputz-Installation. Der Schalter dient zur Schaltung der Baubeleuchtung je vorgegebenem Bereich.;15,0;St;gaeb;4551 lv baustrom.x83
+260;Stundenlohnarbeiten durch Monteur/-in auf Anordnung des AG ausführen, der Verrechnungssatz für die jeweilige Arbeitskraft umfasst sämtliche Aufwendungen wie Lohn- und Gehaltskosten, Lohn und Gehaltsnebenkosten, lohngebundene und lohnabhängige Kosten, sonstige Sozialkosten, Gemeinkosten, Wagnis und G;10,0;h;gaeb;4551 lv baustrom.x83
+270;Koordination des Anschlusses des Hauptstromverteilers an die Trafostation des Netzbetreibers. Die Leistung umfasst die vollständige Abstimmung mit dem zuständigen Versorgungsunternehmen, die Organisation und Begleitung der erforderlichen Arbeiten zur Herstellung des Netzanschlusses sowie die Koordin;1,0;psch;gaeb;4551 lv baustrom.x83

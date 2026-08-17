@@ -1,0 +1,164 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+00000001;SiGe-Plan erstellen;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+00000002;SiGe-Plan des AG fortschreiben;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+00000003;SiGe-Koordinator stellen.;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+00010001;Bohrkern entnehmen Kern-DU 15 cm*... Freitext ... Asphaltschicht*Verfül. Asphalt;16,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+00010002;Probegefäß liefern 10-l-Blecheimer;16,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+00020001;Deklarationsanalyse SoB;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+01000001;Baustelle einrichten Sämtl.LV-Abschn.*Zufahrt vorh.;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+01000002;Baustelleneinrichtung vorhalten;126,0;d;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+01000003;Baustelle räumen Sämtl. LV-Abschn.;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+02000001;Verkehrssich. läng. Dauer aufbauen Arbeitsstelle*... Freitext ... Anordnung Unt. AG*gebührenfrei;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+02000002;Verkehrssich. läng. Dauer vorhalten wie Vorposition;31,0;d;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+02000003;Verkehrssich. läng. Dauer abbauen;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+02000004;Verkehrssich. läng. Dauer aufbauen Arbeitsstelle*... Freitext ... Anordnung Unt. AG*gebührenfrei;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+02000005;Verkehrssich. läng. Dauer vorhalten wie Vorposition;92,0;d;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+02000006;Verkehrssich. läng. Dauer abbauen;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+02000007;Verkehrssich. läng. Dauer aufbauen Arbeitsstelle*... Freitext ... Anordnung Unt. AG*gebührenfrei;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+02000008;Verkehrssich. läng. Dauer vorhalten wie Vorposition;3,0;d;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+02000009;Verkehrssich. läng. Dauer abbauen;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+02000010;Transp. LSA f. Fußgänger;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+02000011;Transport. Lichtsignalanlage vorh. wie Vorposition;123,0;Std;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+02000012;Absp.g.,Warneinr. aufb. u. abb. Abspsch. 250x2000*Typ RA1 5 Strah.eins. rot*Versorg. Wahl AN;100,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+02000013;Absp.g.,Warneinr. vorhalten wie Vorposition;12600,0;Std;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+02000014;Kontrolle d. Verkehrss. an Arb.st. zweimal täglich*elektron. Gerät;126,0;d;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+02010001;Rollsplitt- / Gefahrstelle- /;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+02010002;Verk.schild aufb., abb., vorh. Ronde,Dreie.Quad.*Größe 2 Typ RA2*profilverstärkt ... Freitext ...*... Freitext ...;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+03000001;Asphaltbefestigung trennen Einzelfl.*schneiden ... Freitext ...;1000,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+03000002;Asphalt fräsen ADS*... Freitext ... ... Freitext ...*... Freitext ... ... Freitext ...*Fräsasph. verw. Unebenheit 4 mm;7700,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+03000003;Asphalt feinfräsen ... Freitext ...*... Freitext ... ... Freitext ...*Breite über 200cm Fräsasph. verw.*Unebenheit 4 mm;7700,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+03000004;Asphalt feinfräsen ... Freitext ...*Tiefe ü. 1-2,5cm Fahrbahn*Breite über 200cm Fräsasph. verw.*Unebenheit 4 mm;3000,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+03000005;Asphalt feinfräsen ... Freitext ...*T ü. 2,5-4,5cm ... Freitext ...*... Freitext ... Fräsasph. verw.;420,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+03000006;Pechhaltige Befestigung aufnehmen ... Freitext ...*... Freitext ... ... Freitext ...*... Freitext ... fräsen,reinigen*Pech beseit. ges.;1950,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+03000007;Pechhaltige Befestigung aufnehmen ... Freitext ...*... Freitext ... ... Freitext ...*... Freitext ... aufbrechen*Pech beseit. ges.;950,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+03000008;Gefährl. Abfall aus Abbruch ents. ... Freitext ...*Gebühr einrechn.;1100,0;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+03000009;Plattenbelag aus Beton aufnehmen ... Freitext ...*ungeb. Fugenmat. ungeb. Bettung*Verwertung AN;4800,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+03000010;Tragschicht m. hydr. Bindem. aufn. ... Freitext ...*Beton o.Bewehrung ... Freitext ...*erschütterungsarm Ausb. Verw. zuf.;4800,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+03000011;Schicht ohne Bindemittel aufnehmen ... Freitext ...*... Freitext ... ... Freitext ...*... Freitext ... ... Freitext ...*Abrechng. Abtrag;500,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+03000012;Bordstein aufnehmen. Hochbord Beton*Fund. ü. 10-20 cm alles Verw. AN;2680,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+03000013;Betondecke/Tragschicht schneiden;20,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+03000014;An Bordsteinen/ Randbalken/ Rinnen;340,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+03010001;Unterlage profilieren Unt.gebr. Gestein*EV2 mind. 120 MPa Unebenheit 2 cm;5750,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+03010002;Frostschutzschicht herstellen ... Freitext ...*0/32 URA+Einbaudoku*... Freitext ... ... Freitext ...*Abrechng. Auftrag;1150,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+03010003;Suchgraben herstellen ... Freitext ...*mitMasch.unterst. ... Freitext ...*Boden einb.u.v. Abrechnung Abtrag;100,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+03010004;Induktionsschleifen aufnehmen und;200,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+03010005;Leitungserkundung;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+03010006;Kameradurchfahrung ausführen ... Freitext ...*... Freitext ... Haltung bis 30 m*vor Betrieb SL./Anschl.*Dokumentation Video/Unterl.AG;900,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+03010007;Überquerungshilfe für Fußgänger;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+03010008;Überquerungshilfe umsetzen (Zul.).;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+03010009;Hilfsüberf. aus Stahlpl. herst.;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+03010010;Hilfsüberf. umsetzen (Zul.).;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+03010011;Pflasterd.m.Betonpfl.-steinen aufn. ... Freitext ...*ungeb. Fugenmat. ungeb. Bettung*Steine lagern Pflaster säubern;20,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+03010012;Pflasterd. a. Betonst. d. AG herst. Rad- und Gehwege*... Freitext ... Pflaster gelagert*... Freitext ... SZ18/LA20*Bett.0/4 30 v. H. Fuge 0/4*... Freitext ...;20,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+03020001;Linken bzw. rechten Rad-;1600,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+03020002;Bankett einschließlich;1600,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+03020003;Äste schneiden. Durchschnitt bis 25;50,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+03020004;Hecke schneiden ... Freitext ...*... Freitext ... ... Freitext ...*... Freitext ...;100,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+03030001;Asphalttragschicht aus AC 22 T S;750,0;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+03030002;Asphaltbindersch.AC 16 B S SG herst;1200,0;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+03030003;Asphaltdecksch. aus AC 11 D SP;7700,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+03030004;Asphalttragschicht aus AC 22 T N;4800,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+03030005;Asphaltbetondeckschicht AC 8 D N;4800,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+03030006;Bitumenemulsion aufsprühen Bk100-Bk3,2*... Freitext ... C60BP4-S*Menge 350 g/m2 vor A.deckschicht;19300,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+03030007;Unterlage reinigen gefr. Asphaltsch.*lose Teile aufn. Hochdr.-Sauganl.;19300,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+03030008;Abstumpfungsmaßnahme durchführen LFK 1/3*Gestein wie Decke Menge 1 kg/m2*maschinell;12500,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+03030009;Anschluss a. Fuge m. Fugenm. herst. Längs-/Querfuge*Deckschicht Tiefe 40 mm*Breite 10 mm Fugenmasse N2;5800,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+03030010;Naht in Asphaltschicht herst. Naht ATS*Längs-/Quernaht PmB heiß*Dicke ü.14-18 cm;400,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+03030011;Naht in Asphaltschicht herst. Naht ABS*Längs-/Quernaht PmB heiß*... Freitext ...;1000,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+03030012;Erschwernis infolge Einfassungen Erschwer. gesamt*A.deckschicht ... Freitext ...;4950,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+03030013;Erschwernis infolge Einbauten Erschwer. gesamt*Asphaltbefestig. ... Freitext ...;48,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+03030014;Erschwernis infolge Einbauten Erschwer. gesamt*Asphaltbefestig. Straßenabläufe;32,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+03030015;Erschwernis infolge Einbauten Erschwer. gesamt*Asphaltbefestig. Straßenabläufe;9,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+03030016;Erschwernis infolge Einfassungen Erschwer. gesamt*Asphaltbefestig. ... Freitext ...;800,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+03030017;Erschwernis infolge Einbauten Erschwer. gesamt*Asphaltbefestig. ... Freitext ...;20,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+03030018;Erschwernis infolge Leitungen aller;1650,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+03030019;Bei der Aufnahme der Platten und;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+03040001;Streifen bzw. Rinne aus Gussasphalt;825,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+03040002;Gussasphaltoberfläche bearbeiten fein abstreuen*Verfahren C ungeb. verwert.;250,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+03050001;Bordstein aus Beton setzen ... Freitext ...*Vorsatzschicht gerader Stein*bis 10 cm unt. OK F-beton 12 MPa;36,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+03050002;Bordstein aus Beton setzen ... Freitext ...*Vorsatzschicht ... Freitext ...*bis 10 cm unt. OK F-beton 12 MPa;4,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+03050003;Bordstein aus Beton setzen BSt. TB 8x25 cm*gerader Stein bis 10 cm unt. OK*F-beton 12 MPa;1360,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+03050004;Bordstein aus Beton setzen ... Freitext ...*gerader Stein bis 10 cm unt. OK*F-beton 12 MPa;1160,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+03050005;Bordstein aus Beton setzen ... Freitext ...*gerader Stein bis 10 cm unt. OK*F-beton 12 MPa;46,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+03050006;Bordstein aus Beton setzen ... Freitext ...*gerader Stein bis 10 cm unt. OK*F-beton 12 MPa;10,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+03050007;Bordstein aus Beton setzen ... Freitext ...*gerader Stein bis 10 cm unt. OK*F-beton 12 MPa;140,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+03050008;Bordstein aus Beton setzen ... Freitext ...*Vorsatzschicht gerader Stein*bis 10 cm unt. OK F-beton 12 MPa;10,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+03050009;Bordstein aus Beton setzen ... Freitext ...*Vorsatzschicht ... Freitext ...*bis 10 cm unt. OK F-beton 12 MPa;10,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+03050010;Bordstein aus Beton setzen ... Freitext ...*Vorsatzschicht gerader Stein*bis 10 cm unt. OK F-beton 12 MPa;8,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+03050011;Bordstein trennen ... Freitext ...*BSt.nassschneiden BSt. trennen;100,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+03060001;Noppenplatte weiss, kleben;18,36;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+03060002;Rippenplatte weiss,kleben;4,86;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+03070001;Verkehrsschild anbringen ... Freitext ...*Größe 2 einseitig*Folie RA 2 Profilverstärkt*St.Rohrsch.Plan I UK Schild unt.2 m;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+03070002;Verkehrsschild anbringen ... Freitext ...*Größe 2 einseitig*Folie RA 2 Profilverstärkt*St.Rohrsch.Plan I UK Schild unt.2 m;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+03070003;Verkehrsschild anbringen ... Freitext ...*Größe 2 einseitig*Folie RA 2 Profilverstärkt*St.Rohrsch.Plan I UK Schild unt.2 m;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+03070004;Verkehrsschild anbringen ... Freitext ...*Größe 2 einseitig*Folie RA 2 Profilverstärkt*St.Rohrsch.Plan I UK Schild unt.2 m;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+03070005;Verkehrsschild anbringen ... Freitext ...*Größe 2 einseitig*Folie RA 2 Profilverstärkt*St.Rohrsch.Plan I UK Schild unt.2 m;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+03070006;Verkehrsschild anbringen ... Freitext ...*Größe 2 einseitig*Folie RA 2 Profilverstärkt*St.Rohrsch.Plan I UK Schild unt.2 m;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+03070007;Rohrpfosten aufstellen Länge>3000-3500mm*R.St. 76,1/2,0 mm ... Freitext ...*... Freitext ... ... Freitext ...*Aushub i.Bst.vert;11,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+04000001;Straßenablauf ausbauen Betonfertigteile*... Freitext ... StrA in bef. Fl.*Ausbau verwerten;18,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+04000002;Aufsatz f. Straßenablauf ausbauen in Asph.-Fläche*Ablauf sichern alles verwerten;17,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+04000003;Entwässerungsrohrleitung abbrechen Rohr DN bis 250*... Freitext ... Bettung abbrechen*... Freitext ... Ausb. verwerten;60,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+04000004;Leitungsgraben herstellen eing. verd. Boden*... Freitext ... Rohr bis DN 150*m.Verb./+10 m3 W. lag. i./ver.o.Lz.*Aush.verdichten Abr. senkrecht;80,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+04000005;Öffnung in Sammelleitung verschl.;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+04000006;Straßenablauf einbauen mit Erdarb. Boden Form 1a*Schaft Form 5d Aufl-Ring 10a*Aufl. C 8/10,10cm T ü. 1,25-1,75 m*eing. verd. Bod.;18,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+04000007;Betonauflagering für Straßenablauf;70,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+04000008;Aufsatz f. Straßenablauf aufsetzen 500x500, D, Begu*dämpf.Einlage Zinkeimer A 4*Höhe Zug um Zug WW-Mörtel;35,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+04000009;Anschlussleitung herstellen Rohr DN 150*PVC-U-Rohr Rohrverb.Wahl AN*Bettung Typ 1 ... Freitext ...*... Freitext ... LM 1, Statik.*Ringst. Kl.SN 16;60,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+04000010;Formstück einbauen (Zul.) Bogen DN 150*Kunststoff-Rohr Rohr DN 150;70,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+04000011;Freigelegten Bereich verfüllen und;35,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+04000012;Rohranschluss herstellen (Zul.) Anschluss DN 150*AL Kunststoff SL Beton;18,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+04000013;Kunststoffrohrleitung herstellen Rohr DN 250*PVC-U-Rohr Verb. Wahl AN*Bettung Typ 1 T ü. 1,25-1,75 m*Überdeckg.ü.1-2 m Ringst. SN 16*LM 1, Statik;100,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+04000014;Formstück einbauen (Zul.) ... Freitext ...*Kunststoff-Rohr Rohr DN 250;6,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+04000015;Formstück einbauen (Zul.) ... Freitext ...*Kunststoff-Rohr Rohr DN 250;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+04000016;Schachtanschluss herstellen (Zul.) Rohr DN 250*Kunststoff-Rohr Betonfertigteile*Öffnung herst. Gelenkstück;1,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+04000017;Leitungsgraben herstellen eing. verd. Boden*Tiefe >1,25-1,75m ... Freitext ...*m.Verb./+10 m3 W. lag. i./ver.o.Lz.*Aushub verwerten Abr. senkrecht;175,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+04000018;Kreuzungen aller Art (Kabel etc.);36,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+04000019;Kreuzungen Rohrleitungen;36,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+04000020;Sichern von Versorgungsleitungen Gas;40,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+04000021;Sichern von Versorgungsleitungen Wasser;40,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+04000022;Sichern von Versorgungsleitungen Strom Niederspan.;40,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+04000023;Sichern von Versorgungsleitungen Fernmeldekabel;40,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+04000024;Erschw. d. vorhd.Versorg.Leitg. Strom Niederspan.;40,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+04000025;Erschw. d. vorhd.Versorg.Leitg. Fernmeldekabel;40,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+04000026;Erschw. d. vorhd.Versorg.Leitg. Wasser;40,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+04000027;Erschw. d. vorhd.Versorg.Leitg. Gas;40,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+04010001;Schachtteil freilegen und ausbauen;11,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+04010002;Betonauflagering einbauen ... Freitext ...*Mörtel M20;22,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+04010003;Schachtabdeckung einwalzbar, System;11,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+04010004;Schmutzfänger für;11,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+05000001;Beweissicherungsverfahren für alle;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+05010001;Vermessung Bestandsaufnahme;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+05020001;Zulage zu den Straßenbauarbeiten;1,0;Tag;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+05030001;Federführende Koordination;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+05040001;Erstellen eines Deckenbuches;1,0;Psch;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+06000001;Leitungsgraben herstellen gew. Boden*Tiefe >1,25-1,75m ... Freitext ...*m.Verb./+10 m3 W. Verfüllboden ges.*... Freitext ... Aushub verwerten*Abr. senkrecht;15,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+06000002;Baustoff lief.,in Leitungsgr. einb.;8,0;m3;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+06000003;Leerrohrleitung herstellen;20,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+06000004;Leitungszone verfüllen ... Freitext ...*... Freitext ...;20,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+06000005;Formstück einbauen, Verschlusskappe;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+06000006;Trassenband untersch. Versorger;25,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+06000007;Unterfahrung von Wasserleitung/Gasleitungen;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+06000008;Querbehinderungen durch Kabel, sonst wie vor.;10,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+06000009;Rohrhalbschalen verlegen;5,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+06000010;Sand;2,0;t;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+07000001;Längsmarkierung entfernen Leitlinie 1 zu 1*Breite 0,12 m Plastik*a.Asphaltdecksch. Deckenerneuerung*feinstfräsen Abf.d. Verw.zuf.;170,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+07000002;Längsmarkierung entfernen durchg.Fstr.begr.*... Freitext ... Plastik*a.Asphaltdecksch. Deckenerneuerung*Abf.d. Verw.zuf.;150,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+07000003;Sonstige Markierung entfernen ... Freitext ...*... Freitext ... Plastik*a.Asphaltdecksch. Deckenerneuerung*feinstfräsen Abf.d. Verw.zuf.;12,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+07000004;Markierungszeichen entfernen Plastikmasse*a.Asphaltdecksch. Deckenerneuerung*feinstfräsen Abf.d. Verw.zuf.;6,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+07000005;Längsmarkierung Typ II herstellen durchg.Fb.begr.*Breite 0,12 m mit Vormarkierung*mehrkomp. Farbe mind. P 6*a.Asphaltdecksch.;1600,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+07000006;Längsmarkierung Typ II herstellen Leitlinie 1 zu 2*Breite 0,12 m mit Vormarkierung*mehrkomp. Farbe mind. P 6*a.Asphaltdecksch.;620,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+07000007;Längsmarkierung Typ II herstellen Leitlinie 2 zu 1*Breite 0,12 m mit Vormarkierung*mehrkomp. Farbe mind. P 6*a.Asphaltdecksch.;100,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+07000008;Längsmarkierung Typ II herstellen Leitlinie 1 zu 1*Breite 0,12 m mit Vormarkierung*mehrkomp. Farbe mind. P 6*a.Asphaltdecksch.;50,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+07000009;Längsmarkierung Typ II herstellen Blockmark. 1 zu 1*Breite 0,12 m mit Vormarkierung*mehrkomp. Farbe mind. P 6*a.Asphaltdecksch.;80,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+07000010;Quermarkierung Typ II herstellen Radfahrerfurt*mit Vormarkierung mehrkomp. Farbe*mind. P 6 a.Asphaltdecksch.;150,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+07000011;Parkmarkierung Typ II herstellen Zick-Zack-Linie*mit Vormarkierung mehrkomp. Farbe*mind. P 6 grobstr. Decke;38,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+07000012;Quermarkierung Typ II herstellen Haltlinie*mit Vormarkierung mehrkomp. Farbe*mind. P 6 a.Asphaltdecksch.;10,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+07000013;Quermarkierung Typ II herstellen Wartelinie*mit Vormarkierung mehrkomp. Farbe*mind. P 6 a.Asphaltdecksch.;4,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+07000014;Quermarkierung Typ II herstellen Fußgängerfurt*mit Vormarkierung mehrkomp. Farbe*mind. P 6 a.Asphaltdecksch.;22,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+07000015;Pfeilmarkierung Typ II herstellen geradeaus*mit Vormarkierung Länge 5,00 m*mehrkomp. Farbe mind. P 6*a.Asphaltdecksch.;2,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+07000016;Pfeilmarkierung Typ II herstellen li.o.re. ab*mit Vormarkierung Länge 5,00 m*mehrkomp. Farbe mind. P 6*a.Asphaltdecksch.;5,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+07000017;Pfeilmarkierung Typ II herstellen gerad.+li.o.re.ab*mit Vormarkierung Länge 5,00 m*mehrkomp. Farbe mind. P 6*a.Asphaltdecksch.;3,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+07000018;Sperrflächenmarkierung Typ II herst Breite 0,25 m*mit Vormarkierung mehrkomp. Farbe*mind. P 6 a.Asphaltdecksch.;6,0;m;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+07000019;Sonstiges Mark.zeichen Typ II herst Piktogramm 1,00 m*mit Vormarkierung ... Freitext ...*grobstr. Decke;19,0;St;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+07000020;Markierungsfläche reinigen Saugkehrwagen;2700,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
+07000021;Markierungsfläche trocknen;2700,0;m2;gaeb-flat;vom_unternehmen_auszufuellende_dokumente/KB01.D83
