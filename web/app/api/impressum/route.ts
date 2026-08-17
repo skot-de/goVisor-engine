@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { rateLimit, clientIp } from "@/lib/rateLimit";
 import { pruefeImpressum, domainErlaubt } from "@/lib/impressum";
 import { loadSuppliers } from "@/lib/suppliers";
+import { leseNachweis, schreibeNachweis } from "@/lib/supabase/domainProof";
 
 /* Belegt die Anbieterkennung der Mail-Domain, dass sie zu der Firma gehört, auf deren
  * Profil der Nutzer landet?
@@ -57,9 +58,24 @@ export async function POST(req: NextRequest) {
   if (!s?.name) {
     return NextResponse.json({ urteil: "nicht_pruefbar", grund: "Firma nicht bekannt" });
   }
+  // Erst nachsehen, ob wir das schon wissen. Spart dem Nutzer die Wartezeit und der
+  // fremden Firma bis zu 15 Abrufe — bei jeder einzelnen Registrierung.
+  const bekannt = await leseNachweis(dom, id);
+  if (bekannt) {
+    return NextResponse.json({
+      urteil: bekannt.urteil, grund: bekannt.pfad
+        ? `Firmenname zu ${Math.round((bekannt.quote ?? 0) * 100)} % im Impressum unter ${bekannt.pfad}`
+        : "bereits geprüft",
+      sekunden: 0, ortBelegt: bekannt.ortBelegt, registerBelegt: bekannt.registerBelegt,
+      ausSpeicher: true,
+    });
+  }
+
   // Aliase mitgeben: im Impressum steht oft die Kurzform („ZÜBLIN"), im Vergabedatensatz
   // die volle Firmierung („Ed. Züblin AG"). Gewertet wird die beste Übereinstimmung.
   const b = await pruefeImpressum(dom, [s.name, ...(s.aliases ?? [])].slice(0, 8));
+  // Nicht abwarten: das Urteil steht fest und soll nicht auf die Datenbank warten.
+  void schreibeNachweis(b, id);
   // Nur das Urteil zurück. `worte`/`pfad` blieben harmlos, aber sie verraten, wonach wir
   // suchen — und damit, wie man den Check gezielt bedient.
   return NextResponse.json({

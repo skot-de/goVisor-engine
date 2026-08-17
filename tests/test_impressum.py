@@ -158,3 +158,43 @@ def test_tabelle_liegt_fuer_beide_zwillinge_vor():
     # Tabelle nicht, was sie tragen soll.
     for w in ("deutschland", "technik", "planung"):
         assert t["zaehler"].get(w, 0) >= 20, f"{w} fehlt in der Tabelle"
+
+
+# ── Nachweis-Speicher ─────────────────────────────────────────────────────────────
+def test_nachweistabelle_hat_bewusst_keine_lese_policy():
+    """`domain_proof` ordnet Domains zu Firmen zu.
+
+    Wäre sie für `authenticated` lesbar, könnte jeder angemeldete Nutzer die
+    Kontaktdomains unseres gesamten Firmenbestands abgreifen — dasselbe Leck, das
+    `suppliers.domain` schon serverseitig hält. RLS muss an sein UND es darf keine
+    Policy geben; erst beides zusammen macht die Tabelle für anon und authenticated leer.
+    Eine später hinzugefügte Policy „damit das Frontend auch rankommt" wäre genau der
+    Fehler, den dieser Test verhindern soll.
+    """
+    sql = (ROOT / "supabase" / "0011_domain_proof.sql").read_text(encoding="utf-8")
+    assert "enable row level security" in sql
+    assert "create policy" not in sql.lower(), (
+        "domain_proof hat eine Policy bekommen — damit sind die Kontaktdomains aller "
+        "Firmen über die REST-API abgreifbar")
+
+
+def test_nachweis_wird_nur_serverseitig_gelesen():
+    """Das Zugriffsmodul benutzt den Secret-Key (Admin-Client), der RLS umgeht. Würde es
+    aus einer Client-Komponente importiert, landete der Schlüssel im Browser-Bundle."""
+    mod = (ROOT / "web" / "lib" / "supabase" / "domainProof.ts").read_text(encoding="utf-8")
+    assert "createAdminClient" in mod
+    onboarding = (ROOT / "web" / "app" / "onboarding" / "page.tsx").read_text(encoding="utf-8")
+    assert "domainProof" not in onboarding, (
+        "domainProof wird in einer Client-Komponente importiert — der Secret-Key würde "
+        "ins Browser-Bundle wandern")
+
+
+def test_frist_haengt_am_urteil():
+    """Ein „nicht prüfbar" darf nicht lange gelten: es sagt nur „gerade nicht erreichbar".
+    Ein abgelaufenes Zertifikat ist morgen vielleicht repariert, und wir würden einen
+    echten Kunden ohne Not auf dem kalten Weg lassen."""
+    mod = (ROOT / "web" / "lib" / "supabase" / "domainProof.ts").read_text(encoding="utf-8")
+    m = re.search(r"FRIST_TAGE[^=]*=\s*\{(.*?)\}", mod, re.S)
+    assert m
+    tage = {k: int(v) for k, v in re.findall(r"(\w+):\s*(\d+)", m.group(1))}
+    assert tage["nicht_pruefbar"] < tage["widerlegt"] < tage["belegt"]

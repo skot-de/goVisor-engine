@@ -369,7 +369,25 @@ export default function OnboardingPage() {
 
   async function bestaetigen(m: Match) {
     setMatched(m);
-    await holeImpressum(m.id);
+    const imp = await holeImpressum(m.id);
+    /* Auch der BESTAETIGUNGS-Weg schreibt einen Claim.
+     *
+     * Bis hierher tat er das nicht: er sammelte das Impressum-Urteil ein und warf es beim
+     * Seitenwechsel weg. Damit fehlte ausgerechnet fuer den Hauptweg der Beleg, WARUM
+     * jemand Zugriff auf ein fremdes Firmenprofil bekommen hat — bei einer Beschwerde
+     * („da war jemand in unseren Daten") haetten wir nichts vorzuweisen gehabt.
+     *
+     * Der Nachweis selbst liegt serverseitig in `domain_proof`; hier steht nur, welcher
+     * Nutzer sich auf welche Firma berufen hat und worauf wir uns dabei gestuetzt haben. */
+    const { saveClaim } = await import("@/lib/supabase/claims");
+    const belegt = imp?.urteil === "belegt" || beleg?.conf === "belegt";
+    void saveClaim({
+      identityId: m.id, companyName: m.name,
+      emailDomain: (email.split("@")[1] ?? null),
+      status: belegt ? "belegt" : "unbestaetigt",
+      grund: [beleg?.grund, imp && imp.urteil !== "nicht_pruefbar"
+        ? `Impressum: ${imp.grund}` : null].filter(Boolean).join(" · "),
+    }).catch(() => undefined);
     await ladeMitglieder(m);
     setScreen("profil");
   }
