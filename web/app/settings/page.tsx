@@ -7,10 +7,9 @@ import { LAENDER } from "@/components/explorer/FilterPanel";
 import { logout } from "@/lib/supabase/auth";
 import {
   loadAccount, saveProfileFields, loadAlertSettings, saveAlertSettings,
-  changePassword, changeEmail, gdprExport, loadInvoices, confirmBand,
-  type AccountRow, type AlertSettings, type Invoice,
+  changePassword, changeEmail, gdprExport,
+  type AccountRow, type AlertSettings,
 } from "@/lib/supabase/account";
-import { BANDS } from "@/lib/billing";
 import { useSprache } from "@/lib/i18n";
 import { AppRail, AppTop } from "@/components/explorer/Rail";
 import "../explorer.css";
@@ -22,7 +21,6 @@ const BRANCHEN: [string, string][] = [
   ["beratung", "Beratung & Dienstleistung"], ["sicherheit", "Sicherheit & Verteidigung"], ["energie", "Energie & Versorgung"],
 ];
 const SEKTIONEN: [string, string][] = [
-  ["profil", "Profil"], ["gruppe", "Gruppe"], ["zahlung", "Zahlung"],
   ["alerts", "Benachrichtigungen"], ["account", "Account"],
 ];
 
@@ -68,7 +66,6 @@ export default function SettingsPage() {
         <main className="set-main">
           {sek === "profil" && <ProfilSektion acc={acc} setAcc={setAcc} melde={melde} />}
           {sek === "gruppe" && <GruppeSektion acc={acc} />}
-          {sek === "zahlung" && <ZahlungSektion acc={acc} melde={melde} />}
           {sek === "alerts" && alerts && <AlertSektion alerts={alerts} setAlerts={setAlerts} melde={melde} />}
           {sek === "account" && <AccountSektion acc={acc} melde={melde} router={router} />}
         </main>
@@ -153,65 +150,6 @@ function GruppeSektion({ acc }: { acc: AccountRow }) {
   );
 }
 
-const STATUS_LABEL: Record<string, string> = {
-  draft: "in Vorbereitung", needs_confirmation: "Bestätigung nötig", disputed: "in Prüfung",
-  sent: "Rechnung gestellt", paid: "bezahlt", waived: "erlassen", failed: "fehlgeschlagen",
-};
-function ZahlungSektion({ acc, melde }: { acc: AccountRow; melde: (m: string) => void }) {
-  const { t } = useSprache();
-  const [invoices, setInvoices] = useState<Invoice[]>([]);
-  const [bandSel, setBandSel] = useState<Record<string, string>>({});
-  useEffect(() => { loadInvoices().then(setInvoices); }, []);
-
-  async function bestaetigen(inv: Invoice) {
-    const band = bandSel[inv.id] || inv.anchor_band || BANDS[2];
-    const r = await confirmBand(inv.id, band);
-    if (!r.ok) return melde(t("Bestätigung fehlgeschlagen."));
-    melde(r.flagged ? t("Angabe weicht stark vom Schätzwert ab, geht in Prüfung (Beleg nötig).") : t("Band bestätigt · Gebühr {fee} €.", { fee: r.fee }));
-    setInvoices(await loadInvoices());
-  }
-
-  return (
-    <>
-      <h2 className="set-h">{t("Zahlung")}</h2>
-      <div className="set-row"><span className="set-k">{t("Zugang")}</span>
-        <span className="set-v"><span className={`conf conf-${acc.plan === "paid" ? "belegt" : "unsicher"}`}>{acc.plan === "paid" ? t("Pro") : acc.plan === "cancelled" ? t("gekündigt") : t("Free")}</span></span></div>
-      <div className="set-row"><span className="set-k">{t("Erfolgsprämien-Schonfrist")}</span>
-        <span className="set-v">{acc.grace_until ? t("bis {datum}", { datum: new Date(acc.grace_until).toLocaleDateString("de-DE") }) : "—"}</span></div>
-
-      <h3 className="set-h3">{t("Rechnungen")}</h3>
-      <p className="set-x">{t("Erfolgsprämien werden nie automatisch abgebucht. Ihr bekommt eine Rechnung mit Widerspruchsfrist. Wo kein Auftragswert veröffentlicht ist, bestätigt ihr das Band selbst.")}</p>
-      {invoices.length ? (
-        <div className="set-invlist">
-          {invoices.map((inv) => (
-            <div key={inv.id} className="set-inv">
-              <div className="set-inv-top">
-                <span className="set-inv-t">{inv.lead_id || t("Erfolgsprämie")}{inv.award_date ? ` · ${new Date(inv.award_date).toLocaleDateString("de-DE")}` : ""}</span>
-                <span className={`conf conf-${inv.status === "paid" ? "belegt" : "unsicher"}`}>{t(STATUS_LABEL[inv.status] || inv.status)}</span>
-              </div>
-              <div className="set-inv-b">
-                {inv.fee_amount != null ? <span className="set-inv-fee">{inv.fee_amount} €</span> : <span className="set-x">{t("Betrag offen")}</span>}
-                {inv.value_source ? <span className="set-x"> · {inv.value_source === "echt" ? t("belegter Wert") : inv.value_source === "kunde_bestaetigt" ? t("von euch bestätigt") : t("offen")}</span> : null}
-              </div>
-              {inv.status === "needs_confirmation" ? (
-                <div className="set-inv-confirm">
-                  <span className="set-x">{inv.anchor_band ? t("Bitte bestätigt das Auftragsband (unser Schätzwert: {band}):", { band: inv.anchor_band }) : t("Bitte bestätigt das Auftragsband:")}</span>
-                  <div style={{ display: "flex", gap: 8, marginTop: 6 }}>
-                    <select className="inp" style={{ maxWidth: 160 }} value={bandSel[inv.id] || inv.anchor_band || BANDS[2]} onChange={(e) => setBandSel((s) => ({ ...s, [inv.id]: e.target.value }))}>
-                      {BANDS.map((b) => <option key={b} value={b}>{b}</option>)}
-                    </select>
-                    <button className="btn btn-p" onClick={() => bestaetigen(inv)}>{t("Bestätigen")}</button>
-                  </div>
-                </div>
-              ) : null}
-            </div>
-          ))}
-        </div>
-      ) : <div className="set-empty">{t("Noch keine Rechnungen.")}</div>}
-      <div className="mnote" style={{ marginTop: "var(--s4)" }}>{t("Karten-Hinterlegung & Abo-Zahlung laufen über Stripe (Integrations-Stub bis Provider-Key gesetzt ist).")}</div>
-    </>
-  );
-}
 
 function AlertSektion({ alerts, setAlerts, melde }: { alerts: AlertSettings; setAlerts: (a: AlertSettings) => void; melde: (m: string) => void }) {
   const { t } = useSprache();

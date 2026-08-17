@@ -64,10 +64,8 @@ export const EV = {
   EXPORT: "list_exported",
   BRIEFING: "briefing_generated",
   AWARD_MATCHED: "award_matched_to_user",
-  FEE_ATTRIBUTED: "success_fee_attributed",
-  FEE_DRAFTED: "success_fee_invoice_drafted",
-  FEE_SENT: "success_fee_invoice_sent",
-  FEE_PAID: "success_fee_paid",
+  /* Die vier FEE_*-Ereignisse sind am 2026-08-17 entfallen: die Erfolgsgebuehr
+   * wurde als Modell verworfen. Wer sie sucht, findet sie in der Historie. */
 
   /* Outreach-Landing (`/t/<token>`).
    *

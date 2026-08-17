@@ -57,21 +57,6 @@ export async function saveAlertSettings(s: AlertSettings): Promise<{ ok: boolean
   return { ok: !error };
 }
 
-export type Invoice = {
-  id: string; lead_id: string | null; award_date: string | null; value_source: string | null;
-  award_value_band: string | null; anchor_band: string | null; fee_amount: number | null; status: string;
-  created_at: string;
-};
-export async function loadInvoices(): Promise<Invoice[]> {
-  const sb = createClient();
-  const { data: { user } } = await sb.auth.getUser();
-  if (!user) return [];
-  const { data } = await sb.from("success_fee_charges").select("*").eq("user_id", user.id).order("created_at", { ascending: false });
-  return (data as Invoice[]) || [];
-}
-export async function confirmBand(chargeId: string, band: string) {
-  return fetch("/api/billing/confirm", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ chargeId, band }) }).then((r) => r.json());
-}
 
 export async function changePassword(pw: string) {
   return createClient().auth.updateUser({ password: pw });
@@ -89,6 +74,10 @@ export async function gdprExport(): Promise<Record<string, unknown> | null> {
     sb.from("user_profiles").select("*").eq("id", user.id).single(),
     sb.from("user_watchlist").select("*").eq("user_id", user.id),
     sb.from("user_lead_interactions").select("*").eq("user_id", user.id),
+    // BLEIBT, obwohl die Erfolgsgebuehr am 2026-08-17 als Modell verworfen wurde.
+    // Neue Zeilen entstehen nicht mehr, aber vorhandene sind weiterhin personenbezogene
+    // Daten — eine Auskunft, die eine Kategorie stillschweigend weglaesst, ist falsch.
+    // Erst wenn die Tabelle geleert und geloescht ist, darf diese Zeile weg.
     sb.from("success_fee_charges").select("*").eq("user_id", user.id),
   ]);
   // Anforderung protokollieren (Ticket #10 §5)
