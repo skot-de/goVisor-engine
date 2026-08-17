@@ -274,6 +274,12 @@ export function LandingView({ d, token }: { d: Landing; token: string }) {
      Gesucht wird über die Zeilen, nicht über einen bestimmten Baustein: welcher Baustein
      Chancen mit Fristen liefert, ist eine Sache des Generators und darf hier nicht
      festverdrahtet sein. */
+  /* Das „Leckerli" ist der Baustein mit konkreten Vorgängen. Gibt es keinen (bei den
+     meisten Firmen), fällt der Abschnitt aus und die Seite bleibt trotzdem vollständig:
+     erklären, zeigen was wir wissen, einladen. */
+  const aufmacher = fuerEuch.find((b) => (b.zeilen?.length ?? 0) > 0) ?? null;
+  const uebrigeFuerEuch = fuerEuch.filter((b) => b !== aufmacher);
+
   const naechste = fuerEuch
     .flatMap((b) => b.zeilen ?? [])
     .filter((z) => z.endeISO && (restTage(z.endeISO) ?? -1) >= 0)
@@ -281,134 +287,76 @@ export function LandingView({ d, token }: { d: Landing; token: string }) {
 
   return (
     <Rahmen>
+      {/* ── 1. WAS GOVISOR IST ───────────────────────────────────────────────────
+          Sven: „was ist, wenn man die seite so aufbaut, dass sie für sich selbst
+          spricht. erklärt was goVisor ist, was es kann, was es bietet. dann ein
+          leckerlie mit passenden ausschreibungen und ein bisschen schau mal was wir
+          über dich wissen."
+
+          Das löst, woran beide Vorfassungen scheiterten: eine Diagnose über das
+          Unternehmen eines Fremden ist anmassend, eine Liste ohne Absender unerklärt.
+          Wer kalt angeschrieben wird, muss zuerst wissen, WAS das hier ist. Erst danach
+          ist die personalisierte Hälfte ein Beweis statt einer Zumutung. */}
       <div className="lg-hero">
-        <div className="lg-eyebrow">{t("Auswertung · Stand {datum}", { datum: d.stand })}</div>
-        {/*
-          Zweizeilig, und das ist keine Typografie-Laune: „Unsere Sicht auf H. Klostermann
-          Baugesellschaft mbH" als EIN Satz brach mitten im Firmennamen um. Ein zerrissener
-          Firmenname im ersten Bildschirm ist genau die Sorte Schlamperei, die einem
-          Empfaenger sagt, wie sorgfaeltig der Rest wohl ist.
-          Der Name steht deshalb allein, `nowrap`, und die Schriftgroesse schrumpft per
-          `clamp` mit — lieber kleiner als gebrochen.
-        */}
-        <h1>
-          <span className="lg-h-vor">{t("Unsere Sicht auf")}</span>
-          <span className="lg-h-firma">{d.name}</span>
-        </h1>
-        {/* Der Kernbefund kommt aus dem ÜBERRASCHENDSTEN Baustein, nicht dem belegtesten:
-            „507 Zuschläge seit 2010" ist gut belegt und langweilig.
-            Seit der Umstellung führt `vertraege`: dass von den laufenden Vorhaben keines
-            als Neuvergabe zurückkommt, kann sich der Empfänger nicht selbst beschaffen —
-            die Konzentration auf zwei Auftraggeber kennt er dagegen längst. */}
-        {d.kern && <p className="lg-kern">{d.kern}</p>}
-        {/* Die FOLGE, direkt unter dem Befund. Ein Vertriebsleiter liest „99 % von zwei
-            Auftraggebern" als Beobachtung, die er kennt. Erst „fällt der grösste aus,
-            fehlen 50 %" macht daraus einen Grund zu handeln. */}
-        {folge && <p className="lg-folge">{folge}</p>}
-        {/* „Keine Daten von Ihnen" stand zwei Zeilen unter „eurer Aufträge". Wer eine
-            Firma so genau analysiert hat, sollte sich beim Duzen entscheiden können. */}
-        <p className="lg-quelle">{t("Alles aus öffentlichen Vergabebekanntmachungen. Keine Daten von euch, kein Konto nötig.")}</p>
-        {/*
-          Sven: „was ist, wenn der nutzer nicht scrollt, weil er denkt die seite ist
-          zuende?" Genau das droht: die Überschrift „Das wissen wir bereits über euch"
-          klingt abgeschlossen, und der erste Bildschirm sieht aus wie die ganze Seite.
-          Der Wegweiser nennt den zweiten Teil beim Namen UND führt hin. Ein blosser
-          Pfeil hätte nur gesagt, dass da noch etwas ist, nicht was.
-        */}
-        {/*
-          UMSCHALTER statt Wegweiser (Sven, 2026-08-17). Der Pfeil nach unten setzte
-          voraus, dass jemand scrollt; zwei benannte Schalter zeigen beide Haelften als
-          Wahl. Und sie sagen in vier Woertern, worum es geht: was ihr HEUTE seid, was
-          MORGEN moeglich ist.
-          Der Tracking-Name bleibt `LANDING_WEGWEISER` — sonst reisst die Zeitreihe, und
-          gemessen werden soll dieselbe Frage („kommt jemand in die zweite Haelfte?").
-        */}
-        {fuerEuch.length > 0 && (
-          <div className="lg-umschalter" role="tablist">
-            <button role="tab" aria-selected={sicht === "heute"}
-                    className={sicht === "heute" ? "lg-an" : ""}
-                    onClick={() => setSicht("heute")}>{t("Euer Profil heute")}</button>
-            <button role="tab" aria-selected={sicht === "morgen"}
-                    className={sicht === "morgen" ? "lg-an" : ""}
-                    onClick={() => { setSicht("morgen"); wegweiserBenutzt.current = true;
-                                     track(EV.LANDING_WEGWEISER, { token }); }}>
-              {t("Euer Potenzial morgen")}</button>
-          </div>
-        )}
+        <h1 className="lg-h1">{t("Jede öffentliche Ausschreibung in Deutschland, gelesen und sortiert.")}</h1>
+        <p className="lg-lede">{t("goVisor wertet die öffentlichen Vergabebekanntmachungen aus und sagt euch, welche davon zu eurem Betrieb passen. Ihr müsst sie nicht mehr selbst durchsehen.")}</p>
+        <ul className="lg-kann">
+          <li><b>{t("Passende Ausschreibungen finden")}</b>
+            <span>{t("Zugeschnitten auf euer Fach, eure Gegend und eure Auftraggeber.")}</span></li>
+          <li><b>{t("Fristen im Blick behalten")}</b>
+            <span>{t("Ihr seht, wie lange ihr noch bieten könnt, bevor es zu spät ist.")}</span></li>
+          <li><b>{t("Wissen, wer sonst bietet")}</b>
+            <span>{t("Wer den Auftrag bisher hatte, wie oft gewechselt wurde, wie dünn der Wettbewerb ist.")}</span></li>
+        </ul>
       </div>
 
-      {/* LEISTE ODER KARTE ZUERST — entscheidet die Stärke, nicht die Bauform.
-          Vorher stand die Kennzahlenleiste immer oben und die Karten darunter. Seit
-          `vertraege` (die Karte mit den auslaufenden Vorhaben) den Seitenkopf führt, war
-          das falsch herum: die eigene Historie des Empfängers stand optisch vor der
-          Dringlichkeit. Ein Vertriebsleiter liest von oben, und oben stand „507
-          gewonnene Ausschreibungen" — seine eigene Zahl.
-          Jetzt gewinnt, was der Generator als stärker bewertet hat. Damit wandert die
-          Reihenfolge mit der Datenlage: bei einer Firma ohne auslaufende Vorhaben führt
-          wieder die Leiste, ganz ohne Sonderfall in der Oberfläche. */}
-      {sicht === "heute" && kacheln(ueberEuch).length > 0
-        && (karten(ueberEuch)[0]?.staerke ?? 0) <= (kacheln(ueberEuch)[0]?.staerke ?? 0) && (
-        <KennzahlenLeiste teile={kacheln(ueberEuch)} />
+      {/* ── 2. DAS LECKERLI ─────────────────────────────────────────────────────── */}
+      {aufmacher && (
+        <section className="lg-karte lg-aufmacher">
+          <div className="lg-eyebrow">{t("Für euch schon gemacht")} · {t("Stand")} {d.stand}</div>
+          <h2 className="lg-kt lg-kt-gross">{aufmacher.kern}</h2>
+          <Vertragstabelle zeilen={aufmacher.zeilen!} spalte="Frist" />
+          <div className="lg-grenze">{aufmacher.grenze}</div>
+        </section>
       )}
 
-      {sicht === "heute" && karten(ueberEuch).map((b) => (
+      {/* ── 3. SCHAU MAL, WAS WIR ÜBER EUCH WISSEN ──────────────────────────────── */}
+      {ueberEuch.length > 0 && (
+        <section className="lg-ueber">
+          <h2 className="lg-kt">{t("Das steht öffentlich über euch")}</h2>
+          {d.kern && <p className="lg-kern-zwei">{d.kern}</p>}
+          {folge && <p className="lg-folge">{folge}</p>}
+          {kacheln(ueberEuch).length > 0 && <KennzahlenLeiste teile={kacheln(ueberEuch)} />}
+          {karten(ueberEuch).map((b) => (
+            <div className="lg-karte" key={b.id}>
+              <h3 className="lg-kt3">{b.titel}</h3>
+              {b.zeilen && b.zeilen.length > 0 && <Vertragstabelle zeilen={b.zeilen} />}
+              {b.befund && <div className="lg-befund">{b.befund}</div>}
+              {b.verschwiegen_text && <div className="lg-vergleich">{b.verschwiegen_text}</div>}
+              <div className="lg-grenze">{b.grenze}</div>
+            </div>
+          ))}
+        </section>
+      )}
+
+      {/* Der Rest als Ausblick auf die Tiefe im Konto, nicht als eigenes Kapitel. */}
+      {uebrigeFuerEuch.map((b) => (
         <section className="lg-karte" key={b.id}>
           <h2 className="lg-kt">{b.titel}</h2>
-          {b.zeilen && b.zeilen.length > 0 && <Vertragstabelle zeilen={b.zeilen} />}
-          {/* Der Befund ist die Schlussfolgerung aus der Tabelle. Er ersetzt die frühere
-              Spalte „Art", die achtmal „wird fertig" sagte. */}
-          {b.befund && <div className="lg-befund">{b.befund}</div>}
-          {/* Was NICHT dasteht, gehoert dazu. Eine gefilterte Liste ohne diesen Satz
-              behauptet Vollstaendigkeit, die sie nicht hat. */}
-          {b.verschwiegen_text && <div className="lg-vergleich">{b.verschwiegen_text}</div>}
-          {b.vergleich && <div className="lg-vergleich">{b.vergleich}</div>}
-          <div className="lg-grenze">{b.grenze}</div>
+          {b.trichter?.length
+            ? <Kette stufen={b.trichter} satz={b.kette} />
+            : (b.zahlen?.length ? <KennzahlenLeiste teile={[b]} />
+                                : <div className="lg-grenze">{b.grenze}</div>)}
         </section>
       ))}
 
-      {/* Nachzügler-Leiste: die Kennzahlen, wenn eine Karte sie überholt hat. Sie fällt
-          nicht weg, sie rückt nur hinter das Dringlichere. */}
-      {sicht === "heute" && kacheln(ueberEuch).length > 0
-        && (karten(ueberEuch)[0]?.staerke ?? 0) > (kacheln(ueberEuch)[0]?.staerke ?? 0) && (
-        <KennzahlenLeiste teile={kacheln(ueberEuch)} />
-      )}
-
-      {sicht === "heute" && d.muster && (
-        <p className="lg-muster">{d.muster}</p>
-      )}
-
-      {sicht === "morgen" && fuerEuch.length > 0 && (
-        <div className="lg-wende" id="finden">
-          <h2>{t("Und das können wir für euch finden")}</h2>
-          <p className="lg-wende-lede">{t("Was davon zu euch passt, entscheidet euer Profil. Je schärfer es ist, desto weniger müsst ihr selbst durchsehen.")}</p>
-          {/* Karten VOR den Kacheln: eine Karte zeigt die Vorgänge selbst, und die
-              sind der bessere Beleg. Sven: „wenn es 6 wirkliche treffer sind, nehme ich
-              die lieber als 35 potenzielle, die womöglich passen könnten." */}
-          {karten(fuerEuch).map((b) => (
-            <section className="lg-karte" key={b.id}>
-              <h2 className="lg-kt">{b.titel}</h2>
-              {b.zeilen && b.zeilen.length > 0 && (
-                <Vertragstabelle zeilen={b.zeilen} spalte="Frist" />
-              )}
-              {b.kern && <div className="lg-befund">{b.kern}</div>}
-              <div className="lg-grenze">{b.grenze}</div>
-            </section>
-          ))}
-          <KennzahlenLeiste teile={kacheln(fuerEuch)} />
-          {fuerEuch.filter((b) => b.trichter?.length).map((b) => (
-            <Kette key={b.id} stufen={b.trichter!} satz={b.kette} />
-          ))}
-        </div>
-      )}
-
-      {/* ABSCHLUSS MIT DER DRINGENDSTEN FRIST.
-          Vorher stand hier ein kleiner grüner Knopf — nach einer Liste mit ablaufenden
-          Fristen. Der Absprung von „hier ist eure Lage" zu „kommt rein und bewerbt euch"
-          braucht den konkreten Anlass, nicht eine allgemeine Einladung. Sven: „ist ein
-          guter absprungpunkt zu 'komm in die app, schau dir die analyse an und bewirb
-          dich'." */}
+      {/* ── 4. DIE BRÜCKE ──────────────────────────────────────────────────────
+          Sven: „fokus brücke schlagen um leute in die app zu bringen und pro/premium zu
+          nutzen." Zwei Stufen, ehrlich getrennt: was das kostenlose Konto kann, und was
+          Pro dazulegt. Die Angaben stammen aus dem Produkt (lib/redact.ts,
+          app/onboarding), nicht aus einem Versprechen. */}
       <div className="lg-schluss">
-        <h2>{t("Schärft euer Profil, dann übernehmen wir das Suchen")}</h2>
+        <h2>{t("Weiter im Konto")}</h2>
         {naechste && (
           <p className="lg-dringend">
             {t("Die nächste Frist läuft am")} <strong>{naechste.ende}</strong>{" "}
@@ -416,19 +364,33 @@ export function LandingView({ d, token }: { d: Landing; token: string }) {
             <Restfrist iso={naechste.endeISO} />
           </p>
         )}
-        <p>{t("Das Konto ist kostenlos. Die Auswertung oben ist bereits eingerichtet, ihr ergänzt nur, was wir aus öffentlichen Daten nicht sehen können.")}</p>
-        {/* Ein Weg nach vorn, nicht sechs. Die Produktbereiche stehen als Ausblick
-            darunter, statt als konkurrierende Verweise an jeder einzelnen Karte. */}
-        <Link className="lg-cta" href={signup}
-              onClick={() => track(EV.LANDING_CTA, { token, erreicht: findenGemeldet.current })}>
-          {t("Profil einrichten, kostenlos")}
-        </Link>
-        {d.bereiche && d.bereiche.length > 0 && (
-          <div className="lg-bereiche">
-            {t("Danach offen:")} {d.bereiche.join(" · ")}
+        <div className="lg-stufen">
+          <div className="lg-stufe">
+            <div className="lg-stufe-k">{t("Kostenlos")}</div>
+            <ul>
+              <li>{t("Die volle Lead-Liste mit allen Eckdaten, dauerhaft")}</li>
+              <li>{t("Fristen und Auftraggeber zu jeder Ausschreibung")}</li>
+              <li>{t("Drei ausführliche Bewertungen je 30 Tage")}</li>
+            </ul>
+            <Link className="lg-cta" href={signup}
+                  onClick={() => track(EV.LANDING_CTA, { token, erreicht: findenGemeldet.current })}>
+              {t("Konto anlegen, kostenlos")}
+            </Link>
+            <div className="lg-klein">{t("Keine Zahlungsdaten. Keine Angaben, die nicht ohnehin öffentlich sind.")}</div>
           </div>
+          <div className="lg-stufe lg-stufe-pro">
+            <div className="lg-stufe-k">{t("Mit Pro")}</div>
+            <ul>
+              <li>{t("Jede Ausschreibung ausführlich bewertet, ohne Monatsgrenze")}</li>
+              <li>{t("Wettbewerb und Strategie: wer bisher gewann, wie dünn das Feld ist")}</li>
+              <li>{t("E-Mail, sobald etwas Passendes veröffentlicht wird")}</li>
+            </ul>
+            <div className="lg-klein">{t("Im Konto jederzeit umschaltbar. Erst ausprobieren, dann entscheiden.")}</div>
+          </div>
+        </div>
+        {d.bereiche && d.bereiche.length > 0 && (
+          <div className="lg-bereiche">{t("Danach offen:")} {d.bereiche.join(" · ")}</div>
         )}
-        <div className="lg-klein">{t("Kostenlos dauerhaft nutzbar · keine Zahlungsdaten · keine Angaben, die nicht ohnehin öffentlich sind")}</div>
       </div>
     </Rahmen>
   );
