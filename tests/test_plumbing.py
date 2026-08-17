@@ -2200,8 +2200,21 @@ def test_rueckstau_werkzeug_sperrt_gegen_tageslauf():
 
     from govisor import sources as S
     reg = m.abrufer()
-    erwartet = {q.modul for q in S.DOC_REGISTRY if q.modul}
+    erwartet = {q.modul for q in S.DOC_REGISTRY if q.modul} - set(m.NICHT_EINZELN)
     assert set(reg.values()) == erwartet, "Abrufer-Liste weicht von der Registry ab"
+
+    # Die Ausnahmen duerfen nicht zur Ausrede werden. Wer hier etwas eintraegt, behauptet:
+    # „dieses Modul ist kein eigenstaendiges Programm". Das ist nachpruefbar — ein Modul
+    # ohne `main()` laesst sich nicht per `python -m` starten. Am 2026-08-17 lief das
+    # Rueckstau-Werkzeug genau deshalb ins Leere: die Registry fuehrt `docfetch_rib` als
+    # Abrufer, tatsaechlich ist es ein Einschub von `docfetch` (docfetch.py:122) und
+    # antwortet auf einen Direktstart mit Stille und Exit 0.
+    for modul in m.NICHT_EINZELN:
+        quelle = (Path(__file__).resolve().parent.parent
+                  / (modul.replace(".", "/") + ".py")).read_text(encoding="utf-8")
+        assert "def main(" not in quelle, (
+            f"{modul} hat ein main() — es gehoert nicht in NICHT_EINZELN, sondern in "
+            f"die Abrufer-Liste")
 
     # Der Lock-Wächter: existiert die Datei, ist die Antwort nein.
     m.LOCK.parent.mkdir(parents=True, exist_ok=True)

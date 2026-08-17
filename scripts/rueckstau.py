@@ -58,11 +58,28 @@ def _zahl(s: str) -> int:
     return int(s.replace(".", "").replace(",", ""))
 
 
+# Zwei Registry-Eintraege sind KEINE eigenstaendigen Programme, und das steht der Registry
+# nicht an: `govisor.docfetch` (cosinex) laeuft ueber die CLI, und `govisor.docfetch_rib`
+# ist ueberhaupt kein Abrufer, sondern ein Einschub von `docfetch` — `docfetch.py:122`
+# reicht RIB-URLs dorthin weiter. Wer das Modul startet, bekommt Stille und Exit 0.
+#
+# Genau darauf ist dieses Werkzeug am 2026-08-17 hereingefallen: es hat der Registry
+# geglaubt, `python -m govisor.docfetch_rib` gestartet und nach einer Runde ohne
+# Reststand aufgegeben. Deshalb steht die Ausnahme jetzt HIER, sichtbar, statt als
+# stille Fehlannahme.
+UEBER_CLI = {
+    "govisor.docfetch": ["-m", "govisor.cli", "fetch-docs", "--country", "DE"],
+}
+NICHT_EINZELN = {
+    "govisor.docfetch_rib": "wird von `fetch-docs` mitbedient (docfetch.py:122)",
+}
+
+
 def abrufer() -> dict[str, str]:
     """Kurzname → Python-Modul, aus der Registry statt aus einer zweiten Liste."""
     out = {}
     for q in S.DOC_REGISTRY:
-        if not q.modul:
+        if not q.modul or q.modul in NICHT_EINZELN:
             continue
         out[q.modul.rsplit(".", 1)[-1].replace("docfetch_", "").replace("docfetch", "cosinex")] = q.modul
     return out
@@ -82,8 +99,10 @@ def frei() -> tuple[bool, str]:
 
 def eine_runde(modul: str, limit: int) -> tuple[int, str]:
     """Ein Abrufer-Aufruf. Gibt (Reststand vor der Runde, Rohausgabe) zurück."""
-    p = subprocess.run([sys.executable, "-m", modul, "--limit", str(limit)],
-                       cwd=ROOT, capture_output=True, text=True)
+    befehl = ([sys.executable] + UEBER_CLI[modul] + ["--limit", str(limit)]
+              if modul in UEBER_CLI else
+              [sys.executable, "-m", modul, "--limit", str(limit)])
+    p = subprocess.run(befehl, cwd=ROOT, capture_output=True, text=True)
     aus = (p.stdout or "") + (p.stderr or "")
     m = _REST.search(aus)
     return (_zahl(m.group(1)) if m else -1), aus

@@ -64,7 +64,7 @@ const PREVIEW_COOKIE = "gv_preview";
  *                               gibt es nach `signUp` noch keine. Ohne diese Ausnahme
  *                               waere Schritt 2 der Registrierung tot.
  */
-const OFFEN = ["/login", "/onboarding", "/start", "/t", "/api/wer", "/api/entity-verify", "/api/entity-search",
+const OFFEN = ["/login", "/onboarding", "/start", "/t", "/api/wer", "/api/entity-verify", "/api/impressum", "/api/entity-search",
                      "/api/entity-group", "/api/outreach-firma"];
 
 function istOffen(pfad: string): boolean {

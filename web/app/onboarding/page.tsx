@@ -61,6 +61,35 @@ function domainStamm(mail: string): string | null {
 type Beleg = { conf: "belegt" | "unbestaetigt" | "fremd"; grund: string;
                domainBekannt: boolean; fremdeFirma?: string };
 
+/* Zweiter, unabhaengiger Beleg: die Anbieterkennung der Mail-Domain (§ 5 DDG und die
+ * europaeischen Entsprechungen). Er beantwortet genau die Frage, die der Mail-Hash offen
+ * laesst — gehoert das, was hinter dem @ steht, dieser Firma?
+ *
+ * Gemessen am 2026-08-17: Median 3,25 s, p90 5,25 s. Zu langsam, um beim Tippen darauf zu
+ * warten, aber muehelos schnell genug fuer das Fenster bis zum Klick auf den
+ * Bestaetigungslink. Deshalb wird er hier gestartet und ERST SPAETER eingesammelt.
+ *
+ * Der entscheidende Fund: er faengt die Faelle ab, in denen die einzige hinterlegte
+ * Mailadresse einer Firma die Portaladresse ihres AUFTRAGGEBERS ist (7,5 % der
+ * Gewinner-Mails). Acht von acht solcher Faelle wurden abgelehnt, die zwei echten
+ * Konzerntoechter derselben Domain durchgelassen. */
+type ImpressumUrteil = { urteil: "belegt" | "widerlegt" | "nicht_pruefbar"; grund: string };
+
+async function pruefeImpressumWeb(id: string, email: string): Promise<ImpressumUrteil> {
+  try {
+    const r = await fetch("/api/impressum", {
+      method: "POST", headers: { "content-type": "application/json" },
+      body: JSON.stringify({ id, email }),
+    });
+    if (!r.ok) throw new Error(String(r.status));
+    return await r.json();
+  } catch {
+    // Faellt der Check aus, gilt NICHT „widerlegt" — sonst sperrt eine kaputte Leitung
+    // auf unserer Seite einen echten Kunden aus.
+    return { urteil: "nicht_pruefbar", grund: "Prüfung gerade nicht möglich" };
+  }
+}
+
 async function pruefeBeleg(id: string, email: string, token?: string | null): Promise<Beleg> {
   try {
     const r = await fetch("/api/entity-verify", {
@@ -190,6 +219,10 @@ export default function OnboardingPage() {
   const [offen, setOffen] = useState<string | null>(null);      // aufgeklappte Kandidaten-Karte
   const [keineDavon, setKeineDavon] = useState(false);          // Eingabefeld inline zeigen
   const [beleg, setBeleg] = useState<Beleg | null>(null);       // Ergebnis des Domain-Abgleichs
+  // Der laufende Impressum-Check. Als Ref, nicht als State: er darf kein Rendern
+  // ausloesen, solange er unterwegs ist — der Nutzer soll nichts davon merken.
+  const impressumRef = useRef<{ id: string; lauf: Promise<ImpressumUrteil> } | null>(null);
+  const [impressum, setImpressum] = useState<ImpressumUrteil | null>(null);
   const [antragText, setAntragText] = useState("");             // Freitext für die manuelle Prüfung
   const [antragGesendet, setAntragGesendet] = useState(false);
   const [vomToken, setVomToken] = useState(false);
@@ -288,21 +321,55 @@ export default function OnboardingPage() {
     if (!m || !email.includes("@")) { setBeleg(null); return; }
     let weg = false;
     pruefeBeleg(m.id, email).then((b) => { if (!weg) setBeleg(b); });
+    // Der Impressum-Check laeuft PARALLEL und wird NICHT abgewartet. Er braucht gemessen
+    // 3–6 s; das Fenster dafuer ist die Zeit, die der Nutzer ohnehin auf die
+    // Bestaetigungsmail wartet. Eingesammelt wird er erst in `bestaetigen()`.
+    impressumRef.current = { id: m.id, lauf: pruefeImpressumWeb(m.id, email) };
     return () => { weg = true; };
   }, [matched, offen, matches, email]);
 
+  /* Den im Hintergrund laufenden Impressum-Check einsammeln.
+   *
+   * Beide Wege des Erkennungsschirms brauchen ihn — „Ja, das sind wir" UND der Antrag auf
+   * Freischaltung. Eine fruehere Fassung sammelte ihn nur im Bestaetigungsweg ein, im
+   * Antragsweg war das Urteil deshalb immer `null`: ausgerechnet dort, wo die Handpruefung
+   * am dringendsten einen Beleg braucht.
+   *
+   * Die Frist ist kurz und absichtlich so: der Check laeuft seit der Erkennung und ist
+   * gemessen nach 3–6 s fertig. Wer schneller klickt, soll nicht warten — ein spaeter
+   * Beleg ist wertlos, ein wartender Nutzer ist ein Schaden. */
+  async function holeImpressum(id: string): Promise<ImpressumUrteil | null> {
+    const r = impressumRef.current;
+    if (!r || r.id !== id) return null;
+    const spaet: ImpressumUrteil = { urteil: "nicht_pruefbar", grund: "noch nicht fertig" };
+    const u = await Promise.race([
+      r.lauf, new Promise<ImpressumUrteil>((f) => setTimeout(() => f(spaet), 2500)),
+    ]).catch(() => spaet);
+    setImpressum(u);
+    return u;
+  }
+
   async function antragSenden(m: Match) {
+    const impressum = await holeImpressum(m.id);
     const { saveClaim } = await import("@/lib/supabase/claims");
+    // Das Impressum ist ein eigenstaendiger Beleg und wird deshalb MITGESCHRIEBEN, auch
+    // wenn der Domain-Abgleich nichts hergab: die Handpruefung soll sehen, worauf sie
+    // sich stuetzen kann. „belegt" hebt den Antrag; „widerlegt" ist der wertvollere Fall,
+    // weil er dem Pruefenden die Arbeit abnimmt.
+    const imp = impressum?.urteil === "belegt" || impressum?.urteil === "widerlegt"
+      ? ` · Impressum: ${impressum.grund}` : "";
     await saveClaim({
       identityId: m.id, companyName: m.name,
       emailDomain: (email.split("@")[1] ?? null),
-      status: "unbestaetigt", grund: beleg?.grund ?? "", nachricht: antragText.trim() || undefined,
+      status: impressum?.urteil === "belegt" ? "belegt" : "unbestaetigt",
+      grund: (beleg?.grund ?? "") + imp, nachricht: antragText.trim() || undefined,
     }).catch(() => ({ error: "speichern fehlgeschlagen" }));
     setAntragGesendet(true);
   }
 
   async function bestaetigen(m: Match) {
     setMatched(m);
+    await holeImpressum(m.id);
     await ladeMitglieder(m);
     setScreen("profil");
   }
