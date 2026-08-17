@@ -289,6 +289,36 @@ export default function OnboardingPage() {
   }
 
   // Konto anlegen (Registrierung), dann Firmen-Erkennung. Bei „E-Mail existiert" → Login anbieten.
+/* ══ TESTSPERRE: keine Mail an fremde Firmen ═══════════════════════════════════════
+ *
+ * `signUp` schickt die Bestaetigung an GENAU die Adresse im Feld. Wer beim Ausprobieren
+ * „peter@klostermann.de" eintippt, loest damit eine echte Mail an einen echten Menschen
+ * in einer echten Firma aus — von einem Absender, den er nicht kennt.
+ *
+ * Gemessen am 2026-08-17 im Projekt: `peter@cancom.de` (27.07., sogar bestaetigt) und
+ * `peter@klostermann.de` (heute). Beides Firmen, die wir spaeter sauber ansprechen wollen.
+ * Sven, als es ihm auffiel: „wir sind gerade in einem testszenario, wieso gehen ueberhaupt
+ * mails raus? wenn ich mich als peter@klostermann.de ausgebe, dann ist wohl offensichtlich
+ * das das nicht meine mailadresse ist?!"
+ *
+ * Die Sperre greift NUR ausserhalb der Produktion — in Produktion registrieren sich echte
+ * Firmen mit echten Adressen, dort waere sie falsch. Ueber `NEXT_PUBLIC_TEST_DOMAINS`
+ * erweiterbar.
+ *
+ * Sie ist ein Schutz gegen VERSEHEN, nicht gegen Absicht: der Aufruf laeuft im Browser
+ * und liesse sich umgehen. Das reicht — hier tippt niemand aus boeser Absicht, sondern
+ * beim Ausprobieren.
+ */
+const TEST_DOMAINS = (process.env.NEXT_PUBLIC_TEST_DOMAINS
+  || "govisor.dev,skot.de,skot.io,example.com,example.org,localhost,test")
+  .split(",").map((x) => x.trim().toLowerCase()).filter(Boolean);
+
+function testMailErlaubt(mail: string): boolean {
+  if (process.env.NODE_ENV === "production") return true;
+  const dom = (mail.split("@")[1] || "").toLowerCase();
+  return TEST_DOMAINS.some((d) => dom === d || dom.endsWith("." + d));
+}
+
   /* Anbieter-Fehler in Klartext.
    *
    * Supabase antwortet auf Englisch und in seinem eigenen Vokabular. „email rate limit
@@ -310,7 +340,15 @@ export default function OnboardingPage() {
   }
 
   async function kontoAnlegen() {
-    setAuthFehler(null); setBusy(true);
+    setAuthFehler(null);
+    if (!testMailErlaubt(email)) {
+      setAuthFehler(
+        `Testbetrieb: an ${email.split("@")[1]} wird nichts verschickt. Diese Domain gehört `
+        + `einer echten Firma, und die Bestätigungsmail ginge wirklich dorthin. `
+        + `Erlaubt sind: ${TEST_DOMAINS.join(", ")}.`);
+      return;
+    }
+    setBusy(true);
     const { error } = await register(email, pw);
     setBusy(false);
     if (error && !/already registered|already exists/i.test(error.message)) { setAuthFehler(klartext(error.message)); return; }

@@ -2249,3 +2249,33 @@ def test_domain_rueckwaerts_index_ist_kein_gruppierer():
     route = (w / "app/api/entity-verify/route.ts").read_text(encoding="utf-8")
     assert '"belegt" | "unbestaetigt" | "fremd"' in route
     assert "eigner.id !== id" in route
+
+
+def test_testbetrieb_verschickt_keine_mail_an_fremde_firmen():
+    """Ausserhalb der Produktion darf keine Registrierung an eine echte Firma gehen.
+
+    `signUp` schickt die Bestätigung an GENAU die Adresse im Feld. Wer beim Ausprobieren
+    „peter@klostermann.de" eintippt, löst eine echte Mail an einen echten Menschen aus.
+
+    Gemessen am 2026-08-17 in `auth.users`: `peter@cancom.de` (27.07., sogar bestätigt)
+    und `peter@klostermann.de` (heute) — beides Firmen, die wir später sauber ansprechen
+    wollen. Sven, als es ihm auffiel: „wir sind gerade in einem testszenario, wieso gehen
+    überhaupt mails raus?"
+
+    Der Test hält drei Eigenschaften fest, die zusammen die Sperre ausmachen:
+      1. Sie greift NUR ausserhalb der Produktion — dort registrieren sich echte Firmen.
+      2. Sie sitzt VOR dem `register`-Aufruf, nicht danach.
+      3. Sie hat eine Liste erlaubter Domains, die über die Umgebung erweiterbar ist.
+    """
+    from pathlib import Path
+    quelle = (Path(__file__).resolve().parent.parent
+              / "web/app/onboarding/page.tsx").read_text(encoding="utf-8")
+
+    assert "function testMailErlaubt" in quelle
+    assert 'process.env.NODE_ENV === "production"' in quelle, "Sperre muss in Produktion aus sein"
+    assert "NEXT_PUBLIC_TEST_DOMAINS" in quelle, "Liste muss konfigurierbar sein"
+
+    # Reihenfolge: die Sperre steht vor dem Registrieren, sonst ist die Mail schon weg.
+    i_sperre = quelle.index("if (!testMailErlaubt(email))")
+    i_register = quelle.index("await register(email, pw)")
+    assert i_sperre < i_register, "Sperre laeuft erst NACH dem Registrieren"
