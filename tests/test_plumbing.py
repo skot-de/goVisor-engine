@@ -2212,3 +2212,40 @@ def test_rueckstau_werkzeug_sperrt_gegen_tageslauf():
     # Und die Zeile, an der der Reststand abgelesen wird — sie kommt aus den Abrufern.
     assert m._REST.search("NetServer-Unterlagen: 1.055 Vergaben zu holen (von 2 offenen)")
     assert m._zahl("1.055") == 1055
+
+
+def test_domain_rueckwaerts_index_ist_kein_gruppierer():
+    """Der Domain-Index darf NICHTS zusammenführen — er beantwortet nur eine Frage.
+
+    Sven am 2026-08-17: „heisst so wie wir CANCOM oder andere konzerne
+    zusammenführen/gruppieren, machen wir das nun auch mit den mailendungen?" Nein, und
+    das ist gemessen begründet: von 458 Domains mit mehreren Identitäten tragen **59,6 %**
+    Firmen, deren Namen NICHTS gemeinsam haben (man.eu → Zanner Fahrzeugbau,
+    bechtle.com → Speedpoint GmbH, remondis.de → Reterra Service GmbH). Manche davon sind
+    Töchter, andere teilen nur einen Mail-Hoster — aus der Domain allein ist das nicht zu
+    unterscheiden. Dieselbe Falle wie der Namensstamm, den das Projekt nach 24 %
+    Fehl-Merges verworfen hat.
+
+    Deshalb ZWEI Eigenschaften, die dieser Test festhält:
+      1. Mehrdeutige Domains fallen aus dem Index (sie taugen nicht als Vorwurf).
+      2. Der Index schreibt nichts in die Entitäten — er lebt im Frontend-Modul.
+    """
+    from pathlib import Path
+    w = Path(__file__).resolve().parent.parent / "web"
+    quelle = (w / "lib/suppliers.ts").read_text(encoding="utf-8")
+
+    assert "domainEigentuemer" in quelle
+    # Mehrdeutigkeit sperrt die Domain — ohne diese Zeile wuerde der Index Konzern-
+    # Fragmentierung (Siemens AG / Siemens Mobility) als „fremde Firma" ausgeben.
+    assert "zaehler.set(d, null)" in quelle, "Mehrdeutigkeits-Sperre fehlt"
+    assert "MIN_BELEGE_INDEX" in quelle
+
+    # Der Index darf keine Identitaeten schreiben. Er liest `suppliers.json` und gibt ein
+    # Urteil — jede Schreiboperation waere ein stiller Merge.
+    for verboten in ("identity_id =", "writeFile", "entity_identity"):
+        assert verboten not in quelle, f"Index fasst Daten an: {verboten}"
+
+    # Das dritte Urteil ist in der Pruefung verdrahtet und von „unbestaetigt" getrennt.
+    route = (w / "app/api/entity-verify/route.ts").read_text(encoding="utf-8")
+    assert '"belegt" | "unbestaetigt" | "fremd"' in route
+    assert "eigner.id !== id" in route

@@ -65,6 +65,22 @@ ARTEN_FERTIGSTELLUNG = ("one_off_works", "works_other")
 ABHAENGIG_SCHWELLE = {1: 0.60, 2: 0.80, 3: 0.90}
 ABHAENGIG_AB_ZUSCHLAEGEN = 5
 
+# ── VORBELEGUNG FUER DEN WARMEN ONBOARDING-WEG ──────────────────────────────────────
+# `dim_cpv.branche` kennt 34 Werte, das Onboarding sechs Knoepfe. Diese Tabelle uebersetzt
+# — bewusst als Zuordnung und nicht als Rateregel: was hier nicht steht, bleibt leer, und
+# der Nutzer waehlt selbst. Eine falsch vorbelegte Branche ist schlimmer als eine leere,
+# weil sie stillschweigend die Relevanz-Sortierung praegt.
+BRANCHE_AUS_DIMCPV = {
+    "IT": "it", "Druck/Medien": "it",
+    "Bau": "bau", "Installation": "bau", "Elektro": "bau", "Immobilien": "bau",
+    "Medizin": "medizin", "Gesundheit": "medizin",
+    "Beratung": "beratung", "Ingenieur/Architektur": "beratung",
+    "Verwaltung": "beratung", "Bildung": "beratung", "Forschung": "beratung",
+    "Sicherheit": "sicherheit",
+    "Energie": "energie", "Wasser": "energie", "Versorgung": "energie",
+    "Umwelt/Reinigung": "energie",
+}
+
 
 def token_of(identity_id):
     return hashlib.sha1(identity_id.encode()).hexdigest()[:10]
@@ -563,6 +579,20 @@ def build_payload(con, identity_id, now):
         return None
     gebaut.sort(key=lambda t: -t["staerke"])
 
+    # Vorbelegung fuer den warmen Weg: Branche und Regionen aus der eigenen Historie.
+    # Beides ist im Onboarding aenderbar — es ist ein Vorschlag, keine Festlegung.
+    CP = f"read_parquet('{G}/dim_cpv.parquet')"
+    LE = f"read_parquet('{G}/lead_export.parquet')"
+    br = con.execute(f"""SELECT c.branche FROM {LE} l
+      JOIN {CP} c ON c.division = substr(l.cpv_code, 1, 2)
+      WHERE l.incumbent_group_id = ? GROUP BY 1 ORDER BY count(*) DESC LIMIT 1""",
+      [identity_id]).fetchone()
+    branche = BRANCHE_AUS_DIMCPV.get(br[0]) if br else None
+    # Leistungsorte, nicht Sitz der Vergabestelle — s. baustein_offene_im_feld.
+    regionen = [r[0] for r in con.execute(f"""SELECT substr(market_nuts3, 1, 3) FROM {LE}
+      WHERE incumbent_group_id = ? AND market_nuts3 IS NOT NULL
+      GROUP BY 1 ORDER BY count(*) DESC""", [identity_id]).fetchall()]
+
     nach_id = {t["id"]: t for t in gebaut}
     kern = next((nach_id[i]["kern"] for i in KERN_RANG
                  if i in nach_id and nach_id[i].get("kern")), None)
@@ -576,6 +606,9 @@ def build_payload(con, identity_id, now):
         # Sven: „daraus ableiten: wir erkennen muster, die euch helfen bessere
         # entscheidungen zu treffen." Der Satz gehoert ans Ende der HEUTE-Haelfte: er
         # sagt, wozu die Zahlen darueber gut sind, ohne eine weitere Zahl zu behaupten.
+        # Vorbelegung. `null` heisst „wir wissen es nicht" und fuehrt im Onboarding zur
+        # normalen Auswahl — nicht zu einer geratenen Voreinstellung.
+        "vorbelegung": {"branche": branche, "regionen": regionen},
         "muster": ("Aus solchen Mustern leiten wir ab, welche Ausschreibungen zu euch "
                    "passen und welche ihr euch sparen könnt."),
         "bausteine": gebaut,

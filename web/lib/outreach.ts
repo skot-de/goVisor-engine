@@ -56,6 +56,8 @@ export type Landing = {
   bereiche?: string[];
   /** Was die Zahlen fuer den Empfaenger bedeuten. Schliesst die HEUTE-Haelfte ab. */
   muster?: string | null;
+  /** Vorschlag fuer den warmen Onboarding-Weg. `null` heisst: wir wissen es nicht. */
+  vorbelegung?: { branche: string | null; regionen: string[] } | null;
 };
 
 let CACHE: Record<string, Landing> | null = null;

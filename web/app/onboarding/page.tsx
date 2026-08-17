@@ -58,7 +58,8 @@ function domainStamm(mail: string): string | null {
  * haben eine). Sie darf nicht ins Frontend — sonst wären die Kontaktdomains aller Firmen
  * über die Suche abgreifbar. Deshalb kommt hier nur das Urteil zurück.
  */
-type Beleg = { conf: "belegt" | "unbestaetigt"; grund: string; domainBekannt: boolean };
+type Beleg = { conf: "belegt" | "unbestaetigt" | "fremd"; grund: string;
+               domainBekannt: boolean; fremdeFirma?: string };
 
 async function pruefeBeleg(id: string, email: string): Promise<Beleg> {
   try {
@@ -190,7 +191,8 @@ export default function OnboardingPage() {
   const [beleg, setBeleg] = useState<Beleg | null>(null);       // Ergebnis des Domain-Abgleichs
   const [antragText, setAntragText] = useState("");             // Freitext für die manuelle Prüfung
   const [antragGesendet, setAntragGesendet] = useState(false);
-  const [vomToken, setVomToken] = useState(false);      // Firma kam aus der Outreach-Landing
+  const [vomToken, setVomToken] = useState(false);
+  const [tokenFirma, setTokenFirma] = useState<{ id: string; name: string } | null>(null);      // Firma kam aus der Outreach-Landing
   const pwStatus = pwPruefung(pw, email);
   const pwOk = pwStatus.ok;
 
@@ -216,7 +218,17 @@ export default function OnboardingPage() {
         // NUR vorschlagen, nie festschreiben: das Feld bleibt frei änderbar, und der
         // Treffer wird ganz normal über die Firmensuche bestätigt. Ein Token ist ein
         // Hinweis darauf, wen wir angeschrieben haben — kein Beleg, wer da tippt.
-        if (d?.name) { setEingabe(d.name); setVomToken(true); }
+        if (!d?.name) return;
+        setEingabe(d.name);
+        setVomToken(true);
+        // WARMER WEG: Firma steht fest, Vorbelegung kommt aus der eigenen Historie.
+        if (d.id) setTokenFirma({ id: d.id, name: d.name });
+        if (d.vorbelegung?.branche) setBranche(d.vorbelegung.branche);
+        if (d.vorbelegung?.regionen?.length) {
+          setRegionen(d.vorbelegung.regionen
+            .map((n: string) => LAENDER.find((l) => l[0] === n)?.[1])
+            .filter(Boolean) as string[]);
+        }
       })
       .catch(() => {});
   }, []);
@@ -299,6 +311,36 @@ export default function OnboardingPage() {
       Ein Token sagt, wen wir angeschrieben haben — nicht, wer gerade tippt; ein
       weitergeleiteter Link ist der Normalfall, nicht die Ausnahme.
     */
+    /*
+      WARMER WEG (Sven, 2026-08-17): „ist bei warm die verifizierung notwendig? weil die
+      anmeldung vorher erfolgt doch mit der firmenmail?"
+
+      Richtig, und der Grund ist staerker als der Token: die Bestaetigungsfrage war NIE
+      eine Verifizierung. Ein Klick auf „Ja, das sind wir" beweist nichts. Bewiesen wird
+      ueber die Mailadresse, und das laeuft ohnehin — bei 53,2 % der Firmen liegt dafuer
+      etwas vor (Kontaktadresse oder Domain aus den Vergabedaten).
+
+      Also: still pruefen, nicht fragen. Drei Ausgaenge:
+        belegt        -> durch, Profil traegt „belegt"
+        unbestaetigt  -> AUCH durch, Profil traegt „unbestaetigt" (eine Frage haette die
+                         Beweislage nicht geaendert, nur einen Schritt gekostet)
+        fremd         -> hier NICHT durchwinken. Wer mit @bechtle.de das Klostermann-
+                         Profil oeffnet, ist kein Grenzfall. Zurueck in den kalten Weg.
+    */
+    if (tokenFirma) {
+      const b = await pruefeBeleg(tokenFirma.id, email);
+      setBeleg(b);
+      if (b.conf !== "fremd") {
+        setMatched({ id: tokenFirma.id, name: tokenFirma.name } as Match);
+        await ladeMitglieder({ id: tokenFirma.id, name: tokenFirma.name } as Match);
+        setScreen("profil");
+        return;
+      }
+      // Fremde Domain: Vorbelegung faellt weg, es geht den normalen Weg weiter.
+      setTokenFirma(null);
+      setVomToken(false);
+    }
+
     const ausToken = vomToken && eingabe.trim().length > 1;
     setAusDomain(!ausToken);
     const frage = ausToken ? eingabe.trim() : domainStamm(email);

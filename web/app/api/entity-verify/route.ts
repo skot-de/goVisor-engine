@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { createHash } from "node:crypto";
-import { loadSuppliers } from "@/lib/suppliers";
+import { domainEigentuemer, loadSuppliers } from "@/lib/suppliers";
 import { rateLimit, clientIp } from "@/lib/rateLimit";
 
 /* Belegt-Prüfung des Identitäts-Anspruchs — bewusst SERVERSEITIG.
@@ -32,7 +32,13 @@ const FENSTER_MS = 60 * 60 * 1000;
 const mailHash = (m: string) => createHash("sha256").update(m.trim().toLowerCase()).digest("hex").slice(0, 16);
 
 export type VerifyErgebnis = {
-  conf: "belegt" | "unbestaetigt";
+  /* `fremd` ist bewusst ein DRITTES Urteil und nicht bloss ein „unbestaetigt" mit
+   * anderem Text. Fehlender Beleg und widersprechender Beleg sind verschiedene Dinge:
+   * beim ersten wissen wir nichts, beim zweiten wissen wir etwas Gegenteiliges. Nur der
+   * zweite rechtfertigt, jemanden aufzuhalten. */
+  conf: "belegt" | "unbestaetigt" | "fremd";
+  /** Bei `fremd`: wem die Domain nachweislich gehoert. */
+  fremdeFirma?: string;
   grund: string;
   /** Kann der Nutzer den Anspruch selbst per Domain belegen? Steuert den Hinweistext. */
   domainBekannt: boolean;
@@ -78,6 +84,16 @@ export async function POST(req: NextRequest) {
     return antwort({
       conf: "unbestaetigt", domainBekannt: !!bekannt,
       grund: "private E-Mail-Adresse — sie lässt sich keiner Firma zuordnen",
+    });
+  }
+  // Gehoert die Domain nachweislich einer ANDEREN Firma? Das ist kein Grenzfall mehr.
+  // Mehrdeutige Domains (458 von 7.631, meist Konzern-Fragmentierung wie LEONHARD WEISS
+  // oder Siemens) stehen gar nicht erst im Index — sie taugen nicht als Vorwurf.
+  const eigner = await domainEigentuemer(dom);
+  if (eigner && eigner.id !== id) {
+    return antwort({
+      conf: "fremd", domainBekannt: !!bekannt, fremdeFirma: eigner.name,
+      grund: `${dom} gehört in unseren Daten zu ${eigner.name}, nicht zu dieser Firma`,
     });
   }
   if (bekannt && belege >= MIN_BELEGE) {

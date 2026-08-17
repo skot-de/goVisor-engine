@@ -25,5 +25,12 @@ export async function GET(req: Request) {
     return NextResponse.json({ name: null }, { status: 400 });
   }
   const d = await loadLanding(t).catch(() => null);
-  return NextResponse.json({ name: d?.name ?? null }, { headers: { "cache-control": "no-store" } });
+  // Auch Identitaet und Vorbelegung: der warme Onboarding-Weg ueberspringt die
+  // Firmensuche, braucht dafuer aber die Identitaet, an der die Landing haengt.
+  // Das gibt nichts preis, was die Landing unter demselben Token nicht ohnehin zeigt.
+  return NextResponse.json({
+    name: d?.name ?? null,
+    id: d?.id ?? null,
+    vorbelegung: d?.vorbelegung ?? null,
+  }, { headers: { "cache-control": "no-store" } });
 }

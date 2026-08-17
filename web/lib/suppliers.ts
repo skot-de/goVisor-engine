@@ -33,3 +33,38 @@ export async function loadSuppliers(): Promise<Supplier[]> {
   }
   return CACHE;
 }
+
+/* ── Rückwärts-Index: Domain → Firma ─────────────────────────────────────────────────
+ *
+ * **Wofür.** Die Belegprüfung erkannte bisher „die Domain passt nicht zur hinterlegten",
+ * konnte aber nicht sagen, WEM sie gehört. Der Unterschied ist erheblich: wer mit
+ * `@bechtle.de` das Klostermann-Profil öffnet, ist kein Grenzfall, sondern eine falsche
+ * Zuordnung, die man nicht stillschweigend durchwinken darf.
+ *
+ * **Warum Mehrdeutigkeit hier zählt.** Gemessen 2026-08-17: von 7.631 Domains mit
+ * mindestens zwei Belegen gehören 458 (6,0 %) mehreren Identitäten — und die Beispiele
+ * zeigen, dass das fast immer Konzern-Fragmentierung ist (LEONHARD WEISS zweimal,
+ * MAN zweimal, Siemens zweimal), nicht zwei verschiedene Unternehmen. Eine Domain mit
+ * mehreren Eigentümern taugt deshalb NICHT als Vorwurf. Sie fällt aus dem Index.
+ *
+ * Übrig bleiben die eindeutigen 94 %, und nur die können eine fremde Firma belegen.
+ */
+const MIN_BELEGE_INDEX = 2;
+
+let DOMAIN_INDEX: Map<string, { id: string; name: string }> | null = null;
+
+export async function domainEigentuemer(domain: string) {
+  if (!DOMAIN_INDEX) {
+    const zaehler = new Map<string, { id: string; name: string } | null>();
+    for (const s of await loadSuppliers()) {
+      const d = (s.domain || "").toLowerCase();
+      if (!d || (s.domainBelege ?? 0) < MIN_BELEGE_INDEX) continue;
+      if (!zaehler.has(d)) zaehler.set(d, { id: s.id, name: s.name });
+      // Zweite Identität auf derselben Domain → mehrdeutig, `null` sperrt sie dauerhaft.
+      else if (zaehler.get(d)?.id !== s.id) zaehler.set(d, null);
+    }
+    DOMAIN_INDEX = new Map(
+      [...zaehler].filter(([, v]) => v !== null) as [string, { id: string; name: string }][]);
+  }
+  return DOMAIN_INDEX.get((domain || "").toLowerCase()) ?? null;
+}
