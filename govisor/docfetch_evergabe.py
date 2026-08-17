@@ -69,6 +69,7 @@ _ABKUEHLUNG_S = 420        # 7 min, mit Reserve auf die gemessenen 6
 _MAX_ABKUEHLUNGEN = 4      # danach ist die Sperre keine Drosselung mehr
 _MAX_DATEI = 40 * 1024**2   # eine Einzeldatei
 _MAX_VERGABE = 150 * 1024**2
+_LAUF_BUDGET_MB = 2000   # Deckel fuer den GANZEN Lauf, s. Schleife
 
 # Vier URL-Formen, alle im Bestand gemessen (869 offene Leads):
 #     113  /unterlagen/<zahl>/zustellweg-auswaehlen
@@ -297,10 +298,24 @@ def lauf(limit: int | None = None, dry_run: bool = False, country: str = "DE") -
         ctx = b.new_context(accept_downloads=True)
         pg = ctx.new_page()
         pg.set_default_timeout(60000)
+        _geladen_mb = 0.0
         for i, (lead_id, seite, ziel) in enumerate(offen, 1):
+            # LAUF-BUDGET. Es gab Deckel je Datei (40 MB) und je Vergabe (150 MB), aber
+            # keinen fuer den ganzen Lauf — 60 Vergaben à 150 MB waeren 9 GB gewesen.
+            if _geladen_mb >= _LAUF_BUDGET_MB:
+                print(f"\n  Lauf-Budget von {_LAUF_BUDGET_MB} MB erreicht — "
+                      f"{len(offen) - i + 1} Vergaben bleiben fuer den naechsten Lauf.")
+                break
             try:
                 with tempfile.TemporaryDirectory() as td:
-                    r = hole_vergabe(seite, pg, Path(td))
+                    with _queue.vorgang_frist(VORGANG_FRIST_S):
+                        r = hole_vergabe(seite, pg, Path(td))
+            except _queue.VorgangZuLang:
+                print(f"  [{i}/{len(offen)}] {lead_id}: zu lang (> {VORGANG_FRIST_S}s)", flush=True)
+                saetze.append({"lead_id": lead_id, "url": seite, "status": "zu_lang",
+                               "bytes": 0, "n_files": 0, "uebersprungen": [],
+                               "note": f"> {VORGANG_FRIST_S}s"})
+                continue
             except Exception as e:                       # noqa: BLE001
                 print(f"  [{i}/{len(offen)}] {lead_id}: Fehler ({type(e).__name__})", flush=True)
                 saetze.append({"lead_id": lead_id, "url": seite, "status": "error",

@@ -307,3 +307,55 @@ def bericht(gruende: dict[str, int]) -> str:
     # ist der häufigste Grund kein Fehlschlag, sondern ein fehlender Zugang. Die alte
     # Formulierung hätte 389 wartende Vorgänge als kaputt dargestellt.
     return f"  übersprungen (bekannter Ausgang): {teile}"
+
+
+# ══ ZEITGRENZE JE VORGANG ════════════════════════════════════════════════════════════
+# Playwrights `set_default_timeout` deckelt eine OPERATION, nicht einen Vorgang. Zehn
+# Dateien à 33 MB koennen jede unter 90 s bleiben und zusammen eine halbe Stunde dauern —
+# genau das ist am 2026-08-16 passiert: Healy-Hudson stand bei Vorgang 33 von 60, gab
+# 30 min lang keine Zeile aus, und die Stillstandswache des Tageslaufs erschlug den
+# GANZEN Schritt. Die 27 Vorgaenge dahinter waren nicht kaputt, sie kamen nur nicht dran.
+#
+# Diese Wache bricht den EINEN Vorgang ab und laesst den Schritt weiterlaufen.
+#
+# Warum ein Wecker und kein Thread: die Playwright-Sync-API gehoert dem Hauptthread. Ein
+# Abbruch aus einem anderen Thread wuerde sie im Zweifel im ungueltigen Zustand
+# hinterlassen. `setitimer` unterbricht genau dort, wo der Code gerade steht.
+#
+# ⚠ Damit bleibt die Wache an EINEN Prozess je Abrufer gebunden. Nebenlaeufigkeit gehoert
+# deshalb auf die Prozess-Ebene (mehrere Abrufer gleichzeitig), nicht in die Schleife.
+import signal as _signal
+from contextlib import contextmanager as _contextmanager
+
+
+class VorgangZuLang(TimeoutError):
+    """Ein einzelner Vorgang hat seine Frist gerissen."""
+
+
+@_contextmanager
+def vorgang_frist(sekunden: int = 300):
+    """Bricht den umschlossenen Vorgang nach ``sekunden`` ab.
+
+    Fehlt die Wecker-Unterstuetzung (Windows, Nicht-Hauptthread), laeuft der Block
+    ungeschuetzt weiter, statt den Abruf zu verweigern: eine fehlende Wache ist
+    schlechter als keine Daten, aber besser als gar kein Abruf.
+    """
+    if sekunden <= 0 or not hasattr(_signal, "SIGALRM"):
+        yield
+        return
+    try:
+        vorher = _signal.getsignal(_signal.SIGALRM)
+    except ValueError:                      # nicht im Hauptthread
+        yield
+        return
+
+    def _wecker(signum, rahmen):
+        raise VorgangZuLang(f"Vorgang laenger als {sekunden}s")
+
+    _signal.signal(_signal.SIGALRM, _wecker)
+    _signal.setitimer(_signal.ITIMER_REAL, sekunden)
+    try:
+        yield
+    finally:
+        _signal.setitimer(_signal.ITIMER_REAL, 0)
+        _signal.signal(_signal.SIGALRM, vorher)

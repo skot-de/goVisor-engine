@@ -242,3 +242,63 @@ def test_alte_schreibweise_im_bestand_heilt_beim_lesen(tmp_path):
         "versucht_am": pa.array([dt.date.today()], pa.date32()),
     }), tmp_path / "_manifest_y.parquet", compression="zstd")
     assert q.frueher(tmp_path, "y")["a"]["status"] == "fehler"
+
+
+def test_vorgang_frist_bricht_einzelnen_vorgang_ab():
+    """Ein haengender Vorgang darf den Schritt nicht mitreissen.
+
+    Am 2026-08-16 stand Healy-Hudson bei Vorgang 33 von 60, gab 30 min keine Zeile aus,
+    und die Stillstandswache des Tageslaufs erschlug den GANZEN Schritt. Die 27 Vorgaenge
+    dahinter waren nicht kaputt, sie kamen nur nicht mehr dran.
+
+    Playwrights `set_default_timeout` half nicht: die deckelt eine OPERATION. Zehn Dateien
+    à 33 MB bleiben jede darunter und brauchen zusammen eine halbe Stunde.
+    """
+    import time
+    import signal
+    from govisor import docfetch_queue as Q
+
+    t = time.time()
+    try:
+        with Q.vorgang_frist(1):
+            time.sleep(30)
+        raise AssertionError("Frist hat nicht ausgeloest")
+    except Q.VorgangZuLang:
+        pass
+    assert time.time() - t < 5, "Abbruch kam zu spaet"
+
+    # Der Wecker muss danach ABGERAEUMT sein, sonst schlaegt er mitten im naechsten
+    # Vorgang zu und der Abrufer stirbt an einer Frist, die laengst vorbei ist.
+    with Q.vorgang_frist(30):
+        time.sleep(0.05)
+    assert signal.getsignal(signal.SIGALRM) in (0, signal.SIG_DFL, signal.SIG_IGN), \
+        "SIGALRM-Handler blieb stehen"
+
+    # Ohne Frist (0) laeuft der Block ungeschuetzt — kein Absturz, keine Wache.
+    with Q.vorgang_frist(0):
+        pass
+
+
+def test_alle_abrufer_haben_vorgangsfrist_und_byte_deckel():
+    """Jeder Abrufer braucht beide Grenzen — Zeit je Vorgang UND Bytes je Lauf.
+
+    `--limit 60` zaehlt VORGAENGE, und ein Vorgang ist gemessen alles zwischen 0 und
+    636 MB (Median 8, 90 % unter 72). 60 Stueck sind damit je nach Zusammensetzung 0,6
+    bis 3,3 GB. Die beobachtete Streuung von 55,6 bis 719,1 min ist deshalb zum grossen
+    Teil kein Server-Zufall, sondern eine falsche Zaehleinheit.
+
+    healyhudson war der einzige ohne Byte-Deckel — und der Abrufer mit den 719 Minuten.
+    """
+    from pathlib import Path
+    wurzel = Path(__file__).resolve().parent.parent / "govisor"
+    fehlt_frist, fehlt_bytes = [], []
+    for p in sorted(wurzel.glob("docfetch_*.py")):
+        s = p.read_text(encoding="utf-8")
+        if "hole_vergabe(" not in s or "sync_playwright" not in s:
+            continue                       # kein Vorgangs-Abrufer
+        if "vorgang_frist(" not in s:
+            fehlt_frist.append(p.name)
+        if not any(k in s for k in ("_LAUF_BUDGET_MB", "MAX_BYTES", "BUDGET_MB")):
+            fehlt_bytes.append(p.name)
+    assert not fehlt_frist, f"ohne Zeitgrenze je Vorgang: {fehlt_frist}"
+    assert not fehlt_bytes, f"ohne Byte-Deckel je Lauf: {fehlt_bytes}"

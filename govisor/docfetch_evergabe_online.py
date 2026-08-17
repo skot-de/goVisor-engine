@@ -51,6 +51,14 @@ from pathlib import Path
 
 from . import docfetch_queue as _queue
 
+# ZEITGRENZE JE VORGANG. Playwrights `set_default_timeout` deckelt eine OPERATION; zehn
+# Dateien à 33 MB bleiben jede darunter und brauchen zusammen eine halbe Stunde. Genau so
+# ist am 2026-08-16 ein Abrufer bei Vorgang 33 von 60 stehengeblieben und hat den ganzen
+# Schritt mitgerissen. Diese Grenze wirft EINEN Vorgang weg, nicht den Rest.
+# 8 min: der groesste je geholte Vorgang war 636 MB, das Mittel liegt bei 8 MB.
+VORGANG_FRIST_S = int(__import__("os").environ.get("GOVISOR_VORGANG_FRIST", "480"))
+
+
 ROOT = Path(__file__).resolve().parent.parent
 
 _HOST = "www.evergabe-online.de"
@@ -197,7 +205,11 @@ def lauf(limit: int | None = None, dry_run: bool = False, country: str = "DE") -
                 print(f"\n  Lauf-Budget erreicht — {len(offen) - i + 1} bleiben für morgen.")
                 break
             try:
-                r = hole_vergabe(seite, pg, ziel, dry_run)
+                with _queue.vorgang_frist(VORGANG_FRIST_S):
+                    r = hole_vergabe(seite, pg, ziel, dry_run)
+            except _queue.VorgangZuLang:
+                r = {"status": "zu_lang", "bytes": 0, "n_files": 0,
+                     "note": f"> {VORGANG_FRIST_S}s"}
             except Exception as e:                       # noqa: BLE001
                 erste = str(e).strip().splitlines()[0] if str(e).strip() else ""
                 r = {"status": "fehler", "bytes": 0, "n_files": 0,

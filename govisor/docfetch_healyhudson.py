@@ -43,6 +43,14 @@ from pathlib import Path
 
 from . import docfetch_queue as _queue
 
+# ZEITGRENZE JE VORGANG. Playwrights `set_default_timeout` deckelt eine OPERATION; zehn
+# Dateien à 33 MB bleiben jede darunter und brauchen zusammen eine halbe Stunde. Genau so
+# ist am 2026-08-16 ein Abrufer bei Vorgang 33 von 60 stehengeblieben und hat den ganzen
+# Schritt mitgerissen. Diese Grenze wirft EINEN Vorgang weg, nicht den Rest.
+# 8 min: der groesste je geholte Vorgang war 636 MB, das Mittel liegt bei 8 MB.
+VORGANG_FRIST_S = int(__import__("os").environ.get("GOVISOR_VORGANG_FRIST", "480"))
+
+
 ROOT = Path(__file__).resolve().parent.parent
 
 # Der Deeplink-Pfad ist das gemeinsame Merkmal der Familie — verlaesslicher als eine
@@ -53,6 +61,16 @@ _WARTE_MS = 7000
 _HOEFLICH_MS = 2000
 _MAX_DATEI = 60 * 1024**2
 _MAX_VERGABE = 200 * 1024**2
+
+# LAUF-BUDGET IN BYTES. Als EINZIGER Abrufer hatte healyhudson keins — alle anderen
+# deckeln bei 1.500 bis 2.000 MB. Genau dieser Abrufer lief am 2026-08-15 719 Minuten.
+#
+# Warum ein Byte-Deckel und nicht nur ein Stueck-Deckel: `--limit 60` zaehlt Vorgaenge,
+# und ein Vorgang ist gemessen alles zwischen 0 und 636 MB (Median 8, 90 % unter 72).
+# 60 Stueck sind damit je nach Zusammensetzung 0,6 bis 3,3 GB. Die beobachtete Streuung
+# von 55,6 bis 719,1 min ist zum grossen Teil kein Server-Zufall, sondern diese Einheit:
+# gezaehlt wurde die falsche Groesse.
+_LAUF_BUDGET_MB = 2000
 # ECHTE Dokumentendungen, keine generische `\.\w{2,5}$`-Regel. Die faengt naemlich auch
 # `kundendienst@deutsche-evergabe.de` — gemessen im ersten Probelauf, wo drei von vier
 # Vorgaengen die Kontakt-Mailadresse als „Datei" meldeten.
@@ -208,13 +226,23 @@ def lauf(limit: int | None = None, dry_run: bool = False, country: str = "DE") -
         ctx = b.new_context(accept_downloads=True)
         pg = ctx.new_page()
         pg.set_default_timeout(90000)
+        geladen_mb = 0.0
         for i, (lead_id, url, ziel) in enumerate(offen, 1):
+            if geladen_mb >= _LAUF_BUDGET_MB:
+                print(f"\n  Lauf-Budget von {_LAUF_BUDGET_MB} MB erreicht — "
+                      f"{len(offen) - i + 1} Vergaben bleiben fuer den naechsten Lauf.")
+                break
             host = url.split("/")[2]
             try:
                 with tempfile.TemporaryDirectory() as td:
-                    r = hole_vergabe(url, pg, Path(td), dry_run)
+                    with _queue.vorgang_frist(VORGANG_FRIST_S):
+                        r = hole_vergabe(url, pg, Path(td), dry_run)
                     groesse = (_schreibe_zip(ziel, r["dateien"])
                                if r["dateien"] and not dry_run else 0)
+            except _queue.VorgangZuLang:
+                r = {"dateien": [], "status": "zu_lang", "gelistet": 0,
+                     "note": f"> {VORGANG_FRIST_S}s"}
+                groesse = 0
             except Exception as e:                       # noqa: BLE001
                 r = {"dateien": [], "status": "fehler", "gelistet": 0, "note": type(e).__name__}
                 groesse = 0
@@ -222,6 +250,7 @@ def lauf(limit: int | None = None, dry_run: bool = False, country: str = "DE") -
                            "status": r["status"], "bytes": groesse,
                            "n_files": len(r["dateien"]), "gelistet": r["gelistet"],
                            "note": r["note"]})
+            geladen_mb += groesse / 1e6
             info = (f"{len(r['dateien'])} Dateien  {groesse/1024**2:.1f} MB"
                     if r["status"] == "downloaded" else f"{r['status']} ({r['note'][:50]})")
             print(f"  [{i}/{len(offen)}] {host[:30]:<30} {lead_id[:14]:<14} {info}", flush=True)
