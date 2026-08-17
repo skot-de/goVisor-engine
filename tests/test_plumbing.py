@@ -2072,17 +2072,20 @@ def test_landing_klassen_sind_praefixiert():
     w = Path(__file__).resolve().parent.parent / "web"
 
     tsx = (w / "app/t/[token]/LandingView.tsx").read_text(encoding="utf-8")
-    # Klassen des App-Rahmens sind erlaubt — die kommen aus `Rail`/`explorer.css`.
-    rahmen = {"app", "body", "main", "seitenmain", "landing"}
+    # ZWEI Praefixe seit dem Dossier-Umbau: `lg-` fuer die Inhaltsbausteine, `ds-` fuer
+    # den Dokumentrahmen (Kopf, Blatt, Fuss). Die frueher erlaubten App-Rahmen-Klassen
+    # (`app`, `body`, `main`, `seitenmain`) sind WEG — die Seite steckt nicht mehr in der
+    # App-Huelle, und sie wieder zuzulassen hiesse, den Rueckweg offenzuhalten.
+    erlaubt = ("lg-", "ds-")
     fremd = sorted({k for treffer in re.findall(r'className="([^"{]+)"', tsx)
                     for k in treffer.split()
-                    if not k.startswith("lg-") and k not in rahmen})
+                    if not k.startswith(erlaubt) and k != "dossier"})
     assert not fremd, f"ungepraefixte Klassen im Markup: {fremd}"
 
     css = (w / "app/landing.css").read_text(encoding="utf-8")
     css = re.sub(r"/\*.*?\*/", "", css, flags=re.S)          # Kommentare erwaehnen alte Namen
     sel = sorted({m for m in re.findall(r"\.([a-zA-Z][\w-]*)", css)
-                  if not m.startswith("lg-") and m != "landing"})
+                  if not m.startswith(erlaubt) and m != "dossier"})
     assert not sel, f"ungepraefixte Selektoren in landing.css: {sel}"
 
 
@@ -2369,8 +2372,27 @@ def test_outreach_texte_sind_nicht_zerschossen():
 
     # Abkuerzungen enden regulaer auf einen Punkt und gehen klein weiter.
     ok = _re.compile(r"\b(z\. ?B|u\. ?a|ca|bzw|inkl|evtl|ggf|Nr|St|Bd)\.")
+    # ⚠ NUR VON UNS GESCHRIEBENE PROSA, keine Namen.
+    #
+    # Der erste Anlauf pruefte jedes Textfeld und meldete 30 Treffer, die alle Eigennamen
+    # waren: „H Angers Söhne Bohr und Brunnenbauges. mbH", „ASGE Rümenapp Metallbauges.
+    # mbH", „Land Berlin vertr. durch BA Mitte v. Berlin". Das sind ganz normale deutsche
+    # Abkuerzungen in Firmierungen, und eine Abkuerzungsliste holt die nie ein — man kann
+    # eine Firma nennen, wie man will. Gesucht wird der Tausendertrenner-Fehler, und der
+    # kann nur in Feldern stecken, die der Generator SELBST formuliert.
+    # Der PFAD entscheidet, nicht der Feldname. `bausteine[0].titel` ist unsere
+    # Ueberschrift („Wo eure Auftraege herkommen koennten"), `bausteine[0].zeilen[2].titel`
+    # ist ein Ausschreibungstitel aus der Quelle — „25E30036 - Bw. Sozialwerk (Haus Jade),
+    # San. und Umbau" oder „HWSB Saaledeich re. km 6,3-8,3". Beides heisst `titel`, nur
+    # eines davon haben wir geschrieben.
+    prosa = _re.compile(
+        r"^\.(kern|muster)$"
+        r"|^\.bausteine\[\d+\]\.(kern|folge|grenze|befund|kette|titel|vergleich"
+        r"|verschwiegen_text)$"
+        r"|^\.bausteine\[\d+\]\.(zahlen|trichter)\[\d+\]\.(label|hinweis)$")
     kaputt = [(p_, t) for p_, t in texte(_json.loads(p.read_text(encoding="utf-8")))
-              if _re.search(r"[a-zäöüß]\. [a-zäöüß]", t) and not ok.search(t)]
+              if prosa.match(p_)
+              and _re.search(r"[a-zäöüß]\. [a-zäöüß]", t) and not ok.search(t)]
     assert not kaputt, (
         "Fliesstext mit Kleinbuchstabe nach Satzpunkt — vermutlich ein Komma, das der "
         f"Tausendertrenner erwischt hat:\n" + "\n".join(f"  {a}: {b[:90]}" for a, b in kaputt[:5]))

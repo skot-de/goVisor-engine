@@ -73,6 +73,13 @@ NACKTE_ZAHL_AB_ABWAERTS = 12
 
 _ABKUERZUNG = re.compile(r"\b(z\. ?B|u\. ?a|ca|bzw|inkl|evtl|ggf|Nr|St|Bd)\.")
 
+# Felder, die der Generator SELBST formuliert. Alles andere ist Quelldatum.
+_PROSA = re.compile(
+    r"^\.(kern|muster)$"
+    r"|^\.bausteine\[\d+\]\.(kern|folge|grenze|befund|kette|titel|vergleich"
+    r"|verschwiegen_text)$"
+    r"|^\.bausteine\[\d+\]\.(zahlen|trichter)\[\d+\]\.(label|hinweis)$")
+
 
 def _texte(o, pfad=""):
     if isinstance(o, str):
@@ -131,7 +138,20 @@ def pruefe(con, token: str, l: dict) -> list[tuple[str, str]]:
                                 f"Firma arbeitet zu {anteil:.0%} für `{haupt}`, die empfohlenen "
                                 f"Stellen nur zu {treffer[0]/treffer[1]:.0%}"))
 
+    # ⚠ Nur von UNS geschriebene Prosa, und der PFAD entscheidet.
+    #
+    # Der erste Anlauf pruefte jedes Textfeld und meldete 30 Treffer ueber 9.456 Landings.
+    # Alle waren Eigennamen oder Ausschreibungstitel aus der Quelle: „ASGE Rümenapp
+    # Metallbauges. mbH", „Land Berlin vertr. durch BA Mitte v. Berlin", „HWSB Saaledeich
+    # re. km 6,3-8,3". Ganz normale deutsche Abkuerzungen, die keine Liste je einholt —
+    # man kann eine Firma nennen, wie man will. Gesucht wird der Tausendertrenner-Fehler,
+    # und der kann nur dort stecken, wo der Generator selbst formuliert.
+    #
+    # `bausteine[0].titel` ist unsere Ueberschrift, `bausteine[0].zeilen[2].titel` ist
+    # Quelldatum. Beides heisst `titel` — deshalb der Pfad und nicht der Feldname.
     for pfad, t in _texte(l):
+        if not _PROSA.match(pfad):
+            continue
         if re.search(r"[a-zäöüß]\. [a-zäöüß]", t) and not _ABKUERZUNG.search(t):
             befunde.append(("zerschossen", f"{pfad}: {t[:70]}"))
             break
