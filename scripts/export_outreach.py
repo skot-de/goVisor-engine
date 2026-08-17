@@ -166,6 +166,147 @@ def _vertragszeilen(con, identity_id, limit=8):
     return zeilen
 
 
+# ─────────────────────────────────────────────────────────────────────────────────────
+#  DER ZUSCHNITT — eine Stelle, an der aus der Historie einer Firma wird, wie sich der
+#  Markt auf sie verengen laesst.
+#
+#  WARUM ES DAS GEBEN MUSS (Sven, 2026-08-17): „ich kann und werde nicht bei jedem kunden
+#  dabei sein und vorher gucken was er sehen wuerde. wir muessen da ein muster schaffen,
+#  das immer funktioniert."
+#
+#  Der Fehler, der das ausgeloest hat, ist lehrreich: die Seite empfahl H. Klostermann
+#  (Fernmelde- und Stromleitungen fuer DB Netz) 171 Ausschreibungen von „anderen
+#  Auftraggebern". Dahinter standen Schulbau Hamburg, Stadt Wuppertal und das
+#  Gebaeudemanagement Hannover — Gebaeudeelektrik. Die CPV-Klasse stimmte (4531
+#  „Installation von elektrischen Leitungen"), die Arbeit nicht. Ein Geschaeftsfuehrer
+#  liest so eine Liste und weiss in fuenf Sekunden, dass wir sein Geschaeft nicht
+#  verstanden haben. Das ist schlechter als gar nicht zu schreiben.
+#
+#  Gefunden wurde der Fehler NUR, weil jemand die Namen gelesen hat. Genau das soll hier
+#  nie wieder noetig sein. Drei Regeln setzen das um:
+#
+#    1. EINE Quelle fuer die Verengung. Jeder „fuer euch"-Baustein fragt hier, statt sich
+#       seine Filter selbst zusammenzubauen. Sonst verengt einer nach CPV, der naechste
+#       nach Region, und die Seite widerspricht sich.
+#    2. Jede Stufe traegt IHR EIGENES Etikett. Vorher standen die Etiketten als feste
+#       Zeichenketten in der Oberflaeche („in eurem Fach", „wo ihr baut"), waehrend die
+#       Filter bedingt waren — faellt eine Stufe aus, log das Etikett.
+#    3. Eine Stufe kommt nur in die Kette, wenn sie WIRKLICH einschraenkt. Eine Stufe, die
+#       nichts wegnimmt, taeuscht Praezision vor, die es nicht gibt.
+# ─────────────────────────────────────────────────────────────────────────────────────
+
+# Sammelbecken-Taetigkeiten. `general_public` allein traegt 17.665 Firmen — als Filter
+# verengt das nichts und behauptet trotzdem eine Passung. Solche Werte sind KEINE Stufe.
+AKTIVITAET_UNSPEZIFISCH = {"general_public", "other", None, ""}
+# Ab welchem Anteil der typisierten Auftraggeber gilt eine Taetigkeit als praegend?
+# Gemessen: 79 % der Firmen mit >=3 typisierten erreichen 60 %, 46 % erreichen 80 %.
+AKTIVITAET_SCHWELLE = 0.60
+AKTIVITAET_MIN_BELEGE = 3
+
+
+def zuschnitt(con, ctx):
+    """Wie sich der offene Markt auf DIESE Firma verengen lässt. Gecacht im Kontext."""
+    if "zuschnitt" in ctx:
+        return ctx["zuschnitt"]
+    LE = f"read_parquet('{G}/lead_export.parquet')"
+    CL = f"read_parquet('{G}/dim_cpv_label.parquet')"
+    iid = ctx["id"]
+
+    div = con.execute(f"""SELECT substr(cpv_code,1,2) FROM {LE}
+      WHERE incumbent_group_id = ? AND cpv_code IS NOT NULL
+      GROUP BY 1 ORDER BY count(*) DESC LIMIT 1""", [iid]).fetchone()
+    klassen = [r[0] for r in con.execute(f"""SELECT DISTINCT substr(cpv_code,1,4) FROM {LE}
+      WHERE incumbent_group_id = ? AND cpv_code IS NOT NULL""", [iid]).fetchall()]
+    # Leistungsort, NICHT Sitz der Vergabestelle — s. baustein_offene_im_feld.
+    laender = [r[0] for r in con.execute(f"""SELECT DISTINCT substr(market_nuts3,1,3) FROM {LE}
+      WHERE incumbent_group_id = ? AND market_nuts3 IS NOT NULL""", [iid]).fetchall()]
+
+    # Praegende Taetigkeit der Auftraggeber. Das ist die Achse, die „Bahnbau" von
+    # „Schulverkabelung" trennt, wo die CPV-Klasse beide gleich nennt.
+    akt_rows = con.execute(f"""SELECT buyer_activity, count(*) FROM {LE}
+      WHERE incumbent_group_id = ? AND buyer_activity IS NOT NULL
+      GROUP BY 1 ORDER BY 2 DESC""", [iid]).fetchall()
+    typisiert = sum(n for _, n in akt_rows)
+    aktivitaet = None
+    if typisiert >= AKTIVITAET_MIN_BELEGE:
+        top, k = akt_rows[0]
+        if k / typisiert >= AKTIVITAET_SCHWELLE and top not in AKTIVITAET_UNSPEZIFISCH:
+            aktivitaet = top
+
+    stufen = []
+    if div:
+        stufen.append({"sql": "substr(cpv_code,1,2) = ?", "par": [div[0]],
+                       "label": "sagt der Markt", "art": "division"})
+    if klassen:
+        namen = [r[0] for r in con.execute(
+            f"SELECT label FROM {CL} WHERE substr(cpv_code,1,4) IN "
+            f"({','.join('?' * len(klassen))}) AND substr(cpv_code,5,4) = '0000'",
+            klassen).fetchall() if r[0]]
+        stufen.append({"sql": f"substr(cpv_code,1,4) IN ({','.join('?' * len(klassen))})",
+                       "par": list(klassen), "label": "in eurem Fach", "art": "klasse",
+                       "hinweis": ", ".join(n[:44] for n in namen[:3]) or None})
+    if aktivitaet:
+        stufen.append({"sql": "buyer_activity = ?", "par": [aktivitaet],
+                       "label": AKTIVITAET_LABEL.get(aktivitaet, "bei euren Auftraggebern"),
+                       "art": "aktivitaet"})
+    # Bundesweit taetige Firmen bekommen keine Regionsstufe vorgegaukelt.
+    if laender and len(laender) < 14:
+        stufen.append({"sql": f"substr(market_nuts3,1,3) IN ({','.join('?' * len(laender))})",
+                       "par": list(laender), "label": "wo ihr arbeitet", "art": "region"})
+
+    ctx["zuschnitt"] = {"stufen": stufen, "aktivitaet": aktivitaet,
+                        "typisiert": typisiert, "klassen": klassen, "division": div[0] if div else None}
+    return ctx["zuschnitt"]
+
+
+# Etiketten fuer die Taetigkeitsstufe. Die eForms-Codes sind fuer den Empfaenger
+# unlesbar; „bei Verkehrsbetrieben" ist der Satz, der einen Bahnbauer erreicht.
+AKTIVITAET_LABEL = {
+    "transport": "bei Verkehrsbetrieben",
+    "health": "im Gesundheitswesen",
+    "education": "bei Bildungsträgern",
+    "environment": "bei Umwelt und Entsorgung",
+    "housing": "bei Wohnungs- und Stadtentwicklung",
+    "economic_affairs": "in der Wirtschaftsförderung",
+    "social_protection": "bei sozialen Trägern",
+    "recreation_culture": "bei Kultur und Freizeit",
+    "public_order": "bei Sicherheit und Ordnung",
+    "defence": "im Verteidigungsbereich",
+    "energy": "bei Energieversorgern",
+    "water": "bei Wasserversorgern",
+    "postal": "bei Postdiensten",
+}
+
+
+def kette_bauen(con, zs, ctx, zusatz_sql="", zusatz_par=None):
+    """Stufen nacheinander anwenden und nur behalten, was wirklich einschränkt.
+
+    Gibt die Kette (fürs Anzeigen) und die volle Bedingung (fürs Weiterrechnen) zurück.
+    Eine Stufe ohne Wirkung fliegt raus — samt ihrem Etikett. Das ist der Grund, warum
+    Etikett und Filter hier zusammen entstehen und nicht an zwei Orten gepflegt werden.
+    """
+    LE = f"read_parquet('{G}/lead_export.parquet')"
+    fremd = "(incumbent_group_id IS NULL OR incumbent_group_id <> ?)"
+    bed, par, kette = [], [], []
+    vorher = None
+    for st in zs["stufen"]:
+        p = bed + [st["sql"]], par + st["par"]
+        alle = " AND ".join(p[0])
+        n = con.execute(
+            f"SELECT count(*) FROM {LE} WHERE phase='open' AND {alle} AND {fremd}"
+            + (f" AND {zusatz_sql}" if zusatz_sql else ""),
+            p[1] + [ctx["id"]] + (zusatz_par or [])).fetchone()[0]
+        if vorher is not None and n >= vorher:
+            continue                       # nimmt nichts weg → kein Glied, kein Etikett
+        bed, par = p[0], p[1]
+        glied = {"n": n, "label": st["label"], "art": st["art"]}
+        if st.get("hinweis"):
+            glied["hinweis"] = st["hinweis"]
+        kette.append(glied)
+        vorher = n
+    return kette, (" AND ".join(bed) if bed else "1=1"), par
+
+
 def baustein_transparenz(con, ctx):
     """„Wir kennen euch" — und ehrlich dazu, welcher Teil von euch sichtbar ist.
 
@@ -478,93 +619,44 @@ def baustein_wettbewerber(con, ctx):
 def baustein_offene_im_feld(con, ctx):
     """Was die Firma NICHT weiss: fremde Ausschreibungen, schrittweise auf sie zugeschnitten.
 
-    **Warum ein Trichter und nicht eine Zahl.** Der Baustein zeigte „8.080 offene
-    Ausschreibungen in eurem Fachgebiet". Sven: „schön und gut, aber wie viele genau für
-    klostermann?" — zu Recht: 8.080 ist die ganze CPV-Division 45, also jede
-    Bauausschreibung in Deutschland. Für einen Bahninfrastruktur-Bauer ist das keine
-    Auskunft, sondern eine Marktgrösse.
+    **Warum ein Trichter und nicht eine Zahl.** „8.080 offene Ausschreibungen in eurem
+    Fachgebiet" ist die ganze CPV-Division 45, also jede Bauausschreibung Deutschlands.
+    Sven: „schön und gut, aber wie viele genau für klostermann?"
 
-    Zwei Stufen lassen sich aus dem belegen, was wir ohnehin über die Firma wissen:
-    ihre CPV-KLASSEN (4-stellig, aus den eigenen Zuschlägen) und die Gegenden, in denen
-    sie bisher gebaut hat. Bei Klostermann: 8.080 -> 948 -> 194.
-
-    **Die Falle, in die der erste Anlauf lief.** Die Regionsstufe zuerst über
-    `buyer_nuts` gebaut, also über den Sitz der Vergabestelle. Ergebnis: 104 statt 194,
-    alles in Hessen. Gemessen: ALLE 30 Vergaben von Klostermann tragen Vergabestelle
-    „Hessen" (das Beschaffungsbüro von DB Netz in Frankfurt), gebaut wird aber in
-    Brandenburg, Hamburg, Sachsen, bei Rostock, in Krefeld und Münster. Die Stufe hätte
-    also nach dem Briefkasten des Auftraggebers gefiltert. Richtig ist `market_nuts3`,
-    der Leistungsort. Dieselbe Verwechslung steckt im Projekt schon als zwei getrennte
-    Achsen in `geo.search(axis=...)`.
+    Die Stufen kommen aus `zuschnitt()` — EINER Stelle für alle Bausteine. Welche Stufen
+    es gibt und wie sie heissen, entscheidet dort die Datenlage der Firma; hier wird nur
+    noch gezählt und angezeigt. Vorher baute dieser Baustein seine Filter selbst, und der
+    Nachbar-Baustein baute andere.
 
     Die letzte Stufe bleibt bewusst OFFEN: wie viele wirklich passen, hängt an Eignung,
-    Kapazität und Zuschnitt, und das steht in keinem öffentlichen Datensatz. Genau dafür
-    gibt es das Profil.
+    Kapazität und Zuschnitt, und das steht in keinem öffentlichen Datensatz.
     """
     LE = f"read_parquet('{G}/lead_export.parquet')"
-    CL = f"read_parquet('{G}/dim_cpv_label.parquet')"
-    fremd = "(incumbent_group_id IS NULL OR incumbent_group_id <> ?)"
-
-    div = con.execute(f"""SELECT substr(cpv_code, 1, 2) FROM {LE}
-      WHERE incumbent_group_id = ? AND cpv_code IS NOT NULL
-      GROUP BY 1 ORDER BY count(*) DESC LIMIT 1""", [ctx["id"]]).fetchone()
-    if not div:
+    zs = zuschnitt(con, ctx)
+    if not zs["stufen"]:
         return None
-    klassen = [r[0] for r in con.execute(f"""SELECT substr(cpv_code, 1, 4) FROM {LE}
-      WHERE incumbent_group_id = ? AND cpv_code IS NOT NULL GROUP BY 1""", [ctx["id"]]).fetchall()]
-    # Leistungsort, NICHT Sitz der Vergabestelle. Siehe Docstring.
-    laender = [r[0] for r in con.execute(f"""SELECT substr(market_nuts3, 1, 3) FROM {LE}
-      WHERE incumbent_group_id = ? AND market_nuts3 IS NOT NULL GROUP BY 1""", [ctx["id"]]).fetchall()]
-
-    def zaehl(bed, par):
-        return con.execute(f"SELECT count(*) FROM {LE} WHERE phase='open' AND {bed}", par).fetchone()[0]
-
-    breit = zaehl(f"substr(cpv_code,1,2) = ? AND {fremd}", [div[0], ctx["id"]])
-    if not breit:
+    kette, bed, par = kette_bauen(con, zs, ctx)
+    if not kette or not kette[-1]["n"]:
         return None
-    stufen = [{"n": breit, "label": "sagt der Markt"}]
-
-    eng = breit
-    if klassen:
-        ph = ",".join("?" * len(klassen))
-        eng = zaehl(f"substr(cpv_code,1,4) IN ({ph}) AND {fremd}", klassen + [ctx["id"]])
-        # Die Spalte heisst `cpv_code`, nicht `code`, und traegt die volle 8-stellige
-        # Form ("45230000"). Die Klassen-Ebene ist die Zeile, deren Rest Nullen sind.
-        namen = [r[0] for r in con.execute(
-            f"SELECT label FROM {CL} WHERE substr(cpv_code,1,4) IN ({ph}) "
-            f"AND substr(cpv_code,5,4) = '0000'", klassen).fetchall() if r[0]]
-        stufen.append({"n": eng, "label": "in eurem Fach",
-                       "hinweis": ", ".join(n[:44] for n in namen[:3]) or None})
-
-    # Regionsstufe nur, wenn sie ueberhaupt einschraenkt. Wer bundesweit baut, bekommt
-    # hier keine Stufe vorgegaukelt, die nichts wegnimmt.
-    if klassen and laender and len(laender) < 14:
-        ph, ph2 = ",".join("?" * len(klassen)), ",".join("?" * len(laender))
-        eng2 = zaehl(f"substr(cpv_code,1,4) IN ({ph}) AND substr(market_nuts3,1,3) IN ({ph2}) "
-                     f"AND {fremd}", klassen + laender + [ctx["id"]])
-        if eng2 < eng:
-            stufen.append({"n": eng2, "label": "wo ihr baut"})
-            eng = eng2
+    breit, eng = kette[0]["n"], kette[-1]["n"]
 
     stellen = con.execute(f"""SELECT count(DISTINCT buyer_name) FROM {LE}
-      WHERE phase='open' AND substr(cpv_code,1,2) = ? AND {fremd}""",
-      [div[0], ctx["id"]]).fetchone()[0]
+      WHERE phase='open' AND {bed} AND (incumbent_group_id IS NULL OR incumbent_group_id <> ?)""",
+      par + [ctx["id"]]).fetchone()[0]
 
     return {
         "id": "offene_im_feld", "staerke": 80, "gruppe": "fuer_euch", "form": "kpi",
-        "kern": f"{eng:,}".replace(",", ".") + " offene Ausschreibungen passen zu dem, was ihr baut.",
+        "kern": f"{zahl(eng)} offene Ausschreibungen passen zu dem, was ihr macht.",
         "titel": "Was gerade offen ist, in eurem Fachgebiet",
-        "zahlen": [{"wert": f"{eng:,}".replace(",", "."),
-                    "label": "offene Ausschreibungen passen zu dem, was ihr baut"},
-                   {"wert": f"{stellen:,}".replace(",", "."),
-                    "label": "Vergabestellen schreiben in eurem Bereich aus"}],
-        "trichter": stufen,
-        # Sven: „den trichter sollten wir als kette zeigen: '8.080 Ausschreibungen sagt
-        # der Markt, wir sagen 194 und weniger die wirklich zu euch passen'." Der Satz
-        # steht ueber der Kette, damit sie gelesen wird und nicht nur angesehen.
-        "kette": (f"{breit:,}".replace(",", ".") + " Ausschreibungen sagt der Markt. Wir sagen "
-                  + f"{eng:,}".replace(",", ".") + ", und mit eurem Profil werden es noch "
-                  "weniger, die wirklich zu euch passen."),
+        "zahlen": [{"wert": zahl(eng),
+                    "label": "offene Ausschreibungen passen zu dem, was ihr macht"},
+                   {"wert": zahl(stellen),
+                    "label": "Vergabestellen schreiben dort aus"}],
+        "trichter": kette,
+        # Sven: „den trichter sollten wir als kette zeigen". Der Satz steht ÜBER der
+        # Kette, damit sie gelesen wird und nicht nur angesehen.
+        "kette": (f"{zahl(breit)} Ausschreibungen sagt der Markt. Wir sagen {zahl(eng)}, "
+                  "und mit eurem Profil werden es noch weniger, die wirklich zu euch passen."),
         "grenze": ("Eingegrenzt über eure eigenen Zuschläge. Ob eine Ausschreibung wirklich "
                    "passt, hängt an Eignung und Kapazität, und das steht in keiner "
                    "Bekanntmachung."),
@@ -576,62 +668,61 @@ def baustein_andere_auftraggeber(con, ctx):
     """Offene Ausschreibungen von Auftraggebern AUSSERHALB der Konzentration.
 
     **Warum es diesen Baustein gibt.** Die Seite diagnostizierte „99 % eurer Aufträge
-    kommen von zwei Auftraggebern" und lieferte danach eine nach Fach und Region gefilterte
-    Ausschreibungsliste. Die beantwortet die Diagnose aber nicht: in diesen 200 stecken
-    dieselben zwei Auftraggeber wieder mit drin. Wer Klumpenrisiko feststellt, muss zeigen,
-    wo der Ersatz liegt — sonst bricht der Bogen genau da, wo er tragen soll.
+    kommen von zwei Auftraggebern" und lieferte danach eine Liste, in der dieselben zwei
+    wieder drinsteckten. Wer Klumpenrisiko feststellt, muss zeigen, wo der Ersatz liegt.
 
-    Gemessen an Klostermann: von 200 offenen Ausschreibungen in Fach und Region kommen
-    **171 von 108 anderen Vergabestellen**. Das ist die Zahl, die der Diagnose antwortet.
+    **Warum er nur mit Tätigkeitsstufe feuert.** Der erste Anlauf verengte nur über CPV
+    und Region und empfahl einem Bahnbauer Schulverkabelung — die CPV-Klasse „Installation
+    von elektrischen Leitungen" umfasst beides. Ohne die Achse `buyer_activity` ist
+    „andere Auftraggeber" keine Empfehlung, sondern eine Liste, und dieser Baustein
+    verspricht ausdrücklich Passung. Fehlt die Achse, faellt er aus. Das ist die richtige
+    Antwort: lieber ein Baustein weniger als eine Empfehlung, die den Empfänger verliert.
 
-    **Abgegrenzt wird über den Namen, nicht die Entität.** `lead_export` führt keine
-    `buyer_entity`-Spalte, nur `buyer_name`. Das ist gröber (Schreibvarianten desselben
-    Hauses zählen als verschieden) und irrt damit zu unseren Ungunsten: die Zahl ist eher
-    zu niedrig als zu hoch. Bei einer Verkaufsaussage ist das die richtige Richtung.
-
-    Hängt an `ctx["dominante"]` aus `baustein_abhaengigkeit` — ohne festgestellte
-    Konzentration gibt es hier nichts zu erzählen, und der Baustein fällt aus.
+    Abgegrenzt wird über den Namen der Vergabestelle, weil `lead_export` keine
+    `buyer_entity` führt. Das ist gröber und irrt zu unseren Ungunsten (Schreibvarianten
+    zählen getrennt) — bei einer Verkaufsaussage die richtige Richtung.
     """
     dominante = ctx.get("dominante")
-    if not dominante:
+    zs = zuschnitt(con, ctx)
+    if not dominante or not zs["aktivitaet"]:
         return None
     LE = f"read_parquet('{G}/lead_export.parquet')"
-    fremd = "(incumbent_group_id IS NULL OR incumbent_group_id <> ?)"
-
-    klassen = [r[0] for r in con.execute(f"""SELECT DISTINCT substr(cpv_code, 1, 4) FROM {LE}
-      WHERE incumbent_group_id = ? AND cpv_code IS NOT NULL""", [ctx["id"]]).fetchall()]
-    laender = [r[0] for r in con.execute(f"""SELECT DISTINCT substr(market_nuts3, 1, 3) FROM {LE}
-      WHERE incumbent_group_id = ? AND market_nuts3 IS NOT NULL""", [ctx["id"]]).fetchall()]
-    if not klassen:
-        return None
-
-    bed, par = [f"substr(cpv_code,1,4) IN ({','.join('?' * len(klassen))})", list(klassen)]
-    if laender and len(laender) < 14:
-        bed += f" AND substr(market_nuts3,1,3) IN ({','.join('?' * len(laender))})"
-        par += laender
-    par.append(ctx["id"])
-    gesamt = con.execute(f"SELECT count(*) FROM {LE} WHERE phase='open' AND {bed} AND {fremd}",
-                         par).fetchone()[0]
     ph = ",".join("?" * len(dominante))
+    kette, bed, par = kette_bauen(con, zs, ctx)
+    if not kette:
+        return None
+    gesamt = kette[-1]["n"]
+
     r = con.execute(f"""SELECT count(*), count(DISTINCT buyer_name) FROM {LE}
-      WHERE phase='open' AND {bed} AND {fremd}
-        AND (buyer_name IS NULL OR buyer_name NOT IN ({ph}))""", par + dominante).fetchone()
+      WHERE phase='open' AND {bed}
+        AND (incumbent_group_id IS NULL OR incumbent_group_id <> ?)
+        AND (buyer_name IS NULL OR buyer_name NOT IN ({ph}))""",
+      par + [ctx["id"]] + dominante).fetchone()
     if not r or not r[0] or not gesamt:
         return None
     n, stellen = r
+    wo = AKTIVITAET_LABEL.get(zs["aktivitaet"], "in eurem Bereich")
+
+    beispiele = [x[0] for x in con.execute(f"""SELECT buyer_name FROM {LE}
+      WHERE phase='open' AND {bed}
+        AND (incumbent_group_id IS NULL OR incumbent_group_id <> ?)
+        AND (buyer_name IS NULL OR buyer_name NOT IN ({ph})) AND buyer_name IS NOT NULL
+      GROUP BY 1 ORDER BY count(*) DESC LIMIT 4""",
+      par + [ctx["id"]] + dominante).fetchall()]
 
     return {
         "id": "andere_auftraggeber", "staerke": 88, "gruppe": "fuer_euch", "form": "kpi",
-        "kern": (f"{zahl(n)} offene Ausschreibungen kommen von {zahl(stellen)} "
-                 "Vergabestellen, mit denen ihr noch nie gearbeitet habt."),
-        "titel": "Wo eure Aufträge herkommen könnten, ausserhalb der zwei",
-        "zahlen": [{"wert": zahl(n),
-                    "label": "offene Ausschreibungen von anderen Auftraggebern"},
-                   {"wert": zahl(stellen),
-                    "label": "verschiedene Vergabestellen dahinter"}],
-        "grenze": (f"Von {zahl(gesamt)} offenen Ausschreibungen in eurem Fach und eurer "
-                   "Gegend. Abgegrenzt über den Namen der Vergabestelle, Schreibvarianten "
-                   "desselben Hauses zählen also getrennt."),
+        "kern": (f"{zahl(n)} offene Ausschreibungen {wo} kommen nicht von euren "
+                 "bisherigen Auftraggebern."),
+        "titel": f"Wo eure Aufträge herkommen könnten, {wo}",
+        "zahlen": [{"wert": zahl(n), "label": f"offene Ausschreibungen {wo}, ohne eure bisherigen"},
+                   {"wert": zahl(stellen), "label": "verschiedene Vergabestellen dahinter"}],
+        # Namen statt Zahlen: „BVG, Kölner Verkehrs-Betriebe, SSB Stuttgart" beweist die
+        # Passung in einer Zeile, wo eine Zahl sie nur behauptet.
+        "namen": beispiele,
+        "grenze": (f"Von {zahl(gesamt)} offenen Ausschreibungen in eurem Zuschnitt. "
+                   "Abgegrenzt über den Namen der Vergabestelle, Schreibvarianten desselben "
+                   "Hauses zählen also getrennt."),
         "bruecke": {"produkt": "Strategie",
                     "text": "Wo ihr ausserhalb dieser Konzentration anschlussfähig seid"},
     }

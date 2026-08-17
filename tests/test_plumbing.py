@@ -2374,3 +2374,37 @@ def test_outreach_texte_sind_nicht_zerschossen():
     assert not kaputt, (
         "Fliesstext mit Kleinbuchstabe nach Satzpunkt — vermutlich ein Komma, das der "
         f"Tausendertrenner erwischt hat:\n" + "\n".join(f"  {a}: {b[:90]}" for a, b in kaputt[:5]))
+
+
+def test_passung_versprechende_bausteine_brauchen_die_taetigkeitsachse():
+    """Ein Baustein, der Passung verspricht, darf nicht nur über CPV verengen.
+
+    Der Fehler, der diese Regel erzwungen hat: die Landing empfahl H. Klostermann
+    (Fernmelde- und Stromleitungen für DB Netz) Ausschreibungen von Schulbau Hamburg und
+    dem Gebäudemanagement Hannover. Die CPV-Klasse 4531 „Installation von elektrischen
+    Leitungen" umfasst Bahnstromkabel UND Schulsteckdosen. Alle Zahlen stimmten, alle
+    Tests waren grün — nur die Empfehlung war für den Empfänger unbrauchbar, und ein
+    Geschäftsführer hätte daraus geschlossen, dass wir sein Geschäft nicht verstehen.
+
+    `baustein_andere_auftraggeber` fällt seither aus, wenn `zuschnitt()` keine prägende
+    Auftraggeber-Tätigkeit findet. Lieber ein Baustein weniger als eine Empfehlung, die
+    den Empfänger verliert.
+    """
+    from pathlib import Path as _P
+    q = (_P(__file__).resolve().parent.parent / "scripts" / "export_outreach.py").read_text(encoding="utf-8")
+    fn = q[q.index("def baustein_andere_auftraggeber"):q.index("def baustein_zweitversuche")]
+    assert 'zs["aktivitaet"]' in fn and "return None" in fn, (
+        "andere_auftraggeber prüft die Tätigkeitsachse nicht mehr — die Empfehlung kann "
+        "wieder fachfremd werden")
+
+
+def test_zuschnitt_ignoriert_sammelbecken_taetigkeiten():
+    """`general_public` trägt allein 17.665 Firmen.
+
+    Als Filter verengt der Wert nichts und behauptet trotzdem eine Passung. Eine Stufe,
+    die nichts wegnimmt, täuscht Präzision vor — dieselbe Regel gilt in `kette_bauen`
+    für alle Stufen, hier ist sie zusätzlich am Vokabular festgemacht.
+    """
+    from pathlib import Path as _P
+    q = (_P(__file__).resolve().parent.parent / "scripts" / "export_outreach.py").read_text(encoding="utf-8")
+    assert "AKTIVITAET_UNSPEZIFISCH" in q and '"general_public"' in q
