@@ -2122,3 +2122,53 @@ def test_tageslauf_erntet_vor_dem_abrufen():
     # Uebersprungene Abrufe muessen im Abschlussbericht auftauchen, sonst sieht ein
     # gekuerzter Lauf aus wie ein vollstaendiger.
     assert "_ABRUF_UEBERSPRUNGEN" in quelle and "Abrufe uebersprungen (Zeitbudget)" in quelle
+
+
+def test_dedupe_fenster_vereinigt_statt_zu_ersetzen(tmp_path, monkeypatch):
+    """Ein Fensterlauf muss den Bestand ERGAENZEN, sonst ist er Datenverlust.
+
+    Das rollende Fenster sieht nur die letzten 190 Tage. Wuerde `schreibe` die Datei wie
+    bisher ueberschreiben, waeren beim ersten Nachtlauf alle Paare aus 2004 bis vorletztes
+    Jahr weg — lautlos, weil die Datei ja da ist und plausibel aussieht.
+
+    Geprueft wird beides: dass Altes bleibt UND dass eine neue Zeile mit gleichem
+    Schluessel die alte ersetzt (der frische Lauf hat die aktuellere Anreicherung).
+    """
+    from govisor import dedupe as D
+    import pyarrow.parquet as pq
+
+    monkeypatch.setattr(D, "ROOT", tmp_path)
+
+    def zeile(m, d, beleg="alt"):
+        return {"master_id": m, "duplicate_id": d, "master_quelle": "ted",
+                "duplicate_quelle": "doe", "enthaltung": 0.9, "gleicher_kaeufer": True,
+                "beleg": beleg, "tage_abstand": 1, "ergaenzt": None}
+
+    D.schreibe([zeile("alt_1", "alt_2"), zeile("bleibt", "auch")], "XX")
+    ziel = D.schreibe([zeile("neu_1", "neu_2"), zeile("alt_1", "alt_2", beleg="frisch")],
+                      "XX", vereinigen=True)
+
+    rows = {(z["master_id"], z["duplicate_id"]): z for z in pq.read_table(ziel).to_pylist()}
+    assert ("bleibt", "auch") in rows, "historisches Paar wurde weggeworfen"
+    assert ("neu_1", "neu_2") in rows, "neues Paar fehlt"
+    assert rows[("alt_1", "alt_2")]["beleg"] == "frisch", "neue Zeile muss gewinnen"
+
+    # Ohne `vereinigen` bleibt das alte Verhalten: ersetzen. Der Vollauf braucht das.
+    ziel = D.schreibe([zeile("nur", "das")], "XX")
+    assert len(pq.read_table(ziel).to_pylist()) == 1
+
+
+def test_dedupe_fenster_nimmt_saetze_ohne_datum_mit():
+    """Saetze ohne Datum paaren mit allem und muessen in JEDEM Fensterlauf dabei sein.
+
+    In DE sind das 16.694 Bekanntmachungen. Faellt die `IS NULL`-Klausel weg, verschwinden
+    sie aus dem taeglichen Abgleich und ihre Dubletten werden nie gefunden — ohne dass
+    irgendetwas abbricht.
+    """
+    from pathlib import Path
+    quelle = (Path(__file__).resolve().parent.parent / "govisor/dedupe.py").read_text(encoding="utf-8")
+    assert "coalesce(n.publication_date, n.submission_deadline) IS NULL" in quelle
+    # Der Tageslauf nutzt das Fenster, sonntags aber die volle Historie.
+    lauf = (Path(__file__).resolve().parent.parent / "scripts/daily_leads.sh").read_text(encoding="utf-8")
+    assert "--fenster-tage 190" in lauf
+    assert '[ "$(date +%u)" = "7" ]' in lauf, "Sonntags-Vollauf fehlt"

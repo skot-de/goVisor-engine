@@ -37,6 +37,32 @@ gemessen **zwei- bis dreimal langsamer**: CH ab 2024 5 s gegen 9 s, AT ab 2024 1
 teurer: DuckDB zahlt pro Zeile mehr fuer ``list_intersect``, als Pythons ``frozenset``-
 Schnitt kostet, und die Kandidatenmenge ist gross.
 
+**Inkrementell: das rollende Fenster (2026-08-17).** Der Schritt war mit gemessenen
+188 min der teuerste des Tageslaufs — er verglich jede Nacht die volle Historie ab 2004,
+um Paare unter rund 700 neuen Bekanntmachungen zu finden. ``--fenster-tage 190`` laedt
+stattdessen nur die letzten N Tage plus alle Saetze OHNE Datum.
+
+Das ist verlustfrei, aber nur unter zwei Bedingungen, und beide muessen zusammen gelten:
+
+1. **N deutlich groesser als 2 x FENSTER_TAGE.** Ein Paar liegt binnen 90 Tagen; ein
+   Fenster von 190 kann also nur Paare verpassen, deren BEIDE Seiten aelter sind — und
+   die hat ein frueherer Lauf gefunden.
+2. **Das Ergebnis wird VEREINIGT, nicht geschrieben** (``schreibe(..., vereinigen=True)``,
+   automatisch bei gesetztem Fenster). Ohne das waere der erste Nachtlauf ein stiller
+   Totalverlust der Historie.
+
+Gemessen (Paarung, ``--alle-arten``, ab 2004), Fenster gegen Vollauf:
+
+    CH    120.641 Saetze   7,5 s  ->   18.228 im Fenster   0,9 s    8x
+    AT    414.172 Saetze  39,4 s  ->   26.882 im Fenster   2,0 s   20x
+    DE  2.221.669 Saetze          ->  163.049 im Fenster  41,5 s
+
+In allen drei Faellen fand das Fenster **kein Paar, das der Vollauf nicht auch fand**.
+
+**Warum trotzdem sonntags voll.** Nicht aus Misstrauen gegen die Rechnung, sondern gegen
+ihre Annahmen: ruecklaufende Korrekturen an alten Saetzen, ein geaenderter Schwellwert,
+eine neue Quelle, die Altbestand mitbringt. Der Wochenlauf faengt das ein.
+
 Die Beschleunigung kam am Ende von woanders — aus dem **Seed-Deckel** (s. ``finde``), der
 das Problem an der Wurzel packt statt an der Ausfuehrungsschicht. Er wirkt auf jede
 Implementierung. Die SQL-Fassung wurde deshalb wieder entfernt; wer sie erneut versucht,
@@ -134,7 +160,8 @@ def _enthaltung(a: frozenset, b: frozenset) -> float:
     return len(a & b) / min(len(a), len(b))
 
 
-def _laden(country: str, ab_jahr: int, alle_arten: bool = False):
+def _laden(country: str, ab_jahr: int, alle_arten: bool = False,
+           fenster_tage: int = 0):
     import duckdb
 
     g = glob.glob(f"{ROOT}/data/silver/{country}/notices/**/*.parquet", recursive=True)
@@ -164,12 +191,29 @@ def _laden(country: str, ab_jahr: int, alle_arten: bool = False):
           -- ausschreiben. Genau dort sitzen die Dubletten, die uns interessieren.
           AND (coalesce(n.year, 0) >= {int(ab_jahr)}
                OR CAST(n.submission_deadline AS DATE) >= current_date)
+          {{FENSTER}}
     """.replace("{ARTEN}", "" if alle_arten else
-                 "AND n.notice_kind IN ('cn','pin')")).fetchall()
+                 "AND n.notice_kind IN ('cn','pin')")
+       .replace("{FENSTER}", "" if not fenster_tage else f"""
+          -- ROLLENDES FENSTER (inkrementeller Nachtlauf).
+          --
+          -- Ein Paar muss binnen FENSTER_TAGE (90) liegen. Wer nur die letzten N Tage
+          -- laedt, kann deshalb hoechstens Paare verlieren, deren BEIDE Seiten aelter
+          -- sind als N — und die hat ein frueherer Lauf schon gefunden und geschrieben.
+          -- Verlustfrei ist das aber NUR unter zwei Bedingungen, beide hart:
+          --   1. N deutlich groesser als 2 x FENSTER_TAGE (Standard 190 gegen 180),
+          --   2. das Ergebnis wird mit dem Bestand VEREINIGT statt darueber geschrieben
+          --      (`schreibe(..., vereinigen=True)`).
+          --
+          -- Saetze OHNE Datum bleiben immer dabei: sie paaren mit allem und laufen
+          -- deshalb in jeder Zeitscheibe mit. In DE sind das 16.694, in AT und CH null.
+          AND (coalesce(n.publication_date, n.submission_deadline) IS NULL
+               OR coalesce(n.publication_date, n.submission_deadline)
+                  >= current_date - {int(fenster_tage)})""")).fetchall()
 
 
 def finde(country: str = "DE", ab_jahr: int = 2026,
-          alle_arten: bool = False) -> list[dict]:
+          alle_arten: bool = False, fenster_tage: int = 0) -> list[dict]:
     """Alle Dubletten-Paare eines Landes, quellenübergreifend.
 
     ``alle_arten=False`` (Standard) prüft nur Ausschreibungen — die Lead-Sicht, täglicher
@@ -177,8 +221,9 @@ def finde(country: str = "DE", ab_jahr: int = 2026,
     für Marktpuls. Beides ist DIESELBE Prüfung, nur ein anderer Ausschnitt; zwei Skripte
     daraus zu machen wäre der Rückfall in genau das, was dieses Modul abgelöst hat.
     """
-    zeilen = _laden(country, ab_jahr, alle_arten)
-    print(f"  {len(zeilen):,} Bekanntmachungen ab {ab_jahr} geladen")
+    zeilen = _laden(country, ab_jahr, alle_arten, fenster_tage)
+    wie = f"ab {ab_jahr}" if not fenster_tage else f"aus den letzten {fenster_tage} Tagen (+ ohne Datum)"
+    print(f"  {len(zeilen):,} Bekanntmachungen {wie} geladen")
     saetze = _saetze(zeilen)
     return _in_zeitscheiben(saetze)
 
@@ -373,12 +418,31 @@ def _paare_finden(saetze: list[dict], haeufigkeit: dict | None = None) -> list[d
 
 
 
-def schreibe(paare: list[dict], country: str = "DE") -> Path:
+def schreibe(paare: list[dict], country: str = "DE", vereinigen: bool = False) -> Path:
     import pyarrow as pa
     import pyarrow.parquet as pq
 
     ziel = ROOT / "data" / "gold" / country / "notice_duplicates.parquet"
     ziel.parent.mkdir(parents=True, exist_ok=True)
+
+    # VEREINIGEN statt ersetzen — die Bedingung, ohne die das rollende Fenster Datenverlust
+    # waere. Ein Fensterlauf sieht nur die letzten Monate; wuerde er die Datei ueberschreiben,
+    # verschwaenden alle Paare aus 2004 bis vorletztes Jahr beim ersten Nachtlauf.
+    #
+    # Neue Zeile gewinnt bei gleichem Schluessel (master_id, duplicate_id): der frische Lauf
+    # hat die aktuellere Anreicherung gesehen. Reihenfolge zaehlt also, `alt` zuerst.
+    if vereinigen and ziel.exists():
+        try:
+            vorher = pq.read_table(ziel).to_pylist()
+        except Exception as e:                       # beschaedigte Datei darf den Lauf nicht
+            print(f"  ⚠ Bestand nicht lesbar ({e}) — es wird neu geschrieben.")
+            vorher = []
+        nach_schluessel = {(z["master_id"], z["duplicate_id"]): z for z in vorher}
+        vor_n = len(nach_schluessel)
+        nach_schluessel.update({(z["master_id"], z["duplicate_id"]): z for z in paare})
+        paare = list(nach_schluessel.values())
+        print(f"  vereinigt: {vor_n:,} im Bestand + {len(paare) - vor_n:,} neu = {len(paare):,}")
+
     pq.write_table(pa.Table.from_pylist(paare, schema=pa.schema([
         ("master_id", pa.string()), ("duplicate_id", pa.string()),
         ("master_quelle", pa.string()), ("duplicate_quelle", pa.string()),
@@ -518,17 +582,21 @@ def main(argv=None) -> int:
     ap.add_argument("--ab-jahr", type=int, default=dt.date.today().year)
     ap.add_argument("--anreichern", action="store_true",
                     help="nach der Erkennung die fehlenden Feldwerte sammeln")
+    ap.add_argument("--fenster-tage", type=int, default=0, metavar="N",
+                    help="Nur Bekanntmachungen der letzten N Tage (plus die ohne Datum) "
+                         "abgleichen und das Ergebnis mit dem Bestand VEREINIGEN. Der "
+                         "inkrementelle Nachtlauf. 0 = volle Historie (Standard).")
     ap.add_argument("--alle-arten", action="store_true",
                     help="auch Zuschläge/Aufhebungen prüfen (Veröffentlichungs-Sicht "
                          "für Marktpuls) statt nur Ausschreibungen")
     a = ap.parse_args(argv)
     print(f"Dublettencheck {a.country}, ab {a.ab_jahr}"
           + (" (alle Bekanntmachungsarten)" if a.alle_arten else ""))
-    paare = finde(a.country, a.ab_jahr, a.alle_arten)
+    paare = finde(a.country, a.ab_jahr, a.alle_arten, a.fenster_tage)
     if not paare:
         print("  Keine Dubletten gefunden.")
         return 0
-    ziel = schreibe(paare, a.country)
+    ziel = schreibe(paare, a.country, vereinigen=bool(a.fenster_tage))
     from collections import Counter
     kombis = Counter(f"{p['master_quelle']} ← {p['duplicate_quelle']}" for p in paare)
     from collections import Counter as _C

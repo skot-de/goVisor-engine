@@ -606,9 +606,37 @@ if [ "${GOVISOR_NEUE_QUELLEN:-1}" = "1" ]; then
 # gemessen und verworfen: er haette 64 gueltige Leads gekostet, weil bei 61 davon die Frist
 # des Masters abgelaufen ist und nur die der Dublette laeuft. Feld-Reichtum ist nicht
 # Aktualitaet.
+# ROLLENDES FENSTER statt voller Historie — der teuerste Schritt des Laufs (gemessen
+# 188 min am 2026-08-16, mehr als jeder andere).
+#
+# Warum das verlustfrei geht: ein Dubletten-Paar muss binnen 90 Tagen liegen. Ein Lauf,
+# der nur die letzten 190 Tage laedt, kann hoechstens Paare verlieren, deren BEIDE Seiten
+# aelter sind — und die stehen bereits in `notice_duplicates.parquet`, weil ein frueherer
+# Lauf sie gefunden hat. `--fenster-tage` schaltet deshalb auch das VEREINIGEN ein: das
+# Ergebnis kommt zum Bestand dazu, es ersetzt ihn nicht.
+#
+# Gemessen (Paarung, alle Arten, ab 2004):
+#     CH   120.641 Saetze  7,5 s  →  18.228 im Fenster  0,9 s   (8x)
+#     AT   414.172 Saetze 39,4 s  →  26.882 im Fenster  2,0 s  (20x)
+#     DE 2.221.669 Saetze  s. u.  → 163.049 im Fenster 41,5 s
+# In allen drei Faellen fand das Fenster KEIN Paar, das der Vollauf nicht auch fand.
+#
+# SONNTAGS trotzdem voll. Nicht aus Misstrauen gegen die Rechnung, sondern gegen die
+# Annahmen darin: ruecklaufende Korrekturen an alten Saetzen, ein geaenderter Schwellwert,
+# eine neue Quelle mit Altbestand. Der Wochenlauf faengt das ein, und er faellt auf einen
+# Tag, an dem kein Mensch auf frische Zahlen wartet.
+if [ "$(date +%u)" = "7" ] || [ -n "${GOVISOR_DEDUPE_VOLL:-}" ]; then
+  _DEDUPE_MODUS="volle Historie ab 2004 (Sonntag)"
+  _DEDUPE_ARGS=""
+else
+  _DEDUPE_MODUS="rollendes Fenster 190 Tage (+ Saetze ohne Datum)"
+  _DEDUPE_ARGS="--fenster-tage 190"
+fi
 step "Dubletten-Firewall + Anreicherung (DE/AT/CH)"
+echo "  Modus: $_DEDUPE_MODUS"
 for L in DE AT CH; do
-  $PY -m govisor.dedupe --country "$L" --ab-jahr 2004 --alle-arten --anreichern \
+  # shellcheck disable=SC2086  # _DEDUPE_ARGS ist bewusst wortgetrennt
+  $PY -m govisor.dedupe --country "$L" --ab-jahr 2004 --alle-arten --anreichern $_DEDUPE_ARGS \
     || echo "  ⚠ Dublettencheck $L fehlgeschlagen — Anreicherung bleibt auf altem Stand."
 done
 
