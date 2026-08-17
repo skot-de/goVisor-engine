@@ -196,3 +196,16 @@
   font-weight: 600;
   color: var(--warn, #b45309);
 }
+
+/* Restfrist. Steht unter dem Datum, nicht daneben: das Datum ist der Fakt, die
+   Restlaufzeit die Einordnung. Unter einer Woche wird sie farbig — nicht als Alarm,
+   sondern weil dann eine Entscheidung ansteht. */
+.lg-rest {
+  display: block;
+  font-size: .78rem;
+  font-weight: 600;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+.lg-rest-eng { color: var(--warn, #b45309); }
+.lg-rest-weg { color: var(--muted); text-decoration: line-through; }

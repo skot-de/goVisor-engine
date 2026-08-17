@@ -30,7 +30,35 @@ import type { Baustein, Landing, Zeile } from "@/lib/outreach";
  * **Was diese Datei NICHT tun darf:** einen fehlenden Baustein durch einen Platzhalter
  * ersetzen. Fehlt einer, dann weil er für diese Firma nicht belegt ist. */
 
-function Vertragstabelle({ zeilen }: { zeilen: Zeile[] }) {
+/* „19.08.2026" sagt nicht jedem sofort, dass das übermorgen ist.
+ *
+ * Sven: „nicht jeder hat direkt auf dem schirm das der 19. in zwei tagen ist. ist ein
+ * guter absprungpunkt zu 'komm in die app, schau dir die analyse an und bewirb dich'."
+ *
+ * Gerechnet wird beim Anzeigen, nicht beim Erzeugen: `outreach.json` ist statisch und
+ * liegt Wochen im Deploy. Eine eingefrorene Restlaufzeit wäre irgendwann eine Lüge. */
+function restTage(iso?: string | null): number | null {
+  if (!iso) return null;
+  const tag = 86_400_000;
+  const ziel = new Date(iso + "T00:00:00").getTime();
+  const heute = new Date(new Date().toDateString()).getTime();
+  return Math.round((ziel - heute) / tag);
+}
+
+function Restfrist({ iso }: { iso?: string | null }) {
+  const { t } = useSprache();
+  const d = restTage(iso);
+  if (d === null) return null;
+  if (d < 0) return <span className="lg-rest lg-rest-weg">{t("abgelaufen")}</span>;
+  if (d === 0) return <span className="lg-rest lg-rest-eng">{t("heute")}</span>;
+  return (
+    <span className={`lg-rest${d <= 7 ? " lg-rest-eng" : ""}`}>
+      {d === 1 ? t("noch 1 Tag") : `${t("noch")} ${d} ${t("Tage")}`}
+    </span>
+  );
+}
+
+function Vertragstabelle({ zeilen, spalte }: { zeilen: Zeile[]; spalte?: string }) {
   const { t } = useSprache();
   const mitVolumen = zeilen.some((z) => z.vol);
   return (
@@ -41,7 +69,10 @@ function Vertragstabelle({ zeilen }: { zeilen: Zeile[] }) {
             <th>{t("Vorhaben")}</th>
             <th>{t("Vergabestelle")}</th>
             {mitVolumen && <th className="lg-r">{t("Volumen")}</th>}
-            <th className="lg-r">{t("Endet")}</th>
+            {/* „Endet" bei eigenen Vorhaben, „Frist" bei fremden Chancen — dieselbe
+                Spalte trägt zwei verschiedene Aussagen, und die Überschrift muss sagen
+                welche. Ein Datum ohne Bedeutung ist Zierrat. */}
+            <th className="lg-r">{t(spalte ?? "Endet")}</th>
           </tr>
         </thead>
         <tbody>
@@ -50,7 +81,10 @@ function Vertragstabelle({ zeilen }: { zeilen: Zeile[] }) {
               <td className="lg-titel">{z.titel || t("(ohne Titel)")}</td>
               <td className="lg-buyer">{z.buyer}</td>
               {mitVolumen && <td className="lg-r lg-m">{z.vol ?? ""}</td>}
-              <td className="lg-r lg-m">{z.ende ?? ""}</td>
+              <td className="lg-r lg-m">
+                {z.ende ?? ""}
+                <Restfrist iso={z.endeISO} />
+              </td>
             </tr>
           ))}
         </tbody>
@@ -318,6 +352,19 @@ export function LandingView({ d, token }: { d: Landing; token: string }) {
         <div className="lg-wende" id="finden">
           <h2>{t("Und das können wir für euch finden")}</h2>
           <p className="lg-wende-lede">{t("Was davon zu euch passt, entscheidet euer Profil. Je schärfer es ist, desto weniger müsst ihr selbst durchsehen.")}</p>
+          {/* Karten VOR den Kacheln: eine Karte zeigt die Vorgänge selbst, und die
+              sind der bessere Beleg. Sven: „wenn es 6 wirkliche treffer sind, nehme ich
+              die lieber als 35 potenzielle, die womöglich passen könnten." */}
+          {karten(fuerEuch).map((b) => (
+            <section className="lg-karte" key={b.id}>
+              <h2 className="lg-kt">{b.titel}</h2>
+              {b.zeilen && b.zeilen.length > 0 && (
+                <Vertragstabelle zeilen={b.zeilen} spalte="Frist" />
+              )}
+              {b.kern && <div className="lg-befund">{b.kern}</div>}
+              <div className="lg-grenze">{b.grenze}</div>
+            </section>
+          ))}
           <KennzahlenLeiste teile={kacheln(fuerEuch)} />
           {fuerEuch.filter((b) => b.trichter?.length).map((b) => (
             <Kette key={b.id} stufen={b.trichter!} satz={b.kette} />

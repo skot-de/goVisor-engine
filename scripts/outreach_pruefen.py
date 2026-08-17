@@ -26,8 +26,10 @@ keit. Der Rest darf ungesehen raus. Das ist der Unterschied zwischen „alle pr�
   duenn          Weniger als drei belegte Bausteine. Die Seite trägt dann nicht.
   zerschossen    Fliesstext mit Kleinbuchstabe nach Satzpunkt — der Tausendertrenner hat
                  ein Komma erwischt (passiert am 2026-08-17, s. `zahl()`).
-  winzig         Eine Verkaufszahl unter der Fühlbarkeitsschwelle. „6 offene
-                 Ausschreibungen" ist ehrlich, aber als Aufmacher zu wenig.
+  nackte_zahl    Eine kleine Zahl OHNE die Vorgänge dazu. Nicht die Zahl ist das
+                 Problem — sechs echte Treffer sind besser als 35 vielleicht-Treffer —
+                 sondern dass sie unbelegt dasteht. Sechs Zeilen mit Auftraggeber, Titel
+                 und Frist überzeugen; eine Kachel mit „6" behauptet nur.
 
 Aufruf::
 
@@ -54,9 +56,20 @@ LANDINGS = ROOT / "web" / "data" / "outreach.json"
 # brauchen. Ein Baustein, der nur zählt („was gerade offen ist"), braucht sie nicht.
 VERSPRECHEN_PASSUNG = {"andere_auftraggeber"}
 
-# Unter dieser Zahl trägt eine Verkaufsaussage nicht mehr. Kein Naturgesetz, sondern eine
-# gesetzte Grenze — sie steht hier, damit sie diskutierbar ist und nicht im Code versteckt.
-FUEHLBAR_AB = 15
+# ⚠ DIESE PRUEFUNG WURDE UMGEDREHT.
+#
+# Zuerst hiess sie „winzig": eine Verkaufszahl unter 15 galt als zu klein. Sven am
+# 2026-08-17: „ich finde es gar nicht schlimm, wenn wenige übrig bleiben. das funktioniert
+# aber nur wenn die qualität da ist. wenn es 6 wirkliche treffer sind, nehme ich die lieber
+# als 35 potenzielle, die womöglich passen könnten."
+#
+# Damit ist nicht die kleine Zahl das Problem, sondern eine kleine Zahl OHNE Beleg. Sechs
+# Treffer als nackte Kachel sind eine Behauptung; dieselben sechs als Liste mit
+# Auftraggeber, Titel und Frist sind ein Beweis, den der Empfaenger in zehn Sekunden
+# nachrechnet. Der Generator zeigt sie ab `CHANCEN_ZEIGEN_BIS` (12) auch so.
+#
+# Geprueft wird deshalb: ist die Zahl klein UND fehlt die Liste dazu?
+NACKTE_ZAHL_AB_ABWAERTS = 12
 
 _ABKUERZUNG = re.compile(r"\b(z\. ?B|u\. ?a|ca|bzw|inkl|evtl|ggf|Nr|St|Bd)\.")
 
@@ -128,19 +141,21 @@ def pruefe(con, token: str, l: dict) -> list[tuple[str, str]]:
             continue
         # Nur die ERSTE Zahl, und nur wenn sie eine reine Anzahl ist.
         #
-        # Der erste Anlauf prüfte jede Zahl jedes Bausteins und meldete „bis zu 4 Jahre
-        # sucht dieselbe Stelle schon" als zu klein. Das ist eine Dauer, keine Menge —
-        # vier Jahre erfolgloses Suchen sind gerade das starke Signal. Ein Prüfer, der
-        # Fehlalarme produziert, wird nach der dritten Meldung ignoriert und ist dann
-        # schlechter als keiner.
+        # Ein frueherer Anlauf pruefte jede Zahl jedes Bausteins und meldete „bis zu 4
+        # Jahre sucht dieselbe Stelle schon" als zu klein. Das ist eine Dauer, keine Menge
+        # — vier Jahre erfolgloses Suchen sind gerade das starke Signal. Ein Pruefer, der
+        # Fehlalarme produziert, wird nach der dritten Meldung ignoriert.
         erste = next(iter(b.get("zahlen") or []), None)
         if not erste:
             continue
         wert = (erste.get("wert") or "").strip()
         if not re.fullmatch(r"[\d.]+", wert):
             continue                      # „bis zu 4 Jahre", „99 %" → keine Anzahl
-        if int(wert.replace(".", "")) < FUEHLBAR_AB:
-            befunde.append(("winzig", f"`{b['id']}`: {wert} {erste['label'][:44]}"))
+        anzahl = int(wert.replace(".", ""))
+        if anzahl <= NACKTE_ZAHL_AB_ABWAERTS and not (b.get("zeilen") or []):
+            befunde.append(("nackte_zahl",
+                            f"`{b['id']}`: {wert} {erste['label'][:40]} — kleine Zahl ohne "
+                            "die Vorgänge dazu"))
     return befunde
 
 
@@ -164,7 +179,8 @@ def main(argv=None) -> int:
             sauber += 1
 
     # Nach Schwere sortieren: was eine Empfehlung falsch macht, zuerst.
-    rang = {"fremde_welt": 0, "ohne_passung": 1, "zerschossen": 2, "duenn": 3, "winzig": 4}
+    rang = {"fremde_welt": 0, "ohne_passung": 1, "zerschossen": 2, "duenn": 3,
+            "nackte_zahl": 4}
     auffaellig.sort(key=lambda x: min(rang.get(k, 9) for k, _ in x[2]))
 
     print(f"\n  {len(alle)} Landings · {sauber} ohne Befund · {len(auffaellig)} zum Ansehen\n")

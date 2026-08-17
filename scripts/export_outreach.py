@@ -66,6 +66,10 @@ ARTEN_FERTIGSTELLUNG = ("one_off_works", "works_other")
 ABHAENGIG_SCHWELLE = {1: 0.60, 2: 0.80, 3: 0.90}
 ABHAENGIG_AB_ZUSCHLAEGEN = 5
 
+# Bis zu wie vielen Treffern zeigen wir die Vorgaenge selbst statt nur ihrer Anzahl?
+# Darueber liest sie niemand mehr, darunter ist die Liste der bessere Beleg.
+CHANCEN_ZEIGEN_BIS = 12
+
 # ── VORBELEGUNG FUER DEN WARMEN ONBOARDING-WEG ──────────────────────────────────────
 # `dim_cpv.branche` kennt 34 Werte, das Onboarding sechs Knoepfe. Diese Tabelle uebersetzt
 # — bewusst als Zuordnung und nicht als Rateregel: was hier nicht steht, bleibt leer, und
@@ -703,6 +707,49 @@ def baustein_andere_auftraggeber(con, ctx):
     n, stellen = r
     wo = AKTIVITAET_LABEL.get(zs["aktivitaet"], "in eurem Bereich")
 
+    # WENIGE TREFFER? DANN DIE SACHE STATT DER ANZAHL.
+    #
+    # Sven am 2026-08-17: „ich finde es gar nicht schlimm, wenn wenige übrig bleiben. das
+    # funktioniert aber nur wenn die qualität da ist. wenn es 6 wirkliche treffer sind,
+    # nehme ich die lieber als 35 potenzielle, die womöglich passen könnten."
+    #
+    # Genau deshalb: eine Kachel mit „6" ist eine Behauptung, sechs Zeilen mit Auftraggeber,
+    # Titel und Frist sind der Beleg. Bei Klostermann steht dort „DB Energie, HH 110kV-
+    # Einspeisung Eidelstedt" — und Eidelstedt ist der Ort, an dem die Firma GERADE baut.
+    # Diese eine Zeile beweist die Passung besser als jede Zahl.
+    #
+    # Oberhalb der Grenze kippt es: dreissig Zeilen liest niemand, dort trägt die Zahl.
+    zeilen = []
+    if n <= CHANCEN_ZEIGEN_BIS:
+        for b_, t_, d_, v_, vs_ in con.execute(f"""SELECT DISTINCT ON (title, buyer_name)
+            buyer_name, title, deadline_date, value_eur, value_source
+          FROM {LE} WHERE phase='open' AND {bed}
+            AND (incumbent_group_id IS NULL OR incumbent_group_id <> ?)
+            AND (buyer_name IS NULL OR buyer_name NOT IN ({ph}))
+          ORDER BY title, buyer_name, deadline_date""",
+          par + [ctx["id"]] + dominante).fetchall():
+            zeilen.append({
+                "titel": t_, "buyer": b_,
+                "vol": eur(v_) if vs_ == "actual" else None,
+                # Die Frist ist hier die tragende Spalte, nicht das Vertragsende: sie sagt,
+                # ob man ueberhaupt noch bieten kann.
+                "ende": d_.strftime("%d.%m.%Y") if d_ and hasattr(d_, "strftime") else None,
+                # Rohdatum MIT, damit die Oberflaeche „noch N Tage" beim ANZEIGEN rechnet.
+                # Hier zu rechnen hiesse, die Zahl einzufrieren: `outreach.json` entsteht
+                # einmal und liegt danach im Deploy. Eine Woche spaeter staende „in 2 Tagen"
+                # ueber einer laengst abgelaufenen Frist — schlimmer als keine Angabe.
+                "endeISO": d_.isoformat() if d_ and hasattr(d_, "isoformat") else None,
+                "_sort": d_.isoformat() if d_ and hasattr(d_, "isoformat") else "9999",
+                "art": "unklar",
+            })
+        # ⚠ Nach dem ROHEN Datum sortieren, nicht nach der deutschen Schreibweise.
+        # Lexikalisch steht „01.09.2026" vor „19.08.2026" — die Frist, die in zwei Tagen
+        # ablaeuft, rutschte damit ans Ende der Liste. Bei einer Liste, deren ganzer Zweck
+        # die Dringlichkeit ist, ist das der schlimmstmoegliche Fehler.
+        zeilen.sort(key=lambda z: z["_sort"])
+        for z in zeilen:
+            z.pop("_sort", None)
+
     beispiele = [x[0] for x in con.execute(f"""SELECT buyer_name FROM {LE}
       WHERE phase='open' AND {bed}
         AND (incumbent_group_id IS NULL OR incumbent_group_id <> ?)
@@ -711,7 +758,10 @@ def baustein_andere_auftraggeber(con, ctx):
       par + [ctx["id"]] + dominante).fetchall()]
 
     return {
-        "id": "andere_auftraggeber", "staerke": 88, "gruppe": "fuer_euch", "form": "kpi",
+        "id": "andere_auftraggeber", "staerke": 88, "gruppe": "fuer_euch",
+        # Karte statt Kachel, sobald wir die Vorgaenge selbst zeigen koennen.
+        "form": "karte" if zeilen else "kpi",
+        "zeilen": zeilen,
         "kern": (f"{zahl(n)} offene Ausschreibungen {wo} kommen nicht von euren "
                  "bisherigen Auftraggebern."),
         "titel": f"Wo eure Aufträge herkommen könnten, {wo}",

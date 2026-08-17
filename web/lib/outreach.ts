@@ -16,6 +16,9 @@ import path from "node:path";
 export type Zahl = { wert: string | null; label: string };
 export type Zeile = {
   titel: string; buyer: string; vol: string | null; ende: string | null;
+  /** Rohdatum der Frist. Die Restlaufzeit wird beim ANZEIGEN gerechnet, nicht beim
+   *  Erzeugen — sonst friert „noch 2 Tage" im statischen JSON ein. */
+  endeISO?: string | null;
   art: "auslauf" | "fertigstellung" | "unklar";
 };
 export type Baustein = {
