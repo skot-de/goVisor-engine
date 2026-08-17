@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { createHash } from "node:crypto";
 import { domainEigentuemer, loadSuppliers } from "@/lib/suppliers";
+import { loadLanding } from "@/lib/outreach";
 import { rateLimit, clientIp } from "@/lib/rateLimit";
 
 /* Belegt-Prüfung des Identitäts-Anspruchs — bewusst SERVERSEITIG.
@@ -51,10 +52,11 @@ export async function POST(req: NextRequest) {
       { status: 429, headers: { "retry-after": String(rl.retryAfter) } });
   }
 
-  let body: { id?: string; email?: string };
+  let body: { id?: string; email?: string; token?: string };
   try { body = await req.json(); } catch { return NextResponse.json({ error: "ungültig" }, { status: 400 }); }
 
   const id = String(body.id ?? "").slice(0, 120);
+  const token = String(body.token ?? "").slice(0, 64);
   const email = String(body.email ?? "").slice(0, 254).toLowerCase();
   if (!id || !email.includes("@")) return NextResponse.json({ error: "id und email nötig" }, { status: 400 });
 
@@ -66,6 +68,41 @@ export async function POST(req: NextRequest) {
   const belege = s?.domainBelege ?? 0;
 
   const antwort = (r: VerifyErgebnis) => NextResponse.json(r);
+
+  // ── ZUSTELLQUITTUNG: der staerkste Beleg von allen ────────────────────────────
+  // Wir haben den Link an eine bestimmte Adresse geschickt. Wer sich mit GENAU dieser
+  // Adresse registriert, kontrolliert das Postfach — das ist ein Beweis, kein Indiz, und
+  // er kommt ohne Firmendomain aus. Damit sind auch die 47 % der Firmen erreichbar, zu
+  // denen wir keine Domain haben; H. Klostermann Baugesellschaft ist eine davon.
+  //
+  // Reihenfolge zaehlt: diese Pruefung steht VOR allen anderen. Eine Domain kann geteilt
+  // sein, eine Kontaktadresse aus den Vergabeunterlagen kann veraltet sein — die Adresse,
+  // an die wir heute geschrieben haben, ist beides nicht.
+  //
+  // ⚠ Der Token allein belegt NICHTS. Er wird hier nur benutzt, um die erwartete Adresse
+  // nachzuschlagen; bewiesen wird ueber die Adresse, die der Nutzer eintippt.
+  if (token && /^[A-Za-z0-9_-]{1,64}$/.test(token)) {
+    const l = await loadLanding(token).catch(() => null);
+    if (l && l.id === id && l.zustellung) {
+      if (l.zustellung.hash === mailHash(email)) {
+        return antwort({
+          conf: "belegt", domainBekannt: !!bekannt,
+          grund: "an genau diese Adresse haben wir euch den Link geschickt",
+        });
+      }
+      // Dieselbe DOMAIN wie unsere Zustelladresse. Etwas schwaecher als die Adresse
+      // selbst, aber immer noch stark: die Domain haben nicht wir geraten, sondern wir
+      // haben an sie geschrieben. Deckt die Kollegin ab, an die intern weitergeleitet
+      // wurde — bei Firmen ohne hinterlegte Domain sonst der Regelfall.
+      // Freemail-Domains stehen gar nicht erst im Datensatz (s. Generator).
+      if (l.zustellung.domain && dom === l.zustellung.domain) {
+        return antwort({
+          conf: "belegt", domainBekannt: !!bekannt,
+          grund: `an ${l.zustellung.domain} haben wir euch den Link geschickt`,
+        });
+      }
+    }
+  }
 
   // Stärkster Beleg zuerst: die Adresse selbst steht als Gewinner-Kontakt in den
   // Vergabedaten. Wer sie hat, IST der Kontakt, der die Zuschläge entgegengenommen hat —

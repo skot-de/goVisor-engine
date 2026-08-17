@@ -56,6 +56,9 @@ export type Landing = {
   bereiche?: string[];
   /** Was die Zahlen fuer den Empfaenger bedeuten. Schliesst die HEUTE-Haelfte ab. */
   muster?: string | null;
+  /** Zustellquittung: Hash der Adresse, an die wir den Link geschickt haben.
+   *  Kein Ausweis — nur der Nachschlagewert fuer die Postfach-Pruefung. */
+  zustellung?: { hash: string; am: string; domain: string | null } | null;
   /** Vorschlag fuer den warmen Onboarding-Weg. `null` heisst: wir wissen es nicht. */
   vorbelegung?: { branche: string | null; regionen: string[] } | null;
 };

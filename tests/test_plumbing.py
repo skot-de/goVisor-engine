@@ -2285,3 +2285,41 @@ def test_testbetrieb_verschickt_keine_mail_an_fremde_firmen():
     i_sperre = quelle.index("if (!testMailErlaubt(email))")
     i_register = quelle.index("await register(email, pw)")
     assert i_sperre < i_register, "Sperre laeuft erst NACH dem Registrieren"
+
+
+def test_zustellquittung_belegt_ohne_firmendomain():
+    """Die Adresse, an die WIR geschrieben haben, ist der stärkste Beleg.
+
+    Sven: „was ist wenn man den sales pitch auf die adresse begrenzt, an die man schickt."
+    Genau das, aber ohne den Token zum Ausweis zu machen: er dient nur dem Nachschlagen
+    der erwarteten Adresse, bewiesen wird über die eingetippte.
+
+    Warum das zählt: 46,8 % der Firmen haben WEDER Domain NOCH Kontaktadresse in den
+    Vergabedaten — H. Klostermann Baugesellschaft ist eine davon. Für sie gab es bisher
+    keinen automatischen Beleg. Unsere eigene Zustelladresse schliesst diese Lücke, und
+    ihre Domain deckt zusätzlich die Kollegin ab, an die intern weitergeleitet wurde.
+
+    Vier Eigenschaften, die zusammen die Sicherheit ausmachen:
+    """
+    from pathlib import Path
+    w = Path(__file__).resolve().parent.parent / "web"
+    route = (w / "app/api/entity-verify/route.ts").read_text(encoding="utf-8")
+    gen = (Path(__file__).resolve().parent.parent
+           / "scripts/export_outreach.py").read_text(encoding="utf-8")
+
+    # 1. Die Zustellprüfung steht VOR allen anderen Belegen.
+    i_zustell = route.index("l.zustellung.hash === mailHash(email)")
+    i_hashes = route.index("s?.mailHashes?.includes")
+    assert i_zustell < i_hashes, "Zustellquittung muss zuerst greifen"
+
+    # 2. Der Token muss zur ANGEFRAGTEN Identität gehören — sonst könnte ein beliebiger
+    #    Token einen Beleg für eine beliebige Firma erzeugen.
+    assert "l.id === id" in route, "Token wird nicht gegen die Identitaet geprueft"
+
+    # 3. In der Datei steht nur der HASH, nie die Adresse. `outreach.json` faehrt im
+    #    Deploy mit; eine Adressliste darin waere eine Adressliste zu viel.
+    assert "hashlib.sha256" in gen and '"hash": zustell_hash' in gen
+    assert '"email": zustell' not in gen
+
+    # 4. Freemail-Domains taugen nicht als Firmenbeleg und stehen gar nicht erst drin.
+    assert "_FREEMAIL" in gen and "zustell_dom = None if d in _FREEMAIL else d" in gen

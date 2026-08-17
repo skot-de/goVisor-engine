@@ -61,11 +61,12 @@ function domainStamm(mail: string): string | null {
 type Beleg = { conf: "belegt" | "unbestaetigt" | "fremd"; grund: string;
                domainBekannt: boolean; fremdeFirma?: string };
 
-async function pruefeBeleg(id: string, email: string): Promise<Beleg> {
+async function pruefeBeleg(id: string, email: string, token?: string | null): Promise<Beleg> {
   try {
     const r = await fetch("/api/entity-verify", {
       method: "POST", headers: { "content-type": "application/json" },
-      body: JSON.stringify({ id, email }),
+      // Der Token dient nur dem Nachschlagen der Zustelladresse, nicht als Berechtigung.
+      body: JSON.stringify({ id, email, token: token || undefined }),
     });
     if (!r.ok) throw new Error(String(r.status));
     return await r.json();
@@ -193,6 +194,7 @@ export default function OnboardingPage() {
   const [antragGesendet, setAntragGesendet] = useState(false);
   const [vomToken, setVomToken] = useState(false);
   const [tokenFirma, setTokenFirma] = useState<{ id: string; name: string } | null>(null);
+  const [tokenWert, setTokenWert] = useState<string | null>(null);
   /* TESTLAUF — den Ablauf durchspielen, ohne Konto und ohne Mail.
    *
    * Meine erste Fassung sperrte fremde Domains und verhinderte damit genau den Test, um
@@ -228,6 +230,7 @@ export default function OnboardingPage() {
     if (q.get("probe") === "1") setProbe(true);
     const tok = q.get("t");
     if (!tok) return;
+    setTokenWert(tok);
     fetch(`/api/outreach-firma?t=${encodeURIComponent(tok)}`)
       .then((r) => r.json())
       .then((d) => {
@@ -413,7 +416,7 @@ function testMailErlaubt(mail: string): boolean {
     */
     let fremdErkannt = false;
     if (tokenFirma) {
-      const b = await pruefeBeleg(tokenFirma.id, email);
+      const b = await pruefeBeleg(tokenFirma.id, email, tokenWert);
       setBeleg(b);
       if (b.conf !== "fremd") {
         const m = { id: tokenFirma.id, name: tokenFirma.name } as Match;

@@ -37,6 +37,7 @@ Aufruf:
 Token = sha1(identity_id)[:10] (deterministisch; Sven steuert, wer den Link bekommt).
 """
 import argparse
+import datetime as _dt
 import hashlib
 import json
 import sys
@@ -597,8 +598,44 @@ def build_payload(con, identity_id, now):
     kern = next((nach_id[i]["kern"] for i in KERN_RANG
                  if i in nach_id and nach_id[i].get("kern")), None)
 
+    # ── ZUSTELLQUITTUNG ─────────────────────────────────────────────────────────────
+    # Wir wissen, an welche Adresse wir diesen Link schicken. Registriert sich jemand mit
+    # GENAU dieser Adresse, ist das Postfachkontrolle — ein Beleg, der ohne Firmendomain
+    # auskommt. Das hebt gerade die 47 % der Firmen, zu denen wir keine Domain haben
+    # (Klostermann ist eine davon).
+    #
+    # Gespeichert wird der HASH, nicht die Adresse: `outreach.json` ist eine Datei, die
+    # im Deploy mitfaehrt, und eine Adressliste darin waere eine Adressliste zu viel.
+    # Derselbe Zuschnitt wie bei `suppliers.json` (sha256, 16 Hex) — er schuetzt gegen
+    # das ERNTEN, nicht gegen das Nachpruefen einer bereits bekannten Adresse. Mehr
+    # braucht es hier auch nicht.
+    #
+    # ⚠ Der Token ist damit eine Zustellquittung, KEIN Ausweis. Wer ihn weiterleitet,
+    # gibt keine Berechtigung weiter — der Empfaenger landet bei „unbestaetigt", und das
+    # ist richtig so.
+    zustell = con.execute("SELECT email FROM base WHERE identity_id = ?", [identity_id]).fetchone()
+    zustell_hash = (hashlib.sha256(zustell[0].strip().lower().encode()).hexdigest()[:16]
+                    if zustell and zustell[0] else None)
+    _FREEMAIL = {"gmail.com", "gmx.de", "gmx.net", "web.de", "t-online.de", "outlook.com",
+                 "hotmail.com", "yahoo.de", "icloud.com", "freenet.de", "aol.com",
+                 "googlemail.com", "posteo.de", "mailbox.org", "arcor.de"}
+    zustell_dom = None
+    if zustell and zustell[0] and "@" in zustell[0]:
+        d = zustell[0].strip().lower().split("@")[-1]
+        zustell_dom = None if d in _FREEMAIL else d
+
     return {
         "id": identity_id, "name": Z.clean_name(b[0]),
+        # Nur der Hash und das Datum. Die Adresse selbst bleibt in der Zielliste.
+        "zustellung": ({"hash": zustell_hash, "am": _dt.date.today().isoformat(),
+                        # Die DOMAIN der Zustelladresse — unsere eigene Wahl, nicht aus
+                        # fremden Daten geraten. Damit ist auch die Kollegin belegt, die
+                        # sich mit `peter@klostermann-hamm.de` registriert, obwohl wir an
+                        # `info@…` geschrieben haben. Genau der Fall, der sonst durch das
+                        # Raster faellt: Firmen ohne hinterlegte Domain (47 %).
+                        # Freemail faellt raus — `gmail.com` belegt keine Firma.
+                        "domain": zustell_dom}
+                       if zustell_hash else None),
         # TT.MM.JJJJ statt ISO. `str(now)` lieferte 2026-08-16 — korrekt, aber in einem
         # deutschen Vertriebsdokument liest das niemand als Datum, sondern als Kennung.
         "stand": now.strftime("%d.%m.%Y") if hasattr(now, "strftime") else str(now),
