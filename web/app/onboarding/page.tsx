@@ -289,11 +289,31 @@ export default function OnboardingPage() {
   }
 
   // Konto anlegen (Registrierung), dann Firmen-Erkennung. Bei „E-Mail existiert" → Login anbieten.
+  /* Anbieter-Fehler in Klartext.
+   *
+   * Supabase antwortet auf Englisch und in seinem eigenen Vokabular. „email rate limit
+   * exceeded" ist fuer uns eine Diagnose, fuer den Nutzer eine Sackgasse: er weiss weder,
+   * was ein Rate Limit ist, noch dass es von selbst vergeht. Genau das ist Sven beim
+   * Durchklicken passiert (2026-08-17).
+   *
+   * Was hier NICHT passiert: alles auf eine Sammelmeldung abbilden. Unbekannte Fehler
+   * gehen im Wortlaut durch — eine erfundene Erklaerung waere schlimmer als eine fremde. */
+  function klartext(m: string): string {
+    if (/rate limit/i.test(m)) {
+      return "Zu viele Registrierungen in kurzer Zeit. Der Mailversand ist gedeckelt; "
+           + "in etwa einer Stunde geht es wieder.";
+    }
+    if (/invalid format|valid email/i.test(m)) return "Diese E-Mail-Adresse sieht nicht gültig aus.";
+    if (/password/i.test(m)) return "Das Passwort erfüllt die Mindestanforderungen nicht.";
+    if (/signup.*disabled/i.test(m)) return "Registrierung ist gerade abgeschaltet.";
+    return m;
+  }
+
   async function kontoAnlegen() {
     setAuthFehler(null); setBusy(true);
     const { error } = await register(email, pw);
     setBusy(false);
-    if (error && !/already registered|already exists/i.test(error.message)) { setAuthFehler(error.message); return; }
+    if (error && !/already registered|already exists/i.test(error.message)) { setAuthFehler(klartext(error.message)); return; }
     if (error) { setAuthFehler("Diese E-Mail hat schon ein Konto, bitte anmelden."); return; }
     await erkennen();   // signUp ok (mit oder ohne sofortige Session) → weiter im Flow
   }
