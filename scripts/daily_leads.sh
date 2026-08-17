@@ -872,6 +872,22 @@ fi   # Ende Phase „dokumente"
 step "Marktpuls berechnen (Saison + Jahre 2004-2025 + Lage)"
 $PY scripts/build_marktpuls.py --ab-jahr 2004 || echo "  ⚠ marktpuls.json bleibt auf dem letzten Stand — die Anzeige weist das aus."
 
+step "Namenswoerter-Tabelle (Grundlage des Impressum-Pruefers)"
+# Die Tabelle sagt, wie selten ein Wort in Firmennamen ist. Der Impressum-Pruefer
+# entscheidet daran sein *Traegerwort*: das seltenste Wort eines Firmennamens muss im
+# Impressum stehen, sonst zaehlt der Treffer nicht.
+#
+# WARUM DAS TAEGLICH LAUFEN MUSS: sie leitet sich aus entities.parquet ab und veraltet
+# mit ihm. Bleibt sie stehen, waehrend der Bestand waechst, halten neue Allerweltswoerter
+# sich weiter fuer selten — der Pruefer wird schleichend nachlaessiger, ohne dass
+# irgendwo etwas rot wird. Gemessen am 2026-08-17 kostete eine fehlende Unterscheidung
+# 5,5 % Fehlbestaetigungen: fremde Firma auf fremder Domain als „belegt" durchgewinkt.
+#
+# Schlaegt der Schritt fehl, bleibt die alte Tabelle stehen (der Bau schreibt erst
+# daneben und benennt dann um). Das ist der richtige Ausgang: eine leicht veraltete
+# Tabelle ist harmlos, eine halb geschriebene waere es nicht.
+$PY scripts/build_namenswoerter.py || echo "  ⚠ Namenswoerter-Tabelle bleibt auf dem letzten Stand"
+
 step "Frontend-Daten exportieren (web/data)"
 if $PY scripts/export_web_leads.py; then
   # ACHTUNG: export_web_leads.py schreibt plz-geo.json komplett neu und wirft dabei den

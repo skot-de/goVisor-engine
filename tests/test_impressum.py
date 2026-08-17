@@ -129,3 +129,32 @@ def test_zwillinge_kennen_dieselben_urteile():
     ts = TS.read_text(encoding="utf-8")
     for wert in (I.BELEGT, I.WIDERLEGT, I.NICHT_PRUEFBAR):
         assert f'"{wert}"' in ts, f"Urteil {wert} fehlt in impressum.ts"
+
+
+def test_tabelle_wird_im_tageslauf_gebaut():
+    """Die Häufigkeitstabelle muss täglich neu entstehen.
+
+    Sie leitet sich aus `entities.parquet` ab und veraltet mit ihm. Bleibt sie stehen,
+    während der Bestand wächst, halten neue Allerweltswörter sich weiter für selten — der
+    Prüfer wird schleichend nachlässiger, ohne dass irgendwo etwas rot wird. Genau diese
+    Sorte Fehler fällt im Betrieb nie auf, deshalb steht der Wächter hier.
+    """
+    lauf = (ROOT / "scripts" / "daily_leads.sh").read_text(encoding="utf-8")
+    assert "build_namenswoerter.py" in lauf, (
+        "Der Bauschritt fehlt im Tageslauf — die Tabelle friert ein und der "
+        "Impressum-Prüfer verliert schleichend seine Trennschärfe")
+
+
+def test_tabelle_liegt_fuer_beide_zwillinge_vor():
+    """Python liest `data/reference/`, das Frontend `web/data/` — `web/` wird als eigenes
+    Paket deployt und kann nicht auf den `data/`-Symlink zugreifen. Fehlt die Zweitschrift,
+    urteilt der Deploy anders als der Stapelbetrieb, und zwar nachlässiger."""
+    import json as _json
+    web = ROOT / "web" / "data" / "namenswoerter.json"
+    assert web.exists(), "web/data/namenswoerter.json fehlt — Frontend prüft ohne Seltenheit"
+    t = _json.loads(web.read_text(encoding="utf-8"))
+    assert t["zaehler"] and t["n_namen"] > 1000
+    # Stichprobe: Allerweltswoerter muessen als haeufig gefuehrt sein, sonst traegt die
+    # Tabelle nicht, was sie tragen soll.
+    for w in ("deutschland", "technik", "planung"):
+        assert t["zaehler"].get(w, 0) >= 20, f"{w} fehlt in der Tabelle"
