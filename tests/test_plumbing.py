@@ -2035,7 +2035,13 @@ def test_onboarding_verwirft_token_vorbelegung_nicht():
     p = Path(__file__).resolve().parent.parent / "web/app/onboarding/page.tsx"
     quelle = p.read_text(encoding="utf-8")
     assert "/api/outreach-firma?t=" in quelle, "Vorbelegung wird gar nicht erst geholt"
-    assert "const ausToken = vomToken" in quelle, "Weiche in erkennen() fehlt"
+    # Die Weiche traegt seit 2026-08-17 zusaetzlich `!fremdErkannt`: gehoert die Adresse
+    # nachweislich einer ANDEREN Firma, faellt die Token-Vorbelegung weg. Als lokale
+    # Variable, nicht ueber den Zustand — `setVomToken(false)` wirkt erst beim naechsten
+    # Rendern, und die Zeile darunter las noch den alten Wert (gemessen im Testlauf:
+    # Urteil „gehoert zu Cancom SE", angezeigt trotzdem H. Klostermann).
+    assert "const ausToken = !fremdErkannt && vomToken" in quelle, "Weiche in erkennen() fehlt"
+    assert "let fremdErkannt = false" in quelle, "fremdErkannt muss lokal sein, nicht im Zustand"
     assert "const frage = ausToken ? eingabe.trim() : domainStamm(email)" in quelle
 
     # Die unbelegbare Behauptung darf nicht zurückkehren: wir kennen namentlich nur
