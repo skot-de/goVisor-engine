@@ -2078,3 +2078,47 @@ def test_landing_klassen_sind_praefixiert():
     sel = sorted({m for m in re.findall(r"\.([a-zA-Z][\w-]*)", css)
                   if not m.startswith("lg-") and m != "landing"})
     assert not sel, f"ungepraefixte Selektoren in landing.css: {sel}"
+
+
+def test_tageslauf_erntet_vor_dem_abrufen():
+    """Gold muss VOR den Unterlagen-Abrufern stehen, und die Abrufer unter einem Budget.
+
+    Am 2026-08-16 riss der Lauf nach 623 min die 8-h-Grenze. 18 von 33 Schritten waren
+    erledigt; ausgefallen war ausgerechnet alles, was aus Daten ein Produkt macht:
+    Gold-Rebuild, Signale, Frontend-Export, Supabase, Ertragsbericht. 93 % der Laufzeit
+    steckten in Beschaffung.
+
+    Gemessen ueber fuenf Laeufe: Beschaffung 1.622 min im schlimmsten Fall und nach oben
+    offen, Wertschoepfung 45 min und gedeckelt. Wer das Gedeckelte hinter das Offene
+    stellt, verliert im Zweifel immer dasselbe.
+
+    Die Kette Firewall -> Kategorie -> Gold muss dabei GESCHLOSSEN bleiben: die
+    Kategorie-Ableitung liest `notice_duplicates` aus der Firewall, der Gold-Lead-Bau
+    liest `lead_kategorie.parquet` aus der Kategorie-Ableitung.
+    """
+    from pathlib import Path
+    quelle = (Path(__file__).resolve().parent.parent / "scripts/daily_leads.sh").read_text(encoding="utf-8")
+
+    def pos(nadel: str) -> int:
+        i = quelle.find(nadel)
+        assert i > 0, f"nicht gefunden: {nadel}"
+        return i
+
+    firewall = pos('step "Dubletten-Firewall')
+    kategorie = pos('step "Kategorie-Ableitung')
+    gold = pos('step "Gold-Rebuild')
+    marke_abruf = pos("_ABRUF_PHASE=1")
+    erster_abruf = pos('step "NetServer-Unterlagen')
+    marke_ernte = pos("_ABRUF_PHASE=0")
+    entpacken = pos('step "Unterlagen entpacken')
+
+    assert firewall < kategorie < gold, "Firewall -> Kategorie -> Gold ist die Datenkette"
+    assert gold < marke_abruf < erster_abruf, "Gold gehoert VOR die Unterlagen-Abrufer"
+    assert erster_abruf < marke_ernte < entpacken, "Auswertung liegt hinter der Abruf-Marke"
+
+    # Der Waechter selbst: Reserve gesetzt und in `mit_grenze` konsultiert.
+    assert "ERNTE_RESERVE=${GOVISOR_ERNTE_RESERVE:-5400}" in quelle
+    assert 'if [ "${_ABRUF_PHASE:-0}" = "1" ] && ! abruf_erlaubt' in quelle
+    # Uebersprungene Abrufe muessen im Abschlussbericht auftauchen, sonst sieht ein
+    # gekuerzter Lauf aus wie ein vollstaendiger.
+    assert "_ABRUF_UEBERSPRUNGEN" in quelle and "Abrufe uebersprungen (Zeitbudget)" in quelle

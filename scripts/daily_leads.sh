@@ -173,9 +173,15 @@ abschluss() {
   local zustand="fertig"
   [ "$rc" -ne 0 ] && zustand="ABGEBROCHEN (Code $rc)"
   [ -n "$_SCHRITT_NAME" ] && [ "$rc" -ne 0 ] && zustand="$zustand bei: $_SCHRITT_NAME"
+  # Uebersprungene Abrufer GEHOEREN in den Bericht. Ohne sie sieht ein gekuerzter Lauf
+  # aus wie ein vollstaendiger: die Auswertung lief ja durch, es fehlen bloss die
+  # Dokumente, die niemand geholt hat. Genau diese stille Kuerzung soll sichtbar sein.
+  local gekuerzt=""
+  [ "${_ABRUF_UEBERSPRUNGEN:-0}" -gt 0 ] \
+    && gekuerzt=" · ${_ABRUF_UEBERSPRUNGEN} Abrufe uebersprungen (Zeitbudget)"
   {
-    printf '%s  %s · %d min · %s Warnungen\n' \
-      "$(date '+%Y-%m-%d %H:%M')" "$zustand" "$dauer" "$warn"
+    printf '%s  %s · %d min · %s Warnungen%s\n' \
+      "$(date '+%Y-%m-%d %H:%M')" "$zustand" "$dauer" "$warn" "$gekuerzt"
   } > "$ROOT/data/logs/letzter_lauf.txt"
   echo ""
   echo "── $(cat "$ROOT/data/logs/letzter_lauf.txt")"
@@ -251,6 +257,47 @@ _SCHRITT_NAME=""
 # Schrittgrenzen regelmaessig — ein zweiter Waechterprozess waere Mechanik ohne Mehrwert.
 GRENZE_GESAMT=${GOVISOR_GRENZE_GESAMT:-28800}   # 8 h
 
+# ══ RESERVE FUER DIE AUSWERTUNG ══════════════════════════════════════════════════════
+# Wie viel Zeit muss am Ende uebrig bleiben, damit Entpacken, Signale, Leistungs-
+# verzeichnisse, Marktpuls, Frontend-Export, Supabase, gap_effects und der Ertragsbericht
+# noch durchlaufen?
+#
+# NICHT geschaetzt, sondern aus `data/logs/daily-*.log` ausgezaehlt (fuenf Laeufe,
+# schlimmster Fall je Schritt):
+#     Supabase-Export        17,4    Unterlagen entpacken     9,9
+#     Leistungsverzeichnisse  7,9    Marktpuls                0,7
+#     Frontend-Export         1,1    gap_effects              0,0
+#     Signale                 1,2  ← war 232,6, bis der Schritt inkrementell wurde
+#     ------------------------------------------------------------------
+#     zusammen ~45 min
+#
+# 90 min ist das Doppelte davon. Der Aufschlag ist keine Bequemlichkeit: die Signale
+# skalieren mit der Zahl NEUER Dokumente, und ein Abruf, der endlich einmal durchlaeuft,
+# macht genau diesen Schritt teuer. Wer hier knapp rechnet, bricht den Lauf an der Stelle
+# ab, an der er sich gerade gelohnt haette.
+ERNTE_RESERVE=${GOVISOR_ERNTE_RESERVE:-5400}    # 90 min
+
+# Darf noch ein Abrufer starten? Die Beschaffung ist nach oben offen (gemessen 1.622 min
+# im schlimmsten Fall), die Auswertung dahinter ist es nicht. Also teilen sich ALLE
+# Abrufer einen Topf: was nach Abzug der Reserve uebrig ist.
+#
+# Geprueft wird VOR dem Start, nicht waehrenddessen: ein Schritt, der mittendrin
+# abgeschnitten wird, hinterlaesst halb geladene Pakete. `mit_grenze` deckelt zusaetzlich
+# den einzelnen Schritt — beides zusammen, nicht eines statt des anderen.
+abruf_erlaubt() {
+  local rest=$(( GRENZE_GESAMT - SECONDS ))
+  if [ "$rest" -lt "$ERNTE_RESERVE" ]; then
+    echo ""
+    echo "⏭ $* — uebersprungen."
+    echo "   Nur noch $(( rest / 60 )) min bis zur Gesamtgrenze, reserviert sind $(( ERNTE_RESERVE / 60 )) min"
+    echo "   fuer Auswertung und Veroeffentlichung. Der Abruf holt das morgen nach."
+    _ABRUF_UEBERSPRUNGEN=$(( ${_ABRUF_UEBERSPRUNGEN:-0} + 1 ))
+    return 1
+  fi
+  return 0
+}
+_ABRUF_UEBERSPRUNGEN=0
+
 step() {
   if [ -n "$_SCHRITT_NAME" ]; then
     printf '  ⏱ %s — %ds\n' "$_SCHRITT_NAME" "$(( SECONDS - _SCHRITT_START ))"
@@ -279,6 +326,12 @@ step() {
 # GNU coreutils), also von Hand — mit Wanduhr, nicht mit Rundenzaehlung.
 mit_grenze() {
   local grenze=$1; shift
+  # In der Beschaffungsphase erst fragen, ob der gemeinsame Topf noch etwas hergibt.
+  # VOR dem Start, nicht waehrenddessen: ein mittendrin abgeschnittener Abruf hinterlaesst
+  # halb geladene Pakete.
+  if [ "${_ABRUF_PHASE:-0}" = "1" ] && ! abruf_erlaubt "${_SCHRITT_NAME:-Abruf}"; then
+    return 0
+  fi
   "$@" &
   local kind=$!
   local ende=$(( $(date +%s) + grenze ))
@@ -485,6 +538,113 @@ if [ "${GOVISOR_NEUE_QUELLEN:-1}" = "1" ]; then
   mit_grenze "$GRENZE_ABRUF" $PY -m govisor.healyhudson --silber \
     || echo "  ⚠ Healy-Hudson-Silber nicht gebaut — die Vorgaenge bleiben in Bronze liegen."
 
+
+# ══ ERNTE VOR ABRUF ══════════════════════════════════════════════════════════════════
+# Dieser Block stand bis 2026-08-17 HINTER den Unterlagen-Abrufern. Am 2026-08-16 kostete
+# ihn das den halben Lauf: nach 623 min riss die 8-h-Grenze, 18 von 33 Schritten waren
+# erledigt, und ausgefallen war ausgerechnet alles, was aus Daten ein Produkt macht —
+# Gold-Rebuild, Signale, Frontend-Export, Supabase, Ertragsbericht. 93 % der Laufzeit
+# waren in Beschaffung gegangen.
+#
+# Gemessen ueber fuenf Laeufe: die Beschaffung kostet im schlimmsten Fall 1.622 min und
+# ist nach oben offen, die Wertschoepfung 45 min und ist gedeckelt. Wer das Gedeckelte
+# hinter das Offene stellt, verliert im Zweifel immer dasselbe.
+#
+# Die Kette Firewall -> Kategorie -> Gold wandert deshalb GESCHLOSSEN nach vorn. Einzeln
+# ginge es nicht: die Kategorie-Ableitung liest `notice_duplicates` aus der Firewall, und
+# der Gold-Lead-Bau liest `lead_kategorie.parquet` aus der Kategorie-Ableitung.
+#
+# PREIS, den das hat: Unterlagen, die dieser Lauf holt, werden erst im naechsten
+# ausgewertet — die Auswertung sitzt jetzt hinter dem Abruf. Dafuer steht das Produkt
+# jeden Morgen frisch da, auch wenn die Beschaffung ins Zeitlimit laeuft.
+# DUBLETTEN-FIREWALL. Eine Pruefung fuer ALLE Quellen eines Landes. Sie hat am 2026-08-13
+# `dedupe_at_sources.py` und `dedupe_ch_sources.py` abgeloest — beide geloescht, ihre
+# Verbraucher (Marktpuls, die zwei Alt-Bruecken) lesen jetzt `notice_duplicates`.
+#
+# `--alle-arten` ist Pflicht: mit nur `cn`/`pin` fehlen die ZUSCHLAEGE, und die machten in
+# AT 3.403 von 4.345 der Treffer aus, die frueher nur das Quellskript fand. Marktpuls zaehlt
+# Publikationen je Jahr und wuerde AT/CH sonst doppelt zaehlen.
+#
+# `--ab-jahr 2004` = VOLLE HISTORIE fuer alle drei Laender. Bis 2026-08-14 stand hier ein
+# Notfenster (DE:2026 AT:2024 CH:2024), weil die Historie nicht durchlief — AT ab 2019 brach
+# nach 45 Minuten ab. Das lag nicht an der Datenmenge, sondern daran, dass das
+# ±FENSTER_TAGE-Fenster erst NACH der Kandidatenbildung griff: gepaart wurde quer ueber 22
+# Jahrgaenge. Seit dem Zeitscheiben-Umbau laeuft der Abgleich jahrgangsweise:
+#
+#   AT   413.872 Saetze   >45 min Abbruch →   40 s ·  128.216 Paare
+#   CH   120.434 Saetze                   →    8 s ·   18.465 Paare
+#   DE 2.215.840 Saetze                   →  827 s ·  115.198 Paare
+#
+# DE kostet also rund 14 Minuten je Nacht. Das ist der Preis dafuer, dass die
+# Marktpuls-Jahresschichten ueberhaupt bereinigt sind — mit dem Notfenster blieben AT
+# 2019-2023 und DE 2023-2025 unbereinigt, und zwar lautlos.
+#
+# Der WUNSCHWERT waere der Quellenstart (atverg 2019, DOeE 2023, simap 2024, DTVP ~2024) —
+# davor kann es keine Quellen-Dublette geben. CH erreicht ihn, DE und AT nicht.
+#
+# ERLEDIGT (2026-08-14): hier stand, dass AT 2019-2023 und DE 2023-2025 in den
+# Marktpuls-Jahresschichten unbereinigt bleiben und der echte Fix ein Umbau auf DuckDB-SQL
+# waere. Beides ist ueberholt. Der SQL-Umbau wurde gebaut und war gemessen zwei- bis
+# dreimal LANGSAMER (s. Docstring in govisor/dedupe.py); geholfen haben Seed-Deckel und
+# Zeitscheiben. Seither laeuft die volle Historie, die Luecke ist zu.
+#
+# Gemessen 2026-08-14 ueber die volle Historie:
+#   AT  128.216 Paare ·  64.889 mit Kaeufer-Beleg ·  65.537 Anreicherungswerte
+#   CH   18.465 Paare ·  14.510 mit Kaeufer-Beleg ·   7.579 Werte
+#   DE  115.871 Paare ·  25.990 mit Kaeufer-Beleg ·   1.469 Werte
+# AT/CH liegen weit vor DE, weil TED und die nationale Quelle sich dort zu ~93 % ueberlappen
+# UND den Kaeufer fast gleich schreiben (98 % Beleg gegen 57 % in DE).
+#
+# ⚠ REIHENFOLGE: MUSS vor dem Gold-Rebuild laufen. `build_lead_deadline` liest
+# `notice_enrichment.parquet`; laeuft die Firewall danach, sind die uebernommenen Fristen
+# erst am naechsten Tag im Produkt. Die Datei ist optional — fehlt sie, verhaelt sich der
+# Wasserfall wie vorher, es gibt also keine harte Abhaengigkeit, nur eine zeitliche.
+#
+# Sie MARKIERT und reichert an; geloescht wird an genau EINER Stelle, naemlich in
+# `gold._redundante_zweitquelle_sql` (siehe DTVP weiter unten) — und dort nur, wenn der
+# Master heute noch ein brauchbarer Lead IST. Ein Ausschluss ohne diese Bedingung wurde
+# gemessen und verworfen: er haette 64 gueltige Leads gekostet, weil bei 61 davon die Frist
+# des Masters abgelaufen ist und nur die der Dublette laeuft. Feld-Reichtum ist nicht
+# Aktualitaet.
+step "Dubletten-Firewall + Anreicherung (DE/AT/CH)"
+for L in DE AT CH; do
+  $PY -m govisor.dedupe --country "$L" --ab-jahr 2004 --alle-arten --anreichern \
+    || echo "  ⚠ Dublettencheck $L fehlgeschlagen — Anreicherung bleibt auf altem Stand."
+done
+
+# KATEGORIE-WASSERFALL. Muss ZWISCHEN Firewall und Gold laufen, und das ist keine
+# Geschmacksfrage: er liest `notice_duplicates` (kommt aus der Firewall) und schreibt
+# `lead_kategorie.parquet`, das der Gold-Lead-Bau per LEFT JOIN liest. Davor gaebe es die
+# Zwillinge noch nicht, danach kaeme das Ergebnis einen Lauf zu spaet.
+#
+# GEFEHLT bis 2026-08-14: der Wasserfall war gebaut, aber nie verdrahtet. `lead_kategorie`
+# stand deshalb auf dem Stand eines einzelnen Handlaufs — alle spaeter dazugekommenen
+# Quellen (healyhudson: 676 Leads) blieben „Ohne Kategorie", ohne dass etwas abbrach.
+step "Kategorie-Ableitung fuer Ausschreibungen ohne CPV"
+$PY -m govisor.kategorie --country DE --schreiben \
+  || echo "  ⚠ Kategorie-Ableitung fehlgeschlagen — die Leads ohne CPV bleiben 'Ohne Kategorie'."
+
+step "AT/CH-Gold (volle Pipeline, 26 Schritte je Land)"
+$PY scripts/build_dach_gold.py --laender AT,CH --as-of "$TODAY" \
+  && echo "  AT/CH-Gold ok." \
+  || echo "  ⚠ AT/CH-Gold unvollstaendig — beide Laender bleiben auf dem letzten Stand."
+
+# 2) Gold neu mit heutigem Stichtag — refresht Leads, Fristen, months_to_expiry. FATAL bei Fehler.
+step "Gold-Rebuild (Leads mit Stichtag $TODAY)"
+if ! $PY -m govisor.cli gold --country DE --as-of "$TODAY"; then
+  echo "  ✖ Gold-Rebuild fehlgeschlagen — KEIN Supabase-Push (kein Halb-Stand nach oben)."
+  echo "Abbruch nach ${SECONDS}s."
+  exit 2
+fi
+echo "  Gold ok."
+
+# ══ AB HIER: BESCHAFFUNG ═════════════════════════════════════════════════════════════
+# Alles zwischen dieser Marke und der Auswertung weiter unten ist nach oben offen und
+# teilt sich EINEN Topf: was nach Abzug von ERNTE_RESERVE uebrig bleibt. Die Marke statt
+# elf einzelner Wachen, damit ein neuer Abrufer nicht vergessen werden kann — er liegt
+# zwischen den Marken und ist damit automatisch gedeckelt.
+_ABRUF_PHASE=1
+
   # NetServer-UNTERLAGEN. Die zweitgroesste Dokumentenluecke: 1.055 offene Leads auf
   # Portalen, deren Bekanntmachungen oben schon hereinkommen. Der Weg fuehrt ueber
   # `&thContext=publications` und ein Modal — die rohe `documents_url` zeigt auf die
@@ -567,86 +727,6 @@ else
   echo "  Wieder an mit: GOVISOR_NEUE_QUELLEN=1 (Vorgabe ist AN)"
 fi
 
-# DUBLETTEN-FIREWALL. Eine Pruefung fuer ALLE Quellen eines Landes. Sie hat am 2026-08-13
-# `dedupe_at_sources.py` und `dedupe_ch_sources.py` abgeloest — beide geloescht, ihre
-# Verbraucher (Marktpuls, die zwei Alt-Bruecken) lesen jetzt `notice_duplicates`.
-#
-# `--alle-arten` ist Pflicht: mit nur `cn`/`pin` fehlen die ZUSCHLAEGE, und die machten in
-# AT 3.403 von 4.345 der Treffer aus, die frueher nur das Quellskript fand. Marktpuls zaehlt
-# Publikationen je Jahr und wuerde AT/CH sonst doppelt zaehlen.
-#
-# `--ab-jahr 2004` = VOLLE HISTORIE fuer alle drei Laender. Bis 2026-08-14 stand hier ein
-# Notfenster (DE:2026 AT:2024 CH:2024), weil die Historie nicht durchlief — AT ab 2019 brach
-# nach 45 Minuten ab. Das lag nicht an der Datenmenge, sondern daran, dass das
-# ±FENSTER_TAGE-Fenster erst NACH der Kandidatenbildung griff: gepaart wurde quer ueber 22
-# Jahrgaenge. Seit dem Zeitscheiben-Umbau laeuft der Abgleich jahrgangsweise:
-#
-#   AT   413.872 Saetze   >45 min Abbruch →   40 s ·  128.216 Paare
-#   CH   120.434 Saetze                   →    8 s ·   18.465 Paare
-#   DE 2.215.840 Saetze                   →  827 s ·  115.198 Paare
-#
-# DE kostet also rund 14 Minuten je Nacht. Das ist der Preis dafuer, dass die
-# Marktpuls-Jahresschichten ueberhaupt bereinigt sind — mit dem Notfenster blieben AT
-# 2019-2023 und DE 2023-2025 unbereinigt, und zwar lautlos.
-#
-# Der WUNSCHWERT waere der Quellenstart (atverg 2019, DOeE 2023, simap 2024, DTVP ~2024) —
-# davor kann es keine Quellen-Dublette geben. CH erreicht ihn, DE und AT nicht.
-#
-# ERLEDIGT (2026-08-14): hier stand, dass AT 2019-2023 und DE 2023-2025 in den
-# Marktpuls-Jahresschichten unbereinigt bleiben und der echte Fix ein Umbau auf DuckDB-SQL
-# waere. Beides ist ueberholt. Der SQL-Umbau wurde gebaut und war gemessen zwei- bis
-# dreimal LANGSAMER (s. Docstring in govisor/dedupe.py); geholfen haben Seed-Deckel und
-# Zeitscheiben. Seither laeuft die volle Historie, die Luecke ist zu.
-#
-# Gemessen 2026-08-14 ueber die volle Historie:
-#   AT  128.216 Paare ·  64.889 mit Kaeufer-Beleg ·  65.537 Anreicherungswerte
-#   CH   18.465 Paare ·  14.510 mit Kaeufer-Beleg ·   7.579 Werte
-#   DE  115.871 Paare ·  25.990 mit Kaeufer-Beleg ·   1.469 Werte
-# AT/CH liegen weit vor DE, weil TED und die nationale Quelle sich dort zu ~93 % ueberlappen
-# UND den Kaeufer fast gleich schreiben (98 % Beleg gegen 57 % in DE).
-#
-# ⚠ REIHENFOLGE: MUSS vor dem Gold-Rebuild laufen. `build_lead_deadline` liest
-# `notice_enrichment.parquet`; laeuft die Firewall danach, sind die uebernommenen Fristen
-# erst am naechsten Tag im Produkt. Die Datei ist optional — fehlt sie, verhaelt sich der
-# Wasserfall wie vorher, es gibt also keine harte Abhaengigkeit, nur eine zeitliche.
-#
-# Sie MARKIERT und reichert an; geloescht wird an genau EINER Stelle, naemlich in
-# `gold._redundante_zweitquelle_sql` (siehe DTVP weiter unten) — und dort nur, wenn der
-# Master heute noch ein brauchbarer Lead IST. Ein Ausschluss ohne diese Bedingung wurde
-# gemessen und verworfen: er haette 64 gueltige Leads gekostet, weil bei 61 davon die Frist
-# des Masters abgelaufen ist und nur die der Dublette laeuft. Feld-Reichtum ist nicht
-# Aktualitaet.
-step "Dubletten-Firewall + Anreicherung (DE/AT/CH)"
-for L in DE AT CH; do
-  $PY -m govisor.dedupe --country "$L" --ab-jahr 2004 --alle-arten --anreichern \
-    || echo "  ⚠ Dublettencheck $L fehlgeschlagen — Anreicherung bleibt auf altem Stand."
-done
-
-# KATEGORIE-WASSERFALL. Muss ZWISCHEN Firewall und Gold laufen, und das ist keine
-# Geschmacksfrage: er liest `notice_duplicates` (kommt aus der Firewall) und schreibt
-# `lead_kategorie.parquet`, das der Gold-Lead-Bau per LEFT JOIN liest. Davor gaebe es die
-# Zwillinge noch nicht, danach kaeme das Ergebnis einen Lauf zu spaet.
-#
-# GEFEHLT bis 2026-08-14: der Wasserfall war gebaut, aber nie verdrahtet. `lead_kategorie`
-# stand deshalb auf dem Stand eines einzelnen Handlaufs — alle spaeter dazugekommenen
-# Quellen (healyhudson: 676 Leads) blieben „Ohne Kategorie", ohne dass etwas abbrach.
-step "Kategorie-Ableitung fuer Ausschreibungen ohne CPV"
-$PY -m govisor.kategorie --country DE --schreiben \
-  || echo "  ⚠ Kategorie-Ableitung fehlgeschlagen — die Leads ohne CPV bleiben 'Ohne Kategorie'."
-
-step "AT/CH-Gold (volle Pipeline, 26 Schritte je Land)"
-$PY scripts/build_dach_gold.py --laender AT,CH --as-of "$TODAY" \
-  && echo "  AT/CH-Gold ok." \
-  || echo "  ⚠ AT/CH-Gold unvollstaendig — beide Laender bleiben auf dem letzten Stand."
-
-# 2) Gold neu mit heutigem Stichtag — refresht Leads, Fristen, months_to_expiry. FATAL bei Fehler.
-step "Gold-Rebuild (Leads mit Stichtag $TODAY)"
-if ! $PY -m govisor.cli gold --country DE --as-of "$TODAY"; then
-  echo "  ✖ Gold-Rebuild fehlgeschlagen — KEIN Supabase-Push (kein Halb-Stand nach oben)."
-  echo "Abbruch nach ${SECONDS}s."
-  exit 2
-fi
-echo "  Gold ok."
 
 # 2b) VERGABEUNTERLAGEN — holen UND auswerten. Beides fehlte im Tageslauf: `fetch-docs` und
 #     `signals-docs` gab es nur von Hand, entsprechend waren am 2026-08-13 gemessen 303
@@ -692,6 +772,11 @@ mit_grenze "$GRENZE_ABRUF" $PY -m govisor.docfetch_evergabe --limit 40 || echo "
 # Vorgaenge fallen raus — der Rueckstand arbeitet sich ueber die Tage ab.
 step "subreport-Dateilisten (DE, gedeckelt + idempotent)"
 mit_grenze "$GRENZE_LANG" $PY -m govisor.subreport --limit 120 || echo "  ⚠ subreport-Listen unvollständig."
+
+# ══ AB HIER: AUSWERTUNG ══════════════════════════════════════════════════════════════
+# Fuer diesen Rest ist ERNTE_RESERVE da. Kein Budget-Waechter mehr: was hier laeuft, ist
+# gedeckelt (gemessen ~45 min) und macht aus den Daten das Produkt.
+_ABRUF_PHASE=0
 
 step "Unterlagen entpacken → Volltext-Index"
 # ⚠ ZWEI SCHUTZE, beide am 2026-08-14 durch Schaden gelernt:
