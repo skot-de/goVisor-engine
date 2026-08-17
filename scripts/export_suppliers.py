@@ -7,7 +7,7 @@ Gewinner und leiten das Profil aus dem Zuschlags-Verlauf ab (§4.2: „gemessen"
 Gruppiert über `entity_identity` (grp:*), damit die Varianten einer Firma (z. B. die
 24 CANCOM-Entities) zu EINEM Profil verschmelzen. Nur belegt aufgelöste Identitäten.
 """
-import duckdb, json, pathlib
+import duckdb, json, os, pathlib, requests
 
 OUT = pathlib.Path("web/data"); OUT.mkdir(parents=True, exist_ok=True)
 con = duckdb.connect(); con.execute("SET threads=4")
@@ -277,6 +277,63 @@ def method_conf(m):
     return ("belegt" if belegt else "unsicher"), text
 
 
+
+def belegte_domains() -> dict[str, dict]:
+    """Per Impressum bestaetigte Domains aus `domain_proof` zurueck in den Firmenbestand.
+
+    **Warum das der Muehe wert ist.** Zu 47 % unserer Firmen kennen wir keine Domain, und
+    die uebrigen kommen aus Kontaktmails der Vergabeunterlagen — einer Quelle, die gemessen
+    zu 7,5 % die Adresse des AUFTRAGGEBERS traegt statt die des Gewinners. Der Impressum-
+    Pruefer verifiziert genau diese Zuordnung, an 200 verwuerfelten Paaren mit 0,0 %
+    Fehlbestaetigungen. Ohne diesen Rueckfluss haetten wir dieses Wissen einmal erzeugt und
+    danach jedes Mal weggeworfen.
+
+    **Nur `belegt`.** `widerlegt` sagt „diese Domain gehoert der Firma nicht" und ist als
+    Negativwissen wertvoll, aber es benennt keine Domain. `nicht_pruefbar` sagt ueberhaupt
+    nichts ausser „gerade nicht erreichbar".
+
+    Faellt der Abruf aus, kommt eine leere Abbildung zurueck und der Export laeuft mit den
+    abgeleiteten Domains weiter. Ein fehlender Rueckfluss ist ein verpasster Gewinn, kein
+    Schaden — und darf den Tageslauf nicht anhalten.
+    """
+    url = os.environ.get("SUPABASE_URL")
+    key = os.environ.get("SUPABASE_SERVICE_KEY")
+    if not (url and key):
+        pfad = pathlib.Path(".secrets/supabase.txt")
+        if pfad.exists():
+            zeilen = [z.strip() for z in pfad.read_text().splitlines() if z.strip()]
+            if len(zeilen) >= 2:
+                url, key = zeilen[0], zeilen[1]
+    if not (url and key):
+        print("  ⚠ keine Supabase-Zugangsdaten — Impressum-Rueckfluss uebersprungen")
+        return {}
+    ziel = (f"{url.rstrip('/')}/rest/v1/domain_proof"
+            "?select=domain,identity_id,geprueft_am&urteil=eq.belegt")
+    # `requests` statt `urllib`: urllib nutzt den System-Zertifikatsspeicher, und der ist
+    # auf dieser Maschine leer (CERTIFICATE_VERIFY_FAILED). requests bringt certifi mit.
+    try:
+        antwort = requests.get(ziel, timeout=30, headers={
+            "apikey": key, "Authorization": f"Bearer {key}", "Accept": "application/json"})
+        antwort.raise_for_status()
+        rows = antwort.json()
+    except Exception as e:
+        print(f"  ⚠ domain_proof nicht lesbar ({type(e).__name__}) — Rueckfluss uebersprungen")
+        return {}
+    # Mehrere Belege je Firma sind moeglich (Konzern mit zwei Domains). Der juengste
+    # gewinnt — er beschreibt den heutigen Auftritt, nicht den von vor zwei Jahren.
+    out: dict[str, dict] = {}
+    for z in rows:
+        iid, am = z.get("identity_id"), z.get("geprueft_am") or ""
+        if not iid:
+            continue
+        if iid not in out or am > out[iid]["am"]:
+            out[iid] = {"domain": z.get("domain"), "am": am}
+    print(f"  ✓ {len(out):,} per Impressum bestaetigte Domains aus domain_proof")
+    return out
+
+
+belegte = belegte_domains()
+
 out = []
 for (iid, name, aliase, wins, fields, fields6, regions, reg80, vol, wert_belege, wert_klumpen,
      buyers, seit, members, top_kunden, top_anteil, domain, domain_belege, mail_hashes) in rows:
@@ -313,8 +370,18 @@ for (iid, name, aliase, wins, fields, fields6, regions, reg80, vol, wert_belege,
         # Kunde kennen sollte — und zugleich unser stärkstes Argument fürs Diversifizieren.
         "topShare": round(float(top_anteil), 3) if top_anteil else None,
         # Nur serverseitig ausgewertet (siehe /api/entity-verify) — nie ins Suchergebnis.
-        "domain": domain or None,
+        # Ein per Impressum BESTAETIGTER Eintrag ueberschreibt hier die aus Mailadressen
+        # abgeleitete Domain, statt sie nur zu ergaenzen. Grund ist ein Qualitaetsunterschied,
+        # kein Geschmack: die Ableitung aus Kontaktmails traegt gemessen 7,5 % Auftraggeber-
+        # Adressen, der Impressum-Beleg an 200 verwuerfelten Paaren 0,0 % Fehlbestaetigungen.
+        # Wer die schwaechere Quelle gewinnen liesse, machte die Pruefung wertlos.
+        "domain": (belegte.get(iid) or {}).get("domain") or domain or None,
         "domainBelege": int(domain_belege) if domain_belege else 0,
+        # Woher die Domain stammt. Die Leiter in /api/entity-verify soll unterscheiden
+        # koennen: „passt zu einer Adresse aus den Vergabeunterlagen" ist ein Indiz,
+        # „steht im Impressum dieser Domain" ist ein Beleg.
+        "domainQuelle": "impressum" if iid in belegte else ("kontakt" if domain else None),
+        "domainGeprueft": (belegte.get(iid) or {}).get("am"),
         "mailHashes": list(mail_hashes or []),
         "members": ms,
     })

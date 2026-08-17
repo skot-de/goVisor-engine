@@ -198,3 +198,44 @@ def test_frist_haengt_am_urteil():
     assert m
     tage = {k: int(v) for k, v in re.findall(r"(\w+):\s*(\d+)", m.group(1))}
     assert tage["nicht_pruefbar"] < tage["widerlegt"] < tage["belegt"]
+
+
+# ── Rückfluss in den Firmenbestand ────────────────────────────────────────────────
+def test_impressum_domain_schlaegt_kontakt_domain():
+    """Der bestätigte Beleg muss die abgeleitete Domain ÜBERSCHREIBEN, nicht ergänzen.
+
+    Kein Geschmack, sondern ein gemessener Qualitätsunterschied: die Ableitung aus
+    Kontaktmails der Vergabeunterlagen trägt 7,5 % Auftraggeber-Adressen, der
+    Impressum-Beleg an 200 verwürfelten Paaren 0,0 % Fehlbestätigungen. Liesse man die
+    schwächere Quelle gewinnen, wäre die ganze Prüfung wertlos.
+    """
+    quelle = (ROOT / "scripts" / "export_suppliers.py").read_text(encoding="utf-8")
+    # Gezielt die Zeile im Datensatz-Zusammenbau, nicht die gleichnamige im Lader.
+    treffer = [z for z in re.findall(r'"domain":\s*(.+)', quelle) if "or domain" in z]
+    assert len(treffer) == 1, f'erwartet genau eine Zuweisung im Zusammenbau, gefunden: {treffer}'
+    zeile = treffer[0]
+    assert zeile.index("belegte") < zeile.index("or domain"), (
+        "die abgeleitete Domain steht vor dem Impressum-Beleg — die schwächere Quelle "
+        "würde gewinnen")
+
+
+def test_export_traegt_die_herkunft():
+    """Ohne `domainQuelle` kann die Verifikationsleiter Indiz und Beleg nicht trennen."""
+    quelle = (ROOT / "scripts" / "export_suppliers.py").read_text(encoding="utf-8")
+    assert '"domainQuelle"' in quelle
+    leiter = (ROOT / "web" / "app" / "api" / "entity-verify" / "route.ts").read_text(encoding="utf-8")
+    assert 'domainQuelle === "impressum"' in leiter, (
+        "die Leiter wertet den Impressum-Beleg nicht aus — die bessere Quelle läge im "
+        "Datensatz und würde wie die schwächere behandelt")
+
+
+def test_rueckfluss_faellt_weich_aus():
+    """Ohne Zugangsdaten oder bei Netzfehler darf der Export weiterlaufen. Ein fehlender
+    Rückfluss ist ein verpasster Gewinn, kein Schaden — und darf den Tageslauf nicht
+    anhalten."""
+    quelle = (ROOT / "scripts" / "export_suppliers.py").read_text(encoding="utf-8")
+    block = quelle[quelle.index("def belegte_domains"):quelle.index("belegte = belegte_domains()")]
+    assert "return {}" in block and "except Exception" in block
+    assert "urteil=eq.belegt" in block, (
+        "der Rückfluss holt nicht nur bestätigte Belege — `widerlegt` benennt keine "
+        "Domain und `nicht_pruefbar` sagt gar nichts")

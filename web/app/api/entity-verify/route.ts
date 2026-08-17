@@ -114,6 +114,20 @@ export async function POST(req: NextRequest) {
       grund: "genau diese Adresse steht in den Vergabeunterlagen dieser Firma",
     });
   }
+  // Eine per IMPRESSUM belegte Domain braucht die Belegzahl nicht.
+  //
+  // `MIN_BELEGE` ist eine Krücke für die schwächere Quelle: Domains aus Kontaktmails der
+  // Vergabeunterlagen tragen gemessen 7,5 % Auftraggeber-Adressen, und mehrere Belege
+  // machen einen Ausrutscher unwahrscheinlicher. Beim Impressum-Beleg entfällt dieser
+  // Grund — er wurde gegen die Anbieterkennung der Domain selbst geprüft, an 200
+  // verwürfelten Paaren mit 0,0 % Fehlbestätigungen. Ihn trotzdem an der Belegzahl zu
+  // messen hiesse, die stärkere Quelle an der Schwäche der schwächeren zu bemessen.
+  if (bekannt && dom === bekannt && s?.domainQuelle === "impressum") {
+    return antwort({
+      conf: "belegt", domainBekannt: true,
+      grund: `${dom} ist im Impressum als eure Domain belegt`,
+    });
+  }
   if (bekannt && belege >= MIN_BELEGE && dom === bekannt) {
     return antwort({ conf: "belegt", grund: `über eure Firmen-Domain ${dom} bestätigt`, domainBekannt: true });
   }
