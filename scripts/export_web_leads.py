@@ -86,6 +86,10 @@ _LT = [str(x) for x in pathlib.Path("data/gold").glob("*/lead_text.parquet")]
 LT = (f"read_parquet([{', '.join(repr(x) for x in sorted(_LT))}], union_by_name=true)"
       if _LT else None)
 BS = f"read_parquet('{G}/buyer_stats.parquet')"
+# Die letzten Vergaben je Kaeufer. Seit Langem gebaut (38.320 Zeilen), von niemandem
+# gelesen — der Vergabestellen-Block zeigte nur Aggregate. „Wer hat dort zuletzt
+# was gewonnen" ist die Frage, die ein Bieter wirklich stellt.
+BRA = f"read_parquet('{G}/buyer_recent_awards.parquet')"
 ATTR = "read_parquet('data/silver/DE/attributes/*/*.parquet', hive_partitioning=1)"
 MO = f"read_parquet('{G}/market_opportunity.parquet')"
 CS = f"read_parquet('{G}/contractor_stats.parquet')"
@@ -357,6 +361,30 @@ def buyer_profiles(names):
         con.executemany("INSERT INTO _bn VALUES (?)", [(n,) for n in todo])
         stats = {r["buyer_name"]: r for r in con.execute(
             f"SELECT * FROM {BS} WHERE buyer_name IN (SELECT name FROM _bn)").df().to_dict("records")}
+        # ⚠ `recent` stand im Export fest auf `[]` — bei ALLEN 4.967 Profilen.
+        #
+        # Der Renderer hat den Block „Zuletzt vergeben" seit jeher (explorerCore, `d.recent`),
+        # und `buyer_recent_awards` liegt seit Langem gebaut daneben (38.320 Zeilen). Nur die
+        # Zeile dazwischen fehlte. Nichts war rot: eine leere Liste rendert einen leeren Block,
+        # und ein leerer Block sieht aus wie „diese Stelle hat halt nichts vergeben".
+        #
+        # Neueste zuerst — das ist die Frage, die ein Bieter stellt („wer gewinnt da GERADE?"),
+        # nicht „was war mal am groessten".
+        letzte = {}
+        for bn, lid, tl, wn, val, known, dat in con.execute(f"""
+                SELECT buyer_name, lead_id, titel, winner, value_eur, value_known, vergabe_datum
+                FROM {BRA} WHERE buyer_name IN (SELECT name FROM _bn)
+                QUALIFY row_number() OVER (PARTITION BY buyer_name
+                        ORDER BY vergabe_datum DESC NULLS LAST) <= 6""").fetchall():
+            letzte.setdefault(bn, []).append({
+                "date": dat.strftime("%m/%Y") if dat and hasattr(dat, "strftime") else "",
+                "title": tl or "", "winner": wn or "—",
+                # Der Renderer prueft auf das Wort „unbekannt", um die Zelle zu graue n —
+                # deshalb genau dieses Wort, nicht „k. A." oder ein leerer String.
+                "value": eur(val) if (known and val) else "unbekannt",
+                "lead": lid,
+            })
+
         mix = {}
         for bn, br, n in con.execute(f"""
                 SELECT e.buyer_name, {BRANCHE} AS br, count(*) n
@@ -390,7 +418,7 @@ def buyer_profiles(names):
                                 "pct": round(int(w["wins"]) / total * 100)} for w in tw[:5]] if total else [],
                 "winsAvg": str(round(total / dc, 1)).replace(".", ",") if dc else None,
                 "single": None, "avgBidders": None, "retention": None, "retentionLevel": None,
-                "below": None, "recent": [],
+                "below": None, "recent": letzte.get(n) or [],
                 "_mix": mix.get(n, {}),
             }
     return {n: _prof_cache.get(n) for n in names}
