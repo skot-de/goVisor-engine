@@ -293,6 +293,37 @@ def test_region_kpi_grain_and_sanity():
     assert bad == 0
 
 
+def test_gesundheitsprobe_verraet_keine_mengen():
+    """`/api/health` ist oeffentlich — also darf dort keine Geschaeftszahl stehen.
+
+    Der Endpunkt liegt bewusst vor der Anmeldung UND vor dem Coming-Soon-Vorhang, damit eine
+    Ueberwachung ihn erreicht. Genau deshalb ist jede Zahl darin eine Auskunft an Unbekannte.
+    Erlaubt sind Zustand und Alter; alles, was nach Bestandsgroesse riecht, faellt hier auf.
+    """
+    wurzel = pathlib.Path(__file__).resolve().parent.parent / "web"
+    route = (wurzel / "app/api/health/route.ts").read_text(encoding="utf-8")
+    # Was die Route ausliefert, steht in den `NextResponse.json`-Aufrufen.
+    for verboten in ("leads", "vorgaenge", "count", "anzahl", "archive"):
+        assert f'"{verboten}"' not in route.lower(), f"Gesundheitsprobe nennt {verboten}"
+    mw = (wurzel / "middleware.ts").read_text(encoding="utf-8")
+    assert "/api/health" in mw, "Gesundheitsprobe ist nicht erreichbar"
+
+
+def test_volltext_liegt_je_vorgang_vor():
+    """Der 294-MB-Sammelblock darf nicht zurueckkommen.
+
+    In der Cloud laedt `loadDataFile` ueber das Netz: ein Sammelblock heisst, die ganze Datei
+    fuer EINEN Vorgang zu holen, bei jedem Kaltstart jeder Instanz. Der Test haelt beides
+    fest — dass die Route je Vorgang liest und dass der Export nicht wieder sammelt.
+    """
+    wurzel = pathlib.Path(__file__).resolve().parent.parent
+    route = (wurzel / "web/app/api/lead-detail/route.ts").read_text(encoding="utf-8")
+    assert 'loadDataFile(`doc-text/' in route, "Route liest nicht je Vorgang"
+    assert 'loadDataFile("doc-text.json")' not in route, "Sammelblock ist zurueck"
+    export = (wurzel / "scripts/export_doc_text.py").read_text(encoding="utf-8")
+    assert "ALT.unlink" in export, "der alte Sammelblock wird nicht mehr entfernt"
+
+
 def test_s3_signatur_stimmt_mit_dem_aws_vektor():
     """Die SigV4-Ableitung in `upload_web_data.py` gegen den dokumentierten AWS-Testvektor.
 

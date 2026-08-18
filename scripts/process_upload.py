@@ -110,10 +110,16 @@ def main() -> int:
 
     # ── Pipeline ──────────────────────────────────────────────────────────────────────────
     nfiles = sum(1 for t in texts.values() if t.strip())
-    dt = _load("doc-text.json")
-    dt[nid] = {"chars": len(fulltext), "files": nfiles, "text": fulltext[:CAP_TEXT],
+    # EINE DATEI JE VORGANG, wie `scripts/export_doc_text.py`. Die frueher hier gepflegte
+    # Sammeldatei `doc-text.json` gibt es nicht mehr (zuletzt 294 MB); sie weiterzuschreiben
+    # hiesse, sie fuer JEDEN Upload komplett zu lesen und komplett zurueckzuschreiben.
+    eintrag = {"chars": len(fulltext), "files": nfiles, "text": fulltext[:CAP_TEXT],
                "truncated": len(fulltext) > CAP_TEXT}
-    _save("doc-text.json", dt)
+    dt = {nid: eintrag}
+    sicher = "".join(c for c in nid if c.isalnum() or c in "-_")
+    (DATA / "doc-text").mkdir(parents=True, exist_ok=True)
+    (DATA / "doc-text" / f"{sicher}.json").write_text(
+        json.dumps(eintrag, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
     res = {"lbText": dt[nid]["text"], "lbFiles": nfiles, "lbChars": len(fulltext),
            "lbTruncated": dt[nid]["truncated"], "packageHash": package_hash}
     if lead_mismatch:

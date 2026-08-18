@@ -17,6 +17,12 @@ was gleich gross ist. Das ist bewusst KEIN Hash-Vergleich: S3 liefert bei mehrte
 Uploads kein verlaessliches MD5, und eine Groessengleichheit bei identischem Export ist in
 der Praxis eindeutig. Wer es erzwingen will, nimmt `--alles`.
 
+ZWEI ZIELE, EINE MECHANIK. S3-kompatibel (R2, S3, B2, MinIO) und **Azure Blob Storage**.
+Azure ist das perspektivische Ziel (Sven am 2026-08-18: „ich wuerde es perspektivisch zu
+azure hochladen"), und dort ist der einfachste Weg zugleich der sicherste: ein **SAS-Token**.
+Er ist auf Container und Rechte begrenzt, laeuft ab, und es muss nichts signiert werden — der
+Runner kennt damit keinen Kontoschluessel, der alles darf.
+
 Konfiguration (Umgebungsvariablen, z. B. in `web/.env.local` oder im Runner):
 
     DATA_S3_ENDPOINT   https://<konto>.r2.cloudflarestorage.com
@@ -25,6 +31,14 @@ Konfiguration (Umgebungsvariablen, z. B. in `web/.env.local` oder im Runner):
     DATA_S3_SECRET     …
     DATA_S3_REGION     auto           (Vorgabe: auto — R2 will genau das)
     DATA_S3_PREFIX     web-data       (optional, Unterordner im Bucket)
+
+Oder Azure:
+
+    DATA_AZURE_URL     https://<konto>.blob.core.windows.net/<container>?<sas-token>
+    DATA_AZURE_PREFIX  web-data       (optional)
+
+Ist `DATA_AZURE_URL` gesetzt, gilt Azure; sonst S3. Beides gleichzeitig waere eine Frage
+danach, welche Fassung die echte ist, und die soll niemand raten muessen.
 
 Aufruf::
 
@@ -99,6 +113,31 @@ def kopf_bauen(methode: str, endpunkt: str, bucket: str, pfad: str, region: str,
     return url, kopf
 
 
+def azure_ziel(basis: str, pfad: str) -> str:
+    """Container-URL mit SAS + Blob-Pfad zusammensetzen, ohne den Token zu verlieren.
+
+    Die SAS-URL traegt ihre Rechte in der Query. Wer den Pfad naiv anhaengt, schiebt ihn
+    HINTER das Fragezeichen und bekommt 403 — ein Fehler, der nach falschen Rechten aussieht
+    und keiner ist.
+    """
+    kopf, _, query = basis.partition("?")
+    url = f"{kopf.rstrip('/')}/{pfad.lstrip('/')}"
+    return f"{url}?{query}" if query else url
+
+
+def azure_hochladen(basis: str, pfad: str, daten: bytes, typ: str, timeout: int = 900):
+    return requests.put(azure_ziel(basis, pfad), data=daten, timeout=timeout,
+                        headers={"x-ms-blob-type": "BlockBlob", "Content-Type": typ})
+
+
+def azure_groesse(basis: str, pfad: str) -> int | None:
+    try:
+        r = requests.head(azure_ziel(basis, pfad), timeout=30)
+    except requests.RequestException:
+        return None
+    return int(r.headers.get("content-length", -1)) if r.status_code == 200 else None
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--probe", action="store_true", help="nichts hochladen, nur auflisten")
@@ -106,6 +145,7 @@ def main() -> int:
     a = ap.parse_args()
 
     e = env()
+    azure = e.get("DATA_AZURE_URL", "").strip()
     endpunkt = e.get("DATA_S3_ENDPOINT", "").strip()
     bucket = e.get("DATA_S3_BUCKET", "").strip()
     key_id = e.get("DATA_S3_KEY_ID", "").strip()
@@ -117,9 +157,33 @@ def main() -> int:
     gesamt = sum(p.stat().st_size for p in dateien)
     print(f"  {len(dateien):,} Dateien, {gesamt/1048576:.0f} MB in {QUELLE.relative_to(ROOT)}")
 
+    if azure:
+        prefix = e.get("DATA_AZURE_PREFIX", "").strip().strip("/")
+        hoch, gleich, fehler, bytes_hoch = 0, 0, 0, 0
+        for p in dateien:
+            ziel = f"{prefix}/{p.relative_to(QUELLE).as_posix()}" if prefix else p.relative_to(QUELLE).as_posix()
+            groesse = p.stat().st_size
+            if not a.alles and azure_groesse(azure, ziel) == groesse:
+                gleich += 1
+                continue
+            if a.probe:
+                print(f"    → {ziel} ({groesse/1048576:.1f} MB)")
+                hoch += 1
+                continue
+            r = azure_hochladen(azure, ziel, p.read_bytes(), TYPEN[p.suffix])
+            if r.status_code not in (200, 201):
+                print(f"    ✖ {ziel}: HTTP {r.status_code} {r.text[:120]}", file=sys.stderr)
+                fehler += 1
+                continue
+            hoch += 1
+            bytes_hoch += groesse
+        print(f"  Azure · {hoch:,} hochgeladen ({bytes_hoch/1048576:.0f} MB) · {gleich:,} "
+              f"unveraendert · {fehler:,} Fehler")
+        return 1 if fehler else 0
+
     if not all((endpunkt, bucket, key_id, secret)):
-        print("  ✖ Nicht konfiguriert. Erwartet: DATA_S3_ENDPOINT, DATA_S3_BUCKET, "
-              "DATA_S3_KEY_ID, DATA_S3_SECRET.\n"
+        print("  ✖ Nicht konfiguriert. Erwartet entweder DATA_AZURE_URL (SAS) oder "
+              "DATA_S3_ENDPOINT + DATA_S3_BUCKET + DATA_S3_KEY_ID + DATA_S3_SECRET.\n"
               "    Ohne Speicher bleibt web/data lokal — das Frontend laeuft hier weiter,\n"
               "    ein Deployment ohne DATA_BASE_URL findet aber keine Daten.", file=sys.stderr)
         return 2 if not a.probe else 0

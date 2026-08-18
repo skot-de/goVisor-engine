@@ -60,7 +60,9 @@ function trichter() {
   };
   return {
     signale: zaehle("doc-signals.json"),
-    volltext: zaehle("doc-text.json"),
+    // Der Volltext liegt seit dem 2026-08-18 je Vorgang in `web/data/doc-text/`; gezaehlt
+    // wird ueber das Verzeichnis `doc-text-index.json` (200 KB statt 294 MB).
+    volltext: zaehle("doc-text-index.json"),
     analyse: zaehle("doc-analysis.json"),
     struktur: zaehle("doc-struktur.json"),
   };

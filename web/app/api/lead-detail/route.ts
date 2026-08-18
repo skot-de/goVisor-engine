@@ -26,12 +26,27 @@ async function load(branche: string) {
 // Leistungsbeschreibungs-Volltext aus den Vergabeunterlagen (doc-text.json, aus `index-docs` →
 // export_doc_text.py), je notice_id. Einmal geladen, modulweit gecacht.
 type DocText = { chars: number; files: number; text: string; truncated: boolean };
-let docText: Record<string, DocText> | null = null;
-async function loadDocText(): Promise<Record<string, DocText>> {
-  if (docText) return docText;
-  try { const raw = await loadDataFile("doc-text.json"); docText = raw ? JSON.parse(raw) : {}; }
-  catch { docText = {}; }
-  return docText!;
+/** Volltext EINES Vorgangs.
+ *
+ * ⚠ WARUM NICHT MEHR DIE SAMMELDATEI. `doc-text.json` war am 2026-08-18 auf 294 MB
+ * gewachsen (nach dem Formate-Ausbau). Lokal ist das ein Lesevorgang von der Platte, in der
+ * Cloud laedt `loadDataFile` sie ueber das Netz und haelt sie im Speicher — je Instanz, bei
+ * jedem Kaltstart, um EINEN Vorgang zu beantworten. `scripts/export_doc_text.py` schreibt
+ * deshalb zusaetzlich eine Datei je Vorgang, im Schnitt 61 KB.
+ *
+ * Einen Rueckfall auf die Sammeldatei gibt es bewusst NICHT: sie waere dieselbe Menge ein
+ * zweites Mal, jede Nacht neu hochzuladen. Fehlt die Einzeldatei, fehlt der Volltext —
+ * sichtbar, statt still aus einem alten Stand bedient zu werden.
+ */
+async function ladeVolltext(id: string): Promise<DocText | undefined> {
+  const sicher = id.replace(/[^A-Za-z0-9_-]/g, "");
+  if (sicher) {
+    try {
+      const roh = await loadDataFile(`doc-text/${sicher}.json`);
+      if (roh) return JSON.parse(roh) as DocText;
+    } catch { /* Einzeldatei fehlt oder ist kaputt → Sammeldatei versuchen */ }
+  }
+  return undefined;
 }
 
 // Strukturierte Anforderungs-Signale aus den Vergabeunterlagen (doc-signals.json, aus
@@ -90,7 +105,7 @@ export async function GET(req: Request) {
     const tier = await getTier();   // Free → Premium-Analytik im Detail redigieren (server-seitig)
     const detail = redactDetail(all[id] ?? {}, tier) as Record<string, unknown>;
     // LB-Volltext aus den Vergabeunterlagen anhängen, falls für diese notice_id vorhanden.
-    const dt = (await loadDocText())[id];
+    const dt = await ladeVolltext(id);
     if (dt) {
       detail.lbText = dt.text;
       detail.lbFiles = dt.files;

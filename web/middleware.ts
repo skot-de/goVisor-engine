@@ -64,7 +64,7 @@ const PREVIEW_COOKIE = "gv_preview";
  *                               gibt es nach `signUp` noch keine. Ohne diese Ausnahme
  *                               waere Schritt 2 der Registrierung tot.
  */
-const OFFEN = ["/login", "/auth", "/onboarding", "/start", "/t", "/api/wer", "/api/entity-verify", "/api/impressum", "/api/entity-search",
+const OFFEN = ["/login", "/auth", "/api/health", "/onboarding", "/start", "/t", "/api/wer", "/api/entity-verify", "/api/impressum", "/api/entity-search",
                      "/api/entity-group", "/api/outreach-firma"];
 
 function istOffen(pfad: string): boolean {
@@ -155,7 +155,11 @@ export async function middleware(request: NextRequest) {
     // Die Rueckkehr aus einer Anmelde-Mail muss auch durch den Vorhang. Sie zeigt nichts:
     // sie loest einen Einmal-Token ein und leitet weiter. Ohne diese Ausnahme waere jede
     // Passwort-Wiederherstellung live tot, weil die schwarze Seite vor der Route kaeme.
-    if (!unlocked && !vorhangAuf && !pfad.startsWith("/auth/")) return blackPage();
+    // Die Gesundheitsprobe muss auch durch den Vorhang: eine Ueberwachung, die nur die
+    // schwarze Seite sieht, meldet „alles gut", waehrend die Daten fehlen. Sie verraet
+    // nichts ausser Zustand und Alter (s. app/api/health/route.ts).
+    if (!unlocked && !vorhangAuf && !pfad.startsWith("/auth/") && pfad !== "/api/health")
+      return blackPage();
     // Schlüssel gültig → volle App; bei frischem ?preview den Cookie setzen (Folgeseiten ohne Query).
     const { response: res, email } = await updateSession(request);
     if (istIntern(pfad) && !istAdmin(email)) return nichtGefunden();
