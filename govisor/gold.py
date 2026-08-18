@@ -4100,7 +4100,15 @@ def build_region_kpi(cfg: Config, country: str = "DE"):
             c.baubetriebe, c.bau_beschaeftigte, c.bau_umsatz_eur,
             -- Wettbewerbsdichte: wie viele Aufträge kommen auf einen Baubetrieb
             round(n.n_vergeben::DOUBLE / nullif(c.baubetriebe, 0), 2) AS auftraege_je_betrieb,
-            coalesce(c.genehm_wohngeb, 0) + coalesce(c.genehm_nichtwohngeb, 0) AS genehmigungen_gesamt,
+            -- NULL bleibt NULL. `coalesce(a,0)+coalesce(b,0)` machte aus „kein
+            -- Destatis-Treffer" eine gemessene Null: 86 der 408 deutschen Regionen standen
+            -- mit „0 Baugenehmigungen" da — für einen Landkreis wie den Rems-Murr-Kreis
+            -- offensichtlich falsch, aber nirgends als Lücke erkennbar. Es sind exakt die
+            -- Regionen ohne Destatis-Zuordnung (gleichnamige Kreise, s. docs/kpi-region-
+            -- und-kontext.md): dieselben 86, die auch keine Einwohnerzahl haben.
+            CASE WHEN c.genehm_wohngeb IS NULL AND c.genehm_nichtwohngeb IS NULL THEN NULL
+                 ELSE coalesce(c.genehm_wohngeb, 0) + coalesce(c.genehm_nichtwohngeb, 0)
+            END AS genehmigungen_gesamt,
             c.schulden_kernhaushalt_eur, c.bevoelkerung, c.sv_beschaeftigte,
             round(f.investitionen_eur / nullif(c.bevoelkerung, 0)) AS investition_je_kopf_eur,
             round(c.schulden_kernhaushalt_eur / nullif(c.bevoelkerung, 0)) AS schulden_je_kopf_eur,

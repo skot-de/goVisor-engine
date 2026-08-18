@@ -5,6 +5,7 @@ import { applyState, renderProfil } from "@/lib/explorerCore";
 import { useSprache } from "@/lib/i18n";
 import { ContractsEditor } from "./ContractsEditor";
 import { Trefferguete } from "./Trefferguete";
+import { Regionen } from "./Regionen";
 
 /* Strategie (Ticket #10) — unternehmerische Sicht, nicht operative.
    Acht Sektionen in zwei Gruppen, vertikale Abschnittsnavigation (keine zweite Tab-Ebene). */
@@ -119,6 +120,7 @@ export const SEKTIONEN = [
     { key: "pipeline", label: "Pipeline", frage: "Was kommt in 12/24/36 Monaten?" },
     { key: "felder", label: "Felder", frage: "Wo ist Platz, wo ist es eng?" },
     { key: "stellen", label: "Vergabestellen", frage: "Wo lohnt Beziehungsaufbau?" },
+    { key: "region", label: "Region", frage: "Wo steht der Markt geografisch?" },
     { key: "wettbewerb", label: "Wettbewerb", frage: "Wer holt was, wer hält was?" },
   ]},
   { group: "Wir", items: [
@@ -888,6 +890,8 @@ export function StrategieView({
           ? (!data ? <div className="st-head"><div><h4>{t("Fähigkeiten")}</h4><p className="st-frage">{t("Lade Aggregate …")}</p></div></div>
              : !isPro(data) ? <ProGate titel="Fähigkeiten" frage="Was blockiert uns?" was="Geforderte Nachweise, Bürgschafts-Hürde und der formale Rahmen im Feld." />
              : <Faehigkeiten data={data} />)
+          : sektion === "region"
+          ? <Regionen />
           : sektion === "trefferguete"
           ? <Trefferguete aktiveBranche={aktiveBranche} />
           : sektion === "position" || sektion === "profil"

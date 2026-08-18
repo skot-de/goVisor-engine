@@ -75,10 +75,19 @@ Alles, was nach den Vergabestellen-KPIs dazugekommen ist. Quellen: `region_kpi.p
 ## 5 · Region: Vorlaufindikator (B) — **neu**
 | Feld | Frankfurt | Bonn | Median | p90 | Coverage |
 |---|---|---|---|---|---|
-| `genehmigungen_gesamt` | 347 | 158 | **135** | 383 | **422/422** |
+| `genehmigungen_gesamt` | 347 | 158 | **193** | 383 | **322/408** |
 
 > Baugenehmigungen laufen Bau-Ausschreibungen zeitlich voraus → Frühindikator für kommendes
-> Volumen. Einzige vollständig gedeckte Kontext-Kennzahl.
+> Volumen.
+>
+> ⚠️ **Korrektur am 2026-08-18.** Hier stand „einzige vollständig gedeckte Kontext-Kennzahl,
+> 422/422". Das war ein Artefakt: `coalesce(genehm_wohngeb,0)+coalesce(genehm_nichtwohngeb,0)`
+> machte aus „kein Destatis-Treffer" eine gemessene **Null**. Betroffen waren **86 der 408**
+> deutschen Regionen — exakt jene ohne Destatis-Zuordnung (nachgemessen: dieselbe Menge, die
+> auch keine Einwohnerzahl trägt, ohne einen Abweichler). Der Rems-Murr-Kreis stand mit „0
+> Baugenehmigungen" da. `gold.py` gibt jetzt NULL zurück; der Median steigt dadurch von 135
+> auf **193**. Die echte Abdeckung ist **322/408**, dieselbe wie bei allen anderen
+> Destatis-Größen.
 
 ## 6 · Region: Fiskalische Lage (C) — **neu**
 | Feld | Frankfurt | Bonn | Median | p90 | Coverage |
@@ -125,3 +134,26 @@ Alles, was nach den Vergabestellen-KPIs dazugekommen ist. Quellen: `region_kpi.p
   Kontext dort NULL statt falsch. Betrifft ~100 der 422 Regionen.
 - ~~DÖE-Leads fehlen in `region_kpi`~~ — **behoben**: `region_kpi` aggregiert jetzt über den
   Leistungsort, damit sind die DÖE-Leads drin (422 → 436 Regionen).
+
+---
+
+## Wo es im Produkt sichtbar ist (seit 2026-08-18)
+
+Bis dahin war dieses Dokument eine Design-Referenz ohne Oberfläche: `region_kpi.parquet` lag
+gebaut herum und kam nirgends an.
+
+```
+region_kpi.parquet
+  → scripts/export_regionen.py        (im Tageslauf)   → web/data/regionen.json  174 KB
+  → /api/regionen                     (statische Auslieferung, kein Tier-Gate)
+  → Strategie ▸ Markt ▸ „Region"      components/explorer/Regionen.tsx
+```
+
+Übersicht (437 Regionen, sortierbar, Suche + Bundesland-Filter) und je Region eine
+Detailkarte mit Nachfrage, Angebotsseite, Vorlaufindikator und Fiskallage — **jede
+Kontextgröße mit dem Median der Kreise daneben**, weil eine nackte Zahl ohne Vergleich
+keine Aussage ist und die großen Städte Ausreißer sind.
+
+Die drei Warnungen aus diesem Dokument stehen in der Oberfläche selbst, nicht nur hier:
+Zählung über **alle** Fachgebiete (nicht nur das eigene), `auftraege_je_betrieb` als
+Struktur **ohne** Chancen-Deutung, `intensitaet_pct` als Signal **statt** Quote.

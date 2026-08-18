@@ -3,7 +3,9 @@
 Integrationstest gegen die gebaute Gold-Ebene; skippt sauber, wo die Daten fehlen
 (z. B. frische CI ohne Ingest).
 """
+import json
 import os
+import pathlib
 
 import pytest
 
@@ -289,6 +291,31 @@ def test_region_kpi_grain_and_sanity():
         f"SELECT count(*) FROM read_parquet('{G}/region_kpi.parquet') "
         f"WHERE intensitaet_pct < 0 OR volumen_coverage > 100").fetchone()[0]
     assert bad == 0
+
+
+def test_regionen_export_reaches_the_frontend():
+    """Die Regionalansicht haengt an drei Gliedern — jedes einzeln pruefbar.
+
+    Regression, die es zu verhindern gilt: `export_doc_text.py` existierte, war korrekt und
+    stand nur nicht im Tageslauf. Ergebnis waren 14 Volltexte im Frontend statt 4.499, ueber
+    Monate, ohne dass irgendwo etwas rot wurde. Fuer die Regionen wird derselbe Fehler hier
+    unmoeglich gemacht: fehlt der Aufruf im Tageslauf, faellt dieser Test um.
+    """
+    root = pathlib.Path(__file__).resolve().parent.parent
+    tageslauf = (root / "scripts/daily_leads.sh").read_text(encoding="utf-8")
+    assert "export_regionen.py" in tageslauf, "Regionen-Export fehlt im Tageslauf"
+
+    datei = root / "web/data/regionen.json"
+    assert datei.exists(), "regionen.json nie exportiert"
+    d = json.loads(datei.read_text(encoding="utf-8"))
+    assert d["regionen"], "leere Regionsliste"
+
+    # Die Null, die keine ist: `coalesce(...,0)` machte aus fehlenden Destatis-Werten eine
+    # gemessene Null — 86 Landkreise standen mit „0 Baugenehmigungen" da. Wer keinen
+    # amtlichen Kontext hat (keine Einwohnerzahl), darf auch keine Genehmigungszahl haben.
+    falsch = [r["name"] for r in d["regionen"]
+              if r.get("einwohner") is None and r.get("genehmigungen") is not None]
+    assert not falsch, f"Genehmigungen ohne Destatis-Kontext: {falsch[:5]}"
 
 
 def test_cli_gold_builders_exist():

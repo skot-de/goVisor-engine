@@ -421,3 +421,23 @@ img,svg{display:block;max-width:100%}
 .profil-banner-punkt { width: .5rem; height: .5rem; border-radius: 50%; background: currentColor;
                        flex: none; }
 .profil-banner-raus { margin-left: auto; color: inherit; }
+
+/* ── Regionalansicht (Sektion „Region") ──────────────────────────────────────────
+   Sieben Spalten: Name breit, sechs Zahlenspalten schmal und rechtsbündig. Die
+   Kopfzeile ist dieselbe Bauform wie bei Vergabestellen und Feldern — eine dritte
+   Tabellenoptik im selben Bereich wäre nur Unruhe. */
+.st-regionen .st-row{grid-template-columns:minmax(0,2.2fr) 74px 84px 74px 78px 92px 86px}
+.st-hinweis{font-size:var(--t-sm);color:var(--ink-500);margin:var(--s3) 0 0;max-width:70ch;line-height:1.5}
+.reg-filter{display:flex;gap:var(--s3);align-items:center;flex-wrap:wrap;margin:var(--s3) 0}
+.reg-suche,.reg-land{font:inherit;font-size:var(--t-sm);padding:6px 10px;border:1px solid var(--line-strong);
+  border-radius:8px;background:var(--surface);color:var(--ink-900)}
+.reg-suche{min-width:220px}
+.reg-suche:focus,.reg-land:focus{outline:2px solid var(--signal-deep);outline-offset:1px}
+.reg-zahl{font-family:var(--mono);font-size:var(--t-meta);color:var(--ink-400);margin-left:auto}
+@media (max-width:640px){
+  /* Auf schmalen Geräten fallen die drei Kontextspalten weg — sie stehen alle im Detail.
+     Eine siebenspaltige Tabelle auf 375 px ist keine Tabelle mehr, sondern ein Knäuel. */
+  .st-regionen .st-row{grid-template-columns:minmax(0,1.6fr) 62px 70px 66px}
+  .st-regionen .st-row > :nth-child(n+5){display:none}
+  .reg-zahl{margin-left:0}
+}

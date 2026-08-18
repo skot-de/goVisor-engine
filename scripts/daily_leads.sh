@@ -914,6 +914,13 @@ if $PY scripts/export_web_leads.py; then
   # bisher im Tageslauf — /api/strategie las deshalb einen Stand vom 28. Juli.
   $PY scripts/export_strategie.py >/dev/null \
     || echo "  ⚠ Strategie-Aggregate nicht gebaut — die Strategie-Ansicht bleibt auf altem Stand."
+  # Regionalansicht (Strategie-Sektion „Region"): region_kpi.parquet → web/data/regionen.json.
+  # 174 KB, reines Umformen, unter einer Sekunde. Ohne diesen Schritt bliebe die Ansicht auf
+  # dem Stand des Tages stehen, an dem sie gebaut wurde — und niemand saehe es, denn eine
+  # alte Regionsdatei sieht genauso aus wie eine frische. Genau so verlor `export_doc_text`
+  # monatelang unbemerkt den Anschluss.
+  $PY scripts/export_regionen.py \
+    || echo "  ⚠ Regionen-Export fehlgeschlagen — die Regionalansicht bleibt auf altem Stand."
   echo "  Frontend-Daten ok."
 else
   echo "  ✖ Frontend-Export fehlgeschlagen — die App zeigt weiter den alten Stand."
