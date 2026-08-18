@@ -44,6 +44,46 @@ type Lauf = {
   logZeilen: string[];
 };
 
+/** Der Dokumenten-Trichter für die Live-Ansicht.
+ *
+ * Liest die FERTIGEN Exporte, nicht die Rohdaten: `web/data/doc-*.json` ist genau das,
+ * was beim Nutzer ankommt. Wer stattdessen Parquet zählte, sähe Zahlen, die im Frontend
+ * nie erscheinen — und exakt diese Lücke soll hier ja sichtbar werden. Genau so blieb
+ * monatelang unbemerkt, dass 4.499 Volltexte bereitlagen und 14 ankamen.
+ */
+function trichter() {
+  const zaehle = (name: string): number | null => {
+    try {
+      const roh = fs.readFileSync(path.join(WURZEL, "web", "data", name), "utf-8");
+      return Object.keys(JSON.parse(roh)).length;
+    } catch { return null; }
+  };
+  return {
+    signale: zaehle("doc-signals.json"),
+    volltext: zaehle("doc-text.json"),
+    analyse: zaehle("doc-analysis.json"),
+    struktur: zaehle("doc-struktur.json"),
+  };
+}
+
+/** Zustand des Dauer-Arbeiters: läuft er, und was sagt er zuletzt? */
+function arbeiterStand() {
+  let laeuft = false;
+  let letzte: string[] = [];
+  try {
+    const sperre = path.join(WURZEL, "data", ".dokumente_arbeiter.lock");
+    const pid = Number(fs.readFileSync(sperre, "utf-8").trim());
+    // `process.kill(pid, 0)` wirft, wenn es den Prozess nicht gibt — das ist die
+    // Prüfung, nicht das Töten.
+    if (pid) { process.kill(pid, 0); laeuft = true; }
+  } catch { laeuft = false; }
+  try {
+    letzte = fs.readFileSync(path.join(LOGS, "dokumente-arbeiter.log"), "utf-8")
+      .trim().split("\n").slice(-6);
+  } catch { letzte = []; }
+  return { laeuft, letzte };
+}
+
 /** Zählt Archive auf der Platte — ohne sie zu öffnen. */
 function zaehleArchive(wurzel: string): number {
   let n = 0;
@@ -326,6 +366,13 @@ export async function GET() {
       // Was der Index NICHT verwerten konnte. Steht getrennt, weil es kein Rueckstand ist:
       // diese Archive sind bearbeitet, sie haben nur keinen Text ergeben.
       abgeschossen: (status.speicher ?? 0) + (status.zeitlimit ?? 0),
+      // ── DER TRICHTER ──────────────────────────────────────────────────────────────
+      // „Archive auf der Platte" allein sagt nicht, wo es klemmt. Erst die Stufen zeigen,
+      // ob das Abholen hinterherhinkt oder das Auswerten — gemessen am 2026-08-18 waren
+      // es BEIDE, aber an ganz verschiedenen Stellen: 34 % geholt, nur 1,5 % analysiert.
+      trichter: trichter(),
+      // Läuft der Dauer-Arbeiter, und was hat er zuletzt gesagt?
+      arbeiter: arbeiterStand(),
     },
   });
 }

@@ -58,6 +58,12 @@ type Antwort = {
     aufPlatte: number; indiziert: number | null; rueckstand: number | null;
     stand: string | null; zeichen: number;
     status: Record<string, number>; abgeschossen: number;
+    /* Was tatsächlich im Frontend liegt — nicht, was auf der Platte liegt.
+       null heisst „Datei fehlt", nicht „null Stück". Der Unterschied ist der
+       ganze Zweck dieser Anzeige. */
+    trichter: { signale: number | null; volltext: number | null;
+                analyse: number | null; struktur: number | null };
+    arbeiter: { laeuft: boolean; letzte: string[] };
   };
 };
 
@@ -204,6 +210,41 @@ export default function LaufPage() {
                 {/* Getrennt ausgewiesen, weil es KEIN Rueckstand ist: diese Archive sind
                     bearbeitet, sie haben nur keinen Text ergeben. Sie in den Rueckstand zu
                     zaehlen hiesse, eine Zahl zu zeigen, die nie auf null geht. */}
+                {/* ── WAS BEIM NUTZER ANKOMMT ──────────────────────────────────
+                    „Archive auf der Platte" ist die halbe Wahrheit: entscheidend ist,
+                    wie viel davon im Frontend landet. Am 2026-08-18 lagen 4.499
+                    Volltexte bereit und 14 kamen an, weil ein Export-Aufruf im Tageslauf
+                    fehlte. Nichts war rot — die Datei existierte ja, sie war nur uralt.
+                    Diese vier Zahlen machen genau das sichtbar. */}
+                <div className="lauf-trichter">
+                  <div className="lauf-trichter-h">Im Frontend angekommen</div>
+                  <dl>
+                    <div><dt>Signale</dt>
+                      <dd>{d.dokumente.trichter.signale?.toLocaleString("de-DE") ?? "?"}</dd></div>
+                    <div><dt>Leistungsverzeichnis</dt>
+                      <dd>{d.dokumente.trichter.struktur?.toLocaleString("de-DE") ?? "?"}</dd></div>
+                    <div><dt>Volltext</dt>
+                      <dd>{d.dokumente.trichter.volltext?.toLocaleString("de-DE") ?? "?"}</dd></div>
+                    <div><dt>LLM-Analyse</dt>
+                      <dd>{d.dokumente.trichter.analyse?.toLocaleString("de-DE") ?? "?"}</dd></div>
+                  </dl>
+                </div>
+
+                {/* Der Dauer-Arbeiter. Er schläft, solange der Tageslauf läuft — das ist
+                    kein Fehler, sondern die Kollisionssperre. Ohne diese Zeile sähe es
+                    aus, als täte er nichts. */}
+                <div className="lauf-arbeiter">
+                  <div className="lauf-trichter-h">
+                    Dokumenten-Arbeiter{" "}
+                    <span className={d.dokumente.arbeiter.laeuft ? "ist-an" : "ist-aus"}>
+                      {d.dokumente.arbeiter.laeuft ? "läuft" : "gestoppt"}
+                    </span>
+                  </div>
+                  {d.dokumente.arbeiter.letzte.length ? (
+                    <pre className="lauf-log">{d.dokumente.arbeiter.letzte.join("\n")}</pre>
+                  ) : <p className="lauf-hinweis">Noch keine Meldung.</p>}
+                </div>
+
                 {d.dokumente.abgeschossen > 0 ? (
                   <p className="lauf-hinweis">
                     {d.dokumente.abgeschossen} Archive an der Speicher- oder Zeitgrenze

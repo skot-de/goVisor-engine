@@ -134,3 +134,28 @@
 .sl-mehr{margin-top:10px;background:none;border:0;padding:4px 0;cursor:pointer;
          font-size:12px;color:var(--signal);font-weight:600}
 .sl-mehr:hover{text-decoration:underline}
+
+/* Der Dokumenten-Trichter: was beim NUTZER ankommt, nicht was auf der Platte liegt.
+   Die Unterscheidung ist der ganze Punkt — am 2026-08-18 lagen 4.499 Volltexte bereit
+   und 14 kamen an, ohne dass irgendwo etwas rot wurde. */
+.lauf-trichter, .lauf-arbeiter { margin-top: var(--s5); }
+.lauf-trichter-h {
+  font-size: var(--t-sm); font-weight: 600; margin-bottom: var(--s3);
+  display: flex; align-items: baseline; gap: var(--s2);
+}
+.lauf-trichter dl {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: var(--s3); margin: 0;
+}
+.lauf-trichter dt { font-size: var(--t-meta); color: var(--ink-500); }
+.lauf-trichter dd {
+  margin: 2px 0 0; font-size: 19px; font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+.lauf-arbeiter .ist-an  { color: var(--signal-deep); font-weight: 600; }
+.lauf-arbeiter .ist-aus { color: var(--risk); font-weight: 600; }
+.lauf-log {
+  margin: 0; padding: var(--s3); background: var(--surface-3); border-radius: var(--r);
+  font-family: var(--mono); font-size: var(--t-meta); line-height: 1.6;
+  white-space: pre-wrap; overflow-x: auto;
+}
