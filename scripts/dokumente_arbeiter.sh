@@ -24,10 +24,10 @@
 # Endlosschleife läuft und nicht als einmaliger Lauf: er soll die Lücken zwischen den
 # Tagesläufen füllen, nicht mit ihnen kämpfen.
 #
-# DREI STUFEN, billig zuerst:
+# ZWEI STUFEN, billig zuerst:
 #   1. index-docs    Text aus vorhandenen ZIPs   (lokal, kostenlos)
 #   2. Abrufer       fehlende ZIPs holen         (Netz, kostenlos, portalschonend)
-#   3. analyze_docs  LLM-Analyse                 (kostet Geld)
+#   (3. analyze_docs — ausgezogen nach scripts/analyse_arbeiter.sh, s. unten)
 # So entsteht früh Wert: Stufe 1 hebt die Volltext-Abdeckung, ohne einen Cent zu kosten.
 #
 # Aufruf:  scripts/dokumente_arbeiter.sh            (Vordergrund, zum Zusehen)
@@ -35,7 +35,11 @@
 set -uo pipefail
 cd "$(dirname "$0")/.."
 ROOT="$(pwd)"
-PY=python3
+# ⚠ VOLLER PFAD, s. analyse_arbeiter.sh: unter launchd ist `python3` das System-Python
+# ohne duckdb. Dass es hier bisher lief, lag am geerbten PATH der Terminal-Sitzung, aus der
+# geladen wurde — nach einem Neustart der Maschine waere es stumm gescheitert.
+PY=/Library/Frameworks/Python.framework/Versions/3.14/bin/python3
+[ -x "$PY" ] || PY=python3
 LOCK="$ROOT/data/.daily_leads.lock"
 EIGEN="$ROOT/data/.dokumente_arbeiter.lock"
 LOG="$ROOT/data/logs/dokumente-arbeiter.log"
@@ -99,22 +103,17 @@ while true; do
 
   [ -e "$LOCK" ] && continue
 
-  # ── Stufe 3: LLM-Analyse, neueste zuerst ───────────────────────────────────────
-  # LIMIT je Runde, damit zwischen den Runden der Lock wieder geprüft wird und ein
-  # Abbruch nur die angefangene Runde kostet. `analyze_docs` ist idempotent: was schon
-  # in doc-analysis.json steht, wird übersprungen.
-  sag "Stufe 3: LLM-Analyse (neueste zuerst)"
-  # RUNDENGROESSE UND PARALLELITAET, am 2026-08-18 angehoben.
+  # ── Stufe 3 IST AUSGEZOGEN ──────────────────────────────────────────────────────
+  # Sie liegt seit dem 2026-08-18 in `scripts/analyse_arbeiter.sh` mit eigenem launchd-Dienst.
   #
-  # Vorher: 40 Vorgaenge nacheinander, dann zehn Minuten Pause — rund 200 am Tag. Bei 4.394
-  # Vorgaengen mit Volltext waeren das drei Wochen, und gemessen hatten 2 % der offenen Leads
-  # eine Analyse. Sven dazu: „mach so viel wie moeglich parallel."
+  # Der Grund ist gemessen: Stufe 2 fragt fuenf Portale ab, je bis zu einer Stunde und
+  # bewusst langsam. Solange sie laeuft, stand die Analyse still — um 20:15 waren es
+  # 9 Vorgaenge in 34 Minuten, obwohl sie im Alleinlauf rund 200 in der Stunde schafft.
+  # Die schnelle Aufgabe hinter der langsamen anzustellen war die eigentliche Bremse,
+  # nicht die Rundengroesse und nicht die Parallelitaet.
   #
-  # Der Lauf ist fast nur Warten auf das Modell, also kostet Parallelitaet kaum Rechenzeit.
-  # Die Grenze setzt die Gegenstelle; `govisor/llm.py` faengt 429 mit Backoff und
-  # Key-Rotation ab. LIMIT bleibt endlich, damit zwischen den Runden der Tageslauf-Lock
-  # wieder geprueft wird — eine Runde ist der Preis eines Abbruchs, nicht der ganze Lauf.
-  LIMIT=300 PARALLEL=10 $PY scripts/analyze_docs.py >>"$LOG" 2>&1 && sag "  Runde fertig" || sag "  ⚠ Analyse-Runde abgebrochen"
+  # Beide Arbeiter weichen weiterhin dem Tageslauf aus und pruefen sich gegenseitig ueber
+  # `pgrep`; sie fassen verschiedene Dateien an (hier Archive, dort doc-analysis.json).
 
   # Ausgaben sichtbar machen, ohne ins Anbieter-Dashboard zu müssen.
   $PY scripts/dokumente_stand.py >>"$LOG" 2>&1 || true
