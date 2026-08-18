@@ -294,6 +294,21 @@ def test_region_kpi_grain_and_sanity():
     assert bad == 0
 
 
+def test_gold_liest_die_zusammenfuehrungskarte():
+    """`entity_merge_map.parquet` muss im Gold-Bau ankommen, sonst war die Prüfkette umsonst.
+
+    Die Karte ist das Ergebnis von vier Instanzen (zwei Modelle, Datengegenprobe, Impressum)
+    über 6.971 Kandidatenpaare. Wird die Zeile in `gold.py` beim Aufräumen entfernt, baut
+    Gold weiter fehlerfrei — nur eben ohne die geprüften Zusammenführungen, und niemandem
+    fällt etwas auf. Genau diese Sorte stiller Rückschritt ist hier schon mehrfach passiert.
+    """
+    wurzel = pathlib.Path(__file__).resolve().parent.parent
+    gold = (wurzel / "govisor/gold.py").read_text(encoding="utf-8")
+    assert "entity_merge_map" in gold, "Gold liest die Zusammenführungskarte nicht mehr"
+    # Sie darf NICHT überschreiben, was die Handregel selbst entschieden hat.
+    assert "not in merge_map" in gold, "die Karte überschreibt Regel-Entscheidungen"
+
+
 def test_qualitaetsbericht_liefert_was_die_anzeige_erwartet():
     """Die Kennzahlen, die `/intern/lauf` zeigt, muessen im Bericht auch stehen.
 

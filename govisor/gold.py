@@ -1248,6 +1248,32 @@ def build_entities(cfg: Config, country: str = "DE", hr_index: dict | None = Non
     # Firmen können Namen teilen), darum landet Unbelegtes als Kandidat in der
     # Review-Datei statt im Bestand. Konservativ: 0 Fehl-Merges, Rest sichtbar.
     merge_map, flagged = _consolidate_by_national_id(entity_of, plz_of)
+
+    # ── GEPRUEFTE ZUSAMMENFUEHRUNGEN AUS DER SCHIEDSKARTE ────────────────────────────────
+    #
+    # Die Handregeln oben entscheiden nur, wo der Beleg eindeutig ist; alles andere landet in
+    # `entity_merge_candidates`. Am 2026-08-18 waren das 6.971 Paare, die seit Monaten lagen.
+    # Sie sind seitdem durch vier Instanzen gegangen — zwei Sprachmodelle, die uebereinstimmen
+    # mussten, eine Datengegenprobe und das Impressum als quellenfremder Beleg — und was
+    # dabei uebrig blieb, steht in `entity_merge_map.parquet` (10.018 Entitaeten, 3.967 Ziele).
+    #
+    # ⚠ DIE DATEI IST OPTIONAL UND HAT VORRANG. Optional, damit ein frisches Gold ohne sie
+    # baut wie bisher. Vorrang, weil sie mehr weiss als die Regel: die Regel hat diese Faelle
+    # ausdruecklich NICHT entschieden. Wer die Zusammenfuehrung rueckgaengig machen will,
+    # loescht die Datei und laesst Gold neu laufen — deshalb wird hier nichts ueberschrieben,
+    # was die Regel selbst entschieden hat.
+    _karte = cfg.gold_dir / country / "entity_merge_map.parquet"
+    if _karte.exists():
+        import duckdb as _dd
+        _uebernommen = 0
+        for _alt, _neu in _dd.connect().execute(
+                f"SELECT entity_id, ziel_entity_id FROM '{_karte.as_posix()}'").fetchall():
+            # Nur was es hier auch gibt, und nur was die Regel offengelassen hat.
+            if _alt in entity_of and _neu in entity_of and _alt not in merge_map:
+                merge_map[_alt] = _neu
+                _uebernommen += 1
+        print(f"gold {country}: {_uebernommen:,} Zusammenfuehrungen aus entity_merge_map "
+              f"uebernommen (geprueft, s. scripts/entity_adjudicate.py)")
     # Leitweg-Anker: öffentliche Vergabestellen über die bundesweit eindeutige Leitweg-ID
     # verschmelzen — der autoritative Schlüssel, den resolve_supplier für PUBLIC verwirft.
     # Fängt gerade die NICHT-kommunalen Stellen (Land/Bund/Zweckverbände) + Namens-Fragmente
