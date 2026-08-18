@@ -839,6 +839,20 @@ else
   echo "  ⚠ Signal-Extraktion übersprungen."
 fi
 
+# ⚠ DIESER SCHRITT FEHLTE — und zwar lautlos, seit es ihn gibt.
+#
+# `index-docs` schreibt den ausgelesenen Volltext nach data/docs/DE/doc_text.parquet.
+# Von dort holt ihn `export_doc_text.py` ins Frontend. Nur stand der Aufruf nie im
+# Tageslauf: exportiert wurden allein die SIGNALE. Gemessen am 2026-08-18 lagen
+# 4.499 Vorgaenge mit Text bereit (3.986 davon zu offenen Leads) und im Frontend
+# standen 14 — das Ergebnis eines Handlaufs von irgendwann.
+#
+# Aufgefallen ist es nur, weil jemand die Abdeckung nachgezaehlt hat: nichts war rot,
+# kein Schritt schlug fehl, die Datei existierte. Sie war bloss uralt. Genau dagegen
+# hilft es, den Export NEBEN den Erzeuger zu stellen statt ihn einmal von Hand zu fahren.
+step "Unterlagen-Volltext exportieren (doc-text.json)"
+$PY scripts/export_doc_text.py || echo "  ⚠ doc-text.json nicht geschrieben — Lead-Detail zeigt weiter den alten Textstand."
+
 # Struktur AUS den Unterlagen: Leistungsverzeichnis (GAEB + Preisblatt) und Kriterienmatrix.
 # Anders als die Signale oben ist das keine Ableitung aus Fließtext, sondern die Tabelle
 # selbst — „wie viel wovon" und „woran werde ich gemessen". Läuft über den vorhandenen
@@ -906,7 +920,23 @@ else
 fi
 
 # 4) Schema selbstheilend migrieren (neue Parquet-Spalten → gov_*-Tabellen) via psql, dann pushen.
-if [ -n "${SUPABASE_URL:-}" ] && [ -n "${SUPABASE_SERVICE_KEY:-}" ]; then
+#
+# ⚠ DER gov_*-PUSH IST STANDARDMAESSIG AUS. Am 2026-08-16 meldete Supabase das Ueberschreiten
+# des Free-Limits: 787 MB bei 500 MB erlaubt. Gemessen waren 775 MB davon (98,5 %) die acht
+# `gov_*`-Tabellen — und die liest NIEMAND. Das Frontend holt seine Leads aus
+# `web/data/leads-<branche>.json` (aus lokalem Parquet gebaut); aus Supabase kommen nur die
+# `user_*`-Tabellen, zusammen 568 kB. Geprueft: kein `.from("gov_...")` im Web-Code, keine
+# View, kein Fremdschluessel, keine Funktion, die sie referenziert.
+#
+# Die Datenkette darueber laeuft unveraendert weiter — es entsteht also KEIN Rueckstand.
+# Der Bestand bleibt lokal aktuell; beim Go-live ist der Weg zurueck ein Befehl:
+#     GOVISOR_SUPABASE_GOV_PUSH=1 scripts/daily_leads.sh
+#     # oder direkt: python3 scripts/export_supabase.py --table all --prune
+#
+# ⚠ NICHT mit-abschalten: `gap_effects.py` weiter unten schreibt `user_gap_effects` — eine
+# ECHTE Nutzertabelle, die das Frontend liest. Sie haengt an SUPABASE_URL, nicht am Push.
+GOV_PUSH="${GOVISOR_SUPABASE_GOV_PUSH:-0}"
+if [ -n "${SUPABASE_URL:-}" ] && [ -n "${SUPABASE_SERVICE_KEY:-}" ] && [ "$GOV_PUSH" = "1" ]; then
   step "Supabase-Schema-Migration (DDL aus aktuellem Parquet, idempotent via psql)"
   $PY scripts/export_supabase.py --table all --ddl-only
   REF="$(echo "$SUPABASE_URL" | sed -E 's#https?://([a-z0-9]+)\.supabase\.co.*#\1#')"
@@ -954,8 +984,15 @@ if [ -n "${SUPABASE_URL:-}" ] && [ -n "${SUPABASE_SERVICE_KEY:-}" ]; then
     echo "  ✖ Supabase-Push fehlgeschlagen — lokale Leads und Frontend-Daten sind aktuell, nur der Upload nicht."
     SUPA_FEHLER=1
   fi
+fi
 
-  # 5) Lücken-Wirkung je Nutzer vorberechnen (#11 §7) — nicht fatal, Frontend hat On-Demand-Fallback.
+# 5) Lücken-Wirkung je Nutzer vorberechnen (#11 §7) — nicht fatal, Frontend hat On-Demand-Fallback.
+# Laeuft UNABHAENGIG vom gov_*-Push: `user_gap_effects` ist eine Nutzertabelle, die das
+# Frontend wirklich liest. Sie darf nicht mit dem Spiegel-Push zusammen abgeschaltet werden.
+if [ -n "${SUPABASE_URL:-}" ] && [ -n "${SUPABASE_SERVICE_KEY:-}" ]; then
+  if [ "$GOV_PUSH" != "1" ]; then
+    echo "  · gov_*-Push übersprungen (GOVISOR_SUPABASE_GOV_PUSH≠1) — Supabase hält nur Nutzerdaten."
+  fi
   step "gap_effects vorberechnen (#11 §7)"
   $PY scripts/gap_effects.py || echo "  ⚠ gap_effects übersprungen (nicht kritisch)."
 else

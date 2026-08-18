@@ -199,10 +199,27 @@ def main() -> int:
         print(f"FEHLT: {SRC} — erst `index-docs` laufen lassen.")
         return 1
     con = duckdb.connect()
+    # REIHENFOLGE NACH AKTUALITAET, nicht nach notice_id.
+    #
+    # Sven am 2026-08-18: „fang mit den neuesten ausschreibungen an und arbeite dich zu den
+    # alten durch. bis ich in die erste demo gehe, sind die jetzt aktuellen ausschreibungen
+    # dann schon alt. daher lass die alten, alt sein, die werten wir fuer uebungs- und
+    # nachnutzungszwecke aus."
+    #
+    # `notice_id` ist KEINE Zeitachse: „99_2026" sortiert vor „450024_2026", obwohl es
+    # spaeter erschien. Sortiert wird deshalb ueber den Lead: offene Ausschreibungen zuerst,
+    # darin die mit der spaetesten Frist — das sind die, auf die man noch bieten kann und
+    # die zur Demo noch aktuell sind. Was kein Lead mehr ist, kommt zuletzt.
+    LE = (ROOT / "data/gold/DE/lead_export.parquet").as_posix()
     rows = con.execute(
-        f"""SELECT notice_id, file, text FROM read_parquet('{SRC.as_posix()}')
-            WHERE status='ok' AND text IS NOT NULL AND length(text) > 120
-            ORDER BY notice_id"""
+        f"""WITH t AS (SELECT notice_id, file, text
+                       FROM read_parquet('{SRC.as_posix()}')
+                       WHERE status='ok' AND text IS NOT NULL AND length(text) > 120)
+            SELECT t.notice_id, t.file, t.text
+            FROM t LEFT JOIN read_parquet('{LE}') l ON l.lead_id = t.notice_id
+            ORDER BY (l.phase = 'open') DESC NULLS LAST,
+                     l.deadline_date DESC NULLS LAST,
+                     t.notice_id DESC"""
     ).fetchall()
     per_notice = defaultdict(list)
     for nid, file, text in rows:

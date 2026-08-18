@@ -40,6 +40,9 @@ def days_until(d):
         return None
 
 CAP_MONAT = 120     # Auslauf-Leads je Grundraum UND Auslauf-Monat (24 Monate → ~2.900).
+# ⚠ CAP gilt seit 2026-08-18 NUR NOCH fuer nicht-offene Phasen, und dort greift ohnehin
+# CAP_MONAT. Die Konstante bleibt stehen, weil sie an anderer Stelle gelesen wird — wer sie
+# wieder auf offene Ausschreibungen anwendet, schneidet sie erneut bei sechs Tagen Frist ab.
 CAP = 2500          # Leads je Grundraum UND Phase (Quote statt gemeinsamer Rangliste).
                     # 3 Phasen × 2.500 ≈ derselbe Umfang wie vorher 6.000 gesamt,
                     # aber jede Phase kommt vor. Client-seitiges Filtern deckelt
@@ -592,8 +595,27 @@ def export_branche(key):
         )
         -- CAP je Phase — Nicht-DE-Leads (CH/AT, der DACH-Differenzierer, wenige) IMMER
         -- behalten, sonst verdrängt der große DE-Bestand sie aus dem Umkreis-losen Blick.
+        -- OFFENE AUSSCHREIBUNGEN SIND UNGEDECKELT.
+        --
+        -- Sven am 2026-08-18: „ich verstehe nicht, warum wir nicht alle ausschreibungen
+        -- anzeigen können?" Gemessen war der Deckel im Bau brutal: von 8.447 offenen kamen
+        -- 2.500 durch, und weil nach naechster Frist sortiert wird, endete die Liste bei
+        -- einer Frist von SECHS TAGEN. Wer Kapazitaet fuer Oktober plant, sah nichts.
+        --
+        -- Und sie waren nicht ausgeblendet, sondern WEG: die App liest ausschliesslich
+        -- diese Dateien (lib/dataSource.ts → readFile), keine Route greift auf Gold oder
+        -- Supabase zu. Kein Filter holt zurueck, was hier fehlt.
+        --
+        -- Warum es tragbar ist: 27,5 MB roh sind gemessen 3,5 MB ueber die Leitung
+        -- (gzip 13 %). Der naheliegende Ausweg „schlanke Liste, Details auf Abruf" half
+        -- NICHT — gemessen sind nur 1 % der Felder detail-only, alles andere liest der
+        -- Explorer wirklich (Filter, Suche, Empfehlung). Es gibt kein Fett.
+        --
+        -- Der Auslauf-Radar bleibt monatsquotiert: das sind endende VERTRAEGE, keine
+        -- Ausschreibungen, auf die man bieten kann. Ungedeckelt waeren es 64 MB.
         SELECT * EXCLUDE(rn) FROM ranked
-        WHERE rn <= (CASE WHEN phase = 'expiring' THEN {CAP_MONAT} ELSE {CAP} END)
+        WHERE phase != 'expiring'
+              OR rn <= {CAP_MONAT}
               OR coalesce(country, 'DE') <> 'DE'
         ORDER BY (phase = 'open') DESC,
                  coalesce(days_to_deadline, days_to_expiry, 99999) ASC, lead_id""").df().to_dict("records")
