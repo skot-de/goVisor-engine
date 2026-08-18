@@ -1,25 +1,62 @@
-# web/data aus Git holen — Migrations-Notiz
+# web/data liegt nicht in Git — wie die Daten zum Frontend kommen
 
-**Problem:** `web/data/*.json` (~88 MB: leads/detail/branchen/markt/plz-geo) liegt in Git und
-wächst mit jedem Export (~monatlich) → Repo-History bläht auf.
+**Entschieden am 2026-08-18.** Vorher stand hier eine Migrations-Notiz („wenn du so weit
+bist"). Jetzt ist der Schnitt gemacht, und das ist der Betriebszustand.
 
-**Vorbereitet (Code steht):** Alle Daten-Routes (`/api/{leads,branchen,plz-geo,markt,lead-detail}`)
-laden über `web/lib/dataSource.ts::loadDataFile()`:
-- **`DATA_BASE_URL` gesetzt** → JSONs von dort (Object-Storage: Vercel Blob, Supabase Storage,
-  S3/R2, beliebige CDN-Basis-URL).
-- **nicht gesetzt** → lokales `web/data/` (heutiges Verhalten, Fallback).
+## Was den Ausschlag gab
 
-## Umzug in 3 Schritten (wenn du so weit bist)
-1. **Storage wählen + hochladen** — die 6 `leads-*.json`, 6 `detail-*.json`, `branchen.json`,
-   `markt.json`, `plz-geo.json` in einen öffentlich lesbaren Bucket/Store legen (gleiche Dateinamen).
-   - **Vercel Blob** (am einfachsten für dieses Setup): `npx vercel blob put web/data/*.json`, Basis-URL notieren.
-   - **Supabase Storage / S3 / R2**: Bucket anlegen, hochladen, Basis-URL notieren.
-2. **Env setzen:** in Vercel `DATA_BASE_URL=https://<dein-store>/…/` (die Basis, unter der die Dateien liegen).
-3. **web/data gitignoren:** `echo "web/data/*.json" >> web/.gitignore`, aus dem Index nehmen
-   (`git rm --cached web/data/*.json`), committen. Ab dann wächst Git nicht mehr.
+Nicht die Gesamtgrösse, sondern eine harte Grenze: **GitHub weist jeden Push mit einer Datei
+über 100 MB ab.** `web/data/doc-text.json` wuchs nach dem Formate-Ausbau von 1 MB auf
+**294 MB**. Wäre sie versioniert, liesse sich der Branch ab diesem Commit nicht mehr pushen,
+bis die Datei aus der Historie entfernt ist.
 
-Der Export-Lauf (`scripts/export_web_leads.py`) schreibt weiter nach `web/data/` (lokal); danach
-lädst du die JSONs zum Store hoch (ein kleines Upload-Skript kann das automatisieren).
+Dazu die Mengenrechnung, die schon vorher gegen Git sprach: der Tageslauf schreibt jede Nacht
+rund **150 MB** neu (`leads-bau.json` 42 MB, `suppliers.json` 38 MB, `detail-bau.json` 30 MB).
+Versioniert heisst das 150 MB pro Nacht dauerhaft in der Historie, und Historie schrumpft
+nicht. Dass es nicht früher auffiel, lag daran, dass 79 Commits nicht gepusht waren.
 
-**Alternative (perspektivisch):** Statt statischer JSONs die kuratierten Leads in **Supabase** (Tabelle)
-und die Routes per Query — dann live-aktualisierbar, aber braucht größeren Supabase-Plan (s. CLAUDE.md).
+## Wie es jetzt läuft
+
+```
+scripts/daily_leads.sh
+  → export_web_leads / export_suppliers / export_strategie / export_regionen …   web/data/
+  → scripts/upload_web_data.py                     S3-kompatibler Speicher
+  → Frontend: web/lib/dataSource.ts liest DATA_BASE_URL
+       ist sie NICHT gesetzt → lokale Platte (Entwicklung, dieser Rechner)
+```
+
+Der Upload lädt **nur Geändertes** (HEAD-Abfrage auf die Grösse), spricht R2, S3, B2 und
+MinIO, und braucht **keine zusätzliche Abhängigkeit**: die SigV4-Signatur steht in 40 Zeilen
+Standardbibliothek im Skript. Ein Test prüft sie gegen den dokumentierten AWS-Testvektor —
+ein Signaturfehler sähe sonst wie „HTTP 403" aus, also wie falsche Zugangsdaten, und man
+sucht an der falschen Stelle.
+
+## Was einzurichten ist (einmalig)
+
+1. **Bucket anlegen.** Empfehlung Cloudflare R2: 10 GB frei, **keine Egress-Kosten**, und
+   S3-kompatibel. Alternativen: S3, Backblaze B2, Supabase Storage. ⚠️ Supabase Storage hat
+   im Free-Tarif 1 GB **und** eine Grenze je Datei, an der `doc-text.json` (294 MB) scheitert.
+2. **Zugangsdaten** in `web/.env.local` (lokal) bzw. in den Runner:
+   ```
+   DATA_S3_ENDPOINT=https://<konto>.r2.cloudflarestorage.com
+   DATA_S3_BUCKET=govisor-data
+   DATA_S3_KEY_ID=…
+   DATA_S3_SECRET=…
+   DATA_S3_PREFIX=web-data          # optional
+   ```
+3. **Einmal vollständig hochladen:** `scripts/upload_web_data.py --alles` (624 MB, 2.022 Dateien).
+4. **`DATA_BASE_URL`** in Vercel setzen: die öffentlich lesbare Basis-URL, unter der die
+   Dateien liegen (bei R2 die Bucket-Domain plus Prefix).
+
+## ⚠️ Solange Schritt 1 bis 4 nicht erledigt sind
+
+Lokal ändert sich nichts, die Platte bleibt die Quelle. **Das Deployment aber findet keine
+Daten**: `web/data` ist nicht mehr im Repo, und ohne `DATA_BASE_URL` gibt es keinen Ersatz.
+Die Datenrouten antworten dann ehrlich leer (503 mit Begründung), nicht mit falschen Zahlen.
+Für govisor.eu ist das derzeit verkraftbar, weil die Seite hinter der Coming-Soon-Sperre liegt.
+
+## Ein frisches Klon
+
+`web/data` ist leer. Entweder `DATA_BASE_URL` setzen oder die Exporte einmal laufen lassen.
+Der Rohbestand dahinter (`data/`, 17 GB, plus 125 GB Dokumente) liegt ohnehin nur auf der
+externen Platte dieser Maschine — s. `docs/entscheidung-dokumente.md`.

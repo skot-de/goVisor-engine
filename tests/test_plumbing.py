@@ -293,6 +293,40 @@ def test_region_kpi_grain_and_sanity():
     assert bad == 0
 
 
+def test_s3_signatur_stimmt_mit_dem_aws_vektor():
+    """Die SigV4-Ableitung in `upload_web_data.py` gegen den dokumentierten AWS-Testvektor.
+
+    Warum ein Test dafuer: die Signatur ist von Hand gebaut (statt boto3, das botocore
+    mitzieht). Ein Fehler darin sieht nicht wie ein Fehler aus, sondern wie „HTTP 403" —
+    also wie falsche Zugangsdaten. Dann sucht man an der falschen Stelle. Der Vektor stammt
+    aus der AWS-Dokumentation zur Signature Version 4 und ist eine feste Groesse.
+    """
+    import importlib.util
+
+    ort = pathlib.Path(__file__).resolve().parent.parent / "scripts/upload_web_data.py"
+    spec = importlib.util.spec_from_file_location("upl", ort)
+    m = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(m)
+
+    k = m._signieren(b"AWS4wJalrXUtnFEMI/K7MDENG+bPxRfiCYEXAMPLEKEY", "20120215")
+    for teil in ("us-east-1", "iam", "aws4_request"):
+        k = m._signieren(k, teil)
+    assert k.hex() == "f4780e2d9f65fa895f9c67b32ce1baf0b0d8a43505a000a1a9e090d414db404d"
+
+
+def test_web_data_liegt_nicht_mehr_in_git():
+    """`web/data` darf nicht zurueck in die Versionierung rutschen.
+
+    GitHub weist jeden Push mit einer Datei ueber 100 MB ab. `web/data/doc-text.json` lag am
+    2026-08-18 bei 294 MB; waere sie versioniert, waere der Branch unpushbar. Dieser Test
+    faellt um, sobald jemand die `.gitignore`-Zeile entfernt — auch wenn die Datei in dem
+    Moment gerade klein ist.
+    """
+    wurzel = pathlib.Path(__file__).resolve().parent.parent
+    ignore = (wurzel / ".gitignore").read_text(encoding="utf-8")
+    assert "web/data/" in ignore, "web/data ist nicht mehr ignoriert"
+
+
 def test_dokumentleser_decken_die_alt_formate_ab():
     """Was einmal lesbar war, muss lesbar bleiben — und zwar an echten Dateien geprueft.
 

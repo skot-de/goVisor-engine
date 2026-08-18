@@ -921,6 +921,13 @@ if $PY scripts/export_web_leads.py; then
   # monatelang unbemerkt den Anschluss.
   $PY scripts/export_regionen.py \
     || echo "  ⚠ Regionen-Export fehlgeschlagen — die Regionalansicht bleibt auf altem Stand."
+  # web/data liegt seit dem 2026-08-18 NICHT mehr in Git (s. .gitignore dort). Damit ist
+  # dieser Schritt die einzige Bruecke zwischen dem Export hier und dem Deployment: ohne ihn
+  # zeigt die Cloud-Fassung den Stand des letzten Uploads, und niemand sieht es, denn alte
+  # Daten sehen aus wie frische. Ist kein Speicher konfiguriert, sagt das Skript das und
+  # bricht den Tageslauf NICHT ab — lokal ist die Platte weiterhin die Quelle.
+  $PY scripts/upload_web_data.py \
+    || echo "  ⚠ Upload uebersprungen oder unvollstaendig — Deployment bleibt auf altem Stand."
   echo "  Frontend-Daten ok."
 else
   echo "  ✖ Frontend-Export fehlgeschlagen — die App zeigt weiter den alten Stand."

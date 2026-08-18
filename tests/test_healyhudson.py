@@ -573,8 +573,11 @@ def test_rtf_war_der_groesste_unsupported_posten():
     from govisor.docpipe import _EXTRACT, _KNOWN_NOEXTRACT
     assert ".rtf" in _EXTRACT and ".rtf" not in _KNOWN_NOEXTRACT
     assert ".odt" in _EXTRACT
-    # `.doc`/`.xls` bleiben bewusst offen: Binaerformate ohne Loesung ohne Zusatzpaket.
-    assert ".doc" in _KNOWN_NOEXTRACT and ".xls" in _KNOWN_NOEXTRACT
+    # ÜBERHOLT AM 2026-08-18. Hier stand: „`.doc`/`.xls` bleiben bewusst offen, Binaerformate
+    # ohne Loesung ohne Zusatzpaket." Das galt fuer LibreOffice und antiword; mit olefile und
+    # xlrd<2 (zwei kleine reine Python-Pakete) sind beide jetzt lesbar, s. `_doc_text`/`_xls_text`
+    # und `test_dokumentleser_decken_die_alt_formate_ab` in test_plumbing.py.
+    assert ".doc" in _EXTRACT and ".xls" in _EXTRACT
 
 
 def test_rtf_wirft_die_schrifttabelle_weg():

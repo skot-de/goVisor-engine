@@ -24,3 +24,22 @@ __pycache__/
 # Internes Vertriebs-CSV (enthaelt Kontaktdaten) — nie committen
 data/zielliste.csv
 /.tmp
+
+# ── web/data: Daten, keine Quelltexte ────────────────────────────────────────────
+# Der Tageslauf schreibt hier jede Nacht rund 150 MB neu (leads-bau.json 42 MB,
+# suppliers.json 38 MB, detail-bau.json 30 MB, doc-text.json 294 MB). Versioniert
+# hiess das: jede Nacht 150 MB dauerhaft in die Historie, und Historie schrumpft nicht.
+# Das Repo stand am 2026-08-18 bei 176 MB, nur weil 79 Commits nicht gepusht waren.
+#
+# Entscheidend war aber nicht die Groesse, sondern eine harte Grenze: GitHub weist
+# JEDEN Push mit einer Datei ueber 100 MB ab. `doc-text.json` wuchs nach dem
+# Formate-Ausbau von 1 MB auf 294 MB — der Branch waere ab diesem Commit
+# unpushbar gewesen, bis die Datei aus der Historie entfernt ist.
+#
+# Wo die Dateien jetzt herkommen: `web/lib/dataSource.ts` liest `DATA_BASE_URL`
+# (Objektspeicher) und faellt ohne diese Variable auf die lokale Platte zurueck.
+# Hochgeladen wird mit `scripts/upload_web_data.py`, s. docs/web-data-storage.md.
+#
+# ⚠ FOLGE FUER EIN FRISCHES KLON: web/data ist leer. Entweder `DATA_BASE_URL` setzen
+# oder die Exporte einmal laufen lassen (scripts/daily_leads.sh).
+web/data/
