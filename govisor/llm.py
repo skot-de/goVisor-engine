@@ -101,43 +101,50 @@ def _load_cerebras_keys() -> list[str]:
 
 
 def _anbieter() -> list[dict]:
-    """Anbieter in der Reihenfolge, in der sie versucht werden.
+    """Anbieter in der Reihenfolge, in der sie versucht werden — nach GEMESSENER Qualitaet.
 
-    OpenRouter zuerst, weil dort die Modellauswahl breiter ist und die bisherigen Analysen
-    damit entstanden sind — ein Modellwechsel mitten im Bestand macht die Ergebnisse
-    untereinander unvergleichbar. Cerebras ist der Auffangnetz-Anbieter.
+    Bis zum 2026-08-18 entschied das Guthaben, wer drankam. Das ist die falsche Ordnung:
+    die Modelle unterscheiden sich messbar, und ein Bestand aus dem jeweils gerade bezahlten
+    Modell ist ein Bestand ohne Aussage. Sven: „mach es so das die qualitaet bei der analyse
+    hoch bleibt."
+
+    Gemessen mit `scripts/llm_bench.py --n 6` an denselben sechs Vorgaengen (belegte
+    Pruefpunkte je Vorgang · Anteil verworfener Zitate · Sekunden je Vorgang):
+
+        xai/grok-4-fast-non-reasoning     15,3 ·  2 % · 11,3 s   ← Ordnung folgt dieser Spalte
+        (Bestand) gemini-2.5-flash        14,8 · 26 % ·    —
+        perplexity/sonar                  11,7 ·  1 % ·  6,8 s
+        together/Llama-3.3-70B-Turbo       7,5 ·  0 % ·  7,4 s
+        sambanova/Llama-3.3-70B            7,2 ·  0 % ·  5,1 s
+        cerebras/gpt-oss-120b              —   ·  —   ·  —      429 bei langen Dokumenten
+
+    Die **Verwerfungsquote** ist dabei die ehrlichere Zahl: sie misst nicht Fleiss, sondern
+    Genauigkeit. Ein Modell mit vielen Punkten UND hoher Verwerfung hat viel behauptet und
+    wenig belegt — Gemini liegt hier bei 26 %, grok bei 2 %.
+
+    Cerebras steht zuletzt, obwohl es das schnellste ist: bei den langen Volltexten dieser
+    Aufgabe laeuft es reproduzierbar in sein Ratenlimit (429), waehrend es bei kurzen Fragen
+    in 0,9 s antwortet. Schnell auf dem Prueffeld heisst hier nicht schnell im Betrieb.
     """
     return [
-        {"name": "openrouter", "url": URL, "keys": _load_keys(), "model": DEFAULT_MODEL},
-        {"name": "cerebras", "url": CEREBRAS_URL, "keys": _load_cerebras_keys(),
-         "model": CEREBRAS_MODEL},
+        {"name": "xai", "url": XAI_URL, "keys": _load_keys_aus("xai"), "model": XAI_MODEL},
+        # ⚠ Perplexity NUR mit abgeschalteter Suche: die `sonar`-Modelle recherchieren sonst
+        # im Netz, und unter der Belegpflicht (Zitat AUS DEM DOKUMENT, docextract.py §6a.2)
+        # entstuenden Saetze, die stimmen koennen und trotzdem nicht in den Unterlagen
+        # stehen. Gemessen: ohne Schalter 20 Webquellen je Antwort, mit Schalter 0.
+        {"name": "perplexity", "url": PERPLEXITY_URL, "keys": _load_keys_aus("perplexity"),
+         "model": PERPLEXITY_MODEL, "extra": {"disable_search": True}},
         {"name": "together", "url": TOGETHER_URL, "keys": _load_keys_aus("together"),
          "model": TOGETHER_MODEL},
         {"name": "sambanova", "url": SAMBANOVA_URL, "keys": _load_keys_aus("sambanova"),
          "model": SAMBANOVA_MODEL},
-        {"name": "xai", "url": XAI_URL, "keys": _load_keys_aus("xai"), "model": XAI_MODEL},
-        # ⚠ PERPLEXITY NUR MIT ABGESCHALTETER SUCHE. Die `sonar`-Modelle recherchieren im
-        # Netz; unter der Belegpflicht (jede Aussage braucht ein woertliches Zitat AUS DEM
-        # DOKUMENT, s. govisor/docextract.py §6a.2) ist das die falsche Eigenschaft — es
-        # entstuenden Saetze, die stimmen koennen und trotzdem nicht in den Unterlagen
-        # stehen, und die Zitatpruefung wirft sie weg, nachdem wir bezahlt haben.
-        #
-        # Gemessen am 2026-08-18 an derselben Frage: ohne Schalter 20 Webquellen in der
-        # Antwort, mit `disable_search` genau 0. Deshalb steht der Schalter hier fest im
-        # Anfragekoerper und nicht als Empfehlung in einer Doku.
-        {"name": "perplexity", "url": PERPLEXITY_URL, "keys": _load_keys_aus("perplexity"),
-         "model": PERPLEXITY_MODEL, "extra": {"disable_search": True}},
+        {"name": "cerebras", "url": CEREBRAS_URL, "keys": _load_cerebras_keys(),
+         "model": CEREBRAS_MODEL},
+        # OpenRouter zuletzt: dort ist das Guthaben leer (402, 2026-08-18). Der Eintrag
+        # bleibt, damit ein Aufladen sofort wirkt — dann gehoert er nach oben, sobald ein
+        # Vergleichslauf zeigt, wo das dortige Modell wirklich steht.
+        {"name": "openrouter", "url": URL, "keys": _load_keys(), "model": DEFAULT_MODEL},
     ]
-    # ⚠ PERPLEXITY IST BEWUSST NICHT DABEI, obwohl ein Schluessel mit Guthaben vorliegt
-    # (.secrets/perplexity.key, geprueft am 2026-08-18: antwortet in 1,9 s).
-    #
-    # Die `sonar`-Modelle dort SUCHEN im Web und mischen Gefundenes in die Antwort. Fuer
-    # diese Aufgabe ist das genau falsch: die Vergabe-Analyse unterliegt der Belegpflicht,
-    # jede Aussage muss ein woertliches Zitat AUS DEM DOKUMENT tragen (govisor/docextract.py,
-    # §6a.2). Ein Modell, das nebenbei das Internet befragt, erzeugt Saetze, die stimmen
-    # koennen und trotzdem nicht im Dokument stehen — und die Zitatpruefung verwirft sie,
-    # nachdem wir dafuer bezahlt haben. Fuer Recherche-Aufgaben ist der Schluessel gut;
-    # hier nicht.
 
 
 def available_keys() -> int:
@@ -225,7 +232,15 @@ def chat(messages: list[dict], model: str | None = None, temperature: float = 0,
                         last_err = f"429 Rate-Limit ({anb['name']})"
                         time.sleep(2 * (attempt + 1))
                         continue
-                    last_err = f"HTTP {r.status_code} ({anb['name']}): {r.text[:120]}"
+                    # ⚠ 4xx IST KEIN GUTHABEN-PROBLEM. „Kontext zu lang", „Modell nicht
+                    # verfuegbar", „unbekannter Parameter" — dreimal wiederholen aendert
+                    # daran nichts, und am Ende meldete der Lauf „alle Anbieter erschoepft".
+                    # Gemessen am 2026-08-18 im Modellvergleich: Cerebras und ein
+                    # Together-Modell fielen so aus, und die Ursache stand nirgends. Ein
+                    # Anbieterfehler gehoert sofort weitergereicht, mit Klartext.
+                    last_err = f"HTTP {r.status_code} ({anb['name']}/{modell}): {r.text[:140]}"
+                    if 400 <= r.status_code < 500:
+                        break
                 except Exception as e:              # Netz/Timeout → Retry
                     last_err = f"{type(e).__name__}: {str(e)[:80]}"
                     time.sleep(2 * (attempt + 1))
