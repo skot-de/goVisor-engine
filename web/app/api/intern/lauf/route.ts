@@ -52,19 +52,34 @@ type Lauf = {
  * monatelang unbemerkt, dass 4.499 Volltexte bereitlagen und 14 ankamen.
  */
 function trichter() {
-  const zaehle = (name: string): number | null => {
+  const schluessel = (name: string): Set<string> | null => {
     try {
       const roh = fs.readFileSync(path.join(WURZEL, "web", "data", name), "utf-8");
-      return Object.keys(JSON.parse(roh)).length;
+      return new Set(Object.keys(JSON.parse(roh)));
     } catch { return null; }
   };
+  // Der Volltext liegt seit dem 2026-08-18 je Vorgang in `web/data/doc-text/`; gezaehlt
+  // wird ueber das Verzeichnis `doc-text-index.json` (284 KB statt 294 MB).
+  const volltext = schluessel("doc-text-index.json");
+  const analyse = schluessel("doc-analysis.json");
+  const signale = schluessel("doc-signals.json");
+  const struktur = schluessel("doc-struktur.json");
+
+  // ⚠ DIE ZAHLEN, DIE WIRKLICH INTERESSIEREN, SIND DIFFERENZEN, KEINE BESTAENDE.
+  // Sven am 2026-08-18 vor dieser Anzeige: „fuer mich liest sich das nach: es gibt nur noch
+  // 25 im rueckstau … ich bin verwirrt." Zu Recht. Oben standen Archive (ZIP-DATEIEN),
+  // darunter Vorgaenge — zwei Grundmengen ohne Beschriftung. Der Rueckstand beim Auspacken
+  // war fast null, waehrend 4.766 Vorgaenge mit fertigem Volltext auf ihre Analyse warteten.
+  // Vier Bestandszahlen nebeneinander beantworten die Frage „wo klemmt es" eben nicht.
+  const fehlt = (a: Set<string> | null, b: Set<string> | null) =>
+    a && b ? [...a].filter((k) => !b.has(k)).length : null;
   return {
-    signale: zaehle("doc-signals.json"),
-    // Der Volltext liegt seit dem 2026-08-18 je Vorgang in `web/data/doc-text/`; gezaehlt
-    // wird ueber das Verzeichnis `doc-text-index.json` (200 KB statt 294 MB).
-    volltext: zaehle("doc-text-index.json"),
-    analyse: zaehle("doc-analysis.json"),
-    struktur: zaehle("doc-struktur.json"),
+    signale: signale?.size ?? null,
+    volltext: volltext?.size ?? null,
+    analyse: analyse?.size ?? null,
+    struktur: struktur?.size ?? null,
+    ohneAnalyse: fehlt(volltext, analyse),
+    ohneSignale: fehlt(volltext, signale),
   };
 }
 

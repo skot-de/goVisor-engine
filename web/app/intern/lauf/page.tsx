@@ -62,7 +62,10 @@ type Antwort = {
        null heisst „Datei fehlt", nicht „null Stück". Der Unterschied ist der
        ganze Zweck dieser Anzeige. */
     trichter: { signale: number | null; volltext: number | null;
-                analyse: number | null; struktur: number | null };
+                analyse: number | null; struktur: number | null;
+                /* Differenzen statt Bestaende: was hat Volltext, aber noch keine
+                   Analyse bzw. keine Signale? Das ist der echte Rueckstand. */
+                ohneAnalyse: number | null; ohneSignale: number | null };
     arbeiter: { laeuft: boolean; letzte: string[] };
   };
 };
@@ -197,12 +200,15 @@ export default function LaufPage() {
               ) : null}
 
               <section className="lauf-karte">
-                <div className="lauf-kopf"><b>Vergabeunterlagen — Rückstand beim Auspacken</b></div>
+                <div className="lauf-kopf">
+                  <b>Schritt 1: Archive auspacken</b>
+                  <span className="lauf-urteil">gezählt in ZIP-Dateien</span>
+                </div>
                 <dl className="lauf-werte">
-                  <div><dt>Archive auf der Platte</dt><dd>{d.dokumente.aufPlatte.toLocaleString("de-DE")}</dd></div>
-                  <div><dt>davon im Index</dt>
+                  <div><dt>ZIP-Dateien auf der Platte</dt><dd>{d.dokumente.aufPlatte.toLocaleString("de-DE")}</dd></div>
+                  <div><dt>davon ausgelesen</dt>
                     <dd>{d.dokumente.indiziert?.toLocaleString("de-DE") ?? "?"}</dd></div>
-                  <div><dt>Rückstand</dt>
+                  <div><dt>noch nicht ausgelesen</dt>
                     <dd className={(d.dokumente.rueckstand ?? 0) > 0 ? "ist-offen" : undefined}>
                       {d.dokumente.rueckstand?.toLocaleString("de-DE") ?? "unbekannt"}
                     </dd></div>
@@ -217,7 +223,15 @@ export default function LaufPage() {
                     fehlte. Nichts war rot — die Datei existierte ja, sie war nur uralt.
                     Diese vier Zahlen machen genau das sichtbar. */}
                 <div className="lauf-trichter">
-                  <div className="lauf-trichter-h">Im Frontend angekommen</div>
+                  {/* GRUNDMENGE DAZUSCHREIBEN. Darüber stehen ZIP-Dateien, hier Vorgänge.
+                      Ohne den Zusatz liest man diese vier Zahlen gegen die drei darüber und
+                      kommt auf einen Rückstand, den es nicht gibt. */}
+                  <div className="lauf-trichter-h">
+                    Schritt 2: verwertet, je Vorgang
+                    {d.dokumente.trichter.volltext != null
+                      ? ` · ${d.dokumente.trichter.volltext.toLocaleString("de-DE")} mit Volltext`
+                      : ""}
+                  </div>
                   <dl>
                     <div><dt>Signale</dt>
                       <dd>{d.dokumente.trichter.signale?.toLocaleString("de-DE") ?? "?"}</dd></div>
@@ -227,6 +241,17 @@ export default function LaufPage() {
                       <dd>{d.dokumente.trichter.volltext?.toLocaleString("de-DE") ?? "?"}</dd></div>
                     <div><dt>LLM-Analyse</dt>
                       <dd>{d.dokumente.trichter.analyse?.toLocaleString("de-DE") ?? "?"}</dd></div>
+                  </dl>
+                  {/* Der eigentliche Rückstand. Er steht UNTER dem Trichter und nicht darin:
+                      er ist keine weitere Stufe, sondern die Differenz zweier Stufen — und
+                      die einzige Zahl, an der man sieht, ob der Arbeiter vorankommt. */}
+                  <dl className="lauf-werte lauf-rueckstand">
+                    <div><dt>wartet auf Analyse</dt>
+                      <dd className={(d.dokumente.trichter.ohneAnalyse ?? 0) > 0 ? "ist-offen" : undefined}>
+                        {d.dokumente.trichter.ohneAnalyse?.toLocaleString("de-DE") ?? "?"}
+                      </dd></div>
+                    <div><dt>Signale älter als der Volltext</dt>
+                      <dd>{d.dokumente.trichter.ohneSignale?.toLocaleString("de-DE") ?? "?"}</dd></div>
                   </dl>
                 </div>
 

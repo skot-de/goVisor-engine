@@ -159,3 +159,7 @@
   font-family: var(--mono); font-size: var(--t-meta); line-height: 1.6;
   white-space: pre-wrap; overflow-x: auto;
 }
+
+/* Rückstandszeile unter dem Trichter: dieselbe Bauform wie die Werteliste oben, nur
+   abgesetzt, weil es Differenzen sind und keine Bestände. */
+.lauf-rueckstand{margin-top:10px;border-top:1px solid var(--line);padding-top:8px}
