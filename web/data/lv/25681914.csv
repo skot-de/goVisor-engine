@@ -1,0 +1,125 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+0010;Leitungsrecherche;1,0;Psch;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0020;Bauzeitenplan liefern;1,0;Psch;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0030;Bohranzeige und Datenübermittlung;1,0;Psch;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0040;Beweissicherung Straßen und Wege;1,0;Psch;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0010;Verkehrsrechtliche Anordnung für Einrichtung und Be-;1,0;St;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0020;Verkehrssicherung an Arbeitsstellen von kürzerer Dauer;1,0;St;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0030;Verkehrssicherung an Arbeitsstellen von kürzerer Dauer;2,0;St;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0040;Verkehrssicherung an Arbeitsstellen von kürzerer Dauer;1,0;St;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0010;Geräte, Werkzeuge und sonstige Betriebsmittel, die zur;1,0;Psch;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0020;Baustelle von allen Geräten, Anlagen, Einrichtungen und;1,0;Psch;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0030;Gerät für Baugrunderkundung einschließlich Einrichtung;5,0;St;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0040;Gerät für Baugrunderkundung einschließlich Einrichtung;1,0;St;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0050;Gerät für Baugrunderkundung einschließlich Einrichtung;4,0;St;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0060;Kernbohrung DN 100 mm bis 60 cm;300,0;cm;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0070;Kernbohrung DN 100 mm 60 - 120 cm;1,0;cm;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0080;Kernbohrung DN 300 mm bis 60 cm;1,0;cm;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0090;Kernbohrung DN 300 mm 60 - 120 cm;1,0;cm;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0010;Geräte, Werkzeuge und sonstige Betriebsmittel, die zur;1,0;Psch;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0020;Baustelle von allen Geräten, Anlagen, Einrichtungen und;1,0;Psch;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0030;Gerät für Baugrunderkundung einschließlich Einrichtung;1,0;St;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0040;Gerät für Baugrunderkundung einschließlich Einrichtung;1,0;St;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0050;Gerät für Baugrunderkundung einschließlich Einrichtung;3,0;St;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0060;Vorschachtung nach Unterlagen des AG einschließlich;5,0;St;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0070;Kleinbohrung mit Gestänge und Entnahmerohr für Bau-;55,0;m;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0080;Probe nach DIN EN ISO 22475-1 nach Unterlagen des AG;55,0;St;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0090;Probe nach DIN EN ISO 22475-1 nach Unterlagen des AG;1,0;St;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0100;Bohrloch nach Unterlagen des AG verfüllen. Verfüllpro-;55,0;m;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0110;Wasserprobe nach DIN EN ISO 22475-1 entnehmen und tem-;1,0;St;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0120;Bohrgut nach Wahl des AN verwerten.;1,0;Psch;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0130;Stillstand des Gerätes und des eingesetzten Personals;1,0;h;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0010;Geräte, Werkzeuge und sonstige Betriebsmittel, die zur;1,0;Psch;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0020;Baustelle von allen Geräten, Anlagen, Einrichtungen und;1,0;Psch;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0030;Vorschachtung nach Unterlagen des AG einschließlich;5,0;St;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0040;Gerät für Baugrunderkundung einschließlich Einrichtung;1,0;St;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0050;Gerät für Baugrunderkundung einschließlich Einrichtung;1,0;St;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0060;Gerät für Baugrunderkundung einschließlich Einrichtung;3,0;St;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0070;Drucksondierung für Baugrunduntersuchungen nach DIN EN;135,0;m;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0080;Stillstand des Gerätes und des eingesetzten Personals;1,0;h;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0010;Ortstermin zur Absteckung;1,0;d;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0020;Einmessen der Ansatzpunkte nach Unterlagen des AG. Do-;10,0;St;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0010;Leitungsrecherche;1,0;Psch;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0020;Bauzeitenplan liefern;1,0;Psch;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0030;Bohranzeige und Datenübermittlung;1,0;Psch;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0040;Beweissicherung Straßen und Wege;1,0;Psch;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0010;Verkehrsrechtliche Anordnung für Einrichtung und Be-;1,0;St;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0020;Verkehrssicherung an Arbeitsstellen von kürzerer Dauer;1,0;St;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0030;Verkehrssicherung an Arbeitsstellen von kürzerer Dauer;1,0;St;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0040;Verkehrssicherung an Arbeitsstellen von kürzerer Dauer;1,0;St;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0050;Verkehrssicherung an Arbeitsstellen von kürzerer Dauer;1,0;St;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0010;Geräte, Werkzeuge und sonstige Betriebsmittel, die zur;1,0;Psch;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0020;Baustelle von allen Geräten, Anlagen, Einrichtungen und;1,0;Psch;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0030;Gerät für Baugrunderkundung einschließlich Einrichtung;5,0;St;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0040;Gerät für Baugrunderkundung einschließlich Einrichtung;1,0;St;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0050;Gerät für Baugrunderkundung einschließlich Einrichtung;4,0;St;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0060;Kernbohrung DN 100 mm bis 60 cm;180,0;cm;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0070;Kernbohrung DN 100 mm 60 - 120 cm;1,0;cm;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0080;Kernbohrung DN 300 mm bis 60 cm;1,0;cm;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0090;Kernbohrung DN 300 mm 60 - 120 cm;1,0;cm;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0100;Natursteinpflaster aufnehmen und nach Beendingung der Bohr-/Sondierarbeiten in Ursprungszustand zurückversetzen.;4,0;St;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0010;Geräte, Werkzeuge und sonstige Betriebsmittel, die zur;1,0;Psch;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0020;Baustelle von allen Geräten, Anlagen, Einrichtungen und;1,0;Psch;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0030;Gerät für Baugrunderkundung einschließlich Einrichtung;1,0;St;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0040;Gerät für Baugrunderkundung einschließlich Einrichtung;1,0;St;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0050;Gerät für Baugrunderkundung einschließlich Einrichtung;3,0;St;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0060;Vorschachtung nach Unterlagen des AG einschließlich;5,0;St;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0070;Kleinbohrung mit Gestänge und Entnahmerohr für Bau-;55,0;m;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0080;Probe nach DIN EN ISO 22475-1 nach Unterlagen des AG;55,0;St;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0090;Probe nach DIN EN ISO 22475-1 nach Unterlagen des AG;1,0;St;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0100;Bohrloch nach Unterlagen des AG verfüllen. Verfüllpro-;55,0;m;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0110;Wasserprobe nach DIN EN ISO 22475-1 entnehmen und tem-;1,0;St;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0120;Bohrgut nach Wahl des AN verwerten.;1,0;Psch;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0130;Stillstand des Gerätes und des eingesetzten Personals;1,0;h;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0010;Geräte, Werkzeuge und sonstige Betriebsmittel, die zur;1,0;Psch;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0020;Baustelle von allen Geräten, Anlagen, Einrichtungen und;1,0;Psch;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0030;Vorschachtung nach Unterlagen des AG einschließlich;5,0;St;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0040;Gerät für Baugrunderkundung einschließlich Einrichtung;1,0;St;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0050;Gerät für Baugrunderkundung einschließlich Einrichtung;1,0;St;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0060;Gerät für Baugrunderkundung einschließlich Einrichtung;3,0;St;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0070;Drucksondierung für Baugrunduntersuchungen nach DIN EN;135,0;m;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0080;Stillstand des Gerätes und des eingesetzten Personals;1,0;h;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0010;Ortstermin zur Absteckung;1,0;d;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0020;Einmessen der Ansatzpunkte nach Unterlagen des AG. Do-;10,0;St;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0010;Leitungsrecherche;1,0;Psch;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0020;Bauzeitenplan liefern;1,0;Psch;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0030;Bohranzeige und Datenübermittlung;1,0;Psch;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0040;Beweissicherung Straßen und Wege;1,0;Psch;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0010;Verkehrsrechtliche Anordnung für Einrichtung und Be-;1,0;St;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0020;Verkehrssicherung an Arbeitsstellen von kürzerer Dauer;1,0;St;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0030;Verkehrssicherung an Arbeitsstellen von kürzerer Dauer;1,0;St;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0040;Verkehrssicherung an Arbeitsstellen von kürzerer Dauer;1,0;St;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0050;Verkehrssicherung an Arbeitsstellen von kürzerer Dauer;1,0;St;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0010;Geräte, Werkzeuge und sonstige Betriebsmittel, die zur;1,0;Psch;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0020;Baustelle von allen Geräten, Anlagen, Einrichtungen und;1,0;Psch;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0030;Gerät für Baugrunderkundung einschließlich Einrichtung;5,0;St;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0040;Gerät für Baugrunderkundung einschließlich Einrichtung;1,0;St;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0050;Gerät für Baugrunderkundung einschließlich Einrichtung;4,0;St;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0060;Kernbohrung DN 100 mm bis 60 cm;180,0;cm;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0070;Kernbohrung DN 100 mm 60 - 120 cm;1,0;cm;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0080;Kernbohrung DN 300 mm bis 60 cm;1,0;cm;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0090;Kernbohrung DN 300 mm 60 - 120 cm;1,0;cm;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0100;Natursteinpflaster aufnehmen und nach Beendingung der Bohr-/Sondierarbeiten in Ursprungszustand zurückversetzen.;4,0;St;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0010;Geräte, Werkzeuge und sonstige Betriebsmittel, die zur;1,0;Psch;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0020;Baustelle von allen Geräten, Anlagen, Einrichtungen und;1,0;Psch;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0030;Gerät für Baugrunderkundung einschließlich Einrichtung;1,0;St;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0040;Gerät für Baugrunderkundung einschließlich Einrichtung;1,0;St;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0050;Gerät für Baugrunderkundung einschließlich Einrichtung;3,0;St;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0060;Vorschachtung nach Unterlagen des AG einschließlich;5,0;St;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0070;Kleinbohrung mit Gestänge und Entnahmerohr für Bau-;55,0;m;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0080;Probe nach DIN EN ISO 22475-1 nach Unterlagen des AG;55,0;St;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0090;Probe nach DIN EN ISO 22475-1 nach Unterlagen des AG;1,0;St;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0100;Bohrloch nach Unterlagen des AG verfüllen. Verfüllpro-;55,0;m;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0110;Wasserprobe nach DIN EN ISO 22475-1 entnehmen und tem-;1,0;St;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0120;Bohrgut nach Wahl des AN verwerten.;1,0;Psch;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0130;Stillstand des Gerätes und des eingesetzten Personals;1,0;h;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0010;Geräte, Werkzeuge und sonstige Betriebsmittel, die zur;1,0;Psch;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0020;Baustelle von allen Geräten, Anlagen, Einrichtungen und;1,0;Psch;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0030;Vorschachtung nach Unterlagen des AG einschließlich;5,0;St;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0040;Gerät für Baugrunderkundung einschließlich Einrichtung;1,0;St;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0050;Gerät für Baugrunderkundung einschließlich Einrichtung;1,0;St;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0060;Gerät für Baugrunderkundung einschließlich Einrichtung;3,0;St;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0070;Drucksondierung für Baugrunduntersuchungen nach DIN EN;135,0;m;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0080;Stillstand des Gerätes und des eingesetzten Personals;1,0;h;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0010;Ortstermin zur Absteckung;1,0;d;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83
+0020;Einmessen der Ansatzpunkte nach Unterlagen des AG. Do-;10,0;St;gaeb;Leistungsverzeichnis/NOW-2026-325_VE 21_Baugrundaufschlüsse_Index A.X83

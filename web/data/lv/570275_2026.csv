@@ -1,0 +1,45 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+1;"Pos. 01 - Umrüstsatz zum Austausch der Bestands-lampen und Vorschaltgeräte
+LED Austauschmodule für eine Leuchte
+Das Austauschmodul ist so konzipiert sein, dass eine einfache und schnelle Montage möglich ist. Es kann z.B. in die alten Sockel, in die Halterung der UV-Scheiben, oder magnetisch am Leuch";396,0;"Umrüstsatz
+pro Stck.";preisblatt;A2-Leistungsverzeichnis_LED_Umrüstung.xlsx
+1;"Einbaufluter
+LED-Modul: 38W 3720lm 3000K warmweiß
+DALI2
+Version 2
+Spherolitlinse wide flood
+Leuchte: Aluminiumguss schwarz pulverbeschichtet, als Kühlkörper ausgebildet, mit Verbindungsleitung L 850mm. Kardanische Aufhängung: Kunststoff, schwarz Leuchte 0°-40° schwenkbar.
+Einbauring Größe 7, Kunstst";8,0;Stück;preisblatt;A2-Leistungsverzeichnis_LED_Umrüstung.xlsx
+;Angebotenes Fabrikat/Typ;;;preisblatt;A2-Leistungsverzeichnis_LED_Umrüstung.xlsx
+2;"Sensor als flexibler Repeater an Stromschiene
+Als flexibler Repeater zur Weiterleitung des Bluetooth-Signal dient ein Se-nor, der wo notwendig, in eine 3-Pasen-Stromschiene montiert werden kann.
+Smarter Bewegungsmelder und Helligkeitssensor für 3-Phasen-Stromschienensysteme
+•	einfach in die Stromsch";15,0;Stück;preisblatt;A2-Leistungsverzeichnis_LED_Umrüstung.xlsx
+3;"KNX Szenen-Gateway
+Zur Einbindung von KNX-Geräten in die Casambi-Steuerung und von Casa-mbi-Leuchten/-Geräten in die KNX-Steuerung. Steuert bis zu 16 Szenen in Casambi und 16 Protokolle zurück zur ETS.
+Im Gateway können insgesamt bis zu 32 KNX-Kanäle und 32 Casambi-Szenen registriert werden – davon ";3,0;Stück;preisblatt;A2-Leistungsverzeichnis_LED_Umrüstung.xlsx
+4;"Bedienpanel
+Individuell programmierbares Touch-Panel für bis zu acht Gruppen und 8 Szenen.
+•	Lichtsteuerung: An/Aus, Dimmen, Farbtemperatur TW, Farbsteuerung
+ RGB/RGBW, Szenen
+•	Touchscreen
+•	Temperaturanzeige
+•	Optionale Sensoren: Relative Feuchte, CO2 und Raumluftqualität (VOC)
+•	Optionale Anbindu";3,0;Stück;preisblatt;A2-Leistungsverzeichnis_LED_Umrüstung.xlsx
+6;"Netzwerkeinrichtung
+Durchzuführen von einem zertifizierten Casambi-Inbetriebnahme-Ingenieur.
+
+Aufbau von Mesh-Netzwerk
+Reichweitenprüfung
+Optimierung der Signalqualität
+Failover-Test
+Aushändigung unterschiedlicher Login-Daten: Manager / Benutzer,
+(Admin Rechte auf Anfrage)";3,0;Stück;preisblatt;A2-Leistungsverzeichnis_LED_Umrüstung.xlsx
+7;"Programmierung
+Gemäß kundenspezifischem Programmierplan, Zuordnung Bluetooth-Adressen, Geräte einlesen in das Casambi-Netzwerk, Benennung der Geräte.";463,0;Stück;preisblatt;A2-Leistungsverzeichnis_LED_Umrüstung.xlsx
+8;"Einweisung
+Einweisung in die Casambi-Software und in den Aufbau des des Netz-werkes.";1,0;Stück;preisblatt;A2-Leistungsverzeichnis_LED_Umrüstung.xlsx
+9;Anreisekosten;10,0;Km;preisblatt;A2-Leistungsverzeichnis_LED_Umrüstung.xlsx
+10;"Übernachtungskosten
+Anzahl der benötigten Übernachtungen";5,0;Stck.;preisblatt;A2-Leistungsverzeichnis_LED_Umrüstung.xlsx
+10;0.19;;;preisblatt;A2-Leistungsverzeichnis_LED_Umrüstung.xlsx

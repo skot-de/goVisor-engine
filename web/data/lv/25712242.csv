@@ -1,0 +1,69 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+44201.1;Kabel halogenfrei N2XH-J 5x10RE;80,0;m;gaeb-flat;260803_LV Photovoltaikanlage BA2 Rathaus MMLD.D83
+44201.2;Kabel halogenfrei N2XCH 4x16RM/16;40,0;m;gaeb-flat;260803_LV Photovoltaikanlage BA2 Rathaus MMLD.D83
+44201.3;Datenkabel Kat.7 geschirmt 4x2xAWG23;35,0;m;gaeb-flat;260803_LV Photovoltaikanlage BA2 Rathaus MMLD.D83
+44201.4;Installationskabel symmetrisch J-H(St)H 4x2x0,6 Bd;25,0;m;gaeb-flat;260803_LV Photovoltaikanlage BA2 Rathaus MMLD.D83
+44201.5;Installationsleitung NYM-J 1x16;15,0;m;gaeb-flat;260803_LV Photovoltaikanlage BA2 Rathaus MMLD.D83
+44201.6;C-Modulanschlussleitung - PV-Line-1x6qmm -;550,0;m;gaeb-flat;260803_LV Photovoltaikanlage BA2 Rathaus MMLD.D83
+44201.7;Kabelkanal als Installationskanal 60x200 mm;35,0;m;gaeb-flat;260803_LV Photovoltaikanlage BA2 Rathaus MMLD.D83
+44201.8;Kabelkanal als Installationskanal 60x100 mm;15,0;m;gaeb-flat;260803_LV Photovoltaikanlage BA2 Rathaus MMLD.D83
+44201.9;Leerrohr flexibel M 25;50,0;m;gaeb-flat;260803_LV Photovoltaikanlage BA2 Rathaus MMLD.D83
+44201.10;Kunststoff-Isolierrohr M 32;50,0;m;gaeb-flat;260803_LV Photovoltaikanlage BA2 Rathaus MMLD.D83
+44201.11;C-Profilschiene Stahl feuerverz Wandbefestigung;25,0;m;gaeb-flat;260803_LV Photovoltaikanlage BA2 Rathaus MMLD.D83
+44201.12;Steigleiter Stahl feuerverz H 60mm B 200mm;3,0;m;gaeb-flat;260803_LV Photovoltaikanlage BA2 Rathaus MMLD.D83
+44201.13;Brandschutzkanal;3,0;m;gaeb-flat;260803_LV Photovoltaikanlage BA2 Rathaus MMLD.D83
+44202.1;Solarmodul Monokristallin;56,0;St.;gaeb-flat;260803_LV Photovoltaikanlage BA2 Rathaus MMLD.D83
+44202.2;Wechselrichter für Photovoltaik;1,0;St;gaeb-flat;260803_LV Photovoltaikanlage BA2 Rathaus MMLD.D83
+44202.3;Steuergerät;1,0;St.;gaeb-flat;260803_LV Photovoltaikanlage BA2 Rathaus MMLD.D83
+44202.4;Feuerwehrschalter für Dachfläche;1,0;St.;gaeb-flat;260803_LV Photovoltaikanlage BA2 Rathaus MMLD.D83
+44202.5;Datenlogger;1,0;St.;gaeb-flat;260803_LV Photovoltaikanlage BA2 Rathaus MMLD.D83
+44202.6;Home Manager;1,0;St.;gaeb-flat;260803_LV Photovoltaikanlage BA2 Rathaus MMLD.D83
+44202.7;Unterverteilung für Überspannung Grobschutz;1,0;St;gaeb-flat;260803_LV Photovoltaikanlage BA2 Rathaus MMLD.D83
+44202.8;Überspannungsschutzgerät Typ 2 Reiheneinbau 230/400VAC 4-polig 50kA;1,0;St;gaeb-flat;260803_LV Photovoltaikanlage BA2 Rathaus MMLD.D83
+44203.1;Anschlusskasten mit DC-seitiger Überspannungsschutz;1,0;psch;gaeb-flat;260803_LV Photovoltaikanlage BA2 Rathaus MMLD.D83
+44204.1;Einspeiseantrag / Unterlagen / Messung / Inbetriebnahme;1,0;psch;gaeb-flat;260803_LV Photovoltaikanlage BA2 Rathaus MMLD.D83
+44204.2;Übersichtsplan Anlagenschema;1,0;psch;gaeb-flat;260803_LV Photovoltaikanlage BA2 Rathaus MMLD.D83
+44204.3;Sachverstädnigenabnahme;1,0;psch;gaeb-flat;260803_LV Photovoltaikanlage BA2 Rathaus MMLD.D83
+44204.4;Beistellen von Personal für die Sachverständigenabnahme;3,0;h;gaeb-flat;260803_LV Photovoltaikanlage BA2 Rathaus MMLD.D83
+44204.5;Einbindung in Photovoltaik-Anzeige Display;1,0;St;gaeb-flat;260803_LV Photovoltaikanlage BA2 Rathaus MMLD.D83
+44204.6;Wand- oder Deckendurchbruch bis d= 50mm, Mauerwerk;5,0;St;gaeb-flat;260803_LV Photovoltaikanlage BA2 Rathaus MMLD.D83
+44204.7;Wand- oder Deckendurchbruch bis d= 100mm, Mauerwerk;2,0;St;gaeb-flat;260803_LV Photovoltaikanlage BA2 Rathaus MMLD.D83
+44204.8;Kabelschott S90 / Weichschott / bis 0,20 m²;5,0;St;gaeb-flat;260803_LV Photovoltaikanlage BA2 Rathaus MMLD.D83
+44204.9;Bezeichnungsschilder;5,0;St;gaeb-flat;260803_LV Photovoltaikanlage BA2 Rathaus MMLD.D83
+44204.10;Techniker/-in sämtliche Kosten/Zuschläge;2,0;h;gaeb-flat;260803_LV Photovoltaikanlage BA2 Rathaus MMLD.D83
+44204.11;"Wie vor, jedoch Arbeiten auf Nachweis durch Monteur/-in;";4,0;h;gaeb-flat;260803_LV Photovoltaikanlage BA2 Rathaus MMLD.D83
+44204.12;"Wie vor, jedoch Arbeiten auf Nachweis durch Helfer/-in;";4,0;h;gaeb-flat;260803_LV Photovoltaikanlage BA2 Rathaus MMLD.D83
+1;Halogenfreies Kabel DIN VDE 0276-604 (VDE 0276-604) N2XH-J 5 x 10 RE, Cu-Zahl 480.;80,0;m;gaeb;260803_LV Photovoltaikanlage BA2 Rathaus MMLD_V33.X83
+2;Halogenfreies Kabel DIN VDE 0276-604 (VDE 0276-604) N2XCH 4 x 16 RM/16, Cu-Zahl 796.;40,0;m;gaeb;260803_LV Photovoltaikanlage BA2 Rathaus MMLD_V33.X83
+3;Datenkabel für den Horizontal- und Steigbereich DIN EN 50288-4-1 (VDE 0819-4-1), Kategorie 7 DIN EN 50173-1, geschirmt, Trennklasse d DIN EN 50174-2 (VDE 0800-174-2), Link-Klasse DIN EN 50173-1 E Index A tiefgestellt, 4 x 2 x AWG 23, halogenfrei, flammwidrig.;35,0;m;gaeb;260803_LV Photovoltaikanlage BA2 Rathaus MMLD_V33.X83
+4;Installationskabel, symmetrisch, J-H(St)H, 4 x 2 x 0,6 Bd.;25,0;m;gaeb;260803_LV Photovoltaikanlage BA2 Rathaus MMLD_V33.X83
+5;Installationsleitung DIN VDE 0250-204 (VDE 0250-204) NYM-J 1 x 16, Cu-Zahl 154.;15,0;m;gaeb;260803_LV Photovoltaikanlage BA2 Rathaus MMLD_V33.X83
+6;C-Modulanschlussleitung - PV-Line-1x6qmm -;550,0;m;gaeb;260803_LV Photovoltaikanlage BA2 Rathaus MMLD_V33.X83
+7;Kabelkanal als Installationskanal 60x200 mm;35,0;m;gaeb;260803_LV Photovoltaikanlage BA2 Rathaus MMLD_V33.X83
+8;Kabelkanal als Installationskanal 60x100 mm;15,0;m;gaeb;260803_LV Photovoltaikanlage BA2 Rathaus MMLD_V33.X83
+9;Leerrohr flexibel M 25;50,0;m;gaeb;260803_LV Photovoltaikanlage BA2 Rathaus MMLD_V33.X83
+10;Kunststoff-Isolierrohr M 32;50,0;m;gaeb;260803_LV Photovoltaikanlage BA2 Rathaus MMLD_V33.X83
+11;C-Profilschiene, Breite 56 mm, Höhe 40 mm, gelocht, aus feuerverzinktem Stahl DIN EN ISO 1461, an der Wand aus Mauerwerk befestigen mit bauaufsichtlich zugelassenen Dübeln.;25,0;m;gaeb;260803_LV Photovoltaikanlage BA2 Rathaus MMLD_V33.X83
+12;Steigleiter, Sprossenabstand 300 mm, mit einem Trennsteg, einschl. aller systembedingten Form- und Verbindungsstücke, aus feuerverzinktem Stahl DIN EN ISO 1461, Dicke 1,5 mm, Seitenhöhe mind. 60 mm, Breite mind. 200 mm, Ausführung gemäß Einzelbeschreibung,;3,0;m;gaeb;260803_LV Photovoltaikanlage BA2 Rathaus MMLD_V33.X83
+13;Vierseitiger Brandschutzkanal aus Metall zur Installation und Führung von Kabeln. Mit intumeszierender Innenauskleidung.;3,0;m;gaeb;260803_LV Photovoltaikanlage BA2 Rathaus MMLD_V33.X83
+1;Solarmodul Monokristallin;56,0;St.;gaeb;260803_LV Photovoltaikanlage BA2 Rathaus MMLD_V33.X83
+2;Wechselrichter für Photovoltaik;1,0;St;gaeb;260803_LV Photovoltaikanlage BA2 Rathaus MMLD_V33.X83
+3;Steuergerät;1,0;St.;gaeb;260803_LV Photovoltaikanlage BA2 Rathaus MMLD_V33.X83
+4;Feuerwehrschalter für Dachfläche Dachgeschoss;1,0;St.;gaeb;260803_LV Photovoltaikanlage BA2 Rathaus MMLD_V33.X83
+5;Datenlogger;1,0;St.;gaeb;260803_LV Photovoltaikanlage BA2 Rathaus MMLD_V33.X83
+6;Home Manager;1,0;St.;gaeb;260803_LV Photovoltaikanlage BA2 Rathaus MMLD_V33.X83
+7;Unterverteilung für Überspannung Grobschutz;1,0;St;gaeb;260803_LV Photovoltaikanlage BA2 Rathaus MMLD_V33.X83
+8;Überspannungsschutzgerät DIN EN 61643-11 (VDE;1,0;St;gaeb;260803_LV Photovoltaikanlage BA2 Rathaus MMLD_V33.X83
+1;Anschlusskasten mit DC-seitiger Überspannungsschutz;1,0;psch;gaeb;260803_LV Photovoltaikanlage BA2 Rathaus MMLD_V33.X83
+1;Einspeiseantrag / Unterlagen / Messung / Inbetriebnahme / Abstimmungen;1,0;psch;gaeb;260803_LV Photovoltaikanlage BA2 Rathaus MMLD_V33.X83
+2;Übersichtsplan Anlagenschema;1,0;psch;gaeb;260803_LV Photovoltaikanlage BA2 Rathaus MMLD_V33.X83
+3;Sachverstädnigenabnahme;1,0;psch;gaeb;260803_LV Photovoltaikanlage BA2 Rathaus MMLD_V33.X83
+4;Beistellen von Personal für die Sachverständigenabnahme Photovoltaik.;3,0;h;gaeb;260803_LV Photovoltaikanlage BA2 Rathaus MMLD_V33.X83
+5;Einbindung in Photovoltaik-Anzeige Display;1,0;St;gaeb;260803_LV Photovoltaikanlage BA2 Rathaus MMLD_V33.X83
+6;Wand- oder Deckendurchbruch bis d= 50mm, Mauerwerk;5,0;St;gaeb;260803_LV Photovoltaikanlage BA2 Rathaus MMLD_V33.X83
+7;Wand- oder Deckendurchbruch bis d= 100mm, Mauerwerk;2,0;St;gaeb;260803_LV Photovoltaikanlage BA2 Rathaus MMLD_V33.X83
+8;Kabelschott S90 / Weichschott / bis 0,20 m²;5,0;St;gaeb;260803_LV Photovoltaikanlage BA2 Rathaus MMLD_V33.X83
+9;Bezeichnungsschilder;5,0;St;gaeb;260803_LV Photovoltaikanlage BA2 Rathaus MMLD_V33.X83
+10;Arbeiten auf Nachweis durch Techniker/-in;2,0;h;gaeb;260803_LV Photovoltaikanlage BA2 Rathaus MMLD_V33.X83
+11;Arbeiten auf Nachweis durch Monteur/-in;4,0;h;gaeb;260803_LV Photovoltaikanlage BA2 Rathaus MMLD_V33.X83
+12;Arbeiten auf Nachweis durch Helfer/-in;4,0;h;gaeb;260803_LV Photovoltaikanlage BA2 Rathaus MMLD_V33.X83

@@ -1,0 +1,82 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+1.1.10;Baustelle einrichten;1,0;psch;gaeb-flat;Vergabeunterlagen/LV SLB-2026-0347.D83
+1.1.20;Baustelle beräumen;1,0;psch;gaeb-flat;Vergabeunterlagen/LV SLB-2026-0347.D83
+1.1.30;Bauzaun aufstellen und entfernen, Zaunhöhe 2,00 m *StahlgitterFT;200,0;m;gaeb-flat;Vergabeunterlagen/LV SLB-2026-0347.D83
+1.1.40;Bauzaun mehrfach umsetzen, Zaunhöhe 2,00 m *StahlgitterFT;200,0;m;gaeb-flat;Vergabeunterlagen/LV SLB-2026-0347.D83
+1.1.50;vorhandene Vermessungspunkte sichern;2,0;Stk;gaeb-flat;Vergabeunterlagen/LV SLB-2026-0347.D83
+1.1.60;Schachterlaubnissscheine einholen;1,0;psch;gaeb-flat;Vergabeunterlagen/LV SLB-2026-0347.D83
+1.1.70;Beweissicherung durchführen;1,0;psch;gaeb-flat;Vergabeunterlagen/LV SLB-2026-0347.D83
+1.1.80;Prüfplan für die Eigenüberwachung erstellen;1,0;psch;gaeb-flat;Vergabeunterlagen/LV SLB-2026-0347.D83
+1.1.90;Zahlungs- und Bauzeitenplan erstellen;1,0;psch;gaeb-flat;Vergabeunterlagen/LV SLB-2026-0347.D83
+1.1.100;Deklarationsanalyse gemäß LAGA - M 20;5,0;Stk;gaeb-flat;Vergabeunterlagen/LV SLB-2026-0347.D83
+1.1.110;Zulage für Analysen gemäß Ersatzbaustoffverordnung;5,0;Stk;gaeb-flat;Vergabeunterlagen/LV SLB-2026-0347.D83
+1.1.120;Mehraufwand Gewässer- und Denkmalschutz;1,0;psch;gaeb-flat;Vergabeunterlagen/LV SLB-2026-0347.D83
+1.2.10;Verkehrssicherung längerer Dauer aufbauen, an Arbeitsstellen;1,0;psch;gaeb-flat;Vergabeunterlagen/LV SLB-2026-0347.D83
+1.2.20;Verkehrssicherung längerer Dauer vorhalten;60,0;d;gaeb-flat;Vergabeunterlagen/LV SLB-2026-0347.D83
+1.2.30;Kontrolle der Verkehrssicherung an Arbeitsstellen;60,0;d;gaeb-flat;Vergabeunterlagen/LV SLB-2026-0347.D83
+1.2.40;Verkehrssicherung längerer Dauer abbauen;1,0;psch;gaeb-flat;Vergabeunterlagen/LV SLB-2026-0347.D83
+1.3.10;SiGeKo Hilfsleistungen;1,0;psch;gaeb-flat;Vergabeunterlagen/LV SLB-2026-0347.D83
+1.4.10;Wasserhaltungsanlage nach Wahl des AN herstellen 15 bis 30 m³ / h Schlauchleitung Hohlräume verf.;1,0;psch;gaeb-flat;Vergabeunterlagen/LV SLB-2026-0347.D83
+1.4.20;Wasserhaltungsanlage vorhalten Schlauchleitung Messeinrichtung;60,0;d;gaeb-flat;Vergabeunterlagen/LV SLB-2026-0347.D83
+1.4.30;Wasserhaltungsanlage betreiben;420,0;h;gaeb-flat;Vergabeunterlagen/LV SLB-2026-0347.D83
+1.4.40;zuvor beschriebene Anlage umsetzen;10,0;Stk;gaeb-flat;Vergabeunterlagen/LV SLB-2026-0347.D83
+2.1.10;Fläche abräumen | *Aufwuchs*Wurzelstöcke*Astwerk*Steine*Mauer*Zaun Wst. Verwert. AN*S. Abr. Verwert. AN übr.Räumg. Verw. AN;1,0;psch;gaeb-flat;Vergabeunterlagen/LV SLB-2026-0347.D83
+2.1.20;Wurzelstöcke ausfräsen DU über 0,75 - 1,00 m *Tiefe über 30 - 60 cm, Fräsgut Verw. AN;7,0;St;gaeb-flat;Vergabeunterlagen/LV SLB-2026-0347.D83
+2.1.30;Deckschicht ohne Bindemittel abtragen;20,0;m²;gaeb-flat;Vergabeunterlagen/LV SLB-2026-0347.D83
+2.1.40;Betonsteinpflaster fachgerecht aufnehmen und lagern;20,0;m²;gaeb-flat;Vergabeunterlagen/LV SLB-2026-0347.D83
+2.1.50;Natursteinpflaster fachgerecht aufnehmen und lagern;250,0;m²;gaeb-flat;Vergabeunterlagen/LV SLB-2026-0347.D83
+2.1.60;Rückbau Zaunanlage Höhe ca. 2,00 m inkl. Verwertung und Entsorgung;25,0;m;gaeb-flat;Vergabeunterlagen/LV SLB-2026-0347.D83
+3.1.10;Oberboden abtragen *Abtrag bis 20 cm Oberb.Verw. AN *Abrechnung Abtrag;40,0;m³;gaeb-flat;Vergabeunterlagen/LV SLB-2026-0347.D83
+3.1.20;Graben für Leitungen herstellen Breite bis 1,00 m Verfüllboden ges. LAGA Z 2;100,0;m;gaeb-flat;Vergabeunterlagen/LV SLB-2026-0347.D83
+3.1.30;Graben für Leitungen herstellen Breite bis 1,25 m Verfüllboden ges. LAGA Z 0;5,0;m;gaeb-flat;Vergabeunterlagen/LV SLB-2026-0347.D83
+3.1.40;Graben für Leitungen herstellen Breite bis 1,25 m Verfüllboden ges. LAGA Z 1.1;5,0;m;gaeb-flat;Vergabeunterlagen/LV SLB-2026-0347.D83
+3.1.50;Graben für Leitungen herstellen Breite 1,25 m Verfüllboden ges. LAGA Z 1.2;180,0;m;gaeb-flat;Vergabeunterlagen/LV SLB-2026-0347.D83
+3.1.60;Graben für Leitungen herstellen Breite 1,25 m Verfüllboden ges. LAGA Z 2;150,0;m;gaeb-flat;Vergabeunterlagen/LV SLB-2026-0347.D83
+3.1.70;Baugrube herstellen, Abr. senkrecht;12,0;Stk;gaeb-flat;Vergabeunterlagen/LV SLB-2026-0347.D83
+3.1.80;Baustoff in Leitungsgraben einbauen Tiefe bis 1,00  m, Breite 1,00 m *oberh. Leitungszone;100,0;m;gaeb-flat;Vergabeunterlagen/LV SLB-2026-0347.D83
+3.1.90;Baustoff in Leitungsgraben einbauen Tiefe bis 1,00  m, Breite 1,25 m *oberh. Leitungszone;330,0;m;gaeb-flat;Vergabeunterlagen/LV SLB-2026-0347.D83
+3.1.100;Baustoff in Leitungsgraben einbauen Tiefe bis 1,00  m, Breite 2,70 m *oberh. Leitungszone;5,0;m;gaeb-flat;Vergabeunterlagen/LV SLB-2026-0347.D83
+3.1.110;Sand, steinfrei einbringen;100,0;m;gaeb-flat;Vergabeunterlagen/LV SLB-2026-0347.D83
+3.1.120;Sand, steinfrei einbringen;330,0;m;gaeb-flat;Vergabeunterlagen/LV SLB-2026-0347.D83
+3.1.130;Sand steinfrei einbringen;5,0;m;gaeb-flat;Vergabeunterlagen/LV SLB-2026-0347.D83
+3.1.140;Planum +/- 2 cm bis 1,00 m;100,0;m;gaeb-flat;Vergabeunterlagen/LV SLB-2026-0347.D83
+3.1.150;Planum +/- 2 cm bis 1,00 m;330,0;m;gaeb-flat;Vergabeunterlagen/LV SLB-2026-0347.D83
+3.1.160;Planum +/- 2 cm bis 1,00 m;5,0;m;gaeb-flat;Vergabeunterlagen/LV SLB-2026-0347.D83
+3.1.170;Nachverdichten bis 1,00 m;100,0;m;gaeb-flat;Vergabeunterlagen/LV SLB-2026-0347.D83
+3.1.180;Nachverdichten bis 1,00 m;330,0;m;gaeb-flat;Vergabeunterlagen/LV SLB-2026-0347.D83
+3.1.190;Nachverdichten bis 1,00 m;5,0;m;gaeb-flat;Vergabeunterlagen/LV SLB-2026-0347.D83
+3.1.200;Zulage für Handschachtung zu allen vorher beschriebenen Positionen bezüglich Erdaushub;100,0;m³;gaeb-flat;Vergabeunterlagen/LV SLB-2026-0347.D83
+3.1.210;Zulage für Sichern von Kabeln und Leitungen bis DN 150 bei Kreuzung;20,0;Stk;gaeb-flat;Vergabeunterlagen/LV SLB-2026-0347.D83
+3.1.220;Zulage Parallel führende Kabel und Leitungen sichern;300,0;m;gaeb-flat;Vergabeunterlagen/LV SLB-2026-0347.D83
+3.1.230;Boden für Baugrundersatz ausheben, Breite 1,00 m;100,0;m;gaeb-flat;Vergabeunterlagen/LV SLB-2026-0347.D83
+3.1.240;Boden für Baugrundersatz ausheben, Breite 1,25 m;330,0;m;gaeb-flat;Vergabeunterlagen/LV SLB-2026-0347.D83
+3.1.250;Baugrundersatz Schotter 0 / 56 einbauen, Breite 1,00 m;100,0;m;gaeb-flat;Vergabeunterlagen/LV SLB-2026-0347.D83
+3.1.260;Baugrundersatz Schotter 0 / 56 einbauen, Breite 1,25 m;330,0;m;gaeb-flat;Vergabeunterlagen/LV SLB-2026-0347.D83
+3.2.10;Kabelkleinschacht 80 x 80 x 1,00 cm liefern und einbauen;7,0;Stk;gaeb-flat;Vergabeunterlagen/LV SLB-2026-0347.D83
+3.2.20;Kabelkleinschacht 80 x 80 x 1,00 cm liefern und einbauen;5,0;Stk;gaeb-flat;Vergabeunterlagen/LV SLB-2026-0347.D83
+4.1.10;Oberboden liefern und andecken Seitenbereiche, Andeckung 15 cm, mit Rasenansaat abwalzen;150,0;m²;gaeb-flat;Vergabeunterlagen/LV SLB-2026-0347.D83
+4.1.20;Rasenansaat mit RSM herstellen Menge 15 g / m² *RSM;150,0;m²;gaeb-flat;Vergabeunterlagen/LV SLB-2026-0347.D83
+4.1.30;Rasenfläche herstellen einschl. Fertigstellungspflege;150,0;m²;gaeb-flat;Vergabeunterlagen/LV SLB-2026-0347.D83
+4.1.40;Deckschicht ohne Bindemittel liefern und herstellen, Dicke = 5 cm;20,0;m²;gaeb-flat;Vergabeunterlagen/LV SLB-2026-0347.D83
+4.1.50;Pflasterdecke aus Betonsteinen des AG  hersellen;20,0;m²;gaeb-flat;Vergabeunterlagen/LV SLB-2026-0347.D83
+4.1.60;Pflastersteine aus Beton zuarbeiten;2,0;m²;gaeb-flat;Vergabeunterlagen/LV SLB-2026-0347.D83
+4.1.70;Pfl.m. Großpfl. a. Nat.d. AG herst. Rad- und Gehwege*n. Unterlagen AG Pflaster gelagert*n. Unterlagen AG SZ22/LA25*Bett.0/8 30 v. H. Fuge 0/4*... Freitext ...;250,0;m²;gaeb-flat;Vergabeunterlagen/LV SLB-2026-0347.D83
+5.1.10;Oberboden abtragen *Abtrag bis 20 cm Oberb.Verw. AN *Abrechnung Abtrag;50,0;m³;gaeb-flat;Vergabeunterlagen/LV SLB-2026-0347.D83
+5.1.20;Betonsteinpflaster, gebunden abbrechen;40,0;m²;gaeb-flat;Vergabeunterlagen/LV SLB-2026-0347.D83
+5.1.30;Rückbau Zaunanlage Höhe ca. 2,00 m inkl. Verwertung und Entsorgung;30,0;m;gaeb-flat;Vergabeunterlagen/LV SLB-2026-0347.D83
+5.1.40;Rückbau Zauntor inkl. Verwertung und Entsorgung;1,0;Stk;gaeb-flat;Vergabeunterlagen/LV SLB-2026-0347.D83
+5.2.10;Oberboden liefern und andecken Seitenbereiche, Andeckung 15 cm, mit Rasenansaat abwalzen;200,0;m²;gaeb-flat;Vergabeunterlagen/LV SLB-2026-0347.D83
+5.2.20;Rasenansaat mit RSM herstellen Menge 15 g / m² *RSM;200,0;m²;gaeb-flat;Vergabeunterlagen/LV SLB-2026-0347.D83
+5.2.30;Rasenfläche herstellen einschl. Fertigstellungspflege;200,0;m²;gaeb-flat;Vergabeunterlagen/LV SLB-2026-0347.D83
+5.2.40;Pflasterdecke aus Betonsteinen des AG  hersellen;8,0;m²;gaeb-flat;Vergabeunterlagen/LV SLB-2026-0347.D83
+5.2.50;Pflastersteine aus Beton zuarbeiten;1,5;m²;gaeb-flat;Vergabeunterlagen/LV SLB-2026-0347.D83
+5.2.60;Pflasterdecke aus Betonsteinen des AG herstellen;6,0;m²;gaeb-flat;Vergabeunterlagen/LV SLB-2026-0347.D83
+5.2.70;Pflastersteine aus Beton zuarbeiten;1,5;m;gaeb-flat;Vergabeunterlagen/LV SLB-2026-0347.D83
+5.3.10;Stabmattenzaun liefern und fachgerecht montieren;40,0;m;gaeb-flat;Vergabeunterlagen/LV SLB-2026-0347.D83
+5.3.20;Plattenbelag mit Platten aus Beton liefern und herstellen;40,0;m;gaeb-flat;Vergabeunterlagen/LV SLB-2026-0347.D83
+5.3.30;Tor einflügelig für Stabgitterzaun liefern und fachgerecht montieren;1,0;St;gaeb-flat;Vergabeunterlagen/LV SLB-2026-0347.D83
+5.3.40;Pflanzfläche vorbereiten;40,0;m;gaeb-flat;Vergabeunterlagen/LV SLB-2026-0347.D83
+5.3.50;Lonicera henryi liefern und pflanzen;40,0;Stk;gaeb-flat;Vergabeunterlagen/LV SLB-2026-0347.D83
+5.3.60;Kletterrosen liefern und pflanzen;16,0;Stk;gaeb-flat;Vergabeunterlagen/LV SLB-2026-0347.D83
+5.3.70;Mulchschicht liefern und herstellen;24,0;m²;gaeb-flat;Vergabeunterlagen/LV SLB-2026-0347.D83
+5.3.80;Fertigstellungspflege;40,0;m;gaeb-flat;Vergabeunterlagen/LV SLB-2026-0347.D83

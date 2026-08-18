@@ -1,0 +1,87 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+00000001;Bau-/Einssatzst. einr. Tagbaust.;8,0;St;gaeb-flat;Leistungsverzeichnis/231-26-0009_LV_V1.D83
+00000002;Bau-/Einssatzst. einr. Nachtbst.;1,0;St;gaeb-flat;Leistungsverzeichnis/231-26-0009_LV_V1.D83
+00000003;Bau-/Einsatzst. räumen Tagbaust.;8,0;St;gaeb-flat;Leistungsverzeichnis/231-26-0009_LV_V1.D83
+00000004;Bau-/Einsatzst. räumen Nachtbaust;1,0;St;gaeb-flat;Leistungsverzeichnis/231-26-0009_LV_V1.D83
+00010001;Sicherung nach Vzpl. Nr. 1 Sperrung Überholfahrstreifen 3-streifigen Fahrbahnen;1,0;St;gaeb-flat;Leistungsverzeichnis/231-26-0009_LV_V1.D83
+00010002;Sicherung nach Vzpl. Nr. 1 Sperrung Überholfahrstreifen;1,0;St;gaeb-flat;Leistungsverzeichnis/231-26-0009_LV_V1.D83
+00010003;Sicherung nach Vzpl. Nr. 2 Sperrung Hauptfahrstreifen 3-streifigen Fahrbahnen;1,0;St;gaeb-flat;Leistungsverzeichnis/231-26-0009_LV_V1.D83
+00010004;Sicherung nach Vzpl. Nr. 2 Sperrung Hauptfahrstreifen;5,0;St;gaeb-flat;Leistungsverzeichnis/231-26-0009_LV_V1.D83
+00010005;Sicherung nach Vzpl. Sperrung Ausfahrt;1,0;St;gaeb-flat;Leistungsverzeichnis/231-26-0009_LV_V1.D83
+00010006;Sicherung nach Vzpl. Sperrung Auffahrt;1,0;St;gaeb-flat;Leistungsverzeichnis/231-26-0009_LV_V1.D83
+00010007;Sicherung nach Vzpl. Sperrung Parkplatz;1,0;St;gaeb-flat;Leistungsverzeichnis/231-26-0009_LV_V1.D83
+00010008;Sicherung nach Vzpl. Sperrung Arbeiten auf Rastplätzen;1,0;St;gaeb-flat;Leistungsverzeichnis/231-26-0009_LV_V1.D83
+00010009;Verk.sich. um 1 weiteren Tag vorh.;1,0;d;gaeb-flat;Leistungsverzeichnis/231-26-0009_LV_V1.D83
+00020001;Sicherung nach Vzpl. Nr. N1 Sperrung Überholfahrstreifen Nachts 3-streifigen Fahrbahnen;1,0;St;gaeb-flat;Leistungsverzeichnis/231-26-0009_LV_V1.D83
+00020002;Sicherung nach Vzpl. Nr. N1 Sperrung Überholfahrstreifen Nachts;1,0;St;gaeb-flat;Leistungsverzeichnis/231-26-0009_LV_V1.D83
+00020003;Sicherung nach Vzpl. Nr. N3 Sperrung Hauptfahrstreifen Nachts 3-streifigen Fahrbahnen;1,0;St;gaeb-flat;Leistungsverzeichnis/231-26-0009_LV_V1.D83
+00020004;Sicherung nach Vzpl. Nr. N3 Sperrung Hauptfahrstreifen Nachts;1,0;St;gaeb-flat;Leistungsverzeichnis/231-26-0009_LV_V1.D83
+00020005;Sicherung nach Vzpl. Sperrung Ausfahrt Nachts;1,0;St;gaeb-flat;Leistungsverzeichnis/231-26-0009_LV_V1.D83
+00020006;Sicherung nach Vzpl. Sperrung Auffahrt Nachts;1,0;St;gaeb-flat;Leistungsverzeichnis/231-26-0009_LV_V1.D83
+00030001;Betondecke schneiden ... Freitext ...*Dicke ü. 25-30 cm Oberfl. reinigen;25,0;m;gaeb-flat;Leistungsverzeichnis/231-26-0009_LV_V1.D83
+00030002;Betondecke aufnehmen Einzelplatten*Betondecke+Vlies ... Freitext ...*... Freitext ... Fugenfüllstoffe*Tiefe ü. 25-30 cm ... Freitext ...;20,0;m2;gaeb-flat;Leistungsverzeichnis/231-26-0009_LV_V1.D83
+00030003;Platte oder Plattenteil ersetzen Bk100 bis Bk3,2*... Freitext ... ... Freitext ...*... Freitext ... frühhochf. Beton*über 8 mm =C90/1 ... Freitext ...;20,0;m2;gaeb-flat;Leistungsverzeichnis/231-26-0009_LV_V1.D83
+00030004;Stemmarbeiten in Kleinflächen;10,0;m2;gaeb-flat;Leistungsverzeichnis/231-26-0009_LV_V1.D83
+00030005;Querscheinfuge herstellen ... Freitext ...*... Freitext ... ... Freitext ...*... Freitext ...;20,0;m;gaeb-flat;Leistungsverzeichnis/231-26-0009_LV_V1.D83
+00030006;Verank. Längsscheinfuge herstellen ... Freitext ...*... Freitext ... ... Freitext ...*Anker 20/80 ... Freitext ...;20,0;m;gaeb-flat;Leistungsverzeichnis/231-26-0009_LV_V1.D83
+00030007;Betondecke nachbeh. und schützen NBM aufbringen;20,0;m2;gaeb-flat;Leistungsverzeichnis/231-26-0009_LV_V1.D83
+00030008;Dübel liefern und einbauen;20,0;St;gaeb-flat;Leistungsverzeichnis/231-26-0009_LV_V1.D83
+00030009;Dübel liefern und verlegen;20,0;St;gaeb-flat;Leistungsverzeichnis/231-26-0009_LV_V1.D83
+00030010;Anker liefern und einbauen;5,0;St;gaeb-flat;Leistungsverzeichnis/231-26-0009_LV_V1.D83
+00030011;Anker liefern und verlegen;5,0;St;gaeb-flat;Leistungsverzeichnis/231-26-0009_LV_V1.D83
+00030012;Dübelhülsen liefern und einbauen;20,0;St;gaeb-flat;Leistungsverzeichnis/231-26-0009_LV_V1.D83
+00030013;Betondecke für sonst. Fläche herst. ... Freitext ...*... Freitext ... ... Freitext ...*... Freitext ... C30/37*... Freitext ...;10,0;m2;gaeb-flat;Leistungsverzeichnis/231-26-0009_LV_V1.D83
+00030014;Gefährl. Abfall aus Baustelle ents. Gebühr einrechn.;5,0;t;gaeb-flat;Leistungsverzeichnis/231-26-0009_LV_V1.D83
+00030015;Arbeitsraum für Schalung herstellen;15,0;m;gaeb-flat;Leistungsverzeichnis/231-26-0009_LV_V1.D83
+00030016;Schalung herstellen;15,0;m;gaeb-flat;Leistungsverzeichnis/231-26-0009_LV_V1.D83
+00040001;Betondecke bearbeiten;20,0;m2;gaeb-flat;Leistungsverzeichnis/231-26-0009_LV_V1.D83
+00040002;Betondecke beschichten;20,0;m2;gaeb-flat;Leistungsverzeichnis/231-26-0009_LV_V1.D83
+00040003;Querscheinfugen herstellen Fahrbahn ... Freitext ... Fugenkerbe T = 70 ... Freitext ... Einschneiden Kante 3/3 abfasen;35,0;m;gaeb-flat;Leistungsverzeichnis/231-26-0009_LV_V1.D83
+00050001;Asphaltbefestigung trennen ... Freitext ...*schneiden ... Freitext ...;30,0;m;gaeb-flat;Leistungsverzeichnis/231-26-0009_LV_V1.D83
+00050002;Asphaltbefestigung aufnehmen ... Freitext ...*... Freitext ... ... Freitext ...*... Freitext ...;25,0;m2;gaeb-flat;Leistungsverzeichnis/231-26-0009_LV_V1.D83
+00050003;Asphalt fräsen ADS*Tiefe ü.2,5-4,5cm ... Freitext ...*... Freitext ... ... Freitext ...;150,0;m2;gaeb-flat;Leistungsverzeichnis/231-26-0009_LV_V1.D83
+00050004;Asphalt fräsen ABS*Tiefe ü.4,5-6 cm ... Freitext ...*... Freitext ... ... Freitext ...;50,0;m2;gaeb-flat;Leistungsverzeichnis/231-26-0009_LV_V1.D83
+00050005;Unterlage reinigen ... Freitext ...*lose Teile aufn. Einzelflächen;200,0;m2;gaeb-flat;Leistungsverzeichnis/231-26-0009_LV_V1.D83
+00050006;Asphaltdecksch. aus MA 11 S herst. ... Freitext ...*... Freitext ... Bitumen 20/30+vvZ;5,0;t;gaeb-flat;Leistungsverzeichnis/231-26-0009_LV_V1.D83
+00050007;Asphaltdecksch. aus MA 11 S herst. ... Freitext ...*... Freitext ... Bitumen 20/30+vvZ;5,0;t;gaeb-flat;Leistungsverzeichnis/231-26-0009_LV_V1.D83
+00050008;Gussasphaltoberfläche bearbeiten maschin. abstr.*Verfahren A ungeb. verwert.;50,0;m2;gaeb-flat;Leistungsverzeichnis/231-26-0009_LV_V1.D83
+00050009;Naht oder Anschluss zur Fuge aufw. Längs-/Quernaht*... Freitext ... Tiefe 40 mm*Breite 20 mm schneiden;50,0;m;gaeb-flat;Leistungsverzeichnis/231-26-0009_LV_V1.D83
+00050010;Anschluss a. Fuge m. Fugenm. herst. Längs-/Querfuge*Deckschicht Tiefe 40 mm*Breite 20 mm Verf. mit Ufst.*Fugenmasse N2;50,0;m;gaeb-flat;Leistungsverzeichnis/231-26-0009_LV_V1.D83
+00050011;Bitumenemulsion aufsprühen Bk100-Bk3,2*Asphalt gefräst manuell*C40B5-S*Menge 300 g/m2 ... Freitext ...;150,0;m2;gaeb-flat;Leistungsverzeichnis/231-26-0009_LV_V1.D83
+00050012;Bitumenemulsion aufsprühen Bk100-Bk3,2*Asphalt frisch manuell*C40B5-S*Menge 250 g/m2 vor A.deckschicht;50,0;m2;gaeb-flat;Leistungsverzeichnis/231-26-0009_LV_V1.D83
+00050013;Asphalttragsch. aus AC 16 T S herst ... Freitext ...*... Freitext ... Bitumen 50/70;5,0;t;gaeb-flat;Leistungsverzeichnis/231-26-0009_LV_V1.D83
+00050014;Asphaltdecksch. aus AC 11 D S herst ... Freitext ...*... Freitext ... Bitumen 25/55-55A;150,0;m2;gaeb-flat;Leistungsverzeichnis/231-26-0009_LV_V1.D83
+00050015;Asphaltdecksch. aus AC 11 D S herst ... Freitext ...*... Freitext ... Bitumen 25/55-55A;50,0;m2;gaeb-flat;Leistungsverzeichnis/231-26-0009_LV_V1.D83
+00050016;Naht in Asphaltschicht herst. Naht ADS*Längs-/Quernaht PmB heiß*Dicke ü.2,5-4,5cm;100,0;m;gaeb-flat;Leistungsverzeichnis/231-26-0009_LV_V1.D83
+00050017;Abstumpfungsmaßnahme durchführen LFK 1/3*Menge 1 kg/m2;200,0;m2;gaeb-flat;Leistungsverzeichnis/231-26-0009_LV_V1.D83
+00050018;Erschwernis infolge Einbauten Erschwer. gesamt*Asphaltbefestig.;2,0;St;gaeb-flat;Leistungsverzeichnis/231-26-0009_LV_V1.D83
+00050019;Erschwernis infolge Einfassungen Erschwer. gesamt*Asphaltbefestig.;10,0;m;gaeb-flat;Leistungsverzeichnis/231-26-0009_LV_V1.D83
+00060001;"Str./Rinnen aus Betonst. aufn.; 1-2 Reihen";10,0;m;gaeb-flat;Leistungsverzeichnis/231-26-0009_LV_V1.D83
+00060002;"Str./Rinnen aus Betonst. aufn.; 3-5 Reihen";10,0;m;gaeb-flat;Leistungsverzeichnis/231-26-0009_LV_V1.D83
+00060003;"Str./Rinnen aus Naturst. aufn.; 1-2 Reihen";5,0;m;gaeb-flat;Leistungsverzeichnis/231-26-0009_LV_V1.D83
+00060004;"Str./Rinnen aus Naturst. aufn.; 3-5 Reihen";5,0;m;gaeb-flat;Leistungsverzeichnis/231-26-0009_LV_V1.D83
+00060005;"Rinne aus Beton-Pfl. d.  AG herst.; 1-2 zeilig";10,0;m;gaeb-flat;Leistungsverzeichnis/231-26-0009_LV_V1.D83
+00060006;"Rinne aus Beton-Pfl. d. AG herst.; 1-2 zeilig";10,0;m;gaeb-flat;Leistungsverzeichnis/231-26-0009_LV_V1.D83
+00060007;"Rinne a. Naturst-Pfl. d. AG herst.; 1-2 zeilig";5,0;m;gaeb-flat;Leistungsverzeichnis/231-26-0009_LV_V1.D83
+00060008;"Rinne a. Naturst-Pfl. d. AG herst.; 3-5 zeilig";5,0;m;gaeb-flat;Leistungsverzeichnis/231-26-0009_LV_V1.D83
+00060009;Pflaster umpflastern;10,0;m2;gaeb-flat;Leistungsverzeichnis/231-26-0009_LV_V1.D83
+00060010;Pflasterd. m. Bettung aufn.;10,0;m2;gaeb-flat;Leistungsverzeichnis/231-26-0009_LV_V1.D83
+00060011;Pflasterd.a. St. AG herst.;10,0;m2;gaeb-flat;Leistungsverzeichnis/231-26-0009_LV_V1.D83
+00060012;Pflastersteine zuarbeiten;15,0;m;gaeb-flat;Leistungsverzeichnis/231-26-0009_LV_V1.D83
+00060013;Pflasterdecken-Anpassung herstellen Einzelgr. b 0,5m2*Steine Pflasterd.;1,0;St;gaeb-flat;Leistungsverzeichnis/231-26-0009_LV_V1.D83
+00060014;Pflasterdecken-Anpassung herstellen Einzelgr. b0,75m2*Steine Pflasterd.;1,0;St;gaeb-flat;Leistungsverzeichnis/231-26-0009_LV_V1.D83
+00060015;Pflasterdecken-Anpassung herstellen Einzelgr. b 1,0m2*Steine Pflasterd.;1,0;St;gaeb-flat;Leistungsverzeichnis/231-26-0009_LV_V1.D83
+00070001;Bordstein aufnehmen. ... Freitext ...*Fund.ü10-20/R-St. Steine s.+ lagern*Verwertung AN;10,0;m;gaeb-flat;Leistungsverzeichnis/231-26-0009_LV_V1.D83
+00070002;Bordstein des AG setzen ... Freitext ...*... Freitext ... gerader Stein*... Freitext ... bis 10 cm unt.OK*... Freitext ...;10,0;m;gaeb-flat;Leistungsverzeichnis/231-26-0009_LV_V1.D83
+00070003;Bordstein des AG setzen ... Freitext ...*... Freitext ... ... Freitext ...*... Freitext ... bis 10 cm unt.OK*... Freitext ...;5,0;m;gaeb-flat;Leistungsverzeichnis/231-26-0009_LV_V1.D83
+00070004;Bordstein aufnehmen. ... Freitext ...*Fund.ü10-20/R-St. Steine s.+ lagern*Verwertung AN;10,0;m;gaeb-flat;Leistungsverzeichnis/231-26-0009_LV_V1.D83
+00070005;Bordstein des AG setzen ... Freitext ...*... Freitext ... gerader Stein*... Freitext ... bis 10 cm unt.OK*... Freitext ...;10,0;m;gaeb-flat;Leistungsverzeichnis/231-26-0009_LV_V1.D83
+00070006;Bordstein trennen ... Freitext ...*BSt.nassschneiden ... Freitext ...;10,0;St;gaeb-flat;Leistungsverzeichnis/231-26-0009_LV_V1.D83
+00070007;Bordstein trennen ... Freitext ...*BSt.nassschneiden ... Freitext ...;2,0;St;gaeb-flat;Leistungsverzeichnis/231-26-0009_LV_V1.D83
+00080001;Schachtabdeckung anpassen Höher bis 5 cm;2,0;St;gaeb-flat;Leistungsverzeichnis/231-26-0009_LV_V1.D83
+00080002;Schachtabdeckung anpassen Höher 5 bis 10 cm;2,0;St;gaeb-flat;Leistungsverzeichnis/231-26-0009_LV_V1.D83
+00080003;Schachtabdeckung anpassen Tiefer bis 10 cm;2,0;St;gaeb-flat;Leistungsverzeichnis/231-26-0009_LV_V1.D83
+00090001;Probegefäß liefern 10-l-Blecheimer*Mithilfe Kprüf.;1,0;St;gaeb-flat;Leistungsverzeichnis/231-26-0009_LV_V1.D83
+00090002;Probegefäß liefern Unlack.Blechdosen*Mithilfe Kprüf.;1,0;St;gaeb-flat;Leistungsverzeichnis/231-26-0009_LV_V1.D83
+00090003;Bohrkern entnehmen Kern-DU 15 cm*... Freitext ... Asphaltschicht*Verfül. Asphalt;1,0;St;gaeb-flat;Leistungsverzeichnis/231-26-0009_LV_V1.D83
+00090004;Probekörper herstellen 15 x 15 x 15 cm;1,0;St;gaeb-flat;Leistungsverzeichnis/231-26-0009_LV_V1.D83

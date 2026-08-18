@@ -1,0 +1,63 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+00000001;Baustelle einrichten;1,0;Psch;gaeb-flat;Leistungsverzeichnis/44-26-0004.D83
+00000002;Baustelleneinrichtung vorhalten;2,0;Mt;gaeb-flat;Leistungsverzeichnis/44-26-0004.D83
+00000003;Baustelle räumen;1,0;Psch;gaeb-flat;Leistungsverzeichnis/44-26-0004.D83
+00010001;Verkehrskonzept;1,0;Psch;gaeb-flat;Leistungsverzeichnis/44-26-0004.D83
+00010002;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*bew. Arbeitsst. ... Freitext ...*über 4 bis 8 Std.;4,0;St;gaeb-flat;Leistungsverzeichnis/44-26-0004.D83
+00010003;Verkehrssich. läng. Dauer aufbauen Arbeitsstelle*... Freitext ...;1,0;Psch;gaeb-flat;Leistungsverzeichnis/44-26-0004.D83
+00010004;Verkehrssich. läng. Dauer vorhalten wie Vorposition;3,0;d;gaeb-flat;Leistungsverzeichnis/44-26-0004.D83
+00010005;Verkehrssich. läng. Dauer abbauen ... Freitext ...*... Freitext ...;1,0;Psch;gaeb-flat;Leistungsverzeichnis/44-26-0004.D83
+00010006;Kontrolle d. Verkehrss. a. Uml.str. zweimal täglich*... Freitext ...;3,0;d;gaeb-flat;Leistungsverzeichnis/44-26-0004.D83
+00020001;Strauchbestand roden Höhe bis 2 m*verfüll/Baust. AN Wst.Verw.AN*S.Abr. Verw. AN;500,0;m2;gaeb-flat;Leistungsverzeichnis/44-26-0004.D83
+00020002;Bäume fällen DU über 0,1-0,3 m;1,0;St;gaeb-flat;Leistungsverzeichnis/44-26-0004.D83
+00020003;Einmessen der Erkundungsstellen;23,0;St;gaeb-flat;Leistungsverzeichnis/44-26-0004.D83
+00020004;Genehmigungen / Bohranzeige;1,0;Psch;gaeb-flat;Leistungsverzeichnis/44-26-0004.D83
+00020005;Leitungserkundung;1,0;Psch;gaeb-flat;Leistungsverzeichnis/44-26-0004.D83
+00020006;Zaun aufnehmen Maschendrahtzaun*Höhe 1,50-2,00 m Pfosten Stahl*Abstand bis 2,00m Pfosten in Boden*Material verwert.;4,0;m;gaeb-flat;Leistungsverzeichnis/44-26-0004.D83
+00020007;Maschendrahtzaun herstellen Zaunhöhe 2,00 m*St.pf. D 42mm Pf.L2,10m,D30 T70*Pfostenabst.2,00m Gefl.50x50ku.grün*Spdr.ku.3züg.grün Aushub verteilen;4,0;m;gaeb-flat;Leistungsverzeichnis/44-26-0004.D83
+00030001;Vorschachtung für Leitungssuche;15,0;m;gaeb-flat;Leistungsverzeichnis/44-26-0004.D83
+00040001;Gerät f. Baugrunderkundung;5,0;St;gaeb-flat;Leistungsverzeichnis/44-26-0004.D83
+00040002;Bohrung Tiefe 0 - 10 m;50,0;m;gaeb-flat;Leistungsverzeichnis/44-26-0004.D83
+00040003;Bohrung Tiefe 10 - 20 m;50,0;m;gaeb-flat;Leistungsverzeichnis/44-26-0004.D83
+00040004;Bohrung Tiefe 20 - 25 m;15,0;m;gaeb-flat;Leistungsverzeichnis/44-26-0004.D83
+00040005;Probe entnehmen;115,0;St;gaeb-flat;Leistungsverzeichnis/44-26-0004.D83
+00040006;Kernprobe mit Bohren entnehmen;115,0;m;gaeb-flat;Leistungsverzeichnis/44-26-0004.D83
+00040007;Bohrloch verfüllen;115,0;m;gaeb-flat;Leistungsverzeichnis/44-26-0004.D83
+00040008;Bohrkernlager einrichten;1,0;Psch;gaeb-flat;Leistungsverzeichnis/44-26-0004.D83
+00040009;Bohrkernlager betreiben;1,0;Psch;gaeb-flat;Leistungsverzeichnis/44-26-0004.D83
+00040010;Gerätestillstand;6,0;h;gaeb-flat;Leistungsverzeichnis/44-26-0004.D83
+00040011;Bohrhindernis beseitigen;5,0;h;gaeb-flat;Leistungsverzeichnis/44-26-0004.D83
+00050001;Gerät f. Baugrunderkundung;18,0;St;gaeb-flat;Leistungsverzeichnis/44-26-0004.D83
+00050002;Kleinbohrung Tiefe 0 - 5 m;90,0;m;gaeb-flat;Leistungsverzeichnis/44-26-0004.D83
+00050003;Kleinbohrung Tiefe 5 - 10 m;70,0;m;gaeb-flat;Leistungsverzeichnis/44-26-0004.D83
+00050004;Kleinbohrung Tiefe 10 - 15 m;10,0;m;gaeb-flat;Leistungsverzeichnis/44-26-0004.D83
+00050005;Probe entnehmen;170,0;St;gaeb-flat;Leistungsverzeichnis/44-26-0004.D83
+00050006;Bohrloch verfüllen;170,0;m;gaeb-flat;Leistungsverzeichnis/44-26-0004.D83
+00050007;Gerätestillstand;5,0;h;gaeb-flat;Leistungsverzeichnis/44-26-0004.D83
+00060001;Gerät f. Baugrunderkundung;18,0;St;gaeb-flat;Leistungsverzeichnis/44-26-0004.D83
+00060002;Rammsondierung Tiefe 0 - 5 m;90,0;m;gaeb-flat;Leistungsverzeichnis/44-26-0004.D83
+00060003;Rammsondierung Tiefe 5 - 10 m;70,0;m;gaeb-flat;Leistungsverzeichnis/44-26-0004.D83
+00060004;Rammsondierung Tiefe 10 - 15 m;10,0;m;gaeb-flat;Leistungsverzeichnis/44-26-0004.D83
+00060005;Gerätestillstand;5,0;h;gaeb-flat;Leistungsverzeichnis/44-26-0004.D83
+00070001;Gerät f. Baugrunderkundung;5,0;St;gaeb-flat;Leistungsverzeichnis/44-26-0004.D83
+00070002;Bohrlochrammsondierung durchführen ... Freitext ...;5,0;St;gaeb-flat;Leistungsverzeichnis/44-26-0004.D83
+00070003;Bohrlochrammsondierung durchführen ... Freitext ...;5,0;St;gaeb-flat;Leistungsverzeichnis/44-26-0004.D83
+00070004;Bohrlochrammsondierung durchführen ... Freitext ...;5,0;St;gaeb-flat;Leistungsverzeichnis/44-26-0004.D83
+00070005;Bohrlochrammsondierung durchführen ... Freitext ...;5,0;St;gaeb-flat;Leistungsverzeichnis/44-26-0004.D83
+00070006;Bohrlochrammsondierung durchführen ... Freitext ...;3,0;St;gaeb-flat;Leistungsverzeichnis/44-26-0004.D83
+00070007;Gerätestillstand;5,0;h;gaeb-flat;Leistungsverzeichnis/44-26-0004.D83
+00080001;Bohrlochsondierung durchführen;50,0;m;gaeb-flat;Leistungsverzeichnis/44-26-0004.D83
+00080002;Gerätestillstand;6,0;h;gaeb-flat;Leistungsverzeichnis/44-26-0004.D83
+00080003;Bohrhindernis beseitigen;5,0;h;gaeb-flat;Leistungsverzeichnis/44-26-0004.D83
+00080004;Tiefensond. Bohransatzpunkte;5,0;St;gaeb-flat;Leistungsverzeichnis/44-26-0004.D83
+00090001;Teilnahme Besprechung präsenz;2,0;St;gaeb-flat;Leistungsverzeichnis/44-26-0004.D83
+00090002;Teilnahme Besprechung digital;4,0;St;gaeb-flat;Leistungsverzeichnis/44-26-0004.D83
+00090003;Teilnahme an Ortsbegehungen;10,0;h;gaeb-flat;Leistungsverzeichnis/44-26-0004.D83
+00090004;Liefern der Proben;1,0;Psch;gaeb-flat;Leistungsverzeichnis/44-26-0004.D83
+00090005;Abholen und Entsorgen der Proben;1,0;Psch;gaeb-flat;Leistungsverzeichnis/44-26-0004.D83
+00090006;Wasserprobe entnehmen;2,0;St;gaeb-flat;Leistungsverzeichnis/44-26-0004.D83
+01000001;Bohransatzpunkt vertikal herst.;1,0;St;gaeb-flat;Leistungsverzeichnis/44-26-0004.D83
+01000002;Vertikale Kernbohr. durchf. Stb;1,0;St;gaeb-flat;Leistungsverzeichnis/44-26-0004.D83
+01000003;Vertikale Kernbohr. verschließen;1,0;St;gaeb-flat;Leistungsverzeichnis/44-26-0004.D83
+01000004;Probenahme Beschichtung Stahl;2,0;St;gaeb-flat;Leistungsverzeichnis/44-26-0004.D83
+01000005;Probenahme Mörtel;2,0;St;gaeb-flat;Leistungsverzeichnis/44-26-0004.D83

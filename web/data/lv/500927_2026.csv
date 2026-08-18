@@ -1,0 +1,649 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+0001;Außentemperatur-Messwertgeber, Einsatzbereich - 30 bis 60 Grad C, mit Sonnenschutzeinrichtung, für Wandmontage, Ausführung Ausgänge Feldgerät mit passivem Messelement Ni 1000, relativer Fehler max. 1,6 % vom Einsatzbereich, Gehäuse in Schutzart IP 65 DIN EN 60529 (VDE 0470-1).;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0002;Raumtemperatur-Messwertgeber, Einsatzbereich 0 bis 40 Grad C, für Aufputzmontage, Ausführung Ausgänge Feldgerät mit passivem Messelement Ni 1000, relativer Fehler max. 1 % vom Einsatzbereich, Gehäuse in Schutzart IP 2X DIN EN 60529 (VDE 0470-1).;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0003;Tauchtemperatur-Messwertgeber in Stabausführung, Einsatzbereich - 30 bis 150 Grad C, einschl. Schutzrohr mit Gewinde, PN 16, aus nichtrostendem Stahl, Einbaulänge 100 mm, aktive Messzone bis 50 mm, Ausführung Ausgänge Feldgerät mit passivem Messelement Ni 1000, relativer Fehler max. 1 % vom Einsatzb;2,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0004;Tauchtemperatur-Messwertgeber in Stabausführung, Einsatzbereich - 30 bis 150 Grad C, einschl. Schutzrohr mit Gewinde, PN 16, aus Messing, Einbaulänge 100 mm, aktive Messzone bis 50 mm, Ausführung Ausgänge Feldgerät mit passivem Messelement Ni 1000, relativer Fehler max. 1 % vom Einsatzbereich, Gehäu;8,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0005;Temperatur-Messwertgeber für Luftleitungen, Einsatzbereich - 30 bis 60 Grad C, mit Messstab, Einbaulänge 200 mm, Einbauflansch, Ausführung Ausgänge Feldgerät mit passivem Messelement Ni 1000, relativer Fehler max. 1 % vom Einsatzbereich.;5,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0006;Differenzdruck-Messwertgeber, für Luft,;2,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0007;Differenzdruck-Messwertgeber, für Luft,;5,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0008;Kombinierter Messwertgeber für Luftleitungen, Netzspannung 24 V AC, Schutzart IP 6X DIN EN 60529 (VDE 0470-1), Umgebungstemperatur -25 bis 55 Grad C, 10 bis 90 % relative Umgebungsfeuchte, mit 150 mm Messstab und Einbauflansch, Temperaturmessung, Ausführung Ausgänge Feldgerät mit aktivem Messsignal ;3,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0009;Frostschutzwächter für Luftleitungen, Sollwertsteller verdeckt innerhalb des Gehäuses, mit Kapillarrohr, Kapillarrohrhalterung und Einbauflansch, Kapillarrohrlänge mind. 6 m, mittelwertbildend über die gesamte Länge des Kapillarrohres, mit einer Schaltstufe,;2,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0010;Relative Feuchte-Wächter, Sollwertsteller verdeckt innerhalb des Gehäuses, für Luftleitung, geeignet für Luftgeschwindigkeiten bis 10 m/s, Einstellbereich 10 bis 100 % relative Feuchte, einschl. Montagezubehör, mit einer Schaltstufe,;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0011;Rauchmelder, mit allgemeiner bauaufsichtlicher Zulassung, für Luftleitung, geeignet für Geschwindigkeiten bis 20 m/s, mit Schaltzustandsanzeige am Einbauort, mit schaltendem Ausgang, Kontaktbelastung 230 V AC, 5 A, mit Meldekontakten für Rauchalarm und Wartungsmeldung, Umgebungstemperatur - 10 bis 6;2,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0012;Elektrischer Klappenstellantrieb, Umgebungstemperatur -20 bis 50 Grad C, Stellsignal für 3-Punktregelung 24 V AC/DC,;2,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0001;Automationseinrichtung, gemäß GA-Funktionsliste, Beiblatt 070-5, Netzart Sicherheitsstromversorgung SV, ohne Umschaltzeit, Umgebungstemperatur 0 bis 45 Grad C, relative Umgebungsfeuchte 5 bis 90 % (nicht kondensierend), für Einbau in Schaltschrank, mit Kommunikationsschnittstelle BACnet gemäß AMEV-T;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0002;Netzteil, Hutschiene, 230V, 2,5A;3,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0003;Konfektioniertes Datenkabel/Twisted Pair, Stecker/Stecker, DIN EN 50173-1 (VDE 0800-173-1), Kategorie 8 geprüft DIN EN 61935-2 (VDE 0819-935-2), halogenfrei,;3,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0004;Fast Ethernet Switch, 5 Port, unmanaged;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0005;Statische unterbrechungsfreie Stromversorgungsanlage DIN EN IEC 62040-1 (VDE 0558-510), DIN EN IEC 62040-2 (VDE 0558-520), DIN EN 62040-3 (VDE 0558-530),;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0006;Bediengerät für Automationseinrichtung, für Schaltschrankeinbau, mit Anschlusskabel und Stecker, Netzspannung 230 V AC, für Umgebungsbedingungen - 10 bis 60 Grad C, relative Umgebungsfeuchte 5 bis 90 % (nicht kondensierend), Schnittstelle passend zur Automationseinrichtung, Display farbig und grafik;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0007;Projektierung/Konfigurierung nach DIN EN ISO 16484-3;1,0;psch;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0008;Konfiguration der AS-Strategien gemäß DIN EN ISO 16484-3;1,0;psch;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0009;Inbetriebnahme der GA-Anlage gemäß DIN EN ISO 16484-3;1,0;psch;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0010;Datenpunktprüfung 1:1 Test;1,0;psch;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0011;Bestandsplan erstellen, mit CAD-Programm, anhand von Montageplänen des AN, Übergabe vor der Abnahme, als Papierzeichnung/Plotterausdruck und Datenträger/Schnittstelle zur CAD-Verarbeitung, einfach, farbig, gefaltet DIN A 4.;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0001;Datenschnittstelleneinheit (DSE) zum Datenaustausch zwischen;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0002;Koordination Schnittstelle M-Bus;4,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0003;Konfiguration Schnittstelle M-Bus;4,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0004;Inbetriebnahme Schnittstelle M-BUS;4,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0001;Datenschnittstelleneinheit (DSE) zum Datenaustausch zwischen;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0002;Koordination Schnittstelle Modbus RTU/TCP;143,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0003;Konfiguration Schnittstelle Modbus RTU/TCP;143,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0004;Inbetriebnahme Schnittstelle Modbus RTU/TCP;143,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0001;Koordination BACnet-Client;136,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0002;Konfiguration BACnet-Client;136,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0003;Inbetriebnahme BACnet-Client;136,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0001;Schrankfeld, als Einzelschrank, Maße H/B/T 2000/800/400 mm, mit Sockel, Höhe 200 mm, Kabeleinführung von unten, einschl. Abdichtung und Kabelabfangschiene, Tür mit Öffnungswinkel mind. 130 Grad, einflügelig.;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0002;Sichtfenster für Schaltschranktüraufbau,;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0003;Einspeisung mit Leistungsschalter einschl. thermischer und magnetischer Auslösung, für Bemessungsstrom 63 A, 3-polig, mit potentialfreien Hilfskontakten, Anzahl der potentialfreien Hilfskontakte 1 St, mit Phasenkontrollleuchten.;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0004;Hauptsammelschienensystem DIN EN IEC 61439-2 (VDE 0660-600-2), mit 3 Hauptleitern, Bemessungsbetriebsspannung 400 V AC, Bemessungsfrequenz 50 Hz, Bemessungsstrom 250 A,;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0005;Schaltschrankbeleuchtung mit Steckdose;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0006;Schutzkontaktsteckdose 230 V AC;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0007;Be- und Entlüftung für Schaltschrank, mit Schaltschrankventilator und Abströmöffnung, mit Filter,;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0008;Automatische Wiedereinschaltung;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0009;Netzwerkdose Hutschiene 1x RJ45;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0010;Hutschienennetzteil 24V DC, bis 10A;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0011;elektr. Schutzschalter für 24VDC;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0012;Steuerspannungstrafo 400V / 230V AC 500VA;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0013;Steuerspannungstrafo 230V / 24V AC 500VA;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0014;Überspannungsschutz Einspeisung bis 250A;3,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0015;Überspannungsschutz Außensensor bis 4 Adern;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0016;Montagegehäuse für Blitzschutz 30x30x15;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0017;Spannungsüberwachungsrelais;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0018;Motorbaugruppe 1st. bis 4kW 230V;2,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0019;Motorbaugruppe EC-Motor bis 4kW;2,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0020;Frostschutzschaltung;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0021;Filterüberwachung;2,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0022;Reparaturschalter Überwachung;3,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0023;Spannungsvervielfachung (Klemmen);9,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0024;Rauchmelder-Sicherheitsschaltung;2,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0025;Brandmeldeanlage-Sicherheitsschaltung;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0026;Feuchte-Überwachung;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0027;Überwachung ext. Meldung;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0028;Klappensteuerung AUF/ZU m. RM;2,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0029;Ansteuerung extern AUF/ZU;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0030;Sicherheitstemperaturschaltung;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0031;Sammelstörmeldung / Zentralentsperrung;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0032;Hilfsschütz;2,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0033;Koppelrelais steckbar;2,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0034;Sicherungsabgang 1pol. 16A Automat;2,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0035;Sicherungsabgang 1pol. 16A Automat HK;2,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0036;Sicherungsabgang 3pol. 16A Automat HK;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0037;Einbau und Verdrahtung der physikalischen Datenpunkte;65,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0038;Einbau der modularen Automationsstation;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0039;Türeinbau und Verdrahtung Beistellgeräte;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0040;Einbau und Verdrahtung Beistellgeräte;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0041;Ausführungsprojektierung GA-Schaltanlage (je ASP);1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0042;Inbetriebnahme der Niederspannungsschaltanlage;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0043;Bezeichnungsschild, Farbe und Beschriftung nach Angaben des AG, aus mehrschichtigem Kunststoff, Beschriftung 2-zeilig, gefräst, rechteckig, Höhe über 20 bis 30 mm, Breite über 90 bis 100 mm.;54,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0044;Netzwerk-Modul Hutschiene;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0045;Koordination zw. Gewerk GA u. Schaltanlage;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0046;Kabelmarker;194,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0047;Feuchtraum-Abzweigdose;20,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0048;Reparatur-Notschalter 32A-3P-HK;3,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0049;Anschluss beidseitig bis 6x2x0,8;50,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0050;Anschluss beidseitig bis 5x1,5mm²;34,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0051;Anschluss beidseitig bis 5x1,5mm²;13,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0001;Außentemperatur-Messwertgeber, Einsatzbereich - 30 bis 60 Grad C, mit Sonnenschutzeinrichtung, für Wandmontage, Ausführung Ausgänge Feldgerät mit passivem Messelement Ni 1000, relativer Fehler max. 1,6 % vom Einsatzbereich, Gehäuse in Schutzart IP 65 DIN EN 60529 (VDE 0470-1).;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0002;Raumtemperatur-Messwertgeber, Einsatzbereich 0 bis 40 Grad C, für Aufputzmontage, Ausführung Ausgänge Feldgerät mit passivem Messelement Ni 1000, relativer Fehler max. 1 % vom Einsatzbereich, Gehäuse in Schutzart IP 2X DIN EN 60529 (VDE 0470-1).;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0003;Tauchtemperatur-Messwertgeber in Stabausführung, Einsatzbereich - 30 bis 150 Grad C, einschl. Schutzrohr mit Gewinde, PN 16, aus nichtrostendem Stahl, Einbaulänge 100 mm, aktive Messzone bis 50 mm, Ausführung Ausgänge Feldgerät mit passivem Messelement Ni 1000, relativer Fehler max. 1 % vom Einsatzb;2,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0004;Tauchtemperatur-Messwertgeber in Stabausführung, Einsatzbereich - 30 bis 150 Grad C, einschl. Schutzrohr mit Gewinde, PN 16, aus Messing, Einbaulänge 100 mm, aktive Messzone bis 50 mm, Ausführung Ausgänge Feldgerät mit passivem Messelement Ni 1000, relativer Fehler max. 1 % vom Einsatzbereich, Gehäu;8,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0005;Temperatur-Messwertgeber für Luftleitungen, Einsatzbereich - 30 bis 60 Grad C, mit Messstab, Einbaulänge 200 mm, Einbauflansch, Ausführung Ausgänge Feldgerät mit passivem Messelement Ni 1000, relativer Fehler max. 1 % vom Einsatzbereich.;5,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0006;Differenzdruck-Messwertgeber, für Luft,;2,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0007;Differenzdruck-Messwertgeber, für Luft,;5,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0008;Kombinierter Messwertgeber für Luftleitungen, Netzspannung 24 V AC, Schutzart IP 6X DIN EN 60529 (VDE 0470-1), Umgebungstemperatur -25 bis 55 Grad C, 10 bis 90 % relative Umgebungsfeuchte, mit 150 mm Messstab und Einbauflansch, Temperaturmessung, Ausführung Ausgänge Feldgerät mit aktivem Messsignal ;3,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0009;Frostschutzwächter für Luftleitungen, Sollwertsteller verdeckt innerhalb des Gehäuses, mit Kapillarrohr, Kapillarrohrhalterung und Einbauflansch, Kapillarrohrlänge mind. 6 m, mittelwertbildend über die gesamte Länge des Kapillarrohres, mit einer Schaltstufe,;2,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0010;Relative Feuchte-Wächter, Sollwertsteller verdeckt innerhalb des Gehäuses, für Luftleitung, geeignet für Luftgeschwindigkeiten bis 10 m/s, Einstellbereich 10 bis 100 % relative Feuchte, einschl. Montagezubehör, mit einer Schaltstufe,;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0011;Rauchmelder, mit allgemeiner bauaufsichtlicher Zulassung, für Luftleitung, geeignet für Geschwindigkeiten bis 20 m/s, mit Schaltzustandsanzeige am Einbauort, mit schaltendem Ausgang, Kontaktbelastung 230 V AC, 5 A, mit Meldekontakten für Rauchalarm und Wartungsmeldung, Umgebungstemperatur - 10 bis 6;2,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0012;Elektrischer Klappenstellantrieb, Umgebungstemperatur -20 bis 50 Grad C, Stellsignal für 3-Punktregelung 24 V AC/DC,;2,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0001;Automationseinrichtung, gemäß GA-Funktionsliste, Beiblatt 070-5, Netzart Sicherheitsstromversorgung SV, ohne Umschaltzeit, Umgebungstemperatur 0 bis 45 Grad C, relative Umgebungsfeuchte 5 bis 90 % (nicht kondensierend), für Einbau in Schaltschrank, mit Kommunikationsschnittstelle BACnet gemäß AMEV-T;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0002;Netzteil, Hutschiene, 230V, 2,5A;3,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0003;Konfektioniertes Datenkabel/Twisted Pair, Stecker/Stecker, DIN EN 50173-1 (VDE 0800-173-1), Kategorie 8 geprüft DIN EN 61935-2 (VDE 0819-935-2), halogenfrei,;3,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0004;Fast Ethernet Switch, 5 Port, unmanaged;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0005;Statische unterbrechungsfreie Stromversorgungsanlage DIN EN IEC 62040-1 (VDE 0558-510), DIN EN IEC 62040-2 (VDE 0558-520), DIN EN 62040-3 (VDE 0558-530),;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0006;Bediengerät für Automationseinrichtung, für Schaltschrankeinbau, mit Anschlusskabel und Stecker, Netzspannung 230 V AC, für Umgebungsbedingungen - 10 bis 60 Grad C, relative Umgebungsfeuchte 5 bis 90 % (nicht kondensierend), Schnittstelle passend zur Automationseinrichtung, Display farbig und grafik;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0007;Projektierung/Konfigurierung nach DIN EN ISO 16484-3;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0008;Konfiguration der AS-Strategien gemäß DIN EN ISO 16484-3;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0009;Inbetriebnahme der GA-Anlage gemäß DIN EN ISO 16484-3;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0010;Datenpunktprüfung 1:1 Test;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0011;Bestandsplan erstellen, mit CAD-Programm, anhand von Montageplänen des AN, Übergabe vor der Abnahme, als Papierzeichnung/Plotterausdruck und Datenträger/Schnittstelle zur CAD-Verarbeitung, einfach, farbig, gefaltet DIN A 4.;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0001;Datenschnittstelleneinheit (DSE) zum Datenaustausch zwischen;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0002;Koordination Schnittstelle M-Bus;4,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0003;Konfiguration Schnittstelle M-Bus;4,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0004;Inbetriebnahme Schnittstelle M-BUS;4,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0001;Datenschnittstelleneinheit (DSE) zum Datenaustausch zwischen;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0002;Koordination Schnittstelle Modbus RTU/TCP;143,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0003;Konfiguration Schnittstelle Modbus RTU/TCP;143,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0004;Inbetriebnahme Schnittstelle Modbus RTU/TCP;143,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0001;Koordination BACnet-Client;136,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0002;Konfiguration BACnet-Client;136,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0003;Inbetriebnahme BACnet-Client;136,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0001;Schrankfeld, als Einzelschrank, Maße H/B/T 2000/800/400 mm, mit Sockel, Höhe 200 mm, Kabeleinführung von unten, einschl. Abdichtung und Kabelabfangschiene, Tür mit Öffnungswinkel mind. 130 Grad, einflügelig.;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0002;Sichtfenster für Schaltschranktüraufbau,;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0003;Einspeisung mit Leistungsschalter einschl. thermischer und magnetischer Auslösung, für Bemessungsstrom 63 A, 3-polig, mit potentialfreien Hilfskontakten, Anzahl der potentialfreien Hilfskontakte 1 St, mit Phasenkontrollleuchten.;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0004;Hauptsammelschienensystem DIN EN IEC 61439-2 (VDE 0660-600-2), mit 3 Hauptleitern, Bemessungsbetriebsspannung 400 V AC, Bemessungsfrequenz 50 Hz, Bemessungsstrom 250 A,;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0005;Schaltschrankbeleuchtung mit Steckdose;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0006;Schutzkontaktsteckdose 230 V AC;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0007;Be- und Entlüftung für Schaltschrank, mit Schaltschrankventilator und Abströmöffnung, mit Filter,;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0008;Automatische Wiedereinschaltung;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0009;Netzwerkdose Hutschiene 1x RJ45;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0010;Hutschienennetzteil 24V DC, bis 10A;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0011;elektr. Schutzschalter für 24VDC;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0012;Steuerspannungstrafo 400V / 230V AC 500VA;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0013;Steuerspannungstrafo 230V / 24V AC 500VA;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0014;Überspannungsschutz Einspeisung bis 250A;3,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0015;Überspannungsschutz Außensensor bis 4 Adern;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0016;Montagegehäuse für Blitzschutz 30x30x15;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0017;Spannungsüberwachungsrelais;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0018;Motorbaugruppe 1st. bis 4kW 230V;2,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0019;Motorbaugruppe EC-Motor bis 4kW;2,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0020;Frostschutzschaltung;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0021;Filterüberwachung;2,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0022;Reparaturschalter Überwachung;3,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0023;Spannungsvervielfachung (Klemmen);9,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0024;Rauchmelder-Sicherheitsschaltung;2,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0025;Brandmeldeanlage-Sicherheitsschaltung;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0026;Feuchte-Überwachung;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0027;Überwachung ext. Meldung;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0028;Klappensteuerung AUF/ZU m. RM;2,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0029;Ansteuerung extern AUF/ZU;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0030;Sicherheitstemperaturschaltung;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0031;Sammelstörmeldung / Zentralentsperrung;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0032;Hilfsschütz;2,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0033;Koppelrelais steckbar;2,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0034;Sicherungsabgang 1pol. 16A Automat;2,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0035;Sicherungsabgang 1pol. 16A Automat HK;2,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0036;Sicherungsabgang 3pol. 16A Automat HK;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0037;Einbau und Verdrahtung der physikalischen Datenpunkte;62,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0038;Einbau der modularen Automationsstation;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0039;Türeinbau und Verdrahtung Beistellgeräte;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0040;Einbau und Verdrahtung Beistellgeräte;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0041;Ausführungsprojektierung GA-Schaltanlage (je ASP);1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0042;Inbetriebnahme der Niederspannungsschaltanlage;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0043;Bezeichnungsschild, Farbe und Beschriftung nach Angaben des AG, aus mehrschichtigem Kunststoff, Beschriftung 2-zeilig, gefräst, rechteckig, Höhe über 20 bis 30 mm, Breite über 90 bis 100 mm.;54,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0044;Netzwerk-Modul Hutschiene;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0045;Koordination zw. Gewerk GA u. Schaltanlage;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0046;Kabelmarker;194,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0047;Feuchtraum-Abzweigdose;20,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0048;Reparatur-Notschalter 32A-3P-HK;3,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0049;Anschluss beidseitig bis 6x2x0,8;50,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0050;Anschluss beidseitig bis 5x1,5mm²;34,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0051;Anschluss beidseitig bis 5x1,5mm²;13,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0001;Raumtemperatur-Messwertgeber, Einsatzbereich 0 bis 40 Grad C, für Aufputzmontage, Ausführung Ausgänge Feldgerät mit Messsignal passend zum Automationssystem, relativer Fehler max. 1 % vom Einsatzbereich, Gehäuse in Schutzart IP 2X DIN EN 60529 (VDE 0470-1).;5,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0002;Kombinierter Messwertgeber für Räume, für Unterputzmontage, Schutzart IP 3X DIN EN 60529 (VDE 0470-1), Umgebungstemperatur 5 bis 40 Grad C, 10 bis 90 % relative Umgebungsfeuchte, Ausführung Kommunikationsschnittstelle Feldgerät Kommunikationsprotokoll Modbus RTU, Temperaturmessung, relativer Fehler ;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0003;Tauchtemperatur-Messwertgeber in Stabausführung, Einsatzbereich - 30 bis 150 Grad C, einschl. Schutzrohr mit Gewinde, PN 16, aus nichtrostendem Stahl, Einbaulänge 100 mm, aktive Messzone bis 50 mm, Ausführung Ausgänge Feldgerät mit passivem Messelement Ni 1000, relativer Fehler max. 1 % vom Einsatzb;6,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0004;Tauchtemperatur-Messwertgeber in Stabausführung, Einsatzbereich - 30 bis 150 Grad C, einschl. Schutzrohr mit Gewinde, PN 16, aus Messing, Einbaulänge 100 mm, aktive Messzone bis 50 mm, Ausführung Ausgänge Feldgerät mit passivem Messelement Ni 1000, relativer Fehler max. 1 % vom Einsatzbereich, Gehäu;10,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0005;Temperatur-Messwertgeber für Luftleitungen, Einsatzbereich - 30 bis 60 Grad C, mit Messstab, Einbaulänge 200 mm, Einbauflansch, Ausführung Ausgänge Feldgerät mit passivem Messelement Ni 1000, relativer Fehler max. 1 % vom Einsatzbereich.;2,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0006;Differenzdruck-Messwertgeber, für Luft,;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0007;Differenzdruck-Messwertgeber, für Luft,;2,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0008;Relative Feuchte-Wächter, Sollwertsteller verdeckt innerhalb des Gehäuses, für Luftleitung, geeignet für Luftgeschwindigkeiten bis 10 m/s, Einstellbereich 10 bis 100 % relative Feuchte, einschl. Montagezubehör, mit einer Schaltstufe,;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0009;Rauchmelder, mit allgemeiner bauaufsichtlicher Zulassung, für Luftleitung, geeignet für Geschwindigkeiten bis 20 m/s, mit Schaltzustandsanzeige am Einbauort, mit schaltendem Ausgang, Kontaktbelastung 230 V AC, 5 A, mit Meldekontakten für Rauchalarm und Wartungsmeldung, Umgebungstemperatur - 10 bis 6;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0010;Elektrischer Klappenstellantrieb, Umgebungstemperatur -20 bis 50 Grad C, Stellsignal für 3-Punktregelung 24 V AC/DC,;6,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0011;Kleinstellantrieb, elektromotorisch, Stellsignal buskompatibel, Kommunikationsprotokoll Modbus RTU, für Heizkörperventile mit einem max. Hub von 4,5 mm, mit gehäusefester Anschlussleitung, Länge mind. 0,5 m, zur Montage auf Ventilkörper, Bemessungsbetriebsspannung 24 V AC/DC.;3,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0001;Automationseinrichtung, gemäß GA-Funktionsliste, Beiblatt 070-5, Netzart Sicherheitsstromversorgung SV, ohne Umschaltzeit, Umgebungstemperatur 0 bis 45 Grad C, relative Umgebungsfeuchte 5 bis 90 % (nicht kondensierend), für Einbau in Schaltschrank, mit Kommunikationsschnittstelle BACnet gemäß AMEV-T;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0002;Modbus/RTU-Modul;2,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0003;Netzteil, Hutschiene, 230V, 2,5A;2,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0004;Konfektioniertes Datenkabel/Twisted Pair, Stecker/Stecker, DIN EN 50173-1 (VDE 0800-173-1), Kategorie 8 geprüft DIN EN 61935-2 (VDE 0819-935-2), halogenfrei,;2,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0005;Fast Ethernet Switch, 5 Port, unmanaged;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0006;Statische unterbrechungsfreie Stromversorgungsanlage DIN EN IEC 62040-1 (VDE 0558-510), DIN EN IEC 62040-2 (VDE 0558-520), DIN EN 62040-3 (VDE 0558-530),;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0007;Bediengerät für Automationseinrichtung, für Schaltschrankeinbau, mit Anschlusskabel und Stecker, Netzspannung 230 V AC, für Umgebungsbedingungen - 10 bis 60 Grad C, relative Umgebungsfeuchte 5 bis 90 % (nicht kondensierend), Schnittstelle passend zur Automationseinrichtung, Display farbig und grafik;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0008;Projektierung/Konfigurierung nach DIN EN ISO 16484-3;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0009;Konfiguration der AS-Strategien gemäß DIN EN ISO 16484-3;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0010;Inbetriebnahme der GA-Anlage gemäß DIN EN ISO 16484-3;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0011;Datenpunktprüfung 1:1 Test;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0012;Bestandsplan erstellen, mit CAD-Programm, anhand von Montageplänen des AN, Übergabe vor der Abnahme, als Papierzeichnung/Plotterausdruck und Datenträger/Schnittstelle zur CAD-Verarbeitung, einfach, farbig, gefaltet DIN A 4.;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0001;Raumautomationseinrichtung, mit Busschnittstelle BACnet Normprotokoll DIN EN ISO 16484-5, einschl. Anzahl und Art physikalischer Ein-/Ausgänge passend zu Funktionen, Bezeichnung, Typ, Stückpreis und Anzahl der Hardwarekomponenten siehe Beiblatt 070-4.;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0002;modulares BACnet/SC-Controller-Modul Modbus;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0003;modulares BACnet/SC-Controller-Modul SMI;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0004;Remote-IO-Modul, 230VAC, 4Rel,4UI,4DI/CI;3,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0005;Bedien- und Anzeigeeinrichtung, als stationäre Einheit, für Unterputzmontage, Netzspannung 24 V AC, mit Touch-Screen-Display, mit Bedien-/Anzeigefunktion:;4,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0006;Multisensor Bluetooth, Ethernet;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0007;Multisensor Bluetooth;6,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0008;Projektierung/Konfigurierung der gesamten RA;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0009;Konfiguration aller Raumcontroller;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0010;Inbetriebnahme aller Raumcontroller;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0011;Bestandsplan erstellen, mit CAD-Programm, anhand von Montageplänen des AN, Übergabe vor der Abnahme, als Papierzeichnung/Plotterausdruck und Datenträger/Schnittstelle zur CAD-Verarbeitung, einfach, farbig, gefaltet DIN A 4.;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0001;Datenschnittstelleneinheit (DSE) zum Datenaustausch zwischen;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0002;Koordination Schnittstelle M-Bus;4,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0003;Konfiguration Schnittstelle M-Bus;4,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0004;Inbetriebnahme Schnittstelle M-BUS;4,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0001;RS485-Modbus-Modul;6,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0002;Datenschnittstelleneinheit (DSE) zum Datenaustausch zwischen;4,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0003;Koordination Schnittstelle Modbus RTU/TCP;309,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0004;Konfiguration Schnittstelle Modbus RTU/TCP;309,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0005;Inbetriebnahme Schnittstelle Modbus RTU/TCP;309,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0001;Koordination BACnet-Client;662,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0002;Konfiguration BACnet-Client;662,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0003;Inbetriebnahme BACnet-Client;662,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0001;Schrankfeld, als Einzelschrank, Maße H/B/T 2000/800/400 mm, mit Sockel, Höhe 200 mm, Kabeleinführung von unten, einschl. Abdichtung und Kabelabfangschiene, Tür mit Öffnungswinkel mind. 130 Grad, einflügelig.;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0002;Sichtfenster für Schaltschranktüraufbau,;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0003;Einspeisung mit Leistungsschalter einschl. thermischer und magnetischer Auslösung, für Bemessungsstrom 63 A, 3-polig, mit potentialfreien Hilfskontakten, Anzahl der potentialfreien Hilfskontakte 1 St, mit Phasenkontrollleuchten.;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0004;Hauptsammelschienensystem DIN EN IEC 61439-2 (VDE 0660-600-2), mit 3 Hauptleitern, Bemessungsbetriebsspannung 400 V AC, Bemessungsfrequenz 50 Hz, Bemessungsstrom 250 A,;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0005;Schaltschrankbeleuchtung mit Steckdose;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0006;Schutzkontaktsteckdose 230 V AC;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0007;Be- und Entlüftung für Schaltschrank, mit Schaltschrankventilator und Abströmöffnung, mit Filter,;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0008;Automatische Wiedereinschaltung;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0009;Netzwerkdose Hutschiene 1x RJ45;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0010;Hutschienennetzteil 24V DC, bis 10A;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0011;elektr. Schutzschalter für 24VDC;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0012;Steuerspannungstrafo 400V / 230V AC 500VA;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0013;Steuerspannungstrafo 230V / 24V AC 500VA;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0014;Überspannungsschutz Einspeisung bis 250A;3,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0015;Überspannungsschutz Außensensor bis 4 Adern;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0016;Montagegehäuse für Blitzschutz 30x30x15;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0017;Spannungsüberwachungsrelais;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0018;Motorbaugruppe EC-Motor bis 4kW;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0019;Filterüberwachung;2,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0020;Reparaturschalter Überwachung;3,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0021;Spannungsvervielfachung (Klemmen);9,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0022;Rauchmelder-Sicherheitsschaltung;2,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0023;Brandmeldeanlage-Sicherheitsschaltung;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0024;Klappensteuerung AUF/ZU m. RM;6,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0025;Sammelstörmeldung / Zentralentsperrung;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0026;Hilfsschütz;2,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0027;Koppelrelais steckbar;2,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0028;Sicherungsabgang 1pol. 16A Automat HK;2,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0029;Sicherungsabgang 3pol. 16A Automat HK;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0030;Einbau und Verdrahtung der physikalischen Datenpunkte;67,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0031;Türeinbau und Verdrahtung Beistellgeräte;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0032;Einbau und Verdrahtung Beistellgeräte;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0033;Ausführungsprojektierung GA-Schaltanlage (je ASP);1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0034;Inbetriebnahme der Niederspannungsschaltanlage;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0035;Bezeichnungsschild, Farbe und Beschriftung nach Angaben des AG, aus mehrschichtigem Kunststoff, Beschriftung 2-zeilig, gefräst, rechteckig, Höhe über 20 bis 30 mm, Breite über 90 bis 100 mm.;102,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0036;Netzwerk-Modul Hutschiene;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0037;Koordination zw. Gewerk GA u. Schaltanlage;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0038;Kabelmarker;526,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0039;Feuchtraum-Abzweigdose;40,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0040;Reparatur-Notschalter 32A-3P-HK;3,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0041;Anschluss beidseitig bis 6x2x0,8;128,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0042;Anschluss beidseitig bis 5x1,5mm²;95,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0043;Anschluss beidseitig bis 5x1,5mm²;27,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0001;Raumtemperatur-Messwertgeber, Einsatzbereich 0 bis 40 Grad C, für Aufputzmontage, Ausführung Ausgänge Feldgerät mit Messsignal passend zum Automationssystem, relativer Fehler max. 1 % vom Einsatzbereich, Gehäuse in Schutzart IP 2X DIN EN 60529 (VDE 0470-1).;4,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0002;Kombinierter Messwertgeber für Räume, für Unterputzmontage, Schutzart IP 3X DIN EN 60529 (VDE 0470-1), Umgebungstemperatur 5 bis 40 Grad C, 10 bis 90 % relative Umgebungsfeuchte, Ausführung Kommunikationsschnittstelle Feldgerät Kommunikationsprotokoll Modbus RTU, Temperaturmessung, relativer Fehler ;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0003;Tauchtemperatur-Messwertgeber in Stabausführung, Einsatzbereich - 30 bis 150 Grad C, einschl. Schutzrohr mit Gewinde, PN 16, aus nichtrostendem Stahl, Einbaulänge 100 mm, aktive Messzone bis 50 mm, Ausführung Ausgänge Feldgerät mit passivem Messelement Ni 1000, relativer Fehler max. 1 % vom Einsatzb;6,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0004;Tauchtemperatur-Messwertgeber in Stabausführung, Einsatzbereich - 30 bis 150 Grad C, einschl. Schutzrohr mit Gewinde, PN 16, aus Messing, Einbaulänge 100 mm, aktive Messzone bis 50 mm, Ausführung Ausgänge Feldgerät mit passivem Messelement Ni 1000, relativer Fehler max. 1 % vom Einsatzbereich, Gehäu;10,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0005;Temperatur-Messwertgeber für Luftleitungen, Einsatzbereich - 30 bis 60 Grad C, mit Messstab, Einbaulänge 200 mm, Einbauflansch, Ausführung Ausgänge Feldgerät mit passivem Messelement Ni 1000, relativer Fehler max. 1 % vom Einsatzbereich.;2,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0006;Differenzdruck-Messwertgeber, für Luft,;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0007;Differenzdruck-Messwertgeber, für Luft,;2,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0008;Relative Feuchte-Wächter, Sollwertsteller verdeckt innerhalb des Gehäuses, für Luftleitung, geeignet für Luftgeschwindigkeiten bis 10 m/s, Einstellbereich 10 bis 100 % relative Feuchte, einschl. Montagezubehör, mit einer Schaltstufe,;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0009;Rauchmelder, mit allgemeiner bauaufsichtlicher Zulassung, für Luftleitung, geeignet für Geschwindigkeiten bis 20 m/s, mit Schaltzustandsanzeige am Einbauort, mit schaltendem Ausgang, Kontaktbelastung 230 V AC, 5 A, mit Meldekontakten für Rauchalarm und Wartungsmeldung, Umgebungstemperatur - 10 bis 6;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0010;Elektrischer Klappenstellantrieb, Umgebungstemperatur -20 bis 50 Grad C, Stellsignal für 3-Punktregelung 24 V AC/DC,;6,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0011;Kleinstellantrieb, elektromotorisch, Stellsignal buskompatibel, Kommunikationsprotokoll Modbus RTU, für Heizkörperventile mit einem max. Hub von 4,5 mm, mit gehäusefester Anschlussleitung, Länge mind. 0,5 m, zur Montage auf Ventilkörper, Bemessungsbetriebsspannung 24 V AC/DC.;2,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0001;Automationseinrichtung, gemäß GA-Funktionsliste, Beiblatt 070-5, Netzart Sicherheitsstromversorgung SV, ohne Umschaltzeit, Umgebungstemperatur 0 bis 45 Grad C, relative Umgebungsfeuchte 5 bis 90 % (nicht kondensierend), für Einbau in Schaltschrank, mit Kommunikationsschnittstelle BACnet gemäß AMEV-T;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0002;Modbus/RTU-Modul;2,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0003;Netzteil, Hutschiene, 230V, 2,5A;2,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0004;Konfektioniertes Datenkabel/Twisted Pair, Stecker/Stecker, DIN EN 50173-1 (VDE 0800-173-1), Kategorie 8 geprüft DIN EN 61935-2 (VDE 0819-935-2), halogenfrei,;2,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0005;Fast Ethernet Switch, 5 Port, unmanaged;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0006;Statische unterbrechungsfreie Stromversorgungsanlage DIN EN IEC 62040-1 (VDE 0558-510), DIN EN IEC 62040-2 (VDE 0558-520), DIN EN 62040-3 (VDE 0558-530),;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0007;Bediengerät für Automationseinrichtung, für Schaltschrankeinbau, mit Anschlusskabel und Stecker, Netzspannung 230 V AC, für Umgebungsbedingungen - 10 bis 60 Grad C, relative Umgebungsfeuchte 5 bis 90 % (nicht kondensierend), Schnittstelle passend zur Automationseinrichtung, Display farbig und grafik;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0008;Projektierung/Konfigurierung nach DIN EN ISO 16484-3;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0009;Konfiguration der AS-Strategien gemäß DIN EN ISO 16484-3;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0010;Inbetriebnahme der GA-Anlage gemäß DIN EN ISO 16484-3;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0011;Datenpunktprüfung 1:1 Test;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0012;Bestandsplan erstellen, mit CAD-Programm, anhand von Montageplänen des AN, Übergabe vor der Abnahme, als Papierzeichnung/Plotterausdruck und Datenträger/Schnittstelle zur CAD-Verarbeitung, einfach, farbig, gefaltet DIN A 4.;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0001;Raumautomationseinrichtung, mit Busschnittstelle BACnet Normprotokoll DIN EN ISO 16484-5, einschl. Anzahl und Art physikalischer Ein-/Ausgänge passend zu Funktionen, Bezeichnung, Typ, Stückpreis und Anzahl der Hardwarekomponenten siehe Beiblatt 070-4.;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0002;modulares BACnet/SC-Controller-Modul Modbus;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0003;modulares BACnet/SC-Controller-Modul SMI;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0004;Remote-IO-Modul, 230VAC, 4Rel,4UI,4DI/CI;3,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0005;Bedien- und Anzeigeeinrichtung, als stationäre Einheit, für Unterputzmontage, Netzspannung 24 V AC, mit Touch-Screen-Display, mit Bedien-/Anzeigefunktion:;3,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0006;Jalousietaster;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0007;Multisensor Bluetooth, Ethernet;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0008;Multisensor Bluetooth;5,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0009;Projektierung/Konfigurierung der gesamten RA;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0010;Konfiguration aller Raumcontroller;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0011;Inbetriebnahme aller Raumcontroller;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0012;Bestandsplan erstellen, mit CAD-Programm, anhand von Montageplänen des AN, Übergabe vor der Abnahme, als Papierzeichnung/Plotterausdruck und Datenträger/Schnittstelle zur CAD-Verarbeitung, einfach, farbig, gefaltet DIN A 4.;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0001;Datenschnittstelleneinheit (DSE) zum Datenaustausch zwischen;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0002;Koordination Schnittstelle M-Bus;4,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0003;Konfiguration Schnittstelle M-Bus;4,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0004;Inbetriebnahme Schnittstelle M-BUS;4,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0001;RS485-Modbus-Modul;6,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0002;Datenschnittstelleneinheit (DSE) zum Datenaustausch zwischen;4,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0003;Koordination Schnittstelle Modbus RTU/TCP;309,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0004;Konfiguration Schnittstelle Modbus RTU/TCP;309,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0005;Inbetriebnahme Schnittstelle Modbus RTU/TCP;309,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0001;Koordination BACnet-Client;662,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0002;Konfiguration BACnet-Client;662,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0003;Inbetriebnahme BACnet-Client;662,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0001;Schrankfeld, als Einzelschrank, Maße H/B/T 2000/800/400 mm, mit Sockel, Höhe 200 mm, Kabeleinführung von unten, einschl. Abdichtung und Kabelabfangschiene, Tür mit Öffnungswinkel mind. 130 Grad, einflügelig.;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0002;Sichtfenster für Schaltschranktüraufbau,;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0003;Einspeisung mit Leistungsschalter einschl. thermischer und magnetischer Auslösung, für Bemessungsstrom 63 A, 3-polig, mit potentialfreien Hilfskontakten, Anzahl der potentialfreien Hilfskontakte 1 St, mit Phasenkontrollleuchten.;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0004;Hauptsammelschienensystem DIN EN IEC 61439-2 (VDE 0660-600-2), mit 3 Hauptleitern, Bemessungsbetriebsspannung 400 V AC, Bemessungsfrequenz 50 Hz, Bemessungsstrom 250 A,;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0005;Schaltschrankbeleuchtung mit Steckdose;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0006;Schutzkontaktsteckdose 230 V AC;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0007;Be- und Entlüftung für Schaltschrank, mit Schaltschrankventilator und Abströmöffnung, mit Filter,;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0008;Automatische Wiedereinschaltung;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0009;Netzwerkdose Hutschiene 1x RJ45;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0010;Hutschienennetzteil 24V DC, bis 10A;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0011;elektr. Schutzschalter für 24VDC;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0012;Steuerspannungstrafo 400V / 230V AC 500VA;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0013;Steuerspannungstrafo 230V / 24V AC 500VA;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0014;Überspannungsschutz Einspeisung bis 250A;3,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0015;Überspannungsschutz Außensensor bis 4 Adern;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0016;Montagegehäuse für Blitzschutz 30x30x15;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0017;Spannungsüberwachungsrelais;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0018;Motorbaugruppe EC-Motor bis 4kW;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0019;Filterüberwachung;2,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0020;Reparaturschalter Überwachung;3,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0021;Spannungsvervielfachung (Klemmen);9,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0022;Rauchmelder-Sicherheitsschaltung;2,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0023;Brandmeldeanlage-Sicherheitsschaltung;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0024;Klappensteuerung AUF/ZU m. RM;6,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0025;Sammelstörmeldung / Zentralentsperrung;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0026;Hilfsschütz;2,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0027;Koppelrelais steckbar;2,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0028;Sicherungsabgang 1pol. 16A Automat HK;2,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0029;Sicherungsabgang 3pol. 16A Automat HK;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0030;Einbau und Verdrahtung der physikalischen Datenpunkte;61,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0031;Türeinbau und Verdrahtung Beistellgeräte;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0032;Einbau und Verdrahtung Beistellgeräte;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0033;Ausführungsprojektierung GA-Schaltanlage (je ASP);1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0034;Inbetriebnahme der Niederspannungsschaltanlage;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0035;Bezeichnungsschild, Farbe und Beschriftung nach Angaben des AG, aus mehrschichtigem Kunststoff, Beschriftung 2-zeilig, gefräst, rechteckig, Höhe über 20 bis 30 mm, Breite über 90 bis 100 mm.;102,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0036;Netzwerk-Modul Hutschiene;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0037;Koordination zw. Gewerk GA u. Schaltanlage;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0038;Kabelmarker;526,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0039;Feuchtraum-Abzweigdose;40,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0040;Reparatur-Notschalter 32A-3P-HK;3,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0041;Anschluss beidseitig bis 6x2x0,8;128,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0042;Anschluss beidseitig bis 5x1,5mm²;95,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0043;Anschluss beidseitig bis 5x1,5mm²;27,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0001;Tauchtemperatur-Messwertgeber in Stabausführung, Einsatzbereich - 30 bis 150 Grad C, einschl. Schutzrohr mit Gewinde, PN 16, aus nichtrostendem Stahl, Einbaulänge 100 mm, aktive Messzone bis 50 mm, Ausführung Ausgänge Feldgerät mit passivem Messelement Ni 1000, relativer Fehler max. 1 % vom Einsatzb;2,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0002;Tauchtemperatur-Messwertgeber in Stabausführung, Einsatzbereich - 30 bis 150 Grad C, einschl. Schutzrohr mit Gewinde, PN 16, aus Messing, Einbaulänge 100 mm, aktive Messzone bis 50 mm, Ausführung Ausgänge Feldgerät mit passivem Messelement Ni 1000, relativer Fehler max. 1 % vom Einsatzbereich, Gehäu;2,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0003;Temperatur-Messwertgeber für Luftleitungen, Einsatzbereich - 30 bis 60 Grad C, mit Messstab, Einbaulänge 200 mm, Einbauflansch, Ausführung Ausgänge Feldgerät mit passivem Messelement Ni 1000, relativer Fehler max. 1 % vom Einsatzbereich.;5,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0004;Differenzdruck-Messwertgeber, für Luft,;2,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0005;Differenzdruck-Messwertgeber, für Luft,;5,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0006;Kombinierter Messwertgeber für Luftleitungen, Netzspannung 24 V AC, Schutzart IP 6X DIN EN 60529 (VDE 0470-1), Umgebungstemperatur -25 bis 55 Grad C, 10 bis 90 % relative Umgebungsfeuchte, mit 150 mm Messstab und Einbauflansch, Temperaturmessung, Ausführung Ausgänge Feldgerät mit aktivem Messsignal ;3,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0007;kombinierter Außenmesswertgeber Temperatur & rel. Feuchte, 2 x 0-10V;3,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0008;Sonnenlichtsensor;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0009;Regensensor digital;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0010;Frostschutzwächter für Luftleitungen, Sollwertsteller verdeckt innerhalb des Gehäuses, mit Kapillarrohr, Kapillarrohrhalterung und Einbauflansch, Kapillarrohrlänge mind. 6 m, mittelwertbildend über die gesamte Länge des Kapillarrohres, mit einer Schaltstufe,;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0011;Rauchmelder, mit allgemeiner bauaufsichtlicher Zulassung, für Luftleitung, geeignet für Geschwindigkeiten bis 20 m/s, mit Schaltzustandsanzeige am Einbauort, mit schaltendem Ausgang, Kontaktbelastung 230 V AC, 5 A, mit Meldekontakten für Rauchalarm und Wartungsmeldung, Umgebungstemperatur - 10 bis 6;2,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0012;Elektrischer Klappenstellantrieb, Umgebungstemperatur -20 bis 50 Grad C, Stellsignal für 3-Punktregelung 24 V AC/DC,;2,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0001;Automationseinrichtung, gemäß GA-Funktionsliste, Beiblatt 070-5, Netzart Sicherheitsstromversorgung SV, ohne Umschaltzeit, Umgebungstemperatur 0 bis 45 Grad C, relative Umgebungsfeuchte 5 bis 90 % (nicht kondensierend), für Einbau in Schaltschrank, mit Kommunikationsschnittstelle BACnet gemäß AMEV-T;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0002;Netzteil, Hutschiene, 230V, 2,5A;2,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0003;Konfektioniertes Datenkabel/Twisted Pair, Stecker/Stecker, DIN EN 50173-1 (VDE 0800-173-1), Kategorie 8 geprüft DIN EN 61935-2 (VDE 0819-935-2), halogenfrei,;2,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0004;Fast Ethernet Switch, 5 Port, unmanaged;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0005;Statische unterbrechungsfreie Stromversorgungsanlage DIN EN IEC 62040-1 (VDE 0558-510), DIN EN IEC 62040-2 (VDE 0558-520), DIN EN 62040-3 (VDE 0558-530),;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0006;Bediengerät für Automationseinrichtung, für Schaltschrankeinbau, mit Anschlusskabel und Stecker, Netzspannung 230 V AC, für Umgebungsbedingungen - 10 bis 60 Grad C, relative Umgebungsfeuchte 5 bis 90 % (nicht kondensierend), Schnittstelle passend zur Automationseinrichtung, Display farbig und grafik;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0007;Projektierung/Konfigurierung nach DIN EN ISO 16484-3;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0008;Konfiguration der AS-Strategien gemäß DIN EN ISO 16484-3;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0009;Inbetriebnahme der GA-Anlage gemäß DIN EN ISO 16484-3;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0010;Datenpunktprüfung 1:1 Test;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0011;Bestandsplan erstellen, mit CAD-Programm, anhand von Montageplänen des AN, Übergabe vor der Abnahme, als Papierzeichnung/Plotterausdruck und Datenträger/Schnittstelle zur CAD-Verarbeitung, einfach, farbig, gefaltet DIN A 4.;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0001;Koordination Schnittstelle Modbus RTU/TCP;77,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0002;Konfiguration Schnittstelle Modbus RTU/TCP;77,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0003;Inbetriebnahme Schnittstelle Modbus RTU/TCP;77,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0001;Koordination BACnet-Client;7,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0002;Konfiguration BACnet-Client;7,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0003;Inbetriebnahme BACnet-Client;7,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0001;Schrankfeld, als Einzelschrank, Maße H/B/T 2000/800/400 mm, mit Sockel, Höhe 200 mm, Kabeleinführung von unten, einschl. Abdichtung und Kabelabfangschiene, Tür mit Öffnungswinkel mind. 130 Grad, einflügelig.;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0002;Sichtfenster für Schaltschranktüraufbau,;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0003;Einspeisung mit Leistungsschalter einschl. thermischer und magnetischer Auslösung, für Bemessungsstrom 63 A, 3-polig, mit potentialfreien Hilfskontakten, Anzahl der potentialfreien Hilfskontakte 1 St, mit Phasenkontrollleuchten.;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0004;Hauptsammelschienensystem DIN EN IEC 61439-2 (VDE 0660-600-2), mit 3 Hauptleitern, Bemessungsbetriebsspannung 400 V AC, Bemessungsfrequenz 50 Hz, Bemessungsstrom 250 A,;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0005;Schaltschrankbeleuchtung mit Steckdose;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0006;Schutzkontaktsteckdose 230 V AC;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0007;Be- und Entlüftung für Schaltschrank, mit Schaltschrankventilator und Abströmöffnung, mit Filter,;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0008;Automatische Wiedereinschaltung;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0009;Netzwerkdose Hutschiene 1x RJ45;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0010;Hutschienennetzteil 24V DC, bis 10A;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0011;elektr. Schutzschalter für 24VDC;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0012;Steuerspannungstrafo 400V / 230V AC 500VA;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0013;Steuerspannungstrafo 230V / 24V AC 500VA;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0014;Überspannungsschutz Einspeisung bis 250A;3,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0015;Überspannungsschutz Außensensor bis 4 Adern;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0016;Montagegehäuse für Blitzschutz 30x30x15;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0017;Spannungsüberwachungsrelais;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0018;Motorbaugruppe 1st. bis 4kW 230V;2,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0019;Motorbaugruppe EC-Motor bis 4kW;2,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0020;Frostschutzschaltung;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0021;Filterüberwachung;2,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0022;Reparaturschalter Überwachung;3,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0023;Spannungsvervielfachung (Klemmen);9,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0024;Rauchmelder-Sicherheitsschaltung;2,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0025;Brandmeldeanlage-Sicherheitsschaltung;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0026;Klappensteuerung AUF/ZU m. RM;2,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0027;Sammelstörmeldung / Zentralentsperrung;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0028;Hilfsschütz;2,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0029;Koppelrelais steckbar;2,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0030;Sicherungsabgang 1pol. 16A Automat;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0031;Sicherungsabgang 1pol. 16A Automat HK;2,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0032;Sicherungsabgang 3pol. 16A Automat HK;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0033;Einbau und Verdrahtung der physikalischen Datenpunkte;53,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0034;Türeinbau und Verdrahtung Beistellgeräte;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0035;Einbau und Verdrahtung Beistellgeräte;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0036;Ausführungsprojektierung GA-Schaltanlage (je ASP);1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0037;Inbetriebnahme der Niederspannungsschaltanlage;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0038;Bezeichnungsschild, Farbe und Beschriftung nach Angaben des AG, aus mehrschichtigem Kunststoff, Beschriftung 2-zeilig, gefräst, rechteckig, Höhe über 20 bis 30 mm, Breite über 90 bis 100 mm.;41,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0039;Netzwerk-Modul Hutschiene;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0040;Koordination zw. Gewerk GA u. Schaltanlage;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0041;Kabelmarker;166,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0042;Feuchtraum-Abzweigdose;16,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0043;Reparatur-Notschalter 32A-3P-HK;3,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0044;Anschluss beidseitig bis 6x2x0,8;39,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0045;Anschluss beidseitig bis 5x1,5mm²;82,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0046;Anschluss beidseitig bis 5x1,5mm²;2,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0001;Raumtemperatur-Messwertgeber, Einsatzbereich 0 bis 40 Grad C, für Aufputzmontage, Ausführung Ausgänge Feldgerät mit Messsignal passend zum Automationssystem, relativer Fehler max. 1 % vom Einsatzbereich, Gehäuse in Schutzart IP 2X DIN EN 60529 (VDE 0470-1).;6,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0002;Taupunktwächter, mit integriertem Sensorelement, einschl. Montagezubehör, Kontaktbelastung 24 V AC, 1 A, mit zusätzlichem Analogausgang 0 bis 10 V, Arbeitshöhe des Montageortes bis 3,5 m über der Standfläche des hierfür erforderlichen Gerüstes.;2,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0003;Raumhelligkeitssensor 0-10V;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0004;Kleinstellantrieb, elektrothermisch, stromlos geschlossen, für Heizkörperventile mit einem max. Hub von 4,5 mm, mit gehäusefester Anschlussleitung, Länge mind. 1 m, zur Montage auf Ventilkörper, Leistungsaufnahme in der Einschaltphase 6 VA, Bemessungsbetriebsspannung 24 V AC/DC, Schutzart IP 54 DIN ;4,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0001;Konfektioniertes Datenkabel/Twisted Pair, Stecker/Stecker, DIN EN 50173-1 (VDE 0800-173-1), Kategorie 8 geprüft DIN EN 61935-2 (VDE 0819-935-2), halogenfrei,;2,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0002;Fast Ethernet Switch, 5 Port, unmanaged;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0003;Statische unterbrechungsfreie Stromversorgungsanlage DIN EN IEC 62040-1 (VDE 0558-510), DIN EN IEC 62040-2 (VDE 0558-520), DIN EN 62040-3 (VDE 0558-530),;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0001;Raumautomationseinrichtung, mit Busschnittstelle BACnet Normprotokoll DIN EN ISO 16484-5, einschl. Anzahl und Art physikalischer Ein-/Ausgänge passend zu Funktionen, Bezeichnung, Typ, Stückpreis und Anzahl der Hardwarekomponenten siehe Beiblatt 070-4.;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0002;Netzteil, Hutschiene, 230V, 2,5A;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0003;modulares BACnet/SC-Controller-Modul Modbus;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0004;modulares BACnet/SC-Controller-Modul SMI;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0005;Remote-IO-Modul, 230VAC, 4Rel,4UI,4DI/CI;10,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0006;Bedien- und Anzeigeeinrichtung, als stationäre Einheit, für Unterputzmontage, Netzspannung 24 V AC, mit Touch-Screen-Display, mit Bedien-/Anzeigefunktion:;9,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0007;Multisensor Bluetooth, Ethernet;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0008;Multisensor Bluetooth;8,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0009;Projektierung/Konfigurierung der gesamten RA;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0010;Konfiguration aller Raumcontroller;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0011;Inbetriebnahme aller Raumcontroller;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0012;Bestandsplan erstellen, mit CAD-Programm, anhand von Montageplänen des AN, Übergabe vor der Abnahme, als Papierzeichnung/Plotterausdruck und Datenträger/Schnittstelle zur CAD-Verarbeitung, einfach, farbig, gefaltet DIN A 4.;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0013;RS485-Modbus-Modul;6,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0014;Datenschnittstelleneinheit (DSE) zum Datenaustausch zwischen;3,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0015;Koordination Schnittstelle Modbus RTU/TCP;309,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0016;Konfiguration Schnittstelle Modbus RTU/TCP;309,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0017;Inbetriebnahme Schnittstelle Modbus RTU/TCP;309,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0001;Wandschrank, Maße H/B/T 800/800/300 mm, einschl. Kabelkanal, Kabelabfangschiene und Kabeleinführungen mit Verschraubung aus Kunststoff, Tür mit Öffnungswinkel mind. 130 Grad, einflügelig.;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0002;Schaltschrankbeleuchtung mit Steckdose;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0003;Schutzkontaktsteckdose 230 V AC;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0004;Hutschienennetzteil 24V DC, bis 10A;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0005;Steuerspannungstrafo 230V / 24V AC 500VA;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0006;Überspannungsschutz Einspeisung bis 250A;2,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0007;Brandmeldeanlage-Sicherheitsschaltung;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0008;Ausführungsprojektierung GA-Schaltanlage (je ASP);1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0009;Inbetriebnahme der Niederspannungsschaltanlage;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0010;Bezeichnungsschild, Farbe und Beschriftung nach Angaben des AG, aus mehrschichtigem Kunststoff, Beschriftung 2-zeilig, gefräst, rechteckig, Höhe über 20 bis 30 mm, Breite über 90 bis 100 mm.;76,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0011;Netzwerk-Modul Hutschiene;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0012;Koordination zw. Gewerk GA u. Schaltanlage;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0013;Kabelmarker;264,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0014;Feuchtraum-Abzweigdose;33,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0015;Anschluss beidseitig bis 6x2x0,8;39,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0016;Anschluss beidseitig bis 5x1,5mm²;82,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0017;Anschluss beidseitig bis 5x1,5mm²;2,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0001;Raumtemperatur-Messwertgeber, Einsatzbereich 0 bis 40 Grad C, für Aufputzmontage, Ausführung Ausgänge Feldgerät mit Messsignal passend zum Automationssystem, relativer Fehler max. 1 % vom Einsatzbereich, Gehäuse in Schutzart IP 2X DIN EN 60529 (VDE 0470-1).;4,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0002;Kleinstellantrieb, elektrothermisch, stromlos geschlossen, für Heizkörperventile mit einem max. Hub von 4,5 mm, mit gehäusefester Anschlussleitung, Länge mind. 1 m, zur Montage auf Ventilkörper, Leistungsaufnahme in der Einschaltphase 6 VA, Bemessungsbetriebsspannung 24 V AC/DC, Schutzart IP 54 DIN ;4,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0001;Konfektioniertes Datenkabel/Twisted Pair, Stecker/Stecker, DIN EN 50173-1 (VDE 0800-173-1), Kategorie 8 geprüft DIN EN 61935-2 (VDE 0819-935-2), halogenfrei,;2,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0002;Fast Ethernet Switch, 5 Port, unmanaged;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0003;Statische unterbrechungsfreie Stromversorgungsanlage DIN EN IEC 62040-1 (VDE 0558-510), DIN EN IEC 62040-2 (VDE 0558-520), DIN EN 62040-3 (VDE 0558-530),;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0001;Raumautomationseinrichtung, mit Busschnittstelle BACnet Normprotokoll DIN EN ISO 16484-5, einschl. Anzahl und Art physikalischer Ein-/Ausgänge passend zu Funktionen, Bezeichnung, Typ, Stückpreis und Anzahl der Hardwarekomponenten siehe Beiblatt 070-4.;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0002;Netzteil, Hutschiene, 230V, 2,5A;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0003;modulares BACnet/SC-Controller-Modul Modbus;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0004;modulares BACnet/SC-Controller-Modul SMI;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0005;Remote-IO-Modul, 230VAC, 4Rel,4UI,4DI/CI;9,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0006;Bedien- und Anzeigeeinrichtung, als stationäre Einheit, für Unterputzmontage, Netzspannung 24 V AC, mit Touch-Screen-Display, mit Bedien-/Anzeigefunktion:;10,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0007;Multisensor Bluetooth, Ethernet;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0008;Multisensor Bluetooth;9,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0009;Projektierung/Konfigurierung der gesamten RA;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0010;Konfiguration aller Raumcontroller;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0011;Inbetriebnahme aller Raumcontroller;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0012;Bestandsplan erstellen, mit CAD-Programm, anhand von Montageplänen des AN, Übergabe vor der Abnahme, als Papierzeichnung/Plotterausdruck und Datenträger/Schnittstelle zur CAD-Verarbeitung, einfach, farbig, gefaltet DIN A 4.;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0001;Wandschrank, Maße H/B/T 800/800/300 mm, einschl. Kabelkanal, Kabelabfangschiene und Kabeleinführungen mit Verschraubung aus Kunststoff, Tür mit Öffnungswinkel mind. 130 Grad, einflügelig.;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0002;Schaltschrankbeleuchtung mit Steckdose;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0003;Schutzkontaktsteckdose 230 V AC;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0004;Hutschienennetzteil 24V DC, bis 10A;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0005;Steuerspannungstrafo 230V / 24V AC 500VA;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0006;Überspannungsschutz Einspeisung bis 250A;2,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0007;Brandmeldeanlage-Sicherheitsschaltung;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0008;Ausführungsprojektierung GA-Schaltanlage (je ASP);1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0009;Inbetriebnahme der Niederspannungsschaltanlage;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0010;Bezeichnungsschild, Farbe und Beschriftung nach Angaben des AG, aus mehrschichtigem Kunststoff, Beschriftung 2-zeilig, gefräst, rechteckig, Höhe über 20 bis 30 mm, Breite über 90 bis 100 mm.;80,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0011;Netzwerk-Modul Hutschiene;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0012;Koordination zw. Gewerk GA u. Schaltanlage;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0013;Kabelmarker;266,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0014;Feuchtraum-Abzweigdose;37,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0015;Anschluss beidseitig bis 6x2x0,8;37,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0016;Anschluss beidseitig bis 5x1,5mm²;84,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0017;Anschluss beidseitig bis 5x1,5mm²;2,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0001;Raumtemperatur-Messwertgeber, Einsatzbereich 0 bis 40 Grad C, für Aufputzmontage, Ausführung Ausgänge Feldgerät mit Messsignal passend zum Automationssystem, relativer Fehler max. 1 % vom Einsatzbereich, Gehäuse in Schutzart IP 2X DIN EN 60529 (VDE 0470-1).;6,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0002;Taupunktwächter, mit integriertem Sensorelement, einschl. Montagezubehör, Kontaktbelastung 24 V AC, 1 A, mit zusätzlichem Analogausgang 0 bis 10 V, Arbeitshöhe des Montageortes bis 3,5 m über der Standfläche des hierfür erforderlichen Gerüstes.;2,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0003;Kleinstellantrieb, elektrothermisch, stromlos geschlossen, für Heizkörperventile mit einem max. Hub von 4,5 mm, mit gehäusefester Anschlussleitung, Länge mind. 1 m, zur Montage auf Ventilkörper, Leistungsaufnahme in der Einschaltphase 6 VA, Bemessungsbetriebsspannung 24 V AC/DC, Schutzart IP 54 DIN ;4,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0001;Konfektioniertes Datenkabel/Twisted Pair, Stecker/Stecker, DIN EN 50173-1 (VDE 0800-173-1), Kategorie 8 geprüft DIN EN 61935-2 (VDE 0819-935-2), halogenfrei,;2,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0002;Fast Ethernet Switch, 5 Port, unmanaged;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0003;Statische unterbrechungsfreie Stromversorgungsanlage DIN EN IEC 62040-1 (VDE 0558-510), DIN EN IEC 62040-2 (VDE 0558-520), DIN EN 62040-3 (VDE 0558-530),;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0001;Raumautomationseinrichtung, mit Busschnittstelle BACnet Normprotokoll DIN EN ISO 16484-5, einschl. Anzahl und Art physikalischer Ein-/Ausgänge passend zu Funktionen, Bezeichnung, Typ, Stückpreis und Anzahl der Hardwarekomponenten siehe Beiblatt 070-4.;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0002;Netzteil, Hutschiene, 230V, 2,5A;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0003;modulares BACnet/SC-Controller-Modul Modbus;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0004;modulares BACnet/SC-Controller-Modul SMI;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0005;modulares BACnet/SC-Controller-Modul KNX;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0006;Remote-IO-Modul, 230VAC, 4Rel,4UI,4DI/CI;10,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0007;Bedien- und Anzeigeeinrichtung, als stationäre Einheit, für Unterputzmontage, Netzspannung 24 V AC, mit Touch-Screen-Display, mit Bedien-/Anzeigefunktion:;8,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0008;Multisensor Bluetooth, Ethernet;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0009;Multisensor Bluetooth;8,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0010;Projektierung/Konfigurierung der gesamten RA;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0011;Konfiguration aller Raumcontroller;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0012;Inbetriebnahme aller Raumcontroller;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0013;Bestandsplan erstellen, mit CAD-Programm, anhand von Montageplänen des AN, Übergabe vor der Abnahme, als Papierzeichnung/Plotterausdruck und Datenträger/Schnittstelle zur CAD-Verarbeitung, einfach, farbig, gefaltet DIN A 4.;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0001;Wandschrank, Maße H/B/T 800/800/300 mm, einschl. Kabelkanal, Kabelabfangschiene und Kabeleinführungen mit Verschraubung aus Kunststoff, Tür mit Öffnungswinkel mind. 130 Grad, einflügelig.;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0002;Schaltschrankbeleuchtung mit Steckdose;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0003;Schutzkontaktsteckdose 230 V AC;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0004;Hutschienennetzteil 24V DC, bis 10A;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0005;Steuerspannungstrafo 230V / 24V AC 500VA;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0006;Überspannungsschutz Einspeisung bis 250A;2,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0007;Brandmeldeanlage-Sicherheitsschaltung;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0008;Ausführungsprojektierung GA-Schaltanlage (je ASP);1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0009;Inbetriebnahme der Niederspannungsschaltanlage;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0010;Bezeichnungsschild, Farbe und Beschriftung nach Angaben des AG, aus mehrschichtigem Kunststoff, Beschriftung 2-zeilig, gefräst, rechteckig, Höhe über 20 bis 30 mm, Breite über 90 bis 100 mm.;77,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0011;Netzwerk-Modul Hutschiene;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0012;Koordination zw. Gewerk GA u. Schaltanlage;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0013;Kabelmarker;254,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0014;Feuchtraum-Abzweigdose;33,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0015;Anschluss beidseitig bis 6x2x0,8;37,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0016;Anschluss beidseitig bis 5x1,5mm²;79,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0017;Anschluss beidseitig bis 5x1,5mm²;2,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0001;Raumtemperatur-Messwertgeber, Einsatzbereich 0 bis 40 Grad C, für Aufputzmontage, Ausführung Ausgänge Feldgerät mit Messsignal passend zum Automationssystem, relativer Fehler max. 1 % vom Einsatzbereich, Gehäuse in Schutzart IP 2X DIN EN 60529 (VDE 0470-1).;3,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0002;Kombinierter Messwertgeber für Räume, für Unterputzmontage, Schutzart IP 3X DIN EN 60529 (VDE 0470-1), Umgebungstemperatur 5 bis 40 Grad C, 10 bis 90 % relative Umgebungsfeuchte, Temperaturmessung, Ausführung Ausgänge Feldgerät mit passivem Messelement Ni 1000, relativer Fehler max. 1,6 % vom Einsat;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0003;Differenzdruck-Messwertgeber, für Luft,;2,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0004;Kleinstellantrieb, elektromotorisch, Stellsignal buskompatibel, Kommunikationsprotokoll Modbus RTU, für Heizkörperventile mit einem max. Hub von 4,5 mm, mit gehäusefester Anschlussleitung, Länge mind. 0,5 m, zur Montage auf Ventilkörper, Bemessungsbetriebsspannung 24 V AC/DC.;3,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0001;Automationseinrichtung, gemäß GA-Funktionsliste, Beiblatt 070-5, Netzart Sicherheitsstromversorgung SV, ohne Umschaltzeit, Umgebungstemperatur 0 bis 45 Grad C, relative Umgebungsfeuchte 5 bis 90 % (nicht kondensierend), für Einbau in Schaltschrank, mit Kommunikationsschnittstelle BACnet gemäß AMEV-T;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0002;Netzteil, Hutschiene, 230V, 2,5A;2,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0003;Konfektioniertes Datenkabel/Twisted Pair, Stecker/Stecker, DIN EN 50173-1 (VDE 0800-173-1), Kategorie 8 geprüft DIN EN 61935-2 (VDE 0819-935-2), halogenfrei,;2,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0004;Fast Ethernet Switch, 5 Port, unmanaged;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0005;Statische unterbrechungsfreie Stromversorgungsanlage DIN EN IEC 62040-1 (VDE 0558-510), DIN EN IEC 62040-2 (VDE 0558-520), DIN EN 62040-3 (VDE 0558-530),;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0006;Bediengerät für Automationseinrichtung, für Schaltschrankeinbau, mit Anschlusskabel und Stecker, Netzspannung 230 V AC, für Umgebungsbedingungen - 10 bis 60 Grad C, relative Umgebungsfeuchte 5 bis 90 % (nicht kondensierend), Schnittstelle passend zur Automationseinrichtung, Display farbig und grafik;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0007;Projektierung/Konfigurierung nach DIN EN ISO 16484-3;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0008;Konfiguration der AS-Strategien gemäß DIN EN ISO 16484-3;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0009;Inbetriebnahme der GA-Anlage gemäß DIN EN ISO 16484-3;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0010;Datenpunktprüfung 1:1 Test;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0011;Bestandsplan erstellen, mit CAD-Programm, anhand von Montageplänen des AN, Übergabe vor der Abnahme, als Papierzeichnung/Plotterausdruck und Datenträger/Schnittstelle zur CAD-Verarbeitung, einfach, farbig, gefaltet DIN A 4.;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0001;Raumautomationseinrichtung, mit Busschnittstelle BACnet Normprotokoll DIN EN ISO 16484-5, einschl. Anzahl und Art physikalischer Ein-/Ausgänge passend zu Funktionen, Bezeichnung, Typ, Stückpreis und Anzahl der Hardwarekomponenten siehe Beiblatt 070-4.;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0002;modulares BACnet/SC-Controller-Modul Modbus;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0003;modulares BACnet/SC-Controller-Modul KNX;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0004;Remote-IO-Modul, 230VAC, 4Rel,4UI,4DI/CI;2,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0005;Projektierung/Konfigurierung der gesamten RA;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0006;Konfiguration aller Raumcontroller;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0007;Inbetriebnahme aller Raumcontroller;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0008;Bestandsplan erstellen, mit CAD-Programm, anhand von Montageplänen des AN, Übergabe vor der Abnahme, als Papierzeichnung/Plotterausdruck und Datenträger/Schnittstelle zur CAD-Verarbeitung, einfach, farbig, gefaltet DIN A 4.;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0001;Datenschnittstelleneinheit (DSE) zum Datenaustausch zwischen;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0002;Koordination Schnittstelle M-Bus;4,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0003;Konfiguration Schnittstelle M-Bus;4,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0004;Inbetriebnahme Schnittstelle M-BUS;4,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0001;Koordination Schnittstelle Modbus RTU/TCP;38,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0002;Konfiguration Schnittstelle Modbus RTU/TCP;38,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0003;Inbetriebnahme Schnittstelle Modbus RTU/TCP;38,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0001;Koordination BACnet-Client;69,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0002;Konfiguration BACnet-Client;69,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0003;Inbetriebnahme BACnet-Client;69,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0001;Schrankfeld, als Einzelschrank, Maße H/B/T 2000/800/400 mm, mit Sockel, Höhe 200 mm, Kabeleinführung von unten, einschl. Abdichtung und Kabelabfangschiene, Tür mit Öffnungswinkel mind. 130 Grad, einflügelig.;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0002;Sichtfenster für Schaltschranktüraufbau,;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0003;Einspeisung mit Leistungsschalter einschl. thermischer und magnetischer Auslösung, für Bemessungsstrom 63 A, 3-polig, mit potentialfreien Hilfskontakten, Anzahl der potentialfreien Hilfskontakte 1 St, mit Phasenkontrollleuchten.;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0004;Hauptsammelschienensystem DIN EN IEC 61439-2 (VDE 0660-600-2), mit 3 Hauptleitern, Bemessungsbetriebsspannung 400 V AC, Bemessungsfrequenz 50 Hz, Bemessungsstrom 250 A,;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0005;Schaltschrankbeleuchtung mit Steckdose;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0006;Schutzkontaktsteckdose 230 V AC;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0007;Be- und Entlüftung für Schaltschrank, mit Schaltschrankventilator und Abströmöffnung, mit Filter,;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0008;Automatische Wiedereinschaltung;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0009;Netzwerkdose Hutschiene 1x RJ45;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0010;Hutschienennetzteil 24V DC, bis 10A;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0011;elektr. Schutzschalter für 24VDC;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0012;Steuerspannungstrafo 400V / 230V AC 500VA;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0013;Steuerspannungstrafo 230V / 24V AC 500VA;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0014;Überspannungsschutz Einspeisung bis 250A;3,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0015;Spannungsüberwachungsrelais;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0016;Motorbaugruppe 1st. bis 4kW 230V;2,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0017;Motorbaugruppe EC-Motor bis 4kW;2,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0018;Reparaturschalter Überwachung;3,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0019;Spannungsvervielfachung (Klemmen);9,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0020;Überwachung ext. Meldung;4,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0021;Überwachung allgemein;31,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0022;Brandmeldeanlage-Sicherheitsschaltung;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0023;Sammelstörmeldung / Zentralentsperrung;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0024;Hilfsschütz;2,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0025;Koppelrelais steckbar;2,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0026;Sicherungsabgang 1pol. 16A Automat HK;2,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0027;Einbau und Verdrahtung der physikalischen Datenpunkte;59,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0028;Türeinbau und Verdrahtung Beistellgeräte;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0029;Einbau und Verdrahtung Beistellgeräte;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0030;Ausführungsprojektierung GA-Schaltanlage (je ASP);1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0031;Inbetriebnahme der Niederspannungsschaltanlage;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0032;Bezeichnungsschild, Farbe und Beschriftung nach Angaben des AG, aus mehrschichtigem Kunststoff, Beschriftung 2-zeilig, gefräst, rechteckig, Höhe über 20 bis 30 mm, Breite über 90 bis 100 mm.;55,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0033;Netzwerk-Modul Hutschiene;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0034;Koordination zw. Gewerk GA u. Schaltanlage;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0035;Kabelmarker;158,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0036;Feuchtraum-Abzweigdose;10,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0037;Reparatur-Notschalter 32A-3P-HK;2,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0038;Anschluss beidseitig bis 6x2x0,8;51,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0039;Anschluss beidseitig bis 5x1,5mm²;21,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0040;Anschluss beidseitig bis 5x1,5mm²;6,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0001;BACnet/SC-Router und -Hub, Failover-Hub;7,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0002;Lizenzerweiterung BACnet/SC;9,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0003;Abstimmung / Koordination BACnet/SC Netzwerk;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0001;Datenverarbeitungseinrichtung, ausgelegt gemäß Funktionsliste aller Automationsschwerpunkte und Datenschnittstelleneinheiten, als Tower, mit Schnittstellen für alle Bedienstationen, Ausgabegeräte und Eingabegeräte, zusätzliche Schnittstellen für Datenfernübertragungseinrichtung zu externen Ausgabeei;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0002;"24"" TFT Monitor";1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0003;Color-Laserdrucker A4, Ethernet, USB;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0004;Lizenz MBE Grundpaket 500 Objekte;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0005;Lizenz MBS Erweiterung 10.000 Objekte;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0006;Software und Lizenz Energy Monitoring Module;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0007;Software und Lizenz Wartungsmodul;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0008;Konfiguration Management/Bedienfunktionen;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0009;Anlagenbild Standard;90,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0010;Anlagenbild Standard Kopie;38,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0011;dynamische Einblendung;7166,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0012;Datenpunktprüfung, 1:1-Test;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0013;Dokumentation;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0014;Einweisung MBE;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0015;GSM-Modem mit Sprachmodus für Alert, 4G;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0016;Hutschienennetzteil 24V DC, 1A;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0017;Rundantenne PUK, 8m Kabel, LTE/GSM;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0018;Remote Management Gateway;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0019;Remote Management Gateway Lizenz;1,0;a;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0020;Installation & Inbetriebnahme Remote-Zugriff;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0001;Installationsleitung DIN VDE 0250-204 (VDE 0250-204) NYM-J 3 x 1,5, Cu-Zahl 43.;6937,0;m;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0002;Installationsleitung DIN VDE 0250-204 (VDE 0250-204) NYM-J 5 x 1,5, Cu-Zahl 72.;2754,0;m;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0003;Installationsleitung DIN VDE 0250-204 (VDE 0250-204) NYM-J 3 x 2,5, Cu-Zahl 72.;1361,0;m;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0004;Installationskabel, symmetrisch, DIN VDE 0815 (VDE 0815), J-Y(St)Y, 2 x 2 x 0,8 Bd.;7509,0;m;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0005;Installationskabel, symmetrisch, DIN VDE 0815 (VDE 0815), J-Y(St)Y, 4 x 2 x 0,8 Bd.;2760,0;m;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0006;Kabelrinne, 200x60mm, DIN50976;170,0;m;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0007;Kabelrinnenabdeckung 200mm;170,0;m;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0008;Trennsteg 60mm;170,0;m;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0009;Kabelsteigtrasse, 200x60mm, DIN50976;90,0;m;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0010;Alu-Elektroinstallationsrohr EN16;570,0;m;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0011;Alu-Elektroinstallationsrohr EN20;109,0;m;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0001;Anlage vor der Abnahme betreiben, während 24 Stunden, Betreibungszeit 2 Wochen,;2,0;StWo;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0002;Abnahmeprüfung der GA-Anlage;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0003;Schulung des Bedienungspersonals;1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0001;"Produktdokumentation; Deklaration von SVHC und Bioziden";1,0;St;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0001;Betriebsführung aller Anlagen;12,0;Mt;gaeb;Leistungsverzeichnis/260629_LV GA.x83
+0002;Wartung Gebäudeautomationsanlagen;1,0;a;gaeb;Leistungsverzeichnis/260629_LV GA.x83

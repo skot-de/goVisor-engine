@@ -1,0 +1,51 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+10;Baustelleneinrichtung;1,0;psch;gaeb;leistungsbeschreibungen/LV_4616-EO.x83
+20;Erstellen Abbau Arbeitsgerüst Standgerüst flächenorientiert 2kN/m2 H1;1,0;psch;gaeb;leistungsbeschreibungen/LV_4616-EO.x83
+10;Reinigung Untergrund grobe Verschmutzung;2575,0;m2;gaeb;leistungsbeschreibungen/LV_4616-EO.x83
+20;Beseitigung von Hindernissen im Putzgrund;225,0;m2;gaeb;leistungsbeschreibungen/LV_4616-EO.x83
+30;Haftbrücke als Vorbehandlung für gipshaltige Putze;1425,0;m2;gaeb;leistungsbeschreibungen/LV_4616-EO.x83
+40;Haftbrücke als Vorbehandlung für Kalk-Zement-Putze;1150,0;m2;gaeb;leistungsbeschreibungen/LV_4616-EO.x83
+50;Schutzabdeck. Fenster, Türen, Böden, abkleben;325,0;m2;gaeb;leistungsbeschreibungen/LV_4616-EO.x83
+60;Bodenbelagsschutz - Milchtütenpapier;150,0;m²;gaeb;leistungsbeschreibungen/LV_4616-EO.x83
+70;Schließen von Wandfugen im Übergangsbereich MW zu STB;35,0;m;gaeb;leistungsbeschreibungen/LV_4616-EO.x83
+10;Innenputz einlagig Innenwand Gipsputz B1 D 10mm Q2 geglättet;1425,0;m²;gaeb;leistungsbeschreibungen/LV_4616-EO.x83
+20;Zulage Gipsputz - Mehrdicke 10mm;200,0;m²;gaeb;leistungsbeschreibungen/LV_4616-EO.x83
+30;Innenputz einlagig Innenwand Kalkzementputz CS II D 10mm Q2 gefilzt;1150,0;m2;gaeb;leistungsbeschreibungen/LV_4616-EO.x83
+40;Zulage Kalkzementputz - Mehrdicke 10mm;200,0;m²;gaeb;leistungsbeschreibungen/LV_4616-EO.x83
+50;Zulage Innenputz Leibungen;340,0;m;gaeb;leistungsbeschreibungen/LV_4616-EO.x83
+60;Zulage Innenputz an Stützen und freien Wandenden;50,0;m²;gaeb;leistungsbeschreibungen/LV_4616-EO.x83
+70;Zulage Gewebeeinlage Innenputz;150,0;m²;gaeb;leistungsbeschreibungen/LV_4616-EO.x83
+80;Zulage Innenputz an Treppenuntersichten;25,0;m²;gaeb;leistungsbeschreibungen/LV_4616-EO.x83
+90;Schliessen von Aussparungen;15,0;St;gaeb;leistungsbeschreibungen/LV_4616-EO.x83
+100;Vorgezogenes und nachträgliches Herstellen von Teilflächen;50,0;m2;gaeb;leistungsbeschreibungen/LV_4616-EO.x83
+10;APU-Leisten für Innenputz;350,0;m;gaeb;leistungsbeschreibungen/LV_4616-EO.x83
+20;Kantenprofil verzinkt 90°;525,0;m;gaeb;leistungsbeschreibungen/LV_4616-EO.x83
+30;Putzabschlussprofil, verzinkt, 10 mm;75,0;m;gaeb;leistungsbeschreibungen/LV_4616-EO.x83
+40;Zulage für Oberfläche in Q3 Qualität;200,0;m2;gaeb;leistungsbeschreibungen/LV_4616-EO.x83
+10;Facharbeiterstunden;20,0;h;gaeb;leistungsbeschreibungen/LV_4616-EO.x83
+20;Hilfsarbeiterstunden;20,0;h;gaeb;leistungsbeschreibungen/LV_4616-EO.x83
+10;Baustelleneinrichtung;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_4616-EO.x83
+20;Erstellen Abbau Arbeitsgerüst Standgerüst flächenorientiert 2kN/m2 H1;1,0;psch;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_4616-EO.x83
+10;Reinigung Untergrund grobe Verschmutzung;2575,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_4616-EO.x83
+20;Beseitigung von Hindernissen im Putzgrund;225,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_4616-EO.x83
+30;Haftbrücke als Vorbehandlung für gipshaltige Putze;1425,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_4616-EO.x83
+40;Haftbrücke als Vorbehandlung für Kalk-Zement-Putze;1150,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_4616-EO.x83
+50;Schutzabdeck. Fenster, Türen, Böden, abkleben;325,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_4616-EO.x83
+60;Bodenbelagsschutz - Milchtütenpapier;150,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_4616-EO.x83
+70;Schließen von Wandfugen im Übergangsbereich MW zu STB;35,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_4616-EO.x83
+10;Innenputz einlagig Innenwand Gipsputz B1 D 10mm Q2 geglättet;1425,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_4616-EO.x83
+20;Zulage Gipsputz - Mehrdicke 10mm;200,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_4616-EO.x83
+30;Innenputz einlagig Innenwand Kalkzementputz CS II D 10mm Q2 gefilzt;1150,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_4616-EO.x83
+40;Zulage Kalkzementputz - Mehrdicke 10mm;200,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_4616-EO.x83
+50;Zulage Innenputz Leibungen;340,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_4616-EO.x83
+60;Zulage Innenputz an Stützen und freien Wandenden;50,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_4616-EO.x83
+70;Zulage Gewebeeinlage Innenputz;150,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_4616-EO.x83
+80;Zulage Innenputz an Treppenuntersichten;25,0;m²;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_4616-EO.x83
+90;Schliessen von Aussparungen;15,0;St;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_4616-EO.x83
+100;Vorgezogenes und nachträgliches Herstellen von Teilflächen;50,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_4616-EO.x83
+10;APU-Leisten für Innenputz;350,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_4616-EO.x83
+20;Kantenprofil verzinkt 90°;525,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_4616-EO.x83
+30;Putzabschlussprofil, verzinkt, 10 mm;75,0;m;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_4616-EO.x83
+40;Zulage für Oberfläche in Q3 Qualität;200,0;m2;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_4616-EO.x83
+10;Facharbeiterstunden;20,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_4616-EO.x83
+20;Hilfsarbeiterstunden;20,0;h;gaeb;vom_unternehmen_auszufuellende_dokumente/LV_4616-EO.x83

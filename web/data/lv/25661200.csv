@@ -1,0 +1,61 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+101;Reparatur Schadstellen aus Wühltätigkeit.;30,0;Stk;gaeb-flat;Leistungsverzeichnis/LV.d83
+102;Beseitigung von Wildschäden durch Schwarzwild.;15000,0;m2;gaeb-flat;Leistungsverzeichnis/LV.d83
+103;Oberboden liefern und lagern.;300,0;m3;gaeb-flat;Leistungsverzeichnis/LV.d83
+104;Unterboden liefern und lagern.;300,0;m3;gaeb-flat;Leistungsverzeichnis/LV.d83
+105;Boden laden, fördern, einbauen.;600,0;m3;gaeb-flat;Leistungsverzeichnis/LV.d83
+106;Schotterrasen, Körnung 11-45 mm, liefern und lagern.;300,0;m3;gaeb-flat;Leistungsverzeichnis/LV.d83
+107;Schotterrasen laden, fördern, einbauen und verdichten.;300,0;m3;gaeb-flat;Leistungsverzeichnis/LV.d83
+108;Wasserbausteine liefern und lagern.;150,0;m3;gaeb-flat;Leistungsverzeichnis/LV.d83
+109;Wasserbausteine laden, fördern und einbauen.;150,0;m3;gaeb-flat;Leistungsverzeichnis/LV.d83
+110;Lieferung u. Einbau von Geotextil.;300,0;m2;gaeb-flat;Leistungsverzeichnis/LV.d83
+201;Beseitigung von mehrjährigen Bewuchs.;500,0;m2;gaeb-flat;Leistungsverzeichnis/LV.d83
+202;Strauch- und Buschwerk mittlerer Durchmesser über 0,1 m - 0,4 m holzen.;2000,0;m2;gaeb-flat;Leistungsverzeichnis/LV.d83
+203;Rodung von Strauchwerk im Bereich von Deichen.;1500,0;m2;gaeb-flat;Leistungsverzeichnis/LV.d83
+204;Rodung von Strauchwerk und Gehölzen auf der Düne.;15000,0;m2;gaeb-flat;Leistungsverzeichnis/LV.d83
+205;Fällarbeiten von Starkbäumen Einzelstammdurchmesser 10 - 30 cm.;150,0;Stk;gaeb-flat;Leistungsverzeichnis/LV.d83
+206;Fällarbeiten von Starkbäumen Einzelstammdurchmesser 31 - 60 cm.;80,0;Stk;gaeb-flat;Leistungsverzeichnis/LV.d83
+207;Fällarbeiten von Starkbäumen Einzelstammdurchmesser 61 - 90 cm.;10,0;Stk;gaeb-flat;Leistungsverzeichnis/LV.d83
+208;Lichtraumprofil freischneiden.;4000,0;m;gaeb-flat;Leistungsverzeichnis/LV.d83
+209;Grasansaat auf Deichflächen.;5500,0;m2;gaeb-flat;Leistungsverzeichnis/LV.d83
+210;Entfernung von Jap. Staudenknöterich.;3600,0;m2;gaeb-flat;Leistungsverzeichnis/LV.d83
+211;Lieferung, Einbau und Entfernung von schwarzer lichtundurchlässiger Folie.;600,0;m2;gaeb-flat;Leistungsverzeichnis/LV.d83
+301;Treibsel abharken und ablegen.;3000,0;m2;gaeb-flat;Leistungsverzeichnis/LV.d83
+302;Treibsel aufnehmen und abtransportieren.;15,0;t;gaeb-flat;Leistungsverzeichnis/LV.d83
+401;Stundenlohnarbeiten Baufacharbeiter.;50,0;Std;gaeb-flat;Leistungsverzeichnis/LV.d83
+402;Stundenlohnarbeiten LKW mit Tieflader;60,0;Std;gaeb-flat;Leistungsverzeichnis/LV.d83
+403;Stundenlohnarbeiten LKW-Kipper mit Allradantrieb bis 12 t.;20,0;Std;gaeb-flat;Leistungsverzeichnis/LV.d83
+404;Stundenlohnarbeiten Radlader 1 m3.;30,0;Std;gaeb-flat;Leistungsverzeichnis/LV.d83
+405;Stundenlohnarbeiten Mobilbagger 8 t.;25,0;Std;gaeb-flat;Leistungsverzeichnis/LV.d83
+406;Stundenlohnarbeiten Raupenbagger 12 t.;20,0;Std;gaeb-flat;Leistungsverzeichnis/LV.d83
+407;Std.-Lohn Stubbenfräse.;6,0;Std;gaeb-flat;Leistungsverzeichnis/LV.d83
+01;Schadstellen aus Wühltätigkeit von Nagetieren und;30,0;Stk;gaeb;Leistungsverzeichnis/LV.x83
+02;Wühlstellen durch Schwarzwild bis 40 cm Tiefe und;15000,0;m2;gaeb;Leistungsverzeichnis/LV.x83
+03;Oberboden nach DIN 18915 zum Auffüllen von Fehlstellen;300,0;m3;gaeb;Leistungsverzeichnis/LV.x83
+04;Zur Deichreparatur oder an Gewässern geeigneten;300,0;m3;gaeb;Leistungsverzeichnis/LV.x83
+05;gemäß Pos. 1.03 und 1.04 gelieferten Boden;600,0;m3;gaeb;Leistungsverzeichnis/LV.x83
+06;Schotterrasen zur Reparatur von Deckwerken an Deichen;300,0;m3;gaeb;Leistungsverzeichnis/LV.x83
+07;gemäß Pos. 1.06 gelieferten Schotterrasen ab;300,0;m3;gaeb;Leistungsverzeichnis/LV.x83
+08;Lieferung von Wasserbausteinen Steinklasse;150,0;m3;gaeb;Leistungsverzeichnis/LV.x83
+09;gemäß Pos. 1.08 gelieferte Wasserbausteine;150,0;m3;gaeb;Leistungsverzeichnis/LV.x83
+10;Lieferung und Einbau von Geotextil auf unter-;300,0;m2;gaeb;Leistungsverzeichnis/LV.x83
+01;Wurzelausschläge/Buschreihe im Deichschutzstreifen;500,0;m2;gaeb;Leistungsverzeichnis/LV.x83
+02;Strauch- und Buschwerk mittlerer Durchmesser über 0,1 m;2000,0;m2;gaeb;Leistungsverzeichnis/LV.x83
+03;Rodung von Strauchwerk im Bereich von Deich-;1500,0;m2;gaeb;Leistungsverzeichnis/LV.x83
+04;Rodung von Strauchwerk und junger Bäume (u.a.;15000,0;m2;gaeb;Leistungsverzeichnis/LV.x83
+05;Fällen von Starkbäumen im Bereich von Deichen und;150,0;Stk;gaeb;Leistungsverzeichnis/LV.x83
+06;wie vor, jedoch;80,0;Stk;gaeb;Leistungsverzeichnis/LV.x83
+07;wie vor, jedoch;10,0;Stk;gaeb;Leistungsverzeichnis/LV.x83
+08;in Lichraumprofil einragende Äste bis in 5 m Höhe;4000,0;m;gaeb;Leistungsverzeichnis/LV.x83
+09;nach erfolgtem Bodenauftrag oder anderen Maßnahmen;5500,0;m2;gaeb;Leistungsverzeichnis/LV.x83
+10;Um eine weitere Aussat zu verhindern ist der;3600,0;m2;gaeb;Leistungsverzeichnis/LV.x83
+11;Die Fläche auf der der Jap. Staudenknöterich entfernt;600,0;m2;gaeb;Leistungsverzeichnis/LV.x83
+01;Infolge von Hochwasserereignissen an der;3000,0;m2;gaeb;Leistungsverzeichnis/LV.x83
+02;Infolge von Hochwasserereignissen an der;15,0;t;gaeb;Leistungsverzeichnis/LV.x83
+01;Stundenlohnarbeiten durch Arbeitskräfte auf Anordnung;50,0;Std;gaeb;Leistungsverzeichnis/LV.x83
+02;Stundenlohnarbeiten durch LKW mit Tieflader mindestens;60,0;Std;gaeb;Leistungsverzeichnis/LV.x83
+03;Stundenlohnarbeiten durch LKW- Kipper 12 t auf An-;20,0;Std;gaeb;Leistungsverzeichnis/LV.x83
+04;Stundenlohnarbeiten durch Radlader 1 m3;30,0;Std;gaeb;Leistungsverzeichnis/LV.x83
+05;Stundenlohnarbeiten durch Mobilbagger bis 8 t;25,0;Std;gaeb;Leistungsverzeichnis/LV.x83
+06;Stundenlohnarbeiten durch Raupenbagger bis 12 t;20,0;Std;gaeb;Leistungsverzeichnis/LV.x83
+07;Stundenlohnarbeiten für Stubbenfräse für die;6,0;Std;gaeb;Leistungsverzeichnis/LV.x83

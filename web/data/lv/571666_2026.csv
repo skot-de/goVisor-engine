@@ -1,0 +1,201 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+10;Einrichten und Räumen der Baustelle. Vorhalten der Baustelleneinrichtung für sämtliche in der Leistungsbeschreibung aufgeführten Leistungen.;1,0;Psch;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+10;Teilabbruch eines bestehenden Betonwerksteinbelages zur Vorbereitung der Einarbeitung einer Sauberlaufzone gemäß VOB Teil C, ATV DIN 18299 und ATV DIN 18332.;24,0;m;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+20;"Untergrund, Bodenfläche, für die Aufnahme von Epoxidharzbelag vorbereiten gemäß DIN 18365 und BEB-Merkblatt ""Beurteilen und Vorbereiten von Untergründen - Verlegen von Bodenbelägen aus Reaktionsharzen"", einschließlich Bereich in den Türlaibungen.";80,0;m²;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+30;"Untergrund, Bodenfläche, für die Aufnahme von Fliesenbelag vorbereiten gemäß DIN 18352 ""Fliesen- und Plattenarbeiten"" und ZDB-Merkblatt ""Hinweise für die Ausführung von Abdichtungen im Verbund mit Bekleidungen und Belägen aus Fliesen und Platten"", einschließlich Bereich in den Türlaibungen.";10,0;m²;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+40;"Untergrund, Bodenfläche, für die Aufnahme von Sauberlaufmatten vorbereiten gemäß DIN 18365 ""Bodenbelagsarbeiten"" und VOB Teil C, einschließlich Bereich in den Türlaibungen.";22,0;m²;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+60;"Estrichflächen durch Verharzen von Estrichfugen und Rissen zur Aufnahme von Epoxidharzboden bzw. Fliesenbelag vorbereiten, gemäß DIN 18365 und BEB-Merkblatt ""Beurteilen und Vorbereiten von Untergründen"", in Teil- und Einzellängen:";50,0;m;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+70;"Fehlstellen im Zementestrich kraftschlüssig verschließen mit 2-Komponenten Epoxidharzmörtel, lösungsmittelfrei, sehr emissionsarm (EC1 Plus) und frei von Benzylalkohol, gemäß DIN 18365 und BEB-Merkblatt ""Beurteilen und Vorbereiten von Untergründen"".";20,0;St;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+80;Gereinigte Bodenflächen vollflächig und satt mit Haftgrund/ Haftbrücke;10,0;m²;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+90;Gereinigte und angeschliffene Bodenflächen vollflächig und satt mit 2-komponentigem Epoxidharz-Haftgrund vorbehandeln, zur Aufnahme des nachfolgend beschriebenen Epoxidharzbelags.;80,0;m²;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+100;Zusätzlich zur Grundierung erfolgt das Liefern und Auftragen einer speziellen Epoxidharz-Haftbrücke:;80,0;m²;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+110;Grundierte Estrichflächen mit zementärer, faserverstärkter Ausgleichsspachtelung egalisieren, zur Vorbereitung des Untergrunds für die Verlegung von Fliesenbelag gemäß DIN 18157 und DIN 18202, in Teil- und Einzelflächen:;10,0;m²;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+120;Grundierte Estrichflächen mit zementärer, faserverstärkter Ausgleichsspachtelung egalisieren, zur Vorbereitung des Untergrunds für die Verlegung von Epoxidharzbelag gemäß DIN 18560 und DIN 18202 (Toleranzklasse 3), in Teil- und Einzelflächen:;80,0;m²;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+130;Mehrauftrag für Spachtelung gemäß Vorposition, über die Grundstärke von 15 mm hinaus.;80,0;m²mm;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+140;Liefern und Einbauen eines Randdämmstreifens an aufgehenden Bauteilen, als Trennstreifen zwischen  Bodenausgleichsmasse und aufgehenden Bauteilen:;125,0;m;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+150;Überstehenden Randdämmstreifen bodengleich abschneiden.;125,0;m;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+160;Bestehenden Untergrund zur Vorbereitung für Folgearbeiten fachgerecht anschleifen, in Teil- und Einzelflächen:;545,0;m²;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+170;Liefern und Aufbringen einer zementären, selbstverlaufenden Bodenausgleichsmasse für Schichtstärken bis 35 mm.;545,0;m²;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+10;"Untergrund, Wandfläche (verputzte Mauerwerk, Stahlbeton oder Gipskarton), für die Aufnahme von Fliesenbelag vorbereiten gemäß DIN 18352 ""Fliesen- und Plattenarbeiten"" und ZDB-Merkblatt ""Hinweise für die Ausführung von Abdichtungen im Verbund mit Bekleidungen und Belägen aus Fliesen und Platten"", ein";255,0;m2;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+20;Gereinigte Wandflächen vollflächig und satt mit Haftgrund vorbehandeln, zur Aufnahme der nachfolgend beschriebenen Wandfliesen im Dünnbettverfahren.;255,0;m2;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+10;Flächenabdichtung auf Bodenflächen mit Abdichtungsbahnen, die über eine Europäische Technische Zulassung (ETA) oder ein Allgemeines bauaufsichtliches Prüfzeugnis (abP) für Abdichtungssysteme im Verbund mit Fliesen- und Plattenbelägen verfügen. Die Abdichtung muss geeignet sein für Wassereinwirkungsk;90,0;m2;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+20;Lieferung und fachgerechter Einbau von systemkonformen Dichtmanschetten für Rohrdurchführungen, passend zum angebotenen Abdichtungssystem gemäß ETA/abP für Wassereinwirkungsklasse W1-I nach DIN 18534-1. Inklusive aller notwendigen Materialien für den fachgerechten und wasserdichten Anschluss an die ;20,0;St;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+30;Lieferung und fachgerechter Einbau von systemkonformen Dichtmanschetten für Bodenabläufe, passend zum angebotenen Abdichtungssystem gemäß ETA/abP für Wassereinwirkungsklasse W1-I nach DIN 18534-1. Inklusive aller notwendigen Materialien für den fachgerechten und wasserdichten Anschluss an die Fläche;3,0;St;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+40;Lieferung und fachgerechter Einbau von systemkonformen Innenecken-Formteilen, passend zum angebotenen Abdichtungssystem gemäß ETA/abP für Wassereinwirkungsklasse W1-I nach DIN 18534-1. Inklusive aller notwendigen Materialien für den fachgerechten und wasserdichten Anschluss an die Flächenabdichtung ;50,0;St;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+50;Lieferung und fachgerechter Einbau von systemkonformen Außenecken-Formteilen, passend zum angebotenen Abdichtungssystem gemäß ETA/abP für Wassereinwirkungsklasse W1-I nach DIN 18534-1. Inklusive aller notwendigen Materialien für den fachgerechten und wasserdichten Anschluss an die Flächenabdichtung ;30,0;St;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+60;Lieferung und fachgerechter Einbau von Abdichtungsband passend zum angebotenen Abdichtungssystem gemäß ETA/abP für Wassereinwirkungsklasse W1-I nach DIN 18534-1, zur Abdichtung von:;125,0;m;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+10;Liefern und Verlegen von keramischen Bodenbelägen im Dünnbettverfahren auf vorhandenem Zementestrich mit/ohne Abdichtung, einschließlich aller erforderlichen Zuschnitte, Anpassungen an die Örtlichkeit, Nischen und Türlaibungen.;10,0;m2;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+20;Liefern und Verlegen von Hohlkehlsockelfliesen aus unglasiertem Feinsteinzeug, passend zu den vorbeschriebenen Bodenfliesen, in Teil- und Einzellängen. Verlegung im Dünnbett auf vorbereitete Wände, einschließlich aller erforderlichen Zuschnitte und Anpassungen an die Örtlichkeit.;15,0;m;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+30;Liefern und Einbauen von Innenecken-Formteilen (konkav) für Hohlkehlsockel aus unglasiertem Feinsteinzeug, in gleicher Qualität, Farbe und Oberflächenbeschaffenheit wie die angrenzenden Sockelfliesen.;10,0;St;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+40;Liefern und Einbauen von Außenecken-Formteilen (konvex) für Hohlkehlsockel aus unglasiertem Feinsteinzeug, in gleicher Qualität, Farbe und Oberflächenbeschaffenheit wie die angrenzenden Sockelfliesen.;5,0;St;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+10;Keramischer Wandbelag aus kalibrierten Feinsteinzeugfliesen, in Teil- und Einzelflächen, liefern und im Dünnbettverfahren auf vorbereitete Wände verlegen, einschließlich aller Anschlüsse (Schnitte) an die Örtlichkeit, inkl. Verfugung mit chemikalienbeständigem 2-Komponenten Epoxidharzfugenmörtel im ;212,0;m²;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+20;Keramischer Wandbelag aus kalibrierten Feinsteinzeugfliesen, in Teil- und Einzelflächen, liefern und gemäß Verlegeplänen im Dünnbettverfahren auf vorbereitete Wände verlegen, im zweifarbigen Musterverlauf an GK-Vorwand, einschließlich aller Anschlüsse (Schnitte) an die Örtlichkeit, inkl. Verfugung m;15,0;m²;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+30;Keramischer Wandbelag aus kalibrierten Feinsteinzeugfliesen, in Teil- und Einzelflächen, liefern und gemäß Verlegeplänen im Dünnbettverfahren auf vorbereitete Wände verlegen, im zweifarbigen Musterverlauf an GK-Vorwand, einschließlich aller Anschlüsse (Schnitte) an die Örtlichkeit, inkl. Verfugung m;15,0;m²;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+40;Wandfliesen wie vorstehend beschrieben;6,0;m;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+50;Wandfliesen wie vorstehend beschrieben, 10x10 cm hell- und dunkelblau im Wechsel, als senkrechte Bekleidung der Seiten;2,0;m;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+60;Wandfliesen wie vorstehend beschrieben, 20x20 cm hellgrau, als senkrechte Bekleidung der Seiten;2,0;m;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+70;Zulage für Aussparungen im Fliesenspiegel für;4,0;St;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+10;Keramischer Wandbelag aus kalibrierten Feinsteinzeugfliesen, in Teil- und Einzelflächen, liefern und im Dünnbettverfahren auf vorbereitete Wände verlegen, einschließlich aller Anschlüsse (Schnitte) an die Örtlichkeit, inkl. Verfugung mit chemikalienbeständigem 2-Komponenten Epoxidharzfugenmörtel im ;20,0;m2;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+10;Keramischer Wandbelag aus kalibrierten Feinsteinzeugfliesen, in Teil- und Einzelflächen, liefern und im Dünnbettverfahren auf vorbereitete Wände verlegen, einschließlich aller Anschlüsse (Schnitte) an die Örtlichkeit, inkl. Verfugung mit chemikalienbeständigem 2-Komponenten Epoxidharzfugenmörtel im ;5,0;m2;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+10;Kristallspiegel in Fliesenspiegel fachgerecht einarbeiten/;1,0;St;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+20;Kristallspiegel in Fliesenspiegel fachgerecht einarbeiten/;2,0;St;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+30;Kristallspiegel in Fliesenspiegel fachgerecht einarbeiten/;2,0;St;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+40;Kantenausbildung mit Eckprofil, in Teil- und;25,0;m;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+50;Trennschiene als Belagsabschluss- und Kantenschutzprofil aus Edelstahl V2A (1.4301), für Fliesendicke ca. 10,5 mm, in Teil- und Einzellängen, liefern und unter Berücksichtigung der Anwendungs- und Verarbeitungshinweise des Herstellers fachgerecht einbauen. Einschließlich aller erforderlichen Befesti;30,0;m;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+10;Anlegen von Löchern in keramischen Wand- und;60,0;St;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+20;Anlegen von Löchern in keramischen Wand- und;30,0;St;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+30;Dauerelastischer Fugenverschluss an Anschlussfugen zwischen;150,0;m;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+40;Erstreinigung aller keramischen Bodenbeläge nach;10,0;m2;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+50;Erstreinigung aller keramischen Wandbeläge nach Fertigstellung und Abnahme der Fliesenarbeiten.;250,0;m2;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+60;Liefern und Verlegen von geeignetem Abdeckmaterial;150,0;m2;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+70;Lieferung von Reservematerial für eingebaute Fliesenbeläge nach Abschluss der Verlegearbeiten als Ersatzvorrat.;1,0;Psch;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+10;Vorhandene Estrichschicht mittels geeigneter Schleifmaschinen bis zu einer maximalen Abtragstiefe von 20 mm schleifen. Die vorhandene Oberkante Fertigfußboden (OKFF) ist dabei zu beachten und darf nicht unterschritten werden. Arbeiten unter Verwendung von Staubabsaugung durchführen. Anfallender Baus;365,0;m²;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+20;Untergrund, Bodenfläche, staubarm von Verschmutzung;365,0;m²;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+30;Untergrund, Bodenfläche, staubarm von Verschmutzung;180,0;m²;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+40;Reinigung des Untergrunds an Sockelflächen als Vorbereitung;350,0;m;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+50;Liefern und Auftragen eines geeigneten Haftgrunds als Vorbehandlung;350,0;m;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+10;Trennschicht, PE-Folie, 0,2 mm Foliendicke, einlagig, Stöße;180,0;m²;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+20;Fertigteilestrich zweilagig, geeignet für Flächenlasten von;180,0;m²;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+30;Zulage: Verlegung in Türöffnungen, b=0,8-1,01 m, t bis 30 cm;15,0;St;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+40;Zulage: Anarbeiten an Deckendurchbrüche, ca. 0,10 m2;10,0;St;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+50;Mineralische Ausgleichsschüttung Blähschiefer;2800,0;kg;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+60;Randdämmstreifen Mineralwolle;120,0;m;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+70;Abstellwinkel in Fußbodenhöhe, l= 0,80 - 1,01 m;15,0;St;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+80;Randdämmstreifen abschneiden;120,0;m;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+10;Liefern und Verlegen von Bodenbelag aus Betonwerkstein;545,0;m²;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+40;Liefern und Montieren von Sockelleisten aus Betonwerkstein,;350,0;m;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+50;Herstellen eines dauerelastischen Fugenverschlusses an Bodenfugen.;350,0;m;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+10;Grundreinigung von Fußbodenbelägen aus Betonwerksteinplatten mit Terrazzooberfläche;100,0;m²;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+20;Schleifen von Terrazzo-Bodenflächen.;100,0;m²;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+30;Ausbessern von Fugen und Rissen in Terrazzo-Bodenflächen.;20,0;m;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+40;Feinschliff von Terrazzo-Bodenflächen;100,0;m²;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+50;Imprägnierung von Terrazzo-Bodenflächen in Flurbereichen einer Schuleinrichtung;100,0;m²;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+60;Treppen-Blockstufen aus Betonwerkstein intensiv reinigen.;230,0;m²;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+70;Leistung umfasst:;230,0;m²;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+80;Fehlstellen schließen und Reparatur von Betonwerksteinstufen;100,0;m²;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+90;Bearbeitung von Fehlstellen wie folgt:;5,0;St;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+100;Leistungsumfang:;230,0;m²;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+110;Entsprechend der Vorpositionen vorbereitete Betonwerksteinstufen vollflächig im Nassschleifverfahren nachschleifen. Körnung des Feinschliffs: K800 bis K1500. Die Oberfläche muss nach dem Schleifen eine gleichmäßig matte bis seidenmatte Optik ohne sichtbare Schleifspuren aufweisen.;230,0;m²;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+120;Terrazzobelag als Einzelplatten wechseln;20,0;St;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+130;Zulage für Feinschliff an Wandanschlüssen usw. im Handschleifverfahren;100,0;m;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+10;Strapazierfähige und aufrollbare Eingangsmatte aus verwindungssteifen Aluminium-Trägerprofilen mit unterseitiger Trittschalldämmung, liefern und einbauen.;1,0;St;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+20;Strapazierfähige und aufrollbare Eingangsmatte aus verwindungssteifen Aluminium-Trägerprofilen mit unterseitiger Trittschalldämmung, liefern und einbauen.;1,0;St;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+30;Einbaurahmen aus Aluminium, liefern und einbauen,;30,0;m;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+40;Zulage für Winkelrahmen aus Aluminium für den fachgerechten;25,0;m;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+50;Spachtelung unter Sauberlaufmatten, in der Aussparung des;25,0;m²;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+60;Beschichtung der Spachtelung unter Sauberlaufmatten;25,0;m²;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+10;Untergrund des teils vorhandenen Bestandsestrichs und teils neu eingebrachten Ausgleichsestrichs aus Vorposition, inklusive aller Randbereiche, zur Aufnahme einer Epoxidharz-Grundierung vorbereiten durch:;80,0;m2;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+20;Aufbringen einer Grundierung aus 2-Komponenten- Epoxidharzg mit folgendem Leistungsumfang:;80,0;m2;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+30;Belagsübergangsprofil aus Edelstahl mit einem;10,0;m;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+40;Herstellen einer Hohlkehle als Wandanschluss, bündig;110,0;m;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+50;Anschlussfuge zwischen Bodenbelag und Wandfliesen aus;110,0;m;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+60;Liefern und fachgerechtes Aufziehen einer Ausgleichsspachtelung auf;80,0;m2;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+70;Fachgerechtes Aufziehen einer Verlaufsbeschichtung unter Verwendung eines farbigen, 2-komponentigen Epoxidharzes.;80,0;m2;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+80;Einstreuung von Deko-Chips in die noch frische Oberfläche zur dekorativen Gestaltung bzw. Erhöhung der Rutschfestigkeit.;80,0;m2;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+90;Fachgerechtes Aufziehen der Deckversiegelung unter Verwendung eines;80,0;m2;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+100;An- und Einarbeitung von bauseits gesetzten Bodenabläufen in das Beschichtungssystem.;3,0;St;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+10;Stundensatz eines Meisters für eventuell anfallende komplexe Montage-, Anpassungs- und Nacharbeiten, Qualitätssicherung, fachliche Beratung sowie Bauaufsicht, die nicht im Leistungsverzeichnis enthalten sind.;5,0;h;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+20;Stundensatz eines Facharbeiters/Tischlergesellen für eventuell anfallende Montage-, Anpassungs- und Nacharbeiten, die nicht im Leistungsverzeichnis enthalten sind.;10,0;h;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+30;Stundensatz eines Helfers/einer Hilfskraft für eventuell anfallende unterstützende Tätigkeiten bei Transport, Materialbereitstellung und einfachen Montagearbeiten, die nicht im Leistungsverzeichnis enthalten sind.;10,0;h;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+40;Stundensatz eines Lehrlings/Auszubildenden für eventuell anfallende unterstützende Arbeiten unter Anleitung eines Facharbeiters oder Meisters im Zusammenhang mit Transport, einfachen Montage- und Anpassungsarbeiten, die nicht im Leistungsverzeichnis enthalten sind.;5,0;h;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+50;Materialkosten, Maschineneinsatz und Entsorgungskosten;1,0;Psch;gaeb;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten_V33.X83
+1.10;Baustelleinrichtung;1,0;Psch;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+201.10;Einschneiden und Abbruch Betonwerkstein;24,0;m;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+201.20;Untergrund reinigen, Bodenflächen Epoxidharz;80,0;m²;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+201.30;Untergrund reinigen, Bodenflächen Fliesen;10,0;m²;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+201.40;Untergrund reinigen, Bodenflächen Sauberlaufmatte;22,0;m²;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+201.60;Verharzen von Estrichfugen und Rissen;50,0;m;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+201.70;Fehlstellen mit Epoxidharzmörtel schließen;20,0;St;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+201.80;Haftgrund / Haftbrücke auftragen, Bestandsestrich;10,0;m²;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+201.90;Haftgrund auftragen, Bodenfläche Epoxidharz;80,0;m²;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+201.100;Haftbrücke auftragen, Bodenbelag Epoxidharz;80,0;m²;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+201.110;Ausgleich von Unebenheiten von 5-10mm Fliesenbelag;10,0;m²;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+201.120;Ausgleich von Unebenheiten von 5-10mm Epoxidharz;80,0;m²;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+201.130;Mehrstärken Spachtelung je mm;80,0;m²mm;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+201.140;Randdämmstreifen;125,0;m;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+201.150;Randdämmstreifen abschneiden;125,0;m;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+201.160;Anschleifen des Untergrundes;545,0;m²;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+201.170;Bodenausgleichsmasse;545,0;m²;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+202.10;Untergrund reinigen, Wandflächen;255,0;m2;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+202.20;Haftgrund auftragen, Wandfläche;255,0;m2;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+3.10;Abdichtung Bodenflächen W1-I;90,0;m2;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+3.20;Dichtmanschette für Rohrdurchführungen;20,0;St;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+3.30;Dichtmanschetten für Bodenabläufe;3,0;St;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+3.40;Innenecken-Formteile;50,0;St;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+3.50;Außenecke-Formteile;30,0;St;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+3.60;Dichtband für Wand-/Bodenanschlüsse;125,0;m;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+401.10;Bodenfliesen R10 Feinsteinzeug, 30/30cm;10,0;m2;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+401.20;Sockelfliese Feinsteinzeug, 10/15cm;15,0;m;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+401.30;Innenecke für Hohlkehlsockel;10,0;St;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+401.40;Außenecke für Hohlkehlsockel;5,0;St;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+4021.10;Wandfliesen Steinzeug, 20/20cm, Türhöhe, hellgrau;212,0;m²;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+4021.20;Wandfliesen Steinzeug, 10/10cm, Türhoch, orange und gelb;15,0;m²;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+4021.30;Wandfliesen Steinzeug, 10/10cm, Türhoch, hell- und dunkelblau;15,0;m²;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+4021.40;senkrechte Abdeckung vorsatzschale, Hellgrau, bis 30cm;6,0;m;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+4021.50;senkrechte Abdeckung vorsatzschale, Hell- und dunkelblau, bis 30cm;2,0;m;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+4021.60;senkrechte Abdeckung vorsatzschale, Hellgrau, bis 45cm;2,0;m;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+4021.70;Zulage Aussparung im Fliesenspiegel;4,0;St;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+4022.10;Wandfliesen Steinzeug, 20/20cm, bis 1,20 m, hellgrau, Kleinflächen;20,0;m2;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+4023.10;Wandfliesen Steinzeug, 20/20cm, bis 1,20 m, hellgrau, Kleinflächen;5,0;m2;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+5.10;Kristallspiegel ca. 0,60/1,40m;1,0;St;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+5.20;Kristallspiegel ca. 0,60/1,60m;2,0;St;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+5.30;Kristallspiegel ca. 0,60/0,60m;2,0;St;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+5.40;Eckschutzschiene quadratisch, Edelstahl, 6mm;25,0;m;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+5.50;Fliesenabschlussprofil/ Trennschiene Edelstahl;30,0;m;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+6.10;Löcher anlegen bis 0,01m²;60,0;St;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+6.20;Löcher anlegen bis 0,10m²;30,0;St;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+6.30;Dauerelastische Fuge Silikon;150,0;m;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+6.40;Erstreinigung Bodenfliesen;10,0;m2;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+6.50;Erstreinigung Wandfliesen;250,0;m2;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+6.60;Schutzabdeckung inkl. Beräumen;150,0;m2;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+6.70;Reservefliesen;1,0;Psch;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+701.10;Bestandsestrich mechanisch abtragen;365,0;m²;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+701.20;Untergrund reinigen, Bodenflächen Betonwerkstein;365,0;m²;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+701.30;Untergrund, Bodenfläche, staubarm von Verschmutzung;180,0;m²;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+701.40;Untergrundreinigen Sockelflächen, Höhe bis 10cm;350,0;m;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+701.50;Haftgrund auftragen Sockelflächen, Höhe bis 10cm;350,0;m;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+702.10;Trennschicht, PE-Folie 0,2 mm;180,0;m²;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+702.20;Fertigteilestrich aus Gipsfaserplatten 23 mm + 12,5 mm;180,0;m²;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+702.30;Zulage: Verlegung in Türöffnungen, b=0,8-1,01 m, t bis 30 cm;15,0;St;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+702.40;Zulage: Anarbeiten an Deckendurchbrüche, ca. 0,10 m2;10,0;St;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+702.50;Mineralische Ausgleichsschüttung Blähschiefer;2800,0;kg;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+702.60;Randdämmstreifen Mineralwolle;120,0;m;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+702.70;Abstellwinkel in Fußbodenhöhe, l= 0,80 - 1,01 m;15,0;St;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+702.80;Randdämmstreifen abschneiden;120,0;m;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+703.10;Bodenbelag Betonwerkstein, 30 x 30 cm;545,0;m²;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+703.40;Sockelleiste Betonwerkstein;350,0;m;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+703.50;Dauerelastische Fuge Silikon;350,0;m;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+704.10;Reinigen von Bodenflächen;100,0;m²;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+704.20;Schleifen von Terrazzo-Bodenflächen;100,0;m²;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+704.30;Ausbessern von Fugen und Rissen;20,0;m;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+704.40;Feinschliff von Terrazzo-Bodenflächen;100,0;m²;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+704.50;Bodenflächen Imprägnieren;100,0;m²;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+704.60;Reinigen Betonwerksteinstufen;230,0;m²;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+704.70;Schleifen Betonwerksteinstufen;230,0;m²;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+704.80;Fehlstellen schließen, Betonwerksteinstufen;100,0;m²;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+704.90;Schadstellen ausbessern, Betonwerksteinstufen;5,0;St;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+704.100;Imprägnierung Betonwerksteinstufen;230,0;m²;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+704.110;Feinschliff von Betonwerksteinstufen;230,0;m²;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+704.120;Terrazzobelag als EInzelplatten wechseln;20,0;St;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+704.130;Zulage Schleifen, Feinschliff per Hand;100,0;m;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+705.10;Sauberlaufmatte 17 mm, aufrollbar, 600 cm x 280 cm;1,0;St;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+705.20;Sauberlaufmatte 17 mm, aufrollbar, 150 cm x 200 cm;1,0;St;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+705.30;Winkelrahmen Aluminium 21/24/3mm;30,0;m;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+705.40;Zulage: Anschlussfuge an umgebene Bauteile;25,0;m;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+705.50;Spachtelung unter Sauberlaufmatte;25,0;m²;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+705.60;Farbbeschichtung, dunkelgrau;25,0;m²;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+8.10;Vorbereiten des Untergrundes;80,0;m2;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+8.20;Grundierung aus 2-K-Epoxidharz inkl. Absanden;80,0;m2;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+8.30;Belagsübergangsprofil, Edelstahl;10,0;m;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+8.40;Hohlkehle;110,0;m;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+8.50;Wandanschlussfuge;110,0;m;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+8.60;Liefern und Aufziehen einer Ausgleichsspachtelung;80,0;m2;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+8.70;Verlaufsbeschichtung;80,0;m2;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+8.80;Einstreuung von Deko-Chips;80,0;m2;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+8.90;Versiegelung;80,0;m2;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+8.100;Anarbeiten Bodenabläufe;3,0;St;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+9.10;Meisterstunden Fliesenleger;5,0;h;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+9.20;Stundensatz Facharbeiter;10,0;h;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+9.30;Stundensatz Helfer;10,0;h;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+9.40;Stundensatz eines Lehrlings/Auszubildenden;5,0;h;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83
+9.50;Materiallieferung;1,0;Psch;gaeb-flat;leistungsbeschreibungen/LV_GAEB_Fliesen-und Werksteinarbeiten.D83

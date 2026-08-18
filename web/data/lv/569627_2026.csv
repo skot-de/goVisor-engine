@@ -1,0 +1,32 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+110;Baustromverteiler DIN EN 61439-4 (VDE 0660-600-4), als Anschlussschrank, Bedienung durch elektrotechnischen Laien, geeignet für die Versorgung frequenzgeregelter Antriebe, mit Berührungsschutzabdeckung DIN EN 50274 (VDE 0660-514), Zählerplatz nach den Technischen Anschlussbedingungen des zuständigen;1,0;St;gaeb;leistungsbeschreibungen/C.1_Leistungsverzeichnis X83.X83
+120;Monatliche Miete für die v.g. Baustromzähler,;22,0;StMt;gaeb;leistungsbeschreibungen/C.1_Leistungsverzeichnis X83.X83
+130;Baustromverteiler DIN EN 61439-4 (VDE 0660-600-4), als Verteilerschrank, Bedienung durch elektrotechnischen Laien, geeignet für die Versorgung frequenzgeregelter Antriebe, mit Berührungsschutzabdeckung DIN EN 50274 (VDE 0660-514), Gehäuse aus nichtrostendem Stahl, lackiert, Schutzklasse I,;1,0;St;gaeb;leistungsbeschreibungen/C.1_Leistungsverzeichnis X83.X83
+140;Monatliche Miete für den v.g. Kranbaustromverteiler 87kVA,;6,0;StMt;gaeb;leistungsbeschreibungen/C.1_Leistungsverzeichnis X83.X83
+150;Baustromverteiler DIN EN 61439-4 (VDE 0660-600-4), als Verteilerschrank, Bedienung durch elektrotechnischen Laien, Gehäuse aus nichtrostendem Stahl, lackiert, Schutzklasse I,;1,0;St;gaeb;leistungsbeschreibungen/C.1_Leistungsverzeichnis X83.X83
+160;Monatliche Miete für den v.g. Baustromverteiler 173kVA,;22,0;StMt;gaeb;leistungsbeschreibungen/C.1_Leistungsverzeichnis X83.X83
+170;Baustromverteiler DIN EN 61439-4 (VDE 0660-600-4), als Endverteiler 22 kVA, Bedienung durch elektrotechnischen Laien, mit Berührungsschutzabdeckung DIN EN 50274 (VDE 0660-514), Gehäuse aus Stahl, lackiert, Schutzklasse I,;6,0;St;gaeb;leistungsbeschreibungen/C.1_Leistungsverzeichnis X83.X83
+180;Monatliche Miete für die v.g. Baustromverteiler 22 kVA,;132,0;StMt;gaeb;leistungsbeschreibungen/C.1_Leistungsverzeichnis X83.X83
+210;Umsetzen der Verteilerkästen;10,0;St;gaeb;leistungsbeschreibungen/C.1_Leistungsverzeichnis X83.X83
+220;Baustromverteiler Erdung;3,0;St;gaeb;leistungsbeschreibungen/C.1_Leistungsverzeichnis X83.X83
+230;Einsteck-Hakenriegelschloss DIN SPEC 1134, schwere Ausführung, Gehäuse aus Stahl, mit Zylinderschloss mit Stiftzuhaltungen, Stulp vernickelt.;2,0;St;gaeb;leistungsbeschreibungen/C.1_Leistungsverzeichnis X83.X83
+240;CEE Stecker 32 A zum Anschluss an vorgenannte Baustromleitungen.;5,0;St;gaeb;leistungsbeschreibungen/C.1_Leistungsverzeichnis X83.X83
+250;CEE Kupplung 32 A zum Anschluss an vorgenannte Baustromleitungen.;5,0;St;gaeb;leistungsbeschreibungen/C.1_Leistungsverzeichnis X83.X83
+300;Gummischlauchleitung DIN EN 50525-2-21 (VDE 0285-525-2-21) H07RN-F 4 G 95, Cu-Zahl 3648, offen verlegen;20,0;m;gaeb;leistungsbeschreibungen/C.1_Leistungsverzeichnis X83.X83
+310;Gummischlauchleitung DIN EN 50525-2-21 (VDE 0285-525-2-21) H07RN-F 4 G 95, Cu-Zahl 3648, nur anschließen an beigestellte Betriebsmittel, einschl. Verbindungsmittel.;2,0;St;gaeb;leistungsbeschreibungen/C.1_Leistungsverzeichnis X83.X83
+311;Gummischlauchleitung DIN EN 50525-2-21 (VDE 0285-525-2-21) H07RN-F 5 G 50, Cu-Zahl 2400, offen verlegen;20,0;m;gaeb;leistungsbeschreibungen/C.1_Leistungsverzeichnis X83.X83
+312;Gummischlauchleitung DIN EN 50525-2-21 (VDE 0285-525-2-21) H07RN-F 5 G 50, Cu-Zahl 2400, nur anschließen an beigestellte Betriebsmittel, einschl. Verbindungsmittel.;2,0;St;gaeb;leistungsbeschreibungen/C.1_Leistungsverzeichnis X83.X83
+320;Gummischlauchleitung DIN EN 50525-2-21 (VDE 0285-525-2-21) H07RN-F 5 G 25, Cu-Zahl 1200, in vorh. Rohre/Unterflurkanäle, offen verlegen,;200,0;m;gaeb;leistungsbeschreibungen/C.1_Leistungsverzeichnis X83.X83
+330;Gummischlauchleitung DIN EN 50525-2-21 (VDE 0285-525-2-21) H07RN-F 5 G 25, Cu-Zahl 1200, nur anschließen an beigestellte Betriebsmittel, einschl. Verbindungsmittel.;12,0;St;gaeb;leistungsbeschreibungen/C.1_Leistungsverzeichnis X83.X83
+360;Anschluss an Hausanschluss;1,0;St;gaeb;leistungsbeschreibungen/C.1_Leistungsverzeichnis X83.X83
+365;Umschwenken Baustromanschluss von Hausanschluss alt auf Hausanschluss neu;1,0;St;gaeb;leistungsbeschreibungen/C.1_Leistungsverzeichnis X83.X83
+370;Antrag Anschluss an Baustrom an Energieversorger MITNetz stellen;1,0;psch;gaeb;leistungsbeschreibungen/C.1_Leistungsverzeichnis X83.X83
+10;LED-Lichtband 25m Lichtschlauch;10,0;St;gaeb;leistungsbeschreibungen/C.1_Leistungsverzeichnis X83.X83
+20;Leuchte 1x36W als Baustellenbeleuchtung;20,0;St;gaeb;leistungsbeschreibungen/C.1_Leistungsverzeichnis X83.X83
+21;Vorhaltung und Wartung vorgenannter Leuchte an Stativ,;220,0;StMt;gaeb;leistungsbeschreibungen/C.1_Leistungsverzeichnis X83.X83
+30;Gummischlauchleitung DIN EN 50525-2-21 (VDE 0285-525-2-21) H07RN-F 3 G 2,5, Cu-Zahl 72, offen verlegen;300,0;m;gaeb;leistungsbeschreibungen/C.1_Leistungsverzeichnis X83.X83
+40;Gummischlauchleitung DIN EN 50525-2-21 (VDE 0285-525-2-21) H07RN-F 3 G 4, Cu-Zahl 115, offen verlegen;100,0;m;gaeb;leistungsbeschreibungen/C.1_Leistungsverzeichnis X83.X83
+70;Verbindungsdose DIN EN IEC 60670-1 (VDE 0606-1) als Abzweigkasten, aus Kunststoff, Grundfläche mind. 80/80 mm, Tiefe mind. 37 mm, an Stahlkonstruktion.;10,0;St;gaeb;leistungsbeschreibungen/C.1_Leistungsverzeichnis X83.X83
+80;Dämmerungsschalter 230 V AC mit Schaltuhr, mit Tages- und Wochenprogramm, mit 1 S, min. Schaltabstand 1 min.;1,0;St;gaeb;leistungsbeschreibungen/C.1_Leistungsverzeichnis X83.X83
+90;Die zu bearbeitende Fläche ist so auszuleuchten, dass eine qualitätsgerechte Ausführung der Leistung möglich ist. Anbau an Kran mit LED-Strahlern (ca 150W) zur vollständigen Baustellenbeleuchtung vorhalten und nach Beendigung aller Arbeiten räumen.;2,0;St;gaeb;leistungsbeschreibungen/C.1_Leistungsverzeichnis X83.X83
+100;Vorhaltung und Wartung vorgenannter Strahler an Kranturm (150W);6,0;StMt;gaeb;leistungsbeschreibungen/C.1_Leistungsverzeichnis X83.X83

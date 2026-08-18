@@ -1,0 +1,441 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+10;PE-Rohr DN 150;20,0;m;gaeb;Vergabeunterlagen/1035-26_LV.X83
+20;PE-Rohr DN 125;8,0;m;gaeb;Vergabeunterlagen/1035-26_LV.X83
+30;PE-Rohr DN 100;52,0;m;gaeb;Vergabeunterlagen/1035-26_LV.X83
+40;PE-Rohr DN 70/80;50,0;m;gaeb;Vergabeunterlagen/1035-26_LV.X83
+50;PE-Rohr DN 50;10,0;m;gaeb;Vergabeunterlagen/1035-26_LV.X83
+60;Passstück Länge max. 0,5 m, DN 150;6,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+70;Passstück Länge max. 0,5 m, DN 125;2,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+80;Passstück Länge max. 0,5 m, DN 100;10,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+90;Passstück Länge max. 0,5 m, DN 70/80;15,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+100;Passstück Länge max. 0,5 m, DN 50;4,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+110;PE-Bogen DN 150;18,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+120;PE-Bogen DN 125;6,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+130;PE-Bogen DN 100;45,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+140;PE-Bogen DN 70/80;52,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+150;PE-Bogen DN 50;15,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+160;PE-Abzweig DN 150 x 150;3,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+170;PE-Abzweig DN 125 x 100;3,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+180;PE-Abzweig DN 100 x 100;12,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+190;PE-Abzweig DN 100 x 70/80;6,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+200;PE-Abzweig DN 100 x 50;5,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+210;PE-Eckabzweig DN 100 x 100;1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+220;PE-Doppelabzweig DN 100 x 100;1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+230;PE-Abzweig DN 70 x 70 bzw. 80 x 80;5,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+240;PE-Abzweig DN 70/80 x 50;14,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+250;PE-Enddeckel DN 150;1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+260;PE-Enddeckel DN 125;1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+270;PE-Enddeckel DN 100;1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+280;PE-Enddeckel DN 70/80;1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+290;PE-Reduzierung DN 150 x 125;6,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+300;PE-Reduzierung DN 125 x 100;6,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+310;PE-Reduzierung DN 100 x 70/80;12,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+320;PE-Reduzierung DN 80 x 50;6,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+330;Dehn- und Stützmuffe für Fallleitungen DN 150;1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+340;Dehn- und Stützmuffe für Fallleitungen DN 125;2,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+350;Dehn- und Stützmuffe für Fallleitungen DN 100;4,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+360;Dehn- und Stützmuffe für Fallleitungen DN 70;6,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+370;Grundplatte zur Befestigung an Decken und Wänden,;10,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+380;PE-Reinigungsrohr mit runder Öffnung, für Fallleitungen,;1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+390;PE-Reinigungsrohr mit runder Öffnung, für Fallleitungen,;1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+400;PE-Reinigungsrohr mit runder Öffnung, für Fallleitungen,;1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+410;PE-Reinigungsrohr mit runder Öffnung, für Fallleitungen,;2,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+420;Übergangsmuffe für PE-Rohr DN 150 als Übergangsverbindung zum Anschluss von Fremdwerkstoffen PP-Rohr (KG2000);3,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+430;Übergangsmuffe für PE-Rohr DN 125 als Übergangsverbindung zum Anschluss von Fremdwerkstoffen PP-Rohr (KG2000);3,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+440;Übergangsmuffe für PE-Rohr DN 100 als Übergangsverbindung zum Anschluss von Fremdwerkstoffen PP-Rohr (KG2000);10,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+450;Verbinder DN 150;10,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+460;Verbinder DN 125;4,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+470;Verbinder DN 100;60,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+480;Verbinder DN 70/80;80,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+490;Verbinder DN 50;10,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+500;Rohrschott R90, DN 125;2,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+510;Rohrschott R90 DN 100;7,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+520;Rohrschott R90 DN 70;8,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+530;Rohrschott R90 DN 50;1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+540;Anschluss DN 100;1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+550;Anschluss DN 125;1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+560;Fallrohranschluss aus PE-Rohr DN 100, an vom Dachdecker einzusetzende Entlüftungshauben. Der Anschluss an die Haube ist starr (nicht flexibel) auszuführen.;1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+570;DN 150;1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+580;HT-Rohr DN 100;25,0;m;gaeb;Vergabeunterlagen/1035-26_LV.X83
+590;HT-Rohr DN 70;6,0;m;gaeb;Vergabeunterlagen/1035-26_LV.X83
+600;HT-Rohr DN 50;40,0;m;gaeb;Vergabeunterlagen/1035-26_LV.X83
+610;HT-Passstück Länge max. 0,5 m, DN 100;20,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+620;HT-Passstück Länge max. 0,5 m, DN 70;3,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+630;HT-Passstück Länge max. 0,5 m, DN 50;25,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+640;HT-Bogen DN 100;50,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+650;HT-Bogen DN 70;4,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+660;HT-Bogen DN 50;55,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+670;HT-Abzweig DN 100 x 100;9,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+680;HT-Abzweig DN 100 x 70;8,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+690;HT-Abzweig DN 100 x 50;5,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+700;HT-Abzweig DN 70 x 50;4,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+710;HT-Abzweig DN 50 x 50;8,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+720;HT-Abzweig DN 50 x 40;1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+730;HT-Übergangsrohr DN 100 x 70;8,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+740;HT-Übergangsrohr DN 100 x 50;8,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+750;HT-Übergangsrohr DN 70 x 50;6,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+760;HT-Enddeckel DN 100;2,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+770;HT-Enddeckel DN 70;2,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+780;HT-Enddeckel DN 50;4,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+790;HT-Doppelmuffe DN 100;2,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+800;HT-Doppelmuffe DN 70;2,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+810;HT-Doppelmuffe DN 50;2,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+820;Anschluss der bauseits vorhandenen Küchenspülen unter Hinzulieferung folgender Materialien:;1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+830;für PE - und PP - Rohre bis DN 150;11,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+840;für PE - und PP - Rohre bis DN 125;4,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+850;für PE - und PP - Rohre bis DN 100;40,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+860;für PE - und PP - Rohre bis DN 70/80;35,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+870;für PE - und PP - Rohre bis DN 50;32,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+880;für Schmutzwasserleitungen DN 125;1,0;m;gaeb;Vergabeunterlagen/1035-26_LV.X83
+890;für Schmutzwasserleitungen DN 100;30,0;m;gaeb;Vergabeunterlagen/1035-26_LV.X83
+900;für Schmutzwasserleitungen DN 70;45,0;m;gaeb;Vergabeunterlagen/1035-26_LV.X83
+910;für Schmutzwasserleitungen DN 50;40,0;m;gaeb;Vergabeunterlagen/1035-26_LV.X83
+920;Wärme-/Kältedämmung an Schmutzwasserentlüftungsrohrleitung aus PP;14,0;m2;gaeb;Vergabeunterlagen/1035-26_LV.X83
+10;Regenwasser-Hausspeicher als Grauwasserlagerbehälter mit Überlauf;1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+20;Abwasserschieber DN100;3,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+30;Ausgussbecken;1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+40;Warmwasserspeicher;1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+10;Rückbau von einem nicht genutzten Trinkwasser-Leitungsabschnitt;1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+20;Wasseranschluss herstellen an bauseits vorhandene Absperrarmatur DN 50 an der Haupteinspeisung;1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+30;Wasseranschluss herstellen an bauseits vorhandene Absperrarmatur DN 25;2,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+40;Automatischer Rückspülfilter mit Druckminderer;1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+50;KRV-Ventil DN 32;1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+60;KRV-Ventil DN 25;1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+70;KRV-Ventil DN 20;2,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+80;KRV-Ventil DN 15;1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+90;Freistrom-Schrägsitzventil DN 32;1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+100;Freistrom-Schrägsitzventil DN 25;1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+110;Probenahmeventil;5,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+120;Unterputzventil-Grundkörper mit Behördenoberteil DN 20;1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+130;Unterputzventil-Grundkörper mit Behördenoberteil;6,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+140;Dämmbox für Freistromschrägsitzventil und KRV-Ventil DN 32;2,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+150;Dämmbox für Freistromschrägsitzventil und KRV-Ventil DN 25;2,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+160;Dämmbox für Freistromschrägsitzventil und KRV-Ventil DN 20;2,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+170;Dämmbox für Freistromschrägsitzventil und KRV-Ventil DN 15;1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+180;Edelstahlrohr 54 x 1,5 mm;5,0;m;gaeb;Vergabeunterlagen/1035-26_LV.X83
+190;Edelstahlrohr 42 x 1,5 mm;5,0;m;gaeb;Vergabeunterlagen/1035-26_LV.X83
+200;Edelstahlrohr 35 x 1,5 mm;4,0;m;gaeb;Vergabeunterlagen/1035-26_LV.X83
+210;Edelstahlrohr 28 x 1,2 mm;13,0;m;gaeb;Vergabeunterlagen/1035-26_LV.X83
+220;Edelstahlrohr 22 x 1,2 mm;44,0;m;gaeb;Vergabeunterlagen/1035-26_LV.X83
+230;Edelstahlrohr 18 x 1,0 mm;37,0;m;gaeb;Vergabeunterlagen/1035-26_LV.X83
+240;Edelstahlrohr 15 x 1,0 mm;66,0;m;gaeb;Vergabeunterlagen/1035-26_LV.X83
+250;Rohrbogen 54 x 1,5 mm;2,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+260;Rohrbogen 42 x 1,5 mm;2,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+270;Rohrbogen 35 x 1,5 mm;3,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+280;Rohrbogen 28 x 1,2 mm;7,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+290;Rohrbogen 22 x 1,2 mm;13,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+300;Rohrbogen 18 x 1,0 mm;15,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+310;Rohrbogen 15 x 1,0 mm;87,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+320;T-Stück 54 x 54 x 54;2,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+330;"T-Stück 54 x Rp 1/2"" x 54";1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+340;T-Stück 42 x 42 x 42;2,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+350;T-Stück 35 x 35 x 35;2,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+360;T-Stück 28 x 28 x 28;4,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+370;T-Stück 22 x 22 x 22;7,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+380;T-Stück 18 x 18 x 18;10,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+390;T-Stück 15 x 15 x 15;20,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+400;"Einsteckstück 22 x Rp 1/2""";1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+410;Reduzierung 54/42, 54/35 und 54/28;1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+420;Reduzierung 42/35, 42/28 und 42/22;1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+430;Reduzierung 35/28, 35/22 und 35/18;4,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+440;Reduzierung 28/22, 28/18 und 28/15;8,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+450;Reduzierung 22/18 und 22/15;14,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+460;Reduzierung 18/15;20,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+470;Muffe 54 x 1,5 mm;1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+480;Muffe 42 x 1,5 mm;1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+490;Muffe 35 x 1,5 mm;2,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+500;Muffe 28 x 1,2 mm;5,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+510;Muffe 22 x 1,2 mm;15,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+520;Muffe 18 x 1,0 mm;13,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+530;Muffe 15 x 1,0 mm;22,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+540;Flanschübergang DN 50 (54 x 1,5 mm) PN10/16 mit Pressanschluss;1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+550;"Übergangsstück mit Pressanschluss und R-Gewinde 54/2"" AG";1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+560;"Übergangsstück mit Pressanschluss und R-Gewinde 28/1"" AG";1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+570;"Übergangsstück mit Pressanschluss und Rp-Gewinde 54/2"" IG";1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+580;"Übergangsstück mit Pressanschluss und Rp-Gewinde 28/1"" IG";1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+590;"Übergangsstück mit Pressanschluss und Rp-Gewinde 22 / 1/2"" IG";2,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+600;"Übergangsstück mit Pressanschluss und Rp-Gewinde 15 / 1/2"" IG";7,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+610;Rohrträger für Edelstahlrohr 54 x 1,5 mm;1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+620;Rohrträger für Edelstahlrohr 42 x 1,5 mm;2,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+630;Rohrträger für Edelstahlrohr 35 x 1,5 mm;3,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+640;Rohrträger für Edelstahlrohr 28 x 1,2 mm;9,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+650;Rohrträger für Edelstahlrohr 22 x 1,2 mm;30,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+660;Rohrträger für Edelstahlrohr 18 x 1,0 mm und 15 x 1,0 mm;69,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+670;Flexible Rohrabschottung für Edelstahlrohr 28 x 1,2 mm;3,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+680;Flexible Rohrabschottung für Edelstahlrohr 22 x 1,2 mm;4,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+690;Flexible Rohrabschottung für Edelstahlrohr 18 x 1,0 mm;2,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+700;Flexible Rohrabschottung für Edelstahlrohr 15 x 1,0 mm;5,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+710;Anschluss an vorhandene verzinkte Stahlrohrleitung (Rohrende);1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+720;"Anschluss 3/4"" / 22 mm";1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+730;"Anschluss 1/2"" / 15 mm";1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+740;Bimetall-Thermometer;1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+10;für Edelstahlrohr 54 x 2,0 mm, nach DIN 1988-200 Tabelle 9 (100%);1,0;m;gaeb;Vergabeunterlagen/1035-26_LV.X83
+20;für Edelstahlrohr 42 x 1,5 mm, nach DIN 1988-200 Tabelle 9 (100%);1,0;m;gaeb;Vergabeunterlagen/1035-26_LV.X83
+30;für Edelstahlrohr 35 x 1,5 mm, nach DIN 1988-200 Tabelle 9 (100%);4,0;m;gaeb;Vergabeunterlagen/1035-26_LV.X83
+40;für Edelstahlrohr 28 x 1,2 mm, nach DIN 1988-200 Tabelle 9 (100%);13,0;m;gaeb;Vergabeunterlagen/1035-26_LV.X83
+50;für Edelstahlrohr 22 x 1,2 mm, nach DIN 1988-200 Tabelle 9 (100%);44,0;m;gaeb;Vergabeunterlagen/1035-26_LV.X83
+60;für Edelstahlrohr 18 x 1,0 mm, nach DIN 1988-200 Tabelle 9 (100%);37,0;m;gaeb;Vergabeunterlagen/1035-26_LV.X83
+70;für Edelstahlrohr 15 x 1,0 mm, nach DIN 1988-200 Tabelle 9 (100%);66,0;m;gaeb;Vergabeunterlagen/1035-26_LV.X83
+80;für Rohrbogen 54x2,0 mm;1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+90;für Rohrbogen 42x1,5 mm;1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+100;für Rohrbogen 35x1,5 mm;4,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+110;für Rohrbogen 28x1,2 mm;7,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+120;für Rohrbogen 22x1,2 mm;13,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+130;für Rohrbogen 18x1,0 mm;15,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+140;für Rohrbogen 15x1,0 mm;87,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+150;für T-Stück 54x54x54;2,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+160;für T-Stück 42x42x42;2,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+170;für T-Stück 35x35x35;2,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+180;"für T-Stück 35x1/2""x35";1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+190;für T-Stück 28x28x28;4,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+200;"für T-Stück 28x1/2""x28";1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+210;für T-Stück 22x22x22;7,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+220;für T-Stück 18x18x18;10,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+230;für T-Stück 15x15x15;20,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+240;für Edelstahlrohr 54 x 2,0 mm;2,0;m;gaeb;Vergabeunterlagen/1035-26_LV.X83
+250;für Edelstahlrohr 42 x 1,5 mm;2,0;m;gaeb;Vergabeunterlagen/1035-26_LV.X83
+260;für Edelstahlrohr 35 x 1,5 mm;4,0;m;gaeb;Vergabeunterlagen/1035-26_LV.X83
+270;für Edelstahlrohr 28 x 1,2 mm;13,0;m;gaeb;Vergabeunterlagen/1035-26_LV.X83
+280;für Edelstahlrohr 22 x 1,2 mm;44,0;m;gaeb;Vergabeunterlagen/1035-26_LV.X83
+290;für Edelstahlrohr 18 x 1,0 mm;1,0;m;gaeb;Vergabeunterlagen/1035-26_LV.X83
+300;für Edelstahlrohr 15 x 1,0 mm;1,0;m;gaeb;Vergabeunterlagen/1035-26_LV.X83
+310;für Rohrbogen 54x2,0 mm;2,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+320;für Rohrbogen 42x1,5 mm;2,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+330;für Rohrbogen 35x1,5 mm;3,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+340;für Rohrbogen 28x1,2 mm;7,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+350;für Rohrbogen 22x1,2 mm;13,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+360;für Rohrbogen 18x1,0 mm;1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+370;für Rohrbogen 15x1,0 mm;1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+380;für T-Stück 42x42x42;1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+390;für T-Stück 35x35x35;2,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+400;für T-Stück 28x28x28;4,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+410;für T-Stück 22x22x22;7,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+420;für T-Stück 18x18x18;1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+430;für T-Stück 15x15x15;1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+440;Ausschnitte an Tauchhülsen bis d=35 mm, mit Kantenschutzband und Gewebeumwicklung der Tauchhülse.;1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+450;Passstück für gedämmtes Edelstahlrohr d=15 bis 35 mm,;10,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+460;Endstellenausbildungen als Stirnscheibe für Edelstahlrohr d=15 bis 35 mm;4,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+470;Konusse, Reduzierungen bis da ≤ 400 mm;3,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+10;Waschtischanlage mit 2 Stück Becken;2,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+20;Waschtischanlage mit 2 Stück Becken;1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+30;Waschtischanlage mit 2 Stück Becken;1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+40;Waschtischanlage mit 2 Stück Becken;1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+50;Wiedereinbau und Inbetriebnahme der bei den Demontagearbeiten demontierten Armatur Dyson Airblade Wash+Dry als Standarmatur (nur Kaltwasser) nach Montageanleitung des Herstellers. Einschl. elektrischen Anschluss herstellen sowie Hinzulieferung neuer Dichtungen zum Anbau an den neuen Waschtisch.;2,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+60;Waschtisch unterfahrbar;2,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+70;WC-Anlage nach DIN 1385-6, DIN EN 32;2,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+80;Tiefspülklosett nach DIN 1365-6/EN 997, spülrandlos;13,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+90;Urinal;6,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+100;Elektrische Steuerung;2,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+110;Programmierset für elektrische Steuerung / Hygienespülung;1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+120;Silikonfuge;31,0;m;gaeb;Vergabeunterlagen/1035-26_LV.X83
+130;Elektronische Selbstschluss-Waschtischarmatur DN 15;8,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+140;Waschtisch-Einhand-Einlochbatterie DN 15;2,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+150;Spültisch-Einhand-Einlochbatterie DN 15, Niederdruck;1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+160;Geräteschrägsitzventil DN 15;2,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+170;Durchlauferhitzer;2,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+180;Warmwasserspeicher;1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+190;Spültisch-Einhand-Einlochbatterie DN 15, Niederdruck;1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+200;Eckventil DN 15;14,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+210;Vorrüstung der Küchenanschlüsse unter Hinzulieferung folgender Materialien;1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+220;Probenahmeventil;7,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+230;Installationselement, Waschtisch, BH 1120 mm;10,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+240;Installationselement für WC, BH 1120 mm;13,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+250;Installationselement für Urinal, BH 1120 mm Spülauslösung verdeckt,;6,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+260;Installationselement für Ausgussbecken, BH 1300 mm;1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+270;Installationselement für behindertengerechten Waschtisch, BH 1120 mm;2,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+280;Installationselement für WC mit UK für Stützgriffe, BH 1120 mm;1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+290;zum Ein- und Ummauern;1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+300;Armaturenträger in Installationsvorwand, Küchenspüle;1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+310;Armaturenträger in Installationsvorwand, Geräteanschlussventil;2,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+320;Traverse / Befestigungselement;4,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+330;Toilettenbürstengarnitur;13,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+340;Toilettenbürstengarnitur;2,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+350;Einzel-Garderobenhaken;4,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+360;Stützklappgriff;4,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+370;Rückenstütze;2,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+380;Ablage;2,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+390;Gehhilfenhalter;2,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+400;Haltegriff;2,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+410;Papierkorb für Papierhandtücher;10,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+10;Entleeren der kompletten Trinkwasseranlage im Gebäude für die Durchführung der Demontage (120 Liter, Leitungslänge ca. 200 m).;1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+20;Demontage von Schmutzwasserleitungen DN 50 - 100 aus Guß, (SML-Rohr);58,0;m;gaeb;Vergabeunterlagen/1035-26_LV.X83
+30;Demontage von Schmutzwasserleitungen DN 125 - 150 aus Guß, (SML-Rohr);18,0;m;gaeb;Vergabeunterlagen/1035-26_LV.X83
+40;Demontage von Schmutzwasserleitungen DN 50 - 100 aus Kunststoffrohren;78,0;m;gaeb;Vergabeunterlagen/1035-26_LV.X83
+50;Demontage von Trinkwasserrohrleitungen DN 15 - 25 aus verzinktem Stahlrohr mit Wärmedämmung aus alukaschierter Mineralwolle und Weichschaum mit Blech-Ummantelung;109,0;m;gaeb;Vergabeunterlagen/1035-26_LV.X83
+60;Demontage von Trinkwasserrohrleitungen DN 32 - 65 aus verzinktem Stahlrohr mit Wärmedämmung aus MiWo und Weichschaum mit Ummantelung,;28,0;m;gaeb;Vergabeunterlagen/1035-26_LV.X83
+70;Demontage und Entsorgung Einrichtungsgegenstand Waschtisch bzw. Handwaschbecken aus Sanitärkeramik einschl. Armaturen, Siphon und aller Anschlussleitungen, Vorwandelement sowie Halterungs- und Befestigungsmaterial.;12,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+80;Demontage und Entsorgung Einrichtungsgegenstand WC aus Sanitärkeramik einschl. Unterputz- u. Aufputzspülkasten, Installationselement, Armaturen und aller Anschlussleitungen, Vorwandelement sowie Halterungs- und Befestigungsmaterial.;15,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+90;Demontage und Entsorgung Einrichtungsgegenstand Urinal einschl. Druckspüler aus Sanitärkeramik einschl. Installationselement, Armaturen und aller Anschlussleitungen, Vorwandelement sowie Halterungs- und Befestigungsmaterial.;6,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+100;Demontage und Entsorgung Einrichtungsgegenstand Ausgußbecken aus Stahl, Armaturen und aller Anschlussleitungen, Vorwandelement sowie Halterungs- und Befestigungsmaterial. AVV-Nr. 17 04 05;1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+110;Demontage und Entsorgung Bodenablauf bis DN 70, einschl. Halterungs- und Befestigungsmaterial.;2,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+120;Demontage und Entsorgung Accessoires wie Spiegel, Abfallbehälter, Papiersammelkörbe, Papierhandtuchspender und Seifenspender etc. aus Kunststoff und Metall einschl. Halterungs- und Befestigungsmaterial.;54,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+130;Demontage, Reinigung, geschützt vor Ort einlagern;1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+140;Demontage Auslaufarmatur/Händetrockner Dyson Airblade Wash+Dry;2,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+10;Bestandsunterlagen und Revisionspläne;1,0;psch;gaeb;Vergabeunterlagen/1035-26_LV.X83
+20;Dichtigkeitsprüfung;2,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+30;Spülen des kompletten neu installierten Trinkwasserrohrnetzes je Haus;1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+40;Hygieneabnahme;1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+50;Formstahl;30,0;kg;gaeb;Vergabeunterlagen/1035-26_LV.X83
+60;Gewindestangen M8;35,0;m;gaeb;Vergabeunterlagen/1035-26_LV.X83
+70;Gewindestangen M10, max. 8,6 KN;20,0;m;gaeb;Vergabeunterlagen/1035-26_LV.X83
+80;Montageschiene 45/26/1,5 mm;28,0;m;gaeb;Vergabeunterlagen/1035-26_LV.X83
+90;Montageschiene 45/45/2,5 mm, Gewicht 2,5...2,8 kg/m;10,0;m;gaeb;Vergabeunterlagen/1035-26_LV.X83
+100;Zulage für Befestigung Gewindestange in Hohlkammerdecke mit Siebhülse und Injektionsmörtel;20,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+110;Trägerklammer M8/10, verzinkt.;10,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+120;Fließrichtungspfeile;40,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+130;Hinweisschild zur Kennzeichnung Technischer Anlagen 300x150x2 mm, groß;10,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+140;Hinweisschild zur Kennzeichnung der Technischen Anlagen 120x60 mm, klein;20,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+150;Bestandszeichnung (Anlagenschema) farbig auf Papier, mit Montagerand,;1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+160;Kern-Bohrungen Durchmesser 50-110 mm, Wanddicke bis 60 cm;18,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+170;Kern-Bohrung Durchmesser 120-200 mm, Wanddicke bis 60 cm;6,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+180;Kern-Bohrung Durchmesser 50-110 mm, Wanddicke bis 35 cm;6,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+190;Kern-Bohrung Durchmesser 120-200 mm, Deckendicke bis 35 cm;12,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+200;Fahrgerüst;1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+210;Fahrgerüst über die vereinbarte Vorhaltezeit hinaus vorhalten;1,0;Wo;gaeb;Vergabeunterlagen/1035-26_LV.X83
+10;Strangabsperr- und Messventil DN 20;1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+20;Strangabsperr- und Messventil DN 15;4,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+30;Strangdifferenzdruckregler DN 20;1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+40;Strangdifferenzdruckregler DN 15;4,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+50;Kugelhahn DN 50;1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+60;Kugelhahn DN 40;1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+70;Kugelhahn DN 32;2,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+80;Kugelhahn DN 25;4,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+90;Kugelhahn DN 20;4,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+100;Kugelhahn DN 15;2,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+110;Rohrleitungen trennen und verschließen;1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+120;Rohrleitungen trennen und verschließen;3,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+130;Anschluss herstellen;2,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+140;Anschluss herstellen;2,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+150;Anschluss herstellen;4,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+160;Edelstahlrohr 35 x 1,5 mm;7,0;m;gaeb;Vergabeunterlagen/1035-26_LV.X83
+170;Edelstahlrohr 28 x 1,2 mm;13,0;m;gaeb;Vergabeunterlagen/1035-26_LV.X83
+180;Edelstahlrohr 22 x 1,2 mm;15,0;m;gaeb;Vergabeunterlagen/1035-26_LV.X83
+190;Edelstahlrohr 18 x 1,0 mm;20,0;m;gaeb;Vergabeunterlagen/1035-26_LV.X83
+200;Edelstahlrohr 15 x 1,0 mm;138,0;m;gaeb;Vergabeunterlagen/1035-26_LV.X83
+210;Rohrbogen 35 x 1,5 mm;5,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+220;Rohrbogen 28 x 1,2 mm;8,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+230;Rohrbogen 22 x 1,2 mm;13,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+240;Rohrbogen 18 x 1,0 mm;18,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+250;Rohrbogen 15 x 1,0 mm;155,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+260;T-Stück 35 x 35 x 35;3,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+270;T-Stück 28 x 28 x 28;3,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+280;T-Stück 22 x 22 x 22;8,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+290;T-Stück 18 x 18 x 18;5,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+300;T-Stück 15 x 15 x 15;25,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+310;"Einsteckstück 22 x Rp 1/2""";2,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+320;Reduzierung 35/28, 35/22 und 35/18;6,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+330;Reduzierung 28/22, 28/18 und 28/15;6,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+340;Reduzierung 22/18 und 22/15;16,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+350;Reduzierung 18/15;10,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+360;Muffe 35 x 1,5 mm;3,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+370;Muffe 28 x 1,2 mm;5,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+380;Muffe 22 x 1,2 mm;5,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+390;Muffe 18 x 1,0 mm;7,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+400;Muffe 15 x 1,0 mm;46,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+410;"Übergangsstück mit Pressanschluss und R-Gewinde 28/1"" AG";1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+420;"Übergangsstück mit Pressanschluss und Rp-Gewinde 28/1"" IG";4,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+430;"Übergangsstück mit Pressanschluss und Rp-Gewinde 22 / 1/2"" IG";4,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+440;"Übergangsstück mit Pressanschluss und Rp-Gewinde 15 / 1/2"" IG";8,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+450;Stahlrohr DN 65;6,0;m;gaeb;Vergabeunterlagen/1035-26_LV.X83
+460;Stahlrohr DN 50;6,0;m;gaeb;Vergabeunterlagen/1035-26_LV.X83
+470;Rohrbogen DN 65;8,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+480;Rohrbogen DN 50;8,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+490;T-Stück DN 65x65x65;2,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+500;T-Stück DN 50x50x50;2,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+510;Reduzierung DN 65/50, 65/40 und 65/32;2,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+520;Rohrschelle für Stahl- und Edelstahlrohr DN 65/ 64 x 2 mm;4,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+530;Rohrschelle für Stahl- und Edelstahlrohr DN 50 / 54 x 1,5 mm;4,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+540;Rohrschelle für Stahl- und Edelstahlrohr DN 32 / 35 x 1,5 mm;5,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+550;Rohrschelle für Stahl- und Edelstahlrohr DN 25 / 28 x 1,2 mm;9,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+560;Rohrschelle für Stahl- und Edelstahlrohr DN 20 / 22 x 1,2 mm;10,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+570;Rohrschelle für Stahl- und Edelstahlrohr DN 15 / 12 bzw.;106,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+580;für Edelstahlrohr da 15/18 mm;12,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+590;für Edelstahlrohr DN 20;4,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+600;für Edelstahlrohr DN 25;1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+610;für Edelstahlrohr DN 32;1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+620;Rohrschott für Stahl- und Edelstahlrohr DN 32 / 35 x 1,5 mm;2,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+630;Rohrschott für Stahl- und Edelstahlrohr DN 25 / 28 x 1,2 mm;2,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+640;Rohrschott für Stahl- und Edelstahlrohr DN 20 / 22 x 1,2 mm;2,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+650;Rohrschott für Stahl- und Edelstahlrohr DN 15 / 12 bzw.;2,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+660;Entlüftungsarmatur DN 10;10,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+670;Entleerungsarmatur DN 15;20,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+10;Dämmung für Stahlrohr DN 65;6,0;m;gaeb;Vergabeunterlagen/1035-26_LV.X83
+20;Dämmung für Stahl- und Edelstahlrohr DN 50 / 54 x 1,5 mm;6,0;m;gaeb;Vergabeunterlagen/1035-26_LV.X83
+30;Dämmung für Rohrbogen DN 65;8,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+40;Dämmung für Rohrbogen DN 50 / 54 x 1,5 mm;8,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+50;Dämmung für T-Stück DN 50 / 54 x 1,5 mm;2,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+60;Reduzierung DN 65/50, 65/40 und 65/32;2,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+70;Dämmung für Stahl- und Edelstahlrohr DN 32 / 35 x 1,5 mm;7,0;m;gaeb;Vergabeunterlagen/1035-26_LV.X83
+80;Dämmung für Stahl- und Edelstahlrohr DN 25 / 28 x 1,2 mm;13,0;m;gaeb;Vergabeunterlagen/1035-26_LV.X83
+90;Dämmung für Stahl- und Edelstahlrohr DN 20 / 22 x 1,2 mm;15,0;m;gaeb;Vergabeunterlagen/1035-26_LV.X83
+100;Dämmung für Stahl- und Edelstahlrohr DN 15 / 18 x 1,0 / 15 x 1,0 mm;70,0;m;gaeb;Vergabeunterlagen/1035-26_LV.X83
+110;Dämmung für Rohrbogen DN 32 / 35 x 1,5 mm;5,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+120;Dämmung für Rohrbogen DN 25 / 28 x 1,2 mm;8,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+130;Dämmung für Rohrbogen DN 20 / 22 x 1,2 mm;13,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+140;Dämmung für Rohrbogen DN 15 / 18 x 1,0 / 15 x 1,0 mm;60,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+150;Dämmung für T-Stück DN 32 / 35 x 1,5 mm;3,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+160;Dämmung für T-Stück DN 25 / 28 x 1,2 mm;3,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+170;Dämmung für T-Stück DN 20 / 22 x 1,2 mm;8,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+180;Dämmung für T-Stück DN 15 / 18 x 1,0 / 15 x 1,0 mm;10,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+190;Reduzierung DN 32/25, 32/20 und 32/15;6,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+200;Reduzierung DN 25/20 und 25/15;6,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+210;Reduzierung DN 20/15;10,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+220;Ummantelung für Edelstahl- und Stahlrohr DN 32 / 35 x 1,5 mm;7,0;m;gaeb;Vergabeunterlagen/1035-26_LV.X83
+230;Ummantelung für Edelstahl- und Stahlrohr DN 25 / 28 x 1,2 mm;13,0;m;gaeb;Vergabeunterlagen/1035-26_LV.X83
+240;Ummantelung für Edelstahl- und Stahlrohr DN 20 / 22 x 1,2 mm;15,0;m;gaeb;Vergabeunterlagen/1035-26_LV.X83
+250;Ummantelung für Rohrbogen DN 32 / 35 x 1,5 mm;5,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+260;Ummantelung für Rohrbogen DN 25 / 28 x 1,2 mm;8,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+270;Ummantelung für Rohrbogen DN 20 / 22 x 1,2 mm;13,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+280;Ummantelung für T-Stück DN 35 / 35 x 1,5 mm;3,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+290;Ummantelung für T-Stück DN 25 / 28 x 1,2 mm;3,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+300;Ummantelung für T-Stück DN 20 / 22 x 1,2 mm;8,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+310;Ummantelung an Reduzierung DN 32/25, 32/20 und 32/15;6,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+320;Ummantelung an Reduzierung DN 25/20 und 25/15;6,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+330;Ummantelung an Reduzierung DN 20/15;16,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+340;Passstück für gedämmtes Edelstahlrohr d=15 bis 35 mm,;40,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+350;Endstellenausbildungen als Stirnscheibe für Edelstahlrohr d=15 bis 35 mm;20,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+360;Konusse, Reduzierungen bis da ≤400 mm;5,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+370;Ausschnitte an Tauchhülsen bis d=35 mm, mit Kantenschutzband und Gewebeumwicklung der Tauchhülse.;10,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+10;Bauhöhe: 600 mm, Baulänge: 1000 mm, Bautiefe: 100 mm,;1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+20;Bauhöhe: 900 mm, Baulänge: 600 mm, Bautiefe: 100 mm,;9,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+30;Bauhöhe: 600 mm, Baulänge: 800 mm, Bautiefe: 100 mm,;1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+40;Bauhöhe: 900 mm, Baulänge: 400 mm, Bautiefe: 100 mm,;2,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+50;Hahnblock, G ½ AG x G ¾ Eurokonus;13,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+60;Thermostatkopf mit eingebautem Flüssigfühler,;13,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+70;Heizkörper 1 mal abnehmen;13,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+10;Entleeren eines Stranges der Heizungsanlage im Gebäude für die Durchführung der Demontage (300 Liter, Leitungslänge ca. 200 m).;2,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+20;Demontage von Heizungsrohrleitungen bis DN 25 aus Stahlrohr;110,0;m;gaeb;Vergabeunterlagen/1035-26_LV.X83
+30;Demontage von Heizungsrohrleitungen DN 32 bis 65 aus Stahlrohr;30,0;m;gaeb;Vergabeunterlagen/1035-26_LV.X83
+40;Demontage von Rohrleitungsblechmantel bis da 140 mm aus verz. Blech;50,0;m;gaeb;Vergabeunterlagen/1035-26_LV.X83
+50;Demontage und Entsorgung Heizfläche aus Stahl, 500/500/21;1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+60;Abmaße H/L/Modell: 500/1000/2;2,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+70;Abmaße H/L/Modell: 500/1200/22;2,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+80;Abmaße H/L/Modell: 600/400/10;2,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+90;Abmaße H/L/Modell: 600/800/2000;2,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+100;Abmaße H/L/Modell: 600/1000/20;2,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+10;Vom AG werden Ausführungsunterlagen zur Verfügung gestellt. Die Ausführungszeichnungen (Grundrisse, Schnitte, Ansichten) wurden als 3D-Darstellungen im AutoCAD 2022 mit Ergänzungsaufsatz des Softwareherstellers Linear erstellt. Ausschließlich das MSR-Anlagenschema steht als 2D-Zeichnung zur Verfügun;1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+20;Dichtigkeitsprüfung des Heiznetzes als Wasserdruckprobe;2,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+30;Füllen der Anlage mit VE Wasser;500,0;l;gaeb;Vergabeunterlagen/1035-26_LV.X83
+40;Mehrmaliges Entlüften der Bestandsanlage im Rahmen der Anlagenbefüllung.;2,0;h;gaeb;Vergabeunterlagen/1035-26_LV.X83
+50;Wasseranalyse Heizungswasser nach Abschluss der Arbeiten;1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+60;Formstahl;25,0;kg;gaeb;Vergabeunterlagen/1035-26_LV.X83
+70;Gewindestangen M8;40,0;m;gaeb;Vergabeunterlagen/1035-26_LV.X83
+80;Gewindestangen M10, max. 8,6 KN;20,0;m;gaeb;Vergabeunterlagen/1035-26_LV.X83
+90;Montageschiene 45/26/1,5 mm;12,0;m;gaeb;Vergabeunterlagen/1035-26_LV.X83
+100;Montageschiene 45/45/2,5 mm, Gewicht 2,5...2,8 kg/m;20,0;m;gaeb;Vergabeunterlagen/1035-26_LV.X83
+110;Zulage für Befestigung Gewindestange in Hohlkammerdecke mit Siebhülse und Injektionsmörtel;20,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+120;Fließrichtungspfeile;20,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+130;Hinweisschild zur Kennzeichnung Technischer Anlagen 300x150x2 mm, groß;4,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+140;Hinweisschild zur Kennzeichnung der Technischen Anlagen 120x60 mm, klein;4,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+150;Bestandszeichnung (Anlagenschema) farbig auf Papier, mit Montagerand,;1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+160;Kern-Bohrungen Durchmesser 50-110 mm, Wanddicke bis 60 cm;5,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+170;Kern-Bohrung Durchmesser 120-200 mm, Wanddicke bis 60 cm;1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+180;Kern-Bohrung Durchmesser 50-110 mm, Wanddicke bis 35 cm;3,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+190;Kern-Bohrung Durchmesser 120-200 mm, Deckendicke bis 35 cm;10,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+200;Fahrgerüst;1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+210;Fahrgerüst über die vereinbarte Vorhaltezeit hinaus vorhalten;1,0;Wo;gaeb;Vergabeunterlagen/1035-26_LV.X83
+10;Sensor zur Kontrolle der Atemluft in den engen Räumen,;1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+20;Während der Arbeiten im engen Raum muss ein Sicherungsposten vor dem engen Raum, zur Überwachung der im engen Raum arbeitenden Arbeitskraft, vor Ort sein. Diese Arbeitskraft ist nur bedingt für andere Arbeiten einzuplanen.;16,0;d;gaeb;Vergabeunterlagen/1035-26_LV.X83
+30;Während der Arbeiten im engen Raum muss die Arbeitskraft in persönlicher Schutzkleidung (Ganzkörperanzug mit Kapuze, Mund- und Nasenschutz) arbeiten, die dadurch entstehende Erschwernis sowie die Erschwernis für das Arbeiten mit dieser geringen Höhe (Arbeiten im Liegen, Hocken, Knien) ist hier zu ka;16,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+40;Während der Arbeiten im engen Raum muss ein Feuerlöscher bereitgehalten werden. Pulverlöscher 6 kg.;1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83
+50;Während der Arbeiten im engen Raum muss eine rutschfeste, flexible Notfalltrage bereitgehalten werden, mit der eine hilflose Person aus der Einstiegsluke (48 cm x48 cm) gezogen werden kann.;1,0;St;gaeb;Vergabeunterlagen/1035-26_LV.X83

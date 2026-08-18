@@ -1,0 +1,215 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+00000001;An- und Abfahrt, zum Einsatzort;200,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+00010001;VZP anfertigen;20,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+00020001;Zeichner;20,0;h;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+00020002;Sperrhänger;20,0;h;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+00020003;LED-Vorwarntafel;20,0;h;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+00020004;LKW >7,5 to zul. Gesamtmasse;20,0;h;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+00020005;Fahrer f. Sperrfahrzeug;20,0;h;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01000001;Informationsta. herst., aufb.  abb.;5,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01000002;Informationstafel vorhalten;200,0;d;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01000003;Baustelleninformationstafel  AG;5,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01000004;Baustellenschild abbauen ... Freitext ...*Verwerten;5,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01010001;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. bei Tageslicht*Anordnung n. Unt. Geb. auf Nachweis;4,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01010002;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. bei Tageslicht*Anordnung n. Unt. Geb. auf Nachweis;4,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01010003;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. bei Tageslicht*Anordnung n. Unt. Geb. auf Nachweis;4,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01010004;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. bei Tageslicht*Anordnung n. Unt. Geb. auf Nachweis;4,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01010005;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. bei Tageslicht*Anordnung n. Unt. Geb. auf Nachweis;4,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01010006;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. bei Dunkelheit*Anordnung n. Unt. Geb. auf Nachweis;5,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01010007;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. bei Dunkelheit*Anordnung n. Unt. Geb. auf Nachweis;5,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01010008;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat.Arb.st. ums. bei Tageslicht*Anordnung n. Unt. Geb. auf Nachweis;2,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01010009;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat.Arb.st. ums. bei Tageslicht*Anordnung n. Unt. Geb. auf Nachweis;2,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01010010;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat.Arb.st. ums. bei Tageslicht*Anordnung n. Unt. Geb. auf Nachweis;2,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01010011;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat.Arb.st. ums. bei Tageslicht*Anordnung n. Unt. Geb. auf Nachweis;2,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01010012;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat.Arb.st. ums. bei Tageslicht*Anordnung n. Unt. Geb. auf Nachweis;2,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01010013;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat.Arb.st. ums. bei Dunkelheit*Anordnung n. Unt. Geb. auf Nachweis;5,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01010014;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat.Arb.st. ums. bei Dunkelheit*Anordnung n. Unt. Geb. auf Nachweis;5,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01020001;Verkehrssich. läng. Dauer aufbauen Arb.st.u. Uml.str*... Freitext ... auß. Kraft setzen*... Freitext ... Anordnung Unt. AG*Geb. auf Nachweis;4,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01020002;Verkehrssich. läng. Dauer aufbauen Arb.st.u. Uml.str*... Freitext ... auß. Kraft setzen*... Freitext ... Anordnung Unt. AG*Geb. auf Nachweis;2,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01020003;Verkehrssich. läng. Dauer aufbauen Arb.st.u. Uml.str*... Freitext ... auß. Kraft setzen*... Freitext ... Anordnung Unt. AG*Geb. auf Nachweis;3,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01020004;Verkehrssich. läng. Dauer aufbauen Arb.st.u. Uml.str*... Freitext ... auß. Kraft setzen*... Freitext ... Anordnung Unt. AG*Geb. auf Nachweis;3,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01020005;Verkehrssich. läng. Dauer aufbauen Arb.st.u. Uml.str*... Freitext ... auß. Kraft setzen*... Freitext ... Anordnung Unt. AG*Geb. auf Nachweis;3,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01020006;Verkehrssich. läng. Dauer aufbauen Arb.st.u. Uml.str*... Freitext ... auß. Kraft setzen*... Freitext ... Anordnung Unt. AG*Geb. auf Nachweis;3,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01020007;Verkehrssich. läng. Dauer aufbauen Arb.st.u. Uml.str*... Freitext ... auß. Kraft setzen*... Freitext ... Anordnung Unt. AG*Geb. auf Nachweis;3,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01020008;Verkehrssich. läng. Dauer vorhalten ... Freitext ...;750,0;d;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01020009;Verkehrssicherung umbauen;10,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01020010;Verkehrssich. läng. Dauer abbauen;20,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01030001;Transp.Schutzeinrichtung aufbauen Arb.st./ank.Verk.*Aufhaltest. T3 Wirkungsber.maxW2*... Freitext ... Aufst.DIN EN 1317;1000,0;m;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01030002;Transp.Schutzeinrichtung aufbauen Arb.st./fl. Verk.*Aufhaltest. T3 Wirkungsber.maxW2*... Freitext ... Aufst.DIN EN 1317;500,0;m;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01030003;Transp.Schutzeinrichtung aufbauen entg.Verkehrsstr.*Aufhaltest. T3 Wirkungsber.maxW2*... Freitext ... Aufst.DIN EN 1317;500,0;m;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01030004;Transp.Schutzeinrichtung aufbauen Überleit.bereich*Aufhaltest. T3 Wirkungsber.maxW2*... Freitext ... Aufst.DIN EN 1317;500,0;m;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01030005;Transp.Schutzeinrichtung übernehmen Arb.st./fl. Verk.*Aufhaltest. T3 Wirkungsber.maxW2*... Freitext ...;250,0;m;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01030006;Transport. Schutzeinr. vorhalten ... Freitext ...;50000,0;md;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01030007;Anfangs-/Endkonstruktion (AEK) für;10,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01030008;AEK f. transp. Schutzeinr. überneh,;10,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01030009;AEK vorhalten ... Freitext ...;500,0;Std;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01040001;Verkehrsschild aufbauen u. abbauen Ronde,Dreie.Quad.*Größe 2 Typ RA2, B*profilverstärkt ... Freitext ...*Höhe 2,20 m;50,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01040002;Verkehrsschild vorhalten wie Vorposition;6000,0;Std;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01040003;Verkehrsschild verändern Schild Größe 2*Höhe über 2,00 m ... Freitext ...*mob.Auskreuzvorr.;40,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01040004;Verkehrsschild umsetzen Ronde,Dreie.Quad.*Größe 2 ... Freitext ...*Höhe 2,20 m;40,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01040005;Verkehrsschild aufbauen u. abbauen Ronde,Dreie.Quad.*Größe 2 Typ RA2, B*profilverstärkt ... Freitext ...*Höhe 2,20 m;50,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01040006;Verkehrsschild verändern Schild Größe 2*Höhe über 2,00 m ... Freitext ...*mob.Auskreuzvorr.;20,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01040007;Verkehrsschild umsetzen Ronde,Dreie.Quad.*Größe 2 ... Freitext ...*Höhe 2,20 m;20,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01040008;Verkehrsschild aufbauen u. abbauen Ronde,Dreie.Quad.*Größe 3 Typ RA2, B*profilverstärkt ... Freitext ...*Höhe 2,20 m;50,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01040009;Verkehrsschild verändern Schild Größe 3*Höhe über 2,00 m ... Freitext ...*mob.Auskreuzvorr.;40,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01040010;Verkehrsschild umsetzen Ronde,Dreie.Quad.*Größe 3 ... Freitext ...*Höhe 2,20 m;40,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01040011;Verkehrssch.komb. aufbauen u. abb. ... Freitext ...*Ronde,Dreie.Quad. Größe 2*Typ RA2, B profilverstärkt*... Freitext ... Höhe 2,20 m;25,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01040012;Verkehrssch.komb. aufbauen u. abb. ... Freitext ...*Ronde,Dreie.Quad. Größe 2*Typ RA2, B profilverstärkt*... Freitext ... Höhe 2,20 m;20,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01040013;Verkehrsschildkombination vorhalten ... Freitext ...;15000,0;Std;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01040014;Verkehrsschildkombination verändern ... Freitext ...*Höhe über 2,00 m ... Freitext ...*mob.Auskreuzvorr.;40,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01040015;Verkehrsschildkombination umsetzen ... Freitext ...*Ronde,Dreie.Quad. Größe 2*... Freitext ... Höhe 2,20 m;20,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01040016;Verkehrslenkungstafel aufb. u. abb. Z. 501 bis 551*Typ RA2, B profilverstärkt*... Freitext ... Höhe 2,20 m;10,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01040017;Verkehrslenkungstafel aufb. u. abb. Z.501b.551 m.Zus.*Typ RA2, B profilverstärkt*... Freitext ... Höhe 2,20 m;10,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01040018;Verkehrslenkungstafel vorhalten ... Freitext ...;5000,0;Std;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01040019;Verkehrsschild aufbauen u. abbauen ... Freitext ...*Größe 3 Typ RA2*profilverstärkt ... Freitext ...*... Freitext ...;5,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01040020;Verkehrsschild vorhalten wie Vorposition;250,0;Std;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01040021;Verkehrsschild aufbauen u. abbauen ... Freitext ...*Größe 3 Typ RA2*profilverstärkt ... Freitext ...*... Freitext ...;5,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01040022;Verkehrsschild vorhalten wie Vorposition;250,0;Std;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01040023;Verkehrsschild aufbauen u. abbauen ... Freitext ...*Größe 3 Typ RA2*profilverstärkt ... Freitext ...*... Freitext ...;5,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01040024;Verkehrsschild vorhalten wie Vorposition;250,0;Std;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01040025;Verkehrsschild aufbauen u. abbauen ... Freitext ...*Größe 3 Typ RA2*profilverstärkt ... Freitext ...*... Freitext ...;5,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01040026;Verkehrsschild vorhalten wie Vorposition;250,0;Std;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01040027;LED-Anzeigetafel aufbauen, abbauen vollbest. Kl. B*Tafel 1600x1280mm Typ WL 7, synchr.*... Freitext ... Höhe 1,50 m*m. Aufstellvorr. Geländeverhältn.;20,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01040028;LED-Anzeigetafel vorhalten wie Vorposition;250,0;Std;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01040029;Absp.g.,Warneinr. aufb. u. abb. Schr.bake doppels*Typ RA2 zweis.Dauerlicht*Versorg. Wahl AN;200,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01040030;Absp.g.,Warneinr. aufb. u. abb. Schr.bake doppels*Typ RA2 ... Freitext ...*Versorg. Wahl AN;200,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01040031;Absp.g.,Warneinr. vorhalten ... Freitext ...;7500,0;Std;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01040032;Absperrger. oder Warneinr. umsetzen ... Freitext ...;50,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01040033;Absp.g.,Warneinr. aufb. u. abb. Abspsch. 250x2000*Typ RA2 3 Strah.eins.gelb*Versorg. Wahl AN;150,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01040034;Absp.g.,Warneinr. aufb. u. abb. Abspsch. 250x2000*Typ RA2 5 Strah.eins. rot*Versorg. Wahl AN;150,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01040035;Absp.g.,Warneinr. vorhalten ... Freitext ...;10000,0;Std;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01040036;Absp.g.,Warneinr. aufb. u. abb. Vorw.Blinkleuchte*Typ RA2 mit Blitzlicht*Versorg. Wahl AN;50,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01040037;Bauliches Leitelement aufb. u. abb. Leitschwelle*Leitb. RA2 Ab.5 m Leite.+Bef. entf.;100,0;m;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01040038;Bauliches Leitelement vorhalten wie Vorposition;150,0;md;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01040039;Bauliches Leitelement umsetzen Leitschwelle*Leitbake Abst 5 m;50,0;m;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01050001;Transp. LSA f. Engst. aufb. u. abb. LSA Typ C*Verbind. Wahl AN Entf. ü.50bis100m*Versorg. Wahl AN 2 SZP*VTU erstellen;5,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01050002;Transport. Lichtsignalanlage vorh. wie Vorposition;250,0;Std;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01050003;Transp. LSA f. Engst. aufb. u. abb. LSA Typ C*Verbind. Wahl AN Entf. ü.50bis100m*Versorg. Wahl AN 4 SZP*VTU erstellen;5,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01050004;Transport. Lichtsignalanlage vorh. wie Vorposition;250,0;Std;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01060001;Längsmarkierung Typ II herstellen durchg. Fb.begr.*Breite 0,12 m Folie*P 7*grobstr. Decke Markierung entf.;3000,0;m;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01060002;Längsmarkierung Typ II herstellen durchg. Fb.begr.*Breite 0,15 m Folie*P 7*grobstr. Decke Markierung entf.;5000,0;m;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01060003;Längsmarkierung Typ II herstellen Str/L 1zu2 Leitl.*Breite 0,12 m Folie*P 7*grobstr. Decke Markierung entf.;1500,0;m;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01060004;Längsmarkierung Typ II herstellen Str/L 1zu2 Leitl.*Breite 0,15 m Folie*P 7*grobstr. Decke Markierung entf.;2500,0;m;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01060005;Längsmarkierung Typ II herstellen Str/L 1zu1 Blockm*Breite 0,12 m Folie*P 7*grobstr. Decke Markierung entf.;500,0;m;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01060006;Längsmarkierung Typ II herstellen Str/L 1zu1 Blockm*Breite 0,15 m Folie*P 7*grobstr. Decke Markierung entf.;500,0;m;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01060007;Sperrflächenmarkierung Typ II herst Breite 0,30 m*Folie P 7*grobstr. Decke Markierung entf.;300,0;m;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01060008;Sperrflächenmarkierung Typ II herst Breite 0,50 m*Folie P 7*grobstr. Decke Markierung entf.;300,0;m;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01060009;Quermarkierung Typ II herstellen Haltlinie*Folie*P 7 grobstr. Decke*Markierung entf.;150,0;m;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01060010;Quermarkierung Typ II herstellen Fußgängerfurt*Folie P 7*grobstr. Decke Markierung entf.;100,0;m;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01060011;Längsmarkierung Typ II herstellen Str/L 1zu1 Blockm*Breite 0,25 m Folie*P 7*grobstr. Decke Markierung entf.;150,0;m;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01060012;Längsmarkierung Typ II herstellen Str/L 1zu1 Blockm*Breite 0,30 m Folie*P 7*grobstr. Decke Markierung entf.;150,0;m;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01060013;Pfeilmarkierung Typ II herstellen ... Freitext ...*Länge 5,00 m Folie*P 7*grobstr. Decke Markierung entf.;20,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01060014;Pfeilmarkierung Typ II herstellen ... Freitext ...*Länge 7,50 m Folie*P 7*grobstr. Decke Markierung entf.;20,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01060015;Quermarkierung Typ II herstellen Fußgängerüberweg*Folie P 7*grobstr. Decke Markierung entf.;150,0;m;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01060016;Sonstiges Mark.zeichen Typ II herst ... Freitext ...*Folie P 7*grobstr. Decke Markierung entf.;15,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01060017;Markierungsfläche trocknen;300,0;m2;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01060018;Markierungsfläche reinigen ... Freitext ...;300,0;m2;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01060019;Auskreuzung herstellen Typ II*Breite 0,12 m Länge 2 x 5,00 m*P 7 grobstr. Decke*Folie entf.;25,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01060020;Auskreuzung herstellen Typ II*Breite 0,15 m Länge 2 x 7,50 m*P 7 grobstr. Decke*Folie entf.;25,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01060021;Längsmarkierung Typ II herstellen durchg. Fb.begr.*Breite 0,12 m Kaltplastikmasse*P 7 grobstr. Decke*Markierung entf.;500,0;m;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01060022;Längsmarkierung Typ II herstellen durchg. Fb.begr.*Breite 0,15 m Kaltplastikmasse*P 7 grobstr. Decke*Markierung entf.;500,0;m;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01060023;Längsmarkierung Typ II herstellen Str/L 1zu1 Blockm*Breite 0,25 m Kaltplastikmasse*P 7 grobstr. Decke*Markierung entf.;250,0;m;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01060024;Längsmarkierung Typ II herstellen Str/L 1zu1 Blockm*Breite 0,30 m Kaltplastikmasse*P 7 grobstr. Decke*Markierung entf.;250,0;m;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01070001;Längsmarkierung Typ II herstellen durchg.Fb.begr.*Breite 0,12 m mit Vormarkierung*Heißplastikmasse Aggl.regelm.*... Freitext ... P 7*grobstr. Decke;2000,0;m;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01070002;Längsmarkierung Typ II herstellen durchg.Fb.begr.*Breite 0,15 m mit Vormarkierung*Heißplastikmasse Aggl.regelm.*... Freitext ... P 7*grobstr. Decke;2000,0;m;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01070003;Längsmarkierung Typ II herstellen durchg.Fb.begr.*Breite 0,25 m mit Vormarkierung*Heißplastikmasse Aggl.regelm.*... Freitext ... P 7*grobstr. Decke;500,0;m;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01070004;Längsmarkierung Typ II herstellen durchg.Fb.begr.*Breite 0,30 m mit Vormarkierung*Heißplastikmasse Aggl.regelm.*... Freitext ... P 7*grobstr.Betond.;400,0;m;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01070005;Längsmarkierung Typ II herstellen Leitlinie 1 zu 2*Breite 0,12 m mit Vormarkierung*Heißplastikmasse Aggl.regelm.*... Freitext ... P 7*grobstr. Decke;2000,0;m;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01070006;Längsmarkierung Typ II herstellen Leitlinie 1 zu 2*Breite 0,15 m mit Vormarkierung*Heißplastikmasse Aggl.regelm.*... Freitext ... P 7*grobstr. Decke;2000,0;m;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01070007;Längsmarkierung Typ II herstellen Leitlinie 1 zu 1*Breite 0,12 m mit Vormarkierung*Heißplastikmasse Aggl.regelm.*... Freitext ... P 7*grobstr. Decke;1000,0;m;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01070008;Längsmarkierung Typ II herstellen Leitlinie 1 zu 1*Breite 0,15 m mit Vormarkierung*Heißplastikmasse Aggl.regelm.*... Freitext ... P 7*grobstr. Decke;1000,0;m;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01070009;Längsmarkierung Typ II herstellen Leitlinie 2 zu 1*Breite 0,12 m mit Vormarkierung*Heißplastikmasse Aggl.regelm.*... Freitext ... P 7*grobstr. Decke;500,0;m;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01070010;Längsmarkierung Typ II herstellen Leitlinie 2 zu 1*Breite 0,15 m mit Vormarkierung*Heißplastikmasse Aggl.regelm.*... Freitext ... P 7*grobstr. Decke;500,0;m;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01070011;Längsmarkierung Typ II herstellen Leitlinie 1 zu 2*Breite 0,25 m mit Vormarkierung*Heißplastikmasse Aggl.regelm.*... Freitext ... P 7*grobstr. Decke;750,0;m;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01070012;Längsmarkierung Typ II herstellen Leitlinie 1 zu 2*Breite 0,30 m mit Vormarkierung*Heißplastikmasse Aggl.regelm.*... Freitext ... P 7*grobstr. Decke;500,0;m;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01070013;Quermarkierung Typ II herstellen Haltlinie*mit Vormarkierung Heißplastikmasse*grobe Nachstreum. grobstr. Decke;50,0;m;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01070014;Pfeilmarkierung Typ II herstellen geradeaus*mit Vormarkierung ... Freitext ...*Heißplastikmasse grobe Nachstreum.*grobstr. Decke;10,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01070015;Pfeilmarkierung Typ II herstellen gerad.+li.o.re.ab*mit Vormarkierung ... Freitext ...*Heißplastikmasse grobe Nachstreum.*grobstr. Decke;10,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01070016;Pfeilmarkierung Typ II herstellen li.o.re. ab*mit Vormarkierung ... Freitext ...*Heißplastikmasse grobe Nachstreum.*grobstr. Decke;10,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01070017;Längsmarkierung Typ II herstellen durchg. Fb.begr.*Breite 0,12 m Kaltplastikmasse*P 7 grobstr. Decke*Markierung entf.;600,0;m;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01070018;Längsmarkierung Typ II herstellen durchg. Fb.begr.*Breite 0,15 m Kaltplastikmasse*P 7 grobstr. Decke*Markierung entf.;600,0;m;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01070019;Längsmarkierung Typ II herstellen Str/L 1zu1 Blockm*Breite 0,25 m Kaltplastikmasse*P 7 grobstr. Decke*Markierung entf.;400,0;m;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01070020;Längsmarkierung Typ II herstellen Str/L 1zu1 Blockm*Breite 0,30 m Kaltplastikmasse*P 7 grobstr. Decke*Markierung entf.;400,0;m;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+01080001;Kontrolle d. Verkehrss. an Arb.st. zweimal täglich*elektron. Gerät;1000,0;d;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+02000001;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. ... Freitext ...*über 4 bis 8 Std. bei Tageslicht;25,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+02000002;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. ... Freitext ...*über 4 bis 8 Std. bei Tageslicht;20,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+02000003;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. ... Freitext ...*über 4 bis 8 Std. bei Tageslicht;10,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+02000004;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. ... Freitext ...*über 4 bis 8 Std. bei Tageslicht;10,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+02000005;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. ... Freitext ...*über 4 bis 8 Std. bei Tageslicht;10,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+02000006;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. ... Freitext ...*über 4 bis 8 Std. bei Tageslicht;10,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+02000007;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. ... Freitext ...*über 4 bis 8 Std. bei Tageslicht;10,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+02000008;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. ... Freitext ...*über 4 bis 8 Std. bei Tageslicht;10,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+02000009;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. ... Freitext ...*über 4 bis 8 Std. bei Tageslicht;10,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+02000010;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. ... Freitext ...*über 4 bis 8 Std. bei Tageslicht;10,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+02000011;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. ... Freitext ...*über 4 bis 8 Std. bei Tageslicht;10,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+02000012;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. ... Freitext ...*über 4 bis 8 Std. bei Tageslicht;10,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+02000013;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. ... Freitext ...*über 4 bis 8 Std. bei Tageslicht;10,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+02000014;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. ... Freitext ...*über 4 bis 8 Std. bei Tageslicht;10,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+02000015;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. ... Freitext ...*über 4 bis 8 Std. bei Tageslicht;10,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+02000016;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. ... Freitext ...*über 4 bis 8 Std. bei Tageslicht;10,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+02000017;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. ... Freitext ...*über 4 bis 8 Std. bei Tageslicht;10,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+02000018;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. ... Freitext ...*über 4 bis 8 Std. bei Tageslicht;10,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+02000019;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. ... Freitext ...*über 4 bis 8 Std. bei Tageslicht;10,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+02000020;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. ... Freitext ...*über 4 bis 8 Std. bei Tageslicht;10,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+02000021;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. ... Freitext ...*über 4 bis 8 Std. bei Tageslicht;10,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+02000022;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. ... Freitext ...*über 4 bis 8 Std. bei Tageslicht;10,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+02000023;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. ... Freitext ...*über 4 bis 8 Std. bei Tageslicht;10,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+02000024;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. ... Freitext ...*über 4 bis 8 Std. bei Tageslicht;10,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+02000025;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. ... Freitext ...*über 4 bis 8 Std. bei Tageslicht;10,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+02000026;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. ... Freitext ...*über 4 bis 8 Std. bei Tageslicht;10,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+02000027;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. ... Freitext ...*über 4 bis 8 Std. bei Tageslicht;10,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+02000028;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. ... Freitext ...*über 4 bis 8 Std. bei Tageslicht;10,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+02000029;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. ... Freitext ...*über 4 bis 8 Std. bei Tageslicht;10,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+02000030;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. ... Freitext ...*über 4 bis 8 Std. bei Tageslicht;10,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+02000031;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. ... Freitext ...*über 4 bis 8 Std. bei Tageslicht;10,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+02000032;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. ... Freitext ...*über 4 bis 8 Std. bei Tageslicht;10,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+02000033;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. ... Freitext ...*über 4 bis 8 Std. bei Tageslicht;10,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+02000034;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. ... Freitext ...*über 4 bis 8 Std. bei Tageslicht;10,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+02000035;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. ... Freitext ...*über 4 bis 8 Std. bei Tageslicht;10,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+02000036;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. ... Freitext ...*über 4 bis 8 Std. bei Tageslicht;10,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+02000037;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. ... Freitext ...*über 4 bis 8 Std. bei Tageslicht;10,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+02000038;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. ... Freitext ...*über 4 bis 8 Std. bei Tageslicht;10,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+02000039;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. ... Freitext ...*über 4 bis 8 Std. bei Tageslicht;10,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+02000040;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. ... Freitext ...*über 4 bis 8 Std. bei Tageslicht;10,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+02000041;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. ... Freitext ...*über 4 bis 8 Std. bei Tageslicht;10,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+02000042;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. ... Freitext ...*über 4 bis 8 Std. bei Tageslicht;10,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+02000043;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. ... Freitext ...*über 4 bis 8 Std. bei Tageslicht;10,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+02000044;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. ... Freitext ...*über 4 bis 8 Std. bei Tageslicht;10,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+02010001;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. ... Freitext ...*über 4 bis 8 Std. bei Dunkelheit;10,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+02010002;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. ... Freitext ...*über 4 bis 8 Std. bei Dunkelheit;10,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+02010003;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. ... Freitext ...*über 4 bis 8 Std. bei Dunkelheit;10,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+02010004;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. ... Freitext ...*über 4 bis 8 Std. bei Dunkelheit;10,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+02010005;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. ... Freitext ...*über 4 bis 8 Std. bei Dunkelheit;10,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+02010006;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. ... Freitext ...*über 4 bis 8 Std. bei Dunkelheit;10,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+02010007;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. ... Freitext ...*über 4 bis 8 Std. bei Dunkelheit;10,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+02010008;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. ... Freitext ...*über 4 bis 8 Std. bei Dunkelheit;10,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+02010009;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. ... Freitext ...*über 4 bis 8 Std. bei Dunkelheit;10,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+02010010;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. ... Freitext ...*über 4 bis 8 Std. bei Dunkelheit;10,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+02010011;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. ... Freitext ...*über 4 bis 8 Std. bei Dunkelheit;10,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+02010012;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. ... Freitext ...*über 4 bis 8 Std. bei Dunkelheit;10,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+02010013;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. ... Freitext ...*über 4 bis 8 Std. bei Dunkelheit;10,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+02010014;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. ... Freitext ...*über 4 bis 8 Std. bei Dunkelheit;10,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+02010015;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. ... Freitext ...*über 4 bis 8 Std. bei Dunkelheit;10,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+02010016;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. ... Freitext ...*über 4 bis 8 Std. bei Dunkelheit;10,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+02010017;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. ... Freitext ...*über 4 bis 8 Std. bei Dunkelheit;10,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+02010018;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. ... Freitext ...*über 4 bis 8 Std. bei Dunkelheit;10,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+02010019;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. ... Freitext ...*über 4 bis 8 Std. bei Dunkelheit;10,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+02010020;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. ... Freitext ...*über 4 bis 8 Std. bei Dunkelheit;10,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+02010021;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. ... Freitext ...*über 4 bis 8 Std. bei Dunkelheit;10,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+02010022;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. ... Freitext ...*über 4 bis 8 Std. bei Dunkelheit;10,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+02010023;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. ... Freitext ...*über 4 bis 8 Std. bei Dunkelheit;10,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+02010024;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. ... Freitext ...*über 4 bis 8 Std. bei Dunkelheit;10,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+02010025;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. ... Freitext ...*über 4 bis 8 Std. bei Dunkelheit;10,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+02010026;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. ... Freitext ...*über 4 bis 8 Std. bei Dunkelheit;10,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+02010027;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. ... Freitext ...*über 4 bis 8 Std. bei Dunkelheit;10,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+02010028;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. ... Freitext ...*über 4 bis 8 Std. bei Dunkelheit;10,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+02010029;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. ... Freitext ...*über 4 bis 8 Std. bei Dunkelheit;10,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+02010030;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. ... Freitext ...*über 4 bis 8 Std. bei Dunkelheit;10,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+02010031;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. ... Freitext ...*über 4 bis 8 Std. bei Dunkelheit;10,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+02010032;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. ... Freitext ...*über 4 bis 8 Std. bei Dunkelheit;10,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+02010033;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. ... Freitext ...*über 4 bis 8 Std. bei Dunkelheit;10,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+02010034;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. ... Freitext ...*über 4 bis 8 Std. bei Dunkelheit;10,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+02010035;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. ... Freitext ...*über 4 bis 8 Std. bei Dunkelheit;10,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+02010036;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. ... Freitext ...*über 4 bis 8 Std. bei Dunkelheit;10,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+02010037;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. ... Freitext ...*über 4 bis 8 Std. bei Dunkelheit;10,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83
+02010038;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*stat. Arbeitsst. ... Freitext ...*über 4 bis 8 Std. bei Dunkelheit;10,0;St;gaeb-flat;Leistungsverzeichnis/261-26-5413_V4.D83

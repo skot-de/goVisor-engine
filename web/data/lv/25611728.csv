@@ -1,0 +1,94 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+1;Photovoltaikmodule;2267,0;kWp;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+2;Wechselrichter (200 kW);10,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+3;Unterkonstruktion - Freiflächen Montagesystem gerammt, auslegen, liefern und montieren;2267,0;kWp;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+4;DC-Anbindung der Photovoltaikmodule an die Wechselrichter;2267,0;kWp;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+5;Solarstrahlungssensor;1,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+6;Messfühler PT100/ PT1000;2,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+7;Kennzeichnungen;1,0;psch;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+8;Standsicherheitsnachweis aufstellen PVA;1,0;psch;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+9;Ausführungszeichnungen gemäß Standsicherheitsnachweis herstellen PVA;1,0;psch;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+1;Betonfertigteil-Kompaktstation;1,0;psch;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+2;Digitales Multifunktionsschutzgerät (UMZ/ AMZ Trafo + Abgangsschutz + übergeordneter Entkupplungsschutz);1,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+3;Schutzprüfung übergeordneter Entkupplungs- und digitaler Überstromzeitschutz;1,0;psch;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+4;Zwischengelagerter Entkupplungsschutz;1,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+5;Zeitrelais elektronisch anzugs- bzw. abfallverzögert;2,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+6;Schutzprüfung zwischengelagerter Entkupplungsschutz;1,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+7;Fernwirkgateway/ Protokollumsetzer;1,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+8;Regler- und Kommunikationsschrank für EZA gemäß VDE-AR-N 4110;1,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+9;Programmierung EZA-Regler, Fernwirkanlage;1,0;psch;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+10;Cloud-Lizenz Monitoring, Anlagen ≤ 3 MW;4,0;Jahre;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+1;Zaunanlage;770,0;m;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+2;Toranlage;3,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+3;Überwachungseinrichtung;3,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+1;Runddraht aus V4A;610,0;m;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+2;Tiefenerder aus Rundstahl;4,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+3;Erdungskabel NYY 1 x 16 mm²;35,0;m;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+4;Kupferseil verzinnt, 1 x 95mm²;23,0;m;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+5;Messung des Erdausbreitungswiderstandes;1,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+6;Messung des Einzelerderwiderstandes für jeden Einzelerder.;2,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+7;Erdungsprüfbuch;1,0;psch;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+8;Digitale Fotodokumentation;1,0;psch;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+9;Ablieferungsunterlagen;1,0;psch;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+1;NAYY 4 x 185 mm²;1600,0;m;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+2;NYY 7 x1,5 mm²;50,0;m;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+3;Anschluss NAYY 4 x 185 mm²;20,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+4;Datenkabel CAT 7 AWG23 4 x 2 x 0,5 mm;1125,0;m;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+5;Geschirmte Stecker RJ45, TM31, passend für v. g. LAN-Kabel;26,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+6;Busleitung für RS485-/ Modbus-Schnittstelle;250,0;m;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+7;RS485-Anschlussstecker 90°;2,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+8;LAN-Patchkabel, Länge 2 m;6,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+9;LAN-Patchkabel, Länge 10 m;2,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+10;Formstahl feuerverzinkt;60,0;kg;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+11;Kabelschutzrohr DN 110 aus PE flexibel;200,0;m;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+12;Kabelschutzrohr DN 32 aus PE-flexibel;1300,0;m;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+1;Vermessung;1,0;psch;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+2;Standsicherheitsnachweis aufstellen Bauwerk/ Baubehelfe;1,0;psch;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+3;Ausführungszeichnungen gemäß Standsicherheitsnachweis herstellen Bauwerk/ Baubehelfe;1,0;psch;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+4;Baugrube für Brunnengründung und für Betonfertigteilstation herstellen;1,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+5;Gründung für v. g. Betonstation;1,0;psch;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+6;Anlieferung, Abladung und Positionierung einer Betonfertigteilstation mit Hilfe eines Autokrans 100 t einschließlich Bereitstellung geeigneter Zufahrts- und Stellflächen.;1,0;psch;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+7;Kontrollprüfung ZTV SoB-StB auf besondere Anordnung des Auftraggebers, für Tragschicht ohne Bindemittel, Prüfung des Verdichtungsgrades.;2,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+8;Oberboden mit Vegetationsdecke abtragen und seitlich lagern (< 6 Monate);160,0;m3;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+9;Bodenaushub bis zu einer Tiefe von 0,80 m;113,0;m3;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+10;Bodenaushub bis zu einer Tiefe von 4,00 m (Brunnengründung);6,5;m3;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+11;Zulage Anbaugeräte Bagger;1,0;psch;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+12;Boden für offene Baugruben lösen und ausheben (Suchgräben);5,0;m3;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+13;Liefern und einbauen von Füllsand für Bodenaustausch;151,0;m3;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+14;Vorhandenen Boden wieder einbauen;151,0;m3;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+15;Boden, liefern, profilgerecht einbauen und verdichten, in Baugruben, mit einer Bodengruppe, Bodengruppe 1 GW DIN 18196 (weitgestuftes Kies-Sand-Gemisch), Verdichtungsgrad mind. DPr 0,97, Schichtdicke über 50 bis 80 cm, Arbeiten mit Gerät.;91,0;m3;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+16;Trassenwarnband;500,0;m;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+17;Grünsaat;500,0;m2;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+18;Deklarationsanalyse, Fachgutachter;5,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+19;Bodenprobe aus Haufwerken 100 - 200 m³;5,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+20;Abfall nicht gefährlich AVV170504 - Oberboden;50,0;t;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+21;Aushubböden > BM-0/BG-0;60,0;t;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+22;Gemische BM-F0*/BG-F0*;20,0;t;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+23;Abfalldokumentation und Wochenanmeldung;1,0;psch;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+1;Baustelle einrichten und vorhalten;1,0;psch;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+2;Vorhaltung und Unterhaltung der Baustelleneinrichtung;4,0;StWo;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+3;Baustelle räumen;1,0;psch;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+4;Abfallcontainer aufstellen und abfahren;3,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+5;Pumpensumpf herstellen Aushubtiefe ca. 2,00 bis 3,00 m;2,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+6;Drainage herstellen, Aushubtiefe ca. 1,0 bis 1,50 m;90,0;m;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+7;Liefern, ein- und zurückbauen von Pumpen;2,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+8;Auf- und Abbau von Ableitungen DN 100/150;100,0;m;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+9;Einleitstelle in den Vorfluter herstellen und gegen Auskolkungen/ Auswaschungen sichern;1,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+10;Auf- und Abbau der genannten betriebsbereiten Elektroinstallation;1,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+11;Auf- und Abbau Mehrkammersandfang;1,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+12;U-Pumpen in Pumpensumpf vorhalten;70,0;StKT;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+13;Ableitung vorhalten, warten;3500,0;mKT;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+14;Vorhaltung E-Installation;35,0;KT;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+15;Vorhaltung Sandfang;35,0;KT;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+16;Betrieb aller Pumpen;35,0;d;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+1;Komplette ingenieurmäßige Projektabwicklung;1,0;psch;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+2;Mitwirkung bei der Anlagenzertifizierung und Konformitätserklärung;1,0;psch;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+3;Inbetriebnahme PV-Anlage;1,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+4;Inbetriebnahme Automatisierung SPS, EZA-Regler;1,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+5;Inbetriebnahme Direktvermarkter;1,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+6;Inbetriebnahme Cloud-Anbindung;1,0;St;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+7;Dokumentation nach Fertigstellung für die Gesamtanlage;1,0;psch;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+8;Ingenieurstunden;30,0;h;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+9;Obermonteurstunden;30,0;h;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+10;Monteurstunden;50,0;h;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83
+11;Materiallieferungen nicht über EP erfasst;1,0;psch;gaeb;Leistungsverzeichnis/Leistungsverzeichnis_.x83

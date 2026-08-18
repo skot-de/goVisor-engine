@@ -249,9 +249,23 @@ Konsequenzen fürs Bauen:
   zwischen beiden vergleicht, vergleicht **Verfahren, nicht Datenstände**.
 - **Der Export-Pfad bleibt einsatzbereit**, wird aber nicht mehr routinemässig gefahren:
   `python3 scripts/export_supabase.py --prune` + `scripts/build_search_index.py`.
-- **⚠️ In Supabase liegt seit 2026-07-23 nur ein ENTWICKLUNGS-SAMPLE** (~2.048 Leads +
-  zugehörige Lose/CPV), **nicht** der Bestand. Wer dort zählt, zählt das Sample — jede
-  Kennzahl kommt aus dem lokalen Parquet. Neu ziehen:
+- **⚠️ In Supabase liegen die `gov_*`-Tabellen seit 2026-08-16 LEER — und das ist Absicht.**
+  Der Satz „dort liegt nur ein Entwicklungs-Sample (~2.048 Leads)" stand hier über Wochen und
+  war falsch: als der Tageslauf gebaut wurde, kam `export_supabase.py --table all --prune` als
+  fester Schritt hinein und schob zweimal täglich den **vollen** Bestand hoch. Ergebnis am
+  16.08.: **787 MB bei 500 MB Free-Limit**, davon **775 MB (98,5 %) `gov_*`**.
+  **Das Entscheidende: diese Tabellen liest niemand.** Das Frontend holt seine Leads aus
+  `web/data/leads-<branche>.json` (via `loadDataFile`, gebaut von `export_web_leads.py` aus
+  lokalem Parquet); aus Supabase kommen **ausschliesslich** die `user_*`-Tabellen (568 kB) plus
+  `auth`/`storage`. Geprüft: kein `.from("gov_…")` im Web-Code, kein RPC, keine View, kein
+  Fremdschlüssel, keine Funktion. Der `gov_*`-Push ist deshalb hinter
+  `GOVISOR_SUPABASE_GOV_PUSH=1` gelegt (**Vorgabe: aus**), Aufräumen via
+  `scripts/supabase_schlank.py --ausfuehren`. Die Datenkette läuft unverändert lokal weiter —
+  **kein Rückstand**, beim Go-live ein einziger Push.
+  ⚠️ Offener Punkt, dabei gefunden: die RLS-Idee „nur `authenticated` liest → Registrierung
+  schaltet Leads frei" greift nicht mehr. `/api/leads` hat **kein Auth-Gate**; heute schützt
+  allein die Blackout-Middleware. Vor dem Go-live zu entscheiden.
+  Entwicklungs-Sample (historisch, für den alten Weg) neu ziehen:
   `python3 scripts/supabase_dev_sample.py [--size N] [--dry-run]`. Das Sample ist
   **geschichtet** (Phase × Quelle × Beschreibungstiefe × Mehrlosigkeit) plus erzwungene
   Extremfälle (267-Lose-Ausschreibung, fehlender Wert, fehlende Region, unplausibles

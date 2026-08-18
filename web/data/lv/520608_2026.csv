@@ -1,0 +1,366 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+0010;Mehraufwand Baustelleneinrichtung;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0020;Aufstellen Bauzeitenplan;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0030;Fortschreibung Bauzeitenplan;6,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0040;Werk- und Montageplanung;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0050;Statische Nachweise;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0060;Berechnung Notentwässerungsmenge und -höhe;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0070;Musterbleche;3,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0080;Leistungen Dokumentation;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0090;Feuerlöscher 6 kg;8,0;Stk;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0010;Vorbereiten des Untergrundes, Dachaufsicht;2872,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0010;Dachdeckung, Kaltdach, Stehfalzsystem aus Alu, Dachn. 6 Grad, Det. 402;2872,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0020;Antidrön- und Antikondensatbeschichtung;2872,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0030;Festpunktausbildung, Det. 413;585,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0040;First, Det. 413;117,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0050;Dachrand, giebelseitiger Anschluss, Det. 403, 404, 410, 434;136,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0060;Dachrand, Blechverkleidung Attika, Det. 339, 403, 404, 410, 434;128,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0070;Dachrand, Attikaabdeckblech, Det. 339, 403, 404, 410, 434;136,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0080;Blitzschutz-Überbrückungsbänder;122,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0090;Dachrand, Traufe, Abdeckwinkel, Kastenrinne, Det. 409, 412;234,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0100;Dachrand, Traufe, Dehnstöße für Kastenrinne;24,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0110;Dachrand, Traufe, Rinnenboden für Kastenrinne;12,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0120;Dachrand, Traufe, Rinnenträger, Det. 401, 409, 412;234,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0130;Dachrand, Traufe, Tropfwinkel oberhalb der Rinne, Det. 401, 409, 412;234,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0140;Dachrand, Traufe, Insektenschutzgitter, Det. 401, 409, 412;234,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0150;Dachrand, Traufenwinkel mit Kompriband und Bördelfüller, Det. 401, 409, 412;234,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0160;Schneefangvorrichtung;585,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0170;Eishalter zum Einrasten;1212,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0180;Ablaufstutzen in Rinne;18,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0190;Laubfangkorb;18,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0200;Regenfallrohre, Alu;252,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0210;Regenstandrohre;18,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0220;Revisionsöffnung;18,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0010;Dachweg quer zu den Systemprofiltafeln, Det. 413;210,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0020;Zulage Geländer;117,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0030;Dachweg parallel zu den Systemprofiltafeln, Det. 414;136,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0040;Dachausstieg, Det. 417, 418;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0050;Aufzugshaube Rohbauöffnung BxH=700x450mm, Det. 421;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0060;Aufzugshaube Rohbauöffnung BxH=590x450mm, Det. 421;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0070;Rohreinfassung, DN 150, Det. 422;66,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0010;Vorbereiten des Untergrundes, Dachaufsicht;99,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0010;Abgrenzung DA08 zu den angrenzenden Warmdachbereichen;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0020;Dämmung, MiWo, Hauptflächen Kaltdach, WLG 036, 80mm + 160mm;99,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0030;Verringerung der Dämmstärke im Traufbereich, Det. 424;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0040;Dachdeckung, Kaltdach, Stehfalzsystem aus Alu, Dachn. 6 Grad, Det. 54003;99,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0050;Antidrön- und Antikondensatbeschichtung;99,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0060;Festpunktausbildung;34,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0070;First;7,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0080;Dachrand, giebelseitiger Anschluss, sinngemäß Det. 403;15,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0090;Dachrand, Blechverkleidung Attika, sinngemäß Det. 339, 403;12,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0100;Dachrand, Attikaabdeckblech, sinngemäß Det. 339, 403;15,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0110;Blitzschutz-Überbrückungsbänder;14,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0120;Dachrand, Traufe, Kastenrinne, Det. 424;7,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0130;Dachrand, Traufe, Dehnstöße für Kastenrinne;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0140;Dachrand, Traufe, Rinnenboden für Kastenrinne;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0150;Dachrand, Traufe, Rinnenträger, Det. 424;7,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0160;Dachrand, Traufe, Tropfwinkel oberhalb der Rinne, Det. 424;7,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0170;Dachrand, Traufe, Insektenschutzgitter, Det. 424;7,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0180;Dachrand, Traufenwinkel mit Kompriband und Bördelfüller, Det. 424;7,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0190;Schneefangvorrichtung;18,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0200;Eishalter zum Einrasten;35,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0210;Ablaufstutzen in Rinne;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0220;Laubfangkorb;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0230;Regenfallrohre, Alu;13,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0240;Regenstandrohre;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0250;Revisionsöffnung;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0010;Dachweg quer zu den Systemprofiltafeln, Det. 413;17,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0020;Zulage Geländer;7,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0030;Dachweg parallel zu den Systemprofiltafeln, Det. 414;14,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0040;Rohreinfassung, DN 150, Det. 422;8,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0010;Vorbereiten des Untergrundes, Dachaufsicht;712,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0010;Dämmung, MiWo, Hauptflächen, Warmdach, WLG 036, 80mm + 160mm;712,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0020;Dachdeckung, Warmdach, Stehfalzsystem aus Alu, Dachn. 6 Grad, Det. 54003;712,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0030;Festpunktausbildung, Det. 437;73,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0040;First, Det. 437;29,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0050;Dachrand, giebelseitiger Anschluss, Det. 433;27,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0060;Dachrand, Blechverkleidung Attika, Det. 433;23,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0070;Dachrand, Attikaabdeckblech, Det. 433;27,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0080;Blitzschutz-Überbrückungsbänder;21,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0090;Dachrand Dachdeckung, Det. 408;65,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0100;Dachrand, Traufe, Kastenrinne, Det. 408;65,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0110;Dachrand, Traufe, Dehnstöße für Kastenrinne;8,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0120;Dachrand, Traufe, Rinnenboden für Kastenrinne;3,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0130;Dachrand, Traufe, Rinnenträger, Det. 408;65,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0140;Dachrand, Traufe, Tropfwinkel oberhalb der Rinne, Det. 408;65,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0150;Dachrand, Traufe, Insektenschutzgitter, Det. 408;65,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0160;Dachrand, Traufenwinkel mit Kompriband und Bördelfüller, Det. 408;65,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0170;Schneefangvorrichtung;130,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0180;Eishalter zum Einrasten;280,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0190;Ablaufstutzen in Rinne;5,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0200;Laubfangkorb;5,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0210;Regenfallrohre, Alu;65,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0220;Regenstandrohre;5,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0230;Revisionsöffnung;5,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0010;Dachweg quer zu den Systemprofiltafeln, Det. 413;127,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0020;Zulage Geländer;70,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0030;Dachweg parallel zu den Systemprofiltafeln, Det. 414;40,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0040;Dachausstieg, Det. 420;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0050;Rohreinfassung, DN 150, Det. 422;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0010;Vorbereiten des Untergrundes, Stahlbeton-Aufsicht;194,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0020;Vorbereiten des Untergrundes, aufgehende Stb.-Bauteile;48,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0030;Tagwasser entfernen;2,0;h;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0040;Rohbetondecke trocknen;194,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0050;Voranstrich, Stahlbeton-Aufsicht;194,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0060;Voranstrich, aufgehende Massivbauteile;48,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0070;Dampfsperre / Notdichtung, Stahlbeton-Aufsicht;194,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0080;Mehrpreis für: flächiges aufschweissen der Notdichtung;194,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0090;Dampfsperre, Hochzug;48,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0100;Kehlleisten, 30x30mm;48,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0110;Mechanische Sicherung der Dampfsperrenhochzüge;48,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0120;Dachrand-Stahlbleche, D 4mm, feuerverzinkt, mit Klemmleiste, Det. 406, 407;25,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0130;Sichtprüfung;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0140;Reparatur der Notdichtung, Einzelflächen bis 1,0m2;8,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0150;Reparatur der Notdichtung, großflächig;6,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0010;Grunddämmung, MiWo, Warmdach, WLG 036, 80mm;194,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0020;Reduzierung der Dämmstärke von 80mm bis 40mm, Det. 407;25,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0030;Gefälledämmung, MiWo, Warmdach, WLG 036, 40mm bis 220mm;194,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0040;Dämmung an aufgehenden Wänden, D 300mm, Det. 415;52,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0050;Dachdeckung, Warmdach, Stehfalzsystem aus Alu, Dachn. 2 Grad, Det. 54003;48,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0060;Festpunktausbildung, Det. 406;66,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0070;First (Dachhochpunktlinie), Det. 406;25,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0080;Dachrand, Traufe, Det. 407;25,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0090;Dachrand, Anschluss an aufgehende Wände, sinngemäß Det. 415;48,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0100;Windsperre, dampfdiffusionsoffen vor der aufgehenden Dämmung, Det. 415;56,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0110;Dachrand, Anschluss an aufgehende Wände, sinngemäß Det. 415;48,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0120;Schneefangvorrichtung;50,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0130;Eishalter zum Einrasten;108,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0140;Ablaufstutzen in Rinne;3,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0150;Laubfangkorb;3,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0160;Regenfallrohre, Alu;34,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0170;Regenstandrohre;3,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0180;Revisionsöffnung;3,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0010;Dachweg quer zu den Systemprofiltafeln, Det. 413;24,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0020;Zulage Geländer;24,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0030;Dachweg parallel zu den Systemprofiltafeln, Det. 414;48,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0010;Werkstatt- und Montagepläne einschliesslich Aufmass;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0020;Montageablaufplanung;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0030;Statische Berechnung;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0040;Stahlschwerter des Rankgerüstes, oberer Seilbefestigungspunkt;10,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0050;Unterer Befestigungspunkt;1160,0;kg;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0060;Vertikales Edelstahlseil des Rankgerüstes;10,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0070;Zulage: Edelstahlseil kunststoffummantelt;10,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0080;Horizontale Edelstahlseile des Rankgerüstes;448,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0090;Zulage: Edelstahlseil kunststoffummantelt;448,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0100;Edelstahl-Kreuzverbinder;160,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0110;Horizontale Edelstahlseile des Rankgerüstes - Endausbildungen;112,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0010;Vorbereiten des Untergrundes, Stahlbeton-Aufsicht;339,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0020;Vorbereiten des Untergrundes, aufgehende Stb.-Bauteile;123,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0030;Tagwasser entfernen;3,0;h;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0040;Rohbetondecke trocknen;339,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0050;Voranstrich, Stahlbeton-Aufsicht;339,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0060;Voranstrich, aufgehende Massivbauteile;123,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0070;Dampfsperre / Notdichtung, Stahlbeton-Aufsicht;339,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0080;Mehrpreis für: flächiges aufschweissen der Notdichtung;339,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0090;Dampfsperre, Hochzug;123,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0100;Kehlleisten, 30x30mm;132,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0110;Mechanische Sicherung der Dampfsperrenhochzüge;132,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0120;Dachrand-Stahlbleche, D 4mm, feuerverzinkt, mit Klemmleiste, Det. 406, 407;25,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0130;Sichtprüfung;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0140;Reparatur der Notdichtung, Einzelflächen bis 1,0m2;8,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0150;Reparatur der Notdichtung, großflächig;12,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0010;Grunddämmung, Schaumglas, mind. CS 120kPa, 180mm;339,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0020;Gefälledämmung, Schaumglas, mind. CS 120kPa, 40mm bis 220mm;296,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0030;Kehl- und Gratausbildungen in Schaumglas-Gefälledämmung;25,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0040;A1-Dämmung, WLG 040 senkrecht, Attiken dachseitig, D 120mm;22,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0050;Bitu. Abdichtung, Fläche;339,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0060;Dachabdichtung, Hochzug;123,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0070;Abschottung Dachabschnitte;25,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0080;Abschottungsanschlüße;6,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0090;Kehlleisten, 60x60mm;132,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0010;Attika, Unterkonstruktion Attika-Dachrand, Det. 430;25,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0020;Attika, Stahl-L-Blechwinkelstück;48,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0030;Attika-Verblechung, 2,0mm Blech;25,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0040;Blitzschutz-Überbrückungsbänder;6,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0010;Dachrand: A1-Attikabohle, D 24mm, Tiefe 60cm, Gefälle 2%;25,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0020;Dachrand: UK der A1-Attikabohle, unterer Winkel, D 2,5mm;13,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0030;Dachrand: UK der A1-Attikabohle, oberer Winkel, D 2,5mm;26,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0040;Dachrand: UK der A1-Attikabohle, unterer Winkel, D 8,0mm;13,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0050;Dachrand: UK der A1-Attikabohle, oberer Winkel, D 8,0mm;26,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0060;Dachrand, Kiesleiste;25,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0070;Dachrand, Bitumenstreifen, 20cm x 30cm;50,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0080;Dachrand, Traufe, Kastenrinne, Det. 227, 405;25,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0090;Dachrand, Traufe, Dehnstöße für Kastenrinne;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0100;Dachrand, Traufe, Rinnenboden für Kastenrinne;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0110;Dachrand, Traufe, Rinnenträger;25,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0120;Dachrand, Traufblech oberhalb der Rinne;25,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0130;Ablaufstutzen in Rinne;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0140;Laubfangkorb;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0150;Regenfallrohre, Alu;16,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0160;Regenstandrohre;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0170;Revisionsöffnung;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0010;Vorbereiten des Untergrundes, Stahlbeton-Aufsicht;91,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0020;Vorbereiten des Untergrundes, aufgehende Stb.-Bauteile;46,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0030;Rohbetondecke trocknen;91,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0040;Voranstrich, Stahlbeton-Aufsicht;91,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0050;Voranstrich, aufgehende Massivbauteile;46,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0010;A1-Schaumglasgefälledämmung, D=80mm bis 240mm;91,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0020;Dämmung vertikal, XPS, d 140mm, an Hochzügen;46,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0030;Zulage zur Vorposition für Mehrstärken von je 20mm;46,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0040;Herstellen von Fasen in Schaumglasdämmung;28,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0050;Herstellen von Fasen in XPS-Dämmung;28,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0060;Schrägschnitte in XPS-Dämmungen;28,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0010;Bitu. Abdichtung, Fläche;91,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0020;Dachabdichtung, Hochzug;46,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0030;Bitu. Abdichtung, Dachrand;28,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0040;Kehlleisten, 30x30mm;28,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0050;Fixierung des Dichtungshochzuges, Klemmleiste, incl. Met.Profil;28,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0010;Sichtprüfung;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0020;PE-Folie, 0,2mm dick;91,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0030;Schutzestrich, d 80mm;91,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0040;Zulage - CT Belegereife nach 5 Tagen;91,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0050;Zulage zu CT-Estrichen für Kunststofffasern;7,0;m3;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0060;Abstellen des Schutzestriches am Deckenrand;28,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0010;Vorbereiten des Untergrundes, Holz-Aufsicht;18,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0020;Vorbereiten des Untergrundes, aufgehende Holz-Bauteile;4,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0030;Voranstrich, Holz-Aufsicht;18,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0040;Voranstrich, aufgehende Holzbauteile;4,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0050;Dampfsperre / Notdichtung, Stahlbeton-Aufsicht;18,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0060;Dampfsperre, Hochzug;4,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0070;Kehlleisten, 30x30mm;28,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0080;Mechanische Sicherung der Dampfsperrenhochzüge;28,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0010;Gefälledämmung Loggia, Schaumglasdämmung;18,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0020;Kunststoffabdichtung, Loggia;18,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0030;Hochzug Kunststoffabdichtung, Loggia;4,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0010;Dacheinlauf DN70 und Wasserspeier;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0020;Abdeckblech Deckenstirn, Det. 225;7,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0030;Abdeckblech Aufkantung am Terrassenabschluss;7,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0010;Andichtungen von Technikeinbauten mit Flüssigkunststoff;60,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0010;Vorarbeiter;80,0;h;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0020;Facharbeiter;80,0;h;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0030;Helfer;80,0;h;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0010;Reinigung und Prüfung der Dachfläche;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0010;Fugenband, Dicke 10 mm;28,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0020;Auflastgehaltene Unterkonstruktion für Fremdgeländer;15,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0030;Zulage Eckausbildung für Unterkonstruktion Fußreling;3,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0040;Kiesleiste mit Verklebebohrungen liefern und an Dachrand einbauen, Höhe 12 cm;21,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0050;Kiesleiste mit Verklebebohrungen liefern und als Belagseinfassung einbauen, Höhe 10 cm;24,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0060;Zulage zu Vorposition für Eckausbildung;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0070;Schutz- und Speichervlies liefern und einbauen;95,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0080;Drän- und Wasserspeicherelement 40 mm;95,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0090;Filtervlies;95,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0100;Substratschiene liefern und einbauen, Höhe 12 cm;55,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0110;Zulage 90° Eckelement für Substratschienen, H: 12 cm;3,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0120;Trenn- und Gleitfolie 0,2 mm liefern und einbauen;50,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0130;Trennlage 2,5 mm liefern und einbauen;50,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0140;Drän- und Wasserspeicherelement 25 mm;48,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0150;Fassadenrinne passend zur Laibung, 150 cm liefern und einbauen;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0160;Längsstabrost der Fassadenrinne, Länge 150 cm;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0010;Rollkiesstreifen 16/32 als Trennschicht;19,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0020;Splittbettung ungebunden 0/5 für Betonplatten;48,5;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0030;Terrassenplatten aus Beton 500 x 500 x 40 mm liefern und verlegen;194,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0040;Leichtsubstrat für extensive Begrünung, Schichthöhe 12 cm;6,5;m3;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0050;Leichtsubstrat für einfache Intensivbegrünung, Schichthöhe 12 cm;8,0;m3;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0010;Trockenansaat mit Schattenmischung und Sedumsprossen liefern und ausbringen;75,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0020;Allium schoenoprasum;14,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0030;Origanum vulgare;21,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0040;Thymus serpyllum;21,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0050;Thymus vulgaris;28,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0060;Kleingruppenpflanzen auslegen und pflanzen;84,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0070;Sedum acre;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0080;Sedum album;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0090;Sedum hispanicum;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0100;"Sedum spurium ""roseum""";1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0110;Flächenpflanzen auslegen und pflanzen;200,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0120;Carex flacca;21,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0130;Geranium macrorrhizzum Spessart;63,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0140;Bergenia cordifolia;15,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0150;Geranium wlassovianum;21,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0160;Anemone sylvestris;42,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0170;Helleborus niger;21,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0180;Gräser und Stauden auslegen und pflanzen;183,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0010;Reinigung und Prüfung der Dachfläche;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0010;Fugenband, Dicke 10 mm;20,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0020;Kiesleiste mit Verklebebohrungen liefern und an Dachrand einbauen, Höhe 12 cm;21,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0030;Schutz- und Speichervlies liefern und einbauen;105,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0040;Drän- und Wasserspeicherelement 40 mm;105,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0050;Filtervlies;105,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0060;Substratschiene liefern und einbauen, Höhe 12 cm;37,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0070;Zulage 90° Eckelement für Substratschienen, H: 12 cm;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0010;Rollkiesstreifen 16/32 als Trennschicht;20,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0020;Leichtsubstrat für extensive Begrünung, Schichthöhe 12 cm;7,5;m3;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0030;Leichtsubstrat für einfache Intensivbegrünung, Schichthöhe 12 cm;8,5;m3;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0010;Trockenansaat mit Schattenmischung und Sedumsprossen liefern und ausbringen;85,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0020;Allium schoenoprasum;21,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0030;Origanum vulgare;28,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0040;Thymus serpyllum;28,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0050;Thymus vulgaris;42,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0060;Kleingruppenpflanzen auslegen und pflanzen;119,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0070;Sedum acre;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0080;Sedum album;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0090;Sedum hispanicum;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0100;"Sedum spurium ""roseum""";1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0110;Flächenpflanzen auslegen und pflanzen;200,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0120;Carex flacca;21,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0130;Geranium macrorrhizzum Spessart;63,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0140;Bergenia cordifolia;15,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0150;Geranium wlassovianum;21,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0160;Anemone sylvestris;42,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0170;Helleborus niger;21,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0180;Gräser und Stauden auslegen und pflanzen;183,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0010;Reinigung und Prüfung der Dachfläche;1,0;psch;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0010;Fugenband, Dicke 10 mm;40,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0020;Auflastgehaltene Unterkonstruktion für Fremdgeländer;10,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0030;Zulage Eckausbildung für Unterkonstruktion Fußreling;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0040;Kiesleiste mit Verklebebohrungen liefern und an Dachrand einbauen, Höhe 12 cm;12,5;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0050;Kiesleiste mit Verklebebohrungen liefern und als Belagseinfassung einbauen, Höhe 10 cm;21,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0060;Zulage zu Vorposition für Eckausbildung;4,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0070;Schutz- und Speichervlies liefern und einbauen;125,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0080;Drän- und Wasserspeicherelement 40 mm;125,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0090;Filtervlies;125,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0100;Substratschiene liefern und einbauen, Höhe 12 cm;39,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0110;Zulage 90° Eckelement für Substratschienen, H: 12 cm;3,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0120;Trenn- und Gleitfolie 0,2 mm liefern und einbauen;46,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0130;Trennlage 2,5 mm liefern und einbauen;46,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0140;Drän- und Wasserspeicherelement 25 mm;46,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0150;Fassadenrinne 200 cm liefern und einbauen;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0160;Längsstabrost der Fassadenrinne, Länge 200 cm;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0010;Hochbeet Aluminium 299 x 74 x 90 cm;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0020;Hochbeet Aluminium 199 x 74 x 90 cm;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0030;innenliegende Dämmung liefern und einbauen;13,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0040;Dämmplatten als druckstabile Füllelemente liefern und in Hochbeet einbauen;3,2;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0050;Wasserspeicherelement D 60 mm liefern einbauen und mit Dränageschüttstoff 4/16 verfüllen;3,2;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0060;Filtervlies liefern, in Hochbeet einbauen;3,2;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0070;Intensivsubstrat für Hochbeet;4,0;m3;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0080;Rollkiesstreifen 16/32 als Trennschicht;22,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0090;Splittbettung ungebunden 0/5 für Betonplatten;46,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0100;Terrassenplatten aus Beton 500 x 500 x 40 mm liefern und verlegen;156,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0110;Schneiden von Terrassenplatten aus Beton;10,0;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0120;Fugenband, Dicke 10 mm;11,5;m;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0130;Trittplatten aus Beton 100 x 400 x 30 mm liefern und verlegen;10,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0140;Leichtsubstrat für extensive Begrünung, Schichthöhe 12 cm;11,0;m3;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0150;Leichtsubstrat für einfache Intensivbegrünung, Schichthöhe 12 cm;8,0;m3;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0010;Trockenansaat mit Schattenmischung und Sedumsprossen liefern und ausbringen;105,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0020;Allium schoenoprasum;21,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0030;Origanum vulgare;28,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0040;Thymus serpyllum;28,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0050;Thymus vulgaris;42,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0060;Kleingruppenpflanzen auslegen und pflanzen;119,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0070;Sedum acre;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0080;Sedum album;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0090;Sedum hispanicum;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0100;"Sedum spurium ""roseum""";1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0110;Flächenpflanzen auslegen und pflanzen;200,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0120;Carex flacca;21,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0130;Geranium macrorrhizzum Spessart;63,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0140;Bergenia cordifolia;15,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0150;Geranium wlassovianum;21,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0160;Anemone sylvestris;42,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0170;Helleborus niger;21,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0180;Gräser und Stauden auslegen und pflanzen;183,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0190;Lonicera tellmanniana liefern und pflanzen;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0200;Lonicera heckrottii Goldflame liefern und pflanzen;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0210;Akebia quinata liefern und pflanzen;1,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0010;Lockern und säubern der extensiven Pflanzflächen;1250,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0020;Lockern und säubern der intensiven Pflanzflächen;500,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0030;Düngen der Vegetationsflächen mit umhülltem NPK-Langzeitdünger;250,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0040;Säubern der Fassadenrinnen und Rollkiesstreifen;300,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0050;Wässern der Pflanzflächen;15,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0010;Lockern und säubern der extensiven Pflanzflächen;1250,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0020;Lockern und säubern der intensiven Pflanzflächen;500,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0030;Düngen der Vegetationsflächen mit umhülltem NPK-Langzeitdünger;250,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0040;Säubern der Fassadenrinnen und Rollkiesstreifen;300,0;m2;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0050;Wässern der Pflanzflächen;5,0;St;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0010;Baustellenleiter/Vorarbeiter;10,0;h;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0020;Facharbeiter/Landschaftsgärtner;20,0;h;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
+0030;Arbeiter;40,0;h;gaeb;Zwingend erforderliche Angebotsdateien/260701-BSML-306-Dachdeckungs- und Dachabdichtungsarbeiten-LV.x83
