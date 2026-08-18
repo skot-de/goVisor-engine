@@ -76,9 +76,23 @@ def _union(table, key=None):
 
 
 E = _union("lead_export", key="lead_id")
+
+# ── ABGELEITETE BUNDESLÄNDER ─────────────────────────────────────────────────────────────
+# `scripts/region_ableiten.py` schliesst die grösste sichtbare Lücke des Bestands: bei den
+# OFFENEN Leads fehlte das Bundesland zu 40 % (6.460 von 16.096), weil die unterschwelligen
+# Quellen keine NUTS-Kennung liefern. Wer im Explorer nach Bundesland filtert, verlor damit
+# vier von zehn aktuellen Ausschreibungen.
+#
+# Die Ableitung steht in einer EIGENEN Datei, nicht in `lead_export`: sie ist eine Aussage
+# über die Daten, keine Quelle. Fehlt die Datei, verhält sich der Export wie vorher.
+_FILL = pathlib.Path(f"{G}/lead_region_fill.parquet")
+REGION_FILL = (f"read_parquet('{_FILL.as_posix()}')" if _FILL.exists() else
+               "(SELECT NULL::VARCHAR AS lead_id, NULL::VARCHAR AS buyer_nuts1_abgeleitet, "
+               "NULL::VARCHAR AS quelle WHERE false)")
 CL = f"read_parquet('{G}/dim_cpv_label.parquet')"
 DC = f"read_parquet('{G}/dim_cpv.parquet')"
 LOTS = f"read_parquet('{G}/lead_lot.parquet')"
+DN = f"read_parquet('{G}/dim_nuts.parquet')"   # NUTS-Code → Klartextname
 # Sprachfassungen je Lead. Ohne sie kann die Oberflaeche keine Dokumentsprache
 # anbieten, obwohl die Texte im Silber liegen. Guard: fehlt die Tabelle (Gold aelter
 # als der Builder), bleibt es beim einsprachigen Verhalten statt eines Laufzeitfehlers.
@@ -614,7 +628,14 @@ def export_branche(key):
                  lp.incumbent_since_year AS pred_since,
                  ds.guarantee_required AS doc_guarantee, ds.binding_days AS doc_binding,
                  ds.eligibility_count AS doc_eligibility, ds.certificates AS doc_certs,
-                 ds.variants_allowed AS doc_variants
+                 ds.variants_allowed AS doc_variants,
+                 -- Herkunft mitliefern statt nur den Wert: die Anzeige soll sagen koennen,
+                 -- dass ein Bundesland ABGELEITET ist. Ein stillschweigend ergaenzter Wert
+                 -- sieht aus wie eine Quelle — und danach wird gefiltert.
+                 dn1.name AS region_abgeleitet_name,
+                 CASE WHEN e.buyer_nuts1 IS NOT NULL AND e.buyer_nuts1 <> '' THEN 'amtlich'
+                      WHEN rf.buyer_nuts1_abgeleitet IS NOT NULL THEN 'abgeleitet'
+                 END AS region_quelle
           FROM {E} e
           LEFT JOIN {DC} b ON b.division = substr(e.cpv_code, 1, 2)
           LEFT JOIN {KAT} kat ON kat.notice_id = e.lead_id
@@ -625,6 +646,10 @@ def export_branche(key):
           LEFT JOIN {LG} lg ON lg.lead_id = e.lead_id
           LEFT JOIN {LP} lp ON lp.lead_id = e.lead_id
           LEFT JOIN {DS} ds ON ds.notice_id = e.lead_id
+          -- Abgeleitetes Bundesland (scripts/region_ableiten.py). LEFT JOIN auf eine Datei,
+          -- die fehlen DARF: ohne sie verhaelt sich der Export wie vorher.
+          LEFT JOIN {REGION_FILL} rf ON rf.lead_id = e.lead_id
+          LEFT JOIN {DN} dn1 ON dn1.nuts_code = rf.buyer_nuts1_abgeleitet
         )
         , filtered AS (
           SELECT * FROM mapped WHERE ui_branche = '{key}'
@@ -807,7 +832,11 @@ def export_branche(key):
             # Vergabe-Land aus der country-Spalte (DE-Gold hat keine → NULL → Default DE;
             # CH-Gold trägt 'CH'). Speist den DACH-Länderfilter.
             "land": g("country") or "DE",
-            "region": g("buyer_region_name") or g("region") or "", "nuts": g("buyer_nuts") or "",
+              # Abgeleitetes Bundesland nur, wo keines dasteht — und mit Herkunft,
+              # damit die Anzeige es kennzeichnen kann (s. `regionQuelle`).
+              "region": g("buyer_region_name") or g("region") or g("region_abgeleitet_name") or "",
+              "regionQuelle": g("region_quelle") or ("amtlich" if g("buyer_nuts1") else None),
+              "nuts": g("buyer_nuts") or "",
             # Koordinate (Käufersitz) für die echte PLZ-Umkreissuche (Haversine im Frontend);
             # None, wenn kein Geo-Bezug (bundesweite/ortsungebundene Leads) — ehrlich leer.
             "lat": round(float(r["geo_lat"]), 4) if g("geo_lat") is not None else None,
