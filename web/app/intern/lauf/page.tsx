@@ -67,9 +67,21 @@ type Antwort = {
                    Analyse bzw. keine Signale? Das ist der echte Rueckstand. */
                 ohneAnalyse: number | null; ohneSignale: number | null };
     arbeiter: { laeuft: boolean; letzte: string[] };
+    qualitaet: { stand: string;
+                 werte: { name: string; wert: number; delta: number | null }[] } | null;
     llm: { zeit: number | null; erschoepft: boolean;
            anbieter: { name: string; modell: string; frei: number }[] } | null;
   };
+};
+
+// Kennzahl-Namen der Anzeige. Im Bericht heissen sie technisch (`ohne_wert_offen_pct`),
+// weil dort der Verlauf angehängt wird und ein umbenannter Schlüssel die Historie zerreisst.
+const QUALITAET_LABEL: Record<string, string> = {
+  ohne_bundesland_offen_pct: "offene Leads ohne Bundesland",
+  ohne_marktregion_offen_pct: "offene Leads ohne Marktregion",
+  ohne_wert_offen_pct: "offene Leads ohne Auftragswert",
+  entitaeten_nur_name_pct: "Entitäten nur über den Namen",
+  ohne_ort_pct: "Parteien ohne Ortsangabe",
 };
 
 const AMPEL: Record<Antwort["lauf"]["ergebnis"], { farbe: string; text: string }> = {
@@ -256,6 +268,29 @@ export default function LaufPage() {
                       <dd>{d.dokumente.trichter.ohneSignale?.toLocaleString("de-DE") ?? "?"}</dd></div>
                   </dl>
                 </div>
+
+                {d.dokumente.qualitaet ? (
+                  <div className="lauf-arbeiter">
+                    <div className="lauf-trichter-h">Datenqualität</div>
+                    <dl className="lauf-werte">
+                      {d.dokumente.qualitaet.werte.map((w) => (
+                        <div key={w.name}>
+                          <dt>{QUALITAET_LABEL[w.name] ?? w.name}</dt>
+                          <dd>
+                            {w.wert.toLocaleString("de-DE")} %
+                            {/* Richtung statt Vorzeichen: bei Lückenquoten ist WENIGER besser,
+                                und ein „+0,4" ohne Deutung liest sich wie Fortschritt. */}
+                            {w.delta != null && w.delta !== 0 ? (
+                              <span className={w.delta < 0 ? "ist-an" : "ist-offen"}>
+                                {" "}{w.delta < 0 ? "▼" : "▲"} {Math.abs(w.delta)}
+                              </span>
+                            ) : null}
+                          </dd>
+                        </div>
+                      ))}
+                    </dl>
+                  </div>
+                ) : null}
 
                 {d.dokumente.llm ? (
                   <div className="lauf-arbeiter">

@@ -83,6 +83,32 @@ function trichter() {
   };
 }
 
+/** Datenqualität: Stand und Veränderung zum Vortag (scripts/qualitaet_bericht.py).
+ *
+ * Ausgewählt sind die Zahlen, die eine Verschlechterung ZUERST zeigen würden — Lücken in
+ * dem, was der Kunde filtert. Der ganze Bericht hat zwei Dutzend Kennzahlen; ein Monitor,
+ * der alle zeigt, zeigt keine.
+ */
+function qualitaet() {
+  try {
+    const roh = fs.readFileSync(path.join(WURZEL, "web", "data", "qualitaet.json"), "utf-8");
+    const d = JSON.parse(roh) as { jetzt: Record<string, number | string>; vorher: Record<string, number> | null };
+    const zeigen = ["ohne_bundesland_offen_pct", "ohne_marktregion_offen_pct",
+                    "ohne_wert_offen_pct", "entitaeten_nur_name_pct", "ohne_ort_pct"];
+    return {
+      stand: String(d.jetzt.stand ?? ""),
+      werte: zeigen.map((k) => ({
+        name: k,
+        wert: Number(d.jetzt[k] ?? 0),
+        // null heisst „kein Vortageswert", nicht „unverändert". Der Unterschied ist der
+        // ganze Sinn: beim ersten Lauf gibt es nichts zu vergleichen.
+        delta: d.vorher && typeof d.vorher[k] === "number"
+          ? Math.round((Number(d.jetzt[k]) - d.vorher[k]) * 10) / 10 : null,
+      })),
+    };
+  } catch { return null; }
+}
+
 /** Wer kann gerade analysieren? Geschrieben von `scripts/analyze_docs.py` nach jeder Runde.
  *
  * Die Zahl „wartet auf Analyse" stand am 2026-08-18 eine Stunde still, weil das Guthaben
@@ -419,6 +445,7 @@ export async function GET() {
       // Läuft der Dauer-Arbeiter, und was hat er zuletzt gesagt?
       arbeiter: arbeiterStand(),
       llm: llmStand(),
+      qualitaet: qualitaet(),
     },
   });
 }

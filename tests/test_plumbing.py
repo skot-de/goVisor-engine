@@ -6,6 +6,7 @@ Integrationstest gegen die gebaute Gold-Ebene; skippt sauber, wo die Daten fehle
 import json
 import os
 import pathlib
+import re
 
 import pytest
 
@@ -291,6 +292,27 @@ def test_region_kpi_grain_and_sanity():
         f"SELECT count(*) FROM read_parquet('{G}/region_kpi.parquet') "
         f"WHERE intensitaet_pct < 0 OR volumen_coverage > 100").fetchone()[0]
     assert bad == 0
+
+
+def test_qualitaetsbericht_liefert_was_die_anzeige_erwartet():
+    """Die Kennzahlen, die `/intern/lauf` zeigt, muessen im Bericht auch stehen.
+
+    Die Anzeige waehlt fuenf von zwei Dutzend Kennzahlen aus und spricht sie ueber ihren
+    technischen Namen an. Wer eine davon im Bericht umbenennt, bekommt keine Fehlermeldung,
+    sondern eine leere Zeile — und leere Zeilen liest niemand als Fehler. Zudem haengt am
+    technischen Namen der Verlauf: ein umbenannter Schluessel zerreisst die Historie.
+    """
+    wurzel = pathlib.Path(__file__).resolve().parent.parent
+    bericht = wurzel / "web/data/qualitaet.json"
+    if not bericht.exists():
+        pytest.skip("Bericht noch nie gelaufen")
+    d = json.loads(bericht.read_text(encoding="utf-8"))["jetzt"]
+
+    route = (wurzel / "web/app/api/intern/lauf/route.ts").read_text(encoding="utf-8")
+    gewaehlt = re.findall(r'"(\w+_pct)"', route)
+    assert gewaehlt, "die Route waehlt keine Kennzahlen mehr aus"
+    fehlend = [k for k in gewaehlt if k not in d]
+    assert not fehlend, f"Anzeige erwartet Kennzahlen, die der Bericht nicht liefert: {fehlend}"
 
 
 def test_gesundheitsprobe_verraet_keine_mengen():

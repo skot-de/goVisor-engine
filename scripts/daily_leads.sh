@@ -902,6 +902,17 @@ step "Namenswoerter-Tabelle (Grundlage des Impressum-Pruefers)"
 # Tabelle ist harmlos, eine halb geschriebene waere es nicht.
 $PY scripts/build_namenswoerter.py || echo "  ⚠ Namenswoerter-Tabelle bleibt auf dem letzten Stand"
 
+step "Bundeslaender ableiten (fuer Leads ohne NUTS-Kennung)"
+# ⚠ REIHENFOLGE. Das muss VOR dem Frontend-Export laufen, sonst liest der Export die
+# Ableitung von GESTERN — und beim ersten Lauf gar keine. Beim Einbauen hatte ich sie
+# hinter den Export gesetzt; aufgefallen ist es nur, weil die Zeilennummern nicht passten.
+#
+# Die Ableitung schliesst die groesste sichtbare Luecke des Bestands: bei den offenen Leads
+# fehlte das Bundesland zu 40 %, weil die unterschwelligen Quellen keine NUTS-Kennung
+# liefern. Wer im Explorer nach Bundesland filtert, verlor vier von zehn Ausschreibungen.
+$PY scripts/region_ableiten.py \
+  || echo "  ⚠ Regions-Ableitung fehlgeschlagen — Bundeslaender bleiben so lueckenhaft wie die Quelle."
+
 step "Frontend-Daten exportieren (web/data)"
 if $PY scripts/export_web_leads.py; then
   # ACHTUNG: export_web_leads.py schreibt plz-geo.json komplett neu und wirft dabei den
@@ -928,6 +939,12 @@ if $PY scripts/export_web_leads.py; then
   # bricht den Tageslauf NICHT ab — lokal ist die Platte weiterhin die Quelle.
   $PY scripts/upload_web_data.py \
     || echo "  ⚠ Upload uebersprungen oder unvollstaendig — Deployment bleibt auf altem Stand."
+
+  # Qualitaetsbericht ZULETZT: er misst, was die Schritte davor hinterlassen haben. Jede
+  # Zahl darin wurde bis zum 2026-08-18 von Hand ermittelt — und was von Hand gemessen wird,
+  # misst niemand taeglich. Genau so blieben 14 statt 4.499 Volltexte monatelang unbemerkt.
+  $PY scripts/qualitaet_bericht.py >/dev/null \
+    || echo "  ⚠ Qualitaetsbericht nicht geschrieben — Verschlechterungen faellen dann niemandem auf."
   echo "  Frontend-Daten ok."
 else
   echo "  ✖ Frontend-Export fehlgeschlagen — die App zeigt weiter den alten Stand."
