@@ -47,21 +47,72 @@ G = ROOT / "data/gold/DE"
 SILBER = ROOT / "data/silver/DE/notice_parties"
 ZIEL = G / "entity_merge_urteil.parquet"
 
-# Zwei Anbieter, die im Vergleich (scripts/llm_bench.py) vorn lagen. Bewusst verschiedene
-# Häuser: zwei Modelle desselben Anbieters teilen Trainingsdaten und Fehler.
-RICHTER = [("xai", None), ("perplexity", None)]
+def richter_waehlen(anzahl: int = 2) -> list[str]:
+    """Die besten ZWEI Anbieter, die gerade auch wirklich liefern.
+
+    ⚠ WARUM NICHT FEST VERDRAHTET. Erst standen hier xAI und Perplexity — die beiden Sieger
+    des Modellvergleichs. Eine Stunde später war das xAI-Guthaben aufgebraucht (die
+    Dokumentenanalyse hatte es mit 40 Fäden verbrannt) und Perplexity antwortete mit 401.
+    Der Lauf lieferte daraufhin 40 von 40 Urteilen „unsicher", bei 100 % Einigkeit der
+    Richter — beide sagten nichts, und das sah nach Übereinstimmung aus. Eine feste Liste
+    misst irgendwann nicht mehr die Sache, sondern den Kontostand.
+
+    Deshalb: kurz anklopfen, und wer antwortet, richtet. Die Reihenfolge in `llm._anbieter()`
+    ist die nach gemessener Qualität sortierte.
+    """
+    lebt = []
+    for a in llm._anbieter():
+        if not a["keys"]:
+            continue
+        try:
+            llm.chat([{"role": "user", "content": "ok"}], anbieter=a["name"], max_retries=1, timeout=30)
+            lebt.append(a["name"])
+        except Exception:                                      # noqa: BLE001
+            continue
+        if len(lebt) == anzahl:
+            break
+    return lebt
 
 SYSTEM = (
     "Du ordnest einen Eintrag aus Vergabebekanntmachungen (A, nur ein Name, keine amtliche "
-    "Kennung) einem von mehreren Kandidaten mit Kennung (B) zu — oder keinem. Antworte NUR als "
-    "JSON: {\"urteil\":\"gleich|verschieden|unsicher\",\"treffer\":\"<entity_id oder null>\","
-    "\"grund\":\"ein kurzer Satz\"}. "
+    "Kennung) den Kandidaten mit Kennung (B) zu. Antworte NUR als JSON: "
+    '{"urteil":"gleich|alle_gleich|verschieden|unsicher","treffer":"<entity_id oder null>",'
+    '"grund":"ein kurzer Satz"}. '
+    "Bedeutung der Urteile: "
+    "'gleich' = A ist GENAU EINER der Kandidaten, dessen entity_id in 'treffer' steht. "
+    "'alle_gleich' = A und ALLE Kandidaten bezeichnen dieselbe Organisation, die mehrfach "
+    "mit verschiedenen Kennungen erfasst wurde (gleicher Name, gleicher Ort, keine "
+    "widersprechenden Angaben). "
+    "'verschieden' = A ist keiner davon. 'unsicher' = die Angaben tragen keine Entscheidung. "
     "Regeln: Gleicher Name allein genügt NICHT, wenn Ort oder Kennung widersprechen. "
     "Verschiedene Orte bei gleichem Namen sprechen für verschieden, ausser der Name nennt eine "
-    "überregionale Organisation. Fehlende Angaben sind kein Beleg für Gleichheit — im Zweifel "
-    "'unsicher'. Passen mehrere Kandidaten gleich gut, ist die Antwort 'unsicher', nicht der "
-    "erstbeste. Eine falsche Zusammenführung ist schlimmer als eine unterlassene."
+    "überregionale Organisation. Fehlende Angaben sind kein Beleg für Gleichheit. Passen "
+    "mehrere Kandidaten gleich gut UND unterscheiden sie sich in Ort oder Rechtsform, ist die "
+    "Antwort 'unsicher', nicht 'alle_gleich'. Eine falsche Zusammenführung ist schlimmer als "
+    "eine unterlassene."
 )
+
+# ── WARUM ES 'alle_gleich' GIBT ──────────────────────────────────────────────────────────
+# Der erste Durchgang lieferte 14 von 30 „unsicher", und die Begruendungen sagten fast immer
+# dasselbe: „mehrere Kandidaten mit identischem Namen und Ort, beide passen gleich gut."
+# Das ist keine Unentschiedenheit, sondern ein Befund — die KANDIDATEN sind untereinander
+# dieselbe Organisation, mehrfach erfasst unter verschiedenen Kennungen (Leitweg-ID, USt-ID,
+# HRB, je nach Quelle). Die Frage „welcher von beiden" hat dort keine Antwort, weil die
+# Voraussetzung falsch ist: es sind nicht zwei.
+#
+# Sven am 2026-08-18: „bau das urteil 'kandidaten untereinander gleich' ein."
+#
+# ⚠ Das Urteil ist ausdruecklich enger gefasst als „sieht gleich aus": unterscheiden sich die
+# Kandidaten in Ort oder Rechtsform, bleibt es bei 'unsicher'. Sonst verschmilzt es genau die
+# Faelle, wegen denen die Handregel ueberhaupt aufgegeben hat.
+
+
+def _als_text(wert) -> str | None:
+    if wert is None:
+        return None
+    if isinstance(wert, (list, tuple)):
+        return ";".join(str(w) for w in wert if w) or None
+    return str(wert)
 
 
 def kontext(con, entity_id: str) -> dict:
@@ -110,7 +161,7 @@ def urteil_von(anbieter: str, a: dict, b: dict) -> dict:
         d = json.loads(roh)
     except json.JSONDecodeError:
         return {"urteil": "unsicher", "grund": "Antwort war kein JSON"}
-    if d.get("urteil") not in ("gleich", "verschieden", "unsicher"):
+    if d.get("urteil") not in ("gleich", "alle_gleich", "verschieden", "unsicher"):
         return {"urteil": "unsicher", "grund": "unbekanntes Urteil"}
     return d
 
@@ -128,7 +179,13 @@ def main() -> int:
         f"SELECT name_only_entity, candidate_entity, reason "
         f"FROM '{(G / 'entity_merge_candidates.parquet').as_posix()}'"
         + ("" if a.alle else f" USING SAMPLE {a.n} ROWS")).fetchall()
-    print(f"  {len(paare):,} Kandidatenpaare · Richter: {', '.join(r[0] for r in RICHTER)}")
+    richter = richter_waehlen()
+    if len(richter) < 2:
+        print(f"  ✖ Nur {len(richter)} Anbieter mit Guthaben — ein Urteil braucht zwei "
+              "unabhängige. Abbruch, damit nicht eine Meinung wie ein Konsens aussieht.",
+              file=sys.stderr)
+        return 2
+    print(f"  {len(paare):,} Kandidatenpaare · Richter: {', '.join(richter)}")
 
     def beurteile(paar):
         e1, e2, grund = paar
@@ -138,13 +195,16 @@ def main() -> int:
         kandidaten = kontexte(c, e2)
         b_ctx = {"kandidaten": kandidaten}
         c.close()
-        urteile = [urteil_von(r[0], a_ctx, b_ctx) for r in RICHTER]
+        urteile = [urteil_von(r, a_ctx, b_ctx) for r in richter]
         einig = len({u["urteil"] for u in urteile}) == 1
         return {"entity_a": e1, "entity_b": e2, "regel_grund": grund,
                 "name_a": a_ctx["name"],
                 "name_b": " | ".join(k["name"] for k in kandidaten)[:200],
                 "kandidaten": len(kandidaten),
-                "treffer": (urteile[0].get("treffer") if einig else None),
+                # Eine Spalte, ein Typ. Modelle liefern bei „alle_gleich" gern eine Liste
+                # von Kennungen; als Objektspalte scheitert der Parquet-Schreiber („Expected
+                # bytes, got a 'list'"). Zusammengefuegt bleibt die Information erhalten.
+                "treffer": _als_text(urteile[0].get("treffer")) if einig else None,
                 "urteil": urteile[0]["urteil"] if einig else "unsicher",
                 "einig": einig,
                 "urteil_1": urteile[0]["urteil"], "urteil_2": urteile[1]["urteil"],
