@@ -2,7 +2,7 @@
 """LB-Volltext je Vorgang → web/data/doc-text.json für die Lead-Detail-Anzeige.
 
 Quelle: data/docs/<country>/doc_text.parquet (aus `index-docs`). Ein Vorgang (notice_id) hat
-mehrere Dateien; hier je notice_id zusammengefügt (nur status='ok'), mit Dateiüberschriften.
+mehrere Dateien; hier je notice_id zusammengefügt (status='ok' und 'ocr'), mit Dateiüberschriften.
 Ausgabe: {notice_id: {chars, files, text}}. Pro Vorgang auf CAP Zeichen gekürzt (Payload zähmen —
 für den Volltext-Download gibt es später die echte Datei/Objektspeicher).
 
@@ -38,7 +38,12 @@ def main() -> int:
     rows = con.execute(
         f"""SELECT notice_id, file, filetype, text
             FROM read_parquet('{SRC.as_posix()}')
-            WHERE status='ok' AND text IS NOT NULL AND length(text) > 0
+            -- `ocr` wie `ok` — s. govisor/docpipe.py: der Zustand entsteht nur, wenn die
+            -- Texterkennung Fachvokabular fand (>= 3 Begriffe der Vergabesprache).
+            -- Gemessen 2026-08-18: 404 Vorgaenge bekommen dadurch zusaetzlichen Text,
+            -- 3,23 Mio. Zeichen. KEIN Vorgang haengt allein daran — wer nur OCR-Text hat,
+            -- existiert nicht (0 von 404). Es ist Tiefe, nicht Abdeckung.
+            WHERE status IN ('ok','ocr') AND text IS NOT NULL AND length(text) > 0
             ORDER BY notice_id, file"""
     ).fetchall()
 

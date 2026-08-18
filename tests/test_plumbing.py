@@ -293,6 +293,55 @@ def test_region_kpi_grain_and_sanity():
     assert bad == 0
 
 
+def test_dokumentleser_decken_die_alt_formate_ab():
+    """Was einmal lesbar war, muss lesbar bleiben — und zwar an echten Dateien geprueft.
+
+    Am 2026-08-18 kamen fuenf Formate dazu (.doc, .xls und die drei AI-AG-Formate). Ein
+    reiner Registry-Test wuerde das Wichtigste nicht sehen: ob der Leser auch TEXT liefert.
+    `.doc` haengt an einer von Hand gelesenen Stueckliste, `.xls` an `xlrd<2` — beides
+    kann still kaputtgehen, ohne dass ein Import fehlschlaegt.
+
+    Deshalb: eine echte Datei je Format aus dem Bestand, mindestens 80 Zeichen Text. Ohne
+    Bestand (frische CI) wird uebersprungen, nicht geraten.
+    """
+    from govisor.docpipe import _EXTRACT, _KNOWN_NOEXTRACT, iter_docs
+
+    for typ in (".doc", ".xls", ".aidf", ".aiform", ".aidoc"):
+        assert typ in _EXTRACT, f"{typ} hat keinen Leser mehr"
+        assert typ not in _KNOWN_NOEXTRACT, f"{typ} steht als inhaltslos gefuehrt"
+    # `.asc` ist der Fall, der am leichtesten wieder zurueckrutscht: sieht nach einem
+    # Austauschformat aus, ist aber ein PGP-Schluesselblock (725 Dateien).
+    assert ".asc" in _KNOWN_NOEXTRACT
+
+    root = pathlib.Path(__file__).resolve().parent.parent / "data/docs/DE"
+    quelle = root / "doc_text.parquet"
+    if not quelle.exists():
+        pytest.skip("kein Dokumentenbestand")
+
+    con = duckdb.connect()
+    for typ in (".doc", ".xls", ".aidf"):
+        treffer = con.execute(
+            f"""SELECT notice_id, file FROM read_parquet('{quelle.as_posix()}')
+                WHERE filetype = '{typ}' LIMIT 25""").fetchall()
+        if not treffer:
+            continue
+        text = ""
+        for nid, datei in treffer:
+            for zp in (root / nid).glob("*.zip"):
+                try:
+                    for name, _ext, data in iter_docs(zp):
+                        if name == datei and data:
+                            text = _EXTRACT[typ](data)
+                            break
+                except Exception:                      # kaputtes Archiv → naechste Probe
+                    continue
+                if text:
+                    break
+            if text:
+                break
+        assert len(text.strip()) > 80, f"{typ}: Leser liefert keinen Text mehr"
+
+
 def test_regionen_export_reaches_the_frontend():
     """Die Regionalansicht haengt an drei Gliedern — jedes einzeln pruefbar.
 

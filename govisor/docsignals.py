@@ -309,7 +309,10 @@ def _fingerabdruecke(con, src) -> dict[str, str]:
         f"""SELECT notice_id,
                    count(*) || ':' || coalesce(sum(n_chars), 0) || ':'
                    || md5(string_agg(file, '|' ORDER BY file)) AS fp
-            FROM read_parquet('{src.as_posix()}') WHERE status='ok'
+            -- `ocr` wie `ok`: erkannter Text mit bestandenem Fachvokabeltest ist Inhalt,
+            -- kein Zufallsfund. Betrifft 404 Vorgaenge (3,23 Mio. Zeichen), die daneben
+            -- schon `ok`-Text haben — es geht um vollstaendigere Signale, nicht um neue.
+            FROM read_parquet('{src.as_posix()}') WHERE status IN ('ok','ocr')
             GROUP BY notice_id""").fetchall()}
 
 
@@ -392,7 +395,7 @@ def build_signals(cfg, country: str = "DE", neu_aufbauen: bool = False) -> dict:
             f"""SELECT d.notice_id, string_agg(d.text, '\n\n' ORDER BY d.file) AS full
                 FROM read_parquet('{src.as_posix()}') d
                 JOIN _faellig f USING (notice_id)
-                WHERE d.status='ok' GROUP BY d.notice_id""").fetchall()
+                WHERE d.status IN ('ok','ocr') GROUP BY d.notice_id""").fetchall()
         con.unregister("_faellig")
         for nid, full in rows:
             sig = extract_signals(full or "")

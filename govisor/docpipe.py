@@ -296,6 +296,126 @@ def _rtf_text(data: bytes) -> str:
     return _re.sub(r"[ \t]{2,}", " ", t).strip()
 
 
+_STEUERZEICHEN = re.compile(r"[\x00-\x08\x0b\x0c\x0e-\x1f]")
+
+
+def _doc_text(data: bytes) -> str:
+    """Word 97-2003 (.doc) → Text. OLE2-Container, Stueckliste, keine Bibliothek von der Stange.
+
+    **Warum ueberhaupt.** `.doc` und `.xls` standen als „Binaerformat ohne sinnvolle Loesung"
+    in `_KNOWN_NOEXTRACT`. Gemessen 2026-08-18 sind das 394 Dateien in 213 Vorgaengen, und
+    die Stichprobe zeigt, was drinsteckt: „Stadtverwaltung Idar-Oberstein, Tiefbauamt,
+    Leistungsbeschreibung, Baubeschreibung". Also nicht Beiwerk, sondern der Kern.
+
+    **Warum von Hand und nicht mit einer Konvertierung.** LibreOffice oder antiword waeren
+    ein Fremdprozess je Datei und auf dieser Maschine gar nicht vorhanden. `olefile` liest
+    den Container, den Rest macht das Format selbst: Word legt den Text nicht am Stueck ab,
+    sondern in einer **Stueckliste** (piece table) im Table-Stream. Jedes Stueck sagt, wo
+    seine Zeichen liegen und ob sie als CP1252 (Bit 0x40000000 im `fc`) oder als UTF-16
+    stehen. Wer das ignoriert und einfach im Datenstrom nach Text sucht, bekommt bei
+    schnellgespeicherten Dokumenten die alten Fassungen mit dazu — und ein falsches Zitat
+    ist schlimmer als ein fehlendes (Belegpflicht, s. `govisor/docextract.py`).
+    """
+    import io
+    try:
+        import olefile
+    except ImportError:                                   # noqa: BLE001
+        return ""
+    try:
+        ole = olefile.OleFileIO(io.BytesIO(data))
+        if not ole.exists("WordDocument"):
+            return ""
+        wd = ole.openstream("WordDocument").read()
+        # Bit 0x0200 der FIB-Flags sagt, WELCHER der beiden Table-Streams gilt. Den falschen
+        # zu nehmen liefert Muell, der wie Text aussieht.
+        tabelle = "1Table" if int.from_bytes(wd[0x0A:0x0C], "little") & 0x0200 else "0Table"
+        if not ole.exists(tabelle):
+            return ""
+        tb = ole.openstream(tabelle).read()
+        fc = int.from_bytes(wd[0x01A2:0x01A6], "little")
+        lcb = int.from_bytes(wd[0x01A6:0x01AA], "little")
+        clx = tb[fc:fc + lcb]
+        i = 0
+        while i < len(clx) and clx[i] == 0x01:             # optionale Prc-Bloecke ueberspringen
+            i += 3 + int.from_bytes(clx[i+1:i+3], "little")
+        if i >= len(clx) or clx[i] != 0x02:
+            return ""
+        pcdt = clx[i+5:i+5 + int.from_bytes(clx[i+1:i+5], "little")]
+        n = (len(pcdt) - 4) // 12                          # (n+1) CPs a 4 B + n PCDs a 8 B
+        cps = [int.from_bytes(pcdt[4*k:4*k+4], "little") for k in range(n + 1)]
+        teile = []
+        for k in range(n):
+            pcd = pcdt[4*(n+1) + 8*k: 4*(n+1) + 8*k + 8]
+            f = int.from_bytes(pcd[2:6], "little")
+            zeichen = cps[k+1] - cps[k]
+            if f & 0x40000000:
+                start = (f & 0x3FFFFFFF) >> 1
+                teile.append(wd[start:start + zeichen].decode("cp1252", "replace"))
+            else:
+                teile.append(wd[f:f + zeichen * 2].decode("utf-16-le", "replace"))
+        # \x07 ist das Zellen-/Zeilenende in Word-Tabellen, \r der Absatz.
+        t = "".join(teile).replace("\r", "\n").replace("\x07", "\n")
+        return _STEUERZEICHEN.sub("", t)
+    except Exception:                                      # noqa: BLE001
+        return ""
+
+
+def _xls_text(data: bytes) -> str:
+    """Excel 95-2003 (.xls) → Zeilen als Text. In der Stichprobe: Leistungsverzeichnisse.
+
+    Dasselbe Muster wie `_xlsx_text`: eine Zeile je Tabellenzeile, Zellen mit `|` getrennt,
+    leere Zellen weg. Die Blattnamen bleiben als Ueberschrift stehen, weil sie in
+    Vergabeunterlagen die Gliederung tragen („Leistungsverzeichnis", „Preisblatt").
+
+    `xlrd` ab 2.0 kann kein `.xls` mehr (nur noch `.xlsx`), deshalb steht in
+    `requirements.txt` ausdruecklich `xlrd<2`. Wer das beim naechsten Aufraeumen anhebt,
+    schaltet 394 Dateien still wieder ab.
+    """
+    try:
+        import xlrd
+    except ImportError:                                    # noqa: BLE001
+        return ""
+    try:
+        wb = xlrd.open_workbook(file_contents=data)
+    except Exception:                                      # noqa: BLE001
+        return ""
+    aus = []
+    for sh in wb.sheets():
+        aus.append(f"\u2500\u2500 {sh.name} \u2500\u2500")
+        for r in range(sh.nrows):
+            zeile = [str(c.value).strip() for c in sh.row(r) if str(c.value).strip()]
+            if zeile:
+                aus.append(" | ".join(zeile))
+    return "\n".join(aus)
+
+
+def _aidf_text(data: bytes) -> str:
+    """`.aidf` → das Leistungsverzeichnis darin. Ein ZIP, das sich als Einzeldatei ausgibt.
+
+    Gemessen 2026-08-18 an einer Probe: die Datei ist ein ZIP mit vier Eintraegen, und
+    ``data.lv`` ist ein XML-Leistungsverzeichnis des AI-AG-Formats (`<ai:lv …>`). 391 Dateien
+    liefen als `unknown_type` durch, obwohl genau das drinsteht, wonach ein Bieter sucht.
+
+    Bewusst NUR ``data.lv`` und ``metadata.xml``: ``lvm.aicatalog`` ist mit 415 KB der
+    Abgleichkatalog des Programms (Standardtexte, nicht die Ausschreibung) und ``stylesheet.xsl``
+    die Darstellung. Beide wuerden den Index aufblaehen und nichts beitragen.
+    """
+    import io
+    import zipfile
+    try:
+        z = zipfile.ZipFile(io.BytesIO(data))
+    except Exception:                                      # noqa: BLE001
+        return ""
+    teile = []
+    for name in z.namelist():
+        if name.rsplit("/", 1)[-1] in ("data.lv", "metadata.xml"):
+            try:
+                teile.append(_html_text(z.read(name)))
+            except Exception:                              # noqa: BLE001
+                continue
+    return "\n".join(t for t in teile if t)
+
+
 _EXTRACT = {
     ".pdf": _pdf_text, ".docx": _docx_text, ".xlsx": _xlsx_text,
     ".htm": _html_text, ".html": _html_text, ".xml": _html_text,
@@ -306,12 +426,40 @@ _EXTRACT = {
     # GAEB — der Parser lag seit Ticket 23 ungenutzt daneben, s. `_gaeb_text`.
     ".x83": _gaeb_text, ".x81": _gaeb_text, ".x86": _gaeb_text,
     ".d83": _gaeb_text, ".d81": _gaeb_text, ".p83": _gaeb_text, ".gaeb": _gaeb_text,
+    # Alt-Office. Bis 2026-08-18 als „unsupported" gefuehrt: 394 Dateien in 213 Vorgaengen.
+    ".doc": _doc_text, ".xls": _xls_text,
+    # AI-AG-Vergabemanager (verbreitet auf den Landesportalen). Was Inhalt traegt, gemessen:
+    #   .aidf   391 Dateien  ZIP mit dem XML-Leistungsverzeichnis      → eigener Leser
+    #   .aiform 194 Dateien  das VHB-Angebotsschreiben mit Bindefrist  → XML-Text
+    #   .aidoc  194 Dateien  Vergabenummer, Titel, Leistung            → XML-Text
+    # Was KEINEN Inhalt traegt, steht in `_KNOWN_NOEXTRACT` — mit Beleg, warum.
+    ".aidf": _aidf_text, ".aiform": _html_text, ".aidoc": _html_text,
 }
-# bekannt, aber ohne einfachen Extraktor (Alt-Office/Binär) → geflaggt, nicht ignoriert.
-# `.doc` und `.xls` bleiben: beide sind Binaerformate, fuer die es keine sinnvolle Loesung
-# ohne zusaetzliche Abhaengigkeit gibt (LibreOffice/antiword sind auf dieser Maschine nicht
-# vorhanden). 291 Dateien — bewusst offen, nicht uebersehen.
-_KNOWN_NOEXTRACT = {".doc", ".xls", ".ppt", ".p7s", ".zip"}
+# bekannt, aber ohne einfachen Extraktor → geflaggt, nicht ignoriert.
+#
+# `.doc`/`.xls` standen hier bis 2026-08-18 mit der Begruendung „Binaerformat, keine sinnvolle
+# Loesung ohne Fremdprozess". Das stimmte fuer LibreOffice und antiword, nicht fuer den Weg,
+# den `_doc_text`/`_xls_text` jetzt gehen: zwei kleine reine Python-Pakete (olefile, xlrd<2).
+# Geblieben ist, was wirklich nichts hergibt: `.ppt` (Folien, im Vergabekontext Beiwerk),
+# `.p7s` (Signatur, kein Inhalt), `.zip` (wird eine Ebene hoeher ausgepackt).
+#
+# DAZU, seit 2026-08-18, die grossen Posten aus `unknown_type` — jeder mit Blick in die Bytes
+# entschieden, nicht nach der Endung geraten:
+#
+#   .asc   725  PGP-Schluesselbloecke („-----BEGIN PGP PUBLIC KEY BLOCK-----"). Der groesste
+#               Einzelposten im ganzen `unknown_type` und der irrefuehrendste: er sieht nach
+#               einem Austauschformat aus und ist die Verschluesselung des Portals.
+#   .dwg   384  CAD-Zeichnung, .jpg 291 Foto: Bilder, kein Text.
+#   .aidocdef 582  Formulardefinition des AI-AG-Systems. Ihr Text sind Pruefmeldungen
+#               („Nicht alle Zeichen sind erlaubt"), nicht die Ausschreibung.
+#   .xsl   194  Stylesheet zur Darstellung des LV, nicht das LV (das liegt im `.aidf`).
+#   .din   106  39-Byte-Kopfzeile („VERSION$CHARACTER_SET 1$WE8MSWIN1252"), sonst nichts.
+#   .db    100  `Thumbs.db` aus Windows-Ordnern.
+#
+# Der Unterschied ist keine Wortklauberei: `unknown_type` heisst „hier fehlt uns ein Parser"
+# und ist eine Aufgabe, `unsupported` heisst „hier ist nichts zu holen" und ist erledigt.
+_KNOWN_NOEXTRACT = {".ppt", ".p7s", ".zip", ".asc", ".dwg", ".jpg", ".jpeg",
+                    ".aidocdef", ".xsl", ".din", ".db"}
 
 
 # GROESSEN-SPERRE JE DATEI. Gemessen 2026-08-14 an echten Paketen (je 6 Proben):

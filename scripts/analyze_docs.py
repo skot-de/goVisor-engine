@@ -214,7 +214,12 @@ def main() -> int:
     rows = con.execute(
         f"""WITH t AS (SELECT notice_id, file, text
                        FROM read_parquet('{SRC.as_posix()}')
-                       WHERE status='ok' AND text IS NOT NULL AND length(text) > 120)
+                       -- `ocr` zaehlt wie `ok`: ein bildreines PDF, das die Texterkennung
+                       -- durchlaufen hat UND den Fachvokabeltest bestand, ist inhaltlich
+                       -- dasselbe wie ein durchsuchbares. Gemessen 2026-08-18: 3,23 Mio.
+                       -- Zeichen in 404 Vorgaengen, die alle auch `ok`-Text haben. Der LLM
+                       -- bekommt also mehr Material je Vorgang, nicht mehr Vorgaenge.
+                       WHERE status IN ('ok','ocr') AND text IS NOT NULL AND length(text) > 120)
             SELECT t.notice_id, t.file, t.text
             FROM t LEFT JOIN read_parquet('{LE}') l ON l.lead_id = t.notice_id
             ORDER BY (l.phase = 'open') DESC NULLS LAST,

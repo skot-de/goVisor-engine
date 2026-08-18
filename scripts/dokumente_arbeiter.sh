@@ -69,10 +69,20 @@ while true; do
 
   # ── Stufe 1: Text aus dem, was schon da ist ────────────────────────────────────
   # Zuerst, weil es nichts kostet und sofort im Frontend ankommt.
+  #
+  # ⛔ NICHT NEBEN EINEM HAND-LAUF. Der Tageslauf schuetzt sich per Lock, ein von Hand
+  # gestartetes `index-docs` nicht — und beide schreiben dieselbe `doc_text.parquet`.
+  # Genau das drohte am 2026-08-18, als nach neuen Lesern (.doc/.xls/AI-AG) 492 Vorgaenge
+  # zum erneuten Auslesen freigegeben wurden. Ein `pgrep` ist hier billiger als jede
+  # Aufraeumarbeit hinterher.
+  if pgrep -f "govisor.cli index-docs" >/dev/null 2>&1; then
+    sag "Stufe 1 uebersprungen — es laeuft bereits ein index-docs."
+  else
   sag "Stufe 1: Text auslesen"
   $PY -m govisor.cli index-docs --country DE >>"$LOG" 2>&1 \
     && $PY scripts/export_doc_text.py >>"$LOG" 2>&1 \
     && sag "  Volltext exportiert" || sag "  ⚠ Stufe 1 unvollständig"
+  fi
 
   [ -e "$LOCK" ] && continue
 
