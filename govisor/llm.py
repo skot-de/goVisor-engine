@@ -50,6 +50,10 @@ SAMBANOVA_URL = "https://api.sambanova.ai/v1/chat/completions"
 # DeepSeek-Modelle sind dort also unbrauchbar langsam — nicht falsch, nur nicht benutzbar,
 # wenn 4.500 Vorgaenge warten.
 SAMBANOVA_MODEL = os.environ.get("SAMBANOVA_MODEL", "Meta-Llama-3.3-70B-Instruct")
+XAI_URL = "https://api.x.ai/v1/chat/completions"
+# Gemessen 2026-08-18: grok-4-fast-non-reasoning 0,9 s, grok-3-mini 8,7 s. Bei 4.300
+# wartenden Vorgaengen entscheidet die Antwortzeit ueber Stunden, nicht ueber Sekunden.
+XAI_MODEL = os.environ.get("XAI_MODEL", "grok-4-fast-non-reasoning")
 _LOCK = threading.Lock()
 _EXHAUSTED: set[str] = set()   # Keys ohne Guthaben (402), prozessweit gemerkt
 # Wer hat zuletzt geantwortet? JE FADEN, nicht global: der Analyse-Lauf schickt 40 Anfragen
@@ -109,6 +113,7 @@ def _anbieter() -> list[dict]:
          "model": TOGETHER_MODEL},
         {"name": "sambanova", "url": SAMBANOVA_URL, "keys": _load_keys_aus("sambanova"),
          "model": SAMBANOVA_MODEL},
+        {"name": "xai", "url": XAI_URL, "keys": _load_keys_aus("xai"), "model": XAI_MODEL},
     ]
     # ⚠ PERPLEXITY IST BEWUSST NICHT DABEI, obwohl ein Schluessel mit Guthaben vorliegt
     # (.secrets/perplexity.key, geprueft am 2026-08-18: antwortet in 1,9 s).
