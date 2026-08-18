@@ -179,6 +179,20 @@ def main() -> int:
         f"SELECT name_only_entity, candidate_entity, reason "
         f"FROM '{(G / 'entity_merge_candidates.parquet').as_posix()}'"
         + ("" if a.alle else f" USING SAMPLE {a.n} ROWS")).fetchall()
+    # WIEDERAUFSETZEN. Ein Lauf über alle Paare dauert Stunden; ein Abbruch (leeres Konto,
+    # Neustart, breiter skaliert) darf nicht bedeuten, dass alles noch einmal bezahlt wird.
+    # Bereits beurteilte Paare fallen raus, das Ergebnis wird angehängt.
+    fertig: set[tuple[str, str]] = set()
+    alt = []
+    if ZIEL.exists():
+        import pandas as _pd
+        vorher = _pd.read_parquet(ZIEL)
+        alt = vorher.to_dict("records")
+        fertig = {(r["entity_a"], r["entity_b"]) for r in alt}
+        if fertig:
+            print(f"  {len(fertig):,} Urteile liegen schon vor — die überspringe ich.")
+    paare = [p for p in paare if (p[0], p[1]) not in fertig]
+
     richter = richter_waehlen()
     if len(richter) < 2:
         print(f"  ✖ Nur {len(richter)} Anbieter mit Guthaben — ein Urteil braucht zwei "
@@ -195,7 +209,12 @@ def main() -> int:
         kandidaten = kontexte(c, e2)
         b_ctx = {"kandidaten": kandidaten}
         c.close()
-        urteile = [urteil_von(r, a_ctx, b_ctx) for r in richter]
+        # Beide Richter GLEICHZEITIG. Nacheinander war die Wartezeit je Paar die Summe
+        # zweier Antworten; nebeneinander ist sie die längere von beiden. Kostet nichts
+        # ausser zwei Fäden, halbiert aber die Dauer je Paar.
+        with ThreadPoolExecutor(max_workers=len(richter)) as zwei:
+            urteile = [f.result() for f in [zwei.submit(urteil_von, r, a_ctx, b_ctx)
+                                            for r in richter]]
         einig = len({u["urteil"] for u in urteile}) == 1
         return {"entity_a": e1, "entity_b": e2, "regel_grund": grund,
                 "name_a": a_ctx["name"],
@@ -211,15 +230,22 @@ def main() -> int:
                 "grund_1": (urteile[0].get("grund") or "")[:200],
                 "grund_2": (urteile[1].get("grund") or "")[:200]}
 
-    ergebnisse = []
+    import pandas as pd
+
+    # ZWISCHENSTAND SICHERN. Der volle Lauf sind 6.971 Paare mal zwei Richter, also rund
+    # 14.000 Aufrufe und mehrere Stunden. Erst am Ende zu schreiben hiesse: ein leergelaufenes
+    # Konto nach vier Stunden kostet vier Stunden. Alle 200 Urteile auf die Platte.
+    ergebnisse = list(alt)
     with ThreadPoolExecutor(max_workers=a.parallel) as pool:
-        for fut in as_completed([pool.submit(beurteile, p) for p in paare]):
+        for i, fut in enumerate(as_completed([pool.submit(beurteile, p) for p in paare]), 1):
             try:
                 ergebnisse.append(fut.result())
             except Exception as ex:                            # noqa: BLE001
                 print(f"    ✖ {type(ex).__name__}: {ex}", file=sys.stderr)
+            if i % 200 == 0:
+                pd.DataFrame(ergebnisse).to_parquet(ZIEL, index=False)
+                print(f"    {i:,}/{len(paare):,} beurteilt", flush=True)
 
-    import pandas as pd
     df = pd.DataFrame(ergebnisse)
     df.to_parquet(ZIEL, index=False)
 
