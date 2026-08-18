@@ -86,9 +86,20 @@ def main() -> int:
         -- Mal derselbe Ort in längerer Schreibweise, jedes Mal als Widerspruch gemeldet.
         -- Ein Widerspruch liegt erst vor, wenn KEIN Ortsname der einen Seite in einem der
         -- anderen steckt (und umgekehrt).
+        -- ⚠ DRITTE KORREKTUR DERSELBEN REGEL. Nach PLZ (373 Fehlalarme) und exakter
+        -- Stadtgleichheit (270) blieben 97 — und die Impressum-Gegenprobe zeigte, dass auch
+        -- davon die meisten TIPPFEHLER der Quelle sind: „lipppstadt", „kalrsruhe",
+        -- „erfirt", „garcching", dazu „luxembourg"/„luxemburg" als Sprachvariante. Das
+        -- Impressum der jeweiligen Firma nennt die richtige Schreibweise; die Modelle hatten
+        -- recht, die Regel hatte unrecht.
+        --
+        -- Levenshtein <= 2 faengt genau diese Sorte ab. Weiter aufmachen sollte man nicht:
+        -- „Neustadt" und „Neustadt an der Weinstrasse" trennt mehr als ein Buchstabendreher,
+        -- und das faengt bereits `contains`.
         WHERE NOT EXISTS (
             SELECT 1 FROM unnest(a.orte) AS t(x), unnest(b.orte) AS u(y)
-            WHERE x = y OR contains(x, y) OR contains(y, x))""").fetchone()[0]
+            WHERE x = y OR contains(x, y) OR contains(y, x)
+               OR levenshtein(x, y) <= 2)""").fetchone()[0]
 
     gleicher_vorgang = con.execute(f"""
         SELECT count(DISTINCT (pa.entity_a || '|' || pa.entity_b)) FROM paare pa
