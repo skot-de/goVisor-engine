@@ -105,35 +105,34 @@ function Kette({ stufen, satz }: {
 }) {
   const { t } = useSprache();
   /*
-    Vierter Anlauf, und der letzte Umbau kam nicht von der Optik, sondern vom Inhalt.
-    Sven: „den trichter sollten wir als kette zeigen: '8.080 Ausschreibungen sagt der
-    Markt, wir sagen 194 und weniger die wirklich zu euch passen'."
+    Vierter Anlauf, und der letzte Umbau kam vom Aussehen: die Stufen standen als
+    gleich grosse Kästchen nebeneinander und sahen deshalb aus wie eine Aufzählung.
+    Ein Trichter, dessen Stufen gleich breit sind, verschenkt seine einzige Aussage.
 
-    Ein gestapeltes Balkendiagramm laesst sich ansehen; eine Kette liest man. Und weil
-    der Satz darueber dieselbe Aussage in Worten macht, traegt die Grafik nicht mehr die
-    ganze Last: wer nur den Satz liest, hat es trotzdem verstanden.
+    Jetzt trägt die BREITE die Zahl — logarithmisch, weil 8.297 zu 35 linear ein
+    unsichtbares letztes Glied ergäbe (0,4 % Breite). Die kleinste Stufe behält
+    deshalb einen Mindestanteil; die Reihenfolge bleibt in jedem Fall ablesbar.
   */
+  const max = Math.max(...stufen.map((s) => s.n), 1);
+  const breite = (n: number) =>
+    Math.max(14, Math.round((Math.log10(Math.max(n, 1)) / Math.log10(max)) * 100));
   return (
     <div className="lg-kettewrap">
       {satz && <p className="lg-kettesatz">{satz}</p>}
       <ol className="lg-kette">
         {stufen.map((s, i) => (
-          <li className={`lg-glied${i === stufen.length - 1 ? " lg-letzte" : ""}`} key={i}>
-            <span className="lg-n">{s.n.toLocaleString("de-DE")}</span>
+          <li className="lg-glied" key={i}>
+            <div className="lg-glied-bar" style={{ width: `${breite(s.n)}%` }}>
+              <span className="lg-n">{s.n.toLocaleString("de-DE")}</span>
+            </div>
             <span className="lg-lb">{s.label}</span>
             {s.hinweis && <span className="lg-hw">{s.hinweis}</span>}
           </li>
         ))}
-        {/* Das letzte Glied trug ein Fragezeichen. Gemeint war Ehrlichkeit: wie viele
-            wirklich passen, haengt an Eignung und Kapazitaet und steht in keiner
-            Bekanntmachung. Gelesen wurde etwas anderes. Wir belegen eine Seite lang, dass
-            wir etwas ueber diese Firma wissen, und schliessen dann ausgerechnet bei der
-            einen Zahl, die den Empfaenger interessiert, mit „?". Das entwertet alles
-            davor.
-            Jetzt steht dort, was wir tatsaechlich anbieten: die Auswahl uebernehmen wir.
-            Kein erfundener Wert, aber auch keine Ratlosigkeit. */}
         <li className="lg-glied lg-offen">
-          <span className="lg-n">→</span>
+          <div className="lg-glied-bar" style={{ width: "10%" }}>
+            <span className="lg-n">→</span>
+          </div>
           <span className="lg-lb">{t("die Auswahl übernehmen wir")}</span>
         </li>
       </ol>
@@ -346,10 +345,13 @@ export function LandingView({ d, token }: { d: Landing; token: string }) {
 
       {/* 2 — das Leckerli */}
       {aufmacher && (
-        <section className="ds-slide" id="s-fuer" data-slide="fuer">
+        <section className="ds-slide ds-hell" id="s-fuer" data-slide="fuer">
           <div className="ds-inhalt">
             <div className="lg-eyebrow">{t("Für euch schon gemacht")} · {t("Stand")} {d.stand}</div>
-            <h2 className="lg-kt-gross">{aufmacher.kern}</h2>
+            <div className="ds-kopfzeile">
+              <div className="ds-zahl">{aufmacher.zeilen!.length}</div>
+              <h2 className="lg-kt-gross">{aufmacher.kern}</h2>
+            </div>
             <Vertragstabelle zeilen={aufmacher.zeilen!} spalte="Frist" />
             <div className="lg-grenze">{aufmacher.grenze}</div>
           </div>
@@ -358,7 +360,7 @@ export function LandingView({ d, token }: { d: Landing; token: string }) {
 
       {/* 3 — was öffentlich über sie dasteht */}
       {ueberEuch.length > 0 && (
-        <section className="ds-slide" id="s-ueber" data-slide="ueber">
+        <section className="ds-slide ds-dunkel" id="s-ueber" data-slide="ueber">
           <div className="ds-inhalt">
             <div className="lg-eyebrow">{t("Das steht öffentlich über euch")}</div>
             {d.kern && <h2 className="lg-kt-gross">{d.kern}</h2>}
@@ -388,7 +390,7 @@ export function LandingView({ d, token }: { d: Landing; token: string }) {
       )}
 
       {/* 5 — die Brücke */}
-      <section className="ds-slide" id="s-konto" data-slide="konto">
+      <section className="ds-slide ds-hell" id="s-konto" data-slide="konto">
         <div className="ds-inhalt">
           <h2 className="lg-kt-gross">{t("Weiter im Konto")}</h2>
           {naechste && (

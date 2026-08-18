@@ -1,0 +1,56 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+0001;An- und Abtransport einer ausreichenden Anzahl von Bohrgeräten um den Auftrag fristgerecht abwickeln zu können. Und alle benötigten Maschinen und Gerätschaften für Bohrungen und Bohrlochversuche, Nebenarbeiten sowie Betriebsstoffe und Baustoffe inkl. An- und Abfahrten des Bedienpersonals und aller F;1,0;Psch;gaeb;Leistungsverzeichnis/A0184000013_LV.X83
+0002;Vorhalten der Baustelleneinrichtung für Bohrungen für den Zeitraum der Erkundungsarbeiten, inklusive Stillstandzeiten. Stillstandzeiten und Bauzeitverlängerung werden nur vergütet, wenn die Ursachen vom AG zu vertreten sind. Der Nachweis erfolgt durch Vorlage der Tagesberichte.;4,0;Wo;gaeb;Leistungsverzeichnis/A0184000013_LV.X83
+0003;Baustelle einschließlich aller Anlagen, Einrichtungen,;1,0;Psch;gaeb;Leistungsverzeichnis/A0184000013_LV.X83
+0001;Einrichten eines witterungsgeschützten, frostfreien für die Lagerung der Bohrkerne geeigneten,;1,0;Psch;gaeb;Leistungsverzeichnis/A0184000013_LV.X83
+0002;Kernlager für das Auslegen der Kernkisten und;8,0;Wo;gaeb;Leistungsverzeichnis/A0184000013_LV.X83
+0003;Kernlager nach Ende der Bohrkernaufnahme durch den AG;1,0;Psch;gaeb;Leistungsverzeichnis/A0184000013_LV.X83
+0004;Übernahme der Bohrkerne und des überschüssigen Bohrgutes in das Eigentum des AN zur ordnungsgemäßen Verwertung oder Entsorgung. Bohrgut von bereits im Untergrund kontaminierten Material ist an ein Fachunternehmen zur;1,0;Psch;gaeb;Leistungsverzeichnis/A0184000013_LV.X83
+0005;Transport der Boden-/Grundwasserproben vom Kernlager;1,0;St;gaeb;Leistungsverzeichnis/A0184000013_LV.X83
+0001;Erkundung von Kabeln und Leitungen aller Art (inkl.;6,0;St;gaeb;Leistungsverzeichnis/A0184000013_LV.X83
+0002;An-/Abfahrt zur Kampfmittelerkundung und Vorhalten;1,0;St;gaeb;Leistungsverzeichnis/A0184000013_LV.X83
+0003;Kampfmittelerkundung mittels geeigneter Geräte von der Geländeoberfläche aus, bis in eine Tiefe von 6 m unter GOK an jedem der Bohransatzpunkte in einem Umkreis von 10 m (R=5,0m) um den jeweiligen Bohransatzpunkt. In die Einheitspreise sind alle für die fachgerechte Durchführung der Kampfmittelsondi;6,0;St;gaeb;Leistungsverzeichnis/A0184000013_LV.X83
+0004;(OPTIONAL) Untersuchen und Freigeben von Aufschlusspunkten hinsichtlich eines;1,0;St;gaeb;Leistungsverzeichnis/A0184000013_LV.X83
+0001;Bohrungen und schwere Rammsondierungen bei der zuständigen Behörde gem. GeolDG anzeigen und die Untersuchungsergebnisse (hier: Bohrprofil, Schichtenverzeichnis, Ausbaupläne und Einmessdaten) übermitteln. Die gesetzlichen Fristen sind einzuhalten. Sämtliche daraus resultierenden Kosten sind in die Le;8,0;St;gaeb;Leistungsverzeichnis/A0184000013_LV.X83
+0002;Bohrungen bei der zuständigen Behörde gem. BayWG anzeigen. Die gesetzlichen Fristen sind einzuhalten. Sämtliche daraus resultierenden Kosten sind in die Leistungsposition einzukalkulieren. Abrechnung je Aufschlussstelle.;6,0;St;gaeb;Leistungsverzeichnis/A0184000013_LV.X83
+0003;Anlegen eines Handschachtes bis zu 2,0 m Tiefe zur;6,0;St;gaeb;Leistungsverzeichnis/A0184000013_LV.X83
+0004;Einzelne Sträucher und Bäume (bis 10 cm Durchmesser);1,0;h;gaeb;Leistungsverzeichnis/A0184000013_LV.X83
+0005;"Fotografieren der Bohrkerne in den Kernkisten; verzerrungsfreie Senkrechtaufnahme mit Bezeichnung der Bohrung und Tiefe. Eine Farbskala und ein Meterstab sind mit zu fotografieren. Je Bild 4 Bohrmeter. Lieferung digital im jpg-Format.";195,0;m;gaeb;Leistungsverzeichnis/A0184000013_LV.X83
+0006;Benachrichtigung der Grundeigentümer und Pächter vor Beginn der Bohrungen für die Zu-/Abfahrten;2,0;St;gaeb;Leistungsverzeichnis/A0184000013_LV.X83
+0007;Untersuchungstelle nach Lage und Höhe im System Gauss - Krüger und UTM mit mindestens 1 cm Genauigkeit einmessen. Der AN ist für die Markierung der Untersuchungsstellen nach Durchführung verantwortlich und koordiniert Zeitpunkt und die Anzahl der Einmesstermine in Abhängigkeit vom Baufortschritt. Es;8,0;St;gaeb;Leistungsverzeichnis/A0184000013_LV.X83
+0008;Untersuchungstelle nach Lage und Höhe im System Gauss - Krüger und UTM mit mindestens 1 cm Genauigkeit einmessen, auf Anforderung des AG als Zwischenstand. Der AN ist für die Markierung der Untersuchungsstellen nach Durchführung verantwortlich. Abrechnung je Aufschlussstelle.;1,0;St;gaeb;Leistungsverzeichnis/A0184000013_LV.X83
+0001;Verkehrsrechtliche Anordnung für Einrichtung und Be-;1,0;St;gaeb;Leistungsverzeichnis/A0184000013_LV.X83
+0002;Verkehrssicherung an Arbeitsstellen von kürzerer Dauer;1,0;St;gaeb;Leistungsverzeichnis/A0184000013_LV.X83
+0003;Verkehrssicherung an Arbeitsstellen von kürzerer Dauer;1,0;St;gaeb;Leistungsverzeichnis/A0184000013_LV.X83
+0001;Aufstellen eines Bohrgerätes am ersten Ansatzpunkt und Umsetzen und Aufstellen je weiterer Ansatzpunkt, einschließlich aller Materialien für die Bohrungen. Alle Bohrungen im Untersuchungsgebiet.;6,0;St;gaeb;Leistungsverzeichnis/A0184000013_LV.X83
+0002;Zulage erschwerte An-/Abfahrt in Bereichen mit gering tragfähigen Böden, wie z.B. im Bereich von Flussauen, Moorböden, weichen feinkörnigen Böden, Waldschneisen mit Wurzelstöcken, steilen Hängen, einschließlich der erschwerten Andienung der Bohrstelle.;1,0;St;gaeb;Leistungsverzeichnis/A0184000013_LV.X83
+0003;Durchbohren Fahrbahnen aus Beton und/oder Asphalt im Bereich von Straßen und Wegen, inklusive ggf. vorhandener hydraulisch gebundener Tragschicht. Abrechnung je cm, nachgewiesen durch Bohrkern, zerfällt eine HGT-Schicht beim Bohren zu Kies erforderlichenfalls ergänzt durch Foto des Bohrlochs mit Maß;1,0;m;gaeb;Leistungsverzeichnis/A0184000013_LV.X83
+0004;Niederbringen von lotrechten, verrohrten;64,0;m;gaeb;Leistungsverzeichnis/A0184000013_LV.X83
+0005;Niederbringen von lotrechten, verrohrten;25,0;m;gaeb;Leistungsverzeichnis/A0184000013_LV.X83
+0006;Niederbringen von lotrechten, verrohrten;1,0;m;gaeb;Leistungsverzeichnis/A0184000013_LV.X83
+0007;Niederbringen von lotrechten, verrohrten;1,0;m;gaeb;Leistungsverzeichnis/A0184000013_LV.X83
+0008;Bohrung nach DIN EN ISO 22475-1 und ATV DIN 18301 für;1,0;m;gaeb;Leistungsverzeichnis/A0184000013_LV.X83
+0009;Bohrung nach DIN EN ISO 22475-1 und ATV DIN 18301 für;25,0;m;gaeb;Leistungsverzeichnis/A0184000013_LV.X83
+0010;Bohrung nach DIN EN ISO 22475-1 und ATV DIN 18301 für;49,0;m;gaeb;Leistungsverzeichnis/A0184000013_LV.X83
+0011;Bohrung nach DIN EN ISO 22475-1 und ATV DIN 18301 für;29,0;m;gaeb;Leistungsverzeichnis/A0184000013_LV.X83
+0012;Zulage für das Umstellen des Bohrverfahrens;5,0;St;gaeb;Leistungsverzeichnis/A0184000013_LV.X83
+0013;Ausführen von Bohrlochrammsondierungen nach DIN 4094-2 einschließlich Ein-, Aus- und Umbauten am Bohrgerät sowie Erstellen von Rammdiagrammen und Kopfblättern. Ergebnisse sind als Datei im dxf-und pdf-Format zu liefern. Alle Ansatztiefen.;40,0;St;gaeb;Leistungsverzeichnis/A0184000013_LV.X83
+0014;Beseitigung eines Bohrhindernisses auf Anweisung der BÜ oder des AG. Abrechnung je angefangene Stunde Meißelarbeiten.;1,0;h;gaeb;Leistungsverzeichnis/A0184000013_LV.X83
+0015;Wartezeit Gerät einschließlich Bedienpersonal für das Einspiegeln des Grundwasserstandes oder vom AG angeordnete Wartezeiten. Abrechnung je 1/4 angefangene Stunde.;1,0;h;gaeb;Leistungsverzeichnis/A0184000013_LV.X83
+0016;Zulage für Arbeiten am Wochenende Samstag und Sonntag, je Bohrtrupp mit allen Gerätschaften und Personal, Angebotspreis für eine Tag-Arbeitsschicht bis 12 Stunden, Abrechnungseinheit 1/2 Stück.;1,0;St;gaeb;Leistungsverzeichnis/A0184000013_LV.X83
+0017;Nachtzulage für Bohrungen, auf oder dicht neben der Autobahn, die in einer Nachtschicht abgeschlossen werden können, je Bohrtrupp mit allen Gerätschaften und Personal, Angebotspreis für eine Nacht-Arbeitsschicht bis 12 Stunden, Abrechnungseinheit 1/2 Stück.;1,0;St;gaeb;Leistungsverzeichnis/A0184000013_LV.X83
+0001;An- und Abtransport eines Sondiergeräts und aller benötigten Maschinen und Gerätschaften für die Durchführung der Sondierungen, Nebenarbeiten sowie Betriebsstoffe und Baustoffe inkl. An- und Abfahrten des Bedienungspersonals und aller Fahrten auf der Baustelle.;1,0;St;gaeb;Leistungsverzeichnis/A0184000013_LV.X83
+0002;Aufstellen der Rammsonde am ersten Untersuchungspunkt, Umsetzen und Aufstellen je weiterer Ansatzpunkt, inklusive aller zur Versuchsdurchführung erforderlichen Gerätschaften und Personal, Entfernung < 500 m.;2,0;St;gaeb;Leistungsverzeichnis/A0184000013_LV.X83
+0003;Sondierungen mit der schweren Rammsonde (DPH) mit Dokumentation gemäß DIN EN ISO 22476-2 durchführen, einschließlich Drehmomentmessung. Übergabe der Dokumentation gemäß Baubeschreibung, Sondiertiefe 0-10 m.;20,0;m;gaeb;Leistungsverzeichnis/A0184000013_LV.X83
+0004;Rückverfüllung der Sondierlöcher mit der Korngröße geeigneten Tonpellets oder Tongranualt.;20,0;m;gaeb;Leistungsverzeichnis/A0184000013_LV.X83
+0005;Zulage erschwerte An-/Abfahrt in Bereichen mit gering tragfähigen Böden, wie z.Bsp. im Bereich von Flussauen, Moorböden, weichen feinkörnigen Böden, Waldschneisen mit Wurzelstöcken, steilen Hängen, einschließlich der erschwerten Andienung der Rammstelle.;1,0;St;gaeb;Leistungsverzeichnis/A0184000013_LV.X83
+0001;Entnahme von ungestörten Bodenproben nach DIN EN ISO;15,0;St;gaeb;Leistungsverzeichnis/A0184000013_LV.X83
+0002;Erstellen einer Bodenprobe aus einem Kernstück nach Angabe der BÜ bzw. des AG beim Bohren oder aus Kernkisten, allseits luftdicht umwickeln mit Klarsicht-Frischhaltefolie, anschließen mehrlagig mit wasserfestem Klebeband fixieren, mit Auftrag, Nummer der Bohrung,;1,0;St;gaeb;Leistungsverzeichnis/A0184000013_LV.X83
+0003;Entnahme von gestörten Bodenproben nach DIN EN ISO;10,0;St;gaeb;Leistungsverzeichnis/A0184000013_LV.X83
+0004;Entnahme von gestörten Bodenproben nach DIN EN ISO;80,0;St;gaeb;Leistungsverzeichnis/A0184000013_LV.X83
+0005;Entnahme einer Grundwasserprobe nach;6,0;St;gaeb;Leistungsverzeichnis/A0184000013_LV.X83
+0006;2-fächerige Kernkisten mit 1 m Länge für das;195,0;m;gaeb;Leistungsverzeichnis/A0184000013_LV.X83
+0001;Kies liefern und Verfüllung des Bohrlochs mit gleichkörnigem Kies Lieferkörnung 5/8, 8/16 oder;145,0;m;gaeb;Leistungsverzeichnis/A0184000013_LV.X83
+0002;Zement-Bentonit-Suspension liefern und Verfüllung des Bohrlochs im Kontraktorverfahren, alle Bohrtiefen ab;20,0;m;gaeb;Leistungsverzeichnis/A0184000013_LV.X83
+0003;Tonpellets liefern und Verfüllung des Bohrlochs mit Tonpellets, alle Tiefen.;30,0;m;gaeb;Leistungsverzeichnis/A0184000013_LV.X83
+0004;Verschließen Fahrbahnbohrungen mit 45 cm schnell abbindenen Zementmörtel und oberer Abschluss;1,0;St;gaeb;Leistungsverzeichnis/A0184000013_LV.X83

@@ -1,0 +1,115 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+01000001;Bauvorbereitung;40,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+01000002;Dringlichkeitszulage 12-24 h;4,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+01000003;Dringlichkeitszulage 4-12 h;2,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+01000004;Einholung der VAO;1,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+01000005;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*... Freitext ... bei Tageslicht;50,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+01000006;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*... Freitext ... bei Tageslicht;25,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+01000007;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*... Freitext ... bei Tageslicht;60,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+01000008;Einholen der VAO LSA;1,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+01000009;Transportable Lichtsignalanlage;10,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+01010001;Tragen von PSA;1,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+01010002;Tragen von PSA;1,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+01020001;Zulage Entfernung Baumstandort;3,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+01020002;Zulage Abseilen;1,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+01020003;Zulage Baumfremd. Bewuchs >10 Stck.;10,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+01020004;Zulage Baumfremd. Bewuchs > 20 Stck;10,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+01030001;Zulage Entfernung Baumstandort;3,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+01030002;Zulage Einschnitt- Böschungen;1,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+01030003;Zulage Damm- Böschungen;1,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+01030004;Zulage Abseilen;1,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+01040001;Zulage zum Wurzelstock fräsen;2,0;h;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+02010001;Ast absägen ... Freitext ...*Arb.höhe bis 5 m Ast-d 10-25 cm*Verw. Wahl AN;1,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+02010002;Ast absägen ... Freitext ...*Arb.höhe 5-10 m Ast-d 10-25 cm*Verw. Wahl AN;2,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+02010003;Ast absägen ... Freitext ...*Arb.höhe 10-20 m ... Freitext ...*Verw. Wahl AN;2,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+02010004;Ast absägen ... Freitext ...*Arb.höhe ü.20-25m Ast-DU ü. 10-25cm;2,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+02010005;Ast absägen ... Freitext ...*... Freitext ... Ast-DU ü. 10-25cm;2,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+02010006;Kronenpflege durchführen ... Freitext ...*Baumhöhe 5-10 m KD 5-10 m*... Freitext ...;1,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+02010007;Kronenpflege durchführen ... Freitext ...*Baumhöhe 10-15 m KD 10-15 m*... Freitext ...;2,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+02010008;Kronenpflege durchführen ... Freitext ...*Baumhöhe 15-20 m KD über15 m*... Freitext ...;7,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+02010009;Kronenpflege durchführen ... Freitext ...*Baumhöhe  20-25 m KD ü.15 m*... Freitext ...;25,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+02010010;Kronenpflege durchführen ... Freitext ...*Baumhöhe  25-30 m KD ü.15 m*... Freitext ...;30,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+02010011;Kronenpflege durchführen ... Freitext ...*Baumhöhe  ü. 30 m KD ü.15 m*... Freitext ...;11,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+02010012;Lichtraumprofilschnitt durchführen 4,5m ü. Fahrbahn*Schnittg. Verw.AN;3,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+02010013;Lichtraumprofilschnitt durchführen ... Freitext ...*Schnittg. Verw.AN;3,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+02010014;Lichtraumprofilschnitt durchführen 2,5m ü.Geh/Radweg*0,25 m Abstand Schnittg. Verw.AN;3,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+02010015;Kronenteil 2m einkürzen u. Kr.-pfl. Baumhöhe 10-15 m*Kronen-d 10-15 m Krone anpassen*Auf Astring schn. ... Freitext ...;1,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+02010016;Kronenteil 2m einkürzen u. Kr.-pfl. Baumhöhe 15-20 m*Kronen-d ü. 15 m Krone anpassen*Auf Astring schn. ... Freitext ...;2,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+02010017;Kronenteil 2m einkürzen u. Kr.-pfl. Baumhöhe  20-25 m*Kronen-d ü.15 m Krone anpassen*Auf Astring schn. ... Freitext ...;2,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+02010018;Kronenteil 2m einkürzen u. Kr.-pfl. Baumhöhe  25-30 m*Kronen-d ü. 15 m Krone anpassen*Auf Astring schn. ... Freitext ...;2,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+02010019;Kronenteil 2m einkürzen u. Kr.-pfl. Baumhöhe  ü.30 m*Kronen-d ü. 15 m Krone anpassen*Auf Astring schn. ... Freitext ...;2,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+02010020;Kronenteil 2-4m einkür. u. Kr.-pfl. ... Freitext ...*... Freitext ... Baumhöhe 10-15 m*Kronen-d 10-15 m Krone anpassen*Auf Astring schn. ... Freitext ...;1,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+02010021;Kronenteil 2-4m einkür. u. Kr.-pfl. Baumhöhe 15-20 m*Kronen-d ü.15 m Krone anpassen*Auf Astring schn. ... Freitext ...;2,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+02010022;Kronenteil 2-4m einkür. u. Kr.-pfl. ... Freitext ...*... Freitext ... Baumhöhe 20-25 m*Kronen-d ü.15 m Krone anpassen*Auf Astring schn. ... Freitext ...;2,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+02010023;Kronenteil 2-4m einkür. u. Kr.-pfl ... Freitext ...*... Freitext ... Baumhöhe 25-30 m*Kronen-d ü. 15 m Krone anpassen*Auf Astring schn. ... Freitext ...;2,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+02010024;Kronenteil 2-4m einkür. u. Kr.-pfl. ... Freitext ...*... Freitext ... Baumhöhe ü.30 m*Kronen-d 15 m Krone anpassen*Auf Astring schn. ... Freitext ...;2,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+02010025;Kronenteil 4m einkür. u. Kr.-pfl. ... Freitext ...*... Freitext ... Baumhöhe 10-15 m*KD ü. 15 m Krone anpassen.*Auf Astring schn. ... Freitext ...;1,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+02010026;Kronenteil 4m einkür. u. Kr.-pfl. ... Freitext ...*... Freitext ... Baumhöhe 15-20 m*KD ü. 15 m Krone anpassen.*Auf Astring schn. ... Freitext ...;2,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+02010027;Kronenteil 4m einkür. u. Kr.-pfl. ... Freitext ...*... Freitext ... Baumhöhe 20-25 m*KD ü. 15 m Krone anpassen.*Auf Astring schn. ... Freitext ...;2,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+02010028;Kronenteil 4m einkür. u. Kr.-pfl. ... Freitext ...*... Freitext ... Baumhöhe 25-30 m*KD ü. 15 m Krone anpassen.*Auf Astring schn. ... Freitext ...;2,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+02010029;Kronenteil 4m einkür. u. Kr.-pfl. ... Freitext ...*... Freitext ... Baumhöhe ü. 30 m*KD ü. 15 m Krone anpassen.*Auf Astring schn. ... Freitext ...;2,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+02010030;Krone einkürzen u. Kronenpflege ... Freitext ...*... Freitext ... Baumhöhe 10-15 m*KD 10-15 m allseitig ca. 2 m*Auf Astring schn. ... Freitext ...;1,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+02010031;Krone einkürzen u. Kronenpflege ... Freitext ...*... Freitext ... Baumhöhe 15-20 m*KD ü. 15 m allseitig ca. 2 m*Auf Astring schn. ... Freitext ...;2,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+02010032;Krone einkürzen u. Kronenpflege ... Freitext ...*... Freitext ... Baumhöhe  20-25 m*Kronen-d ü. 15 m allseitig ca. 2 m*Auf Astring schn. ... Freitext ...;2,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+02010033;Krone einkürzen u. Kronenpflege ... Freitext ...*... Freitext ... Baumhöhe  25-30 m*Kronen-d ü. 15 m allseitig ca. 2 m*Auf Astring schn. ... Freitext ...;2,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+02010034;Krone einkürzen u. Kronenpflege ... Freitext ...*... Freitext ... Baumhöhe  ü.30 m*Kronen-d ü. 15 m allseitig ca. 2 m*Auf Astring schn. ... Freitext ...;2,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+02010035;Krone einkürzen u. Kronenpflege ... Freitext ...*... Freitext ... Baumhöhe 10-15 m*Kronen-d 10-15 m allseitig 2- 4 m*Auf Astring schn. ... Freitext ...;1,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+02010036;Krone einkürzen u. Kronenpflege ... Freitext ...*... Freitext ... Baumhöhe 15-20 m*Kronen-d ü. 15 m allseitig 2-4 m*Auf Astring schn. ... Freitext ...;2,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+02010037;Krone einkürzen u. Kronenpflege ... Freitext ...*... Freitext ... Baumhöhe 20-25 m*Kronen-d ü. 15 m allseitig 2-4 m*Auf Astring schn. ... Freitext ...;2,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+02010038;Krone einkürzen u. Kronenpflege ... Freitext ...*... Freitext ... Baumhöhe  25-30 m*Kronen-d ü. 15 m allseitig 2- 4 m*Auf Astring schn. ... Freitext ...;2,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+02010039;Krone einkürzen u. Kronenpflege ... Freitext ...*... Freitext ... Baumhöhe ü. 30 m*KD ü. 15 m allseitig 2-4 m*Auf Astring schn. ... Freitext ...;2,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+02010040;Krone einkürzen u. Kronenpflege ... Freitext ...*... Freitext ... Baumhöhe 10-15 m*KD 10-15 m allseitig ü. 4 m.*Auf Astring schn. ... Freitext ...;1,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+02010041;Krone einkürzen u. Kronenpflege ... Freitext ...*... Freitext ... Baumhöhe 15-20 m*KD ü. 15 m allseitig ü. 4 m.*Auf Astring schn. ... Freitext ...;2,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+02010042;Krone einkürzen u. Kronenpflege ... Freitext ...*... Freitext ... Baumhöhe 20-25 m*KD ü. 15 m allseitig ü. 4 m*Auf Astring schn. ... Freitext ...;2,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+02010043;Krone einkürzen u. Kronenpflege ... Freitext ...*... Freitext ... Baumhöhe 25-30 m*KD ü. 15 m allseitig ü. 4 m*Auf Astring schn. ... Freitext ...;2,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+02010044;Krone einkürzen u. Kronenpflege ... Freitext ...*... Freitext ... Baumhöhe ü. 30 m*KD ü. 15 m allseitig ü. 4 m*Auf Astring schn. ... Freitext ...;2,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+02010045;Eingekürzte Krone nachbehandeln ... Freitext ...*... Freitext ... Baumhöhe ü.10-15m*Kronen-DU ü10-15m;1,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+02010046;Eingekürzte Krone nachbehandeln ... Freitext ...*... Freitext ... Baumhöhe ü.15-20m*Kronen-DU ü. 15 m;1,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+02010047;Eingekürzte Krone nachbehandeln ... Freitext ...*... Freitext ... Baumhöhe ü. 20 m*Kronen-DU ü. 15 m;1,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+02010048;Kopfbaum schneiden ... Freitext ...*... Freitext ... ... Freitext ...*Schnittg. Verw.AN;2,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+02010049;Kopfbaum schneiden ... Freitext ...*... Freitext ... ... Freitext ...*Schnittg. Verw.AN;2,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+02010050;Totholz am Baum entfernen 10m neben Straße*Baumhöhe 5-10 m KD 5-10 m*Schnittgut AN;2,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+02010051;Totholz am Baum entfernen 10m neben Straße*Baumhöhe 10-15 m KD 10-15 m*Schnittgut AN;5,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+02010052;Totholz am Baum entfernen 10m neben Straße*Baumhöhe 15-20 m KD 10-15 m*Schnittgut AN;15,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+02010053;Totholz am Baum entfernen 10m neben Straße*Baumhöhe 20-25 m KD ü 15 m*Schnittgut AN;80,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+02010054;Totholz am Baum entfernen 10m neben Straße*Baumhöhe 25-30 m KD ü 15 m*Schnittgut AN;90,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+02010055;Totholz am Baum entfernen 10m neben Straße*Baumhöhe ü. 30 m KD ü 15 m*Schnittgut AN;10,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+02020001;Austriebe eines Baumes entfernen ... Freitext ...*Stamm und Stock StU bis 1,00 m*... Freitext ... Schnittg. Verw.AN;20,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+02020002;Austriebe eines Baumes entfernen ... Freitext ...*Stamm und Stock ... Freitext ...*... Freitext ... Schnittg. Verw.AN;20,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+02020003;Baumfremden Bewuchs Stamm bis AH 5m;2,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+02020004;Baumfremden Bewuchs Stamm AH 5-10 m;5,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+02020005;Baumfremden Bewuchs Krone BH< 20 m;5,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+02020006;Baumfremden Bewuchs Krone BH> 20 m;5,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+02020007;Kronensicherungsschnitt durchführen Habitatserhaltung Baumhöhe 15-25 m*Kronen-DU ü. 15 m auf Resthöhe 8-12m schneiden;3,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+02020008;Kronensicherungsschnitt durchführen Habitatserhaltung Baumhöhe 25-35 m*Kronen-DU ü. 15 m auf Resthöhe 8-12m schneiden;5,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+02020009;Baum auf Resthöhe Stamm absetzen Habitatserhaltung Baumhöhe 15-25 m*Kronen-DU ü. 15 m auf Resthöhe 1,5-6 m schneiden;5,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+02020010;Baum auf Resthöhe Stamm absetzen Habitatserhaltung Baumhöhe 15-25 m*Kronen-DU ü. 15 m auf Resthöhe 1,5-6 m schneiden;5,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+02020011;Gehölzbestand schneiden Unterwuchs*Best. über 3-10 St/m2, Beseitigung v. Behinderungen, Mat. Verw. AN;250,0;m2;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+03000001;Bäume fällen ohne Roden DU über 0,1-0,3 m*... Freitext ...;1,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+03000002;Bäume fällen ohne Roden DU über 0,3-0,5 m*... Freitext ...;1,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+03000003;Bäume fällen ohne Roden DU über 0,5-0,75m*... Freitext ...;1,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+03010001;Bäume fällen ohne Roden DU über 0,1-0,3 m*Holz Verwert. AN S.Abr.Verwert. AN;1,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+03010002;Bäume fällen ohne Roden DU über 0,3-0,5 m*Holz Verwert. AN S.Abr.Verwert. AN;1,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+03010003;Bäume fällen ohne Roden DU über 0,5-0,75m*Holz Verwert. AN S.Abr.Verwert. AN;2,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+03010004;Bäume fällen ohne Roden DU über 0,75-1 m*Holz Verwert. AN S.Abr.Verwert. AN;2,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+03010005;Bäume fällen ohne Roden ... Freitext ...*Holz Verwert. AN S.Abr.Verwert. AN;2,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+03010006;Bäume fällen mit Fräsen DU über 0,1-0,3 m*absetzen ... Freitext ...*... Freitext ... Holz Verwert. AN*S.Abr.Verwert. AN Fräsgut Verw. AN;2,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+03010007;Bäume fällen mit Fräsen DU über 0,3-0,5 m*absetzen ... Freitext ...*... Freitext ... Holz Verwert. AN*S.Abr.Verwert. AN Fräsgut Verw. AN;7,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+03010008;Bäume fällen mit Fräsen DU über 0,5-0,75m*absetzen ... Freitext ...*... Freitext ... Holz Verwert. AN*S.Abr.Verwert. AN Fräsgut Verw. AN;45,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+03010009;Bäume fällen mit Fräsen DU über 0,75-1 m*absetzen ... Freitext ...*... Freitext ... Holz Verwert. AN*S.Abr.Verwert. AN Fräsgut Verw. AN;55,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+03010010;Bäume fällen mit Fräsen ... Freitext ...*absetzen ... Freitext ...*... Freitext ... Holz Verwert. AN*S.Abr.Verwert. AN Fräsgut Verw. AN;3,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+03010011;Bäume fällen mit Fräsen ... Freitext ...*absetzen ... Freitext ...*... Freitext ... Holz Verwert. AN*S.Abr.Verwert. AN Fräsgut Verw. AN;1,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+03020001;Wurzelstöcke ausfräsen DU über 0,1-0,3 m*... Freitext ... ... Freitext ...*... Freitext ...;1,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+03020002;Wurzelstöcke ausfräsen DU über 0,3-0,5 m*... Freitext ... ... Freitext ...*... Freitext ...;1,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+03020003;Wurzelstöcke ausfräsen DU über 0,5-0,75m*... Freitext ... ... Freitext ...*... Freitext ...;3,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+03020004;Wurzelstöcke ausfräsen DU über 0,75-1 m*... Freitext ... ... Freitext ...*... Freitext ...;5,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+03020005;Wurzelstöcke ausfräsen ... Freitext ...*... Freitext ... ... Freitext ...*... Freitext ...;5,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+03020006;Wurzelstöcke ausfräsen ... Freitext ...*... Freitext ... ... Freitext ...*... Freitext ...;5,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+03030001;Baum-Aufarbeitung Windwurf;1,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+03030002;Baum-Aufarbeitung Windwurf > 0,5 m;1,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+03030003;Baumaufarbeitung Windbruch;2,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+03030004;Baumaufarbeitung Windbruch > 0,5 m;2,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+03040001;Wurzelentfernung n. Wind;1,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+03040002;Wurzelbeseitigung n. Wind;1,0;St;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+04000001;Nicht gefährl. Abfall  entsorgen ... Freitext ...*Entsorgung AN Gebühr einrechn.;2,0;t;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83
+04000002;Nicht gefährl. Abfall entsorgen ... Freitext ...*Entsorgung AN Gebühr einrechn.;5,0;m3;gaeb-flat;Leistungsverzeichnis/GAEB-Datei E-2026-0072.D83

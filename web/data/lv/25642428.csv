@@ -1,0 +1,22 @@
+﻿Pos.;Leistung;Menge;Einheit;Quelle;Datei
+00000001;Gehölzbestand verjüngen ... Freitext ...*... Freitext ... Überwuchs 2,00 m*über 10-20 Jahre über 2 St/m2*100v.H. a.d.Stock ... Freitext ...*... Freitext ...;2000,0;m2;gaeb-flat;Leistungsverzeichnis/02-45-26-0083.D83
+00000002;Gehölzbestand verjüngen ... Freitext ...*... Freitext ... Überwuchs 2,00 m*über 10-20 Jahre über 2 St/m2*100v.H. a.d.Stock ... Freitext ...*... Freitext ...;800,0;m2;gaeb-flat;Leistungsverzeichnis/02-45-26-0083.D83
+00000003;Gehölzbestand verjüngen ... Freitext ...*... Freitext ... Überwuchs 2,00 m*über 10-20 Jahre über 2 St/m2*100v.H. a.d.Stock ... Freitext ...*... Freitext ...;400,0;m;gaeb-flat;Leistungsverzeichnis/02-45-26-0083.D83
+00000004;Baum im Bestand fällen ... Freitext ...*DU über 0,1-0,3 m ... Freitext ...*... Freitext ...;2,0;St;gaeb-flat;Leistungsverzeichnis/02-45-26-0083.D83
+00000005;Baum im Bestand fällen ... Freitext ...*DU über 0,3-0,5 m ... Freitext ...*... Freitext ...;2,0;St;gaeb-flat;Leistungsverzeichnis/02-45-26-0083.D83
+00000006;Baum im Bestand fällen ... Freitext ...*DU über 0,1-0,3 m ... Freitext ...*... Freitext ...;3,0;St;gaeb-flat;Leistungsverzeichnis/02-45-26-0083.D83
+00000007;Baum im Bestand fällen ... Freitext ...*DU über 0,3-0,5 m ... Freitext ...*... Freitext ...;3,0;St;gaeb-flat;Leistungsverzeichnis/02-45-26-0083.D83
+00000008;Lichtraumprofil Fahrbahn/Anlieger;200,0;m;gaeb-flat;Leistungsverzeichnis/02-45-26-0083.D83
+00010001;Gehölzbestand verjüngen ... Freitext ...*... Freitext ... Überwuchs 2,00 m*über 10-20 Jahre über 2 St/m2*100v.H. a.d.Stock ... Freitext ...*... Freitext ...;10000,0;m2;gaeb-flat;Leistungsverzeichnis/02-45-26-0083.D83
+00010002;Gehölzbestand verjüngen ... Freitext ...*... Freitext ... Überwuchs 2,00 m*über 10-20 Jahre über 2 St/m2*100v.H. a.d.Stock ... Freitext ...*... Freitext ...;10000,0;m2;gaeb-flat;Leistungsverzeichnis/02-45-26-0083.D83
+00010003;Gehölzbestand verjüngen ... Freitext ...*... Freitext ... Überwuchs 2,00 m*über 10-20 Jahre über 2 St/m2*100v.H. a.d.Stock ... Freitext ...*... Freitext ...;2000,0;m;gaeb-flat;Leistungsverzeichnis/02-45-26-0083.D83
+00010004;Baum im Bestand fällen ... Freitext ...*DU über 0,1-0,3 m ... Freitext ...*... Freitext ...;3,0;St;gaeb-flat;Leistungsverzeichnis/02-45-26-0083.D83
+00010005;Baum im Bestand fällen ... Freitext ...*DU über 0,3-0,5 m ... Freitext ...*... Freitext ...;3,0;St;gaeb-flat;Leistungsverzeichnis/02-45-26-0083.D83
+00010006;Baum im Bestand fällen ... Freitext ...*DU über 0,1-0,3 m ... Freitext ...*... Freitext ...;3,0;St;gaeb-flat;Leistungsverzeichnis/02-45-26-0083.D83
+00010007;Baum im Bestand fällen ... Freitext ...*DU über 0,3-0,5 m ... Freitext ...*... Freitext ...;3,0;St;gaeb-flat;Leistungsverzeichnis/02-45-26-0083.D83
+00010008;Lichtraumprofil Fahrbahn/Anlieger;600,0;m;gaeb-flat;Leistungsverzeichnis/02-45-26-0083.D83
+01000001;Ausfallst.Baustellenräumung;5,0;h;gaeb-flat;Leistungsverzeichnis/02-45-26-0083.D83
+01000002;Seilklettertechnik (SKT);30,0;h;gaeb-flat;Leistungsverzeichnis/02-45-26-0083.D83
+01000003;Gebühren, Ausgleichzahlungen;1,0;Psch;gaeb-flat;Leistungsverzeichnis/02-45-26-0083.D83
+01000004;Mehraufwand vorh. Baustellenbereich;1,0;Psch;gaeb-flat;Leistungsverzeichnis/02-45-26-0083.D83
+02000001;Verk.sich. kürzerer Dauer durchf. ... Freitext ...*über 4 bis 8 Std. ... Freitext ...*Anordnung n. Unt. ... Freitext ...;3,0;St;gaeb-flat;Leistungsverzeichnis/02-45-26-0083.D83

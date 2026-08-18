@@ -362,3 +362,54 @@ html { scroll-snap-type: y proximity; scroll-behavior: smooth; }
   html { scroll-snap-type: none; }
   .ds-slide { min-height: 0; }
 }
+
+/* ═══ RHYTHMUS ═══════════════════════════════════════════════════════════════════
+   Fünfmal derselbe helle Grund, derselbe linksbündige Textblock, dieselbe Breite —
+   „optisch langweilig", und zwar zu Recht. Der Wechsel des GRUNDES ist der billigste
+   und stärkste Weg, aus fünf Abschnitten ein Deck zu machen.
+
+   Der dunkle Abschnitt trägt bewusst das, was wir über die Firma wissen: der Wechsel
+   liest sich dort als Kapitelmarke, nicht als Werbefläche. Als AUFMACHER wäre derselbe
+   Block eine Anzeige gewesen — deshalb steht er in der Mitte, nicht am Anfang. */
+.ds-hell   { background: var(--surface); }
+.ds-dunkel { background: var(--ink-900); color: #fff; border-bottom-color: #24352F; }
+
+.ds-dunkel .lg-eyebrow { color: #7FA697; }
+.ds-dunkel .lg-grenze, .ds-dunkel .lg-grenzen p, .ds-dunkel .lg-k,
+.ds-dunkel .lg-neben { color: #9FB6AE; }
+.ds-dunkel .lg-leiste { border-color: #24352F; }
+.ds-dunkel .lg-balken { background: #24352F; }
+.ds-dunkel .lg-befund { background: #14302A; color: #A7E8CE; }
+.ds-dunkel .lg-folge { color: #F0B860; border-left-color: #F0B860; }
+
+/* Die grosse Zahl: der Blickfang, den die Seite nicht hatte. Sie steht NEBEN dem Satz,
+   nicht statt seiner — eine Zahl allein sagt nichts, ein Satz allein zeigt nichts. */
+.ds-kopfzeile { display: flex; gap: var(--s5); align-items: baseline; margin-bottom: var(--s4); }
+.ds-zahl {
+  font-size: clamp(56px, 9vw, 104px); font-weight: 700; line-height: .82;
+  letter-spacing: -.05em; font-variant-numeric: tabular-nums; color: var(--signal-deep);
+  flex: 0 0 auto;
+}
+.ds-kopfzeile .lg-kt-gross { margin: 0; }
+
+/* Der Trichter trägt seine Aussage jetzt in der BREITE. Vorher standen die Stufen als
+   gleich grosse Kästchen nebeneinander und sahen aus wie eine Aufzählung. */
+.lg-kette { display: block; }
+.lg-glied { display: block; padding: 0 0 var(--s4); border: 0; }
+.lg-glied-bar {
+  background: var(--ink-900); color: #fff; border-radius: 3px;
+  padding: var(--s2) var(--s3); min-width: 88px;
+  display: flex; align-items: baseline;
+}
+.lg-glied .lg-n { font-size: 20px; font-weight: 700; letter-spacing: -.01em; }
+.lg-glied .lg-lb { display: block; margin-top: var(--s2); font-size: var(--t-body); }
+.lg-glied .lg-hw { display: block; margin-top: 2px; font-size: var(--t-meta); color: var(--ink-400); }
+.lg-offen .lg-glied-bar { background: var(--signal-deep); }
+
+/* Auf dem dunklen Kapitel gehören die Zahlen ihnen. Vorher standen 99 % und 507 dort in
+   derselben Grösse wie überall — auf dem einen Abschnitt, der ihnen gewidmet ist, ist das
+   verschenkt. Nur DORT gross: auf hellem Grund würde dieselbe Grösse die Chancenliste
+   erschlagen, und die ist der Grund für ein Konto. */
+.ds-dunkel .lg-leiste { gap: var(--s6); padding: var(--s5) 0; }
+.ds-dunkel .lg-v { font-size: clamp(44px, 6vw, 72px); letter-spacing: -.04em; }
+.ds-dunkel .lg-k { font-size: var(--t-body); margin-top: var(--s3); }
