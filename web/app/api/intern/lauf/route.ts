@@ -78,8 +78,14 @@ function arbeiterStand() {
     if (pid) { process.kill(pid, 0); laeuft = true; }
   } catch { laeuft = false; }
   try {
+    // NUR die eigenen Meldungen. Der Arbeiter leitet die Ausgaben der aufgerufenen
+    // Schritte ins selbe Log, und `index-docs` schuettet dort seitenweise
+    // pdfminer-Gemecker hinein ("Ignoring wrong pointing object 39 0"). Gemessen am
+    // 2026-08-18: 13 von 189 Zeilen (6,9 %) waren eigene Meldungen — die letzten sechs
+    // Zeilen zeigten damit meist gar nichts ueber den Arbeiter, sondern ueber ein PDF.
+    // Der Zeitstempel am Zeilenanfang ist das Merkmal, das `sag()` im Skript setzt.
     letzte = fs.readFileSync(path.join(LOGS, "dokumente-arbeiter.log"), "utf-8")
-      .trim().split("\n").slice(-6);
+      .split("\n").filter((z) => /^\[\d{2}\.\d{2}\. \d{2}:\d{2}\]/.test(z)).slice(-6);
   } catch { letzte = []; }
   return { laeuft, letzte };
 }
