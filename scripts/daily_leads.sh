@@ -329,8 +329,10 @@ mit_grenze() {
   # In der Beschaffungsphase erst fragen, ob der gemeinsame Topf noch etwas hergibt.
   # VOR dem Start, nicht waehrenddessen: ein mittendrin abgeschnittener Abruf hinterlaesst
   # halb geladene Pakete.
-  if [ "${_ABRUF_PHASE:-0}" = "1" ] && ! abruf_erlaubt "${_SCHRITT_NAME:-Abruf}"; then
-    return 0
+  if [ "${_ABRUF_PHASE:-0}" = "1" ]; then
+    # Beschaffung abgeschaltet? Dann gar nicht erst starten (s. `_ABRUF_AUS` weiter unten).
+    [ "${_ABRUF_AUS:-0}" = "1" ] && return 0
+    abruf_erlaubt "${_SCHRITT_NAME:-Abruf}" || return 0
   fi
   "$@" &
   local kind=$!
@@ -671,7 +673,38 @@ echo "  Gold ok."
 # teilt sich EINEN Topf: was nach Abzug von ERNTE_RESERVE uebrig bleibt. Die Marke statt
 # elf einzelner Wachen, damit ein neuer Abrufer nicht vergessen werden kann — er liegt
 # zwischen den Marken und ist damit automatisch gedeckelt.
-_ABRUF_PHASE=1
+# ⛔ BESCHAFFUNG IM TAGESLAUF: STANDARDMAESSIG AUS (seit 2026-08-18).
+#
+# Gemessen ueber zehn protokollierte Laeufe: 4 von 10 liefen durch, 6 endeten mit Code 75 —
+# das ist KEIN Absturz, sondern die selbstgesetzte Acht-Stunden-Grenze. Und wohin die Zeit
+# geht, ist eindeutig (Durchschnitt ueber die Laeufe vom 14. bis 18.08.):
+#
+#   Healy-Hudson-Unterlagen        136 min   (Spitze 719 min)
+#   Anforderungs-Signale            48 min
+#   subreport-Dateilisten           39 min
+#   vergabeportal.at                35 min
+#   NetServer                       34 min
+#   Staatsanzeiger                  31 min
+#   Dubletten-Firewall              29 min
+#
+# Rund fuenf der acht Stunden gehen fuer das HOLEN von Unterlagen drauf — also fuer die
+# Arbeit, fuer die es seit dem 2026-08-18 einen eigenen Dauerarbeiter gibt
+# (`scripts/dokumente_arbeiter.sh`, laeuft rund um die Uhr und kennt dieselben zwoelf
+# Abrufer ueber `scripts/rueckstau.py`). Beides parallel zu betreiben heisst: dieselben
+# Portale doppelt behelligen und den Tageslauf an seiner eigenen Grenze sterben lassen.
+#
+# Der Tageslauf macht ab jetzt, was nur er kann: einlesen, entdoppeln, Gold bauen,
+# exportieren, veroeffentlichen, messen. Das Holen laeuft nebenher und ohne Uhr.
+#
+# Wieder einschalten (etwa fuer einen Nachhol-Lauf von Hand):
+#     GOVISOR_TAGESLAUF_HOLT_UNTERLAGEN=1 scripts/daily_leads.sh
+_ABRUF_PHASE=${GOVISOR_TAGESLAUF_HOLT_UNTERLAGEN:-0}
+if [ "$_ABRUF_PHASE" != "1" ]; then
+  echo ""
+  echo "⏭ Unterlagen-Abruf uebersprungen — das macht der Dauerarbeiter"
+  echo "   (scripts/dokumente_arbeiter.sh, launchctl list | grep govisor.dokumente)."
+  echo "   Einschalten: GOVISOR_TAGESLAUF_HOLT_UNTERLAGEN=1"
+fi
 
   # NetServer-UNTERLAGEN. Die zweitgroesste Dokumentenluecke: 1.055 offene Leads auf
   # Portalen, deren Bekanntmachungen oben schon hereinkommen. Der Weg fuehrt ueber

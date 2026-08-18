@@ -94,7 +94,28 @@ while true; do
   # Ein Abrufer je Runde, nicht alle gleichzeitig: die Portale sollen uns weiter
   # bedienen. `rueckstau.py` bringt Höflichkeitspausen und Deckel schon mit.
   sag "Stufe 2: Unterlagen holen"
-  for c in evergabe_online cosinex subreport netserver ausschreibungsblatt; do
+  # ALLE ZWOELF ABRUFER, aber drei je Runde im Wechsel.
+  #
+  # Seit dem 2026-08-18 holt der Tageslauf keine Unterlagen mehr (s. daily_leads.sh,
+  # `_ABRUF_AUS`): gemessen gingen dort rund fuenf der acht Stunden dafuer drauf, und
+  # 6 von 10 Laeufen endeten deshalb an ihrer eigenen Zeitgrenze. Damit liegt die
+  # Beschaffung vollstaendig hier — also muessen auch alle Abrufer hier vorkommen, nicht
+  # nur die fuenf vom ersten Entwurf.
+  #
+  # ⚠ NICHT ALLE ZWOELF JE RUNDE. Bei einer Stunde je Abrufer waere eine Runde zwoelf
+  # Stunden lang, und dazwischen wird der Tageslauf-Lock nicht geprueft. Drei je Runde,
+  # rotierend ueber einen Zaehler: nach vier Runden war jeder einmal dran, und zwischen
+  # den Runden ist der Weg frei fuer alles andere.
+  ALLE=(evergabe_online cosinex subreport netserver ausschreibungsblatt healyhudson
+        staatsanzeiger vergabeportal_at aumass bimedien evergabe simap_docs)
+  # Der Zaehler lebt in einer Datei, nicht in einer Variablen: sonst faengt der Arbeiter
+  # nach jedem Neustart wieder beim selben Abrufer an — und die hinteren kaemen nie dran.
+  ZAEHLER="$ROOT/data/.abrufer_runde"
+  RUNDE=$(( $(cat "$ZAEHLER" 2>/dev/null || echo 0) + 1 ))
+  echo "$RUNDE" > "$ZAEHLER" 2>/dev/null || true
+  START=$(( (RUNDE * 3) % ${#ALLE[@]} ))
+  for i in 0 1 2; do
+    c=${ALLE[$(( (START + i) % ${#ALLE[@]} ))]}
     [ -e "$LOCK" ] && break
     # ⚠ KEIN `timeout` — das ist GNU-coreutils und auf macOS nicht vorhanden (Exit 127).
     # Braucht es auch nicht: `rueckstau.py` bringt mit --stunden seine eigene Grenze mit.
