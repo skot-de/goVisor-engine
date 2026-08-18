@@ -104,10 +104,23 @@ while true; do
   # Abbruch nur die angefangene Runde kostet. `analyze_docs` ist idempotent: was schon
   # in doc-analysis.json steht, wird übersprungen.
   sag "Stufe 3: LLM-Analyse (neueste zuerst)"
-  LIMIT=40 $PY scripts/analyze_docs.py >>"$LOG" 2>&1 && sag "  Runde fertig" || sag "  ⚠ Analyse-Runde abgebrochen"
+  # RUNDENGROESSE UND PARALLELITAET, am 2026-08-18 angehoben.
+  #
+  # Vorher: 40 Vorgaenge nacheinander, dann zehn Minuten Pause — rund 200 am Tag. Bei 4.394
+  # Vorgaengen mit Volltext waeren das drei Wochen, und gemessen hatten 2 % der offenen Leads
+  # eine Analyse. Sven dazu: „mach so viel wie moeglich parallel."
+  #
+  # Der Lauf ist fast nur Warten auf das Modell, also kostet Parallelitaet kaum Rechenzeit.
+  # Die Grenze setzt die Gegenstelle; `govisor/llm.py` faengt 429 mit Backoff und
+  # Key-Rotation ab. LIMIT bleibt endlich, damit zwischen den Runden der Tageslauf-Lock
+  # wieder geprueft wird — eine Runde ist der Preis eines Abbruchs, nicht der ganze Lauf.
+  LIMIT=300 PARALLEL=10 $PY scripts/analyze_docs.py >>"$LOG" 2>&1 && sag "  Runde fertig" || sag "  ⚠ Analyse-Runde abgebrochen"
 
   # Ausgaben sichtbar machen, ohne ins Anbieter-Dashboard zu müssen.
   $PY scripts/dokumente_stand.py >>"$LOG" 2>&1 || true
-  sag "Runde beendet — 10 min Pause"
-  sleep 600
+  # Die Pause war die zweite Bremse: zehn Minuten Nichtstun nach jeder Runde. Sie sollte die
+  # Portale schonen — die kommen aber in Stufe 2 dran, nicht hier. Zwei Minuten reichen, um
+  # zwischen den Runden Luft zu lassen und den Lock erneut zu pruefen.
+  sag "Runde beendet — 2 min Pause"
+  sleep 120
 done

@@ -18,7 +18,9 @@ import json
 import os
 import re
 import sys
+import threading
 from collections import defaultdict
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
 import duckdb
@@ -32,6 +34,18 @@ SRC = ROOT / "data" / "docs" / "DE" / "doc_text.parquet"
 OUT = ROOT / "web" / "data" / "doc-analysis.json"
 MODEL = os.environ.get("OR_MODEL", "google/gemini-2.5-flash")
 LIMIT = int(os.environ.get("LIMIT", "0"))
+# PARALLELITAET. Der Lauf ist zu ueber 90 % Warten auf die Antwort des Modells; nacheinander
+# gerechnet schafft er rund 200 Vorgaenge am Tag, und bei 4.394 Vorgaengen mit Volltext waeren
+# das drei Wochen. Gemessen am 2026-08-18: 2 % der offenen Leads hatten eine Analyse.
+#
+# Die Obergrenze ist nicht die Maschine, sondern die Gegenstelle. `govisor/llm.py` faengt 429
+# mit Backoff und Key-Rotation ab, deshalb ist eine hoehere Zahl hier kein Risiko fuer die
+# Richtigkeit — nur fuer die Hoeflichkeit. 8 ist die Vorgabe; wer mehr will, setzt PARALLEL.
+PARALLEL = max(1, int(os.environ.get("PARALLEL", "8")))
+# Wie oft das Ergebnis auf die Platte geht. Nach JEDEM Vorgang zu schreiben war bei 272
+# Analysen billig und waere bei 4.000 eine Datei, die dauernd komplett neu geschrieben wird.
+# Alle 10 heisst: im schlimmsten Fall gehen 10 Analysen verloren, nicht 4.000.
+SICHERN_JE = int(os.environ.get("SICHERN_JE", "10"))
 TOKEN_CAP = 200_000                # §6.1 Deckel für die priorisierte Extraktion
 CHARS_PER_TOKEN = 4                # grobe Umrechnung Zeichen→Tokens
 
@@ -234,20 +248,50 @@ def main() -> int:
     todo = [(nid, files) for nid, files in per_notice.items() if nid not in out]
     if LIMIT:
         todo = todo[:LIMIT]
-    print(f"Zu analysieren: {len(todo)} (von {len(per_notice)}) · Modell {MODEL}", flush=True)
+    print(f"Zu analysieren: {len(todo)} (von {len(per_notice)}) · Modell {MODEL} · {PARALLEL} parallel", flush=True)
 
-    for i, (nid, files) in enumerate(todo, 1):
-        try:
-            structured = structured_for_notice(nid)        # Parser-Schiene (§6.2) über die Roh-ZIPs
-            res = analyze_notice(files, structured=structured)
-        except AllKeysExhausted as e:
-            print(f"  Abbruch: {e} — bisher {len(out)} Analysen gesichert.", flush=True)
-            break
-        out[nid] = res
-        print(f"  [{i}/{len(todo)}] {nid}  {res['ampel']}  items={len(res['checklist'])} "
-              f"({len(res['parsed_files'])} geparst) verworfen={res['rejected_items']} "
-              f"~{res['token_cost']}tok", flush=True)
+    # ── PARALLEL, aber mit einem Schreiber ───────────────────────────────────────────
+    # Die Arbeit je Vorgang ist unabhaengig; nur das Ergebnis-Dictionary und die Datei sind
+    # gemeinsam. Deshalb rechnen N Faeden, und geschrieben wird unter einem Lock im Haupt-
+    # faden, wenn ein Ergebnis eintrifft. Zwei Prozesse gleichzeitig waeren etwas anderes und
+    # blieben verboten — der Arbeiter prueft das (scripts/dokumente_arbeiter.sh).
+    schreib_lock = threading.Lock()
+    fertig = 0
+    erschoepft = False
+
+    def arbeite(auftrag):
+        nid, files = auftrag
+        structured = structured_for_notice(nid)            # Parser-Schiene (§6.2) über die Roh-ZIPs
+        return nid, analyze_notice(files, structured=structured)
+
+    def sichern():
         OUT.write_text(json.dumps(out, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+
+    with ThreadPoolExecutor(max_workers=PARALLEL) as pool:
+        laeuft = {pool.submit(arbeite, t): t[0] for t in todo}
+        for fut in as_completed(laeuft):
+            nid = laeuft[fut]
+            try:
+                nid, res = fut.result()
+            except AllKeysExhausted as e:
+                if not erschoepft:
+                    erschoepft = True
+                    print(f"  Abbruch: {e} — laufende Vorgaenge werden noch fertig.", flush=True)
+                continue
+            except Exception as ex:                        # noqa: BLE001
+                # Ein kaputtes Archiv darf den Lauf nicht beenden. Gezaehlt, benannt, weiter.
+                print(f"  ✖ {nid}: {type(ex).__name__}: {ex}", flush=True)
+                continue
+            with schreib_lock:
+                out[nid] = res
+                fertig += 1
+                print(f"  [{fertig}/{len(todo)}] {nid}  {res['ampel']} "
+                      f"items={len(res['checklist'])} ({len(res['parsed_files'])} geparst) "
+                      f"verworfen={res['rejected_items']} ~{res['token_cost']}tok", flush=True)
+                if fertig % SICHERN_JE == 0:
+                    sichern()
+    with schreib_lock:
+        sichern()
 
     print(f"Vergabe-Analysen: {len(out)} Vorgänge → {OUT.name}")
     return 0
