@@ -102,7 +102,9 @@ def main() -> int:
         if not eintrag or not eintrag["keys"]:
             print(f"  {anbieter + '/' + modell:<46} {'kein Schluessel':>30}")
             continue
-        llm._anbieter = lambda e=eintrag, m=modell: [{**e, "model": m}]
+        # Kein Monkeypatch mehr (s. llm.chat): hier laeuft zwar nur ein Faden, aber ein
+        # Muster, das an einer Stelle bricht, gehoert auch an der anderen weg.
+        ad.MODEL = modell
         punkte = verworfen = 0
         t0 = time.time()
         gemacht = 0

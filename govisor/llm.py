@@ -177,7 +177,7 @@ class AllKeysExhausted(RuntimeError):
 
 
 def chat(messages: list[dict], model: str | None = None, temperature: float = 0,
-         timeout: int = 120, max_retries: int = 3) -> str:
+         timeout: int = 120, max_retries: int = 3, anbieter: str | None = None) -> str:
     """Chat-Completion mit Key- UND Anbieter-Rotation. Wirft erst, wenn niemand mehr kann.
 
     Reihenfolge: alle Keys des ersten Anbieters, dann der naechste Anbieter. Leeres Guthaben
@@ -189,7 +189,16 @@ def chat(messages: list[dict], model: str | None = None, temperature: float = 0,
     """
     versuchte = 0
     last_err = "?"
-    for anb in _anbieter():
+    # `anbieter` zwingt EINEN Anbieter — fuer Vergleichsmessungen und fuer Verfahren, die
+    # bewusst zwei verschiedene Haeuser befragen (scripts/entity_adjudicate.py).
+    #
+    # ⚠ WARUM ALS PARAMETER UND NICHT PER MONKEYPATCH. Genau das war der erste Entwurf: die
+    # Aufrufstelle bog `_anbieter` global um und stellte es danach zurueck. Mit acht Faeden
+    # sah ein Faden die Einschraenkung des anderen; im Ergebnis stand „perplexity nicht
+    # verfuegbar", obwohl der Schluessel da war, und die halbe Messung war Unsinn. Globale
+    # Umschaltung und Parallelitaet vertragen sich nicht, nie.
+    liste = [a for a in _anbieter() if not anbieter or a["name"] == anbieter]
+    for anb in liste:
         keys = [k for k in anb["keys"] if k not in _EXHAUSTED]
         if not keys:
             continue
@@ -244,5 +253,5 @@ def chat(messages: list[dict], model: str | None = None, temperature: float = 0,
                 except Exception as e:              # Netz/Timeout → Retry
                     last_err = f"{type(e).__name__}: {str(e)[:80]}"
                     time.sleep(2 * (attempt + 1))
-    raise AllKeysExhausted(f"Alle {versuchte} Keys ueber alle Anbieter fehlgeschlagen — "
-                           f"zuletzt: {last_err}")
+    wer = anbieter or "alle Anbieter"
+    raise AllKeysExhausted(f"Alle {versuchte} Keys ({wer}) fehlgeschlagen — zuletzt: {last_err}")
