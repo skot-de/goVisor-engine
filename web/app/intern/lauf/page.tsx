@@ -67,6 +67,8 @@ type Antwort = {
                    Analyse bzw. keine Signale? Das ist der echte Rueckstand. */
                 ohneAnalyse: number | null; ohneSignale: number | null };
     arbeiter: { laeuft: boolean; letzte: string[] };
+    llm: { zeit: number | null; erschoepft: boolean;
+           anbieter: { name: string; modell: string; frei: number }[] } | null;
   };
 };
 
@@ -254,6 +256,33 @@ export default function LaufPage() {
                       <dd>{d.dokumente.trichter.ohneSignale?.toLocaleString("de-DE") ?? "?"}</dd></div>
                   </dl>
                 </div>
+
+                {d.dokumente.llm ? (
+                  <div className="lauf-arbeiter">
+                    <div className="lauf-trichter-h">
+                      Sprachmodelle{" "}
+                      <span className={d.dokumente.llm.erschoepft ? "ist-aus" : "ist-an"}>
+                        {d.dokumente.llm.erschoepft ? "kein Guthaben" : "bereit"}
+                      </span>
+                    </div>
+                    <dl className="lauf-werte">
+                      {d.dokumente.llm.anbieter.map((a) => (
+                        <div key={a.name}>
+                          <dt>{a.name}</dt>
+                          <dd className={a.frei > 0 ? undefined : "ist-offen"}>
+                            {a.frei > 0 ? a.modell : "leer"}
+                          </dd>
+                        </div>
+                      ))}
+                    </dl>
+                    {d.dokumente.llm.erschoepft ? (
+                      <p className="lauf-hinweis">
+                        Alle Anbieter ohne Guthaben. Der Arbeiter schläft 30 Minuten und
+                        versucht es dann erneut. Aufladen: openrouter.ai/credits
+                      </p>
+                    ) : null}
+                  </div>
+                ) : null}
 
                 {/* Der Dauer-Arbeiter. Er schläft, solange der Tageslauf läuft — das ist
                     kein Fehler, sondern die Kollisionssperre. Ohne diese Zeile sähe es

@@ -91,5 +91,13 @@ try:
 except Exception as e:
     print(f"  Stand unbekannt: {e}")
 PY
+  # ⛔ NICHT WEITERDREHEN, WENN NIEMAND MEHR LIEFERT. Am 2026-08-18 war das OpenRouter-
+  # Guthaben leer; der Arbeiter holte trotzdem alle 30 Sekunden 400 Vorgaenge, bekam bei
+  # jedem 402 und meldete „Runde fertig". Eine Stunde lang, mit vollem Log und ohne einen
+  # einzigen Fortschritt. Wer nichts tun kann, soll schlafen und es sagen.
+  if grep -q '"erschoepft": true' "$ROOT/data/.llm_stand.json" 2>/dev/null; then
+    sag "Kein Guthaben bei keinem Anbieter — warte 30 min. Aufladen: openrouter.ai/credits"
+    sleep 1800; continue
+  fi
   sleep 30
 done

@@ -19,6 +19,7 @@ import os
 import re
 import sys
 import threading
+import time
 from collections import defaultdict
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
@@ -27,7 +28,8 @@ import duckdb
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
-from govisor.llm import chat, AllKeysExhausted  # noqa: E402  (Multi-Key-Fallback)
+from govisor.llm import (chat, letzter_anbieter, anbieter_stand,  # noqa: E402
+                         AllKeysExhausted)
 from govisor import doctypes, docextract, docparse, doctax, docpipe  # noqa: E402
 
 SRC = ROOT / "data" / "docs" / "DE" / "doc_text.parquet"
@@ -262,7 +264,14 @@ def main() -> int:
     def arbeite(auftrag):
         nid, files = auftrag
         structured = structured_for_notice(nid)            # Parser-Schiene (§6.2) über die Roh-ZIPs
-        return nid, analyze_notice(files, structured=structured)
+        res = analyze_notice(files, structured=structured)
+        # WER HAT ES ERZEUGT. Seit dem 2026-08-18 gibt es drei Anbieter mit verschiedenen
+        # Modellen; welches gerade dran ist, entscheidet das Guthaben. Ohne diese Angabe
+        # stuenden im Bestand Ergebnisse nebeneinander, deren Unterschiede niemand mehr
+        # erklaeren kann — und die Verwerfungsquote unterscheidet sich messbar je Modell.
+        anbieter, modell = letzter_anbieter()
+        res["provider"], res["model"] = anbieter, modell
+        return nid, res
 
     def sichern():
         OUT.write_text(json.dumps(out, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
@@ -292,6 +301,20 @@ def main() -> int:
                     sichern()
     with schreib_lock:
         sichern()
+
+    # BETRIEBSSTAND FUER DIE ANZEIGE. Am 2026-08-18 stand die Zahl „wartet auf Analyse"
+    # eine Stunde lang still, weil das OpenRouter-Guthaben leer war — sichtbar war das nur
+    # im Log. Sven musste fragen, warum sich nichts tut. Wer welchen Anbieter noch hat und
+    # was zuletzt schiefging, gehoert deshalb dorthin, wo die Zahl steht.
+    try:
+        (ROOT / "data" / ".llm_stand.json").write_text(json.dumps({
+            "zeit": int(time.time()),
+            "fertig": fertig,
+            "erschoepft": erschoepft,
+            "anbieter": anbieter_stand(),
+        }, ensure_ascii=False), encoding="utf-8")
+    except Exception:                                      # noqa: BLE001
+        pass                                               # Anzeige ist kein Grund zu scheitern
 
     print(f"Vergabe-Analysen: {len(out)} Vorgänge → {OUT.name}")
     return 0

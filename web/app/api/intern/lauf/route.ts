@@ -83,6 +83,28 @@ function trichter() {
   };
 }
 
+/** Wer kann gerade analysieren? Geschrieben von `scripts/analyze_docs.py` nach jeder Runde.
+ *
+ * Die Zahl „wartet auf Analyse" stand am 2026-08-18 eine Stunde still, weil das Guthaben
+ * leer war — und man sah nur, DASS nichts passiert, nicht warum. Ein Betriebsmonitor, der
+ * den Stillstand zeigt, aber nicht seinen Grund, erzeugt genau die Rückfrage, die er
+ * ersparen soll.
+ */
+function llmStand() {
+  try {
+    const roh = fs.readFileSync(path.join(WURZEL, "data", ".llm_stand.json"), "utf-8");
+    const d = JSON.parse(roh) as {
+      zeit: number; erschoepft: boolean;
+      anbieter: { name: string; modell: string; keys: number; frei: number }[];
+    };
+    return {
+      zeit: d.zeit ?? null,
+      erschoepft: !!d.erschoepft,
+      anbieter: (d.anbieter ?? []).map((a) => ({ name: a.name, modell: a.modell, frei: a.frei })),
+    };
+  } catch { return null; }
+}
+
 /** Zustand des Dauer-Arbeiters: läuft er, und was sagt er zuletzt? */
 function arbeiterStand() {
   let laeuft = false;
@@ -396,6 +418,7 @@ export async function GET() {
       trichter: trichter(),
       // Läuft der Dauer-Arbeiter, und was hat er zuletzt gesagt?
       arbeiter: arbeiterStand(),
+      llm: llmStand(),
     },
   });
 }
