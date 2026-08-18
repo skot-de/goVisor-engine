@@ -1962,7 +1962,7 @@ function renderBuyer(l){
     <div class="buyer-head">
       <div>
         <div class="buyer-name">${d.name}</div>
-        <div class="buyer-sub">${tk("Vergabestelle · Käufer-Dossier")}</div>
+        <div class="buyer-sub">${tk("Vergabestelle · Käufer-Dossier")}${d.quelle === "unterschwellig" ? ` · <span class="v-sparse" title="${esc(tk("Diese Stelle schreibt unterhalb der EU-Schwellenwerte aus. Wir kennen sie aus oeffentlichevergabe.de, nicht aus TED — deshalb fehlen hier Kennzahlen wie Single-Bidder-Anteil und Wechselquote."))}">${tk("unterschwellig")}</span>` : ""}</div>
         <button class="sec-link" data-buyerleads="${esc(l.buyerShort)}">${tk("Alle Leads dieser Vergabestelle")}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </button>
       </div>

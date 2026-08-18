@@ -90,6 +90,10 @@ BS = f"read_parquet('{G}/buyer_stats.parquet')"
 # gelesen — der Vergabestellen-Block zeigte nur Aggregate. „Wer hat dort zuletzt
 # was gewonnen" ist die Frage, die ein Bieter wirklich stellt.
 BRA = f"read_parquet('{G}/buyer_recent_awards.parquet')"
+# Profil der UNTERSCHWELLIGEN Vergabestellen (DÖE). `buyer_stats` kennt nur, was ueber
+# TED lief — gemessen am 2026-08-18 haben 425 Kaeufer mit OFFENEN Ausschreibungen
+# deshalb gar kein Profil, obwohl hier eines liegt. Sie sahen „zu wenig Daten".
+DBP = f"read_parquet('{G}/doe_buyer_profile.parquet')"
 ATTR = "read_parquet('data/silver/DE/attributes/*/*.parquet', hive_partitioning=1)"
 MO = f"read_parquet('{G}/market_opportunity.parquet')"
 CS = f"read_parquet('{G}/contractor_stats.parquet')"
@@ -385,6 +389,12 @@ def buyer_profiles(names):
                 "lead": lid,
             })
 
+        # Rueckfallebene fuer Kaeufer ohne TED-Statistik.
+        doe = {r[0]: r for r in con.execute(f"""
+                SELECT buyer_name, n_tenders, n_awarded, n_cpv_divisions,
+                       top_division_label, main_nuts3, last_activity
+                FROM {DBP} WHERE buyer_name IN (SELECT name FROM _bn)""").fetchall()}
+
         mix = {}
         for bn, br, n in con.execute(f"""
                 SELECT e.buyer_name, {BRANCHE} AS br, count(*) n
@@ -395,7 +405,35 @@ def buyer_profiles(names):
         for n in todo:
             st = stats.get(n)
             if not st:
-                _prof_cache[n] = None
+                # KEIN buyer_stats — aber vielleicht ein DÖE-Profil.
+                #
+                # Bisher stand hier `None`, und der Renderer zeigte seinen ehrlichen
+                # Leerzustand („zu wenig Daten"). Ehrlich war das, vollstaendig nicht:
+                # fuer 425 Kaeufer mit offenen Ausschreibungen liegt sehr wohl ein Profil
+                # vor, nur eben aus der unterschwelligen Quelle. Das ist keine schlechtere
+                # Vergabestelle, sondern eine kleinere — und genau die ist fuer einen
+                # Mittelstaendler oft die interessantere.
+                #
+                # Das Profil bleibt SICHTBAR duenner: nur was DÖE hergibt, keine
+                # Retention, kein Single-Bidder-Anteil. `sparse` steht deshalb auf True,
+                # und `quelle` sagt dem Renderer und dem Leser, woher es kommt.
+                dr = doe.get(n)
+                if dr:
+                    _, n_t, n_a, n_div, top_lbl, nuts, last = dr
+                    _prof_cache[n] = {
+                        "name": n, "sparse": True, "quelle": "unterschwellig",
+                        "total": de(int(n_a)) if n_a else None,
+                        "zeitraum": str(last)[:4] if last else "",
+                        "perYear": None, "decision": None, "median": None, "volume": None,
+                        "coverage": None, "division": top_lbl, "categories": None,
+                        "winners": None, "mix": [], "top3": None,
+                        "concentration": "fragmentiert", "topWinners": [], "winsAvg": None,
+                        "single": None, "avgBidders": None, "retention": None,
+                        "retentionLevel": None, "below": de(int(n_t)) if n_t else None,
+                        "recent": letzte.get(n) or [],
+                    }
+                else:
+                    _prof_cache[n] = None
                 continue
             total = int(st["total_awards"] or 0)
             wy = int(st["window_years"] or 5)
