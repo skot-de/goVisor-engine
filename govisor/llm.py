@@ -54,6 +54,8 @@ XAI_URL = "https://api.x.ai/v1/chat/completions"
 # Gemessen 2026-08-18: grok-4-fast-non-reasoning 0,9 s, grok-3-mini 8,7 s. Bei 4.300
 # wartenden Vorgaengen entscheidet die Antwortzeit ueber Stunden, nicht ueber Sekunden.
 XAI_MODEL = os.environ.get("XAI_MODEL", "grok-4-fast-non-reasoning")
+PERPLEXITY_URL = "https://api.perplexity.ai/chat/completions"
+PERPLEXITY_MODEL = os.environ.get("PERPLEXITY_MODEL", "sonar")
 _LOCK = threading.Lock()
 _EXHAUSTED: set[str] = set()   # Keys ohne Guthaben (402), prozessweit gemerkt
 # Wer hat zuletzt geantwortet? JE FADEN, nicht global: der Analyse-Lauf schickt 40 Anfragen
@@ -114,6 +116,17 @@ def _anbieter() -> list[dict]:
         {"name": "sambanova", "url": SAMBANOVA_URL, "keys": _load_keys_aus("sambanova"),
          "model": SAMBANOVA_MODEL},
         {"name": "xai", "url": XAI_URL, "keys": _load_keys_aus("xai"), "model": XAI_MODEL},
+        # ⚠ PERPLEXITY NUR MIT ABGESCHALTETER SUCHE. Die `sonar`-Modelle recherchieren im
+        # Netz; unter der Belegpflicht (jede Aussage braucht ein woertliches Zitat AUS DEM
+        # DOKUMENT, s. govisor/docextract.py §6a.2) ist das die falsche Eigenschaft — es
+        # entstuenden Saetze, die stimmen koennen und trotzdem nicht in den Unterlagen
+        # stehen, und die Zitatpruefung wirft sie weg, nachdem wir bezahlt haben.
+        #
+        # Gemessen am 2026-08-18 an derselben Frage: ohne Schalter 20 Webquellen in der
+        # Antwort, mit `disable_search` genau 0. Deshalb steht der Schalter hier fest im
+        # Anfragekoerper und nicht als Empfehlung in einer Doku.
+        {"name": "perplexity", "url": PERPLEXITY_URL, "keys": _load_keys_aus("perplexity"),
+         "model": PERPLEXITY_MODEL, "extra": {"disable_search": True}},
     ]
     # ⚠ PERPLEXITY IST BEWUSST NICHT DABEI, obwohl ein Schluessel mit Guthaben vorliegt
     # (.secrets/perplexity.key, geprueft am 2026-08-18: antwortet in 1,9 s).
@@ -179,7 +192,8 @@ def chat(messages: list[dict], model: str | None = None, temperature: float = 0,
         # Ein von aussen gesetztes Modell (OR_MODEL) meint immer OpenRouter; die anderen
         # Anbieter nehmen ihr eigenes, sonst antwortet die Gegenstelle mit „model not found".
         modell = model if (model and anb["name"] == "openrouter") else anb["model"]
-        body = {"model": modell, "temperature": temperature, "messages": messages}
+        body = {"model": modell, "temperature": temperature, "messages": messages,
+                **anb.get("extra", {})}
         for key in keys:
             versuchte += 1
             for attempt in range(max_retries):
