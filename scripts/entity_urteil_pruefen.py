@@ -21,9 +21,21 @@ in `gold` wandern, prüfen die Daten selbst, was das Modell behauptet hat.
    Ein Fund nebenbei: in mindestens einem Datensatz stehen Ort und PLZ vertauscht
    („Wasserstrassen- und Schifffahrtsamt, Ort=56070, PLZ=Koblenz"). Rein numerische
    Ortsangaben zählen deshalb nicht als Beleg.
-2. **Gleicher Vorgang, verschiedene Partei.** Stehen beide Seiten in derselben Bekanntmachung
-   als unterschiedliche Beteiligte, können sie nicht dieselbe Organisation sein — ein
-   Auftraggeber schreibt nicht an sich selbst aus, und zwei Bieter sind zwei Bieter.
+2. **Gleicher Vorgang, verschiedene Partei — aber nur bei bestimmten Rollen.**
+
+   ⚠️ Die erste Fassung meldete 35 Fälle und lag bei fast allen daneben. Der Blick in die
+   Rollen erklärte warum:
+
+   * `review`/`buyer` und `mediation`/`buyer`: dieselbe Behörde ist Auftraggeber UND die
+     benannte Nachprüfungs- oder Schlichtungsstelle. Steht so in jeder zweiten
+     Bundes-Bekanntmachung (Bundeswehr-Dienstleistungszentrum Kiel, Regierungspräsidium
+     Karlsruhe, WWU Münster) und ist der Normalfall.
+   * `winner`/`winner`: dieselbe Firma gewinnt mehrere LOSE desselben Verfahrens und steht
+     deshalb mehrfach in der Bekanntmachung.
+
+   Ein echter Widerspruch bleibt nur `buyer`/`winner`: wer ausschreibt, gewinnt normalerweise
+   nicht selbst. Auch das gibt es (Inhouse-Vergabe an die eigene Tochter), es ist aber selten
+   genug, um es anzusehen statt es durchzuwinken.
 3. **Widersprüchliche amtliche Kennungen.** Zwei verschiedene Handelsregisternummern sind
    zwei Rechtsträger. (USt-IDs schliessen einander NICHT aus: Organschaften teilen sie sich.)
 
@@ -105,7 +117,10 @@ def main() -> int:
         SELECT count(DISTINCT (pa.entity_a || '|' || pa.entity_b)) FROM paare pa
         JOIN '{pe}' x ON x.entity_id = pa.entity_a
         JOIN '{pe}' y ON y.entity_id = pa.entity_b
-        WHERE x.notice_id = y.notice_id AND (x.role, x.seq) <> (y.role, y.seq)""").fetchone()[0]
+        WHERE x.notice_id = y.notice_id AND (x.role, x.seq) <> (y.role, y.seq)
+          -- Nur die Kombination, die wirklich erklaerungsbeduerftig ist (s. oben).
+          AND ((x.role = 'buyer' AND y.role = 'winner')
+            OR (x.role = 'winner' AND y.role = 'buyer'))""").fetchone()[0]
 
     hr = con.execute(f"""
         SELECT count(DISTINCT (pa.entity_a || '|' || pa.entity_b)) FROM paare pa
@@ -118,7 +133,7 @@ def main() -> int:
     gesamt = con.execute("SELECT count(*) FROM paare").fetchone()[0]
     print(f"\n  Geprüfte Entitäts-Beziehungen: {gesamt:,}")
     print(f"    getrennte Städte (keine gemeinsam)        {getrennte_orte:>6,}")
-    print(f"    gleicher Vorgang, verschiedene Partei     {gleicher_vorgang:>6,}")
+    print(f"    Auftraggeber UND Gewinner im selben Vorgang{gleicher_vorgang:>6,}")
     print(f"    zwei verschiedene Handelsregisternummern  {hr:>6,}")
     print("\n  Ein Urteil ohne Widerspruch ist NICHT bestätigt, nur nicht widerlegt.")
     return 0
