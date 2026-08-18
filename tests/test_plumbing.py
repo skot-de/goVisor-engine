@@ -294,6 +294,27 @@ def test_region_kpi_grain_and_sanity():
     assert bad == 0
 
 
+def test_vertauschte_adressfelder_werden_gedreht():
+    """Ort und PLZ tauschen — aber nur, wenn beide Seiten eindeutig sind.
+
+    Gefunden am 2026-08-18 beim Prüfen der Zusammenführungen: „Wasserstrassen- und
+    Schifffahrtsamt Mosel-Saar-Lahn, Ort=56070, PLZ=Koblenz". Über den Bestand sind es 1.332
+    Zeilen mit einer Zahl im Ortsfeld und 1.858 Postleitzahlen ohne jede Ziffer.
+
+    Die Gegenbeispiele sind der eigentliche Test: „D-56070" ist ein Ländervorsatz und kein
+    Tauschgrund, „1. Bezirk" ein Ortsname mit Ziffer. Eine Adresse falsch zu drehen ist
+    schlimmer als eine, die schief bleibt — nach dem Ort wird gefiltert und gruppiert.
+    """
+    from govisor.adressen import normalisiere
+
+    assert normalisiere("56070", "Koblenz") == ("Koblenz", "56070", True)
+    assert normalisiere("Koblenz", "56070") == ("Koblenz", "56070", False)
+    assert normalisiere("Koblenz", "D-56070") == ("Koblenz", "D-56070", False)
+    assert normalisiere("1. Bezirk", "1010") == ("1. Bezirk", "1010", False)
+    assert normalisiere(None, "56070") == (None, "56070", False)
+    assert normalisiere("", "") == (None, None, False)
+
+
 def test_gold_liest_die_zusammenfuehrungskarte():
     """`entity_merge_map.parquet` muss im Gold-Bau ankommen, sonst war die Prüfkette umsonst.
 

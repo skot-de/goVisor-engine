@@ -38,6 +38,13 @@ from datetime import date
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT))
+from govisor.adressen import sql_ort  # noqa: E402
+
+# EINE Regel für vertauschte Adressfelder, nicht drei Fassungen in drei Skripten.
+# Gefunden beim Prüfen der Zusammenführungen: „Ort=56070, PLZ=Koblenz". Wer das für bare
+# Münze nimmt, meldet einen Ortswiderspruch, wo keiner ist.
+ORT = sql_ort("p.town", "p.postal_code")
 G = ROOT / "data/gold/DE"
 SILBER = ROOT / "data/silver/DE/notice_parties"
 ZIEL = G / "entity_merge_map.parquet"
@@ -77,13 +84,13 @@ def main() -> int:
     con.execute(f"""CREATE TEMP TABLE ort AS
         SELECT entity_id, arg_max(stadt, n) AS ort FROM (
             SELECT pe.entity_id,
-                   lower(regexp_replace(p.town, '[^A-Za-zÄÖÜäöüß]', '', 'g')) AS stadt,
+                   lower(regexp_replace({ORT}, '[^A-Za-zÄÖÜäöüß]', '', 'g')) AS stadt,
                    count(*) AS n
             FROM '{(G / 'party_entity.parquet').as_posix()}' pe
             JOIN '{SILBER.as_posix()}/**/*.parquet' p
               ON p.notice_id = pe.notice_id AND p.role = pe.role AND p.seq = pe.seq
-            WHERE p.town IS NOT NULL
-              AND regexp_replace(p.town, '[^A-Za-zÄÖÜäöüß]', '', 'g') <> ''
+            WHERE {ORT} IS NOT NULL
+              AND regexp_replace({ORT}, '[^A-Za-zÄÖÜäöüß]', '', 'g') <> ''
             GROUP BY 1, 2)
         GROUP BY 1""")
     con.execute("""CREATE TEMP TABLE ort_passt AS

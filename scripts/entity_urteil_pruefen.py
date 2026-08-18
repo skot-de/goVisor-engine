@@ -51,6 +51,13 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT))
+from govisor.adressen import sql_ort  # noqa: E402
+
+# EINE Regel für vertauschte Adressfelder, nicht drei Fassungen in drei Skripten.
+# Gefunden beim Prüfen der Zusammenführungen: „Ort=56070, PLZ=Koblenz". Wer das für bare
+# Münze nimmt, meldet einen Ortswiderspruch, wo keiner ist.
+ORT = sql_ort("p.town", "p.postal_code")
 G = ROOT / "data/gold/DE"
 SILBER = ROOT / "data/silver/DE/notice_parties"
 
@@ -75,11 +82,11 @@ def main() -> int:
     # raus — dort stand die PLZ im Ortsfeld.
     con.execute(f"""CREATE TEMP TABLE ort AS
         SELECT pe.entity_id,
-               list(DISTINCT lower(regexp_replace(p.town, '[^A-Za-zÄÖÜäöüß]', '', 'g'))) AS orte
+               list(DISTINCT lower(regexp_replace({ORT}, '[^A-Za-zÄÖÜäöüß]', '', 'g'))) AS orte
         FROM '{pe}' pe JOIN '{np_}' p
           ON p.notice_id = pe.notice_id AND p.role = pe.role AND p.seq = pe.seq
-        WHERE p.town IS NOT NULL
-          AND regexp_replace(p.town, '[^A-Za-zÄÖÜäöüß]', '', 'g') <> ''
+        WHERE {ORT} IS NOT NULL
+          AND regexp_replace({ORT}, '[^A-Za-zÄÖÜäöüß]', '', 'g') <> ''
         GROUP BY 1""")
 
     # ⚠ Die B-Seite ist bei `mehrdeutige_id` eine Liste, mit Semikolon verbunden. Ohne das
