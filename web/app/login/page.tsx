@@ -3,10 +3,29 @@
 import { useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
-import { login } from "@/lib/supabase/auth";
+import { login, magicLink, passwortVergessen } from "@/lib/supabase/auth";
 import { AppRail, AppTop } from "@/components/explorer/Rail";
 import "../explorer.css";
 import "../zugang.css";
+
+/* Supabase antwortet auf Englisch, und zwar mit Saetzen, die der Nutzer nicht einordnen
+ * kann („Email link is invalid or has expired" — und nun?). Uebersetzt wird nur, was
+ * tatsaechlich vorkommt; alles Unbekannte geht unveraendert durch, damit ein neuer Fehler
+ * sichtbar bleibt statt hinter einem freundlichen Platzhalter zu verschwinden. */
+const AUF_DEUTSCH: [RegExp, string][] = [
+  [/invalid login credentials/i, "E-Mail oder Passwort stimmt nicht."],
+  [/(link|token).*(invalid|expired)/i,
+   "Der Link ist abgelaufen oder wurde schon benutzt. Fordert unten einen neuen an, er gilt eine Stunde."],
+  [/only request this after (\d+) seconds/i,
+   "Zu viele Versuche. Wartet einen Moment und probiert es noch einmal."],
+  [/email not confirmed/i, "Die Adresse ist noch nicht bestätigt. Schaut in eure Mails."],
+  [/user not found/i, "Zu dieser Adresse gibt es kein Konto."],
+];
+function deutsch(m: string | null): string | null {
+  if (!m) return m;
+  for (const [muster, text] of AUF_DEUTSCH) if (muster.test(m)) return text;
+  return m;
+}
 
 export default function LoginPage() {
   const router = useRouter();
@@ -14,13 +33,17 @@ export default function LoginPage() {
   const [email, setEmail] = useState("");
   const [pw, setPw] = useState("");
   const [busy, setBusy] = useState(false);
-  const [fehler, setFehler] = useState<string | null>(null);
+  // Der Fehler aus `/auth/callback` kommt als Query an: ein abgelaufener Link ist der
+  // Normalfall (Supabase-Vorgabe: eine Stunde), und er gehoert dorthin gezeigt, wo man den
+  // naechsten anfordert. Sonst steht der Nutzer wieder vor demselben leeren Formular.
+  const [fehler, setFehler] = useState<string | null>(deutsch(params.get("fehler")));
+  const [gesendet, setGesendet] = useState<string | null>(null);
 
   async function anmelden() {
     setBusy(true); setFehler(null);
     const { error } = await login(email, pw);
     setBusy(false);
-    if (error) { setFehler(error.message === "Invalid login credentials" ? "E-Mail oder Passwort stimmt nicht." : error.message); return; }
+    if (error) { setFehler(deutsch(error.message)); return; }
     // WOHIN NACH DEM ANMELDEN — drei Faelle, in dieser Reihenfolge:
     //
     // 1. `weiter`: der Nutzer wollte irgendwohin und wurde vom Tor abgefangen. Ihn
@@ -35,6 +58,26 @@ export default function LoginPage() {
     let hatProfil = false;
     try { hatProfil = !!localStorage.getItem("govisor.profile.v1"); } catch { /* egal */ }
     router.push(ziel && ziel.startsWith("/") ? ziel : (hatProfil ? "/leads" : "/onboarding"));
+  }
+
+  /* OHNE PASSWORT HINEIN — und warum das keine Bequemlichkeit ist.
+   *
+   * Bis 2026-08-18 kannte die Anmeldung ausschliesslich E-Mail plus Passwort. Wer keines
+   * hatte, kam nicht mehr in sein Konto: es gab weder Wiederherstellung noch Magic Link,
+   * und die Mails, die Supabase auf Zuruf verschickt, landeten auf einer Adresse ohne
+   * Rueckkehr-Route. Sven ist an genau dieser Stelle haengengeblieben, an seinem eigenen Konto.
+   *
+   * Beide Wege schicken bewusst DIESELBE Rueckmeldung, egal ob die Adresse existiert. Wer
+   * hier „kein Konto mit dieser Adresse" laese, koennte unsere Kundenliste abfragen.
+   */
+  async function ohnePasswort(art: "link" | "neu") {
+    setBusy(true); setFehler(null); setGesendet(null);
+    const { error } = art === "link" ? await magicLink(email) : await passwortVergessen(email);
+    setBusy(false);
+    if (error) { setFehler(deutsch(error.message)); return; }
+    setGesendet(art === "link"
+      ? "Wir haben euch einen Anmeldelink geschickt. Er gilt eine Stunde."
+      : "Wenn es zu dieser Adresse ein Konto gibt, ist die Mail unterwegs. Der Link gilt eine Stunde.");
   }
 
   // KEINE Schrittanzeige hier: beim Anmelden gibt es keine Schritte. Das ist der einzige
@@ -69,6 +112,17 @@ export default function LoginPage() {
               {busy ? "Melde an …" : "Anmelden"}
             </button>
             <Link className="btn btn-t" href="/onboarding">Noch kein Konto? Kostenlos starten</Link>
+          </div>
+          {gesendet && <div className="note">{gesendet}</div>}
+          {/* Beide brauchen nur die Adresse, nicht das Passwortfeld — deshalb haengen sie
+              an `email` und nicht an der Freigabe des Anmelde-Knopfes. */}
+          <div className="btnrow zugang-alt">
+            <button className="btn btn-t" disabled={!email || busy} onClick={() => ohnePasswort("link")}>
+              Anmeldelink per Mail
+            </button>
+            <button className="btn btn-t" disabled={!email || busy} onClick={() => ohnePasswort("neu")}>
+              Passwort vergessen
+            </button>
           </div>
         </div>
         </div>

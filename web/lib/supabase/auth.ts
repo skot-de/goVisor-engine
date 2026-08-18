@@ -12,6 +12,24 @@ export async function register(email: string, password: string) {
 export async function login(email: string, password: string) {
   return createClient().auth.signInWithPassword({ email, password });
 }
+/* Anmelden ohne Passwort und Passwort zuruecksetzen — beides fuehrt ueber `/auth/callback`
+ * zurueck, der den Einmal-Token einloest. Ohne diese Rueckkehr-Route landeten die Mails auf
+ * einer Adresse, die nichts damit anfangen kann; genau das war bis 2026-08-18 der Zustand.
+ *
+ * `window.location.origin` statt einer festen Adresse: dieselbe Datei laeuft lokal, in der
+ * Vorschau und live. Supabase muss die Ziele trotzdem in seiner Liste erlaubter
+ * Weiterleitungen fuehren, sonst schickt es stumm an die Site-URL. */
+export async function magicLink(email: string) {
+  return createClient().auth.signInWithOtp({
+    email,
+    options: { emailRedirectTo: `${window.location.origin}/auth/callback` },
+  });
+}
+export async function passwortVergessen(email: string) {
+  return createClient().auth.resetPasswordForEmail(email, {
+    redirectTo: `${window.location.origin}/auth/callback?next=/auth/passwort`,
+  });
+}
 export async function logout() {
   return createClient().auth.signOut();
 }

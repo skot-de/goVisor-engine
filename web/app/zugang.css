@@ -218,3 +218,8 @@
   color:var(--ink-800)}
 .zugang .beleg-unbestaetigt{background:var(--wash,rgba(0,0,0,.04));color:var(--ink-600)}
 .zugang .beleg-fremd{background:color-mix(in srgb,#d97706 14%,transparent);color:var(--ink-900)}
+
+/* Zweite Knopfreihe unter dem Anmelden: Wege ohne Passwort. Leiser als die Hauptreihe,
+   aber nicht versteckt — wer sein Passwort nicht kennt, sucht genau hier. */
+.zugang-alt{margin-top:6px;gap:8px}
+.zugang-alt .btn{font-size:var(--t-sm)}
