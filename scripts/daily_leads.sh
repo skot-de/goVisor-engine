@@ -698,8 +698,14 @@ echo "  Gold ok."
 #
 # Wieder einschalten (etwa fuer einen Nachhol-Lauf von Hand):
 #     GOVISOR_TAGESLAUF_HOLT_UNTERLAGEN=1 scripts/daily_leads.sh
-_ABRUF_PHASE=${GOVISOR_TAGESLAUF_HOLT_UNTERLAGEN:-0}
-if [ "$_ABRUF_PHASE" != "1" ]; then
+# ⚠ ZWEI SCHALTER, DIE MAN LEICHT VERWECHSELT — und ich habe es getan.
+# `_ABRUF_PHASE` markiert die Beschaffungsphase; daran haengt die BUDGETWACHE. Auf 0
+# gesetzt liefen die Abrufe nicht etwa nicht, sondern OHNE Deckel. Ob ueberhaupt geholt
+# wird, entscheidet deshalb ein eigener Schalter.
+_ABRUF_PHASE=1
+_ABRUF_AUS=1
+[ "${GOVISOR_TAGESLAUF_HOLT_UNTERLAGEN:-0}" = "1" ] && _ABRUF_AUS=0
+if [ "$_ABRUF_AUS" = "1" ]; then
   echo ""
   echo "⏭ Unterlagen-Abruf uebersprungen — das macht der Dauerarbeiter"
   echo "   (scripts/dokumente_arbeiter.sh, launchctl list | grep govisor.dokumente)."

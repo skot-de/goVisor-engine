@@ -2326,7 +2326,17 @@ def test_tageslauf_erntet_vor_dem_abrufen():
 
     # Der Waechter selbst: Reserve gesetzt und in `mit_grenze` konsultiert.
     assert "ERNTE_RESERVE=${GOVISOR_ERNTE_RESERVE:-5400}" in quelle
-    assert 'if [ "${_ABRUF_PHASE:-0}" = "1" ] && ! abruf_erlaubt' in quelle
+    assert "abruf_erlaubt \"${_SCHRITT_NAME:-Abruf}\" || return 0" in quelle
+
+    # ⚠ ZWEI SCHALTER, und ihre Verwechslung ist gefaehrlich (2026-08-18 fast passiert):
+    # `_ABRUF_PHASE` schaltet die BUDGETWACHE, `_ABRUF_AUS` das Holen. Wer die Phase auf 0
+    # setzt, um das Holen abzuschalten, bekommt Abrufe OHNE Deckel — also genau das
+    # Gegenteil. Beide muessen vorkommen, und die Wache muss beide kennen.
+    assert "_ABRUF_AUS=1" in quelle, "der Schalter fuer das Holen fehlt"
+    assert '[ "${_ABRUF_AUS:-0}" = "1" ] && return 0' in quelle, \
+        "die Wache prueft nicht, ob die Beschaffung abgeschaltet ist"
+    # Vorgabe ist AUS: das Holen macht der Dauerarbeiter (scripts/dokumente_arbeiter.sh).
+    assert '[ "${GOVISOR_TAGESLAUF_HOLT_UNTERLAGEN:-0}" = "1" ] && _ABRUF_AUS=0' in quelle
     # Uebersprungene Abrufe muessen im Abschlussbericht auftauchen, sonst sieht ein
     # gekuerzter Lauf aus wie ein vollstaendiger.
     assert "_ABRUF_UEBERSPRUNGEN" in quelle and "Abrufe uebersprungen (Zeitbudget)" in quelle
