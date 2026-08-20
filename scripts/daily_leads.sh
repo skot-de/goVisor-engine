@@ -1000,6 +1000,10 @@ if $PY scripts/export_web_leads.py; then
   # monatelang unbemerkt den Anschluss.
   $PY scripts/export_regionen.py \
     || echo "  ⚠ Regionen-Export fehlgeschlagen — die Regionalansicht bleibt auf altem Stand."
+    # Zahlen der oeffentlichen Startseite. Sie stehen dort NICHT im Quelltext, weil eine
+    # getippte Zahl in dem Moment veraltet, in dem sie jemand tippt — und niemand merkt es.
+    $PY scripts/export_landing.py \
+      || echo "  ⚠ Startseiten-Zahlen nicht aktualisiert — die Startseite zeigt den alten Stand."
   # web/data liegt seit dem 2026-08-18 NICHT mehr in Git (s. .gitignore dort). Damit ist
   # dieser Schritt die einzige Bruecke zwischen dem Export hier und dem Deployment: ohne ihn
   # zeigt die Cloud-Fassung den Stand des letzten Uploads, und niemand sieht es, denn alte

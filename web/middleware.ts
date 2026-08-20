@@ -68,7 +68,10 @@ const OFFEN = ["/login", "/auth", "/api/health", "/onboarding", "/start", "/t", 
                      "/api/entity-group", "/api/outreach-firma"];
 
 function istOffen(pfad: string): boolean {
-  if (pfad === "/") return false;             // die Wurzel fuehrt in die App
+  // Die Wurzel zeigt seit dem 2026-08-20 die oeffentliche Startseite (app/page.tsx) und
+  // leitet nur ANGEMELDETE in die App. Vorher fuehrte sie immer nach `/leads` und damit
+  // jeden Fremden auf die Anmeldemaske.
+  if (pfad === "/") return true;
   return OFFEN.some((o) => pfad === o || pfad.startsWith(o + "/"));
 }
 
