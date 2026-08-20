@@ -1,0 +1,208 @@
+"use client";
+
+import Link from "next/link";
+import { useMemo, useState } from "react";
+
+/**
+ * Öffentlicher Eignungs-Check — der Einstieg, den die Startseite nicht hatte.
+ *
+ * **Was es drinnen schon gab und warum das nicht reichte.** Der Abgleich Profil gegen
+ * Anforderung steckt seit Ticket #27 in der Anwendung und entscheidet dort mit („Nicht
+ * bewerben, Pflichtanforderung verletzt"). Er setzt aber ein Konto, ein Onboarding und ein
+ * gepflegtes Profil voraus. Wer die Seite zum ersten Mal sieht, hat nichts davon — und die
+ * Frage, die ihn wirklich umtreibt, ist eine Nummer kleiner: *komme ich da überhaupt in
+ * Frage?* Hier beantwortet sie drei Auswahlen, ohne Anmeldung und ohne Firmendaten.
+ *
+ * **Warum das ehrlich bleibt, obwohl es wirbt.** Verglichen wird gegen GEMESSENE Werte:
+ * die Größenverteilung nur über Vorgänge mit VERÖFFENTLICHTEM Auftragswert (der Bestand
+ * trägt auch geschätzte — die zählen hier nicht), die Schwellen nur aus ausgewerteten
+ * Vergabeunterlagen. Jede Aussage nennt ihre Grundlage mit; wo ein Fachgebiet zu dünn
+ * belegt ist (unter 30 Fundstellen), fällt der Vergleich sichtbar auf den Gesamtbestand
+ * zurück. Der Würfel dahinter kommt aus `scripts/export_landing.py` und steckt in
+ * `web/data/landing.json` — knapp 14 KB, damit hier gerechnet werden kann, ohne 40 MB
+ * Leaddateien zu verschicken.
+ *
+ * **Kein Ergebnis wird verschickt.** Alles bleibt im Browser: keine Eingabe geht an einen
+ * Server, es gibt keinen Endpunkt dafür. Das ist nicht nur Datenschutz, sondern der Grund,
+ * warum jemand die Zahlen überhaupt eintippt.
+ */
+
+export type Check = {
+  regionen: { schluessel: string; label: string; offen: number }[];
+  stufen: { von: number; bis: number | null }[];
+  zellen: Record<string, { offen: number; mitWert: number; stufen: number[] }>;
+  anforderungen: Record<string, {
+    frage: string; einheit: string; unten: string; stufen: number[];
+    je_fach: Record<string, { n: number; median: number; kum: number[] }>;
+  }>;
+  wert: { n: number; min: number | null; median: number | null; max: number | null; unter25k: number };
+};
+
+const nf = (n: number) => n.toLocaleString("de-DE");
+
+/** 250000 → „250.000 €", 3000000 → „3 Mio €". Auf einer Auswahlleiste zählt Kürze. */
+function euro(n: number): string {
+  if (n >= 1_000_000) {
+    const m = n / 1_000_000;
+    return `${(Math.round(m * 10) / 10).toLocaleString("de-DE")} Mio €`;
+  }
+  return `${nf(n)} €`;
+}
+
+function stufenLabel(s: { von: number; bis: number | null }): string {
+  if (s.von === 0) return `bis ${euro(s.bis as number)}`;
+  if (s.bis === null) return `über ${euro(s.von)}`;
+  return `${euro(s.von)} – ${euro(s.bis)}`;
+}
+
+/** Eine Auswahlleiste: Knöpfe statt Aufklappmenü, weil man die Nachbarwerte sehen soll. */
+function Leiter({ titel, optionen, wert, setzen }: {
+  titel: string; optionen: string[]; wert: number; setzen: (i: number) => void;
+}) {
+  return (
+    <div className="ec-frage">
+      <span className="ec-frage-t">{titel}</span>
+      <div className="ec-leiter" role="group" aria-label={titel}>
+        {optionen.map((o, i) => (
+          <button key={o} type="button" aria-pressed={wert === i}
+                  className={wert === i ? "ec-opt ec-opt-an" : "ec-opt"}
+                  onClick={() => setzen(i)}>{o}</button>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+export function EignungsCheck({ check, fachgebiete }: {
+  check: Check; fachgebiete: { schluessel: string; label: string; offen: number }[];
+}) {
+  const [fach, setFach] = useState(fachgebiete[0]?.schluessel ?? "bau");
+  const [region, setRegion] = useState("alle");
+  const [groesse, setGroesse] = useState(2);          // 100.000 – 500.000 €: der dichteste Bereich
+  const [antwort, setAntwort] = useState<Record<string, number>>({
+    haftpflicht: 2, referenzen: 2, umsatz: 2,
+  });
+
+  const zelle = check.zellen[`${fach}|${region}`] ?? { offen: 0, mitWert: 0, stufen: [0, 0, 0, 0, 0, 0] };
+  const fachLabel = fachgebiete.find((f) => f.schluessel === fach)?.label ?? fach;
+  const regionLabel = check.regionen.find((r) => r.schluessel === region)?.label ?? region;
+
+  // „In eurer Größenordnung" heisst: alles bis zu der Grösse, die ihr stemmt. Wer 2 Mio
+  // stemmt, kann auch 40.000 — die umgekehrte Lesart („genau diese Stufe") wäre für die
+  // Frage, ob man mitbieten kann, die falsche.
+  const passend = zelle.stufen.slice(0, groesse + 1).reduce((a, b) => a + b, 0);
+
+  const zeilen = useMemo(() => Object.entries(check.anforderungen).map(([name, a]) => {
+    const basis = a.je_fach[fach] ?? a.je_fach["alle"];
+    const eigenesFach = Boolean(a.je_fach[fach]);
+    const i = antwort[name] ?? 0;
+    const erfuellt = i < 0 || !basis ? 0 : (basis.kum[i] ?? 0);
+    const anteil = basis && basis.n ? Math.round((erfuellt / basis.n) * 100) : 0;
+    return { name, a, basis, eigenesFach, anteil, erfuellt };
+  }), [check.anforderungen, fach, antwort]);
+
+  const stark = zeilen.filter((z) => z.anteil >= 50).length;
+
+  return (
+    <section className="lp-check" id="check">
+      <div className="ec-text">
+        <p className="lp-auge">Eignungs-Check</p>
+        <h2 className="lp-h2">Jeder kann mitbieten. Auch ihr.</h2>
+        <p>
+          Öffentliche Aufträge gelten als eine Sache für Grosse. Der kleinste offene Auftrag
+          im Bestand liegt bei {check.wert.min !== null ? euro(check.wert.min) : "—"},
+          {" "}{nf(check.wert.unter25k)} offene Vergaben liegen unter 25.000 €, nach oben
+          hört es bei {check.wert.max !== null ? euro(check.wert.max) : "—"} auf.
+        </p>
+        <p>
+          Sagt uns, was ihr habt. Wir zeigen euch, wie nah ihr an dem seid, was in eurem
+          Fachgebiet tatsächlich verlangt wird. Ohne Anmeldung, ohne Firmendaten, nichts
+          davon verlässt euren Browser.
+        </p>
+      </div>
+
+      <div className="ec-panel">
+        <div className="ec-kopf">
+          <label>
+            <span>Fachgebiet</span>
+            <select value={fach} onChange={(e) => setFach(e.target.value)}>
+              {fachgebiete.map((f) => <option key={f.schluessel} value={f.schluessel}>{f.label}</option>)}
+            </select>
+          </label>
+          <label>
+            <span>Region</span>
+            <select value={region} onChange={(e) => setRegion(e.target.value)}>
+              {check.regionen.map((r) => (
+                <option key={r.schluessel} value={r.schluessel}>{r.label}</option>
+              ))}
+            </select>
+          </label>
+        </div>
+
+        <Leiter titel="Aufträge bis zu welcher Grösse könnt ihr stemmen?"
+                optionen={check.stufen.map(stufenLabel)} wert={groesse} setzen={setGroesse} />
+
+        {Object.entries(check.anforderungen).map(([name, a]) => (
+          <Leiter key={name} titel={a.frage}
+                  optionen={[a.unten, ...a.stufen.map((s) => (a.einheit === "€" ? euro(s) : String(s)))]}
+                  wert={(antwort[name] ?? 0) + 1}
+                  setzen={(i) => setAntwort({ ...antwort, [name]: i - 1 })} />
+        ))}
+
+        <div className="ec-ergebnis">
+          <p className="ec-gross">
+            <b>{nf(zelle.offen)}</b> offene Vergaben in {fachLabel}, {regionLabel}.
+          </p>
+          {zelle.mitWert >= 20 ? (
+            <p className="ec-satz">
+              Bei den {nf(zelle.mitWert)} davon, die ihren Auftragswert veröffentlicht haben,
+              liegen <b>{nf(passend)}</b> in eurer Grössenordnung.
+            </p>
+          ) : (
+            <p className="ec-satz">
+              Für die Grössenordnung ist dieser Zuschnitt zu dünn belegt:{" "}
+              {zelle.mitWert === 0
+                ? "keiner dieser Vorgänge nennt seinen Auftragswert"
+                : `nur ${zelle.mitWert} dieser Vorgänge nennen ihren Auftragswert`}.{" "}
+              Wählt eine grössere Region.
+            </p>
+          )}
+
+          <ul className="ec-zeilen">
+            {zeilen.map((z) => (
+              <li key={z.name}>
+                <span className="ec-balken" aria-hidden="true">
+                  <i style={{ width: `${z.anteil}%` }} />
+                </span>
+                <span className="ec-zeile-t">
+                  <b>{z.anteil} %</b> der Verfahren, die {z.name === "referenzen" ? "Referenzen"
+                    : z.name === "umsatz" ? "einen Mindestumsatz" : "eine Haftpflichtdeckung"}{" "}
+                  fordern, verlangen nicht mehr, als ihr habt.
+                </span>
+                <span className="ec-zeile-q">
+                  {z.basis ? <>Median {z.a.einheit === "€" ? euro(z.basis.median) : z.basis.median}
+                    {" "}· {nf(z.basis.n)} Fundstellen in ausgewerteten Unterlagen
+                    {z.eigenesFach ? "" : ", fachgebietsübergreifend gezählt"}</> : "keine Fundstellen"}
+                </span>
+              </li>
+            ))}
+          </ul>
+
+          <p className="ec-fazit">
+            {stark === zeilen.length
+              ? "Ihr liegt bei allen drei üblichen Vorgaben über dem, was gefordert wird."
+              : stark === 0
+                ? "Bei den üblichen Vorgaben liegt ihr noch darunter — was nicht heisst, dass nichts passt: die Anforderungen wachsen mit der Auftragsgrösse, und der kleinste offene Auftrag kostet weniger als ein Werkzeugkoffer."
+                : `Ihr liegt bei ${stark} von ${zeilen.length} üblichen Vorgaben über dem, was gefordert wird.`}
+          </p>
+          <Link className="lp-knopf" href="/onboarding">Die passenden Vergaben ansehen</Link>
+          <p className="ec-fuss">
+            Verglichen wird gegen gemessene Werte, nicht gegen Erfahrungswerte: veröffentlichte
+            Auftragswerte und Schwellen aus den Vergabeunterlagen. Was ein einzelnes Verfahren
+            verlangt, steht drinnen an jedem Vorgang, mit dem wörtlichen Zitat daneben.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}

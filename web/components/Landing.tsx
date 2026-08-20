@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { loadDataFile } from "@/lib/dataSource";
+import { EignungsCheck, type Check } from "./EignungsCheck";
 import "../app/landing-oeffentlich.css";
 
 /**
@@ -33,6 +34,7 @@ type Zahlen = {
   auslaufend: number; auslaufend_24m: number; regionen: number; anbieter: number;
   fachgebiete: { schluessel: string; label: string; offen: number }[];
   beispiel: { titel: string; kaeufer: string; region: string; frist: string; punkte: Punkt[] } | null;
+  check?: Check;
 };
 
 const LAND_NAME: Record<string, string> = { DE: "Deutschland", AT: "Österreich", CH: "Schweiz" };
@@ -51,6 +53,8 @@ export async function Landing() {
     z = roh ? (JSON.parse(roh) as Zahlen) : null;
   } catch { z = null; }
   const b = z?.beispiel ?? null;
+  // Der kleinste veröffentlichte Auftragswert im offenen Bestand — gemessen, nicht gerundet.
+  const vol = z?.check?.wert?.min != null ? `${nf(z.check.wert.min)} €` : null;
 
   return (
     <main className="lp">
@@ -128,6 +132,16 @@ export async function Landing() {
             Schlagworte.
           </p>
         </section>
+      ) : null}
+
+      {/* EIGNUNGS-CHECK — Svens Einwand: „wir sprechen die zielgruppe nicht an … wir haben
+          auch noch was gebaut wo man checken kann, ob man die vorgaben erfüllt." Den
+          Abgleich gibt es drinnen seit #27, aber erst nach Konto und Onboarding. Hier steht
+          er offen, mit drei Klicks und ohne Firmendaten. Fehlt der vorberechnete Würfel in
+          landing.json, entfällt der Abschnitt — lieber nichts als ein Formular, das nichts
+          rechnet. */}
+      {z?.check && z.fachgebiete?.length ? (
+        <EignungsCheck check={z.check} fachgebiete={z.fachgebiete} />
       ) : null}
 
       {/* PLANUNGSHORIZONT — die Zeitachse, die der ersten Fassung fehlte.
@@ -221,10 +235,12 @@ export async function Landing() {
                 <path d="M9 13h6" strokeWidth="2.2" />
               </svg>
             </span>
-            <h3>Auch unterhalb der Schwelle</h3>
+            <h3>{vol ? `Auftragsvolumen ab ${vol}, nach oben offen` : "Vom Kleinauftrag bis zum Grossprojekt"}</h3>
             <p>
-              Der grösste Teil der öffentlichen Aufträge wird nie EU-weit ausgeschrieben.
-              Wir lesen die nationalen Pflichtveröffentlichungen mit, nicht nur TED.
+              Öffentliche Aufträge gelten als eine Sache für Grosse. Der grösste Teil wird
+              nie EU-weit ausgeschrieben, und wir lesen die nationalen Pflichtveröffent&shy;lichungen
+              mit, nicht nur TED. Deshalb steht hier auch der Auftrag über ein paar tausend
+              Euro neben dem über dreistellige Millionen.
             </p>
           </article>
           <article>
