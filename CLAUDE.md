@@ -54,6 +54,20 @@ CLI: `python -m govisor.cli {ingest|silver|gold|verify|review}`.
   `ps aux` schneidet ohne Terminal bei 80 Zeichen ab (das Wort „govisor" fällt weg), und
   `ps … | grep -q` liefert mit `set -o pipefail` **Exit 141 bei Erfolg** — beide Male lautet
   die Fehlmeldung „Bahn frei".
+- **Bei jedem neuen Land DREI Ebenen prüfen, nicht zwei.** Die dritte wird regelmässig
+  vergessen, weil sie in DACH fast leer ist:
+  1. **oberschwellig** — TED, überall gleich
+  2. **unterschwellig** — nationale Pflichtveröffentlichung. ⚠ Die Struktur unterscheidet
+     sich fundamental: DE ist auf ein Dutzend Portale zersplittert (DÖE aggregiert nur
+     teilweise), Polen hat mit dem **Biuletyn Zamówień Publicznych** eine zentrale Quelle.
+     Ein Connector gegen zwölf — das entscheidet über den Aufwand eines Markteintritts.
+  3. **Fonds-Ebene** — Vergaben von **Empfängern öffentlicher Fördermittel, die selbst keine
+     öffentlichen Auftraggeber sind**. Die Wettbewerbspflicht gilt EU-weit (Fondsverordnungen),
+     die Sichtbarkeit ist rein national. Polen führt dafür ein zentrales Portal
+     (`bazakonkurencyjnosci.funduszeeuropejskie.gov.pl`), die meisten Länder nicht.
+     Je mehr Kohäsionsmittel ein Land bekommt, desto grösser dieser sonst unsichtbare Markt.
+     **Für DACH geprüft (2026-08-18): kein eigenes Verzeichnis** — Details und Belege in
+     der Auto-Memory `govisor-fondsebene-dach.md`.
 - **Messen statt annehmen** — jede Zahl/Feldposition an echten Daten prüfen, nie aus
   dem Gedächtnis behaupten. Auffällige Aggregat-Zahlen sind Warnsignale.
 - **Kein Datenverlust** — nichts nach eigener Relevanz filtern; Unbekanntes →
