@@ -261,6 +261,11 @@ export default function OnboardingPage() {
   useEffect(() => {
     const q = new URLSearchParams(window.location.search);
     if (q.get("probe") === "1") setProbe(true);
+    // Von der Startseite mitgebracht (`?firma=`): dort steht dasselbe Feld, das hier als
+    // Erstes gefragt wird. Wer es schon getippt hat, soll es nicht zweimal tippen. Wie
+    // beim Token gilt: nur ein Vorschlag, bestaetigt wird ueber die Firmensuche.
+    const mit = (q.get("firma") || "").trim();
+    if (mit) setEingabe(mit.slice(0, 120));
     const tok = q.get("t");
     if (!tok) return;
     setTokenWert(tok);

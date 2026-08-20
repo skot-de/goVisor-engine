@@ -22,6 +22,10 @@ import { useMemo, useState } from "react";
  * `web/data/landing.json` — knapp 14 KB, damit hier gerechnet werden kann, ohne 40 MB
  * Leaddateien zu verschicken.
  *
+ * **Eingeklappt, aber nicht leer.** Sven: „sonst nimmt er zu viel platz weg". Sichtbar
+ * bleibt der obere Rand — zwei Auswahlfelder und die Zahl der offenen Vergaben in diesem
+ * Zuschnitt. Wer weiterklickt, bekommt die drei Fragen und den Vergleich.
+ *
  * **Kein Ergebnis wird verschickt.** Alles bleibt im Browser: keine Eingabe geht an einen
  * Server, es gibt keinen Endpunkt dafür. Das ist nicht nur Datenschutz, sondern der Grund,
  * warum jemand die Zahlen überhaupt eintippt.
@@ -82,6 +86,11 @@ export function EignungsCheck({ check, fachgebiete }: {
   const [antwort, setAntwort] = useState<Record<string, number>>({
     haftpflicht: 2, referenzen: 2, umsatz: 2,
   });
+  // Eingeklappt startet der Abschnitt, weil er sonst ein Drittel der Startseite frisst.
+  // Sichtbar bleibt trotzdem etwas, das rechnet: Fachgebiet, Region und die Zahl der
+  // offenen Vergaben darin. Ein Knopf, der nur ein leeres Formular verspricht, wird nicht
+  // gedrückt — einer, unter dem schon eine Zahl steht, schon.
+  const [offen, setOffen] = useState(false);
 
   const zelle = check.zellen[`${fach}|${region}`] ?? { offen: 0, mitWert: 0, stufen: [0, 0, 0, 0, 0, 0] };
   const fachLabel = fachgebiete.find((f) => f.schluessel === fach)?.label ?? fach;
@@ -139,6 +148,18 @@ export function EignungsCheck({ check, fachgebiete }: {
           </label>
         </div>
 
+        <p className="ec-vorschau">
+          <b>{nf(zelle.offen)}</b> offene Vergaben in {fachLabel}, {regionLabel}.
+        </p>
+
+        {!offen ? (
+          <button type="button" className="ec-mehr" onClick={() => setOffen(true)}>
+            Wie nah seid ihr dran? Drei Fragen, keine Anmeldung
+            <span aria-hidden="true">→</span>
+          </button>
+        ) : null}
+
+        <div className={offen ? "ec-tief" : "ec-tief ec-zu"} hidden={!offen}>
         <Leiter titel="Aufträge bis zu welcher Grösse könnt ihr stemmen?"
                 optionen={check.stufen.map(stufenLabel)} wert={groesse} setzen={setGroesse} />
 
@@ -150,9 +171,6 @@ export function EignungsCheck({ check, fachgebiete }: {
         ))}
 
         <div className="ec-ergebnis">
-          <p className="ec-gross">
-            <b>{nf(zelle.offen)}</b> offene Vergaben in {fachLabel}, {regionLabel}.
-          </p>
           {zelle.mitWert >= 20 ? (
             <p className="ec-satz">
               Bei den {nf(zelle.mitWert)} davon, die ihren Auftragswert veröffentlicht haben,
@@ -201,6 +219,7 @@ export function EignungsCheck({ check, fachgebiete }: {
             Auftragswerte und Schwellen aus den Vergabeunterlagen. Was ein einzelnes Verfahren
             verlangt, steht drinnen an jedem Vorgang, mit dem wörtlichen Zitat daneben.
           </p>
+        </div>
         </div>
       </div>
     </section>

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { loadDataFile } from "@/lib/dataSource";
 import { EignungsCheck, type Check } from "./EignungsCheck";
+import { StartForm } from "./StartForm";
 import "../app/landing-oeffentlich.css";
 
 /**
@@ -58,9 +59,22 @@ export async function Landing() {
 
   return (
     <main className="lp">
+      {/* Gründungsleiste. Bewusst OHNE Preisversprechen: die Vorlage warb mit einem
+          „Einführungspreis", und der ist nicht beschlossen. Was stimmt und trotzdem trägt,
+          ist der Zeitpunkt — wer jetzt kommt, redet mit den Leuten, die es bauen. */}
+      <p className="lp-gruendung">
+        <b>Gründungsphase.</b> Der Bestand wächst täglich, das Produkt auch. Wer jetzt
+        einsteigt, redet direkt mit denen, die es bauen.
+      </p>
+
       <header className="lp-kopf">
         <span className="lp-marke">goVisor</span>
         <nav className="lp-nav">
+          {/* Nur Anker auf diese Seite: eine Navigation, die auf Seiten zeigt, die es noch
+              nicht gibt, ist der erste gebrochene Klick des ersten Besuchers. */}
+          <a href="#fachgebiete">Fachgebiete</a>
+          <a href="#check">Eignungs-Check</a>
+          <a href="#arbeitsweise">Arbeitsweise</a>
           <Link href="/login">Anmelden</Link>
           <Link className="lp-knopf" href="/onboarding">Kostenlos starten</Link>
         </nav>
@@ -69,14 +83,15 @@ export async function Landing() {
       <section className="lp-held">
         <div className="lp-held-text">
           <p className="lp-auge">Ausschreibungen aus DACH, bis zur Entscheidung aufbereitet</p>
-          <h1>
-            Ihr seht nicht nur, <em>dass</em> ausgeschrieben wird.
-            <br />Ihr seht, <em>was</em> drinsteht.
-          </h1>
+          {/* „Gezielt bieten" statt der langen Doppelzeile: die Vorlage sagt in zwei Wörtern,
+              wofür wir vier Zeilen brauchten. Der Satz darunter nennt das Unangenehme, das
+              sonst niemand anbietet — wo ihr es lassen solltet. Genau davon lebt das
+              Erlösmodell: wir verdienen mit, wenn ihr gewinnt, nicht wenn ihr bietet. */}
+          <h1>Gezielt bieten.</h1>
           <p className="lp-lead">
-            goVisor holt die Vergabeunterlagen, liest sie aus und legt die Anforderungen offen:
-            welche Nachweise gefordert sind, welche Summen dahinterstehen, wo die K.-o.-Kriterien
-            liegen. Zu jeder Aussage das wörtliche Zitat aus dem Dokument.
+            Ihr seht nicht nur, <em>dass</em> ausgeschrieben wird, sondern <em>was</em>
+            {" "}drinsteht: welche Nachweise gefordert sind, welche Summen dahinterstehen, wo die
+            K.-o.-Kriterien liegen. Und wo ihr besser <b>nicht</b> bietet.
           </p>
           <div className="lp-aktionen">
             <Link className="lp-knopf lp-knopf-gross" href="/onboarding">Kostenlos starten</Link>
@@ -116,7 +131,7 @@ export async function Landing() {
           ihm nichts; „11.733 offene Bauvergaben" schon. Die Zahl je Gebiet zaehlt nur
           Vorgaenge mit LAUFENDER Frist — was abgelaufen ist, interessiert niemanden. */}
       {z?.fachgebiete?.length ? (
-        <section className="lp-fach" aria-label="Fachgebiete">
+        <section className="lp-fach" id="fachgebiete" aria-label="Fachgebiete">
           <h2 className="lp-fach-h">Offen in eurem Fachgebiet</h2>
           <ul>
             {z.fachgebiete.map((f) => (
@@ -216,7 +231,7 @@ export async function Landing() {
         </p>
       ) : null}
 
-      <section className="lp-block">
+      <section className="lp-block" id="arbeitsweise">
         {/* ⚠ Hiess bis zum 2026-08-20 „Drei Dinge, die anderswo fehlen". Sven: „stimmen
             nicht, ich glaube nicht das wir die einzigen sind." Er hat recht, und wir haben
             es sogar gemessen: die Analyse eines Wettbewerbers zum Single-Bieter-Anteil war
@@ -236,11 +251,14 @@ export async function Landing() {
               </svg>
             </span>
             <h3>{vol ? `Auftragsvolumen ab ${vol}, nach oben offen` : "Vom Kleinauftrag bis zum Grossprojekt"}</h3>
+            {/* ⚠ Stand hier bis zum 2026-08-20 mit demselben Einstiegssatz wie der
+                Eignungs-Check darüber („gelten als eine Sache für Grosse") — zweimal
+                dieselbe Wendung auf einer Seite liest sich wie ein Textbaustein. */}
             <p>
-              Öffentliche Aufträge gelten als eine Sache für Grosse. Der grösste Teil wird
-              nie EU-weit ausgeschrieben, und wir lesen die nationalen Pflichtveröffent&shy;lichungen
-              mit, nicht nur TED. Deshalb steht hier auch der Auftrag über ein paar tausend
-              Euro neben dem über dreistellige Millionen.
+              Der grösste Teil der öffentlichen Aufträge wird nie EU-weit ausgeschrieben. Wir
+              lesen die nationalen Pflichtveröffent&shy;lichungen mit, nicht nur TED. Deshalb
+              steht hier der Auftrag über ein paar tausend Euro neben dem über dreistellige
+              Millionen.
             </p>
           </article>
           <article>
@@ -287,16 +305,52 @@ export async function Landing() {
             </p>
           </article>
         </div>
+
+        {/* Die Bausteine, nach denen Sven gefragt hat („den 360-Grad-Blick etwas mehr
+            bewerben"). Als Chips statt als vierzehnte Karte: sie sollen zeigen, dass es
+            weitergeht, nicht jeden Baustein erklären. Kein „Alle Funktionen"-Link, solange
+            es die Seite dahinter nicht gibt. */}
+        <p className="lp-bausteine-t">Dazu gehört, was danach kommt:</p>
+        <div className="lp-bausteine">
+          <span>Vergabestellen-Dossier</span>
+          <span>Wettbewerber und ihre Zuschläge</span>
+          <span>Regionenvergleich</span>
+          <span>Marktpuls im Jahresverlauf</span>
+          <span>Alarme auf eure Kriterien</span>
+          <span>Bausteinbibliothek für Angebotstexte</span>
+        </div>
+
+        {/* Was es kostet, in einem Satz und ohne Zahl: die Stufen stehen fest (Suche und
+            Liste sind dauerhaft frei, die Erfolgsprämie hängt an der Unterlagen-Analyse
+            oder am Bewertungs-Tab), die Beträge sind nicht beschlossen. Eine Zahl, die
+            später anders ausfällt, ist auf einer öffentlichen Seite teuer. */}
+        <p className="lp-preis">
+          <b>Was es kostet:</b> Suchen, filtern und Vergaben ansehen bleibt dauerhaft frei.
+          Bezahlt wird die Tiefe, also die ausgewerteten Unterlagen und die Bewertung. Und
+          wenn ihr damit einen Auftrag gewinnt, verdienen wir mit, nur an Vergaben, die ihr
+          selbst über goVisor ausgewertet habt.
+        </p>
       </section>
 
-      <section className="lp-block lp-schluss">
-        <h2 className="lp-h2">Anfangen kostet nichts</h2>
-        <p>
-          Profil anlegen, Fachgebiet und Umkreis wählen, passende Ausschreibungen ansehen.
-          Wenn nichts dabei ist, habt ihr zehn Minuten verloren und wisst mehr über euren Markt.
-        </p>
-        <Link className="lp-knopf lp-knopf-gross" href="/onboarding">Kostenlos starten</Link>
+      {/* Schluss als dunkles Band, die Form aus der Vorlage. Dort stand ein E-Mail-Feld;
+          hier steht die erste Frage des Onboardings selbst — wer die Firma tippt, hat den
+          ersten Schritt hinter sich, und wir sammeln keine Adressen ein, mit denen wir
+          nichts vorhätten. */}
+      <section className="lp-schluss" id="starten">
+        <div className="lp-schluss-text">
+          <h2>Überzeugt euch selbst. Der Einstieg kostet nichts.</h2>
+          <p>
+            Firma eintragen, Fachgebiet und Umkreis wählen, passende Vergaben ansehen. Wenn
+            nichts dabei ist, habt ihr zehn Minuten verloren und wisst mehr über euren Markt.
+          </p>
+        </div>
+        <StartForm />
       </section>
+      <p className="lp-zusagen">
+        <span>Keine Zahlungsdaten, kein Verkaufsgespräch</span>
+        <span>Dauerhaft frei, nicht vierzehn Tage</span>
+        <span>Jederzeit kündbar, wir fragen höchstens warum</span>
+      </p>
 
       <footer className="lp-fuss">
         <span className="lp-marke">goVisor</span>

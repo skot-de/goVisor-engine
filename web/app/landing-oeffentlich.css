@@ -215,7 +215,7 @@
 .ec-opt-an { background: var(--signal-deep, #067A55); border-color: var(--signal-deep, #067A55);
   color: #fff; font-weight: 600; }
 
-.ec-ergebnis { margin-top: 20px; padding-top: 18px; border-top: 1px dashed var(--line-strong, #CFD6D3); }
+.ec-ergebnis { margin-top: 18px; padding-top: 18px; border-top: 1px dashed var(--line-strong, #CFD6D3); }
 .ec-gross { font-size: 17px; margin: 0 0 4px; }
 .ec-gross b { font-size: 24px; font-variant-numeric: tabular-nums; }
 .ec-satz { font-size: 14px; color: var(--ink-700, #33453F); margin: 0 0 16px; }
@@ -237,4 +237,82 @@
 @media (max-width: 900px) {
   .lp-check { grid-template-columns: 1fr; gap: 24px; }
   .ec-kopf { grid-template-columns: 1fr; }
+}
+
+/* Eingeklappt sichtbar: die Zahl, die schon rechnet, und der Knopf, der weiterführt. */
+.ec-vorschau { font-size: 17px; margin: 4px 0 0; }
+.ec-vorschau b { font-size: 26px; font-variant-numeric: tabular-nums; }
+.ec-mehr { display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  width: 100%; margin-top: 14px; padding: 12px 15px; font: inherit; font-size: 14px;
+  font-weight: 600; text-align: left; cursor: pointer; color: var(--signal-deep, #067A55);
+  background: var(--signal-wash, #E7F7F1); border: 1px solid transparent; border-radius: 11px;
+  transition: .14s; }
+.ec-mehr:hover { border-color: var(--signal, #10B981); }
+.ec-tief { margin-top: 18px; }
+
+/* GRÜNDUNGSLEISTE. Ganz oben, dunkel, eine Zeile — sie soll den Zeitpunkt markieren,
+   nicht den Blick fangen. */
+.lp-gruendung { margin: 0 -24px 0; padding: 10px 24px; text-align: center;
+  background: var(--ink-900, #12211D); color: #DDE9E4; font-size: 13px; line-height: 1.45; }
+.lp-gruendung b { color: #fff; font-weight: 700; }
+
+.lp-nav a { white-space: nowrap; }
+
+/* BAUSTEINE. Chips statt Karten: sie zeigen, dass es weitergeht, ohne jeden Baustein zu
+   erklären — dafür ist drinnen Platz. */
+.lp-bausteine-t { margin: 30px 0 10px; font-size: 14px; font-weight: 600;
+  color: var(--ink-700, #33453F); }
+.lp-bausteine { display: flex; flex-wrap: wrap; gap: 8px; }
+.lp-bausteine span { font-size: 13.5px; font-weight: 600; color: var(--ink-700, #33453F);
+  background: #fff; border: 1px solid var(--line-strong, #CFD6D3); border-radius: 100px;
+  padding: 7px 15px; }
+.lp-preis { margin: 26px 0 0; font-size: 14.5px; line-height: 1.65;
+  color: var(--ink-700, #33453F); max-width: 74ch; }
+.lp-preis b { color: var(--ink-900, #12211D); }
+
+/* SCHLUSS. Dunkles Band mit einem einzigen Feld. */
+.lp-schluss { display: flex; align-items: center; justify-content: space-between;
+  gap: 40px; flex-wrap: wrap; margin: 64px 0 0; padding: 26px 32px; border-radius: 16px;
+  background: var(--ink-900, #12211D); color: #fff; }
+.lp-schluss h2 { font-size: 23px; font-weight: 700; letter-spacing: -.02em; line-height: 1.2;
+  margin: 0 0 7px; }
+.lp-schluss p { font-size: 14px; line-height: 1.5; color: #9DB3AC; max-width: 52ch; margin: 0; }
+
+.lp-startform { display: flex; align-items: stretch; border-radius: 11px; overflow: hidden;
+  box-shadow: 0 6px 22px rgba(0,0,0,.28); }
+.lp-startform input { width: 300px; max-width: 60vw; padding: 12px 17px; font: inherit;
+  font-size: 15px; border: none; background: #fff; color: var(--ink-900, #12211D); }
+.lp-startform input:focus { outline: none; }
+.lp-startform:focus-within { box-shadow: 0 0 0 3px rgba(16,185,129,.45), 0 6px 22px rgba(0,0,0,.28); }
+.lp-startform button { flex: none; width: 58px; display: grid; place-items: center;
+  background: var(--signal, #10B981); color: var(--ink-900, #12211D); border: none;
+  cursor: pointer; transition: .14s; }
+.lp-startform button:hover { background: #34C08D; }
+.lp-startform svg { width: 20px; height: 20px; }
+
+.lp-zusagen { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 0;
+  margin: 18px 0 0; font-size: 13px; color: var(--ink-500, #64766F); }
+.lp-zusagen span { white-space: nowrap; }
+.lp-zusagen span:not(:last-child)::after { content: "·"; margin: 0 12px;
+  color: var(--line-strong, #CFD6D3); }
+
+@media (max-width: 760px) {
+  .lp-schluss { flex-direction: column; align-items: flex-start; gap: 20px; padding: 22px; }
+  .lp-startform { width: 100%; }
+  .lp-startform input { flex: 1; width: auto; max-width: none; }
+}
+
+/* Auf schmalen Geräten weichen die Anker-Links: der Kopf muss Marke, Anmelden und den
+   Startknopf tragen, alles andere steht zwei Fingerbreit tiefer ohnehin im Fluss. */
+@media (max-width: 820px) {
+  .lp-nav a[href^="#"] { display: none; }
+  .lp-kopf { gap: 12px; }
+  .lp-nav { gap: 14px; }
+}
+
+/* Umbrechende Zusagen: der Mittelpunkt hing am Zeilenende, weil er zum vorigen Eintrag
+   gehört. Untereinander braucht es ihn gar nicht. */
+@media (max-width: 700px) {
+  .lp-zusagen { flex-direction: column; align-items: center; gap: 6px; }
+  .lp-zusagen span:not(:last-child)::after { content: none; }
 }
