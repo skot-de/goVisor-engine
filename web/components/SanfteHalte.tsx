@@ -14,7 +14,10 @@ import { useEffect } from "react";
  *   1. Es zieht erst, wenn das Scrollen AUFGEHÖRT hat (140 ms Ruhe). Wer weiterscrollt,
  *      wird nie unterbrochen — das ist der eigentliche Unterschied zu CSS-Snap, der schon
  *      während der Bewegung eingreift.
- *   2. Es zieht nur aus {@link FANG} Pixeln Entfernung statt aus dreihundert.
+ *   2. Es zieht nur aus {@link FANG} Pixeln Entfernung statt aus dreihundert. Der Wert war
+ *      zuerst 90, kurz 60, auf Svens Wunsch jetzt 130. Gemessen heisst das: bis ±120 dockt
+ *      es an, ab ±140 bleibt alles stehen. Näher an CSS-`proximity` (rund 300), aber immer
+ *      noch nur NACH dem Scrollen, nicht mittendrin — der Unterschied bleibt.
  *   3. Es zieht nur, wenn der Weg kurz genug ist, um nicht als Sprung zu wirken.
  *
  * Aus dem Weg geht es bei `prefers-reduced-motion`, auf schmalen und niedrigen Fenstern,
@@ -22,7 +25,7 @@ import { useEffect } from "react";
  * `lp-halt` selbst abmelden — das Werkzeug tut das, sobald seine Auswertung offen ist und
  * es höher wird als das Fenster.
  */
-const FANG = 90;          // px: darunter wird angedockt, darüber bleibt alles, wie es ist
+const FANG = 130;          // px: darunter wird angedockt, darüber bleibt alles, wie es ist
 const RUHE = 140;         // ms ohne Scroll-Ereignis, bevor überhaupt geprüft wird
 const KOPFHOEHE = 78;     // px: die klebende Kopfleiste, die über dem Abschnitt steht
 
