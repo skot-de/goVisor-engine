@@ -20,7 +20,7 @@ import { useMemo, useState } from "react";
  * Vergabeunterlagen (`scripts/export_landing.py`, Block KATALOG).
  *
  * **Drei Ehrlichkeitsregeln, ohne die das Ding Werbung wäre.**
- * 1. „Belegt in 21 %" heisst: in jedem fünften ausgewerteten Verfahren steht es wörtlich.
+ * 1. „Belegt in 21 %" heisst: in so vielen der ausgewerteten Verfahren steht es wörtlich.
  *    Es heisst NICHT, dass vier Fünftel es nicht verlangen — was die Extraktion nicht
  *    erfasst hat, fehlt. Die Zahl ist eine Untergrenze und wird auch so benannt.
  * 2. Die Kernzahl zählt nur gegen Verfahren mit MINDESTENS EINER bezifferten Anforderung.
@@ -301,6 +301,11 @@ export function EignungsCheck({ check, fachgebiete }: {
               </p>
             </div>
 
+            {/* Kopfzeile statt „belegt in" in jeder Zeile — elfmal dieselbe Präposition
+                untereinander liest sich wie ein Formular, nicht wie ein Befund. */}
+            <p className="ec-fundkopf" aria-hidden="true">
+              <span>Anforderung</span><span>belegt in</span><span>ihr</span>
+            </p>
             <ul className="ec-fund">
               {zeilen.map((z) => (
                 <li key={z.key} className={z.ok ? "ec-f-ok" : "ec-f-weg"}>
@@ -316,7 +321,7 @@ export function EignungsCheck({ check, fachgebiete }: {
                     {z.art === "schwelle" && z.median
                       ? <span className="ec-f-med">üblich: {z.median}</span> : null}
                   </span>
-                  <span className="ec-f-quote">belegt in {z.anteil} %</span>
+                  <span className="ec-f-quote">{z.anteil} %</span>
                   <span className={z.ok ? "ec-f-ihr" : "ec-f-ihr ec-f-ihr-weg"}>{z.ihr}</span>
                   {erklaert === z.key ? <p className="ec-erklaerung">{z.was}</p> : null}
                 </li>
@@ -358,9 +363,9 @@ export function EignungsCheck({ check, fachgebiete }: {
               {eigenerKatalog ? ` in ${fachLabel}` : " über alle Fachgebiete"}; Auftragswerte
               nur über die {nf(zelle.mitWert)} Vergaben dieses Zuschnitts mit
               veröffentlichtem Wert, davon liegen {nf(passendeGroesse)} in eurer
-              Grössenordnung. „Belegt in 21 %" heisst: in jedem fünften ausgewerteten
-              Verfahren steht es wörtlich — was unsere Auswertung nicht erfasst hat, fehlt
-              hier. Über die Zulassung im Einzelfall entscheidet die Vergabestelle.
+              Grössenordnung. „Belegt in {zeilen[0]?.anteil ?? 0} %" heisst: in so vielen der
+              ausgewerteten Verfahren steht es wörtlich — was unsere Auswertung nicht erfasst
+              hat, fehlt hier. Über die Zulassung im Einzelfall entscheidet die Vergabestelle.
             </p>
           </div>
         </div>

@@ -447,3 +447,13 @@
   .ec-f-ihr { grid-column: 3; grid-row: 2; min-width: 0; }
   .ec-bignum { font-size: 34px; }
 }
+
+/* Kopfzeile der Fundliste. Dieselben Spaltenbreiten wie die Zeilen darunter, damit sie
+   nicht verrutscht: das leere erste Feld hält die Häkchen-Spalte frei. */
+.ec-fundkopf { display: grid; grid-template-columns: 20px 1fr auto auto; gap: 12px;
+  margin: 0 0 2px; padding-bottom: 7px; border-bottom: 1px solid var(--line-strong, #CFD6D3);
+  font-size: 9.5px; font-weight: 700; letter-spacing: .09em; text-transform: uppercase;
+  color: var(--ink-400, #8C9B95); }
+.ec-fundkopf span:first-child { grid-column: 2; }
+.ec-fundkopf span:nth-child(3) { min-width: 74px; text-align: right; }
+@media (max-width: 620px) { .ec-fundkopf { display: none; } }
