@@ -1,60 +1,119 @@
-/* Öffentliche Startseite. Eigenes Blatt, nicht `landing.css` — das gehört dem
-   Outreach-Deck unter /t/<token> und hat eine andere Aufgabe (persönlich, mit Namen des
-   Empfängers). Zwei Seiten, zwei Tonlagen, zwei Stylesheets. */
-.lp { max-width: 1040px; margin: 0 auto; padding: 0 24px 64px; color: var(--ink-900, #111827); }
+/* Öffentliche Startseite. Eigenes Blatt, nicht `landing.css` — das gehört dem Outreach-Deck
+   unter /t/<token> und hat eine andere Tonlage (persönlich, mit Namen des Empfängers).
 
-.lp-kopf { display: flex; align-items: center; justify-content: space-between;
-  padding: 20px 0; }
-.lp-marke { font-weight: 700; font-size: 20px; letter-spacing: -0.01em; }
-.lp-nav { display: flex; align-items: center; gap: 18px; font-size: var(--t-sm, 14px); }
-.lp-nav a { color: var(--ink-700, #374151); text-decoration: none; }
-.lp-nav a:hover { color: var(--ink-900, #111827); }
+   Die erste Fassung war typografisch sauber und wirkte tot: schwarze Schrift auf Weiss,
+   vier nackte Zahlen, drei Textabsätze. Was fehlte, war nicht Schmuck, sondern der BEWEIS —
+   deshalb liegt jetzt das Gewicht auf der Beispielkarte rechts, und die Farbe dient ihr. */
 
-.lp-knopf { display: inline-block; background: var(--signal-deep, #0f766e); color: #fff;
-  padding: 9px 16px; border-radius: 9px; font-weight: 600; text-decoration: none; }
-.lp-knopf:hover { filter: brightness(1.07); }
-.lp-knopf-gross { padding: 13px 22px; font-size: 15px; }
+.lp { --grad-a: #F2FAF6; --grad-b: #FFFFFF;
+  max-width: 1120px; margin: 0 auto; padding: 0 24px 72px;
+  color: var(--ink-900, #12211D); }
 
-/* HELD. Eine Aussage, kein Absatzgebirge: wer hier nach drei Zeilen nicht weiss, worum es
-   geht, liest die vierte nicht mehr. */
-.lp-held { padding: 56px 0 40px; max-width: 46rem; }
-.lp-held h1 { font-size: clamp(30px, 4.4vw, 46px); line-height: 1.12; letter-spacing: -0.02em;
-  margin: 0 0 18px; }
-.lp-lead { font-size: 18px; line-height: 1.55; color: var(--ink-700, #374151); margin: 0 0 28px; }
-.lp-aktionen { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
-.lp-still { color: var(--ink-500, #6b7280); text-decoration: none; font-size: var(--t-sm, 14px); }
-.lp-still:hover { color: var(--ink-900, #111827); }
+.lp-kopf { display: flex; align-items: center; justify-content: space-between; padding: 20px 0; }
+.lp-marke { font-weight: 700; font-size: 19px; letter-spacing: -0.015em; }
+.lp-nav { display: flex; align-items: center; gap: 20px; font-size: 14px; }
+.lp-nav a { color: var(--ink-700, #33453F); text-decoration: none; }
+.lp-nav a:hover { color: var(--ink-900, #12211D); }
 
-/* ZAHLEN. Gemessen, nicht behauptet — deshalb stehen sie gleich hinter dem Versprechen
-   und nicht im Kleingedruckten. */
-.lp-zahlen { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0 24px;
-  border-top: 1px solid var(--line, #e5e7eb); border-bottom: 1px solid var(--line, #e5e7eb);
-  padding: 22px 0; margin: 8px 0 56px; }
-.lp-zahlen b { display: block; font-size: 26px; font-variant-numeric: tabular-nums;
-  letter-spacing: -0.01em; }
-.lp-zahlen span { font-size: var(--t-meta, 12px); color: var(--ink-500, #6b7280); }
+.lp-knopf { display: inline-block; background: var(--signal-deep, #067A55); color: #fff;
+  padding: 9px 17px; border-radius: 10px; font-weight: 600; font-size: 14px;
+  text-decoration: none; box-shadow: 0 1px 2px rgba(6,122,85,.28); transition: .15s; }
+.lp-knopf:hover { background: #056848; box-shadow: 0 3px 10px rgba(6,122,85,.26);
+  transform: translateY(-1px); }
+.lp-knopf-gross { padding: 14px 26px; font-size: 16px; border-radius: 12px; }
 
-.lp-block { padding: 44px 0; }
-.lp-block h2 { font-size: 24px; letter-spacing: -0.01em; margin: 0 0 22px; }
-.lp-drei { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; }
-.lp-drei h3 { font-size: 16px; margin: 0 0 8px; }
-.lp-drei p { margin: 0; color: var(--ink-700, #374151); line-height: 1.55;
-  font-size: var(--t-sm, 14px); }
+/* HELD: Text links, Beweis rechts. Auf schmalen Geräten untereinander, Beweis zuerst
+   nach dem Text — er ist das Argument, nicht die Dekoration. */
+.lp-held { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr);
+  gap: 56px; align-items: start; padding: 40px 0 52px; }
+.lp-auge { font-size: 12px; font-weight: 600; letter-spacing: .07em; text-transform: uppercase;
+  color: var(--signal-deep, #067A55); margin: 0 0 14px; }
+.lp-held h1 { font-size: clamp(32px, 3.6vw, 46px); line-height: 1.1; letter-spacing: -0.025em;
+  margin: 0 0 20px; font-weight: 700; }
+.lp-held h1 em { font-style: normal; color: var(--signal-deep, #067A55); }
+.lp-lead { font-size: 17px; line-height: 1.6; color: var(--ink-700, #33453F); margin: 0 0 30px;
+  max-width: 40rem; }
+.lp-aktionen { display: flex; align-items: center; gap: 22px; flex-wrap: wrap; }
+.lp-still { color: var(--ink-500, #64766F); text-decoration: none; font-size: 14px;
+  border-bottom: 1px solid var(--line-strong, #CFD6D3); padding-bottom: 1px; }
+.lp-still:hover { color: var(--ink-900, #12211D); border-color: var(--ink-500, #64766F); }
+.lp-fussnote { margin: 14px 0 0; font-size: 13px; color: var(--ink-400, #8C9B95); }
 
-.lp-hell { background: var(--surface-2, #f9fafb); border-radius: 14px; padding: 32px 28px; }
-.lp-quellen { font-size: 15px; color: var(--ink-700, #374151); margin: 0 0 10px; }
-.lp-klein { font-size: var(--t-sm, 14px); color: var(--ink-500, #6b7280); line-height: 1.55;
-  margin: 0; max-width: 62ch; }
+/* DIE BEWEISKARTE. Sie sieht aus wie ein Stück Produkt, weil sie eines ist: derselbe
+   Vorgang, dieselben Zitate, die drinnen im Lead-Detail stehen. */
+.lp-probe { background: linear-gradient(180deg, var(--grad-a) 0%, var(--grad-b) 62%);
+  border: 1px solid var(--line, #E3E7E5); border-radius: 16px; padding: 22px 22px 18px;
+  box-shadow: 0 12px 32px rgba(18,33,29,.07); }
+.lp-probe-kopf { display: flex; align-items: center; justify-content: space-between;
+  gap: 12px; margin-bottom: 14px; }
+.lp-marker { font-size: 11px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase;
+  color: var(--signal-deep, #067A55); background: var(--signal-wash, #E7F7F1);
+  padding: 4px 9px; border-radius: 999px; }
+.lp-frist { font-size: 12px; font-weight: 600; color: var(--flag, #B45309);
+  background: var(--flag-wash, #FBF2E6); padding: 4px 9px; border-radius: 999px;
+  white-space: nowrap; }
+.lp-probe h2 { font-size: 18px; line-height: 1.35; margin: 0 0 4px; letter-spacing: -0.01em; }
+.lp-probe-meta { font-size: 13px; color: var(--ink-500, #64766F); margin: 0 0 16px; }
 
-.lp-schluss { border-top: 1px solid var(--line, #e5e7eb); }
-.lp-schluss p { color: var(--ink-700, #374151); max-width: 52ch; margin: 0 0 22px; }
+.lp-punkte { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.lp-punkte li { background: #fff; border: 1px solid var(--line, #E3E7E5); border-radius: 11px;
+  padding: 11px 13px; }
+.lp-punkt-label { display: block; font-size: 11px; font-weight: 700; letter-spacing: .04em;
+  text-transform: uppercase; color: var(--ink-500, #64766F); margin-bottom: 5px; }
+/* Das Zitat ist der Kern des Versprechens, also bekommt es die Auszeichnung: eigener
+   Randstrich, eigene Schrift. Wer scrollt, soll genau hier hängenbleiben. */
+.lp-punkte blockquote { margin: 0; font-size: 13.5px; line-height: 1.5;
+  color: var(--ink-900, #12211D); border-left: 3px solid var(--signal, #10B981);
+  padding-left: 10px; }
+.lp-punkte cite { display: block; margin-top: 6px; font-style: normal; font-size: 11px;
+  color: var(--ink-400, #8C9B95); font-family: var(--mono, ui-monospace, monospace); }
+.lp-probe-fuss { margin: 14px 0 0; font-size: 12px; color: var(--ink-500, #64766F);
+  line-height: 1.5; }
 
-.lp-fuss { display: flex; justify-content: space-between; align-items: baseline;
-  border-top: 1px solid var(--line, #e5e7eb); padding-top: 18px; gap: 16px; flex-wrap: wrap; }
+/* ZAHLEN als Band, nicht als vier Krümel: eigener Grund, damit sie im Scrollen einen
+   Halt bilden. */
+.lp-zahlen { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px;
+  background: var(--surface-2, #FAFBFA); border: 1px solid var(--line, #E3E7E5);
+  border-radius: 14px; padding: 22px 26px; margin: 8px 0 12px; }
+.lp-zahlen b { display: block; font-size: 27px; font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em; line-height: 1.15; }
+.lp-zahlen span { font-size: 12px; color: var(--ink-500, #64766F); }
 
-@media (max-width: 720px) {
-  /* Vier Zahlen nebeneinander sind auf 375 px vier Krümel. Zwei Reihen zu zwei. */
-  .lp-zahlen { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px 20px; }
-  .lp-drei { grid-template-columns: 1fr; gap: 22px; }
-  .lp-held { padding: 36px 0 28px; }
+.lp-block { padding: 48px 0; }
+.lp-h2 { font-size: 25px; letter-spacing: -0.02em; margin: 0 0 26px; }
+.lp-drei { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 26px; }
+.lp-drei article { background: #fff; border: 1px solid var(--line, #E3E7E5); border-radius: 14px;
+  padding: 22px 20px; transition: .15s; }
+.lp-drei article:hover { border-color: var(--line-strong, #CFD6D3);
+  box-shadow: 0 8px 22px rgba(18,33,29,.06); transform: translateY(-2px); }
+.lp-symbol { display: inline-flex; align-items: center; justify-content: center;
+  width: 38px; height: 38px; border-radius: 11px; background: var(--signal-wash, #E7F7F1);
+  color: var(--signal-deep, #067A55); margin-bottom: 14px; }
+.lp-symbol svg { width: 21px; height: 21px; }
+.lp-drei h3 { font-size: 16px; margin: 0 0 8px; letter-spacing: -0.01em; }
+.lp-drei p { margin: 0; color: var(--ink-700, #33453F); line-height: 1.6; font-size: 14px; }
+
+.lp-hell { background: var(--surface-2, #FAFBFA); border: 1px solid var(--line, #E3E7E5);
+  border-radius: 16px; padding: 34px 30px; }
+.lp-laender { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px;
+  margin-bottom: 18px; }
+.lp-laender b { display: block; font-size: 15px; }
+.lp-laender span { font-size: 13px; color: var(--ink-500, #64766F);
+  font-variant-numeric: tabular-nums; }
+.lp-klein { font-size: 13.5px; color: var(--ink-500, #64766F); line-height: 1.6; margin: 0;
+  max-width: 66ch; }
+
+.lp-schluss { border-top: 1px solid var(--line, #E3E7E5); }
+.lp-schluss p { color: var(--ink-700, #33453F); max-width: 54ch; margin: 0 0 24px;
+  font-size: 15px; line-height: 1.6; }
+
+.lp-fuss { display: flex; justify-content: space-between; align-items: baseline; gap: 16px;
+  border-top: 1px solid var(--line, #E3E7E5); padding-top: 20px; flex-wrap: wrap; }
+
+@media (max-width: 900px) {
+  /* Der Beweis rutscht unter den Text — er bleibt das Argument, verliert nur den Platz
+     daneben. Vier Zahlen nebeneinander sind auf 375 px vier Krümel: zwei mal zwei. */
+  .lp-held { grid-template-columns: 1fr; gap: 34px; padding-top: 28px; }
+  .lp-zahlen { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .lp-drei, .lp-laender { grid-template-columns: 1fr; }
 }

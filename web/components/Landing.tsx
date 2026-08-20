@@ -6,28 +6,41 @@ import "../app/landing-oeffentlich.css";
  * Öffentliche Startseite — was jemand sieht, der den Namen gehört hat und nachsieht.
  *
  * **Die Lücke, die sie schliesst.** Bis zum 2026-08-20 gab es zwei Eingänge: die
- * Outreach-Landing unter `/t/<token>` für Angeschriebene, und `/login` für Kunden
- * („Willkommen zurück"). Wer weder angeschrieben noch Kunde war, fand keinen Satz darüber,
- * was goVisor eigentlich tut.
+ * Outreach-Landing unter `/t/<token>` für Angeschriebene und `/login` für Kunden
+ * („Willkommen zurück"). Wer weder das eine noch das andere war, fand keinen Satz darüber,
+ * was goVisor tut.
  *
- * **Warum die Zahlen aus einer Datei kommen** (`web/data/landing.json`, geschrieben von
- * `scripts/export_landing.py`): eine Startseite, die „über 100.000 Vergaben" im Quelltext
- * behauptet, veraltet in dem Moment, in dem jemand sie tippt, und niemand merkt es. Fehlt
- * die Datei, zeigt die Seite den Zahlenblock gar nicht — lieber keine Zahl als eine alte.
+ * **Warum ein echter Vorgang im Blickfang steht.** Die erste Fassung erklärte in drei
+ * Absätzen, dass zu jeder Anforderung ein wörtliches Zitat gehört. Svens Urteil: „wirkt
+ * langweilig". Zu Recht — das Versprechen dieses Produkts lässt sich zeigen statt behaupten.
+ * Rechts steht deshalb eine echte offene Ausschreibung mit ihren belegten Anforderungen,
+ * ausgesucht von `scripts/export_landing.py` nach Kriterien (offen, Frist in der Zukunft,
+ * mindestens drei VERSCHIEDENE Anforderungsarten). Von Hand ausgesucht stünde dort eines
+ * Tages ein abgelaufenes Verfahren.
  *
- * **Provisorisch heisst hier: ehrlich statt vollständig.** Kein Preis, kein Testimonial,
- * keine Feature-Matrix. Was drinsteht, ist gemessen und im Produkt nachprüfbar.
+ * **Alle Zahlen und der Beispielvorgang kommen aus `web/data/landing.json`.** Eine im
+ * Quelltext getippte Zahl veraltet in dem Moment, in dem jemand sie tippt, und sieht im JSX
+ * trotzdem aus wie eine Tatsache. Fehlt die Datei, entfallen Zahlenblock und Beispiel —
+ * lieber weniger zeigen als Altes.
  */
 
+type Punkt = { label: string; zitat: string; datei: string };
 type Zahlen = {
   stand: string; vergaben: number; offen: number;
   laender: Record<string, { gesamt: number; offen: number }>;
   vergabestellen_de: number; fachgebiete_de: number;
   unterlagen_volltext: number; unterlagen_analysiert: number;
+  beispiel: { titel: string; kaeufer: string; region: string; frist: string; punkte: Punkt[] } | null;
 };
 
 const LAND_NAME: Record<string, string> = { DE: "Deutschland", AT: "Österreich", CH: "Schweiz" };
 const nf = (n: number) => n.toLocaleString("de-DE");
+
+/** Tage bis zur Frist — auf der Startseite die einzige Zahl, die sich täglich ändert. */
+function restTage(iso: string): number {
+  const ms = Date.parse(`${iso}T23:59:59`) - Date.now();
+  return Math.max(0, Math.ceil(ms / 86_400_000));
+}
 
 export async function Landing() {
   let z: Zahlen | null = null;
@@ -35,6 +48,7 @@ export async function Landing() {
     const roh = await loadDataFile("landing.json");
     z = roh ? (JSON.parse(roh) as Zahlen) : null;
   } catch { z = null; }
+  const b = z?.beispiel ?? null;
 
   return (
     <main className="lp">
@@ -47,16 +61,47 @@ export async function Landing() {
       </header>
 
       <section className="lp-held">
-        <h1>Öffentliche Aufträge, aufbereitet bis zur Entscheidung.</h1>
-        <p className="lp-lead">
-          goVisor sammelt Ausschreibungen aus Deutschland, Österreich und der Schweiz,
-          liest die Vergabeunterlagen aus und sagt euch, was drinsteht: welche Nachweise
-          gefordert sind, wie der Zuschlag gewichtet wird, wer bisher gewonnen hat.
-        </p>
-        <div className="lp-aktionen">
-          <Link className="lp-knopf lp-knopf-gross" href="/onboarding">Kostenlos starten</Link>
-          <Link className="lp-still" href="/login">Ich habe schon ein Konto</Link>
+        <div className="lp-held-text">
+          <p className="lp-auge">Ausschreibungen aus DACH, bis zur Entscheidung aufbereitet</p>
+          <h1>
+            Ihr seht nicht nur, <em>dass</em> ausgeschrieben wird.
+            <br />Ihr seht, <em>was</em> drinsteht.
+          </h1>
+          <p className="lp-lead">
+            goVisor holt die Vergabeunterlagen, liest sie aus und legt die Anforderungen offen:
+            welche Nachweise gefordert sind, welche Summen dahinterstehen, wo die K.-o.-Kriterien
+            liegen. Zu jeder Aussage das wörtliche Zitat aus dem Dokument.
+          </p>
+          <div className="lp-aktionen">
+            <Link className="lp-knopf lp-knopf-gross" href="/onboarding">Kostenlos starten</Link>
+            <Link className="lp-still" href="/login">Ich habe schon ein Konto</Link>
+          </div>
+          <p className="lp-fussnote">Kein Vertrag, keine Kündigungsfrist.</p>
         </div>
+
+        {b ? (
+          <aside className="lp-probe" aria-label="Beispiel aus dem Bestand">
+            <div className="lp-probe-kopf">
+              <span className="lp-marker">Echter Vorgang, gerade offen</span>
+              <span className="lp-frist">noch {restTage(b.frist)} Tage</span>
+            </div>
+            <h2>{b.titel}</h2>
+            <p className="lp-probe-meta">{b.kaeufer}{b.region ? ` · ${b.region}` : ""}</p>
+            <ul className="lp-punkte">
+              {b.punkte.map((p, i) => (
+                <li key={i}>
+                  <span className="lp-punkt-label">{p.label}</span>
+                  <blockquote>„{p.zitat}"</blockquote>
+                  {p.datei ? <cite>{p.datei}</cite> : null}
+                </li>
+              ))}
+            </ul>
+            <p className="lp-probe-fuss">
+              Ausgelesen aus den Vergabeunterlagen. Was sich nicht wörtlich belegen lässt,
+              verwerfen wir.
+            </p>
+          </aside>
+        ) : null}
       </section>
 
       {z ? (
@@ -69,9 +114,17 @@ export async function Landing() {
       ) : null}
 
       <section className="lp-block">
-        <h2>Drei Dinge, die anderswo fehlen</h2>
+        <h2 className="lp-h2">Drei Dinge, die anderswo fehlen</h2>
         <div className="lp-drei">
           <article>
+            <span className="lp-symbol" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"
+                   strokeLinecap="round" strokeLinejoin="round">
+                <path d="M3 8h18" /><path d="M6 8V5.5A1.5 1.5 0 0 1 7.5 4h9A1.5 1.5 0 0 1 18 5.5V8" />
+                <path d="M5 8v10.5A1.5 1.5 0 0 0 6.5 20h11a1.5 1.5 0 0 0 1.5-1.5V8" />
+                <path d="M9 13h6" strokeWidth="2.2" />
+              </svg>
+            </span>
             <h3>Auch unterhalb der Schwelle</h3>
             <p>
               Der grösste Teil der öffentlichen Aufträge wird nie EU-weit ausgeschrieben.
@@ -79,6 +132,13 @@ export async function Landing() {
             </p>
           </article>
           <article>
+            <span className="lp-symbol" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"
+                   strokeLinecap="round" strokeLinejoin="round">
+                <path d="M6 3h8l4 4v14a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z" />
+                <path d="M14 3v4h4" /><path d="M8 12h7M8 15.5h7M8 19h4" />
+              </svg>
+            </span>
             <h3>Die Unterlagen, nicht nur die Anzeige</h3>
             <p>
               Was zählt, steht selten in der Bekanntmachung. Wir holen die Vergabeunterlagen,
@@ -87,6 +147,12 @@ export async function Landing() {
             </p>
           </article>
           <article>
+            <span className="lp-symbol" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"
+                   strokeLinecap="round" strokeLinejoin="round">
+                <path d="M20 6 9 17l-5-5" strokeWidth="2.4" />
+              </svg>
+            </span>
             <h3>Jede Aussage mit Beleg</h3>
             <p>
               Zu jeder Anforderung steht das wörtliche Zitat aus dem Dokument daneben. Was sich
@@ -97,36 +163,35 @@ export async function Landing() {
       </section>
 
       <section className="lp-block lp-hell">
-        <h2>Woher die Daten kommen</h2>
-        <p className="lp-quellen">
+        <h2 className="lp-h2">Woher die Daten kommen</h2>
+        <div className="lp-laender">
           {z
-            ? Object.entries(z.laender).map(([k, v], i) => (
-                <span key={k}>
-                  {i > 0 ? " · " : ""}
-                  <b>{LAND_NAME[k] ?? k}</b> {nf(v.gesamt)} Vergaben, {nf(v.offen)} offen
-                </span>
+            ? Object.entries(z.laender).map(([k, v]) => (
+                <div key={k}>
+                  <b>{LAND_NAME[k] ?? k}</b>
+                  <span>{nf(v.gesamt)} Vergaben · {nf(v.offen)} offen</span>
+                </div>
               ))
-            : "Deutschland, Österreich und die Schweiz"}
-        </p>
+            : null}
+        </div>
         <p className="lp-klein">
           Amtliche Quellen: TED für die EU-weiten Verfahren, die nationalen Portale für alles
           darunter. Kein Zukauf, keine Zweitverwertung. Was fehlt, sagen wir statt es zu
-          erfinden.
-          {z ? ` Stand ${new Date(z.stand).toLocaleDateString("de-DE")}.` : ""}
+          erfinden.{z ? ` Stand ${new Date(z.stand).toLocaleDateString("de-DE")}.` : ""}
         </p>
       </section>
 
       <section className="lp-block lp-schluss">
-        <h2>Anfangen kostet nichts</h2>
+        <h2 className="lp-h2">Anfangen kostet nichts</h2>
         <p>
           Profil anlegen, Fachgebiet und Umkreis wählen, passende Ausschreibungen ansehen.
-          Ohne Vertrag, ohne Kündigungsfrist.
+          Wenn nichts dabei ist, habt ihr zehn Minuten verloren und wisst mehr über euren Markt.
         </p>
         <Link className="lp-knopf lp-knopf-gross" href="/onboarding">Kostenlos starten</Link>
       </section>
 
       <footer className="lp-fuss">
-        <span>goVisor</span>
+        <span className="lp-marke">goVisor</span>
         <span className="lp-klein">Diese Seite ist vorläufig und wird noch überarbeitet.</span>
       </footer>
     </main>

@@ -52,6 +52,50 @@ def main() -> int:
         except Exception:                                      # noqa: BLE001
             return 0
 
+    # ── EIN ECHTES BEISPIEL ──────────────────────────────────────────────────────────────
+    # Die Startseite behauptet, dass zu jeder Anforderung das woertliche Zitat danebensteht.
+    # Das kann man schreiben — oder zeigen. Gezeigt wird ein ECHTER offener Vorgang mit
+    # seinen belegten Anforderungen; ausgesucht nach Kriterien, nicht von Hand, damit er
+    # nicht eines Tages abgelaufen auf der Startseite steht.
+    #
+    # Alles daran ist oeffentlich: Vergabebekanntmachungen und ihre Unterlagen sind es von
+    # Natur aus. Trotzdem bewusst nur DREI Anforderungen und gekuerzte Zitate — die Seite
+    # soll neugierig machen, nicht die Auswertung ersetzen.
+    beispiel = None
+    try:
+        analysen = json.loads((ROOT / "web/data/doc-analysis.json").read_text(encoding="utf-8"))
+        offen_map = {r[0]: r[1:] for r in con.execute(
+            f"""SELECT lead_id, title, buyer_name, deadline_date, buyer_region_name
+                FROM '{de}' WHERE phase='open' AND deadline_date >= current_date
+                  AND title IS NOT NULL""").fetchall()}
+        beste = None
+        for lid, a_ in analysen.items():
+            wo = offen_map.get(lid)
+            if not wo:
+                continue
+            treffer = [c for c in (a_.get("checklist") or [])
+                       if isinstance(c, dict) and c.get("quote") and c.get("label")]
+            typen = {c.get("req_type") for c in treffer}
+            # Verschiedene Anforderungsarten sind aussagekraeftiger als viele gleiche:
+            # dreimal „Ausschlussgrund" zeigt weniger als Haftpflicht + Umsatz + Referenz.
+            if len(typen) >= 3 and (beste is None or len(typen) > beste[0]):
+                beste = (len(typen), lid, wo, treffer)
+        if beste:
+            _, lid, (titel, kaeufer, frist, region), treffer = beste
+            gesehen, punkte = set(), []
+            for c in treffer:
+                if c["req_type"] in gesehen:
+                    continue
+                gesehen.add(c["req_type"])
+                punkte.append({"label": c["label"], "zitat": c["quote"][:150],
+                               "datei": (c.get("source_file") or "").split("/")[-1][:60]})
+                if len(punkte) == 3:
+                    break
+            beispiel = {"titel": titel[:90], "kaeufer": kaeufer, "region": region,
+                        "frist": str(frist), "punkte": punkte}
+    except Exception:                                          # noqa: BLE001
+        beispiel = None                                        # ohne Beispiel bleibt die Seite ganz
+
     daten = {
         "stand": date.today().isoformat(),
         "vergaben": gesamt,
@@ -61,6 +105,7 @@ def main() -> int:
         "fachgebiete_de": cpv,
         "unterlagen_volltext": zaehle("doc-text-index.json"),
         "unterlagen_analysiert": zaehle("doc-analysis.json"),
+        "beispiel": beispiel,
     }
     ZIEL.write_text(json.dumps(daten, ensure_ascii=False), encoding="utf-8")
     print(f"  Startseite: {gesamt:,} Vergaben ({offen:,} offen) aus {len(laender)} Ländern "
