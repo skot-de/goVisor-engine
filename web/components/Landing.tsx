@@ -102,6 +102,17 @@ export async function Landing() {
           <p className="lp-fussnote">Kein Vertrag, keine Kündigungsfrist.</p>
         </div>
 
+        {/* Der Hinweis, dass es weitergeht. Sven wollte „einen pfeil runter als andeutung" —
+            das ist der tragende Teil der Idee und kostet nichts. Er springt auf das Werkzeug,
+            nicht irgendwohin, und trägt deshalb einen Text statt nur ein Zeichen. */}
+        <a className="lp-weiter" href="#check">
+          <span>Was heute offen ist</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"
+               strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <path d="M12 5v14M6 13l6 6 6-6" />
+          </svg>
+        </a>
+
         {b ? (
           <aside className="lp-probe" aria-label="Beispiel aus dem Bestand">
             <div className="lp-probe-kopf">
