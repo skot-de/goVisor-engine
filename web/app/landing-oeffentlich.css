@@ -310,12 +310,13 @@
   padding: 10px 12px; border-radius: 10px; background: #fff;
   border: 1px solid var(--line, #E3E7E5); transition: .14s; }
 .ec-kachel:hover { border-color: var(--ink-300, #B7C2BC); }
-.ec-kachel b { display: block; font-size: 19px; letter-spacing: -.02em; line-height: 1.15;
-  font-variant-numeric: tabular-nums; }
-.ec-kachel span { display: block; margin-top: 2px; font-size: 12px; line-height: 1.3;
-  color: var(--ink-500, #64766F); }
+.ec-kachel b { display: block; font-size: 16px; font-weight: 600; letter-spacing: -.01em;
+  line-height: 1.2; color: var(--ink-800, #1B2E29); font-variant-numeric: tabular-nums; }
+.ec-kachel span { display: block; margin-top: 2px; font-size: 12px; font-weight: 500;
+  line-height: 1.3; color: var(--ink-500, #64766F); }
 .ec-kachel-an { border-color: var(--signal-deep, #067A55); background: var(--signal-wash, #E7F7F1);
   box-shadow: inset 3px 0 0 var(--signal-deep, #067A55); }
+.ec-kachel-an b { color: var(--signal-deep, #067A55); }
 .ec-kachel-an span { color: var(--ink-700, #33453F); }
 
 .lp-h3 { font-size: 23px; font-weight: 700; letter-spacing: -.025em; line-height: 1.2;
@@ -373,7 +374,7 @@
 .ec-bigsub { font-size: 13.5px; color: var(--ink-500, #64766F); margin: 8px 0 0; line-height: 1.55; }
 
 .ec-listenkopf { margin: 22px 0 10px; }
-.ec-listenkopf h3 { font-size: 16px; font-weight: 700; letter-spacing: -.02em; margin: 0 0 3px; }
+.ec-listenkopf h3 { font-size: 15px; font-weight: 650; letter-spacing: -.01em; margin: 0 0 3px; }
 .ec-listenkopf p { font-size: 12px; color: var(--ink-400, #8C9B95); line-height: 1.5; margin: 0; }
 
 .ec-fund { list-style: none; margin: 0; padding: 0; }
@@ -381,7 +382,10 @@
   align-items: center; padding: 10px 0; border-bottom: 1px solid var(--line, #E3E7E5);
   font-size: 13.5px; }
 .ec-fund li:last-child { border-bottom: none; }
-.ec-haken { font-weight: 800; text-align: center; color: var(--signal-deep, #067A55); }
+/* Häkchen und Minus tragen ihre Bedeutung über die Farbe; sie brauchen kein Fettgewicht,
+   und zwölfmal 800 in einer Liste ist genau das Rauschen, das die eine Zahl oben
+   übertönt. */
+.ec-haken { font-weight: 600; text-align: center; color: var(--signal-deep, #067A55); }
 .ec-haken-weg { color: var(--flag, #B45309); }
 .ec-f-name { display: flex; align-items: center; gap: 7px; flex-wrap: wrap; line-height: 1.35; }
 .ec-f-med { font-size: 11px; color: var(--ink-400, #8C9B95); }
@@ -401,11 +405,12 @@
   line-height: 1.6; color: var(--ink-700, #33453F); background: var(--surface-2, #FAFBFA);
   border: 1px solid var(--line, #E3E7E5); border-radius: 8px; }
 
+.ec-summe b { font-weight: 600; }
 .ec-summe { display: flex; align-items: baseline; gap: 12px; margin: 0; padding: 13px 0 0;
-  border-top: 2px solid var(--ink-900, #12211D); font-size: 13.5px; }
-.ec-summe > span:first-child { color: var(--ink-400, #8C9B95); font-weight: 700; }
-.ec-summe-p { margin-left: auto; font-size: 15px; font-weight: 700;
-  color: var(--signal-deep, #067A55); font-variant-numeric: tabular-nums; white-space: nowrap; }
+  border-top: 1px solid var(--line-strong, #CFD6D3); font-size: 13.5px; }
+.ec-summe > span:first-child { color: var(--ink-400, #8C9B95); font-weight: 400; }
+.ec-summe-p { margin-left: auto; font-size: 15px; font-weight: 600;
+  color: var(--ink-800, #1B2E29); font-variant-numeric: tabular-nums; white-space: nowrap; }
 
 .ec-luecke { margin: 16px 0 0; padding: 12px 14px; border-radius: 10px; font-size: 13.5px;
   line-height: 1.55; background: #FBF2E6; border: 1px solid #F0E2C2; color: var(--flag, #B45309); }
@@ -427,8 +432,8 @@
 /* Kopfzeile der Fundliste. Dieselben Spaltenbreiten wie die Zeilen darunter, damit sie
    nicht verrutscht: das leere erste Feld hält die Häkchen-Spalte frei. */
 .ec-fundkopf { display: grid; grid-template-columns: 20px 1fr auto auto; gap: 12px;
-  margin: 0 0 2px; padding-bottom: 7px; border-bottom: 1px solid var(--line-strong, #CFD6D3);
-  font-size: 9.5px; font-weight: 700; letter-spacing: .09em; text-transform: uppercase;
+  margin: 0 0 2px; padding-bottom: 7px; border-bottom: 1px solid var(--line, #E3E7E5);
+  font-size: 9.5px; font-weight: 600; letter-spacing: .09em; text-transform: uppercase;
   color: var(--ink-400, #8C9B95); }
 .ec-fundkopf span:first-child { grid-column: 2; }
 .ec-fundkopf span:nth-child(3) { min-width: 74px; text-align: right; }
@@ -458,7 +463,8 @@
 .ec-schritte li { display: flex; align-items: center; gap: 7px; font-size: 12.5px;
   color: var(--ink-400, #8C9B95); padding: 5px 12px 5px 6px; border-radius: 100px; }
 .ec-schritte b { display: grid; place-items: center; width: 20px; height: 20px; border-radius: 50%;
-  font-size: 11px; background: var(--surface-3, #F1F3F2); color: var(--ink-500, #64766F); }
+  font-size: 11px; font-weight: 600; background: var(--surface-3, #F1F3F2);
+  color: var(--ink-500, #64766F); }
 .ec-s-jetzt { color: var(--signal-deep, #067A55); background: var(--signal-wash, #E7F7F1);
   font-weight: 600; }
 .ec-s-jetzt b { background: var(--signal-deep, #067A55); color: #fff; }
@@ -470,15 +476,15 @@
 .ec-zu:hover { background: var(--surface-3, #F1F3F2); color: var(--ink-900, #12211D); }
 
 .ec-fenster-koerper { padding: 22px 24px; overflow-y: auto; }
-.ec-d-h { font-size: 20px; font-weight: 700; letter-spacing: -.03em; margin: 0 0 4px; }
+.ec-d-h { font-size: 17px; font-weight: 650; letter-spacing: -.015em; margin: 0 0 4px; }
 .ec-d-sub { font-size: 13.5px; color: var(--ink-500, #64766F); margin: 0 0 18px; }
 .ec-d-fuss { font-size: 13px; line-height: 1.6; color: var(--ink-500, #64766F); margin: 16px 0 0; }
 
 
 .ec-teaser { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px;
   margin: 0; padding: 18px 0 0; border-top: 1px solid var(--line, #E3E7E5); }
-.ec-teaser b { display: block; font-size: 27px; font-weight: 700; letter-spacing: -.03em;
-  line-height: 1; color: var(--signal-deep, #067A55); font-variant-numeric: tabular-nums; }
+.ec-teaser b { display: block; font-size: 20px; font-weight: 600; letter-spacing: -.02em;
+  line-height: 1.1; color: var(--ink-900, #12211D); font-variant-numeric: tabular-nums; }
 .ec-teaser span { display: block; margin-top: 6px; font-size: 12.5px; line-height: 1.4;
   color: var(--ink-700, #33453F); }
 
@@ -526,12 +532,27 @@
   border-radius: 0; background: none; box-shadow: none; }
 .ec-fenster-koerper { padding: 22px 26px; flex: 1; }
 
-/* Kopfzeile über beide Bereiche: sie hält den Titel an dem fest, was er benennt, und füllt
+/* ─── RANGFOLGE ────────────────────────────────────────────────────────────────────
+   Gemessen am 2026-08-21: 18 Elemente im Schnitt 700 in EINEM Abschnitt, und die drei
+   angeblichen Ebenen lagen bei 19, 21 und 22 px — drei Punkte auseinander liest niemand
+   als Stufen. Die Überschrift der Arbeitsfläche war sogar grösser als der Rahmentitel,
+   die Rangfolge stand also auf dem Kopf. Sven: „ist nun alles etwas zu laut und keine
+   hierachie da?"
+
+   Die Ordnung jetzt, absichtlich mit Abstand zwischen den Stufen:
+     1. Rahmentitel        24 px / 700   — einer je Rahmen
+     2. Abschnitt darin    17 px / 650
+     3. Fliesstext         13,5–14 px / 400
+     4. Beschriftungen     11 px / 700 in Versalien (laut in der Form, leise in der Grösse)
+   Fett bleibt zwei Dingen vorbehalten: dem Titel und der einen Ergebniszahl. Alles andere
+   trägt höchstens 600, damit überhaupt etwas hervorstechen KANN.
+
+   Kopfzeile über beide Bereiche: sie hält den Titel an dem fest, was er benennt, und füllt
    die Ecke, die vorher leer war. */
 .ec-rahmenkopf { grid-column: 1 / -1; display: flex; align-items: baseline;
   justify-content: space-between; gap: 20px; flex-wrap: wrap; padding: 16px 26px;
   border-bottom: 1px solid var(--line, #E3E7E5); }
-.ec-rahmenkopf h2 { font-size: 21px; font-weight: 700; letter-spacing: -.03em; margin: 0; }
+.ec-rahmenkopf h2 { font-size: 24px; font-weight: 700; letter-spacing: -.03em; margin: 0; }
 .ec-rahmenkopf p { font-size: 12.5px; color: var(--ink-500, #64766F); margin: 0;
   font-variant-numeric: tabular-nums; }
 
@@ -550,7 +571,7 @@
   border-top: 1px solid var(--line-strong, #CFD6D3); }
 .ec-zuschnitt { margin-top: 14px; }
 .ec-leer { padding: 34px 26px; }
-.ec-leer h3 { font-size: 22px; font-weight: 700; letter-spacing: -.03em; margin: 0 0 10px; }
+.ec-leer h3 { font-size: 17px; font-weight: 650; letter-spacing: -.015em; margin: 0 0 8px; }
 .ec-leer p { font-size: 14px; line-height: 1.65; color: var(--ink-700, #33453F); margin: 0 0 14px; }
 .ec-leer-f { font-size: 12.5px !important; color: var(--ink-500, #64766F) !important; }
 .ec-fuss-hinweis { font-size: 11.5px; color: var(--ink-400, #8C9B95); }
@@ -574,7 +595,7 @@
 .ec-leer { flex: 1; }
 .ec-leer-p { font-size: 13.5px !important; max-width: 62ch; }
 .ec-fund-still li { grid-template-columns: 20px 1fr auto; padding: 8px 0; }
-.ec-haken-still { color: var(--ink-300, #B7C2BC); font-weight: 700; }
+.ec-haken-still { color: var(--ink-300, #B7C2BC); font-weight: 400; }
 .ec-leer .ec-fundkopf { grid-template-columns: 20px 1fr auto; }
 
 /* Der Inhalt der Bedienleiste klebt, ihr Grund läuft durch. */
