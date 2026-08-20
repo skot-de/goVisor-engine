@@ -2,7 +2,6 @@ import Link from "next/link";
 import { loadDataFile } from "@/lib/dataSource";
 import { EignungsCheck, type Check } from "./EignungsCheck";
 import { StartForm } from "./StartForm";
-import { SanfteHalte } from "./SanfteHalte";
 import "../app/landing-oeffentlich.css";
 
 /**
@@ -58,7 +57,6 @@ export async function Landing() {
 
   return (
     <main className="lp">
-      <SanfteHalte />
       {/* Gründungsleiste. Bewusst OHNE Preisversprechen: die Vorlage warb mit einem
           „Einführungspreis", und der ist nicht beschlossen. Was stimmt und trotzdem trägt,
           ist der Zeitpunkt — wer jetzt kommt, redet mit den Leuten, die es bauen. */}

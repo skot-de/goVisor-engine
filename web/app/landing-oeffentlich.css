@@ -37,11 +37,17 @@
 
    Abgeschaltet auf niedrigen Fenstern und Telefonen: dort ist fast jeder Abschnitt höher
    als das Fenster, und Einrasten wird zum Widerhaken. */
-/* ⚠ Hier stand `scroll-snap-type: y proximity`. Gemessen zieht Chrome damit aus rund
-   300 px und greift schon WÄHREND des Scrollens ein — Sven: „kannst du sie nicht ganz so
-   sticky machen?" Kann CSS nicht: die Fangweite ist nicht einstellbar. Das Andocken macht
-   deshalb `components/SanfteHalte.tsx`, mit 90 px Fangweite und erst nach 140 ms Ruhe.
-   Die Klasse `lp-halt` bleibt und markiert weiterhin die Abschnittsanfänge. */
+/* ⚠ ZWEI VERSUCHE, EIN ERGEBNIS: die Seite rastet nicht ein.
+   Erst `scroll-snap-type: y proximity` — gemessen zieht Chrome damit aus rund 300 px und
+   greift schon WÄHREND des Scrollens ein. Dann ein eigenes Andocken (`SanfteHalte.tsx`,
+   erst nach 140 ms Ruhe, Fangweite von 90 über 60 auf 130). Svens Urteil beim Ausprobieren:
+   „das fühlt sich wie ein korrigieren an, wenn man scrollt." Genau das ist es auch, und
+   zwar prinzipiell: jedes nachträgliche Andocken bewegt die Seite, NACHDEM der Benutzer
+   aufgehört hat — das Auge liest es als Widerspruch zur eigenen Eingabe. Eine kleinere
+   Fangweite macht es seltener, nicht angenehmer.
+   Was die Gliederung tatsächlich trägt, steht ohne Bewegung da: der fast bildschirmhohe
+   Kopf, der Hinweis mit Pfeil und die Abstände zwischen den Abschnitten.
+   `lp-halt` bleibt als Sprungziel für Pfeil und Navigation. */
 .lp-halt { scroll-margin-top: 78px; }
 
 /* Fast, aber nicht ganz bildschirmhoch. „Ganz" hiesse Vollbild-Sektionen mit Einrasten,
