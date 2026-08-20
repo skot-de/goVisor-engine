@@ -207,40 +207,14 @@ export function EignungsCheck({ check, fachgebiete }: {
 
   return (
     <section className="lp-check" id="check">
-      <div className="ec-kopfzeile">
-        <h2 className="lp-h2">Was heute offen ist. Und ob ihr drankommt.</h2>
-        <label className="ec-regionwahl">
-          <span>Region</span>
-          <select value={region} onChange={(e) => setRegion(e.target.value)}>
-            {check.regionen.map((r) => (
-              <option key={r.schluessel} value={r.schluessel}>{r.label}</option>
-            ))}
-          </select>
-        </label>
-      </div>
+      <h2 className="lp-h2 ec-h2">Was heute offen ist. Und ob ihr drankommt.</h2>
 
-      {/* Links wählen, rechts rechnen. Vorher waren das zwei Abschnitte untereinander und
+      {/* Rechts wählen, links rechnen. Vorher waren das zwei Abschnitte untereinander und
           die Verbindung dazwischen musste man sich denken; Sven: „ich weiss nicht, ob alle
           leute die brücke verstehen zwischen branche und dem eignungscheck". Nebeneinander
-          ist die Brücke der Klick selbst. */}
+          ist die Brücke der Klick selbst. Die Auswahl sitzt rechts, weil der Inhalt links
+          das Gewicht trägt („dann ist es nicht so ein rechts übergewicht"). */}
       <div className="ec-zwei">
-        <ul className="ec-kacheln" role="group" aria-label="Fachgebiet wählen">
-          {fachgebiete.map((f) => {
-            const z = check.zellen[`${f.schluessel}|${region}`];
-            return (
-              <li key={f.schluessel}>
-                <button type="button" aria-pressed={fach === f.schluessel}
-                        aria-label={`${f.label}: ${nf(z?.offen ?? 0)} offene Vergaben`}
-                        className={fach === f.schluessel ? "ec-kachel ec-kachel-an" : "ec-kachel"}
-                        onClick={() => waehlen(f.schluessel)}>
-                  <b>{nf(z?.offen ?? 0)}</b>
-                  <span>{f.label}</span>
-                </button>
-              </li>
-            );
-          })}
-        </ul>
-
         <div className="ec-fenster">
           {!fach ? (
             <div className="ec-leer">
@@ -440,6 +414,35 @@ export function EignungsCheck({ check, fachgebiete }: {
               </div>
             </>
           )}
+        </div>
+        {/* Region ÜBER den Kacheln, so breit wie sie: sie ändert deren Zahlen, und ein
+            Regler gehört über das, was er regelt, nicht daneben. Die Spalte steht rechts,
+            damit das Gewicht der Seite nicht nach rechts kippt — links steht der Inhalt. */}
+        <div className="ec-auswahl">
+          <label className="ec-regionwahl">
+            <span>Region</span>
+            <select value={region} onChange={(e) => setRegion(e.target.value)}>
+              {check.regionen.map((r) => (
+                <option key={r.schluessel} value={r.schluessel}>{r.label}</option>
+              ))}
+            </select>
+          </label>
+          <ul className="ec-kacheln" role="group" aria-label="Fachgebiet wählen">
+            {fachgebiete.map((f) => {
+              const z = check.zellen[`${f.schluessel}|${region}`];
+              return (
+                <li key={f.schluessel}>
+                  <button type="button" aria-pressed={fach === f.schluessel}
+                          aria-label={`${f.label}: ${nf(z?.offen ?? 0)} offene Vergaben`}
+                          className={fach === f.schluessel ? "ec-kachel ec-kachel-an" : "ec-kachel"}
+                          onClick={() => waehlen(f.schluessel)}>
+                    <b>{nf(z?.offen ?? 0)}</b>
+                    <span>{f.label}</span>
+                  </button>
+                </li>
+              );
+            })}
+          </ul>
         </div>
       </div>
 
