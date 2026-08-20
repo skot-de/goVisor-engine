@@ -18,6 +18,35 @@ set -uo pipefail
 ROOT="/Users/svko_macmini/PROJEKTE/claude_code/C09_govisor"
 cd "$ROOT" || { echo "Repo-Verzeichnis fehlt: $ROOT"; exit 1; }
 
+# ⛔ SELBSTKOPIE — GEGEN DEN FEHLER, DER DIESEN LAUF SCHON ZWEIMAL GETOETET HAT.
+#
+# Bash liest ein Skript WAEHREND der Ausfuehrung haeppchenweise nach. Wird die Datei in der
+# Zwischenzeit geaendert, liest der laufende Prozess ab der naechsten Nachlade-Grenze an
+# einer falschen Byte-Position weiter. Das Ergebnis sieht aus wie ein Syntaxfehler im Code
+# und ist keiner:
+#
+#   2026-08-17 13:21  ABGEBROCHEN (Code 258) — line 787: syntax error near `else'
+#   2026-08-19 00:13  ABGEBROCHEN (Code 258) — line 787: syntax error near `else'
+#
+# Beide Male lief ein Tageslauf, waehrend am Skript gearbeitet wurde; beim zweiten Mal war
+# ich es selbst, mit sechs Aenderungen zwischen 23:35 und 23:55. Der Lauf war um 00:13 tot,
+# und die Nacht damit verloren.
+#
+# Also: beim Start EINE Kopie anlegen und die ausfuehren. Wer danach am Original arbeitet,
+# aendert eine Datei, die niemand mehr liest. `ROOT` steht hart oben, deshalb ist der Ort
+# der Kopie gleichgueltig.
+if [ "${GOVISOR_TAGESLAUF_KOPIE:-0}" != "1" ]; then
+  _KOPIE="$(mktemp "${TMPDIR:-/tmp}/daily_leads.XXXXXX")" || {
+    echo "Selbstkopie fehlgeschlagen — Lauf abgebrochen, bevor er beginnt."; exit 1; }
+  cat "$0" > "$_KOPIE" && chmod +x "$_KOPIE" || {
+    echo "Selbstkopie nicht schreibbar — Lauf abgebrochen."; exit 1; }
+  # Alte Kopien aufraeumen (aelter als ein Tag). Kein `trap`, weil der Lauf weiter unten
+  # seinen eigenen EXIT-Trap setzt und ein zweiter ihn ersetzen wuerde.
+  find "${TMPDIR:-/tmp}" -maxdepth 1 -name 'daily_leads.*' -mtime +1 -delete 2>/dev/null || true
+  export GOVISOR_TAGESLAUF_KOPIE=1
+  exec /bin/bash "$_KOPIE" "$@"
+fi
+
 LOG_DIR="$ROOT/data/logs"
 LOCK="$ROOT/data/.daily_leads.lock"
 PY="python3"
