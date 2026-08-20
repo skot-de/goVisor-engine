@@ -162,8 +162,30 @@ export async function Landing() {
         </section>
       ) : null}
 
+      {/* Herkunft der Daten: EIN Satz unter den Zahlen statt eines eigenen Abschnitts.
+          Als Abschnitt („Woher die Daten kommen", mit Laenderkacheln) war es korrekt und
+          langweilig — Sven: „ist vll auch nicht so der hit". Es ist ein Vertrauenssignal,
+          kein Verkaufsargument, und Vertrauenssignale gehoeren neben die Zahl, die sie
+          stuetzen. */}
+      {z ? (
+        <p className="lp-herkunft">
+          {Object.entries(z.laender).map(([k, v], i) => (
+            <span key={k}>{i > 0 ? " · " : ""}{LAND_NAME[k] ?? k} {nf(v.gesamt)}</span>
+          ))}
+          {" · "}Amtliche Quellen: TED und die nationalen Portale. Kein Zukauf, keine
+          Zweitverwertung. Stand {new Date(z.stand).toLocaleDateString("de-DE")}.
+        </p>
+      ) : null}
+
       <section className="lp-block">
-        <h2 className="lp-h2">Drei Dinge, die anderswo fehlen</h2>
+        {/* ⚠ Hiess bis zum 2026-08-20 „Drei Dinge, die anderswo fehlen". Sven: „stimmen
+            nicht, ich glaube nicht das wir die einzigen sind." Er hat recht, und wir haben
+            es sogar gemessen: die Analyse eines Wettbewerbers zum Single-Bieter-Anteil war
+            methodisch gleichwertig (s. Auto-Memory `govisor-wettbewerber-auftraege-io`).
+            Eine Behauptung ueber andere, die wir nicht pruefen koennen, ist genau das, was
+            das Produkt drinnen nirgends zulaesst. Also Tatsachen ueber uns statt Urteile
+            ueber andere — das ist ohnehin die staerkere Aussage, weil sie ueberpruefbar ist. */}
+        <h2 className="lp-h2">So arbeitet goVisor</h2>
         <div className="lp-drei">
           <article>
             <span className="lp-symbol" aria-hidden="true">
@@ -177,7 +199,7 @@ export async function Landing() {
             <h3>Auch unterhalb der Schwelle</h3>
             <p>
               Der grösste Teil der öffentlichen Aufträge wird nie EU-weit ausgeschrieben.
-              goVisor liest die nationalen Pflichtveröffentlichungen mit, nicht nur TED.
+              Wir lesen die nationalen Pflichtveröffentlichungen mit, nicht nur TED.
             </p>
           </article>
           <article>
@@ -192,7 +214,7 @@ export async function Landing() {
             <p>
               Was zählt, steht selten in der Bekanntmachung. Wir holen die Vergabeunterlagen,
               lesen Leistungsverzeichnis und Eignungskriterien aus und zeigen die Anforderungen
-              im Klartext.
+              im Klartext, mit Frist und Fundstelle.
             </p>
           </article>
           <article>
@@ -205,29 +227,10 @@ export async function Landing() {
             <h3>Jede Aussage mit Beleg</h3>
             <p>
               Zu jeder Anforderung steht das wörtliche Zitat aus dem Dokument daneben. Was sich
-              nicht belegen lässt, wird verworfen statt geschätzt.
+              nicht belegen lässt, verwerfen wir, statt es zu schätzen.
             </p>
           </article>
         </div>
-      </section>
-
-      <section className="lp-block lp-hell">
-        <h2 className="lp-h2">Woher die Daten kommen</h2>
-        <div className="lp-laender">
-          {z
-            ? Object.entries(z.laender).map(([k, v]) => (
-                <div key={k}>
-                  <b>{LAND_NAME[k] ?? k}</b>
-                  <span>{nf(v.gesamt)} Vergaben · {nf(v.offen)} offen</span>
-                </div>
-              ))
-            : null}
-        </div>
-        <p className="lp-klein">
-          Amtliche Quellen: TED für die EU-weiten Verfahren, die nationalen Portale für alles
-          darunter. Kein Zukauf, keine Zweitverwertung. Was fehlt, sagen wir statt es zu
-          erfinden.{z ? ` Stand ${new Date(z.stand).toLocaleDateString("de-DE")}.` : ""}
-        </p>
       </section>
 
       <section className="lp-block lp-schluss">

@@ -157,3 +157,8 @@
   .lp-horizont li::after { display: none; }
   .lp-horizont li:last-child { padding-bottom: 0; }
 }
+
+/* Herkunftszeile unter dem Zahlenband. Klein, aber nicht versteckt: wer bei „117.493"
+   stutzt, findet hier im selben Blick, woher sie kommen. */
+.lp-herkunft { margin: 10px 2px 0; font-size: 12.5px; line-height: 1.6;
+  color: var(--ink-500, #64766F); font-variant-numeric: tabular-nums; max-width: 82ch; }
