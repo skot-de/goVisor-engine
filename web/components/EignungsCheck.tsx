@@ -124,6 +124,8 @@ export function EignungsCheck({ check, fachgebiete }: {
   });
   const [hat, setHat] = useState<Record<string, boolean>>({});
 
+  const gesamtOffen = fachgebiete.reduce(
+    (summe, f) => summe + (check.zellen[`${f.schluessel}|${region}`]?.offen ?? 0), 0);
   const zelle = check.zellen[`${fach}|${region}`] ?? { offen: 0, mitWert: 0, stufen: [0, 0, 0, 0, 0, 0] };
   const fachLabel = fachgebiete.find((f) => f.schluessel === fach)?.label ?? "eurem Fachgebiet";
   const regionLabel = check.regionen.find((r) => r.schluessel === region)?.label ?? region;
@@ -207,7 +209,6 @@ export function EignungsCheck({ check, fachgebiete }: {
 
   return (
     <section className="lp-check" id="check">
-      <h2 className="lp-h2 ec-h2">Was heute offen ist. Und ob ihr drankommt.</h2>
 
       {/* EIN Kasten, zwei Bereiche: links die Arbeitsfläche, rechts die Bedienleiste.
           Sven: „optisch ist das irgendwie unsauber, die architektur stimmt nicht so ganz."
@@ -217,10 +218,24 @@ export function EignungsCheck({ check, fachgebiete }: {
           gemeinsame Höhe, die Leiste durch ihren Grundton als Bedienung erkennbar.
           Dass die Auswahl rechts steht, bleibt („bring das fenster von rechts nach links"). */}
       <div className="ec-zwei">
+        {/* ⚠ Der Titel stand bis zum 2026-08-21 ÜBER dem Rahmen und wirkte dort, so Sven,
+            „verloren": eine Zeile Text über einem schweren Kasten, ohne Verbindung. Und die
+            linke obere Ecke des Rahmens war leer, während rechts schon die Leiste anfing.
+            Beides derselbe Fehler — dem Rahmen fehlte ein Kopf. Jetzt trägt er ihn über
+            beide Bereiche, und der Titel sitzt an dem, was er benennt. */}
+        <div className="ec-rahmenkopf">
+          <h2>Was heute offen ist. Und ob ihr drankommt.</h2>
+          {/* ⚠ „in überall" stand hier kurz — der Schlüssel „alle" trägt als Beschriftung
+              ein Adverb, das sich nicht in „in …" einsetzen lässt. */}
+          <p>
+            {nf(gesamtOffen)} offene Vergaben in sechs Fachgebieten
+            {region === "alle" ? ", in allen drei Ländern" : `, ${regionLabel}`}
+          </p>
+        </div>
+
         <div className="ec-fenster">
           {!fach ? (
             <div className="ec-leer">
-              <p className="lp-auge">Eignungs-Check</p>
               {/* ⚠ Hier stand bis zum 2026-08-21 nur eine Aufforderung, und der Rest der
                   Fläche war leer — Sven: „optisch ist das irgendwie unsauber". Eine leere
                   Arbeitsfläche neben einer vollen Leiste sieht nach halbfertig aus. Jetzt
@@ -445,6 +460,7 @@ export function EignungsCheck({ check, fachgebiete }: {
               ))}
             </select>
           </label>
+          <p className="ec-leiste-t">Fachgebiet</p>
           <ul className="ec-kacheln" role="group" aria-label="Fachgebiet wählen">
             {fachgebiete.map((f) => {
               const z = check.zellen[`${f.schluessel}|${region}`];

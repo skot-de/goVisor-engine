@@ -300,9 +300,13 @@
 
 /* FACHGEBIETE ALS AUSWAHL. Kacheln, keine Anzeige: sie tragen die Zahl UND schalten den
    Check darunter um. Die Zahl gehört zur gewählten Region, deshalb ändert sie sich mit. */
+/* `grid-auto-rows: 1fr` macht alle Kacheln gleich hoch: „Planung und Beratung"
+   bricht auf zwei Zeilen um, „Sicherheit" nicht — ohne das steht jede zweite
+   Kachel anders hoch da. */
 .ec-kacheln { list-style: none; display: grid; grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 1fr;
   gap: 10px; margin: 18px 0 12px; padding: 0; }
-.ec-kachel { display: block; width: 100%; text-align: left; cursor: pointer; font: inherit;
+.ec-kachel { display: block; width: 100%; height: 100%; text-align: left; cursor: pointer; font: inherit;
   padding: 10px 12px; border-radius: 10px; background: #fff;
   border: 1px solid var(--line, #E3E7E5); transition: .14s; }
 .ec-kachel:hover { border-color: var(--ink-300, #B7C2BC); }
@@ -502,7 +506,6 @@
    sondern die Bewegung selbst. */
 .lp-check { display: block; margin: 56px 0; padding: 34px 0 0;
   border-top: 1px solid var(--line, #E3E7E5); }
-.ec-h2 { margin-bottom: 18px; }
 
 /* ─── EIN RAHMEN, ZWEI BEREICHE ─────────────────────────────────────────────────────
    Vorher: eine schwebende Karte links, eine lose Kachelgruppe rechts, zwei Schatten, zwei
@@ -515,12 +518,22 @@
    klebende Verhalten der Bedienleiste ausser Kraft (gemessen: sie stand bei -36 px). `clip`
    schneidet genauso ab, ohne einen Rollcontainer zu erzeugen. */
 .ec-zwei { display: grid; grid-template-columns: minmax(0, 1fr) 320px; align-items: stretch;
+  grid-template-rows: auto 1fr;
   border: 1px solid var(--line-strong, #CFD6D3); border-radius: 16px; overflow: clip;
   background: #fff; box-shadow: 0 10px 34px rgba(18,33,29,.06); }
 
 .ec-fenster { display: flex; flex-direction: column; min-height: 430px; border: none;
   border-radius: 0; background: none; box-shadow: none; }
 .ec-fenster-koerper { padding: 22px 26px; flex: 1; }
+
+/* Kopfzeile über beide Bereiche: sie hält den Titel an dem fest, was er benennt, und füllt
+   die Ecke, die vorher leer war. */
+.ec-rahmenkopf { grid-column: 1 / -1; display: flex; align-items: baseline;
+  justify-content: space-between; gap: 20px; flex-wrap: wrap; padding: 16px 26px;
+  border-bottom: 1px solid var(--line, #E3E7E5); }
+.ec-rahmenkopf h2 { font-size: 21px; font-weight: 700; letter-spacing: -.03em; margin: 0; }
+.ec-rahmenkopf p { font-size: 12.5px; color: var(--ink-500, #64766F); margin: 0;
+  font-variant-numeric: tabular-nums; }
 
 /* Die Bedienleiste: eigener Grund, klare Kante zur Arbeitsfläche. */
 .ec-auswahl { padding: 18px; background: var(--surface-2, #FAFBFA);
@@ -532,6 +545,9 @@
   border: 1px solid var(--line-strong, #CFD6D3); border-radius: 9px; background: #fff;
   color: inherit; }
 .ec-regionwahl select:focus { outline: 2px solid var(--signal, #10B981); outline-offset: -1px; }
+.ec-leiste-t { margin: 0 0 8px; padding-top: 14px; font-size: 11px; font-weight: 700;
+  letter-spacing: .07em; text-transform: uppercase; color: var(--ink-400, #8C9B95);
+  border-top: 1px solid var(--line-strong, #CFD6D3); }
 .ec-zuschnitt { margin-top: 14px; }
 .ec-leer { padding: 34px 26px; }
 .ec-leer h3 { font-size: 22px; font-weight: 700; letter-spacing: -.03em; margin: 0 0 10px; }
@@ -543,6 +559,9 @@
    im Quelltext hinter dem Feld steht. */
 @media (max-width: 900px) {
   .ec-zwei { grid-template-columns: 1fr; }
+  /* ⚠ `order: -1` schob die Leiste auch vor die Kopfzeile — der Rahmen begann auf dem
+     Telefon mit „REGION" statt mit seinem Titel. Der Kopf braucht deshalb -2. */
+  .ec-rahmenkopf { order: -2; }
   .ec-auswahl { order: -1; border-left: none; border-bottom: 1px solid var(--line, #E3E7E5); }
   .ec-kacheln { grid-template-columns: repeat(3, 1fr); }
   .ec-fenster { min-height: 0; }
