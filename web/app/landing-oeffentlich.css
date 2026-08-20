@@ -219,20 +219,44 @@
 .ec-ergebnis { margin-top: 18px; padding-top: 18px; border-top: 1px dashed var(--line-strong, #CFD6D3); }
 .ec-gross { font-size: 17px; margin: 0 0 4px; }
 .ec-gross b { font-size: 24px; font-variant-numeric: tabular-nums; }
-.ec-satz { font-size: 14px; color: var(--ink-700, #33453F); margin: 0 0 16px; }
 
-.ec-zeilen { list-style: none; margin: 0 0 16px; padding: 0; display: grid; gap: 13px; }
-.ec-zeilen li { display: grid; gap: 4px; }
-.ec-balken { display: block; height: 5px; border-radius: 3px; background: var(--surface-3, #F1F3F2); }
-.ec-balken i { display: block; height: 100%; border-radius: 3px;
-  background: var(--signal, #10B981); transition: width .2s; }
-.ec-zeile-t { font-size: 13.5px; line-height: 1.5; }
-.ec-zeile-t b { font-variant-numeric: tabular-nums; }
-.ec-zeile-q { font-size: 11.5px; color: var(--ink-400, #8C9B95); }
+/* ERGEBNISTABELLE, Optik aus der Vorlage: schmale Kopfzeile in Versalien, eine Zeile je
+   Anforderung, Segmentbalken statt Prozentwurst, Urteil rechts mit Punkt und Grund darunter.
+   Vier gleich gebaute Zeilen kann man vergleichen, vier Fliesstexte nicht. */
+.ec-tabelle { width: 100%; border-collapse: collapse; table-layout: fixed; margin-bottom: 16px; }
+.ec-tabelle th { font-size: 9.5px; font-weight: 700; letter-spacing: .09em; text-transform: uppercase;
+  color: var(--ink-400, #8C9B95); text-align: left; padding: 0 10px 7px 0; white-space: nowrap;
+  border-bottom: 1px solid var(--line-strong, #CFD6D3); }
+.ec-tabelle th:last-child, .ec-tabelle td:last-child { text-align: right; padding-right: 0; }
+.ec-tabelle th:nth-child(2) { width: 124px; }
+.ec-tabelle th:nth-child(3) { width: 34%; }
+.ec-tabelle td { padding: 12px 10px 12px 0; border-bottom: 1px solid var(--line, #E3E7E5);
+  vertical-align: middle; }
+.ec-tabelle tr:last-child td { border-bottom: none; }
+.ec-tr-gut td { background: var(--signal-wash, #E7F7F1); }
+.ec-tr-gut td:first-child { border-radius: 8px 0 0 8px; padding-left: 10px; }
+.ec-tr-gut td:last-child { border-radius: 0 8px 8px 0; padding-right: 10px; }
+.ec-tr-leer td { opacity: .5; }
+.ec-tit { display: block; font-size: 13.5px; font-weight: 600; line-height: 1.3; }
+.ec-mess { white-space: nowrap; }
+.ec-meter { display: inline-flex; gap: 2px; vertical-align: middle; }
+.ec-meter i { display: block; width: 13px; height: 5px; border-radius: 2px;
+  background: var(--surface-3, #F1F3F2); }
+.ec-m1 i:nth-child(-n+1), .ec-m2 i:nth-child(-n+2) { background: var(--flag, #B45309); }
+.ec-m3 i:nth-child(-n+3) { background: #34C08D; }
+.ec-m4 i:nth-child(-n+4), .ec-m5 i:nth-child(-n+5) { background: var(--signal-deep, #067A55); }
+.ec-prozent { margin-left: 8px; font-size: 12px; font-variant-numeric: tabular-nums;
+  color: var(--ink-500, #64766F); }
+.ec-quelle { display: block; margin-top: 2px; font-size: 11px; line-height: 1.4;
+  color: var(--ink-400, #8C9B95); }
+.ec-urteil { white-space: nowrap; }
+.ec-note { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; }
+.ec-note::before { content: ""; width: 6px; height: 6px; border-radius: 50%;
+  background: currentColor; flex: none; }
+.ec-note-gut { color: var(--signal-deep, #067A55); }
+.ec-note-blass { color: var(--ink-400, #8C9B95); }
+.ec-grund { display: block; margin-top: 2px; font-size: 11.5px; color: var(--ink-400, #8C9B95); }
 
-.ec-fazit { font-size: 14px; line-height: 1.6; margin: 0 0 16px;
-  padding: 11px 13px; border-radius: 10px; background: var(--signal-wash, #E7F7F1);
-  color: var(--ink-800, #1B2E29); }
 .ec-fuss { font-size: 11.5px; line-height: 1.6; color: var(--ink-400, #8C9B95); margin: 14px 0 0; }
 
 @media (max-width: 900px) {
@@ -374,3 +398,40 @@
 /* Sprungziele der Kopfleiste ausweichen lassen: ohne das legt sich die klebende Leiste
    nach einem Ankerklick über die Überschrift, zu der gesprungen wurde. */
 .lp [id] { scroll-margin-top: 78px; }
+
+/* ⚠ Diese drei Regeln fielen beim Umbau der Ergebnisanzeige heraus: der Block lag zwischen
+   den ersetzten Regeln, und ein `replace` ohne Prüfung ersetzte danach ins Leere. Sichtbar
+   war es nur daran, dass die Fazit-Zeile ihre Auszeichnung verlor.
+   Die Zeile ist der Abbinder der Tabelle, gebaut wie die Notiz in der Vorlage: Punkt links,
+   Satz in der Mitte, Herkunftsmarke rechts. */
+.ec-fazit { display: flex; align-items: center; gap: 9px; font-size: 13.5px; line-height: 1.55;
+  margin: 0 0 16px; padding: 11px 13px; border-radius: 10px; background: var(--surface-2, #FAFBFA);
+  border: 1px solid var(--line, #E3E7E5); color: var(--ink-800, #1B2E29); }
+.ec-punkt { width: 7px; height: 7px; border-radius: 50%; background: var(--signal, #10B981);
+  flex: none; box-shadow: 0 0 0 3px var(--signal-wash, #E7F7F1); }
+.ec-marke { margin-left: auto; flex: none; font-size: 9.5px; font-weight: 700; letter-spacing: .08em;
+  text-transform: uppercase; color: var(--ink-400, #8C9B95); background: var(--surface-3, #F1F3F2);
+  padding: 4px 9px; border-radius: 100px; white-space: nowrap; }
+@media (max-width: 620px) {
+  .ec-fazit { flex-wrap: wrap; }
+  .ec-marke { margin-left: 16px; }
+}
+
+/* Auf dem Telefon ist eine dreispaltige Tabelle in einem 327-px-Kasten keine Tabelle mehr:
+   die Grundlage stapelte sich zu einer sechszeiligen Säule, und das Urteil stand halb
+   ausserhalb. Unter 620 px wird jede Zeile deshalb zu einer Karte — dieselbe Reihenfolge,
+   nur untereinander. */
+@media (max-width: 620px) {
+  .ec-tabelle, .ec-tabelle tbody, .ec-tabelle tr, .ec-tabelle td { display: block; width: auto; }
+  .ec-tabelle thead { display: none; }
+  .ec-tabelle tr { padding: 11px 12px; border-bottom: 1px solid var(--line, #E3E7E5); }
+  .ec-tabelle tr:last-child { border-bottom: none; }
+  .ec-tabelle td { padding: 0; border: none; background: none !important; }
+  .ec-tr-gut { background: var(--signal-wash, #E7F7F1); border-radius: 10px;
+    border-bottom-color: transparent; }
+  .ec-mess { margin: 8px 0 6px; }
+  .ec-tabelle td:last-child { text-align: left; }
+  .ec-urteil, .ec-grund { white-space: normal; }
+  .ec-note { margin-right: 8px; }
+  .ec-grund { display: inline; }
+}

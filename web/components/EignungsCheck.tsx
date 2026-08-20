@@ -50,6 +50,7 @@ export type Check = {
 };
 
 const nf = (n: number) => n.toLocaleString("de-DE");
+const ZAHLWORT: Record<number, string> = { 2: "Zwei", 3: "Drei", 4: "Vier", 5: "Fünf", 6: "Sechs" };
 
 /** 250000 → „250.000 €", 3000000 → „3 Mio €". Auf einer Auswahlleiste zählt Kürze. */
 function euro(n: number): string {
@@ -108,16 +109,45 @@ export function EignungsCheck({ check, fachgebiete }: {
   // Frage, ob man mitbieten kann, die falsche.
   const passend = zelle.stufen.slice(0, groesse + 1).reduce((a, b) => a + b, 0);
 
+  const TITEL: Record<string, string> = {
+    haftpflicht: "Betriebshaftpflicht", referenzen: "Vergleichbare Referenzen",
+    umsatz: "Jahresumsatz",
+  };
+
   const zeilen = useMemo(() => Object.entries(check.anforderungen).map(([name, a]) => {
     const basis = a.je_fach[fach] ?? a.je_fach["alle"];
     const eigenesFach = Boolean(a.je_fach[fach]);
     const i = antwort[name] ?? 0;
     const erfuellt = i < 0 || !basis ? 0 : (basis.kum[i] ?? 0);
     const anteil = basis && basis.n ? Math.round((erfuellt / basis.n) * 100) : 0;
-    return { name, a, basis, eigenesFach, anteil, erfuellt };
+    return {
+      name, a, basis, eigenesFach, anteil, erfuellt,
+      titel: TITEL[name] ?? name,
+      quelle: basis
+        ? `Median ${a.einheit === "€" ? euro(basis.median) : basis.median} · ${nf(basis.n)} Fundstellen`
+          + (eigenesFach ? "" : ", fachgebietsübergreifend")
+        : "keine Fundstellen",
+      grund: basis ? `${anteil} % verlangen nicht mehr` : "nicht belegt",
+    };
   }), [check.anforderungen, fach, antwort]);
 
-  const stark = zeilen.filter((z) => z.anteil >= 50).length;
+  // Die Auftragsgrösse ist die vierte Zeile derselben Tabelle — nur kommt ihre Zahl aus den
+  // veröffentlichten Auftragswerten, nicht aus den Unterlagen. Sie steht oben, weil sie die
+  // Frage beantwortet, die vor allen anderen kommt: ist da überhaupt etwas in meiner Grösse?
+  const wertAnteil = zelle.mitWert ? Math.round((passend / zelle.mitWert) * 100) : 0;
+  const alleZeilen = [
+    {
+      name: "groesse", titel: "Auftragsgrösse", anteil: wertAnteil,
+      quelle: `${nf(zelle.mitWert)} von ${nf(zelle.offen)} nennen ihren Wert`,
+      grund: zelle.mitWert ? `${nf(passend)} liegen in eurer Grösse` : "kein Wert veröffentlicht",
+      genug: zelle.mitWert >= 20,
+    },
+    ...zeilen.map((z) => ({ ...z, genug: Boolean(z.basis) })),
+  ];
+
+  const stark = alleZeilen.filter((z) => z.genug && z.anteil >= 50).length;
+  /** Fünf Segmente wie drinnen in der Lead-Liste: ein Balken lügt weniger als eine Note. */
+  const segmente = (anteil: number) => Math.max(0, Math.min(5, Math.round(anteil / 20)));
 
   return (
     <section className="lp-check" id="check">
@@ -181,7 +211,11 @@ export function EignungsCheck({ check, fachgebiete }: {
 
         {!offen ? (
           <button type="button" className="ec-mehr" onClick={() => setOffen(true)}>
-            Wie nah seid ihr dran? Drei Fragen, keine Anmeldung
+            {/* ⚠ Stand hier bis zum 2026-08-20 als getippte „Drei Fragen", während vier
+                gestellt wurden. Gezählt statt getippt: eine Frage mehr, und der Satz
+                stimmt weiter. */}
+            Wie nah seid ihr dran? {ZAHLWORT[1 + Object.keys(check.anforderungen).length]
+              ?? String(1 + Object.keys(check.anforderungen).length)} Fragen, keine Anmeldung
             <span aria-hidden="true">→</span>
           </button>
         ) : null}
@@ -197,54 +231,68 @@ export function EignungsCheck({ check, fachgebiete }: {
                   setzen={(i) => setAntwort({ ...antwort, [name]: i - 1 })} />
         ))}
 
+        {/* ERGEBNIS als Tabelle. Die Vorlage (`INPUT/…/govisor-landing-v28.html`) zeigt ihre
+            Urteile in einer Zeile je Fall: Balken für die Stärke, ein Punkt für das Urteil,
+            der Grund klein darunter. Sven: „die optik aus dem html bei der ergebnisanzeige
+            fand ich sexier." Sie ist es auch — und zwar nicht nur hübscher: vier Zeilen
+            gleicher Bauart lassen sich vergleichen, vier Fliesstexte nicht. Der Unterschied
+            zur Vorlage bleibt, dass hier nichts erfunden ist; jede Zeile nennt ihre
+            Grundlage in der Spalte daneben. */}
         <div className="ec-ergebnis">
-          {zelle.mitWert >= 20 ? (
-            <p className="ec-satz">
-              Bei den {nf(zelle.mitWert)} davon, die ihren Auftragswert veröffentlicht haben,
-              liegen <b>{nf(passend)}</b> in eurer Grössenordnung.
-            </p>
-          ) : (
-            <p className="ec-satz">
-              Für die Grössenordnung ist dieser Zuschnitt zu dünn belegt:{" "}
-              {zelle.mitWert === 0
-                ? "keiner dieser Vorgänge nennt seinen Auftragswert"
-                : `nur ${zelle.mitWert} dieser Vorgänge nennen ihren Auftragswert`}.{" "}
-              Wählt eine grössere Region.
-            </p>
-          )}
-
-          <ul className="ec-zeilen">
-            {zeilen.map((z) => (
-              <li key={z.name}>
-                <span className="ec-balken" aria-hidden="true">
-                  <i style={{ width: `${z.anteil}%` }} />
-                </span>
-                <span className="ec-zeile-t">
-                  <b>{z.anteil} %</b> der Verfahren, die {z.name === "referenzen" ? "Referenzen"
-                    : z.name === "umsatz" ? "einen Mindestumsatz" : "eine Haftpflichtdeckung"}{" "}
-                  fordern, verlangen nicht mehr, als ihr habt.
-                </span>
-                <span className="ec-zeile-q">
-                  {z.basis ? <>Median {z.a.einheit === "€" ? euro(z.basis.median) : z.basis.median}
-                    {" "}· {nf(z.basis.n)} Fundstellen in ausgewerteten Unterlagen
-                    {z.eigenesFach ? "" : ", fachgebietsübergreifend gezählt"}</> : "keine Fundstellen"}
-                </span>
-              </li>
-            ))}
-          </ul>
+          <table className="ec-tabelle">
+            <thead>
+              <tr>
+                <th>Anforderung</th>
+                <th>Wie ihr dasteht</th>
+                <th>Urteil</th>
+              </tr>
+            </thead>
+            <tbody>
+              {alleZeilen.map((z) => {
+                const gut = z.genug && z.anteil >= 50;
+                return (
+                  <tr key={z.name} className={!z.genug ? "ec-tr-leer" : gut ? "ec-tr-gut" : "ec-tr-knapp"}>
+                    <td>
+                      {/* Titel und Grundlage in EINER Spalte, wie in der Vorlage: vier
+                          Spalten drängeln sich in einem 570 px breiten Kasten, drei atmen. */}
+                      <span className="ec-tit">{z.titel}</span>
+                      <span className="ec-quelle">{z.quelle}</span>
+                    </td>
+                    <td className="ec-mess">
+                      <span className={`ec-meter ec-m${segmente(z.anteil)}`} aria-hidden="true">
+                        <i /><i /><i /><i /><i />
+                      </span>
+                      <span className="ec-prozent">{z.genug ? `${z.anteil} %` : "—"}</span>
+                    </td>
+                    <td className="ec-urteil">
+                      <span className={gut ? "ec-note ec-note-gut" : "ec-note ec-note-blass"}>
+                        {!z.genug ? "zu dünn belegt" : gut ? "passt" : "knapp"}
+                      </span>
+                      <span className="ec-grund">{z.grund}</span>
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
 
           <p className="ec-fazit">
-            {stark === zeilen.length
-              ? "Ihr liegt bei allen drei üblichen Vorgaben über dem, was gefordert wird."
-              : stark === 0
-                ? "Bei den üblichen Vorgaben liegt ihr noch darunter — was nicht heisst, dass nichts passt: die Anforderungen wachsen mit der Auftragsgrösse, und der kleinste offene Auftrag kostet weniger als ein Werkzeugkoffer."
-                : `Ihr liegt bei ${stark} von ${zeilen.length} üblichen Vorgaben über dem, was gefordert wird.`}
+            <span className="ec-punkt" aria-hidden="true" />
+            <span>
+              {stark === alleZeilen.length
+                ? "Ihr liegt bei allen vier Punkten über dem, was üblicherweise verlangt wird."
+                : stark === 0
+                  ? "Bei den üblichen Vorgaben liegt ihr noch darunter. Das heisst nicht, dass nichts passt: die Anforderungen wachsen mit der Auftragsgrösse, und der kleinste offene Auftrag kostet weniger als ein Werkzeugkoffer."
+                  : `Ihr liegt bei ${stark} von ${alleZeilen.length} Punkten über dem, was üblicherweise verlangt wird.`}
+            </span>
+            <span className="ec-marke">gemessen, nicht geschätzt</span>
           </p>
+
           <Link className="lp-knopf" href="/onboarding">Die passenden Vergaben ansehen</Link>
           <p className="ec-fuss">
-            Verglichen wird gegen gemessene Werte, nicht gegen Erfahrungswerte: veröffentlichte
-            Auftragswerte und Schwellen aus den Vergabeunterlagen. Was ein einzelnes Verfahren
-            verlangt, steht drinnen an jedem Vorgang, mit dem wörtlichen Zitat daneben.
+            Verglichen wird gegen veröffentlichte Auftragswerte und gegen Schwellen aus den
+            ausgewerteten Vergabeunterlagen. Was ein einzelnes Verfahren verlangt, steht
+            drinnen an jedem Vorgang, mit dem wörtlichen Zitat daneben.
           </p>
         </div>
         </div>
