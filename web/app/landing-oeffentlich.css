@@ -24,22 +24,26 @@
 
 /* HELD: Text links, Beweis rechts. Auf schmalen Geräten untereinander, Beweis zuerst
    nach dem Text — er ist das Argument, nicht die Dekoration. */
-/* ─── DER ANFANG DER SEITE ──────────────────────────────────────────────────────────
-   Sven: „macht es sinn das gezielt bieten in ein grünen kasten zu packen?" Das Ziel ist
-   richtig, der Kasten wäre der falsche Weg — Begründung im Chat, kurz: ein Kasten macht
-   aus der Stimme der Seite ein Bauteil (und Bauteile am Seitenanfang liest man als
-   Werbebanner), und eine grüne Fläche würde den einzigen grünen Knopf schlucken, den wir
-   uns gerade erst freigeräumt haben.
-   Stattdessen ein durchgehendes, sehr helles Feld hinter dem GANZEN Kopfbereich: die Seite
-   beginnt sichtbar auf einem Grund und wird darunter weiss. Der Beweiskasten wird dafür
-   weiss statt getönt — auf dem hellen Feld hebt er sich so stärker ab als vorher. */
-.lp-held { margin: 0 -24px; padding-left: 24px; padding-right: 24px;
-  /* Der Ton beginnt beim Grün der Kopfleiste (#EFF7F3) und läuft nach unten aus:
-     Leiste und Kopfbereich lesen sich so als EINE Anfangszone, die an der Linie
-     endet. Kräftiger darf er nicht werden, sonst wird die Fläche zur Aussage und
-     der Startknopf verliert seine. */
-  background: linear-gradient(180deg, #EAF5EF 0%, #F4FAF7 52%, #FFFFFF 100%);
-  border-bottom: 1px solid var(--line, #E3E7E5); }
+/* ─── DREI HALTEPUNKTE, SANFT ───────────────────────────────────────────────────────
+   Sven wollte die zahme Variante sehen: `proximity` statt `mandatory`. Der Unterschied ist
+   der ganze Punkt — `mandatory` ZWINGT jeden Halt an, auch wenn der Abschnitt höher ist als
+   das Fenster (unser Werkzeug ist bei offener Auswertung 1.193 px hoch und wäre gefangen).
+   `proximity` rastet nur ein, wenn man ohnehin in der Nähe zum Stehen kommt, und lässt
+   Zwischenpositionen zu.
+
+   Drei Halte, nicht zwei: Kopf → Werkzeug → Planungshorizont. Alles danach (Zahlenband,
+   Arbeitsweise, Schluss) läuft frei durch; wer so weit gekommen ist, liest und sucht nicht
+   mehr.
+
+   Abgeschaltet auf niedrigen Fenstern und Telefonen: dort ist fast jeder Abschnitt höher
+   als das Fenster, und Einrasten wird zum Widerhaken. */
+html { scroll-snap-type: y proximity; }
+.lp-halt { scroll-snap-align: start; scroll-snap-stop: normal; scroll-margin-top: 78px; }
+@media (max-height: 700px), (max-width: 900px) {
+  html { scroll-snap-type: none; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-snap-type: none; } }
+
 /* Fast, aber nicht ganz bildschirmhoch. „Ganz" hiesse Vollbild-Sektionen mit Einrasten,
    und dagegen spricht der Inhalt selbst: das Werkzeug darunter ist bei offener Auswertung
    1.193 px hoch, passt also in kein Fenster — bei erzwungenem Einrasten wäre es

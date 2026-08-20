@@ -207,8 +207,13 @@ export function EignungsCheck({ check, fachgebiete }: {
     setSchritt(1);
   };
 
+  // Haltepunkt NUR, solange der Abschnitt ins Fenster passt. Gemessen bei 1.400 × 900: mit
+  // offener Auswertung ist er 1.185 px hoch, und der Versuch, seinen unteren Teil zu lesen,
+  // wurde vom Einrasten zurückgezogen (gewollt +500 px, gelandet bei +341). Genau dieser
+  // Widerhaken ist der Grund, warum Vollbild-Sektionen auf Werkzeugseiten scheitern; hier
+  // lässt der Halt los, sobald das Ergebnis offen ist.
   return (
-    <section className="lp-check" id="check">
+    <section className={`lp-check${fach && schritt === 3 ? "" : " lp-halt"}`} id="check">
 
       {/* EIN Kasten, zwei Bereiche: links die Arbeitsfläche, rechts die Bedienleiste.
           Sven: „optisch ist das irgendwie unsauber, die architektur stimmt nicht so ganz."

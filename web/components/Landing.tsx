@@ -82,7 +82,7 @@ export async function Landing() {
         </nav>
       </header>
 
-      <section className="lp-held">
+      <section className="lp-held lp-halt">
         <div className="lp-held-text">
           <p className="lp-auge">Ausschreibungen aus DACH, bis zur Entscheidung aufbereitet</p>
           {/* „Gezielt bieten" statt der langen Doppelzeile: die Vorlage sagt in zwei Wörtern,
@@ -163,7 +163,7 @@ export async function Landing() {
           Datenbankauskunft, „eure Region" ist ein Angebot. Die Zahl steht klein daneben,
           weil sie den Zuschnitt belegt, nicht ersetzt. */}
       {z ? (
-        <section className="lp-block">
+        <section className="lp-block lp-halt" id="horizont">
           <h2 className="lp-h2">Wie weit reicht euer Planungshorizont?</h2>
           <ol className="lp-horizont">
             <li>
