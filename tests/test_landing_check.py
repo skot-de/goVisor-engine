@@ -27,6 +27,22 @@ def _modul():
     return mod
 
 
+def test_platzhalterwerte_fallen_aus_der_spanne(tmp_path):
+    """⚠ Die Startseite sagte „ab 80 €". Nachgemessen war das ein „Neubau Grundschule,
+    Innentüren Holz" mit Los-Wert 100 € — ein Platzhalter der Vergabestelle, kein Auftrag.
+    Unter 1.000 € zählt deshalb nichts mehr mit, und die Spanne kommt aus Quartilen statt
+    aus Extremen: ein einziger Fehlwert kippt ein Extrem, ein Quartil nicht."""
+    mod = _modul()
+    (tmp_path / "web/data").mkdir(parents=True)
+    leads = [_lead("p", "DE", "Bremen", "echt", "80 €")]
+    leads += [_lead(str(i), "DE", "Bremen", "echt", f"{100 + i}.000 €") for i in range(10)]
+    (tmp_path / "web/data/leads-bau.json").write_text(json.dumps(leads), encoding="utf-8")
+    w = mod.eignungs_check(tmp_path, [{"schluessel": "bau", "label": "Bau"}], {})["wert"]
+    assert w["verworfen"] == 1 and w["n"] == 10
+    assert w["untergrenze"] == 1_000
+    assert w["p25"] >= 100_000 and w["p75"] >= w["median"] >= w["p25"]
+
+
 @pytest.mark.parametrize("roh,erwartet", [
     ("225.100 €", 225_100), ("1,2 Mio €", 1_200_000), ("80 €", 80),
     ("1,5 Mrd €", 1_500_000_000), ("Wert offen", None), ("", None), (None, None),
@@ -54,7 +70,7 @@ def test_geschaetzte_werte_zaehlen_nicht_zur_groessenverteilung(tmp_path):
     assert zelle["offen"] == 3                 # gezählt werden alle offenen Vorgänge …
     assert zelle["mitWert"] == 1               # … verglichen nur die mit echtem Wert
     assert sum(zelle["stufen"]) == 1
-    assert w["wert"]["min"] == w["wert"]["max"] == 50_000
+    assert w["wert"]["n"] == 1 and w["wert"]["median"] == 50_000
 
 
 def test_nur_bundeslaender_stehen_zur_auswahl(tmp_path):

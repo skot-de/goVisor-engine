@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useMemo, useState } from "react";
 
 /**
  * Öffentlicher Eignungs-Check — der Einstieg, den die Startseite nicht hatte.
@@ -65,7 +65,9 @@ export type Check = {
   texte: Record<string, { name: string; art: "formular" | "schwelle" | "nachweis"; was: string; frage: string | null }>;
   profile: Record<string, { n: number; ohne: number; gruppen: number[][] }>;
   nachweise: { key: string; name: string }[];
-  wert: { n: number; min: number | null; median: number | null; max: number | null; unter25k: number };
+  wert: { n: number; untergrenze: number; verworfen: number; p25: number | null;
+    median: number | null; p75: number | null; p95: number | null;
+    unter25k: number; ab1m: number };
 };
 
 const nf = (n: number) => n.toLocaleString("de-DE");
@@ -110,9 +112,10 @@ function Leiste({ titel, hinweis, optionen, wert, setzen }: {
 export function EignungsCheck({ check, fachgebiete }: {
   check: Check; fachgebiete: { schluessel: string; label: string; offen: number }[];
 }) {
-  const [fach, setFach] = useState(fachgebiete[0]?.schluessel ?? "bau");
+  // Bewusst OHNE Vorauswahl: das rechte Feld soll auffordern, nicht schon Ergebnisse
+  // zeigen, die niemand angefragt hat. Der erste Klick auf eine Kachel ist der Einstieg.
+  const [fach, setFach] = useState<string | null>(null);
   const [region, setRegion] = useState("alle");
-  const dialog = useRef<HTMLDialogElement>(null);
   const [schritt, setSchritt] = useState(1);
   const [erklaert, setErklaert] = useState<string | null>(null);
   const [groesse, setGroesse] = useState(2);          // 100.000 – 500.000 €: der dichteste Bereich
@@ -122,14 +125,14 @@ export function EignungsCheck({ check, fachgebiete }: {
   const [hat, setHat] = useState<Record<string, boolean>>({});
 
   const zelle = check.zellen[`${fach}|${region}`] ?? { offen: 0, mitWert: 0, stufen: [0, 0, 0, 0, 0, 0] };
-  const fachLabel = fachgebiete.find((f) => f.schluessel === fach)?.label ?? fach;
+  const fachLabel = fachgebiete.find((f) => f.schluessel === fach)?.label ?? "eurem Fachgebiet";
   const regionLabel = check.regionen.find((r) => r.schluessel === region)?.label ?? region;
 
   // Fällt ein Fachgebiet unter die 30 ausgewerteten Verfahren, rechnet der Katalog
   // fachgebietsübergreifend weiter — sichtbar gemacht, nicht stillschweigend.
-  const eigenerKatalog = Boolean(check.katalog[fach]);
-  const katalog = check.katalog[fach] ?? check.katalog["alle"];
-  const profil = check.profile[fach] ?? check.profile["alle"];
+  const eigenerKatalog = Boolean(fach && check.katalog[fach]);
+  const katalog = (fach ? check.katalog[fach] : undefined) ?? check.katalog["alle"];
+  const profil = (fach ? check.profile[fach] : undefined) ?? check.profile["alle"];
 
   // „In eurer Grössenordnung" heisst: alles bis zu der Grösse, die ihr stemmt.
   const passendeGroesse = zelle.stufen.slice(0, groesse + 1).reduce((a, b) => a + b, 0);
@@ -174,7 +177,7 @@ export function EignungsCheck({ check, fachgebiete }: {
     }
     // Schwelle: die eigene Stufe gegen das, was üblicherweise verlangt wird (Median).
     const leiter = check.anforderungen[t.frage ?? ""];
-    const basis = leiter?.je_fach[fach] ?? leiter?.je_fach["alle"];
+    const basis = (fach ? leiter?.je_fach[fach] : undefined) ?? leiter?.je_fach["alle"];
     const i = antwort[t.frage ?? ""] ?? -1;
     const eigene = i < 0 ? null : leiter?.stufen[i];
     const ok = Boolean(basis && eigene !== null && eigene !== undefined && eigene >= basis.median);
@@ -194,24 +197,33 @@ export function EignungsCheck({ check, fachgebiete }: {
   const erfuellt = zeilen.filter((z) => z.ok).length;
   const luecke = zeilen.filter((z) => !z.ok).sort((a, b) => b.n - a.n)[0] ?? null;
 
-  // Escape und Hintergrund-Klick schliessen das Fenster; beides kommt vom <dialog>. Nur
-  // den Schritt müssen wir zurücksetzen, damit der nächste Aufruf wieder vorn beginnt.
-  useEffect(() => {
-    const d = dialog.current;
-    if (!d) return;
-    const zu = () => setSchritt(1);
-    d.addEventListener("close", zu);
-    return () => d.removeEventListener("close", zu);
-  }, []);
-
-  const oeffnen = () => { setSchritt(1); dialog.current?.showModal(); };
-
   const SCHRITTE = ["Euer Feld", "Eure Angaben", "Die Auswertung"];
+
+  /** Kachel angeklickt: Feld setzen und im rechten Feld vorn anfangen. */
+  const waehlen = (schluessel: string) => {
+    setFach(schluessel);
+    setSchritt(1);
+  };
 
   return (
     <section className="lp-check" id="check">
-      <div className="ec-kacheln-block">
+      <div className="ec-kopfzeile">
         <h2 className="lp-h2">Was heute offen ist. Und ob ihr drankommt.</h2>
+        <label className="ec-regionwahl">
+          <span>Region</span>
+          <select value={region} onChange={(e) => setRegion(e.target.value)}>
+            {check.regionen.map((r) => (
+              <option key={r.schluessel} value={r.schluessel}>{r.label}</option>
+            ))}
+          </select>
+        </label>
+      </div>
+
+      {/* Links wählen, rechts rechnen. Vorher waren das zwei Abschnitte untereinander und
+          die Verbindung dazwischen musste man sich denken; Sven: „ich weiss nicht, ob alle
+          leute die brücke verstehen zwischen branche und dem eignungscheck". Nebeneinander
+          ist die Brücke der Klick selbst. */}
+      <div className="ec-zwei">
         <ul className="ec-kacheln" role="group" aria-label="Fachgebiet wählen">
           {fachgebiete.map((f) => {
             const z = check.zellen[`${f.schluessel}|${region}`];
@@ -220,7 +232,7 @@ export function EignungsCheck({ check, fachgebiete }: {
                 <button type="button" aria-pressed={fach === f.schluessel}
                         aria-label={`${f.label}: ${nf(z?.offen ?? 0)} offene Vergaben`}
                         className={fach === f.schluessel ? "ec-kachel ec-kachel-an" : "ec-kachel"}
-                        onClick={() => setFach(f.schluessel)}>
+                        onClick={() => waehlen(f.schluessel)}>
                   <b>{nf(z?.offen ?? 0)}</b>
                   <span>{f.label}</span>
                 </button>
@@ -228,246 +240,214 @@ export function EignungsCheck({ check, fachgebiete }: {
             );
           })}
         </ul>
-        <div className="ec-regionwahl">
-          <label>
-            <span>Region</span>
-            <select value={region} onChange={(e) => setRegion(e.target.value)}>
-              {check.regionen.map((r) => (
-                <option key={r.schluessel} value={r.schluessel}>{r.label}</option>
-              ))}
-            </select>
-          </label>
-          <p className="lp-klein">
-            Gezählt sind Vorgänge mit laufender Frist. Der Zuschnitt läuft über CPV-Codes,
-            nicht über Schlagworte; was sich keinem der sechs Gebiete zuordnen lässt
-            (Lieferungen, Dienstleistungen, Sonderfälle), steht drinnen.
-          </p>
-        </div>
-      </div>
 
-      {/* DIE BRÜCKE. Sie stand vorher nur implizit da: oben Kacheln, darunter ein Kasten,
-          und wer den Zusammenhang nicht sah, sah zwei Sachen. Jetzt nennt EIN Satz das
-          gewählte Feld beim Namen und sagt, was der Knopf tut. */}
-      <div className="ec-bruecke">
-        <div>
-          <p className="lp-auge">Eignungs-Check</p>
-          <h3 className="ec-bruecke-h">
-            Ihr arbeitet in {fachLabel}? Dann ist die nächste Frage, ob ihr erfüllt, was dort
-            verlangt wird.
-          </h3>
-          <p className="ec-bruecke-p">
-            Öffentliche Aufträge gelten als eine Sache für Grosse. Der kleinste offene Auftrag
-            im Bestand liegt bei {check.wert.min !== null ? euro(check.wert.min) : "unbekannt"},
-            nach oben hört es bei {check.wert.max !== null ? euro(check.wert.max) : "unbekannt"}
-            {" "}auf. Was zwischen euch und dem Auftrag steht, sind die Nachweise, und die
-            stehen in den Unterlagen, die wir ausgewertet haben.
-          </p>
-        </div>
-        <div className="ec-bruecke-start">
-          <button type="button" className="lp-knopf lp-knopf-gross" onClick={oeffnen}>
-            Eignungs-Check starten
-          </button>
-          <p className="ec-bruecke-f">
-            {ZAHLWORT[SCHRITTE.length] ?? SCHRITTE.length} Schritte, {fragen} Fragen.
-            Ohne Anmeldung, ohne Firmendaten, nichts davon verlässt euren Browser.
-          </p>
-        </div>
-      </div>
-
-      <dialog className="ec-dialog" ref={dialog}
-              onClick={(e) => { if (e.target === dialog.current) dialog.current?.close(); }}>
-        <div className="ec-dialog-kopf">
-          <ol className="ec-schritte">
-            {SCHRITTE.map((s, i) => (
-              <li key={s} aria-current={schritt === i + 1 ? "step" : undefined}
-                  className={schritt > i + 1 ? "ec-s-fertig" : schritt === i + 1 ? "ec-s-jetzt" : ""}>
-                <b>{i + 1}</b> {s}
-              </li>
-            ))}
-          </ol>
-          <button type="button" className="ec-zu" aria-label="Fenster schliessen"
-                  onClick={() => dialog.current?.close()}>×</button>
-        </div>
-
-        <div className="ec-dialog-koerper">
-          {schritt === 1 ? (
-            <>
-              <h3 className="ec-d-h">Das prüfen wir für euch</h3>
-              <div className="ec-wahl">
-                <label>
-                  <span>Fachgebiet</span>
-                  <select value={fach} onChange={(e) => setFach(e.target.value)}>
-                    {fachgebiete.map((f) => (
-                      <option key={f.schluessel} value={f.schluessel}>{f.label}</option>
-                    ))}
-                  </select>
-                </label>
-                <label>
-                  <span>Region</span>
-                  <select value={region} onChange={(e) => setRegion(e.target.value)}>
-                    {check.regionen.map((r) => (
-                      <option key={r.schluessel} value={r.schluessel}>{r.label}</option>
-                    ))}
-                  </select>
-                </label>
-              </div>
-
-              {/* Erst geben, dann fragen: die Marktzahlen stehen VOR den Fragen, damit der
-                  Besuch etwas mitnimmt, auch wenn er hier abbricht. */}
-              <ul className="ec-teaser">
-                <li><b>{nf(zelle.offen)}</b><span>offene Vergaben in diesem Zuschnitt</span></li>
-                <li><b>{nf(katalog?.n ?? 0)}</b><span>ausgewertete Vergabeunterlagen
-                  {eigenerKatalog ? ` in ${fachLabel}` : ", alle Fachgebiete"}</span></li>
-                <li><b>{nf(zelle.mitWert)}</b><span>davon mit veröffentlichtem Auftragswert</span></li>
-              </ul>
-              <p className="ec-d-fuss">
-                Aus diesen Unterlagen lesen wir, welche Nachweise verlangt werden. Im nächsten
-                Schritt fragen wir, was ihr davon habt.
+        <div className="ec-fenster">
+          {!fach ? (
+            <div className="ec-leer">
+              <p className="lp-auge">Eignungs-Check</p>
+              {/* ⚠ Hiess bis zum 2026-08-21 „Wählt LINKS euer Fachgebiet" — auf dem
+                  Telefon stehen die Kacheln aber darüber, nicht daneben. Eine Ortsangabe,
+                  die nur in einem Layout stimmt, ist schlechter als gar keine. */}
+              <h3>Wählt euer Fachgebiet.</h3>
+              <p>
+                Ein Klick auf eine der Kacheln genügt. Danach fragen wir in{" "}
+                {(ZAHLWORT[SCHRITTE.length] ?? String(SCHRITTE.length)).toLowerCase()}{" "}
+                Schritten ab, was ihr mitbringt, und zeigen euch, was in genau diesem Feld
+                verlangt wird und wie viel davon ihr erfüllt.
               </p>
-            </>
-          ) : null}
-
-          {schritt === 2 ? (
-            <>
-              <h3 className="ec-d-h">Was habt ihr?</h3>
-              <p className="ec-d-sub">
-                {fragen} Fragen. Danach sagen wir euch, bei wie vielen der ausgewerteten
-                Verfahren das gereicht hätte.
+              <p className="ec-leer-f">
+                Die Hälfte der Vergaben mit veröffentlichtem Wert liegt zwischen{" "}
+                {check.wert.p25 !== null ? euro(check.wert.p25) : "?"} und{" "}
+                {check.wert.p75 !== null ? euro(check.wert.p75) : "?"};{" "}
+                {nf(check.wert.unter25k)} offene liegen unter 25.000 €,{" "}
+                {nf(check.wert.ab1m)} über einer Million. Für kleine Betriebe ist da genauso
+                etwas dabei wie für grosse.
               </p>
-              <Leiste titel="Aufträge bis zu welcher Grösse könnt ihr stemmen?"
-                      optionen={check.stufen.map(stufenLabel)} wert={groesse} setzen={setGroesse} />
-              {Object.entries(check.anforderungen).map(([name, a]) => (
-                <Leiste key={name} titel={a.frage}
-                        optionen={[a.unten, ...a.stufen.map((s) => (a.einheit === "€" ? euro(s) : String(s)))]}
-                        wert={(antwort[name] ?? 0) + 1}
-                        setzen={(i) => setAntwort({ ...antwort, [name]: i - 1 })} />
-              ))}
-              {/* Nachweisfragen kommen nur, wenn sie in diesem Feld überhaupt vorkommen: nach
-                  ISO 14001 zu fragen, wo es in 0,2 % der Unterlagen steht, ist Zeitraub. */}
-              {nachweisfragen.map((n) => (
-                <Leiste key={n.key} titel={`Habt ihr ${n.name}?`} optionen={["nein", "ja"]}
-                        wert={hat[n.key] ? 1 : 0}
-                        setzen={(i) => setHat({ ...hat, [n.key]: i === 1 })} />
-              ))}
-            </>
-          ) : null}
-
-          {schritt === 3 ? (
-            <>
-              {profil && treffer.mit >= 30 ? (
-                <div className="ec-gross">
-                  <p className="ec-bigline">
-                    <span className="ec-bignum">{nf(treffer.passt)}</span>
-                    <span className="ec-bigrest">
-                      der {nf(treffer.mit)} ausgewerteten Verfahren hätten gepasst.
-                    </span>
-                  </p>
-                  <p className="ec-bigsub">
-                    Gezählt gegen die Verfahren in {eigenerKatalog ? fachLabel : "allen Fachgebieten"},
-                    deren Unterlagen mindestens eine bezifferte Anforderung tragen.
-                    {treffer.offen > 0
-                      ? ` ${nf(treffer.offen)} davon sind heute noch offen.`
-                      : " Keines davon ist heute noch offen."}
-                  </p>
-                </div>
-              ) : (
-                <p className="ec-bigsub">
-                  Für {fachLabel} sind bisher zu wenige Unterlagen ausgewertet, um zu sagen,
-                  bei wie vielen Verfahren es gereicht hätte. Belastbar wird das ab 30
-                  ausgewerteten Vergabeunterlagen je Fachgebiet.
-                </p>
-              )}
-
-              <div className="ec-listenkopf">
-                <h3>Was gefordert wurde</h3>
-                <p>
-                  Nach Häufigkeit, aus {nf(katalog?.n ?? 0)} ausgewerteten Unterlagen
-                  {eigenerKatalog ? "" : " aller Fachgebiete"}. Das Fragezeichen erklärt,
-                  was dahintersteckt.
-                </p>
-              </div>
-
-              <p className="ec-fundkopf" aria-hidden="true">
-                <span>Anforderung</span><span>belegt in</span><span>ihr</span>
+              <p className="ec-leer-f">
+                Ohne Anmeldung, ohne Firmendaten. Nichts davon verlässt euren Browser.
               </p>
-              <ul className="ec-fund">
-                {zeilen.map((z) => (
-                  <li key={z.key} className={z.ok ? "ec-f-ok" : "ec-f-weg"}>
-                    <span className={z.ok ? "ec-haken" : "ec-haken ec-haken-weg"} aria-hidden="true">
-                      {z.ok ? "✓" : "–"}
-                    </span>
-                    <span className="ec-f-name">
-                      {z.name}
-                      <button type="button" className="ec-was"
-                              aria-expanded={erklaert === z.key}
-                              aria-label={`Was ist ${z.name}?`}
-                              onClick={() => setErklaert(erklaert === z.key ? null : z.key)}>?</button>
-                      {z.art === "schwelle" && z.median
-                        ? <span className="ec-f-med">üblich: {z.median}</span> : null}
-                    </span>
-                    <span className="ec-f-quote">{z.anteil} %</span>
-                    <span className={z.ok ? "ec-f-ihr" : "ec-f-ihr ec-f-ihr-weg"}>{z.ihr}</span>
-                    {erklaert === z.key ? <p className="ec-erklaerung">{z.was}</p> : null}
-                  </li>
-                ))}
-              </ul>
-
-              <p className="ec-summe">
-                <span aria-hidden="true">Σ</span>
-                <span><b>{erfuellt} von {zeilen.length} erfüllt</b>, die Formulare mitgezählt,
-                  die jeder ausfüllen kann.</span>
-                <span className="ec-summe-p">
-                  {zeilen.length ? Math.round((erfuellt / zeilen.length) * 100) : 0} %
-                </span>
-              </p>
-
-              {luecke ? (
-                <p className="ec-luecke">
-                  <b>Eure grösste Lücke ist {luecke.name}.</b> In {nf(luecke.n)} der{" "}
-                  {nf(katalog?.n ?? 0)} ausgewerteten Unterlagen steht es drin.
-                </p>
-              ) : (
-                <p className="ec-fazit">
-                  <span className="ec-punkt" aria-hidden="true" />
-                  <span>Von dem, was in diesen Unterlagen belegt ist, erfüllt ihr alles.</span>
-                  <span className="ec-marke">gemessen, nicht geschätzt</span>
-                </p>
-              )}
-
-              <p className="ec-fuss">
-                Grundlage: {nf(katalog?.n ?? 0)} ausgewertete Vergabeunterlagen
-                {eigenerKatalog ? ` in ${fachLabel}` : " über alle Fachgebiete"}; Auftragswerte
-                nur über die {nf(zelle.mitWert)} Vergaben dieses Zuschnitts mit
-                veröffentlichtem Wert, davon liegen {nf(passendeGroesse)} in eurer
-                Grössenordnung. „Belegt in {zeilen[0]?.anteil ?? 0} %" heisst: in so vielen der
-                ausgewerteten Verfahren steht es wörtlich. Was unsere Auswertung nicht
-                erfasst hat, fehlt hier. Über die Zulassung im Einzelfall entscheidet die
-                Vergabestelle.
-              </p>
-            </>
-          ) : null}
-        </div>
-
-        <div className="ec-dialog-fuss">
-          {schritt > 1 ? (
-            <button type="button" className="ec-zurueck"
-                    onClick={() => setSchritt(schritt - 1)}>Zurück</button>
-          ) : <span />}
-          {schritt < 3 ? (
-            <button type="button" className="lp-knopf" onClick={() => setSchritt(schritt + 1)}>
-              {schritt === 1 ? "Weiter zu euren Angaben" : "Auswertung ansehen"}
-            </button>
+            </div>
           ) : (
-            <span className="ec-aktion">
-              <Link className="lp-knopf" href="/onboarding">
-                {treffer.offen > 0 ? `${nf(treffer.offen)} passende offene Vergaben ansehen`
-                  : "Die passenden Vergaben ansehen"}
-              </Link>
-              <span className="ec-aktion-h">kostenfrei, ohne Zahlungsdaten</span>
-            </span>
+            <>
+              <div className="ec-fenster-kopf">
+                <ol className="ec-schritte">
+                  {SCHRITTE.map((t, i) => (
+                    <li key={t} aria-current={schritt === i + 1 ? "step" : undefined}
+                        className={schritt > i + 1 ? "ec-s-fertig" : schritt === i + 1 ? "ec-s-jetzt" : ""}>
+                      <b>{i + 1}</b> {t}
+                    </li>
+                  ))}
+                </ol>
+                <button type="button" className="ec-zu" aria-label="Auswahl aufheben"
+                        onClick={() => { setFach(null); setSchritt(1); }}>×</button>
+              </div>
+
+              <div className="ec-fenster-koerper">
+                {schritt === 1 ? (
+                  <>
+                    <h3 className="ec-d-h">{fachLabel}, {regionLabel}</h3>
+                    <p className="ec-d-sub">Das ist die Grundlage, auf der wir gleich rechnen.</p>
+                    <ul className="ec-teaser">
+                      <li><b>{nf(zelle.offen)}</b><span>offene Vergaben</span></li>
+                      <li><b>{nf(katalog?.n ?? 0)}</b><span>ausgewertete Vergabeunterlagen
+                        {eigenerKatalog ? "" : ", alle Fachgebiete"}</span></li>
+                      <li><b>{nf(zelle.mitWert)}</b><span>davon mit veröffentlichtem Wert</span></li>
+                    </ul>
+                    <p className="ec-d-fuss">
+                      Aus diesen Unterlagen lesen wir, welche Nachweise verlangt werden. Im
+                      nächsten Schritt fragen wir, was ihr davon habt: {fragen} Fragen, alle
+                      zum Anklicken.
+                    </p>
+                  </>
+                ) : null}
+
+                {schritt === 2 ? (
+                  <>
+                    <h3 className="ec-d-h">Was habt ihr?</h3>
+                    <p className="ec-d-sub">
+                      {fragen} Fragen. Danach sagen wir euch, bei wie vielen der ausgewerteten
+                      Verfahren das gereicht hätte.
+                    </p>
+                    <Leiste titel="Aufträge bis zu welcher Grösse könnt ihr stemmen?"
+                            optionen={check.stufen.map(stufenLabel)} wert={groesse} setzen={setGroesse} />
+                    {Object.entries(check.anforderungen).map(([name, a]) => (
+                      <Leiste key={name} titel={a.frage}
+                              optionen={[a.unten, ...a.stufen.map((x) => (a.einheit === "€" ? euro(x) : String(x)))]}
+                              wert={(antwort[name] ?? 0) + 1}
+                              setzen={(i) => setAntwort({ ...antwort, [name]: i - 1 })} />
+                    ))}
+                    {/* Nachweisfragen nur, wenn sie im Feld überhaupt vorkommen: nach
+                        ISO 14001 zu fragen, wo es in 0,2 % der Unterlagen steht, ist Zeitraub. */}
+                    {nachweisfragen.map((n) => (
+                      <Leiste key={n.key} titel={`Habt ihr ${n.name}?`} optionen={["nein", "ja"]}
+                              wert={hat[n.key] ? 1 : 0}
+                              setzen={(i) => setHat({ ...hat, [n.key]: i === 1 })} />
+                    ))}
+                  </>
+                ) : null}
+
+                {schritt === 3 ? (
+                  <>
+                    {profil && treffer.mit >= 30 ? (
+                      <div className="ec-gross">
+                        <p className="ec-bigline">
+                          <span className="ec-bignum">{nf(treffer.passt)}</span>
+                          <span className="ec-bigrest">
+                            der {nf(treffer.mit)} ausgewerteten Verfahren hätten gepasst.
+                          </span>
+                        </p>
+                        <p className="ec-bigsub">
+                          Gezählt gegen die Verfahren in {eigenerKatalog ? fachLabel : "allen Fachgebieten"},
+                          deren Unterlagen mindestens eine bezifferte Anforderung tragen.
+                          {treffer.offen > 0
+                            ? ` ${nf(treffer.offen)} davon sind heute noch offen.`
+                            : " Keines davon ist heute noch offen."}
+                        </p>
+                      </div>
+                    ) : (
+                      <p className="ec-bigsub">
+                        Für {fachLabel} sind bisher zu wenige Unterlagen ausgewertet, um zu
+                        sagen, bei wie vielen Verfahren es gereicht hätte. Belastbar wird das
+                        ab 30 ausgewerteten Vergabeunterlagen je Fachgebiet.
+                      </p>
+                    )}
+
+                    <div className="ec-listenkopf">
+                      <h3>Was gefordert wurde</h3>
+                      <p>
+                        Nach Häufigkeit, aus {nf(katalog?.n ?? 0)} ausgewerteten Unterlagen
+                        {eigenerKatalog ? "" : " aller Fachgebiete"}. Das Fragezeichen erklärt,
+                        was dahintersteckt.
+                      </p>
+                    </div>
+
+                    <p className="ec-fundkopf" aria-hidden="true">
+                      <span>Anforderung</span><span>belegt in</span><span>ihr</span>
+                    </p>
+                    <ul className="ec-fund">
+                      {zeilen.map((z) => (
+                        <li key={z.key} className={z.ok ? "ec-f-ok" : "ec-f-weg"}>
+                          <span className={z.ok ? "ec-haken" : "ec-haken ec-haken-weg"} aria-hidden="true">
+                            {z.ok ? "✓" : "–"}
+                          </span>
+                          <span className="ec-f-name">
+                            {z.name}
+                            <button type="button" className="ec-was"
+                                    aria-expanded={erklaert === z.key}
+                                    aria-label={`Was ist ${z.name}?`}
+                                    onClick={() => setErklaert(erklaert === z.key ? null : z.key)}>?</button>
+                            {z.art === "schwelle" && z.median
+                              ? <span className="ec-f-med">üblich: {z.median}</span> : null}
+                          </span>
+                          <span className="ec-f-quote">{z.anteil} %</span>
+                          <span className={z.ok ? "ec-f-ihr" : "ec-f-ihr ec-f-ihr-weg"}>{z.ihr}</span>
+                          {erklaert === z.key ? <p className="ec-erklaerung">{z.was}</p> : null}
+                        </li>
+                      ))}
+                    </ul>
+
+                    <p className="ec-summe">
+                      <span aria-hidden="true">Σ</span>
+                      <span><b>{erfuellt} von {zeilen.length} erfüllt</b>, die Formulare
+                        mitgezählt, die jeder ausfüllen kann.</span>
+                      <span className="ec-summe-p">
+                        {zeilen.length ? Math.round((erfuellt / zeilen.length) * 100) : 0} %
+                      </span>
+                    </p>
+
+                    {luecke ? (
+                      <p className="ec-luecke">
+                        <b>Eure grösste Lücke ist {luecke.name}.</b> In {nf(luecke.n)} der{" "}
+                        {nf(katalog?.n ?? 0)} ausgewerteten Unterlagen steht es drin.
+                      </p>
+                    ) : (
+                      <p className="ec-fazit">
+                        <span className="ec-punkt" aria-hidden="true" />
+                        <span>Von dem, was in diesen Unterlagen belegt ist, erfüllt ihr alles.</span>
+                        <span className="ec-marke">gemessen, nicht geschätzt</span>
+                      </p>
+                    )}
+
+                    <p className="ec-fuss">
+                      Grundlage: {nf(katalog?.n ?? 0)} ausgewertete Vergabeunterlagen
+                      {eigenerKatalog ? ` in ${fachLabel}` : " über alle Fachgebiete"};
+                      Auftragswerte nur über die {nf(zelle.mitWert)} Vergaben dieses
+                      Zuschnitts mit veröffentlichtem Wert, davon liegen {nf(passendeGroesse)}
+                      {" "}in eurer Grössenordnung. „Belegt in {zeilen[0]?.anteil ?? 0} %"
+                      heisst: in so vielen der ausgewerteten Verfahren steht es wörtlich. Was
+                      unsere Auswertung nicht erfasst hat, fehlt hier. Über die Zulassung im
+                      Einzelfall entscheidet die Vergabestelle.
+                    </p>
+                  </>
+                ) : null}
+              </div>
+
+              <div className="ec-fenster-fuss">
+                {schritt > 1
+                  ? <button type="button" className="ec-zurueck"
+                            onClick={() => setSchritt(schritt - 1)}>Zurück</button>
+                  : <span className="ec-fuss-hinweis">Ohne Anmeldung, ohne Firmendaten</span>}
+                {schritt < 3 ? (
+                  <button type="button" className="lp-knopf" onClick={() => setSchritt(schritt + 1)}>
+                    {schritt === 1 ? "Weiter zu euren Angaben" : "Auswertung ansehen"}
+                  </button>
+                ) : (
+                  <Link className="lp-knopf" href="/onboarding">
+                    {treffer.offen > 0 ? `${nf(treffer.offen)} passende offene Vergaben ansehen`
+                      : "Die passenden Vergaben ansehen"}
+                  </Link>
+                )}
+              </div>
+            </>
           )}
         </div>
-      </dialog>
+      </div>
+
+      <p className="lp-klein ec-zuschnitt">
+        Gezählt sind Vorgänge mit laufender Frist. Der Zuschnitt läuft über CPV-Codes, nicht
+        über Schlagworte; was sich keinem der sechs Gebiete zuordnen lässt (Lieferungen,
+        Dienstleistungen, Sonderfälle), steht drinnen.
+      </p>
     </section>
   );
 }

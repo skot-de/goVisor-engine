@@ -54,8 +54,6 @@ export async function Landing() {
     z = roh ? (JSON.parse(roh) as Zahlen) : null;
   } catch { z = null; }
   const b = z?.beispiel ?? null;
-  // Der kleinste veröffentlichte Auftragswert im offenen Bestand — gemessen, nicht gerundet.
-  const vol = z?.check?.wert?.min != null ? `${nf(z.check.wert.min)} €` : null;
 
   return (
     <main className="lp">
@@ -224,28 +222,16 @@ export async function Landing() {
             Eine Behauptung ueber andere, die wir nicht pruefen koennen, ist genau das, was
             das Produkt drinnen nirgends zulaesst. Also Tatsachen ueber uns statt Urteile
             ueber andere — das ist ohnehin die staerkere Aussage, weil sie ueberpruefbar ist. */}
+        {/* ⚠ Waren bis zum 2026-08-21 VIER Karten, und Sven hat recht: „die so arbeitet
+            punkte sind alle ziemlich redundant". Sie waren es auf zwei Arten. „Die
+            Unterlagen" und „Jede Aussage mit Beleg" sagten beide, dass wir Dokumente lesen
+            und zitieren — jetzt eine Karte. „Der Abgleich mit eurem Profil" beschrieb genau
+            das, was der Eignungs-Check darüber inzwischen VORFÜHRT; eine Karte, die eine
+            Funktion erklärt, die zwei Bildschirmhöhen weiter oben schon lief, ist Füllung.
+            Und die Wertspanne steht ebenfalls dort, mit echten Zahlen. Bleiben zwei Karten,
+            die etwas sagen, das sonst nirgends steht. */}
         <h2 className="lp-h2">So arbeitet goVisor</h2>
-        <div className="lp-drei">
-          <article>
-            <span className="lp-symbol" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"
-                   strokeLinecap="round" strokeLinejoin="round">
-                <path d="M3 8h18" /><path d="M6 8V5.5A1.5 1.5 0 0 1 7.5 4h9A1.5 1.5 0 0 1 18 5.5V8" />
-                <path d="M5 8v10.5A1.5 1.5 0 0 0 6.5 20h11a1.5 1.5 0 0 0 1.5-1.5V8" />
-                <path d="M9 13h6" strokeWidth="2.2" />
-              </svg>
-            </span>
-            <h3>{vol ? `Auftragsvolumen ab ${vol}, nach oben offen` : "Vom Kleinauftrag bis zum Grossprojekt"}</h3>
-            {/* ⚠ Stand hier bis zum 2026-08-20 mit demselben Einstiegssatz wie der
-                Eignungs-Check darüber („gelten als eine Sache für Grosse") — zweimal
-                dieselbe Wendung auf einer Seite liest sich wie ein Textbaustein. */}
-            <p>
-              Der grösste Teil der öffentlichen Aufträge wird nie EU-weit ausgeschrieben. Wir
-              lesen die nationalen Pflichtveröffent&shy;lichungen mit, nicht nur TED. Deshalb
-              steht hier der Auftrag über ein paar tausend Euro neben dem über dreistellige
-              Millionen.
-            </p>
-          </article>
+        <div className="lp-drei lp-zwei">
           <article>
             <span className="lp-symbol" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"
@@ -258,43 +244,29 @@ export async function Landing() {
             <p>
               Was zählt, steht selten in der Bekanntmachung. Wir holen die Vergabeunterlagen,
               lesen Leistungsverzeichnis und Eignungskriterien aus und zeigen die Anforderungen
-              im Klartext, mit Frist und Fundstelle.
+              im Klartext, mit Frist und Fundstelle. Zu jeder steht das wörtliche Zitat aus dem
+              Dokument daneben; was sich nicht belegen lässt, verwerfen wir, statt es zu
+              schätzen.
             </p>
           </article>
           <article>
             <span className="lp-symbol" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"
                    strokeLinecap="round" strokeLinejoin="round">
-                <path d="M20 6 9 17l-5-5" strokeWidth="2.4" />
+                <circle cx="12" cy="12" r="9" /><path d="M3 12h18" />
+                <path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18Z" />
               </svg>
             </span>
-            <h3>Jede Aussage mit Beleg</h3>
+            <h3>Drei Länder, auch unterhalb der Schwelle</h3>
             <p>
-              Zu jeder Anforderung steht das wörtliche Zitat aus dem Dokument daneben. Was sich
-              nicht belegen lässt, verwerfen wir, statt es zu schätzen.
-            </p>
-          </article>
-          <article>
-            <span className="lp-symbol" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"
-                   strokeLinecap="round" strokeLinejoin="round">
-                <path d="M9 11.5 11 13.5 15.5 9" /><path d="M12 3 4 6.5v5c0 4.6 3.2 8.4 8 9.5
-                  4.8-1.1 8-4.9 8-9.5v-5L12 3Z" />
-              </svg>
-            </span>
-            <h3>Der Abgleich mit eurem Profil</h3>
-            <p>
-              Ihr hinterlegt einmal, was ihr habt: Umsatz, Referenzen, Zertifikate,
-              Bürgschaftsrahmen. Danach steht an jedem Verfahren, was ihr erfüllt, was fehlt
-              und wovon wir abraten, weil eine Pflichtanforderung nicht passt.
+              Der grösste Teil der öffentlichen Aufträge wird nie EU-weit ausgeschrieben. Wir
+              lesen die nationalen Pflichtveröffent&shy;lichungen in Deutschland, Österreich
+              und der Schweiz mit, nicht nur TED. Deshalb steht hier der Auftrag über ein paar
+              tausend Euro neben dem über dreistellige Millionen.
             </p>
           </article>
         </div>
 
-        {/* Die Bausteine, nach denen Sven gefragt hat („den 360-Grad-Blick etwas mehr
-            bewerben"). Als Chips statt als vierzehnte Karte: sie sollen zeigen, dass es
-            weitergeht, nicht jeden Baustein erklären. Kein „Alle Funktionen"-Link, solange
-            es die Seite dahinter nicht gibt. */}
         <p className="lp-bausteine-t">Dazu gehört, was danach kommt:</p>
         <div className="lp-bausteine">
           <span>Vergabestellen-Dossier</span>
@@ -305,15 +277,15 @@ export async function Landing() {
           <span>Bausteinbibliothek für Angebotstexte</span>
         </div>
 
-        {/* Was es kostet, in einem Satz und ohne Zahl: die Stufen stehen fest (Suche und
-            Liste sind dauerhaft frei, die Erfolgsprämie hängt an der Unterlagen-Analyse
-            oder am Bewertungs-Tab), die Beträge sind nicht beschlossen. Eine Zahl, die
-            später anders ausfällt, ist auf einer öffentlichen Seite teuer. */}
+        {/* ⚠ Hier stand bis zum 2026-08-21 die Erfolgsprämie („wenn ihr gewinnt, verdienen
+            wir mit"). Sven: „wir haben die vergabeprämie verworfen, also nimm das von der
+            seite." Was bleibt, ist die Stufenaussage ohne Beträge — die stehen nicht fest,
+            und eine Zahl, die später anders ausfällt, ist auf einer öffentlichen Seite
+            teuer. */}
         <p className="lp-preis">
-          <b>Was es kostet:</b> Suchen, filtern und Vergaben ansehen bleibt dauerhaft frei.
-          Bezahlt wird die Tiefe, also die ausgewerteten Unterlagen und die Bewertung. Und
-          wenn ihr damit einen Auftrag gewinnt, verdienen wir mit, nur an Vergaben, die ihr
-          selbst über goVisor ausgewertet habt.
+          <b>Was es kostet:</b> Der Einstieg nichts. Suchen, filtern und Vergaben ansehen
+          bleibt dauerhaft frei, ohne Zahlungsdaten und ohne Frist. Bezahlt wird später die
+          Tiefe: die ausgewerteten Unterlagen und die Bewertung eines Verfahrens.
         </p>
       </section>
 

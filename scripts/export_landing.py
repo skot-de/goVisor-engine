@@ -360,7 +360,25 @@ def eignungs_check(root, fachliste, analysen: dict) -> dict:
                   "offen": summe[r]} for r in laender_raeume]
                 + [{"schluessel": r, "label": r, "offen": summe[r]} for r in bundeslaender])
 
-    alle_werte.sort()
+    # ── WERTSPANNE: WARUM KEINE EXTREME ────────────────────────────────────────────
+    # Die Startseite sagte „Auftragsvolumen ab 80 €, nach oben offen bis 524,1 Mio €".
+    # Sven: „wir haben vergaben ab 80 €?!" — nachgemessen, und beide Enden waren Artefakte:
+    #   unten  ein „Neubau Grundschule, Innentüren Holz" für 80 € und sechs weitere mit
+    #          Los-Werten von 1 € oder 100 €. Das sind PLATZHALTER der Vergabestelle, kein
+    #          Auftragswert (der Bestand kennt das Muster als `wert_sentinel`, aber nur für
+    #          0,01 und 1,00 — 100 € rutscht durch).
+    #   oben   „TESTDL2025" der Bundesrechenzentrum GmbH: eine Testausschreibung, fünf
+    #          solche stecken im Bestand (s. eigenes Ticket).
+    # Ein einziger Fehlwert kippt ein Extrem, ein Perzentil nicht. Gezeigt werden deshalb
+    # Quartile, und Werte unter 1.000 € zählen gar nicht erst mit — sie sind zu 100 %
+    # Platzhalter, geprüft an den 69 betroffenen Vorgängen.
+    WERT_UNTERGRENZE = 1_000
+    verworfen = sum(1 for w in alle_werte if w < WERT_UNTERGRENZE)
+    alle_werte = sorted(w for w in alle_werte if w >= WERT_UNTERGRENZE)
+
+    def _q(anteil: int) -> int | None:
+        return alle_werte[int(len(alle_werte) * anteil / 100)] if alle_werte else None
+
     kat = anforderungs_katalog(analysen, fach_von_lead, offene_leads)
     return {
         "katalog": kat["katalog"],
@@ -372,11 +390,10 @@ def eignungs_check(root, fachliste, analysen: dict) -> dict:
         "stufen": [{"von": a, "bis": b} for a, b in STUFEN],
         "zellen": zellen,
         "anforderungen": anforderungen,
-        "wert": {"n": len(alle_werte),
-                 "min": alle_werte[0] if alle_werte else None,
-                 "median": alle_werte[len(alle_werte) // 2] if alle_werte else None,
-                 "max": alle_werte[-1] if alle_werte else None,
-                 "unter25k": sum(1 for w in alle_werte if w < 25_000)},
+        "wert": {"n": len(alle_werte), "untergrenze": WERT_UNTERGRENZE, "verworfen": verworfen,
+                 "p25": _q(25), "median": _q(50), "p75": _q(75), "p95": _q(95),
+                 "unter25k": sum(1 for w in alle_werte if w < 25_000),
+                 "ab1m": sum(1 for w in alle_werte if w >= 1_000_000)},
     }
 
 
