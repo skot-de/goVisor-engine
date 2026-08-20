@@ -333,11 +333,19 @@
    einem hellen Grünton statt auf Weiss, klebt beim Scrollen oben und trägt eine feine
    Linie nach unten. Der Ton ist derselbe, aus dem der Held seinen Verlauf zieht — die
    Seite bekommt damit oben eine Kante, ohne bunt zu werden. */
-.lp-kopf { position: sticky; top: 0; z-index: 50; margin: 0 -24px; padding: 13px 24px;
-  background: #EFF7F3; border-bottom: 1px solid #D7E7DF; }
+/* ⚠ Der Kopf trug bis zum 2026-08-21 einen grünen Grund. Der stammte aus der Zeit, als der
+   Kopfbereich darunter ebenfalls getönt war; seit der weg ist, schwebte hier ein grünes Band
+   über einer weissen Seite — derselbe Fehler wie vorher, nur isoliert. Dazu schwächte die
+   Fläche ausgerechnet den grünen Knopf, der als einzige gesättigte Farbe ziehen soll.
+   Jetzt weiss und beim Scrollen leicht durchscheinend: die Leiste ist als Ebene erkennbar,
+   ohne eine Farbe dafür zu verbrauchen. */
+.lp-kopf { position: sticky; top: 0; z-index: 50; margin: 0 -24px; padding: 10px 24px;
+  background: rgba(255, 255, 255, .88); backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line, #E3E7E5); }
 .lp-nav a:not(.lp-knopf) { padding: 6px 11px; border-radius: 8px; font-weight: 500;
   color: var(--ink-700, #33453F); transition: .13s; }
-.lp-nav a:not(.lp-knopf):hover { color: var(--signal-deep, #067A55); background: #E1F1EA; }
+.lp-nav a:not(.lp-knopf):hover { color: var(--signal-deep, #067A55);
+  background: var(--signal-wash, #E7F7F1); }
 
 /* Das echte Zeichen. Höhe fest, Breite mit — ein verzerrtes Logo fällt jedem auf, der es
    kennt, und sonst niemandem. */

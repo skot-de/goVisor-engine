@@ -74,9 +74,12 @@ export async function Landing() {
         <nav className="lp-nav">
           {/* Nur Anker auf diese Seite: eine Navigation, die auf Seiten zeigt, die es noch
               nicht gibt, ist der erste gebrochene Klick des ersten Besuchers. */}
-          <a href="#check">Was ist offen</a>
+          {/* ⚠ Standen als „Was ist offen" (Frage), „Arbeitsweise" (Substantiv) und
+              „Anfangen" (Verb) nebeneinander: drei Register in drei Wörtern. Jetzt drei
+              Substantive, damit die Leiste eine Stimme hat. */}
+          <a href="#check">Offene Vergaben</a>
           <a href="#arbeitsweise">Arbeitsweise</a>
-          <a href="#starten">Anfangen</a>
+          <a href="#starten">Einstieg</a>
           <Link href="/login">Anmelden</Link>
           <Link className="lp-knopf" href="/onboarding">Kostenlos starten</Link>
         </nav>
