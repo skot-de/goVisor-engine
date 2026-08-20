@@ -22,6 +22,13 @@ import { useMemo, useState } from "react";
  * `web/data/landing.json` — knapp 14 KB, damit hier gerechnet werden kann, ohne 40 MB
  * Leaddateien zu verschicken.
  *
+ * **Warum hier auch die Fachgebiete stehen.** Bis zum 2026-08-20 gab es zwei Abschnitte
+ * direkt untereinander: „Offen in eurem Fachgebiet" (sechs Zahlen zum Anschauen) und den
+ * Check (der dieselbe Auswahl noch einmal als Aufklappmenü stellte). Sven: „sollte man
+ * besser verbinden." Jetzt SIND die Kacheln die Auswahl — und sie rechnen mit: wer eine
+ * Region wählt, sieht alle sechs Zahlen auf diese Region umspringen. Aus einer Anzeige
+ * wird ein Werkzeug, und eine doppelte Frage verschwindet.
+ *
  * **Eingeklappt, aber nicht leer.** Sven: „sonst nimmt er zu viel platz weg". Sichtbar
  * bleibt der obere Rand — zwei Auswahlfelder und die Zahl der offenen Vergaben in diesem
  * Zuschnitt. Wer weiterklickt, bekommt die drei Fragen und den Vergleich.
@@ -114,9 +121,35 @@ export function EignungsCheck({ check, fachgebiete }: {
 
   return (
     <section className="lp-check" id="check">
+      <div className="ec-kacheln-block">
+        <h2 className="lp-h2">Was heute offen ist. Und ob ihr drankommt.</h2>
+        <ul className="ec-kacheln" role="group" aria-label="Fachgebiet wählen">
+          {fachgebiete.map((f) => {
+            const z = check.zellen[`${f.schluessel}|${region}`];
+            return (
+              <li key={f.schluessel}>
+                <button type="button" aria-pressed={fach === f.schluessel}
+                        aria-label={`${f.label}: ${nf(z?.offen ?? 0)} offene Vergaben`}
+                        className={fach === f.schluessel ? "ec-kachel ec-kachel-an" : "ec-kachel"}
+                        onClick={() => setFach(f.schluessel)}>
+                  <b>{nf(z?.offen ?? 0)}</b>
+                  <span>{f.label}</span>
+                </button>
+              </li>
+            );
+          })}
+        </ul>
+        <p className="lp-klein">
+          Gezählt sind Vorgänge mit laufender Frist, {regionLabel === "überall" ? "in allen drei Ländern"
+            : regionLabel}. Dazu alles, was sich keinem dieser Gebiete zuordnen lässt:
+          Lieferungen, Dienstleistungen, Sonderfälle. Der Zuschnitt läuft über CPV-Codes,
+          nicht über Schlagworte.
+        </p>
+      </div>
+
       <div className="ec-text">
         <p className="lp-auge">Eignungs-Check</p>
-        <h2 className="lp-h2">Jeder kann mitbieten. Auch ihr.</h2>
+        <h2 className="lp-h3">Jeder kann mitbieten. Auch ihr.</h2>
         <p>
           Öffentliche Aufträge gelten als eine Sache für Grosse. Der kleinste offene Auftrag
           im Bestand liegt bei {check.wert.min !== null ? euro(check.wert.min) : "—"},
@@ -133,13 +166,7 @@ export function EignungsCheck({ check, fachgebiete }: {
       <div className="ec-panel">
         <div className="ec-kopf">
           <label>
-            <span>Fachgebiet</span>
-            <select value={fach} onChange={(e) => setFach(e.target.value)}>
-              {fachgebiete.map((f) => <option key={f.schluessel} value={f.schluessel}>{f.label}</option>)}
-            </select>
-          </label>
-          <label>
-            <span>Region</span>
+            <span>Region — die Kacheln oben rechnen mit</span>
             <select value={region} onChange={(e) => setRegion(e.target.value)}>
               {check.regionen.map((r) => (
                 <option key={r.schluessel} value={r.schluessel}>{r.label}</option>

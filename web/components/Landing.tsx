@@ -68,13 +68,17 @@ export async function Landing() {
       </p>
 
       <header className="lp-kopf">
-        <span className="lp-marke">goVisor</span>
+        {/* Das echte Zeichen statt getippter Buchstaben: dieselbe Datei, die die Anwendung
+            in der Seitenleiste trägt (`Rail.tsx`). Ein Schriftzug, der auf der Startseite
+            anders aussieht als drinnen, ist zwei Marken. */}
+        <img className="lp-logo" src="/govisor-wordmark.png" alt="goVisor" width={1004}
+             height={252} />
         <nav className="lp-nav">
           {/* Nur Anker auf diese Seite: eine Navigation, die auf Seiten zeigt, die es noch
               nicht gibt, ist der erste gebrochene Klick des ersten Besuchers. */}
-          <a href="#fachgebiete">Fachgebiete</a>
-          <a href="#check">Eignungs-Check</a>
+          <a href="#check">Was ist offen</a>
           <a href="#arbeitsweise">Arbeitsweise</a>
+          <a href="#starten">Anfangen</a>
           <Link href="/login">Anmelden</Link>
           <Link className="lp-knopf" href="/onboarding">Kostenlos starten</Link>
         </nav>
@@ -125,30 +129,11 @@ export async function Landing() {
         ) : null}
       </section>
 
-      {/* FÜR WEN — die Zeile, die vorher fehlte.
-          Die Seite sprach niemanden an: kein einziges Gewerk genannt. Ein Dachdecker
-          entscheidet in drei Sekunden, ob eine Seite ihn meint, und „117.493 Vergaben" sagt
-          ihm nichts; „11.733 offene Bauvergaben" schon. Die Zahl je Gebiet zaehlt nur
-          Vorgaenge mit LAUFENDER Frist — was abgelaufen ist, interessiert niemanden. */}
-      {z?.fachgebiete?.length ? (
-        <section className="lp-fach" id="fachgebiete" aria-label="Fachgebiete">
-          <h2 className="lp-fach-h">Offen in eurem Fachgebiet</h2>
-          <ul>
-            {z.fachgebiete.map((f) => (
-              <li key={f.schluessel}>
-                <b>{nf(f.offen)}</b>
-                <span>{f.label}</span>
-              </li>
-            ))}
-          </ul>
-          <p className="lp-klein">
-            Dazu alles, was sich keinem dieser Gebiete zuordnen lässt: Lieferungen,
-            Dienstleistungen, Sonderfälle. Der Zuschnitt läuft über CPV-Codes, nicht über
-            Schlagworte.
-          </p>
-        </section>
-      ) : null}
-
+      {/* ⚠ Hier stand bis zum 2026-08-20 ein eigener Abschnitt „Offen in eurem
+          Fachgebiet": sechs Zahlen zum Anschauen, direkt über einem Check, der dieselbe
+          Auswahl noch einmal als Aufklappmenü stellte. Sven: „sollte man besser verbinden."
+          Die Kacheln sind jetzt die Auswahl des Checks (s. EignungsCheck.tsx) — und sie
+          rechnen mit der gewählten Region mit. */}
       {/* EIGNUNGS-CHECK — Svens Einwand: „wir sprechen die zielgruppe nicht an … wir haben
           auch noch was gebaut wo man checken kann, ob man die vorgaben erfüllt." Den
           Abgleich gibt es drinnen seit #27, aber erst nach Konto und Onboarding. Hier steht
@@ -353,7 +338,8 @@ export async function Landing() {
       </p>
 
       <footer className="lp-fuss">
-        <span className="lp-marke">goVisor</span>
+        <img className="lp-logo lp-logo-fuss" src="/govisor-wordmark.png" alt="goVisor"
+             width={1004} height={252} />
         <span className="lp-klein">Diese Seite ist vorläufig und wird noch überarbeitet.</span>
       </footer>
     </main>

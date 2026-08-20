@@ -189,14 +189,15 @@
    nüchtern: er ist ein Werkzeug, kein Werbebanner, und wirkt nur, wenn seine Zahlen
    glaubwürdig aussehen. */
 .lp-check { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr);
-  gap: 44px; align-items: start; margin: 64px 0; padding: 36px 0 0;
+  gap: 20px 44px; align-items: start; margin: 56px 0; padding: 34px 0 0;
   border-top: 1px solid var(--line, #E3E7E5); }
 .ec-text h2 { margin-bottom: 14px; }
 .ec-text p { font-size: 15px; line-height: 1.65; color: var(--ink-700, #33453F); margin: 0 0 14px; }
 
 .ec-panel { border: 1px solid var(--line, #E3E7E5); border-radius: 16px; background: #fff;
   padding: 22px; box-shadow: 0 18px 46px rgba(18,33,29,.07); }
-.ec-kopf { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 18px; }
+/* Seit die Kacheln das Fachgebiet tragen, steht hier nur noch die Region. */
+.ec-kopf { margin-bottom: 16px; }
 .ec-kopf label { display: block; }
 .ec-kopf span { display: block; font-size: 12px; font-weight: 600; color: var(--ink-500, #64766F);
   margin-bottom: 5px; }
@@ -316,3 +317,60 @@
   .lp-zusagen { flex-direction: column; align-items: center; gap: 6px; }
   .lp-zusagen span:not(:last-child)::after { content: none; }
 }
+
+/* KOPF farblich abgesetzt (Sven: „menu farblich absetzen"). Die Leiste sitzt jetzt in
+   einem hellen Grünton statt auf Weiss, klebt beim Scrollen oben und trägt eine feine
+   Linie nach unten. Der Ton ist derselbe, aus dem der Held seinen Verlauf zieht — die
+   Seite bekommt damit oben eine Kante, ohne bunt zu werden. */
+.lp-kopf { position: sticky; top: 0; z-index: 50; margin: 0 -24px; padding: 13px 24px;
+  background: #EFF7F3; border-bottom: 1px solid #D7E7DF; }
+.lp-nav a:not(.lp-knopf) { padding: 6px 11px; border-radius: 8px; font-weight: 500;
+  color: var(--ink-700, #33453F); transition: .13s; }
+.lp-nav a:not(.lp-knopf):hover { color: var(--signal-deep, #067A55); background: #E1F1EA; }
+
+/* Das echte Zeichen. Höhe fest, Breite mit — ein verzerrtes Logo fällt jedem auf, der es
+   kennt, und sonst niemandem. */
+.lp-logo { height: 26px; width: auto; display: block; }
+.lp-logo-fuss { height: 22px; opacity: .85; }
+
+/* FACHGEBIETE ALS AUSWAHL. Kacheln, keine Anzeige: sie tragen die Zahl UND schalten den
+   Check darunter um. Die Zahl gehört zur gewählten Region, deshalb ändert sie sich mit. */
+.ec-kacheln-block { grid-column: 1 / -1; margin-bottom: 8px; }
+.ec-kacheln { list-style: none; display: grid; grid-template-columns: repeat(6, 1fr);
+  gap: 10px; margin: 18px 0 12px; padding: 0; }
+.ec-kachel { display: block; width: 100%; text-align: left; cursor: pointer; font: inherit;
+  padding: 13px 14px 12px; border-radius: 12px; background: #fff;
+  border: 1px solid var(--line, #E3E7E5); border-top: 3px solid var(--line-strong, #CFD6D3);
+  transition: .14s; }
+.ec-kachel:hover { border-top-color: var(--signal, #10B981); transform: translateY(-1px); }
+.ec-kachel b { display: block; font-size: 22px; letter-spacing: -.02em;
+  font-variant-numeric: tabular-nums; }
+.ec-kachel span { display: block; margin-top: 3px; font-size: 12.5px; line-height: 1.35;
+  color: var(--ink-500, #64766F); }
+.ec-kachel-an { border-color: var(--signal, #10B981); border-top-color: var(--signal-deep, #067A55);
+  background: var(--signal-wash, #E7F7F1); box-shadow: 0 6px 18px rgba(6,122,85,.12); }
+.ec-kachel-an span { color: var(--ink-700, #33453F); }
+
+.lp-h3 { font-size: 23px; font-weight: 700; letter-spacing: -.025em; line-height: 1.2;
+  margin: 0 0 14px; }
+
+@media (max-width: 1000px) { .ec-kacheln { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 560px) { .ec-kacheln { grid-template-columns: repeat(2, 1fr); } }
+
+/* ⚠ Der Startknopf im Kopf trug dunkelgraue Schrift auf Dunkelgrün: `.lp-nav a` (Klasse +
+   Typ) schlägt `.lp-knopf` (nur Klasse), und die weisse Farbe des Knopfes fiel lautlos
+   heraus. Fiel erst auf, als die Leiste einen farbigen Grund bekam. */
+.lp-nav a.lp-knopf { color: #fff; }
+
+/* Unter 480 px passten Zeichen, „Anmelden" und Startknopf zusammen 13 px zu breit — die
+   Seite bekam einen waagerechten Schieber, und der Knopf stand halb ausserhalb. */
+@media (max-width: 480px) {
+  .lp-kopf { padding: 11px 16px; margin: 0 -16px; }
+  .lp-logo { height: 21px; }
+  .lp-nav { gap: 10px; font-size: 13px; }
+  .lp-nav a.lp-knopf { padding: 8px 13px; font-size: 13px; }
+}
+
+/* Sprungziele der Kopfleiste ausweichen lassen: ohne das legt sich die klebende Leiste
+   nach einem Ankerklick über die Überschrift, zu der gesprungen wurde. */
+.lp [id] { scroll-margin-top: 78px; }
