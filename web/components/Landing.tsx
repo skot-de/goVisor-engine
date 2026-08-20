@@ -31,6 +31,7 @@ type Zahlen = {
   vergabestellen_de: number; fachgebiete_de: number;
   unterlagen_volltext: number; unterlagen_analysiert: number;
   auslaufend: number; auslaufend_24m: number; regionen: number; anbieter: number;
+  fachgebiete: { schluessel: string; label: string; offen: number }[];
   beispiel: { titel: string; kaeufer: string; region: string; frist: string; punkte: Punkt[] } | null;
 };
 
@@ -104,6 +105,30 @@ export async function Landing() {
           </aside>
         ) : null}
       </section>
+
+      {/* FÜR WEN — die Zeile, die vorher fehlte.
+          Die Seite sprach niemanden an: kein einziges Gewerk genannt. Ein Dachdecker
+          entscheidet in drei Sekunden, ob eine Seite ihn meint, und „117.493 Vergaben" sagt
+          ihm nichts; „11.733 offene Bauvergaben" schon. Die Zahl je Gebiet zaehlt nur
+          Vorgaenge mit LAUFENDER Frist — was abgelaufen ist, interessiert niemanden. */}
+      {z?.fachgebiete?.length ? (
+        <section className="lp-fach" aria-label="Fachgebiete">
+          <h2 className="lp-fach-h">Offen in eurem Fachgebiet</h2>
+          <ul>
+            {z.fachgebiete.map((f) => (
+              <li key={f.schluessel}>
+                <b>{nf(f.offen)}</b>
+                <span>{f.label}</span>
+              </li>
+            ))}
+          </ul>
+          <p className="lp-klein">
+            Dazu alles, was sich keinem dieser Gebiete zuordnen lässt: Lieferungen,
+            Dienstleistungen, Sonderfälle. Der Zuschnitt läuft über CPV-Codes, nicht über
+            Schlagworte.
+          </p>
+        </section>
+      ) : null}
 
       {/* PLANUNGSHORIZONT — die Zeitachse, die der ersten Fassung fehlte.
           Sie zeigte nur den Einzelfall: eine offene Ausschreibung mit ihren Anforderungen.
@@ -228,6 +253,21 @@ export async function Landing() {
             <p>
               Zu jeder Anforderung steht das wörtliche Zitat aus dem Dokument daneben. Was sich
               nicht belegen lässt, verwerfen wir, statt es zu schätzen.
+            </p>
+          </article>
+          <article>
+            <span className="lp-symbol" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"
+                   strokeLinecap="round" strokeLinejoin="round">
+                <path d="M9 11.5 11 13.5 15.5 9" /><path d="M12 3 4 6.5v5c0 4.6 3.2 8.4 8 9.5
+                  4.8-1.1 8-4.9 8-9.5v-5L12 3Z" />
+              </svg>
+            </span>
+            <h3>Der Abgleich mit eurem Profil</h3>
+            <p>
+              Ihr hinterlegt einmal, was ihr habt: Umsatz, Referenzen, Zertifikate,
+              Bürgschaftsrahmen. Danach steht an jedem Verfahren, was ihr erfüllt, was fehlt
+              und wovon wir abraten, weil eine Pflichtanforderung nicht passt.
             </p>
           </article>
         </div>

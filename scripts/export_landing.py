@@ -60,6 +60,27 @@ def main() -> int:
     stellen, cpv = con.execute(
         f"SELECT count(DISTINCT buyer_name), count(DISTINCT cpv_code) FROM '{de}'").fetchone()
 
+    # ── FACHGEBIETE ─────────────────────────────────────────────────────────────────────
+    # Die Startseite sprach niemanden an: kein einziges Gewerk genannt. Ein Dachdecker
+    # entscheidet in drei Sekunden, ob eine Seite ihn meint, und „117.493 Vergaben" sagt
+    # ihm nichts. Gezaehlt werden Vorgaenge mit LAUFENDER Frist — nicht der Gesamtbestand,
+    # denn was zaehlt, ist was heute offen ist.
+    fach = []
+    for datei, label in (("bau", "Bau und Handwerk"), ("it", "IT und Digitales"),
+                         ("beratung", "Planung und Beratung"), ("energie", "Energie und Umwelt"),
+                         ("medizin", "Medizin und Pflege"), ("sicherheit", "Sicherheit")):
+        pfad = ROOT / "web/data" / f"leads-{datei}.json"
+        try:
+            leads = json.loads(pfad.read_text(encoding="utf-8"))
+            leads = leads if isinstance(leads, list) else list(leads.values())
+            n = sum(1 for l in leads if isinstance(l, dict)
+                    and isinstance(l.get("endTage"), int) and l["endTage"] >= 0)
+        except Exception:                                      # noqa: BLE001
+            n = 0
+        if n:
+            fach.append({"schluessel": datei, "label": label, "offen": n})
+    fach.sort(key=lambda f: -f["offen"])
+
     def zaehle(name: str) -> int:
         p = ROOT / "web/data" / name
         try:
@@ -124,6 +145,7 @@ def main() -> int:
         "auslaufend_24m": horizont[1],
         "regionen": regionen,
         "anbieter": zaehle("suppliers.json"),
+        "fachgebiete": fach,
         "beispiel": beispiel,
     }
     ZIEL.write_text(json.dumps(daten, ensure_ascii=False), encoding="utf-8")

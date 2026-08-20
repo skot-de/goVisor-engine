@@ -81,7 +81,9 @@
 
 .lp-block { padding: 48px 0; }
 .lp-h2 { font-size: 25px; letter-spacing: -0.02em; margin: 0 0 26px; }
-.lp-drei { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 26px; }
+/* Vier Karten seit dem Profilabgleich: zwei mal zwei liest sich ruhiger als vier in einer
+   Reihe, und die Texte bleiben lesbar breit. */
+.lp-drei { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
 .lp-drei article { background: #fff; border: 1px solid var(--line, #E3E7E5); border-radius: 14px;
   padding: 22px 20px; transition: .15s; }
 .lp-drei article:hover { border-color: var(--line-strong, #CFD6D3);
@@ -162,3 +164,22 @@
    stutzt, findet hier im selben Blick, woher sie kommen. */
 .lp-herkunft { margin: 10px 2px 0; font-size: 12.5px; line-height: 1.6;
   color: var(--ink-500, #64766F); font-variant-numeric: tabular-nums; max-width: 82ch; }
+
+/* FÜR WEN. Sechs Zahlen mit Gewerk daneben, damit jeder in drei Sekunden sieht, ob er
+   gemeint ist. Bewusst keine Kacheln mit Rahmen: das ist eine Aufzählung, kein Menü. */
+.lp-fach { padding: 8px 0 34px; }
+.lp-fach-h { font-size: 15px; font-weight: 600; color: var(--ink-500, #64766F);
+  margin: 0 0 14px; letter-spacing: -0.005em; }
+.lp-fach ul { list-style: none; margin: 0 0 12px; padding: 0; display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 18px; }
+.lp-fach li { border-top: 2px solid var(--signal, #10B981); padding-top: 9px; }
+/* Die kleineren Gebiete bekommen einen blasseren Strich: die Reihenfolge ist die Groesse,
+   und das soll man sehen, ohne die Zahlen zu vergleichen. */
+.lp-fach li:nth-child(n+4) { border-top-color: #9AD6C1; }
+.lp-fach b { display: block; font-size: 21px; font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em; line-height: 1.2; }
+.lp-fach span { font-size: 12.5px; color: var(--ink-500, #64766F); }
+
+@media (max-width: 900px) {
+  .lp-fach ul { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px 18px; }
+}
