@@ -117,3 +117,22 @@
   .lp-zahlen { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .lp-drei, .lp-laender { grid-template-columns: 1fr; }
 }
+
+/* PLANUNGSHORIZONT. Drei Stufen als Zeitachse, nicht als Kachelwand: die Linie links macht
+   sichtbar, dass es eine Reihenfolge ist und keine Auswahl. Die Bestandszahl steht klein
+   unter jeder Stufe — sie belegt den Zuschnitt, sie ist nicht das Versprechen. */
+.lp-horizont { list-style: none; margin: 0; padding: 0; display: grid; gap: 0;
+  border-left: 2px solid var(--line-strong, #CFD6D3); }
+.lp-horizont li { position: relative; padding: 0 0 30px 26px; }
+.lp-horizont li:last-child { padding-bottom: 0; }
+/* Der Punkt auf der Linie. Gefüllt in Akzentfarbe, damit das Auge die Stufen abzählt. */
+.lp-horizont li::before { content: ""; position: absolute; left: -7px; top: 4px;
+  width: 12px; height: 12px; border-radius: 999px; background: var(--signal-deep, #067A55);
+  box-shadow: 0 0 0 4px var(--paper, #F6F7F6); }
+.lp-stufe { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: .06em;
+  text-transform: uppercase; color: var(--signal-deep, #067A55); margin-bottom: 6px; }
+.lp-horizont h3 { font-size: 18px; margin: 0 0 6px; letter-spacing: -0.01em; }
+.lp-horizont p { margin: 0 0 8px; color: var(--ink-700, #33453F); line-height: 1.6;
+  font-size: 14.5px; max-width: 62ch; }
+.lp-stufe-zahl { font-size: 12.5px; color: var(--ink-500, #64766F);
+  font-variant-numeric: tabular-nums; }

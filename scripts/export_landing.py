@@ -39,6 +39,21 @@ def main() -> int:
         gesamt += n
         offen += o
 
+    # ── PLANUNGSHORIZONT ────────────────────────────────────────────────────────────────
+    # Die Startseite zeigte zuerst nur den Einzelfall: eine offene Ausschreibung mit ihren
+    # Anforderungen. Was fehlte, ist die Zeitachse — und dort steht die staerkste Zahl des
+    # Bestands: die auslaufenden Vertraege. Eine laufende Ausschreibung ist fuer die meisten
+    # Firmen zu spaet; wer einen Amtsinhaber verdraengen will, faengt ein Jahr vorher an.
+    de_le = (ROOT / 'data/gold/DE/lead_export.parquet').as_posix()
+    horizont = con.execute(f"""SELECT
+        count(*) FILTER (WHERE phase='expiring'),
+        count(*) FILTER (WHERE phase='expiring' AND months_to_expiry BETWEEN 0 AND 24)
+        FROM '{de_le}'""").fetchone()
+    regionen = 0
+    rp = ROOT / "data/gold/DE/region_kpi.parquet"
+    if rp.exists():
+        regionen = con.execute(f"SELECT count(*) FROM '{rp.as_posix()}'").fetchone()[0]
+
     # Vergabestellen und Fachgebiete nur aus DE: für AT/CH ist die Entitäten-Auflösung
     # schwächer, und eine Zahl, die zwei verschiedene Qualitäten mischt, ist keine Zahl.
     de = (ROOT / "data/gold/DE/lead_export.parquet").as_posix()
@@ -105,6 +120,10 @@ def main() -> int:
         "fachgebiete_de": cpv,
         "unterlagen_volltext": zaehle("doc-text-index.json"),
         "unterlagen_analysiert": zaehle("doc-analysis.json"),
+        "auslaufend": horizont[0],
+        "auslaufend_24m": horizont[1],
+        "regionen": regionen,
+        "anbieter": zaehle("suppliers.json"),
         "beispiel": beispiel,
     }
     ZIEL.write_text(json.dumps(daten, ensure_ascii=False), encoding="utf-8")
