@@ -37,12 +37,12 @@
 
    Abgeschaltet auf niedrigen Fenstern und Telefonen: dort ist fast jeder Abschnitt höher
    als das Fenster, und Einrasten wird zum Widerhaken. */
-html { scroll-snap-type: y proximity; }
-.lp-halt { scroll-snap-align: start; scroll-snap-stop: normal; scroll-margin-top: 78px; }
-@media (max-height: 700px), (max-width: 900px) {
-  html { scroll-snap-type: none; }
-}
-@media (prefers-reduced-motion: reduce) { html { scroll-snap-type: none; } }
+/* ⚠ Hier stand `scroll-snap-type: y proximity`. Gemessen zieht Chrome damit aus rund
+   300 px und greift schon WÄHREND des Scrollens ein — Sven: „kannst du sie nicht ganz so
+   sticky machen?" Kann CSS nicht: die Fangweite ist nicht einstellbar. Das Andocken macht
+   deshalb `components/SanfteHalte.tsx`, mit 90 px Fangweite und erst nach 140 ms Ruhe.
+   Die Klasse `lp-halt` bleibt und markiert weiterhin die Abschnittsanfänge. */
+.lp-halt { scroll-margin-top: 78px; }
 
 /* Fast, aber nicht ganz bildschirmhoch. „Ganz" hiesse Vollbild-Sektionen mit Einrasten,
    und dagegen spricht der Inhalt selbst: das Werkzeug darunter ist bei offener Auswertung
