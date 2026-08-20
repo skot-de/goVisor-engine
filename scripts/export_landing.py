@@ -66,6 +66,83 @@ ANF_LEITER = {
 }
 
 
+# ── WAS IN DEN UNTERLAGEN GEFORDERT WIRD ────────────────────────────────────────────
+# Der öffentliche Check zeigte zuerst vier Zeilen: die vier Fragen, die er selbst gestellt
+# hatte. Svens Urteil zur Vorlage `INPUT/…/govisor-eignungscheck-v1.html`: „was gefunden
+# wurde finde ich da besser." Zu Recht — die interessante Liste ist nicht, was wir gefragt
+# haben, sondern was in den Unterlagen tatsächlich steht, nach Häufigkeit sortiert.
+#
+# **Wie gezählt wird und was die Prozentzahl NICHT heisst.** Grundlage sind die extrahierten
+# Anforderungen je ausgewertetem Verfahren (`doc-analysis.json`), erkannt über Begriffe in
+# Zitat, Wert und Bezeichnung. Die Zahl ist damit eine **Untergrenze**: was die Extraktion
+# nicht erfasst hat, fehlt hier. „Belegt in 21 %“ heisst „in jedem fünften ausgewerteten
+# Verfahren steht es wörtlich“, nicht „vier Fünftel verlangen es nicht“. Die Oberfläche
+# muss das so sagen, sonst wird aus einer ehrlichen Zahl eine falsche.
+#
+# Drei Arten, weil sie verschieden zu beantworten sind:
+#   formular  — eine Erklärung, die man ankreuzt und unterschreibt. Kostet Zeit, keine
+#               Voraussetzung; deshalb für jeden erfüllbar und ohne Frage im Check.
+#   schwelle  — eine Zahl, die gegen die Antwort geprüft wird (Deckung, Referenzen, Umsatz).
+#   nachweis  — hat man oder hat man nicht (Präqualifikation, Zertifikat).
+KATALOG = [
+    {"key": "eigenerklaerung", "art": "formular", "name": "Eigenerklärung zur Eignung",
+     "rx": r"Eigenerkl[äa]rung",
+     "was": "Ihr erklärt selbst, dass ihr die Eignungskriterien erfüllt. Nachweise verlangt "
+            "die Vergabestelle erst, wenn euer Angebot in die engere Wahl kommt."},
+    {"key": "nachunternehmer", "art": "formular", "name": "Erklärung zu Nachunternehmern",
+     "rx": r"Nachunternehm|Unterauftrag",
+     "was": "Wer Teile der Leistung weitergibt, benennt sie und legt die Zustimmung des "
+            "Nachunternehmers bei. Ohne Nachunternehmer genügt die Fehlanzeige."},
+    {"key": "ausschluss", "art": "formular", "name": "Ausschlussgründe §§ 123/124 GWB",
+     "rx": r"§+\s*12[34]|Ausschlussgr[uü]nd",
+     "was": "Die Erklärung, dass gegen euer Unternehmen keine schweren Verfehlungen "
+            "vorliegen: Steuerrückstände, Insolvenz, einschlägige Verurteilungen. "
+            "Ein Formular ankreuzen und unterschreiben."},
+    {"key": "sanktionen", "art": "formular", "name": "Russland-Sanktionen (Art. 5k)",
+     "rx": r"Art\.?\s*5k|Sanktion|Russland",
+     "was": "Die Erklärung, dass euer Unternehmen nicht unter die EU-Sanktionen gegen "
+            "Russland fällt. Für die meisten Betriebe eine Formalie."},
+    {"key": "bietergemeinschaft", "art": "formular", "name": "Erklärung zur Bietergemeinschaft",
+     "rx": r"Bietergemeinschaft|Arbeitsgemeinschaft|ARGE",
+     "was": "Wer gemeinsam bietet, benennt alle Beteiligten und einen Bevollmächtigten. "
+            "Wer allein bietet, kreuzt „Einzelbieter“ an."},
+    {"key": "tariftreue", "art": "formular", "name": "Tariftreue und Mindestentgelt",
+     "rx": r"Tariftreue|Mindestentgelt|Mindestlohn",
+     "was": "Die Zusage, nach geltendem Tarif oder mindestens dem Landesmindestlohn zu "
+            "zahlen und dasselbe von Nachunternehmern zu verlangen."},
+    {"key": "unbedenklichkeit", "art": "formular", "name": "Unbedenklichkeitsbescheinigungen",
+     "rx": r"Unbedenklichkeitsbesch",
+     "was": "Bescheinigungen von Finanzamt, Krankenkasse, Berufsgenossenschaft oder "
+            "Sozialkasse, dass ihr keine Rückstände habt. Werden auf Anforderung "
+            "nachgereicht, nicht mit dem Angebot."},
+    {"key": "haftpflicht", "art": "schwelle", "name": "Berufs- oder Betriebshaftpflicht",
+     "rx": r"Haftpflicht", "frage": "haftpflicht",
+     "was": "Die Versicherung, die Schäden aus eurer Tätigkeit deckt. Gefragt ist die "
+            "Deckungssumme; sie steht in der Police, meist auf der ersten Seite."},
+    {"key": "referenzen", "art": "schwelle", "name": "Vergleichbare Referenzen",
+     "rx": r"Referenz", "frage": "referenzen",
+     "was": "Abgeschlossene Aufträge ähnlicher Art und Grösse, meist aus den letzten drei "
+            "bis fünf Jahren, oft mit Ansprechpartner beim Auftraggeber."},
+    {"key": "umsatz", "art": "schwelle", "name": "Mindestumsatz",
+     "rx": r"Mindestumsatz|Umsatz des Unternehmens", "frage": "umsatz",
+     "was": "Ein Jahresumsatz, den ihr in den letzten Geschäftsjahren erreicht haben müsst, "
+            "häufig bezogen auf vergleichbare Leistungen."},
+    {"key": "praequalifikation", "art": "nachweis", "name": "Präqualifikation (PQ)",
+     "rx": r"Pr[äa]qualifi|PQ-?VOB", "frage": "pq",
+     "was": "Eine einmalige Vorabprüfung eurer Eignung durch eine amtliche Stelle. Danach "
+            "genügt bei jeder Bewerbung eure PQ-Nummer statt derselben Nachweise. Antrag "
+            "mit Unterlagen, jährliche Verlängerung, jährliche Gebühr."},
+    {"key": "iso9001", "art": "nachweis", "name": "ISO 9001 (Qualitätsmanagement)",
+     "rx": r"ISO\s*9001|DIN\s*EN\s*ISO\s*9001", "frage": "iso9001",
+     "was": "Zertifiziertes Qualitätsmanagement. Die Zertifizierung läuft über eine "
+            "akkreditierte Stelle, gilt drei Jahre und wird jährlich überwacht."},
+    {"key": "iso14001", "art": "nachweis", "name": "ISO 14001 (Umweltmanagement)",
+     "rx": r"ISO\s*14001", "frage": "iso14001",
+     "was": "Zertifiziertes Umweltmanagement. Wird vor allem dort verlangt, wo "
+            "Umweltkriterien in die Wertung eingehen."},
+]
+
+
 def _wert_eur(roh: object) -> int | None:
     """„1,2 Mio €" → 1_200_000. Gibt None zurück, wenn nichts Zählbares dasteht."""
     import re
@@ -88,12 +165,111 @@ def _zahl(roh: object) -> float | None:
     return float(m.group()) if m else None
 
 
+def anforderungs_katalog(analysen: dict, fach_von_lead: dict, offene_leads: set) -> dict:
+    """Häufigkeitsliste je Fachgebiet + die Anforderungsprofile der einzelnen Verfahren.
+
+    Zwei Ergebnisse aus einem Durchgang:
+
+    ``katalog`` — was wie oft belegt ist. Sortiert nach Häufigkeit, denn das ist die
+    Reihenfolge, in der es jemanden interessiert.
+
+    ``profile`` — je Verfahren die verlangten Stufen, gruppiert und gezählt. Damit kann der
+    Browser die Frage beantworten, die alles zusammenfasst: *bei wie vielen dieser Verfahren
+    hätten unsere Angaben gereicht?* Gruppiert, weil 3.544 Verfahren nur 238 verschiedene
+    Profile ergeben — die Datei bleibt bei 5 kB statt 60.
+
+    **Der Nenner ist nicht die Zahl der Verfahren.** Zwei Drittel der ausgewerteten
+    Unterlagen tragen gar keine bezifferte Anforderung; wer die mitzählt, verkauft jedem
+    „passt schon". Gezählt wird deshalb nur gegen Verfahren mit MINDESTENS EINER belegten
+    Anforderung, und die Zahl der übrigen steht daneben.
+    """
+    import re
+    from collections import Counter, defaultdict
+
+    leitern = {n: ANF_LEITER[n]["stufen"] for n in ("haftpflicht", "referenzen", "umsatz")}
+    typen = {n: ANF_LEITER[n]["typ"] for n in leitern}
+    mindest = {n: ANF_LEITER[n]["min"] for n in leitern}
+    hoechst = {n: ANF_LEITER[n].get("max", float("inf")) for n in leitern}
+
+    def stufe(wert: float, leiter: list) -> int:
+        """Kleinste Stufe, die die Forderung noch erfüllt — verlangt sind 2 Mio, Stufe 3 Mio."""
+        for i, s in enumerate(leiter):
+            if wert <= s:
+                return i
+        return len(leiter) - 1
+
+    treffer: dict[str, Counter] = defaultdict(Counter)
+    gruppen: dict[str, Counter] = defaultdict(Counter)
+    je_fach = Counter()
+
+    for lid, a in analysen.items():
+        f = fach_von_lead.get(lid)
+        if not f:
+            continue
+        je_fach[f] += 1
+        stufen = {"haftpflicht": -1, "referenzen": -1, "umsatz": -1}
+        text = []
+        for it in (a.get("checklist") or []):
+            if not isinstance(it, dict):
+                continue
+            text.append(f"{it.get('quote') or ''} {it.get('value') or ''} {it.get('label') or ''}")
+            for name, leiter in leitern.items():
+                if it.get("req_type") != typen[name] or not it.get("value"):
+                    continue
+                z = _zahl(it["value"])
+                if z is None or z < mindest[name] or z > hoechst[name]:
+                    continue
+                stufen[name] = max(stufen[name], stufe(z, leiter))
+        voll = " ".join(text)
+        gefunden = {e["key"] for e in KATALOG if re.search(e["rx"], voll, re.I)}
+        for key in gefunden:
+            treffer[f][key] += 1
+            treffer["alle"][key] += 1
+        # Profil: verlangte Stufe je Schwelle (-1 = nicht beziffert) + die zwei Nachweise
+        pq = 1 if "praequalifikation" in gefunden else 0
+        i9 = 1 if "iso9001" in gefunden else 0
+        i14 = 1 if "iso14001" in gefunden else 0
+        offen = 1 if lid in offene_leads else 0
+        schluessel = (stufen["haftpflicht"], stufen["referenzen"], stufen["umsatz"],
+                      pq, i9, i14, offen)
+        gruppen[f][schluessel] += 1
+        gruppen["alle"][schluessel] += 1
+    je_fach["alle"] = sum(je_fach.values())
+
+    katalog = {}
+    for raum, zaehler in treffer.items():
+        n = je_fach[raum]
+        if n < 30:                       # unter 30 Verfahren trägt die Quote keine Aussage
+            continue
+        # Nur Schlüssel und Zahlen je Raum; Name, Art und Erklärtext stehen EINMAL in
+        # `texte`. Sieben Räume × dreizehn Erklärungen wären 38 kB Wiederholung.
+        # Unter einem Prozent fliegt die Zeile raus: „belegt in 0 %" (5 von 2.155) sieht
+        # nach kaputt aus, und danach zu fragen ist Zeitraub für den Besucher.
+        zeilen = [{"key": e["key"], "n": zaehler[e["key"]],
+                   "anteil": round(zaehler[e["key"]] / n * 100)}
+                  for e in KATALOG if zaehler[e["key"]] / n >= 0.01]
+        zeilen.sort(key=lambda z: -z["n"])
+        katalog[raum] = {"n": n, "zeilen": zeilen}
+
+    profile = {}
+    for raum, zaehler in gruppen.items():
+        if je_fach[raum] < 30:
+            continue
+        rohe = [[*k, c] for k, c in zaehler.items()]
+        ohne = sum(c for k, c in zaehler.items() if k[:6] == (-1, -1, -1, 0, 0, 0))
+        profile[raum] = {"n": je_fach[raum], "ohne": ohne, "gruppen": rohe}
+    texte = {e["key"]: {"name": e["name"], "art": e["art"], "was": e["was"],
+                        "frage": e.get("frage")} for e in KATALOG}
+    return {"katalog": katalog, "profile": profile, "texte": texte}
+
+
 def eignungs_check(root, fachliste, analysen: dict) -> dict:
     """Der Würfel für den öffentlichen Eignungs-Check."""
     import json as _json
     from collections import Counter, defaultdict
 
     fach_von_lead: dict[str, str] = {}
+    offene_leads: set[str] = set()
     zellen: dict[str, dict] = {}
     alle_werte: list[int] = []
 
@@ -110,9 +286,10 @@ def eignungs_check(root, fachliste, analysen: dict) -> dict:
         offen_je_region: dict[str, Counter] = defaultdict(Counter)
         werte_je_region: dict[str, list[int]] = defaultdict(list)
         for l in leads:
+            fach_von_lead[l.get("id")] = schluessel
             if not (isinstance(l.get("endTage"), int) and l["endTage"] >= 0):
                 continue
-            fach_von_lead[l.get("id")] = schluessel
+            offene_leads.add(l.get("id"))
             land = l.get("land")
             raeume = ["alle"]
             if land == "DE":
@@ -184,7 +361,13 @@ def eignungs_check(root, fachliste, analysen: dict) -> dict:
                 + [{"schluessel": r, "label": r, "offen": summe[r]} for r in bundeslaender])
 
     alle_werte.sort()
+    kat = anforderungs_katalog(analysen, fach_von_lead, offene_leads)
     return {
+        "katalog": kat["katalog"],
+        "texte": kat["texte"],
+        "profile": kat["profile"],
+        "nachweise": [{"key": e["frage"], "name": e["name"]}
+                      for e in KATALOG if e["art"] == "nachweis"],
         "regionen": regionen,
         "stufen": [{"von": a, "bis": b} for a, b in STUFEN],
         "zellen": zellen,

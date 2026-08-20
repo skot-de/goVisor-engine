@@ -101,3 +101,43 @@ def test_duenne_fachgebiete_fallen_auf_den_gesamtbestand_zurueck(tmp_path):
         tmp_path, [{"schluessel": "bau", "label": "Bau"}], analysen
     )["anforderungen"]["referenzen"]["je_fach"]
     assert "bau" not in je_fach and je_fach["alle"]["n"] == 5
+
+
+def test_katalog_zaehlt_nur_belegte_anforderungen(tmp_path):
+    """Erkannt wird über Begriffe im Zitat — und nur, was auch wirklich dasteht."""
+    mod = _modul()
+    analysen = {
+        "a": {"checklist": [{"req_type": "formalie", "quote": "Eigenerklärung zur Eignung"},
+                            {"req_type": "zertifikat", "quote": "DIN EN ISO 9001 gefordert"}]},
+        "b": {"checklist": [{"req_type": "formalie", "quote": "Eigenerklärung beilegen"}]},
+    }
+    kat = mod.anforderungs_katalog(analysen, {"a": "bau", "b": "bau"}, {"a"})
+    zeilen = {z["key"]: z for z in kat["katalog"]["bau"]["zeilen"]} if "bau" in kat["katalog"] else {}
+    # unter 30 Verfahren gibt es bewusst KEINEN Fachgebiets-Katalog
+    assert zeilen == {}
+    assert "bau" not in kat["profile"]
+
+
+def test_katalog_und_profile_ab_dreissig_verfahren():
+    """Ab 30 Verfahren: Häufigkeit, Profile, und der Nenner ohne die anforderungslosen."""
+    mod = _modul()
+    analysen = {}
+    for i in range(40):
+        pruefungen = [{"req_type": "formalie", "quote": "Eigenerklärung zur Eignung"}]
+        if i < 10:                                   # zehn verlangen 3 Mio Haftpflicht
+            pruefungen.append({"req_type": "berufshaftpflicht", "value": "3000000",
+                               "quote": "Betriebshaftpflicht in Höhe von 3.000.000 €"})
+        analysen[str(i)] = {"checklist": pruefungen}
+    fach = {str(i): "bau" for i in range(40)}
+    kat = mod.anforderungs_katalog(analysen, fach, {"0", "1"})
+    zeilen = {z["key"]: z for z in kat["katalog"]["bau"]["zeilen"]}
+    assert zeilen["eigenerklaerung"]["anteil"] == 100
+    assert zeilen["haftpflicht"]["n"] == 10
+    p = kat["profile"]["bau"]
+    assert p["n"] == 40 and p["ohne"] == 30       # 30 tragen keine bezifferte Anforderung
+    # Die Gruppe mit der Forderung trägt die Stufe „3 Mio" (Index 3 der Haftpflicht-Leiter)
+    fordernd = [g for g in p["gruppen"] if g[0] >= 0]
+    assert sum(g[-1] for g in fordernd) == 10
+    assert {g[0] for g in fordernd} == {mod.ANF_LEITER["haftpflicht"]["stufen"].index(3_000_000)}
+    # Zwei der zehn sind offen und müssen als solche gezählt sein
+    assert sum(g[-1] for g in fordernd if g[6] == 1) == 2

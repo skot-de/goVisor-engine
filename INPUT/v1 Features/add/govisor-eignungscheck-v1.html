@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>goVisor · Eignungs-Checker</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F6F7F6;--surface:#FFFFFF;--surface-2:#FAFBFA;--surface-3:#F1F3F2;
+  --line:#E3E7E5;--line-strong:#CFD6D3;
+  --ink-900:#12211D;--ink-800:#1B2E29;--ink-700:#33453F;--ink-500:#64766F;--ink-400:#8C9B95;--ink-300:#B7C2BC;
+  --signal:#10B981;--signal-deep:#067A55;--signal-wash:#E7F7F1;--flag:#B45309;--flag-wash:#FBF2E6;--flag-line:#F0E2C2;
+  --note:#6D5DA6;--note-deep:#4C3F7D;
+  --sans:'Archivo',system-ui,sans-serif;--mono:'IBM Plex Mono',ui-monospace,monospace;
+  --r:6px;--s1:4px;--s2:8px;--s3:12px;--s4:16px;--s5:24px;--s6:32px;--s7:48px;--s8:72px;
+  --t-meta:11px;--t-sm:12.5px;--t-body:14px;--t-lg:15px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--sans);background:var(--paper);color:var(--ink-900);font-size:var(--t-body);line-height:1.6;-webkit-font-smoothing:antialiased}
+button{font:inherit;cursor:pointer}
+a{color:inherit;text-decoration:none}
+svg{display:block}
+h1,h2,h3{text-wrap:balance}
+p{text-wrap:pretty}
+:focus-visible{outline:2px solid var(--signal);outline-offset:2px;border-radius:3px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 var(--s5)}
+
+/* Prototyp-Navigation */
+.stepbar{position:sticky;top:0;z-index:60;background:var(--ink-900);color:#EAF2EF;padding:9px var(--s5);display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.stepbar b{font-family:var(--mono);font-size:var(--t-meta);letter-spacing:.12em;text-transform:uppercase;color:#7F9990;margin-right:6px;font-weight:600}
+.stepbar button{font-family:var(--mono);font-size:var(--t-meta);background:rgba(255,255,255,.06);color:#C9D6D1;border:1px solid rgba(255,255,255,.14);padding:5px 11px;border-radius:99px;transition:.14s}
+.stepbar button:hover{background:rgba(255,255,255,.13);color:#fff}
+.stepbar button[aria-current="true"]{background:var(--signal);border-color:var(--signal);color:#fff;font-weight:600}
+
+.top{background:var(--surface);border-bottom:1px solid var(--line)}
+.top .wrap{height:60px;display:flex;align-items:center;justify-content:space-between;gap:var(--s4)}
+.brand{font-size:18px;font-weight:800;letter-spacing:-.03em}
+.brand span{color:var(--signal)}
+.topnav{display:flex;align-items:center;gap:var(--s5)}
+.topnav a{font-size:var(--t-sm);color:var(--ink-500)}
+.topnav a:hover{color:var(--ink-900)}
+.btn-s2{font-size:var(--t-sm);font-weight:600;padding:8px 15px;border-radius:var(--r);border:1px solid var(--line-strong)}
+.btn-s2:hover{border-color:var(--ink-400)}
+.btn-h{font-size:var(--t-sm);font-weight:700;color:#fff;background:var(--signal);padding:8px 16px;border-radius:var(--r);transition:.14s}
+.btn-h:hover{background:var(--signal-deep)}
+
+.hero{background:var(--surface);border-bottom:1px solid var(--line);padding:var(--s8) 0}
+.hero h1{font-size:clamp(30px,4.6vw,44px);font-weight:800;letter-spacing:-.04em;line-height:1.08;max-width:15ch;margin-bottom:var(--s4)}
+.hero h1 em{font-style:normal;color:var(--signal-deep)}
+.hero .lede{font-size:var(--t-lg);color:var(--ink-700);max-width:58ch;margin-bottom:var(--s6);line-height:1.5}
+
+.mini{border:1px solid var(--line);border-radius:14px;background:var(--surface-2);padding:var(--s5);max-width:800px}
+.mini .ml{font-size:var(--t-sm);color:var(--ink-700);margin-bottom:var(--s3)}
+.mini .mrow{display:grid;grid-template-columns:1.6fr 1fr auto;gap:10px;align-items:center}
+.mini select{width:100%;min-width:0;border:1px solid var(--line-strong);border-radius:8px;padding:11px 13px;font:inherit;font-size:var(--t-body);background:var(--surface);color:var(--ink-900);text-overflow:ellipsis}
+.mini select:focus{outline:2px solid var(--signal);outline-offset:-1px;border-color:var(--signal)}
+.mini .mf{font-family:var(--mono);font-size:var(--t-meta);color:var(--ink-400);margin-top:11px}
+@media(max-width:640px){.mini .mrow{grid-template-columns:1fr}}
+
+.page{max-width:820px;margin:0 auto;padding:var(--s7) var(--s5) var(--s8)}
+.hint{font-family:var(--mono);font-size:var(--t-meta);color:var(--ink-400);border-left:2px solid var(--line-strong);padding-left:12px;line-height:1.55;margin-bottom:var(--s5)}
+
+.btn{font-size:var(--t-sm);font-weight:700;border-radius:var(--r);padding:11px 20px;border:1px solid transparent;display:inline-flex;align-items:center;gap:8px;transition:.14s}
+.btn-p{background:var(--signal);color:#fff}.btn-p:hover{background:var(--signal-deep)}
+.btn-line{background:var(--surface);color:var(--ink-900);border-color:var(--line-strong)}.btn-line:hover{border-color:var(--ink-400)}
+.btn-sm{padding:9px 16px}
+.btn svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.acts{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:var(--s5)}
+
+.teaser{background:var(--surface);border:1px solid var(--signal-wash);border-radius:14px;padding:var(--s5) var(--s6);margin-bottom:var(--s4)}
+.teaser .th{font-family:var(--mono);font-size:var(--t-sm);color:var(--ink-500);margin-bottom:var(--s4)}
+.tgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:var(--s5)}
+.tg .tv{font-family:var(--mono);font-size:32px;font-weight:700;letter-spacing:-.025em;line-height:1;color:var(--signal-deep)}
+.tg .tl{font-size:var(--t-sm);color:var(--ink-700);margin-top:6px;line-height:1.4}
+.tg .tb{font-family:var(--mono);font-size:var(--t-meta);color:var(--ink-400);margin-top:5px}
+
+.h2{font-size:20px;font-weight:800;letter-spacing:-.03em;margin:var(--s6) 0 4px}
+.sub{font-size:var(--t-sm);color:var(--ink-500);margin-bottom:var(--s4)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:var(--s6)}
+.q{margin-bottom:var(--s6)}.q:last-of-type{margin-bottom:0}
+.qh{font-size:var(--t-lg);font-weight:600;margin-bottom:4px;display:flex;align-items:center;gap:8px}
+.qs{font-size:var(--t-sm);color:var(--ink-400);margin-bottom:12px}
+.opts{display:flex;gap:8px;flex-wrap:wrap}
+.opt{border:1px solid var(--line);background:var(--surface-2);border-radius:8px;padding:9px 15px;font-size:var(--t-body);color:var(--ink-900);transition:.14s}
+.opt:hover{border-color:var(--line-strong)}
+.opt.on{background:var(--signal-wash);border-color:var(--signal);color:var(--signal-deep);font-weight:600}
+input[type=text]{width:100%;border:1px solid var(--line-strong);border-radius:8px;padding:11px 13px;font:inherit;font-size:var(--t-body);background:var(--surface)}
+input:focus{outline:2px solid var(--signal);outline-offset:-1px;border-color:var(--signal)}
+
+.exp{border:1px solid var(--line-strong);background:none;color:var(--ink-400);font-size:11px;width:18px;height:18px;border-radius:50%;line-height:1;padding:0;flex-shrink:0}
+.exp:hover{border-color:var(--signal);color:var(--signal-deep)}
+.expbox{background:var(--surface-2);border:1px solid var(--line);border-radius:8px;padding:13px 15px;margin:8px 0 0;font-size:var(--t-sm);line-height:1.6;color:var(--ink-700);display:none}
+.expbox.on{display:block}
+.expbox b{color:var(--ink-900)}
+.expbox a{color:var(--signal-deep);font-weight:600}
+
+.res{background:var(--surface);border:1px solid var(--signal-wash);border-radius:14px;padding:var(--s5) var(--s6) var(--s4)}
+.bigline{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.bignum{font-family:var(--mono);font-size:46px;font-weight:700;letter-spacing:-.03em;line-height:1;color:var(--signal-deep)}
+.bigrest{font-size:20px;font-weight:600;letter-spacing:-.02em}
+.bigsub{font-size:var(--t-lg);color:var(--ink-500);margin-top:8px}
+.openrow{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:18px;padding-top:14px;border-top:1px solid var(--line)}
+.openrow .ol{font-size:var(--t-lg)}
+.openrow .ov{font-family:var(--mono);font-size:22px;font-weight:700;color:var(--signal-deep);margin-right:4px}
+.ctahint{font-family:var(--mono);font-size:var(--t-meta);color:var(--ink-400);margin-top:5px}
+.foot{font-size:var(--t-sm);color:var(--ink-400);line-height:1.6;margin-top:var(--s5);padding-top:16px;border-top:1px solid var(--line);max-width:660px}
+.basis{font-family:var(--mono);font-size:var(--t-meta);color:var(--ink-400);margin-top:14px}
+
+.rowhead,.row{display:grid;grid-template-columns:24px 1fr 110px 100px;gap:14px;align-items:center}
+.rowhead{font-family:var(--mono);font-size:var(--t-meta);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-400);font-weight:600;padding-bottom:9px;border-bottom:1px solid var(--line)}
+.rowhead div:nth-child(3),.rowhead div:nth-child(4){text-align:right}
+.row{padding:12px 0;border-bottom:1px solid var(--line);font-size:var(--t-body)}
+.row .ic{font-weight:800;text-align:center}
+.row .ic.ok{color:var(--signal-deep)}
+.row .ic.no{color:var(--flag)}
+.row .frq{font-family:var(--mono);font-size:var(--t-sm);color:var(--ink-500);text-align:right}
+.row .st{font-size:var(--t-sm);text-align:right}
+.row .st.ok{color:var(--signal-deep)}
+.row .st.no{color:var(--flag);font-weight:600}
+.rowsum{display:grid;grid-template-columns:24px 1fr auto;gap:14px;align-items:baseline;padding:15px 0 2px;border-top:2px solid var(--ink-900);margin-top:6px;font-size:var(--t-body)}
+.rowsum .ic{font-family:var(--mono);font-weight:700;text-align:center;color:var(--ink-400)}
+.rowsum .sumtx{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rowsum .sumpct{font-family:var(--mono);font-size:15px;font-weight:700;color:var(--signal-deep)}
+@media(max-width:700px){.rowsum{grid-template-columns:20px 1fr auto;gap:10px}.rowsum .sumtx{white-space:normal}}
+
+.note{border-radius:10px;padding:14px 16px;font-size:var(--t-body);display:flex;gap:11px;align-items:flex-start;line-height:1.55;margin-bottom:16px}
+.note svg{width:16px;height:16px;flex-shrink:0;margin-top:2px;stroke:currentColor;fill:none;stroke-width:1.9}
+.note-a{background:var(--flag-wash);color:var(--flag);border:1px solid var(--flag-line)}
+.note-n{background:var(--surface-2);color:var(--ink-500);border:1px solid var(--line)}
+
+.keep{background:var(--signal-wash);border:1px solid #CFE8DC;border-radius:10px;padding:14px 16px;margin-bottom:16px}
+.keep .kh{font-family:var(--mono);font-size:var(--t-meta);letter-spacing:.08em;text-transform:uppercase;color:var(--signal-deep);font-weight:700;margin-bottom:9px;display:flex;align-items:center;gap:6px}
+.keep .kh svg{width:13px;height:13px;stroke:currentColor;fill:none;stroke-width:2.4}
+.keep .kr{display:flex;justify-content:space-between;gap:14px;padding:3px 0;font-size:var(--t-sm)}
+.keep .kr .kv{font-family:var(--mono);font-size:var(--t-sm);color:var(--ink-500)}
+.fine{font-size:var(--t-sm);color:var(--ink-400);margin-top:12px;line-height:1.55}
+
+.scr{display:none}.scr.on{display:block}
+@media(max-width:700px){
+  .rowhead,.row{grid-template-columns:20px 1fr 84px}
+  .row .frq,.rowhead div:nth-child(3){display:none}
+  .topnav a{display:none}
+}
+</style>
+</head>
+<body>
+
+<nav class="stepbar">
+  <b>Checker</b>
+  <button data-s="e1" aria-current="true">1 · Einstieg</button>
+  <button data-s="e2">2 · Teaser und Fragen</button>
+  <button data-s="e3">3 · Ergebnis</button>
+  <button data-s="e4">4 · Übergang</button>
+  <button data-s="e5">5 · Dünne Daten</button>
+</nav>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#">go<span>V</span>isor</a>
+    <nav class="topnav">
+      <a href="#">Funktionen</a>
+      <a href="#">Datenlage</a>
+      <a href="#">Preis</a>
+      <button class="btn-s2">Anmelden</button>
+      <button class="btn-h">Kostenlos starten</button>
+    </nav>
+  </div>
+</header>
+
+<!-- 1 -->
+<section class="scr on" id="e1">
+  <div class="hero">
+    <div class="wrap">
+      <h1>Wisst ihr, ob ihr <em>gewinnen</em> könnt, bevor ihr bietet?</h1>
+      <p class="lede">goVisor zeigt, welche öffentlichen Aufträge zu euch passen, wie fest der bisherige Anbieter sitzt und wann sein Vertrag ausläuft.</p>
+      <div class="mini">
+        <div class="ml">Kurz ausprobieren: was wird in eurem Feld eigentlich verlangt?</div>
+        <div class="mrow">
+          <select><option>Elektroinstallation und Gebäudetechnik</option><option>Hochbau und Rohbau</option><option>IT-Dienstleistungen und Software</option><option>Reinigung und Gebäudeservice</option><option>Sicherheitsdienste</option><option>Beratung und Planung</option></select>
+          <select><optgroup label="Deutschland"><option>bundesweit</option><option>Baden-Württemberg</option><option>Bayern</option><option>Berlin</option><option>Brandenburg</option><option>Bremen</option><option>Hamburg</option><option>Hessen</option><option>Mecklenburg-Vorpommern</option><option>Niedersachsen</option><option selected>Nordrhein-Westfalen</option><option>Rheinland-Pfalz</option><option>Saarland</option><option>Sachsen</option><option>Sachsen-Anhalt</option><option>Schleswig-Holstein</option><option>Thüringen</option></optgroup><optgroup label="Österreich"><option>österreichweit</option><option>Burgenland</option><option>Kärnten</option><option>Niederösterreich</option><option>Oberösterreich</option><option>Salzburg</option><option>Steiermark</option><option>Tirol</option><option>Vorarlberg</option><option>Wien</option></optgroup><optgroup label="Schweiz"><option>schweizweit</option><option>Aargau</option><option>Appenzell Ausserrhoden</option><option>Appenzell Innerrhoden</option><option>Basel-Landschaft</option><option>Basel-Stadt</option><option>Bern</option><option>Freiburg</option><option>Genf</option><option>Glarus</option><option>Graubünden</option><option>Jura</option><option>Luzern</option><option>Neuenburg</option><option>Nidwalden</option><option>Obwalden</option><option>Schaffhausen</option><option>Schwyz</option><option>Solothurn</option><option>St. Gallen</option><option>Tessin</option><option>Thurgau</option><option>Uri</option><option>Waadt</option><option>Wallis</option><option>Zug</option><option>Zürich</option></optgroup></select>
+          <button class="btn btn-p" data-go="e2">Ansehen<svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </div>
+        <div class="mf">Ohne Anmeldung, ohne Firmendaten. Region nach Standort vorausgewählt, änderbar.</div>
+      </div>
+    </div>
+  </div>
+  <div class="page">
+    <p class="hint">Der Einstieg ist zwei Auswahlfelder und ein Knopf, klein genug für die Startseite. Die Strecke öffnet sich erst danach.</p>
+    <div style="color:var(--ink-400);font-size:var(--t-body)">… weiterer Inhalt der Landingpage …</div>
+  </div>
+</section>
+
+<!-- 2 -->
+<section class="scr" id="e2">
+  <div class="page">
+    <p class="hint">Erst geben, dann fragen. Die Marktzahlen stehen hier, und später nicht noch einmal.</p>
+
+    <div class="teaser">
+      <div class="th">Elektroinstallation und Gebäudetechnik · Nordrhein-Westfalen · letzte 12 Monate</div>
+      <div class="tgrid">
+        <div class="tg"><div class="tv">214</div><div class="tl">Aufträge vergeben</div><div class="tb">gemessen</div></div>
+        <div class="tg"><div class="tv">3</div><div class="tl">Bieter im Median</div><div class="tb">gemessen · n=214</div></div>
+        <div class="tg"><div class="tv">44 %</div><div class="tl">Anbieterwechsel beim Auslauf</div><div class="tb">Markt 28 %</div></div>
+      </div>
+    </div>
+
+    <div class="h2" style="margin-top:30px">Was habt ihr?</div>
+    <div class="sub">Sieben Fragen. Danach sagen wir euch, bei wie vielen dieser 214 Aufträge das gereicht hätte.</div>
+
+    <div class="card">
+      <div class="q">
+        <div class="qh">Vergleichbare Referenzen der letzten fünf Jahre</div>
+        <div class="qs">Abgeschlossene Aufträge, die ihr benennen könnt, auch private.</div>
+        <div class="opts"><button class="opt">keine</button><button class="opt">1–2</button><button class="opt on">3–5</button><button class="opt">mehr als 5</button></div>
+      </div>
+      <div class="q">
+        <div class="qh">Größter Auftrag darunter</div>
+        <div class="opts"><button class="opt">unter 50.000 €</button><button class="opt on">50.000–250.000 €</button><button class="opt">250.000–1 Mio €</button><button class="opt">über 1 Mio €</button></div>
+      </div>
+      <div class="q">
+        <div class="qh">Jahresumsatz</div>
+        <div class="opts"><button class="opt">unter 500.000 €</button><button class="opt on">0,5–2 Mio €</button><button class="opt">2–10 Mio €</button><button class="opt">über 10 Mio €</button></div>
+      </div>
+      <div class="q">
+        <div class="qh">Präqualifikation (PQ-VOB) <button class="exp" data-exp="q1">?</button></div>
+        <div class="expbox" id="q1"><b>Eine einmalige Vorabprüfung eurer Eignung</b> durch eine amtliche Stelle. Ihr reicht Nachweise über Fachkunde, Zuverlässigkeit und Leistungsfähigkeit ein und werdet in ein Verzeichnis eingetragen.<br><br>Danach gebt ihr bei jeder Bewerbung nur noch eure PQ-Nummer an, statt dieselben Nachweise erneut beizulegen. Antrag mit Unterlagen, jährliche Verlängerung, jährliche Gebühr.</div>
+        <div class="opts"><button class="opt">ja</button><button class="opt on">nein</button><button class="opt">weiß ich nicht</button></div>
+      </div>
+      <div class="q">
+        <div class="qh">Zertifizierungen <button class="exp" data-exp="q2">?</button></div>
+        <div class="qs">Mehrfachauswahl. Wir zeigen die, die in eurem Feld tatsächlich gefordert werden.</div>
+        <div class="expbox" id="q2"><b>ISO 9001:</b> Qualitätsmanagement.<br><b>ISO 14001:</b> Umweltmanagement.<br><b>ISO 45001:</b> Arbeitssicherheit und Gesundheitsschutz.<br><b>SCC:</b> Sicherheitszertifikat für Kontraktoren, verbreitet bei Arbeiten auf fremdem Gelände.<br><br>Welche davon in eurem Feld verlangt werden, seht ihr gleich in der Auswertung.</div>
+        <div class="opts"><button class="opt">ISO 9001</button><button class="opt">ISO 14001</button><button class="opt">ISO 45001</button><button class="opt on">SCC</button><button class="opt">keine</button></div>
+      </div>
+      <div class="q">
+        <div class="qh">Berufshaftpflicht <button class="exp" data-exp="q3">?</button></div>
+        <div class="expbox" id="q3">Die Versicherung, die Schäden aus eurer beruflichen Tätigkeit abdeckt. Gefragt ist die <b>Deckungssumme</b>, sie steht in eurer Police, meist auf der ersten Seite. Wenn ihr sie nicht zur Hand habt, wählt „weiß ich nicht", wir zeigen euch trotzdem, was üblicherweise gefordert wird.</div>
+        <div class="opts"><button class="opt">unter 1 Mio €</button><button class="opt on">1–3 Mio €</button><button class="opt">über 3 Mio €</button><button class="opt">keine</button><button class="opt">weiß ich nicht</button></div>
+      </div>
+      <div class="q">
+        <div class="qh">Mitarbeiter</div>
+        <div class="opts"><button class="opt">1–5</button><button class="opt on">6–20</button><button class="opt">21–100</button><button class="opt">über 100</button></div>
+      </div>
+      <div class="acts">
+        <button class="btn btn-p" data-go="e3">Auswertung ansehen<svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        <button class="btn btn-line" data-go="e1">Zurück</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="scr" id="e3">
+  <div class="page">
+    <p class="hint">Reduziert: eine Kernzahl, die Liste, die größte Lücke. Marktzahlen stehen im Teaser und werden nicht wiederholt.</p>
+
+    <div class="res">
+      <div class="bigline"><span class="bignum">131</span> <span class="bigrest">der 214 Aufträge wären passend gewesen.</span></div>
+      <div class="bigsub">Zusammen 18,7 Mio € Auftragsvolumen.</div>
+      <div class="openrow">
+        <div class="ol"><span class="ov">12</span> davon sind aktuell offen</div>
+        <div style="text-align:right">
+          <button class="btn btn-p btn-sm" data-go="e4">Direkt loslegen<svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+          <div class="ctahint">kostenfrei, ohne Zahlungsdaten</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="h2">Was gefordert wurde</div>
+    <div class="sub">Nach Häufigkeit. Das Fragezeichen erklärt, was dahintersteckt.</div>
+    <div class="card" style="padding:20px 24px">
+      <div class="rowhead"><div></div><div>Anforderung</div><div>gefordert in</div><div>ihr</div></div>
+
+      <div class="row"><span class="ic ok">✓</span><span>Eigenerklärung Ausschlussgründe §§ 123/124 GWB <button class="exp" data-exp="x1">?</button></span><span class="frq">98 %</span><span class="st ok">erfüllbar</span></div>
+      <div class="expbox" id="x1"><b>Was das ist:</b> Die Erklärung, dass gegen euer Unternehmen keine schweren Verfehlungen vorliegen, etwa Steuerrückstände, Insolvenz oder einschlägige Verurteilungen.<br><br><b>Aufwand:</b> Ein Formular ankreuzen und unterschreiben.</div>
+
+      <div class="row"><span class="ic ok">✓</span><span>Tariftreue- und Mindestentgelterklärung <button class="exp" data-exp="x2">?</button></span><span class="frq">91 %</span><span class="st ok">erfüllbar</span></div>
+      <div class="expbox" id="x2"><b>Was das ist:</b> Die Zusage, nach geltendem Tarif oder mindestens dem Landesmindestlohn zu bezahlen, und dasselbe von Nachunternehmen zu verlangen.<br><br><b>Aufwand:</b> Ein Formular.</div>
+
+      <div class="row"><span class="ic ok">✓</span><span>Russland-Sanktionen (Art. 5k) <button class="exp" data-exp="x3">?</button></span><span class="frq">87 %</span><span class="st ok">erfüllbar</span></div>
+      <div class="expbox" id="x3"><b>Was das ist:</b> Die Erklärung, dass euer Unternehmen nicht unter die EU-Sanktionen gegen Russland fällt.<br><br><b>Aufwand:</b> Ein Formular. Für die meisten deutschen Betriebe eine Formalie.</div>
+
+      <div class="row"><span class="ic ok">✓</span><span>Berufshaftpflicht ab 1 Mio €</span><span class="frq">74 %</span><span class="st ok">1–3 Mio €</span></div>
+      <div class="row"><span class="ic ok">✓</span><span>3 Referenzen der letzten 5 Jahre</span><span class="frq">68 %</span><span class="st ok">3–5</span></div>
+
+      <div class="row"><span class="ic no">–</span><span>Präqualifikation (PQ-VOB) <button class="exp" data-exp="x4">?</button></span><span class="frq">39 %</span><span class="st no">fehlt</span></div>
+      <div class="expbox" id="x4"><b>Was das ist:</b> Eine einmalige Vorabprüfung eurer Eignung durch eine amtliche Stelle. Ihr reicht Nachweise über Fachkunde, Zuverlässigkeit und Leistungsfähigkeit ein und werdet in ein Verzeichnis eingetragen.<br><br><b>Warum es sich lohnt:</b> Statt bei jeder Bewerbung dieselben Nachweise beizulegen, gebt ihr nur noch eure PQ-Nummer an.<br><br><b>Aufwand:</b> Antrag mit Unterlagen, jährliche Verlängerung, jährliche Gebühr. <a href="#">Zur Präqualifizierungsstelle ↗</a></div>
+
+      <div class="row"><span class="ic ok">✓</span><span>Mindestumsatz bis 1 Mio €</span><span class="frq">34 %</span><span class="st ok">0,5–2 Mio €</span></div>
+      <div class="row"><span class="ic no">–</span><span>Referenz über 250.000 €</span><span class="frq">22 %</span><span class="st no">größter: 250 T€</span></div>
+      <div class="row"><span class="ic no">–</span><span>ISO 9001</span><span class="frq">18 %</span><span class="st no">fehlt</span></div>
+      <div class="row"><span class="ic ok">✓</span><span>SCC-Zertifizierung</span><span class="frq">7 %</span><span class="st ok">vorhanden</span></div>
+      <div class="rowsum">
+        <span class="ic">Σ</span>
+        <span class="sumtx"><b>7 von 10 erfüllt</b>, damit wären <b>131 der 214 Aufträge</b> passend</span>
+        <span class="sumpct">61 %</span>
+      </div>
+    </div>
+
+    <div class="note note-a">
+      <svg viewBox="0 0 24 24"><path d="M12 8v5M12 17h.01"/><circle cx="12" cy="12" r="9"/></svg>
+      <div><b>Eure größte Lücke ist die Präqualifikation.</b> 83 Aufträge über 31,4 Mio € setzten sie voraus.</div>
+    </div>
+
+    <div class="acts" style="margin-top:22px">
+      <button class="btn btn-p" data-go="e4">12 offene Aufträge ansehen<svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+      <button class="btn btn-line">Als PDF</button>
+    </div>
+    <div class="foot">
+      Grundlage: Vergaben der letzten 12 Monate in Elektro/TGA · Nordrhein-Westfalen. Anforderungen aus 189 ausgewerteten Vergabeunterlagen; Volumen nur über Verfahren mit veröffentlichtem Wert (n=96).<br>
+      Wir zeigen, was in vergleichbaren Verfahren gefordert wurde. Über die Zulassung im Einzelfall entscheidet die Vergabestelle.
+    </div>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="scr" id="e4">
+  <div class="page">
+    <p class="hint">Die Antworten aus dem Checker werden zum Eignungsprofil. Kein zweites Ausfüllen, kein Firmenname nötig.</p>
+    <div style="max-width:470px;margin:0 auto">
+      <div class="h2" style="margin-top:0">Konto anlegen</div>
+      <div class="sub">Zwei Angaben genügen, alles andere habt ihr gerade beantwortet.</div>
+      <div class="card">
+        <div class="keep">
+          <div class="kh"><svg viewBox="0 0 24 24"><path d="M20 7L9 18l-5-5"/></svg>Wird übernommen</div>
+          <div class="kr"><span>Gewerk</span><span class="kv">Elektro / TGA</span></div>
+          <div class="kr"><span>Region</span><span class="kv">Nordrhein-Westfalen</span></div>
+          <div class="kr"><span>Eignungsangaben</span><span class="kv">7 von 10 beantwortet</span></div>
+          <div class="kr"><span>Auswertung</span><span class="kv">gespeichert</span></div>
+        </div>
+        <div class="q" style="margin-bottom:14px">
+          <div class="qh" style="font-size:13.5px;font-weight:500;margin-bottom:5px">E-Mail-Adresse</div>
+          <input type="text" placeholder="name@firma.de">
+        </div>
+        <div class="q" style="margin-bottom:18px">
+          <div class="qh" style="font-size:13.5px;font-weight:500;margin-bottom:5px">Passwort</div>
+          <input type="text" placeholder="mindestens 10 Zeichen">
+        </div>
+        <button class="btn btn-p" style="width:100%;justify-content:center">Konto anlegen und Aufträge ansehen</button>
+        <div class="fine">Kostenlos und dauerhaft nutzbar. Keine Zahlungsdaten. Euren Firmennamen ergänzt ihr später, dann zeigen wir zusätzlich eure bisherigen öffentlichen Aufträge.</div>
+      </div>
+      <div class="acts" style="justify-content:center"><button class="btn btn-line btn-sm" data-go="e3">Zurück zur Auswertung</button></div>
+    </div>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="scr" id="e5">
+  <div class="page">
+    <p class="hint">Der ehrliche Fall: zu wenige ausgewertete Verfahren. Lieber nichts behaupten als schätzen.</p>
+    <div class="card">
+      <div style="font-size:22px;font-weight:800;letter-spacing:-.03em;margin-bottom:8px">Für dieses Feld reichen unsere Daten noch nicht</div>
+      <p style="font-size:var(--t-lg);color:var(--ink-700);max-width:560px">In „Vermessungstechnik · Saarland" haben wir bisher 6 Vergabeunterlagen ausgewertet. Aus so wenigen Verfahren lässt sich keine belastbare Aussage ableiten, und eine geschätzte Zahl wäre schlechter als keine.</p>
+      <div class="basis" style="margin-top:16px">Belastbar ab 30 ausgewerteten Verfahren je Feld und Region</div>
+    </div>
+
+    <div class="h2">Was wir trotzdem sagen können</div>
+    <div class="sub">Diese drei Anforderungen sind branchenunabhängig.</div>
+    <div class="card" style="padding:20px 24px">
+      <div class="rowhead"><div></div><div>Anforderung</div><div>bundesweit</div><div>ihr</div></div>
+      <div class="row"><span class="ic ok">✓</span><span>Eigenerklärung Ausschlussgründe §§ 123/124 GWB</span><span class="frq">96 %</span><span class="st ok">erfüllbar</span></div>
+      <div class="row"><span class="ic ok">✓</span><span>Tariftreue- und Mindestentgelterklärung</span><span class="frq">88 %</span><span class="st ok">erfüllbar</span></div>
+      <div class="row"><span class="ic ok">✓</span><span>Russland-Sanktionen (Art. 5k)</span><span class="frq">85 %</span><span class="st ok">erfüllbar</span></div>
+      <div class="basis" style="margin-top:14px">Basis: 3.140 ausgewertete Verfahren aller Felder</div>
+    </div>
+
+    <div class="acts" style="margin-top:22px">
+      <button class="btn btn-p" data-go="e4">4 offene Aufträge ansehen<svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+      <span class="ctahint" style="margin-top:0">kostenfrei, ohne Zahlungsdaten</span>
+    </div>
+    <div class="foot">Die Vergaben selbst kennen wir vollständig, nur die Anforderungsstatistik braucht mehr ausgewertete Unterlagen.</div>
+  </div>
+</section>
+
+<script>
+(function(){
+  function show(id){
+    document.querySelectorAll('.scr').forEach(function(s){s.classList.toggle('on',s.id===id)});
+    document.querySelectorAll('.stepbar button').forEach(function(b){b.setAttribute('aria-current',String(b.dataset.s===id))});
+    window.scrollTo({top:0});
+  }
+  document.querySelectorAll('.stepbar button').forEach(function(b){b.addEventListener('click',function(){show(b.dataset.s)})});
+  document.querySelectorAll('[data-go]').forEach(function(b){b.addEventListener('click',function(e){e.preventDefault();show(b.dataset.go)})});
+  document.querySelectorAll('.exp').forEach(function(b){
+    b.addEventListener('click',function(e){
+      e.stopPropagation();
+      var t=document.getElementById(b.dataset.exp);
+      if(t)t.classList.toggle('on');
+    });
+  });
+  document.querySelectorAll('.opts').forEach(function(g){
+    g.addEventListener('click',function(e){
+      var o=e.target.closest('.opt'); if(!o)return;
+      var qs=g.parentElement.querySelector('.qs');
+      var multi=qs && /Mehrfach/.test(qs.textContent||'');
+      if(multi){o.classList.toggle('on');}
+      else{g.querySelectorAll('.opt').forEach(function(x){x.classList.remove('on')});o.classList.add('on');}
+    });
+  });
+})();
+</script>
+</body>
+</html>
