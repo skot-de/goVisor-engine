@@ -300,26 +300,23 @@
 
 /* FACHGEBIETE ALS AUSWAHL. Kacheln, keine Anzeige: sie tragen die Zahl UND schalten den
    Check darunter um. Die Zahl gehört zur gewählten Region, deshalb ändert sie sich mit. */
-.ec-kacheln { list-style: none; display: grid; grid-template-columns: repeat(6, 1fr);
+.ec-kacheln { list-style: none; display: grid; grid-template-columns: repeat(2, 1fr);
   gap: 10px; margin: 18px 0 12px; padding: 0; }
 .ec-kachel { display: block; width: 100%; text-align: left; cursor: pointer; font: inherit;
-  padding: 13px 14px 12px; border-radius: 12px; background: #fff;
-  border: 1px solid var(--line, #E3E7E5); border-top: 3px solid var(--line-strong, #CFD6D3);
-  transition: .14s; }
-.ec-kachel:hover { border-top-color: var(--signal, #10B981); transform: translateY(-1px); }
-.ec-kachel b { display: block; font-size: 22px; letter-spacing: -.02em;
+  padding: 10px 12px; border-radius: 10px; background: #fff;
+  border: 1px solid var(--line, #E3E7E5); transition: .14s; }
+.ec-kachel:hover { border-color: var(--ink-300, #B7C2BC); }
+.ec-kachel b { display: block; font-size: 19px; letter-spacing: -.02em; line-height: 1.15;
   font-variant-numeric: tabular-nums; }
-.ec-kachel span { display: block; margin-top: 3px; font-size: 12.5px; line-height: 1.35;
+.ec-kachel span { display: block; margin-top: 2px; font-size: 12px; line-height: 1.3;
   color: var(--ink-500, #64766F); }
-.ec-kachel-an { border-color: var(--signal, #10B981); border-top-color: var(--signal-deep, #067A55);
-  background: var(--signal-wash, #E7F7F1); box-shadow: 0 6px 18px rgba(6,122,85,.12); }
+.ec-kachel-an { border-color: var(--signal-deep, #067A55); background: var(--signal-wash, #E7F7F1);
+  box-shadow: inset 3px 0 0 var(--signal-deep, #067A55); }
 .ec-kachel-an span { color: var(--ink-700, #33453F); }
 
 .lp-h3 { font-size: 23px; font-weight: 700; letter-spacing: -.025em; line-height: 1.2;
   margin: 0 0 14px; }
 
-@media (max-width: 1000px) { .ec-kacheln { grid-template-columns: repeat(3, 1fr); } }
-@media (max-width: 560px) { .ec-kacheln { grid-template-columns: repeat(2, 1fr); } }
 
 /* ⚠ Der Startknopf im Kopf trug dunkelgraue Schrift auf Dunkelgrün: `.lp-nav a` (Klasse +
    Typ) schlägt `.lp-knopf` (nur Klasse), und die weisse Farbe des Knopfes fiel lautlos
@@ -451,8 +448,8 @@
 
 
 
-.ec-fenster-kopf { display: flex; align-items: center; gap: 16px; padding: 13px 18px;
-  border-bottom: 1px solid var(--line, #E3E7E5); background: var(--surface-2, #FAFBFA); }
+.ec-fenster-kopf { display: flex; align-items: center; gap: 16px; padding: 12px 26px;
+  border-bottom: 1px solid var(--line, #E3E7E5); }
 .ec-schritte { list-style: none; display: flex; flex-wrap: wrap; gap: 6px; margin: 0; padding: 0; }
 .ec-schritte li { display: flex; align-items: center; gap: 7px; font-size: 12.5px;
   color: var(--ink-400, #8C9B95); padding: 5px 12px 5px 6px; border-radius: 100px; }
@@ -482,8 +479,7 @@
   color: var(--ink-700, #33453F); }
 
 .ec-fenster-fuss { display: flex; align-items: center; justify-content: space-between; gap: 14px;
-  padding: 13px 18px; border-top: 1px solid var(--line, #E3E7E5);
-  background: var(--surface-2, #FAFBFA); }
+  padding: 14px 26px; border-top: 1px solid var(--line, #E3E7E5); }
 .ec-zurueck { font: inherit; font-size: 13.5px; font-weight: 600; padding: 9px 15px;
   border-radius: 9px; cursor: pointer; background: #fff; color: var(--ink-900, #12211D);
   border: 1px solid var(--line-strong, #CFD6D3); }
@@ -506,35 +502,38 @@
    sondern die Bewegung selbst. */
 .lp-check { display: block; margin: 56px 0; padding: 34px 0 0;
   border-top: 1px solid var(--line, #E3E7E5); }
-.ec-h2 { margin-bottom: 20px; }
+.ec-h2 { margin-bottom: 18px; }
 
-/* Auswahlspalte rechts: Region ÜBER den Kacheln und genau so breit wie sie. Sven: „die
-   region auswahl muss über die branchen kacheln, weil es die zahlen beeinflusst" — ein
-   Regler gehört über das, was er regelt. */
-.ec-auswahl { display: block; }
-.ec-regionwahl { display: block; margin-bottom: 12px; }
-.ec-regionwahl span { display: block; font-size: 12px; font-weight: 600;
-  color: var(--ink-500, #64766F); margin-bottom: 5px; }
+/* ─── EIN RAHMEN, ZWEI BEREICHE ─────────────────────────────────────────────────────
+   Vorher: eine schwebende Karte links, eine lose Kachelgruppe rechts, zwei Schatten, zwei
+   Radien, ungleiche Spaltenhöhen. Das sah nach zwei Dingen aus, die zufällig nebeneinander
+   stehen. Es ist aber eines: Arbeitsfläche und Bedienung desselben Werkzeugs. Also ein
+   Rahmen darum, eine Trennlinie hinein, und die Leiste bekommt einen eigenen Grundton —
+   dieselbe Sprache, die die Anwendung drinnen spricht. Gleiche Höhe ergibt sich von selbst,
+   weil beide Bereiche Zellen desselben Rasters sind. */
+/* ⚠ `overflow: hidden` hier macht aus dem Rahmen einen Rollcontainer und setzt damit das
+   klebende Verhalten der Bedienleiste ausser Kraft (gemessen: sie stand bei -36 px). `clip`
+   schneidet genauso ab, ohne einen Rollcontainer zu erzeugen. */
+.ec-zwei { display: grid; grid-template-columns: minmax(0, 1fr) 320px; align-items: stretch;
+  border: 1px solid var(--line-strong, #CFD6D3); border-radius: 16px; overflow: clip;
+  background: #fff; box-shadow: 0 10px 34px rgba(18,33,29,.06); }
+
+.ec-fenster { display: flex; flex-direction: column; min-height: 430px; border: none;
+  border-radius: 0; background: none; box-shadow: none; }
+.ec-fenster-koerper { padding: 22px 26px; flex: 1; }
+
+/* Die Bedienleiste: eigener Grund, klare Kante zur Arbeitsfläche. */
+.ec-auswahl { padding: 18px; background: var(--surface-2, #FAFBFA);
+  border-left: 1px solid var(--line, #E3E7E5); }
+.ec-regionwahl { display: block; margin-bottom: 14px; }
+.ec-regionwahl span { display: block; font-size: 11px; font-weight: 700; letter-spacing: .07em;
+  text-transform: uppercase; color: var(--ink-400, #8C9B95); margin-bottom: 6px; }
 .ec-regionwahl select { width: 100%; padding: 10px 12px; font: inherit; font-size: 14px;
   border: 1px solid var(--line-strong, #CFD6D3); border-radius: 9px; background: #fff;
   color: inherit; }
 .ec-regionwahl select:focus { outline: 2px solid var(--signal, #10B981); outline-offset: -1px; }
-
-/* Inhalt links, Auswahl rechts („bring das fenster von rechts nach links, dann ist es
-   nicht so ein rechts übergewicht"). */
-.ec-zwei { display: grid; grid-template-columns: minmax(0, 1fr) minmax(260px, 340px);
-  gap: 22px; align-items: start; }
-.ec-kacheln { grid-template-columns: repeat(2, 1fr); margin: 0; }
-.ec-zuschnitt { margin-top: 16px; }
-
-/* Das Feld links. KEIN eigener Rollbereich mehr: Sven will alles auf einen Blick sehen
-   („die box sollte so gross sein das immer alles sichtbar ist"). Es wächst also mit dem
-   Schritt; die Mindesthöhe verhindert nur, dass es beim ersten Schritt klein wirkt. */
-.ec-fenster { display: flex; flex-direction: column; min-height: 430px;
-  border: 1px solid var(--line-strong, #CFD6D3); border-radius: 16px; background: #fff;
-  box-shadow: 0 14px 40px rgba(18,33,29,.07); overflow: hidden; }
-.ec-fenster-koerper { padding: 20px 24px; flex: 1; }
-.ec-leer { padding: 30px 26px; }
+.ec-zuschnitt { margin-top: 14px; }
+.ec-leer { padding: 34px 26px; }
 .ec-leer h3 { font-size: 22px; font-weight: 700; letter-spacing: -.03em; margin: 0 0 10px; }
 .ec-leer p { font-size: 14px; line-height: 1.65; color: var(--ink-700, #33453F); margin: 0 0 14px; }
 .ec-leer-f { font-size: 12.5px !important; color: var(--ink-500, #64766F) !important; }
@@ -544,8 +543,21 @@
    im Quelltext hinter dem Feld steht. */
 @media (max-width: 900px) {
   .ec-zwei { grid-template-columns: 1fr; }
-  .ec-auswahl { order: -1; }
+  .ec-auswahl { order: -1; border-left: none; border-bottom: 1px solid var(--line, #E3E7E5); }
   .ec-kacheln { grid-template-columns: repeat(3, 1fr); }
   .ec-fenster { min-height: 0; }
 }
 @media (max-width: 560px) { .ec-kacheln { grid-template-columns: repeat(2, 1fr); } }
+
+/* Leerlauf-Zustand: keine halbleere Fläche mehr, sondern die Liste, die wir ohne jede
+   Angabe schon zeigen können. Die Zeilen sind ruhiger gesetzt als im Ergebnis (Punkt statt
+   Häkchen, keine „ihr"-Spalte) — sie sind eine Vorschau, kein Urteil. */
+.ec-leer { flex: 1; }
+.ec-leer-p { font-size: 13.5px !important; max-width: 62ch; }
+.ec-fund-still li { grid-template-columns: 20px 1fr auto; padding: 8px 0; }
+.ec-haken-still { color: var(--ink-300, #B7C2BC); font-weight: 700; }
+.ec-leer .ec-fundkopf { grid-template-columns: 20px 1fr auto; }
+
+/* Der Inhalt der Bedienleiste klebt, ihr Grund läuft durch. */
+.ec-auswahl-innen { position: sticky; top: 88px; }
+@media (max-width: 900px) { .ec-auswahl-innen { position: static; } }

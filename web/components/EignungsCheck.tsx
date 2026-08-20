@@ -209,36 +209,50 @@ export function EignungsCheck({ check, fachgebiete }: {
     <section className="lp-check" id="check">
       <h2 className="lp-h2 ec-h2">Was heute offen ist. Und ob ihr drankommt.</h2>
 
-      {/* Rechts wählen, links rechnen. Vorher waren das zwei Abschnitte untereinander und
-          die Verbindung dazwischen musste man sich denken; Sven: „ich weiss nicht, ob alle
-          leute die brücke verstehen zwischen branche und dem eignungscheck". Nebeneinander
-          ist die Brücke der Klick selbst. Die Auswahl sitzt rechts, weil der Inhalt links
-          das Gewicht trägt („dann ist es nicht so ein rechts übergewicht"). */}
+      {/* EIN Kasten, zwei Bereiche: links die Arbeitsfläche, rechts die Bedienleiste.
+          Sven: „optisch ist das irgendwie unsauber, die architektur stimmt nicht so ganz."
+          Sie stimmte auch nicht — es waren zwei getrennte Dinge nebeneinander (eine
+          schwebende Karte und eine lose Kachelgruppe), mit ungleich hohen Spalten und zwei
+          Schattenrändern. Jetzt sind es zwei Bereiche EINES Rahmens: gemeinsame Kante,
+          gemeinsame Höhe, die Leiste durch ihren Grundton als Bedienung erkennbar.
+          Dass die Auswahl rechts steht, bleibt („bring das fenster von rechts nach links"). */}
       <div className="ec-zwei">
         <div className="ec-fenster">
           {!fach ? (
             <div className="ec-leer">
               <p className="lp-auge">Eignungs-Check</p>
-              {/* ⚠ Hiess bis zum 2026-08-21 „Wählt LINKS euer Fachgebiet" — auf dem
-                  Telefon stehen die Kacheln aber darüber, nicht daneben. Eine Ortsangabe,
-                  die nur in einem Layout stimmt, ist schlechter als gar keine. */}
-              <h3>Wählt euer Fachgebiet.</h3>
-              <p>
-                Ein Klick auf eine der Kacheln genügt. Danach fragen wir in{" "}
-                {(ZAHLWORT[SCHRITTE.length] ?? String(SCHRITTE.length)).toLowerCase()}{" "}
-                Schritten ab, was ihr mitbringt, und zeigen euch, was in genau diesem Feld
-                verlangt wird und wie viel davon ihr erfüllt.
+              {/* ⚠ Hier stand bis zum 2026-08-21 nur eine Aufforderung, und der Rest der
+                  Fläche war leer — Sven: „optisch ist das irgendwie unsauber". Eine leere
+                  Arbeitsfläche neben einer vollen Leiste sieht nach halbfertig aus. Jetzt
+                  steht hier, was wir OHNE jede Angabe schon wissen: die häufigsten
+                  Anforderungen über alle Fachgebiete. Erst geben, dann fragen. */}
+              <h3>Das wird in Vergabeunterlagen am häufigsten verlangt.</h3>
+              <p className="ec-leer-p">
+                Aus {nf(check.katalog["alle"]?.n ?? 0)} ausgewerteten Unterlagen aller
+                Fachgebiete. Wählt euer Fachgebiet, dann steht hier dessen eigene Liste,
+                und nach {(ZAHLWORT[fragen] ?? String(fragen)).toLowerCase()} Fragen daneben,
+                was ihr davon erfüllt.
               </p>
+
+              <p className="ec-fundkopf" aria-hidden="true">
+                <span>Anforderung</span><span>belegt in</span>
+              </p>
+              <ul className="ec-fund ec-fund-still">
+                {(check.katalog["alle"]?.zeilen ?? []).slice(0, 6).map((z) => (
+                  <li key={z.key}>
+                    <span className="ec-haken ec-haken-still" aria-hidden="true">·</span>
+                    <span className="ec-f-name">{check.texte[z.key]?.name ?? z.key}</span>
+                    <span className="ec-f-quote">{z.anteil} %</span>
+                  </li>
+                ))}
+              </ul>
+
               <p className="ec-leer-f">
                 Die Hälfte der Vergaben mit veröffentlichtem Wert liegt zwischen{" "}
                 {check.wert.p25 !== null ? euro(check.wert.p25) : "?"} und{" "}
                 {check.wert.p75 !== null ? euro(check.wert.p75) : "?"};{" "}
                 {nf(check.wert.unter25k)} offene liegen unter 25.000 €,{" "}
-                {nf(check.wert.ab1m)} über einer Million. Für kleine Betriebe ist da genauso
-                etwas dabei wie für grosse.
-              </p>
-              <p className="ec-leer-f">
-                Ohne Anmeldung, ohne Firmendaten. Nichts davon verlässt euren Browser.
+                {nf(check.wert.ab1m)} über einer Million. Ohne Anmeldung, ohne Firmendaten.
               </p>
             </div>
           ) : (
@@ -419,6 +433,10 @@ export function EignungsCheck({ check, fachgebiete }: {
             Regler gehört über das, was er regelt, nicht daneben. Die Spalte steht rechts,
             damit das Gewicht der Seite nicht nach rechts kippt — links steht der Inhalt. */}
         <div className="ec-auswahl">
+          {/* Der Inhalt der Leiste klebt: bei offener Auswertung ist die Arbeitsfläche
+              tausend Pixel hoch, und wer dann das Fachgebiet wechseln will, soll nicht
+              zurückscrollen müssen. Der Grund der Leiste bleibt dabei durchgehend. */}
+          <div className="ec-auswahl-innen">
           <label className="ec-regionwahl">
             <span>Region</span>
             <select value={region} onChange={(e) => setRegion(e.target.value)}>
@@ -443,6 +461,7 @@ export function EignungsCheck({ check, fachgebiete }: {
               );
             })}
           </ul>
+          </div>
         </div>
       </div>
 
