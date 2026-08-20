@@ -105,6 +105,54 @@ export async function Landing() {
         ) : null}
       </section>
 
+      {/* PLANUNGSHORIZONT — die Zeitachse, die der ersten Fassung fehlte.
+          Sie zeigte nur den Einzelfall: eine offene Ausschreibung mit ihren Anforderungen.
+          Dass man damit Jahre voraus planen kann, stand nirgends — dabei ist es das
+          stärkere Argument. Wer heute eine laufende Ausschreibung sieht, ist meist zu spät;
+          wer einen Amtsinhaber verdrängen will, fängt ein Jahr vorher an.
+
+          Bewusst „euer/eure" statt der nackten Bestandszahl: 437 Regionen sind eine
+          Datenbankauskunft, „eure Region" ist ein Angebot. Die Zahl steht klein daneben,
+          weil sie den Zuschnitt belegt, nicht ersetzt. */}
+      {z ? (
+        <section className="lp-block">
+          <h2 className="lp-h2">Wie weit reicht euer Planungshorizont?</h2>
+          <ol className="lp-horizont">
+            <li>
+              <span className="lp-stufe">Jetzt</span>
+              <h3>Bieten, worauf ihr bieten könnt</h3>
+              <p>
+                Offene Verfahren in eurem Fachgebiet und Umkreis, mit ausgewerteten Unterlagen
+                und der Frist im Blick.
+              </p>
+              <span className="lp-stufe-zahl">{nf(z.offen)} offene Verfahren im Bestand</span>
+            </li>
+            <li>
+              <span className="lp-stufe">Nächste 24 Monate</span>
+              <h3>Da anfangen, wo andere noch nicht hinsehen</h3>
+              <p>
+                Welche Verträge in eurem Gebiet auslaufen, wer sie heute hält und was beim
+                letzten Mal gefordert war. Zeit genug, den Auftraggeber vorher kennenzulernen.
+              </p>
+              <span className="lp-stufe-zahl">
+                {nf(z.auslaufend_24m)} Verträge laufen in 24 Monaten aus
+              </span>
+            </li>
+            <li>
+              <span className="lp-stufe">Dauerhaft</span>
+              <h3>Euren Markt kennen, nicht nur eure Aufträge</h3>
+              <p>
+                Eure Region gegen den Durchschnitt, eure Wettbewerber mit ihren Zuschlägen,
+                euer Fachgebiet im Jahresverlauf. Wo ihr stark seid und wo jemand anderes sitzt.
+              </p>
+              <span className="lp-stufe-zahl">
+                {nf(z.regionen)} Regionen · {nf(z.anbieter)} Anbieter im Wettbewerbsbild
+              </span>
+            </li>
+          </ol>
+        </section>
+      ) : null}
+
       {z ? (
         <section className="lp-zahlen" aria-label="Bestand">
           <div><b>{nf(z.vergaben)}</b><span>Vergaben im Bestand</span></div>
@@ -162,54 +210,6 @@ export async function Landing() {
           </article>
         </div>
       </section>
-
-      {/* PLANUNGSHORIZONT — die Zeitachse, die der ersten Fassung fehlte.
-          Sie zeigte nur den Einzelfall: eine offene Ausschreibung mit ihren Anforderungen.
-          Dass man damit Jahre voraus planen kann, stand nirgends — dabei ist es das
-          stärkere Argument. Wer heute eine laufende Ausschreibung sieht, ist meist zu spät;
-          wer einen Amtsinhaber verdrängen will, fängt ein Jahr vorher an.
-
-          Bewusst „euer/eure" statt der nackten Bestandszahl: 437 Regionen sind eine
-          Datenbankauskunft, „eure Region" ist ein Angebot. Die Zahl steht klein daneben,
-          weil sie den Zuschnitt belegt, nicht ersetzt. */}
-      {z ? (
-        <section className="lp-block">
-          <h2 className="lp-h2">Wie weit reicht euer Planungshorizont?</h2>
-          <ol className="lp-horizont">
-            <li>
-              <span className="lp-stufe">Jetzt</span>
-              <h3>Bieten, worauf ihr bieten könnt</h3>
-              <p>
-                Offene Verfahren in eurem Fachgebiet und Umkreis, mit ausgewerteten Unterlagen
-                und der Frist im Blick.
-              </p>
-              <span className="lp-stufe-zahl">{nf(z.offen)} offene Verfahren im Bestand</span>
-            </li>
-            <li>
-              <span className="lp-stufe">Nächste 24 Monate</span>
-              <h3>Da anfangen, wo andere noch nicht hinsehen</h3>
-              <p>
-                Welche Verträge in eurem Gebiet auslaufen, wer sie heute hält und was beim
-                letzten Mal gefordert war. Zeit genug, den Auftraggeber vorher kennenzulernen.
-              </p>
-              <span className="lp-stufe-zahl">
-                {nf(z.auslaufend_24m)} Verträge laufen in 24 Monaten aus
-              </span>
-            </li>
-            <li>
-              <span className="lp-stufe">Dauerhaft</span>
-              <h3>Euren Markt kennen, nicht nur eure Aufträge</h3>
-              <p>
-                Eure Region gegen den Durchschnitt, eure Wettbewerber mit ihren Zuschlägen,
-                euer Fachgebiet im Jahresverlauf. Wo ihr stark seid und wo jemand anderes sitzt.
-              </p>
-              <span className="lp-stufe-zahl">
-                {nf(z.regionen)} Regionen · {nf(z.anbieter)} Anbieter im Wettbewerbsbild
-              </span>
-            </li>
-          </ol>
-        </section>
-      ) : null}
 
       <section className="lp-block lp-hell">
         <h2 className="lp-h2">Woher die Daten kommen</h2>
