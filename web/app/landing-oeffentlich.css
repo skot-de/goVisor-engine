@@ -679,7 +679,20 @@ body:has(> .lp) { background: #E4E8E6; }
 .lp-anmeldung .lp-kopf a:first-child { display: block; }
 .lp-anmeldung-schritte { display: flex; justify-content: center; padding: 22px 0 4px;
   border-bottom: 1px solid var(--line, #E3E7E5); margin: 0 -24px 30px; }
-.lp-anmeldung .seitenmain { max-width: 560px; margin: 0 auto; padding: 0; background: none; }
+/* ⚠ `.main` ist im Explorer ein DREIZEILIGES GRID (`grid-template-rows:1fr 6px 34vh`,
+   explorer.css) samt `overflow:auto`. Die Bühne trägt dieselbe Klasse und erbte beides.
+   Zwei Folgen, beide gemessen am 2026-08-21:
+     1. Unter der Karte klafften ~410 px Leere — die zweite und dritte Grid-Zeile, leer,
+        aber vorhanden.
+     2. Als Grid-Element hat die Karte `min-width:auto`, kann also nicht unter ihre
+        Min-Content-Breite schrumpfen. Bei schmalem Fenster (400 px gemessen: Spur 350 px,
+        Karte 401 px) lief sie heraus, und `.lp` mit `overflow:clip` schnitt sie ab —
+        ohne Scrollbalken, einfach weg. Genau der abgeschnittene Kandidaten-Screen.
+   Deshalb bekommt die Bühne hier ihren eigenen Fluss zurück. Dieselbe Falle wie bei der
+   Schrittleiste weiter unten: Regeln, die dem Explorer gehören, treffen die Bühne mit. */
+.lp-anmeldung .seitenmain { display: block; overflow: visible;
+  max-width: 560px; margin: 0 auto; padding: 0; background: none; }
+.lp-anmeldung .card { min-width: 0; }
 .lp-anmeldung .card { border: 1px solid var(--line, #E3E7E5); border-radius: 16px;
   background: var(--surface, #fff); padding: 28px 30px;
   box-shadow: 0 1px 2px rgba(18,33,29,.04); }

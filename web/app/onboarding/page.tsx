@@ -898,8 +898,26 @@ function testMailErlaubt(mail: string): boolean {
         {/* 3 · Kandidaten (schwacher Match) */}
         {screen === "kandidaten" && (
           <div className="card wide">
-            <h1>{t("Welche davon seid ihr?")}</h1>
-            <p className="lede">{t("Der Name allein war nicht eindeutig. Klickt auf eure Firma. Dann zeigen wir direkt hier, was in den Vergabedaten über euch steht.")}</p>
+            {/* Der Bildschirm entsteht, wenn `zumMatch` keinen starken Treffer hat — das
+                kann auch EIN schwacher Treffer sein. „Welche davon seid ihr?" fragt dann
+                nach einer Auswahl, die es nicht gibt. Sven am 2026-08-21: „wenn nur eine
+                firma vorgeschlagen wird, warum dann die frage ‚welche davon seid ihr?'" */}
+            {matches.length === 1 ? (
+              <>
+                <h1>{t("Seid ihr das?")}</h1>
+                <p className="lede">{t("Eine Firma passt zu dem Namen, sicher sind wir uns aber nicht. Prüft, was in den Vergabedaten über sie steht.")}</p>
+              </>
+            ) : matches.length ? (
+              <>
+                <h1>{t("Welche davon seid ihr?")}</h1>
+                <p className="lede">{t("Der Name allein war nicht eindeutig. Klickt auf eure Firma. Dann zeigen wir direkt hier, was in den Vergabedaten über euch steht.")}</p>
+              </>
+            ) : (
+              <>
+                <h1>{t("Kein Treffer für diesen Namen")}</h1>
+                <p className="lede">{t("Das heißt nicht, dass ihr nicht dabei seid. Vielleicht schreibt euch die Vergabestelle anders.")}</p>
+              </>
+            )}
             <div className="cands">
               {matches.length ? matches.map((m) => (
                 <div key={m.id} className={`cand-box ${offen === m.id ? "auf" : ""}`}>

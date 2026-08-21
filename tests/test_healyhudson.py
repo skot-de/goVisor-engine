@@ -1205,3 +1205,45 @@ def test_keine_erfolgspraemie_in_der_oberflaeche():
             if verboten.search(z):
                 treffer.append(f"{pfad.relative_to(ROOT)}:{nr}: {nackt[:90]}")
     assert not treffer, "Erfolgsprämie zurück in der Oberfläche:\n  " + "\n  ".join(treffer)
+
+
+def test_die_buehne_erbt_das_explorer_gitter_nicht():
+    """Der Kandidaten-Screen war rechts abgeschnitten (Sven, 2026-08-21, mit Bild).
+
+    Ursache war nicht der Inhalt, sondern eine geerbte Regel: `.main` ist im Explorer ein
+    dreizeiliges Grid (`grid-template-rows:1fr 6px 34vh`) mit `overflow:auto`. Die
+    Anmelde-Bühne trägt dieselbe Klasse (`<div className="main seitenmain zugang">`) und
+    bekam beides mit. Gemessen im Browser:
+
+      · unter der Karte klafften ~410 px Leere — die zweite und dritte Grid-Zeile
+      · als Grid-Element hat die Karte `min-width:auto`, kann also nicht unter ihre
+        Min-Content-Breite schrumpfen. Bei 400 px Fenster: Spur 350 px, Karte 401 px.
+        `.lp` hat `overflow:clip` → abgeschnitten, ohne Scrollbalken.
+
+    Nach der Korrektur (display:block + min-width:0) passt die Karte von 360 bis 981 px
+    in ihre Spur. Dieselbe Familie wie die Schrittleisten-Falle: Regeln, die dem Explorer
+    gehören, treffen die Bühne mit, weil sie sich eine Klasse teilen.
+    """
+    css = (ROOT / "web" / "app" / "landing-oeffentlich.css").read_text(encoding="utf-8")
+    regel = [z for z in css.splitlines() if z.startswith(".lp-anmeldung .seitenmain")]
+    assert regel, "die Bühnen-Regel für .seitenmain fehlt"
+    assert "display: block" in regel[0], \
+        "ohne eigenes display erbt die Bühne wieder das dreizeilige Explorer-Grid"
+    assert "overflow: visible" in regel[0], \
+        "ohne eigenes overflow erbt die Bühne wieder .seitenmain{overflow:auto}"
+    assert ".lp-anmeldung .card { min-width: 0; }" in css, \
+        "ohne min-width:0 kann die Karte im schmalen Fenster nicht schrumpfen"
+
+
+def test_kandidaten_fragen_nach_der_zahl_der_treffer():
+    """„wenn nur eine firma vorgeschlagen wird, warum dann die frage ‚welche davon seid
+    ihr?'" (Sven, 2026-08-21).
+
+    Der Screen entsteht, sobald `zumMatch` keinen STARKEN Treffer hat — das kann ein
+    einziger schwacher Treffer sein, oder gar keiner. Eine Auswahlfrage ohne Auswahl ist
+    für den Nutzer schlicht falsch gestellt.
+    """
+    onb = (ROOT / "web" / "app" / "onboarding" / "page.tsx").read_text(encoding="utf-8")
+    assert 'matches.length === 1 ?' in onb, "die Frage unterscheidet nicht nach der Trefferzahl"
+    for satz in ('Seid ihr das?', 'Welche davon seid ihr?', 'Kein Treffer für diesen Namen'):
+        assert satz in onb, f"Fassung fehlt: {satz}"
