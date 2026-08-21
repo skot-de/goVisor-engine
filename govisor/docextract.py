@@ -157,14 +157,14 @@ def validate_item(item: dict, allowed_req_types: set[str] | None = None) -> bool
 # ⚠ **`cap` NICHT anheben — gemessen, nicht vermutet.** Der Verdacht lag nahe: 54 % der
 # Leistungsbeschreibungen werden bei 60.000 Zeichen geschnitten, der Median liegt bei
 # 172.000, und nur 38,8 % des Textes priorisierter Typen erreichen ueberhaupt das Modell.
-# Am 2026-08-22 an 49 GEPAARTEN Vorgaengen geprueft (dieselben Vergaben, einmal 60k, einmal
+# Am 2026-08-22 an 96 GEPAARTEN Vorgaengen geprueft (dieselben Vergaben, einmal 60k, einmal
 # 240k, google/gemini-2.5-flash):
 #
-#     Text ans Modell   60.000 → 103.384 Zeichen   (1,7×)
-#     Eintraege gesamt   1.533 →   1.483           (WENIGER)
-#     je Vorgang (Ø)      31,3 →    30,3
-#     verworfen            281 →     414           (+47 %)
-#     21 besser · 14 gleich · 14 schlechter · Vorzeichentest p ≈ 0,16
+#     Text ans Modell   60.000 → 163.029 Zeichen   (2,7×)
+#     Eintraege gesamt   2.899 →   2.611           (10 % WENIGER)
+#     je Vorgang (Ø)      30,2 →    27,2
+#     verworfen            475 →     803           (+69 %)
+#     37 besser · 21 gleich · 38 schlechter · Vorzeichentest p ≈ 1,00
 #
 # Mehr Text bringt also nicht mehr belegte Anforderungen, sondern mehr Verwerfungen — das
 # Modell findet in den zusaetzlichen 43.000 Zeichen vor allem Positionszeilen, deren Zitate
