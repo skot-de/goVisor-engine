@@ -5,9 +5,31 @@
    vier nackte Zahlen, drei Textabsätze. Was fehlte, war nicht Schmuck, sondern der BEWEIS —
    deshalb liegt jetzt das Gewicht auf der Beispielkarte rechts, und die Farbe dient ihr. */
 
+/* ─── AUSSEN UND INNEN ──────────────────────────────────────────────────────────────
+   Sven: „gerade hat nur der header ein von links nach rechts durchgehen ansatz, der optisch
+   sonst nicht wieder vorkommt." Stimmt — Gründungsleiste und Kopf trugen als Einzige eine
+   eigene Fläche über die ganze Spaltenbreite, alles darunter schwebte frei auf demselben
+   Weiss. Zwei Sprachen auf einer Seite.
+
+   Also bekommt die Seite einen Rahmen: aussen der graue Grund (`--paper`, den `body` ohnehin
+   trägt), innen das weisse Blatt mit Kante und Radius. Damit ergeben Leiste und Kopf Sinn —
+   sie sind der obere Abschluss des Blattes, nicht zwei fremde Balken —, und jeder Abschnitt
+   darunter hat eine sichtbare linke und rechte Grenze, an der er sich ausrichtet.
+
+   `overflow: clip` schneidet die Ecken sauber und lässt (anders als `hidden`) die klebende
+   Kopfleiste weiterhin kleben; das haben wir am Werkzeug schon einmal gelernt. */
 .lp { --grad-a: #F2FAF6; --grad-b: #FFFFFF;
-  max-width: 1120px; margin: 0 auto; padding: 0 24px 72px;
+  max-width: 1160px; margin: 18px auto 28px; padding: 0 24px 72px;
+  background: var(--surface, #FFFFFF); border: 1px solid var(--line, #E3E7E5);
+  border-radius: 18px; overflow: clip;
+  box-shadow: 0 1px 2px rgba(18,33,29,.04), 0 18px 50px rgba(18,33,29,.05);
   color: var(--ink-900, #12211D); }
+
+/* Auf schmalen Geräten fällt der Rahmen weg: dort ist der Bildschirm das Blatt, und ein
+   Rand kostet nur Breite. */
+@media (max-width: 900px) {
+  .lp { margin: 0; border: none; border-radius: 0; box-shadow: none; }
+}
 
 .lp-kopf { display: flex; align-items: center; justify-content: space-between; padding: 20px 0; }
 .lp-marke { font-weight: 700; font-size: 19px; letter-spacing: -0.015em; }
@@ -264,7 +286,7 @@
 
 /* GRÜNDUNGSLEISTE. Ganz oben, dunkel, eine Zeile — sie soll den Zeitpunkt markieren,
    nicht den Blick fangen. */
-.lp-gruendung { margin: 0 -24px 0; padding: 10px 24px; text-align: center;
+.lp-gruendung { margin: 0 -24px; padding: 10px 24px; border-radius: 17px 17px 0 0; text-align: center;
   background: var(--ink-900, #12211D); color: #DDE9E4; font-size: 13px; line-height: 1.45; }
 .lp-gruendung b { color: #fff; font-weight: 700; }
 
@@ -655,3 +677,10 @@
 /* Der Inhalt der Bedienleiste klebt, ihr Grund läuft durch. */
 .ec-auswahl-innen { position: sticky; top: 88px; }
 @media (max-width: 900px) { .ec-auswahl-innen { position: static; } }
+
+/* Der Grund draussen. `--paper` (#F6F7F6) unterscheidet sich vom weissen Blatt kaum; damit
+   „aussen" und „innen" wirklich zwei Zonen sind, braucht es einen Ton mehr. Gesetzt wird er
+   NUR, wenn diese Seite im Dokument steht (`:has`), damit die Anwendung ihren eigenen Grund
+   behält — die Startseite ist Gast im selben Blatt, nicht sein Besitzer. */
+body:has(> .lp) { background: #ECEFED; }
+@media (max-width: 900px) { body:has(> .lp) { background: var(--surface, #fff); } }
