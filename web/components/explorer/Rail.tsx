@@ -190,12 +190,13 @@ export function AppRail({
                 <b>{userEmail || "Nicht angemeldet"}</b>
                 <span>{plan === "paid" ? "Pro — voller Zugang" : "Free — Lead-Liste unbegrenzt, 3 Bewertungen"}</span>
               </div>
-              {/* Die Sperre sichtbar machen, wo die Abrechnung liegt — sonst merkt man
-                  erst beim Rechnungslauf, dass etwas nicht freigeschaltet ist. */}
+              {/* Die Sperre hing frueher an der Abrechnung. Die Erfolgspraemie ist am
+                  2026-08-21 gestrichen worden; was bleibt, ist die Kennzeichnung: bis die
+                  Zugehoerigkeit belegt ist, steht die Historie auf Selbstauskunft. */}
               {identBestaetigt === false ? (
                 <div className="pm-warn">
                   Firma noch <b>unbestätigt</b>
-                  <em>Erfolgsprämie und Abrechnung bleiben gesperrt, bis die Zugehörigkeit belegt ist.</em>
+                  <em>Eure Historie und die Erkennung eigener Aufträge beruhen so lange auf eurer Selbstauskunft.</em>
                 </div>
               ) : null}
               {plan !== "paid" ? (

@@ -59,7 +59,7 @@ Relevanz & Analyse als `relevance(entität, ausschreibung)` — nicht an den ein
 | #14 | Entity-Härtung | ✅ fertig (neu) | Backend + Konfidenz-Ehrlichkeit: unsicherer Incumbent ehrlich, statt „kein Amtsinhaber" |
 | #15 | Anforderungs-Check | ◑ teilweise | Zuschlags-**Gewichtung** + Basis (CPV/Rechtsrahmen) fertig · Weg-A-Restfelder offen · Weg B vertagt |
 | #16 | Verfahrenskalender | ◑ teilweise | Angebotsfrist mit Datum + Dringlichkeit im Detail (neu) · Kalenderseite + iCal offen |
-| #6b | Billing / Erfolgsprämie | ✅ fertig | DB + HITL-Freigabe + UI · **Stripe-Transport = Stub** |
+| #6b | Billing | ◑ Abo offen | Erfolgsprämie **gestrichen 2026-08-21** (Code raus, Schema via 0012) · Abo-Transport = Stripe-Stub |
 | #10s | Settings | ✅ fertig | Konto, Profil, Alert-Einstellungen, Datenexport, Löschung |
 
 ---
@@ -74,7 +74,7 @@ l.eigen real verdrahtet · profile_type-Anker · Rahmenvertrag-Bewertungssignal 
 
 - **#15 Weg A vervollständigen** — Bürgschaft, Nebenangebote, Eignung, Bietergemeinschaft aus `attributes` (ohne Reparse) in `lead_export` + UI. Weg B (Doku-Crawl + LLM mit Pflicht-Seitenbeleg) danach.
 - **#16 Kalender-Übersicht + iCal-Feed** — chronologische Fristen der Watchlist; Uhrzeit & Bieterfragen-Frist aus dem XML.
-- **Externe Transporte anschließen** — E-Mail (Resend/SES), PostHog, Stripe. Logik steht, es fehlen nur die Provider-Keys.
+- **Externe Transporte anschließen** — E-Mail (Resend/SES), PostHog, Stripe (nur Abo). Logik steht, es fehlen nur die Provider-Keys.
 - **Deployment + Pflicht-Security-Review** — RLS, Secret-Key server-only, §9-Blur serverseitig, innerHTML-XSS; plus npm-Vulns (Next SSRF, PostCSS, sharp).
 - **notice_id-Normalisierung** — Unterstrich/Bindestrich-Doppelformat verwaist bei jedem Monatswechsel ~551 Leads (bekannt, eigener Schritt).
 
@@ -87,8 +87,8 @@ Die Bausteine, an denen ein Preismodell andockt — was die Datenlage **wirklich
 - **Pricing-Staffel gebaut** (`govisor/pricing.py`): reines **Flat-per-Band**, 7 Stufen, Pauschalen verdoppeln sich — `<100k`=600 / `100–250k`=1.200 / `250–500k`=2.400 / `500k–1,3M`=4.800 / `1,3–5M`=9.600 / `5–25M`=15.000 / `>25M`=25.000 €. `imputiert`/`default` → ×0,8.
 - **Warum Flat statt %:** Wert-Schätzung trifft nur **~42 %** das richtige Band (gemessen) → Prozent auf geratenen Wert ist nicht verteidigbar. Abgerechnet wird auf echtem Wert (**~65 %** publiziert), der Rest via Kunden-Bestätigung.
 - **Gebühren-Basis nie „unbekannt"** (`value_band_effektiv`): echter Wert 37 % / geschätzt 5 % / CPV-Median-imputiert 52 % / default 6 %, mit `band_source` als Fairness-Regler.
-- **Erfolgsprämie** — gestaffelt, **nur bei nachgewiesenem Gewinn und nur auf echten Werten**. Attribution über `award_tender_link` (Zuschlag ↔ Ausschreibung, 373k Links). `value_anchor` ist ein **Lowball-Plausibilitätscheck** (~68 % ±1 Band), kein Orakel → bei ≥2 Bänder-Abweichung HITL-Prüfung.
-- **Gate-Logik:** `entity_confidence` (confirmed/probable/none) ist das Billing-Gate; Erfolgsprämie löst **nur** der Klick auf den Bewertungs-Tab eines konkreten Leads aus (nicht Strategie-Ansichten).
+- **Erfolgsprämie — GESTRICHEN am 2026-08-21.** Sie war nie scharf (kein Rechnungslauf, kein Provider-Key) und versprach Nutzern in einem Dutzend Texten eine Abrechnung, die es nicht gab. Code entfernt, Schema räumt `supabase/0012_erfolgspraemie_entfernen.sql`. Was vom Unterbau übrig ist und heute niemand liest: `value_anchor` (Wert-Schätzer, ~42 % exakt) und `award_tender_link` (Attribution, wird anderweitig gebraucht).
+- **Gate-Logik:** `entity_confidence` (confirmed/probable/none) kennzeichnet die Identität. Ein Abrechnungs-Gate hängt seit dem 2026-08-21 nicht mehr daran; der Klick auf den Bewertungs-Tab markiert nur noch den Fortschritt.
 - **Free/Pro:** kostenlos = Liste + Basisdaten + Netzwerkteilnahme (Dichte/Vertrauen); bezahlt = Wettbewerbssicht, Strategie, Export, Fristen. Strategie ist rein Pro-gegated (sektionsweise), verbraucht keine Analysen.
 - **Offen (Business, nicht Technik):** finale Beträge, Rabatt-Faktor, Attributions-/Rechnungs-Mechanik. Marktvalidierung liegt in der Pricing-Research-Notiz.
 

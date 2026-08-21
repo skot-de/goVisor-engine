@@ -2,8 +2,10 @@
 import { createClient } from "./client";
 
 /* Feature #11 §8.3 — Ergebnismeldungen („die Moat-Tabelle").
- * WICHTIG (§4.3.1 Regel 1 / AC11/AC12): Eine Meldung löst NIE eine Erfolgsprämie aus und hat
- * KEINE Verbindung zu success_fee_charges. Das private Tracking (§4.3.0) nützt ab dem ersten
+ * WICHTIG (§4.3.1 Regel 1 / AC11/AC12): Eine Meldung kostet den Nutzer nichts und hat KEINE
+ * Verbindung zu irgendeiner Abrechnung. Die Erfolgsprämie, gegen die diese Regel ursprünglich
+ * schützte, ist am 2026-08-21 gestrichen; die Regel bleibt, weil sie fuer jedes kuenftige
+ * Preismodell gilt: Melden darf nie teurer sein als Schweigen. Das private Tracking (§4.3.0) nützt ab dem ersten
  * Nutzer OHNE fremden Pool — es ist der Eigenwert, der den Kaltstart auflöst. */
 
 export type OutcomeResult = "won" | "lost" | "cancelled" | "excluded";

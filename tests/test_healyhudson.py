@@ -1152,3 +1152,56 @@ def test_plausibilitaetsbremse_bei_der_identitaet():
     auth = (ROOT / "web" / "lib" / "supabase" / "auth.ts").read_text(encoding="utf-8")
     assert "string | { name: string; beleg:" in auth, \
         "der Profiltyp kennt die Beleglage nicht — oder bricht alte Profile (reine Namen)"
+    # ⚠ `confirmed_entities` ist in 0001_auth_profiles.sql ein text[]. Objekte scheitern dort
+    # am Typ; die Beleglage reist im `profile`-jsonb mit, die Spalte bleibt Namensliste.
+    assert 'typeof e === "string" ? e : e.name' in auth, \
+        "Objekte gehen in die text[]-Spalte — das Update scheitert am Typ"
+
+
+def test_der_haken_im_onboarding_hat_eine_wirkung():
+    """Der Screen „Gehören diese Einheiten zu euch?" war bis zum 2026-08-21 folgenlos.
+
+    Gescort wurde allein gegen `identityId`, also gegen die GANZE Gruppe: Abwählen nahm
+    nichts weg, Dazuwählen gab nichts dazu. `confirmed_entities` las ausserhalb von
+    /settings niemand. Eine Bremse, die nichts bremst, ist schlimmer als keine, weil der
+    Kasten daneben eine Wirkung behauptet.
+
+    Der Incumbent trägt nur `groupId` und `name`, keine Mitglieds-ID — der Haken wird
+    deshalb über den Namen eingelöst. Gemessen: 9.991 Treffer, 39 Ausreisser.
+    """
+    core = (ROOT / "web" / "lib" / "explorerCore.js").read_text(encoding="utf-8")
+    assert "meineEinheiten" in core, "die angehakten Einheiten liest wieder niemand"
+    assert "meineEinheiten.size === 0 || meineEinheiten.has(inc.name)" in core, \
+        "der Gruppentreffer allein entscheidet wieder ueber die Eigen-Markierung"
+
+
+def test_keine_erfolgspraemie_in_der_oberflaeche():
+    """Sven am 2026-08-21: „es gibt keine erfolgsprämie … nimm die erfolgsprämie überall raus."
+
+    Ein Preisversprechen ohne Gegenstück ist eine Falschaussage an den Nutzer, egal wie gut
+    gemeint. Gefunden und entfernt wurden unter anderem: das Erfolgshonorar-Banner mitten in
+    der Dokumenten-Checkliste, die Abrechnungssperre im Konto-Menü, die Beruhigung auf der
+    Treffergüte-Seite und zwei Versprechen im Onboarding.
+
+    Geprüft wird der NUTZERSICHTBARE Text, nicht der Quelltext: Kommentare dürfen den
+    gestrichenen Begriff nennen (sie erklären, warum etwas fehlt), Oberflächentexte nicht.
+    """
+    import re
+    verboten = re.compile(r"Erfolgspr(ä|ae)mie|Erfolgsgeb(ü|ue)hr|Erfolgshonorar|[Ss]uccess.[Ff]ee")
+    treffer = []
+    for pfad in [p for p in (ROOT / "web").rglob("*")
+                 if p.suffix in {".ts", ".tsx", ".js"}
+                 and "node_modules" not in p.parts and ".next" not in p.parts
+                 and "data" not in p.parts]:
+        for nr, z in enumerate(pfad.read_text(encoding="utf-8").splitlines(), 1):
+            nackt = z.strip()
+            if nackt.startswith(("//", "*", "/*", "{/*", "--")):
+                continue          # Kommentarzeile (auch JSX): darf die Streichung erklären
+            if "success_fee_charges" in z and "user_data_export" not in z:
+                # Bewusste Ausnahme: der DSGVO-Datenexport liest die Tabelle weiter, solange
+                # sie existiert. Eine Auskunft, die eine Datenkategorie stillschweigend
+                # weglaesst, ist falsch — auch wenn die Kategorie abgeschafft wurde.
+                continue
+            if verboten.search(z):
+                treffer.append(f"{pfad.relative_to(ROOT)}:{nr}: {nackt[:90]}")
+    assert not treffer, "Erfolgsprämie zurück in der Oberfläche:\n  " + "\n  ".join(treffer)

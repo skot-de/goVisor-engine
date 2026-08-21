@@ -47,27 +47,9 @@ alter table public.user_lead_interactions enable row level security;
 drop policy if exists "inter_rw_own" on public.user_lead_interactions;
 create policy "inter_rw_own" on public.user_lead_interactions using (auth.uid() = user_id) with check (auth.uid() = user_id);
 
--- ── Success-Fee-Rechnungen (Ticket #6, HITL-Modell) ──────────────────────────
--- KEIN FK zu einer Fee-Kalkulation (Ticket #11 §8.3-Prinzip). Schreiben nur serverseitig.
-create table if not exists public.success_fee_charges (
-  id                        uuid primary key default gen_random_uuid(),
-  user_id                   uuid not null references public.user_profiles(id) on delete cascade,
-  lead_id                   text,
-  tender_publication_number text,
-  award_date                date,
-  value_source              text check (value_source in ('echt','kunde_bestaetigt','kunde_offen')),
-  award_value_band          text,
-  anchor_band               text,
-  fee_amount                numeric,
-  status                    text not null default 'draft'
-                              check (status in ('draft','needs_confirmation','disputed','sent','paid','waived','failed')),
-  created_at                timestamptz not null default now(),
-  updated_at                timestamptz not null default now()
-);
-alter table public.success_fee_charges enable row level security;
--- Nur LESEN der eigenen Rechnungen; angelegt/geändert wird serverseitig (Secret-Key umgeht RLS).
-drop policy if exists "fees_select_own" on public.success_fee_charges;
-create policy "fees_select_own" on public.success_fee_charges for select using (auth.uid() = user_id);
+-- ── Success-Fee-Rechnungen: GESTRICHEN am 2026-08-21 ─────────────────────────
+-- Die Erfolgsprämie ist kein Produktbestandteil mehr. `success_fee_charges` wird hier
+-- nicht mehr angelegt; bestehende Installationen raeumt 0012_erfolgspraemie_entfernen.sql.
 
 -- ── GDPR-Datenexport-Anforderung (Ticket #10 §5, Art. 20) ────────────────────
 create table if not exists public.user_data_export (
@@ -85,6 +67,4 @@ create policy "export_rw_own" on public.user_data_export using (auth.uid() = use
 drop trigger if exists alert_settings_touch on public.user_alert_settings;
 create trigger alert_settings_touch before update on public.user_alert_settings
   for each row execute function public.touch_updated_at();
-drop trigger if exists fees_touch on public.success_fee_charges;
-create trigger fees_touch before update on public.success_fee_charges
-  for each row execute function public.touch_updated_at();
+-- (fees_touch entfaellt mit success_fee_charges, s. o.)

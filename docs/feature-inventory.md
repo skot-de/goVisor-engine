@@ -1,5 +1,7 @@
 # goVisor — Vollständige Feature-Liste
 
+> ⚠ **STAND 2026-08-21: Die Erfolgsprämie ist gestrichen.** Alles unten zum Thema Success-Fee ist Entscheidungsgeschichte, kein geltendes Modell. Aus dem Produkt ist sie entfernt (Code + Texte), das Schema räumt `supabase/0012_erfolgspraemie_entfernen.sql`.
+
 Struktur → Feature → Erklärung. Basis für die Landingpage. **Reifegrad:** 🟢 live/verifiziert ·
 🟡 gebaut (funktioniert, ggf. an Demo-/Teildaten) · ⚪ Stub/ruht (Gerüst da, noch nicht scharf).
 Stand: 2026-07-30.
@@ -138,7 +140,7 @@ Nicht nur ein Bieter-Tab, sondern eine **eigene Rolle** (Route `/authority`, Ums
 |---|---|---|
 | **Registrierung/Login** | Supabase-Auth; Registrierung schaltet Leads frei. | 🟡 |
 | **Settings** | Profil, Firmengruppe, Zahlung, Rechnungen, Benachrichtigungen, Account, Daten-Export, Account-Löschung. | 🟡 |
-| **Billing / Success-Fee** | Erfolgsprämien-Modell (Human-in-the-Loop, Stripe als Stub). | ⚪ |
+| **Billing / Abo** | Abo-Zahlung über Stripe (Stub, kein Provider-Key). Die Erfolgsprämie ist am 2026-08-21 gestrichen. | ⚪ |
 | **Free/Pro-Gating** | Analyse-Tabs (Vergabestelle, Markt) hinter Paywall; Bewertungs-Limit im Free-Tier. | 🟡 |
 | **Analytics** | Event-Layer für Nutzungsauswertung. | 🟡 |
 

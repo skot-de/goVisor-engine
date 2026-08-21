@@ -24,7 +24,7 @@ export async function getTier(): Promise<Tier> {
     const { data: { user } } = await supabase.auth.getUser();
     if (!user) return "free";
     // Echtes Abo lesen, sobald Billing eine Spalte/Tabelle dafür hat (z. B. user_profiles.tier
-    // oder success_fee_charges/subscriptions). Bis dahin: eingeloggt ≠ zahlend → free.
+    // oder subscriptions). Bis dahin: eingeloggt ≠ zahlend → free.
     const { data } = await supabase
       .from("user_profiles").select("tier").eq("id", user.id).maybeSingle();
     return data?.tier === "pro" ? "pro" : "free";

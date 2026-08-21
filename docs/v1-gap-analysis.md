@@ -1,5 +1,7 @@
 # goVisor V1 — Gap-Analyse & Reihenfolge
 
+> ⚠ **STAND 2026-08-21: Die Erfolgsprämie ist gestrichen.** Alles unten zum Thema Success-Fee ist Entscheidungsgeschichte, kein geltendes Modell. Aus dem Produkt ist sie entfernt (Code + Texte), das Schema räumt `supabase/0012_erfolgspraemie_entfernen.sql`.
+
 **Status:** 2026-07-21, nach Review aller 9 Feature-Tickets (v2)
 **Kernaussage:** Der analytische Datenmoat steht weitgehend. Was fehlt, ist die
 **operative Verdrahtung**, die **Nicht-Ticket-Bereiche** (Settings, Billing-Tooling,

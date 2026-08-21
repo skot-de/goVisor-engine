@@ -853,7 +853,7 @@ const _CL_GROUPS = [
 function _clDone(leadId){ try{ return JSON.parse(localStorage.getItem('govisor.checkstate.'+leadId)||'{}'); }catch(e){ return {}; } }
 function _clHasBlocks(){ try{ return (JSON.parse(localStorage.getItem('govisor.blocks')||'[]')||[]).length>0; }catch(e){ return false; } }
 
-// §7 Checkliste im Prototyp-Design: Kopf (Stand+Haftung) · Erfolgshonorar-Zeile · TOC · funktionale
+// §7 Checkliste im Prototyp-Design: Kopf (Stand+Haftung) · TOC · funktionale
 // Gruppen mit Zitat+Fundstelle+Kennzeichnung+editierbarem Baustein+Kombi-Button+Abhaken.
 function renderChecklistBlock(a, l){
   const items = (a.checklist||[]).map((it,i)=>({...it, _i:i}));
@@ -897,12 +897,11 @@ function renderChecklistBlock(a, l){
   const portal = (l.unterlagen&&l.unterlagen.url) ? `<a href="${esc(l.unterlagen.url)}" target="_blank" rel="noopener" class="link">${tk("Zum Vergabeportal ↗")}</a>` : '';
   const chead = `<div class="chead"><div class="r1"><span class="stand">Stand der Unterlagen: ${l.lbFiles||1} Datei${(l.lbFiles||1)===1?'':'en'}</span>${portal}</div>
     <div class="disc">Bitte regelmäßig prüfen, ob neue Unterlagen vorliegen. LLM-gestützte Analyse — kann Fehler enthalten. Jede Angabe ist mit Fundstelle im Originaldokument belegt${a.rejected_items>0?`; ${a.rejected_items} unbelegte Aussagen wurden verworfen`:''}; maßgeblich bleiben die Vergabeunterlagen.</div></div>`;
-  const stake = `<div class="stake"><svg viewBox="0 0 24 24"><path d="M12 3l2.6 5.6 6 .8-4.4 4.2 1.1 6-5.3-2.9L6.7 19.6l1.1-6L3.4 9.4l6-.8z"/></svg><div><b>${tk("Erfolgshonorar:")}</b>${tk("Gewinnst du diesen Auftrag, berechnen wir eine Erfolgsgebühr. Verlierst du, nichts. Kein Aufschlag fürs Bewerben.")}</div></div>`;
   const toc = `<div class="toc"><div class="th"><b>${tk("Eure Checkliste")}</b><span class="pr"><span class="cl-doneN">${dn}</span> von ${tot} erledigt</span></div><div class="chips">${chips}<button class="tchip all" data-clcollapse>${tk("Alle zuklappen")}</button></div><div class="tprog"><i class="cl-tprog" style="width:${tot?Math.round(dn/tot*100):0}%"></i></div></div>`;
 
   // a2 Erstnutzer: leere Bibliothek → die Textbausteine sind noch generische Vorlagen (§9.1).
   const firstday = !_clHasBlocks() ? `<div class="cl-firstday">${tk("Eure Bausteinbibliothek ist noch leer, die Textvorschläge unten sind generische Vorlagen.")}<a href="/bausteine" class="link">${tk("Bibliothek füllen →")}</a>${tk("Dann setzt goVisor eure echten Referenzen und Zertifikate ein statt Platzhalter.")}</div>` : '';
-  return `<div class="va-checklist" data-clroot="${l.id}">${chead}${firstday}${stake}${toc}${groupsHtml}${offen}${weitere}</div>`;
+  return `<div class="va-checklist" data-clroot="${l.id}">${chead}${firstday}${toc}${groupsHtml}${offen}${weitere}</div>`;
 }
 
 // Download-Knopf für unsere extrahierte Tabelle (nicht für die Original-Unterlagen — die
@@ -2127,7 +2126,7 @@ function renderProfil(){
           <span>${userProfile?(userProfile.regions?(userProfile.regionLabels||[]).join(' · '):'bundesweit'):'bundesweit'}</span><i>·</i>
           ${userProfile
             ? `<span class="steck-ok" title="${esc(tk("Profil aktiv, steuert Relevanz und Anforderungs-Check."))}">${tk("Profil aktiv")}</span>`
-            : `<span class="steck-m" title="${esc(tk("Meldet euch an und bestätigt eure Firma, um euer Profil zu verbinden (Relevanz, Historie, Erfolgsprämie)."))}">${tk("Profil noch nicht verbunden")}</span>`}
+            : `<span class="steck-m" title="${esc(tk("Meldet euch an und bestätigt eure Firma, um euer Profil zu verbinden (Relevanz, Historie, eigene Aufträge)."))}">${tk("Profil noch nicht verbunden")}</span>`}
         </div>
       </div>
     </div>
@@ -2252,7 +2251,7 @@ function renderProfil(){
         </div>
       </div>
 
-      <p class="pgap">${tk("Angaben von euch sind")}<b>${tk("nicht überprüft")}</b>${tk("wir kennzeichnen sie getrennt von dem, was wir aus euren Vergaben messen. Für die Erfolgsprämie zählt nur Gemessenes.")}</p>
+      <p class="pgap">${tk("Angaben von euch sind")}<b>${tk("nicht überprüft")}</b>${tk("wir kennzeichnen sie getrennt von dem, was wir aus euren Vergaben messen.")}</p>
 
       <button class="sec-link" data-editbestand="an">${historie?tk("Eure Verträge pflegen"):tk("Frühere Vergaben nachtragen")}
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
@@ -2386,6 +2385,14 @@ function scoreLeadPerLot(l, profile, v){
 function scoreAll(){
   if(!userProfile){ for(const l of LEADS){ l.relevanz='na'; l.match=null; l.bestLot=null; l.eigen=false; l.eigenBestaetigt=false; } return; }
   const myId = userProfile.identityId || null;
+  /* Die angehakten Einheiten aus dem Onboarding. Bis zum 2026-08-21 wurden sie NIRGENDS
+     gelesen: gescort wurde allein gegen `identityId`, also gegen die ganze Gruppe. Der
+     Screen „Gehören diese Einheiten zu euch?" war damit folgenlos — Abwählen nahm nichts
+     weg, Dazuwählen gab nichts dazu. Jetzt zählt der Haken.
+     Alte Profile tragen hier reine Namen (string), neue Objekte mit Beleglage. */
+  const meineEinheiten = new Set((userProfile.confirmedEntities||[])
+    .map(e => typeof e === 'string' ? e : (e && e.name))
+    .filter(Boolean));
   // Buyer-Namen aus dem eigenen Vertragsbestand (für „eigen"-Match über Verträge)
   const myBuyers = (userContracts||[]).map(c=>String(c.buyer_name||'').toLowerCase()).filter(Boolean);
   for(const l of LEADS){
@@ -2398,7 +2405,13 @@ function scoreAll(){
     // „Eigen" (Verteidigungs-Sicht): der Amtsinhaber IST unsere Identität, ODER ein eigener
     // Vertrag passt zur Vergabestelle. Bei unsicherem Incumbent (conf<0.75) → „mutmaßlich".
     const inc = l.incumbent;
-    const incMine = !!(inc && myId && inc.groupId === myId);
+    /* Gruppentreffer allein genügt nicht mehr: die abgewählte Schwesterfirma ist nicht
+       „eigen". Gemessen am 2026-08-21 findet der Incumbent-Name sein Mitglied in 9.991 von
+       10.030 Fällen; die 39 Ausreisser (0,4 %) verlieren die Eigen-Markierung, was die
+       vorsichtige Richtung ist. Leere Liste = Altprofil ohne Einheiten-Angabe → wie bisher
+       die ganze Gruppe, sonst nähmen wir bestehenden Konten ihre Historie weg. */
+    const incMine = !!(inc && myId && inc.groupId === myId
+      && (meineEinheiten.size === 0 || meineEinheiten.has(inc.name)));
     const bn = String(l.buyer||'').toLowerCase();
     const contractMine = !!(bn && myBuyers.some(b=> b.includes(bn.slice(0,18)) || bn.includes(b.slice(0,18))));
     l.eigen = incMine || contractMine;

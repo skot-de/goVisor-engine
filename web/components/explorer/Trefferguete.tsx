@@ -251,7 +251,7 @@ function PrivatesTracking({ outcomes, onChange }: { outcomes: UserOutcome[]; onC
       <div className="tg-recip">
         <span className="tg-ge-t">{t("Wettbewerbsdaten")} <em>{t("{n} von 3 Meldungen", { n: b.gemeldet })}</em></span>
         <p className="tg-muted">{t("Meldet ihr eure Ergebnisse, seht ihr ab 3 Meldungen die Wettbewerbsmenge eurer Vergabestellen, ab 10 eure Rangverteilung im Marktvergleich. Solange der Markt zu dünn meldet, bleibt dieser Teil leer, euer privates Tracking oben funktioniert trotzdem.")}</p>
-        <p className="tg-note">{t("Eine Meldung löst nie eine Erfolgsprämie aus. Wer einen Verlust meldet, zahlt nichts; wer gewinnt, zahlt nicht mehr als ohne Meldung.")}</p>
+        <p className="tg-note">{t("Eine Meldung kostet euch nichts, weder bei Verlust noch bei Gewinn. Sie fliesst nur anonym in die Wettbewerbsmenge ein, ohne Anbieterbezug.")}</p>
       </div>
 
       {outcomes.length > 0 && (

@@ -1,5 +1,7 @@
 # goVisor — Preismodell (Mechanik)
 
+> ⚠ **STAND 2026-08-21: Die Erfolgsprämie ist gestrichen.** Alles unten zum Thema Success-Fee ist Entscheidungsgeschichte, kein geltendes Modell. Aus dem Produkt ist sie entfernt (Code + Texte), das Schema räumt `supabase/0012_erfolgspraemie_entfernen.sql`.
+
 **Status:** In Arbeit — Mechanik steht, Beträge offen
 **Letzte Messung:** 2026-07-20 (75.014 DE-Leads, 28.004 mit echtem Wert)
 

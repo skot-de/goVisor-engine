@@ -8,7 +8,7 @@ export type AccountRow = {
   identity_id: string | null; entity_confidence: string;
   confirmed_entities: string[]; cpv_fields: string[]; cpv_labels: string[];
   regions: string[]; region_labels: string[]; vol_min: number | null; vol_max: number | null;
-  branche: string | null; plan: string; grace_until: string | null;
+  branche: string | null; plan: string;
 };
 export type AlertSettings = {
   deadline_warning_enabled: boolean; expiry_warning_enabled: boolean;
@@ -74,10 +74,12 @@ export async function gdprExport(): Promise<Record<string, unknown> | null> {
     sb.from("user_profiles").select("*").eq("id", user.id).single(),
     sb.from("user_watchlist").select("*").eq("user_id", user.id),
     sb.from("user_lead_interactions").select("*").eq("user_id", user.id),
-    // BLEIBT, obwohl die Erfolgsgebuehr am 2026-08-17 als Modell verworfen wurde.
-    // Neue Zeilen entstehen nicht mehr, aber vorhandene sind weiterhin personenbezogene
-    // Daten — eine Auskunft, die eine Kategorie stillschweigend weglaesst, ist falsch.
-    // Erst wenn die Tabelle geleert und geloescht ist, darf diese Zeile weg.
+    // BLEIBT, obwohl die Erfolgspraemie gestrichen ist (Modell verworfen 2026-08-17,
+    // aus dem Produkt entfernt 2026-08-21). Neue Zeilen entstehen nicht, aber vorhandene
+    // waeren personenbezogene Daten — eine Auskunft, die eine Kategorie stillschweigend
+    // weglaesst, ist falsch. Diese Zeile darf erst weg, wenn 0012 gelaufen ist und die
+    // Tabelle wirklich nicht mehr existiert. Fehlt sie schon, liefert Supabase hier
+    // einen Fehler statt Daten, und der Export laeuft mit `null` weiter (kein Absturz).
     sb.from("success_fee_charges").select("*").eq("user_id", user.id),
   ]);
   // Anforderung protokollieren (Ticket #10 §5)

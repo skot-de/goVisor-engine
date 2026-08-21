@@ -1,5 +1,7 @@
 # goVisor — Produkt-Vision & Scope
 
+> ⚠ **STAND 2026-08-21: Die Erfolgsprämie ist gestrichen.** Alles unten zum Thema Success-Fee ist Entscheidungsgeschichte, kein geltendes Modell. Aus dem Produkt ist sie entfernt (Code + Texte), das Schema räumt `supabase/0012_erfolgspraemie_entfernen.sql`.
+
 **Status:** Strategische Leitlinie (2026-07-20)
 **Zweck:** Wo goVisor spielt, wo bewusst nicht, und warum — abgeleitet aus der
 gemessenen Datenrealität, nicht aus Wunschdenken.

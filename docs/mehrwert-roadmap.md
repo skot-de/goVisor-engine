@@ -1,5 +1,7 @@
 # goVisor — Mehrwert-Roadmap (KPIs, Features, externe Quellen)
 
+> ⚠ **STAND 2026-08-21: Die Erfolgsprämie ist gestrichen.** Alles unten zum Thema Erfolgsgebühr ist Entscheidungsgeschichte, kein geltendes Modell. Aus dem Produkt ist sie entfernt (Code + Texte), das Schema räumt `supabase/0012_erfolgspraemie_entfernen.sql`.
+
 **Erstellt:** 2026-07-19 · Grundlage: 3 Markt-/Quellen-Recherchen + granulare Datenmessung am echten Bestand.
 
 **Zweck:** Ideenlandkarte mit *gemessenem* Mehrwert und ehrlicher Machbarkeit, damit Versionen (V1/V2/…)

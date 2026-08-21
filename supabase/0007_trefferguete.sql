@@ -1,9 +1,10 @@
 -- Feature #11 „Treffergüte" — Nutzer-Tabellen (§8.1/§8.3/§8.4). Muster wie 0003_user_contracts.
 -- Idempotent. Anwenden: psql "$CONN" -f supabase/0007_trefferguete.sql
 --
--- WICHTIG (§8.3 / AC12): user_outcomes hat KEINE Verbindung zu success_fee_charges — kein
--- Fremdschlüssel, keine gemeinsame View. Eine Ergebnismeldung löst NIE eine Erfolgsprämie aus.
--- Das muss im Schema sichtbar bleiben.
+-- WICHTIG (§8.3 / AC12): user_outcomes hat KEINE Verbindung zu irgendeiner Abrechnung —
+-- kein Fremdschlüssel, keine gemeinsame View. Die Erfolgsprämie, gegen die diese Regel
+-- ursprünglich schützte, ist am 2026-08-21 gestrichen (s. 0012). Die Regel bleibt, weil sie
+-- für jedes künftige Preismodell gilt: Melden darf nie teurer sein als Schweigen.
 
 -- ── §8.1 user_declarations: alle erklärten Angaben, einheitlich ──
 create table if not exists public.user_declarations (
@@ -25,7 +26,7 @@ drop policy if exists "declarations_rw_own" on public.user_declarations;
 create policy "declarations_rw_own" on public.user_declarations
   using (auth.uid() = user_id) with check (auth.uid() = user_id);
 
--- ── §8.3 user_outcomes: Ergebnismeldungen (Moat) — bewusst KEIN FK zu success_fee_charges ──
+-- ── §8.3 user_outcomes: Ergebnismeldungen (Moat) — bewusst KEIN FK zu einer Abrechnung ──
 create table if not exists public.user_outcomes (
   id                   uuid primary key default gen_random_uuid(),
   user_id              uuid not null references public.user_profiles(id) on delete cascade,

@@ -2240,10 +2240,14 @@ def build_award_tender_link(cfg: Config, country: str = "DE"):
 
 
 def build_value_anchor(cfg: Config, country: str = "DE"):
-    """Wert-Anker je Zuschlag — der **Lowball-Wächter** fürs Erfolgsgebühren-Billing (#6).
+    """Wert-Anker je Zuschlag — Schätzer für den Auftragswert, wo keiner veröffentlicht ist.
 
-    Kein Rechnungs-Orakel (Schätzung trifft nur ~42 % exakt), sondern ein Plausibilitäts-
-    Anker gegen die Kunden-Selbstauskunft (~68 % ±1 Band). **Waterfall** (bester
+    ⚠ ZWECK ENTFALLEN. Gebaut wurde das als **Lowball-Wächter** fürs Erfolgsgebühren-Billing
+    (#6): ein Plausibilitäts-Anker gegen die Kunden-Selbstauskunft (~68 % ±1 Band). Die
+    Erfolgsprämie ist am 2026-08-21 gestrichen, und ``value_anchor.parquet`` liest seitdem
+    **niemand** (nur `cli.py` baut es, `verify.py` prüft die Integrität). Der Schätzer selbst
+    bleibt brauchbar, wo ein Auftragswert fehlt — er wartet aber auf einen Abnehmer.
+    Kein Orakel: die Schätzung trifft nur ~42 % exakt. **Waterfall** (bester
     verfügbarer Schätzer): Ausschreibungssumme (via ``award_tender_link``) → Vorgänger-
     Vertrag (``contract_succession``) → Buyer×CPV-Median → Buyer-Median → CPV-Median.
     Werte sind **nominal** (der Kunde bestätigt den echten Auftragswert, nicht deflationiert).

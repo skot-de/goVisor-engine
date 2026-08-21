@@ -66,7 +66,12 @@ export async function saveProfile(profile: Profile): Promise<{ ok: boolean; reas
     company_name: profile.firma ?? null,
     identity_id: profile.identityId ?? null,
     entity_confidence: confidenceSpalte(profile.entityConfidence),
-    confirmed_entities: profile.confirmedEntities ?? [],
+    // ⚠ `confirmed_entities` ist in 0001_auth_profiles.sql ein `text[]`. Die Beleglage
+    // (Objekt je Einheit) kann dort NICHT liegen, ohne dass das Update am Typ scheitert.
+    // Sie reist deshalb im `profile`-jsonb mit (blob unten), die Spalte bleibt die reine
+    // Namensliste — auch fuer /settings, das genau diese Spalte anzeigt.
+    confirmed_entities: (profile.confirmedEntities ?? [])
+      .map((e) => (typeof e === "string" ? e : e.name)),
     cpv_fields: profile.cpvFields ?? [],
     cpv_labels: profile.cpvLabels ?? [],
     regions: profile.regions ?? [],

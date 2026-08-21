@@ -19,9 +19,10 @@ create table if not exists public.user_profiles (
   vol_max             numeric,
   branche             text,                        -- Aspiring-Bidder-Pfad (ohne Firmenmatch)
   known_from_ted      boolean not null default false,
-  -- Account-State (Ticket #6). Success-Fee/Billing kommt in eigener Migration.
+  -- Account-State (Ticket #6). Abo-Billing kommt in eigener Migration.
+  -- `grace_until` (Erfolgsprämien-Schonfrist) ist am 2026-08-21 mit dem Prämienmodell
+  -- gestrichen. Neuinstallationen legen die Spalte nicht mehr an, bestehende raeumt 0012.
   plan                text not null default 'free' check (plan in ('free','paid','cancelled')),
-  grace_until         timestamptz,                 -- Erfolgsprämien-Schonfrist (6 Mo ab Upgrade)
   -- Vollständiges Engine-Profil als Blob (Flexibilität, ohne Schema-Migration bei Feldzuwachs)
   profile             jsonb,
   created_at          timestamptz not null default now(),

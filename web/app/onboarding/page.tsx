@@ -621,11 +621,10 @@ function testMailErlaubt(mail: string): boolean {
           regionLabels: matched.regions.map((r) => LAENDER.find((l) => l[0] === r)?.[1] || r),
         }),
         // ── PLAUSIBILITÄTSBREMSE, TEIL 2: den BELEG mitspeichern, nicht nur den Anspruch ──
-        // ⚠ Bis zum 2026-08-21 wanderten nur die NAMEN ins Profil. Der Kasten darüber
-        // versprach aber „wir kennzeichnen sie als unbestätigt und rechnen sie nicht in die
-        // Erfolgsprämie" — eine Zusage, die nach dem Speichern niemand mehr einlösen konnte,
-        // weil die Beleglage verloren war. Wer später abrechnet, muss unterscheiden können,
-        // was belegt war und was Selbstauskunft.
+        // ⚠ Bis zum 2026-08-21 wanderten nur die NAMEN ins Profil. Damit war nach dem
+        // Speichern nicht mehr unterscheidbar, welcher Teil des Bestands belegt ist und
+        // welcher blosse Selbstauskunft — die Oberflaeche kann den Unterschied dann
+        // nirgends mehr zeigen. Der Beleg gehoert an den Anspruch, nicht daneben.
         confirmedEntities: members.filter((_, i) => aktiv.has(String(i)))
           .map((m) => ({ name: m.name,
                          beleg: (m.conf === "belegt" ? "kennung" : "selbstauskunft") as
@@ -877,7 +876,7 @@ function testMailErlaubt(mail: string): boolean {
                 <div className="note note-w antrag">
                   <b>{t("Wir können nicht automatisch prüfen, ob ihr zu dieser Firma gehört.")}</b>
                   <span>{t(beleg.grund)}. {t("Ihr könnt trotzdem sofort loslegen, die Zuordnung bleibt so lange")}
-                    <b> {t("unbestätigt")}</b>{t(", und die Erfolgsprämie samt Abrechnung bleibt gesperrt.")}</span>
+                    <b> {t("unbestätigt")}</b>{t(" und ist in eurem Profil so gekennzeichnet.")}</span>
                   {/* Statt einer Sackgasse ein Weg: Kurznachricht, die jemand von Hand prüft.
                       Gemessen betrifft das 5,8 % der Zielgruppe — knapp die Hälfte davon
                       t-online-Adressen, also etablierte Betriebe ohne eigene Mail-Domain. */}
@@ -976,7 +975,7 @@ function testMailErlaubt(mail: string): boolean {
               <div className="note note-w">
                 {t("Ihr habt {n} Zuschläge angehakt, für die es ausser dem Namen keinen Beleg gibt: {p} % eures Profils.",
                    { n: winsUnbelegt, p: anteilUnbelegt })}{" "}
-                {t("Wir halten euch nicht auf: ihr kennt eure Firmengruppe besser als unsere Daten. Wir merken uns diese Einheiten aber als Selbstauskunft, kennzeichnen sie so und rechnen sie nicht in die Erfolgsprämie, solange die Zuordnung nicht belegt ist.")}
+                {t("Wir halten euch nicht auf: ihr kennt eure Firmengruppe besser als unsere Daten. Wir merken uns diese Einheiten aber als Selbstauskunft. Was ihr hier anhakt, gilt uns als euer Bestand: diese Zuschläge zählen als eure Historie, und die zugehörigen Ausschreibungen erscheinen euch als eigene, die ihr verteidigen müsst.")}
               </div>
             )}
             <div className="note note-p">{t("Mit der Bestätigung merken wir uns diese Einheiten als eure Identität. Nur so erkennen wir später, dass ihr eine Ausschreibung gewonnen habt.")} <b>{t("{n} Siege", { n: winsAktiv })}</b> {t("fließen in euer Profil.")}</div>

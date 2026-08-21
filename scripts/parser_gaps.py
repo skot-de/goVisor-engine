@@ -7,8 +7,9 @@ gefunden: „Bindefrist" stand in 392 Dokumenten, extrahiert wurde 1 Wert.
 
 **Warum das Skript keine Regeln schreibt.** Ein Parser, der sich selbst erweitert, stürzt bei
 einem Fehler nicht ab — er liefert *plausible falsche Zahlen*. „Vertragsstrafe 5 %" statt
-0,5 % fällt niemandem auf, bis danach kalkuliert wird; und an diesen Zahlen hängt die
-Erfolgsprämie. Außerdem wäre keine frühere Auswertung mehr reproduzierbar. Deshalb:
+0,5 % fällt niemandem auf, bis danach kalkuliert wird, und an diesen Zahlen hängt die
+Angebotsentscheidung des Kunden. Außerdem wäre keine frühere Auswertung mehr
+reproduzierbar. Deshalb:
 **das Skript diagnostiziert und schlägt vor, ein Mensch entscheidet.** Dasselbe Muster wie
 bei `review_queue` und der handkuratierten Entity-Alias-CSV.
 

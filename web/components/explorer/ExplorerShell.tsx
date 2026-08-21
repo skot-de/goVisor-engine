@@ -585,7 +585,7 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
     bump();
     // `l` mitgeben, nicht nur die Kennung: die Dichte muss im MOMENT des Klicks
     // festgehalten werden — sie aendert sich, sobald Unterlagen nachkommen.
-    recordLeadClick(id, l);   // Attribution: erster Detail-Klick (Success-Fee-Gate #6)
+    recordLeadClick(id, l);   // erster Detail-Klick, fuer die Historie (war einmal das Fee-Gate)
     // Schwere Felder (Beschreibung + Vergabestellen-Profil) einmalig nachladen.
     if (l && !detailLoaded.current.has(id)) {
       detailLoaded.current.add(id);
@@ -602,11 +602,12 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
   function setTab(k: string) {
     setActiveTab(k);
     setMode((m) => (m === "browse" ? "read" : m));
-    // Bewertung ist das Erfolgsprämien-Gate (§4): Klick auf „Bewertung" markiert analysiert.
+    // Klick auf „Bewertung" markiert den Lead als analysiert. Das war einmal das Gate der
+    // Erfolgspraemie (§4); die ist gestrichen, der Klick bleibt als Fortschrittsspur nuetzlich.
     if (k === "analyse" && !accountLimit) {
       const l = CORE.find((x) => x.id === activeId) as (Lead & { status?: string; seen?: string }) | undefined;
       if (l) { l.status = "analysiert"; l.seen = "ANALYSIERT"; }
-      if (activeId) recordAnalysis(activeId);   // Attribution: erster Bewertungs-Klick
+      if (activeId) recordAnalysis(activeId);   // erster Bewertungs-Klick, fuer die Historie
     }
     bump();
   }
