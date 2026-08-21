@@ -668,3 +668,37 @@ body:has(> .lp) { background: #E4E8E6; }
 .lp-baustein-symbol { display: block; width: 22px; height: 22px; margin-bottom: 10px;
   color: var(--signal-deep, #067A55); }
 .lp-baustein-symbol svg { width: 100%; height: 100%; display: block; }
+
+/* ─── DIE BÜHNE FÜR KONTO UND FIRMA ─────────────────────────────────────────────────
+   Die ersten beiden Schritte der Registrierung stehen auf demselben Blatt wie die
+   Startseite: gleicher Grund, gleicher Rahmen, gleiche Kopfleiste. Erst wenn das Konto
+   steht, klappt die Anwendung auf. Der Bruch fällt damit mit dem Ankommen zusammen und
+   nicht mit der Passwortabfrage. */
+.lp-anmeldung { padding-bottom: 56px; }
+.lp-anmeldung .lp-kopf { position: static; }
+.lp-anmeldung .lp-kopf a:first-child { display: block; }
+.lp-anmeldung-schritte { display: flex; justify-content: center; padding: 22px 0 4px;
+  border-bottom: 1px solid var(--line, #E3E7E5); margin: 0 -24px 30px; }
+.lp-anmeldung .seitenmain { max-width: 560px; margin: 0 auto; padding: 0; background: none; }
+.lp-anmeldung .card { border: 1px solid var(--line, #E3E7E5); border-radius: 16px;
+  background: var(--surface, #fff); padding: 28px 30px;
+  box-shadow: 0 1px 2px rgba(18,33,29,.04); }
+
+/* Schrittanzeige auf der Bühne. ⚠ Die Regeln in `explorer.css` hängen alle an
+   `.bereichsleiste` — genau die Falle, die dort schon einmal dokumentiert ist („Ergebnis
+   war 1Konto2Firma3Profil"). Auf der Bühne gibt es diese Leiste nicht, also brauchen die
+   Schritte hier ihre eigenen Regeln. */
+.lp-anmeldung .steps { display: flex; align-items: center; gap: 10px; }
+.lp-anmeldung .step { display: flex; align-items: center; gap: 7px; font-size: 12px;
+  color: var(--ink-400, #8C9B95); }
+.lp-anmeldung .step i { width: 20px; height: 20px; border-radius: 50%; font-style: normal;
+  border: 1.5px solid var(--line-strong, #CFD6D3); display: grid; place-items: center;
+  font-family: var(--mono); font-size: 9.5px; font-weight: 600; }
+.lp-anmeldung .step.on { color: var(--ink-900, #12211D); font-weight: 600; }
+.lp-anmeldung .step.on i { border-color: var(--signal, #10B981);
+  background: var(--signal-wash, #E7F7F1); color: var(--signal-deep, #067A55); }
+.lp-anmeldung .step.done i { background: var(--signal, #10B981);
+  border-color: var(--signal, #10B981); color: #fff; }
+.lp-anmeldung .step-sep { width: 18px; height: 1px; background: var(--line-strong, #CFD6D3); }
+.lp-anmeldung .step-grund { font-style: normal; font-size: 10.5px; margin-left: 4px;
+  color: var(--ink-400, #8C9B95); white-space: nowrap; }

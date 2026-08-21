@@ -12,6 +12,7 @@ import { AppRail, AppTop } from "@/components/explorer/Rail";
 import "../explorer.css";
 import "../zugang.css";
 import { CheckMitbringsel } from "@/components/CheckMitbringsel";
+import "../landing-oeffentlich.css";
 
 /* Onboarding — portiert aus INPUT/Design/govisor-onboarding-v1.4.html.
    Registrierung + Firmen-Matching + Profil in einem ganzseitigen Flow. Die Demo-ENTITIES
@@ -617,37 +618,52 @@ function testMailErlaubt(mail: string): boolean {
   // Der Ausgang „Spaeter einrichten" ist entfallen: die Rail IST der Ausgang. Eine
   // Sackgasse kann so gar nicht mehr entstehen — das war der eigentliche Fehler, nicht der
   // fehlende Link dagegen.
-  return (
-    <div className="app">
-      <AppTop />
-      <div className="bereichsleiste">
-        <nav className="steps">
-          {SCHRITTE.map(([k, l], i) => (
-            <span key={k} style={{ display: "contents" }}>
-              {/*
-                WARUM BIN ICH SCHON BEI SCHRITT 3? Genau die Frage hatte Sven beim
-                Durchklicken (2026-08-17): der warme Weg ueberspringt „Firma", die Leiste
-                sagte aber nur „1 2 3 4" und liess offen, was mit Schritt 2 passiert ist.
-                Ein uebersprungener Schritt, der aussieht wie ein ausstehender, ist eine
-                offene Frage im Kopf des Nutzers — und zwar an der Stelle, an der er
-                gerade Vertrauen fassen soll.
-                Er steht deshalb als ERLEDIGT da, mit dem Grund darunter.
-              */}
-              <span className={`step ${k === "firma" && tokenFirma ? "done"
-                                       : i < cur ? "done" : i === cur ? "on" : ""}`}>
-                <i>{(k === "firma" && tokenFirma) || i < cur ? "✓" : i + 1}</i>{t(l)}
-                {k === "firma" && tokenFirma && (
-                  <em className="step-grund">{t("über euren Link erkannt")}</em>
-                )}
+  // ─── ZWEI WELTEN, EINE SCHWELLE ────────────────────────────────────────────────────
+  // Sven: „was ist wenn man startseite → registrierung macht und dann anmeldung in der
+  // app?" Genau so. Der Bruch lässt sich nicht vermeiden, nur platzieren — und er gehört
+  // dorthin, wo jemand etwas BEKOMMT, nicht dorthin, wo er etwas gibt.
+  //
+  // Konto und Firma sind noch Besuch: sie laufen auf der Bühne der Startseite (grauer
+  // Grund, weisses Blatt, dieselbe Kopfleiste). Ab Profil ist das Konto da, es gibt echte
+  // Daten, und die Anwendung klappt auf — mit Rail, Suche und dem Free-Abzeichen, das dann
+  // auch etwas bedeutet. Vorher standen beide Schritte in der App-Hülle, also neben einer
+  // gesperrten Werkzeugleiste und einer Suche, die ins Leere sucht: die neue Umgebung kam
+  // im selben Moment wie die Passwortabfrage, und beides zusammen ist eine Schranke.
+  // ⚠ Nicht am Bildschirm festmachen, sondern an der STUFE: zum Schritt „Firma" gehören
+  // ausser `firma` auch `vorschlag`, `kandidaten`, `branche` und `region` (s. `stufeVon`).
+  // Beim ersten Versuch hing die Bühne an `screen`, und mitten im zweiten Schritt klappte
+  // unvermittelt die App-Hülle auf — der Bruch wäre dorthin gerutscht, wo er am wenigsten
+  // hingehört: mitten in eine Eingabe.
+  const aufBuehne = cur <= 1;
+
+  const schrittleiste = (
+          <nav className="steps">
+            {SCHRITTE.map(([k, l], i) => (
+              <span key={k} style={{ display: "contents" }}>
+                {/*
+                  WARUM BIN ICH SCHON BEI SCHRITT 3? Genau die Frage hatte Sven beim
+                  Durchklicken (2026-08-17): der warme Weg ueberspringt „Firma", die Leiste
+                  sagte aber nur „1 2 3 4" und liess offen, was mit Schritt 2 passiert ist.
+                  Ein uebersprungener Schritt, der aussieht wie ein ausstehender, ist eine
+                  offene Frage im Kopf des Nutzers — und zwar an der Stelle, an der er
+                  gerade Vertrauen fassen soll.
+                  Er steht deshalb als ERLEDIGT da, mit dem Grund darunter.
+                */}
+                <span className={`step ${k === "firma" && tokenFirma ? "done"
+                                         : i < cur ? "done" : i === cur ? "on" : ""}`}>
+                  <i>{(k === "firma" && tokenFirma) || i < cur ? "✓" : i + 1}</i>{t(l)}
+                  {k === "firma" && tokenFirma && (
+                    <em className="step-grund">{t("über euren Link erkannt")}</em>
+                  )}
+                </span>
+                {i < SCHRITTE.length - 1 ? <span className="step-sep" /> : null}
               </span>
-              {i < SCHRITTE.length - 1 ? <span className="step-sep" /> : null}
-            </span>
-          ))}
-        </nav>
-      </div>
-      <div className="body">
-        <AppRail gesperrt />
-        <div className="main seitenmain zugang">
+            ))}
+          </nav>
+  );
+
+  const inhalt = (
+    <>
         {/* 0 · Konto */}
         {screen === "mail" && (
           <div className="card">
@@ -972,7 +988,34 @@ function testMailErlaubt(mail: string): boolean {
             </div>
           </div>
         )}
-        </div>
+    </>
+  );
+
+  if (aufBuehne) {
+    return (
+      <main className="lp lp-anmeldung">
+        <header className="lp-kopf">
+          <Link href="/" aria-label={t("Zur Startseite")}>
+            <img className="lp-logo" src="/govisor-wordmark.png" alt="goVisor"
+                 width={1004} height={252} />
+          </Link>
+          <nav className="lp-nav">
+            <Link href="/login">{t("Ich habe schon ein Konto")}</Link>
+          </nav>
+        </header>
+        <div className="lp-anmeldung-schritte">{schrittleiste}</div>
+        <div className="main seitenmain zugang">{inhalt}</div>
+      </main>
+    );
+  }
+
+  return (
+    <div className="app">
+      <AppTop />
+      <div className="bereichsleiste">{schrittleiste}</div>
+      <div className="body">
+        <AppRail gesperrt />
+        <div className="main seitenmain zugang">{inhalt}</div>
       </div>
     </div>
   );
