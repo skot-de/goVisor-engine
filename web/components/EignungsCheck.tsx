@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import { setzeCheckErgebnis } from "@/lib/checkErgebnis";
 
 /**
  * Öffentlicher Eignungs-Check — der Einstieg, den die Startseite nicht hatte.
@@ -198,6 +199,15 @@ export function EignungsCheck({ check, fachgebiete }: {
 
   const erfuellt = zeilen.filter((z) => z.ok).length;
   const luecke = zeilen.filter((z) => !z.ok).sort((a, b) => b.n - a.n)[0] ?? null;
+
+  // Das Ergebnis nach unten reichen, sobald es eines gibt: die Relevanz-Spalte der drei
+  // Masse zeigt es dann statt eines Verweises. Erst ab Schritt 3, weil vorher niemand
+  // etwas beantwortet hat, und wieder weg, wenn die Auswahl aufgehoben wird.
+  useEffect(() => {
+    setzeCheckErgebnis(fach && schritt === 3 && zeilen.length
+      ? { fachLabel, erfuellt, von: zeilen.length, luecke: luecke?.name ?? null }
+      : null);
+  }, [fach, schritt, fachLabel, erfuellt, zeilen.length, luecke]);
 
   const SCHRITTE = ["Euer Feld", "Eure Angaben", "Die Auswertung"];
 

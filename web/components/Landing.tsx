@@ -2,6 +2,7 @@ import Link from "next/link";
 import { loadDataFile } from "@/lib/dataSource";
 import { EignungsCheck, type Check } from "./EignungsCheck";
 import { StartForm } from "./StartForm";
+import { RelevanzEcho } from "./RelevanzEcho";
 import "../app/landing-oeffentlich.css";
 
 /**
@@ -183,11 +184,10 @@ export async function Landing() {
             <li>
               <span className="lp-masse-k">Relevanz</span>
               <h3>Passt sie zu euch?</h3>
-              <p>
-                Der Abgleich eurer Nachweise mit dem, was in den Unterlagen verlangt wird.
-                Diese Zahl gibt es nur mit Profil, deshalb steht hier keine: probiert sie
-                oben im <a href="#check">Eignungs-Check</a> aus, ohne Anmeldung.
-              </p>
+              {/* Wer den Check oben durchgespielt hat, sieht hier SEIN Ergebnis statt des
+                  Verweises. Es kommt aus derselben Seitenansicht und wird nirgends
+                  gespeichert (s. lib/checkErgebnis.ts). */}
+              <RelevanzEcho />
             </li>
             <li>
               <span className="lp-masse-k">Chance</span>
