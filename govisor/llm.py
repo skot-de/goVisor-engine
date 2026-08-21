@@ -189,7 +189,7 @@ LIMIT_USD = float(_os.environ.get("GOVISOR_LIMIT_USD", "5.00"))
 _TAKT = int(_os.environ.get("GOVISOR_BUDGET_TAKT", "20"))
 
 _geld_sperre = _threading.Lock()
-_geld = {"start": None, "stand": None, "n": 0, "gewarnt": False}
+_geld = {"start": None, "stand": None, "n": 0, "naechste": 1, "gewarnt": False, "stopp": None}
 
 
 class BudgetErschoepft(RuntimeError):
@@ -232,11 +232,24 @@ def _geldwache() -> None:
     ⚠ **Faellt der Kontostand nicht zu ermitteln, wird NICHT blockiert.** Ein Netzproblem
     darf den Tagesbetrieb nicht anhalten. Gewarnt wird trotzdem, einmal je Prozess — sonst
     laeuft man monatelang ohne Schutz und haelt sich fuer geschuetzt.
+
+    ⚠ **Zwei Vorkehrungen gegen Ueberschwingen, beide aus einer Messung.** Die erste Fassung
+    prueffte stur jeden 20. Aufruf. Am 2026-08-22 lief damit ein Test mit sechs Faeden und
+    teuren Aufrufen auf **8,48 $ bei einem Limit von 5,00 $** — 3,48 $ daneben. Zwei Gruende:
+      · Sechs Faeden kommen an der Pruefung vorbei, bevor einer abbricht → der Abbruch ist
+        jetzt **klebrig**: einmal gefallen, wirft JEDER weitere Aufruf sofort, ohne Netz.
+      · Ein fester Takt kennt den Preis nicht. Er richtet sich jetzt nach dem GEMESSENEN
+        Preis je Aufruf: je weniger Luft bis zur Grenze, desto frueher die naechste Pruefung.
     """
     with _geld_sperre:
+        if _geld["stopp"]:
+            raise BudgetErschoepft(_geld["stopp"])
         _geld["n"] += 1
-        erster = _geld["start"] is None
-        faellig = erster or _geld["n"] % _TAKT == 0
+        n = _geld["n"]
+        faellig = n >= _geld["naechste"]
+        if faellig:
+            # Sofort weitersetzen, damit parallele Faeden nicht alle zugleich pruefen.
+            _geld["naechste"] = n + _TAKT
     if not faellig:
         return
     stand = kontostand(frisch=True)
@@ -250,15 +263,31 @@ def _geldwache() -> None:
         if _geld["start"] is None:
             _geld["start"] = stand
         ausgegeben = _geld["start"] - stand
-    if stand < RESERVE_USD:
-        raise BudgetErschoepft(
-            f"Guthaben {stand:.2f} $ unter der Reserve von {RESERVE_USD:.2f} $ — "
-            f"abgebrochen, damit der Tagesbetrieb weiterlaufen kann. "
-            f"Aufladen: openrouter.ai/credits")
-    if LIMIT_USD and ausgegeben > LIMIT_USD:
-        raise BudgetErschoepft(
-            f"dieser Lauf hat {ausgegeben:.2f} $ verbraucht (Limit {LIMIT_USD:.2f} $) — "
-            f"abgebrochen. Hoeher setzen: GOVISOR_LIMIT_USD")
+        # Preis je Aufruf aus dem, was tatsaechlich passiert ist — nicht aus einer Schaetzung.
+        # Genau die Schaetzung lag am 22.08. um das Vierfache daneben.
+        je_aufruf = ausgegeben / n if n and ausgegeben > 0 else 0.0
+        luft = min(LIMIT_USD - ausgegeben if LIMIT_USD else float("inf"),
+                   stand - RESERVE_USD)
+        if je_aufruf > 0:
+            # Halbe Luft als Sicherheitsabstand: lieber einmal zu oft fragen als einmal
+            # zu spaet. Ein Kontostand-Abruf kostet nichts ausser einer Sekunde.
+            schritte = max(1, min(_TAKT, int(luft / je_aufruf / 2)))
+        else:
+            schritte = _TAKT
+        _geld["naechste"] = n + schritte
+
+        grund = None
+        if stand < RESERVE_USD:
+            grund = (f"Guthaben {stand:.2f} $ unter der Reserve von {RESERVE_USD:.2f} $ — "
+                     f"abgebrochen, damit der Tagesbetrieb weiterlaufen kann. "
+                     f"Aufladen: openrouter.ai/credits")
+        elif LIMIT_USD and ausgegeben > LIMIT_USD:
+            grund = (f"dieser Lauf hat {ausgegeben:.2f} $ verbraucht (Limit {LIMIT_USD:.2f} $) "
+                     f"— abgebrochen. Hoeher setzen: GOVISOR_LIMIT_USD")
+        if grund:
+            _geld["stopp"] = grund
+    if grund:
+        raise BudgetErschoepft(grund)
 
 
 def probe(model: str | None = None) -> dict:

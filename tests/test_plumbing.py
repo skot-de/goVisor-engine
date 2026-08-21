@@ -3118,7 +3118,8 @@ def test_reserve_schuetzt_den_tagesbetrieb(monkeypatch):
 
     monkeypatch.setattr(llm, "kontostand", lambda frisch=False: 0.40)
     monkeypatch.setattr(llm, "RESERVE_USD", 1.00)
-    monkeypatch.setattr(llm, "_geld", {"start": None, "stand": None, "n": 0, "gewarnt": False})
+    monkeypatch.setattr(llm, "_geld", {"start": None, "stand": None, "n": 0,
+                                       "naechste": 1, "gewarnt": False, "stopp": None})
     with pytest.raises(llm.BudgetErschoepft) as e:
         llm._geldwache()
     assert "Reserve" in str(e.value)
@@ -3132,7 +3133,8 @@ def test_lauf_limit_faengt_ausreisser(monkeypatch):
     monkeypatch.setattr(llm, "RESERVE_USD", 0.0)
     monkeypatch.setattr(llm, "LIMIT_USD", 5.0)
     monkeypatch.setattr(llm, "_geld",
-                        {"start": 100.0, "stand": 90.0, "n": llm._TAKT - 1, "gewarnt": False})
+                        {"start": 100.0, "stand": 90.0, "n": 0,
+                                       "naechste": 1, "gewarnt": False, "stopp": None})
     with pytest.raises(llm.BudgetErschoepft) as e:
         llm._geldwache()
     assert "Limit" in str(e.value)
@@ -3148,7 +3150,8 @@ def test_geldwache_blockiert_nicht_wenn_der_stand_unbekannt_ist(monkeypatch, cap
     from govisor import llm
 
     monkeypatch.setattr(llm, "kontostand", lambda frisch=False: None)
-    monkeypatch.setattr(llm, "_geld", {"start": None, "stand": None, "n": 0, "gewarnt": False})
+    monkeypatch.setattr(llm, "_geld", {"start": None, "stand": None, "n": 0,
+                                       "naechste": 1, "gewarnt": False, "stopp": None})
     llm._geldwache()
     llm._geldwache()
     assert "Geldwache ist AUS" in capsys.readouterr().out
@@ -3194,3 +3197,81 @@ def test_budgetbremse_rechnet_in_die_richtige_richtung():
               / "scripts" / "analyze_docs.py").read_text(encoding="utf-8")
     assert "start_usd - jetzt >= BUDGET_USD" in quelle
     assert "jetzt - start_usd" not in quelle, "die Bremse rechnet verkehrt herum"
+
+
+def test_geldwache_schwingt_bei_parallelen_faeden_kaum_ueber(monkeypatch):
+    """⚠ Ein fester Prüftakt reicht bei Parallelität nicht.
+
+    Gemessen 2026-08-22: sechs Fäden, teure Aufrufe, Limit 5,00 $ — der Lauf endete bei
+    **8,48 $**. Zwei Ursachen, beide behoben:
+      · Fäden kommen an der Prüfung vorbei, bevor einer abbricht → der Abbruch ist jetzt
+        KLEBRIG: einmal gefallen, wirft jeder weitere Aufruf sofort, ohne Netzabfrage.
+      · Ein fester Takt kennt den Preis nicht → er richtet sich jetzt nach dem GEMESSENEN
+        Preis je Aufruf, mit halber Luft als Sicherheitsabstand.
+
+    Der Test fährt genau die Bedingungen von damals nach.
+    """
+    import threading
+
+    from govisor import llm
+
+    KOSTEN, START, LIMIT = 0.0425, 50.0, 5.0
+    zaehler = {"n": 0}
+    sperre = threading.Lock()
+
+    def stand(frisch=False):
+        with sperre:
+            return START - zaehler["n"] * KOSTEN
+
+    monkeypatch.setattr(llm, "kontostand", stand)
+    monkeypatch.setattr(llm, "RESERVE_USD", 1.0)
+    monkeypatch.setattr(llm, "LIMIT_USD", LIMIT)
+    monkeypatch.setattr(llm, "_geld", {"start": None, "stand": None, "n": 0,
+                                       "naechste": 1, "gewarnt": False, "stopp": None})
+
+    def arbeiter():
+        for _ in range(60):
+            try:
+                llm._geldwache()
+            except llm.BudgetErschoepft:
+                return
+            with sperre:
+                zaehler["n"] += 1
+
+    faeden = [threading.Thread(target=arbeiter) for _ in range(6)]
+    for f in faeden:
+        f.start()
+    for f in faeden:
+        f.join()
+
+    ausgegeben = zaehler["n"] * KOSTEN
+    assert ausgegeben >= LIMIT * 0.8, "viel zu frueh gestoppt — die Wache waere unbrauchbar"
+    assert ausgegeben < LIMIT + 0.5, (
+        f"{ausgegeben:.2f} $ bei Limit {LIMIT:.2f} $ — zu viel Überschwingen")
+
+
+def test_abbruch_der_geldwache_ist_klebrig(monkeypatch):
+    """Einmal gefallen, muss JEDER weitere Aufruf sofort werfen — ohne Netzabfrage.
+
+    Sonst laufen die uebrigen Faeden bis zu ihrer eigenen Pruefung weiter und geben Geld
+    aus, das die Wache gerade fuer gesperrt erklaert hat.
+    """
+    from govisor import llm
+
+    rufe = {"n": 0}
+
+    def stand(frisch=False):
+        rufe["n"] += 1
+        return 0.10                                   # unter jeder Reserve
+
+    monkeypatch.setattr(llm, "kontostand", stand)
+    monkeypatch.setattr(llm, "RESERVE_USD", 1.0)
+    monkeypatch.setattr(llm, "_geld", {"start": None, "stand": None, "n": 0,
+                                       "naechste": 1, "gewarnt": False, "stopp": None})
+    with pytest.raises(llm.BudgetErschoepft):
+        llm._geldwache()
+    vorher = rufe["n"]
+    for _ in range(5):
+        with pytest.raises(llm.BudgetErschoepft):
+            llm._geldwache()
+    assert rufe["n"] == vorher, "nach dem Abbruch wurde weiter der Kontostand abgefragt"
