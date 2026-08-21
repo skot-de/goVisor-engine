@@ -357,10 +357,17 @@ export async function Landing() {
           nichts vorhätten. */}
       <section className="lp-schluss" id="starten">
         <div className="lp-schluss-text">
+          {/* ⚠ Hier stand „Firma eintragen, Fachgebiet und Umkreis wählen, passende Vergaben
+              ansehen" — und verschwieg damit den Schritt, an dem die Leute abspringen: das
+              Onboarding beginnt mit Konto (E-Mail und Passwort), die Firma ist Schritt zwei.
+              Sven: „das verstehe ich nicht. firma eintragen und dann kommt man in den
+              anmeldeprozess?" Ja. Auf einer Seite, die überall die Grundlage mitnennt, darf
+              ausgerechnet der letzte Satz nicht die Hälfte weglassen. */}
           <h2>Überzeugt euch selbst. Der Einstieg kostet nichts.</h2>
           <p>
-            Firma eintragen, Fachgebiet und Umkreis wählen, passende Vergaben ansehen. Wenn
-            nichts dabei ist, habt ihr zehn Minuten verloren und wisst mehr über euren Markt.
+            Vier Schritte: Konto anlegen, Firma bestätigen, Fachgebiet und Umkreis wählen,
+            passende Vergaben ansehen. Wenn nichts dabei ist, habt ihr zehn Minuten verloren
+            und wisst mehr über euren Markt.
           </p>
         </div>
         <StartForm />

@@ -15,6 +15,10 @@ import { useState } from "react";
  *
  * Der Name wandert als Parameter weiter und wird dort NUR VORGESCHLAGEN: bestätigt wird er
  * über die Firmensuche wie jeder andere Treffer auch.
+ *
+ * **Und was danach kommt, steht darunter.** Das Onboarding beginnt mit dem Konto, die Firma
+ * ist Schritt zwei. Wer hier einen Firmennamen tippt und unangekündigt auf einem
+ * Anmeldeformular landet, erlebt genau den Bruch, den diese Seite sonst vermeidet.
  */
 export function StartForm() {
   const router = useRouter();
@@ -31,12 +35,15 @@ export function StartForm() {
     >
       <input value={name} onChange={(e) => setName(e.target.value)} maxLength={120}
              placeholder="Name eurer Firma" aria-label="Name eurer Firma" />
-      <button type="submit" aria-label="Weiter zum Profil">
+      <button type="submit" aria-label="Weiter zur Anmeldung">
         <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
           <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" strokeWidth="2.5"
                 strokeLinecap="round" strokeLinejoin="round" />
         </svg>
       </button>
+      <p className="lp-startform-hinweis">
+        Danach legt ihr ein Konto an; euer Firmenname steht dann schon drin.
+      </p>
     </form>
   );
 }
