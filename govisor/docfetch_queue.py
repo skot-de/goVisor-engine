@@ -108,7 +108,10 @@ SPERRE_TAGE = 7
 #   nur_liste   das IST das Ergebnis: die Abrufer für subreport und vergabeportal.at
 #               sammeln Dateilisten, sie laden nichts herunter. Als Fehlschlag gewertet
 #               liefe jeder erfasste Vorgang für immer in der Warteschlange mit.
-KEIN_FEHLSCHLAG = frozenset({"downloaded", "exists", "probe", "nur_liste"})
+#   nur_bekanntmachung  Staatsanzeiger-Frameset: die Bekanntmachung liegt, mehr gibt
+#                       es dort nicht (gemessen 21.08.) — nichts nachzuholen
+KEIN_FEHLSCHLAG = frozenset({"downloaded", "exists", "probe", "nur_liste",
+                             "nur_bekanntmachung"})
 
 # Historische Dateinamen. `docfetch.py` (cosinex) schreibt seit jeher `_manifest.parquet`
 # ohne Quellenkürzel — 3.416 Zeilen Vorgeschichte. Statt sie umzubenennen (ein Schreibzugriff

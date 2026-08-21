@@ -70,6 +70,8 @@ _ZIP = re.compile(r"https?://[^\"']*staatsanzeiger-eservices\.eu/[^\"']+\.zip", 
 
 _WARTE_MS = 8000
 _NACH_KLICK_MS = 8000
+# Der Frameset-Download erscheint waehrend des Seitenaufbaus; gemessen nach ~2 s.
+_FRAMESET_MS = 6000
 _HOEFLICH_MS = 2500
 _MAX_ZIP = 500 * 1024**2
 _LAUF_BUDGET_MB = 1500
@@ -79,8 +81,43 @@ def ist_staatsanzeiger(url: str | None) -> bool:
     return bool(url) and f"//{_HOST}/" in url
 
 
+def _als_zip(ziel: Path, name: str, blob: bytes) -> int:
+    """Eine Einzeldatei in ein ZIP legen. `docpipe` indiziert ausschliesslich ``*.zip``;
+    eine lose PDF neben dem Vorgang wuerde niemand je lesen."""
+    import io
+    import zipfile
+
+    ziel.parent.mkdir(parents=True, exist_ok=True)
+    puffer = io.BytesIO()
+    with zipfile.ZipFile(puffer, "w", zipfile.ZIP_DEFLATED) as z:
+        z.writestr(name, blob)
+    ziel.write_bytes(puffer.getvalue())
+    return ziel.stat().st_size
+
+
 def hole_vergabe(url: str, pg, ziel: Path, dry_run: bool = False) -> dict:
     """Eine Vergabe → Unterlagen-ZIP. Drei Stufen, s. Modulkopf."""
+    # Die zweite URL-Form schiebt ihre Datei als DOWNLOAD waehrend des Seitenaufbaus heraus,
+    # ohne dass jemand klickt (s. Frameset-Zweig unten). Der Horcher muss deshalb VOR dem
+    # `goto` stehen.
+    gefangen: list = []
+
+    # ⚠ KEINE gebundene Methode (`gefangen.append`): Playwright heftet dem Horcher ein
+    # eigenes Attribut an, und an einer eingebauten Methode geht das nicht
+    # (`AttributeError: … no __dict__`). Eine gewoehnliche Funktion vertraegt es.
+    def _sammeln(dl):
+        gefangen.append(dl)
+    pg.on("download", _sammeln)
+    try:
+        return _hole(url, pg, ziel, dry_run, gefangen)
+    finally:
+        try:
+            pg.remove_listener("download", _sammeln)
+        except Exception:                                     # noqa: BLE001
+            pass
+
+
+def _hole(url: str, pg, ziel: Path, dry_run: bool, gefangen: list) -> dict:
     r = pg.goto(url, wait_until="domcontentloaded")
     if r is not None and r.status >= 400:
         return {"status": "fehler", "bytes": 0, "n_files": 0, "note": f"http {r.status}"}
@@ -98,8 +135,36 @@ def hole_vergabe(url: str, pg, ziel: Path, dry_run: bool = False) -> dict:
         # zu fuehren wuerde jeden Lauf mit 56 falschen Warnungen belasten, bis niemand mehr
         # hinsieht.
         if len(pg.frames) > 1:
+            # ⚠ **Der Inhalts-Frame IST erreichbar — aber nur ueber den Browser selbst.**
+            # Gemessen am 2026-08-21: `GetFile2?z_param1=…` einzeln angefragt gibt
+            # `http 200, content-length: 0` zurueck, AUCH mit den Sitzungs-Cookies des
+            # Kontexts. Laedt dagegen der Browser den Frame im Zuge des Seitenaufbaus,
+            # kommt `application/pdf` — und Playwright meldet einen Download. Der Server
+            # unterscheidet also die Anfrage, nicht die Sitzung. Die alte Notiz
+            # („Inhalts-Frame ohne Sitzung leer") war insofern nicht ganz richtig.
+            #
+            # ⚠ **Was kommt, ist die BEKANNTMACHUNG, nicht die Vergabeunterlagen.**
+            # Acht Stichproben: sieben duenne Notice-PDFs (4 davon Ex-ante, die per
+            # Definition keine Unterlagen haben), EINE mit 61 KB, in der
+            # „Vergabeunterlagen" und „Zuschlagskriterien" ausgeschrieben stehen. Deshalb
+            # ein eigener Status statt `downloaded`: die Zahl im Bericht soll nicht
+            # behaupten, hier laegen Unterlagen.
+            pg.wait_for_timeout(_FRAMESET_MS)
+            if dry_run:
+                return {"status": "probe", "bytes": 0, "n_files": len(gefangen),
+                        "note": "Frameset, Bekanntmachung als Download"}
+            if gefangen:
+                dl = gefangen[0]
+                name = (dl.suggested_filename or "Bekanntmachung").strip() or "Bekanntmachung"
+                if "." not in name:
+                    name += ".pdf"
+                blob = Path(dl.path()).read_bytes()
+                if blob:
+                    n = _als_zip(ziel, name, blob)
+                    return {"status": "nur_bekanntmachung", "bytes": n, "n_files": 1,
+                            "note": f"{name} aus dem Frameset ({len(blob):,} B)"}
             return {"status": "frameset", "bytes": 0, "n_files": 0,
-                    "note": "BekLanding4Bund-Frameset, Inhalts-Frame ohne Sitzung leer"}
+                    "note": "Frameset, aber kein Download erschienen"}
         # POSITIVES Merkmal fehlt. Traegt die Seite ueberhaupt die Weiche? Wenn nicht, sind
         # wir woanders gelandet — das ist etwas anderes als „keine Unterlagen".
         rumpf = pg.evaluate("() => document.body.innerText")
@@ -184,7 +249,7 @@ def lauf(limit: int | None = None, dry_run: bool = False, country: str = "DE") -
     with _queue.Wache("staatsanzeiger", vorgang_hart_s=0, leerlauf_s=LEERLAUF_S,
                       sichern=_sichern) as wache, sync_playwright() as p:
         b = p.chromium.launch(headless=True)
-        ctx = b.new_context()
+        ctx = b.new_context(accept_downloads=True)
         pg = ctx.new_page()
         pg.set_default_timeout(60000)
         for i, (lead_id, url, ziel) in enumerate(offen, 1):

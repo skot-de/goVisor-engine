@@ -3054,3 +3054,41 @@ def test_kein_abrufer_benutzt_einen_namen_den_es_nicht_gibt():
         if offen:
             fehler[pfad.name] = offen
     assert not fehler, f"ungebundene Namen: {fehler}"
+
+
+def test_staatsanzeiger_frameset_wird_verpackt_und_ehrlich_benannt(tmp_path):
+    """Der Inhalts-Frame IST erreichbar — aber nur über den Browser selbst.
+
+    Gemessen 2026-08-21: `GetFile2?z_param1=…` einzeln angefragt gibt `http 200,
+    content-length: 0` zurueck, AUCH mit den Sitzungs-Cookies des Kontexts. Laedt dagegen
+    der Browser den Frame im Zuge des Seitenaufbaus, kommt `application/pdf`. Der Server
+    unterscheidet die Anfrage, nicht die Sitzung.
+
+    ⚠ **Geliefert wird die BEKANNTMACHUNG, nicht die Vergabeunterlagen.** Acht Stichproben:
+    sieben duenne Notice-PDFs (vier davon Ex-ante, die per Definition keine Unterlagen
+    haben), EINE mit 61 KB, in der „Vergabeunterlagen" und „Zuschlagskriterien"
+    ausgeschrieben stehen. Deshalb ein eigener Status — die Zahl im Bericht darf nicht
+    behaupten, hier laegen Unterlagen.
+    """
+    import zipfile
+
+    from govisor import docfetch_staatsanzeiger as sa
+    from govisor.docfetch_queue import KEIN_FEHLSCHLAG
+
+    # ⚠ Verpacken ist Pflicht: `docpipe` indiziert ausschliesslich `*.zip`. Eine lose PDF
+    # neben dem Vorgang wuerde geholt und nie gelesen.
+    ziel = tmp_path / "n1" / "Vergabeunterlagen_staatsanzeiger_n1.zip"
+    n = sa._als_zip(ziel, "Bekanntmachung.pdf", b"%PDF-1.4 Inhalt")
+    assert n > 0 and ziel.exists()
+    with zipfile.ZipFile(ziel) as z:
+        assert z.namelist() == ["Bekanntmachung.pdf"]
+        assert z.read("Bekanntmachung.pdf").startswith(b"%PDF-")
+
+    # Nichts nachzuholen — sonst wird es bei jedem Lauf erneut versucht.
+    assert "nur_bekanntmachung" in KEIN_FEHLSCHLAG
+
+    quelle = (pathlib.Path(__file__).resolve().parent.parent
+              / "govisor" / "docfetch_staatsanzeiger.py").read_text(encoding="utf-8")
+    assert "accept_downloads=True" in quelle, "ohne das faengt der Kontext keinen Download"
+    # ⚠ Keine gebundene Methode als Horcher — Playwright heftet ihm ein Attribut an.
+    assert "def _sammeln(dl):" in quelle
