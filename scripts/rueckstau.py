@@ -92,6 +92,14 @@ def abrufer() -> dict[str, str]:
 # Leistungsverzeichnis" beantwortet.
 _ERFOLG = ("downloaded", "nur_liste")
 
+# ⚠ `exists` IST KEIN VERSUCH. cosinex schreibt fuer jede Vergabe, deren ZIP schon auf der
+# Platte liegt, einen Satz mit diesem Status — die anderen Abrufer sortieren solche Faelle
+# vorher aus und schreiben gar nichts. Zaehlt man `exists` in den Nenner, sieht cosinex nach
+# 2 % aus (74 von 3.296), waehrend es unter den echten Versuchen **79 %** holt (74 von 94).
+# Genau diese Fehldeutung hat am 21.08. dazu gefuehrt, den groessten deutschen Abrufer ans
+# Ende der Reihenfolge zu sortieren.
+_KEIN_VERSUCH = ("exists",)
+
 
 def _ausbeute(kurz: str, tage: int = 7) -> float | None:
     """Anteil erfolgreicher Abrufe der letzten Tage. ``None``, wenn es keine Historie gibt."""
@@ -106,7 +114,8 @@ def _ausbeute(kurz: str, tage: int = 7) -> float | None:
         v, g = duckdb.sql(
             f"""SELECT count(*), sum(CASE WHEN status IN {_ERFOLG!r} THEN 1 ELSE 0 END)
                 FROM read_parquet('{pfad.as_posix()}')
-                WHERE versucht_am >= current_date - {tage}""").fetchone()
+                WHERE versucht_am >= current_date - {tage}
+                  AND status NOT IN {_KEIN_VERSUCH!r}""").fetchone()
     except Exception:                                         # noqa: BLE001
         return None
     return (g or 0) / v if v else None
@@ -120,11 +129,13 @@ def rueckstand() -> list[tuple[str, int]]:
     (405 `nur_liste`, 112 `leer`, 136 `fehler`) und schrumpfen den Rueckstau nie — dafuer
     eine Sonderbehandlung zu bauen, waere Aufwand fuer 11 %.
 
-    ⚠ **Nach Rückstau allein zu sortieren waere falsch.** Gemessen 21.08. ueber sieben Tage:
-    `cosinex` traegt mit 1.737 den groessten Rueckstau und holt **2 %** (3.296 Versuche, 74
-    Pakete); `subreport` steht bei 979 und holt **0 %** — es liefert konstruktionsbedingt nur
-    Dateilisten, nie ZIPs, sein Rueckstau schrumpft also nie. Beide haetten die Spitzenplaetze
-    dauerhaft besetzt. `netserver` dagegen holt 81 %, `evergabe_online` 96 %.
+    ⚠ **Nach Rückstau allein zu sortieren waere falsch.** `subreport` steht bei 979 offenen
+    Vergaben und liefert konstruktionsbedingt nur Dateilisten, nie ZIPs — sein Rueckstau
+    schrumpft nie. Ohne Gewichtung hielte es einen Spitzenplatz auf Dauer besetzt.
+
+    ⚠ **Das Manifest ist ein ZUSTAND je Vergabe, kein Protokoll der Versuche** (`schreibe`
+    behaelt je Kennung nur den juengsten Satz). Die Quote hier misst also „von den zuletzt
+    beruehrten Vergaben — wie viele haben einen Erfolgsstatus", nicht „von N Anfragen".
     #
     Ohne Historie gilt 0,5 — ein neuer Abrufer soll seine Chance bekommen, aber keinen Vorrang.
 
@@ -141,15 +152,24 @@ def rueckstand() -> list[tuple[str, int]]:
 
     import duckdb
 
+    from govisor.docfetch_queue import filtere, frueher
+
     L = (ROOT / "data" / "gold" / "DE" / "lead_export.parquet").as_posix()
     T = (ROOT / "data" / "docs" / "DE" / "doc_text.parquet").as_posix()
     con = duckdb.connect()
     schon = {n for (n,) in con.execute(
         f"SELECT DISTINCT notice_id FROM read_parquet('{T}')").fetchall()} \
         if (ROOT / "data" / "docs" / "DE" / "doc_text.parquet").exists() else set()
+    # ⚠ OPEN HOUSE GEHOERT NICHT IN DEN RUECKSTAU. Dort tritt man einem Rabattvertrag BEI,
+    # statt zu bieten; die Unterlagen liegen systematisch hinter der Teilnahme, und die
+    # Abrufer schliessen sie deshalb schon in ihrer eigenen Auswahl aus. Zaehlt man sie mit,
+    # sieht ein Abrufer riesig aus und ist es nicht: von cosinex' scheinbaren 1.751 offenen
+    # Vergaben sind **1.172 Open House** (67 %) und weitere 253 als `gated` bereits gelernt —
+    # wirklich holbar sind 307. Ueber alle Abrufer: 1.953 der 7.936 sind Open House (25 %).
     offen = con.execute(f"""
         SELECT lead_id, documents_url FROM read_parquet('{L}')
         WHERE phase='open' AND deadline_date > current_date AND documents_url IS NOT NULL
+          AND coalesce(procedure_kind, '') <> 'open_house'
     """).fetchall()
     con.close()
     offen = [(lid, url) for lid, url in offen if lid not in schon]
@@ -165,9 +185,17 @@ def rueckstand() -> list[tuple[str, int]]:
         if pruefer is None:
             continue
         try:
-            zahlen[kurz] = sum(1 for _, url in offen if pruefer(url))
+            treffer = [(lid, url) for lid, url in offen if pruefer(url)]
         except Exception:                                     # noqa: BLE001
             continue
+        # Frueher Gescheitertes zaehlt ebenfalls nicht: der Abrufer wuerde es gar nicht
+        # erst anfassen (`filtere`), es blaeht nur die Zahl auf, nach der wir sortieren.
+        try:
+            treffer, _ = filtere(treffer, frueher(ROOT / "data" / "docs" / "DE", kurz),
+                                 lead_id=lambda x: x[0])
+        except Exception:                                     # noqa: BLE001
+            pass
+        zahlen[kurz] = len(treffer)
     gewichtet = []
     for kurz, n in zahlen.items():
         quote = _ausbeute(kurz)

@@ -335,8 +335,23 @@ export default function OnboardingPage() {
       const d = await fetch(`/api/entity-group?id=${encodeURIComponent(m.id)}`).then((r) => r.json());
       const ms: Member[] = d.members || [];
       setMembers(ms);
+      // ── PLAUSIBILITÄTSBREMSE, TEIL 1: die Vorauswahl folgt der Beleglage ──────────
+      // Sven: „was ist wenn ich bei der frage ‚gehören die einheiten zu euch' einfach was
+      // dazu klicke, was eig gar nicht dazu gehört?" Bis zum 2026-08-21 waren ALLE
+      // Einheiten vorangehakt, auch die nur über den Namen erkannten. Wer nichts tut,
+      // bestätigt damit fremde Zuschläge — und das Bequeme war das Unbelegte.
+      // Jetzt sind belegte Einheiten (Handelsregister, nationale Kennung) angehakt, die
+      // nur namentlich erkannten nicht. Wer sie will, hakt sie bewusst an.
       // Nach Index keyen — gleichnamige Schwester-Entities (mehrere „CANCOM Public GmbH") kollabieren sonst.
-      setAktiv(new Set(ms.map((_, i) => String(i))));
+      const belegte = ms.map((m, i) => (m.conf === "belegt" ? String(i) : null))
+                        .filter((x): x is string => x !== null);
+      // Sackgasse vermeiden: 7 der 31.418 Gruppen haben KEIN belegtes Mitglied (gemessen
+      // 2026-08-21, u. a. „BS/ENERGY", „Dr. Löber IGV mbH"). Ohne Haken ist „Profil
+      // bestätigen" gesperrt (s. disabled={!aktiv.size}) und das Onboarding endet blind.
+      // Dort haken wir die grösste Einheit an: der Nutzer hat diese Firma im Schritt davor
+      // selbst bestätigt, die Namensgleichheit ist also mehr als eine Vermutung.
+      const groesste = ms.reduce((b, m, i) => (m.wins > (ms[b]?.wins ?? -1) ? i : b), 0);
+      setAktiv(new Set(belegte.length ? belegte : ms.length ? [String(groesste)] : []));
       return ms.length;
     } catch { setMembers([]); setAktiv(new Set()); return 0; }
   }, []);
@@ -605,7 +620,17 @@ function testMailErlaubt(mail: string): boolean {
           regionTyp: matched.regionTyp ?? null,   // aus der Zuschlagshistorie abgeleitet
           regionLabels: matched.regions.map((r) => LAENDER.find((l) => l[0] === r)?.[1] || r),
         }),
-        confirmedEntities: members.filter((_, i) => aktiv.has(String(i))).map((m) => m.name),
+        // ── PLAUSIBILITÄTSBREMSE, TEIL 2: den BELEG mitspeichern, nicht nur den Anspruch ──
+        // ⚠ Bis zum 2026-08-21 wanderten nur die NAMEN ins Profil. Der Kasten darüber
+        // versprach aber „wir kennzeichnen sie als unbestätigt und rechnen sie nicht in die
+        // Erfolgsprämie" — eine Zusage, die nach dem Speichern niemand mehr einlösen konnte,
+        // weil die Beleglage verloren war. Wer später abrechnet, muss unterscheiden können,
+        // was belegt war und was Selbstauskunft.
+        confirmedEntities: members.filter((_, i) => aktiv.has(String(i)))
+          .map((m) => ({ name: m.name,
+                         beleg: (m.conf === "belegt" ? "kennung" : "selbstauskunft") as
+                                "kennung" | "selbstauskunft",
+                         wins: m.wins })),
         identityId: matched.id,
       };
     } else {
@@ -634,6 +659,15 @@ function testMailErlaubt(mail: string): boolean {
   const cur = stufeVon(screen);
   const winsAktiv = members.filter((_, i) => aktiv.has(String(i))).reduce((a, m) => a + m.wins, 0);
   const unsicher = members.some((m, i) => m.conf === "unsicher" && aktiv.has(String(i)));
+  // ── PLAUSIBILITÄTSBREMSE, TEIL 3: das Preisschild ────────────────────────────────
+  // Wir halten niemanden auf — wer seine Firmengruppe kennt, weiss es besser als unsere
+  // Daten. Aber der Haken bekommt eine Zahl: wie viele Zuschläge hängen gerade an
+  // Einheiten, für die es ausser dem Namen keinen Beleg gibt, und welcher Anteil des
+  // Profils ist das? Eine Warnung ohne Zahl überliest man; „78 von 98" nicht.
+  const winsUnbelegt = members
+    .filter((m, i) => aktiv.has(String(i)) && m.conf !== "belegt")
+    .reduce((a, m) => a + m.wins, 0);
+  const anteilUnbelegt = winsAktiv ? Math.round((winsUnbelegt / winsAktiv) * 100) : 0;
 
   // EIN Rahmen — derselbe wie in der App. Die Schrittanzeige sitzt in der BEREICHSLEISTE,
   // derselben zweiten Zeile, in der Strategie ihre Abschnitte und Bausteine seine Themen
@@ -926,14 +960,25 @@ function testMailErlaubt(mail: string): boolean {
                 {members.map((m, i) => (
                   <div key={i} className={`ent ${aktiv.has(String(i)) ? "on" : ""}`}>
                     <button className="ent-box" onClick={() => toggleMember(String(i))}>✓</button>
-                    <div className="ent-m"><span className="ent-n">{m.name}</span><span className="ent-x">{t(m.method)}</span></div>
+                    <div className="ent-m">
+                      <span className="ent-n">{m.name}</span>
+                      <span className={m.conf === "belegt" ? "ent-x" : "ent-x ent-x-schwach"}>
+                        {t(m.method)}
+                      </span>
+                    </div>
                     <span className="ent-w">{m.wins}</span>
                   </div>
                 ))}
               </div>
             ) : <div className="spin">{t("Lade Einheiten …")}</div>}
             {aktiv.size === 0 && <div className="note note-w">{t("Mindestens eine Einheit muss aktiv bleiben.")}</div>}
-            {unsicher && <div className="note note-w">{t("Eine aktive Einheit wurde")} <b>{t("nur über den Namen")}</b> {t("erkannt. Wir zeigen ihre Zahlen, kennzeichnen sie aber als unbestätigt, und rechnen sie nicht in die Erfolgsprämie ein, solange die Zuordnung nicht belegt ist.")}</div>}
+            {unsicher && (
+              <div className="note note-w">
+                {t("Ihr habt {n} Zuschläge angehakt, für die es ausser dem Namen keinen Beleg gibt: {p} % eures Profils.",
+                   { n: winsUnbelegt, p: anteilUnbelegt })}{" "}
+                {t("Wir halten euch nicht auf: ihr kennt eure Firmengruppe besser als unsere Daten. Wir merken uns diese Einheiten aber als Selbstauskunft, kennzeichnen sie so und rechnen sie nicht in die Erfolgsprämie, solange die Zuordnung nicht belegt ist.")}
+              </div>
+            )}
             <div className="note note-p">{t("Mit der Bestätigung merken wir uns diese Einheiten als eure Identität. Nur so erkennen wir später, dass ihr eine Ausschreibung gewonnen habt.")} <b>{t("{n} Siege", { n: winsAktiv })}</b> {t("fließen in euer Profil.")}</div>
             <div className="btnrow split">
               <button className="btn btn-p" disabled={!aktiv.size} onClick={() => geheZu("fertig")}>{t("Profil bestätigen")}</button>

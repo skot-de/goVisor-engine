@@ -1121,3 +1121,34 @@ def test_onboarding_hat_einen_rueckweg_und_endet_in_den_leads():
     import re
     roh = [m for m in re.finditer(r"(?<!set)setScreen\(", onb)]
     assert len(roh) <= 2, f"{len(roh)} direkte setScreen-Aufrufe — Vorwaertswege gehoeren in geheZu"
+
+
+def test_plausibilitaetsbremse_bei_der_identitaet():
+    """Sven: „was ist wenn ich bei der frage ‚gehören die einheiten zu euch' einfach was
+    dazu klicke, was eig gar nicht dazu gehört?"
+
+    Drei Befunde am 2026-08-21, alle drei hier festgehalten:
+
+    1. ALLE Einheiten waren vorangehakt, auch die nur über den Namen erkannten. Wer nichts
+       tat, bestätigte fremde Zuschläge — das Bequeme war das Unbelegte.
+    2. Ins Profil wanderten nur die NAMEN. Der Hinweis versprach aber „wir rechnen sie nicht
+       in die Erfolgsprämie" — eine Zusage, die nach dem Speichern niemand mehr einlösen
+       konnte, weil die Beleglage weg war. Ohne Beleg am Datensatz ist jede spätere
+       Abrechnung auf Vertrauen angewiesen.
+    3. Der Hinweis nannte keine Zahl. „Eine Einheit ist unbestätigt" überliest man,
+       „78 Zuschläge, 80 % eures Profils" nicht.
+
+    Bewusst KEINE Sperre: wer seine eigene Firmengruppe kennt, weiss es besser als unsere
+    Daten. Der Haken bekommt ein Preisschild, keinen Riegel.
+    """
+    onb = (ROOT / "web" / "app" / "onboarding" / "page.tsx").read_text(encoding="utf-8")
+    assert 'm.conf === "belegt" ? String(i) : null' in onb, \
+        "die Vorauswahl hakt wieder alles an, auch das nur namentlich Erkannte"
+    assert 'beleg: (m.conf === "belegt" ? "kennung" : "selbstauskunft")' in onb, \
+        "der Beleg wandert nicht mehr mit ins Profil"
+    assert "winsUnbelegt" in onb and "anteilUnbelegt" in onb, \
+        "der Hinweis nennt keine Zahl mehr"
+
+    auth = (ROOT / "web" / "lib" / "supabase" / "auth.ts").read_text(encoding="utf-8")
+    assert "string | { name: string; beleg:" in auth, \
+        "der Profiltyp kennt die Beleglage nicht — oder bricht alte Profile (reine Namen)"

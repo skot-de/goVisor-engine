@@ -238,3 +238,11 @@
 .mitbringsel li b { font-weight: 600; text-align: right; font-variant-numeric: tabular-nums; }
 .mitbringsel-fuss { margin: 11px 0 0; font-size: 12px; line-height: 1.55;
   color: var(--ink-700, #33453F); }
+
+/* Nur über den Namen erkannte Einheiten: die Herkunft steht in Warnfarbe, nicht der ganze
+   Eintrag. Der Unterschied soll auffallen, ohne die Zeile zu verurteilen — es kann die
+   eigene Tochter sein, die nur schlecht geschrieben in den Daten steht. */
+/* ⚠ Spezifität: `.zugang .ent-x` (0,2,0) schlägt eine blosse `.ent-x-schwach` (0,1,0).
+   Dieselbe Falle hat in dieser Sitzung schon zweimal zugeschlagen (dunkler Text auf
+   dunklem Grün, weiss auf weiss). Die Variante muss auf dieselbe Stufe. */
+.zugang .ent-x.ent-x-schwach { color: var(--flag, #B45309); }

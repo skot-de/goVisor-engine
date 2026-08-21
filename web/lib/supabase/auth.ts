@@ -3,7 +3,11 @@ import { createClient } from "./client";
 import type { buildProfile } from "@/lib/profileEngine";
 
 export type Profile = ReturnType<typeof buildProfile> & {
-  identityId?: string; confirmedEntities?: string[]; branche?: string;
+  identityId?: string;
+  /** Bestätigte Einheiten MIT Beleglage. Alte Profile tragen hier reine Namen (string) —
+   *  beim Lesen beides zulassen, sonst verliert ein bestehendes Konto seine Identität. */
+  confirmedEntities?: (string | { name: string; beleg: "kennung" | "selbstauskunft"; wins?: number })[];
+  branche?: string;
 };
 
 export async function register(email: string, password: string) {

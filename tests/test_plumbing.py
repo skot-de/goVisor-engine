@@ -2956,3 +2956,55 @@ def test_die_prioritaeten_stehen_richtig_herum():
     assert dok.get("Nice", 0) <= ana.get("Nice", 0), (
         f"Dokumenten-Arbeiter Nice {dok.get('Nice', 0)}, "
         f"Analyse-Arbeiter Nice {ana.get('Nice', 0)} — verkehrt herum")
+
+
+def test_cosinex_sortiert_geholtes_vor_dem_limit_aus():
+    """Der Grund, warum cosinex „nur 2 %" zu holen schien.
+
+    `fetch_one` erkennt ein bereits vorhandenes ZIP (Status ``exists``) und kostet dabei kein
+    Netz — aber der Fall verbrauchte das Limit. Zusammen mit ``ORDER BY deadline_date ASC``
+    traf das immer dieselben Vorgaenge: die naechsten Fristen stehen vorn und sind laengst
+    geholt. Gemessen 2026-08-21: von 2.918 Kandidaten lagen 2.484 schon da, der Median der
+    fehlenden stand auf Position 1.842. Mit ``--limit 40`` waren 8 von 40 Versuchen neu.
+    """
+    import inspect
+
+    from govisor import docfetch
+
+    quelle = inspect.getsource(docfetch.fetch_batch)
+    assert "schon += 1" in quelle
+    assert quelle.index("schon += 1") < quelle.index("if limit:"), (
+        "der Filter steht hinter dem Limit und wirkt damit nicht")
+    # Beide Connectoren muessen ihren Zielpfad kennen, sonst wirkt der Filter nur halb.
+    assert len(docfetch._ZIELE) == 2
+    assert docfetch.ziel("https://www.dtvp.de/Satellite/notice/CXP4YHH5V73/documents",
+                         "n1", pathlib.Path("/tmp")).name == "Vergabeunterlagen_CXP4YHH5V73.zip"
+    assert docfetch.ziel("https://example.org/kein/cosinex", "n1", pathlib.Path("/tmp")) is None
+
+
+def test_rueckstau_zaehlt_nur_was_ein_abrufer_wirklich_holen_kann():
+    """Der rohe Rueckstau taeuscht — und zwar in beide Richtungen.
+
+    ⚠ **Open House** ist kein Abrufproblem: dort tritt man einem Rabattvertrag BEI, statt zu
+    bieten, und die Unterlagen liegen hinter der Teilnahme. Von cosinex' scheinbaren 1.751
+    offenen Vergaben sind 1.172 Open House (67 %) und 253 bereits als `gated` gelernt —
+    holbar sind 307. Ueber alle Abrufer: 1.953 der 7.936 (25 %).
+
+    ⚠ **`exists` ist kein Versuch.** Nur cosinex schreibt einen Satz fuer jede Vergabe, deren
+    ZIP schon da ist; die anderen sortieren solche Faelle vorher aus. Zaehlt man `exists` in
+    den Nenner, sieht cosinex nach 2 % aus statt nach 79 % — genau diese Fehldeutung hat den
+    groessten deutschen Abrufer ans Ende der Reihenfolge sortiert.
+    """
+    import importlib.util
+    import sys
+
+    wurzel = pathlib.Path(__file__).resolve().parent.parent
+    spec = importlib.util.spec_from_file_location("_rs2", wurzel / "scripts" / "rueckstau.py")
+    rs = importlib.util.module_from_spec(spec)
+    sys.modules["_rs2"] = rs
+    spec.loader.exec_module(rs)
+
+    quelle = (wurzel / "scripts" / "rueckstau.py").read_text(encoding="utf-8")
+    assert "open_house" in quelle, "Open House wird noch mitgezaehlt"
+    assert "filtere(" in quelle, "frueher Gescheitertes wird noch mitgezaehlt"
+    assert rs._KEIN_VERSUCH == ("exists",)

@@ -66,6 +66,18 @@ def _zip_url(origin: str, base: str, cx: str) -> str:
             f"archive/Vergabeunterlagen_{cx}.zip")
 
 
+def ziel(documents_url: str, notice_id: str, out_root: Path) -> Path | None:
+    """Wohin das ZIP dieses Vorgangs gehoert. ``None``, wenn die URL keine cosinex-URL ist.
+
+    Herausgezogen aus `fetch_one`, damit die Auswahl VOR dem Limit wissen kann, was schon
+    da ist — ohne dafuer den Abruf anzustossen (s. `fetch_batch`).
+    """
+    m = _COSINEX_RE.match(documents_url or "")
+    if not m:
+        return None
+    return out_root / notice_id / f"Vergabeunterlagen_{m.group('cx')}.zip"
+
+
 def fetch_one(documents_url: str, notice_id: str, out_root: Path,
               session: requests.Session | None = None, timeout: int = 60) -> FetchResult:
     """Ein cosinex-Vorgang → Vergabeunterlagen-ZIP auf die Platte. Idempotent."""
@@ -123,6 +135,16 @@ def _waehle_connector(url: str):
     if docfetch_rib.is_rib(url):
         return docfetch_rib.fetch_one
     return fetch_one
+
+
+# Modulname → Zielpfad-Funktion. Zwei Connectoren, zwei Namensschemata; die Zuordnung
+# steht hier, damit `fetch_batch` sie nicht raten muss.
+_ZIELE = {
+    __name__: lambda u, n, r: ziel(u, n, r),
+    __name__.rsplit(".", 1)[0] + ".docfetch_rib":
+        lambda u, n, r: __import__(__name__.rsplit(".", 1)[0] + ".docfetch_rib",
+                                   fromlist=["ziel"]).ziel(u, n, r),
+}
 
 
 def fetch_batch(cfg: Config, country: str = "DE", limit: int | None = None,
@@ -192,6 +214,34 @@ def fetch_batch(cfg: Config, country: str = "DE", limit: int | None = None,
     rows, _weg = _queue.filtere(rows, _queue.frueher(out_root, "cosinex", id_feld="notice_id"))
     if _weg:
         print(_queue.bericht(_weg))
+
+    # ⚠ WAS SCHON AUF DER PLATTE LIEGT, EBENFALLS VOR DEM LIMIT AUSSORTIEREN.
+    #
+    # Der Fehlschlag-Filter darueber tut das seit dem 15.08. fuer frueher Gescheitertes —
+    # fuer bereits GEHOLTE Vergaben fehlte dasselbe. `fetch_one` erkennt sie zwar (Status
+    # `exists`) und kostet dabei kein Netz, aber sie verbrauchen das Limit. Zusammen mit
+    # `ORDER BY deadline_date ASC` traf das immer dieselben: die naechsten Fristen stehen
+    # vorn und sind laengst geholt.
+    #
+    # Gemessen am 2026-08-21: von 2.918 Kandidaten lagen **1.930 schon da**, und der
+    # Median der fehlenden stand auf Position 1.842. Mit `--limit 40` waren 8 von 40
+    # Versuchen wirklich neu (20 %), mit 150 waren es 35. Die hinteren Zweidrittel des
+    # Rueckstaus wurden nie erreicht — nicht weil das Portal sperrt, sondern weil die
+    # Liste vorher endete.
+    schon = 0
+    frisch = []
+    for lead_id, url in rows:
+        modul = _waehle_connector(url).__module__
+        finder = _ZIELE.get(modul)
+        z = finder(url, lead_id, out_root) if finder else None
+        if z is not None and z.exists() and z.stat().st_size > 0:
+            schon += 1
+            continue
+        frisch.append((lead_id, url))
+    if schon:
+        print(f"  {schon:,} Vorgänge liegen schon auf der Platte — vor dem Limit aussortiert.")
+    rows = frisch
+
     if limit:
         rows = rows[:limit]
 

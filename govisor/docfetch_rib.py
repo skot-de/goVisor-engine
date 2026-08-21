@@ -125,6 +125,16 @@ def _dateiname(url: str, antwort: requests.Response, nr: int) -> str:
     return f"{nr:02d}_{name}"[:120]
 
 
+def ziel(documents_url: str, notice_id: str, out_root: Path):
+    """Wohin das ZIP gehoert. ``None`` bei fremder URL. S. `docfetch.ziel`."""
+    from pathlib import Path as _P
+
+    m = _RIB_RE.match(documents_url or "")
+    if not m:
+        return None
+    return _P(out_root) / notice_id / f"Vergabeunterlagen_rib_{m.group('tid')}.zip"
+
+
 def fetch_one(documents_url: str, notice_id: str, out_root: Path,
               session: requests.Session | None = None, timeout: int = 60) -> FetchResult:
     """Ein RIB-Vorgang → ein ZIP mit allen öffentlichen Unterlagen. Idempotent."""
