@@ -104,18 +104,21 @@ while true; do
     $PY scripts/analyze_docs.py >>"$LOG" 2>&1 \
     && sag "  Runde fertig" || sag "  ⚠ Runde abgebrochen"
 
-  # Wie viele warten noch? Eine Zeile, damit man den Fortschritt im Log sieht, ohne
-  # das Dashboard zu oeffnen.
-  $PY - <<'PY' >>"$LOG" 2>&1 || true
+  # Wie viele warten noch? Die Zahl geht ins Log UND steuert die Pause.
+  WARTEN="$($PY - 2>/dev/null <<'PYZ'
 import json, pathlib
 w = pathlib.Path("web/data")
 try:
     vt = set(json.loads((w / "doc-text-index.json").read_text()))
     an = set(json.loads((w / "doc-analysis.json").read_text()))
-    print(f"  Stand: {len(an):,} analysiert · {len(vt - an):,} warten noch")
-except Exception as e:
-    print(f"  Stand unbekannt: {e}")
-PY
+    print(len(vt - an))
+except Exception:
+    print(-1)
+PYZ
+)"
+  case "$WARTEN" in ''|*[!0-9-]*) WARTEN=-1 ;; esac
+  sag "  Stand: $WARTEN warten noch"
+
   # ⛔ NICHT WEITERDREHEN, WENN NIEMAND MEHR LIEFERT. Am 2026-08-18 war das OpenRouter-
   # Guthaben leer; der Arbeiter holte trotzdem alle 30 Sekunden 400 Vorgaenge, bekam bei
   # jedem 402 und meldete „Runde fertig". Eine Stunde lang, mit vollem Log und ohne einen
@@ -123,6 +126,16 @@ PY
   if grep -q '"erschoepft": true' "$ROOT/data/.llm_stand.json" 2>/dev/null; then
     sag "Kein Guthaben bei keinem Anbieter — warte 30 min. Aufladen: openrouter.ai/credits"
     sleep 1800; continue
+  fi
+
+  # ⛔ UND NICHT, WENN ES NICHTS ZU TUN GIBT. Am 21.08. war der Rueckstau leer (5.596
+  # analysiert, 0 warten) und dieser Arbeiter drehte trotzdem alle 30 Sekunden eine Runde
+  # ueber nichts — bei normaler Prozesspriorität, waehrend der Dokumenten-Arbeiter, der als
+  # EINZIGER Nachschub liefern kann, freiwillig hinten anstand. Nachschub kommt nicht
+  # schneller, wenn man oefter nachsieht.
+  if [ "$WARTEN" = "0" ]; then
+    sag "  Nichts zu tun — warte 10 min auf Nachschub."
+    sleep 600; continue
   fi
   sleep 30
 done

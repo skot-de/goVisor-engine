@@ -94,32 +94,57 @@ while true; do
   # Ein Abrufer je Runde, nicht alle gleichzeitig: die Portale sollen uns weiter
   # bedienen. `rueckstau.py` bringt Höflichkeitspausen und Deckel schon mit.
   sag "Stufe 2: Unterlagen holen"
-  # ALLE ZWOELF ABRUFER, aber drei je Runde im Wechsel.
+  # ── WELCHE DREI ABRUFER DRAN SIND ──────────────────────────────────────────────
   #
-  # Seit dem 2026-08-18 holt der Tageslauf keine Unterlagen mehr (s. daily_leads.sh,
-  # `_ABRUF_AUS`): gemessen gingen dort rund fuenf der acht Stunden dafuer drauf, und
-  # 6 von 10 Laeufen endeten deshalb an ihrer eigenen Zeitgrenze. Damit liegt die
-  # Beschaffung vollstaendig hier — also muessen auch alle Abrufer hier vorkommen, nicht
-  # nur die fuenf vom ersten Entwurf.
+  # Bis zum 21.08. reihum: drei von zwoelf, rotierend ueber einen Zaehler. Der Rueckstau
+  # ist aber alles andere als gleich verteilt (gemessen 21.08., offene Vergaben ohne
+  # Unterlagen):
   #
-  # ⚠ NICHT ALLE ZWOELF JE RUNDE. Bei einer Stunde je Abrufer waere eine Runde zwoelf
-  # Stunden lang, und dazwischen wird der Tageslauf-Lock nicht geprueft. Drei je Runde,
-  # rotierend ueber einen Zaehler: nach vier Runden war jeder einmal dran, und zwischen
-  # den Runden ist der Weg frei fuer alles andere.
-  ALLE=(evergabe_online cosinex subreport netserver ausschreibungsblatt healyhudson
-        staatsanzeiger vergabeportal_at aumass bimedien evergabe simap_docs)
+  #     cosinex 1.737 · netserver 1.327 · subreport 979 · evergabe 743 · healyhudson 543
+  #     evergabe_online 491 · aumass 109 · staatsanzeiger 79 · ausschreibungsblatt 26
+  #     bimedien 7 · simap_docs 3 · vergabeportal_at 0
+  #
+  # Reihum bekam `vergabeportal_at` mit NULL offenen Vergaben dieselbe Stunde wie `cosinex`
+  # mit 1.737. Eine ganze Runde ging so an Portale, bei denen es nichts zu holen gab.
+  #
+  # ⚠ REIN NACH RUECKSTAU WAERE AUCH FALSCH. Dann kaeme immer dieselbe Spitze dran und der
+  # Schwanz nie — und ein grosser Rueckstau heisst nicht, dass ein Abrufer auch liefert:
+  # `netserver` steht mit 1.327 weit oben und lief am 21.08. 46 Stunden ohne ein einziges
+  # Paket. Deshalb ZWEI nach Rueckstau plus EINER aus der Rotation.
+  RUECKSTAND="$($PY scripts/rueckstau.py --rueckstand 2>/dev/null | awk -F'\t' '$2 > 0 {print $1}')"
+  if [ -z "$RUECKSTAND" ]; then
+    sag "  Kein Rückstau ermittelbar — nehme die Rotation."
+    RUECKSTAND="evergabe_online cosinex subreport netserver ausschreibungsblatt healyhudson
+                staatsanzeiger vergabeportal_at aumass bimedien evergabe simap_docs"
+  fi
+  # shellcheck disable=SC2206
+  SORTIERT=($RUECKSTAND)
   # Der Zaehler lebt in einer Datei, nicht in einer Variablen: sonst faengt der Arbeiter
   # nach jedem Neustart wieder beim selben Abrufer an — und die hinteren kaemen nie dran.
   ZAEHLER="$ROOT/data/.abrufer_runde"
   RUNDE=$(( $(cat "$ZAEHLER" 2>/dev/null || echo 0) + 1 ))
   echo "$RUNDE" > "$ZAEHLER" 2>/dev/null || true
-  START=$(( (RUNDE * 3) % ${#ALLE[@]} ))
-  for i in 0 1 2; do
-    c=${ALLE[$(( (START + i) % ${#ALLE[@]} ))]}
+  DRAN=("${SORTIERT[0]}")
+  [ ${#SORTIERT[@]} -gt 1 ] && DRAN+=("${SORTIERT[1]}")
+  # Der dritte rotiert durch ALLE mit Rueckstau — auch die kleinen kommen so dran.
+  # ⚠ `RUNDE - 1`, nicht `RUNDE`: sonst faengt die Rotation nicht beim naechstbesten an,
+  # sondern beim schlechtesten. Rang 3 (evergabe_online, 96 % Ausbeute) waere so erst in
+  # Runde 9 drangekommen.
+  if [ ${#SORTIERT[@]} -gt 2 ]; then
+    IDX=$(( 2 + ((RUNDE - 1) % (${#SORTIERT[@]} - 2)) ))
+    DRAN+=("${SORTIERT[$IDX]}")
+  fi
+  sag "  Runde $RUNDE — dran: ${DRAN[*]}"
+  for c in "${DRAN[@]}"; do
     [ -e "$LOCK" ] && break
     # ⚠ KEIN `timeout` — das ist GNU-coreutils und auf macOS nicht vorhanden (Exit 127).
     # Braucht es auch nicht: `rueckstau.py` bringt mit --stunden seine eigene Grenze mit.
-    scripts/rueckstau.py --connector "$c" --stunden 1 --limit 40 >>"$LOG" 2>&1
+    #
+    # LIMIT von 40 auf 150: die Stunde ist die eigentliche Grenze, das Limit war nur eine
+    # zweite daneben. Bei einem schnellen Portal war nach 40 Vergaben Schluss, obwohl die
+    # Stunde noch lief — gemessen am 18.08. schaffte dieselbe Maschine 916 Pakete an einem
+    # Tag, am 19.08. waren es 20 und am 20.08. keins.
+    scripts/rueckstau.py --connector "$c" --stunden 1 --limit "${ABRUF_LIMIT:-150}" >>"$LOG" 2>&1
   done
 
   [ -e "$LOCK" ] && continue

@@ -2897,3 +2897,62 @@ def test_ueberholte_dateien_erreichen_keine_auswertung():
                        ("scripts/export_doc_text.py", "ueberholte(")):
         quelle = (wurzel / rel).read_text(encoding="utf-8")
         assert marke in quelle, f"{rel} rechnet ueberholte Nachtraege noch mit"
+
+
+def test_abrufer_werden_nach_erwarteter_ausbeute_gewaehlt():
+    """Reihum war falsch: der Rueckstau ist nicht gleich verteilt, die Trefferquote auch nicht.
+
+    Gemessen 2026-08-21: `vergabeportal_at` hatte NULL offene Vergaben und bekam dieselbe
+    Stunde wie `cosinex` mit 1.737. Nach Rueckstau ALLEIN waere aber auch falsch gewesen —
+    `cosinex` holt 2 % (3.296 Versuche, 74 Pakete) und `subreport` liefert konstruktions-
+    bedingt nie ein ZIP. Deshalb Rueckstau × Trefferquote.
+    """
+    import importlib.util
+    import sys
+
+    wurzel = pathlib.Path(__file__).resolve().parent.parent
+    spec = importlib.util.spec_from_file_location("_rs", wurzel / "scripts" / "rueckstau.py")
+    rs = importlib.util.module_from_spec(spec)
+    sys.modules["_rs"] = rs
+    spec.loader.exec_module(rs)
+
+    # ⚠ Erfolg heisst NICHT ueberall `downloaded`: Listen-Abrufer schreiben `nur_liste`.
+    # Wer nur `downloaded` zaehlt, haelt subreport fuer kaputt (0 %) statt fuer erfolgreich.
+    assert "nur_liste" in rs._ERFOLG and "downloaded" in rs._ERFOLG
+
+    arbeiter = (wurzel / "scripts" / "dokumente_arbeiter.sh").read_text(encoding="utf-8")
+    assert "--rueckstand" in arbeiter, "der Arbeiter waehlt noch reihum"
+    assert "ABRUF_LIMIT:-150" in arbeiter, "das alte Limit von 40 band vor der Stunde"
+    # Zwei feste Plaetze nach Erwartung, einer rotierend — sonst verhungert der Schwanz.
+    assert "SORTIERT[0]" in arbeiter and "RUNDE - 1" in arbeiter
+
+
+def test_analyse_arbeiter_schlaeft_wenn_nichts_zu_tun_ist():
+    """Am 21.08. war der Rueckstau leer und er drehte trotzdem alle 30 s eine Runde.
+
+    Nachschub kann nur der Dokumenten-Arbeiter liefern — oefter nachzusehen beschleunigt
+    ihn nicht, es nimmt ihm Rechenzeit weg.
+    """
+    wurzel = pathlib.Path(__file__).resolve().parent.parent
+    q = (wurzel / "scripts" / "analyse_arbeiter.sh").read_text(encoding="utf-8")
+    assert 'if [ "$WARTEN" = "0" ]' in q, "kein Leerlauf-Zweig"
+    assert "sleep 600" in q
+
+
+def test_die_prioritaeten_stehen_richtig_herum():
+    """Der Engpass gehoert nach vorn.
+
+    Bis zum 21.08. lief der Dokumenten-Arbeiter — der EINZIGE, der Nachschub liefert — mit
+    `Nice 10`, der Analyse-Arbeiter mit leerem Rueckstau bei normaler Prioritaet.
+    """
+    import plistlib
+
+    H = pathlib.Path.home() / "Library" / "LaunchAgents"
+    if not (H / "eu.govisor.dokumente.plist").exists():
+        import pytest
+        pytest.skip("launchd-Aufträge nicht auf dieser Maschine")
+    dok = plistlib.loads((H / "eu.govisor.dokumente.plist").read_bytes())
+    ana = plistlib.loads((H / "eu.govisor.analyse.plist").read_bytes())
+    assert dok.get("Nice", 0) <= ana.get("Nice", 0), (
+        f"Dokumenten-Arbeiter Nice {dok.get('Nice', 0)}, "
+        f"Analyse-Arbeiter Nice {ana.get('Nice', 0)} — verkehrt herum")

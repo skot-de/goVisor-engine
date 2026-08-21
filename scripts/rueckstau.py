@@ -85,6 +85,99 @@ def abrufer() -> dict[str, str]:
     return out
 
 
+# ⚠ ERFOLG HEISST NICHT ÜBERALL `downloaded`. `subreport` und `vergabeportal_at` liefern
+# konstruktionsbedingt nur DATEILISTEN und schreiben `nur_liste` — gemessen 467 von 560 in
+# sieben Tagen. Wer nur `downloaded` zaehlt, haelt sie fuer kaputt (0 %) statt fuer
+# erfolgreich (83 %) und sortiert sie aus, obwohl ihre Liste die Frage „gibt es ein
+# Leistungsverzeichnis" beantwortet.
+_ERFOLG = ("downloaded", "nur_liste")
+
+
+def _ausbeute(kurz: str, tage: int = 7) -> float | None:
+    """Anteil erfolgreicher Abrufe der letzten Tage. ``None``, wenn es keine Historie gibt."""
+    import duckdb
+
+    verz = ROOT / "data" / "docs" / "DE"
+    # cosinex schreibt in `_manifest.parquet` ohne Namenszusatz — historisch der erste.
+    pfad = verz / (f"_manifest_{kurz}.parquet" if kurz != "cosinex" else "_manifest.parquet")
+    if not pfad.exists():
+        return None
+    try:
+        v, g = duckdb.sql(
+            f"""SELECT count(*), sum(CASE WHEN status IN {_ERFOLG!r} THEN 1 ELSE 0 END)
+                FROM read_parquet('{pfad.as_posix()}')
+                WHERE versucht_am >= current_date - {tage}""").fetchone()
+    except Exception:                                         # noqa: BLE001
+        return None
+    return (g or 0) / v if v else None
+
+
+def rueckstand() -> list[tuple[str, int]]:
+    """Kurzname → ERWARTETE Ausbeute (Rückstau × Trefferquote), absteigend.
+
+    ⚠ Der rohe Rueckstau ist zu 88 % ehrlich: von 8.029 offenen Vergaben ohne Unterlagen
+    wurden 7.107 noch NIE versucht. Die restlichen 922 tragen schon einen Manifest-Eintrag
+    (405 `nur_liste`, 112 `leer`, 136 `fehler`) und schrumpfen den Rueckstau nie — dafuer
+    eine Sonderbehandlung zu bauen, waere Aufwand fuer 11 %.
+
+    ⚠ **Nach Rückstau allein zu sortieren waere falsch.** Gemessen 21.08. ueber sieben Tage:
+    `cosinex` traegt mit 1.737 den groessten Rueckstau und holt **2 %** (3.296 Versuche, 74
+    Pakete); `subreport` steht bei 979 und holt **0 %** — es liefert konstruktionsbedingt nur
+    Dateilisten, nie ZIPs, sein Rueckstau schrumpft also nie. Beide haetten die Spitzenplaetze
+    dauerhaft besetzt. `netserver` dagegen holt 81 %, `evergabe_online` 96 %.
+    #
+    Ohne Historie gilt 0,5 — ein neuer Abrufer soll seine Chance bekommen, aber keinen Vorrang.
+
+    Warum das hier steht und nicht im Arbeiter-Skript: die Zuordnung Portal → Abrufer lebt
+    in den Modulen selbst (`ist_bimedien`, `is_cosinex`, …). Eine zweite Liste in Bash waere
+    die Kopie, die als erste veraltet — und sie waere still falsch, nicht laut.
+
+    ⚠ Die Prädikate heissen NICHT einheitlich: zehn Module schreiben `ist_*`, `docfetch`
+    (cosinex) und `docfetch_rib` schreiben `is_*`. Ausgerechnet cosinex traegt den groessten
+    Rueckstau — wer nur `ist_*` sucht, uebersieht ihn und haelt die Liste trotzdem fuer
+    vollstaendig.
+    """
+    import importlib
+
+    import duckdb
+
+    L = (ROOT / "data" / "gold" / "DE" / "lead_export.parquet").as_posix()
+    T = (ROOT / "data" / "docs" / "DE" / "doc_text.parquet").as_posix()
+    con = duckdb.connect()
+    schon = {n for (n,) in con.execute(
+        f"SELECT DISTINCT notice_id FROM read_parquet('{T}')").fetchall()} \
+        if (ROOT / "data" / "docs" / "DE" / "doc_text.parquet").exists() else set()
+    offen = con.execute(f"""
+        SELECT lead_id, documents_url FROM read_parquet('{L}')
+        WHERE phase='open' AND deadline_date > current_date AND documents_url IS NOT NULL
+    """).fetchall()
+    con.close()
+    offen = [(lid, url) for lid, url in offen if lid not in schon]
+
+    zahlen: dict[str, int] = {}
+    for kurz, modul in abrufer().items():
+        try:
+            m = importlib.import_module(modul)
+        except Exception:                                     # noqa: BLE001
+            continue
+        pruefer = next((getattr(m, n) for n in dir(m)
+                        if n.startswith(("ist_", "is_")) and callable(getattr(m, n))), None)
+        if pruefer is None:
+            continue
+        try:
+            zahlen[kurz] = sum(1 for _, url in offen if pruefer(url))
+        except Exception:                                     # noqa: BLE001
+            continue
+    gewichtet = []
+    for kurz, n in zahlen.items():
+        quote = _ausbeute(kurz)
+        quote = 0.5 if quote is None else quote
+        gewichtet.append((kurz, n, round(n * quote)))
+    # Ausgabe traegt BEIDE Zahlen: die Erwartung steuert, der rohe Rueckstau erklaert sie.
+    gewichtet.sort(key=lambda x: (-x[2], -x[1]))
+    return [(kurz, erwartet, roh) for kurz, roh, erwartet in gewichtet]
+
+
 def frei() -> tuple[bool, str]:
     """Läuft der Tageslauf? Dann NICHT starten.
 
@@ -153,6 +246,8 @@ def main(argv=None) -> int:
     reg = abrufer()
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     ap.add_argument("--zeigen", action="store_true", help="verfügbare Abrufer auflisten")
+    ap.add_argument("--rueckstand", action="store_true",
+                    help="Abrufer nach offenem Rückstau sortiert (Name<TAB>Zahl)")
     ap.add_argument("--connector", help=f"einer von: {', '.join(sorted(reg))}")
     ap.add_argument("--stunden", type=float, default=4.0)
     ap.add_argument("--limit", type=int, default=60, help="Vorgänge je Runde")
@@ -160,6 +255,10 @@ def main(argv=None) -> int:
                     help="auch bei laufendem Tageslauf starten (nur wenn man weiss, warum)")
     a = ap.parse_args(argv)
 
+    if a.rueckstand:
+        for kurz, erwartet, roh in rueckstand():
+            print(f"{kurz}\t{erwartet}\t{roh}")
+        return 0
     if a.zeigen or not a.connector:
         print("Dokument-Abrufer:")
         for k, m in sorted(reg.items()):
