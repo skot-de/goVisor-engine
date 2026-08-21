@@ -157,3 +157,21 @@ def test_katalog_und_profile_ab_dreissig_verfahren():
     assert {g[0] for g in fordernd} == {mod.ANF_LEITER["haftpflicht"]["stufen"].index(3_000_000)}
     # Zwei der zehn sind offen und müssen als solche gezählt sein
     assert sum(g[-1] for g in fordernd if g[6] == 1) == 2
+
+
+def test_beispielvorrat_meidet_open_house_und_leere_fristen():
+    """⚠ „Späteste Frist zuerst" holte Open-House-Verträge mit Frist 2029 nach oben („noch
+    1.217 Tage" beweist keine Dringlichkeit, und Open House ist kein Wettbewerb). Gesucht
+    ist ein Fenster: weit genug, um einen ausgefallenen Tageslauf zu überleben, nah genug,
+    um ein normales Verfahren zu sein."""
+    stand = json.loads((ROOT / "web/data/landing.json").read_text(encoding="utf-8"))
+    vorrat = stand.get("beispiele")
+    if not vorrat:                       # ohne ausgewertete Unterlagen gibt es keinen Vorrat
+        pytest.skip("kein Beispielvorrat im aktuellen Export")
+    import datetime
+    heute = datetime.date.today()
+    reste = [(datetime.date.fromisoformat(b["frist"]) - heute).days for b in vorrat]
+    assert len(vorrat) >= 2, "ein einziges Beispiel überlebt keinen ausgefallenen Tageslauf"
+    assert all(r > 0 for r in reste), "abgelaufene Vorgänge gehören nicht in den Vorrat"
+    assert max(reste) <= 400, f"Frist zu weit weg, riecht nach Open House: {max(reste)} Tage"
+    assert all(len(b["punkte"]) == 3 for b in vorrat)

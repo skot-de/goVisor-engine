@@ -520,6 +520,7 @@ def main() -> int:
     # Natur aus. Trotzdem bewusst nur DREI Anforderungen und gekuerzte Zitate — die Seite
     # soll neugierig machen, nicht die Auswertung ersetzen.
     beispiel = None
+    beispiele: list[dict] = []
     analysen_fuer_check: dict = {}
     try:
         analysen = json.loads((ROOT / "web/data/doc-analysis.json").read_text(encoding="utf-8"))
@@ -528,7 +529,15 @@ def main() -> int:
             f"""SELECT lead_id, title, buyer_name, deadline_date, buyer_region_name
                 FROM '{de}' WHERE phase='open' AND deadline_date >= current_date
                   AND title IS NOT NULL""").fetchall()}
-        beste = None
+        # ── VORRAT STATT EINZELSTÜCK ─────────────────────────────────────────────────
+        # Sven: „muss ich alle 2 wochen schauen, dass da eine neue ausschreibung rein
+        # kommt?" Nein — der Tageslauf wählt jede Nacht neu. Aber genau daran hing der
+        # Kasten: fällt der Lauf aus (in diesem Projekt schon vorgekommen), läuft die Frist
+        # des einen Beispiels ab und der Kasten verschwindet. Deshalb wandern jetzt FÜNF
+        # Kandidaten in die Datei, nach Restlaufzeit sortiert; die Seite nimmt den ersten,
+        # dessen Frist noch läuft. Damit trägt ein einziger Export über Wochen, ohne dass
+        # jemals ein abgelaufener Vorgang gezeigt wird.
+        kandidaten = []
         for lid, a_ in analysen.items():
             wo = offen_map.get(lid)
             if not wo:
@@ -538,10 +547,21 @@ def main() -> int:
             typen = {c.get("req_type") for c in treffer}
             # Verschiedene Anforderungsarten sind aussagekraeftiger als viele gleiche:
             # dreimal „Ausschlussgrund" zeigt weniger als Haftpflicht + Umsatz + Referenz.
-            if len(typen) >= 3 and (beste is None or len(typen) > beste[0]):
-                beste = (len(typen), lid, wo, treffer)
-        if beste:
-            _, lid, (titel, kaeufer, frist, region), treffer = beste
+            if len(typen) >= 3:
+                kandidaten.append((wo[2], len(typen), lid, wo, treffer))
+        # ⚠ „Späteste Frist zuerst" war der falsche Schluss (2026-08-21): oben standen dann
+        # Open-House-Verträge und dynamische Beschaffungssysteme mit Frist bis 2029. „Noch
+        # 1.217 Tage" beweist keine Dringlichkeit, und Open House ist kein Wettbewerb — es
+        # wäre also ein schlechtes Beispiel für genau die Sache, für die es dasteht.
+        # Gesucht ist ein Fenster: weit genug weg, um einen ausgefallenen Tageslauf zu
+        # überleben, nah genug, um ein normales Verfahren zu sein.
+        heute = date.today()
+        fenster = [k for k in kandidaten if 30 <= (k[0] - heute).days <= 180]
+        kandidaten = (fenster or kandidaten)
+        kandidaten.sort(key=lambda k: (k[1], k[0]), reverse=True)
+
+        def _als_beispiel(wo, treffer) -> dict:
+            titel, kaeufer, frist, region = wo
             gesehen, punkte = set(), []
             for c in treffer:
                 if c["req_type"] in gesehen:
@@ -551,10 +571,13 @@ def main() -> int:
                                "datei": (c.get("source_file") or "").split("/")[-1][:60]})
                 if len(punkte) == 3:
                     break
-            beispiel = {"titel": titel[:90], "kaeufer": kaeufer, "region": region,
-                        "frist": str(frist), "punkte": punkte}
+            return {"titel": titel[:90], "kaeufer": kaeufer, "region": region,
+                    "frist": str(frist), "punkte": punkte}
+
+        beispiele = [_als_beispiel(k[3], k[4]) for k in kandidaten[:5]]
+        beispiel = beispiele[0] if beispiele else None
     except Exception:                                          # noqa: BLE001
-        beispiel = None                                        # ohne Beispiel bleibt die Seite ganz
+        beispiel, beispiele = None, []                         # ohne Beispiel bleibt die Seite ganz
 
     daten = {
         "stand": date.today().isoformat(),
@@ -571,6 +594,7 @@ def main() -> int:
         "anbieter": zaehle("suppliers.json"),
         "fachgebiete": fach,
         "beispiel": beispiel,
+        "beispiele": beispiele,
         "check": eignungs_check(ROOT, fach, analysen_fuer_check),
         "masse": masse,
     }

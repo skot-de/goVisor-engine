@@ -28,6 +28,7 @@ import "../app/landing-oeffentlich.css";
  */
 
 type Punkt = { label: string; zitat: string; datei: string };
+type Beispiel = { titel: string; kaeufer: string; region: string; frist: string; punkte: Punkt[] };
 type Zahlen = {
   stand: string; vergaben: number; offen: number;
   laender: Record<string, { gesamt: number; offen: number }>;
@@ -35,7 +36,8 @@ type Zahlen = {
   unterlagen_volltext: number; unterlagen_analysiert: number;
   auslaufend: number; auslaufend_24m: number; regionen: number; anbieter: number;
   fachgebiete: { schluessel: string; label: string; offen: number }[];
-  beispiel: { titel: string; kaeufer: string; region: string; frist: string; punkte: Punkt[] } | null;
+  beispiel: Beispiel | null;
+  beispiele?: Beispiel[];
   check?: Check;
   masse?: {
     offen: number;
@@ -69,7 +71,11 @@ export async function Landing() {
     const roh = await loadDataFile("landing.json");
     z = roh ? (JSON.parse(roh) as Zahlen) : null;
   } catch { z = null; }
-  const b = z?.beispiel ?? null;
+  // Aus dem Vorrat den ersten nehmen, dessen Frist noch läuft. Der Tageslauf legt fünf
+  // Kandidaten ab (s. export_landing.py); damit trägt ein einziger Export über Wochen,
+  // ohne dass je ein abgelaufener Vorgang gezeigt wird.
+  const vorrat: Beispiel[] = z?.beispiele?.length ? z.beispiele : z?.beispiel ? [z.beispiel] : [];
+  const b = vorrat.find((k) => restTage(k.frist) > 0) ?? null;
   const rest = b ? restTage(b.frist) : 0;
 
   return (
