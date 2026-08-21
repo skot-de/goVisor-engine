@@ -151,7 +151,12 @@
   letter-spacing: -0.02em; line-height: 1.15; }
 .lp-zahlen span { font-size: 12px; color: var(--ink-500, #64766F); }
 
+/* Trennlinien zwischen den grossen Abschnitten. Ohne sie stossen Werkzeug, Planungshorizont
+   und Arbeitsweise ohne Grenze aneinander — auf einem Blatt mit Rahmen fällt das auf, weil
+   der Rahmen eine Ordnung verspricht, die drinnen dann fehlt. */
 .lp-block { padding: 48px 0; }
+.lp-block + .lp-block, #horizont, #masse, #arbeitsweise {
+  border-top: 1px solid var(--line, #E3E7E5); }
 .lp-h2 { font-size: 25px; letter-spacing: -0.02em; margin: 0 0 26px; }
 /* Vier Karten seit dem Profilabgleich: zwei mal zwei liest sich ruhiger als vier in einer
    Reihe, und die Texte bleiben lesbar breit. */
@@ -260,10 +265,6 @@
    auch hier links die Einladung steht und rechts der Beweis. Der Kasten ist bewusst
    nüchtern: er ist ein Werkzeug, kein Werbebanner, und wirkt nur, wenn seine Zahlen
    glaubwürdig aussehen. */
-.lp-check { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr);
-  gap: 20px 44px; align-items: start; margin: 56px 0; padding: 34px 0 0;
-  border-top: 1px solid var(--line, #E3E7E5); }
-
 /* Seit die Kacheln das Fachgebiet tragen, steht hier nur noch die Region. */
 
 .ec-frage { margin-bottom: 14px; }
@@ -276,17 +277,8 @@
 .ec-opt-an { background: var(--signal-deep, #067A55); border-color: var(--signal-deep, #067A55);
   color: #fff; font-weight: 600; }
 
-.ec-gross { font-size: 17px; margin: 0 0 4px; }
-.ec-gross b { font-size: 24px; font-variant-numeric: tabular-nums; }
-
 .ec-fuss { font-size: 11.5px; line-height: 1.6; color: var(--ink-400, #8C9B95); margin: 14px 0 0; }
 
-@media (max-width: 900px) {
-  .lp-check { grid-template-columns: 1fr; gap: 24px; }
-  .ec-kopf { grid-template-columns: 1fr; }
-}
-
-/* Eingeklappt sichtbar: die Zahl, die schon rechnet, und der Knopf, der weiterführt. */
 
 /* GRÜNDUNGSLEISTE. Ganz oben, dunkel, eine Zeile — sie soll den Zeitpunkt markieren,
    nicht den Blick fangen. */
@@ -555,7 +547,6 @@
   color: var(--ink-400, #8C9B95); cursor: pointer; }
 .ec-zu:hover { background: var(--surface-3, #F1F3F2); color: var(--ink-900, #12211D); }
 
-.ec-fenster-koerper { padding: 22px 24px; overflow-y: auto; }
 .ec-d-h { font-size: 17px; font-weight: 650; letter-spacing: -.015em; margin: 0 0 4px; }
 .ec-d-sub { font-size: 13.5px; color: var(--ink-500, #64766F); margin: 0 0 18px; }
 .ec-d-fuss { font-size: 13px; line-height: 1.6; color: var(--ink-500, #64766F); margin: 16px 0 0; }
@@ -650,7 +641,6 @@
   letter-spacing: .07em; text-transform: uppercase; color: var(--ink-400, #8C9B95);
   border-top: 1px solid var(--line-strong, #CFD6D3); }
 .ec-zuschnitt { margin-top: 14px; }
-.ec-leer { padding: 34px 26px; }
 .ec-leer h3 { font-size: 17px; font-weight: 650; letter-spacing: -.015em; margin: 0 0 8px; }
 .ec-leer p { font-size: 14px; line-height: 1.65; color: var(--ink-700, #33453F); margin: 0 0 14px; }
 .ec-leer-f { font-size: 12.5px !important; color: var(--ink-500, #64766F) !important; }
@@ -672,7 +662,7 @@
 /* Leerlauf-Zustand: keine halbleere Fläche mehr, sondern die Liste, die wir ohne jede
    Angabe schon zeigen können. Die Zeilen sind ruhiger gesetzt als im Ergebnis (Punkt statt
    Häkchen, keine „ihr"-Spalte) — sie sind eine Vorschau, kein Urteil. */
-.ec-leer { flex: 1; }
+.ec-leer { flex: 1; padding: 34px 26px; }
 .ec-leer-p { font-size: 13.5px !important; max-width: 62ch; }
 .ec-fund-still li { grid-template-columns: 20px 1fr auto; padding: 8px 0; }
 .ec-haken-still { color: var(--ink-300, #B7C2BC); font-weight: 400; }
@@ -688,3 +678,21 @@
    behält — die Startseite ist Gast im selben Blatt, nicht sein Besitzer. */
 body:has(> .lp) { background: #E4E8E6; }
 @media (max-width: 900px) { body:has(> .lp) { background: var(--surface, #fff); } }
+
+/* DREI MASSE. Nummerierte Liste statt Karten: sie sind eine Reihenfolge (passt es → kann
+   ich gewinnen → was kostet es), keine gleichwertigen Kacheln. Die Ziffer trägt das. */
+.lp-masse-lede { font-size: 15px; line-height: 1.65; color: var(--ink-700, #33453F);
+  max-width: 62ch; margin: -14px 0 26px; }
+.lp-masse { list-style: none; counter-reset: masse; display: grid;
+  grid-template-columns: repeat(3, 1fr); gap: 26px; margin: 0 0 18px; padding: 0; }
+.lp-masse li { counter-increment: masse; padding-top: 16px;
+  border-top: 2px solid var(--signal-deep, #067A55); }
+.lp-masse li:nth-child(2) { border-top-color: var(--signal, #10B981); }
+.lp-masse li:nth-child(3) { border-top-color: var(--ink-300, #B7C2BC); }
+.lp-masse-k { display: block; font-size: 11px; font-weight: 700; letter-spacing: .08em;
+  text-transform: uppercase; color: var(--ink-400, #8C9B95); margin-bottom: 6px; }
+.lp-masse-k::before { content: counter(masse) " · "; color: var(--ink-300, #B7C2BC); }
+.lp-masse h3 { font-size: 17px; font-weight: 650; letter-spacing: -.015em; margin: 0 0 8px; }
+.lp-masse p { font-size: 13.5px; line-height: 1.65; color: var(--ink-700, #33453F); margin: 0; }
+.lp-masse a { color: var(--signal-deep, #067A55); font-weight: 600; }
+@media (max-width: 820px) { .lp-masse { grid-template-columns: 1fr; gap: 20px; } }

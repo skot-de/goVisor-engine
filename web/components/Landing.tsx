@@ -36,6 +36,13 @@ type Zahlen = {
   fachgebiete: { schluessel: string; label: string; offen: number }[];
   beispiel: { titel: string; kaeufer: string; region: string; frist: string; punkte: Punkt[] } | null;
   check?: Check;
+  masse?: {
+    offen: number;
+    verdraengbar: Record<string, number>;
+    buergschaft: Record<string, number>;
+    bindefrist: { n: number; median: number | null; p90: number | null };
+    zuschlag: Record<string, number>;
+  };
 };
 
 const LAND_NAME: Record<string, string> = { DE: "Deutschland", AT: "Österreich", CH: "Schweiz" };
@@ -226,6 +233,61 @@ export async function Landing() {
           {" · "}Amtliche Quellen: TED und die nationalen Portale. Kein Zukauf, keine
           Zweitverwertung. Stand {new Date(z.stand).toLocaleDateString("de-DE")}.
         </p>
+      ) : null}
+
+      {/* DREI MASSE. Aus der Vorlage `INPUT/…/govisor-landing-v28.html` („KPIs die wirklich
+          helfen: Relevanz, Chance, Aufwand"). Nachgemessen tragen davon ohne Konto nur zwei
+          etwas: `relevanz` steht bei allen 30.627 offenen Vorgängen auf „na", weil sie erst
+          im Abgleich mit einem Profil entsteht, und ein Feld `chance` ist durchgehend leer.
+          Deshalb steht hier bei der Relevanz kein Wert, sondern der Verweis auf den Check
+          darüber — und die beiden anderen tragen gemessene Zahlen statt Balken. */}
+      {z?.masse ? (
+        <section className="lp-block" id="masse">
+          <h2 className="lp-h2">Drei Masse, die die Entscheidung tragen</h2>
+          <p className="lp-masse-lede">
+            Eine Ausschreibung zu finden ist das Leichte. Die Frage ist, ob sie zu euch passt,
+            ob ihr sie gewinnen könnt und was der Versuch kostet.
+          </p>
+          <ol className="lp-masse">
+            <li>
+              <span className="lp-masse-k">Relevanz</span>
+              <h3>Passt sie zu euch?</h3>
+              <p>
+                Der Abgleich eurer Nachweise mit dem, was in den Unterlagen verlangt wird.
+                Diese Zahl gibt es nur mit Profil, deshalb steht hier keine: probiert sie
+                oben im <a href="#check">Eignungs-Check</a> aus, ohne Anmeldung.
+              </p>
+            </li>
+            <li>
+              <span className="lp-masse-k">Chance</span>
+              <h3>Könnt ihr gewinnen?</h3>
+              <p>
+                Wie fest der bisherige Anbieter sitzt, aus Bieterzahl, Vorgeschichte und
+                Zuschlagsmuster. Bei <b>{nf(z.masse.verdraengbar.hoch ?? 0)}</b> der{" "}
+                {nf(z.masse.offen)} offenen Vergaben ist er verdrängbar, bei{" "}
+                {nf(z.masse.verdraengbar.niedrig ?? 0)} sitzt er fest. Wo die Belege fehlen,
+                steht kein Wert statt eines geratenen: {nf(z.masse.verdraengbar.na ?? 0)} Fälle.
+              </p>
+            </li>
+            <li>
+              <span className="lp-masse-k">Aufwand</span>
+              <h3>Was kostet der Versuch?</h3>
+              <p>
+                Bindefrist, Bürgschaft, Zuschlagskriterien. Die Bindefrist liegt im Median bei{" "}
+                <b>{z.masse.bindefrist.median ?? "?"} Tagen</b>, im oberen Zehntel bei{" "}
+                {z.masse.bindefrist.p90 ?? "?"}; eine Bürgschaft ist bei{" "}
+                {nf(z.masse.buergschaft.ja ?? 0)} Verfahren belegt, und bei{" "}
+                {nf(z.masse.zuschlag.preis ?? 0)} entscheidet allein der Preis.
+              </p>
+            </li>
+          </ol>
+          <p className="lp-klein">
+            Die Aufwandsangaben stammen aus den ausgewerteten Vergabeunterlagen und fehlen
+            dort, wo noch keine ausgewertet sind: Bindefrist aus {nf(z.masse.bindefrist.n)}{" "}
+            Verfahren, Zuschlagskriterien aus{" "}
+            {nf((z.masse.zuschlag.preis ?? 0) + (z.masse.zuschlag.gemischt ?? 0))}.
+          </p>
+        </section>
       ) : null}
 
       <section className="lp-block" id="arbeitsweise">

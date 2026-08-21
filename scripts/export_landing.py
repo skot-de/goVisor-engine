@@ -15,6 +15,7 @@ Aufruf::  scripts/export_landing.py
 from __future__ import annotations
 
 import json
+from collections import Counter
 from datetime import date
 from pathlib import Path
 
@@ -463,6 +464,52 @@ def main() -> int:
         except Exception:                                      # noqa: BLE001
             return 0
 
+    # ── DREI MASSE, DIE DIE ENTSCHEIDUNG TRAGEN ─────────────────────────────────────────
+    # Die Vorlage (`INPUT/…/govisor-landing-v28.html`) bewirbt „Relevanz, Chance, Aufwand".
+    # Nachgemessen tragen davon ohne Konto nur ZWEI etwas: `relevanz` steht bei allen 30.627
+    # offenen Vorgängen auf „na" (sie entsteht erst im Abgleich mit einem Profil), und ein
+    # Feld `chance` ist durchgehend leer. Was es wirklich gibt, ist die Verdrängbarkeit des
+    # Amtsinhabers (`wechsel`) als Chance-Achse und die Aufwandsseite aus Bindefrist,
+    # Bürgschaft und Zuschlagskriterien. Genau das steht hier — mit den Lücken, die dazu
+    # gehören: die Aufwandsangaben kommen aus den Unterlagen und fehlen, wo keine ausgewertet
+    # sind.
+    from statistics import median as _median
+
+    verdraengbar = Counter()
+    buergschaft = Counter()
+    bindefristen: list[int] = []
+    zuschlagsart = Counter()
+    for f in fach:
+        try:
+            leads = json.loads((ROOT / "web/data" / f"leads-{f['schluessel']}.json")
+                               .read_text(encoding="utf-8"))
+            leads = leads if isinstance(leads, list) else list(leads.values())
+        except Exception:                                      # noqa: BLE001
+            continue
+        for l in leads:
+            if not (isinstance(l.get("endTage"), int) and l["endTage"] >= 0):
+                continue
+            verdraengbar[l.get("wechsel") or "na"] += 1
+            a = l.get("anf") or {}
+            buergschaft["ja" if a.get("buergschaft") is True
+                        else "nein" if a.get("buergschaft") is False else "unbekannt"] += 1
+            if isinstance(a.get("bindefristTage"), int):
+                bindefristen.append(a["bindefristTage"])
+            zk = l.get("zuschlag") or []
+            zuschlagsart["unbekannt" if not zk
+                         else "preis" if len(zk) == 1 and zk[0].get("art") == "preis"
+                         else "gemischt"] += 1
+    bindefristen.sort()
+    masse = {
+        "offen": sum(verdraengbar.values()),
+        "verdraengbar": dict(verdraengbar),
+        "buergschaft": dict(buergschaft),
+        "bindefrist": {"n": len(bindefristen),
+                       "median": int(_median(bindefristen)) if bindefristen else None,
+                       "p90": bindefristen[int(len(bindefristen) * 0.9)] if bindefristen else None},
+        "zuschlag": dict(zuschlagsart),
+    }
+
     # ── EIN ECHTES BEISPIEL ──────────────────────────────────────────────────────────────
     # Die Startseite behauptet, dass zu jeder Anforderung das woertliche Zitat danebensteht.
     # Das kann man schreiben — oder zeigen. Gezeigt wird ein ECHTER offener Vorgang mit
@@ -525,6 +572,7 @@ def main() -> int:
         "fachgebiete": fach,
         "beispiel": beispiel,
         "check": eignungs_check(ROOT, fach, analysen_fuer_check),
+        "masse": masse,
     }
     ZIEL.write_text(json.dumps(daten, ensure_ascii=False), encoding="utf-8")
     print(f"  Startseite: {gesamt:,} Vergaben ({offen:,} offen) aus {len(laender)} Ländern "
