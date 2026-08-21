@@ -58,3 +58,47 @@ def test_normalisation_bridges_spelling_noise():
 
 def test_blocking_key_skips_noise_tokens():
     assert blocking_key("Fa.Hentrich GmbH Gebäudereinigung") == "hentrich"
+
+
+def test_gruppenname_geht_an_den_stamm():
+    """⚠ Eine Gruppe hiess nach der falschen Tochter.
+
+    Sven im Testlauf mit einer @netgo.de-Adresse (2026-08-21): „ich glaube die netgo ost ist
+    nicht die zentrale netgo einheit oder?" Stimmte. Die Gruppe war inhaltlich richtig
+    (14 Mitglieder, 98 Zuschlaege), aber der Anzeigename kam aus der Regel „haeufigster
+    canonical_name" — und „netgo Ost GmbH" klebte an SECHS Entitaeten (dieselbe Firma,
+    sechsmal verschieden geschrieben: HRB84278, HRB84278B, „HRB84278B,", HRB84278BerlinCh,
+    zwei Umsatzsteuer-IDs), waehrend „NETGO GmbH" nur an einer klebte, dafuer mit
+    Handelsregister-Beleg und den meisten Zuschlaegen.
+
+    Haeufigkeit misst also, wie zerfranst die Schreibweise einer Tochter ist, nicht wer die
+    Mutter ist. Jetzt gewinnt der STAMM: das Mitglied, dessen Name in den Namen der anderen
+    steckt.
+    """
+    import pathlib
+    import duckdb
+    wurzel = pathlib.Path(__file__).resolve().parent.parent
+    quelle = (wurzel / "scripts" / "export_suppliers.py").read_text(encoding="utf-8")
+    i = quelle.index('NAMEN_SQL = """') + len('NAMEN_SQL = """')
+    sql = quelle[i:quelle.index('"""', i)]
+
+    con = duckdb.connect()
+    zeilen = [("grp:netgo", n, f"n{k}") for k, n in enumerate(
+        ["NETGO GmbH"] * 1                      # eine Entitaet, aber die Mutter
+        + ["netgo Ost GmbH"] * 6                # sechs Schreibweisen derselben Tochter
+        + ["netgo Süd GmbH", "netgo Nürnberg GmbH", "netgo Gießen GmbH"])]
+    con.execute("CREATE TEMP TABLE w (identity_id VARCHAR, canonical_name VARCHAR, notice_id VARCHAR)")
+    con.executemany("INSERT INTO w VALUES (?, ?, ?)", zeilen)
+    con.execute("CREATE TEMP TABLE tops AS SELECT DISTINCT identity_id FROM w")
+    con.execute(sql)
+    name = con.execute("SELECT name FROM namen").fetchone()[0]
+    assert name == "NETGO GmbH", f"die Gruppe heisst nach der Tochter: {name}"
+
+    # Gegenprobe: ohne Stamm entscheidet weiterhin die Haeufigkeit.
+    con.execute("DELETE FROM w")
+    con.executemany("INSERT INTO w VALUES (?, ?, ?)", [
+        ("grp:x", "Meier Bau GmbH", "a"), ("grp:x", "Meier Bau GmbH", "b"),
+        ("grp:x", "Schulze Tief GmbH", "c")])
+    con.execute("CREATE OR REPLACE TEMP TABLE tops AS SELECT DISTINCT identity_id FROM w")
+    con.execute(sql)
+    assert con.execute("SELECT name FROM namen").fetchone()[0] == "Meier Bau GmbH"

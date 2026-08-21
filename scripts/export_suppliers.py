@@ -66,15 +66,43 @@ con.execute(f"""CREATE OR REPLACE TEMP TABLE tops AS
   FROM w GROUP BY 1 HAVING count(DISTINCT notice_id) >= {MIN_WINS}
   ORDER BY 2 DESC, identity_id LIMIT {MAX_ROWS}""")
 
-# Repräsentativer Name = häufigster canonical_name der Gruppe; Aliase = die übrigen
-con.execute("""CREATE OR REPLACE TEMP TABLE namen AS
+# ── WIE DIE GRUPPE HEISST ───────────────────────────────────────────────────────────
+# ⚠ Bis zum 2026-08-21 galt „häufigster canonical_name der Gruppe". Sven beim Testlauf mit
+# einer @netgo.de-Adresse: „ich glaube die netgo ost ist nicht die zentrale netgo einheit
+# oder?" Genau so war es. Die Gruppe `grp:netgo` ist inhaltlich richtig (14 Mitglieder,
+# 98 Zuschläge), sie hiess nur nach der falschen Tochter: „netgo Ost GmbH" klebt an SECHS
+# Entitäten (dieselbe Firma, sechsmal verschieden geschrieben — HRB84278, HRB84278B,
+# „HRB84278B,", HRB84278BerlinCh, zwei Umsatzsteuer-IDs), „NETGO GmbH" nur an einer, dafür
+# mit Handelsregister-Beleg und den meisten Zuschlägen (40 gegen 20).
+#
+# Häufigkeit misst also, wie zerfranst die Schreibweise einer Tochter ist, nicht wer die
+# Mutter ist. Der Name geht deshalb jetzt an den STAMM: an das Mitglied, dessen Name in den
+# Namen der anderen steckt („netgo" in „netgo Ost", „netgo Süd", „netgo Nürnberg" …). Nur
+# wenn es keinen solchen Stamm gibt, entscheidet wie bisher die Häufigkeit.
+# Als Konstante, damit die Regel ohne den ganzen Export prüfbar ist
+# (tests/test_entities.py::test_gruppenname_geht_an_den_stamm).
+NAMEN_SQL = """CREATE OR REPLACE TEMP TABLE namen AS
   WITH cnt AS (SELECT identity_id, canonical_name, count(*) c FROM w
                WHERE canonical_name IS NOT NULL GROUP BY 1,2),
-  rk AS (SELECT *, row_number() OVER (PARTITION BY identity_id ORDER BY c DESC, length(canonical_name), canonical_name) rn FROM cnt)
+  -- Rechtsform und Zeichensetzung weg, damit „NETGO GmbH" und „netgo Ost GmbH"
+  -- vergleichbar werden.
+  norm AS (SELECT *, trim(regexp_replace(lower(canonical_name),
+             '(gmbh|ag|se|kg|mbh|co\\.?|&|,|\\.)', ' ', 'g')) AS kern FROM cnt),
+  -- Wie viele ANDERE Mitglieder fangen mit diesem Kern an? Das ist die Stammeigenschaft.
+  stamm AS (SELECT a.identity_id, a.canonical_name, a.c, a.kern,
+                   (SELECT count(*) FROM norm b
+                     WHERE b.identity_id = a.identity_id AND b.kern <> a.kern
+                       AND b.kern LIKE a.kern || '%') AS kinder
+            FROM norm a),
+  rk AS (SELECT *, row_number() OVER (PARTITION BY identity_id
+                     ORDER BY (kinder >= 2) DESC, kinder DESC, c DESC,
+                              length(canonical_name), canonical_name) rn
+         FROM stamm)
   SELECT identity_id,
          max(canonical_name) FILTER (WHERE rn = 1) AS name,
          list(DISTINCT canonical_name ORDER BY canonical_name) AS aliase
-  FROM rk WHERE identity_id IN (SELECT identity_id FROM tops) GROUP BY 1""")
+  FROM rk WHERE identity_id IN (SELECT identity_id FROM tops) GROUP BY 1"""
+con.execute(NAMEN_SQL)
 
 # Top-CPV-Felder je Identität (Schwerpunkte)
 con.execute(f"""CREATE OR REPLACE TEMP TABLE felder AS
