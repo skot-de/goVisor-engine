@@ -959,37 +959,57 @@ def test_ein_lauf_eine_logdatei():
 
 # ══ EIN Rahmen — auch fuer Anmelden und Onboarding (2026-08-16) ═══════════════════════
 
-def test_es_gibt_nur_einen_rahmen():
-    """Sven: „nicht zwei Rahmen, sondern nur einen".
+def test_es_gibt_nur_einen_rahmen_pro_welt():
+    """Sven, 2026-08-16: „nicht zwei Rahmen, sondern nur einen".
 
     Mein erster Anlauf zog Anmelden/Registrieren/Profilwechsel in einen EIGENEN Rahmen VOR
     der App und begruendete das mit „der Uebergang ist bewusst ein Schnitt". Das war eine
     Behauptung ueber einen Zustand, den die Anwendung nicht kennt: sie ist **anonym
-    nutzbar** (Free-Tier) — Leads, Merkliste und Unternehmen antworten ohne Anmeldung mit
-    200. Ein Rahmen VOR der App unterstellt eine Schranke, die es nicht gibt.
+    nutzbar** (Free-Tier). Ein Rahmen VOR der App unterstellte eine Schranke, die es nicht
+    gibt.
 
-    Jetzt tragen alle drei `AppTop` + `AppRail`. Die Rail IST der Ausgang; die Sackgasse,
-    gegen die wir vorher einen Link gebaut hatten, kann gar nicht mehr entstehen.
+    ⚠ Am 2026-08-21 hat Sven die Aufteilung geschaerft: „was ist wenn man startseite →
+    registrierung macht und dann anmeldung in der app?" Der Bruch laesst sich nicht
+    vermeiden, nur platzieren — und er gehoert dorthin, wo jemand etwas BEKOMMT (das Konto
+    steht, die App klappt auf), nicht dorthin, wo er etwas gibt (E-Mail und Passwort).
+
+    Daraus folgt fuer diesen Test: die Regel „ein Rahmen" gilt weiter, aber JE WELT.
+    - `/login` und `/start` sind Routine fuer Leute, die das Werkzeug kennen: App-Rahmen,
+      keine eigene Kopfzeile.
+    - `/onboarding` traegt BEIDE — die Buehne der Startseite fuer Konto und Firma, den
+      App-Rahmen ab Profil. Was der Test hier festhaelt, ist der Umschaltpunkt: er haengt
+      an der STUFE, nicht am Bildschirm (sonst klappt die App mitten in Schritt 2 auf).
     """
     web = ROOT / "web"
-    for seite in ("login", "onboarding", "start"):
+    for seite in ("login", "start"):
         q = (web / "app" / seite / "page.tsx").read_text(encoding="utf-8")
         assert "AppTop" in q and "AppRail" in q, f"/{seite} nutzt den App-Rahmen nicht"
         assert "<header" not in q, f"/{seite} hat wieder eine eigene Kopfzeile"
-    assert not (web / "components" / "EinstiegShell.tsx").exists(), \
-        "der zweite Rahmen ist zurueck"
+
+    onb = (web / "app" / "onboarding" / "page.tsx").read_text(encoding="utf-8")
+    assert "AppTop" in onb and "AppRail" in onb, "/onboarding verliert den App-Rahmen"
+    assert 'className="lp lp-anmeldung"' in onb, "/onboarding hat die Buehne verloren"
+    assert "const aufBuehne = cur <= 1;" in onb,         "der Umschaltpunkt haengt nicht mehr an der Stufe — dann klappt die App mitten in "         "Schritt 2 auf (gemessen: Bildschirme vorschlag/kandidaten/branche/region)"
+    assert not (web / "components" / "EinstiegShell.tsx").exists(),         "der zweite Rahmen ist zurueck"
 
 
-def test_onboarding_schritte_stehen_in_der_bereichsleiste():
-    """Dieselbe Frage („wo bin ich"), derselbe Ort wie die Abschnitte von Strategie und die
-    Themen von Bausteinen. Die Regeln mussten mitwandern: sie waren auf den alten Bereich
-    gescoped und wirkten in der Leiste nicht — Ergebnis war „1Konto2Firma3Profil"."""
+def test_onboarding_schritte_haben_in_beiden_welten_regeln():
+    """Dieselbe Frage („wo bin ich"), in beiden Welten beantwortet.
+
+    Die Falle ist beide Male dieselbe und hat beide Male zugeschlagen: die Schritt-Regeln
+    sind auf einen Bereich gescoped. Erst hingen sie an `zugang.css` und wirkten in der
+    Bereichsleiste nicht, jetzt haengen sie an `.bereichsleiste` und wirkten auf der Buehne
+    nicht — Ergebnis war zweimal „1Konto2Firma3Profil4Fertig".
+    """
     web = ROOT / "web"
     onb = (web / "app" / "onboarding" / "page.tsx").read_text(encoding="utf-8")
     i = onb.index('className="bereichsleiste"')
-    assert 'className="steps"' in onb[i:i + 400], "die Schrittanzeige sitzt nicht in der Leiste"
-    css = (web / "app" / "explorer.css").read_text(encoding="utf-8")
-    assert ".bereichsleiste .step" in css, "die Schritt-Regeln fehlen in der Leiste"
+    assert "schrittleiste" in onb[i:i + 200], "die Schrittanzeige fehlt in der Leiste"
+    j = onb.index('className="lp-anmeldung-schritte"')
+    assert "schrittleiste" in onb[j:j + 200], "die Schrittanzeige fehlt auf der Buehne"
+
+    assert ".bereichsleiste .step" in (web / "app" / "explorer.css").read_text(encoding="utf-8"),         "die Schritt-Regeln fehlen fuer den App-Rahmen"
+    assert ".lp-anmeldung .step" in (web / "app" / "landing-oeffentlich.css").read_text(encoding="utf-8"),         "die Schritt-Regeln fehlen fuer die Buehne"
 
 
 def test_kein_zweiter_ausgang_mehr_noetig():
