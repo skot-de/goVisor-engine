@@ -72,6 +72,13 @@ export type Check = {
 };
 
 const nf = (n: number) => n.toLocaleString("de-DE");
+/** Welche Regionsschlüssel zu welchem Land gehören — nur DE ist unterhalb der Landesebene
+ *  aufgelöst (16 Länder); AT und CH tragen im Bestand keine belastbare Regionalzuordnung. */
+const LAENDER: Record<string, string[]> = {
+  DE: ["Baden-Württemberg", "Bayern", "Berlin", "Brandenburg", "Bremen", "Hamburg", "Hessen",
+       "Mecklenburg-Vorpommern", "Niedersachsen", "Nordrhein-Westfalen", "Rheinland-Pfalz",
+       "Saarland", "Sachsen", "Sachsen-Anhalt", "Schleswig-Holstein", "Thüringen"],
+};
 const ZAHLWORT: Record<number, string> = {
   2: "Zwei", 3: "Drei", 4: "Vier", 5: "Fünf", 6: "Sechs", 7: "Sieben", 8: "Acht",
 };
@@ -469,10 +476,35 @@ export function EignungsCheck({ check, fachgebiete }: {
           <div className="ec-auswahl-innen">
           <label className="ec-regionwahl">
             <span>Region</span>
+            {/* Nach Ländern gruppiert wie in der Vorlage: das Aufklappmenü listete vorher
+                „überall, Deutschland gesamt, Österreich, Schweiz" und dann sechzehn
+                Bundesländer ohne erkennbare Zugehörigkeit. `optgroup` zieht die Trennlinien
+                und beschriftet sie, das macht der Browser selbst. */}
             <select value={region} onChange={(e) => setRegion(e.target.value)}>
-              {check.regionen.map((r) => (
+              {check.regionen.filter((r) => r.schluessel === "alle").map((r) => (
                 <option key={r.schluessel} value={r.schluessel}>{r.label}</option>
               ))}
+              <optgroup label="Deutschland">
+                {check.regionen
+                  .filter((r) => r.schluessel === "DE" || LAENDER.DE.includes(r.schluessel))
+                  .map((r) => (
+                    <option key={r.schluessel} value={r.schluessel}>{r.label}</option>
+                  ))}
+              </optgroup>
+              {check.regionen.some((r) => r.schluessel === "AT") ? (
+                <optgroup label="Österreich">
+                  <option value="AT">
+                    {check.regionen.find((r) => r.schluessel === "AT")?.label ?? "Österreich"}
+                  </option>
+                </optgroup>
+              ) : null}
+              {check.regionen.some((r) => r.schluessel === "CH") ? (
+                <optgroup label="Schweiz">
+                  <option value="CH">
+                    {check.regionen.find((r) => r.schluessel === "CH")?.label ?? "Schweiz"}
+                  </option>
+                </optgroup>
+              ) : null}
             </select>
           </label>
           <p className="ec-leiste-t">Fachgebiet</p>
@@ -496,10 +528,10 @@ export function EignungsCheck({ check, fachgebiete }: {
         </div>
       </div>
 
+      {/* Eine Zeile, volle Breite: gekürzt, bis sie ohne Umbruch unter den Kasten passt. */}
       <p className="lp-klein ec-zuschnitt">
-        Gezählt sind Vorgänge mit laufender Frist. Der Zuschnitt läuft über CPV-Codes, nicht
-        über Schlagworte; was sich keinem der sechs Gebiete zuordnen lässt (Lieferungen,
-        Dienstleistungen, Sonderfälle), steht drinnen.
+        Gezählt sind Vorgänge mit laufender Frist; der Zuschnitt läuft über CPV-Codes, nicht
+        über Schlagworte. Was sich keinem der sechs Gebiete zuordnen lässt, steht drinnen.
       </p>
     </section>
   );

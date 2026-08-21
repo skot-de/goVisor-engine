@@ -125,7 +125,17 @@ export async function Landing() {
             <Link className="lp-knopf lp-knopf-gross" href="/onboarding">Kostenlos starten</Link>
             <Link className="lp-still" href="/login">Ich habe schon ein Konto</Link>
           </div>
-          <p className="lp-fussnote">Kein Vertrag, keine Kündigungsfrist.</p>
+          {/* Sven: „mach das ‚kein vertrag, keine kündigungsfrist' weg oder mach es als
+              ordentliche punkte darunter mit haken davor." Als Punkte — und sie schliessen
+              zugleich die Lücke, die unter dieser Spalte klaffte: der Beweiskasten rechts
+              ist 610 px hoch, der Text links war 300, also standen 310 px leer.
+              Dieselben drei Zusagen standen bisher unten unter dem Schlussband; sie stehen
+              jetzt nur noch hier, wo sie zur Entscheidung gehören. */}
+          <ul className="lp-zusicherungen">
+            <li>Kein Vertrag, keine Kündigungsfrist</li>
+            <li>Dauerhaft kostenfrei, nicht vierzehn Tage</li>
+            <li>Keine Zahlungsdaten, kein Verkaufsgespräch</li>
+          </ul>
         </div>
 
         {/* Der Hinweis, dass es weitergeht. Sven wollte „einen pfeil runter als andeutung" —
@@ -333,8 +343,7 @@ export async function Landing() {
             teuer. */}
         <p className="lp-preis">
           <b>Was es kostet:</b> Der Einstieg nichts. Suchen, filtern und Vergaben ansehen
-          bleibt dauerhaft frei, ohne Zahlungsdaten und ohne Frist. Bezahlt wird später die
-          Tiefe: die ausgewerteten Unterlagen und die Bewertung eines Verfahrens.
+          bleibt dauerhaft frei. Bezahlt wird die Tiefe: ausgewertete Unterlagen und Bewertung.
         </p>
       </section>
 
@@ -352,11 +361,6 @@ export async function Landing() {
         </div>
         <StartForm />
       </section>
-      <p className="lp-zusagen">
-        <span>Keine Zahlungsdaten, kein Verkaufsgespräch</span>
-        <span>Dauerhaft frei, nicht vierzehn Tage</span>
-        <span>Jederzeit kündbar, wir fragen höchstens warum</span>
-      </p>
 
       <footer className="lp-fuss">
         <img className="lp-logo lp-logo-fuss" src="/govisor-wordmark.png" alt="goVisor"
