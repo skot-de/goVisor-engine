@@ -709,3 +709,16 @@ body:has(> .lp) { background: #E4E8E6; }
   padding: 4px 10px 4px 6px; border: none; border-radius: 100px; cursor: pointer;
   font: inherit; font-size: 12px; background: none; color: var(--ink-500, #64766F); }
 .step-zurueck:hover { background: var(--surface-3, #F1F3F2); color: var(--ink-900, #12211D); }
+
+/* Knopf mit Linie statt Fläche: für die zweite Handlung neben einer ersten. Auf der Bühne
+   der Registrierung ist das die Anmeldung — sie soll auffindbar sein, aber nicht mit dem
+   Weg konkurrieren, auf dem der Besuch gerade ist. */
+/* ⚠ `.lp-nav a.lp-knopf` setzt Weiss (Klasse + Klasse + Element schlägt eine einzelne
+   Klasse). Ohne die zweite Regel steht hier weisse Schrift auf weissem Knopf — genau der
+   Fehler, der vorher schon einmal dunkle Schrift auf dunkelgrünem Knopf erzeugt hat. */
+.lp-nav a.lp-knopf-linie, .lp-knopf-linie { background: var(--surface, #fff);
+  color: var(--ink-900, #12211D);
+  border: 1px solid var(--line-strong, #CFD6D3); box-shadow: none; }
+.lp-nav a.lp-knopf-linie:hover, .lp-knopf-linie:hover { background: var(--surface-2, #FAFBFA);
+  border-color: var(--ink-400, #8C9B95); color: var(--ink-900, #12211D);
+  box-shadow: none; transform: none; }

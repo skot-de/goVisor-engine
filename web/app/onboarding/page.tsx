@@ -664,8 +664,8 @@ function testMailErlaubt(mail: string): boolean {
           <nav className="steps">
             {/* Der Rückweg steht VOR den Schritten, also dort, wo man ihn sucht, und er ist
                 in beiden Welten derselbe, weil beide dieselbe Leiste rendern. Auf dem
-                ersten Bildschirm gibt es ihn nicht — dort führt „Ich habe schon ein Konto"
-                hinaus. */}
+                ersten Bildschirm gibt es ihn nicht — dort führt der Knopf „Anmeldung"
+                oben rechts hinaus. */}
             {verlauf.length > 0 && (
               <button type="button" className="step-zurueck" onClick={zurueck}>
                 <span aria-hidden="true">←</span> {t("Zurück")}
@@ -739,7 +739,6 @@ function testMailErlaubt(mail: string): boolean {
               <button className="btn btn-p" disabled={!email.includes("@") || !pwOk || busy} onClick={kontoAnlegen}>
                 {busy ? t("Lege Konto an …") : t("Konto anlegen")}
               </button>
-              <Link className="btn btn-t" href="/login">{t("Ich habe schon ein Konto")}</Link>
             </div>
             <div className="note note-i">{t("Free-Zugang nach der Anmeldung: Lead-Liste und alle Eckdaten dauerhaft unbegrenzt, drei ausführliche Bewertungen je 30 Tage.")}</div>
           </div>
@@ -1033,7 +1032,7 @@ function testMailErlaubt(mail: string): boolean {
                  width={1004} height={252} />
           </Link>
           <nav className="lp-nav">
-            <Link href="/login">{t("Ich habe schon ein Konto")}</Link>
+            <Link className="lp-knopf lp-knopf-linie" href="/login">{t("Anmeldung")}</Link>
           </nav>
         </header>
         <div className="lp-anmeldung-schritte">{schrittleiste}</div>
