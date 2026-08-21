@@ -344,6 +344,12 @@ def test_pflicht_eintrag_verdraengt_nicht_den_parser_eintrag():
     sys.modules["_ad3"] = ad
     spec.loader.exec_module(ad)
 
+    # ⚠ KEIN echter Modellaufruf im Test. `analyze_notice` ruft `summarize()`, und das geht
+    # ueber `llm.chat` ins Netz — bezahlt. Bis zum 21.08. hat dieser Test bei JEDEM Lauf der
+    # Suite Geld ausgegeben; aufgefallen ist es erst, als die Geldwache ihn blockierte, weil
+    # das Guthaben leer war. Ein Test, der Kosten verursacht, wird irgendwann abgeschaltet.
+    ad.summarize = lambda text: {"ampel": "gelb", "ampel_grund": "", "zusammenfassung": ""}
+
     datei = "V/Vom Unternehmen auszufuellende Dokumente/Angebot.pdf"
     r = ad.analyze_notice(
         [(datei, "")],

@@ -15,6 +15,10 @@ Alle Dateien liegen unter ``.secrets/`` (gitignored). Nutzung:
 """
 from __future__ import annotations
 
+import os as _os
+import threading as _threading
+from pathlib import Path as _Path
+
 import os
 import threading
 import time
@@ -165,6 +169,112 @@ def _is_credit_error(status: int, text: str) -> bool:
     return status in (400, 403) and any(w in t for w in ("credit", "insufficient", "quota", "balance"))
 
 
+# ── GELDWACHE ──────────────────────────────────────────────────────────────────────────
+#
+# ⚠ **Sie sitzt HIER und nicht im Aufrufer.** Bis zum 21.08. stand die einzige Bremse in
+# `scripts/analyze_docs.py` (`BUDGET_USD`) — also im Produktionsweg. Jedes von Hand
+# geschriebene Skript ging daran vorbei, und genau so ist an dem Abend ein Testlauf
+# gestartet, der 1,71 $ verbraucht und **kein einziges verwertbares Ergebnis** geliefert
+# hat: erst lief er in eine Zeitgrenze, dann in ein leeres Konto. `chat()` ist die Tuer,
+# durch die jeder Aufruf geht; eine Bremse davor kann niemand versehentlich umgehen.
+#
+# Drei Grenzen, drei verschiedene Fehler:
+#   · RESERVE  — was NIE ausgegeben wird. Schuetzt den Tagesbetrieb davor, dass ein
+#                Versuch das Konto leerraeumt. Genau das ist passiert.
+#   · LIMIT    — was EIN Prozess hoechstens ausgeben darf. Fängt Ausreisser und Schleifen.
+#   · TAKT     — wie oft nachgefragt wird. Der Kontostand kostet einen HTTP-Aufruf; ihn vor
+#                jedem Chat zu holen waere teurer als das, was er schuetzt.
+RESERVE_USD = float(_os.environ.get("GOVISOR_RESERVE_USD", "1.00"))
+LIMIT_USD = float(_os.environ.get("GOVISOR_LIMIT_USD", "5.00"))
+_TAKT = int(_os.environ.get("GOVISOR_BUDGET_TAKT", "20"))
+
+_geld_sperre = _threading.Lock()
+_geld = {"start": None, "stand": None, "n": 0, "gewarnt": False}
+
+
+class BudgetErschoepft(RuntimeError):
+    """Die Geldwache hat abgebrochen — kein Anbieterfehler, eine Entscheidung."""
+
+
+def kontostand(frisch: bool = False) -> float | None:
+    """Verbleibendes OpenRouter-Guthaben in Dollar. ``None``, wenn nicht ermittelbar.
+
+    ⚠ Ueber `curl`, nicht ueber `urllib`. Auf dieser Maschine scheitert urllib an der
+    TLS-Kette und gibt still `None` zurueck — eine Bremse, die still ausfaellt, ist
+    schlimmer als keine, weil sie Sicherheit vortaeuscht.
+    """
+    if not frisch and _geld["stand"] is not None:
+        return _geld["stand"]
+    import json as _json
+    import subprocess as _sp
+    schluessel = _os.environ.get("OPENROUTER_API_KEY")
+    if not schluessel:
+        pfad = _Path(__file__).resolve().parent.parent / ".secrets" / "openrouter.key"
+        if pfad.exists():
+            schluessel = pfad.read_text(encoding="utf-8").strip()
+    if not schluessel:
+        return None
+    try:
+        r = _sp.run(["curl", "-s", "--max-time", "20", "-H",
+                     f"Authorization: Bearer {schluessel}",
+                     "https://openrouter.ai/api/v1/credits"],
+                    capture_output=True, text=True, timeout=30)
+        d = _json.loads(r.stdout)["data"]
+        _geld["stand"] = float(d["total_credits"]) - float(d["total_usage"])
+        return _geld["stand"]
+    except Exception:                                         # noqa: BLE001
+        return None
+
+
+def _geldwache() -> None:
+    """Vor jedem Chat. Wirft `BudgetErschoepft`, wenn Reserve oder Limit gerissen sind.
+
+    ⚠ **Faellt der Kontostand nicht zu ermitteln, wird NICHT blockiert.** Ein Netzproblem
+    darf den Tagesbetrieb nicht anhalten. Gewarnt wird trotzdem, einmal je Prozess — sonst
+    laeuft man monatelang ohne Schutz und haelt sich fuer geschuetzt.
+    """
+    with _geld_sperre:
+        _geld["n"] += 1
+        erster = _geld["start"] is None
+        faellig = erster or _geld["n"] % _TAKT == 0
+    if not faellig:
+        return
+    stand = kontostand(frisch=True)
+    if stand is None:
+        with _geld_sperre:
+            if not _geld["gewarnt"]:
+                _geld["gewarnt"] = True
+                print("  ⚠ Kontostand nicht ermittelbar — die Geldwache ist AUS.", flush=True)
+        return
+    with _geld_sperre:
+        if _geld["start"] is None:
+            _geld["start"] = stand
+        ausgegeben = _geld["start"] - stand
+    if stand < RESERVE_USD:
+        raise BudgetErschoepft(
+            f"Guthaben {stand:.2f} $ unter der Reserve von {RESERVE_USD:.2f} $ — "
+            f"abgebrochen, damit der Tagesbetrieb weiterlaufen kann. "
+            f"Aufladen: openrouter.ai/credits")
+    if LIMIT_USD and ausgegeben > LIMIT_USD:
+        raise BudgetErschoepft(
+            f"dieser Lauf hat {ausgegeben:.2f} $ verbraucht (Limit {LIMIT_USD:.2f} $) — "
+            f"abgebrochen. Hoeher setzen: GOVISOR_LIMIT_USD")
+
+
+def probe(model: str | None = None) -> dict:
+    """EIN billiger Aufruf, bevor ein Stapel startet — mit Kosten davor und danach.
+
+    ⚠ Der Grund steht in der Geldwache oben: am 21.08. sind 80 Aufrufe losgelaufen, ohne
+    dass je einer bewiesen hatte, dass die Mechanik traegt. Ein Cent vorher haette den
+    ganzen Abend gerettet.
+    """
+    vorher = kontostand(frisch=True)
+    antwort = chat([{"role": "user", "content": "Antworte nur mit: ok"}], model=model)
+    nachher = kontostand(frisch=True)
+    return {"antwort": (antwort or "").strip()[:40], "vorher": vorher, "nachher": nachher,
+            "kosten": None if None in (vorher, nachher) else round(vorher - nachher, 4)}
+
+
 class AllKeysExhausted(RuntimeError):
     pass
 
@@ -180,6 +290,7 @@ def chat(messages: list[dict], model: str | None = None, temperature: float = 0,
     ist ein OpenRouter-Name und waere bei Cerebras ein Fehler. Ohne Angabe nimmt jeder
     Anbieter sein eigenes Standardmodell.
     """
+    _geldwache()
     versuchte = 0
     last_err = "?"
     # `anbieter` zwingt EINEN Anbieter — fuer Vergleichsmessungen und fuer Verfahren, die

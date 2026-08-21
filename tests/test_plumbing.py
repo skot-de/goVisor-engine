@@ -3092,3 +3092,105 @@ def test_staatsanzeiger_frameset_wird_verpackt_und_ehrlich_benannt(tmp_path):
     assert "accept_downloads=True" in quelle, "ohne das faengt der Kontext keinen Download"
     # ⚠ Keine gebundene Methode als Horcher — Playwright heftet ihm ein Attribut an.
     assert "def _sammeln(dl):" in quelle
+
+
+def test_geldwache_sitzt_an_der_tuer_und_nicht_im_aufrufer():
+    """Jede Bremse, die im Aufrufer sitzt, wird vom naechsten Skript umgangen.
+
+    Bis zum 21.08. stand die einzige Grenze (`BUDGET_USD`) in `scripts/analyze_docs.py`.
+    Ein von Hand geschriebener Testlauf ging daran vorbei, verbrauchte 1,71 $ und lieferte
+    **kein einziges verwertbares Ergebnis**: erst Zeitgrenze, dann leeres Konto. `chat()`
+    ist die Tuer, durch die jeder Aufruf geht.
+    """
+    import inspect
+
+    from govisor import llm
+
+    assert "_geldwache()" in inspect.getsource(llm.chat), "chat() prueft das Budget nicht"
+    assert hasattr(llm, "BudgetErschoepft")
+    assert llm.RESERVE_USD > 0, "ohne Reserve kann ein Versuch den Tagesbetrieb aushungern"
+
+
+def test_reserve_schuetzt_den_tagesbetrieb(monkeypatch):
+    """⚠ Der Fall, der es ausgeloest hat: ein Versuch raeumt das Konto leer, und der
+    Analyse-Arbeiter steht danach ohne Guthaben da."""
+    from govisor import llm
+
+    monkeypatch.setattr(llm, "kontostand", lambda frisch=False: 0.40)
+    monkeypatch.setattr(llm, "RESERVE_USD", 1.00)
+    monkeypatch.setattr(llm, "_geld", {"start": None, "stand": None, "n": 0, "gewarnt": False})
+    with pytest.raises(llm.BudgetErschoepft) as e:
+        llm._geldwache()
+    assert "Reserve" in str(e.value)
+
+
+def test_lauf_limit_faengt_ausreisser(monkeypatch):
+    """Zweite Grenze, anderer Fehler: nicht „Konto leer", sondern „dieser Lauf laeuft weg"."""
+    from govisor import llm
+
+    monkeypatch.setattr(llm, "kontostand", lambda frisch=False: 90.0)
+    monkeypatch.setattr(llm, "RESERVE_USD", 0.0)
+    monkeypatch.setattr(llm, "LIMIT_USD", 5.0)
+    monkeypatch.setattr(llm, "_geld",
+                        {"start": 100.0, "stand": 90.0, "n": llm._TAKT - 1, "gewarnt": False})
+    with pytest.raises(llm.BudgetErschoepft) as e:
+        llm._geldwache()
+    assert "Limit" in str(e.value)
+
+
+def test_geldwache_blockiert_nicht_wenn_der_stand_unbekannt_ist(monkeypatch, capsys):
+    """⚠ Ein Netzproblem darf den Tagesbetrieb nicht anhalten — aber es muss auffallen.
+
+    Eine Bremse, die still ausfaellt, ist schlimmer als keine: sie taeuscht Sicherheit vor.
+    Genau das ist der frueheren `_kontostand`-Fassung passiert, die urllib benutzte und an
+    der TLS-Kette dieser Maschine scheiterte.
+    """
+    from govisor import llm
+
+    monkeypatch.setattr(llm, "kontostand", lambda frisch=False: None)
+    monkeypatch.setattr(llm, "_geld", {"start": None, "stand": None, "n": 0, "gewarnt": False})
+    llm._geldwache()
+    llm._geldwache()
+    assert "Geldwache ist AUS" in capsys.readouterr().out
+
+
+def test_probe_gibt_es_fuer_den_einen_aufruf_vorher():
+    """80 Aufrufe sind losgelaufen, ohne dass je einer die Mechanik bewiesen hatte."""
+    from govisor import llm
+
+    assert callable(llm.probe)
+
+
+def test_kein_test_gibt_geld_aus():
+    """⚠ Bis zum 21.08. hat ein Test bei JEDEM Lauf der Suite echte Modellaufrufe gemacht.
+
+    `analyze_notice` ruft `summarize()`, und das geht über `llm.chat` ins Netz. Aufgefallen
+    ist es erst, als die frisch gebaute Geldwache ihn blockierte — vorher lief es still
+    durch, solange Guthaben da war. Ein Test, der Kosten verursacht, wird irgendwann
+    abgeschaltet statt repariert.
+
+    Der Test hier ist grob: er verlangt, dass jede Testdatei, die `analyze_notice` oder
+    `summarize` benutzt, den Modellaufruf auch ersetzt.
+    """
+    verz = pathlib.Path(__file__).resolve().parent
+    for pfad in sorted(verz.glob("test_*.py")):
+        quelle = pfad.read_text(encoding="utf-8")
+        if "analyze_notice(" not in quelle and "summarize(" not in quelle:
+            continue
+        assert ("summarize = lambda" in quelle or "monkeypatch.setattr" in quelle
+                or "chat_fn=" in quelle), (
+            f"{pfad.name} ruft die Analyse, ohne den Modellaufruf zu ersetzen")
+
+
+def test_budgetbremse_rechnet_in_die_richtige_richtung():
+    """⚠ Restguthaben FÄLLT, Verbrauch STEIGT — wer das verwechselt, hat keine Bremse.
+
+    Beim Zusammenlegen am 21.08. wurde `_kontostand()` (Verbrauch, steigend) durch
+    `_restguthaben()` (Guthaben, fallend) ersetzt, die Rechnung `jetzt - start >= BUDGET`
+    aber stehen gelassen. Die Differenz wäre negativ gewesen und die Notbremse hätte
+    NIE ausgelöst — sichtbar wird so ein Fehler erst, wenn das Geld weg ist.
+    """
+    quelle = (pathlib.Path(__file__).resolve().parent.parent
+              / "scripts" / "analyze_docs.py").read_text(encoding="utf-8")
+    assert "start_usd - jetzt >= BUDGET_USD" in quelle
+    assert "jetzt - start_usd" not in quelle, "die Bremse rechnet verkehrt herum"

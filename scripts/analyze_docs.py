@@ -30,6 +30,7 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 from govisor.llm import (chat, letzter_anbieter, anbieter_stand,  # noqa: E402
                          AllKeysExhausted)
+from govisor.llm import BudgetErschoepft, kontostand as _llm_kontostand  # noqa: E402
 from govisor import doctypes, docextract, docparse, doctax, docpipe  # noqa: E402
 from govisor.docpipe import SQL_BRAUCHBAR  # noqa: E402
 
@@ -60,21 +61,17 @@ BUDGET_USD = float(os.environ.get("BUDGET_USD", "0") or 0)
 NUR_OFFENE = os.environ.get("NUR_OFFENE", "") == "1"
 
 
-def _kontostand() -> float | None:
-    """Verbrauch laut OpenRouter, oder None wenn nicht ermittelbar."""
-    # ⚠ curl, NICHT urllib: urllib scheitert hier an der TLS-Kette und liefert None — und
-    # eine Notbremse, die still None zurueckgibt, ist keine Bremse. Genau so lief der erste
-    # Entwurf am 21.08. „ungebremst" an.
-    import subprocess
-    try:
-        schluessel = (ROOT / ".secrets" / "openrouter.key").read_text().splitlines()[0].strip()
-        r = subprocess.run(["curl", "-s", "--max-time", "20",
-                            "-H", f"Authorization: Bearer {schluessel}",
-                            "https://openrouter.ai/api/v1/key"],
-                           capture_output=True, text=True, timeout=30)
-        return float(json.loads(r.stdout)["data"]["usage"])
-    except Exception:                                        # noqa: BLE001
-        return None
+def _restguthaben() -> float | None:
+    """VERBLEIBENDES Guthaben in Dollar, aus :mod:`govisor.llm`.
+
+    ⚠ **Andere Bedeutung als die Vorgaengerin.** Die alte Fassung gab den VERBRAUCH zurueck
+    (`/key` → `data.usage`), eine STEIGENDE Zahl. Hier steht das Restguthaben, das FAELLT.
+    Wer die alte Rechnung `jetzt - start >= BUDGET` stehen laesst, bekommt eine negative
+    Differenz — und eine Bremse, die NIE ausloest.
+    """
+    return _llm_kontostand(frisch=True)
+
+
 # Wie oft das Ergebnis auf die Platte geht. Nach JEDEM Vorgang zu schreiben war bei 272
 # Analysen billig und waere bei 4.000 eine Datei, die dauernd komplett neu geschrieben wird.
 # Alle 10 heisst: im schlimmsten Fall gehen 10 Analysen verloren, nicht 4.000.
@@ -435,7 +432,7 @@ def main() -> int:
     def sichern():
         OUT.write_text(json.dumps(out, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
 
-    start_usd = _kontostand() if BUDGET_USD else None
+    start_usd = _restguthaben() if BUDGET_USD else None
     if BUDGET_USD:
         print(f"Budget: {BUDGET_USD:.2f} $ ab Stand "
               + (f"{start_usd:.2f} $" if start_usd is not None else "(nicht lesbar — ungebremst!)"),
@@ -447,7 +444,10 @@ def main() -> int:
             nid = laeuft[fut]
             try:
                 nid, res = fut.result()
-            except AllKeysExhausted as e:
+            except (AllKeysExhausted, BudgetErschoepft) as e:
+                # Beides heisst „hier geht nichts mehr" — der eine Fall aus Sicht der
+                # Anbieter, der andere als Entscheidung der Geldwache. Weiterprobieren
+                # waere in beiden Faellen nur Laerm.
                 if not erschoepft:
                     erschoepft = True
                     print(f"  Abbruch: {e} — laufende Vorgaenge werden noch fertig.", flush=True)
@@ -461,9 +461,10 @@ def main() -> int:
                 fertig += 1
                 # Notbremse: alle 10 Vorgaenge nachsehen, was der Lauf gekostet hat.
                 if BUDGET_USD and start_usd is not None and fertig % 10 == 0:
-                    jetzt = _kontostand()
-                    if jetzt is not None and jetzt - start_usd >= BUDGET_USD:
-                        print(f"\n⛔ Budget erreicht: {jetzt - start_usd:.2f} $ von "
+                    jetzt = _restguthaben()
+                    # Restguthaben FAELLT — verbraucht ist `start - jetzt`.
+                    if jetzt is not None and start_usd - jetzt >= BUDGET_USD:
+                        print(f"\n⛔ Budget erreicht: {start_usd - jetzt:.2f} $ von "
                               f"{BUDGET_USD:.2f} $ — Lauf wird beendet, Stand ist gesichert.",
                               flush=True)
                         for f in laeuft:
