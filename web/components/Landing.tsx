@@ -326,31 +326,77 @@ export async function Landing() {
         </p>
         <ul className="lp-bausteine">
           <li>
+            <span className="lp-baustein-symbol" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"
+                   strokeLinecap="round" strokeLinejoin="round">
+                <path d="M3 21h18" />
+                <path d="M5 21V9.5L12 5l7 4.5V21" />
+                <path d="M9 21v-5h6v5" />
+                <path d="M9 12h.01M15 12h.01" />
+              </svg>
+            </span>
             <h3>Vergabestellen-Dossier</h3>
             <p>Was diese Stelle zuletzt vergeben hat, an wen, wie oft sie den Anbieter
               wechselt und wie lange sie bis zum Zuschlag braucht.</p>
           </li>
           <li>
+            <span className="lp-baustein-symbol" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"
+                   strokeLinecap="round" strokeLinejoin="round">
+                <path d="M4 20V13h4v7" />
+                <path d="M10 20V6h4v14" />
+                <path d="M16 20v-9h4v9" />
+                <path d="M3 20h18" />
+              </svg>
+            </span>
             <h3>Wettbewerber und ihre Zuschläge</h3>
             <p>Wer in eurem Fachgebiet gewinnt, wo er sitzt und welche Aufträge er zuletzt
               geholt hat. Auch der, der gerade auf eurem Wunschauftrag sitzt.</p>
           </li>
           <li>
+            <span className="lp-baustein-symbol" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"
+                   strokeLinecap="round" strokeLinejoin="round">
+                <path d="M9 3 3 5.5v15L9 18l6 3 6-2.5v-15L15 6 9 3Z" />
+                <path d="M9 3v15M15 6v15" />
+              </svg>
+            </span>
             <h3>Regionenvergleich</h3>
             <p>Eure Region gegen den Durchschnitt: wie viel dort vergeben wird, wie dicht der
               Wettbewerb ist, wo daneben mehr zu holen wäre.</p>
           </li>
           <li>
+            <span className="lp-baustein-symbol" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"
+                   strokeLinecap="round" strokeLinejoin="round">
+                <path d="M3 12h4l2.5-6 4 12L16 12h5" />
+              </svg>
+            </span>
             <h3>Marktpuls im Jahresverlauf</h3>
             <p>Wann in eurem Fachgebiet ausgeschrieben wird, über zwanzig Jahre gemessen.
               Wer die Saison kennt, plant seine Kapazität dagegen.</p>
           </li>
           <li>
+            <span className="lp-baustein-symbol" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"
+                   strokeLinecap="round" strokeLinejoin="round">
+                <path d="M18 9a6 6 0 1 0-12 0c0 5-2 6.5-2 6.5h16S18 14 18 9Z" />
+                <path d="M10.5 19.5a2 2 0 0 0 3 0" />
+              </svg>
+            </span>
             <h3>Alarme auf eure Kriterien</h3>
             <p>Meldung, sobald etwas Passendes erscheint oder ein Vertrag ausläuft, den ihr
               im Blick habt. Keine Rundmail an alle.</p>
           </li>
           <li>
+            <span className="lp-baustein-symbol" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"
+                   strokeLinecap="round" strokeLinejoin="round">
+                <rect x="3.5" y="4" width="6.5" height="7" rx="1.2" />
+                <rect x="13.5" y="4" width="7" height="7" rx="1.2" />
+                <rect x="3.5" y="14" width="17" height="6" rx="1.2" />
+              </svg>
+            </span>
             <h3>Bausteinbibliothek</h3>
             <p>Eure Standardtexte für wiederkehrende Nachweise an einem Ort, damit das
               nächste Angebot nicht wieder bei null anfängt.</p>

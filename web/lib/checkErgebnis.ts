@@ -8,6 +8,12 @@
  * Also ein winziger Speicher mit `useSyncExternalStore`: der Check schreibt, wer will,
  * hört zu.
  *
+ * **Warum das über die Anmeldung hinweg trägt.** Der Wert liegt im Modul, nicht im Bauteil,
+ * und die Navigation zur Anmeldung läuft über `next/link` im selben Laufzeitraum. Wer also
+ * den Check macht und danach auf „Kostenlos starten" klickt, bringt sein Ergebnis mit. Wer
+ * die Anmeldung frisch aufruft oder neu lädt, bringt nichts mit — dann steht dort schlicht
+ * nichts, statt etwas Erfundenem.
+ *
  * **Was hier NICHT passiert.** Nichts wird gespeichert, gesendet oder wiederhergestellt.
  * Der Wert lebt in dieser einen Seitenansicht und ist beim Neuladen weg — dieselbe Zusage
  * wie im Check selbst („nichts davon verlässt euren Browser"), und die einzige Fassung, in
@@ -15,9 +21,12 @@
  */
 export type CheckErgebnis = {
   fachLabel: string;
+  regionLabel: string;
   erfuellt: number;
   von: number;
   luecke: string | null;
+  /** Wie viele der ausgewerteten Verfahren gepasst hätten und heute noch offen sind. */
+  offeneTreffer: number;
 } | null;
 
 let wert: CheckErgebnis = null;

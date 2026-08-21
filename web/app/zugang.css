@@ -223,3 +223,18 @@
    aber nicht versteckt — wer sein Passwort nicht kennt, sucht genau hier. */
 .zugang-alt{margin-top:6px;gap:8px}
 .zugang-alt .btn{font-size:var(--t-sm)}
+
+/* MITBRINGSEL aus dem Eignungs-Check der Startseite. Bewusst ruhig gesetzt: es ist ein
+   Beleg, kein Werbebanner — der Besucher soll seine eigene Eingabe wiedererkennen, nicht
+   angesprungen werden. */
+.mitbringsel { margin: 0 0 22px; padding: 14px 16px; border-radius: 12px;
+  background: var(--signal-wash, #E7F7F1); border: 1px solid #CFE8DC; }
+.mitbringsel-kopf { margin: 0 0 10px; font-size: 10.5px; font-weight: 700; letter-spacing: .08em;
+  text-transform: uppercase; color: var(--signal-deep, #067A55); }
+.mitbringsel ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.mitbringsel li { display: flex; align-items: baseline; justify-content: space-between;
+  gap: 14px; font-size: 13px; }
+.mitbringsel li span { color: var(--ink-500, #64766F); }
+.mitbringsel li b { font-weight: 600; text-align: right; font-variant-numeric: tabular-nums; }
+.mitbringsel-fuss { margin: 11px 0 0; font-size: 12px; line-height: 1.55;
+  color: var(--ink-700, #33453F); }

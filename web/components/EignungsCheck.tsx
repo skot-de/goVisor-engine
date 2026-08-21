@@ -212,9 +212,10 @@ export function EignungsCheck({ check, fachgebiete }: {
   // etwas beantwortet hat, und wieder weg, wenn die Auswahl aufgehoben wird.
   useEffect(() => {
     setzeCheckErgebnis(fach && schritt === 3 && zeilen.length
-      ? { fachLabel, erfuellt, von: zeilen.length, luecke: luecke?.name ?? null }
+      ? { fachLabel, regionLabel, erfuellt, von: zeilen.length,
+          luecke: luecke?.name ?? null, offeneTreffer: treffer.offen }
       : null);
-  }, [fach, schritt, fachLabel, erfuellt, zeilen.length, luecke]);
+  }, [fach, schritt, fachLabel, regionLabel, erfuellt, zeilen.length, luecke, treffer.offen]);
 
   const SCHRITTE = ["Euer Feld", "Eure Angaben", "Die Auswertung"];
 

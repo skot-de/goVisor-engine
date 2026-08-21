@@ -11,6 +11,7 @@ import Link from "next/link";
 import { AppRail, AppTop } from "@/components/explorer/Rail";
 import "../explorer.css";
 import "../zugang.css";
+import { CheckMitbringsel } from "@/components/CheckMitbringsel";
 
 /* Onboarding — portiert aus INPUT/Design/govisor-onboarding-v1.4.html.
    Registrierung + Firmen-Matching + Profil in einem ganzseitigen Flow. Die Demo-ENTITIES
@@ -650,6 +651,10 @@ function testMailErlaubt(mail: string): boolean {
         {/* 0 · Konto */}
         {screen === "mail" && (
           <div className="card">
+            {/* Was aus dem Eignungs-Check der Startseite mitkommt. Steht VOR der Überschrift,
+                weil es die Frage beantwortet, die hier zuerst auftaucht: wofür lege ich das
+                Konto an? Erscheint nur, wenn der Check in dieser Sitzung gelaufen ist. */}
+            <CheckMitbringsel />
             <h1>{t("Alle öffentlichen Ausschreibungen.")}<br />{t("Die eine, die zu euch passt.")}</h1>
             <p className="lede">{t("goVisor liest jede öffentliche Vergabe in Deutschland und filtert die heraus, auf die ihr euch bewerben solltet. Kostenlos starten, ohne Zahlungsdaten.")}</p>
             <div className="field">
