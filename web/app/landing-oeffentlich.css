@@ -162,9 +162,6 @@
 
 .lp-klein { font-size: 13.5px; color: var(--ink-500, #64766F); line-height: 1.6; margin: 0; }
 
-.lp-schluss { border-top: 1px solid var(--line, #E3E7E5); }
-.lp-schluss p { color: var(--ink-700, #33453F); max-width: 54ch; margin: 0 0 24px;
-  font-size: 15px; line-height: 1.6; }
 
 .lp-fuss { display: flex; justify-content: space-between; align-items: baseline; gap: 16px;
   border-top: 1px solid var(--line, #E3E7E5); padding-top: 20px; flex-wrap: wrap; }
@@ -260,42 +257,14 @@
 
 /* BAUSTEINE. Chips statt Karten: sie zeigen, dass es weitergeht, ohne jeden Baustein zu
    erklären — dafür ist drinnen Platz. */
-.lp-bausteine { display: flex; flex-wrap: wrap; gap: 8px; }
-.lp-bausteine span { font-size: 13.5px; font-weight: 600; color: var(--ink-700, #33453F);
-  background: #fff; border: 1px solid var(--line-strong, #CFD6D3); border-radius: 100px;
-  padding: 7px 15px; }
 .lp-preis { margin: 26px 0 0; font-size: 14.5px; line-height: 1.65;
   color: var(--ink-700, #33453F); }
 .lp-preis b { color: var(--ink-900, #12211D); }
 
 /* SCHLUSS. Dunkles Band mit einem einzigen Feld. */
-.lp-schluss { display: flex; align-items: center; justify-content: space-between;
-  gap: 40px; flex-wrap: wrap; margin: 64px 0 0; padding: 26px 32px; border-radius: 16px;
-  background: var(--ink-900, #12211D); color: #fff; }
-.lp-schluss h2 { font-size: 23px; font-weight: 700; letter-spacing: -.02em; line-height: 1.2;
-  margin: 0 0 7px; }
-.lp-schluss p { font-size: 14px; line-height: 1.5; color: #9DB3AC; max-width: 52ch; margin: 0; }
-
-.lp-startform { display: flex; align-items: stretch; flex-wrap: wrap; border-radius: 11px;
-  box-shadow: none; }
-.lp-startform input { border-radius: 11px 0 0 11px; }
-.lp-startform button { border-radius: 0 11px 11px 0; }
-.lp-startform input { width: 300px; max-width: 60vw; padding: 12px 17px; font: inherit;
-  font-size: 15px; border: none; background: #fff; color: var(--ink-900, #12211D); }
-.lp-startform input:focus { outline: none; }
-.lp-startform:focus-within { box-shadow: 0 0 0 3px rgba(16,185,129,.45), 0 6px 22px rgba(0,0,0,.28); }
-.lp-startform button { flex: none; width: 58px; display: grid; place-items: center;
-  background: var(--signal, #10B981); color: var(--ink-900, #12211D); border: none;
-  cursor: pointer; transition: .14s; }
-.lp-startform button:hover { background: #34C08D; }
-.lp-startform svg { width: 20px; height: 20px; }
 
 
-@media (max-width: 760px) {
-  .lp-schluss { flex-direction: column; align-items: flex-start; gap: 20px; padding: 22px; }
-  .lp-startform { width: 100%; }
-  .lp-startform input { flex: 1; width: auto; max-width: none; }
-}
+
 
 /* Auf schmalen Geräten weichen die Anker-Links: der Kopf muss Marke, Anmelden und den
    Startknopf tragen, alles andere steht zwei Fingerbreit tiefer ohnehin im Fluss. */
@@ -673,5 +642,24 @@ body:has(> .lp) { background: #E4E8E6; }
 
 /* Was nach dem Feld kommt, steht unter dem Feld. Im dunklen Schlussband deshalb hell genug
    zum Lesen, aber leiser als die Zusage darüber. */
-.lp-startform-hinweis { flex-basis: 100%; margin: 9px 2px 0; font-size: 11.5px;
-  line-height: 1.5; color: #9DB3AC; }
+
+/* BAUSTEINE als Kacheln statt Chips: sechs Dinge, die es gibt, jedes mit einem Satz, der
+   sagt wozu. Als Chips waren es Stichworte ohne Inhalt — hübsch, aber niemand weiss danach,
+   was ein „Vergabestellen-Dossier" ist. */
+.lp-bausteine-lede { font-size: 15px; line-height: 1.65; color: var(--ink-700, #33453F);
+  margin: -14px 0 26px; }
+.lp-bausteine { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 16px; margin: 0; padding: 0; }
+.lp-bausteine li { padding: 18px 20px; border-radius: 14px; background: var(--surface-2, #FAFBFA);
+  border: 1px solid var(--line, #E3E7E5); }
+.lp-bausteine h3 { font-size: 15px; font-weight: 650; letter-spacing: -.01em; margin: 0 0 6px; }
+.lp-bausteine p { font-size: 13px; line-height: 1.6; color: var(--ink-500, #64766F); margin: 0; }
+
+/* Der Einstieg am Ende: ein Knopf, ein Satz, kein Kasten. */
+.lp-abschluss { display: flex; align-items: center; gap: 20px; flex-wrap: wrap;
+  margin: 30px 0 0; padding: 22px 0 0; border-top: 1px solid var(--line, #E3E7E5); }
+.lp-abschluss p { font-size: 13px; line-height: 1.6; color: var(--ink-500, #64766F);
+  margin: 0; max-width: 62ch; }
+
+@media (max-width: 900px) { .lp-bausteine { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 620px) { .lp-bausteine { grid-template-columns: 1fr; } }

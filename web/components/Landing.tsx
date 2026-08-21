@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { loadDataFile } from "@/lib/dataSource";
 import { EignungsCheck, type Check } from "./EignungsCheck";
-import { StartForm } from "./StartForm";
 import { RelevanzEcho } from "./RelevanzEcho";
 import "../app/landing-oeffentlich.css";
 
@@ -314,63 +313,62 @@ export async function Landing() {
         </p>
       ) : null}
 
+      {/* Der Abschluss der Seite. Sven: „nimm den kasten da unten raus und mach dafür ‚was
+          noch dazugehört' etwas grösser … gib dem featureset mehr platz mit grösseren
+          kacheln und einem erklärsatz." Das dunkle Band mit dem Firmenfeld ist damit weg;
+          der Einstieg liegt jetzt am Ende dieses Abschnitts und oben in der Leiste, wo er
+          ohnehin die ganze Zeit steht. */}
       <section className="lp-block" id="arbeitsweise">
-        {/* ⚠ Hiess bis zum 2026-08-20 „Drei Dinge, die anderswo fehlen". Sven: „stimmen
-            nicht, ich glaube nicht das wir die einzigen sind." Er hat recht, und wir haben
-            es sogar gemessen: die Analyse eines Wettbewerbers zum Single-Bieter-Anteil war
-            methodisch gleichwertig (s. Auto-Memory `govisor-wettbewerber-auftraege-io`).
-            Eine Behauptung ueber andere, die wir nicht pruefen koennen, ist genau das, was
-            das Produkt drinnen nirgends zulaesst. Also Tatsachen ueber uns statt Urteile
-            ueber andere — das ist ohnehin die staerkere Aussage, weil sie ueberpruefbar ist. */}
-        {/* ⚠ Waren erst vier Karten, dann zwei, jetzt keine. Sven: „drei masse, wie weit
-            und so arbeitet ist noch zu viel text, das ist ein riesiger block" — gemessen
-            1.494 px und 429 Wörter am Stück, mehr als eine Bildschirmhöhe reine Prosa.
-            Die zwei verbliebenen Karten sagten nichts, was die Seite nicht schon ZEIGT:
-            „Die Unterlagen, nicht nur die Anzeige" führt der Beweiskasten oben vor und die
-            Fundliste im Werkzeug, „Drei Länder, auch unterhalb der Schwelle" steht als Zahl
-            in der Herkunftszeile. Was bleibt, ist das, was sonst nirgends steht: die
-            Bausteine und der Preis. */}
         <h2 className="lp-h2">Was noch dazugehört</h2>
-        <div className="lp-bausteine">
-          <span>Vergabestellen-Dossier</span>
-          <span>Wettbewerber und ihre Zuschläge</span>
-          <span>Regionenvergleich</span>
-          <span>Marktpuls im Jahresverlauf</span>
-          <span>Alarme auf eure Kriterien</span>
-          <span>Bausteinbibliothek für Angebotstexte</span>
-        </div>
+        <p className="lp-bausteine-lede">
+          Der Check zeigt, ob ihr passt. Danach fängt die Arbeit an, und dafür liegt in
+          goVisor mehr als eine Liste von Ausschreibungen.
+        </p>
+        <ul className="lp-bausteine">
+          <li>
+            <h3>Vergabestellen-Dossier</h3>
+            <p>Was diese Stelle zuletzt vergeben hat, an wen, wie oft sie den Anbieter
+              wechselt und wie lange sie bis zum Zuschlag braucht.</p>
+          </li>
+          <li>
+            <h3>Wettbewerber und ihre Zuschläge</h3>
+            <p>Wer in eurem Fachgebiet gewinnt, wo er sitzt und welche Aufträge er zuletzt
+              geholt hat. Auch der, der gerade auf eurem Wunschauftrag sitzt.</p>
+          </li>
+          <li>
+            <h3>Regionenvergleich</h3>
+            <p>Eure Region gegen den Durchschnitt: wie viel dort vergeben wird, wie dicht der
+              Wettbewerb ist, wo daneben mehr zu holen wäre.</p>
+          </li>
+          <li>
+            <h3>Marktpuls im Jahresverlauf</h3>
+            <p>Wann in eurem Fachgebiet ausgeschrieben wird, über zwanzig Jahre gemessen.
+              Wer die Saison kennt, plant seine Kapazität dagegen.</p>
+          </li>
+          <li>
+            <h3>Alarme auf eure Kriterien</h3>
+            <p>Meldung, sobald etwas Passendes erscheint oder ein Vertrag ausläuft, den ihr
+              im Blick habt. Keine Rundmail an alle.</p>
+          </li>
+          <li>
+            <h3>Bausteinbibliothek</h3>
+            <p>Eure Standardtexte für wiederkehrende Nachweise an einem Ort, damit das
+              nächste Angebot nicht wieder bei null anfängt.</p>
+          </li>
+        </ul>
 
-        {/* ⚠ Hier stand bis zum 2026-08-21 die Erfolgsprämie („wenn ihr gewinnt, verdienen
-            wir mit"). Sven: „wir haben die vergabeprämie verworfen, also nimm das von der
-            seite." Was bleibt, ist die Stufenaussage ohne Beträge — die stehen nicht fest,
-            und eine Zahl, die später anders ausfällt, ist auf einer öffentlichen Seite
-            teuer. */}
         <p className="lp-preis">
           <b>Was es kostet:</b> Der Einstieg nichts. Suchen, filtern und Vergaben ansehen
           bleibt dauerhaft frei. Bezahlt wird die Tiefe: ausgewertete Unterlagen und Bewertung.
         </p>
-      </section>
 
-      {/* Schluss als dunkles Band, die Form aus der Vorlage. Dort stand ein E-Mail-Feld;
-          hier steht die erste Frage des Onboardings selbst — wer die Firma tippt, hat den
-          ersten Schritt hinter sich, und wir sammeln keine Adressen ein, mit denen wir
-          nichts vorhätten. */}
-      <section className="lp-schluss" id="starten">
-        <div className="lp-schluss-text">
-          {/* ⚠ Hier stand „Firma eintragen, Fachgebiet und Umkreis wählen, passende Vergaben
-              ansehen" — und verschwieg damit den Schritt, an dem die Leute abspringen: das
-              Onboarding beginnt mit Konto (E-Mail und Passwort), die Firma ist Schritt zwei.
-              Sven: „das verstehe ich nicht. firma eintragen und dann kommt man in den
-              anmeldeprozess?" Ja. Auf einer Seite, die überall die Grundlage mitnennt, darf
-              ausgerechnet der letzte Satz nicht die Hälfte weglassen. */}
-          <h2>Überzeugt euch selbst. Der Einstieg kostet nichts.</h2>
+        <div className="lp-abschluss" id="starten">
+          <Link className="lp-knopf lp-knopf-gross" href="/onboarding">Kostenlos starten</Link>
           <p>
             Vier Schritte: Konto anlegen, Firma bestätigen, Fachgebiet und Umkreis wählen,
-            passende Vergaben ansehen. Wenn nichts dabei ist, habt ihr zehn Minuten verloren
-            und wisst mehr über euren Markt.
+            passende Vergaben ansehen. Zehn Minuten, kein Vertrag, keine Kündigungsfrist.
           </p>
         </div>
-        <StartForm />
       </section>
 
       <footer className="lp-fuss">

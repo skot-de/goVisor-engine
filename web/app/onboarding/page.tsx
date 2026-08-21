@@ -261,9 +261,10 @@ export default function OnboardingPage() {
   useEffect(() => {
     const q = new URLSearchParams(window.location.search);
     if (q.get("probe") === "1") setProbe(true);
-    // Von der Startseite mitgebracht (`?firma=`): dort steht dasselbe Feld, das hier als
-    // Erstes gefragt wird. Wer es schon getippt hat, soll es nicht zweimal tippen. Wie
-    // beim Token gilt: nur ein Vorschlag, bestaetigt wird ueber die Firmensuche.
+    // `?firma=` als Vorbelegung: kam von einem Feld auf der Startseite, das dort am
+    // 2026-08-21 wieder verschwunden ist. Der Eingang bleibt, weil er nichts kostet und
+    // fuer Anschreiben nuetzlich ist — nur ein Vorschlag, bestaetigt wird ueber die
+    // Firmensuche.
     const mit = (q.get("firma") || "").trim();
     if (mit) setEingabe(mit.slice(0, 120));
     const tok = q.get("t");
