@@ -597,7 +597,6 @@
 .ec-leiste-t { margin: 0 0 8px; padding-top: 14px; font-size: 11px; font-weight: 700;
   letter-spacing: .07em; text-transform: uppercase; color: var(--ink-400, #8C9B95);
   border-top: 1px solid var(--line-strong, #CFD6D3); }
-.ec-zuschnitt { margin-top: 14px; }
 .ec-leer h3 { font-size: 17px; font-weight: 650; letter-spacing: -.015em; margin: 0 0 8px; }
 .ec-leer p { font-size: 14px; line-height: 1.65; color: var(--ink-700, #33453F); margin: 0 0 14px; }
 .ec-leer-f { font-size: 12.5px !important; color: var(--ink-500, #64766F) !important; }

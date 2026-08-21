@@ -250,8 +250,8 @@ export function EignungsCheck({ check, fachgebiete }: {
           {/* ⚠ „in überall" stand hier kurz — der Schlüssel „alle" trägt als Beschriftung
               ein Adverb, das sich nicht in „in …" einsetzen lässt. */}
           <p>
-            {nf(gesamtOffen)} offene Vergaben in sechs Fachgebieten
-            {region === "alle" ? ", in allen drei Ländern" : `, ${regionLabel}`}
+            {nf(gesamtOffen)} Vergaben mit laufender Frist, in sechs Fachgebieten
+            {region === "alle" ? " und drei Ländern" : `, ${regionLabel}`}
           </p>
         </div>
 
@@ -528,11 +528,6 @@ export function EignungsCheck({ check, fachgebiete }: {
         </div>
       </div>
 
-      {/* Eine Zeile, volle Breite: gekürzt, bis sie ohne Umbruch unter den Kasten passt. */}
-      <p className="lp-klein ec-zuschnitt">
-        Gezählt sind Vorgänge mit laufender Frist; der Zuschnitt läuft über CPV-Codes, nicht
-        über Schlagworte. Was sich keinem der sechs Gebiete zuordnen lässt, steht drinnen.
-      </p>
     </section>
   );
 }

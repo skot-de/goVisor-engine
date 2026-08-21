@@ -227,17 +227,13 @@ export async function Landing() {
               <span className="lp-masse-k">Aufwand</span>
               <h3>Was kostet der Versuch?</h3>
               <p>
-                Bindefrist im Median <b>{z.masse.bindefrist.median ?? "?"} Tage</b>, Bürgschaft
-                bei {nf(z.masse.buergschaft.ja ?? 0)} Verfahren belegt, und bei{" "}
+                Bindefrist im Median <b>{z.masse.bindefrist.median ?? "?"} Tage</b>{" "}
+                ({nf(z.masse.bindefrist.n)} Verfahren), Bürgschaft bei{" "}
+                {nf(z.masse.buergschaft.ja ?? 0)} belegt, und bei{" "}
                 {nf(z.masse.zuschlag.preis ?? 0)} entscheidet allein der Preis.
               </p>
             </li>
           </ol>
-          <p className="lp-klein">
-            Aufwandsangaben aus den ausgewerteten Unterlagen: Bindefrist aus{" "}
-            {nf(z.masse.bindefrist.n)} Verfahren, Zuschlagskriterien aus{" "}
-            {nf((z.masse.zuschlag.preis ?? 0) + (z.masse.zuschlag.gemischt ?? 0))}.
-          </p>
         </section>
       ) : null}
 
@@ -300,13 +296,21 @@ export async function Landing() {
           langweilig — Sven: „ist vll auch nicht so der hit". Es ist ein Vertrauenssignal,
           kein Verkaufsargument, und Vertrauenssignale gehoeren neben die Zahl, die sie
           stuetzen. */}
+      {/* ⚠ Bis zum 2026-08-21 hing unter fast jedem Block eine kleine Erklärzeile: unter dem
+          Werkzeug, unter den drei Massen, unter dem Zahlenband. Sven: „das sieht aus, als
+          wenn wir uns für alles erklären müssen." Genau so liest es sich auch — jede
+          einzelne Zahl abzusichern wirkt unsicherer als eine Seite, die einmal sagt, woher
+          alles kommt. Die Vorbehalte sind deshalb dorthin gewandert, wo sie hingehören:
+          „mit laufender Frist" in die Kopfzeile des Werkzeugs, „(7.123 Verfahren)" in den
+          Satz, zu dem die Zahl gehört. Übrig bleibt DIESE eine Zeile. */}
       {z ? (
         <p className="lp-herkunft">
           {Object.entries(z.laender).map(([k, v], i) => (
             <span key={k}>{i > 0 ? " · " : ""}{LAND_NAME[k] ?? k} {nf(v.gesamt)}</span>
           ))}
-          {" · "}Amtliche Quellen: TED und die nationalen Portale. Kein Zukauf, keine
-          Zweitverwertung. Stand {new Date(z.stand).toLocaleDateString("de-DE")}.
+          {" · "}Amtliche Quellen: TED und die nationalen Portale, kein Zukauf. Fachgebiete
+          nach CPV-Codes, nicht nach Schlagworten. Stand{" "}
+          {new Date(z.stand).toLocaleDateString("de-DE")}.
         </p>
       ) : null}
 
