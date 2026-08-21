@@ -54,6 +54,13 @@ from . import docfetch_queue as _queue
 
 ROOT = Path(__file__).resolve().parent.parent
 
+# ZEITGRENZE JE VORGANG. ⚠ Diese Zeile FEHLTE von 66de757 (17.08.) bis zum 21.08.: die
+# Verwendung wurde eingebaut, die Definition nicht. Ergebnis war ein `NameError` bei JEDEM
+# Vorgang — 240 Fehlschlaege, und der Lauf meldete brav „N versucht · 0 geladen", weil der
+# Sammel-`except` nur den Ausnahmetyp notiert. Ein Abrufer, der zu 100 % scheitert, sah
+# damit aus wie ein Portal, das nichts hergibt.
+VORGANG_FRIST_S = int(__import__("os").environ.get("GOVISOR_VORGANG_FRIST", "480"))
+
 # Wie lange ein Lauf OHNE ein einziges neues Paket weiterlaufen darf. Der Fall, der am
 # 2026-08-21 zwei Abrufer 54 Stunden hat laufen lassen, war nicht ein haengender Vorgang,
 # sondern ein Abrufer, der beschaeftigt aussah und nichts mehr lieferte.

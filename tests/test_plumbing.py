@@ -3008,3 +3008,49 @@ def test_rueckstau_zaehlt_nur_was_ein_abrufer_wirklich_holen_kann():
     assert "open_house" in quelle, "Open House wird noch mitgezaehlt"
     assert "filtere(" in quelle, "frueher Gescheitertes wird noch mitgezaehlt"
     assert rs._KEIN_VERSUCH == ("exists",)
+
+
+def test_kein_abrufer_benutzt_einen_namen_den_es_nicht_gibt():
+    """Ein `NameError` in der Vorgangsschleife legt einen Abrufer still — und zwar leise.
+
+    Gemessen 2026-08-21: `docfetch_evergabe` benutzte seit Commit 66de757 (17.08.)
+    ``VORGANG_FRIST_S``, ohne es zu definieren. Die Verwendung wurde eingebaut, die
+    Definition nicht. Jeder Vorgang lief in einen `NameError`, den der Sammel-``except``
+    als ``fehler`` mit der Notiz „NameError" ablegte — 240 Fehlschlaege, waehrend der Lauf
+    brav „N versucht · 0 geladen" meldete. Von aussen sah es aus wie ein Portal, das nichts
+    hergibt; es war eine fehlende Zeile.
+
+    Der Test prueft die KLASSE, nicht den Einzelfall: kein Modulname wird gelesen, der
+    nirgends gebunden ist. Import allein reicht dafuer nicht — der Fehler steckt im
+    Funktionsrumpf und schlaegt erst zur Laufzeit zu.
+    """
+    import ast
+    import builtins
+
+    wurzel = pathlib.Path(__file__).resolve().parent.parent / "govisor"
+    module = sorted(wurzel.glob("docfetch*.py")) + [
+        wurzel / "subreport.py", wurzel / "vergabeportal_at.py", wurzel / "simap_docs.py"]
+    fehler = {}
+    for pfad in module:
+        if not pfad.exists():
+            continue
+        baum = ast.parse(pfad.read_text(encoding="utf-8"))
+        bekannt = set(dir(builtins)) | {"__file__", "__name__", "__doc__"}
+        for n in ast.walk(baum):
+            if isinstance(n, (ast.FunctionDef, ast.AsyncFunctionDef, ast.ClassDef)):
+                bekannt.add(n.name)
+            elif isinstance(n, ast.Name) and isinstance(n.ctx, ast.Store):
+                bekannt.add(n.id)
+            elif isinstance(n, (ast.Import, ast.ImportFrom)):
+                for a in n.names:
+                    bekannt.add((a.asname or a.name).split(".")[0])
+            elif isinstance(n, ast.ExceptHandler) and n.name:
+                bekannt.add(n.name)
+            elif isinstance(n, ast.arg):
+                bekannt.add(n.arg)
+        offen = sorted({x.id for x in ast.walk(baum)
+                        if isinstance(x, ast.Name) and isinstance(x.ctx, ast.Load)
+                        and x.id not in bekannt})
+        if offen:
+            fehler[pfad.name] = offen
+    assert not fehler, f"ungebundene Namen: {fehler}"
