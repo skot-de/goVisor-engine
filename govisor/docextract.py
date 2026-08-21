@@ -154,6 +154,24 @@ def validate_item(item: dict, allowed_req_types: set[str] | None = None) -> bool
     return True
 
 
+# ⚠ **`cap` NICHT anheben — gemessen, nicht vermutet.** Der Verdacht lag nahe: 54 % der
+# Leistungsbeschreibungen werden bei 60.000 Zeichen geschnitten, der Median liegt bei
+# 172.000, und nur 38,8 % des Textes priorisierter Typen erreichen ueberhaupt das Modell.
+# Am 2026-08-22 an 49 GEPAARTEN Vorgaengen geprueft (dieselben Vergaben, einmal 60k, einmal
+# 240k, google/gemini-2.5-flash):
+#
+#     Text ans Modell   60.000 → 103.384 Zeichen   (1,7×)
+#     Eintraege gesamt   1.533 →   1.483           (WENIGER)
+#     je Vorgang (Ø)      31,3 →    30,3
+#     verworfen            281 →     414           (+47 %)
+#     21 besser · 14 gleich · 14 schlechter · Vorzeichentest p ≈ 0,16
+#
+# Mehr Text bringt also nicht mehr belegte Anforderungen, sondern mehr Verwerfungen — das
+# Modell findet in den zusaetzlichen 43.000 Zeichen vor allem Positionszeilen, deren Zitate
+# die Belegpflicht nicht bestehen. Der Test kostete 7,59 $ und hat eine Aenderung
+# verhindert, die auf den ganzen Bestand hochgerechnet ~36 $ gekostet und nichts gebracht
+# haette. Wer es erneut versuchen will: das Problem ist nicht die Menge, sondern die
+# Auswahl innerhalb der LB.
 def build_messages(doctype: str, text: str, source_file: str, cap: int = 60000) -> list[dict]:
     task = _TASKS[doctype]
     schema = ('{"req_type": <einer aus der Liste>, "value": <Wert oder null>, "unit": <Einheit oder null>, '
