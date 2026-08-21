@@ -34,15 +34,19 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 from govisor import llm  # noqa: E402
+from govisor.docpipe import SQL_BRAUCHBAR  # noqa: E402
 
 # Kandidaten: je Anbieter das staerkste Modell, das schnell genug antwortet. Was zu langsam
 # war, steht mit Messwert dabei — damit niemand es „mal wieder probiert".
 KANDIDATEN = [
-    ("perplexity", "sonar"),
-    ("xai", "grok-4-fast-non-reasoning"),
-    ("together", "meta-llama/Llama-3.3-70B-Instruct-Turbo"),
-    ("sambanova", "Meta-Llama-3.3-70B-Instruct"),
-    ("cerebras", "gpt-oss-120b"),
+    # OpenRouter-Auswahl, 2026-08-21. Alle koennen erzwungene Schema-Ausgabe; Preise je
+    # Mio Token (Eingabe/Ausgabe) aus dem OpenRouter-Katalog, `:batch` waere jeweils halb
+    # so teuer und fuer diesen Stapelbetrieb die richtige Wahl.
+    ("openrouter", "google/gemini-2.5-flash"),      # 0,30 / 2,50 — der gemessene Titelverteidiger
+    ("openrouter", "google/gemini-3.6-flash"),      # 0,75 / 3,75 — neuere Generation
+    ("openrouter", "openai/gpt-5-mini"),            # 0,25 / 2,00 — guenstigste Alternative
+    ("openrouter", "anthropic/claude-haiku-4.5"),   # 1,00 / 5,00 — Woertlichkeits-Hypothese
+    ("openrouter", "anthropic/claude-sonnet-5"),    # 2,00 /10,00 — dieselbe, eine Klasse hoeher
     # Ausgeschieden, mit Messwert, damit es niemand „mal wieder probiert":
     #   sambanova/DeepSeek-V3.2   180 s Timeout
     #   sambanova/DeepSeek-V3.1    78 s fuer eine triviale Frage
@@ -81,17 +85,24 @@ def main() -> int:
     for nid in referenz:
         rows = con.execute(
             f"""SELECT file, text FROM read_parquet('{src}')
-                WHERE notice_id = ? AND status IN ('ok','ocr') AND length(text) > 120""",
+                WHERE notice_id = ? AND {SQL_BRAUCHBAR} AND length(text) > 120""",
             [nid]).fetchall()
         if rows:
             texte[nid] = rows
 
     print(f"\n  {len(texte)} Vorgaenge je Modell\n")
-    print(f"  {'Anbieter/Modell':<46} {'Punkte':>7} {'verworfen':>10} {'Sek/Vorgang':>12}")
+    print(f"  {'Anbieter/Modell':<46} {'Punkte':>7} {'verworfen':>10} {'Sek/Vorgang':>12}   je Vorgang")
     print("  " + "─" * 78)
 
     # Referenz zuerst: der Bestand, gegen den verglichen wird.
-    ref_pkt = sum(len(bestand[n].get("checklist", [])) for n in texte) / max(len(texte), 1)
+    # NUR Modell-Eintraege zaehlen: alles mit `parser` (gaeb/xlsx/pdf_fields) stammt aus
+    # einem deterministischen Leser und darf keinem Modell gutgeschrieben werden. Die erste
+    # Fassung zaehlte sie mit — bei 15 % Parser-Anteil verschiebt das jede Rangfolge.
+    def _modellpunkte(res):
+        return sum(1 for e in (res.get("checklist") or [])
+                   if not e.get("parser") and e.get("marking") == "Zitat")
+
+    ref_pkt = sum(_modellpunkte(bestand[n]) for n in texte) / max(len(texte), 1)
     ref_vw = sum(bestand[n].get("rejected_items", 0) for n in texte) / max(len(texte), 1)
     print(f"  {'(Bestand) google/gemini-2.5-flash':<46} {ref_pkt:7.1f} "
           f"{ref_vw / max(ref_pkt + ref_vw, 1):9.0%} {'—':>12}")
@@ -106,6 +117,7 @@ def main() -> int:
         # Muster, das an einer Stelle bricht, gehoert auch an der anderen weg.
         ad.MODEL = modell
         punkte = verworfen = 0
+        je_vorgang = []
         t0 = time.time()
         gemacht = 0
         for nid, rows in texte.items():
@@ -115,13 +127,16 @@ def main() -> int:
                 print(f"  {anbieter + '/' + modell:<46} ✖ {type(ex).__name__}: {str(ex)[:28]}")
                 gemacht = 0
                 break
-            punkte += len(res.get("checklist", []))
+            _p = _modellpunkte(res)
+            je_vorgang.append(_p)
+            punkte += _p
             verworfen += res.get("rejected_items", 0)
             gemacht += 1
         if gemacht:
             quote = verworfen / max(punkte + verworfen, 1)
             print(f"  {anbieter + '/' + modell:<46} {punkte / gemacht:7.1f} {quote:9.0%} "
-                  f"{(time.time() - t0) / gemacht:12.1f}")
+                  f"{(time.time() - t0) / gemacht:12.1f}   "
+                  + " ".join(str(x) for x in je_vorgang))
     llm._anbieter = echt
     print()
     return 0

@@ -16,9 +16,12 @@ Robust: Fehler je Datei werden gefangen (eine kaputte PDF kippt nicht den Lauf).
 from __future__ import annotations
 
 import io
+import contextlib
 import datetime as _dt
 import os
 import re
+import shutil
+import tempfile
 import zipfile
 from pathlib import Path
 
@@ -507,6 +510,87 @@ _KNOWN_NOEXTRACT = {".ppt", ".p7s", ".zip", ".asc", ".dwg", ".jpg", ".jpeg",
 MAX_DATEI_MB = int(os.environ.get("GOVISOR_MAX_DATEI_MB", "10"))
 
 
+# ── GROSSE EINZELDATEIEN: STROM STATT VERZICHT ──────────────────────────────────────────
+#
+# `MAX_DATEI_MB` war nicht nur eine Speicher-, sondern auch eine ZEITgrenze: eine PDF ueber
+# 60 MB kostete gemessen Ø 600 s. Uebersprungen wurden dabei aber auch die inhaltsreichsten
+# Dateien — gemessen am 2026-08-21 **945 Dokumente priorisierter Typen**, darunter 760
+# Leistungsbeschreibungen. Und, ueberraschender: **1.554 verschachtelte ZIPs**, weil die
+# Groessenpruefung VOR der Rekursion steht und ein Archiv im Archiv damit nie geoeffnet wurde.
+#
+# Beide Grenzen fallen weg, wenn nicht in den Speicher gelesen wird:
+#   · **Verschachtelte ZIPs** gehen ueber die Platte in `iter_docs(Path)` — den Weg, den die
+#     Funktion fuer das aeussere Archiv ohnehin nimmt. Das Gesamtbudget (`MAX_PACKAGE_BYTES`)
+#     und die Tiefengrenze gelten unveraendert weiter.
+#   · **Grosse PDFs** werden seitenweise von der Platte gelesen und nach `_GROSS_SEITEN`
+#     abgebrochen. Das deckelt Speicher UND Zeit, statt die Datei ganz wegzuwerfen.
+#
+# ⚠ Oberhalb von `GROSS_DATEI_MB` bleibt es beim Ueberspringen. Die Grenze ist kein
+# Feinwert, sondern die Aussage „ab hier ist auch der Strom es nicht mehr wert".
+# ⚠ **Wer einen neuen Status einfuehrt, muss ihn hier eintragen.** Fuenf Stellen filterten
+# bisher jede fuer sich auf ``('ok','ocr')``. Genau daran waere der Strom-Pfad gescheitert:
+# die geretteten grossen PDFs tragen `gross_gekuerzt` und waeren nirgends angekommen — die
+# Arbeit haette stattgefunden und nichts bewirkt.
+# ⚠ `budget` ist NEU gegenueber dem alten `('ok','ocr')` und war beim Zusammenfassen eine
+# stillschweigende Erweiterung — hier ausdruecklich: eine Datei, an der das Archiv-Textbudget
+# endete, traegt GEKUERZTEN Text, keinen falschen. Sie zu verwerfen waere strenger als noetig,
+# aus demselben Grund wie bei `gross_gekuerzt`. Betrifft derzeit 0 Zeilen; die Wirkung
+# entsteht erst, wenn ein Paket das 30-MB-Textbudget reisst.
+BRAUCHBARE_STATUS: tuple[str, ...] = ("ok", "ocr", "gross_gekuerzt", "budget")
+SQL_BRAUCHBAR = "status IN (" + ", ".join(f"'{s}'" for s in BRAUCHBARE_STATUS) + ")"
+
+GROSS_DATEI_MB = int(os.environ.get("GOVISOR_GROSS_DATEI_MB", "120"))
+_GROSS_SEITEN = int(os.environ.get("GOVISOR_GROSS_SEITEN", "150"))
+_STROM_PUFFER = 1024 * 1024
+
+
+class Fertig:
+    """Text, der schon gewonnen ist — die Rohdaten gab es nie im Speicher."""
+
+    __slots__ = ("text", "status")
+
+    def __init__(self, text: str, status: str):
+        self.text, self.status = text, status
+
+
+@contextlib.contextmanager
+def _auf_platte(zf, info):
+    """ZIP-Eintrag stromweise auf die Platte. Speicher bleibt beim Puffer, nicht der Datei."""
+    tmp = tempfile.NamedTemporaryFile(suffix=Path(info.filename).suffix, delete=False)
+    try:
+        with zf.open(info) as quelle:
+            shutil.copyfileobj(quelle, tmp, length=_STROM_PUFFER)
+        tmp.close()
+        yield Path(tmp.name)
+    finally:
+        tmp.close()
+        Path(tmp.name).unlink(missing_ok=True)
+
+
+def _pdf_text_seitenweise(pfad: Path, seiten: int = _GROSS_SEITEN) -> tuple[str, str]:
+    """(Text, Status) einer grossen PDF — von der Platte, mit Seitendeckel.
+
+    Gibt ``gross_gekuerzt`` zurueck, wenn der Deckel griff: eine gekuerzte Leistungs-
+    beschreibung ist etwas anderes als eine vollstaendige, und wer das spaeter auswertet,
+    soll es sehen.
+    """
+    try:
+        from pypdf import PdfReader
+        with pfad.open("rb") as fh:
+            r = PdfReader(fh)
+            n = len(r.pages)
+            teile = []
+            for i in range(min(n, seiten)):
+                teile.append(r.pages[i].extract_text() or "")
+                if sum(map(len, teile)) > _MAX_TEXT:
+                    break
+            text = "\n".join(teile)
+        if not text.strip():
+            return "", "image_only"
+        return text[:_MAX_TEXT], ("gross_gekuerzt" if n > seiten else "ok")
+    except Exception:                                    # noqa: BLE001
+        return "", "gross_unlesbar"
+
 def iter_docs(quelle, prefix: str = "", depth: int = 0, _budget: list | None = None):
     """(pfad, ext, bytes) je Datei — rekursiv durch verschachtelte ZIPs.
 
@@ -549,6 +633,22 @@ def iter_docs(quelle, prefix: str = "", depth: int = 0, _budget: list | None = N
             # Der Brocken wird gar nicht erst entpackt — das spart Speicher UND die
             # Minuten, die seine Text-Extraktion kosten wuerde.
             if MAX_DATEI_MB and info.file_size > MAX_DATEI_MB * 1e6:
+                # Archiv im Archiv: ueber die Platte weiter, statt es nie zu oeffnen.
+                if ext == ".zip" and depth < MAX_ZIP_DEPTH:
+                    with _auf_platte(zf, info) as pfad:
+                        yield from iter_docs(pfad, prefix + name + "::", depth + 1, _budget)
+                    continue
+                if ext == ".pdf" and info.file_size <= GROSS_DATEI_MB * 1e6:
+                    with _auf_platte(zf, info) as pfad:
+                        text, zustand = _pdf_text_seitenweise(pfad)
+                    # ⚠ Auch der Strom-Pfad zahlt auf `MAX_PACKAGE_BYTES` ein. Sonst
+                    # umgeht ausgerechnet der Zweig fuer die groessten Dateien die Sperre,
+                    # die viele mittelgrosse Eintraege in Summe abfangen soll. Gezaehlt
+                    # wird, was tatsaechlich im Speicher landet — der Text, nicht die
+                    # Dateigroesse: der Rohinhalt lag nie im Speicher.
+                    _budget[0] -= len(text)
+                    yield prefix + name, ext, Fertig(text, zustand)
+                    continue
                 yield prefix + name, None, info.file_size
                 continue
             try:
@@ -561,6 +661,51 @@ def iter_docs(quelle, prefix: str = "", depth: int = 0, _budget: list | None = N
             else:
                 yield prefix + name, ext, data
 
+
+# ── FASSUNGEN: NACHTRAEGE, KEINE NEUAUSGABEN ────────────────────────────────────────────
+#
+# Portale legen Nachtraege als eigenen Ordner ab: „Vergabeunterlagen/Version 2/…". Gemessen
+# am 2026-08-21 tragen 282 Vorgaenge solche Ordner, **120 davon mehrere** (bis Version 13).
+# Ohne Behandlung liegen dem Modell widersprueche Staende nebeneinander — zwei Angebotsfristen,
+# zwei Mengengeruesten, und keine Angabe, welche gilt.
+#
+# ⚠ **„Nur die hoechste Fassung nehmen" waere falsch gewesen.** Gemessen: von 4.464 Dateien
+# in aelteren Fassungen kommen **3.173 in der juengsten gar nicht vor**. Die Portale liefern
+# NACHTRAEGE — Version 2 enthaelt nur, was sich geaendert hat. Die naive Regel haette also
+# mehr Dokumente vernichtet als bereinigt.
+#
+# Die Regel gilt deshalb JE DATEI: derselbe Pfad UNTERHALB des Fassungsordners in einer
+# hoeheren Fassung ersetzt die aeltere. Was nur in einer alten Fassung steht, bleibt — es
+# wurde nie ersetzt. Das trifft 1.291 Dateien in 84 Vorgaengen (17,2 Mio. Zeichen).
+_FASSUNG = re.compile(r"(?i)(?:^|/)(?:version|fassung|stand)[ _.-]?(\d+)[a-z]?(?:/)")
+
+
+def fassung(pfad: str) -> tuple[int, str] | None:
+    """(Nummer, Restpfad) eines Fassungsordners — ``None``, wenn keiner im Pfad steht.
+
+    Der Restpfad ist die Kennung der Datei UEBER die Fassungen hinweg; klein geschrieben,
+    weil Portale die Schreibweise zwischen Nachtraegen wechseln.
+    """
+    p = (pfad or "").replace("::", "/")
+    m = _FASSUNG.search(p)
+    return (int(m.group(1)), p[m.end():].lower()) if m else None
+
+
+def ueberholte(dateien) -> set[str]:
+    """Welche der Dateien durch eine hoehere Fassung ersetzt sind."""
+    je: dict[str, dict[int, str]] = {}
+    for name in dateien:
+        f = fassung(name)
+        if not f:
+            continue
+        je.setdefault(f[1], {})[f[0]] = name
+    weg = set()
+    for stufen in je.values():
+        if len(stufen) < 2:
+            continue
+        hoechste = max(stufen)
+        weg.update(name for nr, name in stufen.items() if nr != hoechste)
+    return weg
 
 def process_zip(path: Path) -> list[dict]:
     """Ein Vergabeunterlagen-ZIP → Zeilen [{file, filetype, n_chars, text, status}]."""
@@ -578,6 +723,14 @@ def process_zip(path: Path) -> list[dict]:
             rows.append({"file": name, "filetype": Path(name).suffix.lower(),
                          "n_chars": 0, "text": "", "status": "datei_zu_gross"})
             continue
+        if isinstance(data, Fertig):           # gross, aber stromweise schon gelesen
+            text, status = data.text[:_MAX_TEXT], data.status
+            if len(text) > rest:
+                text, status = text[:max(rest, 0)], "budget"
+            rest -= len(text)
+            rows.append({"file": name, "filetype": ext, "n_chars": len(text),
+                         "text": text, "status": status})
+            continue
         fn = _EXTRACT.get(ext)
         if fn:
             text = (fn(data) or "")[:_MAX_TEXT]
@@ -594,7 +747,14 @@ def process_zip(path: Path) -> list[dict]:
                     # Text da, aber ohne Substanz: Kartenbeschriftungen, Stempel,
                     # Erkennungsfehler. Gezaehlt statt verworfen — sonst sieht ein Plan
                     # aus wie eine Datei, die OCR gar nicht erreicht hat.
-                    status = "ocr_ohne_inhalt"
+                    #
+                    # ⚠ Das Erkannte wird AUFGEHOBEN, nicht weggeworfen. Es kostet nichts
+                    # (der Status haelt es aus jeder Auswertung heraus, s.
+                    # `BRAUCHBARE_STATUS`) und macht die Entscheidung umkehrbar: an einer
+                    # Stichprobe vom 2026-08-21 war der Vokabeltest jedes Mal im Recht
+                    # (Grundbuchauszug, Planlegende, Statikbericht), aber das laesst sich
+                    # nur nachpruefen, solange der Text noch da ist.
+                    text, status = erkannt[:_MAX_TEXT], "ocr_ohne_inhalt"
             if len(text) > rest:
                 text, status = text[:max(rest, 0)], "budget"
             rest -= len(text)
@@ -603,6 +763,18 @@ def process_zip(path: Path) -> list[dict]:
             status = "unsupported" if ext in _KNOWN_NOEXTRACT else "unknown_type"
         rows.append({"file": name, "filetype": ext, "n_chars": len(text),
                      "text": text, "status": status})
+    # Nachtraege: was eine hoehere Fassung ersetzt hat, wird MARKIERT, nicht geloescht — der
+    # Text bleibt lesbar, faellt aber aus jeder Auswertung (`BRAUCHBARE_STATUS`).
+    #
+    # ⚠ NACH der Schleife, nicht davor. Welche Datei ueberholt ist, weiss man erst, wenn alle
+    # Namen vorliegen — ein Vorlauf ueber `iter_docs` waere der nachliegende Gedanke und
+    # zugleich teuer: der Generator entpackt und extrahiert dabei bereits alles, auch die
+    # Strom-Pfade fuer grosse Dateien. Der Preis dieser Reihenfolge ist, dass ueberholte
+    # Dateien noch Text-Budget verbrauchen; das ist deutlich billiger als ein zweiter Durchlauf.
+    ueberholt = ueberholte(r["file"] for r in rows)
+    for r in rows:
+        if r["file"] in ueberholt:
+            r["status"] = "ueberholt"
     return rows
 
 

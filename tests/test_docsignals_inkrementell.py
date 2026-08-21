@@ -109,3 +109,94 @@ def test_regelmarke_existiert_und_trennt_regeln_von_mechanik():
     kopf = quelle.split("\n" + docsignals._REGEL_MARKE, 1)[0]
     assert "def extract_signals" in kopf, "die Extraktionsregeln müssen ÜBER der Marke stehen"
     assert "def build_signals" not in kopf, "die Mechanik gehört UNTER die Marke"
+
+
+def _korpus_mit_fassungen(ziel: pathlib.Path) -> None:
+    """Ein Vorgang mit Nachtrag, einer ohne — beide mit widerspruechlichen Angaben."""
+    alt = ("Zuschlagskriterien: Preis 70 %, Qualität 30 %. "
+           "Nebenangebote sind nicht zugelassen.")
+    neu = ("Zuschlagskriterien: Preis 40 %, Qualität 60 %. "
+           "Nebenangebote sind zugelassen.")
+    nur_alt = "Eine Ortsbesichtigung ist verpflichtend."
+    zeilen = {"notice_id": [], "archive": [], "file": [], "filetype": [],
+              "n_chars": [], "status": [], "text": []}
+    for nid, datei, text in (
+        # ersetzt: gleicher Pfad unterhalb des Fassungsordners
+        ("n1", "Vergabe/Version 1/Bedingungen.pdf", alt),
+        ("n1", "Vergabe/Version 2/Bedingungen.pdf", neu),
+        # steht NUR in der alten Fassung — ein Nachtrag ersetzt nur, was er selbst enthaelt
+        ("n1", "Vergabe/Version 1/Zusatz.pdf", nur_alt),
+        ("n2", "u.pdf", _B),
+    ):
+        zeilen["notice_id"].append(nid); zeilen["archive"].append("a.zip")
+        zeilen["file"].append(datei); zeilen["filetype"].append(".pdf")
+        zeilen["n_chars"].append(len(text)); zeilen["status"].append("ok")
+        zeilen["text"].append(text)
+    ziel.parent.mkdir(parents=True, exist_ok=True)
+    pq.write_table(pa.table(zeilen), ziel, compression="zstd")
+
+
+def test_ueberholte_nachtraege_gehen_nicht_in_die_signale(tmp_path):
+    """Ohne Ausschluss rechnet der Schritt zwei Staende in EINEN Text zusammen.
+
+    Gemessen am 2026-08-21: 1.291 Dateien in 84 Vorgaengen, 17,2 Mio. Zeichen. Der Vorgang
+    haette dann „Preis 70 %" und „Preis 40 %" nebeneinander — und keine Angabe, was gilt.
+    """
+    import duckdb
+
+    quelle = tmp_path / "docs" / "DE" / "doc_text.parquet"
+    _korpus_mit_fassungen(quelle)
+
+    con = duckdb.connect()
+    n = docsignals._ueberholt_registrieren(con, quelle)
+    assert n == 1, "genau die ersetzte Datei, nicht die ganze alte Fassung"
+
+    behalten = {f for (f,) in con.execute(
+        f"SELECT file FROM read_parquet('{quelle.as_posix()}') d "
+        f"WHERE {docsignals.SQL_BRAUCHBAR} {docsignals._ohne_ueberholte('d')}").fetchall()}
+    assert "Vergabe/Version 2/Bedingungen.pdf" in behalten
+    assert "Vergabe/Version 1/Bedingungen.pdf" not in behalten
+    # ⚠ Der Zusatz steht NUR in Version 1 und wurde nie ersetzt — er muss bleiben.
+    assert "Vergabe/Version 1/Zusatz.pdf" in behalten
+
+
+def test_ausschluss_steckt_im_fingerabdruck_sonst_bliebe_er_wirkungslos(tmp_path):
+    """Der inkrementelle Schritt rechnet nur, was sich laut Abdruck geaendert hat.
+
+    ⚠ Stuende der Ausschluss nur in der Auswertung und nicht im Abdruck, hielte der Schritt
+    die alten Signale fuer gueltig — die Aenderung haette am Bestand nichts bewirkt. Die
+    Regeln fuer den Voll-Lauf (`_REGEL_MARKE`) greifen hier NICHT: der Ausschluss ist
+    Mechanik. Ueber den Abdruck rechnen sich genau die betroffenen Vorgaenge neu, im echten
+    Bestand 84 von 5.593 — nicht alle.
+    """
+    import duckdb
+    import pyarrow as _pa
+
+    quelle = tmp_path / "docs" / "DE" / "doc_text.parquet"
+    _korpus_mit_fassungen(quelle)
+
+    con = duckdb.connect()
+    con.register("_ueberholt", _pa.table({"notice_id": _pa.array([], _pa.string()),
+                                          "file": _pa.array([], _pa.string())}))
+    ohne = docsignals._fingerabdruecke(con, quelle)
+    con.unregister("_ueberholt")
+    docsignals._ueberholt_registrieren(con, quelle)
+    mit = docsignals._fingerabdruecke(con, quelle)
+
+    assert ohne["n1"] != mit["n1"], "der betroffene Vorgang wird sonst nicht neu gerechnet"
+    assert ohne["n2"] == mit["n2"], "unbeteiligte Vorgaenge duerfen nicht neu gerechnet werden"
+
+
+def test_signale_folgen_dem_geltenden_stand(tmp_path):
+    """Am Ende zaehlt, was in den Signalen steht — nicht, welche Datei gelesen wurde."""
+    quelle = tmp_path / "docs" / "DE" / "doc_text.parquet"
+    _korpus_mit_fassungen(quelle)
+    cfg = Config(countries=("DE",), data_dir=tmp_path)
+    docsignals.build_signals(cfg, country="DE")
+    tab = _ausgabe(tmp_path)
+    zeile = {n: i for i, n in enumerate(tab.column("notice_id").to_pylist())}
+    assert "n1" in zeile
+    # Version 2 laesst Nebenangebote zu, Version 1 nicht. Es gilt Version 2.
+    spalten = tab.column_names
+    assert "variants_allowed" in spalten, spalten
+    assert tab.column("variants_allowed")[zeile["n1"]].as_py() is True

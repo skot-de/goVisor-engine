@@ -10,11 +10,16 @@ Aufruf: python3 scripts/export_doc_text.py
 """
 import json
 import re
+import sys
 from pathlib import Path
 
 import duckdb
 
 ROOT = Path(__file__).resolve().parent.parent
+# ⚠ ERST den Projektpfad, DANN `govisor` importieren. Unter launchd gibt es kein
+# PYTHONPATH; ein Import davor bricht stumm ab (s. test_skripte_finden_govisor_ohne_pythonpath).
+sys.path.insert(0, str(ROOT))
+from govisor.docpipe import SQL_BRAUCHBAR, ueberholte  # noqa: E402
 SRC = ROOT / "data" / "docs" / "DE" / "doc_text.parquet"
 # Eine Datei je Vorgang — der einzige Weg, auf dem der Volltext ausgeliefert wird.
 JE_VORGANG = ROOT / "web" / "data" / "doc-text"
@@ -50,12 +55,27 @@ def main() -> int:
             -- Gemessen 2026-08-18: 404 Vorgaenge bekommen dadurch zusaetzlichen Text,
             -- 3,23 Mio. Zeichen. KEIN Vorgang haengt allein daran — wer nur OCR-Text hat,
             -- existiert nicht (0 von 404). Es ist Tiefe, nicht Abdeckung.
-            WHERE status IN ('ok','ocr') AND text IS NOT NULL AND length(text) > 0
+            WHERE {SQL_BRAUCHBAR} AND text IS NOT NULL AND length(text) > 0
             ORDER BY notice_id, file"""
     ).fetchall()
 
+    # ── Nachtraege: ueberholte Fassungen nicht ausliefern ───────────────────────────────
+    #
+    # `docpipe` markiert sie seit dem 21.08. beim Indizieren (`status='ueberholt'`); dieser
+    # Filter gilt dem, was VORHER indiziert wurde. Ohne ihn stuenden in der Anzeige zwei
+    # Angebotsfristen untereinander, mit „── Datei ──"-Trenner dazwischen und ohne Hinweis,
+    # welche gilt. Je DATEI, nicht je Fassung — s. `docpipe.ueberholte`.
+    je_vorgang: dict[str, list[str]] = {}
+    for nid, file, _, _ in rows:
+        je_vorgang.setdefault(nid, []).append(file)
+    raus = {(nid, f) for nid, dateien in je_vorgang.items() for f in ueberholte(dateien)}
+    if raus:
+        print(f"  {len(raus):,} überholte Dateien aus Nachträgen übersprungen")
+
     docs: dict[str, dict] = {}
     for nid, file, ftype, text in rows:
+        if (nid, file) in raus:
+            continue
         d = docs.setdefault(nid, {"files": [], "parts": []})
         d["files"].append(file)
         d["parts"].append(f"── {file} ──\n{clean(text)}")

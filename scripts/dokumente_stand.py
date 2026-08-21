@@ -27,11 +27,25 @@ W = ROOT / "web/data"
 
 
 def lade(name: str) -> set:
-    p = W / f"{name}.json"
-    try:
-        return set(json.loads(p.read_text(encoding="utf-8")))
-    except Exception:
-        return set()
+    """Kennungen aus einem Web-Artefakt.
+
+    ⚠ Kennt BEIDE Formen. `export_doc_text.py` hat am 2026-08-18 den 294-MB-Sammelblock
+    `doc-text.json` durch Einzeldateien je Vorgang plus `doc-text-index.json` ersetzt —
+    diese Funktion suchte weiter die Sammeldatei und meldete deshalb seither
+    „Volltext 0 (0 %)", waehrend 5.593 Vorgaenge Volltext hatten. Die naechste Stufe
+    bekam dadurch „404500 %". Ein Trichter, der eine Stufe auf null zeigt, laesst genau
+    dort suchen, wo nichts fehlt.
+    """
+    for kandidat in (W / f"{name}.json", W / f"{name}-index.json"):
+        try:
+            d = json.loads(kandidat.read_text(encoding="utf-8"))
+            return set(d)                      # dict → Schluessel, Liste → Werte
+        except Exception:
+            continue
+    verz = W / name                            # dritte Form: ein Verzeichnis je Vorgang
+    if verz.is_dir():
+        return {f.stem for f in verz.glob("*.json")}
+    return set()
 
 
 def main() -> int:

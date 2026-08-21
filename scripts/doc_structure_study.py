@@ -23,26 +23,16 @@ import pypdf
 
 ROOT = Path(__file__).resolve().parent.parent
 import sys; sys.path.insert(0, str(ROOT))
-from govisor import docpipe  # noqa: E402
+from govisor import docpipe, doctypes  # noqa: E402
 
 OUT = ROOT / "data" / "docs" / "study"; OUT.mkdir(parents=True, exist_ok=True)
 BRANCHES = ["bau", "beratung", "medizin", "it", "energie", "sicherheit"]
 
-# ── Dokumenttyp-Klassifikation über den Dateinamen (Zweck, nicht Portal-Ordner) ──
-DOCTYPES = [
-    ("aufforderung",         r"aufforder|anschreiben|angebotsauff|deckblatt.*angebot|begleitschreiben"),
-    ("bewerbungsbedingungen", r"bewerbungsbed|teilnahmebed|vergabebed|angebotsbed|verfahrensbed"),
-    ("leistungsbeschreibung", r"leistungsbeschr|leistungsverz|\blv\b|lastenheft|leistungskatalog|baubeschr"),
-    ("vertrag",              r"vertrag|\bevb\b|\bvob\b|\bvol\b|\bagb\b|\bzvb\b|\bbvb\b|besondere.*bedingung|zusätzliche.*bedingung"),
-    ("eignung",              r"eignung|eignungsnachw|eignungskrit|präqualif|referenz"),
-    ("eigenerklaerung",      r"eigenerkl|verpflichtungserkl|\beee\b|einheitliche.?europ"),
-    ("formblatt",            r"formblatt|form_|\bvhb\b|\b124\b|\b234\b|\b521\b|\b522\b|\b531\b"),
-    ("zuschlagskriterien",   r"zuschlag|wertung|wertungsmatrix|kriterienkatalog|bewertungsmatrix|kriterien"),
-    ("preisblatt",           r"preisblatt|preisverz|kalkulat|\bpreise?\b|angebotspreis|preistabelle"),
-    ("datenschutz",          r"datenschutz|dsgvo|\bavv\b|vertraulichk|verschwiegen"),
-    ("technische_anlage",    r"plan\b|zeichnung|gutachten|baugrund|lageplan|schema|technische.?anlage|\bgaeb\b"),
-    ("informationsblatt",    r"\binfo|hinweis|merkblatt|erläuter|checkliste"),
-]
+# ── Dokumenttyp-Klassifikation: EINE Quelle, `govisor.doctypes` ──
+# Dieses Skript trug bis 2026-08-21 eine eigene, eingefrorene Kopie der Regeln. Seine
+# Extratypen `technische_anlage` und `informationsblatt` haben sich als richtig erwiesen und
+# sind in den Betriebs-Klassifikator uebernommen worden; sein `bewerbungsbedingungen` faellt
+# dort unter `eignung`.
 _KRIT_TXT = re.compile(r"zuschlagskriteri|wertungskriteri|zuschlag erfolgt|bewertet.{0,20}nach|gewichtung", re.I)
 _EIGN_TXT = re.compile(r"eignungskriteri|eignungsnachweis|geeignetheit|mindestanforderung.{0,20}eignung", re.I)
 _LOS = re.compile(r"\blos[\s_\-]?\d|\blos[\s_\-]?[ivx]+\b|fachlos|gewerk", re.I)
@@ -52,11 +42,7 @@ _GAEB = re.compile(r"\.(d8[1-4]|x8[1-3]|p8[0-9])$|gaeb", re.I)
 
 
 def classify(name: str) -> str:
-    n = name.lower()
-    for t, pat in DOCTYPES:
-        if re.search(pat, n):
-            return t
-    return "sonstiges"
+    return doctypes.classify(name)
 
 
 def norm_text(t: str) -> str:
@@ -239,7 +225,7 @@ def main() -> int:
     loc = Counter()
     for n in notices:
         has_own = any(f["doctype"] == "zuschlagskriterien" for f in n["files"])
-        emb = any(_KRIT_TXT.search(f["text"] or "") for f in n["files"] if f["doctype"] in ("bewerbungsbedingungen", "leistungsbeschreibung", "vertrag"))
+        emb = any(_KRIT_TXT.search(f["text"] or "") for f in n["files"] if f["doctype"] in ("eignung", "leistungsbeschreibung", "vertrag"))
         loc["eigenes Dokument" if has_own else "eingebettet (Bewerbung/LB)" if emb else "nicht gefunden"] += 1
     crit_names = Counter(re.sub(r"\d+", "#", os.path.basename(f["name"]).lower())
                          for n in notices for f in n["files"] if f["doctype"] == "zuschlagskriterien")

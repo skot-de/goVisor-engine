@@ -62,6 +62,11 @@ from . import docfetch_queue as _queue
 # 8 min: der groesste je geholte Vorgang war 636 MB, das Mittel liegt bei 8 MB.
 VORGANG_FRIST_S = int(__import__("os").environ.get("GOVISOR_VORGANG_FRIST", "480"))
 
+# Wie lange ein Lauf OHNE ein einziges neues Paket weiterlaufen darf. Der Fall, der am
+# 2026-08-21 zwei Abrufer 54 Stunden hat laufen lassen, war nicht ein haengender Vorgang,
+# sondern ein Abrufer, der beschaeftigt aussah und nichts mehr lieferte.
+LEERLAUF_S = int(__import__("os").environ.get("GOVISOR_LEERLAUF", "3600"))
+
 
 ROOT = Path(__file__).resolve().parent.parent
 
@@ -281,7 +286,13 @@ def lauf(limit: int | None = None, dry_run: bool = False, country: str = "DE") -
 
     saetze = []
     geladen_mb = 0.0
-    with sync_playwright() as p:
+    def _sichern():                     # laeuft, wenn die Wache hart abbricht
+        if saetze and not dry_run:
+            out_root.mkdir(parents=True, exist_ok=True)
+            _queue.schreibe(out_root, "netserver", saetze)
+
+    with _queue.Wache("netserver", vorgang_hart_s=0, leerlauf_s=LEERLAUF_S,
+                      sichern=_sichern) as wache, sync_playwright() as p:
         b = p.chromium.launch(headless=True)
         ctx = b.new_context(accept_downloads=True)
         pg = ctx.new_page()
@@ -301,6 +312,8 @@ def lauf(limit: int | None = None, dry_run: bool = False, country: str = "DE") -
                 r = {"status": "fehler", "bytes": 0, "n_files": 0, "note": type(e).__name__}
             host = seite.split("/")[2]
             saetze.append({"lead_id": lead_id, "host": host, "url": seite, **r})
+            if r.get("status") == "downloaded":
+                wache.erfolg()
             info = (f"{r['n_files']} Dateien  {r['bytes']/1024**2:.1f} MB"
                     if r["status"] == "downloaded" else f"{r['status']} ({r['note']})")
             print(f"  [{i}/{len(offen)}] {host[:24]:<24} {lead_id[:14]:<14} {info}", flush=True)

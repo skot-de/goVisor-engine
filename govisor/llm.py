@@ -101,52 +101,45 @@ def _load_cerebras_keys() -> list[str]:
 
 
 def _anbieter() -> list[dict]:
-    """Anbieter in der Reihenfolge, in der sie versucht werden — nach GEMESSENER Qualitaet.
+    """Die Anbieterliste — seit 2026-08-21 **nur noch OpenRouter**.
 
-    Bis zum 2026-08-18 entschied das Guthaben, wer drankam. Das ist die falsche Ordnung:
-    die Modelle unterscheiden sich messbar, und ein Bestand aus dem jeweils gerade bezahlten
-    Modell ist ein Bestand ohne Aussage. Sven: „mach es so das die qualitaet bei der analyse
-    hoch bleibt."
+    **Warum die anderen weg sind.** Die Kette aus fuenf Anbietern stammte aus einer Zeit mit
+    Restguthaben bei xAI, Perplexity, Together, SambaNova und Cerebras. Sven am 2026-08-21:
+    „das kommt aus der zeit wo ich noch rest budgets bei den anbietern hatte. nun muss ich
+    aktiv nachladen und das mache ich dann nur bei openrouter." Wer nur eine Kasse fuellt,
+    braucht keine Verteilungslogik — und bekommt eine Eigenschaft geschenkt, die vorher
+    fehlte: **derselbe Bestand entsteht mit demselben Modell**.
 
-    Gemessen mit `scripts/llm_bench.py --n 6` an denselben sechs Vorgaengen (belegte
-    Pruefpunkte je Vorgang · Anteil verworfener Zitate · Sekunden je Vorgang):
+    **Was das behebt.** Bis hierher entschied das Guthaben, welches Modell eine Vergabe
+    analysierte. Gemessen an 3.544 produktiv gerechneten Vergaben (`scripts/llm_qualitaet.py`)
+    war das ein Bestand ohne gemeinsame Aussage:
 
-        xai/grok-4-fast-non-reasoning     15,3 ·  2 % · 11,3 s   ← Ordnung folgt dieser Spalte
-        (Bestand) gemini-2.5-flash        14,8 · 26 % ·    —
-        perplexity/sonar                  11,7 ·  1 % ·  6,8 s
-        together/Llama-3.3-70B-Turbo       7,5 ·  0 % ·  7,4 s
-        sambanova/Llama-3.3-70B            7,2 ·  0 % ·  5,1 s
-        cerebras/gpt-oss-120b              —   ·  —   ·  —      429 bei langen Dokumenten
+        google/gemini-2.5-flash      43,3 belegte Punkte · 15 % verworfen ·  5 % gruen
+        cerebras/gpt-oss-120b        27,1 ·  19 % ·  7 % gruen
+        xai/grok-4-fast              25,1 ·  23 % · 26 % gruen · 14 % ganz ohne Befund
+        perplexity/sonar             22,5 ·  17 % · 11 % gruen
+        together/Llama-3.3-70B       16,9 ·  22 % · 90 % gruen
+        sambanova/Llama-3.3-70B      16,2 ·  28 % · 86 % gruen
 
-    Die **Verwerfungsquote** ist dabei die ehrlichere Zahl: sie misst nicht Fleiss, sondern
-    Genauigkeit. Ein Modell mit vielen Punkten UND hoher Verwerfung hat viel behauptet und
-    wenig belegt — Gemini liegt hier bei 26 %, grok bei 2 %.
+    Die letzte Spalte ist die schlimmste: die Modelle, die am **wenigsten** finden, erklaeren
+    fast alles fuer unproblematisch. Fuer den Nutzer heisst gruen „keine Huerden".
 
-    Cerebras steht zuletzt, obwohl es das schnellste ist: bei den langen Volltexten dieser
-    Aufgabe laeuft es reproduzierbar in sein Ratenlimit (429), waehrend es bei kurzen Fragen
-    in 0,9 s antwortet. Schnell auf dem Prueffeld heisst hier nicht schnell im Betrieb.
+    **Was mit dem Wegfall verlorengeht — bewusst notiert, damit es niemand neu entdeckt:**
+
+    * Perplexitys `sonar` brauchte zwingend `disable_search: True`. Ohne den Schalter
+      recherchierte es im Netz und lieferte 20 Webquellen je Antwort — unter der Belegpflicht
+      (Zitat AUS DEM DOKUMENT) entstehen so Saetze, die stimmen koennen und trotzdem nicht in
+      den Unterlagen stehen.
+    * Cerebras war auf kurze Fragen mit 0,9 s das schnellste und lief bei den langen
+      Volltexten dieser Aufgabe reproduzierbar in sein Ratenlimit (429).
+    * Together und SambaNova fuhren **dasselbe** Llama-3.3-70B mit messbar verschiedenem
+      Ergebnis (16,9 bei 22 % gegen 16,2 bei 28 %) — gleiche Gewichte, andere Auslieferung.
+
+    Ein Wiedereinstieg ist ein Listeneintrag; die Schluessel-Lader bleiben erhalten.
     """
     return [
-        {"name": "xai", "url": XAI_URL, "keys": _load_keys_aus("xai"), "model": XAI_MODEL},
-        # ⚠ Perplexity NUR mit abgeschalteter Suche: die `sonar`-Modelle recherchieren sonst
-        # im Netz, und unter der Belegpflicht (Zitat AUS DEM DOKUMENT, docextract.py §6a.2)
-        # entstuenden Saetze, die stimmen koennen und trotzdem nicht in den Unterlagen
-        # stehen. Gemessen: ohne Schalter 20 Webquellen je Antwort, mit Schalter 0.
-        {"name": "perplexity", "url": PERPLEXITY_URL, "keys": _load_keys_aus("perplexity"),
-         "model": PERPLEXITY_MODEL, "extra": {"disable_search": True}},
-        {"name": "together", "url": TOGETHER_URL, "keys": _load_keys_aus("together"),
-         "model": TOGETHER_MODEL},
-        {"name": "sambanova", "url": SAMBANOVA_URL, "keys": _load_keys_aus("sambanova"),
-         "model": SAMBANOVA_MODEL},
-        {"name": "cerebras", "url": CEREBRAS_URL, "keys": _load_cerebras_keys(),
-         "model": CEREBRAS_MODEL},
-        # OpenRouter zuletzt: dort ist das Guthaben leer (402, 2026-08-18). Der Eintrag
-        # bleibt, damit ein Aufladen sofort wirkt — dann gehoert er nach oben, sobald ein
-        # Vergleichslauf zeigt, wo das dortige Modell wirklich steht.
         {"name": "openrouter", "url": URL, "keys": _load_keys(), "model": DEFAULT_MODEL},
     ]
-
-
 def available_keys() -> int:
     """Anzahl konfigurierter Keys ueber ALLE Anbieter, die (noch) nicht leer sind."""
     return sum(1 for a in _anbieter() for k in a["keys"] if k not in _EXHAUSTED)

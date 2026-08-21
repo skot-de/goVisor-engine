@@ -54,6 +54,11 @@ from . import docfetch_queue as _queue
 
 ROOT = Path(__file__).resolve().parent.parent
 
+# Wie lange ein Lauf OHNE ein einziges neues Paket weiterlaufen darf. Der Fall, der am
+# 2026-08-21 zwei Abrufer 54 Stunden hat laufen lassen, war nicht ein haengender Vorgang,
+# sondern ein Abrufer, der beschaeftigt aussah und nichts mehr lieferte.
+LEERLAUF_S = int(__import__("os").environ.get("GOVISOR_LEERLAUF", "3600"))
+
 # Genau dieser Host. Die Nachbarn heissen fast gleich und sind voellig andere Systeme:
 # evergabe-online.de (Bund), deutsche-evergabe.de, evergabe.nrw.de, evergabe.blb.nrw.de,
 # bieter.ehealth-evergabe.de. Ein `in`-Test auf "evergabe.de" faengt sie alle mit ein.
@@ -293,7 +298,13 @@ def lauf(limit: int | None = None, dry_run: bool = False, country: str = "DE") -
     saetze: list[dict] = []
     abkuehlungen = 0
     nachzuholen: list[tuple] = []
-    with sync_playwright() as p:
+    def _sichern():                     # laeuft, wenn die Wache hart abbricht
+        if saetze and not dry_run:
+            out_root.mkdir(parents=True, exist_ok=True)
+            _queue.schreibe(out_root, "evergabe", saetze)
+
+    with _queue.Wache("evergabe", vorgang_hart_s=0, leerlauf_s=LEERLAUF_S,
+                      sichern=_sichern) as wache, sync_playwright() as p:
         b = p.chromium.launch(headless=True)
         ctx = b.new_context(accept_downloads=True)
         pg = ctx.new_page()
@@ -361,6 +372,7 @@ def lauf(limit: int | None = None, dry_run: bool = False, country: str = "DE") -
             saetze.append({"lead_id": lead_id, "url": seite, "status": "downloaded",
                            "bytes": groesse, "n_files": len(r["dateien"]),
                            "uebersprungen": r["uebersprungen"], "note": ""})
+            wache.erfolg()
             rest = f" · {len(r['uebersprungen'])} übersprungen" if r["uebersprungen"] else ""
             print(f"  [{i}/{len(offen)}] {lead_id}: {len(r['dateien'])} Dateien"
                   f"  {groesse/1024:.0f} KB{rest}", flush=True)
@@ -380,6 +392,7 @@ def lauf(limit: int | None = None, dry_run: bool = False, country: str = "DE") -
                 saetze.append({"lead_id": lead_id, "url": seite, "status": "downloaded",
                                "bytes": groesse, "n_files": len(r["dateien"]),
                                "uebersprungen": r["uebersprungen"], "note": "nachgeholt"})
+                wache.erfolg()
                 print(f"  [nach {j}/{len(nachzuholen)}] {lead_id}: {len(r['dateien'])} "
                       f"Dateien  {groesse/1024:.0f} KB", flush=True)
             except Exception as e:                       # noqa: BLE001

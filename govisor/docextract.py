@@ -17,6 +17,37 @@ from . import doctax
 
 # Je Extraktions-Doktyp: Ziel, erlaubte req_types, Few-Shot-Beispiele (aus realem Unterlagen-Stil).
 _TASKS: dict[str, dict] = {
+    # ── Fragenbeantwortung (Bieterfragen) ──────────────────────────────────────────────
+    #
+    # ⚠ **Der einzige Doktyp, der die anderen ueberschreibt.** Die Bekanntmachung sagt das
+    # Alte, die Fragenbeantwortung das Geltende: verschobene Fristen, korrigierte Mengen,
+    # zurueckgenommene Eignungsanforderungen, nachgereichte Formulare. Wer nur die
+    # urspruenglichen Unterlagen liest, arbeitet mit einem ueberholten Stand.
+    #
+    # Eigene `req_types` braucht es dafuer nicht — eine verschobene Frist ist eine `frist`.
+    # Was sie unterscheidet, ist die Herkunft: sie steht im Nachtrag, nicht im Original.
+    # Deshalb bleibt der Typ AUSSERHALB von `doctypes.PRIORITY`: die meisten Vergaben haben
+    # keine Fragenbeantwortung, und ihr Fehlen ist keine Luecke (§4.3).
+    "fragenantworten": {
+        "ziel": ("Was die Antworten an den urspruenglichen Unterlagen AENDERN: neue oder "
+                 "verschobene Fristen und Termine, korrigierte Mengen und Leistungen, "
+                 "geaenderte oder zurueckgenommene Eignungs- und Zuschlagskriterien, "
+                 "zusaetzlich geforderte oder gestrichene Dokumente, klargestellte "
+                 "Formalien. Reine Rueckfragen ohne Aenderung NICHT aufnehmen."),
+        "req_types": ["frist", "einzureichendes_dokument", "formalie", "leistung_menge",
+                      "technische_mindestanforderung", "zuschlagskriterium",
+                      "eignung_technisch", "eignung_personal", "zertifikat"],
+        "beispiele": [
+            {"req_type": "frist", "value": "Angebotsfrist", "unit": "12.09.2026, 10:00 Uhr",
+             "quote": "Die Angebotsfrist wird auf den 12.09.2026, 10:00 Uhr verlaengert.",
+             "marking": "Zitat"},
+            {"req_type": "einzureichendes_dokument", "value": "Referenzbescheinigung", "unit": None,
+             "quote": "Frage 4: Ist eine Referenzbescheinigung beizulegen? Antwort: Ja, "
+                      "Formblatt 444 ist mit dem Angebot einzureichen.",
+             "marking": "Zitat"},
+        ],
+    },
+
     "eignung": {
         "ziel": ("K.-o.- und Eignungskriterien: Mindestumsatz, Mindestanzahl und -wert vergleichbarer "
                  "Referenzen, geforderte Zertifikate/Nachweise, Ausschluss-/Mindestbedingungen, "

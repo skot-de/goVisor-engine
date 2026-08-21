@@ -2639,3 +2639,261 @@ def test_zuschnitt_ignoriert_sammelbecken_taetigkeiten():
     from pathlib import Path as _P
     q = (_P(__file__).resolve().parent.parent / "scripts" / "export_outreach.py").read_text(encoding="utf-8")
     assert "AKTIVITAET_UNSPEZIFISCH" in q and '"general_public"' in q
+
+
+def test_wache_bricht_hart_ab_wenn_die_weiche_frist_verschluckt_wird():
+    """Die weiche Frist (``SIGALRM``) reicht nicht — sie wurde nachweislich verschluckt.
+
+    Playwrights Sync-API fuehrt Aufrufercode in einem Greenlet aus; trifft das Signal ein,
+    waehrend der Hauptthread im Treiber steckt, verpufft die Ausnahme. Gemessen am
+    2026-08-21: ``docfetch_healyhudson`` lief 8 h 25 min mit gesetzter
+    ``VORGANG_FRIST_S = 480`` und holte vier Stunden lang nichts.
+
+    Der Test legt SIGALRM lahm — genau der beobachtete Zustand — und verlangt, dass der
+    Prozess trotzdem endet. Er laeuft in einem Unterprozess, weil die Wache ``os._exit``
+    ruft; jede sanftere Variante koennte von genau dem blockiert werden, wogegen sie hilft.
+    """
+    import subprocess
+    import sys
+    from pathlib import Path
+
+    wurzel = Path(__file__).resolve().parent.parent
+    programm = (
+        "import sys, time, signal; sys.path.insert(0, %r)\n"
+        "from govisor import docfetch_queue as q\n"
+        "q.HART_FAKTOR = 2\n"
+        "signal.signal = lambda *a, **k: None\n"
+        "signal.setitimer = lambda *a, **k: None\n"
+        "gerettet = []\n"
+        "with q.vorgang_frist(2, ):\n"
+        "    time.sleep(60)\n"
+        "print('DARF NIE ERSCHEINEN')\n" % str(wurzel)
+    )
+    r = subprocess.run([sys.executable, "-c", programm], capture_output=True,
+                       text=True, timeout=60)
+    assert r.returncode == 75, f"kein harter Abbruch: {r.returncode} / {r.stdout} {r.stderr}"
+    assert "DARF NIE ERSCHEINEN" not in r.stdout
+
+
+def test_wache_bricht_bei_leerlauf_ab_und_sichert_vorher():
+    """Der teuerste Fall war nicht ein haengender Vorgang, sondern ein Abrufer, der
+    beschaeftigt aussah und nichts mehr lieferte — 54 Stunden fuer null Pakete.
+
+    Vor dem Abbruch muss der Zwischenstand geschrieben werden, sonst kostet die Wache den
+    ganzen Lauf.
+    """
+    import subprocess
+    import sys
+    from pathlib import Path
+
+    wurzel = Path(__file__).resolve().parent.parent
+    programm = (
+        "import sys, time; sys.path.insert(0, %r)\n"
+        "from govisor.docfetch_queue import Wache\n"
+        "with Wache('probe', vorgang_hart_s=0, leerlauf_s=2, takt_s=1,\n"
+        "           sichern=lambda: print('GESICHERT', flush=True)):\n"
+        "    time.sleep(60)\n"
+        "print('DARF NIE ERSCHEINEN')\n" % str(wurzel)
+    )
+    r = subprocess.run([sys.executable, "-c", programm], capture_output=True,
+                       text=True, timeout=60)
+    assert r.returncode == 75
+    assert "GESICHERT" in r.stdout, "der Zwischenstand wurde nicht gerettet"
+    assert "DARF NIE ERSCHEINEN" not in r.stdout
+
+
+def test_jeder_abrufer_haengt_an_der_wache():
+    """Acht Abrufer teilen die Schleife — und muessen alle bewacht sein.
+
+    Ein Abrufer ohne Wache faellt nicht auf: er sieht beschaeftigt aus.
+    """
+    from pathlib import Path
+
+    verz = Path(__file__).resolve().parent.parent / "govisor"
+    abrufer = [p for p in sorted(verz.glob("docfetch_*.py"))
+               if p.name != "docfetch_queue.py" and "sync_playwright" in p.read_text(encoding="utf-8")]
+    assert len(abrufer) >= 8, f"nur {len(abrufer)} Abrufer gefunden"
+    for p in abrufer:
+        quelle = p.read_text(encoding="utf-8")
+        assert "_queue.Wache(" in quelle, f"{p.name} laeuft ohne Wache"
+        assert "wache.erfolg()" in quelle, f"{p.name} meldet der Wache keinen Fortschritt"
+        assert "LEERLAUF_S" in quelle, f"{p.name} kennt keine Leerlaufgrenze"
+
+
+def _zip_mit_grossem_innenarchiv(ziel):
+    """Aeusseres ZIP mit einem inneren, das ueber `MAX_DATEI_MB` liegt."""
+    import io
+    import zipfile
+
+    innen = io.BytesIO()
+    with zipfile.ZipFile(innen, "w", zipfile.ZIP_DEFLATED) as z:
+        # Fuellung, damit das innere Archiv UNKOMPRIMIERT ueber der Grenze liegt.
+        z.writestr("fuellung.txt", ("Vergabeunterlagen " * 40) + "\n" * 10)
+        z.writestr("Leistungsverzeichnis.txt", "Leistungsverzeichnis Ordnungszahl Langtext")
+    roh = innen.getvalue()
+    with zipfile.ZipFile(ziel, "w", zipfile.ZIP_STORED) as z:
+        z.writestr("sonstiges/Grosses_Innenarchiv.zip", roh)
+        z.writestr("Aufforderung.txt", "Aufforderung zur Abgabe eines Angebots")
+    return len(roh)
+
+
+def test_verschachtelte_archive_ueber_der_groessengrenze_werden_geoeffnet(tmp_path, monkeypatch):
+    """Die Groessenpruefung stand VOR der Rekursion — ein Archiv im Archiv blieb zu.
+
+    Gemessen am 2026-08-21: 1.554 der als ``datei_zu_gross`` gemeldeten Eintraege waren
+    ZIPs, keine Brocken. An einem echten Paket (457686_2026) kamen so 173 Dateien zurueck,
+    die vorher nie gelesen wurden. Der Weg ueber die Platte kostet keinen Speicher — es ist
+    derselbe, den `iter_docs` fuer das aeussere Archiv ohnehin geht.
+    """
+    from govisor import docpipe
+
+    p = tmp_path / "paket.zip"
+    innen_bytes = _zip_mit_grossem_innenarchiv(p)
+    # Grenze so setzen, dass das innere Archiv sicher darueber liegt.
+    monkeypatch.setattr(docpipe, "MAX_DATEI_MB", max(1, innen_bytes // 1_000_000) or 1)
+    monkeypatch.setattr(docpipe, "MAX_DATEI_MB", 0.000_001)
+
+    namen = [n for n, _, _ in docpipe.iter_docs(p)]
+    assert any("Leistungsverzeichnis.txt" in n for n in namen), namen
+    assert any("::" in n for n in namen), "der Pfad in das innere Archiv fehlt"
+
+
+def test_grosse_pdf_wird_gekuerzt_statt_verworfen():
+    """945 Dokumente priorisierter Typen wurden ganz uebersprungen, darunter 760
+    Leistungsbeschreibungen — ausgerechnet die inhaltsreichsten Dateien.
+
+    ⚠ Die Grenze hatte einen guten Grund: eine PDF ueber 60 MB kostete gemessen Ø 600 s,
+    und acht Arbeiter mal 40 MB waeren auf einer 16-GB-Maschine ueber 50 GB gewesen. Der
+    Seitendeckel loest BEIDES — deshalb wird gekuerzt, nicht die Grenze angehoben.
+    """
+    from govisor import docpipe
+
+    assert docpipe.GROSS_DATEI_MB > docpipe.MAX_DATEI_MB
+    assert docpipe._GROSS_SEITEN > 0
+    # Der gekuerzte Zustand muss SICHTBAR sein: eine halbe Leistungsbeschreibung ist etwas
+    # anderes als eine ganze.
+    quelle = (pathlib.Path(__file__).resolve().parent.parent / "govisor" / "docpipe.py").read_text(encoding="utf-8")
+    assert "gross_gekuerzt" in quelle
+    assert "Fertig" in quelle and "_auf_platte" in quelle
+
+
+def test_neue_status_erreichen_die_auswertung():
+    """Ein neuer Status ist wertlos, wenn ihn die Filter nicht kennen.
+
+    Fuenf Stellen filterten bisher jede fuer sich auf ``('ok','ocr')``. Der Strom-Pfad fuer
+    grosse PDFs waere genau daran gescheitert: die geretteten Dateien tragen
+    ``gross_gekuerzt``, waeren also nirgends angekommen — die Arbeit haette stattgefunden
+    und nichts bewirkt. Seither gibt es EINEN Namen dafuer.
+    """
+    from govisor.docpipe import BRAUCHBARE_STATUS, SQL_BRAUCHBAR
+
+    assert "gross_gekuerzt" in BRAUCHBARE_STATUS
+    assert "ok" in BRAUCHBARE_STATUS and "ocr" in BRAUCHBARE_STATUS
+    assert SQL_BRAUCHBAR.startswith("status IN (")
+
+    wurzel = pathlib.Path(__file__).resolve().parent.parent
+    stellen = ["govisor/docsignals.py", "scripts/analyze_docs.py",
+               "scripts/llm_bench.py", "scripts/export_doc_text.py"]
+    for rel in stellen:
+        quelle = (wurzel / rel).read_text(encoding="utf-8")
+        assert "SQL_BRAUCHBAR" in quelle, f"{rel} filtert an der gemeinsamen Liste vorbei"
+        assert "'ok','ocr'" not in quelle, f"{rel} hat noch eine eigene Kopie der Statusliste"
+
+    # ⚠ **Der Name muss auch IMPORTIERT sein.** Eine erste Fassung dieses Tests prueffte nur,
+    # ob „SQL_BRAUCHBAR" im Quelltext vorkommt — sie war gruen, waehrend drei Skripte den
+    # Import nicht hatten und mit `NameError` abbrachen. Das ist am 2026-08-21 dem laufenden
+    # Dokumenten-Arbeiter passiert, mitten in Stufe 1. Ein Test, der Text sucht statt Code
+    # auszufuehren, bestaetigt nur die Schreibweise.
+    import importlib
+    import importlib.util
+    import sys as _sys
+
+    for rel in stellen:
+        pfad = wurzel / rel
+        if rel.startswith("govisor/"):
+            # Paketmodul: normal importieren. Ueber den Dateipfad geladen scheitern die
+            # relativen Importe, und der Test wuerde einen Fehler melden, den es nicht gibt.
+            modul = importlib.import_module("govisor." + pfad.stem)
+        else:
+            spec = importlib.util.spec_from_file_location(f"_prueflauf_{pfad.stem}", pfad)
+            modul = importlib.util.module_from_spec(spec)
+            _sys.modules[spec.name] = modul
+            try:
+                spec.loader.exec_module(modul)
+            except SystemExit:
+                pass                              # Skripte mit argparse duerfen aussteigen
+            finally:
+                _sys.modules.pop(spec.name, None)
+        # ⚠ **Laden allein beweist nichts.** `SQL_BRAUCHBAR` wird in diesen Skripten erst
+        # INNERHALB von `main()` gebraucht — ein fehlender Import faellt beim Import nicht
+        # auf, sondern erst im Betrieb. Genau so ist der Dokumenten-Arbeiter am 2026-08-21
+        # in Stufe 1 abgebrochen, waehrend zwei Fassungen dieses Tests gruen waren: die
+        # erste suchte den Namen im Text, die zweite fuehrte das Modul aus. Gebunden sein
+        # muss er.
+        assert hasattr(modul, "SQL_BRAUCHBAR"), (
+            f"{rel} nennt SQL_BRAUCHBAR, importiert den Namen aber nicht — "
+            "der Fehler zeigt sich erst zur Laufzeit")
+
+
+def test_ocr_text_wird_aufgehoben_auch_wenn_der_vokabeltest_scheitert():
+    """Der erkannte Text wurde bisher verworfen — damit war die Entscheidung unpruefbar.
+
+    An einer Stichprobe vom 2026-08-21 lag der Vokabeltest jedes Mal richtig
+    (Grundbuchauszug, Planlegende, Statikbericht sind keine Vergabeanforderungen). Genau das
+    liess sich aber nur feststellen, weil OCR dafuer noch einmal von Hand lief. Aufheben
+    kostet nichts: ``ocr_ohne_inhalt`` steht nicht in `BRAUCHBARE_STATUS`, der Text erreicht
+    also keine Auswertung.
+    """
+    from govisor.docpipe import BRAUCHBARE_STATUS
+
+    assert "ocr_ohne_inhalt" not in BRAUCHBARE_STATUS
+    quelle = (pathlib.Path(__file__).resolve().parent.parent
+              / "govisor" / "docpipe.py").read_text(encoding="utf-8")
+    assert 'text, status = erkannt[:_MAX_TEXT], "ocr_ohne_inhalt"' in quelle
+
+
+def test_nachtraege_ersetzen_je_datei_nicht_je_fassung():
+    """Portale legen Nachtraege als „Version 2/" ab — aber nur mit dem, was sich aendert.
+
+    ⚠ Die naheliegende Regel „nur die hoechste Fassung nehmen" waere zerstoererisch gewesen:
+    gemessen am 2026-08-21 kommen von 4.464 Dateien in aelteren Fassungen **3.173 in der
+    juengsten gar nicht vor**. Sie haetten nirgends mehr existiert. Ersetzt wird deshalb je
+    DATEI: derselbe Pfad unterhalb des Fassungsordners in einer hoeheren Fassung. Das trifft
+    1.291 Dateien in 84 Vorgaengen.
+    """
+    from govisor.docpipe import fassung, ueberholte
+
+    assert fassung("Vergabe/Version 2/Anlage 4.pdf") == (2, "anlage 4.pdf")
+    assert fassung("Vergabe/Anlage 4.pdf") is None
+    assert fassung("Paket.zip::Fassung_03/LV.pdf") == (3, "lv.pdf")
+
+    dateien = [
+        "V/Version 1/A.pdf",        # von V4 ersetzt
+        "V/Version 2/A.pdf",        # ebenfalls
+        "V/Version 4/A.pdf",        # gilt
+        "V/Version 1/B.pdf",        # steht NUR in V1 — bleibt
+        "V/Anlage.pdf",             # ohne Fassung — bleibt
+    ]
+    weg = ueberholte(dateien)
+    assert weg == {"V/Version 1/A.pdf", "V/Version 2/A.pdf"}, weg
+    assert "V/Version 1/B.pdf" not in weg, "ein Nachtrag ersetzt nur, was er selbst enthaelt"
+    assert "V/Anlage.pdf" not in weg
+
+
+def test_ueberholte_dateien_erreichen_keine_auswertung():
+    """Markiert, nicht geloescht — aber aus jeder Auswertung heraus."""
+    from govisor.docpipe import BRAUCHBARE_STATUS
+
+    assert "ueberholt" not in BRAUCHBARE_STATUS
+    quelle = (pathlib.Path(__file__).resolve().parent.parent
+              / "govisor" / "docpipe.py").read_text(encoding="utf-8")
+    assert 'r["status"] = "ueberholt"' in quelle
+    # ⚠ Der Lesepfad muss es AUCH tun: das bereits Indizierte traegt den Status noch nicht.
+    # ALLE DREI Verbraucher — Analyse, Signale, Volltext-Auslieferung. Wer einen vergisst,
+    # bekommt einen Bestand, der sich je nach Blickwinkel anders liest.
+    wurzel = pathlib.Path(__file__).resolve().parent.parent
+    for rel, marke in (("scripts/analyze_docs.py", "docpipe.ueberholte("),
+                       ("govisor/docsignals.py", "_ueberholt_registrieren"),
+                       ("scripts/export_doc_text.py", "ueberholte(")):
+        quelle = (wurzel / rel).read_text(encoding="utf-8")
+        assert marke in quelle, f"{rel} rechnet ueberholte Nachtraege noch mit"

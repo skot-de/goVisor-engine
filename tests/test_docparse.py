@@ -68,10 +68,41 @@ def test_dispatcher_routes_by_ext():
 
 
 def test_classify_content():
-    assert docparse.classify_content("Die Wertung erfolgt zu 60 % über den Preis, Gewichtung 40 %") == "zuschlagskriterien"
-    assert docparse.classify_content("Nachzuweisen sind vergleichbare Referenzen und ein Mindestumsatz") == "eignung"
-    assert docparse.classify_content("Angebote sind bis 15.08.2026 einzureichen") == "aufforderung"
+    """Die Inhaltsprobe wertet nach Punkten und schweigt im Zweifel.
+
+    ⚠ Bis 2026-08-21 nahm sie die erste passende Regel — ein einziges Stichwort genuegte.
+    Gegen eine Rueckhaltestichprobe gehalten lag sie damit in ueber der Haelfte der Faelle
+    daneben (46,1 %). Ein EINZELNER Satz reicht seither nicht mehr: die Schwelle verlangt
+    mehrere zusammenpassende Merkmale. Das ist der Preis fuer 86 % Genauigkeit und
+    beabsichtigt — ein falscher Doktyp schickt den Text an die falsche Extraktionsaufgabe
+    und meldet einen priorisierten Typ als vorhanden, wo eine echte Luecke ist.
+    """
+    zuschlag = ("Zuschlagskriterien und ihre Gewichtung 40 %. Die Bewertung erfolgt nach "
+                "Bewertungsmatrix; die Hoechstpunktzahl erhaelt das Angebot mit dem "
+                "niedrigsten Angebotspreis, dazwischen lineare Interpolation.")
+    assert docparse.classify_content(zuschlag) == "zuschlagskriterien"
+
+    eignung = ("Bewerbungsbedingungen. Nachzuweisen sind vergleichbare Referenzen der "
+               "letzten drei Jahre sowie ein Mindestumsatz. Die Eignungsnachweise sind mit "
+               "den Vordrucken der Vergabestelle einzureichen.")
+    assert docparse.classify_content(eignung) == "eignung"
+
+    preis = ("Aufgliederung der Einheitspreise. Mittellohn einschliesslich Lohnzulagen, "
+             "Soziallöhne und Lohnnebenkosten ergeben den Verrechnungslohn.")
+    assert docparse.classify_content(preis) == "preisblatt"
+
     assert docparse.classify_content("Allgemeines Blabla ohne Merkmale") == "sonstiges"
+    # Ein einzelnes Stichwort ist kein Urteil.
+    assert docparse.classify_content("Angebote sind bis 15.08.2026 einzureichen") == "sonstiges"
+
+
+def test_inhaltsprobe_greift_erst_wenn_der_name_schweigt():
+    """Der Name entscheidet, solange er etwas hergibt — er ist genauer und kostet nichts."""
+    from govisor import doctypes
+    lb = "Leistungsverzeichnis, Ordnungszahl und Langtext je Position, Menge Einheit."
+    assert doctypes.classify("Vertragsbedingungen.pdf", lb) == "vertrag"
+    assert doctypes.classify("Anlage 3.pdf", lb) == "leistungsbeschreibung"
+    assert doctypes.classify("Anlage 3.pdf") == "sonstiges"
 
 
 def test_nachweis_count():

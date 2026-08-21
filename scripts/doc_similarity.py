@@ -7,6 +7,12 @@ Dokumenttyp:
     Vorgänge desselben Typs vorkommen → „wie viel einer typischen LB wiederholt sich?"
   · **Median Jaccard** (Stichprobe paarweise) → grobe Gesamt-Ähnlichkeit.
 
+Die Doktyp-Klassifikation kommt aus ``govisor.doctypes`` — dieses Skript trug bis
+2026-08-21 eine eigene, eingefrorene Kopie der Regeln. Sie kannte weder Oesterreich noch
+die VHB-Nummern und zaehlte „Preisermittlung bei Zuschlagskalkulation" als
+Zuschlagskriterium. Wer hier wieder Regeln einsetzt, misst an einem anderen Massstab als
+der Betrieb.
+
 Liest data/docs/DE/doc_text.parquet (aus `index-docs`). Schreibt data/docs/study/q1b_aehnlichkeit.csv
 + druckt eine Tabelle. Aufruf: python3 scripts/doc_similarity.py
 """
@@ -21,6 +27,8 @@ from pathlib import Path
 import duckdb
 
 ROOT = Path(__file__).resolve().parent.parent
+import sys; sys.path.insert(0, str(ROOT))
+from govisor import doctypes  # noqa: E402
 SRC = ROOT / "data" / "docs" / "DE" / "doc_text.parquet"
 OUTCSV = ROOT / "data" / "docs" / "study" / "q1b_aehnlichkeit.csv"
 K = 8            # Shingle-Länge (Wörter)
@@ -28,26 +36,9 @@ DF_BOILER = 0.30  # ab welchem Dokument-Frequenz-Anteil eine Passage als Boilerp
 MAXWORDS = 20000  # Deckel je (Vorgang,Typ) — bändigt Riesen-LVs
 SAMPLE = 40       # Vorgänge je Typ für die paarweise Jaccard-Messung
 
-DOCTYPES = [
-    ("aufforderung",         r"aufforder|anschreiben|angebotsauff|deckblatt.*angebot|begleitschreiben"),
-    ("bewerbungsbedingungen", r"bewerbungsbed|teilnahmebed|vergabebed|angebotsbed|verfahrensbed"),
-    ("leistungsbeschreibung", r"leistungsbeschr|leistungsverz|\blv\b|lastenheft|leistungskatalog|baubeschr"),
-    ("vertrag",              r"vertrag|\bevb\b|\bvob\b|\bvol\b|\bagb\b|\bzvb\b|\bbvb\b|besondere.*bedingung|zusätzliche.*bedingung"),
-    ("eignung",              r"eignung|eignungsnachw|eignungskrit|präqualif|referenz"),
-    ("eigenerklaerung",      r"eigenerkl|verpflichtungserkl|\beee\b|einheitliche.?europ"),
-    ("formblatt",            r"formblatt|form_|\bvhb\b|\b124\b|\b234\b|\b521\b|\b522\b|\b531\b"),
-    ("zuschlagskriterien",   r"zuschlag|wertung|wertungsmatrix|kriterienkatalog|bewertungsmatrix|kriterien"),
-    ("preisblatt",           r"preisblatt|preisverz|kalkulat|\bpreise?\b|angebotspreis|preistabelle"),
-    ("datenschutz",          r"datenschutz|dsgvo|\bavv\b|vertraulichk|verschwiegen"),
-]
-
 
 def classify(name: str) -> str:
-    n = name.lower()
-    for t, pat in DOCTYPES:
-        if re.search(pat, n):
-            return t
-    return "sonstiges"
+    return doctypes.classify(name)
 
 
 def shingles(text: str) -> set[int]:

@@ -49,9 +49,18 @@ echo "── goVisor-Prozesse ──"
 # ersten Treffer aus, `ps` bekommt SIGPIPE, und mit `set -o pipefail` wird die Pipeline zu
 # Exit 141. Das `if` nimmt dann den else-Zweig: „keine Prozesse" — WEIL etwas gefunden wurde.
 # Diese Fassung hat mir „Bahn frei" gemeldet, waehrend `index-docs` seit 76 Minuten lief.
-_proc="$(ps -Ao pid=,command= | grep 'govisor\.' || true)"
+# ⚠ UND: nicht nur `govisor.` — das trifft `python -m govisor.…` und sonst nichts. Die
+# beiden DAUER-Arbeiter (`dokumente_arbeiter.sh`, `analyse_arbeiter.sh`) laufen als
+# Bash-Skript, ihre Befehlszeile enthaelt `govisor/` mit Schraegstrich, nicht mit Punkt.
+# Ausgerechnet sie liefen am 2026-08-21 seit zwei Tagen — und diese Pruefung meldete
+# „keine Prozesse". Sie sind die wahrscheinlichste Kollision ueberhaupt, weil sie nie enden.
+#
+# Die Klammern um den ersten Buchstaben halten grep davon ab, sich selbst zu finden.
+_proc="$(ps -Ao pid=,command= | grep -E '[g]ovisor\.|[d]okumente_arbeiter|[a]nalyse_arbeiter|[d]aily_leads' || true)"
 if [ -n "$_proc" ]; then
-  printf '  ⛔ %s\n' "$(echo "$_proc" | sed 's|/[^ ]*/Python ||' | head -8)"
+  # Zeichen vor JEDE Zeile — `printf %s` mit mehrzeiliger Variable setzt es nur vor die
+  # erste, der Rest sieht dann aus wie Fliesstext und wird ueberlesen.
+  echo "$_proc" | sed 's|/[^ ]*/Python ||' | cut -c1-110 | head -8 | sed 's/^/  ⛔ /'
   frei=1
 else
   echo "  ✓ keine"

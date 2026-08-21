@@ -50,6 +50,11 @@ from . import docfetch_queue as _queue
 # 8 min: der groesste je geholte Vorgang war 636 MB, das Mittel liegt bei 8 MB.
 VORGANG_FRIST_S = int(__import__("os").environ.get("GOVISOR_VORGANG_FRIST", "480"))
 
+# Wie lange ein Lauf OHNE ein einziges neues Paket weiterlaufen darf. Der Fall, der am
+# 2026-08-21 zwei Abrufer 54 Stunden hat laufen lassen, war nicht ein haengender Vorgang,
+# sondern ein Abrufer, der beschaeftigt aussah und nichts mehr lieferte.
+LEERLAUF_S = int(__import__("os").environ.get("GOVISOR_LEERLAUF", "3600"))
+
 
 ROOT = Path(__file__).resolve().parent.parent
 
@@ -221,7 +226,13 @@ def lauf(limit: int | None = None, dry_run: bool = False, country: str = "DE") -
     print(f"Healy-Hudson-Unterlagen: {len(offen)} Vergaben zu holen (von {len(rows)} offenen Leads)")
 
     saetze = []
-    with sync_playwright() as p:
+    def _sichern():                     # laeuft, wenn die Wache hart abbricht
+        if saetze and not dry_run:
+            out_root.mkdir(parents=True, exist_ok=True)
+            _queue.schreibe(out_root, "healyhudson", saetze)
+
+    with _queue.Wache("healyhudson", vorgang_hart_s=0, leerlauf_s=LEERLAUF_S,
+                      sichern=_sichern) as wache, sync_playwright() as p:
         b = p.chromium.launch(headless=True)
         ctx = b.new_context(accept_downloads=True)
         pg = ctx.new_page()
@@ -250,6 +261,8 @@ def lauf(limit: int | None = None, dry_run: bool = False, country: str = "DE") -
                            "status": r["status"], "bytes": groesse,
                            "n_files": len(r["dateien"]), "gelistet": r["gelistet"],
                            "note": r["note"]})
+            if r.get("status") == "downloaded":
+                wache.erfolg()
             geladen_mb += groesse / 1e6
             info = (f"{len(r['dateien'])} Dateien  {groesse/1024**2:.1f} MB"
                     if r["status"] == "downloaded" else f"{r['status']} ({r['note'][:50]})")

@@ -21,6 +21,8 @@ from __future__ import annotations
 import re
 from datetime import date as _date
 
+from .docpipe import SQL_BRAUCHBAR
+
 _FLAGS = re.IGNORECASE | re.DOTALL
 
 
@@ -297,6 +299,44 @@ _STAPEL = 40
 _STAND = "doc_signals_stand.parquet"
 
 
+def _ueberholt_registrieren(con, src) -> int:
+    """Ueberholte Nachtrags-Dateien als ``_ueberholt`` an die Verbindung haengen.
+
+    Portale legen Nachtraege als „Version 2/" ab. Ohne Ausschluss rechnen die Signale den
+    ueberholten Stand mit — zwei Angebotsfristen, zwei Mengengerueste, in einem Text
+    zusammengefasst. Gemessen 2026-08-21: 1.291 Dateien in 84 Vorgaengen, 17,2 Mio. Zeichen.
+
+    ⚠ Der Schluessel ist (notice_id, file), nicht nur `file`: derselbe Pfad kommt in
+    verschiedenen Vorgaengen vor, ein Ausschluss nur ueber den Namen traefe Fremde mit.
+
+    ⚠ Nur `notice_id` und `file` werden gelesen — ein Spalten-Scan, der `text` (312 MB) gar
+    nicht anfasst. Dieselbe Ueberlegung wie bei `_fingerabdruecke`.
+
+    Die Regel selbst steht in `docpipe.ueberholte`: je DATEI, nicht je Fassung. Sie hier zu
+    wiederholen waere die zweite Wahrheit, die als erste veraltet.
+    """
+    import pyarrow as pa
+
+    from .docpipe import ueberholte
+
+    je: dict[str, list[str]] = {}
+    for nid, datei in con.execute(
+            f"SELECT notice_id, file FROM read_parquet('{src.as_posix()}')").fetchall():
+        je.setdefault(nid, []).append(datei)
+    paare = [(nid, d) for nid, dateien in je.items() for d in ueberholte(dateien)]
+    con.register("_ueberholt", pa.table({
+        "notice_id": pa.array([n for n, _ in paare], pa.string()),
+        "file": pa.array([d for _, d in paare], pa.string()),
+    }))
+    return len(paare)
+
+
+# Bedingung fuer beide Abfragen. Als Text, weil der Alias je Abfrage anders heisst.
+def _ohne_ueberholte(alias: str) -> str:
+    return (f"AND NOT EXISTS (SELECT 1 FROM _ueberholt u "
+            f"WHERE u.notice_id = {alias}.notice_id AND u.file = {alias}.file)")
+
+
 def _fingerabdruecke(con, src) -> dict[str, str]:
     """Je Vorgang ein billiger Abdruck seines Text-Eingangs — OHNE den Text zu lesen.
 
@@ -312,7 +352,12 @@ def _fingerabdruecke(con, src) -> dict[str, str]:
             -- `ocr` wie `ok`: erkannter Text mit bestandenem Fachvokabeltest ist Inhalt,
             -- kein Zufallsfund. Betrifft 404 Vorgaenge (3,23 Mio. Zeichen), die daneben
             -- schon `ok`-Text haben — es geht um vollstaendigere Signale, nicht um neue.
-            FROM read_parquet('{src.as_posix()}') WHERE status IN ('ok','ocr')
+            -- Ueberholte Nachtraege zaehlen NICHT mit. Das gehoert in den Abdruck, nicht
+            -- nur in die Auswertung: aendert sich hier nichts, haelt der inkrementelle
+            -- Schritt die alten Signale fuer gueltig und der Ausschluss bliebe wirkungslos.
+            -- So rechnen sich genau die 84 betroffenen Vorgaenge neu statt aller 5.726.
+            FROM read_parquet('{src.as_posix()}') d
+            WHERE {SQL_BRAUCHBAR} {_ohne_ueberholte("d")}
             GROUP BY notice_id""").fetchall()}
 
 
@@ -348,6 +393,13 @@ def build_signals(cfg, country: str = "DE", neu_aufbauen: bool = False) -> dict:
 
     con = duckdb.connect()
     version = _regel_version()
+    # ⚠ VOR `_fingerabdruecke`: der Abdruck schliesst die ueberholten Nachtraege mit aus, und
+    # nur dadurch merkt der inkrementelle Schritt ueberhaupt, dass sich etwas geaendert hat.
+    # Die Regeln stehen unterhalb der `_REGEL_MARKE`, loesen also KEINEN Voll-Lauf aus — das
+    # ist hier richtig: neu zu rechnen sind die 84 betroffenen Vorgaenge, nicht alle 5.726.
+    n_ueberholt = _ueberholt_registrieren(con, src)
+    if n_ueberholt:
+        print(f"docsignals: {n_ueberholt:,} überholte Nachtrags-Dateien ausgeschlossen")
     jetzt = _fingerabdruecke(con, src)
 
     # ── Was ist zu tun? ────────────────────────────────────────────────────────────────────
@@ -395,7 +447,8 @@ def build_signals(cfg, country: str = "DE", neu_aufbauen: bool = False) -> dict:
             f"""SELECT d.notice_id, string_agg(d.text, '\n\n' ORDER BY d.file) AS full
                 FROM read_parquet('{src.as_posix()}') d
                 JOIN _faellig f USING (notice_id)
-                WHERE d.status IN ('ok','ocr') GROUP BY d.notice_id""").fetchall()
+                WHERE d.{SQL_BRAUCHBAR} {_ohne_ueberholte("d")}
+                GROUP BY d.notice_id""").fetchall()
         con.unregister("_faellig")
         for nid, full in rows:
             sig = extract_signals(full or "")

@@ -76,7 +76,32 @@ while true; do
   # ab, aber wer dauernd dagegenlaeuft, wartet nur teurer) und der Speicher: jeder Faden
   # packt Archive aus und haelt bis zu 200.000 Token Text. 40 ist der gemessene Schritt
   # nach 10; wenn im Log keine 429 auftauchen und der Speicher haelt, darf er hoeher.
-  LIMIT=400 PARALLEL=40 $PY scripts/analyze_docs.py >>"$LOG" 2>&1 \
+  # ── DREI VORGABEN, die am 2026-08-21 gefehlt haben ─────────────────────────────────
+  #
+  # Ohne sie lief dieser Arbeiter 15 Stunden unbemerkt bei rund 50 $/h durch und rechnete
+  # dabei fast ausschliesslich Vorgaenge mit ABGELAUFENER Frist — die einzigen, die im
+  # Textindex standen. Rund 350 $ fuer Analysen ohne Produktwert.
+  #
+  #   BUDGET_USD  harte Notbremse. Der Lauf merkt sich den Kontostand beim Start und bricht
+  #               ab, sobald die Differenz die Grenze reisst. ⚠ Der Stand ist KONTOWEIT:
+  #               laeuft parallel etwas anderes, zaehlt es mit.
+  #   NUR_OFFENE  nur Ausschreibungen mit laufender Frist. Gemessen: von 940 nie
+  #               analysierten Vorgaengen waren 110 offen — der Rest kostet dasselbe und
+  #               nuetzt niemandem.
+  #   OR_MODEL    wirkt erst, seit OpenRouter in `govisor/llm.py` vorne steht. Ein von
+  #               aussen gesetztes Modell gilt NUR bei OpenRouter; stand es hinten, griffen
+  #               zuerst die anderen Anbieter mit ihren eigenen, schwaecheren Modellen.
+  #
+  # PARALLEL von 40 auf 8: nicht aus Hoeflichkeit, sondern damit die Bremse greifen KANN.
+  # Sie prueft alle zehn fertigen Vorgaenge; bei 40 gleichzeitigen Anfragen sind im Moment
+  # des Abbruchs bis zu 40 unterwegs — bei 0,42 $ je Vorgang also bis zu 17 $ Ueberschuss.
+  # Bei 8 sind es hoechstens 3 $.
+  LIMIT=400 PARALLEL="${PARALLEL:-8}" \
+    NUR_OFFENE="${NUR_OFFENE:-1}" \
+    BUDGET_USD="${BUDGET_USD:-8}" \
+    OR_MODEL="${OR_MODEL:-google/gemini-2.5-flash}" \
+    PYTHONUNBUFFERED=1 \
+    $PY scripts/analyze_docs.py >>"$LOG" 2>&1 \
     && sag "  Runde fertig" || sag "  ⚠ Runde abgebrochen"
 
   # Wie viele warten noch? Eine Zeile, damit man den Fortschritt im Log sieht, ohne

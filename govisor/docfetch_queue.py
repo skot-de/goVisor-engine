@@ -281,7 +281,13 @@ def schreibe(out_root: Path, name: str, saetze: list[dict], id_feld: str = "lead
     felder = sorted({k for z in zeilen for k in z})
     zeilen = [{k: z.get(k) for k in felder} for z in zeilen]
     out_root.mkdir(parents=True, exist_ok=True)
-    tmp = p.with_suffix(".part")
+    # ⚠ EIGENER Zwischenname je Schreiber. Seit es die `Wache` gibt, kann ein zweiter
+    # Schreiber existieren: sie ruft `sichern` aus ihrem Thread, waehrend der Hauptthread
+    # womoeglich gerade selbst schreibt. Auf einen gemeinsamen `.part` schrieben dann beide
+    # ineinander, und das anschliessende `replace` machte den Schaden dauerhaft. Mit
+    # eigenem Namen ist jede Datei fuer sich vollstaendig; im schlimmsten Fall gewinnt die
+    # zuletzt umbenannte, und beide haben den Altbestand vorher eingelesen.
+    tmp = p.with_suffix(f".{_os.getpid()}.{_threading.get_ident()}.part")
     pq.write_table(pa.Table.from_pylist(zeilen), tmp, compression="zstd")
     tmp.replace(p)
     return len(zeilen)
@@ -324,8 +330,100 @@ def bericht(gruende: dict[str, int]) -> str:
 #
 # ⚠ Damit bleibt die Wache an EINEN Prozess je Abrufer gebunden. Nebenlaeufigkeit gehoert
 # deshalb auf die Prozess-Ebene (mehrere Abrufer gleichzeitig), nicht in die Schleife.
+import os as _os
 import signal as _signal
+import sys as _sys
+import threading as _threading
+import time as _time
 from contextlib import contextmanager as _contextmanager
+
+
+# ── WANDUHR-WACHE ───────────────────────────────────────────────────────────────────────
+#
+# ⚠ **Warum es `vorgang_frist` NICHT tut.** Die arbeitet mit ``SIGALRM``. Playwrights
+# Sync-API fuehrt den Aufrufercode in einem Greenlet aus; trifft das Signal ein, waehrend
+# der Hauptthread im Treiber-Greenlet steckt, wird die Ausnahme im falschen Kontext
+# ausgeloest und verschluckt. Gemessen am 2026-08-21: ``docfetch_healyhudson`` lief
+# **8 h 25 min** mit gesetzter ``VORGANG_FRIST_S = 480`` und holte in den letzten vier
+# Stunden kein einziges Paket. Die Frist stand da und hat nichts getan.
+#
+# Ein eigener Thread ist davon unabhaengig: er misst Wanduhrzeit und ruft ``os._exit``,
+# was kein Greenlet, kein Treiber und kein haengender Socket aufhalten kann.
+#
+# Zwei Grenzen, weil zwei verschiedene Fehler:
+#   · **vorgang_hart** — ein einzelner Vorgang haengt. Grosszuegig gegenueber der weichen
+#     Frist, damit die weiche zuerst greift und nur DIESEN Vorgang verwirft.
+#   · **leerlauf** — der Abrufer laeuft, aber es kommt nichts mehr an. Das ist der Fall,
+#     der 54 Stunden Rechenzeit gekostet hat: beschaeftigt, nicht blockiert.
+def _dauer(sekunden: float) -> str:
+    s = int(sekunden)
+    return f"{s} s" if s < 90 else f"{s // 60} min"
+
+
+class Wache:
+    """Beendet den Prozess hart, wenn ein Vorgang haengt oder nichts mehr ankommt.
+
+    ``sichern`` wird VOR dem Abbruch gerufen und soll das Bisherige wegschreiben — sonst
+    kostet der harte Abbruch den ganzen Lauf. Fehler darin werden geschluckt: ein
+    misslingender Rettungsversuch darf den Abbruch nicht verhindern.
+    """
+
+    def __init__(self, name: str, vorgang_hart_s: int = 1800, leerlauf_s: int = 3600,
+                 sichern=None, takt_s: int = 15):
+        self.name, self.sichern, self.takt = name, sichern, takt_s
+        self.vorgang_hart, self.leerlauf = vorgang_hart_s, leerlauf_s
+        self._jetzt = _time.time()
+        self._erfolg = _time.time()
+        self._marke = "—"
+        self._laeuft = False
+        self._thread = None
+
+    def vorgang(self, marke: str = "") -> None:
+        """Ein neuer Vorgang beginnt."""
+        self._jetzt = _time.time()
+        self._marke = marke or "—"
+
+    def erfolg(self) -> None:
+        """Etwas ist tatsaechlich angekommen."""
+        self._erfolg = _time.time()
+
+    def _abbruch(self, grund: str) -> None:
+        print(f"\n⛔ {self.name}: {grund} — harter Abbruch der Wache.", flush=True)
+        if self.sichern:
+            try:
+                self.sichern()
+                print("   Zwischenstand gesichert.", flush=True)
+            except Exception as e:                                  # noqa: BLE001
+                print(f"   ⚠ Sichern misslungen: {type(e).__name__}: {e}", flush=True)
+        _sys.stdout.flush()
+        _sys.stderr.flush()
+        _os._exit(75)                       # EX_TEMPFAIL — „nochmal versuchen", kein Erfolg
+
+    def _schleife(self) -> None:
+        while self._laeuft:
+            _time.sleep(self.takt)
+            if not self._laeuft:
+                return
+            n = _time.time()
+            if self.vorgang_hart and n - self._jetzt > self.vorgang_hart:
+                self._abbruch(f"Vorgang {self._marke} haengt seit {_dauer(n - self._jetzt)}")
+            if self.leerlauf and n - self._erfolg > self.leerlauf:
+                self._abbruch(f"seit {_dauer(n - self._erfolg)} kein Paket mehr")
+
+    def __enter__(self):
+        self._laeuft = True
+        self._jetzt = self._erfolg = _time.time()
+        self._thread = _threading.Thread(target=self._schleife, daemon=True)
+        self._thread.start()
+        return self
+
+    def __exit__(self, *_):
+        self._laeuft = False
+        return False
+
+
+# Wie viel Vorsprung die weiche Frist bekommt, bevor die harte den Prozess beendet.
+HART_FAKTOR = float(__import__("os").environ.get("GOVISOR_HART_FAKTOR", "3"))
 
 
 class VorgangZuLang(TimeoutError):
@@ -340,13 +438,25 @@ def vorgang_frist(sekunden: int = 300):
     ungeschuetzt weiter, statt den Abruf zu verweigern: eine fehlende Wache ist
     schlechter als keine Daten, aber besser als gar kein Abruf.
     """
-    if sekunden <= 0 or not hasattr(_signal, "SIGALRM"):
+    if sekunden <= 0:
         yield
+        return
+    # ⚠ **Die harte Ebene laeuft IMMER mit**, auch wenn SIGALRM verfuegbar ist. Genau das
+    # war der Fehler: die weiche Frist stand, galt als Absicherung — und wurde von
+    # Playwrights Greenlets verschluckt (s. `Wache`). Der Faktor gibt der weichen Frist
+    # Vorsprung: greift sie, wird nur DIESER Vorgang verworfen und der Lauf geht weiter.
+    # Erst wenn sie stumm bleibt, beendet die harte Ebene den Prozess.
+    hart = Wache("vorgang_frist", vorgang_hart_s=int(sekunden * HART_FAKTOR),
+                 leerlauf_s=0, takt_s=min(30, max(5, sekunden // 4)))
+    if not hasattr(_signal, "SIGALRM"):
+        with hart:
+            yield
         return
     try:
         vorher = _signal.getsignal(_signal.SIGALRM)
     except ValueError:                      # nicht im Hauptthread
-        yield
+        with hart:
+            yield
         return
 
     def _wecker(signum, rahmen):
@@ -355,7 +465,8 @@ def vorgang_frist(sekunden: int = 300):
     _signal.signal(_signal.SIGALRM, _wecker)
     _signal.setitimer(_signal.ITIMER_REAL, sekunden)
     try:
-        yield
+        with hart:
+            yield
     finally:
         _signal.setitimer(_signal.ITIMER_REAL, 0)
         _signal.signal(_signal.SIGALRM, vorher)
