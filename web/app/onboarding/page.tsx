@@ -244,6 +244,25 @@ export default function OnboardingPage() {
    * einzige Mail eine echte Firma erreicht. */
   const testbetrieb = process.env.NODE_ENV !== "production";
   const [probe, setProbe] = useState(false);      // Firma kam aus der Outreach-Landing
+  // ── ZURÜCK ────────────────────────────────────────────────────────────────────────
+  // Sven beim Anlegen eines Profils: „es wäre schön, wenn man bei der anmeldung auch
+  // zurück springen kann." Es gab Rückwege, aber nur auf zwei Bildschirmen — wer sich
+  // vertippt hatte, kam von den übrigen nur über einen Neustart heraus.
+  //
+  // Ein Verlaufsstapel statt fester Rücksprünge: der Weg durchs Onboarding hat mehrere
+  // Verzweigungen (Firma erkannt oder nicht, Vorschlag oder Kandidaten, warmer Weg über
+  // Token), und eine Tabelle „von X kommt man nach Y" wäre bei der nächsten Verzweigung
+  // schon wieder falsch. Der Stapel weiss immer, wo man wirklich herkam.
+  const [verlauf, setVerlauf] = useState<Screen[]>([]);
+
+  /** Einen Schritt weiter — und sich merken, von wo. */
+  const geheZu = (ziel: Screen) => { setVerlauf((v) => [...v, screen]); setScreen(ziel); };
+  /** Einen Schritt zurück. Eingaben bleiben stehen, es wird nichts verworfen. */
+  const zurueck = () => {
+    if (!verlauf.length) return;
+    setScreen(verlauf[verlauf.length - 1]);
+    setVerlauf(verlauf.slice(0, -1));
+  };
   const pwStatus = pwPruefung(pw, email);
   const pwOk = pwStatus.ok;
 
@@ -295,7 +314,7 @@ export default function OnboardingPage() {
 
   // Schon eingeloggt (z. B. „Profil bearbeiten")? → Konto-/Registrierungs-Screen überspringen.
   useEffect(() => {
-    currentUser().then((u) => { if (u) { setEmail(u.email ?? ""); setScreen("firma"); } }).catch(() => {});
+    currentUser().then((u) => { if (u) { setEmail(u.email ?? ""); geheZu("firma"); } }).catch(() => {});
   }, []);
 
   // Autocomplete auf der Firma-Seite (debounced).
@@ -397,7 +416,7 @@ export default function OnboardingPage() {
         ? `Impressum: ${imp.grund}` : null].filter(Boolean).join(" · "),
     }).catch(() => undefined);
     await ladeMitglieder(m);
-    setScreen("profil");
+    geheZu("profil");
   }
 
   // Konto anlegen (Registrierung), dann Firmen-Erkennung. Bei „E-Mail existiert" → Login anbieten.
@@ -519,7 +538,7 @@ function testMailErlaubt(mail: string): boolean {
         // gibt. Bei Klostermann ist es genau eine — der Screen haette einen Klick
         // gekostet und nichts entschieden. Bei CANCOM mit vielen Schwestern ist die
         // Frage echt und bleibt stehen.
-        setScreen(anzahl > 1 ? "profil" : "fertig");
+        geheZu(anzahl > 1 ? "profil" : "fertig");
         return;
       }
       // Fremde Domain: Vorbelegung faellt weg, es geht den normalen Weg weiter.
@@ -540,14 +559,14 @@ function testMailErlaubt(mail: string): boolean {
     const frage = ausToken ? eingabe.trim() : domainStamm(email);
     // Bei fremder Domain ist der Domain-Stamm genau richtig: er fuehrt zu DER Firma,
     // zu der die Adresse gehoert — im Testfall von „cancom.de" also zu Cancom SE.
-    if (!frage) { setScreen("firma"); return; }
+    if (!frage) { geheZu("firma"); return; }
     setBusy(true);
     const treffer = await suche(frage);
     setBusy(false);
-    if (!treffer.length) { setEingabe(frage); setScreen("firma"); return; }
+    if (!treffer.length) { setEingabe(frage); geheZu("firma"); return; }
     const beste = treffer[0];
-    if (beste.strong && treffer.length <= 3) { setMatched(beste); setScreen("vorschlag"); }
-    else { setMatches(treffer); setOffen(treffer[0]?.id ?? null); setKeineDavon(false); setScreen("kandidaten"); }
+    if (beste.strong && treffer.length <= 3) { setMatched(beste); geheZu("vorschlag"); }
+    else { setMatches(treffer); setOffen(treffer[0]?.id ?? null); setKeineDavon(false); geheZu("kandidaten"); }
   }
 
   async function zumMatch() {
@@ -555,10 +574,10 @@ function testMailErlaubt(mail: string): boolean {
     setBusy(true);
     const treffer = await suche(eingabe);
     setBusy(false);
-    if (!treffer.length) { setScreen("branche"); return; }
+    if (!treffer.length) { geheZu("branche"); return; }
     const beste = treffer[0];
-    if (beste.strong) { setMatched(beste); setScreen("vorschlag"); }
-    else { setMatches(treffer); setOffen(treffer[0]?.id ?? null); setKeineDavon(false); setScreen("kandidaten"); }
+    if (beste.strong) { setMatched(beste); geheZu("vorschlag"); }
+    else { setMatches(treffer); setOffen(treffer[0]?.id ?? null); setKeineDavon(false); geheZu("kandidaten"); }
   }
 
   function toggleMember(key: string) {
@@ -604,7 +623,12 @@ function testMailErlaubt(mail: string): boolean {
     track(EV.ONBOARDING_DONE, { matched: !!matched, entities: matched ? aktiv.size : 0 });
     // Bei aktiver Session zusätzlich nach Supabase (sonst bleibt es lokal, bis bestätigt+angemeldet).
     saveProfile(profile).catch(() => {});
-    router.push("/");
+    // ⚠ Zeigte bis zum 2026-08-21 auf „/" — und seit die oeffentliche Startseite dort
+    // wohnt (2026-08-20), landete „Leads ansehen" auf der Werbeseite statt in der Liste.
+    // Wer angemeldet ist, wird von „/" zwar nach „/leads" geschickt; im Testlauf und in
+    // jeder Sekunde, in der die Sitzung noch nicht steht, aber nicht. Also direkt dorthin,
+    // was der Knopf verspricht.
+    router.push("/leads");
   }
 
   const cur = stufeVon(screen);
@@ -638,6 +662,15 @@ function testMailErlaubt(mail: string): boolean {
 
   const schrittleiste = (
           <nav className="steps">
+            {/* Der Rückweg steht VOR den Schritten, also dort, wo man ihn sucht, und er ist
+                in beiden Welten derselbe, weil beide dieselbe Leiste rendern. Auf dem
+                ersten Bildschirm gibt es ihn nicht — dort führt „Ich habe schon ein Konto"
+                hinaus. */}
+            {verlauf.length > 0 && (
+              <button type="button" className="step-zurueck" onClick={zurueck}>
+                <span aria-hidden="true">←</span> {t("Zurück")}
+              </button>
+            )}
             {SCHRITTE.map(([k, l], i) => (
               <span key={k} style={{ display: "contents" }}>
                 {/*
@@ -773,7 +806,7 @@ function testMailErlaubt(mail: string): boolean {
                 jemand, der nie angetreten ist.
                 Der Knopf sagt jetzt, was wir wirklich wissen: dass wir sie nicht finden.
               */}
-              <button className="btn btn-t" onClick={() => setScreen("branche")}>{t("Wir sind noch nicht in eurer Datenbank")}</button>
+              <button className="btn btn-t" onClick={() => geheZu("branche")}>{t("Wir sind noch nicht in eurer Datenbank")}</button>
             </div>
           </div>
         )}
@@ -825,7 +858,7 @@ function testMailErlaubt(mail: string): boolean {
             <div className="note note-p">{t("Passend zu diesem Profil bauen wir gleich eure Lead-Liste. Bestätigt die Firma, dann leiten wir das Profil aus euren Vergaben ab.")}</div>
             <div className="btnrow split">
               <button className="btn btn-p" onClick={() => bestaetigen(matched)}>{t("Ja, das sind wir")}</button>
-              <button className="btn btn-s" onClick={() => { const l = [matched, ...matches].slice(0, 6); setMatches(l); setOffen(l[0]?.id ?? null); setKeineDavon(false); setScreen("kandidaten"); }}>{t("Nein, andere Firma")}</button>
+              <button className="btn btn-s" onClick={() => { const l = [matched, ...matches].slice(0, 6); setMatches(l); setOffen(l[0]?.id ?? null); setKeineDavon(false); geheZu("kandidaten"); }}>{t("Nein, andere Firma")}</button>
             </div>
           </div>
         )}
@@ -871,7 +904,7 @@ function testMailErlaubt(mail: string): boolean {
                   <button className="btn btn-p" disabled={eingabe.trim().length < 2 || busy} onClick={zumMatch}>
                     {busy ? t("Suche …") : t("Nochmal suchen")}
                   </button>
-                  <button className="btn btn-t" onClick={() => setScreen("branche")}>
+                  <button className="btn btn-t" onClick={() => geheZu("branche")}>
                     {t("Wir sind nicht dabei, ohne Vergabehistorie starten")}
                   </button>
                 </div>
@@ -904,8 +937,8 @@ function testMailErlaubt(mail: string): boolean {
             {unsicher && <div className="note note-w">{t("Eine aktive Einheit wurde")} <b>{t("nur über den Namen")}</b> {t("erkannt. Wir zeigen ihre Zahlen, kennzeichnen sie aber als unbestätigt, und rechnen sie nicht in die Erfolgsprämie ein, solange die Zuordnung nicht belegt ist.")}</div>}
             <div className="note note-p">{t("Mit der Bestätigung merken wir uns diese Einheiten als eure Identität. Nur so erkennen wir später, dass ihr eine Ausschreibung gewonnen habt.")} <b>{t("{n} Siege", { n: winsAktiv })}</b> {t("fließen in euer Profil.")}</div>
             <div className="btnrow split">
-              <button className="btn btn-p" disabled={!aktiv.size} onClick={() => setScreen("fertig")}>{t("Profil bestätigen")}</button>
-              <button className="btn btn-t" onClick={() => setScreen("kandidaten")}>{t("Doch eine andere Firma")}</button>
+              <button className="btn btn-p" disabled={!aktiv.size} onClick={() => geheZu("fertig")}>{t("Profil bestätigen")}</button>
+              <button className="btn btn-t" onClick={() => geheZu("kandidaten")}>{t("Doch eine andere Firma")}</button>
             </div>
           </div>
         )}
@@ -923,8 +956,8 @@ function testMailErlaubt(mail: string): boolean {
               ))}
             </div>
             <div className="btnrow split">
-              <button className="btn btn-p" disabled={!branche} onClick={() => setScreen("region")}>{t("Weiter")}</button>
-              <button className="btn btn-t" onClick={() => setScreen("firma")}>{t("Zurück zur Firmensuche")}</button>
+              <button className="btn btn-p" disabled={!branche} onClick={() => geheZu("region")}>{t("Weiter")}</button>
+              <button className="btn btn-t" onClick={zurueck}>{t("Zurück zur Firmensuche")}</button>
             </div>
           </div>
         )}
@@ -941,8 +974,8 @@ function testMailErlaubt(mail: string): boolean {
             </div>
             <div className="note note-i">{t("Bei etwa jeder zehnten Ausschreibung ist der Leistungsort nicht kreisgenau bekannt. Diese zeigen wir trotzdem, aber ohne Regionsfilter, lieber einmal zu viel als einen passenden Auftrag verschweigen.")}</div>
             <div className="btnrow split">
-              <button className="btn btn-p" disabled={!regionen.length} onClick={() => setScreen("fertig")}>{t("Fertig")}</button>
-              <button className="btn btn-t" onClick={() => setScreen("branche")}>{t("Zurück")}</button>
+              <button className="btn btn-p" disabled={!regionen.length} onClick={() => geheZu("fertig")}>{t("Fertig")}</button>
+              <button className="btn btn-t" onClick={zurueck}>{t("Zurück")}</button>
             </div>
           </div>
         )}

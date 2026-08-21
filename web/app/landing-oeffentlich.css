@@ -702,3 +702,10 @@ body:has(> .lp) { background: #E4E8E6; }
 .lp-anmeldung .step-sep { width: 18px; height: 1px; background: var(--line-strong, #CFD6D3); }
 .lp-anmeldung .step-grund { font-style: normal; font-size: 10.5px; margin-left: 4px;
   color: var(--ink-400, #8C9B95); white-space: nowrap; }
+
+/* Rückweg in der Schrittleiste. Leiser als die Schritte selbst: er ist eine Korrektur,
+   keine Station. */
+.step-zurueck { display: inline-flex; align-items: center; gap: 5px; margin-right: 14px;
+  padding: 4px 10px 4px 6px; border: none; border-radius: 100px; cursor: pointer;
+  font: inherit; font-size: 12px; background: none; color: var(--ink-500, #64766F); }
+.step-zurueck:hover { background: var(--surface-3, #F1F3F2); color: var(--ink-900, #12211D); }

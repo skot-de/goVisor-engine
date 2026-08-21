@@ -1095,3 +1095,29 @@ def test_free_verspricht_nichts_falsches_mehr():
     als gar keins."""
     onb = (ROOT / "web" / "app" / "onboarding" / "page.tsx").read_text(encoding="utf-8")
     assert "Free-Zugang nach der Anmeldung" in onb
+
+
+def test_onboarding_hat_einen_rueckweg_und_endet_in_den_leads():
+    """Zwei Funde beim Testlauf am 2026-08-21.
+
+    1. Sven: „es wäre schön, wenn man bei der anmeldung auch zurück springen kann." Es gab
+       Rückwege, aber nur auf zwei Bildschirmen. Jetzt trägt ein Verlaufsstapel den Weg —
+       feste Rücksprünge („von X nach Y") wären bei der nächsten Verzweigung falsch, und
+       das Onboarding hat mehrere (Firma erkannt oder nicht, Vorschlag oder Kandidaten,
+       warmer Weg über Token).
+    2. ⚠ „nach ‚leads ansehen' lande ich wieder auf der landingpage": der Schlussknopf zeigte
+       auf `/`, und dort wohnt seit dem 2026-08-20 die öffentliche Startseite. Angemeldete
+       werden von dort zwar weitergeleitet, im Testlauf und in der Sekunde vor der Sitzung
+       aber nicht.
+    """
+    onb = (ROOT / "web" / "app" / "onboarding" / "page.tsx").read_text(encoding="utf-8")
+    assert 'router.push("/leads")' in onb, "der Schluss zeigt nicht in die Lead-Liste"
+    assert 'router.push("/")' not in onb, "der Schluss zeigt wieder auf die Startseite"
+    assert "const [verlauf, setVerlauf]" in onb and "const zurueck = ()" in onb, \
+        "der Verlaufsstapel fehlt"
+    assert "step-zurueck" in onb, "der Rückweg steht nicht in der Schrittleiste"
+    # Vorwaerts NUR ueber geheZu, sonst faellt der Schritt aus dem Verlauf und der Rueckweg
+    # springt spaeter an die falsche Stelle.
+    import re
+    roh = [m for m in re.finditer(r"(?<!set)setScreen\(", onb)]
+    assert len(roh) <= 2, f"{len(roh)} direkte setScreen-Aufrufe — Vorwaertswege gehoeren in geheZu"
