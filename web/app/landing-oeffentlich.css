@@ -682,5 +682,5 @@
    „aussen" und „innen" wirklich zwei Zonen sind, braucht es einen Ton mehr. Gesetzt wird er
    NUR, wenn diese Seite im Dokument steht (`:has`), damit die Anwendung ihren eigenen Grund
    behält — die Startseite ist Gast im selben Blatt, nicht sein Besitzer. */
-body:has(> .lp) { background: #ECEFED; }
+body:has(> .lp) { background: #E4E8E6; }
 @media (max-width: 900px) { body:has(> .lp) { background: var(--surface, #fff); } }
