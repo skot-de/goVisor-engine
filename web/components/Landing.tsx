@@ -194,10 +194,6 @@ export async function Landing() {
       {z?.masse ? (
         <section className="lp-block" id="masse">
           <h2 className="lp-h2">Drei Masse, die die Entscheidung tragen</h2>
-          <p className="lp-masse-lede">
-            Eine Ausschreibung zu finden ist das Leichte. Die Frage ist, ob sie zu euch passt,
-            ob ihr sie gewinnen könnt und was der Versuch kostet.
-          </p>
           <ol className="lp-masse">
             <li>
               <span className="lp-masse-k">Relevanz</span>
@@ -211,29 +207,25 @@ export async function Landing() {
               <span className="lp-masse-k">Chance</span>
               <h3>Könnt ihr gewinnen?</h3>
               <p>
-                Wie fest der bisherige Anbieter sitzt, aus Bieterzahl, Vorgeschichte und
-                Zuschlagsmuster. Bei <b>{nf(z.masse.verdraengbar.hoch ?? 0)}</b> der{" "}
-                {nf(z.masse.offen)} offenen Vergaben ist er verdrängbar, bei{" "}
-                {nf(z.masse.verdraengbar.niedrig ?? 0)} sitzt er fest. Wo die Belege fehlen,
-                steht kein Wert statt eines geratenen: {nf(z.masse.verdraengbar.na ?? 0)} Fälle.
+                Wie fest der bisherige Anbieter sitzt. Bei{" "}
+                <b>{nf(z.masse.verdraengbar.hoch ?? 0)}</b> der {nf(z.masse.offen)} offenen
+                Vergaben ist er verdrängbar, bei {nf(z.masse.verdraengbar.niedrig ?? 0)} sitzt
+                er fest, bei {nf(z.masse.verdraengbar.na ?? 0)} fehlt der Beleg.
               </p>
             </li>
             <li>
               <span className="lp-masse-k">Aufwand</span>
               <h3>Was kostet der Versuch?</h3>
               <p>
-                Bindefrist, Bürgschaft, Zuschlagskriterien. Die Bindefrist liegt im Median bei{" "}
-                <b>{z.masse.bindefrist.median ?? "?"} Tagen</b>, im oberen Zehntel bei{" "}
-                {z.masse.bindefrist.p90 ?? "?"}; eine Bürgschaft ist bei{" "}
-                {nf(z.masse.buergschaft.ja ?? 0)} Verfahren belegt, und bei{" "}
+                Bindefrist im Median <b>{z.masse.bindefrist.median ?? "?"} Tage</b>, Bürgschaft
+                bei {nf(z.masse.buergschaft.ja ?? 0)} Verfahren belegt, und bei{" "}
                 {nf(z.masse.zuschlag.preis ?? 0)} entscheidet allein der Preis.
               </p>
             </li>
           </ol>
           <p className="lp-klein">
-            Die Aufwandsangaben stammen aus den ausgewerteten Vergabeunterlagen und fehlen
-            dort, wo noch keine ausgewertet sind: Bindefrist aus {nf(z.masse.bindefrist.n)}{" "}
-            Verfahren, Zuschlagskriterien aus{" "}
+            Aufwandsangaben aus den ausgewerteten Unterlagen: Bindefrist aus{" "}
+            {nf(z.masse.bindefrist.n)} Verfahren, Zuschlagskriterien aus{" "}
             {nf((z.masse.zuschlag.preis ?? 0) + (z.masse.zuschlag.gemischt ?? 0))}.
           </p>
         </section>
@@ -255,18 +247,15 @@ export async function Landing() {
             <li>
               <span className="lp-stufe">Jetzt</span>
               <h3>Bieten, worauf ihr bieten könnt</h3>
-              <p>
-                Offene Verfahren in eurem Fachgebiet und Umkreis, mit ausgewerteten Unterlagen
-                und der Frist im Blick.
-              </p>
+              <p>Offene Verfahren in eurem Umkreis, mit ausgewerteten Unterlagen und Frist.</p>
               <span className="lp-stufe-zahl">{nf(z.offen)} offene Verfahren im Bestand</span>
             </li>
             <li>
               <span className="lp-stufe">Nächste 24 Monate</span>
               <h3>Da anfangen, wo andere noch nicht hinsehen</h3>
               <p>
-                Welche Verträge in eurem Gebiet auslaufen, wer sie heute hält und was beim
-                letzten Mal gefordert war. Zeit genug, den Auftraggeber vorher kennenzulernen.
+                Welche Verträge auslaufen, wer sie hält, was beim letzten Mal gefordert war.
+                Zeit genug, den Auftraggeber vorher kennenzulernen.
               </p>
               <span className="lp-stufe-zahl">
                 {nf(z.auslaufend_24m)} Verträge laufen in 24 Monaten aus
@@ -277,7 +266,7 @@ export async function Landing() {
               <h3>Euren Markt kennen, nicht nur eure Aufträge</h3>
               <p>
                 Eure Region gegen den Durchschnitt, eure Wettbewerber mit ihren Zuschlägen,
-                euer Fachgebiet im Jahresverlauf. Wo ihr stark seid und wo jemand anderes sitzt.
+                euer Fachgebiet im Jahresverlauf.
               </p>
               <span className="lp-stufe-zahl">
                 {nf(z.regionen)} Regionen · {nf(z.anbieter)} Anbieter im Wettbewerbsbild
@@ -319,52 +308,15 @@ export async function Landing() {
             Eine Behauptung ueber andere, die wir nicht pruefen koennen, ist genau das, was
             das Produkt drinnen nirgends zulaesst. Also Tatsachen ueber uns statt Urteile
             ueber andere — das ist ohnehin die staerkere Aussage, weil sie ueberpruefbar ist. */}
-        {/* ⚠ Waren bis zum 2026-08-21 VIER Karten, und Sven hat recht: „die so arbeitet
-            punkte sind alle ziemlich redundant". Sie waren es auf zwei Arten. „Die
-            Unterlagen" und „Jede Aussage mit Beleg" sagten beide, dass wir Dokumente lesen
-            und zitieren — jetzt eine Karte. „Der Abgleich mit eurem Profil" beschrieb genau
-            das, was der Eignungs-Check darüber inzwischen VORFÜHRT; eine Karte, die eine
-            Funktion erklärt, die zwei Bildschirmhöhen weiter oben schon lief, ist Füllung.
-            Und die Wertspanne steht ebenfalls dort, mit echten Zahlen. Bleiben zwei Karten,
-            die etwas sagen, das sonst nirgends steht. */}
-        <h2 className="lp-h2">So arbeitet goVisor</h2>
-        <div className="lp-drei lp-zwei">
-          <article>
-            <span className="lp-symbol" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"
-                   strokeLinecap="round" strokeLinejoin="round">
-                <path d="M6 3h8l4 4v14a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z" />
-                <path d="M14 3v4h4" /><path d="M8 12h7M8 15.5h7M8 19h4" />
-              </svg>
-            </span>
-            <h3>Die Unterlagen, nicht nur die Anzeige</h3>
-            <p>
-              Was zählt, steht selten in der Bekanntmachung. Wir holen die Vergabeunterlagen,
-              lesen Leistungsverzeichnis und Eignungskriterien aus und zeigen die Anforderungen
-              im Klartext, mit Frist und Fundstelle. Zu jeder steht das wörtliche Zitat aus dem
-              Dokument daneben; was sich nicht belegen lässt, verwerfen wir, statt es zu
-              schätzen.
-            </p>
-          </article>
-          <article>
-            <span className="lp-symbol" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"
-                   strokeLinecap="round" strokeLinejoin="round">
-                <circle cx="12" cy="12" r="9" /><path d="M3 12h18" />
-                <path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18Z" />
-              </svg>
-            </span>
-            <h3>Drei Länder, auch unterhalb der Schwelle</h3>
-            <p>
-              Der grösste Teil der öffentlichen Aufträge wird nie EU-weit ausgeschrieben. Wir
-              lesen die nationalen Pflichtveröffent&shy;lichungen in Deutschland, Österreich
-              und der Schweiz mit, nicht nur TED. Deshalb steht hier der Auftrag über ein paar
-              tausend Euro neben dem über dreistellige Millionen.
-            </p>
-          </article>
-        </div>
-
-        <p className="lp-bausteine-t">Dazu gehört, was danach kommt:</p>
+        {/* ⚠ Waren erst vier Karten, dann zwei, jetzt keine. Sven: „drei masse, wie weit
+            und so arbeitet ist noch zu viel text, das ist ein riesiger block" — gemessen
+            1.494 px und 429 Wörter am Stück, mehr als eine Bildschirmhöhe reine Prosa.
+            Die zwei verbliebenen Karten sagten nichts, was die Seite nicht schon ZEIGT:
+            „Die Unterlagen, nicht nur die Anzeige" führt der Beweiskasten oben vor und die
+            Fundliste im Werkzeug, „Drei Länder, auch unterhalb der Schwelle" steht als Zahl
+            in der Herkunftszeile. Was bleibt, ist das, was sonst nirgends steht: die
+            Bausteine und der Preis. */}
+        <h2 className="lp-h2">Was noch dazugehört</h2>
         <div className="lp-bausteine">
           <span>Vergabestellen-Dossier</span>
           <span>Wettbewerber und ihre Zuschläge</span>

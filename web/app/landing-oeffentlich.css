@@ -160,25 +160,7 @@
 .lp-h2 { font-size: 25px; letter-spacing: -0.02em; margin: 0 0 26px; }
 /* Vier Karten seit dem Profilabgleich: zwei mal zwei liest sich ruhiger als vier in einer
    Reihe, und die Texte bleiben lesbar breit. */
-.lp-drei { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
-.lp-drei article { background: #fff; border: 1px solid var(--line, #E3E7E5); border-radius: 14px;
-  padding: 22px 20px; transition: .15s; }
-.lp-drei article:hover { border-color: var(--line-strong, #CFD6D3);
-  box-shadow: 0 8px 22px rgba(18,33,29,.06); transform: translateY(-2px); }
-.lp-symbol { display: inline-flex; align-items: center; justify-content: center;
-  width: 38px; height: 38px; border-radius: 11px; background: var(--signal-wash, #E7F7F1);
-  color: var(--signal-deep, #067A55); margin-bottom: 14px; }
-.lp-symbol svg { width: 21px; height: 21px; }
-.lp-drei h3 { font-size: 16px; margin: 0 0 8px; letter-spacing: -0.01em; }
-.lp-drei p { margin: 0; color: var(--ink-700, #33453F); line-height: 1.6; font-size: 14px; }
 
-.lp-hell { background: var(--surface-2, #FAFBFA); border: 1px solid var(--line, #E3E7E5);
-  border-radius: 16px; padding: 34px 30px; }
-.lp-laender { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px;
-  margin-bottom: 18px; }
-.lp-laender b { display: block; font-size: 15px; }
-.lp-laender span { font-size: 13px; color: var(--ink-500, #64766F);
-  font-variant-numeric: tabular-nums; }
 .lp-klein { font-size: 13.5px; color: var(--ink-500, #64766F); line-height: 1.6; margin: 0;
   max-width: 66ch; }
 
@@ -244,18 +226,8 @@
 
 /* FÜR WEN. Sechs Zahlen mit Gewerk daneben, damit jeder in drei Sekunden sieht, ob er
    gemeint ist. Bewusst keine Kacheln mit Rahmen: das ist eine Aufzählung, kein Menü. */
-.lp-fach { padding: 8px 0 34px; }
-.lp-fach-h { font-size: 15px; font-weight: 600; color: var(--ink-500, #64766F);
-  margin: 0 0 14px; letter-spacing: -0.005em; }
-.lp-fach ul { list-style: none; margin: 0 0 12px; padding: 0; display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 18px; }
-.lp-fach li { border-top: 2px solid var(--signal, #10B981); padding-top: 9px; }
 /* Die kleineren Gebiete bekommen einen blasseren Strich: die Reihenfolge ist die Groesse,
    und das soll man sehen, ohne die Zahlen zu vergleichen. */
-.lp-fach li:nth-child(n+4) { border-top-color: #9AD6C1; }
-.lp-fach b { display: block; font-size: 21px; font-variant-numeric: tabular-nums;
-  letter-spacing: -0.02em; line-height: 1.2; }
-.lp-fach span { font-size: 12.5px; color: var(--ink-500, #64766F); }
 
 @media (max-width: 900px) {
   .lp-fach ul { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px 18px; }
@@ -290,8 +262,6 @@
 
 /* BAUSTEINE. Chips statt Karten: sie zeigen, dass es weitergeht, ohne jeden Baustein zu
    erklären — dafür ist drinnen Platz. */
-.lp-bausteine-t { margin: 30px 0 10px; font-size: 14px; font-weight: 600;
-  color: var(--ink-700, #33453F); }
 .lp-bausteine { display: flex; flex-wrap: wrap; gap: 8px; }
 .lp-bausteine span { font-size: 13.5px; font-weight: 600; color: var(--ink-700, #33453F);
   background: #fff; border: 1px solid var(--line-strong, #CFD6D3); border-radius: 100px;
@@ -391,8 +361,6 @@
 .ec-kachel-an b { color: var(--signal-deep, #067A55); }
 .ec-kachel-an span { color: var(--ink-700, #33453F); }
 
-.lp-h3 { font-size: 23px; font-weight: 700; letter-spacing: -.025em; line-height: 1.2;
-  margin: 0 0 14px; }
 
 
 /* ⚠ Der Startknopf im Kopf trug dunkelgraue Schrift auf Dunkelgrün: `.lp-nav a` (Klasse +
@@ -681,8 +649,6 @@ body:has(> .lp) { background: #E4E8E6; }
 
 /* DREI MASSE. Nummerierte Liste statt Karten: sie sind eine Reihenfolge (passt es → kann
    ich gewinnen → was kostet es), keine gleichwertigen Kacheln. Die Ziffer trägt das. */
-.lp-masse-lede { font-size: 15px; line-height: 1.65; color: var(--ink-700, #33453F);
-  max-width: 62ch; margin: -14px 0 26px; }
 .lp-masse { list-style: none; counter-reset: masse; display: grid;
   grid-template-columns: repeat(3, 1fr); gap: 26px; margin: 0 0 18px; padding: 0; }
 .lp-masse li { counter-increment: masse; padding-top: 16px;
