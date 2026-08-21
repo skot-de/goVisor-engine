@@ -49,10 +49,18 @@ type Zahlen = {
 const LAND_NAME: Record<string, string> = { DE: "Deutschland", AT: "Österreich", CH: "Schweiz" };
 const nf = (n: number) => n.toLocaleString("de-DE");
 
-/** Tage bis zur Frist — auf der Startseite die einzige Zahl, die sich täglich ändert. */
+/**
+ * Tage bis zur Frist — auf der Startseite die einzige Zahl, die sich täglich ändert.
+ *
+ * ⚠ Gibt bewusst auch NEGATIVE Werte zurück. Die Vorfassung klemmte bei 0 ab, und damit
+ * hätte der Beweiskasten nach Fristablauf „noch 0 Tage" behauptet und den Vorgang weiter
+ * als „gerade offen" ausgewiesen. Das passiert nicht theoretisch: der Kasten wird vom
+ * Tageslauf frisch gewählt, und der Tageslauf ist in diesem Projekt schon tagelang
+ * ausgefallen. Wer die Zahl abklemmt, macht aus einem stehengebliebenen Lauf eine
+ * Falschaussage auf der öffentlichen Seite.
+ */
 function restTage(iso: string): number {
-  const ms = Date.parse(`${iso}T23:59:59`) - Date.now();
-  return Math.max(0, Math.ceil(ms / 86_400_000));
+  return Math.ceil((Date.parse(`${iso}T23:59:59`) - Date.now()) / 86_400_000);
 }
 
 export async function Landing() {
@@ -62,6 +70,7 @@ export async function Landing() {
     z = roh ? (JSON.parse(roh) as Zahlen) : null;
   } catch { z = null; }
   const b = z?.beispiel ?? null;
+  const rest = b ? restTage(b.frist) : 0;
 
   return (
     <main className="lp">
@@ -93,7 +102,7 @@ export async function Landing() {
         </nav>
       </header>
 
-      <section className="lp-held lp-halt">
+      <section className={`lp-held lp-halt${b && rest > 0 ? "" : " lp-held-solo"}`}>
         <div className="lp-held-text">
           <p className="lp-auge">Ausschreibungen aus DACH, bis zur Entscheidung aufbereitet</p>
           {/* „Gezielt bieten" statt der langen Doppelzeile: die Vorlage sagt in zwei Wörtern,
@@ -124,11 +133,14 @@ export async function Landing() {
           </svg>
         </a>
 
-        {b ? (
+        {/* Der Kasten verschwindet, sobald die Frist durch ist: „Echter Vorgang, gerade
+            offen" über einem abgelaufenen Verfahren wäre die peinlichste Zeile der Seite,
+            und sie stünde ausgerechnet dann da, wenn der Tageslauf hängt. */}
+        {b && rest > 0 ? (
           <aside className="lp-probe" aria-label="Beispiel aus dem Bestand">
             <div className="lp-probe-kopf">
               <span className="lp-marker">Echter Vorgang, gerade offen</span>
-              <span className="lp-frist">noch {restTage(b.frist)} Tage</span>
+              <span className="lp-frist">noch {rest} {rest === 1 ? "Tag" : "Tage"}</span>
             </div>
             <h2>{b.titel}</h2>
             <p className="lp-probe-meta">{b.kaeufer}{b.region ? ` · ${b.region}` : ""}</p>

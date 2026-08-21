@@ -696,3 +696,8 @@ body:has(> .lp) { background: #E4E8E6; }
 .lp-masse p { font-size: 13.5px; line-height: 1.65; color: var(--ink-700, #33453F); margin: 0; }
 .lp-masse a { color: var(--signal-deep, #067A55); font-weight: 600; }
 @media (max-width: 820px) { .lp-masse { grid-template-columns: 1fr; gap: 20px; } }
+
+/* Ohne Beweiskasten (Frist durch, oder landing.json ohne Beispiel) läuft der Kopftext über
+   die ganze Breite, statt eine leere rechte Spalte offen zu lassen. */
+.lp-held-solo { grid-template-columns: minmax(0, 1fr); }
+.lp-held-solo .lp-held-text { max-width: 62ch; }
