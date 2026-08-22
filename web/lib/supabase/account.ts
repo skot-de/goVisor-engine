@@ -70,23 +70,21 @@ export async function gdprExport(): Promise<Record<string, unknown> | null> {
   const sb = createClient();
   const { data: { user } } = await sb.auth.getUser();
   if (!user) return null;
-  const [profile, watchlist, interactions, fees] = await Promise.all([
+  const [profile, watchlist, interactions] = await Promise.all([
     sb.from("user_profiles").select("*").eq("id", user.id).single(),
     sb.from("user_watchlist").select("*").eq("user_id", user.id),
     sb.from("user_lead_interactions").select("*").eq("user_id", user.id),
-    // BLEIBT, obwohl die Erfolgspraemie gestrichen ist (Modell verworfen 2026-08-17,
-    // aus dem Produkt entfernt 2026-08-21). Neue Zeilen entstehen nicht, aber vorhandene
-    // waeren personenbezogene Daten — eine Auskunft, die eine Kategorie stillschweigend
-    // weglaesst, ist falsch. Diese Zeile darf erst weg, wenn 0012 gelaufen ist und die
-    // Tabelle wirklich nicht mehr existiert. Fehlt sie schon, liefert Supabase hier
-    // einen Fehler statt Daten, und der Export laeuft mit `null` weiter (kein Absturz).
-    sb.from("success_fee_charges").select("*").eq("user_id", user.id),
+    // Hier stand bis zum 2026-08-22 eine vierte Abfrage auf `success_fee_charges`. Sie
+    // BLIEB bewusst stehen, nachdem die Erfolgsprämie gestrichen war: eine Auskunft, die
+    // eine Datenkategorie stillschweigend weglässt, ist falsch, solange die Kategorie noch
+    // existiert. Mit 0012 ist die Tabelle weg (sie war leer, 0 Zeilen, nachgezählt) — es
+    // gibt nichts mehr auszukünften, und die Abfrage würde nur noch einen Fehler liefern.
   ]);
   // Anforderung protokollieren (Ticket #10 §5)
   await sb.from("user_data_export").insert({ user_id: user.id, status: "ready" });
   return {
     exportiert_am: new Date().toISOString(),
     profil: profile.data, merkliste: watchlist.data,
-    interaktionen: interactions.data, rechnungen: fees.data,
+    interaktionen: interactions.data,
   };
 }

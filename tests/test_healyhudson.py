@@ -1185,6 +1185,9 @@ def test_keine_erfolgspraemie_in_der_oberflaeche():
 
     Geprüft wird der NUTZERSICHTBARE Text, nicht der Quelltext: Kommentare dürfen den
     gestrichenen Begriff nennen (sie erklären, warum etwas fehlt), Oberflächentexte nicht.
+
+    Die Ausnahme für den DSGVO-Export ist am 2026-08-22 entfallen: mit Migration 0012 ist
+    `success_fee_charges` gelöscht (war leer), es gibt keine Kategorie mehr auszukünften.
     """
     import re
     verboten = re.compile(r"Erfolgspr(ä|ae)mie|Erfolgsgeb(ü|ue)hr|Erfolgshonorar|[Ss]uccess.[Ff]ee")
@@ -1197,11 +1200,6 @@ def test_keine_erfolgspraemie_in_der_oberflaeche():
             nackt = z.strip()
             if nackt.startswith(("//", "*", "/*", "{/*", "--")):
                 continue          # Kommentarzeile (auch JSX): darf die Streichung erklären
-            if "success_fee_charges" in z and "user_data_export" not in z:
-                # Bewusste Ausnahme: der DSGVO-Datenexport liest die Tabelle weiter, solange
-                # sie existiert. Eine Auskunft, die eine Datenkategorie stillschweigend
-                # weglaesst, ist falsch — auch wenn die Kategorie abgeschafft wurde.
-                continue
             if verboten.search(z):
                 treffer.append(f"{pfad.relative_to(ROOT)}:{nr}: {nackt[:90]}")
     assert not treffer, "Erfolgsprämie zurück in der Oberfläche:\n  " + "\n  ".join(treffer)
