@@ -1077,7 +1077,11 @@ def test_docfetch_cosinex_url_parsing():
     login-frei). Host/Base(Satellite|VMPSatellite)/CX korrekt extrahiert; Nicht-cosinex abgelehnt."""
     from govisor import docfetch, cli
     assert docfetch.is_cosinex("https://www.dtvp.de/Satellite/notice/CXP4Y6YMYCG/documents")
-    assert docfetch.is_cosinex("https://vergabemarktplatz.brandenburg.de/VMPSatellite/notice/CX9/documents")
+    # ⚠ ECHTE Kennungslaenge. Hier stand `CX9` — eine erfundene Kurzform, die kein Portal
+    # ausgibt: im Bestand sind alle 3.941 cosinex-Kennungen 11 oder 16 Zeichen lang. Der
+    # erfundene Wert hat am 22.08. eine richtige Verschaerfung des Musters blockiert
+    # (Basispfad frei, dafuer Kennung streng — s. `_COSINEX_RE`).
+    assert docfetch.is_cosinex("https://vergabemarktplatz.brandenburg.de/VMPSatellite/notice/CX9YHH5V73X/documents")
     assert not docfetch.is_cosinex("https://www.subreport.de/E13767982")
     assert not docfetch.is_cosinex("https://www.evergabe.de/unterlagen/x")
     m = docfetch._COSINEX_RE.match("https://www.dtvp.de/Satellite/notice/CXP4Y6YMYCG/documents")
@@ -3460,3 +3464,45 @@ def test_der_tageslauf_liegt_nicht_im_nachtfenster():
         stunde = eintrag.get("Hour")
         assert not (ab <= stunde < bis), (
             f"Tageslauf um {stunde}:00 liegt im Nachtfenster {ab}–{bis} Uhr")
+
+
+def test_cosinex_erkennt_auch_fremde_basispfade():
+    """⚠ Der Basispfad ist NICHT immer „Satellite".
+
+    cosinex-Instanzen benennen ihn frei: `evergabe.blb.nrw.de` führt ihn als `/Vergabe/`.
+    Bis zum 22.08. stand hier eine Aufzählung, und 128 offene Vergaben des Landesbetriebs
+    NRW galten als „Portal ohne Abrufer" — obwohl derselbe ZIP-Weg dort einwandfrei liefert
+    (gemessen: `application/zip`, 21 MB und 5 MB).
+
+    Die Genauigkeit hängt jetzt an der KENNUNG (`CX…`), nicht am Pfadnamen. Gegen den
+    offenen Bestand geprüft: +128 erfasst, 0 verloren, kein fremder Host fällt hinein.
+    """
+    from govisor.docfetch import is_cosinex, ziel
+
+    assert is_cosinex("https://evergabe.blb.nrw.de/Vergabe/notice/CXS7YYXDYYZGR7EP")
+    assert is_cosinex("https://www.dtvp.de/Satellite/notice/CXP4YHH5V73/documents")
+    assert is_cosinex("https://x.de/VMPSatellite/public/company/project/CXABC123/de")
+    # ⚠ Ohne die CX-Kennung wäre das Muster beliebig und würde Fremdes einsammeln.
+    assert not is_cosinex("https://example.org/foo/notice/12345")
+    assert not is_cosinex("https://example.org/foo/notice/ABC12345")
+
+    # Der Zielpfad muss den fremden Basispfad überleben.
+    z = ziel("https://evergabe.blb.nrw.de/Vergabe/notice/CXS7YYXDYYZGR7EP", "n1",
+             pathlib.Path("/tmp"))
+    assert z is not None and z.name == "Vergabeunterlagen_CXS7YYXDYYZGR7EP.zip"
+
+
+def test_sql_vorfilter_und_regex_sind_sich_einig():
+    """Zwei Orte, dieselbe Frage — der SQL-Vorfilter in `fetch_batch` und `_COSINEX_RE`.
+
+    Läuft einer dem anderen davon, holt der Abrufer entweder zu wenig (Vorfilter zu eng)
+    oder verwirft hinterher (Regex zu eng). Bis zum 22.08. waren beide auf „Satellite"
+    festgelegt; beim Weiten musste die SQL mitwandern.
+    """
+    import inspect
+
+    from govisor import docfetch
+
+    quelle = inspect.getsource(docfetch.fetch_batch)
+    assert "CX[A-Z0-9]{6,}" in quelle, "der SQL-Vorfilter kennt die CX-Kennung nicht"
+    assert "V?MP)?Satellite" not in quelle, "der SQL-Vorfilter hängt noch an „Satellite\""

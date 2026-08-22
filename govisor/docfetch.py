@@ -40,9 +40,18 @@ from .config import Config
 _UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
        "(KHTML, like Gecko) Chrome/120 Safari/537.36")
 # cosinex-URL: Host + Base (Satellite|VMPSatellite) + CX-Projekt-ID aus notice/<CX> oder project/<CX>.
+# ⚠ Der BASISPFAD ist NICHT immer „Satellite". cosinex-Instanzen benennen ihn frei:
+# `evergabe.blb.nrw.de` fuehrt ihn als `/Vergabe/`. Bis zum 22.08. stand hier eine Aufzaehlung
+# (`Satellite|MPSatellite|VMPSatellite`), und 128 offene Vergaben des Landesbetriebs NRW
+# galten deshalb als „Portal ohne Abrufer" — obwohl derselbe ZIP-Weg dort einwandfrei
+# liefert (gemessen: `application/zip`, 21 MB und 5 MB).
+#
+# Die Genauigkeit haengt jetzt an der KENNUNG, nicht am Pfadnamen: cosinex-Projekt-IDs
+# beginnen mit `CX`. Gegen den offenen Bestand geprueft — +128 erfasst, 0 verloren, und
+# kein fremder Host faellt versehentlich hinein.
 _COSINEX_RE = re.compile(
-    r"^(?P<origin>https?://[^/]+)/(?P<base>V?MPSatellite|Satellite)/"
-    r"(?:public/company/project|notice)/(?P<cx>[A-Z0-9]+)", re.I)
+    r"^(?P<origin>https?://[^/]+)/(?P<base>[A-Za-z0-9_-]{2,20})/"
+    r"(?:public/company/project|notice)/(?P<cx>CX[A-Z0-9]{6,})", re.I)
 
 
 def is_cosinex(url: str) -> bool:
@@ -168,7 +177,9 @@ def fetch_batch(cfg: Config, country: str = "DE", limit: int | None = None,
               -- Zwei Connectoren: cosinex (Satellite-Pfad) und RIB/meinauftrag.
               -- Die Zuordnung je Zeile macht `_waehle_connector` unten — hier nur
               -- vorfiltern, damit nicht 7.000 ungedeckte Vorgaenge durchlaufen.
-              AND (regexp_matches(documents_url, '/(V?MP)?Satellite/')
+              -- Basispfad frei, Kennung streng (s. `_COSINEX_RE`): `/Vergabe/notice/CX…`
+              -- beim Landesbetrieb NRW gehoert genauso dazu wie `/Satellite/notice/CX…`.
+              AND (regexp_matches(documents_url, '/[A-Za-z0-9_-]{2,20}/(public/company/project|notice)/CX[A-Z0-9]{6,}')
                    OR documents_url LIKE '%meinauftrag.rib.de%')
               -- Nur LAUFENDE Verfahren. Die Unterlagen haengen nur waehrend der Angebots-
               -- frist am Portal; danach liefert der Endpoint die Landingpage (Status
