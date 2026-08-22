@@ -3668,3 +3668,33 @@ def test_sicherung_des_dokumentkorpus_ist_vorbereitet():
 
     doku = (pathlib.Path(__file__).resolve().parent.parent / "docs/dokumentkorpus-sichern.md")
     assert doku.exists() and "--quelle docs" in doku.read_text(encoding="utf-8")
+
+
+def test_doc_analysis_liegt_je_vorgang_vor():
+    """`doc-analysis.json` war am 2026-08-22 auf **252 MB** gewachsen (6.262 Auswertungen).
+    `/api/lead-detail` lud und parste sie VOLLSTÄNDIG, um eine einzige Auswertung
+    herauszugreifen — und hielt sie danach in einer Modulvariable ohne Verfall.
+
+    Zwei Folgen: im Betrieb ein Netzabruf von 252 MB je Instanz und Kaltstart, und eine
+    laufende Instanz hätte bis zum nächsten Deployment die Auswertungen von gestern
+    geliefert. Dazu hätte die Datei allein das gesamte Cache-Budget von 256 MB belegt und
+    alles andere verdrängt.
+
+    Denselben Weg ist `doc-text` schon gegangen (294 MB → eine Datei je Vorgang). Dieser
+    Test hält fest, dass die Auswertungen ihn auch gegangen sind — und dass die Sammeldatei
+    als ARBEITSSTAND lokal bleibt, aber nicht mehr hochgeladen wird.
+    """
+    wurzel = pathlib.Path(__file__).resolve().parent.parent
+    route = (wurzel / "web/app/api/lead-detail/route.ts").read_text(encoding="utf-8")
+    assert "doc-analysis/${sicher}.json" in route, "die Route liest wieder die Sammeldatei"
+    assert "let docAnalysis" not in route, "der ewige Modulspeicher ist zurück"
+    assert 'loadDataFile("doc-analysis.json")' not in route, "Sammeldatei ist zurück"
+
+    assert (wurzel / "scripts/export_doc_analysis.py").exists(), "der Zerleger fehlt"
+    lauf = (wurzel / "scripts/daily_leads.sh").read_text(encoding="utf-8")
+    assert "export_doc_analysis.py" in lauf, \
+        "der Zerleger steht nicht im Tageslauf — dann friert das Lead-Detail auf dem Stand von heute ein"
+
+    upl = (wurzel / "scripts/upload_web_data.py").read_text(encoding="utf-8")
+    assert '"doc-analysis.json"' in upl and "NICHT_HOCH" in upl, \
+        "der 252-MB-Arbeitsstand wandert wieder jede Nacht in den Objektspeicher"

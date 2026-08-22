@@ -204,7 +204,13 @@ def main() -> int:
     if eigen_prefix:
         prefix = f"{prefix}/{eigen_prefix}".strip("/")
 
-    dateien = sorted(p for p in QUELLE.rglob("*") if p.is_file() and p.suffix in TYPEN)
+    # ⚠ ARBEITSSTAENDE GEHOEREN NICHT IN DEN OBJEKTSPEICHER. `doc-analysis.json` ist die
+    # Datei, aus der `analyse_arbeiter.sh` liest, was noch fehlt — 252 MB, die das Frontend
+    # seit dem 2026-08-22 nicht mehr anfasst (es liest `doc-analysis/<id>.json`). Sie jede
+    # Nacht hochzuladen, damit sie niemand liest, waere teuer und sinnlos.
+    NICHT_HOCH = {"doc-analysis.json"}
+    dateien = sorted(p for p in QUELLE.rglob("*")
+                     if p.is_file() and p.suffix in TYPEN and p.name not in NICHT_HOCH)
     gesamt = sum(p.stat().st_size for p in dateien)
     print(f"  {len(dateien):,} Dateien, {gesamt/1048576:.0f} MB in {QUELLE.relative_to(ROOT)} "
           f"→ Stufe {stufe}")

@@ -920,6 +920,10 @@ fi
 # hilft es, den Export NEBEN den Erzeuger zu stellen statt ihn einmal von Hand zu fahren.
 step "Unterlagen-Volltext exportieren (doc-text.json)"
 $PY scripts/export_doc_text.py || echo "  ⚠ doc-text.json nicht geschrieben — Lead-Detail zeigt weiter den alten Textstand."
+# Dasselbe fuer die LLM-Auswertungen: `doc-analysis.json` ist der Arbeitsstand des
+# Analyse-Arbeiters (252 MB) und bleibt lokal; das Frontend liest eine Datei je Vorgang.
+# Ohne diesen Aufruf zeigt das Lead-Detail die Auswertungen vom letzten Export.
+$PY scripts/export_doc_analysis.py || echo "  ⚠ doc-analysis nicht zerlegt — Lead-Detail zeigt weiter den alten Auswertungsstand."
 
 # Struktur AUS den Unterlagen: Leistungsverzeichnis (GAEB + Preisblatt) und Kriterienmatrix.
 # Anders als die Signale oben ist das keine Ableitung aus Fließtext, sondern die Tabelle

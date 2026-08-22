@@ -85,12 +85,27 @@ async function loadDocStruktur(): Promise<Record<string, DocStruktur>> {
 // LLM-Vergabe-Analyse aus den Unterlagen (doc-analysis.json, aus analyze_docs.py): Ampel +
 // Bieter-Checkliste (K.o./Eignung/Zuschlag/Fristen/Aufwand/vorausfüllbar), je notice_id.
 type DocAnalysis = Record<string, unknown>;
-let docAnalysis: Record<string, DocAnalysis> | null = null;
-async function loadDocAnalysis(): Promise<Record<string, DocAnalysis>> {
-  if (docAnalysis) return docAnalysis;
-  try { const raw = await loadDataFile("doc-analysis.json"); docAnalysis = raw ? JSON.parse(raw) : {}; }
-  catch { docAnalysis = {}; }
-  return docAnalysis!;
+/** Auswertung EINES Vorgangs.
+ *
+ * ⚠ WARUM NICHT MEHR DIE SAMMELDATEI. `doc-analysis.json` war am 2026-08-22 auf 252 MB
+ * gewachsen. Diese Route lud und parste sie VOLLSTAeNDIG, um eine einzige Auswertung
+ * herauszugreifen — und hielt sie danach in einer Modulvariable OHNE Verfall fest: eine
+ * laufende Instanz haette bis zum naechsten Deployment die Auswertungen von gestern
+ * geliefert, ohne dass es jemand sieht. Jetzt eine Datei je Vorgang, im Schnitt 40 KB
+ * (`scripts/export_doc_analysis.py`), genau wie der Volltext daneben.
+ *
+ * Kein Rueckfall auf die Sammeldatei: sie ist der ARBEITSSTAND des Analyse-Arbeiters und
+ * wird gar nicht mehr hochgeladen. Fehlt die Einzeldatei, fehlt die Auswertung — sichtbar,
+ * statt still aus einem alten Stand bedient zu werden.
+ */
+async function ladeAnalyse(id: string): Promise<DocAnalysis | undefined> {
+  const sicher = id.replace(/[^A-Za-z0-9_-]/g, "");
+  if (!sicher) return undefined;
+  try {
+    const roh = await loadDataFile(`doc-analysis/${sicher}.json`);
+    if (roh) return JSON.parse(roh) as DocAnalysis;
+  } catch { /* fehlt oder kaputt → keine Auswertung */ }
+  return undefined;
 }
 
 export async function GET(req: Request) {
@@ -119,7 +134,7 @@ export async function GET(req: Request) {
     const st = (await loadDocStruktur())[id];
     if (st) detail.lbStruktur = st;
     // LLM-Vergabe-Analyse (Ampel + Bieter-Checkliste).
-    const an = (await loadDocAnalysis())[id];
+    const an = await ladeAnalyse(id);
     if (an) detail.lbAnalyse = an;
     return NextResponse.json(detail);
   } catch {
