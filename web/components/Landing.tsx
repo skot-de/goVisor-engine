@@ -428,9 +428,14 @@ export async function Landing() {
                 <path d="M10.5 19.5a2 2 0 0 0 3 0" />
               </svg>
             </span>
-            <h3>Alarme auf eure Kriterien</h3>
-            <p>Meldung, sobald etwas Passendes erscheint oder ein Vertrag ausläuft, den ihr
-              im Blick habt. Keine Rundmail an alle.</p>
+            {/* ⚠ Der Satz sagt jetzt, WO die Meldung ankommt. Vorher versprach er eine
+                Meldung, ohne dass es einen Zustellweg gab: E-Mail ist ein Stub, einen
+                Posteingang gab es bis zum 2026-08-22 nicht. Wer „Meldung" liest, denkt an
+                E-Mail — und hätte auf eine gewartet, die nie kommt. */}
+            <h3>Hinweise zu euren Vergaben</h3>
+            <p>Sobald bei einer gemerkten Ausschreibung die Frist näher rückt oder ein
+              Vertrag ausläuft, liegt der Hinweis in eurem Posteingang in der App. Keine
+              Rundmail an alle.</p>
           </li>
           <li>
             <span className="lp-baustein-symbol" aria-hidden="true">

@@ -1496,3 +1496,58 @@ def test_migrationswerkzeug_lehnt_loeschendes_ab():
     p2 = subprocess.run(["python3", "scripts/migrate.py", "../../etc/hosts"],
                         cwd=ROOT, capture_output=True, text=True)
     assert p2.returncode == 2, "Pfade ausserhalb von supabase/ werden nicht abgewiesen"
+
+
+def test_nachbarfelder_haben_eine_fallzahl_schwelle():
+    """§3.1 des Tickets sagt: Fallzahl-Schwellen gelten für JEDEN Quoten-KPI. Bei den
+    Nachbarfeldern war sie vergessen.
+
+    Ohne Schwelle gewinnt die Reihung nach `cond_prob` das seltenste Paar: für Bau stand
+    „Fernsprech- und Datenübertragungsdienste" mit **19 Firmen** ganz oben, für Energie
+    „Straßenausrüstung" mit 16. Eine Quote auf so kleiner Basis ist keine Nähe, sondern
+    Rauschen — und sie stand an zwei Stellen in der Oberfläche.
+
+    25 ist gemessen, nicht geraten: bei 25 bleibt jede der sechs Branchenlisten voll,
+    bei 50 schrumpfen Medizin auf 5 und Sicherheit auf 3 Einträge.
+    """
+    quelle = (ROOT / "scripts" / "export_strategie.py").read_text(encoding="utf-8")
+    assert "NACHBAR_MIN_FIRMEN = 25" in quelle, "die Fallzahl-Schwelle fehlt oder wurde verstellt"
+    assert "HAVING max(a.shared_firms) >= {NACHBAR_MIN_FIRMEN}" in quelle, \
+        "die Schwelle steht da, wirkt aber nicht in der Abfrage"
+
+    # Und im Ergebnis nachsehen, falls der Export schon gelaufen ist.
+    datei = ROOT / "web" / "data" / "strategie.json"
+    if datei.exists():
+        import json
+        daten = json.loads(datei.read_text(encoding="utf-8"))
+        zu_duenn = [(b, n["label"], n["firmen"])
+                    for b, d in daten.items() for n in d.get("nachbarn", [])
+                    if n.get("firmen", 0) < 25]
+        assert not zu_duenn, f"Nachbarfelder unter der Schwelle im Export: {zu_duenn[:3]}"
+
+
+def test_kuendigung_sperrt_nicht_sofort():
+    """Wer am 2. des Monats kündigt, hat den Monat bezahlt. `plan` kennt nur
+    'free'|'paid'|'cancelled' und kein Datum, also musste `getTier` `cancelled` wie `free`
+    behandeln — der Zugang endete am Tag der Kündigung. Das fällt erst auf, wenn es einem
+    Kunden passiert, und ist dann eine Rückbuchung wert.
+
+    `plan_until` (Migration 0015) trägt jetzt das Ende des bezahlten Zeitraums. Ohne Datum
+    bleibt es beim sofortigen Ende — dann wissen wir nichts Besseres.
+    """
+    tier = (ROOT / "web" / "lib" / "tier.ts").read_text(encoding="utf-8")
+    assert 'select("plan,plan_until")' in tier, "das Enddatum wird gar nicht gelesen"
+    assert 'data?.plan === "cancelled" && data.plan_until' in tier, \
+        "gekündigte Konten verlieren den Zugang wieder sofort"
+    sql = (ROOT / "supabase" / "0015_abo_laufzeit.sql").read_text(encoding="utf-8")
+    assert "add column if not exists plan_until" in sql
+
+
+def test_startseite_sagt_wo_der_hinweis_ankommt():
+    """Die Kachel versprach „Meldung, sobald etwas Passendes erscheint" — ohne dass es einen
+    Zustellweg gab. Wer „Meldung" liest, denkt an E-Mail und wartet auf eine, die nie kommt.
+    Jetzt steht dort, dass der Hinweis im Posteingang in der App liegt.
+    """
+    landing = (ROOT / "web" / "components" / "Landing.tsx").read_text(encoding="utf-8")
+    assert "Posteingang in der App" in landing, \
+        "die Kachel sagt nicht mehr, wo der Hinweis ankommt"

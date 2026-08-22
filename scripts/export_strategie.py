@@ -463,6 +463,16 @@ def felder(key, limit=20):
     return out
 
 
+# Fallzahl-Schwelle für die Nachbarfelder (§3.1 gilt für JEDEN Quoten-KPI — hier war sie
+# vergessen). Ohne sie gewinnt die Reihung nach `cond_prob` das seltenste Paar: für Bau stand
+# „Fernsprech- und Datenübertragungsdienste" mit **19 Firmen** ganz oben, für Energie
+# „Straßenausrüstung" mit 16. Eine Quote auf so kleiner Basis ist keine Nähe, sondern Rauschen.
+# Gemessen am 2026-08-22 über alle sechs Branchen: bei 25 bleibt jede Liste voll (8 Einträge),
+# und oben stehen Felder mit 38 bis 232 geteilten Firmen. Bei 50 schrumpfen Medizin auf 5 und
+# Sicherheit auf 3 — deshalb 25 und nicht mehr.
+NACHBAR_MIN_FIRMEN = 25
+
+
 def nachbarfelder(key, limit=8):
     """Felder, die dieselben Anbieter zusätzlich bedienen (§5.2, aus `Chancen` übernommen)."""
     rows = con.execute(f"""
@@ -473,7 +483,9 @@ def nachbarfelder(key, limit=8):
         JOIN meine m ON m.cpv4 = a.cpv_a
         LEFT JOIN {CL} cl ON cl.cpv_code = a.cpv_b || '0000'
         WHERE a.cpv_b NOT IN (SELECT cpv4 FROM meine)
-        GROUP BY 1 ORDER BY 3 DESC, 1 LIMIT {limit}""").fetchall()
+        GROUP BY 1
+        HAVING max(a.shared_firms) >= {NACHBAR_MIN_FIRMEN}
+        ORDER BY 3 DESC, 1 LIMIT {limit}""").fetchall()
     return [{"cpv4": c, "label": l or c, "naehe": round(float(p) * 100),
              "firmen": int(f)} for (c, l, p, f) in rows]
 

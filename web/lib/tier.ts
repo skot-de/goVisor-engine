@@ -31,16 +31,22 @@ export async function getTier(): Promise<Tier> {
     // Zahlende wäre auf den Free-Umfang gefallen. Der teuerste denkbare Zeitpunkt.
     // Werte laut 0001: 'free' | 'paid' | 'cancelled'.
     const { data, error } = await supabase
-      .from("user_profiles").select("plan").eq("id", user.id).maybeSingle();
+      .from("user_profiles").select("plan,plan_until").eq("id", user.id).maybeSingle();
     // Ein FEHLER ist nicht dasselbe wie „zahlt nicht". Wer beides gleich behandelt, merkt
     // einen Schemafehler erst an den Beschwerden zahlender Kunden.
     if (error) {
       console.error("[tier] Abo-Abfrage fehlgeschlagen, liefere free:", error.message);
       return "free";
     }
-    // `cancelled` gilt sofort als free. Sauberer wäre „bis Periodenende", dafür fehlt aber
-    // ein Feld mit dem Enddatum — offener Punkt, sobald das Abo wirklich verkauft wird.
-    return data?.plan === "paid" ? "pro" : "free";
+    if (data?.plan === "paid") return "pro";
+    // Gekündigt heisst nicht sofort gesperrt: wer am 2. des Monats kündigt, hat den Monat
+    // bezahlt. `plan_until` (0015) trägt das Ende des bezahlten Zeitraums; ohne Datum bleibt
+    // es beim sofortigen Ende, weil wir dann nichts Besseres wissen.
+    if (data?.plan === "cancelled" && data.plan_until) {
+      const bis = Date.parse(data.plan_until as string);
+      if (Number.isFinite(bis) && bis > Date.now()) return "pro";
+    }
+    return "free";
   } catch (e) {
     console.error("[tier] unerwartet:", e instanceof Error ? e.message : e);
     return "free"; // im Zweifel restriktiv (keine Premium-Daten ausliefern)
