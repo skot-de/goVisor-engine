@@ -1314,3 +1314,45 @@ def test_partnersuche_gibt_nichts_ueber_fremde_preis():
 
     sql = (ROOT / "supabase" / "0013_netz_partner.sql").read_text(encoding="utf-8")
     assert "auth.uid() = user_id" in sql, "RLS gibt fremde Meldungen frei"
+
+
+def test_abfragen_treffen_spalten_die_es_gibt():
+    """`lib/tier.ts` fragte bis zum 2026-08-22 `user_profiles.tier` ab — eine Spalte, die in
+    KEINER Migration je stand. Solange `PAYWALL_ENFORCED` aus war, fiel das nicht auf: die
+    Funktion kehrt vorher zurück. Am Tag der Scharfschaltung hätte die Abfrage geworfen, der
+    `catch` hätte daraus lautlos „free" gemacht, und jeder zahlende Kunde wäre auf den
+    Free-Umfang gefallen. Ein Fehler, der genau am teuersten Tag erscheint.
+
+    Dieser Test vergleicht die abgefragten Spalten mit dem Schema. Er greift bewusst nur
+    `user_profiles`: dort sind die Spalten in einer Migration deklariert und stabil.
+    """
+    import re
+    spalten = set()
+    sql = (ROOT / "supabase" / "0001_auth_profiles.sql").read_text(encoding="utf-8")
+    block = sql[sql.index("create table if not exists public.user_profiles"):]
+    block = block[: block.index(");")]
+    for zeile in block.splitlines()[1:]:
+        m = re.match(r"\s*([a-z_]+)\s+[a-z]", zeile)
+        if m and m.group(1) not in {"constraint", "create", "primary"}:
+            spalten.add(m.group(1))
+    # Spalten, die spätere Migrationen hinzufügen oder entfernen
+    for datei in sorted((ROOT / "supabase").glob("*.sql")):
+        t = datei.read_text(encoding="utf-8")
+        for m in re.finditer(r"alter table public\.user_profiles\s+add column(?: if not exists)?\s+([a-z_]+)", t):
+            spalten.add(m.group(1))
+        for m in re.finditer(r"alter table public\.user_profiles\s+drop column(?: if exists)?\s+([a-z_]+)", t):
+            spalten.discard(m.group(1))
+    assert "plan" in spalten and "profile" in spalten, f"Schema nicht erkannt: {sorted(spalten)}"
+
+    treffer = []
+    for pfad in [p for p in (ROOT / "web").rglob("*.ts")
+                 if "node_modules" not in p.parts and ".next" not in p.parts]:
+        text = pfad.read_text(encoding="utf-8")
+        for m in re.finditer(r'from\("user_profiles"\)\s*\.select\("([^"]+)"\)', text):
+            for feld in m.group(1).split(","):
+                feld = feld.strip()
+                if feld in {"*", ""}:
+                    continue
+                if feld not in spalten:
+                    treffer.append(f"{pfad.relative_to(ROOT)}: user_profiles.{feld}")
+    assert not treffer, "Abfrage auf Spalten, die es nicht gibt:\n  " + "\n  ".join(treffer)
