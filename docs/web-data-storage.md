@@ -44,9 +44,20 @@ sucht an der falschen Stelle.
    DATA_S3_SECRET=…
    DATA_S3_PREFIX=web-data          # optional
    ```
-3. **Einmal vollständig hochladen:** `scripts/upload_web_data.py --alles` (624 MB, 2.022 Dateien).
-4. **`DATA_BASE_URL`** in Vercel setzen: die öffentlich lesbare Basis-URL, unter der die
-   Dateien liegen (bei R2 die Bucket-Domain plus Prefix).
+3. **Einmal vollständig hochladen:** `scripts/upload_web_data.py --alles`
+   (Stand 2026-08-22: **984 MB, 9.125 Dateien** — die Dokumenttexte wachsen schnell,
+   am 18.08. waren es noch 624 MB und 2.022 Dateien).
+4. **Dieselben vier Variablen auch im Deployment setzen** (`DATA_S3_ENDPOINT`,
+   `DATA_S3_BUCKET`, `DATA_S3_KEY_ID`, `DATA_S3_SECRET`, optional `DATA_S3_PREFIX`).
+   Das Frontend liest damit **signiert** — der Bucket bleibt privat.
+
+   ⚠️ **Den Bucket NICHT öffentlich schalten.** `DATA_BASE_URL` allein (blankes `fetch`)
+   gibt es weiterhin, aber nur, um einen bestehenden offenen Bucket nicht zu brechen. Unter
+   dieser Basis liegt `suppliers.json` mit den Kontaktdomains von 16.454 Firmen — Felder,
+   die `lib/suppliers.ts` ausdrücklich als „NUR SERVERSEITIG" führt —, dazu 6.563
+   Dokumentvolltexte und 253 MB LLM-Auswertungen. Offen wäre die Ratenbremse auf
+   `/api/entity-search` gegenstandslos: ein einziger GET liefert den ganzen Bestand.
+   Nachträglich schliessen heisst annehmen, dass in der Zwischenzeit niemand hingesehen hat.
 
 ## ⚠️ Solange Schritt 1 bis 4 nicht erledigt sind
 

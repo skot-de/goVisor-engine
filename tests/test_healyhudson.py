@@ -1549,3 +1549,38 @@ def test_startseite_sagt_wo_der_hinweis_ankommt():
     landing = (ROOT / "web" / "components" / "Landing.tsx").read_text(encoding="utf-8")
     assert "Posteingang in der App" in landing, \
         "die Kachel sagt nicht mehr, wo der Hinweis ankommt"
+
+
+def test_der_objektspeicher_wird_signiert_gelesen():
+    """`DATA_BASE_URL` allein verlangte einen ÖFFENTLICH lesbaren Speicher — `loadDataFile`
+    machte ein blankes `fetch`.
+
+    ⚠ Was dort liegt: `suppliers.json` mit den Kontaktdomains von 16.454 Firmen, Felder, die
+    `lib/suppliers.ts` ausdrücklich als „NUR SERVERSEITIG" führt („sonst sind die
+    Kontaktdomains aller Firmen abgreifbar"), dazu 6.563 Dokumentvolltexte und 253 MB
+    LLM-Auswertungen. Ein offener Bucket hätte die Ratenbremse auf `/api/entity-search`
+    gegenstandslos gemacht: ein einziger GET liefert den ganzen Bestand.
+
+    Geprüft wird ausserdem die Signatur selbst — mit `node` gegen den AWS-Testvektor, und
+    zwar die ECHTE Funktion, nicht eine Abschrift. Ein Signaturfehler sieht aus wie
+    „HTTP 403", also wie falsche Zugangsdaten; man sucht dann an der falschen Stelle.
+    """
+    import subprocess
+    quelle = (ROOT / "web" / "lib" / "dataSource.ts").read_text(encoding="utf-8")
+    assert "signierterGet" in quelle, "der Speicher wird wieder unsigniert gelesen"
+    assert "function s3Zugang()" in quelle, \
+        "der Env-Zugriff liegt nicht mehr hinter dem server-only-Schutz"
+
+    # Kommentare VOR der Prüfung entfernen: die Datei erklärt in einem Kommentar, warum sie
+    # `server-only` und `process.env` gerade NICHT benutzt. Ein Test, der Prosa mitzählt,
+    # zwingt dazu, die Begründung zu löschen — zum dritten Mal heute dieselbe Falle.
+    import re
+    signer = (ROOT / "web" / "lib" / "s3sign.js").read_text(encoding="utf-8")
+    code = re.sub(r"/\*.*?\*/", " ", signer, flags=re.S)
+    code = "\n".join(z.split("//")[0] for z in code.splitlines())
+    assert 'import "server-only"' not in code and "process.env" not in code, \
+        "der Signierer ist wieder unladbar für node — dann prüft der Test eine Abschrift"
+
+    skript = ROOT / "web" / "scripts" / "pruefe-s3signatur.mjs"
+    p = subprocess.run(["node", str(skript)], capture_output=True, text=True)
+    assert p.returncode == 0, f"Signatur stimmt nicht:\n{p.stdout}{p.stderr}"
