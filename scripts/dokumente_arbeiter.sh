@@ -111,7 +111,21 @@ while true; do
   # Schwanz nie — und ein grosser Rueckstau heisst nicht, dass ein Abrufer auch liefert:
   # `netserver` steht mit 1.327 weit oben und lief am 21.08. 46 Stunden ohne ein einziges
   # Paket. Deshalb ZWEI nach Rueckstau plus EINER aus der Rotation.
-  RUECKSTAND="$($PY scripts/rueckstau.py --rueckstand 2>/dev/null | awk -F'\t' '$2 > 0 {print $1}')"
+  # ⚠ NUR ABRUFER, DIE EINE STUNDE AUCH FÜLLEN KÖNNEN. Der dritte Platz rotierte bis zum
+  # 22.08. durch ALLE mit Rückstau > 0 — und ging dabei an `aumass` mit EINEM offenen
+  # Vorgang und an `bimedien` mit vieren. Vier der letzten sechs Runden haben ihre dritte
+  # Stunde so verschenkt, während netserver (967) und subreport (852) warteten.
+  #
+  # Die Läufe enden gemessen an der ZEITGRENZE, nicht am Limit: eine Stunde ist also immer
+  # voll ausgelastet, wenn genug da ist. Bei vier Vorgängen ist sie es nicht.
+  MINDEST="${ABRUF_MINDEST:-50}"
+  RUECKSTAND="$($PY scripts/rueckstau.py --rueckstand 2>/dev/null \
+                 | awk -F'\t' -v m="$MINDEST" '$3 >= m {print $1}')"
+  # Reicht das nicht für drei, die kleineren dazunehmen — sonst steht der Schritt still,
+  # sobald der Rückstau abgearbeitet ist.
+  if [ "$(echo "$RUECKSTAND" | grep -c .)" -lt 3 ]; then
+    RUECKSTAND="$($PY scripts/rueckstau.py --rueckstand 2>/dev/null | awk -F'\t' '$2 > 0 {print $1}')"
+  fi
   if [ -z "$RUECKSTAND" ]; then
     sag "  Kein Rückstau ermittelbar — nehme die Rotation."
     RUECKSTAND="evergabe_online cosinex subreport netserver ausschreibungsblatt healyhudson

@@ -3392,3 +3392,20 @@ def test_batch_ergebnis_wird_atomar_geschrieben():
     i = quelle.index("def uebernehmen_aus_batch")
     block = quelle[i:i + 2000]
     assert 'with_suffix(".teil")' in block and "tmp.replace(OUT)" in block
+
+
+def test_kein_abrufer_bekommt_eine_stunde_fuer_vier_vorgaenge():
+    """⚠ Die Läufe enden an der ZEITGRENZE, nicht am Stückzahl-Limit.
+
+    Eine Stunde ist also immer voll ausgelastet — wenn genug da ist. Bis zum 22.08. rotierte
+    der dritte Platz durch ALLE Abrufer mit Rückstau > 0 und ging dabei an `aumass` mit EINEM
+    offenen Vorgang und an `bimedien` mit vieren. Vier der letzten sechs Runden haben ihre
+    dritte Stunde so verschenkt, während netserver (967) und subreport (852) warteten.
+    """
+    quelle = (pathlib.Path(__file__).resolve().parent.parent
+              / "scripts" / "dokumente_arbeiter.sh").read_text(encoding="utf-8")
+    assert "ABRUF_MINDEST" in quelle, "der dritte Platz filtert nicht nach Rückstau"
+    assert "$3 >= m" in quelle, "gefiltert wird auf der falschen Spalte (erwartet: holbar)"
+    # ⚠ Rückfallebene: sobald der Rückstau abgearbeitet ist, darf der Schritt nicht
+    # stillstehen, nur weil niemand mehr die Mindestmenge erreicht.
+    assert "-lt 3" in quelle, "ohne Rückfall steht der Abruf bei kleinem Rückstau still"
