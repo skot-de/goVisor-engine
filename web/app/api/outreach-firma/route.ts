@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { loadLanding } from "@/lib/outreach";
+import { bremse } from "@/lib/rateLimit";
 
 /**
  * Firmenname zu einem Outreach-Token — für die Vorbelegung im Onboarding.
@@ -18,6 +19,10 @@ export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
 export async function GET(req: Request) {
+  // Der Token ist zwar nicht zu raten, aber die Route liegt offen und liest je Aufruf eine
+  // Datei. 30 pro Minute reichen für den einen Aufruf, den die Vorbelegung braucht.
+  const zuViel = bremse(req, "outreachfirma", 30, 60_000);
+  if (zuViel) return zuViel;
   const t = new URL(req.url).searchParams.get("t") ?? "";
   // Enges Muster: der Token wandert in einen Dateizugriff. Ohne die Prüfung wäre `../`
   // ein Weg aus dem Datenverzeichnis heraus.

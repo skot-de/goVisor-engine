@@ -27,3 +27,24 @@ export function clientIp(req: Request): string {
   if (xff) return xff.split(",")[0].trim();
   return req.headers.get("x-real-ip") || "unknown";
 }
+
+/**
+ * Fertige Bremse für einen Endpunkt: prüft und liefert im Zweifel gleich die 429-Antwort.
+ * Spart die immer gleichen fünf Zeilen je Route — und sorgt dafür, dass niemand den
+ * `retry-after`-Header vergisst, an dem sich anständige Clients orientieren.
+ *
+ * ⚠ WAS DIESE BREMSE NICHT IST. Der Zähler lebt im Arbeitsspeicher EINER Instanz. Auf
+ * mehreren Serverless-Instanzen gilt das Limit entsprechend mehrfach, und ein Neustart
+ * setzt ihn zurück. Das ist eine Schwelle gegen Schleifen, keine Mauer gegen einen
+ * entschlossenen Abgriff. Wer die wirklich braucht, braucht einen geteilten Zähler.
+ *
+ * @returns die 429-Antwort, oder `null` wenn die Anfrage durchdarf.
+ */
+export function bremse(req: Request, name: string, limit: number, windowMs: number) {
+  const rl = rateLimit(`${name}:${clientIp(req)}`, limit, windowMs);
+  if (rl.ok) return null;
+  return new Response(JSON.stringify({ error: "zu viele Anfragen" }), {
+    status: 429,
+    headers: { "content-type": "application/json", "retry-after": String(rl.retryAfter) },
+  });
+}

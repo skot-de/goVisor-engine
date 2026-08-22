@@ -1391,3 +1391,42 @@ def test_posteingang_verbraucht_keine_hinweise():
     assert "loadDataFile" in idx, "der Hinweis-Index geht nicht mehr über den Daten-Loader"
     for name, text in (("leadIndex.ts", idx), ("alerts/run", run)):
         assert "node:fs" not in text, f"{name} liest wieder direkt von der Platte"
+
+
+def test_offene_endpunkte_haben_eine_bremse():
+    """Was vor dem Anmelde-Tor liegt, muss gebremst sein.
+
+    `/api/entity-search` ist die Enumerations-Fläche: sie MUSS offen sein (das Onboarding
+    braucht sie, bevor es ein Konto gibt) und gibt zu jedem Namensfragment Firma,
+    Zuschlagszahl, Auftraggeberzahl und CPV-Felder heraus. Ohne Bremse holt eine Schleife
+    über „aa".."zz" den Bestand ab. Gemessen am 2026-08-22: 70 Abrufe in Folge → ab dem
+    61. kommt 429 mit `retry-after`, acht Abrufe wie beim Tippen kommen alle durch.
+
+    Die Liste der offenen Pfade kommt aus `middleware.ts`, damit ein neu geöffneter
+    Endpunkt diesen Test SOFORT rot macht. Genau dort entsteht der Fehler: jemand nimmt
+    eine Route in OFFEN auf und denkt an alles ausser der Bremse.
+    """
+    import re
+    mw = (ROOT / "web" / "middleware.ts").read_text(encoding="utf-8")
+    block = mw[mw.index("const OFFEN = ["):]
+    block = block[: block.index("]")]
+    offen = re.findall(r'"(/api/[a-z-]+)"', block)
+    assert len(offen) >= 5, f"OFFEN-Liste nicht erkannt: {offen}"
+
+    # Zwei begründete Ausnahmen, bewusst benannt statt stillschweigend übersprungen:
+    ausnahmen = {
+        "/api/health": "Zustandsprobe der Überwachung, verrät nur Zustand und Alter",
+        "/api/wer": "liest ausschliesslich die Sitzung des Aufrufers, gibt fremde Daten nicht heraus",
+    }
+    ohne = []
+    for pfad in offen:
+        if pfad in ausnahmen:
+            continue
+        datei = ROOT / "web" / "app" / pfad.lstrip("/") / "route.ts"
+        if not datei.exists():
+            ohne.append(f"{pfad}: Route nicht gefunden")
+            continue
+        text = datei.read_text(encoding="utf-8")
+        if "bremse(" not in text and "rateLimit(" not in text:
+            ohne.append(f"{pfad}: keine Bremse")
+    assert not ohne, "offene Endpunkte ohne Ratenbremse:\n  " + "\n  ".join(ohne)
