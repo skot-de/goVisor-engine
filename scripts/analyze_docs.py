@@ -32,6 +32,7 @@ from govisor.llm import (chat, letzter_anbieter, anbieter_stand,  # noqa: E402
                          AllKeysExhausted)
 from govisor.llm import BudgetErschoepft, kontostand as _llm_kontostand  # noqa: E402
 from govisor import doctypes, docextract, docparse, doctax, docpipe  # noqa: E402
+from govisor import lbauswahl  # noqa: E402
 from govisor.docpipe import SQL_BRAUCHBAR  # noqa: E402
 
 SRC = ROOT / "data" / "docs" / "DE" / "doc_text.parquet"
@@ -209,7 +210,8 @@ def _pflicht_items(dateien: list[str]) -> list[dict]:
 AUSWERTUNG = ("fragenantworten",) + tuple(doctypes.PRIORITY)
 
 
-def analyze_notice(files: list, structured: dict | None = None) -> dict:
+def analyze_notice(files: list, structured: dict | None = None,
+                   notice_id: str = "") -> dict:
     """files = [(filename, text), …] eines Vorgangs → Analyse mit verifizierter Checkliste.
 
     Zwei Schienen: **Parser** (§6.2, structured={name: parser_result}) liefert strukturierte
@@ -237,6 +239,7 @@ def analyze_notice(files: list, structured: dict | None = None) -> dict:
             by_type_file.setdefault(dt, name)
 
     rejected, sent_chars, truncated = 0, 0, []
+    lb_art = None
     llm_started = False
     for dt in AUSWERTUNG:
         if dt not in by_type_text:
@@ -244,6 +247,12 @@ def analyze_notice(files: list, structured: dict | None = None) -> dict:
         blob = "\n\n".join(by_type_text[dt]).strip()
         if not blob:
             continue
+        # ── AUSWAHL INNERHALB DER LB (§6.1) ────────────────────────────────────────────
+        # Nur hier: die LB ist der einzige Typ, dessen Blob den Deckel regelmaessig reisst
+        # (54 % der Vorgaenge), und der einzige, bei dem gemessen ist, dass die Auswahl
+        # etwas aendert. Die uebrigen Typen bleiben unangetastet.
+        if dt == "leistungsbeschreibung":
+            blob, lb_art = lbauswahl.waehle(blob, notice_id)
         if sent_chars + len(blob) > TOKEN_CAP * CHARS_PER_TOKEN and llm_started:
             truncated.append(dt)                       # Deckel: nach Priorität abschneiden (§6.1)
             continue
@@ -278,6 +287,10 @@ def analyze_notice(files: list, structured: dict | None = None) -> dict:
         "doctypes_seen": seen,
         "missing_expected": missing,
         "truncated_doctypes": truncated,
+        # Welches Auswahlverfahren die LB bekommen hat — die Grundlage der laufenden
+        # Pruefung (`scripts/lb_auswahl_stand.py`). Ohne dieses Feld ist die
+        # Kontrollgruppe nachtraeglich nicht mehr von der Behandlung zu unterscheiden.
+        "lb_auswahl": lb_art,
     }
     out.update(_derive_legacy(checklist))
     return out
@@ -420,7 +433,7 @@ def main() -> int:
     def arbeite(auftrag):
         nid, files = auftrag
         structured = structured_for_notice(nid)            # Parser-Schiene (§6.2) über die Roh-ZIPs
-        res = analyze_notice(files, structured=structured)
+        res = analyze_notice(files, structured=structured, notice_id=nid)
         # WER HAT ES ERZEUGT. Seit dem 2026-08-18 gibt es drei Anbieter mit verschiedenen
         # Modellen; welches gerade dran ist, entscheidet das Guthaben. Ohne diese Angabe
         # stuenden im Bestand Ergebnisse nebeneinander, deren Unterschiede niemand mehr

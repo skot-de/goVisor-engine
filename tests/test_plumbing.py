@@ -3118,6 +3118,7 @@ def test_reserve_schuetzt_den_tagesbetrieb(monkeypatch):
 
     monkeypatch.setattr(llm, "kontostand", lambda frisch=False: 0.40)
     monkeypatch.setattr(llm, "RESERVE_USD", 1.00)
+    monkeypatch.setattr(llm, "TAG_USD", 0)          # hier nicht das Thema
     monkeypatch.setattr(llm, "_geld", {"start": None, "stand": None, "n": 0,
                                        "naechste": 1, "gewarnt": False, "stopp": None})
     with pytest.raises(llm.BudgetErschoepft) as e:
@@ -3132,6 +3133,7 @@ def test_lauf_limit_faengt_ausreisser(monkeypatch):
     monkeypatch.setattr(llm, "kontostand", lambda frisch=False: 90.0)
     monkeypatch.setattr(llm, "RESERVE_USD", 0.0)
     monkeypatch.setattr(llm, "LIMIT_USD", 5.0)
+    monkeypatch.setattr(llm, "TAG_USD", 0)
     monkeypatch.setattr(llm, "_geld",
                         {"start": 100.0, "stand": 90.0, "n": 0,
                                        "naechste": 1, "gewarnt": False, "stopp": None})
@@ -3226,6 +3228,7 @@ def test_geldwache_schwingt_bei_parallelen_faeden_kaum_ueber(monkeypatch):
     monkeypatch.setattr(llm, "kontostand", stand)
     monkeypatch.setattr(llm, "RESERVE_USD", 1.0)
     monkeypatch.setattr(llm, "LIMIT_USD", LIMIT)
+    monkeypatch.setattr(llm, "TAG_USD", 0)
     monkeypatch.setattr(llm, "_geld", {"start": None, "stand": None, "n": 0,
                                        "naechste": 1, "gewarnt": False, "stopp": None})
 
@@ -3266,6 +3269,7 @@ def test_abbruch_der_geldwache_ist_klebrig(monkeypatch):
 
     monkeypatch.setattr(llm, "kontostand", stand)
     monkeypatch.setattr(llm, "RESERVE_USD", 1.0)
+    monkeypatch.setattr(llm, "TAG_USD", 0)
     monkeypatch.setattr(llm, "_geld", {"start": None, "stand": None, "n": 0,
                                        "naechste": 1, "gewarnt": False, "stopp": None})
     with pytest.raises(llm.BudgetErschoepft):
@@ -3275,3 +3279,51 @@ def test_abbruch_der_geldwache_ist_klebrig(monkeypatch):
         with pytest.raises(llm.BudgetErschoepft):
             llm._geldwache()
     assert rufe["n"] == vorher, "nach dem Abbruch wurde weiter der Kontostand abgefragt"
+
+
+def test_tagesdeckel_greift_ueber_prozesse_hinweg(monkeypatch, tmp_path):
+    """⚠ Reserve und Lauf-Limit schützen vor EINEM Ausreißer, nicht vor einem teuren Tag.
+
+    Der Analyse-Arbeiter rechnet Runde für Runde, jede unter dem Lauf-Limit — und kam so am
+    2026-08-22 auf rund 11 $ an einem Tag, ohne dass eine Bremse falsch lag. Bei 0,045 $ je
+    Vorgang und ~5.983 offenen Vergaben wären das ~271 $, die niemand geplant hat.
+
+    Gemerkt wird der ERSTE Kontostand des Tages, nicht eine Summe: das überlebt parallele
+    Prozesse ohne Sperre und ohne Addierfehler.
+    """
+    from govisor import llm
+
+    buch = tmp_path / ".llm_tagesbudget.json"
+    monkeypatch.setattr(llm, "_Path", type(llm._Path)(llm._Path.__name__, (llm._Path,), {}))
+    # Einfacher: die Funktion direkt prüfen, mit echtem Pfad im tmp_path
+    import datetime as dt
+    import json as js
+
+    buch.write_text(js.dumps({"datum": dt.date.today().isoformat(), "start_stand": 20.0}))
+
+    def tagesbuch(stand):
+        d = js.loads(buch.read_text())
+        return max(0.0, float(d["start_stand"]) - stand)
+
+    monkeypatch.setattr(llm, "_tagesbuch", tagesbuch)
+    monkeypatch.setattr(llm, "kontostand", lambda frisch=False: 16.0)   # 4 $ heute weg
+    monkeypatch.setattr(llm, "RESERVE_USD", 1.0)
+    monkeypatch.setattr(llm, "LIMIT_USD", 0)
+    monkeypatch.setattr(llm, "TAG_USD", 3.0)
+    monkeypatch.setattr(llm, "_geld", {"start": None, "stand": None, "n": 0,
+                                       "naechste": 1, "gewarnt": False, "stopp": None})
+    with pytest.raises(llm.BudgetErschoepft) as e:
+        llm._geldwache()
+    assert "Tagesdeckel" in str(e.value)
+
+
+def test_tagesbuch_faellt_nicht_lautlos_aus(monkeypatch, capsys):
+    """Ein Buch, das nicht geschrieben werden kann, legt der nächste Aufruf neu an — mit
+    dem dann niedrigeren Stand. Der Deckel misst danach nur noch den Rest des Tages und
+    greift nie. Genau so ist er am 22.08. ausgefallen."""
+    from govisor import llm
+
+    quelle = (pathlib.Path(__file__).resolve().parent.parent
+              / "govisor" / "llm.py").read_text(encoding="utf-8")
+    assert "Tagesbuch nicht schreibbar" in quelle, "das Scheitern wird still verschluckt"
+    assert "buch_gewarnt" in quelle

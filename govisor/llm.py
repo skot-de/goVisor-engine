@@ -185,6 +185,13 @@ def _is_credit_error(status: int, text: str) -> bool:
 #   · TAKT     — wie oft nachgefragt wird. Der Kontostand kostet einen HTTP-Aufruf; ihn vor
 #                jedem Chat zu holen waere teurer als das, was er schuetzt.
 RESERVE_USD = float(_os.environ.get("GOVISOR_RESERVE_USD", "1.00"))
+# ⚠ **TAGESDECKEL — die Grenze, die die anderen beiden nicht ziehen.** Reserve und Limit
+# schuetzen vor EINEM Ausreisser; sie sagen nichts darueber, wie viel ein Tag insgesamt
+# kosten darf. Der Analyse-Arbeiter rechnet Runde fuer Runde, jede unter dem Lauf-Limit —
+# und kam so am 22.08. auf ~11 $ an einem Tag, ohne dass irgendeine Bremse falsch lag.
+# Bei 0,045 $ je Vorgang und einer offenen Beschaffungsluecke von ~5.983 Vergaben waeren
+# das rund 271 $, die sonst niemand geplant haette.
+TAG_USD = float(_os.environ.get("GOVISOR_TAG_USD", "3.00"))
 LIMIT_USD = float(_os.environ.get("GOVISOR_LIMIT_USD", "5.00"))
 _TAKT = int(_os.environ.get("GOVISOR_BUDGET_TAKT", "20"))
 
@@ -226,6 +233,46 @@ def kontostand(frisch: bool = False) -> float | None:
         return None
 
 
+def _tagesbuch(stand: float) -> float:
+    """Was HEUTE schon ausgegeben wurde, prozessuebergreifend.
+
+    Gemerkt wird nicht die Summe, sondern der **erste Kontostand des Tages** — daraus
+    ergibt sich der Verbrauch durch Subtraktion. Das ueberlebt parallele Prozesse ohne
+    Sperre und ohne Addierfehler: es gibt nichts hochzuzaehlen, was doppelt gezaehlt
+    werden koennte.
+
+    ⚠ Ein Aufladen mitten am Tag setzt die Tagesrechnung faktisch zurueck (der Stand steigt
+    ueber den Startwert). Das ist gewollt: wer nachlaedt, hat sich entschieden.
+    """
+    import datetime as _dt
+    import json as _json
+
+    pfad = _Path(__file__).resolve().parent.parent / "data" / ".llm_tagesbudget.json"
+    heute = _dt.date.today().isoformat()
+    try:
+        d = _json.loads(pfad.read_text(encoding="utf-8"))
+    except Exception:                                         # noqa: BLE001
+        d = {}
+    if d.get("datum") != heute:
+        d = {"datum": heute, "start_stand": stand}
+        try:
+            pfad.parent.mkdir(parents=True, exist_ok=True)
+            pfad.write_text(_json.dumps(d), encoding="utf-8")
+        except Exception as e:                                # noqa: BLE001
+            # ⚠ NICHT still verschlucken. Schlaegt das Schreiben fehl, legt der naechste
+            # Aufruf das Buch neu an — mit dem dann niedrigeren Stand als Startwert. Der
+            # Tagesdeckel misst danach nur noch, was seit diesem Moment ausgegeben wurde,
+            # und greift nie. Genau so ist er am 22.08. lautlos ausgefallen: ein
+            # Startwert von 8,03 $ verschwand, der naechste Aufruf schrieb 5,43 $, und
+            # der Verbrauch dazwischen war aus der Rechnung.
+            with _geld_sperre:
+                if not _geld.get("buch_gewarnt"):
+                    _geld["buch_gewarnt"] = True
+                    print(f"  ⚠ Tagesbuch nicht schreibbar ({type(e).__name__}) — "
+                          f"der Tagesdeckel ist AUS.", flush=True)
+    return max(0.0, float(d.get("start_stand", stand)) - stand)
+
+
 def _geldwache() -> None:
     """Vor jedem Chat. Wirft `BudgetErschoepft`, wenn Reserve oder Limit gerissen sind.
 
@@ -262,12 +309,20 @@ def _geldwache() -> None:
     with _geld_sperre:
         if _geld["start"] is None:
             _geld["start"] = stand
+            # ⚠ Den Startwert AUSGEBEN. Am 22.08. habe ich zweimal Verbrauch dem falschen
+            # Verursacher zugeschrieben, weil ich den Kontostand vor dem Start gemessen
+            # hatte statt beim Start — dazwischen lief ein anderer Prozess. Wer den Wert
+            # im eigenen Protokoll hat, muss nicht raten.
+            print(f"  Geldwache: Start bei {stand:.2f} $ "
+                  f"(Reserve {RESERVE_USD:.2f} · Lauf {LIMIT_USD:.2f} · Tag {TAG_USD:.2f})",
+                  flush=True)
         ausgegeben = _geld["start"] - stand
         # Preis je Aufruf aus dem, was tatsaechlich passiert ist — nicht aus einer Schaetzung.
         # Genau die Schaetzung lag am 22.08. um das Vierfache daneben.
         je_aufruf = ausgegeben / n if n and ausgegeben > 0 else 0.0
         luft = min(LIMIT_USD - ausgegeben if LIMIT_USD else float("inf"),
-                   stand - RESERVE_USD)
+                   stand - RESERVE_USD,
+                   TAG_USD - _tagesbuch(stand) if TAG_USD else float("inf"))
         if je_aufruf > 0:
             # Halbe Luft als Sicherheitsabstand: lieber einmal zu oft fragen als einmal
             # zu spaet. Ein Kontostand-Abruf kostet nichts ausser einer Sekunde.
@@ -276,12 +331,16 @@ def _geldwache() -> None:
             schritte = _TAKT
         _geld["naechste"] = n + schritte
 
+        heute = _tagesbuch(stand)
         grund = None
-        if stand < RESERVE_USD:
+        if TAG_USD and heute > TAG_USD:
+            grund = (f"heute schon {heute:.2f} $ ausgegeben (Tagesdeckel {TAG_USD:.2f} $) — "
+                     f"abgebrochen. Anheben: GOVISOR_TAG_USD")
+        elif stand < RESERVE_USD:
             grund = (f"Guthaben {stand:.2f} $ unter der Reserve von {RESERVE_USD:.2f} $ — "
                      f"abgebrochen, damit der Tagesbetrieb weiterlaufen kann. "
                      f"Aufladen: openrouter.ai/credits")
-        elif LIMIT_USD and ausgegeben > LIMIT_USD:
+        if not grund and LIMIT_USD and ausgegeben > LIMIT_USD:
             grund = (f"dieser Lauf hat {ausgegeben:.2f} $ verbraucht (Limit {LIMIT_USD:.2f} $) "
                      f"— abgebrochen. Hoeher setzen: GOVISOR_LIMIT_USD")
         if grund:
