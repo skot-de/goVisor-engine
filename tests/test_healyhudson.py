@@ -1471,3 +1471,28 @@ def test_firma_startet_auf_dem_deployment_kein_python():
         "der Python-Zweig liegt nicht mehr hinter der Production-Sperre"
     assert "Object.keys(profiles).length > 0 && process.env.NODE_ENV" not in route, \
         "das Loch ist zurück: leere Profilmenge umgeht die Sperre"
+
+
+def test_migrationswerkzeug_lehnt_loeschendes_ab():
+    """`scripts/migrate.py` spielt Migrationen direkt gegen die Supabase ein — das ging
+    entgegen einer alten Notiz schon immer, sie bezog sich auf die GETEILTE Instanz.
+
+    ⚠ Die Vorsicht gehört ins Werkzeug, nicht in jemandes Gedächtnis: eine Migration, die
+    etwas WEGNIMMT, muss bewusst ausgelöst werden. Additive DDL lässt sich notfalls
+    zurücknehmen, gelöschte Zeilen nicht. `0012_erfolgspraemie_entfernen.sql` löscht eine
+    Tabelle und ist deshalb der Prüfstein.
+
+    Der Test verbindet sich NICHT: die Ablehnung passiert vor dem Verbindungsaufbau.
+    """
+    import subprocess
+    p = subprocess.run(["python3", "scripts/migrate.py",
+                        "supabase/0012_erfolgspraemie_entfernen.sql"],
+                       cwd=ROOT, capture_output=True, text=True)
+    assert p.returncode == 3, f"loeschende Migration lief ungebremst durch:\n{p.stdout}{p.stderr}"
+    assert "auch-loeschen" in p.stdout, "die Ablehnung nennt den bewussten Weg nicht"
+
+    # Und nichts ausserhalb von supabase/ darf eingespielt werden: der Dateiname kommt
+    # von der Kommandozeile und landet in einem Lesezugriff.
+    p2 = subprocess.run(["python3", "scripts/migrate.py", "../../etc/hosts"],
+                        cwd=ROOT, capture_output=True, text=True)
+    assert p2.returncode == 2, "Pfade ausserhalb von supabase/ werden nicht abgewiesen"
