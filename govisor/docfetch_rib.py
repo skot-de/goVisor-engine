@@ -37,13 +37,28 @@ import zipfile
 from pathlib import Path
 
 import requests
+from urllib.parse import urlparse
 
 from .docfetch import FetchResult, _UA
 
 _RIB_RE = re.compile(
     r"^https?://(?:www\.)?meinauftrag\.rib\.de/public/"
     r"DetailsByPlatformIdAndTenderId/platformId/(?P<pid>\d+)/tenderId/(?P<tid>\d+)", re.I)
-_VAR = re.compile(r"var\s+documentsAttachments\s*=\s*\[")
+# ⚠ ZWEI TOEPFE, NICHT EINER. Der Abrufer sah nur `documentsAttachments` — die eigentlichen
+# Vergabeunterlagen. Bei 94 Vorgaengen steht dort aber `null`, waehrend `documentsNotices`
+# sehr wohl gefuellt ist: die Auftragsbekanntmachung als PDF, anonym ladbar ueber einen
+# Token-Link auf `my.vergabe.rib.de`. Gemessen am 2026-08-22 an einem dieser Vorgaenge:
+#
+#     var documentsAttachments = null;
+#     var documentsNotices     = [{"data":[{"value":"<a href=…Auftragsbekanntmachung_VOB_A_national-0925.pdf</a>"}]}]
+#
+# Fuer eine nationale VOB/A-Vergabe steht in dieser Bekanntmachung, was gefordert ist —
+# Eignung, Fristen, Zuschlagskriterien. Das ist nicht der volle Unterlagensatz, aber es ist
+# der Unterschied zwischen „nichts" und „etwas Belegtem".
+_VARIANTEN = (
+    ("attachments", re.compile(r"var\s+documentsAttachments\s*=\s*\[")),
+    ("bekanntmachung", re.compile(r"var\s+documentsNotices\s*=\s*\[")),
+)
 _HREF = re.compile(r'href=\\?"([^"\\]{6,})')
 
 # Erste Fassung stand auf 80 — und drei von fuenf Testvorgaengen landeten EXAKT auf 80.
@@ -87,8 +102,18 @@ def _klammer_block(text: str, start: int) -> str | None:
 
 
 def dokumentlinks(html: str) -> list[str]:
-    """Download-Adressen aus dem eingebetteten JS-Literal. Leere Liste, wenn es fehlt."""
-    m = _VAR.search(html)
+    """Download-Adressen der Vergabeunterlagen. Leere Liste, wenn es sie nicht gibt."""
+    return _links_aus(html, "attachments")
+
+
+def bekanntmachungslinks(html: str) -> list[str]:
+    """Download-Adressen der Bekanntmachung — der Rueckfall, wenn Unterlagen fehlen."""
+    return _links_aus(html, "bekanntmachung")
+
+
+def _links_aus(html: str, welche: str) -> list[str]:
+    muster = dict(_VARIANTEN)[welche]
+    m = muster.search(html)
     if not m:
         return []
     blk = _klammer_block(html, html.index("[", m.start()))
@@ -157,15 +182,35 @@ def fetch_one(documents_url: str, notice_id: str, out_root: Path,
                            f"{type(e).__name__}: {e}"[:150])
     if r.status_code != 200:
         return FetchResult(notice_id, tid, portal, "error", 0, 0, None, f"http {r.status_code}")
+    # ⚠ HTTP 200 IST NICHT GENUG. Ist die Vergabe zurueckgezogen oder die Frist vorbei,
+    # leitet RIB auf `/public/unavailable` um — mit Status 200 und einer 18-KB-Seite ohne
+    # jede Dokumentvariable. Wer nur den Statuscode prueft, haelt das fuer ein Layoutproblem
+    # und sucht im eigenen Parser (2 von 3 Stichproben am 2026-08-22 waren genau das).
+    endpfad = urlparse(r.url or "").path.rstrip("/")
+    # Zwei Umleitungen bedeuten dasselbe: den Vorgang gibt es hier nicht mehr.
+    #   /public/unavailable   ausdrueckliche Absage
+    #   /public/publications  die LISTE statt der Vergabe. ⚠ Der Erfolgsfall landet auf
+    #                         /public/publications/605329 — es zaehlt also, ob eine Kennung
+    #                         folgt, nicht ob der Pfad vorkommt.
+    if endpfad.endswith("/public/unavailable") or endpfad.endswith("/public/publications"):
+        return FetchResult(notice_id, tid, portal, "abgelaufen", 0, 0, None,
+                           f"Portal leitet auf {endpfad[-30:]}")
 
     alle_links = dokumentlinks(r.text)
+    # ⚠ RUECKFALL AUF DIE BEKANNTMACHUNG. Bei 94 Vorgaengen ist `documentsAttachments`
+    # schlicht `null` — es gibt dort keine Vergabeunterlagen, wohl aber die
+    # Auftragsbekanntmachung als PDF. Bis zum 2026-08-22 galten diese Faelle als „gated"
+    # und warteten auf ein Konto, das ihnen nicht geholfen haette. Was da ist, nehmen wir.
+    nur_bm = False
+    if not alle_links:
+        alle_links = bekanntmachungslinks(r.text)
+        nur_bm = bool(alle_links)
     links = alle_links[:_MAX_DATEIEN]
     gekappt = len(alle_links) - len(links)
     if not links:
-        # Kein Literal in der Seite: die Seite laedt, ist aber anders gebaut als erwartet.
-        # ⚠ Bis zum 2026-08-22 stand hier "gated" — und damit landeten 94 Vorgaenge im Topf
-        # „Konto noetig" und warteten auf einen Zugang, der ihnen nicht hilft. Es ist kein
-        # Tor, es ist unser Parser. Eigene Klasse, damit daraus eine Arbeitsliste wird.
+        # Weder Unterlagen noch Bekanntmachung: die Seite laedt, ist aber anders gebaut als
+        # erwartet. Kein Tor, sondern unser Parser — eigene Klasse, damit daraus eine
+        # Arbeitsliste wird und kein Warten auf einen Zugang.
         return FetchResult(notice_id, tid, portal, "kein_listenlayout", 0, 0, None,
                            "keine Dokumentliste in der Seite")
 
@@ -193,6 +238,17 @@ def fetch_one(documents_url: str, notice_id: str, out_root: Path,
             zf.writestr(_dateiname(u, d, nr), d.content)
             gesamt += len(d.content)
             n_ok += 1
+
+    if n_ok and nur_bm:
+        # Ehrlich beschriften: das ist die Bekanntmachung, nicht der Unterlagensatz. Der
+        # Status existiert bereits (Staatsanzeiger-Frameset) und zaehlt als „nichts
+        # nachzuholen" — richtig so, denn mehr gibt das Portal anonym nicht her.
+        dest_dir.mkdir(parents=True, exist_ok=True)
+        tmp = dest.with_suffix(".part")
+        tmp.write_bytes(puffer.getvalue())
+        tmp.replace(dest)
+        return FetchResult(notice_id, tid, portal, "nur_bekanntmachung", gesamt, n_ok,
+                           str(dest), "keine Vergabeunterlagen, nur die Bekanntmachung")
 
     if not n_ok:
         # ⚠ 404/410 ist kein Tor, sondern ein Verschwinden. Diese Faelle als "gated" zu

@@ -330,3 +330,41 @@ def test_gated_ist_kein_sammeltopf_mehr():
     assert hinweis and "parser" in hinweis
     # Und wer den Parser repariert, bekommt sie ohne Frist zurück in die Schlange.
     assert q.ueberspringen({"status": "kein_listenlayout", "wann": None}, frei={"parser"}) is None
+
+
+def test_rib_nimmt_die_bekanntmachung_wenn_es_keine_unterlagen_gibt():
+    """Die 94 „keine Dokumentliste"-Faelle auf meinauftrag.rib.de waren drei verschiedene
+    Dinge — gemessen an acht Stichproben am 2026-08-22:
+
+        4  `documentsAttachments = null`, aber `documentsNotices` gefuellt: die
+           Auftragsbekanntmachung als PDF, anonym ladbar → **holen wir jetzt**
+        3  Umleitung auf /public/unavailable oder /public/publications: den Vorgang gibt
+           es dort nicht mehr → `abgelaufen`, kein Nachfassen
+        1  weiterhin unklar
+
+    ⚠ HTTP 200 IST NICHT GENUG. Beide Umleitungen antworten mit 200 und einer Seite ohne
+    jede Dokumentvariable. Wer nur den Statuscode prueft, haelt das fuer ein Layoutproblem
+    und sucht im eigenen Parser.
+
+    ⚠ UND DER PFAD ENTSCHEIDET NACH DER KENNUNG. Der Erfolgsfall landet auf
+    `/public/publications/605329` — es zaehlt, ob eine Kennung folgt, nicht ob der Pfad
+    vorkommt. Eine Pruefung mit `in` haette jeden erfolgreichen Abruf als abgelaufen gemeldet.
+    """
+    from govisor import docfetch_rib as rib
+
+    seite = ('<script>var documentsAttachments = null;\n'
+             'var documentsNotices = [{"id":"x","data":[{"value":"<a href=\\"'
+             'https://my.vergabe.rib.de/remote/download.php?k=abc\\">Bekanntmachung.pdf</a>"}]}];'
+             '</script>')
+    assert rib.dokumentlinks(seite) == [], "Unterlagen erfunden, wo `null` steht"
+    bm = rib.bekanntmachungslinks(seite)
+    assert bm and bm[0].endswith("k=abc"), f"Bekanntmachung nicht gefunden: {bm}"
+
+    # Die Erfolgs-URL darf NICHT als abgelaufen gelten.
+    from urllib.parse import urlparse
+    for pfad, erwartet in (("/public/publications/605329", False),
+                           ("/public/publications", True),
+                           ("/public/unavailable", True)):
+        p = urlparse("https://www.meinauftrag.rib.de" + pfad).path.rstrip("/")
+        ist = p.endswith("/public/unavailable") or p.endswith("/public/publications")
+        assert ist == erwartet, f"{pfad} falsch eingestuft"
