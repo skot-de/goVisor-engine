@@ -3018,6 +3018,19 @@ def _lead_context_sql(cfg: Config, country: str) -> str:
     `local_authority` zu verschmelzen waere geraten.
     """
     A = cfg.silver_table_glob("attributes", country)
+    # ⚠ EIN LAND OHNE `attributes` DARF DEN BAU NICHT ABBRECHEN. DuckDB wirft bei einem
+    # Glob ohne Treffer einen IO-Fehler — und seit der AT-Pfad diesen Block benutzt
+    # (2026-08-22) hiesse das: eine frische Installation oder ein Land, das noch keine
+    # Attribute geerntet hat, bricht mitten im Gold-Bau ab. Stattdessen eine leere Tabelle
+    # mit denselben Spalten; der LEFT JOIN liefert dann sauber NULL.
+    import glob as _glob
+    if not _glob.glob(A):
+        return ("SELECT NULL::VARCHAR AS notice_id, NULL::VARCHAR AS legal_basis, "
+                "NULL::VARCHAR AS documents_url, FALSE AS is_nationwide, "
+                "NULL::INTEGER AS guarantee_required, NULL::INTEGER AS variants_allowed, "
+                "NULL::INTEGER AS validity_days, NULL::VARCHAR AS selection_types, "
+                "NULL::VARCHAR AS deadline_time, NULL::VARCHAR AS question_deadline "
+                "WHERE false")
     return f"""
       SELECT notice_id,
         -- 1.1 Vergaberegime. Die deutsche Vorschrift ist spezifischer als die
