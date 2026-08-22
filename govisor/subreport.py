@@ -51,6 +51,11 @@ from . import docfetch_queue as _queue
 
 ROOT = Path(__file__).resolve().parent.parent
 
+# Wie lange ein Lauf OHNE ein einziges neues Ergebnis weiterlaufen darf. Der Fall, der am
+# 2026-08-21 zwei Abrufer 54 Stunden hat laufen lassen, war nicht ein haengender Vorgang,
+# sondern ein Abrufer, der beschaeftigt aussah und nichts mehr lieferte.
+LEERLAUF_S = int(__import__("os").environ.get("GOVISOR_LEERLAUF", "3600"))
+
 # Nur diese Hosts — beide führen auf dieselbe ELViS-Oberfläche.
 _HOSTS = ("subreport.de", "subreport-elvis.de")
 _WARTE_SEITE_MS = 6000     # clientseitiges Rendern; darunter kam eine leere Hülle
@@ -179,7 +184,12 @@ def lauf(limit: int | None, dry_run: bool, country: str = "DE",
 
     saetze: list[dict] = []
     heute = dt.date.today().isoformat()
-    with sync_playwright() as p:
+    def _sichern():                     # laeuft, wenn die Wache hart abbricht
+        if _manifest:
+            _queue.schreibe(_mroot, "subreport", _manifest)
+
+    with _queue.Wache("subreport", vorgang_hart_s=0, leerlauf_s=LEERLAUF_S,
+                      sichern=_sichern) as wache, sync_playwright() as p:
         b = p.chromium.launch(headless=True)
         ctx = b.new_context()
         pg = ctx.new_page()
@@ -208,6 +218,7 @@ def lauf(limit: int | None, dry_run: bool, country: str = "DE",
                 # Ehrlicher Status: die LISTE haben wir, die Dateien nicht.
                 "status": "nur_liste" if r["gefunden"] else "leer",
             })
+            wache.erfolg()
             # Schlank ins Manifest: Status und Zahl, NICHT die Dateiliste. Das Manifest
             # beantwortet „nochmal versuchen?", nicht „was lag drin" — dafuer gibt es
             # `doc_listing_subreport.parquet`. Zwei Dateien mit demselben Inhalt liefen

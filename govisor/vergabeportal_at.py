@@ -64,6 +64,11 @@ from . import docfetch_queue as _queue
 
 ROOT = Path(__file__).resolve().parent.parent
 
+# Wie lange ein Lauf OHNE ein einziges neues Ergebnis weiterlaufen darf. Der Fall, der am
+# 2026-08-21 zwei Abrufer 54 Stunden hat laufen lassen, war nicht ein haengender Vorgang,
+# sondern ein Abrufer, der beschaeftigt aussah und nichts mehr lieferte.
+LEERLAUF_S = int(__import__("os").environ.get("GOVISOR_LEERLAUF", "3600"))
+
 # Beide Formen derselben Software. Der Pfad ist das Merkmal, nicht der Host — die Lehre aus
 # drei DE-Quellen an einem Tag.
 _DETAIL = re.compile(r"^https?://[^/]+/(?:Vergabeportal/)?Detail/(\d+)", re.IGNORECASE)
@@ -189,7 +194,12 @@ def lauf(limit: int | None = None, dry_run: bool = False, country: str = "AT",
 
     saetze: list[dict] = []
     heute = dt.date.today().isoformat()
-    with sync_playwright() as p:
+    def _sichern():                     # laeuft, wenn die Wache hart abbricht
+        if _manifest:
+            _queue.schreibe(_mroot, "vergabeportal", _manifest)
+
+    with _queue.Wache("vergabeportal", vorgang_hart_s=0, leerlauf_s=LEERLAUF_S,
+                      sichern=_sichern) as wache, sync_playwright() as p:
         b = p.chromium.launch(headless=True)
         ctx = b.new_context()
         pg = ctx.new_page()
@@ -218,6 +228,7 @@ def lauf(limit: int | None = None, dry_run: bool = False, country: str = "AT",
                 # hinter einem CAPTCHA, das bewusst nicht angeruehrt wird.
                 "status": r["status"],
             })
+            wache.erfolg()
             # Schlank ins Manifest (Status + Zahl), die Dateiliste bleibt in
             # `doc_listing_vergabeportal.parquet` — eine Datei je Frage.
             _manifest.append({"lead_id": lead_id, "url": url, "status": r["status"],

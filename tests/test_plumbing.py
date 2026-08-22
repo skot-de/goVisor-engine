@@ -2707,21 +2707,34 @@ def test_wache_bricht_bei_leerlauf_ab_und_sichert_vorher():
 
 
 def test_jeder_abrufer_haengt_an_der_wache():
-    """Acht Abrufer teilen die Schleife — und muessen alle bewacht sein.
+    """Zwölf Abrufer teilen die Schleife — und müssen alle bewacht sein.
 
-    Ein Abrufer ohne Wache faellt nicht auf: er sieht beschaeftigt aus.
+    Ein Abrufer ohne Wache fällt nicht auf: er sieht beschäftigt aus.
+
+    ⚠ Die erste Fassung dieses Tests prüfte nur `docfetch_*.py` mit `sync_playwright`. Vier
+    Abrufer standen deshalb ungeschützt da — darunter `subreport`, das mit 852 offenen
+    Vergaben an der Spitze des Rückstaus steht und in JEDER Runde läuft, und `cosinex`
+    (717), das über `requests` geht. Dass `requests` je Aufruf ein `timeout` hat, schützt
+    den einzelnen Aufruf, nicht den Lauf.
     """
     from pathlib import Path
 
     verz = Path(__file__).resolve().parent.parent / "govisor"
-    abrufer = [p for p in sorted(verz.glob("docfetch_*.py"))
-               if p.name != "docfetch_queue.py" and "sync_playwright" in p.read_text(encoding="utf-8")]
-    assert len(abrufer) >= 8, f"nur {len(abrufer)} Abrufer gefunden"
+    abrufer = [p for p in sorted(verz.glob("docfetch_*.py")) + [
+        verz / "subreport.py", verz / "vergabeportal_at.py"]
+        if p.name != "docfetch_queue.py" and p.exists()
+        and ("sync_playwright" in p.read_text(encoding="utf-8")
+             or "requests.Session()" in p.read_text(encoding="utf-8"))]
+    assert len(abrufer) >= 11, f"nur {len(abrufer)} Abrufer gefunden"
+    ohne = []
     for p in abrufer:
         quelle = p.read_text(encoding="utf-8")
-        assert "_queue.Wache(" in quelle, f"{p.name} laeuft ohne Wache"
-        assert "wache.erfolg()" in quelle, f"{p.name} meldet der Wache keinen Fortschritt"
-        assert "LEERLAUF_S" in quelle, f"{p.name} kennt keine Leerlaufgrenze"
+        if not ("_queue.Wache(" in quelle and "wache.erfolg()" in quelle
+                and "LEERLAUF_S" in quelle):
+            ohne.append(p.name)
+    # ⚠ `docfetch_rib` hat keine eigene Schleife — es wird von `docfetch.fetch_batch`
+    # mitbedient und läuft dort unter dessen Wache (s. `NICHT_EINZELN` in rueckstau.py).
+    assert ohne == ["docfetch_rib.py"] or not ohne, f"ohne Wache: {ohne}"
 
 
 def _zip_mit_grossem_innenarchiv(ziel):

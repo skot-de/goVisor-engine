@@ -49,6 +49,11 @@ _UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
 # Die Genauigkeit haengt jetzt an der KENNUNG, nicht am Pfadnamen: cosinex-Projekt-IDs
 # beginnen mit `CX`. Gegen den offenen Bestand geprueft — +128 erfasst, 0 verloren, und
 # kein fremder Host faellt versehentlich hinein.
+# Wie lange ein Lauf OHNE ein einziges neues Ergebnis weiterlaufen darf. Der Fall, der am
+# 2026-08-21 zwei Abrufer 54 Stunden hat laufen lassen, war nicht ein haengender Vorgang,
+# sondern ein Abrufer, der beschaeftigt aussah und nichts mehr lieferte.
+LEERLAUF_S = int(__import__("os").environ.get("GOVISOR_LEERLAUF", "3600"))
+
 _COSINEX_RE = re.compile(
     r"^(?P<origin>https?://[^/]+)/(?P<base>[A-Za-z0-9_-]{2,20})/"
     r"(?:public/company/project|notice)/(?P<cx>CX[A-Z0-9]{6,})", re.I)
@@ -256,12 +261,25 @@ def fetch_batch(cfg: Config, country: str = "DE", limit: int | None = None,
     if limit:
         rows = rows[:limit]
 
+    # ⚠ Auch hier eine Wache, obwohl `requests` je Aufruf ein `timeout` hat: die Grenze
+    # schuetzt den EINZELNEN Aufruf, nicht den Lauf. Ein Abrufer, der eine Stunde lang
+    # brav in Zeitgrenzen laeuft und dabei nichts holt, ist derselbe Verlust wie einer,
+    # der haengt — nur unauffaelliger.
+    def _sichern():
+        if results:
+            _queue.schreibe(out_root, "cosinex", [asdict(r) for r in results],
+                            id_feld="notice_id")
+
+    wache = _queue.Wache("cosinex", vorgang_hart_s=0, leerlauf_s=LEERLAUF_S, sichern=_sichern)
+    wache.__enter__()
     s = requests.Session()
     results: list[FetchResult] = []
     counts: dict[str, int] = {}
     for i, (lead_id, url) in enumerate(rows, 1):
         res = _waehle_connector(url)(url, lead_id, out_root, session=s)
         results.append(res)
+        if res.status == "downloaded":
+            wache.erfolg()
         counts[res.status] = counts.get(res.status, 0) + 1
         if res.status in ("downloaded", "exists"):
             tag = f"{res.n_files} Dateien" if res.status == "downloaded" else "vorhanden"
