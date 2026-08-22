@@ -3577,3 +3577,55 @@ def test_geerbte_eintraege_zeigen_auf_die_eigene_datei():
     # Kein Master → nichts erben, statt zu raten.
     assert dokdubletten.items_vom_master(fertig, "m1", "unbekannt.pdf", "B.pdf") is None
     assert dokdubletten.items_vom_master({}, "m1", "A.pdf", "B.pdf") is None
+
+
+def test_vorlauf_sortiert_nach_nutzen_je_aufwand():
+    """⚠ Nicht nach Häufigkeit. Ein 200-Zeichen-Formular, das 50-mal vorkommt, ist mehr wert
+    als ein 60.000-Zeichen-Vertrag, der 60-mal vorkommt.
+
+    Gemessen 2026-08-22 ergibt das eine sehr steile Kurve: 100 Dokumente für 0,04 $ decken
+    26 % der Ersparnis, 2.000 für 0,99 $ decken 68 %, alle 6.324 für 14,70 $. Deshalb ein
+    BUDGET statt einer Stückzahl — der Lauf nimmt, was hineinpasst.
+    """
+    quelle = (pathlib.Path(__file__).resolve().parent.parent
+              / "scripts" / "dubletten_vorlauf.py").read_text(encoding="utf-8")
+    assert "(x[4] - 1) / max(min(len(x[2]), DECKEL), 1)" in quelle, "falsche Sortierung"
+    assert "--budget-usd" in quelle
+    assert "BudgetErschoepft" in quelle, "der Vorlauf achtet nicht auf die Geldwache"
+    # Zwischendurch sichern: ein Abbruch darf nicht den ganzen Lauf kosten.
+    assert quelle.count("schreibe_master_items") >= 2
+
+
+def test_vorlauf_eintraege_verfallen_mit_dem_prompt():
+    """Die PAARE brauchen keine Prompt-Version — „diese Texte sind identisch" bleibt wahr.
+    Wo aber EINTRÄGE liegen, müssen sie verfallen, wenn sich die Aufgabe ändert."""
+    from govisor import dokdubletten
+
+    assert callable(dokdubletten.prompt_version)
+    quelle = (pathlib.Path(__file__).resolve().parent.parent
+              / "govisor" / "dokdubletten.py").read_text(encoding="utf-8")
+    assert "if pv == gueltig" in quelle, "veraltete Vorlauf-Einträge werden nicht gefiltert"
+    # ... und die Paare-Datei trägt bewusst KEINE Prompt-Version.
+    i = quelle.index("def schreibe(")
+    assert "prompt_version" not in quelle[i:i + 900]
+
+
+def test_vorlauf_hat_vorrang_vor_dem_master():
+    """Der Vorlauf hat das Dokument ALLEIN ausgewertet — dort ist die Zuordnung nicht nur
+    belegt, sondern konstruktionsbedingt eindeutig."""
+    from govisor import dokdubletten
+
+    text = "Mindestumsatz 500.000 EUR"
+    h = dokdubletten.pruefsumme(text)
+    vorlauf = {("eignung", h): [{"req_type": "mindestumsatz", "quote": "aus dem Vorlauf"}]}
+    karte = {("eignung", h): ("m1", "A.pdf")}
+    fertig = {"m1": {"checklist": [{"req_type": "frist", "source_file": "A.pdf",
+                                    "quote": "vom Master"}]}}
+    items = dokdubletten.items_fuer("eignung", text, "B.pdf", fertig, karte, vorlauf)
+    assert items[0]["quote"] == "aus dem Vorlauf"
+    assert items[0]["source_file"] == "B.pdf"
+    # Ohne Vorlauf greift der Master.
+    items = dokdubletten.items_fuer("eignung", text, "B.pdf", fertig, karte, {})
+    assert items[0]["quote"] == "vom Master"
+    # Ohne beides: nichts erfinden.
+    assert dokdubletten.items_fuer("eignung", "fremd", "B.pdf", fertig, {}, {}) is None

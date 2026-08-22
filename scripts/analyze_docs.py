@@ -221,7 +221,8 @@ AUSWERTUNG = ("fragenantworten",) + tuple(doctypes.PRIORITY)
 
 def analyze_notice(files: list, structured: dict | None = None,
                    notice_id: str = "", antwort_fn=None,
-                   dubletten: dict | None = None, fertig: dict | None = None) -> dict:
+                   dubletten: dict | None = None, fertig: dict | None = None,
+                   vorlauf: dict | None = None) -> dict:
     """files = [(filename, text), …] eines Vorgangs → Analyse mit verifizierter Checkliste.
 
     Zwei Schienen: **Parser** (§6.2, structured={name: parser_result}) liefert strukturierte
@@ -267,9 +268,8 @@ def analyze_notice(files: list, structured: dict | None = None,
         if dubletten and fertig is not None:
             behalten = []
             for name_, text_ in by_type_docs[dt]:
-                treffer = dubletten.get((dt, dokdubletten.pruefsumme(text_)))
-                geerbt = (dokdubletten.items_vom_master(fertig, treffer[0], treffer[1], name_)
-                          if treffer else None)
+                geerbt = dokdubletten.items_fuer(dt, text_, name_, fertig,
+                                                 dubletten, vorlauf or {})
                 if geerbt:
                     checklist.extend(geerbt)
                     aus_dubletten += len(geerbt)
@@ -492,8 +492,10 @@ def main() -> int:
     # Dokument-Dubletten: (doctype, Pruefsumme) → Master. Leer, wenn die Datei fehlt —
     # dann laeuft alles wie bisher, nur teurer. Erzeugt von `govisor.dokdubletten.finde`.
     _dubletten = dokdubletten.karte()
-    if _dubletten:
-        print(f"Dokument-Dubletten: {len(_dubletten):,} bekannte Dokumente", flush=True)
+    _vorlauf = dokdubletten.master_items()
+    if _dubletten or _vorlauf:
+        print(f"Dokument-Dubletten: {len(_dubletten):,} über Master · "
+              f"{len(_vorlauf):,} aus dem Vorlauf", flush=True)
 
     # NEUBERECHNUNG SCHWACHER ALTLAEUFE. `NEU_AB_MODELL` nennt Modell-Teilstrings, deren
     # Ergebnisse verworfen und neu gerechnet werden — gemessen am 2026-08-20 liefern die
@@ -548,7 +550,7 @@ def main() -> int:
         nid, files = auftrag
         structured = structured_for_notice(nid)            # Parser-Schiene (§6.2) über die Roh-ZIPs
         res = analyze_notice(files, structured=structured, notice_id=nid,
-                             dubletten=_dubletten, fertig=out)
+                             dubletten=_dubletten, fertig=out, vorlauf=_vorlauf)
         # WER HAT ES ERZEUGT. Seit dem 2026-08-18 gibt es drei Anbieter mit verschiedenen
         # Modellen; welches gerade dran ist, entscheidet das Guthaben. Ohne diese Angabe
         # stuenden im Bestand Ergebnisse nebeneinander, deren Unterschiede niemand mehr

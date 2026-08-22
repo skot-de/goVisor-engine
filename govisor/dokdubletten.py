@@ -149,6 +149,84 @@ def karte(country: str = "DE") -> dict[tuple, tuple]:
     return aus
 
 
+MASTER_ITEMS = "document_master_items.parquet"
+
+
+def _master_datei(country: str) -> Path:
+    return ROOT / "data" / "gold" / country / MASTER_ITEMS
+
+
+def prompt_version() -> str:
+    """Fingerabdruck der Extraktionsaufgabe — nur fuer den VORLAUF-Speicher noetig.
+
+    Die Paare selbst brauchen ihn nicht: „diese beiden Texte sind identisch" bleibt wahr,
+    egal wie der Prompt aussieht. Wo aber EINTRAEGE liegen, muessen sie verfallen, wenn
+    sich die Aufgabe aendert — sonst mischt sich altes Verhalten unbemerkt unter neues.
+    """
+    from . import docextract
+
+    roh = json.dumps(docextract._TASKS, sort_keys=True, ensure_ascii=False, default=str)
+    quelle = Path(docextract.__file__).read_text(encoding="utf-8")
+    a, b = quelle.find("def build_messages"), quelle.find("def extract")
+    return hashlib.md5((roh + quelle[a:b]).encode()).hexdigest()[:12]
+
+
+def master_items(country: str = "DE") -> dict[tuple, list]:
+    """(doctype, pruefsumme) → Eintraege aus dem Vorlauf. Veraltete Prompt-Version faellt raus."""
+    d = _master_datei(country)
+    if not d.exists():
+        return {}
+    try:
+        import pyarrow.parquet as pq
+
+        t = pq.read_table(d)
+    except Exception:                                         # noqa: BLE001
+        return {}
+    gueltig = prompt_version()
+    return {(dt, h): json.loads(it)
+            for dt, h, pv, it in zip(t.column("doctype").to_pylist(),
+                                     t.column("pruefsumme").to_pylist(),
+                                     t.column("prompt_version").to_pylist(),
+                                     t.column("items").to_pylist())
+            if pv == gueltig}
+
+
+def schreibe_master_items(eintraege: dict[tuple, list], country: str = "DE") -> Path:
+    """Vorlauf-Ergebnisse ablegen. Bestehende gueltige Eintraege bleiben erhalten."""
+    import pyarrow as pa
+    import pyarrow.parquet as pq
+
+    alle = {**master_items(country), **eintraege}
+    pv = prompt_version()
+    ziel = _master_datei(country)
+    ziel.parent.mkdir(parents=True, exist_ok=True)
+    tab = pa.table({
+        "doctype": pa.array([k[0] for k in alle], pa.string()),
+        "pruefsumme": pa.array([k[1] for k in alle], pa.string()),
+        "prompt_version": pa.array([pv] * len(alle), pa.string()),
+        "items": pa.array([json.dumps(v, ensure_ascii=False) for v in alle.values()], pa.string()),
+    })
+    tmp = ziel.with_suffix(".teil")
+    pq.write_table(tab, tmp, compression="zstd")
+    tmp.replace(ziel)
+    return ziel
+
+
+def items_fuer(doctype: str, text: str, source_file: str, fertig: dict,
+               karte_: dict, vorlauf: dict) -> list | None:
+    """Die eine Anlaufstelle: erst der Vorlauf, dann der Master aus einer echten Auswertung.
+
+    ⚠ Der Vorlauf zuerst, weil er das Dokument ALLEIN ausgewertet hat — dort ist die
+    Zuordnung nicht nur belegt, sondern konstruktionsbedingt eindeutig.
+    """
+    h = pruefsumme(text)
+    treffer = vorlauf.get((doctype, h))
+    if treffer:
+        return [{**i, "source_file": source_file, "aus_dublette": True} for i in treffer]
+    m = karte_.get((doctype, h))
+    return items_vom_master(fertig, m[0], m[1], source_file) if m else None
+
+
 def items_vom_master(fertig: dict, master_id: str, master_file: str,
                      source_file: str) -> list | None:
     """Die Eintraege des Masters, umgeschrieben auf die Datei DIESES Vorgangs.
