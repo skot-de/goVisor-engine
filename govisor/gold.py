@@ -4424,10 +4424,26 @@ def build_at_gold(cfg: Config, country: str = "AT"):
              CASE WHEN m.num_tenders IS NOT NULL THEN 'actual' END AS competition_source,
              CASE WHEN m.num_tenders IS NULL THEN NULL
                   WHEN m.num_tenders <= 2 THEN 'low'
-                  WHEN m.num_tenders <= 5 THEN 'medium' ELSE 'high' END AS competition_level
+                  WHEN m.num_tenders <= 5 THEN 'medium' ELSE 'high' END AS competition_level,
+             -- ── ANFORDERUNGS-SIGNALE (#15 Weg A) ───────────────────────────────────────
+             -- ⚠ Bis zum 2026-08-22 endete der AT-Export hier, und zwar bewusst („Bewusst
+             -- KEINE volle DE-Gold-Pipeline (die käme später separat, wenn AT-Volumen es
+             -- rechtfertigt)"). Der Preis dafuer war messbar: 435 offene AT-Vergaben trugen
+             -- `anf.quelle = "eforms"` und darunter NICHTS — keine Bindefrist, keine
+             -- Buergschaft, keine Zuschlagskriterien, keine Lose. Die Schweiz kam auf 51 %,
+             -- Deutschland auf 39 bis 79 %. Es lag also nie an eForms.
+             --
+             -- Die Quelle trug es die ganze Zeit: Angebotsfrist 88 %, Bindefrist 71 %,
+             -- Zuschlagskriterien 54 %, Nebenangebote 34 %, Buergschaft 20 %, Lose 88 %.
+             --
+             -- Kein zweiter Parser: `_lead_context_sql` nimmt das Land als Parameter und
+             -- laeuft fuer DE und CH seit jeher. Er wird hier nur angeschlossen.
+             ctx.guarantee_required, ctx.variants_allowed, ctx.validity_days,
+             ctx.selection_types, ctx.deadline_time, ctx.question_deadline
       FROM read_parquet({N}, hive_partitioning=1) n
       LEFT JOIN buyer b ON b.notice_id = n.notice_id
       LEFT JOIN matched m ON m.lead_id = n.notice_id AND m.rn = 1
+      LEFT JOIN ({_lead_context_sql(cfg, country)}) ctx ON ctx.notice_id = n.notice_id
       {AV_WERT}
       WHERE {LEAD}
     ) TO '{(g / 'lead_export.parquet').as_posix()}' (FORMAT PARQUET, COMPRESSION ZSTD)""")
