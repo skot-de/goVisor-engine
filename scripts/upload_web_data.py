@@ -60,10 +60,31 @@ from pathlib import Path
 import requests
 
 ROOT = Path(__file__).resolve().parent.parent
-QUELLE = ROOT / "web" / "data"
 LEER_HASH = hashlib.sha256(b"").hexdigest()
 
-TYPEN = {".json": "application/json", ".csv": "text/csv"}
+# ZWEI QUELLEN, EINE MECHANIK.
+#
+# `web` ist der Betriebszweck: die Dateien, die das Frontend liest. Sie gehen in die
+# heisse Stufe, werden taeglich neu geschrieben und sind klein (984 MB).
+#
+# `docs` ist die SICHERUNG des Korpus: 175 GB Vergabeunterlagen in 6.830 ZIPs. Sven am
+# 2026-08-22: „ich will die ausschreibungsdokumente behalten, um daraus muster abzuleiten".
+# Sie liegen bisher genau EINMAL, auf einer externen SSD. Der Rest der Plattform ist aus
+# ihnen regenerierbar, sie selbst aus nichts: Portale geben nicht alles zweimal heraus, und
+# `SPERRE_TAGE` bremst jeden zweiten Versuch. Deshalb kalte Stufe, selten geschrieben,
+# nie geloescht.
+QUELLEN = {
+    "web": (ROOT / "web" / "data", {".json": "application/json", ".csv": "text/csv"}),
+    "docs": (ROOT / "data" / "docs", {".zip": "application/zip",
+                                      ".parquet": "application/octet-stream",
+                                      ".json": "application/json", ".csv": "text/csv"}),
+}
+
+# Speicherstufe. Kalt kostet rund ein Fuenftel von heiss, verlangt aber laengere
+# Mindestliegezeit und Abrufgebuehren — fuer eine Sicherung, die man hoffentlich nie liest,
+# genau richtig. Archiv waere noch billiger, muss aber vor jedem Zugriff stundenlang
+# aufgetaut werden; das will man nicht, wenn man Muster ableiten moechte.
+STUFEN = {"hot": "Hot", "cool": "Cool", "cold": "Cold", "archive": "Archive"}
 
 
 def env() -> dict[str, str]:
@@ -85,7 +106,8 @@ def _signieren(schluessel: bytes, msg: str) -> bytes:
 
 
 def kopf_bauen(methode: str, endpunkt: str, bucket: str, pfad: str, region: str,
-               key_id: str, secret: str, nutzlast: bytes | None) -> tuple[str, dict]:
+               key_id: str, secret: str, nutzlast: bytes | None,
+               speicherklasse: str | None = None) -> tuple[str, dict]:
     """AWS-Signature-Version-4 fuer einen einzelnen Aufruf. Rueckgabe: URL + Kopfzeilen."""
     host = endpunkt.split("://", 1)[1].rstrip("/")
     kanon_uri = "/" + bucket + "/" + pfad.lstrip("/")
@@ -96,6 +118,11 @@ def kopf_bauen(methode: str, endpunkt: str, bucket: str, pfad: str, region: str,
     inhalt = hashlib.sha256(nutzlast).hexdigest() if nutzlast is not None else LEER_HASH
 
     kopf = {"host": host, "x-amz-content-sha256": inhalt, "x-amz-date": stempel}
+    # ⚠ MUSS MITSIGNIERT WERDEN. Eine `x-amz-`-Kopfzeile, die nachtraeglich angehaengt wird,
+    # macht die Signatur ungueltig — und der Fehler kommt als 403 zurueck, also als „falsche
+    # Zugangsdaten". Deshalb steht sie hier, VOR der Berechnung, und nicht beim Aufrufer.
+    if speicherklasse:
+        kopf["x-amz-storage-class"] = speicherklasse
     signierte = ";".join(sorted(kopf))
     kanon_kopf = "".join(f"{k}:{kopf[k]}\n" for k in sorted(kopf))
     kanon = f"{methode}\n{kanon_uri}\n\n{kanon_kopf}\n{signierte}\n{inhalt}"
@@ -125,9 +152,17 @@ def azure_ziel(basis: str, pfad: str) -> str:
     return f"{url}?{query}" if query else url
 
 
-def azure_hochladen(basis: str, pfad: str, daten: bytes, typ: str, timeout: int = 900):
-    return requests.put(azure_ziel(basis, pfad), data=daten, timeout=timeout,
-                        headers={"x-ms-blob-type": "BlockBlob", "Content-Type": typ})
+def azure_hochladen(basis: str, pfad: str, daten: bytes, typ: str, timeout: int = 900,
+                    stufe: str = "Hot"):
+    """Ein Blob schreiben. `stufe` setzt die Speicherklasse gleich beim Schreiben.
+
+    ⚠ Die Stufe NACHTRAeglich zu aendern kostet eine zweite Operation je Blob und bei
+    6.830 Dateien einen eigenen Lauf. Beim Schreiben ist sie ein Kopfzeilen-Feld.
+    """
+    kopf = {"x-ms-blob-type": "BlockBlob", "Content-Type": typ}
+    if stufe and stufe != "Hot":
+        kopf["x-ms-access-tier"] = stufe
+    return requests.put(azure_ziel(basis, pfad), data=daten, timeout=timeout, headers=kopf)
 
 
 def azure_groesse(basis: str, pfad: str) -> int | None:
@@ -142,7 +177,21 @@ def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--probe", action="store_true", help="nichts hochladen, nur auflisten")
     ap.add_argument("--alles", action="store_true", help="auch unveraenderte Dateien")
+    ap.add_argument("--quelle", choices=sorted(QUELLEN), default="web",
+                    help="web = Frontend-Daten (Vorgabe), docs = Sicherung des Dokumentkorpus")
+    ap.add_argument("--stufe", choices=sorted(STUFEN), default=None,
+                    help="Speicherstufe; Vorgabe: hot fuer web, cool fuer docs")
     a = ap.parse_args()
+
+    QUELLE, TYPEN = QUELLEN[a.quelle]
+    if not QUELLE.exists():
+        print(f"  ✖ {QUELLE} gibt es nicht.", file=sys.stderr)
+        return 2
+    # Die Sicherung landet unter einem eigenen Praefix. Sonst mischen sich 175 GB Archiv und
+    # 984 MB Betriebsdaten in einem Verzeichnis, und die Lebenszyklus-Regel des Speichers
+    # (kalt nach X Tagen) trifft die falschen Dateien.
+    stufe = STUFEN[a.stufe] if a.stufe else ("Cool" if a.quelle == "docs" else "Hot")
+    eigen_prefix = "docs" if a.quelle == "docs" else ""
 
     e = env()
     azure = e.get("DATA_AZURE_URL", "").strip()
@@ -152,13 +201,18 @@ def main() -> int:
     secret = e.get("DATA_S3_SECRET", "").strip()
     region = e.get("DATA_S3_REGION", "auto").strip() or "auto"
     prefix = e.get("DATA_S3_PREFIX", "").strip().strip("/")
+    if eigen_prefix:
+        prefix = f"{prefix}/{eigen_prefix}".strip("/")
 
     dateien = sorted(p for p in QUELLE.rglob("*") if p.is_file() and p.suffix in TYPEN)
     gesamt = sum(p.stat().st_size for p in dateien)
-    print(f"  {len(dateien):,} Dateien, {gesamt/1048576:.0f} MB in {QUELLE.relative_to(ROOT)}")
+    print(f"  {len(dateien):,} Dateien, {gesamt/1048576:.0f} MB in {QUELLE.relative_to(ROOT)} "
+          f"→ Stufe {stufe}")
 
     if azure:
         prefix = e.get("DATA_AZURE_PREFIX", "").strip().strip("/")
+        if eigen_prefix:
+            prefix = f"{prefix}/{eigen_prefix}".strip("/")
         hoch, gleich, fehler, bytes_hoch = 0, 0, 0, 0
         for p in dateien:
             ziel = f"{prefix}/{p.relative_to(QUELLE).as_posix()}" if prefix else p.relative_to(QUELLE).as_posix()
@@ -170,7 +224,7 @@ def main() -> int:
                 print(f"    → {ziel} ({groesse/1048576:.1f} MB)")
                 hoch += 1
                 continue
-            r = azure_hochladen(azure, ziel, p.read_bytes(), TYPEN[p.suffix])
+            r = azure_hochladen(azure, ziel, p.read_bytes(), TYPEN[p.suffix], stufe=stufe)
             if r.status_code not in (200, 201):
                 print(f"    ✖ {ziel}: HTTP {r.status_code} {r.text[:120]}", file=sys.stderr)
                 fehler += 1
@@ -182,10 +236,15 @@ def main() -> int:
         return 1 if fehler else 0
 
     if not all((endpunkt, bucket, key_id, secret)):
+        folge = ("Ohne Speicher bleibt web/data lokal — das Frontend laeuft hier weiter,\n"
+                 "    ein Deployment ohne DATA_BASE_URL findet aber keine Daten."
+                 if a.quelle == "web" else
+                 "Ohne Speicher gibt es den Dokumentkorpus weiterhin GENAU EINMAL, auf der\n"
+                 "    externen SSD. Der Rest der Plattform ist aus ihm regenerierbar, er selbst\n"
+                 "    aus nichts.")
         print("  ✖ Nicht konfiguriert. Erwartet entweder DATA_AZURE_URL (SAS) oder "
               "DATA_S3_ENDPOINT + DATA_S3_BUCKET + DATA_S3_KEY_ID + DATA_S3_SECRET.\n"
-              "    Ohne Speicher bleibt web/data lokal — das Frontend laeuft hier weiter,\n"
-              "    ein Deployment ohne DATA_BASE_URL findet aber keine Daten.", file=sys.stderr)
+              f"    {folge}", file=sys.stderr)
         return 2 if not a.probe else 0
 
     hoch, gleich, fehler, bytes_hoch = 0, 0, 0, 0
@@ -209,7 +268,10 @@ def main() -> int:
             continue
 
         daten = p.read_bytes()
-        url, kopf = kopf_bauen("PUT", endpunkt, bucket, ziel, region, key_id, secret, daten)
+        # S3-Speicherklassen heissen anders als bei Azure; nur die kalten Stufen abbilden.
+        klasse = {"Cool": "STANDARD_IA", "Cold": "GLACIER_IR", "Archive": "GLACIER"}.get(stufe)
+        url, kopf = kopf_bauen("PUT", endpunkt, bucket, ziel, region, key_id, secret, daten,
+                               speicherklasse=klasse)
         kopf["Content-Type"] = TYPEN[p.suffix]
         try:
             r = requests.put(url, data=daten, headers=kopf, timeout=900)

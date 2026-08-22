@@ -3629,3 +3629,42 @@ def test_vorlauf_hat_vorrang_vor_dem_master():
     assert items[0]["quote"] == "vom Master"
     # Ohne beides: nichts erfinden.
     assert dokdubletten.items_fuer("eignung", "fremd", "B.pdf", fertig, {}, {}) is None
+
+
+def test_sicherung_des_dokumentkorpus_ist_vorbereitet():
+    """`data/docs` sind 173 GB in 6.860 Dateien und liegen genau EINMAL, auf einer externen
+    SSD. Der Rest der Plattform ist daraus regenerierbar, sie selbst aus nichts: Portale
+    geben nicht alles zweimal heraus, und die 6.262 LLM-Auswertungen darauf haben bei
+    8 USD Tagesdeckel Monate gekostet.
+
+    Geprüft wird, dass die zweite Quelle im Upload-Skript existiert und die kalte Stufe
+    trifft — nicht der Transfer selbst, für den es (Stand 2026-08-22) noch kein Konto gibt.
+
+    ⚠ Die Speicherklasse muss MITSIGNIERT werden. Eine `x-amz-`-Kopfzeile, die man
+    nachträglich anhängt, macht die Signatur ungültig, und der Fehler kommt als 403 zurück —
+    also als „falsche Zugangsdaten", und man sucht an der falschen Stelle.
+    """
+    import importlib.util
+    ort = pathlib.Path(__file__).resolve().parent.parent / "scripts/upload_web_data.py"
+    spec = importlib.util.spec_from_file_location("upl2", ort)
+    m = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(m)
+
+    assert set(m.QUELLEN) == {"web", "docs"}, "die zweite Quelle fehlt"
+    docs_pfad, docs_typen = m.QUELLEN["docs"]
+    assert docs_pfad.name == "docs" and ".zip" in docs_typen, \
+        "die Sicherung erfasst keine ZIPs — dann sichert sie fast nichts"
+    assert "Cool" in m.STUFEN.values() and "Archive" in m.STUFEN.values()
+
+    # Signatur mit und ohne Speicherklasse muss sich unterscheiden, und die Kopfzeile muss
+    # in `SignedHeaders` auftauchen.
+    args = ("PUT", "https://x.example.com", "eimer", "a/b.zip", "auto", "AKID", "GEHEIM", b"x")
+    _, ohne = m.kopf_bauen(*args)
+    _, mit = m.kopf_bauen(*args, speicherklasse="STANDARD_IA")
+    assert mit.get("x-amz-storage-class") == "STANDARD_IA"
+    assert "x-amz-storage-class" in mit["Authorization"], \
+        "die Speicherklasse wird nicht mitsigniert — das gibt 403, das wie ein Passwortfehler aussieht"
+    assert ohne["Authorization"] != mit["Authorization"]
+
+    doku = (pathlib.Path(__file__).resolve().parent.parent / "docs/dokumentkorpus-sichern.md")
+    assert doku.exists() and "--quelle docs" in doku.read_text(encoding="utf-8")
