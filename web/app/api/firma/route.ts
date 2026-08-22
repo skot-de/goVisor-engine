@@ -38,11 +38,17 @@ export async function GET(req: Request) {
   const hit = profiles[id];
   if (hit) return NextResponse.json(redactFirma(hit, tier));
 
-  // In Production (serverless, kein Python) nur der vorberechnete Kundenraum → sonst 404.
-  // Lokal fällt es auf On-Demand-Python zurück (deckt auch nicht-vorberechnete Firmen des
-  // internen Firmen-Radars, die nicht im Top-Kundenraum von firma-profiles.json liegen).
-  if (Object.keys(profiles).length > 0 && process.env.NODE_ENV === "production") {
-    return NextResponse.json({ error: "kein Profil (keine belegten Zuschläge)", id }, { status: 404 });
+  // ⚠ AUF EINEM DEPLOYMENT NIE PYTHON. Die Bedingung hatte bis zum 2026-08-22 ein Loch:
+  // sie verlangte `Object.keys(profiles).length > 0`. Fehlt die vorberechnete Datei — genau
+  // der Fall auf einem Deployment ohne Objektspeicher — ist die Menge LEER, die Bedingung
+  // damit falsch, und die Route fiel auf `spawn("python3")` zurück. Dort gibt es kein
+  // Python: aus einem Datenproblem wurde ein Exec-Fehler, der wie ein Codefehler aussieht.
+  if (process.env.NODE_ENV === "production") {
+    return NextResponse.json(
+      Object.keys(profiles).length
+        ? { error: "kein Profil (keine belegten Zuschläge)", id }
+        : { error: "Firmenprofile nicht geladen — DATA_BASE_URL prüfen (docs/web-data-storage.md)" },
+      { status: Object.keys(profiles).length ? 404 : 503 });
   }
 
   try {

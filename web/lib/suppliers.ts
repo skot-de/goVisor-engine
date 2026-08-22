@@ -1,5 +1,4 @@
-import { readFile } from "node:fs/promises";
-import path from "node:path";
+import { loadDataFile } from "@/lib/dataSource";
 
 /* Serverseitiger Lieferanten-Index (Onboarding-Matching). Einmal geladen, gecacht. */
 
@@ -31,7 +30,7 @@ let CACHE: Supplier[] | null = null;
 export async function loadSuppliers(): Promise<Supplier[]> {
   if (CACHE) return CACHE;
   try {
-    const raw = await readFile(path.join(process.cwd(), "data", "suppliers.json"), "utf-8");
+    const raw = (await loadDataFile("suppliers.json")) ?? "";
     CACHE = JSON.parse(raw) as Supplier[];
   } catch {
     CACHE = [];

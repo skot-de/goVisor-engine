@@ -1,6 +1,5 @@
 import { NextResponse } from "next/server";
-import { readFile } from "node:fs/promises";
-import path from "node:path";
+import { loadDataFile } from "@/lib/dataSource";
 import { getTier } from "@/lib/tier";
 import { redactStrategie } from "@/lib/redact";
 
@@ -13,8 +12,9 @@ import { redactStrategie } from "@/lib/redact";
 export async function GET(req: Request) {
   const ctx = new URL(req.url).searchParams.get("ctx");
   try {
-    const file = path.join(process.cwd(), "data", "strategie.json");
-    const raw = JSON.parse(await readFile(file, "utf-8"));
+    const roh = await loadDataFile("strategie.json");
+    if (!roh) return NextResponse.json({}, { status: 200 });
+    const raw = JSON.parse(roh);
     if (ctx === "provider") {
       const tier = await getTier();
       return NextResponse.json(redactStrategie(raw, tier), { headers: { "cache-control": "no-store" } });

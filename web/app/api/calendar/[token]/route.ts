@@ -1,6 +1,5 @@
 import { NextResponse } from "next/server";
-import { readFile } from "node:fs/promises";
-import path from "node:path";
+import { loadDataFile } from "@/lib/dataSource";
 import { createAdminClient } from "@/lib/supabase/admin";
 
 // iCal-Feed der beobachteten Leads (Ticket #16 §7). Der Token ist der geheime Schlüssel;
@@ -43,7 +42,12 @@ export async function GET(_req: Request, { params }: { params: Promise<{ token: 
     if (!want.size) break;
     let arr: Array<{ id: string; titel?: string; buyer?: string; frist?: { date?: string | null; src?: string } | null }>;
     try {
-      arr = JSON.parse(await readFile(path.join(process.cwd(), "data", `leads-${b}.json`), "utf-8"));
+      // ⚠ Über den Daten-Loader, nicht von der Platte: auf einem Deployment liegt
+      // web/data im Objektspeicher (DATA_BASE_URL). Direkt gelesen bliebe der
+      // Kalender-Feed still leer — abonniert, aber ohne einen einzigen Termin.
+      const roh = await loadDataFile(`leads-${b}.json`);
+      if (!roh) continue;
+      arr = JSON.parse(roh);
     } catch { continue; }
     for (const l of arr) {
       if (!want.has(l.id) || !l.frist?.date) continue;

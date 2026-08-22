@@ -1,5 +1,4 @@
-import { readFile } from "node:fs/promises";
-import path from "node:path";
+import { loadDataFile } from "@/lib/dataSource";
 
 /* Vorberechnete Outreach-Landings (scripts/export_outreach.py), nach Token verschlüsselt.
  * Statisch + serverless-fähig — die Landing /t/<token> braucht kein Python im Deploy. */
@@ -71,10 +70,15 @@ export type Landing = {
 
 let CACHE: Record<string, Landing> | null = null;
 
+/* ⚠ Über `loadDataFile`, NICHT direkt von der Platte. Seit `web/data` nicht mehr in Git
+   liegt, kommt die Datei auf einem Deployment aus dem Objektspeicher (`DATA_BASE_URL`).
+   Ein direktes `readFile(process.cwd()/data/...)` findet dort NICHTS und liefert still
+   einen leeren Bestand — die Oberfläche sähe aus, als gäbe es keine Daten. */
 export async function loadLanding(token: string): Promise<Landing | null> {
   if (!CACHE) {
     try {
-      CACHE = JSON.parse(await readFile(path.join(process.cwd(), "data", "outreach.json"), "utf-8"));
+      const roh = await loadDataFile("outreach.json");
+      CACHE = roh ? JSON.parse(roh) : {};
     } catch { CACHE = {}; }
   }
   return CACHE?.[token] ?? null;

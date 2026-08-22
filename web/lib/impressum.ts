@@ -112,10 +112,11 @@ let HAEUFIG: Record<string, number> | null = null;
 async function haeufigkeit(w: string): Promise<number> {
   if (!HAEUFIG) {
     try {
-      const { readFile } = await import("node:fs/promises");
-      const path = await import("node:path");
-      HAEUFIG = JSON.parse(await readFile(
-        path.join(process.cwd(), "data", "namenswoerter.json"), "utf-8")).zaehler;
+      // ⚠ Über den Daten-Loader: auf einem Deployment kommt die Datei aus dem
+      // Objektspeicher (DATA_BASE_URL). Ein direktes readFile fände dort nichts und
+      // die Häufigkeiten wären still leer — die Namensprüfung würde stumpf.
+      const { loadDataFile } = await import("@/lib/dataSource");
+      HAEUFIG = JSON.parse((await loadDataFile("namenswoerter.json")) || "{}").zaehler || {};
     } catch { HAEUFIG = {}; }
   }
   return HAEUFIG?.[w] ?? 0;

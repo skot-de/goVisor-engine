@@ -1430,3 +1430,44 @@ def test_offene_endpunkte_haben_eine_bremse():
         if "bremse(" not in text and "rateLimit(" not in text:
             ohne.append(f"{pfad}: keine Bremse")
     assert not ohne, "offene Endpunkte ohne Ratenbremse:\n  " + "\n  ".join(ohne)
+
+
+def test_daten_kommen_ueber_den_loader_nicht_von_der_platte():
+    """Seit dem 2026-08-18 liegt `web/data` nicht mehr in Git; auf einem Deployment kommen
+    die Dateien aus dem Objektspeicher (`DATA_BASE_URL`, s. lib/dataSource.ts).
+
+    ⚠ Am 2026-08-22 gemessen: SECHS Loader lasen trotzdem direkt von der Platte
+    (`readFile(process.cwd()/data/...)`). Auf einem Deployment hätten sie still einen leeren
+    Bestand geliefert — Firmenprofile, Lieferanten (und damit das ganze Onboarding-Matching),
+    Outreach-Landings, Kalender-Feed, Strategie und die Namenshäufigkeiten. Nichts davon
+    wäre als Fehler aufgefallen: die Oberfläche sähe nur aus, als gäbe es keine Daten.
+
+    Genau diese Sorte Fehler hat in diesem Projekt schon einmal Monate überdauert
+    (14 statt 4.499 Volltexte im Frontend), deshalb steht sie unter Test.
+    """
+    import re
+    treffer = []
+    for pfad in [p for p in (ROOT / "web").rglob("*.ts")
+                 if "node_modules" not in p.parts and ".next" not in p.parts
+                 and p.name != "dataSource.ts"]:      # der Loader SELBST liest die Platte
+        text = pfad.read_text(encoding="utf-8")
+        for nr, z in enumerate(text.splitlines(), 1):
+            if re.search(r'process\.cwd\(\)\s*,\s*"data"', z):
+                treffer.append(f"{pfad.relative_to(ROOT)}:{nr}")
+    assert not treffer, ("liest web/data direkt von der Platte statt über loadDataFile:\n  "
+                         + "\n  ".join(treffer))
+
+
+def test_firma_startet_auf_dem_deployment_kein_python():
+    """`/api/firma` fällt lokal auf `spawn("python3", …)` zurück. Die Sperre dagegen hatte
+    ein Loch: sie verlangte `Object.keys(profiles).length > 0`. Fehlt die vorberechnete
+    Datei — genau der Fall auf einem Deployment ohne Objektspeicher — ist die Menge leer,
+    die Bedingung falsch, und die Route rief Python auf, das dort nicht existiert. Aus
+    einem Datenproblem wurde ein Exec-Fehler, der wie ein Codefehler aussieht.
+    """
+    route = (ROOT / "web" / "app" / "api" / "firma" / "route.ts").read_text(encoding="utf-8")
+    stelle = route.index('if (process.env.NODE_ENV === "production")')
+    assert route.index("profilPython(id)", stelle) > stelle, \
+        "der Python-Zweig liegt nicht mehr hinter der Production-Sperre"
+    assert "Object.keys(profiles).length > 0 && process.env.NODE_ENV" not in route, \
+        "das Loch ist zurück: leere Profilmenge umgeht die Sperre"
