@@ -1279,3 +1279,38 @@ def test_position_und_profil_lesen_den_echten_bestand():
 
     shell = (ROOT / "web" / "components" / "explorer" / "ExplorerShell.tsx").read_text(encoding="utf-8")
     assert "/api/firma?id=" in shell, "niemand holt das Firmenprofil der angemeldeten Identität"
+
+
+def test_partnersuche_regeln_halten():
+    """Die Partnersuche hatte bis zum 2026-08-22 keinen Unterbau: `netzPartner` schrieb
+    niemand (0 von 43.199 Leads), die Meldung lebte in einem `Set` im Browserspeicher.
+
+    Jetzt gibt es Tabelle (0013), Endpunkt und Auswahlregel. Geprüft wird hier die REGEL,
+    nicht der Quelltext: `web/scripts/pruefe-netzmatch.mjs` spielt sie mit `node` durch.
+    Eine Partnersuche, die Wettbewerber vorschlägt, wäre schlimmer als keine — wer dieselben
+    Lose abdeckt wie ich, bietet gegen mich.
+    """
+    import subprocess
+    skript = ROOT / "web" / "scripts" / "pruefe-netzmatch.mjs"
+    assert skript.exists(), "die Regelprüfung der Partnersuche fehlt"
+    p = subprocess.run(["node", str(skript)], capture_output=True, text=True)
+    assert p.returncode == 0, f"Partnersuche-Regeln verletzt:\n{p.stdout}{p.stderr}"
+
+
+def test_partnersuche_gibt_nichts_ueber_fremde_preis():
+    """Wer sich für welche Ausschreibung meldet, ist Wettbewerbsinformation ersten Ranges.
+
+    Drei Grenzen, die nur im Endpunkt durchgesetzt werden können und deshalb hier stehen:
+    ohne eigene Meldung keine Auskunft (auch keine Anzahl), Name und Kontakt erst bei
+    BEIDSEITIGER Freigabe, und die Suche über fremde Zeilen läuft mit dem Secret-Key,
+    weil RLS dem Client nur die eigenen Zeilen zeigt.
+    """
+    route = (ROOT / "web" / "app" / "api" / "netz" / "route.ts").read_text(encoding="utf-8")
+    assert "if (!meins) return { interesse: null, partner: null };" in route, \
+        "ohne eigene Meldung wird wieder etwas herausgegeben"
+    assert "const beide = meins.freigabe && a.freigabe;" in route, \
+        "der Name der Gegenseite haengt nicht mehr an beidseitiger Freigabe"
+    assert "createAdminClient" in route, "das Matching liest fremde Zeilen nicht mehr serverseitig"
+
+    sql = (ROOT / "supabase" / "0013_netz_partner.sql").read_text(encoding="utf-8")
+    assert "auth.uid() = user_id" in sql, "RLS gibt fremde Meldungen frei"

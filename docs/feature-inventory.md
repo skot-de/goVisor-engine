@@ -110,7 +110,7 @@ Nicht nur ein Bieter-Tab, sondern eine **eigene Rolle** (Route `/authority`, Ums
 
 | Feature | Erklärung | Reife |
 |---|---|---|
-| **Partnersuche** | Oberfläche gebaut, aber **ohne Unterbau**: `netzPartner` schreibt niemand, die Interessensmeldung lebt nur im Speicher. Es kann kein Treffer entstehen. Braucht Tabelle, API und Matching (und andere Nutzer). | ⚪ |
+| **Partnersuche** | Mehr-Los-Vergaben, bei denen ein Partner die übrigen Lose abdeckt. Unterbau am 2026-08-22 gebaut: Tabelle (`0013`, **muss im Dashboard laufen**), `/api/netz`, Los-Auswahl, beidseitige Freigabe. Regeln unter Test. Zeigt naturgemäss erst Treffer, wenn zwei Firmen mit passenden Losen gemeldet sind. | 🟡 |
 | **Konsortial-Erkennung** | Bietergemeinschaften werden als solche erkannt und geflaggt. | 🟢 (Daten) |
 
 ## J. Arbeits-Workflow (Team/CRM-artig)

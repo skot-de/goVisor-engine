@@ -3,7 +3,8 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
   LEADS, BRANCHEN, COLS, applyState, relabelLeads, visible, sorted, syncLocationColumn,
-  suggestList, classifyQuery, netzInteresse, netzFreigabe, offeneGruppen, angaben, setLeads, setMarket, setBestand, setPlzGeo, setPlzLand,
+  suggestList, classifyQuery, netzInteresse, netzFreigabe, offeneGruppen, angaben, setLeads, setMarket, setBestand,
+  setNachbarn, setNetzZustand, toggleNetzLos, netzLoseVon, setPlzGeo, setPlzLand,
   setProfile, setUserContracts, parseWert, aufwandStufe,
 } from "@/lib/explorerCore";
 import { loadContracts } from "@/lib/supabase/contracts";
@@ -327,6 +328,20 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
   useEffect(() => {
     if (marktRef.current[aktiveBranche]) { setMarket(marktRef.current[aktiveBranche]); bump(); }
   }, [aktiveBranche, bump]);
+
+  // Partnersuche: Zustand für den geöffneten Lead holen. Nur für Mehr-Los-Vergaben und nur
+  // mit Konto — ohne eigene Meldung gibt der Endpunkt ohnehin nichts heraus (Regel 1 dort).
+  useEffect(() => {
+    if (!activeId || !userEmail) return;
+    const l = CORE.find((x) => x.id === activeId) as (Lead & { lose?: unknown[] }) | undefined;
+    if (!l || (l.lose?.length ?? 0) < 2) return;
+    let abgebrochen = false;
+    fetch(`/api/netz?leadId=${encodeURIComponent(activeId)}`)
+      .then((r) => (r.ok ? r.json() : null))
+      .then((z) => { if (!abgebrochen) { setNetzZustand(activeId, z); bump(); } })
+      .catch(() => {});
+    return () => { abgebrochen = true; };
+  }, [activeId, userEmail, bump]);
 
   // Der eigene Bestand für „Position" und „Profil". Bis zum 2026-08-22 holte den niemand:
   // die Ansicht las nur die Leerstufe in `PROFIL`, und deshalb standen dort Nullen, obwohl
@@ -818,14 +833,40 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
         setFilters((f) => ({ ...f, kandidaten: false }));
         break;
       }
-      default: break; // mark/netzfrei — Feinschliff
+      // ── Partnersuche ──────────────────────────────────────────────────────────────
+      // Vor dem 2026-08-22 lief das rein im Speicher: `toggleNetz` schob eine ID in ein Set,
+      // das beim Neuladen verschwand und das niemand sonst je sah. Jetzt geht jeder Schritt
+      // an `/api/netz` und kommt mit dem Serverzustand samt Treffer zurück.
+      case "netzlos": toggleNetzLos(value); bump(); break;
+      case "netzint": netzMelden(value); break;
+      case "netzfrei": netzFreigeben(value); break;
+      default: break; // mark — Feinschliff
     }
   }
-  function toggleNetz(id: string) {
-    const ni = netzInteresse as Set<string>;
-    ni.has(id) ? ni.delete(id) : ni.add(id);
+  async function netzSenden(id: string, feld: Record<string, unknown>) {
+    try {
+      const r = await fetch("/api/netz", {
+        method: "POST", headers: { "content-type": "application/json" },
+        body: JSON.stringify({ leadId: id, identityId: identId, ...feld }),
+      });
+      setNetzZustand(id, r.ok ? await r.json() : null);
+    } catch { /* offline: Zustand bleibt, wie er war */ }
     bump();
   }
+  /* Melden oder zurückziehen. Die angehakten Lose sind die eigentliche Angabe: ohne sie
+     gäbe es keine Ergänzung, sondern nur zwei Firmen auf demselben Los. */
+  function netzMelden(id: string) {
+    if ((netzInteresse as Set<string>).has(id)) {
+      fetch(`/api/netz?leadId=${encodeURIComponent(id)}`, { method: "DELETE" })
+        .then(() => { setNetzZustand(id, null); bump(); }).catch(() => {});
+      return;
+    }
+    const lose = netzLoseVon(id);
+    if (!lose.length) return;      // der Knopf ist dann ohnehin gesperrt
+    netzSenden(id, { lose });
+  }
+  function netzFreigeben(id: string) { netzSenden(id, { freigabe: true }); }
+  function toggleNetz(id: string) { netzMelden(id); }
   function toggleOwn(id: string, ans: string) {
     const l = CORE.find((x) => x.id === id) as (Lead & { eigen?: boolean; eigenBestaetigt?: boolean }) | undefined;
     if (l) {

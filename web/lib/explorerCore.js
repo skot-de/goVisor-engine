@@ -815,6 +815,29 @@ let potTab = 'chancen';   // chancen | position | profil | netzwerk
 
 /* ── Netzwerk-Freigabe + angFeld (erklärtes Profil-Feld) ── */
 let netzFreigabe  = new Set();
+/* Angehakte eigene Lose, als `${leadId}:${losNr}`. Vor der Meldung eine reine Auswahl im
+   Browser, danach der gespeicherte Zustand vom Server (`/api/netz`). */
+let netzLose = new Set();
+function toggleNetzLos(key){ netzLose.has(key) ? netzLose.delete(key) : netzLose.add(key); }
+function netzLoseVon(leadId){
+  return [...netzLose].filter(k=>k.startsWith(leadId+':')).map(k=>+k.split(':').pop()).filter(Boolean);
+}
+/* Serverzustand für EINEN Lead in den Kern schieben: Meldung, Freigabe, Treffer.
+   Vor dem 2026-08-22 gab es diesen Weg nicht — `netzPartner` setzte niemand, also konnte
+   der Treffer-Zweig der Oberfläche nie erscheinen. */
+function setNetzZustand(leadId, z){
+  const l = LEADS.find(x=>x.id===leadId);
+  if(!z || !z.interesse){
+    netzInteresse.delete(leadId); netzFreigabe.delete(leadId);
+    if(l){ l.netzPartner = null; l.netzDeckung = 0; }
+    return;
+  }
+  netzInteresse.add(leadId);
+  z.interesse.freigabe ? netzFreigabe.add(leadId) : netzFreigabe.delete(leadId);
+  [...netzLose].forEach(k=>{ if(k.startsWith(leadId+':')) netzLose.delete(k); });
+  (z.interesse.lose||[]).forEach(n=>netzLose.add(leadId+':'+n));
+  if(l){ l.netzPartner = z.partner || null; l.netzDeckung = (z.interesse.lose||[]).length; }
+}
 
 /* Ein Feld mit abgeleiteten (gemessen) und angegebenen (unbestätigt) Werten */
 function angFeld(key, titel, zweck, abgeleitet){
@@ -1514,23 +1537,30 @@ ${l.lose && l.lose.length>1 ? (()=>{
         <span>${tk("Aktiviert das Netzwerk, dann könnt ihr euch für solche Ausschreibungen melden, und wir prüfen, wer euch ergänzt.")}</span></div>
         <button class="pn-btn" data-tonetz>${tk("Zum Netzwerk")}</button>
       </div>`
-      : !netzInteresse.has(l.id) ? `<div class="pn-off">
+      : !netzInteresse.has(l.id) ? `<div class="pn-off pn-wahl">
         <div><b>${tk("Sucht ihr hier einen Partner?")}</b>
-        <span>${tk("Meldet euch für diese Ausschreibung. Sichtbar werdet ihr nur für Firmen, die euch fachlich ergänzen.")}</span></div>
-        <button class="pn-btn" data-netzint="${l.id}">${tk("Interesse bekunden")}</button>
+        <span>${tk("Hakt die Lose an, die ihr selbst abdeckt. Wir suchen dann eine Firma, die genau die übrigen kann. Sichtbar werdet ihr nur für solche Firmen.")}</span>
+        <div class="nz-loswahl">${(l.lose||[]).map(x=>`<button class="nz-los ${netzLose.has(l.id+':'+x.nr)?'on':''}"
+          data-netzlos="${l.id}:${x.nr}">${tk("Los")} ${x.nr}<i>${esc(x.titel||'')}</i></button>`).join('')}</div></div>
+        <button class="pn-btn" data-netzint="${l.id}" ${[...netzLose].some(k=>k.startsWith(l.id+':'))?'':'disabled'}
+          >${tk("Interesse bekunden")}</button>
       </div>`
       : l.netzPartner ? (()=>{ const frei = netzFreigabe.has(l.id); return `<div class="nz-match">
         <div class="nz-m-h"><b>${tk("Eine Firma ergänzt euch")}</b><span class="nz-m-s">seit ${l.netzPartner.seit}</span></div>
         <div class="nz-m-r">
-          <span class="nz-m-n">${frei?l.netzPartner.n:`<span class="nz-blur">${tk("Firmenname sichtbar nach Freigabe")}</span>`}</span>
-          <span class="nz-m-f">${l.netzPartner.feld}</span>
-          <span class="nz-m-g">${l.netzPartner.groesse}</span>
-          <span class="nz-m-d">deckt ${l.netzPartner.deckung} Lose</span>
+          <span class="nz-m-n">${frei&&l.netzPartner.n?esc(l.netzPartner.n)
+            :`<span class="nz-blur">${tk("Firmenname sichtbar nach Freigabe")}</span>`}</span>
+          <span class="nz-m-f">${esc(l.netzPartner.feld||tk("Feld nicht hinterlegt"))}</span>
+          <span class="nz-m-g">${esc(l.netzPartner.groesse||'')}</span>
+          <span class="nz-m-d">${tk("deckt {n} Lose")
+            .replace('{n}', l.netzPartner.deckung)}</span>
         </div>
-        <p class="nz-m-x">${tk("Zusammen kommt ihr auf")}<b>${(l.netzDeckung||1)+l.netzPartner.deckung} von ${l.lose.length} Losen</b>.
-        ${frei?tk("Beide Seiten haben freigegeben, die Kontaktdaten liegen jetzt bei euch beiden.")
+        <p class="nz-m-x">${tk("Zusammen kommt ihr auf")}<b>${(l.netzDeckung||0)+l.netzPartner.deckung} von ${(l.lose||[]).length} Losen</b>.
+        ${frei&&l.netzPartner.n?tk("Beide Seiten haben freigegeben, die Kontaktdaten liegen jetzt bei euch beiden.")
+             :frei?tk("Ihr habt freigegeben. Sichtbar wird der Name erst, wenn die andere Seite ebenfalls freigibt.")
+             :l.netzPartner.freigabeGegenseite?tk("Die andere Seite hat bereits freigegeben. Gebt ihr auch frei, tauschen wir die Kontakte aus.")
              :tk("Gebt den Kontakt frei, wenn ihr sprechen wollt. Die andere Seite muss ebenfalls freigeben.")}</p>
-        ${frei?`<div class="nz-kontakt"><b>${esc(l.netzPartner.n)}</b>
+        ${frei?`<div class="nz-kontakt"><b>${esc(l.netzPartner.n||tk("Firma ohne Namen in unseren Daten"))}</b>
           <span>${l.netzPartner.kontakt ? esc(l.netzPartner.kontakt)
             : tk("Kontaktdaten liegen uns nicht vor, die Firma erreicht ihr über die Vergabestelle.")}</span></div>`
         :`<button class="nz-frei" data-netzfrei="${l.id}">${tk("Kontakt freigeben")}</button>`}
@@ -2484,7 +2514,7 @@ function applyProfile(key){
   setProfile(activeProfile ? profileFromPreset(activeProfile) : null);
 }
 
-export { cpvLabel, relabelLeads, applyState, getState, setLeads, setMarket, setBestand, setNachbarn, setPlzGeo, setPlzLand, setUserContracts, applyProfile, setProfile, getProfile, PROFILES, parseWert, netzInteresse, netzFreigabe, offeneGruppen };
+export { cpvLabel, relabelLeads, applyState, getState, setLeads, setMarket, setBestand, setNachbarn, setNetzZustand, toggleNetzLos, netzLoseVon, netzLose, setPlzGeo, setPlzLand, setUserContracts, applyProfile, setProfile, getProfile, PROFILES, parseWert, netzInteresse, netzFreigabe, offeneGruppen };
 export {
   renderUebersicht, renderTeilnahme, renderAnalyse, renderMarkt, renderBuyer,
   renderTeam, renderGate, renderProfil, renderDocs, REGIONS,

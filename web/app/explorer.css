@@ -2147,3 +2147,16 @@ a.lb-kachel{text-decoration:none}
   padding:3px 9px 3px 5px;border:none;border-radius:100px;cursor:pointer;font:inherit;
   font-size:11px;background:none;color:var(--ink-500)}
 .bereichsleiste .step-zurueck:hover{background:var(--surface-3);color:var(--ink-900)}
+
+/* Los-Auswahl der Partnersuche. ⚠ NICHT `.nz-lose` benutzen — die Klasse gibt es schon
+   (Los-Aufzählung im Teilnahme-Tab) und ihre `i`-Regel würde den Titel hier ausgrauen.
+   Genau die Sorte Kollision, die in dieser Datei schon zweimal Text unsichtbar gemacht hat. */
+.nz-loswahl{display:flex;flex-wrap:wrap;gap:6px;margin:var(--s3) 0 var(--s2)}
+.nz-los{display:flex;flex-direction:column;gap:1px;text-align:left;max-width:190px;
+  padding:6px 10px;border:1px solid var(--line);border-radius:7px;background:var(--surface);
+  font-size:var(--t-sm);font-family:var(--mono);color:var(--ink-700);cursor:pointer}
+.nz-los i{font-style:normal;font-family:var(--font);font-size:var(--t-xs,11px);color:var(--ink-500);
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.nz-los:hover{border-color:var(--signal)}
+.nz-los.on{border-color:var(--signal);background:var(--signal-wash);color:var(--ink-900)}
+.pn-wahl .pn-btn[disabled]{opacity:.45;cursor:not-allowed}
