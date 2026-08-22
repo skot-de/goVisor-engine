@@ -1,35 +1,27 @@
 import { NextRequest, NextResponse } from "next/server";
-import { readFile, readdir } from "node:fs/promises";
-import path from "node:path";
 import { createAdminClient } from "@/lib/supabase/admin";
-import { dueAlerts, sentFlagFor, alertText, type LeadTiming } from "@/lib/alerts";
-import { send } from "@/lib/email";
+import { dueAlerts, sentFlagFor, alertText } from "@/lib/alerts";
+import { leadFristen } from "@/lib/leadIndex";
+import { send, mailAktiv } from "@/lib/email";
 import { requireCronSecret } from "@/lib/cronAuth";
 
 /* Alert-Lauf (Ticket #9) — cron-getriggert (täglich). Rechnet fällige Frist-/Auslauf-Alerts
  * aus den Watchlists und verschickt sie (E-Mail-Stub bis Provider). Idempotent über die
  * *_sent-Flags. Absicherung: CRON_SECRET-Header, damit nur der Scheduler das aufruft. */
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-async function loadLeadIndex(): Promise<Map<string, LeadTiming>> {
-  const dir = path.join(process.cwd(), "data");
-  const files = (await readdir(dir)).filter((f) => f.startsWith("leads-") && f.endsWith(".json"));
-  const idx = new Map<string, LeadTiming>();
-  for (const f of files) {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const arr = JSON.parse(await readFile(path.join(dir, f), "utf-8")) as any[];
-    for (const l of arr) idx.set(l.id, {
-      id: l.id, titel: l.titel, src: l.src, tage: l.tage, endTage: l.endTage,
-      endeEcht: l?.timing?.src === "echt",
-    });
-  }
-  return idx;
-}
-
 async function run(req: NextRequest) {
   // Fail-closed: ohne CRON_SECRET deaktiviert, sonst nur mit passendem Header (Vercel-Cron/manuell).
   const deny = requireCronSecret(req);
   if (deny) return deny;
+
+  // ⚠ OHNE PROVIDER NICHT „ZUSTELLEN". `send()` meldet auch als Stub Erfolg; der Lauf setzte
+  // danach die `*_sent`-Flags, und `dueAlerts` liefert den Hinweis nie wieder. Jeder Lauf
+  // hätte also Hinweise VERBRAUCHT, die niemand bekommen hat. Der Posteingang in der App
+  // (`/api/alerts`) ist davon unabhängig und rechnet mit neutralen Flags.
+  if (!mailAktiv) {
+    return NextResponse.json({ ok: true, uebersprungen: true,
+      grund: "kein EMAIL_API_KEY — es wird nichts als zugestellt markiert" });
+  }
 
   const admin = createAdminClient();
   const [{ data: watch }, { data: prefsRows }, { data: profiles }] = await Promise.all([
@@ -37,7 +29,7 @@ async function run(req: NextRequest) {
     admin.from("user_alert_settings").select("*"),
     admin.from("user_profiles").select("id,email"),
   ]);
-  const leadIdx = await loadLeadIndex();
+  const leadIdx = await leadFristen();
   const prefsBy = new Map((prefsRows || []).map((p) => [p.user_id, p]));
   const emailBy = new Map((profiles || []).map((p) => [p.id, p.email]));
   const DEFAULT_PREFS = { deadline_warning_enabled: true, expiry_warning_enabled: false };

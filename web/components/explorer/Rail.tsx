@@ -6,6 +6,7 @@ import { logout } from "@/lib/supabase/auth";
 import { SPRACHEN, sprachName, useSprache } from "@/lib/i18n";
 import { useProfil } from "@/lib/useProfil";
 import { SeitenSuche } from "./SeitenSuche";
+import { Posteingang } from "./Posteingang";
 
 /* Die Hauptnavigation — EINE Quelle für alle Seiten.
  *
@@ -309,6 +310,11 @@ export function AppTop({ suche, werkzeuge, ohneSuche }: {
 
       {ohneSuche ? null : (suche ?? <SeitenSuche />)}
       {werkzeuge ? <div className="top-werkzeuge">{werkzeuge}</div> : null}
+
+      {/* Posteingang neben der Sprache, auf JEDER Seite — wie Profil und Sprache gehört er
+          zum Konto, nicht zur Lead-Liste. Vorher gab es für Hinweise überhaupt keinen
+          Zustellweg: die Logik rechnete, der Versand war ein Stub. */}
+      <Posteingang />
 
       {/* Sprache ganz rechts, auf JEDER Seite. Sie betrifft die Anzeige, nicht das Konto —
           deshalb hier und nicht im Konto-Menue der Rail. */}

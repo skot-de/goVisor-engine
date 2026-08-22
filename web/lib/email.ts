@@ -9,6 +9,11 @@ export type Mail = { to: string; subject: string; text: string; marketing?: bool
 
 const KEY = process.env.EMAIL_API_KEY;   // z. B. Resend-Key; fehlt → Stub
 
+/* Ob wirklich versendet wird. Wer nach `send()` etwas als ZUGESTELLT verbucht, muss das
+   vorher fragen: der Stub meldet ebenfalls Erfolg, und ein Hinweis, der als zugestellt gilt,
+   ohne jemanden erreicht zu haben, ist verloren. */
+export const mailAktiv = !!KEY;
+
 export async function send(mail: Mail): Promise<{ ok: boolean; stub: boolean }> {
   if (!KEY) {
     console.info(`[email:stub] → ${mail.to} | ${mail.subject}`);

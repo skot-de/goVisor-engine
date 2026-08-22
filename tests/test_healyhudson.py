@@ -1356,3 +1356,38 @@ def test_abfragen_treffen_spalten_die_es_gibt():
                 if feld not in spalten:
                     treffer.append(f"{pfad.relative_to(ROOT)}: user_profiles.{feld}")
     assert not treffer, "Abfrage auf Spalten, die es nicht gibt:\n  " + "\n  ".join(treffer)
+
+
+def test_posteingang_verbraucht_keine_hinweise():
+    """Hinweise hatten bis zum 2026-08-22 KEINEN Zustellweg: `lib/email.ts` ist ein Stub,
+    einen Posteingang gab es nicht, und die Startseite versprach trotzdem eine Meldung.
+
+    ⚠ Schlimmer als nichts war der Cron-Lauf: `send()` meldet auch als Stub Erfolg, danach
+    setzte der Lauf die `*_sent`-Flags in `user_watchlist` — der Hinweis galt als zugestellt,
+    obwohl ihn niemand bekommen hat, und `dueAlerts` liefert ihn nie wieder. Jeder Lauf hätte
+    Hinweise VERBRAUCHT statt sie auszuliefern.
+
+    Zwei Grenzen halten das auseinander und stehen deshalb unter Test:
+    · Ohne echten Provider markiert der Lauf gar nichts (`mailAktiv`).
+    · Der Posteingang rechnet mit NEUTRALEN Flags und fasst `user_watchlist` nicht an.
+    """
+    run = (ROOT / "web" / "app" / "api" / "alerts" / "run" / "route.ts").read_text(encoding="utf-8")
+    assert "if (!mailAktiv)" in run, \
+        "der Lauf markiert wieder als zugestellt, ohne dass ein Provider da ist"
+
+    box = (ROOT / "web" / "app" / "api" / "alerts" / "route.ts").read_text(encoding="utf-8")
+    assert "NEUTRAL" in box and "deadline_14d_sent: false" in box, \
+        "der Posteingang haengt wieder an den *_sent-Flags des E-Mail-Wegs"
+    assert "user_watchlist" not in box or ".select(" in box, "Posteingang schreibt in die Watchlist"
+    assert "ignoreDuplicates: true" in box, \
+        "ein gelesener Hinweis springt wieder auf ungelesen, solange die Frist laeuft"
+
+    # Der Lead-Index muss ueber den Daten-Loader gehen: auf einem Deployment mit
+    # DATA_BASE_URL liegt lokal nichts, ein `readdir` faende still null Hinweise.
+    # Auf den IMPORT prüfen, nicht auf das Wort: beide Dateien erklären in einem Kommentar,
+    # warum sie `readdir` gerade NICHT benutzen. Ein Test, der Prosa mitzählt, zwingt einen
+    # dazu, die Begründung zu löschen.
+    idx = (ROOT / "web" / "lib" / "leadIndex.ts").read_text(encoding="utf-8")
+    assert "loadDataFile" in idx, "der Hinweis-Index geht nicht mehr über den Daten-Loader"
+    for name, text in (("leadIndex.ts", idx), ("alerts/run", run)):
+        assert "node:fs" not in text, f"{name} liest wieder direkt von der Platte"
