@@ -16,8 +16,16 @@ Aufruf: python3 scripts/export_web_awards.py
 import json
 import pathlib
 
+import sys
+
 import duckdb
-from govisor.testvergaben import sql_bedingung as _testvergabe_sql
+
+# ⚠ Projektpfad selbst setzen. Unter launchd gibt es kein PYTHONPATH, und ein Skript, das
+# `govisor` importiert, ohne den Pfad zu setzen, bricht dort ab — still, im Tageslauf.
+# Genau das hat `test_skripte_finden_govisor_ohne_pythonpath` hier gefangen.
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent.parent))
+
+from govisor.testvergaben import sql_bedingung as _testvergabe_sql  # noqa: E402
 
 OUT = pathlib.Path("web/data"); OUT.mkdir(parents=True, exist_ok=True)
 con = duckdb.connect(); con.execute("SET threads=4")
