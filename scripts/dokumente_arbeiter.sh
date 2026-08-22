@@ -149,17 +149,52 @@ while true; do
     DRAN+=("${SORTIERT[$IDX]}")
   fi
   sag "  Runde $RUNDE — dran: ${DRAN[*]}"
+
+  # ── WIE VIELE GLEICHZEITIG ────────────────────────────────────────────────────────
+  #
+  # Bis zum 22.08. liefen die drei NACHEINANDER: drei Stunden je Runde. Sie holen von
+  # verschiedenen Portalen, die Hoeflichkeitspausen gelten je Host — gleichzeitig ist also
+  # kein Verstoss, sondern nur eine Frage des Speichers.
+  #
+  # ⚠ **Der Speicherfresser ist NICHT der Abruf.** Gemessen am 22.08.: ein Abrufer samt
+  # Browser liegt bei rund 20 MB, waehrend Stufe 1 mit `tesseract` (1,3 GB) und `pdftoppm`
+  # (je 0,4 GB) den Rechner fuellt. Beide laufen nie zugleich — Stufe 1 ist durch, bevor
+  # Stufe 2 beginnt. Der Absturz vom 16.08. (Browser vom System abgeraeumt, Lauf 10,5 h
+  # eingefroren) entstand, als ein Index-NEUAUFBAU parallel lief; genau das verhindert die
+  # Reihenfolge im Arbeiter heute.
+  #
+  # Nachts mehr, tagsueber weniger — Sven am 22.08.: „ab zwischen 2 und 6 voll durchziehen
+  # und tagsueber moderater".
+  STUNDE=$(date +%-H)
+  if [ "$STUNDE" -ge "${ABRUF_NACHT_AB:-2}" ] && [ "$STUNDE" -lt "${ABRUF_NACHT_BIS:-6}" ]; then
+    GLEICHZEITIG="${ABRUF_PARALLEL_NACHT:-3}"
+  else
+    GLEICHZEITIG="${ABRUF_PARALLEL_TAG:-2}"
+  fi
+
+  # ⚠ UND EINE MESSUNG STATT EINER SCHAETZUNG. Wie viel ein Abrufer wirklich braucht,
+  # haengt am Portal (ein 636-MB-ZIP ist vorgekommen). Vor jedem zusaetzlichen Prozess wird
+  # der freie Speicher gefragt; wird es eng, laeuft die Runde eben serieller. Eine Grenze,
+  # die man vorher festlegt, ist am Tag des naechsten Riesenpakets falsch.
+  frei_prozent() { memory_pressure 2>/dev/null | awk -F: '/free percentage/{gsub(/[^0-9]/,"",$2); print $2}'; }
+  PIDS=()
   for c in "${DRAN[@]}"; do
     [ -e "$LOCK" ] && break
-    # ⚠ KEIN `timeout` — das ist GNU-coreutils und auf macOS nicht vorhanden (Exit 127).
-    # Braucht es auch nicht: `rueckstau.py` bringt mit --stunden seine eigene Grenze mit.
-    #
-    # LIMIT von 40 auf 150: die Stunde ist die eigentliche Grenze, das Limit war nur eine
-    # zweite daneben. Bei einem schnellen Portal war nach 40 Vergaben Schluss, obwohl die
-    # Stunde noch lief — gemessen am 18.08. schaffte dieselbe Maschine 916 Pakete an einem
-    # Tag, am 19.08. waren es 20 und am 20.08. keins.
-    scripts/rueckstau.py --connector "$c" --stunden 1 --limit "${ABRUF_LIMIT:-150}" >>"$LOG" 2>&1
+    while [ "${#PIDS[@]}" -ge "$GLEICHZEITIG" ]; do wait -n 2>/dev/null || break; PIDS=($(jobs -pr)); done
+    F="$(frei_prozent)"
+    if [ -n "$F" ] && [ "$F" -lt "${ABRUF_MIN_FREI:-25}" ] && [ "${#PIDS[@]}" -ge 1 ]; then
+      sag "    nur ${F}% Speicher frei — warte, statt einen weiteren zu starten"
+      wait -n 2>/dev/null || true
+    fi
+    # ⚠ KEIN `timeout` — GNU-coreutils, auf macOS nicht vorhanden (Exit 127). `rueckstau.py`
+    # bringt mit --stunden seine eigene Grenze mit.
+    scripts/rueckstau.py --connector "$c" --stunden "${ABRUF_STUNDEN:-1}" \
+      --limit "${ABRUF_LIMIT:-150}" >>"$LOG" 2>&1 &
+    PIDS+=($!)
+    sleep 5                       # gestaffelt starten, damit die Browser nicht zeitgleich hochfahren
   done
+  sag "    $GLEICHZEITIG gleichzeitig (Stunde $STUNDE)"
+  wait
 
   [ -e "$LOCK" ] && continue
 

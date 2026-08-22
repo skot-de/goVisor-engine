@@ -3409,3 +3409,54 @@ def test_kein_abrufer_bekommt_eine_stunde_fuer_vier_vorgaenge():
     # ⚠ Rückfallebene: sobald der Rückstau abgearbeitet ist, darf der Schritt nicht
     # stillstehen, nur weil niemand mehr die Mindestmenge erreicht.
     assert "-lt 3" in quelle, "ohne Rückfall steht der Abruf bei kleinem Rückstau still"
+
+
+def test_abrufer_laufen_gleichzeitig_und_messen_den_speicher():
+    """Drei Abrufer nacheinander sind drei Stunden je Runde; gleichzeitig ist es eine.
+
+    Sie holen von verschiedenen Portalen, die Höflichkeitspausen gelten je Host — Parallelität
+    ist also kein Verstoß, sondern eine Frage des Speichers.
+
+    ⚠ **Der Speicherfresser ist NICHT der Abruf.** Gemessen 2026-08-22: ein Abrufer samt
+    Browser rund 20 MB, während Stufe 1 mit `tesseract` (1,3 GB) und `pdftoppm` (je 0,4 GB)
+    den Rechner füllt. Beide laufen nie zugleich. Der Absturz vom 16.08. (Browser vom System
+    abgeräumt, Lauf 10,5 h eingefroren) entstand durch einen parallelen Index-NEUAUFBAU.
+
+    ⚠ Trotzdem eine MESSUNG statt einer festen Zahl: was ein Abrufer braucht, hängt am Portal
+    (ein 636-MB-ZIP ist vorgekommen). Eine vorab festgelegte Grenze ist am Tag des nächsten
+    Riesenpakets falsch.
+    """
+    quelle = (pathlib.Path(__file__).resolve().parent.parent
+              / "scripts" / "dokumente_arbeiter.sh").read_text(encoding="utf-8")
+    assert "PIDS+=($!)" in quelle, "die Abrufer laufen noch seriell"
+    assert "wait" in quelle
+    assert "frei_prozent" in quelle and "ABRUF_MIN_FREI" in quelle, "keine Speichermessung"
+    assert "ABRUF_PARALLEL_NACHT" in quelle and "ABRUF_PARALLEL_TAG" in quelle
+
+
+def test_der_tageslauf_liegt_nicht_im_nachtfenster():
+    """⚠ Ein Plan, der sich selbst blockiert, sieht auf dem Papier richtig aus.
+
+    Der Tageslauf stand zuerst auf 03:00 und dauert 90–135 min — mitten im Nachtfenster
+    02–06 Uhr, in dem die Abrufer voll durchziehen sollen. Der Arbeiter weicht dem Lock aus,
+    also wären real keine zwei Stunden übrig geblieben.
+    """
+    import plistlib
+
+    H = pathlib.Path.home() / "Library" / "LaunchAgents"
+    p = H / "de.skot.govisor.daily.plist"
+    if not p.exists():
+        import pytest
+        pytest.skip("launchd-Auftrag nicht auf dieser Maschine")
+    d = plistlib.loads(p.read_bytes())
+    plan = d["StartCalendarInterval"]
+    plan = [plan] if isinstance(plan, dict) else plan
+    quelle = (pathlib.Path(__file__).resolve().parent.parent
+              / "scripts" / "dokumente_arbeiter.sh").read_text(encoding="utf-8")
+    import re
+    ab = int(re.search(r"ABRUF_NACHT_AB:-(\d+)", quelle).group(1))
+    bis = int(re.search(r"ABRUF_NACHT_BIS:-(\d+)", quelle).group(1))
+    for eintrag in plan:
+        stunde = eintrag.get("Hour")
+        assert not (ab <= stunde < bis), (
+            f"Tageslauf um {stunde}:00 liegt im Nachtfenster {ab}–{bis} Uhr")
