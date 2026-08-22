@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { applyState, renderProfil } from "@/lib/explorerCore";
+import { applyState, renderProfil, setNachbarn } from "@/lib/explorerCore";
 import { useSprache } from "@/lib/i18n";
 import { ContractsEditor } from "./ContractsEditor";
 import { Trefferguete } from "./Trefferguete";
@@ -850,6 +850,9 @@ export function StrategieView({
   const bestandHtml = useMemo(() => {
     if (sektion !== "position" && sektion !== "profil") return "";
     applyState({ potTab: sektion, profilStufe, offenerPicker, aktiveBranche, accountLimit });
+    // Die Nachbarfelder liegen in denselben Aggregaten, die diese Ansicht ohnehin geladen
+    // hat. Der Kern kennt sie nicht von sich aus, also reichen wir sie hier herein.
+    setNachbarn(strat?.[aktiveBranche]?.nachbarn);
     return renderProfil();
   }, [sektion, profilStufe, offenerPicker, aktiveBranche, accountLimit, tick]);
 

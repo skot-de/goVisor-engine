@@ -736,6 +736,63 @@ const PMARKT = {
   vergaben:null, offen:null, stellen:null, regionen:null, topStellen:[], einstieg:[],
 };
 let profilStufe = 'neu';   // ohne Onboarding: aspiring bidder — keine Firmen-Historie
+
+/* Der ECHTE Bestand der angemeldeten Firma, gesetzt aus `/api/firma?id=<identityId>`
+   (vorberechnet in scripts/export_firma_profiles.py, 5.334 Identitäten aus dem Gold-Layer).
+   Bis zum 2026-08-22 gab es diesen Weg nicht: `renderProfil` las ausschliesslich `PROFIL`,
+   und dort steht seit der Ehrlichkeits-Korrektur nur noch die Leerstufe. Position und
+   Profil blieben deshalb auch dann leer, wenn die Firma 248 Zuschläge im Bestand hat —
+   die Zahlen lagen bereit, es holte sie nur niemand ab. */
+let BESTAND = null;
+
+/* Abbildung von der Firmenprofil-JSON auf die Felder, die `renderProfil` braucht.
+   ⚠ Bewusst NICHT gefüllt werden `anteil` und `rang`: der Marktanteil wäre „Siege über
+   alle Branchen" geteilt durch „Markt einer Branche × Region" — eine Zahl, die grösser
+   aussieht als sie ist. Die Oberfläche zeigt dort „—" bzw. „zu wenige Siege", und das
+   ist die richtige Antwort, solange wir es nicht sauber rechnen. */
+const geld = v => v == null ? null
+  : v >= 1e9 ? (v/1e9).toFixed(1).replace('.',',') + ' Mrd €'
+  : v >= 1e6 ? (v/1e6).toFixed(1).replace('.',',') + ' Mio €'
+  : Math.round(v).toLocaleString('de-DE') + ' €';
+
+function setBestand(fp){
+  if(!fp || !fp.kpi){ BESTAND = null; return; }
+  const sits = Array.isArray(fp.sits) ? fp.sits : [];
+  const jahre = sits.map(s=>s.seit).filter(Boolean);
+  BESTAND = {
+    siege:   fp.kpi.wins_total || 0,
+    kunden:  fp.n_vergabestellen || sits.length,
+    seit:    jahre.length ? Math.min(...jahre) : null,
+    // ⚠ Beide Felder gehen ungeformt in die Oberflaeche (`n(v)` setzt den Wert roh ein).
+    // Die alte Demo-Stufe trug fertige Zeichenketten („4,2 Mio €"), die echten Zahlen sind
+    // Fliesskomma: ohne diese Formatierung stand dort „17270807468.510025".
+    volumen: geld(fp.kpi.vol_sum),
+    median:  geld(fp.kpi.vol_median),
+    anteil:  null,
+    rang:    null,
+    // Die Vergabestellen, bei denen die Firma schon gewonnen hat. `offen` zählt live aus
+    // dem geladenen Leadbestand, wie viele Vergaben dieser Stelle gerade laufen.
+    kundenListe: sits.slice(0,8).map(s=>({
+      n: s.buyer, gewonnen: s.auftraege || 0, seit: s.seit || null,
+      bindung: s.bindung || null,
+      offen: LEADS.filter(l=>l.src==='f02' && l.buyer===s.buyer).length,
+    })),
+    // ⚠ `fp.felder` sind die EIGENEN Schwerpunkte der Firma („60 % Bauarbeiten für
+    // Rohrleitungen"), NICHT die benachbarten. Sie hier einzusetzen hiesse, gemessene
+    // Daten unter eine falsche Überschrift zu stellen. Die echten Nachbarfelder kommen
+    // aus der CPV-Nähe je Branche, s. `setNachbarn`.
+    nachbarn: [],
+  };
+}
+
+/* Nachbarfelder je Branche (CPV-Nähe aus Firmen-Co-Occurrence, scripts/export_strategie.py).
+   Die Strategie-Ansicht hat die Zahlen ohnehin geladen und reicht sie hier herein. */
+let NACHBARN = [];
+function setNachbarn(liste){
+  NACHBARN = (Array.isArray(liste) ? liste : []).slice(0,6).map(x=>({
+    n: x.label, naehe: (x.naehe||0) >= 70 ? 'hoch' : 'mittel', firmen: x.firmen || 0,
+  }));
+}
 /* Was wir NICHT messen können, sondern was die Firma selbst angibt.
    Trennung ist wichtig: abgeleitet = gemessen, angegeben = unbestätigt. */
 let angaben = {   // erklärtes Profil — leer bis der Nutzer es im Onboarding/Profil-Tab pflegt
@@ -2113,7 +2170,7 @@ function renderGate(){
 
 /* ── Potenzial-Bereich: renderProfil (Prototyp, innerHTML→return) ── */
 function renderProfil(){
-  const d = PROFIL[profilStufe] || PROFIL.neu;
+  const d = BESTAND || PROFIL[profilStufe] || PROFIL.neu;
   const historie = d.siege>0, belastbar = d.siege>=5 && d.kunden>=3;
   const free = isFreeLimit();
   const n = v => `<span class="v-num">${v}</span>`;
@@ -2142,21 +2199,22 @@ function renderProfil(){
     ${potTab!=='chancen'?'':`
     <section class="sec">
       <h4>${tk("Wo könnt ihr gewinnen?")}</h4>
-      ${historie?`<div class="pblock ${free?'pb-lock':''}">
+      ${historie&&d.kundenListe.length?`<div class="pblock ${free?'pb-lock':''}">
         <div class="pb-h"><span class="pb-t">Bei euren Kunden${free?`<span class="probadge probadge-lock">${tk("Pro")}</span>`:''}</span>
-          <span class="pb-n">${d.kundenListe.reduce((a,k)=>a+(k.gesamt-k.gewonnen),0)} verpasst · ${d.kundenListe.reduce((a,k)=>a+k.offen,0)} offen</span></div>
-        <p class="pb-x">${tk("Diese Stellen kennen euch bereits. Der Balken zeigt, wie viel ihr dort abgeräumt habt, der Rest ging an andere.")}</p>
-        ${d.kundenListe.map(k=>{const p=Math.round(k.gewonnen/k.gesamt*100);
-          return `<div class="pen"><span class="pen-n">${k.n}${k.offen?`<span class="pr-tag" style="margin-left:8px">${k.offen} offen</span>`:''}</span>
-            <span class="pen-bar"><i style="width:${p}%"></i></span><span class="pen-v">${k.gewonnen} / ${k.gesamt}</span></div>`;}).join('')}
+          <span class="pb-n">${d.kundenListe.reduce((a,k)=>a+k.offen,0)} ${tk("gerade offen")}</span></div>
+        <p class="pb-x">${tk("Diese Stellen kennen euch bereits. Rechts steht, wie viele ihrer Vergaben gerade laufen.")}</p>
+        ${d.kundenListe.map(k=>`<div class="pen"><span class="pen-n">${esc(k.n)}${
+            k.offen?`<span class="pr-tag" style="margin-left:8px">${k.offen} ${tk("offen")}</span>`:''}</span>
+          <span class="pen-s">${k.seit?tk("seit {j}",{j:k.seit}):''}${k.bindung?` · ${tk("Bindung")} ${tk(k.bindung)}`:''}</span>
+          <span class="pen-v">${k.gewonnen} ${k.gewonnen===1?tk("Auftrag"):tk("Aufträge")}</span></div>`).join('')}
       </div>`:''}
-      ${d.nachbarn.length?`<div class="pblock ${free?'pb-lock':''}">
+      ${NACHBARN.length?`<div class="pblock ${free?'pb-lock':''}">
         <div class="pb-h"><span class="pb-t">In benachbarten Feldern${free?`<span class="probadge probadge-lock">${tk("Pro")}</span>`:''}</span></div>
         <p class="pb-x">${tk("Bereiche, die Firmen wie ihr häufig zusätzlich bedienen. Abgeleitet daraus, welche Felder dieselben Anbieter gemeinsam abdecken.")}</p>
-        <div class="prow prow-h"><span>${tk("Feld")}</span><span>${tk("Nähe")}</span><span>${tk("Vergaben")}</span></div>
-        ${d.nachbarn.map(x=>`<div class="prow"><span class="pr-n">${x.n}</span>
-          <span class="pr-o"><span class="pr-tag ${x.naehe==='hoch'?'':'mut'}">${x.naehe}</span></span>
-          <span class="pr-a">${x.vergaben}</span></div>`).join('')}
+        <div class="prow prow-h"><span>${tk("Feld")}</span><span>${tk("Nähe")}</span><span>${tk("Firmen")}</span></div>
+        ${NACHBARN.map(x=>`<div class="prow"><span class="pr-n">${esc(x.n)}</span>
+          <span class="pr-o"><span class="pr-tag ${x.naehe==='hoch'?'':'mut'}">${tk(x.naehe)}</span></span>
+          <span class="pr-a">${x.firmen}</span></div>`).join('')}
       </div>`:''}
       <div class="pblock">
         <div class="pb-h"><span class="pb-t">${tk("In eurem Markt")}</span><span class="pb-n">${PMARKT.offen} offen</span></div>
@@ -2426,7 +2484,7 @@ function applyProfile(key){
   setProfile(activeProfile ? profileFromPreset(activeProfile) : null);
 }
 
-export { cpvLabel, relabelLeads, applyState, getState, setLeads, setMarket, setPlzGeo, setPlzLand, setUserContracts, applyProfile, setProfile, getProfile, PROFILES, parseWert, netzInteresse, netzFreigabe, offeneGruppen };
+export { cpvLabel, relabelLeads, applyState, getState, setLeads, setMarket, setBestand, setNachbarn, setPlzGeo, setPlzLand, setUserContracts, applyProfile, setProfile, getProfile, PROFILES, parseWert, netzInteresse, netzFreigabe, offeneGruppen };
 export {
   renderUebersicht, renderTeilnahme, renderAnalyse, renderMarkt, renderBuyer,
   renderTeam, renderGate, renderProfil, renderDocs, REGIONS,

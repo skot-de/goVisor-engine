@@ -93,16 +93,25 @@ _SUMMARY_SYS = (
 )
 
 
-def summarize(text: str) -> dict:
-    txt = chat([{"role": "system", "content": _SUMMARY_SYS},
-                {"role": "user", "content": text[:28_000]}], model=MODEL)
-    txt = re.sub(r"^```json|^```|```$", "", txt.strip(), flags=re.M).strip()
+def summary_messages(text: str) -> list[dict]:
+    """Die Nachrichten der Zusammenfassung — auch der Stapelweg braucht sie."""
+    return [{"role": "system", "content": _SUMMARY_SYS},
+            {"role": "user", "content": text[:28_000]}]
+
+
+def _summary_aus(txt: str) -> dict:
+    """Rohantwort → Ampel und Zusammenfassung. Von beiden Wegen benutzt."""
+    txt = re.sub(r"^```json|^```|```$", "", (txt or "").strip(), flags=re.M).strip()
     try:
         d = json.loads(txt)
         return {"ampel": d.get("ampel", "gelb"), "ampel_grund": d.get("ampel_grund", ""),
                 "zusammenfassung": d.get("zusammenfassung", "")}
     except json.JSONDecodeError:
         return {"ampel": "gelb", "ampel_grund": "", "zusammenfassung": ""}
+
+
+def summarize(text: str) -> dict:
+    return _summary_aus(chat(summary_messages(text), model=MODEL))
 
 
 def _derive_legacy(checklist: list) -> dict:
@@ -211,7 +220,7 @@ AUSWERTUNG = ("fragenantworten",) + tuple(doctypes.PRIORITY)
 
 
 def analyze_notice(files: list, structured: dict | None = None,
-                   notice_id: str = "") -> dict:
+                   notice_id: str = "", antwort_fn=None) -> dict:
     """files = [(filename, text), …] eines Vorgangs → Analyse mit verifizierter Checkliste.
 
     Zwei Schienen: **Parser** (§6.2, structured={name: parser_result}) liefert strukturierte
@@ -258,7 +267,19 @@ def analyze_notice(files: list, structured: dict | None = None,
             continue
         sent_chars += min(len(blob), 60_000)
         llm_started = True
-        res = docextract.extract(dt, blob, by_type_file[dt], model=MODEL)
+        # ── EIN Pfad, zwei Bezugsquellen ───────────────────────────────────────────────
+        # `antwort_fn` liefert die Rohantwort, statt sie zu holen: der Stapelweg reicht
+        # damit fertige Antworten herein, und in der Sammelphase gibt er `None` zurueck
+        # und merkt sich nur die Anfrage. Ohne diese Naht gaebe es zwei Auswertungen —
+        # und die zweite waere in einem Monat anders als die erste.
+        if antwort_fn is None:
+            res = docextract.extract(dt, blob, by_type_file[dt], model=MODEL)
+        else:
+            roh = antwort_fn("extract", dt, blob, by_type_file[dt])
+            if roh is None:
+                continue
+            res = docextract.verarbeite(dt, blob, by_type_file[dt],
+                                        docextract._parse_array(roh) or [])
         checklist.extend(res.get("items", []))
         rejected += res.get("rejected", 0)
 
@@ -274,7 +295,13 @@ def analyze_notice(files: list, structured: dict | None = None,
 
     seen = sorted(set(by_type_text) | {doctypes.classify(n) for n in parsed_files})
 
-    summary = summarize("\n\n".join(t for _, t in files))
+    volltext = "\n\n".join(t for _, t in files)
+    if antwort_fn is None:
+        summary = summarize(volltext)
+    else:
+        roh = antwort_fn("summary", "", volltext, "")
+        summary = _summary_aus(roh) if roh is not None else {
+            "ampel": "gelb", "ampel_grund": "", "zusammenfassung": ""}
     missing = [dt for dt in doctypes.PRIORITY if dt not in seen]      # Q1a-Vollständigkeit (§4.3)
     out = {
         **summary,
@@ -323,6 +350,62 @@ def structured_for_notice(notice_id: str, docs_root: Path = None) -> dict:
             if r:
                 out[name] = r
     return out
+
+
+def _bestand() -> tuple[dict, dict]:
+    """(Volltexte je Vorgang, bisherige Ergebnisse). Herausgezogen, damit der Stapelweg
+    (`scripts/analyse_batch.py`) dieselbe Auswahl trifft wie der synchrone Lauf."""
+    import duckdb
+    con = duckdb.connect()
+    rows = con.execute(
+        f"""SELECT notice_id, file, text FROM read_parquet('{SRC.as_posix()}')
+            WHERE {SQL_BRAUCHBAR} AND text IS NOT NULL AND length(text) > 120""").fetchall()
+    con.close()
+    per = defaultdict(list)
+    for nid, datei, text in rows:
+        per[nid].append((datei, text))
+    for nid, dateien in per.items():
+        raus = docpipe.ueberholte(f for f, _ in dateien)
+        if raus:
+            per[nid] = [(f, t) for f, t in dateien if f not in raus]
+    fertig = json.loads(OUT.read_text(encoding="utf-8")) if OUT.exists() else {}
+    return per, fertig
+
+
+def offene_vorgaenge(limit: int) -> list[tuple[str, list, dict]]:
+    """Was noch zu analysieren ist — (Kennung, Dateien, Parser-Ergebnisse)."""
+    import duckdb
+    per, fertig = _bestand()
+    todo = [n for n in per if n not in fertig]
+    offen = {r[0] for r in duckdb.connect().execute(
+        f"""SELECT lead_id FROM read_parquet('{ROOT}/data/gold/DE/lead_export.parquet')
+            WHERE phase='open' AND deadline_date > current_date""").fetchall()}
+    todo = [n for n in todo if n in offen][:limit]
+    return [(n, per[n], structured_for_notice(n)) for n in todo]
+
+
+def uebernehmen_aus_batch(nids: list, antworten: dict, leser_fabrik) -> int:
+    """Stapel-Antworten → fertige Analysen, ueber DASSELBE `analyze_notice`.
+
+    ⚠ Geschrieben wird erst, wenn alle Vorgaenge durch sind — und in eine Zwischendatei,
+    die dann umbenannt wird. Ein Abbruch mittendrin darf `doc-analysis.json` nicht halb
+    beschrieben zuruecklassen; sie ist die Datei, aus der das Frontend liest.
+    """
+    per, out = _bestand()
+    n = 0
+    for nid in nids:
+        if nid not in per:
+            continue
+        res = analyze_notice(per[nid], structured=structured_for_notice(nid),
+                             notice_id=nid, antwort_fn=leser_fabrik(nid, antworten))
+        res["model"] = MODEL + " (batch)"
+        out[nid] = res
+        n += 1
+    tmp = OUT.with_suffix(".teil")
+    tmp.write_text(json.dumps(out, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+    tmp.replace(OUT)
+    print(f"    {n} Vorgänge übernommen → {OUT.name}")
+    return n
 
 
 def main() -> int:

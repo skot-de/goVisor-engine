@@ -329,6 +329,21 @@ export async function Landing() {
             <span className="lp-baustein-symbol" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"
                    strokeLinecap="round" strokeLinejoin="round">
+                <path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z" />
+                <path d="M14 3v5h5" />
+                <path d="M12 18v-6" />
+                <path d="M9.5 14.5 12 12l2.5 2.5" />
+              </svg>
+            </span>
+            <h3>Unterlagen rein, Checkliste zurück</h3>
+            <p>Zieht das Portal-Paket herein: goVisor liest PDF, Word und Excel aus, auch
+              verschachtelt, und gibt eine abhakbare Bieter-Checkliste zurück. Jede Angabe mit
+              Fundstelle im Originaldokument.</p>
+          </li>
+          <li>
+            <span className="lp-baustein-symbol" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"
+                   strokeLinecap="round" strokeLinejoin="round">
                 <path d="M3 21h18" />
                 <path d="M5 21V9.5L12 5l7 4.5V21" />
                 <path d="M9 21v-5h6v5" />
@@ -352,6 +367,35 @@ export async function Landing() {
             <h3>Wettbewerber und ihre Zuschläge</h3>
             <p>Wer in eurem Fachgebiet gewinnt, wo er sitzt und welche Aufträge er zuletzt
               geholt hat. Auch der, der gerade auf eurem Wunschauftrag sitzt.</p>
+          </li>
+          <li>
+            <span className="lp-baustein-symbol" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"
+                   strokeLinecap="round" strokeLinejoin="round">
+                <path d="M4 20V10" />
+                <path d="M10 20V4" />
+                <path d="M16 20v-7" />
+                <path d="M22 20V8" />
+              </svg>
+            </span>
+            <h3>Strategie: Pipeline und freie Felder</h3>
+            <p>Was in den nächsten zwölf bis sechsunddreißig Monaten zu erwarten ist, welche
+              Segmente eng besetzt sind und wo Platz ist. Abgeleitet aus den Vergaben eures
+              Fachgebiets, nicht aus einer Umfrage.</p>
+          </li>
+          <li>
+            <span className="lp-baustein-symbol" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"
+                   strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="7" cy="7" r="3" />
+                <circle cx="17" cy="17" r="3" />
+                <path d="M10 7h4a3 3 0 0 1 3 3v4" />
+                <path d="M7 10v4a3 3 0 0 0 3 3h4" />
+              </svg>
+            </span>
+            <h3>Partnersuche für Mehr-Los-Vergaben</h3>
+            <p>Vergaben mit mehreren Losen, bei denen ein Partner die übrigen abdecken könnte.
+              Sichtbar wird das erst, wenn beide Seiten sich dafür freigeben.</p>
           </li>
           <li>
             <span className="lp-baustein-symbol" aria-hidden="true">

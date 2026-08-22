@@ -4,7 +4,11 @@
 
 Struktur → Feature → Erklärung. Basis für die Landingpage. **Reifegrad:** 🟢 live/verifiziert ·
 🟡 gebaut (funktioniert, ggf. an Demo-/Teildaten) · ⚪ Stub/ruht (Gerüst da, noch nicht scharf).
-Stand: 2026-07-30.
+Stand: 2026-07-30, Abschnitte H und I am 2026-08-22 nachgemessen.
+
+> ⚠ **H lief nie auf Demo-Daten.** `web/data/strategie.json` wird täglich von
+> `scripts/export_strategie.py` aus dem Gold-Layer gebaut (34.158 Verträge allein im Bau).
+> Der Reifegrad 🟡 stand hier aus einer früheren Bauphase und war irreführend.
 
 ---
 
@@ -94,11 +98,11 @@ Nicht nur ein Bieter-Tab, sondern eine **eigene Rolle** (Route `/authority`, Ums
 
 | Unteransicht | Frage, die sie beantwortet | Reife |
 |---|---|---|
-| **Pipeline** | Was kommt in 12/24/36 Monaten? | 🟡 |
-| **Felder (White-Space)** | Wo ist Platz, wo ist es eng? Marktchancen-Score je CPV-Segment (Nachfrage × Schwäche × Wert), Make/Buy/Partner. | 🟡 |
-| **Vergabestellen** | Wo lohnt Beziehungsaufbau? | 🟡 |
-| **Wettbewerb** | Wer holt was, wer hält was? (Incumbent-Retention, Head-to-Head) | 🟡 |
-| **Position / Fähigkeiten / Bindung / Profil** | Wo stehen wir, was blockiert uns, was ist uns verschlossen, wer sind wir? | 🟡 |
+| **Pipeline** | Was kommt in 12/24/36 Monaten? | 🟢 |
+| **Felder (White-Space)** | Wo ist Platz, wo ist es eng? Marktchancen-Score je CPV-Segment (Nachfrage × Schwäche × Wert), Make/Buy/Partner. | 🟢 |
+| **Vergabestellen** | Wo lohnt Beziehungsaufbau? | 🟢 |
+| **Wettbewerb** | Wer holt was, wer hält was? (Incumbent-Retention, Head-to-Head) | 🟢 |
+| **Position / Fähigkeiten / Bindung / Profil** | Wo stehen wir, was blockiert uns, was ist uns verschlossen, wer sind wir? | 🟢 |
 | **Verzweiflungs-Chronik** | Chronisch erfolglose Ausschreibungen („seit X Jahren Y-mal gesucht") — stärkster Kauf-/Chancen-Hinweis. | 🟢 (Daten) |
 | **CPV-Nähe** | Offene Märkte nah am eigenen Skill (Firmen-Co-Occurrence). | 🟢 (Daten) |
 
@@ -106,7 +110,7 @@ Nicht nur ein Bieter-Tab, sondern eine **eigene Rolle** (Route `/authority`, Ums
 
 | Feature | Erklärung | Reife |
 |---|---|---|
-| **Partnersuche** | Mehr-Los-Vergaben, bei denen ein Partner weitere Lose abdecken kann; beidseitig freiwillige Freigabe. | 🟡 |
+| **Partnersuche** | Oberfläche gebaut, aber **ohne Unterbau**: `netzPartner` schreibt niemand, die Interessensmeldung lebt nur im Speicher. Es kann kein Treffer entstehen. Braucht Tabelle, API und Matching (und andere Nutzer). | ⚪ |
 | **Konsortial-Erkennung** | Bietergemeinschaften werden als solche erkannt und geflaggt. | 🟢 (Daten) |
 
 ## J. Arbeits-Workflow (Team/CRM-artig)

@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
   LEADS, BRANCHEN, COLS, applyState, relabelLeads, visible, sorted, syncLocationColumn,
-  suggestList, classifyQuery, netzInteresse, netzFreigabe, offeneGruppen, angaben, setLeads, setMarket, setPlzGeo, setPlzLand,
+  suggestList, classifyQuery, netzInteresse, netzFreigabe, offeneGruppen, angaben, setLeads, setMarket, setBestand, setPlzGeo, setPlzLand,
   setProfile, setUserContracts, parseWert, aufwandStufe,
 } from "@/lib/explorerCore";
 import { loadContracts } from "@/lib/supabase/contracts";
@@ -327,6 +327,24 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
   useEffect(() => {
     if (marktRef.current[aktiveBranche]) { setMarket(marktRef.current[aktiveBranche]); bump(); }
   }, [aktiveBranche, bump]);
+
+  // Der eigene Bestand für „Position" und „Profil". Bis zum 2026-08-22 holte den niemand:
+  // die Ansicht las nur die Leerstufe in `PROFIL`, und deshalb standen dort Nullen, obwohl
+  // `/api/firma` das vorberechnete Profil der Identität längst ausliefert. Ohne bestätigte
+  // Firma bleibt es bewusst leer — dann gibt es keinen Bestand, den wir zeigen dürften.
+  // `Profile` ist `ReturnType<typeof buildProfile>` und kennt `identityId` nicht — das Feld
+  // setzt erst das Onboarding auf das gespeicherte Profil. Gleiche Lage wie bei
+  // `brancheFromProfile` weiter oben, deshalb hier derselbe enge Zugriff statt eines
+  // aufgeweichten Typs.
+  const identId = (realProfile as unknown as { identityId?: string } | null)?.identityId;
+  useEffect(() => {
+    const id = identId;
+    if (!id) { setBestand(null); bump(); return; }
+    fetch(`/api/firma?id=${encodeURIComponent(id)}`)
+      .then((r) => (r.ok ? r.json() : null))
+      .then((fp) => { setBestand(fp && !fp.error ? fp : null); bump(); })
+      .catch(() => { setBestand(null); bump(); });
+  }, [identId, bump]);
 
   // Vom Nutzer gezogene Spaltenbreiten (px), je Spaltenschlüssel. Gehört später ins
   // gespeicherte Arbeitsplatz-Profil (Übergabenotiz §10, um „Breite" erweitert).

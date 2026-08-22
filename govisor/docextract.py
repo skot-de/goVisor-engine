@@ -234,8 +234,20 @@ def extract(doctype: str, text: str, source_file: str, chat_fn=None,
     if parsed is None:
         return {"items": [], "rejected": 0, "parse_error": True}
 
+    return verarbeite(doctype, text, source_file, parsed)
+
+
+def verarbeite(doctype: str, text: str, source_file: str, parsed: list) -> dict:
+    """Rohe Modellantwort (schon als Liste geparst) → geprueffte Eintraege.
+
+    ⚠ **Herausgezogen aus `extract`, damit der Batch-Weg dieselbe Pruefung benutzt.** Die
+    Belegpflicht (§6a.2) und die Schema-Pruefung duerfen nicht davon abhaengen, ob eine
+    Antwort synchron oder Stunden spaeter aus einem Stapel kommt — sonst gaebe es zwei
+    Wahrheiten darueber, was ein gueltiger Eintrag ist, und die zweite veraltet zuerst.
+    """
+    allowed = set(_TASKS[doctype]["req_types"]) if doctype in _TASKS else set()
     items, rejected = [], 0
-    for raw_item in parsed[:_MAX_ITEMS]:
+    for raw_item in (parsed or [])[:_MAX_ITEMS]:
         if not validate_item(raw_item, allowed):
             rejected += 1
             continue

@@ -1247,3 +1247,35 @@ def test_kandidaten_fragen_nach_der_zahl_der_treffer():
     assert 'matches.length === 1 ?' in onb, "die Frage unterscheidet nicht nach der Trefferzahl"
     for satz in ('Seid ihr das?', 'Welche davon seid ihr?', 'Kein Treffer für diesen Namen'):
         assert satz in onb, f"Fassung fehlt: {satz}"
+
+
+def test_position_und_profil_lesen_den_echten_bestand():
+    """„wieso laufen die auf demo daten?" (Sven, 2026-08-22).
+
+    Teilweise stimmte die Diagnose: die Markt-Abschnitte der Strategie (Pipeline, Felder,
+    Vergabestellen, Wettbewerb, Bindung, Fähigkeiten) liefen längst auf echten Aggregaten
+    aus dem Gold-Layer. „Position" und „Profil" dagegen lasen `PROFIL`, und dort steht seit
+    der Ehrlichkeits-Korrektur nur die Leerstufe: eine Firma mit 4.475 Zuschlägen sah
+    Nullen, obwohl `/api/firma` ihr vorberechnetes Profil längst ausliefert.
+
+    Zwei Fallen, die dabei aufgefallen sind und hier festgehalten werden:
+
+    · `fp.felder` sind die EIGENEN Schwerpunkte der Firma, nicht die benachbarten Felder.
+      Sie unter die Überschrift „In benachbarten Feldern" zu setzen hiesse, gemessene Daten
+      falsch zu beschriften. Die Nachbarn kommen aus der CPV-Nähe je Branche.
+    · Die Oberfläche setzt Zahlen ROH ein (`n(v)`). Die alte Demo-Stufe trug fertige
+      Zeichenketten („4,2 Mio €"), die echten Werte sind Fliesskomma: ohne Formatierung
+      stand dort „17270807468.510025".
+    """
+    core = (ROOT / "web" / "lib" / "explorerCore.js").read_text(encoding="utf-8")
+    assert "function setBestand(" in core, "der echte Bestand wird nicht mehr eingespeist"
+    assert "const d = BESTAND || PROFIL" in core, \
+        "renderProfil liest wieder nur die Leerstufe, nicht den echten Bestand"
+    assert "volumen: geld(" in core and "median:  geld(" in core, \
+        "Geldwerte gehen ungeformt in die Oberflaeche (17270807468.510025)"
+    assert "nachbarn: []" in core, \
+        "die eigenen Felder stehen wieder unter der Überschrift „benachbarte Felder\""
+    assert "function setNachbarn(" in core, "die Nachbarfelder haben keine Quelle mehr"
+
+    shell = (ROOT / "web" / "components" / "explorer" / "ExplorerShell.tsx").read_text(encoding="utf-8")
+    assert "/api/firma?id=" in shell, "niemand holt das Firmenprofil der angemeldeten Identität"

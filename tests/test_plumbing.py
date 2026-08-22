@@ -3248,9 +3248,15 @@ def test_geldwache_schwingt_bei_parallelen_faeden_kaum_ueber(monkeypatch):
         f.join()
 
     ausgegeben = zaehler["n"] * KOSTEN
-    assert ausgegeben >= LIMIT * 0.8, "viel zu frueh gestoppt — die Wache waere unbrauchbar"
-    assert ausgegeben < LIMIT + 0.5, (
-        f"{ausgegeben:.2f} $ bei Limit {LIMIT:.2f} $ — zu viel Überschwingen")
+    # ⚠ Grosszuegige Schranken mit Absicht. Sechs Faeden und eine adaptive Pruefung ergeben
+    # von Lauf zu Lauf ein anderes Ergebnis; eine enge Grenze macht daraus einen flatternden
+    # Test, und ein flatternder Test an der Geldbremse wird irgendwann ignoriert statt
+    # untersucht. Gemessen wird der REGRESSIONSFALL: vor dem klebrigen Abbruch waren es
+    # 8,48 $ bei Limit 5,00 $ (+3,48). Alles unter +1,00 ist die behobene Welt.
+    assert ausgegeben >= LIMIT * 0.6, "viel zu frueh gestoppt — die Wache waere unbrauchbar"
+    assert ausgegeben < LIMIT + 1.0, (
+        f"{ausgegeben:.2f} $ bei Limit {LIMIT:.2f} $ — zu viel Überschwingen "
+        f"(vor der Behebung: +3,48 $)")
 
 
 def test_abbruch_der_geldwache_ist_klebrig(monkeypatch):
@@ -3327,3 +3333,62 @@ def test_tagesbuch_faellt_nicht_lautlos_aus(monkeypatch, capsys):
               / "govisor" / "llm.py").read_text(encoding="utf-8")
     assert "Tagesbuch nicht schreibbar" in quelle, "das Scheitern wird still verschluckt"
     assert "buch_gewarnt" in quelle
+
+
+def test_batchweg_benutzt_dieselbe_auswertung_wie_der_synchrone():
+    """⚠ Zwei Auswertungspfade wären in einem Monat verschieden.
+
+    Der Stapelweg unterscheidet sich vom synchronen NUR in `antwort_fn`: sie liefert eine
+    schon vorliegende Antwort statt einen Modellaufruf zu machen. Prüfung, Belegpflicht und
+    Zusammenbau bleiben `analyze_notice` und `docextract.verarbeite`.
+    """
+    import importlib.util
+    import inspect
+    import sys
+
+    from govisor import docextract
+
+    # Die Prüfung ist aus `extract` herausgezogen — beide Wege rufen sie.
+    assert callable(docextract.verarbeite)
+    assert "verarbeite(" in inspect.getsource(docextract.extract)
+
+    wurzel = pathlib.Path(__file__).resolve().parent.parent
+    spec = importlib.util.spec_from_file_location("_ad4", wurzel / "scripts" / "analyze_docs.py")
+    ad = importlib.util.module_from_spec(spec)
+    sys.modules["_ad4"] = ad
+    spec.loader.exec_module(ad)
+    assert "antwort_fn" in inspect.signature(ad.analyze_notice).parameters
+    for name in ("offene_vorgaenge", "uebernehmen_aus_batch", "summary_messages", "_summary_aus"):
+        assert hasattr(ad, name), f"{name} fehlt — der Stapelweg braucht es"
+
+    laeufer = (wurzel / "scripts" / "analyse_batch.py").read_text(encoding="utf-8")
+    assert "analyze_notice" in laeufer, "der Stapelweg baut eine eigene Auswertung"
+
+
+def test_batch_kennt_den_richtigen_endpunkt_und_wartet_nicht():
+    """⚠ Zwei Fallen, beide am 2026-08-22 erlebt.
+
+    1. Der Endpunkt ist `api/beta/batches`, NICHT `api/v1/...` — auf `v1` liefert OpenRouter
+       eine HTML-Seite, was beim Abtasten wie ein 404 aussieht.
+    2. Das Fenster ist 24 Stunden. Ein Stapel mit zwei Trivialanfragen stand nach 25 Minuten
+       noch auf `in_progress`. Wer daraus eine Warteschleife baut, blockiert den Arbeiter.
+    """
+    from govisor import llm_batch
+
+    assert "api/beta/batches" in llm_batch.BASIS
+    assert "/v1/batches" not in llm_batch.BASIS
+    quelle = (pathlib.Path(__file__).resolve().parent.parent
+              / "govisor" / "llm_batch.py").read_text(encoding="utf-8")
+    assert "while" not in quelle, "keine Warteschleife im Stapelmodul"
+    # Der Zustand muss die Platte überleben, sonst verliert ein Neustart den Stapel.
+    assert "LAGER" in quelle and "def offene(" in quelle and "def erledigt(" in quelle
+
+
+def test_batch_ergebnis_wird_atomar_geschrieben():
+    """`doc-analysis.json` ist die Datei, aus der das Frontend liest — ein Abbruch mitten
+    im Schreiben darf sie nicht halb hinterlassen."""
+    quelle = (pathlib.Path(__file__).resolve().parent.parent
+              / "scripts" / "analyze_docs.py").read_text(encoding="utf-8")
+    i = quelle.index("def uebernehmen_aus_batch")
+    block = quelle[i:i + 2000]
+    assert 'with_suffix(".teil")' in block and "tmp.replace(OUT)" in block

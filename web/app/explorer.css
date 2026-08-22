@@ -893,7 +893,11 @@ body[data-area="profil"] .profilview{display:block;grid-row:1/-1}
 .pen-n{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:var(--t-sm);font-weight:500}
 .pen-bar{width:104px;height:7px;border-radius:100px;background:var(--surface-3);overflow:hidden;flex:none}
 .pen-bar i{display:block;height:100%;background:var(--signal);border-radius:100px}
-.pen-v{font-family:var(--mono);font-size:var(--t-sm);width:62px;text-align:right;flex:none;color:var(--ink-700)}
+.pen-v{font-family:var(--mono);font-size:var(--t-sm);width:82px;text-align:right;flex:none;color:var(--ink-700)}
+/* Herkunft der Bindung statt Balken: der Balken brauchte die Gesamtzahl der Vergaben je
+   Stelle, und die haben wir je Vergabestelle nicht. Lieber zwei belegte Angaben als eine
+   erfundene Quote. */
+.pen-s{font-size:var(--t-xs,11px);color:var(--ink-500);flex:none;margin-right:10px;white-space:nowrap}
 .pgap{font-size:var(--t-meta);color:var(--ink-400);margin-top:var(--s3);padding-top:var(--s3);
   border-top:1px solid var(--line);line-height:1.5}
 .pdemo{display:inline-flex;align-items:center;gap:4px;background:var(--surface-3);padding:3px;border-radius:100px}
