@@ -3732,3 +3732,37 @@ def test_dateilisten_der_portale_werden_ausgeliefert():
     kern = (wurzel / "web/lib/explorerCore.js").read_text(encoding="utf-8")
     assert "va-liste" in kern and "Dateiliste des Portals, nicht gelesen" in kern, \
         "die Anzeige nennt den Unterschied zwischen gelesen und gelistet nicht mehr"
+
+
+def test_at_leads_tragen_einen_link_zur_quelle():
+    """Sven am 2026-08-22: „wenn schon keine dokumente, dann wären links ganz gut."
+
+    ⚠ Bei 508 von 1.199 offenen AT-Vergaben zeigte das Frontend GAR KEINEN Weg zur Quelle.
+    Der Grund stand in `build_at_gold`: `n.ted_url AS documents_url` — und `ted_url` ist für
+    die nationale Quelle IMMER leer. Gemessen: von 10.877 `atv-`-Vorgängen in `lead_detail`
+    hatten null eine ted_url und null eine buyer_url.
+
+    Dabei trägt jeder einzelne der 238.347 atv-Vorgänge in Silber eine eigene Seite:
+    `https://offenevergaben.at/auftrag/31290`. Dokumente gibt es dort nicht — die Portale
+    stehen hinter CAPTCHA oder verlinken nur ihre Startseite —, aber die Bekanntmachung.
+    Ein Link dorthin ist mehr als kein Link.
+
+    Nach der Korrektur: 943 von 943 offenen AT-Vergaben mit Link (vorher 691 von 1.199).
+    """
+    wurzel = pathlib.Path(__file__).resolve().parent.parent
+    gold = (wurzel / "govisor/gold.py").read_text(encoding="utf-8")
+    assert "coalesce(n.ted_url, n.portal_url) AS documents_url" in gold, \
+        "die AT-Leads fallen wieder auf eine leere ted_url zurück"
+
+    # Und im Ergebnis nachsehen, falls der Export schon gelaufen ist.
+    import json
+    ohne = 0
+    for datei in (wurzel / "web/data").glob("leads-*.json"):
+        daten = json.loads(datei.read_text(encoding="utf-8"))
+        leads = daten if isinstance(daten, list) else next(
+            (v for v in daten.values() if isinstance(v, list)), [])
+        for l in leads:
+            if l.get("src") == "f02" and l.get("land") == "AT":
+                if not (l.get("unterlagen") or {}).get("url"):
+                    ohne += 1
+    assert ohne == 0, f"{ohne} offene AT-Vergaben ohne jeden Link zur Quelle"

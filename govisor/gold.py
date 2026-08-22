@@ -4407,7 +4407,15 @@ def build_at_gold(cfg: Config, country: str = "AT"):
              -- Beide sind Schätzwerte, also bleibt das Vokabular 'estimated' korrekt
              -- (die Allow-Liste in tests/test_plumbing.py::_EXPORT_VOCAB ist fest).
              CASE WHEN {WERT_SQL} IS NOT NULL THEN 'estimated' ELSE 'unknown' END AS value_source,
-             n.ted_url AS source_url, n.ted_url AS documents_url,
+             -- ⚠ `ted_url` IST FUER DIE NATIONALE AT-QUELLE IMMER LEER. Gemessen am
+             -- 2026-08-22: von 10.877 `atv-`-Vorgaengen in `lead_detail` hatten NULL eine
+             -- ted_url und NULL eine buyer_url — das Frontend zeigte bei 508 heute offenen
+             -- AT-Vergaben ueberhaupt keinen Weg zur Quelle. Dabei traegt jeder einzelne
+             -- der 238.347 atv-Vorgaenge in Silber eine eigene Seite:
+             -- `https://offenevergaben.at/auftrag/31290`. Dokumente gibt es dort nicht,
+             -- aber die Bekanntmachung — und ein Link dorthin ist mehr als kein Link.
+             coalesce(n.ted_url, n.portal_url) AS source_url,
+             coalesce(n.ted_url, n.portal_url) AS documents_url,
              FALSE AS is_nationwide, 'AT' AS country,
              m.winner_name AS incumbent_name, m.ayear AS incumbent_since_year,
              CASE WHEN m.winner_name IS NOT NULL THEN 'uncertain' END AS incumbent_source,
