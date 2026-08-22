@@ -3766,3 +3766,45 @@ def test_at_leads_tragen_einen_link_zur_quelle():
                 if not (l.get("unterlagen") or {}).get("url"):
                     ohne += 1
     assert ohne == 0, f"{ohne} offene AT-Vergaben ohne jeden Link zur Quelle"
+
+
+def test_laenderuebergreifende_tabellen_werden_unioniert():
+    """`export_web_leads.py` liest die meisten Tabellen über `_union(...)` — DE plus jedes
+    weitere `gold/<CC>/<table>.parquet`. Zwei Stellen lasen aber `{G}/…`, also NUR DE:
+
+        lead_lot         AT 10.871 Lose über 6.891 Vergaben, CH 7.660 über 7.346 —
+                         im Frontend standen „Lose" für DE bei 79 %, für AT und CH bei 0 %
+        entity_identity  AT 70.031 Identitäten, CH 33.443 — ein österreichischer
+                         Amtsinhaber bekam keinen Namen
+
+    ⚠ Ein `{G}` mitten in einer sonst länderübergreifenden Datei ist genau die Sorte Rest,
+    die der EU-weit-Grundsatz in CLAUDE.md meint: für DE gebaut, für den Rest vergessen,
+    und niemand sieht es, weil das Feld einfach leer bleibt statt zu scheitern.
+
+    Nach der Korrektur: Lose AT 25 %, CH 41 %.
+    """
+    wurzel = pathlib.Path(__file__).resolve().parent.parent
+    roh = (wurzel / "scripts/export_web_leads.py").read_text(encoding="utf-8")
+    # Kommentare raus, BEVOR gesucht wird: die Datei erklärt in einem Kommentar, was dort
+    # früher stand. Ein Test, der Prosa mitzählt, zwingt dazu, die Begründung zu löschen —
+    # heute zum dritten Mal dieselbe Falle.
+    quelle = "\n".join(z for z in roh.splitlines() if not z.strip().startswith("#"))
+    for tabelle in ("lead_lot", "entity_identity"):
+        assert f'_union("{tabelle}")' in quelle, f"{tabelle} wird wieder nur für DE gelesen"
+        assert f"{{G}}/{tabelle}.parquet" not in quelle, f"{tabelle} hängt wieder am DE-Pfad"
+
+    # Und die Tabellen, die es je Land wirklich gibt, müssen auch je Land gelesen werden.
+    import collections
+    vorhanden = collections.defaultdict(set)
+    for p in (wurzel / "data/gold").glob("*/*.parquet"):
+        vorhanden[p.stem].add(p.parent.name)
+    # ⚠ `dim_*` sind AUSGENOMMEN, und zwar zu Recht: Dimensionstabellen (CPV-Klartext,
+    # NUTS-Namen, PLZ-Koordinaten) sind ihrer Natur nach länderunabhängig. Dass sie je Land
+    # als Datei liegen, ist ein Nebenprodukt des Bauwegs, kein Inhaltsunterschied — die
+    # DE-Fassung ist die vollständige. Ein Test, der sie mitzählt, erzeugt drei Fehlalarme
+    # und wird deshalb abgeschaltet statt befolgt.
+    mehrlaendrig = {t for t, l in vorhanden.items() if len(l) > 1 and not t.startswith("dim_")}
+    for tabelle in sorted(mehrlaendrig):
+        if f"{{G}}/{tabelle}.parquet" in quelle:
+            raise AssertionError(
+                f"{tabelle} liegt für {sorted(vorhanden[tabelle])} vor, wird aber nur aus DE gelesen")

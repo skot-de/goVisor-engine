@@ -92,7 +92,12 @@ REGION_FILL = (f"read_parquet('{_FILL.as_posix()}')" if _FILL.exists() else
                "NULL::VARCHAR AS quelle WHERE false)")
 CL = f"read_parquet('{G}/dim_cpv_label.parquet')"
 DC = f"read_parquet('{G}/dim_cpv.parquet')"
-LOTS = f"read_parquet('{G}/lead_lot.parquet')"
+# ⚠ ÜBER ALLE LÄNDER, nicht nur DE. Bis zum 2026-08-22 stand hier `{G}/lead_lot.parquet`
+# — also ausschliesslich `data/gold/DE`. Die österreichischen und Schweizer Lose existierten
+# längst (AT 10.871 über 6.891 Vergaben, CH 7.660 über 7.346), erreichten das Frontend aber
+# nie: „Lose" stand für DE bei 79 %, für AT und CH bei 0 %. Ein `{G}` mitten in einer sonst
+# länderübergreifenden Datei ist genau die Sorte Rest, die der EU-weit-Grundsatz meint.
+LOTS = _union("lead_lot")
 DN = f"read_parquet('{G}/dim_nuts.parquet')"   # NUTS-Code → Klartextname
 # Sprachfassungen je Lead. Ohne sie kann die Oberflaeche keine Dokumentsprache
 # anbieten, obwohl die Texte im Silber liegen. Guard: fehlt die Tabelle (Gold aelter
@@ -112,7 +117,10 @@ DBP = f"read_parquet('{G}/doe_buyer_profile.parquet')"
 ATTR = "read_parquet('data/silver/DE/attributes/*/*.parquet', hive_partitioning=1)"
 MO = f"read_parquet('{G}/market_opportunity.parquet')"
 CS = f"read_parquet('{G}/contractor_stats.parquet')"
-EI = f"read_parquet('{G}/entity_identity.parquet')"
+# ⚠ Ebenfalls über alle Länder: AT trägt 70.031 Identitäten, CH 33.443. Nur DE zu lesen
+# heisst, dass ein österreichischer Amtsinhaber keinen Namen bekommt — dieselbe Sorte
+# DE-Rest wie bei `lead_lot`.
+EI = _union("entity_identity")
 # HINWEIS-FELDER (s. web/lib/hinweise.ts). Zwei Dinge, die das Frontend braucht und die
 # nirgends sonst zusammenkommen:
 #
