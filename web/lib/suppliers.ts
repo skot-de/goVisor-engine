@@ -1,4 +1,4 @@
-import { loadDataFile } from "@/lib/dataSource";
+import { loadDataFile, ausSpeicher, inSpeicher } from "@/lib/dataSource";
 
 /* Serverseitiger Lieferanten-Index (Onboarding-Matching). Einmal geladen, gecacht. */
 
@@ -25,17 +25,21 @@ export type Supplier = {
   members: Member[];
 };
 
-let CACHE: Supplier[] | null = null;
-
+/* ⚠ KEIN EWIGER SPEICHER MEHR. Vorher hielt eine Modulvariable die geparste Datei bis zum
+   Neustart der Instanz fest. Lokal harmlos, im Betrieb aber falsch: die Exporte laufen
+   nachts, und eine laufende Instanz hätte bis zum nächsten Deployment die Zahlen von gestern
+   ausgeliefert — ohne dass es jemand sieht, denn alte Daten sehen aus wie frische.
+   Jetzt unter demselben Regime wie die Rohdateien (Verfallszeit + Byte-Budget). Gespeichert
+   wird das GEPARSTE Ergebnis: das Parsen von 39 MB JSON ist teurer als der Abruf. */
 export async function loadSuppliers(): Promise<Supplier[]> {
-  if (CACHE) return CACHE;
+  const fertig = ausSpeicher<Supplier[]>("suppliers:geparst");
+  if (fertig) return fertig;
   try {
     const raw = (await loadDataFile("suppliers.json")) ?? "";
-    CACHE = JSON.parse(raw) as Supplier[];
+    return inSpeicher("suppliers:geparst", JSON.parse(raw) as Supplier[], raw.length);
   } catch {
-    CACHE = [];
+    return [];
   }
-  return CACHE;
 }
 
 /* ── Rückwärts-Index: Domain → Firma ─────────────────────────────────────────────────

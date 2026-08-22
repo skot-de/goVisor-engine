@@ -1584,3 +1584,38 @@ def test_der_objektspeicher_wird_signiert_gelesen():
     skript = ROOT / "web" / "scripts" / "pruefe-s3signatur.mjs"
     p = subprocess.run(["node", str(skript)], capture_output=True, text=True)
     assert p.returncode == 0, f"Signatur stimmt nicht:\n{p.stdout}{p.stderr}"
+
+
+def test_datendateien_werden_zwischengespeichert():
+    """`loadDataFile` holte jede Datei bei JEDER Anfrage neu (`cache: "no-store"`).
+
+    Lokal ist das ein Plattenzugriff und folgenlos. Aus einem Objektspeicher sind es 42 MB
+    für `leads-bau.json` und 30 MB für `detail-bau.json`, pro Branchenwechsel und pro Nutzer.
+    Gemessen am 2026-08-22: elf von vierzehn Aufrufern hatten keinen eigenen Speicher.
+
+    ⚠ Und die drei, die einen hatten, hatten den falschen: eine Modulvariable OHNE Verfall.
+    Die Exporte laufen nachts — eine laufende Instanz hätte bis zum nächsten Deployment die
+    Zahlen von gestern ausgeliefert, ohne dass es jemand sieht. Alte Daten sehen aus wie
+    frische; genau so hat `export_doc_text` hier monatelang den Anschluss verloren.
+
+    Der Plattenweg bleibt bewusst ungepuffert: er ist billig, und nach einem Export will man
+    sofort die neuen Zahlen sehen, nicht zehn Minuten die alten.
+    """
+    import subprocess
+    quelle = (ROOT / "web" / "lib" / "dataSource.ts").read_text(encoding="utf-8")
+    assert "erstelleCache" in quelle, "der Zwischenspeicher ist nicht mehr angeschlossen"
+    assert "speicher.setze(name, text, text.length)" in quelle, \
+        "Geholtes wird nicht abgelegt — dann bringt der Speicher nichts"
+
+    for datei, schluessel in (("suppliers.ts", "suppliers:geparst"),
+                              ("firmaProfiles.ts", "firma-profiles:geparst"),
+                              ("outreach.ts", "outreach:geparst")):
+        text = (ROOT / "web" / "lib" / datei).read_text(encoding="utf-8")
+        assert schluessel in text, f"{datei} hält seinen Bestand wieder ohne Verfall"
+        assert "let CACHE" not in text, f"{datei} hat wieder einen ewigen Modulspeicher"
+
+    # Die Regeln des Speichers selbst laufen unter `node` — Verdrängung und Verfall sind
+    # Verhalten, keine Zusicherung auf den Quelltext.
+    skript = ROOT / "web" / "scripts" / "pruefe-datacache.mjs"
+    p = subprocess.run(["node", str(skript)], capture_output=True, text=True)
+    assert p.returncode == 0, f"Zwischenspeicher hält seine Regeln nicht:\n{p.stdout}{p.stderr}"

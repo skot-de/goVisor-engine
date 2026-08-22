@@ -1,4 +1,4 @@
-import { loadDataFile } from "@/lib/dataSource";
+import { loadDataFile, ausSpeicher, inSpeicher } from "@/lib/dataSource";
 
 /* Vorberechnete Outreach-Landings (scripts/export_outreach.py), nach Token verschlüsselt.
  * Statisch + serverless-fähig — die Landing /t/<token> braucht kein Python im Deploy. */
@@ -68,18 +68,21 @@ export type Landing = {
   vorbelegung?: { branche: string | null; regionen: string[] } | null;
 };
 
-let CACHE: Record<string, Landing> | null = null;
 
 /* ⚠ Über `loadDataFile`, NICHT direkt von der Platte. Seit `web/data` nicht mehr in Git
    liegt, kommt die Datei auf einem Deployment aus dem Objektspeicher (`DATA_BASE_URL`).
    Ein direktes `readFile(process.cwd()/data/...)` findet dort NICHTS und liefert still
    einen leeren Bestand — die Oberfläche sähe aus, als gäbe es keine Daten. */
 export async function loadLanding(token: string): Promise<Landing | null> {
-  if (!CACHE) {
+  // Wie bei suppliers/firmaProfiles: kein ewiger Speicher mehr. Eine Instanz, die den
+  // Outreach-Bestand bis zum Neustart festhält, zeigt frisch angeschriebenen Firmen ihre
+  // Landing nicht — sie war beim Start noch nicht dabei.
+  let alle = ausSpeicher<Record<string, Landing>>("outreach:geparst");
+  if (!alle) {
     try {
       const roh = await loadDataFile("outreach.json");
-      CACHE = roh ? JSON.parse(roh) : {};
-    } catch { CACHE = {}; }
+      alle = inSpeicher("outreach:geparst", roh ? JSON.parse(roh) : {}, roh?.length ?? 0);
+    } catch { alle = inSpeicher("outreach:geparst", {}, 0); }
   }
-  return CACHE?.[token] ?? null;
+  return alle?.[token] ?? null;
 }

@@ -2,6 +2,7 @@ import "server-only";
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { signierterGet } from "@/lib/s3sign";
+import { erstelleCache } from "@/lib/dataCache";
 
 /**
  * Lädt eine Web-Daten-Datei (leads-<branche>.json, suppliers.json, doc-text/…) aus dem
@@ -31,14 +32,38 @@ function s3Zugang() {
   return { endpunkt, bucket, keyId, secret, region: process.env.DATA_S3_REGION || "auto" };
 }
 
+/* Zwischenspeicher für den ENTFERNTEN Weg. Der Plattenzugriff bleibt ungepuffert: er ist
+   billig, und in der Entwicklung will man nach einem Export sofort die neuen Zahlen sehen,
+   nicht zehn Minuten die alten. */
+const speicher = erstelleCache({
+  maxBytes: Number(process.env.DATA_CACHE_MAX_BYTES) || 256 * 1024 * 1024,
+  ttlMs: Number(process.env.DATA_CACHE_TTL_MS) || 10 * 60 * 1000,
+});
+
+/** Beliebigen abgeleiteten Wert unter demselben Regime halten (geparste JSON etwa).
+ *  `bytes` ist das Gewicht fürs Budget, üblicherweise die Länge des Rohtexts. */
+export function ausSpeicher<T>(schluessel: string): T | undefined {
+  return speicher.hole(schluessel) as T | undefined;
+}
+export function inSpeicher<T>(schluessel: string, wert: T, bytes: number): T {
+  speicher.setze(schluessel, wert, bytes);
+  return wert;
+}
+
 export async function loadDataFile(name: string): Promise<string | null> {
   const zugang = s3Zugang();
   if (zugang) {
+    const gepuffert = speicher.hole(name);
+    if (typeof gepuffert === "string") return gepuffert;
     try {
       const praefix = process.env.DATA_S3_PREFIX?.replace(/^\/+|\/+$/g, "");
       const { url, kopf } = await signierterGet(zugang, praefix ? `${praefix}/${name}` : name);
       const res = await fetch(url, { headers: kopf, cache: "no-store" });
-      if (res.ok) return await res.text();
+      if (res.ok) {
+        const text = await res.text();
+        speicher.setze(name, text, text.length);
+        return text;
+      }
       // 404 ist eine Antwort, kein Fehler: die Datei gibt es dort nicht. Alles andere ist
       // eine Störung, die man sehen muss — sonst fällt sie stumm auf die Platte zurück und
       // ein Deployment liefert alte oder gar keine Daten, ohne dass es jemand merkt.
@@ -50,9 +75,15 @@ export async function loadDataFile(name: string): Promise<string | null> {
   } else {
     const base = process.env.DATA_BASE_URL?.replace(/\/$/, "");
     if (base) {
+      const gepuffert = speicher.hole(name);
+      if (typeof gepuffert === "string") return gepuffert;
       try {
         const res = await fetch(`${base}/${name}`, { cache: "no-store" });
-        if (res.ok) return await res.text();
+        if (res.ok) {
+          const text = await res.text();
+          speicher.setze(name, text, text.length);
+          return text;
+        }
       } catch {
         /* Netz-/Storage-Fehler → auf Disk-Fallback ausweichen */
       }
