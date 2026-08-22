@@ -69,6 +69,10 @@ DAUERHAFT = frozenset({
     "kein_downloadbereich",  # Portal leitet anonyme Abrufe aufs Dashboard um
     "frameset",             # Inhalts-Frame bleibt ohne Sitzung leer
     "abgelaufen",           # Frist vorbei — das Portal nimmt die Unterlagen herunter
+    # Die Adresse antwortet 404/410. Das Dokument ist dort weg — kein Konto der Welt holt
+    # es zurück. Bis zum 2026-08-22 landeten diese 54 Faelle unter `gated` und warteten
+    # damit auf einen Zugang, der ihnen nicht helfen wuerde.
+    "weg",
 })
 
 # ── DRITTE KLASSE: blockiert ──────────────────────────────────────────────────────────────
@@ -93,6 +97,12 @@ BLOCKIERT = {
     "kein_token":           "konto",
     "interesse_noetig":     "interesse",   # simap: Interesse muss bekundet werden
     "interesse_abgelehnt":  "interesse",
+    # ⚠ NICHT „konto", sondern UNSER Problem. Die Seite laedt, sie ist nur anders gebaut als
+    # der Parser erwartet („keine Dokumentliste in der Seite", 94 Faelle, alle auf
+    # meinauftrag.rib.de — einem Portal, das sonst 73 % Ausbeute liefert). Unter „konto"
+    # abgelegt warteten sie auf einen Zugang; sie brauchen aber einen Blick in den Quelltext.
+    # Eigene Klasse, damit sie als ARBEITSLISTE sichtbar sind und nicht als Schicksal.
+    "kein_listenlayout":    "parser",
     "nur_cockpit":          "portal",  # Portal gibt anonym nur die Oberfläche her
     "nur_einzeldateien":    "portal",  # kein Sammel-ZIP; Einzelabruf noch nicht gebaut
     "zu_gross":             "groesse",  # über der Grössengrenze DIESES Laufs

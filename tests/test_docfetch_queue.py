@@ -302,3 +302,31 @@ def test_alle_abrufer_haben_vorgangsfrist_und_byte_deckel():
             fehlt_bytes.append(p.name)
     assert not fehlt_frist, f"ohne Zeitgrenze je Vorgang: {fehlt_frist}"
     assert not fehlt_bytes, f"ohne Byte-Deckel je Lauf: {fehlt_bytes}"
+
+
+def test_gated_ist_kein_sammeltopf_mehr():
+    """`gated` bedeutet „die Unterlagen existieren, uns fehlt ein Zugang". Am 2026-08-22
+    lagen darin 406 Vorgänge — aber die Notizen zeigten drei verschiedene Lagen:
+
+        257  http 200 + HTML   → wirklich ein Anmeldetor (cosinex, davon 175 auf dtvp.de)
+         54  http 404/410      → das Dokument ist WEG. Kein Konto holt es zurück.
+         94  keine Dokumentliste → die Seite lädt, unser Parser liest sie nicht
+                                  (ausnahmslos meinauftrag.rib.de, das sonst 73 % liefert)
+
+    148 von 406 warteten damit auf einen Zugang, der ihnen nicht geholfen hätte — und
+    niemand hätte je nachgesehen, denn sie sahen aus wie ein Portalproblem. Die 94 sind das
+    Gegenteil: die billigste Abdeckung, die zu holen ist, weil die Seiten erreichbar sind.
+    """
+    from govisor import docfetch_queue as q
+
+    assert "weg" in q.DAUERHAFT, "404/410 wartet wieder auf ein Konto"
+    assert q.BLOCKIERT.get("kein_listenlayout") == "parser", \
+        "das Layout-Problem ist wieder als Zugangsproblem abgelegt"
+    assert q.BLOCKIERT.get("gated") == "konto", "das echte Tor hat seine Klasse verloren"
+
+    # „weg" wird nicht mehr nachgeschlagen, „kein_listenlayout" wartet auf uns statt auf ein Konto.
+    assert q.ueberspringen({"status": "weg", "wann": None}, frei=set()) == "weg"
+    hinweis = q.ueberspringen({"status": "kein_listenlayout", "wann": None}, frei=set())
+    assert hinweis and "parser" in hinweis
+    # Und wer den Parser repariert, bekommt sie ohne Frist zurück in die Schlange.
+    assert q.ueberspringen({"status": "kein_listenlayout", "wann": None}, frei={"parser"}) is None

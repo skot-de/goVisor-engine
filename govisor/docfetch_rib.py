@@ -162,9 +162,11 @@ def fetch_one(documents_url: str, notice_id: str, out_root: Path,
     links = alle_links[:_MAX_DATEIEN]
     gekappt = len(alle_links) - len(links)
     if not links:
-        # Kein Literal in der Seite: entweder keine öffentlichen Unterlagen oder ein
-        # anderes Seitenlayout. Ehrlich als "gated" melden statt so zu tun, als sei nichts da.
-        return FetchResult(notice_id, tid, portal, "gated", 0, 0, None,
+        # Kein Literal in der Seite: die Seite laedt, ist aber anders gebaut als erwartet.
+        # ⚠ Bis zum 2026-08-22 stand hier "gated" — und damit landeten 94 Vorgaenge im Topf
+        # „Konto noetig" und warteten auf einen Zugang, der ihnen nicht hilft. Es ist kein
+        # Tor, es ist unser Parser. Eigene Klasse, damit daraus eine Arbeitsliste wird.
+        return FetchResult(notice_id, tid, portal, "kein_listenlayout", 0, 0, None,
                            "keine Dokumentliste in der Seite")
 
     puffer = io.BytesIO()
@@ -193,7 +195,12 @@ def fetch_one(documents_url: str, notice_id: str, out_root: Path,
             n_ok += 1
 
     if not n_ok:
-        return FetchResult(notice_id, tid, portal, "gated", 0, 0, None,
+        # ⚠ 404/410 ist kein Tor, sondern ein Verschwinden. Diese Faelle als "gated" zu
+        # fuehren hiess: sie warten auf ein Konto, das sie nie zurueckholt (54 Stueck,
+        # gemessen 2026-08-22). Nur wenn ALLE Fehlschlaege ein Verschwinden sind — ein
+        # einziges 403 dazwischen kann sehr wohl ein Tor sein.
+        weg = fehler and all(f.startswith(("http 404", "http 410")) for f in fehler)
+        return FetchResult(notice_id, tid, portal, "weg" if weg else "gated", 0, 0, None,
                            "; ".join(fehler[:3])[:120] or "keine Datei ladbar")
     dest_dir.mkdir(parents=True, exist_ok=True)
     tmp = dest.with_suffix(".part")
