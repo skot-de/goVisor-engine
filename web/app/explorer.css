@@ -2151,7 +2151,11 @@ a.lb-kachel{text-decoration:none}
 /* Los-Auswahl der Partnersuche. ⚠ NICHT `.nz-lose` benutzen — die Klasse gibt es schon
    (Los-Aufzählung im Teilnahme-Tab) und ihre `i`-Regel würde den Titel hier ausgrauen.
    Genau die Sorte Kollision, die in dieser Datei schon zweimal Text unsichtbar gemacht hat. */
-.nz-loswahl{display:flex;flex-wrap:wrap;gap:6px;margin:var(--s3) 0 var(--s2)}
+/* ⚠ Gedeckelt, weil es Vergaben mit 136 Losen gibt (Arzneimittelrabattverträge, gemessen
+   2026-08-22). Ungedeckelt wäre die Auswahl eine Wand aus Knöpfen, die den ganzen Reiter
+   verdrängt. Scrollen statt Wachsen. */
+.nz-loswahl{display:flex;flex-wrap:wrap;gap:6px;margin:var(--s3) 0 var(--s2);
+  max-height:168px;overflow-y:auto;padding-right:2px}
 .nz-los{display:flex;flex-direction:column;gap:1px;text-align:left;max-width:190px;
   padding:6px 10px;border:1px solid var(--line);border-radius:7px;background:var(--surface);
   font-size:var(--t-sm);font-family:var(--mono);color:var(--ink-700);cursor:pointer}
