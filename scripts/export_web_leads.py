@@ -19,6 +19,7 @@ from datetime import date
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent.parent))
 
 from govisor import db as _db  # noqa: E402
+from govisor.testvergaben import sql_bedingung as _testvergabe_sql
 
 TODAY = date.today()
 
@@ -653,6 +654,13 @@ def export_branche(key):
         )
         , filtered AS (
           SELECT * FROM mapped WHERE ui_branche = '{key}'
+            -- Übungsvorgänge der Portale und Behörden-Selbsttests gehören nicht in die
+            -- Lead-Liste: sie sehen aus wie eine echte Ausschreibung, sind aber keine.
+            -- Gold MARKIERT sie (Merkmal `testvergabe`), hier fliegen sie raus — das
+            -- Frontend ist die Stelle, an der aus „markiert" ein „nicht zeigen" wird.
+            -- ⚠ Das Muster ist eng: 203 Titel tragen „test" im Namen (Testautomation,
+            -- Wafer Testing), von denen darf keiner mitgehen. S. govisor/testvergaben.py.
+            AND NOT {_testvergabe_sql('title')}
             -- Auslauf-Radar bis 24 Monate. Wer eine Nachausschreibung vorbereiten will,
             -- braucht Vorlauf — und der gemessene Versatz (duration_calibration) zeigt, dass
             -- Nachfolger im Median deutlich VOR dem prognostizierten Ende erscheinen.

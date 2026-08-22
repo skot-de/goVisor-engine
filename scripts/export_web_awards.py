@@ -17,6 +17,7 @@ import json
 import pathlib
 
 import duckdb
+from govisor.testvergaben import sql_bedingung as _testvergabe_sql
 
 OUT = pathlib.Path("web/data"); OUT.mkdir(parents=True, exist_ok=True)
 con = duckdb.connect(); con.execute("SET threads=4")
@@ -87,6 +88,9 @@ con.execute(f"""CREATE TEMP TABLE aw AS
   LEFT JOIN {CL} cl ON cl.cpv_code = n.cpv_main
   LEFT JOIN {LD} nd ON nd.notice_id = n.notice_id
   WHERE n.notice_kind='can' AND n.award_date >= (DATE '{NOW}' - INTERVAL {WINDOW_DAYS} DAY)
+    -- Übungsvorgänge raus, gleiche Regel wie im Lead-Export (govisor/testvergaben.py).
+    -- Ein Zuschlag auf eine Testausschreibung ist genauso wenig ein Zuschlag.
+    AND NOT {_testvergabe_sql('n.title')}
     AND n.award_date <= DATE '{NOW}'
     AND coalesce(n.final_value, n.estimated_value) >= {VALUE_FLOOR}
     AND win.wid IS NOT NULL""")

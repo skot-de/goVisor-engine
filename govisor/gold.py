@@ -24,6 +24,7 @@ from pathlib import Path
 from . import locales
 from . import db as _db
 from .config import Config
+from .testvergaben import sql_bedingung as _testvergabe_sql
 
 # eForms-ORG-Referenz (UUID) — pro Dokument vergeben, taugt nicht als Entity-Schlüssel.
 _RE_UUID_ID = re.compile(r"^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-")
@@ -449,6 +450,11 @@ def build_quality(cfg: Config, country: str = "DE"):
               CASE WHEN final_value IS NOT NULL AND final_value < 100
                    THEN 'wert_unplausibel_niedrig' END,
               CASE WHEN final_value <= 1 THEN 'wert_sentinel' END,
+              -- Übungsvorgänge der Portale („Testvergabe für Bieter zur Übung der
+              -- Angebotsabgabe") und Behörden-Selbsttests („TESTDL2025", 524 Mio €).
+              -- Markiert, nicht gelöscht: sie sind Teil dessen, was die Quelle liefert.
+              -- Das Muster ist bewusst eng, s. govisor/testvergaben.py.
+              CASE WHEN {_testvergabe_sql('n.title')} THEN 'testvergabe' END,
               CASE WHEN final_value >= 100 AND final_value < 1000
                    THEN 'wert_verdaechtig_niedrig' END,
               CASE WHEN final_value > 1e9 THEN 'wert_absurd_hoch' END,
