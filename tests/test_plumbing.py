@@ -3519,3 +3519,61 @@ def test_sql_vorfilter_und_regex_sind_sich_einig():
     quelle = inspect.getsource(docfetch.fetch_batch)
     assert "CX[A-Z0-9]{6,}" in quelle, "der SQL-Vorfilter kennt die CX-Kennung nicht"
     assert "V?MP)?Satellite" not in quelle, "der SQL-Vorfilter hängt noch an „Satellite\""
+
+
+def test_dokumenten_firewall_hat_dieselbe_form_wie_die_ausschreibungs_firewall():
+    """Zwei Wälle, gleiche Form, verschiedene Mechanik.
+
+    Sven am 2026-08-22: „kann man die gleiche mechanik nicht wieder nutzen?" — der
+    Apparat aus `dedupe.py` nicht (Wortmengen, Enthaltungsmaß und Zeitscheiben beantworten
+    „sind zwei VERSCHIEDENE Texte dieselbe Vergabe?"; Dokument-Dubletten sind byteweise
+    identisch, da antwortet eine Prüfsumme exakt). Das MUSTER schon: Paare statt Löschen,
+    `master_id`/`duplicate_id`/`beleg`, neben den Golddaten, nachgelagert ausgewertet.
+
+    ⚠ Der erste Entwurf war ein Ergebnisspeicher — eine zweite Kopie der Einträge neben
+    `doc-analysis.json` mit eigener Verfallslogik. Ein Paar bleibt gültig, egal wie oft
+    sich der Prompt ändert; eine gespeicherte Extraktion nicht.
+    """
+    from govisor import dokdubletten
+
+    for name in ("finde", "schreibe", "karte", "items_vom_master", "pruefsumme"):
+        assert hasattr(dokdubletten, name), name
+    quelle = (pathlib.Path(__file__).resolve().parent.parent
+              / "govisor" / "dokdubletten.py").read_text(encoding="utf-8")
+    for feld in ("master_id", "duplicate_id", "beleg"):
+        assert feld in quelle, f"{feld} fehlt — nicht dieselbe Form wie notice_duplicates"
+
+
+def test_nur_belegte_master_werden_zu_paaren():
+    """⚠ Ein Paar ohne belegbaren Master ist ein Versprechen, das ins Leere läuft.
+
+    Der Doktyp wird beim Bauen mit dem HEUTIGEN Klassifikator bestimmt, die Auswertung lief
+    mit dem von gestern. Änderte sich die Einteilung, zeigt `source_file` auf eine andere
+    Datei. Gemessen 2026-08-22: von 789 vermeintlichen Mastern hielten nur **363** dem
+    Abgleich stand — die erste Fassung hätte 6.300 Paare geschrieben, von denen die Hälfte
+    beim Auswerten nichts geliefert hätte.
+    """
+    quelle = (pathlib.Path(__file__).resolve().parent.parent
+              / "govisor" / "dokdubletten.py").read_text(encoding="utf-8")
+    assert "belegt = any(" in quelle, "Master werden nicht auf Belegbarkeit geprüft"
+    assert "if belegt:" in quelle
+
+
+def test_geerbte_eintraege_zeigen_auf_die_eigene_datei():
+    """Das Zitat bleibt gültig (identischer Text), aber `source_file` muss auf die Datei
+    DIESES Vorgangs zeigen — nicht auf die, bei der der Eintrag zuerst gefunden wurde."""
+    from govisor import dokdubletten
+
+    fertig = {"m1": {"checklist": [
+        {"req_type": "frist", "source_file": "A.pdf", "quote": "bis 12.09."},
+        {"req_type": "formalie", "source_file": "andere.pdf", "quote": "x"},
+        {"req_type": "leistung_menge", "source_file": "A.pdf", "parser": "gaeb"},
+    ]}}
+    items = dokdubletten.items_vom_master(fertig, "m1", "A.pdf", "B.pdf")
+    assert len(items) == 1, "Parser-Einträge und fremde Dateien gehören nicht dazu"
+    assert items[0]["source_file"] == "B.pdf"
+    assert items[0]["aus_dublette"] is True
+    assert items[0]["quote"] == "bis 12.09."
+    # Kein Master → nichts erben, statt zu raten.
+    assert dokdubletten.items_vom_master(fertig, "m1", "unbekannt.pdf", "B.pdf") is None
+    assert dokdubletten.items_vom_master({}, "m1", "A.pdf", "B.pdf") is None

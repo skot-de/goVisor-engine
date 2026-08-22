@@ -32,7 +32,7 @@ from govisor.llm import (chat, letzter_anbieter, anbieter_stand,  # noqa: E402
                          AllKeysExhausted)
 from govisor.llm import BudgetErschoepft, kontostand as _llm_kontostand  # noqa: E402
 from govisor import doctypes, docextract, docparse, doctax, docpipe  # noqa: E402
-from govisor import lbauswahl  # noqa: E402
+from govisor import lbauswahl, dokdubletten  # noqa: E402
 from govisor.docpipe import SQL_BRAUCHBAR  # noqa: E402
 
 SRC = ROOT / "data" / "docs" / "DE" / "doc_text.parquet"
@@ -220,7 +220,8 @@ AUSWERTUNG = ("fragenantworten",) + tuple(doctypes.PRIORITY)
 
 
 def analyze_notice(files: list, structured: dict | None = None,
-                   notice_id: str = "", antwort_fn=None) -> dict:
+                   notice_id: str = "", antwort_fn=None,
+                   dubletten: dict | None = None, fertig: dict | None = None) -> dict:
     """files = [(filename, text), …] eines Vorgangs → Analyse mit verifizierter Checkliste.
 
     Zwei Schienen: **Parser** (§6.2, structured={name: parser_result}) liefert strukturierte
@@ -229,6 +230,7 @@ def analyze_notice(files: list, structured: dict | None = None,
     """
     structured = structured or {}
     by_type_text = defaultdict(list)
+    by_type_docs = defaultdict(list)
     by_type_file = {}
     checklist, positions, parsed_files, other_docs = [], [], [], []
     for name, text in files:
@@ -245,15 +247,36 @@ def analyze_notice(files: list, structured: dict | None = None,
             if dt not in AUSWERTUNG:                   # nicht ausgewertet → „Weitere Dokumente" (§7.5)
                 other_docs.append(name)
             by_type_text[dt].append(text or "")
+            by_type_docs[dt].append((name, text or ""))
             by_type_file.setdefault(dt, name)
 
     rejected, sent_chars, truncated = 0, 0, []
+    aus_dubletten = 0
     lb_art = None
     llm_started = False
     for dt in AUSWERTUNG:
         if dt not in by_type_text:
             continue
-        blob = "\n\n".join(by_type_text[dt]).strip()
+        # ── DOKUMENT-DUBLETTEN (§6.2) ──────────────────────────────────────────────────
+        # Was byteweise schon ausgewertet wurde, faellt aus dem Blob und bekommt die
+        # Eintraege des Masters. Gemessen 2026-08-22: 22 % des gesendeten Textes stammt aus
+        # Dokumenten, die wir schon kennen — `VHB_124` allein liegt in 432 Vergaben.
+        # Das Zitat bleibt gueltig, der Text ist identisch (§6a.2); umgeschrieben wird nur
+        # `source_file`, damit der Eintrag auf die Datei DIESES Vorgangs zeigt.
+        uebrig = by_type_docs[dt]
+        if dubletten and fertig is not None:
+            behalten = []
+            for name_, text_ in by_type_docs[dt]:
+                treffer = dubletten.get((dt, dokdubletten.pruefsumme(text_)))
+                geerbt = (dokdubletten.items_vom_master(fertig, treffer[0], treffer[1], name_)
+                          if treffer else None)
+                if geerbt:
+                    checklist.extend(geerbt)
+                    aus_dubletten += len(geerbt)
+                else:
+                    behalten.append((name_, text_))
+            uebrig = behalten
+        blob = "\n\n".join(t for _, t in uebrig).strip()
         if not blob:
             continue
         # ── AUSWAHL INNERHALB DER LB (§6.1) ────────────────────────────────────────────
@@ -318,6 +341,8 @@ def analyze_notice(files: list, structured: dict | None = None,
         # Pruefung (`scripts/lb_auswahl_stand.py`). Ohne dieses Feld ist die
         # Kontrollgruppe nachtraeglich nicht mehr von der Behandlung zu unterscheiden.
         "lb_auswahl": lb_art,
+        # Wie viele Eintraege aus schon ausgewerteten, identischen Dokumenten stammen.
+        "aus_dubletten": aus_dubletten,
     }
     out.update(_derive_legacy(checklist))
     return out
@@ -464,6 +489,12 @@ def main() -> int:
 
     out = json.loads(OUT.read_text(encoding="utf-8")) if OUT.exists() else {}
 
+    # Dokument-Dubletten: (doctype, Pruefsumme) → Master. Leer, wenn die Datei fehlt —
+    # dann laeuft alles wie bisher, nur teurer. Erzeugt von `govisor.dokdubletten.finde`.
+    _dubletten = dokdubletten.karte()
+    if _dubletten:
+        print(f"Dokument-Dubletten: {len(_dubletten):,} bekannte Dokumente", flush=True)
+
     # NEUBERECHNUNG SCHWACHER ALTLAEUFE. `NEU_AB_MODELL` nennt Modell-Teilstrings, deren
     # Ergebnisse verworfen und neu gerechnet werden — gemessen am 2026-08-20 liefern die
     # Llama-Anbieter 16 Punkte je Vergabe, wo Gemini 43 findet, und setzen dabei 90 % der
@@ -516,7 +547,8 @@ def main() -> int:
     def arbeite(auftrag):
         nid, files = auftrag
         structured = structured_for_notice(nid)            # Parser-Schiene (§6.2) über die Roh-ZIPs
-        res = analyze_notice(files, structured=structured, notice_id=nid)
+        res = analyze_notice(files, structured=structured, notice_id=nid,
+                             dubletten=_dubletten, fertig=out)
         # WER HAT ES ERZEUGT. Seit dem 2026-08-18 gibt es drei Anbieter mit verschiedenen
         # Modellen; welches gerade dran ist, entscheidet das Guthaben. Ohne diese Angabe
         # stuenden im Bestand Ergebnisse nebeneinander, deren Unterschiede niemand mehr
