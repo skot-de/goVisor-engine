@@ -39,6 +39,23 @@ CLI: `python -m govisor.cli {ingest|silver|gold|verify|review}`.
   Konkrete Altlasten dieser Art: der Regionen-Katalog kennt nur deutsche Bundesländer
   (Schweizer Leads fallen aus jeder Umkreissuche), und der Dokument-Fetcher deckt nur
   cosinex/DTVP ab (eine deutsche Plattform-Familie).
+- **⛔ NIE `git commit -a` oder `git add -A`.** Immer die eigenen Pfade einzeln nennen:
+
+      git add web/components/Landing.tsx tests/test_landing_check.py
+
+  In diesem Verzeichnis arbeitet womöglich eine **zweite Sitzung** parallel. `-a` sammelt
+  deren offene Änderungen mit ein, und sie landen unter einer Commit-Nachricht, die von
+  etwas ganz anderem handelt. Am 2026-08-22 ist das zweimal passiert: Landing-Kacheln
+  steckten am Ende in einem Commit über OpenRouter-Stapelverarbeitung. Verloren geht dabei
+  nichts, aber die Historie erzählt Unsinn, und niemand findet die Änderung später wieder.
+  Vor dem Commit `git status` lesen und alles Fremde bewusst liegen lassen.
+- **Wem gehört was, wenn zwei Sitzungen laufen.** Eine Sitzung besitzt `web/` (Frontend,
+  Produkt), die andere `govisor/` und `scripts/` (Pipeline, Abrufer, LLM). Wer in fremdem
+  Gebiet etwas ändern muss, sagt es an. Zwei Folgen, die sonst Zeit kosten:
+  · Eine **rote Testsuite** ist mehrdeutig — man weiss nicht, ob der Fehler der eigene ist.
+    Im Zweifel die fremde Datei kurz wegstashen und den Test allein laufen lassen.
+  · Den **Dev-Server auf Port 3000** fährt nur eine Sitzung. Für die zweite steht
+    `govisor-web-3100` in `.claude/launch.json`.
 - **⛔ VOR jedem schreibenden Schritt prüfen, ob ein anderer Lauf stört.** Ein Befehl,
   unmittelbar davor, nicht „ich habe vorhin geschaut":
 
