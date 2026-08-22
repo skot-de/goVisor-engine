@@ -1123,7 +1123,39 @@ function renderDocs(l){
       </details>
     </section>` : '';
 
-  return `<div class="dbody dbody-ov">${head}${anforderungen}${kriterien}${umfang}${volltext}</div>`;
+  /* Dateiliste des Portals — was dort LIEGT, ohne dass wir es gelesen haben.
+     ⚠ Die Trennung ist der ganze Punkt. subreport (DE) und vergabeportal.at (AT) geben die
+     Dateien nur gegen Anmeldung heraus, die LISTE aber öffentlich. Gemessen 2026-08-22:
+     944 heute offene Vergaben haben eine solche Liste und KEINEN Volltext — 134 davon in
+     Österreich, wo es bis dahin gar keine Dokumentsignale gab. Sie beantwortet zwei Fragen,
+     die sonst offen bleiben: gibt es ein Leistungsverzeichnis, und welche Nachweise werden
+     verlangt. Sie ersetzt die Unterlagen NICHT, und die Anzeige sagt das in jeder Zeile. */
+  const liste = (l.lbListe && (l.lbListe.dateien||[]).length) ? (()=>{
+    const li = l.lbListe;
+    // Alle Typen, die in den Listen wirklich vorkommen (gezählt am 2026-08-22). Ein Typ
+    // ohne Eintrag fiele als `technische_anlage` in der Oberfläche auf — Kleinschreibung
+    // mit Unterstrich, mitten in deutschem Text.
+    const TYP = {leistungsbeschreibung:tk("Leistungsbeschreibung"), eignung:tk("Eignung"),
+                 vertrag:tk("Vertrag"), aufforderung:tk("Aufforderung"),
+                 zuschlagskriterien:tk("Zuschlagskriterien"), eigenerklaerung:tk("Eigenerklärung"),
+                 formblatt:tk("Formblatt"), technische_anlage:tk("Technische Anlage"),
+                 preisblatt:tk("Preisblatt"), datenschutz:tk("Datenschutz"),
+                 informationsblatt:tk("Informationsblatt"), fragenantworten:tk("Fragen und Antworten")};
+    const schwer = (li.schwerpunkte||[]).map(t=>`<span class="dl-typ">${esc(TYP[t]||t)}</span>`).join('');
+    const zeilen = (li.dateien||[]).slice(0,40).map(d=>
+      `<li><span class="dl-n">${esc(d.name||'')}</span>${
+        d.typ && d.typ!=='sonstiges' ? `<span class="dl-t">${esc(TYP[d.typ]||d.typ)}</span>` : ''}</li>`).join('');
+    const rest = Math.max(0, (li.dateien||[]).length - 40);
+    return `<section class="sec va-liste">
+      <h4>${tk("Was dort liegt")}<span class="cov">${tk("Dateiliste des Portals, nicht gelesen")}</span></h4>
+      <p class="dl-x">${tk("{quelle} zeigt die Namen der Vergabeunterlagen öffentlich an, die Dateien selbst nur nach Anmeldung. Wir haben keine davon geöffnet — was hier steht, ist der Dateiname und der daraus erkannte Typ.")
+          .replace('{quelle}', esc(li.quelle||''))}</p>
+      ${schwer ? `<div class="dl-schwer">${tk("Erkannt:")} ${schwer}</div>` : ''}
+      <ul class="dl-liste">${zeilen}</ul>
+      ${rest ? `<p class="dl-rest">${tk("und {n} weitere").replace('{n}', rest)}</p>` : ''}
+    </section>`;})() : '';
+
+  return `<div class="dbody dbody-ov">${head}${anforderungen}${kriterien}${umfang}${liste}${volltext}</div>`;
 }
 
 // #24 Zuschlag-Detail (Ticket §5): gleiche Detailstruktur wie ein Lead, andere Frage —

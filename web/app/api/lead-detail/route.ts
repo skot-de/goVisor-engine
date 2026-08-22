@@ -108,6 +108,28 @@ async function ladeAnalyse(id: string): Promise<DocAnalysis | undefined> {
   return undefined;
 }
 
+/** Dateiliste EINES Vorgangs: was das Portal ohne Anmeldung anzeigt.
+ *
+ * ⚠ DAS IST KEIN VOLLTEXT. subreport (DE) und vergabeportal.at (AT) geben die Dateien nur
+ * gegen Anmeldung heraus, die LISTE aber öffentlich. Sie beantwortet zwei Fragen, die sonst
+ * offen bleiben: gibt es ein Leistungsverzeichnis, und welche Nachweise werden verlangt.
+ * Gemessen am 2026-08-22: 944 heute offene Vergaben haben eine solche Liste und KEINEN
+ * Volltext — davon 134 in Österreich, wo es bis dahin überhaupt keine Dokumentsignale gab.
+ *
+ * Jeder Satz trägt `gelesen: false`. Wer das anzeigt, muss den Unterschied zwischen
+ * „gelesen" und „nur gelistet" sichtbar machen — sonst behauptet die Oberfläche Wissen
+ * über Dokumente, die niemand geöffnet hat.
+ */
+async function ladeDateiliste(id: string): Promise<Record<string, unknown> | undefined> {
+  const sicher = id.replace(/[^A-Za-z0-9_-]/g, "");
+  if (!sicher) return undefined;
+  try {
+    const roh = await loadDataFile(`doc-listing/${sicher}.json`);
+    if (roh) return JSON.parse(roh) as Record<string, unknown>;
+  } catch { /* keine Liste → nichts anzeigen */ }
+  return undefined;
+}
+
 export async function GET(req: Request) {
   const u = new URL(req.url);
   const branche = u.searchParams.get("branche") || "";
@@ -136,6 +158,9 @@ export async function GET(req: Request) {
     // LLM-Vergabe-Analyse (Ampel + Bieter-Checkliste).
     const an = await ladeAnalyse(id);
     if (an) detail.lbAnalyse = an;
+    // Dateiliste des Portals — was dort LIEGT, ohne dass wir es gelesen haben.
+    const li = await ladeDateiliste(id);
+    if (li) detail.lbListe = li;
     return NextResponse.json(detail);
   } catch {
     return NextResponse.json({ error: "keine Detaildaten" }, { status: 503 });

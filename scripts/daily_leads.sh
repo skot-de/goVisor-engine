@@ -924,6 +924,10 @@ $PY scripts/export_doc_text.py || echo "  ⚠ doc-text.json nicht geschrieben �
 # Analyse-Arbeiters (252 MB) und bleibt lokal; das Frontend liest eine Datei je Vorgang.
 # Ohne diesen Aufruf zeigt das Lead-Detail die Auswertungen vom letzten Export.
 $PY scripts/export_doc_analysis.py || echo "  ⚠ doc-analysis nicht zerlegt — Lead-Detail zeigt weiter den alten Auswertungsstand."
+# Dateilisten der Portale (subreport DE, vergabeportal AT): was dort LIEGT, ohne dass wir es
+# gelesen haben. Lag bis zum 22.08. ungenutzt im Gold-Layer — 944 offene Vergaben ohne
+# Volltext haben darüber trotzdem eine Aussage, darunter die ersten 134 für Österreich.
+$PY scripts/export_doc_listing.py || echo "  ⚠ Dateilisten nicht exportiert — die Portal-Listen bleiben auf altem Stand."
 
 # Struktur AUS den Unterlagen: Leistungsverzeichnis (GAEB + Preisblatt) und Kriterienmatrix.
 # Anders als die Signale oben ist das keine Ableitung aus Fließtext, sondern die Tabelle

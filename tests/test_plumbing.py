@@ -3698,3 +3698,37 @@ def test_doc_analysis_liegt_je_vorgang_vor():
     upl = (wurzel / "scripts/upload_web_data.py").read_text(encoding="utf-8")
     assert '"doc-analysis.json"' in upl and "NICHT_HOCH" in upl, \
         "der 252-MB-Arbeitsstand wandert wieder jede Nacht in den Objektspeicher"
+
+
+def test_dateilisten_der_portale_werden_ausgeliefert():
+    """subreport (DE) und vergabeportal.at (AT) geben die Vergabeunterlagen nur gegen
+    Anmeldung heraus — die LISTE der Dateinamen aber öffentlich. Beide Abrufer holen sie
+    samt erkanntem Dokumenttyp seit Wochen nach `data/docs/<land>/doc_listing_*.parquet`.
+
+    ⚠ Gelesen hat sie bis zum 2026-08-22 NIEMAND. Kein Pipeline-Schritt, kein Export, kein
+    Frontend — dieselbe Sorte wie `value_anchor`: gebaut, richtig, unbenutzt. Gemessen:
+    1.205 DE- und 325 AT-Vergaben, 32.783 Dateinamen. 944 davon sind heute offen und haben
+    KEINEN Volltext (810 DE, 134 AT) — für Österreich sind es die ersten Dokumentsignale
+    überhaupt. Abdeckung mit Substanz: 26 % → 31 %.
+
+    ⚠ UND DIE ANZEIGE MUSS DEN UNTERSCHIED TRAGEN. Was hier steht, ist ein Dateiname, kein
+    gelesenes Dokument. Deshalb `gelesen: false` in jedem Satz und ein Satz in der
+    Oberfläche, der es ausspricht. Ohne das behauptet das Produkt Wissen über Dateien, die
+    niemand geöffnet hat.
+    """
+    wurzel = pathlib.Path(__file__).resolve().parent.parent
+    assert (wurzel / "scripts/export_doc_listing.py").exists(), "der Export fehlt"
+    lauf = (wurzel / "scripts/daily_leads.sh").read_text(encoding="utf-8")
+    assert "export_doc_listing.py" in lauf, "der Export steht nicht im Tageslauf"
+
+    export = (wurzel / "scripts/export_doc_listing.py").read_text(encoding="utf-8")
+    assert '"gelesen": False' in export, "die Sätze sagen nicht mehr, dass nichts gelesen wurde"
+    assert "len(dateien or []) != len(doktypen or [])" in export, \
+        "Namen und Typen werden wieder blind gezippt — dann trägt eine Datei den Typ ihrer Nachbarin"
+
+    route = (wurzel / "web/app/api/lead-detail/route.ts").read_text(encoding="utf-8")
+    assert "doc-listing/${sicher}.json" in route, "das Lead-Detail liefert die Liste nicht aus"
+
+    kern = (wurzel / "web/lib/explorerCore.js").read_text(encoding="utf-8")
+    assert "va-liste" in kern and "Dateiliste des Portals, nicht gelesen" in kern, \
+        "die Anzeige nennt den Unterschied zwischen gelesen und gelistet nicht mehr"
