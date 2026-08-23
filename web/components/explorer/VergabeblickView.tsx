@@ -1,4 +1,5 @@
 "use client";
+import { nutzerLand } from "@/lib/explorerCore";
 import { useEffect, useMemo, useState } from "react";
 import { useSprache } from "@/lib/i18n";
 
@@ -104,7 +105,9 @@ export function VergabeblickView() {
   const [draftBusy, setDraftBusy] = useState(false);
 
   useEffect(() => {
-    fetch("/api/strategie").then((r) => r.json()).then(setStrat).catch(() => {});
+    // Gleiche Quelle wie die Anbieter-Strategie, gleiches Land (s. dort).
+    fetch(`/api/strategie?land=${nutzerLand()}`)
+      .then((r) => r.json()).then(setStrat).catch(() => {});
   }, []);
 
   const alleStellen = useMemo(() => {

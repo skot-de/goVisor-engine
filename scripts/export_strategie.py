@@ -14,10 +14,68 @@ import duckdb, json, pathlib
 
 OUT = pathlib.Path("web/data"); OUT.mkdir(parents=True, exist_ok=True)
 con = duckdb.connect(); con.execute("SET threads=4")
-G = "data/gold/DE"
-E = f"read_parquet('{G}/lead_export.parquet')"
-DC = f"read_parquet('{G}/dim_cpv.parquet')"
-ATTR = "read_parquet('data/silver/DE/attributes/*/*.parquet', hive_partitioning=1)"
+
+# ── TEMP-TABELLEN JE LAND ────────────────────────────────────────────────────────────
+# Die Auswertungen stehen auf ~20 TEMP-Tabellen, die frueher beim Import EINMAL gebaut
+# wurden — fest gegen DE. Sie muessen je Land neu entstehen, stehen aber im Quelltext
+# verstreut zwischen den Funktionen, zu denen sie gehoeren. Statt die Datei umzubauen,
+# sammelt `VORLAUF` sie in Reihenfolge ein; der f-String im Lambda wird erst beim Aufruf
+# ausgewertet und sieht dann die Quellen des aktuellen Landes.
+VORLAUF: list = []
+# ── QUELLEN JE LAND ──────────────────────────────────────────────────────────────────
+#
+# Bis 2026-08-23 stand hier fest `data/gold/DE`, und zwar an SECHZEHN Stellen. Die
+# Strategie-Ansicht war damit vollstaendig deutsch: ein oesterreichischer Bieter sah
+# deutsche Vergabestellen, deutsche Wettbewerbsdichte, deutsche Felder — ausgegeben als
+# seine. Nichts daran war als Landesangabe erkennbar.
+#
+# WARUM NICHT EINFACH ALLES ZUSAMMEN. Ein `union_by_name` ueber DE+AT+CH waere schneller
+# gebaut und falsch: „Wer vergibt in meinem Feld?" und „wie dicht ist der Wettbewerb?"
+# sind Fragen an EINEN Markt. Eine DACH-Summe beantwortet keine davon und verdeckt beide.
+# Deshalb wird je Land ein eigener Satz Aggregate gerechnet; die Datei ist nach Land
+# verschluesselt und `/api/strategie?land=…` reicht genau einen davon heraus — die Form,
+# die das Frontend kennt, bleibt unveraendert.
+#
+# Die Quellen sind bewusst MODULWEIT und werden je Land neu gesetzt: die Auswertungs-
+# funktionen bauen ihr SQL aus diesen Namen, und sie alle auf einen Parameter umzustellen
+# waere ein Umbau von 700 Zeilen fuer denselben Effekt.
+LAENDER = ["DE", "AT", "CH"]
+
+
+def quellen_setzen(land: str) -> None:
+    """Alle Tabellen-Ausdruecke auf ein Land umstellen."""
+    global G, E, DC, ATTR, PE, EN, N, AW, AC, CS, CA, CL, LL, BN, LR
+    G = f"data/gold/{land}"
+    S = f"data/silver/{land}"
+    E = f"read_parquet('{G}/lead_export.parquet')"
+    DC = f"read_parquet('{G}/dim_cpv.parquet')"
+    ATTR = _glob_oder_leer(f"{S}/attributes", "notice_id VARCHAR, path VARCHAR, value VARCHAR")
+    PE = f"read_parquet('{G}/party_entity.parquet')"
+    EN = f"read_parquet('{G}/entities.parquet')"
+    N = _glob_oder_leer(f"{S}/notices", "notice_id VARCHAR, title VARCHAR")
+    AW = _glob_oder_leer(f"{S}/awards", "notice_id VARCHAR")
+    AC = _glob_oder_leer(f"{S}/award_criteria", "notice_id VARCHAR")
+    CS = f"read_parquet('{G}/contract_succession.parquet')"
+    CA = f"read_parquet('{G}/cpv_adjacency.parquet')"
+    CL = f"read_parquet('{G}/dim_cpv_label.parquet')"
+    LL = f"read_parquet('{G}/lead_lot.parquet')"
+    BN = f"read_parquet('{G}/buyer_stats.parquet')"
+    LR = f"read_parquet('{G}/lead_requirement.parquet')"
+
+
+def _glob_oder_leer(verzeichnis: str, spalten: str) -> str:
+    """Silber-Glob, oder eine leere Tabelle mit denselben Spalten.
+
+    Noetig, weil die Silber-Ebene nicht in jedem Land jede Tabelle fuehrt: CH hat keine
+    `award_criteria` aus simap. Ein Glob ins Leere ist in DuckDB ein LAUFZEITFEHLER, kein
+    leeres Ergebnis — die ganze Sektion waere ausgefallen statt leer zu bleiben.
+    """
+    if list(pathlib.Path(verzeichnis).glob("*/*.parquet")):
+        return f"read_parquet('{verzeichnis}/*/*.parquet', hive_partitioning=1)"
+    return f"(SELECT {', '.join('NULL::' + t.split(' ', 1)[1] + ' AS ' + t.split(' ', 1)[0] for t in spalten.split(', '))} WHERE false)"
+
+
+G = E = DC = ATTR = PE = EN = N = AW = AC = CS = CA = CL = LL = BN = LR = ""
 
 BRANCHE = """CASE b.branche
   WHEN 'IT' THEN 'it' WHEN 'Elektro' THEN 'it' WHEN 'Messtechnik' THEN 'it'
@@ -33,20 +91,24 @@ BRANCHEN = ["it", "bau", "medizin", "beratung", "sicherheit", "energie"]
 
 # Rahmenvereinbarungen OHNE erneuten Wettbewerb — Volumen, das zwar ausläuft,
 # aber nur für Gelistete abrufbar ist (Ticket §5.1, letzte Kennzahl).
-con.execute(f"""CREATE OR REPLACE TEMP TABLE fa_wo_rc AS
-  SELECT DISTINCT notice_id FROM {ATTR}
-  WHERE path ILIKE '%ContractingSystemTypeCode' AND lower(value) = 'fa-wo-rc'""")
+VORLAUF.append(lambda: (
+    con.execute(f"""CREATE OR REPLACE TEMP TABLE fa_wo_rc AS
+      SELECT DISTINCT notice_id FROM {ATTR}
+      WHERE path ILIKE '%ContractingSystemTypeCode' AND lower(value) = 'fa-wo-rc'""")
+))
 
-con.execute(f"""CREATE OR REPLACE TEMP TABLE basis AS
-  SELECT e.lead_id, e.title, e.buyer_name, e.contract_end, e.value_eur,
-         e.value_source, e.timing_source, e.buyer_nuts, e.market_nuts3,
-         {BRANCHE} AS branche,
-         (f.notice_id IS NOT NULL) AS rahmen_ohne_wb
-  FROM {E} e
-  LEFT JOIN {DC} b ON b.division = substr(e.cpv_code, 1, 2)
-  LEFT JOIN fa_wo_rc f ON f.notice_id = e.lead_id
-  WHERE e.phase = 'expiring' AND e.contract_end IS NOT NULL
-    AND e.contract_end BETWEEN CURRENT_DATE AND CURRENT_DATE + INTERVAL 36 MONTH""")
+VORLAUF.append(lambda: (
+    con.execute(f"""CREATE OR REPLACE TEMP TABLE basis AS
+      SELECT e.lead_id, e.title, e.buyer_name, e.contract_end, e.value_eur,
+             e.value_source, e.timing_source, e.buyer_nuts, e.market_nuts3,
+             {BRANCHE} AS branche,
+             (f.notice_id IS NOT NULL) AS rahmen_ohne_wb
+      FROM {E} e
+      LEFT JOIN {DC} b ON b.division = substr(e.cpv_code, 1, 2)
+      LEFT JOIN fa_wo_rc f ON f.notice_id = e.lead_id
+      WHERE e.phase = 'expiring' AND e.contract_end IS NOT NULL
+        AND e.contract_end BETWEEN CURRENT_DATE AND CURRENT_DATE + INTERVAL 36 MONTH""")
+))
 
 
 def eur(v):
@@ -98,109 +160,124 @@ def top_posten(key, limit=12):
 # ───────────────────────── Vergabestellen (Ticket §5.3 / §4.1) ─────────────────────────
 # Jede Quote trägt ihre Fallzahl mit — die Schwellenregel (§3.1) entscheidet erst im UI
 # über die Darstellung. So bleibt "gemessen aus 3 Fällen" von "aus 300" unterscheidbar.
-PE = f"read_parquet('{G}/party_entity.parquet')"
-EN = f"read_parquet('{G}/entities.parquet')"
-N = "read_parquet('data/silver/DE/notices/*/*.parquet', hive_partitioning=1)"
-AW = "read_parquet('data/silver/DE/awards/*/*.parquet', hive_partitioning=1)"
-AC = "read_parquet('data/silver/DE/award_criteria/*/*.parquet', hive_partitioning=1)"
-CS = f"read_parquet('{G}/contract_succession.parquet')"
+# (Quelle wird in `quellen_setzen()` je Land gesetzt.)
 
 print("\nBaue Vergabestellen-Aggregat …")
 
 # Zuschläge mit BELEGTER Gewinner-Identität (Akzeptanzkriterium #8: confidence=none raus)
-con.execute(f"""CREATE OR REPLACE TEMP TABLE zusch AS
-  SELECT n.notice_id, n.publication_date, substr(n.cpv_main,1,2) AS div,
-         pb.entity_id AS buyer, pw.entity_id AS winner, ew.canonical_name AS winner_name
-  FROM {N} n
-  JOIN {PE} pb ON pb.notice_id = n.notice_id AND pb.role = 'buyer'
-  JOIN {PE} pw ON pw.notice_id = n.notice_id AND pw.role = 'winner'
-  JOIN {EN} ew ON ew.entity_id = pw.entity_id
-  WHERE ew.method IN ('handelsregister_exakt','ted_nationalid')
-    AND n.publication_date IS NOT NULL""")
+VORLAUF.append(lambda: (
+    con.execute(f"""CREATE OR REPLACE TEMP TABLE zusch AS
+      SELECT n.notice_id, n.publication_date, substr(n.cpv_main,1,2) AS div,
+             pb.entity_id AS buyer, pw.entity_id AS winner, ew.canonical_name AS winner_name
+      FROM {N} n
+      JOIN {PE} pb ON pb.notice_id = n.notice_id AND pb.role = 'buyer'
+      JOIN {PE} pw ON pw.notice_id = n.notice_id AND pw.role = 'winner'
+      JOIN {EN} ew ON ew.entity_id = pw.entity_id
+      WHERE ew.method IN ('handelsregister_exakt','ted_nationalid')
+        AND n.publication_date IS NOT NULL""")
+))
 
-con.execute("""CREATE OR REPLACE TEMP TABLE z36 AS
-  SELECT * FROM zusch WHERE publication_date >= CURRENT_DATE - INTERVAL 36 MONTH""")
+VORLAUF.append(lambda: (
+    con.execute("""CREATE OR REPLACE TEMP TABLE z36 AS
+      SELECT * FROM zusch WHERE publication_date >= CURRENT_DATE - INTERVAL 36 MONTH""")
+))
 
 # Notice-Ebene, dedupliziert. OHNE das fächern Lose und Mehrfachgewinner jede Fallzahl
 # auf (gemessen: DB Netz 44 Vergaben → n=13.295). Jede Quote zählt Vergaben, nicht Zeilen.
-con.execute("""CREATE OR REPLACE TEMP TABLE v36 AS
-  SELECT DISTINCT notice_id, buyer, div FROM z36""")
+VORLAUF.append(lambda: (
+    con.execute("""CREATE OR REPLACE TEMP TABLE v36 AS
+      SELECT DISTINCT notice_id, buyer, div FROM z36""")
+))
 
 # Neuzugänge: Anbieter mit ERSTEM Zuschlag bei dieser Stelle im 36-Mon-Fenster.
 # Braucht keine Nachfolge-Verkettung → belastbarster KPI (gemessen: 11.632 Stellen).
-con.execute("""CREATE OR REPLACE TEMP TABLE neu AS
-  WITH erst AS (SELECT buyer, winner, min(publication_date) ersten FROM zusch GROUP BY 1,2),
-  hist AS (SELECT buyer, min(publication_date) AS erste_vergabe FROM zusch GROUP BY 1)
-  SELECT e.buyer,
-         count(*) FILTER (WHERE e.ersten >= CURRENT_DATE - INTERVAL 36 MONTH) AS neue_36m,
-         count(*) AS anbieter_gesamt,
-         -- Guard: taucht die STELLE selbst erst im Fenster auf, sind zwangsläufig alle
-         -- Anbieter „neu" (gemessen: mehrere Stellen mit 100 %). Dann ist die Offenheit
-         -- nicht messbar — lieber nichts zeigen als einen Artefakt-Wert.
-         (h.erste_vergabe < CURRENT_DATE - INTERVAL 36 MONTH) AS hat_vorgeschichte
-  FROM erst e JOIN hist h ON h.buyer = e.buyer
-  GROUP BY 1, 4""")
+VORLAUF.append(lambda: (
+    con.execute("""CREATE OR REPLACE TEMP TABLE neu AS
+      WITH erst AS (SELECT buyer, winner, min(publication_date) ersten FROM zusch GROUP BY 1,2),
+      hist AS (SELECT buyer, min(publication_date) AS erste_vergabe FROM zusch GROUP BY 1)
+      SELECT e.buyer,
+             count(*) FILTER (WHERE e.ersten >= CURRENT_DATE - INTERVAL 36 MONTH) AS neue_36m,
+             count(*) AS anbieter_gesamt,
+             -- Guard: taucht die STELLE selbst erst im Fenster auf, sind zwangsläufig alle
+             -- Anbieter „neu" (gemessen: mehrere Stellen mit 100 %). Dann ist die Offenheit
+             -- nicht messbar — lieber nichts zeigen als einen Artefakt-Wert.
+             (h.erste_vergabe < CURRENT_DATE - INTERVAL 36 MONTH) AS hat_vorgeschichte
+      FROM erst e JOIN hist h ON h.buyer = e.buyer
+      GROUP BY 1, 4""")
+))
 
 # Wechselquote aus verifizierten Nachfolgen (schwächer, s. Spike) — mit Fallzahl
 # Nur Paare, bei denen BEIDE Seiten genau EINEN belegten Gewinner haben. Bei Konsortien /
 # Mehrfachgewinnern ist „gewechselt" nicht bestimmbar — die bleiben draußen statt geraten
 # zu werden (dokumentierte Linie: ARGE-Fluktuation ehrlich „unbestimmbar").
-con.execute(f"""CREATE OR REPLACE TEMP TABLE wechsel AS
-  WITH einzeln AS (
-    SELECT notice_id, any_value(buyer) buyer, any_value(winner) winner
-    FROM zusch GROUP BY notice_id HAVING count(DISTINCT winner) = 1)
-  SELECT p.buyer,
-         count(*) AS wechsel_n,
-         count(*) FILTER (WHERE p.winner IS DISTINCT FROM s.winner) AS gewechselt
-  FROM {CS} cs
-  JOIN einzeln p ON p.notice_id = cs.predecessor
-  JOIN einzeln s ON s.notice_id = cs.successor
-  GROUP BY 1""")
+VORLAUF.append(lambda: (
+    con.execute(f"""CREATE OR REPLACE TEMP TABLE wechsel AS
+      WITH einzeln AS (
+        SELECT notice_id, any_value(buyer) buyer, any_value(winner) winner
+        FROM zusch GROUP BY notice_id HAVING count(DISTINCT winner) = 1)
+      SELECT p.buyer,
+             count(*) AS wechsel_n,
+             count(*) FILTER (WHERE p.winner IS DISTINCT FROM s.winner) AS gewechselt
+      FROM {CS} cs
+      JOIN einzeln p ON p.notice_id = cs.predecessor
+      JOIN einzeln s ON s.notice_id = cs.successor
+      GROUP BY 1""")
+))
 
 # Bieterzahl + KMU-Anteil + Preisentscheidungen je Stelle
-con.execute(f"""CREATE OR REPLACE TEMP TABLE kpi AS
-  WITH je_notice AS (
-    SELECT notice_id, median(num_tenders) AS bieter
-    FROM {AW} WHERE num_tenders > 0 GROUP BY 1)
-  SELECT v.buyer, median(j.bieter) AS bieter_median, count(*) AS bieter_n
-  FROM v36 v JOIN je_notice j ON j.notice_id = v.notice_id GROUP BY 1""")
+VORLAUF.append(lambda: (
+    con.execute(f"""CREATE OR REPLACE TEMP TABLE kpi AS
+      WITH je_notice AS (
+        SELECT notice_id, median(num_tenders) AS bieter
+        FROM {AW} WHERE num_tenders > 0 GROUP BY 1)
+      SELECT v.buyer, median(j.bieter) AS bieter_median, count(*) AS bieter_n
+      FROM v36 v JOIN je_notice j ON j.notice_id = v.notice_id GROUP BY 1""")
+))
 
-con.execute(f"""CREATE OR REPLACE TEMP TABLE kmu AS
-  WITH je_notice AS (
-    SELECT notice_id,
-           max(CASE WHEN lower(value) IN ('micro','small','medium','sme') THEN 1 ELSE 0 END) AS ist_kmu
-    FROM {ATTR}
-    WHERE path ILIKE '%CompanySizeCode' AND path NOT ILIKE '%listName' GROUP BY 1)
-  SELECT v.buyer, sum(j.ist_kmu) AS kmu_treffer, count(*) AS kmu_n
-  FROM v36 v JOIN je_notice j ON j.notice_id = v.notice_id GROUP BY 1""")
+VORLAUF.append(lambda: (
+    con.execute(f"""CREATE OR REPLACE TEMP TABLE kmu AS
+      WITH je_notice AS (
+        SELECT notice_id,
+               max(CASE WHEN lower(value) IN ('micro','small','medium','sme') THEN 1 ELSE 0 END) AS ist_kmu
+        FROM {ATTR}
+        WHERE path ILIKE '%CompanySizeCode' AND path NOT ILIKE '%listName' GROUP BY 1)
+      SELECT v.buyer, sum(j.ist_kmu) AS kmu_treffer, count(*) AS kmu_n
+      FROM v36 v JOIN je_notice j ON j.notice_id = v.notice_id GROUP BY 1""")
+))
 
 # „Preisentscheidung" = Vergabe, deren Zuschlagskriterien NUR Preis enthalten
-con.execute(f"""CREATE OR REPLACE TEMP TABLE preis AS
-  WITH je_notice AS (
-    SELECT notice_id, count(*) FILTER (WHERE kind <> 'price') AS nicht_preis
-    FROM {AC} GROUP BY 1)
-  SELECT v.buyer,
-         count(*) FILTER (WHERE j.nicht_preis = 0) AS nur_preis,
-         count(*) AS preis_n
-  FROM v36 v JOIN je_notice j ON j.notice_id = v.notice_id GROUP BY 1""")
+VORLAUF.append(lambda: (
+    con.execute(f"""CREATE OR REPLACE TEMP TABLE preis AS
+      WITH je_notice AS (
+        SELECT notice_id, count(*) FILTER (WHERE kind <> 'price') AS nicht_preis
+        FROM {AC} GROUP BY 1)
+      SELECT v.buyer,
+             count(*) FILTER (WHERE j.nicht_preis = 0) AS nur_preis,
+             count(*) AS preis_n
+      FROM v36 v JOIN je_notice j ON j.notice_id = v.notice_id GROUP BY 1""")
+))
 
-con.execute(f"""CREATE OR REPLACE TEMP TABLE vol AS
-  SELECT pb.entity_id AS buyer,
-         sum(e.value_eur) FILTER (WHERE e.value_source = 'actual') AS vol_echt_24m,
-         count(*) FILTER (WHERE e.value_source = 'actual')         AS vol_n,
-         count(*)                                                  AS vergaben_24m
-  FROM {E} e JOIN {PE} pb ON pb.notice_id = e.lead_id AND pb.role = 'buyer'
-  GROUP BY 1""")
+VORLAUF.append(lambda: (
+    con.execute(f"""CREATE OR REPLACE TEMP TABLE vol AS
+      SELECT pb.entity_id AS buyer,
+             sum(e.value_eur) FILTER (WHERE e.value_source = 'actual') AS vol_echt_24m,
+             count(*) FILTER (WHERE e.value_source = 'actual')         AS vol_n,
+             count(*)                                                  AS vergaben_24m
+      FROM {E} e JOIN {PE} pb ON pb.notice_id = e.lead_id AND pb.role = 'buyer'
+      GROUP BY 1""")
+))
 
 # Konzentration + Top-Anbieter je Stelle
-con.execute("""CREATE OR REPLACE TEMP TABLE topsupp AS
-  WITH s AS (SELECT buyer, winner, any_value(winner_name) nm, count(*) n FROM z36 GROUP BY 1,2),
-  r AS (SELECT *, row_number() OVER (PARTITION BY buyer ORDER BY n DESC, winner) rk,
-               sum(n) OVER (PARTITION BY buyer) ges FROM s)
-  SELECT buyer, max(CASE WHEN rk=1 THEN n END)::DOUBLE / max(ges) AS top1_anteil,
-         list({'n': nm, 'wins': n, 'pct': round(100.0*n/ges)} ORDER BY n DESC, nm)
-           FILTER (WHERE rk <= 5) AS top
-  FROM r GROUP BY 1""")
+VORLAUF.append(lambda: (
+    con.execute("""CREATE OR REPLACE TEMP TABLE topsupp AS
+      WITH s AS (SELECT buyer, winner, any_value(winner_name) nm, count(*) n FROM z36 GROUP BY 1,2),
+      r AS (SELECT *, row_number() OVER (PARTITION BY buyer ORDER BY n DESC, winner) rk,
+                   sum(n) OVER (PARTITION BY buyer) ges FROM s)
+      SELECT buyer, max(CASE WHEN rk=1 THEN n END)::DOUBLE / max(ges) AS top1_anteil,
+             list({'n': nm, 'wins': n, 'pct': round(100.0*n/ges)} ORDER BY n DESC, nm)
+               FILTER (WHERE rk <= 5) AS top
+      FROM r GROUP BY 1""")
+))
 
 
 def _modalband(baender):
@@ -239,7 +316,7 @@ def vergabestellen(key, limit=60):
                nz.neue_36m, nz.anbieter_gesamt, nz.hat_vorgeschichte,
                t.top1_anteil, t.top
         FROM stellen s
-        LEFT JOIN read_parquet('{G}/buyer_stats.parquet') bs ON bs.buyer_entity_id = s.buyer
+        LEFT JOIN {BN} bs ON bs.buyer_entity_id = s.buyer
         LEFT JOIN vol v ON v.buyer = s.buyer
         LEFT JOIN kpi k ON k.buyer = s.buyer
         LEFT JOIN kmu m ON m.buyer = s.buyer
@@ -292,11 +369,20 @@ def vergabestellen(key, limit=60):
         vrows = con.execute(f"""
             SELECT buyer_name, title, months_to_expiry, contract_end FROM (
               SELECT buyer_name, title, months_to_expiry, contract_end,
-                     row_number() OVER (PARTITION BY buyer_name ORDER BY months_to_expiry, title) rn
+                     -- `contract_end` als letzter Entscheider, sonst ist die Reihenfolge
+                     -- bei gleichem Titel UND gleicher Restlaufzeit dem Zufall ueberlassen:
+                     -- zwei aufeinanderfolgende Laeufe lieferten gemessen zwei vertauschte
+                     -- Zeilen. Das ist inhaltlich egal und macht trotzdem jeden Vergleich
+                     -- zweier Ausgaben unbrauchbar — und genau so ein Vergleich ist das
+                     -- einzige Mittel, um bei einem Umbau zu belegen, dass sich nichts
+                     -- verschoben hat.
+                     row_number() OVER (PARTITION BY buyer_name
+                                        ORDER BY months_to_expiry, title, contract_end) rn
               FROM {E}
               WHERE phase='expiring' AND buyer_name IN (SELECT n FROM _vn)
                 AND months_to_expiry IS NOT NULL AND months_to_expiry BETWEEN 0 AND 24)
-            WHERE rn <= 6 ORDER BY buyer_name, months_to_expiry, title""").fetchall()
+            WHERE rn <= 6
+            ORDER BY buyer_name, months_to_expiry, title, contract_end""").fetchall()
         vmap = {}
         for bn, title, mte, cend in vrows:
             vmap.setdefault(bn, []).append({
@@ -313,22 +399,26 @@ def vergabestellen(key, limit=60):
 # nicht als gesperrt angenommen. (Gemessen: 82 % der laufenden Rahmen haben Gelistete.)
 print("\nBaue Bindungs-Aggregat …")
 
-con.execute(f"""CREATE OR REPLACE TEMP TABLE gelistet AS
-  SELECT p.notice_id, list(DISTINCT en.canonical_name ORDER BY en.canonical_name) AS namen
-  FROM {PE} p JOIN {EN} en USING(entity_id)
-  WHERE p.role = 'winner' AND en.method IN ('handelsregister_exakt','ted_nationalid')
-  GROUP BY 1""")
+VORLAUF.append(lambda: (
+    con.execute(f"""CREATE OR REPLACE TEMP TABLE gelistet AS
+      SELECT p.notice_id, list(DISTINCT en.canonical_name ORDER BY en.canonical_name) AS namen
+      FROM {PE} p JOIN {EN} en USING(entity_id)
+      WHERE p.role = 'winner' AND en.method IN ('handelsregister_exakt','ted_nationalid')
+      GROUP BY 1""")
+))
 
-con.execute(f"""CREATE OR REPLACE TEMP TABLE bindung AS
-  SELECT e.lead_id, e.title, e.buyer_name, e.contract_end, e.value_eur, e.value_source,
-         e.timing_source, {BRANCHE} AS branche,
-         g.namen AS gelistete,
-         date_diff('day', CURRENT_DATE, e.contract_end) AS tage_bis_ende
-  FROM {E} e
-  JOIN fa_wo_rc f ON f.notice_id = e.lead_id
-  LEFT JOIN {DC} b ON b.division = substr(e.cpv_code, 1, 2)
-  LEFT JOIN gelistet g ON g.notice_id = e.lead_id
-  WHERE e.contract_end >= CURRENT_DATE""")
+VORLAUF.append(lambda: (
+    con.execute(f"""CREATE OR REPLACE TEMP TABLE bindung AS
+      SELECT e.lead_id, e.title, e.buyer_name, e.contract_end, e.value_eur, e.value_source,
+             e.timing_source, {BRANCHE} AS branche,
+             g.namen AS gelistete,
+             date_diff('day', CURRENT_DATE, e.contract_end) AS tage_bis_ende
+      FROM {E} e
+      JOIN fa_wo_rc f ON f.notice_id = e.lead_id
+      LEFT JOIN {DC} b ON b.division = substr(e.cpv_code, 1, 2)
+      LEFT JOIN gelistet g ON g.notice_id = e.lead_id
+      WHERE e.contract_end >= CURRENT_DATE""")
+))
 
 # Vorlauf bis zum Einstiegsfenster: Median Bekanntmachung→Zuschlag ~87 Tage
 # plus Positionierungsvorlauf. Vor diesem Datum muss man sich bewegt haben.
@@ -382,29 +472,33 @@ def bindung_daten(key):
 # CPV-Bündel als Fachgebiete: wo ist Platz, wo ist es eng? Kaum entity-abhängig,
 # deshalb laut Spike vor „Wettbewerb" gebaut.
 print("\nBaue Felder-Aggregat …")
-CA = f"read_parquet('{G}/cpv_adjacency.parquet')"
-CL = f"read_parquet('{G}/dim_cpv_label.parquet')"
-LL = f"read_parquet('{G}/lead_lot.parquet')"
+# (Quelle wird in `quellen_setzen()` je Land gesetzt.)
 
-con.execute(f"""CREATE OR REPLACE TEMP TABLE feld_basis AS
-  SELECT substr(n.cpv_main,1,4) AS cpv4, n.notice_id, n.publication_date,
-         date_part('year', n.publication_date) AS jahr, {BRANCHE} AS branche
-  FROM {N} n LEFT JOIN {DC} b ON b.division = substr(n.cpv_main,1,2)
-  WHERE n.publication_date >= CURRENT_DATE - INTERVAL 36 MONTH
-    AND n.cpv_main IS NOT NULL""")
+VORLAUF.append(lambda: (
+    con.execute(f"""CREATE OR REPLACE TEMP TABLE feld_basis AS
+      SELECT substr(n.cpv_main,1,4) AS cpv4, n.notice_id, n.publication_date,
+             date_part('year', n.publication_date) AS jahr, {BRANCHE} AS branche
+      FROM {N} n LEFT JOIN {DC} b ON b.division = substr(n.cpv_main,1,2)
+      WHERE n.publication_date >= CURRENT_DATE - INTERVAL 36 MONTH
+        AND n.cpv_main IS NOT NULL""")
+))
 
 # Kleinstes Los je Ausschreibung = Einstiegshürde (§5.2)
-con.execute(f"""CREATE OR REPLACE TEMP TABLE kleinstes_los AS
-  SELECT lead_id, min(lot_value_eur) AS min_los
-  FROM {LL} WHERE lot_value_eur > 0 GROUP BY 1""")
+VORLAUF.append(lambda: (
+    con.execute(f"""CREATE OR REPLACE TEMP TABLE kleinstes_los AS
+      SELECT lead_id, min(lot_value_eur) AS min_los
+      FROM {LL} WHERE lot_value_eur > 0 GROUP BY 1""")
+))
 
 # Bürgschaftsquote je Feld = Kapitalhürde
-con.execute(f"""CREATE OR REPLACE TEMP TABLE buergschaft AS
-  SELECT notice_id,
-         max(CASE WHEN lower(value) NOT IN ('false','none') THEN 1 ELSE 0 END) AS hat_buerg
-  FROM {ATTR}
-  WHERE path ILIKE '%RequiredFinancialGuarantee.GuaranteeTypeCode' AND path NOT ILIKE '%listName'
-  GROUP BY 1""")
+VORLAUF.append(lambda: (
+    con.execute(f"""CREATE OR REPLACE TEMP TABLE buergschaft AS
+      SELECT notice_id,
+             max(CASE WHEN lower(value) NOT IN ('false','none') THEN 1 ELSE 0 END) AS hat_buerg
+      FROM {ATTR}
+      WHERE path ILIKE '%RequiredFinancialGuarantee.GuaranteeTypeCode' AND path NOT ILIKE '%listName'
+      GROUP BY 1""")
+))
 
 
 def felder(key, limit=20):
@@ -524,33 +618,41 @@ def einstiegsfreundlich(key, limit=10):
 print("\nBaue Wettbewerbs-Aggregat …")
 
 # Die bipartite Kante Käufer×Anbieter, 36 Mon, auf belegten Zuschlägen (Notice-Ebene)
-con.execute(f"""CREATE OR REPLACE TEMP TABLE bs AS
-  WITH kante AS (SELECT DISTINCT notice_id, buyer, winner, div FROM z36)
-  SELECT k.buyer, k.winner, k.div,
-         count(DISTINCT k.notice_id)                                   AS wins,
-         sum(e.value_eur) FILTER (WHERE e.value_source = 'actual')     AS vol
-  FROM kante k LEFT JOIN {E} e ON e.lead_id = k.notice_id
-  GROUP BY 1, 2, 3""")
+VORLAUF.append(lambda: (
+    con.execute(f"""CREATE OR REPLACE TEMP TABLE bs AS
+      WITH kante AS (SELECT DISTINCT notice_id, buyer, winner, div FROM z36)
+      SELECT k.buyer, k.winner, k.div,
+             count(DISTINCT k.notice_id)                                   AS wins,
+             sum(e.value_eur) FILTER (WHERE e.value_source = 'actual')     AS vol
+      FROM kante k LEFT JOIN {E} e ON e.lead_id = k.notice_id
+      GROUP BY 1, 2, 3""")
+))
 
 # Käufer-Summen für Zuschlagsanteil vs. Marktdurchschnitt
-con.execute("""CREATE OR REPLACE TEMP TABLE bt AS
-  SELECT buyer, sum(wins) AS total, count(DISTINCT winner) AS n_supplier FROM bs GROUP BY 1""")
+VORLAUF.append(lambda: (
+    con.execute("""CREATE OR REPLACE TEMP TABLE bt AS
+      SELECT buyer, sum(wins) AS total, count(DISTINCT winner) AS n_supplier FROM bs GROUP BY 1""")
+))
 
 # Anbieter-Trend: letzte 12 Mon gegen die 12 davor (rollierend, wie bei Feldern)
-con.execute("""CREATE OR REPLACE TEMP TABLE supp_trend AS
-  WITH k AS (SELECT DISTINCT notice_id, winner, publication_date FROM z36)
-  SELECT winner,
-         count(*) FILTER (WHERE publication_date >= CURRENT_DATE - INTERVAL 12 MONTH) AS w0,
-         count(*) FILTER (WHERE publication_date >= CURRENT_DATE - INTERVAL 24 MONTH
-                            AND publication_date <  CURRENT_DATE - INTERVAL 12 MONTH) AS w1
-  FROM k GROUP BY 1""")
+VORLAUF.append(lambda: (
+    con.execute("""CREATE OR REPLACE TEMP TABLE supp_trend AS
+      WITH k AS (SELECT DISTINCT notice_id, winner, publication_date FROM z36)
+      SELECT winner,
+             count(*) FILTER (WHERE publication_date >= CURRENT_DATE - INTERVAL 12 MONTH) AS w0,
+             count(*) FILTER (WHERE publication_date >= CURRENT_DATE - INTERVAL 24 MONTH
+                                AND publication_date <  CURRENT_DATE - INTERVAL 12 MONTH) AS w1
+      FROM k GROUP BY 1""")
+))
 
-BN = f"read_parquet('{G}/buyer_stats.parquet')"
+# (`BN` wird in `quellen_setzen()` je Land gesetzt.)
 
 # Namens-Lookup je Anbieter — EINE Zeile pro winner. Ihn per JOIN aus z36 zu ziehen
 # hätte jede Aggregation über die Zuschlags-Zeilen des Anbieters aufgefächert.
-con.execute("""CREATE OR REPLACE TEMP TABLE supp_name AS
-  SELECT winner, any_value(winner_name) AS name FROM z36 GROUP BY 1""")
+VORLAUF.append(lambda: (
+    con.execute("""CREATE OR REPLACE TEMP TABLE supp_name AS
+      SELECT winner, any_value(winner_name) AS name FROM z36 GROUP BY 1""")
+))
 
 
 def wettbewerb(key):
@@ -631,8 +733,7 @@ def wettbewerb(key):
 # ───────────────────────── Fähigkeiten (Ticket §5.6) ─────────────────────────
 # Was blockiert uns? Eignungsanforderungen liegen überwiegend im Freitext (~37 % Abdeckung),
 # deshalb ist JEDE Aussage eine Untergrenze: „Mindestens €X fordern Y", nie „€X fordern Y".
-print("\nBaue Fähigkeiten-Aggregat …")
-LR = f"read_parquet('{G}/lead_requirement.parquet')"
+# (`LR` wird in `quellen_setzen()` je Land gesetzt.)
 
 REGIME_LABEL = {
     "vgv": "VgV — Liefer-/Dienstleistung", "vob": "VOB/A — Bauleistung",
@@ -683,10 +784,9 @@ def faehigkeiten(key):
     }
 
 
-out = {}
-for key in BRANCHEN:
+def branche_bauen(key):
     q = pipeline(key)
-    out[key] = {
+    ergebnis = {
         "quartale": q,
         "top": top_posten(key),
         "stellen": vergabestellen(key),
@@ -704,10 +804,36 @@ for key in BRANCHEN:
             "nRahmenOhneWb": sum(x["nRahmenOhneWb"] for x in q),
         },
     }
-    s = out[key]["summe"]
-    print(f"  {key:11} {s['nGesamt']:>6} Verträge · echt {eur(s['volEcht']):>12} · "
-          f"geschätzt {eur(s['volSchaetz']):>12} · ohne Wert {s['nUnbekannt']:>5} · "
-          f"Rahmen o. Wettb. {s['nRahmenOhneWb']:>5}")
+    z = ergebnis["summe"]
+    print(f"  {key:11} {z['nGesamt']:>6} Verträge · echt {eur(z['volEcht']):>12} · "
+          f"geschätzt {eur(z['volSchaetz']):>12} · ohne Wert {z['nUnbekannt']:>5} · "
+          f"Rahmen o. Wettb. {z['nRahmenOhneWb']:>5}")
+    return ergebnis
+
+
+# ── EIN SATZ AGGREGATE JE LAND ───────────────────────────────────────────────────────
+# Die Datei ist nach Land verschluesselt, `/api/strategie?land=…` reicht genau einen Satz
+# heraus. Damit bleibt die Form, die das Frontend liest, exakt wie vorher — und die
+# Nutzlast beim Client waechst nicht, obwohl die Datei es tut.
+out: dict[str, dict] = {}
+for land in LAENDER:
+    if not pathlib.Path(f"data/gold/{land}/lead_export.parquet").exists():
+        print(f"\n{land}: keine Gold-Ebene — uebersprungen.")
+        continue
+    print(f"\n══ {land} ══")
+    quellen_setzen(land)
+    for schritt in VORLAUF:
+        schritt()
+    out[land] = {}
+    for key in BRANCHEN:
+        try:
+            out[land][key] = branche_bauen(key)
+        except Exception as e:
+            # EINE Branche darf den Lauf nicht kippen. Faellt sie aus, fehlt eine Sektion;
+            # bricht das Skript ab, steht die GANZE Strategie-Ansicht auf altem Stand —
+            # und zwar unbemerkt, weil eine alte Datei wie eine frische aussieht.
+            print(f"  ⚠ {land}/{key} fehlgeschlagen: {str(e)[:110]}")
 
 (OUT / "strategie.json").write_text(json.dumps(out, ensure_ascii=False, sort_keys=True))
-print(f"\n→ {OUT}/strategie.json")
+groesse = (OUT / "strategie.json").stat().st_size
+print(f"\n→ {OUT}/strategie.json ({groesse/1024:.0f} KB, Länder: {', '.join(sorted(out))})")

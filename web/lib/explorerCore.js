@@ -2581,3 +2581,26 @@ export {
   classifyQuery, val, bandMeter, wfPill, konkCell, chanceCap, istEigen, bieterLuecke,
   fristCell, visible, syncLocationColumn, sorted, cellHTML, tokenLabel, suggestList,
 };
+
+/* Land des Nutzers aus seinen Regionen — NUTS traegt es im Praefix („DE2", „AT3", „CH0").
+ *
+ * Gebraucht von der Strategie-Ansicht: deren Aggregate sind seit 2026-08-23 je Land
+ * gerechnet, und ohne diese Ableitung bekaeme jeder Nutzer die deutschen. Ein eigener
+ * Laenderwaehler waere die ehrlichere Loesung, aber solange die Regionen ohnehin
+ * laendergebunden sind, ist ein zweiter Regler dieselbe Angabe zweimal.
+ *
+ * ⚠ Nicht jede Region traegt ein sauberes NUTS: gemessen fuehren 138 Schweizer Leads
+ * einen Kantonskuerzel („ZH", „VD") statt „CH0…", und „BE" ist dort Bern, im NUTS-Raum
+ * aber Belgien. Deshalb wird NUR gegen die drei bekannten Laender geprueft und sonst auf
+ * DE zurueckgefallen — raten waere hier schlimmer als der Standard.
+ */
+const LAND_AUS_NUTS = { DE: 'DE', AT: 'AT', CH: 'CH' };
+function nutzerLand() {
+  const regionen = (userProfile && userProfile.regions) || [];
+  for (const r of regionen) {
+    const code = LAND_AUS_NUTS[String(r || '').slice(0, 2).toUpperCase()];
+    if (code) return code;
+  }
+  return 'DE';
+}
+export { nutzerLand };

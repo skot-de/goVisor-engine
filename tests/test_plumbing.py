@@ -4058,3 +4058,50 @@ def test_simap_textzeilen_passen_aufs_silber_schema():
            "detail": {"base": {"id": "x4"}}}
     t = simap.parse_publication(rec)["notice_text"]
     assert set(t[0]) == {f.name for f in model.TABLES["notice_text"]}
+
+
+# ── Strategie-Ansicht je Land ───────────────────────────────────────────────
+# Bis 2026-08-23 stand `data/gold/DE` an SECHZEHN Stellen in export_strategie.py.
+# Der ganze Bereich war damit deutsch: ein oesterreichischer Bieter sah deutsche
+# Vergabestellen und deutsche Wettbewerbsdichte, ausgegeben als seine.
+
+def test_strategie_export_haengt_an_keinem_festen_land():
+    quelle = (pathlib.Path(__file__).resolve().parent.parent / "scripts" / "export_strategie.py").read_text(encoding="utf-8")
+    # Kommentare raus, BEVOR gesucht wird: die Datei erklaert in einem Kommentar, was
+    # dort frueher stand. Ein Test, der Prosa mitzaehlt, zwingt dazu, die Begruendung
+    # zu loeschen — dieselbe Falle wie schon dreimal zuvor.
+    code = "\n".join(z for z in quelle.splitlines() if not z.lstrip().startswith("#"))
+    for fest in ("data/gold/DE", "data/silver/DE"):
+        assert fest not in code, f"{fest} steht wieder fest im Strategie-Export"
+    assert "quellen_setzen(land)" in code
+
+
+def test_strategie_json_ist_nach_land_verschluesselt():
+    """Die flache Form {branche: …} ist die alte, deutsche."""
+    datei = pathlib.Path(__file__).resolve().parent.parent / "web" / "data" / "strategie.json"
+    if not datei.exists():
+        pytest.skip("strategie.json fehlt (frische CI ohne Export)")
+    daten = json.loads(datei.read_text(encoding="utf-8"))
+    assert "DE" in daten, "strategie.json traegt keine Laenderebene"
+    assert "it" not in daten, "strategie.json ist noch flach nach Branche verschluesselt"
+    for land, branchen in daten.items():
+        assert land in ("DE", "AT", "CH"), f"unerwartetes Land: {land}"
+        assert "wettbewerb" in next(iter(branchen.values())), f"{land} traegt keine Sektionen"
+
+
+def test_strategie_route_waehlt_das_land_und_faellt_sauber_zurueck():
+    quelle = (pathlib.Path(__file__).resolve().parent.parent / "web" / "app" / "api" / "strategie" / "route.ts").read_text(encoding="utf-8")
+    code = "\n".join(z for z in quelle.splitlines() if not z.lstrip().startswith("//"))
+    # Freitext aus der Anfrage darf nie ungeprueft als Schluessel dienen.
+    assert "LAENDER.has(" in code, "das Land aus der URL wird nicht gegen eine Liste geprueft"
+    # Waehrend eines Deployments kann noch eine flache Datei liegen.
+    assert "datei.DE" in code, "kein Rueckfall auf die alte, flache Form"
+
+
+def test_strategie_ansichten_fragen_ihr_land_ab():
+    """Eine Route mit `?land=` nuetzt nichts, wenn niemand sie so aufruft."""
+    for datei in ("StrategieView.tsx", "VergabeblickView.tsx"):
+        quelle = (pathlib.Path(__file__).resolve().parent.parent / "web" / "components" / "explorer" / datei).read_text(encoding="utf-8")
+        code = "\n".join(z for z in quelle.splitlines() if not z.lstrip().startswith("//"))
+        assert "nutzerLand()" in code, f"{datei} fragt das Land nicht ab"
+        assert "land=" in code, f"{datei} reicht das Land nicht an die Route"

@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { applyState, renderProfil, setNachbarn } from "@/lib/explorerCore";
+import { applyState, nutzerLand, renderProfil, setNachbarn } from "@/lib/explorerCore";
 import { useSprache } from "@/lib/i18n";
 import { ContractsEditor } from "./ContractsEditor";
 import { Trefferguete } from "./Trefferguete";
@@ -842,8 +842,13 @@ export function StrategieView({
   const [strat, setStrat] = useState<Record<string, Strat> | null>(null);
   const [offeneStelle, setOffeneStelle] = useState<Stelle | null>(null);
 
+  // Aggregate des EIGENEN Landes. Ohne `land` liefert die Route DE — was fuer einen
+  // oesterreichischen Bieter deutsche Vergabestellen und deutsche Wettbewerbsdichte
+  // waere, ausgegeben als seine.
   useEffect(() => {
-    fetch("/api/strategie?ctx=provider").then((r) => r.json()).then(setStrat).catch(() => {});
+    const land = nutzerLand();
+    fetch(`/api/strategie?ctx=provider&land=${land}`)
+      .then((r) => r.json()).then(setStrat).catch(() => {});
   }, []);
 
   // Position + Profil kommen unverändert aus dem Bestand (Ticket §5.5 / §5.8)

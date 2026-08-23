@@ -9,12 +9,31 @@ import { redactStrategie } from "@/lib/redact";
 // Härtung 4: im Bieter-Kontext (?ctx=provider) wird die Wettbewerbs-Intelligenz für Free
 // server-seitig zur Teaser-Paywall redigiert (redactStrategie). Ohne ctx (Vergabeblick/Käufer)
 // unverändert — die Käufer-Sicht hat eine eigene Orientierung.
+// LAND. Die Datei ist seit 2026-08-23 nach Land verschluesselt ({DE:{…},AT:{…},CH:{…}});
+// diese Route reicht genau EINEN Satz heraus, damit die Form fuer das Frontend unveraendert
+// bleibt und die Nutzlast nicht auf das Dreifache waechst.
+//
+// Warum ueberhaupt: bis dahin war der ganze Bereich deutsch. Ein oesterreichischer Bieter
+// sah deutsche Vergabestellen und deutsche Wettbewerbsdichte, ausgegeben als seine. Eine
+// DACH-Summe waere keine Loesung gewesen, sondern dieselbe Verwechslung mit mehr Zahlen:
+// „wer vergibt in meinem Feld" ist eine Frage an EINEN Markt.
+const LAENDER = new Set(["DE", "AT", "CH"]);
+
 export async function GET(req: Request) {
-  const ctx = new URL(req.url).searchParams.get("ctx");
+  const p = new URL(req.url).searchParams;
+  const ctx = p.get("ctx");
+  // Freitext aus der Anfrage NIE ungeprueft als Schluessel verwenden.
+  const gewuenscht = (p.get("land") || "").toUpperCase();
+  const land = LAENDER.has(gewuenscht) ? gewuenscht : "DE";
   try {
     const roh = await loadDataFile("strategie.json");
     if (!roh) return NextResponse.json({}, { status: 200 });
-    const raw = JSON.parse(roh);
+    const datei = JSON.parse(roh);
+    // Rueckfall auf die alte, flache Form: waehrend eines Deployments kann eine Datei
+    // liegen, die vor der Umstellung gebaut wurde. Ohne diesen Zweig waere der ganze
+    // Bereich fuer die Dauer des Uebergangs leer — und leer sieht aus wie „keine Daten".
+    const flach = !datei.DE && !datei.AT && !datei.CH;
+    const raw = flach ? datei : (datei[land] ?? datei.DE ?? {});
     if (ctx === "provider") {
       const tier = await getTier();
       return NextResponse.json(redactStrategie(raw, tier), { headers: { "cache-control": "no-store" } });
