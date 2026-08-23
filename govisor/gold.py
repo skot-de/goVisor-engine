@@ -454,7 +454,11 @@ def build_quality(cfg: Config, country: str = "DE"):
               -- Angebotsabgabe") und Behörden-Selbsttests („TESTDL2025", 524 Mio €).
               -- Markiert, nicht gelöscht: sie sind Teil dessen, was die Quelle liefert.
               -- Das Muster ist bewusst eng, s. govisor/testvergaben.py.
-              CASE WHEN {_testvergabe_sql('n.title')} THEN 'testvergabe' END,
+              -- ⚠ BARE SPALTE, kein `n.`: die aeussere Auswahl steht ueber der CTE `q`,
+              -- dort gibt es kein `n` mehr (die Nachbarzeilen sagen `final_value`, nicht
+              -- `n.final_value`). Mit `n.title` bindet DuckDB nicht — und der Fehler
+              -- erscheint erst beim Lauf, nicht beim Schreiben.
+              CASE WHEN {_testvergabe_sql('title')} THEN 'testvergabe' END,
               CASE WHEN final_value >= 100 AND final_value < 1000
                    THEN 'wert_verdaechtig_niedrig' END,
               CASE WHEN final_value > 1e9 THEN 'wert_absurd_hoch' END,
@@ -3028,7 +3032,8 @@ def _lead_context_sql(cfg: Config, country: str) -> str:
         return ("SELECT NULL::VARCHAR AS notice_id, NULL::VARCHAR AS legal_basis, "
                 "NULL::VARCHAR AS documents_url, FALSE AS is_nationwide, "
                 "NULL::INTEGER AS guarantee_required, NULL::INTEGER AS variants_allowed, "
-                "NULL::INTEGER AS validity_days, NULL::VARCHAR AS selection_types, "
+                "NULL::INTEGER AS validity_days, NULL::DATE AS validity_until, "
+                "NULL::VARCHAR AS selection_types, "
                 "NULL::VARCHAR AS deadline_time, NULL::VARCHAR AS question_deadline "
                 "WHERE false")
     return f"""
@@ -3125,13 +3130,28 @@ def _lead_context_sql(cfg: Config, country: str) -> str:
                            THEN try_cast(value AS integer) END) * 30
              ELSE max(CASE WHEN path ILIKE '%TenderValidityPeriod.DurationMeasure' AND path NOT ILIKE '%@%'
                            THEN try_cast(value AS integer) END) END                      AS validity_days,
+        -- simap nennt kein Dauermass, sondern ein DATUM („Angebot gueltig bis 2026-12-31",
+        -- 32 % der simap-Vorgaenge). In Tage umrechnen kann erst der Aufrufer, weil die
+        -- Angebotsfrist in `notices` steht und nicht in `attributes`.
+        max(CASE WHEN path = 'simap/offerValidityDeadline'
+                 THEN try_cast(substr(value, 1, 10) AS date) END)                AS validity_until,
         string_agg(DISTINCT CASE WHEN path ILIKE '%SelectionCriteria.CriterionTypeCode' AND path NOT ILIKE '%@%'
                             AND value IN ('tp-abil','sui-act','ef-stand') THEN value END, ',') AS selection_types,
         -- #16 Verfahrenskalender-Rest: Angebotsfrist-Uhrzeit (HH:MM) + Bieterfragen-Frist.
         max(CASE WHEN path ILIKE '%TenderSubmissionDeadlinePeriod.EndTime' AND path NOT ILIKE '%@%'
                  THEN substr(value, 1, 5) END)                                   AS deadline_time,
-        max(CASE WHEN path ILIKE '%AdditionalInformationRequestPeriod.EndDate' AND path NOT ILIKE '%@%'
-                 THEN substr(value, 1, 10) END)                                  AS question_deadline,
+        -- ⚠ ZWEI VOKABULARE, EIN FELD. Die Schweiz hat zwei Quellen: 875 offene Vergaben
+        -- kommen als eForms ueber TED, 813 direkt von simap.ch mit EIGENEN Feldnamen.
+        -- Gemessen am 2026-08-22: die eForms-Haelfte war zu 98-100 % gefuellt, die
+        -- simap-Haelfte zu NULL — nicht weil simap nichts liefert, sondern weil hier nur
+        -- eForms-Pfade standen. simap traegt `questionDeadline` bei 93 % seiner Vorgaenge.
+        -- Das ist genau der Fall aus `docs/land-onboarding.md`: uebertragbar ist die
+        -- Funktion, NICHT das Vokabular.
+        coalesce(
+          max(CASE WHEN path ILIKE '%AdditionalInformationRequestPeriod.EndDate' AND path NOT ILIKE '%@%'
+                   THEN substr(value, 1, 10) END),
+          max(CASE WHEN path = 'simap/questionDeadline'
+                   THEN substr(value, 1, 10) END))                               AS question_deadline,
         -- CH/simap: Unterlagen-Herkunft. Die Felder liegen seit dem ersten simap-Ingest in
         -- Bronze und seit 2026-08-13 in Silber; ohne diese vier Zeilen bleiben sie dort
         -- liegen. Gemessen ueber 11.460 Publikationen: 4.452 mit `documents_source_simap`
@@ -3157,6 +3177,12 @@ def _lead_context_sql(cfg: Config, country: str) -> str:
       -- 2026-08-13 mit den vier simap-Unterlagen-Feldern: Spalten im Parquet vorhanden,
       -- Werte durchgehend leer.
       WHERE path LIKE 'simap/documents%'
+         -- ⚠ POSITIVLISTE, also auch die simap-EIGENEN Felder eintragen. Ohne diese zwei
+         -- Zeilen bleibt der `coalesce` oben wirkungslos: die Zeilen kommen gar nicht erst
+         -- durch. Gemessen am 2026-08-22: der Kontext lieferte 4 statt 765 Bieterfragen-
+         -- Fristen, und der Fehler sah aus wie ein leeres Feld in der Quelle.
+         OR path = 'simap/questionDeadline'
+         OR path = 'simap/offerValidityDeadline'
          OR path = 'simap/hasProjectDocuments'
          OR path ILIKE '%RegulatoryDomain'
          OR path ILIKE '%ProcurementLegislationDocumentReference.ID'
@@ -3328,7 +3354,14 @@ def build_lead_export(cfg: Config, country: str = "DE"):
             -- 1.4 Direktlink zu den Vergabeunterlagen. `source_url` zeigt auf TED,
             -- `portal_url` (in lead_detail) ist zu 44,5 % / bei DÖE zu 0 % gefuellt —
             -- dieses Feld deckt 96,8 % der OFFENEN Leads.
-            ctx.documents_url,
+            -- ⚠ RÜCKFALL AUF DIE PORTALSEITE. `ctx.documents_url` kommt aus
+            -- `CallForTendersDocumentReference` — ein eForms-Feld. Nationale Quellen haben
+            -- es nicht: von 508 offenen AT-Vergaben aus offenevergaben.at trug KEINE eine
+            -- documents_url, und das Frontend zeigte dort ueberhaupt keinen Weg zur Quelle.
+            -- Jeder dieser 238.347 Vorgaenge traegt aber `portal_url` in Silber
+            -- (`https://offenevergaben.at/auftrag/31290`). Dokumente gibt es dort nicht,
+            -- die Bekanntmachung schon — und ein Link dorthin ist mehr als kein Link.
+            coalesce(ctx.documents_url, nq.portal_url)  AS documents_url,
             -- CH/simap: WIE kommt man an die Unterlagen? `documents_url` sagt nur, DASS es
             -- einen Link gibt. Diese vier beantworten die Frage davor — gemessen ueber 11.460
             -- simap-Publikationen: 4.452 `platform` (simap haelt sie selbst), 238
@@ -3344,12 +3377,25 @@ def build_lead_export(cfg: Config, country: str = "DE"):
             coalesce(ctx.is_nationwide, false)         AS is_nationwide,
             -- #15 Weg A — strukturierte Anforderungen (Anforderungs-Check)
             ctx.guarantee_required, ctx.variants_allowed,
-            ctx.validity_days, ctx.selection_types,
+            -- Bindefrist: eForms nennt eine Dauer, simap ein Enddatum. Hier wird beides
+            -- auf TAGE gebracht — gegen die Angebotsfrist, denn ab da laeuft die Bindung.
+            coalesce(ctx.validity_days,
+                     date_diff('day', d.deadline_date, ctx.validity_until)) AS validity_days,
+            ctx.selection_types,
             ctx.deadline_time, ctx.question_deadline,
             d.ted_url                                 AS source_url,
             (d.incumbent_name IS NOT NULL AND d.incumbent_conf >= 0.75) AS has_comparables,
             (coalesce(d.tenure_years, 0) > 0)         AS has_contract_history
           FROM read_parquet({q('lead_detail.parquet')}) d
+          -- Nur fuer `portal_url` — die Spalte steht in `notices` und in keiner Gold-Tabelle.
+          -- ⚠ NUR MIT SCHEMA. Ein Eintrag lautet `www.bahn-bkk.de/leistungserbringer` —
+          -- ohne `https://` ist das kein anklickbarer Link, und `test_lead_export_documents_
+          -- url_is_a_link` besteht zu Recht darauf. Ein Schema davorzusetzen waere geraten:
+          -- wir wissen nicht, ob der Host http oder https spricht.
+          LEFT JOIN (SELECT notice_id, any_value(portal_url) AS portal_url
+                     FROM read_parquet('{cfg.silver_table_glob("notices", country)}',
+                                       hive_partitioning=1)
+                     WHERE portal_url LIKE 'http%' GROUP BY 1) nq ON nq.notice_id = d.lead_id
           LEFT JOIN read_parquet('{slug_path}') sl ON sl.lead_id = d.lead_id
           LEFT JOIN read_parquet({q('lead_geo.parquet')}) lg ON lg.lead_id = d.lead_id
           LEFT JOIN read_parquet({q('dim_nuts.parquet')}) dn ON dn.nuts_code = substr(d.buyer_nuts,1,3)

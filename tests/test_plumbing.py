@@ -3828,3 +3828,36 @@ def test_land_onboarding_ist_verankert():
     claude = (wurzel / "CLAUDE.md").read_text(encoding="utf-8")
     assert "docs/land-onboarding.md" in claude, \
         "CLAUDE.md verweist nicht auf die Checkliste — dann findet sie niemand"
+
+
+def test_ch_kontext_liest_auch_simap_vokabular():
+    """Die Schweiz hat ZWEI Quellen: 875 offene Vergaben kommen als eForms über TED,
+    813 direkt von simap.ch mit eigenen Feldnamen.
+
+    ⚠ Gemessen am 2026-08-22: die eForms-Hälfte war zu 98–100 % gefüllt, die simap-Hälfte
+    zu NULL. Nicht weil simap nichts liefert — es trägt `questionDeadline` bei 93 % und
+    `offerValidityDeadline` bei 32 % seiner Vorgänge —, sondern weil in `_lead_context_sql`
+    nur eForms-Pfade standen. Das ist der Fall aus `docs/land-onboarding.md`: übertragbar
+    ist die Funktion, NICHT das Vokabular.
+
+    ⚠ UND DIE POSITIVLISTE. Der `coalesce` allein reichte nicht: die WHERE-Liste des CTE
+    ist eine Positivliste, und ohne Eintrag kommen die Zeilen gar nicht erst durch — der
+    Kontext lieferte 4 statt 765 Bieterfragen-Fristen. Der Kommentar über der Liste warnt
+    seit dem 2026-08-13 genau davor („Spalten im Parquet vorhanden, Werte durchgehend
+    leer"), und ich bin trotzdem hineingelaufen.
+
+    Nach der Korrektur: Bindefrist CH 51 % → 66 %, Bieterfragen-Frist 0 % → 45 %.
+    """
+    import sys
+    wurzel = pathlib.Path(__file__).resolve().parent.parent
+    sys.path.insert(0, str(wurzel))
+    from govisor.config import Config
+    from govisor.gold import _lead_context_sql
+
+    sql = _lead_context_sql(Config(), "CH")
+    assert "simap/questionDeadline" in sql, "das simap-Vokabular ist wieder raus"
+    assert "simap/offerValidityDeadline" in sql
+    # Beide MÜSSEN auch in der Positivliste stehen, sonst ist der coalesce wirkungslos.
+    where = sql[sql.index("WHERE path LIKE"):]
+    for pfad in ("simap/questionDeadline", "simap/offerValidityDeadline"):
+        assert pfad in where, f"{pfad} fehlt in der Positivliste — die Spalte bliebe leer"
