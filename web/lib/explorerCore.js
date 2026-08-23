@@ -1761,6 +1761,10 @@ function renderAnalyse(l){
         <div class="zlist">${z.map(x=>`<span class="zitem">
           <i class="zdot z-${x.art}"></i>${x.label}
           <b>${x.pct!=null?x.pct+' %':`<span class="v-unk">${tk("ohne Angabe")}</span>`}</b></span>`).join('')}</div>
+        ${(l.zuschlagNamen||[]).length ? `<div class="zname">
+          <span class="zname-k">${tk("So nennt die Vergabestelle sie")}</span>
+          ${l.zuschlagNamen.map(n=>`<span class="zname-i">${esc(n)}</span>`).join('')}
+        </div>` : ''}
         <p class="zdeut">${deutung}</p>
       </section>`;
     })()}

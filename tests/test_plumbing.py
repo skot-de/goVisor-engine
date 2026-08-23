@@ -3888,3 +3888,37 @@ def test_bietergemeinschaft_wird_nicht_mehr_behauptet():
     assert '"bietergemeinschaft": (bool(g("consortium_allowed"))' in export
     assert 'if (l.get("anf") or {}).get("bietergemeinschaft"):' in export, \
         "die Haftungsform wird wieder ohne Beleg gesetzt"
+
+
+def test_zuschlagskriterien_brauchen_kein_gewicht():
+    """Der Export trug bis zum 2026-08-23 NUR Kriterien mit Gewicht (`price_weight_pct` &c.).
+
+    ⚠ Österreich veröffentlicht die Kriterien zu 54 %, die GEWICHTE zu 0 % — dort stand
+    also nichts. Die Kriterien selbst liegen in allen drei Ländern: Typ-Code DE 350.861,
+    AT 23.558, CH 32.113 Vorgänge. Jetzt im Produkt: DE 31 %, AT 28 %, CH 51 %.
+
+    ⚠ ZWEI SPALTEN, NICHT EINE. Die Attribut-Pfade tragen keinen Index
+    (`AwardingCriterion.Description` steht ohne Nummer), Typ und Beschreibung lassen sich
+    also nicht paaren. Getrennt zu führen ist ehrlich; zu paaren wäre geraten — und ein
+    falsch zugeordnetes Kriterium ist schlimmer als keins.
+
+    ⚠ VERWEISE RAUS. „Bitte konsultieren Sie die Auftragsunterlagen" ist kein Kriterium,
+    sondern ein Zeiger auf Dokumente, an die wir oft nicht kommen (DE 10 %, AT 24 % solcher
+    Verweise). Der Filter greift deutsch, französisch und italienisch — die Schweiz ist zu
+    35 % nicht deutsch.
+
+    `pct: None` heisst „genannt, ohne Gewichtung", nicht „0 %". Die Oberfläche sagt das auch.
+    """
+    wurzel = pathlib.Path(__file__).resolve().parent.parent
+    gold = (wurzel / "govisor/gold.py").read_text(encoding="utf-8")
+    assert "AS award_types" in gold and "AS award_criteria" in gold, "die Spalten fehlen"
+    assert "konsultier|consulter" in gold, "der Verweis-Filter ist raus"
+
+    export = (wurzel / "scripts/export_web_leads.py").read_text(encoding="utf-8")
+    assert 'if not z and g("award_types"):' in export, \
+        "ohne Gewicht steht wieder nichts da"
+    assert '"zuschlagNamen"' in export
+
+    kern = (wurzel / "web/lib/explorerCore.js").read_text(encoding="utf-8")
+    assert "zuschlagNamen" in kern, "die Klartext-Kriterien werden nicht angezeigt"
+    assert 'x.pct!=null?x.pct' in kern, "die Anzeige unterscheidet nicht mehr zwischen 0 % und unbekannt"

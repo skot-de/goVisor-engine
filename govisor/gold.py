@@ -3034,6 +3034,7 @@ def _lead_context_sql(cfg: Config, country: str) -> str:
                 "NULL::INTEGER AS guarantee_required, NULL::INTEGER AS variants_allowed, "
                 "NULL::INTEGER AS validity_days, NULL::DATE AS validity_until, "
                 "NULL::INTEGER AS consortium_allowed, NULL::INTEGER AS subcontracting_allowed, "
+                "NULL::VARCHAR AS award_types, NULL::VARCHAR AS award_criteria, "
                 "NULL::VARCHAR AS selection_types, "
                 "NULL::VARCHAR AS deadline_time, NULL::VARCHAR AS question_deadline "
                 "WHERE false")
@@ -3144,6 +3145,31 @@ def _lead_context_sql(cfg: Config, country: str) -> str:
         -- simap sagt es direkt: `subContractorAllowed` 78 %, `consortiumAllowed` 55 %.
         -- Ein Feld, das nur ein Land fuellt, ist erlaubt — solange NULL „unbekannt" heisst
         -- und nicht „nicht erlaubt". Genau das steht in docs/land-onboarding.md.
+        -- ── ZUSCHLAGSKRITERIEN ────────────────────────────────────────────────────────
+        -- Bis zum 2026-08-23 trug der Export NUR die Gewichte (`price_weight_pct` &c.).
+        -- Gemessen: AT veroeffentlicht die Kriterien zu 54 %, aber die GEWICHTE zu 0 % —
+        -- also stand dort nichts. Die Kriterien selbst liegen in allen drei Laendern:
+        -- Typ-Code DE 350.861 / AT 23.558 / CH 32.113 Vorgaenge.
+        --
+        -- ⚠ ZWEI SPALTEN, NICHT EINE. Die Attribut-Pfade tragen KEINEN Index
+        -- (`AwardingCriterion.Description` steht ohne Nummer), Typ und Beschreibung lassen
+        -- sich also nicht paaren. Beides getrennt zu fuehren ist ehrlich; sie zu paaren
+        -- waere geraten — und ein falsch zugeordnetes Kriterium ist schlimmer als keins.
+        string_agg(DISTINCT CASE WHEN path ILIKE '%AwardingCriterion.AwardingCriterionTypeCode'
+                             AND path NOT ILIKE '%@%' AND value IN ('price','quality','cost')
+                            THEN value END, ',')                                 AS award_types,
+        -- ⚠ VERWEISE RAUS. „Bitte konsultieren Sie die Auftragsunterlagen" ist kein
+        -- Kriterium, sondern ein Zeiger auf Dokumente, an die wir oft nicht kommen.
+        -- Gemessen: DE 10 %, AT 24 %, CH unter 1 % solcher Verweise. Der Filter greift
+        -- deutsch, franzoesisch und italienisch — CH ist zu 35 % nicht deutsch.
+        list_aggregate(list_slice(list_distinct(list(CASE
+            WHEN (path ILIKE '%AwardingCriterion.Description'
+                  OR path ILIKE '%SubordinateAwardingCriterion.Name')
+             AND path NOT ILIKE '%@%' AND length(trim(value)) BETWEEN 4 AND 80
+             AND NOT regexp_matches(lower(value),
+                   'unterlag|ausschreib|dokument|document|dossier|konsultier|consulter|'
+                   || 'cit(e|é)s? dans|siehe|voir |vedi |see the|as (stated|specified)')
+            THEN trim(value) END)), 1, 6), 'string_agg', ' · ')                  AS award_criteria,
         max(CASE WHEN path = 'simap/consortiumAllowed'
                  THEN CASE lower(value) WHEN 'yes' THEN 1 WHEN 'no' THEN 0 END END)
                                                                              AS consortium_allowed,
@@ -3192,6 +3218,7 @@ def _lead_context_sql(cfg: Config, country: str) -> str:
       -- 2026-08-13 mit den vier simap-Unterlagen-Feldern: Spalten im Parquet vorhanden,
       -- Werte durchgehend leer.
       WHERE path LIKE 'simap/documents%'
+         OR path ILIKE '%AwardingCriterion%'
          -- ⚠ POSITIVLISTE, also auch die simap-EIGENEN Felder eintragen. Ohne diese zwei
          -- Zeilen bleibt der `coalesce` oben wirkungslos: die Zeilen kommen gar nicht erst
          -- durch. Gemessen am 2026-08-22: der Kontext lieferte 4 statt 765 Bieterfragen-
@@ -3399,6 +3426,7 @@ def build_lead_export(cfg: Config, country: str = "DE"):
             coalesce(ctx.validity_days,
                      date_diff('day', d.deadline_date, ctx.validity_until)) AS validity_days,
             ctx.consortium_allowed, ctx.subcontracting_allowed,
+            ctx.award_types, ctx.award_criteria,
             ctx.selection_types,
             ctx.deadline_time, ctx.question_deadline,
             d.ted_url                                 AS source_url,

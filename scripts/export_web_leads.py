@@ -763,6 +763,17 @@ def export_branche(key):
             z.append({"art": "qualitaet", "label": "Qualität", "pct": int(r["quality_weight_pct"])})
         if g("cost_weight_pct") is not None:
             z.append({"art": "kosten", "label": "Kosten", "pct": int(r["cost_weight_pct"])})
+        # ⚠ OHNE GEWICHT IST NICHT OHNE KRITERIUM. Bis zum 2026-08-23 stand hier nur, was
+        # ein Gewicht trug — und Österreich veröffentlicht die Kriterien zu 54 %, die
+        # Gewichte zu 0 %. Also stand dort nichts. Wenn kein Gewicht bekannt ist, tragen
+        # wir die genannten Typen ohne Prozentzahl ein; `pct: None` heisst „genannt, aber
+        # ohne Gewichtung", nicht „0 %".
+        if not z and g("award_types"):
+            LAB = {"price": "Preis", "quality": "Qualität", "cost": "Kosten"}
+            ART = {"price": "preis", "quality": "qualitaet", "cost": "kosten"}
+            for t in str(g("award_types")).split(","):
+                if t in LAB:
+                    z.append({"art": ART[t], "label": LAB[t], "pct": None})
 
         tage = frist_tage if (src == "f02" and frist_tage is not None) else None
         endTage = int(r["days_to_expiry"]) if g("days_to_expiry") is not None else None
@@ -890,6 +901,10 @@ def export_branche(key):
             "fragefrist": ((lambda q: f"{q[8:10]}.{q[5:7]}.{q[0:4]}")(str(g("question_deadline")))
                            if g("question_deadline") else None),
             "lose": lots.get(r["lead_id"], []), "zuschlag": z,
+            # Die Kriterien im Klartext, wie die Vergabestelle sie nennt („Vorstellung",
+            # „Termintreue"). Verweise auf die Unterlagen sind in Gold schon aussortiert.
+            "zuschlagNamen": (str(g("award_criteria")).split(" · ")
+                              if g("award_criteria") else None),
             # #13 Dokument-Wasserfall: erst der echte Unterlagen-Link (documents_url), sonst nur
             # die Plattform (source_url). `source` hält die zwei sauber auseinander; `access` ist
             # ehrlich 'unknown' — die non-restricted-Markierung ist noch nicht aus dem XML gezogen.

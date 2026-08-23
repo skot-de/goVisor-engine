@@ -2208,3 +2208,10 @@ a.lb-kachel{text-decoration:none}
 /* Bietergemeinschaft ohne Beleg: sichtbar zurueckgenommen. Die Zeile stand bis zum
    2026-08-22 IMMER auf „zugelassen", ohne dass es dafuer eine Quelle gab. */
 .pn-bg-offen .pn-bg-v{color:var(--ink-400);font-style:normal}
+
+/* Zuschlagskriterien im Klartext, wie die Vergabestelle sie nennt („Vorstellung",
+   „Termintreue"). Verweise auf die Unterlagen sind schon im Gold-Layer aussortiert. */
+.zname{display:flex;flex-wrap:wrap;gap:6px;align-items:baseline;margin:var(--s3) 0 0}
+.zname-k{font-size:var(--t-xs,11px);color:var(--ink-500);margin-right:2px}
+.zname-i{padding:2px 8px;border-radius:100px;background:var(--surface-2);
+  border:1px solid var(--line);font-size:var(--t-xs,11px);color:var(--ink-700)}
