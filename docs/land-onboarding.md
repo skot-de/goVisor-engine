@@ -39,6 +39,40 @@ Drei Fragen, immer in dieser Reihenfolge:
 3. **Wie viel davon ist Textbaustein?** Werteverteilung ansehen, nicht nur zählen. Diese
    Frage überspringt man leicht, weil die ersten beiden so schöne Zahlen liefern.
 
+## 1a · Jedes Land ist einzeln zu prüfen — die ganze Maschinerie
+
+⚠ Punkt 3 unten sagt „nichts DE-only lesen". Das ist **nicht** dasselbe wie „eine Logik für
+alle". Sven am 2026-08-22: *„jedes land ist individuell zu behandeln. parser, dubletten usw,
+also die ganze machinerie die wir aufgebaut haben."*
+
+Beides gilt gleichzeitig, und die Unterscheidung ist die eigentliche Arbeit:
+
+| Teil | länderübergreifend? | was zu prüfen ist |
+|---|---|---|
+| `lead_lot`, `entity_identity`, Exporte | **ja** — nur unionieren | steht ein `{G}/` drin? |
+| `_lead_context_sql` | **ja** — nimmt `country` | ist es angeschlossen? |
+| eForms-**Elemente** | **nein** | DE liest `SelectionCriteria`; AT befüllt `SpecificTendererRequirement` (3 von 435 gegen 383 von 435) |
+| Dubletten-Regeln | **nein** | `QUELLEN_RANG` ist quellen- und damit faktisch länderspezifisch (`simap`=CH, `atverg`=AT, `dtvp`/`doe`/`netserver`=DE) |
+| Stoppwörter im Titelvergleich | **nein** | `_STOPP` in `dedupe.py` ist rein deutsch |
+| Regionen-Katalog, PLZ | **nein** | AT-PLZ (4-stellig) kollidiert mit CH — der Geo-Join braucht `country`-Filter |
+| Dokument-Portale | **nein** | völlig andere Familien je Land |
+| Doktyp-Erkennung | **nein** | fünf Sprachräume, s. `govisor/doctypes.py` |
+| Währung | **nein** | CHF fällt aus jeder Wert-Kennzahl, wenn niemand umrechnet |
+
+**Gemessen, nicht behauptet** (CH, 2026-08-22): 35 % des Schweizer Bestands ist nicht
+deutsch — 39.656 französische und 1.554 italienische Vorgänge von 121.375. Die
+Dubletten-Erkennung überlebt das insgesamt (fr 19 %, de 20 % der Vorgänge in einem Paar),
+weil `kaeufer_und_titel` den Löwenanteil trägt. Eine Regel degradiert aber sichtbar:
+`nur_titel_kurz` greift bei deutschen Vorgängen 1.993-mal, bei französischen **182-mal** —
+sechsmal seltener, weil die deutsche Stoppwortliste französische Funktionswörter stehen
+lässt und die Titel dadurch „reicher" wirken.
+
+Das ist die Art Befund, die man nur beim Hinsehen bekommt: kein Ausfall, eine Schieflage.
+**Bei jedem neuen Land jede Stufe der Maschinerie einzeln durchgehen** — Parser, Dubletten,
+Geo, Doktypen, Währung, Portale — und je Stufe entscheiden, ob sie übertragbar ist oder eine
+eigene Fassung braucht. Was übertragbar ist, wird unioniert; was es nicht ist, bekommt eine
+eigene, benannte Regel statt einer stillschweigenden Annahme.
+
 ## 2 · Gold: keine „schlanke" Länder-Pipeline ohne Verfallsdatum
 
 `build_at_gold` trug im Docstring: *„Bewusst KEINE volle DE-Gold-Pipeline (die käme später
