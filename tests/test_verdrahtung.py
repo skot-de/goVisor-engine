@@ -230,3 +230,32 @@ def test_skript_listen_haben_begruendungen():
                         ("AUSNAHMEN_WEB", pv.AUSNAHMEN_WEB)):
         for schluessel, grund in liste.items():
             assert grund and len(grund) > 25, f"{name}[{schluessel}] ist nicht begruendet"
+
+
+def test_pfade_erlaubt_die_union_basis(tmp_path, monkeypatch):
+    """`G = "data/gold/DE"` ist in einem Skript mit `_union` die BASIS, der die
+    uebrigen Laender angehaengt werden — kein Befund. Zwei Nennungen schon."""
+    lauf = tmp_path / "daily_leads.sh"
+    lauf.write_text("$PY scripts/mit_union.py\n$PY scripts/zwei_mal.py\n")
+    skripte = tmp_path / "scripts"
+    skripte.mkdir()
+    (skripte / "mit_union.py").write_text(
+        'G = "data/gold/DE"\n'
+        "def _union(t):\n    return G + t\n")
+    (skripte / "zwei_mal.py").write_text(
+        'G = "data/gold/DE"\n'
+        'X = "data/silver/DE/notices"\n'
+        "def _union(t):\n    return G + t\n")
+    monkeypatch.setattr(pv, "NACHTLAUF", lauf)
+    monkeypatch.setattr(pv, "ROOT", tmp_path)
+    fehler = pv.sonde_pfade()
+    assert len(fehler) == 1 and "zwei_mal.py" in fehler[0]
+
+
+def test_die_drei_produktwege_laufen_im_nachtlauf_mit():
+    """Onboarding-Index, Zuschlagsphase und Firmenprofile. Zwei davon standen bis
+    2026-08-23 in KEINEM Lauf und schrieben trotzdem nach web/data."""
+    lauf = (ROOT / "scripts" / "daily_leads.sh").read_text()
+    ohne_kommentar = "\n".join(z for z in lauf.splitlines() if not z.lstrip().startswith("#"))
+    for skript in ("export_suppliers.py", "export_web_awards.py", "export_firma_profiles.py"):
+        assert skript in ohne_kommentar, f"{skript} laeuft nicht im Nachtlauf"

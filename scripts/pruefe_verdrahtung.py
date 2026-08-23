@@ -89,9 +89,6 @@ AUSNAHMEN_WEB: dict[str, str] = {
     "doc-analysis.backup.json": "Sicherungskopie vor dem Zerlegen der Dokumentanalyse",
     "nachweis-median.json": "Kennzahl aus einer einmaligen Erhebung, kein Tageslauf",
     "outreach.json": "internes Vertriebswerkzeug, laeuft von Hand",
-    "firma-profiles.json":
-        "⚠ BAUSTELLE, nicht Ausnahme: `export_firma_profiles.py` steht in KEINEM Lauf. "
-        "Die Datei speist /firma und war am 2026-08-23 dreiundzwanzig Tage alt.",
 }
 
 # ── Sonde 2: Laenderparitaet ────────────────────────────────────────────────
@@ -150,28 +147,19 @@ BEWUSST_NUR_DE_SKRIPTE: dict[str, str] = {
         "interner Bericht ueber den DE-Bestand, kein Produktweg",
     "gap_effects.py":
         "interne Wirkungsanalyse, kein Produktweg",
-    "export_web_leads.py":
-        "`G = data/gold/DE` ist die BASIS von `_union`, das DE voranstellt und jedes "
-        "weitere Land anhaengt — der einzige Treffer ist genau diese Basis",
     "pruefe_verdrahtung.py":
         "dieses Skript selbst; die Treffer sind die Begruendungstexte oben",
 }
 
 # OFFEN: liest nur DE, muesste es aber nicht. Jede Zeile ist eine Baustelle mit
 # gemessener Auswirkung — sichtbar, damit sie nicht als erledigt durchgeht.
-OFFEN_NUR_DE_SKRIPTE: dict[str, str] = {
-    "export_suppliers.py":
-        "Firmenindex fuers Onboarding (31.459 Firmen). AT/CH-Auftragnehmer (34.340 + 15.494 "
-        "in contractor_stats) fehlen; eine rein schweizerische Firma faellt bei der "
-        "Anmeldung auf den manuellen Pfad. Gemessen: PORR wird gefunden (gewinnt auch in "
-        "DE), Implenia Schweiz nicht.",
-    "export_web_awards.py":
-        "Zuschlagsphase. Im Frontend liegen 379 Zuschlags-Leads, alle DE — die Frage, "
-        "wer dort zuletzt gewonnen hat, bleibt fuer AT/CH ohne Antwort.",
-    "export_firma_profiles.py":
-        "vorberechnete Firmenprofile fuer /firma (16 MB). Firmen ohne DE-Zuschlaege haben "
-        "kein Profil.",
-}
+#
+# Am 2026-08-23 standen hier drei Eintraege; alle drei sind verdrahtet:
+#   export_suppliers.py       31.459 → 37.896 Firmen, Schweizer Firmen jetzt auffindbar
+#   export_web_awards.py      379 → 1.019 Zuschlaege (DE 379, AT 334, CH 306)
+#   export_firma_profiles.py  AT 2.685 / CH 84 Profile mit echter Hauptregion
+# Die Liste bleibt leer stehen, weil der naechste Fund dieselbe Form haben wird.
+OFFEN_NUR_DE_SKRIPTE: dict[str, str] = {}
 
 
 def _de_feste_pfade(skript: pathlib.Path) -> int:
@@ -206,6 +194,14 @@ def _de_feste_pfade(skript: pathlib.Path) -> int:
                 and id(knoten) not in docs \
                 and ("data/gold/DE" in knoten.value or "data/silver/DE" in knoten.value):
             n += 1
+    # ⚠ EINE Nennung ist erlaubt, WENN das Skript `_union` definiert: `G = "data/gold/DE"`
+    # ist dort die BASIS, der die uebrigen Laender angehaengt werden (DE zuerst, weil es
+    # das vollstaendigste Schema hat). Das als Ausnahme je Skript zu fuehren waere eine
+    # Liste, die mit jedem umgestellten Exporter waechst und nichts aussagt — die Regel
+    # gehoert in die Pruefung, nicht in die Ausnahmen.
+    if n == 1 and any(isinstance(k, ast.FunctionDef) and k.name == "_union"
+                      for k in ast.walk(baum)):
+        return 0
     return n
 
 

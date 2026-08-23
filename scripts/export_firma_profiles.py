@@ -20,16 +20,55 @@ import duckdb
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 OUT = ROOT / "web/data"
 G = str(ROOT / "data/gold/DE")
-SN = str(ROOT / "data/silver/DE/notices/*/*.parquet")
-SA = str(ROOT / "data/silver/DE/attributes/*/*.parquet")
+
+
+def _union(tabelle: str) -> str:
+    """Gold-Tabelle ueber ALLE Laender, DE zuerst (Basis-Schema).
+
+    ⚠ Bis 2026-08-23 las dieses Skript nur `data/gold/DE` und stand ausserdem in KEINEM
+    Lauf: `web/data/firma-profiles.json` war 23 Tage alt (16,6 MB). Eine Firma ohne
+    deutsche Zuschlaege hatte gar kein Profil.
+    """
+    weitere = sorted(str(x) for x in (ROOT / "data/gold").glob(f"*/{tabelle}.parquet")
+                     if x.parent.name != "DE")
+    lst = ", ".join(f"'{d}'" for d in [f"{G}/{tabelle}.parquet"] + weitere)
+    return f"read_parquet([{lst}], union_by_name=true)"
+
+
+def _silber_union(tabelle: str) -> str:
+    """Silber ueber alle Laender, die die Tabelle fuehren (Glob ins Leere = Laufzeitfehler)."""
+    muster = [str(ROOT / f"data/silver/{x.parent.name}/{tabelle}/*/*.parquet")
+              for x in sorted((ROOT / "data/silver").glob(f"*/{tabelle}"))
+              if list(x.glob("*/*.parquet"))]
+    lst = ", ".join(f"'{m}'" for m in muster)
+    return f"read_parquet([{lst}], hive_partitioning=1, union_by_name=true)"
+
+
+SN = _silber_union("notices")
+SA = _silber_union("attributes")
 
 MARKT_VERTEIDIGUNG = 28
 BINDUNG_MIN_BELEGE = 3
-NUTS1 = {"DE1": "Baden-Württemberg", "DE2": "Bayern", "DE3": "Berlin", "DE4": "Brandenburg",
-         "DE5": "Bremen", "DE6": "Hamburg", "DE7": "Hessen", "DE8": "Meck.-Vorpommern",
-         "DE9": "Niedersachsen", "DEA": "Nordrhein-Westfalen", "DEB": "Rheinland-Pfalz",
-         "DEC": "Saarland", "DED": "Sachsen", "DEE": "Sachsen-Anhalt", "DEF": "Schleswig-Holstein",
-         "DEG": "Thüringen"}
+# ⚠ Regionsnamen aus `dim_nuts` JE LAND statt getippter DE-Liste. „Bundesland" sitzt
+# nicht ueberall auf derselben NUTS-Stelle (DE 3, AT 4, CH 5 — s.
+# `docs/laender/07-geo-und-regionen.md`); die getippte Liste kannte nur DE-Codes und
+# haette fuer AT/CH den rohen Code angezeigt.
+def _regionsnamen() -> dict[str, str]:
+    con = duckdb.connect()
+    aus: dict[str, str] = {}
+    for datei in sorted((ROOT / "data/gold").glob("*/dim_nuts.parquet")):
+        try:
+            for code, name in con.execute(
+                    f"SELECT nuts_code, name FROM '{datei.as_posix()}'").fetchall():
+                if code and name:
+                    aus[code] = name
+        except Exception:
+            continue
+    con.close()
+    return aus
+
+
+NUTS1 = _regionsnamen()
 
 
 def bindung(wins, renewals, seit, now_year):
@@ -73,18 +112,18 @@ def main():
         print("keine Ziel-Identitäten (suppliers.json / awards-*.json fehlen?)"); return 1
 
     con = duckdb.connect(); con.execute("SET threads=4")
-    EI = f"read_parquet('{G}/entity_identity.parquet')"
-    EN = f"read_parquet('{G}/entities.parquet')"
-    PE = f"read_parquet('{G}/party_entity.parquet')"
+    EI = _union('entity_identity')
+    EN = _union('entities')
+    PE = _union('party_entity')
     CL = f"read_parquet('{G}/dim_cpv_label.parquet')"
-    LE = f"read_parquet('{G}/lead_export.parquet')"
-    BCH = f"read_parquet('{G}/buyer_contractor_history.parquet')"
-    CLOSS = f"read_parquet('{G}/contractor_loss.parquet')"
+    LE = _union('lead_export')
+    BCH = _union('buyer_contractor_history')
+    CLOSS = _union('contractor_loss')
 
     con.execute("CREATE TEMP TABLE targets(identity_id VARCHAR)")
     con.executemany("INSERT INTO targets VALUES (?)", [[i] for i in ids])
 
-    now = con.execute(f"SELECT max(publication_date) FROM read_parquet('{SN}', hive_partitioning=1) "
+    now = con.execute(f"SELECT max(publication_date) FROM {SN} "
                       f"WHERE publication_date <= CURRENT_DATE").fetchone()[0]
     now_year = now.year if now else 2026
 
@@ -98,12 +137,18 @@ def main():
     con.execute(f"""CREATE TEMP TABLE w AS
       SELECT DISTINCT m.identity_id, p.notice_id,
              substr(n.cpv_main,1,4) AS cpv4,
-             substr(n.performance_nuts,1,3) AS nuts1,
+             -- REGIONS-EBENE JE LAND (s. govisor.gold._REGION_STELLEN und
+             -- docs/laender/07-geo-und-regionen.md). Ein fester Schnitt auf 3 Zeichen
+             -- ist eine deutsche Annahme: AT1 hiesse „Ostoesterreich" (drei
+             -- Bundeslaender), CH0 die ganze Schweiz.
+             substr(n.performance_nuts, 1,
+                    CASE substr(n.performance_nuts,1,2)
+                         WHEN 'AT' THEN 4 WHEN 'CH' THEN 5 ELSE 3 END) AS nuts1,
              coalesce(n.award_date, n.publication_date) AS dt,
              year(coalesce(n.award_date, n.publication_date)) AS jahr,
              CASE WHEN n.value_currency='EUR' THEN n.final_value END AS val
       FROM {PE} p JOIN members m ON m.entity_id = p.entity_id
-      JOIN read_parquet('{SN}', hive_partitioning=1) n ON n.notice_id = p.notice_id
+      JOIN {SN} n ON n.notice_id = p.notice_id
       WHERE p.role='winner'""")
 
     # ---- Kopf/Name/Konfidenz je Identität ----
@@ -147,7 +192,11 @@ def main():
 
     regionen = {}
     for iid, nuts1, n, pct in con.execute("""
-      WITH c AS (SELECT identity_id, nuts1, count(*) n FROM w WHERE nuts1 LIKE 'DE_' GROUP BY 1,2),
+      -- ⚠ Stand hier bis 2026-08-23 als `nuts1 LIKE 'DE_'` — ein fest eingebauter
+      -- Deutschlandfilter, der oesterreichische und schweizerische Regionen komplett
+      -- verwarf. Gemessen: NULL von 38.307 Profilen trug eine AT/CH-Hauptregion.
+      WITH c AS (SELECT identity_id, nuts1, count(*) n FROM w
+                 WHERE nuts1 IS NOT NULL AND length(nuts1) >= 3 GROUP BY 1,2),
       t AS (SELECT identity_id, sum(n) tot FROM c GROUP BY 1),
       rk AS (SELECT c.*, round(100.0*c.n/t.tot) pct, row_number() OVER (PARTITION BY c.identity_id ORDER BY c.n DESC) rn
              FROM c JOIN t USING(identity_id))
@@ -157,7 +206,7 @@ def main():
     # ---- Signale: Subcontracting (distinkte Zuschläge mit Feld) + Bietergemeinschaften ----
     subc = {r[0]: r[1] for r in con.execute(f"""
       SELECT w.identity_id, count(DISTINCT w.notice_id) FROM w
-      WHERE EXISTS (SELECT 1 FROM read_parquet('{SA}', hive_partitioning=1) a
+      WHERE EXISTS (SELECT 1 FROM {SA} a
                     WHERE a.notice_id = w.notice_id AND a.path ILIKE '%ubcontract%') GROUP BY 1""").fetchall()}
     arge = {r[0]: r[1] for r in con.execute(f"""
       WITH nwin AS (SELECT p.notice_id, count(DISTINCT p.entity_id) c FROM {PE} p WHERE p.role='winner' GROUP BY 1)

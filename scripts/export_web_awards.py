@@ -30,20 +30,50 @@ from govisor.testvergaben import sql_bedingung as _testvergabe_sql  # noqa: E402
 OUT = pathlib.Path("web/data"); OUT.mkdir(parents=True, exist_ok=True)
 con = duckdb.connect(); con.execute("SET threads=4")
 G = "data/gold/DE"
-N = "read_parquet('data/silver/DE/notices/*/*.parquet', hive_partitioning=1)"
-A = "read_parquet('data/silver/DE/attributes/*/*.parquet', hive_partitioning=1)"
-PE = f"read_parquet('{G}/party_entity.parquet')"
-EI = f"read_parquet('{G}/entity_identity.parquet')"
-EN = f"read_parquet('{G}/entities.parquet')"
-CL = f"read_parquet('{G}/dim_cpv_label.parquet')"
-DC = f"read_parquet('{G}/dim_cpv.parquet')"
-LD = f"read_parquet('{G}/lead_duration.parquet')"
+
+
+def _union(tabelle: str) -> str:
+    """Gold-Tabelle ueber ALLE Laender, DE zuerst (Basis-Schema).
+
+    ⚠ Bis 2026-08-23 las dieses Skript nur `data/gold/DE`, und es stand ausserdem in
+    KEINEM Lauf. Die Zuschlagsphase im Frontend trug deshalb 379 Leads, alle deutsch —
+    die Frage, wer bei einer oesterreichischen oder schweizerischen Stelle zuletzt
+    gewonnen hat, blieb ohne Antwort.
+    """
+    weitere = sorted(str(x) for x in pathlib.Path("data/gold").glob(f"*/{tabelle}.parquet")
+                     if x.parent.name != "DE")
+    lst = ", ".join(f"'{d}'" for d in [f"{G}/{tabelle}.parquet"] + weitere)
+    return f"read_parquet([{lst}], union_by_name=true)"
+
+
+def _silber_union(tabelle: str) -> str:
+    """Silber ueber alle Laender, die die Tabelle fuehren (Glob ins Leere = Laufzeitfehler)."""
+    muster = [f"data/silver/{x.parent.name}/{tabelle}/*/*.parquet"
+              for x in sorted(pathlib.Path("data/silver").glob(f"*/{tabelle}"))
+              if list(x.glob("*/*.parquet"))]
+    lst = ", ".join(f"'{m}'" for m in muster)
+    return f"read_parquet([{lst}], hive_partitioning=1, union_by_name=true)"
+
+
+N = _silber_union("notices")
+A = _silber_union("attributes")
+PE = _union("party_entity")
+EI = _union("entity_identity")
+EN = _union("entities")
+CL = f"read_parquet('{G}/dim_cpv_label.parquet')"   # EU-Vokabular, eine Kopie genuegt
+DC = f"read_parquet('{G}/dim_cpv.parquet')"         # dito
+LD = _union("lead_duration")
 
 # Standardausschnitt (Ticket §3.3): letzte 30 Tage + ab 500.000 €. Das ist der ehrliche „frische"
 # Zuschlag-Stream (unter 500k selten Weitervergabe, nach 30 Tagen ist das Kontakt-Fenster meist zu).
 WINDOW_DAYS = 30
 VALUE_FLOOR = 500_000
-CAP = 120                   # je Branche
+# ⚠ JE BRANCHE **UND LAND**. Bis 2026-08-23 galt der Deckel je Branche allein — das war
+# richtig, solange nur Deutschland drin war. Mit AT und CH haetten sich die drei Laender
+# denselben Deckel geteilt: ein deutscher Nutzer saehe statt 503 nur noch 196 deutsche
+# Zuschlaege, weil oesterreichische und schweizerische ihm die Plaetze wegnehmen. Der
+# Deckel soll die Liste kurz halten, nicht Laender gegeneinander ausspielen.
+CAP = 120                   # je Branche UND Land
 
 # Branche-Mapping identisch zu export_web_leads.py (dim_cpv.branche → ui_branche)
 BRANCHE = """CASE b.branche
@@ -80,7 +110,7 @@ con.execute(f"""CREATE TEMP TABLE aw AS
     SELECT p.notice_id, min(ei.identity_id) AS wid, count(DISTINCT ei.identity_id) AS n_win
     FROM {PE} p JOIN {EI} ei ON ei.entity_id = p.entity_id
     WHERE p.role='winner' GROUP BY 1)
-  SELECT n.notice_id, n.title, n.cpv_main, substr(n.cpv_main,1,4) AS cpv4,
+  SELECT n.notice_id, n.country, n.title, n.cpv_main, substr(n.cpv_main,1,4) AS cpv4,
          substr(n.performance_nuts,1,3) AS nuts1,
          n.award_date, coalesce(n.final_value, n.estimated_value) AS wert,
          (n.final_value IS NOT NULL AND n.value_currency='EUR') AS wert_echt,
@@ -205,12 +235,16 @@ def g(r, k):
 
 
 by_branche = {}
+_je_land: dict[tuple[str, str], int] = {}
 for r in rows:
     br = g(r, "ui_branche") or "beratung"
+    land = g(r, "country") or "DE"
     if br not in by_branche:
         by_branche[br] = []
-    if len(by_branche[br]) >= CAP:
+    schluessel = (br, land)
+    if _je_land.get(schluessel, 0) >= CAP:
         continue
+    _je_land[schluessel] = _je_land.get(schluessel, 0) + 1
     share = g(r, "self_share")
     overlap = overlap_of(share)
     sub = bool(g(r, "sub_flag"))
@@ -233,7 +267,11 @@ for r in rows:
         "titel": g(r, "title") or "(ohne Titel)",
         "buyer": g(r, "buyer") or "", "buyerShort": g(r, "buyer") or "",
         "cpv": g(r, "cpv_main"), "cpvLabel": g(r, "cpv_label") or "",
-        "land": "DE",
+        # ⚠ Stand hier bis 2026-08-23 FEST auf "DE" — selbst nachdem die Quellen alle
+        # Laender lasen, waere jeder oesterreichische Zuschlag als deutscher ausgegeben
+        # worden. Ein hartkodierter Wert ist die leiseste Sorte Fehler: er sieht wie
+        # ein Feld aus.
+        "land": g(r, "country") or "DE",
         "region": NUTS1.get(g(r, "nuts1"), ""), "nuts": g(r, "nuts1") or "",
         "volumen": {"wert": eur(g(r, "wert")) or "Wert offen",
                     "src": "echt" if g(r, "wert_echt") else "schaetz"},

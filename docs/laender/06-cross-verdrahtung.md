@@ -134,26 +134,46 @@ hatte — indem die **alte Fassung aus dem Commit** gegen die heutigen Daten lie
 **Regel:** erst prüfen, ob zwei Läufe der ALTEN Fassung identisch sind. Sonst diagnostiziert
 man hinterher Gespenster.
 
-## ⚠ Was ein neues Land heute NICHT bekommt
+## Was ein neues Land heute bekommt
 
 Stand 2026-08-23, gemessen mit `pruefe_verdrahtung.py --sonde pfade`. Diese Liste ist der
 ehrliche Gegenpol zum Rest des Kapitels: die **Datenkette** ist länderfähig, drei
 **Produktwege** sind es nicht.
 
-| Weg | Status | Was das Land verliert |
-|-----|--------|-----------------------|
-| `export_suppliers.py` → Onboarding-Firmenindex | DE-fest | Eine Firma des Landes wird bei der Anmeldung **nicht gefunden** und fällt auf den manuellen Pfad (Branche + Region wählen, kein CPV-Ranking). Gemessen: 31.459 Firmen im Index, davon **keine** rein schweizerische — PORR ist drin, weil es auch in DE gewinnt, Implenia Schweiz nicht. Dabei liegen 34.340 AT- und 15.494 CH-Auftragnehmer in `contractor_stats`. |
-| `export_web_awards.py` → Zuschlagsphase | DE-fest **und in keinem Lauf** | Die Frage, wer dort zuletzt gewonnen hat, bleibt ohne Antwort. Im Frontend liegen 379 Zuschlags-Leads, alle DE. |
-| `export_firma_profiles.py` → `/firma` | DE-fest **und in keinem Lauf** | Firmen ohne deutsche Zuschläge haben kein Profil. Die Datei war am 2026-08-23 **23 Tage alt** (16,6 MB). |
+Seit dem 2026-08-23 sind auch die drei **Produktwege** länderfähig, die vorher nur
+Deutschland kannten. Sie standen zum Teil in **gar keinem Lauf** — die Fehlerklasse aus
+[Kapitel 05](05-gold-kette.md), eine Ebene weiter aussen:
+
+| Weg | Vorher | Nachher |
+|-----|--------|---------|
+| `export_suppliers.py` → Onboarding-Firmenindex | 31.459 Firmen, **keine** rein schweizerische. PORR war drin (gewinnt auch in DE), Implenia Schweiz nicht — eine Schweizer Firma fiel bei der Anmeldung auf den manuellen Pfad. | 37.896 Firmen, alle drei Länder |
+| `export_web_awards.py` → Zuschlagsphase | 379 Zuschläge, alle DE, `"land"` stand **fest** im Quelltext | 1.019 (DE 379, AT 334, CH 306) |
+| `export_firma_profiles.py` → `/firma` | 23 Tage alte Datei, `nuts1 LIKE 'DE_'` verwarf AT/CH komplett | AT 2.685 / CH 84 Profile mit echter Hauptregion |
+
+Drei Fallen steckten darin, jede eine eigene Lehre:
+
+- **Der Deckel muss je Land gelten.** `CAP = 120 je Branche` war richtig, solange nur DE
+  drin war. Mit drei Ländern hätten sie sich denselben Deckel geteilt: ein deutscher
+  Nutzer sähe statt 379 nur noch 196 deutsche Zuschläge. Ein Deckel soll die Liste kurz
+  halten, nicht Länder gegeneinander ausspielen.
+- **Ein hartkodierter Wert ist die leiseste Sorte Fehler.** `"land": "DE"` stand mitten im
+  Ausgabe-Aufbau. Selbst nachdem alle Quellen alle Länder lasen, wäre jeder
+  österreichische Zuschlag als deutscher ausgegeben worden — er *sieht aus wie ein Feld*.
+- **Grenzgänger brauchen eine Zusammenlegung mit Beleg.** Dieselbe Firma trägt je Land
+  eine eigene Identität: ACP IT Solutions kam mit vier Einträgen, darunter `solo:id:032844a`
+  und `solo:id:FN32844a` — dieselbe Firmenbuchnummer in zwei Schreibweisen. Mehrfach
+  vorkommende Namen stiegen von 134 auf 868. Zusammengelegt wird nur bei **zwei** Belegen:
+  gleicher Name **und** mindestens ein gemeinsames CPV-4-Feld. Gemessen an allen 868
+  Fällen hatte **jeder** überlappende Felder — die Bedingung steht trotzdem im Code, damit
+  der erste Fall ohne Überlappung getrennt bleibt.
 
 Bewusst DE-only und damit **kein** Mangel: `export_landing.py` (Startseiten-Zahlen —
 gemischte Qualitäten wären keine Zahl), `export_supabase.py` (Push ist ohnehin aus),
 `qualitaet_bericht.py` und `gap_effects.py` (interne Berichte).
 
-**Für ein neues Land heisst das:** die Leads, Kennzahlen, Regionen, Sprachfassungen,
-Dubletten und Marktzahlen sind da. Onboarding-Matching, Zuschlagsansicht und Firmenprofil
-sind es nicht — und das gehört dem Nutzer gegenüber gesagt, nicht als leere Ansicht
-ausgeliefert.
+⚠ **Offen geblieben:** `firma-profiles.json` ist mit den drei Ländern auf **70 MB**
+gewachsen und wird vom Frontend als Ganzes geparst. Das trägt heute (Cache-Grenze 256 MB),
+skaliert aber nicht auf weitere Länder — dieselbe Sharding-Frage wie bei den Detail-Dateien.
 
 ## Die Abnahme dieses Tors
 

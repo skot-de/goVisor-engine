@@ -12,12 +12,44 @@ import duckdb, json, os, pathlib, requests
 OUT = pathlib.Path("web/data"); OUT.mkdir(parents=True, exist_ok=True)
 con = duckdb.connect(); con.execute("SET threads=4")
 G = "data/gold/DE"
-PE = f"read_parquet('{G}/party_entity.parquet')"
-EI = f"read_parquet('{G}/entity_identity.parquet')"
-EN = f"read_parquet('{G}/entities.parquet')"
-CL = f"read_parquet('{G}/dim_cpv_label.parquet')"
-N = "read_parquet('data/silver/DE/notices/*/*.parquet', hive_partitioning=1)"
-E = f"read_parquet('{G}/lead_export.parquet')"
+
+
+def _union(tabelle: str) -> str:
+    """Gold-Tabelle ueber ALLE Laender, DE zuerst (Basis-Schema).
+
+    ⚠ Bis 2026-08-23 las dieses Skript ausschliesslich `data/gold/DE`. Der Firmenindex
+    fuers Onboarding enthielt damit 31.459 Firmen und KEINE rein oesterreichische oder
+    schweizerische — obwohl 34.340 AT- und 15.494 CH-Auftragnehmer in `contractor_stats`
+    liegen. Gemessen: PORR war auffindbar, weil es auch in Deutschland gewinnt; Implenia
+    Schweiz nicht. Eine Schweizer Firma fiel bei der Anmeldung auf den manuellen Pfad.
+    """
+    weitere = sorted(str(x) for x in pathlib.Path("data/gold").glob(f"*/{tabelle}.parquet")
+                     if x.parent.name != "DE")
+    dateien = [f"{G}/{tabelle}.parquet"] + weitere
+    lst = ", ".join(f"'{d}'" for d in dateien)
+    return f"read_parquet([{lst}], union_by_name=true)"
+
+
+def _silber_union(tabelle: str) -> str:
+    """Silber-Tabelle ueber alle Laender, die sie fuehren.
+
+    Getrennt von `_union`: Gold hat EINE Datei je Land, Silber einen Baum aus
+    Jahrespartitionen. Ein Glob ins Leere ist in DuckDB ein Laufzeitfehler.
+    """
+    muster = [f"data/silver/{x.parent.name}/{tabelle}/*/*.parquet"
+              for x in sorted(pathlib.Path("data/silver").glob(f"*/{tabelle}"))
+              if list(x.glob("*/*.parquet"))]
+    lst = ", ".join(f"'{m}'" for m in muster)
+    return f"read_parquet([{lst}], hive_partitioning=1, union_by_name=true)"
+
+
+PE = _union("party_entity")
+EI = _union("entity_identity")
+EN = _union("entities")
+CL = f"read_parquet('{G}/dim_cpv_label.parquet')"   # EU-Vokabular, eine Kopie genuegt
+LP = _union("lead_party")
+N = _silber_union("notices")
+E = _union("lead_export")
 
 MIN_WINS = 3      # Firmen ab 3 Zuschlägen auffindbar (Mittelstand); darunter ist das CPV-Profil zu dünn
 MAX_ROWS = 40000  # Sicherheits-Deckel gegen Ausreißer
@@ -44,10 +76,22 @@ BLOCK_SQL = _block_sql('name')
 
 # Gewinner-Zuschläge mit Identity, CPV4 und Leistungsort-NUTS1. Nur Identitäten, die
 # mindestens eine belegt aufgelöste Entity (HR/national-id) enthalten — sonst Namens-Rauschen.
+# ⚠ ENTARTETE KENNUNGEN AUSSCHLIESSEN. Seit dieses Skript ueber alle Laender liest, ist
+# das keine Feinheit mehr, sondern Pflicht: 1.722 `identity_id` kommen in mehr als einem
+# Land vor, und 29 davon sind Platzhalter — `solo:id:.`, `solo:id:00000`, `solo:id:N/A`,
+# `solo:id:00000000`. Unter ihnen faellt zusammen, was nichts miteinander zu tun hat
+# (gemessen: „Fa. Scharr Tec GmbH & Co.KG" und „Bieter"). Die uebrigen 1.693 sind ECHTE
+# grenzueberschreitende Firmen (Kaercher, Schindler Aufzuege, Amberg Engineering) und
+# sollen genau deshalb zu EINEM Eintrag verschmelzen.
+_KERN = "regexp_replace(split_part(identity_id, ':', -1), '[.0[:space:]-]', '', 'g')"
+GUELTIG = (f"length({_KERN}) >= 3 AND lower({_KERN}) "
+           f"NOT IN ('na', 'n/a', 'keine', 'unbekannt', 'bieter', 'unknown')")
+
 con.execute(f"""CREATE OR REPLACE TEMP TABLE belegt AS
   SELECT DISTINCT ei.identity_id
   FROM {EI} ei JOIN {EN} e ON e.entity_id = ei.entity_id
-  WHERE e.method IN ('handelsregister_exakt','ted_nationalid')""")
+  WHERE e.method IN ('handelsregister_exakt','ted_nationalid')
+    AND {GUELTIG.replace('identity_id', 'ei.identity_id')}""")
 
 con.execute(f"""CREATE OR REPLACE TEMP TABLE w AS
   SELECT ei.identity_id, ei.canonical_name, p.entity_id, p.notice_id,
@@ -203,11 +247,11 @@ con.execute(f"""CREATE OR REPLACE TEMP TABLE kunden AS
 con.execute(f"""CREATE OR REPLACE TEMP TABLE domains AS
   WITH kauf AS (   -- Domain des AUFTRAGGEBERS je Bekanntmachung
     SELECT lead_id, lower(split_part(email, '@', 2)) AS dom
-    FROM read_parquet('{G}/lead_party.parquet')
+    FROM {LP}
     WHERE party_role = 'buyer' AND email LIKE '%@%'),
   m AS (
     SELECT w.identity_id, lower(split_part(lp.email, '@', 2)) AS dom
-    FROM w JOIN read_parquet('{G}/lead_party.parquet') lp ON lp.lead_id = w.notice_id
+    FROM w JOIN {LP} lp ON lp.lead_id = w.notice_id
            LEFT JOIN kauf k ON k.lead_id = w.notice_id
     WHERE lower(lp.party_role) LIKE '%win%' AND lp.email LIKE '%@%'
       AND w.identity_id IN (SELECT identity_id FROM tops)
@@ -235,11 +279,11 @@ con.execute(f"""CREATE OR REPLACE TEMP TABLE domains AS
 # er nicht — das kann er ohne geheimen Schlüssel auch nicht, und dafür ist er nicht da.
 con.execute(f"""CREATE OR REPLACE TEMP TABLE mailhashes AS
   WITH kauf AS (
-    SELECT lead_id, lower(split_part(email, '@', 2)) AS dom FROM read_parquet('{G}/lead_party.parquet')
+    SELECT lead_id, lower(split_part(email, '@', 2)) AS dom FROM {LP}
     WHERE party_role = 'buyer' AND email LIKE '%@%'),
   m AS (
     SELECT DISTINCT w.identity_id, lower(trim(lp.email)) AS mail
-    FROM w JOIN read_parquet('{G}/lead_party.parquet') lp ON lp.lead_id = w.notice_id
+    FROM w JOIN {LP} lp ON lp.lead_id = w.notice_id
            LEFT JOIN kauf k ON k.lead_id = w.notice_id
     WHERE lower(lp.party_role) LIKE '%win%' AND lp.email LIKE '%@%'
       AND w.identity_id IN (SELECT identity_id FROM tops)
@@ -417,6 +461,80 @@ for (iid, name, aliase, wins, fields, fields6, regions, reg80, vol, wert_belege,
 # Reihenfolge festnageln: die Zeilen kommen aus einer Abfrage ohne eindeutigen
 # Endschluessel, und ohne diese Sortierung aendert sich die Datei bei jedem Lauf.
 out.sort(key=lambda x: (-int(x.get("wins") or 0), str(x.get("id") or "")))
+
+# ── GRENZGAENGER ZU EINEM EINTRAG ───────────────────────────────────────────────────
+# Seit dieses Skript alle Laender liest, traegt dieselbe Firma mehrere Identitaeten:
+# ACP IT Solutions kam mit VIER Eintraegen (`solo:id:032844a`, zwei GLN und
+# `solo:id:FN32844a` — die letzten beiden sind dieselbe Firmenbuchnummer in zwei
+# Schreibweisen). Gemessen stieg die Zahl mehrfach vorkommender Namen von 134 auf 868.
+#
+# Das ist kein Schoenheitsfehler: wer im Onboarding seinen Firmennamen tippt, bekaeme
+# vierzehn Treffer und muesste raten, welcher SEIN Zuschlags-Verlauf ist.
+#
+# ⚠ Zusammengelegt wird nur bei ZWEI Belegen: gleicher Name UND mindestens ein
+# gemeinsames CPV-4-Feld. Der Namensvergleich allein waere die Falle aus
+# `docs/laender/08-entitaeten-und-locale.md` — 22 Kaeufernamen kommen in mehr als einem
+# Land vor. Gemessen an allen 868 Faellen: JEDER hatte ueberlappende Felder, kein
+# einziger sah nach fremden Firmen aus. Bleibt die Ueberlappung eines Tages aus, bleiben
+# die Eintraege getrennt — die Bedingung steht deshalb im Code und nicht im Kommentar.
+def _zusammenlegen(eintraege: list[dict]) -> list[dict]:
+    from collections import defaultdict
+    nach_name: dict[str, list[dict]] = defaultdict(list)
+    for e in eintraege:
+        nach_name[(e.get("name") or "").strip().lower()].append(e)
+
+    def felder4(e):
+        return {str(f.get("cpv") or f.get("code") or "")[:4]
+                for f in (e.get("fields") or []) if f}
+
+    aus, verschmolzen = [], 0
+    for gruppe in nach_name.values():
+        if len(gruppe) == 1:
+            aus.append(gruppe[0])
+            continue
+        # Reichster Eintrag fuehrt (meiste Zuschlaege) — er traegt den vollstaendigsten
+        # Verlauf, und die uebrigen steuern nur bei, was ihm fehlt.
+        gruppe.sort(key=lambda e: -(e.get("wins") or 0))
+        kopf, rest = gruppe[0], []
+        for e in gruppe[1:]:
+            if felder4(kopf) & felder4(e):
+                rest.append(e)
+            else:
+                aus.append(e)          # kein gemeinsames Feld → getrennt lassen
+        if not rest:
+            aus.append(kopf)
+            continue
+        verschmolzen += len(rest)
+        z = dict(kopf)
+        z["wins"] = sum((e.get("wins") or 0) for e in gruppe[:1] + rest)
+        z["buyers"] = sum((e.get("buyers") or 0) for e in gruppe[:1] + rest) or None
+        seit = [e.get("seit") for e in gruppe[:1] + rest if e.get("seit")]
+        z["seit"] = min(seit) if seit else None
+        # Kennungen der Geschwister als Alias behalten: die Suche findet die Firma dann
+        # auch ueber eine Schreibweise, die nur eine der Quellen fuehrt.
+        z["aliases"] = list(dict.fromkeys(
+            (kopf.get("aliases") or []) + [a for e in rest for a in (e.get("aliases") or [])]
+        ))[:8]
+        for feld in ("fields", "fields6", "topBuyers", "members", "mailHashes"):
+            gesehen, zus = set(), []
+            for e in gruppe[:1] + rest:
+                for x in (e.get(feld) or []):
+                    k = json.dumps(x, sort_keys=True) if isinstance(x, dict) else str(x)
+                    if k not in gesehen:
+                        gesehen.add(k); zus.append(x)
+            z[feld] = zus[:12] if feld.startswith("fields") else zus
+        # Eine belegte Domain schlaegt eine fehlende, egal aus welchem Geschwister.
+        if not z.get("domain"):
+            for e in rest:
+                if e.get("domain"):
+                    z["domain"] = e["domain"]; z["domainQuelle"] = e.get("domainQuelle"); break
+        aus.append(z)
+    print(f"  Grenzgaenger zusammengelegt: {verschmolzen:,} Eintraege in {len(eintraege):,} → {len(aus):,}")
+    return aus
+
+
+out = _zusammenlegen(out)
+
 (OUT / "suppliers.json").write_text(json.dumps(out, ensure_ascii=False, sort_keys=True))
 print(f"{len(out)} Lieferanten → {OUT}/suppliers.json")
 cancom = next((s for s in out if "cancom" in s["name"].lower()), None)

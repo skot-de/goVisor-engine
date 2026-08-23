@@ -1021,6 +1021,18 @@ if $PY scripts/export_web_leads.py; then
   # neu gebaut werden, sonst findet die Stadtsuche im Frontend nichts mehr.
   $PY scripts/build_city_index.py || echo "  ⚠ Stadt-Index nicht gebaut — Umkreissuche über Städte fällt aus."
   $PY scripts/export_suppliers.py || echo "  ⚠ Lieferanten-Index nicht gebaut — Onboarding-Matching bleibt auf altem Stand."
+  # ── ZWEI PRODUKTWEGE, DIE BIS 2026-08-23 IN KEINEM LAUF STANDEN ────────────────────
+  #
+  # Beide schreiben nach `web/data` und wurden trotzdem nie gebaut. Aufgefallen ist es
+  # erst, als die Frischepruefung auf `web/data` ausgeweitet wurde:
+  # `firma-profiles.json` war 23 TAGE alt (16,6 MB) und speist die /firma-Seite.
+  # Klassischer Fall von „gebaut, aber nicht verdrahtet" — eine Ebene weiter aussen als
+  # die Gold-Builder, und deshalb von Sonde 1 lange nicht gesehen.
+  $PY scripts/export_web_awards.py \
+    || echo "  ⚠ Zuschlagsphase nicht gebaut — die Ansicht bleibt auf altem Stand."
+  # 70 MB. Laeuft NACH den Leads, weil es `lead_export` liest.
+  $PY scripts/export_firma_profiles.py \
+    || echo "  ⚠ Firmenprofile nicht gebaut — /firma bleibt auf altem Stand."
   # Strategie-Aggregate: eigener Export, weil er 36 Monate braucht (unternehmerische
   # Planung), während die Lead-Liste auf 24 gedeckelt ist (Handlungsrelevanz). Fehlte
   # bisher im Tageslauf — /api/strategie las deshalb einen Stand vom 28. Juli.
