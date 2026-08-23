@@ -908,9 +908,27 @@ def export_branche(key):
             # #13 Dokument-Wasserfall: erst der echte Unterlagen-Link (documents_url), sonst nur
             # die Plattform (source_url). `source` hält die zwei sauber auseinander; `access` ist
             # ehrlich 'unknown' — die non-restricted-Markierung ist noch nicht aus dem XML gezogen.
-            "unterlagen": ({"url": g("documents_url"), "source": "docs", "access": "unknown"} if g("documents_url")
-                           else {"url": g("source_url"), "source": "portal", "access": "unknown"} if g("source_url")
-                           else None),
+            # ⚠ `access` STAND AUF „unknown" — IMMER, bei allen 13.849 Vergaben mit Link.
+            # Das Feld existierte, wurde aber nie gefüllt, und der Abrufer konnte deshalb
+            # nicht priorisieren: er wusste vorher nie, wo es sich lohnt. Für die Schweiz
+            # steht die Antwort seit dem simap-Ingest in Gold — `documents_source` sagt
+            # sogar WIE (Plattform, externer Link, auf Anfrage, per Post), und
+            # `documents_paid` sagt, ob sie Geld kosten. Gemessen: CH 675 Plattform,
+            # 70 externer Link, 67 nur auf Anfrage, 2 postalisch.
+            "unterlagen": ((lambda url, src: {
+                "url": url, "source": src,
+                "access": ("offen" if g("has_documents") and not g("documents_paid")
+                           else "kostenpflichtig" if g("documents_paid")
+                           else "auf_anfrage" if g("documents_source") == "on_request"
+                           else "unknown"),
+                "wie": g("documents_source") or None,
+             })(g("documents_url"), "docs") if g("documents_url")
+                else (lambda url: {
+                    "url": url, "source": "portal",
+                    "access": ("auf_anfrage" if g("documents_source") == "on_request" else "unknown"),
+                    "wie": g("documents_source") or None,
+                })(g("source_url")) if g("source_url")
+                else None),
             # #15 Weg A — strukturierte Anforderungen aus eForms. True/False = belegt,
             # None = nicht veröffentlicht (ehrlich weglassen statt „erfüllt" zu behaupten).
             # #15/#18: strukturierte Anforderungen. Dokument-Signale (aus den Vergabeunterlagen)

@@ -2215,3 +2215,8 @@ a.lb-kachel{text-decoration:none}
 .zname-k{font-size:var(--t-xs,11px);color:var(--ink-500);margin-right:2px}
 .zname-i{padding:2px 8px;border-radius:100px;background:var(--surface-2);
   border:1px solid var(--line);font-size:var(--t-xs,11px);color:var(--ink-700)}
+
+/* Zugangs-Hinweis zu den Unterlagen. Zurueckhaltend: es ist eine Portalangabe, keine
+   Zusage — und „auf Anfrage" ist die wichtigere der drei Farben. */
+.va-zugang{font-size:var(--t-xs,11px);color:var(--ink-500);margin:4px 0 0}
+.va-zugang-auf_anfrage,.va-zugang-kostenpflichtig{color:var(--flag,#B45309)}

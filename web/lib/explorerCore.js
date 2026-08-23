@@ -1030,11 +1030,19 @@ function renderDocs(l){
     const dl = u.url
       ? `<a class="va-dl" href="${esc(u.url)}" target="_blank" rel="noopener">Beim Vergabeportal herunterladen ${ext}</a>`
       : `<span class="va-dl-off">${tk("Unterlagen beim Vergabeportal herunterladen")}</span>`;
+    /* Was das Portal ueber den Zugang sagt. ⚠ `access` stand bis zum 2026-08-23 bei ALLEN
+       13.849 Vergaben mit Link auf „unknown" — das Feld gab es, gefuellt hat es niemand.
+       Die Schweiz liefert die Antwort seit dem simap-Ingest: 660 offen, 55 nur auf Anfrage,
+       4 kostenpflichtig. Wer vorher weiss, dass er nichts bekommt, spart sich den Weg. */
+    const ZUG = {offen: tk("Unterlagen sind ohne Anmeldung abrufbar"),
+                 auf_anfrage: tk("Unterlagen gibt es nur auf Anfrage"),
+                 kostenpflichtig: tk("Unterlagen sind kostenpflichtig")};
+    const zugang = ZUG[u.access] ? `<p class="va-zugang va-zugang-${u.access}">${ZUG[u.access]}</p>` : '';
     return `<section class="sec va-empty">
       <h4>${tk("Vergabe-Analyse")}<span class="cov">${tk("aus euren Unterlagen")}</span></h4>
       <p class="va-sum">${tk("Aus den Vergabeunterlagen machen wir in Sekunden eine")}<b>${tk("Ampel-Einschätzung")}</b>${tk(", eine abhakbare")}<b>${tk("Bieter-Checkliste")}</b>${tk("(K.o.-Kriterien, Eignungsnachweise, Zuschlagsgewichte) und")}<b>${tk("füllen Firmenangaben vor")}</b>.</p>
       <ol class="va-steps">
-        <li><span class="va-step-n">1</span><div>${dl}</div></li>
+        <li><span class="va-step-n">1</span><div>${dl}${zugang}</div></li>
         <li><span class="va-step-n">2</span><div><button class="va-upload-btn" data-uploaddocs="${l.id}">${tk("Hier hochladen (ZIP/PDF)")}</button></div></li>
         <li><span class="va-step-n">3</span><div class="va-step-res">${tk("Ampel + Checkliste erscheinen automatisch")}</div></li>
       </ol>

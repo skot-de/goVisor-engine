@@ -3922,3 +3922,37 @@ def test_zuschlagskriterien_brauchen_kein_gewicht():
     kern = (wurzel / "web/lib/explorerCore.js").read_text(encoding="utf-8")
     assert "zuschlagNamen" in kern, "die Klartext-Kriterien werden nicht angezeigt"
     assert 'x.pct!=null?x.pct' in kern, "die Anzeige unterscheidet nicht mehr zwischen 0 % und unbekannt"
+
+
+def test_zugang_zu_den_unterlagen_wird_gesagt():
+    """⚠ `unterlagen.access` stand bei ALLEN 13.849 Vergaben mit Link auf „unknown".
+
+    Das Feld existierte seit jeher, gefüllt hat es niemand. Zwei Folgen: der Abrufer konnte
+    nicht priorisieren (er wusste vorher nie, wo es sich lohnt), und der Nutzer lief ins
+    Leere, wo das Portal von vornherein nichts herausgibt.
+
+    Die Schweiz liefert die Antwort seit dem simap-Ingest — `documents_source` sagt sogar
+    WIE: 675 Plattform, 70 externer Link, 67 nur auf Anfrage, 2 postalisch. Im Frontend
+    jetzt: 660 offen, 55 auf Anfrage, 4 kostenpflichtig.
+
+    Für DE und AT bleibt es „unknown", und das ist die ehrliche Antwort — dort steht es
+    nicht in der Bekanntmachung.
+    """
+    import json
+    wurzel = pathlib.Path(__file__).resolve().parent.parent
+    export = (wurzel / "scripts/export_web_leads.py").read_text(encoding="utf-8")
+    assert '"access": ("offen" if g("has_documents")' in export, \
+        "der Zugang wird wieder pauschal als unbekannt gemeldet"
+    kern = (wurzel / "web/lib/explorerCore.js").read_text(encoding="utf-8")
+    assert "va-zugang" in kern, "die Oberfläche sagt den Zugang nicht mehr"
+
+    # Und im Ergebnis: mindestens ein Land muss etwas anderes als „unknown" liefern.
+    werte = set()
+    for datei in (wurzel / "web/data").glob("leads-*.json"):
+        daten = json.loads(datei.read_text(encoding="utf-8"))
+        leads = daten if isinstance(daten, list) else next(
+            (v for v in daten.values() if isinstance(v, list)), [])
+        for l in leads:
+            if l.get("src") == "f02" and (l.get("unterlagen") or {}).get("access"):
+                werte.add(l["unterlagen"]["access"])
+    assert werte - {"unknown"}, f"alle Zugänge stehen wieder auf unknown: {werte}"
