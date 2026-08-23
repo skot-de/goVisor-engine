@@ -126,6 +126,41 @@ Der Leistungsort wäre die bessere Achse. Er existiert bei **28 von 8.654** dies
 Es gibt also nichts Besseres — der Wert ist als `abgeleitet` gekennzeichnet, damit die
 Anzeige es sagen kann. Ein stillschweigend ergänzter Wert sieht aus wie eine Quelle.
 
+## ⚠ Trägt die Quelle überhaupt NUTS — oder nur nationale Kürzel?
+
+Diese Frage klingt nach einer Formalie und war der teuerste Einzelfund des kritischen
+Durchgangs am 2026-08-23.
+
+simap.ch liefert als Leistungsort einen **Kantonscode** (`ZH`, `VD`, `BE`), und der stand
+roh in `performance_nuts`. Gemessen, was das kostete:
+
+```
+ 4.850 Schweizer Zuschläge trugen ein zweistelliges Kürzel  → aus JEDER Regionsanzeige raus
+19.572 trugen „CH0"                                         → NUTS-1, das ganze Land
+   933 trugen ein echtes fünfstelliges NUTS
+```
+
+Die Folgen zogen sich durch das ganze Produkt: die Zuschlagsphase zeigte bei **306 von 306**
+Schweizer Zuschlägen keine Region, der Lieferantenindex kannte **6** Schweizer Regionen.
+
+⚠ **Und ein falsches Kürzel ist gefährlicher als eine Lücke:** `BE` ist in der Schweiz
+**Bern**, im NUTS-Raum aber **Belgien**. Ein Verbraucher, der auf das Präfix schaut, ordnet
+den Kanton Bern dem falschen Land zu.
+
+**Die Lehre: das gehört an die Quelle, nicht in jeden Verbraucher.** Die Zuordnung sitzt
+jetzt im Parser (`govisor/simap.py`, `_KANTON_NUTS`), also vor Silber — damit bekommt jede
+nachgelagerte Auswertung sauberes NUTS, ohne davon zu wissen. Nach der Korrektur: 933 →
+**20.459** Sätze mit fünfstelligem NUTS.
+
+Zwei Regeln daraus für jedes neue Land:
+
+1. **Die Zuordnung muss vollständig sein und geprüft werden.** 26 Kantone auf genau die 26
+   fünfstelligen CH-NUTS aus `dim_nuts`, ohne Rest auf beiden Seiten — ein Test hält das
+   fest. Ein getippter Code, den es nicht gibt, fällt so beim Bauen auf und nicht in der
+   Anzeige.
+2. **Unbekanntes bleibt stehen, nicht leer.** Wer ein unbekanntes Kürzel auf `None` abbildet,
+   verliert die Angabe still. Ein unbekanntes Kürzel ist eine Auskunft über die Quelle.
+
 ## Zwei Achsen, die man nicht verwechseln darf
 
 - **Käufersitz** (`buyer_nuts`) — fein (PLZ-genau), aber bei bundesweiten Käufern falsch.

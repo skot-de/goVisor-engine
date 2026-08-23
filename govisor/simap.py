@@ -186,6 +186,44 @@ def _pick(node) -> str | None:
     return None
 
 
+# ── KANTONSKUERZEL → NUTS-3 ──────────────────────────────────────────────────────────
+# simap liefert als Leistungsort einen `cantonId` („ZH", „VD", „BE"). Bis 2026-08-23 stand
+# der roh in `performance_nuts` — und war damit KEIN NUTS. Folgen, gemessen:
+#
+#   4.850 Zuschlaege trugen ein zweistelliges Kuerzel und fielen aus JEDER Regionsanzeige
+#         (Zuschlagsphase 306 von 306 ohne Region, Lieferantenindex 6 Regionen fuer die
+#         gesamte Schweiz)
+#   19.572 trugen „CH0" — NUTS-1, also die ganze Schweiz, als Region wertlos
+#
+# ⚠ Und ein Kuerzel ist gefaehrlicher als eine Luecke: „BE" ist in der Schweiz Bern, im
+# NUTS-Raum aber BELGIEN. Ein Verbraucher, der auf das Praefix schaut, ordnet den Kanton
+# Bern dem falschen Land zu.
+#
+# Die Zuordnung ist vollstaendig und geprueft: 26 Kantone auf genau die 26 fuenfstelligen
+# CH-NUTS aus `dim_nuts`, ohne Rest auf beiden Seiten.
+_KANTON_NUTS = {
+    "VD": "CH011", "VS": "CH012", "GE": "CH013",
+    "BE": "CH021", "FR": "CH022", "SO": "CH023", "NE": "CH024", "JU": "CH025",
+    "BS": "CH031", "BL": "CH032", "AG": "CH033",
+    "ZH": "CH040",
+    "GL": "CH051", "SH": "CH052", "AR": "CH053", "AI": "CH054", "SG": "CH055",
+    "GR": "CH056", "TG": "CH057",
+    "LU": "CH061", "UR": "CH062", "SZ": "CH063", "OW": "CH064", "NW": "CH065", "ZG": "CH066",
+    "TI": "CH070",
+}
+
+
+def _nuts(canton: str | None) -> str | None:
+    """Kantonskuerzel → NUTS-3. Unbekanntes bleibt unveraendert, nicht leer.
+
+    Wer hier auf None abbildet, verliert die Angabe still; ein unbekanntes Kuerzel ist
+    eine Auskunft ueber die Quelle und gehoert sichtbar zu bleiben.
+    """
+    if not canton:
+        return None
+    return _KANTON_NUTS.get(str(canton).strip().upper(), canton)
+
+
 def _fassungen(node, feld: str, nid: str, entwerten: bool = False) -> list[dict]:
     """ALLE gefuellten Sprachen eines simap-Knotens als `notice_text`-Zeilen.
 
@@ -289,8 +327,8 @@ def parse_publication(rec: dict) -> dict[str, list[dict]]:
         "language": base.get("creationLanguage"),
         "title": title, "description": desc,
         "cpv_main": cpv,
-        "performance_nuts": (proc.get("orderAddress") or {}).get("cantonId")
-                            or (s.get("orderAddress") or {}).get("cantonId"),
+        "performance_nuts": _nuts((proc.get("orderAddress") or {}).get("cantonId")
+                                  or (s.get("orderAddress") or {}).get("cantonId")),
         "contract_nature": _NATURE.get(proc.get("orderType") or s.get("projectSubType")),
         "procedure_type": proc.get("processType") or s.get("processType"),
         "submission_deadline": _date(dates.get("offerDeadline")),

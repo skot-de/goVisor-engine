@@ -52,6 +52,8 @@
 | D6 | **Englische geonames-Dubletten** | „Bavaria" neben „Bayern" — überspringen, nicht übersetzen |
 | D7 | **Sitz ≠ Leistungsort** | 88 % der AT-Ableitungen zeigen auf Wien (ÖBB, ASFINAG) |
 | D8 | **Bundesweite Vergaben fallen aus dem Filter** | 4.144 DE-Leads, Regel war doppelt implementiert |
+| D9 | **Quelle liefert nationale Kürzel statt NUTS** | simap: `ZH`/`VD`/`BE` roh in `performance_nuts`; 4.850 Zuschläge ohne Region, `BE` = Bern **oder Belgien** |
+| D10 | **Regionsfilter je Verbraucher statt an der Quelle** | dieselbe DE-Annahme steckte in vier Exportern; Fix gehört in den Parser |
 
 ## E · Fallen bei Sprachen
 

@@ -86,11 +86,31 @@ BRANCHE = """CASE b.branche
     WHEN 'Umwelt/Reinigung' THEN 'energie' WHEN 'Chemie' THEN 'energie' WHEN 'Rohstoffe' THEN 'energie'
   ELSE 'beratung' END"""
 
-NUTS1 = {"DE1": "Baden-Württemberg", "DE2": "Bayern", "DE3": "Berlin", "DE4": "Brandenburg",
-         "DE5": "Bremen", "DE6": "Hamburg", "DE7": "Hessen", "DE8": "Meck.-Vorpommern",
-         "DE9": "Niedersachsen", "DEA": "Nordrhein-Westfalen", "DEB": "Rheinland-Pfalz",
-         "DEC": "Saarland", "DED": "Sachsen", "DEE": "Sachsen-Anhalt", "DEF": "Schleswig-Holstein",
-         "DEG": "Thüringen"}
+# ⚠ Regionsnamen aus `dim_nuts` JE LAND statt getippter DE-Liste — dieselbe Falle wie in
+# `export_firma_profiles.py`, und beim kritischen Durchgang am 2026-08-23 hier zunaechst
+# uebersehen. Gemessen vor der Korrektur: ALLE 306 schweizerischen und 333
+# oesterreichischen Zuschlaege zeigten gar keine Region, weil die Liste nur DE-Codes kannte
+# UND der Schnitt auf 3 Zeichen die falsche Ebene traf (AT1 = „Ostoesterreich", CH0 = die
+# ganze Schweiz). Siehe `docs/laender/07-geo-und-regionen.md`.
+def _regionsnamen() -> dict[str, str]:
+    aus: dict[str, str] = {}
+    for datei in sorted(pathlib.Path("data/gold").glob("*/dim_nuts.parquet")):
+        try:
+            for code, name in con.execute(
+                    f"SELECT nuts_code, name FROM '{datei.as_posix()}'").fetchall():
+                if code and name:
+                    aus[code] = name
+        except Exception:
+            continue
+    return aus
+
+
+NUTS1 = _regionsnamen()
+
+# Auf wie vielen Stellen sitzt die Verwaltungseinheit? DE 3, AT 4, CH 5 — muss zu
+# `govisor.gold._REGION_STELLEN` passen.
+_NUTS_SCHNITT = ("substr(n.performance_nuts, 1, CASE substr(n.performance_nuts, 1, 2) "
+                 "WHEN 'AT' THEN 4 WHEN 'CH' THEN 5 ELSE 3 END)")
 
 
 def eur(v):
@@ -111,7 +131,7 @@ con.execute(f"""CREATE TEMP TABLE aw AS
     FROM {PE} p JOIN {EI} ei ON ei.entity_id = p.entity_id
     WHERE p.role='winner' GROUP BY 1)
   SELECT n.notice_id, n.country, n.title, n.cpv_main, substr(n.cpv_main,1,4) AS cpv4,
-         substr(n.performance_nuts,1,3) AS nuts1,
+         {_NUTS_SCHNITT} AS nuts1,
          n.award_date, coalesce(n.final_value, n.estimated_value) AS wert,
          (n.final_value IS NOT NULL AND n.value_currency='EUR') AS wert_echt,
          date_diff('day', n.award_date, DATE '{NOW}') AS ago,
@@ -138,7 +158,7 @@ con.execute(f"""CREATE TEMP TABLE winners AS
   WITH wl AS (   -- volle Gewinn-Historie der Award-Gewinner
     SELECT DISTINCT ei.identity_id AS wid, p.notice_id,
            substr(n.cpv_main,1,4) AS cpv4,
-           substr(n.performance_nuts,1,3) AS nuts1,
+           {_NUTS_SCHNITT} AS nuts1,
            CASE WHEN n.value_currency='EUR' THEN n.final_value END AS val,
            n.award_date,
            EXISTS(SELECT 1 FROM {A} a WHERE a.notice_id=n.notice_id AND a.path ILIKE '%ubcontract%') AS sub

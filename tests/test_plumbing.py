@@ -682,7 +682,11 @@ def test_simap_parser_maps_award_richness():
     n = t["notices"][0]
     assert n["notice_id"] == "pub-1" and n["country"] == "CH" and n["schema_gen"] == "simap"
     assert n["notice_kind"] == "can" and n["cpv_main"] == "45000000"
-    assert n["contract_nature"] == "works" and n["performance_nuts"] == "ZH"
+    # ⚠ Der Test hielt bis 2026-08-23 `"ZH"` fest — also das Kantonskuerzel, das simap
+    # liefert. Das ist KEIN NUTS: 4.850 Schweizer Zuschlaege fielen damit aus jeder
+    # Regionsanzeige, und „BE" waere im NUTS-Raum Belgien statt Bern. Der Parser bildet
+    # jetzt auf NUTS-3 ab; erwartet wird die Zuordnung, nicht die Rohform.
+    assert n["contract_nature"] == "works" and n["performance_nuts"] == "CH040"
     assert n["final_value"] == 152652.35 and n["value_currency"] == "CHF"
     assert t["awards"][0]["winner_name"] == "Muster AG" and t["awards"][0]["num_tenders"] == 4
     assert any(p["role"] == "winner" and p["name"] == "Muster AG" for p in t["notice_parties"])
@@ -4221,3 +4225,31 @@ def test_laender_bibel_verweist_nur_auf_vorhandenes():
 def test_claude_md_fuehrt_zur_bibel():
     wurzel = pathlib.Path(__file__).resolve().parent.parent
     assert "docs/land-onboarding.md" in (wurzel / "CLAUDE.md").read_text(encoding="utf-8")
+
+
+def test_simap_kantonskuerzel_werden_zu_nuts():
+    """Alle 26 Kantone treffen genau die 26 fuenfstelligen CH-NUTS — ohne Rest auf
+    beiden Seiten. Unbekanntes bleibt STEHEN statt zu verschwinden: ein unbekanntes
+    Kuerzel ist eine Auskunft ueber die Quelle."""
+    from govisor import simap
+    assert len(simap._KANTON_NUTS) == 26
+    assert len(set(simap._KANTON_NUTS.values())) == 26
+    assert simap._nuts("ZH") == "CH040" and simap._nuts("be") == "CH021"
+    assert simap._nuts("XX") == "XX"          # unbekannt bleibt erhalten
+    assert simap._nuts(None) is None
+    # ⚠ Die Falle, die das Ganze ausgeloest hat: „BE" ist in der Schweiz Bern, im
+    # NUTS-Raum aber Belgien. Nach der Zuordnung ist das eindeutig.
+    assert simap._nuts("BE").startswith("CH")
+
+
+def test_simap_kantonszuordnung_deckt_dim_nuts_vollstaendig():
+    """Ein getippter Code, den es nicht gibt, faellt hier auf — nicht erst in der Anzeige."""
+    from govisor import simap
+    datei = pathlib.Path(__file__).resolve().parent.parent / "data/gold/CH/dim_nuts.parquet"
+    if not datei.exists():
+        pytest.skip("CH-dim_nuts fehlt (frische CI ohne Ingest)")
+    con = duckdb.connect()
+    vorhanden = {c for (c,) in con.execute(
+        f"SELECT nuts_code FROM '{datei.as_posix()}' WHERE length(nuts_code) = 5").fetchall()}
+    con.close()
+    assert set(simap._KANTON_NUTS.values()) == vorhanden

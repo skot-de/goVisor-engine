@@ -97,7 +97,13 @@ con.execute(f"""CREATE OR REPLACE TEMP TABLE w AS
   SELECT ei.identity_id, ei.canonical_name, p.entity_id, p.notice_id,
          substr(n.cpv_main, 1, 4) AS cpv4,
          substr(n.cpv_main, 1, 6) AS cpv6,
-         substr(n.performance_nuts, 1, 3) AS nuts1,
+         -- REGIONS-EBENE JE LAND (s. govisor.gold._REGION_STELLEN). Ein fester Schnitt
+         -- auf 3 Zeichen ist eine deutsche Annahme; AT1 hiesse „Ostoesterreich", CH0 die
+         -- ganze Schweiz. Beim kritischen Durchgang am 2026-08-23 gefunden: die FIRMEN
+         -- waren da schon laenderweit, ihre REGIONEN noch nicht.
+         substr(n.performance_nuts, 1,
+                CASE substr(n.performance_nuts, 1, 2)
+                     WHEN 'AT' THEN 4 WHEN 'CH' THEN 5 ELSE 3 END) AS nuts1,
          year(n.publication_date) AS jahr
   FROM {PE} p
   JOIN {EI} ei ON ei.entity_id = p.entity_id
@@ -336,9 +342,25 @@ rows = con.execute(f"""
   WHERE n.name IS NOT NULL AND {BLOCK_SQL}
   ORDER BY t.wins DESC""").fetchall()
 
-# NUTS1 = 'DE' + genau ein Zeichen (DE1..DEG). Bare 'DE' (nur Land) = bundesweit-Signal, raus.
+# Regionskennung = Landeskuerzel PLUS mindestens eine Stelle. Ein blosses „DE"/„AT"/„CH"
+# ist das Bundesweit-Signal und keine Region — das faellt raus.
+#
+# ⚠ Die Laenge ist je Land verschieden (DE 3, AT 4, CH 5). Der fruehere Test
+# `len(r) == 3 and r.startswith('DE')` verwarf deshalb JEDE oesterreichische und
+# schweizerische Region — die Firmen waren nach der Umstellung auffindbar und standen
+# ohne Einsatzgebiet da.
+_STELLEN = {"DE": 3, "AT": 4, "CH": 5}
+
+
 def clean_nuts(regs):
-    return [r for r in (regs or []) if len(r) == 3 and r.startswith('DE')]
+    aus = []
+    for r in (regs or []):
+        if not r or len(r) < 3:
+            continue
+        soll = _STELLEN.get(r[:2])
+        if soll and len(r) == soll:
+            aus.append(r)
+    return aus
 
 def method_conf(m):
     """Methode → belegt/unsicher + Klartext (Ticket #7 Confidence-Marke)."""
