@@ -134,6 +134,27 @@ hatte — indem die **alte Fassung aus dem Commit** gegen die heutigen Daten lie
 **Regel:** erst prüfen, ob zwei Läufe der ALTEN Fassung identisch sind. Sonst diagnostiziert
 man hinterher Gespenster.
 
+## ⚠ Was ein neues Land heute NICHT bekommt
+
+Stand 2026-08-23, gemessen mit `pruefe_verdrahtung.py --sonde pfade`. Diese Liste ist der
+ehrliche Gegenpol zum Rest des Kapitels: die **Datenkette** ist länderfähig, drei
+**Produktwege** sind es nicht.
+
+| Weg | Status | Was das Land verliert |
+|-----|--------|-----------------------|
+| `export_suppliers.py` → Onboarding-Firmenindex | DE-fest | Eine Firma des Landes wird bei der Anmeldung **nicht gefunden** und fällt auf den manuellen Pfad (Branche + Region wählen, kein CPV-Ranking). Gemessen: 31.459 Firmen im Index, davon **keine** rein schweizerische — PORR ist drin, weil es auch in DE gewinnt, Implenia Schweiz nicht. Dabei liegen 34.340 AT- und 15.494 CH-Auftragnehmer in `contractor_stats`. |
+| `export_web_awards.py` → Zuschlagsphase | DE-fest **und in keinem Lauf** | Die Frage, wer dort zuletzt gewonnen hat, bleibt ohne Antwort. Im Frontend liegen 379 Zuschlags-Leads, alle DE. |
+| `export_firma_profiles.py` → `/firma` | DE-fest **und in keinem Lauf** | Firmen ohne deutsche Zuschläge haben kein Profil. Die Datei war am 2026-08-23 **23 Tage alt** (16,6 MB). |
+
+Bewusst DE-only und damit **kein** Mangel: `export_landing.py` (Startseiten-Zahlen —
+gemischte Qualitäten wären keine Zahl), `export_supabase.py` (Push ist ohnehin aus),
+`qualitaet_bericht.py` und `gap_effects.py` (interne Berichte).
+
+**Für ein neues Land heisst das:** die Leads, Kennzahlen, Regionen, Sprachfassungen,
+Dubletten und Marktzahlen sind da. Onboarding-Matching, Zuschlagsansicht und Firmenprofil
+sind es nicht — und das gehört dem Nutzer gegenüber gesagt, nicht als leere Ansicht
+ausgeliefert.
+
 ## Die Abnahme dieses Tors
 
 Feldabdeckung je Land **nebeneinander** auszählen, direkt aus `web/data/leads-*.json`:

@@ -174,3 +174,59 @@ def test_die_sonde_laeuft_im_nachtlauf_mit():
     lauf = (ROOT / "scripts" / "daily_leads.sh").read_text()
     ohne_kommentar = "\n".join(z for z in lauf.splitlines() if not z.lstrip().startswith("#"))
     assert "scripts/pruefe_verdrahtung.py" in ohne_kommentar
+
+
+# ── Sonde 3: DE-feste Pfade ─────────────────────────────────────────────────
+# Sonde 1 und 2 sehen die Gold-Ebene. Die Haelfte aller Funde sass aber im
+# VERBRAUCHER: Tabelle sauber je Land gebaut, Exporter liest nur DE.
+
+def test_pfade_findet_das_de_feste_skript(tmp_path, monkeypatch):
+    lauf = tmp_path / "daily_leads.sh"
+    lauf.write_text("$PY scripts/beispiel_export.py\n")
+    skripte = tmp_path / "scripts"
+    skripte.mkdir()
+    (skripte / "beispiel_export.py").write_text('G = "data/gold/DE"\n')
+    monkeypatch.setattr(pv, "NACHTLAUF", lauf)
+    monkeypatch.setattr(pv, "ROOT", tmp_path)
+    fehler = pv.sonde_pfade()
+    assert len(fehler) == 1 and "beispiel_export.py" in fehler[0]
+
+
+def test_pfade_zaehlt_docstrings_und_kommentare_nicht_mit(tmp_path, monkeypatch):
+    """Der erste Versuch meldete drei Fehlalarme — einen Docstring, der ERKLAERT,
+    warum dort nicht gelesen wird, und die Begruendungstexte der Sonde selbst.
+    Wer Prosa mitzaehlt, zwingt dazu, die Begruendung zu loeschen."""
+    lauf = tmp_path / "daily_leads.sh"
+    lauf.write_text("$PY scripts/nur_prosa.py\n")
+    skripte = tmp_path / "scripts"
+    skripte.mkdir()
+    (skripte / "nur_prosa.py").write_text(
+        '"""Hier wird bewusst NICHT data/gold/DE gelesen."""\n'
+        "# auch data/silver/DE im Kommentar zaehlt nicht\n"
+        "x = 1\n")
+    monkeypatch.setattr(pv, "NACHTLAUF", lauf)
+    monkeypatch.setattr(pv, "ROOT", tmp_path)
+    assert pv.sonde_pfade() == []
+
+
+def test_sonde_1_sieht_auch_die_frontend_daten(tmp_path, monkeypatch):
+    """`firma-profiles.json` war 23 Tage alt und von keiner Sonde gedeckt."""
+    gold = _gold(tmp_path, {"DE": {"lead_export": 0}})
+    web = tmp_path / "web" / "data"
+    web.mkdir(parents=True)
+    jetzt = time.time()
+    for name, alter in (("frisch.json", 0), ("vergessen.json", 20)):
+        f = web / name
+        f.write_text("{}")
+        os.utime(f, (jetzt - alter * TAG, jetzt - alter * TAG))
+    monkeypatch.setattr(pv, "WEB", web)
+    fehler = pv.sonde_frische(wurzel=gold)
+    assert any("vergessen.json" in f for f in fehler)
+
+
+def test_skript_listen_haben_begruendungen():
+    for name, liste in (("BEWUSST_NUR_DE_SKRIPTE", pv.BEWUSST_NUR_DE_SKRIPTE),
+                        ("OFFEN_NUR_DE_SKRIPTE", pv.OFFEN_NUR_DE_SKRIPTE),
+                        ("AUSNAHMEN_WEB", pv.AUSNAHMEN_WEB)):
+        for schluessel, grund in liste.items():
+            assert grund and len(grund) > 25, f"{name}[{schluessel}] ist nicht begruendet"

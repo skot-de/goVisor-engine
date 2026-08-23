@@ -79,6 +79,14 @@ python3 scripts/pruefe_verdrahtung.py --offen
   zurückhängt. Schwelle 2 Tage, gemessen: 134 von 142 Dateien lagen darunter, danach
   klaffte eine Lücke bis 4,5 Tage.
 - **Sonde 2 (Länderparität)**: meldet jede Tabelle, die es nur in DE gibt.
+- **Sonde 3 (DE-feste Pfade)**: meldet jedes Skript des Nachtlaufs, das fest
+  `data/gold/DE` liest. Sonde 1 und 2 sehen nur die Gold-Ebene — **die Hälfte aller Funde
+  sass aber im Verbraucher**: Tabelle sauber je Land gebaut, Exporter liest nur DE.
+  Sie parst den Syntaxbaum, damit Docstrings und Kommentare nicht mitzählen.
+
+Sonde 1 deckt seit dem 2026-08-23 auch `web/data` ab. Vorher sah sie nur `data/gold` und
+übersah damit die Schicht, die der Nutzer zu sehen bekommt: `firma-profiles.json` war
+23 Tage alt, weil sein Erzeuger in **keinem** Lauf steht.
 
 Ausnahmen stehen als **Code im Skript**, nie in einer Textdatei, und
 `tests/test_verdrahtung.py` hält sie ehrlich: ohne Begründung, für etwas Gelöschtes oder

@@ -79,6 +79,21 @@ AUSNAHMEN_FRISCHE: dict[str, str] = {
 # haelt Leichen fuer lebendig.
 LEICHEN: dict[str, str] = {}
 
+# Frontend-Daten. Sonde 1 sah zuerst NUR `data/gold` — und uebersah damit genau die
+# Schicht, die der Nutzer zu sehen bekommt: `web/data/firma-profiles.json` war 23 Tage alt
+# (16,6 MB, speist /firma), weil `export_firma_profiles.py` in keinem Lauf steht. Dieselbe
+# Fehlerklasse wie `lead_lot`, eine Schicht weiter aussen.
+WEB = ROOT / "web" / "data"
+
+AUSNAHMEN_WEB: dict[str, str] = {
+    "doc-analysis.backup.json": "Sicherungskopie vor dem Zerlegen der Dokumentanalyse",
+    "nachweis-median.json": "Kennzahl aus einer einmaligen Erhebung, kein Tageslauf",
+    "outreach.json": "internes Vertriebswerkzeug, laeuft von Hand",
+    "firma-profiles.json":
+        "⚠ BAUSTELLE, nicht Ausnahme: `export_firma_profiles.py` steht in KEINEM Lauf. "
+        "Die Datei speist /firma und war am 2026-08-23 dreiundzwanzig Tage alt.",
+}
+
 # ── Sonde 2: Laenderparitaet ────────────────────────────────────────────────
 LAENDER = ("DE", "AT", "CH")
 
@@ -110,6 +125,114 @@ BEWUSST_NUR_DE: dict[str, str] = {
 #     lead_requirement AT  2.748 / CH    595      market_opp.   AT    317 / CH    125
 # Die Liste ist leer und bleibt stehen, weil der naechste Fund dieselbe Form haben wird.
 OFFEN_NUR_DE: dict[str, str] = {}
+
+
+# ── Sonde 3: DE-feste Pfade im Nachtlauf ────────────────────────────────────
+# Sonde 1 und 2 sehen die GOLD-Ebene. Sie merken nicht, wenn eine Tabelle sauber je Land
+# gebaut wird und der Verbraucher trotzdem nur `data/gold/DE` liest — und genau dort sass
+# die Haelfte aller Funde: `buyer_stats`, `market_opportunity`, `lead_predecessor`, `ATTR`,
+# `lead_region_fill` waren alle gebaut und wurden alle nur aus DE gelesen.
+#
+# Geprueft wird, was im NACHTLAUF steht. Ein Analyse-Skript, das niemand taeglich ruft,
+# blockiert kein Land; ein Exporter schon.
+NACHTLAUF = ROOT / "scripts" / "daily_leads.sh"
+
+# Wer zu Recht nur DE liest. Der Grund muss sagen, WARUM das Land dort nichts zu suchen
+# hat — „noch nicht umgestellt" ist kein Grund, sondern der Befund selbst.
+BEWUSST_NUR_DE_SKRIPTE: dict[str, str] = {
+    "export_landing.py":
+        "Startseiten-Zahlen: fuer AT/CH ist die Entitaeten-Aufloesung schwaecher, und eine "
+        "Zahl, die zwei Qualitaeten mischt, ist keine Zahl (Kommentar steht im Skript)",
+    "export_supabase.py":
+        "schiebt die gov_*-Tabellen hoch; der Push ist seit 16.08. hinter "
+        "GOVISOR_SUPABASE_GOV_PUSH=1 und standardmaessig AUS",
+    "qualitaet_bericht.py":
+        "interner Bericht ueber den DE-Bestand, kein Produktweg",
+    "gap_effects.py":
+        "interne Wirkungsanalyse, kein Produktweg",
+    "export_web_leads.py":
+        "`G = data/gold/DE` ist die BASIS von `_union`, das DE voranstellt und jedes "
+        "weitere Land anhaengt — der einzige Treffer ist genau diese Basis",
+    "pruefe_verdrahtung.py":
+        "dieses Skript selbst; die Treffer sind die Begruendungstexte oben",
+}
+
+# OFFEN: liest nur DE, muesste es aber nicht. Jede Zeile ist eine Baustelle mit
+# gemessener Auswirkung — sichtbar, damit sie nicht als erledigt durchgeht.
+OFFEN_NUR_DE_SKRIPTE: dict[str, str] = {
+    "export_suppliers.py":
+        "Firmenindex fuers Onboarding (31.459 Firmen). AT/CH-Auftragnehmer (34.340 + 15.494 "
+        "in contractor_stats) fehlen; eine rein schweizerische Firma faellt bei der "
+        "Anmeldung auf den manuellen Pfad. Gemessen: PORR wird gefunden (gewinnt auch in "
+        "DE), Implenia Schweiz nicht.",
+    "export_web_awards.py":
+        "Zuschlagsphase. Im Frontend liegen 379 Zuschlags-Leads, alle DE — die Frage, "
+        "wer dort zuletzt gewonnen hat, bleibt fuer AT/CH ohne Antwort.",
+    "export_firma_profiles.py":
+        "vorberechnete Firmenprofile fuer /firma (16 MB). Firmen ohne DE-Zuschlaege haben "
+        "kein Profil.",
+}
+
+
+def _de_feste_pfade(skript: pathlib.Path) -> int:
+    """Wie oft steht `data/{gold,silver}/DE` in einer Zeichenkette, die WIRKLICH LAEUFT?
+
+    Ein Zeilenscanner reicht dafuer nicht. Der erste Versuch zaehlte drei Fehlalarme:
+    einen Docstring in `build_marktpuls.py`, der erklaert, warum dort NICHT gelesen wird,
+    und die Begruendungstexte dieses Skripts selbst. Wer Prosa mitzaehlt, zwingt dazu, die
+    Begruendung zu loeschen — dieselbe Falle wie schon dreimal bei Tests.
+
+    Deshalb ueber den Syntaxbaum: gezaehlt werden nur Zeichenketten-Knoten, die keine
+    Docstrings sind. Kommentare tauchen im Baum gar nicht erst auf.
+    """
+    import ast
+    if not skript.exists():
+        return 0
+    try:
+        baum = ast.parse(skript.read_text(encoding="utf-8"))
+    except SyntaxError:
+        return 0
+    # Docstrings einsammeln, damit sie ausgenommen werden koennen.
+    docs = set()
+    for knoten in ast.walk(baum):
+        if isinstance(knoten, (ast.Module, ast.FunctionDef, ast.AsyncFunctionDef, ast.ClassDef)):
+            k = knoten.body[0] if knoten.body else None
+            if isinstance(k, ast.Expr) and isinstance(k.value, ast.Constant) \
+                    and isinstance(k.value.value, str):
+                docs.add(id(k.value))
+    n = 0
+    for knoten in ast.walk(baum):
+        if isinstance(knoten, ast.Constant) and isinstance(knoten.value, str) \
+                and id(knoten) not in docs \
+                and ("data/gold/DE" in knoten.value or "data/silver/DE" in knoten.value):
+            n += 1
+    return n
+
+
+def sonde_pfade(zeige_offen: bool = False) -> list[str]:
+    """Welches Skript des Nachtlaufs liest fest aus Deutschland?"""
+    if not NACHTLAUF.exists():
+        print("  daily_leads.sh nicht gefunden — Sonde uebersprungen")
+        return []
+    import re
+    genannt = sorted(set(re.findall(r"scripts/([a-z_0-9]+\.py)", NACHTLAUF.read_text(encoding="utf-8"))))
+    fehler: list[str] = []
+    offen: list[str] = []
+    for name in genannt:
+        n = _de_feste_pfade(ROOT / "scripts" / name)
+        if not n or name in BEWUSST_NUR_DE_SKRIPTE:
+            continue
+        if name in OFFEN_NUR_DE_SKRIPTE:
+            offen.append(f"    OFFEN   {name} ({n} feste DE-Pfade): {OFFEN_NUR_DE_SKRIPTE[name]}")
+            continue
+        fehler.append(f"{name} liest an {n} Stellen fest aus data/gold/DE bzw. data/silver/DE "
+                      f"und steht in keiner Liste — Absicht oder vergessen?")
+    if offen:
+        if zeige_offen:
+            print("\n".join(offen))
+        else:
+            print(f"    ({len(offen)} bekannte Baustellen — mit --offen anzeigen)")
+    return fehler
 
 
 def _dateien(wurzel: pathlib.Path) -> dict[str, list[pathlib.Path]]:
@@ -173,6 +296,18 @@ def sonde_frische(zeige_offen: bool = False,
                           f"wird der Schritt im Lauf des Landes ueberhaupt aufgerufen?")
     if offen and not zeige_offen:
         print(f"    ({offen} Leichen — mit --offen anzeigen)")
+
+    # (c) Frontend-Daten. Bezug ist hier die NEUESTE Datei in `web/data` — derselbe
+    # Gedanke wie oben, nur eine Schicht weiter aussen.
+    web = sorted(WEB.glob("*.json")) if WEB.is_dir() else []
+    if web:
+        neuestes_web = max(f.stat().st_mtime for f in web)
+        for f in web:
+            rueck = (neuestes_web - f.stat().st_mtime) / 86400
+            if rueck <= SCHWELLE_TAGE or f.name in AUSNAHMEN_WEB:
+                continue
+            fehler.append(f"web/data/{f.name} haengt {rueck:.1f} Tage zurueck — "
+                          f"wer baut diese Datei, und laeuft er noch?")
     return fehler
 
 
@@ -215,7 +350,7 @@ def sonde_paritaet(zeige_offen: bool = False,
 
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
-    ap.add_argument("--sonde", choices=("frische", "paritaet", "alle"), default="alle")
+    ap.add_argument("--sonde", choices=("frische", "paritaet", "pfade", "alle"), default="alle")
     ap.add_argument("--offen", action="store_true",
                     help="bekannte Luecken und Leichen mit auflisten")
     a = ap.parse_args()
@@ -231,6 +366,11 @@ def main() -> int:
         f = sonde_paritaet(a.offen)
         alles += f
         print(f"    {len(f)} unerklaerte Alleingaenge")
+    if a.sonde in ("pfade", "alle"):
+        print("── Sonde 3: DE-feste Pfade im Nachtlauf (wer liest nur DE?) ──")
+        f = sonde_pfade(a.offen)
+        alles += f
+        print(f"    {len(f)} unerklaerte DE-Bindungen")
 
     if alles:
         print("\n⚠ Verdrahtungspruefung: " + str(len(alles)) + " Befund(e)")
