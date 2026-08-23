@@ -286,6 +286,12 @@ AT = Locale(
                  r"kommanditgesellschaft", r"offene gesellschaft", r"privatstiftung",
                  r"eingetragene genossenschaft", r"genossenschaft", r"eingetragener verein",
                  # Punkte statt Wortgrenzen: „ges.m.b.h.", „gesmbh", „m.b.h." in einem Muster.
+                 # „gesellschaft mbh" MUSS vor „ges.m.b.h." stehen und als GANZES gehen:
+                 # sonst frisst das kuerzere Muster nur das „mbh" und laesst das Wort
+                 # „gesellschaft" stehen, womit „OeBB-Technische Services-GmbH" und
+                 # „OeBB-Technische Services-Gesellschaft mbH" verschiedene Kaeufer bleiben.
+                 # Gemessen 2026-08-23 an AT: dieses eine Muster belegt 308 Paare zusaetzlich.
+                 r"gesellschaft\s?m\.?\s?b\.?\s?h\.?",
                  r"ges\.?\s?m\.?\s?b\.?\s?h\.?", r"\bm\.?\s?b\.?\s?h\.?\b", r"gmbh",
                  r"\bag\b", r"\bog\b", r"\bkg\b", r"\bohg\b", r"\bkeg\b", r"\boeg\b",
                  r"\bse\b", r"\begen\b", r"\bgesbr\b", r"\be\.? ?u\b", r"\be\.? ?v\b"),

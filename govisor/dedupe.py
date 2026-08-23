@@ -109,6 +109,7 @@ from collections import defaultdict
 
 from . import entities as _entities
 from . import db as _db
+from . import locales as _locales
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -192,10 +193,12 @@ def _laden(country: str, ab_jahr: int, alle_arten: bool = False,
     return con.execute(f"""
         SELECT n.notice_id, n.schema_gen, n.title, n.notice_kind,
                coalesce(n.publication_date, n.submission_deadline) AS d,
-               b.buyer_name AS buyer, n.cpv_main, n.estimated_value, n.submission_deadline,
+               b.buyer_name AS buyer, b.buyer_id AS buyer_id,
+               n.cpv_main, n.estimated_value, n.submission_deadline,
                n.performance_nuts, n.description
         FROM read_parquet({g!r}) n
-        LEFT JOIN (SELECT notice_id, min(name) AS buyer_name FROM read_parquet({p!r})
+        LEFT JOIN (SELECT notice_id, min(name) AS buyer_name,
+                          min(national_id) AS buyer_id FROM read_parquet({p!r})
                    WHERE role='buyer' GROUP BY 1) b USING (notice_id)
         WHERE n.title IS NOT NULL
           -- ARTEN. Standard sind Ausschreibungen (`cn`/`pin`) — das ist die Lead-Sicht und
@@ -243,6 +246,14 @@ def finde(country: str = "DE", ab_jahr: int = 2026,
     für Marktpuls. Beides ist DIESELBE Prüfung, nur ein anderer Ausschnitt; zwei Skripte
     daraus zu machen wäre der Rückfall in genau das, was dieses Modul abgelöst hat.
     """
+    # LOCALE JE LAND. Ohne das lief der Wall fuer AT und CH mit dem DE-Profil, weil
+    # `locales.active()` auf DE vorbelegt ist und NIEMAND es umgestellt hat. Folge:
+    # `normalize_company` kannte oesterreichische Rechtsformen nicht, „KRAGES … GesmbH"
+    # und „Krages …" galten als verschiedene Kaeufer. Gemessen 2026-08-23 an AT: allein
+    # das Umstellen macht 31 Paare kaeuferbelegt, die vorher nur einen Titelbeleg hatten.
+    # Der Aufruf gehoert hierher und nicht in die CLI, weil `finde()` auch aus Skripten
+    # kommt (build_dach_gold) — dort haette die CLI-Variante lautlos gefehlt.
+    _locales.use(country)
     zeilen = _laden(country, ab_jahr, alle_arten, fenster_tage)
     wie = f"ab {ab_jahr}" if not fenster_tage else f"aus den letzten {fenster_tage} Tagen (+ ohne Datum)"
     print(f"  {len(zeilen):,} Bekanntmachungen {wie} geladen")
@@ -250,10 +261,49 @@ def finde(country: str = "DE", ab_jahr: int = 2026,
     return _in_zeitscheiben(saetze)
 
 
+# Kennungen, die KEINE sind. Gemessen an AT: „0" steht bei 510 verschiedenen Kaeufern,
+# „1" bei 178, „AT" bei 133. Wer sie als Gleichheitsbeleg nimmt, verschmilzt fremde Haeuser.
+_KENNUNG_MUELL = {"0", "1", "at", "de", "ch", "n a", "na", "keine", "999999"}
+
+
+def _kennung(v: str | None) -> str:
+    """Vergleichsform einer Kaeufer-Kennung, oder "" wenn sie nichts beweist."""
+    k = re.sub(r"[^a-z0-9]", "", (v or "").lower())
+    return "" if len(k) < 6 or k in _KENNUNG_MUELL else k
+
+
+def _kaeufer_gleich(s: dict, t: dict) -> bool:
+    """Sind das zwei Namen DESSELBEN Kaeufers?
+
+    Zwei Wege. Der erste ist die Normalform des Namens — sie traegt die Hauptlast.
+    Der zweite ist die amtliche Kennung, und der ist noetig, weil AT und CH dieselbe
+    Stelle je nach Quelle voellig anders schreiben: TED meldet „ASFINAG Autobahnen- und
+    Schnellstrassen-Finanzierungs-AG", offenevergaben.at den ausgeschriebenen Namen ohne
+    das Kuerzel. Keine Normalisierung der Welt fuehrt diese beiden zusammen.
+
+    Die Kennung allein reicht aber NICHT, und das ist der teuer gemessene Teil: die
+    oesterreichischen GLN sind Dachkennungen. `9110027589349` traegt die OeGK-Landesstellen
+    Wien, Steiermark UND Kaernten, `FN92191a` deckt 60 verschiedene ASFINAG-Namen ab. Wer
+    auf Kennungsgleichheit allein merged, wirft die Landesstelle Wien mit der steirischen
+    zusammen — bei kurzen Gewerketiteln passiert das sofort.
+    Deshalb muss die Kennung stimmen UND die Namen duerfen sich nicht WIDERSPRECHEN: einer
+    ist Teilmenge des anderen (Kuerzel-Praefix, Dachname vs. Dienststelle) oder beide sind
+    gleich. Traegt jede Seite ein eigenes Wort („Wien" gegen „Steiermark"), gilt der Beleg
+    nicht. Gemessen 2026-08-23 an AT: +147 Paare belegt, 1.055 widerspruechliche bleiben
+    bewusst aussen vor.
+    """
+    if s["buyer"] and s["buyer"] == t["buyer"]:
+        return True
+    if not (s["bid"] and s["bid"] == t["bid"]):
+        return False
+    a, b = set(s["buyer"].split()), set(t["buyer"].split())
+    return bool(a and b and (a <= b or b <= a))
+
+
 def _saetze(zeilen) -> list[dict]:
     """Rohzeilen → vergleichsfertige Sätze (Wortmenge, Zahlen, Käufer-Normalform)."""
     saetze = []
-    for nid, gen, titel, art, d, buyer, cpv, wert, frist, nuts, beschr in zeilen:
+    for nid, gen, titel, art, d, buyer, buyer_id, cpv, wert, frist, nuts, beschr in zeilen:
         w = worte(titel)
         if len(w) < MIN_WORTE:
             continue                      # zu kurz für eine belastbare Aussage
@@ -267,6 +317,7 @@ def _saetze(zeilen) -> list[dict]:
         saetze.append({"id": nid, "gen": gen or "?", "titel": titel, "w": w,
                        "z": zahlen(titel), "art": art, "d": d,
                        "buyer": _entities.normalize_company(buyer) if buyer else "",
+                       "bid": _kennung(buyer_id),
                        "cpv": cpv, "wert": wert,
                        "frist": frist, "nuts": nuts, "beschr": beschr})
 
@@ -413,7 +464,7 @@ def _paare_finden(saetze: list[dict], haeufigkeit: dict | None = None) -> list[d
             # Sie wird deshalb als eigene Belegstufe MARKIERT, nicht verworfen — die Paare
             # bleiben in der Tabelle sichtbar, aber die Anreicherung fasst sie nicht an.
             geschwister = bool((s["w"] - t["w"]) and (t["w"] - s["w"]))
-            gleicher_kaeufer = bool(s["buyer"] and s["buyer"] == t["buyer"])
+            gleicher_kaeufer = _kaeufer_gleich(s, t)
             # BELEGLAGE statt Schwelle. Ein kurzer Gewerke-Titel („Sanitär, Lüftung,
             # Heizung") steckt vollständig in jedem längeren Titel desselben Gewerks —
             # Enthaltung 1,0 ist dort KEIN Identitätsbeleg. Gemessen: eine Lockerung auf

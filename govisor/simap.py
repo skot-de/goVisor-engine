@@ -186,6 +186,36 @@ def _pick(node) -> str | None:
     return None
 
 
+def _fassungen(node, feld: str, nid: str, entwerten: bool = False) -> list[dict]:
+    """ALLE gefuellten Sprachen eines simap-Knotens als `notice_text`-Zeilen.
+
+    `_pick` waehlt genau eine Sprache aus und wirft den Rest weg — richtig fuer die
+    eine `title`-Spalte in `notices`, falsch fuer alles andere: 31 % der simap-Saetze
+    (10.139 von 32.592, gemessen 2026-08-23) tragen den Titel in mehr als einer
+    Amtssprache, meist de+fr. Ohne diese Zeilen bekommt kein Schweizer Lead im
+    Frontend eine Sprachwahl, obwohl der franzoesische Text im Bronze liegt — die
+    164 mehrsprachigen CH-Leads von heute stammen AUSNAHMSLOS aus TED.
+
+    Nur wirklich gefuellte Sprachen: simap liefert die nicht belegten als `null`
+    MIT Schluessel. Wer die Schluessel zaehlt statt die Werte, meldet vier Sprachen
+    und liefert eine.
+    """
+    if not isinstance(node, dict):
+        return []
+    zeilen = []
+    for lang, wert in node.items():
+        if not isinstance(wert, str) or not wert.strip():
+            continue
+        text = _TAG.sub(" ", wert).strip() if entwerten else wert.strip()
+        if text:
+            # KEIN `year` in der Zeile: `model.TABLES["notice_text"]` fuehrt die Spalte
+            # nicht, das Jahr kommt aus der Partition (`year=…/`). Wer sie mitgibt,
+            # schreibt gegen ein Schema, das sie nicht kennt.
+            zeilen.append({"notice_id": nid, "lot_id": None, "field": feld,
+                           "language": lang, "value": text})
+    return zeilen
+
+
 def _text(node) -> str | None:
     """Wie _pick, aber HTML-Tags raus (orderDescription trägt <p>…)."""
     s = _pick(node)
@@ -309,6 +339,34 @@ def parse_publication(rec: dict) -> dict[str, list[dict]]:
     if cpvs:
         out["notice_cpv"] = [{"notice_id": nid, "cpv_code": c, "is_main": (i == 0)}
                              for i, c in enumerate(dict.fromkeys(cpvs))]
+
+    # SPRACHFASSUNGEN. Nur wenn es WIRKLICH eine Wahl gibt: eine einzige Fassung ist
+    # keine Sprachwahl, sondern nur die Sprache der Veroeffentlichung — die steht schon
+    # als `title`/`description` in `notices`. Der Export prueft das noch einmal, aber
+    # eine Tabelle, die 22.453 einsprachige Saetze mitschleppt, laedt jeden spaeteren
+    # Verbraucher zum selben Fehlschluss ein.
+    # BEIDE Titelknoten zusammenlegen, nicht den ersten nehmen. `detail.base.title` und
+    # `summary.title` tragen dieselbe Vergabe, aber nicht dieselbe Sprachmenge: 3.511
+    # Saetze sind NUR in `summary` mehrsprachig, umgekehrt kein einziger. Ein `or`
+    # zwischen beiden haette diese 3.511 stillschweigend auf eine Sprache reduziert.
+    # Zusammenlegen ist belegt, nicht geraten: wo beide Knoten dieselbe Sprache fuehren,
+    # stimmen sie in 39.533 von 39.533 Faellen woertlich ueberein (gemessen 2026-08-23).
+    _jahr = pubdate.year if pubdate else None
+    # Nur GEFUELLTE Werte zusammenlegen. Ein schlichtes {**a, **b} kippt die Sache um:
+    # beide Knoten fuehren die unbelegten Sprachen als `null` MIT Schluessel, also
+    # ueberschreibt das `"fr": null` des einen das gefuellte `"fr"` des anderen. Beim
+    # ersten Versuch blieb die Ausbeute deshalb exakt gleich — der Merge lief, brachte
+    # aber nichts.
+    _titel: dict = {}
+    for _knoten in (s.get("title"), base.get("title")):
+        if isinstance(_knoten, dict):
+            _titel.update({k: v for k, v in _knoten.items()
+                           if isinstance(v, str) and v.strip()})
+    fassungen = (_fassungen(_titel or base.get("title") or s.get("title"), "title", nid)
+                 + _fassungen(proc.get("orderDescription"), "description", nid,
+                              entwerten=True))
+    if len({z["language"] for z in fassungen}) > 1:
+        out["notice_text"] = fassungen
 
     # CH-Spezifika → attributes (Catch-all; speist später l.extras[]).
     attrs = []

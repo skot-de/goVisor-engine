@@ -3956,3 +3956,105 @@ def test_zugang_zu_den_unterlagen_wird_gesagt():
             if l.get("src") == "f02" and (l.get("unterlagen") or {}).get("access"):
                 werte.add(l["unterlagen"]["access"])
     assert werte - {"unknown"}, f"alle Zugänge stehen wieder auf unknown: {werte}"
+
+
+# ── Kaeufer-Beleg ueber die amtliche Kennung ────────────────────────────────
+# Hintergrund: AT und CH schreiben dieselbe Stelle je Quelle anders. Die Kennung
+# fuehrt sie zusammen — darf aber Dachkennungen nicht ueber Dienststellen hinweg
+# gleichsetzen. Beide Richtungen stehen hier, weil nur die zweite teuer war.
+
+def _kaeufersatz(buyer, bid):
+    from govisor import dedupe, entities
+    return {"buyer": entities.normalize_company(buyer), "bid": dedupe._kennung(bid)}
+
+
+def test_kennung_verbindet_kuerzel_mit_ausgeschriebenem_namen():
+    from govisor import dedupe, locales
+    locales.use("AT")
+    try:
+        a = _kaeufersatz("ASFINAG Autobahnen- und Schnellstraßen-Finanzierungs-AG", "FN92191a")
+        b = _kaeufersatz("Autobahnen- und Schnellstraßen-Finanzierungs-Aktiengesellschaft", "FN 92191 a")
+        assert dedupe._kaeufer_gleich(a, b)
+    finally:
+        locales.use("DE")
+
+
+def test_dachkennung_verschmilzt_keine_dienststellen():
+    """Beide OeGK-Landesstellen haengen an EINER GLN. Sie sind trotzdem zwei Kaeufer."""
+    from govisor import dedupe
+    a = _kaeufersatz("Österreichische Gesundheitskasse Landesstelle Wien", "9110027589349")
+    b = _kaeufersatz("Österreichische Gesundheitskasse Landesstelle Steiermark", "9110027589349")
+    assert not dedupe._kaeufer_gleich(a, b)
+
+
+def test_muellkennungen_belegen_nichts():
+    """„0" steht an 510 verschiedenen AT-Kaeufern — als Beleg unbrauchbar."""
+    from govisor import dedupe
+    for muell in ("0", "1", "AT", "", None, "99"):
+        assert dedupe._kennung(muell) == ""
+    assert not dedupe._kaeufer_gleich(_kaeufersatz("Alpha Bau", "0"),
+                                      _kaeufersatz("Beta Tief", "0"))
+
+
+def test_dedupe_aktiviert_das_locale_des_landes():
+    """Ohne das lief der Wall fuer AT und CH mit deutschen Rechtsformen."""
+    from govisor import dedupe
+    quelle = pathlib.Path(dedupe.__file__).read_text()
+    ohne_kommentar = "\n".join(z for z in quelle.splitlines() if not z.lstrip().startswith("#"))
+    assert "_locales.use(country)" in ohne_kommentar
+
+
+def test_at_kennt_die_rechtsform_gesellschaft_mbh():
+    from govisor import entities, locales
+    locales.use("AT")
+    try:
+        assert (entities.normalize_company("ÖBB-Technische Services-GmbH")
+                == entities.normalize_company("ÖBB-Technische Services-Gesellschaft mbH"))
+    finally:
+        locales.use("DE")
+
+
+# ── simap-Sprachfassungen ───────────────────────────────────────────────────
+# simap liefert {de,fr,it,en} je Titel; `_pick` waehlt EINE aus. Ohne die
+# `notice_text`-Zeilen bekommt kein Schweizer Lead eine Sprachwahl.
+
+def test_simap_gibt_alle_gefuellten_sprachen_aus():
+    from govisor import simap
+    rec = {"summary": {"publicationId": "x1",
+                       "title": {"de": "Sanierung Schulhaus", "fr": "Rénovation école",
+                                 "it": None, "en": ""}},
+           "detail": {"base": {"id": "x1"}}}
+    t = simap.parse_publication(rec)["notice_text"]
+    assert {z["language"] for z in t} == {"de", "fr"}, "leere Sprachen duerfen nicht zaehlen"
+
+
+def test_simap_meldet_keine_wahl_bei_einer_sprache():
+    """Eine Fassung ist die Veroeffentlichungssprache, keine Wahl."""
+    from govisor import simap
+    rec = {"summary": {"publicationId": "x2", "title": {"de": "Nur deutsch", "fr": None}},
+           "detail": {"base": {"id": "x2"}}}
+    assert "notice_text" not in simap.parse_publication(rec)
+
+
+def test_simap_legt_beide_titelknoten_zusammen():
+    """`summary.title` und `detail.base.title` fuehren verschiedene Sprachmengen.
+
+    Die `null`-Schluessel des einen duerfen die gefuellten des anderen NICHT
+    ueberschreiben — genau daran scheiterte der erste Versuch lautlos.
+    """
+    from govisor import simap
+    rec = {"summary": {"publicationId": "x3",
+                       "title": {"de": "Umbau Turnhalle", "fr": "Transformation salle"}},
+           "detail": {"base": {"id": "x3", "title": {"de": "Umbau Turnhalle", "fr": None}}}}
+    t = simap.parse_publication(rec)["notice_text"]
+    assert {z["language"] for z in t} == {"de", "fr"}
+
+
+def test_simap_textzeilen_passen_aufs_silber_schema():
+    """Ein `year` in der Zeile schreibt gegen eine Spalte, die es nicht gibt."""
+    from govisor import model, simap
+    rec = {"summary": {"publicationId": "x4",
+                       "title": {"de": "Neubau", "fr": "Construction"}},
+           "detail": {"base": {"id": "x4"}}}
+    t = simap.parse_publication(rec)["notice_text"]
+    assert set(t[0]) == {f.name for f in model.TABLES["notice_text"]}

@@ -67,6 +67,12 @@ KETTE: list[tuple[str, str]] = [
     ("build_lead_cpv",             "Mehr-CPV je Lead"),
     ("build_lead_detail",          "UI-View je Lead"),
     ("build_lead_export",          "was das Frontend liest — MUSS zuletzt"),
+    # NACH `build_lead_export`, weil `build_lead_text` gegen dessen lead_id joint —
+    # davor waere die Tabelle leer. Bis 2026-08-23 lief der Schritt fuer AT/CH GAR
+    # NICHT: die Dateien standen still auf dem Stand vom 11.08., waehrend der Rest
+    # taeglich neu gebaut wurde. Aufgefallen ist es erst, als simap seine
+    # Sprachfassungen lieferte und im Frontend trotzdem nichts ankam.
+    ("build_lead_text",            "Sprachfassungen je Lead (Sprachwahl im Detail)"),
 ]
 
 
