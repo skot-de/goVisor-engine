@@ -3861,3 +3861,30 @@ def test_ch_kontext_liest_auch_simap_vokabular():
     where = sql[sql.index("WHERE path LIKE"):]
     for pfad in ("simap/questionDeadline", "simap/offerValidityDeadline"):
         assert pfad in where, f"{pfad} fehlt in der Positivliste — die Spalte bliebe leer"
+
+
+def test_bietergemeinschaft_wird_nicht_mehr_behauptet():
+    """⚠ Die Zeile „Bietergemeinschaft: zugelassen" stand IMMER da — ohne einen einzigen
+    Beleg. Daneben eine erfundene Haftungsform („gesamtschuldnerisch haftend"), die jedem
+    Lead mit Los-Grenze angeheftet wurde. Wer als Bieter darauf baut und sich eine
+    Partnerschaft organisiert, hat es von uns gehört.
+
+    Nur simap veröffentlicht die Angabe strukturiert: `consortiumAllowed` bei 55 %,
+    `subContractorAllowed` bei 78 % seiner Vorgänge. eForms hat bieterseitig kein Feld mit
+    Substanz — `NoticeResult.LotTender.SubcontractingTerm` ist reichlich vorhanden (DE
+    216.443), meint aber die ZUSCHLAGS-Seite: hat der Gewinner untervergeben. Eine andere
+    Frage.
+
+    Deshalb dreiwertig: erlaubt / nicht erlaubt / keine Angabe. ⚠ `None` heisst „das Portal
+    sagt nichts", NICHT „nicht erlaubt" — sonst wird aus einer fehlenden Angabe eine Absage.
+    """
+    wurzel = pathlib.Path(__file__).resolve().parent.parent
+    kern = (wurzel / "web/lib/explorerCore.js").read_text(encoding="utf-8")
+    assert 'keine Angabe in der Bekanntmachung' in kern, \
+        "die Oberflaeche behauptet wieder eine Zulassung ohne Beleg"
+    assert 'bg === true ? tk("zugelassen")' in kern, "die Anzeige ist nicht mehr dreiwertig"
+
+    export = (wurzel / "scripts/export_web_leads.py").read_text(encoding="utf-8")
+    assert '"bietergemeinschaft": (bool(g("consortium_allowed"))' in export
+    assert 'if (l.get("anf") or {}).get("bietergemeinschaft"):' in export, \
+        "die Haftungsform wird wieder ohne Beleg gesetzt"

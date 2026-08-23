@@ -1558,11 +1558,21 @@ ${l.lose && l.lose.length>1 ? (()=>{
             : tk("Noch wenig Bewegung. Wer sich früh meldet, hat die freie Wahl bei den Losen.")}</span>
         </div>`;})()}
 
-      <div class="pn-bg">
+      ${(()=>{
+        /* ⚠ HIER STAND „zugelassen" — IMMER. Ohne einen einzigen Beleg, und daneben eine
+           erfundene Haftungsform. Wer als Bieter darauf baut und sich eine Partnerschaft
+           organisiert, hat es von uns gehoert. Nur simap veroeffentlicht die Angabe
+           strukturiert (55 % seiner Vorgaenge); eForms hat bieterseitig kein Feld mit
+           Substanz. Deshalb dreiwertig: erlaubt / nicht erlaubt / keine Angabe. */
+        const bg = (l.anf||{}).bietergemeinschaft;
+        const wert = bg === true ? tk("zugelassen")
+                   : bg === false ? tk("nicht zugelassen")
+                   : tk("keine Angabe in der Bekanntmachung");
+        return `<div class="pn-bg${bg==null?' pn-bg-offen':''}">
         <span class="pn-bg-k">${tk("Bietergemeinschaft")}</span>
-        <span class="pn-bg-v">${tk("zugelassen")}</span>
+        <span class="pn-bg-v">${wert}</span>
         <span class="pn-bg-x">${esc(tk(l.bgForm||''))}</span>
-      </div>
+      </div>`;})()}
 
       ${!angaben.partner ? `<div class="pn-off">
         <div><b>${tk("Partner finden?")}</b>

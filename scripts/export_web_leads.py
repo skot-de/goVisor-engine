@@ -909,6 +909,15 @@ def export_branche(key):
                                    else int(r["validity_days"]) if g("validity_days") is not None else None),
                 "eignung": (["Nachweis"] * int(g("doc_eligibility")) if g("doc_eligibility")
                             else str(g("selection_types")).split(",") if g("selection_types") else []),
+                # ⚠ DREIWERTIG: True / False / None. `None` heisst „das Portal sagt nichts",
+                # NICHT „nicht erlaubt". Nur simap veroeffentlicht beides strukturiert
+                # (78 % bzw. 55 %); eForms hat dafuer kein bieterseitiges Feld mit Substanz.
+                # Die Oberflaeche muss den Unterschied tragen, sonst wird aus einer
+                # fehlenden Angabe eine Absage.
+                "unterauftrag": (bool(g("subcontracting_allowed"))
+                                 if g("subcontracting_allowed") is not None else None),
+                "bietergemeinschaft": (bool(g("consortium_allowed"))
+                                       if g("consortium_allowed") is not None else None),
                 "zertifikate": (str(g("doc_certs")).split(",") if g("doc_certs") else []),
                 "quelle": ("unterlagen" if g("doc_eligibility") or g("doc_guarantee") is not None else "eforms"),
             },
@@ -950,7 +959,14 @@ def export_branche(key):
         if lim and nlose > 1 and lim[1] and lim[1] < nlose:
             l["loseMaxAngebot"] = lim[0] or nlose
             l["loseMaxZuschlag"] = lim[1]
-            l["bgForm"] = "gesamtschuldnerisch haftend"  # Standardform; Klausel-Detail folgt später
+            # ⚠ HIER STAND EINE ANNAHME. „gesamtschuldnerisch haftend" wurde jedem Lead
+            # mit Los-Grenze angeheftet, ohne einen einzigen Beleg — und die Oberflaeche
+            # zeigte daneben „Bietergemeinschaft: zugelassen". Beides war geraten.
+            # Jetzt steht die Form nur da, wo das Portal die Bietergemeinschaft wirklich
+            # erlaubt (simap, 55 %); sonst bleibt das Feld leer und die Anzeige sagt
+            # „keine Angabe" statt einer Zusage.
+            if (l.get("anf") or {}).get("bietergemeinschaft"):
+                l["bgForm"] = "gesamtschuldnerisch haftend"
 
     # Payload-Split: die zwei schweren Felder (Beschreibung, Vergabestellen-Profil) wandern
     # in eine Detail-Datei und werden erst beim Öffnen eines Leads nachgeladen. So bleibt die

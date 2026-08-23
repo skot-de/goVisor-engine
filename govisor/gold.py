@@ -3033,6 +3033,7 @@ def _lead_context_sql(cfg: Config, country: str) -> str:
                 "NULL::VARCHAR AS documents_url, FALSE AS is_nationwide, "
                 "NULL::INTEGER AS guarantee_required, NULL::INTEGER AS variants_allowed, "
                 "NULL::INTEGER AS validity_days, NULL::DATE AS validity_until, "
+                "NULL::INTEGER AS consortium_allowed, NULL::INTEGER AS subcontracting_allowed, "
                 "NULL::VARCHAR AS selection_types, "
                 "NULL::VARCHAR AS deadline_time, NULL::VARCHAR AS question_deadline "
                 "WHERE false")
@@ -3135,6 +3136,20 @@ def _lead_context_sql(cfg: Config, country: str) -> str:
         -- Angebotsfrist in `notices` steht und nicht in `attributes`.
         max(CASE WHEN path = 'simap/offerValidityDeadline'
                  THEN try_cast(substr(value, 1, 10) AS date) END)                AS validity_until,
+        -- ⚠ NUR SIMAP, UND DAS IST KEIN VERSEHEN. Gesucht wurde eine eForms-Entsprechung:
+        -- `NoticeResult.LotTender.SubcontractingTerm` gibt es reichlich (DE 216.443), meint
+        -- aber die ZUSCHLAGS-Seite — hat der Gewinner untervergeben. Das ist eine andere
+        -- Frage als „darf ein Bieter untervergeben". Bieterseitig traegt eForms nur
+        -- `TenderSubcontractingRequirementsCode`, DE 2.523 und AT 16 — zu duenn zum Anzeigen.
+        -- simap sagt es direkt: `subContractorAllowed` 78 %, `consortiumAllowed` 55 %.
+        -- Ein Feld, das nur ein Land fuellt, ist erlaubt — solange NULL „unbekannt" heisst
+        -- und nicht „nicht erlaubt". Genau das steht in docs/land-onboarding.md.
+        max(CASE WHEN path = 'simap/consortiumAllowed'
+                 THEN CASE lower(value) WHEN 'yes' THEN 1 WHEN 'no' THEN 0 END END)
+                                                                             AS consortium_allowed,
+        max(CASE WHEN path = 'simap/subContractorAllowed'
+                 THEN CASE lower(value) WHEN 'yes' THEN 1 WHEN 'no' THEN 0 END END)
+                                                                             AS subcontracting_allowed,
         string_agg(DISTINCT CASE WHEN path ILIKE '%SelectionCriteria.CriterionTypeCode' AND path NOT ILIKE '%@%'
                             AND value IN ('tp-abil','sui-act','ef-stand') THEN value END, ',') AS selection_types,
         -- #16 Verfahrenskalender-Rest: Angebotsfrist-Uhrzeit (HH:MM) + Bieterfragen-Frist.
@@ -3183,6 +3198,8 @@ def _lead_context_sql(cfg: Config, country: str) -> str:
          -- Fristen, und der Fehler sah aus wie ein leeres Feld in der Quelle.
          OR path = 'simap/questionDeadline'
          OR path = 'simap/offerValidityDeadline'
+         OR path = 'simap/consortiumAllowed'
+         OR path = 'simap/subContractorAllowed'
          OR path = 'simap/hasProjectDocuments'
          OR path ILIKE '%RegulatoryDomain'
          OR path ILIKE '%ProcurementLegislationDocumentReference.ID'
@@ -3381,6 +3398,7 @@ def build_lead_export(cfg: Config, country: str = "DE"):
             -- auf TAGE gebracht — gegen die Angebotsfrist, denn ab da laeuft die Bindung.
             coalesce(ctx.validity_days,
                      date_diff('day', d.deadline_date, ctx.validity_until)) AS validity_days,
+            ctx.consortium_allowed, ctx.subcontracting_allowed,
             ctx.selection_types,
             ctx.deadline_time, ctx.question_deadline,
             d.ted_url                                 AS source_url,
