@@ -14,6 +14,10 @@ für Wechsel-Prognosen und Lead-Generierung. Nutzer: Sven (sven.kotzur@gmail.com
 - `docs/marktpuls-jahres-layer.md` — Jahres-Layer/Historie 2004–2025, Serien-Regel je Quelle,
   Bruchstellen. **Enthält den Fund, dass eine harte `publication_date`-Bedingung 93 % von DÖE
   lautlos verwarf** — vor dem Anschluss einer Quelle mit dünnem Datumsfeld lesen.
+- `docs/modellwahl-und-anbieterboden.md` — **wie LLM-Geld gespart wird, ohne die Qualität
+  zu verwetten**: Anbieterboden (`:floor`, halber Preis bei gleichem Modell), Kostenbuch
+  je Aufruf, gepaarter Modellvergleich. **Vor jeder Änderung an `OR_MODEL` oder an der
+  Geldwache lesen** — der Boden greift nur, weil er angehängt statt vorausgesetzt wird.
 - Auto-Memory (`MEMORY.md` + `govisor-*.md`) ist zusätzlich hinterlegt.
 - **Secrets:** OpenRouter-API-Key (LLM-Nachfolge-Adjudikation) liegt in
   `.secrets/openrouter.key` (gitignored, chmod 600). ~$25 Startguthaben; Fallback-Key
