@@ -191,7 +191,14 @@ RESERVE_USD = float(_os.environ.get("GOVISOR_RESERVE_USD", "1.00"))
 # und kam so am 22.08. auf ~11 $ an einem Tag, ohne dass irgendeine Bremse falsch lag.
 # Bei 0,045 $ je Vorgang und einer offenen Beschaffungsluecke von ~5.983 Vergaben waeren
 # das rund 271 $, die sonst niemand geplant haette.
-TAG_USD = float(_os.environ.get("GOVISOR_TAG_USD", "3.00"))
+# 6,00 $ statt der ersten 3,00 — gerechnet, nicht geraten. Zufluss ~233 Vergaben je
+# Kalendertag (Fristen der naechsten 42 Tage durch 42; Gegenprobe ueber Bestand geteilt
+# durch mittlere Laufzeit: 311). Kosten 0,048 $ je Vorgang (gemessen ueber 310 Vorgaenge).
+# Bei der heutigen Abdeckung von 43 % sind das ~5,7 $/Tag mit 10 % Puffer; 3,00 $ reichten
+# nicht einmal dafuer und wurden am 22.08. nach 4,02 $ gerissen, waehrend 886 Vorgaenge
+# warteten. Bei VOLLER Abdeckung waeren es 12–16 $/Tag — dann traegt erst der Stapelweg
+# (halber Preis) und der Dublettenwall (−22 %) die Rechnung.
+TAG_USD = float(_os.environ.get("GOVISOR_TAG_USD", "6.00"))
 LIMIT_USD = float(_os.environ.get("GOVISOR_LIMIT_USD", "5.00"))
 _TAKT = int(_os.environ.get("GOVISOR_BUDGET_TAKT", "20"))
 
