@@ -96,6 +96,28 @@ CLI: `python -m govisor.cli {ingest|silver|gold|verify|review}`.
      der Auto-Memory `govisor-fondsebene-dach.md`.
 - **Messen statt annehmen** — jede Zahl/Feldposition an echten Daten prüfen, nie aus
   dem Gedächtnis behaupten. Auffällige Aggregat-Zahlen sind Warnsignale.
+- **„Gebaut, aber nicht verdrahtet" ist unsere häufigste Fehlerklasse.** Nicht Denkfehler,
+  sondern korrekte Bausteine, die niemand aufruft: `build_lead_text` und `build_lead_lot`
+  liefen im DACH-Gold nie mit (12 bzw. 10 Tage stille Dateien), `dedupe` reichte `country`
+  durch, ohne je ein Locale zu aktivieren, der simap-Parser verwarf vorhandene
+  Sprachfassungen, ein AT-Fix landete in einem abgelösten Modul. **Jedes Mal waren alle
+  Tests grün** — ein Unit-Test prüft, ob ein Baustein das Richtige tut, nicht ob ihn jemand
+  benutzt. Deshalb:
+
+      python3 scripts/pruefe_verdrahtung.py [--offen]
+
+  Sonde 1 (Frische) meldet jede Gold-Datei, die gegenüber dem Lauf ihres Landes zurückhängt;
+  Sonde 2 (Länderparität) jede Tabelle, die es nur in DE gibt. Läuft am Ende von
+  `daily_leads.sh`. Ausnahmen stehen als Code **im Skript**, nicht in einer Textdatei, und
+  `tests/test_verdrahtung.py` hält sie ehrlich: ohne Begründung, für etwas Gelöschtes oder
+  für eine längst geschlossene Lücke wird die Suite rot.
+  ⚠ Zwei Dinge, die man dabei wissen muss: der ältere **Altersbericht** im selben Skript ist
+  eine handgepflegte Liste von sechs Eckpfeilern — genau deshalb hat er `lead_lot` nie
+  gemeldet. Beide bleiben, weil sie verschiedene Ausfälle sehen (Altersbericht: der ganze
+  Lauf steht; Sonde: ein einzelner Schritt fehlt). Und: **16 Gold-Tabellen gibt es weiterhin
+  nur für DE**, obwohl ihr Builder country-fähig ist und für AT/CH echte Zeilen liefert
+  (`lead_criteria`, `lead_requirement`, `lead_party`, `value_anchor` u. a.) — sie stehen als
+  `OFFEN_NUR_DE` im Skript und sind eine Arbeitsliste, kein erledigter Punkt.
 - **Kein Datenverlust** — nichts nach eigener Relevanz filtern; Unbekanntes →
   „sonstiges"/`attributes`, Zweifelsfälle → `review`-Queue. Erschlossenes trägt Konfidenz.
 - Details + Warum: `docs/entscheidungen-und-kontext.md`.

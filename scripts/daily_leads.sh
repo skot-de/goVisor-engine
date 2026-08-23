@@ -1165,5 +1165,26 @@ do
 done
 [ "$_ALT" = "1" ] && echo "  → Ein Baustein ist aelter als erwartet. Gruener Lauf heisst NICHT frische Daten."
 
+# ── VERDRAHTUNGSPRUEFUNG ─────────────────────────────────────────────────────────────────
+#
+# Der Altersbericht daruber ist eine HANDGEPFLEGTE Liste von sechs Eckpfeilern. Genau das
+# war die Luecke: `lead_lot` und `lead_text` standen nie drauf, wurden im DACH-Lauf nie
+# gebaut und fielen 10 bzw. 12 Tage zurueck, ohne dass irgendetwas rot wurde. Wer eine
+# neue Tabelle baut, denkt nicht daran, sie hier nachzutragen.
+#
+# Die Sonde dreht das um: sie beobachtet ALLE Gold-Dateien und fuehrt stattdessen die
+# Ausnahmen — mit Begruendung, und `tests/test_verdrahtung.py` haelt die Liste ehrlich.
+#
+# BEIDE bleiben stehen, weil sie verschiedene Ausfaelle sehen:
+#   Altersbericht  absolute Frische weniger Eckpfeiler → merkt, wenn der GANZE Lauf steht
+#   Sonde 1        Frische relativ zum Landeslauf      → merkt, wenn EIN Schritt fehlt
+# Faellt alles gleichzeitig aus, ist die Sonde blind (ihr Bezugspunkt wandert mit) und der
+# Altersbericht der einzige Waechter. Umgekehrt sieht der Altersbericht nur seine sechs.
+#
+# Warnung, kein Abbruch — aus demselben Grund wie oben.
+echo ""
+$PY scripts/pruefe_verdrahtung.py \
+  || echo "  → Verdrahtungspruefung meldet Befunde. Details: python3 scripts/pruefe_verdrahtung.py --offen"
+
 # Alte Logs aufräumen (>30 Tage)
 find "$LOG_DIR" -name 'daily-*.log' -type f -mtime +30 -delete 2>/dev/null || true

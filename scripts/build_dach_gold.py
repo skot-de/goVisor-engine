@@ -65,6 +65,12 @@ KETTE: list[tuple[str, str]] = [
     ("build_value_band_effektiv",  "Gebühren-Band"),
     ("build_lead_geo",             "Koordinate je Lead (braucht dim_plz)"),
     ("build_lead_cpv",             "Mehr-CPV je Lead"),
+    # VOR `build_lead_detail`/`build_lead_export`: beide lesen die Lose. Bis 2026-08-23
+    # fehlte der Schritt hier ganz — `lead_lot.parquet` fuer AT und CH stand seit dem
+    # 13.08. still, waehrend der Export ihn taeglich las. Derselbe Fehler wie bei
+    # `build_lead_text`, nur zehn Tage aelter. Gefunden hat ihn die Frischepruefung
+    # (`scripts/pruefe_frische.py`), nicht ein Test.
+    ("build_lead_lot",             "Lose je Lead — der Inhalts-Layer"),
     ("build_lead_detail",          "UI-View je Lead"),
     ("build_lead_export",          "was das Frontend liest — MUSS zuletzt"),
     # NACH `build_lead_export`, weil `build_lead_text` gegen dessen lead_id joint —
