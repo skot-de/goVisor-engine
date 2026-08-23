@@ -9,7 +9,20 @@ Aufruf: LIMIT=20 python scripts/succession_llm.py   (Pilot)
 import os, re, json, time, duckdb, requests
 
 KEY = open(os.environ.get("OPENROUTER_KEY_FILE", ".secrets/openrouter.key")).read().strip()
-MODEL = os.environ.get("OR_MODEL", "google/gemini-2.0-flash-001")
+# ⚠ DIESES SKRIPT UMGEHT DIE GELDWACHE. Es postet unten direkt mit `requests`, statt über
+# `govisor.llm.chat()` zu gehen — also ohne Reserve-Boden, ohne Lauf- und Tagesdeckel und
+# ohne Kostenbuch. Solange es nur als Pilot mit LIMIT läuft, ist der Schaden begrenzt;
+# `LIMIT=0` würde ungebremst Geld ausgeben. Der Umbau auf `llm.chat()` steht aus.
+#
+# Der Anbieterboden lässt sich dagegen sofort mitnehmen: gleiches Modell, günstigster
+# Endpunkt, kein Verhaltensunterschied.
+# `python scripts/…` setzt sys.path[0] auf scripts/, nicht auf die Wurzel — ohne die
+# naechste Zeile scheitert der Import mit ModuleNotFoundError.
+import sys as _sys
+_sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from govisor.llm import mit_boden as _mit_boden  # noqa: E402
+
+MODEL = _mit_boden(os.environ.get("OR_MODEL", "google/gemini-2.0-flash-001"))
 LIMIT = int(os.environ.get("LIMIT", "20"))
 BATCH = int(os.environ.get("BATCH", "10"))
 URL = "https://openrouter.ai/api/v1/chat/completions"

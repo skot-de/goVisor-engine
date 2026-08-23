@@ -16,9 +16,11 @@ Alle Dateien liegen unter ``.secrets/`` (gitignored). Nutzung:
 from __future__ import annotations
 
 import os as _os
+import sys
 import threading as _threading
 from pathlib import Path as _Path
 
+import contextlib
 import os
 import threading
 import time
@@ -26,8 +28,52 @@ from pathlib import Path
 
 import requests
 
+from govisor import kostenbuch
+
 URL = "https://openrouter.ai/api/v1/chat/completions"
-DEFAULT_MODEL = os.environ.get("OR_MODEL", "google/gemini-2.5-flash")
+
+# ── ANBIETERBODEN: DERSELBE MODELL, DER GUENSTIGSTE WEG ──────────────────────────────
+#
+# Gemessen am 2026-08-23 fuehrt OpenRouter fuer `google/gemini-2.5-flash` SIEBEN Endpunkte:
+#
+#     0,150 / 1,250 $/Mio   google-ai-studio/flex
+#     0,300 / 2,500 $/Mio   google-ai-studio · google-vertex/global · google-vertex/eu
+#     0,540 / 4,500 $/Mio   google-ai-studio/priority · google-vertex/global/priority
+#
+# Dasselbe Modell, Spanne 3,6-fach. Ohne Angabe verteilt OpenRouter nach „price-based load
+# balancing": gewichtet nach dem inversen Quadrat des Preises. Guenstig bevorzugt, aber eben
+# NICHT immer — wir landeten regelmaessig auf den teuren Endpunkten, ohne es zu merken.
+#
+# ⚠ `provider.sort = "price"` REICHT NICHT. Es sortiert nur; die Flex-Endpunkte bleiben
+# gesperrt. Nur die Endung `:floor` macht sie zusaetzlich zulaessig — laut OpenRouter-Doku
+# „a superset of setting provider.sort to price". Wer nur sortiert, zahlt weiter 0,300.
+#
+# Was das kostet: nichts. Gleiches Modell, gleicher Kontext (1.048.576), gleiche
+# Ausgabegrenze (65.535). Was es bringt: bis zur Haelfte. Was es riskiert: Flex ist die
+# niedrigere Dienstguete — langsamer, mehr Warteschlange. Fuer einen Nachtarbeiter mit
+# Wachhund ist das gleichgueltig, aber es ist eine Behauptung, bis das Kostenbuch sie
+# belegt. Deshalb wird ab hier jeder Aufruf mit Preis und Dauer mitgeschrieben.
+_MODELL_ROH = os.environ.get("OR_MODEL", "google/gemini-2.5-flash")
+
+# Preisdeckel je Mio Token, Format „Eingabe/Ausgabe" (z. B. „0.30/2.50"). Ohne Angabe kein
+# Deckel. Er ist der Guertel zum Hosentraeger: `:floor` waehlt den billigsten Endpunkt, der
+# Deckel verbietet den teuren auch dann, wenn der billige gerade ausfaellt.
+#
+# ⚠ NICHT VORBELEGEN. Ein fest eingebauter Deckel gilt auch fuer ein Modell, das jemand
+# spaeter per OR_MODEL setzt — und sperrt dann womoeglich JEDEN Endpunkt aus. Der Aufruf
+# scheitert mit „no allowed providers", und die Ursache steht an einer Stelle, an die
+# niemand schaut. Wer deckeln will, deckelt bewusst.
+# Schalter fuer den Boden. „aus" fuehrt jeden Aufruf ohne `:floor` — noetig, um den Boden
+# ueberhaupt MESSEN zu koennen: ohne eine Vergleichsgruppe ohne Boden ist die Ersparnis eine
+# Behauptung. Der Vergleich laeuft ueber `scripts/kostenbericht.py --boden`.
+OR_BODEN = os.environ.get("OR_BODEN", "an").lower()
+OR_MAX_PREIS = os.environ.get("OR_MAX_PREIS", "")
+
+# „deny" schliesst Anbieter aus, die Eingaben speichern duerfen. Ebenfalls nicht vorbelegt:
+# ob der Flex-Endpunkt darunter faellt, sagt die OpenRouter-Schnittstelle nicht (das Feld
+# `data_policy` kam bei allen sieben Endpunkten leer zurueck). Einschalten heisst hier also
+# moeglicherweise: den halben Preis wieder aufgeben. Das ist eine Abwaegung, keine Vorgabe.
+OR_DATENSCHUTZ = os.environ.get("OR_DATENSCHUTZ", "")
 _SECRETS = Path(os.environ.get("GOVISOR_SECRETS", ".secrets"))
 
 # ── ZWEITER ANBIETER: CEREBRAS ───────────────────────────────────────────────────────
@@ -67,6 +113,11 @@ _EXHAUSTED: set[str] = set()   # Keys ohne Guthaben (402), prozessweit gemerkt
 # Ohne diese Angabe steht im Ergebnis nicht, welches Modell es erzeugt hat — und dann laesst
 # sich spaeter nicht mehr sagen, warum ein Bestand anders aussieht als der daneben.
 _LETZTER = threading.local()
+# Wofuer wird gerade Geld ausgegeben? Ebenfalls JE FADEN. Ohne diese Angabe steht im
+# Kostenbuch zwar der Preis, aber nicht der Anlass — und dann laesst sich hinterher nicht
+# trennen, was die Produktion gekostet hat und was ein Versuch. Genau diese Trennung fehlte
+# am 2026-08-23, als ein Deckel-Test das Guthaben des Analyse-Arbeiters aufbrauchte.
+_KONTEXT = threading.local()
 
 
 def _load_keys() -> list[str]:
@@ -142,11 +193,116 @@ def _anbieter() -> list[dict]:
     Ein Wiedereinstieg ist ein Listeneintrag; die Schluessel-Lader bleiben erhalten.
     """
     return [
-        {"name": "openrouter", "url": URL, "keys": _load_keys(), "model": DEFAULT_MODEL},
+        {"name": "openrouter", "url": URL, "keys": _load_keys(), "model": DEFAULT_MODEL,
+         "extra": _or_extra()},
     ]
+def mit_boden(modell: str | None) -> str:
+    """Haengt `:floor` an, wenn noch keine Route dransteht und der Boden eingeschaltet ist.
+
+    ⚠ **Anhaengen statt voraussetzen — und zwar aus einem konkreten Grund.** Der Boden als
+    blosse Vorgabe in `DEFAULT_MODEL` waere in der Produktion wirkungslos gewesen:
+    `scripts/analyse_arbeiter.sh` setzt `OR_MODEL="google/gemini-2.5-flash"` ausdruecklich,
+    und `scripts/analyze_docs.py` trug denselben Namen noch einmal fest eingebaut. Die
+    Vorgabe haette also genau an der einen Stelle nicht gegriffen, an der das Geld ausgegeben
+    wird — und im Kostenbuch haette trotzdem plausibel etwas gestanden.
+
+    Eine bereits gesetzte Route (`:nitro`, `:floor`) bleibt unangetastet: wer den schnellen
+    Weg ausdruecklich will, bekommt ihn.
+    """
+    if not modell or OR_BODEN == "aus":
+        return modell or ""
+    return modell if kostenbuch.weg(modell) else modell + ":floor"
+
+
+DEFAULT_MODEL = mit_boden(_MODELL_ROH)
+
+
+def _or_extra() -> dict:
+    """Der OpenRouter-`provider`-Block — Preisdeckel und Datenrichtlinie, beide optional.
+
+    Die Endung `:floor` steckt im Modellnamen (s. DEFAULT_MODEL) und nicht hier; sie ist
+    das Einzige, was den Flex-Endpunkt freischaltet. Dieser Block ergaenzt nur die Grenzen.
+    """
+    prov: dict = {}
+    if OR_MAX_PREIS:
+        # „0.30/2.50" → {"prompt": 0.30, "completion": 2.50}, in $ je Mio Token.
+        try:
+            ein, _, aus = OR_MAX_PREIS.partition("/")
+            prov["max_price"] = {"prompt": float(ein), "completion": float(aus or ein)}
+        except ValueError:
+            print(f"⚠ OR_MAX_PREIS unlesbar: {OR_MAX_PREIS!r} — erwartet 0.30/2.50. "
+                  f"Es wird ohne Preisdeckel gefahren.", file=sys.stderr, flush=True)
+    if OR_DATENSCHUTZ:
+        prov["data_collection"] = OR_DATENSCHUTZ
+    return {"provider": prov} if prov else {}
+
+
 def available_keys() -> int:
     """Anzahl konfigurierter Keys ueber ALLE Anbieter, die (noch) nicht leer sind."""
     return sum(1 for a in _anbieter() for k in a["keys"] if k not in _EXHAUSTED)
+
+
+@contextlib.contextmanager
+def kontext(*, zweck: str | None = None, vorgang: str | None = None):
+    """Anlass der folgenden Aufrufe fuers Kostenbuch — je Faden, verschachtelbar.
+
+    ::
+
+        with llm.kontext(zweck="analyse", vorgang=notice_id):
+            chat(...)
+
+    ⚠ **Kein globales Umbiegen.** Derselbe Fehler wie beim Anbieter-Zwang (s. `chat`): der
+    Analyse-Lauf faehrt vierzig Faeden, und eine gemeinsame Variable wuerde die Anlaesse
+    untereinander vertauschen. Beim Verlassen wird der vorherige Stand zurueckgelegt, nicht
+    geleert — sonst verliert ein aeusserer Block seinen Zweck an einen inneren.
+    """
+    vorher = (getattr(_KONTEXT, "zweck", None), getattr(_KONTEXT, "vorgang", None))
+    if zweck is not None:
+        _KONTEXT.zweck = zweck
+    if vorgang is not None:
+        _KONTEXT.vorgang = vorgang
+    try:
+        yield
+    finally:
+        _KONTEXT.zweck, _KONTEXT.vorgang = vorher
+
+
+def _buchen(anbieter: str, modell: str, daten: dict, sekunden: float) -> None:
+    """Preis, Weg und Dauer einer Antwort ins Kostenbuch.
+
+    Die Kosten stehen seit der Umstellung der OpenRouter-Nutzungsabrechnung **immer** in der
+    Antwort; ein Zusatzaufruf waere weder noetig noch bezahlbar (er kostet Zeit je Analyse).
+    Fehlen sie doch, wird die Zeile trotzdem geschrieben — mit `kosten_usd: null`. Eine
+    Luecke, die man zaehlen kann, ist besser als eine Zeile, die fehlt.
+    """
+    if not isinstance(daten, dict):
+        return
+    u = daten.get("usage") or {}
+    if not isinstance(u, dict):
+        u = {}
+    det = u.get("cost_details") or {}
+    pd = u.get("prompt_tokens_details") or {}
+    kostenbuch.notiere(
+        anbieter=anbieter, modell=modell,
+        # OpenRouter nennt hier den Anbieter, der tatsaechlich geantwortet hat
+        # („Google AI Studio"). Das ist die einzige Stelle, an der sich pruefen laesst,
+        # ob `:floor` den Flex-Endpunkt wirklich getroffen hat.
+        endpunkt=str(daten.get("provider") or ""),
+        vorgang=getattr(_KONTEXT, "vorgang", None),
+        zweck=getattr(_KONTEXT, "zweck", None),
+        eingabe_token=u.get("prompt_tokens"),
+        ausgabe_token=u.get("completion_tokens"),
+        cache_token=(pd or {}).get("cached_tokens") if isinstance(pd, dict) else None,
+        kosten_usd=u.get("cost"),
+        upstream_usd=(det or {}).get("upstream_inference_cost") if isinstance(det, dict) else None,
+        sekunden=sekunden)
+
+
+def letzter_verbrauch() -> dict:
+    """Preis, Endpunkt und Dauer des letzten erfolgreichen Aufrufs IN DIESEM FADEN."""
+    return {"endpunkt": getattr(_LETZTER, "endpunkt", None),
+            "kosten_usd": getattr(_LETZTER, "kosten_usd", None),
+            "sekunden": getattr(_LETZTER, "sekunden", None)}
 
 
 def letzter_anbieter() -> tuple[str | None, str | None]:
@@ -413,6 +569,7 @@ def chat(messages: list[dict], model: str | None = None, temperature: float = 0,
             versuchte += 1
             for attempt in range(max_retries):
                 try:
+                    t0 = time.time()
                     r = requests.post(anb["url"], headers={"Authorization": f"Bearer {key}",
                                       "Content-Type": "application/json"}, json=body, timeout=timeout)
                     if r.status_code == 200:
@@ -423,11 +580,24 @@ def chat(messages: list[dict], model: str | None = None, temperature: float = 0,
                         # Fehler wie ein Netzfehler aussah, wanderte der Lauf durch alle Keys
                         # und meldete am Ende „alle Anbieter erschoepft". Ein Formatunterschied
                         # als Guthabenproblem verkleidet: die teuerste Sorte Fehlermeldung.
-                        m = (r.json().get("choices") or [{}])[0].get("message") or {}
+                        daten = r.json()
+                        m = (daten.get("choices") or [{}])[0].get("message") or {}
                         inhalt = m.get("content") or m.get("reasoning") or ""
                         if inhalt.strip():
+                            dauer = time.time() - t0
                             _LETZTER.anbieter = anb["name"]
-                            _LETZTER.modell = modell
+                            # ⚠ OHNE ROUTING-ENDUNG festhalten. `analyze_docs` schreibt
+                            # diesen Namen in jeden Datensatz, und `llm_qualitaet.py`
+                            # gruppiert danach. Stuende hier „…flash:floor", zerfiele die
+                            # Historie desselben Modells in zwei Reihen — und der
+                            # Vorher-Nachher-Vergleich, um den es beim Boden gerade geht,
+                            # waere genau dadurch unmoeglich.
+                            _LETZTER.modell = kostenbuch.grundmodell(modell)
+                            _LETZTER.endpunkt = str(daten.get("provider") or "")
+                            _u = daten.get("usage") or {}
+                            _LETZTER.kosten_usd = _u.get("cost") if isinstance(_u, dict) else None
+                            _LETZTER.sekunden = dauer
+                            _buchen(anb["name"], modell, daten, dauer)
                             return inhalt
                         last_err = f"leere Antwort ({anb['name']})"
                         continue
