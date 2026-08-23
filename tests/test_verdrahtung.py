@@ -88,10 +88,18 @@ def test_paritaet_schweigt_bei_begruendeter_luecke(tmp_path):
     assert pv.sonde_paritaet(wurzel=w) == []
 
 
-def test_paritaet_meldet_bekannte_luecken_nicht_als_fehler(tmp_path):
+def test_paritaet_meldet_bekannte_luecken_nicht_als_fehler(tmp_path, monkeypatch):
     """`OFFEN` ist eine Arbeitsliste, kein Fehlschlag — sonst waere die Suite
-    dauerhaft rot und niemand schaut mehr hin."""
-    w = _gold(tmp_path, {"DE": {"lead_export": 0, "lead_criteria": 0},
+    dauerhaft rot und niemand schaut mehr hin.
+
+    Der Eintrag wird hier GESETZT statt aus der echten Liste geliehen: sobald
+    jemand die geliehene Zeile streicht (weil er die Tabelle verdrahtet hat),
+    faellt sonst dieser Test — und zwar mit einer Meldung, die vom Falschen
+    handelt. Genau das ist beim Leeren der Liste am 2026-08-23 passiert.
+    """
+    monkeypatch.setitem(pv.OFFEN_NUR_DE, "beispiel_luecke",
+                        "nur fuer den Test gesetzt, steht fuer eine bekannte Baustelle")
+    w = _gold(tmp_path, {"DE": {"lead_export": 0, "beispiel_luecke": 0},
                          "AT": {"lead_export": 0}, "CH": {"lead_export": 0}})
     assert pv.sonde_paritaet(wurzel=w) == []
 

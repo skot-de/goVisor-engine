@@ -4158,6 +4158,14 @@ def build_buyer_recent_awards(cfg: Config, country: str = "DE"):
 def build_region_kpi(cfg: Config, country: str = "DE"):
     """**Regions-KPI je NUTS-3**: unsere Nachfrage × Destatis-Regionalkontext.
 
+    ⚠ AT/CH: nur die NACHFRAGE-Seite traegt Inhalt. Der Kontext kommt aus Destatis und
+    endet an der deutschen Grenze — gemessen 2026-08-23 stehen 39 von 40 AT-Regionen und
+    23 von 23 CH-Regionen ohne Investitionen, Baubetriebe, Bevoelkerung da. (Die eine
+    gefuellte AT-Zeile ist KEIN Fehljoin, sondern eine oesterreichische Vergabe mit
+    Leistungsort Heidelberg.) Die Spalten bleiben NULL statt 0 — dieselbe Regel wie bei
+    den 86 deutschen Regionen ohne Destatis-Zuordnung weiter unten. Wer AT/CH-Kontext
+    will, braucht Statistik Austria bzw. das BFS als eigene Quelle.
+
     Führt erstmals Angebot und Nachfrage zusammen. Nachfrage aus ``leads`` (vergeben +
     offen), Kontext aus ``kreis_finanzen`` (Investitionen) und ``kreis_kontext``
     (A Baubetriebe/Umsatz, B Baugenehmigungen, C Schulden, D Bevölkerung/Beschäftigte).

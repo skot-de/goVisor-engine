@@ -53,7 +53,7 @@ con = _db.connect()
 G = "data/gold/DE"
 
 
-def _union(table, key=None):
+def _union(table, key=None, mit_land=False):
     """DE-Gold + jede weitere ``gold/<CC>/<table>.parquet`` (CH, AT, künftige) per union_by_name —
     jede Quelle füllt nur ihre Spalten, fehlende werden NULL (DACH-Mehrquellen ohne Schema-Zwang).
     Unterschieden über die country-Spalte (→ land). DE zuerst (Basis-Schema).
@@ -69,6 +69,13 @@ def _union(table, key=None):
     files = [f"{G}/{table}.parquet"] + others
     lst = ", ".join(f"'{f}'" for f in files)
     roh = f"read_parquet([{lst}], union_by_name=true, filename=true)"
+    if mit_land:
+        # Fuer Tabellen OHNE `country`-Spalte. `market_opportunity` ist nach `cpv4`
+        # verschluesselt, `cpv_adjacency` nach Codepaar — beide sagen nichts darueber,
+        # aus welchem Markt die Zahl stammt. Ohne diese Ableitung wuerde ein Verbraucher,
+        # der nach dem Fachschluessel greift, still den letzten Treffer bekommen.
+        return (f"(SELECT * EXCLUDE(filename), "
+                f"regexp_extract(filename, 'gold/([A-Z]{{2}})/', 1) AS land FROM {roh})")
     if not key:
         return roh
     return (f"(SELECT * EXCLUDE(filename) FROM {roh} "
@@ -105,18 +112,34 @@ DN = f"read_parquet('{G}/dim_nuts.parquet')"   # NUTS-Code → Klartextname
 _LT = [str(x) for x in pathlib.Path("data/gold").glob("*/lead_text.parquet")]
 LT = (f"read_parquet([{', '.join(repr(x) for x in sorted(_LT))}], union_by_name=true)"
       if _LT else None)
-BS = f"read_parquet('{G}/buyer_stats.parquet')"
+# ⚠ Ueber ALLE Laender. Bis 2026-08-23 stand hier der reine DE-Pfad — kein einziger
+# oesterreichischer oder schweizerischer Kaeufer bekam ein Profil, und der Renderer zeigte
+# stattdessen „zu wenig Daten": eine Aussage ueber die Vergabestelle, wo in Wahrheit nur
+# die Datei fehlte. Jetzt AT 4.341 + CH 5.656 Kaeufer zusaetzlich.
+#
+# Bekannte Grenze, gemessen: der Profil-Nachschlag geht ueber den NAMEN, nicht ueber die
+# Kennung. 22 Kaeufernamen kommen in mehr als einem Land vor („Gemeinde Bergheim" gibt es
+# in DE und AT, „Stadtbauamt" und „Einkauf" sind ohnehin keine Namen) und treffen 463 von
+# 117.241 Leads. Dort gewinnt DE. Das ist der bessere Zustand als vorher — vorher bekamen
+# ALLE 27.000 AT/CH-Kaeufer gar nichts — aber es ist keine saubere Aufloesung; die braeuchte
+# einen Schluessel aus (Name, Land) durch die ganze Profilkette.
+BS = _union("buyer_stats")
 # Die letzten Vergaben je Kaeufer. Seit Langem gebaut (38.320 Zeilen), von niemandem
 # gelesen — der Vergabestellen-Block zeigte nur Aggregate. „Wer hat dort zuletzt
 # was gewonnen" ist die Frage, die ein Bieter wirklich stellt.
-BRA = f"read_parquet('{G}/buyer_recent_awards.parquet')"
+BRA = _union("buyer_recent_awards")
 # Profil der UNTERSCHWELLIGEN Vergabestellen (DÖE). `buyer_stats` kennt nur, was ueber
 # TED lief — gemessen am 2026-08-18 haben 425 Kaeufer mit OFFENEN Ausschreibungen
 # deshalb gar kein Profil, obwohl hier eines liegt. Sie sahen „zu wenig Daten".
 DBP = f"read_parquet('{G}/doe_buyer_profile.parquet')"
 ATTR = "read_parquet('data/silver/DE/attributes/*/*.parquet', hive_partitioning=1)"
-MO = f"read_parquet('{G}/market_opportunity.parquet')"
-CS = f"read_parquet('{G}/contractor_stats.parquet')"
+# ⚠ Ueber ALLE Laender, und der Schluessel traegt das Land mit. `market_opportunity` ist
+# nach `cpv4` verschluesselt, nicht nach Land — ein reines union_by_name wuerde die
+# deutschen Marktzahlen still durch die schweizerischen ersetzen, weil im Woerterbuch
+# der letzte Treffer gewinnt. Bis 2026-08-23 wurde ausschliesslich DE gelesen: ein
+# oesterreichischer Bieter sah im Markt-Tab deutsche Segmentzahlen, ausgegeben als seine.
+MO = _union("market_opportunity", mit_land=True)
+CS = _union("contractor_stats")
 # ⚠ Ebenfalls über alle Länder: AT trägt 70.031 Identitäten, CH 33.443. Nur DE zu lesen
 # heisst, dass ein österreichischer Amtsinhaber keinen Namen bekommt — dieselbe Sorte
 # DE-Rest wie bei `lead_lot`.
@@ -183,8 +206,12 @@ LG = _union("lead_geo", key="lead_id")                              # Koordinate
 PLZ = f"read_parquet('{G}/dim_plz.parquet')"        # PLZ→Zentroid für die PLZ-Umkreissuche
 # Vorgänger-Link: offene Leads (ohne eigenen Zuschlag) erben Incumbent/Bieterzahl/Kette vom
 # jüngsten passenden Vorgänger-Zuschlag. Guard: fehlt die Tabelle, leerer Stub (kein Join-Fehler).
-_LP_PATH = f"{G}/lead_predecessor.parquet"
-LP = (f"read_parquet('{_LP_PATH}')" if pathlib.Path(_LP_PATH).exists() else
+# Seit 2026-08-23 gibt es die Tabelle auch fuer AT (531) und CH (572) — deshalb ueber
+# `_union` und mit `key`, weil der Join gegen `lead_id` genau EINE Zeile erwartet.
+# Der Waechter fragt nach IRGENDEINEM Land, nicht nach DE: faellt der deutsche Bau aus,
+# waeren sonst auch die vorhandenen AT/CH-Vorgaenger abgeschaltet.
+_LP_DA = any(pathlib.Path("data/gold").glob("*/lead_predecessor.parquet"))
+LP = (_union("lead_predecessor", key="lead_id") if _LP_DA else
       "(SELECT NULL::VARCHAR lead_id, NULL::VARCHAR incumbent_name, NULL::BIGINT n_bidders, "
       "NULL::VARCHAR competition_level, NULL::BIGINT chain_depth, NULL::BIGINT incumbent_since_year "
       "WHERE false)")
@@ -227,11 +254,11 @@ def segments():
     global _seg
     if _seg is None:
         _seg = {}
-        for r in con.execute(f"""SELECT cpv4, segment_label, n_awards, erfolglos_pct,
+        for r in con.execute(f"""SELECT land, cpv4, segment_label, n_awards, erfolglos_pct,
                 single_bidder_pct, struktur, top3_share, chronic_needs, opportunity_score,
                 top_dominators, window_start, window_end FROM {MO}""").fetchall():
-            (cpv4, label, na, erf, sb, struk, t3, chron, score, dom, ws, we) = r
-            _seg[cpv4] = {
+            (land, cpv4, label, na, erf, sb, struk, t3, chron, score, dom, ws, we) = r
+            _seg[(land, cpv4)] = {
                 "cpv4": cpv4, "label": label, "nAwards": int(na or 0),
                 "erfolglos": round(erf) if erf is not None else None,
                 "singleBidder": round(sb) if sb is not None else None,
@@ -1006,7 +1033,10 @@ def export_branche(key):
     # Listen-Ladung schlank genug, um viele Tausend Leads client-seitig zu filtern/sortieren.
     seg = segments()
     for l in leads:
-        l["marktSegment"] = seg.get((l.get("cpv") or "")[:4])
+        # Segment des EIGENEN Landes. Kein Rueckfall auf DE: „in Deutschland ist dieses
+        # Segment schwach" ist fuer eine Schweizer Vergabe keine Aussage, sondern eine
+        # Verwechslung — und sie waere im Markt-Tab nicht als solche zu erkennen.
+        l["marktSegment"] = seg.get((l.get("land") or "DE", (l.get("cpv") or "")[:4]))
     # Sprachfassungen nachladen: die Liste bekommt nur die Sprach-CODES (kompakt, fuer
     # einen Umschalter), die Texte selbst wandern ins Detail — sonst blaeht sich die
     # Listen-Payload um ein Vielfaches auf (563 Leads fuehren 24 Sprachen).

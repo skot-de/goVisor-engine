@@ -44,10 +44,16 @@ KETTE: list[tuple[str, str]] = [
     ("build_entities",             "Entitäten + party_entity — Basis für alles Käufer-/Gewinner-bezogene"),
     ("build_entity_groups",        "leere Tabelle, wenn keine kuratierte CSV — Nachfolger brauchen die DATEI"),
     ("build_dim_cpv",              "CPV-Divisionen"),
+    # Das CPV-Vokabular ist EU-Recht und gilt in jedem Mitgliedstaat gleich — es war nie
+    # eine DE-Sache, sondern nur fuer AT/CH nie gebaut worden.
+    ("build_dim_cpv_label",        "CPV-Klartext (9.454 Codes, EU-weit gueltig)"),
     ("build_dim_deflator",         "Realwert-Faktor (AT/CH: DE-Näherung, in cpi_source gekennzeichnet)"),
     ("build_dim_plz",              "PLZ→Koordinate aus GeoNames"),
     ("build_dim_nuts",             "Regionen-Katalog"),
     ("build_quality",              "Qualitäts-Flags"),
+    # Ohne sie bleiben harte AT/CH-Datenfehler unsichtbar: `quality` markiert sie, aber
+    # niemand bekommt eine Worklist zu sehen.
+    ("build_review_queue",         "Worklist harter Datenfehler"),
     ("build_procedures",           "Verfahrens-Klammer"),
     ("build_contract_chains",      "Ketten (Alt-Modell, von displaceability gebraucht)"),
     ("build_contract_successions", "Nachfolge-Kanten (PLURAL-Datei!) für displaceability"),
@@ -63,13 +69,22 @@ KETTE: list[tuple[str, str]] = [
     ("build_displaceability",      "Verdrängbarkeit → displ_band in lead_export"),
     ("build_lead_deadline",        "Angebotsfrist"),
     ("build_value_band_effektiv",  "Gebühren-Band"),
+    # ── Markt-Ebene. Reihenfolge wie im DE-Lauf (cli.py): Kennzahlen → chronische
+    # Fehl-Bedarfe → Chancen-Landkarte (liest beide) → CPV-Naehe.
+    ("build_market_intelligence",  "Käufer-/Auftragnehmer-/Markt-Kennzahlen (4 Tabellen)"),
+    ("build_retender_signal",      "chronisch erfolglose Bedarfe"),
+    ("build_market_opportunity",   "Chancen-Landkarte je CPV-Segment"),
+    ("build_cpv_adjacency",        "CPV-Nähe aus Firmen-Co-Occurrence"),
+    # Beide brauchen `award_tender_link` (steht oben) UND die Leads (stehen darueber).
+    ("build_lead_predecessor",     "offener Lead → Vorgänger-Zuschlag (Incumbent)"),
+    ("build_value_anchor",         "Wert-Anker je Zuschlag (Billing-Plausibilität)"),
     ("build_lead_geo",             "Koordinate je Lead (braucht dim_plz)"),
     ("build_lead_cpv",             "Mehr-CPV je Lead"),
     # VOR `build_lead_detail`/`build_lead_export`: beide lesen die Lose. Bis 2026-08-23
     # fehlte der Schritt hier ganz — `lead_lot.parquet` fuer AT und CH stand seit dem
     # 13.08. still, waehrend der Export ihn taeglich las. Derselbe Fehler wie bei
     # `build_lead_text`, nur zehn Tage aelter. Gefunden hat ihn die Frischepruefung
-    # (`scripts/pruefe_frische.py`), nicht ein Test.
+    # (`scripts/pruefe_verdrahtung.py`), nicht ein Test.
     ("build_lead_lot",             "Lose je Lead — der Inhalts-Layer"),
     ("build_lead_detail",          "UI-View je Lead"),
     ("build_lead_export",          "was das Frontend liest — MUSS zuletzt"),
@@ -79,6 +94,12 @@ KETTE: list[tuple[str, str]] = [
     # taeglich neu gebaut wurde. Aufgefallen ist es erst, als simap seine
     # Sprachfassungen lieferte und im Frontend trotzdem nichts ankam.
     ("build_lead_text",            "Sprachfassungen je Lead (Sprachwahl im Detail)"),
+    # ── Lead-Inhalt. Alle drei joinen gegen `lead_export`, muessen also dahinter.
+    ("build_lead_criteria",        "Zuschlagskriterien je Lead (Preis vs. Konzept)"),
+    ("build_lead_requirement",     "Eignungsanforderungen je Lead (darf ich bieten?)"),
+    ("build_lead_party",           "Beteiligte je Lead (Kontakt der Vergabestelle)"),
+    ("build_buyer_recent_awards",  "letzte Zuschläge je Käufer (Vergabestelle-Tab)"),
+    ("build_region_kpi",           "Regions-Kennzahlen je NUTS-3"),
 ]
 
 

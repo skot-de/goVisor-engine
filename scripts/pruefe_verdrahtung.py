@@ -98,33 +98,18 @@ BEWUSST_NUR_DE: dict[str, str] = {
     "lead_region_fill": "Bundesland-Auffuellung, deutsche NUTS-Systematik",
 }
 
-# OFFEN: bekannte Luecke. Diese Tabellen HABEN einen country-faehigen Builder, er wird
-# im DACH-Lauf nur nicht aufgerufen. Gemessen 2026-08-23 an Probelaeufen — sie liefern
-# fuer AT/CH echte Zeilen, laufen also nicht ins Leere:
-#     lead_criteria     CH 13.654 · AT 22.471
-#     lead_requirement  CH    595 · AT  2.748
-#     value_anchor      CH 51.919 · AT 228.920
-#     lead_party        CH 16.459 · AT  38.681
-# Sie stehen hier und nicht in BEWUSST_NUR_DE, damit sie sichtbar bleiben. Wer eine
-# davon verdrahtet, streicht die Zeile — und der Test verlangt das auch.
-OFFEN_NUR_DE: dict[str, str] = {
-    "lead_criteria": "Zuschlagskriterien je Lead — Builder ist country-faehig",
-    "lead_requirement": "Eignungsanforderungen je Lead — Builder ist country-faehig",
-    "lead_party": "Beteiligte je Lead — Builder ist country-faehig",
-    "lead_predecessor": "Vorgaenger-Verknuepfung — Builder ist country-faehig",
-    "value_anchor": "Wert-Anker fuer die Schaetzung — Builder ist country-faehig",
-    "buyer_stats": "Kaeufer-Kennzahlen aus build_market_intelligence",
-    "contractor_stats": "Auftragnehmer-Kennzahlen aus build_market_intelligence",
-    "buyer_contractor_history": "Kaeufer-Auftragnehmer-Historie aus build_market_intelligence",
-    "market_stats": "Marktkennzahlen aus build_market_intelligence",
-    "market_opportunity": "Marktchancen-Landkarte je CPV — ohne sie hat der Radar in AT/CH keine Segmente",
-    "buyer_recent_awards": "letzte Zuschlaege je Kaeufer, speist den Vergabestelle-Tab",
-    "cpv_adjacency": "CPV-Nachbarschaft aus Firmen-Co-Occurrence, die Naehe-Achse des Radars",
-    "dim_cpv_label": "CPV-Klartext; das Vokabular ist EU-weit gueltig, nur nie fuer AT/CH gebaut",
-    "region_kpi": "regionale Kennzahlen je NUTS — Grundlage der Regionsansicht",
-    "retender_signal": "chronisch erfolglose Bedarfe, der staerkste Chancen-Hinweis ueberhaupt",
-    "review_queue": "Worklist harter Datenfehler; ohne sie bleiben AT/CH-Defekte unsichtbar",
-}
+# OFFEN: bekannte Luecke — eine Tabelle, die es nur in DE gibt, obwohl sie es nicht
+# muesste. Sie steht hier statt in BEWUSST_NUR_DE, damit sie sichtbar bleibt; wer eine
+# davon verdrahtet, streicht die Zeile, und `test_kein_offen_eintrag_ist_laengst_erledigt`
+# verlangt das auch.
+#
+# Am 2026-08-23 standen hier 16 Eintraege. Alle sind erledigt: die Builder waren durchweg
+# country-faehig und wurden im DACH-Lauf nur nicht aufgerufen. Verdrahtet, gemessen:
+#     lead_criteria    AT 22.471 / CH 13.656      value_anchor  AT 228.920 / CH 51.919
+#     lead_party       AT 38.681 / CH 16.462      buyer_stats   AT  4.341 / CH  5.656
+#     lead_requirement AT  2.748 / CH    595      market_opp.   AT    317 / CH    125
+# Die Liste ist leer und bleibt stehen, weil der naechste Fund dieselbe Form haben wird.
+OFFEN_NUR_DE: dict[str, str] = {}
 
 
 def _dateien(wurzel: pathlib.Path) -> dict[str, list[pathlib.Path]]:
