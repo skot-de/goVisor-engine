@@ -14,6 +14,7 @@ Key: $OPENROUTER_KEY_FILE (default .secrets/openrouter.key). Aufruf:
   python3 scripts/analyze_docs.py            # alle Vorgänge ohne Analyse
   LIMIT=3 python3 scripts/analyze_docs.py    # nur 3 (Test)
 """
+import datetime as _dt
 import json
 import os
 import re
@@ -29,6 +30,8 @@ import duckdb
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 from govisor.llm import (chat, letzter_anbieter, anbieter_stand,  # noqa: E402
+                         kontext as llm_kontext, mit_boden as llm_mit_boden,
+                         DEFAULT_MODEL as llm_default_model,
                          AllKeysExhausted)
 from govisor.llm import BudgetErschoepft, kontostand as _llm_kontostand  # noqa: E402
 from govisor import doctypes, docextract, docparse, doctax, docpipe  # noqa: E402
@@ -37,7 +40,48 @@ from govisor.docpipe import SQL_BRAUCHBAR  # noqa: E402
 
 SRC = ROOT / "data" / "docs" / "DE" / "doc_text.parquet"
 OUT = ROOT / "web" / "data" / "doc-analysis.json"
-MODEL = os.environ.get("OR_MODEL", "google/gemini-2.5-flash")
+# ⚠ NICHT den Modellnamen hier noch einmal fest eintragen. Genau das stand hier und war
+# der Grund, warum der Anbieterboden die Produktion nicht erreicht haette: `llm.DEFAULT_MODEL`
+# trug ihn, dieses Modul ueberschrieb ihn mit seiner eigenen Kopie. `mit_boden` haengt die
+# guenstigste Route an das an, was tatsaechlich gilt — auch an ein von aussen gesetztes Modell.
+def _entschiedene_wahl(hoechstens_tage: int = 7) -> str | None:
+    """Das Modell, das `scripts/modellwaechter.py` zuletzt gewaehlt hat — oder None.
+
+    Die Wahl faellt nur unter **freigegebenen** Modellen, also solchen, die den gepaarten
+    Versuch am eigenen Korpus bestanden haben (`govisor/pruefstand.py`). Ein billiges
+    Modell aus dem Katalog landet hier nie ungeprueft.
+
+    ⚠ **Veraltetes wird ignoriert.** Steht die Datei laenger als eine Woche, ist der
+    Waechter offenbar nicht mehr gelaufen; dann gilt wieder die Vorgabe. Eine alte
+    Entscheidung stillschweigend weiterzufahren waere die schlechtere Sorte Automatik.
+    """
+    p = ROOT / "data" / "modellwahl.json"
+    try:
+        d = json.loads(p.read_text(encoding="utf-8"))
+        tag = _dt.date.fromisoformat(d["stand"])
+        if (_dt.date.today() - tag).days > hoechstens_tage:
+            print(f"⚠ Modellwahl vom {d['stand']} ist älter als {hoechstens_tage} Tage — "
+                  f"es gilt die Vorgabe. Läuft `scripts/modellwaechter.py` noch?",
+                  file=sys.stderr)
+            return None
+        return d.get("modell") or None
+    except Exception:                                    # noqa: BLE001
+        return None                                      # keine Wahl getroffen — Vorgabe
+
+
+# Rangfolge, absichtlich in dieser Reihenfolge:
+#   1. OR_MODEL_FEST — ausdruecklicher Zwang, schlaegt alles (Messungen, Fehlersuche)
+#   2. die entschiedene Wahl — vom Waechter, nur aus freigegebenen Modellen
+#   3. OR_MODEL — die Vorgabe der Aufrufer
+#
+# ⚠ Punkt 2 schlaegt Punkt 3 mit Absicht. `scripts/analyse_arbeiter.sh` setzt
+# `OR_MODEL="${OR_MODEL:-google/gemini-2.5-flash}"` fest ein; das ist eine Vorgabe aus dem
+# August, keine Entscheidung fuer heute. Stuende OR_MODEL vorn, koennte die Automatik nie
+# greifen — dieselbe Falle wie beim Anbieterboden. Wer wirklich zwingen will, nimmt
+# OR_MODEL_FEST, und im Lauf steht dann, welches Modell warum gilt.
+_WAHL = _entschiedene_wahl()
+MODEL = llm_mit_boden(os.environ.get("OR_MODEL_FEST") or _WAHL
+                      or os.environ.get("OR_MODEL") or llm_default_model)
 LIMIT = int(os.environ.get("LIMIT", "0"))
 # PARALLELITAET. Der Lauf ist zu ueber 90 % Warten auf die Antwort des Modells; nacheinander
 # gerechnet schafft er rund 200 Vorgaenge am Tag, und bei 4.394 Vorgaengen mit Volltext waeren
@@ -549,14 +593,23 @@ def main() -> int:
     def arbeite(auftrag):
         nid, files = auftrag
         structured = structured_for_notice(nid)            # Parser-Schiene (§6.2) über die Roh-ZIPs
-        res = analyze_notice(files, structured=structured, notice_id=nid,
-                             dubletten=_dubletten, fertig=out, vorlauf=_vorlauf)
+        # WOFÜR das Geld ausgegeben wird — je Faden, fürs Kostenbuch. Ohne diesen Rahmen
+        # steht dort der Preis, aber nicht der Anlass; Produktion und Versuch wären im
+        # selben Topf, und genau diese Vermischung kostete am 2026-08-23 einen Arbeitstag.
+        with llm_kontext(zweck="analyse", vorgang=nid):
+            res = analyze_notice(files, structured=structured, notice_id=nid,
+                                 dubletten=_dubletten, fertig=out, vorlauf=_vorlauf)
         # WER HAT ES ERZEUGT. Seit dem 2026-08-18 gibt es drei Anbieter mit verschiedenen
         # Modellen; welches gerade dran ist, entscheidet das Guthaben. Ohne diese Angabe
         # stuenden im Bestand Ergebnisse nebeneinander, deren Unterschiede niemand mehr
         # erklaeren kann — und die Verwerfungsquote unterscheidet sich messbar je Modell.
         anbieter, modell = letzter_anbieter()
         res["provider"], res["model"] = anbieter, modell
+        # WANN. Ohne Datum lässt sich keine Zeitreihe bilden, und ohne Zeitreihe verschwindet
+        # eine Verschlechterung, die vor drei Wochen begann, im Gesamtdurchschnitt. Modelle
+        # werden auch schlechter, ohne dass es jemand ankündigt: Anbieter wechseln
+        # Quantisierung, Endpunkte ändern sich. Ein Mittelwert über alles zeigt das nie.
+        res["analysiert_am"] = _dt.datetime.now(_dt.timezone.utc).date().isoformat()
         return nid, res
 
     def sichern():

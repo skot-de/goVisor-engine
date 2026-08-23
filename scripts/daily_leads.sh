@@ -286,6 +286,31 @@ _SCHRITT_NAME=""
 # Schrittgrenzen regelmaessig — ein zweiter Waechterprozess waere Mechanik ohne Mehrwert.
 GRENZE_GESAMT=${GOVISOR_GRENZE_GESAMT:-28800}   # 8 h
 
+# ══ MODELLMARKT: TAEGLICH SCHAUEN, VOR DEM LAUF ══════════════════════════════════════
+#
+# Sven, 2026-08-23: „am besten machst du die abfrage bevor wir unseren lauf starten, dann
+# passt sich im idealfall der anbieter und/oder das modell automatisch an" — und: „nicht
+# einmal im monat checken, sondern jeden tag. die preise sind variable."
+#
+# Zwei Schritte, bewusst getrennt nach dem, was sie kosten:
+#
+#   --pruefen   EIN HTTP-Aufruf, keine Token, kein Guthaben. Holt den Katalog (422 Modelle),
+#               legt den Tagesstand ab, vergleicht mit gestern, reiht lohnende Kandidaten
+#               in den Pruefstand ein und frischt die Modellwahl auf.
+#   pruefung    Gibt Geld aus — aber aus einem EIGENEN Topf (GOVISOR_TEST_USD, Vorgabe
+#               0,50 $/Tag) und hoechstens fuer zwei Kandidaten. Wer besteht, wird
+#               freigegeben; die naechste Analyserunde nimmt ihn dann von selbst.
+#
+# ⚠ Beide duerfen den Lauf NIE aufhalten. Faellt der Katalog aus, bleibt es beim zuletzt
+# gewaehlten Modell — ein Waechter, der die Produktion blockiert, ist teurer als jedes
+# Modell, das er einsparen koennte.
+echo ""
+echo "── Modellmarkt"
+$PY scripts/modellwaechter.py --pruefen \
+  || echo "  ⚠ Modellkatalog nicht erreichbar — es bleibt bei der zuletzt getroffenen Wahl."
+$PY scripts/modellpruefung.py \
+  || echo "  ⚠ Modellpruefung uebersprungen — die Warteschlange bleibt stehen."
+
 # ══ RESERVE FUER DIE AUSWERTUNG ══════════════════════════════════════════════════════
 # Wie viel Zeit muss am Ende uebrig bleiben, damit Entpacken, Signale, Leistungs-
 # verzeichnisse, Marktpuls, Frontend-Export, Supabase, gap_effects und der Ertragsbericht
