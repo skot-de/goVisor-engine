@@ -4105,3 +4105,67 @@ def test_strategie_ansichten_fragen_ihr_land_ab():
         code = "\n".join(z for z in quelle.splitlines() if not z.lstrip().startswith("//"))
         assert "nutzerLand()" in code, f"{datei} fragt das Land nicht ab"
         assert "land=" in code, f"{datei} reicht das Land nicht an die Route"
+
+
+# ── Regions-Ebene je Land ───────────────────────────────────────────────────
+# „Bundesland" sitzt nicht ueberall auf derselben NUTS-Stelle. Der feste Schnitt
+# auf drei Zeichen war eine deutsche Annahme: alle 3.856 Schweizer Leads mit
+# Region trugen dieselbe Angabe „Schweiz/Suisse/Svizzera".
+
+def test_regions_ebene_stimmt_zwischen_gold_und_ableitung_ueberein():
+    """Zwei Tabellen, dieselbe Aussage — laufen sie auseinander, leitet das Skript
+    eine Ebene ab, die der Export nicht liest."""
+    from govisor import gold
+    import importlib.util
+    wurzel = pathlib.Path(__file__).resolve().parent.parent
+    spec = importlib.util.spec_from_file_location(
+        "region_ableiten", wurzel / "scripts" / "region_ableiten.py")
+    ra = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(ra)
+    assert gold._REGION_STELLEN == ra.REGION_STELLEN
+    assert gold._REGION_STELLEN["AT"] == 4 and gold._REGION_STELLEN["CH"] == 5
+
+
+def test_at_ch_regionen_sind_nicht_die_grobe_ebene():
+    """AT1 heisst „Ostoesterreich" (drei Bundeslaender), CH0 die ganze Schweiz."""
+    GROB = {"Ostösterreich", "Südösterreich", "Westösterreich", "Schweiz/Suisse/Svizzera"}
+    wurzel = pathlib.Path(__file__).resolve().parent.parent
+    treffer = grob = 0
+    for datei in (wurzel / "web" / "data").glob("leads-*.json"):
+        for l in json.loads(datei.read_text(encoding="utf-8")):
+            if l.get("land") not in ("AT", "CH") or not l.get("region"):
+                continue
+            treffer += 1
+            grob += l["region"] in GROB
+    if not treffer:
+        pytest.skip("keine AT/CH-Leads exportiert")
+    # Ein RESTBESTAND ist richtig: 4 oesterreichische Leads tragen in der Quelle nur eine
+    # dreistellige NUTS-Kennung, dort IST „Westoesterreich" die feinste wahre Aussage.
+    # Geprueft wird deshalb der Anteil — vor der Korrektur lag er bei 100 %.
+    assert grob / treffer < 0.01, (
+        f"{grob} von {treffer} AT/CH-Leads tragen die grobe Regionsebene "
+        f"({grob/treffer:.0%}) — sitzt der NUTS-Schnitt wieder auf drei Stellen?")
+
+
+def test_keine_orte_kennt_die_oesterreichische_falle():
+    """„stadt" ist in AT ein Ortsname und stand allein fuer 46 von 80 Widerspruechen."""
+    import importlib.util
+    wurzel = pathlib.Path(__file__).resolve().parent.parent
+    spec = importlib.util.spec_from_file_location(
+        "region_ableiten", wurzel / "scripts" / "region_ableiten.py")
+    ra = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(ra)
+    for wort in ("stadt", "kammer", "magistrat", "landesregierung"):
+        assert wort in ra._KEINE_ORTE
+
+
+def test_export_liest_attribute_und_regionsfuellung_ueber_alle_laender():
+    """Zwei DE-feste Pfade mitten in einem sonst laenderfaehigen Export: der
+    Angebotsaufwand lag fuer AT/CH bei genau 0 %, und die Regionsableitung waere
+    selbst nach ihrer Reparatur nicht gelesen worden."""
+    wurzel = pathlib.Path(__file__).resolve().parent.parent
+    roh = (wurzel / "scripts" / "export_web_leads.py").read_text(encoding="utf-8")
+    code = "\n".join(z for z in roh.splitlines() if not z.strip().startswith("#"))
+    assert "data/silver/DE/attributes" not in code, "ATTR haengt wieder am DE-Pfad"
+    assert '_silber_union("attributes")' in code
+    assert "{G}/lead_region_fill.parquet" not in code, "REGION_FILL haengt wieder am DE-Pfad"

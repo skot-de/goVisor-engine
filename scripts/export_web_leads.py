@@ -83,6 +83,23 @@ def _union(table, key=None, mit_land=False):
             f"ORDER BY (filename LIKE '%/DE/%') DESC, filename) = 1)")
 
 
+def _silber_union(tabelle: str) -> str:
+    """Silber-Tabelle ueber alle Laender, die sie fuehren.
+
+    Getrennt von `_union`: Gold hat EINE Datei je Land, Silber einen Baum aus
+    Jahrespartitionen. Laender ohne die Tabelle fallen raus statt durch — ein Glob
+    ins Leere ist in DuckDB ein Laufzeitfehler, kein leeres Ergebnis.
+    """
+    muster = [f"data/silver/{p.parent.name}/{tabelle}/*/*.parquet"
+              for p in sorted(pathlib.Path("data/silver").glob(f"*/{tabelle}"))
+              if list(p.glob("*/*.parquet"))]
+    if not muster:
+        return ("(SELECT NULL::VARCHAR AS notice_id, NULL::VARCHAR AS path, "
+                "NULL::VARCHAR AS value WHERE false)")
+    lst = ", ".join(f"'{m}'" for m in muster)
+    return f"read_parquet([{lst}], hive_partitioning=1, union_by_name=true)"
+
+
 E = _union("lead_export", key="lead_id")
 
 # ── ABGELEITETE BUNDESLÄNDER ─────────────────────────────────────────────────────────────
@@ -93,8 +110,12 @@ E = _union("lead_export", key="lead_id")
 #
 # Die Ableitung steht in einer EIGENEN Datei, nicht in `lead_export`: sie ist eine Aussage
 # über die Daten, keine Quelle. Fehlt die Datei, verhält sich der Export wie vorher.
-_FILL = pathlib.Path(f"{G}/lead_region_fill.parquet")
-REGION_FILL = (f"read_parquet('{_FILL.as_posix()}')" if _FILL.exists() else
+# ⚠ Ueber ALLE Laender, und der Waechter fragt nach IRGENDEINEM. Bis 2026-08-23 stand hier
+# der reine DE-Pfad: `region_ableiten.py` lief nur fuer Deutschland, und selbst nachdem es
+# oesterreichische Ableitungen gab, haette der Export sie nicht gelesen. Zwei Schichten
+# derselben Annahme, und die zweite haette die Reparatur der ersten lautlos verschluckt.
+_FILL_DA = any(pathlib.Path("data/gold").glob("*/lead_region_fill.parquet"))
+REGION_FILL = (_union("lead_region_fill", key="lead_id") if _FILL_DA else
                "(SELECT NULL::VARCHAR AS lead_id, NULL::VARCHAR AS buyer_nuts1_abgeleitet, "
                "NULL::VARCHAR AS quelle WHERE false)")
 CL = f"read_parquet('{G}/dim_cpv_label.parquet')"
@@ -105,7 +126,10 @@ DC = f"read_parquet('{G}/dim_cpv.parquet')"
 # nie: „Lose" stand für DE bei 79 %, für AT und CH bei 0 %. Ein `{G}` mitten in einer sonst
 # länderübergreifenden Datei ist genau die Sorte Rest, die der EU-weit-Grundsatz meint.
 LOTS = _union("lead_lot")
-DN = f"read_parquet('{G}/dim_nuts.parquet')"   # NUTS-Code → Klartextname
+# ⚠ Ueber ALLE Laender: die abgeleitete Region wird hier in Klartext aufgeloest, und die
+# oesterreichischen bzw. schweizerischen Namen stehen nur in deren eigenem `dim_nuts`
+# (DE 462 Eintraege, AT 48, CH 35 — ohne Ueberschneidung).
+DN = _union("dim_nuts")                        # NUTS-Code → Klartextname
 # Sprachfassungen je Lead. Ohne sie kann die Oberflaeche keine Dokumentsprache
 # anbieten, obwohl die Texte im Silber liegen. Guard: fehlt die Tabelle (Gold aelter
 # als der Builder), bleibt es beim einsprachigen Verhalten statt eines Laufzeitfehlers.
@@ -132,7 +156,16 @@ BRA = _union("buyer_recent_awards")
 # TED lief — gemessen am 2026-08-18 haben 425 Kaeufer mit OFFENEN Ausschreibungen
 # deshalb gar kein Profil, obwohl hier eines liegt. Sie sahen „zu wenig Daten".
 DBP = f"read_parquet('{G}/doe_buyer_profile.parquet')"
-ATTR = "read_parquet('data/silver/DE/attributes/*/*.parquet', hive_partitioning=1)"
+# ⚠ Ueber ALLE Laender. Bis 2026-08-23 stand hier fest `data/silver/DE` — mitten in einem
+# Export, der seine Gold-Tabellen laengst per `_union` liest. Folge: der Angebotsaufwand
+# (Bietungsbuergschaft, Bindefrist) lag fuer DE bei 30 % und fuer AT und CH bei GENAU 0 %,
+# obwohl 272 oesterreichische und 124 schweizerische Attribut-Dateien danebenliegen. Wie
+# immer bei dieser Fehlerklasse fiel es nicht auf, weil ein leeres Feld aussieht wie eine
+# Quelle, die nichts hergibt.
+#
+# Kein `_union`, weil das die GOLD-Ebene meint (eine Datei je Land); hier ist es ein
+# Silber-Glob ueber Jahrespartitionen.
+ATTR = _silber_union("attributes")
 # ⚠ Ueber ALLE Laender, und der Schluessel traegt das Land mit. `market_opportunity` ist
 # nach `cpv4` verschluesselt, nicht nach Land — ein reines union_by_name wuerde die
 # deutschen Marktzahlen still durch die schweizerischen ersetzen, weil im Woerterbuch

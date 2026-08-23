@@ -3246,6 +3246,15 @@ def _lead_context_sql(cfg: Config, country: str) -> str:
     """
 
 
+# Auf wie vielen Stellen der NUTS-Kennung sitzt die Verwaltungseinheit, nach der ein
+# Bieter filtert? Das ist je Land verschieden und keine Geschmacksfrage:
+#     DE  3  NUTS-1 = Bundesland          (DE2 = Bayern)
+#     AT  4  NUTS-2 = Bundesland          (AT13 = Wien; AT1 waere „Ostoesterreich")
+#     CH  5  NUTS-3 = Kanton              (CH021 = Bern; CH0 waere die ganze Schweiz)
+# Unbekannte Laender bekommen 3 — dieselbe Annahme wie bisher, aber jetzt sichtbar.
+_REGION_STELLEN = {"DE": 3, "AT": 4, "CH": 5}
+
+
 def build_lead_export(cfg: Config, country: str = "DE"):
     """`lead_detail` → **Frontend-Vertrag** (flach, Supabase-ready) — durchgehend ENGLISCH.
 
@@ -3295,7 +3304,16 @@ def build_lead_export(cfg: Config, country: str = "DE"):
                                                       AS has_detailed_description,
             coalesce(lt.n_lots, 0)                    AS n_lots,
             d.buyer_name, d.buyer_town,
-            d.buyer_nuts, substr(d.buyer_nuts,1,3)    AS buyer_nuts1,
+            -- REGIONS-EBENE JE LAND. Der feste Schnitt auf 3 Zeichen (NUTS-1) war eine
+            -- deutsche Annahme: in DE ist NUTS-1 das Bundesland, in AT die Drittel-
+            -- Einteilung (AT1 „Ostoesterreich" umfasst Burgenland, Niederoesterreich UND
+            -- Wien) und in CH das GANZE LAND (CH0). Gemessen 2026-08-23 trugen deshalb
+            -- alle 3.856 Schweizer Leads mit Region dieselbe Angabe „Schweiz/Suisse/
+            -- Svizzera" und alle oesterreichischen eine von drei — als Filter wertlos,
+            -- obwohl die Leads NUTS-3-genau vorliegen (AT130 = Wien, CH021 = Bern).
+            -- Die passende Ebene ist die, auf der das Land seine Verwaltungseinheit
+            -- fuehrt: DE NUTS-1, AT NUTS-2 (Bundesland), CH NUTS-3 (Kanton).
+            d.buyer_nuts, substr(d.buyer_nuts,1,{_REGION_STELLEN.get(country, 3)}) AS buyer_nuts1,
             dn.name                                   AS buyer_region_name,
             -- Markt = LEISTUNGSORT. Nur zeigen, wenn NUTS-3-genau bekannt.
             CASE WHEN length(lg.perf_nuts) >= 5 THEN substr(lg.perf_nuts,1,5) END AS market_nuts3,
@@ -3444,7 +3462,10 @@ def build_lead_export(cfg: Config, country: str = "DE"):
                      WHERE portal_url LIKE 'http%' GROUP BY 1) nq ON nq.notice_id = d.lead_id
           LEFT JOIN read_parquet('{slug_path}') sl ON sl.lead_id = d.lead_id
           LEFT JOIN read_parquet({q('lead_geo.parquet')}) lg ON lg.lead_id = d.lead_id
-          LEFT JOIN read_parquet({q('dim_nuts.parquet')}) dn ON dn.nuts_code = substr(d.buyer_nuts,1,3)
+          -- Derselbe Schnitt wie bei `buyer_nuts1` oben — sonst traegt der Lead die
+          -- richtige Kennung und daneben den Namen der falschen Ebene.
+          LEFT JOIN read_parquet({q('dim_nuts.parquet')}) dn
+                 ON dn.nuts_code = substr(d.buyer_nuts, 1, {_REGION_STELLEN.get(country, 3)})
           LEFT JOIN read_parquet({q('dim_nuts.parquet')}) mkt ON mkt.nuts_code = substr(lg.perf_nuts,1,5)
           LEFT JOIN read_parquet({q('entity_identity.parquet')}) ei ON ei.entity_id = d.incumbent_entity
           LEFT JOIN (
