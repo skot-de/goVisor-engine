@@ -40,7 +40,15 @@ CLI: `python -m govisor.cli {ingest|silver|gold|verify|review}`.
   (Schweizer Leads fallen aus jeder Umkreissuche), und der Dokument-Fetcher deckt nur
   cosinex/DTVP ab (eine deutsche Plattform-Familie).
 
-  **Wer ein Land aufnimmt oder nachbessert: `docs/land-onboarding.md` zuerst lesen.** Die
+  **Wer ein Land aufnimmt oder nachbessert: [`docs/land-onboarding.md`](docs/land-onboarding.md)
+  zuerst lesen.** Das ist die Nabe einer 16-teiligen Bibel in `docs/laender/` — von der
+  Quellenlandschaft über Ausschreibungs- und Dokument-Input, Dublettenwall, Gold-Kette und
+  Cross-Verdrahtung bis Abnahme, Betrieb und Fallenkatalog. ⚠ Zwei Kapitel gehören VOR die
+  erste Messung, wenn sie zutreffen: **13 Währung** (die Schweiz hat `value_eur` bei 1 %
+  gefüllt, DE bei 91 % — jede wertbasierte Kennzahl faellt aus) und **14 Schrift** (die
+  Wortfaltung kennt nur ä ö ü ß; `Łódź` wird zu `['d']`). **15 Eintragungsliste** nennt
+  jede Datei, in der ein Land bekannt gemacht werden muss — eine zentrale Länderliste gibt
+  es nicht. Die
   Liste ist die Summe eines Tages, an dem Österreich nachgemessen wurde — sechs Wochen
   nachdem es „fertig" war. Bindefrist 0 %, Bürgschaft 0 %, Nebenangebote 0 %, Lose 0 %,
   bei 57 % nicht einmal ein Link zur Quelle, während die Schweiz auf 51 % stand und die

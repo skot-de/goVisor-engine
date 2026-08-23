@@ -1,134 +1,116 @@
 # Ein neues Land aufnehmen
 
-**Warum es diese Liste gibt.** Am 2026-08-22 wurde Österreich nachgemessen, sechs Wochen
-nachdem es „fertig" war. Das Ergebnis: die Daten lagen vollständig da, kamen aber nicht an.
+**Das ist die Nabe.** Die Einzelheiten stehen in `docs/laender/`; dieses Dokument sagt, was
+zu tun ist, in welcher Reihenfolge, und woran man merkt, dass man fertig ist.
+
+> **goVisor ist EU-weit geplant. Deutschland ist der Testfall, nicht der Zielmarkt.**
+> Wer ein Feature nur für DE baut, hat es nicht fertig gebaut, sondern angefangen.
+
+## Warum es dieses Dokument gibt
+
+Österreich galt sechs Wochen lang als fertig. Beim Nachmessen am 2026-08-14 standen
+Bindefrist, Bürgschaft, Nebenangebote und Lose bei **0 %**, bei 57 % der Vergaben fehlte
+ein Link zur Quelle, und die Schweiz lag bei 51 % — während die Daten vollständig in
+Silber lagen.
+
+Keiner dieser Fehler war ein Denkfehler. Es waren durchweg Reste einer Funktion, die für
+Deutschland gebaut und für den Rest vergessen wurde. Und sie fielen nicht auf, weil:
+
+> **Ein leeres Feld bleibt leer, statt zu scheitern — und sieht aus wie eine Quelle, die
+> nichts hergibt.**
+
+## Die Kapitel
+
+| | Kapitel | Beantwortet |
+|---|---------|-------------|
+| **00** | [Reihenfolge und Tore](laender/00-reihenfolge-und-tore.md) | Was heisst „fertig"? Sechs Tore, drei Fragen an jede Zahl. |
+| **01** | [Quellenlandschaft](laender/01-quellenlandschaft.md) | Drei Vergabeebenen, API vor Abgriff, Recht, Registry-Status. |
+| **02** | [Input Ausschreibungen](laender/02-input-ausschreibungen.md) | Bronze→Silber, Parser, IDs, Sprachfassungen, Attribute. |
+| **03** | [Input Dokumente](laender/03-input-dokumente.md) | Portale, Abrufwarteschlange, Sperrtypen, Doktypen. |
+| **04** | [Dublettenwall](laender/04-dublettenwall.md) | Belegklassen, Locale je Land, Kennung vs. Name. |
+| **05** | [Gold-Kette](laender/05-gold-kette.md) | Builder-Reihenfolge, Verdrahtungsprüfung, bewusste Lücken. |
+| **06** | [Cross-Verdrahtung](laender/06-cross-verdrahtung.md) | `_union`, Land im Schlüssel, Silber-Globs, Determinismus. |
+| **07** | [Geo und Regionen](laender/07-geo-und-regionen.md) | NUTS-Ebene je Land, Ableitung, Ortsnamen-Fallen. |
+| **08** | [Entitäten und Locale](laender/08-entitaeten-und-locale.md) | Rechtsformen, `normalize_company`, amtliche Kennungen. |
+| **09** | [Frontend und Sprache](laender/09-frontend-und-i18n.md) | Vertrag englisch, `tk()`, Herkunft anzeigen. |
+| **10** | [Abnahme und Messung](laender/10-abnahme-und-messung.md) | Die Zahlen, die man verlangen muss. |
+| **11** | [Betrieb](laender/11-betrieb.md) | Nachtlauf, Sperren, launchd, Geldwache. |
+| **12** | [Fallenkatalog](laender/12-fallenkatalog.md) | Jede Falle mit ihrer Messung. |
+| **13** | [Währung und Werte](laender/13-waehrung-und-werte.md) | ⚠ **Zuerst lesen, wenn das Land nicht in Euro rechnet.** |
+| **14** | [Zeichen und Schrift](laender/14-zeichen-und-schrift.md) | ⚠ **Zuerst lesen, wenn das Land andere Buchstaben hat.** |
+| **15** | [Eintragungsliste](laender/15-eintragungsliste.md) | Jede Datei, in der ein Land bekannt gemacht wird. |
+
+## Der Ablauf in einem Bild
 
 ```
-                DE      AT      CH        AT nach einem Tag Reparatur
-Bindefrist    53 %     0 %    51 %   →   71 % (der TED-Vergaben)
-Bürgschaft    39 %     0 %    51 %   →   20 %
-Nebenangebote 60 %     0 %    51 %   →   34 %
-Lose          79 %     0 %     0 %   →   25 % (CH: 41 %)
-Link zur Quelle       57 %          →  100 %
+        ┌─ 13 Währung   ⚠ wenn nicht Euro
+VORAB ──┤                                     … beide VOR der ersten Messung,
+        └─ 14 Schrift   ⚠ wenn andere Buchstaben   sonst misst man Unsinn
+
+01 Quellen  →  02 Ausschreibungen  →  04 Dubletten  →  05 Gold  →  06 Frontend
+                                                                      │
+                        07 Geo  ·  08 Entitäten  ·  09 Sprache ───────┤
+                                                                      ▼
+                                              10 Abnahme  →  11 Betrieb
+
+                        03 Dokumente — jederzeit, blockiert nichts
+                        15 Eintragungsliste — durchgehend abarbeiten
 ```
 
-Keiner dieser Fehler war ein Denkfehler. Es waren durchweg **Reste**: eine Funktion, die für
-DE gebaut und für den Rest vergessen wurde. Sie fallen nicht auf, weil ein Feld leer bleibt
-statt zu scheitern — und ein leeres Feld sieht aus wie eine Quelle, die nichts hergibt.
+## Die zwei Fragen vor allem anderen
 
-Diese Liste ist die Summe dieses Tages. Sie ist keine Theorie.
+Beide Kapitel entstanden am 2026-08-23 beim Durchspielen eines fiktiven neuen Landes. Sie
+fehlten, und beide hätten ein Land vom ersten Tag an unbrauchbar gemacht:
 
----
+1. **Rechnet das Land in Euro?** Wenn nein: die Schweiz zeigt, was passiert — `value_eur`
+   ist dort bei **1 %** gefüllt (DE 91 %), und damit fällt jede wertbasierte Kennzahl aus.
+   → [Kapitel 13](laender/13-waehrung-und-werte.md)
+2. **Hat das Land andere Buchstaben?** Die Wortfaltung kennt ä/ö/ü/ß und zerlegt alles
+   andere: `Łódź` wird zu `['d']`. Ohne Erweiterung ist **jede** Messung der Kapitel 04
+   und 07 falsch — und zwar lautlos.
+   → [Kapitel 14](laender/14-zeichen-und-schrift.md)
 
-## 1 · Vor dem ersten Code: messen, was die Quelle wirklich trägt
+## Was zwischen Ländern übertragbar ist — und was nicht
 
-⚠ **Füllquote allein entscheidet nichts.** Für Österreich stand `SpecificTendererRequirement`
-bei **88 %** — es lag nahe, den Extraktor darauf umzustellen. Beim Hinsehen waren 91 % der
-Werte Standard-Ausschlussgründe (`exg-mis-*`), `none` oder `epo-procurement-document`
-(„steht in den Unterlagen"). Substanz trugen **37 von 435**. Der Freitext lautete wörtlich
-„Gemäß den entsprechenden nationalen vergaberechtlichen Vorgaben."
+| Baustein | Überträgt sich | Warum |
+|----------|----------------|-------|
+| TED-Parser (eForms/legacy) | **ja** | EU-einheitlich |
+| CPV-Vokabular | **ja** | EU-Recht, `dim_cpv_label` gilt überall |
+| Dubletten-**Logik** | **ja** | Wortmengen und Enthaltung sind sprachunabhängig |
+| Gold-Builder | **ja**, wenn country-fähig | prüfen, nicht annehmen |
+| Nationaler Parser | **nein** | eigenes Schema je Quelle |
+| **Locale** (Rechtsformen) | **nein** | national |
+| **NUTS-Ebene** der Region | **nein** | DE 3 / AT 4 / CH 5 Stellen |
+| Ortsnamen-Ausschlussliste | **nein** | Behördendeutsch ist national |
+| Dokument-Connectoren | **nein** | je Portalfamilie |
+| Entity-Register | **nein** | HR/Firmenbuch/Handelsregister je Land |
+| Destatis-Kontext | **nein** | endet an der deutschen Grenze |
+| Wortfaltung / Zeichen | **nein** | kennt nur ä ö ü ß |
+| Währungsumrechnung | **nein** | gibt es bisher gar nicht |
 
-**88 % Abdeckung, die nichts sagt, ist schlechter als 0 % — sie sieht aus wie eine Antwort.**
+## Die eine Frage, die alles trägt
 
-Drei Fragen, immer in dieser Reihenfolge:
+Wenn ein Feld leer ist, ein Wert fehlt, eine Ansicht nichts zeigt:
 
-1. **Welches Element nutzt das Land?** Derselbe eForms-Standard wird verschieden befüllt.
-   DE liest `SelectionCriteria`; AT befüllt `SpecificTendererRequirement` und hat bei
-   `SelectionCriteria` 3 von 435.
-2. **Wie hoch ist die Füllquote?** Je Feld, gegen die offenen Vergaben des Landes.
-3. **Wie viel davon ist Textbaustein?** Werteverteilung ansehen, nicht nur zählen. Diese
-   Frage überspringt man leicht, weil die ersten beiden so schöne Zahlen liefern.
+> ### Fehlt der Wert, oder fehlt die Leitung?
 
-## 1a · Jedes Land ist einzeln zu prüfen — die ganze Maschinerie
+Die Antwort steht fast immer in Silber. Trägt Silber den Wert und Gold nicht, ist es die
+Leitung — und dann gilt [Kapitel 12](laender/12-fallenkatalog.md).
 
-⚠ Punkt 3 unten sagt „nichts DE-only lesen". Das ist **nicht** dasselbe wie „eine Logik für
-alle". Sven am 2026-08-22: *„jedes land ist individuell zu behandeln. parser, dubletten usw,
-also die ganze machinerie die wir aufgebaut haben."*
+## Werkzeuge, die man dabei braucht
 
-Beides gilt gleichzeitig, und die Unterscheidung ist die eigentliche Arbeit:
+```bash
+scripts/laeuft_was.sh                          # ⛔ vor JEDEM schreibenden Schritt
+python3 scripts/pruefe_verdrahtung.py --offen  # Frische + Länderparität
+python3 -m govisor.cli verify --country XX     # FK-Integrität
+python3 -m pytest tests/ -q                    # muss grün sein, vor dem Commit
+```
 
-| Teil | länderübergreifend? | was zu prüfen ist |
-|---|---|---|
-| `lead_lot`, `entity_identity`, Exporte | **ja** — nur unionieren | steht ein `{G}/` drin? |
-| `_lead_context_sql` | **ja** — nimmt `country` | ist es angeschlossen? |
-| eForms-**Elemente** | **nein** | DE liest `SelectionCriteria`; AT befüllt `SpecificTendererRequirement` (3 von 435 gegen 383 von 435) |
-| Dubletten-Regeln | **nein** | `QUELLEN_RANG` ist quellen- und damit faktisch länderspezifisch (`simap`=CH, `atverg`=AT, `dtvp`/`doe`/`netserver`=DE) |
-| Stoppwörter im Titelvergleich | **nein** | `_STOPP` in `dedupe.py` ist rein deutsch |
-| Regionen-Katalog, PLZ | **nein** | AT-PLZ (4-stellig) kollidiert mit CH — der Geo-Join braucht `country`-Filter |
-| Dokument-Portale | **nein** | völlig andere Familien je Land |
-| Doktyp-Erkennung | **nein** | fünf Sprachräume, s. `govisor/doctypes.py` |
-| Währung | **nein** | CHF fällt aus jeder Wert-Kennzahl, wenn niemand umrechnet |
+## Verwandte Dokumente
 
-**Gemessen, nicht behauptet** (CH, 2026-08-22): 35 % des Schweizer Bestands ist nicht
-deutsch — 39.656 französische und 1.554 italienische Vorgänge von 121.375. Die
-Dubletten-Erkennung überlebt das insgesamt (fr 19 %, de 20 % der Vorgänge in einem Paar),
-weil `kaeufer_und_titel` den Löwenanteil trägt. Eine Regel degradiert aber sichtbar:
-`nur_titel_kurz` greift bei deutschen Vorgängen 1.993-mal, bei französischen **182-mal** —
-sechsmal seltener, weil die deutsche Stoppwortliste französische Funktionswörter stehen
-lässt und die Titel dadurch „reicher" wirken.
-
-Das ist die Art Befund, die man nur beim Hinsehen bekommt: kein Ausfall, eine Schieflage.
-**Bei jedem neuen Land jede Stufe der Maschinerie einzeln durchgehen** — Parser, Dubletten,
-Geo, Doktypen, Währung, Portale — und je Stufe entscheiden, ob sie übertragbar ist oder eine
-eigene Fassung braucht. Was übertragbar ist, wird unioniert; was es nicht ist, bekommt eine
-eigene, benannte Regel statt einer stillschweigenden Annahme.
-
-## 2 · Gold: keine „schlanke" Länder-Pipeline ohne Verfallsdatum
-
-`build_at_gold` trug im Docstring: *„Bewusst KEINE volle DE-Gold-Pipeline (die käme später
-separat, wenn AT-Volumen es rechtfertigt)."* Ein „später", das niemand wieder aufgemacht hat.
-Ergebnis: 26 statt 74 Spalten, alle Anforderungs-Signale fehlten.
-
-* **`_lead_context_sql(cfg, country)` anschliessen.** Nimmt das Land als Parameter und liefert
-  Bürgschaft, Nebenangebote, Bindefrist, Fristuhrzeit, Bieterfragen-Frist. Kein zweiter Parser.
-* **`documents_url` nicht an `ted_url` hängen.** Für nationale Quellen ist die leer: von
-  10.877 `atv-`-Vorgängen hatten null eine `ted_url`. Die eigene Portalseite steht in Silber
-  (`portal_url`) — `coalesce(n.ted_url, n.portal_url)`.
-* **Jeder Glob auf `attributes` braucht einen Guard.** DuckDB wirft bei einem Glob ohne
-  Treffer einen IO-Fehler; ein Land ohne geerntete Attribute bricht sonst mitten im Bau ab.
-* **Wenn wirklich etwas fehlt, gehört es in den Docstring — mit dem Was, nicht nur dem Ob.**
-
-## 3 · Export: `_union(...)`, niemals `{G}/…` für Faktentabellen
-
-`{G}` ist `data/gold/DE`. Zwei Zeilen in `export_web_leads.py` lasen so `lead_lot` und
-`entity_identity` — die AT- und CH-Fassungen existierten längst und kamen nie an.
-
-`tests/test_plumbing.py::test_laenderuebergreifende_tabellen_werden_unioniert` prüft das
-jetzt selbsttätig: es vergleicht, welche Gold-Tabellen es je Land WIRKLICH gibt, mit dem,
-was der Export nur aus DE liest. `dim_*` ist ausgenommen (länderunabhängig).
-
-## 4 · Portale: messen, nicht glauben — und Grenzen respektieren
-
-Für jedes Portal des Landes gilt dieselbe Prüfung, und sie ist in diesem Projekt schon
-mehrfach zu früh beendet worden (subreport galt erst als Bot-Sperre, dann als offen; beides
-falsch):
-
-* **Trägt der Link zur Vergabe oder nur zum Portal?** Bei `vemap.com` zeigen 189 von 189
-  Links auf die Startseite. Ohne Vorgangs-ID kann kein Abrufer folgen. Die vorgangsgenauen
-  Links gab es bis 2024-11-06 im alten TED-XML; seit eForms tragen die Auftraggeber nur noch
-  die Wurzel ein.
-* **Ein PDF ist noch keine Vergabeunterlage.** Was zurückkommt, kann die Bekanntmachung sein
-  — die haben wir längst. `scripts/probe_portals.py` warnt im Modulkopf davor.
-* **CAPTCHA ist eine Grenze, keine Hürde.** `vergabeportal.at` bietet den anonymen Download
-  an und sperrt die Dateien per hCaptcha. Ein CAPTCHA wird nicht gelöst und nicht umgangen.
-* **Was öffentlich ist, auch nehmen.** Wo die Dateien gesperrt sind, ist oft die *Dateiliste*
-  offen. Aus Dateinamen lassen sich Dokumenttypen ableiten (`govisor.doctypes.classify`) —
-  944 offene Vergaben ohne jeden Volltext haben darüber trotzdem eine Aussage.
-  ⚠ Dann muss die Anzeige den Unterschied tragen: `gelesen: false`, und ein Satz, der sagt,
-  dass niemand die Datei geöffnet hat.
-
-## 5 · Statusklassen ehrlich halten
-
-`gated` heisst „existiert, uns fehlt ein Zugang" und parkt Vorgänge dauerhaft. Am 2026-08-22
-lagen darin drei verschiedene Lagen; 148 von 406 warteten auf ein Konto, das ihnen nicht
-geholfen hätte (404/410-Fälle und Parser-Probleme). Beim Anlegen eines Connectors gilt:
-
-* `weg` für 404/410 — dauerhaft, kein Nachfassen.
-* `kein_listenlayout` (Blocker `parser`) für „Seite lädt, wir lesen sie nicht" — das ist eine
-  **Arbeitsliste**, kein Schicksal. Freigabe über `scripts/entsperren.py`.
-* `gated` nur für echte Anmeldeschranken.
-
-## 6 · Zum Schluss: nachmessen statt annehmen
-
-Nach dem Aufbau dieselbe Tabelle wie oben aufstellen — Feld für Feld, Land neben Land. Steht
-irgendwo eine 0 %, wo das Nachbarland 50 % hat, ist es kein Quellenproblem, sondern ein Rest.
+- [`docs/quellen-landkarte.md`](quellen-landkarte.md) — Registry und Ausbau-Strategie
+- [`docs/data-sources.md`](data-sources.md) — gemessene TED-Datenrealitäten
+- [`docs/dokument-zugang-map.md`](dokument-zugang-map.md) — wer Unterlagen herausgibt
+- [`docs/laender-onboarding-checkliste.md`](laender-onboarding-checkliste.md) — ältere
+  Planungs-Checkliste (2026-07-30), **abgelöst** durch diese Bibel; sie enthält noch
+  brauchbare Fragen für den Steckbrief eines Landes

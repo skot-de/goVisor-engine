@@ -1,5 +1,11 @@
 # Länder-Onboarding — Checkliste / Playbook
 
+> ⚠ **ABGELÖST (2026-08-23).** Die vollständige Anleitung ist jetzt
+> [`docs/land-onboarding.md`](land-onboarding.md) mit den Kapiteln in `docs/laender/`.
+> Dieses Dokument bleibt stehen, weil sein **Kurz-Steckbrief** (Abschnitt 0) noch die
+> besten Erstfragen an ein unbekanntes Land stellt — der Rest ist dort ausführlicher und
+> mit gemessenen Zahlen belegt.
+
 Was wir prüfen, bevor wir ein neues Land in goVisor aufnehmen. Reihenfolge = grob die
 Bau-Reihenfolge. Jeder Punkt ist eine **Messung an echten Daten**, keine Annahme
 (Arbeitsweise-Prinzip). Die DACH-Referenz unten zeigt, wie unterschiedlich die Antworten

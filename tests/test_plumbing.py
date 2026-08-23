@@ -3822,9 +3822,19 @@ def test_land_onboarding_ist_verankert():
     wurzel = pathlib.Path(__file__).resolve().parent.parent
     doku = wurzel / "docs/land-onboarding.md"
     assert doku.exists(), "die Länder-Checkliste fehlt"
-    text = doku.read_text(encoding="utf-8")
-    for stichwort in ("_union", "_lead_context_sql", "portal_url", "CAPTCHA", "gelesen: false"):
-        assert stichwort in text, f"die Checkliste nennt {stichwort} nicht mehr"
+    # Seit 2026-08-23 ist `land-onboarding.md` nur noch die NABE; die Einzelheiten stehen
+    # in `docs/laender/`. Gesucht wird deshalb ueber die ganze Bibel — beim Aufteilen sind
+    # genau drei Inhalte verlorengegangen (portal_url, CAPTCHA, `gelesen: false`), und
+    # dieser Test hat sie gefangen. Das ist sein Zweck: Inhalt darf umziehen, nicht
+    # verschwinden.
+    text = doku.read_text(encoding="utf-8") + "\n".join(
+        k.read_text(encoding="utf-8") for k in (wurzel / "docs" / "laender").glob("*.md"))
+    for stichwort in ("_union", "_lead_context_sql", "portal_url", "CAPTCHA",
+                      "gelesen: false", "vemap", "kein_listenlayout", "entsperren.py",
+                      # 2026-08-23 dazugekommen, beide beim Durchspielen eines neuen
+                      # Landes gefunden und beide toedlich, wenn sie fehlen:
+                      "value_eur", "Łódź"):
+        assert stichwort in text, f"die Bibel nennt {stichwort} nicht mehr"
     claude = (wurzel / "CLAUDE.md").read_text(encoding="utf-8")
     assert "docs/land-onboarding.md" in claude, \
         "CLAUDE.md verweist nicht auf die Checkliste — dann findet sie niemand"
@@ -4169,3 +4179,45 @@ def test_export_liest_attribute_und_regionsfuellung_ueber_alle_laender():
     assert "data/silver/DE/attributes" not in code, "ATTR haengt wieder am DE-Pfad"
     assert '_silber_union("attributes")' in code
     assert "{G}/lead_region_fill.parquet" not in code, "REGION_FILL haengt wieder am DE-Pfad"
+
+
+# ── Länder-Bibel ────────────────────────────────────────────────────────────
+# Eine Anleitung, die auf Dateien zeigt, die es nicht gibt, ist schlimmer als keine:
+# sie kostet Vertrauen genau in dem Moment, in dem jemand sie zum ersten Mal braucht.
+
+def test_laender_bibel_ist_vollstaendig_und_verlinkt():
+    wurzel = pathlib.Path(__file__).resolve().parent.parent
+    nabe = wurzel / "docs" / "land-onboarding.md"
+    kapitel = sorted((wurzel / "docs" / "laender").glob("*.md"))
+    assert len(kapitel) >= 16, "Kapitel fehlen"
+    nabentext = nabe.read_text(encoding="utf-8")
+    for k in kapitel:
+        assert k.name in nabentext, f"{k.name} ist in der Nabe nicht verlinkt"
+    # Nummerierung lueckenlos
+    nummern = sorted(int(k.name[:2]) for k in kapitel)
+    assert nummern == list(range(nummern[0], nummern[-1] + 1))
+
+
+def test_laender_bibel_verweist_nur_auf_vorhandenes():
+    """Jeder interne Verweis und jeder genannte Skript-/Modulpfad muss existieren."""
+    wurzel = pathlib.Path(__file__).resolve().parent.parent
+    dateien = list((wurzel / "docs" / "laender").glob("*.md")) + [
+        wurzel / "docs" / "land-onboarding.md"]
+    fehlend = []
+    for d in dateien:
+        text = d.read_text(encoding="utf-8")
+        # Markdown-Verweise. Code-Abschnitte enthalten Regexe wie `[-_](\d{4})`, die
+        # aussehen wie Verweise — deshalb nur auf .md endende Ziele pruefen.
+        for ziel in re.findall(r"\]\((?!http)([^)]+\.md)\)", text):
+            if not (d.parent / ziel).resolve().exists():
+                fehlend.append(f"{d.name} → {ziel}")
+        # Genannte Projektpfade in Backticks
+        for pfad in re.findall(r"`((?:scripts|govisor|tests|web)/[\w./-]+\.\w+)`", text):
+            if not (wurzel / pfad).exists():
+                fehlend.append(f"{d.name} → {pfad}")
+    assert not fehlend, "Die Bibel zeigt ins Leere: " + ", ".join(sorted(set(fehlend)))
+
+
+def test_claude_md_fuehrt_zur_bibel():
+    wurzel = pathlib.Path(__file__).resolve().parent.parent
+    assert "docs/land-onboarding.md" in (wurzel / "CLAUDE.md").read_text(encoding="utf-8")
