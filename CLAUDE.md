@@ -39,6 +39,15 @@ CLI: `python -m govisor.cli {ingest|silver|gold|verify|review}`.
   Konkrete Altlasten dieser Art: der Regionen-Katalog kennt nur deutsche Bundesländer
   (Schweizer Leads fallen aus jeder Umkreissuche), und der Dokument-Fetcher deckt nur
   cosinex/DTVP ab (eine deutsche Plattform-Familie).
+
+  **Wer ein Land aufnimmt oder nachbessert: `docs/land-onboarding.md` zuerst lesen.** Die
+  Liste ist die Summe eines Tages, an dem Österreich nachgemessen wurde — sechs Wochen
+  nachdem es „fertig" war. Bindefrist 0 %, Bürgschaft 0 %, Nebenangebote 0 %, Lose 0 %,
+  bei 57 % nicht einmal ein Link zur Quelle, während die Schweiz auf 51 % stand und die
+  Daten vollständig in Silber lagen. Keiner dieser Fehler war ein Denkfehler; es waren
+  durchweg Reste einer Funktion, die für DE gebaut und für den Rest vergessen wurde.
+  ⚠ Sie fallen nicht auf, weil ein Feld **leer bleibt statt zu scheitern** — und ein leeres
+  Feld sieht aus wie eine Quelle, die nichts hergibt.
 - **⛔ NIE `git commit -a` oder `git add -A`.** Immer die eigenen Pfade einzeln nennen:
 
       git add web/components/Landing.tsx tests/test_landing_check.py

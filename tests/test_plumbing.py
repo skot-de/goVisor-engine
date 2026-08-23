@@ -3808,3 +3808,23 @@ def test_laenderuebergreifende_tabellen_werden_unioniert():
         if f"{{G}}/{tabelle}.parquet" in quelle:
             raise AssertionError(
                 f"{tabelle} liegt für {sorted(vorhanden[tabelle])} vor, wird aber nur aus DE gelesen")
+
+
+def test_land_onboarding_ist_verankert():
+    """Die Länder-Checkliste nützt nur, wenn sie gefunden wird.
+
+    `docs/land-onboarding.md` hält fest, was am 2026-08-22 beim Nachmessen von Österreich
+    herauskam: die Daten lagen vollständig in Silber, kamen aber nicht an — Bindefrist 0 %,
+    Lose 0 %, bei 57 % nicht einmal ein Link zur Quelle. Alles Reste einer für DE gebauten
+    Funktion. Damit das nicht beim nächsten Land wieder passiert, verweist der EU-weit-
+    Grundsatz in CLAUDE.md darauf, den jede Sitzung beim Start liest.
+    """
+    wurzel = pathlib.Path(__file__).resolve().parent.parent
+    doku = wurzel / "docs/land-onboarding.md"
+    assert doku.exists(), "die Länder-Checkliste fehlt"
+    text = doku.read_text(encoding="utf-8")
+    for stichwort in ("_union", "_lead_context_sql", "portal_url", "CAPTCHA", "gelesen: false"):
+        assert stichwort in text, f"die Checkliste nennt {stichwort} nicht mehr"
+    claude = (wurzel / "CLAUDE.md").read_text(encoding="utf-8")
+    assert "docs/land-onboarding.md" in claude, \
+        "CLAUDE.md verweist nicht auf die Checkliste — dann findet sie niemand"
