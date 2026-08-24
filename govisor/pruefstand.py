@@ -121,13 +121,23 @@ def kennzahlen(je_vorgang: dict) -> dict:
 
 # ── Das Urteil ───────────────────────────────────────────────────────────────────────
 
-def entscheide(kandidat: dict, amtierend: dict, *, min_n: int = MIN_N,
-               alpha: float = ALPHA, toleranz: float = VERWERFUNG_TOLERANZ,
-               min_ersparnis: float = MIN_ERSPARNIS) -> dict:
+def entscheide(kandidat: dict, amtierend: dict, *, min_n: int | None = None,
+               alpha: float | None = None, toleranz: float | None = None,
+               min_ersparnis: float | None = None) -> dict:
     """Gepaarte Messreihen → Urteil. Beide Wörterbücher sind {vorgang: {...}}.
 
     Rückgabe: ``{"status", "grund", "wechseln", plus alle Messwerte}``.
+
+    ⚠ **Die Stellschrauben werden HIER aufgelöst, nicht in der Signatur.** Stünde
+    ``min_n: int = MIN_N`` als Vorgabewert, wäre er beim Laden des Moduls eingefroren:
+    ein späteres ``pruefstand.MIN_N = 3`` hätte keine Wirkung mehr — auch nicht im Test,
+    was genau am 2026-08-24 auffiel. Ein Modul, dessen Regler nach dem Import wirkungslos
+    sind, sieht einstellbar aus und ist es nicht.
     """
+    min_n = MIN_N if min_n is None else min_n
+    alpha = ALPHA if alpha is None else alpha
+    toleranz = VERWERFUNG_TOLERANZ if toleranz is None else toleranz
+    min_ersparnis = MIN_ERSPARNIS if min_ersparnis is None else min_ersparnis
     paare = [(v["punkte"], amtierend[k]["punkte"]) for k, v in kandidat.items()
              if "punkte" in v and k in amtierend and "punkte" in amtierend[k]]
     kk, ka = kennzahlen(kandidat), kennzahlen(amtierend)
@@ -261,8 +271,9 @@ def einreihen(stand: dict, modell: str, *, preis: float, grund: str,
     return True
 
 
-def naechste(stand: dict, hoechstens: int = MAX_JE_TAG) -> list[str]:
+def naechste(stand: dict, hoechstens: int | None = None) -> list[str]:
     """Wer ist als Nächstes dran? Billigste zuerst — dort liegt der größte Gewinn."""
+    hoechstens = MAX_JE_TAG if hoechstens is None else hoechstens
     offen = [(v.get("preis") or 9e9, m) for m, v in stand["kandidaten"].items()
              if v.get("status") in ("neu", "vorpruefung_bestanden")]
     offen.sort()
@@ -270,7 +281,8 @@ def naechste(stand: dict, hoechstens: int = MAX_JE_TAG) -> list[str]:
 
 
 def grundlinie_frisch(stand: dict, heute: str | None = None,
-                      tage: int = GRUNDLINIE_TAGE) -> bool:
+                      tage: int | None = None) -> bool:
+    tage = GRUNDLINIE_TAGE if tage is None else tage
     g = stand.get("grundlinie") or {}
     if not g.get("stand") or not g.get("je_vorgang"):
         return False
