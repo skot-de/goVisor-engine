@@ -44,7 +44,7 @@ Ein Portal mit 0 % ist **nicht** notwendig gesperrt — es kann auch ein fehlend
 sein. Genau dafür gibt es die Sperrtypen unten.
 
 **Anonyme Herausgabe ist die Ausnahme, nicht die Regel.** Belegt herausgebend:
-Ausschreibungsblatt und bi-medien geben anonym ZIPs heraus (282 Leads). `vergabe24` weist
+Ausschreibungsblatt und bi-medien geben anonym ZIPs heraus (282 Leads, gemessen 2026-08). `vergabe24` weist
 den Client ab.
 
 ## Vier Prüfungen je Portal — und keine davon abkürzen

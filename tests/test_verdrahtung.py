@@ -341,3 +341,41 @@ def test_karte_sieht_die_union_leser():
     Verbraucher unsichtbar — also die, um die es geht."""
     k = _karte().karte()
     assert "scripts/export_web_leads.py" in k["lead_lot"]["verbraucher"]
+
+
+# ── Bibel-Pruefung ──────────────────────────────────────────────────────────
+# Eine Anleitung faellt nicht um, sie wird nur langsam falsch. Was dagegen hilft,
+# sind Pruefungen die LAUT scheitern — nicht Vorsaetze.
+
+def _bibel():
+    import importlib.util
+    spec = importlib.util.spec_from_file_location(
+        "pruefe_bibel", ROOT / "scripts" / "pruefe_bibel.py")
+    m = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(m)
+    return m
+
+
+def test_bibel_behauptungen_stimmen_noch():
+    """Das Behauptungs-Register gegen die LIVE-Daten. Faellt eine Zeile, weiss man
+    sofort, welches Kapitel ab sofort luegt."""
+    assert _bibel().pruefung_behauptungen() == []
+
+
+def test_bibel_zahlen_tragen_ein_datum():
+    """Eine Messung ohne Datum liest sich als Gegenwart und ist morgen falsch —
+    gemessen drifteten sechs undatierte Zahlen binnen Stunden."""
+    assert _bibel().pruefung_datierung() == []
+
+
+def test_bibel_und_claude_md_pflegen_keine_zahl_doppelt():
+    """CLAUDE.md fasst die Bibel zusammen. Wer dieselbe Zahl an zwei Stellen fuehrt,
+    pflegt sie an einer nicht — genau so stand dort „16 Tabellen nur fuer DE",
+    Stunden nachdem sie verdrahtet waren."""
+    assert _bibel().pruefung_doppelpflege() == []
+
+
+def test_bibel_pruefung_laeuft_im_nachtlauf_mit():
+    lauf = (ROOT / "scripts" / "daily_leads.sh").read_text()
+    ohne_kommentar = "\n".join(z for z in lauf.splitlines() if not z.lstrip().startswith("#"))
+    assert "scripts/pruefe_bibel.py" in ohne_kommentar

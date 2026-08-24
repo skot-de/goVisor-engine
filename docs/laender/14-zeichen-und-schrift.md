@@ -83,7 +83,7 @@ Connector, nicht danach.
 ## Kodierung der Quelle
 
 Nicht verwechseln mit der Faltung: manche Quellen liefern kein UTF-8. Die deutsche
-Historie brauchte dafür `flatten.decode_text()` mit cp1252-Rückfall — 11.448
+Historie brauchte dafür `flatten.decode_text()` mit cp1252-Rückfall — damals wurden 11.448
 Bekanntmachungen wurden so verlustfrei zurückgeholt und rund 115.000 `�`-Zeilen
 verschwanden.
 

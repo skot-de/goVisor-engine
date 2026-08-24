@@ -101,7 +101,8 @@ Und: `{G}/tabelle.parquet` irgendwo im Quelltext lässt den Test
   länderunabhängig; dass sie je Land als Datei liegen, ist ein Nebenprodukt des Bauwegs.
   Die DE-Fassung ist die vollständige. Ein Test, der sie mitzählt, erzeugt drei Fehlalarme.
   ⚠ **Ausnahme `dim_nuts`**: die AT- und CH-Namen stehen **nur** in deren eigener Datei
-  (DE 462 Einträge, AT 48, CH 35, ohne Überschneidung). Diese Tabelle muss unioniert werden.
+  (gemessen 2026-08-23: DE 462 Einträge, AT 48, CH 35, ohne Überschneidung). Diese Tabelle
+  muss unioniert werden.
 - **`export_landing.py`**: liest bewusst nur DE. Der Kommentar dort begründet es —
   „eine Zahl, die zwei verschiedene Qualitäten mischt, ist keine Zahl". Für AT/CH ist die
   Entitäten-Auflösung schwächer, eine gemischte Vergabestellen-Zahl auf der öffentlichen
@@ -111,7 +112,8 @@ Und: `{G}/tabelle.parquet` irgendwo im Quelltext lässt den Test
 
 Der Vergabestellen-Profil-Nachschlag geht über den **Namen**, nicht über die Kennung.
 22 Käufernamen kommen in mehr als einem Land vor („Gemeinde Bergheim" gibt es in DE und
-AT; „Stadtbauamt" und „Einkauf" sind ohnehin keine Namen) und treffen **463 von 117.241**
+AT; „Stadtbauamt" und „Einkauf" sind ohnehin keine Namen) und treffen gemessen
+**463 von 117.241**
 Leads; dort gewinnt DE.
 
 Das ist der bessere Zustand als vorher — vorher bekamen **alle** 27.000 AT/CH-Käufer gar

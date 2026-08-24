@@ -1223,5 +1223,19 @@ echo ""
 $PY scripts/pruefe_verdrahtung.py \
   || echo "  → Verdrahtungspruefung meldet Befunde. Details: python3 scripts/pruefe_verdrahtung.py --offen"
 
+# ── BIBEL-PRUEFUNG ───────────────────────────────────────────────────────────────────────
+#
+# Die Laender-Bibel (docs/laender/) altert anders als Code: sie faellt nicht um, sie wird
+# nur langsam falsch. Am 2026-08-23 wurde sie an einem Tag geschrieben und am selben Tag
+# zweimal von der Wirklichkeit ueberholt — sechs Zahlen drifteten binnen Stunden.
+#
+# Drei Pruefungen: Zahlen ohne Datum (die altern lautlos), Behauptungen gegen die
+# LIVE-Daten (nicht gegen das Feld, das die Antwort behauptet), und Doppelpflege mit
+# CLAUDE.md (wer eine Aussage an zwei Stellen fuehrt, pflegt sie an einer nicht).
+#
+# Warnung, kein Abbruch — wie die Verdrahtungspruefung.
+$PY scripts/pruefe_bibel.py \
+  || echo "  → Bibel-Pruefung meldet Befunde. Details: python3 scripts/pruefe_bibel.py --offen"
+
 # Alte Logs aufräumen (>30 Tage)
 find "$LOG_DIR" -name 'daily-*.log' -type f -mtime +30 -delete 2>/dev/null || true

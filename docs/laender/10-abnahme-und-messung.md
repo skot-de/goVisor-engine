@@ -6,10 +6,27 @@
 
 ## Die Pflichtläufe
 
+⚠ **Die Bibel prüft sich selbst mit.** Sie altert anders als Code — sie fällt nicht um,
+sie wird nur langsam falsch. Am 2026-08-23 wurde sie an einem Tag geschrieben und am
+selben Tag zweimal von der Wirklichkeit überholt: sechs Zahlen drifteten binnen Stunden,
+eine Aussage über die Registry war schon beim Schreiben falsch.
+
+`scripts/pruefe_bibel.py` prüft deshalb drei Dinge, und läuft im Nachtlauf mit:
+
+| Prüfung | Was sie fängt |
+|---------|---------------|
+| **Datierung** | Eine Zahl ohne Datum liest sich als Gegenwart. Vergangenheitsaussagen („stand 12 Tage still") sind ausgenommen — ein Ereignis altert nicht. |
+| **Behauptungen** | Ein Register messbarer Aussagen gegen die **Live-Daten**. Jede nennt ihr Kapitel; fällt sie, weiss man sofort, welche Stelle ab jetzt lügt. |
+| **Doppelpflege** | Nennt `CLAUDE.md` eine Zahl, die auch in der Bibel steht? Dann veraltet sie an einer der beiden Stellen zuerst — genau so stand dort „16 Tabellen nur für DE", Stunden nachdem sie verdrahtet waren. |
+
+**Eine neue prüfbare Behauptung gehört ins Register**, nicht nur in den Fliesstext. Was
+dort steht, kann verrotten, ohne dass es jemand merkt.
+
 ```bash
 python3 -m pytest tests/ -q                    # muss GRÜN sein, vor dem Commit
 python3 -m govisor.cli verify --country XX     # FK-Integrität
-python3 scripts/pruefe_verdrahtung.py --offen  # Frische + Länderparität
+python3 scripts/pruefe_verdrahtung.py --offen  # Sonde 1-4: Frische, Parität, Pfade, Länder
+python3 scripts/pruefe_bibel.py --offen        # altert die Anleitung selbst?
 cd web && npx tsc --noEmit                     # Typprüfung
 cd web && for f in scripts/pruefe-*.mjs; do node "$f"; done
 ```

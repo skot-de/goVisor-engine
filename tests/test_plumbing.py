@@ -4277,7 +4277,11 @@ def test_registry_status_candidate_heisst_nicht_gebaut():
     quelltext = ""
     for ordner in ("govisor", "scripts"):
         for datei in (wurzel / ordner).rglob("*.py"):
-            if datei.name == "sources.py":
+            # ⚠ Zwei Dateien nennen die Woerter, um sie zu PRUEFEN, nicht um sie zu
+            # implementieren: die Registry selbst und `pruefe_bibel.py`. Ohne diese
+            # Ausnahme schlug der Test gegen seinen eigenen Waechter an — dieselbe
+            # Falle wie „Prosa mitzaehlen", nur eine Ebene hoeher.
+            if datei.name in ("sources.py", "pruefe_bibel.py"):
                 continue
             try:
                 quelltext += datei.read_text(encoding="utf-8")
