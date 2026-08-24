@@ -198,9 +198,25 @@ def entscheide(kandidat: dict, amtierend: dict, *, min_n: int | None = None,
     alpha = ALPHA if alpha is None else alpha
     toleranz = VERWERFUNG_TOLERANZ if toleranz is None else toleranz
     min_ersparnis = MIN_ERSPARNIS if min_ersparnis is None else min_ersparnis
-    paare = [(v["punkte"], amtierend[k]["punkte"]) for k, v in kandidat.items()
-             if "punkte" in v and k in amtierend and "punkte" in amtierend[k]]
-    kk, ka = kennzahlen(kandidat), kennzahlen(amtierend)
+    # ⚠ ALLES VERGLEICHENDE MUSS AUF DENSELBEN VORGAENGEN RECHNEN.
+    #
+    # Die erste Fassung verglich die QUALITAET gepaart (nur gemeinsame Vorgaenge), die
+    # KOSTEN aber ueber alle gemessenen je Seite. Ein Kandidat, der genau an den grossen,
+    # teuren Vergaben scheitert und die kleinen schafft, sieht dadurch dramatisch billiger
+    # aus, als er ist. Nachgerechnet am 2026-08-24: gemeldet wurden **84 % Ersparnis**, auf
+    # denselben Vorgaengen waren es **10 %** — achtfach ueberhoeht.
+    #
+    # Das ist kein kosmetischer Fehler: `ersparnis` traegt die Regel „gleichwertig und
+    # billiger" UND die Ausnahme „eklatant billiger". Ein Kandidat mit einer Luecke bei den
+    # teuren Vergaben haette so uebernommen werden koennen.
+    gemeinsam = {k for k, v in kandidat.items()
+                 if "punkte" in v and k in amtierend and "punkte" in amtierend[k]}
+    paare = [(kandidat[k]["punkte"], amtierend[k]["punkte"]) for k in sorted(gemeinsam)]
+    kk = kennzahlen({k: v for k, v in kandidat.items() if k in gemeinsam})
+    ka = kennzahlen({k: v for k, v in amtierend.items() if k in gemeinsam})
+    # Wie viel wurde ueberhaupt gemessen — fuer den Bericht, nicht fuer das Urteil.
+    kk["n_gemessen"] = kennzahlen(kandidat).get("n", 0)
+    ka["n_gemessen"] = kennzahlen(amtierend).get("n", 0)
     g = sum(1 for a, b in paare if a > b)
     v = sum(1 for a, b in paare if a < b)
     p = vorzeichentest(g, v)

@@ -505,3 +505,44 @@ def test_ohne_spurangabe_gilt_die_preisspur():
     """Bestandsdaten von vor der Umstellung tragen kein `spur`-Feld."""
     stand = {"kandidaten": {"alt/x": {"status": "neu", "preis": 0.05}}}
     assert ps.naechste(stand, 1) == ["alt/x"]
+
+
+def test_kosten_werden_auf_denselben_vorgaengen_verglichen_wie_die_qualitaet():
+    """⚠ Die erste Fassung verglich Qualität gepaart und Kosten ungepaart.
+
+    Ein Kandidat, der genau an den grossen, teuren Vergaben scheitert und die kleinen
+    schafft, sieht dadurch dramatisch billiger aus, als er ist. Nachgerechnet am
+    2026-08-24: gemeldet **84 % Ersparnis**, auf denselben Vorgängen **10 %**.
+
+    Das ist kein kosmetischer Fehler: `ersparnis` trägt die Regel „gleichwertig und
+    billiger" UND die Ausnahme „eklatant billiger" — ein Kandidat mit einer Lücke bei den
+    teuren Vergaben hätte so übernommen werden können.
+    """
+    amt = {f"N{i}": {"punkte": 60 if i < 3 else 20, "verworfen": 3,
+                     "kosten_usd": 0.20 if i < 3 else 0.010, "sekunden": 5.0}
+           for i in range(12)}
+    kand = {f"N{i}": {"punkte": 20, "verworfen": 3, "kosten_usd": 0.009, "sekunden": 5.0}
+            for i in range(3, 12)}
+    for i in range(3):                       # scheitert an den drei teuren
+        kand[f"N{i}"] = {"fehler": "TimeoutError", "grund": "HTTP 500"}
+
+    u = ps.entscheide(kand, amt, min_n=5)
+    assert u["ersparnis"] == pytest.approx(0.10, abs=0.02), \
+        f"Ersparnis muss auf den gemeinsamen Vorgängen rechnen, ist {u['ersparnis']:.0%}"
+    assert u["kandidat"]["n"] == 9 and u["kandidat"]["n_gemessen"] == 9
+    assert u["amtierend"]["n"] == 9, "der Amtierende zählt nur die gemeinsamen mit"
+    assert u["amtierend"]["n_gemessen"] == 12, "sein voller Umfang bleibt im Bericht"
+
+
+def test_die_ausnahme_greift_nicht_wegen_ausgelassener_teurer_vorgaenge():
+    """Die Probe aufs Exempel: derselbe Kandidat darf die Ausnahme nicht auslösen."""
+    amt = {f"N{i}": {"punkte": 30, "verworfen": 4,
+                     "kosten_usd": 0.50 if i < 4 else 0.010, "sekunden": 5.0}
+           for i in range(12)}
+    # Auf den gemeinsamen Vorgängen ist er nur 10 % billiger — die Ausnahme verlangt 90 %.
+    kand = {f"N{i}": {"punkte": 29, "verworfen": 4, "kosten_usd": 0.009, "sekunden": 5.0}
+            for i in range(4, 12)}
+    for i in range(4):
+        kand[f"N{i}"] = {"fehler": "TimeoutError", "grund": "HTTP 500"}
+    u = ps.entscheide(kand, amt, min_n=5)
+    assert not u["wechseln"], f"hätte nicht wechseln dürfen: {u['grund']}"
