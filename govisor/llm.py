@@ -254,7 +254,13 @@ def mit_boden(modell: str | None) -> str:
     """
     if not modell or OR_BODEN == "aus":
         return modell or ""
-    return modell if kostenbuch.weg(modell) else modell + ":floor"
+    # ⚠ NICHT NUR AUF `:floor`/`:nitro` PRUEFEN. In der Warteschlange stand am 2026-08-24
+    # `openai/gpt-5-nano:batch` — eine Variante, die `kostenbuch.weg()` nicht kennt. Die
+    # alte Bedingung haette daraus `openai/gpt-5-nano:batch:floor` gemacht, also einen
+    # Namen, den es nicht gibt. Jede Endung nach dem letzten Schraegstrich ist eine
+    # Variante; wer schon eine hat, bekommt keine zweite.
+    letztes = modell.rsplit("/", 1)[-1]
+    return modell if ":" in letztes else modell + ":floor"
 
 
 DEFAULT_MODEL = mit_boden(_MODELL_ROH)

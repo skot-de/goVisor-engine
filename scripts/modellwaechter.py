@@ -86,6 +86,16 @@ WAHL = ROOT / "data" / "modellwahl.json"
 STANDARD_MISCHUNG = (1.5, 1.0)
 MISCHUNG_AB = 20               # ab so vielen Buchungen wird gemessen statt geschaetzt
 
+# Obergrenze der QUALITAETSSPUR: bis zum Wievielfachen unseres Preises lohnt der Versuch,
+# ein BESSERES Modell zu finden? Sven, 2026-08-24: „eig ist qualitaet zuerst, dann die
+# kosten". Ohne diese Spur konnte der Pruefstand das gar nicht erfuellen — er liess nur
+# billigere Modelle herein und haette einen Qualitaetsgewinn strukturell nie gesehen.
+#
+# Zusaetzlich muss ein Kandidat NEUER sein als unser Modell. Das sagt nichts ueber Guete,
+# aber ein aelteres Modell als Verbesserung zu bezahlen ist unplausibel genug, um den
+# Suchraum damit zu halbieren: 52 Modelle bis 3×, davon 35 bis 2×.
+QUALITAET_DECKEL = float(os.environ.get("GOVISOR_QUALITAET_DECKEL", "2.0"))
+
 
 def _z(n: float | int) -> str:
     """Tausenderpunkte. ⚠ Nicht `.replace(",", ".")` auf den ganzen Satz anwenden — das
@@ -295,7 +305,32 @@ def pruefen(schwelle: float) -> int:
                           f"({(1 - kp / latte):.0%} unter Boden)")
                 if len(neu_eingereiht) > 5:
                     print(f"    … und {len(neu_eingereiht) - 5} weitere")
-            print(f"  → {offen} Kandidat(en) offen. Keiner wird verwendet, bevor er den "
+            # ── Zweite Spur: teurer, aber neuer — Kandidaten fuer QUALITAET ─────
+            unser_alter = (stand.get(AMTIEREND) or {}).get("erschienen") or 0
+            stark = []
+            for mid, m in stand.items():
+                if mid in beobachtet or not mk.taugt(m) or m["ein"] <= 0:
+                    continue
+                kp = mischpreis(m["ein"], m["aus"], g_ein, g_aus)
+                if not (latte < kp <= latte * QUALITAET_DECKEL):
+                    continue
+                if (m.get("erschienen") or 0) <= unser_alter:
+                    continue          # aelter als unseres — als Verbesserung unplausibel
+                if ps.einreihen(pstand, mid, preis=kp, spur="qualitaet",
+                                grund=f"neuer als unser Modell, {kp / latte:.1f}× der Preis "
+                                      f"— Kandidat für bessere Qualität"):
+                    stark.append((mid, kp))
+            ps.sichere(pstand)
+            if stark:
+                stark.sort(key=lambda x: x[1])
+                print(f"\n  {len(stark)} neuere Modelle bis {QUALITAET_DECKEL:.0f}× unseres "
+                      f"Preises — Qualitätsspur:")
+                for mid, kp in stark[:5]:
+                    print(f"    + {mid:<46} {kp:>6.3f} $/Mio ({kp / latte:.1f}×)")
+                if len(stark) > 5:
+                    print(f"    … und {len(stark) - 5} weitere")
+            offen = len(ps.naechste(pstand, hoechstens=999))
+            print(f"\n  → {offen} Kandidat(en) offen. Keiner wird verwendet, bevor er den "
                   f"gepaarten Versuch bestanden hat:")
             print(f"     scripts/modellpruefung.py     (prüft höchstens "
                   f"{ps.MAX_JE_TAG} je Tag im eigenen Testtopf)")

@@ -98,6 +98,28 @@ KANDIDAT_FRIST = float(os.environ.get("GOVISOR_KANDIDAT_FRIST", "240"))
 # ueberhaupt eine Pruefung?
 MIN_ERSPARNIS = float(os.environ.get("GOVISOR_MIN_ERSPARNIS", "0.20"))
 
+# ── DIE AUSNAHME „EKLATANT BILLIGER" ─────────────────────────────────────────────────
+#
+# Sven, 2026-08-24: „eig ist qualitaet zuerst, dann die kosten, es sei denn es ist ein
+# eklatanter unterschied bei den kosten."
+#
+# Damit darf ein Kandidat auch dann gewinnen, wenn er etwas WENIGER findet — aber nur,
+# wenn der Preisunterschied dramatisch ist UND der Qualitaetsverlust klein bleibt. Beide
+# Bedingungen zusammen, sonst waere es die Hintertuer, durch die jedes billige Modell
+# hereinkommt.
+#
+# EKLATANT: hoechstens ein Zehntel unserer Kosten. Nicht „deutlich billiger" (dafuer gibt
+# es MIN_ERSPARNIS bei gleicher Qualitaet), sondern eine andere Groessenordnung.
+#
+# QUALITAETSBODEN: mindestens 90 % der belegten Punkte des Amtierenden. Zum Vergleich der
+# reale Fall vom 2026-08-24: `upstage/solar-pro4` kostete 10 % und fand 44 % — das ist kein
+# Kompromiss, das ist ein halbes Produkt. Er faellt weiterhin durch.
+#
+# ⚠ Der Verwerfungsriegel kennt diese Ausnahme NICHT. Ungenauigkeit ist kein Preisthema:
+# ein Modell, das mehr behauptet als es belegt, ist zu keinem Preis brauchbar.
+EKLATANT = float(os.environ.get("GOVISOR_EKLATANT", "0.10"))
+QUALITAETSBODEN = float(os.environ.get("GOVISOR_QUALITAETSBODEN", "0.90"))
+
 # Wie lange gilt die Grundlinie des Amtierenden? Danach neu messen — Doktyp-Erkennung,
 # Prompts und Dublettenlogik aendern sich, und dann vergleicht man Aepfel mit Aepfeln von
 # vorgestern.
@@ -230,9 +252,22 @@ def entscheide(kandidat: dict, amtierend: dict, *, min_n: int | None = None,
 
     # 2./3. Signifikanz auf den Punkten.
     if p < alpha and v > g:
+        # Die Ausnahme: eklatant billiger UND nur knapp schwaecher.
+        anteil = kk["punkte_je"] / ka["punkte_je"] if ka.get("punkte_je") else 0.0
+        kosten_anteil = kk["usd_je"] / ka["usd_je"] if ka.get("usd_je") else 1.0
+        if anteil >= QUALITAETSBODEN and kosten_anteil <= EKLATANT:
+            return {**urteil, "status": "bestanden", "wechseln": True,
+                    "grund": (f"findet zwar etwas weniger ({g}:{v}, p={p:.3f}), aber "
+                              f"{anteil:.0%} der Punkte bei {kosten_anteil:.0%} der Kosten "
+                              f"— eklatanter Preisunterschied, Qualitätsverlust unter "
+                              f"{1 - QUALITAETSBODEN:.0%}")}
         return {**urteil, "status": "durchgefallen", "wechseln": False,
                 "grund": (f"findet signifikant weniger ({g}:{v} von {len(paare)}, "
-                          f"p={p:.3f})")}
+                          f"p={p:.3f}"
+                          + (f"; {anteil:.0%} der Punkte bei {kosten_anteil:.0%} der "
+                             f"Kosten — für die Ausnahme müssten es ≥ "
+                             f"{QUALITAETSBODEN:.0%} bei ≤ {EKLATANT:.0%} sein"
+                             if anteil and kosten_anteil <= EKLATANT else "") + ")")}
     if p < alpha and g > v:
         return {**urteil, "status": "bestanden", "wechseln": True,
                 "grund": (f"findet signifikant mehr ({g}:{v} von {len(paare)}, p={p:.3f}) "
@@ -266,6 +301,10 @@ def vorpruefung_bestanden(kandidat: dict, amtierend: dict) -> tuple[bool, str]:
     if kk.get("formatquote", 0) > FORMAT_TOLERANZ:
         return False, (f"{kk['formatfehler']} von {kk['aufrufe']} Antworten unlesbar "
                        f"({kk['formatquote']:.0%}) — Formatproblem, kein Qualitätsurteil")
+    # ⚠ Der Grobfilter muss GROBER sein als die Ausnahme, sonst wirft er einen eklatant
+    # billigen Kandidaten weg, bevor die Hauptpruefung ihn ueberhaupt beurteilen darf.
+    # Bei drei Vorgaengen schwanken die Punkte stark; die Huerde liegt deshalb bei der
+    # Haelfte und nicht beim Qualitaetsboden von 90 %.
     if kk["punkte_je"] < 0.5 * ka.get("punkte_je", 0):
         return False, (f"findet nur {kk['punkte_je']:.1f} statt {ka['punkte_je']:.1f} "
                        f"Punkte je Vorgang (unter der Hälfte)")
@@ -295,7 +334,7 @@ def sichere(stand: dict) -> None:
 
 
 def einreihen(stand: dict, modell: str, *, preis: float, grund: str,
-              heute: str | None = None) -> bool:
+              heute: str | None = None, spur: str = "preis") -> bool:
     """Kandidat aufnehmen. Gibt True, wenn er neu ist oder erneut geprüft werden muss.
 
     ⚠ Ein einmal durchgefallenes Modell wird **nicht** wieder geprüft, solange sich sein
@@ -323,17 +362,41 @@ def einreihen(stand: dict, modell: str, *, preis: float, grund: str,
             return True
         return vor.get("status") in ("neu", "vorpruefung_bestanden")
     stand["kandidaten"][modell] = {"status": "neu", "seit": heute, "preis": preis,
-                                   "grund": grund}
+                                   "grund": grund, "spur": spur}
     return True
 
 
 def naechste(stand: dict, hoechstens: int | None = None) -> list[str]:
-    """Wer ist als Nächstes dran? Billigste zuerst — dort liegt der größte Gewinn."""
+    """Wer ist als Nächstes dran? **Abwechselnd** aus beiden Spuren.
+
+    ⚠ Die erste Fassung nahm stur die billigsten zuerst. Das klang vernünftig („dort liegt
+    der größte Gewinn") und war die schlechteste mögliche Reihenfolge: die billigsten
+    Modelle sind die kleinsten und fallen am ehesten durch. Gemessen am 2026-08-24 waren
+    die ersten drei Kandidaten ein nicht lieferbares, ein hoffnungslos langsames und eines
+    mit 44 % der Punkte — drei Abende für nichts.
+
+    Seit Sven klargestellt hat, dass **Qualität zuerst** kommt, gibt es zwei Spuren:
+
+    * ``preis``     — billiger als wir, sortiert nach Preis (der günstigste zuerst)
+    * ``qualitaet`` — teurer, aber neuer als unser Modell; sortiert nach Preis (der
+                      günstigste zuerst, denn dort ist der Aufpreis am leichtesten zu
+                      rechtfertigen)
+
+    Abwechselnd, damit keine Spur verhungert. Ohne das würde die Preisspur die
+    Qualitätsspur monatelang blockieren — 39 gegen 35 Kandidaten.
+    """
     hoechstens = MAX_JE_TAG if hoechstens is None else hoechstens
-    offen = [(v.get("preis") or 9e9, m) for m, v in stand["kandidaten"].items()
+    offen = [(v.get("preis") or 9e9, v.get("spur") or "preis", m)
+             for m, v in stand["kandidaten"].items()
              if v.get("status") in ("neu", "vorpruefung_bestanden")]
-    offen.sort()
-    return [m for _, m in offen[:hoechstens]]
+    spuren = {"preis": sorted(x for x in offen if x[1] == "preis"),
+              "qualitaet": sorted(x for x in offen if x[1] == "qualitaet")}
+    aus: list[str] = []
+    while len(aus) < hoechstens and any(spuren.values()):
+        for name in ("qualitaet", "preis"):        # Qualität zuerst, s. Svens Rangfolge
+            if spuren[name] and len(aus) < hoechstens:
+                aus.append(spuren[name].pop(0)[2])
+    return aus
 
 
 def grundlinie_frisch(stand: dict, heute: str | None = None,

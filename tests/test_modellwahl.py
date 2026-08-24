@@ -443,3 +443,65 @@ def test_fristquote_zaehlt_nur_echte_fristfaelle():
                 "b": {"fehler": "Y", "grund": "Frist von 240 s überschritten"},
                 "c": {"punkte": 5}}
     assert ps.fristquote(gemischt) == (1 / 3, 1, 3)
+
+
+# ── Svens Rangfolge: Qualität zuerst, Preis danach, Ausnahme bei eklatantem Unterschied ──
+
+_A = {f"N{i}": {"punkte": 30, "verworfen": 4, "kosten_usd": 0.0100, "sekunden": 5.0}
+      for i in range(12)}
+
+
+def _k(punkte, verworfen, kosten):
+    return {f"N{i}": {"punkte": punkte, "verworfen": verworfen, "kosten_usd": kosten,
+                      "sekunden": 5.0} for i in range(12)}
+
+
+def test_besser_gewinnt_auch_bei_dreifachem_preis():
+    """„Qualität zuerst" heißt: der Preis darf den Wechsel nicht verhindern."""
+    u = ps.entscheide(_k(35, 4, 0.0300), _A)
+    assert u["status"] == "bestanden" and u["wechseln"]
+
+
+def test_eklatant_billiger_gewinnt_trotz_leicht_weniger_punkten():
+    """Sven, 2026-08-24: „es sei denn es ist ein eklatanter unterschied bei den kosten"."""
+    u = ps.entscheide(_k(28, 4, 0.0005), _A)          # 93 % Punkte, 5 % Kosten
+    assert u["status"] == "bestanden" and u["wechseln"]
+    assert "eklatanter Preisunterschied" in u["grund"]
+
+
+def test_nur_halb_so_billig_reicht_fuer_die_ausnahme_nicht():
+    u = ps.entscheide(_k(28, 4, 0.0050), _A)          # 93 % Punkte, 50 % Kosten
+    assert u["status"] == "durchgefallen"
+
+
+def test_die_ausnahme_rettet_kein_halbes_produkt():
+    """Der reale Fall `upstage/solar-pro4`: 10 % der Kosten, aber 44 % der Punkte.
+    Ein Preisvorteil kompensiert keinen halbierten Ertrag."""
+    u = ps.entscheide(_k(13, 2, 0.0005), _A)
+    assert u["status"] == "durchgefallen"
+    assert "für die Ausnahme müssten es" in u["grund"], "der Befund nennt die Hürde"
+
+
+def test_der_verwerfungsriegel_kennt_die_ausnahme_nicht():
+    """⚠ Ungenauigkeit ist kein Preisthema. Ein Modell, das mehr behauptet als es belegt,
+    ist zu keinem Preis brauchbar."""
+    u = ps.entscheide(_k(28, 20, 0.0005), _A)         # 93 % Punkte, 5 % Kosten, schlampig
+    assert u["status"] == "durchgefallen" and "behauptet mehr" in u["grund"]
+
+
+def test_beide_spuren_kommen_abwechselnd_dran():
+    """⚠ Stur die billigsten zuerst war die schlechteste Reihenfolge: die billigsten
+    Modelle sind die kleinsten und fallen am ehesten durch."""
+    stand = {"kandidaten": {
+        "billig/a": {"status": "neu", "preis": 0.01, "spur": "preis"},
+        "billig/b": {"status": "neu", "preis": 0.02, "spur": "preis"},
+        "stark/x": {"status": "neu", "preis": 0.70, "spur": "qualitaet"},
+        "stark/y": {"status": "neu", "preis": 0.90, "spur": "qualitaet"}}}
+    assert ps.naechste(stand, 4) == ["stark/x", "billig/a", "stark/y", "billig/b"]
+    assert ps.naechste(stand, 2) == ["stark/x", "billig/a"], "keine Spur verhungert"
+
+
+def test_ohne_spurangabe_gilt_die_preisspur():
+    """Bestandsdaten von vor der Umstellung tragen kein `spur`-Feld."""
+    stand = {"kandidaten": {"alt/x": {"status": "neu", "preis": 0.05}}}
+    assert ps.naechste(stand, 1) == ["alt/x"]

@@ -308,14 +308,45 @@ Sven, 2026-08-23: *„für mich steht qualität oben, aber danach kommt direkt d
 geschwindigkeit ist nicht wichtig […] sollte mit gemessen werden."* Das steht als Code in
 `govisor/pruefstand.py:entscheide()` und nirgends sonst:
 
+Sven, 2026-08-24 präzisiert: *„eig ist qualität zuerst, dann die kosten, es sei denn es
+ist ein eklatanter unterschied bei den kosten."*
+
 | # | Prüfung | Ergebnis |
 |---|---|---|
-| 1 | **Verwerfungsriegel**: verwirft mehr als der Amtierende (> 2 Punkte) | **durchgefallen**, egal wie billig |
-| 2 | signifikant weniger Punkte (Vorzeichentest, p < 0,05) | durchgefallen |
-| 3 | signifikant mehr Punkte | **bestanden** — auch wenn teurer |
-| 4 | gleichwertig **und** ≥ 20 % billiger | **bestanden** |
-| 5 | gleichwertig, kaum billiger | gleichwertig, kein Wechsel |
+| 1 | **Verwerfungsriegel**: verwirft mehr als der Amtierende (> 2 Punkte) | **durchgefallen**, egal wie billig — **ohne Ausnahme** |
+| 2 | signifikant weniger Punkte, aber **≥ 90 % der Punkte bei ≤ 10 % der Kosten** | **bestanden** — die Ausnahme |
+| 3 | signifikant weniger Punkte, sonst | durchgefallen |
+| 4 | signifikant mehr Punkte | **bestanden** — auch wenn teurer |
+| 5 | gleichwertig **und** ≥ 20 % billiger | **bestanden** |
+| 6 | gleichwertig, kaum billiger | gleichwertig, kein Wechsel |
 | — | Geschwindigkeit | gemessen, ausgewiesen, **entscheidet nichts** |
+
+Beide Bedingungen der Ausnahme müssen zusammen gelten, sonst wäre sie die Hintertür, durch
+die jedes billige Modell hereinkommt. Zum Maßstab der reale Fall: `upstage/solar-pro4`
+kostete 10 % und fand 44 % — das ist kein Kompromiss, sondern ein halbes Produkt, und er
+fällt weiterhin durch. Der Verwerfungsriegel kennt die Ausnahme **nicht**: Ungenauigkeit
+ist kein Preisthema.
+
+### Zwei Spuren, abwechselnd geprüft
+
+Die erste Fassung liess **nur billigere** Modelle in die Warteschlange. Damit konnte der
+Prüfstand „Qualität zuerst" strukturell nie erfüllen — ein besseres, etwas teureres Modell
+war unsichtbar. Von 234 tauglichen Katalogmodellen kamen 46 in Frage, 188 nie.
+
+| Spur | Aufnahme | sortiert nach |
+|---|---|---|
+| `preis` | ≥ 20 % billiger als unser Boden | Preis, günstigste zuerst |
+| `qualitaet` | teurer, aber **neuer** als unser Modell, bis 2× unser Preis | Preis, günstigste zuerst |
+
+⚠ **Und stur die billigsten zuerst war die schlechteste denkbare Reihenfolge.** Die
+billigsten Modelle sind die kleinsten und fallen am ehesten durch: die ersten drei
+Kandidaten am 2026-08-24 waren ein nicht lieferbares, ein hoffnungslos langsames und eines
+mit 44 % der Punkte — drei Abende für nichts. `naechste()` wechselt jetzt zwischen den
+Spuren ab, Qualität zuerst. Die Qualitätsspur beginnt bei **1,0×** unserem Preis: neuere
+Modelle zum gleichen Geld sind die aussichtsreichsten Kandidaten überhaupt.
+
+Das Erscheinungsdatum sagt nichts über Güte — aber ein Modell, das älter ist als unseres,
+als Verbesserung zu bezahlen ist unplausibel genug, um den Suchraum damit zu halbieren.
 
 Der Verwerfungsriegel steht ganz oben, und das ist keine Förmlichkeit. Unsere eigene
 Messung vom 2026-08-18: die Modelle, die am **wenigsten** fanden, erklärten am **meisten**

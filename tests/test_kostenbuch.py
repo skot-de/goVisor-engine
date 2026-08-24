@@ -298,3 +298,17 @@ def test_leere_antwort_wird_gebucht_denn_sie_kostet_geld(tmp_path, monkeypatch):
     assert zeilen, "die leere Antwort muss im Buch stehen"
     assert zeilen[0]["leer"] is True
     assert zeilen[0]["kosten_usd"] == 0.00013
+
+
+@pytest.mark.parametrize("roh, erwartet", [
+    ("google/gemini-2.5-flash", "google/gemini-2.5-flash:floor"),
+    ("upstage/solar-pro4", "upstage/solar-pro4:floor"),
+    # ⚠ Bereits eine Variante — es darf keine zweite drangehaengt werden.
+    ("openai/gpt-5-nano:batch", "openai/gpt-5-nano:batch"),
+    ("x/y:nitro", "x/y:nitro"),
+    ("x/y:floor", "x/y:floor"),
+])
+def test_mit_boden_haengt_keine_zweite_variante_an(roh, erwartet, monkeypatch):
+    from govisor import llm
+    monkeypatch.setattr(llm, "OR_BODEN", "an")
+    assert llm.mit_boden(roh) == erwartet

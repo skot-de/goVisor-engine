@@ -98,6 +98,10 @@ def verdichte(roh: Iterable[dict]) -> dict[str, dict]:
             "aus": _preis(pr, "completion"),
             "params": sorted(m.get("supported_parameters") or []),
             "auslauf": m.get("expiration_date") or None,
+            # Erscheinungsdatum: das einzige mechanische Indiz fuer „neuere Generation".
+            # Es sagt nichts ueber Guete — aber ein Modell, das aelter ist als unseres,
+            # ist als Qualitaetsverbesserung unplausibel genug, um es nicht zu bezahlen.
+            "erschienen": int(m.get("created") or 0),
         }
     return aus
 
