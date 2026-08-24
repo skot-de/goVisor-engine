@@ -110,10 +110,20 @@ def hole_vergabe(url: str, pg, ziel: Path, dry_run: bool = False) -> dict:
         # Direktvergabe an, es gibt nichts zu bieten und entsprechend nichts herunterzuladen.
         # Das als `fehler` zu fuehren wuerde eine korrekte Seite wie einen Ausfall aussehen
         # lassen und jeden Lauf mit falschen Warnungen belasten.
+        oben = rumpf.upper()
+        # Nach Fristende ersetzt aumass die ganze Seite durch EINEN Satz: „DIE ANGEBOTSFRIST
+        # FUER DIE AUSSCHREIBUNG … IST ABGELAUFEN." Kein Unterlagen-Abschnitt, keine
+        # Bekanntmachungsart — also fiel der Vorgang durch beide Pruefungen und landete als
+        # `fehler`, obwohl nichts fehlgeschlagen war. 6 der 7 so gemeldeten Faelle waren das
+        # (gemessen 2026-08-24); der siebte hatte inzwischen wieder Unterlagen.
+        if "ANGEBOTSFRIST" in oben and "ABGELAUFEN" in oben:
+            return {"status": "abgelaufen", "bytes": 0, "n_files": 0,
+                    "note": "Angebotsfrist abgelaufen"}
+
         art = "unbekannt"
         for kennung in ("EX ANTE BEKANNTMACHUNG", "VORINFORMATION", "ZUSCHLAG",
                         "AUFHEBUNG", "BEKANNTMACHUNG VERGEBENER"):
-            if kennung in rumpf.upper():
+            if kennung in oben:
                 art = kennung.title()
                 break
         if art != "unbekannt":
