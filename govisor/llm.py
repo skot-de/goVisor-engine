@@ -20,6 +20,7 @@ import sys
 import threading as _threading
 from pathlib import Path as _Path
 
+import datetime as _dt
 import contextlib
 import os
 import threading
@@ -503,7 +504,8 @@ GESCHONT = ("pruefstand", "bench")      # Zwecke, die aus dem geschonten Topf za
 _TAKT = int(_os.environ.get("GOVISOR_BUDGET_TAKT", "20"))
 
 _geld_sperre = _threading.Lock()
-_geld = {"start": None, "stand": None, "n": 0, "naechste": 1, "gewarnt": False, "stopp": None}
+_geld = {"start": None, "stand": None, "verbrauch": None, "n": 0, "naechste": 1,
+         "gewarnt": False, "stopp": None}
 
 
 class BudgetErschoepft(RuntimeError):
@@ -534,50 +536,72 @@ def kontostand(frisch: bool = False) -> float | None:
                      "https://openrouter.ai/api/v1/credits"],
                     capture_output=True, text=True, timeout=30)
         d = _json.loads(r.stdout)["data"]
-        _geld["stand"] = float(d["total_credits"]) - float(d["total_usage"])
+        # `total_usage` steigt nur und kennt keine Aufladung — das Tagesbuch braucht es.
+        _geld["verbrauch"] = float(d["total_usage"])
+        _geld["stand"] = float(d["total_credits"]) - _geld["verbrauch"]
         return _geld["stand"]
     except Exception:                                         # noqa: BLE001
         return None
 
 
 def _tagesbuch(stand: float) -> float:
-    """Was HEUTE schon ausgegeben wurde, prozessuebergreifend.
+    """Was heute schon ausgegeben wurde. Grundlage ist der KUMULIERTE Verbrauch.
 
-    Gemerkt wird nicht die Summe, sondern der **erste Kontostand des Tages** — daraus
-    ergibt sich der Verbrauch durch Subtraktion. Das ueberlebt parallele Prozesse ohne
-    Sperre und ohne Addierfehler: es gibt nichts hochzuzaehlen, was doppelt gezaehlt
-    werden koennte.
+    ⚠ **HIER STAND DIE KONTOSTANDSDIFFERENZ, UND DAS MACHTE DEN TAGESDECKEL WERTLOS.**
+    Gerechnet wurde ``max(0, Stand_vom_Tagesbeginn − Stand_jetzt)``. Laedt jemand mitten am
+    Tag Guthaben auf, steigt der Stand ueber den Startwert, die Differenz wird negativ und
+    `max` macht daraus **null**. Gemessen am 2026-08-24: das Tagesbuch meldete 0,00 $,
+    waehrend das Kostenbuch 36,64 $ auswies. Der Deckel haette an diesem Tag nie gegriffen —
+    ausgerechnet an dem Tag, an dem aufgeladen wurde und also am meisten auf dem Spiel stand.
 
-    ⚠ Ein Aufladen mitten am Tag setzt die Tagesrechnung faktisch zurueck (der Stand steigt
-    ueber den Startwert). Das ist gewollt: wer nachlaedt, hat sich entschieden.
+    `total_usage` von OpenRouter steigt nur und kennt keine Aufladung. Damit ist die Zahl
+    gegen genau den Vorgang immun, der sie vorher zunichte gemacht hat.
+
+    Faellt der Verbrauch nicht zu ermitteln, wird auf die alte Rechnung zurueckgegriffen —
+    zu wenig zu messen ist besser als gar nicht zu messen.
     """
-    import datetime as _dt
     import json as _json
-
-    pfad = _Path(__file__).resolve().parent.parent / "data" / ".llm_tagesbudget.json"
     heute = _dt.date.today().isoformat()
+    pfad = _Path(__file__).resolve().parent.parent / "data" / ".llm_tagesbudget.json"
+    verbrauch = _geld.get("verbrauch")
     try:
         d = _json.loads(pfad.read_text(encoding="utf-8"))
     except Exception:                                         # noqa: BLE001
         d = {}
     if d.get("datum") != heute:
-        d = {"datum": heute, "start_stand": stand}
+        d = {"datum": heute, "start_stand": stand, "start_verbrauch": verbrauch}
+        _schreibe_tagesbuch(pfad, d)
+    elif verbrauch is not None and d.get("start_verbrauch") is None:
+        # Bestandsdatei von vor der Umstellung. ⚠ NICHT mit der alten Formel nachtragen —
+        # die ist ja genau die kaputte: nach einer Aufladung liefert sie 0 und der
+        # Startwert wuerde auf den jetzigen Stand gesetzt, womit der heutige Verbrauch
+        # verschluckt waere. Das Kostenbuch weiss, was heute wirklich gebucht wurde.
+        gebucht = 0.0
         try:
-            pfad.parent.mkdir(parents=True, exist_ok=True)
-            pfad.write_text(_json.dumps(d), encoding="utf-8")
-        except Exception as e:                                # noqa: BLE001
-            # ⚠ NICHT still verschlucken. Schlaegt das Schreiben fehl, legt der naechste
-            # Aufruf das Buch neu an — mit dem dann niedrigeren Stand als Startwert. Der
-            # Tagesdeckel misst danach nur noch, was seit diesem Moment ausgegeben wurde,
-            # und greift nie. Genau so ist er am 22.08. lautlos ausgefallen: ein
-            # Startwert von 8,03 $ verschwand, der naechste Aufruf schrieb 5,43 $, und
-            # der Verbrauch dazwischen war aus der Rechnung.
-            with _geld_sperre:
-                if not _geld.get("buch_gewarnt"):
-                    _geld["buch_gewarnt"] = True
-                    print(f"  ⚠ Tagesbuch nicht schreibbar ({type(e).__name__}) — "
-                          f"der Tagesdeckel ist AUS.", flush=True)
+            heute_tag = heute
+            gebucht = sum(float(z["kosten_usd"]) for z in kostenbuch.lies()
+                          if z.get("kosten_usd") is not None
+                          and (z.get("ts") or "").startswith(heute_tag))
+        except Exception:                                     # noqa: BLE001
+            gebucht = max(0.0, float(d.get("start_stand", stand)) - stand)
+        d["start_verbrauch"] = verbrauch - gebucht
+        _schreibe_tagesbuch(pfad, d)
+    if verbrauch is not None and d.get("start_verbrauch") is not None:
+        return max(0.0, verbrauch - float(d["start_verbrauch"]))
     return max(0.0, float(d.get("start_stand", stand)) - stand)
+
+
+def _schreibe_tagesbuch(pfad, d) -> None:
+    """⚠ Ein stilles Scheitern hier macht den Tagesdeckel wirkungslos — es wird geklagt."""
+    import json as _json
+    try:
+        pfad.parent.mkdir(parents=True, exist_ok=True)
+        pfad.write_text(_json.dumps(d), encoding="utf-8")
+    except Exception as e:                                    # noqa: BLE001
+        if not _geld.get("tagesbuch_gewarnt"):
+            _geld["tagesbuch_gewarnt"] = True
+            print(f"⚠ Tagesbuch nicht schreibbar ({pfad}): {type(e).__name__} — der "
+                  f"Tagesdeckel kann nicht greifen.", file=sys.stderr, flush=True)
 
 
 def _geldwache() -> None:

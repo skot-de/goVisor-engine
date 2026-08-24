@@ -362,3 +362,55 @@ def test_schonung_gilt_auch_am_tagesdeckel(monkeypatch):
                          "gewarnt": False, "stopp": None})
     with llm.kontext(zweck="pruefstand"):
         llm._geldwache()          # der geschonte Zweck darf die letzten 0,20 $ nutzen
+
+
+# ── Tagesbuch: eine Aufladung darf den Tagesdeckel nicht aushebeln ───────────────────
+
+def test_tagesbuch_ueberlebt_eine_aufladung(monkeypatch):
+    """⚠ Der Fund vom 2026-08-24, und einer der gefährlichsten des Tages.
+
+    Gerechnet wurde `max(0, Stand_vom_Tagesbeginn − Stand_jetzt)`. Lädt jemand mitten am
+    Tag auf, steigt der Stand über den Startwert, die Differenz wird negativ und `max`
+    macht daraus **null**. Das Tagesbuch meldete 0,00 $, während das Kostenbuch 36,64 $
+    auswies — der Deckel hätte an genau dem Tag nie gegriffen, an dem aufgeladen wurde und
+    also am meisten auf dem Spiel stand.
+    """
+    from govisor import llm
+    importlib.reload(llm)
+    # Die echte Datei vorgeben und hinterher zurueckstellen — ein umgelenkter Pfad wuerde
+    # die Aufloesung in `_tagesbuch` zerschiessen und nicht das pruefen, was gemeint ist.
+    import json as _json
+    heute = __import__("datetime").date.today().isoformat()
+    zielpfad = Path(llm.__file__).resolve().parent.parent / "data" / ".llm_tagesbudget.json"
+    sicherung = zielpfad.read_text(encoding="utf-8") if zielpfad.exists() else None
+    try:
+        zielpfad.write_text(_json.dumps(
+            {"datum": heute, "start_stand": 5.00, "start_verbrauch": 100.0}),
+            encoding="utf-8")
+        # Aufladung: Stand steigt von 5 auf 95, Verbrauch von 100 auf 103.
+        llm._geld["verbrauch"] = 103.0
+        assert llm._tagesbuch(95.00) == pytest.approx(3.0), \
+            "3 $ verbraucht — die Aufladung darf daran nichts ändern"
+        # Zum Vergleich die alte Rechnung: 5 − 95 = −90 → max(0, …) = 0
+        assert max(0.0, 5.00 - 95.00) == 0.0
+    finally:
+        if sicherung is not None:
+            zielpfad.write_text(sicherung, encoding="utf-8")
+
+
+def test_tagesbuch_faellt_ohne_verbrauchszahl_auf_die_alte_rechnung_zurueck(monkeypatch):
+    """Zu wenig zu messen ist besser als gar nicht zu messen."""
+    from govisor import llm
+    importlib.reload(llm)
+    import json as _json
+    heute = __import__("datetime").date.today().isoformat()
+    zielpfad = Path(llm.__file__).resolve().parent.parent / "data" / ".llm_tagesbudget.json"
+    sicherung = zielpfad.read_text(encoding="utf-8") if zielpfad.exists() else None
+    try:
+        zielpfad.write_text(_json.dumps({"datum": heute, "start_stand": 10.0}),
+                            encoding="utf-8")
+        llm._geld["verbrauch"] = None
+        assert llm._tagesbuch(7.0) == pytest.approx(3.0)
+    finally:
+        if sicherung is not None:
+            zielpfad.write_text(sicherung, encoding="utf-8")
