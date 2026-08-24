@@ -46,12 +46,25 @@ for ((i = 1; i <= ETAPPEN; i++)); do
   fi
   sag "── Etappe ${i}: ${ETAPPE_USD} \$ (Guthaben ${stand} \$)"
 
+  vorher="$stand"
   BUDGET_USD="$ETAPPE_USD" \
   GOVISOR_LIMIT_USD="$(python3 -c "print(${ETAPPE_USD} + 1)")" \
   GOVISOR_TAG_USD="${GOVISOR_TAG_USD:-200}" \
   PARALLEL="${PARALLEL:-8}" LIMIT="${LIMIT:-600}" NUR_OFFENE=1 PYTHONUNBUFFERED=1 \
     python3 -u scripts/analyze_docs.py >>"$LOG" 2>&1
   sag "   $(grep -oE 'Budget erreicht.*' "$LOG" | tail -1)"
+
+  # ⛔ LEERRUNDEN ERKENNEN. Am 2026-08-24 war der Rueckstau nach drei Etappen abgearbeitet
+  # („Zu analysieren: 0 von 7678"), und diese Schleife drehte danach 37 Runden in wenigen
+  # Minuten: Analyse startet, findet nichts, endet; Schranke misst null neue Aufrufe und
+  # meldet folgerichtig gruen. Ein Lauf, der nichts tut, sieht von aussen aus wie ein Lauf,
+  # der alles richtig macht — deshalb wird hier am KONTOSTAND geprueft und nicht am Log.
+  danach=$(python3 -c "import sys;sys.path.insert(0,'.');from govisor import llm;print(f'{llm.kontostand() or 0:.2f}')" 2>/dev/null | tail -1)
+  if python3 -c "import sys; sys.exit(0 if (float('$vorher') - float('$danach')) < 0.05 else 1)"; then
+    sag "Etappe hat nichts verbraucht (${vorher} → ${danach} \$) — es gibt nichts mehr zu tun."
+    sag "$(grep -oE 'Zu analysieren: [0-9]+ \(von [0-9]+\)' "$LOG" | tail -1)"
+    exit 0
+  fi
 
   sag "── Schranke nach Etappe ${i}"
   if python3 scripts/qualitaetsschranke.py >>"$LOG" 2>&1; then
