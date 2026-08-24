@@ -710,10 +710,18 @@ def probe(model: str | None = None) -> dict:
     ganzen Abend gerettet.
     """
     vorher = kontostand(frisch=True)
-    antwort = chat([{"role": "user", "content": "Antworte nur mit: ok"}], model=model)
-    nachher = kontostand(frisch=True)
-    return {"antwort": (antwort or "").strip()[:40], "vorher": vorher, "nachher": nachher,
-            "kosten": None if None in (vorher, nachher) else round(vorher - nachher, 4)}
+    with kontext(zweck="probe"):
+        antwort = chat([{"role": "user", "content": "Antworte nur mit: ok"}], model=model)
+    v = letzter_verbrauch()
+    # ⚠ NICHT die Differenz zweier Kontostaende. Zwei Gruende, beide gemessen:
+    #   · `total_usage` laeuft nach — direkt nach einem Aufruf steht der Stand oft noch
+    #     unveraendert da, und die Probe meldete 0,0000 $ fuer einen bezahlten Aufruf.
+    #   · Eine Aufladung zwischen den beiden Messungen kehrt das Vorzeichen um.
+    # Der abgerechnete Betrag steht seit dem 2026-08-24 exakt in der Antwort selbst.
+    return {"antwort": (antwort or "").strip()[:40], "vorher": vorher,
+            "nachher": kontostand(frisch=True), "endpunkt": v.get("endpunkt"),
+            "sekunden": v.get("sekunden"),
+            "kosten": None if v.get("kosten_usd") is None else round(v["kosten_usd"], 8)}
 
 
 class AllKeysExhausted(RuntimeError):

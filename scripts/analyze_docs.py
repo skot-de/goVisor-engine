@@ -29,6 +29,7 @@ import duckdb
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
+from govisor.llm import _geld as _llm_geld  # noqa: E402
 from govisor.llm import (chat, letzter_anbieter, anbieter_stand,  # noqa: E402
                          kontext as llm_kontext, mit_boden as llm_mit_boden,
                          DEFAULT_MODEL as llm_default_model,
@@ -104,6 +105,20 @@ PARALLEL = max(1, int(os.environ.get("PARALLEL", "8")))
 # kein Messinstrument.
 BUDGET_USD = float(os.environ.get("BUDGET_USD", "0") or 0)
 NUR_OFFENE = os.environ.get("NUR_OFFENE", "") == "1"
+
+
+def _verbrauch() -> float | None:
+    """Der KUMULIERTE Verbrauch (`total_usage`), sofern ermittelbar.
+
+    ⚠ **Warum nicht das Restguthaben.** Der Etappendeckel rechnete `start - jetzt` auf dem
+    Restguthaben. Laedt jemand mitten in der Etappe auf, wird die Differenz negativ und der
+    Deckel loest NIE aus — genau die Falle, vor der der Docstring von `_restguthaben`
+    warnt, nur mit umgekehrtem Vorzeichen. Am 2026-08-24 war das im Modul die fuenfte
+    Stelle derselben Klasse (Tagesbuch, Abgleich, Lauf-Deckel, Kostenbuch-Umhaengen).
+    `total_usage` steigt nur und kennt keine Aufladung.
+    """
+    _llm_kontostand(frisch=True)          # setzt `llm._geld["verbrauch"]` mit
+    return _llm_geld.get("verbrauch")
 
 
 def _restguthaben() -> float | None:
@@ -630,6 +645,7 @@ def main() -> int:
         OUT.write_text(json.dumps(out, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
 
     start_usd = _restguthaben() if BUDGET_USD else None
+    start_verbrauch = _verbrauch() if BUDGET_USD else None
     if BUDGET_USD:
         print(f"Budget: {BUDGET_USD:.2f} $ ab Stand "
               + (f"{start_usd:.2f} $" if start_usd is not None else "(nicht lesbar — ungebremst!)"),
@@ -658,10 +674,16 @@ def main() -> int:
                 fertig += 1
                 # Notbremse: alle 10 Vorgaenge nachsehen, was der Lauf gekostet hat.
                 if BUDGET_USD and start_usd is not None and fertig % 10 == 0:
-                    jetzt = _restguthaben()
-                    # Restguthaben FAELLT — verbraucht ist `start - jetzt`.
-                    if jetzt is not None and start_usd - jetzt >= BUDGET_USD:
-                        print(f"\n⛔ Budget erreicht: {start_usd - jetzt:.2f} $ von "
+                    # Bevorzugt der kumulierte Verbrauch — er ueberlebt eine Aufladung.
+                    # Rueckfall auf das Restguthaben, wenn er nicht zu haben ist.
+                    v_jetzt = _verbrauch()
+                    if v_jetzt is not None and start_verbrauch is not None:
+                        weg = v_jetzt - start_verbrauch
+                    else:
+                        jetzt = _restguthaben()
+                        weg = (start_usd - jetzt) if jetzt is not None else None
+                    if weg is not None and weg >= BUDGET_USD:
+                        print(f"\n⛔ Budget erreicht: {weg:.2f} $ von "
                               f"{BUDGET_USD:.2f} $ — Lauf wird beendet, Stand ist gesichert.",
                               flush=True)
                         for f in laeuft:
