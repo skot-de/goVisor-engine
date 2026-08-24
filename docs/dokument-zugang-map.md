@@ -21,7 +21,7 @@ Unterlagen — deshalb erlauben die großen Engines den Download oberschwellig *
 | **Bund e-Vergabe** (evergabe-online.de) | 8,8 % | **ohne Registrierung** — freier Download (Beschaffungsamt BMI) | ✅ ohne Account holbar |
 | **AI evergabe.de** (`/unterlagen/`) | 7,2 % | **ohne Registrierung** — Deeplink-Download | ✅ ohne Account holbar |
 | **AI evergabe.bieter** (`evergabe.bieter/`) | 4,3 % | **ohne Registrierung** (gleiche AI-Plattform) | ✅ ohne Account holbar |
-| **Healy-Hudson / NetServer** (`/NetServer/`) | 13,3 % | **Registrierung nötig** — keine öffentlichen Download-Buttons | 🟡 Login-Wand |
+| **Healy-Hudson / NetServer** (`/NetServer/`) | 13,3 % | **ohne Registrierung** — Sammel-ZIP je Version (widerlegt 2026-08-24, s. u.) | ✅ ohne Account holbar |
 | **subreport ELViS** | 7,3 % | (kostenlose) **Registrierung** üblich | 🟡 Login-Wand (zu bestätigen) |
 | **RIB meinauftrag** | 6,9 % | **Registrierung nötig** — „Documents"-Bereich öffentlich leer | 🟡 Login-Wand |
 | **Staatsanzeiger / vergabe24** | 3,6 % | zu verifizieren | ⚪ offen |
@@ -36,7 +36,7 @@ Unterlagen — deshalb erlauben die großen Engines den Download oberschwellig *
 |---|---:|---|
 | **Skript-fetchbar** (cosinex/DTVP) | **≈ 32 %** | ✅ **validiert + gebaut** (`docfetch.py`): Archiv-ZIP-Endpoint, login-frei, curl-tauglich |
 | **§41-frei, aber NICHT skript-fetchbar** (Bund + AI) | **≈ 20 %** | Bund = Apache-Wicket-Stateful (Download-Link → 403); AI evergabe.de = **418 Anti-Bot**; AI-bieter → Healy-Dashboard. Frei *im Prinzip*, technisch nur per **Browser-Automation** (brüchig, nicht bulk-tauglich, SSD-Schreiben mit Browser-Tools nicht sauber) |
-| **Login-Wand** (NetServer + subreport + RIB) | **≈ 28 %** | Registrierung nötig → **ich darf mich nicht einloggen** (Regelgrenze), egal welche Accounts |
+| **Login-Wand** (subreport + RIB) | **≈ 14 %** | Registrierung nötig → **ich darf mich nicht einloggen** (Regelgrenze), egal welche Accounts. NetServer gehört seit 2026-08-24 nicht mehr dazu |
 | **Zu verifizieren / gemischt** | **≈ 20 %** | Staatsanzeiger/AUMASS/Direktseiten — Rest der Sondierung |
 
 **Korrektur (2026-07-29, gemessen):** Die frühere „≈ 52 % ohne Login"-Schätzung stützte sich auf
@@ -71,3 +71,25 @@ deinen Zugangsdaten nicht einloggen. Die Trennlinie ist also nicht „mit/ohne A
 - **Unterschwellig** (DÖE/atverg): §41 gilt nicht → dort ist Registrierung häufiger, auch bei den
   login-freien Engines. Die 52 % oben beziehen sich auf den oberschwelligen TED-Bestand.
 - Zahlen sind DE (der aktuelle Bestand); AT/CH-Verteilung kommt nach dem laufenden Ingest dazu.
+
+## Korrektur (2026-08-24, gemessen): NetServer war nie eine Login-Wand
+
+Die Zeile oben behauptete „Registrierung nötig — keine öffentlichen Download-Buttons".
+Gemessen am eigenen Bestand: **1.871 Abrufversuche, 1.494 erfolgreich (80 %), 31.442
+Dateien, 57 GB, über 40 Hosts — sämtlich anonym.** Die ursprüngliche Sondierung hatte auf
+der BEKANNTMACHUNG nachgesehen; der Unterlagen-Bereich hängt an einem anderen Servlet
+(`TenderingProcedureDetails`, siehe `govisor/docfetch_netserver.py`).
+
+Zwei Nachbeben derselben Ursache, beide am 2026-08-24 behoben:
+
+- **had.de** ist nur eine Hülle; die Anwendung läuft im Kindrahmen auf `vergabe.had.de`.
+  Wer die Seite abfragt, durchsucht das Menü. 188 Vorgänge galten als „hat keine
+  Unterlagen"; die Stichprobe fand bei 21 von 25 welche.
+- **xvergabe.de** fährt eine neuere Oberfläche mit anderen CSS-Klassen und einem
+  Sammelknopf statt eines Modals. 32 Vorgänge galten als „keine Version gelistet",
+  während die Seite die Dateien sichtbar auflistete.
+
+**Die Lehre für jede weitere Zeile dieser Tabelle:** „kein Download-Knopf gefunden" ist ein
+Befund über unseren Blick, nicht über das Portal. Erst wenn geklärt ist, WELCHE Seite man
+angesehen hat und in welchem Rahmen, ist „Login-Wand" eine Aussage. Die Zeilen mit „zu
+verifizieren" stehen bis heute unter diesem Vorbehalt.

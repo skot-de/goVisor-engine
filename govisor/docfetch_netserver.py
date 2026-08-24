@@ -91,10 +91,13 @@ ROOT = Path(__file__).resolve().parent.parent
 # selben Tag: wer nach HOSTNAMEN sucht statt nach dem Merkmal der Plattform, findet immer
 # nur die Portale, die er schon kannte.
 #
-# ⚠ `had.de` (Hessen) meldete beim ersten Lauf „keine Version gelistet". Dasselbe Portal
-# braucht schon bei den Bekanntmachungen einen eigenen Pfad (`netserver.hole_had`) — es ist
-# anders geskinnt als die uebrigen. Ob dort wirklich keine Unterlagen liegen oder nur die
-# Tabelle anders heisst, ist UNGEPRUEFT. 197 offene Leads haengen daran.
+# `had.de` (Hessen) meldete beim ersten Lauf „keine Version gelistet". Diese Frage ist am
+# 2026-08-24 GEKLAERT, und die Antwort war keine der beiden vermuteten: `www.had.de` ist nur
+# eine Huelle. Die Anwendung laeuft in einem Kindrahmen auf `vergabe.had.de`, und
+# `page.query_selector` sieht nur den Hauptrahmen — wir haben also im MENUE nach Unterlagen
+# gesucht. Dass die Wache das nicht merkte, lag an der Brotkrume „… | eHAD-Vergabeunterlagen",
+# die auf jeder Seite des Portals steht (siehe `hole_vergabe`). Stichprobe ueber 25 der 188
+# Faelle nach der Korrektur: 21 hatten Unterlagen, 4 waren abgelaufen.
 HOSTS = (
     "vergabe.autobahn.de", "www.had.de", "vergabe.hessen.de",
     "vergabe.landbw.de", "ausschreibungen.landbw.de",
@@ -181,49 +184,21 @@ def unterlagen_url(url: str | None) -> str | None:
             f"&TenderOID={m.group(1)}&thContext=publications")
 
 
-def hole_vergabe(seite: str, pg, ziel: Path, dry_run: bool = False) -> dict:
-    """Eine Vergabe → Unterlagen-ZIP. Gibt {status, bytes, n_files, note}."""
-    r = pg.goto(seite, wait_until="domcontentloaded")
-    if r is not None and r.status >= 400:
-        return {"status": "fehler", "bytes": 0, "n_files": 0, "note": f"http {r.status}"}
-    pg.wait_for_timeout(_WARTE_MS)
+# NetServer laeuft in zwei Oberflaechen. Die aeltere (die Regel) fuehrt ueber ein Modal:
+# je Version ein `zipFileContents`-Knopf, darin „Alles auswählen" und Absenden. Die neuere
+# (gemessen auf xvergabe.de) hat gar kein Modal, sondern einen Sammelknopf, der das ZIP
+# sofort liefert. Wer nur den alten Selektor kennt, meldet dort „keine Version gelistet",
+# obwohl die Seite die Dateien sichtbar auflistet — 32 Vorgaenge lagen so auf Halde.
+_KNOPF = "a.zipFileContents"
+_SAMMEL = "a.documents-download-all"
+_EINZEL = "a.document-tab-document-download"
 
-    knoepfe = pg.query_selector_all("a.zipFileContents")
-    if not knoepfe:
-        # POSITIVES Merkmal pruefen, statt aus der Abwesenheit zu schliessen. Traegt die
-        # Seite ueberhaupt den Unterlagen-Abschnitt? Wenn ja, hat die Vergabe wirklich
-        # keine Dateien; wenn nein, sind wir auf der falschen Seite gelandet.
-        rumpf = pg.evaluate("() => document.body.innerText")
-        if "Vergabeunterlagen" not in rumpf:
-            return {"status": "fehler", "bytes": 0, "n_files": 0,
-                    "note": "kein Unterlagen-Abschnitt — falsche Seite?"}
-        return {"status": "leer", "bytes": 0, "n_files": 0, "note": "keine Version gelistet"}
 
-    # NUR die oberste Zeile: hoechste Versionsnummer, und die Seite sagt selbst, dass nur
-    # die aktuellste gilt.
-    knoepfe[0].click()
-    pg.wait_for_timeout(_MODAL_MS)
-    try:
-        pg.click("#detailModal input[value='Alles auswählen']")
-        pg.wait_for_timeout(1500)
-    except Exception:                                    # noqa: BLE001
-        pass                                             # manche Modals haben alles vorgewaehlt
-    if dry_run:
-        namen = pg.evaluate("""() => [...document.querySelectorAll('#detailModal a')]
-            .map(a => (a.innerText || '').trim()).filter(x => /\\.[a-z0-9]{2,5}$/i.test(x))""")
-        return {"status": "probe", "bytes": 0, "n_files": len(namen),
-                "note": ", ".join(namen[:3])}
-
-    try:
-        with pg.expect_download(timeout=_DOWNLOAD_MS) as dl:
-            pg.click("#detailModal input[type=submit]")
-        d = dl.value
-        ziel.parent.mkdir(parents=True, exist_ok=True)
-        tmp = ziel.with_suffix(".part")
-        d.save_as(str(tmp))
-    except Exception as e:                               # noqa: BLE001
-        return {"status": "fehler", "bytes": 0, "n_files": 0, "note": type(e).__name__}
-
+def _uebernimm(d, ziel: Path) -> dict:
+    """Heruntergeladene Datei pruefen und ablegen — fuer beide Bauformen dieselbe Kontrolle."""
+    ziel.parent.mkdir(parents=True, exist_ok=True)
+    tmp = ziel.with_suffix(".part")
+    d.save_as(str(tmp))
     groesse = tmp.stat().st_size
     if groesse > _MAX_ZIP:
         tmp.unlink(missing_ok=True)
@@ -238,6 +213,102 @@ def hole_vergabe(seite: str, pg, ziel: Path, dry_run: bool = False) -> dict:
         return {"status": "fehler", "bytes": groesse, "n_files": 0, "note": "defektes ZIP"}
     tmp.replace(ziel)
     return {"status": "downloaded", "bytes": groesse, "n_files": n, "note": ""}
+
+
+def inhalts_rahmen(pg, oid: str | None):
+    """Der Rahmen, der den VORGANG traegt — nicht der, der das MENUE traegt.
+
+    NetServer kommt in zwei Bauformen: eine Seite (die Regel) oder ein Frameset, dessen
+    Menue auf dem einen Host liegt und dessen Anwendung auf einem anderen
+    (`www.had.de` → `vergabe.had.de`). `page.query_selector_all` sieht nur den Hauptrahmen;
+    bei der Frameset-Bauform sucht es also im Menue nach Unterlagen und findet nie welche.
+
+    Gesucht wird nach dem MERKMAL, nicht nach dem Hostnamen — dieselbe Lehre wie oben bei
+    der Portalerkennung, hier zum vierten Mal in derselben Datei.
+    """
+    rahmen = list(pg.frames)
+    for f in rahmen:                  # eindeutig: wer den Knopf traegt, ist der Inhalt
+        try:
+            if f.query_selector_all(_KNOPF):
+                return f
+        except Exception:                                # noqa: BLE001
+            continue
+    if oid:                           # sonst: der Kindrahmen, der DENSELBEN Vorgang laedt
+        for f in rahmen:
+            if f.parent_frame is not None and oid in (f.url or ""):
+                return f
+    return pg.main_frame
+
+
+def hole_vergabe(seite: str, pg, ziel: Path, dry_run: bool = False) -> dict:
+    """Eine Vergabe → Unterlagen-ZIP. Gibt {status, bytes, n_files, note}."""
+    r = pg.goto(seite, wait_until="domcontentloaded")
+    if r is not None and r.status >= 400:
+        return {"status": "fehler", "bytes": 0, "n_files": 0, "note": f"http {r.status}"}
+    pg.wait_for_timeout(_WARTE_MS)
+
+    m = _OID.search(seite)
+    rahmen = inhalts_rahmen(pg, m.group(1) if m else None)
+
+    knoepfe = rahmen.query_selector_all(_KNOPF)
+    if not knoepfe:
+        # POSITIVES Merkmal pruefen, statt aus der Abwesenheit zu schliessen — aber im
+        # INHALT, nicht irgendwo auf der Seite.
+        #
+        # ⚠ Bis 2026-08-24 las diese Wache `document.body.innerText` der GANZEN Seite. Die
+        # Brotkrume von had.de lautet „Ausschreibungen suchen | … | eHAD-Vergabeunterlagen"
+        # — das Wort steht dort auf JEDER Seite, im Menue. Also meldete die Wache 188 Mal
+        # „Abschnitt vorhanden, die Vergabe hat wirklich keine Datei", waehrend sie in
+        # Wahrheit die Navigation gelesen hatte. Stichprobe ueber 25 dieser Faelle nach der
+        # Korrektur: 21 hatten Unterlagen, 4 waren abgelaufen. Ein positives Merkmal ist nur
+        # dann ein Nachweis, wenn es nicht auch im Rahmen drumherum stehen kann.
+        sammel = rahmen.query_selector(_SAMMEL)
+        if sammel:                        # neuere Oberflaeche: Sammel-ZIP ohne Modal
+            if dry_run:
+                namen = rahmen.evaluate(
+                    "() => [...document.querySelectorAll('" + _EINZEL + "')]"
+                    ".map(a => (a.innerText || '').trim().split('\\n').pop())")
+                return {"status": "probe", "bytes": 0, "n_files": len(namen),
+                        "note": ", ".join(n.strip() for n in namen[:3])}
+            try:
+                with pg.expect_download(timeout=_DOWNLOAD_MS) as dl:
+                    sammel.click()
+                return _uebernimm(dl.value, ziel)
+            except Exception as e:                       # noqa: BLE001
+                return {"status": "fehler", "bytes": 0, "n_files": 0, "note": type(e).__name__}
+
+        rumpf = rahmen.evaluate("() => document.body ? document.body.innerText : ''")
+        if "Sichtbarkeitszeitraum" in rumpf:
+            # Das Portal sagt es selbst: ausserhalb des Sichtbarkeitsfensters. Kein Konto
+            # und kein zweiter Versuch aendern daran etwas → DAUERHAFT.
+            return {"status": "abgelaufen", "bytes": 0, "n_files": 0,
+                    "note": "Sichtbarkeitszeitraum abgelaufen"}
+        if "Vergabeunterlagen" not in rumpf:
+            return {"status": "fehler", "bytes": 0, "n_files": 0,
+                    "note": "kein Unterlagen-Abschnitt — falsche Seite?"}
+        return {"status": "leer", "bytes": 0, "n_files": 0, "note": "keine Version gelistet"}
+
+    # NUR die oberste Zeile: hoechste Versionsnummer, und die Seite sagt selbst, dass nur
+    # die aktuellste gilt.
+    knoepfe[0].click()
+    pg.wait_for_timeout(_MODAL_MS)
+    try:
+        rahmen.click("#detailModal input[value='Alles auswählen']")
+        pg.wait_for_timeout(1500)
+    except Exception:                                    # noqa: BLE001
+        pass                                             # manche Modals haben alles vorgewaehlt
+    if dry_run:
+        namen = rahmen.evaluate("""() => [...document.querySelectorAll('#detailModal a')]
+            .map(a => (a.innerText || '').trim()).filter(x => /\\.[a-z0-9]{2,5}$/i.test(x))""")
+        return {"status": "probe", "bytes": 0, "n_files": len(namen),
+                "note": ", ".join(namen[:3])}
+
+    try:
+        with pg.expect_download(timeout=_DOWNLOAD_MS) as dl:
+            rahmen.click("#detailModal input[type=submit]")
+        return _uebernimm(dl.value, ziel)
+    except Exception as e:                               # noqa: BLE001
+        return {"status": "fehler", "bytes": 0, "n_files": 0, "note": type(e).__name__}
 
 
 def lauf(limit: int | None = None, dry_run: bool = False, country: str = "DE") -> dict:

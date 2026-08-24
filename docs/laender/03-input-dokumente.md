@@ -145,6 +145,28 @@ Connectors gilt:
 
 ## Fallen beim Abruf
 
+- **⚠ Ein positives Merkmal ist nur dann ein Nachweis, wenn es nicht auch im Rahmen
+  drumherum stehen kann.** Der NetServer-Abrufer schloss nicht aus der Abwesenheit — er
+  prüfte eigens nach, ob die Seite den Unterlagen-Abschnitt trägt, und meldete nur dann
+  „wirklich keine Datei". Genau richtig gedacht, und trotzdem falsch: geprüft wurde
+  `document.body.innerText` der ganzen Seite, und die Brotkrume von had.de lautet auf JEDER
+  Seite „… | eHAD-Vergabeunterlagen". Die Wache las das Menü und bestätigte sich selbst.
+  188 Vorgänge lagen deshalb als „hat keine Unterlagen" auf Halde; die Stichprobe nach der
+  Korrektur fand bei 21 von 25 welche. **Ein Merkmal im Suchbereich einschränken, sonst
+  bestätigt die Navigation jede Behauptung.**
+- **Frameset-Portale: `page.query_selector` sieht nur den Hauptrahmen.** `www.had.de` ist
+  eine leere Hülle, die Anwendung läuft auf `vergabe.had.de` in einem Kindrahmen. Wer die
+  Seite abfragt, durchsucht das Menü. Den Inhaltsrahmen am MERKMAL suchen (wer den Knopf
+  trägt, ist der Inhalt; sonst der Kindrahmen, der dieselbe Vorgangs-ID lädt), niemals am
+  Hostnamen — siehe auch [Kapitel 02](02-input-ausschreibungen.md), dort dieselbe Lehre.
+- **Ein Portal, zwei Oberflächen.** NetServer läuft in einer älteren Bauform (Modal je
+  Version) und einer neueren (Sammelknopf, kein Modal, andere CSS-Klassen). Wer nur die
+  bekannte Bauform kennt, meldet auf der anderen „keine Version gelistet", obwohl die Seite
+  die Dateien sichtbar auflistet. **Vor „das Portal gibt nichts her" einmal in den Quelltext
+  sehen, was es tatsächlich anbietet.**
+- **„Sichtbarkeitszeitraum abgelaufen" ist DAUERHAFT, nicht offen.** Sagt das Portal selbst,
+  dass der Vorgang ausserhalb seines Fensters liegt, hilft kein zweiter Versuch und kein
+  Konto. Ohne eigene Klasse läuft der Vorgang alle sieben Tage erneut gegen dieselbe Wand.
 - **Hängende Abrufer.** `SIGALRM` wird von Playwright verschluckt. Es braucht eine Wache
   ausserhalb des Prozesses, sonst steht ein Lauf still und meldet nichts.
 - **Zip-Bomben.** Grössengrenze und Entpack-Grenze sind Pflicht, nicht Kür.
