@@ -13,6 +13,16 @@ from govisor import docfetch_queue as q
 FEHLER = "https://bieterzugang.deutsche-evergabe.de/evergabe.bieter/ErrorMessage.aspx?ErrorMessageKey="
 VORGANG = "https://fbhh-evergabe.web.hamburg.de/evergabe.bieter/eva/supplierportal/x/subproject/1"
 
+# Echte Vorgangsseiten tragen Tausende Zeichen. Ein Fake mit drei Woertern loest die Wache
+# gegen leer geladene Seiten aus — und pruefte dann etwas anderes als gemeint.
+def _seitentext(kern: str) -> str:
+    rahmen = ("Öffentliche Verfahren Bieterassistent Einladungscode Nicht angemeldet Home "
+              "Details Projektinformationen Auftraggeber Auftraggebertyp Öffentlicher "
+              "Auftraggeber Verfahren Projektnummer Titel Vergabeordnung Leistungsart "
+              "Vergabeart Vertragsart Ausführungsort Fristen und Termine Bekanntmachung "
+              "Einreichungsfrist Bindefrist Verfahrensbeschreibung ")
+    return kern + "\n" + rahmen * 2
+
 
 class Antwort:
     def __init__(self, status=200):
@@ -69,13 +79,27 @@ def test_fehlerseite_wird_nicht_als_leere_vergabe_gemeldet():
 
 
 def test_echte_vorgangsseite_ohne_dateien_bleibt_leer():
-    r = hh.hole_vergabe("x", Seite(VORGANG, text="Projektinformationen"), Path("/tmp"), dry_run=True)
+    r = hh.hole_vergabe("x", Seite(VORGANG, text=_seitentext("Projektinformationen")), Path("/tmp"), dry_run=True)
     assert r["status"] == "leer"
 
 
 def test_dashboard_bleibt_unterscheidbar_von_leer():
-    s = Seite("https://portal.deutsche-evergabe.de/dashboards/dashboard_off/abc", text="Anzahl: 7")
+    s = Seite("https://portal.deutsche-evergabe.de/dashboards/dashboard_off/abc", text=_seitentext("Anzahl: 7"))
     r = hh.hole_vergabe("x", s, Path("/tmp"), dry_run=True)
     assert r["status"] == "kein_downloadbereich"
     # Zugangsfrage, kein Urteil über die Vergabe — s. test_docfetch_queue.
     assert q.BLOCKIERT.get(r["status"]) == "konto"
+
+
+def test_leer_geladene_seite_ist_kein_befund():
+    """⚠ Ein leerer Rumpf ist NIE eine Aussage über eine Vergabe.
+
+    Ohne diese Wache landet ein misslungener Ladevorgang als `leer` im Manifest — also als
+    Befund über das Portal, obwohl nichts gesehen wurde. Genau so stand am 2026-08-24 eine
+    Seite mit 0 Zeichen als „kein Unterlagen-Link" beim Ausschreibungsblatt.
+    """
+    r = hh.hole_vergabe("x", Seite(VORGANG, text=""), Path("/tmp"), dry_run=True)
+    assert r["status"] == "fehler"
+    assert "leer geladen" in r["note"]
+    # Und er darf nicht als erledigt gelten, sonst wird er nie wiederholt.
+    assert r["status"] not in q.KEIN_FEHLSCHLAG

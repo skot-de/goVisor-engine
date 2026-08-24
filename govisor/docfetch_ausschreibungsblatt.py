@@ -77,6 +77,12 @@ def kennung(url: str | None) -> str | None:
     return m.group(1) if m else None
 
 
+# Kuerzeste je gemessene ECHTE Vorgangsseite dieses Portals liegt bei rund 10.000 Zeichen.
+# Die Grenze ist bewusst weit darunter: sie soll leere Ladevorgaenge fangen, nicht knappe
+# Bekanntmachungen aussortieren.
+_RUMPF_MIN = 200
+
+
 def hole_vergabe(seite: str, pg, ziel: Path, dry_run: bool = False) -> dict:
     """Eine Vergabe → ZIP nach `ziel`. Erwartet einen FRISCHEN Kontext (s. Modul-Docstring)."""
     pg.goto(seite, wait_until="domcontentloaded")
@@ -87,8 +93,24 @@ def hole_vergabe(seite: str, pg, ziel: Path, dry_run: bool = False) -> dict:
              .find(e => /initiateDownload/.test(e.getAttribute('href') || ''));
              return a ? a.href : null; }""")
     if not start:
-        # Kein Link heisst hier wirklich „keine Unterlagen veroeffentlicht" — der Knopf haengt
-        # nicht an der Anmeldung, sonst waere er bei den gemessenen Faellen auch verschwunden.
+        # ⚠ ZUERST: hat die Seite ueberhaupt geladen? Eine Seite mit leerem Rumpf ist NIE
+        # eine Aussage ueber eine Vergabe. Gemessen 2026-08-24: S-SCHWELM-2026-0044 lieferte
+        # 0 Zeichen und stand trotzdem als „kein Unterlagen-Link" im Manifest — also als
+        # Befund ueber das Portal, obwohl wir nichts gesehen hatten. Normale Seiten dieses
+        # Portals tragen 10.000 bis 17.000 Zeichen.
+        rumpf = pg.evaluate("() => document.body ? document.body.innerText : ''")
+        if len(rumpf.strip()) < _RUMPF_MIN:
+            return {"status": "fehler", "bytes": 0, "n_files": 0,
+                    "note": f"Seite leer geladen ({len(rumpf.strip())} Zeichen)"}
+
+        # ⚠ Hier stand: „Kein Link heisst hier wirklich keine Unterlagen veroeffentlicht —
+        # der Knopf haengt nicht an der Anmeldung, sonst waere er bei den gemessenen Faellen
+        # auch verschwunden." Das ist am 2026-08-24 widerlegt: von 13 nachgeprueften Vergaben,
+        # deren ZIP wir BEREITS HABEN, trugen 3 den Link heute ebenfalls nicht mehr. Er
+        # verschwindet also im Lauf der Zeit, und seine Abwesenheit beweist nichts ueber die
+        # Vergabe. `leer` bleibt trotzdem richtig — es heisst „ungeklaert, spaeter erneut",
+        # nicht „dort liegt nichts". Die fuenf so gemeldeten Faelle hatten keinen gemeinsamen
+        # Grund: eine Frist durch, eine noch offen, drei ohne Unterlagen-Abschnitt.
         return {"status": "leer", "bytes": 0, "n_files": 0, "note": "kein Unterlagen-Link"}
 
     # Weiterleitung aufloesen statt klicken (Consent-Banner faengt Klicks ab).

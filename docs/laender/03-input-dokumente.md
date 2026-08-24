@@ -217,9 +217,14 @@ Wiederholbar, in dieser Reihenfolge, und er dauert eine gute Stunde je Abrufer:
 7. **Gegenprobe auf dem guten Weg.** Nach jeder Änderung eine Stichprobe der ERFOLGREICHEN
    Fälle erneut holen. Bei subreport: 15 nachgeprüft, 13 weiter mit 270 Dateinamen.
 
-### Die sechs Formen, in denen eine falsche Behauptung entsteht
+⚠ **Ein Grep über den Quelltext ist keine Messung.** Beim Suchen nach dieser Lücke ergab
+ein Grep „acht von neun Abrufern ohne Längen-Wache" — nachgesehen fingen die meisten den
+Fall längst, nur anders benannt. Übrig blieb ein einziger. Wer nach dem Grep aufhört, baut
+acht Änderungen, von denen sieben nichts verbessern und jede etwas kaputt machen kann.
 
-Alle sechs sind am selben Tag aufgetreten. Sie zu kennen spart den halben Prüfgang.
+### Die sieben Formen, in denen eine falsche Behauptung entsteht
+
+Alle sieben sind am selben Tag aufgetreten. Sie zu kennen spart den halben Prüfgang.
 
 1. **Das Merkmal steht auch im Rahmen drumherum.** Die NetServer-Wache prüfte eigens nach,
    ob die Seite den Unterlagen-Abschnitt trägt — las dafür aber die ganze Seite, und die
@@ -245,6 +250,14 @@ Alle sechs sind am selben Tag aufgetreten. Sie zu kennen spart den halben Prüfg
    Fliesstext „Die Vergabeunterlagen stehen nicht zum Download bereit … (INFO 75630)".
    Gesucht wurde nur dort, wo Links stehen. **Fehlt ein Element, erst den Fliesstext lesen,
    dann urteilen.**
+
+7. **Die Seite hat gar nicht geladen.** Ein leerer Rumpf ist NIE eine Aussage über eine
+   Vergabe. Beim Ausschreibungsblatt stand eine Seite mit **0 Zeichen** als „kein
+   Unterlagen-Link" im Manifest — ein Befund über das Portal, obwohl nichts gesehen wurde.
+   **Vor jeder Inhaltsprüfung eine Mindestlänge verlangen**, und den Fall als Fehlschlag
+   führen, damit er wiederholt wird. Die meisten Abrufer fangen ihn schon nebenbei (über
+   eine fehlende Überschrift oder einen fehlenden Abschnitt); wer neu baut, muss ihn
+   ausdrücklich fangen.
 
 Dazu eine Regel für die Rangfolge im Code: **der positive Befund führt.** Trägt die Seite
 einen Knopf oder Ausklapper, wird geholt — erst wenn es ihn nicht gibt, wird nach dem Grund

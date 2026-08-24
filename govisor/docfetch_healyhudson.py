@@ -85,6 +85,8 @@ _ENDUNGEN = ("pdf", "zip", "doc", "docx", "xls", "xlsx", "rtf", "odt", "ods", "t
 _MIT_ENDUNG = re.compile(r"\.(?:" + "|".join(_ENDUNGEN) + r")$", re.IGNORECASE)
 
 # Der Sammelknopf. Die Oberflaeche benutzt Material-Icons, der Text steht daneben.
+_RUMPF_MIN = 200
+
 _FEHLERSCHLUESSEL = re.compile(r"ErrorMessageKey=([A-Za-z0-9._]+)")
 
 _ALLE = ("xpath=//*[self::button or self::a]"
@@ -131,6 +133,15 @@ def hole_vergabe(url: str, pg, tmp: Path, dry_run: bool = False) -> dict:
                 "note": f"Fehlerseite {schluessel or 'ohne Schlüssel'}"}
 
     rumpf = pg.evaluate("() => document.body.innerText")
+    # ⚠ Hat die Seite ueberhaupt geladen? Ein leerer Rumpf ist NIE eine Aussage ueber eine
+    # Vergabe. Ohne diese Zeile landet ein leerer Ladevorgang weiter unten als `leer` — also
+    # als Befund ueber das Portal, obwohl wir nichts gesehen haben. Die uebrigen Abrufer
+    # fangen den Fall schon (evergabe ueber die fehlende Ueberschrift, subreport und aumass
+    # ueber den fehlenden Abschnitt); hier fehlte er. Echte Vorgangsseiten dieses Portals
+    # tragen ueber 2.000 Zeichen, die Grenze ist bewusst weit darunter.
+    if len(rumpf.strip()) < _RUMPF_MIN:
+        return {"dateien": [], "status": "fehler", "gelistet": 0,
+                "note": f"Seite leer geladen ({len(rumpf.strip())} Zeichen)"}
     eintraege = _dateiliste(pg)
     knopf = pg.query_selector(_ALLE)
 
