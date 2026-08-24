@@ -379,3 +379,14 @@ def test_bibel_pruefung_laeuft_im_nachtlauf_mit():
     lauf = (ROOT / "scripts" / "daily_leads.sh").read_text()
     ohne_kommentar = "\n".join(z for z in lauf.splitlines() if not z.lstrip().startswith("#"))
     assert "scripts/pruefe_bibel.py" in ohne_kommentar
+
+
+def test_nachlauf_eskaliert_nach_der_frist(monkeypatch):
+    """Eine Warnung ohne Frist ist folgenlos — man kann sie beliebig lange
+    ignorieren, und genau das passiert mit jeder Meldung, die nie eskaliert.
+    Unter der Frist ein Anstoss, darueber ein Fehlschlag."""
+    b = _bibel()
+    monkeypatch.setattr(b, "NACHLAUF_FRIST_TAGE", 10_000)
+    assert b.pruefung_nachlauf() == [], "so lange darf nichts eskalieren"
+    monkeypatch.setattr(b, "NACHLAUF_FRIST_TAGE", -1)
+    assert b.pruefung_nachlauf(), "jenseits der Frist MUSS es fehlschlagen"

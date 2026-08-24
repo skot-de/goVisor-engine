@@ -201,9 +201,23 @@ def _git_zeit(pfad) -> int:
     return int(r.stdout.strip() or 0)
 
 
+# Ab wann ein Nachlauf kein Hinweis mehr ist, sondern ein Versaeumnis.
+#
+# ⚠ Eine Warnung ohne Frist ist folgenlos: man kann sie beliebig lange ignorieren, und
+# genau das passiert mit jeder Meldung, die nie eskaliert. Deshalb zwei Stufen — unter
+# der Frist ein Anstoss zum Hinsehen, darueber ein Fehlschlag.
+#
+# 30 Tage, weil `daily_leads.sh` und `sources.py` sich staendig aendern: eine kuerzere
+# Frist macht aus dem taeglichen Rauschen einen taeglichen Fehlschlag, und dann liest sie
+# niemand mehr. Ein Kapitel, dessen Gegenstand sich einen Monat lang bewegt hat, ohne
+# dass jemand hinsah, ist dagegen wirklich ein Problem.
+NACHLAUF_FRIST_TAGE = 30
+
+
 def pruefung_nachlauf(zeige_offen: bool = False) -> list[str]:
     import datetime as _dt
-    zeilen = []
+    jetzt = _dt.datetime.now().timestamp()
+    zeilen, fehler = [], []
     for datei in sorted(KAPITEL.glob("*.md")):
         kap = _git_zeit(datei)
         if not kap:
@@ -212,14 +226,20 @@ def pruefung_nachlauf(zeige_offen: bool = False) -> list[str]:
                               datei.read_text(encoding="utf-8")))
         juenger = sorted(r for r in refs
                          if (ROOT / r).exists() and _git_zeit(ROOT / r) > kap)
-        if juenger:
-            stand = _dt.date.fromtimestamp(kap).isoformat()
-            zeilen.append(f"    {datei.name} (Stand {stand}) beschreibt neuere Dateien: "
-                          f"{', '.join(juenger[:3])}"
-                          + (f" (+{len(juenger)-3})" if len(juenger) > 3 else ""))
+        if not juenger:
+            continue
+        stand = _dt.date.fromtimestamp(kap).isoformat()
+        tage = int((jetzt - kap) / 86400)
+        text = (f"{datei.name} (Stand {stand}, {tage} Tage) beschreibt neuere Dateien: "
+                f"{', '.join(juenger[:3])}"
+                + (f" (+{len(juenger)-3})" if len(juenger) > 3 else ""))
+        if tage > NACHLAUF_FRIST_TAGE:
+            fehler.append(text + f" — laenger als {NACHLAUF_FRIST_TAGE} Tage unbesehen")
+        else:
+            zeilen.append("    " + text)
     if zeilen:
         print("\n".join(zeilen))
-    return []          # WARNUNG, kein Fehlschlag — s. Kommentar oben
+    return fehler
 
 
 def stand_uebersicht() -> None:

@@ -91,6 +91,11 @@ ist ein Grund hinzusehen, keiner den Lauf wegzuwerfen.
   `--stand` zeigt, wie alt jedes Kapitel ist — **aus git**, nicht getippt: ein
   handgeschriebenes „Stand: …" verrottet in dem Moment, in dem jemand das Kapitel ändert
   und die Zeile vergisst.
+  ⚠ **Der Nachlauf hat eine Frist.** Unter 30 Tagen ist er ein Anstoss zum Hinsehen,
+  darüber ein Fehlschlag. Grund: eine Warnung ohne Frist ist folgenlos — man kann sie
+  beliebig lange ignorieren, und genau das passiert mit jeder Meldung, die nie eskaliert.
+  Kürzer als 30 Tage ginge nicht, weil `daily_leads.sh` und `sources.py` sich ständig
+  ändern; dann wäre aus dem täglichen Rauschen ein täglicher Fehlschlag geworden.
 - **`pruefe_verdrahtung.py`** — alle Gold-Dateien, relativ zum Lauf ihres Landes. Merkt,
   wenn **ein** Schritt fehlt.
 
