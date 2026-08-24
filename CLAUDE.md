@@ -71,6 +71,24 @@ CLI: `python -m govisor.cli {ingest|silver|gold|verify|review}`.
   steckten am Ende in einem Commit über OpenRouter-Stapelverarbeitung. Verloren geht dabei
   nichts, aber die Historie erzählt Unsinn, und niemand findet die Änderung später wieder.
   Vor dem Commit `git status` lesen und alles Fremde bewusst liegen lassen.
+- **⛔ Beim PUSH reicht saubere Commit-Hygiene NICHT.** Ein Push schickt den ganzen Zweig,
+  also auch fremde Commits, die zufällig darauf liegen. Vor jedem Push nachsehen, wer was
+  beisteuert, und gezielt bis zum eigenen letzten Commit pushen:
+
+      git log --format="%h %an %s" personal/main..HEAD
+      git push personal <mein-letzter-sha>:main
+
+  Liegt ein fremder Commit **unter** den eigenen, geht er zwangsläufig mit — das dann
+  **vorher ansagen**, nicht hinterher erwähnen.
+
+  Am 2026-08-24 ist genau das passiert: zwei eigene Commits, darüber einer der anderen
+  Sitzung (`ausschreibungsblatt`, vier fremde Dateien). `git push personal main` hat ihn
+  mitveröffentlicht, obwohl `git push personal <sha>:main` ihn zurückgelassen hätte. Die
+  Trennung war beim Committen sauber durchgehalten und beim Pushen nicht weitergedacht.
+
+  ⚠ **Nicht mit Force-Push zurückdrehen.** Fremde Arbeit ist damit zwar veröffentlicht,
+  aber unversehrt; eine umgeschriebene Fernhistorie trifft die andere Sitzung mitten im
+  Lauf und richtet mehr Schaden an als der Fehler selbst.
 - **Wem gehört was, wenn zwei Sitzungen laufen.** Eine Sitzung besitzt `web/` (Frontend,
   Produkt), die andere `govisor/` und `scripts/` (Pipeline, Abrufer, LLM). Wer in fremdem
   Gebiet etwas ändern muss, sagt es an. Zwei Folgen, die sonst Zeit kosten:
