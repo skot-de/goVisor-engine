@@ -102,6 +102,35 @@ liefert. Falsch klassifiziert heisst: als unlösbar abgelegt.
 **Regel:** ein Fehlschlag, den wir beheben können, bekommt eine eigene Klasse. Sonst
 verschwindet er in einer Kategorie, die niemand mehr anfasst.
 
+### ⚠ Ein ungeklärter Fehlversuch wartet auf UNS, nicht auf die Welt
+
+Der Ertragsbericht (`python3 -m govisor.ertrag --country XX`) sortiert jeden Manifest-Satz
+in vier Klassen: `erledigt`, `dauerhaft`, `blockiert:<typ>` — und **`offen`** für alles,
+was in keine der drei fällt.
+
+Diese vierte Klasse ist die gefährliche. Sie liest sich wie „steht noch aus", und bis zum
+2026-08-24 wurde sie **gar nicht ausgegeben**. Gemessen verbargen sich dahinter:
+
+```
+netserver         364   261× keine Version gelistet     ← unser Parser
+evergabe          241   240× NameError                  ← UNSER Fehler, eine Woche unsichtbar
+subreport         165   124× 0 Dateien
+evergabe_online    35   23× keine Unterlagen
+```
+
+Der `NameError` stand seit dem 17.08. im Manifest, sauber protokolliert, und wurde am
+21.08. behoben (`04d2dd8`, „fehlende Zeile legte den Abrufer drei Tage still") — gefunden
+hat ihn niemand über den Bericht, weil der Bericht ihn nicht zeigte.
+
+**Ein Bericht, der die Antwort hat und sie zudeckt, ist schlimmer als keiner: er beruhigt.**
+
+Der Abschnitt heisst deshalb „UNGEKLAERT" und steht neben „BLOCKIERT". Der Unterschied ist
+der Adressat: ein blockierter Vorgang wartet auf einen Zugang, ein ungeklärter auf uns.
+
+⚠ Beim Bauen selbst hineingetappt: die erste Fassung zählte die Notizen **aller** Zeilen
+und meldete „1494×" bei 364 Fällen. Eine Zahl, die grösser ist als ihre Grundmenge, ist
+keine Auskunft, sondern ein Warnsignal.
+
 ### Statusklassen ehrlich halten
 
 `gated` heisst „existiert, uns fehlt ein Zugang" und parkt Vorgänge **dauerhaft**. Am

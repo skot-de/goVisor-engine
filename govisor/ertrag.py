@@ -98,6 +98,31 @@ def sammle(country: str = "DE", data_dir: Path | None = None) -> dict:
                  "dauerhaft" if st in _q.DAUERHAFT else
                  f"blockiert:{_q.BLOCKIERT[st]}" if st in _q.BLOCKIERT else "offen")
             klassen[k] = klassen.get(k, 0) + n
+        # ⚠ „offen" ist die Sammelklasse fuer alles, was in KEINE der drei bekannten
+        # Mengen faellt — und sie liest sich wie „steht noch aus". Gemessen am 2026-08-24
+        # verbargen sich hinter „evergabe: 240 offen" 240-mal `NameError`, also UNSER
+        # eigener Fehler, sauber protokolliert und eine Woche lang von niemandem gesehen
+        # (behoben am 21.08. mit 04d2dd8, „fehlende Zeile legte den Abrufer drei Tage
+        # still"). Ein Bericht, der die Antwort hat und sie zudeckt, ist schlimmer als
+        # keiner: er beruhigt.
+        #
+        # Deshalb: bei „offen" die haeufigsten NOTIZEN mitliefern. Sie stehen im
+        # Manifest, es sah nur nie jemand hinein.
+        if klassen.get("offen"):
+            # ⚠ NUR die ungeklaerten Zeilen zaehlen. Die erste Fassung zaehlte die Notizen
+            # ALLER Zeilen und meldete „1494×" bei 364 Faellen — eine Zahl, die groesser
+            # ist als ihre Grundmenge, ist keine Auskunft, sondern ein Warnsignal.
+            bekannt = (set(_q.KEIN_FEHLSCHLAG) | set(_q.DAUERHAFT) | set(_q.BLOCKIERT))
+            liste = ", ".join(f"'{x}'" for x in sorted(bekannt)) or "''"
+            try:
+                notizen = con.execute(f"""
+                    SELECT coalesce(nullif(trim(note), ''), '(ohne Notiz)') AS grund, count(*) n
+                    FROM read_parquet('{pfad.as_posix()}')
+                    WHERE lower(coalesce(status, '')) NOT IN ({liste})
+                    GROUP BY 1 ORDER BY n DESC LIMIT 3""").fetchall()
+                klassen["offen_gruende"] = {t: n for t, n in notizen}
+            except Exception:                              # noqa: BLE001
+                pass
         abruf[name] = klassen
     b["abruf"] = abruf
     # Die Arbeitsliste: was ist blockiert, und woran. DAS ist die Reichweiten-Frage.
@@ -289,6 +314,22 @@ def _drucke(b: dict) -> None:
         print("\n  BLOCKIERT — die Reichweiten-Arbeitsliste")
         for grund, n in b["blockiert_nach_grund"].items():
             print(f"    {grund:<26}{n:>8,}")
+
+    # ⚠ UNGEKLAERTE FEHLVERSUCHE. Bis 2026-08-24 tauchten sie hier GAR NICHT auf: die
+    # Klasse „offen" wurde zwar berechnet, aber nie gedruckt. Gemessen verbargen sich
+    # hinter evergabe 240 Versuche mit `NameError` — also unser eigener Fehler, sauber
+    # protokolliert und eine Woche lang unsichtbar (behoben am 21.08. mit 04d2dd8:
+    # „fehlende Zeile legte den Abrufer drei Tage still").
+    #
+    # Ein blockierter Vorgang wartet auf die Welt; ein ungeklaerter wartet auf UNS. Die
+    # zweite Sorte gehoert deshalb ganz nach oben, nicht in eine Restkategorie.
+    ungeklaert = {q: kl for q, kl in (b.get("abruf") or {}).items() if kl.get("offen")}
+    if ungeklaert:
+        print("\n  UNGEKLAERT — Fehlversuche ohne Klasse (warten auf UNS, nicht auf die Welt)")
+        for quelle, kl in sorted(ungeklaert.items(), key=lambda x: -x[1]["offen"]):
+            gruende = kl.get("offen_gruende") or {}
+            text = ", ".join(f"{n}× {t}" for t, n in gruende.items()) or "ohne Notiz"
+            print(f"    {quelle:<26}{kl['offen']:>8,}   {text}")
 
     # `datei_zu_gross` ist eine ABSICHTLICHE Grenze, kein fehlender Parser. Beide in einer
     # Liste zu zeigen liest sich als „.zip koennen wir nicht" — koennen wir, wir wollen
