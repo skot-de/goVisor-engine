@@ -472,6 +472,41 @@ Die Vorschau für den ersten echten Lauf (Stand 2026-08-24): 15 Prüfvergaben, 5
 0,0086 $ für die Vorprüfung und 0,0431 $ für den vollen Satz. Der Trockenlauf warnt selbst,
 dass die Grundlinie den Tagestopf von 0,50 $ fast ausfüllt.
 
+## Der erste bezahlte Lauf (2026-08-24, 0,62 $)
+
+Grundlinie über 15 Vergaben: **0,6073 $**, 41,0 belegte Punkte je Vergabe im Mittel. Der
+Trockenlauf hatte 0,4694 $ vorhergesagt — 29 % daneben, weil er die Ausgabemenge aus nur
+vier Buchungen hochrechnete. Die Größenordnung stimmte.
+
+Der erste echte Kandidat, `nex-agi/nex-n2-mini`, hat drei Dinge gezeigt, die keine Attrappe
+hätte zeigen können:
+
+**1. Ein Modell kann davonlaufen.** Ein einziger Aufruf erzeugte **65.536 Ausgabe-Token** —
+exakt die Obergrenze des Endpunkts — und brauchte dafür **761 Sekunden**. Der Amtierende
+liegt bei 775 Token und 3,7 s im Median. Wir setzten bis dahin **kein `max_tokens`**.
+
+**2. Der `timeout` von `requests` schützt davor nicht.** Er misst die Pause *zwischen*
+Bytes, nicht die Gesamtdauer; die Gegenstelle hält die Verbindung mit Füllbytes offen. Der
+761-Sekunden-Aufruf lief mit `timeout=120` durch. Es braucht eine echte Uhr
+(`llm.frist()`), die den Faden liegenlässt statt auf ihn zu warten.
+
+**3. Und das Urteil war falsch.** Zwei von drei Vorgängen rissen die Frist, der dritte ergab
+null Punkte — dort hatte aber auch der Amtierende null. Es lag also **kein einziger**
+verwertbarer Vergleich vor, und der Prüfstand meldete trotzdem „durchgefallen: findet nur
+0,0 statt 41,0 Punkte". Ein Qualitätsurteil über Antworten, die nie angekommen sind.
+
+Jetzt steht ein **Fristriegel ganz vorn** in `entscheide()` — noch vor der Mindestmenge,
+denn ein Kandidat, der in die Frist läuft, hat zwangsläufig zu wenige gepaarte Vorgänge und
+wäre sonst als „zu wenig Daten" in der Schlange geblieben, um morgen wieder Zeit zu
+verbrennen. Status: `zu_langsam`, kein Qualitätsurteil.
+
+| Grenze | Wert | wogegen |
+|---|---|---|
+| `OR_MAX_TOKENS` | 56.000 | Davonlaufende Ausgabe (über allem Legitimen: Maximum 50.964) |
+| `OR_FRIST` | 600 s | Hänger in der Produktion (Maximum legitim: 185 s) |
+| `KANDIDAT_FRIST` | 240 s | Hängender Aufruf eines Kandidaten |
+| `ZEIT_FAKTOR` | 4× | Vorgang, der insgesamt zu lange braucht |
+
 ## Fallen, die schon zugeschlagen haben
 
 1. **`sort: "price"` statt `:floor`** — sortiert nur, erreicht Flex nie. Zahlt weiter 0,300.
@@ -501,3 +536,7 @@ dass die Grundlinie den Tagestopf von 0,50 $ fast ausfüllt.
     dessen Regler nach dem Laden nichts mehr tun, sieht einstellbar aus und ist es nicht.
 14. **Prüfvergaben ohne extrahierbaren Doktyp** — siehe Trockenlauf.
 15. **Katalogeintrag mit null Endpunkten** als Qualitätsmangel verbucht — siehe Trockenlauf.
+16. **Kein `max_tokens`** — ein Modell schrieb 65.536 Token in einem Aufruf.
+17. **`requests`-Timeout für eine Gesamtfrist gehalten** — er misst Pausen zwischen Bytes.
+18. **Fristabbruch als Qualitätsurteil** verbucht, und der Riegel dagegen zuerst hinter der
+    Mindestmengenprüfung — die immer zuerst gegriffen hätte.

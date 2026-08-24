@@ -149,6 +149,22 @@ def grundlinie(stand, ad, vorgaenge, rest) -> tuple[dict, str | None]:
     return erg, grund
 
 
+def _abbruch_verbuchen(stand, eintrag, grund: str) -> str:
+    """Ein Abbruch wegen Langsamkeit ist ein ENDGUELTIGES Urteil, aber kein Qualitaetsurteil.
+
+    Ohne diese Unterscheidung waere ein Modell, das 760 s je Aufruf braucht, morgen wieder
+    dran — und wuerde den naechtlichen Lauf jedes Mal aufs Neue blockieren. Budget- und
+    Geldwache-Abbrueche dagegen sagen nichts ueber das Modell: die gehoeren zurueck in die
+    Schlange.
+    """
+    if grund.startswith("zu langsam"):
+        eintrag.update({"status": "zu_langsam", "urteil": grund,
+                        "entschieden": date.today().isoformat()})
+        ps.sichere(stand)
+        print(f"    🐌 zu langsam: {grund}")
+    return grund
+
+
 def pruefe_einen(stand, ad, modell, satz_voll, basis, rest) -> str | None:
     """Vorprüfung, dann Hauptprüfung, dann Urteil. Gibt einen Abbruchgrund oder None."""
     eintrag = stand["kandidaten"].setdefault(modell, {"status": "neu", "preis": 0})
@@ -165,14 +181,16 @@ def pruefe_einen(stand, ad, modell, satz_voll, basis, rest) -> str | None:
         gemessen, grund = ps.messe_reihe(
             analyse=ad, llm=llm, kostenbuch=kostenbuch, modell=modell, vorgaenge=klein,
             zweck=ZWECK, vorhanden=gemessen, budget=rest, nach_vorgang=sichern,
-            ausgeben=lambda z: print(z, flush=True))
+            ausgeben=lambda z: print(z, flush=True), vergleich=basis)
         sichern(gemessen)
         if grund:
-            return grund
+            return _abbruch_verbuchen(stand, eintrag, grund)
         ok, warum = ps.vorpruefung_bestanden(
             gemessen, {k: basis[k] for k in klein if k in basis})
         if not ok:
-            eintrag.update({"status": "durchgefallen", "urteil": warum,
+            # Ein Fristbefund ist KEIN Qualitaetsurteil — er bekommt seinen eigenen Status.
+            eintrag.update({"status": "zu_langsam" if "Zeitfrist" in warum
+                            else "durchgefallen", "urteil": warum,
                             "entschieden": date.today().isoformat()})
             ps.sichere(stand)
             print(f"    ⛔ durchgefallen: {warum}")
@@ -186,10 +204,10 @@ def pruefe_einen(stand, ad, modell, satz_voll, basis, rest) -> str | None:
     gemessen, grund = ps.messe_reihe(
         analyse=ad, llm=llm, kostenbuch=kostenbuch, modell=modell, vorgaenge=satz_voll,
         zweck=ZWECK, vorhanden=gemessen, budget=rest, nach_vorgang=sichern,
-        ausgeben=lambda z: print(z, flush=True))
+        ausgeben=lambda z: print(z, flush=True), vergleich=basis)
     sichern(gemessen)
     if grund:
-        return grund
+        return _abbruch_verbuchen(stand, eintrag, grund)
 
     urteil = ps.entscheide(gemessen, basis)
     eintrag.update({"status": urteil["status"], "urteil": urteil["grund"],

@@ -73,6 +73,27 @@ VERWERFUNG_TOLERANZ = float(os.environ.get("GOVISOR_VERWERFUNG_TOLERANZ", "0.02"
 # spricht das Modell schlicht ein anderes Format.
 FORMAT_TOLERANZ = float(os.environ.get("GOVISOR_FORMAT_TOLERANZ", "0.20"))
 
+# Wie viel langsamer als der Amtierende darf ein Kandidat je Vorgang sein, bevor der Test
+# abgebrochen wird?
+#
+# ⚠ Das ist KEIN Qualitaetsurteil und widerspricht auch nicht „Geschwindigkeit entscheidet
+# nicht". Es gibt einen Unterschied zwischen *langsamer* und *nicht benutzbar*: gemessen am
+# 2026-08-24 brauchte `nex-agi/nex-n2-mini` 760 s fuer einen einzigen Aufruf (Amtierender:
+# 2,6 s im Median). Bei 7.241 wartenden Vergaben ist so ein Modell nicht „etwas langsamer",
+# es kann die Aufgabe grundsaetzlich nicht erledigen — und blockiert bis dahin den
+# naechtlichen Lauf.
+#
+# ⚠ Und der `timeout` in `requests` hilft hier NICHT: er misst die Pause zwischen Bytes,
+# nicht die Gesamtdauer. Der 760-Sekunden-Aufruf lief mit `timeout=120` durch.
+ZEIT_FAKTOR = float(os.environ.get("GOVISOR_ZEIT_FAKTOR", "4"))
+ZEIT_MINDEST = float(os.environ.get("GOVISOR_ZEIT_MINDEST", "180"))
+
+# Harte Frist je EINZELAUFRUF fuer einen Kandidaten. Der Amtierende braucht ueber 311
+# Aufrufe im Maximum 185 s; 240 s laesst also alles Legitime durch und stoppt den Haenger
+# nach vier Minuten statt nach dreizehn. Die Vorgangs-Grenze (ZEIT_FAKTOR) bleibt daneben
+# bestehen — sie faengt das langsame Modell, diese hier den haengenden Aufruf.
+KANDIDAT_FRIST = float(os.environ.get("GOVISOR_KANDIDAT_FRIST", "240"))
+
 # Ab welcher Ersparnis lohnt ein Wechsel bei gleicher Qualitaet? Und ab welcher lohnt
 # ueberhaupt eine Pruefung?
 MIN_ERSPARNIS = float(os.environ.get("GOVISOR_MIN_ERSPARNIS", "0.20"))
@@ -87,7 +108,7 @@ GRUNDLINIE_TAGE = int(os.environ.get("GOVISOR_GRUNDLINIE_TAGE", "14"))
 MAX_JE_TAG = int(os.environ.get("GOVISOR_MAX_PRUEFUNGEN", "2"))
 
 STATUS = ("neu", "vorpruefung_bestanden", "bestanden", "durchgefallen", "gleichwertig",
-          "formatproblem", "nicht_lieferbar")
+          "formatproblem", "nicht_lieferbar", "zu_langsam")
 
 
 # ── Statistik ────────────────────────────────────────────────────────────────────────
@@ -99,6 +120,23 @@ def vorzeichentest(gewinne: int, verluste: int) -> float:
         return 1.0
     k = min(gewinne, verluste)
     return min(2 * sum(math.comb(n, i) for i in range(k + 1)) / (2 ** n), 1.0)
+
+
+def fristquote(je_vorgang: dict) -> tuple[float, int, int]:
+    """(Anteil, Fristfaelle, Gesamtzahl) der Vorgaenge, die an der ZEITFRIST scheiterten.
+
+    ⚠ Diese Unterscheidung entscheidet, ob ein Urteil ueberhaupt zulaessig ist. Am
+    2026-08-24 fielen bei `nex-agi/nex-n2-mini` zwei von drei Vorgaengen in die Frist; der
+    dritte ergab null Punkte — dort hatte aber auch der Amtierende null. Es lag also
+    **kein einziger** verwertbarer Vergleich vor, und trotzdem lautete das Urteil
+    „durchgefallen: findet nur 0,0 statt 25,0 Punkte". Ein Qualitaetsurteil ueber Antworten,
+    die nie angekommen sind.
+    """
+    if not je_vorgang:
+        return 0.0, 0, 0
+    treffer = sum(1 for v in je_vorgang.values()
+                  if "Frist" in (v.get("grund") or ""))
+    return treffer / len(je_vorgang), treffer, len(je_vorgang)
 
 
 def kennzahlen(je_vorgang: dict) -> dict:
@@ -151,11 +189,25 @@ def entscheide(kandidat: dict, amtierend: dict, *, min_n: int | None = None,
               # Geschwindigkeit: gemessen, ausgewiesen, NICHT entscheidend.
               "sek_kandidat": kk.get("sek_je"), "sek_amtierend": ka.get("sek_je")}
 
+    # 0a. Fristriegel — GANZ ZUERST, noch vor der Mindestmenge.
+    #
+    # ⚠ Die Reihenfolge ist hier entscheidend und war zuerst falsch. Ein Kandidat, der in
+    # die Frist laeuft, hat zwangslaeufig zu wenige gepaarte Vorgaenge — die
+    # Mindestmengenpruefung haette also immer zuerst gegriffen und „nur 1 gepaarter
+    # Vorgang" gemeldet. Das ist zwar wahr, aber es verschweigt den Grund und laesst den
+    # Kandidaten als `neu` in der Schlange, wo er morgen wieder Zeit verbrennt.
+    q, treffer, ges = fristquote(kandidat)
+    if q >= 0.5:
+        return {**urteil, "status": "zu_langsam", "wechseln": False,
+                "grund": (f"{treffer} von {ges} Vorgängen rissen die Zeitfrist "
+                          f"({KANDIDAT_FRIST:.0f} s je Aufruf) — kein Qualitätsurteil "
+                          f"möglich, die Antworten kamen nie an")}
+
     if len(paare) < min_n:
         return {**urteil, "status": "neu", "wechseln": False,
                 "grund": f"nur {len(paare)} gepaarte Vorgänge, nötig sind {min_n}"}
 
-    # 0. Formatriegel — VOR jedem Qualitätsurteil.
+    # 0b. Formatriegel — VOR jedem Qualitätsurteil.
     #
     # ⚠ Ohne ihn wäre die schlimmste Verwechslung dieses Moduls möglich: ein Modell, das
     # unsere Aufgabe beherrscht, aber sein JSON in Prosa wickelt, liefert 0 Punkte UND
@@ -205,6 +257,10 @@ def vorpruefung_bestanden(kandidat: dict, amtierend: dict) -> tuple[bool, str]:
     kaum Punkte oder massenhaft unbelegte Behauptungen. Alles Übrige geht weiter.
     """
     kk, ka = kennzahlen(kandidat), kennzahlen(amtierend)
+    q, treffer, ges = fristquote(kandidat)
+    if q >= 0.5:
+        return False, (f"{treffer} von {ges} Vorgängen rissen die Zeitfrist — "
+                       f"zu langsam, kein Qualitätsurteil")
     if not kk.get("n"):
         return False, "keine auswertbaren Vorgänge"
     if kk.get("formatquote", 0) > FORMAT_TOLERANZ:
@@ -257,7 +313,7 @@ def einreihen(stand: dict, modell: str, *, preis: float, grund: str,
         # das Schema erzwingen (`response_format`), ist eine erneute Pruefung sinnvoll.
         # Wiedervorlage von Hand: den Eintrag aus `data/pruefstand.json` loeschen.
         if vor.get("status") in ("durchgefallen", "gleichwertig", "formatproblem",
-                                 "nicht_lieferbar") and not billiger:
+                                 "nicht_lieferbar", "zu_langsam") and not billiger:
             return False
         if vor.get("status") == "bestanden":
             return False
@@ -339,9 +395,22 @@ def _kosten_seit(kostenbuch, marke: int, vorgang: str, modell: str,
     return summe, fehlt
 
 
+def zeitgrenze(vergleich: dict | None, nid: str) -> float | None:
+    """Wie lange darf ein Kandidat für diesen Vorgang höchstens brauchen?
+
+    ``None`` **oder 0** heisst: keine Grenze. Ohne Grundlinie als Maßstab wird nicht
+    geraten — eine erfundene Zeitgrenze waere schlimmer als keine.
+    """
+    if not vergleich or nid not in vergleich:
+        return None
+    s = (vergleich[nid] or {}).get("sekunden")
+    return max(ZEIT_MINDEST, float(s) * ZEIT_FAKTOR) if s else None
+
+
 def messe_reihe(*, analyse, llm, kostenbuch, modell: str, vorgaenge: dict, zweck: str,
                 vorhanden: dict | None = None, budget: float | None = None,
-                nach_vorgang=None, ausgeben=None) -> tuple[dict, str | None]:
+                nach_vorgang=None, ausgeben=None,
+                vergleich: dict | None = None) -> tuple[dict, str | None]:
     """Ein Modell durch die Vorgänge. Gibt ``(ergebnisse, abbruchgrund)``.
 
     ``vorhanden`` sind bereits gemessene Vorgänge (Wiederaufnahme). ``nach_vorgang`` wird
@@ -363,20 +432,46 @@ def messe_reihe(*, analyse, llm, kostenbuch, modell: str, vorgaenge: dict, zweck
             marke = _buchstand(kostenbuch)
             t0 = time.time()
             try:
-                with llm.kontext(zweck=zweck, vorgang=nid):
+                # Eine Frist gilt nur fuer KANDIDATEN — erkennbar daran, dass eine
+                # Grundlinie zum Vergleich vorliegt. Die Grundlinie selbst wird ohne
+                # Sonderfrist gemessen, sonst verzerrte die Bremse den Massstab.
+                with llm.kontext(zweck=zweck, vorgang=nid), \
+                        llm.frist(KANDIDAT_FRIST if vergleich else None):
                     res = analyse.analyze_notice(
                         rows, structured=analyse.structured_for_notice(nid), notice_id=nid)
             except llm.BudgetErschoepft as e:
                 return ergebnisse, f"Geldwache: {e}"
             except Exception as e:                       # noqa: BLE001
-                ergebnisse[nid] = {"fehler": type(e).__name__}
+                # ⚠ Der Ausnahmetyp allein genuegt nicht. „AllKeysExhausted" entsteht
+                # sowohl bei einem echten Anbieterproblem als auch dann, wenn unsere
+                # eigene Frist gerissen ist — und das ist ein Unterschied ums Ganze.
+                ergebnisse[nid] = {"fehler": type(e).__name__, "grund": str(e)[:200]}
                 if nach_vorgang:
                     nach_vorgang(ergebnisse)
                 if ausgeben:
                     ausgeben(f"      ✖ {nid[:26]}: {type(e).__name__}: {str(e)[:50]}")
                 continue
+            dauer = time.time() - t0
             kosten, ohne_preis = _kosten_seit(kostenbuch, marke, nid, voll, zweck)
             ausgegeben += kosten
+            # Abbruch NACH dem Vorgang: ein laufender Aufruf laesst sich aus demselben
+            # Faden nicht unterbrechen, also wird der Schaden auf EINEN Vorgang begrenzt.
+            grenze = zeitgrenze(vergleich, nid)
+            if grenze and dauer > grenze:
+                ergebnisse[nid] = {"punkte": sum(
+                    1 for e in (res.get("checklist") or [])
+                    if not e.get("parser") and e.get("marking") == "Zitat"),
+                    "verworfen": res.get("rejected_items") or 0,
+                    "llm_aufrufe": res.get("llm_aufrufe") or 0,
+                    "formatfehler": res.get("formatfehler") or 0,
+                    "kosten_usd": kosten, "ohne_preis": ohne_preis,
+                    "sekunden": round(dauer, 1)}
+                if nach_vorgang:
+                    nach_vorgang(ergebnisse)
+                return ergebnisse, (
+                    f"zu langsam: {dauer:.0f} s für {nid}, erlaubt waren {grenze:.0f} s "
+                    f"({ZEIT_FAKTOR:.0f}× der Amtierende). Kein Qualitätsurteil — das "
+                    f"Modell kann die Aufgabe zeitlich nicht erledigen")
             ergebnisse[nid] = {
                 "punkte": sum(1 for e in (res.get("checklist") or [])
                               if not e.get("parser") and e.get("marking") == "Zitat"),
@@ -386,7 +481,7 @@ def messe_reihe(*, analyse, llm, kostenbuch, modell: str, vorgaenge: dict, zweck
                 "llm_aufrufe": res.get("llm_aufrufe") or 0,
                 "formatfehler": res.get("formatfehler") or 0,
                 "kosten_usd": kosten, "ohne_preis": ohne_preis,
-                "sekunden": round(time.time() - t0, 1)}
+                "sekunden": round(dauer, 1)}
             if nach_vorgang:
                 nach_vorgang(ergebnisse)
             if ausgeben:

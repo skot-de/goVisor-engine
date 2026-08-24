@@ -191,6 +191,19 @@ def test_grundlinie_veraltet():
 
 # ── Der Messkern ─────────────────────────────────────────────────────────────────────
 
+class _Nichts:
+    """Kontextverwalter, der nichts tut — fuer `kontext` und `frist` in den Attrappen."""
+
+    def __init__(self, *a, **kw):
+        pass
+
+    def __enter__(self):
+        return self
+
+    def __exit__(self, *a):
+        return False
+
+
 class _FakeLLM:
     BudgetErschoepft = type("BudgetErschoepft", (RuntimeError,), {})
 
@@ -198,15 +211,8 @@ class _FakeLLM:
     def mit_boden(m):
         return m + ":floor"
 
-    class kontext:
-        def __init__(self, **kw):
-            self.kw = kw
-
-        def __enter__(self):
-            return self
-
-        def __exit__(self, *a):
-            return False
+    kontext = _Nichts
+    frist = _Nichts
 
 
 class _FakeAnalyse:
@@ -269,7 +275,8 @@ def test_messkern_ueberlebt_einen_kaputten_vorgang():
     erg, grund = ps.messe_reihe(
         analyse=_FakeAnalyse(wirft=ValueError("kaputt")), llm=_FakeLLM,
         kostenbuch=kostenbuch, modell="a/b", vorgaenge={"N1": [], "N2": []}, zweck="test")
-    assert grund is None and erg["N1"] == {"fehler": "ValueError"}
+    assert grund is None and erg["N1"]["fehler"] == "ValueError"
+    assert "kaputt" in erg["N1"]["grund"], "der Grund gehört mit ins Protokoll"
     assert ps.kennzahlen(erg)["n"] == 0, "Fehler zählen nicht als Messwert"
 
 
@@ -334,3 +341,105 @@ def test_formatproblem_wird_nicht_jede_nacht_wiederholt():
 def test_formatquote_ohne_aufrufe_ist_null_und_wirft_nicht():
     assert ps.kennzahlen(_reihe_fmt(5, 1, 0.01, aufrufe=0))["formatquote"] == 0.0
     assert ps.kennzahlen({"N0": {"fehler": "Timeout"}}) == {"n": 0}
+
+
+# ── Zeitgrenze: langsam ist nicht dasselbe wie schlecht ──────────────────────────────
+
+def test_zeitgrenze_bricht_ab_ohne_ein_qualitaetsurteil_zu_faellen(monkeypatch):
+    """⚠ Gemessen am 2026-08-24: `nex-agi/nex-n2-mini` brauchte 760 s für EINEN Aufruf
+    (Amtierender: 2,6 s im Median) und erzeugte dabei 65.536 Ausgabe-Token — die
+    Obergrenze des Endpunkts. Es hörte schlicht nicht auf zu schreiben.
+
+    Der `timeout` in `requests` hilft dagegen nicht: er misst die Pause zwischen Bytes,
+    nicht die Gesamtdauer. Der Aufruf lief mit `timeout=120` durch.
+    """
+    import time as _t
+
+    class Langsam:
+        MODEL = "x"
+
+        def structured_for_notice(self, nid):
+            return {}
+
+        def analyze_notice(self, rows, structured=None, notice_id=None):
+            _t.sleep(0.01)
+            return {"checklist": [], "rejected_items": 0}
+
+    class FakeLLM:
+        BudgetErschoepft = type("B", (RuntimeError,), {})
+        mit_boden = staticmethod(lambda m: m)
+        kontext = _Nichts
+        frist = _Nichts
+
+    # ⚠ Nicht 0 setzen: eine Grenze von 0 gilt als „keine Grenze" (`if grenze and …`).
+    monkeypatch.setattr(ps, "ZEIT_MINDEST", 0.001)
+    monkeypatch.setattr(ps, "ZEIT_FAKTOR", 0.001)    # jede echte Dauer reisst die Grenze
+    erg, grund = ps.messe_reihe(
+        analyse=Langsam(), llm=FakeLLM, kostenbuch=kostenbuch, modell="lahm/x",
+        vorgaenge={"N1": [], "N2": []}, zweck="test",
+        vergleich={"N1": {"sekunden": 1.0}, "N2": {"sekunden": 1.0}})
+    assert grund and grund.startswith("zu langsam")
+    assert "Kein Qualitätsurteil" in grund
+    assert set(erg) == {"N1"}, "nach dem ersten Verstoss wird abgebrochen"
+    assert "sekunden" in erg["N1"], "der Messwert bleibt erhalten"
+
+
+def test_ohne_vergleichsmass_gibt_es_keine_zeitgrenze():
+    """Die Grundlinie ist der Maßstab. Fehlt sie, wird nicht geraten."""
+    assert ps.zeitgrenze(None, "N1") is None
+    assert ps.zeitgrenze({"N1": {}}, "N1") is None
+    assert ps.zeitgrenze({"N1": {"sekunden": 100.0}}, "N1") == max(ps.ZEIT_MINDEST, 400.0)
+
+
+def test_zu_langsam_kommt_nicht_von_selbst_zurueck_in_die_schlange():
+    stand = {"kandidaten": {"lahm/x": {"status": "zu_langsam", "preis": 0.01}},
+             "grundlinie": {}}
+    assert not ps.einreihen(stand, "lahm/x", preis=0.01, grund="nochmal")
+    assert ps.naechste(stand, 5) == []
+
+
+def test_fristabbrueche_ergeben_kein_qualitaetsurteil():
+    """⚠ Der reale Fall vom 2026-08-24, und der Grund für den Fristriegel.
+
+    Bei `nex-agi/nex-n2-mini` rissen zwei von drei Vorgängen die Zeitfrist; der dritte
+    ergab null Punkte — dort hatte aber auch der Amtierende null. Es lag also **kein
+    einziger** verwertbarer Vergleich vor, und das Urteil lautete trotzdem
+    „durchgefallen: findet nur 0,0 statt 25,0 Punkte". Ein Qualitätsurteil über Antworten,
+    die nie angekommen sind.
+    """
+    amt = {f"N{i}": {"punkte": 25, "verworfen": 3, "kosten_usd": 0.03, "sekunden": 5.0}
+           for i in range(3)}
+    kand = {"N0": {"fehler": "AllKeysExhausted", "grund": "Frist von 240 s überschritten"},
+            "N1": {"punkte": 0, "verworfen": 0, "kosten_usd": 0.0005, "sekunden": 19.9},
+            "N2": {"fehler": "AllKeysExhausted", "grund": "Frist von 240 s überschritten"}}
+    ok, warum = ps.vorpruefung_bestanden(kand, amt)
+    assert not ok and "Zeitfrist" in warum and "kein Qualitätsurteil" in warum
+
+    voll = dict(kand)
+    voll.update({f"N{i}": {"fehler": "AllKeysExhausted",
+                           "grund": "Frist von 240 s überschritten"} for i in range(3, 12)})
+    amt_voll = {f"N{i}": {"punkte": 25, "verworfen": 3, "kosten_usd": 0.03, "sekunden": 5.0}
+                for i in range(12)}
+    u = ps.entscheide(voll, amt_voll)
+    assert u["status"] == "zu_langsam" and not u["wechseln"]
+    assert "kamen nie an" in u["grund"]
+
+
+def test_ein_einzelner_fristfall_kippt_das_urteil_nicht():
+    """Unter der Hälfte bleibt es ein Qualitätsurteil — sonst rettet ein Ausreißer jedes
+    schlechte Modell vor dem Durchfallen."""
+    amt = {f"N{i}": {"punkte": 25, "verworfen": 3, "kosten_usd": 0.03, "sekunden": 5.0}
+           for i in range(12)}
+    kand = {f"N{i}": {"punkte": 2, "verworfen": 1, "kosten_usd": 0.001, "sekunden": 4.0}
+            for i in range(12)}
+    kand["N0"] = {"fehler": "AllKeysExhausted", "grund": "Frist von 240 s überschritten"}
+    u = ps.entscheide(kand, amt)
+    assert u["status"] == "durchgefallen", u["grund"]
+
+
+def test_fristquote_zaehlt_nur_echte_fristfaelle():
+    assert ps.fristquote({}) == (0.0, 0, 0)
+    gemischt = {"a": {"fehler": "X", "grund": "HTTP 500"},
+                "b": {"fehler": "Y", "grund": "Frist von 240 s überschritten"},
+                "c": {"punkte": 5}}
+    assert ps.fristquote(gemischt) == (1 / 3, 1, 3)

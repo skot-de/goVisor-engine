@@ -66,6 +66,31 @@ _MODELL_ROH = os.environ.get("OR_MODEL", "google/gemini-2.5-flash")
 # Schalter fuer den Boden. „aus" fuehrt jeden Aufruf ohne `:floor` — noetig, um den Boden
 # ueberhaupt MESSEN zu koennen: ohne eine Vergleichsgruppe ohne Boden ist die Ersparnis eine
 # Behauptung. Der Vergleich laeuft ueber `scripts/kostenbericht.py --boden`.
+# Obergrenze der Ausgabe je Aufruf. ⚠ KEINE Sparmassnahme, sondern eine Ausreisser-Bremse.
+#
+# Gemessen am 2026-08-24 ueber 311 Produktionsaufrufe: der Amtierende braucht im Median
+# 775 Ausgabe-Token, im 90.-Perzentil 6.242, im Hoechstfall 50.964. Der Kandidat
+# `nex-agi/nex-n2-mini` erzeugte in EINEM Aufruf 65.536 — exakt die Obergrenze des
+# Endpunkts. Er hoerte schlicht nicht auf zu schreiben und brauchte dafuer 760 Sekunden,
+# gegen 2,6 s im Median beim Amtierenden.
+#
+# Ohne Angabe gilt die Grenze des Anbieters, und die ist bei jedem anders. 56.000 liegt
+# ueber allem, was wir je legitim gebraucht haben (50.964), und deckelt trotzdem den
+# Ausreisser. Wer sie enger zieht, schneidet echte Antworten ab — und eine abgeschnittene
+# Antwort ist unparsbar, kostet also doppelt: einmal bezahlt, nichts bekommen.
+OR_MAX_TOKENS = int(os.environ.get("OR_MAX_TOKENS", "56000"))
+
+# Harte Gesamtfrist je Aufruf, in Sekunden. 0 = aus.
+#
+# ⚠ DER `timeout` VON `requests` REICHT NICHT. Er misst die Pause ZWISCHEN Bytes, nicht die
+# Gesamtdauer. Am 2026-08-24 lief ein Aufruf an `nex-agi/nex-n2-mini` 761 Sekunden durch,
+# obwohl `timeout=120` gesetzt war — die Gegenstelle haelt die Verbindung mit Fuellbytes
+# offen, und damit laeuft der Lesetimeout nie ab.
+#
+# Gemessen ueber 311 Produktionsaufrufe des Amtierenden: Median 3,7 s, 95.-Perzentil
+# 36,4 s, Maximum 185,1 s. 600 s ist also weit jenseits von allem Legitimen und faengt nur
+# den echten Haenger. Der Pruefstand setzt sich fuer Kandidaten eine engere Frist.
+OR_FRIST = float(os.environ.get("OR_FRIST", "600"))
 OR_BODEN = os.environ.get("OR_BODEN", "an").lower()
 OR_MAX_PREIS = os.environ.get("OR_MAX_PREIS", "")
 
@@ -118,6 +143,8 @@ _LETZTER = threading.local()
 # trennen, was die Produktion gekostet hat und was ein Versuch. Genau diese Trennung fehlte
 # am 2026-08-23, als ein Deckel-Test das Guthaben des Analyse-Arbeiters aufbrauchte.
 _KONTEXT = threading.local()
+# Engere Frist fuer den laufenden Abschnitt — je Faden, wie alles andere hier.
+_FRIST = threading.local()
 
 
 def _load_keys() -> list[str]:
@@ -240,6 +267,50 @@ def _or_extra() -> dict:
 def available_keys() -> int:
     """Anzahl konfigurierter Keys ueber ALLE Anbieter, die (noch) nicht leer sind."""
     return sum(1 for a in _anbieter() for k in a["keys"] if k not in _EXHAUSTED)
+
+
+@contextlib.contextmanager
+def frist(sekunden: float | None):
+    """Engere Gesamtfrist je Aufruf für den folgenden Abschnitt. ``None`` laesst OR_FRIST.
+
+    Der Pruefstand nutzt das, um einen unbekannten Kandidaten kurz zu halten, ohne die
+    Produktion anzufassen.
+    """
+    vorher = getattr(_FRIST, "s", None)
+    if sekunden is not None:
+        _FRIST.s = sekunden
+    try:
+        yield
+    finally:
+        _FRIST.s = vorher
+
+
+def _post_mit_frist(url, headers, body, timeout, frist_s):
+    """`requests.post` mit ECHTER Gesamtfrist. Gibt (antwort, None) oder (None, grund).
+
+    ⚠ Der Faden wird bei Fristablauf **liegengelassen**, nicht abgebrochen — Python kann
+    einen blockierten Socket-Lesevorgang nicht von aussen unterbrechen. Er laeuft aus und
+    verschwindet. Das ist bewusst in Kauf genommen: ein liegengelassener Faden kostet
+    Speicher, ein haengender Lauf kostet die Nacht.
+    """
+    if not frist_s:
+        return requests.post(url, headers=headers, json=body, timeout=timeout), None
+    kiste: dict = {}
+
+    def hol():
+        try:
+            kiste["r"] = requests.post(url, headers=headers, json=body, timeout=timeout)
+        except Exception as e:                           # noqa: BLE001
+            kiste["e"] = e
+
+    t = threading.Thread(target=hol, daemon=True)
+    t.start()
+    t.join(frist_s)
+    if t.is_alive():
+        return None, f"Frist von {frist_s:.0f} s überschritten"
+    if "e" in kiste:
+        raise kiste["e"]
+    return kiste.get("r"), None
 
 
 @contextlib.contextmanager
@@ -565,14 +636,28 @@ def chat(messages: list[dict], model: str | None = None, temperature: float = 0,
         # Anbieter nehmen ihr eigenes, sonst antwortet die Gegenstelle mit „model not found".
         modell = model if (model and anb["name"] == "openrouter") else anb["model"]
         body = {"model": modell, "temperature": temperature, "messages": messages,
+                **({"max_tokens": OR_MAX_TOKENS} if OR_MAX_TOKENS else {}),
                 **anb.get("extra", {})}
         for key in keys:
             versuchte += 1
             for attempt in range(max_retries):
                 try:
                     t0 = time.time()
-                    r = requests.post(anb["url"], headers={"Authorization": f"Bearer {key}",
-                                      "Content-Type": "application/json"}, json=body, timeout=timeout)
+                    r, ueberzogen = _post_mit_frist(
+                        anb["url"], {"Authorization": f"Bearer {key}",
+                                     "Content-Type": "application/json"},
+                        body, timeout, getattr(_FRIST, "s", None) or OR_FRIST)
+                    if ueberzogen:
+                        # ⚠ Der Aufruf wird oben zu Ende gerechnet und ABGERECHNET, auch
+                        # wenn wir die Antwort nie sehen. Deshalb eine Zeile ohne Preis:
+                        # sie erklaert spaeter die Luecke in `kostenbericht.py --abgleich`.
+                        kostenbuch.notiere(
+                            anbieter=anb["name"], modell=modell, endpunkt="",
+                            vorgang=getattr(_KONTEXT, "vorgang", None),
+                            zweck=getattr(_KONTEXT, "zweck", None),
+                            kosten_usd=None, sekunden=time.time() - t0, abgebrochen=True)
+                        last_err = f"{ueberzogen} ({anb['name']}/{modell})"
+                        break                            # dieses Modell haengt — Key wechseln hilft nicht
                     if r.status_code == 200:
                         # ⚠ NICHT BLIND `["content"]`. Cerebras' gpt-oss-120b liefert
                         # `{"role","content","reasoning"}` und laesst `content` gelegentlich
