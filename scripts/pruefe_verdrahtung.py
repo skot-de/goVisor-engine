@@ -230,7 +230,7 @@ def _de_feste_pfade(skript: pathlib.Path) -> int:
     for knoten in ast.walk(baum):
         if isinstance(knoten, ast.Constant) and isinstance(knoten.value, str) \
                 and id(knoten) not in docs \
-                and ("data/gold/DE" in knoten.value or "data/silver/DE" in knoten.value):
+                and any(m in knoten.value for m in _DE_MUSTER):
             n += 1
     # ⚠ EINE Nennung ist erlaubt, WENN das Skript `_union` definiert: `G = "data/gold/DE"`
     # ist dort die BASIS, der die uebrigen Laender angehaengt werden (DE zuerst, weil es
@@ -241,6 +241,14 @@ def _de_feste_pfade(skript: pathlib.Path) -> int:
                       for k in ast.walk(baum)):
         return 0
     return n
+
+
+# ⚠ `data/docs/DE` KAM ERST AM 2026-08-24 DAZU. Die Sonde sah nur Gold und Silber und war
+# damit blind fuer die Dokumentebene — also fuer die Schicht, in der Abruf, Index und
+# Dokumentanalyse arbeiten. Aufgefallen ist es beim Gegenlesen der Laender-Bibel: der frisch
+# gebaute Pruefstand las fest aus `data/docs/DE`, die Sonde meldete „0 unerklaerte
+# DE-Bindungen". Eine Sonde, die eine Ebene nicht kennt, meldet dort Ruhe.
+_DE_MUSTER = ("data/gold/DE", "data/silver/DE", "data/docs/DE")
 
 
 def sonde_pfade(zeige_offen: bool = False) -> list[str]:
@@ -259,7 +267,8 @@ def sonde_pfade(zeige_offen: bool = False) -> list[str]:
         if name in OFFEN_NUR_DE_SKRIPTE:
             offen.append(f"    OFFEN   {name} ({n} feste DE-Pfade): {OFFEN_NUR_DE_SKRIPTE[name]}")
             continue
-        fehler.append(f"{name} liest an {n} Stellen fest aus data/gold/DE bzw. data/silver/DE "
+        fehler.append(f"{name} liest an {n} Stellen fest aus data/gold/DE, data/silver/DE "
+                      f"oder data/docs/DE "
                       f"und steht in keiner Liste — Absicht oder vergessen?")
     if offen:
         if zeige_offen:

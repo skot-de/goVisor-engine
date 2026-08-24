@@ -49,6 +49,15 @@ from govisor import kostenbuch, llm, pruefstand as ps  # noqa: E402
 from govisor.docpipe import SQL_BRAUCHBAR  # noqa: E402
 
 ZWECK = "pruefstand"
+# Aus welchem Land stammen die Prüfvergaben?
+#
+# ⚠ **Vorgabe DE, und das ist eine Datenlage, keine Bequemlichkeit.** Die Bibel verlangt zu
+# Recht, dass kein Feature nur für Deutschland gebaut wird (`docs/land-onboarding.md`).
+# Hier ist die Beschränkung erzwungen: AT und CH haben **0 % Dokumentabdeckung**
+# (`docs/laender/03-input-dokumente.md`) — es gibt dort schlicht keinen Volltext, an dem
+# sich zwei Modelle unterscheiden könnten. Sobald ein Land Dokumente hat, genügt
+# `--land XX`; der Rest der Kette ist länderunabhängig.
+LAND = __import__("os").environ.get("GOVISOR_PRUEFLAND", "DE")
 TEST_USD = float(__import__("os").environ.get("GOVISOR_TEST_USD", "0.50"))
 AMTIEREND = __import__("os").environ.get("GOVISOR_AMTIEREND", "google/gemini-2.5-flash")
 
@@ -97,7 +106,11 @@ def pruefsatz(stand: dict, n: int) -> dict:
         ids = list(bestand)[: n * 20]
         stand["pruefsatz"] = ids
     con = duckdb.connect()
-    src = (ROOT / "data/docs/DE/doc_text.parquet").as_posix()
+    src = (ROOT / f"data/docs/{LAND}/doc_text.parquet").as_posix()
+    if not Path(src).exists():
+        print(f"  Kein Volltext-Index für {LAND} ({src}) — Prüfsatz nicht aufbaubar.",
+              file=sys.stderr)
+        return {}
     aus: dict[str, list] = {}
     verworfen = 0
     for nid in ids:
@@ -391,11 +404,14 @@ def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--kandidat", help="gezielt dieses Modell prüfen")
     ap.add_argument("--stand", action="store_true", help="nur die Warteschlange zeigen")
+    ap.add_argument("--land", default=LAND,
+                    help="Land der Prüfvergaben (Vorgabe DE — nur dort gibt es Volltext)")
     ap.add_argument("--trocken", action="store_true",
                     help="kompletter Ablauf ohne Modell: Aufrufe zählen, Kosten vorhersagen")
     ap.add_argument("--budget-usd", type=float, default=TEST_USD)
     ap.add_argument("--hoechstens", type=int, default=ps.MAX_JE_TAG)
     a = ap.parse_args()
+    globals()["LAND"] = a.land
 
     if a.trocken:
         return trockenlauf([a.kandidat] if a.kandidat else None)

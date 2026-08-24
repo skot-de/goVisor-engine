@@ -219,7 +219,9 @@ def main() -> int:
     bestand = json.loads((ROOT / "web/data/doc-analysis.json").read_text(encoding="utf-8"))
     # Vorgaenge mit vorhandener Analyse: so steht der gespeicherte Bestand als Anker daneben.
     kandidaten_ids = stand["vorgaenge"] or [k for k in bestand][: a.n]
-    src = (ROOT / "data/docs/DE/doc_text.parquet").as_posix()
+    # Vorgabe DE: AT und CH haben 0 % Dokumentabdeckung, s. docs/laender/03.
+    land = __import__("os").environ.get("GOVISOR_PRUEFLAND", "DE")
+    src = (ROOT / f"data/docs/{land}/doc_text.parquet").as_posix()
     vorgaenge: dict[str, list] = {}
     for nid in kandidaten_ids[: a.n]:
         rows = con.execute(
