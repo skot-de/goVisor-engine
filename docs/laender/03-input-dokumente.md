@@ -150,6 +150,9 @@ Connectors gilt:
   unsere eigenen Fehler. Am Ablauf ändert es nichts (dieselbe Sperrfrist), an der
   Buchführung alles.
 
+Ob die Klassen im Bestand auch wirklich stimmen, beantwortet keine Regel, sondern der
+Prüfgang im nächsten Abschnitt.
+
 **⚠ Die Probe für „dauerhaft": kannst du begründen, warum es sich NIE ändern kann?** Wenn
 nicht, gehört es nicht dorthin. `kein_downloadbereich` stand bis zum 2026-08-24 unter
 dauerhaft, weil das zentrale Dashboard von deutsche-evergabe den Vorgang zwar listet, aber
@@ -159,71 +162,116 @@ Zugangsfrage, keine strukturelle Leere. 171 Vorgänge waren damit stillschweigen
 abgeschrieben statt als Reichweite geführt — genau der Verlust, vor dem der Kopf von
 `docfetch_queue.py` warnt.
 
+## ⚠ Ein Status ist eine Behauptung — und sie war fünfmal von fünf falsch
+
+Am 2026-08-24 wurden fünf Abrufer nachgeprüft, weil ihre Fehlermeldungen zum ersten Mal im
+Ertragsbericht sichtbar wurden (siehe oben, „Ein ungeklärter Fehlversuch wartet auf UNS").
+Geprüft wurde jeweils dieselbe Frage: **stimmt, was der Vermerk behauptet?**
+
+| Abrufer | Vermerk im Manifest (Stand 2026-08-24) | Fälle | Was tatsächlich dahinterlag |
+|---|---|---:|---|
+| netserver | „keine Version gelistet" | 261 | 25 von 30 hatten Unterlagen (477 Dateien) |
+| subreport | „0 Dateien" | 124 | vier Zustände: Konto, Frist, Aufhebung, Passwort |
+| evergabe-online | „keine Unterlagen" | 23 | 17× Vertraulichkeit, 4× Frist, 2 hatten ein ZIP |
+| healyhudson | „keine Dateien auf der Vorgangsseite" | 14 | 3 unveröffentlicht, 3 weg, 7 hatten Dateien |
+| staatsanzeiger | „kein ZIP-Link auf der Trefferliste" | 11 | 7 hatten einen Link, 4 tragen eine Absage |
+
+**433 Vorgänge trugen einen dieser fünf Vermerke; hochgerechnet aus den Stichproben traf
+er auf rund neun von zehn nicht zu.** Ein Rest war wirklich leer — dass es ihn gibt, ist
+kein Einwand, sondern der Grund, warum der falsche Teil so lange unbemerkt blieb. Dazu
+kamen zwei als *dauerhaft* abgeschriebene Gruppen (171 + 78): dort hielt das Urteil, aber
+mit einer Begründung, die sich widerlegen liess.
+
+### Warum das kein Zufall ist, sondern die Bauart
+
+Ein falsches „leer" verhält sich anders als ein Absturz. Es wirft keine Ausnahme, füllt
+kein Fehlerprotokoll und sieht im Bericht aus wie erledigte Arbeit. Es ist die einzige
+Fehlerart, die sich selbst versteckt — und deshalb die einzige, nach der man **aktiv suchen
+muss**. Ein Abrufer, der nie „leer" meldet, ist verdächtiger als einer, der es oft tut.
+
+Der zweite Grund ist die Blickrichtung. Ein Abrufer sucht, was er kennt: einen Knopf, einen
+Link, eine Dateiliste. Findet er ihn nicht, hat er streng genommen nur festgestellt, dass
+**sein Suchmuster nicht passte**. Daraus einen Satz über die Vergabe zu machen, ist ein
+Sprung, den der Code nicht belegen kann. Fast immer sagt die Seite den Grund selbst — in
+der Statusspalte, im Fliesstext, in der Adresse der Fehlerseite. Nur eben nicht dort, wo
+der Abrufer hinsieht.
+
+### Der Prüfgang für einen Abrufer
+
+Wiederholbar, in dieser Reihenfolge, und er dauert eine gute Stunde je Abrufer:
+
+1. **Bahn prüfen.** `scripts/laeuft_was.sh` — und die AUSGABE GANZ lesen. Ein `tail -3`
+   verdeckt den Prozessblock; genau das ist am 24.08. passiert.
+2. **Gruppen zählen.** Status und Notizen aus dem Manifest, absteigend. Schon hier fällt
+   auf, wenn eine Notiz für Hunderte Fälle gleich lautet.
+3. **Den bestehenden Code erneut laufen lassen**, ohne eine Zeile zu ändern. Das trennt
+   „kaputt" von „damals noch nicht da". Ausbeute an drei Abrufern: 7 von 14, 7 von 11,
+   2 von 23. **Wer diesen Schritt überspringt, baut einen Parser um, der funktioniert.**
+4. **Eine Handvoll Seiten von Hand ansehen** — den ganzen sichtbaren Text, nicht nur die
+   Stelle, an der der Abrufer sucht. Bei Framesets jeden Rahmen einzeln.
+5. **Nicht aus n=1 schliessen.** Die erste had.de-Probe war eine abgelaufene Vergabe und
+   hätte zum Urteil „dort liegt nichts" geführt; die Stichprobe über 25 zeigte das
+   Gegenteil. Umgekehrt genügt eine einzige Seite, um eine Behauptung zu WIDERLEGEN.
+6. **Jede Gruppe benennen**, bis der Rest klein ist. Ein Rest bleibt und darf bleiben —
+   „wirklich unerklärt" ist ein ehrlicher Status, „leer" für alles ist es nicht.
+7. **Gegenprobe auf dem guten Weg.** Nach jeder Änderung eine Stichprobe der ERFOLGREICHEN
+   Fälle erneut holen. Bei subreport: 15 nachgeprüft, 13 weiter mit 270 Dateinamen.
+
+### Die sechs Formen, in denen eine falsche Behauptung entsteht
+
+Alle sechs sind am selben Tag aufgetreten. Sie zu kennen spart den halben Prüfgang.
+
+1. **Das Merkmal steht auch im Rahmen drumherum.** Die NetServer-Wache prüfte eigens nach,
+   ob die Seite den Unterlagen-Abschnitt trägt — las dafür aber die ganze Seite, und die
+   Brotkrume von had.de lautet auf JEDER Seite „… | eHAD-Vergabeunterlagen". Die Wache las
+   das Menü und bestätigte sich selbst. **Ein Merkmal ist nur im eingegrenzten Suchbereich
+   ein Nachweis.**
+2. **Der Inhalt liegt in einem anderen Rahmen.** `page.query_selector` sieht nur den
+   Hauptrahmen. `www.had.de` ist eine Hülle, die Anwendung läuft auf `vergabe.had.de`.
+   Den Inhaltsrahmen am Merkmal suchen (wer den Knopf trägt, ist der Inhalt), nie am
+   Hostnamen — dieselbe Lehre wie in [Kapitel 02](02-input-ausschreibungen.md).
+3. **Ein Portal, zwei Oberflächen.** NetServer fährt eine ältere Bauform (Modal je Version)
+   und eine neuere (Sammelknopf, andere CSS-Klassen). Wer nur die bekannte kennt, meldet auf
+   der anderen „keine Version gelistet", während die Seite die Dateien sichtbar auflistet.
+4. **Die Zahl ersetzt den Grund.** subreport gab eine Dateizahl zurück, und der Aufrufer
+   machte daraus „nur_liste" oder „leer". Vier Zustände wurden so ununterscheidbar. **Wo
+   ein Abrufer eine Zahl liefert, liefert er keinen Grund.**
+5. **Die Seite, die scheitert, ist nicht die Seite, die antwortet.** Die Unterlagenseite der
+   e-Vergabe des Bundes quittiert jeden Fehlgriff mit demselben Satz („Diese Information
+   steht aktuell nicht zur Verfügung"); der Grund steht auf der Vorgangsseite. Healy-Hudson
+   trägt ihn sogar maschinenlesbar in der Adresse (`ErrorMessageKey=…`). **Führt eine Seite
+   einen Einheitssatz für alle Fehler, ist die Nachbarseite Pflicht.**
+6. **Das erwartete Element fehlt, die Begründung steht daneben.** Der Staatsanzeiger sagt im
+   Fliesstext „Die Vergabeunterlagen stehen nicht zum Download bereit … (INFO 75630)".
+   Gesucht wurde nur dort, wo Links stehen. **Fehlt ein Element, erst den Fliesstext lesen,
+   dann urteilen.**
+
+Dazu eine Regel für die Rangfolge im Code: **der positive Befund führt.** Trägt die Seite
+einen Knopf oder Ausklapper, wird geholt — erst wenn es ihn nicht gibt, wird nach dem Grund
+gesucht. Andersherum kann ein Wort aus einer Nachbarzeile („canceled" bei Los 2, während
+Los 1 offen ist) eine laufende Vergabe abstempeln. Dieser Fehler erzeugt keinen Fehlschlag,
+sondern eine falsche Gewissheit.
+
+### Was zu einer Korrektur dazugehört
+
+Der Code allein reicht nicht. Vier Dinge, sonst wirkt die Arbeit nicht:
+
+- **Die falsch beschrifteten Sätze freigeben.** Ein Satz ohne Manifest-Eintrag ist exakt
+  „noch nie versucht". Sonst warten sie die Sperrfrist ab, obwohl sie nie ordentlich
+  beurteilt wurden. Vorher sichern, und nur wenn der Abrufer gerade nicht läuft.
+- **Die neue Klasse in die Taxonomie eintragen**, mit Begründung. Für DAUERHAFT gilt die
+  Probe: *kannst du begründen, warum es sich NIE ändern kann?* Wenn nicht, gehört es nach
+  BLOCKIERT — sonst ist der Vorgang an dem Tag verloren, an dem der Zugang entsteht.
+- **Eine Wache schreiben, die genau diesen Irrtum festhält**, nicht nur den neuen Weg.
+  Der Test heisst dann „das Menü gilt nicht als Unterlagen-Abschnitt", nicht „Parser läuft".
+- **Die Portal-Landkarte berichtigen.** Falsche Einträge dort steuern, welche Portale
+  überhaupt angefasst werden. NetServer stand als „Login-Wand, keine öffentlichen
+  Download-Buttons" — dagegen standen 1.494 anonym geholte ZIPs.
+
 ## Fallen beim Abruf
 
-- **⚠ Ein positives Merkmal ist nur dann ein Nachweis, wenn es nicht auch im Rahmen
-  drumherum stehen kann.** Der NetServer-Abrufer schloss nicht aus der Abwesenheit — er
-  prüfte eigens nach, ob die Seite den Unterlagen-Abschnitt trägt, und meldete nur dann
-  „wirklich keine Datei". Genau richtig gedacht, und trotzdem falsch: geprüft wurde
-  `document.body.innerText` der ganzen Seite, und die Brotkrume von had.de lautet auf JEDER
-  Seite „… | eHAD-Vergabeunterlagen". Die Wache las das Menü und bestätigte sich selbst.
-  188 Vorgänge lagen deshalb als „hat keine Unterlagen" auf Halde; die Stichprobe nach der
-  Korrektur fand bei 21 von 25 welche. **Ein Merkmal im Suchbereich einschränken, sonst
-  bestätigt die Navigation jede Behauptung.**
-- **Frameset-Portale: `page.query_selector` sieht nur den Hauptrahmen.** `www.had.de` ist
-  eine leere Hülle, die Anwendung läuft auf `vergabe.had.de` in einem Kindrahmen. Wer die
-  Seite abfragt, durchsucht das Menü. Den Inhaltsrahmen am MERKMAL suchen (wer den Knopf
-  trägt, ist der Inhalt; sonst der Kindrahmen, der dieselbe Vorgangs-ID lädt), niemals am
-  Hostnamen — siehe auch [Kapitel 02](02-input-ausschreibungen.md), dort dieselbe Lehre.
-- **Ein Portal, zwei Oberflächen.** NetServer läuft in einer älteren Bauform (Modal je
-  Version) und einer neueren (Sammelknopf, kein Modal, andere CSS-Klassen). Wer nur die
-  bekannte Bauform kennt, meldet auf der anderen „keine Version gelistet", obwohl die Seite
-  die Dateien sichtbar auflistet. **Vor „das Portal gibt nichts her" einmal in den Quelltext
-  sehen, was es tatsächlich anbietet.**
-- **„Sichtbarkeitszeitraum abgelaufen" ist DAUERHAFT, nicht offen.** Sagt das Portal selbst,
-  dass der Vorgang ausserhalb seines Fensters liegt, hilft kein zweiter Versuch und kein
-  Konto. Ohne eigene Klasse läuft der Vorgang alle sieben Tage erneut gegen dieselbe Wand.
-- **⚠ Eine Zahl ist keine Diagnose.** subreport meldete für 124 Vorgänge „0 Dateien" — ein
-  Satz, der wie „diese Vergabe hat keine Unterlagen" klingt. Nachgemessen waren es VIER
-  verschiedene Dinge, jedes mit einer anderen Konsequenz: Anmeldung nötig (blockiert,
-  wartet auf ein Konto), Gültigkeit abgelaufen und Vergabe aufgehoben (beides dauerhaft,
-  nie wieder versuchen) und beschränkte Vergaben mit Passwort für eingeladene Bieter. Nur
-  ein kleiner Rest war wirklich unerklärt. **Wo ein Abrufer eine Zahl zurückgibt, gibt er
-  keinen Grund zurück — und ohne Grund landet alles in derselben Schublade.** Die Seite
-  selbst weiß es fast immer; sie sagt es in der Statusspalte.
-- **⚠ Der positive Befund muss die Rangfolge anführen.** Trägt die Seite einen Ausklapper
-  oder einen Knopf, wird geholt — erst wenn es ihn NICHT gibt, wird nach dem Grund gesucht.
-  Andersherum kann ein Wort aus einer Nachbarzeile („canceled" bei Los 2, während Los 1
-  offen ist) eine laufende Vergabe abstempeln. Dieser Fehler erzeugt keinen Fehlschlag,
-  sondern eine falsche Gewissheit, und die sieht niemand im Bericht.
-- **⚠ Die Seite, die scheitert, ist oft nicht die Seite, die antwortet.** Die
-  Unterlagenseite der e-Vergabe des Bundes quittiert JEDEN Fehlgriff mit demselben Satz:
-  „Diese Information steht aktuell nicht zur Verfügung." Er sagt nichts darüber, ob der
-  Vorgang weg ist, die Frist durch oder die Unterlagen absichtlich zurückgehalten werden.
-  Der Grund steht eine Seite weiter, auf der Vorgangsseite. Gemessen über alle 23 Fälle:
-  17× „Aus Gründen der Vertraulichkeit … nicht frei zugänglich" (blockiert, nicht leer),
-  4× Abgabefrist verstrichen, 2 hatten inzwischen ein ZIP mit 52 Dateien. **Kein einziger
-  war eine Vergabe ohne Unterlagen** — was der Vermerk behauptete. Wo eine Portalseite
-  einen Einheitssatz für alle Fehler führt, ist die Nachbarseite Pflicht, nicht Kür.
-- **⚠ Eine Fehlerseite sagt etwas über die ANFRAGE, nicht über die Vergabe.**
-  Healy-Hudson beantwortet Fehlgriffe mit `ErrorMessage.aspx?ErrorMessageKey=…` und trägt
-  den Grund damit maschinenlesbar in der Adresse. Wer dort nur nach Dateien sucht, findet
-  keine und meldet „keine Dateien auf der Vorgangsseite". Gemessen über alle 14 so
-  gemeldeten Fälle: 3× `Project.NotBeenPublished` (noch nicht veröffentlicht), 3×
-  `SubProject.NotAvailable` (nicht mehr verfügbar), 7 hatten inzwischen Dateien. **Vor der
-  Inhaltsprüfung fragen, ob man überhaupt auf der gemeinten Seite steht.**
-- **Ein Teil der Fehlversuche ist schlicht zu früh.** Von denselben 14 lieferten 7 beim
-  zweiten Anlauf ohne jede Codeänderung Dateien. Bevor man einen Parser umbaut, den
-  bestehenden Code erneut über die Fälle laufen lassen: das trennt „kaputt" von „damals
-  noch nicht da" und kostet ein paar Minuten statt eines Umbaus.
-- **⚠ „Kein Link gefunden" ist eine Aussage über unseren Blick.** Der Staatsanzeiger-
-  Abrufer meldete für 11 Vorgänge „kein ZIP-Link auf der Trefferliste". Nachgesehen: 7
-  lieferten beim zweiten Anlauf einen Link, und die übrigen 4 tragen die Absage des Portals
-  im Klartext auf derselben Seite — „Die Vergabeunterlagen stehen nicht zum Download
-  bereit. Bitte setzen Sie sich mit der Vergabestelle in Verbindung … (INFO 75630)". Wir
-  suchten nur an der Stelle, an der Links stehen, und nicht dort, wo die Begründung steht.
-  **Wenn ein erwartetes Element fehlt, den Fließtext der Seite lesen, bevor man ein Urteil
-  schreibt.**
+Der Rest, der nichts mit Statusmeldungen zu tun hat — sondern mit dem Betrieb:
+
 - **Hängende Abrufer.** `SIGALRM` wird von Playwright verschluckt. Es braucht eine Wache
   ausserhalb des Prozesses, sonst steht ein Lauf still und meldet nichts.
 - **Zip-Bomben.** Grössengrenze und Entpack-Grenze sind Pflicht, nicht Kür.
@@ -262,6 +310,10 @@ statt Ergebnisspeicher**. Gemessen sind **22 % des Textbestands Kopie**.
 3. Ausbeute je Portal messen und in `docs/dokument-zugang-map.md` eintragen.
 4. Sperrtypen zuordnen — insbesondere: ist es `konto` oder in Wahrheit `parser`?
 5. Erst dann entscheiden, ob sich ein Connector lohnt.
+6. **Nach den ersten Läufen den Prüfgang gehen** (siehe „Ein Status ist eine Behauptung").
+   Ein frischer Connector produziert seine falschen Vermerke sofort — sie bleiben nur
+   unsichtbar, bis jemand sie nachrechnet. Bei fünf gewachsenen Abrufern waren es 433
+   Vorgänge.
 
 ## ⚠ `has_documents` heisst NICHT „wir haben die Unterlagen"
 

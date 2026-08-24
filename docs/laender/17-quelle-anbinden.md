@@ -161,15 +161,30 @@ def lauf(limit: int | None = None, dry_run: bool = False, country: str = "DE") -
 `govisor/docfetch_queue.py` einordnet:
 
 ```
-KEIN_FEHLSCHLAG   downloaded · exists · probe · nur_liste
-DAUERHAFT         der Vorgang gibt strukturell nichts her
-BLOCKIERT         kann sich aendern; Sperrfrist 7 Tage, dann erneut
+KEIN_FEHLSCHLAG   downloaded · exists · probe · nur_liste · nur_bekanntmachung
+DAUERHAFT         gibt strukturell nichts her — laeuft NIE wieder auf
+WARTET            noch nicht so weit (der Vorgang, nicht wir)
+BLOCKIERT         existiert, uns fehlt der Zugang
+in keiner Menge   der gewoehnliche Fehlschlag — Sperrfrist 7 Tage, dann erneut
 ```
+
+⚠ **Die Sperrfrist gilt NUR für die letzte Zeile.** Ein blockierter Vorgang läuft nicht
+nach sieben Tagen wieder auf, sondern erst, wenn der Blocker gemeldet wird
+(`filtere(..., frei={"konto"})`) oder ihn jemand von Hand räumt. Das ist der ganze Zweck
+der Klasse: 389 Vorgänge sollen nicht jede Woche gegen dieselbe Anmeldeschranke laufen,
+aber auch nicht verloren sein, wenn ein Zugang entsteht.
 
 ⚠ **Einen behebbaren Fehlschlag als `konto` abzulegen ist der teuerste Fehler dieser
 Achse.** 94 Vorgänge warteten so auf einen Zugang, der ihnen nichts genützt hätte — die
 Seite lud, sie war nur anders gebaut als der Parser erwartete. Dafür gibt es
 `kein_listenlayout` mit Sperrtyp `parser`: eine **Arbeitsliste**, kein Schicksal.
+
+⚠ **Und der Status altert.** Was der Abrufer heute schreibt, steht morgen noch da und wird
+nie wieder geprüft — genau darin liegt die Gefahr. Am 2026-08-24 wurden fünf gewachsene
+Abrufer nachgerechnet: **keine einzige ihrer Fehlermeldungen hielt der Prüfung stand**, 433
+Vorgänge trugen eine falsche Beschriftung. Der Prüfgang dafür steht in
+[Kapitel 03](03-input-dokumente.md), Abschnitt „Ein Status ist eine Behauptung"; er gehört
+nach den ersten Läufen eines neuen Connectors einmal gegangen.
 
 ### Wenn nur die Liste offen ist
 

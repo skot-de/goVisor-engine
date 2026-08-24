@@ -26,7 +26,7 @@ Deutschland gebaut und für den Rest vergessen wurde. Und sie fielen nicht auf, 
 | **00** | [Reihenfolge und Tore](laender/00-reihenfolge-und-tore.md) | Was heisst „fertig"? Sechs Tore, drei Fragen an jede Zahl. |
 | **01** | [Quellenlandschaft](laender/01-quellenlandschaft.md) | Drei Vergabeebenen, API vor Abgriff, Recht, Registry-Status. |
 | **02** | [Input Ausschreibungen](laender/02-input-ausschreibungen.md) | Bronze→Silber, Parser, IDs, Sprachfassungen, Attribute. |
-| **03** | [Input Dokumente](laender/03-input-dokumente.md) | Portale, Abrufwarteschlange, Sperrtypen, Doktypen. |
+| **03** | [Input Dokumente](laender/03-input-dokumente.md) | Portale, Abrufwarteschlange, Sperrtypen, Doktypen. **Enthält den Prüfgang für einen Abrufer** — fünf von fünf Statusmeldungen hielten der Prüfung nicht stand. |
 | **04** | [Dublettenwall](laender/04-dublettenwall.md) | Belegklassen, Locale je Land, Kennung vs. Name. |
 | **05** | [Gold-Kette](laender/05-gold-kette.md) | Builder-Reihenfolge, Verdrahtungsprüfung, bewusste Lücken. |
 | **06** | [Cross-Verdrahtung](laender/06-cross-verdrahtung.md) | `_union`, Land im Schlüssel, Silber-Globs, Determinismus. |
