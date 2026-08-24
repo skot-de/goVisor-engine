@@ -26,7 +26,7 @@ Nichts hier lädt Daten — es ist reine Deklaration. Der Ingest passiert über 
 """
 from __future__ import annotations
 
-from dataclasses import dataclass, field
+from dataclasses import dataclass, field, replace as _replace
 
 # --- Connector = technische Basis (was gepflegt werden muss) ---------------------------------
 CONNECTORS = {
@@ -113,13 +113,42 @@ _TED_EU = {
 }
 
 
+def _ted_status(cc: str) -> tuple[str, str]:
+    """Status eines TED-Landes aus der DATENLAGE ableiten, nicht pauschal setzen.
+
+    ⚠ Bis 2026-08-23 bekam jedes EU-Land hier fest `candidate` — „Machbarkeit belegt,
+    Connector geplant". Fuer Polen war das schlicht falsch: 326.485 Bekanntmachungen
+    lagen in Silber, seit dem 2026-06-29 unberuehrt, und die Registry las sich, als haette
+    niemand das Land je angefasst. Ein Status, der die Datenlage nicht kennt, ist keine
+    Auskunft, sondern eine Vorgabe mit Etikett.
+
+    Die Stufen sind dieselben wie in `docs/laender/01-quellenlandschaft.md`:
+        candidate  nichts da
+        prepared   Silber liegt, Gold nicht — angefangen und liegengeblieben
+        live       Gold liegt, das Land ist in der Kette
+    """
+    from pathlib import Path as _P
+    wurzel = _P(__file__).resolve().parents[1] / "data"
+    silber = list((wurzel / "silver" / cc / "notices").glob("*/*.parquet")) \
+        if (wurzel / "silver" / cc / "notices").is_dir() else []
+    gold = (wurzel / "gold" / cc / "lead_export.parquet").exists()
+    if gold:
+        return "live", "in der Kette"
+    if silber:
+        return "prepared", (f"Silber liegt ({len(silber)} Dateien), Gold NICHT — "
+                            "angefangen und liegengeblieben, s. docs/land-onboarding.md")
+    return "candidate", ""
+
+
 def _ted_candidates() -> list[Source]:
     out = []
     for cc, name in _TED_EU.items():
+        status, hinweis = _ted_status(cc)
         out.append(Source(
             id=f"ted-{cc.lower()}", name=f"TED {name}", connector="ted-bulk",
-            country=cc, tier="oberschwellig", status="candidate",
-            coverage="EU-pflichtige Vergaben; gleiche eForms/Legacy-Pipeline wie DE/AT",
+            country=cc, tier="oberschwellig", status=status,
+            coverage=("EU-pflichtige Vergaben; gleiche eForms/Legacy-Pipeline wie DE/AT"
+                      + (f" — ⚠ {hinweis}" if hinweis else "")),
             overlap="", url="https://ted.europa.eu",
         ))
     return out
@@ -214,8 +243,19 @@ REGISTRY: list[Source] = [
            url="https://www.data.gouv.fr/datasets/donnees-essentielles-de-la-commande-publique-consolidees-format-tabulaire"),
 ]
 
-# TED-EU-Breite anhängen (candidate).
+# TED-EU-Breite anhaengen. Der Status kommt aus der Datenlage, nicht aus einer Vorgabe.
 REGISTRY += _ted_candidates()
+
+# ⚠ DASSELBE FUER DIE VON HAND GESCHRIEBENEN TED-EINTRAEGE. `ted-at` stand fest auf
+# `prepared`, obwohl Oesterreich seit Wochen taeglich durch die Kette laeuft — ein
+# getippter Status altert, sobald jemand das Land fertig baut, und niemand merkt es.
+# Betroffen sind NUR die `ted-*`-Landeseintraege; Portale und nationale Quellen behalten
+# ihren kuratierten Status, weil dort die Datenlage nichts ueber den Anbindungsstand sagt.
+for _i, _s in enumerate(REGISTRY):
+    if _s.connector == "ted-bulk":
+        _status, _ = _ted_status(_s.country)
+        if _status != _s.status:
+            REGISTRY[_i] = _replace(_s, status=_status)
 
 
 # ------------------------------------------------------------------------------------------

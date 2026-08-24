@@ -39,6 +39,7 @@ Deutschland gebaut und für den Rest vergessen wurde. Und sie fielen nicht auf, 
 | **13** | [Währung und Werte](laender/13-waehrung-und-werte.md) | ⚠ **Zuerst lesen, wenn das Land nicht in Euro rechnet.** |
 | **14** | [Zeichen und Schrift](laender/14-zeichen-und-schrift.md) | ⚠ **Zuerst lesen, wenn das Land andere Buchstaben hat.** |
 | **15** | [Eintragungsliste](laender/15-eintragungsliste.md) | Jede Datei, in der ein Land bekannt gemacht wird. |
+| **16** | [Trockenlauf Polen](laender/16-trockenlauf-polen.md) | Die Bibel am echten Fall geprüft — was hielt und was fehlte. |
 
 ## Der Ablauf in einem Bild
 

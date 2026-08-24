@@ -807,15 +807,24 @@ def test_source_registry_is_wellformed():
     assert dach[("DE", "oberschwellig")] == "live" and dach[("DE", "unterschwellig")] == "live"
     assert dach[("CH", "oberschwellig")] == "live" and dach[("CH", "unterschwellig")] == "live"
     assert dach[("AT", "unterschwellig")] in ("candidate", "prepared", "live")
-    # Die Live-Quellen. ⚠ Die Registry hinkt dem Tageslauf hinterher: `govisor.dtvp` laeuft
-    # dort und schreibt Silber, steht aber in KEINEM Registry-Eintrag; `atverg` steht auf
-    # "prepared", obwohl `ingest-atverg` taeglich laeuft. Beides ist beim Eintragen von
-    # NetServer aufgefallen und bewusst nicht mit-korrigiert — der Status einer fremden
-    # Quelle ist eine Produktaussage, keine Aufraeumarbeit nebenbei.
+    # Die Live-Quellen.
+    #
+    # ⚠ `ted-at` ist seit 2026-08-23 dabei, und zwar OHNE dass jemand es eingetippt hat:
+    # der Status der `ted-*`-Landeseintraege wird seither aus der DATENLAGE abgeleitet
+    # (Gold da → live, nur Silber → prepared, nichts → candidate). Vorher stand `ted-at`
+    # fest auf "prepared", obwohl Oesterreich seit Wochen taeglich durch die Kette laeuft,
+    # und `ted-pl` auf "candidate", obwohl 326.485 polnische Bekanntmachungen in Silber
+    # lagen. Ein getippter Status altert in dem Moment, in dem jemand das Land fertig baut.
+    #
+    # ⚠ Was NICHT abgeleitet wird und weiter hinterherhinkt: `govisor.dtvp` laeuft im
+    # Tageslauf und schreibt Silber, steht aber in KEINEM Eintrag; `atverg` steht auf
+    # "prepared", obwohl `ingest-atverg` taeglich laeuft. Bei Portalen und nationalen
+    # Quellen sagt die Datenlage nichts ueber den Anbindungsstand — dort bleibt der Status
+    # eine Produktaussage und wird von Hand gepflegt.
     live_ids = {s.id for s in sources.bekanntmachungen() if s.status == "live"}
-    assert live_ids == {"ted-de", "doe-de", "simap-ch", "netserver-de"}
-    # AT ist als Brücke vorbereitet (deckt sich mit build_at_gold)
-    assert any(s.id == "ted-at" and s.status == "prepared" for s in sources.REGISTRY)
+    assert live_ids == {"ted-de", "ted-at", "doe-de", "simap-ch", "netserver-de"}
+    # Polen: Silber liegt, Gold nicht — die Ableitung muss das sehen.
+    assert any(s.id == "ted-pl" and s.status == "prepared" for s in sources.REGISTRY)
 
 
 def test_muni_key_ags_matching():
