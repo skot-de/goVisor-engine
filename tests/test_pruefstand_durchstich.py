@@ -159,3 +159,91 @@ def test_schlechter_kandidat_faellt_in_der_vorpruefung_und_kostet_nicht_die_haup
     berührt = {v for m, v in prot if m == "billig/schlecht"}
     assert berührt == {"N0", "N1"}, "nur die Vorprüfung, nicht der ganze Satz"
     assert not (buehne / "freigabe.json").exists(), "ein Durchgefallener wird nie freigegeben"
+
+
+# ── Der Wechsel selbst ───────────────────────────────────────────────────────────────
+
+def test_waehlen_nimmt_das_billigste_freigegebene_und_hinterlegt_es(tmp_path, monkeypatch,
+                                                                    capsys):
+    """⚠ DER MOMENT DES WECHSELS. Vorher war er nur mit EINEM freigegebenen Modell erprobt —
+    da kann nichts schiefgehen, weil es nichts zu wählen gibt.
+
+    Geprüft wird zusätzlich, dass nach dem **Mischpreis** gewählt wird und nicht nach der
+    Summe der beiden Preise: unsere Last ist ausgabelastig (gemessen 1,33:1), und ein
+    Modell mit billiger Eingabe und teurer Ausgabe wäre sonst zu gut bewertet.
+    """
+    mw = _lade("scripts/modellwaechter.py", "mw_test")
+    monkeypatch.setattr(mw, "WAHL", tmp_path / "wahl.json")
+    monkeypatch.setattr(mw, "FREIGABE", tmp_path / "freigabe.json")
+    (tmp_path / "freigabe.json").write_text(json.dumps({
+        AMT: {"grund": "Titelverteidiger", "seit": "2026-08-18"},
+        "billig/gut": {"grund": "Prüfstand", "seit": "2026-08-24"},
+        "falle/teure-ausgabe": {"grund": "Prüfstand", "seit": "2026-08-24"},
+    }), encoding="utf-8")
+
+    tauglich = {"kontext": 1_000_000, "params": ["structured_outputs"], "auslauf": None}
+    monkeypatch.setattr(mw.mk, "hole", lambda *a, **k: [])
+    monkeypatch.setattr(mw.mk, "verdichte", lambda roh: {
+        AMT: {"name": "A", "ein": 0.30, "aus": 2.50, **tauglich},
+        "billig/gut": {"name": "B", "ein": 0.05, "aus": 0.40, **tauglich},
+        # Billiger in der EINGABE, teurer in der Ausgabe — die Falle.
+        "falle/teure-ausgabe": {"name": "C", "ein": 0.01, "aus": 3.00, **tauglich},
+    })
+    boeden = {AMT: (0.15, 1.25), "billig/gut": (0.05, 0.40),
+              "falle/teure-ausgabe": (0.01, 3.00)}
+    monkeypatch.setattr(mw.mk, "bodenpreis", lambda slug, **k: {
+        "ein": boeden[slug][0], "aus": boeden[slug][1],
+        "endpunkt": "fake", "haeuser": 1, "endpunkte": 1})
+    monkeypatch.setattr(kostenbuch, "PFAD", tmp_path / "leer.jsonl")
+
+    assert mw.waehle() == 0
+    aus = capsys.readouterr()
+    assert aus.out.strip() == "billig/gut", "auf stdout gehört NUR der Modellname"
+    assert "Wechsel von" in aus.err
+
+    hinterlegt = json.loads((tmp_path / "wahl.json").read_text(encoding="utf-8"))
+    assert hinterlegt["modell"] == "billig/gut"
+    assert hinterlegt["stand"], "ohne Datum verfällt die Wahl nie"
+
+
+def test_waehlen_faellt_auf_den_amtierenden_zurueck_wenn_der_katalog_ausfaellt(
+        tmp_path, monkeypatch, capsys):
+    """Fail-open: ein Wächter, der den Lauf verhindert, ist teurer als jedes Modell."""
+    mw = _lade("scripts/modellwaechter.py", "mw_test2")
+    monkeypatch.setattr(mw, "WAHL", tmp_path / "wahl.json")
+    monkeypatch.setattr(mw, "FREIGABE", tmp_path / "freigabe.json")
+    monkeypatch.setattr(mw.mk, "hole",
+                        lambda *a, **k: (_ for _ in ()).throw(OSError("Netz weg")))
+    monkeypatch.setattr(kostenbuch, "PFAD", tmp_path / "leer.jsonl")
+
+    assert mw.waehle() == 0
+    aus = capsys.readouterr()
+    assert aus.out.strip() == mw.AMTIEREND
+    assert "nicht erreichbar" in aus.err
+
+
+def test_waehlen_ueberspringt_ein_freigegebenes_das_nicht_mehr_taugt(tmp_path, monkeypatch,
+                                                                     capsys):
+    """Ein Modell kann abgekündigt werden oder seinen Kontext verlieren, nachdem wir es
+    freigegeben haben. Dann darf es nicht mehr gewählt werden — auch nicht als billigstes."""
+    mw = _lade("scripts/modellwaechter.py", "mw_test3")
+    monkeypatch.setattr(mw, "WAHL", tmp_path / "wahl.json")
+    monkeypatch.setattr(mw, "FREIGABE", tmp_path / "freigabe.json")
+    (tmp_path / "freigabe.json").write_text(json.dumps({
+        AMT: {"grund": "x", "seit": "1"}, "geschrumpft/x": {"grund": "y", "seit": "2"},
+    }), encoding="utf-8")
+    monkeypatch.setattr(mw.mk, "hole", lambda *a, **k: [])
+    monkeypatch.setattr(mw.mk, "verdichte", lambda roh: {
+        AMT: {"name": "A", "ein": 0.30, "aus": 2.50, "kontext": 1_000_000,
+              "params": ["structured_outputs"], "auslauf": None},
+        "geschrumpft/x": {"name": "S", "ein": 0.001, "aus": 0.001, "kontext": 8192,
+                          "params": ["structured_outputs"], "auslauf": None},
+    })
+    monkeypatch.setattr(mw.mk, "bodenpreis", lambda slug, **k: {
+        "ein": 0.15, "aus": 1.25, "endpunkt": "f", "haeuser": 1, "endpunkte": 1})
+    monkeypatch.setattr(kostenbuch, "PFAD", tmp_path / "leer.jsonl")
+
+    assert mw.waehle() == 0
+    aus = capsys.readouterr()
+    assert aus.out.strip() == AMT, "das geschrumpfte Modell darf nicht gewählt werden"
+    assert "erfüllt den Bedarf nicht mehr" in aus.err
