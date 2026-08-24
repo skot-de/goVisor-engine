@@ -191,7 +191,37 @@ def unterlagen_url(url: str | None) -> str | None:
 # obwohl die Seite die Dateien sichtbar auflistet — 32 Vorgaenge lagen so auf Halde.
 _KNOPF = "a.zipFileContents"
 _SAMMEL = "a.documents-download-all"
+# ⚠ Der Sammelknopf steckt im eingeklappten Abschnitt „Unterlagen". Die Seite oeffnet auf
+# „Bekanntmachungen"; der Knopf ist dann im DOM, aber NICHT SICHTBAR. Playwright wartet auf
+# einem unsichtbaren Element die volle Zeitgrenze ab und wirft dann `TimeoutError` — am
+# 2026-08-24 waren das 13 von 19 xvergabe-Versuchen, je 45 Sekunden fuer nichts. Die
+# Ueberschrift ist tastaturbedienbar (`div.enter-key`), ein Klick darauf klappt sie auf.
+_ABSCHNITT_KOPF = ("xpath=//div[contains(@class,'enter-key')]"
+                   "[.//h2[normalize-space()='Unterlagen' or normalize-space()='Documents']]")
+_ABSCHNITT_MS = 3000
+_KLICK_MS = 8000
 _EINZEL = "a.document-tab-document-download"
+
+
+def sichtbar_machen(rahmen, knopf):
+    """Eingeklappten Unterlagen-Abschnitt oeffnen. Gibt den sichtbaren Knopf oder None.
+
+    ⚠ NIEMALS auf ein unsichtbares Element klicken. Der Klick scheitert nicht sofort, er
+    WARTET — und verbrennt je Vorgang die volle Zeitgrenze, ohne dass im Protokoll steht,
+    warum. Ein `TimeoutError` liest sich wie ein langsames Portal; hier war es ein
+    zugeklappter Abschnitt.
+    """
+    if knopf.is_visible():
+        return knopf
+    kopf = rahmen.query_selector(_ABSCHNITT_KOPF)
+    if kopf is not None:
+        try:
+            kopf.click(timeout=_KLICK_MS)
+            rahmen.wait_for_timeout(_ABSCHNITT_MS)
+        except Exception:                                # noqa: BLE001
+            pass
+    knopf = rahmen.query_selector(_SAMMEL)
+    return knopf if (knopf is not None and knopf.is_visible()) else None
 
 
 def _uebernimm(d, ziel: Path) -> dict:
@@ -264,6 +294,12 @@ def hole_vergabe(seite: str, pg, ziel: Path, dry_run: bool = False) -> dict:
         # dann ein Nachweis, wenn es nicht auch im Rahmen drumherum stehen kann.
         sammel = rahmen.query_selector(_SAMMEL)
         if sammel:                        # neuere Oberflaeche: Sammel-ZIP ohne Modal
+            sammel = sichtbar_machen(rahmen, sammel)
+            if sammel is None:
+                # Der Knopf ist da, wir bekommen ihn nur nicht zu Gesicht. Das ist UNSER
+                # Problem, kein fehlender Zugang — Sperrtyp `parser`, also Arbeitsliste.
+                return {"status": "kein_listenlayout", "bytes": 0, "n_files": 0,
+                        "note": "Sammelknopf bleibt unsichtbar"}
             if dry_run:
                 namen = rahmen.evaluate(
                     "() => [...document.querySelectorAll('" + _EINZEL + "')]"

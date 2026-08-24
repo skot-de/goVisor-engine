@@ -222,9 +222,9 @@ ein Grep „acht von neun Abrufern ohne Längen-Wache" — nachgesehen fingen di
 Fall längst, nur anders benannt. Übrig blieb ein einziger. Wer nach dem Grep aufhört, baut
 acht Änderungen, von denen sieben nichts verbessern und jede etwas kaputt machen kann.
 
-### Die sieben Formen, in denen eine falsche Behauptung entsteht
+### Die acht Formen, in denen eine falsche Behauptung entsteht
 
-Alle sieben sind am selben Tag aufgetreten. Sie zu kennen spart den halben Prüfgang.
+Alle acht sind am selben Tag aufgetreten. Sie zu kennen spart den halben Prüfgang.
 
 1. **Das Merkmal steht auch im Rahmen drumherum.** Die NetServer-Wache prüfte eigens nach,
    ob die Seite den Unterlagen-Abschnitt trägt — las dafür aber die ganze Seite, und die
@@ -258,6 +258,16 @@ Alle sieben sind am selben Tag aufgetreten. Sie zu kennen spart den halben Prüf
    führen, damit er wiederholt wird. Die meisten Abrufer fangen ihn schon nebenbei (über
    eine fehlende Überschrift oder einen fehlenden Abschnitt); wer neu baut, muss ihn
    ausdrücklich fangen.
+
+8. **Ein `TimeoutError` ist nicht immer ein langsames Portal.** Auf xvergabe.de steckte der
+   Sammelknopf im eingeklappten Abschnitt „Unterlagen" — die Seite öffnet auf
+   „Bekanntmachungen". Der Knopf war im DOM, aber unsichtbar, und Playwright klickt nicht
+   sofort ins Leere: **es wartet, bis das Element klickbar wird**, und wirft erst nach der
+   vollen Zeitgrenze. 13 von 19 Versuchen verbrannten so je 45 Sekunden, und im Protokoll
+   stand „TimeoutError" — also etwas, das nach fremder Langsamkeit aussieht. Nach dem
+   Aufklappen laden dieselben acht Vorgänge in 74 Sekunden zusammen, mit 235 Dateien.
+   **Nie auf ein unsichtbares Element klicken; erst `is_visible()` fragen, dann handeln.**
+   Und wenn es unsichtbar bleibt, ist das ein Parser-Fall, kein fehlender Zugang.
 
 Dazu eine Regel für die Rangfolge im Code: **der positive Befund führt.** Trägt die Seite
 einen Knopf oder Ausklapper, wird geholt — erst wenn es ihn nicht gibt, wird nach dem Grund

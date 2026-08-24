@@ -17,16 +17,22 @@ MENUE = "Ausschreibungen suchen | Aktuelle Ausschreibungen aus Hessen | eHAD-Ver
 
 
 class Rahmen:
-    def __init__(self, url, text="", knoepfe=(), sammel=None, parent=None, dateien=()):
+    def __init__(self, url, text="", knoepfe=(), sammel=None, parent=None, dateien=(),
+                 kopf=None):
         self.url, self._text = url, text
         self._knoepfe, self._sammel, self.parent_frame = list(knoepfe), sammel, parent
-        self._dateien = dateien
+        self._dateien, self._kopf = dateien, kopf
 
     def query_selector_all(self, sel):
         return self._knoepfe if sel == ns._KNOPF else []
 
     def query_selector(self, sel):
-        return self._sammel if sel == ns._SAMMEL else None
+        if sel == ns._SAMMEL:
+            return self._sammel
+        return self._kopf if sel == ns._ABSCHNITT_KOPF else None
+
+    def wait_for_timeout(self, ms):
+        pass
 
     def evaluate(self, js):
         # Der Abrufer fragt zweierlei ab: den Rumpftext und die Dateiliste. Ein Fake, der
@@ -48,13 +54,13 @@ class Seite:
         pass
 
 
-def _frameset(inhalt_text="", knoepfe=(), sammel=None, dateien=()):
+def _frameset(inhalt_text="", knoepfe=(), sammel=None, dateien=(), kopf=None):
     """had.de-Bauform: Menü im Hauptrahmen, Vorgang im Kindrahmen auf ANDEREM Host."""
     menue = Rahmen("https://www.had.de/NetServer/TenderingProcedureDetails?TenderOID=" + OID,
                    text=MENUE)
     inhalt = Rahmen("https://vergabe.had.de/NetServer/TenderingProcedureDetails?TenderOID=" + OID,
                     text=inhalt_text, knoepfe=knoepfe, sammel=sammel, parent=menue,
-                    dateien=dateien)
+                    dateien=dateien, kopf=kopf)
     return Seite([menue, inhalt])
 
 
@@ -128,7 +134,13 @@ def test_abgelaufen_wird_erkannt_und_gilt_als_dauerhaft():
 # ── Zweite Oberfläche ─────────────────────────────────────────────────────────────────────
 
 class Sammelknopf:
-    def click(self):
+    def __init__(self, sichtbar=True):
+        self._sichtbar = sichtbar
+
+    def is_visible(self):
+        return self._sichtbar
+
+    def click(self, timeout=None):
         pass
 
 
@@ -141,3 +153,38 @@ def test_neue_oberflaeche_gilt_nicht_als_leer():
     assert r["status"] == "probe"
     assert r["n_files"] == 2
     assert "Leistungsverzeichnis.pdf" in r["note"]
+
+
+# ── Der eingeklappte Abschnitt ────────────────────────────────────────────────────────────
+
+class Abschnittskopf:
+    """Ein Klick darauf macht den Sammelknopf sichtbar."""
+
+    def __init__(self, knopf):
+        self._knopf = knopf
+
+    def click(self, timeout=None):
+        self._knopf._sichtbar = True
+
+
+def test_zugeklappter_abschnitt_wird_geoeffnet():
+    """⚠ 13 von 19 xvergabe-Versuchen liefen so je 45 s in einen Timeout.
+
+    Der Knopf war im DOM, aber unsichtbar — die Seite oeffnet auf „Bekanntmachungen".
+    """
+    knopf = Sammelknopf(sichtbar=False)
+    s = _frameset(inhalt_text="Vergabeunterlagen", sammel=knopf,
+                  dateien=["Leistungsverzeichnis.pdf"], kopf=Abschnittskopf(knopf))
+    r = ns.hole_vergabe("https://xvergabe.de/x?TenderOID=" + OID, s,
+                        Path("/dev/null"), dry_run=True)
+    assert r["status"] == "probe"
+
+
+def test_unsichtbarer_knopf_wird_nie_geklickt():
+    """Ohne Abschnittskopf bleibt er unsichtbar — dann NICHT klicken, sondern benennen."""
+    s = _frameset(inhalt_text="Vergabeunterlagen", sammel=Sammelknopf(sichtbar=False))
+    r = ns.hole_vergabe("https://xvergabe.de/x?TenderOID=" + OID, s,
+                        Path("/dev/null"), dry_run=True)
+    assert r["status"] == "kein_listenlayout"
+    # Sperrtyp `parser`: unser Problem, eine Arbeitsliste — kein fehlender Zugang.
+    assert q.BLOCKIERT.get(r["status"]) == "parser"
