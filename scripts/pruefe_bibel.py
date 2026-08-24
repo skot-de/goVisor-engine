@@ -148,6 +148,50 @@ def _behauptungen() -> list[tuple[str, str, bool, str]]:
         aus.append(("03", f"{land} hat 0 % Dokumentabdeckung (kein Volltext-Index)",
                     not p.exists(), "doc_text.parquet vorhanden" if p.exists() else "keiner"))
 
+    # ── Geldwache (Kapitel 11) ──────────────────────────────────────────────
+    #
+    # Vier Aussagen, die Kapitel 11 macht und die alle vier schon einmal NICHT stimmten.
+    # Sie stehen hier, weil der Fliesstext verrotten kann, ohne dass es jemand merkt —
+    # und weil jede von ihnen bei einem Rueckbau lautlos wieder falsch wuerde.
+    import inspect as _inspect
+    from govisor import llm as _llm
+
+    # 1 · Die Bremse sitzt in `chat()`, nicht im Aufrufer. `succession_llm.py` postete bis
+    #     zum 2026-08-24 daran vorbei und lief damit ohne jede Grenze.
+    quelle_chat = _inspect.getsource(_llm.chat)
+    aus.append(("11", "die Geldwache sitzt in llm.chat(), nicht im Aufrufer",
+                "_geldwache()" in quelle_chat,
+                "kein _geldwache()-Aufruf in chat()"))
+
+    # 2 · Das Tagesbuch rechnet mit dem KUMULIERTEN Verbrauch, nicht mit der
+    #     Kontostandsdifferenz. Letztere wird durch jede Aufladung zunichte (gemessen
+    #     2026-08-24: gemeldet 0,00 $ bei tatsaechlich 36,64 $).
+    quelle_tb = _inspect.getsource(_llm._tagesbuch)
+    aus.append(("11", "der Tagesdeckel rechnet mit total_usage, nicht mit dem Kontostand",
+                "start_verbrauch" in quelle_tb,
+                "rechnet wieder mit der Kontostandsdifferenz"))
+
+    # 3 · Die Schonung haelt dem Pruefstand Geld frei.
+    aus.append(("11", "die Schonung schuetzt den Pruefstand vor der Produktion",
+                _llm.SCHONUNG_USD > 0 and "pruefstand" in _llm.GESCHONT,
+                f"SCHONUNG_USD={_llm.SCHONUNG_USD}, geschont={_llm.GESCHONT}"))
+
+    # 4 · Der Bodenpreis wird per `max_price` ERZWUNGEN, nicht nur per `:floor` erbeten.
+    #     ⚠ Braucht das Netz. Ist der Katalog nicht erreichbar, wird das ausgewiesen und
+    #     nicht als Fehlschlag gewertet — eine Pruefung, die bei Netzproblemen rot wird,
+    #     wird abgeschaltet und prueft danach gar nichts mehr.
+    try:
+        deckel = _llm.bodendeckel(_llm.DEFAULT_MODEL)
+    except Exception:                                     # noqa: BLE001
+        deckel = None
+    if deckel is None:
+        aus.append(("11", "der Bodenpreis wird per max_price erzwungen",
+                    True, "nicht pruefbar (Katalog nicht erreichbar)"))
+    else:
+        prov = _llm._or_extra(_llm.DEFAULT_MODEL).get("provider", {})
+        aus.append(("11", "der Bodenpreis wird per max_price erzwungen",
+                    "max_price" in prov, f"provider={prov}"))
+
     return aus
 
 
