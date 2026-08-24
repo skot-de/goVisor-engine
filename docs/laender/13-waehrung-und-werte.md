@@ -10,7 +10,7 @@
 value_eur gefüllt:    DE 91 %    AT 98 %    CH  1 %
 ```
 
-**77 von 8.257** Schweizer Leads tragen einen verwertbaren Wert. 49.368 Schweizer
+**77 von 8.301** Schweizer Leads tragen einen verwertbaren Wert (gemessen 2026-08-23). 49.368 Schweizer
 Bekanntmachungen tragen das Qualitäts-Flag `waehrung_fremd`.
 
 Der Grund ist keine schlechte Quelle — simap liefert Werte. Der Grund ist, dass die

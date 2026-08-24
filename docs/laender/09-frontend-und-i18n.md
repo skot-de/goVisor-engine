@@ -41,8 +41,8 @@ eine einzige Fassung ist keine Wahl, sondern die Sprache der Veröffentlichung. 
 gewählte Fassung muss auch den **Körper** erreichen, nicht nur die Überschrift — die
 Leistungsbeschreibung ist der eigentliche Inhalt.
 
-Gemessen nach der simap-Korrektur: **1.209 Leads** mit Sprachwahl (CH 1.161, DE 33,
-AT 15). Häufigste Kombinationen de+fr 923, de+en 128, fr+it 54.
+Gemessen 2026-08-23 nach der simap-Korrektur: **1.217 Leads** mit Sprachwahl
+(CH 1.165, DE 36, AT 16). Häufigste Kombinationen de+fr 923, de+en 128, fr+it 54.
 
 Zwei Leads zeigen **24 Sprachen** — das ist die EZB, die tatsächlich in allen EU-Amtssprachen
 ausschreibt. Korrektes Verhalten, kein Fehler.

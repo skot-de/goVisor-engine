@@ -155,7 +155,34 @@ statt Ergebnisspeicher**. Gemessen sind **22 % des Textbestands Kopie**.
 4. Sperrtypen zuordnen — insbesondere: ist es `konto` oder in Wahrheit `parser`?
 5. Erst dann entscheiden, ob sich ein Connector lohnt.
 
-**AT und CH als Warnung**: beide stehen bei 0 %. CH hängt komplett an simap.ch, das eine
+## ⚠ `has_documents` heisst NICHT „wir haben die Unterlagen"
+
+Gefunden am 2026-08-23 beim Nachprüfen der Behauptung „AT und CH stehen bei 0 %". Die
+Behauptung stimmt — DE hat 7.781 Vorgänge im Volltext-Index, AT und CH je **null**. Aber
+das Feld, mit dem man es zu messen versucht ist, sagt etwas anderes, und das Ergebnis ist
+im Produkt **umgekehrt**:
+
+```
+DE   27.860 offene Leads zeigen „unknown"   obwohl 7.781 Vorgänge indiziert sind
+CH    1.369 zeigen „offen"                  obwohl NULL Dokumente abgerufen wurden
+```
+
+`has_documents` bedeutet **„die Quelle bewirbt Unterlagen"**, nicht „wir haben sie". Für
+CH füllt es die simap-Projektbrücke; für DE füllt es **niemand**, obwohl dort
+`documents_url` bei den offenen Leads zu 96,6 % steht. Ein deutscher Nutzer liest damit
+„unbekannt", wo der Volltext vorliegt, ein schweizerischer „offen", wo nichts da ist.
+
+**Für ein neues Land heisst das:** zwei Fragen sauber trennen und beide getrennt messen.
+
+1. **Bewirbt die Quelle Unterlagen?** (`documents_url`, `has_documents`) — sagt etwas über
+   die Bekanntmachung.
+2. **Haben wir sie geholt und gelesen?** (`data/docs/<LAND>/doc_text.parquet`) — sagt etwas
+   über uns.
+
+Wer Frage 1 misst und Frage 2 meint, bekommt eine Zahl, die in die falsche Richtung zeigt.
+
+**AT und CH als Warnung**: beide stehen bei 0 % (gemessen 2026-08-23 an
+`data/docs/<LAND>/doc_text.parquet`). CH hängt komplett an simap.ch, das eine
 Interessensbekundung je Vergabe verlangt (889 Leads betroffen) — eine Kontofrage, keine
 technische. AT hat zwei Portalfamilien, die **nie geprüft** wurden. Das ist kein
 Versäumnis der Pipeline, sondern eine offene Aufgabe, und sie steht als solche da.

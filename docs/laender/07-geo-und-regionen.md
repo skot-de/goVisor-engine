@@ -122,7 +122,9 @@ ist vollständig geklärt: **ÖBB und ASFINAG stellen 88 % davon** — beide mit
 beide österreichweit tätig. Dieselbe Eigenschaft, die DB Netz in Deutschland hat
 (17 Bundesländer).
 
-Der Leistungsort wäre die bessere Achse. Er existiert bei **28 von 8.654** dieser Leads.
+Der Leistungsort wäre die bessere Achse. Er existiert bei **19 von 8.383** dieser Leads
+(gemessen 2026-08-23 NACH der Kanton-Umstellung; davor 28 von 8.654 — die Zahl wandert
+mit dem Bestand, die Aussage nicht).
 Es gibt also nichts Besseres — der Wert ist als `abgeleitet` gekennzeichnet, damit die
 Anzeige es sagen kann. Ein stillschweigend ergänzter Wert sieht aus wie eine Quelle.
 

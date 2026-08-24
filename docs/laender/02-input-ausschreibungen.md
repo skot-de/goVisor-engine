@@ -156,7 +156,7 @@ Ohne **Zuschläge** (`can`) fehlt aber die halbe Analytik: Nachfolge-Ketten, Amt
 Gemessener Bestand (2026-08-23):
 
 ```
-DE  814.142 Zuschläge von 2.262.483 Bekanntmachungen
+DE  814.393 Zuschläge von 2.263.244 Bekanntmachungen
 AT  228.920 von   420.311
 CH   51.919 von   121.375
 ```

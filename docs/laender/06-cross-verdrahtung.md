@@ -171,7 +171,8 @@ Bewusst DE-only und damit **kein** Mangel: `export_landing.py` (Startseiten-Zahl
 gemischte Qualitäten wären keine Zahl), `export_supabase.py` (Push ist ohnehin aus),
 `qualitaet_bericht.py` und `gap_effects.py` (interne Berichte).
 
-⚠ **Offen geblieben:** `firma-profiles.json` ist mit den drei Ländern auf **70 MB**
+⚠ **Offen geblieben:** `firma-profiles.json` ist mit den drei Ländern auf **67 MB**
+(gemessen 2026-08-23)
 gewachsen und wird vom Frontend als Ganzes geparst. Das trägt heute (Cache-Grenze 256 MB),
 skaliert aber nicht auf weitere Länder — dieselbe Sharding-Frage wie bei den Detail-Dateien.
 
