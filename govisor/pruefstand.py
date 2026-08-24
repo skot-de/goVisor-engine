@@ -87,7 +87,7 @@ GRUNDLINIE_TAGE = int(os.environ.get("GOVISOR_GRUNDLINIE_TAGE", "14"))
 MAX_JE_TAG = int(os.environ.get("GOVISOR_MAX_PRUEFUNGEN", "2"))
 
 STATUS = ("neu", "vorpruefung_bestanden", "bestanden", "durchgefallen", "gleichwertig",
-          "formatproblem")
+          "formatproblem", "nicht_lieferbar")
 
 
 # ── Statistik ────────────────────────────────────────────────────────────────────────
@@ -256,8 +256,8 @@ def einreihen(stand: dict, modell: str, *, preis: float, grund: str,
         # Urteil ueber das Modell, sondern eines ueber unsere Schnittstelle: erst wenn wir
         # das Schema erzwingen (`response_format`), ist eine erneute Pruefung sinnvoll.
         # Wiedervorlage von Hand: den Eintrag aus `data/pruefstand.json` loeschen.
-        if vor.get("status") in ("durchgefallen", "gleichwertig", "formatproblem") \
-                and not billiger:
+        if vor.get("status") in ("durchgefallen", "gleichwertig", "formatproblem",
+                                 "nicht_lieferbar") and not billiger:
             return False
         if vor.get("status") == "bestanden":
             return False

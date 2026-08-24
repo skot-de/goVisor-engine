@@ -433,6 +433,45 @@ scripts/kostenbericht.py --marke-neu     # Messpunkt neu setzen
 nahm die Kontostandsdifferenz — die wird durch jede **Aufladung** sinnlos, und genau die
 stand unmittelbar bevor. `total_usage` steigt nur und kennt keine Aufladung.
 
+## Der Trockenlauf
+
+```bash
+scripts/modellpruefung.py --trocken
+```
+
+Fährt den **kompletten** Ablauf mit echtem Prüfsatz und echten Dokumenten — Doktyp-
+Erkennung, Parser-Schiene, Dublettenlogik, Textdeckel — und befragt nur kein Modell.
+Deshalb ist die Eingabeseite **exakt** und nicht geschätzt; die Ausgabemenge wird aus dem
+Kostenbuch hochgerechnet und als Schätzung ausgewiesen. Er arbeitet auf einer Kopie des
+Zustands und gibt nichts aus.
+
+Er beantwortet drei Fragen vor dem ersten bezahlten Lauf: *wie viele Aufrufe werden das*,
+*was kostet der Abend*, und — die wichtigste — *taugen die Prüfvergaben überhaupt, zwei
+Modelle zu unterscheiden?*
+
+Am 2026-08-24 fand er auf Anhieb drei Dinge, die kein Test gesehen hatte:
+
+1. **Drei von fünfzehn Prüfvergaben waren taub.** Je ein einziges Dokument, alle drei
+   dieselbe Russland-Sanktions-Eigenerklärung (gleiche Prüfsumme), Doktyp
+   `eigenerklaerung` — den kennt `docextract` gar nicht. Kein Extraktionsaufruf, beide
+   Modelle null Punkte, im Vorzeichentest ein Unentschieden, das herausfällt. Die
+   wirksame Stichprobe wäre still unter das Mindestmaß gerutscht. `pruefsatz()` verlangt
+   jetzt mindestens einen extrahierbaren Doktyp.
+2. **Der günstigste Kandidat der Warteschlange war nicht bestellbar.**
+   `inclusionai/ling-2.6-flash` steht im Katalog und hat **null Endpunkte**. Er hätte
+   einen der zwei Tagesplätze verbraucht, an jedem Aufruf scheitern und als
+   `durchgefallen` enden müssen — ein Qualitätsurteil über ein nie gesehenes Modell.
+   Jetzt: Status `nicht_lieferbar`, kein Urteil.
+3. **Und beim Beheben von (2) gleich der nächste:** `bodenpreis()` liefert `None` sowohl
+   bei „niemand liefert das" als auch bei einem **Netzfehler**. Wer beides gleich
+   behandelt, schreibt bei einem Aussetzer die halbe Warteschlange ab. Gegenprobe ist
+   jetzt der Amtierende — er hat garantiert Endpunkte.
+
+Die Vorschau für den ersten echten Lauf (Stand 2026-08-24): 15 Prüfvergaben, 59 Aufrufe,
+430.058 Token Eingabe. Grundlinie **0,4694 $**, ein Kandidat wie `nex-agi/nex-n2-mini`
+0,0086 $ für die Vorprüfung und 0,0431 $ für den vollen Satz. Der Trockenlauf warnt selbst,
+dass die Grundlinie den Tagestopf von 0,50 $ fast ausfüllt.
+
 ## Fallen, die schon zugeschlagen haben
 
 1. **`sort: "price"` statt `:floor`** — sortiert nur, erreicht Flex nie. Zahlt weiter 0,300.
@@ -457,3 +496,8 @@ stand unmittelbar bevor. `total_usage` steigt nur und kennt keine Aufladung.
     gedeckelt — die Rangfolge der Kandidaten hing daran.
 11. **Unlesbare Antwort als Qualitätsurteil verbucht** — siehe oben, Formatriegel.
 12. **Abgleich über den Kontostand** — bricht bei der ersten Aufladung. `total_usage`.
+13. **Stellschrauben als Vorgabewerte in der Signatur** (`min_n: int = MIN_N`) — beim
+    Import eingefroren; ein späteres `pruefstand.MIN_N = 3` bleibt wirkungslos. Ein Modul,
+    dessen Regler nach dem Laden nichts mehr tun, sieht einstellbar aus und ist es nicht.
+14. **Prüfvergaben ohne extrahierbaren Doktyp** — siehe Trockenlauf.
+15. **Katalogeintrag mit null Endpunkten** als Qualitätsmangel verbucht — siehe Trockenlauf.

@@ -68,6 +68,17 @@ def lade_analyse():
     return m
 
 
+def taugt_als_pruefvergabe(rows) -> bool:
+    """Beschäftigt diese Vergabe das Modell überhaupt? ``rows = [(datei, text), …]``
+
+    Nur wenn mindestens ein Dokument einen Doktyp trägt, für den `docextract` eine Aufgabe
+    kennt. Sonst gibt es keinen Extraktionsaufruf — und ohne den können zwei Modelle sich
+    nicht unterscheiden.
+    """
+    from govisor import doctypes, docextract
+    return any(doctypes.classify(f, t) in docextract._TASKS for f, t in rows)
+
+
 def pruefsatz(stand: dict, n: int) -> dict:
     """Der feste Prüfsatz — dieselben Vergaben für jeden Kandidaten, dauerhaft.
 
@@ -76,16 +87,19 @@ def pruefsatz(stand: dict, n: int) -> dict:
     Satz wird deshalb einmal gewählt und in der Warteschlange festgehalten.
     """
     import duckdb
+    from govisor import doctypes, docextract
+
     ids = stand.get("pruefsatz") or []
     if not ids:
         bestand = json.loads((ROOT / "web/data/doc-analysis.json").read_text(encoding="utf-8"))
-        # Stabil und ohne Zufall: die ersten mit vorhandener Analyse. Reproduzierbar,
-        # und `data/pruefstand.json` haelt sie ab jetzt fest.
-        ids = list(bestand)[: n * 3]
+        # Stabil und ohne Zufall: Reihenfolge des Bestands. Grosszuegig vorgemerkt, weil
+        # unten aussortiert wird.
+        ids = list(bestand)[: n * 20]
         stand["pruefsatz"] = ids
     con = duckdb.connect()
     src = (ROOT / "data/docs/DE/doc_text.parquet").as_posix()
     aus: dict[str, list] = {}
+    verworfen = 0
     for nid in ids:
         if len(aus) >= n:
             break
@@ -93,8 +107,24 @@ def pruefsatz(stand: dict, n: int) -> dict:
             f"""SELECT file, text FROM read_parquet('{src}')
                 WHERE notice_id = ? AND {SQL_BRAUCHBAR} AND length(text) > 120""",
             [nid]).fetchall()
-        if rows:
-            aus[nid] = rows
+        if not rows:
+            continue
+        # ⚠ EINE VERGABE OHNE EXTRAHIERBAREN DOKTYP IST ALS PRUEFVERGABE WERTLOS.
+        #
+        # Gemessen am 2026-08-24 im Trockenlauf: drei der fuenfzehn Pruefvergaben bestanden
+        # aus je einem einzigen Dokument — und zwar dreimal DEMSELBEN (gleiche Pruefsumme):
+        # der Russland-Sanktions-Eigenerklaerung. Ihr Doktyp `eigenerklaerung` steht nicht
+        # in `docextract._TASKS`, es gaebe also keinen einzigen Extraktionsaufruf. Beide
+        # Modelle erzielten dort null Punkte; im Vorzeichentest ist das ein Unentschieden,
+        # und Unentschiedene fallen heraus. Die wirksame Stichprobe waere still unter das
+        # Mindestmass gerutscht, ohne dass irgendwo etwas Auffaelliges gestanden haette.
+        if not taugt_als_pruefvergabe(rows):
+            verworfen += 1
+            continue
+        aus[nid] = rows
+    if verworfen:
+        print(f"  {verworfen} Vergabe(n) übersprungen: kein extrahierbarer Doktyp — "
+              f"sie könnten zwei Modelle nicht unterscheiden.")
     return aus
 
 
@@ -185,13 +215,172 @@ def pruefe_einen(stand, ad, modell, satz_voll, basis, rest) -> str | None:
     return None
 
 
+# ── Trockenlauf ──────────────────────────────────────────────────────────────────────
+
+def trockenlauf(kandidaten: list[str] | None = None) -> int:
+    """Der ganze Ablauf mit echtem Prüfsatz und echten Dokumenten — nur ohne Modell.
+
+    **Wozu.** Vor dem ersten bezahlten Lauf soll beantwortbar sein: *wie viele Aufrufe
+    werden das, wie viel Text geht raus, was kostet der Abend* — und vor allem: *taugen
+    die Prüfvergaben überhaupt, zwei Modelle zu unterscheiden?*
+
+    Gefälscht ist einzig `llm.chat`; alles davor ist echt: Doktyp-Erkennung, Parser-Schiene,
+    Dublettenlogik, Textdeckel. Deshalb ist die **Eingabeseite exakt** und nicht geschätzt.
+    Die Ausgabemenge lässt sich nicht ohne Modell wissen; sie wird aus dem Kostenbuch
+    hochgerechnet und als Schätzung ausgewiesen.
+
+    ⚠ **Eine Vergabe ohne Extraktionsaufruf ist als Prüfvergabe wertlos.** Gemessen am
+    2026-08-24 standen drei solche im Prüfsatz: je ein einziges Dokument, alle drei
+    dieselbe Russland-Sanktions-Eigenerklärung (gleiche Prüfsumme), Doktyp
+    `eigenerklaerung` — den kennt `docextract` gar nicht. Beide Modelle hätten dort null
+    Punkte erzielt, der Vergleich wäre ein Unentschieden ohne Aussage, und im
+    Vorzeichentest fallen Unentschiedene heraus: die wirksame Stichprobe wäre still unter
+    das Mindestmaß gerutscht. Diese Spalte deckt das auf.
+    """
+    import shutil
+    import tempfile
+
+    stand_echt = ps.lade()
+    # Auf einer Kopie arbeiten: ein Trockenlauf darf den echten Zustand nicht anfassen.
+    tmp = Path(tempfile.mkdtemp()) / "pruefstand.json"
+    if ps.WARTESCHLANGE.exists():
+        shutil.copy(ps.WARTESCHLANGE, tmp)
+    echt_pfad, ps.WARTESCHLANGE = ps.WARTESCHLANGE, tmp
+    try:
+        stand = ps.lade()
+        satz = pruefsatz(stand, ps.HAUPTPRUEFUNG_N)
+        if not satz:
+            print("  Kein Prüfsatz aufbaubar.", file=sys.stderr)
+            return 1
+
+        ad = lade_analyse()
+        gezaehlt: dict[str, dict] = {}
+
+        def stub(messages, model=None, **kw):
+            nid = getattr(llm._KONTEXT, "vorgang", "?")
+            g = gezaehlt.setdefault(nid, {"aufrufe": 0, "zeichen": 0, "zusammenfassung": 0})
+            txt = " ".join(m.get("content", "") for m in messages)
+            g["zeichen"] += len(txt)
+            if "ampel" in txt.lower():
+                g["zusammenfassung"] += 1
+                return ('{"ampel":"gelb","ampel_grund":"Trockenlauf",'
+                        '"zusammenfassung":"Trockenlauf","aufwand":"mittel"}')
+            g["aufrufe"] += 1
+            return "[]"
+
+        import govisor.docextract as dx
+        alt = (llm.chat, getattr(ad, "chat", None), getattr(dx, "chat", None))
+        llm.chat = stub
+        ad.chat = stub
+        dx.chat = stub
+        try:
+            for nid, rows in satz.items():
+                with llm.kontext(zweck="trocken", vorgang=nid):
+                    ad.analyze_notice(rows, structured=ad.structured_for_notice(nid),
+                                      notice_id=nid)
+        finally:
+            llm.chat, ad.chat, dx.chat = alt[0], alt[1] or stub, alt[2] or stub
+
+        # ── Bericht ──────────────────────────────────────────────────────────────────
+        print(f"\n  Trockenlauf über {len(satz)} Prüfvergaben — kein Modell befragt, "
+              f"0 $ ausgegeben\n")
+        print(f"  {'Vergabe':<18}{'Dok.':>6}{'Extraktion':>12}{'Zusammenf.':>12}"
+              f"{'Zeichen raus':>14}  Eignung")
+        print("  " + "─" * 82)
+        taub = []
+        for nid in satz:
+            g = gezaehlt.get(nid, {"aufrufe": 0, "zeichen": 0, "zusammenfassung": 0})
+            eignung = "✓" if g["aufrufe"] else "✖ kein Extraktionsaufruf"
+            if not g["aufrufe"]:
+                taub.append(nid)
+            print(f"  {nid[:17]:<18}{len(satz[nid]):>6}{g['aufrufe']:>12}"
+                  f"{g['zusammenfassung']:>12}{g['zeichen']:>14,}  {eignung}"
+                  .replace(",", "."))
+
+        zeichen = sum(g["zeichen"] for g in gezaehlt.values())
+        aufrufe = sum(g["aufrufe"] + g["zusammenfassung"] for g in gezaehlt.values())
+        ein_tok = zeichen / ad.CHARS_PER_TOKEN
+        print("  " + "─" * 82)
+        print(f"  {'zusammen':<18}{'':>6}{aufrufe:>12} Aufrufe {ein_tok:>17,.0f} Token ein"
+              .replace(",", "."))
+
+        if taub:
+            print(f"\n  ⚠ {len(taub)} von {len(satz)} Vergaben lösen KEINEN "
+                  f"Extraktionsaufruf aus.")
+            print(f"    Dort erzielen beide Modelle null Punkte — im Vorzeichentest ein "
+                  f"Unentschieden,\n    das herausfällt. Die wirksame Stichprobe ist damit "
+                  f"{len(satz) - len(taub)}, nicht {len(satz)}"
+                  + (f" — UNTER dem Mindestmaß von {ps.MIN_N}." if len(satz) - len(taub)
+                     < ps.MIN_N else "."))
+
+        # ── Kostenvorschau ───────────────────────────────────────────────────────────
+        v_ein, v_aus = _ausgabeverhaeltnis()
+        aus_tok = ein_tok * v_aus / v_ein
+        print(f"\n  Kostenvorschau (Ausgabe hochgerechnet mit {v_aus / v_ein:.2f}× der "
+              f"Eingabe, {_verhaeltnis_herkunft()})\n")
+        print(f"  {'Modell':<40}{f'Vorprüfung ({ps.VORPRUEFUNG_N})':>18}"
+              f"{f'voller Satz ({len(satz)})':>20}")
+        print("  " + "─" * 78)
+        from govisor import modellkatalog as mk
+        liste = kandidaten or ([AMTIEREND] + ps.naechste(stand, 2))
+        for m in dict.fromkeys(liste):
+            b = mk.bodenpreis(m)
+            if not b:
+                print(f"  {m:<40}{'✖ kein lieferbarer Endpunkt — wird übersprungen':>38}")
+                continue
+            voll = ein_tok * b["ein"] / 1e6 + aus_tok * b["aus"] / 1e6
+            vor = voll * ps.VORPRUEFUNG_N / max(len(satz), 1)
+            print(f"  {m:<40}{vor:>17.4f} ${voll:>19.4f} $")
+        print(f"\n  Der echte Lauf misst zuerst die Grundlinie ({AMTIEREND}), dann je "
+              f"Kandidat\n  erst die Vorprüfung und nur bei Bestehen den vollen Satz.")
+        print(f"  Tagestopf: {TEST_USD:.2f} $ · heute schon verbraucht: "
+              f"{heute_ausgegeben():.4f} $")
+        # Die Grundlinie ist der Brocken — und sie faellt nur alle 14 Tage an.
+        grund_kosten = None
+        b_amt = mk.bodenpreis(AMTIEREND)
+        if b_amt:
+            grund_kosten = ein_tok * b_amt["ein"] / 1e6 + aus_tok * b_amt["aus"] / 1e6
+            if grund_kosten > TEST_USD * 0.8:
+                print(f"  ⚠ Die Grundlinie allein ({grund_kosten:.4f} $) füllt den Topf "
+                      f"fast aus. Der erste Abend misst\n    dann nur sie; Kandidaten "
+                      f"kommen ab morgen dran. Schneller mit GOVISOR_TEST_USD.")
+        print()
+        return 0
+    finally:
+        ps.WARTESCHLANGE = echt_pfad
+        assert ps.lade() is not None            # der echte Zustand ist unberuehrt
+
+
+def _ausgabeverhaeltnis() -> tuple[float, float]:
+    """(Eingabe, Ausgabe) aus dem Kostenbuch — sonst der gemessene Vorgabewert 1:1,33."""
+    ein = aus = 0
+    for z in kostenbuch.lies():
+        if z.get("zweck") not in ("analyse", "bench", "pruefstand"):
+            continue
+        ein += int(z.get("eingabe_token") or 0)
+        aus += int(z.get("ausgabe_token") or 0)
+    return (ein, aus) if ein and aus else (100.0, 75.0)
+
+
+def _verhaeltnis_herkunft() -> str:
+    ein, aus = _ausgabeverhaeltnis()
+    n = sum(1 for z in kostenbuch.lies()
+            if z.get("zweck") in ("analyse", "bench", "pruefstand"))
+    return f"gemessen an {n} Buchungen" if n else "Vorgabe, noch keine Buchungen"
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--kandidat", help="gezielt dieses Modell prüfen")
     ap.add_argument("--stand", action="store_true", help="nur die Warteschlange zeigen")
+    ap.add_argument("--trocken", action="store_true",
+                    help="kompletter Ablauf ohne Modell: Aufrufe zählen, Kosten vorhersagen")
     ap.add_argument("--budget-usd", type=float, default=TEST_USD)
     ap.add_argument("--hoechstens", type=int, default=ps.MAX_JE_TAG)
     a = ap.parse_args()
+
+    if a.trocken:
+        return trockenlauf([a.kandidat] if a.kandidat else None)
 
     stand = ps.lade()
     if a.stand:
@@ -233,7 +422,31 @@ def main() -> int:
         print(f"\n  ⏹ Abgebrochen beim Messen der Grundlinie: {grund}\n", file=sys.stderr)
         return 0
 
+    from govisor import modellkatalog as mk
     for modell in dran:
+        # ⚠ IM KATALOG HEISST NICHT LIEFERBAR. `inclusionai/ling-2.6-flash` stand am
+        # 2026-08-24 als guenstigster Kandidat in der Schlange und hatte NULL Endpunkte —
+        # niemand liefert es aus. Ohne diese Pruefung haette es einen der zwei Tagesplaetze
+        # verbraucht, an jedem Aufruf scheitern und als `durchgefallen` enden muessen:
+        # ein Urteil ueber die Qualitaet eines Modells, das wir nie gesehen haben.
+        if mk.bodenpreis(modell) is None:
+            # ⚠ KEIN PREIS HEISST NICHT AUTOMATISCH KEIN ENDPUNKT. `bodenpreis` liefert
+            # `None` sowohl bei „niemand liefert dieses Modell" als auch bei einem
+            # Netzfehler. Wer beides gleich behandelt, schreibt bei einem Aussetzer die
+            # halbe Warteschlange dauerhaft ab. Der Amtierende ist die Gegenprobe: er hat
+            # garantiert Endpunkte — antwortet auch seine Abfrage nicht, liegt es am Netz.
+            if mk.bodenpreis(AMTIEREND) is None:
+                print(f"\n  {modell}: Endpunkte nicht abfragbar (Netz?) — heute "
+                      f"übersprungen, ohne Urteil.", file=sys.stderr)
+                continue
+            stand["kandidaten"].setdefault(modell, {})["status"] = "nicht_lieferbar"
+            stand["kandidaten"][modell]["urteil"] = (
+                "kein lieferbarer Endpunkt bei OpenRouter — nicht bestellbar, "
+                "kein Urteil über die Qualität")
+            stand["kandidaten"][modell]["entschieden"] = date.today().isoformat()
+            ps.sichere(stand)
+            print(f"\n  {modell}: kein lieferbarer Endpunkt — übersprungen.")
+            continue
         rest = a.budget_usd - heute_ausgegeben()
         if rest <= 0:
             print(f"\n  ⏹ Testtopf leer — der Rest wartet auf morgen.\n", file=sys.stderr)

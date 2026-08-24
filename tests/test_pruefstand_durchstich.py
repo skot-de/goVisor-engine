@@ -90,6 +90,10 @@ def _stelle_modell(monkeypatch, punkte_je_modell: dict, preis_je_modell: dict,
 def _fahre(monkeypatch, buehne, kandidat: str, punkte: dict, preise: dict,
            protokoll: list, argv: list | None = None):
     mp = _lade("scripts/modellpruefung.py", "mp")
+    # Endpunktabfrage stubben: sonst fragt der Test OpenRouter nach erfundenen Modellen.
+    from govisor import modellkatalog as mk
+    monkeypatch.setattr(mk, "bodenpreis", lambda slug, **k: {
+        "ein": 0.15, "aus": 1.25, "endpunkt": "fake", "haeuser": 1, "endpunkte": 1})
     ad = _lade("scripts/analyze_docs.py", "ad_test")
     monkeypatch.setattr(mp, "lade_analyse", lambda: ad)
     monkeypatch.setattr(mp, "pruefsatz",
@@ -247,3 +251,85 @@ def test_waehlen_ueberspringt_ein_freigegebenes_das_nicht_mehr_taugt(tmp_path, m
     aus = capsys.readouterr()
     assert aus.out.strip() == AMT, "das geschrumpfte Modell darf nicht gewählt werden"
     assert "erfüllt den Bedarf nicht mehr" in aus.err
+
+
+# ── Auswahl der Prüfvergaben und nicht lieferbare Modelle ────────────────────────────
+
+def test_vergabe_ohne_extrahierbaren_doktyp_taugt_nicht_als_pruefvergabe():
+    """⚠ Der Fund aus dem Trockenlauf vom 2026-08-24.
+
+    Drei der fünfzehn Prüfvergaben bestanden aus je einem einzigen Dokument — dreimal
+    demselben (gleiche Prüfsumme): der Russland-Sanktions-Eigenerklärung. Ihr Doktyp
+    steht nicht in `docextract._TASKS`, es gäbe also keinen Extraktionsaufruf. Beide
+    Modelle erzielten dort null Punkte; im Vorzeichentest ist das ein Unentschieden, und
+    Unentschiedene fallen heraus. Die wirksame Stichprobe wäre still geschrumpft.
+    """
+    mp = _lade("scripts/modellpruefung.py", "mp_sel")
+    eigen = [("4_Eigenerklaerung_Russland-Sanktionen.pdf",
+              "Hiermit erkläre ich, dass keine Russland-Sanktionen vorliegen. " * 20)]
+    lb = [("Leistungsbeschreibung.pdf", "Leistungsverzeichnis. " * 50)]
+    assert not mp.taugt_als_pruefvergabe(eigen)
+    assert mp.taugt_als_pruefvergabe(lb)
+    assert mp.taugt_als_pruefvergabe(eigen + lb), "ein brauchbares Dokument genügt"
+
+
+def test_modell_ohne_lieferbaren_endpunkt_wird_uebersprungen_statt_verurteilt(
+        buehne, monkeypatch, capsys):
+    """⚠ Im Katalog heißt nicht lieferbar.
+
+    `inclusionai/ling-2.6-flash` stand als günstigster Kandidat in der Schlange und hatte
+    NULL Endpunkte. Ohne diese Prüfung hätte es einen der zwei Tagesplätze verbraucht, an
+    jedem Aufruf scheitern und als `durchgefallen` enden müssen — ein Qualitätsurteil über
+    ein Modell, das wir nie gesehen haben.
+    """
+    prot: list = []
+    mp = _lade("scripts/modellpruefung.py", "mp_nl")
+    ad = _lade("scripts/analyze_docs.py", "ad_nl")
+    monkeypatch.setattr(mp, "lade_analyse", lambda: ad)
+    monkeypatch.setattr(mp, "pruefsatz",
+                        lambda stand, n: {f"N{i}": [(f"Eignungskriterien{i}.pdf", TEXT)]
+                                          for i in range(n)})
+    monkeypatch.setattr(ad, "chat",
+                        _stelle_modell(monkeypatch, {AMT: 3}, {AMT: 0.03}, prot))
+    from govisor import modellkatalog as mk
+    monkeypatch.setattr(mk, "bodenpreis",
+                        lambda slug, **k: None if slug == "geister/modell"
+                        else {"ein": 0.15, "aus": 1.25, "endpunkt": "f",
+                              "haeuser": 1, "endpunkte": 1})
+    monkeypatch.setattr(sys, "argv", ["mp", "--kandidat", "geister/modell",
+                                      "--budget-usd", "5.0"])
+    assert mp.main() == 0
+
+    stand = json.loads((buehne / "pruefstand.json").read_text(encoding="utf-8"))
+    k = stand["kandidaten"]["geister/modell"]
+    assert k["status"] == "nicht_lieferbar", "kein Qualitätsurteil"
+    assert "nicht bestellbar" in k["urteil"]
+    assert not any(m == "geister/modell" for m, _ in prot), "es wurde nie befragt"
+    assert not (buehne / "freigabe.json").exists()
+
+
+def test_netzfehler_schreibt_keinen_kandidaten_ab(buehne, monkeypatch, capsys):
+    """⚠ `bodenpreis` liefert None bei „niemand liefert" UND bei Netzfehler.
+
+    Wer beides gleich behandelt, schreibt bei einem Aussetzer die halbe Warteschlange
+    dauerhaft ab. Gegenprobe ist der Amtierende: er hat garantiert Endpunkte.
+    """
+    prot: list = []
+    mp = _lade("scripts/modellpruefung.py", "mp_netz")
+    ad = _lade("scripts/analyze_docs.py", "ad_netz")
+    monkeypatch.setattr(mp, "lade_analyse", lambda: ad)
+    monkeypatch.setattr(mp, "pruefsatz",
+                        lambda stand, n: {f"N{i}": [(f"Eignungskriterien{i}.pdf", TEXT)]
+                                          for i in range(n)})
+    monkeypatch.setattr(ad, "chat",
+                        _stelle_modell(monkeypatch, {AMT: 3}, {AMT: 0.03}, prot))
+    from govisor import modellkatalog as mk
+    monkeypatch.setattr(mk, "bodenpreis", lambda slug, **k: None)   # Netz komplett weg
+    monkeypatch.setattr(sys, "argv", ["mp", "--kandidat", "irgendein/modell",
+                                      "--budget-usd", "5.0"])
+    assert mp.main() == 0
+
+    stand = json.loads((buehne / "pruefstand.json").read_text(encoding="utf-8"))
+    eintrag = (stand.get("kandidaten") or {}).get("irgendein/modell", {})
+    assert eintrag.get("status") != "nicht_lieferbar", "kein Urteil bei Netzproblem"
+    assert "Netz" in capsys.readouterr().err
