@@ -49,6 +49,39 @@ Ohne Angabe verteilt OpenRouter nach *price-based load balancing*: gewichtet nac
 inversen Quadrat des Preises. Günstig wird bevorzugt, aber nicht erzwungen. Wir landeten also
 regelmäßig auf teureren Endpunkten, ohne dass es irgendwo auffiel.
 
+### ⚠ `:floor` ist eine Bitte, keine Garantie
+
+**Der teuerste Irrtum in diesem Dokument, gemessen am 2026-08-24 über 311 Aufrufe — alle
+mit `:floor` gesendet:**
+
+| Anzahl | Tarif | Endpunkt |
+|---|---|---|
+| **304** | Standard 0,300 / 2,500 | „Google" (Vertex) |
+| 5 | Flex 0,150 / 1,250 | „Google AI Studio" |
+
+Bezahlt: **2,45 $ statt 1,27 $ — 48 % zu viel.** `:floor` sortiert nach Preis und erlaubt
+Flex, aber `allow_fallbacks` steht auf wahr: sobald der billigste Endpunkt nicht sofort
+liefert, geht es eine Stufe höher, lautlos.
+
+*(Ich hatte nach den ersten fünf Aufrufen „der Boden greift, arithmetisch bewiesen"
+gemeldet. Die fünf stimmten. Die nächsten 304 nicht.)*
+
+**Was wirklich zwingt, ist `max_price`.** Derselbe Prompt, nachgemessen:
+
+```
+ohne Deckel          → Google             0,00000460 $   Standard
+mit 0.15/1.25        → Google AI Studio   0,00000245 $   Flex
+```
+
+Der Deckel wird deshalb **aus dem Modell selbst abgeleitet** (`llm.bodendeckel()`): der
+günstigste Endpunkt dieses Modells, einmal je Prozess geholt. Ein fest eingebauter Wert
+wäre falsch — er gälte auch für ein anderes Modell und könnte jeden Endpunkt aussperren.
+Der eigene Bodenpreis ist per Definition erreichbar.
+
+Findet der Deckel einmal niemanden, wird **genau einmal ohne ihn** nachgefasst: den Lauf
+daran scheitern zu lassen wäre schlimmer als der doppelte Preis. Wie oft das passiert,
+steht im Kostenbuch. Abschalten mit `OR_STRENG=aus`.
+
 ### Warum `:floor` und nicht `provider.sort`
 
 Naheliegend wäre `{"provider": {"sort": "price"}}`. **Das reicht nicht.** Laut

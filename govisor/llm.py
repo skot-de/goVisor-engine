@@ -92,6 +92,23 @@ OR_MAX_TOKENS = int(os.environ.get("OR_MAX_TOKENS", "56000"))
 # den echten Haenger. Der Pruefstand setzt sich fuer Kandidaten eine engere Frist.
 OR_FRIST = float(os.environ.get("OR_FRIST", "600"))
 OR_BODEN = os.environ.get("OR_BODEN", "an").lower()
+# ⚠ `:floor` IST EINE BITTE, KEINE GARANTIE — und das ist der teuerste Irrtum dieses
+# Moduls gewesen. Gemessen am 2026-08-24 ueber 311 Aufrufe, ALLE mit `:floor` gesendet:
+#
+#     304× Standard 0,300/2,500  ueber „Google" (Vertex)
+#       5× Flex     0,150/1,250  ueber „Google AI Studio"
+#
+# Der Boden sortiert nach Preis und erlaubt Flex — aber `allow_fallbacks` steht auf wahr,
+# und sobald der billigste Endpunkt nicht sofort liefert, geht es eine Stufe hoeher, ohne
+# dass irgendwo etwas steht. Wir haben 2,45 $ gezahlt statt 1,27 $: **48 % zu viel**.
+#
+# Ich hatte nach den ersten fuenf Aufrufen „der Boden greift, arithmetisch bewiesen"
+# gemeldet. Die fuenf stimmten. Die naechsten 304 nicht.
+#
+# Was wirklich zwingt, ist der Preisdeckel: mit `max_price` auf dem Bodenpreis geht der
+# Aufruf an Flex — nachgemessen, derselbe Prompt, einmal 0,00000460 $ ohne und
+# 0,00000245 $ mit Deckel. Der Deckel wird deshalb aus dem Modell selbst abgeleitet.
+OR_STRENG = os.environ.get("OR_STRENG", "an").lower()
 OR_MAX_PREIS = os.environ.get("OR_MAX_PREIS", "")
 
 # „deny" schliesst Anbieter aus, die Eingaben speichern duerfen. Ebenfalls nicht vorbelegt:
@@ -220,8 +237,7 @@ def _anbieter() -> list[dict]:
     Ein Wiedereinstieg ist ein Listeneintrag; die Schluessel-Lader bleiben erhalten.
     """
     return [
-        {"name": "openrouter", "url": URL, "keys": _load_keys(), "model": DEFAULT_MODEL,
-         "extra": _or_extra()},
+        {"name": "openrouter", "url": URL, "keys": _load_keys(), "model": DEFAULT_MODEL},
     ]
 def mit_boden(modell: str | None) -> str:
     """Haengt `:floor` an, wenn noch keine Route dransteht und der Boden eingeschaltet ist.
@@ -244,13 +260,46 @@ def mit_boden(modell: str | None) -> str:
 DEFAULT_MODEL = mit_boden(_MODELL_ROH)
 
 
-def _or_extra() -> dict:
+_BODEN: dict[str, tuple[float, float] | None] = {}
+_BODEN_SPERRE = threading.Lock()
+
+
+def bodendeckel(modell: str) -> tuple[float, float] | None:
+    """Der guenstigste Endpunktpreis DIESES Modells, einmal je Prozess geholt.
+
+    Ein fest eingebauter Deckel waere falsch: er gilt sonst auch fuer ein Modell, das
+    jemand per OR_MODEL setzt, und sperrt womoeglich jeden Endpunkt aus. Aus dem Modell
+    abgeleitet kann das nicht passieren — der eigene Bodenpreis ist per Definition
+    erreichbar.
+    """
+    grund = kostenbuch.grundmodell(modell)
+    with _BODEN_SPERRE:
+        if grund in _BODEN:
+            return _BODEN[grund]
+    wert = None
+    try:
+        from govisor import modellkatalog as _mk
+        b = _mk.bodenpreis(grund)
+        if b:
+            wert = (b["ein"], b["aus"])
+    except Exception:                                    # noqa: BLE001
+        wert = None                                      # kein Deckel ist besser als ein falscher
+    with _BODEN_SPERRE:
+        _BODEN[grund] = wert
+    return wert
+
+
+def _or_extra(modell: str | None = None) -> dict:
     """Der OpenRouter-`provider`-Block — Preisdeckel und Datenrichtlinie, beide optional.
 
     Die Endung `:floor` steckt im Modellnamen (s. DEFAULT_MODEL) und nicht hier; sie ist
     das Einzige, was den Flex-Endpunkt freischaltet. Dieser Block ergaenzt nur die Grenzen.
     """
     prov: dict = {}
+    if not OR_MAX_PREIS and OR_STRENG != "aus" and modell:
+        b = bodendeckel(modell)
+        if b:
+            prov["max_price"] = {"prompt": b[0], "completion": b[1]}
     if OR_MAX_PREIS:
         # „0.30/2.50" → {"prompt": 0.30, "completion": 2.50}, in $ je Mio Token.
         try:
@@ -635,11 +684,15 @@ def chat(messages: list[dict], model: str | None = None, temperature: float = 0,
         # Ein von aussen gesetztes Modell (OR_MODEL) meint immer OpenRouter; die anderen
         # Anbieter nehmen ihr eigenes, sonst antwortet die Gegenstelle mit „model not found".
         modell = model if (model and anb["name"] == "openrouter") else anb["model"]
+        # Der Preisdeckel haengt am tatsaechlich verwendeten Modell, nicht an der
+        # Anbieterliste — deshalb hier und nicht in `_anbieter()`.
+        extra = _or_extra(modell) if anb["name"] == "openrouter" else anb.get("extra", {})
         body = {"model": modell, "temperature": temperature, "messages": messages,
                 **({"max_tokens": OR_MAX_TOKENS} if OR_MAX_TOKENS else {}),
-                **anb.get("extra", {})}
+                **extra}
         for key in keys:
             versuchte += 1
+            ohne_deckel = False
             for attempt in range(max_retries):
                 try:
                     t0 = time.time()
@@ -707,6 +760,16 @@ def chat(messages: list[dict], model: str | None = None, temperature: float = 0,
                     # Gemessen am 2026-08-18 im Modellvergleich: Cerebras und ein
                     # Together-Modell fielen so aus, und die Ursache stand nirgends. Ein
                     # Anbieterfehler gehoert sofort weitergereicht, mit Klartext.
+                    # ⚠ EINMAL OHNE DECKEL NACHFASSEN. Wenn der billigste Endpunkt gerade
+                    # niemanden hat, antwortet OpenRouter mit „no allowed providers". Den
+                    # Lauf daran scheitern zu lassen waere schlimmer als der doppelte
+                    # Preis — aber es gehoert sichtbar ins Buch, wie oft das passiert.
+                    if (400 <= r.status_code < 500 and extra.get("provider", {}).get("max_price")
+                            and "provider" in r.text.lower() and not ohne_deckel):
+                        ohne_deckel = True
+                        body.pop("provider", None)
+                        last_err = f"Preisdeckel liess niemanden zu ({anb['name']}) — einmal ohne"
+                        continue
                     last_err = f"HTTP {r.status_code} ({anb['name']}/{modell}): {r.text[:140]}"
                     if 400 <= r.status_code < 500:
                         break
