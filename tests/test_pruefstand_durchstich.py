@@ -333,3 +333,66 @@ def test_netzfehler_schreibt_keinen_kandidaten_ab(buehne, monkeypatch, capsys):
     eintrag = (stand.get("kandidaten") or {}).get("irgendein/modell", {})
     assert eintrag.get("status") != "nicht_lieferbar", "kein Urteil bei Netzproblem"
     assert "Netz" in capsys.readouterr().err
+
+
+def _waechter_buehne(tmp_path, monkeypatch, name, freigaben, preise):
+    """Wächter mit erfundenem Katalog und steuerbarer Endpunktabfrage."""
+    mw = _lade("scripts/modellwaechter.py", name)
+    monkeypatch.setattr(mw, "WAHL", tmp_path / "wahl.json")
+    monkeypatch.setattr(mw, "FREIGABE", tmp_path / "freigabe.json")
+    (tmp_path / "freigabe.json").write_text(json.dumps(freigaben), encoding="utf-8")
+    tauglich = {"kontext": 1_000_000, "params": ["structured_outputs"], "auslauf": None,
+                "erschienen": 0}
+    monkeypatch.setattr(mw.mk, "hole", lambda *a, **k: [])
+    monkeypatch.setattr(mw.mk, "verdichte", lambda roh: {
+        m: {"name": m, "ein": 0.30, "aus": 2.50, **tauglich} for m in freigaben})
+    monkeypatch.setattr(mw.mk, "bodenpreis", lambda slug, **k: preise(slug))
+    monkeypatch.setattr(kostenbuch, "PFAD", tmp_path / "leer.jsonl")
+    return mw
+
+
+_FLEX = {"ein": 0.15, "aus": 1.25, "endpunkt": "flex", "haeuser": 1, "endpunkte": 1}
+
+
+def test_netzaussetzer_beim_amtierenden_loest_keinen_wechsel_aus(tmp_path, monkeypatch,
+                                                                 capsys):
+    """⚠ Der erste Entwurf setzte bei fehlgeschlagener Endpunktabfrage den LISTENPREIS ein.
+
+    Das ist asymmetrisch: schlägt die Abfrage nur beim Amtierenden fehl, steht er mit dem
+    doppelten Preis da, ein Kandidat mit dem echten — und der Wächter meldet „spart 50 %"
+    und wechselt. Nachgestellt am 2026-08-24: beide Modelle mit identischem echten Preis,
+    ein Netzaussetzer beim Amtierenden, und es wurde gewechselt.
+    """
+    mw = _waechter_buehne(
+        tmp_path, monkeypatch, "mw_netz1",
+        {AMT: {"grund": "x", "seit": "1"}, "anderer/kandidat": {"grund": "y", "seit": "2"}},
+        lambda slug: None if slug == AMT else dict(_FLEX))
+    assert mw.waehle() == 0
+    aus = capsys.readouterr()
+    assert aus.out.strip() == AMT, "bei Zweifel bleibt es beim Amtierenden"
+    assert "nicht abfragbar" in aus.err and "nicht gewechselt" in aus.err
+
+
+def test_kandidat_ohne_endpunktpreis_wird_ausgelassen_nicht_geschaetzt(tmp_path,
+                                                                       monkeypatch, capsys):
+    """Ein Kandidat ohne Preis darf keinen Ersatzpreis bekommen — er fällt einfach weg.
+    Das kann einen Wechsel nur verhindern, nie einen falschen auslösen."""
+    mw = _waechter_buehne(
+        tmp_path, monkeypatch, "mw_netz2",
+        {AMT: {"grund": "x", "seit": "1"}, "geist/modell": {"grund": "y", "seit": "2"}},
+        lambda slug: None if slug == "geist/modell" else dict(_FLEX))
+    assert mw.waehle() == 0
+    aus = capsys.readouterr()
+    assert aus.out.strip() == AMT
+    assert "kein Endpunktpreis" in aus.err and "ausgelassen" in aus.err
+
+
+def test_echter_preisvorteil_fuehrt_weiterhin_zum_wechsel(tmp_path, monkeypatch, capsys):
+    """Die Gegenprobe: die Vorsicht darf einen berechtigten Wechsel nicht blockieren."""
+    mw = _waechter_buehne(
+        tmp_path, monkeypatch, "mw_netz3",
+        {AMT: {"grund": "x", "seit": "1"}, "billig/gut": {"grund": "y", "seit": "2"}},
+        lambda slug: dict(_FLEX) if slug == AMT
+        else {"ein": 0.01, "aus": 0.05, "endpunkt": "f", "haeuser": 1, "endpunkte": 1})
+    assert mw.waehle() == 0
+    assert capsys.readouterr().out.strip() == "billig/gut"

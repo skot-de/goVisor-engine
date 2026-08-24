@@ -170,8 +170,31 @@ def waehle() -> int:
             print(f"  ⚠ {mid} erfüllt den Bedarf nicht mehr "
                   f"(Kontext {_z(m['kontext'])}).", file=sys.stderr)
             continue
-        boden = mk.bodenpreis(mid) or {"ein": m["ein"], "aus": m["aus"],
-                                       "endpunkt": "(Listenpreis)", "haeuser": 0}
+        # ⚠ KEIN RUECKFALL AUF DEN LISTENPREIS. Der erste Entwurf setzte bei einer
+        # fehlgeschlagenen Endpunktabfrage den Katalogpreis ein — typisch das Doppelte des
+        # Bodens. Das ist ASYMMETRISCH: schlaegt die Abfrage nur beim Amtierenden fehl,
+        # steht er mit dem doppelten Preis da, ein Kandidat mit dem echten, und der Waechter
+        # meldet „spart 50 %" und wechselt. Nachgestellt am 2026-08-24: beide Modelle mit
+        # identischem echten Preis, ein Netzaussetzer beim Amtierenden — es wurde gewechselt.
+        #
+        # `bodenpreis` liefert None sowohl bei „niemand liefert das" als auch bei einem
+        # Netzfehler; unterscheiden kann man es hier nicht. Beide Faelle werden deshalb
+        # gleich behandelt, aber je nach Rolle verschieden:
+        #   · der AMTIERENDE ohne Preis  → gar nicht wechseln (er hat garantiert Endpunkte,
+        #     also liegt es am Netz)
+        #   · ein KANDIDAT ohne Preis    → diesen Kandidaten auslassen
+        # Beides kann nur einen Wechsel VERHINDERN, nie einen falschen ausloesen. Das ist
+        # die Lesart von „bei JEDEM Zweifel der Amtierende", die im Docstring steht.
+        boden = mk.bodenpreis(mid)
+        if boden is None:
+            if mid == AMTIEREND:
+                print(f"  ⚠ Endpunktpreis des Amtierenden nicht abfragbar (Netz?) — "
+                      f"es wird nicht gewechselt.", file=sys.stderr)
+                hinterlege(AMTIEREND, "Endpunktpreise nicht abfragbar — unveraendert")
+                print(AMTIEREND)
+                return 0
+            print(f"  ⚠ {mid}: kein Endpunktpreis — ausgelassen.", file=sys.stderr)
+            continue
         kandidaten.append((mischpreis(boden["ein"], boden["aus"], g_ein, g_aus), mid, boden))
     if not kandidaten:
         print(f"  ⚠ Kein freigegebenes Modell verfügbar — es bleibt bei {AMTIEREND}.",
