@@ -41,6 +41,7 @@ import json
 import os
 import sys
 import threading
+import time as _time
 from collections import defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
@@ -49,10 +50,26 @@ from typing import Any, Iterable, Iterator
 ROOT = Path(__file__).resolve().parent.parent
 PFAD = Path(os.environ.get("GOVISOR_KOSTENBUCH", ROOT / "data" / "llm_kosten.jsonl"))
 
-# Ab hier wird umgehängt: das Buch waechst mit rund 200 Byte je Aufruf, 32 MB sind gut
-# 160.000 Aufrufe. Eine Generation wird aufgehoben (`.1`), aeltere fallen weg — es ist ein
-# Betriebsbuch fuer Wochen, kein Archiv fuer Jahre.
+# Ab hier wird umgehaengt: das Buch waechst mit rund 200 Byte je Aufruf, 32 MB sind gut
+# 160.000 Aufrufe.
+#
+# ⚠ DIE ERSTE FASSUNG HAT DABEI DATEN VERNICHTET, und zwar still. Sie benannte die Datei in
+# `.1` um und ueberschrieb damit die vorige `.1`; `lies()` las per Vorgabe nur die aktuelle.
+# Gemessen am 2026-08-24 an einem winzigen Deckel: 40 geschriebene Zeilen, 2 lesbar. Von
+# 4,00 $ ausgegebenem Geld meldete das Buch danach 0,20 $.
+#
+# Das war nicht nur Datenverlust. Daran haengen vier Bremsen, und alle vier haetten zu
+# WENIG gemeldet und damit zu VIEL erlaubt:
+#   · `modellpruefung.heute_ausgegeben()` — der Testtopf-Deckel
+#   · `llm._tagesbuch` (Uebernahme) — der Tagesdeckel
+#   · `kostenbericht --abgleich` — die Marke haelt eine Summe von vor dem Umhaengen fest,
+#     die Differenz wird negativ und meldet einen Fehlalarm
+#   · `qualitaetsschranke` — der Etappenvergleich verliert seine Grundlage
+#
+# Jetzt bekommt jede umgehaengte Generation einen EIGENEN Namen, und `lies()` liest per
+# Vorgabe ALLE. Aufgeraeumt wird nach Alter, nicht durch Ueberschreiben.
 MAX_MB = float(os.environ.get("GOVISOR_KOSTENBUCH_MB", "32"))
+AUFBEWAHREN_TAGE = int(os.environ.get("GOVISOR_KOSTENBUCH_TAGE", "90"))
 
 # Routing-Endungen, die KEIN anderes Modell bezeichnen, sondern nur einen anderen Weg dorthin.
 # `:floor` (guenstigster Endpunkt, Flex erlaubt) und `:nitro` (schnellster) liefern dasselbe
@@ -104,10 +121,52 @@ def _ganz(v: Any) -> int:
     return int(z) if z is not None else 0
 
 
+def _generationen(p: Path | None = None) -> list[Path]:
+    """Alle Generationen des Buchs, aelteste zuerst.
+
+    Die umgehaengten heissen `<stamm>-<zeitstempel>.jsonl` und sortieren dadurch VOR der
+    laufenden Datei `<stamm>.jsonl` — `-` (0x2D) kommt vor `.` (0x2E).
+    """
+    p = p or PFAD
+    stamm = p.name[: -len(p.suffix)] if p.suffix else p.name
+    if not p.parent.exists():
+        return []
+    return sorted(q for q in p.parent.glob(f"{stamm}*{p.suffix}") if q.is_file())
+
+
+def _aufraeumen(p: Path) -> None:
+    """Generationen aelter als `AUFBEWAHREN_TAGE` entfernen. Die laufende bleibt immer."""
+    if not AUFBEWAHREN_TAGE:
+        return
+    grenze = _time.time() - AUFBEWAHREN_TAGE * 86400
+    for q in _generationen(p):
+        if q == p:
+            continue
+        try:
+            if q.stat().st_mtime < grenze:
+                q.unlink()
+        except OSError:
+            pass
+
+
 def _umhaengen() -> None:
     try:
-        if PFAD.exists() and PFAD.stat().st_size > MAX_MB * 1024 * 1024:
-            PFAD.replace(PFAD.with_suffix(PFAD.suffix + ".1"))
+        if not (PFAD.exists() and PFAD.stat().st_size > MAX_MB * 1024 * 1024):
+            return
+        stamm = PFAD.name[: -len(PFAD.suffix)] if PFAD.suffix else PFAD.name
+        # ⚠ ALLE umgehaengten Namen brauchen DIESELBE Form, sonst stimmt die Reihenfolge
+        # nicht. Der erste Entwurf nahm bei einer Kollision `…-<marke>-1`, sonst
+        # `…-<marke>` — und `-` (0x2D) sortiert VOR `.` (0x2E), womit die spaetere Datei
+        # vor der frueheren stand. Gefunden, weil ein Test die Reihenfolge prueft; ohne
+        # ihn haette jede Auswertung „seit Zeitpunkt X" still die falschen Zeilen genommen.
+        marke = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S")
+        n = 0
+        ziel = PFAD.with_name(f"{stamm}-{marke}-{n:03d}{PFAD.suffix}")
+        while ziel.exists():                      # mehrfach in derselben Sekunde
+            n += 1
+            ziel = PFAD.with_name(f"{stamm}-{marke}-{n:03d}{PFAD.suffix}")
+        PFAD.replace(ziel)
+        _aufraeumen(PFAD)
     except OSError:
         pass
 
@@ -159,10 +218,16 @@ def notiere(*, anbieter: str, modell: str, endpunkt: str | None = None,
                   file=sys.stderr, flush=True)
 
 
-def lies(pfad: Path | None = None, mit_alt: bool = False) -> Iterator[dict]:
-    """Zeilen des Buchs, aelteste zuerst. Kaputte Zeilen werden uebersprungen."""
+def lies(pfad: Path | None = None, mit_alt: bool = True) -> Iterator[dict]:
+    """Zeilen des Buchs ueber ALLE Generationen, aelteste zuerst.
+
+    ⚠ `mit_alt` steht auf True und bleibt nur aus Ruecksicht auf bestehende Aufrufe
+    erhalten. Die erste Fassung las per Vorgabe nur die laufende Datei — elf von dreizehn
+    Aufrufstellen benutzten den Schalter nicht, und nach dem ersten Umhaengen meldeten alle
+    zu wenig. Eine Vorgabe, die Daten verschweigt, ist die falsche Vorgabe.
+    """
     p = pfad or PFAD
-    quellen = [p.with_suffix(p.suffix + ".1"), p] if mit_alt else [p]
+    quellen = _generationen(p) if mit_alt else [p]
     for q in quellen:
         if not q.exists():
             continue

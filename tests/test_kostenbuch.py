@@ -414,3 +414,50 @@ def test_tagesbuch_faellt_ohne_verbrauchszahl_auf_die_alte_rechnung_zurueck(monk
     finally:
         if sicherung is not None:
             zielpfad.write_text(sicherung, encoding="utf-8")
+
+
+# ── Umhängen: es darf nichts verlorengehen ───────────────────────────────────────────
+
+def test_umhaengen_vernichtet_keine_zeilen(tmp_path, monkeypatch):
+    """⚠ Die erste Fassung benannte in `.1` um und überschrieb dabei die vorige `.1`.
+
+    Gemessen am 2026-08-24 an einem winzigen Deckel: 40 geschriebene Zeilen, 2 lesbar. Von
+    4,00 $ ausgegebenem Geld meldete das Buch danach 0,20 $ — und daran hängen vier
+    Bremsen, die dadurch alle zu wenig gemeldet und zu viel erlaubt hätten.
+    """
+    monkeypatch.setattr(kostenbuch, "PFAD", tmp_path / "k.jsonl")
+    monkeypatch.setattr(kostenbuch, "MAX_MB", 0.0005)     # zwingt viele Umhängungen
+    for _ in range(40):
+        kostenbuch.notiere(anbieter="or", modell="m", zweck="analyse", kosten_usd=0.10)
+
+    zeilen = list(kostenbuch.lies())
+    assert len(zeilen) == 40, f"nur {len(zeilen)} von 40 Zeilen lesbar"
+    assert sum(z["kosten_usd"] for z in zeilen) == pytest.approx(4.00)
+    assert len(list(tmp_path.iterdir())) > 2, "es muss mehrere Generationen geben"
+
+
+def test_generationen_kommen_in_der_richtigen_reihenfolge(tmp_path, monkeypatch):
+    """Ältestes zuerst — sonst stimmt jede Auswertung „seit Zeitpunkt X" nicht."""
+    monkeypatch.setattr(kostenbuch, "PFAD", tmp_path / "k.jsonl")
+    monkeypatch.setattr(kostenbuch, "MAX_MB", 0.0005)
+    for i in range(20):
+        kostenbuch.notiere(anbieter="or", modell="m", vorgang=f"N{i:02d}", kosten_usd=0.01)
+    vorgaenge = [z["vorgang"] for z in kostenbuch.lies()]
+    assert vorgaenge == sorted(vorgaenge), "die Generationen liegen nicht chronologisch"
+
+
+def test_alte_generationen_werden_nach_alter_entfernt_nicht_ueberschrieben(tmp_path,
+                                                                           monkeypatch):
+    import os as _os
+    import time as _t
+    monkeypatch.setattr(kostenbuch, "PFAD", tmp_path / "k.jsonl")
+    monkeypatch.setattr(kostenbuch, "MAX_MB", 0.0005)
+    monkeypatch.setattr(kostenbuch, "AUFBEWAHREN_TAGE", 1)
+    for _ in range(10):
+        kostenbuch.notiere(anbieter="or", modell="m", kosten_usd=0.01)
+    alt = [q for q in tmp_path.iterdir() if q.name != "k.jsonl"]
+    assert alt, "es muss umgehängte Generationen geben"
+    _os.utime(alt[0], (_t.time() - 5 * 86400, _t.time() - 5 * 86400))   # 5 Tage alt
+    kostenbuch.notiere(anbieter="or", modell="m", kosten_usd=0.01)      # löst Aufräumen aus
+    assert not alt[0].exists(), "zu alte Generation hätte entfernt werden müssen"
+    assert (tmp_path / "k.jsonl").exists(), "die laufende Datei bleibt immer"

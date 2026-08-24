@@ -40,8 +40,12 @@ from govisor import kostenbuch  # noqa: E402
 FELDER = ("modell", "weg", "endpunkt", "zweck", "anbieter", "vorgang")
 
 
-def _zeilen(seit: str | None, mit_alt: bool):
-    for z in kostenbuch.lies(mit_alt=mit_alt):
+def _zeilen(seit: str | None):
+    # ⚠ Frueher gab es hier `--mit-alt`. Die Option war ein Fehler: sie machte das
+    # VOLLSTAENDIGE Lesen zur Ausnahme statt zur Regel, und nach dem ersten Umhaengen
+    # meldete der Bericht ohne sie stillschweigend zu wenig. `lies()` liest jetzt immer
+    # alle Generationen.
+    for z in kostenbuch.lies():
         if seit and (z.get("ts") or "") < seit:
             continue
         yield z
@@ -209,7 +213,6 @@ def main() -> int:
                     help="Buch gegen OpenRouters Abrechnung — wie viel wurde NICHT gebucht?")
     ap.add_argument("--marke-neu", action="store_true",
                     help="Abgleichsmarke auf den heutigen Stand setzen")
-    ap.add_argument("--mit-alt", action="store_true", help="umgehängte Generation mitlesen")
     a = ap.parse_args()
 
     if a.abgleich or a.marke_neu:
@@ -220,7 +223,7 @@ def main() -> int:
               f"  Es entsteht beim ersten LLM-Aufruf von selbst.", file=sys.stderr)
         return 1
 
-    zeilen = list(_zeilen(a.seit, a.mit_alt))
+    zeilen = list(_zeilen(a.seit))
     if not zeilen:
         print("  Keine Zeilen im gewählten Zeitraum.", file=sys.stderr)
         return 1
