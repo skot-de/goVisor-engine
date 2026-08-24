@@ -390,3 +390,17 @@ def test_nachlauf_eskaliert_nach_der_frist(monkeypatch):
     assert b.pruefung_nachlauf() == [], "so lange darf nichts eskalieren"
     monkeypatch.setattr(b, "NACHLAUF_FRIST_TAGE", -1)
     assert b.pruefung_nachlauf(), "jenseits der Frist MUSS es fehlschlagen"
+
+
+def test_claude_md_kennt_beide_pruefungen():
+    """Was eine neue Sitzung beim Start liest, entscheidet, was sie benutzt.
+
+    ⚠ `pruefe_bibel.py` war gebaut, im Nachtlauf verankert und in zwei Kapiteln
+    beschrieben — und stand trotzdem NICHT in CLAUDE.md. Dieselbe Fehlerklasse wie
+    „gebaut, aber nicht verdrahtet", eine Ebene weiter aussen: das Werkzeug lief,
+    aber niemand wusste davon.
+    """
+    claude = (ROOT / "CLAUDE.md").read_text(encoding="utf-8")
+    for werkzeug in ("scripts/pruefe_verdrahtung.py", "scripts/verdrahtungskarte.py",
+                     "scripts/pruefe_bibel.py", "docs/land-onboarding.md"):
+        assert werkzeug in claude, f"CLAUDE.md nennt {werkzeug} nicht"

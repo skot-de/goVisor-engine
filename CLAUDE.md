@@ -128,9 +128,15 @@ CLI: `python -m govisor.cli {ingest|silver|gold|verify|review}`.
   Suite rot.
 
       python3 scripts/verdrahtungskarte.py <tabelle>   # wer erzeugt es, wer liest es
+      python3 scripts/pruefe_bibel.py [--stand]        # altert die Anleitung selbst?
 
   Dazu die **Verdrahtungskarte**: die Sonden melden, dass etwas nicht stimmt, die Karte
   sagt, woran es hängt. Sie wird aus dem Quelltext ERZEUGT, nicht getippt.
+  Und `pruefe_bibel.py` hält die Länder-Bibel selbst ehrlich: Zahlen ohne Datum, Aussagen
+  gegen die LIVE-Daten, doppelt gepflegte Werte, und ob ein Kapitel stillstand, während
+  der Code darunter sich bewegte (nach 30 Tagen ein Fehlschlag, nicht nur ein Hinweis).
+  **Wer eine prüfbare Aussage in die Bibel schreibt, trägt sie ins Register dort ein** —
+  was nur im Fliesstext steht, kann verrotten, ohne dass es jemand merkt.
   ⚠ Drei Dinge, die man dabei wissen muss: der ältere **Altersbericht** im selben Skript ist
   eine handgepflegte Liste von sechs Eckpfeilern — genau deshalb hat er `lead_lot` nie
   gemeldet. Beide bleiben, weil sie verschiedene Ausfälle sehen (Altersbericht: der ganze
