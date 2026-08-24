@@ -40,6 +40,7 @@ Deutschland gebaut und für den Rest vergessen wurde. Und sie fielen nicht auf, 
 | **14** | [Zeichen und Schrift](laender/14-zeichen-und-schrift.md) | ⚠ **Zuerst lesen, wenn das Land andere Buchstaben hat.** |
 | **15** | [Eintragungsliste](laender/15-eintragungsliste.md) | Jede Datei, in der ein Land bekannt gemacht wird. |
 | **16** | [Trockenlauf Polen](laender/16-trockenlauf-polen.md) | Die Bibel am echten Fall geprüft — was hielt und was fehlte. |
+| **17** | [Eine Quelle anbinden](laender/17-quelle-anbinden.md) | Das **Wie**: Portale finden, Ausschreibungs- und Dokument-Connector bauen. |
 
 ## Der Ablauf in einem Bild
 
