@@ -22,7 +22,7 @@ Unterlagen — deshalb erlauben die großen Engines den Download oberschwellig *
 | **AI evergabe.de** (`/unterlagen/`) | 7,2 % | **ohne Registrierung** — Deeplink-Download | ✅ ohne Account holbar |
 | **AI evergabe.bieter** (`evergabe.bieter/`) | 4,3 % | **ohne Registrierung** (gleiche AI-Plattform) | ✅ ohne Account holbar |
 | **Healy-Hudson / NetServer** (`/NetServer/`) | 13,3 % | **ohne Registrierung** — Sammel-ZIP je Version (widerlegt 2026-08-24, s. u.) | ✅ ohne Account holbar |
-| **subreport ELViS** | 7,3 % | (kostenlose) **Registrierung** üblich | 🟡 Login-Wand (zu bestätigen) |
+| **subreport ELViS** | 7,3 % | **Registrierung** für die Dateien; die **Dateiliste mit Namen ist öffentlich** (gemessen 2026-08-14 und 2026-08-24) | 🟡 Login-Wand, aber Namen holbar |
 | **RIB meinauftrag** | 6,9 % | **Registrierung nötig** — „Documents"-Bereich öffentlich leer | 🟡 Login-Wand |
 | **Staatsanzeiger / vergabe24** | 3,6 % | zu verifizieren | ⚪ offen |
 | **AUMASS** | 2,0 % | zu verifizieren | ⚪ offen |
@@ -93,3 +93,24 @@ Zwei Nachbeben derselben Ursache, beide am 2026-08-24 behoben:
 Befund über unseren Blick, nicht über das Portal. Erst wenn geklärt ist, WELCHE Seite man
 angesehen hat und in welchem Rahmen, ist „Login-Wand" eine Aussage. Die Zeilen mit „zu
 verifizieren" stehen bis heute unter diesem Vorbehalt.
+
+## Nachtrag (2026-08-24, gemessen): subreport ist nicht eine Wand, sondern vier Zustände
+
+Die Zeile stand mit „zu bestätigen". Bestätigt ist jetzt: die Vergabeunterlagen selbst
+verlangen eine Anmeldung (gemessen 2026-08-14 über drei Vergaben und alle Knopfpositionen,
+siehe `govisor/subreport.py`), die **Dateiliste mit Namen** ist dagegen öffentlich und
+trägt Substanz — sie beantwortet, ob ein Leistungsverzeichnis existiert und welche
+Nachweise verlangt werden.
+
+Wo keine Liste erscheint, liegt es an einem von vier Zuständen, die das Portal in seiner
+Statusspalte selbst nennt (Stichprobe 20 von 124):
+
+| Zustand | Anteil | Konsequenz |
+|---|---:|---|
+| `Download` + „Already registered …" | ~45 % | blockiert, wartet auf ein Konto |
+| „Validity expired" | ~15 % | dauerhaft, Fenster zu |
+| „canceled" | ~20 % | dauerhaft, Vergabe aufgehoben |
+| Passwortabfrage, beschränkte Vergabe | ~5 % | blockiert, Passwort geht an eingeladene Bieter |
+| wirklich unerklärt | ~10 % | Arbeitsliste |
+
+Vorher trugen alle 124 denselben Vermerk „0 Dateien" und liefen alle sieben Tage erneut.

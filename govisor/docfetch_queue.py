@@ -69,6 +69,9 @@ DAUERHAFT = frozenset({
     "kein_downloadbereich",  # Portal leitet anonyme Abrufe aufs Dashboard um
     "frameset",             # Inhalts-Frame bleibt ohne Sitzung leer
     "abgelaufen",           # Frist vorbei — das Portal nimmt die Unterlagen herunter
+    # Aufgehobene Vergabe (subreport zeigt es in der Statusspalte an). Sie kommt unter
+    # derselben Kennung nicht zurück; wird neu ausgeschrieben, ist es ein neuer Vorgang.
+    "aufgehoben",
     # Die Adresse antwortet 404/410. Das Dokument ist dort weg — kein Konto der Welt holt
     # es zurück. Bis zum 2026-08-22 landeten diese 54 Faelle unter `gated` und warteten
     # damit auf einen Zugang, der ihnen nicht helfen wuerde.
@@ -95,6 +98,10 @@ BLOCKIERT = {
     "nicht_angemeldet":     "konto",
     "kein_zugriff":         "konto",
     "kein_token":           "konto",
+    # Beschränkte Vergabe: subreport verlangt ein Passwort, das an eingeladene Bieter geht.
+    # NICHT „konto" — ein Konto hilft hier nicht, und es wird auch nichts versucht. Eigene
+    # Klasse, damit sichtbar bleibt: dort LIEGEN Unterlagen, sie sind nur nicht für uns.
+    "passwortgeschuetzt":   "passwort",
     "interesse_noetig":     "interesse",   # simap: Interesse muss bekundet werden
     "interesse_abgelehnt":  "interesse",
     # ⚠ NICHT „konto", sondern UNSER Problem. Die Seite laedt, sie ist nur anders gebaut als

@@ -117,21 +117,95 @@ def _liste_von_seite(pg) -> list[str]:
     return aus
 
 
+# Die Ueberschrift des Unterlagen-Abschnitts. Alles darueber gehoert zur BEKANNTMACHUNG
+# und traegt einen eigenen `download`-Knopf — wer den ganzen Seitentext prueft, verwechselt
+# beides. (Dieselbe Falle wie bei NetServer am 2026-08-24, dort war es die Brotkrume.)
+_ABSCHNITT = ("Access to the tender documents", "Zugang zu den Vergabeunterlagen")
+
+# ⚠ Gemessen sind die ENGLISCHEN Formen: die Seiten kommen anonym auf Englisch. Die
+# deutschen Entsprechungen stehen als beste Annahme daneben und sind UNGEPRUEFT — wer sie
+# bestaetigt oder widerlegt, streicht diesen Hinweis.
+_ABGELAUFEN = ("Validity expired", "Gültigkeit abgelaufen")
+_AUFGEHOBEN = ("canceled", "aufgehoben")
+_LOGIN_HINWEIS = ("Already registered", "Bereits registrierte")
+_PASSWORT = ("password for the restricted tender", "Passwort für die beschränkte")
+
+
+# Wie weit der Abschnitt reicht. ⚠ Ohne Grenze waere es „alles ab der Ueberschrift" —
+# inklusive Fusszeile und Hinweistexten. Ein „canceled" irgendwo weiter unten wuerde dann
+# eine laufende Vergabe abstempeln. Vor dem Ausklappen ist die Tabelle klein (eine Zeile je
+# Paket), 900 Zeichen fassen sie mit Reserve.
+_ABSCHNITT_MAX = 900
+
+
+def _abschnitt(txt: str) -> str | None:
+    for k in _ABSCHNITT:
+        i = txt.find(k)
+        if i >= 0:
+            return txt[i:i + _ABSCHNITT_MAX]
+    return None
+
+
 def hole_liste(url: str, pg) -> dict:
-    """Eine Vergabe → Dateiliste. Erwartet eine bereits offene Playwright-Seite."""
+    """Eine Vergabe → Dateiliste ODER der Grund, warum es keine gibt.
+
+    ⚠ Bis zum 2026-08-24 gab diese Funktion nur eine Zahl zurueck, und der Aufrufer machte
+    daraus „nur_liste" oder „leer". 124 Vorgaenge standen damit als „0 Dateien" da — ein
+    Satz, der wie „diese Vergabe hat keine Unterlagen" klingt und in Wahrheit vier voellig
+    verschiedene Dinge bedeutete. Gemessen an einer Stichprobe von 20:
+
+        ~50 %  `Download` statt `display` + „Already registered …"  → Anmeldung noetig
+        ~40 %  Statusspalte „Validity expired" bzw. „canceled"      → Fenster zu
+        ~10 %  Passwortabfrage („restricted tender")                → beschraenkte Vergabe
+          Rest wirklich unerklaert
+
+    Jeder dieser Faelle braucht eine andere Antwort: warten auf ein Konto, nie wieder
+    versuchen, oder nachsehen. Als eine Zahl waren sie ununterscheidbar.
+    """
     pg.goto(url, wait_until="domcontentloaded")
     pg.wait_for_timeout(_WARTE_SEITE_MS)
-    # „display"/„anzeigen" klappt die Unterlagen-Tabelle auf. Ohne diesen Klick steht dort
-    # nur die Kopfzeile „Access to the tender documents" und kein einziger Dateiname.
+    txt = pg.evaluate("() => document.body.innerText")
+    ab = _abschnitt(txt)
+    if ab is None:
+        return {"dateien": [], "gefunden": 0, "status": "fehler",
+                "note": "kein Unterlagen-Abschnitt"}
+    # ⚠ REIHENFOLGE: der Ausklapper gewinnt IMMER. Traegt die Tabelle ein „display", ist
+    # etwas zu holen — dann wird geholt, egal was sonst auf der Seite steht. Erst wenn es
+    # ihn NICHT gibt, wird nach dem Grund gesucht. Andersherum koennte ein Wort aus einer
+    # Nachbarzeile eine laufende Vergabe abstempeln, und der Fehler waere unsichtbar: er
+    # produziert keinen Fehlschlag, sondern eine falsche Gewissheit.
+    if not ("display" in ab or "anzeigen" in ab):
+        if any(w in ab for w in _ABGELAUFEN):
+            return {"dateien": [], "gefunden": 0, "status": "abgelaufen",
+                    "note": "Gültigkeit abgelaufen"}
+        if any(w in ab for w in _AUFGEHOBEN):
+            return {"dateien": [], "gefunden": 0, "status": "aufgehoben",
+                    "note": "Vergabe aufgehoben"}
+        # Kein Ausklapper, aber der Hinweis auf angemeldete Nutzer: die Unterlagen sind da,
+        # uns fehlt der Zugang. Das ist BLOCKIERT, nicht „leer" — sonst laeuft der Vorgang
+        # jede Woche erneut gegen dieselbe Wand und liest sich obendrein wie „nichts da".
+        if any(w in txt for w in _LOGIN_HINWEIS):
+            return {"dateien": [], "gefunden": 0, "status": "gated",
+                    "note": "Download nur für angemeldete Nutzer"}
+        return {"dateien": [], "gefunden": 0, "status": "leer", "note": "0 Dateien"}
+
     try:
         pg.click("xpath=//button[normalize-space()='display' or normalize-space()='anzeigen']")
         pg.wait_for_timeout(_WARTE_LISTE_MS)
     except Exception:                                    # noqa: BLE001
         pass                                             # manche Vergaben zeigen die Liste direkt
+
+    danach = pg.evaluate("() => document.body.innerText")
+    if any(w in danach for w in _PASSWORT):
+        # Beschraenkte Vergabe: das Passwort geht an eingeladene Bieter. Wir bewerben uns
+        # nicht, es wird also nicht versucht. Eigene Klasse statt „leer", damit sichtbar
+        # bleibt, dass hier Unterlagen LIEGEN.
+        return {"dateien": [], "gefunden": 0, "status": "passwortgeschuetzt",
+                "note": "beschränkte Vergabe, Passwort nötig"}
     namen = _liste_von_seite(pg)
-    kopf = pg.evaluate("() => document.body.innerText.slice(0, 400)")
     return {"dateien": namen, "gefunden": len(namen),
-            "angemeldet_noetig": "Login" in kopf or "Registration" in kopf}
+            "status": "nur_liste" if namen else "leer",
+            "note": f"{len(namen)} Dateien"}
 
 
 def lauf(limit: int | None, dry_run: bool, country: str = "DE",
@@ -215,8 +289,9 @@ def lauf(limit: int | None, dry_run: bool, country: str = "DE",
                 "lead_id": lead_id, "url": seite, "url_quelle": url, "erfasst_am": heute,
                 "n_dateien": r["gefunden"], "dateien": r["dateien"],
                 "doktypen": typen, "prioritaetstypen": prio,
-                # Ehrlicher Status: die LISTE haben wir, die Dateien nicht.
-                "status": "nur_liste" if r["gefunden"] else "leer",
+                # Ehrlicher Status: die LISTE haben wir, die Dateien nicht. Welcher es
+                # ist, weiss nur die Seite selbst — deshalb kommt er aus `hole_liste`.
+                "status": r["status"],
             })
             wache.erfolg()
             # Schlank ins Manifest: Status und Zahl, NICHT die Dateiliste. Das Manifest
@@ -224,9 +299,8 @@ def lauf(limit: int | None, dry_run: bool, country: str = "DE",
             # `doc_listing_subreport.parquet`. Zwei Dateien mit demselben Inhalt liefen
             # sonst auseinander, und niemand wuesste, welche gilt.
             _manifest.append({"lead_id": lead_id, "url": seite,
-                              "status": "nur_liste" if r["gefunden"] else "leer",
-                              "note": f"{r['gefunden']} Dateien"})
-            print(f"  [{i}/{len(rows)}] {lead_id}: {r['gefunden']} Dateien"
+                              "status": r["status"], "note": r["note"]})
+            print(f"  [{i}/{len(rows)}] {lead_id}: {r['note']}"
                   + (f" · {', '.join(prio)}" if prio else ""), flush=True)
             pg.wait_for_timeout(_HOEFLICH_MS)
         ctx.close()

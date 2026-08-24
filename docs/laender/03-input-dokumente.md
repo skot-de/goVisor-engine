@@ -167,6 +167,19 @@ Connectors gilt:
 - **„Sichtbarkeitszeitraum abgelaufen" ist DAUERHAFT, nicht offen.** Sagt das Portal selbst,
   dass der Vorgang ausserhalb seines Fensters liegt, hilft kein zweiter Versuch und kein
   Konto. Ohne eigene Klasse läuft der Vorgang alle sieben Tage erneut gegen dieselbe Wand.
+- **⚠ Eine Zahl ist keine Diagnose.** subreport meldete für 124 Vorgänge „0 Dateien" — ein
+  Satz, der wie „diese Vergabe hat keine Unterlagen" klingt. Nachgemessen waren es VIER
+  verschiedene Dinge, jedes mit einer anderen Konsequenz: Anmeldung nötig (blockiert,
+  wartet auf ein Konto), Gültigkeit abgelaufen und Vergabe aufgehoben (beides dauerhaft,
+  nie wieder versuchen) und beschränkte Vergaben mit Passwort für eingeladene Bieter. Nur
+  ein kleiner Rest war wirklich unerklärt. **Wo ein Abrufer eine Zahl zurückgibt, gibt er
+  keinen Grund zurück — und ohne Grund landet alles in derselben Schublade.** Die Seite
+  selbst weiß es fast immer; sie sagt es in der Statusspalte.
+- **⚠ Der positive Befund muss die Rangfolge anführen.** Trägt die Seite einen Ausklapper
+  oder einen Knopf, wird geholt — erst wenn es ihn NICHT gibt, wird nach dem Grund gesucht.
+  Andersherum kann ein Wort aus einer Nachbarzeile („canceled" bei Los 2, während Los 1
+  offen ist) eine laufende Vergabe abstempeln. Dieser Fehler erzeugt keinen Fehlschlag,
+  sondern eine falsche Gewissheit, und die sieht niemand im Bericht.
 - **Hängende Abrufer.** `SIGALRM` wird von Playwright verschluckt. Es braucht eine Wache
   ausserhalb des Prozesses, sonst steht ein Lauf still und meldet nichts.
 - **Zip-Bomben.** Grössengrenze und Entpack-Grenze sind Pflicht, nicht Kür.
