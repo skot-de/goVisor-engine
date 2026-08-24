@@ -3220,16 +3220,31 @@ def test_kein_test_gibt_geld_aus():
 def test_budgetbremse_rechnet_in_die_richtige_richtung():
     """⚠ Restguthaben FÄLLT, Verbrauch STEIGT — wer das verwechselt, hat keine Bremse.
 
-    Beim Zusammenlegen am 21.08. wurde `_kontostand()` (Verbrauch, steigend) durch
+    Beim Zusammenlegen am 2026-08-21 wurde `_kontostand()` (Verbrauch, steigend) durch
     `_restguthaben()` (Guthaben, fallend) ersetzt, die Rechnung `jetzt - start >= BUDGET`
-    aber stehen gelassen. Die Differenz wäre negativ gewesen und die Notbremse hätte
-    NIE ausgelöst — sichtbar wird so ein Fehler erst, wenn das Geld weg ist.
-    """
-    quelle = (pathlib.Path(__file__).resolve().parent.parent
-              / "scripts" / "analyze_docs.py").read_text(encoding="utf-8")
-    assert "start_usd - jetzt >= BUDGET_USD" in quelle
-    assert "jetzt - start_usd" not in quelle, "die Bremse rechnet verkehrt herum"
+    aber stehen gelassen. Die Differenz wäre negativ gewesen und die Notbremse hätte NIE
+    ausgelöst — sichtbar wird so ein Fehler erst, wenn das Geld weg ist.
 
+    ⚠ Dieser Test nagelte bis zum 2026-08-24 eine **wörtliche Quelltextzeile** fest
+    (`"start_usd - jetzt >= BUDGET_USD" in quelle`). Er brach beim ersten legitimen Umbau
+    und sagte nichts über das Verhalten — Falle F1 des Fallenkatalogs. Jetzt wird die
+    Entscheidung selbst geprüft.
+    """
+    import importlib.util
+    spec = importlib.util.spec_from_file_location(
+        "ad_budget", pathlib.Path(__file__).resolve().parent.parent / "scripts" / "analyze_docs.py")
+    ad = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(ad)
+
+    # Der kumulierte Verbrauch hat Vorrang und STEIGT.
+    assert ad._budget_weg(10.0, 100.0, 103.0, None) == pytest.approx(3.0)
+    # ⚠ Auch nach einer Aufladung: der Stand steigt, der Verbrauch nicht.
+    assert ad._budget_weg(10.0, 100.0, 103.0, 110.0) == pytest.approx(3.0)
+    # Rückfall auf das Restguthaben, das FÄLLT.
+    assert ad._budget_weg(10.0, None, None, 7.0) == pytest.approx(3.0)
+    # Nichts messbar → keine Behauptung.
+    assert ad._budget_weg(None, None, None, None) is None
+    assert ad._budget_weg(10.0, None, None, None) is None
 
 def test_geldwache_schwingt_bei_parallelen_faeden_kaum_ueber(monkeypatch):
     """⚠ Ein fester Prüftakt reicht bei Parallelität nicht.

@@ -121,6 +121,32 @@ def _verbrauch() -> float | None:
     return _llm_geld.get("verbrauch")
 
 
+def _budget_weg(start_usd: float | None, start_verbrauch: float | None,
+                v_jetzt: float | None, r_jetzt: float | None) -> float | None:
+    """Wie viel hat dieser Lauf verbraucht? ``None``, wenn es nicht zu ermitteln ist.
+
+    ⚠ **Zwei Zahlen, zwei Richtungen — und wer sie verwechselt, hat keine Bremse.**
+    Der kumulierte Verbrauch (`total_usage`) STEIGT, das Restguthaben FAELLT. Beim
+    Zusammenlegen am 2026-08-21 wurde `_kontostand()` (steigend) durch `_restguthaben()`
+    (fallend) ersetzt und die Rechnung stehen gelassen — die Differenz waere negativ
+    gewesen und die Notbremse haette nie ausgeloest.
+
+    ⚠ Und der Rueckfall auf das Restguthaben ueberlebt keine Aufladung: dann steigt der
+    Stand ueber den Startwert und die Differenz kehrt sich um. Deshalb hat der Verbrauch
+    Vorrang; das Restguthaben ist nur die zweite Wahl.
+
+    Als eigene Funktion herausgezogen, weil der Waechter darueber vorher eine woertliche
+    Quelltextzeile festnagelte (`"start_usd - jetzt >= BUDGET_USD" in quelle`). Der brach
+    beim ersten legitimen Umbau und sagte nichts ueber das Verhalten — Falle F1 des
+    Fallenkatalogs.
+    """
+    if v_jetzt is not None and start_verbrauch is not None:
+        return v_jetzt - start_verbrauch
+    if r_jetzt is not None and start_usd is not None:
+        return start_usd - r_jetzt
+    return None
+
+
 def _restguthaben() -> float | None:
     """VERBLEIBENDES Guthaben in Dollar, aus :mod:`govisor.llm`.
 
@@ -677,11 +703,8 @@ def main() -> int:
                     # Bevorzugt der kumulierte Verbrauch — er ueberlebt eine Aufladung.
                     # Rueckfall auf das Restguthaben, wenn er nicht zu haben ist.
                     v_jetzt = _verbrauch()
-                    if v_jetzt is not None and start_verbrauch is not None:
-                        weg = v_jetzt - start_verbrauch
-                    else:
-                        jetzt = _restguthaben()
-                        weg = (start_usd - jetzt) if jetzt is not None else None
+                    weg = _budget_weg(start_usd, start_verbrauch, v_jetzt,
+                                      None if v_jetzt is not None else _restguthaben())
                     if weg is not None and weg >= BUDGET_USD:
                         print(f"\n⛔ Budget erreicht: {weg:.2f} $ von "
                               f"{BUDGET_USD:.2f} $ — Lauf wird beendet, Stand ist gesichert.",
