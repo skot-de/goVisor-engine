@@ -18,7 +18,7 @@ Der Grund, warum das niemandem auffiel, steht in einem Satz:
 Deshalb arbeitet dieses Vorgehen mit **Toren**: jedes hat eine Zahl, die man messen muss,
 und ein Tor fällt erst, wenn die Zahl stimmt. „Läuft durch" ist kein Tor.
 
-## Die sechs Tore
+## Die sieben Tore
 
 | # | Tor | Fällt, wenn … | Kapitel |
 |---|-----|---------------|---------|
@@ -27,9 +27,17 @@ und ein Tor fällt erst, wenn die Zahl stimmt. „Läuft durch" ist kein Tor.
 | 3 | **Dubletten erkannt** | Wall läuft mit dem **Locale des Landes**, Belegklassen gemessen, Selbsttest unter 15 % | [04](04-dublettenwall.md) |
 | 4 | **Gold vollständig** | jede country-fähige Tabelle wird auch für dieses Land gebaut (`pruefe_verdrahtung.py` sauber) | [05](05-gold-kette.md) |
 | 5 | **Frontend zeigt es** | keine Kennzahl liegt in Gold und fehlt in der Oberfläche; Feldabdeckung je Land nebeneinander gemessen | [06](06-cross-verdrahtung.md) |
-| 6 | **Dokumente** | Portale gemessen, Ausbeute je Portal bekannt, Sperrtypen klassifiziert | [03](03-input-dokumente.md) |
+| 6 | **Produktwege gehen** | Onboarding findet eine Firma des Landes, Zuschlagsansicht und Firmenprofil tragen es | [06](06-cross-verdrahtung.md) |
+| 7 | **Dokumente** | Portale gemessen, Ausbeute je Portal bekannt, Sperrtypen klassifiziert | [03](03-input-dokumente.md) |
 
-Tor 6 steht bewusst hinten: **AT und CH haben bis heute 0 % Dokumentabdeckung** und sind
+**Tor 6 ist eigenständig, und das ist die Lehre vom 2026-08-23.** Tor 5 war gefallen — jede
+Kennzahl kam in der Oberfläche an, die Feldabdeckung stand nebeneinander — und **drei
+Produktwege waren trotzdem deutsch**: der Onboarding-Firmenindex kannte keine Schweizer
+Firma, die Zuschlagsansicht und die Firmenprofile liefen in gar keinem Lauf. Eine Kennzahl
+zu zeigen und eine Anmeldung zu ermöglichen sind zwei verschiedene Tore. Wer sie zusammen
+prüft, prüft nur das erste.
+
+Tor 7 steht bewusst hinten: **AT und CH haben bis heute 0 % Dokumentabdeckung** und sind
 trotzdem produktiv. Ein Land ohne Dokumente ist ein halbes Land, kein unbrauchbares.
 
 ## Die drei Fragen, die man an JEDE Zahl stellt

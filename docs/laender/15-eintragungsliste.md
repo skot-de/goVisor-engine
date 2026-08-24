@@ -22,6 +22,7 @@ Sortiert nach dem Zeitpunkt, zu dem man sie braucht.
 | Datei | Was |
 |-------|-----|
 | neues Modul `govisor/<quelle>.py` | Parser Bronze→Silber, ein `schema_gen`-Wert |
+| ⚠ dort: **Regionskennung normalisieren** | Liefert die Quelle **NUTS** oder ein nationales Kürzel? simap liefert Kantonscodes (`ZH`, `VD`, `BE`); ohne Zuordnung fielen 4.850 Zuschläge aus jeder Regionsanzeige, und `BE` wäre im NUTS-Raum Belgien statt Bern. Vorbild: `_KANTON_NUTS` in `govisor/simap.py` — vollständig, gegen `dim_nuts` geprüft, Unbekanntes bleibt stehen. Siehe [Kapitel 07](07-geo-und-regionen.md). |
 | `govisor/cli.py` | Unterbefehl `ingest-<quelle>` |
 | `scripts/fetch_ted_live.py` | Land in den Live-Abruf aufnehmen |
 
@@ -60,7 +61,9 @@ Sortiert nach dem Zeitpunkt, zu dem man sie braucht.
 | `scripts/export_strategie.py` → `LAENDER` | Land aufnehmen |
 | `scripts/export_landing.py` | bewusst DE-only — **entscheiden und begründen**, ob das so bleibt |
 | `scripts/build_marktpuls.py` | Serien-Regel je Quelle (`_serien_regel`): zu welcher Linie gehört die neue Quelle, wo bricht die Reihe? |
-| `scripts/export_web_awards.py` | Zuschlagsphase; prüfen, ob das Land Zuschläge liefert |
+| `scripts/export_web_awards.py` | Zuschlagsphase. ⚠ Deckel gilt je Branche **und Land** (`CAP`), und das Feld `land` kommt aus der Quelle — nicht hartkodieren |
+| `scripts/export_suppliers.py` | Onboarding-Firmenindex. ⚠ Zwei Dinge: `clean_nuts` braucht die Regionslänge des Landes, und Grenzgänger müssen zusammengelegt werden (gleicher Name **und** gemeinsames CPV-4-Feld) |
+| `scripts/export_firma_profiles.py` | `/firma`-Profile. ⚠ Regionsnamen aus `dim_nuts` je Land, kein `nuts1 LIKE 'DE_'` |
 | `scripts/export_regionen.py` | nimmt `--country`; entscheiden, ob eine eigene Regionsansicht entsteht |
 
 ## Frontend

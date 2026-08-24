@@ -93,6 +93,25 @@ Silber-Pfaden (Archiv und Live). Wer einen neuen Ingest-Pfad baut, hängt sie do
 
 Regressionswächter: `tests/test_plumbing.py::test_silver_gold_notice_ids_are_canonical`.
 
+## ⚠ Liefert die Quelle NUTS — oder ein nationales Kürzel?
+
+Diese Frage gehört an den Parser, nicht in die Auswertung. simap.ch liefert als
+Leistungsort einen **Kantonscode** (`ZH`, `VD`, `BE`), und der stand roh in
+`performance_nuts`. Folge: 4.850 Schweizer Zuschläge fielen aus jeder Regionsanzeige,
+und `BE` heisst im NUTS-Raum **Belgien** statt Bern.
+
+Die Zuordnung sitzt im Parser (`govisor/simap.py`, `_KANTON_NUTS`) und damit **vor**
+Silber — so bekommt jede nachgelagerte Auswertung sauberes NUTS, ohne davon zu wissen.
+Wer sie in den Verbrauchern nachbaut, baut sie viermal; genau das war der Zustand.
+
+Zwei Bedingungen ([Kapitel 07](07-geo-und-regionen.md) hat die Messung):
+
+1. **Vollständig und geprüft** — ein Test vergleicht die Zuordnung gegen `dim_nuts` des
+   Landes, ohne Rest auf beiden Seiten. Ein getippter Code, den es nicht gibt, fällt beim
+   Bauen auf und nicht in der Anzeige.
+2. **Unbekanntes bleibt stehen**, nicht leer. Ein unbekanntes Kürzel ist eine Auskunft über
+   die Quelle.
+
 ## Sprachfassungen — der Fund, den man leicht verschenkt
 
 Nationale Quellen liefern Titel und Beschreibung oft in **mehreren Amtssprachen im selben

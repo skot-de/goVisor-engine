@@ -87,6 +87,8 @@ fehlten, und beide hätten ein Land vom ersten Tag an unbrauchbar gemacht:
 | Destatis-Kontext | **nein** | endet an der deutschen Grenze |
 | Wortfaltung / Zeichen | **nein** | kennt nur ä ö ü ß |
 | Währungsumrechnung | **nein** | gibt es bisher gar nicht |
+| Regionskennung der Quelle | **nein** | liefert sie NUTS oder ein nationales Kürzel? |
+| Behördenvokabular-Sperrliste | **nein** | „stadt" ist in AT ein Ortsname |
 
 ## Die eine Frage, die alles trägt
 

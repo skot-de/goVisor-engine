@@ -72,6 +72,24 @@ python3 scripts/export_strategie.py && diff <(jq -S . /tmp/a.json) <(jq -S . web
 Gefundene Ursache: ein Sortier-Gleichstand (gleicher Titel **und** gleiche Restlaufzeit).
 Ein Feld mehr im `ORDER BY` behebt es.
 
+## Die Produktwege einmal von Hand durchgehen
+
+Tor 6 ist das einzige, das man nicht rein mechanisch prüfen kann. Drei Handgriffe, die
+zusammen fünf Minuten brauchen:
+
+1. **Onboarding** — einen Firmennamen dieses Landes in `web/data/suppliers.json` suchen.
+   Nicht einen, der auch in Deutschland gewinnt (der ist versehentlich drin), sondern einen
+   rein inländischen. Gemessenes Beispiel: PORR war auffindbar, Implenia Schweiz nicht.
+2. **Zuschlagsansicht** — `web/data/awards-*.json` nach `land` auszählen. Steht dort nur
+   DE, ist entweder die Quelle DE-fest oder das Feld hartkodiert; beides ist vorgekommen.
+3. **Firmenprofil** — in `web/data/firma-profiles.json` prüfen, ob Profile dieses Landes
+   eine echte `hauptregion` tragen. Ein Regionsfilter à la `nuts1 LIKE 'DE_'` liess dort
+   **null von 38.307** Profilen mit AT/CH-Region übrig.
+
+⚠ Die Zahl allein genügt nicht. Nach dem Unionieren stiegen die Namensdubletten im
+Firmenindex von 134 auf 868 — der Index war „vollständig" und für die Suche schlechter als
+vorher. Also auch: **einen Namen suchen und zählen, wie viele Treffer kommen.**
+
 ## Der Dubletten-Selbsttest
 
 Widerspruchsquote der Regionsableitung unter **15 %**. AT startete bei 58 % — die Ursache

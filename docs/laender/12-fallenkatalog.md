@@ -27,6 +27,11 @@
 | B6 | **Glob ins Leere** | DuckDB wirft einen Laufzeitfehler, kein leeres Ergebnis | CH hat keine `award_criteria` |
 | B7 | **Namenskollision über Grenzen** | 22 Käufernamen in mehr als einem Land | trifft 463 von 117.241 Leads |
 | B8 | **PLZ-Kollision** | AT und CH sind beide 4-stellig | 1010 = Wien AT / Lausanne CH |
+| B9 | **Deckel gilt je Branche statt je Land** | drei Länder teilen sich einen Deckel | `CAP = 120`: deutscher Nutzer sähe 196 statt 379 Zuschlägen |
+| B10 | **Hartkodierter Wert sieht aus wie ein Feld** | Quellen umgestellt, Ausgabe nicht | `"land": "DE"` mitten im Ausgabe-Aufbau |
+| B11 | **Grenzgänger doppelt im Index** | Identität wird je Land eigenständig gebildet | ACP IT Solutions mit 4 Einträgen; Namensdubletten 134 → 868 |
+| B12 | **Entartete Kennung verschmilzt Fremdes** | Platzhalter als Gleichheitsbeleg | 29 von 1.722 grenzüberschreitenden `identity_id` sind `solo:id:.` / `N/A` |
+| B13 | **Firmen umgestellt, ihre Regionen nicht** | halbe Umstellung, sieht fertig aus | `clean_nuts` verlangte `len==3 and startswith('DE')` |
 
 ## C · Fallen bei Namen und Kennungen
 
