@@ -95,6 +95,48 @@ def unterlagen_url(url: str | None) -> str | None:
     return f"https://{_HOST}/tenderdocuments.html?id={m.group(1)}" if m else None
 
 
+def detailseite(url: str | None) -> str | None:
+    """Unterlagenseite → Vorgangsseite. Dort steht der Grund, hier steht nur das Ergebnis."""
+    if not url:
+        return None
+    return url.replace("tenderdocuments.html", "tenderdetails.html")
+
+
+# Die Unterlagenseite antwortet auf jeden Fehlgriff mit demselben Satz. Er sagt NICHTS —
+# nicht ob der Vorgang weg ist, ob die Frist durch ist oder ob die Unterlagen absichtlich
+# zurueckgehalten werden.
+_NICHTSSAGEND = "steht aktuell nicht zur Verfügung"
+
+# ⚠ Die Vergabestelle kann Unterlagen bewusst zurueckhalten. Woertlich: „Aus Gruenden der
+# Vertraulichkeit sind die Vergabeunterlagen nicht frei zugaenglich … Registrierte Nutzer
+# koennen sie im Bereich ‚Meine e-Vergabe‘ anfordern." Das ist kein Fehlschlag und keine
+# leere Vergabe, sondern ein Zugang, den wir nicht haben.
+_VERTRAULICH = ("Vertraulichkeit", "nicht frei zugänglich")
+
+_FRIST = re.compile(r"Abgabefrist Angebot:\s*\n+\s*(\d{2})\.(\d{2})\.(\d{4})")
+
+
+def grund_von_detailseite(text: str, heute=None) -> dict:
+    """Vorgangsseiten-Text → warum es keine Unterlagen gab.
+
+    ⚠ Gemessen am 2026-08-24 ueber ALLE 23 Faelle, die als „keine Unterlagen" im Manifest
+    standen: 17 Vertraulichkeit, 4 Abgabefrist verstrichen, 1 wirklich offen (ein Vorgang
+    lag doppelt). Kein einziger davon war eine Vergabe ohne Unterlagen — was der Vermerk
+    aber behauptete.
+    """
+    import datetime as _dt
+    if not text or _NICHTSSAGEND in text:
+        return {"status": "leer", "note": "auch die Vorgangsseite gibt nichts her"}
+    if all(w in text for w in _VERTRAULICH):
+        return {"status": "gated", "note": "Vertraulichkeit — nur auf Anforderung"}
+    m = _FRIST.search(text)
+    if m:
+        frist = _dt.date(int(m.group(3)), int(m.group(2)), int(m.group(1)))
+        if frist < (heute or _dt.date.today()):
+            return {"status": "abgelaufen", "note": f"Abgabefrist {frist:%d.%m.%Y} verstrichen"}
+    return {"status": "leer", "note": "kein Grund auf der Vorgangsseite"}
+
+
 _KLICK = """u => { const a = document.createElement('a'); a.href = u; a.download = '';
                    document.body.appendChild(a); a.click(); }"""
 
@@ -121,7 +163,18 @@ def hole_vergabe(seite: str, pg, ziel: Path, dry_run: bool = False) -> dict:
         if n_gelistet:
             return {"status": "nur_einzeldateien", "bytes": 0, "n_files": n_gelistet,
                     "note": f"{n_gelistet} Dateien gelistet, kein ZIP-Knopf"}
-        return {"status": "leer", "bytes": 0, "n_files": 0, "note": "keine Unterlagen"}
+        # ⚠ NICHT „keine Unterlagen" behaupten. Die Unterlagenseite antwortet auf jeden
+        # Fehlgriff mit demselben nichtssagenden Satz; der Grund steht eine Seite weiter.
+        # Ein Seitenaufruf mehr, und das nur fuer die wenigen Faelle, die hier ankommen.
+        d = detailseite(seite)
+        try:
+            pg.goto(d, wait_until="domcontentloaded")
+            pg.wait_for_timeout(_WARTE_MS)
+            detail = pg.inner_text("body")
+        except Exception as e:                           # noqa: BLE001
+            return {"status": "fehler", "bytes": 0, "n_files": 0, "note": type(e).__name__}
+        g = grund_von_detailseite(detail)
+        return {"status": g["status"], "bytes": 0, "n_files": 0, "note": g["note"]}
 
     if dry_run:
         return {"status": "probe", "bytes": 0, "n_files": n_gelistet,

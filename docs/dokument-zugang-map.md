@@ -18,7 +18,7 @@ Unterlagen — deshalb erlauben die großen Engines den Download oberschwellig *
 | Engine | Anteil | Zugang (oberschwellig) | Für uns |
 |---|---:|---|---|
 | **cosinex/DTVP** (`/Satellite/`) | 31,9 % | **ohne Registrierung** — „Alle Dokumente als ZIP" | ✅ ohne Account holbar |
-| **Bund e-Vergabe** (evergabe-online.de) | 8,8 % | **ohne Registrierung** — freier Download (Beschaffungsamt BMI) | ✅ ohne Account holbar |
+| **Bund e-Vergabe** (evergabe-online.de) | 8,8 % | **ohne Registrierung** — freier Download (Beschaffungsamt BMI); rund 2 % hält die Vergabestelle aus Vertraulichkeit zurück | ✅ ohne Account holbar |
 | **AI evergabe.de** (`/unterlagen/`) | 7,2 % | **ohne Registrierung** — Deeplink-Download | ✅ ohne Account holbar |
 | **AI evergabe.bieter** (`evergabe.bieter/`) | 4,3 % | **ohne Registrierung** (gleiche AI-Plattform) | ✅ ohne Account holbar |
 | **Healy-Hudson / NetServer** (`/NetServer/`) | 13,3 % | **ohne Registrierung** — Sammel-ZIP je Version (widerlegt 2026-08-24, s. u.) | ✅ ohne Account holbar |
@@ -114,3 +114,16 @@ Statusspalte selbst nennt (Stichprobe 20 von 124):
 | wirklich unerklärt | ~10 % | Arbeitsliste |
 
 Vorher trugen alle 124 denselben Vermerk „0 Dateien" und liefen alle sieben Tage erneut.
+
+## Nachtrag (2026-08-24, gemessen): die Ausnahme beim Bund hat einen Namen
+
+95 % der Vorgänge auf evergabe-online.de liefern das ZIP anonym (1.097 von 1.152 Versuchen).
+Die Ausnahme ist keine technische Hürde, sondern eine Entscheidung der Vergabestelle:
+
+> „Aus Gründen der Vertraulichkeit sind die Vergabeunterlagen nicht frei zugänglich.
+> Registrierte Nutzer der e-Vergabe können die Vergabeunterlagen im Bereich
+> ‚Meine e-Vergabe‘ anfordern."
+
+Das steht auf der VORGANGSSEITE. Die Unterlagenseite selbst quittiert diesen Fall mit
+demselben Einheitssatz wie jeden anderen Fehler. Wer nur sie liest, hält 17 bewusst
+zurückgehaltene Vergaben für 17 Vergaben ohne Unterlagen.

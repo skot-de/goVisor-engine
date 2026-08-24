@@ -180,6 +180,15 @@ Connectors gilt:
   Andersherum kann ein Wort aus einer Nachbarzeile („canceled" bei Los 2, während Los 1
   offen ist) eine laufende Vergabe abstempeln. Dieser Fehler erzeugt keinen Fehlschlag,
   sondern eine falsche Gewissheit, und die sieht niemand im Bericht.
+- **⚠ Die Seite, die scheitert, ist oft nicht die Seite, die antwortet.** Die
+  Unterlagenseite der e-Vergabe des Bundes quittiert JEDEN Fehlgriff mit demselben Satz:
+  „Diese Information steht aktuell nicht zur Verfügung." Er sagt nichts darüber, ob der
+  Vorgang weg ist, die Frist durch oder die Unterlagen absichtlich zurückgehalten werden.
+  Der Grund steht eine Seite weiter, auf der Vorgangsseite. Gemessen über alle 23 Fälle:
+  17× „Aus Gründen der Vertraulichkeit … nicht frei zugänglich" (blockiert, nicht leer),
+  4× Abgabefrist verstrichen, 2 hatten inzwischen ein ZIP mit 52 Dateien. **Kein einziger
+  war eine Vergabe ohne Unterlagen** — was der Vermerk behauptete. Wo eine Portalseite
+  einen Einheitssatz für alle Fehler führt, ist die Nachbarseite Pflicht, nicht Kür.
 - **Hängende Abrufer.** `SIGALRM` wird von Playwright verschluckt. Es braucht eine Wache
   ausserhalb des Prozesses, sonst steht ein Lauf still und meldet nichts.
 - **Zip-Bomben.** Grössengrenze und Entpack-Grenze sind Pflicht, nicht Kür.
