@@ -21,7 +21,7 @@ Ingest (TED, DÖE, atverg, simap, Portale)
   → Frontend-Daten (web/data)
   → Marktpuls, Strategie, Regionen, Startseite
   → Ertragsbericht
-  → Altersbericht + Verdrahtungsprüfung
+  → Altersbericht + Verdrahtungsprüfung + Bibel-Prüfung
 ```
 
 Sonntags läuft die volle Historie der Firewall (`--ab-jahr 2004`), sonst ein rollendes
@@ -85,6 +85,12 @@ ist ein Grund hinzusehen, keiner den Lauf wegzuwerfen.
 
 - **Altersbericht** — handgepflegte Liste von sechs Eckpfeilern, absolute Frische. Merkt,
   wenn der **ganze** Lauf steht.
+- **`pruefe_bibel.py`** — prüft die Anleitung selbst: Zahlen ohne Datum, Behauptungen
+  gegen die Live-Daten, Doppelpflege mit `CLAUDE.md`, und ob ein Kapitel stillstand,
+  während der Code darunter sich bewegte. Ebenfalls Warnung, kein Abbruch.
+  `--stand` zeigt, wie alt jedes Kapitel ist — **aus git**, nicht getippt: ein
+  handgeschriebenes „Stand: …" verrottet in dem Moment, in dem jemand das Kapitel ändert
+  und die Zeile vergisst.
 - **`pruefe_verdrahtung.py`** — alle Gold-Dateien, relativ zum Lauf ihres Landes. Merkt,
   wenn **ein** Schritt fehlt.
 

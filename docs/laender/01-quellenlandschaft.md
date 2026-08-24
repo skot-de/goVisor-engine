@@ -92,6 +92,33 @@ Die vier Status ehrlich verwenden:
 gebaut ist und nicht läuft, sieht in jeder Übersicht aus wie Fortschritt und liefert
 nichts. Wer etwas auf `prepared` setzt, schreibt dazu, was zum `live` fehlt.
 
+### Bei TED-Ländern kommt der Status aus der Datenlage
+
+Seit 2026-08-23 wird der Status der `ted-*`-Landeseinträge **abgeleitet**, nicht getippt:
+
+```
+Gold liegt   → live         das Land ist in der Kette
+nur Silber   → prepared     angefangen und liegengeblieben
+nichts       → candidate
+```
+
+Der Anlass war ein Fund aus dem Trockenlauf ([Kapitel 16](16-trockenlauf-polen.md)): Polen
+stand auf `candidate` — „nie angefasst" — während 326.485 Bekanntmachungen in Silber lagen.
+Die Ursache war Bauart, kein Tippfehler: alle EU-Länder bekamen pauschal `candidate`, weil
+die Einträge erzeugt werden. Derselbe Fehler steckte in einem **von Hand** geschriebenen
+Eintrag: `ted-at` stand auf `prepared`, obwohl Österreich täglich durch die Kette läuft.
+
+⚠ **Portale und nationale Quellen behalten ihren kuratierten Status.** Dort sagt die
+Datenlage nichts über den Anbindungsstand — ein Portal kann Silber liefern und trotzdem
+nur zur Hälfte angebunden sein. Was dadurch weiter hinterherhinkt und bewusst so bleibt:
+`govisor.dtvp` läuft im Tageslauf und steht in **keinem** Eintrag, `atverg` steht auf
+`prepared`, obwohl `ingest-atverg` täglich läuft.
+
+⚠ **Und `candidate` heisst recherchiert, nicht gebaut.** `uk-fts`, `uk-cf` und `fr-decp`
+stehen mit Namen, Format und Abdeckung da und haben **null Zeilen Code** — beim Schreiben
+von [Kapitel 17](17-quelle-anbinden.md) wurde ein solcher Eintrag für eine Implementierung
+gehalten. Ein Test hält das jetzt ehrlich.
+
 ## Ehrlicher Konter auf „wir haben 200 Quellen"
 
 Drei Connectoren aggregieren rund 36 Portale. Das ist eine gute Zahl und trotzdem nicht

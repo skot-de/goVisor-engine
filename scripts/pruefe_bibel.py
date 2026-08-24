@@ -182,14 +182,74 @@ def pruefung_doppelpflege(zeige_offen: bool = False) -> list[str]:
     return fehler
 
 
+# ── Pruefung 4: Nachlauf ────────────────────────────────────────────────────
+# Hat sich der Code bewegt, waehrend das Kapitel stillstand? Jedes Kapitel nennt Dateien;
+# wurde eine davon NACH dem Kapitel geaendert, beschreibt es moeglicherweise etwas, das
+# umgezogen ist.
+#
+# ⚠ Bewusst eine WARNUNG, kein Fehlschlag. `daily_leads.sh` und `sources.py` aendern sich
+# staendig — wer daraus einen roten Test macht, erzeugt eine Meldung, die nach zwei Wochen
+# niemand mehr liest. Der Zweck ist ein Anstoss zum Hinsehen, und Hinsehen ist billig.
+#
+# Ein GETIPPTES „Stand: 2026-08-24" waere die schlechtere Loesung: es verrottet in dem
+# Moment, in dem jemand das Kapitel aendert und die Zeile vergisst. Das Datum kommt
+# deshalb aus git.
+def _git_zeit(pfad) -> int:
+    import subprocess
+    r = subprocess.run(["git", "log", "-1", "--format=%at", "--", str(pfad)],
+                       capture_output=True, text=True, cwd=ROOT)
+    return int(r.stdout.strip() or 0)
+
+
+def pruefung_nachlauf(zeige_offen: bool = False) -> list[str]:
+    import datetime as _dt
+    zeilen = []
+    for datei in sorted(KAPITEL.glob("*.md")):
+        kap = _git_zeit(datei)
+        if not kap:
+            continue
+        refs = set(re.findall(r"`((?:scripts|govisor|tests|web)/[\w./-]+\.\w+)`",
+                              datei.read_text(encoding="utf-8")))
+        juenger = sorted(r for r in refs
+                         if (ROOT / r).exists() and _git_zeit(ROOT / r) > kap)
+        if juenger:
+            stand = _dt.date.fromtimestamp(kap).isoformat()
+            zeilen.append(f"    {datei.name} (Stand {stand}) beschreibt neuere Dateien: "
+                          f"{', '.join(juenger[:3])}"
+                          + (f" (+{len(juenger)-3})" if len(juenger) > 3 else ""))
+    if zeilen:
+        print("\n".join(zeilen))
+    return []          # WARNUNG, kein Fehlschlag — s. Kommentar oben
+
+
+def stand_uebersicht() -> None:
+    """Wie alt ist jedes Kapitel? Aus git, nicht getippt."""
+    import datetime as _dt
+    heute = _dt.date.today()
+    print(f"  {'KAPITEL':38} {'STAND':12} ALTER")
+    for datei in sorted(KAPITEL.glob("*.md")) + [NABE]:
+        t = _git_zeit(datei)
+        if not t:
+            print(f"  {datei.name:38} {'nicht in git':12}")
+            continue
+        d = _dt.date.fromtimestamp(t)
+        print(f"  {datei.name:38} {d.isoformat():12} {(heute - d).days} Tage")
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--offen", action="store_true")
+    ap.add_argument("--stand", action="store_true",
+                    help="nur zeigen, wie alt jedes Kapitel ist (aus git)")
     a = ap.parse_args()
+    if a.stand:
+        stand_uebersicht()
+        return 0
     alles = []
     for name, fn in (("1: Datierung (Zahl ohne Datum)", pruefung_datierung),
                      ("2: Behauptungen gegen die Live-Daten", pruefung_behauptungen),
-                     ("3: Doppelpflege mit CLAUDE.md", pruefung_doppelpflege)):
+                     ("3: Doppelpflege mit CLAUDE.md", pruefung_doppelpflege),
+                     ("4: Nachlauf (Code bewegt, Kapitel still)", pruefung_nachlauf)):
         print(f"── Pruefung {name} ──")
         f = fn(a.offen)
         alles += f
