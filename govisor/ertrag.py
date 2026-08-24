@@ -176,7 +176,7 @@ def sammle(country: str = "DE", data_dir: Path | None = None) -> dict:
     ]:
         stufen.append((label, _zahl(con, sql)))
     for name, datei in [("mit Leistungsverzeichnis", "doc_lv.parquet"),
-                        ("mit Kriterienmatrix", "doc_criteria.parquet")]:
+                        ("Kriterienmatrix (Nische)", "doc_criteria.parquet")]:
         p = docs / datei
         if p.exists():
             stufen.append((name, _zahl(con, f"""
@@ -311,7 +311,15 @@ def _drucke(b: dict) -> None:
         d = v.get(f"trichter.{s['stufe']}")
         dd = f"  ({d:+d})" if d else ""
         print(f"    {s['stufe']:<26}{s['n']:>8,}  {s['pct'] if s['pct'] is not None else '?':>5} %{dd}")
+    print("    ⌐ Die letzte Stufe ist KEINE Pipeline-Stufe: UfAB/EVB-IT-Matrizen sind"
+          "\n      ein Nischenformblatt. 18 von 16.083 offenen Vorgaengen tragen"
+          "\n      ueberhaupt eine, gemessen 2026-08-24.")
 
+    # ⚠ Die letzte Trichterstufe ist KEINE Pipeline-Stufe. UfAB/EVB-IT-Kriterienmatrizen
+    # sind ein Nischenformblatt: gemessen am 2026-08-24 tragen 18 von 16.083 offenen
+    # Vorgaengen ueberhaupt eine (gesucht ueber `doc_text`), davon werden 12 gelesen. Als
+    # „0.0 %" neben „mit Archiv 37.9 %" gestellt liest sich das wie ein Totalausfall — und
+    # genau diesen Fehlschluss hat der Bericht am selben Tag ausgeloest.
     if b.get("blockiert_nach_grund"):
         print("\n  BLOCKIERT — die Reichweiten-Arbeitsliste")
         for grund, n in b["blockiert_nach_grund"].items():

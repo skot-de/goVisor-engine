@@ -305,6 +305,57 @@ Der Rest, der nichts mit Statusmeldungen zu tun hat — sondern mit dem Betrieb:
   Baum, in den ein Abruf schreibt. Am 2026-08-15 lief so ein Neuaufbau 9,5 h durch und
   startete am selben Abend erneut. Siehe [Kapitel 11](11-betrieb.md).
 
+## Kriterienmatrizen — und was eine Zahl im Trichter verschweigt
+
+Zuschlagskriterien sind die erste Frage jedes Bieters: **komme ich überhaupt in Frage
+(Ausschlusskriterium), und woran werde ich gemessen (Bewertungskriterium)?** Sie stehen oft
+nicht im Fliesstext der Bekanntmachung, sondern in einem beigelegten Excel-Formblatt.
+
+Der Trichter im Ertragsbericht zeigte dafür „8 · 0,0 %" neben „mit Archiv 37,9 %". Das
+liest sich als Totalausfall und ist eine Fehldeutung: UfAB/EVB-IT-Matrizen sind ein
+**Nischenformblatt**. Gemessen am 2026-08-24 über den Volltext-Index tragen 18 von 16.083
+offenen Vorgängen überhaupt eine. **Eine Stufe, deren Grundmenge eine andere ist als die
+der Stufe darüber, gehört nicht in denselben Trichter** — sonst erzeugt der Bericht genau
+den Alarm, den er verhindern soll.
+
+Von diesen 18 wurden 8 gelesen. Die Ursachen der Lücke lagen an vier Stellen und keine
+davon im Matrix-Parser selbst:
+
+| Ursache | Fälle | Lehre |
+|---|---:|---|
+| Kandidaten kamen aus `doc_lv` (Leistungsverzeichnis-Extraktion) | 2 | **Ein Vorlauf, der etwas anderes sucht, ist kein Filter.** Wer kein LV hat, wurde nie auf Kriterien geprüft. |
+| Marker fehlte in `xlsx_blaetter` des Vorlaufs | 7 | Dieselbe Ursache eine Ebene höher: die Spaltenerkennung dort kannte ihn nicht. |
+| Datei lag in einem Archiv IM Archiv (`…zip::…xlsx`) | 2 | Der Volltext-Index notiert verschachtelte Pfade; ein `KeyError` wurde stillschweigend übersprungen. |
+| Blattname aus dem Vorlauf war der falsche | mehrere | Der Marker sass auf „Erklärung", „Übersicht", „Erläuterungen". **Alle Blätter durchsehen**, eine Datei kann ihn zweimal tragen (Variante 1 / Variante 2). |
+
+Der Schnitt war, die Kandidaten direkt aus `doc_text` zu ziehen: dort steht bereits, WELCHE
+Datei den Marker enthält. Gegengeprüft, bevor umgestellt wurde: der neue Weg findet alle 8
+bisherigen und 10 weitere. **Ergebnis 8 → 12 Vorgänge, 7.199 Kriterien.**
+
+### Die Codes kommen in mehreren Schreibweisen
+
+    A.1.1.4            der Buchstabe IST die Art
+    Kriterium A.1.2    dasselbe, mit Wort davor
+    K 1.1.1            Nummer ohne Art; die steht in einer Spalte „Art" als „[ A ]"
+
+⚠ **Ohne belegte Art wird nichts geraten.** Ein falsch als Bewertungskriterium geführtes
+Ausschlusskriterium sagt einem Bieter „du kannst mitbieten", wo in Wahrheit „du fliegst
+raus" steht. Die zweite Bauform wird deshalb nur gelesen, wenn die Spalte „Art" wirklich da
+ist — und die steht manchmal erst in der Zeile UNTER der Kopfzeile, wie schon „Gewichtung".
+
+⚠ **Ein Gruppenname ist nie ein Code.** In der zweiten Bauform liegen Hauptgruppe, Gruppe
+und Code in derselben Spalte. Ein erster Riegel prüfte auf gleiche Spaltennummern und fiel
+bei der nächsten Variante sofort wieder um; geprüft werden muss der **Wert**.
+
+Sechs der 18 tragen gar keine erkennbare Code-Form und bleiben ungelesen. Das ist Absicht:
+lieber ein Vorgang weniger als eine falsche Ausschlussliste.
+
+### ⚠ Zwölf Vorgänge sind nicht zwölf Unterlagen
+
+Acht der zwölf tragen **identisch 854 Kriterien über 14 Blätter** — dieselbe Matrix,
+verteilt auf mehrere Lose desselben Verfahrens. Zwei weitere teilen sich ein Archiv. Wer
+„12 Vorgänge mit Kriterienmatrix" als „12 verschiedene Kataloge" liest, zählt fünf.
+
 ## Doktyp-Erkennung
 
 Drei Stufen, in dieser Reihenfolge:
