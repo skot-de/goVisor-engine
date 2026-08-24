@@ -14,6 +14,7 @@
 | A5 | **Leeres Feld = „Quelle gibt nichts her"** | niemand fragt nach | AT Bindefrist/Bürgschaft/Lose je 0 %, 6 Wochen lang |
 | A6 | **Nominell gefüllt, faktisch wertlos** | 79 % Abdeckung, eine einzige Ausprägung | alle 3.856 CH-Regionen hiessen „Schweiz/Suisse/Svizzera" |
 | A7 | **„Alle Schritte grün"** | Lauf meldet Erfolg, Ergebnis ist alt | Anforderungs-Signale aus einem Index vom 31. Juli |
+| A9 | **Registry-Eintrag für Code gehalten** | `uk-fts`/`fr-decp` stehen mit Namen, Format und Abdeckung da — und haben NULL Zeilen Code. `candidate` heisst recherchiert. |
 | A8 | **Feld misst etwas anderes als sein Name** | `has_documents` = „Quelle bewirbt", nicht „wir haben"; DE zeigt „unknown" bei 7.781 indizierten Vorgängen, CH „offen" bei null |
 
 ## B · Fallen beim Zusammenführen von Ländern

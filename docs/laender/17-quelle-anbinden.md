@@ -40,6 +40,34 @@ Bekanntmachungsquelle bedeutet **nicht** eine zentrale Dokumentquelle.
 Die ersten beiden Zeilen sind kein Portal, sondern die Bekanntmachung selbst. Wer sie
 mitzählt, hält ein Land für erschlossen, das es nicht ist.
 
+## Schritt 0b · Spricht die Quelle einen STANDARD?
+
+Bevor man einen Parser schreibt: liefert die Quelle ein **standardisiertes** Format? Dann
+schreibt man den Parser einmal und bekommt jedes weitere Land, das denselben Standard
+spricht, fast geschenkt — das ist der einzige Fall, in dem sich ein nationaler Parser doch
+überträgt.
+
+Bekannte Kandidaten, die in der Registry als **recherchiert** stehen:
+
+| Standard | Wer ihn spricht | Registry |
+|----------|-----------------|----------|
+| **OCDS 1.1** (Open Contracting Data Standard) | UK Find a Tender, UK Contracts Finder — und viele weitere weltweit | `uk-fts`, `uk-cf`, Status `candidate` |
+| **DECP** (Données Essentielles) | Frankreich, konsolidiert als Parquet/CSV, täglich | `fr-decp`, Status `candidate` |
+| **eForms** | EU-weit Pflicht — der TED-Parser deckt das ab | `ted-bulk`, live |
+
+⚠ **`candidate` heisst recherchiert, NICHT gebaut.** Zu OCDS und DECP existiert am
+2026-08-23 **keine einzige Zeile Code** ausserhalb von `sources.py`. Genau das ist beim
+Schreiben dieses Kapitels passiert: ein Registry-Eintrag wurde für eine Implementierung
+gehalten. Die Statusklassen aus [Kapitel 01](01-quellenlandschaft.md) sind kein
+Verwaltungskram — sie sind der Unterschied zwischen „wir haben das" und „wir wissen, dass
+es ginge".
+
+**Die Frage für ein neues Land lautet also zweistufig:**
+
+1. Spricht das Land einen Standard, für den wir **schon einen Parser haben**? → fast fertig.
+2. Spricht es einen Standard, den wir **nur recherchiert** haben? → der Parser lohnt sich
+   trotzdem doppelt, weil er beim übernächsten Land wieder trägt.
+
 ## Teil A · Ausschreibungs-Connector
 
 ### Der Vertrag

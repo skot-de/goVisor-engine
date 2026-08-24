@@ -4262,3 +4262,33 @@ def test_simap_kantonszuordnung_deckt_dim_nuts_vollstaendig():
         f"SELECT nuts_code FROM '{datei.as_posix()}' WHERE length(nuts_code) = 5").fetchall()}
     con.close()
     assert set(simap._KANTON_NUTS.values()) == vorhanden
+
+
+def test_registry_status_candidate_heisst_nicht_gebaut():
+    """⚠ Am 2026-08-23 wurde ein Registry-Eintrag fuer eine Implementierung gehalten:
+    `uk-fts` und `fr-decp` stehen mit Namen, Format und Abdeckung in `sources.py` —
+    und haben NULL Zeilen Code. `candidate` heisst recherchiert, nicht gebaut.
+
+    Dieser Test haelt die Aussage ehrlich: findet sich eines Tages Code dazu, muss
+    der Status mitwachsen, statt weiter „geplant" zu behaupten.
+    """
+    from govisor import sources
+    wurzel = pathlib.Path(__file__).resolve().parent.parent
+    quelltext = ""
+    for ordner in ("govisor", "scripts"):
+        for datei in (wurzel / ordner).rglob("*.py"):
+            if datei.name == "sources.py":
+                continue
+            try:
+                quelltext += datei.read_text(encoding="utf-8")
+            except (UnicodeDecodeError, OSError):
+                continue
+    for eintrag, wort in (("uk-fts", "ocds"), ("fr-decp", "decp")):
+        s = next(x for x in sources.REGISTRY if x.id == eintrag)
+        hat_code = wort in quelltext.lower()
+        if hat_code:
+            assert s.status in ("prepared", "live"), (
+                f"{eintrag}: es gibt Code fuer {wort}, der Status sagt aber {s.status}")
+        else:
+            assert s.status == "candidate", (
+                f"{eintrag}: kein Code fuer {wort}, Status {s.status} verspricht zu viel")

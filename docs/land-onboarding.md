@@ -80,7 +80,7 @@ fehlten, und beide hätten ein Land vom ersten Tag an unbrauchbar gemacht:
 | CPV-Vokabular | **ja** | EU-Recht, `dim_cpv_label` gilt überall |
 | Dubletten-**Logik** | **ja** | Wortmengen und Enthaltung sind sprachunabhängig |
 | Gold-Builder | **ja**, wenn country-fähig | prüfen, nicht annehmen |
-| Nationaler Parser | **nein** | eigenes Schema je Quelle |
+| Nationaler Parser | **nein**, ausser bei einem Standard | eigenes Schema je Quelle — **aber** OCDS und DECP sind Standards: ein Parser trägt dort über viele Länder ([Kapitel 17](laender/17-quelle-anbinden.md)) |
 | **Locale** (Rechtsformen) | **nein** | national |
 | **NUTS-Ebene** der Region | **nein** | DE 3 / AT 4 / CH 5 Stellen |
 | Ortsnamen-Ausschlussliste | **nein** | Behördendeutsch ist national |
