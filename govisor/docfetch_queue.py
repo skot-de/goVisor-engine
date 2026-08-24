@@ -66,7 +66,12 @@ def normalisiere(status: str | None) -> str | None:
 # Last. Wer hier etwas ergänzt, sollte begründen können, warum es sich NIE ändern kann.
 DAUERHAFT = frozenset({
     "ohne_unterlagen",      # Ex-Ante-Bekanntmachung: es gibt keine Unterlagen
-    "frameset",             # Inhalts-Frame bleibt ohne Sitzung leer
+    # ⚠ Die urspruengliche Begruendung („Inhalts-Frame bleibt ohne Sitzung leer") ist am
+    # 2026-08-24 widerlegt: 18 von 20 Stichproben liefern heute sehr wohl einen Download.
+    # Was kommt, ist aber die BEKANNTMACHUNG, und die haben wir laengst ueber TED — die
+    # Einstufung bleibt also richtig, nur ihr Grund ist ein anderer: dort sind keine
+    # Vergabeunterlagen zu holen, nicht: dort ist nichts zu holen.
+    "frameset",             # Staatsanzeiger-Frameset gibt nur die Bekanntmachung her
     "abgelaufen",           # Frist vorbei — das Portal nimmt die Unterlagen herunter
     # Aufgehobene Vergabe (subreport zeigt es in der Statusspalte an). Sie kommt unter
     # derselben Kennung nicht zurück; wird neu ausgeschrieben, ist es ein neuer Vorgang.
@@ -117,6 +122,11 @@ BLOCKIERT = {
     # abgelegt warteten sie auf einen Zugang; sie brauchen aber einen Blick in den Quelltext.
     # Eigene Klasse, damit sie als ARBEITSLISTE sichtbar sind und nicht als Schicksal.
     "kein_listenlayout":    "parser",
+    # Staatsanzeiger sagt es woertlich: „Die Vergabeunterlagen stehen nicht zum Download
+    # bereit. Bitte setzen Sie sich mit der Vergabestelle in Verbindung oder rufen Sie die
+    # Hotline an. (INFO 75630)" Das ist kein fehlender Link und kein Parser-Problem, sondern
+    # eine Absage mit Verweis auf einen menschlichen Kanal. Wir rufen keine Hotline an.
+    "nicht_bereitgestellt": "portal",
     "nur_cockpit":          "portal",  # Portal gibt anonym nur die Oberfläche her
     "nur_einzeldateien":    "portal",  # kein Sammel-ZIP; Einzelabruf noch nicht gebaut
     "zu_gross":             "groesse",  # über der Grössengrenze DIESES Laufs

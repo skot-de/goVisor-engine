@@ -142,6 +142,9 @@ Connectors gilt:
 - **`kein_listenlayout`** (Sperrtyp `parser`) für „Seite lädt, wir lesen sie nicht" — eine
   **Arbeitsliste**, kein Schicksal. Freigabe über `scripts/entsperren.py`.
 - **`gated`** nur für echte Anmeldeschranken.
+- **`nicht_bereitgestellt`** (Sperrtyp `portal`) wenn das Portal die Herausgabe verweigert
+  und an einen menschlichen Kanal verweist. Kein Konto hilft, kein zweiter Versuch, und es
+  ist trotzdem nicht „dauerhaft": die Vergabestelle kann die Unterlagen nachreichen.
 - **`nicht_veroeffentlicht`** (Menge `WARTET`) für „der Vorgang ist noch nicht so weit".
   Das wartet auf die WELT, nicht auf uns — und gehört deshalb nicht in dieselbe Liste wie
   unsere eigenen Fehler. Am Ablauf ändert es nichts (dieselbe Sperrfrist), an der
@@ -213,6 +216,14 @@ abgeschrieben statt als Reichweite geführt — genau der Verlust, vor dem der K
   zweiten Anlauf ohne jede Codeänderung Dateien. Bevor man einen Parser umbaut, den
   bestehenden Code erneut über die Fälle laufen lassen: das trennt „kaputt" von „damals
   noch nicht da" und kostet ein paar Minuten statt eines Umbaus.
+- **⚠ „Kein Link gefunden" ist eine Aussage über unseren Blick.** Der Staatsanzeiger-
+  Abrufer meldete für 11 Vorgänge „kein ZIP-Link auf der Trefferliste". Nachgesehen: 7
+  lieferten beim zweiten Anlauf einen Link, und die übrigen 4 tragen die Absage des Portals
+  im Klartext auf derselben Seite — „Die Vergabeunterlagen stehen nicht zum Download
+  bereit. Bitte setzen Sie sich mit der Vergabestelle in Verbindung … (INFO 75630)". Wir
+  suchten nur an der Stelle, an der Links stehen, und nicht dort, wo die Begründung steht.
+  **Wenn ein erwartetes Element fehlt, den Fließtext der Seite lesen, bevor man ein Urteil
+  schreibt.**
 - **Hängende Abrufer.** `SIGALRM` wird von Playwright verschluckt. Es braucht eine Wache
   ausserhalb des Prozesses, sonst steht ein Lauf still und meldet nichts.
 - **Zip-Bomben.** Grössengrenze und Entpack-Grenze sind Pflicht, nicht Kür.

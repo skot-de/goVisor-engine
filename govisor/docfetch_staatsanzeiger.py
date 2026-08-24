@@ -66,6 +66,9 @@ ROOT = Path(__file__).resolve().parent.parent
 
 _HOST = "www.staatsanzeiger-eservices.de"
 _ANONYM = "input[type=submit][value='Anonym als Zip']"
+# Die Absage des Portals, woertlich. Sie steht auf der Trefferliste selbst.
+_ABSAGE = "Vergabeunterlagen stehen nicht zum Download bereit"
+
 _ZIP = re.compile(r"https?://[^\"']*staatsanzeiger-eservices\.eu/[^\"']+\.zip", re.IGNORECASE)
 
 _WARTE_MS = 8000
@@ -180,6 +183,14 @@ def _hole(url: str, pg, ziel: Path, dry_run: bool, gefangen: list) -> dict:
 
     treffer = _ZIP.search(pg.evaluate("() => document.documentElement.outerHTML"))
     if not treffer:
+        # ⚠ Kein ZIP-Link ist noch kein Befund. Das Portal sagt in diesem Fall selbst,
+        # woran es liegt — und zwar auf derselben Seite, nur ausserhalb des Bereichs, in
+        # dem wir nach Links suchen. Gemessen am 2026-08-24 ueber die 11 so gemeldeten
+        # Faelle: 7 lieferten beim zweiten Anlauf einen Link, 4 tragen diese Absage.
+        rumpf = pg.evaluate("() => document.body.innerText")
+        if _ABSAGE in rumpf:
+            return {"status": "nicht_bereitgestellt", "bytes": 0, "n_files": 0,
+                    "note": "Portal verweist an die Vergabestelle (INFO 75630)"}
         return {"status": "leer", "bytes": 0, "n_files": 0,
                 "note": "kein ZIP-Link auf der Trefferliste"}
     zip_url = treffer.group(0)
