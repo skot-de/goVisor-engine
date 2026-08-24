@@ -504,8 +504,8 @@ GESCHONT = ("pruefstand", "bench")      # Zwecke, die aus dem geschonten Topf za
 _TAKT = int(_os.environ.get("GOVISOR_BUDGET_TAKT", "20"))
 
 _geld_sperre = _threading.Lock()
-_geld = {"start": None, "stand": None, "verbrauch": None, "n": 0, "naechste": 1,
-         "gewarnt": False, "stopp": None}
+_geld = {"start": None, "start_verbrauch": None, "stand": None, "verbrauch": None,
+         "n": 0, "naechste": 1, "gewarnt": False, "stopp": None}
 
 
 class BudgetErschoepft(RuntimeError):
@@ -640,6 +640,7 @@ def _geldwache() -> None:
     with _geld_sperre:
         if _geld["start"] is None:
             _geld["start"] = stand
+            _geld["start_verbrauch"] = _geld.get("verbrauch")
             # ⚠ Den Startwert AUSGEBEN. Am 22.08. habe ich zweimal Verbrauch dem falschen
             # Verursacher zugeschrieben, weil ich den Kontostand vor dem Start gemessen
             # hatte statt beim Start — dazwischen lief ein anderer Prozess. Wer den Wert
@@ -647,7 +648,22 @@ def _geldwache() -> None:
             print(f"  Geldwache: Start bei {stand:.2f} $ "
                   f"(Reserve {RESERVE_USD:.2f} · Lauf {LIMIT_USD:.2f} · Tag {TAG_USD:.2f})",
                   flush=True)
-        ausgegeben = _geld["start"] - stand
+        # ⚠ NICHT die Kontostandsdifferenz. Das ist im Modul die vierte Stelle derselben
+        # Klasse — Tagesbuch, Abgleich und jetzt der Lauf-Deckel. Laedt jemand mitten im
+        # Lauf auf, steigt `stand` ueber `start`, `ausgegeben` wird NEGATIV, und
+        # `LIMIT_USD - ausgegeben` meldet mehr Luft, als das Limit hergibt. Nachgerechnet
+        # am 2026-08-24: Lauf mit Limit 5,00 $, nach einer Aufladung um 100 $ meldete er
+        # 102,00 $ Luft — der Deckel war aus.
+        #
+        # Schlimmer noch: `je_aufruf` faellt dabei auf 0, also greift auch die adaptive
+        # Taktung nicht mehr und es gilt wieder der feste 20er-Takt — genau die Bedingung,
+        # die am 2026-08-22 zu 8,48 $ bei einem Limit von 5,00 $ gefuehrt hat.
+        #
+        # `total_usage` steigt nur und kennt keine Aufladung. Fehlt es, bleibt die alte
+        # Rechnung als Rueckfall: zu wenig zu messen ist besser als gar nicht.
+        _vj, _vs = _geld.get("verbrauch"), _geld.get("start_verbrauch")
+        ausgegeben = (_vj - _vs) if (_vj is not None and _vs is not None) \
+            else (_geld["start"] - stand)
         # Preis je Aufruf aus dem, was tatsaechlich passiert ist — nicht aus einer Schaetzung.
         # Genau die Schaetzung lag am 22.08. um das Vierfache daneben.
         je_aufruf = ausgegeben / n if n and ausgegeben > 0 else 0.0

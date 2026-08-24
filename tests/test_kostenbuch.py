@@ -461,3 +461,44 @@ def test_alte_generationen_werden_nach_alter_entfernt_nicht_ueberschrieben(tmp_p
     kostenbuch.notiere(anbieter="or", modell="m", kosten_usd=0.01)      # löst Aufräumen aus
     assert not alt[0].exists(), "zu alte Generation hätte entfernt werden müssen"
     assert (tmp_path / "k.jsonl").exists(), "die laufende Datei bleibt immer"
+
+
+def test_lauf_deckel_ueberlebt_eine_aufladung(monkeypatch):
+    """⚠ Die vierte Stelle derselben Klasse: eine Zahl aus dem Kontostand.
+
+    Der Lauf-Deckel rechnete `start_stand − stand_jetzt`. Lädt jemand mitten im Lauf auf,
+    wird die Differenz negativ und `LIMIT_USD − ausgegeben` meldet mehr Luft, als das
+    Limit hergibt. Nachgerechnet am 2026-08-24: Limit 5,00 $, nach einer Aufladung um
+    100 $ meldete der Lauf 102,00 $ Luft.
+
+    Schlimmer noch: `je_aufruf` fällt dabei auf 0, also greift auch die adaptive Taktung
+    nicht mehr — genau die Bedingung, die am 2026-08-22 zu 8,48 $ bei Limit 5,00 $ führte.
+    """
+    from govisor import llm
+    importlib.reload(llm)
+    monkeypatch.setattr(llm, "_tagesbuch", lambda s: 0.0)
+    monkeypatch.setattr(llm, "LIMIT_USD", 5.00)
+    monkeypatch.setattr(llm, "TAG_USD", 0.0)          # Tagesdeckel hier nicht im Weg
+    monkeypatch.setattr(llm, "SCHONUNG_USD", 0.0)
+
+    stand = {"wert": 10.00, "verbrauch": 100.0}
+
+    def fake_kontostand(frisch=False):
+        llm._geld["verbrauch"] = stand["verbrauch"]
+        return stand["wert"]
+
+    monkeypatch.setattr(llm, "kontostand", fake_kontostand)
+    monkeypatch.setattr(llm, "_geld",
+                        {"start": None, "start_verbrauch": None, "stand": None,
+                         "verbrauch": None, "n": 0, "naechste": 1, "gewarnt": False,
+                         "stopp": None})
+
+    llm._geldwache()                                   # setzt den Startpunkt
+    assert llm._geld["start_verbrauch"] == 100.0
+
+    # 6 $ verbraucht UND um 100 $ aufgeladen — das Limit von 5 $ ist trotzdem gerissen.
+    stand.update(wert=104.00, verbrauch=106.0)
+    llm._geld["naechste"] = llm._geld["n"] + 1
+    with pytest.raises(llm.BudgetErschoepft) as e:
+        llm._geldwache()
+    assert "Limit" in str(e.value) or "verbraucht" in str(e.value)
