@@ -295,6 +295,14 @@ def analyze_notice(files: list, structured: dict | None = None,
             by_type_docs[dt].append((name, text or ""))
             by_type_file.setdefault(dt, name)
 
+    # ⚠ FORMATFEHLER SIND NICHT DASSELBE WIE SCHLECHTE QUALITÄT. `docextract.extract`
+    # gibt bei unparsbarer Antwort `{"items": [], "parse_error": True}` zurück — das sah
+    # von oben exakt aus wie „das Modell hat nichts gefunden". Für den laufenden Betrieb
+    # ist das gleichgültig (es gibt ohnehin keine Einträge), für den **Prüfstand** aber
+    # fatal: ein fremdes Modell, das gültiges JSON in Prosa wickelt, wäre als „findet
+    # nichts" durchgefallen und nie wieder geprüft worden. Deshalb wandern beide Zahlen
+    # nach oben — wie viele LLM-Aufrufe es gab und wie viele davon unlesbar zurückkamen.
+    llm_aufrufe, formatfehler = 0, 0
     rejected, sent_chars, truncated = 0, 0, []
     aus_dubletten = 0
     lb_art = None
@@ -349,6 +357,10 @@ def analyze_notice(files: list, structured: dict | None = None,
                                         docextract._parse_array(roh) or [])
         checklist.extend(res.get("items", []))
         rejected += res.get("rejected", 0)
+        if not res.get("skipped"):
+            llm_aufrufe += 1
+            if res.get("parse_error"):
+                formatfehler += 1
 
     # Pflicht aus der Ablage — unabhaengig davon, was das Modell im Text gefunden hat.
     #
@@ -377,6 +389,8 @@ def analyze_notice(files: list, structured: dict | None = None,
         "parsed_files": parsed_files,
         "other_documents": other_docs,
         "rejected_items": rejected,
+        "llm_aufrufe": llm_aufrufe,
+        "formatfehler": formatfehler,
         "token_cost": round(sent_chars / CHARS_PER_TOKEN),
         "doctypes_seen": seen,
         "missing_expected": missing,

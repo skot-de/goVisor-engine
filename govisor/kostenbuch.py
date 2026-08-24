@@ -116,7 +116,7 @@ def notiere(*, anbieter: str, modell: str, endpunkt: str | None = None,
             vorgang: str | None = None, zweck: str | None = None,
             eingabe_token: int = 0, ausgabe_token: int = 0, cache_token: int = 0,
             kosten_usd: float | None = None, upstream_usd: float | None = None,
-            sekunden: float | None = None) -> None:
+            sekunden: float | None = None, leer: bool = False) -> None:
     """Eine Zeile ins Buch. Wirft nie — ein Buchungsfehler darf keinen Aufruf kosten.
 
     ``modell`` darf die Routing-Endung tragen; sie wird getrennt abgelegt (``weg``), damit
@@ -137,6 +137,9 @@ def notiere(*, anbieter: str, modell: str, endpunkt: str | None = None,
         "kosten_usd": None if _zahl(kosten_usd) is None else round(_zahl(kosten_usd), 8),
         "upstream_usd": None if _zahl(upstream_usd) is None else round(_zahl(upstream_usd), 8),
         "sekunden": None if _zahl(sekunden) is None else round(_zahl(sekunden), 3),
+        # 200er ohne verwertbaren Inhalt — bezahlt, aber ohne Ertrag. Getrennt gefuehrt,
+        # damit „was hat es gekostet" und „was hat es gebracht" nicht vermischt werden.
+        "leer": bool(leer),
     }
     try:
         with _LOCK:

@@ -68,6 +68,11 @@ ALPHA = float(os.environ.get("GOVISOR_ALPHA", "0.05"))
 # bevor der Kandidat faellt? 2 Punkte Toleranz fuer Messrauschen, mehr nicht.
 VERWERFUNG_TOLERANZ = float(os.environ.get("GOVISOR_VERWERFUNG_TOLERANZ", "0.02"))
 
+# Ab welchem Anteil unlesbarer Antworten ist es ein FORMAT- und kein Qualitaetsproblem?
+# 20 %: darunter faengt die eingebaute Wiederholung in `docextract.extract` es ab, darueber
+# spricht das Modell schlicht ein anderes Format.
+FORMAT_TOLERANZ = float(os.environ.get("GOVISOR_FORMAT_TOLERANZ", "0.20"))
+
 # Ab welcher Ersparnis lohnt ein Wechsel bei gleicher Qualitaet? Und ab welcher lohnt
 # ueberhaupt eine Pruefung?
 MIN_ERSPARNIS = float(os.environ.get("GOVISOR_MIN_ERSPARNIS", "0.20"))
@@ -81,7 +86,8 @@ GRUNDLINIE_TAGE = int(os.environ.get("GOVISOR_GRUNDLINIE_TAGE", "14"))
 # zwanzig neuen Modellen das Tagesbudget auf.
 MAX_JE_TAG = int(os.environ.get("GOVISOR_MAX_PRUEFUNGEN", "2"))
 
-STATUS = ("neu", "vorpruefung_bestanden", "bestanden", "durchgefallen", "gleichwertig")
+STATUS = ("neu", "vorpruefung_bestanden", "bestanden", "durchgefallen", "gleichwertig",
+          "formatproblem")
 
 
 # ── Statistik ────────────────────────────────────────────────────────────────────────
@@ -102,7 +108,11 @@ def kennzahlen(je_vorgang: dict) -> dict:
         return {"n": 0}
     pkt = sum(v["punkte"] for v in gut.values())
     vw = sum(v.get("verworfen") or 0 for v in gut.values())
+    aufrufe = sum(v.get("llm_aufrufe") or 0 for v in gut.values())
+    fehler = sum(v.get("formatfehler") or 0 for v in gut.values())
     return {"n": len(gut),
+            "formatquote": fehler / aufrufe if aufrufe else 0.0,
+            "aufrufe": aufrufe, "formatfehler": fehler,
             "punkte_je": pkt / len(gut),
             "verwerfung": vw / max(pkt + vw, 1),
             "usd_je": sum(v.get("kosten_usd") or 0 for v in gut.values()) / len(gut),
@@ -134,6 +144,20 @@ def entscheide(kandidat: dict, amtierend: dict, *, min_n: int = MIN_N,
     if len(paare) < min_n:
         return {**urteil, "status": "neu", "wechseln": False,
                 "grund": f"nur {len(paare)} gepaarte Vorgänge, nötig sind {min_n}"}
+
+    # 0. Formatriegel — VOR jedem Qualitätsurteil.
+    #
+    # ⚠ Ohne ihn wäre die schlimmste Verwechslung dieses Moduls möglich: ein Modell, das
+    # unsere Aufgabe beherrscht, aber sein JSON in Prosa wickelt, liefert 0 Punkte UND
+    # 0 verworfene Aussagen. Das sieht nach „findet nichts bei perfekter Genauigkeit" aus,
+    # fällt über Regel 2 durch und würde als `durchgefallen` NIE WIEDER geprüft. Ein
+    # Formatproblem ist aber behebbar (erzwungenes Schema), ein Qualitätsmangel nicht.
+    if kk.get("formatquote", 0) > FORMAT_TOLERANZ:
+        return {**urteil, "status": "formatproblem", "wechseln": False,
+                "grund": (f"{kk['formatfehler']} von {kk['aufrufe']} Antworten waren nicht "
+                          f"lesbar ({kk['formatquote']:.0%}) — kein Qualitätsurteil möglich. "
+                          f"Das Modell spricht unser JSON-Format nicht; erzwungenes Schema "
+                          f"(response_format) wäre der nächste Schritt")}
 
     # 1. Verwerfungsriegel — steht VOR allem anderen.
     d_vw = kk["verwerfung"] - ka["verwerfung"]
@@ -173,6 +197,9 @@ def vorpruefung_bestanden(kandidat: dict, amtierend: dict) -> tuple[bool, str]:
     kk, ka = kennzahlen(kandidat), kennzahlen(amtierend)
     if not kk.get("n"):
         return False, "keine auswertbaren Vorgänge"
+    if kk.get("formatquote", 0) > FORMAT_TOLERANZ:
+        return False, (f"{kk['formatfehler']} von {kk['aufrufe']} Antworten unlesbar "
+                       f"({kk['formatquote']:.0%}) — Formatproblem, kein Qualitätsurteil")
     if kk["punkte_je"] < 0.5 * ka.get("punkte_je", 0):
         return False, (f"findet nur {kk['punkte_je']:.1f} statt {ka['punkte_je']:.1f} "
                        f"Punkte je Vorgang (unter der Hälfte)")
@@ -214,7 +241,13 @@ def einreihen(stand: dict, modell: str, *, preis: float, grund: str,
     if vor:
         alt_preis = vor.get("preis") or 0
         billiger = alt_preis > 0 and (alt_preis - preis) / alt_preis >= MIN_ERSPARNIS
-        if vor.get("status") in ("durchgefallen", "gleichwertig") and not billiger:
+        # ⚠ `formatproblem` wird EBENFALLS nicht automatisch wiederholt — es wuerde jede
+        # Nacht identisch scheitern und dabei Geld kosten. Es ist aber ausdruecklich KEIN
+        # Urteil ueber das Modell, sondern eines ueber unsere Schnittstelle: erst wenn wir
+        # das Schema erzwingen (`response_format`), ist eine erneute Pruefung sinnvoll.
+        # Wiedervorlage von Hand: den Eintrag aus `data/pruefstand.json` loeschen.
+        if vor.get("status") in ("durchgefallen", "gleichwertig", "formatproblem") \
+                and not billiger:
             return False
         if vor.get("status") == "bestanden":
             return False
@@ -336,6 +369,10 @@ def messe_reihe(*, analyse, llm, kostenbuch, modell: str, vorgaenge: dict, zweck
                 "punkte": sum(1 for e in (res.get("checklist") or [])
                               if not e.get("parser") and e.get("marking") == "Zitat"),
                 "verworfen": res.get("rejected_items") or 0,
+                # Getrennt vom Ergebnis: unlesbare Antworten sind ein Formatproblem,
+                # kein Qualitaetsurteil (s. `formatquote`).
+                "llm_aufrufe": res.get("llm_aufrufe") or 0,
+                "formatfehler": res.get("formatfehler") or 0,
                 "kosten_usd": kosten, "ohne_preis": ohne_preis,
                 "sekunden": round(time.time() - t0, 1)}
             if nach_vorgang:

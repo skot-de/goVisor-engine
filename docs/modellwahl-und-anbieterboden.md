@@ -392,6 +392,47 @@ Ein Eintrag dort von Hand zu löschen setzt einen Kandidaten zurück.
   würde ungebremst Geld ausgeben. Den Anbieterboden hat es bekommen, den Umbau auf
   `llm.chat()` nicht.
 
+## Zwei Befunde aus dem ersten Echtbetrieb (2026-08-24)
+
+### Formatfehler sind kein Qualitätsurteil
+
+`docextract.extract` erzwingt **kein** Schema — es bittet im Prompt um JSON, streift
+Code-Zäune ab und wiederholt einmal. Gemessen an vier Antwortformen:
+
+| Antwort des Modells | Ergebnis |
+|---|---|
+| sauberes JSON | geparst |
+| in ```` ```json ```` gewickelt | geparst |
+| **JSON mit Prosa drumherum** | **`parse_error`** |
+| gar kein JSON | `parse_error` |
+
+Ein `parse_error` liefert nach oben **0 Punkte und 0 verworfene Aussagen** — das sieht aus
+wie „findet nichts bei perfekter Genauigkeit". Ohne Gegenmaßnahme wäre ein Modell, das
+unsere Aufgabe beherrscht und nur höflich drumherum redet, als `durchgefallen` abgestempelt
+und **nie wieder geprüft** worden. Besonders heikel, weil wir Kandidaten zwar nach
+`structured_outputs` filtern, die Fähigkeit aber gar nicht nutzen.
+
+Deshalb zählt `analyze_notice` jetzt `llm_aufrufe` und `formatfehler`, und im Prüfstand
+steht ein **Formatriegel vor allen Qualitätsregeln**: über 20 % unlesbare Antworten ergeben
+den Status `formatproblem` statt eines Urteils. Wiederholt wird nicht automatisch (es
+scheiterte identisch und kostete Geld); die Abhilfe steht im Befund: erzwungenes Schema.
+
+### Das Kostenbuch kann nicht vollständig sein — also weist es seine Lücke aus
+
+Am 2026-08-24 fehlten 0,0208 $ zwischen Buch und Abrechnung. Ursache zum Teil gefunden:
+**leere 200er wurden nicht gebucht**, obwohl OpenRouter sie abrechnet. Das ist behoben
+(`leer: true` im Buch). Der Rest ist prinzipiell nicht buchbar — bei einem Client-Timeout
+wurde die Anfrage oben verarbeitet und abgerechnet, ohne dass wir je eine Antwort sahen.
+
+```bash
+scripts/kostenbericht.py --abgleich      # Buch gegen OpenRouters total_usage
+scripts/kostenbericht.py --marke-neu     # Messpunkt neu setzen
+```
+
+⚠ Der Abgleich rechnet mit **`total_usage`**, nicht mit dem Kontostand. Die erste Fassung
+nahm die Kontostandsdifferenz — die wird durch jede **Aufladung** sinnlos, und genau die
+stand unmittelbar bevor. `total_usage` steigt nur und kennt keine Aufladung.
+
 ## Fallen, die schon zugeschlagen haben
 
 1. **`sort: "price"` statt `:floor`** — sortiert nur, erreicht Flex nie. Zahlt weiter 0,300.
@@ -410,3 +451,9 @@ Ein Eintrag dort von Hand zu löschen setzt einen Kandidaten zurück.
    als billiger. Boden gegen Katalog, und am Mischpreis.
 9. **Zwei Kopien der bezahlten Schleife** — Handbetrieb und Automatik liefen fast
    auseinander. `pruefstand.messe_reihe()` ist die einzige; beide rufen dorthin.
+10. **15:1 statt 1,33:1 beim Token-Verhältnis** — geschätzt statt gemessen, daneben um den
+    Faktor 11. Unsere Kosten liegen zu **86 % bei der Ausgabe**, weil die Extraktion die
+    Belegzitate mit zurückgibt. Damit ist jeder Eingabe-Hebel (Prompt-Caching!) auf 14 %
+    gedeckelt — die Rangfolge der Kandidaten hing daran.
+11. **Unlesbare Antwort als Qualitätsurteil verbucht** — siehe oben, Formatriegel.
+12. **Abgleich über den Kontostand** — bricht bei der ersten Aufladung. `total_usage`.

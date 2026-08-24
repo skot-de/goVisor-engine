@@ -267,7 +267,8 @@ def kontext(*, zweck: str | None = None, vorgang: str | None = None):
         _KONTEXT.zweck, _KONTEXT.vorgang = vorher
 
 
-def _buchen(anbieter: str, modell: str, daten: dict, sekunden: float) -> None:
+def _buchen(anbieter: str, modell: str, daten: dict, sekunden: float,
+            leer: bool = False) -> None:
     """Preis, Weg und Dauer einer Antwort ins Kostenbuch.
 
     Die Kosten stehen seit der Umstellung der OpenRouter-Nutzungsabrechnung **immer** in der
@@ -295,7 +296,7 @@ def _buchen(anbieter: str, modell: str, daten: dict, sekunden: float) -> None:
         cache_token=(pd or {}).get("cached_tokens") if isinstance(pd, dict) else None,
         kosten_usd=u.get("cost"),
         upstream_usd=(det or {}).get("upstream_inference_cost") if isinstance(det, dict) else None,
-        sekunden=sekunden)
+        sekunden=sekunden, leer=leer)
 
 
 def letzter_verbrauch() -> dict:
@@ -599,6 +600,11 @@ def chat(messages: list[dict], model: str | None = None, temperature: float = 0,
                             _LETZTER.sekunden = dauer
                             _buchen(anb["name"], modell, daten, dauer)
                             return inhalt
+                        # ⚠ AUCH LEERE ANTWORTEN KOSTEN GELD. Ein 200 ohne verwertbaren
+                        # Inhalt wird von OpenRouter trotzdem abgerechnet — die Tokens sind
+                        # erzeugt worden. Die erste Fassung buchte hier nicht und das Buch
+                        # meldete am 2026-08-23 rund 20 % weniger, als das Konto verlor.
+                        _buchen(anb["name"], modell, daten, time.time() - t0, leer=True)
                         last_err = f"leere Antwort ({anb['name']})"
                         continue
                     if _is_credit_error(r.status_code, r.text):

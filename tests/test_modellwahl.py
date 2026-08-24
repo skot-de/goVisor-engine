@@ -282,3 +282,55 @@ def test_kosten_seit_ignoriert_fremden_zweck(tmp_path, monkeypatch):
                        kosten_usd=5.00)
     summe, _ = ps._kosten_seit(kostenbuch, marke, "N1", "a/b:floor", "test")
     assert summe == pytest.approx(0.01)
+
+
+# ── Formatriegel: das Modell kann gut sein und trotzdem unlesbar antworten ───────────
+
+def _reihe_fmt(punkte, verworfen, preis, aufrufe=6, fehler=0, n=12):
+    return {f"N{i}": {"punkte": punkte, "verworfen": verworfen, "kosten_usd": preis,
+                      "sekunden": 5.0, "llm_aufrufe": aufrufe, "formatfehler": fehler}
+            for i in range(n)}
+
+
+AMT_FMT = _reihe_fmt(50, 6, 0.030)
+
+
+def test_unlesbare_antworten_sind_KEIN_qualitaetsurteil():
+    """⚠ Die schlimmste Verwechslung dieses Moduls, wenn sie fehlte.
+
+    `docextract.extract` gibt bei unparsbarer Antwort stillschweigend
+    `{"items": [], "parse_error": True}` zurück. Von oben sieht das aus wie
+    „0 Punkte bei 0 verworfenen Aussagen" — also nach perfekter Genauigkeit ohne Ertrag.
+    Ohne den Formatriegel fiele ein Modell, das unsere Aufgabe beherrscht und nur sein
+    JSON in Prosa wickelt, über Regel 2 durch und würde NIE WIEDER geprüft.
+    """
+    murks = _reihe_fmt(0, 0, 0.002, aufrufe=6, fehler=6)
+    u = ps.entscheide(murks, AMT_FMT)
+    assert u["status"] == "formatproblem", "nicht 'durchgefallen' — das wäre ein Urteil"
+    assert not u["wechseln"] and "nicht lesbar" in u["grund"]
+    assert "response_format" in u["grund"], "die Abhilfe gehört in den Befund"
+
+
+def test_vereinzelte_formatfehler_bleiben_ein_qualitaetsurteil():
+    """Unter der Toleranz fängt die eingebaute Wiederholung in docextract es ab."""
+    u = ps.entscheide(_reihe_fmt(50, 6, 0.006, aufrufe=20, fehler=1), AMT_FMT)   # 5 %
+    assert u["status"] == "bestanden" and u["wechseln"]
+
+
+def test_formatproblem_faellt_schon_in_der_vorpruefung_auf():
+    ok, warum = ps.vorpruefung_bestanden(
+        _reihe_fmt(0, 0, 0.002, aufrufe=6, fehler=6, n=3), _reihe_fmt(50, 6, 0.03, n=3))
+    assert not ok and "Formatproblem" in warum
+
+
+def test_formatproblem_wird_nicht_jede_nacht_wiederholt():
+    """Es würde identisch scheitern und dabei Geld kosten. Wiedervorlage ist Handarbeit."""
+    stand = {"kandidaten": {"x/y": {"status": "formatproblem", "preis": 0.01}},
+             "grundlinie": {}}
+    assert not ps.einreihen(stand, "x/y", preis=0.01, grund="nochmal")
+    assert ps.naechste(stand, 5) == []
+
+
+def test_formatquote_ohne_aufrufe_ist_null_und_wirft_nicht():
+    assert ps.kennzahlen(_reihe_fmt(5, 1, 0.01, aufrufe=0))["formatquote"] == 0.0
+    assert ps.kennzahlen({"N0": {"fehler": "Timeout"}}) == {"n": 0}

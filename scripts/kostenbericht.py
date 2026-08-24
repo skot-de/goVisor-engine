@@ -27,7 +27,9 @@ Aufruf::
 from __future__ import annotations
 
 import argparse
+import os
 import sys
+from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -94,14 +96,115 @@ def _boden(zeilen) -> int:
     return 0
 
 
+MARKE = ROOT / "data" / ".llm_abgleich.json"
+
+
+def _gesamtverbrauch() -> float | None:
+    """OpenRouters kumulierter Verbrauch (`total_usage`). Steigt nur, nie zurück."""
+    import json as _json
+    import subprocess
+    schluessel = os.environ.get("OPENROUTER_API_KEY")
+    if not schluessel:
+        pfad = ROOT / ".secrets" / "openrouter.key"
+        if not pfad.exists():
+            return None
+        schluessel = pfad.read_text(encoding="utf-8").strip()
+    try:
+        roh = subprocess.run(
+            ["curl", "-s", "--max-time", "20", "-H", f"Authorization: Bearer {schluessel}",
+             "https://openrouter.ai/api/v1/credits"],
+            capture_output=True, text=True, timeout=30).stdout
+        return float(_json.loads(roh)["data"]["total_usage"])
+    except Exception:                                    # noqa: BLE001
+        return None
+
+
+def abgleich(marke_neu: bool = False) -> int:
+    """Buch gegen OpenRouters eigene Abrechnung. Die Lücke ist eine Messgröße, kein Fehler.
+
+    **Warum `total_usage` und nicht der Kontostand.** Die erste Fassung verglich den
+    Kontostand vom Tagesbeginn mit dem jetzigen. Das funktioniert genau so lange, bis
+    jemand **auflädt** — dann steigt der Stand, die Differenz wird negativ und der Abgleich
+    meldet Unsinn. `total_usage` ist der kumulierte Verbrauch: er steigt nur, und eine
+    Aufladung rührt ihn nicht an.
+
+    **Warum das Buch nie vollständig sein kann.** Gebucht wird, was in einer Antwort steht.
+    Zwei Wege bleiben daran vorbei:
+
+    * **Client-Timeout** — oben verarbeitet und abgerechnet, wir haben die Antwort nie
+      gesehen. Prinzipiell nicht buchbar.
+    * **Alles, was `govisor.llm.chat()` umgeht** — `scripts/succession_llm.py` postet
+      direkt mit `requests`, ohne Geldwache und ohne Buch.
+
+    Ein Buch, das seine eigene Lücke ausweist, ist ehrlicher als eines, das Vollständigkeit
+    vortäuscht. Und die Lücke ist selbst ein Signal: wächst sie, geht an einer Stelle Geld
+    weg, die wir nicht sehen.
+    """
+    import json as _json
+    jetzt = _gesamtverbrauch()
+    if jetzt is None:
+        print("  Gesamtverbrauch nicht abrufbar (Schlüssel? Netz?).", file=sys.stderr)
+        return 1
+    buch_jetzt = sum(float(z["kosten_usd"]) for z in kostenbuch.lies()
+                     if z.get("kosten_usd") is not None)
+
+    if marke_neu or not MARKE.exists():
+        MARKE.parent.mkdir(parents=True, exist_ok=True)
+        MARKE.write_text(_json.dumps(
+            {"gesetzt": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+             "total_usage": jetzt, "buch": buch_jetzt}, indent=1), encoding="utf-8")
+        print(f"\n  Marke gesetzt: OpenRouter-Gesamtverbrauch {jetzt:.5f} $, "
+              f"Buch {buch_jetzt:.5f} $.")
+        print(f"  Ab jetzt wird die Differenz beider Zuwächse gemessen.\n")
+        return 0
+
+    m = _json.loads(MARKE.read_text(encoding="utf-8"))
+    d_konto = jetzt - float(m["total_usage"])
+    d_buch = buch_jetzt - float(m["buch"])
+    luecke = d_konto - d_buch
+    anteil = luecke / d_konto if d_konto > 0 else 0.0
+
+    print(f"\n  Abgleich seit {m['gesetzt']}\n")
+    print(f"    OpenRouter abgerechnet {d_konto:>10.5f} $")
+    print(f"    Kostenbuch gebucht     {d_buch:>10.5f} $")
+    print(f"    → ungebucht            {luecke:>10.5f} $   ({anteil:.0%})")
+
+    zeilen = list(kostenbuch.lies())
+    leer = sum(1 for z in zeilen if z.get("leer"))
+    ohne = sum(1 for z in zeilen if z.get("kosten_usd") is None)
+    if leer:
+        print(f"\n    {leer} leere Antwort(en) im Buch — bezahlt, ohne Ertrag")
+    if ohne:
+        print(f"    {ohne} Zeile(n) ohne mitgelieferten Preis")
+
+    if d_konto <= 0:
+        print(f"\n  Seit der Marke wurde nichts abgerechnet.")
+    elif anteil > 0.10:
+        print(f"\n  ⚠ Mehr als 10 % ungebucht. Verdächtig, in dieser Reihenfolge:")
+        print(f"    · Client-Timeouts (oben abgerechnet, Antwort nie gesehen)")
+        print(f"    · etwas umgeht govisor.llm.chat() — z. B. scripts/succession_llm.py")
+        print(f"    · ein zweiter Prozess auf demselben Schlüssel")
+    else:
+        print(f"\n  ✓ Buch und Abrechnung stimmen im Rahmen überein.")
+    print()
+    return 0
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--nach", default="modell,weg,endpunkt",
                     help=f"Gruppierung, komma-getrennt aus: {', '.join(FELDER)}")
     ap.add_argument("--seit", help="nur Zeilen ab diesem Zeitstempel (z. B. 2026-08-23)")
     ap.add_argument("--boden", action="store_true", help="Boden gegen ohne Boden")
+    ap.add_argument("--abgleich", action="store_true",
+                    help="Buch gegen OpenRouters Abrechnung — wie viel wurde NICHT gebucht?")
+    ap.add_argument("--marke-neu", action="store_true",
+                    help="Abgleichsmarke auf den heutigen Stand setzen")
     ap.add_argument("--mit-alt", action="store_true", help="umgehängte Generation mitlesen")
     a = ap.parse_args()
+
+    if a.abgleich or a.marke_neu:
+        return abgleich(marke_neu=a.marke_neu)
 
     if not kostenbuch.PFAD.exists():
         print(f"  Kein Kostenbuch unter {kostenbuch.PFAD}.\n"

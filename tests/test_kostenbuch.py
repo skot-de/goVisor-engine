@@ -262,3 +262,39 @@ def test_bericht_zeigt_usd_je_punkt(capsys):
     b.bericht({"vorgaenge": [], "ergebnis": {b.AMTIEREND: {
         "N1": {"punkte": 50, "verworfen": 0, "kosten_usd": 0.05, "sekunden": 5.0}}}})
     assert "0.00100" in capsys.readouterr().out       # 0,05 $ / 50 Punkte
+
+
+def test_leere_antwort_wird_gebucht_denn_sie_kostet_geld(tmp_path, monkeypatch):
+    """⚠ Ein 200 ohne verwertbaren Inhalt wird von OpenRouter trotzdem abgerechnet.
+
+    Die erste Fassung buchte hier nicht und ging zum nächsten Key weiter. Ergebnis: das
+    Buch meldete weniger, als das Konto verlor — und eine Lücke im Buch sieht aus wie
+    Sparsamkeit.
+    """
+    from govisor import llm
+    importlib.reload(llm)
+    monkeypatch.setattr(kostenbuch, "PFAD", tmp_path / "k.jsonl")
+    monkeypatch.setattr(llm, "_geldwache", lambda: None)
+    monkeypatch.setattr(llm, "_anbieter", lambda: [
+        {"name": "openrouter", "url": "http://x", "keys": ["k1"], "model": "a/b", "extra": {}}])
+
+    class Leer:
+        status_code = 200
+        text = ""
+
+        @staticmethod
+        def json():
+            return {"provider": "Google AI Studio",
+                    "choices": [{"message": {"content": "   "}}],
+                    "usage": {"prompt_tokens": 900, "completion_tokens": 0, "cost": 0.00013}}
+
+    monkeypatch.setattr(llm.requests, "post",
+                        lambda *a, **k: Leer())
+    with pytest.raises(llm.LLMFehler if hasattr(llm, "LLMFehler") else RuntimeError):
+        llm.chat([{"role": "user", "content": "hi"}])
+
+    zeilen = [json.loads(z) for z in
+              (tmp_path / "k.jsonl").read_text(encoding="utf-8").splitlines()]
+    assert zeilen, "die leere Antwort muss im Buch stehen"
+    assert zeilen[0]["leer"] is True
+    assert zeilen[0]["kosten_usd"] == 0.00013
