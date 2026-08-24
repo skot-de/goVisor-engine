@@ -483,6 +483,23 @@ RESERVE_USD = float(_os.environ.get("GOVISOR_RESERVE_USD", "1.00"))
 # (halber Preis) und der Dublettenwall (−22 %) die Rechnung.
 TAG_USD = float(_os.environ.get("GOVISOR_TAG_USD", "6.00"))
 LIMIT_USD = float(_os.environ.get("GOVISOR_LIMIT_USD", "5.00"))
+
+# ── SCHONUNG: EIN TOPF, DEN DIE PRODUKTION NICHT ANRUEHRT ────────────────────────────
+#
+# Der Testtopf (`GOVISOR_TEST_USD`) begrenzt bisher nur den Pruefstand — er SCHUETZT ihn
+# nicht. Beide teilen sich Reserve und Tagesdeckel, und der Analyse-Arbeiter laeuft alle
+# 30 Sekunden, der Pruefstand einmal nachts. Wer zuerst da ist, nimmt alles.
+#
+# Genau das ist am 2026-08-23 passiert, nur andersherum: ein Versuch frass das Guthaben des
+# Arbeiters auf, danach stand die Produktion, waehrend der Versuch weiterlief. Die Lehre
+# war „getrennte Toepfe" — gebaut wurde aber nur eine Obergrenze fuer den einen, keine
+# Untergrenze fuer den anderen.
+#
+# Die Schonung dreht es um: fuer ALLE Zwecke ausser dem Pruefstand liegen Reserve und
+# Tagesdeckel um diesen Betrag straffer. Die Produktion haelt also frueher an und laesst
+# dem Test sein Geld stehen — ohne dass irgendwo eine Reihenfolge verabredet werden muss.
+SCHONUNG_USD = float(_os.environ.get("GOVISOR_SCHONUNG_USD", "0.50"))
+GESCHONT = ("pruefstand", "bench")      # Zwecke, die aus dem geschonten Topf zahlen duerfen
 _TAKT = int(_os.environ.get("GOVISOR_BUDGET_TAKT", "20"))
 
 _geld_sperre = _threading.Lock()
@@ -610,9 +627,11 @@ def _geldwache() -> None:
         # Preis je Aufruf aus dem, was tatsaechlich passiert ist — nicht aus einer Schaetzung.
         # Genau die Schaetzung lag am 22.08. um das Vierfache daneben.
         je_aufruf = ausgegeben / n if n and ausgegeben > 0 else 0.0
+        # Fuer alles ausser dem Pruefstand liegen die Grenzen um die Schonung straffer.
+        schonung = 0.0 if getattr(_KONTEXT, "zweck", None) in GESCHONT else SCHONUNG_USD
         luft = min(LIMIT_USD - ausgegeben if LIMIT_USD else float("inf"),
-                   stand - RESERVE_USD,
-                   TAG_USD - _tagesbuch(stand) if TAG_USD else float("inf"))
+                   stand - RESERVE_USD - schonung,
+                   TAG_USD - schonung - _tagesbuch(stand) if TAG_USD else float("inf"))
         if je_aufruf > 0:
             # Halbe Luft als Sicherheitsabstand: lieber einmal zu oft fragen als einmal
             # zu spaet. Ein Kontostand-Abruf kostet nichts ausser einer Sekunde.
@@ -623,11 +642,15 @@ def _geldwache() -> None:
 
         heute = _tagesbuch(stand)
         grund = None
-        if TAG_USD and heute > TAG_USD:
-            grund = (f"heute schon {heute:.2f} $ ausgegeben (Tagesdeckel {TAG_USD:.2f} $) — "
-                     f"abgebrochen. Anheben: GOVISOR_TAG_USD")
-        elif stand < RESERVE_USD:
-            grund = (f"Guthaben {stand:.2f} $ unter der Reserve von {RESERVE_USD:.2f} $ — "
+        if TAG_USD and heute > TAG_USD - schonung:
+            grund = (f"heute schon {heute:.2f} $ ausgegeben (Tagesdeckel {TAG_USD:.2f} $"
+                     + (f" minus {schonung:.2f} $ Schonung für den Prüfstand" if schonung
+                        else "") + ") — abgebrochen. Anheben: GOVISOR_TAG_USD")
+        elif stand < RESERVE_USD + schonung:
+            grund = (f"Guthaben {stand:.2f} $ unter der Reserve von "
+                     f"{RESERVE_USD + schonung:.2f} $"
+                     + (f" (davon {schonung:.2f} $ Schonung für den Prüfstand)"
+                        if schonung else "") + " — "
                      f"abgebrochen, damit der Tagesbetrieb weiterlaufen kann. "
                      f"Aufladen: openrouter.ai/credits")
         if not grund and LIMIT_USD and ausgegeben > LIMIT_USD:

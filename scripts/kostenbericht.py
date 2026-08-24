@@ -179,6 +179,15 @@ def abgleich(marke_neu: bool = False) -> int:
 
     if d_konto <= 0:
         print(f"\n  Seit der Marke wurde nichts abgerechnet.")
+    elif anteil < -0.05:
+        # ⚠ Das Buch meldet MEHR als die Abrechnung. Das ist fast immer der Nachlauf:
+        # `total_usage` wird verzoegert fortgeschrieben, waehrend unser Buch die Kosten
+        # nimmt, die in der Antwort selbst standen. Die erste Fassung pruefte nur nach
+        # oben und meldete bei -25 % ein zufriedenes „stimmt ueberein".
+        print(f"\n  ℹ Das Buch liegt {-luecke:.4f} $ ÜBER der Abrechnung. Üblicherweise "
+              f"Nachlauf:\n    `total_usage` wird verzögert fortgeschrieben, unser Buch "
+              f"nimmt den Preis aus der Antwort.\n    In ein paar Minuten erneut prüfen; "
+              f"bleibt es bestehen, wird doppelt gebucht.")
     elif anteil > 0.10:
         print(f"\n  ⚠ Mehr als 10 % ungebucht. Verdächtig, in dieser Reihenfolge:")
         print(f"    · Client-Timeouts (oben abgerechnet, Antwort nie gesehen)")

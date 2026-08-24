@@ -312,3 +312,53 @@ def test_mit_boden_haengt_keine_zweite_variante_an(roh, erwartet, monkeypatch):
     from govisor import llm
     monkeypatch.setattr(llm, "OR_BODEN", "an")
     assert llm.mit_boden(roh) == erwartet
+
+
+# ── Schonung: die Produktion hält früher an als der Prüfstand ────────────────────────
+
+@pytest.mark.parametrize("zweck, stand, soll_werfen", [
+    ("analyse",    1.20, True),    # unter Reserve+Schonung → Produktion hält an
+    ("pruefstand", 1.20, False),   # derselbe Stand, geschonter Zweck → darf weiter
+    ("analyse",    2.00, False),   # genug für beide
+    ("pruefstand", 0.80, True),    # unter der blanken Reserve → auch der Test hält an
+])
+def test_schonung_haelt_die_produktion_frueher_an(zweck, stand, soll_werfen, monkeypatch):
+    """⚠ Der Testtopf war begrenzt, aber nicht geschützt.
+
+    Beide teilten sich Reserve und Tagesdeckel; der Analyse-Arbeiter läuft alle 30
+    Sekunden, der Prüfstand einmal nachts. Wer zuerst da ist, nahm alles. Die Schonung
+    dreht es um: für alles außer dem Prüfstand liegen die Grenzen straffer.
+    """
+    from govisor import llm
+    importlib.reload(llm)
+    monkeypatch.setattr(llm, "kontostand", lambda **k: stand)
+    monkeypatch.setattr(llm, "_tagesbuch", lambda s: 0.0)
+    monkeypatch.setattr(llm, "_geld",
+                        {"start": None, "stand": None, "n": 0, "naechste": 1,
+                         "gewarnt": False, "stopp": None})
+    with llm.kontext(zweck=zweck):
+        if soll_werfen:
+            with pytest.raises(llm.BudgetErschoepft) as e:
+                llm._geldwache()
+            if zweck == "analyse":
+                assert "Schonung" in str(e.value), "der Grund nennt die Schonung"
+        else:
+            llm._geldwache()
+
+
+def test_schonung_gilt_auch_am_tagesdeckel(monkeypatch):
+    from govisor import llm
+    importlib.reload(llm)
+    monkeypatch.setattr(llm, "kontostand", lambda **k: 50.0)
+    monkeypatch.setattr(llm, "_tagesbuch", lambda s: llm.TAG_USD - 0.20)  # fast am Deckel
+    monkeypatch.setattr(llm, "_geld",
+                        {"start": None, "stand": None, "n": 0, "naechste": 1,
+                         "gewarnt": False, "stopp": None})
+    with llm.kontext(zweck="analyse"):
+        with pytest.raises(llm.BudgetErschoepft):
+            llm._geldwache()
+    monkeypatch.setattr(llm, "_geld",
+                        {"start": None, "stand": None, "n": 0, "naechste": 1,
+                         "gewarnt": False, "stopp": None})
+    with llm.kontext(zweck="pruefstand"):
+        llm._geldwache()          # der geschonte Zweck darf die letzten 0,20 $ nutzen
