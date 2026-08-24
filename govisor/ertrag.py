@@ -96,6 +96,7 @@ def sammle(country: str = "DE", data_dir: Path | None = None) -> dict:
             st = _q.normalisiere(st)
             k = ("erledigt" if st in _q.KEIN_FEHLSCHLAG else
                  "dauerhaft" if st in _q.DAUERHAFT else
+                 "wartet" if st in getattr(_q, "WARTET", ()) else
                  f"blockiert:{_q.BLOCKIERT[st]}" if st in _q.BLOCKIERT else "offen")
             klassen[k] = klassen.get(k, 0) + n
         # ⚠ „offen" ist die Sammelklasse fuer alles, was in KEINE der drei bekannten
@@ -112,7 +113,8 @@ def sammle(country: str = "DE", data_dir: Path | None = None) -> dict:
             # ⚠ NUR die ungeklaerten Zeilen zaehlen. Die erste Fassung zaehlte die Notizen
             # ALLER Zeilen und meldete „1494×" bei 364 Faellen — eine Zahl, die groesser
             # ist als ihre Grundmenge, ist keine Auskunft, sondern ein Warnsignal.
-            bekannt = (set(_q.KEIN_FEHLSCHLAG) | set(_q.DAUERHAFT) | set(_q.BLOCKIERT))
+            bekannt = (set(_q.KEIN_FEHLSCHLAG) | set(_q.DAUERHAFT) | set(_q.BLOCKIERT)
+                       | set(getattr(_q, "WARTET", ())))
             liste = ", ".join(f"'{x}'" for x in sorted(bekannt)) or "''"
             try:
                 notizen = con.execute(f"""
@@ -323,6 +325,12 @@ def _drucke(b: dict) -> None:
     #
     # Ein blockierter Vorgang wartet auf die Welt; ein ungeklaerter wartet auf UNS. Die
     # zweite Sorte gehoert deshalb ganz nach oben, nicht in eine Restkategorie.
+    wartend = {q: kl["wartet"] for q, kl in (b.get("abruf") or {}).items() if kl.get("wartet")}
+    if wartend:
+        print("\n  WARTET AUF DIE WELT — nichts zu tun, nur wiederkommen")
+        for quelle, n in sorted(wartend.items(), key=lambda x: -x[1]):
+            print(f"    {quelle:<26}{n:>8,}")
+
     ungeklaert = {q: kl for q, kl in (b.get("abruf") or {}).items() if kl.get("offen")}
     if ungeklaert:
         print("\n  UNGEKLAERT — Fehlversuche ohne Klasse (warten auf UNS, nicht auf die Welt)")

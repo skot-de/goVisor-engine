@@ -21,9 +21,25 @@ HEUTE = dt.date(2026, 8, 14)
 def test_dauerhaftes_wird_nie_wieder_versucht():
     """Eine Ex-Ante-Bekanntmachung kündigt eine beabsichtigte Direktvergabe an. Es GIBT
     keine Unterlagen — nicht heute und nicht in drei Wochen."""
-    for status in ("ohne_unterlagen", "kein_downloadbereich", "frameset"):
+    for status in ("ohne_unterlagen", "weg", "frameset"):
         vorher = {"status": status, "wann": dt.date(2020, 1, 1)}
         assert q.ueberspringen(vorher, HEUTE) == status, status
+
+
+def test_kein_downloadbereich_ist_eine_zugangsfrage_kein_urteil():
+    """⚠ Stand bis 2026-08-24 unter „dauerhaft".
+
+    Das Dashboard zeigt den Vorgang und bietet „jetzt anmelden" — daraus „nie wieder"
+    abzuleiten hiesse, 171 Vorgaenge an dem Tag zu verlieren, an dem ein Konto existiert.
+    Genau davor warnt der Kopf dieser Datei.
+    """
+    assert "kein_downloadbereich" not in q.DAUERHAFT
+    assert q.BLOCKIERT.get("kein_downloadbereich") == "konto"
+    vorher = {"status": "kein_downloadbereich", "wann": dt.date(2020, 1, 1)}
+    # Ohne Zugang: uebersprungen, aber als BLOCKIERT benannt statt als erledigt.
+    assert "blockiert" in (q.ueberspringen(vorher, HEUTE) or "")
+    # Mit Zugang: sofort wieder dran, ohne Sperrfrist.
+    assert q.ueberspringen(vorher, HEUTE, frei={"konto"}) is None
 
 
 def test_voruebergehendes_bekommt_eine_sperrfrist_keinen_ausschluss():

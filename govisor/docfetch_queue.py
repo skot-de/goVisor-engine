@@ -66,7 +66,6 @@ def normalisiere(status: str | None) -> str | None:
 # Last. Wer hier etwas ergänzt, sollte begründen können, warum es sich NIE ändern kann.
 DAUERHAFT = frozenset({
     "ohne_unterlagen",      # Ex-Ante-Bekanntmachung: es gibt keine Unterlagen
-    "kein_downloadbereich",  # Portal leitet anonyme Abrufe aufs Dashboard um
     "frameset",             # Inhalts-Frame bleibt ohne Sitzung leer
     "abgelaufen",           # Frist vorbei — das Portal nimmt die Unterlagen herunter
     # Aufgehobene Vergabe (subreport zeigt es in der Statusspalte an). Sie kommt unter
@@ -92,6 +91,14 @@ DAUERHAFT = frozenset({
 # wenn der benannte Blocker fällt: entweder der Abrufer meldet ihn beim Aufruf als gelöst
 # (`filtere(..., frei={"konto"})`) oder jemand räumt ihn von Hand (`entsperre`).
 BLOCKIERT = {
+    # ⚠ Stand bis zum 2026-08-24 unter DAUERHAFT — gegen die eigene Regel dieser Datei.
+    # Das zentrale Dashboard von deutsche-evergabe zeigt den Vorgang, aber keine Dateien;
+    # daraus wurde „gibt strukturell nichts her". Nachgesehen am 2026-08-24: JEDE Spur auf
+    # dieser Seite fuehrt auf `/Account/Login` oder `/Account/Register`, die Vorgangszeile
+    # selbst hat gar kein Ziel. Es ist also eine Zugangsfrage, keine strukturelle Leere —
+    # und „warum kann sich das NIE aendern?" laesst sich hier nicht beantworten. 171
+    # Vorgaenge waren damit stillschweigend abgeschrieben statt als Reichweite gefuehrt.
+    "kein_downloadbereich": "konto",   # deutsche-evergabe: anonym nur das Dashboard
     "gated":                "konto",   # cosinex: Teilnahmeantrag/Login nötig
     "gesperrt":             "konto",
     "abgewiesen":           "konto",
@@ -114,6 +121,21 @@ BLOCKIERT = {
     "nur_einzeldateien":    "portal",  # kein Sammel-ZIP; Einzelabruf noch nicht gebaut
     "zu_gross":             "groesse",  # über der Grössengrenze DIESES Laufs
 }
+
+# ── VIERTE KLASSE: wartet auf die Welt ────────────────────────────────────────────────────
+#
+# Weder unser Fehler noch ein fehlender Zugang: der Vorgang ist schlicht noch nicht so weit.
+# Healy-Hudson sagt es woertlich — „Das Verfahren wurde noch nicht veroeffentlicht!".
+#
+# Warum das eine eigene Menge braucht: solche Saetze fielen bisher in die Sammelklasse
+# „offen", und die steht im Bericht unter der Ueberschrift „warten auf UNS, nicht auf die
+# Welt". Genau falsch herum. Eine Arbeitsliste, die Fremdes mitfuehrt, verliert ihren Wert.
+#
+# ⚠ Am Ablauf aendert das NICHTS: diese Saetze laufen ueber dieselbe Sperrfrist wieder auf
+# wie jeder ungeklaerte Fall. Es ist eine Frage der Buchfuehrung, nicht der Steuerung.
+WARTET = frozenset({
+    "nicht_veroeffentlicht",    # Healy-Hudson: Verfahren angelegt, aber noch nicht offen
+})
 
 # Kann sich ändern. Nicht bei jedem Lauf erneut probieren, aber auch nicht aufgeben.
 SPERRE_TAGE = 7

@@ -85,6 +85,8 @@ _ENDUNGEN = ("pdf", "zip", "doc", "docx", "xls", "xlsx", "rtf", "odt", "ods", "t
 _MIT_ENDUNG = re.compile(r"\.(?:" + "|".join(_ENDUNGEN) + r")$", re.IGNORECASE)
 
 # Der Sammelknopf. Die Oberflaeche benutzt Material-Icons, der Text steht daneben.
+_FEHLERSCHLUESSEL = re.compile(r"ErrorMessageKey=([A-Za-z0-9._]+)")
+
 _ALLE = ("xpath=//*[self::button or self::a]"
          "[contains(normalize-space(.), 'Alle herunterladen')]")
 
@@ -109,6 +111,24 @@ def hole_vergabe(url: str, pg, tmp: Path, dry_run: bool = False) -> dict:
     if r is not None and r.status >= 400:
         return {"dateien": [], "status": "fehler", "note": f"http {r.status}", "gelistet": 0}
     pg.wait_for_timeout(_WARTE_MS)
+
+    # ⚠ Healy-Hudson beantwortet Fehlgriffe mit einer eigenen Seite, und die traegt den
+    # Grund maschinenlesbar in der Adresse (`ErrorMessage.aspx?ErrorMessageKey=…`). Wer nur
+    # nach Dateien sucht, sieht dort keine und meldet „keine Dateien auf der Vorgangsseite"
+    # — eine Aussage ueber die Vergabe, obwohl die Seite eine ueber die ANFRAGE macht.
+    # Gemessen am 2026-08-24 ueber die 14 so gemeldeten Faelle: 3× noch nicht
+    # veroeffentlicht, 3× nicht mehr verfuegbar, 7 hatten inzwischen Dateien.
+    if "errormessage.aspx" in pg.url.lower():
+        m = _FEHLERSCHLUESSEL.search(pg.url)
+        schluessel = m.group(1) if m else ""
+        if schluessel.startswith("Project.NotBeenPublished"):
+            return {"dateien": [], "status": "nicht_veroeffentlicht", "gelistet": 0,
+                    "note": "Verfahren noch nicht veröffentlicht"}
+        if schluessel.startswith("SubProject.NotAvailable"):
+            return {"dateien": [], "status": "weg", "gelistet": 0,
+                    "note": "Verfahren nicht mehr verfügbar"}
+        return {"dateien": [], "status": "fehler", "gelistet": 0,
+                "note": f"Fehlerseite {schluessel or 'ohne Schlüssel'}"}
 
     rumpf = pg.evaluate("() => document.body.innerText")
     eintraege = _dateiliste(pg)

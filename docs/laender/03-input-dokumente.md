@@ -142,6 +142,19 @@ Connectors gilt:
 - **`kein_listenlayout`** (Sperrtyp `parser`) für „Seite lädt, wir lesen sie nicht" — eine
   **Arbeitsliste**, kein Schicksal. Freigabe über `scripts/entsperren.py`.
 - **`gated`** nur für echte Anmeldeschranken.
+- **`nicht_veroeffentlicht`** (Menge `WARTET`) für „der Vorgang ist noch nicht so weit".
+  Das wartet auf die WELT, nicht auf uns — und gehört deshalb nicht in dieselbe Liste wie
+  unsere eigenen Fehler. Am Ablauf ändert es nichts (dieselbe Sperrfrist), an der
+  Buchführung alles.
+
+**⚠ Die Probe für „dauerhaft": kannst du begründen, warum es sich NIE ändern kann?** Wenn
+nicht, gehört es nicht dorthin. `kein_downloadbereich` stand bis zum 2026-08-24 unter
+dauerhaft, weil das zentrale Dashboard von deutsche-evergabe den Vorgang zwar listet, aber
+keine Dateien trägt. Nachgesehen: **jede** Spur auf dieser Seite führt auf `/Account/Login`
+oder `/Account/Register`, die Vorgangszeile selbst hat gar kein Ziel. Das ist eine
+Zugangsfrage, keine strukturelle Leere. 171 Vorgänge waren damit stillschweigend
+abgeschrieben statt als Reichweite geführt — genau der Verlust, vor dem der Kopf von
+`docfetch_queue.py` warnt.
 
 ## Fallen beim Abruf
 
@@ -189,6 +202,17 @@ Connectors gilt:
   4× Abgabefrist verstrichen, 2 hatten inzwischen ein ZIP mit 52 Dateien. **Kein einziger
   war eine Vergabe ohne Unterlagen** — was der Vermerk behauptete. Wo eine Portalseite
   einen Einheitssatz für alle Fehler führt, ist die Nachbarseite Pflicht, nicht Kür.
+- **⚠ Eine Fehlerseite sagt etwas über die ANFRAGE, nicht über die Vergabe.**
+  Healy-Hudson beantwortet Fehlgriffe mit `ErrorMessage.aspx?ErrorMessageKey=…` und trägt
+  den Grund damit maschinenlesbar in der Adresse. Wer dort nur nach Dateien sucht, findet
+  keine und meldet „keine Dateien auf der Vorgangsseite". Gemessen über alle 14 so
+  gemeldeten Fälle: 3× `Project.NotBeenPublished` (noch nicht veröffentlicht), 3×
+  `SubProject.NotAvailable` (nicht mehr verfügbar), 7 hatten inzwischen Dateien. **Vor der
+  Inhaltsprüfung fragen, ob man überhaupt auf der gemeinten Seite steht.**
+- **Ein Teil der Fehlversuche ist schlicht zu früh.** Von denselben 14 lieferten 7 beim
+  zweiten Anlauf ohne jede Codeänderung Dateien. Bevor man einen Parser umbaut, den
+  bestehenden Code erneut über die Fälle laufen lassen: das trennt „kaputt" von „damals
+  noch nicht da" und kostet ein paar Minuten statt eines Umbaus.
 - **Hängende Abrufer.** `SIGALRM` wird von Playwright verschluckt. Es braucht eine Wache
   ausserhalb des Prozesses, sonst steht ein Lauf still und meldet nichts.
 - **Zip-Bomben.** Grössengrenze und Entpack-Grenze sind Pflicht, nicht Kür.
