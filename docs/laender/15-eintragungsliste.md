@@ -116,3 +116,10 @@ Dazu die Sonde, die den Gold-Teil automatisch prüft:
 ```bash
 python3 scripts/pruefe_verdrahtung.py --offen
 ```
+
+Und für die Frage „was hängt eigentlich an dieser Tabelle" — die Karte, die den Quelltext
+liest statt ein getipptes Verzeichnis:
+
+```bash
+python3 scripts/verdrahtungskarte.py --waisen
+```

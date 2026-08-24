@@ -102,6 +102,44 @@ verschiedene Ausfälle sehen: der Altersbericht merkt, wenn der **ganze** Lauf s
 wandert der Bezugspunkt der Sonde mit und sie ist blind); die Sonde merkt, wenn **ein**
 Schritt fehlt.
 
+## Die Verdrahtungskarte — wer erzeugt was, und wer liest es
+
+Die Sonden melden, dass etwas **nicht stimmt**. Die Karte sagt, **woran es hängt**:
+
+```bash
+python3 scripts/verdrahtungskarte.py lead_lot     # eine Tabelle
+python3 scripts/verdrahtungskarte.py --waisen     # nur die auffälligen Fälle
+python3 scripts/verdrahtungskarte.py --markdown   # zum Einfügen
+```
+
+```
+lead_lot
+  erzeugt von : build_lead_lot
+  gelesen von : govisor/search.py, scripts/export_strategie.py,
+                scripts/export_supabase.py, scripts/export_web_leads.py
+```
+
+Jeder Fund dieser Sitzung stand darin: `build_lead_lot` lief im DACH-Gold nicht mit,
+während vier Verbraucher täglich lasen. Wer vor einem Umbau wissen will, was er zerreisst,
+fragt hier — nicht im Kopf.
+
+**Zwei Klassen werden getrennt gemeldet:**
+
+- **Erzeuger ohne Verbraucher** — gebaut, liest niemand. Rechenzeit für nichts.
+- **Verbraucher ohne Erzeuger** — gelesen, baut niemand. Läuft ins Leere oder auf einen
+  Stand, den niemand auffrischt.
+
+⚠ **Sie wird ERZEUGT, nicht getippt.** Eine von Hand gepflegte Karte verrottet mit dem
+ersten Umbau, und dieses Projekt hat an einem Tag gezeigt, wie schnell das geht. Sie liest
+den Quelltext und ist damit so aktuell wie er.
+
+⚠ **Ehrlich zur Genauigkeit:** die Karte erkennt Schreibziele über die Muster, die der
+Bestand benutzt (`COPY … TO`, `out =`, Schreib-Helfer wie `_write`/`copy_to`). Beim Bauen
+hat jedes einzelne davon einmal gefehlt und Tabellen fälschlich als Waisen gemeldet — von
+65 falschen Anklagen auf 13 verbliebene, die grösstenteils echt sind (Silber-Tabellen wie
+`attributes` haben keinen Gold-Builder). **Wer einen neuen Schreib-Helfer einführt, trägt
+ihn in `SCHREIB_HELFER` ein**, sonst sind seine Tabellen plötzlich vaterlos.
+
 ## Bewusste Länderlücken sauber begründen
 
 Nicht jede DE-Tabelle muss es überall geben. Der Grund muss die **Quelle** nennen, nicht

@@ -103,7 +103,8 @@ Leitung — und dann gilt [Kapitel 12](laender/12-fallenkatalog.md).
 
 ```bash
 scripts/laeuft_was.sh                          # ⛔ vor JEDEM schreibenden Schritt
-python3 scripts/pruefe_verdrahtung.py --offen  # Frische + Länderparität
+python3 scripts/pruefe_verdrahtung.py --offen  # Sonde 1-4: Frische, Parität, Pfade, Länder
+python3 scripts/verdrahtungskarte.py <tabelle> # wer erzeugt es, wer liest es
 python3 -m govisor.cli verify --country XX     # FK-Integrität
 python3 -m pytest tests/ -q                    # muss grün sein, vor dem Commit
 ```

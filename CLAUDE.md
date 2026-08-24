@@ -51,8 +51,9 @@ CLI: `python -m govisor.cli {ingest|silver|gold|verify|review}`.
   erste Messung, wenn sie zutreffen: **13 Währung** (die Schweiz hat `value_eur` bei 1 %
   gefüllt, DE bei 91 % — jede wertbasierte Kennzahl faellt aus) und **14 Schrift** (die
   Wortfaltung kennt nur ä ö ü ß; `Łódź` wird zu `['d']`). **15 Eintragungsliste** nennt
-  jede Datei, in der ein Land bekannt gemacht werden muss — eine zentrale Länderliste gibt
-  es nicht. Die
+  jede Datei, in der ein Land bekannt gemacht werden muss. ⚠ `govisor/countries.py` führt
+  die Ländercodes (Ingest/Parser), NICHT welche Länder die Pipeline baut — das sind eigene
+  `LAENDER`-Tupel in fünf Dateien. Die
   Liste ist die Summe eines Tages, an dem Österreich nachgemessen wurde — sechs Wochen
   nachdem es „fertig" war. Bindefrist 0 %, Bürgschaft 0 %, Nebenangebote 0 %, Lose 0 %,
   bei 57 % nicht einmal ein Link zur Quelle, während die Schweiz auf 51 % stand und die
@@ -118,18 +119,25 @@ CLI: `python -m govisor.cli {ingest|silver|gold|verify|review}`.
 
       python3 scripts/pruefe_verdrahtung.py [--offen]
 
-  Sonde 1 (Frische) meldet jede Gold-Datei, die gegenüber dem Lauf ihres Landes zurückhängt;
-  Sonde 2 (Länderparität) jede Tabelle, die es nur in DE gibt. Läuft am Ende von
-  `daily_leads.sh`. Ausnahmen stehen als Code **im Skript**, nicht in einer Textdatei, und
-  `tests/test_verdrahtung.py` hält sie ehrlich: ohne Begründung, für etwas Gelöschtes oder
-  für eine längst geschlossene Lücke wird die Suite rot.
-  ⚠ Zwei Dinge, die man dabei wissen muss: der ältere **Altersbericht** im selben Skript ist
+  **Vier Sonden**, alle am Ende von `daily_leads.sh`: 1 Frische (welche Gold- oder
+  `web/data`-Datei hängt gegenüber dem Lauf ihres Landes zurück), 2 Länderparität (welche
+  Tabelle gibt es nur in DE), 3 DE-feste Pfade (welches Skript liest fest `data/gold/DE`),
+  4 Länder (wer liegt in Silber, ohne in Gold anzukommen). Ausnahmen stehen als Code **im
+  Skript**, nicht in einer Textdatei, und `tests/test_verdrahtung.py` hält sie ehrlich:
+  ohne Begründung, für etwas Gelöschtes oder für eine längst geschlossene Lücke wird die
+  Suite rot.
+
+      python3 scripts/verdrahtungskarte.py <tabelle>   # wer erzeugt es, wer liest es
+
+  Dazu die **Verdrahtungskarte**: die Sonden melden, dass etwas nicht stimmt, die Karte
+  sagt, woran es hängt. Sie wird aus dem Quelltext ERZEUGT, nicht getippt.
+  ⚠ Drei Dinge, die man dabei wissen muss: der ältere **Altersbericht** im selben Skript ist
   eine handgepflegte Liste von sechs Eckpfeilern — genau deshalb hat er `lead_lot` nie
   gemeldet. Beide bleiben, weil sie verschiedene Ausfälle sehen (Altersbericht: der ganze
-  Lauf steht; Sonde: ein einzelner Schritt fehlt). Und: **16 Gold-Tabellen gibt es weiterhin
-  nur für DE**, obwohl ihr Builder country-fähig ist und für AT/CH echte Zeilen liefert
-  (`lead_criteria`, `lead_requirement`, `lead_party`, `value_anchor` u. a.) — sie stehen als
-  `OFFEN_NUR_DE` im Skript und sind eine Arbeitsliste, kein erledigter Punkt.
+  Lauf steht; Sonde: ein einzelner Schritt fehlt). Die 16 nur-DE-Tabellen und die drei
+  Produktwege (Onboarding, Zuschläge, /firma) sind seit 2026-08-23 verdrahtet. Und:
+  **Polen liegt mit 326.485 Bekanntmachungen in Silber ohne Gold** — angefangen und
+  liegengeblieben, steht als Baustelle in `BEWUSST_OHNE_GOLD`.
 - **Kein Datenverlust** — nichts nach eigener Relevanz filtern; Unbekanntes →
   „sonstiges"/`attributes`, Zweifelsfälle → `review`-Queue. Erschlossenes trägt Konfidenz.
 - Details + Warum: `docs/entscheidungen-und-kontext.md`.

@@ -298,3 +298,46 @@ def test_laender_schweigt_wenn_gold_da_ist(tmp_path, monkeypatch):
 def test_bewusst_ohne_gold_ist_begruendet():
     for land, grund in pv.BEWUSST_OHNE_GOLD.items():
         assert grund and len(grund) > 25, f"BEWUSST_OHNE_GOLD[{land}] ist nicht begruendet"
+
+
+# ── Verdrahtungskarte ───────────────────────────────────────────────────────
+# Die Bibel nennt die REGELN. Was ihr fehlte, ist die KARTE: welche Tabelle kommt
+# aus welchem Builder, und wer haengt daran. Sie wird ERZEUGT, nicht getippt —
+# eine getippte Karte verrottet mit dem ersten Umbau.
+
+def _karte():
+    import importlib.util
+    spec = importlib.util.spec_from_file_location(
+        "verdrahtungskarte", ROOT / "scripts" / "verdrahtungskarte.py")
+    m = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(m)
+    return m
+
+
+def test_karte_findet_erzeuger_und_verbraucher():
+    """Drei Tabellen, an denen diese Sitzung Fehler hatte — jede muss beide Seiten
+    zeigen, sonst haette die Karte den Fund nicht geliefert."""
+    k = _karte().karte()
+    for tabelle, builder in (("lead_lot", "build_lead_lot"),
+                             ("lead_text", "build_lead_text"),
+                             ("buyer_stats", "build_market_intelligence")):
+        assert tabelle in k, f"{tabelle} fehlt in der Karte"
+        assert builder in k[tabelle]["erzeuger"], \
+            f"{tabelle}: {builder} nicht als Erzeuger erkannt"
+        assert k[tabelle]["verbraucher"], f"{tabelle} hat keinen Verbraucher"
+
+
+def test_karte_haelt_erzeuger_und_leser_auseinander():
+    """In `COPY (… JOIN read_parquet('a') …) TO 'b'` stehen beide in EINER Anweisung.
+    Wer die ganze Anweisung durchsucht, macht jede gelesene Tabelle zum Erzeuger —
+    gemessen bekam `dim_cpv_label` so fuenf angebliche Erzeuger statt einem."""
+    k = _karte().karte()
+    assert k["dim_cpv_label"]["erzeuger"] == {"build_dim_cpv_label"}
+
+
+def test_karte_sieht_die_union_leser():
+    """Der wichtigste Leser nennt die Endung gar nicht: `_union("lead_lot")` baut den
+    Dateinamen zur Laufzeit. Ohne diesen Zweig waeren genau die laenderfaehigen
+    Verbraucher unsichtbar — also die, um die es geht."""
+    k = _karte().karte()
+    assert "scripts/export_web_leads.py" in k["lead_lot"]["verbraucher"]
