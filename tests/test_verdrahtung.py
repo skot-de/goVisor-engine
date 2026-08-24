@@ -259,3 +259,42 @@ def test_die_drei_produktwege_laufen_im_nachtlauf_mit():
     ohne_kommentar = "\n".join(z for z in lauf.splitlines() if not z.lstrip().startswith("#"))
     for skript in ("export_suppliers.py", "export_web_awards.py", "export_firma_profiles.py"):
         assert skript in ohne_kommentar, f"{skript} laeuft nicht im Nachtlauf"
+
+
+# ── Sonde 4: halb aufgenommene Laender ──────────────────────────────────────
+# Die Fehlerklasse dieses Skripts auf der obersten Ebene: 326.485 polnische
+# Bekanntmachungen lagen in Silber, seit zwei Monaten ohne Gold, und KEINE
+# Sonde meldete es — Sonde 1 und 2 sehen nur, was in `data/gold` steht.
+
+def test_laender_findet_silber_ohne_gold(tmp_path, monkeypatch):
+    silber = tmp_path / "silver" / "XX" / "notices" / "year=2026"
+    silber.mkdir(parents=True)
+    (silber / "a.parquet").write_bytes(b"")
+    monkeypatch.setattr(pv, "SILBER", tmp_path / "silver")
+    monkeypatch.setattr(pv, "GOLD", tmp_path / "gold")
+    fehler = pv.sonde_laender()
+    assert len(fehler) == 1 and "XX" in fehler[0]
+
+
+def test_laender_schweigt_bei_begruendetem_land(tmp_path, monkeypatch):
+    silber = tmp_path / "silver" / "EU" / "notices" / "year=2026"
+    silber.mkdir(parents=True)
+    (silber / "a.parquet").write_bytes(b"")
+    monkeypatch.setattr(pv, "SILBER", tmp_path / "silver")
+    monkeypatch.setattr(pv, "GOLD", tmp_path / "gold")
+    assert pv.sonde_laender() == []
+
+
+def test_laender_schweigt_wenn_gold_da_ist(tmp_path, monkeypatch):
+    silber = tmp_path / "silver" / "XX" / "notices" / "year=2026"
+    silber.mkdir(parents=True)
+    (silber / "a.parquet").write_bytes(b"")
+    (tmp_path / "gold" / "XX").mkdir(parents=True)
+    monkeypatch.setattr(pv, "SILBER", tmp_path / "silver")
+    monkeypatch.setattr(pv, "GOLD", tmp_path / "gold")
+    assert pv.sonde_laender() == []
+
+
+def test_bewusst_ohne_gold_ist_begruendet():
+    for land, grund in pv.BEWUSST_OHNE_GOLD.items():
+        assert grund and len(grund) > 25, f"BEWUSST_OHNE_GOLD[{land}] ist nicht begruendet"

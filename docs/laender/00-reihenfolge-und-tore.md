@@ -60,6 +60,21 @@ Drei gemessene Beispiele, warum Frage 3 zählt:
   Angabe lautete „Ostösterreich", „Südösterreich" oder „Westösterreich". Formal befüllt,
   als Filter wertlos — „Ostösterreich" umfasst Burgenland, Niederösterreich und Wien.
 
+## ⚠ Ein halb aufgenommenes Land ist unsichtbar
+
+Am 2026-08-23 lagen **326.485 polnische Bekanntmachungen** in Silber — seit zwei Monaten,
+ohne Gold, ohne Eintrag in einer Länderliste, und **keine Sonde meldete es**. Sonde 1 und 2
+sehen nur, was in `data/gold` steht; ein Land, das es nie dorthin geschafft hat, existiert
+für sie nicht.
+
+Deshalb prüft **Sonde 4** seit dem 2026-08-23, welches Land in Silber liegt, ohne in Gold
+anzukommen. Wer ein Land beginnt und unterbricht, trägt es in `BEWUSST_OHNE_GOLD` ein — mit
+dem Stand, an dem er aufgehört hat, nicht mit „später".
+
+```bash
+python3 scripts/pruefe_verdrahtung.py --sonde laender --offen
+```
+
 ## Was „fertig" heisst
 
 Ein Land ist fertig, wenn die Abnahme aus [Kapitel 10](10-abnahme-und-messung.md)

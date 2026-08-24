@@ -79,6 +79,10 @@ python3 scripts/pruefe_verdrahtung.py --offen
   zurückhängt. Schwelle 2 Tage, gemessen: 134 von 142 Dateien lagen darunter, danach
   klaffte eine Lücke bis 4,5 Tage.
 - **Sonde 2 (Länderparität)**: meldet jede Tabelle, die es nur in DE gibt.
+- **Sonde 4 (Länder)**: meldet jedes Land, das in **Silber** liegt und nicht in Gold
+  ankommt. Sonde 1 und 2 sehen nur `data/gold` — ein Land, das es nie dorthin geschafft
+  hat, ist für sie unsichtbar. So lagen 326.485 polnische Bekanntmachungen zwei Monate
+  lang unbemerkt.
 - **Sonde 3 (DE-feste Pfade)**: meldet jedes Skript des Nachtlaufs, das fest
   `data/gold/DE` liest. Sonde 1 und 2 sehen nur die Gold-Ebene — **die Hälfte aller Funde
   sass aber im Verbraucher**: Tabelle sauber je Land gebaut, Exporter liest nur DE.

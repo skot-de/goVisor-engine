@@ -1,8 +1,15 @@
 # 15 · Eintragungsliste — wo ein Land überall bekannt gemacht wird
 
-> **Es gibt keine zentrale Länderliste.** `("DE", "AT", "CH")` steht an über einem Dutzend
-> Stellen. Diese Liste ist der Ersatz dafür; sie wird beim Aufnehmen eines Landes
-> abgearbeitet und beim Abschluss noch einmal gegengelesen.
+> **Es gibt zwei Ebenen, und nur eine hat eine Registry.**
+>
+> `govisor/countries.py` führt die **Ländercodes** — Alpha-2, Alpha-3 und Name, plus die
+> Aliase, die TED über zwanzig Jahre gesammelt hat (`GR`→`EL`, `GB`→`UK`). Sie ist
+> ausdrücklich dafür gebaut, dass „adding a country stays a one-line change", und wird von
+> `config.py`, `schema.py` und `verify.py` benutzt — also von Ingest und Parser.
+>
+> Welche Länder die **Pipeline tatsächlich baut**, steht dort NICHT. Das sind eigene
+> `LAENDER`-Tupel in mindestens fünf Dateien. Diese Liste ist der Ersatz dafür; sie wird
+> beim Aufnehmen eines Landes abgearbeitet und beim Abschluss gegengelesen.
 
 Sortiert nach dem Zeitpunkt, zu dem man sie braucht.
 
@@ -10,12 +17,13 @@ Sortiert nach dem Zeitpunkt, zu dem man sie braucht.
 
 | Datei | Was einzutragen ist |
 |-------|---------------------|
+| `govisor/countries.py` | Alpha-2/Alpha-3 und Name — **prüfen, ob das Land schon drinsteht** (EU-27 plus EWR/Beitrittskandidaten sind vorhanden) |
 | `govisor/sources.py` | Eintrag je Quelle mit ehrlichem Status (`research`/`candidate`/`prepared`/`live`) |
 | `govisor/locales.py` | `Locale`-Profil: Rechtsformen, Vertretungsklauseln, Abteilungen, Klassifikation. **Ohne dieses Profil läuft alles mit dem DE-Default.** |
 | `govisor/languages.py` | Sprachcodes, falls die Quelle exotische Kürzel liefert |
 | `govisor/model.py` | nur, wenn die Quelle Felder bringt, die es noch nicht gibt |
-| `data/reference/geonames/XX.txt` | Ortsverzeichnis herunterladen |
-| `data/reference/nuts/` | NUTS-Katalog des Landes (speist `dim_nuts`) |
+| `data/reference/geonames/<LAND>.txt` | Ortsverzeichnis herunterladen |
+| `data/reference/nuts/` | ⚠ **schon EU-weit vorhanden.** `NUTS_AT_2024.csv` heisst NUTS-**Attributes**, nicht Austria: 1.971 Codes über 39 Länder (FR 143, PL 98). Nichts herunterzuladen. |
 
 ## Parser und Ingest
 
@@ -34,7 +42,7 @@ Sortiert nach dem Zeitpunkt, zu dem man sie braucht.
 | Datei | Was |
 |-------|-----|
 | `govisor/dedupe.py` | nichts — **wenn** `locales.use(country)` bereits greift. Prüfen. |
-| `data/curated/XX_entity_aliases.csv` | optional, kuratierte Umbenennungen |
+| `data/curated/<LAND>_entity_aliases.csv` | optional, kuratierte Umbenennungen |
 
 ## Gold
 

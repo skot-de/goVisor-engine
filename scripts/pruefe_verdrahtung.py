@@ -124,6 +124,44 @@ BEWUSST_NUR_DE: dict[str, str] = {
 OFFEN_NUR_DE: dict[str, str] = {}
 
 
+# Laender, die in Silber liegen duerfen, ohne in Gold zu erscheinen. Alles andere ist ein
+# halb aufgenommenes Land — und das ist die Fehlerklasse dieses Skripts auf der obersten
+# Ebene: Gemessen am 2026-08-23 lagen 326.485 polnische Bekanntmachungen in Silber, seit
+# zwei Monaten ohne Gold, und KEINE Sonde meldete es. Sonde 1 und 2 sehen nur, was in
+# `data/gold` steht; ein Land, das es nie dorthin geschafft hat, ist fuer sie unsichtbar.
+SILBER = ROOT / "data" / "silver"
+
+BEWUSST_OHNE_GOLD: dict[str, str] = {
+    "EU": "Sammelablage fuer Bekanntmachungen ohne eindeutiges Land (282 Saetze, 15 Laender)",
+    "PL": "angefangen und liegengeblieben: 326.485 Saetze, letzte Publikation 2026-06-29. "
+          "KEINE Entscheidung, sondern eine Baustelle — s. docs/land-onboarding.md",
+}
+
+
+def sonde_laender(zeige_offen: bool = False) -> list[str]:
+    """Welches Land liegt in Silber, ohne in Gold anzukommen?"""
+    if not SILBER.is_dir():
+        return []
+    fehler, offen = [], []
+    for d in sorted(x for x in SILBER.iterdir() if x.is_dir()):
+        if not list((d / "notices").glob("*/*.parquet")):
+            continue
+        if (GOLD / d.name).is_dir():
+            continue
+        grund = BEWUSST_OHNE_GOLD.get(d.name)
+        if grund:
+            offen.append(f"    OFFEN   {d.name} liegt in Silber, nicht in Gold: {grund}")
+        else:
+            fehler.append(f"{d.name} liegt in Silber, aber nicht in Gold — halb aufgenommen "
+                          f"oder vergessen? Es steht in keiner Liste.")
+    if offen:
+        if zeige_offen:
+            print("\n".join(offen))
+        else:
+            print(f"    ({len(offen)} Laender ohne Gold — mit --offen anzeigen)")
+    return fehler
+
+
 # ── Sonde 3: DE-feste Pfade im Nachtlauf ────────────────────────────────────
 # Sonde 1 und 2 sehen die GOLD-Ebene. Sie merken nicht, wenn eine Tabelle sauber je Land
 # gebaut wird und der Verbraucher trotzdem nur `data/gold/DE` liest — und genau dort sass
@@ -346,7 +384,7 @@ def sonde_paritaet(zeige_offen: bool = False,
 
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
-    ap.add_argument("--sonde", choices=("frische", "paritaet", "pfade", "alle"), default="alle")
+    ap.add_argument("--sonde", choices=("frische", "paritaet", "pfade", "laender", "alle"), default="alle")
     ap.add_argument("--offen", action="store_true",
                     help="bekannte Luecken und Leichen mit auflisten")
     a = ap.parse_args()
@@ -362,6 +400,11 @@ def main() -> int:
         f = sonde_paritaet(a.offen)
         alles += f
         print(f"    {len(f)} unerklaerte Alleingaenge")
+    if a.sonde in ("laender", "alle"):
+        print("── Sonde 4: Laender (wer liegt in Silber, ohne in Gold anzukommen?) ──")
+        f = sonde_laender(a.offen)
+        alles += f
+        print(f"    {len(f)} unerklaerte Laender")
     if a.sonde in ("pfade", "alle"):
         print("── Sonde 3: DE-feste Pfade im Nachtlauf (wer liest nur DE?) ──")
         f = sonde_pfade(a.offen)
