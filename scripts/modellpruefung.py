@@ -145,10 +145,29 @@ def pruefsatz(stand: dict, n: int) -> dict:
 
 def grundlinie(stand, ad, vorgaenge, rest) -> tuple[dict, str | None]:
     """Der Amtierende auf dem Prüfsatz — einmal gemessen, dann wiederverwendet."""
-    if ps.grundlinie_frisch(stand):
+    if ps.grundlinie_frisch(stand, vorgaenge=vorgaenge):
         return stand["grundlinie"]["je_vorgang"], None
-    print(f"  Grundlinie {AMTIEREND} wird erneuert (älter als {ps.GRUNDLINIE_TAGE} Tage "
-          f"oder nicht vorhanden)")
+
+    # ⚠ VERALTET HEISST NEU MESSEN, NICHT NUR NEU DATIEREN.
+    #
+    # Die erste Fassung reichte die alten Messwerte immer als `vorhanden` weiter. Da
+    # `messe_reihe` alles ueberspringt, was schon dasteht, wurde beim „Erneuern" einer
+    # veralteten Grundlinie **kein einziger Vorgang** neu gemessen — sie bekam nur das
+    # heutige Datum und galt wieder als frisch. Nachgestellt am 2026-08-25: 15 von 15
+    # Vorgaengen uebersprungen, Meldung trotzdem „wird erneuert".
+    #
+    # Der Grund fuer `vorhanden` ist ein anderer: eine Grundlinie, die mitten im Messen
+    # abgebrochen ist (Budget, Frist), soll fortgesetzt und nicht neu begonnen werden.
+    # Das sind zwei verschiedene Faelle, und sie brauchen zwei verschiedene Antworten.
+    veraltet = not ps.grundlinie_aktuell(stand)
+    vorhanden = None if veraltet else (stand.get("grundlinie") or {}).get("je_vorgang")
+    if veraltet:
+        print(f"  Grundlinie {AMTIEREND} ist älter als {ps.GRUNDLINIE_TAGE} Tage — "
+              f"sie wird VOLLSTÄNDIG neu gemessen.")
+    else:
+        fehlt = len(set(vorgaenge) - set(vorhanden or {}))
+        print(f"  Grundlinie {AMTIEREND} unvollständig — {fehlt} von {len(vorgaenge)} "
+              f"Vorgängen fehlen und werden nachgemessen.")
 
     def sichern(e):
         stand["grundlinie"] = {"stand": date.today().isoformat(), "modell": AMTIEREND,
@@ -158,7 +177,7 @@ def grundlinie(stand, ad, vorgaenge, rest) -> tuple[dict, str | None]:
     erg, grund = ps.messe_reihe(
         analyse=ad, llm=llm, kostenbuch=kostenbuch, modell=AMTIEREND,
         vorgaenge=vorgaenge, zweck=ZWECK,
-        vorhanden=(stand.get("grundlinie") or {}).get("je_vorgang"),
+        vorhanden=vorhanden,
         budget=rest, nach_vorgang=sichern, ausgeben=lambda z: print(z, flush=True))
     sichern(erg)
     return erg, grund

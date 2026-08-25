@@ -414,8 +414,9 @@ def naechste(stand: dict, hoechstens: int | None = None) -> list[str]:
     return aus
 
 
-def grundlinie_frisch(stand: dict, heute: str | None = None,
-                      tage: int | None = None) -> bool:
+def grundlinie_aktuell(stand: dict, heute: str | None = None,
+                       tage: int | None = None) -> bool:
+    """Ist die Grundlinie jung genug? Sagt NICHTS ueber ihre Vollstaendigkeit."""
     tage = GRUNDLINIE_TAGE if tage is None else tage
     g = stand.get("grundlinie") or {}
     if not g.get("stand") or not g.get("je_vorgang"):
@@ -425,6 +426,25 @@ def grundlinie_frisch(stand: dict, heute: str | None = None,
     except ValueError:
         return False
     return (date.fromisoformat(heute or date.today().isoformat()) - alt).days < tage
+
+
+def grundlinie_frisch(stand: dict, heute: str | None = None, tage: int | None = None,
+                      vorgaenge: dict | None = None) -> bool:
+    """Ist die Grundlinie brauchbar — jung genug UND ueber den ganzen Pruefsatz?
+
+    ⚠ **Die zweite Bedingung fehlte, und das war teuer gedacht.** Die erste Fassung
+    prueffte nur das Datum und ob ueberhaupt etwas dasteht. Eine nach drei von fuenfzehn
+    Vergaben abgebrochene Grundlinie galt damit als frisch — jeder Kandidat waere gegen
+    drei Paare verglichen worden, die Mindestmenge (MIN_N) haette das Urteil verweigert,
+    und der Kandidat waere als `neu` in der Schlange geblieben. Jede Nacht wieder, ohne
+    dass jemals ein Urteil zustande kaeme.
+    """
+    if not grundlinie_aktuell(stand, heute, tage):
+        return False
+    if vorgaenge is None:
+        return True
+    gemessen = set((stand.get("grundlinie") or {}).get("je_vorgang") or {})
+    return set(vorgaenge) <= gemessen
 
 
 # ── Der Messkern ─────────────────────────────────────────────────────────────────────

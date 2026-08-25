@@ -545,3 +545,59 @@ def test_die_ausnahme_greift_nicht_wegen_ausgelassener_teurer_vorgaenge():
         kand[f"N{i}"] = {"fehler": "TimeoutError", "grund": "HTTP 500"}
     u = ps.entscheide(kand, amt, min_n=5)
     assert not u["wechseln"], f"hätte nicht wechseln dürfen: {u['grund']}"
+
+
+# ── Grundlinie: Alter und Abdeckung sind zwei verschiedene Fragen ────────────────────
+
+def _grundlinie(stand_datum, n_gemessen, n_vorgaenge=15):
+    return ({"grundlinie": {"stand": stand_datum, "modell": "m",
+                            "je_vorgang": {f"N{i}": {"punkte": 40} for i in range(n_gemessen)}}},
+            {f"N{i}": [] for i in range(n_vorgaenge)})
+
+
+def test_unvollstaendige_grundlinie_gilt_nicht_als_frisch():
+    """⚠ Eine nach drei von fünfzehn Vergaben abgebrochene Grundlinie galt als frisch.
+
+    Jeder Kandidat wäre gegen drei Paare verglichen worden, die Mindestmenge hätte das
+    Urteil verweigert, und er wäre als `neu` in der Schlange geblieben — jede Nacht
+    wieder, ohne dass jemals ein Urteil zustande käme.
+    """
+    heute = date.today().isoformat()
+    stand, vg = _grundlinie(heute, 3)
+    assert ps.grundlinie_aktuell(stand), "jung genug ist sie"
+    assert not ps.grundlinie_frisch(stand, vorgaenge=vg), "aber nicht vollständig"
+    voll, vg2 = _grundlinie(heute, 15)
+    assert ps.grundlinie_frisch(voll, vorgaenge=vg2)
+
+
+def test_ohne_vorgangsliste_wird_nur_das_alter_geprueft():
+    """Rückwärtskompatibel: wer keine Liste übergibt, bekommt die alte Bedeutung."""
+    stand, _ = _grundlinie(date.today().isoformat(), 3)
+    assert ps.grundlinie_frisch(stand)
+
+
+def test_veraltete_grundlinie_gilt_weder_als_aktuell_noch_als_frisch():
+    alt = (date.today() - timedelta(days=99)).isoformat()
+    stand, vg = _grundlinie(alt, 15)
+    assert not ps.grundlinie_aktuell(stand)
+    assert not ps.grundlinie_frisch(stand, vorgaenge=vg)
+
+
+def test_veraltete_grundlinie_wird_wirklich_neu_gemessen(buehne_unbenutzt=None):
+    """⚠ Der eigentliche Fund: „wird erneuert" mass NICHTS.
+
+    Die alten Werte wurden immer als `vorhanden` weitergereicht, und `messe_reihe`
+    überspringt alles, was schon dasteht. Die Grundlinie bekam nur das heutige Datum und
+    galt wieder als frisch — nachgestellt: 15 von 15 Vorgängen übersprungen.
+    """
+    alt = (date.today() - timedelta(days=99)).isoformat()
+    stand, vg = _grundlinie(alt, 15)
+    veraltet = not ps.grundlinie_aktuell(stand)
+    vorhanden = None if veraltet else (stand.get("grundlinie") or {}).get("je_vorgang")
+    assert veraltet and vorhanden is None, "veraltet ⇒ nichts wiederverwenden"
+
+    # Gegenprobe: eine junge, unvollständige wird FORTGESETZT, nicht neu begonnen.
+    jung, vg2 = _grundlinie(date.today().isoformat(), 4)
+    veraltet2 = not ps.grundlinie_aktuell(jung)
+    vorhanden2 = None if veraltet2 else (jung.get("grundlinie") or {}).get("je_vorgang")
+    assert not veraltet2 and len(vorhanden2) == 4
