@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { loadDataFile } from "@/lib/dataSource";
 import { createAdminClient } from "@/lib/supabase/admin";
+import { bremse } from "@/lib/rateLimit";
 
 // iCal-Feed der beobachteten Leads (Ticket #16 §7). Der Token ist der geheime Schlüssel;
 // die Route löst ihn server-seitig (Service-Role) zu user_watchlist auf und emittiert die
@@ -19,7 +20,15 @@ function esc(s: string): string {
   return String(s).replace(/([,;\\])/g, "\\$1").replace(/\r?\n/g, "\\n");
 }
 
-export async function GET(_req: Request, { params }: { params: Promise<{ token: string }> }) {
+export async function GET(req: Request, { params }: { params: Promise<{ token: string }> }) {
+  // ⚠ DIESE ROUTE STEHT OFFEN — sie muss, weil Outlook und Google keinen Sitzungscookie
+  // schicken (s. `OFFEN` in middleware.ts). Damit ist der Token das einzige Geheimnis, und
+  // ein offener Endpunkt, der Tokens prueft, laedt zum Durchprobieren ein. Die Bremse macht
+  // das Raten unwirtschaftlich; grosszuegig genug, dass ein Kalenderprogramm nie ansteht —
+  // die holen im Minuten- bis Stundentakt, nicht 30-mal je Minute.
+  const zuViel = bremse(req, "ical", 30, 60_000);
+  if (zuViel) return zuViel;
+
   const { token: raw } = await params;
   const token = raw.replace(/\.ics$/i, "");
 

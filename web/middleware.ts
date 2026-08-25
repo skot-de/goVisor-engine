@@ -63,9 +63,18 @@ const PREVIEW_COOKIE = "gv_preview";
  *                               Sitzung existiert: bei ausstehender E-Mail-Bestaetigung
  *                               gibt es nach `signUp` noch keine. Ohne diese Ausnahme
  *                               waere Schritt 2 der Registrierung tot.
+ *   /api/calendar/<token>       der iCal-Feed. Ihn holt Outlook bzw. Google, nicht der
+ *                               Browser des Nutzers — diese Clients schicken KEIN
+ *                               Sitzungscookie und koennen sich auch nicht anmelden.
+ *                               Hinter dem Tor war der Feed unabonnierbar, obwohl die
+ *                               Oberflaeche ihn anbietet („aktualisiert sich automatisch").
+ *                               Die Berechtigung ist hier der TOKEN: die Route loest ihn
+ *                               serverseitig gegen `user_calendar_feed` auf und antwortet
+ *                               sonst mit 404. Weil sie damit oeffentlich erreichbar ist,
+ *                               hat sie eine Ratenbremse bekommen.
  */
 const OFFEN = ["/login", "/auth", "/api/health", "/onboarding", "/start", "/t", "/api/wer", "/api/entity-verify", "/api/impressum", "/api/entity-search",
-                     "/api/entity-group", "/api/outreach-firma"];
+                     "/api/entity-group", "/api/outreach-firma", "/api/calendar"];
 
 function istOffen(pfad: string): boolean {
   // Die Wurzel zeigt seit dem 2026-08-20 die oeffentliche Startseite (app/page.tsx) und
@@ -161,7 +170,13 @@ export async function middleware(request: NextRequest) {
     // Die Gesundheitsprobe muss auch durch den Vorhang: eine Ueberwachung, die nur die
     // schwarze Seite sieht, meldet „alles gut", waehrend die Daten fehlen. Sie verraet
     // nichts ausser Zustand und Alter (s. app/api/health/route.ts).
-    if (!unlocked && !vorhangAuf && !pfad.startsWith("/auth/") && pfad !== "/api/health")
+    // Der Kalender-Feed muss ebenfalls durch den Vorhang, aus demselben Grund wie die
+    // Gesundheitsprobe: ein Kalenderprogramm, das die schwarze Seite bekommt, meldet
+    // keinen Fehler — es zeigt einen LEEREN Kalender. Abonniert und still, und der Nutzer
+    // merkt es erst, wenn er eine Frist verpasst hat. Er verraet nichts: ohne gueltigen
+    // Token gibt die Route 404.
+    if (!unlocked && !vorhangAuf && !pfad.startsWith("/auth/") && pfad !== "/api/health"
+        && !pfad.startsWith("/api/calendar/"))
       return blackPage();
     // Schlüssel gültig → volle App; bei frischem ?preview den Cookie setzen (Folgeseiten ohne Query).
     const { response: res, email } = await updateSession(request);

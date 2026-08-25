@@ -1419,13 +1419,24 @@ def test_offene_endpunkte_haben_eine_bremse():
     for pfad in offen:
         if pfad in ausnahmen:
             continue
-        datei = ROOT / "web" / "app" / pfad.lstrip("/") / "route.ts"
-        if not datei.exists():
+        basis = ROOT / "web" / "app" / pfad.lstrip("/")
+        dateien = [basis / "route.ts"] if (basis / "route.ts").exists() else []
+        # ⚠ EINE OFFENE ROUTE KANN EINEN DYNAMISCHEN ABSCHNITT TRAGEN. Der iCal-Feed liegt
+        # unter `api/calendar/[token]/route.ts`; gesucht wurde nur `api/calendar/route.ts`.
+        # Der Waechter meldete deshalb „Route nicht gefunden" fuer eine Route, die es gibt —
+        # und die Bremse, nach der er sucht, hat er nie gelesen. Fuer den naechsten offenen
+        # `/api/…/[id]`-Endpunkt waere es genauso ausgegangen.
+        if not dateien and basis.is_dir():
+            dateien = [d / "route.ts" for d in sorted(basis.iterdir())
+                       if d.is_dir() and d.name.startswith("[") and d.name.endswith("]")
+                       and (d / "route.ts").exists()]
+        if not dateien:
             ohne.append(f"{pfad}: Route nicht gefunden")
             continue
-        text = datei.read_text(encoding="utf-8")
-        if "bremse(" not in text and "rateLimit(" not in text:
-            ohne.append(f"{pfad}: keine Bremse")
+        for datei in dateien:
+            text = datei.read_text(encoding="utf-8")
+            if "bremse(" not in text and "rateLimit(" not in text:
+                ohne.append(f"{datei.relative_to(ROOT / 'web' / 'app')}: keine Bremse")
     assert not ohne, "offene Endpunkte ohne Ratenbremse:\n  " + "\n  ".join(ohne)
 
 
