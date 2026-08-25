@@ -323,6 +323,10 @@ def parse_publication(rec: dict) -> dict[str, list[dict]]:
         "year": pubdate.year if pubdate else None,
         "month": pubdate.month if pubdate else None,
         "schema_gen": "simap",
+        # ⚠ Leere Listen, nicht NULL — s. `atverg.py`. `len(NULL) > 0` ergibt NULL und
+        # nicht FALSE; die Zeile faellt dann aus jeder Zaehlung heraus, statt mit null
+        # Marken dazustehen.
+        "flags": [], "unknown_country_codes": [],
         "form_type": pubtype, "notice_kind": _KIND.get(pubtype, pubtype),
         "language": base.get("creationLanguage"),
         "title": title, "description": desc,

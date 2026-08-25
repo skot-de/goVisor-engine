@@ -164,7 +164,11 @@ def build_silver(cfg: Config, country: str = "AT", force: bool = False) -> int:
              {_D.format(c='"endzeitpunkt / erfüllungszeitpunkt"')} AS "end_date",
              CAST(NULL AS BIGINT) AS "lot_count", CAST(length(coalesce(beschreibung,'')) AS BIGINT) AS "text_chars",
              CAST(NULL AS VARCHAR) AS "ref_publication_number", CAST(NULL AS VARCHAR) AS "ref_ted_url",
-             CAST(NULL AS VARCHAR[]) AS "flags", CAST(NULL AS VARCHAR[]) AS "unknown_country_codes"
+             -- ⚠ LEERE LISTE, NICHT NULL. `dtvp` und `cosinex` schreiben hier `[]`;
+             -- NULL bedeutet in SQL etwas anderes: `len(NULL) > 0` ist NULL und nicht
+             -- FALSE, die Zeile faellt also aus jeder Zaehlung heraus statt mit null
+             -- Marken dazustehen (s. `cli.py`, Befehl `review`).
+             CAST([] AS VARCHAR[]) AS "flags", CAST([] AS VARCHAR[]) AS "unknown_country_codes"
       FROM src WHERE id IS NOT NULL
     """
 

@@ -237,8 +237,14 @@ def cmd_review(args) -> int:
     try:
         import duckdb
         glob = cfg.silver_table_glob("notices", "DE")
+        # ⚠ `coalesce`, weil drei Connectoren `flags` als NULL schreiben statt als leere
+        # Liste (atverg, simap, healyhudson — zusammen 272.501 Zeilen, gemessen
+        # 2026-08-25). `len(NULL) > 0` ergibt NULL, nicht FALSE: die Zeilen fielen aus
+        # der Zaehlung, und „0 Marken" las sich wie „nichts zu beanstanden" statt wie
+        # „dieser Connector setzt gar keine Marken". Die Erzeuger sind mitgezogen, aber
+        # der Bestand traegt die NULL bis zum naechsten Silber-Neubau.
         kept_flagged = duckdb.sql(
-            f"SELECT count(*) FROM '{glob}' WHERE len(flags) > 0"
+            f"SELECT count(*) FROM '{glob}' WHERE len(coalesce(flags, [])) > 0"
         ).fetchone()[0]
     except Exception:
         pass

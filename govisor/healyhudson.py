@@ -321,6 +321,10 @@ def nach_silber(satz: dict, laender: list[str] | None = None) -> dict[str, list[
         "year": pub.year if pub else None,
         "month": pub.month if pub else None,
         "schema_gen": "healyhudson",
+        # ⚠ Leere Listen, nicht NULL — s. `atverg.py`. Ohne sie stehen diese Saetze mit
+        # `flags IS NULL` in Silber, und `len(NULL) > 0` schliesst sie lautlos aus jeder
+        # Zaehlung aus, statt sie mit null Marken zu zeigen.
+        "flags": [], "unknown_country_codes": [],
         "notice_kind": "cn",             # offene Ausschreibung mit Frist, kein Zuschlag
         "language": "de",   # ISO-639-1 klein — `languages.normalize`, nicht "DE"
         "title": titel,
