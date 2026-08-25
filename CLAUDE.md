@@ -268,20 +268,27 @@ CLI: `python -m govisor.cli {ingest|silver|gold|verify|review}`.
   Fairness-Regler. Basis `value_real_2020`. **7-Band-Pricing-Schema** (`_band_sql`, Grenzen 100k/250k/500k/
   1,3M/5M/25M, an den Wert-Perzentilen) — bewusst getrennt vom KPI-`value_band` (5 Bänder). Default-Band
   `250-500k`.
-- **`govisor/pricing.py`:** gebaute Staffel — **reines Flat-per-Band** (7 Stufen, Pauschalen verdoppeln
-  sich: `<100k`=600 / `100-250k`=1.200 / `250-500k`=2.400 / `500k-1,3M`=4.800 / `1,3-5M`=9.600 /
-  `5-25M`=15.000 / `>25M`=25.000 €). `imputiert`/`default` → ×0,8. `SCHEDULE` + `fee(band,source,value)`;
-  Keys = exakt `_band_sql`-Labels. `python -m govisor.pricing` → Verteilung an 75.014 Leads (Ø ~3.210 €/Lead;
-  Summe ~241 Mio. € = Obergrenze bei 100 % Gewinn). **Warum Flat statt %:** Wert-Schätzung trifft nur ~42 %
-  das richtige Band (gemessen) → % auf geratenen Wert nicht verteidigbar; abrechnen auf echtem Wert (65 %),
-  Rest via Kunden-Bestätigung. Mechanik: [`docs/pricing-modell.md`]; Marktvalidierung: [[govisor-pricing-research]].
-  **Offen (Business):** finale Beträge, Rabatt-Faktor, Attributions-/Rechnungs-Mechanik (s. Ticket-06-v2).
+- **⚠️ `govisor/pricing.py` GIBT ES NICHT MEHR** — gelöscht am 2026-08-17 mit der Erfolgsgebühr
+  (Commit `dd1f290`, zusammen mit `tests/test_pricing.py`, `web/lib/billing.ts` und den
+  Billing-Routen). Hier stand bis zum 2026-08-25 ein Absatz, der `SCHEDULE`,
+  `fee(band,source,value)` und einen Aufruf `python -m govisor.pricing` beschrieb, als
+  wären sie da. Wer danach sucht, sucht acht Tage lang ins Leere — und CLAUDE.md ist die
+  Datei, die jede neue Sitzung als Erstes liest.
+  **Was geblieben ist:** die 7 Bandgrenzen (100k/250k/500k/1,3M/5M/25M) in
+  `gold._band_sql` — die einzige Quelle der Labels, seit `pricing.SCHEDULE` weg ist —
+  und die Beträge als Geschäftsentscheidung in [`docs/pricing-modell.md`]
+  (`<100k`=600 / `100-250k`=1.200 / `250-500k`=2.400 / `500k-1,3M`=4.800 / `1,3-5M`=9.600 /
+  `5-25M`=15.000 / `>25M`=25.000 €, `imputiert`/`default` → ×0,8). Sie sind Text, kein Code.
+  **Warum Flat statt %:** Wert-Schätzung trifft nur ~42 % das richtige Band (gemessen) → %
+  auf geratenen Wert nicht verteidigbar; abrechnen auf echtem Wert (65 %), Rest via
+  Kunden-Bestätigung. Marktvalidierung: [[govisor-pricing-research]].
+  **Offen (Business):** finale Beträge, Rabatt-Faktor, Attributions-/Rechnungs-Mechanik.
 - **`award_tender_link` (`gold.build_award_tender_link`):** Zuschlag↔Ausschreibung via `ref_publication_number`
   (373k Links, 0 Dup je Award, gap-Median 114 T). Fundament für Attribution (#6) + Award-Alerts (#9). FK-geprüft.
 - **`value_anchor` (`gold.build_value_anchor`):** Wert-**Wächter** je Zuschlag fürs Billing (#6) — Waterfall
   Ausschreibungssumme→Vorgänger→Buyer×CPV→Buyer→CPV, **nominal**. Kein Orakel (Schätzung ~42 % exakt), sondern
   Lowball-Plausibilitätscheck (~68 % ±1) gegen Kunden-Selbstauskunft. 98 % Abdeckung (96 % im wertlosen Drittel).
-  `anchor_band`-Labels = `pricing.SCHEDULE`-Keys. **Billing-Regel:** echt=Fakt, sonst Kunde bestätigt + Anker-Flag
+  `anchor_band`-Labels = `gold._band_sql`-Labels (früher `pricing.SCHEDULE`, s. o.). **Billing-Regel:** echt=Fakt, sonst Kunde bestätigt + Anker-Flag
   bei ≥2 Bänder-Abweichung → HITL. Roadmap/Reifegrad: [`docs/v1-gap-analysis.md`].
 - **`lead_deadline` (`gold.build_lead_deadline`):** Angebotsfrist je offener Ausschreibung (`cn`/`pin`) — der
   **primäre Timing-Alert** (#9-Flip). 861k Zeilen, **0 NULL** (63 % echt `submission_deadline`, Rest geschätzt aus

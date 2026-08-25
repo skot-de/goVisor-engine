@@ -14,6 +14,9 @@ pytest.importorskip("duckdb")
 import duckdb  # noqa: E402
 
 G = "data/gold/DE"
+# Die Bandbeschriftungen aus `gold._band_sql`. Sie standen frueher auch in
+# `pricing.SCHEDULE`; das Modul ist am 2026-08-17 mit der Erfolgsgebuehr geloescht
+# worden, `_band_sql` ist seither die einzige Quelle und diese Liste ihr Gegenstueck.
 PRICING_BANDS = {"<100k", "100-250k", "250-500k", "500k-1,3M", "1,3-5M", "5-25M", ">25M"}
 
 
@@ -36,7 +39,8 @@ def test_value_anchor_bands_are_valid_pricing_bands():
     bands = {r[0] for r in con.execute(
         f"SELECT DISTINCT anchor_band FROM read_parquet('{G}/value_anchor.parquet') "
         f"WHERE anchor_source <> 'none'").fetchall()}  # ohne Anker -> 'unbekannt', legitim
-    # anchor_band muss exakt zu pricing.SCHEDULE passen (sonst greift der Waechter ins Leere)
+    # anchor_band muss exakt zu `gold._band_sql` passen — sonst zeigt die Wert-Ampel im
+    # Lead-Detail ein Band an, das das Frontend nicht kennt.
     assert bands <= PRICING_BANDS, f"unerwartete Bänder: {bands - PRICING_BANDS}"
 
 

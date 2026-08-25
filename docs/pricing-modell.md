@@ -7,7 +7,12 @@
 
 > Dieses Dokument beschreibt die **Mechanik** des Preismodells. Die konkreten
 > Beträge/Prozente sind bewusst offen und als „aktueller Vorschlag" markiert —
-> sie sind reine Konfiguration (`govisor/pricing.py`) und jederzeit kalibrierbar.
+> sie sind reine Konfiguration und jederzeit kalibrierbar.
+>
+> ⚠️ **Stand 2026-08-25: es gibt keinen Code dazu.** `govisor/pricing.py` wurde am
+> 2026-08-17 mit der Erfolgsgebühr gelöscht (Commit `dd1f290`). Die Beträge unten sind
+> seither eine Geschäftsentscheidung auf Papier; im Code stehen nur noch die
+> Bandgrenzen in `gold._band_sql`.
 
 ---
 
@@ -64,7 +69,8 @@ konservativer ab (×0,8, s. §5).
 
 ## 4. Die Staffel (gebaut — Beträge als V1-Default)
 
-> **Status:** in Code umgesetzt (`gold._band_sql` + `pricing.SCHEDULE`, 90 Tests grün,
+> **Status:** die BANDGRENZEN sind in Code umgesetzt (`gold._band_sql`), die Beträge
+> nicht mehr (`pricing.SCHEDULE` gelöscht 2026-08-17). Stand damals: 90 Tests grün,
 > FK sauber). Die Beträge sind der V1-Default und bleiben Business-kalibrierbar.
 
 Stufengrenzen **datengetrieben** an den echten Perzentilen der Auftragswerte
@@ -105,8 +111,9 @@ if band_source in ('imputiert', 'default'):
 Fairness bei geschätzten Werten: wo wir den Wert nur geraten haben, rechnen wir
 20 % günstiger ab. Reiner Regler, frei einstellbar.
 
-Implementierung: `govisor/pricing.py` (`SCHEDULE` + `fee(band, source, value)`),
-Tests in `tests/test_pricing.py`. Runner `python -m govisor.pricing` rechnet die
+Implementierung: **gelöscht** — `govisor/pricing.py` (`SCHEDULE` + `fee(band, source,
+value)`) und `tests/test_pricing.py` gingen am 2026-08-17 mit der Erfolgsgebühr.
+Die folgende Beschreibung ist der Stand von davor. Der Runner `python -m govisor.pricing` rechnete die
 Verteilung an den echten Leads durch.
 
 ---

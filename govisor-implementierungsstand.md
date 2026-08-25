@@ -84,7 +84,10 @@ l.eigen real verdrahtet · profile_type-Anker · Rahmenvertrag-Bewertungssignal 
 
 Die Bausteine, an denen ein Preismodell andockt — was die Datenlage **wirklich** hergibt:
 
-- **Pricing-Staffel gebaut** (`govisor/pricing.py`): reines **Flat-per-Band**, 7 Stufen, Pauschalen verdoppeln sich — `<100k`=600 / `100–250k`=1.200 / `250–500k`=2.400 / `500k–1,3M`=4.800 / `1,3–5M`=9.600 / `5–25M`=15.000 / `>25M`=25.000 €. `imputiert`/`default` → ×0,8.
+- **⚠️ Pricing-Staffel: kein Code mehr.** `govisor/pricing.py` wurde am 2026-08-17 mit
+  der Erfolgsgebühr gelöscht (Commit `dd1f290`); im Code stehen nur noch die Bandgrenzen
+  in `gold._band_sql`. Die Beträge sind seither eine Geschäftsentscheidung auf Papier —
+  reines **Flat-per-Band**, 7 Stufen, Pauschalen verdoppeln sich — `<100k`=600 / `100–250k`=1.200 / `250–500k`=2.400 / `500k–1,3M`=4.800 / `1,3–5M`=9.600 / `5–25M`=15.000 / `>25M`=25.000 €. `imputiert`/`default` → ×0,8.
 - **Warum Flat statt %:** Wert-Schätzung trifft nur **~42 %** das richtige Band (gemessen) → Prozent auf geratenen Wert ist nicht verteidigbar. Abgerechnet wird auf echtem Wert (**~65 %** publiziert), der Rest via Kunden-Bestätigung.
 - **Gebühren-Basis nie „unbekannt"** (`value_band_effektiv`): echter Wert 37 % / geschätzt 5 % / CPV-Median-imputiert 52 % / default 6 %, mit `band_source` als Fairness-Regler.
 - **Erfolgsprämie — GESTRICHEN am 2026-08-21.** Sie war nie scharf (kein Rechnungslauf, kein Provider-Key) und versprach Nutzern in einem Dutzend Texten eine Abrechnung, die es nicht gab. Code entfernt, Schema räumt `supabase/0012_erfolgspraemie_entfernen.sql`. Was vom Unterbau übrig ist und heute niemand liest: `value_anchor` (Wert-Schätzer, ~42 % exakt) und `award_tender_link` (Attribution, wird anderweitig gebraucht).
@@ -92,4 +95,12 @@ Die Bausteine, an denen ein Preismodell andockt — was die Datenlage **wirklich
 - **Free/Pro:** kostenlos = Liste + Basisdaten + Netzwerkteilnahme (Dichte/Vertrauen); bezahlt = Wettbewerbssicht, Strategie, Export, Fristen. Strategie ist rein Pro-gegated (sektionsweise), verbraucht keine Analysen.
 - **Offen (Business, nicht Technik):** finale Beträge, Rabatt-Faktor, Attributions-/Rechnungs-Mechanik. Marktvalidierung liegt in der Pricing-Research-Notiz.
 
-> Quelle der Zahlen: lokales Parquet/DuckDB (`docs/pricing-modell.md`, `docs/entscheidungen-und-kontext.md`). In Supabase liegt nur ein Entwicklungs-Sample — dort zählen heißt das Sample zählen.
+> Quelle der Zahlen: lokales Parquet/DuckDB (`docs/pricing-modell.md`, `docs/entscheidungen-und-kontext.md`).
+>
+> ⚠️ **Der Satz „In Supabase liegt nur ein Entwicklungs-Sample“ stand hier und war
+> falsch.** Der Tageslauf schob zweimal täglich den VOLLEN Bestand hoch, bis am
+> 2026-08-16 787 MB bei 500 MB Free-Limit standen. Seither sind die `gov_*`-Tabellen
+> **absichtlich leer** und der Push liegt hinter `GOVISOR_SUPABASE_GOV_PUSH=1`
+> (Vorgabe: aus) — sie liest ohnehin niemand, das Frontend holt seine Leads aus
+> `web/data/*.json`. Gezählt werden kann nur lokal. Einzelheiten in CLAUDE.md,
+> Abschnitt „lokal entwickeln, Supabase ist Deploy-Ziel“.

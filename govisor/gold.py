@@ -4980,8 +4980,14 @@ def build_cpv_adjacency(cfg: Config, country: str = "DE", since_year: int = 2016
 def _band_sql(col: str) -> str:
     # 7-Stufen-Pricing-Schema, Grenzen an den echten Wert-Perzentilen (p20/p40/p60/p80
     # ~ 100k/250k/500k/1,3M) + Rahmen-Splits bei 5M/25M. NUR fuer die Gebuehren-Basis
-    # value_band_effektiv — bewusst getrennt vom KPI-value_band (5 Baender). Labels =
-    # exakt die Keys in pricing.SCHEDULE.
+    # value_band_effektiv — bewusst getrennt vom KPI-value_band (5 Baender).
+    #
+    # ⚠ DIESE FUNKTION IST DIE QUELLE DER LABELS. Hier stand „Labels = exakt die Keys in
+    # pricing.SCHEDULE" — `govisor/pricing.py` ist aber am 2026-08-17 mit der Erfolgs-
+    # gebuehr geloescht worden (Commit dd1f290). Der Verweis zeigte also acht Tage lang auf
+    # eine Datei, die es nicht gibt. Wer die Bandgrenzen aendert, aendert sie HIER und
+    # zieht `tests/test_plumbing.py::PRICING_BANDS` nach; eine dritte Stelle gibt es nicht
+    # mehr.
     return (f"CASE WHEN {col} IS NULL THEN 'unbekannt' "
             f"WHEN {col}<100000 THEN '<100k' WHEN {col}<250000 THEN '100-250k' "
             f"WHEN {col}<500000 THEN '250-500k' WHEN {col}<1300000 THEN '500k-1,3M' "
