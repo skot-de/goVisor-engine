@@ -41,7 +41,16 @@ ROOT="$(pwd)"
 PY=/Library/Frameworks/Python.framework/Versions/3.14/bin/python3
 [ -x "$PY" ] || PY=python3
 LOCK="$ROOT/data/.daily_leads.lock"
-EIGEN="$ROOT/data/.dokumente_arbeiter.lock"
+# ⚠ SPERRE AUF DIE INTERNE PLATTE. `data` ist ein Symlink auf ein externes Volume, und
+# macOS vergibt den Zugriff darauf JE PROGRAMM: aus dem Terminal gestartet darf dieses
+# Skript dort schreiben, als launchd-Dienst nicht. Beim Analyse-Arbeiter ist genau das am
+# 2026-08-25 aufgeflogen — er lief seit dem Vorabend OHNE Sperre, weil `echo $$ > …` mit
+# „Operation not permitted" auf stderr scheiterte und das Skript einfach weitermachte.
+# Dass es hier bisher funktionierte, lag daran, dass dieser Arbeiter aus einer Terminal-
+# Sitzung geladen wurde und deren Zugriffsrecht geerbt hat — derselbe Zufall wie bei `$PY`
+# eine Zeile weiter oben, und derselbe stumme Ausfall nach einem Maschinen-Neustart.
+EIGEN="${GOVISOR_DOKUMENTE_LOCK:-$HOME/Library/Caches/eu.govisor/dokumente_arbeiter.lock}"
+mkdir -p "$(dirname "$EIGEN")"
 LOG="$ROOT/data/logs/dokumente-arbeiter.log"
 
 # ⚠ Die Daten liegen auf einer EXTERNEN Platte (data → /Volumes/goVisor). Ist sie nicht
@@ -56,11 +65,26 @@ mkdir -p "$(dirname "$LOG")"
 
 # Nur EIN Arbeiter. Ohne das startet launchd nach einem Absturz einen zweiten daneben,
 # und zwei Abrufer am selben Portal sind der schnellste Weg zu einer Sperre.
-if [ -e "$EIGEN" ] && kill -0 "$(cat "$EIGEN" 2>/dev/null)" 2>/dev/null; then
-  echo "Ein Arbeiter läuft bereits (PID $(cat "$EIGEN"))." ; exit 0
+#
+# ⚠ ZWEI RIEGEL, s. analyse_arbeiter.sh. Der erste ist die Prozessliste: sie luegt nicht,
+# auch wenn eine Sperrdatei verlorengegangen ist. Der zweite ist ein VERZEICHNIS statt
+# einer Datei — `mkdir` ist atomar, `[ -e ] && echo >` laesst zwei gleichzeitige Starts
+# durch. Und der Trap raeumt nur die EIGENE Sperre weg: ein spaet sterbender Vorgaenger
+# nahm sonst die des Nachfolgers mit.
+_andere="$(pgrep -f 'dokumente_arbeiter\.sh' 2>/dev/null | grep -v "^$$\$" | head -1)"
+if [ -n "$_andere" ]; then
+  echo "Ein Arbeiter läuft bereits (PID $_andere)." ; exit 0
 fi
-echo $$ > "$EIGEN"
-trap 'rm -f "$EIGEN"' EXIT
+if ! mkdir "$EIGEN" 2>/dev/null; then
+  _alt="$(tr -d '[:space:]' < "$EIGEN/pid" 2>/dev/null)"
+  if [ -n "$_alt" ] && kill -0 "$_alt" 2>/dev/null; then
+    echo "Ein Arbeiter läuft bereits (PID $_alt)." ; exit 0
+  fi
+  echo "Verwaiste Sperre (PID '${_alt:-?}' läuft nicht) — übernommen."
+  rm -rf "$EIGEN" && mkdir "$EIGEN" || { echo "Sperre nicht übernehmbar." >&2; exit 75; }
+fi
+echo $$ > "$EIGEN/pid"
+trap 'if [ "$(tr -d "[:space:]" < "$EIGEN/pid" 2>/dev/null)" = "$$" ]; then rm -rf "$EIGEN"; fi' EXIT
 
 sag() { echo "[$(date '+%d.%m. %H:%M')] $*" | tee -a "$LOG"; }
 
