@@ -16,7 +16,6 @@ Aufruf::
 from __future__ import annotations
 
 import json
-import sys
 from pathlib import Path
 
 import duckdb
@@ -59,16 +58,35 @@ def main() -> int:
     zips = {d.name for d in (ROOT / "data/docs/DE").iterdir()
             if d.is_dir() and any(d.glob("*.zip"))} if (ROOT / "data/docs/DE").exists() else set()
 
-    stufen = [("offene Leads", offen), ("mit Unterlagen-Link", mit_link),
-              ("ZIP geholt", offen & zips), ("Signale", offen & lade("doc-signals")),
-              ("Volltext", offen & lade("doc-text")), ("LLM-Analyse", offen & lade("doc-analysis"))]
+    # ⚠ DIE KETTE ENDET AM VOLLTEXT — danach zweigt sie sich. Bis zum 2026-08-25 stand
+    # hier eine Reihe von sechs Stufen, jede als Prozent „der Stufe davor". Zwei Fehler
+    # in einer Zeile:
+    #
+    #   1. Signale standen VOR dem Volltext, obwohl `signals-docs` genau den liest, den
+    #      `index-docs` vorher schreibt. Ergebnis: „Volltext 102 % der Stufe davor" —
+    #      eine Stufe, die mehr enthaelt als die, aus der sie hervorgeht.
+    #   2. Auch richtig sortiert bleibt es falsch: Signale und LLM-Analyse sind
+    #      GESCHWISTER, keine Folge. Beide lesen `doc_text.parquet`, keiner den anderen.
+    #      Gemessen am 25.08.: 90 Vorgaenge haben eine Auswertung ohne Signale — kein
+    #      Defekt, sondern zwei Wege, die verschieden viel finden.
+    #
+    # Ein Trichter, der Geschwister uebereinanderstapelt, laesst genau dort suchen, wo
+    # nichts fehlt — dieselbe Falle, vor der der Docstring von `lade()` oben warnt.
+    volltext = offen & lade("doc-text")
+    kette = [("offene Leads", offen), ("mit Unterlagen-Link", mit_link),
+             ("ZIP geholt", offen & zips), ("Volltext", volltext)]
+    zweige = [("Signale", offen & lade("doc-signals")),
+              ("LLM-Analyse", offen & lade("doc-analysis"))]
     print("\n  Dokumenten-Trichter (offene Leads):")
     vor = None
-    for name, s in stufen:
+    for name, s in kette:
         n = len(s)
         anteil = f"  {n/vor:>5.0%} der Stufe davor" if vor else ""
         print(f"    {name:<22}{n:>7,}{anteil}")
         vor = n or 1
+    basis = len(volltext) or 1
+    for name, s in zweige:
+        print(f"    ├ {name:<20}{len(s):>7,}  {len(s)/basis:>5.0%} des Volltexts")
 
     # ⚠ `token_cost` sind TOKEN, keine Dollar.
     #
@@ -95,10 +113,21 @@ def main() -> int:
     kosten = summe / 1e6 * PREIS_JE_MIO_EINGABE
     print(f"\n  Analysiert: {len(d):,} Vorgaenge · {summe/1e6:.1f} Mio Token "
           f"· ~{kosten:.2f} $ (Eingabe, {PREIS_JE_MIO_EINGABE} $/Mio)")
-    rest = len(zips - set(d))
-    if rest and tok:
-        hoch = rest * (summe / len(tok)) / 1e6 * PREIS_JE_MIO_EINGABE
-        print(f"  Noch offen: {rest:,} Vorgaenge → hochgerechnet ~{hoch:.0f} $")
+    # ⚠ ZWEI ZAHLEN, WEIL NUR EINE DAVON BEZAHLT WIRD. Hier stand bis zum 2026-08-25
+    # allein `len(zips - d)` — also JEDER Vorgang mit ZIP ohne Auswertung, samt
+    # abgelaufener Frist. Der Produktionslauf faehrt aber mit `NUR_OFFENE=1` und ruehrt
+    # die abgelaufenen nie an (die Vorgabe kam am 21.08. dazu, nachdem 350 $ genau dafuer
+    # ausgegeben waren). Eine Hochrechnung ueber Arbeit, die niemand machen wird, ist
+    # eine Zahl, die nur erschreckt.
+    rest_offen = len(offen & zips - set(d))
+    rest_zu = len(zips - set(d)) - rest_offen
+    if tok:
+        je = summe / len(tok) / 1e6 * PREIS_JE_MIO_EINGABE
+        print(f"  Noch offen: {rest_offen:,} Vorgaenge mit laufender Frist "
+              f"→ hochgerechnet ~{rest_offen * je:.2f} $")
+        if rest_zu:
+            print(f"  Dazu {rest_zu:,} mit abgelaufener Frist (~{rest_zu * je:.2f} $) — "
+                  f"die faehrt der Lauf mit NUR_OFFENE=1 nicht an.")
     print("  Die Ausgabe-Token kommen dazu; sie sind hier NICHT enthalten, weil das "
           "Ergebnis sie nicht mitschreibt.")
 
