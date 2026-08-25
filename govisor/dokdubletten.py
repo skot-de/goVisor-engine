@@ -243,3 +243,59 @@ def items_vom_master(fertig: dict, master_id: str, master_file: str,
     if not treffer:
         return None
     return [{**i, "source_file": source_file, "aus_dublette": True} for i in treffer]
+
+
+def main(argv=None) -> int:
+    """Paare neu bilden und ablegen — der Aufruf, den es bis zum 2026-08-25 nicht gab.
+
+    ⚠ **Gebaut und nicht verdrahtet, der Klassiker dieses Projekts.** `finde()` und
+    `schreibe()` standen seit dem 22.08. fertig da und wurden von **niemandem** gerufen:
+    nicht vom Tageslauf, nicht von der CLI, nicht von einem der Arbeiter. Das Ergebnis
+    `document_duplicates.parquet` stammte aus einem Handlauf vom 22.08. um 19:18 und
+    alterte seither vor sich hin, waehrend `analyze_docs.py` es Runde fuer Runde einlas —
+    mit unveraendert „449 ueber Master" im Log, Tag fuer Tag dieselbe Zahl.
+
+    Aufgefallen ist es nicht beim Lesen, sondern weil Sonde 1 der Verdrahtungspruefung die
+    Testsuite rot gemacht hat. Genau dafuer gibt es sie.
+
+    Aufruf::
+
+        python3 -m govisor.dokdubletten --country DE
+    """
+    import argparse
+
+    ap = argparse.ArgumentParser(description="Dokument-Dubletten: gleiche Datei, ein Master")
+    ap.add_argument("--country", default="DE")
+    ap.add_argument("--trocken", action="store_true", help="nur zaehlen, nichts schreiben")
+    a = ap.parse_args(argv)
+
+    paare = finde(a.country)
+    if not paare:
+        # ⚠ NICHT SCHWEIGEN und NICHT die alte Datei stehen lassen, ohne es zu sagen.
+        # Ohne Textindex gibt es nichts zu vergleichen — das ist etwas anderes als
+        # „keine Dubletten gefunden", und wer es verwechselt, sucht am falschen Ende.
+        src = ROOT / "data" / "docs" / a.country / "doc_text.parquet"
+        if not src.exists():
+            print(f"  Kein Textindex fuer {a.country} ({src.name} fehlt) — nichts zu tun.")
+        else:
+            print("  Keine Dokument-Dubletten gefunden.")
+        return 0
+
+    if a.trocken:
+        print(f"  {len(paare):,} Paare (trocken — nichts geschrieben)")
+        return 0
+
+    ziel = schreibe(paare, a.country)
+    je_typ = collections.Counter(p["doctype"] for p in paare)
+    master = len({(p["master_id"], p["master_file"]) for p in paare})
+    print(f"\n  {len(paare):,} Dokument-Dubletten ueber {master:,} Master")
+    for k, n in je_typ.most_common():
+        print(f"    {k:<22} {n:>7,}")
+    print(f"\n→ {ziel.relative_to(ROOT)}")
+    return 0
+
+
+if __name__ == "__main__":
+    import sys
+
+    sys.exit(main())

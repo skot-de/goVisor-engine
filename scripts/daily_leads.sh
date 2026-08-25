@@ -722,6 +722,27 @@ if ! $PY -m govisor.cli gold --country DE --as-of "$TODAY"; then
 fi
 echo "  Gold ok."
 
+# ⚠ ZWEITER SCHRITT, DER NIE GERUFEN WURDE — und dieser hier ist noch nie gelaufen.
+#
+# `govisor/retender_link.py` verknuepft chronisch erfolglose Bedarfe („diese Vergabestelle
+# sucht zum vierten Mal") mit den offenen Leads. Sven hat genau danach am 2026-08-16
+# gefragt; das Modul wurde daraufhin gebaut — und nie verdrahtet. `lead_retender.parquet`
+# gab es in KEINEM Land: nicht veraltet, sondern nie entstanden. Sonde 1 der
+# Verdrahtungspruefung konnte es deshalb nicht melden, sie misst das Alter VORHANDENER
+# Dateien.
+#
+# Erster Lauf ueberhaupt (2026-08-25, DE): 2.464 chronische Bedarfe, 14.470 offene Leads,
+# 11 Verknuepfungen. 0,2 s.
+#
+# ⚠ ES LIEST NOCH NIEMAND. Der Erzeuger laeuft ab hier, der Verbraucher fehlt — die Datei
+# kommt in keinem Frontend-Export vor. Das ist eine offene Produktfrage, kein Defekt, und
+# sie steht ausdruecklich hier, statt still zu bleiben.
+#
+# NACH dem Gold-Rebuild: gelesen werden `retender_signal` und `lead_export`, beides Gold.
+step "Zweitversuch-Kennzeichnung (chronische Bedarfe → offene Leads)"
+$PY -m govisor.retender_link --country DE \
+  || echo "  ⚠ lead_retender nicht gebaut — die Zweitversuch-Marke bleibt auf altem Stand."
+
 # ══ AB HIER: BESCHAFFUNG ═════════════════════════════════════════════════════════════
 # Alles zwischen dieser Marke und der Auswertung weiter unten ist nach oben offen und
 # teilt sich EINEN Topf: was nach Abzug von ERNTE_RESERVE uebrig bleibt. Die Marke statt
@@ -925,6 +946,29 @@ else
     rm -rf "$_IXLOCK"
   fi
 fi
+# ⚠ DIESER SCHRITT HAT GEFEHLT — gebaut am 2026-08-22, gerufen von niemandem.
+#
+# `govisor/dokdubletten.py` bildet Paare „dieselbe Datei, ein Master", damit ein
+# Standardformular EINMAL ausgewertet wird statt in jeder Vergabe erneut. Der Code stand
+# fertig da, die CLI kannte ihn nicht, der Tageslauf auch nicht. `document_duplicates.parquet`
+# stammte deshalb aus einem Handlauf vom 22.08. um 19:18 und lag drei Tage still, waehrend
+# `analyze_docs.py` es jede Runde einlas — im Log Tag fuer Tag dieselben „449 ueber Master".
+# Nachgemessen am 25.08.: es waeren **3.687** Paare gewesen, also rund 3.200 Dokumente, die
+# seither erneut ans Modell gingen, obwohl ihr Ergebnis schon vorlag.
+#
+# Gefunden hat es Sonde 1 der Verdrahtungspruefung (sie laeuft unten am Ende dieses Laufs)
+# — nicht ein Blick in den Code. Genau dafuer gibt es sie.
+#
+# ⚠ REIHENFOLGE: NACH `index-docs`. Die Paare entstehen aus `doc_text.parquet`; wer sie vor
+# dem Index bildet, vergleicht den Bestand von gestern.
+#
+# NUR DE, und das ist belegt, nicht vergessen: AT und CH haben 0 % Dokumentabdeckung
+# (s. `docs/laender/03-input-dokumente.md`). Das Modul sagt es selbst, wenn kein Textindex
+# da ist, statt still nichts zu tun — ein Land, das Unterlagen bekommt, kommt hier dazu.
+step "Dokument-Dubletten (gleiche Datei → ein Master)"
+$PY -m govisor.dokdubletten --country DE \
+  || echo "  ⚠ Dokument-Dubletten nicht neu gebildet — die Analyse zahlt Wiederholungen erneut."
+
 step "Unterlagen auswerten → Anforderungs-Signale"
 if $PY -m govisor.cli signals-docs; then
   $PY scripts/export_doc_signals.py || echo "  ⚠ doc-signals.json nicht geschrieben."

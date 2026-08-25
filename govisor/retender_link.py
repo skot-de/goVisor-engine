@@ -131,3 +131,40 @@ def verknuepfe(cfg, country: str = "DE", schreiben: bool = True) -> dict:
     print(f"retender_link {country}: {len(treffer):,} offene Leads sind ein Zweitversuch "
           f"(von {len(leads):,} offenen, {len(bedarfe):,} chronische Bedarfe)")
     return ergebnis
+
+
+def main(argv=None) -> int:
+    """Aufruf von Hand und aus dem Tageslauf — den es bis zum 2026-08-25 nicht gab.
+
+    ⚠ **Dieses Modul ist NIE GELAUFEN.** Es war vollstaendig gebaut, mit Docstring und
+    Begruendung, und wurde von niemandem gerufen: keine CLI, kein Tageslauf, kein Skript.
+    `lead_retender.parquet` existierte in KEINEM Land — nicht veraltet, sondern nie
+    entstanden. Deshalb konnte auch die Verdrahtungspruefung nichts melden: Sonde 1 misst
+    das Alter vorhandener Dateien, und eine Datei, die es nie gab, hat kein Alter.
+
+    Gemessen beim ersten Lauf ueberhaupt (2026-08-25, DE): 2.464 chronische Bedarfe,
+    14.470 offene Leads, **11 Verknuepfungen**. Es funktioniert, die Ausbeute ist bei
+    JACCARD_MIN = 0.55 aber klein — wer sie heben will, faengt bei der Schwelle an.
+
+    ⚠ **Und es liest immer noch niemand.** Der Erzeuger ist ab heute verdrahtet, der
+    Verbraucher fehlt: `lead_retender.parquet` kommt in keiner Frontend-Datei vor. Das ist
+    eine Produktentscheidung (`web/`), keine Aufraeumarbeit — sie steht hier als offener
+    Punkt, damit sie nicht wieder unsichtbar wird.
+    """
+    import argparse
+
+    from .config import Config
+
+    ap = argparse.ArgumentParser(description="Zweitversuch-Kennzeichnung je offenem Lead")
+    ap.add_argument("--country", default="DE")
+    ap.add_argument("--trocken", action="store_true",
+                    help="nur messen, nichts schreiben (wenn ein anderer Lauf nach data/ schreibt)")
+    a = ap.parse_args(argv)
+    verknuepfe(Config(countries=(a.country,)), a.country, schreiben=not a.trocken)
+    return 0
+
+
+if __name__ == "__main__":
+    import sys as _sys
+
+    _sys.exit(main())

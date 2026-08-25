@@ -21,6 +21,23 @@ Sonden hier.
                           bewusste Luecke oder ein Verdrahtungsfehler. Das ist der
                           EU-weit-Grundsatz, zum ersten Mal pruefbar statt vereinbart.
 
+⚠ **WAS DIE SONDEN NICHT SEHEN: eine Tabelle, die es noch NIE gab.** Sonde 1 misst das
+ALTER vorhandener Dateien, Sonde 2 vergleicht vorhandene Dateien zwischen Laendern. Eine
+Datei, die nie geschrieben wurde, hat kein Alter und steht in keinem Land — sie ist fuer
+beide unsichtbar. Genau so ist `govisor/retender_link.py` durchgerutscht: vollstaendig
+gebaut am 2026-08-16, von niemandem gerufen, `lead_retender.parquet` in KEINEM Land, und
+alle Sonden gruen. Gefunden wurde es am 2026-08-25 nur, weil jemand nach oeffentlichen
+Funktionen ohne Aufrufer gesucht hat:
+
+    # Namen, die govisor/ als Parquet nennt, aber in data/ nirgends liegen
+    grep -oE '"[a-z_]+[.]parquet"' govisor/*.py | sort -u
+
+Ein Gegenmittel als Sonde 5 waere moeglich (Erzeuger-Name gegen data/gold + data/reference
++ data/cache), ist aber bewusst NICHT gebaut: der erste Entwurf meldete vier Fehlalarme
+(Cache- und Referenztabellen liegen ausserhalb von gold/) und ein legitimes offenes Stueck
+(`document_master_items` — der Vorlauf kostet Geld und laeuft von Hand). Wer sie baut,
+faengt bei diesen fuenf an.
+
 AUSNAHMEN sind hier Code, nicht Textdatei, und `tests/test_verdrahtung.py` haelt sie
 ehrlich: jede Ausnahme braucht eine Begruendung, und eine Ausnahme, die nicht mehr
 zutrifft, laesst die Suite rot werden. Sonst waechst so eine Liste stillschweigend,
