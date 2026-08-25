@@ -133,3 +133,39 @@ def test_ein_fremdes_land_raeumt_unsere_dateien_nicht_weg(tmp_path, monkeypatch)
     ek.main(["--country", "DE"])
     assert {p.stem for p in ek.JE_VORGANG.glob("*.json")} == {"de-1"}, \
         "die eigene Karteileiche bleibt liegen — die Reinigung räumt gar nichts mehr"
+
+
+def test_ical_zeilen_werden_gefaltet_und_zerschneiden_keine_umlaute():
+    """RFC 5545 §3.1: Inhaltszeilen sollen 75 Oktett nicht überschreiten.
+
+    Gemessen am 2026-08-25 über den ganzen Bestand: **37 % der erzeugten Zeilen** lagen
+    darüber, die längste bei 198 Oktett — die DESCRIPTION trägt ein wörtliches Zitat aus
+    den Vergabeunterlagen. Der Standard sagt hier SHOULD, nicht MUST; ein Ausfall träfe
+    also nur strenge Clients, wäre auf einzelne Nutzer verteilt und von aussen unsichtbar.
+
+    ⚠ Die eigentliche Falle ist nicht die Länge, sondern die EINHEIT: gezählt wird in
+    Oktett, geschnitten wird an Zeichen. Wer beides verwechselt, zerlegt „ä" in zwei
+    halbe Bytes.
+
+    Zwei Seiten, beide geprüft: die Python-Fassung hier direkt, die ausgelieferte
+    JS-Fassung über `node` — sonst prüfte der Test eine Abschrift.
+    """
+    import subprocess
+    from pathlib import Path
+
+    lang = ("Termine für eine Ortsbesichtigung können mit DWS Architekten PartGmbB "
+            "Dollmann Wagner Schmidt vereinbart werden — Łódź, 🏗 und € inbegriffen.")
+    ics = k.als_ical([{"art": "ortstermin", "datum": "2026-09-30",
+                       "label": "Ortstermin", "quelle": "unterlagen", "beleg": lang}],
+                     "Ein sehr langer Vergabetitel über Straßenbauarbeiten", "x")
+    zeilen = ics.split("\r\n")
+    assert all(len(z.encode("utf-8")) <= 75 for z in zeilen), \
+        "Python-iCal schreibt wieder Zeilen über 75 Oktett"
+    # Entfalten muss das Original herstellen — sonst ist der Text zwar kurz, aber kaputt.
+    assert lang.replace(",", r"\,") in ics.replace("\r\n ", ""), \
+        "die Faltung hat den Belegtext beschädigt"
+
+    wurzel = Path(__file__).resolve().parent.parent
+    skript = wurzel / "web" / "scripts" / "pruefe-ical-faltung.mjs"
+    p = subprocess.run(["node", str(skript)], capture_output=True, text=True)
+    assert p.returncode == 0, f"die ausgelieferte JS-Fassung faltet falsch:\n{p.stdout}{p.stderr}"

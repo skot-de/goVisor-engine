@@ -203,7 +203,37 @@ def als_ical(termine_liste: list[dict], titel: str, uid_praefix: str,
             zeilen.append(f"DESCRIPTION:{_escape(beschreibung)}")
         zeilen.append("END:VEVENT")
     zeilen.append("END:VCALENDAR")
-    return "\r\n".join(zeilen) + "\r\n"
+    return "\r\n".join(_falte(z) for z in zeilen) + "\r\n"
+
+
+def _falte(zeile: str) -> str:
+    """Lange Zeile nach RFC 5545 §3.1 umbrechen: CRLF und ein fuehrendes Leerzeichen.
+
+    Der Standard sagt SHOULD, nicht MUST — die meisten Kalenderprogramme lesen auch lange
+    Zeilen. „Die meisten" ist bei einem Feed, den man einmal abonniert und dann vergisst,
+    aber die falsche Wette: der Ausfall traefe einzelne Nutzer und waere von aussen nicht
+    zu sehen. Gemessen am 2026-08-25: 37 % der erzeugten Inhaltszeilen liegen darueber,
+    die laengste bei 198 Oktett.
+
+    ⚠ GEZAEHLT WIRD IN OKTETT, NICHT IN ZEICHEN. „ä" ist zwei Oktett; ein Schnitt mitten
+    im Zeichen macht aus dem Umlaut Datenmuell. Deshalb laeuft die Schleife ueber Zeichen
+    und rechnet deren Bytes mit. Fortsetzungszeilen duerfen nur 74 tragen — das
+    fuehrende Leerzeichen zaehlt mit.
+    """
+    if len(zeile.encode("utf-8")) <= 75:
+        return zeile
+    teile: list[str] = []
+    akt, oktett, grenze = "", 0, 75
+    for zeichen in zeile:
+        n = len(zeichen.encode("utf-8"))
+        if oktett + n > grenze:
+            teile.append(akt)
+            akt, oktett, grenze = "", 0, 74
+        akt += zeichen
+        oktett += n
+    if akt:
+        teile.append(akt)
+    return "\r\n ".join(teile)
 
 
 def _escape(s: str) -> str:

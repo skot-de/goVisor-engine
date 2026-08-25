@@ -2,6 +2,9 @@ import { NextResponse } from "next/server";
 import { loadDataFile } from "@/lib/dataSource";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { bremse } from "@/lib/rateLimit";
+// ⚠ Maskieren und Falten liegen in Plain JS, damit `node` sie laden und
+// `web/scripts/pruefe-ical-faltung.mjs` die ECHTE Fassung pruefen kann.
+import { esc, falte } from "@/lib/ical";
 
 // iCal-Feed der beobachteten Leads (Ticket #16 §7). Der Token ist der geheime Schlüssel;
 // die Route löst ihn server-seitig (Service-Role) zu user_watchlist auf und emittiert die
@@ -16,10 +19,6 @@ function icsDate(dmy: string): string | null {
   const m = /^(\d{2})\.(\d{2})\.(\d{4})$/.exec(dmy);
   return m ? `${m[3]}${m[2]}${m[1]}` : null; // YYYYMMDD
 }
-function esc(s: string): string {
-  return String(s).replace(/([,;\\])/g, "\\$1").replace(/\r?\n/g, "\\n");
-}
-
 export async function GET(req: Request, { params }: { params: Promise<{ token: string }> }) {
   // ⚠ DIESE ROUTE STEHT OFFEN — sie muss, weil Outlook und Google keinen Sitzungscookie
   // schicken (s. `OFFEN` in middleware.ts). Damit ist der Token das einzige Geheimnis, und
@@ -77,7 +76,7 @@ export async function GET(req: Request, { params }: { params: Promise<{ token: s
         `SUMMARY:Angebotsfrist${est ? " (voraussichtlich)" : ""}: ${esc(l.titel || "Ausschreibung")}`,
         `DESCRIPTION:${esc(`${l.buyer || ""} — Angebotsfrist über goVisor`)}`,
         "END:VEVENT",
-      ].join("\r\n"));
+      ].map(falte).join("\r\n"));
     }
   }
 
@@ -116,7 +115,7 @@ export async function GET(req: Request, { params }: { params: Promise<{ token: s
         `SUMMARY:${esc(`${warnung}${t.label}: ${eintrag?.titel || "Ausschreibung"}`)}`,
         `DESCRIPTION:${esc(t.beleg || `${t.label} laut Vergabeunterlagen — über goVisor`)}`,
         "END:VEVENT",
-      ].join("\r\n"));
+      ].map(falte).join("\r\n"));
     }
   }
 
