@@ -153,6 +153,31 @@ DÖEs Beitrag ist zudem **stark gewerkeabhängig** — 9,7 % aller Bau-Leads (CP
 0 % bei Finanz (66) und Nahrungsmitteln (15) und 0,1 % bei Pharma (33): solche Verträge
 liegen praktisch immer über dem EU-Schwellenwert.
 
+### `contract_nature` — 5,8 % bei DÖE, 99,9 % bei TED (gemessen 2026-08-25)
+
+Die Vertragsart (works / supplies / services, BT-23) steht bei TED-eForms praktisch
+immer, bei DÖE fast nie:
+
+| Generation | Sätze | mit `contract_nature` |
+|---|---:|---:|
+| `eforms` (TED) | 454.036 | 99,9 % |
+| `doe` | 391.784 | **5,8 %** — 369.239 leer |
+
+⚠ **Das ist die QUELLE, nicht der Parser.** Der Verdacht lag nahe, denn DÖE ist eForms
+(Dialekt `eforms-sdk-0.1`), und der Parser wählt `ProcurementTypeCode` über seine Position
+im Baum. Nachgemessen an 400 Roh-XML je Dialekt, einmal mit der Positionsregel und einmal
+über das Attribut `listName="contract-nature"`: **identisches Ergebnis** (DÖE 45/400, TED
+400/400). Die übrigen 355 DÖE-Dokumente tragen das Element schlicht nicht.
+
+Wer diesen Weg noch einmal geht, spart sich eine Falle: die Dateinamen im DÖE-ZIP tragen
+ein Versionssuffix (`<uuid>-10.xml`), die `notice_id` in Silber ist die nackte UUID. Ein
+Abgleich über den Dateinamen läuft leer — und wer dann eine beliebige Datei als Beispiel
+nimmt, baut sich eine Hypothese, die die Messung widerlegt.
+
+Produktfolge: die Bau/Dienstleistung/Lieferung-Unterscheidung ist für den unterschwelligen
+Bestand nicht aus `contract_nature` zu haben. Sie kommt dort über CPV und über die
+VOB/A-Regel (`kategorie.aus_regelwerk`).
+
 Zwei Aussagen, die beide stimmen und leicht gegeneinander ausgespielt werden:
 
 1. **Der Regelfall ist dünn.** Die Mehrheit der Bekanntmachungen beschreibt in zwei
