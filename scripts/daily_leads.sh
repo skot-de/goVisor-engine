@@ -198,7 +198,19 @@ abschluss() {
   # `$LOG` (nicht LOGFILE) — und KEIN `|| echo 0`: `grep -c` schreibt bei null Treffern
   # bereits „0" und beendet sich trotzdem mit 1. Das angehaengte echo haette eine zweite
   # Null erzeugt und die Meldung waere „0\n0 Warnungen" geworden.
-  local warn; warn=$(grep -c '⚠' "${LOG:-/dev/null}" 2>/dev/null); warn=${warn:-0}
+  #
+  # ⚠ NUR ZEILEN, DIE MIT ⚠ BEGINNEN. Gezaehlt wurde jedes Vorkommen des Zeichens
+  # irgendwo in der Zeile — und das Zeichen dient an vielen Stellen als INLINE-MARKER,
+  # nicht als Warnung: „⚠2024=10Mon" markiert im Marktpuls eine Serie, die mitten im Jahr
+  # beginnt, „⚠ unvollstaendig" steht am Ende jeder Healy-Hudson-Landeszeile. Ergebnis
+  # (gemessen ueber acht Laeufe vom 20. bis 25.08.): die Zahl stand bei 18, 18, 18, 18,
+  # 18, 13, 18, 19. Eine Kennzahl, die jede Nacht denselben Wert hat, liest niemand mehr —
+  # und ein Lauf, in dem wirklich etwas kaputtging, saehe genauso aus.
+  #
+  # Mit dem strengeren Filter: 3, 3, 3, 3, 3, 4, 3, 5. Am 25.08. sind die zwei zusaetz-
+  # lichen der Verdrahtungsbefund und die Deflator-Naeherung — also genau das, was man
+  # sehen will. Wer die Rohzahl braucht: `grep -c '⚠' data/logs/daily-*.log`.
+  local warn; warn=$(grep -cE '^[[:space:]]*⚠' "${LOG:-/dev/null}" 2>/dev/null); warn=${warn:-0}
   local zustand="fertig"
   [ "$rc" -ne 0 ] && zustand="ABGEBROCHEN (Code $rc)"
   [ -n "$_SCHRITT_NAME" ] && [ "$rc" -ne 0 ] && zustand="$zustand bei: $_SCHRITT_NAME"
@@ -214,7 +226,13 @@ abschluss() {
   } > "$ROOT/data/logs/letzter_lauf.txt"
   echo ""
   echo "── $(cat "$ROOT/data/logs/letzter_lauf.txt")"
-  rm -rf "$LOCK" 2>/dev/null
+  # Nur die EIGENE Sperre wegraeumen. Ein blindes `rm -rf` nimmt die Sperre eines
+  # Nachfolgers mit, falls dieser Lauf spaet stirbt und der naechste sie inzwischen
+  # uebernommen hat. Dritte Stelle derselben Klasse — die anderen beiden stehen in
+  # `analyse_arbeiter.sh` und `_index_nach_tageslauf.sh`.
+  if [ "$(tr -d '[:space:]' < "$LOCK/pid" 2>/dev/null)" = "$$" ]; then
+    rm -rf "$LOCK" 2>/dev/null
+  fi
 }
 trap abschluss EXIT
 
