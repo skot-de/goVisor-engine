@@ -717,8 +717,9 @@ def chat(messages: list[dict], model: str | None = None, temperature: float = 0,
 
     Reihenfolge: alle Keys des Anbieters der Reihe nach. Leeres Guthaben (402) mustert den
     Key prozessweit aus, 429 fuehrt zu kurzem Backoff und Wiederholung, eine gerissene
-    Frist beendet den Aufruf sofort (der Endpunkt haengt, ein anderer Key aendert daran
-    nichts und kostet nur noch einmal OR_FRIST).
+    Frist ueberspringt die restlichen KEYS dieses Anbieters (der Endpunkt haengt, ein
+    anderer Key aendert daran nichts und kostet nur noch einmal OR_FRIST) — ein zweiter
+    ANBIETER waere ein anderer Endpunkt und kaeme weiterhin dran.
 
     ⚠ **Die Anbieterliste hat seit dem 2026-08-21 genau einen Eintrag: OpenRouter.** Die
     Schleife ueber `_anbieter()` bleibt, weil sie nichts kostet und der Tag absehbar ist,
