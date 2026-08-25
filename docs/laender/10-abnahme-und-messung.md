@@ -76,6 +76,44 @@ Gemessen CH: 29 % der Kriterien heissen „Zuschlagskriterien" und tragen kein G
 100 % der Eignungsanforderungen sind Verweise auf simap.ch. AT dagegen: 94 % mit Gewicht,
 0 % Platzhalter. **Dieselbe Tabelle, zwei völlig verschiedene Qualitäten.**
 
+### ⚠ „Thema erwähnt" ist nicht „Wert müsste da sein"
+
+Die Parser-Selbstdiagnose (`scripts/parser_gaps.py`) misst je Signal, wie oft ein Thema im
+Dokument steht (Anker trifft) und wie oft ein Wert herauskommt. Die Differenz gilt als
+Arbeitsliste. Gemessen am 2026-08-25 stand dort für DE:
+
+    award_weights   Lücke 4.555   Quote 38 %
+    penalty_pct     Lücke 3.630   Quote 49 %
+    binding_until   Lücke 2.711   Quote 64 %
+    skonto_pct      Lücke 2.497   Quote 10 %
+
+Drei dieser Posten wurden nachgeprüft. **Alle drei lösten sich auf:**
+
+- **Skonto bietet der BIETER an**, der Auftraggeber nennt es nicht. An 200 Dokumenten ohne
+  Wert: 30 % blosse Erwähnung im Angebotsformular, 28 % VOB/B-Regelung ohne Zahl, 20 %
+  leeres Formularfeld („Gewährung von FORMTEXT ______ % Skonto"), nur 8 % mit einer
+  Prozentzahl im Umfeld. Dort ist nichts zu holen — die Lücke von 2.497 war ein Phantom.
+- **„Bindefrist endet am"** (353 Treffer) sah nach einem Datum aus. An 120 Dokumenten
+  tragen **119 dahinter nichts** — es ist eine Formularbeschriftung.
+- **„Zuschlagskriterium Preis"** (1.288 Treffer) sah nach „Preis als alleiniges Kriterium"
+  aus und wäre eine wertvolle Regel gewesen. An 120 Dokumenten nennen **101 daneben
+  „mehrere Zuschlagskriterien"**: der Satz gehört zu einem Formblatt, das Optionen
+  auflistet. Nur 13 sind wirklich Preis-allein.
+
+**Die Lehre für jede Lücken-Kennzahl:** ein Anker trifft ein THEMA. Ob an dieser Stelle
+überhaupt ein Wert stehen kann, ist eine zweite Frage — und wo die Antwort „nein" lautet,
+erzeugt die Kennzahl eine dauerhaft rote Zeile, die man nach zwei Wochen ignoriert. Das
+Werkzeug kennt den Gedanken für Feld-Alternativen bereits (`ALTERNATIVEN`, siehe
+`binding_days`); er gilt genauso für Bieterangaben und Formularfelder. Der Bericht weist
+jetzt **rohe Lücke · ohne Wert · erreichbar** getrennt aus.
+
+⚠ **Und eine Einschränkung, die zur Ehrlichkeit gehört.** Der „ohne Wert"-Test prüft das
+Umfeld auf BEIDEN Seiten des Ankers; eine Ziffer irgendwo in 110 Zeichen genügt, um eine
+Fundstelle als verwertbar zu zählen. Er fängt deshalb nur 723 der 4.555
+`award_weights`-Fehlschläge. Eine Stichprobe, die nur RECHTS vom Anker sah, kam auf 97 % —
+sie misst aber etwas anderes, nämlich „hängt an dieser Erwähnung ein Wert". Welche der
+beiden Fragen die richtige ist, hängt am Signal und ist nicht entschieden.
+
 ## Determinismus
 
 Zwei Läufe desselben Exports müssen dieselbe Ausgabe liefern. Sonst ist jeder

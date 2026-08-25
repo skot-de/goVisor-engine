@@ -51,6 +51,46 @@ ALTERNATIVEN: dict[str, tuple[str, ...]] = {
     "binding_days": ("binding_until",),
     "binding_until": ("binding_days",),
 }
+# ⚠ SIGNALE, DEREN WERT DER BIETER LIEFERT — nicht der Auftraggeber.
+#
+# Gemessen am 2026-08-25 an 200 Dokumenten mit „Skonto", die keinen Wert ergaben:
+#
+#     30 %  blosse Erwaehnung im Angebotsformular („Skontoangebot fuer alle Zahlungen")
+#     28 %  VOB/B-Regelung ohne Zahl („unter Abzug eines vereinbarten Skontos")
+#     20 %  LEERES Formularfeld („Gewaehrung von FORMTEXT ______ % Skonto")
+#      8 %  Prozentzahl im Umfeld — die einzigen echten Regel-Kandidaten
+#      2 %  ausdruecklich kein Skonto
+#
+# Skonto BIETET der Bieter an; die Unterlagen fragen es ab. In rund vier von fuenf Faellen
+# gibt es gar keinen Wert zu holen. Die Kennzahl las „Thema erwaehnt" als „Wert muesste da
+# sein" und meldete dauerhaft eine Luecke von 2.429 — dasselbe Muster wie bei
+# `binding_days` oben, nur eine Ebene tiefer: nicht zwei Felder teilen sich einen Anker,
+# sondern der Anker trifft ein Thema, das per Bauart keinen Wert traegt.
+BIETERANGABE: frozenset[str] = frozenset({"skonto_pct"})
+
+# Leere Formularfelder. Sie sind der haeufigste Grund fuer einen Fehlschlag, der keiner ist:
+# „Bindefrist endet am: ____" traegt in 99 von 100 Faellen nichts dahinter (gemessen an 120
+# Dokumenten), und „FORMTEXT ______ %" wartet auf den Bieter.
+_LEERFELD = re.compile(r"_{3,}|\.{4,}|FORMTEXT|\[\s*\]|…{2,}")
+
+# ⚠ DER WICHTIGERE TEST: steht hinter dem Anker ueberhaupt eine ZAHL?
+#
+# Ein Signal, das eine Zahl sucht, kann aus einer Fundstelle ohne Ziffern nichts holen —
+# keine Regel der Welt. Genau das ist der Normalfall: gemessen am 2026-08-25 tragen 97 %
+# der `award_weights`-Fehlschlaege keine Ziffer im Umfeld, bei `penalty_pct` 67 %, bei
+# `skonto_pct` 53 %. Der Anker trifft dort ein THEMA, keinen Wert.
+#
+# Ein erster Versuch suchte nur nach leeren Formularfeldern (`____`, `FORMTEXT`) und fand
+# fast nichts: der haeufigste Fall sieht anders aus — „Bindefrist endet am: Liste der
+# Anlagen:", also eine Beschriftung, hinter der die naechste Beschriftung kommt.
+_ZAHL = re.compile(r"\d")
+# Nur fuer Signale, die eine Zahl suchen. `variants_allowed` und `guarantee_required`
+# beantworten ja/nein und brauchen keine.
+ZAHLSIGNALE: frozenset[str] = frozenset({
+    "skonto_pct", "penalty_pct", "binding_days", "binding_until", "award_weights",
+    "eligibility_count",
+})
+
 _UMFELD = 55          # Zeichen links/rechts vom Ankertreffer
 _MAX_FUNDE = 6        # je Dokument und Signal — sonst dominiert ein Formularsatz die Statistik
 
@@ -81,6 +121,7 @@ def analysiere(country: str, top: int, mindest: int) -> dict:
     erwaehnt: Counter = Counter()
     erkannt: Counter = Counter()
     formen: dict[str, Counter] = {k: Counter() for k in docsignals.ANKER}
+    formularfeld: Counter = Counter()
 
     for _nid, text in docs:
         t = text or ""
@@ -94,16 +135,36 @@ def analysiere(country: str, top: int, mindest: int) -> dict:
                 erkannt[signal] += 1
                 continue
             # Fehlschlag: das Thema steht da, ein Wert kam nicht heraus → Formen sammeln.
+            umfelder = []
             for m in treffer[:_MAX_FUNDE]:
                 a, b = max(0, m.start() - _UMFELD), min(len(t), m.end() + _UMFELD)
-                formen[signal][_form(t[a:b])] += 1
+                umfelder.append(t[a:b])
+            # Traegt KEINE der Fundstellen etwas ausser einem leeren Feld, ist das kein
+            # Regel-Kandidat, sondern ein Formular, das auf den Bieter wartet.
+            def _ohne_wert(u: str) -> bool:
+                if _LEERFELD.search(u):
+                    return True
+                return signal in ZAHLSIGNALE and not _ZAHL.search(u)
+
+            if umfelder and all(_ohne_wert(u) for u in umfelder):
+                formularfeld[signal] += 1
+                continue
+            for u in umfelder:
+                formen[signal][_form(u)] += 1
 
     bericht = {"country": country, "dokumente": len(docs), "signale": {}}
     for signal in sorted(docsignals.ANKER, key=lambda s: -(erwaehnt[s] - erkannt[s])):
         e, k = erwaehnt[signal], erkannt[signal]
+        ff = formularfeld[signal]
         luecke = e - k
+        # Die ERREICHBARE Luecke: ohne leere Formularfelder, und ohne Signale, deren Wert
+        # der Bieter liefert. Beide Zahlen stehen nebeneinander — wer die rohe braucht,
+        # findet sie, und wer die Arbeitsliste braucht, wird nicht in die Irre geschickt.
+        erreichbar = 0 if signal in BIETERANGABE else max(0, luecke - ff)
         bericht["signale"][signal] = {
             "erwaehnt": e, "erkannt": k, "luecke": luecke,
+            "formularfeld": ff, "erreichbar": erreichbar,
+            "bieterangabe": signal in BIETERANGABE,
             "quote": round(k / e, 3) if e else None,
             "unerkannte_formen": [
                 {"form": f, "n": n} for f, n in formen[signal].most_common(top) if n >= mindest
@@ -120,16 +181,19 @@ def main(country: str, top: int, mindest: int) -> int:
     ziel.write_text(json.dumps(b, ensure_ascii=False, indent=1) + "\n")
 
     print(f"Parser-Selbstdiagnose {country} — {b['dokumente']} Dokumente\n")
-    print(f"  {'Signal':<24}{'erwähnt':>9}{'erkannt':>9}{'Lücke':>8}{'Quote':>8}")
+    print(f"  {'Signal':<24}{'erwähnt':>9}{'erkannt':>9}{'Lücke':>8}"
+          f"{'ohne Wert':>11}{'erreichbar':>12}{'Quote':>8}")
     for name, d in b["signale"].items():
         q = f"{d['quote']:.0%}" if d["quote"] is not None else "—"
-        print(f"  {name:<24}{d['erwaehnt']:>9}{d['erkannt']:>9}{d['luecke']:>8}{q:>8}")
+        err = "Bieter" if d.get("bieterangabe") else f"{d.get('erreichbar', 0)}"
+        print(f"  {name:<24}{d['erwaehnt']:>9}{d['erkannt']:>9}{d['luecke']:>8}"
+              f"{d.get('formularfeld', 0):>11}{err:>12}{q:>8}")
 
     print("\nHäufigste NICHT erfasste Formen (Kandidaten für neue Regeln):")
     for name, d in b["signale"].items():
         if not d["unerkannte_formen"]:
             continue
-        print(f"\n  ── {name}  (Lücke {d['luecke']})")
+        print(f"\n  ── {name}  (Lücke {d['luecke']}, davon erreichbar {d.get('erreichbar', 0)})")
         for f in d["unerkannte_formen"]:
             print(f"     {f['n']:>4}×  {f['form'][:118]}")
     print(f"\n→ {ziel.relative_to(ROOT)}")
