@@ -1011,6 +1011,12 @@ $PY scripts/export_doc_text.py || echo "  ⚠ doc-text.json nicht geschrieben �
 # Analyse-Arbeiters (252 MB) und bleibt lokal; das Frontend liest eine Datei je Vorgang.
 # Ohne diesen Aufruf zeigt das Lead-Detail die Auswertungen vom letzten Export.
 $PY scripts/export_doc_analysis.py || echo "  ⚠ doc-analysis nicht zerlegt — Lead-Detail zeigt weiter den alten Auswertungsstand."
+# Verfahrenskalender (#16) — MUSS nach `export_doc_analysis` laufen: er liest die
+# Splitterdateien, die dort entstehen. Baut je offenem Lead die Terminliste aus
+# Bekanntmachung (Angebotsfrist) und Unterlagen (Bindefrist, Bieterfragen, Ortstermin …).
+# Nur klassifizierte Termine; was sich keiner Art zuordnen laesst, wird gezaehlt und
+# verworfen — sonst stuende das Druckdatum einer PDF im Kalender.
+$PY scripts/export_kalender.py --country DE || echo "  ⚠ kalender.json nicht gebaut — die Terminliste bleibt auf altem Stand."
 # Dateilisten der Portale (subreport DE, vergabeportal AT): was dort LIEGT, ohne dass wir es
 # gelesen haben. Lag bis zum 22.08. ungenutzt im Gold-Layer — 944 offene Vergaben ohne
 # Volltext haben darüber trotzdem eine Aussage, darunter die ersten 134 für Österreich.
