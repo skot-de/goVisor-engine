@@ -15,14 +15,10 @@ Alle Dateien liegen unter ``.secrets/`` (gitignored). Nutzung:
 """
 from __future__ import annotations
 
-import os as _os
-import sys
-import threading as _threading
-from pathlib import Path as _Path
-
-import datetime as _dt
 import contextlib
+import datetime as _dt
 import os
+import sys
 import threading
 import time
 from pathlib import Path
@@ -56,17 +52,6 @@ URL = "https://openrouter.ai/api/v1/chat/completions"
 # belegt. Deshalb wird ab hier jeder Aufruf mit Preis und Dauer mitgeschrieben.
 _MODELL_ROH = os.environ.get("OR_MODEL", "google/gemini-2.5-flash")
 
-# Preisdeckel je Mio Token, Format „Eingabe/Ausgabe" (z. B. „0.30/2.50"). Ohne Angabe kein
-# Deckel. Er ist der Guertel zum Hosentraeger: `:floor` waehlt den billigsten Endpunkt, der
-# Deckel verbietet den teuren auch dann, wenn der billige gerade ausfaellt.
-#
-# ⚠ NICHT VORBELEGEN. Ein fest eingebauter Deckel gilt auch fuer ein Modell, das jemand
-# spaeter per OR_MODEL setzt — und sperrt dann womoeglich JEDEN Endpunkt aus. Der Aufruf
-# scheitert mit „no allowed providers", und die Ursache steht an einer Stelle, an die
-# niemand schaut. Wer deckeln will, deckelt bewusst.
-# Schalter fuer den Boden. „aus" fuehrt jeden Aufruf ohne `:floor` — noetig, um den Boden
-# ueberhaupt MESSEN zu koennen: ohne eine Vergleichsgruppe ohne Boden ist die Ersparnis eine
-# Behauptung. Der Vergleich laeuft ueber `scripts/kostenbericht.py --boden`.
 # Obergrenze der Ausgabe je Aufruf. ⚠ KEINE Sparmassnahme, sondern eine Ausreisser-Bremse.
 #
 # Gemessen am 2026-08-24 ueber 311 Produktionsaufrufe: der Amtierende braucht im Median
@@ -92,7 +77,12 @@ OR_MAX_TOKENS = int(os.environ.get("OR_MAX_TOKENS", "56000"))
 # 36,4 s, Maximum 185,1 s. 600 s ist also weit jenseits von allem Legitimen und faengt nur
 # den echten Haenger. Der Pruefstand setzt sich fuer Kandidaten eine engere Frist.
 OR_FRIST = float(os.environ.get("OR_FRIST", "600"))
+
+# Schalter fuer den Boden. „aus" fuehrt jeden Aufruf ohne `:floor` — noetig, um den Boden
+# ueberhaupt MESSEN zu koennen: ohne eine Vergleichsgruppe ohne Boden ist die Ersparnis eine
+# Behauptung. Der Vergleich laeuft ueber `scripts/kostenbericht.py --boden`.
 OR_BODEN = os.environ.get("OR_BODEN", "an").lower()
+
 # ⚠ `:floor` IST EINE BITTE, KEINE GARANTIE — und das ist der teuerste Irrtum dieses
 # Moduls gewesen. Gemessen am 2026-08-24 ueber 311 Aufrufe, ALLE mit `:floor` gesendet:
 #
@@ -110,6 +100,15 @@ OR_BODEN = os.environ.get("OR_BODEN", "an").lower()
 # Aufruf an Flex — nachgemessen, derselbe Prompt, einmal 0,00000460 $ ohne und
 # 0,00000245 $ mit Deckel. Der Deckel wird deshalb aus dem Modell selbst abgeleitet.
 OR_STRENG = os.environ.get("OR_STRENG", "an").lower()
+
+# Preisdeckel je Mio Token, Format „Eingabe/Ausgabe" (z. B. „0.30/2.50"). Ohne Angabe kein
+# Deckel. Er ist der Guertel zum Hosentraeger: `:floor` waehlt den billigsten Endpunkt, der
+# Deckel verbietet den teuren auch dann, wenn der billige gerade ausfaellt.
+#
+# ⚠ NICHT VORBELEGEN. Ein fest eingebauter Deckel gilt auch fuer ein Modell, das jemand
+# spaeter per OR_MODEL setzt — und sperrt dann womoeglich JEDEN Endpunkt aus. Der Aufruf
+# scheitert mit „no allowed providers", und die Ursache steht an einer Stelle, an die
+# niemand schaut. Wer deckeln will, deckelt bewusst.
 OR_MAX_PREIS = os.environ.get("OR_MAX_PREIS", "")
 
 # „deny" schliesst Anbieter aus, die Eingaben speichern duerfen. Ebenfalls nicht vorbelegt:
@@ -178,26 +177,6 @@ def _load_keys() -> list[str]:
                 if k and not k.startswith("#") and k not in keys:
                     keys.append(k)
     return keys
-
-
-def _load_keys_aus(anbieter: str) -> list[str]:
-    """Keys eines Anbieters: erst Umgebung, dann `.secrets/<anbieter>.keys|.key`."""
-    keys: list[str] = []
-    env = os.environ.get(f"{anbieter.upper()}_KEYS")
-    if env:
-        keys += [k.strip() for k in env.split(",") if k.strip()]
-    for name in (f"{anbieter}.keys", f"{anbieter}.key"):
-        p = _SECRETS / name
-        if p.exists():
-            for line in p.read_text(encoding="utf-8").splitlines():
-                k = line.strip()
-                if k and not k.startswith("#") and k not in keys:
-                    keys.append(k)
-    return keys
-
-
-def _load_cerebras_keys() -> list[str]:
-    return _load_keys_aus("cerebras")
 
 
 def _anbieter() -> list[dict]:
@@ -468,7 +447,7 @@ def _is_credit_error(status: int, text: str) -> bool:
 #   · LIMIT    — was EIN Prozess hoechstens ausgeben darf. Fängt Ausreisser und Schleifen.
 #   · TAKT     — wie oft nachgefragt wird. Der Kontostand kostet einen HTTP-Aufruf; ihn vor
 #                jedem Chat zu holen waere teurer als das, was er schuetzt.
-RESERVE_USD = float(_os.environ.get("GOVISOR_RESERVE_USD", "1.00"))
+RESERVE_USD = float(os.environ.get("GOVISOR_RESERVE_USD", "1.00"))
 # ⚠ **TAGESDECKEL — die Grenze, die die anderen beiden nicht ziehen.** Reserve und Limit
 # schuetzen vor EINEM Ausreisser; sie sagen nichts darueber, wie viel ein Tag insgesamt
 # kosten darf. Der Analyse-Arbeiter rechnet Runde fuer Runde, jede unter dem Lauf-Limit —
@@ -482,8 +461,8 @@ RESERVE_USD = float(_os.environ.get("GOVISOR_RESERVE_USD", "1.00"))
 # nicht einmal dafuer und wurden am 22.08. nach 4,02 $ gerissen, waehrend 886 Vorgaenge
 # warteten. Bei VOLLER Abdeckung waeren es 12–16 $/Tag — dann traegt erst der Stapelweg
 # (halber Preis) und der Dublettenwall (−22 %) die Rechnung.
-TAG_USD = float(_os.environ.get("GOVISOR_TAG_USD", "6.00"))
-LIMIT_USD = float(_os.environ.get("GOVISOR_LIMIT_USD", "5.00"))
+TAG_USD = float(os.environ.get("GOVISOR_TAG_USD", "6.00"))
+LIMIT_USD = float(os.environ.get("GOVISOR_LIMIT_USD", "5.00"))
 
 # ── SCHONUNG: EIN TOPF, DEN DIE PRODUKTION NICHT ANRUEHRT ────────────────────────────
 #
@@ -499,11 +478,11 @@ LIMIT_USD = float(_os.environ.get("GOVISOR_LIMIT_USD", "5.00"))
 # Die Schonung dreht es um: fuer ALLE Zwecke ausser dem Pruefstand liegen Reserve und
 # Tagesdeckel um diesen Betrag straffer. Die Produktion haelt also frueher an und laesst
 # dem Test sein Geld stehen — ohne dass irgendwo eine Reihenfolge verabredet werden muss.
-SCHONUNG_USD = float(_os.environ.get("GOVISOR_SCHONUNG_USD", "0.50"))
+SCHONUNG_USD = float(os.environ.get("GOVISOR_SCHONUNG_USD", "0.50"))
 GESCHONT = ("pruefstand", "bench")      # Zwecke, die aus dem geschonten Topf zahlen duerfen
-_TAKT = int(_os.environ.get("GOVISOR_BUDGET_TAKT", "20"))
+_TAKT = int(os.environ.get("GOVISOR_BUDGET_TAKT", "20"))
 
-_geld_sperre = _threading.Lock()
+_geld_sperre = threading.Lock()
 _geld = {"start": None, "start_verbrauch": None, "stand": None, "verbrauch": None,
          "n": 0, "naechste": 1, "gewarnt": False, "stopp": None}
 
@@ -523,11 +502,15 @@ def kontostand(frisch: bool = False) -> float | None:
         return _geld["stand"]
     import json as _json
     import subprocess as _sp
-    schluessel = _os.environ.get("OPENROUTER_API_KEY")
-    if not schluessel:
-        pfad = _Path(__file__).resolve().parent.parent / ".secrets" / "openrouter.key"
-        if pfad.exists():
-            schluessel = pfad.read_text(encoding="utf-8").strip()
+    # ⚠ DENSELBEN SCHLUESSELWEG WIE `chat()`. Hier stand bis zum 2026-08-25 eine eigene,
+    # engere Suche: `OPENROUTER_API_KEY` (ein Name, den sonst nichts in diesem Modul
+    # kennt) und danach nur `.secrets/openrouter.key`. `_load_keys()` liest daneben
+    # `OPENROUTER_KEYS` und `.secrets/openrouter.keys` — die im Modulkopf dokumentierten
+    # Wege. Wer also den dokumentierten Weg benutzt, bekommt ein funktionierendes `chat()`
+    # und eine BLINDE Geldwache: sie findet keinen Schluessel, meldet „nicht ermittelbar"
+    # und laesst nach eigener Vorgabe alles durch. Eine Bremse, die still ausfaellt, ist
+    # schlimmer als keine — das steht drei Zeilen weiter oben und galt hier nicht.
+    schluessel = next(iter(_load_keys()), None)
     if not schluessel:
         return None
     try:
@@ -562,7 +545,7 @@ def _tagesbuch(stand: float) -> float:
     """
     import json as _json
     heute = _dt.date.today().isoformat()
-    pfad = _Path(__file__).resolve().parent.parent / "data" / ".llm_tagesbudget.json"
+    pfad = Path(__file__).resolve().parent.parent / "data" / ".llm_tagesbudget.json"
     verbrauch = _geld.get("verbrauch")
     try:
         d = _json.loads(pfad.read_text(encoding="utf-8"))
@@ -691,8 +674,8 @@ def _geldwache() -> None:
                      f"{RESERVE_USD + schonung:.2f} $"
                      + (f" (davon {schonung:.2f} $ Schonung für den Prüfstand)"
                         if schonung else "") + " — "
-                     f"abgebrochen, damit der Tagesbetrieb weiterlaufen kann. "
-                     f"Aufladen: openrouter.ai/credits")
+                     "abgebrochen, damit der Tagesbetrieb weiterlaufen kann. "
+                     "Aufladen: openrouter.ai/credits")
         if not grund and LIMIT_USD and ausgegeben > LIMIT_USD:
             grund = (f"dieser Lauf hat {ausgegeben:.2f} $ verbraucht (Limit {LIMIT_USD:.2f} $) "
                      f"— abgebrochen. Hoeher setzen: GOVISOR_LIMIT_USD")
@@ -730,14 +713,22 @@ class AllKeysExhausted(RuntimeError):
 
 def chat(messages: list[dict], model: str | None = None, temperature: float = 0,
          timeout: int = 120, max_retries: int = 3, anbieter: str | None = None) -> str:
-    """Chat-Completion mit Key- UND Anbieter-Rotation. Wirft erst, wenn niemand mehr kann.
+    """Chat-Completion mit Key-Rotation. Wirft erst, wenn kein Key mehr kann.
 
-    Reihenfolge: alle Keys des ersten Anbieters, dann der naechste Anbieter. Leeres Guthaben
-    (402) mustert den Key prozessweit aus, 429 fuehrt zu kurzem Backoff und Wiederholung.
+    Reihenfolge: alle Keys des Anbieters der Reihe nach. Leeres Guthaben (402) mustert den
+    Key prozessweit aus, 429 fuehrt zu kurzem Backoff und Wiederholung, eine gerissene
+    Frist beendet den Aufruf sofort (der Endpunkt haengt, ein anderer Key aendert daran
+    nichts und kostet nur noch einmal OR_FRIST).
 
-    `model` gilt nur fuer den passenden Anbieter: ein Name mit Schraegstrich („google/…")
-    ist ein OpenRouter-Name und waere bei Cerebras ein Fehler. Ohne Angabe nimmt jeder
-    Anbieter sein eigenes Standardmodell.
+    ⚠ **Die Anbieterliste hat seit dem 2026-08-21 genau einen Eintrag: OpenRouter.** Die
+    Schleife ueber `_anbieter()` bleibt, weil sie nichts kostet und der Tag absehbar ist,
+    an dem ein zweiter dazukommt — hier stand aber bis zum 25.08. noch die Anleitung von
+    frueher („dann der naechste Anbieter", „waere bei Cerebras ein Fehler"). Wer sie las,
+    suchte eine Verteilungslogik, die es nicht mehr gibt. Warum sie weg ist, steht in
+    `_anbieter()`.
+
+    `model` gilt nur bei OpenRouter; ein anderer Anbieter bekaeme einen Namen, den er nicht
+    kennt, und antwortete mit „model not found".
     """
     _geldwache()
     versuchte = 0
@@ -767,16 +758,27 @@ def chat(messages: list[dict], model: str | None = None, temperature: float = 0,
         body = {"model": modell, "temperature": temperature, "messages": messages,
                 **({"max_tokens": OR_MAX_TOKENS} if OR_MAX_TOKENS else {}),
                 **extra}
+        haengt = False              # Frist gerissen → nicht nur der Versuch endet, s. u.
         for key in keys:
             versuchte += 1
             ohne_deckel = False
             for attempt in range(max_retries):
                 try:
                     t0 = time.time()
+                    # ⚠ NICHT `body` SELBST OHNE DECKEL SCHICKEN. Bis zum 2026-08-25
+                    # entfernte der Nachfass-Zweig unten den `provider`-Block direkt aus
+                    # `body` — und damit fuer JEDEN weiteren Versuch und JEDEN weiteren
+                    # Key dieses Aufrufs. Der Kommentar dort sagt „einmal ohne", der Code
+                    # tat „ab jetzt ohne": nach einem einzigen „no allowed providers"
+                    # liefen bis zu zwei Wiederholungen zum vollen Listenpreis, ohne dass
+                    # irgendwo etwas stand. Genau die Sorte stiller Mehrkosten, wegen der
+                    # es den Boden ueberhaupt gibt.
+                    sende = body if not ohne_deckel else {
+                        k: v for k, v in body.items() if k != "provider"}
                     r, ueberzogen = _post_mit_frist(
                         anb["url"], {"Authorization": f"Bearer {key}",
                                      "Content-Type": "application/json"},
-                        body, timeout, getattr(_FRIST, "s", None) or OR_FRIST)
+                        sende, timeout, getattr(_FRIST, "s", None) or OR_FRIST)
                     if ueberzogen:
                         # ⚠ Der Aufruf wird oben zu Ende gerechnet und ABGERECHNET, auch
                         # wenn wir die Antwort nie sehen. Deshalb eine Zeile ohne Preis:
@@ -787,6 +789,12 @@ def chat(messages: list[dict], model: str | None = None, temperature: float = 0,
                             zweck=getattr(_KONTEXT, "zweck", None),
                             kosten_usd=None, sekunden=time.time() - t0, abgebrochen=True)
                         last_err = f"{ueberzogen} ({anb['name']}/{modell})"
+                        # ⚠ RAUS AUS BEIDEN SCHLEIFEN. Der Kommentar stand hier seit je,
+                        # der Code hielt ihn nicht: `break` verliess nur die Wiederholung
+                        # und der naechste Key bekam denselben haengenden Endpunkt noch
+                        # einmal — je Key bis zu OR_FRIST (600 s), und abgerechnet wird
+                        # jeder dieser Aufrufe. Mit einem einzigen Key fiel das nicht auf.
+                        haengt = True
                         break                            # dieses Modell haengt — Key wechseln hilft nicht
                     if r.status_code == 200:
                         # ⚠ NICHT BLIND `["content"]`. Cerebras' gpt-oss-120b liefert
@@ -843,8 +851,7 @@ def chat(messages: list[dict], model: str | None = None, temperature: float = 0,
                     # Preis — aber es gehoert sichtbar ins Buch, wie oft das passiert.
                     if (400 <= r.status_code < 500 and extra.get("provider", {}).get("max_price")
                             and "provider" in r.text.lower() and not ohne_deckel):
-                        ohne_deckel = True
-                        body.pop("provider", None)
+                        ohne_deckel = True      # gilt nur fuer DIESEN Key, s. `sende` oben
                         last_err = f"Preisdeckel liess niemanden zu ({anb['name']}) — einmal ohne"
                         continue
                     last_err = f"HTTP {r.status_code} ({anb['name']}/{modell}): {r.text[:140]}"
@@ -853,5 +860,7 @@ def chat(messages: list[dict], model: str | None = None, temperature: float = 0,
                 except Exception as e:              # Netz/Timeout → Retry
                     last_err = f"{type(e).__name__}: {str(e)[:80]}"
                     time.sleep(2 * (attempt + 1))
+            if haengt:
+                break
     wer = anbieter or "alle Anbieter"
     raise AllKeysExhausted(f"Alle {versuchte} Keys ({wer}) fehlgeschlagen — zuletzt: {last_err}")

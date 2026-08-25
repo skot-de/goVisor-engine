@@ -27,7 +27,6 @@ Aufruf::
 from __future__ import annotations
 
 import argparse
-import os
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
@@ -35,7 +34,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
-from govisor import kostenbuch  # noqa: E402
+from govisor import kostenbuch, llm  # noqa: E402
 
 FELDER = ("modell", "weg", "endpunkt", "zweck", "anbieter", "vorgang")
 
@@ -107,12 +106,13 @@ def _gesamtverbrauch() -> float | None:
     """OpenRouters kumulierter Verbrauch (`total_usage`). Steigt nur, nie zurück."""
     import json as _json
     import subprocess
-    schluessel = os.environ.get("OPENROUTER_API_KEY")
+    # Derselbe Schluesselweg wie `chat()` — s. `llm_batch._schluessel`. Eine eigene,
+    # engere Suche stand hier bis zum 2026-08-25 und haette bei `OPENROUTER_KEYS` still
+    # `None` geliefert; der Abgleich haette dann „kein Vergleich moeglich" gemeldet,
+    # obwohl der Schluessel da war.
+    schluessel = next(iter(llm._load_keys()), None)
     if not schluessel:
-        pfad = ROOT / ".secrets" / "openrouter.key"
-        if not pfad.exists():
-            return None
-        schluessel = pfad.read_text(encoding="utf-8").strip()
+        return None
     try:
         roh = subprocess.run(
             ["curl", "-s", "--max-time", "20", "-H", f"Authorization: Bearer {schluessel}",
@@ -159,7 +159,7 @@ def abgleich(marke_neu: bool = False) -> int:
              "total_usage": jetzt, "buch": buch_jetzt}, indent=1), encoding="utf-8")
         print(f"\n  Marke gesetzt: OpenRouter-Gesamtverbrauch {jetzt:.5f} $, "
               f"Buch {buch_jetzt:.5f} $.")
-        print(f"  Ab jetzt wird die Differenz beider Zuwächse gemessen.\n")
+        print("  Ab jetzt wird die Differenz beider Zuwächse gemessen.\n")
         return 0
 
     m = _json.loads(MARKE.read_text(encoding="utf-8"))
@@ -182,7 +182,7 @@ def abgleich(marke_neu: bool = False) -> int:
         print(f"    {ohne} Zeile(n) ohne mitgelieferten Preis")
 
     if d_konto <= 0:
-        print(f"\n  Seit der Marke wurde nichts abgerechnet.")
+        print("\n  Seit der Marke wurde nichts abgerechnet.")
     elif anteil < -0.05:
         # ⚠ Das Buch meldet MEHR als die Abrechnung. Das ist fast immer der Nachlauf:
         # `total_usage` wird verzoegert fortgeschrieben, waehrend unser Buch die Kosten
@@ -193,12 +193,12 @@ def abgleich(marke_neu: bool = False) -> int:
               f"nimmt den Preis aus der Antwort.\n    In ein paar Minuten erneut prüfen; "
               f"bleibt es bestehen, wird doppelt gebucht.")
     elif anteil > 0.10:
-        print(f"\n  ⚠ Mehr als 10 % ungebucht. Verdächtig, in dieser Reihenfolge:")
-        print(f"    · Client-Timeouts (oben abgerechnet, Antwort nie gesehen)")
-        print(f"    · etwas umgeht govisor.llm.chat() — z. B. scripts/succession_llm.py")
-        print(f"    · ein zweiter Prozess auf demselben Schlüssel")
+        print("\n  ⚠ Mehr als 10 % ungebucht. Verdächtig, in dieser Reihenfolge:")
+        print("    · Client-Timeouts (oben abgerechnet, Antwort nie gesehen)")
+        print("    · etwas umgeht govisor.llm.chat() — z. B. scripts/succession_llm.py")
+        print("    · ein zweiter Prozess auf demselben Schlüssel")
     else:
-        print(f"\n  ✓ Buch und Abrechnung stimmen im Rahmen überein.")
+        print("\n  ✓ Buch und Abrechnung stimmen im Rahmen überein.")
     print()
     return 0
 

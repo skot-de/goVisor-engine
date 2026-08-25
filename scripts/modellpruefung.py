@@ -96,7 +96,6 @@ def pruefsatz(stand: dict, n: int) -> dict:
     Satz wird deshalb einmal gewählt und in der Warteschlange festgehalten.
     """
     import duckdb
-    from govisor import doctypes, docextract
 
     ids = stand.get("pruefsatz") or []
     if not ids:
@@ -241,8 +240,8 @@ def pruefe_einen(stand, ad, modell, satz_voll, basis, rest) -> str | None:
                         "--freigeben", modell, "--grund",
                         f"Prüfstand {date.today().isoformat()}: {urteil['grund']}"],
                        check=False)
-        print(f"    → freigegeben. Der nächste Lauf wählt es, wenn es das billigste "
-              f"Freigegebene ist.")
+        print("    → freigegeben. Der nächste Lauf wählt es, wenn es das billigste "
+              "Freigegebene ist.")
     return None
 
 
@@ -271,7 +270,6 @@ def trockenlauf(kandidaten: list[str] | None = None) -> int:
     import shutil
     import tempfile
 
-    stand_echt = ps.lade()
     # Auf einer Kopie arbeiten: ein Trockenlauf darf den echten Zustand nicht anfassen.
     tmp = Path(tempfile.mkdtemp()) / "pruefstand.json"
     if ps.WARTESCHLANGE.exists():
@@ -299,18 +297,22 @@ def trockenlauf(kandidaten: list[str] | None = None) -> int:
             g["aufrufe"] += 1
             return "[]"
 
-        import govisor.docextract as dx
-        alt = (llm.chat, getattr(ad, "chat", None), getattr(dx, "chat", None))
+        # ⚠ ZWEI Stellen, nicht drei. `analyze_docs` holt `chat` beim Import in seinen
+        # eigenen Namensraum, deshalb muss es dort ersetzt werden. `docextract` dagegen
+        # holt es LAZY (`from .llm import chat as chat_fn` im Funktionsrumpf) — das
+        # Umbiegen von `llm.chat` erreicht es also ohnehin. Hier stand zusaetzlich ein
+        # `dx.chat = stub`: wirkungslos, und die Ruecknahme unten legte dem Modul den Stub
+        # dauerhaft an, weil es kein Original zurueckzulegen gab.
+        alt = (llm.chat, getattr(ad, "chat", None))
         llm.chat = stub
         ad.chat = stub
-        dx.chat = stub
         try:
             for nid, rows in satz.items():
                 with llm.kontext(zweck="trocken", vorgang=nid):
                     ad.analyze_notice(rows, structured=ad.structured_for_notice(nid),
                                       notice_id=nid)
         finally:
-            llm.chat, ad.chat, dx.chat = alt[0], alt[1] or stub, alt[2] or stub
+            llm.chat, ad.chat = alt[0], alt[1] or stub
 
         # ── Bericht ──────────────────────────────────────────────────────────────────
         print(f"\n  Trockenlauf über {len(satz)} Prüfvergaben — kein Modell befragt, "
@@ -483,7 +485,7 @@ def main() -> int:
             continue
         rest = a.budget_usd - heute_ausgegeben()
         if rest <= 0:
-            print(f"\n  ⏹ Testtopf leer — der Rest wartet auf morgen.\n", file=sys.stderr)
+            print("\n  ⏹ Testtopf leer — der Rest wartet auf morgen.\n", file=sys.stderr)
             break
         print(f"\n  {modell}  (noch {rest:.4f} $ im Topf)")
         abbruch = pruefe_einen(stand, ad, modell, satz, basis, rest)

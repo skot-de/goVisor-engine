@@ -35,11 +35,16 @@ MAX_JE_STAPEL = int(os.environ.get("GOVISOR_BATCH_MAX", "200"))
 
 
 def _schluessel() -> str:
-    k = os.environ.get("OPENROUTER_API_KEY")
-    if k:
-        return k.strip()
-    p = ROOT / ".secrets" / "openrouter.key"
-    return p.read_text(encoding="utf-8").strip() if p.exists() else ""
+    """Derselbe Schluesselweg wie `chat()` — nicht ein zweiter daneben.
+
+    ⚠ Hier stand bis zum 2026-08-25 eine eigene Suche ueber `OPENROUTER_API_KEY` und
+    `.secrets/openrouter.key`. Das ist NICHT der dokumentierte Weg (`OPENROUTER_KEYS`,
+    `.secrets/openrouter.keys`, s. Modulkopf von `llm`), sondern ein dritter, der bei
+    jeder Schluesselumstellung als Erster stillsteht. Es gab drei solcher Kopien;
+    `llm.kontostand()` war die teuerste, weil an ihr die Geldwache haengt.
+    """
+    from .llm import _load_keys
+    return next(iter(_load_keys()), "")
 
 
 def _ruf(args: list[str], eingabe: str | None = None, frist: int = 120) -> dict:

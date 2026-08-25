@@ -3345,8 +3345,11 @@ def test_tagesdeckel_greift_ueber_prozesse_hinweg(monkeypatch, tmp_path):
     from govisor import llm
 
     buch = tmp_path / ".llm_tagesbudget.json"
-    monkeypatch.setattr(llm, "_Path", type(llm._Path)(llm._Path.__name__, (llm._Path,), {}))
-    # Einfacher: die Funktion direkt prüfen, mit echtem Pfad im tmp_path
+    # Geprüft wird die Entscheidung der Geldwache, nicht der Weg zur Datei: `_tagesbuch`
+    # wird unten ersetzt und liest `buch` direkt. (Hier stand davor noch ein Umbiegen von
+    # `llm._Path` auf eine Unterklasse — wirkungslos, seit `_tagesbuch` ersetzt wird, und
+    # der einzige Grund, warum dieser Test am 2026-08-25 an einer reinen Umbenennung
+    # zerbrach.)
     import datetime as dt
     import json as js
 
