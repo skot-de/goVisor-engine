@@ -685,6 +685,34 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
     }).catch(() => {});
   }
 
+  /* ── Vorhandenen Baustein in einen Vorgang übernehmen (§9.3) ───────────────────────────
+   *
+   * Bis hierher konnte die Bibliothek nur WACHSEN: jeder Weg legte einen neuen Baustein an.
+   * Das ist die Gegenrichtung — und erst sie macht die Verwendungshistorie zu dem, was sie
+   * meint. Ein Baustein, der in fünf Vorgängen half, ist ein anderer als einer, der einmal
+   * entstand.
+   *
+   * Die Liste wird EINMAL geholt und behalten: wer eine Checkliste durchgeht, tippt den
+   * Knopf mehrfach, und jedes Mal 40 Bausteine neu zu laden wäre spürbar. */
+  const bibliothekRef = useRef<{ id?: string; theme: string; content: string;
+    verwendet?: number }[] | null>(null);
+
+  async function bibliothek() {
+    if (bibliothekRef.current) return bibliothekRef.current;
+    let liste: { id?: string; theme: string; content: string; verwendet?: number }[] = [];
+    try {
+      const d = await (await fetch("/api/blocks")).json();
+      if (Array.isArray(d.blocks)) liste = d.blocks;
+    } catch { /* s. u. */ }
+    // Ohne Anmeldung antwortet die Middleware mit 401 — dann gilt der lokale Bestand.
+    // Er ist derselbe, nur ohne Kennung; die Verwendung lässt sich dann nicht vermerken.
+    if (!liste.length) {
+      try { liste = JSON.parse(localStorage.getItem("govisor.blocks") || "[]"); } catch { liste = []; }
+    }
+    bibliothekRef.current = liste;
+    return liste;
+  }
+
   function onBodyAction(action: string, value: string, el: HTMLElement) {
     switch (action) {
       case "anav": {
@@ -730,6 +758,79 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
           bausteinUebernehmen(blk.theme || "sonstiges", text, blk.label || "", activeId);
         }
         if (it) { it.classList.add("done"); clPersist(el.closest<HTMLElement>(".va-checklist")); }
+        break;
+      }
+      case "clnutzen": {
+        let blk: { theme?: string; i?: number } = {};
+        try { blk = JSON.parse(value); } catch { /* ignore */ }
+        const it = el.closest<HTMLElement>(".item");
+        const fuss = it?.querySelector<HTMLElement>(".blockfoot");
+        if (!it || !fuss) break;
+        const offen = it.querySelector(".cl-bib");
+        if (offen) { offen.remove(); break; }        // zweiter Klick schliesst wieder
+
+        const kasten = document.createElement("div");
+        kasten.className = "cl-bib";
+        kasten.textContent = t("Wird geladen …");
+        fuss.after(kasten);
+        bibliothek().then((alle) => {
+          // Zum Thema passende zuerst, danach der Rest — nie NUR die passenden: eine leere
+          // Liste erklaert nicht, ob die Bibliothek leer ist oder nur zu diesem Thema nichts
+          // hat, und das sind zwei sehr verschiedene Lagen.
+          const passend = alle.filter((b) => b.theme === blk.theme);
+          const rest = alle.filter((b) => b.theme !== blk.theme);
+          const zeigen = [...passend, ...rest].slice(0, 12);
+          if (!zeigen.length) {
+            kasten.textContent = t("Noch keine Bausteine in der Bibliothek.");
+            return;
+          }
+          kasten.innerHTML = "";
+          if (!passend.length) {
+            const h = document.createElement("div");
+            h.className = "cl-bib-h";
+            h.textContent = t("Zu diesem Punkt noch nichts. Hier der übrige Bestand:");
+            kasten.appendChild(h);
+          }
+          zeigen.forEach((b, k) => {
+            const z = document.createElement("button");
+            z.className = "cl-bib-z";
+            z.dataset.clpick = String(alle.indexOf(b));
+            const wie = b.verwendet ? ` · ${b.verwendet}×` : "";
+            z.innerHTML = `<span class="cl-bib-t">${b.theme}${wie}</span>`
+              + `<span class="cl-bib-x"></span>`;
+            // Textinhalt NICHT ueber innerHTML: ein Baustein enthaelt fremden Text.
+            z.querySelector(".cl-bib-x")!.textContent = b.content.slice(0, 160);
+            if (passend.length && k === passend.length) z.classList.add("cl-bib-trenn");
+            kasten.appendChild(z);
+          });
+        });
+        break;
+      }
+      case "clpick": {
+        const idx = Number(value);
+        const it = el.closest<HTMLElement>(".item");
+        const ta = it?.querySelector<HTMLTextAreaElement>("textarea.ta");
+        const alle = bibliothekRef.current || [];
+        const b = alle[idx];
+        if (!b || !ta) break;
+        ta.value = b.content;
+        ta.dispatchEvent(new Event("input", { bubbles: true }));
+        it?.querySelector(".cl-bib")?.remove();
+        // ⚠ Der Vermerk kommt NACH dem Einsetzen und blockiert es nicht. Ohne Kennung
+        // (lokaler Bestand ohne Anmeldung) gibt es nichts zu vermerken — der Baustein steht
+        // trotzdem im Feld.
+        if (b.id && activeId) {
+          fetch("/api/blocks/usage", {
+            method: "POST", headers: { "content-type": "application/json" },
+            body: JSON.stringify({ block_id: b.id, lead_id: activeId }),
+          }).then(() => {
+            // Die Zahl im Kasten stimmt sonst bis zum naechsten Laden nicht.
+            b.verwendet = (b.verwendet || 0) + 1;
+            const hist = it?.querySelector<HTMLElement>(".cl-hist");
+            if (hist) hist.textContent = t("Übernommen · schon %n× verwendet")
+              .replace("%n", String(b.verwendet));
+          }).catch(() => {});
+        }
         break;
       }
       case "clcopy": {

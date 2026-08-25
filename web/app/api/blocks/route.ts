@@ -64,7 +64,11 @@ export async function GET() {
   // freigegebenen einer Kollegin unterscheiden koennen — sonst bietet sie ein Loeschen an,
   // das die Regel ohnehin verweigert.
   const { data, error } = await sb.from("profile_text_blocks")
-    .select("id, theme, content_encrypted, keywords, origin, updated_at, sichtbarkeit, profile_id")
+    // `profile_block_usage(count)` zaehlt die Verwendungen mit, ohne sie zu laden — die
+    // Zahl ist das Interessante, nicht die Liste der Vorgaenge.
+    // ⚠ EINE Zeichenkette, nicht zusammengesetzt: Supabase leitet die Spaltentypen aus dem
+    // Literal ab. Ein `"a, " + "b"` kennt es nicht und macht daraus `GenericStringError`.
+    .select("id, theme, content_encrypted, keywords, origin, updated_at, sichtbarkeit, profile_id, profile_block_usage(count)")
     .eq("archived", false).order("updated_at", { ascending: false });
   if (error) return NextResponse.json({ error: error.message }, { status: 500 });
 
@@ -76,6 +80,7 @@ export async function GET() {
         id: r.id, theme: r.theme, content: entschluessele(ausHex(r.content_encrypted as string)),
         keywords: r.keywords ?? [], origin: r.origin ?? undefined, saved_at: r.updated_at,
         sichtbarkeit: r.sichtbarkeit ?? "privat", eigen: r.profile_id === user.id,
+        verwendet: (r.profile_block_usage as { count?: number }[] | null)?.[0]?.count ?? 0,
       });
     } catch {
       // Ein Baustein, der sich nicht entschlüsseln lässt (falscher oder gewechselter

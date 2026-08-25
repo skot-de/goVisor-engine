@@ -450,6 +450,19 @@ mark.hit{background:#CFF3E4;box-shadow:0 0 0 2px #CFF3E4}
 .va-checklist .ta{width:100%;border:1px solid var(--line);border-radius:7px;padding:11px 13px;font:inherit;font-size:13.5px;line-height:1.6;min-height:70px;background:#fff;color:var(--ink-900)}
 .va-checklist .ta:focus{outline:2px solid var(--signal-deep);outline-offset:-1px;border-color:var(--signal-deep)}
 .va-checklist .blockfoot{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:11px;flex-wrap:wrap}
+/* Bausteine aus der Bibliothek uebernehmen (§9.3). Bewusst im selben Kasten wie das
+   Textfeld: die Auswahl gehoert zum Baustein, nicht zur Checkliste drumherum. */
+.va-checklist .cl-bib{margin-top:9px;border:1px solid var(--line);border-radius:8px;overflow:hidden;font-size:13px}
+.va-checklist .cl-bib-h{padding:7px 10px;background:var(--bg2);color:var(--muted);font-size:12px}
+.va-checklist .cl-bib-z{display:block;width:100%;text-align:left;padding:8px 10px;background:none;border:0;border-top:1px solid var(--line);cursor:pointer;font:inherit;color:inherit}
+.va-checklist .cl-bib-z:first-child{border-top:0}
+.va-checklist .cl-bib-z:hover{background:var(--bg2)}
+/* Trennt die zum Punkt passenden von den uebrigen — ohne Beschriftung waere die Reihenfolge
+   eine unausgesprochene Behauptung. */
+.va-checklist .cl-bib-z.cl-bib-trenn{border-top:2px solid var(--line)}
+.va-checklist .cl-bib-t{display:block;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.03em;margin-bottom:3px}
+.va-checklist .cl-bib-x{display:block;line-height:1.45}
+.va-checklist .cl-hist{color:var(--muted);font-size:12px}
 .va-checklist .acts{display:flex;gap:7px;align-items:center}
 .va-checklist .btn{font-size:12px;font-weight:600;border-radius:7px;padding:6px 12px;cursor:pointer;border:1px solid transparent;display:inline-flex;align-items:center;gap:6px}
 .va-checklist .btn-p{background:var(--signal-deep);color:#fff}.va-checklist .btn-s{background:var(--surface);color:var(--ink-900);border-color:var(--line)}

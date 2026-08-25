@@ -954,6 +954,7 @@ function renderChecklistBlock(a, l){
     const block = `<div class="block"><div class="lbl"><span>${tk("Euer Textbaustein")}</span><span class="mark m-v">${tk("aus eurem Profil")}</span></div>
       <textarea class="ta cl-edit" placeholder="${esc(tk("Textbaustein aus eurem Profil einsetzen …"))}"></textarea>
       <div class="blockfoot"><span class="cl-hist"></span><span class="acts">
+        <button class="btn btn-q btn-sm" data-clnutzen='${esc(kombi)}'>${tk("Aus Bibliothek")}</button>
         <button class="btn btn-p btn-sm" data-clkombi='${esc(kombi)}'>${tk("Kopieren &amp; speichern")}</button></span></div></div>`;
     return `<article class="item${isDone?' done':''}" data-clitem="${it._i}">
       <div class="ih"><button class="dchk" data-clchk="${it._i}">✓</button><b>${esc(it.label||it.req_type)}${val}</b></div>

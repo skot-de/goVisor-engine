@@ -206,7 +206,9 @@ def test_verwendung_wird_aus_derselben_gefilterten_liste_zugeordnet():
 def test_fehlende_historie_nimmt_den_baustein_nicht_mit():
     """Eine verlorene Zeile Statistik ist kein Grund, einem Menschen seinen Text wegzunehmen."""
     code = ohne_kommentare(ROUTE, "//")
-    i = code.index("profile_block_usage")
+    # ⚠ Die EINFUEGENDE Stelle, nicht die erste: seit dem Verwendungszähler steht
+    # `profile_block_usage(count)` schon oben im `select` der Leseabfrage.
+    i = code.index('from("profile_block_usage")')
     rest = code[i:i + 400]
     assert "historie" in rest
     # Kein Abbruch mit Fehlerstatus, nur ein Vermerk in der Antwort.
@@ -233,3 +235,70 @@ def test_beide_checklisten_knoepfe_gehen_denselben_weg():
     einer Stelle hätte die andere stehen lassen."""
     assert SHELL.count("bausteinUebernehmen(") == 3      # 1 Definition + 2 Aufrufe
     assert "govisor.blocks" not in SHELL[SHELL.index("case \"clkombi\""):]
+
+
+# ── Vorhandenen Baustein in einen Vorgang übernehmen ───────────────────────────────────────
+
+CORE = (ROOT / "web" / "lib" / "explorerCore.js").read_text(encoding="utf-8")
+PANEL = (ROOT / "web" / "components" / "explorer" / "DetailPanel.tsx").read_text(encoding="utf-8")
+CSS = (ROOT / "web" / "app" / "explorer.css").read_text(encoding="utf-8")
+
+
+def test_knopf_steht_neben_dem_bestehenden():
+    """Beide Wege gehören in dieselbe Zeile: einen Baustein anlegen und einen holen."""
+    i = CORE.index("data-clnutzen")
+    assert "data-clkombi" in CORE[i:i + 400], "die zwei Knöpfe gehören zusammen"
+
+
+def test_neue_aktionen_sind_verdrahtet():
+    """⚠ Unsere häufigste Fehlerklasse: gebaut, aber nicht verdrahtet.
+
+    `DetailPanel` reicht nur Aktionen weiter, die in seiner Liste stehen. Fehlt eine, ist
+    der Knopf da, sieht richtig aus und tut nichts — und alle Tests bleiben grün.
+    """
+    for a in ("clnutzen", "clpick"):
+        assert f'"{a}"' in PANEL, f"{a} wird nicht weitergereicht"
+        assert f'case "{a}"' in SHELL, f"{a} wird nicht behandelt"
+
+
+def test_auswahlkasten_hat_seine_klassen():
+    """Ohne die Regeln stünde die Auswahl als unformatierte Liste im Text."""
+    for klasse in ("cl-bib", "cl-bib-z", "cl-bib-h", "cl-bib-t", "cl-bib-x", "cl-hist"):
+        assert f".{klasse}" in CSS, f"{klasse} fehlt im Stylesheet"
+        assert klasse in SHELL or klasse in CORE, f"{klasse} wird nirgends gesetzt"
+
+
+def test_fremder_text_geht_nicht_ueber_innerhtml():
+    """⚠ Ein Baustein enthält Text, den ein Mensch geschrieben hat — nie als HTML deuten."""
+    # Geprüft wird der Code, nicht der Kommentar, der genau diese Regel begründet.
+    code = ohne_kommentare(SHELL, "//")
+    i = code.index('case "clnutzen"')
+    block = code[i:code.index('case "clpick"')]
+    assert "textContent = b.content" in block
+    # Der Inhalt selbst darf nie über innerHTML gehen — nur das Gerüst drumherum.
+    for zeile in block.splitlines():
+        if "innerHTML" in zeile:
+            assert "b.content" not in zeile, f"Inhalt als HTML: {zeile.strip()[:70]}"
+
+
+def test_uebernehmen_setzt_den_text_auch_ohne_anmeldung():
+    """⚠ Der Vermerk ist die Kür, das Einsetzen die Pflicht. Wer nicht angemeldet ist, soll
+    den Baustein trotzdem im Feld haben."""
+    i = SHELL.index('case "clpick"')
+    block = SHELL[i:i + 1400]
+    assert block.index("ta.value = b.content") < block.index('fetch("/api/blocks/usage"')
+    assert "if (b.id && activeId)" in block, "ohne Kennung wird nichts vermerkt, aber eingesetzt"
+
+
+def test_liste_wird_nicht_bei_jedem_klick_neu_geholt():
+    """Wer eine Checkliste durchgeht, tippt den Knopf mehrfach."""
+    assert "bibliothekRef" in SHELL and "if (bibliothekRef.current) return" in SHELL
+
+
+def test_leere_themenauswahl_zeigt_trotzdem_den_bestand():
+    """⚠ Eine leere Liste erklärt nicht, ob die Bibliothek leer ist oder nur zu diesem Thema
+    nichts hat — und das sind zwei sehr verschiedene Lagen."""
+    i = SHELL.index('case "clnutzen"')
+    block = SHELL[i:SHELL.index('case "clpick"')]
+    assert "...passend, ...rest" in block.replace(" ", "").replace("\n", "") or \
+           "[...passend, ...rest]" in block
