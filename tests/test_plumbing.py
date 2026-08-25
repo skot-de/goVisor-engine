@@ -4363,3 +4363,43 @@ def test_keine_route_laedt_die_firmen_sammeldatei():
         quelle = (wurzel / datei).read_text(encoding="utf-8")
         assert "loadFirmaProfiles" not in quelle, datei
         assert "loadFirmaProfil" in quelle, datei
+
+
+# ── Fristen: eine schlanke Datei statt sieben dicker ───────────────────────────────────────
+
+def _export_web_leads_teil(name: str):
+    """Nur den Fristen-Teil laden — die Datei selbst führt beim Import einen Voll-Export aus."""
+    wurzel = pathlib.Path(__file__).resolve().parent.parent
+    q = (wurzel / "scripts" / "export_web_leads.py").read_text(encoding="utf-8")
+    i, j = q.index("def _frist_zeile"), q.index("def export_branche")
+    raum: dict = {}
+    exec(compile(q[i:j], "frist", "exec"), raum)
+    return raum[name]
+
+
+def test_fristzeile_traegt_genau_die_sechs_gebrauchten_felder():
+    """⚠ Jedes Feld mehr ist ein Feld, das 43.735 Mal mitgeschleppt wird.
+
+    Gemessen: sieben `leads-<branche>.json` sind 110 MB, dieselben sechs Felder 6,7 MB.
+    """
+    zeile = _export_web_leads_teil("_frist_zeile")({
+        "id": "x1", "titel": "T", "src": "ted", "tage": 5, "endTage": 9,
+        "timing": {"src": "echt"}, "beschreibung": "…" * 2000, "lose": [1, 2, 3],
+    })
+    assert set(zeile) == {"id", "titel", "src", "tage", "endTage", "endeEcht"}
+    assert zeile["endeEcht"] is True
+
+
+def test_endeEcht_ist_nur_bei_echt_wahr():
+    z = _export_web_leads_teil("_frist_zeile")
+    assert z({"timing": {"src": "geschaetzt"}})["endeEcht"] is False
+    assert z({})["endeEcht"] is False          # kein timing → nicht echt, nicht Absturz
+
+
+def test_leadfristen_liest_die_schlanke_datei_zuerst():
+    wurzel = pathlib.Path(__file__).resolve().parent.parent
+    quelle = (wurzel / "web" / "lib" / "leadIndex.ts").read_text(encoding="utf-8")
+    assert "leads-fristen.json" in quelle
+    # Der Rückfall muss sich melden — sonst merkt niemand, dass 110 MB geladen werden.
+    assert "console.error" in quelle
+    assert quelle.index("ausSchlankerDatei") < quelle.index("ausAllenBranchen")

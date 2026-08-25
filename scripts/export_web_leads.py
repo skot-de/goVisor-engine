@@ -682,6 +682,25 @@ def ch_extras_for(ids):
     return {nid: [e for _, e in sorted(items, key=lambda x: x[0])] for nid, items in out.items()}
 
 
+# ⚠ FRISTEN GETRENNT VON ALLEM ANDEREN.
+#
+# `web/lib/leadIndex.ts::leadFristen()` braucht die Fristen ALLER Leads und las dafuer alle
+# sieben `leads-<branche>.json` nacheinander — gemessen am 2026-08-25: **110 MB** fuer
+# 43.735 Leads, von denen es sechs Felder benutzt. Dieselben sechs Felder als eine Datei:
+# **7,2 MB**, also 6,5 %. Der Rest sind Beschreibung (22 %), Lose (13 %), Anforderungen
+# (11 %) und Unterlagen (7 %) — Dinge, die eine Fristenliste nichts angehen.
+#
+# Anders als bei den Firmenprofilen hilft hier KEINE Datei je Eintrag: der Verbraucher
+# braucht wirklich alle. Was er nicht braucht, sind die Spalten.
+FRISTEN: list[dict] = []
+
+
+def _frist_zeile(l: dict) -> dict:
+    return {"id": l.get("id"), "titel": l.get("titel"), "src": l.get("src"),
+            "tage": l.get("tage"), "endTage": l.get("endTage"),
+            "endeEcht": (l.get("timing") or {}).get("src") == "echt"}
+
+
 def export_branche(key):
     rows = con.execute(f"""
         WITH mapped AS (
@@ -1118,6 +1137,7 @@ def export_branche(key):
                            "sprachfassungen": fassungen.get(l["id"]) if len(sp) > 1 else None}
     (OUT / f"leads-{key}.json").write_text(json.dumps(leads, ensure_ascii=False, sort_keys=True))
     (OUT / f"detail-{key}.json").write_text(json.dumps(detail, ensure_ascii=False, sort_keys=True))
+    FRISTEN.extend(_frist_zeile(l) for l in leads)
     return len(leads)
 
 
@@ -1135,6 +1155,12 @@ for key in ["it", "bau", "medizin", "beratung", "sicherheit", "energie", "ohne"]
     exported[key] = export_branche(key)
     markets[key] = market_summary(key)
     print(f"  {key:11} {exported[key]:>5} / {counts.get(key, 0):>6} exportiert")
+
+(OUT / "leads-fristen.json").write_text(
+    json.dumps(FRISTEN, ensure_ascii=False, separators=(",", ":")))
+print(f"  {len(FRISTEN):,} Fristen → web/data/leads-fristen.json "
+      f"({(OUT / 'leads-fristen.json').stat().st_size / 1048576:.1f} MB "
+      f"statt 110 MB ueber sieben Dateien)")
 
 (OUT / "markt.json").write_text(json.dumps(markets, ensure_ascii=False, sort_keys=True))
 
