@@ -27,11 +27,24 @@ für Wechsel-Prognosen und Lead-Generierung. Nutzer: Sven (sven.kotzur@gmail.com
 Medallion: **Bronze** (Original-TED-XML, verlustfreie Quelle, nach Land gefiltert) →
 **Silber** (normalisierte Parquet-Tabellen, kein JSON) → **Gold** (abgeleitet/kuratiert).
 Lokal DuckDB/Parquet. Quelle sind die monatlichen XML-Bulk-Pakete, NICHT der CSV-Export.
-Bestand: DE komplett, alle CPV, **2004-01–2026-06 (270 Monate, lückenlos), 1.832.998
-Notices, 0 Dubletten**, gegen TED-API verifiziert. Vier Schema-Generationen im Parser
-(`schema_gen`): `legacy` (TED_EXPORT, 1,15 Mio), `eforms` (0,43 Mio), `text` (Vor-XML-
-Textformat, 0,25 Mio, cp1252-Fallback), `ojs` (INTERNAL_OJS, OPOCE-Altformat, u. a. 2008-05).
+Bestand DE, alle CPV, 2004-01 bis heute, gegen TED-API verifiziert. Schema-Generationen
+im Parser (`schema_gen`): `legacy` (TED_EXPORT), `eforms`, `text` (Vor-XML-Textformat,
+cp1252-Fallback), `ojs` (INTERNAL_OJS, OPOCE-Altformat, u. a. 2008-05).
 CLI: `python -m govisor.cli {ingest|silver|gold|verify|review}`.
+
+⚠ **HIER STANDEN ZAHLEN OHNE DATUM, und alle waren falsch.** „1.832.998 Notices,
+270 Monate" war der Stand vom 2026-07-19; am 2026-08-25 nachgemessen waren es **1.858.744**
+allein aus den TED-Generationen. Schlimmer als die Drift ist, dass der Satz seine Bedeutung
+verloren hat: `silver/DE/notices` traegt inzwischen **405.357 Saetze aus Nicht-TED-Quellen**
+(DÖE 391.784, DTVP 8.540, NetServer 3.773, Healy-Hudson 1.260). Ein `count(*)` ueber die
+Tabelle ergibt 2.264.101 — wer die alte Zahl gegenprueft, findet eine Abweichung von 24 %
+und weiss nicht, ob etwas kaputt ist oder ob er das Falsche zaehlt.
+
+**Zahlen, die sich jede Nacht aendern, gehoeren nicht in diese Datei.** Der aktuelle Stand
+kommt aus `python3 scripts/qualitaet_bericht.py` (jede Nacht dieselben Kennzahlen, mit
+Vortageswert). Was hier stehen darf, ist, was gilt: Bauart, Regeln, Fallen — und Zahlen nur
+mit Datum daneben, so wie es die Länder-Bibel haelt (`scripts/pruefe_bibel.py`, Pruefung 1
+laesst eine undatierte Zahl dort gar nicht durch).
 
 ## Arbeitsweise (wichtig, von Sven eingefordert)
 - **goVisor ist EU-weit geplant — jede Funktion gilt für ALLE Länder.** Deutschland ist der
@@ -166,7 +179,16 @@ CLI: `python -m govisor.cli {ingest|silver|gold|verify|review}`.
   „sonstiges"/`attributes`, Zweifelsfälle → `review`-Queue. Erschlossenes trägt Konfidenz.
 - Details + Warum: `docs/entscheidungen-und-kontext.md`.
 
-## Aktueller Stand (2026-07-19)
+## Stand vom 2026-07-19 — ZAHLEN SIND MOMENTAUFNAHMEN, nicht der heutige Stand
+
+⚠ Am 2026-08-25 nachgemessen: **jede Zahl in diesem Abschnitt ist gewandert**, einige weit.
+Leads 70.246 → 91.240 · verifizierte Nachfolgen 100.071 → 114.170 · `retender_signal`
+282 → 3.915 · `dim_plz` 10.813 → 16.676 (AT/CH kamen dazu) · `market_opportunity`
+511 → 489 Segmente · `buyer_stats` 23.998 → 22.097. Das ist normal — der Bestand waechst
+taeglich. Es heisst nur: **lies den Abschnitt als Chronik, nicht als Auskunft.** Was noch
+gilt, sind die Entscheidungen und Begruendungen darin; die Zahlen holt
+`python3 scripts/qualitaet_bericht.py`.
+
 - **Backfill 2004–2015 + Qualitäts-Reparatur fertig** (`REPAIR2_DONE`, Audit-Trail
   `data/repair.log` + `data/repair2.log`, Skripte in `scripts/`). Bestand jetzt **1.832.998
   DE-Notices, 2004-01–2026-06 lückenlos (270 Monate)**. Drei Root-Causes des Nacht-Ingests
