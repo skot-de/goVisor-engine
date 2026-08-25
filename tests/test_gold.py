@@ -163,3 +163,33 @@ def test_curated_alias_merges_rename_into_canonical():
     entity_of = {netz.entity_id: netz, infra.entity_id: infra}
     aliases = gold._load_entity_aliases(Config(countries=("DE",), data_dir="data"), "DE", entity_of)
     assert aliases == {"name:db infrago": "hr:HRB50879"}
+
+
+def test_verfahren_status_trennt_unbekannt_von_gescheitert():
+    """⚠ „Wir wissen es nicht" ist nicht „gescheitert".
+
+    Bis zum 2026-08-25 galt jede Zuschlags-Bekanntmachung ohne Award-Zeile als
+    `erfolglos`. DÖE und NetServer schreiben aber gar keine Award-Zeilen — 79.302 bzw.
+    2.253 CANs, davon 0 mit Zeile. Ergebnis: 54 % aller 150.168 „erfolglos" waren
+    Artefakt, vierzehn Vergabestellen standen bei exakt 100,0 % Abbruchquote, und
+    `retender_signal` war zu 46 % allein darauf gebaut.
+
+    Die Quelle wird ABGELEITET, nicht getippt: liefert sie bei unter 1 % ihrer CANs eine
+    Award-Zeile, kann sie keine Zuschlaege melden. Gemessen liegt der naechste Wert bei
+    79 % (`text`) — die Schwelle trennt also mit grossem Abstand.
+    """
+    import pathlib
+
+    q = (pathlib.Path(__file__).resolve().parent.parent
+         / "govisor" / "gold.py").read_text(encoding="utf-8")
+    block = q.split("def build_quality")[1].split("\ndef ")[0]
+
+    assert "'ohne_zuschlagsdaten'" in block, "der eigene Status fehlt"
+    assert "quelle_ohne_zuschlagsdaten" in block, "das Merkmal wird nicht mitgefuehrt"
+    # Die Ableitung darf keine getippte Quellenliste sein.
+    assert "quelle AS (" in block, "die Quellenlage wird nicht abgeleitet"
+    assert "'doe'" not in block and "'netserver'" not in block, \
+        "Quellen sind hart eingetragen statt gemessen"
+    # Und die Reihenfolge muss stimmen: erst pruefen, ob die Quelle etwas liefern KANN.
+    assert block.index("'ohne_zuschlagsdaten'") < block.index("THEN 'erfolglos'"), \
+        "`erfolglos` greift vor der Quellenpruefung — dann bleibt das Artefakt"

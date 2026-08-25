@@ -413,6 +413,8 @@ def build_quality(cfg: Config, country: str = "DE"):
     # in die Review-Queue. Zusätzlich `verfahren_status` (kein Defekt, sondern
     # Signal): CANs ohne Gewinner UND ohne Award-Daten = erfolglos/aufgehoben —
     # wertvoller Lead-Hinweis (weniger Konkurrenz beim Re-Tender), kein Fehler.
+    # ⚠ Aber nur, wenn die QUELLE ueberhaupt Zuschlagsdaten liefert — sonst
+    # `ohne_zuschlagsdaten`. Warum das zaehlt, steht unten am Status selbst.
     con.execute(f"""
         COPY (
           WITH dur AS (SELECT notice_id, max(duration_months) dm
@@ -424,6 +426,15 @@ def build_quality(cfg: Config, country: str = "DE"):
                   FROM '{A}' GROUP BY 1),
           win AS (SELECT DISTINCT notice_id FROM '{PE}' WHERE role='winner'),
           awp AS (SELECT DISTINCT notice_id FROM '{A}'),
+          -- ⚠ WELCHE QUELLE LIEFERT UEBERHAUPT ZUSCHLAGSDATEN? Abgeleitet, nicht getippt:
+          -- eine Quelle, deren Zuschlags-Bekanntmachungen zu unter 1 % eine Zeile in
+          -- `awards` haben, liefert strukturell keine. Sobald sie es tut, faellt die
+          -- Ausnahme von selbst weg — eine getippte Liste wuerde das nicht mitbekommen.
+          quelle AS (
+            SELECT n.schema_gen,
+                   count(*) FILTER (WHERE a.notice_id IS NOT NULL)*1.0/count(*) AS anteil
+            FROM '{N}' n LEFT JOIN awp a ON a.notice_id=n.notice_id
+            WHERE n.notice_kind='can' GROUP BY 1),
           q AS (
             SELECT n.notice_id, n.final_value, n.estimated_value, n.value_currency,
                    n.notice_kind, n.award_date, n.end_date, n.start_date, n.title,
@@ -432,12 +443,14 @@ def build_quality(cfg: Config, country: str = "DE"):
                      n.award_date + (CAST(dur.dm AS VARCHAR) || ' months')::INTERVAL) AS eff_end,
                    coalesce(bid.bad, false) AS bad_bid,
                    (win.notice_id IS NOT NULL) AS has_winner,
-                   (awp.notice_id IS NOT NULL) AS has_award
+                   (awp.notice_id IS NOT NULL) AS has_award,
+                   coalesce(quelle.anteil, 1.0) < 0.01 AS quelle_ohne_zuschlagsdaten
             FROM '{N}' n
             LEFT JOIN dur ON dur.notice_id=n.notice_id
             LEFT JOIN bid ON bid.notice_id=n.notice_id
             LEFT JOIN win ON win.notice_id=n.notice_id
             LEFT JOIN awp ON awp.notice_id=n.notice_id
+            LEFT JOIN quelle ON quelle.schema_gen=n.schema_gen
           )
           SELECT notice_id,
             list_filter([
@@ -497,6 +510,27 @@ def build_quality(cfg: Config, country: str = "DE"):
                  -- aus dem Chancen-Radar/der Chronik.
                  WHEN notice_kind='can' AND NOT has_winner
                       AND {_open_house_sql()} THEN 'open_house'
+                 -- ⚠ „WIR WISSEN ES NICHT" IST NICHT „GESCHEITERT". Bis zum 2026-08-25
+                 -- galt jede Zuschlags-Bekanntmachung ohne Zuschlagsdaten als erfolglos.
+                 -- DOeE und NetServer schreiben aber ueberhaupt keine `awards`-Zeilen —
+                 -- 79.302 bzw. 2.253 CANs, davon 0 mit Zeile. Ergebnis: **54 % aller
+                 -- 150.168 „erfolglos" waren Artefakt**, und vierzehn Vergabestellen
+                 -- standen mit einer Abbruchquote von exakt 100,0 % da (an der Spitze
+                 -- die Vermoegens- und Hochbauverwaltung Baden-Wuerttemberg mit 5.189
+                 -- Verfahren). Auffaellige Aggregatzahlen sind Warnsignale.
+                 --
+                 -- Das schlaegt weiter: `retender_signal` — laut CLAUDE.md „der
+                 -- staerkste Kauf-/Chancen-Hinweis" — war zu 46 % allein auf diesen
+                 -- Quellen gebaut, und dieselbe Groesse speist die Schwaeche-Achse von
+                 -- `market_opportunity`. Ein Bieter waere zu Stellen geschickt worden,
+                 -- die voellig normal vergeben, nur eben unterschwellig, wo niemand
+                 -- einen Zuschlag veroeffentlicht.
+                 --
+                 -- Der eigene Status haelt beides auseinander, statt das Unbekannte als
+                 -- Befund auszugeben. Wer „erfolglos" auswertet, bekommt ab hier nur
+                 -- noch Faelle, bei denen die Quelle einen Zuschlag haette melden koennen.
+                 WHEN notice_kind='can' AND quelle_ohne_zuschlagsdaten
+                      THEN 'ohne_zuschlagsdaten'
                  WHEN notice_kind='can' AND NOT has_award THEN 'erfolglos'
                  WHEN notice_kind='can' THEN 'unbekannt'
                  -- NEU: auch die AUSSCHREIBUNGSSEITE markieren. Bisher lief der Status nur

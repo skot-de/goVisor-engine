@@ -73,8 +73,13 @@ Grund: `gold.build_quality` stempelt jeden ``notice_kind='can'`` ohne Award-Zeil
 ``verfahren_status='erfolglos'``, und eine cosinex-Trefferzeile trägt keinen Gewinner.
 Die Zuschläge (bei RLP gemessen: 150 von 247 Sätzen) würden also als *erfolglose*
 Ausschreibungen gezählt und die Schwäche-Achse von `market_opportunity`/`retender_signal`
-verfälschen. Ausführlich mit Messung bei `ARTEN_STANDARD`; freischalten mit
-``--arten cn,pin,can``, sobald `gold` einen Status für „Zuschlag ohne Details" kennt.
+verfälschen. Ausführlich mit Messung bei `ARTEN_STANDARD`.
+
+✅ **Die Bedingung ist seit dem 2026-08-25 erfüllt.** `gold.build_quality` kennt jetzt
+``verfahren_status='ohne_zuschlagsdaten'`` und leitet je Quelle ab, ob sie überhaupt
+Zuschlagsdaten liefert. Freischalten mit ``--arten cn,pin,can`` ist damit möglich — die
+Entscheidung, es zu tun, gehört aber gemessen (Dublettenlage gegen TED/DÖE) und steht
+noch aus.
 
 **Bronze = eine Zeile je Bekanntmachung als JSONL**, ``data/raw_cosinex/DE/YYYY-MM.jsonl``,
 dedupliziert über ``<portal>:<pid>``. Wie bei TED/DÖE/simap/DTVP/NetServer liegt die
@@ -400,6 +405,16 @@ def _iso(s: str | None):
 #: **390 seiner Zuschläge stehen heute als `erfolglos` in `quality.parquet`** (gemessen
 #: 2026-08-14; von 147.673 insgesamt). Der Anteil ist klein, der Mechanismus aber falsch,
 #: und er wächst mit jeder Quelle, die Zuschläge ohne Gewinnerangabe liefert.
+#:
+#: ⚠ **Der Anteil war NICHT klein — hier wurde die falsche Quelle gemessen.** Am
+#: 2026-08-25 nachgezählt: NetServer 2.253, **DÖE 79.300**. Zusammen 81.553 von 150.168
+#: „erfolglos", also **54 %**. Vierzehn Vergabestellen standen mit einer Abbruchquote von
+#: exakt 100,0 % da. `retender_signal` war zu 46 % allein darauf gebaut. Die Warnung hier
+#: war richtig, ihre Groessenordnung um den Faktor 200 zu niedrig — gemessen wurde der
+#: Connector, an dem man gerade arbeitete, nicht der grosse daneben.
+#:
+#: ✅ Behoben: `gold.build_quality` kennt seit dem 25.08. den Status
+#: `ohne_zuschlagsdaten` und leitet je Quelle ab, ob sie Zuschlagsdaten liefert.
 #:
 #: Das gehört in `gold` gelöst (ein Status wie „zuschlag_ohne_details" für Quellen, die
 #: keine Gewinner führen) — `gold.py` ist hier aber ausdrücklich nicht anzufassen. Bis
