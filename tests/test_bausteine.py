@@ -162,3 +162,21 @@ def test_fehlgeschlagene_freigabe_wird_zurueckgedreht():
     i = LIB.index("async function freigabe")
     block = LIB[i:LIB.index("function removeBlock")]
     assert block.count("zurueck") >= 2, "beide Fehlerwege müssen zurückdrehen"
+
+
+def test_null_getroffene_zeilen_sind_kein_erfolg():
+    """⚠ Der Fehler, den erst der Durchlauf zeigte.
+
+    Trifft die RLS-Regel keine Zeile — weil der Baustein jemand anderem gehört —, liefert
+    PostgREST KEINEN Fehler, sondern null Zeilen. Ohne Prüfung meldete die Route `ok`.
+    Am 2026-08-25 gemessen: Nutzer B bekam „ok" für das Archivieren eines fremden
+    Bausteins, der danach unverändert dastand (`archived = f`). Die Daten waren sicher,
+    die Antwort war eine Lüge — und die ist schlimmer, weil niemand nachsieht.
+    """
+    code = ohne_kommentare(ROUTE, "//")
+    for stelle in ("archived: true", "sichtbarkeit: nachFirma"):
+        i = code.index(stelle)
+        rest = code[i:i + 700]
+        assert ".select(" in rest, f"{stelle}: ohne select bleibt der Treffer ungeprüft"
+        assert "data?.length" in rest, f"{stelle}: die Trefferzahl wird nicht geprüft"
+        assert "403" in rest, f"{stelle}: null Treffer muss abgelehnt werden, nicht bejaht"

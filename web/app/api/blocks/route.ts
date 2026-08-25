@@ -153,14 +153,20 @@ export async function PATCH(req: Request) {
       error: "Freigeben an die Firma geht erst, wenn eure Firmenzugehörigkeit belegt ist "
              + "(über die Firmen-Domain im Onboarding)." }, { status: 409 });
   }
-  const { error } = await sb.from("profile_text_blocks").update({
+  const { data, error } = await sb.from("profile_text_blocks").update({
     sichtbarkeit: nachFirma ? "firma" : "privat",
     // Beim Zuruecknehmen wird die Firma GELOESCHT, nicht behalten: ein privater Baustein
     // mit Firmenvermerk saehe aus wie ein Rest, den jemand vergessen hat.
     identity_id: nachFirma ? firma : null,
     last_edited_by: user.id, updated_at: new Date().toISOString(),
-  }).eq("id", id).eq("profile_id", user.id);
+  }).eq("id", id).eq("profile_id", user.id).select("id");
   if (error) return NextResponse.json({ error: error.message }, { status: 500 });
+  // Gleicher Grund wie beim Archivieren: null getroffene Zeilen sind kein Fehler, sondern
+  // eine leere Antwort — und ein `ok` darauf wäre falsch.
+  if (!data?.length) {
+    return NextResponse.json({ error: "Nicht dein Baustein — nur die anlegende Person kann "
+                                     + "die Freigabe ändern." }, { status: 403 });
+  }
   return NextResponse.json({ ok: true, sichtbarkeit: nachFirma ? "firma" : "privat" });
 }
 
@@ -172,8 +178,18 @@ export async function DELETE(req: Request) {
   if (!user) return NextResponse.json({ error: "Anmeldung erforderlich" }, { status: 401 });
   const id = new URL(req.url).searchParams.get("id") || "";
   if (!/^[0-9a-f-]{36}$/i.test(id)) return NextResponse.json({ error: "ungültige ID" }, { status: 400 });
-  const { error } = await sb.from("profile_text_blocks")
-    .update({ archived: true, last_edited_by: user.id }).eq("id", id);
+  // ⚠ `.select()` IST HIER KEINE ZIERDE. Trifft die Regel keine Zeile — weil der Baustein
+  // jemand anderem gehört —, liefert PostgREST KEINEN Fehler, sondern null Zeilen. Ohne
+  // diese Prüfung meldete die Route `ok`, obwohl nichts geschah. Am 2026-08-25 im
+  // Durchlauf aufgefallen: Nutzer B bekam „ok" für das Archivieren eines fremden
+  // Bausteins, der danach unverändert dastand. Die Daten waren sicher, die Antwort war
+  // eine Lüge — und die ist schlimmer, weil niemand nachsieht.
+  const { data, error } = await sb.from("profile_text_blocks")
+    .update({ archived: true, last_edited_by: user.id }).eq("id", id).select("id");
   if (error) return NextResponse.json({ error: error.message }, { status: 500 });
+  if (!data?.length) {
+    return NextResponse.json({ error: "Nicht dein Baustein — nur die anlegende Person kann "
+                                     + "ihn archivieren." }, { status: 403 });
+  }
   return NextResponse.json({ ok: true });
 }
