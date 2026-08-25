@@ -186,12 +186,23 @@ def summary_messages(text: str) -> list[dict]:
             {"role": "user", "content": text[:28_000]}]
 
 
+_AMPEL = ("gruen", "gelb", "rot")
+
+
 def _summary_aus(txt: str) -> dict:
     """Rohantwort → Ampel und Zusammenfassung. Von beiden Wegen benutzt."""
     txt = re.sub(r"^```json|^```|```$", "", (txt or "").strip(), flags=re.M).strip()
     try:
         d = json.loads(txt)
-        return {"ampel": d.get("ampel", "gelb"), "ampel_grund": d.get("ampel_grund", ""),
+        # ⚠ DIE AMPEL GEGEN DIE ERLAUBTEN WERTE PRUEFEN. Sie wurde ungeprueft aus der
+        # Modellantwort uebernommen; im Bestand steht deshalb ein Vorgang mit der Ampel
+        # `gruuen` (gemessen 2026-08-25 ueber 7.755 Auswertungen). Ein Wert, den die
+        # Oberflaeche nicht kennt, faellt dort in den Vorgabezweig — und der ist nicht
+        # zwingend derselbe wie hier. Unbekanntes wird `gelb`: die vorsichtige Mitte, wie
+        # schon beim unlesbaren JSON eine Zeile weiter unten.
+        ampel = str(d.get("ampel", "")).strip().lower()
+        return {"ampel": ampel if ampel in _AMPEL else "gelb",
+                "ampel_grund": d.get("ampel_grund", ""),
                 "zusammenfassung": d.get("zusammenfassung", "")}
     except json.JSONDecodeError:
         return {"ampel": "gelb", "ampel_grund": "", "zusammenfassung": ""}
@@ -667,30 +678,55 @@ def _lauf() -> int:
     # ⚠ Die alten Saetze werden NICHT ueberschrieben, sondern zuerst weggesichert. Bricht der
     # neue Lauf ab, ist der alte Stand noch da — sonst taeusche man Fortschritt vor und haette
     # am Ende weniger als vorher.
+    # Die offenen Leads werden HIER schon gebraucht, nicht erst beim Filtern unten: die
+    # Neuberechnung darf nur wegwerfen, was sie auch wieder herstellt (s. gleich).
+    offen: set[str] | None = None
+    if NUR_OFFENE:
+        import duckdb as _d
+        offen = {r[0] for r in _d.connect().execute(
+            f"""SELECT lead_id FROM read_parquet('{ROOT}/data/gold/DE/lead_export.parquet')
+                WHERE phase='open' AND deadline_date > current_date""").fetchall()}
+
     neu_ab = [x.strip() for x in os.environ.get("NEU_AB_MODELL", "").split(",") if x.strip()]
     if neu_ab:
         treffer = [k for k, v in out.items()
                    if any(t in (v.get("model") or "") for t in neu_ab)]
+        # ⚠ NUR WEGWERFEN, WAS AUCH NEU GERECHNET WIRD. Bis zum 2026-08-25 loeschte diese
+        # Stelle ALLE Treffer, und der `NUR_OFFENE`-Filter weiter unten liess davon nur die
+        # offenen zum Rechnen durch. Die abgelaufenen waren damit geloescht und wurden nie
+        # ersetzt — beim Bestand vom 25.08. waeren das 158 Vorgaenge gewesen (3.544 Treffer,
+        # davon 3.386 offen). Ein Werkzeug, das „neu rechnen" heisst, darf nicht ersatzlos
+        # streichen.
+        uebersprungen = 0
+        if offen is not None:
+            vorher = len(treffer)
+            treffer = [k for k in treffer if k in offen]
+            uebersprungen = vorher - len(treffer)
         if treffer:
-            sicherung = OUT.with_suffix(".vor_neurechnung.json")
-            if not sicherung.exists():
-                sicherung.write_text(json.dumps(out, ensure_ascii=False), encoding="utf-8")
-                print(f"Alter Stand gesichert: {sicherung.name}", flush=True)
+            # ⚠ NUR DIE BETROFFENEN SICHERN, und zwar JEDES MAL. Vorher wurde die ganze
+            # Ergebnisdatei kopiert (358 MB) — aber nur, wenn es die Sicherung noch nicht
+            # gab. Ein zweiter Lauf lief also ohne Netz, und ausgerechnet der ist der
+            # gefaehrliche, weil der erste den Stand schon veraendert hat. Die betroffenen
+            # Saetze allein sind klein genug fuer eine Kopie je Lauf.
+            marke = _dt.datetime.now().strftime("%Y%m%dT%H%M%S")
+            sicherung = OUT.with_name(f"{OUT.stem}.vor_neurechnung-{marke}.json")
+            sicherung.write_text(
+                json.dumps({k: out[k] for k in treffer}, ensure_ascii=False), encoding="utf-8")
+            print(f"Alter Stand der betroffenen Vorgänge gesichert: {sicherung.name}", flush=True)
             for k in treffer:
                 del out[k]
             print(f"Neuberechnung: {len(treffer)} Vorgänge von {', '.join(neu_ab)} verworfen",
                   flush=True)
+        if uebersprungen:
+            print(f"  {uebersprungen} Treffer mit abgelaufener Frist bleiben stehen — "
+                  f"NUR_OFFENE=1 wuerde sie nicht neu rechnen.", flush=True)
 
     todo = [(nid, files) for nid, files in per_notice.items() if nid not in out]
 
     # NUR OFFENE. Gemessen 2026-08-21: von 940 nie analysierten Vorgaengen sind **110**
     # offen, bei den uebrigen 830 ist die Frist durch. Eine Analyse kostet dort dasselbe
     # und nuetzt niemandem — bei 0,42 $ je Vorgang sind das 350 $ fuer nichts.
-    if NUR_OFFENE:
-        import duckdb as _d
-        offen = {r[0] for r in _d.connect().execute(
-            f"""SELECT lead_id FROM read_parquet('{ROOT}/data/gold/DE/lead_export.parquet')
-                WHERE phase='open' AND deadline_date > current_date""").fetchall()}
+    if offen is not None:
         vorher = len(todo)
         todo = [t for t in todo if t[0] in offen]
         print(f"Nur offene Ausschreibungen: {len(todo)} von {vorher}", flush=True)

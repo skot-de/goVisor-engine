@@ -360,3 +360,46 @@ def test_pflicht_eintrag_verdraengt_nicht_den_parser_eintrag():
     assert len(treffer) == 1, [t["label"] for t in treffer]
     assert "Formular" in treffer[0]["label"], treffer[0]["label"]
     assert treffer[0].get("parser") == "pdf_fields"
+
+
+def test_ampel_nur_aus_den_drei_erlaubten_werten():
+    """Ein Modell vertippt sich, und die Oberfläche kennt den Wert dann nicht.
+
+    Gemessen am 2026-08-25 über 7.755 gespeicherte Auswertungen: einer trägt die Ampel
+    `gruuen`. Sie wurde ungeprüft aus der Modellantwort übernommen. Unbekanntes wird
+    `gelb` — die vorsichtige Mitte, dieselbe Wahl wie bei unlesbarem JSON.
+    """
+    import importlib.util
+    import pathlib
+
+    wurzel = pathlib.Path(__file__).resolve().parent.parent
+    spec = importlib.util.spec_from_file_location("_ad_ampel", wurzel / "scripts" / "analyze_docs.py")
+    ad = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(ad)
+
+    assert ad._summary_aus('{"ampel":"gruuen"}')["ampel"] == "gelb", "Tippfehler darf nicht durch"
+    assert ad._summary_aus('{"ampel":"erfunden"}')["ampel"] == "gelb"
+    assert ad._summary_aus("kein json")["ampel"] == "gelb"
+    for gut in ("gruen", "gelb", "rot"):
+        assert ad._summary_aus('{"ampel":"%s"}' % gut)["ampel"] == gut
+    # Grossschreibung ist kein anderer Wert.
+    assert ad._summary_aus('{"ampel":"GRUEN"}')["ampel"] == "gruen"
+
+
+def test_neuberechnung_wirft_nur_weg_was_sie_ersetzt():
+    """`NEU_AB_MODELL` heisst neu rechnen, nicht streichen.
+
+    Bis zum 2026-08-25 loeschte der Schritt ALLE Treffer, und `NUR_OFFENE` liess davon
+    nur die offenen zum Rechnen durch — die abgelaufenen waren weg und wurden nie
+    ersetzt. Am Bestand jenes Tages waeren das 158 von 3.544 gewesen.
+    """
+    import pathlib as _p
+
+    quelle = (_p.Path(__file__).resolve().parent.parent
+              / "scripts" / "analyze_docs.py").read_text(encoding="utf-8")
+    block = quelle.split("neu_ab = [")[1].split("todo = [")[0]
+    assert "treffer = [k for k in treffer if k in offen]" in block, \
+        "Treffer werden nicht auf die tatsaechlich neu gerechneten eingegrenzt"
+    assert "if not sicherung.exists()" not in block, \
+        "die Sicherung darf nicht uebersprungen werden, wenn es schon eine gibt"
+    assert "vor_neurechnung-" in block, "Sicherung ohne Laufmarke — ein zweiter Lauf ueberschriebe sie"
