@@ -59,13 +59,27 @@ export function Kalender({
 
   // Termine der beobachteten Leads nachladen. Eine Datei je Vorgang, deshalb nur die
   // Merkliste — nicht der Bestand.
+  //
+  // ⚠ IN BLOECKEN, NICHT ABGESCHNITTEN. Die Route deckelt bei 60 IDs je Anfrage (sie soll
+  // keine Abgriff-Flaeche fuer den Bestand sein). Hier stand dafuer ein `.slice(0, 60)` —
+  // ein stiller Schnitt, und der ist hier besonders tueckisch: die Zeilen ab 61 fielen auf
+  // die Angebotsfrist aus dem Lead zurueck und saehen damit aus wie Vorgaenge, zu denen es
+  // eben keine weiteren Termine gibt. Eine fehlende Bindefrist ist aber nicht dasselbe wie
+  // eine, die wir nicht geholt haben. Wer 200 Leads beobachtet, bekommt jetzt vier Abrufe.
   useEffect(() => {
-    const ids = rows.map((l) => l.id).filter(Boolean).slice(0, 60);
+    const ids = rows.map((l) => l.id).filter(Boolean);
     if (!ids.length) { setExtra({}); return; }
+    const bloecke: string[][] = [];
+    for (let i = 0; i < ids.length; i += 60) bloecke.push(ids.slice(i, i + 60));
     let abgebrochen = false;
-    fetch(`/api/kalender?ids=${encodeURIComponent(ids.join(","))}`)
-      .then((r) => (r.ok ? r.json() : {}))
-      .then((d) => { if (!abgebrochen) setExtra(d || {}); })
+    Promise.all(
+      bloecke.map((b) =>
+        fetch(`/api/kalender?ids=${encodeURIComponent(b.join(","))}`)
+          .then((r) => (r.ok ? r.json() : {}))
+          .catch(() => ({})),          // ein gescheiterter Block kippt die anderen nicht
+      ),
+    )
+      .then((teile) => { if (!abgebrochen) setExtra(Object.assign({}, ...teile)); })
       .catch(() => { /* keine Termine ist kein Fehler, der die Ansicht kippt */ });
     return () => { abgebrochen = true; };
   }, [rows]);
