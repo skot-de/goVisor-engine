@@ -4316,3 +4316,50 @@ def test_registry_status_candidate_heisst_nicht_gebaut():
         else:
             assert s.status == "candidate", (
                 f"{eintrag}: kein Code fuer {wort}, Status {s.status} verspricht zu viel")
+
+
+# ── Firmenprofile: ein Profil je Datei ─────────────────────────────────────────────────────
+
+def test_firma_dateiname_ist_kollisionsfrei():
+    """⚠ Die sonst übliche Säuberung `[^A-Za-z0-9_-]` → "" kollidiert hier.
+
+    Gemessen am 2026-08-25 über 38.307 Firmenschlüssel: drei Kollisionen, sechs Firmen.
+    `solo:id:112.766h` und `solo:id:112766h` wären beide `soloid112766h` geworden — eine
+    hätte die andere überschrieben, und zwar lautlos.
+    """
+    import importlib.util
+    spec = importlib.util.spec_from_file_location(
+        "efp", pathlib.Path(__file__).resolve().parent.parent / "scripts" / "export_firma_profiles.py")
+    efp = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(efp)
+    a = efp.dateiname("solo:id:112.766h")
+    b = efp.dateiname("solo:id:112766h")
+    assert a != b
+    assert a == efp.dateiname("solo:id:112.766h"), "muss deterministisch sein"
+
+
+def test_firma_dateiname_ist_derselbe_wie_in_typescript():
+    """Python und Node dürfen nicht auseinanderlaufen — deshalb ein Hash, keine Regel.
+
+    Geprüft wird der Vertrag, nicht die Implementierung: sha1(hex) über UTF-8.
+    """
+    import hashlib
+    import importlib.util
+    wurzel = pathlib.Path(__file__).resolve().parent.parent
+    spec = importlib.util.spec_from_file_location(
+        "efp", wurzel / "scripts" / "export_firma_profiles.py")
+    efp = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(efp)
+    for schluessel in ("grp:-arnold", "solo:hr:B1204_GnR700077", "ümläute:ß"):
+        assert efp.dateiname(schluessel) == hashlib.sha1(schluessel.encode("utf-8")).hexdigest()
+    ts = (wurzel / "web" / "lib" / "firmaProfiles.ts").read_text(encoding="utf-8")
+    assert 'createHash("sha1")' in ts and 'digest("hex")' in ts
+
+
+def test_keine_route_laedt_die_firmen_sammeldatei():
+    """⚠ 67 MB für ein Profil von 1,6 KB. Beide Verbraucher holen genau eines heraus."""
+    wurzel = pathlib.Path(__file__).resolve().parent.parent
+    for datei in ("web/app/api/firma/route.ts", "web/app/api/netz/route.ts"):
+        quelle = (wurzel / datei).read_text(encoding="utf-8")
+        assert "loadFirmaProfiles" not in quelle, datei
+        assert "loadFirmaProfil" in quelle, datei

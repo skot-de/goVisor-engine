@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import path from "node:path";
 import { spawn } from "node:child_process";
-import { loadFirmaProfiles } from "@/lib/firmaProfiles";
+import { loadFirmaProfil, firmaBestand } from "@/lib/firmaProfiles";
 import { getTier } from "@/lib/tier";
 import { redactFirma } from "@/lib/redact";
 
@@ -34,8 +34,7 @@ export async function GET(req: Request) {
   if (!ID_RE.test(id)) return NextResponse.json({ error: "ungültige Firmen-ID" }, { status: 400 });
 
   const tier = await getTier();   // Free → Pro-Sektion „Was ausläuft" server-seitig entfernen
-  const profiles = await loadFirmaProfiles();
-  const hit = profiles[id];
+  const hit = await loadFirmaProfil(id);
   if (hit) return NextResponse.json(redactFirma(hit, tier));
 
   // ⚠ AUF EINEM DEPLOYMENT NIE PYTHON. Die Bedingung hatte bis zum 2026-08-22 ein Loch:
@@ -44,11 +43,12 @@ export async function GET(req: Request) {
   // damit falsch, und die Route fiel auf `spawn("python3")` zurück. Dort gibt es kein
   // Python: aus einem Datenproblem wurde ein Exec-Fehler, der wie ein Codefehler aussieht.
   if (process.env.NODE_ENV === "production") {
+    const bestand = await firmaBestand();
     return NextResponse.json(
-      Object.keys(profiles).length
+      bestand
         ? { error: "kein Profil (keine belegten Zuschläge)", id }
         : { error: "Firmenprofile nicht geladen — DATA_BASE_URL prüfen (docs/web-data-storage.md)" },
-      { status: Object.keys(profiles).length ? 404 : 503 });
+      { status: bestand ? 404 : 503 });
   }
 
   try {

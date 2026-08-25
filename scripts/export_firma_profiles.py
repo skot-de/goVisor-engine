@@ -11,6 +11,7 @@ Feldkontrakt identisch zu scripts/firma_profil.py::build (Frontend unverändert)
 Aufruf: python3 scripts/export_firma_profiles.py [--limit N]
 """
 import glob
+import hashlib
 import json
 import pathlib
 import sys
@@ -19,6 +20,7 @@ import duckdb
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 OUT = ROOT / "web/data"
+JE_FIRMA = OUT / "firma"
 G = str(ROOT / "data/gold/DE")
 
 
@@ -305,7 +307,62 @@ def main():
 
     (OUT / "firma-profiles.json").write_text(json.dumps(out, ensure_ascii=False, default=str))
     print(f"{len(out)} Firmenprofile → web/data/firma-profiles.json ({(OUT/'firma-profiles.json').stat().st_size/1e6:.1f} MB)")
+    schreibe_je_firma(out)
     return 0
+
+
+def dateiname(schluessel: str) -> str:
+    """Firmenschlüssel → Dateiname. Muss in `web/lib/firmaProfiles.ts` identisch sein.
+
+    ⚠ WARUM EIN HASH UND NICHT DIE ÜBLICHE SÄUBERUNG. Die anderen Exporte bilden ihre
+    Kennung mit `[^A-Za-z0-9_-]` → "" ab; das geht dort gut, weil es UUIDs und Zahlen sind.
+    Firmenschlüssel sehen aber so aus: `solo:id:112.766h` und `solo:id:112766h` — nach der
+    Säuberung BEIDE `soloid112766h`. Gemessen am 2026-08-25 über 38.307 Schlüssel: drei
+    solche Kollisionen, sechs Firmen betroffen. Eine davon hätte die andere überschrieben,
+    und zwar lautlos: die Datei ist da, sie enthält nur die falsche Firma.
+
+    Ein Hash kann in Python und in Node nicht auseinanderlaufen — es gibt keine zweite
+    Implementierung, die man vergessen könnte anzupassen.
+    """
+    return hashlib.sha1(schluessel.encode("utf-8")).hexdigest()
+
+
+def schreibe_je_firma(profile: dict) -> None:
+    """Ein Profil je Datei + ein Index. Dieselbe Form wie `doc-analysis/<id>.json`.
+
+    Beide Verbraucher (`/api/firma`, `/api/netz`) holen GENAU EIN Profil über seine Kennung
+    heraus und luden dafür bisher 67 MB. Im Median ist ein Profil 1,6 KB gross.
+    """
+    JE_FIRMA.mkdir(parents=True, exist_ok=True)
+    vorher = {p.name for p in JE_FIRMA.glob("*.json")}
+    neu = gleich = 0
+    index: dict[str, str] = {}
+    for schluessel, eintrag in profile.items():
+        name = dateiname(schluessel)
+        index[schluessel] = name
+        ziel = JE_FIRMA / f"{name}.json"
+        text = json.dumps(eintrag, ensure_ascii=False, default=str)
+        # Nur schreiben, was sich geaendert hat — sonst laedt der naechtliche Abgleich
+        # 38.307 unveraenderte Dateien erneut hoch (dieselbe Regel wie bei doc-analysis).
+        if ziel.exists() and ziel.read_text(encoding="utf-8") == text:
+            gleich += 1
+        else:
+            ziel.write_text(text, encoding="utf-8")
+            neu += 1
+        vorher.discard(f"{name}.json")
+    for tot in vorher:
+        (JE_FIRMA / tot).unlink(missing_ok=True)
+    (OUT / "firma-index.json").write_text(
+        json.dumps(index, ensure_ascii=False, sort_keys=True), encoding="utf-8")
+    # ⚠ 100 BYTES, DIE EINE UNTERSCHEIDUNG RETTEN. `/api/firma` trennt „diese Firma hat kein
+    # Profil" (404) von „die Profile sind gar nicht geladen" (503) — eine Unterscheidung,
+    # die nach einem echten Vorfall eingebaut wurde. Bisher beantwortete sie
+    # `Object.keys(profiles).length`, wofuer die 67-MB-Datei im Speicher liegen musste.
+    # Diese Datei beantwortet dieselbe Frage, ohne ein einziges Profil zu laden.
+    (OUT / "firma-stand.json").write_text(
+        json.dumps({"n": len(profile)}), encoding="utf-8")
+    print(f"  je Firma: {neu:,} geschrieben, {gleich:,} unveraendert, {len(vorher):,} entfernt "
+          f"→ web/data/firma/ + firma-index.json")
 
 
 if __name__ == "__main__":

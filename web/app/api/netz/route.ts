@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { createClient } from "@/lib/supabase/server";
 import { createAdminClient } from "@/lib/supabase/admin";
-import { loadFirmaProfiles } from "@/lib/firmaProfiles";
+import { loadFirmaProfil } from "@/lib/firmaProfiles";
 import { besterPartner } from "@/lib/netzMatch";
 
 /* Partnersuche für Mehr-Los-Vergaben (Feature I).
@@ -33,8 +33,9 @@ async function partnerSicht(meins: Zeile, andere: Zeile[]) {
   if (!treffer) return null;
   const a = treffer.zeile as Zeile, ergaenzt = treffer.ergaenzt;
 
-  const profile = await loadFirmaProfiles();
-  const fp = (a.identity_id ? profile[a.identity_id] : null) as Record<string, unknown> | null;
+  const fp = (a.identity_id
+    ? await loadFirmaProfil(String(a.identity_id))
+    : null) as Record<string, unknown> | null;
   const gr = typeof fp?.group_size === "number" ? (fp.group_size as number) : 1;
 
   const beide = meins.freigabe && a.freigabe;          // Regel 4
