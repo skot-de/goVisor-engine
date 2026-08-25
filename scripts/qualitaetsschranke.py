@@ -67,7 +67,20 @@ def _zeilen_seit(ts: str | None) -> list[dict]:
 
 
 def _tarifanteil(zeilen: list[dict]) -> tuple[float, int, int]:
-    """Anteil der Aufrufe, die zum Bodenpreis des jeweiligen Modells liefen."""
+    """Anteil der Aufrufe, die HÖCHSTENS den Bodenpreis ihres Modells gekostet haben.
+
+    ⚠ **„Höchstens", nicht „genau".** Die erste Fassung prüfte auf Gleichheit
+    (`abs(kosten - soll) < 1e-8`) und wertete damit alles, was BILLIGER war als der
+    Bodenpreis, als Verfehlung. Der naheliegende Fall dafür ist ein Cache-Rabatt: die
+    Antwort kostet weniger, weil ein Teil der Eingabe schon zwischengespeichert war.
+
+    Die Folge wäre ein Fehlalarm mit Bremswirkung. Die Schranke wird unter 95 % ROT und
+    hält den Rückstau-Abbau an — einsetzendes Caching hätte den Lauf also mit der Meldung
+    „der Preisdeckel ist undicht" gestoppt, während er in Wahrheit besser wirkte als
+    erwartet.
+
+    Gefragt ist: haben wir MEHR gezahlt als den Boden? Alles darunter ist kein Mangel.
+    """
     treffer = gesamt = 0
     deckel: dict[str, tuple[float, float] | None] = {}
     for z in zeilen:
@@ -82,7 +95,7 @@ def _tarifanteil(zeilen: list[dict]) -> tuple[float, int, int]:
         gesamt += 1
         soll = (z.get("eingabe_token") or 0) * b[0] / 1e6 + \
                (z.get("ausgabe_token") or 0) * b[1] / 1e6
-        if abs(float(z["kosten_usd"]) - soll) < 1e-8:
+        if float(z["kosten_usd"]) <= soll + 1e-8:
             treffer += 1
     return (treffer / gesamt if gesamt else 0.0), treffer, gesamt
 
@@ -150,11 +163,11 @@ def bewerte(jetzt: dict, vor: dict | None, luecke: float | None,
     aus: list[tuple[str, str]] = []
     a = jetzt["bodenanteil"]
     if jetzt["boden_gesamt"] and a < MIN_BODENANTEIL:
-        aus.append(("rot", f"nur {a:.0%} der Aufrufe zum Bodenpreis "
+        aus.append(("rot", f"nur {a:.0%} der Aufrufe höchstens zum Bodenpreis "
                            f"({jetzt['boden_treffer']}/{jetzt['boden_gesamt']}) — "
                            f"der Preisdeckel ist undicht"))
     else:
-        aus.append(("grün", f"{a:.0%} der Aufrufe zum Bodenpreis"))
+        aus.append(("grün", f"{a:.0%} der Aufrufe höchstens zum Bodenpreis"))
 
     if luecke is not None:
         if abs(luecke) > MAX_LUECKE:

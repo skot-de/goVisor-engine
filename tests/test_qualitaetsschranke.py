@@ -11,6 +11,8 @@ import json
 import sys
 from pathlib import Path
 
+import pytest
+
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
@@ -144,3 +146,39 @@ def test_analysiert_am_steht_in_ortszeit():
     i = quelle.index('res["analysiert_am"]')
     zeile = quelle[i:quelle.index("\n", i)]
     assert "timezone.utc" not in zeile, f"analysiert_am steht wieder in UTC: {zeile}"
+
+
+def test_ein_cache_rabatt_gilt_nicht_als_verfehlter_bodenpreis(tmp_path, monkeypatch):
+    """⚠ Die erste Fassung prüfte auf GLEICHHEIT mit dem Bodenpreis.
+
+    Alles, was billiger war — der naheliegende Fall ist ein Cache-Rabatt — galt als
+    Verfehlung. Die Schranke wird unter 95 % rot und hält den Rückstau-Abbau an;
+    einsetzendes Caching hätte den Lauf also mit „der Preisdeckel ist undicht" gestoppt,
+    während er in Wahrheit besser wirkte als erwartet.
+    """
+    from govisor import llm
+    qs = _schranke()
+    monkeypatch.setattr(llm, "bodendeckel", lambda m: (0.15, 1.25))
+    soll = 100_000 * 0.15 / 1e6 + 20_000 * 1.25 / 1e6
+
+    def zeile(kosten):
+        return {"kosten_usd": kosten, "modell": "m",
+                "eingabe_token": 100_000, "ausgabe_token": 20_000}
+
+    anteil, treffer, ges = qs._tarifanteil(
+        [zeile(soll), zeile(soll * 0.80), zeile(soll * 2)])
+    assert ges == 3 and treffer == 2, "genau UND billiger zählen, nur teurer nicht"
+    assert anteil == pytest.approx(2 / 3)
+
+
+def test_ohne_abfragbaren_bodenpreis_wird_nichts_behauptet(monkeypatch):
+    """Fällt die Preisabfrage aus, ist die Grundmenge leer — und kein Alarm."""
+    from govisor import llm
+    qs = _schranke()
+    monkeypatch.setattr(llm, "bodendeckel", lambda m: None)
+    anteil, treffer, ges = qs._tarifanteil(
+        [{"kosten_usd": 0.04, "modell": "m", "eingabe_token": 1, "ausgabe_token": 1}])
+    assert (anteil, treffer, ges) == (0.0, 0, 0)
+    befunde = qs.bewerte(_etappe(bodenanteil=0.0, boden_treffer=0, boden_gesamt=0),
+                         _etappe(), 0.01, True)
+    assert not [t for a, t in befunde if a == "rot"], "leere Grundmenge ist kein Befund"
