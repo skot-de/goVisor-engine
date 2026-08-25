@@ -502,3 +502,41 @@ def test_lauf_deckel_ueberlebt_eine_aufladung(monkeypatch):
     with pytest.raises(llm.BudgetErschoepft) as e:
         llm._geldwache()
     assert "Limit" in str(e.value) or "verbraucht" in str(e.value)
+
+
+def test_lokaler_tag_rechnet_um_statt_abzuschneiden():
+    """⚠ Das Buch stempelt UTC, jeder Tagesdeckel rechnet in Ortszeit.
+
+    `ts.startswith(date.today())` mischt beide Zeitbasen und verfehlt dabei genau das
+    Fenster, in dem dieses System am meisten ausgibt: der Nachtlauf startet um 00:30
+    Ortszeit mit einem UTC-Stempel vom Vortag. Gemessen am 2026-08-25: nach UTC-Präfix
+    3,59 $ „heute", in Ortszeit 5,58 $ — 351 Buchungen über 1,99 $ Differenz.
+    """
+    import datetime as dt
+
+    def erwartet(ts):
+        t = dt.datetime.fromisoformat(ts.replace("Z", "+00:00"))
+        return t.astimezone().date().isoformat()
+
+    for ts in ("2026-08-24T22:30:00+00:00", "2026-08-24T21:59:00Z",
+               "2026-08-25T11:59:28+00:00", "2026-01-15T23:10:00+00:00"):
+        assert kostenbuch.lokaler_tag({"ts": ts}) == erwartet(ts), ts
+
+    # Ein Stempel ohne Zonenangabe (altes Buch) gilt als UTC, nicht als Ortszeit.
+    naiv = "2026-08-24T22:30:00"
+    assert kostenbuch.lokaler_tag({"ts": naiv}) == erwartet(naiv + "+00:00")
+
+    # Unlesbares darf nicht werfen — Buchhaltung bricht keinen Lauf ab.
+    for kaputt in ({"ts": None}, {}, {"ts": ""}, {"ts": "morgen"}, {"ts": 17}):
+        assert kostenbuch.lokaler_tag(kaputt) is None, kaputt
+
+
+def test_tagesdeckel_und_testtopf_zaehlen_in_ortszeit():
+    """Beide Deckel lesen dasselbe Buch — sie müssen dieselbe Zeitbasis benutzen."""
+    import pathlib
+
+    for rel in ("govisor/llm.py", "scripts/modellpruefung.py"):
+        q = (pathlib.Path(__file__).resolve().parent.parent / rel).read_text(encoding="utf-8")
+        assert "kostenbuch.lokaler_tag(z)" in q, f"{rel} rechnet nicht in Ortszeit"
+        assert '(z.get("ts") or "").startswith(heute' not in q, \
+            f"{rel} vergleicht wieder UTC-Stempel gegen ein Ortsdatum"

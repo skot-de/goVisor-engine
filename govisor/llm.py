@@ -561,10 +561,13 @@ def _tagesbuch(stand: float) -> float:
         # verschluckt waere. Das Kostenbuch weiss, was heute wirklich gebucht wurde.
         gebucht = 0.0
         try:
-            heute_tag = heute
+            # ⚠ Ueber `kostenbuch.lokaler_tag`, nicht ueber `ts.startswith(heute)`: das Buch
+            # stempelt UTC, `heute` ist ein Ortsdatum. Der Praefixvergleich verfehlte genau
+            # das Fenster 00:00-02:00 Ortszeit — also den Nachtlauf. Am 2026-08-25 waren das
+            # 1,99 $ von 5,58 $. Zu wenig gezaehlt heisst hier: zu viel erlaubt.
             gebucht = sum(float(z["kosten_usd"]) for z in kostenbuch.lies()
                           if z.get("kosten_usd") is not None
-                          and (z.get("ts") or "").startswith(heute_tag))
+                          and kostenbuch.lokaler_tag(z) == heute)
         except Exception:                                     # noqa: BLE001
             gebucht = max(0.0, float(d.get("start_stand", stand)) - stand)
         d["start_verbrauch"] = verbrauch - gebucht

@@ -99,6 +99,35 @@ def weg(name: str | None) -> str:
     return schwanz if schwanz in _WEGE else ""
 
 
+def lokaler_tag(zeile: dict) -> str | None:
+    """Der KALENDERTAG einer Buchung, in Ortszeit. ``None``, wenn kein lesbares `ts`.
+
+    ⚠ **Das Buch stempelt UTC, jeder Tagesdeckel rechnet in Ortszeit.** Wer `ts` mit
+    `str.startswith(date.today())` vergleicht, mischt beide Zeitbasen — und trifft damit
+    ausgerechnet das Fenster, in dem dieses System am meisten ausgibt: der Nachtlauf
+    startet um 00:30 Ortszeit, trägt aber einen UTC-Stempel vom Vortag (Berlin ist im
+    Sommer UTC+2).
+
+    Gemessen am 2026-08-25: nach UTC-Präfix 3,59 $ „heute", in Ortszeit 5,58 $ — die
+    Differenz sind **351 Buchungen über 1,99 $** mit Stempel `2026-08-24T22:xx`. Die
+    Geldwache (die am kumulierten Verbrauch rechnet, nicht am Buch) meldete korrekt
+    5,69 $; der Buch-Zähler daneben meldete zwei Dollar weniger.
+
+    Wer zu wenig zählt, erlaubt zu viel. Deshalb steht die Umrechnung hier und nicht in
+    jedem Aufrufer noch einmal.
+    """
+    ts = (zeile or {}).get("ts")
+    if not isinstance(ts, str) or not ts:
+        return None
+    try:
+        t = datetime.fromisoformat(ts.replace("Z", "+00:00"))
+    except ValueError:
+        return None
+    if t.tzinfo is None:                      # altes Buch ohne Zonenangabe: als UTC lesen
+        t = t.replace(tzinfo=timezone.utc)
+    return t.astimezone().date().isoformat()
+
+
 def _zahl(v: Any) -> float | None:
     """Robuste Zahl. ⚠ Diese Umwandlung MUSS scheitern duerfen, ohne zu werfen.
 

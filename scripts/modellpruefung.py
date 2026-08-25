@@ -64,10 +64,13 @@ AMTIEREND = __import__("os").environ.get("GOVISOR_AMTIEREND", "google/gemini-2.5
 
 def heute_ausgegeben() -> float:
     """Was der Testtopf heute schon hergegeben hat — aus dem Kostenbuch."""
+    # ⚠ Ortszeit gegen Ortszeit, s. `kostenbuch.lokaler_tag`. Der Praefixvergleich zaehlte
+    # das Fenster 00:00-02:00 Ortszeit dem Vortag zu — am 2026-08-25 meldete dieser Deckel
+    # deshalb 0,00 $ verbraucht, waehrend 0,12 $ von 0,50 $ schon weg waren.
     heute = date.today().isoformat()
     return sum(float(z["kosten_usd"]) for z in kostenbuch.lies()
                if z.get("zweck") == ZWECK and z.get("kosten_usd") is not None
-               and (z.get("ts") or "").startswith(heute))
+               and kostenbuch.lokaler_tag(z) == heute)
 
 
 def lade_analyse():
