@@ -3,33 +3,12 @@
 Der Code steht (Ticket #23 §9, Deploy-Schicht). Es fehlen **zwei Handgriffe**, die beide
 Zugänge brauchen, die nur Sven hat.
 
-## 1. Migration 0006 anwenden
+## 1. Migrationen — ERLEDIGT (2026-08-25)
 
-Die sieben Tabellen aus `supabase/0006_doc_analysis.sql` existieren auf
-`tegznbkbvbbbgzhsvoza` noch nicht — gemessen am 2026-08-25 über die REST-Schnittstelle
-(15 von 22 Tabellen aller Migrationen sind da, die sieben fehlenden sind genau diese).
-
-Die Datei ist wiederholbar (`create table if not exists`, `drop policy if exists`). Im
-Supabase-Dashboard unter **SQL Editor** den Inhalt von `supabase/0006_doc_analysis.sql`
-einfügen und ausführen.
-
-Gebraucht werden davon nur zwei Tabellen — `profile_text_blocks` und `profile_block_usage`.
-Die übrigen fünf gehören zur Dokumentenanalyse und stören nicht.
-
-Danach prüfen:
-
-```bash
-python3 - <<'PY'
-import urllib.request, ssl, re, certifi
-from pathlib import Path
-env = dict(re.findall(r"^([A-Z_]+)\s*=\s*(.*)$", Path("web/.env.local").read_text(), re.M))
-url, key = env["NEXT_PUBLIC_SUPABASE_URL"].rstrip("/"), env["SUPABASE_SECRET_KEY"]
-req = urllib.request.Request(f"{url}/rest/v1/profile_text_blocks?select=id&limit=1",
-                             headers={"apikey": key, "Authorization": f"Bearer {key}"})
-print(urllib.request.urlopen(req, timeout=20,
-      context=ssl.create_default_context(cafile=certifi.where())).status)
-PY
-```
+`supabase/0006_doc_analysis.sql` und `supabase/0016_bausteine_firmenebene.sql` sind auf
+`tegznbkbvbbbgzhsvoza` angewandt. `psql` verbindet von dieser Maschine direkt
+(`db.<ref>.supabase.co:5432`, Passwort in `.secrets/supabase_db.txt`) — Dashboard nicht
+nötig, s. CLAUDE.md.
 
 ## 2. Hauptschlüssel setzen
 
@@ -55,13 +34,42 @@ statt sie stillschweigend wegzulassen.
   wäre die Anmeldung ein Datenverlust: die Bibliothek stünde plötzlich leer.
 * Löschen archiviert (§9.2), es löscht nicht.
 
-## Zwei offene Punkte
+## Persönlich, mit Freigabe an die Firma (0016)
 
-**Die Oberfläche verspricht mehr, als das Schema hält.** Auf `/bausteine` steht: „Eure
-Textbausteine für Angebote — gehören dem **Unternehmen**, nicht der einzelnen Person." Die
-RLS-Regel im Schema ist aber `auth.uid() = profile_id`, also **pro Person**. Zwei Personen
-derselben Firma sehen die Bausteine der jeweils anderen nicht. Entweder der Satz ändert
-sich, oder das Schema bekommt eine Firmen-Ebene — beides eine Entscheidung, kein Fehler.
+Ein Baustein gehört der Person, die ihn angelegt hat, und **sie** entscheidet, ob die Firma
+ihn sieht. In der Karte steht dafür ein Schalter: „Nur ich" ↔ „Für die Firma".
+
+* **Lesen** darf ein freigegebener Baustein jeder mit **belegter** Zugehörigkeit zu
+  derselben Firma.
+* **Ändern und archivieren** darf ihn ausschliesslich der Eigentümer — sonst nähme jemand
+  anderes einem Menschen seinen Text weg.
+* **Zurücknehmen** geht jederzeit; die Firma wird dabei aus dem Satz entfernt.
+* **Firmenwechsel:** private Bausteine wandern mit, freigegebene bleiben, wo sie
+  freigegeben wurden, bis der Eigentümer sie zurückzieht.
+
+⚠ **Massgeblich ist der belegte Anspruch, NICHT das Profilfeld.**
+`user_profiles.identity_id` ist eine Selbstauskunft — `saveIdentityCorrection` (§7.3) lässt
+jeden Nutzer sie frei setzen. Eine Freigabe, die nur darauf schaut, wäre eine offene Tür:
+wer den Namen einer fremden Firma einträgt, läse deren Bausteine. Die Regel prüft deshalb
+`identity_claims` mit Status `belegt` oder `geprueft` — den vergibt `/api/entity-verify`
+über die Firmen-Domain.
+
+Am 2026-08-25 gegen die laufende Datenbank geprüft (Transaktion mit Rollback, es blieb
+nichts zurück):
+
+| Lage | sichtbar | erwartet |
+|---|---:|---:|
+| B hat keinen Anspruch | 0 | 0 |
+| B trägt die Firma nur im Profil ein (Selbstauskunft) | 0 | 0 |
+| B hat einen belegten Anspruch | 1 | 1 |
+| B versucht zu archivieren | 0 Zeilen | 0 |
+| privater Baustein von A | 0 | 0 |
+
+⚠ **Solange niemand einen belegten Anspruch hat, ist der Schalter wirkungslos** — und die
+Ansicht sagt das auch, statt ihn stumm auszugrauen. Belegt wird über die Firmen-Domain im
+Onboarding.
+
+## Ein offener Punkt
 
 **`profile_block_usage` wird noch von niemandem geschrieben.** Die Tabelle hält fest, welcher
 Baustein in welchem Lead verwendet wurde (§10.4). Der Kombi-Knopf der Checkliste müsste das

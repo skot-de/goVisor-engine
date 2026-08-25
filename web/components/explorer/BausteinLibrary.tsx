@@ -10,7 +10,11 @@ import { useEffect, useState } from "react";
 type Block = { theme: string; content: string; label?: string; lead_id?: string; saved_at?: string;
   origin?: string; keywords?: string[];
   /** Vergeben, sobald der Baustein auf dem Server liegt. Ohne ihn ist er nur im Browser. */
-  id?: string };
+  id?: string;
+  /** `privat` = nur ich, `firma` = alle mit belegter Zugehörigkeit zu derselben Firma. */
+  sichtbarkeit?: "privat" | "firma";
+  /** Falsch, wenn der Baustein einer Kollegin gehört und nur freigegeben ist. */
+  eigen?: boolean };
 
 /* Erkennungsmerkmal für den Abgleich. Lokale Bausteine haben keine ID — zwei Bausteine mit
  * demselben Thema und demselben Text sind derselbe. Bewusst kein Zeitstempel darin: derselbe
@@ -59,6 +63,9 @@ export function BausteinLibrary({ importOpen, onImport, theme, onTheme, onThemen
   /** Angemeldet und der Server antwortet — nur dann wird überhaupt hochgeschrieben. */
   const [amServer, setAmServer] = useState(false);
   const [hinweis, setHinweis] = useState("");
+  /** Die Firma, in die freigegeben werden darf — `null`, solange keine belegt ist.
+   *  Kommt vom Server: die Ansicht soll nicht raten, ob ein Schalter etwas bewirkt. */
+  const [firma, setFirma] = useState<string | null>(null);
 
   /* LOKAL-FIRST, dann abgleichen. Die lokale Liste steht sofort; der Server kommt danach.
    * Umgekehrt (erst laden, dann anzeigen) sähe die Bibliothek bei jedem Aufruf für einen
@@ -73,6 +80,7 @@ export function BausteinLibrary({ importOpen, onImport, theme, onTheme, onThemen
         // Ohne Anmeldung antwortet die Middleware mit 401 — dann bleibt alles im Browser.
         if (d.error) return;
         setAmServer(true);
+        setFirma(d.firma ?? null);
         let ferne: Block[] = d.blocks || [];
 
         // Erstübernahme: was bisher nur im Browser lag, wandert einmalig hoch. Ohne diesen
@@ -137,6 +145,32 @@ export function BausteinLibrary({ importOpen, onImport, theme, onTheme, onThemen
       setMsg(`${fresh.length} Bausteine angelegt${d.skipped_personal ? ` · ${d.skipped_personal} Passagen übersprungen (überwiegend Personendaten)` : ""}.`);
     } catch { setMsg("Import fehlgeschlagen."); }
     setBusy(false);
+  }
+
+  /* Freigabe umstellen. Der Baustein gehört der Person, die ihn angelegt hat — sie
+   * entscheidet, ob die Firma ihn sieht. Zurücknehmen geht jederzeit. */
+  async function freigabe(b: Block, anFirma: boolean) {
+    if (!b.id || !amServer) return;
+    const vorher = b.sichtbarkeit ?? "privat";
+    const ziel: Block["sichtbarkeit"] = anFirma ? "firma" : "privat";
+    const naechste = blocks.map((x) => x === b ? { ...x, sichtbarkeit: ziel } : x);
+    setBlocks(naechste); save(naechste);          // sofort sichtbar, danach bestätigen
+    try {
+      const r = await fetch("/api/blocks", {
+        method: "PATCH", headers: { "content-type": "application/json" },
+        body: JSON.stringify({ id: b.id, sichtbarkeit: anFirma ? "firma" : "privat" }),
+      });
+      const d = await r.json();
+      if (d.error) {
+        // ⚠ Zurückdrehen, nicht nur meckern: ein Schalter, der umgelegt bleibt und nichts
+        // bewirkt hat, ist eine Lüge über den Zustand.
+        const zurueck = blocks.map((x) => x === b ? { ...x, sichtbarkeit: vorher } : x);
+        setBlocks(zurueck); save(zurueck); setHinweis(d.error);
+      }
+    } catch {
+      const zurueck = blocks.map((x) => x === b ? { ...x, sichtbarkeit: vorher } : x);
+      setBlocks(zurueck); save(zurueck); setHinweis("Freigabe konnte nicht gespeichert werden.");
+    }
   }
 
   function removeBlock(i: number) {
@@ -236,7 +270,28 @@ export function BausteinLibrary({ importOpen, onImport, theme, onTheme, onThemen
                 <div className="bh">
                   <div><div className="bt">{b.label || THEMES.find(([t]) => t === b.theme)?.[1] || "Baustein"}</div>
                     <div className="bm">{b.origin === "import" ? "aus altem Angebot" : (b.lead_id ? "aus Checkliste · Lead " + b.lead_id : "")} {b.saved_at ? "· " + new Date(b.saved_at).toLocaleDateString("de-DE") : ""}</div></div>
-                  <button className="btn btn-q" onClick={() => removeBlock(i)}>Archivieren</button>
+                  {/* Fremder Baustein: nur lesen. Kein Archivieren-Knopf, den die Regel
+                      ohnehin verweigern würde — ein Knopf, der nichts tut, ist schlimmer
+                      als keiner. */}
+                  {amServer && b.eigen === false ? (
+                    <span className="chip" title="Von einer Kollegin freigegeben">geteilt</span>
+                  ) : (
+                    <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
+                      {amServer && b.id && (
+                        <button className="btn btn-q"
+                          disabled={!firma && (b.sichtbarkeit ?? "privat") === "privat"}
+                          title={firma
+                            ? ((b.sichtbarkeit ?? "privat") === "firma"
+                                ? "Für die Firma freigegeben — antippen, um zurückzunehmen"
+                                : "Nur für dich — antippen, um die Firma sehen zu lassen")
+                            : "Freigeben geht erst, wenn eure Firmenzugehörigkeit belegt ist"}
+                          onClick={() => freigabe(b, (b.sichtbarkeit ?? "privat") !== "firma")}>
+                          {(b.sichtbarkeit ?? "privat") === "firma" ? "Für die Firma" : "Nur ich"}
+                        </button>
+                      )}
+                      <button className="btn btn-q" onClick={() => removeBlock(i)}>Archivieren</button>
+                    </div>
+                  )}
                 </div>
                 <div className="bx">{b.content}</div>
                 {b.keywords && b.keywords.length > 0 && (

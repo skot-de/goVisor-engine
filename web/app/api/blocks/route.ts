@@ -15,7 +15,8 @@ export const runtime = "nodejs";     // Buffer + node:crypto
  * Ein Browser-Modul müsste ihn ausliefern — dann wäre er keiner mehr.
  */
 
-type Eingang = { theme?: string; content?: string; keywords?: string[]; origin?: string };
+type Eingang = { theme?: string; content?: string; keywords?: string[]; origin?: string;
+  sichtbarkeit?: string };
 
 const THEMEN = new Set(["referenzen", "unternehmensdarstellung", "zertifikate_qm",
   "datenschutz_avv", "projektorganisation", "personal_qualifikation",
@@ -34,6 +35,20 @@ async function sitzung() {
   return { sb, user };
 }
 
+/* Die Firma, in die dieser Mensch freigeben DARF — `null`, wenn keine belegt ist.
+ *
+ * ⚠ NICHT `user_profiles.identity_id`. Das ist eine Selbstauskunft: `saveIdentityCorrection`
+ * (§7.3) lässt jeden Nutzer sie frei setzen. Wer den Namen einer fremden Firma einträgt,
+ * bekäme sonst deren freigegebene Bausteine zu sehen. Massgeblich ist der BELEGTE Anspruch,
+ * den `/api/entity-verify` über die Firmen-Domain vergibt — nicht ein Textfeld.
+ * Dieselbe Bedingung steht in der RLS (0016); hier steht sie, um eine ehrliche Fehlermeldung
+ * geben zu können statt eines nackten Datenbankfehlers. */
+async function belegteFirma(sb: Awaited<ReturnType<typeof createClient>>, uid: string) {
+  const { data } = await sb.from("identity_claims").select("identity_id")
+    .eq("user_id", uid).in("status", ["belegt", "geprueft"]).limit(1);
+  return (data?.[0]?.identity_id as string | undefined) ?? null;
+}
+
 /* ⚠ Die Middleware laesst `/api/blocks` ohne Sitzung gar nicht durch (`OFFEN` in
  * `web/middleware.ts` fuehrt es nicht) — anonym kommt hier ein 401 an, nicht diese Route.
  * Die Pruefung bleibt trotzdem stehen: sie ist die Zusicherung dieser Datei, nicht die
@@ -42,8 +57,11 @@ async function sitzung() {
 export async function GET() {
   const { sb, user } = await sitzung();
   if (!user) return NextResponse.json({ error: "Anmeldung erforderlich" }, { status: 401 });
+  // `profile_id` und `sichtbarkeit` gehoeren mit: die Ansicht muss den eigenen Baustein vom
+  // freigegebenen einer Kollegin unterscheiden koennen — sonst bietet sie ein Loeschen an,
+  // das die Regel ohnehin verweigert.
   const { data, error } = await sb.from("profile_text_blocks")
-    .select("id, theme, content_encrypted, keywords, origin, updated_at")
+    .select("id, theme, content_encrypted, keywords, origin, updated_at, sichtbarkeit, profile_id")
     .eq("archived", false).order("updated_at", { ascending: false });
   if (error) return NextResponse.json({ error: error.message }, { status: 500 });
 
@@ -54,6 +72,7 @@ export async function GET() {
       blocks.push({
         id: r.id, theme: r.theme, content: entschluessele(ausHex(r.content_encrypted as string)),
         keywords: r.keywords ?? [], origin: r.origin ?? undefined, saved_at: r.updated_at,
+        sichtbarkeit: r.sichtbarkeit ?? "privat", eigen: r.profile_id === user.id,
       });
     } catch {
       // Ein Baustein, der sich nicht entschlüsseln lässt (falscher oder gewechselter
@@ -62,7 +81,10 @@ export async function GET() {
       unlesbar++;
     }
   }
-  return NextResponse.json({ blocks, ...(unlesbar ? { unlesbar } : {}) });
+  // Ob dieser Mensch ueberhaupt freigeben kann, entscheidet die Ansicht nicht selbst —
+  // sonst raet sie, und ein ausgegrauter Schalter ohne Begruendung ist schlimmer als keiner.
+  const firma = await belegteFirma(sb, user.id);
+  return NextResponse.json({ blocks, firma, ...(unlesbar ? { unlesbar } : {}) });
 }
 
 export async function POST(req: Request) {
@@ -75,6 +97,16 @@ export async function POST(req: Request) {
   if (!roh.length) return NextResponse.json({ error: "keine Bausteine" }, { status: 400 });
   if (roh.length > 200) return NextResponse.json({ error: "zu viele auf einmal (max. 200)" }, { status: 400 });
 
+  // Freigeben kann nur, wer eine Firma BELEGT hat. Wer keine hat, legt privat an — statt
+  // einen Datenbankfehler zu bekommen, den niemand lesen kann.
+  const willFirma = roh.some((b) => b.sichtbarkeit === "firma");
+  const firma = willFirma ? await belegteFirma(sb, user.id) : null;
+  if (willFirma && !firma) {
+    return NextResponse.json({
+      error: "Freigeben an die Firma geht erst, wenn eure Firmenzugehörigkeit belegt ist "
+             + "(über die Firmen-Domain im Onboarding).", firma: null }, { status: 409 });
+  }
+
   let saetze;
   try {
     saetze = roh
@@ -86,6 +118,11 @@ export async function POST(req: Request) {
         keywords: Array.isArray(b.keywords) ? b.keywords.slice(0, 20) : null,
         origin: typeof b.origin === "string" ? b.origin.slice(0, 80) : null,
         last_edited_by: user.id,
+        sichtbarkeit: b.sichtbarkeit === "firma" ? "firma" : "privat",
+        // ⚠ EINGEFROREN, nicht mitwandernd: wer spaeter die Firma wechselt, zieht seine
+        // freigegebenen Bausteine nicht in die neue mit. Sie bleiben, wo sie freigegeben
+        // wurden, bis der Eigentuemer sie zurueckzieht.
+        identity_id: b.sichtbarkeit === "firma" ? firma : null,
       }));
   } catch (e) {
     if (e instanceof KeinSchluessel) {
@@ -98,6 +135,33 @@ export async function POST(req: Request) {
   const { data, error } = await sb.from("profile_text_blocks").insert(saetze).select("id");
   if (error) return NextResponse.json({ error: error.message }, { status: 500 });
   return NextResponse.json({ ids: (data ?? []).map((r) => r.id), n: saetze.length });
+}
+
+/** Freigabe umstellen — privat ↔ Firma. Nur der Eigentümer; die Regel erzwingt es zusätzlich. */
+export async function PATCH(req: Request) {
+  const { sb, user } = await sitzung();
+  if (!user) return NextResponse.json({ error: "Anmeldung erforderlich" }, { status: 401 });
+  let eingang: { id?: string; sichtbarkeit?: string };
+  try { eingang = await req.json(); } catch { return NextResponse.json({ error: "kein JSON" }, { status: 400 }); }
+  const id = String(eingang.id || "");
+  if (!/^[0-9a-f-]{36}$/i.test(id)) return NextResponse.json({ error: "ungültige ID" }, { status: 400 });
+  const nachFirma = eingang.sichtbarkeit === "firma";
+
+  const firma = nachFirma ? await belegteFirma(sb, user.id) : null;
+  if (nachFirma && !firma) {
+    return NextResponse.json({
+      error: "Freigeben an die Firma geht erst, wenn eure Firmenzugehörigkeit belegt ist "
+             + "(über die Firmen-Domain im Onboarding)." }, { status: 409 });
+  }
+  const { error } = await sb.from("profile_text_blocks").update({
+    sichtbarkeit: nachFirma ? "firma" : "privat",
+    // Beim Zuruecknehmen wird die Firma GELOESCHT, nicht behalten: ein privater Baustein
+    // mit Firmenvermerk saehe aus wie ein Rest, den jemand vergessen hat.
+    identity_id: nachFirma ? firma : null,
+    last_edited_by: user.id, updated_at: new Date().toISOString(),
+  }).eq("id", id).eq("profile_id", user.id);
+  if (error) return NextResponse.json({ error: error.message }, { status: 500 });
+  return NextResponse.json({ ok: true, sichtbarkeit: nachFirma ? "firma" : "privat" });
 }
 
 /* ⚠ ARCHIVIEREN STATT LÖSCHEN (§9.2, so steht es auch im Schema). Ein Baustein, den jemand
