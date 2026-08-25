@@ -359,15 +359,36 @@ def sonde_frische(zeige_offen: bool = False,
 
     # (c) Frontend-Daten. Bezug ist hier die NEUESTE Datei in `web/data` — derselbe
     # Gedanke wie oben, nur eine Schicht weiter aussen.
-    web = sorted(WEB.glob("*.json")) if WEB.is_dir() else []
+    #
+    # ⚠ NICHT NUR `*.json` DIREKT IN `web/data`. Genau das stand hier bis zum 2026-08-25,
+    # und damit war ein wachsender Teil der Frontend-Daten unbeobachtet:
+    #
+    #   · die SPLITTERVERZEICHNISSE `doc-analysis/`, `doc-text/`, `doc-listing/` — je rund
+    #     8.000 Einzeldateien, aus denen das Lead-Detail seine Texte und Auswertungen holt.
+    #     Der Sammelblock daneben blieb frisch, waehrend die Splitter haetten verrotten
+    #     koennen; die Sonde haette geschwiegen.
+    #   · die CSV-Ausgaben `kriterien/` und `lv/` (3.281 Dateien), die `/api/lead-export`
+    #     ausliefert. `*.json` trifft sie per Bauart nie.
+    #
+    # Ein Verzeichnis zaehlt mit dem Alter seiner JUENGSTEN Datei: es ist frisch, sobald
+    # sein Erzeuger ueberhaupt noch laeuft. Wer einzelne verwaiste Splitter finden will,
+    # braucht einen Abgleich gegen die Leadliste — das ist eine andere Frage als diese.
+    def _stand(pfad: pathlib.Path) -> float | None:
+        if pfad.is_file():
+            return pfad.stat().st_mtime
+        kinder = [f for f in pfad.rglob("*") if f.is_file()]
+        return max((f.stat().st_mtime for f in kinder), default=None)
+
+    web = {p.name: t for p in sorted(WEB.iterdir())
+           if (t := _stand(p)) is not None} if WEB.is_dir() else {}
     if web:
-        neuestes_web = max(f.stat().st_mtime for f in web)
-        for f in web:
-            rueck = (neuestes_web - f.stat().st_mtime) / 86400
-            if rueck <= SCHWELLE_TAGE or f.name in AUSNAHMEN_WEB:
+        neuestes_web = max(web.values())
+        for name, t in sorted(web.items()):
+            rueck = (neuestes_web - t) / 86400
+            if rueck <= SCHWELLE_TAGE or name in AUSNAHMEN_WEB:
                 continue
-            fehler.append(f"web/data/{f.name} haengt {rueck:.1f} Tage zurueck — "
-                          f"wer baut diese Datei, und laeuft er noch?")
+            fehler.append(f"web/data/{name} haengt {rueck:.1f} Tage zurueck — "
+                          f"wer baut das, und laeuft er noch?")
     return fehler
 
 
