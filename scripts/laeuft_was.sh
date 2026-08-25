@@ -18,8 +18,11 @@
 # Aufruf:  scripts/laeuft_was.sh && python3 -m govisor.docfetch_...
 # ============================================================================
 set -uo pipefail
-ROOT="/Users/svko_macmini/PROJEKTE/claude_code/C09_govisor"
-cd "$ROOT" || exit 1
+# Vom eigenen Ort aus, nicht von einem eingetippten Pfad. Der stand hier fest verdrahtet —
+# als einziges Skript im Projekt. Ein verschobenes Verzeichnis haette die Pruefung stumm
+# ins falsche Zielverzeichnis schauen lassen, und sie haette „Bahn frei" gemeldet.
+cd "$(dirname "$0")/.." || exit 1
+ROOT="$(pwd)"
 frei=0
 
 echo "── Tageslauf-Lock ──"
@@ -56,7 +59,15 @@ echo "── goVisor-Prozesse ──"
 # „keine Prozesse". Sie sind die wahrscheinlichste Kollision ueberhaupt, weil sie nie enden.
 #
 # Die Klammern um den ersten Buchstaben halten grep davon ab, sich selbst zu finden.
-_proc="$(ps -Ao pid=,command= | grep -E '[g]ovisor\.|[d]okumente_arbeiter|[a]nalyse_arbeiter|[d]aily_leads' || true)"
+# ⚠ UND: `python3 scripts/<irgendwas>.py` MITZAEHLEN. Bis zum 2026-08-25 stand hier nur
+# `govisor.` (mit Punkt) plus drei Skriptnamen. Ein von Hand gestartetes
+# `python3 scripts/export_web_leads.py` oder `scripts/analyze_docs.py` — beides schreibt
+# nach `data/` bzw. `web/data/` — fiel durch jedes dieser Muster und die Pruefung meldete
+# „Bahn frei". Ausgerechnet Handlaeufe sind der Grund, warum es dieses Skript gibt.
+# Verlangt wird der Interpreter DAVOR (`… /Python scripts/x.py`) — sonst schlaegt die
+# Pruefung schon bei einem Editor an, der den Dateinamen im Titel fuehrt, und eine
+# Pruefung, die staendig grundlos anschlaegt, liest bald niemand mehr.
+_proc="$(ps -Ao pid=,command= | grep -E '[g]ovisor\.|[Pp]ython[0-9.]* +[^ ]*scripts/[a-z_]+\.py|[d]okumente_arbeiter|[a]nalyse_arbeiter|[d]aily_leads' || true)"
 if [ -n "$_proc" ]; then
   # Zeichen vor JEDE Zeile — `printf %s` mit mehrzeiliger Variable setzt es nur vor die
   # erste, der Rest sieht dann aus wie Fliesstext und wird ueberlesen.

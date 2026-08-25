@@ -7,6 +7,12 @@
 # heisst neue Signale. Erst dieser Lauf legt den Merkzettel an, gegen den der morgige
 # Tageslauf vergleichen kann.
 cd "$(dirname "$0")/.." || exit 1
+# ⚠ VOLLER PFAD, s. analyse_arbeiter.sh. Und derselbe Protokollort wie im
+# vorgelagerten `_index_nach_tageslauf.sh` — die beiden hatten `/tmp/index_neu4.log`
+# je einmal eingetippt stehen.
+PY=/Library/Frameworks/Python.framework/Versions/3.14/bin/python3
+[ -x "$PY" ] || PY=python3
+IXLOG="${IXLOG:-/tmp/govisor-index-neuaufbau.log}"
 ENDE=$(( $(date +%s) + 21600 ))          # Obergrenze 6 h
 while pgrep -f "cli index-docs" >/dev/null; do
   if [ "$(date +%s)" -ge "$ENDE" ]; then
@@ -15,10 +21,10 @@ while pgrep -f "cli index-docs" >/dev/null; do
   sleep 30
 done
 echo "Index-Neuaufbau beendet um $(date '+%H:%M:%S')"
-tail -4 /tmp/index_neu4.log
+tail -4 "$IXLOG"
 
 echo "--- Signal-Grundlauf startet $(date '+%H:%M:%S') ---"
-python3 -m govisor.cli signals-docs --country DE > /tmp/signale_grund.log 2>&1
+"$PY" -m govisor.cli signals-docs --country DE > /tmp/signale_grund.log 2>&1
 echo "EXIT=$?  ($(date '+%H:%M:%S'))"
 tail -4 /tmp/signale_grund.log
-python3 scripts/export_doc_signals.py 2>&1 | tail -2
+"$PY" scripts/export_doc_signals.py 2>&1 | tail -2
