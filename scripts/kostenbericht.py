@@ -123,6 +123,20 @@ def _gesamtverbrauch() -> float | None:
         return None
 
 
+def _luecke(marke: dict, verbrauch_jetzt: float, buch_jetzt: float) -> dict:
+    """Die Arithmetik des Abgleichs, ohne Ein- und Ausgabe — damit sie pruefbar ist.
+
+    Gibt ``{"konto", "buch", "luecke", "anteil"}``: beide Zuwaechse seit der Marke, die
+    Differenz und ihr Anteil. ``anteil`` ist 0.0, wenn seit der Marke nichts abgerechnet
+    wurde — dann gibt es nichts, worauf man beziehen koennte.
+    """
+    d_konto = verbrauch_jetzt - float(marke["total_usage"])
+    d_buch = buch_jetzt - float(marke["buch"])
+    luecke = d_konto - d_buch
+    return {"konto": d_konto, "buch": d_buch, "luecke": luecke,
+            "anteil": luecke / d_konto if d_konto > 0 else 0.0}
+
+
 def abgleich(marke_neu: bool = False) -> int:
     """Buch gegen OpenRouters eigene Abrechnung. Die Lücke ist eine Messgröße, kein Fehler.
 
@@ -163,23 +177,29 @@ def abgleich(marke_neu: bool = False) -> int:
         return 0
 
     m = _json.loads(MARKE.read_text(encoding="utf-8"))
-    d_konto = jetzt - float(m["total_usage"])
-    d_buch = buch_jetzt - float(m["buch"])
-    luecke = d_konto - d_buch
-    anteil = luecke / d_konto if d_konto > 0 else 0.0
+    _l = _luecke(m, jetzt, buch_jetzt)
+    d_konto, d_buch, luecke, anteil = _l["konto"], _l["buch"], _l["luecke"], _l["anteil"]
 
     print(f"\n  Abgleich seit {m['gesetzt']}\n")
     print(f"    OpenRouter abgerechnet {d_konto:>10.5f} $")
     print(f"    Kostenbuch gebucht     {d_buch:>10.5f} $")
     print(f"    → ungebucht            {luecke:>10.5f} $   ({anteil:.0%})")
 
-    zeilen = list(kostenbuch.lies())
+    # ⚠ NUR DER ZEITRAUM, nicht das ganze Buch. Die erste Fassung zaehlte lebenslang und
+    # stellte die Zahlen unter die Ueberschrift „Abgleich seit …". Solange die Marke jung
+    # ist, faellt das nicht auf; ueber Wochen schreibt der Bericht damit alte
+    # Auffaelligkeiten dem laufenden Zeitraum zu.
+    zeilen = [z for z in kostenbuch.lies() if (z.get("ts") or "") > m["gesetzt"]]
     leer = sum(1 for z in zeilen if z.get("leer"))
     ohne = sum(1 for z in zeilen if z.get("kosten_usd") is None)
+    abgebrochen = sum(1 for z in zeilen if z.get("abgebrochen"))
     if leer:
         print(f"\n    {leer} leere Antwort(en) im Buch — bezahlt, ohne Ertrag")
     if ohne:
         print(f"    {ohne} Zeile(n) ohne mitgelieferten Preis")
+    if abgebrochen:
+        print(f"    {abgebrochen} an der Frist abgebrochen — oben abgerechnet, "
+              f"Antwort nie gesehen")
 
     if d_konto <= 0:
         print("\n  Seit der Marke wurde nichts abgerechnet.")
