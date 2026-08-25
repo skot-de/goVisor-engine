@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Verfahrenskalender je offenem Lead → ``web/data/kalender.json``.
+"""Verfahrenskalender je offenem Lead → ``web/data/kalender/<lead_id>.json``.
 
 Feature #16. Der Implementierungsstand führte es als „teilweise — Angebotsfrist mit Datum
 im Detail, Kalenderseite + iCal offen". Es fehlte kein Datenfeld: die Termine standen in
@@ -38,7 +38,12 @@ from govisor import kalender  # noqa: E402
 
 W = ROOT / "web" / "data"
 ANALYSEN = W / "doc-analysis"
-ZIEL = W / "kalender.json"
+# ⚠ EINE DATEI JE VORGANG, keine Sammeldatei. `doc-analysis.json` war am 2026-08-22 auf
+# 252 MB gewachsen, bevor sie zerlegt wurde; der Kalender wiederholt den Fehler nicht.
+# Die Terminansicht zeigt die MERKLISTE — ein Nutzer braucht eine Handvoll Dateien, nicht
+# 1,6 MB fuer 2.945 Vorgaenge, von denen ihn drei interessieren.
+JE_VORGANG = W / "kalender"
+INDEX = W / "kalender-index.json"
 
 
 def _leads(country: str) -> dict[str, dict]:
@@ -102,18 +107,36 @@ def main(argv=None) -> int:
         print(kalender.als_ical(eintrag["termine"], eintrag["titel"], a.ical), end="")
         return 0
 
-    ZIEL.parent.mkdir(parents=True, exist_ok=True)
-    ZIEL.write_text(json.dumps(aus, ensure_ascii=False, separators=(",", ":")),
-                    encoding="utf-8")
+    JE_VORGANG.mkdir(parents=True, exist_ok=True)
+    vorher = {q.name for q in JE_VORGANG.glob("*.json")}
+    geschrieben = 0
+    for lead_id, eintrag in aus.items():
+        sicher = "".join(c for c in lead_id if c.isalnum() or c in "_-")
+        if not sicher:
+            continue
+        ziel = JE_VORGANG / f"{sicher}.json"
+        text = json.dumps(eintrag, ensure_ascii=False, separators=(",", ":"))
+        # Nur schreiben, was sich geaendert hat — wie beim Analyse-Export daneben. Sonst
+        # schiebt jede Nacht der ganze Bestand als „geaendert" in den Objektspeicher.
+        if not (ziel.exists() and ziel.read_text(encoding="utf-8") == text):
+            ziel.write_text(text, encoding="utf-8")
+            geschrieben += 1
+        vorher.discard(f"{sicher}.json")
+    for verwaist in vorher:                     # Lead ist zu, Termine sind gegenstandslos
+        (JE_VORGANG / verwaist).unlink(missing_ok=True)
+    INDEX.write_text(json.dumps(sorted(aus), ensure_ascii=False), encoding="utf-8")
     print(f"Verfahrenskalender {a.country}: {zahl['mit_terminen']:,} Leads mit Terminen "
           f"aus den Unterlagen (von {zahl['leads']:,} offenen)")
+    print(f"  {geschrieben:,} Dateien neu geschrieben · {len(vorher):,} verwaiste entfernt")
     print(f"  {zahl['termine_gesamt']:,} Termine · {zahl['verworfen']:,} nicht zuzuordnen "
           f"und verworfen")
     for art, text in kalender.ARTEN.items():
         n = zahl.get(f"art_{art}", 0)
         if n:
             print(f"    {text:<32}{n:>7,}")
-    print(f"→ {ZIEL.relative_to(ROOT)} ({ZIEL.stat().st_size/1e6:.1f} MB)")
+    gesamt = sum(q.stat().st_size for q in JE_VORGANG.glob("*.json"))
+    print(f"→ {JE_VORGANG.relative_to(ROOT)}/ ({gesamt/1e6:.1f} MB in {len(aus):,} Dateien) "
+          f"+ {INDEX.name}")
     return 0
 
 
