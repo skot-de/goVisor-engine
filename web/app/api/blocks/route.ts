@@ -16,7 +16,10 @@ export const runtime = "nodejs";     // Buffer + node:crypto
  */
 
 type Eingang = { theme?: string; content?: string; keywords?: string[]; origin?: string;
-  sichtbarkeit?: string };
+  sichtbarkeit?: string;
+  /** Der Vorgang, aus dem der Baustein übernommen wurde. Erzeugt einen Eintrag in
+   *  `profile_block_usage` — die Verwendungshistorie (§9.3). */
+  lead_id?: string };
 
 const THEMEN = new Set(["referenzen", "unternehmensdarstellung", "zertifikate_qm",
   "datenschutz_avv", "projektorganisation", "personal_qualifikation",
@@ -107,10 +110,15 @@ export async function POST(req: Request) {
              + "(über die Firmen-Domain im Onboarding).", firma: null }, { status: 409 });
   }
 
+  // ⚠ ERST FILTERN, DANN ALLES AUS DERSELBEN LISTE. Ein erster Entwurf las die `lead_id`
+  // spaeter aus der UNGEFILTERTEN Liste ueber denselben Index — sobald ein Baustein wegfaellt
+  // (zu kurz), haengt die Verwendung am falschen. Solche Fehler fallen nie beim Schreiben
+  // auf, sondern erst, wenn jemand die Historie auswertet.
+  const brauchbar = roh.filter((b) => typeof b.content === "string" && b.content.trim().length >= 10);
+
   let saetze;
   try {
-    saetze = roh
-      .filter((b) => typeof b.content === "string" && b.content.trim().length >= 10)
+    saetze = brauchbar
       .map((b) => ({
         profile_id: user.id,
         theme: b.theme && THEMEN.has(b.theme) ? b.theme : "sonstiges",
@@ -134,7 +142,29 @@ export async function POST(req: Request) {
 
   const { data, error } = await sb.from("profile_text_blocks").insert(saetze).select("id");
   if (error) return NextResponse.json({ error: error.message }, { status: 500 });
-  return NextResponse.json({ ids: (data ?? []).map((r) => r.id), n: saetze.length });
+  const ids = (data ?? []).map((r) => r.id as string);
+
+  /* VERWENDUNGSHISTORIE (§9.3). Ein Baustein, der aus der Checkliste eines Vorgangs kommt,
+   * ist in diesem Vorgang VERWENDET worden — das ist dasselbe Ereignis, nicht zwei.
+   *
+   * ⚠ Warum nicht einfach `lead_id` am Baustein auswerten (die Spalte gibt es lokal schon)?
+   * Weil ein Baustein über die Jahre in vielen Vorgängen landet und eine Spalte nur einen
+   * behält. Genau dafür ist `profile_block_usage` eine eigene Tabelle: sie zählt mit,
+   * statt zu überschreiben. Aus ihr kommt später die Zuordnung Thema/Stichworte.
+   *
+   * ⚠ Und sie darf den Baustein NICHT mit sich reissen: schlägt der Vermerk fehl, ist der
+   * Baustein trotzdem gespeichert. Eine verlorene Zeile Statistik ist kein Grund, einem
+   * Menschen seinen Text wegzunehmen. Gemeldet wird es trotzdem. */
+  const verwendungen = ids
+    .map((id, i) => ({ block_id: id, lead_id: brauchbar[i]?.lead_id }))
+    .filter((v): v is { block_id: string; lead_id: string } =>
+      typeof v.lead_id === "string" && v.lead_id.length > 0 && v.lead_id.length <= 64);
+  let historie: string | undefined;
+  if (verwendungen.length) {
+    const { error: e2 } = await sb.from("profile_block_usage").insert(verwendungen);
+    if (e2) historie = `Baustein gespeichert, Verwendungsvermerk nicht: ${e2.message}`;
+  }
+  return NextResponse.json({ ids, n: saetze.length, ...(historie ? { historie } : {}) });
 }
 
 /** Freigabe umstellen — privat ↔ Firma. Nur der Eigentümer; die Regel erzwingt es zusätzlich. */

@@ -69,6 +69,26 @@ nichts zurück):
 Ansicht sagt das auch, statt ihn stumm auszugrauen. Belegt wird über die Firmen-Domain im
 Onboarding.
 
+## Verwendungshistorie (§9.3)
+
+Übernimmt jemand in der Unterlagen-Checkliste einen Baustein („Kopieren & abhaken"), ist das
+EIN Ereignis, nicht zwei: der Baustein entsteht **und** er ist in diesem Vorgang verwendet.
+Beides schreibt dieselbe Anfrage — der Baustein nach `profile_text_blocks`, der Vermerk nach
+`profile_block_usage`.
+
+⚠ **Warum eine eigene Tabelle und nicht die Spalte `lead_id` am Baustein.** Ein Baustein
+landet über die Jahre in vielen Vorgängen, eine Spalte behält nur einen. Die Tabelle zählt
+mit, statt zu überschreiben; aus ihr kommt später die Zuordnung Thema/Stichworte.
+
+⚠ **Der Vermerk reisst den Baustein nicht mit.** Schlägt er fehl, ist der Baustein trotzdem
+gespeichert und die Antwort sagt es (`historie`). Eine verlorene Zeile Statistik ist kein
+Grund, einem Menschen seinen Text wegzunehmen.
+
+Am 2026-08-25 durchgespielt: drei Bausteine aus drei Vorgängen, einer davon zu kurz.
+Ergebnis LEAD-B → referenzen, LEAD-C → nachhaltigkeit — der weggefallene LEAD-A ist
+verschwunden statt verrutscht. Und die Regel hält: ein fremder Nutzer sieht keine
+Verwendungen und kann auch mit bekannter Baustein-Kennung keine eintragen.
+
 ## Ein offener Punkt
 
 **`profile_block_usage` wird noch von niemandem geschrieben.** Die Tabelle hält fest, welcher

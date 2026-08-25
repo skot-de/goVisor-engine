@@ -180,3 +180,56 @@ def test_null_getroffene_zeilen_sind_kein_erfolg():
         assert ".select(" in rest, f"{stelle}: ohne select bleibt der Treffer ungeprüft"
         assert "data?.length" in rest, f"{stelle}: die Trefferzahl wird nicht geprüft"
         assert "403" in rest, f"{stelle}: null Treffer muss abgelehnt werden, nicht bejaht"
+
+
+# ── Verwendungshistorie (§9.3) ─────────────────────────────────────────────────────────────
+
+SHELL = (ROOT / "web" / "components" / "explorer" / "ExplorerShell.tsx").read_text(encoding="utf-8")
+
+
+def test_verwendung_wird_aus_derselben_gefilterten_liste_zugeordnet():
+    """⚠ Der Fehler, der beim Bauen fast durchgerutscht wäre.
+
+    Ein erster Entwurf las die `lead_id` über denselben Index aus der UNGEFILTERTEN Liste.
+    Sobald ein Baustein wegfällt (zu kurz), hängt die Verwendung am falschen — und das
+    fällt nie beim Schreiben auf, sondern erst, wenn jemand die Historie auswertet.
+    Am 2026-08-25 im Durchlauf mit drei Bausteinen geprüft, einer davon zu kurz:
+    LEAD-B → referenzen, LEAD-C → nachhaltigkeit, LEAD-A verschwunden statt verrutscht.
+    """
+    code = ohne_kommentare(ROUTE, "//")
+    assert "brauchbar" in code
+    i = code.index("const verwendungen")
+    assert "brauchbar[i]" in code[i:i + 300], "die Zuordnung muss aus der gefilterten Liste kommen"
+    assert "roh[i]" not in code, "über die ungefilterte Liste verrutscht die Zuordnung"
+
+
+def test_fehlende_historie_nimmt_den_baustein_nicht_mit():
+    """Eine verlorene Zeile Statistik ist kein Grund, einem Menschen seinen Text wegzunehmen."""
+    code = ohne_kommentare(ROUTE, "//")
+    i = code.index("profile_block_usage")
+    rest = code[i:i + 400]
+    assert "historie" in rest
+    # Kein Abbruch mit Fehlerstatus, nur ein Vermerk in der Antwort.
+    assert "status: 500" not in rest
+
+
+def test_ohne_vorgang_kein_verwendungsvermerk():
+    """Ein Baustein ohne Herkunft ist besser als einer mit falscher."""
+    code = ohne_kommentare(ROUTE, "//")
+    i = code.index("const verwendungen")
+    assert 'typeof v.lead_id === "string"' in code[i:i + 400]
+
+
+def test_checkliste_speichert_lokal_bevor_sie_den_server_fragt():
+    """⚠ Umgekehrt hinge der Knopf am Netz — und wer nicht angemeldet ist, verlöre den
+    Baustein ganz. Der Server ist die Schicht darüber, nicht die Bedingung."""
+    i = SHELL.index("function bausteinUebernehmen")
+    block = SHELL[i:i + 1400]
+    assert block.index("localStorage.setItem") < block.index('fetch("/api/blocks"')
+
+
+def test_beide_checklisten_knoepfe_gehen_denselben_weg():
+    """`saveblock` (§7.1) und `clkombi` (§7) taten dasselbe zweimal — eine Änderung an
+    einer Stelle hätte die andere stehen lassen."""
+    assert SHELL.count("bausteinUebernehmen(") == 3      # 1 Definition + 2 Aufrufe
+    assert "govisor.blocks" not in SHELL[SHELL.index("case \"clkombi\""):]

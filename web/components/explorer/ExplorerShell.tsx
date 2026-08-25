@@ -657,6 +657,34 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
   function toggleExpand() { setMode((m) => (m === "full" ? "read" : "full")); }
 
   // Interaktionen im Tab-Körper (delegiert aus DetailPanel)
+  /* Baustein aus der Checkliste übernehmen: lokal IMMER, auf dem Server wenn möglich.
+   *
+   * ⚠ Die Reihenfolge ist der Punkt. Lokal zuerst, ohne auf das Netz zu warten — sonst
+   * hinge der Knopf, und wer nicht angemeldet ist, verlöre den Baustein ganz. Der Server
+   * ist die Schicht darüber, nicht die Bedingung.
+   *
+   * Der Vermerk in der Verwendungshistorie (§9.3) entsteht dabei in derselben Anfrage:
+   * ein Baustein, der aus der Checkliste eines Vorgangs kommt, ist in diesem Vorgang
+   * verwendet worden. Das ist EIN Ereignis, nicht zwei. */
+  function bausteinUebernehmen(theme: string, content: string, label: string,
+                               leadId: string | null) {
+    try {
+      const lib = JSON.parse(localStorage.getItem("govisor.blocks") || "[]");
+      lib.push({ theme: theme || "sonstiges", content, label: label || "",
+        lead_id: leadId, saved_at: new Date().toISOString() });
+      localStorage.setItem("govisor.blocks", JSON.stringify(lib));
+    } catch { /* Speicher voll/blockiert → wenigstens kopiert */ }
+    // Ohne Anmeldung antwortet die Middleware mit 401; das ist kein Fehlerfall, sondern
+    // der lokale Betrieb. Deshalb still.
+    fetch("/api/blocks", {
+      method: "POST", headers: { "content-type": "application/json" },
+      // Ohne Vorgang kein Verwendungsvermerk — ein Baustein ohne Herkunft ist keiner mit
+      // falscher. Der Baustein selbst wird trotzdem gespeichert.
+      body: JSON.stringify({ blocks: [{ theme: theme || "sonstiges", content,
+        ...(leadId ? { lead_id: leadId } : {}), origin: "checkliste" }] }),
+    }).catch(() => {});
+  }
+
   function onBodyAction(action: string, value: string, el: HTMLElement) {
     switch (action) {
       case "anav": {
@@ -677,13 +705,7 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
         const text = (ta?.value.trim()) || blk.quote || blk.label || "";
         if (text) {
           navigator.clipboard?.writeText(text).catch(() => {});
-          try {
-            const key = "govisor.blocks";
-            const lib = JSON.parse(localStorage.getItem(key) || "[]");
-            lib.push({ theme: blk.theme || "sonstiges", content: text, label: blk.label || "",
-              lead_id: activeId, saved_at: new Date().toISOString() });
-            localStorage.setItem(key, JSON.stringify(lib));
-          } catch { /* Speicher voll/blockiert → nur kopieren */ }
+          bausteinUebernehmen(blk.theme || "sonstiges", text, blk.label || "", activeId);
         }
         const btn = el as HTMLButtonElement;
         const orig = btn.textContent;
@@ -705,12 +727,7 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
         const text = (ta?.value.trim()) || blk.quote || blk.label || "";
         if (text) {
           navigator.clipboard?.writeText(text).catch(() => {});
-          try {
-            const lib = JSON.parse(localStorage.getItem("govisor.blocks") || "[]");
-            lib.push({ theme: blk.theme || "sonstiges", content: text, label: blk.label || "",
-              lead_id: activeId, saved_at: new Date().toISOString() });
-            localStorage.setItem("govisor.blocks", JSON.stringify(lib));
-          } catch { /* voll/blockiert */ }
+          bausteinUebernehmen(blk.theme || "sonstiges", text, blk.label || "", activeId);
         }
         if (it) { it.classList.add("done"); clPersist(el.closest<HTMLElement>(".va-checklist")); }
         break;
