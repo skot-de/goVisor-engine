@@ -41,17 +41,38 @@ ROOT="$(pwd)"
 PY=/Library/Frameworks/Python.framework/Versions/3.14/bin/python3
 [ -x "$PY" ] || PY=python3
 LOCK="$ROOT/data/.daily_leads.lock"
-# ⚠ SPERRE AUF DIE INTERNE PLATTE. `data` ist ein Symlink auf ein externes Volume, und
-# macOS vergibt den Zugriff darauf JE PROGRAMM: aus dem Terminal gestartet darf dieses
-# Skript dort schreiben, als launchd-Dienst nicht. Beim Analyse-Arbeiter ist genau das am
-# 2026-08-25 aufgeflogen — er lief seit dem Vorabend OHNE Sperre, weil `echo $$ > …` mit
-# „Operation not permitted" auf stderr scheiterte und das Skript einfach weitermachte.
-# Dass es hier bisher funktionierte, lag daran, dass dieser Arbeiter aus einer Terminal-
-# Sitzung geladen wurde und deren Zugriffsrecht geerbt hat — derselbe Zufall wie bei `$PY`
-# eine Zeile weiter oben, und derselbe stumme Ausfall nach einem Maschinen-Neustart.
+# ⚠ SPERRE UND LOG AUF DIE INTERNE PLATTE — und die Begruendung dafuer ist NICHT die,
+# die hier zuerst stand. `data` ist ein Symlink auf ein externes Volume, und macOS vergibt
+# den Zugriff darauf je Programm. Gemessen am 2026-08-25:
+#
+#   eu.govisor.analyse    scheitert dort mit „Operation not permitted" (steht in
+#                         ~/Library/Logs/govisor-analyse.err.log) — er lief seit dem
+#                         Vorabend OHNE Sperre, weil `echo $$ > …` still fehlschlug und
+#                         das Skript einfach weitermachte.
+#   eu.govisor.dokumente  DARF dort schreiben. PID 76941 ist der launchd-Dienst (nicht,
+#                         wie ich hier zuerst behauptet habe, ein Terminal-Start) und
+#                         beschreibt `data/logs/…` im Minutentakt.
+#
+# Zwei gleichartige Dienste auf derselben Maschine, verschiedenes Ergebnis. Die
+# Berechtigung haengt also nicht am Code, sondern an einer Zuteilung, die dieser Dienst
+# einmal bekommen hat und der andere nie — und die mit einem neuen Plist, einem
+# verschobenen Pfad oder einer anderen Maschine weg ist. Darauf soll nichts aufbauen,
+# was der Arbeiter zum Laufen braucht.
+#
+# Dazu ein zweiter Grund, der unabhaengig davon gilt: Sperre und Log sollen lesbar sein,
+# wenn die externe Platte NICHT eingehaengt ist — und genau darauf wartet der Arbeiter
+# ein paar Zeilen weiter unten.
 EIGEN="${GOVISOR_DOKUMENTE_LOCK:-$HOME/Library/Caches/eu.govisor/dokumente_arbeiter.lock}"
 mkdir -p "$(dirname "$EIGEN")"
-LOG="$ROOT/data/logs/dokumente-arbeiter.log"
+# Das Log aus demselben Grund (s. oben). Der Analyse-Arbeiter hat den Fall am 2026-08-18
+# vorgefuehrt: „tee: Operation not permitted", danach brach JEDE Runde ab — der Dienst
+# lief und tat nichts. Der Name passt zu dem, was launchd schon danebenlegt
+# (`govisor-arbeiter.out.log`, `govisor-arbeiter.err.log`).
+#
+# ⚠ Die Historie bis zum 2026-08-25 liegt weiter unter `data/logs/dokumente-arbeiter.log`,
+# und ein Arbeiter, der seit vorher laeuft, schreibt bis zu seinem Neustart dorthin.
+# `scripts/logs.sh` nimmt deshalb den neueren der beiden Orte.
+LOG="${GOVISOR_DOKUMENTE_LOG:-$HOME/Library/Logs/govisor-arbeiter.log}"
 
 # ⚠ Die Daten liegen auf einer EXTERNEN Platte (data → /Volumes/goVisor). Ist sie nicht
 # eingehaengt, darf der Arbeiter nicht loslaufen — er wuerde ins Leere greifen und im

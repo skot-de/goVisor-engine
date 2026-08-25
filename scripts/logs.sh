@@ -18,8 +18,18 @@
 #          scripts/logs.sh tag        dem Tageslauf zusehen
 set -uo pipefail
 cd "$(dirname "$0")/.."
+
+# Der Dokumenten-Arbeiter hat sein Log am 2026-08-25 auf die interne Platte bekommen
+# (s. dort). Die Historie bis dahin liegt weiter auf der Datenplatte, und ein Arbeiter,
+# der seit vorher laeuft, schreibt bis zu seinem Neustart auch noch dorthin. Also: den
+# neueren der beiden Orte nehmen, statt sich fuer einen zu entscheiden.
+ARBEITER_LOG="$HOME/Library/Logs/govisor-arbeiter.log"
+[ -f "data/logs/dokumente-arbeiter.log" ] \
+  && [ ! "$ARBEITER_LOG" -nt "data/logs/dokumente-arbeiter.log" ] \
+  && ARBEITER_LOG="data/logs/dokumente-arbeiter.log"
+
 case "${1:-uebersicht}" in
-  arbeiter) exec tail -f data/logs/dokumente-arbeiter.log ;;
+  arbeiter) exec tail -f "$ARBEITER_LOG" ;;
   analyse)  exec tail -f "$HOME/Library/Logs/govisor-analyse.log" ;;
   tag)      exec tail -f "$(ls -t data/logs/daily-*.log | head -1)" ;;
   uebersicht)
@@ -30,7 +40,7 @@ case "${1:-uebersicht}" in
     pgrep -f analyse_arbeiter  >/dev/null && echo "    ▶ Analyse-Arbeiter"    || echo "    · Analyse-Arbeiter schläft"
     echo
     echo "  ZULETZT GESAGT — Arbeiter"
-    tail -4 data/logs/dokumente-arbeiter.log 2>/dev/null | sed 's/^/    /' || echo "    (noch nichts)"
+    tail -4 "$ARBEITER_LOG" 2>/dev/null | sed 's/^/    /' || echo "    (noch nichts)"
     echo
     echo "  ZULETZT GESAGT — Analyse"
     tail -3 "$HOME/Library/Logs/govisor-analyse.log" 2>/dev/null | cut -c1-96 | sed 's/^/    /'
