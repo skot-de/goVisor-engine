@@ -467,8 +467,20 @@ def build_quality(cfg: Config, country: str = "DE"):
                         AND start_date > end_date THEN 'datum_start_nach_ende' END,
               CASE WHEN submission_deadline IS NOT NULL AND publication_date IS NOT NULL
                         AND submission_deadline < publication_date THEN 'frist_vor_pub' END,
+              -- ⚠ `publication_date` GEHOERT DAZU. Bis zum 2026-08-25 prueffte diese Regel
+              -- nur award/end/start — ein Erscheinungsdatum in der Zukunft lief unmarkiert
+              -- durch. Gemessen: 32 DE-Bekanntmachungen mit `publication_date` in 2033,
+              -- alle vom Typ `can` und alle mit `_2023` in der Kennung, also um ein
+              -- Jahrzehnt verrutscht. Einer davon steht als Lead im Frontend
+              -- (773387_2023, „Juristische Datenbank", leads-it.json).
+              -- Dass das Problem bekannt war, steht in `scripts/firma_profil.py:76`:
+              -- dort wird auf „<= heute" geklemmt, mit dem Verweis auf genau diese Marke —
+              -- ein Verbraucher raeumte auf, waehrend die Marke selbst nicht griff.
+              -- Markieren, nicht wegwerfen: `datum_absurd` speist allein die Review-Queue.
               CASE WHEN award_date > current_date OR award_date < DATE '1990-01-01'
                         OR end_date > DATE '2100-01-01' OR start_date < DATE '1990-01-01'
+                        OR publication_date > current_date
+                        OR publication_date < DATE '1990-01-01'
                    THEN 'datum_absurd' END,
               CASE WHEN eff_end IS NOT NULL AND award_date IS NOT NULL
                         AND eff_end > award_date + INTERVAL 25 YEAR
