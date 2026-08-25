@@ -2786,6 +2786,15 @@ def _redundante_zweitquelle_sql(cfg: Config, country: str, spalte: str = "n.noti
                          WHERE feld='submission_deadline_verlaengert' GROUP BY 1) v
                      ON v.notice_id = d.master_id
               WHERE d.beleg = 'kaeufer_und_titel'
+                -- ⚠ EIN EINZIGES NULL WUERDE DIESE BEDINGUNG TOETEN — und zwar in die
+                -- teure Richtung. `x NOT IN (…, NULL)` ist fuer JEDES x niemals wahr
+                -- (x <> NULL ergibt UNKNOWN), also faellt nicht die Dublette raus,
+                -- sondern der GESAMTE Bestand: `build_leads` liefe auf eine leere
+                -- Leadtabelle. Nachgestellt am 2026-08-25 an einer Nachbildung —
+                -- 3 Saetze, 1 Treffer: ohne NULL bleiben 2 uebrig, mit NULL null.
+                -- Gemessen tragen `duplicate_id` in DE/AT/CH heute 0 NULL; die Bedingung
+                -- soll aber nicht davon abhaengen, dass das so bleibt.
+                AND d.duplicate_id IS NOT NULL
                 AND coalesce(try_cast(v.w AS DATE),
                              CAST(m.submission_deadline AS DATE),
                              try_cast(a.w AS DATE)) >= {_ST})"""

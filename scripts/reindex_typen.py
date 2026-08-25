@@ -70,11 +70,30 @@ def main() -> int:
     shutil.copy2(quelle, sicherung)
 
     temp = quelle.with_suffix(".parquet.neu")
+    # ⚠ `IS NOT NULL` im Subselect ist kein Zierrat. `x NOT IN (…, NULL)` ist fuer JEDES x
+    # niemals wahr, die Bedingung waehlt dann NICHTS aus — und die naechste Zeile schiebt
+    # das leere Ergebnis ueber den Index. Heute traegt `notice_id` 0 NULL; der Schutz soll
+    # nicht davon abhaengen, dass das so bleibt.
     con.execute(f"""COPY (SELECT * FROM read_parquet('{q}')
                           WHERE notice_id NOT IN (
                             SELECT DISTINCT notice_id FROM read_parquet('{q}')
-                            WHERE filetype IN ({liste})))
+                            WHERE filetype IN ({liste}) AND notice_id IS NOT NULL))
                     TO '{temp.as_posix()}' (FORMAT PARQUET)""")
+
+    # ⚠ ERST NACHRECHNEN, DANN ERSETZEN. Bisher wurde das Ergebnis ungesehen ueber den
+    # Index geschoben, und die Erfolgsmeldung darunter rechnet `gesamt - rest`: bei einem
+    # leeren Ergebnis haette dort „✓ freigegeben: 7.860 Vorgaenge" gestanden — die
+    # Vernichtung des Index als Erfolg gemeldet. Der Index ist Stunden Rechenzeit; die
+    # Sicherung daneben hilft nur, wenn jemand merkt, dass er sie braucht.
+    #
+    # Erwartet wird genau `gesamt - betroffen`. Weicht es ab, bleibt der alte Index stehen.
+    neu_zahl = con.execute(
+        f"SELECT count(DISTINCT notice_id) FROM read_parquet('{temp.as_posix()}')").fetchone()[0]
+    if neu_zahl != gesamt - betroffen:
+        temp.unlink(missing_ok=True)
+        print(f"  ⛔ Ergebnis unplausibel: {neu_zahl:,} Vorgaenge statt erwarteter "
+              f"{gesamt - betroffen:,}. Index NICHT ersetzt.", file=sys.stderr)
+        return 1
     temp.replace(quelle)
     rest = con.execute(f"SELECT count(DISTINCT notice_id) FROM read_parquet('{q}')").fetchone()[0]
     print(f"  ✓ freigegeben: {gesamt - rest:,} Vorgaenge · Index jetzt {rest:,}")
