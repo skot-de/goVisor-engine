@@ -8,7 +8,14 @@ import { useEffect, useState } from "react";
 // verschlüsselte Supabase-Persistenz (profile_text_blocks) ist die Deploy-Schicht.
 
 type Block = { theme: string; content: string; label?: string; lead_id?: string; saved_at?: string;
-  origin?: string; keywords?: string[] };
+  origin?: string; keywords?: string[];
+  /** Vergeben, sobald der Baustein auf dem Server liegt. Ohne ihn ist er nur im Browser. */
+  id?: string };
+
+/* Erkennungsmerkmal für den Abgleich. Lokale Bausteine haben keine ID — zwei Bausteine mit
+ * demselben Thema und demselben Text sind derselbe. Bewusst kein Zeitstempel darin: derselbe
+ * Text, zweimal gespeichert, soll nach dem Abgleich EINMAL dastehen. */
+const merkmal = (b: Block) => `${b.theme}\u0000${b.content.trim()}`;
 
 const THEMES: [string, string][] = [
   ["referenzen", "Referenzen"], ["unternehmensdarstellung", "Unternehmensdarstellung"],
@@ -49,7 +56,46 @@ export function BausteinLibrary({ importOpen, onImport, theme, onTheme, onThemen
   const [busy, setBusy] = useState(false);
   const [msg, setMsg] = useState<string>("");
 
-  useEffect(() => { setBlocks(load()); }, []);
+  /** Angemeldet und der Server antwortet — nur dann wird überhaupt hochgeschrieben. */
+  const [amServer, setAmServer] = useState(false);
+  const [hinweis, setHinweis] = useState("");
+
+  /* LOKAL-FIRST, dann abgleichen. Die lokale Liste steht sofort; der Server kommt danach.
+   * Umgekehrt (erst laden, dann anzeigen) sähe die Bibliothek bei jedem Aufruf für einen
+   * Moment leer aus — und eine leere Bausteinbibliothek liest sich wie Datenverlust. */
+  useEffect(() => {
+    const lokal = load();
+    setBlocks(lokal);
+    (async () => {
+      try {
+        const r = await fetch("/api/blocks");
+        const d = await r.json();
+        // Ohne Anmeldung antwortet die Middleware mit 401 — dann bleibt alles im Browser.
+        if (d.error) return;
+        setAmServer(true);
+        let ferne: Block[] = d.blocks || [];
+
+        // Erstübernahme: was bisher nur im Browser lag, wandert einmalig hoch. Ohne diesen
+        // Schritt wäre die Anmeldung ein Datenverlust — die Bibliothek stünde plötzlich leer.
+        const bekannt = new Set(ferne.map(merkmal));
+        const nurLokal = lokal.filter((b) => !bekannt.has(merkmal(b)));
+        if (nurLokal.length) {
+          const p = await fetch("/api/blocks", {
+            method: "POST", headers: { "content-type": "application/json" },
+            body: JSON.stringify({ blocks: nurLokal.slice(0, 200) }),
+          });
+          const pd = await p.json();
+          if (pd.error) { setHinweis(pd.error); return; }
+          ferne = (await (await fetch("/api/blocks")).json()).blocks || [];
+        }
+        save(ferne); setBlocks(ferne);
+        if (d.unlesbar) {
+          setHinweis(`${d.unlesbar} Baustein(e) konnten nicht entschlüsselt werden — `
+                     + "vermutlich wurde der Hauptschlüssel gewechselt.");
+        }
+      } catch { /* Server nicht erreichbar → lokal weiterarbeiten */ }
+    })();
+  }, []);
 
   const counts: Record<string, number> = {};
   blocks.forEach((b) => { counts[b.theme] = (counts[b.theme] || 0) + 1; });
@@ -75,7 +121,18 @@ export function BausteinLibrary({ importOpen, onImport, theme, onTheme, onThemen
       if (d.error) { setMsg(d.error); setBusy(false); return; }
       const fresh: Block[] = (d.blocks || []).map((b: Block) => ({ ...b, origin: "import",
         saved_at: new Date().toISOString() }));
-      const merged = [...fresh, ...blocks];
+      let merged = [...fresh, ...blocks];
+      if (amServer) {
+        const p = await fetch("/api/blocks", {
+          method: "POST", headers: { "content-type": "application/json" },
+          body: JSON.stringify({ blocks: fresh }),
+        });
+        const pd = await p.json();
+        // ⚠ Der Import darf NICHT verlorengehen, wenn der Server nein sagt. Er bleibt dann
+        // lokal, und der Hinweis sagt warum — statt still zu verschwinden.
+        if (pd.error) setHinweis(pd.error);
+        else merged = (await (await fetch("/api/blocks")).json()).blocks || merged;
+      }
       save(merged); setBlocks(merged); setText(""); onImport(false);
       setMsg(`${fresh.length} Bausteine angelegt${d.skipped_personal ? ` · ${d.skipped_personal} Passagen übersprungen (überwiegend Personendaten)` : ""}.`);
     } catch { setMsg("Import fehlgeschlagen."); }
@@ -83,9 +140,15 @@ export function BausteinLibrary({ importOpen, onImport, theme, onTheme, onThemen
   }
 
   function removeBlock(i: number) {
-    const idx = blocks.indexOf(shown[i]);
+    const weg = shown[i];
+    const idx = blocks.indexOf(weg);
     const next = blocks.filter((_, k) => k !== idx);
     save(next); setBlocks(next);
+    // Auf dem Server wird ARCHIVIERT, nicht gelöscht (§9.2): ein Baustein kann in einem
+    // alten Angebot stecken, das später noch zu begründen ist.
+    if (amServer && weg?.id) {
+      fetch(`/api/blocks?id=${encodeURIComponent(weg.id)}`, { method: "DELETE" }).catch(() => {});
+    }
   }
 
   return (
@@ -106,6 +169,7 @@ export function BausteinLibrary({ importOpen, onImport, theme, onTheme, onThemen
         </div>
       )}
       {!importOpen && msg && <div className="ii-msg" style={{ marginBottom: 12 }}>{msg}</div>}
+      {hinweis && <div className="ii-msg" style={{ marginBottom: 12 }}>{hinweis}</div>}
 
       {blocks.length === 0 ? (
         /* LEERZUSTAND: das ZIEL zeigen, nicht die Luecke.
