@@ -43,7 +43,30 @@ ANALYSEN = W / "doc-analysis"
 # Die Terminansicht zeigt die MERKLISTE — ein Nutzer braucht eine Handvoll Dateien, nicht
 # 1,6 MB fuer 2.945 Vorgaenge, von denen ihn drei interessieren.
 JE_VORGANG = W / "kalender"
-INDEX = W / "kalender-index.json"
+# ⚠ EIN VERZEICHNIS FUER ALLE LAENDER, und das ist Absicht: die Lead-Kennung ist
+# eindeutig, und `/api/kalender` soll sie ohne Land aufloesen koennen. Der Preis dafuer
+# steht unten in `main()` — wer hier aufraeumt, darf NICHT „alles, was dieser Lauf nicht
+# geschrieben hat" wegwerfen. Genau das stand hier am 2026-08-25 und haette bei einem
+# `--country AT` alle 2.945 DE-Dateien geloescht (gemessen, nicht vermutet).
+#
+# Das Manifest merkt sich, was JE LAND geschrieben wurde. Es liegt bewusst in `data/`
+# und nicht in `web/data/`: es ist Betriebswissen des Exports, kein Ausliefergut — im
+# Objektspeicher waere es tote Fracht. Sein Vorgaenger `kalender-index.json` lag dort und
+# wurde von niemandem gelesen (geprueft: kein Treffer im Web-Code).
+MANIFEST = ROOT / "data" / "kalender_manifest.json"
+
+
+def _manifest_lesen() -> dict[str, list[str]]:
+    """Was welcher Landeslauf zuletzt geschrieben hat. Fehlt oder kaputt → leer.
+
+    Leer heisst hier „ich weiss es nicht", nicht „es war nichts" — deshalb faellt die
+    Reinigung in `main()` dann auf das Lead-Universum zurueck und loescht nicht ins Blaue.
+    """
+    try:
+        d = json.loads(MANIFEST.read_text(encoding="utf-8"))
+        return d if isinstance(d, dict) else {}
+    except Exception:                                       # noqa: BLE001
+        return {}
 
 
 def _leads(country: str) -> dict[str, dict]:
@@ -58,10 +81,19 @@ def _leads(country: str) -> dict[str, dict]:
     return {r[0]: {"titel": r[1] or "", "frist": r[2]} for r in rows}
 
 
-def baue(country: str = "DE") -> tuple[dict, dict]:
+def baue(country: str = "DE") -> tuple[dict, dict, set[str]]:
+    """Termine je Lead, Zaehlwerk, und das Lead-Universum DIESES Landes.
+
+    Das Universum ist kein Beiwerk: es sagt der Reinigung in `main()`, welche Dateien
+    ueberhaupt zu diesem Land gehoeren. Ohne es kann sie fremde Laender nicht von
+    eigenen Karteileichen unterscheiden.
+    """
     leads = _leads(country)
     if not leads:
-        return {}, {"leads": 0}
+        # ⚠ Ein Counter, KEIN einfaches dict. `main()` liest `zahl["mit_terminen"]`; ein
+        # dict wirft dort KeyError, und ein Land ohne `lead_export` (Polen liegt in Silber
+        # ohne Gold) waere mit einem Absturz ausgestiegen statt mit „keine Daten".
+        return {}, collections.Counter({"leads": 0}), set()
     aus: dict[str, dict] = {}
     zahl = collections.Counter()
     for lead_id, info in leads.items():
@@ -88,7 +120,7 @@ def baue(country: str = "DE") -> tuple[dict, dict]:
         for t in aus_unterlagen:
             zahl[f"art_{t['art']}"] += 1
     zahl["leads"] = len(leads)
-    return aus, zahl
+    return aus, zahl, set(leads)
 
 
 def main(argv=None) -> int:
@@ -97,7 +129,7 @@ def main(argv=None) -> int:
     ap.add_argument("--ical", metavar="LEAD_ID", help="einen Lead als .ics auf stdout")
     a = ap.parse_args(argv)
 
-    aus, zahl = baue(a.country)
+    aus, zahl, universum = baue(a.country)
     if a.ical:
         eintrag = aus.get(a.ical)
         if not eintrag:
@@ -108,7 +140,18 @@ def main(argv=None) -> int:
         return 0
 
     JE_VORGANG.mkdir(parents=True, exist_ok=True)
-    vorher = {q.name for q in JE_VORGANG.glob("*.json")}
+
+    # WAS DIESEM LAND GEHOERT — und nur das darf dieser Lauf wegraeumen. Zwei Quellen,
+    # weil keine allein reicht:
+    #   · das Manifest nennt, was wir beim letzten Mal geschrieben haben. Es ist die
+    #     einzige Spur zu Leads, die inzwischen GESCHLOSSEN sind — die stehen in keinem
+    #     `lead_export` mehr und blieben sonst als Karteileiche liegen.
+    #   · das Lead-Universum faengt ab, was vor dem Manifest entstanden ist (Erstlauf)
+    #     und haelt zugleich fremde Laender heraus: eine DE-Datei ist in AT nicht bekannt
+    #     und wird deshalb in einem AT-Lauf nicht angefasst.
+    manifest = _manifest_lesen()
+    auf_platte = {q.stem for q in JE_VORGANG.glob("*.json")}
+    unsere = (set(manifest.get(a.country) or []) | (auf_platte & universum))
     geschrieben = 0
     for lead_id, eintrag in aus.items():
         sicher = "".join(c for c in lead_id if c.isalnum() or c in "_-")
@@ -121,13 +164,16 @@ def main(argv=None) -> int:
         if not (ziel.exists() and ziel.read_text(encoding="utf-8") == text):
             ziel.write_text(text, encoding="utf-8")
             geschrieben += 1
-        vorher.discard(f"{sicher}.json")
-    for verwaist in vorher:                     # Lead ist zu, Termine sind gegenstandslos
-        (JE_VORGANG / verwaist).unlink(missing_ok=True)
-    INDEX.write_text(json.dumps(sorted(aus), ensure_ascii=False), encoding="utf-8")
+        unsere.discard(sicher)
+    for verwaist in unsere:                     # Lead ist zu, Termine sind gegenstandslos
+        (JE_VORGANG / f"{verwaist}.json").unlink(missing_ok=True)
+    manifest[a.country] = sorted(aus)
+    MANIFEST.write_text(json.dumps(manifest, ensure_ascii=False, sort_keys=True),
+                        encoding="utf-8")
     print(f"Verfahrenskalender {a.country}: {zahl['mit_terminen']:,} Leads mit Terminen "
           f"aus den Unterlagen (von {zahl['leads']:,} offenen)")
-    print(f"  {geschrieben:,} Dateien neu geschrieben · {len(vorher):,} verwaiste entfernt")
+    print(f"  {geschrieben:,} Dateien neu geschrieben · {len(unsere):,} verwaiste entfernt "
+          f"(nur aus {a.country})")
     print(f"  {zahl['termine_gesamt']:,} Termine · {zahl['verworfen']:,} nicht zuzuordnen "
           f"und verworfen")
     for art, text in kalender.ARTEN.items():
@@ -135,8 +181,8 @@ def main(argv=None) -> int:
         if n:
             print(f"    {text:<32}{n:>7,}")
     gesamt = sum(q.stat().st_size for q in JE_VORGANG.glob("*.json"))
-    print(f"→ {JE_VORGANG.relative_to(ROOT)}/ ({gesamt/1e6:.1f} MB in {len(aus):,} Dateien) "
-          f"+ {INDEX.name}")
+    print(f"→ {JE_VORGANG.relative_to(ROOT)}/ ({gesamt/1e6:.1f} MB, "
+          f"davon {len(aus):,} aus {a.country})")
     return 0
 
 

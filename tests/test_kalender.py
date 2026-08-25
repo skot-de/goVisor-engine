@@ -82,3 +82,54 @@ def test_ical_ist_gueltig_und_maskiert():
     # Komma und Semikolon muessen maskiert sein, sonst zerfaellt die Zeile.
     assert r"Sanierung\, Turnhalle" in ics
     assert r"wichtig\, sehr" in ics and r"\;" in ics
+
+
+def test_ein_fremdes_land_raeumt_unsere_dateien_nicht_weg(tmp_path, monkeypatch):
+    """⚠ Der Export schreibt ALLE Länder in EIN Verzeichnis — die Reinigung darf das nicht
+    vergessen.
+
+    Am 2026-08-25 stand in `main()` sinngemäß „alles löschen, was dieser Lauf nicht
+    geschrieben hat". Gemessen an echten Daten: `--country AT` hätte **alle 2.945
+    DE-Dateien** entfernt. Österreich und die Schweiz haben bei den Dokumenten 0 %
+    Abdeckung, ihr Ergebnis ist also leer — und eine Reinigung, die „leer" als „alles
+    verwaist" liest, räumt den Bestand des Nachbarlandes ab. Gemeldet hätte sie das als
+    „2.945 verwaiste entfernt", was wie Hausputz aussieht.
+
+    Der Test hält beide Richtungen fest: fremdes Land fasst nichts an, eigenes Land räumt
+    seine Karteileiche trotzdem weg. Ohne die zweite Hälfte wäre „nie löschen" ein
+    bestandener Test und trotzdem falsch.
+    """
+    import importlib.util
+    from pathlib import Path
+
+    wurzel = Path(__file__).resolve().parent.parent
+    spec = importlib.util.spec_from_file_location("ek", wurzel / "scripts" / "export_kalender.py")
+    ek = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(ek)
+
+    monkeypatch.setattr(ek, "JE_VORGANG", tmp_path / "kalender")
+    monkeypatch.setattr(ek, "MANIFEST", tmp_path / "manifest.json")
+    monkeypatch.setattr(ek, "ROOT", tmp_path)          # nur für die Schlusszeile
+    ek.JE_VORGANG.mkdir(parents=True)
+    (ek.JE_VORGANG / "de-1.json").write_text('{"titel":"x","termine":[],"verworfen":0}')
+    (ek.JE_VORGANG / "de-2.json").write_text('{"titel":"y","termine":[],"verworfen":0}')
+
+    eintrag = {"titel": "DE-Lead", "termine": [], "verworfen": 0}
+    # DE kennt beide Leads, AT keinen von beiden — so sieht die Wirklichkeit aus.
+    import collections
+    z = collections.Counter
+    welt = {"DE": ({"de-1": eintrag, "de-2": eintrag}, z({"leads": 2}), {"de-1", "de-2"}),
+            "AT": ({}, z({"leads": 9}), {"at-1"})}
+    monkeypatch.setattr(ek, "baue", lambda c="DE": welt[c])
+
+    ek.main(["--country", "DE"])                        # Manifest anlegen
+    ek.main(["--country", "AT"])                        # der gefährliche Lauf
+    uebrig = {p.stem for p in ek.JE_VORGANG.glob("*.json")}
+    assert uebrig == {"de-1", "de-2"}, \
+        f"ein AT-Lauf hat DE-Dateien angefasst: {sorted(uebrig)}"
+
+    # Und die Reinigung muss trotzdem greifen, wenn ein Lead aus UNSEREM Lauf wegfällt.
+    welt["DE"] = ({"de-1": eintrag}, z({"leads": 1}), {"de-1", "de-2"})
+    ek.main(["--country", "DE"])
+    assert {p.stem for p in ek.JE_VORGANG.glob("*.json")} == {"de-1"}, \
+        "die eigene Karteileiche bleibt liegen — die Reinigung räumt gar nichts mehr"

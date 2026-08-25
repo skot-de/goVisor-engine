@@ -1016,7 +1016,15 @@ $PY scripts/export_doc_analysis.py || echo "  ⚠ doc-analysis nicht zerlegt —
 # Bekanntmachung (Angebotsfrist) und Unterlagen (Bindefrist, Bieterfragen, Ortstermin …).
 # Nur klassifizierte Termine; was sich keiner Art zuordnen laesst, wird gezaehlt und
 # verworfen — sonst stuende das Druckdatum einer PDF im Kalender.
-$PY scripts/export_kalender.py --country DE || echo "  ⚠ kalender.json nicht gebaut — die Terminliste bleibt auf altem Stand."
+# ⚠ ALLE DREI LAENDER, auch wenn heute nur DE etwas liefert: AT und CH haben bei den
+# Vergabeunterlagen 0 % Abdeckung, ihr Lauf schreibt also nichts. Er ist trotzdem richtig
+# hier — am Tag, an dem die ersten AT-Unterlagen ankommen, steht der Kalender ohne
+# Zutun. Und er ist seit dem 2026-08-25 gefahrlos: bis dahin haette ein AT-Lauf ALLE
+# 2.945 DE-Dateien geloescht (die Reinigung las „leer" als „alles verwaist").
+for L in DE AT CH; do
+  $PY scripts/export_kalender.py --country "$L" \
+    || echo "  ⚠ Verfahrenskalender $L nicht gebaut — die Terminliste bleibt auf altem Stand."
+done
 # Dateilisten der Portale (subreport DE, vergabeportal AT): was dort LIEGT, ohne dass wir es
 # gelesen haben. Lag bis zum 22.08. ungenutzt im Gold-Layer — 944 offene Vergaben ohne
 # Volltext haben darüber trotzdem eine Aussage, darunter die ersten 134 für Österreich.
