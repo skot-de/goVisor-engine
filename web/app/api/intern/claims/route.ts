@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { createAdminClient } from "@/lib/supabase/admin";
-import { loadSuppliers } from "@/lib/suppliers";
+import { loadSupplier } from "@/lib/suppliers";
 
 /* INTERN — Prüfung der Identitäts-Ansprüche.
  *
@@ -30,8 +30,12 @@ export async function GET() {
 
   // Die Firmen-Fakten dazulegen: ohne sie ist „stimmt der Anspruch?" nicht entscheidbar.
   // Die bekannte Domain gehört hier ausdrücklich hin — das ist das Prüfmerkmal.
-  const sup = await loadSuppliers();
-  const idx = new Map(sup.map((s) => [s.id, s]));
+  // ⚠ Hoechstens 200 Anspruechen stehen hoechstens 200 Firmen gegenueber — dafuer alle
+  // 37.901 zu laden, war das rund Zweihundertfache. Doppelte Kennungen werden nur einmal
+  // geholt; der Speicher haelt sie ohnehin fest.
+  const ids = [...new Set((data ?? []).map((c) => c.identity_id).filter(Boolean))];
+  const idx = new Map((await Promise.all(ids.map(async (i) => [i, await loadSupplier(String(i))] as const)))
+    .filter(([, s]) => s));
   const rows = (data ?? []).map((c) => {
     const s = idx.get(c.identity_id);
     return {

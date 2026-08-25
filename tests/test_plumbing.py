@@ -4403,3 +4403,54 @@ def test_leadfristen_liest_die_schlanke_datei_zuerst():
     # Der Rückfall muss sich melden — sonst merkt niemand, dass 110 MB geladen werden.
     assert "console.error" in quelle
     assert quelle.index("ausSchlankerDatei") < quelle.index("ausAllenBranchen")
+
+
+# ── Lieferanten: Basis für die Suche, eine Datei je Firma für den Rest ─────────────────────
+
+def test_keine_route_laedt_die_lieferanten_sammeldatei():
+    """⚠ 46 MB für eine Firma von 1,2 KB — oder für vier leichte Felder.
+
+    Vier Routen holten genau eine Firma per `.find(x => x.id === id)`, die Suche brauchte
+    nur Name und Aliasse. Fünf Felder tragen 91 % der Bytes, und keine Route braucht mehr
+    als eines davon.
+    """
+    wurzel = pathlib.Path(__file__).resolve().parent.parent
+    for datei in ("web/app/api/entity-search/route.ts", "web/app/api/entity-group/route.ts",
+                  "web/app/api/entity-verify/route.ts", "web/app/api/impressum/route.ts",
+                  "web/app/api/intern/claims/route.ts"):
+        quelle = (wurzel / datei).read_text(encoding="utf-8")
+        assert "loadSuppliers(" not in quelle, f"{datei} lädt noch die Sammeldatei"
+
+
+def test_lieferanten_basis_traegt_nur_leichte_felder():
+    """⚠ Jedes schwere Feld in der Basis macht sie um ein Vielfaches grösser.
+
+    `fields`, `members`, `topBuyers`, `fields6`, `mailHashes` sind zusammen 91 % der Bytes.
+    """
+    wurzel = pathlib.Path(__file__).resolve().parent.parent
+    quelle = (wurzel / "scripts" / "export_suppliers.py").read_text(encoding="utf-8")
+    i = quelle.index("_BASIS = (")
+    zeile = quelle[i:quelle.index(")", i)]
+    for schwer in ("fields", "members", "topBuyers", "fields6", "mailHashes"):
+        assert f'"{schwer}"' not in zeile, f"{schwer} gehört nicht in die Basis"
+    for leicht in ("id", "name", "aliases", "wins"):
+        assert f'"{leicht}"' in zeile, f"{leicht} fehlt der Suche"
+
+
+def test_lieferanten_dateiname_gleicht_dem_der_firmenprofile():
+    """Ein Vertrag für beide Aufteilungen — sonst gibt es zwei Wahrheiten."""
+    import hashlib
+    import importlib.util
+    wurzel = pathlib.Path(__file__).resolve().parent.parent
+    quelle = (wurzel / "scripts" / "export_suppliers.py").read_text(encoding="utf-8")
+    i = quelle.index("def suppliers_dateiname")
+    raum: dict = {"hashlib": hashlib}
+    exec(compile(quelle[i:quelle.index("\n\n\n", i)], "sup", "exec"), raum)
+    spec = importlib.util.spec_from_file_location(
+        "efp", wurzel / "scripts" / "export_firma_profiles.py")
+    efp = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(efp)
+    for k in ("grp:-arnold", "solo:id:112.766h"):
+        assert raum["suppliers_dateiname"](k) == efp.dateiname(k)
+    ts = (wurzel / "web" / "lib" / "suppliers.ts").read_text(encoding="utf-8")
+    assert 'createHash("sha1")' in ts and 'digest("hex")' in ts

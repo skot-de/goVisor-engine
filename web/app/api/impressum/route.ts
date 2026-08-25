@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { rateLimit, clientIp } from "@/lib/rateLimit";
 import { pruefeImpressum, domainErlaubt } from "@/lib/impressum";
-import { loadSuppliers } from "@/lib/suppliers";
+import { loadSupplier } from "@/lib/suppliers";
 import { leseNachweis, schreibeNachweis } from "@/lib/supabase/domainProof";
 
 /* Belegt die Anbieterkennung der Mail-Domain, dass sie zu der Firma gehört, auf deren
@@ -54,7 +54,7 @@ export async function POST(req: NextRequest) {
   // Der Firmenname kommt aus UNSEREM Bestand, nicht aus der Anfrage — sonst könnte
   // jemand einen Namen mitschicken, der zufällig auf der fremden Seite steht, und sich
   // das Urteil „belegt" selbst besorgen.
-  const s = id ? (await loadSuppliers()).find((x) => x.id === id) : null;
+  const s = id ? await loadSupplier(id) : null;
   if (!s?.name) {
     return NextResponse.json({ urteil: "nicht_pruefbar", grund: "Firma nicht bekannt" });
   }

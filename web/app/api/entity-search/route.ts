@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { loadSuppliers, type Supplier } from "@/lib/suppliers";
+import { loadSuppliersBasis, loadSupplier, type SupplierBasis } from "@/lib/suppliers";
 import { bremse } from "@/lib/rateLimit";
 
 /* Firmen-Matching fürs Onboarding (Ticket #7 v2): getippter Name → Fuzzy-Abgleich gegen
@@ -23,9 +23,12 @@ export async function GET(req: NextRequest) {
   if (zuViel) return zuViel;
   const q = norm(req.nextUrl.searchParams.get("q") || "");
   if (q.length < 2) return NextResponse.json({ matches: [] });
-  const all = await loadSuppliers();
+  // ⚠ Gesucht wird ueber die BASIS (Name, Aliasse, wins) — 46 MB dafuer zu laden waere
+  // das Fuenfzehnfache dessen, was die Suche anfasst. Die schweren Felder holt erst die
+  // Anreicherung unten, und zwar fuer sechs Firmen statt fuer 37.901.
+  const all = await loadSuppliersBasis();
 
-  const scored: { s: Supplier; score: number }[] = [];
+  const scored: { s: SupplierBasis; score: number }[] = [];
   for (const s of all) {
     const hay = [s.name, ...s.aliases].map(norm);
     let score = 0;
@@ -41,11 +44,16 @@ export async function GET(req: NextRequest) {
   // Nach Trefferqualität, dann nach Zuschlägen (die stärkeren Firmen zuerst).
   scored.sort((a, b) => b.score - a.score || b.s.wins - a.s.wins);
   // Mitglieder bleiben draußen (lädt der Gruppen-Screen bei Bedarf) — Suche schlank halten.
-  const matches = scored.slice(0, 6).map(({ s, score }) => ({
-    id: s.id, name: s.name, wins: s.wins, buyers: s.buyers, seit: s.seit,
-    fields: s.fields, fields6: s.fields6 ?? [], regions: s.regions, regionTyp: s.regionTyp ?? null, volMedian: s.volMedian,
-    topBuyers: s.topBuyers ?? [], topShare: s.topShare ?? null,
-    strong: score >= 80,          // starker Vorschlag vs. „meinst du eine dieser?"
-  }));
+  const matches = (await Promise.all(scored.slice(0, 6).map(async ({ s, score }) => {
+    const v = await loadSupplier(s.id);
+    if (!v) return null;
+    return {
+      id: v.id, name: v.name, wins: v.wins, buyers: v.buyers, seit: v.seit,
+      fields: v.fields, fields6: v.fields6 ?? [], regions: v.regions,
+      regionTyp: v.regionTyp ?? null, volMedian: v.volMedian,
+      topBuyers: v.topBuyers ?? [], topShare: v.topShare ?? null,
+      strong: score >= 80,          // starker Vorschlag vs. „meinst du eine dieser?"
+    };
+  }))).filter(Boolean);
   return NextResponse.json({ matches });
 }

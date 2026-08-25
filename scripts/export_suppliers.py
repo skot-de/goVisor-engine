@@ -7,7 +7,7 @@ Gewinner und leiten das Profil aus dem Zuschlags-Verlauf ab (§4.2: „gemessen"
 Gruppiert über `entity_identity` (grp:*), damit die Varianten einer Firma (z. B. die
 24 CANCOM-Entities) zu EINEM Profil verschmelzen. Nur belegt aufgelöste Identitäten.
 """
-import duckdb, json, os, pathlib, requests
+import duckdb, hashlib, json, os, pathlib, requests
 
 OUT = pathlib.Path("web/data"); OUT.mkdir(parents=True, exist_ok=True)
 con = duckdb.connect(); con.execute("SET threads=4")
@@ -559,6 +559,55 @@ out = _zusammenlegen(out)
 
 (OUT / "suppliers.json").write_text(json.dumps(out, ensure_ascii=False, sort_keys=True))
 print(f"{len(out)} Lieferanten → {OUT}/suppliers.json")
+
+# ── AUFGETEILT: was die Suche braucht, und was nur eine einzelne Firma braucht ────────────
+#
+# Gemessen am 2026-08-25 an 37.901 Firmen: fuenf Felder tragen 91 % der Bytes —
+# `fields` 25 %, `members` 20 %, `topBuyers` 17 %, `fields6` 16 %, `mailHashes` 14 %.
+# KEINE Route braucht mehr als eines davon, und vier Routen brauchen ueberhaupt nur EINE
+# Firma (`.find(x => x.id === id)`). `entity-search` sucht ueber Name und Aliasse und
+# reichert danach nur die SECHS besten Treffer an.
+#
+# Deshalb zweierlei: eine schlanke Datei fuer die Suche und den Domain-Index, und eine
+# Datei je Firma fuer alles Uebrige.
+JE_FIRMA = OUT / "suppliers"
+JE_FIRMA.mkdir(parents=True, exist_ok=True)
+
+
+def suppliers_dateiname(schluessel: str) -> str:
+    """Firmen-ID → Dateiname. IDENTISCH zu `export_firma_profiles.dateiname` und
+    `web/lib/suppliers.ts::supplierDateiname`. Hash, weil die uebliche Saeuberung
+    `[^A-Za-z0-9_-]` → "" bei diesen Kennungen kollidiert (dort gemessen: drei Paare)."""
+    return hashlib.sha1(schluessel.encode("utf-8")).hexdigest()
+
+
+# Was die Suche und der Domain-Index brauchen — und sonst nichts. `wins` ist dabei, weil
+# die Trefferliste danach sortiert; `domain`/`domainBelege`, weil `domainEigentuemer` den
+# Rueckwaerts-Index ueber ALLE Firmen bildet.
+_BASIS = ("id", "name", "aliases", "wins", "domain", "domainBelege")
+
+_vorher = {q.name for q in JE_FIRMA.glob("*.json")}
+_neu = _gleich = 0
+for _s in out:
+    _name = suppliers_dateiname(str(_s.get("id")))
+    _ziel = JE_FIRMA / f"{_name}.json"
+    _text = json.dumps(_s, ensure_ascii=False, sort_keys=True)
+    if _ziel.exists() and _ziel.read_text(encoding="utf-8") == _text:
+        _gleich += 1
+    else:
+        _ziel.write_text(_text, encoding="utf-8")
+        _neu += 1
+    _vorher.discard(f"{_name}.json")
+for _tot in _vorher:
+    (JE_FIRMA / _tot).unlink(missing_ok=True)
+
+_basis = [{k: _s[k] for k in _BASIS if k in _s} for _s in out]
+(OUT / "suppliers-basis.json").write_text(
+    json.dumps(_basis, ensure_ascii=False, separators=(",", ":")))
+print(f"  je Firma: {_neu:,} geschrieben, {_gleich:,} unveraendert, {len(_vorher):,} entfernt "
+      f"→ web/data/suppliers/ · Basis "
+      f"{(OUT / 'suppliers-basis.json').stat().st_size / 1048576:.1f} MB "
+      f"statt {(OUT / 'suppliers.json').stat().st_size / 1048576:.0f} MB")
 cancom = next((s for s in out if "cancom" in s["name"].lower()), None)
 if cancom:
     print(f"\nBeispiel CANCOM: {cancom['name']} · {cancom['wins']} Zuschläge")

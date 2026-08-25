@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { createHash } from "node:crypto";
-import { domainEigentuemer, loadSuppliers } from "@/lib/suppliers";
+import { domainEigentuemer, loadSupplier } from "@/lib/suppliers";
 import { loadLanding } from "@/lib/outreach";
 import { rateLimit, clientIp } from "@/lib/rateLimit";
 
@@ -63,7 +63,7 @@ export async function POST(req: NextRequest) {
   const dom = email.split("@")[1] ?? "";
   const stamm = dom.split(".")[0] ?? "";
 
-  const s = (await loadSuppliers()).find((x) => x.id === id);
+  const s = await loadSupplier(id);
   const bekannt = s?.domain ?? null;
   const belege = s?.domainBelege ?? 0;
 

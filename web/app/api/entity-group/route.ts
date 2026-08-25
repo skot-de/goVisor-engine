@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { loadSuppliers } from "@/lib/suppliers";
+import { loadSupplier } from "@/lib/suppliers";
 import { bremse } from "@/lib/rateLimit";
 
 /* Gruppen-Mitglieder einer Identität (Ticket #7: Gruppe = Identität). Der Onboarding-
@@ -11,7 +11,6 @@ export async function GET(req: NextRequest) {
   if (zuViel) return zuViel;
   const id = req.nextUrl.searchParams.get("id") || "";
   if (!id) return NextResponse.json({ members: [] });
-  const all = await loadSuppliers();
-  const s = all.find((x) => x.id === id);
+  const s = await loadSupplier(id);
   return NextResponse.json({ members: s?.members || [], name: s?.name || null });
 }
