@@ -17,7 +17,6 @@ Liest data/docs/DE/doc_text.parquet (aus `index-docs`). Schreibt data/docs/study
 + druckt eine Tabelle. Aufruf: python3 scripts/doc_similarity.py
 """
 import csv
-import glob
 import random
 import re
 import statistics as st

@@ -44,7 +44,6 @@ import argparse
 import datetime as dt
 import json
 import re
-import sys
 from pathlib import Path
 
 from . import docfetch_queue as _queue
@@ -273,7 +272,7 @@ def lauf(limit: int | None, dry_run: bool, country: str = "DE",
             if not seite:
                 print(f"  [{i}/{len(rows)}] {lead_id}: keine ELVIS-Kennung in der URL", flush=True)
                 _manifest.append({"lead_id": lead_id, "status": "keine_kennung",
-                                  "note": f"keine ELVIS-Kennung in der URL"})
+                                  "note": "keine ELVIS-Kennung in der URL"})
                 continue
             try:
                 r = hole_liste(seite, pg)

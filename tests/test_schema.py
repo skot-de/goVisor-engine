@@ -533,7 +533,6 @@ def test_missing_description_is_flagged_but_kept():
 
 
 def test_category6_renewal_and_options_on_lot():
-    from govisor.schema import Flag
     xml = LEGACY_2014.replace(
         b"<SHORT_DESCR><P>Betrieb der Rechenzentren an drei Standorten.</P></SHORT_DESCR>",
         b"<SHORT_DESCR><P>Betrieb der Rechenzentren an drei Standorten.</P></SHORT_DESCR>"
@@ -585,8 +584,10 @@ def test_category9_requirements_captured_with_text():
 def test_flatten_leaves_captures_every_value():
     from govisor import flatten
     pairs = list(flatten.leaves(LEGACY_2014))
-    joined = {p: v for p, v in pairs}
     # Ein Wert aus jeder Ebene muss auffindbar sein — über seinen Pfad.
+    # (Geprüft wird über `pairs`; das Dict daraus wurde gebaut und nie gelesen. Es wäre
+    # ausserdem irreführend gewesen: ein Pfad kann mehrfach vorkommen, ein Dict behält
+    # nur den letzten Wert.)
     assert any("SHORT_DESCR" in p and "48 Monate" in v for p, v in pairs)
     assert any(p.endswith("@CODE") and v == "72000000" for p, v in pairs)
     assert any("Los 1 Betrieb" in v for p, v in pairs)

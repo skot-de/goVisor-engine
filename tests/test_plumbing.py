@@ -176,7 +176,6 @@ def test_lead_export_default_value_is_hidden():
 @pytest.mark.skipif(not _has("lead_export"), reason="lead_export nicht gebaut")
 def test_lead_export_slug_is_unique_and_wellformed():
     """slug = permanente Kurz-ID: eindeutig, non-null, Quellen-Prefix + base62."""
-    import re
     con = duckdb.connect()
     tot, uni, nn = con.execute(
         f"SELECT count(*), count(DISTINCT slug), count(slug) FROM read_parquet('{G}/lead_export.parquet')"
@@ -2625,7 +2624,7 @@ def test_outreach_texte_sind_nicht_zerschossen():
               and _re.search(r"[a-zäöüß]\. [a-zäöüß]", t) and not ok.search(t)]
     assert not kaputt, (
         "Fliesstext mit Kleinbuchstabe nach Satzpunkt — vermutlich ein Komma, das der "
-        f"Tausendertrenner erwischt hat:\n" + "\n".join(f"  {a}: {b[:90]}" for a, b in kaputt[:5]))
+        "Tausendertrenner erwischt hat:\n" + "\n".join(f"  {a}: {b[:90]}" for a, b in kaputt[:5]))
 
 
 def test_passung_versprechende_bausteine_brauchen_die_taetigkeitsachse():
@@ -3379,7 +3378,6 @@ def test_tagesbuch_faellt_nicht_lautlos_aus(monkeypatch, capsys):
     """Ein Buch, das nicht geschrieben werden kann, legt der nächste Aufruf neu an — mit
     dem dann niedrigeren Stand. Der Deckel misst danach nur noch den Rest des Tages und
     greift nie. Genau so ist er am 22.08. ausgefallen."""
-    from govisor import llm
 
     quelle = (pathlib.Path(__file__).resolve().parent.parent
               / "govisor" / "llm.py").read_text(encoding="utf-8")

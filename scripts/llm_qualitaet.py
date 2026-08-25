@@ -156,8 +156,8 @@ def zeitreihe(daten: dict, je: str = "woche") -> int:
             warnung.append(f"Verwerfung {quote:.0%} statt sonst {m_q:.0%}")
         if warnung:
             print(f"⚠ {modell} in {schl}: " + " · ".join(warnung))
-            print(f"  Ein Modell kann sich ändern, ohne dass es jemand ankündigt "
-                  f"(Quantisierung, Endpunkt). Prüfen: scripts/llm_bench.py --n 15")
+            print("  Ein Modell kann sich ändern, ohne dass es jemand ankündigt "
+                  "(Quantisierung, Endpunkt). Prüfen: scripts/llm_bench.py --n 15")
     if ohne_datum:
         print(f"\n{ohne_datum:,} Vorgänge ohne Datum (vor dem 2026-08-23) sind nicht "
               f"enthalten.".replace(",", "."))

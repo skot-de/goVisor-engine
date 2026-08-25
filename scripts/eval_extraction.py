@@ -21,7 +21,7 @@ import duckdb
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
-from govisor import doctypes, docparse  # noqa: E402
+from govisor import doctypes  # noqa: E402
 
 DOC = ROOT / "data" / "docs" / "DE" / "doc_text.parquet"
 ANALYSIS = ROOT / "web" / "data" / "doc-analysis.json"

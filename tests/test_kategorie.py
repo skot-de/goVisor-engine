@@ -1,7 +1,6 @@
 """Kategorie-Ableitung für Ausschreibungen ohne CPV — Wasserfall + Lernschleife."""
 from pathlib import Path
 
-import pytest
 
 from govisor import kategorie as K
 

@@ -49,7 +49,6 @@ import math
 import os
 from datetime import date
 from pathlib import Path
-from typing import Any, Iterable
 
 ROOT = Path(__file__).resolve().parent.parent
 WARTESCHLANGE = Path(os.environ.get("GOVISOR_PRUEFSTAND",

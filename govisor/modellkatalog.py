@@ -40,7 +40,7 @@ import json
 import os
 from datetime import date, datetime, timezone
 from pathlib import Path
-from typing import Any, Iterable
+from typing import Iterable
 
 import requests
 

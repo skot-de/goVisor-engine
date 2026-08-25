@@ -6,7 +6,7 @@ schreibt bestätigte Kanten. Key kommt aus $OPENROUTER_KEY_FILE (nie im Code/Rep
 Aufruf: LIMIT=20 python scripts/succession_llm.py   (Pilot)
         LIMIT=0  python scripts/succession_llm.py   (alle)
 """
-import os, re, json, time, duckdb
+import os, re, json, duckdb
 
 # Der Schluessel wird nicht mehr hier gelesen — `govisor.llm` holt ihn selbst.
 # Seit 2026-08-24 läuft dieses Skript über `govisor.llm.chat()` und damit unter allen

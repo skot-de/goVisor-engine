@@ -168,14 +168,14 @@ con.execute(f"""CREATE OR REPLACE TEMP TABLE felder AS
 # Top-CPV-6-Felder je Identität (gewerkscharf) — ohne Divisions-Sammelcodes (XX0000).
 # CPV-6 trennt die Gewerke, die CPV-4 zusammenwirft (Aufzug 453131 ≠ Elektro 453112). Speist
 # den Relevanz-Volltreffer; CPV-4 (fields) bleibt als Nachbarfeld.
-con.execute(f"""CREATE OR REPLACE TEMP TABLE felder6 AS
+con.execute("""CREATE OR REPLACE TEMP TABLE felder6 AS
   WITH c AS (SELECT identity_id, cpv6, count(*) n FROM w
              WHERE cpv6 IS NOT NULL AND length(cpv6) = 6 AND substr(cpv6, 3, 4) <> '0000'
                AND identity_id IN (SELECT identity_id FROM tops)
              GROUP BY 1,2),
   rk AS (SELECT *, row_number() OVER (PARTITION BY identity_id ORDER BY n DESC, cpv6) rn FROM c)
   SELECT r.identity_id,
-         list({{'cpv6': r.cpv6, 'wins': r.n}} ORDER BY r.n DESC, r.cpv6) AS fields6
+         list({'cpv6': r.cpv6, 'wins': r.n} ORDER BY r.n DESC, r.cpv6) AS fields6
   FROM rk r
   WHERE r.rn <= 12 GROUP BY 1""")   # ohne Label: nur der Code zählt fürs Matching (spart ~3 MB)
 

@@ -14,13 +14,9 @@ für die Ref, .secrets/supabase_db.txt fürs Passwort). Idempotent (Upsert je us
 
 Aufruf:  python3 scripts/gap_effects.py
 """
-import csv
-import io
-import json
 import os
 import re
 import subprocess
-import sys
 from pathlib import Path
 
 import duckdb

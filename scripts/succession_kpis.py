@@ -44,7 +44,7 @@ dis = con.execute("SELECT count(*) FROM ev WHERE displaced").fetchone()[0]
 print(f"Nachfolge-Ereignisse: {n_ev:,}")
 print(f"  mit beidseitig aufgelöstem Gewinner: {resolved:,}")
 print(f"\n>>> INCUMBENT-RETENTION: {100*ret/resolved:.1f}%  (Verdrängung {100*dis/resolved:.1f}%)")
-print(f"    (Artefakt-Rate war 7% Incumbent — jetzt an inhaltlich verifizierten Nachfolgen)")
+print("    (Artefakt-Rate war 7% Incumbent — jetzt an inhaltlich verifizierten Nachfolgen)")
 
 # succession_events materialisieren (Basis für alle 🔴-KPIs)
 copy_to("SELECT * FROM ev", "succession_events.parquet")

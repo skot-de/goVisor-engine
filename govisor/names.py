@@ -98,7 +98,9 @@ def resolve_representation(name: str) -> str:
     Behörde) — stabil + wiedererkennbar; tiefere „dieses vertreten durch"-Ebenen fallen weg."""
     if not _VERTRETEN.search(name):
         return name
-    head, _, tail = _VERTRETEN.split(name, maxsplit=1)[0], None, _VERTRETEN.split(name, maxsplit=1)
+    # (Hier stand eine Dreifachzuweisung, die denselben `split` zweimal ausfuehrte und
+    # zwei der drei Namen nie benutzte.)
+    tail = _VERTRETEN.split(name, maxsplit=1)
     prefix = tail[0]
     rest = tail[1] if len(tail) > 1 else ""
     if _SOVEREIGN.match(prefix):

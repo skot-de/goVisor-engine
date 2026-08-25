@@ -188,8 +188,8 @@ def waehle() -> int:
         boden = mk.bodenpreis(mid)
         if boden is None:
             if mid == AMTIEREND:
-                print(f"  ⚠ Endpunktpreis des Amtierenden nicht abfragbar (Netz?) — "
-                      f"es wird nicht gewechselt.", file=sys.stderr)
+                print("  ⚠ Endpunktpreis des Amtierenden nicht abfragbar (Netz?) — "
+                      "es wird nicht gewechselt.", file=sys.stderr)
                 hinterlege(AMTIEREND, "Endpunktpreise nicht abfragbar — unveraendert")
                 print(AMTIEREND)
                 return 0
@@ -257,7 +257,7 @@ def pruefen(schwelle: float) -> int:
     print(f"\n  Modellkatalog {heute} · {len(stand)} Modelle, davon {tauglich} tauglich "
           f"(Kontext ≥ {_z(mk.MIN_KONTEXT)}, strukturierte Ausgabe)")
     if alt is None:
-        print(f"  Erster Stand — ab morgen wird verglichen.\n")
+        print("  Erster Stand — ab morgen wird verglichen.\n")
     else:
         print(f"  Verglichen mit {vortag}: {len(befunde)} Befund(e)\n")
 

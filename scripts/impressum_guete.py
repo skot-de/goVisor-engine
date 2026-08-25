@@ -30,7 +30,6 @@ from __future__ import annotations
 import argparse
 import json
 import random
-import re
 import sys
 from collections import Counter
 from concurrent.futures import ThreadPoolExecutor

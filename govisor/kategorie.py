@@ -129,7 +129,6 @@ def lade_korrekturen(country: str) -> list[dict]:
 
 
 def _divisionen(country: str) -> dict[str, tuple[str, str]]:
-    import duckdb
     p = ROOT / "data" / "gold" / country / "dim_cpv.parquet"
     if not p.exists():                       # dim_cpv ist DE-gepflegt, andere Laender erben sie
         p = ROOT / "data" / "gold" / "DE" / "dim_cpv.parquet"
@@ -140,7 +139,6 @@ def _divisionen(country: str) -> dict[str, tuple[str, str]]:
 
 def offene_ohne_kategorie(country: str) -> list[tuple[str, str]]:
     """(notice_id, titel) aller laufenden Ausschreibungen ohne CPV."""
-    import duckdb
     g = glob.glob(f"{ROOT}/data/silver/{country}/notices/**/*.parquet", recursive=True)
     if not g:
         return []
@@ -157,7 +155,6 @@ def aus_zwilling(country: str) -> dict[str, str]:
     Nur die staerkste Belegstufe. Ein Zwilling auf `nur_titel_kurz` waere bei generischen
     Titeln („Installation von elektrischen Leitungen") reines Rauschen.
     """
-    import duckdb
     dup = ROOT / "data" / "gold" / country / "notice_duplicates.parquet"
     g = glob.glob(f"{ROOT}/data/silver/{country}/notices/**/*.parquet", recursive=True)
     if not dup.exists() or not g:
@@ -187,7 +184,6 @@ def aus_regelwerk(country: str) -> dict[str, str]:
     Dieselbe Ableitung benutzen die DTVP- und NetServer-Connectoren bereits fuer `cpv_main`;
     hier greift sie fuer die Saetze, bei denen der Connector sie nicht ziehen konnte.
     """
-    import duckdb
     a = glob.glob(f"{ROOT}/data/silver/{country}/attributes/**/*.parquet", recursive=True)
     g = glob.glob(f"{ROOT}/data/silver/{country}/notices/**/*.parquet", recursive=True)
     if not a or not g:

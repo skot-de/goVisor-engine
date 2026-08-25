@@ -105,7 +105,7 @@ import datetime as dt
 import glob
 import re
 import sys
-from collections import defaultdict
+from collections import Counter, defaultdict
 
 from . import entities as _entities
 from . import db as _db
@@ -185,7 +185,6 @@ def _enthaltung(a: frozenset, b: frozenset) -> float:
 
 def _laden(country: str, ab_jahr: int, alle_arten: bool = False,
            fenster_tage: int = 0):
-    import duckdb
 
     g = glob.glob(f"{ROOT}/data/silver/{country}/notices/**/*.parquet", recursive=True)
     p = glob.glob(f"{ROOT}/data/silver/{country}/notice_parties/**/*.parquet", recursive=True)
@@ -378,7 +377,6 @@ def _paare_finden(saetze: list[dict], haeufigkeit: dict | None = None) -> list[d
     diese vom Scheiben-Zuschnitt unabhaengig bleibt. Ohne sie (Einzellauf) wird sie aus
     der uebergebenen Menge bestimmt.
     """
-    from collections import defaultdict
     # Invertierter Index: Wort → Sätze. Der Kandidatenraum wird über die SELTENSTEN Wörter
     # aufgespannt, sonst vergleicht man jeden „Neubau" mit jedem.
     inv: dict[str, list[int]] = defaultdict(list)
@@ -545,7 +543,6 @@ def anreichern(country: str = "DE") -> dict:
 
     **Es wird nichts ueberschrieben.** Nur Felder, die beim Master NULL sind.
     """
-    import duckdb
     import pyarrow as pa
     import pyarrow.parquet as pq
 
@@ -559,7 +556,9 @@ def anreichern(country: str = "DE") -> dict:
               "estimated_value", "description")
     zeilen = []
     for feld in FELDER:
-        typ = "VARCHAR" if feld not in ("submission_deadline", "estimated_value") else None
+        # Alles als Text: die Zeile traegt `wert` als String, unabhaengig vom Quelltyp.
+        # (Hier stand ein `typ`-Ternaer, der nie benutzt wurde und den Eindruck erweckte,
+        # es gaebe zwei Umwandlungen. Es gibt nur diese eine.)
         wert_sql = f"CAST(x.{feld} AS VARCHAR)"
         zeilen += [dict(notice_id=r[0], feld=feld, wert=r[1], quelle_notice_id=r[2],
                         quelle_gen=r[3])
@@ -670,10 +669,8 @@ def main(argv=None) -> int:
         print("  Keine Dubletten gefunden.")
         return 0
     ziel = schreibe(paare, a.country, vereinigen=bool(a.fenster_tage))
-    from collections import Counter
     kombis = Counter(f"{p['master_quelle']} ← {p['duplicate_quelle']}" for p in paare)
-    from collections import Counter as _C
-    stufen = _C(p["beleg"] for p in paare)
+    stufen = Counter(p["beleg"] for p in paare)
     sicher = sum(1 for p in paare if p["gleicher_kaeufer"])
     mit_plus = sum(1 for p in paare if p["ergaenzt"])
     print(f"\n  {len(paare):,} Dubletten-Paare, davon {sicher:,} mit identischem Käufer")

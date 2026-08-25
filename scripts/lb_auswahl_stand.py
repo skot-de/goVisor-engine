@@ -18,7 +18,6 @@ gepaarte Vorzeichentests aber ohne Signifikanz (p ≈ 0,41 bzw. 1,00).
 from __future__ import annotations
 
 import json
-import math
 import statistics as st
 from collections import defaultdict
 from pathlib import Path

@@ -169,7 +169,7 @@ def build_silver(cfg: Config, country: str = "AT", force: bool = False) -> int:
     """
 
     # --- notice_parties: Auftraggeber (+ Lieferant als winner bei Zuschlägen) ---
-    parties_sql = f"""
+    parties_sql = """
       SELECT 'atv-' || id AS "notice_id", 'buyer' AS "role", 0 AS "seq", auftraggeber AS "name",
              "auftraggeber stammzahl" AS "national_id", CAST(NULL AS VARCHAR) AS "town",
              CAST(NULL AS VARCHAR) AS "postal_code", 'AT' AS "country", nuts_code AS "nuts",
@@ -183,13 +183,13 @@ def build_silver(cfg: Config, country: str = "AT", force: bool = False) -> int:
     """
 
     # --- notice_cpv (Haupt-CPV; "cpv zusätzlich" ist frei-getrennt → Haupt genügt für den Scaffold) ---
-    cpv_sql = f"""
-      SELECT 'atv-' || id notice_id, regexp_extract(cpv, '([0-9]{{8}})', 1) cpv_code, true is_main
-      FROM src WHERE id IS NOT NULL AND regexp_extract(cpv, '([0-9]{{8}})', 1) <> ''
+    cpv_sql = """
+      SELECT 'atv-' || id notice_id, regexp_extract(cpv, '([0-9]{8})', 1) cpv_code, true is_main
+      FROM src WHERE id IS NOT NULL AND regexp_extract(cpv, '([0-9]{8})', 1) <> ''
     """
 
     # --- awards (Bieterzahl!) ---
-    awards_sql = f"""
+    awards_sql = """
       SELECT 'atv-' || id notice_id, CAST(NULL AS VARCHAR) lot_id, lieferant winner_name,
              "lieferant stammzahl" winner_national_id,
              TRY_CAST("anzahl eingegangener angebote" AS BIGINT) num_tenders,
@@ -200,7 +200,7 @@ def build_silver(cfg: Config, country: str = "AT", force: bool = False) -> int:
     """
 
     # --- attributes: Schwelle (OSB/USB) fürs spätere Overlap-Handling + Verfahrensart-Rohwert ---
-    attrs_sql = f"""
+    attrs_sql = """
       SELECT 'atv-' || id AS "notice_id", 'atverg/schwelle' AS "path",
              "oberschwellenbereich / unterschwellenbereich" AS "value"
       FROM src WHERE id IS NOT NULL AND "oberschwellenbereich / unterschwellenbereich" IS NOT NULL

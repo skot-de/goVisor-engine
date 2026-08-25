@@ -26,7 +26,7 @@ Nichts hier lädt Daten — es ist reine Deklaration. Der Ingest passiert über 
 """
 from __future__ import annotations
 
-from dataclasses import dataclass, field, replace as _replace
+from dataclasses import dataclass, replace as _replace
 
 # --- Connector = technische Basis (was gepflegt werden muss) ---------------------------------
 CONNECTORS = {

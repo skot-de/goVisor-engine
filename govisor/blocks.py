@@ -12,7 +12,6 @@ import re
 from collections import Counter
 
 from . import pii
-from .doctax import THEMES
 
 # Thema (§9.4) → Erkennungsmuster im Passagentext. Reihenfolge = Vorrang bei Mehrfachtreffer.
 _THEME_KW: tuple[tuple[str, str], ...] = (

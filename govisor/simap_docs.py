@@ -352,8 +352,6 @@ def hole_vergabe(pid: str, pg, token: str, ziel: Path, dry_run: bool = False,
 def lauf(limit: int | None = None, dry_run: bool = False, country: str = "CH",
          interesse: bool = False) -> dict:
     import duckdb
-    import pyarrow as pa
-    import pyarrow.parquet as pq
     from playwright.sync_api import sync_playwright
 
     # ZUERST die Zugangsdaten — vor Browser, vor Abfrage, vor jeder Ausgabe.

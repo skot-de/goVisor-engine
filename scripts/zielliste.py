@@ -14,7 +14,6 @@ Aufruf:
 Diese Fassung: Stufe 1 (harte Filter §2) + Grundgesamtheit messen. Signale folgen gestaffelt.
 """
 import argparse
-import sys
 from pathlib import Path
 
 import duckdb
@@ -296,7 +295,7 @@ def compute_signals(con, now):
       FROM pop p LEFT JOIN cpvb USING (identity_id) LEFT JOIN nutsb USING (identity_id)""")
 
     # ── Zusammenführen + perzentil-normalisieren INNERHALB der Population (§4) ──
-    con.execute(f"""CREATE OR REPLACE TEMP TABLE scored AS
+    con.execute("""CREATE OR REPLACE TEMP TABLE scored AS
       WITH j AS (
         SELECT p.*, coalesce(s1.s1_raw,0) AS s1_raw, coalesce(s1.verlorene_12m,0) AS verlorene_12m,
                coalesce(s1.verlust_vol,0) AS verlust_vol, s1.letzter_verlust,

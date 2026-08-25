@@ -16,7 +16,6 @@ Aufruf:  python scripts/fetch_destatis_kontext.py [--year 2023]
 import argparse
 import os
 import sys
-import time
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent

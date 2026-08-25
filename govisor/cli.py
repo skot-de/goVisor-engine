@@ -7,7 +7,7 @@ import collections
 import sys
 from datetime import date
 
-from . import bulk, gold, locales, review, silver, simap, verify
+from . import bulk, locales, review, silver, simap, verify
 from .config import Config
 from .ingest import ingest_month, is_done
 

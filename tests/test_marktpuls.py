@@ -985,7 +985,6 @@ def test_simap_bricht_ohne_zugangsdaten_ab_statt_anonym_zu_laufen():
     Portalproblem. Deshalb KEIN anonymer Rückfallpfad: fehlen die Zugangsdaten, bricht der
     Lauf mit einer Anleitung ab.
     """
-    import subprocess, sys
     S = (ROOT / "govisor" / "simap_docs.py").read_text(encoding="utf-8")
     assert "SystemExit" in S and "Zugangsdaten fehlen" in S
     # Das Passwort darf nirgends ausgegeben werden — auch nicht im Fehlerfall.

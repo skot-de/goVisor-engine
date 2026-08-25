@@ -903,7 +903,6 @@ def _dringlichkeit(cfg: Config, country: str) -> dict[str, int]:
     landet ein Vorgang hinten — nicht weil er wertlos waere, sondern weil niemand mehr auf
     ihn bietet.
     """
-    import duckdb
     p = cfg.gold_dir / country / "lead_deadline.parquet"
     if not p.exists():
         return {}
@@ -963,7 +962,6 @@ def build_index(cfg: Config, country: str = "DE", neu_aufbauen: bool = False,
         #
         # Der Bestand wird unten STROMWEISE uebernommen, Zeilengruppe fuer Zeilengruppe —
         # er muss nie ganz im Speicher liegen.
-        import duckdb
         bekannt = {(r[0], r[1]) for r in _db.connect().execute(
             f"SELECT DISTINCT notice_id, archive FROM read_parquet('{out.as_posix()}')"
         ).fetchall()}

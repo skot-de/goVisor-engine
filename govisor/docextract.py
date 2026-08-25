@@ -218,8 +218,6 @@ def extract(doctype: str, text: str, source_file: str, chat_fn=None,
         return {"items": [], "rejected": 0, "skipped": True}
     if chat_fn is None:
         from .llm import chat as chat_fn                      # lazy: Tests injizieren einen Fake
-    task = _TASKS[doctype]
-    allowed = set(task["req_types"])
     messages = build_messages(doctype, text, source_file)
 
     parsed = None

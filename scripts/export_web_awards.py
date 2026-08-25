@@ -212,7 +212,7 @@ con.execute(f"""CREATE TEMP TABLE abuyer AS
   FROM aw a JOIN {PE} p ON p.notice_id=a.notice_id AND p.role='buyer'
   JOIN {EN} e ON e.entity_id=p.entity_id GROUP BY 1""")
 
-rows = con.execute(f"""
+rows = con.execute("""
   SELECT a.*, w.wins_total, w.wins36, w.avg_val, w.sub_wins,
          wn.name AS winner_name, wn.belegt AS winner_belegt,
          wf.fields AS winner_fields, ss.share AS self_share, ab.buyer

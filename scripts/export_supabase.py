@@ -79,7 +79,7 @@ def build_ddl(table: str, parquet: str, pk=("lead_id",)) -> str:
         # NOT NULL auf den PK-Spalten: sonst kippt das Upsert erst zur Laufzeit.
         extra = " not null" if name in pk else (" unique" if name == "slug" else "")
         lines.append(f"  {name:<24} {pg}{extra},")
-    lines.append(f"  updated_at               timestamptz default now(),")
+    lines.append("  updated_at               timestamptz default now(),")
     lines.append(f"  primary key ({', '.join(pk)})")
     ddl = [f"-- {table}: generiert aus {parquet} (nicht von Hand pflegen).",
            f"create table if not exists {table} (", "\n".join(lines), ");"]
@@ -87,7 +87,7 @@ def build_ddl(table: str, parquet: str, pk=("lead_id",)) -> str:
     # neue Spalten kaemen nie an (und der Upsert scheitert dann mit PGRST204). Deshalb
     # zusaetzlich je Spalte ein idempotentes ADD COLUMN. Damit ist dieselbe Datei sowohl
     # Erst-Anlage als auch Migration; mehrfaches Ausfuehren ist gefahrlos.
-    ddl.append(f"-- Migration bestehender Tabellen (idempotent, neue Spalten nachziehen):")
+    ddl.append("-- Migration bestehender Tabellen (idempotent, neue Spalten nachziehen):")
     for name, dtype, *_ in cols:
         pg = _PG_TYPE.get(str(dtype).split("(")[0], "text")
         ddl.append(f"alter table {table} add column if not exists {name} {pg};")
@@ -99,7 +99,7 @@ def build_ddl(table: str, parquet: str, pk=("lead_id",)) -> str:
     # stiller Datenumbau und gehoert von Hand entschieden).
     ddl += [
         "do $$ begin",
-        f"  if not exists (select 1 from pg_constraint",
+        "  if not exists (select 1 from pg_constraint",
         f"                  where conrelid = '{table}'::regclass and contype = 'p') then",
         f"    alter table {table} add primary key ({', '.join(pk)});",
         "  end if;",

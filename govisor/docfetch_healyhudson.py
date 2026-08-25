@@ -226,8 +226,6 @@ def _schreibe_zip(ziel: Path, dateien: list[tuple[str, bytes]]) -> int:
 
 def lauf(limit: int | None = None, dry_run: bool = False, country: str = "DE") -> dict:
     import duckdb
-    import pyarrow as pa
-    import pyarrow.parquet as pq
     from playwright.sync_api import sync_playwright
 
     L = ROOT / "data" / "gold" / country / "lead_export.parquet"

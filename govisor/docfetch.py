@@ -169,8 +169,6 @@ def fetch_batch(cfg: Config, country: str = "DE", limit: int | None = None,
     ZIP mit ``delay`` s Pause. Schreibt Manifest. Gibt eine Status-Zusammenfassung zurück.
     """
     import duckdb
-    import pyarrow as pa
-    import pyarrow.parquet as pq
 
     G = cfg.gold_dir / country
     out_root = cfg.data_dir / "docs" / country

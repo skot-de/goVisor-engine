@@ -243,7 +243,7 @@ def main() -> int:
     if rot:
         print(f"\n  ⛔ {len(rot)} Befund(e) verlangen Hinsehen, bevor es weitergeht.\n")
     else:
-        print(f"\n  ✓ Alles im Rahmen — die nächste Etappe kann laufen.\n")
+        print("\n  ✓ Alles im Rahmen — die nächste Etappe kann laufen.\n")
 
     if not a.nur_lesen:
         jetzt["befunde_rot"] = rot

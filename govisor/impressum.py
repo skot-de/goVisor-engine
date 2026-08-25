@@ -282,7 +282,6 @@ def pruefe(domain: str, firma: str, ort: str | None = None,
         return Befund(NICHT_PRUEFBAR, domain, firma,
                       grund="Firmenname trägt nur Rechtsform, nichts Unterscheidendes")
 
-    kern_wort = traeger(k)
     # Zwei Lesarten des Namens: gefaltet („barmann") und in Umschrift („baermann").
     lesarten = [k, {w for w in stamm(umschrift(firma)).split()
                     if len(w) >= 3 and not _RECHTSFORM.fullmatch(w)}]

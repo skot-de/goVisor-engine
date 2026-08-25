@@ -18,7 +18,6 @@ genau das tun, was er prüfen soll.
 import pathlib
 import re
 
-import pytest
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 

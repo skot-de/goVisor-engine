@@ -106,6 +106,12 @@ def main(argv=None) -> int:
             print(f"  ⛔ {e}", flush=True)
             break
         except Exception as e:                                # noqa: BLE001
+            # ⚠ Der Zaehler allein hilft niemandem: „37 Fehler" laesst offen, ob ein Modell
+            # haengt oder eine Datei kaputt ist. Der ERSTE Grund wird darum genannt, die
+            # uebrigen nur gezaehlt — laut genug zum Auffallen, leise genug fuers Protokoll.
+            if not fehler:
+                print(f"  ⚠ erster Fehler ({f}): {type(e).__name__}: {str(e)[:120]}",
+                      flush=True)
             fehler += 1
             continue
         items = r.get("items", [])

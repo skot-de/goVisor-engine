@@ -128,7 +128,6 @@ def build_procedures(cfg: Config, country: str = "DE"):
     2023). Letztere existiert in den Daten nicht und muss erschlossen werden —
     siehe docs/concept-v3.md, Abschnitt 8.
     """
-    import duckdb
 
     con = _db.connect()
     src = _notices_glob(cfg, country)
@@ -182,7 +181,6 @@ def seed_groups(cfg: Config, country: str = "DE", reseed: bool = False) -> tuple
     auf ``manual`` setzen.
     """
     import csv
-    import duckdb
     from . import entities as ent
 
     path = cfg.group_csv(country)
@@ -296,7 +294,6 @@ def build_entity_groups(cfg: Config, country: str = "DE") -> tuple[int, int]:
     (Gruppe → Einheiten) und Roll-up (Einheit → Gruppe) laufen über ``group_id``.
     """
     import csv
-    import duckdb
 
     # KEIN früher Rücksprung ohne Datei. Die Gruppen-CSV wird von Hand gepflegt und existiert
     # nur für DE; für AT/CH gibt es keine — ein zulässiger Zustand, kein Fehler. Der Bauer
@@ -338,7 +335,6 @@ def build_dim_cpv(cfg: Config, country: str = "DE"):
     Zeile in govisor/cpv.py ändern und diese Tabelle neu schreiben — kein
     Silber-Rebuild.
     """
-    import duckdb
     from . import cpv
 
     rows = [(div, label, sector, branche, cpv.DIM_CPV_VERSION)
@@ -377,7 +373,6 @@ def build_dim_deflator(cfg: Config, country: str = "DE"):
     Eurozonen-Näherung vertretbar; **für die Schweiz nicht** — eigene Währung, eigener
     Inflationspfad. Wer CH-Werte real vergleicht, muss vorher echte BFS-Daten einspielen.
     """
-    import duckdb
     eigen = locales.get(country)
     cpi = getattr(eigen, "cpi", None) or {}
     quelle = country
@@ -406,7 +401,6 @@ def build_quality(cfg: Config, country: str = "DE"):
     Platzhalter unter 100 € — echte öffentliche Aufträge beginnen ~1.000 €.
     Ohne Bereinigung ist der Median-Deal um 45% zu niedrig.
     """
-    import duckdb
     con = _db.connect()
     N = cfg.silver_table_glob("notices", country)
     L = cfg.silver_table_glob("lots", country)
@@ -553,7 +547,6 @@ def build_review_queue(cfg: Config, country: str = "DE"):
     Fall geprüft/korrigiert hat, kann ihn in einer kuratierten Spalte abhaken
     (später) — die Queue ist die Grundlage, kein Löschknopf.
     """
-    import duckdb
     con = _db.connect()
     N = cfg.silver_table_glob("notices", country)
     L = cfg.silver_table_glob("lots", country)
@@ -595,7 +588,6 @@ def build_contract_chains(cfg: Config, country: str = "DE"):
     'in den letzten N Ausschreibungen', und die Konfidenz läuft mit, damit eine
     schwache Vermutung nie als sichere Kette ausgegeben wird.
     """
-    import duckdb
     con = _db.connect()
     N = cfg.silver_table_glob("notices", country)
     PE = str(cfg.gold_dir / country / "party_entity.parquet")
@@ -618,7 +610,7 @@ def build_contract_chains(cfg: Config, country: str = "DE"):
           AND n.end_date IS NOT NULL AND pe.entity_id IS NOT NULL
     """)
     # Nächster Nachfolger je Vorgänger: der zeitlich am dichtesten am Enddatum.
-    con.execute(f"""
+    con.execute("""
         CREATE TABLE chains AS
         WITH pairs AS (
           SELECT c1.notice_id AS predecessor, c2.notice_id AS successor,
@@ -705,7 +697,6 @@ def build_contract_successions(cfg: Config, country: str = "DE", min_sim: float 
     Blockung nach (Käufer, 4-stellig CPV) hält das paarweise Matching bezahlbar;
     Blöcke über ``max_block`` Verträgen werden übersprungen (gezählt zurückgegeben).
     """
-    import duckdb
     from . import entities as ent
 
     con = _db.connect()
@@ -793,7 +784,6 @@ def build_leads(cfg: Config, country: str = "DE", reference_date: str | None = N
     Verträge, die an oder nach ihm auslaufen. Als Parameter, nicht ``now()`` im
     Buildcode — reproduzierbar.
     """
-    import duckdb
     from datetime import date
 
     ref = reference_date or date.today().isoformat()
@@ -836,7 +826,7 @@ def build_leads(cfg: Config, country: str = "DE", reference_date: str | None = N
     out = g / "leads.parquet"
     out.parent.mkdir(parents=True, exist_ok=True)
     # Vertragsende: eigenes end_date, sonst award_date + größte Los-Laufzeit.
-    END = f"COALESCE(n.end_date, n.award_date + (CAST(dur.dm AS VARCHAR) || ' months')::INTERVAL)"
+    END = "COALESCE(n.end_date, n.award_date + (CAST(dur.dm AS VARCHAR) || ' months')::INTERVAL)"
     # Wert: Endwert (hart), sonst der Schätzwert der Ausschreibung als Fallback —
     # nur EUR/plausibel, klar als 'geschaetzt' markiert. Strukturschätzung wäre
     # falsche Präzision (gemessen ~70% Fehler), estimated_value dagegen ~12% Fehler.
@@ -934,7 +924,6 @@ def build_displaceability(cfg: Config, country: str = "DE", min_support: int = 2
     Backoff: (Art×Branche×Bieter) → (Art×Branche) → (Art) → global. Schreibt
     ``dim_displaceability`` (kuratierbar) + Score-Spalten auf ``leads``.
     """
-    import duckdb
     con = _db.connect()
     N = cfg.silver_table_glob("notices", country)
     A = cfg.silver_table_glob("awards", country)
@@ -1000,7 +989,7 @@ def build_displaceability(cfg: Config, country: str = "DE", min_support: int = 2
         LEFT JOIN mkb  kb  ON kb.contract_kind=l.contract_kind AND kb.branche=l.branche_j
         LEFT JOIN mk   mk  ON mk.contract_kind=l.contract_kind
     """)
-    con.execute(f"""
+    con.execute("""
         CREATE TABLE leads2 AS
         SELECT * EXCLUDE (displaceability),
           round(displaceability,3) AS displaceability,
@@ -1155,7 +1144,6 @@ def build_hr_index(path: str | None = None, fuzzy: bool = False) -> dict:
     # laden (mtime-invalidiert). Nur ohne fuzzy, weil der Fuzzy-Zweig ``by_plz`` braucht.
     cache = os.path.join("data", "cache", "hr_index.parquet")
     if not fuzzy and os.path.exists(cache) and os.path.getmtime(cache) >= os.path.getmtime(path):
-        import duckdb
         lk = _HRLookup()
         for norm, nr, name, plz in _db.connect().execute(
                 f"SELECT norm, nr, name, plz FROM read_parquet('{cache}')").fetchall():
@@ -1191,7 +1179,7 @@ def build_hr_index(path: str | None = None, fuzzy: bool = False) -> dict:
 
     lk = _HRLookup(); lk.update(index); lk._by_plz = by_plz
     if not fuzzy:      # Cache für den nächsten Lauf schreiben (nur der reine Index)
-        import duckdb, pandas as pd
+        import pandas as pd
         os.makedirs(os.path.dirname(cache), exist_ok=True)
         df = pd.DataFrame(((k, v["nr"], v["name"], v["plz"]) for k, v in index.items()),
                           columns=["norm", "nr", "name", "plz"])
@@ -1212,8 +1200,6 @@ def build_entities(cfg: Config, country: str = "DE", hr_index: dict | None = Non
       * ``party_entity`` — (notice_id, role, seq) → entity_id, damit notice_parties
                             joinbar wird
     """
-    import duckdb
-    from . import entities as ent
 
     con = _db.connect()
     parties = con.execute(f"""
@@ -1590,7 +1576,6 @@ _TYP_KLASSE = {  # Typ → grobe Klasse (Stadt vs. Kreis-Ebene bleiben getrennt)
 
 def _load_plz_kreis(cfg: Config) -> dict:
     """geonames DE (PLZ → Kreis + Bundesland) für die Gemeinde-Disambiguierung."""
-    import duckdb
     f = (cfg.data_dir / "reference" / "geonames" / "DE.txt")
     if not f.exists():
         return {}
@@ -1807,7 +1792,6 @@ def build_market_intelligence(cfg: Config, country: str = "DE", as_of_year: int 
     Schreibt: ``buyer_stats``, ``contractor_stats``, ``market_stats``,
     ``buyer_contractor_history`` (je Parquet). Gibt Zeilenzahlen zurück.
     """
-    import duckdb
     from datetime import date
 
     as_of = as_of_year or date.today().year
@@ -1906,7 +1890,7 @@ def build_market_intelligence(cfg: Config, country: str = "DE", as_of_year: int 
              count(l.duration_months) n_dur, count(*) n_tot
       FROM aw a LEFT JOIN read_parquet({LOTS}) l ON l.notice_id=a.notice_id
       GROUP BY a.cpv_class, a.nuts1""")
-    n_market = copy_to(f"""
+    n_market = copy_to("""
       SELECT a.cpv_class, a.nuts1, count(DISTINCT a.winner) AS active_contractors,
              count(DISTINCT a.notice_id) AS total_awards,
              round(d.avg_dur) AS avg_contract_duration_months,
@@ -1920,7 +1904,7 @@ def build_market_intelligence(cfg: Config, country: str = "DE", as_of_year: int 
              max(CASE WHEN l.has_renewal THEN 1 ELSE 0 END) AS renewed
       FROM aw a LEFT JOIN read_parquet({LOTS}) l ON l.notice_id=a.notice_id
       WHERE a.winner IS NOT NULL GROUP BY a.buyer, a.winner, a.notice_id""")
-    n_bch = copy_to(f"""
+    n_bch = copy_to("""
       SELECT a.buyer AS buyer_entity_id, a.winner AS contractor_entity_id,
              any_value(a.winner_name) AS contractor_name,
              count(DISTINCT a.notice_id) AS total_wins, max(a.yr) AS last_win_year,
@@ -1962,7 +1946,6 @@ def build_content_successions(cfg: Config, country: str = "DE",
     Schreibt ``contract_succession`` (konfidente Kanten, als Fakt) + ``…_llm_queue``.
     Gibt ``(n_edges, n_llm, n_none)`` zurück.
     """
-    import duckdb
     from collections import defaultdict
 
     g = cfg.gold_dir / country
@@ -2057,7 +2040,6 @@ def build_succession_kpis(cfg: Config, country: str = "DE"):
     Schreibt ``succession_events`` (+ ``head_to_head``, ``market_switch_rate``,
     ``buyer_loyalty``, ``contractor_loss``). Gibt Zeilenzahlen + Retention zurück.
     """
-    import duckdb
 
     g = cfg.gold_dir / country
     S = f"'{(g / 'contract_succession.parquet').as_posix()}'"
@@ -2090,7 +2072,6 @@ def build_succession_kpis(cfg: Config, country: str = "DE"):
     FROM read_parquet({S}) s
     JOIN wg pw ON pw.notice_id=s.predecessor JOIN wg sw ON sw.notice_id=s.successor
     """)
-    n_ev = con.execute("SELECT count(*) FROM ev").fetchone()[0]
     rr = con.execute("SELECT count(*) FILTER (WHERE retained), count(*) FROM ev WHERE NOT consortium").fetchone()
     retention = round(rr[0] / rr[1], 3) if rr[1] else None
 
@@ -2141,7 +2122,6 @@ def merge_llm_successions(cfg: Config, country: str = "DE", llm_confidence: floa
     Konfidenz). Idempotent: ein Gold-Rebuild schreibt erst die Content-Kanten, dann mischt
     dieser Schritt die (persistente) LLM-Datei wieder ein. Gibt die Gesamt-Kantenzahl zurück.
     """
-    import duckdb
 
     g = cfg.gold_dir / country
     llm = g / "succession_llm_edges.parquet"
@@ -2183,7 +2163,6 @@ def build_incumbent_tenure(cfg: Config, country: str = "DE"):
     und misst seit wann + über wie viele Zyklen. Basis für „Incumbent seit 20XX" (#3/#4 D4).
     Schreibt ``incumbent_tenure`` (notice_id, incumbent_since_year, tenure_years, chain_depth).
     """
-    import duckdb
 
     g = cfg.gold_dir / country
     con = _db.connect(); con.execute("SET threads=3")
@@ -2219,7 +2198,6 @@ def build_award_tender_link(cfg: Config, country: str = "DE"):
     tragen einen Verweis, davon ~99,9 % in der DB auflösbar. Schreibt ``award_tender_link``
     (award_notice_id, tender_notice_id, tender_publication_number, gap_days, method).
     """
-    import duckdb
 
     g = cfg.gold_dir / country
     N = f"'{cfg.silver_table_glob('notices', country)}'"
@@ -2264,7 +2242,6 @@ def build_value_anchor(cfg: Config, country: str = "DE"):
     Schreibt ``value_anchor`` (notice_id, anchor_value, anchor_band, anchor_source,
     has_real_value).
     """
-    import duckdb
 
     g = cfg.gold_dir / country
     N = f"'{cfg.silver_table_glob('notices', country)}'"
@@ -2372,7 +2349,6 @@ def build_lead_deadline(cfg: Config, country: str = "DE"):
     Median ~31 T, stddev 12 T). Waterfall: echt → CPV-Median-Fenster → globaler Median.
     Schreibt ``lead_deadline`` (notice_id, deadline_date, deadline_source, days_from_pub).
     """
-    import duckdb
 
     g = cfg.gold_dir / country
     N = f"'{cfg.silver_table_glob('notices', country)}'"
@@ -2461,7 +2437,6 @@ def build_duration_calibration(cfg: Config, country: str = "DE"):
     Ausreißer-Schutz: Paare mit über 4 Jahren Abstand sind keine Nachfolge-Beziehung mehr,
     sondern Zufall — sie fliegen raus, sonst zieht ein einzelner Fall den Median.
     """
-    import duckdb
 
     G = cfg.gold_dir / country
     N = cfg.silver_table_glob("notices", country)
@@ -2531,7 +2506,6 @@ def build_lead_duration(cfg: Config, country: str = "DE"):
     Schreibt ``lead_duration`` (notice_id, contract_end, contract_end_kal, kal_versatz_tage,
     kal_spanne_tage, duration_days, duration_source).
     """
-    import duckdb
 
     g = cfg.gold_dir / country
     N = f"'{cfg.silver_table_glob('notices', country)}'"
@@ -2616,7 +2590,6 @@ def build_entity_identity(cfg: Config, country: str = "DE"):
     dieselbe `identity_id`. Schreibt ``entity_identity`` (entity_id, identity_id,
     in_group, group_size, canonical_name).
     """
-    import duckdb
 
     g = cfg.gold_dir / country
     def q(name): return f"'{(g / name).as_posix()}'"
@@ -2649,7 +2622,6 @@ def build_lead_detail(cfg: Config, country: str = "DE"):
     Leitregel: was geschätzt ist, trägt seine Quelle — nie als Fakt getarnt.
     Schreibt ``lead_detail``.
     """
-    import duckdb
 
     g = cfg.gold_dir / country
     def q(name): return f"'{(g / name).as_posix()}'"
@@ -2820,7 +2792,6 @@ def build_prospective_leads(cfg: Config, country: str = "DE", reference_date: st
 
     Gibt die Zahl der angehängten prospektiven Leads zurück.
     """
-    import duckdb
     from datetime import date
 
     ref = reference_date or date.today().isoformat()
@@ -2976,7 +2947,6 @@ def _assign_slugs(cfg: Config, country: str, lead_ids: list[str],
     bestehende behalten ihren. Quellen-Prefix: ``d`` für DÖE-Leads (in ``doe_ids``),
     sonst ``t`` (TED). Gibt den Parquet-Pfad zurück (für den Join im Export).
     """
-    import duckdb
     import pyarrow as pa
     import pyarrow.parquet as pq
 
@@ -3266,7 +3236,6 @@ def build_lead_export(cfg: Config, country: str = "DE"):
     Markt-Region = **Leistungsort**, nicht Käufersitz (``market_region_known`` als Gate).
     ``slug`` = permanenter Kurz-Link. Schreibt ``lead_export`` (1 Zeile je Lead).
     """
-    import duckdb
 
     g = cfg.gold_dir / country
     def q(n): return f"'{(g / n).as_posix()}'"
@@ -3532,7 +3501,6 @@ def build_lead_cpv(cfg: Config, country: str = "DE"):
     `lead_export.cpv_code` führt nur den Haupt-CPV; diese Tabelle macht die übrigen
     zugänglich (Silber `notice_cpv`). Schreibt ``lead_cpv`` (lead_id, cpv_code, is_main).
     """
-    import duckdb
 
     g = cfg.gold_dir / country
     out = (g / "lead_cpv.parquet").as_posix()
@@ -3567,7 +3535,6 @@ def build_lead_lot(cfg: Config, country: str = "DE"):
 
     Schreibt ``lead_lot`` (englischer Vertrag, 1:n zu `lead_export.lead_id`).
     """
-    import duckdb
 
     g = cfg.gold_dir / country
     out = (g / "lead_lot.parquet").as_posix()
@@ -3635,7 +3602,6 @@ def build_lead_text(cfg: Config, country: str = "DE"):
     Schreibt `lead_text` (lead_id, lot_id, field, language, value), 1:n zu
     `lead_export.lead_id`. Sprachcodes sind ISO-639-1 klein (s. `govisor/languages.py`).
     """
-    import duckdb
 
     g = cfg.gold_dir / country
     out = (g / "lead_text.parquet").as_posix()
@@ -3676,7 +3642,6 @@ def build_doe_buyer_profile(cfg: Config, country: str = "DE"):
     (Cross-Threshold, 47 % Overlap). KEINE €/Gewinner-KPIs (DÖE trägt beides nicht).
     Schreibt ``doe_buyer_profile``.
     """
-    import duckdb
 
     g = cfg.gold_dir / country
     def q(n): return f"'{(g / n).as_posix()}'"
@@ -3745,7 +3710,6 @@ def build_lead_criteria(cfg: Config, country: str = "DE"):
 
     Schreibt ``lead_criteria`` (eine Zeile je Kriterium, fuer die Detailansicht).
     """
-    import duckdb
 
     g = cfg.gold_dir / country
     out = (g / "lead_criteria.parquet").as_posix()
@@ -3811,7 +3775,6 @@ def build_lead_requirement(cfg: Config, country: str = "DE"):
 
     Schreibt ``lead_requirement``.
     """
-    import duckdb
 
     g = cfg.gold_dir / country
     out = (g / "lead_requirement.parquet").as_posix()
@@ -3853,7 +3816,6 @@ def build_lead_party(cfg: Config, country: str = "DE"):
 
     Schreibt ``lead_party``.
     """
-    import duckdb
 
     g = cfg.gold_dir / country
     out = (g / "lead_party.parquet").as_posix()
@@ -3972,7 +3934,6 @@ def build_bronze_inventory(cfg: Config, country: str = "DE", since_year: int = 2
     Schreibt ``bronze_inventory``. Klein genug (~wenige tausend Zeilen), um sie ins
     Frontend zu exportieren.
     """
-    import duckdb
 
     g = cfg.gold_dir / country
     out = (g / "bronze_inventory.parquet").as_posix()
@@ -4030,7 +3991,6 @@ def build_buyer_profile(cfg: Config, country: str = "DE"):
     Basis: ``leads`` (source='auslauf' = vergeben) + buyer_stats/history/succession/DÖE.
     Schreibt ``buyer_profile`` (eine Zeile je Käufer-Entität).
     """
-    import duckdb
 
     g = cfg.gold_dir / country
     def q(n): return f"'{(g / n).as_posix()}'"
@@ -4151,7 +4111,6 @@ def build_buyer_recent_awards(cfg: Config, country: str = "DE"):
     Titel, Gewinner, Wert (real-2020 + `value_known`-Flag), Thema, Datum, Wettbewerb.
     Schreibt ``buyer_recent_awards``.
     """
-    import duckdb
 
     g = cfg.gold_dir / country
     def q(n): return f"'{(g / n).as_posix()}'"
@@ -4203,7 +4162,6 @@ def build_region_kpi(cfg: Config, country: str = "DE"):
     Fehlt ein Destatis-Cache, bleiben die betroffenen Spalten NULL (Gold-Lauf braucht kein Netz).
     Schreibt ``region_kpi``.
     """
-    import duckdb
 
     g = cfg.gold_dir / country
     def q(n): return f"'{(g / n).as_posix()}'"
@@ -4301,7 +4259,6 @@ def build_doe_demand(cfg: Config, country: str = "DE"):
     ``performance_nuts`` (Käufer-NUTS ist unterschwellig 0 %). Nur Zählungen (kein €).
     Schreibt ``doe_demand`` (cpv_div, cpv_div_label, nuts3, year, n_tenders).
     """
-    import duckdb
 
     g = cfg.gold_dir / country
     def q(n): return f"'{(g / n).as_posix()}'"
@@ -4340,7 +4297,6 @@ def build_dim_plz(cfg: Config, country: str = "DE"):
     alle Geo-Joins (``build_lead_geo`` je Quelle) filtern auf das Land des Leads. Für CH/AT steht
     im ``bundesland``-Feld der Kanton/das Bundesland. Es werden alle vorhandenen ``{CC}.txt`` gelesen.
     """
-    import duckdb
 
     g = cfg.gold_dir / country
     gn = cfg.data_dir / "reference" / "geonames"
@@ -4377,7 +4333,6 @@ def build_lead_geo(cfg: Config, country: str = "DE"):
     Haversine-Distanz-Query je Lead möglich. Schreibt ``lead_geo`` (lead_id, lat, lon,
     plz, ort, geo_source).
     """
-    import duckdb
 
     g = cfg.gold_dir / country
     NP = f"'{cfg.silver_table_glob('notice_parties', country)}'"
@@ -4453,7 +4408,6 @@ def build_at_gold(cfg: Config, country: str = "AT"):
     (Vor-Zuschlag desselben Käufers + volle CPV + Titel-Token → Amtsinhaber unsicher + Bieterzahl).
     Bewusst KEINE volle DE-Gold-Pipeline (die käme später separat, wenn AT-Volumen es rechtfertigt).
     """
-    import duckdb
 
     g = cfg.gold_dir / country
     g.mkdir(parents=True, exist_ok=True)
@@ -4624,7 +4578,6 @@ def build_lead_predecessor(cfg: Config, country: str = "DE"):
     chain_depth, incumbent_since_year, confidence); der Web-Export joint es für offene Leads.
     Konservativ: nur bei Entity+CPV-Gleichheit UND Titel-Token-Überlappung (sonst kein Link).
     """
-    import duckdb
 
     g = cfg.gold_dir / country
     N = f"'{cfg.silver_table_glob('notices', country)}'"
@@ -4684,7 +4637,6 @@ def build_dim_nuts(cfg: Config, country: str = "DE"):
     die Jahre abgedeckt sind. Ebene = Code-Länge − 2 (DE=0, DE2=1, DE21=2, DE212=3).
     Schreibt ``dim_nuts`` (nuts_code, name, level, parent, version).
     """
-    import duckdb
 
     g = cfg.gold_dir / country
     ref = cfg.data_dir / "reference" / "nuts"
@@ -4726,7 +4678,6 @@ def build_dim_cpv_label(cfg: Config, country: str = "DE"):
     kein Uebersetzen noetig und auch nicht erlaubt: die CPV-Begriffe sind Rechtsvokabular.
     """
     import xml.etree.ElementTree as ET
-    import duckdb
 
     src = cfg.data_dir / "reference" / "cpv_2008.xml"
     if not src.exists():
@@ -4767,7 +4718,6 @@ def build_market_opportunity(cfg: Config, country: str = "DE", as_of_year: int |
     über heute — Chance ist ein GEGENWARTS-Signal. Fenster + ``last_award_year`` stehen
     transparent in der Ausgabe. Score als relatives Perzentil-Ranking (0–100).
     """
-    import duckdb
     from datetime import date
 
     as_of = as_of_year or date.today().year
@@ -4874,7 +4824,6 @@ def build_retender_signal(cfg: Config, country: str = "DE", as_of_year: int | No
     (buyer_entity, cpv_class, need_title, fail_attempts, first_fail_year, last_fail_year,
     span_years, still_open). Gibt die Zahl chronischer Bedarfe zurück.
     """
-    import duckdb
     from datetime import date
     from collections import defaultdict
 
@@ -4942,7 +4891,6 @@ def build_cpv_adjacency(cfg: Config, country: str = "DE", since_year: int = 2016
     ``cond_prob`` = P(Firma bedient cpv_b | bedient cpv_a) — gerichtet a→b. Schreibt
     ``cpv_adjacency`` (cpv_a, cpv_b, shared_firms, jaccard, cond_prob).
     """
-    import duckdb
 
     g = cfg.gold_dir / country
     N = f"'{cfg.silver_table_glob('notices', country)}'"
@@ -5007,7 +4955,6 @@ def build_value_band_effektiv(cfg: Config, country: str = "DE", min_samples: int
     konsistent zu ``value_band``. Schreibt ``value_band_effektiv``
     (lead_id, value_effektiv, band_effektiv, band_source).
     """
-    import duckdb
 
     g = cfg.gold_dir / country
     L = f"'{(g / 'leads.parquet').as_posix()}'"

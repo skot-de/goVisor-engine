@@ -12,7 +12,6 @@ Dateiname nicht trifft.
 from __future__ import annotations
 
 import io
-import re
 
 # Endungen, für die ein Parser existiert (→ keine LLM-Extraktion).
 GAEB_EXTS = frozenset({".x83", ".x81", ".x86", ".d83", ".d81", ".p83", ".gaeb"})

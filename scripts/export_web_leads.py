@@ -8,7 +8,7 @@ Datenblatt-Prinzip (Übergabenotiz §3) zeigt Fehlendes ehrlich an, statt es zu 
 Schreibt `web/data/leads-<branche>.json` (je Grundraum gekappt) + `web/data/branchen.json`.
 Lokal-first: kein Supabase nötig. Später durch eine Live-Query ersetzbar.
 """
-import duckdb, json, pathlib, sys
+import json, pathlib, sys
 from datetime import date
 
 # Der Runner ruft dieses Skript als `python3 scripts/export_web_leads.py` — dabei liegt die
@@ -203,8 +203,7 @@ def _portal_case(spalte: str) -> str:
 
 
 def _quellen_je_lead() -> str:
-    import glob as _g
-    dups, teile = [], []
+    dups = []
     for land in ("DE", "AT", "CH"):
         d = pathlib.Path(f"data/gold/{land}/notice_duplicates.parquet")
         if d.exists():

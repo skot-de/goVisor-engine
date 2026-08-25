@@ -277,7 +277,7 @@ def segment(seg="F", limit=100, params=None, geo=None):
       WHERE n.award_date > {w(6)} AND coalesce(q.final_value_clean,0) >= 100000
         AND NOT EXISTS(SELECT 1 FROM {PE} ps JOIN {EI} es ON es.entity_id=ps.entity_id
                        WHERE ps.notice_id=pr.successor AND ps.role='winner' AND es.identity_id=pr.loser)""")
-    con.execute(f"""CREATE OR REPLACE TEMP TABLE mem AS
+    con.execute("""CREATE OR REPLACE TEMP TABLE mem AS
       SELECT s.identity_id,
         (ff.identity_id IS NOT NULL) fF,
         (ee.identity_id IS NOT NULL) fE,

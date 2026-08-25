@@ -427,7 +427,7 @@ def main(argv=None) -> int:
     a = ap.parse_args(argv)
     AUS.mkdir(parents=True, exist_ok=True)
     con = duckdb.connect()
-    teile = [f"# Preisstufen aus dem Auftragsvolumen", "",
+    teile = ["# Preisstufen aus dem Auftragsvolumen", "",
              f"**Erzeugt:** {dt.date.today().isoformat()} · "
              f"`scripts/preisstufen_analyse.py` · Fenster: letzte {MONATE} Monate", ""]
     alle, fakten = [], []

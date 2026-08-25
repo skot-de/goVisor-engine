@@ -687,7 +687,6 @@ def test_fehlendes_tesseract_bricht_den_index_nicht():
     Ein Werkzeug, das nicht da ist, ist kein Fehler des Bestands."""
     q = (ROOT / "govisor" / "docpipe.py").read_text(encoding="utf-8")
     assert "_ocr_verfuegbar" in q and "shutil.which" in q
-    from govisor.docpipe import _ocr_pdf
     import os as _os
     alt = _os.environ.get("GOVISOR_OCR")
     _os.environ["GOVISOR_OCR"] = "0"

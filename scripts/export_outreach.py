@@ -445,7 +445,9 @@ def baustein_abhaengigkeit(con, ctx):
     groesster = rows[0][1] / ges
     folge = (f"Fällt der grösste aus, fehlen {groesster*100:.0f} % eures "
              "öffentlichen Geschäfts.")
-    wer = namen[0] if k == 1 else f"von {k} Auftraggebern"
+    # (Hier stand ein `wer`, das den groessten Auftraggeber benannt haette — gebaut,
+    # nie in einen Text eingesetzt. Der Name des Auftraggebers im Aufhaenger waere eine
+    # Produktentscheidung, keine Aufraeumarbeit; deshalb nur die tote Zeile entfernt.)
     return {
         "id": "abhaengigkeit", "staerke": 95, "gruppe": "ueber_euch", "form": "kpi",
         "kern": (f"{anteil*100:.0f} % eurer Aufträge kommen von einem einzigen Auftraggeber."
