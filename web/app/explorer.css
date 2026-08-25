@@ -1665,7 +1665,27 @@ tr.wf-verworfen .ttitel{color:var(--ink-400);text-decoration:line-through;text-d
 .kal-rest.flag,.kal-row.flag .kal-date{color:var(--flag)}
 .kal-rest.risk,.kal-row.risk .kal-date{color:var(--risk)}
 .kal-row.risk{background:var(--risk-wash)}.kal-row.risk:hover{background:color-mix(in srgb,var(--risk) 14%,transparent)}
-@media (max-width:640px){.kal-row{grid-template-columns:80px 1fr auto;gap:var(--s3)}.kal-kind{display:none}}
+.kal-row{align-items:start}
+/* Die Terminart traegt jetzt mehr als ein Wort: Herkunft und ggf. eine Warnung stehen
+   darunter. Deshalb eine Spalte, die stapelt, statt einer, die abschneidet. */
+.kal-kind{display:flex;flex-direction:column;gap:2px;line-height:1.35;padding-top:1px}
+.kal-src{font-size:10.5px;color:var(--ink-400)}
+.kal-warn{font-size:10.5px;font-weight:600;color:var(--risk);line-height:1.3}
+.kal-row.konflikt{box-shadow:inset 2px 0 0 var(--risk)}
+/* ⚠ Der Widerspruch gehoert nach oben. Wer sich auf die falsche Frist verlaesst, bietet
+   zu spaet — und merkt es erst danach. */
+.kal-konflikt{font-size:12.5px;line-height:1.5;color:var(--ink-900);background:var(--risk-wash);
+  border:1px solid color-mix(in srgb,var(--risk) 35%,transparent);border-radius:var(--r);
+  padding:var(--s3) var(--s4);margin-bottom:var(--s5)}
+/* ⚠ Auf Mobil war die Terminart frueher ausgeblendet. Das ging, solange in jeder Zeile
+   dasselbe stand („Angebotsfrist"). Jetzt steht dort, WELCHE Frist es ist — ohne sie ist
+   die Zeile sinnlos. Sie rutscht deshalb unter den Titel statt zu verschwinden. */
+@media (max-width:640px){
+  .kal-row{grid-template-columns:80px 1fr auto;gap:var(--s3) var(--s3);
+    grid-template-areas:"date lead rest" ".  kind kind"}
+  .kal-date{grid-area:date}.kal-lead{grid-area:lead}.kal-rest{grid-area:rest}
+  .kal-kind{grid-area:kind;font-size:11.5px}
+}
 
 /* Rollen-Umschalter (Durchsicht-Hilfe; produktiv rollen-gegatet) */
 
