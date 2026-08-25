@@ -774,7 +774,17 @@ def _lauf() -> int:
         # eine Verschlechterung, die vor drei Wochen begann, im Gesamtdurchschnitt. Modelle
         # werden auch schlechter, ohne dass es jemand ankündigt: Anbieter wechseln
         # Quantisierung, Endpunkte ändern sich. Ein Mittelwert über alles zeigt das nie.
-        res["analysiert_am"] = _dt.datetime.now(_dt.timezone.utc).date().isoformat()
+        # ⚠ ORTSZEIT, nicht UTC. Der Nachtlauf startet um 00:30 Ortszeit und trug damit
+        # einen UTC-Stempel vom VORTAG (Berlin ist im Sommer UTC+2) — die Zeitreihe in
+        # `llm_qualitaet --zeitreihe` haette den groessten Teil einer Nacht dem falschen
+        # Tag zugeschlagen. Gemessen am 2026-08-25: 347 von 7.123 Analysebuchungen (5 %)
+        # liegen in diesem Fenster, und es sind systematisch die des Nachtlaufs.
+        #
+        # ⚠ Bestandsdaten vor dem 2026-08-25 tragen den UTC-Tag. Der Unterschied ist
+        # hoechstens ein Tag; die Reihe fasst wochenweise zusammen, deshalb wird NICHT
+        # nachtraeglich umgeschrieben — ein umdatierter Bestand waere schwerer zu
+        # erklaeren als ein bekannter Bruch.
+        res["analysiert_am"] = _dt.datetime.now().date().isoformat()
         return nid, res
 
     def sichern():

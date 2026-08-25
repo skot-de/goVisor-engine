@@ -92,7 +92,9 @@ def _ausbeute(seit: str | None) -> tuple[float, float, int]:
     if not ANALYSE.exists():
         return 0.0, 0.0, 0
     daten = json.loads(ANALYSE.read_text(encoding="utf-8"))
-    tag = (seit or "")[:10]
+    # ⚠ In Ortszeit, weil `analysiert_am` in Ortszeit steht. Der rohe UTC-Praefix haette
+    # an der Tagesgrenze die falschen Vergaben in die Etappe gezogen.
+    tag = (kostenbuch.lokaler_tag({"ts": seit}) or (seit or "")[:10]) if seit else ""
     ids = {z["vorgang"] for z in _zeilen_seit(seit) if z.get("vorgang")}
     passend = [v for k, v in daten.items()
                if k in ids or (not ids and (v.get("analysiert_am") or "") >= tag)]

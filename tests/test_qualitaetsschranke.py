@@ -7,6 +7,7 @@ fröhlich weiter und produziert stundenlang schlechtere Daten — teurer als jed
 from __future__ import annotations
 
 import importlib.util
+import json
 import sys
 from pathlib import Path
 
@@ -102,3 +103,44 @@ def test_steigende_stueckkosten_fallen_auf():
     r = _rot(qs.bewerte(_etappe(usd_je_vergabe=0.050), _etappe(usd_je_vergabe=0.030),
                         0.01, True))
     assert any("Stückkosten" in t for t in r)
+
+
+# ── Zeitbasen: das Buch stempelt UTC, die Auswertung rechnet in Ortszeit ─────────────
+
+def test_ersatzdatum_kommt_in_ortszeit_nicht_als_utc_praefix(tmp_path, monkeypatch):
+    """⚠ Nachtrag zu einem Fund der Aufräum-Sitzung (`60ba97a`).
+
+    Sie zog die beiden GELD-Bremsen auf `kostenbuch.lokaler_tag()`. Drei Stellen mischten
+    die Zeitbasen aber weiter, und eine davon trägt die ganze Zeitreihe: `analysiert_am`
+    wurde in UTC gestempelt, und der Nachtlauf startet um 00:30 Ortszeit — er landete
+    damit systematisch auf dem Vortag. Gemessen am 2026-08-25: 347 von 7.123
+    Analysebuchungen (5 %) liegen in diesem Fenster.
+    """
+    from govisor import kostenbuch
+    import importlib.util
+    spec = importlib.util.spec_from_file_location(
+        "lq", ROOT / "scripts" / "llm_qualitaet.py")
+    lq = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(lq)
+
+    buch = tmp_path / "k.jsonl"
+    monkeypatch.setattr(kostenbuch, "PFAD", buch)
+    buch.write_text(json.dumps({
+        "ts": "2026-08-24T22:30:00+00:00", "zweck": "analyse", "vorgang": "N1",
+        "modell": "m", "kosten_usd": 0.01}) + "\n", encoding="utf-8")
+
+    tag = lq.zeitpunkt_je_vorgang()["N1"]
+    assert tag == kostenbuch.lokaler_tag({"ts": "2026-08-24T22:30:00+00:00"})
+    # In einer Zone östlich von UTC ist das der Folgetag — dieselbe Basis wie
+    # `analysiert_am`, das seit dem 2026-08-25 ebenfalls in Ortszeit geschrieben wird.
+
+
+def test_analysiert_am_steht_in_ortszeit():
+    """Sonst schlägt der Nachtlauf seine Vergaben dem Vortag zu."""
+    import importlib.util
+    spec = importlib.util.spec_from_file_location(
+        "ad_tz", ROOT / "scripts" / "analyze_docs.py")
+    quelle = (ROOT / "scripts" / "analyze_docs.py").read_text(encoding="utf-8")
+    i = quelle.index('res["analysiert_am"]')
+    zeile = quelle[i:quelle.index("\n", i)]
+    assert "timezone.utc" not in zeile, f"analysiert_am steht wieder in UTC: {zeile}"

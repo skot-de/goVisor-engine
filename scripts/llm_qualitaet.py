@@ -77,7 +77,9 @@ def zeitpunkt_je_vorgang() -> dict[str, str]:
     for z in kostenbuch.lies():
         nid, ts = z.get("vorgang"), z.get("ts") or ""
         if nid and ts and z.get("zweck") == "analyse":
-            aus.setdefault(nid, ts[:10])
+            # ⚠ `ts[:10]` waere der UTC-Tag; `analysiert_am` steht in Ortszeit. Ein
+            # roher Praefix haette beide Basen gemischt (s. `kostenbuch.lokaler_tag`).
+            aus.setdefault(nid, kostenbuch.lokaler_tag(z) or ts[:10])
     return aus
 
 
