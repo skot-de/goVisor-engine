@@ -689,8 +689,17 @@ def _lauf() -> int:
 
     neu_ab = [x.strip() for x in os.environ.get("NEU_AB_MODELL", "").split(",") if x.strip()]
     if neu_ab:
+        # ⚠ „KEIN MODELL VERMERKT" IST AUCH EIN MODELL. Die Teilstring-Suche laeuft gegen
+        # `v.get("model") or ""` — bei Saetzen ohne Modellangabe also gegen den leeren
+        # String, den kein Token trifft. Gemessen am 2026-08-25: von 2.917 offenen Leads
+        # aus abgeloesten Modellen tragen **476** gar keine Angabe. Sie waeren als einzige
+        # Gruppe stehen geblieben, und zwar unsichtbar — eine Neuberechnung „aller alten"
+        # haette 84 % erwischt und das gemeldet, als waere es alles.
+        # Das Zeichen `(ohne)` trifft genau sie.
+        _OHNE = {"(ohne)", "?"}
         treffer = [k for k, v in out.items()
-                   if any(t in (v.get("model") or "") for t in neu_ab)]
+                   if (not (v.get("model") or "") and any(t in _OHNE for t in neu_ab))
+                   or any(t in (v.get("model") or "") for t in neu_ab if t not in _OHNE)]
         # ⚠ NUR WEGWERFEN, WAS AUCH NEU GERECHNET WIRD. Bis zum 2026-08-25 loeschte diese
         # Stelle ALLE Treffer, und der `NUR_OFFENE`-Filter weiter unten liess davon nur die
         # offenen zum Rechnen durch. Die abgelaufenen waren damit geloescht und wurden nie

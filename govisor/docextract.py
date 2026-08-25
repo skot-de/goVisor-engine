@@ -13,7 +13,7 @@ from __future__ import annotations
 import json
 import re
 
-from . import doctax
+from . import doctax, normwerte
 
 # Je Extraktions-Doktyp: Ziel, erlaubte req_types, Few-Shot-Beispiele (aus realem Unterlagen-Stil).
 _TASKS: dict[str, dict] = {
@@ -255,7 +255,13 @@ def verarbeite(doctype: str, text: str, source_file: str, parsed: list) -> dict:
             rejected += 1                                     # Belegpflicht verletzt → verwerfen (§6a.2)
             continue
         rt = raw_item["req_type"]
+        # Rechenbare Zusatzfelder (`wert_num`, `wert_einheit`, `wert_datum`, `wert_tage`).
+        # ⚠ ADDITIV — `value`/`unit` bleiben unangetastet, denn sie tragen die Belegpflicht
+        # (§6a.2). Ein normalisierter Wert ist eine Auslegung, kein Zitat.
+        norm = normwerte.normalisiere({"value": raw_item.get("value"),
+                                       "unit": raw_item.get("unit")})
         items.append({
+            **norm,
             "req_type": rt,
             "label": doctax.REQ_TYPES[rt][0],
             "theme": doctax.theme_for(rt),

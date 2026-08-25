@@ -26,6 +26,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
+from govisor import normwerte  # noqa: E402
 
 SAMMEL = ROOT / "web" / "data" / "doc-analysis.json"
 JE_VORGANG = ROOT / "web" / "data" / "doc-analysis"
@@ -54,6 +55,15 @@ def main() -> int:
             uebersprungen += 1
             continue
         ziel = JE_VORGANG / f"{sicher}.json"
+        # ⚠ NORMALISIERUNG AUCH FUER DEN BESTAND. `docextract` legt die rechenbaren Felder
+        # seit dem 2026-08-25 selbst an — aber nur bei NEUEN Auswertungen. Die 346.055
+        # Eintraege, die schon dastehen, kosten sonst einen kompletten Neulauf am Modell,
+        # um an eine Zahl zu kommen, die bereits im Text steht. Hier ist sie umsonst.
+        # Gemessen: 51 % der Eintraege bekommen dadurch eine rechenbare Zahl (vorher
+        # trugen 12 % ueberhaupt einen numerischen Typ), `frist` zu 51 % ein Datum.
+        for _it in (eintrag.get("checklist") or []):
+            if isinstance(_it, dict) and "wert_num" not in _it and "wert_datum" not in _it:
+                _it.update(normwerte.normalisiere(_it))
         text = json.dumps(eintrag, ensure_ascii=False)
         # Nur schreiben, was sich geaendert hat: der Arbeiter laeuft staendig, der Export
         # taeglich. Unveraendert neu zu schreiben hiesse, jede Nacht 6.262 Dateien als
