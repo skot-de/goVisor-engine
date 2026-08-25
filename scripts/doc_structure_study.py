@@ -181,11 +181,11 @@ def main() -> int:
             brtype[n["branche"]][t] += 1
     with open(OUT/"q3_doktypen_je_branche.csv", "w", newline="") as fh:
         w = csv.writer(fh); w.writerow(["doctype", "anteil_dateien_%"]+[f"{b}(n={by_br[b]})_%" for b in BRANCHES])
-        for t, _ in DOCTYPES + [("sonstiges", None)]:
+        for t in doctypes.ALLE + ("sonstiges",):
             w.writerow([t, round(100*file_types[t]/tot_files, 1)]+[round(100*brtype[b][t]/max(by_br[b], 1)) for b in BRANCHES])
     print("── Q3 Dokumentklassen — Anteil der VORGÄNGE je Branche (%), n je Spalte ──")
     print(f"  {'Doctype':22}"+"".join(f"{b[:5]+'/'+str(by_br[b]):>10}" for b in BRANCHES))
-    for t, _ in DOCTYPES:
+    for t in doctypes.ALLE:
         print(f"  {t:22}"+"".join(f"{100*brtype[b][t]//max(by_br[b],1):>9}%" for b in BRANCHES))
     print(f"  → Dateiname-Trefferquote (klassifizierbar ohne Inhalt): {100*classnoun/tot_files:.0f}% "
           f"({classnoun}/{tot_files} Dateien); Rest 'sonstiges' braucht Inhaltsblick.\n")
@@ -250,7 +250,7 @@ def main() -> int:
     print("── Q5 Los-Spezifik ──")
     print(f"  Vorgänge mit los-benannten Dateien: {len(lot_any)}/{N} ({100*len(lot_any)/N:.0f}%)")
     print(f"  Mehr-Los-Vergaben (lose>1, aus Metadaten): {len(multilot)}")
-    print(f"  In Mehr-Los-Paketen los-spezifische Doctypes: " + (", ".join(f"{k}×{v}" for k, v in ml_lotdocs.most_common(5)) or "—"))
+    print("  In Mehr-Los-Paketen los-spezifische Doctypes: " + (", ".join(f"{k}×{v}" for k, v in ml_lotdocs.most_common(5)) or "—"))
     print()
 
     # ══ Q6 — Strukturierte Formate je Branche ══

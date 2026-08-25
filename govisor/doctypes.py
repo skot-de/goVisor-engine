@@ -172,11 +172,11 @@ _REGELN: tuple[tuple[str, dict[str, str]], ...] = (
     # Zeichnungen. Deshalb Ausschluss statt Grenze.
     ("technische_anlage", {                                                    # +5.412
         "de": r"lageplan|grundriss|(?<!ab)(?<!aus)(?<!durch)schnitt(?!stelle)|ansicht|"
-              r"zeichnung|plan|baugrund|gutachten|schema|gaeb|dwg|dxf|ifc",
+              r"zeichnung|plan|baugrund|gutachten|schema|gaeb|\bdwg\b|\bdxf\b|\bifc\b",
         "at": r"planbeilage|einreichplan",
-        "fr": r"plans?|dessin|croquis|expertise",
+        "fr": r"plans?\b|dessin|croquis|expertise",
         "it": r"planimetri|disegn|perizia",
-        "pl": r"rysun|plan|ekspertyz",
+        "pl": r"rysun|plan\b|ekspertyz",
     }),
     ("informationsblatt", {                                                    # +2.498
         "de": r"hinweis|merkblatt|informationsblatt|erl[aä]uter|infoblatt",
@@ -197,6 +197,16 @@ _REGELN: tuple[tuple[str, dict[str, str]], ...] = (
         "pl": r"formularz",
     }),
 )
+
+# Jeder Doktyp, den `classify` vergeben kann — ABGELEITET aus den Regeln, nicht getippt.
+# `sonstiges` ist der Rueckfall und steht bewusst nicht drin; wer eine vollstaendige Achse
+# fuer einen Bericht braucht, haengt ihn an: ``ALLE + ("sonstiges",)``.
+#
+# ⚠ Es gab hier schon eine getippte Zweitliste. `scripts/doc_structure_study.py` trug bis
+# zum 2026-08-21 eine eigene Kopie der Regeln; beim Umstellen auf dieses Modul blieben zwei
+# Nutzungen ihres Namens `DOCTYPES` stehen und rissen den Bericht mit `NameError` ab —
+# gefunden am 2026-08-25. Eine abgeleitete Liste kann nicht auf diese Weise veralten.
+ALLE: tuple[str, ...] = tuple(dt for dt, _ in _REGELN)
 
 # Ein Muster je Doktyp, aus allen Sprachraeumen vereinigt.
 _COMPILED = tuple(
