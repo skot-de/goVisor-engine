@@ -49,6 +49,71 @@ CAP = 2500          # Leads je Grundraum UND Phase (Quote statt gemeinsamer Rang
                     # aber jede Phase kommt vor. Client-seitiges Filtern deckelt
                     # bei ein paar Tausend; der volle Bestand (Bau 48k) braucht die Server-Query.
 OUT = pathlib.Path("web/data"); OUT.mkdir(parents=True, exist_ok=True)
+
+
+def _volltext_index() -> set:
+    """Welche Leads haben bei UNS den Volltext der Vergabeunterlagen?
+
+    ⚠ **Das ist eine andere Frage als `has_documents`, und die Verwechslung stand im
+    Produkt falsch herum.** `has_documents` sagt „die QUELLE bewirbt Unterlagen"; es wird
+    fuer die Schweiz aus der simap-Projektbruecke gefuellt und fuer Deutschland von
+    niemandem. Gemessen am 2026-08-25 ueber 18.594 Leads mit laufender Frist:
+
+        DE   5.899 Leads haben bei uns den VOLLTEXT — und keiner sagte es dem Nutzer
+             (2.573 + 9.614 zeigten „unknown" bzw. gar keinen Unterlagen-Block)
+        CH     166 zeigten „offen", obwohl NICHTS abgerufen wurde
+
+    Der Nutzer konnte also nicht erkennen, ob wir die Unterlagen gelesen haben — genau die
+    Auskunft, fuer die er das Produkt benutzt. `docs/laender/03-input-dokumente.md` verlangt
+    dafuer ausdruecklich ein `gelesen`-Feld.
+
+    Der Index entsteht in `scripts/export_doc_text.py` und laeuft im Tageslauf VOR diesem
+    Skript (Zeile 1009 gegen 1094). Fehlt er, wird nichts behauptet: leere Menge.
+    """
+    p = OUT / "doc-text-index.json"
+    try:
+        d = json.loads(p.read_text(encoding="utf-8"))
+    except Exception:                                        # noqa: BLE001
+        print("  ⚠ doc-text-index.json fehlt — `gelesen` bleibt bei allen Leads False.")
+        return set()
+    return set(d)
+
+
+VOLLTEXT = _volltext_index()
+
+
+def _unterlagen(g, volltext: set) -> dict | None:
+    """Der Unterlagen-Block eines Leads. ``None``, wenn es nichts zu sagen gibt.
+
+    Zwei Fragen, die vorher zu einer verschmolzen waren:
+
+    * **`access`** — was die QUELLE anbietet (offen, kostenpflichtig, auf Anfrage,
+      unbekannt). Kommt aus `has_documents`/`documents_paid`/`documents_source`.
+    * **`gelesen`** — ob WIR den Volltext haben. Das ist die Auskunft, für die der Nutzer
+      das Produkt benutzt, und sie fehlte vollständig.
+
+    ⚠ Der Block entsteht auch **ohne Link**, wenn wir den Text haben. Sonst fällt genau
+    die Auskunft weg, die zählt: gemessen am 2026-08-25 hatten 5.155 offene deutsche Leads
+    Volltext bei uns und **gar keinen** Unterlagen-Block, weil weder `documents_url` noch
+    `source_url` gesetzt war.
+    """
+    gelesen = g("lead_id") in volltext
+    wie = g("documents_source") or None
+    if g("documents_url"):
+        return {"url": g("documents_url"), "source": "docs",
+                "access": ("offen" if g("has_documents") and not g("documents_paid")
+                           else "kostenpflichtig" if g("documents_paid")
+                           else "auf_anfrage" if wie == "on_request"
+                           else "unknown"),
+                "wie": wie, "gelesen": gelesen}
+    if g("source_url"):
+        return {"url": g("source_url"), "source": "portal",
+                "access": "auf_anfrage" if wie == "on_request" else "unknown",
+                "wie": wie, "gelesen": gelesen}
+    if gelesen:
+        return {"url": None, "source": None, "access": "unknown", "wie": wie,
+                "gelesen": True}
+    return None
 con = _db.connect()
 G = "data/gold/DE"
 
@@ -993,20 +1058,12 @@ def export_branche(key):
             # sogar WIE (Plattform, externer Link, auf Anfrage, per Post), und
             # `documents_paid` sagt, ob sie Geld kosten. Gemessen: CH 675 Plattform,
             # 70 externer Link, 67 nur auf Anfrage, 2 postalisch.
-            "unterlagen": ((lambda url, src: {
-                "url": url, "source": src,
-                "access": ("offen" if g("has_documents") and not g("documents_paid")
-                           else "kostenpflichtig" if g("documents_paid")
-                           else "auf_anfrage" if g("documents_source") == "on_request"
-                           else "unknown"),
-                "wie": g("documents_source") or None,
-             })(g("documents_url"), "docs") if g("documents_url")
-                else (lambda url: {
-                    "url": url, "source": "portal",
-                    "access": ("auf_anfrage" if g("documents_source") == "on_request" else "unknown"),
-                    "wie": g("documents_source") or None,
-                })(g("source_url")) if g("source_url")
-                else None),
+            # ⚠ `access` sagt, was die QUELLE anbietet. `gelesen` sagt, ob WIR den Text
+            # haben. Zwei verschiedene Fragen, und bis zum 2026-08-25 gab es nur die erste
+            # — 5.899 offene deutsche Leads mit Volltext zeigten dem Nutzer „unknown" oder
+            # gar nichts. Der Block entsteht deshalb jetzt auch OHNE Link, wenn wir den
+            # Text haben: sonst faellt genau die Auskunft weg, die zaehlt.
+            "unterlagen": _unterlagen(g, VOLLTEXT),
             # #15 Weg A — strukturierte Anforderungen aus eForms. True/False = belegt,
             # None = nicht veröffentlicht (ehrlich weglassen statt „erfüllt" zu behaupten).
             # #15/#18: strukturierte Anforderungen. Dokument-Signale (aus den Vergabeunterlagen)
