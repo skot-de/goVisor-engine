@@ -404,3 +404,48 @@ def test_claude_md_kennt_beide_pruefungen():
     for werkzeug in ("scripts/pruefe_verdrahtung.py", "scripts/verdrahtungskarte.py",
                      "scripts/pruefe_bibel.py", "docs/land-onboarding.md"):
         assert werkzeug in claude, f"CLAUDE.md nennt {werkzeug} nicht"
+
+
+# ── Sonde 5: Nutzlast ───────────────────────────────────────────────────────
+# Sonde 1 fragt, ob eine Datei in `web/data` FRISCH ist. Ob sie ueberhaupt jemand
+# holt, fragte bis zum 2026-08-25 niemand — und `web/data` geht taeglich als Ganzes
+# in den Objektspeicher (1,4 GB gemessen). An einem einzigen Tag entstand dort
+# `kalender-index.json`, das keine vier Stunden spaeter als ungelesen aufflog.
+
+def test_nutzlast_findet_die_ungelesene_datei(tmp_path, monkeypatch):
+    """Was ausgeliefert und von niemandem geholt wird, muss auffallen."""
+    (tmp_path / "leads-bau.json").write_text("[]")          # wird geladen
+    (tmp_path / "geisterdatei.json").write_text("{}")       # holt niemand
+    assert any("geisterdatei.json" in b for b in pv.sonde_nutzlast(wurzel=tmp_path))
+    assert not any("leads-bau.json" in b for b in pv.sonde_nutzlast(wurzel=tmp_path))
+
+
+def test_nutzlast_schweigt_bei_begruendeter_ausnahme(tmp_path, monkeypatch):
+    """Eine benannte Ausnahme ist kein Befund — eine unbenannte schon."""
+    (tmp_path / "doc-analysis.json").write_text("{}")
+    assert pv.sonde_nutzlast(wurzel=tmp_path) == []
+
+
+def test_nutzlast_erkennt_verzeichnisse_ueber_ein_beispiel(tmp_path):
+    """Bei `kalender/<id>.json` sagt der Verzeichnisname allein nichts — geprüft wird
+    eine Beispieldatei darin, sonst gälte jedes Scherbenverzeichnis als tot."""
+    (tmp_path / "kalender").mkdir()
+    (tmp_path / "kalender" / "491665_2026.json").write_text("{}")
+    (tmp_path / "muell").mkdir()
+    (tmp_path / "muell" / "x.json").write_text("{}")
+    befunde = pv.sonde_nutzlast(wurzel=tmp_path)
+    assert not any("kalender" in b for b in befunde), "ein echtes Scherbenverzeichnis gilt als tot"
+    assert any("muell" in b for b in befunde)
+
+
+def test_jede_nutzlast_ausnahme_hat_eine_begruendung():
+    """Eine Ausnahme ohne Grund ist ein Schweigen, kein Befund."""
+    for name, grund in pv.AUSNAHMEN_NUTZLAST.items():
+        assert len(grund) > 20, f"{name} steht ohne belastbare Begruendung in der Liste"
+
+
+@pytest.mark.skipif(not (ROOT / "web" / "data").exists(), reason="kein Export vorhanden")
+def test_die_echte_nutzlast_ist_sauber():
+    """Der eigentliche Waechter: eine NEUE ungelesene Datei laesst ab sofort die Suite
+    fallen. Die drei bekannten stehen als offener Punkt in `AUSNAHMEN_NUTZLAST`."""
+    assert pv.sonde_nutzlast() == []

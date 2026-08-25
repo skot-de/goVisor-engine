@@ -57,6 +57,7 @@ import argparse
 import collections
 import datetime as dt
 import pathlib
+import re
 import sys
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
@@ -429,9 +430,95 @@ def sonde_paritaet(zeige_offen: bool = False,
     return fehler
 
 
+# ── Sonde 5: Nutzlast (wer liest, was wir ausliefern?) ──────────────────────
+#
+# Sonde 1 fragt, ob eine Datei in `web/data` FRISCH ist. Sie fragt nicht, ob sie ueberhaupt
+# jemand holt — und das ist eine eigene Fehlerklasse, mit eigenem Preis: `web/data` geht
+# als Ganzes in den Objektspeicher, taeglich, rund 1,4 GB (gemessen 2026-08-25).
+#
+# Der Anlass: an einem einzigen Tag entstanden `kalender-index.json` (45 kB, von mir, keine
+# vier Stunden alt) und daneben lagen `firma-index.json`, `doc-analysis-index.json` und
+# `doc-listing-index.json` — alle vier geschrieben, keine einzige gelesen. Das faellt nicht
+# auf, weil eine ungelesene Datei nichts kaputt macht. Sie wird nur bezahlt, und irgendwann
+# baut jemand auf ihr auf, weil sie aussieht wie eine Schnittstelle.
+#
+# ⚠ WIE GEMESSEN WIRD, und wo die Grenze liegt. Aus dem Web-Code werden die Muster der
+# `loadDataFile(...)`-Aufrufe gezogen (`leads-${b}.json` → `leads-[^/]+\.json`), dazu jeder
+# blanke String, der auf `.json`/`.csv` endet — den braucht es fuer Leser, die nicht ueber
+# `loadDataFile` gehen. Das ist absichtlich GROSSZUEGIG: ein falscher Alarm kostet Zeit und
+# Vertrauen, ein uebersehener Eintrag nur Speicher. Der Aufruf `${art.dir}/${id}.csv` deckt
+# deshalb jedes CSV-Verzeichnis ab; wer dort etwas Totes vermutet, muss von Hand nachsehen.
+AUSNAHMEN_NUTZLAST: dict[str, str] = {
+    "doc-analysis.json": "Arbeitsstand des Analyse-Laufs, per NICHT_HOCH vom Upload ausgenommen",
+    "doc-analysis.backup.json": "Sicherungskopie vor dem Zerlegen der Dokumentanalyse",
+    # ⚠ DIE DREI SIND EIN OFFENER PUNKT, KEIN ERLEDIGTER. Sie stehen hier, damit die Sonde
+    # gruen ist und ein NEUER toter Posten auffaellt — nicht, weil die Sache geklaert waere.
+    # Alle drei sind Verzeichnisse ihrer Scherben und waeren plausibel nuetzlich (Suche,
+    # Ampel-Abzeichen in der Liste); gebaut wurde nur die Datei, nie der Leser. Zusammen
+    # 3,1 MB von 1,4 GB — der Preis ist nicht das Problem, der Anschein ist es: was wie eine
+    # Schnittstelle aussieht, wird irgendwann als eine benutzt. Entscheidung (2026-08-25):
+    # verdrahten oder streichen.
+    "firma-index.json": "2,6 MB Verzeichnis der Firmenprofile — geschrieben, nie gelesen (offen seit 2026-08-25)",
+    "doc-analysis-index.json": "Ampel je Vorgang — geschrieben, nie gelesen (offen seit 2026-08-25)",
+    "doc-listing-index.json": "Dateizahl je Vorgang — geschrieben, nie gelesen (offen seit 2026-08-25)",
+}
+
+
+def _leser_muster() -> list[re.Pattern]:
+    """Woran der Web-Code Datendateien erkennt — als Regex, aus dem Quelltext gezogen."""
+    muster: list[re.Pattern] = []
+    for datei in (ROOT / "web").rglob("*"):
+        if (not datei.is_file() or datei.suffix not in {".ts", ".tsx", ".js", ".mjs"}
+                or "node_modules" in datei.parts):
+            continue
+        text = datei.read_text(encoding="utf-8", errors="replace")
+        for roh in re.findall(r'loadDataFile\(\s*[`"\']([^`"\']+)[`"\']', text):
+            muster.append(re.compile("^" + re.sub(r"\\\$\\\{[^}]*\\\}", "[^/]+",
+                                                  re.escape(roh)) + "$"))
+        for roh in re.findall(r'[`"\']([A-Za-z0-9_./-]+\.(?:json|csv))[`"\']', text):
+            muster.append(re.compile("^" + re.escape(roh) + "$"))
+    return muster
+
+
+def sonde_nutzlast(zeige_offen: bool = False, wurzel: pathlib.Path | None = None) -> list[str]:
+    ziel = wurzel or WEB
+    if not ziel.exists():
+        return []                       # frische Arbeitskopie ohne Export — kein Befund
+    muster = _leser_muster()
+    if len(muster) < 10:
+        return ["Nutzlast: keine Leser-Muster gefunden — die Sonde misst sich selbst kaputt"]
+
+    def gelesen(pfad: str) -> bool:
+        return any(m.match(pfad) for m in muster)
+
+    befunde: list[str] = []
+    for eintrag in sorted(ziel.iterdir()):
+        if eintrag.name.startswith("."):
+            continue
+        if eintrag.name in AUSNAHMEN_NUTZLAST:
+            if zeige_offen:
+                print(f"    (erklaert) {eintrag.name}: {AUSNAHMEN_NUTZLAST[eintrag.name]}")
+            continue
+        if eintrag.is_dir():
+            # Ein Verzeichnis gilt als gelesen, wenn EIN Beispiel darin passt — die Muster
+            # enthalten die Kennung als Platzhalter, ein Name allein sagt nichts.
+            beispiel = next((f for f in eintrag.iterdir() if f.is_file()), None)
+            if beispiel is None or gelesen(f"{eintrag.name}/{beispiel.name}"):
+                continue
+            groesse = sum(f.stat().st_size for f in eintrag.rglob("*") if f.is_file())
+        else:
+            if eintrag.suffix not in {".json", ".csv"} or gelesen(eintrag.name):
+                continue
+            groesse = eintrag.stat().st_size
+        befunde.append(f"Nutzlast: {eintrag.name} ({groesse/1e6:.1f} MB) wird ausgeliefert, "
+                       f"aber von keinem Aufrufer geholt")
+    return befunde
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
-    ap.add_argument("--sonde", choices=("frische", "paritaet", "pfade", "laender", "alle"), default="alle")
+    ap.add_argument("--sonde", choices=("frische", "paritaet", "pfade", "laender",
+                                       "nutzlast", "alle"), default="alle")
     ap.add_argument("--offen", action="store_true",
                     help="bekannte Luecken und Leichen mit auflisten")
     a = ap.parse_args()
@@ -457,6 +544,12 @@ def main() -> int:
         f = sonde_pfade(a.offen)
         alles += f
         print(f"    {len(f)} unerklaerte DE-Bindungen")
+
+    if a.sonde in ("nutzlast", "alle"):
+        print("── Sonde 5: Nutzlast (wer liest, was wir ausliefern?) ──")
+        f = sonde_nutzlast(a.offen)
+        alles += f
+        print(f"    {len(f)} unerklaerte Ausliefergueter")
 
     if alles:
         print("\n⚠ Verdrahtungspruefung: " + str(len(alles)) + " Befund(e)")
