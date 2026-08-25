@@ -43,6 +43,10 @@ from govisor.docpipe import SQL_BRAUCHBAR  # noqa: E402
 
 SRC = ROOT / "data" / "docs" / "DE" / "doc_text.parquet"
 OUT = ROOT / "web" / "data" / "doc-analysis.json"
+# Sicherungen vor einer Neuberechnung. Bewusst AUSSERHALB von `web/data`: das Verzeichnis
+# wird ausgeliefert, eine Sicherung nicht. Sie werden NICHT automatisch geloescht — sie
+# tragen Ergebnisse, die einmal Geld gekostet haben, und was hier weg ist, ist weg.
+SICHERUNGEN = ROOT / "data" / "sicherungen"
 # ⚠ NICHT den Modellnamen hier noch einmal fest eintragen. Genau das stand hier und war
 # der Grund, warum der Anbieterboden die Produktion nicht erreicht haette: `llm.DEFAULT_MODEL`
 # trug ihn, dieses Modul ueberschrieb ihn mit seiner eigenen Kopie. `mit_boden` haengt die
@@ -717,11 +721,19 @@ def _lauf() -> int:
             # gab. Ein zweiter Lauf lief also ohne Netz, und ausgerechnet der ist der
             # gefaehrliche, weil der erste den Stand schon veraendert hat. Die betroffenen
             # Saetze allein sind klein genug fuer eine Kopie je Lauf.
+            # ⚠ NICHT NEBEN `OUT`, also nicht in `web/data`. Dort lag sie bis zum
+            # 2026-08-25 — und `web/data` ist das Verzeichnis, das in den Objektspeicher
+            # geht. Der Ausschluss dort trifft exakt den Namen `doc-analysis.json`; eine
+            # Sicherung mit Zeitstempel heisst anders und rutschte durch. Gemessen war sie
+            # mit 112 MB die GROESSTE Einzeldatei des Uploads, groesser als jede echte
+            # Produktdatei — und niemand liest sie. Sicherungen sind Betriebswissen.
             marke = _dt.datetime.now().strftime("%Y%m%dT%H%M%S")
-            sicherung = OUT.with_name(f"{OUT.stem}.vor_neurechnung-{marke}.json")
+            SICHERUNGEN.mkdir(parents=True, exist_ok=True)
+            sicherung = SICHERUNGEN / f"{OUT.stem}.vor_neurechnung-{marke}.json"
             sicherung.write_text(
                 json.dumps({k: out[k] for k in treffer}, ensure_ascii=False), encoding="utf-8")
-            print(f"Alter Stand der betroffenen Vorgänge gesichert: {sicherung.name}", flush=True)
+            print(f"Alter Stand der betroffenen Vorgänge gesichert: "
+                  f"{sicherung.relative_to(ROOT)}", flush=True)
             for k in treffer:
                 del out[k]
             print(f"Neuberechnung: {len(treffer)} Vorgänge von {', '.join(neu_ab)} verworfen",

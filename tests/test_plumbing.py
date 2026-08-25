@@ -4454,3 +4454,47 @@ def test_lieferanten_dateiname_gleicht_dem_der_firmenprofile():
         assert raum["suppliers_dateiname"](k) == efp.dateiname(k)
     ts = (wurzel / "web" / "lib" / "suppliers.ts").read_text(encoding="utf-8")
     assert 'createHash("sha1")' in ts and 'digest("hex")' in ts
+
+
+def test_upload_laesst_arbeitsstaende_und_sicherungen_liegen(tmp_path):
+    """Was in den Objektspeicher geht, muss jemand LESEN.
+
+    `web/data` wird ausgeliefert, aber nicht alles darin ist Ausliefergut.
+    `doc-analysis.json` (332 MB) ist der Arbeitsstand, aus dem `analyse_arbeiter.sh`
+    liest, was noch fehlt — das Frontend fasst sie seit dem 2026-08-22 nicht mehr an.
+    Sie stand deshalb auf einer Ausschlussliste.
+
+    ⚠ Die Liste nannte EXAKTE NAMEN, und daran ist sie gescheitert: die Sicherung vor
+    einer Neuberechnung heisst `doc-analysis.vor_neurechnung-<zeit>.json`, also anders.
+    Sie rutschte durch und war am 2026-08-25 mit **112 MB die groesste Einzeldatei des
+    ganzen Uploads** — groesser als jede echte Produktdatei, und niemand liest sie.
+
+    Der Fehler war nicht die vergessene Zeile, sondern die FORM der Regel: eine Liste
+    exakter Namen faellt beim naechsten Namen wieder um, und zwar lautlos. Der Test haelt
+    beide Haelften fest — was draussen bleibt UND was hineinmuss. Ohne die zweite Haelfte
+    waere „gar nichts hochladen" ein bestandener Test.
+    """
+    import importlib.util
+
+    wurzel = pathlib.Path(__file__).resolve().parent.parent
+    spec = importlib.util.spec_from_file_location(
+        "uwd", wurzel / "scripts" / "upload_web_data.py")
+    uwd = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(uwd)
+
+    (tmp_path / "doc-analysis").mkdir()
+    fuer_uns = ["leads-bau.json", "kalender-index.json", "doc-analysis/491665_2026.json"]
+    nicht_fuer_uns = ["doc-analysis.json",
+                      "doc-analysis.vor_neurechnung-20260825T151107.json",
+                      "leads-bau.bak.json", "halbfertig.tmp.json"]
+    for name in fuer_uns + nicht_fuer_uns:
+        (tmp_path / name).write_text("{}", encoding="utf-8")
+    (tmp_path / "notiz.txt").write_text("kein Datentyp", encoding="utf-8")
+
+    gewaehlt = {p.name for p in uwd.auswahl(tmp_path, {".json": "application/json"})}
+
+    for name in nicht_fuer_uns:
+        assert name not in gewaehlt, f"{name} geht wieder in den Objektspeicher"
+    for name in fuer_uns:
+        assert name.split("/")[-1] in gewaehlt, f"{name} fehlt im Upload — das Frontend liest es"
+    assert "notiz.txt" not in gewaehlt, "fremde Dateitypen gehen mit hoch"

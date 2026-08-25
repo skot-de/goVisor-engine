@@ -73,6 +73,34 @@ LEER_HASH = hashlib.sha256(b"").hexdigest()
 # ihnen regenerierbar, sie selbst aus nichts: Portale geben nicht alles zweimal heraus, und
 # `SPERRE_TAGE` bremst jeden zweiten Versuch. Deshalb kalte Stufe, selten geschrieben,
 # nie geloescht.
+# ⚠ ARBEITSSTAENDE UND SICHERUNGEN GEHOEREN NICHT IN DEN OBJEKTSPEICHER.
+# `doc-analysis.json` ist die Datei, aus der `analyse_arbeiter.sh` liest, was noch fehlt —
+# 332 MB, die das Frontend seit dem 2026-08-22 nicht mehr anfasst (es liest
+# `doc-analysis/<id>.json`). Sie jede Nacht hochzuladen, damit sie niemand liest, waere
+# teuer und sinnlos.
+#
+# ⚠ EIN EXAKTER NAME REICHT NICHT. Genau das stand hier bis zum 2026-08-25, und die
+# Sicherung vor einer Neuberechnung heisst `doc-analysis.vor_neurechnung-<zeit>.json` —
+# also anders. Sie rutschte durch und war mit **112 MB die groesste Einzeldatei des
+# Uploads**, groesser als jede echte Produktdatei. Der Fehler war nicht die vergessene
+# Zeile, sondern die Form der Regel: eine Liste exakter Namen faellt beim naechsten
+# Namen wieder um, und zwar lautlos. Deshalb jetzt zusaetzlich ein Muster.
+NICHT_HOCH = {"doc-analysis.json"}
+NICHT_HOCH_MUSTER = (".vor_", ".bak", ".backup", ".tmp", ".alt-")
+
+
+def auswahl(quelle, typen) -> list:
+    """Was hochgeht: Nutzdaten, keine Arbeitsstaende.
+
+    Ausgelagert, damit `tests/` die Regel an einem Beispielbaum pruefen kann — im
+    Rumpf von `main()` waere sie nur durch einen echten Upload zu erreichen.
+    """
+    return sorted(p for p in quelle.rglob("*")
+                  if p.is_file() and p.suffix in typen
+                  and p.name not in NICHT_HOCH
+                  and not any(m in p.name for m in NICHT_HOCH_MUSTER))
+
+
 QUELLEN = {
     "web": (ROOT / "web" / "data", {".json": "application/json", ".csv": "text/csv"}),
     "docs": (ROOT / "data" / "docs", {".zip": "application/zip",
@@ -204,13 +232,7 @@ def main() -> int:
     if eigen_prefix:
         prefix = f"{prefix}/{eigen_prefix}".strip("/")
 
-    # ⚠ ARBEITSSTAENDE GEHOEREN NICHT IN DEN OBJEKTSPEICHER. `doc-analysis.json` ist die
-    # Datei, aus der `analyse_arbeiter.sh` liest, was noch fehlt — 252 MB, die das Frontend
-    # seit dem 2026-08-22 nicht mehr anfasst (es liest `doc-analysis/<id>.json`). Sie jede
-    # Nacht hochzuladen, damit sie niemand liest, waere teuer und sinnlos.
-    NICHT_HOCH = {"doc-analysis.json"}
-    dateien = sorted(p for p in QUELLE.rglob("*")
-                     if p.is_file() and p.suffix in TYPEN and p.name not in NICHT_HOCH)
+    dateien = auswahl(QUELLE, TYPEN)
     gesamt = sum(p.stat().st_size for p in dateien)
     print(f"  {len(dateien):,} Dateien, {gesamt/1048576:.0f} MB in {QUELLE.relative_to(ROOT)} "
           f"→ Stufe {stufe}")
