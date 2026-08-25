@@ -37,6 +37,11 @@ export async function GET(_req: Request, { params }: { params: Promise<{ token: 
   }
 
   const want = new Set(leadIds);
+  const alleGemerkt = [...want];          // `want` wird unten geleert, die Liste bleibt
+  // ⚠ DTSTAMP IST PFLICHT (RFC 5545, 3.6.1). Es fehlte; strenge Clients weisen einen Feed
+  // ohne diese Eigenschaft zurueck, andere zeigen ihn — der Ausfall waere also nur bei
+  // manchen Nutzern sichtbar und entsprechend schwer zu finden.
+  const stamp = new Date().toISOString().replace(/[-:]/g, "").replace(/\.\d{3}/, "");
   const events: string[] = [];
   for (const b of BRANCHEN) {
     if (!want.size) break;
@@ -58,9 +63,49 @@ export async function GET(_req: Request, { params }: { params: Promise<{ token: 
       events.push([
         "BEGIN:VEVENT",
         `UID:govisor-${l.id}@govisor.eu`,
+        `DTSTAMP:${stamp}`,
         `DTSTART;VALUE=DATE:${d}`,
         `SUMMARY:Angebotsfrist${est ? " (voraussichtlich)" : ""}: ${esc(l.titel || "Ausschreibung")}`,
         `DESCRIPTION:${esc(`${l.buyer || ""} — Angebotsfrist über goVisor`)}`,
+        "END:VEVENT",
+      ].join("\r\n"));
+    }
+  }
+
+  /* ⚠ DIE TERMINE, DIE IN KEINER BEKANNTMACHUNG STEHEN. Bis zum 2026-08-25 trug dieser
+   * Feed genau einen Termin je Lead: die Angebotsfrist. Aus den Vergabeunterlagen kommen
+   * die dazu, die dort NICHT stehen und trotzdem ueber Erfolg oder Ausschluss entscheiden —
+   * vor allem das **Ende der Bindefrist** und der **letzte Tag fuer Bieterfragen**, der VOR
+   * der Angebotsfrist liegt. Erzeugt von `scripts/export_kalender.py`.
+   *
+   * Die Angebotsfrist aus der Bekanntmachung steht oben schon; hier kommt sie nur dann noch
+   * einmal, wenn die Unterlagen ein ABWEICHENDES Datum nennen — dann als Warnung, nicht als
+   * zweiter Termin. Welche gilt, kann nur die Vergabestelle sagen. */
+  for (const id of alleGemerkt) {
+    const sicher = id.replace(/[^A-Za-z0-9_-]/g, "");
+    if (!sicher) continue;
+    let eintrag: { titel?: string; termine?: Array<{
+      art: string; datum: string; label: string; quelle: string;
+      beleg?: string | null; konflikt?: boolean; abweichung_tage?: number }> } | null = null;
+    try {
+      const roh = await loadDataFile(`kalender/${sicher}.json`);
+      if (roh) eintrag = JSON.parse(roh);
+    } catch { continue; }   // kein Kalender fuer diesen Lead ist kein Fehler
+    for (const t of eintrag?.termine ?? []) {
+      if (t.quelle !== "unterlagen") continue;
+      if (t.art === "angebotsfrist" && !t.konflikt) continue;   // steht oben schon
+      const d = t.datum?.replace(/-/g, "");
+      if (!d || d.length !== 8) continue;
+      const warnung = t.art === "angebotsfrist"
+        ? `⚠ Abweichende Angebotsfrist laut Unterlagen (${(t.abweichung_tage ?? 0) > 0 ? "+" : ""}${t.abweichung_tage ?? 0} Tage): `
+        : "";
+      events.push([
+        "BEGIN:VEVENT",
+        `UID:govisor-${sicher}-${t.art}-${d}@govisor.eu`,
+        `DTSTAMP:${stamp}`,
+        `DTSTART;VALUE=DATE:${d}`,
+        `SUMMARY:${esc(`${warnung}${t.label}: ${eintrag?.titel || "Ausschreibung"}`)}`,
+        `DESCRIPTION:${esc(t.beleg || `${t.label} laut Vergabeunterlagen — über goVisor`)}`,
         "END:VEVENT",
       ].join("\r\n"));
     }
