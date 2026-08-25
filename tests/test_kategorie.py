@@ -7,6 +7,29 @@ from govisor import kategorie as K
 _QUELLE = (Path(__file__).resolve().parent.parent / "govisor" / "kategorie.py").read_text(
     encoding="utf-8")
 
+_KAT = {"45": ("Bauarbeiten", None), "72": ("IT-Dienste", None)}
+
+
+def _frag(K, faelle, antwort):
+    """`frag_modell` mit gestubbter Gegenstelle — kein Netz, kein Geld."""
+    import json
+
+    import requests
+
+    class _Antwort:
+        status_code = 200
+
+        @staticmethod
+        def json():
+            return {"choices": [{"message": {"content": json.dumps({"v": antwort})}}]}
+
+    alt = requests.post
+    requests.post = lambda *a, **kw: _Antwort()
+    try:
+        return K.frag_modell(faelle, _KAT, [], "testkey")
+    finally:
+        requests.post = alt
+
 
 def test_wasserfall_reihenfolge_nach_belegkraft():
     """korrektur → zwilling → regelwerk → modell. Die Reihenfolge IST die Aussage.
@@ -42,8 +65,35 @@ def test_modell_darf_unbekannt_sagen():
     aber unschädlich. Die Antwort `99` darf deshalb nie als Division durchgehen.
     """
     assert K.UNBEKANNT == "99"
-    f = _QUELLE.split("def frag_modell")[1].split("\ndef ")[0]
-    assert "if d in kat" in f, "unbekannt/Muell wird nicht verworfen"
+    # ⚠ VERHALTEN PRUEFEN, NICHT DIE QUELLTEXTZEILE. Hier stand
+    # `assert "if d in kat" in f` — der Test brach am 2026-08-25 an einer rein
+    # gleichbedeutenden Umformulierung (`if d not in kat: continue`), waehrend er einen
+    # echten Rueckschritt nicht bemerkt haette. Dieselbe Falle hat der Waechter der
+    # Budgetbremse schon einmal gestellt (Commit 0271db6).
+    erg = _frag(K, [("n1", "Rohbau"), ("n2", "Server")],
+                [{"id": "n1", "div": "99"},        # UNBEKANNT
+                 {"id": "n2", "div": "72"},        # gueltig
+                 {"id": "n3", "div": "45"}])       # nie gesendet
+    assert "n1" not in erg, "UNBEKANNT (99) darf keine Division werden"
+    assert erg.get("n2") == "72", "eine gueltige Antwort muss durchkommen"
+
+
+def test_modell_kennung_wird_gegen_die_anfrage_geprueft():
+    """Ein Schluessel aus einer Modellantwort ist kein Schluessel, bis er belegt ist.
+
+    Gemessen am 2026-08-25 im Bestand: 60 von 499 modellabgeleiteten NetServer-Zeilen in
+    `lead_kategorie` trugen einen Doppelpunkt zu viel (`ns:he:6559bb29329c3878:`), weil
+    die Prompt-Zeile `id={n}: "..."` lautete und NetServer-Kennungen selbst Doppelpunkte
+    enthalten. Alle 60 waren Leads im Produkt — mit ermittelter Branche, die niemand sah,
+    weil der Join ins Leere lief. Dazu zwei frei erfundene Kennungen.
+    """
+    erg = _frag(K, [("ns:he:6559bb29329c3878", "Netzwerk")],
+                [{"id": "ns:he:6559bb29329c3878:", "div": "72"}])
+    assert erg == {"ns:he:6559bb29329c3878": "72"}, "angehaengtes Trennzeichen nicht repariert"
+
+    erg = _frag(K, [("ns:he:6559bb29329c3878", "Netzwerk")],
+                [{"id": "ns:he:ausgedacht", "div": "72"}])
+    assert erg == {}, "eine nie gesendete Kennung darf nicht nach Gold durchkommen"
 
 
 def test_kein_erfundener_cpv_main():

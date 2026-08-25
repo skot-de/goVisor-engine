@@ -215,7 +215,9 @@ def _prompt(kat: dict, beispiele: list[dict]) -> str:
         if zeilen:
             txt += ("\nFRUEHERE KORREKTUREN durch Fachleute dieses Hauses. Sie gehen im "
                     "Zweifel VOR deiner eigenen Einschaetzung:\n" + zeilen + "\n")
-    txt += '\nNur JSON: {"v":[{"id":"..","div":".."}]}'
+    txt += ('\nJede Eingabezeile lautet `id=<kennung> | "<titel>"`. Gib die Kennung '
+            'unveraendert zurueck; sie kann selbst Doppelpunkte enthalten.'
+            '\nNur JSON: {"v":[{"id":"..","div":".."}]}')
     return txt
 
 
@@ -226,12 +228,20 @@ def frag_modell(faelle: list[tuple[str, str]], kat: dict, beispiele: list[dict],
 
     sys_prompt = _prompt(kat, beispiele)
     out: dict[str, str] = {}
+    verworfen: list[str] = []      # Kennungen, die so nicht gesendet wurden
     for i in range(0, len(faelle), BATCH):
         teil = faelle[i:i + BATCH]
+        # ⚠ TRENNZEICHEN, DAS IN KEINER KENNUNG VORKOMMT. Hier stand `id={n}: "..."` —
+        # und NetServer-Kennungen tragen selbst Doppelpunkte (`ns:he:6559bb29329c3878`).
+        # Die Zeile lautete damit `id=ns:he:6559bb29329c3878: "Titel"`, und das Modell
+        # musste raten, wo die Kennung endet. Gemessen am 2026-08-25 im Bestand: von 499
+        # modellabgeleiteten NetServer-Zeilen trugen **60** einen Doppelpunkt zu viel
+        # (12 %). Kennungen ohne Doppelpunkt (TED, DOeE) waren zu 0 von 1.199 betroffen.
+        erlaubt = {n for n, _ in teil}
         body = {"model": MODELL, "temperature": 0,
                 "messages": [{"role": "system", "content": sys_prompt},
                              {"role": "user", "content": "\n".join(
-                                 f'id={n}: "{(t or "")[:TITEL_MAX]}"' for n, t in teil)}]}
+                                 f'id={n} | "{(t or "")[:TITEL_MAX]}"' for n, t in teil)}]}
         for versuch in range(3):
             try:
                 r = requests.post(URL, headers={"Authorization": f"Bearer {key}",
@@ -241,13 +251,31 @@ def frag_modell(faelle: list[tuple[str, str]], kat: dict, beispiele: list[dict],
                     txt = re.sub(r"^```json|^```|```$", "", txt.strip(), flags=re.M).strip()
                     for v in json.loads(txt).get("v", []):
                         d = str(v.get("div", "")).zfill(2)
-                        if d in kat:                     # UNBEKANNT und Muell fallen hier raus
-                            out[str(v.get("id"))] = d
+                        if d not in kat:                 # UNBEKANNT und Muell fallen hier raus
+                            continue
+                        # ⚠ DIE KENNUNG AUS DER ANTWORT IST NICHT VERTRAUENSWUERDIG. Sie
+                        # wurde bisher ungeprueft uebernommen und landete so in einer
+                        # Gold-Tabelle, in der sie auf NICHTS zeigte — 60 Leads mit
+                        # ermittelter Branche, die im Produkt „Ohne Kategorie" blieben,
+                        # weil der Join ins Leere lief. Ein Schluessel, den ein Modell
+                        # zurueckgibt, gehoert gegen die gesendete Menge geprueft.
+                        roh = str(v.get("id", ""))
+                        nid = roh if roh in erlaubt else roh.strip().rstrip(":")
+                        if nid in erlaubt:
+                            out[nid] = d
+                        else:
+                            verworfen.append(roh)
                     break
             except Exception as e:
                 if versuch == 2:
                     print(f"  Batch-Fehler: {type(e).__name__}: {str(e)[:70]}", flush=True)
         print(f"  {min(i + BATCH, len(faelle))}/{len(faelle)}", flush=True)
+    if verworfen:
+        # Laut sagen, nicht stillschweigend schlucken: wer das Trennzeichen oder den
+        # Prompt aendert, soll es hier sehen und nicht erst Wochen spaeter an einer
+        # Gold-Tabelle, die auf nichts zeigt.
+        print(f"  ⚠ {len(verworfen)} Antwort-Kennungen gehoerten nicht zur Anfrage und "
+              f"wurden verworfen (z. B. {verworfen[0]!r})", flush=True)
     return out
 
 
