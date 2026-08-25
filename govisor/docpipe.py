@@ -980,8 +980,13 @@ def build_index(cfg: Config, country: str = "DE", neu_aufbauen: bool = False,
                 continue
             auftraege.append((notice_dir.name, str(zp)))
     if uebersprungen:
-        print(f"docpipe {country}: {uebersprungen} Archive bereits im Index — uebersprungen "
-              f"(`neu_aufbauen=True` erzwingt alles)", flush=True)
+        # ⚠ ALS RAT LESBAR, NICHT ALS ZUSTAND. Hier stand „(`neu_aufbauen=True` erzwingt
+        # alles)" direkt hinter „uebersprungen" — im Nachtprotokoll las sich derselbe Satz
+        # damit so, als sei der Neuaufbau AN und erzwinge alles, waehrend die erste Haelfte
+        # das Gegenteil meldet. Diese Zeile kann per Bauart nur erscheinen, wenn
+        # `neu_aufbauen` FALSCH ist: `bekannt` wird oben ausschliesslich dann gefuellt.
+        print(f"docpipe {country}: {uebersprungen} Archive stehen schon im Index — "
+              f"uebersprungen. Wer sie trotzdem neu lesen will: --neu-aufbauen", flush=True)
     if not auftraege:
         print(f"docpipe {country}: nichts Neues zu indizieren.")
         return {"notices": n_notices, "uebersprungen": uebersprungen}
