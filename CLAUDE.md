@@ -227,7 +227,13 @@ gilt, sind die Entscheidungen und Begruendungen darin; die Zahlen holt
   entscheidend erkannt: naiv 1-Gewinner ergäbe irreführende 78 % Verdrängung durch Siemens-
   AG↔Mobility-Fragmentierung/ARGE). **Incumbent-Retention 28,3 %** auf den 100k verifizierten
   Nachfolgen (belastbar, vs 7 % Artefakt). `succession_events` 80.638, `head_to_head` 31.364.
-  Alle neuen Tabellen in `verify.gold_integrity` (FK sauber). 84 Tests grün.
+  Alle damals neuen Tabellen in `verify.gold_integrity` (FK sauber). 84 Tests grün.
+  ⚠ **Der Satz galt am 2026-07-19 und danach nicht mehr.** Am 2026-08-25 standen dort
+  22 Pruefungen, waehrend `data/gold/<L>` auf **64 Tabellen** gewachsen war — 44 kamen
+  nicht vor, darunter die ganze Los-, CPV-, Text- und Kriterien-Ebene. Dieselbe
+  Krankheit wie beim Altersbericht: eine handgepflegte Liste, die aufhört zu wachsen.
+  17 Pruefungen sind nachgetragen, dazu drei fuer Schluessel, die Entitaet ODER Gruppe
+  sein duerfen. Wer eine Gold-Tabelle mit Fremdschluessel anlegt, traegt sie dort ein.
 
 ### Weitere Grundlagen (2026-07-19, Forts.)
 - **`avg_decision_days`** in `buyer_stats` (cn→can via `ref_publication_number`, ~42 % Coverage,

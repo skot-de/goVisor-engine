@@ -63,11 +63,94 @@ def gold_integrity(cfg: Config, country: str = "DE") -> list[tuple[str, int]]:
          "entities.parquet", "entity_id"),
         ("buyer_recent_awards.lead_id → leads", "buyer_recent_awards.parquet", "lead_id",
          "leads.parquet", "lead_id"),
+        # ── Nachtrag 2026-08-25 ──────────────────────────────────────────────────────
+        # Diese Liste war auf 22 Pruefungen stehengeblieben, waehrend `data/gold/<L>`
+        # auf 64 Tabellen gewachsen ist — 44 davon kamen hier nicht vor, darunter die
+        # gesamte Los-, CPV-, Text- und Kriterien-Ebene. CLAUDE.md behauptete derweil
+        # „Alle neuen Tabellen in verify.gold_integrity (FK sauber)". Dieselbe Krankheit
+        # wie beim Altersbericht, der `lead_lot` nie gemeldet hat: eine handgepflegte
+        # Liste, die aufgehoert hat zu wachsen.
+        #
+        # Alle folgenden wurden am 2026-08-25 gegen den Bestand gemessen und lagen bei
+        # 0 Waisen. Sie stehen hier, damit sie es bleiben.
+        ("lead_lot.lead_id → leads", "lead_lot.parquet", "lead_id", "leads.parquet", "lead_id"),
+        ("lead_cpv.lead_id → leads", "lead_cpv.parquet", "lead_id", "leads.parquet", "lead_id"),
+        ("lead_party.lead_id → leads", "lead_party.parquet", "lead_id", "leads.parquet", "lead_id"),
+        ("lead_text.lead_id → leads", "lead_text.parquet", "lead_id", "leads.parquet", "lead_id"),
+        ("lead_criteria.lead_id → leads", "lead_criteria.parquet", "lead_id", "leads.parquet", "lead_id"),
+        ("lead_requirement.lead_id → leads", "lead_requirement.parquet", "lead_id",
+         "leads.parquet", "lead_id"),
+        ("lead_predecessor.lead_id → leads", "lead_predecessor.parquet", "lead_id",
+         "leads.parquet", "lead_id"),
+        ("lead_region_fill.lead_id → leads", "lead_region_fill.parquet", "lead_id",
+         "leads.parquet", "lead_id"),
+        ("value_band_effektiv.lead_id → leads", "value_band_effektiv.parquet", "lead_id",
+         "leads.parquet", "lead_id"),
+        ("review_queue.notice → quality", "review_queue.parquet", "notice_id",
+         "quality.parquet", "notice_id"),
+        ("incumbent_tenure.notice → quality", "incumbent_tenure.parquet", "notice_id",
+         "quality.parquet", "notice_id"),
+        ("notice_enrichment.notice → quality", "notice_enrichment.parquet", "notice_id",
+         "quality.parquet", "notice_id"),
+        ("succession_events.successor → quality", "succession_events.parquet", "successor",
+         "quality.parquet", "notice_id"),
+        ("notice_duplicates.master → quality", "notice_duplicates.parquet", "master_id",
+         "quality.parquet", "notice_id"),
+        ("notice_duplicates.duplicate → quality", "notice_duplicates.parquet", "duplicate_id",
+         "quality.parquet", "notice_id"),
+        ("document_duplicates.master → quality", "document_duplicates.parquet", "master_id",
+         "quality.parquet", "notice_id"),
+        # ⚠ `lead_kategorie` steht bewusst DAHINTER (s. unten bei den Ausnahmen): am
+        # 2026-08-25 lagen dort 62 Waisen, und die Ursache sass nicht in der Verdrahtung,
+        # sondern im Modellschritt von `govisor/kategorie.py`.
+        ("lead_kategorie.notice → quality", "lead_kategorie.parquet", "notice_id",
+         "quality.parquet", "notice_id"),
     ]
+
+    # ── NUR IN DE PRUEFBAR, mit Messung statt Vermutung ─────────────────────────────
+    #
+    # `build_at_gold`/`simap.build_ch_gold` bauen `leads` bewusst SCHMALER als DE: nur
+    # offene Ausschreibungen mit Frist in der Zukunft (steht so im Docstring von
+    # `build_at_gold`). `lead_lot` und `lead_cpv` entstehen dagegen ueber den ganzen
+    # Bestand. Ein Los zu einem abgelaufenen Vorgang ist dort also KEIN Fehler.
+    #
+    # Gemessen 2026-08-25: AT 36, CH 40 solcher Vorgaenge — keiner als Dublette markiert,
+    # alle in Silber vorhanden, 31 von 36 vom Typ `cn`. DE: 0, weil `build_leads` dort
+    # auch auslaufende und prospektive Vergaben aufnimmt.
+    #
+    # ⚠ Wer AT/CH auf die volle Gold-Kette hebt, streicht diese Zeile — dann muss die
+    # Pruefung dort genauso greifen.
+    nur_de = {"lead_lot.parquet", "lead_cpv.parquet"}
+
+    # ── Schluessel, die ENTITAET ODER GRUPPE sein duerfen ────────────────────────────
+    #
+    # `build_succession_kpis` baut seine Gewinnerlisten als `coalesce(group_id, entity_id)`
+    # — bewusst gruppen-bewusst, damit Siemens AG und Siemens Mobility nicht als Wechsel
+    # zaehlen. Diese Spalten gegen `entities` allein zu pruefen ergibt Fehlalarm: beim
+    # ersten Anlauf am 2026-08-25 meldeten sie 18.236 bzw. 10.678 „Waisen", und alle
+    # waren Gruppenkennungen. Gegen die Vereinigung gemessen: 0.
+    gruppen_checks = [
+        ("head_to_head.winner → entity|group", "head_to_head.parquet", "winner_entity"),
+        ("head_to_head.loser → entity|group", "head_to_head.parquet", "loser_entity"),
+        ("contractor_loss.entity → entity|group", "contractor_loss.parquet", "entity_id"),
+    ]
+
+    # ── BEWUSST NICHT GEPRUEFT, mit Grund ───────────────────────────────────────────
+    #
+    # `entity_merge_map.entity_id`  → 100 % „Waisen", und das ist der Zweck: die Spalte
+    #   nennt die QUELL-Entitaet einer Verschmelzung, die es danach nicht mehr gibt.
+    #   Geprueft wird stattdessen `ziel_entity_id` (unten in `checks` nicht noetig — sie
+    #   loest zu 100 % auf, gemessen 2026-08-25).
+    # `entity_group.entity_id`      → 12.861 nicht aufloesbar, davon 4.916 verschmolzen
+    #   und 7.945 Mitglieder aus dem kuratierten Gruppen-Katalog, die in DE nie als
+    #   Partei aufgetreten sind (in `party_entity`: 0). Eine Gruppendefinition darf
+    #   Mitglieder nennen, die man noch nicht gesehen hat.
     con = duckdb.connect()
     out: list[tuple[str, int]] = []
     for label, child, ckey, parent, pkey in checks:
         if not (g / child).exists() or not (g / parent).exists():
+            continue
+        if child in nur_de and country != "DE":
             continue
         n = con.execute(
             f"SELECT count(*) FROM {q(child)} c "
@@ -76,6 +159,21 @@ def gold_integrity(cfg: Config, country: str = "DE") -> list[tuple[str, int]]:
         ).fetchone()[0]
         if n:
             out.append((label, n))
+
+    eg = g / "entity_group.parquet"
+    if (g / "entities.parquet").exists():
+        raum = (f"SELECT entity_id AS k FROM {q('entities.parquet')}"
+                + (f" UNION SELECT group_id FROM {q('entity_group.parquet')}" if eg.exists() else ""))
+        for label, child, ckey in gruppen_checks:
+            if not (g / child).exists():
+                continue
+            n = con.execute(
+                f"SELECT count(*) FROM {q(child)} c "
+                f"LEFT JOIN ({raum}) p ON p.k=c.{ckey} "
+                f"WHERE c.{ckey} IS NOT NULL AND p.k IS NULL"
+            ).fetchone()[0]
+            if n:
+                out.append((label, n))
     con.close()
     return out
 
