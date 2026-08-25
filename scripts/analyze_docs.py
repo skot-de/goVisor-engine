@@ -14,9 +14,11 @@ Key: $OPENROUTER_KEY_FILE (default .secrets/openrouter.key). Aufruf:
   python3 scripts/analyze_docs.py            # alle Vorgänge ohne Analyse
   LIMIT=3 python3 scripts/analyze_docs.py    # nur 3 (Test)
 """
+import contextlib
 import datetime as _dt
 import json
 import os
+import shutil
 import re
 import sys
 import threading
@@ -536,6 +538,66 @@ def main() -> int:
     if not SRC.exists():
         print(f"FEHLT: {SRC} — erst `index-docs` laufen lassen.")
         return 1
+    with _nur_einmal():
+        return _lauf()
+
+
+@contextlib.contextmanager
+def _nur_einmal():
+    """Ein Lauf zur Zeit — die Sperre gehoert HIERHER, nicht in die Aufrufer.
+
+    ⚠ Zwei Prozesse schreiben dieselbe `doc-analysis.json`, jeder mit seinem eigenen
+    Stand im Speicher. Der zweite, der sichert, gewinnt; die Arbeit des ersten ist weg —
+    und zwar lautlos, denn beide melden „Runde fertig".
+
+    **Die Sperre gab es nur mittelbar, und die Vermittlung war falsch.** Der Kommentar
+    weiter unten verwies bis zum 2026-08-25 auf `scripts/dokumente_arbeiter.sh` — der
+    faehrt die Analyse aber seit dem 18.08. gar nicht mehr. Geschuetzt war seither nur,
+    dass nicht zwei ARBEITER laufen. Es gibt aber drei Wege hierher: der Arbeiter,
+    `scripts/rueckstau_etappen.sh` und der Aufruf von Hand. Der Arbeiter schlaeft
+    zwischen den Runden 30 s — startet in diesem Fenster eine Etappe, laufen beide.
+
+    Eine Sperre, die in einem von drei Aufrufern sitzt, ist keine. `mkdir` ist atomar,
+    `[ -e ] && …` waere es nicht.
+    """
+    sperre = ROOT / "data" / ".analyze_docs.lock"
+    try:
+        sperre.mkdir()
+    except FileExistsError:
+        alt_pid = (sperre / "pid").read_text(encoding="utf-8").strip() if (sperre / "pid").exists() else ""
+        if alt_pid.isdigit() and _laeuft(int(alt_pid)):
+            print(f"⛔ Es laeuft bereits eine Analyse (PID {alt_pid}) — abgebrochen. "
+                  f"Zwei Laeufe wuerden sich die Ergebnisse gegenseitig ueberschreiben.",
+                  file=sys.stderr, flush=True)
+            raise SystemExit(75)
+        print(f"⚠ Verwaiste Sperre (PID '{alt_pid or '?'}' laeuft nicht) — uebernommen.",
+              flush=True)
+        shutil.rmtree(sperre, ignore_errors=True)
+        sperre.mkdir()
+    (sperre / "pid").write_text(str(os.getpid()), encoding="utf-8")
+    try:
+        yield
+    finally:
+        # Nur die EIGENE Sperre wegraeumen: ein spaet sterbender Vorgaenger nimmt sonst
+        # die Sperre seines Nachfolgers mit.
+        try:
+            if (sperre / "pid").read_text(encoding="utf-8").strip() == str(os.getpid()):
+                shutil.rmtree(sperre, ignore_errors=True)
+        except OSError:
+            pass
+
+
+def _laeuft(pid: int) -> bool:
+    try:
+        os.kill(pid, 0)
+    except (ProcessLookupError, ValueError):
+        return False
+    except PermissionError:
+        return True                                        # fremder Nutzer, aber am Leben
+    return True
+
+
+def _lauf() -> int:
     con = duckdb.connect()
     # REIHENFOLGE NACH AKTUALITAET, nicht nach notice_id.
     #
@@ -610,7 +672,7 @@ def main() -> int:
         treffer = [k for k, v in out.items()
                    if any(t in (v.get("model") or "") for t in neu_ab)]
         if treffer:
-            sicherung = OUT.with_suffix(f".vor_neurechnung.json")
+            sicherung = OUT.with_suffix(".vor_neurechnung.json")
             if not sicherung.exists():
                 sicherung.write_text(json.dumps(out, ensure_ascii=False), encoding="utf-8")
                 print(f"Alter Stand gesichert: {sicherung.name}", flush=True)
@@ -632,6 +694,17 @@ def main() -> int:
         vorher = len(todo)
         todo = [t for t in todo if t[0] in offen]
         print(f"Nur offene Ausschreibungen: {len(todo)} von {vorher}", flush=True)
+    # ⚠ VOR dem LIMIT festhalten, wie viel wirklich anliegt. Diese Zahl geht unten in
+    # `.llm_stand.json` und steuert die Pause des Analyse-Arbeiters. Der hat sie sich bis
+    # zum 2026-08-25 selbst ausgerechnet — als Differenz aus Textindex und Ergebnisdatei,
+    # also VOR dem NUR_OFFENE-Filter. Am 25.08. standen dort 22 Vorgaenge, von denen kein
+    # einziger eine laufende Frist hatte: der Arbeiter sah 22 „Wartende", bekam „Zu
+    # analysieren: 0" und drehte trotzdem alle 30 Sekunden eine Runde. 31 Leerrunden in
+    # einer halben Stunde, jede mit einem Python-Start ueber eine 358-MB-Datei.
+    #
+    # Wer die Pause steuert, muss dieselbe Menge zaehlen wie der, der die Arbeit macht.
+    # Deshalb sagt es der Lauf selbst, statt es den Arbeiter schaetzen zu lassen.
+    anliegend = len(todo)
     if LIMIT:
         todo = todo[:LIMIT]
     print(f"Zu analysieren: {len(todo)} (von {len(per_notice)}) · Modell {MODEL} · {PARALLEL} parallel", flush=True)
@@ -639,8 +712,9 @@ def main() -> int:
     # ── PARALLEL, aber mit einem Schreiber ───────────────────────────────────────────
     # Die Arbeit je Vorgang ist unabhaengig; nur das Ergebnis-Dictionary und die Datei sind
     # gemeinsam. Deshalb rechnen N Faeden, und geschrieben wird unter einem Lock im Haupt-
-    # faden, wenn ein Ergebnis eintrifft. Zwei Prozesse gleichzeitig waeren etwas anderes und
-    # blieben verboten — der Arbeiter prueft das (scripts/dokumente_arbeiter.sh).
+    # faden, wenn ein Ergebnis eintrifft. Zwei PROZESSE gleichzeitig sind etwas anderes und
+    # bleiben verboten — das prueft `_nur_einmal()` oben, seit dem 2026-08-25 hier und
+    # nicht mehr in einem der drei Aufrufer.
     schreib_lock = threading.Lock()
     fertig = 0
     erschoepft = False
@@ -728,6 +802,10 @@ def main() -> int:
         (ROOT / "data" / ".llm_stand.json").write_text(json.dumps({
             "zeit": int(time.time()),
             "fertig": fertig,
+            # Was NACH diesem Lauf noch anliegt — dieselbe Menge, die oben gearbeitet
+            # wurde, nur um das Geschaffte vermindert. Der Analyse-Arbeiter legt sich
+            # schlafen, wenn hier 0 steht.
+            "wartend": max(0, anliegend - fertig),
             "erschoepft": erschoepft,
             "anbieter": anbieter_stand(),
         }, ensure_ascii=False), encoding="utf-8")

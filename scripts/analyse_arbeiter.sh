@@ -29,7 +29,20 @@ ROOT="$(pwd)"
 PY=/Library/Frameworks/Python.framework/Versions/3.14/bin/python3
 [ -x "$PY" ] || PY=python3
 LOCK="$ROOT/data/.daily_leads.lock"
-EIGEN="$ROOT/data/.analyse_arbeiter.lock"
+# ⚠ DIE SPERRE GEHOERT AUF DIE INTERNE PLATTE — aus demselben Grund wie das Log unten.
+# `data` ist ein Symlink auf ein externes Volume, und macOS vergibt den Zugriff darauf JE
+# PROGRAMM: aus dem Terminal gestartet darf dieses Skript schreiben, als launchd-Dienst
+# nicht. Bis zum 2026-08-25 lag die Sperre unter `data/`, und der Dienst scheiterte dort
+# bei JEDEM Start mit „Operation not permitted" — auf stderr, in eine Datei, die niemand
+# liest. Die alte Fassung machte einfach weiter: Sperre nie geschrieben, Trap ohne Wirkung,
+# und der Dienst lief seit dem 24.08. voellig ungeschuetzt. Genau daran ist der Befund
+# „Sperre fehlt, waehrend PID 88947 laeuft" haengengeblieben.
+#
+# Dieselbe Falle steckte schon einmal im Log dieses Skripts (18.08., „tee: Operation not
+# permitted"). Sie zweimal zu treffen, reicht: was der Dienst zum Laufen braucht, liegt ab
+# hier nicht mehr auf der Datenplatte.
+EIGEN="${GOVISOR_ANALYSE_LOCK:-$HOME/Library/Caches/eu.govisor/analyse_arbeiter.lock}"
+mkdir -p "$(dirname "$EIGEN")"
 # ⚠ NICHT nach data/logs/. `data` ist ein Symlink auf die externe Platte, und ein NEU
 # angelegter launchd-Dienst hat dort keine Schreibrechte (macOS vergibt den Zugriff auf
 # externe Volumes je Programm). Gemessen am 2026-08-18, 20:23: „tee: Operation not
@@ -48,11 +61,33 @@ mkdir -p "$(dirname "$LOG")"
 
 # Nur EIN Analyse-Arbeiter: zwei wuerden dieselbe doc-analysis.json schreiben und sich
 # gegenseitig ueberschreiben — der zweite gewinnt, und die Arbeit des ersten ist weg.
-if [ -e "$EIGEN" ] && kill -0 "$(cat "$EIGEN" 2>/dev/null)" 2>/dev/null; then
-  echo "Ein Analyse-Arbeiter läuft bereits (PID $(cat "$EIGEN"))." ; exit 0
+#
+# ⚠ ZWEI RIEGEL, weil einer nachweislich nicht gehalten hat. Am 2026-08-25 lief dieser
+# Arbeiter als PID 88947 seit dem Vorabend — und `data/.analyse_arbeiter.lock` gab es
+# nicht. Ein zweiter Start haette also nichts vorgefunden und waere danebengelaufen.
+#
+#   1. VERZEICHNIS statt Datei. `mkdir` ist atomar, `[ -e ] && echo >` ist es nicht:
+#      zwischen Pruefung und Schreiben passen zwei Starts gleichzeitig hindurch. Dieselbe
+#      Form benutzen der Tageslauf und `_index_nach_tageslauf.sh` schon.
+#   2. Der Trap raeumt NUR die EIGENE Sperre weg. Vorher loeschte er blind — ein spaet
+#      sterbender Vorgaenger (er haengt bis zu 30 min in `sleep`) nahm damit die Sperre
+#      seines Nachfolgers mit. Genau so verschwindet sie unbemerkt.
+#   3. Und weil eine Sperre trotzdem verlorengehen kann, fragen wir zusaetzlich die
+#      Prozessliste. Ein laufender Prozess luegt nicht.
+_andere="$(pgrep -f 'analyse_arbeiter\.sh' 2>/dev/null | grep -v "^$$\$" | head -1)"
+if [ -n "$_andere" ]; then
+  echo "Ein Analyse-Arbeiter läuft bereits (PID $_andere)." ; exit 0
 fi
-echo $$ > "$EIGEN"
-trap 'rm -f "$EIGEN"' EXIT
+if ! mkdir "$EIGEN" 2>/dev/null; then
+  _alt="$(tr -d '[:space:]' < "$EIGEN/pid" 2>/dev/null)"
+  if [ -n "$_alt" ] && kill -0 "$_alt" 2>/dev/null; then
+    echo "Ein Analyse-Arbeiter läuft bereits (PID $_alt)." ; exit 0
+  fi
+  echo "Verwaiste Sperre (PID '${_alt:-?}' läuft nicht) — übernommen."
+  rm -rf "$EIGEN" && mkdir "$EIGEN" || { echo "Sperre nicht übernehmbar." >&2; exit 75; }
+fi
+echo $$ > "$EIGEN/pid"
+trap 'if [ "$(tr -d "[:space:]" < "$EIGEN/pid" 2>/dev/null)" = "$$" ]; then rm -rf "$EIGEN"; fi' EXIT
 
 sag() { echo "[$(date '+%d.%m. %H:%M')] $*" | tee -a "$LOG"; }
 
@@ -105,19 +140,33 @@ while true; do
     && sag "  Runde fertig" || sag "  ⚠ Runde abgebrochen"
 
   # Wie viele warten noch? Die Zahl geht ins Log UND steuert die Pause.
+  #
+  # ⛔ SIE MUSS DIESELBE MENGE ZAEHLEN WIE DER LAUF. Hier stand bis zum 2026-08-25 eine
+  # eigene Rechnung: Textindex minus Ergebnisdatei. Die kennt den NUR_OFFENE-Filter nicht.
+  # Am 25.08. standen so 22 „Wartende" da, von denen kein einziger eine laufende Frist
+  # hatte — der Lauf meldete folgerichtig „Zu analysieren: 0", die Pause unten griff
+  # trotzdem nicht (sie verlangt exakt 0), und der Arbeiter drehte alle 30 Sekunden eine
+  # Leerrunde. 31 davon in einer halben Stunde, jede mit einem Python-Start ueber eine
+  # 358-MB-Datei. Dieselbe Klasse Fehler, die `rueckstau_etappen.sh` am 24.08. an
+  # 37 Leerrunden gelernt hat.
+  #
+  # Jetzt sagt der Lauf selbst, was er uebrig gelassen hat (`analyze_docs.py` schreibt
+  # `wartend` nach `.llm_stand.json`). Nebeneffekt: die 358-MB-Datei wird nicht mehr
+  # jede Runde nur zum Zaehlen eingelesen.
   WARTEN="$($PY - 2>/dev/null <<'PYZ'
 import json, pathlib
-w = pathlib.Path("web/data")
 try:
-    vt = set(json.loads((w / "doc-text-index.json").read_text()))
-    an = set(json.loads((w / "doc-analysis.json").read_text()))
-    print(len(vt - an))
+    print(int(json.loads(pathlib.Path("data/.llm_stand.json").read_text())["wartend"]))
 except Exception:
     print(-1)
 PYZ
 )"
   case "$WARTEN" in ''|*[!0-9-]*) WARTEN=-1 ;; esac
-  sag "  Stand: $WARTEN warten noch"
+  if [ "$WARTEN" -lt 0 ]; then
+    sag "  Stand: unbekannt (kein .llm_stand.json — Lauf abgebrochen?)"
+  else
+    sag "  Stand: $WARTEN warten noch"
+  fi
 
   # ⛔ NICHT WEITERDREHEN, WENN NIEMAND MEHR LIEFERT. Am 2026-08-18 war das OpenRouter-
   # Guthaben leer; der Arbeiter holte trotzdem alle 30 Sekunden 400 Vorgaenge, bekam bei
