@@ -1,4 +1,5 @@
 import "server-only";
+import { clientIp } from "./clientIp";
 
 /**
  * Einfacher In-Memory-Fixed-Window-Rate-Limiter — Kosten-/Abuse-Bremse für teure Endpunkte
@@ -21,12 +22,12 @@ export function rateLimit(key: string, limit: number, windowMs: number): { ok: b
   return { ok: true, retryAfter: 0 };
 }
 
-/** Client-IP aus den üblichen Proxy-Headern (Vercel/Reverse-Proxy); Fallback "unknown". */
-export function clientIp(req: Request): string {
-  const xff = req.headers.get("x-forwarded-for");
-  if (xff) return xff.split(",")[0].trim();
-  return req.headers.get("x-real-ip") || "unknown";
-}
+/* ⚠ Die Herkunft liegt in `lib/clientIp.js` — Plain JS, damit `node` sie laden und
+ * `web/scripts/pruefe-herkunft.mjs` die ECHTE Fassung pruefen kann. Diese Datei traegt
+ * `server-only` und waere fuer einen Test unerreichbar; er muesste die Regel abschreiben,
+ * und ein Test gegen eine Abschrift geht gruen, waehrend die benutzte Fassung falsch ist.
+ * Genau dieser Fehler stand hier: der linkeste `x-forwarded-for`-Wert ist frei waehlbar. */
+export { clientIp };
 
 /**
  * Fertige Bremse für einen Endpunkt: prüft und liefert im Zweifel gleich die 429-Antwort.

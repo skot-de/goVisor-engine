@@ -1629,3 +1629,36 @@ def test_datendateien_werden_zwischengespeichert():
     skript = ROOT / "web" / "scripts" / "pruefe-datacache.mjs"
     p = subprocess.run(["node", str(skript)], capture_output=True, text=True)
     assert p.returncode == 0, f"Zwischenspeicher hält seine Regeln nicht:\n{p.stdout}{p.stderr}"
+
+
+def test_die_herkunft_ist_nicht_vom_aufrufer_waehlbar():
+    """Jede Ratenbremse zählt pro Herkunft — die darf der Aufrufer nicht bestimmen.
+
+    `x-forwarded-for` ist eine LISTE, an die jeder Proxy hinten anhängt. Wer den linkesten
+    Wert liest, liest den, den der Aufrufer selbst mitgeschickt hat:
+
+        Client sendet:  x-forwarded-for: 10.0.0.1
+        bei uns an:     x-forwarded-for: 10.0.0.1, 203.0.113.77
+        gelesen wurde:  10.0.0.1        ← frei wählbar, bei jeder Anfrage neu
+
+    Ein neuer Wert je Anfrage ist ein neuer Zähler: damit war jede Bremse im Haus mit einer
+    Kopfzeile abschaltbar. Am 2026-08-27 gegen den laufenden Server gemessen, 40 Anfragen
+    bei einem Limit von 30: **alte Fassung 0 abgewiesen, neue 10**.
+
+    Das trifft die Enumerations-Sperre vor `/api/entity-search`, das Token-Raten vor dem
+    iCal-Feed — und `/api/lead-docs`, der Geld ausgibt.
+
+    ⚠ Der Fehler sieht nicht wie einer aus: die Route antwortet weiter mit 200, sie bremst
+    nur niemanden mehr. Deshalb ein Test gegen die ECHTE Funktion (Plain JS, `node`-ladbar)
+    statt gegen eine Abschrift.
+    """
+    import subprocess
+
+    skript = ROOT / "web" / "scripts" / "pruefe-herkunft.mjs"
+    p = subprocess.run(["node", str(skript)], capture_output=True, text=True)
+    assert p.returncode == 0, f"die Herkunft ist wieder waehlbar:\n{p.stdout}{p.stderr}"
+
+    # Und die Bremse muss diese Funktion auch BENUTZEN — sonst prueft der Test etwas,
+    # das keine Route anfasst.
+    rl = (ROOT / "web" / "lib" / "rateLimit.ts").read_text(encoding="utf-8")
+    assert 'from "./clientIp"' in rl, "rateLimit.ts bestimmt die Herkunft wieder selbst"
