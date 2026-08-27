@@ -449,3 +449,51 @@ def test_die_echte_nutzlast_ist_sauber():
     """Der eigentliche Waechter: eine NEUE ungelesene Datei laesst ab sofort die Suite
     fallen. Die drei bekannten stehen als offener Punkt in `AUSNAHMEN_NUTZLAST`."""
     assert pv.sonde_nutzlast() == []
+
+
+def test_jedes_pruefskript_wird_auch_aufgerufen():
+    """Eine Pruefung, die niemand startet, ist eine Datei — keine Pruefung.
+
+    Unter `web/scripts/` liegen Skripte, die die ECHTEN Frontend-Bausteine gegen `node`
+    fahren (Signatur, Herkunft, iCal-Faltung, Ratenbremse …). Sie sind genau deshalb dort,
+    weil ein Test gegen eine Abschrift gruen geht, waehrend die benutzte Fassung falsch ist.
+    Damit teilen sie aber die Schwaeche jedes Bausteins: gebaut heisst nicht aufgerufen.
+
+    Am 2026-08-27 lag `pruefe-unterlagen-gelesen.mjs` genau so da — geschrieben, lauffaehig,
+    von niemandem gestartet. Aufgefallen ist es nur, weil ich beim Anlegen des dritten
+    eigenen Skripts nachgesehen habe, ob meine ueberhaupt laufen.
+
+    Zaehlt als Aufruf: eine Datei unter `tests/` oder ein npm-Skript in `web/package.json`.
+    """
+    import json
+
+    skripte = sorted((ROOT / "web" / "scripts").glob("pruefe-*.mjs"))
+    assert len(skripte) >= 5, f"nur {len(skripte)} Pruefskripte gefunden — stimmt der Pfad noch?"
+
+    rufer = [p.read_text(encoding="utf-8") for p in sorted((ROOT / "tests").glob("*.py"))]
+    rufer.append(json.dumps(json.loads(
+        (ROOT / "web" / "package.json").read_text(encoding="utf-8"))))
+    alles = "\n".join(rufer)
+
+    verwaist = [p.name for p in skripte if p.name not in alles]
+    assert not verwaist, (
+        "Pruefskripte, die niemand startet:\n  " + "\n  ".join(verwaist)
+        + "\n(ein Test unter tests/ oder ein npm-Skript in web/package.json)")
+
+
+def test_unterlagen_gelesen_sagt_die_wahrheit():
+    """`has_documents` heisst „die QUELLE bewirbt Unterlagen", nicht „wir haben sie".
+
+    Die Auskunft, ob wir den Volltext gelesen haben, ist die, fuer die ein Bieter das
+    Produkt benutzt. Das Skript prueft sie gegen den echten Bestand.
+
+    ⚠ Es traegt eine bewusste Nachlauf-Toleranz: ist der Volltext-Index juenger als der
+    Lead-Export, sind einzelne Leads noch ohne Kennzeichnung, und das ist kein Mangel,
+    sondern die Reihenfolge des Nachtlaufs. Ohne diese Toleranz waere der Test jede Nacht
+    einmal rot und damit wertlos.
+    """
+    import subprocess
+
+    skript = ROOT / "web" / "scripts" / "pruefe-unterlagen-gelesen.mjs"
+    p = subprocess.run(["node", str(skript)], capture_output=True, text=True)
+    assert p.returncode == 0, f"die Oberflaeche behauptet Unterlagen, die wir nicht haben:\n{p.stdout}{p.stderr}"
