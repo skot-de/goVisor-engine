@@ -169,3 +169,44 @@ def test_ical_zeilen_werden_gefaltet_und_zerschneiden_keine_umlaute():
     skript = wurzel / "web" / "scripts" / "pruefe-ical-faltung.mjs"
     p = subprocess.run(["node", str(skript)], capture_output=True, text=True)
     assert p.returncode == 0, f"die ausgelieferte JS-Fassung faltet falsch:\n{p.stdout}{p.stderr}"
+
+
+def test_ein_abstand_vor_der_frist_ist_keine_frist():
+    """„3 Werktage vor Ablauf der Angebotsfrist" nennt keine Frist, sondern rechnet mit ihr.
+
+    Die Angebotsfrist ist der einzige Termin, auf den sich andere Angaben BEZIEHEN — und
+    Vergabeunterlagen nennen sie am häufigsten genau dafür. Weil das Wort im Satz steht,
+    wurde daraus ein Angebotsfrist-Termin mit irgendeinem Datum aus demselben Eintrag.
+
+    Der Schaden sass nicht im Kalendereintrag, sondern im KONFLIKT-BANNER darüber: er sagt
+    „die Unterlagen nennen eine andere Angebotsfrist als die Bekanntmachung" und schickt
+    den Bieter zur Vergabestelle wegen einer Frist, die stimmt. Gemessen am 2026-08-27 über
+    4.421 offene Leads: 67 sichtbare Banner, 6 davon auf einem Beleg, der von etwas anderem
+    handelte.
+
+    ⚠ ENTSCHEIDEND IST DIE ZAHL, NICHT DAS WORT. Meine erste Fassung verwarf jedes
+    „vor Ablauf der Angebotsfrist" — und hätte damit echte Fristen gelöscht, denn
+    „bis zum Ablauf der Angebotsfrist am 25.08.2026, 11:00 Uhr" ist die Frist. Beide Sätze
+    enthalten dieselben Worte; nur der gezifferte Abstand trennt sie. Der Test hält beide
+    Richtungen fest — ohne die zweite Hälfte wäre „alles mit ‚vor Ablauf' wegwerfen" ein
+    bestandener Test und trotzdem falsch.
+    """
+    # Rechenvorschrift — kein Termin
+    for relativ in (
+        "Auskünfte sind spätestens 3 Werktage vor Ablauf der Angebotsfrist zu erbitten",
+        "so rechtzeitig, dass der AG noch mind. sechs Tage vor Ablauf der Angebotsfrist antwortet",
+        "1. Stichtag: am 15.09.2026 ab 18.00 Uhr, d. h. 7 Kalendertage vor Ablauf der Angebotsfrist",
+    ):
+        assert k.art(relativ) is None, relativ
+
+    # Dieselben Worte, aber die Frist SELBST — muss bleiben
+    for echt in (
+        "Sie haben Ihr Angebot bis zum Ablauf der Angebotsfrist am 25.08.2026, 11:00 Uhr einzureichen.",
+        "Der AN ist verpflichtet, sein Angebot rechtzeitig vor Ablauf der Angebotsfrist einzureichen",
+        "Die Frist für den Eingang der Angebote wird bis zum 04.09.2026 verlängert. Angebotsfrist",
+    ):
+        assert k.art(echt) == "angebotsfrist", echt
+
+    # Und der Bieterfragen-Satz, der BEIDES enthält, bleibt Bieterfragen
+    assert k.art("Die Fragen sollten bis spätestens zum 02.09.2026 gestellt werden, damit sie "
+                 "sechs Tage vor Ablauf der Angebotsfrist beantwortet sind.") == "bieterfragen"

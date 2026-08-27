@@ -84,13 +84,51 @@ _RAUSCHEN = re.compile(
     r"version|erstellt am|ausgabe\s*\d|zuletzt ge(?:ä|ae)ndert")
 
 
+# ⚠ „VOR ABLAUF DER ANGEBOTSFRIST" IST KEINE ANGEBOTSFRIST. Vergabeunterlagen nennen die
+# Angebotsfrist am haeufigsten gar nicht, um sie zu setzen, sondern um etwas ANDERES an ihr
+# auszurichten: „Auskuenfte sind spaetestens 3 Werktage vor Ablauf der Angebotsfrist
+# schriftlich zu erbitten." Weil das Wort im Satz steht, wurde daraus ein Angebotsfrist-
+# Termin — mit irgendeinem Datum aus demselben Eintrag, das dort nichts zu suchen hat.
+#
+# Der Schaden sass nicht im Kalendereintrag, sondern im KONFLIKT-BANNER darueber: er sagt
+# „die Unterlagen nennen eine andere Angebotsfrist als die Bekanntmachung" und schickt den
+# Bieter zur Vergabestelle, wegen einer Frist, die stimmt. Gemessen am 2026-08-27: von 67
+# Bannern, die den Nutzer erreichten, standen 6 auf einem Beleg, der von etwas anderem
+# handelt.
+#
+# ⚠ NUR die Angebotsfrist wird so geprueft. Ein Satz wie „Fragen bis 02.09., damit sie
+# sechs Tage vor Ablauf der Angebotsfrist beantwortet sind" traegt ein ECHTES Datum fuer
+# die Bieterfragen — er darf nicht mitfallen. Deshalb steht die Pruefung nicht im
+# Rauschfilter, sondern greift erst, wenn eine Regel „angebotsfrist" sagt.
+# ⚠ ENTSCHEIDEND IST DER ZAHLENABSTAND, NICHT DAS WORT „vor Ablauf". Meine erste Fassung
+# verwarf jedes „vor Ablauf der Angebotsfrist" — und haette damit echte Fristen geloescht:
+#
+#     „Sie haben Ihr Angebot … bis zum Ablauf der Angebotsfrist am 25.08.2026,
+#      11:00 Uhr einzureichen."          ← das IST die Angebotsfrist, mit Datum
+#     „Auskuenfte sind spaetestens 3 Werktage vor Ablauf der Angebotsfrist …"
+#                                        ← eine Rechenvorschrift, das Datum gehoert nicht dazu
+#
+# Beide Saetze enthalten dieselben Worte. Nur die Zahl davor trennt sie. Die Regel verlangt
+# deshalb einen ausgeschriebenen oder gezifferten Abstand („3 Werktage vor", „sechs Tage
+# vor") und laesst alles andere durch.
+_RELATIVE_FRIST = re.compile(
+    r"(?i)(?:\d+|ein(?:en)?|zwei|drei|vier|f(?:ü|ue)nf|sechs|sieben|acht|neun|zehn|elf|"
+    r"zw(?:ö|oe)lf|vierzehn)\s*(?:kalender|werk|arbeits)?tage?n?\s+vor\b")
+
+
 def art(text: str) -> str | None:
     """Terminart aus dem Beleg. ``None``, wenn nicht zuzuordnen — dann fällt er raus."""
     if not text or _RAUSCHEN.search(text):
         return None
     for schluessel, rx in _KOMPILIERT:
-        if rx.search(text):
-            return schluessel
+        if not rx.search(text):
+            continue
+        # Die Angebotsfrist ist der einzige Termin, auf den sich andere Angaben BEZIEHEN.
+        # Steht sie nur als Bezugspunkt da, ist der Eintrag keiner — und faellt hier raus,
+        # statt als Termin mit fremdem Datum im Kalender zu landen.
+        if schluessel == "angebotsfrist" and _RELATIVE_FRIST.search(text):
+            return None
+        return schluessel
     return None
 
 
