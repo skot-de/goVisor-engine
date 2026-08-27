@@ -2086,5 +2086,7 @@
   "🇨🇭 nur Schweiz": "🇨🇭 Switzerland only",
   "Die Vergabeunterlagen liegen uns bereits vor. Die Auswertung steht noch aus und erscheint hier, sobald sie durchgelaufen ist.": "We already have the tender documents. The analysis is still pending and will appear here as soon as it has run.",
   "Du kannst nicht warten? Lade deine eigene Fassung hoch, dann wird sie sofort ausgewertet.": "Cannot wait? Upload your own copy and it will be analysed right away.",
-  "Unterlagen liegen vor": "documents available"
+  "Unterlagen liegen vor": "documents available",
+  "Diese Auswertung stammt aus Unterlagen, die ein Nutzer hochgeladen hat.": "This assessment is based on documents uploaded by a user.",
+  "Achtung: der Auftraggeber dieses Leads kommt in den hochgeladenen Unterlagen nicht vor. Möglicherweise gehören sie zu einem anderen Verfahren. Prüft die Angaben, bevor ihr euch darauf verlasst.": "Caution: the contracting authority for this lead does not appear in the uploaded documents. They may belong to a different procedure. Check the details before relying on them."
 }

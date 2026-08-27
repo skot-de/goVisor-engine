@@ -96,15 +96,10 @@ def main() -> int:
     # 4 Lead-Zuordnung (§5-4): kommt der Käufer des Leads in den Unterlagen vor? Heuristik →
     # Rückfrage (kein stiller Durchlauf), kein harter Abbruch (Käufernamen weichen oft ab).
     lead_buyer = sys.argv[2] if len(sys.argv) > 2 else ""
-    lead_mismatch = None
-    if lead_buyer:
-        import re
-        stop = {"gmbh", "stadt", "der", "die", "und", "des", "fuer", "amt", "eigenbetrieb", "aoer"}
-        toks = {t for t in re.findall(r"[a-zäöüß]{4,}", lead_buyer.lower()) if t not in stop}
-        low = fulltext.lower()
-        hit = sum(1 for t in toks if t in low)
-        if toks and hit / len(toks) < 0.34:            # weniger als ein Drittel der Käufer-Wörter im Text
-            lead_mismatch = {"expected_buyer": lead_buyer}
+    # Die Heuristik stand hier im Ablauf und war damit nur ueber einen vollen Upload samt
+    # LLM-Lauf erreichbar — also faktisch ungetestet. Sie liegt jetzt bei der uebrigen
+    # §5-Logik in `docupload`, wo sie geprueft werden kann.
+    lead_mismatch = docupload.zuordnung_zweifelhaft(lead_buyer, fulltext)
     # 5 Doppelung: Paket-Hash (Dedup/Herkunft §5-5, §12.2)
     package_hash = docupload.package_hash([(n, d) for n, _, d in raw])
 
@@ -113,8 +108,18 @@ def main() -> int:
     # EINE DATEI JE VORGANG, wie `scripts/export_doc_text.py`. Die frueher hier gepflegte
     # Sammeldatei `doc-text.json` gibt es nicht mehr (zuletzt 294 MB); sie weiterzuschreiben
     # hiesse, sie fuer JEDEN Upload komplett zu lesen und komplett zurueckzuschreiben.
+    # ⚠ HERKUNFT BLEIBT BEI DEN DATEN. Was hier entsteht, kommt aus einem Upload und wird
+    # ALLEN Nutzern dieses Vorgangs ausgeliefert — nicht nur dem, der hochgeladen hat.
+    # Bis zum 2026-08-27 stand das nirgends: eine hochgeladene Auswertung sah aus wie eine
+    # aus dem Portal geholte. Und der §5-4-Zweifel („der Kaeufer des Leads kommt in den
+    # Unterlagen gar nicht vor") ging als Meldung an den Hochladenden, waehrend die Daten
+    # unmarkiert im geteilten Bestand landeten. Wer den Lead spaeter oeffnet, sah eine
+    # Analyse ohne jeden Vorbehalt — und der Vorbehalt war nach einem Seitenwechsel weg.
+    herkunft = {"herkunft": "upload"}
+    if lead_mismatch:
+        herkunft["zuordnung_zweifelhaft"] = lead_mismatch
     eintrag = {"chars": len(fulltext), "files": nfiles, "text": fulltext[:CAP_TEXT],
-               "truncated": len(fulltext) > CAP_TEXT}
+               "truncated": len(fulltext) > CAP_TEXT, **herkunft}
     dt = {nid: eintrag}
     sicher = "".join(c for c in nid if c.isalnum() or c in "-_")
     (DATA / "doc-text").mkdir(parents=True, exist_ok=True)
@@ -140,7 +145,16 @@ def main() -> int:
     files = [(n, texts.get(n, "")) for n, _, _ in raw]
     an = ad.analyze_notice(files, structured=structured)
     if an:
+        an = {**an, **herkunft}          # s. o.: die Herkunft gehoert in den Satz, nicht in die Antwort
         da = _load("doc-analysis.json"); da[nid] = an; _save("doc-analysis.json", da)
+        # ⚠ Auch als Einzeldatei schreiben. Das Frontend liest `doc-analysis/<id>.json`;
+        # die Sammeldatei ist nur noch Arbeitsstand und wird nicht ausgeliefert. Ohne diese
+        # Zeile war die frische Analyse fuer JEDEN ANDEREN unsichtbar, bis der Nachtlauf
+        # exportiert — der Hochladende sah sie sofort, alle anderen bis zu einen Tag nicht.
+        sicher_a = "".join(c for c in nid if c.isalnum() or c in "-_")
+        (DATA / "doc-analysis").mkdir(parents=True, exist_ok=True)
+        (DATA / "doc-analysis" / f"{sicher_a}.json").write_text(
+            json.dumps(an, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
         res["lbAnalyse"] = an
 
     print(json.dumps(res, ensure_ascii=False))

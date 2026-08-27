@@ -1009,7 +1009,18 @@ function renderDocs(l){
     const a = l.lbAnalyse;
     const AMP = {gruen:['●','Bietbar','va-go'], gelb:['●',tk("Abwägen"),'va-weigh'], rot:['●',tk("Hohe Hürde"),'va-stop']};
     const [icon,label,cls] = AMP[a.ampel] || AMP.gelb;
+    /* ⚠ WOHER DIE UNTERLAGEN KOMMEN, GEHOERT AN DIE ANALYSE. Ein Nutzer kann Unterlagen
+       zu JEDEM Vorgang hochladen; das Ergebnis sehen danach alle. Bis zum 2026-08-27 sah
+       eine hochgeladene Auswertung genauso aus wie eine aus dem Portal geholte, und der
+       §5-4-Zweifel ("der Auftraggeber des Leads kommt in den Unterlagen gar nicht vor")
+       ging als einmalige Meldung an den Hochladenden — alle anderen bekamen dieselbe
+       Analyse ohne jeden Vorbehalt. */
+    const quelle = a.herkunft === "upload"
+      ? `<p class="va-herkunft">${tk("Diese Auswertung stammt aus Unterlagen, die ein Nutzer hochgeladen hat.")}</p>` : '';
+    const zweifel = a.zuordnung_zweifelhaft
+      ? `<p class="va-zweifel">${tk("Achtung: der Auftraggeber dieses Leads kommt in den hochgeladenen Unterlagen nicht vor. Möglicherweise gehören sie zu einem anderen Verfahren. Prüft die Angaben, bevor ihr euch darauf verlasst.")}</p>` : '';
     const vahead = `<div class="va-head"><span class="va-amp ${cls}">${icon} ${label}</span><span class="cov">${tk("Vergabe-Analyse · aus den Unterlagen")}</span></div>
+      ${zweifel}${quelle}
       ${a.ampel_grund?`<p class="va-grund">${esc(a.ampel_grund)}</p>`:''}
       ${a.zusammenfassung?`<p class="va-sum">${esc(a.zusammenfassung)}</p>`:''}`;
     // Reiche Checkliste (§7, Prototyp-Design) wenn vorhanden — sie trägt Kopf/Haftung/Erfolgshonorar selbst.

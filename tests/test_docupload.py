@@ -72,3 +72,47 @@ def test_match_lead():
     assert not r["matched"] and "cpv" in r["mismatches"]
     # widersprüchliches Aktenzeichen → mismatch
     assert "aktenzeichen" in du.match_lead({"aktenzeichen": "XX-1", "title": lead["title"]}, lead)["mismatches"]
+
+
+def test_zweifelhafte_zuordnung_wird_erkannt_und_bleibt_bei_den_daten():
+    """§5-4: Kommt der Auftraggeber des Leads in den hochgeladenen Unterlagen überhaupt vor?
+
+    Ein Nutzer kann Unterlagen zu JEDEM Vorgang hochladen; Volltext, Signale und die
+    LLM-Analyse landen danach im geteilten Bestand und werden ALLEN Nutzern dieses Leads
+    ausgeliefert. Die Prüfung gab es, aber ihr Ergebnis ging als einmalige Meldung an den
+    Hochladenden zurück — die Daten selbst blieben unmarkiert. Wer den Lead später öffnete,
+    sah eine Auswertung ohne jeden Vorbehalt, und der Vorbehalt war nach dem Seitenwechsel
+    weg, während die Daten blieben.
+
+    ⚠ Die Schwelle ist absichtlich niedrig. Käufernamen weichen zwischen Bekanntmachung und
+    Unterlagen oft ab; ein Fehlalarm bei jedem zweiten Upload wäre schlimmer als keiner.
+    Deshalb prüft der Test BEIDE Richtungen — sonst wäre „immer zweifeln" bestanden.
+    """
+    from govisor import docupload
+
+    # Passt: der Name steht in den Unterlagen.
+    assert docupload.zuordnung_zweifelhaft(
+        "Stadt Wolfsburg", "Die Stadt Wolfsburg schreibt folgende Leistung aus.") is None
+    assert docupload.zuordnung_zweifelhaft(
+        "Universitätsklinikum Tübingen", "Das Universitätsklinikum Tübingen vergibt") is None
+
+    # Passt nicht: ein ganz anderer Auftraggeber.
+    treffer = docupload.zuordnung_zweifelhaft(
+        "Stadt Wolfsburg", "Landeshauptstadt München, Baureferat, Vergabestelle")
+    assert treffer and treffer["expected_buyer"] == "Stadt Wolfsburg"
+    assert treffer["anteil"] == 0.0
+
+    # ⚠ Ein Name aus lauter Allerweltswörtern gibt KEINE Aussage her. Ohne diese Grenze
+    # zählte „Stadt" als Treffer und jedes kommunale Dokument passte zu jedem kommunalen
+    # Lead — die Prüfung wäre da, würde aber nichts prüfen.
+    assert docupload.zuordnung_zweifelhaft("Stadt", "beliebiger Text") is None
+    assert docupload.zuordnung_zweifelhaft("", "beliebiger Text") is None
+    assert docupload.zuordnung_zweifelhaft("Stadt Wolfsburg", "") is None
+
+    # Und der Aufrufer muss den Befund AN DIE DATEN schreiben, nicht nur zurückgeben.
+    wurzel = Path(__file__).resolve().parent.parent
+    quelle = (wurzel / "scripts" / "process_upload.py").read_text(encoding="utf-8")
+    assert "docupload.zuordnung_zweifelhaft(" in quelle, \
+        "der Upload-Weg prüft die Zuordnung nicht mehr"
+    assert '"herkunft": "upload"' in quelle and '"zuordnung_zweifelhaft"' in quelle, \
+        "die Herkunft landet nicht mehr im gespeicherten Satz — der Vorbehalt wäre wieder flüchtig"

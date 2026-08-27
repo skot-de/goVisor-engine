@@ -104,6 +104,41 @@ def match_lead(doc_meta: dict, lead_meta: dict) -> dict:
             "score": round(max(title_overlap, buyer_overlap), 2)}
 
 
+# Wörter, die in fast jedem Behördennamen stehen und deshalb nichts über die Zuordnung
+# sagen. Ohne sie zählte „Stadt" als Treffer und jedes kommunale Dokument passte zu jedem
+# kommunalen Lead.
+_KAEUFER_STOPP = frozenset({"gmbh", "stadt", "der", "die", "und", "des", "fuer", "für",
+                            "amt", "eigenbetrieb", "aoer", "anstalt", "landkreis", "kreis"})
+# Ab wann der Zweifel greift: weniger als ein Drittel der aussagekräftigen Käufer-Wörter
+# steht im Text. Absichtlich niedrig — Käufernamen weichen zwischen Bekanntmachung und
+# Unterlagen oft ab, und ein Fehlalarm bei jedem zweiten Upload wäre schlimmer als keiner.
+ZUORDNUNG_SCHWELLE = 0.34
+
+
+def zuordnung_zweifelhaft(lead_buyer: str, fulltext: str) -> dict | None:
+    """Kommt der Auftraggeber des Leads in den Unterlagen überhaupt vor? (§5-4)
+
+    ``None`` heisst „kein Widerspruch", ein Dict heisst „nachfragen". Der Aufruf-Kontext
+    entscheidet, was daraus folgt — hier wird nur gemessen.
+
+    ⚠ Das Ergebnis gehört ZU DEN DATEN, nicht in eine Meldung an den Hochladenden. Ein
+    Upload landet im geteilten Bestand und wird allen Nutzern dieses Vorgangs ausgeliefert;
+    ein Vorbehalt, der nur einmal auf einem Bildschirm steht, ist nach dem Seitenwechsel
+    weg, während die Daten bleiben.
+    """
+    if not lead_buyer or not fulltext:
+        return None
+    toks = {t for t in re.findall(r"[a-zäöüß]{4,}", lead_buyer.lower())
+            if t not in _KAEUFER_STOPP}
+    if not toks:
+        return None                      # nur Allerweltswörter → keine Aussage möglich
+    low = fulltext.lower()
+    anteil = sum(1 for t in toks if t in low) / len(toks)
+    if anteil >= ZUORDNUNG_SCHWELLE:
+        return None
+    return {"expected_buyer": lead_buyer, "anteil": round(anteil, 2)}
+
+
 def scan_malware(name: str, data: bytes) -> bool:
     """Hook (§5-1). Gibt True = sauber zurück; die Produktion verdrahtet hier einen echten
     Scanner (z. B. ClamAV). Bewusst kein selbstgebauter Scanner."""

@@ -2253,3 +2253,16 @@ a.lb-kachel{text-decoration:none}
    Zusage — und „auf Anfrage" ist die wichtigere der drei Farben. */
 .va-zugang{font-size:var(--t-xs,11px);color:var(--ink-500);margin:4px 0 0}
 .va-zugang-auf_anfrage,.va-zugang-kostenpflichtig{color:var(--flag,#B45309)}
+
+/* Herkunft einer Dokumentanalyse. Ein Nutzer kann Unterlagen zu JEDEM Vorgang hochladen,
+   und das Ergebnis sehen danach alle. Der Vorbehalt gehoert deshalb an die Analyse und
+   nicht in eine einmalige Meldung an den, der hochgeladen hat. */
+.va-zweifel {
+  margin: .5rem 0 0; padding: .5rem .65rem; border-radius: 6px;
+  border: 1px solid color-mix(in srgb, #b91c1c 40%, transparent);
+  background: color-mix(in srgb, #b91c1c 8%, transparent);
+  color: var(--fg); font-size: .82rem; line-height: 1.45;
+}
+.va-herkunft {
+  margin: .4rem 0 0; color: var(--muted); font-size: .78rem; line-height: 1.4;
+}
