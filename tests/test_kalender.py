@@ -210,3 +210,46 @@ def test_ein_abstand_vor_der_frist_ist_keine_frist():
     # Und der Bieterfragen-Satz, der BEIDES enthält, bleibt Bieterfragen
     assert k.art("Die Fragen sollten bis spätestens zum 02.09.2026 gestellt werden, damit sie "
                  "sechs Tage vor Ablauf der Angebotsfrist beantwortet sind.") == "bieterfragen"
+
+
+def test_fremder_text_kann_keine_ical_zeile_einschleusen():
+    """Titel und Belege stammen aus fremden Ausschreibungsunterlagen — sie dürfen im Feed
+    keine eigene Zeile erzeugen.
+
+    In iCal trennt CRLF die Zeilen. Die Maskierung suchte `\\r?\\n` und liess damit ein
+    einzelnes `\\r` durch; nachsichtige Kalenderprogramme brechen schon daran um, und der
+    Rest des Textes stünde als EIGENE Eigenschaft im Termin — `ATTENDEE`, `URL`, was immer
+    dort steht. Wer einen Text in unsere Daten bekommt, schriebe damit in den Kalender
+    eines Nutzers.
+
+    ⚠ Im Bestand kam es am 2026-08-27 NICHT vor (alle Kalender- und Lead-Dateien geprüft,
+    0 Treffer). Das ist der Grund, es jetzt zu schliessen und nicht später: es gibt nichts
+    zu reparieren, nur etwas zu verhindern.
+
+    Beide Umsetzungen werden geprüft — die Python-Fassung hier, die AUSGELIEFERTE
+    JS-Fassung über `node`.
+    """
+    import subprocess
+    from pathlib import Path
+
+    gemein = "Turnhalle\rATTENDEE:mailto:fremd@example.org"
+    assert "\r" not in k._escape(gemein) and "\n" not in k._escape(gemein)
+    assert k._escape("a\rb") == r"a\nb"
+    assert k._escape("Seite1\x0cSeite2\x08x") == "Seite1Seite2x", "Steuerzeichen bleiben stehen"
+    assert k._escape("a\tb") == "a\tb", "der Tabulator ist erlaubt und muss bleiben"
+
+    # Und durch die ganze Kette: im fertigen iCal darf keine Zeile entstehen, die nicht
+    # von uns stammt — jede Folgezeile ist entweder eine bekannte Eigenschaft oder eine
+    # Faltung (führendes Leerzeichen).
+    ics = k.als_ical([{"art": "ortstermin", "datum": "2026-09-30", "label": "Ortstermin",
+                       "quelle": "unterlagen", "beleg": gemein}], gemein, "x")
+    erlaubt = ("BEGIN:", "END:", "UID:", "DTSTAMP:", "DTSTART", "DTEND", "SUMMARY:",
+               "DESCRIPTION:", "VERSION:", "PRODID:", "CALSCALE:", "METHOD:", " ")
+    for zeile in ics.split("\r\n"):
+        if zeile:
+            assert zeile.startswith(erlaubt), f"eingeschleuste Zeile im Feed: {zeile!r}"
+
+    wurzel = Path(__file__).resolve().parent.parent
+    p = subprocess.run(["node", str(wurzel / "web" / "scripts" / "pruefe-ical-faltung.mjs")],
+                       capture_output=True, text=True)
+    assert p.returncode == 0, f"die ausgelieferte JS-Fassung maskiert falsch:\n{p.stdout}{p.stderr}"

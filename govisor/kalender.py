@@ -274,7 +274,23 @@ def _falte(zeile: str) -> str:
     return "\r\n ".join(teile)
 
 
+_STEUERZEICHEN = re.compile(r"[\x00-\x08\x0b\x0c\x0e-\x1f\x7f]")
+
+
 def _escape(s: str) -> str:
-    """RFC 5545: Komma, Semikolon, Backslash und Zeilenumbruch müssen maskiert werden."""
-    return (str(s).replace("\\", "\\\\").replace(";", r"\;")
-            .replace(",", r"\,").replace("\n", r"\n").replace("\r", ""))
+    """RFC 5545 §3.3.11: Komma, Semikolon, Backslash und Zeilenumbruch maskieren.
+
+    ⚠ JEDE Umbruchform, auch ein einzelnes ``\r``. In iCal trennt CRLF die Zeilen, und
+    nachsichtige Kalenderprogramme brechen schon am blossen CR um — der Rest des Textes
+    stuende dann als eigene Eigenschaft im Termin. Die Titel und Belege stammen aus
+    fremden Ausschreibungsunterlagen; was von dort kommt, darf keine Zeilen erzeugen.
+
+    Steuerzeichen fallen weg (HTAB bleibt): der TEXT-Typ des Standards laesst sie nicht
+    zu, und aus PDF-Extraktion kommen sie regelmaessig mit.
+
+    ⚠ Die Schwester dieser Funktion steht in `web/lib/ical.js` und liefert den Feed aus,
+    den Nutzer wirklich abonnieren. Wer hier eine Regel aendert, aendert beide.
+    """
+    t = (str(s).replace("\\", "\\\\").replace(";", r"\;").replace(",", r"\,")
+         .replace("\r\n", r"\n").replace("\r", r"\n").replace("\n", r"\n"))
+    return _STEUERZEICHEN.sub("", t)

@@ -12,9 +12,29 @@
  * ändert, ändert beide — ausgeliefert wird DIESE.
  */
 
-/** RFC 5545 §3.3.11: Komma, Semikolon, Backslash und Zeilenumbruch maskieren. */
+/**
+ * RFC 5545 §3.3.11: Komma, Semikolon, Backslash und Zeilenumbruch maskieren.
+ *
+ * ⚠ EIN EINZELNES CR IST AUCH EIN ZEILENUMBRUCH. Die vorige Fassung suchte `\r?\n` — ein
+ * `\r` OHNE folgendes `\n` lief damit ungefiltert in die Ausgabe. In iCal trennt CRLF die
+ * Zeilen, und nachsichtige Kalenderprogramme brechen schon am blossen CR um: der Rest des
+ * Titels stuende dann als EIGENE Eigenschaft im Termin. Wer einen Text in unsere Daten
+ * bekommt — und die Titel und Belege stammen aus fremden Ausschreibungsunterlagen —, kann
+ * so eigene iCal-Felder in den Kalender eines Nutzers schreiben.
+ *
+ * Im Bestand kommt es heute NICHT vor (2026-08-27 ueber alle Kalender- und Lead-Dateien
+ * geprueft: 0 Treffer). Das ist der Grund, es jetzt zu schliessen und nicht spaeter: es
+ * gibt nichts zu reparieren, nur etwas zu verhindern.
+ *
+ * Dazu fallen Steuerzeichen weg. Der TEXT-Typ des Standards laesst ausser HTAB keine zu,
+ * und aus PDF-Extraktion kommen sie regelmaessig mit (das Projekt hatte schon einmal
+ * literale 0x08-Bytes im Quelltext).
+ */
 export function esc(s) {
-  return String(s).replace(/([,;\\])/g, "\\$1").replace(/\r?\n/g, "\\n");
+  return String(s)
+    .replace(/([,;\\])/g, "\\$1")
+    .replace(/\r\n|\r|\n/g, "\\n")
+    .replace(/[\x00-\x08\x0b\x0c\x0e-\x1f\x7f]/g, "");
 }
 
 /**

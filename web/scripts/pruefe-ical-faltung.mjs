@@ -51,7 +51,25 @@ pruefe("Komma und Semikolon werden maskiert", esc("a,b;c") === "a\\,b\\;c");
 pruefe("Backslash wird verdoppelt", esc("a\\b") === "a\\\\b");
 pruefe("Zeilenumbruch wird zu \\n", esc("a\r\nb") === "a\\nb");
 
-// 5) Grenzfall: genau 75 und genau 76 Oktett.
+// 5) ⚠ EINSCHLEUSEN VON iCal-EIGENSCHAFTEN. Ein einzelnes CR ohne folgendes LF ist auch ein
+//    Zeilenumbruch; nachsichtige Kalenderprogramme brechen daran um. Die Titel und Belege
+//    stammen aus fremden Ausschreibungsunterlagen — was von dort kommt, darf im Feed keine
+//    eigene Zeile erzeugen, sonst schreibt ein fremder Text eigene Felder in den Kalender
+//    eines Nutzers.
+pruefe("einzelnes CR bricht keine Zeile",
+  !/[\r\n]/.test(esc("Zeile1\rSUMMARY:Eingeschmuggelt")));
+pruefe("einzelnes CR wird zu \\n", esc("a\rb") === "a\\nb");
+pruefe("Steuerzeichen fallen weg", esc("Seite1\fSeite2\bx") === "Seite1Seite2x");
+pruefe("Tabulator bleibt erhalten", esc("a\tb") === "a\tb");
+//    Und die ganze Kette: gefaltet darf ebenfalls keine fremde Zeile entstehen.
+{
+  const gemein = falte("SUMMARY:" + esc("Turnhalle\rATTENDEE:mailto:fremd@example.org"));
+  const zeilen = gemein.split("\r\n");
+  pruefe("gefaltet entsteht keine fremde Eigenschaft",
+    zeilen.slice(1).every((z) => z.startsWith(" ")));
+}
+
+// 6) Grenzfall: genau 75 und genau 76 Oktett.
 pruefe("genau 75 Oktett bleibt eine Zeile", falte("A".repeat(75)).split("\r\n").length === 1);
 pruefe("76 Oktett werden zwei Zeilen", falte("A".repeat(76)).split("\r\n").length === 2);
 
