@@ -1,5 +1,6 @@
 import "server-only";
 import { clientIp } from "./clientIp";
+import { rateLimit } from "./rateLimitCore";
 
 /**
  * Einfacher In-Memory-Fixed-Window-Rate-Limiter — Kosten-/Abuse-Bremse für teure Endpunkte
@@ -7,20 +8,12 @@ import { clientIp } from "./clientIp";
  * einfach für die Pre-Launch-Phase — eine verteilte, exakte Quote gehört an den User/das Billing,
  * wenn PAYWALL_ENFORCED live geht, s. govisor/docsafety.py FREE_ANALYSES_PER_MONTH).
  */
-type Bucket = { count: number; resetAt: number };
-const store = new Map<string, Bucket>();
-
-export function rateLimit(key: string, limit: number, windowMs: number): { ok: boolean; retryAfter: number } {
-  const now = Date.now();
-  const b = store.get(key);
-  if (!b || now >= b.resetAt) {
-    store.set(key, { count: 1, resetAt: now + windowMs });
-    return { ok: true, retryAfter: 0 };
-  }
-  if (b.count >= limit) return { ok: false, retryAfter: Math.ceil((b.resetAt - now) / 1000) };
-  b.count++;
-  return { ok: true, retryAfter: 0 };
-}
+/* ⚠ Der Zaehler liegt in `lib/rateLimitCore.js` — Plain JS, aus demselben Grund wie
+ * `clientIp.js`: diese Datei traegt `server-only` und ist fuer `node` unladbar, ein Test
+ * muesste die Zaehlregel abschreiben. `darfNoch` sieht nach OHNE zu verbrauchen; das
+ * braucht `/api/lead-docs`, wo eine ungueltige Anfrage sonst die Quote fuer alle
+ * verbraucht, ohne eine einzige Analyse auszuloesen. */
+export { rateLimit, darfNoch } from "./rateLimitCore";
 
 /* ⚠ Die Herkunft liegt in `lib/clientIp.js` — Plain JS, damit `node` sie laden und
  * `web/scripts/pruefe-herkunft.mjs` die ECHTE Fassung pruefen kann. Diese Datei traegt

@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { mkdir, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { spawn } from "node:child_process";
-import { rateLimit, clientIp } from "@/lib/rateLimit";
+import { rateLimit, darfNoch, clientIp } from "@/lib/rateLimit";
 
 // Kosten-/Abuse-Bremse für die (teure) LLM-Analyse: pro IP und global gedeckelt.
 const WINDOW_MS = 10 * 60 * 1000;   // 10-Minuten-Fenster
@@ -48,14 +48,24 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "ungültige id" }, { status: 400 });
   }
   // Rate-Limit VOR der teuren Analyse — pro IP und global (LLM-Kostenbremse).
+  //
+  // ⚠ HIER WIRD NUR NACHGESEHEN, NICHT VERBRAUCHT. Bis zum 2026-08-27 zählte diese Stelle
+  // mit — vor dem Einlesen der Datei und vor jeder Gültigkeitsprüfung. Eine Anfrage ohne
+  // Datei, mit falschem Typ oder zu grosser Datei bekam ihr 400 und hatte den Zähler
+  // trotzdem verbraucht. Weil daneben ein GLOBALER Deckel steht, konnte ein angemeldeter
+  // Nutzer mit 40 leeren Anfragen die Dokumentanalyse für ALLE anderen zehn Minuten lang
+  // sperren, ohne eine einzige Analyse auszulösen — und ein kaputter Client, der stur
+  // wiederholt, richtet dasselbe an, ohne es zu wollen.
+  //
+  // Verbraucht wird unten, unmittelbar bevor die Pipeline anläuft. Gezählt gehört, was man
+  // schützen will: der teure Lauf, nicht die Anfrage.
   const ip = clientIp(req);
-  const gl = rateLimit("leaddocs:global", GLOBAL, WINDOW_MS);
-  const perIp = rateLimit(`leaddocs:ip:${ip}`, PER_IP, WINDOW_MS);
-  if (!perIp.ok || !gl.ok) {
-    const retry = Math.max(perIp.retryAfter, gl.retryAfter);
+  const vorab = [darfNoch("leaddocs:global", GLOBAL), darfNoch(`leaddocs:ip:${ip}`, PER_IP)];
+  const zuViel = vorab.find((r) => !r.ok);
+  if (zuViel) {
     return NextResponse.json(
-      { error: "Zu viele Analysen — bitte später erneut.", retryAfter: retry },
-      { status: 429, headers: { "retry-after": String(retry) } });
+      { error: "Zu viele Analysen — bitte später erneut.", retryAfter: zuViel.retryAfter },
+      { status: 429, headers: { "retry-after": String(zuViel.retryAfter) } });
   }
   let file: File | null = null;
   try {
@@ -77,6 +87,16 @@ export async function POST(req: Request) {
   const dir = path.join(ROOT, "data", "docs", "DE", id);
   await mkdir(dir, { recursive: true });
   await writeFile(path.join(dir, safe), Buffer.from(await file.arrayBuffer()));
+
+  // Jetzt ist die Anfrage gültig und die Datei liegt — ab hier kostet es. Zählen.
+  const gl = rateLimit("leaddocs:global", GLOBAL, WINDOW_MS);
+  const perIp = rateLimit(`leaddocs:ip:${ip}`, PER_IP, WINDOW_MS);
+  if (!gl.ok || !perIp.ok) {
+    const retry = Math.max(gl.retryAfter, perIp.retryAfter);
+    return NextResponse.json(
+      { error: "Zu viele Analysen — bitte später erneut.", retryAfter: retry },
+      { status: 429, headers: { "retry-after": String(retry) } });
+  }
 
   try {
     return NextResponse.json(await runPipeline(id, buyer));

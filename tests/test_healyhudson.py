@@ -1662,3 +1662,47 @@ def test_die_herkunft_ist_nicht_vom_aufrufer_waehlbar():
     # das keine Route anfasst.
     rl = (ROOT / "web" / "lib" / "rateLimit.ts").read_text(encoding="utf-8")
     assert 'from "./clientIp"' in rl, "rateLimit.ts bestimmt die Herkunft wieder selbst"
+
+
+def test_ungueltige_anfragen_verbrauchen_die_analyse_quote_nicht():
+    """Gezählt gehört, was man schützen will — der teure Lauf, nicht die Anfrage.
+
+    `/api/lead-docs` prüfte die Quote ganz am Anfang, vor dem Einlesen der Datei und vor
+    jeder Gültigkeitsprüfung. Eine Anfrage ohne Datei, mit falschem Dateityp oder zu grosser
+    Datei bekam ihr 400 und hatte den Zähler trotzdem verbraucht. Neben der IP-Quote steht
+    dort ein GLOBALER Deckel (40 Analysen je 10 Minuten): ein angemeldeter Nutzer konnte
+    damit die Dokumentanalyse für ALLE anderen zehn Minuten lang sperren, ohne eine einzige
+    Analyse auszulösen. Ein kaputter Client, der stur wiederholt, richtet dasselbe an, ohne
+    es zu wollen.
+
+    ⚠ Der Fehler sieht nicht wie einer aus: die Route antwortet völlig korrekt mit 400. Sie
+    nimmt nur nebenbei allen anderen das Kontingent weg.
+
+    Geprüft wird beides: die Zählregel selbst (über `node`, an der ECHTEN Fassung) und die
+    REIHENFOLGE in der Route — denn genau die ist hier das Verhalten.
+    """
+    import re
+    import subprocess
+
+    skript = ROOT / "web" / "scripts" / "pruefe-ratenbremse.mjs"
+    p = subprocess.run(["node", str(skript)], capture_output=True, text=True)
+    assert p.returncode == 0, f"der Zaehler verhaelt sich falsch:\n{p.stdout}{p.stderr}"
+
+    quelle = (ROOT / "web" / "app" / "api" / "lead-docs" / "route.ts").read_text(encoding="utf-8")
+    stelle = {name: quelle.find(name) for name in ("darfNoch(", "formData(")}
+    # ⚠ `rfind`, nicht `find`: `runPipeline(id` steht auch in der Funktionsdefinition ganz
+    # oben in der Datei. Gegen die zu messen hiesse, den Aufruf zu verfehlen — der Test
+    # waere rot, obwohl die Reihenfolge stimmt.
+    stelle["runPipeline(id"] = quelle.rfind("runPipeline(id")
+    verbrauch = [m.start() for m in re.finditer(r"\brateLimit\(", quelle)]
+    for name, pos in stelle.items():
+        assert pos > 0, f"{name} kommt in der Route gar nicht mehr vor"
+    assert verbrauch, "die Route verbraucht die Quote nicht mehr — dann deckelt sie nichts"
+
+    assert stelle["darfNoch("] < stelle["formData("], \
+        "die Quote wird nicht mehr vorab geprueft — eine erschoepfte Quote laedt erst die Datei hoch"
+    assert min(verbrauch) > stelle["formData("], \
+        "die Quote wird wieder VOR der Gueltigkeitspruefung verbraucht: eine ungueltige " \
+        "Anfrage nimmt allen anderen das Kontingent weg"
+    assert max(verbrauch) < stelle["runPipeline(id"], \
+        "die Quote wird nicht mehr vor dem teuren Lauf verbraucht"
