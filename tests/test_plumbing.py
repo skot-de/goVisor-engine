@@ -2206,18 +2206,34 @@ def test_dichte_regel_ist_eine_quelle_und_wird_beim_klick_festgehalten():
 def test_dichte_zaehlt_nicht_einfach_vorhandene_felder():
     """Ein naives Zählen führt in die Irre — und das ist gemessen, nicht vermutet.
 
-    Einen Unterlagen-LINK haben 74,6 % der Leads, Lose 56,0 % — beides sagt nichts darüber,
-    ob man die Vergabe beurteilen kann. Das einzige Merkmal, das das bedeutet, ist „Signale
-    aus den Unterlagen gelesen": 20,5 %. Eine Punktzahl hätte diese eine wichtige
-    Eigenschaft unter fünf billigen begraben.
+    Einen Unterlagen-LINK haben die meisten Leads, Lose viele — beides sagt nichts darüber,
+    ob man die Vergabe beurteilen kann. Eine Punktzahl hätte die eine wichtige Eigenschaft
+    unter fünf billigen begraben.
+
+    ⚠ Dieser Test nagelte bis zum 2026-08-26 den HELFERNAMEN `unterlagenAusgewertet` fest.
+    Er brach beim ersten legitimen Umbau, ohne etwas über das Verhalten zu sagen — dieselbe
+    Falle wie beim Wächter der Budgetbremse (F1 des Fallenkatalogs, Variante „Test zählt
+    Quelltext mit"). Geprüft wird jetzt die EIGENSCHAFT: die Stufe delegiert, statt Felder
+    selbst abzuzählen.
+
+    ⚠ Und die Grenze dieses Tests gehört dazu: Python kann kein TypeScript ausführen. Das
+    Verhalten sichert `web/scripts/pruefe-dichte.mjs` — dort steht die Invariante, dass
+    „reich" nur gelten darf, wo der Volltext wirklich vorliegt.
     """
     d = (ROOT_WEB() / "lib" / "dichte.ts").read_text(encoding="utf-8")
-    assert "unterlagenAusgewertet" in d, "die entscheidende Frage braucht einen eigenen Namen"
-    # `unterlagen` (der blosse Link) darf die Stufe NICHT bestimmen.
     kern = d.split("export function dichte")[1].split("export function merkmale")[0]
-    assert "unterlagen" not in kern.replace("unterlagenAusgewertet", ""), \
-        "der Unterlagen-LINK darf die Dichte nicht bestimmen — er sagt nichts ueber den Inhalt"
+    # Kommentare raus: sie duerfen die Felder nennen, der Code nicht (Falle F1).
+    import re as _re
+    code = _re.sub(r"//[^\n]*", "", kern)
 
+    roh = [f for f in (".eignung", ".zertifikate", ".bindefristTage", ".buergschaft",
+                       ".lose", ".frist", ".hasDetail", ".url") if f in code]
+    assert not roh, (f"die Stufe greift direkt auf Felder zu ({', '.join(roh)}) — sie soll "
+                     f"delegieren, sonst ist sie wieder eine Punktzahl in Verkleidung")
+
+    # Der bloße LINK darf die Stufe nicht bestimmen; die Tatsache „Volltext liegt vor" schon.
+    assert "volltext" in code.lower(), \
+        "die Stufe muss die Tatsache heranziehen, ob der Volltext bei uns liegt"
 
 def ROOT_WEB():
     import pathlib
