@@ -1039,6 +1039,23 @@ function renderDocs(l){
                  auf_anfrage: tk("Unterlagen gibt es nur auf Anfrage"),
                  kostenpflichtig: tk("Unterlagen sind kostenpflichtig")};
     const zugang = ZUG[u.access] ? `<p class="va-zugang va-zugang-${u.access}">${ZUG[u.access]}</p>` : '';
+    /* ⚠ WIR HABEN DIE UNTERLAGEN SCHON, SAGTEN ES ABER NICHT.
+       `unterlagen.gelesen` (seit 2026-08-25) sagt, ob der Volltext bei UNS liegt —
+       `access` sagt nur, was die Quelle anbietet. Ohne diese Trennung landete jeder Lead
+       mit vorhandenem Volltext, aber noch ohne Auswertung, im Aufforderungs-Zweig „Hier
+       hochladen (ZIP/PDF)". Gemessen am 2026-08-25: 1.154 von 5.899 offenen Leads mit
+       Volltext. Der Nutzer wurde also gebeten, uns etwas zu schicken, das wir hatten. */
+    if (u.gelesen) return `<section class="sec va-empty">
+      <h4>${tk("Vergabe-Analyse")}<span class="cov">${tk("Unterlagen liegen vor")}</span></h4>
+      <p class="va-sum">${tk("Die Vergabeunterlagen liegen uns bereits vor. Die Auswertung steht noch aus und erscheint hier, sobald sie durchgelaufen ist.")}</p>
+      <p class="va-eigen">${dl}${zugang}</p>
+      <p class="va-sum va-eigen-hint">${tk("Du kannst nicht warten? Lade deine eigene Fassung hoch, dann wird sie sofort ausgewertet.")}</p>
+      <ol class="va-steps">
+        <li><span class="va-step-n">1</span><div><button class="va-upload-btn" data-uploaddocs="${l.id}">${tk("Hier hochladen (ZIP/PDF)")}</button></div></li>
+        <li><span class="va-step-n">2</span><div class="va-step-res">${tk("Ampel + Checkliste erscheinen automatisch")}</div></li>
+      </ol>
+      <div class="va-status" data-upstatus="${l.id}"></div>
+    </section>`;
     return `<section class="sec va-empty">
       <h4>${tk("Vergabe-Analyse")}<span class="cov">${tk("aus euren Unterlagen")}</span></h4>
       <p class="va-sum">${tk("Aus den Vergabeunterlagen machen wir in Sekunden eine")}<b>${tk("Ampel-Einschätzung")}</b>${tk(", eine abhakbare")}<b>${tk("Bieter-Checkliste")}</b>${tk("(K.o.-Kriterien, Eignungsnachweise, Zuschlagsgewichte) und")}<b>${tk("füllen Firmenangaben vor")}</b>.</p>
