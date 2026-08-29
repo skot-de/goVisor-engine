@@ -309,7 +309,8 @@ def _dateien(wurzel: pathlib.Path) -> dict[str, list[pathlib.Path]]:
 
 
 def sonde_frische(zeige_offen: bool = False,
-                  wurzel: pathlib.Path = GOLD) -> list[str]:
+                  wurzel: pathlib.Path = GOLD,
+                  web_wurzel: pathlib.Path | None = None) -> list[str]:
     """Welche Gold-Datei haengt gegenueber dem Lauf ihres Landes zurueck?
 
     Bezug ist die NEUESTE Datei DESSELBEN Landes, nicht die Uhr: der Lauf kann
@@ -380,8 +381,19 @@ def sonde_frische(zeige_offen: bool = False,
         kinder = [f for f in pfad.rglob("*") if f.is_file()]
         return max((f.stat().st_mtime for f in kinder), default=None)
 
-    web = {p.name: t for p in sorted(WEB.iterdir())
-           if (t := _stand(p)) is not None} if WEB.is_dir() else {}
+    # ⚠ NICHT ALLES IN `web/data` IST UNSER. macOS legt dort `.DS_Store` ab, sobald jemand
+    # den Ordner im Finder oeffnet — die Datei altert dann vor sich hin und meldete sich am
+    # 2026-08-29 als „haengt 3.8 Tage zurueck, wer baut das?". Niemand baut das, und die
+    # Frage hat keine Antwort. Ein Fehlalarm in einer Sonde ist teurer als anderswo: er
+    # gewoehnt einen daran, ihre Meldungen zu ueberfliegen.
+    # ⚠ AUCH DIE WEB-HAELFTE MUSS PRUEFBAR SEIN. `wurzel` war fuer das Gold da, mit der
+    # Begruendung oben im Docstring — die Web-Haelfte las trotzdem fest `WEB`. Damit hing
+    # jeder synthetische Sonde-1-Test zusaetzlich an der ECHTEN Datenlage: am 2026-08-29
+    # wurden drei davon rot, weil die Dokumentanalyse seit vier Tagen stillstand. Der
+    # Befund war richtig, die Tests hatten damit nur nichts zu tun.
+    ziel_web = web_wurzel if web_wurzel is not None else WEB
+    web = {p.name: t for p in sorted(ziel_web.iterdir())
+           if not p.name.startswith(".") and (t := _stand(p)) is not None} if ziel_web.is_dir() else {}
     if web:
         neuestes_web = max(web.values())
         for name, t in sorted(web.items()):

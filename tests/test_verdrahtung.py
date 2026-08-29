@@ -29,6 +29,19 @@ _spec.loader.exec_module(pv)
 TAG = 86400
 
 
+def _leeres_web(tmp_path):
+    """Ein leeres `web/data` fuer die Gold-Tests.
+
+    ⚠ Ohne das scannt `sonde_frische` zusaetzlich das ECHTE `web/data` — und dann haengt
+    ein synthetischer Test an der Datenlage der Maschine. Am 2026-08-29 wurden drei Tests
+    rot, weil die Dokumentanalyse seit vier Tagen stillstand: der Befund stimmte, die
+    Tests hatten damit nur nichts zu tun.
+    """
+    d = tmp_path / "leeres-web"
+    d.mkdir(exist_ok=True)
+    return d
+
+
 def _gold(tmp_path, dateien: dict[str, dict[str, float]]) -> pathlib.Path:
     """Kuenstliche Gold-Ebene: {land: {tabelle: alter_in_tagen}}.
 
@@ -50,26 +63,26 @@ def _gold(tmp_path, dateien: dict[str, dict[str, float]]) -> pathlib.Path:
 def test_frische_findet_die_stehengebliebene_datei(tmp_path):
     """Der Fall lead_lot/lead_text: alles taeglich, einer haengt zehn Tage zurueck."""
     w = _gold(tmp_path, {"DE": {"lead_export": 0, "lead_lot": 10}})
-    fehler = pv.sonde_frische(wurzel=w)
+    fehler = pv.sonde_frische(wurzel=w, web_wurzel=_leeres_web(tmp_path))
     assert len(fehler) == 1 and "lead_lot" in fehler[0]
 
 
 def test_frische_schweigt_bei_taeglichem_bestand(tmp_path):
     w = _gold(tmp_path, {"DE": {"lead_export": 0, "lead_lot": 0.5}})
-    assert pv.sonde_frische(wurzel=w) == []
+    assert pv.sonde_frische(wurzel=w, web_wurzel=_leeres_web(tmp_path)) == []
 
 
 def test_frische_akzeptiert_eine_begruendete_ausnahme(tmp_path):
     """`succession_llm_edges` laeuft von Hand — 25 Tage sind dort kein Befund."""
     w = _gold(tmp_path, {"DE": {"lead_export": 0, "succession_llm_edges": 25}})
-    assert pv.sonde_frische(wurzel=w) == []
+    assert pv.sonde_frische(wurzel=w, web_wurzel=_leeres_web(tmp_path)) == []
 
 
 def test_frische_findet_ein_ganz_stehengebliebenes_land(tmp_path):
     """Ohne diese Pruefung wandert der Bezugspunkt mit: baut AT gar nichts mehr,
     ist AT trotzdem in sich konsistent und faellt nicht auf."""
     w = _gold(tmp_path, {"DE": {"lead_export": 0}, "AT": {"lead_export": 9, "lead_lot": 9}})
-    fehler = pv.sonde_frische(wurzel=w)
+    fehler = pv.sonde_frische(wurzel=w, web_wurzel=_leeres_web(tmp_path))
     assert any("Land AT" in f for f in fehler)
 
 
@@ -209,7 +222,7 @@ def test_pfade_zaehlt_docstrings_und_kommentare_nicht_mit(tmp_path, monkeypatch)
     assert pv.sonde_pfade() == []
 
 
-def test_sonde_1_sieht_auch_die_frontend_daten(tmp_path, monkeypatch):
+def test_sonde_1_sieht_auch_die_frontend_daten(tmp_path):
     """`firma-profiles.json` war 23 Tage alt und von keiner Sonde gedeckt."""
     gold = _gold(tmp_path, {"DE": {"lead_export": 0}})
     web = tmp_path / "web" / "data"
@@ -219,8 +232,7 @@ def test_sonde_1_sieht_auch_die_frontend_daten(tmp_path, monkeypatch):
         f = web / name
         f.write_text("{}")
         os.utime(f, (jetzt - alter * TAG, jetzt - alter * TAG))
-    monkeypatch.setattr(pv, "WEB", web)
-    fehler = pv.sonde_frische(wurzel=gold)
+    fehler = pv.sonde_frische(wurzel=gold, web_wurzel=web)
     assert any("vergessen.json" in f for f in fehler)
 
 
