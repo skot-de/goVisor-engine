@@ -89,3 +89,74 @@ def test_die_auffaelligkeiten_zaehlen_den_zeitraum_nicht_das_ganze_buch(tmp_path
     kb.abgleich()
     aus = capsys.readouterr().out
     assert "1 leere Antwort(en)" in aus, f"nur die eine seit der Marke: {aus}"
+
+
+def _stand_modul():
+    """`scripts/dokumente_stand.py` laden — es ist ein Skript, kein Paket."""
+    import importlib.util
+    from pathlib import Path
+
+    wurzel = Path(__file__).resolve().parent.parent
+    spec = importlib.util.spec_from_file_location("ds", wurzel / "scripts" / "dokumente_stand.py")
+    m = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(m)
+    return m
+
+
+def test_hochrechnung_nimmt_den_bezahlten_preis_je_vorgang(tmp_path, monkeypatch):
+    """Der Dokumenten-Stand rechnet hoch, was ein Nachholen kosten würde — und nach dieser
+    Zahl entscheidet jemand, ob er Guthaben auflädt.
+
+    Bis zum 2026-08-29 rechnete sie mit einem festen Listenpreis (0,30 $ je Mio
+    Eingabe-Token) und liess die Ausgabe-Token ausdrücklich weg, während daneben das
+    Kostenbuch mit dem abgerechneten Betrag lag. Gemessen über 16.140 echte Aufrufe:
+    tatsächlich 0,64 $ je Mio Eingabe plus 56,7 Mio Ausgabe-Token. Die Hochrechnung lag um
+    **Faktor 3,6** zu niedrig — 11 $ statt 40 $. Wer ihr glaubt, lädt ein Viertel des
+    Nötigen auf und wundert sich, warum der Lauf steht.
+
+    ⚠ Gerechnet wird je VORGANG, nicht je Aufruf. Eine Vergabe kostet mehrere Aufrufe,
+    einen je Dokumentgattung. Wer je Aufruf hochrechnet, liegt um diesen Faktor daneben —
+    deshalb prüft der Test genau das.
+    """
+    import json
+
+    from govisor import kostenbuch
+
+    buch = tmp_path / "llm_kosten.jsonl"
+    zeilen = [
+        # zwei Vorgaenge, sechs Aufrufe, zusammen 1,20 $ → 0,60 $ je Vorgang
+        *[{"ts": "2026-08-27T10:00:00+00:00", "zweck": "analyse", "vorgang": "A",
+           "kosten_usd": 0.10} for _ in range(3)],
+        *[{"ts": "2026-08-27T10:01:00+00:00", "zweck": "analyse", "vorgang": "B",
+           "kosten_usd": 0.30} for _ in range(3)],
+        # fremder Zweck und Nullbetrag duerfen den Schnitt nicht verschieben
+        {"ts": "2026-08-27T10:02:00+00:00", "zweck": "nachfolge", "vorgang": "C",
+         "kosten_usd": 99.0},
+        {"ts": "2026-08-27T10:03:00+00:00", "zweck": "analyse", "vorgang": "D",
+         "kosten_usd": 0.0},
+    ]
+    buch.write_text("\n".join(json.dumps(z) for z in zeilen) + "\n", encoding="utf-8")
+    monkeypatch.setattr(kostenbuch, "PFAD", buch)
+
+    preis, herkunft = _stand_modul()._preis_je_vorgang()
+    assert preis == pytest.approx(0.60), \
+        f"je Aufruf statt je Vorgang gerechnet (waere 0,20 $) — bekommen: {preis}"
+    assert "bezahlt" in herkunft and "2 Vorgaengen" in herkunft, \
+        "die Ausgabe sagt nicht mehr, dass die Zahl gemessen und nicht geschaetzt ist"
+
+
+def test_ohne_kostenbuch_wird_ehrlich_geschaetzt(tmp_path, monkeypatch):
+    """Kein Buch heisst „ich weiss es nicht" — nicht „es war umsonst".
+
+    Der Aufrufer faellt dann auf den sichtbaren Listenpreis zurueck. Wichtig ist nur, dass
+    er das SAGT: eine geschaetzte Zahl, die aussieht wie eine gemessene, ist schlimmer als
+    gar keine.
+    """
+    from govisor import kostenbuch
+
+    monkeypatch.setattr(kostenbuch, "PFAD", tmp_path / "gibt-es-nicht.jsonl")
+    preis, herkunft = _stand_modul()._preis_je_vorgang()
+    assert preis is None and herkunft == ""
+
+    quelle = (ROOT / "scripts" / "dokumente_stand.py").read_text(encoding="utf-8")
+    assert "geschaetzt" in quelle, "der Rueckfall kennzeichnet sich nicht mehr als Schaetzung"

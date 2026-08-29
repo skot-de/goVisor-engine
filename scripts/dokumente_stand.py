@@ -47,6 +47,46 @@ def lade(name: str) -> set:
     return set()
 
 
+def _preis_je_vorgang() -> tuple[float | None, str]:
+    """Was ein analysierter Vorgang WIRKLICH gekostet hat — aus dem Kostenbuch.
+
+    ``(None, "")``, wenn das Kostenbuch nichts hergibt; dann faellt der Aufrufer auf den
+    Listenpreis zurueck und sagt in der Ausgabe, dass geschaetzt wird.
+
+    ⚠ Gerechnet wird je VORGANG, nicht je Aufruf. Eine Vergabe kostet mehrere Aufrufe
+    (einen je Dokumentgattung), gemessen rund vier — wer je Aufruf hochrechnet, liegt um
+    diesen Faktor daneben.
+
+    ⚠ Das Kostenbuch reicht nur so weit zurueck, wie es aufbewahrt wird (90 Tage bzw.
+    32 MB, s. `govisor/kostenbuch.py`). Fuer einen Durchschnittspreis genuegt das; als
+    Gesamtsumme des Projekts taugt es nicht, und deshalb steht hier auch keine.
+    """
+    try:
+        import sys
+        sys.path.insert(0, str(ROOT))
+        from govisor import kostenbuch
+    except Exception:                                       # noqa: BLE001
+        return None, ""
+    summe = 0.0
+    vorgaenge: set[str] = set()
+    try:
+        for zeile in kostenbuch.lies():
+            if zeile.get("zweck") != "analyse":
+                continue
+            betrag = zeile.get("kosten_usd")
+            if not isinstance(betrag, (int, float)) or betrag <= 0:
+                continue
+            summe += float(betrag)
+            v = zeile.get("vorgang")
+            if v:
+                vorgaenge.add(str(v))
+    except Exception:                                       # noqa: BLE001
+        return None, ""
+    if not vorgaenge or summe <= 0:
+        return None, ""
+    return summe / len(vorgaenge), f"bezahlt, gemessen an {len(vorgaenge):,} Vorgaengen"
+
+
 def main() -> int:
     con = duckdb.connect()
     le = (G / "lead_export.parquet").as_posix()
@@ -96,9 +136,20 @@ def main() -> int:
     #     "token_cost": round(sent_chars / CHARS_PER_TOKEN)
     # also die geschaetzte Zahl GESENDETER Token je Vorgang.
     #
-    # Umgerechnet wird mit einem hier sichtbaren Preis, nicht mit einem versteckten:
-    # wer das Modell wechselt, muss diese Zeile anfassen, und dann faellt ihm auf, dass
-    # er sie anfassen muss.
+    # ⚠ EIN SICHTBARER PREIS IST BESSER ALS EIN VERSTECKTER — UND EIN GEMESSENER BESSER
+    # ALS BEIDE. Hier stand bis zum 2026-08-29 ein fester Listenpreis, und daneben lag die
+    # ganze Zeit das Kostenbuch mit dem, was wirklich abgerechnet wurde. Gemessen ueber
+    # 16.140 echte Analyse-Aufrufe:
+    #
+    #     angenommen   0,30 $ je Mio Eingabe-Token, Ausgabe ausdruecklich nicht enthalten
+    #     bezahlt      0,64 $ je Mio Eingabe-Token, plus 56,7 Mio Ausgabe-Token
+    #     → die Hochrechnung lag um Faktor 3,6 zu niedrig (11 $ statt 40 $)
+    #
+    # Das ist genau die Zahl, nach der jemand entscheidet, ob er Guthaben auflaedt. Wer ihr
+    # glaubt, laedt ein Viertel des Noetigen auf und wundert sich, warum der Lauf steht.
+    #
+    # Der Listenpreis bleibt als Rueckfall, wenn das Kostenbuch nichts hergibt — dann sagt
+    # die Ausgabe aber dazu, dass geschaetzt wird.
     PREIS_JE_MIO_EINGABE = 0.30   # google/gemini-2.5-flash, Stand 2026-08 (OpenRouter)
     ana = W / "doc-analysis.json"
     if not ana.exists():
@@ -110,9 +161,13 @@ def main() -> int:
         print(f"\n  Analysierte Vorgaenge: {len(d):,} · keine Token-Angabe im Ergebnis")
         return 0
     summe = sum(tok)
-    kosten = summe / 1e6 * PREIS_JE_MIO_EINGABE
-    print(f"\n  Analysiert: {len(d):,} Vorgaenge · {summe/1e6:.1f} Mio Token "
-          f"· ~{kosten:.2f} $ (Eingabe, {PREIS_JE_MIO_EINGABE} $/Mio)")
+    je_vorgang, herkunft = _preis_je_vorgang()
+    if je_vorgang is None:                       # kein Kostenbuch → ehrlich schaetzen
+        je_vorgang = summe / len(tok) / 1e6 * PREIS_JE_MIO_EINGABE
+        herkunft = (f"geschaetzt, {PREIS_JE_MIO_EINGABE} $/Mio Eingabe, "
+                    f"OHNE Ausgabe-Token")
+    print(f"\n  Analysiert: {len(d):,} Vorgaenge · {summe/1e6:.1f} Mio Eingabe-Token")
+    print(f"  Kosten je Vorgang: {je_vorgang:.4f} $ ({herkunft})")
     # ⚠ ZWEI ZAHLEN, WEIL NUR EINE DAVON BEZAHLT WIRD. Hier stand bis zum 2026-08-25
     # allein `len(zips - d)` — also JEDER Vorgang mit ZIP ohne Auswertung, samt
     # abgelaufener Frist. Der Produktionslauf faehrt aber mit `NUR_OFFENE=1` und ruehrt
@@ -121,15 +176,11 @@ def main() -> int:
     # eine Zahl, die nur erschreckt.
     rest_offen = len(offen & zips - set(d))
     rest_zu = len(zips - set(d)) - rest_offen
-    if tok:
-        je = summe / len(tok) / 1e6 * PREIS_JE_MIO_EINGABE
-        print(f"  Noch offen: {rest_offen:,} Vorgaenge mit laufender Frist "
-              f"→ hochgerechnet ~{rest_offen * je:.2f} $")
-        if rest_zu:
-            print(f"  Dazu {rest_zu:,} mit abgelaufener Frist (~{rest_zu * je:.2f} $) — "
-                  f"die faehrt der Lauf mit NUR_OFFENE=1 nicht an.")
-    print("  Die Ausgabe-Token kommen dazu; sie sind hier NICHT enthalten, weil das "
-          "Ergebnis sie nicht mitschreibt.")
+    print(f"  Noch offen: {rest_offen:,} Vorgaenge mit laufender Frist "
+          f"→ hochgerechnet ~{rest_offen * je_vorgang:.2f} $")
+    if rest_zu:
+        print(f"  Dazu {rest_zu:,} mit abgelaufener Frist (~{rest_zu * je_vorgang:.2f} $) — "
+              f"die faehrt der Lauf mit NUR_OFFENE=1 nicht an.")
 
     return 0
 
