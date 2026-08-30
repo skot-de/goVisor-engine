@@ -39,7 +39,9 @@ Token = sha1(identity_id)[:10] (deterministisch; Sven steuert, wer den Link beko
 import argparse
 import datetime as _dt
 import hashlib
+import hmac
 import json
+import os
 import sys
 from pathlib import Path
 
@@ -99,8 +101,49 @@ def zahl(n) -> str:
     return f"{int(n):,}".replace(",", ".")
 
 
+SALZ_PFAD = ROOT / ".secrets" / "outreach.salt"
+
+
+def _salz() -> str:
+    """Das Geheimnis, ohne das der Token errechenbar waere.
+
+    ⚠ FAIL-CLOSED, mit Absicht. Ein Rueckfall auf „ohne Salz" waere die gefaehrlichste
+    Variante: die Token saehen gleich aus, waeren aber wieder oeffentlich ableitbar, und
+    niemand haette einen Anlass hinzusehen.
+    """
+    roh = (os.environ.get("GOVISOR_OUTREACH_SALT") or
+           (SALZ_PFAD.read_text(encoding="utf-8").strip() if SALZ_PFAD.exists() else ""))
+    if len(roh) < 32:
+        raise SystemExit(
+            "⛔ Kein Outreach-Salz gefunden. Ohne es sind die Token aus der oeffentlichen\n"
+            "   Firmenkennung errechenbar (gemessen 2026-08-30: 4.127 von 9.456 Seiten).\n"
+            "   Anlegen:\n"
+            "     mkdir -p .secrets\n"
+            "     python3 -c 'import secrets;print(secrets.token_hex(32))' > .secrets/outreach.salt\n"
+            "     chmod 600 .secrets/outreach.salt\n"
+            "   ⚠ Ein NEUES Salz aendert alle Token und bricht bereits verschickte Links.")
+    return roh
+
+
 def token_of(identity_id):
-    return hashlib.sha1(identity_id.encode()).hexdigest()[:10]
+    """Die Adresse einer Outreach-Seite. Sie IST der Zugang — `/t/<token>` ist oeffentlich.
+
+    ⚠ HIER STAND `sha1(identity_id)[:10]` — ungesalzen und deterministisch. Die Kennung,
+    die hineingeht, gibt die Anwendung selbst heraus: `/api/entity-search` ist bewusst offen
+    (das Onboarding braucht sie vor der Anmeldung) und liefert je Treffer die `identity_id`.
+    Damit war die Kette geschlossen: Firmenname suchen → Kennung bekommen → Token ausrechnen
+    → fremde Vertriebsseite oeffnen.
+
+    Gemessen am 2026-08-30 an den echten Daten: von 9.456 Seiten waren **4.127** so
+    erreichbar, davon 3.622 bereits verschickte. Preisgegeben haetten sie die
+    firmenspezifische Auswertung UND — im Feld `zustellung` — Empfaengerdomain und
+    Versanddatum. Also wen wir angesprochen haben, wann, und womit.
+
+    Jetzt HMAC-SHA256 mit einem Geheimnis, 16 Hex-Zeichen (64 Bit). Aus der Kennung laesst
+    sich der Token nicht mehr herleiten, und aus dem Token nicht die Kennung.
+    """
+    return hmac.new(_salz().encode("utf-8"), str(identity_id).encode("utf-8"),
+                    hashlib.sha256).hexdigest()[:16]
 
 
 def eur(v):

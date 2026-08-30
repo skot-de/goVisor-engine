@@ -11,6 +11,16 @@ const securityHeaders = [
   { key: "X-DNS-Prefetch-Control", value: "off" },
 ];
 
+// Der Ursprung unserer Supabase-Instanz, aus der oeffentlichen Variable abgeleitet.
+// `new URL(...).origin` schneidet Pfad und Schraegstrich ab — die CSP will genau die Herkunft.
+const supabaseOrigin = (() => {
+  try {
+    return new URL(process.env.NEXT_PUBLIC_SUPABASE_URL ?? "").origin;
+  } catch {
+    return "";
+  }
+})();
+
 if (process.env.NODE_ENV === "production") {
   // Pragmatische CSP: Next braucht inline-Bootstrap-Scripts + React-Inline-Styles → 'unsafe-inline'
   // für script/style. Der eigentliche XSS-Schutz bleibt das durchgängige esc() (Input-Escaping);
@@ -22,7 +32,13 @@ if (process.env.NODE_ENV === "production") {
     "style-src 'self' 'unsafe-inline'",
     "img-src 'self' data: blob:",
     "font-src 'self'",
-    "connect-src 'self' https://*.supabase.co",
+    // ⚠ NUR UNSER PROJEKT, nicht `*.supabase.co`. Der Platzhalter stand hier und erlaubte
+    // jedes fremde Supabase-Projekt als Ziel — also genau den Weg, den eine XSS zum
+    // Hinausschaffen von Daten braucht: ein Angreifer legt sich ein eigenes, kostenloses
+    // Projekt an und schreibt dorthin. Der Ursprung kommt aus derselben Variable, aus der
+    // der Client seine Verbindung baut; faellt sie aus, bleibt es beim Platzhalter, denn
+    // eine CSP, die die eigene Datenbank aussperrt, macht die Anwendung unbenutzbar.
+    `connect-src 'self' ${supabaseOrigin || "https://*.supabase.co"}`,
     "frame-ancestors 'none'",
     "object-src 'none'",
     "base-uri 'self'",

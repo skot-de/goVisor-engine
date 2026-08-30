@@ -454,9 +454,17 @@ export default function OnboardingPage() {
  * Sie ist ein Schutz gegen VERSEHEN, nicht gegen Absicht: der Aufruf laeuft im Browser
  * und liesse sich umgehen. Das reicht — hier tippt niemand aus boeser Absicht, sondern
  * beim Ausprobieren.
+ *
+ * ⚠ WAS HIER STEHT, STEHT IM BROWSER. `NEXT_PUBLIC_*` wird ins Bundle gebacken und ist
+ * lesbar. In der eingebauten Liste standen bis zum 2026-08-30 `skot.de` und `skot.io` —
+ * die Domains des Betreibers. Sie verrieten nichts Gefaehrliches, verknuepften die
+ * Anwendung aber mit einer Person, und dafuer gibt es keinen Grund: die Liste braucht nur
+ * Adressen, an die ohnehin nie eine echte Mail geht. Die Vorgabe enthaelt deshalb nur noch
+ * die reservierten Namen aus RFC 2606. Wer eigene ergaenzt, tut das ueber die Variable und
+ * weiss dann, dass sie oeffentlich sind.
  */
 const TEST_DOMAINS = (process.env.NEXT_PUBLIC_TEST_DOMAINS
-  || "govisor.dev,skot.de,skot.io,example.com,example.org,localhost,test")
+  || "example.com,example.org,example.net,localhost,test,invalid")
   .split(",").map((x) => x.trim().toLowerCase()).filter(Boolean);
 
 function testMailErlaubt(mail: string): boolean {
