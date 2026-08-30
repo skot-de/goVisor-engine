@@ -1,7 +1,14 @@
 # 03 · Input Dokumente — die schwierigste Achse
 
-> Tor 6. Blockiert nichts: **AT und CH stehen bis heute bei 0 % Dokumentabdeckung** und
-> sind trotzdem produktiv. Ein Land ohne Dokumente ist ein halbes Land, kein unbrauchbares.
+> Tor 6. Blockiert nichts: **AT und CH haben bis heute 0 Dokument-DATEIEN** und sind
+> trotzdem produktiv. Ein Land ohne Dokumente ist ein halbes Land, kein unbrauchbares.
+>
+> ⚠ **„0 %" ist seit 2026-08-30 zu grob.** AT hat 267 DATEILISTEN (Name, Grösse, Datum,
+> Hash) aus `vergabeportal.at`/`wien.gv.at` — die Dateien selbst stehen hinter einem
+> hCaptcha, das bewusst nicht angerührt wird. Eine Liste beantwortet aber genau die
+> Produktfrage „gibt es ein Leistungsverzeichnis, welche Nachweise werden verlangt".
+> **Dateien und Listen sind zwei Kennzahlen; wer sie zu einer macht, hält AT für leer.**
+> CH hat weder das eine noch das andere: dort ist selbst die Liste zu (Interessensbekundung).
 
 ## Warum das die schwierigste Achse ist
 
@@ -222,9 +229,10 @@ ein Grep „acht von neun Abrufern ohne Längen-Wache" — nachgesehen fingen di
 Fall längst, nur anders benannt. Übrig blieb ein einziger. Wer nach dem Grep aufhört, baut
 acht Änderungen, von denen sieben nichts verbessern und jede etwas kaputt machen kann.
 
-### Die acht Formen, in denen eine falsche Behauptung entsteht
+### Die zehn Formen, in denen eine falsche Behauptung entsteht
 
-Alle acht sind am selben Tag aufgetreten. Sie zu kennen spart den halben Prüfgang.
+Acht davon sind an einem Tag aufgetreten, zwei weitere am 2026-08-30 in Österreich.
+Sie zu kennen spart den halben Prüfgang.
 
 1. **Das Merkmal steht auch im Rahmen drumherum.** Die NetServer-Wache prüfte eigens nach,
    ob die Seite den Unterlagen-Abschnitt trägt — las dafür aber die ganze Seite, und die
@@ -269,6 +277,19 @@ Alle acht sind am selben Tag aufgetreten. Sie zu kennen spart den halben Prüfga
    **Nie auf ein unsichtbares Element klicken; erst `is_visible()` fragen, dann handeln.**
    Und wenn es unsichtbar bleibt, ist das ein Parser-Fall, kein fehlender Zugang.
 
+9. **Eine Spaltenzahl ist keine Struktur.** Der AT-Abrufer verlangte vier Tabellenzellen je
+   Datei (Name, Grösse, erstellt, aktualisiert). Manche Vorgänge führen nur drei — ohne
+   „aktualisiert" — und die Bauform wurde **vollständig verworfen**: auf `www.wien.gv.at`
+   lagen 20 von 29 Vorgängen als „0 aktiv von 0" im Manifest, obwohl der Reiter
+   „Unterlagen 7" hiess und acht Dateinamen trug, darunter ein Leistungsverzeichnis. Nach
+   der Korrektur 20 Listen mit 149 Namen. **Am Merkmal festmachen (hier: dem Dateinamen),
+   nicht an der Form der Tabelle drumherum.**
+10. **Der Fehlereintrag trägt nicht, was die Frage beantwortet.** Derselbe Abrufer schrieb
+   bei einer Ausnahme `{lead_id, status, note}` — **ohne URL**. 83 Sätze standen so als
+   „fehler" ohne Host da, und „welches Portal klemmt?" war aus den eigenen Daten nicht zu
+   beantworten. Der Erfolgspfad trug die URL, der Fehlerpfad nicht — gebraucht wird sie
+   genau dort.
+
 Dazu eine Regel für die Rangfolge im Code: **der positive Befund führt.** Trägt die Seite
 einen Knopf oder Ausklapper, wird geholt — erst wenn es ihn nicht gibt, wird nach dem Grund
 gesucht. Andersherum kann ein Wort aus einer Nachbarzeile („canceled" bei Los 2, während
@@ -295,18 +316,6 @@ Der Code allein reicht nicht. Vier Dinge, sonst wirkt die Arbeit nicht:
 
 Der Rest, der nichts mit Statusmeldungen zu tun hat — sondern mit dem Betrieb:
 
-- **⚠ Eine Spaltenzahl ist keine Struktur.** Der AT-Abrufer verlangte vier Tabellenzellen
-  je Datei (Name, Grösse, erstellt, aktualisiert). Manche Vorgänge führen nur drei — ohne
-  „aktualisiert". Die dreispaltige Bauform wurde damit **vollständig verworfen**: auf
-  `www.wien.gv.at` lagen 20 von 29 Vorgängen als „0 aktiv von 0" im Manifest, obwohl der
-  Reiter „Unterlagen 7" hiess und acht Dateinamen trug, darunter ein Leistungsverzeichnis.
-  Nach der Korrektur: 20 Listen, 149 Dateinamen. **Am Merkmal festmachen (hier: der
-  Dateiname), nicht an der Form der Tabelle drumherum.**
-- **⚠ Der Fehlereintrag muss tragen, was die Frage beantwortet.** Derselbe Abrufer schrieb
-  bei einer Ausnahme `{lead_id, status, note}` — **ohne URL**. 83 Sätze standen so als
-  „fehler" ohne Host im Manifest, und die Frage „welches Portal klemmt?" war aus den eigenen
-  Daten nicht zu beantworten. Der Erfolgspfad trug die URL, der Fehlerpfad nicht — und
-  gebraucht wird sie genau dort.
 - **Hängende Abrufer.** `SIGALRM` wird von Playwright verschluckt. Es braucht eine Wache
   ausserhalb des Prozesses, sonst steht ein Lauf still und meldet nichts.
 - **Zip-Bomben.** Grössengrenze und Entpack-Grenze sind Pflicht, nicht Kür.

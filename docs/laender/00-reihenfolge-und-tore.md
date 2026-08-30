@@ -37,7 +37,7 @@ Firma, die Zuschlagsansicht und die Firmenprofile liefen in gar keinem Lauf. Ein
 zu zeigen und eine Anmeldung zu ermöglichen sind zwei verschiedene Tore. Wer sie zusammen
 prüft, prüft nur das erste.
 
-Tor 7 steht bewusst hinten: **AT und CH haben bis heute 0 % Dokumentabdeckung** und sind
+Tor 7 steht bewusst hinten: **AT und CH haben bis heute 0 Dokument-DATEIEN** (AT aber 267 Dateilisten, s. [Kapitel 03](03-input-dokumente.md)) und sind
 trotzdem produktiv. Ein Land ohne Dokumente ist ein halbes Land, kein unbrauchbares.
 
 ## Die drei Fragen, die man an JEDE Zahl stellt

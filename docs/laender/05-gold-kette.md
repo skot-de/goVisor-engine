@@ -150,7 +150,7 @@ Gute Begründungen aus `BEWUSST_NUR_DE`:
 - `doe_*` — DÖE ist eine rein deutsche Unterschwellenquelle
 - `entity_impressum_beleg` — deutsche Impressumspflicht (§5 DDG), kein AT/CH-Gegenstück
 - `entity_merge_map` — Entity-Auflösung ist auf das deutsche Handelsregister getunt
-- `document_duplicates` — AT/CH haben 0 % Dokumentabdeckung
+- `document_duplicates` — AT/CH haben 0 Dokument-Dateien (AT hat Dateilisten, aber der Dublettenwall vergleicht Inhalte)
 - `lead_region_fill` gilt **nicht** als solche Lücke (s. [Kapitel 07](07-geo-und-regionen.md))
 
 ## Halbe Länderlücken benennen
