@@ -2088,5 +2088,8 @@
   "Du kannst nicht warten? Lade deine eigene Fassung hoch, dann wird sie sofort ausgewertet.": "Cannot wait? Upload your own copy and it will be analysed right away.",
   "Unterlagen liegen vor": "documents available",
   "Diese Auswertung stammt aus Unterlagen, die ein Nutzer hochgeladen hat.": "This assessment is based on documents uploaded by a user.",
-  "Achtung: der Auftraggeber dieses Leads kommt in den hochgeladenen Unterlagen nicht vor. Möglicherweise gehören sie zu einem anderen Verfahren. Prüft die Angaben, bevor ihr euch darauf verlasst.": "Caution: the contracting authority for this lead does not appear in the uploaded documents. They may belong to a different procedure. Check the details before relying on them."
+  "Achtung: der Auftraggeber dieses Leads kommt in den hochgeladenen Unterlagen nicht vor. Möglicherweise gehören sie zu einem anderen Verfahren. Prüft die Angaben, bevor ihr euch darauf verlasst.": "Caution: the contracting authority for this lead does not appear in the uploaded documents. They may belong to a different procedure. Check the details before relying on them.",
+  "teils belegt": "partly documented",
+  "nur Kopfdaten": "headline data only",
+  "Passung {n} von 100. Eine Rangzahl zum Sortieren, kein Prozentsatz und keine Gewinnwahrscheinlichkeit. Beleglage: {beleg}.": "Fit {n} out of 100. A ranking figure for sorting, not a percentage and not a probability of winning. Evidence: {beleg}."
 }

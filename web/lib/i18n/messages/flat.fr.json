@@ -2088,5 +2088,8 @@
   "Du kannst nicht warten? Lade deine eigene Fassung hoch, dann wird sie sofort ausgewertet.": "Vous ne pouvez pas attendre ? Téléversez votre propre version, elle sera analysée immédiatement.",
   "Unterlagen liegen vor": "dossier disponible",
   "Diese Auswertung stammt aus Unterlagen, die ein Nutzer hochgeladen hat.": "Cette analyse repose sur des documents téléversés par un utilisateur.",
-  "Achtung: der Auftraggeber dieses Leads kommt in den hochgeladenen Unterlagen nicht vor. Möglicherweise gehören sie zu einem anderen Verfahren. Prüft die Angaben, bevor ihr euch darauf verlasst.": "Attention : l'acheteur de cette opportunité n'apparaît pas dans les documents téléversés. Ils appartiennent peut-être à une autre procédure. Vérifiez les informations avant de vous y fier."
+  "Achtung: der Auftraggeber dieses Leads kommt in den hochgeladenen Unterlagen nicht vor. Möglicherweise gehören sie zu einem anderen Verfahren. Prüft die Angaben, bevor ihr euch darauf verlasst.": "Attention : l'acheteur de cette opportunité n'apparaît pas dans les documents téléversés. Ils appartiennent peut-être à une autre procédure. Vérifiez les informations avant de vous y fier.",
+  "teils belegt": "partiellement attesté",
+  "nur Kopfdaten": "données d'en-tête uniquement",
+  "Passung {n} von 100. Eine Rangzahl zum Sortieren, kein Prozentsatz und keine Gewinnwahrscheinlichkeit. Beleglage: {beleg}.": "Adéquation {n} sur 100. Un rang de tri, ni un pourcentage ni une probabilité de succès. Base documentaire : {beleg}."
 }
