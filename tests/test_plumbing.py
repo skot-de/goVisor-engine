@@ -2361,7 +2361,16 @@ def test_tageslauf_erntet_vor_dem_abrufen():
     assert erster_abruf < marke_ernte < entpacken, "Auswertung liegt hinter der Abruf-Marke"
 
     # Der Waechter selbst: Reserve gesetzt und in `mit_grenze` konsultiert.
-    assert "ERNTE_RESERVE=${GOVISOR_ERNTE_RESERVE:-5400}" in quelle
+    #
+    # ⚠ NICHT MEHR AUF DEN ZAHLENWERT festgenagelt. Hier stand `…:-5400}`, also 90 min als
+    # Zeichenkette. Der Wert ist aber eine MESSUNG, keine Konstante: am 2026-08-30 lag die
+    # tatsaechliche Erntezeit bei bis zu 99 min, die „Reserve" also darunter. Wer sie
+    # nachfuehrt, macht diesen Test rot, obwohl er gerade einen Fehler behebt — und wer den
+    # Test dann anpasst, hat nichts geprueft. Ob die Zahl noch traegt, rechnet
+    # `tests/test_daily.py` gegen die echten Protokolle nach.
+    import re as _re
+    assert _re.search(r"ERNTE_RESERVE=\$\{GOVISOR_ERNTE_RESERVE:-\d+\}", quelle), \
+        "die Ernte-Reserve ist nicht mehr gesetzt"
     assert "abruf_erlaubt \"${_SCHRITT_NAME:-Abruf}\" || return 0" in quelle
 
     # ⚠ ZWEI SCHALTER, und ihre Verwechslung ist gefaehrlich (2026-08-18 fast passiert):

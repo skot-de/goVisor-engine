@@ -334,20 +334,28 @@ $PY scripts/modellpruefung.py \
 # verzeichnisse, Marktpuls, Frontend-Export, Supabase, gap_effects und der Ertragsbericht
 # noch durchlaufen?
 #
-# NICHT geschaetzt, sondern aus `data/logs/daily-*.log` ausgezaehlt (fuenf Laeufe,
-# schlimmster Fall je Schritt):
-#     Supabase-Export        17,4    Unterlagen entpacken     9,9
-#     Leistungsverzeichnisse  7,9    Marktpuls                0,7
-#     Frontend-Export         1,1    gap_effects              0,0
-#     Signale                 1,2  ← war 232,6, bis der Schritt inkrementell wurde
-#     ------------------------------------------------------------------
-#     zusammen ~45 min
+# NICHT geschaetzt, sondern aus `data/logs/daily-*.log` ausgezaehlt — die GANZE Ernte,
+# also alles hinter der Marke unten (10 Schritte, Stand 2026-08-30):
 #
-# 90 min ist das Doppelte davon. Der Aufschlag ist keine Bequemlichkeit: die Signale
-# skalieren mit der Zahl NEUER Dokumente, und ein Abruf, der endlich einmal durchlaeuft,
-# macht genau diesen Schritt teuer. Wer hier knapp rechnet, bricht den Lauf an der Stelle
-# ab, an der er sich gerade gelohnt haette.
-ERNTE_RESERVE=${GOVISOR_ERNTE_RESERVE:-5400}    # 90 min
+#     letzte sieben Laeufe:  45 · 56 · 60 · 65 · 77 · 94 · 99 min
+#
+# ⚠ DIESE ZAHL IST EINMAL VERROTTET, UND ZWAR STILL. Hier stand „zusammen ~45 min, 90 min
+# ist das Doppelte davon". Am 2026-08-30 nachgemessen: der schlimmste Fall lag bei 99 min —
+# die Reserve war also nicht das Doppelte, sondern das **0,91-fache**. Sie war gar keine
+# Reserve mehr. Aufgefallen ist es nicht im Betrieb, sondern erst beim Nachrechnen: die
+# Laeufe blieben mit 87 bis 184 min weit unter der 8-h-Grenze, die Reserve wurde also nie
+# geprueft. Sie haette beim ersten langen Abruf gegriffen — und genau dann versagt.
+#
+# Zwei Gruende fuer das Wachstum, beide legitim: die Tabelle zaehlte nur 7 der 10 Schritte
+# (`Dokument-Dubletten` allein kostet 18 min und kam spaeter dazu), und die Ernte skaliert
+# mit der Zahl NEUER Dokumente — ein Abruf, der endlich einmal durchlaeuft, macht sie teuer.
+#
+# 200 min ist wieder das Doppelte des gemessenen schlimmsten Falls. Wer hier knapp rechnet,
+# bricht den Lauf an der Stelle ab, an der er sich gerade gelohnt haette.
+#
+# `tests/test_daily.py::test_ernte_reserve_deckt_die_gemessene_ernte` rechnet das gegen die
+# echten Protokolle nach und wird rot, wenn der Abstand wieder schmilzt.
+ERNTE_RESERVE=${GOVISOR_ERNTE_RESERVE:-12000}   # 200 min
 
 # Darf noch ein Abrufer starten? Die Beschaffung ist nach oben offen (gemessen 1.622 min
 # im schlimmsten Fall), die Auswertung dahinter ist es nicht. Also teilen sich ALLE
