@@ -72,9 +72,18 @@ const PREVIEW_COOKIE = "gv_preview";
  *                               serverseitig gegen `user_calendar_feed` auf und antwortet
  *                               sonst mit 404. Weil sie damit oeffentlich erreichbar ist,
  *                               hat sie eine Ratenbremse bekommen.
+ *   /robots.txt /sitemap.xml    die zwei Dateien, die ein Crawler als ERSTES holt — und er
+ *                               holt sie ohne Konto. Hinter dem Tor beantwortete beide eine
+ *                               Umleitung auf `/login`; eine robots.txt, die auf eine
+ *                               Anmeldemaske zeigt, ist keine. Gemessen am 2026-08-30, kurz
+ *                               nachdem ich sie angelegt hatte: `GET /robots.txt` →
+ *                               `/login?weiter=%2Frobots.txt`. Sie geben nichts preis, was
+ *                               nicht ohnehin fuer die Oeffentlichkeit gedacht ist — die
+ *                               Sitemap nennt Startseite, Einstieg und Impressum.
  */
 const OFFEN = ["/login", "/auth", "/api/health", "/onboarding", "/start", "/t", "/api/wer", "/api/entity-verify", "/api/impressum", "/api/entity-search",
-                     "/api/entity-group", "/api/outreach-firma", "/api/calendar"];
+                     "/api/entity-group", "/api/outreach-firma", "/api/calendar",
+                     "/robots.txt", "/sitemap.xml"];
 
 function istOffen(pfad: string): boolean {
   // Die Wurzel zeigt seit dem 2026-08-20 die oeffentliche Startseite (app/page.tsx) und
@@ -175,8 +184,13 @@ export async function middleware(request: NextRequest) {
     // keinen Fehler — es zeigt einen LEEREN Kalender. Abonniert und still, und der Nutzer
     // merkt es erst, wenn er eine Frist verpasst hat. Er verraet nichts: ohne gueltigen
     // Token gibt die Route 404.
+    // Auch `robots.txt` und `sitemap.xml` muessen durch den Vorhang. Ein Crawler, der als
+    // Antwort auf `robots.txt` eine schwarze HTML-Seite bekommt, liest daraus keine Regeln
+    // — er sieht eine kaputte Datei und faellt auf „alles erlaubt" zurueck. Verraten wird
+    // dabei nichts: waehrend der Sperre traegt ohnehin jede Seite `noindex`.
     if (!unlocked && !vorhangAuf && !pfad.startsWith("/auth/") && pfad !== "/api/health"
-        && !pfad.startsWith("/api/calendar/"))
+        && !pfad.startsWith("/api/calendar/")
+        && pfad !== "/robots.txt" && pfad !== "/sitemap.xml")
       return blackPage();
     // Schlüssel gültig → volle App; bei frischem ?preview den Cookie setzen (Folgeseiten ohne Query).
     const { response: res, email } = await updateSession(request);

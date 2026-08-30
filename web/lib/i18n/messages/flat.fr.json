@@ -1741,7 +1741,6 @@
   "gleiche Region, Proxy": "même région, indicatif",
   "gleichen eure Adresse mit den Vergabedaten ab": "comparaison de votre adresse avec les données de marchés",
   "goVisor liest jede öffentliche Vergabe in Deutschland und filtert die heraus, auf die ihr euch bewerben solltet. Kostenlos starten, ohne Zahlungsdaten.": "goVisor analyse chaque marché public en Allemagne et sélectionne ceux sur lesquels vous devriez soumissionner. Démarrage gratuit, sans coordonnées bancaires.",
-  "goVisor macht öffentliche Ausschreibungen (TED) für Bieter nutzbar. Jeder Wert mit seiner Herkunft. Gemessenes ist gemessen, Geschätztes ist markiert, Unbekanntes bleibt sichtbar.": "goVisor rend les appels d'offres publics (TED) exploitables pour les soumissionnaires. Chaque valeur avec son origine. Ce qui est mesuré est mesuré, ce qui est estimé est signalé, ce qui est inconnu reste visible.",
   "goVisor täuscht keine Vermittlung vor: ohne beidseitige Netzwerk-Freigabe kein Kontaktknopf, nur öffentliche Angaben.": "goVisor ne simule aucune mise en relation : sans consentement réseau réciproque, pas de bouton de contact, uniquement des informations publiques.",
   "goVisor verwaltet den": "goVisor gère le",
   "goVisor wertet die öffentlichen Vergabebekanntmachungen aus und sagt euch, welche davon zu eurem Betrieb passen. Ihr müsst sie nicht mehr selbst durchsehen.": "goVisor analyse les avis de marchés publics et vous indique ceux qui correspondent à votre entreprise.",
@@ -2091,5 +2090,6 @@
   "Achtung: der Auftraggeber dieses Leads kommt in den hochgeladenen Unterlagen nicht vor. Möglicherweise gehören sie zu einem anderen Verfahren. Prüft die Angaben, bevor ihr euch darauf verlasst.": "Attention : l'acheteur de cette opportunité n'apparaît pas dans les documents téléversés. Ils appartiennent peut-être à une autre procédure. Vérifiez les informations avant de vous y fier.",
   "teils belegt": "partiellement attesté",
   "nur Kopfdaten": "données d'en-tête uniquement",
-  "Passung {n} von 100. Eine Rangzahl zum Sortieren, kein Prozentsatz und keine Gewinnwahrscheinlichkeit. Beleglage: {beleg}.": "Adéquation {n} sur 100. Un rang de tri, ni un pourcentage ni une probabilité de succès. Base documentaire : {beleg}."
+  "Passung {n} von 100. Eine Rangzahl zum Sortieren, kein Prozentsatz und keine Gewinnwahrscheinlichkeit. Beleglage: {beleg}.": "Adéquation {n} sur 100. Un rang de tri, ni un pourcentage ni une probabilité de succès. Base documentaire : {beleg}.",
+  "goVisor macht öffentliche Ausschreibungen in Europa für Bieter nutzbar. Jeder Wert mit seiner Herkunft: Gemessenes ist gemessen, Geschätztes ist markiert, Unbekanntes bleibt sichtbar.": "goVisor rend les marchés publics européens exploitables pour les soumissionnaires. Chaque chiffre avec son origine : ce qui est mesuré est mesuré, ce qui est estimé est signalé, ce qui est inconnu reste visible."
 }

@@ -27,8 +27,18 @@ export const copy = {
   get tagline() { return ueb("Öffentliche Ausschreibungen, ehrlich aufbereitet"); },
   get metaDescription() {
     return ueb(
-      "goVisor macht öffentliche Ausschreibungen (TED) für Bieter nutzbar — jeder Wert mit " +
-      "seiner Herkunft. Gemessenes ist gemessen, Geschätztes ist markiert, Unbekanntes bleibt sichtbar.");
+      // ⚠ DIESER SATZ IST DER SCHLUESSEL SEINER EIGENEN UEBERSETZUNG. Er stand hier mit
+      // Gedankenstrich („nutzbar — jeder Wert"), im Katalog aber mit Punkt („nutzbar. Jeder
+      // Wert") — jemand hat die Gedankenstrich-Regel auf den Katalog angewandt und den Code
+      // vergessen. Damit fand `tk()` nichts und lieferte still den deutschen Satz zurueck:
+      // EN- und FR-Besucher bekamen eine deutsche Beschreibung, und zwar genau die, die
+      // Suchmaschinen und Sprachmodelle als Antwort auf „was ist goVisor" zitieren.
+      //
+      // „in Europa" statt „(TED)": das Kuerzel kennt ausserhalb der Branche niemand, und der
+      // Anspruch ist groesser als eine einzelne Datenquelle — daher auch die Domain.
+      "goVisor macht öffentliche Ausschreibungen in Europa für Bieter nutzbar. "
+      + "Jeder Wert mit seiner Herkunft: Gemessenes ist gemessen, Geschätztes ist markiert, "
+      + "Unbekanntes bleibt sichtbar.");
   },
 
   // Markenkern — steht wörtlich in der Übergabenotiz §1

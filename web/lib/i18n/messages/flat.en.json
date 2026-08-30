@@ -1741,7 +1741,6 @@
   "gleiche Region, Proxy": "same region, proxy",
   "gleichen eure Adresse mit den Vergabedaten ab": "matching your address against the procurement data",
   "goVisor liest jede öffentliche Vergabe in Deutschland und filtert die heraus, auf die ihr euch bewerben solltet. Kostenlos starten, ohne Zahlungsdaten.": "goVisor reads every public tender in Germany and filters out the ones worth bidding on. Start free, no payment details.",
-  "goVisor macht öffentliche Ausschreibungen (TED) für Bieter nutzbar. Jeder Wert mit seiner Herkunft. Gemessenes ist gemessen, Geschätztes ist markiert, Unbekanntes bleibt sichtbar.": "goVisor makes public tenders (TED) usable for bidders. Every figure with its origin. What is measured is measured, what is estimated is marked, what is unknown stays visible.",
   "goVisor täuscht keine Vermittlung vor: ohne beidseitige Netzwerk-Freigabe kein Kontaktknopf, nur öffentliche Angaben.": "goVisor does not fake brokerage: without mutual network consent there is no contact button, only public information.",
   "goVisor verwaltet den": "goVisor tracks the",
   "goVisor wertet die öffentlichen Vergabebekanntmachungen aus und sagt euch, welche davon zu eurem Betrieb passen. Ihr müsst sie nicht mehr selbst durchsehen.": "goVisor analyses public procurement notices and tells you which ones fit your business. You no longer have to go through them yourself.",
@@ -2091,5 +2090,6 @@
   "Achtung: der Auftraggeber dieses Leads kommt in den hochgeladenen Unterlagen nicht vor. Möglicherweise gehören sie zu einem anderen Verfahren. Prüft die Angaben, bevor ihr euch darauf verlasst.": "Caution: the contracting authority for this lead does not appear in the uploaded documents. They may belong to a different procedure. Check the details before relying on them.",
   "teils belegt": "partly documented",
   "nur Kopfdaten": "headline data only",
-  "Passung {n} von 100. Eine Rangzahl zum Sortieren, kein Prozentsatz und keine Gewinnwahrscheinlichkeit. Beleglage: {beleg}.": "Fit {n} out of 100. A ranking figure for sorting, not a percentage and not a probability of winning. Evidence: {beleg}."
+  "Passung {n} von 100. Eine Rangzahl zum Sortieren, kein Prozentsatz und keine Gewinnwahrscheinlichkeit. Beleglage: {beleg}.": "Fit {n} out of 100. A ranking figure for sorting, not a percentage and not a probability of winning. Evidence: {beleg}.",
+  "goVisor macht öffentliche Ausschreibungen in Europa für Bieter nutzbar. Jeder Wert mit seiner Herkunft: Gemessenes ist gemessen, Geschätztes ist markiert, Unbekanntes bleibt sichtbar.": "goVisor makes public tenders across Europe usable for bidders. Every figure with its origin: what is measured is measured, what is estimated is marked, what is unknown stays visible."
 }

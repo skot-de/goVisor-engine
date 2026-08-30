@@ -19,13 +19,87 @@ const plexMono = IBM_Plex_Mono({
   display: "swap",
 });
 
+/* Woher die Seite sich selbst adressiert. Ohne diese Basis baut Next relative URLs in
+ * Open-Graph-Karten ein, und relative URLs sind dort wertlos — jeder Abrufer sitzt woanders.
+ * Aus der Umgebung, damit eine Vorschau-Bereitstellung nicht auf die Produktion zeigt. */
+const SEITE = process.env.NEXT_PUBLIC_SITE_URL ?? "https://govisor.eu";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(SEITE),
   title: {
     default: `${copy.brand} — ${copy.tagline}`,
     template: `%s · ${copy.brand}`,
   },
   description: copy.metaDescription,
   robots: { index: true, follow: true },
+  // Eine Adresse ist die richtige. Ohne canonical zaehlen `?ref=…`, `//` und die
+  // www-Variante als eigene Seiten und teilen sich auf, was eine haette sein sollen.
+  alternates: { canonical: "/" },
+  // ⚠ KEIN `alternates.languages`. Die Anwendung spricht Deutsch, Englisch und
+  // Franzoesisch, aber die Sprache liegt im `localStorage` — es gibt KEINE
+  // sprachspezifischen URLs. `hreflang` verlangt genau die; Eintraege, die alle auf
+  // dieselbe Adresse zeigen, waeren eine Behauptung ohne Deckung. Die drei Fassungen sind
+  // damit von aussen nicht auffindbar, und das bleibt so, bis es Sprach-Routen gibt.
+  openGraph: {
+    type: "website",
+    siteName: copy.brand,
+    locale: "de_DE",
+    url: SEITE,
+    title: `${copy.brand} — ${copy.tagline}`,
+    description: copy.metaDescription,
+    images: [{ url: "/govisor-wordmark.png", width: 1200, height: 630, alt: copy.brand }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${copy.brand} — ${copy.tagline}`,
+    description: copy.metaDescription,
+    images: ["/govisor-wordmark.png"],
+  },
+};
+
+/* Was die Seite ueber sich selbst SAGT, in maschinenlesbarer Form.
+ *
+ * Titel und Beschreibung muss ein Abrufer aus dem Fliesstext deuten; hier steht es
+ * ausdruecklich: was das Ding ist, wer es betreibt, wen es adressiert, was es kostet. Das
+ * ist das einzige Signal auf der Seite, das sich ausschliesslich an Maschinen richtet.
+ *
+ * ⚠ NUR BELEGBARES. Keine Bewertungen, keine Nutzerzahlen, keine erfundenen Auszeichnungen —
+ * strukturierte Daten sind eine Behauptung mit Anspruch auf Genauigkeit, und was hier nicht
+ * stimmt, steht spaeter woertlich in fremden Antworten. */
+const strukturdaten = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": `${SEITE}/#organisation`,
+      name: copy.brand,
+      url: SEITE,
+      logo: `${SEITE}/govisor-wordmark.png`,
+      areaServed: "EU",
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${SEITE}/#website`,
+      url: SEITE,
+      name: copy.brand,
+      inLanguage: ["de", "en", "fr"],
+      publisher: { "@id": `${SEITE}/#organisation` },
+    },
+    {
+      "@type": "SoftwareApplication",
+      name: copy.brand,
+      applicationCategory: "BusinessApplication",
+      operatingSystem: "Web",
+      url: SEITE,
+      description: copy.metaDescription,
+      inLanguage: ["de", "en", "fr"],
+      publisher: { "@id": `${SEITE}/#organisation` },
+      // Die kostenfreie Stufe ist belegt: „Dauerhaft kostenfrei, nicht vierzehn Tage"
+      // steht so auf der Startseite. Preise der bezahlten Stufen stehen hier NICHT —
+      // sie sind noch nicht entschieden (s. docs/pricing-modell.md).
+      offers: { "@type": "Offer", price: "0", priceCurrency: "EUR" },
+    },
+  ],
 };
 
 export default function RootLayout({
@@ -41,6 +115,16 @@ export default function RootLayout({
       {/* Der Kundensicht-Hinweis haengt im Layout und damit auf JEDER Seite. Haenge ihn
           nie in eine einzelne Seite um — genau die Seite, die man dann vergisst, ist die,
           auf der man den Testzustand fuer echt haelt. */}
+      <head>
+        {/* Die Strukturdaten gehoeren in die Server-Ausgabe. Wuerden sie erst im Client
+            entstehen, saehe sie kein Abrufer, der kein JavaScript ausfuehrt — und das sind
+            die meisten. `JSON.stringify` statt einer Zeichenkette von Hand: so kann kein
+            Anfuehrungszeichen aus `copy` das Skript aufbrechen. */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(strukturdaten) }}
+        />
+      </head>
       <body><SprachProvider><ProfilBanner />{children}</SprachProvider></body>
     </html>
   );

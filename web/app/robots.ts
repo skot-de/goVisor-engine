@@ -17,5 +17,7 @@ import type { MetadataRoute } from "next";
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: [{ userAgent: "*", allow: "/", disallow: ["/t/", "/api/"] }],
+    // Ohne diesen Verweis muss ein Abrufer die Seiten erraten. Mit ihm steht die Liste da.
+    sitemap: `${process.env.NEXT_PUBLIC_SITE_URL ?? "https://govisor.eu"}/sitemap.xml`,
   };
 }
