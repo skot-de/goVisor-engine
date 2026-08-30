@@ -1204,7 +1204,7 @@ table.leads{width:100%;border-collapse:collapse;font-size:13px}
 .leads thead th.right{text-align:right}
 .leads thead th.center{text-align:center}
 .leads tbody td{padding:var(--s3) var(--s3);border-bottom:1px solid var(--line);vertical-align:middle}
-td.c-band{width:78px;text-align:center}
+td.c-band{width:104px;text-align:center}
 td.c-band .band{justify-content:center;gap:0}
 
 .leads tbody tr{cursor:pointer}
@@ -2266,3 +2266,21 @@ a.lb-kachel{text-decoration:none}
 .va-herkunft {
   margin: .4rem 0 0; color: var(--muted); font-size: .78rem; line-height: 1.4;
 }
+
+/* Passungszahl — zweite Achse zur Relevanz-Stufe (profileEngine.js).
+   Die Zahl traegt „/100" statt eines Prozentzeichens: sie ordnet, sie prognostiziert nicht.
+   Die Beleglage steht bewusst daneben und nicht in einer eigenen Spalte, damit die Zahl nie
+   ohne ihren Vorbehalt erscheint. Farbe kommt von der Beleglage, nicht von der Hoehe der
+   Zahl: eine hohe Passung auf duenner Beleglage soll nicht satter aussehen als eine
+   niedrige auf belegter. */
+.passung{display:inline-flex;align-items:baseline;gap:2px;margin-left:var(--s2);white-space:nowrap}
+.passung b{font-size:var(--t-body);font-weight:600;color:var(--ink-700);font-variant-numeric:tabular-nums}
+.passung i{font-size:11px;font-style:normal;color:var(--ink-400)}
+.passung em{font-size:11px;font-style:normal;margin-left:6px;padding:1px 6px;border-radius:999px;
+  background:var(--surface-3);color:var(--ink-700)}
+.passung[data-beleg="reich"] em{background:var(--signal-wash,var(--surface-3));color:var(--signal-deep)}
+.passung[data-beleg="duenn"] em{color:var(--ink-400)}
+.passung[data-beleg="duenn"] b{color:var(--ink-400)}
+/* In der Liste nur die Zahl (das Wort blendet passungAchse(l,true) selbst aus). */
+td.c-band .passung{margin-left:4px}
+td.c-band .passung i{display:none}
