@@ -9,6 +9,7 @@ import { tk, aktuelleSprache } from "./i18n";
 import { emptyProfile, matchLead, whyHtml, hasProfile } from './profileEngine';
 import { recommend, begruendungskette } from './recommendation';
 import { applyLabels } from './labels';
+import { dichte } from './dichte';
 /**
  * goVisor Explorer — Kern-Logik & Demo-Daten, VERBATIM aus dem Prototyp
  * govisor-explorer-v4.4.html. Reine Funktionen (String-/Datenrückgabe, keine
@@ -384,6 +385,31 @@ const bandMeter = (level, risk, cap, naTitle) => {
     ? `<span class="band" data-level="na"${t}><span class="segs"><i></i><i></i><i></i></span><span class="lbl">n/a</span></span>`
     : `<span class="band ${risk?'risk':''}" data-level="${level}"${t}><span class="segs"><i></i><i></i><i></i></span><span class="lbl">${level}</span></span>`;
 };
+/* Zweite Achse zur Relevanz-Stufe: die Passungszahl, IMMER gepaart mit der Beleglage.
+ *
+ * Die Paarung ist der ganze Zweck, nicht Beiwerk. „71" allein laesst offen, ob die Zahl auf
+ * gelesenen Vergabeunterlagen steht oder auf blossen Kopfdaten. „71 · nur Kopfdaten" sagt es.
+ * Darum stecken beide in EINEM Baustein: wer sie auf zwei Funktionen aufteilt, zeigt die Zahl
+ * frueher oder spaeter ohne ihren Vorbehalt.
+ *
+ * ⚠ Die Zahl ist eine Rangzahl zum Sortieren, KEIN Prozentsatz und keine
+ * Gewinnwahrscheinlichkeit. Deshalb steht „/100" dran und nie ein Prozentzeichen. Sie kennt
+ * genau acht Werte (0·14·29·43·57·71·86·100), weil `s` in Halbschritten springt; eine feinere
+ * Darstellung wuerde Genauigkeit behaupten, die es nicht gibt. Herkunft: profileEngine.js.
+ * Die kalibrierte Zahl des Hauses ist eine andere (dim_displaceability, ECE 0,016). */
+const BELEG_WORT = { reich: "belegt", mittel: "teils belegt", duenn: "nur Kopfdaten" };
+function passungAchse(l, kompakt){
+  if(l.passung == null) return '';
+  const d = dichte(l);
+  const wort = tk(BELEG_WORT[d] || BELEG_WORT.duenn);
+  const titel = tk("Passung {n} von 100. Eine Rangzahl zum Sortieren, kein Prozentsatz und keine Gewinnwahrscheinlichkeit. Beleglage: {beleg}.",
+                   { n: l.passung, beleg: wort });
+  return `<span class="passung" data-beleg="${d}" title="${esc(titel)}">`
+       + `<b>${l.passung}</b><i>/100</i>`
+       + (kompakt ? '' : `<em>${esc(wort)}</em>`)
+       + `</span>`;
+}
+
 const STAR = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linejoin="round"><path d="m12 4 2.4 4.9 5.4.8-3.9 3.8.9 5.4-4.8-2.5-4.8 2.5.9-5.4-3.9-3.8 5.4-.8L12 4Z"/></svg>`;
 const LVL = {hoch:3, mittel:2, niedrig:1, na:0};
 const WF = {
@@ -536,7 +562,11 @@ function sorted(rows){
                          : l.tage != null ? l.tage : (l.endTage!=null ? l.endTage : 9999);
       case 'vol': return l.volumen.src==='unbekannt' ? -1 : parseFloat(String(l.volumen.wert).replace(/[^\d,]/g,'').replace(',','.'))||0;
       case 'empf': return l.src==='award' ? 9 : recForList(l).rank;   // #26 §4.1 Aussagestärke, stärkste zuerst
-      case 'relevanz': return LVL[l.relevanz];
+      /* Passungszahl statt Stufe: dieselbe Richtung, nur feiner. Sie ist monoton aus
+         demselben `s` abgeleitet wie die Stufe, die Reihenfolge der Baender bleibt also
+         erhalten — innerhalb von „hoch" trennt sie jetzt 71 / 86 / 100. „na" (kein Profil)
+         bleibt unter allem, wie vorher mit LVL['na']=0 unter LVL['niedrig']=1. */
+      case 'relevanz': return l.relevanz === 'na' ? -1 : (l.passung ?? 0);
       case 'wechsel': return LVL[l.wechsel];
       case 'aufwand': return LVL[aufwandStufe(l).stufe];
       case 'konk': { const m={gering:1,mittel:2,hoch:3}; return m[l.konk.stufe]||9; }
@@ -613,7 +643,7 @@ function cellHTML(l, key){
     case 'neu': return `<td class="c-neu" style="text-align:center">${l.neu
         ? `<span class="wettb neu" title="${esc(tk("Neuvergabe. Kein Amtsinhaber, offenes Feld"))}">${tk("Neu")}</span>`
         : `<span class="wettb folge" title="${esc(tk("Folgevergabe. Amtsinhaber vorhanden"))}">${tk("Folge")}</span>`}</td>`;
-    case 'relevanz': return `<td class="c-band">${bandMeter(l.relevanz)}</td>`;
+    case 'relevanz': return `<td class="c-band">${bandMeter(l.relevanz)}${passungAchse(l, true)}</td>`;
     case 'wechsel': { const lue = bieterLuecke(l);
       return `<td class="c-band">${bandMeter(l.wechsel, true, chanceCap())}${
         lue ? `<span class="pdot pdot-schaetz" title="${esc(tk("Geschätzt, {k}: keine Bieterzahl verfügbar", {k: tk(lue.kurz)}))}"></span>` : ''}</td>`;
@@ -1718,6 +1748,7 @@ function renderAnalyse(l){
           <span class="name">${tk("Relevanz")}</span>
           ${bandMeter(l.relevanz)}
           <span class="scoreword">${l.relevanz==='na'?'—':l.relevanz}</span>
+          ${passungAchse(l)}
         </div>
         <div class="score" data-level="${l.wechsel}">
           <span class="name" id="chanceName">${istEigen(l)?tk("Verdrängungs-Risiko"):'Wechsel-Chance'}</span>
@@ -2554,7 +2585,7 @@ function scoreLeadPerLot(l, profile, v){
 /* Alle Leads gegen das aktive Profil scoren — setzt relevanz, relWhy und das
  * volle match-Objekt (Blocker/Partner) für die Detail-Erklärung. */
 function scoreAll(){
-  if(!userProfile){ for(const l of LEADS){ l.relevanz='na'; l.match=null; l.bestLot=null; l.eigen=false; l.eigenBestaetigt=false; } return; }
+  if(!userProfile){ for(const l of LEADS){ l.relevanz='na'; l.passung=null; l.match=null; l.bestLot=null; l.eigen=false; l.eigenBestaetigt=false; } return; }
   const myId = userProfile.identityId || null;
   /* Die angehakten Einheiten aus dem Onboarding. Bis zum 2026-08-21 wurden sie NIRGENDS
      gelesen: gescort wurde allein gegen `identityId`, also gegen die ganze Gruppe. Der
@@ -2570,6 +2601,7 @@ function scoreAll(){
     const v = parseWert(l.volumen && l.volumen.wert);
     const { m, bestLot } = scoreLeadPerLot(l, userProfile, v);
     l.relevanz = m.relevanz;
+    l.passung = m.passung;      // 0–100, Rangzahl zur Stufe; null ohne Profil
     l.match = m;
     l.bestLot = bestLot;   // {nr,titel,region,cpv} des passenden Loses, oder null
     l.relWhy = whyHtml(m);
