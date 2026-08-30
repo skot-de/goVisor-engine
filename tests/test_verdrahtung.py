@@ -509,3 +509,22 @@ def test_unterlagen_gelesen_sagt_die_wahrheit():
     skript = ROOT / "web" / "scripts" / "pruefe-unterlagen-gelesen.mjs"
     p = subprocess.run(["node", str(skript)], capture_output=True, text=True)
     assert p.returncode == 0, f"die Oberflaeche behauptet Unterlagen, die wir nicht haben:\n{p.stdout}{p.stderr}"
+
+
+def test_passungszahl_widerspricht_nie_ihrer_stufe():
+    """Die Zahl und das Wort daneben stammen aus derselben Groesse. Sie koennen auseinanderlaufen.
+
+    `profileEngine.matchLead` rechnet einen Punktwert `s` und leitet daraus BEIDES ab: die
+    Stufe (hoch/mittel/niedrig) ueber die Schwellen 4,5 und 3, und die Passungszahl ueber die
+    Spanne S_MIN..S_MAX. Verschiebt jemand nur eine der beiden Seiten, zeigt die Oberflaeche
+    „niedrig · 86" oder „hoch · 12".
+
+    Das ist die unangenehme Sorte Fehler: beide Angaben sehen fuer sich plausibel aus, und
+    niemand meldet sie. Darum faehrt `pruefe-passung.mjs` den ECHTEN Baustein unter `node`
+    ueber alle erreichbaren Kombinationen und vergleicht Wort gegen Zahl.
+    """
+    import subprocess
+
+    skript = ROOT / "web" / "scripts" / "pruefe-passung.mjs"
+    p = subprocess.run(["node", str(skript)], capture_output=True, text=True)
+    assert p.returncode == 0, f"Passungszahl und Relevanz-Stufe widersprechen sich:\n{p.stdout}{p.stderr}"
