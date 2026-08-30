@@ -16,9 +16,31 @@ Zwei Wege:
 | Format | CSV-Bulk, täglich | Portal/Abo |
 | Volumen | Pflichtpublikation **>50k €** | ~3.000/Tag (inkl. <50k) |
 
-**Entscheidung: OffeneVergaben.at.** Offen, offiziell fundiert, sofort integrierbar. ANKÖ
-brächte die <50k-€-Fälle zusätzlich, ist aber kommerziell und redundant zur Pflichtpublikation
-oberhalb 50k — kein offener Bausstein. Nur bei konkretem Kundenbedarf an der <50k-Tiefe später prüfen.
+**Entscheidung: OffeneVergaben.at.** Offen, offiziell fundiert, sofort integrierbar.
+
+> ⚠ **Berichtigung 2026-08-30 an der Tabelle darüber.** Die Zeile „ANKÖ: kein offener Feed"
+> ist falsch. ANKÖ betreibt eine **offene, per BVergG 2018 verpflichtende Kerndatenquelle**
+> unter **CC BY 4.0**: `http://ogd.ankoe.at/api/v1/notices`, XML im `kdq`-Schema des BRZ,
+> **41.709 Bekanntmachungen seit März 2019**, ohne Anmeldung abrufbar. Kommerziell ist das
+> PORTAL, nicht die Pflichtpublikation — und die beiden wurden hier in einen Topf geworfen.
+>
+> **An der Entscheidung ändert das nichts, aber ihre Begründung war die falsche.** Der
+> tragfähige Grund ist eine Messung: ANKÖ veröffentlicht die Kerndaten SEINER Auftraggeber,
+> OffeneVergaben.at bündelt die aller Publizierenden — **238.979 Sätze gegen 41.709**,
+> dasselbe Recht, dieselbe Lizenz, das Fünfeinhalbfache. Dazu sind **96 % der ANKÖ-Sätze
+> Zuschläge** (Stichprobe 89 aus 2026: 85× `KD_8_2_Z1`, 4× `KD_8_1_Z2` mit Frist), also
+> genau die Schicht, die atverg ohnehin führt.
+>
+> Nicht bauen, solange atverg läuft. Registry-Eintrag `ankoe-at` = `research`.
+
+> ⚠ **Und das Unternehmensserviceportal (USP) ist keine Quelle.** Am 2026-08-30 geprüft, weil
+> es auf der Portalliste stand: das USP ist das **Meldeformular**, mit dem Auftraggeber ihre
+> Kerndaten-Metadaten auf data.gv.at eintragen — mit Anmeldung und dem Rollenrecht
+> „eProcurement Metadaten-Ersteller". Die Ausschreibungssuche darauf
+> (`ausschreibungen.usp.gv.at`) bündelt genau die Kerndatenquellen, die dort registriert
+> wurden, und hat keine öffentliche Schnittstelle (`/api/*`, `/v3/api-docs`, `/swagger-ui`,
+> `/actuator` → 404 bzw. 403). Wer die Daten will, liest die Quellen selbst — und das tut
+> `offeneverg-at` bereits. Registry-Eintrag `usp-at` = `research`.
 
 ## Rechtsgrundlage / Abdeckung
 
@@ -37,8 +59,14 @@ DÖE in DE, nur über einen anderen Kanal (Open-Data-Metadaten statt eForms-API)
 
 ## Connector GEBAUT (`govisor/atverg.py`, 2026-07-29)
 
-Bronze + Silber fertig und smoke-getestet gegen den echten Tages-Dump (236.118 Records). **Voll-
-Ingest wartet auf den externen Speicher** (wie AT-TED).
+Bronze + Silber fertig und smoke-getestet gegen den echten Tages-Dump (236.118 Records).
+
+> **Stand 2026-08-30: läuft.** Der Voll-Ingest wartete auf den externen Speicher — den es seit
+> dem 2026-07-29 gibt. Gemessen: Bronze lädt täglich (34 MB, zuletzt 28./29./30.08.), Silber
+> führt **238.979 atverg-Sätze** (158.945 `can` / 80.034 `cn`), und **10.947 der 18.284
+> AT-Gold-Leads** tragen die `atv-`-Kennung. Von den `cn`-Sätzen haben 995 eine Frist in der
+> Zukunft. Der Registry-Eintrag stand bis heute auf `prepared` und beschrieb damit den
+> Bauzustand von Ende Juli, nicht den Betrieb.
 
 1. **Bronze:** `atverg.download()` — GET der Downloads-Seite, ZIP-URL aus dem HTML parsen
    (`_ZIP_RE`, da Zeitstempel+Hash pro Aufruf), ZIP nach `data/raw_atverg/AT/<stamp>.zip`.

@@ -34,6 +34,8 @@ CONNECTORS = {
     "doe-api":      "DÖE notice-exports API (oeffentlichevergabe.de = service.bund.de) — eForms, unterschwellig DE",
     "simap-json":   "simap.ch offene JSON-REST-API — CH Bund + Kantone + Gemeinden",
     "offeneverg-csv": "OffeneVergaben.at BULK-Kerndaten CSV (data.gv.at, BVergG2018) — unterschwellig AT >50k €",
+    "kdq-xml":      "Kerndatenquelle XML im BRZ-Schema (brz.gv.at/eproc/kdq) — jeder AT-Auftraggeber "
+                    "kann eine eigene führen; ANKÖ tut es. Index + eine Datei je Bekanntmachung",
     "ocds-json":    "OCDS-JSON-API (Open Contracting Data Standard 1.1) — UK Find-a-Tender/Contracts-Finder",
     "decp-bulk":    "DECP konsolidiert Parquet/CSV (data.gouv.fr) — Frankreich unterschwellig, tägl.",
     "netserver-html": "NetServer (Administration Intelligence) öffentliche Trefferliste — 4 DE-Landesportale, nur Bekanntmachungen (Unterlagen hinter Anmeldung)",
@@ -207,9 +209,13 @@ REGISTRY: list[Source] = [
     # 2019) via data.gv.at, täglich als CSV-Bulk aggregiert von OffeneVergaben.at (FOI, Open Source).
     # Bewusst NICHT das kommerzielle ANKÖ/vergabeportal.at (3.000/Tag, aber kein offener Zugang).
     Source("offeneverg-at", "OffeneVergaben.at (AT unterschwellig)", "offeneverg-csv", "AT",
-           "unterschwellig", "prepared", portals=1,
-           coverage="Connector gebaut (govisor/atverg.py: download+build_silver, Mapping gemessen an "
-                    "236k Records); BVergG2018-Open-Data >50k €, tägl. CSV-Bulk ~34 MB. Wartet auf Voll-Ingest",
+           "unterschwellig", "live", portals=1,
+           # ⚠ Stand bis 2026-08-30 „prepared … wartet auf Voll-Ingest". Gewartet wurde auf den
+           # externen Speicher — den es seit dem 2026-07-29 gibt. Gemessen: Bronze laedt taeglich
+           # (34 MB), Silber fuehrt 238.979 atverg-Saetze, 10.947 der 18.284 AT-Gold-Leads tragen
+           # die `atv-`-Kennung. Der Eintrag beschrieb den Bauzustand von Ende Juli, nicht den Betrieb.
+           coverage="läuft täglich. 238.979 Sätze in Silber (158.945 can / 80.034 cn), davon "
+                    "10.947 von 18.284 AT-Gold-Leads. BVergG2018-Open-Data >50k €, CSV-Bulk ~34 MB",
            overlap="füllt die AT-Lücke unter der EU-Schwelle; OSB-Anteil (~36%) überlappt TED-AT → "
                    "Gold-Filter via attributes.atverg/schwelle",
            url="https://offenevergaben.at/downloads/kerndaten_dump_daily?format=csv"),
@@ -218,6 +224,40 @@ REGISTRY: list[Source] = [
     # CH freihändig + Einladungsverfahren UNTER den CHF-Schwellen erscheinen oft NICHT auf simap;
     # einige Kantone betreiben Eigenportale. Niederwertig (Direktvergabe, kein Wettbewerb → kaum
     # Lead-Wert) und auf ~26 Kantonsportale fragmentiert. Nur bei konkretem Kundenbedarf gezielt.
+    # ANKÖ: geprueft am 2026-08-30, NICHT zu bauen — und der Grund ist ein anderer als der
+    # bisher notierte. `docs/quellen-at-unterschwellig.md` sagte „kommerziell, Login, kein
+    # offener Feed". Das erste stimmt, das letzte nicht: ANKÖ betreibt eine offene, per BVergG
+    # 2018 verpflichtende Kerndatenquelle unter CC BY 4.0 — 41.709 Bekanntmachungen seit
+    # 2019-03, taeglich fortgeschrieben, ohne Anmeldung abrufbar.
+    #
+    # Gebaut wird sie trotzdem nicht, aus einem MESSBAREN Grund: sie ist eine Teilmenge.
+    # ANKÖ veroeffentlicht die Kerndaten SEINER Auftraggeber; OffeneVergaben.at buendelt die
+    # aller Publizierenden und liefert 238.979 Saetze gegen 41.709 — dasselbe Recht, dieselbe
+    # Lizenz, das Fuenfeinhalbfache. Dazu sind 96 % der ANKÖ-Saetze Zuschlaege (Stichprobe 89
+    # aus 2026: 85× KD_8_2_Z1, 4× KD_8_1_Z2), also genau die Schicht, die atverg schon fuehrt.
+    Source("ankoe-at", "ANKÖ Kerndatenquelle (AT)", "kdq-xml", "AT",
+           "unterschwellig", "research", portals=1,
+           coverage="offene API http://ogd.ankoe.at/api/v1/notices (XML, CC BY 4.0), 41.709 "
+                    "Bekanntmachungen seit 2019-03. 96 % Zuschläge, 4 % offene Ausschreibungen",
+           overlap="⚠ TEILMENGE von offeneverg-at (238.979 Sätze aus derselben BVergG-Pflicht). "
+                   "Kein eigener Zugewinn — nicht bauen, solange atverg läuft",
+           url="http://ogd.ankoe.at/api/v1/notices"),
+
+    # USP: KEINE Datenquelle. Am 2026-08-30 geprueft, weil es auf der Portalliste stand.
+    # Das Unternehmensserviceportal ist das MELDEFORMULAR, mit dem oesterreichische Auftraggeber
+    # ihre Kerndaten-Metadaten auf data.gv.at eintragen — mit Anmeldung und dem Rollenrecht
+    # „eProcurement Metadaten-Ersteller". Die Ausschreibungssuche daneben
+    # (ausschreibungen.usp.gv.at) buendelt genau die Kerndatenquellen, die dort registriert
+    # wurden; eine oeffentliche Schnittstelle hat sie nicht (geprueft: /api/*, /v3/api-docs,
+    # /swagger-ui, /actuator → 404 bzw. 403). Wer die Daten will, liest die Quellen selbst —
+    # und das tut `offeneverg-at` bereits.
+    Source("usp-at", "Unternehmensserviceportal (AT)", "", "AT",
+           "beides", "research", portals=0,
+           coverage="⚠ keine Quelle: Meldeformular für Auftraggeber (Login + Rollenrecht). "
+                    "Die Suche darauf bündelt die Kerndatenquellen von data.gv.at",
+           overlap="führt zu denselben Daten wie offeneverg-at, nur ohne Schnittstelle",
+           url="https://ausschreibungen.usp.gv.at"),
+
     Source("ch-kantonal", "CH kantonale Eigenportale (freihändig/Einladung)", "simap-json", "CH",
            "unterschwellig", "research", portals=0,
            coverage="unter simap-Publikationspflicht; fragmentiert über Kantonsportale",
@@ -285,10 +325,14 @@ DOC_REGISTRY: list[Source] = [
            overlap="⚠ Hostliste allein greift zu kurz: erkannt wird über Pfad + Servlet + Liste",
            url="https://vergabe.bremen.de/NetServer/"),
     Source("doc-evgo-de", "e-Vergabe des Bundes — Unterlagen", "docfetch-evgo", "DE", "beides",
-           "prepared", portals=1, ebene="unterlagen", ertrag="dateien",
+           "live", portals=1, ebene="unterlagen", ertrag="dateien",
            modul="govisor.docfetch_evergabe_online",
-           coverage="1.033 Leads, noch kein regulärer Lauf. Download frei und ausdrücklich "
-                    "angeboten (»uneingeschränkter … Zugang gebührenfrei«), 30 von 30 mit ZIP",
+           # ⚠ Stand bis 2026-08-29 „prepared, noch kein regulärer Lauf". Gemessen am
+           # Manifest: 1.287 Archive geholt, täglich 35–47 Versuche, im Tageslauf verdrahtet.
+           # Der Eintrag beschrieb den Bauzustand, nicht den Betrieb — und niemand las ihn
+           # nach, weil er plausibel klang.
+           coverage="1.352 Versuche, 1.287 Archive (95 %), läuft täglich mit. Download frei "
+                    "und ausdrücklich angeboten (»uneingeschränkter … Zugang gebührenfrei«)",
            overlap="⚠ /xvergabe/services/ existiert laut robots.txt, ist dort aber für "
                    "automatische Zugriffe gesperrt — wir sprechen es NICHT an",
            url="https://www.evergabe-online.de"),

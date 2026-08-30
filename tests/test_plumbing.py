@@ -795,6 +795,14 @@ def test_source_registry_is_wellformed():
         # IHREN Connector-Namensraum — ein Doc-Abrufer unter CONNECTORS wuerde die
         # Connector-Zahl aufblaehen, ohne eine Bekanntmachung mehr zu liefern.
         erlaubt = sources.DOC_CONNECTORS if s.ebene == "unterlagen" else sources.CONNECTORS
+        # ⚠ Ein `research`-Eintrag darf OHNE Connector stehen — aber nur er. Die Landkarte
+        # haelt seit 2026-08-30 auch Negativbefunde fest („das USP ist keine Quelle, sondern
+        # das Meldeformular"), und so ein Eintrag hat keine technische Basis, die man
+        # benennen koennte. Ihn zu erfinden waere schlimmer als die Luecke: der naechste
+        # Leser haelt sie fuer einen halbfertigen Connector.
+        if s.status == "research" and not s.connector:
+            assert s.coverage, f"{s.id}: Befund ohne Connector braucht eine Begruendung"
+            continue
         assert s.connector in erlaubt, f"{s.id}: unbekannter Connector {s.connector}"
         assert s.status in sources.STATUSES, f"{s.id}: unbekannter Status {s.status}"
         assert s.tier in ("oberschwellig", "unterschwellig", "beides"), f"{s.id}: Tier {s.tier}"
@@ -819,13 +827,17 @@ def test_source_registry_is_wellformed():
     # und `ted-pl` auf "candidate", obwohl 326.485 polnische Bekanntmachungen in Silber
     # lagen. Ein getippter Status altert in dem Moment, in dem jemand das Land fertig baut.
     #
-    # ⚠ Was NICHT abgeleitet wird und weiter hinterherhinkt: `govisor.dtvp` laeuft im
-    # Tageslauf und schreibt Silber, steht aber in KEINEM Eintrag; `atverg` steht auf
-    # "prepared", obwohl `ingest-atverg` taeglich laeuft. Bei Portalen und nationalen
-    # Quellen sagt die Datenlage nichts ueber den Anbindungsstand — dort bleibt der Status
-    # eine Produktaussage und wird von Hand gepflegt.
+    # ⚠ Was NICHT abgeleitet wird: `govisor.dtvp` laeuft im Tageslauf und schreibt Silber,
+    # steht aber in KEINEM Eintrag. Bei Portalen und nationalen Quellen sagt die Datenlage
+    # nichts ueber den Anbindungsstand — dort bleibt der Status eine Produktaussage und wird
+    # von Hand gepflegt.
+    #
+    # `offeneverg-at` stand hier als bekannter Nachhinker im Kommentar („prepared, obwohl
+    # ingest-atverg taeglich laeuft") und ist am 2026-08-30 nachgezogen: 238.979 Saetze in
+    # Silber, 10.947 der 18.284 AT-Gold-Leads tragen die `atv-`-Kennung. Ein Nachhinker, den
+    # man notiert statt behebt, wird zur Fussnote — und Fussnoten liest niemand zweimal.
     live_ids = {s.id for s in sources.bekanntmachungen() if s.status == "live"}
-    assert live_ids == {"ted-de", "ted-at", "doe-de", "simap-ch", "netserver-de"}
+    assert live_ids == {"ted-de", "ted-at", "doe-de", "simap-ch", "netserver-de", "offeneverg-at"}
     # Polen: Silber liegt, Gold nicht — die Ableitung muss das sehen.
     assert any(s.id == "ted-pl" and s.status == "prepared" for s in sources.REGISTRY)
 
