@@ -95,7 +95,13 @@ def _liste_von_seite(pg) -> list[dict]:
     return pg.evaluate(
         """() => [...document.querySelectorAll('tr')].map(tr => {
              const zellen = [...tr.querySelectorAll('td')];
-             if (zellen.length < 4) return null;
+             // ⚠ DREI Spalten reichen. Manche Vorgaenge fuehren nur Name/Groesse/Erstellt,
+             // andere zusaetzlich „aktualisiert". Die Schwelle stand auf 4 und verwarf die
+             // dreispaltige Bauform vollstaendig: auf `www.wien.gv.at` lagen so 20 von 29
+             // Vorgaengen als „0 aktiv von 0" im Manifest, obwohl der Reiter „Unterlagen 7"
+             // hiess und acht Dateinamen trug — darunter ein Leistungsverzeichnis.
+             // Massgeblich ist der NAME, nicht die Spaltenzahl.
+             if (zellen.length < 3) return null;
              const span = zellen[0].querySelector('span[data-ng-bind*="f.name"]');
              if (!span) return null;
              const roh = zellen[0].innerText.replace(/\\s+/g, ' ').trim();
@@ -104,7 +110,9 @@ def _liste_von_seite(pg) -> list[dict]:
                roh: roh,
                groesse: zellen[1].innerText.trim(),
                erstellt: zellen[2].innerText.trim(),
-               aktualisiert: zellen[3].innerText.trim(),
+               // Fehlt die Spalte, ist das KEIN Nachtrag — deshalb der Erstellwert und
+               // nicht der leere String: `nachgebessert` vergleicht beide.
+               aktualisiert: (zellen[3] ? zellen[3].innerText.trim() : zellen[2].innerText.trim()),
              };
            }).filter(Boolean)""")
 
@@ -209,7 +217,10 @@ def lauf(limit: int | None = None, dry_run: bool = False, country: str = "AT",
                 r = hole_liste(url, pg)
             except Exception as e:                       # noqa: BLE001
                 print(f"  [{i}/{len(rows)}] {lead_id}: Fehler ({type(e).__name__})", flush=True)
-                _manifest.append({"lead_id": lead_id, "status": "fehler",
+                # ⚠ Die URL GEHOERT in den Fehlereintrag. Ohne sie stand im Manifest
+                # 83-mal „fehler" ohne Host — und die Frage „welches Portal klemmt?"
+                # war aus den eigenen Daten nicht zu beantworten.
+                _manifest.append({"lead_id": lead_id, "url": url, "status": "fehler",
                                   "note": f"{type(e).__name__}"})
                 continue
             dateien = r["dateien"]
@@ -231,8 +242,11 @@ def lauf(limit: int | None = None, dry_run: bool = False, country: str = "AT",
             wache.erfolg()
             # Schlank ins Manifest (Status + Zahl), die Dateiliste bleibt in
             # `doc_listing_vergabeportal.parquet` — eine Datei je Frage.
+            # ⚠ Die Notiz des Abrufers gewinnt, wenn er eine hat. Vorher stand bei jedem
+            # `leer` stumpf „0 aktiv von 0" — die genauere Auskunft („keine Dateien
+            # gelistet" bzw. „kein Unterlagen-Bereich") wurde ueberschrieben.
             _manifest.append({"lead_id": lead_id, "url": url, "status": r["status"],
-                              "note": f"{len(aktiv)} aktiv von {len(dateien)}"})
+                              "note": r.get("note") or f"{len(aktiv)} aktiv von {len(dateien)}"})
             print(f"  [{i}/{len(rows)}] {lead_id}: {len(aktiv)} aktiv von {len(dateien)}"
                   + (f" · {', '.join(prio)}" if prio else ""), flush=True)
             pg.wait_for_timeout(_HOEFLICH_MS)

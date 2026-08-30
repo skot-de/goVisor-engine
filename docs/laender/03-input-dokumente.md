@@ -295,6 +295,18 @@ Der Code allein reicht nicht. Vier Dinge, sonst wirkt die Arbeit nicht:
 
 Der Rest, der nichts mit Statusmeldungen zu tun hat — sondern mit dem Betrieb:
 
+- **⚠ Eine Spaltenzahl ist keine Struktur.** Der AT-Abrufer verlangte vier Tabellenzellen
+  je Datei (Name, Grösse, erstellt, aktualisiert). Manche Vorgänge führen nur drei — ohne
+  „aktualisiert". Die dreispaltige Bauform wurde damit **vollständig verworfen**: auf
+  `www.wien.gv.at` lagen 20 von 29 Vorgängen als „0 aktiv von 0" im Manifest, obwohl der
+  Reiter „Unterlagen 7" hiess und acht Dateinamen trug, darunter ein Leistungsverzeichnis.
+  Nach der Korrektur: 20 Listen, 149 Dateinamen. **Am Merkmal festmachen (hier: der
+  Dateiname), nicht an der Form der Tabelle drumherum.**
+- **⚠ Der Fehlereintrag muss tragen, was die Frage beantwortet.** Derselbe Abrufer schrieb
+  bei einer Ausnahme `{lead_id, status, note}` — **ohne URL**. 83 Sätze standen so als
+  „fehler" ohne Host im Manifest, und die Frage „welches Portal klemmt?" war aus den eigenen
+  Daten nicht zu beantworten. Der Erfolgspfad trug die URL, der Fehlerpfad nicht — und
+  gebraucht wird sie genau dort.
 - **Hängende Abrufer.** `SIGALRM` wird von Playwright verschluckt. Es braucht eine Wache
   ausserhalb des Prozesses, sonst steht ein Lauf still und meldet nichts.
 - **Zip-Bomben.** Grössengrenze und Entpack-Grenze sind Pflicht, nicht Kür.
