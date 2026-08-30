@@ -1249,7 +1249,7 @@ def build_entities(cfg: Config, country: str = "DE", hr_index: dict | None = Non
 
     con = _db.connect()
     parties = con.execute(f"""
-        SELECT notice_id, role, seq, name, national_id, postal_code
+        SELECT notice_id, role, seq, name, national_id, postal_code, nuts, town
         FROM '{cfg.silver_table_glob("notice_parties", country)}'
         WHERE name IS NOT NULL
     """).fetchall()
@@ -1258,13 +1258,20 @@ def build_entities(cfg: Config, country: str = "DE", hr_index: dict | None = Non
     plz_of: dict[str, set[str]] = {}
     leitweg_of: dict[str, set[str]] = {}     # entity_id → Leitweg-ID(s), für den Vergabestellen-Anker
     vat_of: dict[str, set[str]] = {}         # entity_id → USt-IdNr(n), zweiter Vergabestellen-Anker
+    # NUTS3 als ZWEITBESTER Ortsbeleg. Die PLZ ist der scharfe Beleg, aber sie fehlt bei
+    # vielen oeffentlichen Stellen; NUTS3 (Kreisebene) traegt dieselbe Aussage groeber und
+    # rettet genau die Faelle, in denen sonst gar kein Beleg vorliegt. Nie GEGEN eine PLZ.
+    nuts_of: dict[str, set[str]] = {}
+    # Ortsname als DRITTER, schwaechster Beleg — nur wo PLZ und NUTS beide fehlen.
+    ort_of: dict[str, set[str]] = {}
     links = []
     # In-Run-Memoisierung: resolve_supplier ist rein in (name, national_id, plz, hr_index),
     # und 84 % der 3,7M Parteien sind Wiederholungen (nur 592k distinkte Tupel). Reihenfolge
     # und setdefault-First bleiben unverändert → bit-identisch. (Kein Cross-Lauf-Cache — der
     # brachte nichts, s. Historie: der Flaschenhals war _write, nicht die Auflösung.)
     memo: dict[tuple, ResolvedEntity] = {}
-    for notice_id, role, seq, name, national_id, plz in parties:
+    from . import entities as _entities
+    for notice_id, role, seq, name, national_id, plz, nuts, town in parties:
         key = (name, national_id, plz)
         resolved = memo.get(key)
         if resolved is None:
@@ -1274,6 +1281,13 @@ def build_entities(cfg: Config, country: str = "DE", hr_index: dict | None = Non
         entity_of.setdefault(resolved.entity_id, resolved)
         if plz and plz.strip():
             plz_of.setdefault(resolved.entity_id, set()).add(plz.strip())
+        if nuts and nuts.strip():
+            nuts_of.setdefault(resolved.entity_id, set()).add(nuts.strip()[:5])   # NUTS3
+        if town and town.strip():
+            # Gefaltet wie die Namen (ae/oe/ue), sonst spaltet „Muenchen"/„München" den Beleg.
+            o = re.sub(r"[^a-z]", "", _entities.strip_accents(town.lower()))
+            if o:
+                ort_of.setdefault(resolved.entity_id, set()).add(o)
         # Käufer-IDs festhalten (resolve_supplier verwirft sie für PUBLIC) — Anker s. u.
         if role == "buyer" and national_id:
             nk = normalize_national_id(national_id)
@@ -1338,7 +1352,7 @@ def build_entities(cfg: Config, country: str = "DE", hr_index: dict | None = Non
     merge_map.update(_load_entity_aliases(cfg, country, entity_of))
     # Clean-Name-Merge (PLZ-gegated): nur-Name-Fragmente öffentlicher Stellen ohne Register-Anker
     # (Casing-/Vertretungs-Dubletten) zusammenführen. Gemessen ~8 % weniger Vergabestellen-Entities.
-    merge_map.update(_consolidate_by_shared_name_plz(entity_of, plz_of, set(merge_map)))
+    merge_map.update(_consolidate_by_shared_name_geo(entity_of, plz_of, nuts_of, ort_of, set(merge_map)))
     # Municipality-Merge (AGS-artig): kommunale Vergabestellen über kanonischen Gemeinde-Schlüssel
     # (Behörden-Typ + Gemeinde + geonames-Kreis) — merged „Stadt X"=„Landeshauptstadt X"=„STADT X,
     # Amt Y". Adressiert die Behörden-Fragmentierung, die Register nicht auflöst (~21 % der Buyer).
@@ -1685,38 +1699,129 @@ def _consolidate_by_municipality(entity_of: dict, plz_of: dict, plz_kreis: dict,
     return merge_map
 
 
-def _consolidate_by_shared_name_plz(entity_of: dict, plz_of: dict, already: set):
-    """Nur-Name-Fragmente mit GLEICHEM Namen (``norm``) UND geteilter PLZ verschmelzen — auch OHNE
-    Register-Anker. Schließt die Lücke für **öffentliche Stellen** (nicht im HR): Casing-/Vertretungs-
-    Dubletten (``OCHTUMVERBAND`` = ``Ochtumverband``) landen im selben norm-Cluster, blieben aber
-    getrennt, weil ``_consolidate_by_national_id`` einen ID-Anker braucht. Gate = geteilte PLZ (dieselbe
-    „0 Fehl-Merges"-Regel wie Stufe 1); zwei „Stadtwerke" verschiedener Orte bleiben getrennt.
+def _consolidate_by_shared_name_geo(entity_of: dict, plz_of: dict, nuts_of: dict,
+                                    ort_of: dict, already: set):
+    """Fragmente mit demselben GEREINIGTEN Namen und geteiltem Ortsbeleg verschmelzen.
 
-    ``already`` = Entities, die schon (per National-ID/Alias) verschmelzen — die überspringen wir.
-    Konservativ: mergt je Cluster in die kleinste entity_id, nur wo eine PLZ überlappt.
+    Der Vorgaenger (``_consolidate_by_shared_name_plz``) war an drei Stellen zu eng, und alle
+    drei trafen ausgerechnet die Vergabestellen — also genau die Gruppe, fuer die er gedacht war.
+    Gemessen am DE-Bestand 2026-08-30 (72.607 Kaeufer-Entitaeten aus 123.428 Rohnamen):
+
+    1. FILTER AUF ``NAME_ONLY``. ``resolve_supplier`` kehrt fuer alles, was nicht
+       ``Kind.COMPANY`` ist, frueh als ``unresolved:<name>`` zurueck — der Kommentar dort nennt
+       Personen und Bietergemeinschaften, aber ``Kind.PUBLIC`` faellt in denselben Zweig.
+       Ergebnis: **27.348 Kaeufer-Entitaeten (37,7 %) tragen ``nicht_aufgeloest``** und kamen in
+       diesem Pass nie vor. Jetzt sind sie drin, aber nur wenn sie oeffentlich sind: Personen und
+       Bietergemeinschaften bleiben ausgeschlossen, fuer die waere ein Namensmerge ein Ratespiel.
+
+    2. SCHLUESSEL WAR ``e.norm``, ALSO DER ROHE NAME. ``clean_display_name`` loest
+       „X vertreten durch Y" zu „X" auf — aber erst NACH der Aufloesung, auf dem Anzeigenamen.
+       Der Merge-Schluessel trug den Zusatz weiter. Folge: **„DB Netz AG" existiert 98-mal**, als
+       ``name:db netz vertreten durch db projektbau niederlassung suedost b so tp5`` und 97
+       Geschwister, die einander nie begegnen. Jetzt clustert der Pass ueber den gereinigten
+       Namen, mit demselben ``classify``-Normalisierer wie der Rest des Hauses.
+
+    3. OHNE PLZ KEIN MERGE. Die PLZ ist der scharfe Beleg, fehlt aber bei oeffentlichen Stellen
+       oft. NUTS3 (Kreisebene) und der ORTSNAME tragen dieselbe Aussage groeber und lagen beide
+       ungenutzt daneben. Gemessen: **248.611 Kaeufer-Instanzen (11,2 %) tragen NUR einen
+       Ortsnamen** und sonst keinen Ortsbeleg. Genau daran scheiterte der Pass bisher: von den
+       1.889 blockierten Fragmenten scheiterten nur 68 an WIDERSPRECHENDEN Adressen, aber 1.821
+       an gar keiner. Das Vergabestellen-Problem ist kein Zuordnungs-, sondern ein Adressproblem.
+
+    ⚠ DIE BELEGREGEL IST BEWUSST ASYMMETRISCH: Haben BEIDE Seiten eine PLZ, MUSS sie sich
+    ueberschneiden — zwei „Stadtwerke" verschiedener Orte bleiben getrennt, und NUTS3 darf das
+    nicht ueberstimmen. Erst wenn der PLZ-Beleg auf mindestens einer Seite fehlt, entscheidet
+    NUTS3. So bleibt die „0 Fehl-Merges"-Regel erhalten, statt sie gegen Ausbeute zu tauschen.
+
+    Gemessen auf dem aktuellen Bestand: 1.471 Namensgruppen teilen einen Ortsbeleg
+    (**2.369 ueberzaehlige Entitaeten**); 121 Gruppen (304 Entitaeten) haben WIDERSPRECHENDE
+    Belege und werden bewusst nicht angefasst; 1.594 Gruppen (2.066) haben gar keinen Beleg und
+    bleiben ebenfalls liegen. Nicht adressiert ist die Abteilungsebene („Stadt X, Bauamt" gegen
+    „Stadt X, Schulamt", rund 28 % des Bestands) — das ist eine Produktfrage, kein Datenfehler,
+    und gehoert nicht heimlich in einen Merge-Pass.
+
+    ``already`` = Entities, die schon (per National-ID/Alias/Leitweg/VAT) verschmelzen.
+    Konservativ: mergt je Cluster in die kleinste entity_id.
     """
     from collections import defaultdict
+    import re as _re
+    from . import entities as _ents
+    from . import names as _names
 
-    by_norm: dict[str, list] = defaultdict(list)
+    KANDIDAT = (Method.NAME_ONLY, Method.UNRESOLVED)
+    OEFFENTLICH = (_ents.Kind.PUBLIC, _ents.Kind.ASSOCIATION)
+
+    def _sauber(e):
+        return _names.clean_display_name(e.canonical_name) or e.canonical_name or ""
+
+    def _schluessel(e):
+        """Cluster-Schluessel aus dem GEREINIGTEN Namen — kein eigener Normalisierer."""
+        sauber = _sauber(e)
+        return _ents.classify(sauber).normalized if sauber else None
+
+    def _einheit(e):
+        """Die Organisationseinheit hinter dem ersten Komma, normalisiert.
+
+        ⚠ SIE ENTSCHEIDET UEBER DIE KOERNUNG DES BESTANDS, und deshalb steht sie hier.
+        ``classify().normalized`` schneidet am Komma ab: „Landeshauptstadt Dresden,
+        Geschaeftsbereich Stadtentwicklung" und „…, Geschaeftsbereich Allgemeine Verwaltung"
+        ergeben denselben Schluessel. Ohne diesen Riegel wuerde der Pass also nebenbei die
+        ABTEILUNGSEBENE einschmelzen — gemessen 1.772 statt 1.017 Merges.
+
+        Das waere keine Datenbereinigung, sondern eine Produktentscheidung: „Wer ist die
+        Vergabestelle, die Behoerde oder die einkaufende Einheit?" Sie ist frueher bewusst
+        zugunsten der Einheit gefallen (Muenchen 5, BImA 4). Ein Merge-Pass ist nicht der Ort,
+        an dem so etwas still umgedreht wird.
+
+        Darum: verschmolzen wird nur, wenn die Einheiten GLEICH sind oder eine Seite gar keine
+        nennt. „Stadt Muenster, der Oberbuergermeister" und „Stadt Muenster" gehoeren zusammen
+        (Vertretung, keine Einheit); die zwei Dresdner Geschaeftsbereiche nicht.
+        """
+        sauber = _sauber(e)
+        rest = sauber.split(",", 1)[1] if "," in sauber else ""
+        return _re.sub(r"[^a-z0-9]", "", _ents.strip_accents(rest.lower()))
+
+    by_key: dict[str, list] = defaultdict(list)
     for e in entity_of.values():
-        if e.norm and e.method == Method.NAME_ONLY and e.entity_id not in already:
-            by_norm[e.norm].append(e)
+        if e.entity_id in already or e.method not in KANDIDAT:
+            continue
+        if e.method == Method.UNRESOLVED and _ents.classify(e.canonical_name).kind not in OEFFENTLICH:
+            continue                                    # Person/Bietergemeinschaft: nicht raten
+        k = _schluessel(e)
+        if k:
+            by_key[k].append(e)
+
+    def _beleg_passt(a: str, b: str) -> bool:
+        """Ortsbeleg als KASKADE: der schaerfste vorhandene Beleg entscheidet allein.
+
+        Der schwaechere darf den schaerferen nie ueberstimmen — sonst wuerde ein geteilter
+        Ortsname zwei Stellen mit widersprechender PLZ zusammenziehen. Darum wird pro Paar
+        die hoechste Stufe genommen, auf der BEIDE Seiten etwas vorweisen, und nur die zaehlt.
+        """
+        pa, pb = plz_of.get(a, set()), plz_of.get(b, set())
+        if pa and pb:
+            return bool(pa & pb)                        # 1. PLZ: der scharfe Beleg
+        na, nb = nuts_of.get(a, set()), nuts_of.get(b, set())
+        if na and nb:
+            return bool(na & nb)                        # 2. NUTS3: Kreisebene
+        oa, ob = ort_of.get(a, set()), ort_of.get(b, set())
+        return bool(oa and ob and (oa & ob))             # 3. Ortsname: letzter Beleg
 
     merge_map: dict[str, str] = {}
-    for norm, group in by_norm.items():
+    for _, group in by_key.items():
         if len(group) < 2:
             continue
-        group.sort(key=lambda e: e.entity_id)          # kleinste ID = Repräsentant, stabil
+        group.sort(key=lambda e: e.entity_id)           # kleinste ID = Repraesentant, stabil
         for i, rep in enumerate(group):
             if rep.entity_id in merge_map:
-                continue                                # schon einem früheren Repräsentanten zugeschlagen
-            rplz = plz_of.get(rep.entity_id, set())
-            if not rplz:
-                continue                                # ohne PLZ kein Beleg → nicht mergen
+                continue                                # schon einem frueheren Repraesentanten zu
             for other in group[i + 1:]:
                 if other.entity_id in merge_map:
                     continue
-                if plz_of.get(other.entity_id, set()) & rplz:
+                ea, eb = _einheit(rep), _einheit(other)
+                if ea and eb and ea != eb:
+                    continue                            # zwei verschiedene Einheiten: nicht unsere Entscheidung
+                if _beleg_passt(rep.entity_id, other.entity_id):
                     merge_map[other.entity_id] = rep.entity_id
     return merge_map
 
