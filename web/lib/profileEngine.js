@@ -106,8 +106,29 @@ const BUERG_QUOTE = 0.05;
 /* Erklärbare Passung eines Leads gegen ein Profil.
  * leadValue: der geparste Auftragswert in € (oder null = unbekannt) — außerhalb geparst,
  * damit die Engine frei von Parsing-Heuristik bleibt. */
+/* Passungszahl — dieselbe Rechnung wie die Relevanz-Stufe, nur nicht auf drei Stufen
+ * gerundet. `s` laeuft von 2 (nichts passt ausser dem Nachbarfeld) bis 5,5 (alles passt).
+ *
+ * ⚠ Sie ist BEWUSST grob. `s` springt in Halbschritten, es gibt genau acht erreichbare
+ * Werte: 0 · 14 · 29 · 43 · 57 · 71 · 86 · 100. Wer daraus eine feine Skala liest, liest
+ * mehr hinein als drin ist.
+ *
+ * ⚠ Und sie ist KEIN Prozentsatz und keine Gewinnwahrscheinlichkeit. Sie ordnet, sie
+ * prognostiziert nicht. Eine kalibrierte Zahl haben wir woanders (dim_displaceability,
+ * ECE 0,016) — diese hier ist eine Rangzahl. Darum bleibt die STUFE die Aussage; die Zahl
+ * dient dem Sortieren und einem Mindestwert. Nie ohne die Beleglage zeigen (dichte.ts):
+ * „71 bei duenner Beleglage" ist eine andere Aussage als „71 bei reicher".
+ *
+ * Die Grenzen der Stufen liegen skaliert bei 71 (hoch) und 29 (mittel) — dieselben
+ * Schwellen wie oben, nur in der 100er-Darstellung. */
+const S_MIN = 2, S_MAX = 5.5;
+export function passungsZahl(s) {
+  const v = Math.round(((s - S_MIN) / (S_MAX - S_MIN)) * 100);
+  return Math.max(0, Math.min(100, v));
+}
+
 export function matchLead(lead, p, leadValue) {
-  if (!hasProfile(p)) return { relevanz: 'na', teile: [], blocker: [], partner: false };
+  if (!hasProfile(p)) return { relevanz: 'na', passung: null, teile: [], blocker: [], partner: false };
 
   const teile = [];        // {dim, label, status, text}
   const blocker = [];      // harte Ausschluss-/Warnhinweise
@@ -197,12 +218,12 @@ export function matchLead(lead, p, leadValue) {
     blocker.push({ art: 'buergschaft_offen', text: 'fordert eine Bürgschaft — hinterlegt euren Rahmen, dann prüfen wir das.' });
   }
 
-  // ── Relevanz-Stufe ──────────────────────────────────────────────────────────
+  // ── Relevanz-Stufe + Passungszahl ──────────────────────────────────────────
   const hartBlock = blocker.some((b) => b.art === 'buergschaft');
-  let relevanz;
-  if (ausgeschlossen) relevanz = 'niedrig';       // #27 §6.3: Ausschluss → aus der Relevanz
-  else if (feld === 'aussen') relevanz = 'niedrig';
-  else if (hartBlock) relevanz = 'niedrig';
+  let relevanz, passung;
+  if (ausgeschlossen) { relevanz = 'niedrig'; passung = 0; }   // #27 §6.3: Ausschluss → aus der Relevanz
+  else if (feld === 'aussen') { relevanz = 'niedrig'; passung = 0; }
+  else if (hartBlock) { relevanz = 'niedrig'; passung = 0; }
   else {
     let s = 2;                                  // Feldtreffer ist die Basis
     if (feld === 'ok') s++;                      // voller Feldtreffer statt Nachbar
@@ -212,9 +233,10 @@ export function matchLead(lead, p, leadValue) {
     if (p.zielrichtung === 'bestand' && p.cpvWins && p.cpvWins[cpv4]) s += 0.5;
     else if (p.zielrichtung === 'expandieren' && feld === 'nachbar') s += 0.5;
     relevanz = s >= 4.5 ? 'hoch' : s >= 3 ? 'mittel' : 'niedrig';
+    passung = passungsZahl(s);
   }
 
-  return { relevanz, teile, blocker, partner };
+  return { relevanz, passung, teile, blocker, partner };
 }
 
 /* Kompakte HTML-Zeile „Feld ✓ · Region ✓ · Volumen unbekannt" — kompatibel zum
