@@ -37,6 +37,7 @@ from govisor.llm import (chat, letzter_anbieter, anbieter_stand,  # noqa: E402
                          DEFAULT_MODEL as llm_default_model,
                          AllKeysExhausted)
 from govisor.llm import BudgetErschoepft, kontostand as _llm_kontostand  # noqa: E402
+from govisor.llm import RESERVE_USD as _llm_reserve  # noqa: E402
 from govisor import doctypes, docextract, docparse, doctax, docpipe  # noqa: E402
 from govisor import lbauswahl, dokdubletten  # noqa: E402
 from govisor.docpipe import SQL_BRAUCHBAR  # noqa: E402
@@ -612,7 +613,48 @@ def _laeuft(pid: int) -> bool:
     return True
 
 
+# Was mindestens ueber der Reserve stehen muss, damit eine Runde sich lohnt.
+#
+# Ein Vorgang kostet gemessen rund 0,025 $ (s. `scripts/dokumente_stand.py`), 0,50 $ reichen
+# also fuer etwa zwanzig. Der Wert ist eine Abwaegung, keine Naturkonstante: die Runde selbst
+# kostet nichts an Geld, aber rund 1,7 GB Speicher und mehrere Minuten Maschine. Fuer eine
+# Handvoll Vorgaenge lohnt das nicht — und genau dieser Fall trat ein: bei 1,41 $ Guthaben
+# gegen 1,00 $ Reserve blieben 0,41 $, und eine erste Schwelle von 0,15 $ liess die Runde
+# durch. Sie haette sechzehn Vorgaenge geschafft und den Rechner minutenlang belegt.
+MINDEST_UEBER_RESERVE = float(os.environ.get("MINDEST_UEBER_RESERVE", "0.50"))
+
+
+def _lohnt_sich() -> str | None:
+    """Grund, die Runde gar nicht erst anzufangen — oder ``None``.
+
+    ⚠ WARUM DIE PRUEFUNG GANZ VORNE STEHT. Die Geldwache sitzt in `llm.chat()`, also im
+    einzelnen Aufruf. Sie verhindert Ausgaben, nicht Arbeit: eine Runde ohne Guthaben
+    laedt trotzdem erst die Quelle (Volltexte aus 817 MB Parquet) und dann den Bestand
+    (`doc-analysis.json`, 354 MB → rund 1,7 GB Python-Objekte), stellt danach fest, dass
+    sie nichts tun darf, und schreibt alles zurueck.
+
+    Am 29.08. lief genau das im Viertelstundentakt: drei Runden hintereinander meldeten
+    unveraendert „1379 warten noch", waehrend der Rechner unbedienbar war. Bezahlt hat es
+    niemand — es hat nur die Maschine gekostet.
+    """
+    try:
+        rest = _restguthaben()
+    except Exception:                                       # noqa: BLE001
+        return None                                         # nicht abrufbar → lieber laufen
+    if rest is None:
+        return None
+    frei = rest - _llm_reserve
+    if frei < MINDEST_UEBER_RESERVE:
+        return (f"Guthaben {rest:.2f} $ bei {_llm_reserve:.2f} $ Reserve — "
+                f"{frei:.2f} $ frei, das reicht fuer keine sinnvolle Runde. "
+                f"Aufladen oder MINDEST_UEBER_RESERVE senken.")
+    return None
+
+
 def _lauf() -> int:
+    if (grund := _lohnt_sich()):
+        print(f"⏸  Runde uebersprungen: {grund}", flush=True)
+        return 0
     con = duckdb.connect()
     # REIHENFOLGE NACH AKTUALITAET, nicht nach notice_id.
     #
@@ -809,7 +851,22 @@ def _lauf() -> int:
         return nid, res
 
     def sichern():
-        OUT.write_text(json.dumps(out, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+        """Zwischenstand auf die Platte — ueber eine temporaere Datei, dann umbenennen.
+
+        ⚠ HIER STAND EIN DIREKTES `OUT.write_text(...)`. Die Datei ist 355 MB gross und
+        traegt Analysen fuer rund 94 $ bezahlte Modell-Zeit; sie zu schreiben dauert
+        Sekunden. Wer den Lauf in diesem Fenster abbricht — ein `launchctl bootout`, ein
+        Neustart, ein voller Datentraeger — bekommt eine abgeschnittene Datei zurueck, und
+        zwar ohne Fehlermeldung: sie ist einfach kuerzer und laesst sich nicht mehr lesen.
+
+        `rename` innerhalb desselben Dateisystems ist atomar: entweder steht der alte Stand
+        da oder der neue, nie ein halber. Der Stapel-Pfad zwei Funktionen weiter oben macht
+        es seit jeher so (`tmp.replace(OUT)`) — diese Stelle war die Ausnahme.
+        """
+        tmp = OUT.with_suffix(".teil")
+        tmp.write_text(json.dumps(out, ensure_ascii=False, separators=(",", ":")),
+                       encoding="utf-8")
+        tmp.replace(OUT)
 
     start_usd = _restguthaben() if BUDGET_USD else None
     start_verbrauch = _verbrauch() if BUDGET_USD else None

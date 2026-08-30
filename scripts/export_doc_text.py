@@ -8,6 +8,7 @@ für den Volltext-Download gibt es später die echte Datei/Objektspeicher).
 
 Aufruf: python3 scripts/export_doc_text.py
 """
+import argparse
 import json
 import re
 import sys
@@ -30,6 +31,15 @@ INDEX = ROOT / "web" / "data" / "doc-text-index.json"
 # Der alte Sammelblock. Wird nur noch geloescht, nie geschrieben.
 ALT = ROOT / "web" / "data" / "doc-text.json"
 CAP = 60_000  # Zeichen je Vorgang im JSON
+# ⚠ WANN DER LAUF UEBERHAUPT ETWAS ZU TUN HAT. Der Dokument-Arbeiter ruft dieses Skript alle
+# zehn Minuten auf. Am 29.08. hat es dabei in einer ganzen Stunde NULL von 9.128 Dateien
+# geschrieben — es gab schlicht nichts Neues. Bezahlt wurde der Lauf trotzdem: die ganze
+# Parquet-Datei durch den Speicher, gemessen 14 GB auf einer 16-GB-Maschine. Der Rechner war
+# dadurch waehrend der Laufzeit praktisch unbedienbar.
+#
+# Die Quelle wird ausschliesslich von `index-docs` geschrieben. Aendert sie sich nicht, kann
+# sich das Ergebnis nicht aendern — dann genuegt ein Blick auf Zeitstempel und Groesse.
+STAND = ROOT / "data" / ".doc_text_export.json"
 
 _WS = re.compile(r"[ \t]+")
 _NL = re.compile(r"\n{3,}")
@@ -42,12 +52,57 @@ def clean(t: str) -> str:
     return t.strip()
 
 
-def main() -> int:
+def _quelle_stand() -> dict:
+    """Fingerabdruck der Quelle: Zeitstempel und Groesse. Beides billig, beides genug."""
+    st = SRC.stat()
+    return {"mtime": int(st.st_mtime), "groesse": st.st_size}
+
+
+def main(argv=None) -> int:
+    ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
+    ap.add_argument("--erzwingen", action="store_true",
+                    help="auch laufen, wenn die Quelle unveraendert ist")
+    ap.add_argument("--sortieren", action="store_true",
+                    help="Quelle vor dem Lesen sortieren (teuer; nur noetig, wenn der Lauf "
+                         "zerrissene Vorgaenge meldet)")
+    a = ap.parse_args(argv)
+
     if not SRC.exists():
         print(f"FEHLT: {SRC} — erst `index-docs` laufen lassen.")
         return 1
+
+    stand = _quelle_stand()
+    if not a.erzwingen and INDEX.exists() and STAND.exists():
+        try:
+            if json.loads(STAND.read_text(encoding="utf-8")) == stand:
+                print("LB-Volltext: Quelle unveraendert — nichts zu tun. (--erzwingen laeuft trotzdem)")
+                return 0
+        except Exception:                       # noqa: BLE001
+            pass                                # kaputter Stand → lieber einmal zu viel laufen
+
     con = duckdb.connect()
-    rows = con.execute(
+    # ⚠ NICHT SORTIEREN. Hier stand `ORDER BY notice_id, file` — und genau das war das
+    # Speicherproblem: DuckDB muss dafuer 817 MB Parquet MIT den Volltext-Spalten
+    # materialisieren. Mit einer Grenze von 1 GB oder 2 GB steigt es mit
+    # OutOfMemoryException aus, ohne Grenze nimmt es sich, was da ist.
+    #
+    # Gebraucht wird die Sortierung ohnehin nicht. `index-docs` schreibt vorgangsweise;
+    # gemessen am 2026-08-30 ueber 223.747 Zeilen und 9.336 Vorgaenge: **kein einziger**
+    # Vorgang ist in der Dateireihenfolge zerrissen. Die Reihenfolge der Dateien INNERHALB
+    # eines Vorgangs stellt `verarbeite()` selbst her — das sind eine Handvoll Eintraege.
+    #
+    # ⚠ Verlassen wird sich darauf nicht: taucht eine Kennung doch ein zweites Mal auf,
+    # zaehlt der Lauf das und sagt es laut. `--sortieren` erzwingt dann den alten Weg mit
+    # genug Speicher. Eine stillschweigende Annahme waere hier ein halber Volltext.
+    con.execute(f"SET memory_limit='{'6GB' if a.sortieren else '1GB'}'")
+    # ⚠ `preserve_insertion_order=false` DARF HIER NICHT STEHEN. Ich hatte es gesetzt, weil
+    # DuckDB es bei Speichernot selbst vorschlaegt — es erlaubt aber ausdruecklich, Zeilen
+    # umzuordnen, und genau darauf beruht die Gruppierung ohne ORDER BY. Die Folge war
+    # nicht ein Fehler, sondern ein WACKELN: derselbe Lauf schrieb mal 50, mal 62 Dateien,
+    # und die Zeichensumme wanderte. Ein Ergebnis, das sich bei gleicher Eingabe aendert,
+    # ist schlimmer als ein langsames.
+    ordnung = "ORDER BY notice_id, file" if a.sortieren else ""
+    con.execute(
         f"""SELECT notice_id, file, filetype, text
             FROM read_parquet('{SRC.as_posix()}')
             -- `ocr` wie `ok` — s. govisor/docpipe.py: der Zustand entsteht nur, wenn die
@@ -56,66 +111,74 @@ def main() -> int:
             -- 3,23 Mio. Zeichen. KEIN Vorgang haengt allein daran — wer nur OCR-Text hat,
             -- existiert nicht (0 von 404). Es ist Tiefe, nicht Abdeckung.
             WHERE {SQL_BRAUCHBAR} AND text IS NOT NULL AND length(text) > 0
-            ORDER BY notice_id, file"""
-    ).fetchall()
+            {ordnung}"""
+    )
 
-    # ── Nachtraege: ueberholte Fassungen nicht ausliefern ───────────────────────────────
-    #
-    # `docpipe` markiert sie seit dem 21.08. beim Indizieren (`status='ueberholt'`); dieser
-    # Filter gilt dem, was VORHER indiziert wurde. Ohne ihn stuenden in der Anzeige zwei
-    # Angebotsfristen untereinander, mit „── Datei ──"-Trenner dazwischen und ohne Hinweis,
-    # welche gilt. Je DATEI, nicht je Fassung — s. `docpipe.ueberholte`.
-    je_vorgang: dict[str, list[str]] = {}
-    for nid, file, _, _ in rows:
-        je_vorgang.setdefault(nid, []).append(file)
-    raus = {(nid, f) for nid, dateien in je_vorgang.items() for f in ueberholte(dateien)}
-    if raus:
-        print(f"  {len(raus):,} überholte Dateien aus Nachträgen übersprungen")
-
-    docs: dict[str, dict] = {}
-    for nid, file, ftype, text in rows:
-        if (nid, file) in raus:
-            continue
-        d = docs.setdefault(nid, {"files": [], "parts": []})
-        d["files"].append(file)
-        d["parts"].append(f"── {file} ──\n{clean(text)}")
-
-    out = {}
-    for nid, d in docs.items():
-        full = "\n\n".join(d["parts"])
-        out[nid] = {
-            "chars": len(full),
-            "files": len(d["files"]),
-            "text": full[:CAP],
-            "truncated": len(full) > CAP,
-        }
-
-    # ── EINE DATEI JE VORGANG ────────────────────────────────────────────────────────
-    # Der Sammelblock `doc-text.json` war am 2026-08-18 auf 294 MB gewachsen. Lokal ist das
-    # ein Lesevorgang von der Platte; in der Cloud laedt `app/api/lead-detail/route.ts` die
-    # GANZE Datei ueber das Netz und haelt sie im Speicher — je Serverless-Instanz, bei jedem
-    # Kaltstart, fuer EINEN angefragten Vorgang. Aufgeteilt sind es ein paar Kilobyte.
-    #
-    # Der Sammelblock bleibt trotzdem stehen: `scripts/dokumente_stand.py` und der
-    # Lauf-Monitor zaehlen darueber, und die Route faellt auf ihn zurueck, wenn eine
-    # Einzeldatei fehlt. Verschwinden soll er erst, wenn ihn nichts mehr liest.
     JE_VORGANG.mkdir(parents=True, exist_ok=True)
     vorhanden = {f.stem for f in JE_VORGANG.glob("*.json")}
+    index: dict[str, dict] = {}
+    zerrissen: list[str] = []
     geschrieben = 0
-    for nid, v in out.items():
+    zeichen_gesamt = 0
+    ueberholt_gesamt = 0
+
+    def verarbeite(nid: str, dateien: list[tuple[str, str]]) -> None:
+        """Ein Vorgang, fertig zusammengesetzt und geschrieben."""
+        nonlocal geschrieben, zeichen_gesamt, ueberholt_gesamt
+        # ── Nachtraege: ueberholte Fassungen nicht ausliefern ──────────────────────────
+        # `docpipe` markiert sie seit dem 21.08. beim Indizieren (`status='ueberholt'`);
+        # dieser Filter gilt dem, was VORHER indiziert wurde. Ohne ihn stuenden in der
+        # Anzeige zwei Angebotsfristen untereinander, mit „── Datei ──"-Trenner dazwischen
+        # und ohne Hinweis, welche gilt. Je DATEI, nicht je Fassung — s. `docpipe.ueberholte`.
+        dateien = sorted(dateien, key=lambda x: x[0])   # ersetzt das teure ORDER BY … , file
+        raus = ueberholte([f for f, _ in dateien])
+        ueberholt_gesamt += len(raus)
+        teile = [f"── {f} ──\n{clean(t)}" for f, t in dateien if f not in raus]
+        if not teile:
+            return
+        full = "\n\n".join(teile)
+        v = {"chars": len(full), "files": len(teile), "text": full[:CAP],
+             "truncated": len(full) > CAP}
+        index[nid] = {"chars": v["chars"], "files": v["files"], "truncated": v["truncated"]}
+        zeichen_gesamt += v["chars"]
         # Der Dateiname wird zum URL-Pfad. Alles, was dort nichts zu suchen hat, faellt weg —
         # ein `../` in einer notice_id waere sonst ein Pfadwechsel beim Ausliefern.
         sicher = "".join(c for c in nid if c.isalnum() or c in "-_")
         if not sicher:
-            continue
+            return
         ziel = JE_VORGANG / f"{sicher}.json"
-        neu_inhalt = json.dumps(v, ensure_ascii=False, separators=(",", ":"))
-        if ziel.exists() and ziel.read_text(encoding="utf-8") == neu_inhalt:
-            vorhanden.discard(sicher)
-            continue
-        ziel.write_text(neu_inhalt, encoding="utf-8")
+        inhalt = json.dumps(v, ensure_ascii=False, separators=(",", ":"))
         vorhanden.discard(sicher)
+        if ziel.exists() and ziel.read_text(encoding="utf-8") == inhalt:
+            return
+        ziel.write_text(inhalt, encoding="utf-8")
         geschrieben += 1
+
+    # ⚠ IN STAPELN, NICHT AUF EINMAL. Hier stand `.fetchall()` — die ganze Tabelle samt
+    # Volltexten in einem Rutsch. 817 MB Parquet werden dabei zu **14 GB** Python-Objekten,
+    # und danach hielt der Code dieselben Texte in `docs` ein zweites Mal.
+    #
+    # Weil die Abfrage `ORDER BY notice_id, file` sortiert, liegen die Dateien eines
+    # Vorgangs beieinander: es genuegt, sie zu sammeln, bis die naechste Kennung anfaengt.
+    # Im Speicher steht damit EIN Vorgang statt neuntausend.
+    BATCH = 500
+    aktuelle_nid: str | None = None
+    puffer: list[tuple[str, str]] = []
+    while True:
+        teil = con.fetchmany(BATCH)
+        if not teil:
+            break
+        for nid, datei, _ftype, text in teil:
+            if aktuelle_nid is not None and nid != aktuelle_nid:
+                verarbeite(aktuelle_nid, puffer)
+                puffer = []
+                if nid in index:                  # Kennung kommt ein zweites Mal
+                    zerrissen.append(nid)
+            aktuelle_nid = nid
+            puffer.append((datei, text))
+    if aktuelle_nid is not None and puffer:
+        verarbeite(aktuelle_nid, puffer)
+
     # Was der Lauf nicht mehr kennt, fliegt raus: eine alte Einzeldatei wuerde sonst ewig
     # weiter ausgeliefert, obwohl der Vorgang laengst aus dem Bestand ist.
     for verwaist in vorhanden:
@@ -126,11 +189,19 @@ def main() -> int:
     # nimmt den Index; wer Text will, die Einzeldatei. Die alte Datei wird aktiv entfernt,
     # damit nicht irgendwo ein Monat alter Stand weiterlebt und wie aktuell aussieht.
     ALT.unlink(missing_ok=True)
-    INDEX.write_text(json.dumps(
-        {nid: {"chars": v["chars"], "files": v["files"], "truncated": v["truncated"]}
-         for nid, v in out.items()}, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
-    print(f"LB-Volltext: {len(out)} Vorgänge "
-          f"({sum(v['chars'] for v in out.values()):,} Zeichen gesamt)")
+    INDEX.write_text(json.dumps(index, ensure_ascii=False, separators=(",", ":")),
+                     encoding="utf-8")
+    # Erst NACH dem Schreiben vermerken: bricht der Lauf vorher ab, laeuft der naechste
+    # wieder an, statt eine halbe Ausgabe fuer fertig zu halten.
+    STAND.write_text(json.dumps(stand), encoding="utf-8")
+
+    if zerrissen:
+        print(f"  ⚠ {len(zerrissen):,} Vorgaenge liegen NICHT am Stueck in der Quelle "
+              f"(z. B. {zerrissen[0]}). Ihr Volltext ist unvollstaendig. "
+              f"Lauf mit --sortieren wiederholen.")
+    if ueberholt_gesamt:
+        print(f"  {ueberholt_gesamt:,} überholte Dateien aus Nachträgen übersprungen")
+    print(f"LB-Volltext: {len(index)} Vorgänge ({zeichen_gesamt:,} Zeichen gesamt)")
     print(f"  je Vorgang: {geschrieben:,} geschrieben, {len(vorhanden):,} verwaiste entfernt "
           f"→ {JE_VORGANG.relative_to(ROOT)}/")
     return 0
