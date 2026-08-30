@@ -878,29 +878,103 @@ def test_normalize_national_id_leitweg():
     assert N("HRB 12345") == "HRB12345"
 
 
-def test_consolidate_by_shared_name_plz():
-    """Clean-Name-Merge (PLZ-gegated): nur-Name-Fragmente öffentlicher Stellen mit gleichem norm UND
-    geteilter PLZ verschmelzen; verschiedene PLZ (zwei Städte) NICHT; `already`-Entities übersprungen."""
-    from govisor.gold import ResolvedEntity, Method, _consolidate_by_shared_name_plz
+def test_consolidate_by_shared_name_geo():
+    """Clean-Name-Merge: gleicher GEREINIGTER Name + geteilter Ortsbeleg verschmilzt.
 
-    def E(eid, norm, method=Method.NAME_ONLY):
-        return ResolvedEntity(entity_id=eid, canonical_name=norm.upper(), method=method,
-                              confidence=0.4, national_id=None, source_names=(norm,), norm=norm)
+    Der Pass hiess frueher ``_consolidate_by_shared_name_plz`` und war an drei Stellen zu eng.
+    Jede der drei Luecken hat hier ihren eigenen Fall, damit sie nicht stillschweigend
+    zurueckwandern kann:
+
+      (1) ``nicht_aufgeloest`` war ausgeschlossen — und dort liegen 37,7 % der Kaeufer, weil
+          ``resolve_supplier`` alles Nicht-COMPANY frueh abbiegt, ``Kind.PUBLIC`` eingeschlossen.
+      (2) der Schluessel war der ROHE Name, weshalb „X vertreten durch Y" seine Geschwister nie
+          traf („DB Netz AG" existierte 98-mal).
+      (3) ohne PLZ gar kein Merge, obwohl NUTS3 UND der Ortsname danebenlagen. Gemessen war
+          genau das der Engpass: von 1.889 blockierten Fragmenten scheiterten nur 68 an
+          WIDERSPRECHENDEN Adressen, 1.821 an gar keiner.
+
+    Und der Riegel dagegen, dass daraus Ausbeute-Gier wird: NUTS3 darf eine WIDERSPRECHENDE
+    PLZ nicht ueberstimmen.
+    """
+    from govisor.gold import ResolvedEntity, Method, _consolidate_by_shared_name_geo
+
+    def E(eid, name, method=Method.NAME_ONLY, norm=None):
+        return ResolvedEntity(entity_id=eid, canonical_name=name, method=method,
+                              confidence=0.4, national_id=None, source_names=(name,),
+                              norm=norm if norm is not None else name.lower())
+
     ents = {e.entity_id: e for e in [
-        E("a1", "ochtumverband"), E("a2", "ochtumverband"), E("a3", "ochtumverband"),
-        E("b1", "stadtwerke"), E("b2", "stadtwerke"),
-        E("c1", "amt fuer hochbau", Method.HR_EXACT),   # Register-Anker → nicht nur_name
+        E("a1", "OCHTUMVERBAND"), E("a2", "Ochtumverband"), E("a3", "Ochtumverband"),
+        E("b1", "Stadtwerke"), E("b2", "Stadtwerke"),
+        E("c1", "Amt fuer Hochbau", Method.HR_EXACT),
+        # (1) oeffentliche Stelle, nicht aufgeloest — frueher nie Kandidat
+        E("p1", "Stadtverwaltung Marl", Method.UNRESOLVED),
+        E("p2", "Stadtverwaltung Marl", Method.UNRESOLVED),
+        # ... Person und Bietergemeinschaft bleiben aussen vor
+        E("h1", "Herr Thomas Mueller", Method.UNRESOLVED),
+        E("h2", "Herr Thomas Mueller", Method.UNRESOLVED),
+        # (2) derselbe Traeger, zwei Vertretungs-Zusaetze, verschiedene rohe norm
+        E("d1", "DB Netz AG vertreten durch DB Projektbau Niederlassung Suedost",
+          norm="db netz vertreten durch db projektbau niederlassung suedost"),
+        E("d2", "DB Netz AG vertreten durch die DB Projektbau Region Mitte",
+          norm="db netz vertreten durch die db projektbau region mitte"),
+        # (3) kein PLZ-Beleg, aber gemeinsames NUTS3
+        E("n1", "Zweckverband Wasser"), E("n2", "Zweckverband Wasser"),
+        # Riegel: NUTS3 gleich, PLZ aber widersprechend
+        E("w1", "Kreisverwaltung Nord"), E("w2", "Kreisverwaltung Nord"),
+        # ohne jeden Ortsbeleg bleibt es liegen
+        E("x1", "Amt Ohne Ort"), E("x2", "Amt Ohne Ort"),
+        # nur ein Ortsname, sonst nichts — der haeufigste Fall im echten Bestand
+        E("o1", "Regiebetrieb Gruenflaechen"), E("o2", "Regiebetrieb Gruenflaechen"),
+        # Kaskaden-Riegel: gleicher Ortsname, aber WIDERSPRECHENDES NUTS3
+        E("k1", "Eigenbetrieb Abwasser"), E("k2", "Eigenbetrieb Abwasser"),
+        # Einheiten-Riegel: derselbe Traeger, ZWEI VERSCHIEDENE Organisationseinheiten.
+        # `classify().normalized` schneidet am Komma ab, beide ergaeben denselben Schluessel.
+        E("u1", "Landeshauptstadt Dresden, Geschaeftsbereich Stadtentwicklung"),
+        E("u2", "Landeshauptstadt Dresden, Geschaeftsbereich Finanzen"),
+        # ... eine Seite OHNE Einheit gehoert dagegen zusammen (Vertretung, keine Abteilung)
+        E("v1", "Stadt Muenster, der Oberbuergermeister"), E("v2", "Stadt Muenster"),
     ]}
-    plz = {"a1": {"28844"}, "a2": {"28844"}, "a3": {"12345"},   # a1+a2 gleiche PLZ, a3 andere
-           "b1": {"80331"}, "b2": {"50667"}}                    # zwei Städte → getrennt
-    mm = _consolidate_by_shared_name_plz(ents, plz, already=set())
+    plz = {"a1": {"28844"}, "a2": {"28844"}, "a3": {"12345"},
+           "b1": {"80331"}, "b2": {"50667"},
+           "p1": {"45772"}, "p2": {"45772"},
+           "h1": {"10115"}, "h2": {"10115"},
+           "d1": {"60326"}, "d2": {"60326"},
+           "w1": {"24103"}, "w2": {"24943"},
+           "u1": {"01067"}, "u2": {"01067"},
+           "v1": {"48143"}, "v2": {"48143"}}
+    nuts = {"n1": {"DEA1A"}, "n2": {"DEA1A"},
+            "w1": {"DEF01"}, "w2": {"DEF01"},
+            "k1": {"DE111"}, "k2": {"DE222"}}
+    ort  = {"o1": {"kassel"}, "o2": {"kassel"},
+            "k1": {"neustadt"}, "k2": {"neustadt"}}
+
+    mm = _consolidate_by_shared_name_geo(ents, plz, nuts, ort, already=set())
+
     assert mm.get("a2") == "a1", "gleicher Name + PLZ → merge"
     assert "a3" not in mm, "andere PLZ → kein merge"
-    assert "b2" not in mm and "b1" not in mm, "zwei Städte gleichen Namens bleiben getrennt"
-    assert "c1" not in mm, "Register-Entity ist kein nur_name-Merge-Kandidat"
-    # `already` (schon per ID verschmolzen) wird übersprungen
-    mm2 = _consolidate_by_shared_name_plz(ents, plz, already={"a1", "a2"})
-    assert "a2" not in mm2
+    assert "b2" not in mm and "b1" not in mm, "zwei Staedte gleichen Namens bleiben getrennt"
+    assert "c1" not in mm, "Register-Entity ist kein Kandidat dieses Passes"
+
+    assert mm.get("p2") == "p1", "(1) oeffentliche nicht_aufgeloeste Stelle muss mergen"
+    assert "h2" not in mm, "(1) Personen bleiben ausgeschlossen — dort waere es Raten"
+    assert mm.get('d2') == 'd1', '(2) Vertretungs-Zusatz darf den Traeger nicht spalten'
+    assert mm.get("n2") == "n1", "(3) NUTS3 belegt den Ort, wenn keine PLZ vorliegt"
+
+    assert "w2" not in mm, "NUTS3 darf eine widersprechende PLZ NICHT ueberstimmen"
+    assert mm.get("o2") == "o1", "(3) der blosse Ortsname belegt, wenn PLZ und NUTS fehlen"
+    assert "k2" not in mm, "der Ortsname darf ein widersprechendes NUTS3 NICHT ueberstimmen"
+
+    # Der Riegel, der die KOERNUNG des Bestands schuetzt. Ohne ihn schmilzt der Pass nebenbei
+    # die Abteilungsebene ein (gemessen 1.772 statt 1.162 Merges) — das waere eine
+    # Produktentscheidung, getarnt als Datenbereinigung.
+    assert "u2" not in mm, "zwei verschiedene Geschaeftsbereiche duerfen NICHT verschmelzen"
+    assert mm.get("v2") == "v1" or mm.get("v1") == "v2", \
+        "eine Seite ohne Einheit (blosse Vertretung) gehoert dagegen zusammen"
+    assert "x2" not in mm, "ohne jeden Ortsbeleg wird nicht gemerged"
+
+    mm2 = _consolidate_by_shared_name_geo(ents, plz, nuts, ort, already={"a1", "a2"})
+    assert "a2" not in mm2, "`already` wird uebersprungen"
 
 
 def test_consolidate_by_leitweg():
