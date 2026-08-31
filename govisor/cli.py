@@ -437,6 +437,10 @@ def main(argv: list[str] | None = None) -> int:
         if pe_orphans:
             raise RuntimeError(f"party_entity → entities: {pe_orphans[0]:,} Waisen — "
                                "Entity-Rebuild unvollständig (build_entities erneut laufen lassen).")
+        # Traeger-Ebene: additiv ueber den Vergabestellen, direkt nach den Entitaeten (sie
+        # liest party_entity + entities). Nimmt nichts weg — `entity_id` bleibt die Einheit.
+        tr, eh = gold.build_buyer_traeger(cfg, c)
+        print(f"traeger     : {tr:,} Traeger ueber {eh:,} Vergabestellen")
         total, added = gold.seed_groups(cfg, c)
         print(f"gruppen-seed: {total:,} Firmen in CSV ({added:,} neu geseedet)")
         g, gl = gold.build_entity_groups(cfg, c)

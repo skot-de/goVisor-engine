@@ -42,6 +42,7 @@ from govisor import gold  # noqa: E402
 # Ergebnis gebraucht wird — damit man beim Umsortieren sieht, was man zerreißt.
 KETTE: list[tuple[str, str]] = [
     ("build_entities",             "Entitäten + party_entity — Basis für alles Käufer-/Gewinner-bezogene"),
+    ("build_buyer_traeger",        "Traeger-Ebene ueber den Vergabestellen (additiv, nimmt nichts weg)"),
     ("build_entity_groups",        "leere Tabelle, wenn keine kuratierte CSV — Nachfolger brauchen die DATEI"),
     ("build_dim_cpv",              "CPV-Divisionen"),
     # Das CPV-Vokabular ist EU-Recht und gilt in jedem Mitgliedstaat gleich — es war nie
