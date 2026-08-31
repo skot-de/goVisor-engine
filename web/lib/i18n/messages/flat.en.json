@@ -2096,5 +2096,8 @@
   "Aufträge bis {n}": "contracts up to {n}",
   "Aufträge ohne Obergrenze": "no upper contract limit",
   "Haftpflicht {n}": "liability cover {n}",
-  "{n} Referenzen": "{n} references"
+  "{n} Referenzen": "{n} references",
+  "widersprüchlich": "contradictory",
+  "nicht bestätigt": "not confirmed",
+  "entweder ab 16 Zeichen bzw. vier Wörter, oder Groß- und Kleinbuchstaben plus Ziffern": "either 16+ characters or four words, or upper and lower case plus digits"
 }

@@ -2096,5 +2096,8 @@
   "Aufträge bis {n}": "marchés jusqu'à {n}",
   "Aufträge ohne Obergrenze": "sans plafond de marché",
   "Haftpflicht {n}": "assurance RC {n}",
-  "{n} Referenzen": "{n} références"
+  "{n} Referenzen": "{n} références",
+  "widersprüchlich": "contradictoire",
+  "nicht bestätigt": "non confirmé",
+  "entweder ab 16 Zeichen bzw. vier Wörter, oder Groß- und Kleinbuchstaben plus Ziffern": "soit 16 caractères ou quatre mots, soit majuscules et minuscules plus chiffres"
 }
