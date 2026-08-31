@@ -57,6 +57,36 @@ stehen in der Auto-Memory `govisor-keine-gedankenstriche`.
 
 ⚠ Gilt für **Oberflächentexte**, nicht für Quelltext-Kommentare oder Dokumentation.
 
+## ⚠ Die Haustür spricht nur Deutsch
+
+Die Sprachumschaltung wirkt **hinter der Anmeldung**. Die öffentlichen Seiten tragen ihren
+Text fest verdrahtet im JSX, nicht über den Katalog. Gemessen am 2026-08-30:
+
+```
+Landing.tsx   35 deutsche Textstellen · 0 im Katalog · 0 t()-Aufrufe
+/start         3                      · 0            · 0
+/login         2                      · 0            · 0
+```
+
+Das ist mehr als ein Schönheitsfehler, wenn ein Land dazukommt: der erste Bildschirm, den
+ein französischer oder polnischer Bieter sieht, ist deutsch — und zwar der einzige, den er
+ohne Konto zu sehen bekommt. Die Pipeline kann das Land vollständig tragen, und das Produkt
+stellt sich trotzdem auf Deutsch vor.
+
+**Folge für die Auffindbarkeit:** es gibt kein `hreflang`, und das ist richtig so. Die
+Angabe verlangt sprachspezifische URLs mit *unterschiedlichem* Inhalt. Wer Routen wie `/en`
+anlegt, bevor die Texte übersetzbar sind, liefert dort denselben deutschen Text aus —
+`hreflang` wäre dann eine Falschangabe, und drei URLs mit gleichem Inhalt sind schlechter
+als eine saubere.
+
+**Reihenfolge, wenn es angegangen wird:** erst die Texte auf `t()` verdrahten und EN/FR
+schreiben, dann Sprach-Routen, dann `hreflang` in `app/layout.tsx`. Nicht andersherum.
+
+`tests/test_auffindbarkeit.py::test_hreflang_fehlt_solange_es_nichts_zu_verlinken_gibt`
+bewacht **die Begründung, nicht den Zustand**: sobald die öffentlichen Seiten einen
+`t()`-Aufruf bekommen, entfällt der Grund und der Test verlangt Routen samt `hreflang`.
+Entscheidung vom 2026-08-30 (Sven): vorerst nur Deutsch.
+
 ## Länderkennzeichnung in der Anzeige
 
 Es gibt bereits Bausteine:
@@ -93,6 +123,10 @@ diese Stellen sei zu wenig bekannt.
    ([Kapitel 06](06-cross-verdrahtung.md)) — `nutzerLand()` erweitern
 4. PLZ-Umkreissuche: kollidieren die PLZ mit einem Nachbarland?
 5. Eine Runde durch die Detail-Tabs mit einem echten Lead dieses Landes
+6. ⚠ **Die öffentliche Startseite bleibt deutsch** — auch für dieses Land. Solange das so
+   ist, ist der Markteintritt nach innen fertig und nach aussen nicht (s. oben,
+   „Die Haustür spricht nur Deutsch"). Das gehört benannt, nicht stillschweigend
+   abgehakt.
 
 ## Paywall und Sichtbarkeit
 

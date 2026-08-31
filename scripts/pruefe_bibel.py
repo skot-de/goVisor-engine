@@ -218,6 +218,21 @@ def _behauptungen() -> list[tuple[str, str, bool, str]]:
                 _defs == 1 and _rufe == 2,
                 f"{_defs} Definition(en), {_rufe} Aufrufe"))
 
+    # Die Haustuer spricht nur Deutsch (Kapitel 09) — und daran haengt, dass `hreflang`
+    # fehlen MUSS. Die Behauptung ist die Begruendung einer Auslassung, und Auslassungen
+    # verrotten am leisesten: sobald jemand die oeffentlichen Seiten uebersetzbar macht,
+    # stimmt der Absatz nicht mehr, ohne dass irgendetwas bricht.
+    _oeffentlich = [ROOT / "web" / "components" / "Landing.tsx",
+                    ROOT / "web" / "app" / "start" / "page.tsx",
+                    ROOT / "web" / "app" / "login" / "page.tsx"]
+    _rufe_t = sum(len(re.findall(r'\bt[k]?\(\s*["`]', d.read_text(encoding="utf-8")))
+                  for d in _oeffentlich if d.exists())
+    _layout = (ROOT / "web" / "app" / "layout.tsx").read_text(encoding="utf-8")
+    _hreflang = bool(re.search(r"alternates:[^}]*languages", _layout, re.S))
+    aus.append(("09", "oeffentliche Seiten nur deutsch, deshalb kein hreflang",
+                _rufe_t == 0 and not _hreflang,
+                f"{_rufe_t} t()-Aufrufe, hreflang={'ja' if _hreflang else 'nein'}"))
+
     return aus
 
 
