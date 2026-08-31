@@ -946,7 +946,15 @@ def export_branche(key):
         if use_pred:
             inc_obj = {"name": g("pred_incumbent"),
                        "seit": str(int(g("pred_since"))) if g("pred_since") else "",
-                       "src": "uncertain", "hint": "aus dem letzten vergleichbaren Zuschlag desselben Käufers",
+                       # ⚠ „unsicher", NICHT „uncertain". Die Pipeline spricht Englisch, die
+                       # Oberflaeche Deutsch — `INC_SRC` fuenf Zeilen tiefer bildet genau das
+                       # ab. Dieser Zweig ging daran vorbei und lieferte den Rohwert aus.
+                       # Gemessen am 2026-08-31: 5.683 Leads. Fuer den Nutzer hiess das kein
+                       # Herkunftspunkt (die CSS-Regeln greifen nur auf bekannte Werte, der
+                       # Punkt blieb durchsichtig) und ein Tooltip mit dem Wort „undefined" —
+                       # der Amtsinhaber sah aus wie gemessen, obwohl er aus einem
+                       # VERGLEICHBAREN Zuschlag desselben Kaeufers abgeleitet ist.
+                       "src": "unsicher", "hint": "aus dem letzten vergleichbaren Zuschlag desselben Käufers",
                        "groupId": None, "conf": 0.6}
         elif g("incumbent_name"):
             inc_obj = {"name": r["incumbent_name"],
@@ -1024,7 +1032,9 @@ def export_branche(key):
                        "src": TIM_SRC.get(g("timing_source"), "unbekannt"), "warn": False,
                        "hint": ""},
             "konk": {"wert": konk_wert,
-                     "src": KONK_SRC.get(g("competition_source"), "uncertain" if use_pred else "na"),
+                     # Dieselbe Falle als Vorgabewert — heute unbenutzt, aber sie waere
+                     # beim ersten Treffer genauso still.
+                     "src": KONK_SRC.get(g("competition_source"), "unsicher" if use_pred else "na"),
                      "stufe": konk_stufe,
                      "hint": ("Aus der letzten Zuschlagsbekanntmachung." if g("competition_source") == "actual"
                               else "Aus dem letzten vergleichbaren Zuschlag desselben Käufers." if use_pred else "")},
