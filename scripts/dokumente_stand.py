@@ -47,6 +47,29 @@ def lade(name: str) -> set:
     return set()
 
 
+def trichter(offen: set, mit_link: set, zips: set, volltext: set) -> tuple[list, set]:
+    """Die Stufen der Dokumentenkette — jede eine Teilmenge der vorigen.
+
+    Gibt ``([(Name, Menge), …], ausserhalb)`` zurueck. `ausserhalb` sind Vorgaenge mit
+    Archiv, aber ohne beworbenen Link; sie gehoeren nicht in die Kette und werden getrennt
+    ausgewiesen statt verschwiegen.
+
+    ⚠ WARUM DAS EINE EIGENE FUNKTION IST. „% der Stufe davor" ist nur dann eine Quote, wenn
+    die Stufen wirklich ineinanderliegen. Hier stand `offen & zips` — die Archive gemessen
+    an ALLEN offenen Leads, ausgewiesen als Anteil der Stufe mit Link. Am 2026-08-31
+    nachgemessen fiel das nicht auf: 0 Vorgaenge haben ein Archiv ohne Link. Zufaellig.
+    Der Upload-Weg legt Archive fuer jeden Vorgang ab, auch fuer die 1.088 offenen ohne
+    `documents_url` — ein einziger Upload darauf, und eine Stufe waere groesser als ihre
+    Mutter.
+    """
+    zip_in_kette = mit_link & zips
+    return ([("offene Leads", offen),
+             ("mit Unterlagen-Link", mit_link),
+             ("ZIP geholt", zip_in_kette),
+             ("Volltext", zip_in_kette & volltext)],
+            (offen & zips) - mit_link)
+
+
 def _preis_je_vorgang() -> tuple[float | None, str]:
     """Was ein analysierter Vorgang WIRKLICH gekostet hat — aus dem Kostenbuch.
 
@@ -112,9 +135,22 @@ def main() -> int:
     #
     # Ein Trichter, der Geschwister uebereinanderstapelt, laesst genau dort suchen, wo
     # nichts fehlt — dieselbe Falle, vor der der Docstring von `lade()` oben warnt.
-    volltext = offen & lade("doc-text")
-    kette = [("offene Leads", offen), ("mit Unterlagen-Link", mit_link),
-             ("ZIP geholt", offen & zips), ("Volltext", volltext)]
+    # ⚠ JEDE STUFE MUSS IN DER VORIGEN LIEGEN, sonst ist „% der Stufe davor" keine Quote,
+    # sondern zwei Mengen, die gegeneinander gehalten werden. Hier stand `offen & zips` —
+    # also die ZIPs gemessen an ALLEN offenen Leads, ausgewiesen als Anteil der Stufe mit
+    # Link. Am 2026-08-31 nachgemessen fiel das nicht auf: 0 Vorgaenge haben ein Archiv
+    # ohne beworbenen Link, die Kette lag also zufaellig ineinander.
+    #
+    # Zufaellig ist das Wort. Der Upload-Weg (`/api/lead-docs`) legt Archive unter
+    # `data/docs/DE/<notice_id>/` ab, ganz gleich ob der Lead einen `documents_url` hat —
+    # und 1.088 der offenen Leads haben keinen. Ein einziger Upload auf so einen Vorgang,
+    # und die Stufe waere groesser als ihre Mutter.
+    #
+    # Die Kette wird deshalb kumulativ gebaut. Was dabei herausfaellt, verschwindet NICHT
+    # stillschweigend, sondern wird darunter genannt: „Archiv ohne beworbenen Link" ist
+    # eine Auskunft, kein Rundungsfehler.
+    kette, ausserhalb = trichter(offen, mit_link, zips, lade("doc-text"))
+    volltext = kette[-1][1]
     zweige = [("Signale", offen & lade("doc-signals")),
               ("LLM-Analyse", offen & lade("doc-analysis"))]
     print("\n  Dokumenten-Trichter (offene Leads):")
@@ -127,6 +163,9 @@ def main() -> int:
     basis = len(volltext) or 1
     for name, s in zweige:
         print(f"    ├ {name:<20}{len(s):>7,}  {len(s)/basis:>5.0%} des Volltexts")
+    if ausserhalb:
+        print(f"    (dazu {len(ausserhalb):,} Vorgaenge mit Archiv, aber ohne beworbenen "
+              f"Link — meist Uploads; sie stehen ausserhalb der Kette)")
 
     # ⚠ `token_cost` sind TOKEN, keine Dollar.
     #

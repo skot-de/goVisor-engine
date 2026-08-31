@@ -160,3 +160,44 @@ def test_ohne_kostenbuch_wird_ehrlich_geschaetzt(tmp_path, monkeypatch):
 
     quelle = (ROOT / "scripts" / "dokumente_stand.py").read_text(encoding="utf-8")
     assert "geschaetzt" in quelle, "der Rueckfall kennzeichnet sich nicht mehr als Schaetzung"
+
+
+def test_trichterstufen_liegen_ineinander():
+    """„% der Stufe davor" ist nur eine Quote, wenn die Stufen wirklich ineinanderliegen.
+
+    Die dritte Stufe war `offen & zips` — die Archive gemessen an ALLEN offenen Leads,
+    ausgewiesen als Anteil der Stufe mit beworbenem Link. Am 2026-08-31 fiel das nicht auf:
+    kein einziger Vorgang hatte ein Archiv ohne Link, die Kette lag also zufällig
+    ineinander.
+
+    ⚠ Zufällig ist das Wort. Der Upload-Weg (`/api/lead-docs`) legt Archive unter
+    `data/docs/DE/<notice_id>/` ab, ganz gleich ob der Lead einen `documents_url` hat — und
+    1.088 der offenen Leads haben keinen. Ein einziger Upload darauf, und eine Stufe wäre
+    grösser als ihre Mutter: „112 % der Stufe davor".
+
+    Genau diesen Fall spielt der Test durch, denn in echten Daten gibt es ihn noch nicht.
+    """
+    m = _stand_modul()
+
+    offen = {"a", "b", "c", "d"}
+    mit_link = {"a", "b"}                 # c und d bewerben keine Unterlagen
+    zips = {"a", "c"}                     # c hat trotzdem ein Archiv — der Upload-Fall
+    volltext = {"a", "c"}
+
+    kette, ausserhalb = m.trichter(offen, mit_link, zips, volltext)
+    namen = [n for n, _ in kette]
+    assert namen == ["offene Leads", "mit Unterlagen-Link", "ZIP geholt", "Volltext"]
+
+    # Jede Stufe eine echte Teilmenge der vorigen — die Eigenschaft, um die es geht.
+    for (name_v, vor), (name_n, nach) in zip(kette, kette[1:]):
+        assert nach <= vor, (
+            f"Stufe {name_n!r} liegt nicht in {name_v!r}: {sorted(nach - vor)} — "
+            f"die Prozentangabe waere dann keine Quote, sondern zwei Mengen gegeneinander")
+
+    # Und der Ausreisser verschwindet nicht, er wird benannt.
+    assert ausserhalb == {"c"}, \
+        "der Vorgang mit Archiv ohne beworbenen Link wird stillschweigend verschluckt"
+
+    # Der harmlose Normalfall bleibt harmlos.
+    kette2, ausserhalb2 = m.trichter(offen, mit_link, {"a"}, {"a"})
+    assert not ausserhalb2 and kette2[2][1] == {"a"}
