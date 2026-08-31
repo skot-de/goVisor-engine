@@ -28,6 +28,7 @@ Wichtige Ankerpunkte der Reihenfolge:
 
 ```
 build_entities            Basis für alles Käufer-/Gewinner-bezogene
+  build_buyer_traeger     Träger-Ebene über den Vergabestellen — liest party_entity+entities
 build_dim_cpv(_label)     Vokabular — EU-weit gültig
 build_quality             Qualitäts-Flags
   build_review_queue      liest quality
