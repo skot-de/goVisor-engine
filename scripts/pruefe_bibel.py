@@ -192,6 +192,32 @@ def _behauptungen() -> list[tuple[str, str, bool, str]]:
         aus.append(("11", "der Bodenpreis wird per max_price erzwungen",
                     "max_price" in prov, f"provider={prov}"))
 
+    # Traeger-Ebene (Kapitel 05/08). Zwei Aussagen, die im Alltag lautlos brechen wuerden.
+    #
+    #   (a) Sie muss in BEIDE Ketten haengen. `cli gold` baut DE, `build_dach_gold.py` AT/CH —
+    #       faellt eine heraus, fehlt die Ebene fuer ein Land, und das faellt erst auf, wenn
+    #       jemand dort gruppiert und die Haelfte vermisst.
+    #   (b) Die Ortsbeleg-Kaskade darf es nur EINMAL geben. Merge-Pass und Traeger-Bauer
+    #       muessen dieselbe Funktion benutzen, sonst widerspricht die Ebene irgendwann dem
+    #       Bestand, auf dem sie sitzt — ohne dass es jemandem auffiele.
+    _cli = (ROOT / "govisor" / "cli.py").read_text(encoding="utf-8")
+    _dach = (ROOT / "scripts" / "build_dach_gold.py").read_text(encoding="utf-8")
+    aus.append(("05/08", "build_buyer_traeger haengt in BEIDEN Ketten (cli + build_dach_gold)",
+                "build_buyer_traeger" in _cli and "build_buyer_traeger" in _dach,
+                f"cli={'ja' if 'build_buyer_traeger' in _cli else 'NEIN'}, "
+                f"dach={'ja' if 'build_buyer_traeger' in _dach else 'NEIN'}"))
+
+    # ⚠ MIT WORTGRENZE, nicht als Teilzeichenkette. `"def _ortsbeleg_passt" in src` haelt auch
+    # noch, wenn jemand die Funktion in `_ortsbeleg_passt2` umbenennt und danebenschreibt —
+    # also genau in dem Fall, den diese Behauptung fangen soll. Das ist Falle C6 aus Kapitel 12,
+    # und sie ist mir beim Schreiben DIESER Zeile passiert.
+    _gold_src = (ROOT / "govisor" / "gold.py").read_text(encoding="utf-8")
+    _defs = len(re.findall(r"def _ortsbeleg_passt\b", _gold_src))
+    _rufe = len(re.findall(r"_ortsbeleg_passt\(", _gold_src)) - _defs
+    aus.append(("08", "die Ortsbeleg-Kaskade steht genau einmal und hat zwei Nutzer",
+                _defs == 1 and _rufe == 2,
+                f"{_defs} Definition(en), {_rufe} Aufrufe"))
+
     return aus
 
 
