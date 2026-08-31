@@ -18,7 +18,24 @@ export function dueAlerts(lead: LeadTiming, w: WatchState, prefs: AlertPrefs): D
   const titel = lead.titel || lead.id;
 
   // Primär: Angebotsfrist (nur offene Ausschreibungen mit Frist in der Zukunft)
-  if (prefs.deadline_warning_enabled && lead.src === "f02" && lead.tage != null && lead.tage >= 0) {
+  //
+  // ⚠ HIER STAND `lead.src === "f02"`, und das war eine Aufzählung, die still einen Fall
+  // ausliess. Gemessen am 2026-08-31 über alle ausgelieferten Leads:
+  //
+  //     auslauf   24.889   davon mit `tage`:      0   (die bekommen den Auslauf-Hinweis)
+  //     f02       18.792   davon mit `tage`: 18.789
+  //     f01           18   davon mit `tage`:     18   ← bekam NIE einen Hinweis
+  //
+  // Alle 18 tragen `frist.src = "echt"`, also eine veröffentlichte Angebotsfrist, und
+  // mehrere waren an dem Tag fällig. Die Oberfläche zeigt ihnen eine Frist, der Hinweislauf
+  // überspringt sie — der Nutzer merkt es an dem Tag, an dem er sie verpasst.
+  //
+  // Die Bedingung ist deshalb umgedreht: nicht aufzählen, wer gemeint ist, sondern
+  // ausschliessen, wer es nicht ist. `auslauf` hat seinen eigenen Hinweis; alles andere mit
+  // einer Frist in der Zukunft gehört hierher. Eine neue Quelle fällt damit nicht wieder
+  // stumm heraus — bei einem Wecker ist einmal zu viel erinnern der bessere Fehler.
+  if (prefs.deadline_warning_enabled && lead.src !== "auslauf"
+      && lead.tage != null && lead.tage >= 0) {
     // Fenster diskret: ≤3 Tage = 3-Tage-Alert; 4–14 Tage = 14-Tage-Alert. Ein Lead 1 Tag vor
     // Frist darf keinen „14 Tage"-Alert nachziehen — deshalb explizite Untergrenze im 14er-Zweig.
     if (lead.tage <= 3 && !w.deadline_3d_sent) out.push({ type: "deadline_3d", leadId: lead.id, titel, days: lead.tage });

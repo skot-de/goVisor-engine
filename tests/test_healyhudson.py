@@ -1758,3 +1758,33 @@ def test_jeder_cron_kommt_durch_beide_tore_und_sichert_sich_selbst():
         assert "requireCronSecret" in quelle or "CRON_SECRET" in quelle, (
             f"{pfad} ist offen erreichbar und prueft den Aufrufer NICHT. Ein Cron-Endpunkt "
             f"ohne eigenes Geheimnis ist eine Schaltflaeche fuer jeden.")
+
+
+def test_die_hinweislogik_erinnert_an_jede_echte_frist():
+    """Ein Wecker, der nicht klingelt, meldet sich nicht.
+
+    Die Bedingung lautete `lead.src === "f02"` — eine Aufzählung, die still einen Fall
+    ausliess. Gemessen am 2026-08-31 über alle ausgelieferten Leads:
+
+        auslauf   24.889   davon mit `tage`:      0   (bekommen den Auslauf-Hinweis)
+        f02       18.792   davon mit `tage`: 18.789
+        f01           18   davon mit `tage`:     18   ← bekam NIE einen Hinweis
+
+    Alle 18 tragen `frist.src = "echt"`, also eine veröffentlichte Angebotsfrist, und
+    mehrere waren an dem Tag fällig. Die Oberfläche zeigt ihnen eine Frist, der Hinweislauf
+    übersprang sie — der Nutzer merkt das an dem Tag, an dem er sie verpasst.
+
+    ⚠ Die Bedingung ist jetzt umgedreht: nicht aufzählen, wer gemeint ist, sondern
+    ausschliessen, wer es nicht ist. Bei einem Wecker ist einmal zu viel erinnern der
+    bessere Fehler.
+
+    Geprüft wird die ECHTE Funktion über `node` — ihr Docstring sagt seit jeher „reine
+    Funktion, damit sie ohne Cron/Provider testbar ist", und getestet hat sie bis heute
+    niemand. Ein Baustein, der für Prüfbarkeit gebaut und nie geprüft wurde, ist dieselbe
+    Fehlerklasse wie einer, den niemand aufruft.
+    """
+    import subprocess
+
+    skript = ROOT / "web" / "scripts" / "pruefe-hinweise.mjs"
+    p = subprocess.run(["node", str(skript)], capture_output=True, text=True)
+    assert p.returncode == 0, f"die Hinweislogik erinnert falsch:\n{p.stdout}{p.stderr}"
