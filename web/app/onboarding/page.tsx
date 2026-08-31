@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { buildProfile } from "@/lib/profileEngine";
+import { pwPruefung } from "@/lib/passwort";
 import { lesen as checkLesen, verwerfen as checkVerwerfen, alsProfilfelder }
   from "@/lib/checkUebergabe";
 import { uebernimmCheck } from "@/lib/supabase/unternehmen";
@@ -115,26 +116,6 @@ const norm = (s: string) => s.toLowerCase().replace(/[^a-zäöüß0-9]/g, "");
 const eur = (n: number) => n >= 1_000_000 ? `${(n / 1_000_000).toLocaleString("de-DE",
   { maximumFractionDigits: 1 })} Mio €` : `${n.toLocaleString("de-DE")} €`;
 
-/* Passwortstärke — bewusst ohne Bibliothek, aber mit den Regeln, die wirklich tragen:
- * Länge schlägt Sonderzeichen (deshalb 12 statt 8 als Ziel), und die üblichen Muster
- * fliegen raus. Ein 8-Zeichen-Passwort mit Sonderzeichen ist heute in Stunden geknackt,
- * eine 12-Zeichen-Passphrase nicht. Zusätzlich: die eigene E-Mail darf nicht drinstehen. */
-const SCHWACH = ["passwort", "password", "qwertz", "qwerty", "123456", "govisor", "admin", "willkommen", "sommer", "winter"];
-function pwPruefung(pw: string, mail: string) {
-  const lokal = (mail.split("@")[0] || "").toLowerCase();
-  const klassen = [/[a-zäöüß]/, /[A-ZÄÖÜ]/, /\d/, /[^\wäöüßÄÖÜ]/].filter((r) => r.test(pw)).length;
-  const maengel: string[] = [];
-  if (pw.length < 12) maengel.push("mindestens 12 Zeichen");
-  if (klassen < 3) maengel.push("Groß- und Kleinbuchstaben plus Ziffern oder Zeichen");
-  if (SCHWACH.some((w) => pw.toLowerCase().includes(w))) maengel.push("kein gängiges Wort wie „passwort\u201c");
-  if (lokal.length >= 3 && pw.toLowerCase().includes(lokal)) maengel.push("nicht die eigene E-Mail-Adresse");
-  if (/^(.)\1+$/.test(pw)) maengel.push("nicht nur ein wiederholtes Zeichen");
-  // Stufe rein für die Anzeige — die Freigabe hängt allein an `maengel`.
-  const stufe = pw.length === 0 ? 0
-    : maengel.length ? 1
-    : pw.length >= 16 && klassen >= 3 ? 3 : 2;
-  return { ok: pw.length > 0 && maengel.length === 0, maengel, stufe };
-}
 
 type Screen = "mail" | "firma" | "vorschlag" | "kandidaten" | "profil" | "branche" | "region" | "fertig";
 const SCHRITTE: [string, string][] = [["mail", "Konto"], ["firma", "Firma"], ["profil", "Profil"], ["fertig", "Fertig"]];
@@ -1104,7 +1085,18 @@ function testMailErlaubt(mail: string): boolean {
                 <div className="sum-r"><span className="sum-k">{t("Einheiten")}</span><span className="sum-v">{t("{n} aktiv", { n: aktiv.size })}</span></div>
                 <div className="sum-r"><span className="sum-k">{t("Siege im Profil")}</span><span className="sum-v">{winsAktiv}</span></div>
                 <div className="sum-r"><span className="sum-k">{t("Schwerpunkte")}</span><span className="sum-v">{matched.fields.slice(0, 4).map((f) => f.label || f.cpv4).join(" · ")}</span></div>
-                <div className="sum-r"><span className="sum-k">{t("Identität")}</span><span className="sum-v">{t("bestätigt ✓")}</span></div>
+                {/* ⚠ HAENGT AM BELEG, NICHT AM TREFFER. Bis zum 2026-08-31 stand hier fest
+                    „bestätigt ✓", sobald ueberhaupt eine Firma gewaehlt war — waehrend zwei
+                    Zeilen darueber der Kasten „Nicht bestätigt" meldete. Zwei Bedeutungen in
+                    einem Wort: `matched` heisst „wir haben die Firma GEFUNDEN", der Beleg
+                    heisst „wir wissen, dass ihr dazugehoert". Ausgerechnet bei einem Produkt,
+                    das mit „was sich nicht belegen laesst, verwerfen wir" wirbt.
+                    Dieselbe Quelle wie der Kasten oben, damit sie sich nicht widersprechen
+                    koennen. */}
+                <div className="sum-r"><span className="sum-k">{t("Identität")}</span><span className="sum-v">{
+                  beleg?.conf === "belegt" ? t("bestätigt ✓")
+                    : beleg?.conf === "fremd" ? t("widersprüchlich")
+                    : t("nicht bestätigt")}</span></div>
               </> : <>
                 <div className="sum-r"><span className="sum-k">{t("Bereich")}</span><span className="sum-v">{(() => { const b = BRANCHEN.find((x) => x.k === branche); return b ? t(b.n) : "—"; })()}</span></div>
                 <div className="sum-r"><span className="sum-k">{t("Regionen")}</span><span className="sum-v">{regionen.map((r) => t(r)).join(" · ") || "—"}</span></div>

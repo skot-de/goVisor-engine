@@ -15,6 +15,7 @@ import { AppRail, AppTop } from "@/components/explorer/Rail";
 import "../explorer.css";
 import "../zugang.css";
 import "./settings.css";
+import { pwPruefung } from "@/lib/passwort";
 
 const BRANCHEN: [string, string][] = [
   ["it", "IT & Software"], ["bau", "Bau & Infrastruktur"], ["medizin", "Medizin & Gesundheit"],
@@ -187,7 +188,11 @@ function AccountSektion({ acc, melde, router }: { acc: AccountRow; melde: (m: st
   const [confirmDel, setConfirmDel] = useState(false);
 
   async function pwSpeichern() {
-    if (pw.length < 8) return melde(t("Passwort zu kurz (min. 8)."));
+    // Dieselbe Regel wie beim Anlegen. Vorher liessen die Einstellungen 8 Zeichen durch,
+    // das Onboarding verlangte 12 — man konnte hier ein Passwort setzen, mit dem man sich
+    // nicht haette registrieren duerfen.
+    const pruef = pwPruefung(pw);
+    if (!pruef.ok) return melde(t("Es fehlt noch:") + " " + pruef.maengel.join(" · "));
     const { error } = await changePassword(pw); setPw("");
     melde(error ? error.message : t("Passwort geändert."));
   }
@@ -218,7 +223,7 @@ function AccountSektion({ acc, melde, router }: { acc: AccountRow; melde: (m: st
         </div><span className="set-x">{t("Änderung erfordert Bestätigung der neuen Adresse.")}</span></div>
       <div className="field"><label className="lbl">{t("Neues Passwort")}</label>
         <div style={{ display: "flex", gap: 8 }}>
-          <input className="inp" type="password" value={pw} onChange={(e) => setPw(e.target.value)} placeholder={t("min. 8 Zeichen")} />
+          <input className="inp" type="password" value={pw} onChange={(e) => setPw(e.target.value)} placeholder={t("mindestens 12 Zeichen")} />
           <button className="btn btn-s" onClick={pwSpeichern} disabled={!pw}>{t("Ändern")}</button>
         </div></div>
 

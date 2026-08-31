@@ -18,7 +18,8 @@ import "../../zugang.css";
  * Die Mindestlänge stammt aus der Supabase-Vorgabe (6). Wir prüfen sie hier mit, damit der
  * Fehler beim Tippen erscheint und nicht erst nach dem Absenden vom Server kommt.
  */
-const MINDESTLAENGE = 8;
+// Eine Regel fuer das ganze Produkt — vorher standen hier 8, im Onboarding 12.
+import { pwPruefung, MINDESTLAENGE } from "@/lib/passwort";
 
 export default function PasswortPage() {
   const router = useRouter();
@@ -42,7 +43,8 @@ export default function PasswortPage() {
     setTimeout(() => router.push("/leads"), 1200);
   }
 
-  const zuKurz = pw.length > 0 && pw.length < MINDESTLAENGE;
+  const pwStatus = pwPruefung(pw);
+  const zuKurz = pw.length > 0 && !pwStatus.ok;
   const ungleich = pw2.length > 0 && pw !== pw2;
 
   return (
@@ -79,7 +81,7 @@ export default function PasswortPage() {
                     onChange={(e) => setPw2(e.target.value)}
                     onKeyDown={(e) => { if (e.key === "Enter" && pw && pw === pw2 && !zuKurz) speichern(); }} />
                 </div>
-                {zuKurz && <div className="note note-w">Mindestens {MINDESTLAENGE} Zeichen.</div>}
+                {zuKurz && <div className="note note-w">Es fehlt noch: {pwStatus.maengel.join(" · ")}</div>}
                 {ungleich && <div className="note note-w">Die beiden Eingaben sind nicht gleich.</div>}
                 {fehler && <div className="note note-w">{fehler}</div>}
                 <div className="btnrow">
