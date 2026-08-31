@@ -528,3 +528,91 @@ def test_passungszahl_widerspricht_nie_ihrer_stufe():
     skript = ROOT / "web" / "scripts" / "pruefe-passung.mjs"
     p = subprocess.run(["node", str(skript)], capture_output=True, text=True)
     assert p.returncode == 0, f"Passungszahl und Relevanz-Stufe widersprechen sich:\n{p.stdout}{p.stderr}"
+
+
+def test_jede_gold_tabelle_mit_fk_wird_geprueft():
+    """Eine handgepflegte Liste hoert irgendwann auf zu wachsen. Diese hier merkt es selbst.
+
+    `verify.gold_integrity` fuehrt die Fremdschluessel-Pruefungen als Liste von Hand. Am
+    2026-08-25 stand sie bei 22 Pruefungen, waehrend `data/gold/<L>` auf 64 Tabellen
+    gewachsen war — 44 kamen nicht vor, darunter die ganze Los-, CPV- und Kriterien-Ebene.
+    Der Kommentar im Code nennt es die Krankheit: eine Liste, die aufgehoert hat zu wachsen,
+    waehrend nebenan behauptet wurde, alle neuen Tabellen seien erfasst.
+
+    Dagegen hilft kein Vorsatz, sondern nur eine Pruefung, die NEUE Tabellen von selbst
+    findet. Diese hier scannt die Gold-Ebene nach Spalten, die erkennbar ein Fremdschluessel
+    sind, und verlangt fuer jede entweder eine Pruefung oder einen begruendeten Eintrag in
+    `verify.FK_AUSNAHMEN`. Wer eine Tabelle hinzufuegt, muss sich also entscheiden — und
+    kann sie nicht mehr stillschweigend uebergehen.
+
+    ⚠ Sie prueft die LISTE, nicht die Daten. Ob die Pruefung dann 0 Waisen findet, ist
+    `gold_integrity` selbst; ob die Tabelle in allen Laendern existiert, ist
+    `pruefe_verdrahtung.sonde_paritaet`. Drei verschiedene Fragen, drei Stellen.
+
+    ⚠ UND SIE SIEHT NUR, WAS AUF DER PLATTE LIEGT. Eine gerade hinzugefuegte Tabelle ist
+    unsichtbar, bis sie einmal gebaut wurde — der Wachhund greift also erst nach dem ersten
+    Lauf. Gegengeprueft am 2026-08-31: nimmt man `buyer_loyalty` oder `retender_signal` aus
+    der Liste, meldet sie beide; nimmt man `verify.FK_AUSNAHMEN` weg, meldet sie
+    `entity_merge_map` und `entity_group`.
+    """
+    import ast
+    import duckdb
+    from govisor import verify
+
+    gold = ROOT / "data" / "gold" / "DE"
+    if not gold.is_dir():
+        pytest.skip("keine Gold-Ebene vorhanden")
+
+    # ⚠ NICHT per Regex ueber die ganze Datei. Der erste Anlauf tat das und war damit
+    # wirkungslos: `FK_AUSNAHMEN` nennt die ausgenommenen Tabellen selbst beim Namen, also
+    # galten sie als geprueft — und jede beliebige Erwaehnung im Quelltext haette die
+    # Pruefung ebenso stillgelegt. Eine Pruefung, die sich vom eigenen Kommentar besaenftigen
+    # laesst, prueft nichts.
+    #
+    # Stattdessen der Syntaxbaum: nur die Tupel aus den `checks`-Listen in `gold_integrity`
+    # zaehlen, und dort nur das zweite Feld (die Kind-Tabelle).
+    baum = ast.parse((ROOT / "govisor" / "verify.py").read_text(encoding="utf-8"))
+    geprueft: set[str] = set()
+    for knoten in ast.walk(baum):
+        if not (isinstance(knoten, ast.Assign) and isinstance(knoten.value, ast.List)):
+            continue
+        namen = [z.id for z in knoten.targets if isinstance(z, ast.Name)]
+        if not any(n.endswith("checks") for n in namen):
+            continue
+        for eintrag in knoten.value.elts:
+            if not isinstance(eintrag, ast.Tuple):
+                continue
+            # Feld 1 = Kind-Tabelle (die geprueft wird), Feld 3 = Eltern-Tabelle (das ZIEL).
+            # Die Eltern zaehlen ebenfalls als abgedeckt: `entities.entity_id` ist ein
+            # Primaerschluessel, kein Fremdschluessel. Ohne diese Zeile meldet die Pruefung
+            # `entities` und `quality` als ungeprueft — formal richtig erkannt, fachlich
+            # Unsinn, und ein Fehlalarm in einer Waechter-Pruefung ist toedlich: er kostet
+            # sie beim zweiten Mal das Vertrauen und beim dritten die Existenz.
+            for i in (1, 3):
+                if len(eintrag.elts) > i:
+                    feld = eintrag.elts[i]
+                    if isinstance(feld, ast.Constant) and str(feld.value).endswith(".parquet"):
+                        geprueft.add(feld.value)
+    assert geprueft, "keine Pruefliste gefunden — der Syntaxbaum-Zugriff ist gebrochen"
+
+    # Spalten, die ohne Zweifel auf eine andere Tabelle zeigen.
+    FK_SPALTEN = {"entity_id", "lead_id", "notice_id", "buyer_entity", "incumbent_entity"}
+
+    con = duckdb.connect()
+    offen = []
+    for datei in sorted(gold.glob("*.parquet")):
+        if datei.name in geprueft or datei.name in verify.FK_AUSNAHMEN:
+            continue
+        try:
+            spalten = {c[0] for c in con.execute(
+                f"DESCRIBE SELECT * FROM read_parquet('{datei.as_posix()}')").fetchall()}
+        except Exception:                                  # noqa: BLE001
+            continue                                       # unlesbar ist Sache anderer Sonden
+        treffer = spalten & FK_SPALTEN
+        if treffer:
+            offen.append(f"{datei.name} ({', '.join(sorted(treffer))})")
+    con.close()
+
+    assert not offen, (
+        "Gold-Tabellen mit Fremdschluessel-Spalte, die weder in `gold_integrity` geprueft "
+        "noch in `verify.FK_AUSNAHMEN` begruendet sind:\n  " + "\n  ".join(offen))
