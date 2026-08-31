@@ -1699,6 +1699,155 @@ def _consolidate_by_municipality(entity_of: dict, plz_of: dict, plz_kreis: dict,
     return merge_map
 
 
+def build_buyer_traeger(cfg: Config, country: str = "DE") -> tuple[int, int]:
+    """Zweite Ebene ueber den Vergabestellen: TRAEGER (die Behoerde) + EINHEIT (die einkaufende Stelle).
+
+    WARUM EINE EBENE UND KEIN MERGE. Gemessen am DE-Bestand 2026-08-30 liessen sich rund 20.700
+    Kaeufer-Entitaeten (28,6 %) zusammenziehen, wenn man den Abteilungs-Zusatz wegwirft:
+    „Landeshauptstadt Dresden, Geschaeftsbereich Finanzen" und „…, Geschaeftsbereich
+    Stadtentwicklung" waeren dann eine Zeile. Das ist aber keine Datenbereinigung, sondern eine
+    Produktentscheidung mit zwei richtigen Antworten:
+
+      „Wie viele Vergabestellen gibt es?"      → die Behoerde (Traeger)
+      „Wer schreibt diesen Auftrag aus?"       → die einkaufende Einheit
+
+    Ein Merge beantwortet die erste Frage und macht die zweite unbeantwortbar. Diese Tabelle
+    beantwortet beide, weil sie NICHTS wegnimmt: ``entity_id`` bleibt die Einheit und damit die
+    Koernung des ganzen Bestands, ``traeger_id`` kommt daneben. Wer zaehlen will, gruppiert;
+    wer anschreiben will, nimmt die Einheit.
+
+    ⚠ DER TRAEGER IST NICHT DER NAMENSSTAMM ALLEIN. „Stadtwerke" gibt es hundertfach; ohne
+    Ortsbeleg waeren das alles Geschwister. Es gilt dieselbe Kaskade wie beim Verschmelzen
+    (``_ortsbeleg_passt``, PLZ → NUTS3 → Ortsname) und ausdruecklich dieselbe FUNKTION, damit
+    Traeger-Ebene und Bestand nicht auseinanderdriften.
+
+    JEDE Kaeufer-Entitaet bekommt eine Zeile, auch wenn ihr Traeger nur aus ihr selbst besteht.
+    Sonst muesste jeder Verbraucher einen Aussenjoin schreiben und der erste, der es vergisst,
+    verliert still die Haelfte der Vergabestellen.
+
+    Rueckgabe: (Traeger, zugeordnete Einheiten).
+    """
+    import re as _re
+    from collections import defaultdict, Counter
+    from . import entities as _ents
+    from . import names as _names
+
+    con = _db.connect()
+    gd = cfg.gold_dir / country
+    pe, ent = f"'{gd}/party_entity.parquet'", f"'{gd}/entities.parquet'"
+    reihen = con.execute(f"""
+        SELECT DISTINCT e.entity_id, e.canonical_name
+        FROM {pe} pe JOIN {ent} e USING(entity_id)
+        WHERE pe.role = 'buyer'
+    """).fetchall()
+    geo = con.execute(f"""
+        SELECT pe.entity_id,
+               list(DISTINCT np.postal_code)          FILTER (WHERE np.postal_code IS NOT NULL AND np.postal_code <> ''),
+               list(DISTINCT substr(np.nuts, 1, 5))   FILTER (WHERE np.nuts IS NOT NULL AND np.nuts <> ''),
+               list(DISTINCT np.town)                 FILTER (WHERE np.town IS NOT NULL AND np.town <> '')
+        FROM {pe} pe
+        JOIN '{cfg.silver_table_glob("notice_parties", country)}' np
+          ON np.notice_id = pe.notice_id AND np.role = pe.role AND np.seq = pe.seq
+        WHERE pe.role = 'buyer'
+        GROUP BY 1
+    """).fetchall()
+
+    def _ort(t):
+        return _re.sub(r"[^a-z]", "", _ents.strip_accents((t or "").lower()))
+
+    plz_of = {e: set(p or []) for e, p, _, _ in geo}
+    nuts_of = {e: set(n or []) for e, _, n, _ in geo}
+    ort_of = {e: {o for o in (_ort(t) for t in (x or [])) if o} for e, _, _, x in geo}
+
+    # Der Bindestrich trennt eine Einheit genauso wie das Komma („Stadt Koeln - Amt fuer
+    # Schulentwicklung"), aber `classify` schneidet nur am Komma. Ohne diese Angleichung waere
+    # die Ebene in sich widerspruechlich: dieselbe Behoerde faltet mit Komma und faellt mit
+    # Bindestrich auseinander. Angeglichen wird NUR hier, `classify` selbst bleibt unberuehrt —
+    # es hat andere Nutzer, die auf seinem heutigen Verhalten stehen.
+    _TRENNER = _re.compile(r"\s+[-–—]\s*|\s*,\s*")
+
+    sauber_of, einheit_of, stamm_of = {}, {}, {}
+    cluster: dict[str, list[str]] = defaultdict(list)
+    for eid, name in reihen:
+        sauber = _names.clean_display_name(name) or name or ""
+        sauber_of[eid] = sauber
+        teile = _TRENNER.split(sauber, 1)
+        stamm_of[eid] = teile[0].strip()
+        einheit_of[eid] = (teile[1].strip() if len(teile) > 1 else "") or None
+        # Schluessel aus dem STAMM, nicht aus dem vollen Namen — sonst haengt die Zuordnung
+        # daran, ob die Quelle Komma oder Bindestrich geschrieben hat.
+        schluessel = _ents.classify(stamm_of[eid]).normalized if stamm_of[eid] else None
+        if schluessel:
+            cluster[schluessel].append(eid)
+        else:
+            cluster[f"__allein:{eid}"].append(eid)
+
+    # Innerhalb eines Namens-Clusters entscheidet der Ortsbeleg, WELCHE Einheiten wirklich
+    # denselben Traeger haben. Kleinste entity_id ist der Vertreter — dieselbe stabile Wahl
+    # wie beim Verschmelzen, damit die IDs zwischen zwei Laeufen nicht wandern.
+    zuordnung: dict[str, str] = {}
+    for _, gruppe in cluster.items():
+        gruppe.sort()
+        for i, vertreter in enumerate(gruppe):
+            if vertreter in zuordnung:
+                continue
+            zuordnung[vertreter] = vertreter
+            for anderer in gruppe[i + 1:]:
+                if anderer in zuordnung:
+                    continue
+                if _ortsbeleg_passt(vertreter, anderer, plz_of, nuts_of, ort_of):
+                    zuordnung[anderer] = vertreter
+
+    # Anzeigename des Traegers: bevorzugt ein Mitglied OHNE Einheit (das ist der reine
+    # Behoerdenname), sonst der kuerzeste Namensstamm. Ohne diese Wahl hiesse der Traeger nach
+    # der zufaellig kleinsten entity_id, also z. B. „…, Referat U 2.1" — formal richtig,
+    # als Ueberschrift einer Behoerde aber irrefuehrend.
+    mitglieder: dict[str, list[str]] = defaultdict(list)
+    for eid, vertreter in zuordnung.items():
+        mitglieder[vertreter].append(eid)
+    name_of: dict[str, str] = {}
+    for vertreter, gruppe in mitglieder.items():
+        ohne = [g for g in gruppe if not einheit_of[g]]
+        kandidaten = [g for g in (ohne or gruppe) if stamm_of[g]]
+        if not kandidaten:
+            name_of[vertreter] = sauber_of[vertreter]
+            continue
+        # HAEUFIGSTE Schreibweise, nicht die kuerzeste. Der kuerzeste Name gewinnt sonst mit
+        # jeder verstuemmelten Variante: „DB Netz" schlaegt „DB Netz AG", obwohl fast alle
+        # Quellen die lange Form schreiben. Gleichstand → der kuerzere, damit es stabil bleibt.
+        haeufig = Counter(stamm_of[g] for g in kandidaten)
+        name_of[vertreter] = min(haeufig, key=lambda n: (-haeufig[n], len(n), n))
+
+    zeilen = [(eid, f"traeger:{vertreter}", name_of[vertreter], einheit_of[eid])
+              for eid, vertreter in sorted(zuordnung.items())]
+    _write(con, gd / "buyer_traeger.parquet", zeilen,
+           "entity_id VARCHAR, traeger_id VARCHAR, traeger_name VARCHAR, einheit VARCHAR")
+    con.close()
+    return len(mitglieder), len(zeilen)
+
+
+def _ortsbeleg_passt(a: str, b: str, plz_of: dict, nuts_of: dict, ort_of: dict) -> bool:
+    """Ortsbeleg als KASKADE: der schaerfste vorhandene Beleg entscheidet allein.
+
+    Der schwaechere darf den schaerferen nie ueberstimmen — sonst zoege ein geteilter Ortsname
+    zwei Stellen mit widersprechender PLZ zusammen. Pro Paar wird die hoechste Stufe genommen,
+    auf der BEIDE Seiten etwas vorweisen, und nur die zaehlt.
+
+    ⚠ BEWUSST EINE MODULFUNKTION, nicht zweimal geschrieben. Sie entscheidet sowohl, was
+    ``_consolidate_by_shared_name_geo`` verschmilzt, als auch, was ``build_buyer_traeger``
+    unter einen Traeger stellt. Zwei Kopien wuerden auseinanderdriften, und dann widerspraeche
+    die Traeger-Ebene dem Bestand, auf dem sie sitzt — ohne dass es jemandem auffiele.
+    """
+    pa, pb = plz_of.get(a, set()), plz_of.get(b, set())
+    if pa and pb:
+        return bool(pa & pb)                            # 1. PLZ: der scharfe Beleg
+    na, nb = nuts_of.get(a, set()), nuts_of.get(b, set())
+    if na and nb:
+        return bool(na & nb)                            # 2. NUTS3: Kreisebene
+    oa, ob = ort_of.get(a, set()), ort_of.get(b, set())
+    return bool(oa and ob and (oa & ob))                 # 3. Ortsname: letzter Beleg
+
+
 def _consolidate_by_shared_name_geo(entity_of: dict, plz_of: dict, nuts_of: dict,
                                     ort_of: dict, already: set):
     """Fragmente mit demselben GEREINIGTEN Namen und geteiltem Ortsbeleg verschmelzen.
@@ -1792,20 +1941,7 @@ def _consolidate_by_shared_name_geo(entity_of: dict, plz_of: dict, nuts_of: dict
             by_key[k].append(e)
 
     def _beleg_passt(a: str, b: str) -> bool:
-        """Ortsbeleg als KASKADE: der schaerfste vorhandene Beleg entscheidet allein.
-
-        Der schwaechere darf den schaerferen nie ueberstimmen — sonst wuerde ein geteilter
-        Ortsname zwei Stellen mit widersprechender PLZ zusammenziehen. Darum wird pro Paar
-        die hoechste Stufe genommen, auf der BEIDE Seiten etwas vorweisen, und nur die zaehlt.
-        """
-        pa, pb = plz_of.get(a, set()), plz_of.get(b, set())
-        if pa and pb:
-            return bool(pa & pb)                        # 1. PLZ: der scharfe Beleg
-        na, nb = nuts_of.get(a, set()), nuts_of.get(b, set())
-        if na and nb:
-            return bool(na & nb)                        # 2. NUTS3: Kreisebene
-        oa, ob = ort_of.get(a, set()), ort_of.get(b, set())
-        return bool(oa and ob and (oa & ob))             # 3. Ortsname: letzter Beleg
+        return _ortsbeleg_passt(a, b, plz_of, nuts_of, ort_of)
 
     merge_map: dict[str, str] = {}
     for _, group in by_key.items():
