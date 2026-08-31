@@ -657,3 +657,34 @@ def test_eignungscheck_gibt_seine_antworten_weiter():
     assert modul.count('const SCHLUESSEL') == 1
     assert "gv_check_v1" not in check and "gv_check_v1" not in onb, \
         "der Speicherschluessel gehoert ins Modul, nicht in die Enden — sonst laeuft er auseinander"
+
+
+def test_passwortregel_haelt_was_der_hinweis_verspricht():
+    """Hinweis und Regel standen uebereinander und widersprachen sich.
+
+    Unter dem Feld: „Länge zählt mehr als Sonderzeichen, eine Passphrase aus vier Wörtern ist
+    sicherer als P@ssw0rt!" Darunter eine Bedingung, die drei Zeichenklassen verlangte. Eine
+    29 Zeichen lange Passphrase fiel durch, `Abcdefgh123!` kam durch.
+
+    Beide Seiten waren fuer sich vertretbar, und genau deshalb schlug nichts an. Dazu kam,
+    dass DREI verschiedene Regeln nebeneinander standen — Onboarding 12 Zeichen plus Klassen,
+    Zuruecksetzen 8, Einstellungen 8. Man konnte spaeter ein Passwort setzen, mit dem man
+    sich nicht haette registrieren duerfen: die schwaechste Regel gewann, weil sie erreichbar
+    blieb.
+
+    `pruefe-passwort.mjs` faehrt die EINE Regel unter `node` mit echten Passwoertern.
+    """
+    import subprocess
+
+    skript = ROOT / "web" / "scripts" / "pruefe-passwort.mjs"
+    p = subprocess.run(["node", str(skript)], capture_output=True, text=True)
+    assert p.returncode == 0, f"Passwortregel und Hinweis widersprechen sich:\n{p.stdout}{p.stderr}"
+
+    # Und die Regel darf nicht wieder auseinanderlaufen: keine eigene Laengenpruefung mehr
+    # neben der gemeinsamen.
+    web = ROOT / "web"
+    for datei in ("app/onboarding/page.tsx", "app/auth/passwort/page.tsx", "app/settings/page.tsx"):
+        quelle = (web / datei).read_text(encoding="utf-8")
+        assert "pwPruefung" in quelle, f"{datei} benutzt die gemeinsame Passwortregel nicht"
+    einstellungen = (web / "app" / "settings" / "page.tsx").read_text(encoding="utf-8")
+    assert "pw.length < 8" not in einstellungen, "die alte 8-Zeichen-Regel ist zurueck"
