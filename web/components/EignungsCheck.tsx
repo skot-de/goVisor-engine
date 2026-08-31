@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
+import { speichern } from "@/lib/checkUebergabe";
 import { setzeCheckErgebnis } from "@/lib/checkErgebnis";
 
 /**
@@ -152,6 +153,39 @@ export function EignungsCheck({ check, fachgebiete }: {
     (n) => katalog?.zeilen.some((z) => check.texte[z.key]?.frage === n.key));
 
   const fragen = 1 + Object.keys(check.anforderungen).length + nachweisfragen.length;
+
+  /* Die Angaben ins Onboarding mitgeben. Vorher endete der Weg hier: der Aufruf war ein
+   * blankes `<a href="/onboarding">`, und die sechs Antworten waren weg — obwohl das
+   * Onboarding sie nie erfragt und sie aus Vergabedaten auch nicht ableitbar sind.
+   *
+   * Umgerechnet wird HIER, weil hier die Leitern liegen: gespeichert ist ein Index, und was
+   * er bedeutet, weiss nur diese Komponente. Eine rohe Zahl weiterzureichen hiesse, die
+   * Bedeutung an zwei Stellen zu pflegen. */
+  function stufenwert(name: string): number | null {
+    const a = check.anforderungen[name];
+    if (!a) return null;
+    const i = antwort[name] ?? 0;
+    // i < 0 ist die unterste Option („keine" bzw. „weniger"). Wir setzen 0 statt null:
+    // beim Umsatz untertreibt das leicht, und Untertreiben ist die sichere Richtung —
+    // es macht aus einem Lead nie faelschlich einen passenden.
+    return i >= 0 ? (a.stufen[i] ?? null) : 0;
+  }
+
+  function angabenMitgeben() {
+    const stufe = check.stufen[groesse];
+    speichern({
+      fach, region,
+      volMin: stufe?.von ?? null,
+      volMax: stufe?.bis ?? null,
+      haftpflicht: stufenwert("haftpflicht"),
+      referenzen: stufenwert("referenzen"),
+      umsatz: stufenwert("umsatz"),
+      pq: Boolean(hat.pq), iso9001: Boolean(hat.iso9001), iso14001: Boolean(hat.iso14001),
+      // Welche Nachweisfragen im gewaehlten Feld ueberhaupt auftauchten. Ohne das wuerde
+      // aus einer NICHT GESTELLTEN Frage ein „nein" — der Vorgabewert ist `false`.
+      gefragt: nachweisfragen.map((n) => n.key),
+    });
+  }
 
   /** Verlangte Stufe erfüllt? −1 heisst „in diesem Verfahren nicht beziffert". */
   const reicht = (verlangt: number, eigene: number) => verlangt < 0 || eigene >= verlangt;
@@ -458,7 +492,7 @@ export function EignungsCheck({ check, fachgebiete }: {
                     {schritt === 1 ? "Weiter zu euren Angaben" : "Auswertung ansehen"}
                   </button>
                 ) : (
-                  <Link className="lp-knopf" href="/onboarding">
+                  <Link className="lp-knopf" href="/onboarding" onClick={angabenMitgeben}>
                     {treffer.offen > 0 ? `${nf(treffer.offen)} passende offene Vergaben ansehen`
                       : "Die passenden Vergaben ansehen"}
                   </Link>
