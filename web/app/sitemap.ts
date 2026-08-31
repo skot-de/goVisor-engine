@@ -8,8 +8,10 @@ import type { MetadataRoute } from "next";
  * ohnehin in der Sperrliste der robots.txt — token-adressierte Vertriebsseiten sind fuer
  * ihren Empfaenger da, nicht fuer einen Index.
  *
- * Bleibt wenig: die Startseite, der Einstieg und das Impressum. Das ist ehrlich — mehr
- * Oeffentliches gibt es zurzeit nicht.
+ * Bleibt wenig: die Startseite, der Einstieg und die Anmeldung. Das ist ehrlich — mehr
+ * Oeffentliches gibt es zurzeit nicht. (Ein Impressum stand hier zuerst im Text, es gibt
+ * aber nur die Route `/api/impressum`, keine Seite — eine Sitemap, die auf eine nicht
+ * existierende Adresse zeigt, ist schlechter als eine kurze.)
  */
 const SEITE = process.env.NEXT_PUBLIC_SITE_URL ?? "https://govisor.eu";
 

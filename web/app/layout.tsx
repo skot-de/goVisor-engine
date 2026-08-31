@@ -35,11 +35,28 @@ export const metadata: Metadata = {
   // Eine Adresse ist die richtige. Ohne canonical zaehlen `?ref=…`, `//` und die
   // www-Variante als eigene Seiten und teilen sich auf, was eine haette sein sollen.
   alternates: { canonical: "/" },
-  // ⚠ KEIN `alternates.languages`. Die Anwendung spricht Deutsch, Englisch und
-  // Franzoesisch, aber die Sprache liegt im `localStorage` — es gibt KEINE
-  // sprachspezifischen URLs. `hreflang` verlangt genau die; Eintraege, die alle auf
-  // dieselbe Adresse zeigen, waeren eine Behauptung ohne Deckung. Die drei Fassungen sind
-  // damit von aussen nicht auffindbar, und das bleibt so, bis es Sprach-Routen gibt.
+  // ⚠ KEIN `alternates.languages`, UND DAS IST KEIN VERSAEUMNIS.
+  //
+  // Der naheliegende Grund waere: die Sprache liegt im `localStorage`, es gibt keine
+  // sprachspezifischen URLs. Das stimmt, ist aber nur die halbe Wahrheit — und die
+  // gefaehrlichere Haelfte kam erst beim Nachmessen heraus (2026-08-30):
+  //
+  //     Landing.tsx   35 deutsche Textstellen · 0 im Katalog · 0 t()-Aufrufe
+  //     /start         3                      · 0            · 0
+  //     /login         2                      · 0            · 0
+  //
+  // Die OEFFENTLICHEN Seiten sind gar nicht uebersetzbar. Ihr Text steht fest verdrahtet
+  // im JSX; die Sprachumschaltung wirkt nur HINTER der Anmeldung, wo die Kataloge greifen.
+  // Es gibt also keine englische oder franzoesische Startseite, auf die ein `hreflang`
+  // zeigen koennte.
+  //
+  // Wer hier Sprach-Routen anlegt, ohne vorher die Texte uebersetzbar zu machen, liefert
+  // unter `/en` und `/fr` denselben deutschen Inhalt aus. `hreflang` waere dann eine
+  // Falschangabe, und drei URLs mit gleichem Text sind fuer die Auffindbarkeit schlechter
+  // als eine saubere. Erst die Texte, dann die Routen.
+  //
+  // Sven am 2026-08-30, als die Messung vorlag: vorerst nur Deutsch.
+  // `tests/test_auffindbarkeit.py` meldet sich, sobald der Grund entfaellt.
   openGraph: {
     type: "website",
     siteName: copy.brand,
