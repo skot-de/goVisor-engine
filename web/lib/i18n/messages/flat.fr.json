@@ -2091,5 +2091,10 @@
   "teils belegt": "partiellement attesté",
   "nur Kopfdaten": "données d'en-tête uniquement",
   "Passung {n} von 100. Eine Rangzahl zum Sortieren, kein Prozentsatz und keine Gewinnwahrscheinlichkeit. Beleglage: {beleg}.": "Adéquation {n} sur 100. Un rang de tri, ni un pourcentage ni une probabilité de succès. Base documentaire : {beleg}.",
-  "goVisor macht öffentliche Ausschreibungen in Europa für Bieter nutzbar. Jeder Wert mit seiner Herkunft: Gemessenes ist gemessen, Geschätztes ist markiert, Unbekanntes bleibt sichtbar.": "goVisor rend les marchés publics européens exploitables pour les soumissionnaires. Chaque chiffre avec son origine : ce qui est mesuré est mesuré, ce qui est estimé est signalé, ce qui est inconnu reste visible."
+  "goVisor macht öffentliche Ausschreibungen in Europa für Bieter nutzbar. Jeder Wert mit seiner Herkunft: Gemessenes ist gemessen, Geschätztes ist markiert, Unbekanntes bleibt sichtbar.": "goVisor rend les marchés publics européens exploitables pour les soumissionnaires. Chaque chiffre avec son origine : ce qui est mesuré est mesuré, ce qui est estimé est signalé, ce qui est inconnu reste visible.",
+  "Aus eurem Check": "D'après votre test",
+  "Aufträge bis {n}": "marchés jusqu'à {n}",
+  "Aufträge ohne Obergrenze": "sans plafond de marché",
+  "Haftpflicht {n}": "assurance RC {n}",
+  "{n} Referenzen": "{n} références"
 }

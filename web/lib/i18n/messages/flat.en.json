@@ -2091,5 +2091,10 @@
   "teils belegt": "partly documented",
   "nur Kopfdaten": "headline data only",
   "Passung {n} von 100. Eine Rangzahl zum Sortieren, kein Prozentsatz und keine Gewinnwahrscheinlichkeit. Beleglage: {beleg}.": "Fit {n} out of 100. A ranking figure for sorting, not a percentage and not a probability of winning. Evidence: {beleg}.",
-  "goVisor macht öffentliche Ausschreibungen in Europa für Bieter nutzbar. Jeder Wert mit seiner Herkunft: Gemessenes ist gemessen, Geschätztes ist markiert, Unbekanntes bleibt sichtbar.": "goVisor makes public tenders across Europe usable for bidders. Every figure with its origin: what is measured is measured, what is estimated is marked, what is unknown stays visible."
+  "goVisor macht öffentliche Ausschreibungen in Europa für Bieter nutzbar. Jeder Wert mit seiner Herkunft: Gemessenes ist gemessen, Geschätztes ist markiert, Unbekanntes bleibt sichtbar.": "goVisor makes public tenders across Europe usable for bidders. Every figure with its origin: what is measured is measured, what is estimated is marked, what is unknown stays visible.",
+  "Aus eurem Check": "From your check",
+  "Aufträge bis {n}": "contracts up to {n}",
+  "Aufträge ohne Obergrenze": "no upper contract limit",
+  "Haftpflicht {n}": "liability cover {n}",
+  "{n} Referenzen": "{n} references"
 }
