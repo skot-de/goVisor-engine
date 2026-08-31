@@ -36,6 +36,55 @@ cd web && for f in scripts/pruefe-*.mjs; do node "$f"; done
 statt `title`, `_lead_context_sql` stürzte über einen fehlenden Glob. Jedes Mal wäre es
 vorher aufgefallen.
 
+## Eine Prüfung, die selbst mitwächst
+
+**Drei Fragen, die wie eine aussehen, und drei verschiedene Stellen.** Wer nur eine davon
+beantwortet, hält sich für abgesichert:
+
+| Frage | Wo sie beantwortet wird |
+|---|---|
+| Fehlt die Tabelle für ein Land? | `pruefe_verdrahtung.sonde_paritaet` — generisch, braucht keine Eintragung |
+| Sind die Daten darin gültig? | `verify.gold_integrity` — Fremdschlüssel je Tabelle |
+| Wurde eine neue Tabelle vergessen? | `test_jede_gold_tabelle_mit_fk_wird_geprueft` |
+
+Die dritte ist die, die man vergisst. `gold_integrity` führt seine Prüfungen als
+handgepflegte Liste; am 2026-08-25 stand sie bei 22, während `data/gold/<L>` auf 64 Tabellen
+gewachsen war — 44 kamen nicht vor, darunter die ganze Los-, CPV- und Kriterien-Ebene.
+Nebenan behauptete `CLAUDE.md` derweil, alle neuen Tabellen seien erfasst.
+
+> **Gegen eine Liste, die aufhört zu wachsen, hilft kein Vorsatz.** Nur eine Prüfung, die
+> neue Einträge von selbst findet und eine Entscheidung erzwingt: geprüft, oder mit Grund
+> ausgenommen. Am 2026-08-31 fand sie beim ersten Lauf drei ungeprüfte Tabellen.
+
+**Ausnahmen gehören als Daten neben die Prüfung, nicht in den Fliesstext.** `verify.FK_AUSNAHMEN`
+war vorher ein Kommentarblock. Eine Ausnahme, die nur in Prosa steht, kann eine Prüfung nicht
+von einer Nachlässigkeit unterscheiden. (`entity_merge_map` hat 100 % Waisen, und das ist sein
+Zweck — es nennt die Quell-Entität einer Verschmelzung, die es danach nicht mehr gibt.)
+
+### ⚠ Zwei Arten, wie ein Wächter unbrauchbar wird
+
+Beide sind beim Bau genau dieser Prüfung passiert und beide erst durch den Versuch
+aufgefallen, sie absichtlich zum Fehlschlagen zu bringen.
+
+1. **Er lässt sich vom eigenen Kommentar besänftigen.** Die erste Fassung las die geprüften
+   Tabellen per Regex aus dem ganzen Quelltext — und die Ausnahmeliste nennt die
+   ausgenommenen Tabellen selbst beim Namen. Sie galten damit als geprüft, und jede
+   beliebige Erwähnung im Text hätte dieselbe Wirkung gehabt. Ein Wächter, der seine eigene
+   Dokumentation als Beleg akzeptiert, prüft nichts. → über den **Syntaxbaum** lesen, nicht
+   über den Text.
+2. **Er schlägt falsch an.** Die zweite Fassung meldete `entities` und `quality` als
+   ungeprüft — die Eltern-Tabellen, deren Spalte ein Primärschlüssel ist. Formal richtig
+   erkannt, fachlich Unsinn. **Ein Fehlalarm ist tödlicher als eine Lücke:** er kostet die
+   Prüfung beim zweiten Mal das Vertrauen und beim dritten die Existenz.
+
+> **Die Gegenprobe gehört zur Prüfung.** Eine Prüfung, die man nicht zum Fehlschlagen
+> gebracht hat, ist unbewiesen. Für jede neue: einmal den Eintrag entfernen, einmal die
+> Ausnahme entfernen, und sehen, ob sie wirklich rot wird. Beide Male hat genau das den
+> Fehler gefunden, nicht das Nachdenken.
+
+Und die Grenze mitschreiben: dieser Wächter sieht nur, was auf der Platte liegt — eine
+gerade hinzugefügte Tabelle ist unsichtbar, bis sie einmal gebaut wurde.
+
 ## Die Abnahmetabelle
 
 Eine Zeile je Kennzahl, alle Länder **nebeneinander**. Getrennte Messungen verstecken die
