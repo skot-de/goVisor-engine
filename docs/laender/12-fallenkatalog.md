@@ -16,7 +16,7 @@
 | A7 | **„Alle Schritte grün"** | Lauf meldet Erfolg, Ergebnis ist alt | Anforderungs-Signale aus einem Index vom 31. Juli |
 | A9 | **Registry-Eintrag für Code gehalten** | `uk-fts`/`fr-decp` stehen mit Namen, Format und Abdeckung da — und haben NULL Zeilen Code. `candidate` heisst recherchiert. |
 | A8 | **Feld misst etwas anderes als sein Name** | `has_documents` = „Quelle bewirbt", nicht „wir haben"; DE zeigt „unknown" bei 7.781 indizierten Vorgängen, CH „offen" bei null |
-| A10 | **Statusmeldung als Befund gelesen** | Ein Abrufer meldet „keine Datei"; niemand fragt, ob er an der richtigen Stelle gesucht hat. Der Fehler wirft keine Ausnahme und sieht im Bericht wie erledigte Arbeit aus. | 2026-08-24: fünf Abrufer geprüft, fünf Vermerke falsch, 433 Vorgänge — s. [Kapitel 03](03-input-dokumente.md) |
+| A10 | **Statusmeldung als Befund gelesen** | Ein Abrufer meldet „keine Datei"; niemand fragt, ob er an der richtigen Stelle gesucht hat. Der Fehler wirft keine Ausnahme und sieht im Bericht wie erledigte Arbeit aus. | seit 2026-08-24: acht Abrufer geprüft, acht Vermerke gefallen, 549 Vorgänge — s. [Kapitel 03](03-input-dokumente.md) |
 
 ## B · Fallen beim Zusammenführen von Ländern
 
@@ -47,6 +47,10 @@
 | C5 | **Fuzzy-Matching auf Namen** | Schwelle 0.7 → ~24 % Fehl-Merges bei Ertrag 1.428. Verworfen. |
 | C6 | **Sperrliste als Teilzeichenkette** | `'land '` traf „Deutschland GmbH" — 211 Grossfirmen unauffindbar |
 | C7 | **CPV-4 fürs Matching** | Elektriker bekam Aufzüge und Heizung als „hoch"; CPV-6 ist die Ebene |
+| C8 | **Bedingung, die den Sonderfall unsichtbar ausschliesst** | Merge-Pass filterte auf `Method.NAME_ONLY` — aber `Kind.PUBLIC` landet bei `nicht_aufgeloest`. 37,7 % der Käufer waren nie Kandidat, und niemandem fiel es auf |
+| C9 | **Säubern nach der Auflösung statt davor** | `clean_display_name` löst „vertreten durch" nur auf dem ANZEIGEnamen; der Merge-Schlüssel trug ihn weiter → „DB Netz AG" existierte 98-mal |
+| C10 | **Normalisierer schneidet mehr weg, als man denkt** | `classify().normalized` cuttet am Komma: „Dresden, GB Finanzen" = „Dresden, GB Stadtentwicklung". Ein Namens-Merge darüber schmilzt still die Abteilungsebene ein (1.772 statt 1.162) — Produktentscheidung als Datenpflege getarnt |
+| C11 | **Kürzesten Namen als Anzeigenamen wählen** | jede verstümmelte Variante gewinnt: „DB Netz" schlug „DB Netz AG". Die HÄUFIGSTE Schreibweise nehmen |
 
 ## D · Fallen bei Orten und Regionen
 

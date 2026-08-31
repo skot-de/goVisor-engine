@@ -169,25 +169,34 @@ Zugangsfrage, keine strukturelle Leere. 171 Vorgänge waren damit stillschweigen
 abgeschrieben statt als Reichweite geführt — genau der Verlust, vor dem der Kopf von
 `docfetch_queue.py` warnt.
 
-## ⚠ Ein Status ist eine Behauptung — und sie war fünfmal von fünf falsch
+## ⚠ Ein Status ist eine Behauptung — und bisher hielt keine einzige stand
 
-Am 2026-08-24 wurden fünf Abrufer nachgeprüft, weil ihre Fehlermeldungen zum ersten Mal im
-Ertragsbericht sichtbar wurden (siehe oben, „Ein ungeklärter Fehlversuch wartet auf UNS").
-Geprüft wurde jeweils dieselbe Frage: **stimmt, was der Vermerk behauptet?**
+Begonnen am 2026-08-24, weil die Fehlermeldungen der Abrufer zum ersten Mal im Ertragsbericht
+sichtbar wurden (siehe oben, „Ein ungeklärter Fehlversuch wartet auf UNS"). Geprüft wurde
+jedes Mal dieselbe Frage: **stimmt, was der Vermerk behauptet?**
 
-| Abrufer | Vermerk im Manifest (Stand 2026-08-24) | Fälle | Was tatsächlich dahinterlag |
+| Abrufer | Vermerk im Manifest (2026-08-24 bis 2026-08-30) | Fälle | Was tatsächlich dahinterlag |
 |---|---|---:|---|
 | netserver | „keine Version gelistet" | 261 | 25 von 30 hatten Unterlagen (477 Dateien) |
 | subreport | „0 Dateien" | 124 | vier Zustände: Konto, Frist, Aufhebung, Passwort |
+| vergabeportal.at | „0 aktiv von 0" + „fehler" ohne Host | 103 | 62 hatten Listen (721 Dateinamen) |
 | evergabe-online | „keine Unterlagen" | 23 | 17× Vertraulichkeit, 4× Frist, 2 hatten ein ZIP |
 | healyhudson | „keine Dateien auf der Vorgangsseite" | 14 | 3 unveröffentlicht, 3 weg, 7 hatten Dateien |
 | staatsanzeiger | „kein ZIP-Link auf der Trefferliste" | 11 | 7 hatten einen Link, 4 tragen eine Absage |
+| aumass | „kein Unterlagen-Abschnitt" | 7 | 6× Angebotsfrist abgelaufen, 1 hatte Unterlagen |
+| ausschreibungsblatt | „kein Unterlagen-Link" | 6 | 3 hatten eine ZIP-Option, 1 lud leer, 2 offen |
 
-**433 Vorgänge trugen einen dieser fünf Vermerke; hochgerechnet aus den Stichproben traf
+**549 Vorgänge trugen einen dieser acht Vermerke; hochgerechnet aus den Stichproben traf
 er auf rund neun von zehn nicht zu.** Ein Rest war wirklich leer — dass es ihn gibt, ist
 kein Einwand, sondern der Grund, warum der falsche Teil so lange unbemerkt blieb. Dazu
 kamen zwei als *dauerhaft* abgeschriebene Gruppen (171 + 78): dort hielt das Urteil, aber
 mit einer Begründung, die sich widerlegen liess.
+
+⚠ **Acht von acht ist kein Zufall mehr, sondern eine Aussage über die Bauart.** Als es fünf
+waren, konnte man noch an eine Häufung glauben. Bei acht geprüften Abrufern und acht
+gefallenen Vermerken lautet die Erwartung für den neunten: **er hält auch nicht.** Wer einen
+Abrufer erbt, prüft seine Statusmeldungen, bevor er ihnen glaubt — nicht, weil dieser eine
+verdächtig wäre, sondern weil noch keiner standgehalten hat.
 
 ### Warum das kein Zufall ist, sondern die Bauart
 
