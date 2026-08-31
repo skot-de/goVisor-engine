@@ -233,6 +233,17 @@ def _behauptungen() -> list[tuple[str, str, bool, str]]:
                 _rufe_t == 0 and not _hreflang,
                 f"{_rufe_t} t()-Aufrufe, hreflang={'ja' if _hreflang else 'nein'}"))
 
+    # Der einfachste Weg, den FK-Waechter auszuhebeln, ist eine Ausnahme ohne Begruendung:
+    # Tabelle in `FK_AUSNAHMEN` eintragen, Wert leer lassen, Ruhe. Kapitel 10 verlangt
+    # ausdruecklich einen Grund — also wird er hier eingefordert. Zehn Zeichen sind kein
+    # Qualitaetsmassstab, aber sie unterscheiden einen Satz von einem Platzhalter.
+    from govisor import verify as _verify
+    _ohne_grund = sorted(t for t, g in _verify.FK_AUSNAHMEN.items() if len((g or "").strip()) < 10)
+    aus.append(("10", "jede FK-Ausnahme nennt ihren Grund",
+                not _ohne_grund,
+                f"ohne Grund: {_ohne_grund}" if _ohne_grund
+                else f"{len(_verify.FK_AUSNAHMEN)} Ausnahmen, alle begruendet"))
+
     return aus
 
 
