@@ -99,8 +99,67 @@ behandelt, bevor die Kennung als Beleg dient.
 - **Kuratierte Aliase** (`data/curated/<LAND>_entity_aliases.csv`): belegte Umbenennungen
   als Identitäts-Merge, human-verifiziert. Kein Namensstamm-Automatismus. Seed-Beispiel:
   DB Netz ↔ DB InfraGO (Umbenennung 2024, gleiche HRB50879) → 15.662 auf 22.104 Vergaben.
-- **Bewusst ungelöst:** die Fragmentierung öffentlicher Stellen (61 % der Vergaben, nicht
-  im Handelsregister, Vertretungs- und Abteilungs-Zusätze).
+- **Vertretungs-Zusätze: gelöst** (2026-08-30). `_consolidate_by_shared_name_geo` clustert über
+  den **gereinigten** Namen. Vorher war der Schlüssel der rohe Name, weshalb „DB Netz AG"
+  98-mal existierte — als `name:db netz vertreten durch db projektbau …` und 97 Geschwister,
+  die einander nie begegneten. `clean_display_name` löste „vertreten durch" schon damals auf,
+  aber erst NACH der Auflösung, auf dem Anzeigenamen.
+- **Abteilungs-Zusätze: bewusst NICHT gemerged**, sondern als eigene Ebene geführt →
+  Abschnitt „Träger und Einheit" unten.
+
+## ⚠ Der Merge-Pass sah die Vergabestellen strukturell nicht
+
+Drei Jahre lang war `_consolidate_by_shared_name_plz` „für öffentliche Stellen" beschrieben
+und hat sie an drei Stellen verfehlt. Alle drei sind dieselbe Fehlerklasse: **eine Bedingung,
+die für den Normalfall richtig ist und den Sonderfall unsichtbar ausschliesst.**
+
+1. **Filter auf `Method.NAME_ONLY`.** `resolve_supplier` biegt alles ab, was nicht
+   `Kind.COMPANY` ist — der Kommentar dort nennt Personen und Bietergemeinschaften, aber
+   **`Kind.PUBLIC` fällt in denselben Zweig**. Gemessen: 27.348 Käufer-Entitäten (37,7 %)
+   tragen `nicht_aufgeloest` und waren nie Kandidat.
+2. **Schlüssel war der rohe Name** (siehe oben).
+3. **Ohne PLZ gar kein Merge.**
+
+> **Der Kernbefund, und er zeigt woandershin als erwartet:** von 1.889 blockierten Fragmenten
+> scheiterten **nur 68 an widersprechenden Adressen, 1.821 an gar keiner**. Die
+> Vergabestellen-Auflösung ist kein Zuordnungsproblem, sondern ein **Adressproblem**.
+> 248.611 Käufer-Instanzen (11,2 %) tragen nur einen Ortsnamen, sonst nichts.
+
+**Für ein neues Land heisst das:** erst messen, wie viele Käufer überhaupt eine Adresse
+tragen — vor jeder Arbeit am Namensabgleich. Der Ortsbeleg läuft als **Kaskade
+PLZ → NUTS3 → Ortsname**: der schärfste vorhandene entscheidet allein, der schwächere darf
+ihn nie überstimmen. Sonst zieht ein geteilter Ortsname zwei Stellen mit widersprechender
+PLZ zusammen.
+
+## Träger und Einheit — eine Ebene daneben statt einer Zeile weniger
+
+Rund 20.700 Käufer-Entitäten (28,6 %) liessen sich zusammenziehen, wenn man den
+Abteilungs-Zusatz wegwirft. Das ist verlockend und falsch, weil zwei richtige Antworten
+dahinterstehen:
+
+| Frage | Antwort |
+|---|---|
+| Wie viele Vergabestellen gibt es? | die Behörde (**Träger**) |
+| Wer schreibt diesen Auftrag aus? | die einkaufende Stelle (**Einheit**) |
+
+Ein Merge beantwortet die erste und macht die zweite unbeantwortbar. `build_buyer_traeger`
+schreibt deshalb `buyer_traeger.parquet` (`entity_id, traeger_id, traeger_name, einheit`) und
+nimmt **nichts** weg: `entity_id` bleibt die Einheit und damit die Körnung des Bestands.
+Zählen = `group by traeger_id`, anschreiben = `entity_id`.
+Gemessen DE (2026-08-31): **71.343 Vergabestellen unter 55.240 Trägern**, 22,6 % gebündelt.
+
+⚠ **Der Träger ist nicht der Namensstamm allein.** „Stadtwerke" gibt es hundertfach; ohne
+Ortsbeleg wären das alles Geschwister. Es gilt dieselbe Kaskade wie beim Verschmelzen, über
+**dieselbe Funktion** (`_ortsbeleg_passt`). Zwei Kopien würden auseinanderdriften, und dann
+widerspräche die Träger-Ebene dem Bestand, auf dem sie sitzt.
+
+⚠ **`entities.classify().normalized` schneidet am Komma ab.** „Dresden, GB Stadtentwicklung"
+und „Dresden, GB Finanzen" ergeben denselben Schlüssel. Ein Namens-Merge darüber schmilzt
+still die Abteilungsebene ein (gemessen 1.772 statt 1.162 Merges) — eine Produktentscheidung,
+getarnt als Datenbereinigung. Der Merge-Pass hat dagegen einen **Einheiten-Riegel**: gemergt
+wird nur bei gleicher Einheit oder wenn eine Seite keine nennt. Den **Bindestrich** behandelt
+`classify` übrigens NICHT wie das Komma; `build_buyer_traeger` gleicht das für sich an, ohne
+`classify` anzufassen (das hat andere Nutzer).
 
 ## Der amtliche Anker für Vergabestellen
 
