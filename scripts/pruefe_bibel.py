@@ -244,6 +244,17 @@ def _behauptungen() -> list[tuple[str, str, bool, str]]:
                 f"ohne Grund: {_ohne_grund}" if _ohne_grund
                 else f"{len(_verify.FK_AUSNAHMEN)} Ausnahmen, alle begruendet"))
 
+    # Kapitel 09 behauptet: es gibt ZWEI Profile, und `recommendation.js` liest die
+    # Nachweise aus `attributes` — NICHT aus `capabilities`. Daran haengt, wohin eine
+    # Uebernahme schreiben muss; am 2026-08-31 war eine fertige Reparatur deswegen
+    # wirkungslos. Verdrahtet jemand `capabilities`, wird das Kapitel falsch und soll es
+    # hier merken, statt jemanden ein zweites Mal ins Leere schreiben zu lassen.
+    _rec = (ROOT / "web" / "lib" / "recommendation.js").read_text(encoding="utf-8")
+    aus.append(("09", "recommendation.js liest die Nachweise aus attributes, nicht aus capabilities",
+                "capabilities" not in _rec and "profile.attributes" in _rec,
+                f"capabilities={'kommt vor' if 'capabilities' in _rec else 'kommt nicht vor'}, "
+                f"attributes={'kommt vor' if 'profile.attributes' in _rec else 'FEHLT'}"))
+
     return aus
 
 
