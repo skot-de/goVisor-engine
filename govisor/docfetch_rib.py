@@ -193,7 +193,16 @@ def fetch_one(documents_url: str, notice_id: str, out_root: Path,
     #                         /public/publications/605329 — es zaehlt also, ob eine Kennung
     #                         folgt, nicht ob der Pfad vorkommt.
     if endpfad.endswith("/public/unavailable") or endpfad.endswith("/public/publications"):
-        return FetchResult(notice_id, tid, portal, "abgelaufen", 0, 0, None,
+        # ⚠ NICHT `abgelaufen`. Der Status liegt in DAUERHAFT und heisst „nie wieder
+        # versuchen" — hier wird er aber aus einer UMLEITUNG geschlossen, und eine Umleitung
+        # ist ein Zustand des Augenblicks, keine Eigenschaft des Vorgangs. Bei netserver,
+        # subreport, evergabe-online und aumass sagt das Portal die abgelaufene Frist
+        # ausdruecklich; hier raten wir sie.
+        #
+        # Nachgemessen am 2026-08-31 an 18 so abgelegten Vorgaengen: **13 laden herunter**
+        # (7 bis 32 Dateien), 5 leiten weiter um. Von 105 dauerhaft abgeschriebenen waren
+        # also rund drei Viertel jederzeit holbar — und wurden nie wieder angefasst.
+        return FetchResult(notice_id, tid, portal, "nicht_abrufbar", 0, 0, None,
                            f"Portal leitet auf {endpfad[-30:]}")
 
     alle_links = dokumentlinks(r.text)

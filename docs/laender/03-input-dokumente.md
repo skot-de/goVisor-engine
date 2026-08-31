@@ -186,12 +186,21 @@ jedes Mal dieselbe Frage: **stimmt, was der Vermerk behauptet?**
 | aumass | „kein Unterlagen-Abschnitt" | 7 | 6× Angebotsfrist abgelaufen, 1 hatte Unterlagen |
 | ausschreibungsblatt | „kein Unterlagen-Link" | 6 | 3 hatten eine ZIP-Option, 1 lud leer, 2 offen |
 | **cosinex** | „http 200, text/html" → `gated` | 257 | ✅ **hält** — 70 von 70 verlangen wirklich Teilnahme |
+| **rib** | „Portal leitet auf /public/unavailable" → `abgelaufen` | 105 | 13 von 18 laden herunter (7–32 Dateien) |
+| rib | „nur die Bekanntmachung" | 74 | ✅ **hält** — 15 von 18 geben weiter nur sie her |
 
 **549 Vorgänge trugen einen dieser acht Vermerke; hochgerechnet aus den Stichproben traf
 er auf rund neun von zehn nicht zu.** Ein Rest war wirklich leer — dass es ihn gibt, ist
 kein Einwand, sondern der Grund, warum der falsche Teil so lange unbemerkt blieb. Dazu
 kamen zwei als *dauerhaft* abgeschriebene Gruppen (171 + 78): dort hielt das Urteil, aber
 mit einer Begründung, die sich widerlegen liess.
+
+⚠ **Eine Umleitung ist kein Urteil.** RIB leitet nicht mehr verfügbare Vorgänge auf
+`/public/unavailable` um, und der Abrufer schloss daraus `abgelaufen` — ein Status aus
+DAUERHAFT, also „nie wieder versuchen". Bei netserver, subreport, evergabe-online und aumass
+nennt das Portal die abgelaufene Frist **ausdrücklich**; hier wurde sie aus dem Verhalten
+geraten. Nachgemessen an 18 Fällen: 13 laden herunter. **Aus einem Zustand des Augenblicks
+darf keine Eigenschaft des Vorgangs werden** — dafür gibt es die gewöhnliche Sperrfrist.
 
 ⚠ **Acht von acht sah nach einer Aussage über die Bauart aus. Der neunte hat sie
 widerlegt.** Ich hatte hier stehen: „die Erwartung für den neunten lautet, er hält auch
