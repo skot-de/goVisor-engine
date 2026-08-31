@@ -19,12 +19,23 @@
  * statt sie in einer Abschrift nachzubauen. Eine Abschrift geht gruen, waehrend die benutzte
  * Fassung falsch ist.
  *
- * ⚠ SERVERSEITE NICHT VERGESSEN: Supabase führt eine eigene Passwortregel. In der
- * Voreinstellung ist das nur eine Mindestlänge; ist im Dashboard zusätzlich „Password
- * Requirements" auf Zeichenklassen gestellt, weist der Server eine Passphrase trotzdem ab —
- * dann greift die Abbildung auf „Das Passwort erfüllt die Mindestanforderungen nicht", und
- * der Nutzer sieht eine schlechtere Meldung als vorher. Das ist eine Einstellung, keine
- * Codezeile; wer diese Datei ändert, sieht im Dashboard nach.
+ * SERVERSEITE, GEMESSEN AM 2026-08-31: Supabase führt eine eigene Passwortregel, und sie
+ * steht in keiner Codezeile — sie ist eine Dashboard-Einstellung. Nachgesehen ohne Anmeldung,
+ * über eine Registrieranfrage mit einem Passwort, das garantiert scheitert (`abc`):
+ *
+ *     {"error_code":"weak_password","msg":"Password should be at least 6 characters.",
+ *      "weak_password":{"reasons":["length"]}}
+ *
+ * **Nur `length`, kein `characters`.** `abc` verletzt jede denkbare Zeichenklassen-Regel;
+ * wäre eine gesetzt, stünde sie in den Gründen, denn GoTrue meldet alle zutreffenden. Also
+ * gilt serverseitig die Voreinstellung: sechs Zeichen, keine Zeichenklassen. Unsere Regel
+ * hier ist strenger, und eine Passphrase kommt am Server durch.
+ *
+ * ⚠ Das bleibt eine EINSTELLUNG und kann sich ohne Codeänderung ändern. Wird im Dashboard
+ * „Password Requirements" auf Zeichenklassen gestellt, weist der Server die Passphrase
+ * trotzdem ab, und der Nutzer sieht die generische Meldung „Das Passwort erfüllt die
+ * Mindestanforderungen nicht" statt des Hinweises hier. Nachprüfen geht mit derselben Sonde,
+ * ohne Konto und ohne Mail — die Prüfung scheitert vor dem Anlegen (HTTP 422).
  */
 
 export const MINDESTLAENGE = 12;
