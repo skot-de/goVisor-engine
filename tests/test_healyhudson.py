@@ -1706,3 +1706,55 @@ def test_ungueltige_anfragen_verbrauchen_die_analyse_quote_nicht():
         "Anfrage nimmt allen anderen das Kontingent weg"
     assert max(verbrauch) < stelle["runPipeline(id"], \
         "die Quote wird nicht mehr vor dem teuren Lauf verbraucht"
+
+
+def test_jeder_cron_kommt_durch_beide_tore_und_sichert_sich_selbst():
+    """Ein Scheduler hat keine Sitzung — und meldet nicht, wenn er ausgesperrt wird.
+
+    `web/vercel.json` bestellt täglich 06:00 einen Lauf auf `/api/alerts/run`. Der Pfad
+    stand nicht in `OFFEN`; gemessen am 2026-08-31 gegen den laufenden Server antwortete
+    die Middleware mit `401 Anmeldung erforderlich`, auch MIT `Authorization: Bearer …`.
+
+    ⚠ Das ist die stillste Art zu scheitern. Ein Cron, der 401 bekommt, wiederholt es am
+    nächsten Morgen; niemand bekommt eine Meldung, und die Frist-Hinweise wären einfach nie
+    gekommen — ausgerechnet bei dem Versprechen, um dessentwillen es das Produkt gibt.
+    Dieselbe Stelle hatte tags zuvor schon `robots.txt` verschluckt.
+
+    Beide Bedingungen gehören zusammen und werden deshalb zusammen geprüft:
+    · Der Pfad muss durch das Anmelde-Tor UND durch die Baustellen-Sperre kommen.
+    · Die Route muss sich SELBST absichern. Ohne das zweite wäre das erste ein offener
+      Endpunkt, der Mails verschickt und `*_sent`-Flags setzt.
+    """
+    import json
+
+    vercel = json.loads((ROOT / "web" / "vercel.json").read_text(encoding="utf-8"))
+    crons = [c["path"] for c in vercel.get("crons", [])]
+    assert crons, "keine Cron-Eintraege mehr in web/vercel.json — Absicht?"
+
+    mw = (ROOT / "web" / "middleware.ts").read_text(encoding="utf-8")
+
+    # ⚠ GEGEN CODE PRUEFEN, NICHT GEGEN PROSA. Der erste Anlauf suchte den Pfad irgendwo in
+    # der Datei — und fand ihn im Kommentarblock ueber der Liste, den ich selbst geschrieben
+    # hatte. Die Gegenprobe (Pfad aus OFFEN entfernen) ging deshalb GRUEN durch: ein Test,
+    # der die Begruendung mitzaehlt, prueft die Begruendung.
+    offen_block = mw[mw.index("const OFFEN = ["):]
+    offen_block = offen_block[:offen_block.index("]")]
+    ohne_kommentar = "\n".join(z.split("//")[0] for z in
+                               mw[mw.index("if (BLACKOUT)"):mw.index("return blackPage();")]
+                               .splitlines())
+    vorhang = ohne_kommentar
+
+    for pfad in crons:
+        assert f'"{pfad}"' in offen_block, (
+            f"{pfad} steht nicht in der OFFEN-Liste der Middleware — der Scheduler bekommt "
+            f"dort 401, jeden Morgen, ohne dass es jemand erfaehrt")
+        assert pfad in vorhang, (
+            f"{pfad} kommt nicht durch die Baustellen-Sperre — der Scheduler bekommt eine "
+            f"schwarze HTML-Seite mit 200 und meldet deshalb keinen Fehler")
+
+        datei = ROOT / "web" / "app" / pfad.lstrip("/") / "route.ts"
+        assert datei.exists(), f"{pfad}: Route nicht gefunden"
+        quelle = datei.read_text(encoding="utf-8")
+        assert "requireCronSecret" in quelle or "CRON_SECRET" in quelle, (
+            f"{pfad} ist offen erreichbar und prueft den Aufrufer NICHT. Ein Cron-Endpunkt "
+            f"ohne eigenes Geheimnis ist eine Schaltflaeche fuer jeden.")

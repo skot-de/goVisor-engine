@@ -79,11 +79,20 @@ const PREVIEW_COOKIE = "gv_preview";
  *                               nachdem ich sie angelegt hatte: `GET /robots.txt` →
  *                               `/login?weiter=%2Frobots.txt`. Sie geben nichts preis, was
  *                               nicht ohnehin fuer die Oeffentlichkeit gedacht ist — die
- *                               Sitemap nennt Startseite, Einstieg und Impressum.
+ *                               Sitemap nennt Startseite, Einstieg und Anmeldung.
+ *   /api/alerts/run             der Frist-Hinweislauf. Ihn ruft der Vercel-Scheduler
+ *                               (`web/vercel.json`, taeglich 06:00), und ein Scheduler hat
+ *                               keine Sitzung. Hinter dem Tor bekam er jeden Morgen 401 —
+ *                               gemessen am 2026-08-31, auch MIT Bearer-Kopfzeile. Ein Cron,
+ *                               der ins Leere laeuft, meldet sich nicht: die Hinweise waeren
+ *                               einfach nie gekommen, und das ausgerechnet bei dem
+ *                               Versprechen, um dessentwillen es das Produkt gibt.
+ *                               Die Berechtigung ist hier das CRON_SECRET: `requireCronSecret`
+ *                               ist fail-closed (ohne Geheimnis 503, mit falschem 403).
  */
 const OFFEN = ["/login", "/auth", "/api/health", "/onboarding", "/start", "/t", "/api/wer", "/api/entity-verify", "/api/impressum", "/api/entity-search",
                      "/api/entity-group", "/api/outreach-firma", "/api/calendar",
-                     "/robots.txt", "/sitemap.xml"];
+                     "/robots.txt", "/sitemap.xml", "/api/alerts/run"];
 
 function istOffen(pfad: string): boolean {
   // Die Wurzel zeigt seit dem 2026-08-20 die oeffentliche Startseite (app/page.tsx) und
@@ -188,9 +197,14 @@ export async function middleware(request: NextRequest) {
     // Antwort auf `robots.txt` eine schwarze HTML-Seite bekommt, liest daraus keine Regeln
     // — er sieht eine kaputte Datei und faellt auf „alles erlaubt" zurueck. Verraten wird
     // dabei nichts: waehrend der Sperre traegt ohnehin jede Seite `noindex`.
+    // Der Hinweislauf muss ebenfalls durch, aus demselben Grund wie die Gesundheitsprobe:
+    // ein Scheduler, der eine schwarze HTML-Seite bekommt, meldet keinen Fehler. Er laeuft
+    // jeden Morgen, bekommt 200, und niemand erfaehrt, dass nichts passiert ist. Verraten
+    // wird nichts — ohne CRON_SECRET antwortet die Route mit 503, mit falschem mit 403.
     if (!unlocked && !vorhangAuf && !pfad.startsWith("/auth/") && pfad !== "/api/health"
         && !pfad.startsWith("/api/calendar/")
-        && pfad !== "/robots.txt" && pfad !== "/sitemap.xml")
+        && pfad !== "/robots.txt" && pfad !== "/sitemap.xml"
+        && pfad !== "/api/alerts/run")
       return blackPage();
     // Schlüssel gültig → volle App; bei frischem ?preview den Cookie setzen (Folgeseiten ohne Query).
     const { response: res, email } = await updateSession(request);
