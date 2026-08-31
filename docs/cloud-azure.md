@@ -60,10 +60,33 @@ das und bricht **nicht** ab: lokal bleibt die Platte die Quelle.
 
 1. **Speicher anlegen und `DATA_BASE_URL` setzen.** Bis dahin findet ein Deployment keine
    Daten. Die Datenrouten antworten dann leer mit Begründung, nicht mit falschen Zahlen.
-2. **`/firma` ist nicht serverless-fähig** (ruft Python zur Laufzeit). Entweder vorberechnen
-   wie alles andere oder ein eigener kleiner Dienst.
-3. **`/api/leads` hat kein Auth-Gate.** Heute schützt allein die Coming-Soon-Sperre. Vor dem
-   Go-live zu entscheiden (steht auch in `CLAUDE.md`).
+2. **Sieben Nutzer-Routen rufen Python zur Laufzeit.** Hier stand `/firma` als der eine
+   Fall — ausgerechnet der, der inzwischen gelöst ist: die Route liest zuerst die
+   vorberechnete Datei und startet in Produktion **nie** Python, sondern antwortet mit
+   einer verwertbaren Meldung. Nachgezählt am 2026-08-31 rufen **elf** Routen
+   `child_process`, und nur vier haben diesen Riegel:
+
+   | Route | Riegel in Produktion |
+   |---|---|
+   | `/api/firma`, `/api/intern/{firmen,landing,outreach}` | ja |
+   | `/api/lead/dokumente`, `/api/lead/datei` | **nein** |
+   | `/api/unternehmen/{vorbefuellung,bilanz}` | **nein** |
+   | `/api/lead-docs`, `/api/draft-check`, `/api/blocks-import` | **nein** |
+
+   ⚠ Ohne Riegel wird aus einer fehlenden Laufzeit ein **Exec-Fehler**, der wie ein
+   Codefehler aussieht — genau das ist am 2026-08-22 bei `/firma` passiert und steht dort
+   als Kommentar. Die Grundform oben („die Anwendung kennt die Datenfabrik nicht") gilt
+   für die Datenrouten; für diese sieben gilt sie nicht.
+
+   Zwei Wege, beide gangbar: entweder vorberechnen wie `/firma` es vormacht, oder ein
+   Host mit Python (dann ist es kein Hindernis, sondern eine Anforderung an die
+   Host-Entscheidung). Was nicht geht: es beim Umzug übersehen.
+
+   `tests/test_serverless.py` zählt mit und wird rot, wenn eine zwölfte dazukommt.
+3. ~~**`/api/leads` hat kein Auth-Gate.**~~ **Erledigt.** Nachgeprüft am 2026-08-31 gegen
+   den laufenden Server: `/api/leads`, `/api/branchen` und `/api/lead-detail` antworten
+   ohne Sitzung mit `401`. Die Middleware sperrt alles ausser der `OFFEN`-Liste; die
+   Coming-Soon-Sperre ist nicht mehr der einzige Schutz.
 4. **`ADMIN_EMAILS`** ist nur lokal gesetzt; in der Cloud gilt sonst die Vorgabe `sk@skot.de`.
 5. **Mail-Vorlagen** auf `{{ .TokenHash }}` umstellen, sonst funktionieren Anmeldelinks nur
    in dem Browser, der sie angefordert hat.
