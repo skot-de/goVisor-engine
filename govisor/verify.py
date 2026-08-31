@@ -22,6 +22,21 @@ import requests
 from . import bulk
 from .config import Config
 
+# Tabellen, die eine Fremdschluessel-Spalte tragen und trotzdem NICHT geprueft werden.
+# Als Daten und nicht als Kommentar, damit `test_jede_gold_tabelle_mit_fk_wird_geprueft`
+# sie kennt: eine Ausnahme, die nur in Prosa steht, kann eine Pruefung nicht von einer
+# Nachlaessigkeit unterscheiden.
+FK_AUSNAHMEN: dict[str, str] = {
+    "entity_merge_map.parquet":
+        "100 % Waisen, und das ist der Zweck: die Spalte nennt die QUELL-Entitaet einer "
+        "Verschmelzung, die es danach nicht mehr gibt (gemessen 2026-08-31: 10.018).",
+    "entity_group.parquet":
+        "12.861 nicht aufloesbar, davon 4.916 verschmolzen und 7.945 Mitglieder aus dem "
+        "kuratierten Gruppen-Katalog, die in DE nie als Partei auftraten. Eine "
+        "Gruppendefinition darf Mitglieder nennen, die man noch nicht gesehen hat.",
+}
+
+
 def gold_integrity(cfg: Config, country: str = "DE") -> list[tuple[str, int]]:
     """Referenz-Integrität der Gold-Tabellen — jeder FK muss auflösen.
 
@@ -88,6 +103,16 @@ def gold_integrity(cfg: Config, country: str = "DE") -> list[tuple[str, int]]:
          "leads.parquet", "lead_id"),
         ("review_queue.notice → quality", "review_queue.parquet", "notice_id",
          "quality.parquet", "notice_id"),
+        # ── Nachtrag 2026-08-31 ──────────────────────────────────────────────────────
+        # Gefunden nicht durch Nachdenken, sondern durch die Meta-Pruefung unten: drei
+        # Tabellen trugen eine Fremdschluessel-Spalte und kamen hier nicht vor. Alle drei
+        # am 2026-08-31 gegen den Bestand gemessen, alle 0 Waisen.
+        ("buyer_loyalty.buyer → entities", "buyer_loyalty.parquet", "buyer_entity",
+         "entities.parquet", "entity_id"),
+        ("retender_signal.buyer → entities", "retender_signal.parquet", "buyer_entity",
+         "entities.parquet", "entity_id"),
+        ("buyer_traeger.entity → entities", "buyer_traeger.parquet", "entity_id",
+         "entities.parquet", "entity_id"),
         ("incumbent_tenure.notice → quality", "incumbent_tenure.parquet", "notice_id",
          "quality.parquet", "notice_id"),
         ("notice_enrichment.notice → quality", "notice_enrichment.parquet", "notice_id",
@@ -159,6 +184,22 @@ def gold_integrity(cfg: Config, country: str = "DE") -> list[tuple[str, int]]:
         ).fetchone()[0]
         if n:
             out.append((label, n))
+
+    # ── ABDECKUNG statt Fremdschluessel: die andere Richtung ────────────────────────
+    #
+    # Ein FK-Check fragt „zeigt jede Zeile auf etwas Gueltiges". Die Zusage der Traeger-Ebene
+    # ist die UMGEKEHRTE: „bekommt jede Vergabestelle eine Zeile". Sie kann tadellos
+    # fremdschluessel-sauber sein und trotzdem die Haelfte der Kaeufer nicht enthalten —
+    # und genau dann verliert der erste Verbraucher, der den Aussenjoin vergisst, still die
+    # Haelfte der Vergabestellen. Darum hier eigens geprueft.
+    bt, pe_p = g / "buyer_traeger.parquet", g / "party_entity.parquet"
+    if bt.exists() and pe_p.exists():
+        n = con.execute(
+            f"SELECT count(*) FROM (SELECT DISTINCT entity_id FROM {q('party_entity.parquet')} "
+            f"WHERE role='buyer' EXCEPT SELECT entity_id FROM {q('buyer_traeger.parquet')})"
+        ).fetchone()[0]
+        if n:
+            out.append(("Kaeufer ohne Traeger-Zeile", n))
 
     eg = g / "entity_group.parquet"
     if (g / "entities.parquet").exists():
