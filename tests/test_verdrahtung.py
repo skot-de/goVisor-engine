@@ -616,3 +616,44 @@ def test_jede_gold_tabelle_mit_fk_wird_geprueft():
     assert not offen, (
         "Gold-Tabellen mit Fremdschluessel-Spalte, die weder in `gold_integrity` geprueft "
         "noch in `verify.FK_AUSNAHMEN` begruendet sind:\n  " + "\n  ".join(offen))
+
+
+def test_eignungscheck_gibt_seine_antworten_weiter():
+    """Der Check sammelt sechs Angaben. Bis zum 2026-08-31 warf er sie danach weg.
+
+    Gemessen: der Aufruf „N passende offene Vergaben ansehen" war ein blankes
+    `<a href="/onboarding">`, `localStorage` und `sessionStorage` blieben leer, und
+    `app/onboarding/page.tsx` hatte NULL Treffer fuer `buergschaft`, `iso_9001`,
+    `praequalifikation`, `referenz`. Der Nutzer beantwortete dieselben Fragen zweimal —
+    beim zweiten Mal, weil `matchLead` mangels `buergschaft` sagte „hinterlegt euren Rahmen".
+
+    Das ist die Sorte Fehler, die keine Ausnahme wirft und keinen Test rot macht: beide
+    Seiten funktionieren fuer sich. Nur die Leitung dazwischen fehlt. Deshalb wird hier die
+    LEITUNG geprueft, nicht das Verhalten der Enden.
+
+    ⚠ Bewusst eine Quelltext-Pruefung, mit der bekannten Schwaeche: sie sieht, dass die
+    Aufrufe dastehen, nicht dass sie zur Laufzeit greifen. Das Verhalten selbst wurde am
+    2026-08-31 von Hand durchgespielt (Check → Onboarding → Profil traegt volMin/volMax
+    100.000/500.000 und `capabilities: ["berufshaftpflicht"]`). Eine bessere Pruefung
+    braeuchte einen Browser im Testlauf; die gibt es hier nicht.
+    """
+    web = ROOT / "web"
+    check = (web / "components" / "EignungsCheck.tsx").read_text(encoding="utf-8")
+    onb = (web / "app" / "onboarding" / "page.tsx").read_text(encoding="utf-8")
+    modul = (web / "lib" / "checkUebergabe.ts").read_text(encoding="utf-8")
+
+    assert "checkUebergabe" in check and "speichern(" in check, \
+        "der Eignungs-Check gibt seine Antworten nicht mehr weiter"
+    assert "onClick={angabenMitgeben}" in check, \
+        "der Aufruf ins Onboarding traegt die Angaben nicht mehr mit"
+    assert "checkUebergabe" in onb and "alsProfilfelder" in onb, \
+        "das Onboarding liest die Angaben aus dem Check nicht mehr"
+    assert "uebernimmCheck" in onb, \
+        "die Nachweise landen nicht mehr im Firmenprofil — nur dort liest recommendation.js sie"
+    assert "Aus eurem Check" in onb, \
+        "die Uebernahme muss SICHTBAR sein; still vorbelegte Zahlen kann niemand korrigieren"
+
+    # Beide Seiten muessen denselben Schluessel benutzen. Er steht genau einmal, im Modul.
+    assert modul.count('const SCHLUESSEL') == 1
+    assert "gv_check_v1" not in check and "gv_check_v1" not in onb, \
+        "der Speicherschluessel gehoert ins Modul, nicht in die Enden — sonst laeuft er auseinander"
