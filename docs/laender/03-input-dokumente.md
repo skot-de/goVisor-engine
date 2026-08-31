@@ -185,6 +185,7 @@ jedes Mal dieselbe Frage: **stimmt, was der Vermerk behauptet?**
 | staatsanzeiger | „kein ZIP-Link auf der Trefferliste" | 11 | 7 hatten einen Link, 4 tragen eine Absage |
 | aumass | „kein Unterlagen-Abschnitt" | 7 | 6× Angebotsfrist abgelaufen, 1 hatte Unterlagen |
 | ausschreibungsblatt | „kein Unterlagen-Link" | 6 | 3 hatten eine ZIP-Option, 1 lud leer, 2 offen |
+| **cosinex** | „http 200, text/html" → `gated` | 257 | ✅ **hält** — 70 von 70 verlangen wirklich Teilnahme |
 
 **549 Vorgänge trugen einen dieser acht Vermerke; hochgerechnet aus den Stichproben traf
 er auf rund neun von zehn nicht zu.** Ein Rest war wirklich leer — dass es ihn gibt, ist
@@ -192,11 +193,21 @@ kein Einwand, sondern der Grund, warum der falsche Teil so lange unbemerkt blieb
 kamen zwei als *dauerhaft* abgeschriebene Gruppen (171 + 78): dort hielt das Urteil, aber
 mit einer Begründung, die sich widerlegen liess.
 
-⚠ **Acht von acht ist kein Zufall mehr, sondern eine Aussage über die Bauart.** Als es fünf
-waren, konnte man noch an eine Häufung glauben. Bei acht geprüften Abrufern und acht
-gefallenen Vermerken lautet die Erwartung für den neunten: **er hält auch nicht.** Wer einen
-Abrufer erbt, prüft seine Statusmeldungen, bevor er ihnen glaubt — nicht, weil dieser eine
-verdächtig wäre, sondern weil noch keiner standgehalten hat.
+⚠ **Acht von acht sah nach einer Aussage über die Bauart aus. Der neunte hat sie
+widerlegt.** Ich hatte hier stehen: „die Erwartung für den neunten lautet, er hält auch
+nicht." Am 2026-08-31 geprüft — **cosinex hält.** 70 von 70 als `gated` abgelegten
+Vorgängen tragen wörtlich „Um Zugriff auf dieses Modul zu erhalten müssen Sie am
+Vergabeverfahren teilnehmen"; die Einstufung stimmt.
+
+Und der Weg dorthin ist die eigentliche Lehre. Eine erste Messung ergab „82 % sind gar
+nicht mehr da (404)" — ich hatte in der Sonde den Basispfad `/VMPSatellite/` fest
+verdrahtet, während `www.dtvp.de` (144 der Vorgänge) `/Satellite/` fährt. Der Abrufer
+selbst leitet ihn aus der echten `documents_url` ab und macht den Fehler nicht.
+
+**Die Erwartung „es hält nicht" ist genauso eine Behauptung wie „es hält" — und sie
+verführt zur schlampigeren Messung, weil das Ergebnis ja passt.** Wer acht Treffer hinter
+sich hat, prüft den neunten mit derselben Sorgfalt wie den ersten, nicht mit weniger. Der
+Prüfgang gilt unverändert; sein Ausgang ist offen, sonst wäre er keiner.
 
 ### Warum das kein Zufall ist, sondern die Bauart
 

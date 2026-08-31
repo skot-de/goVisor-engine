@@ -63,12 +63,31 @@ def is_cosinex(url: str) -> bool:
     return bool(url and _COSINEX_RE.match(url))
 
 
+_TEILNAHME = re.compile(r"am Vergabeverfahren teilnehmen|Teilnahmeantrag|Interesse bekunden",
+                        re.I)
+
+
+def _sichtbarer_text(html: str | None) -> str:
+    """Nur was ein Mensch sieht. ⚠ Skript und Stil MUESSEN raus.
+
+    Eine erste Fassung dieser Pruefung suchte im Roh-HTML nach „anmelden" und fand es in
+    jeder Seite — teils in CSS-Regeln, teils im Kopfmenue, das auf jeder cosinex-Seite
+    einen Login-Link traegt. Dieselbe Falle wie die had.de-Brotkrume: ein Merkmal, das
+    ueberall steht, belegt nichts.
+    """
+    if not html:
+        return ""
+    t = re.sub(r"(?is)<(script|style)[^>]*>.*?</\1>", " ", html)
+    t = re.sub(r"<[^>]+>", " ", t)
+    return re.sub(r"\s+", " ", t).strip()
+
+
 @dataclass
 class FetchResult:
     notice_id: str
     cx: str | None
     portal: str | None
-    status: str          # "downloaded" | "exists" | "gated" | "empty" | "error"
+    status: str          # downloaded | exists | gated | weg | kein_zip | empty | error
     bytes: int
     n_files: int
     path: str | None
@@ -119,9 +138,28 @@ def fetch_one(documents_url: str, notice_id: str, out_root: Path,
 
     ctype = r.headers.get("content-type", "").lower()
     if r.status_code != 200 or "zip" not in ctype:
-        # kein ZIP → gegated (Teilnahme/Login) oder nicht (mehr) verfügbar.
-        note = f"http {r.status_code}, {ctype[:40]}"
-        return FetchResult(notice_id, cx, portal, "gated", 0, 0, None, note)
+        # ⚠ KEIN ZIP HEISST NICHT „gegated". Hier stand bis zum 2026-08-31 pauschal `gated`,
+        # und der Kommentar daneben nannte die Zweideutigkeit sogar beim Namen
+        # („oder nicht (mehr) verfügbar") — entschieden wurde trotzdem zugunsten der
+        # blockierenden Deutung. Gemessen an 45 so abgelegten Vorgaengen:
+        #
+        #     82 %  404 — der Vorgang ist WEG (www.dtvp.de: 26 von 26)
+        #     18 %  „Um Zugriff auf dieses Modul zu erhalten muessen Sie am
+        #           Vergabeverfahren teilnehmen." — die einzige echte Schranke
+        #
+        # Der Unterschied ist nicht kosmetisch: `gated` wartet auf ein Konto (BLOCKIERT),
+        # `weg` ist endgueltig. Vier von fuenf Vorgaengen standen damit in der
+        # Reichweiten-Arbeitsliste und warteten auf einen Zugang, der ihnen nichts nuetzt.
+        sicht = _sichtbarer_text(r.text)
+        note = f"http {r.status_code}, {ctype[:30]}"
+        if r.status_code == 404 or "(404)" in sicht:
+            return FetchResult(notice_id, cx, portal, "weg", 0, 0, None,
+                               "Vorgang nicht mehr auf dem Portal (404)")
+        if _TEILNAHME.search(sicht):
+            return FetchResult(notice_id, cx, portal, "gated", 0, 0, None,
+                               "Teilnahme am Verfahren nötig")
+        # Weder das eine noch das andere: ehrlich offen lassen, statt zu raten.
+        return FetchResult(notice_id, cx, portal, "kein_zip", 0, 0, None, note)
     if not r.content or len(r.content) < 64:
         return FetchResult(notice_id, cx, portal, "empty", len(r.content or b""), 0, None)
 
