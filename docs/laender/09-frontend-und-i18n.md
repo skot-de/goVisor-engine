@@ -128,6 +128,75 @@ diese Stellen sei zu wenig bekannt.
    „Die Haustür spricht nur Deutsch"). Das gehört benannt, nicht stillschweigend
    abgehakt.
 
+## ⚠ Es gibt ZWEI Profile, und nur eines führt zur Empfehlung
+
+Wer etwas ins „Profil" schreibt, muss wissen, in welches. Am 2026-08-31 stolperte genau
+daran eine Reparatur, die schon fertig aussah.
+
+| | wo | wer liest es |
+|---|---|---|
+| **Onboarding-Profil** | `profileEngine.buildProfile`, `localStorage` + `saveProfile` | `matchLead` → Relevanz-Stufe und Passungszahl |
+| **Firmenprofil** (#27) | `lib/supabase/unternehmen.ts`, serverseitig | `recommendation.js` über `profile.attributes` |
+
+⚠ **`capabilities` im Onboarding-Profil liest heute NIEMAND.** Der Name passt zu den
+Schlüsseln aus `REQUIRED_KEYS`, die Werte landen aber im falschen Behälter:
+`recommendation.js` liest `attributes`, nicht `capabilities`. Wer dorthin schreibt, baut
+eine Reparatur, die aussieht wie eine und keine ist.
+
+**Beim Schreiben ins Firmenprofil gilt `zustand`:** `"angegeben"` ist Selbstauskunft,
+`"belegt"` heisst, wir haben einen Nachweis, `"abgeleitet"` zählt in `coverage()` nicht mit.
+Ein Klick-Check auf der Startseite liefert `"angegeben"` — nie `"belegt"`.
+
+## ⚠ Eine fehlende Leitung wirft keine Ausnahme
+
+Der Eignungs-Check sammelte sechs Angaben, rechnete eine Auswertung, und der Aufruf ins
+Onboarding war ein blankes `<a href="/onboarding">`. Beide Enden funktionierten tadellos.
+Nur dazwischen war nichts. Kein Test wurde rot, keine Ausnahme flog, und aufgefallen ist es
+erst, als jemand den Weg von Hand abging.
+
+> **Für jeden mehrstufigen Weg im Frontend die Frage stellen: was trägt der Übergang?**
+> Ein Verweis trägt nichts ausser der Adresse. Wer Angaben sammelt und danach weiterleitet,
+> braucht eine Übergabe — mit EINER Datei für beide Seiten, sonst laufen Schlüssel und Form
+> auseinander.
+
+⚠ **Nicht gestellte Fragen sind keine Neins.** Der Check zeigt je Fachgebiet nur die
+Nachweise, die dort vorkommen (Bau 2, IT 3). Die übrigen stehen als `false` im Zustand, weil
+das der Vorgabewert ist. Wer den Zustand einfach übernimmt, schreibt dem Nutzer eine Antwort
+zu, die er nie gegeben hat — und `coverage()` zählt sie mit. Deshalb fährt mit, WELCHE
+Fragen gestellt wurden.
+
+⚠ **Eine Übernahme muss sichtbar sein.** Vorbelegte Zahlen wirken auf jede spätere
+Bewertung; wer sich vertippt hat, muss es bemerken können. Still ist schlechter als gar
+nicht.
+
+## ⚠ Eine Regel, die dem Hinweis daneben widerspricht
+
+Unter dem Passwortfeld stand „Länge zählt mehr als Sonderzeichen, eine Passphrase aus vier
+Wörtern ist sicherer als P@ssw0rt!" — und der Prüfer wies genau diese Passphrase ab, weil
+ihr die Ziffer fehlte. Beide Seiten waren für sich vertretbar, und **Widersprüche zwischen
+zwei richtigen Dingen fängt keine Zusicherung ab.**
+
+Dazu standen drei Regeln für dieselbe Sache nebeneinander: Anlegen 12 Zeichen plus Klassen,
+Zurücksetzen 8, Einstellungen 8. **Die schwächste gewinnt, weil sie erreichbar bleibt** —
+man konnte später ein Passwort setzen, mit dem man sich nicht hätte registrieren dürfen.
+
+> **Wo dieselbe Regel an mehreren Stellen gilt, gehört sie in eine Datei.** Und wo eine
+> Oberfläche etwas verspricht, gehört die Zusage in einen Test, nicht die Bedingung.
+
+⚠ **Serverseite mitdenken:** Supabase führt eine eigene Passwortregel („Password
+Requirements" im Dashboard). Sie steht in keiner Codezeile und kann eine Passphrase
+trotzdem abweisen.
+
+## ⚠ Zwei Bedeutungen in einem Wort
+
+Der Abschlussbildschirm meldete „Nicht bestätigt" und zwei Zeilen darunter
+„Identität: bestätigt ✓". Die Zeile hing an `matched` (wir haben die Firma GEFUNDEN), der
+Kasten am Beleg (wir wissen, dass ihr dazugehört). Beides hiess „bestätigt".
+
+**Wo zwei Anzeigen dieselbe Sache behaupten, müssen sie dieselbe Quelle lesen.** Sonst
+widersprechen sie sich irgendwann, und beim Beleg-Zustand ist das kein Schönheitsfehler:
+das Produkt wirbt mit „was sich nicht wörtlich belegen lässt, verwerfen wir".
+
 ## Paywall und Sichtbarkeit
 
 Die abgestuften Free/Pro-Regeln (`redactStrategie`, UI-Teaser) sind gebaut und ruhen hinter
