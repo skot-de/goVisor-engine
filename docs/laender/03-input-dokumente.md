@@ -445,8 +445,36 @@ CH füllt es die simap-Projektbrücke; für DE füllt es **niemand**, obwohl dor
 
 Wer Frage 1 misst und Frage 2 meint, bekommt eine Zahl, die in die falsche Richtung zeigt.
 
-**AT und CH als Warnung**: beide stehen bei 0 % (gemessen 2026-08-23 an
+**AT und CH als Warnung**: beide standen bei 0 Dateien (gemessen 2026-08-23 an
 `data/docs/<LAND>/doc_text.parquet`). CH hängt komplett an simap.ch, das eine
 Interessensbekundung je Vergabe verlangt (889 Leads betroffen) — eine Kontofrage, keine
-technische. AT hat zwei Portalfamilien, die **nie geprüft** wurden. Das ist kein
-Versäumnis der Pipeline, sondern eine offene Aufgabe, und sie steht als solche da.
+technische. AT hatte zwei Portalfamilien, die **nie geprüft** waren.
+
+### ✅ Behoben am 2026-08-25 — durch ein zweites Feld, nicht durch ein besseres
+
+Die beiden Fragen stehen jetzt getrennt im Produkt:
+
+* **`unterlagen.access`** — was die QUELLE anbietet (`offen`, `kostenpflichtig`,
+  `auf_anfrage`, `unknown`). Aus `has_documents`/`documents_paid`/`documents_source`.
+* **`unterlagen.gelesen`** — ob WIR den Volltext haben. Aus `doc-text-index.json`.
+
+Gemessen am 2026-08-31: `gelesen=true` bei 5.756 Leads. Der Block entsteht auch **ohne
+Link**, wenn wir den Text haben — sonst fiele genau die Auskunft weg, die zählt.
+
+⚠ **Und der Fehler wiederholt sich auf der Leseseite.** Am 2026-08-31 habe ich `access`
+ausgezählt, `gelesen` gemeint und daraus „6.927 Leads verschweigen vorhandene Unterlagen"
+geschlossen — eine Arbeitsempfehlung auf einer Kennzahl, deren Bedeutung ich nicht
+nachgeschlagen hatte. Die Falle heisst „Feld misst etwas anderes als sein Name"; sie trifft
+den, der es baut, **und** den, der es liest. **Vor jeder Zahl, auf die man eine Entscheidung
+stützt, einmal nachlesen, was sie zählt.**
+
+### ⚠ `gelesen` hinkt um bis zu einen Tag — das ist kein Fehler
+
+Der Volltext-Index wird im Tageslauf VOR dem Lead-Export geschrieben (Zeile 1017 gegen
+1102), innerhalb eines Laufs stimmen beide also überein. Der Dokumenten-Arbeiter indiziert
+aber **den ganzen Tag weiter**: am 2026-08-31 war `leads-bau.json` von 02:56 und
+`doc-text-index.json` von 07:58. Wer beide zur Mittagszeit vergleicht, findet Dutzende
+„Leads mit Volltext, aber `gelesen=false`" — und keiner davon ist ein Defekt. Nach dem
+nächsten Nachtlauf sind sie deckungsgleich.
+
+**Wer Konsistenz zwischen zwei Exporten misst, misst auch ihren Abstand in der Zeit.**

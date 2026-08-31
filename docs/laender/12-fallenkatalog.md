@@ -15,7 +15,7 @@
 | A6 | **Nominell gefüllt, faktisch wertlos** | 79 % Abdeckung, eine einzige Ausprägung | alle 3.856 CH-Regionen hiessen „Schweiz/Suisse/Svizzera" |
 | A7 | **„Alle Schritte grün"** | Lauf meldet Erfolg, Ergebnis ist alt | Anforderungs-Signale aus einem Index vom 31. Juli |
 | A9 | **Registry-Eintrag für Code gehalten** | `uk-fts`/`fr-decp` stehen mit Namen, Format und Abdeckung da — und haben NULL Zeilen Code. `candidate` heisst recherchiert. |
-| A8 | **Feld misst etwas anderes als sein Name** | `has_documents` = „Quelle bewirbt", nicht „wir haben"; DE zeigt „unknown" bei 7.781 indizierten Vorgängen, CH „offen" bei null |
+| A8 | **Feld misst etwas anderes als sein Name** | `has_documents` = „Quelle bewirbt", nicht „wir haben". **Behoben 2026-08-25** durch ein zweites Feld (`unterlagen.gelesen`). ⚠ Die Falle trifft aber auch den LESER: am 2026-08-31 wurde `access` ausgezählt und `gelesen` gemeint — Arbeitsempfehlung auf einer Kennzahl ohne nachgeschlagene Bedeutung |
 | A10 | **Statusmeldung als Befund gelesen** | Ein Abrufer meldet „keine Datei"; niemand fragt, ob er an der richtigen Stelle gesucht hat. Der Fehler wirft keine Ausnahme und sieht im Bericht wie erledigte Arbeit aus. | seit 2026-08-24: acht Abrufer geprüft, acht Vermerke gefallen, 549 Vorgänge — s. [Kapitel 03](03-input-dokumente.md) |
 
 ## B · Fallen beim Zusammenführen von Ländern
