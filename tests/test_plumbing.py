@@ -977,6 +977,79 @@ def test_consolidate_by_shared_name_geo():
     assert "a2" not in mm2, "`already` wird uebersprungen"
 
 
+def test_buyer_traeger_nimmt_nichts_weg(tmp_path):
+    """Die Traeger-Ebene ist additiv. Genau das ist ihre Existenzberechtigung.
+
+    Die Alternative waere gewesen, „Stadt X, Bauamt" und „Stadt X, Schulamt" zu einer Zeile zu
+    verschmelzen — rund 20.700 Kaeufer-Entitaeten (28,6 %) weniger. Das beantwortet „wie viele
+    Vergabestellen gibt es" und macht „wer schreibt diesen Auftrag aus" unbeantwortbar.
+
+    Deshalb pruefen wir hier nicht, WIE VIEL gebuendelt wird (das ist Datenlage und aendert
+    sich), sondern die Zusagen, die halten muessen:
+      1. JEDE Kaeufer-Entitaet bekommt eine Zeile — sonst verliert der erste Verbraucher, der
+         den Aussenjoin vergisst, still die Haelfte der Vergabestellen.
+      2. Die Einheit bleibt erhalten, `entity_id` bleibt die Koernung.
+      3. Ohne Ortsbeleg wird NICHT gebuendelt: zwei „Stadtwerke" verschiedener Orte sind zwei
+         Traeger, auch wenn der Namensstamm gleich ist.
+    """
+    import duckdb
+    from pathlib import Path
+    from govisor.config import Config
+    from govisor import gold
+
+    gd = tmp_path / "gold" / "DE"
+    sd = tmp_path / "silver" / "DE" / "notice_parties" / "teil=1"
+    gd.mkdir(parents=True); sd.mkdir(parents=True)
+    con = duckdb.connect()
+
+    # Zwei Stuttgarter Einheiten desselben Traegers, ein Stuttgarter ohne Einheit,
+    # und zwei gleichnamige Stadtwerke in verschiedenen Staedten.
+    ents = [("e1", "Landeshauptstadt Stuttgart, Baureferat"),
+            ("e2", "Landeshauptstadt Stuttgart - Schulreferat"),
+            ("e3", "Landeshauptstadt Stuttgart"),
+            ("s1", "Stadtwerke"), ("s2", "Stadtwerke")]
+    con.execute("CREATE TABLE e (entity_id VARCHAR, canonical_name VARCHAR)")
+    con.executemany("INSERT INTO e VALUES (?, ?)", ents)
+    con.execute(f"COPY e TO '{gd / 'entities.parquet'}' (FORMAT PARQUET)")
+
+    pe = [(f"n{i}", "buyer", 0, eid) for i, (eid, _) in enumerate(ents)]
+    con.execute("CREATE TABLE pe (notice_id VARCHAR, role VARCHAR, seq INTEGER, entity_id VARCHAR)")
+    con.executemany("INSERT INTO pe VALUES (?, ?, ?, ?)", pe)
+    con.execute(f"COPY pe TO '{gd / 'party_entity.parquet'}' (FORMAT PARQUET)")
+
+    np_rows = [("n0", "buyer", 0, "70173", "DE111", "Stuttgart"),
+               ("n1", "buyer", 0, "70173", "DE111", "Stuttgart"),
+               ("n2", "buyer", 0, "70173", "DE111", "Stuttgart"),
+               ("n3", "buyer", 0, "80331", "DE212", "Muenchen"),
+               ("n4", "buyer", 0, "20095", "DE600", "Hamburg")]
+    con.execute("CREATE TABLE np (notice_id VARCHAR, role VARCHAR, seq INTEGER, "
+                "postal_code VARCHAR, nuts VARCHAR, town VARCHAR)")
+    con.executemany("INSERT INTO np VALUES (?, ?, ?, ?, ?, ?)", np_rows)
+    con.execute(f"COPY np TO '{sd / 'teil.parquet'}' (FORMAT PARQUET)")
+    con.close()
+
+    cfg = Config(data_dir=tmp_path)
+    traeger, einheiten = gold.build_buyer_traeger(cfg, "DE")
+
+    con = duckdb.connect()
+    rows = con.execute(f"SELECT entity_id, traeger_id, traeger_name, einheit "
+                       f"FROM '{gd / 'buyer_traeger.parquet'}'").fetchall()
+    con.close()
+    nach = {r[0]: r for r in rows}
+
+    assert einheiten == len(ents) == len(nach), "jede Kaeufer-Entitaet braucht eine Zeile"
+    assert nach["e1"][1] == nach["e2"][1] == nach["e3"][1], \
+        "Komma UND Bindestrich trennen eine Einheit ab — beide gehoeren zum selben Traeger"
+    assert nach["s1"][1] != nach["s2"][1], \
+        "gleicher Namensstamm ohne gemeinsamen Ortsbeleg ist NICHT derselbe Traeger"
+    assert nach["e1"][3] == "Baureferat" and nach["e2"][3] == "Schulreferat", \
+        "die Einheit bleibt erhalten, sie wird nicht eingeschmolzen"
+    assert nach["e3"][3] is None, "wer keine Einheit nennt, traegt auch keine"
+    assert nach["e1"][2] == "Landeshauptstadt Stuttgart", \
+        "der Traeger heisst nach dem reinen Behoerdennamen, nicht nach einer Abteilung"
+    assert traeger == 3, "drei Stuttgarter Einheiten = EIN Traeger, die zwei Stadtwerke = zwei"
+
+
 def test_consolidate_by_leitweg():
     """Leitweg-Anker: Entitäten mit derselben (nicht-generischen, eindeutigen) Leitweg-ID mergen;
     register-getragenes Ziel bevorzugt; generischer Platzhalter (>80 Namen) + mehrdeutige raus."""
