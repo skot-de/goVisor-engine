@@ -16,6 +16,9 @@
 | A7 | **„Alle Schritte grün"** | Lauf meldet Erfolg, Ergebnis ist alt | Anforderungs-Signale aus einem Index vom 31. Juli |
 | A9 | **Registry-Eintrag für Code gehalten** | `uk-fts`/`fr-decp` stehen mit Namen, Format und Abdeckung da — und haben NULL Zeilen Code. `candidate` heisst recherchiert. |
 | A8 | **Feld misst etwas anderes als sein Name** | `has_documents` = „Quelle bewirbt", nicht „wir haben". **Behoben 2026-08-25** durch ein zweites Feld (`unterlagen.gelesen`). ⚠ Die Falle trifft aber auch den LESER: am 2026-08-31 wurde `access` ausgezählt und `gelesen` gemeint — Arbeitsempfehlung auf einer Kennzahl ohne nachgeschlagene Bedeutung |
+| A11 | **Beide Enden richtig, die Leitung fehlt** | Nichts wird rot, weil jede Seite fuer sich tut, was dasteht. Faellt nur auf, wenn jemand den Weg abgeht. | Eignungs-Check sammelte sechs Angaben, der Aufruf ins Onboarding war ein blankes `<a href>` — alles weg, und das Onboarding fragt sie nie |
+| A12 | **Ins falsche Profil geschrieben** | Die Reparatur ist fertig, typgeprueft und wirkungslos: es gibt zwei Profile, und `capabilities` liest niemand | 2026-08-31, s. [Kapitel 09](09-frontend-und-i18n.md) |
+| A13 | **Vorgabewert als Antwort gelesen** | Eine nie gestellte Frage steht als `false` da; wer den Zustand uebernimmt, schreibt ein „nein", das niemand gesagt hat — und die Abdeckung steigt | Check zeigt je Fachgebiet nur die Nachweise des Feldes (Bau 2, IT 3) |
 | A10 | **Statusmeldung als Befund gelesen** | Ein Abrufer meldet „keine Datei"; niemand fragt, ob er an der richtigen Stelle gesucht hat. Der Fehler wirft keine Ausnahme und sieht im Bericht wie erledigte Arbeit aus. | seit 2026-08-24: acht Abrufer geprüft, acht Vermerke gefallen, 549 Vorgänge — s. [Kapitel 03](03-input-dokumente.md) |
 
 ## B · Fallen beim Zusammenführen von Ländern
@@ -51,6 +54,9 @@
 | C9 | **Säubern nach der Auflösung statt davor** | `clean_display_name` löst „vertreten durch" nur auf dem ANZEIGEnamen; der Merge-Schlüssel trug ihn weiter → „DB Netz AG" existierte 98-mal |
 | C10 | **Normalisierer schneidet mehr weg, als man denkt** | `classify().normalized` cuttet am Komma: „Dresden, GB Finanzen" = „Dresden, GB Stadtentwicklung". Ein Namens-Merge darüber schmilzt still die Abteilungsebene ein (1.772 statt 1.162) — Produktentscheidung als Datenpflege getarnt |
 | C11 | **Kürzesten Namen als Anzeigenamen wählen** | jede verstümmelte Variante gewinnt: „DB Netz" schlug „DB Netz AG". Die HÄUFIGSTE Schreibweise nehmen |
+| C12 | **Ein Wort, zwei Bedeutungen** | „bestätigt" hiess an einer Stelle „Firma gefunden", an der anderen „Zugehörigkeit belegt" — der Abschlussbildschirm meldete beides gleichzeitig |
+| C13 | **Regel widerspricht dem Hinweis daneben** | beide fuer sich vertretbar, zusammen ein Widerspruch, und keine Zusicherung faengt ihn: der Passwortpruefer wies genau die Passphrase ab, die er empfahl |
+| C14 | **Dieselbe Regel an drei Stellen** | die SCHWAECHSTE gewinnt, weil sie erreichbar bleibt: Anlegen verlangte 12 Zeichen, die Einstellungen liessen 8 durch |
 
 ## D · Fallen bei Orten und Regionen
 
