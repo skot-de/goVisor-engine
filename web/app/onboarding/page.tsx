@@ -3,6 +3,9 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { buildProfile } from "@/lib/profileEngine";
+import { lesen as checkLesen, verwerfen as checkVerwerfen, alsProfilfelder }
+  from "@/lib/checkUebergabe";
+import { uebernimmCheck } from "@/lib/supabase/unternehmen";
 import { LAENDER } from "@/components/explorer/FilterPanel";
 import { register, saveProfile, currentUser } from "@/lib/supabase/auth";
 import { track, EV } from "@/lib/analytics";
@@ -108,6 +111,9 @@ async function pruefeBeleg(id: string, email: string, token?: string | null): Pr
 }
 
 const norm = (s: string) => s.toLowerCase().replace(/[^a-zäöüß0-9]/g, "");
+/** Kurzform fuer die Zusammenfassung: 1.000.000 → „1 Mio €". */
+const eur = (n: number) => n >= 1_000_000 ? `${(n / 1_000_000).toLocaleString("de-DE",
+  { maximumFractionDigits: 1 })} Mio €` : `${n.toLocaleString("de-DE")} €`;
 
 /* Passwortstärke — bewusst ohne Bibliothek, aber mit den Regeln, die wirklich tragen:
  * Länge schlägt Sonderzeichen (deshalb 12 statt 8 als Ziel), und die üblichen Muster
@@ -244,6 +250,12 @@ export default function OnboardingPage() {
    * einzige Mail eine echte Firma erreicht. */
   const testbetrieb = process.env.NODE_ENV !== "production";
   const [probe, setProbe] = useState(false);      // Firma kam aus der Outreach-Landing
+  /* Angaben aus dem Eignungs-Check der Startseite. EINMAL beim Laden gelesen, nicht
+   * erst beim Fertigstellen: der Abschlussbildschirm soll sie ZEIGEN. Eine stille
+   * Vorbelegung waere schlechter als gar keine — wer sich vertippt hat, koennte es
+   * nie bemerken, und die Zahl wirkt trotzdem auf jede Lead-Bewertung. */
+  const [checkAngaben] = useState(() =>
+    (typeof window === "undefined" ? null : checkLesen()));
   // ── ZURÜCK ────────────────────────────────────────────────────────────────────────
   // Sven beim Anlegen eines Profils: „es wäre schön, wenn man bei der anmeldung auch
   // zurück springen kann." Es gab Rückwege, aber nur auf zwei Bildschirmen — wer sich
@@ -614,6 +626,8 @@ function testMailErlaubt(mail: string): boolean {
 
   function fertigstellen() {
     let profile;
+    // Was der Check hergibt, bevor die Zweige sich trennen — er gilt in beiden.
+    const ausCheck = checkAngaben ? alsProfilfelder(checkAngaben) : null;
     if (matched) {
       const cpvFields = matched.fields.map((f) => f.cpv4);
       profile = {
@@ -627,7 +641,11 @@ function testMailErlaubt(mail: string): boolean {
           regions: matched.regions,
           regionTyp: matched.regionTyp ?? null,   // aus der Zuschlagshistorie abgeleitet
           regionLabels: matched.regions.map((r) => LAENDER.find((l) => l[0] === r)?.[1] || r),
+          // Aus dem Eignungs-Check. Nichts davon ist aus Vergabedaten ableitbar — eine
+          // Haftpflichtsumme steht in keiner Zuschlagsbekanntmachung.
+          ...(ausCheck ?? {}),
         }),
+        ...(checkAngaben ? { checkAngaben } : {}),
         // ── PLAUSIBILITÄTSBREMSE, TEIL 2: den BELEG mitspeichern, nicht nur den Anspruch ──
         // ⚠ Bis zum 2026-08-21 wanderten nur die NAMEN ins Profil. Damit war nach dem
         // Speichern nicht mehr unterscheidbar, welcher Teil des Bestands belegt ist und
@@ -647,11 +665,21 @@ function testMailErlaubt(mail: string): boolean {
           firma: eingabe.trim() || null, entityConfidence: null,
           cpvFields: [], regions: nuts,
           regionLabels: nuts.map((r) => r === "BUND" ? "Bund" : (LAENDER.find((l) => l[0] === r)?.[1] || r)),
+          ...(ausCheck ?? {}),
         }),
         branche: branche || undefined,
+        ...(checkAngaben ? { checkAngaben } : {}),
       };
     }
     try { localStorage.setItem(PROFILE_KEY, JSON.stringify(profile)); } catch { /* Quota */ }
+    // Verbraucht. Sonst belegt ein zweiter Durchlauf still mit den Zahlen des ersten vor.
+    if (checkAngaben) {
+      // Die Nachweise gehoeren ins FIRMENPROFIL — nur dort liest `recommendation.js` sie.
+      // Ohne Sitzung (Testlauf) faellt das sauber auf `no-session`; die Rohwerte reisen
+      // dann am Profil mit und koennen spaeter nachgezogen werden.
+      uebernimmCheck(checkAngaben).catch(() => {});
+      checkVerwerfen();
+    }
     track(EV.ONBOARDING_DONE, { matched: !!matched, entities: matched ? aktiv.size : 0 });
     // Bei aktiver Session zusätzlich nach Supabase (sonst bleibt es lokal, bis bestätigt+angemeldet).
     saveProfile(profile).catch(() => {});
@@ -1082,6 +1110,22 @@ function testMailErlaubt(mail: string): boolean {
                 <div className="sum-r"><span className="sum-k">{t("Regionen")}</span><span className="sum-v">{regionen.map((r) => t(r)).join(" · ") || "—"}</span></div>
                 <div className="sum-r"><span className="sum-k">{t("Identität")}</span><span className="sum-v">{t("noch offen")}</span></div>
               </>}
+              {/* ⚠ SICHTBAR, nicht still. Diese Angaben wirken auf jede spaetere
+                  Lead-Bewertung; wer sich im Check vertippt hat, muss es hier bemerken
+                  koennen. Eine unsichtbare Vorbelegung waere schlechter als gar keine. */}
+              {checkAngaben && (
+                <div className="sum-r">
+                  <span className="sum-k">{t("Aus eurem Check")}</span>
+                  <span className="sum-v">{[
+                    checkAngaben.volMax ? t("Aufträge bis {n}", { n: eur(checkAngaben.volMax) })
+                                        : t("Aufträge ohne Obergrenze"),
+                    checkAngaben.haftpflicht ? t("Haftpflicht {n}", { n: eur(checkAngaben.haftpflicht) }) : null,
+                    checkAngaben.referenzen != null ? t("{n} Referenzen", { n: checkAngaben.referenzen }) : null,
+                    checkAngaben.pq ? "PQ" : null,
+                    checkAngaben.iso9001 ? "ISO 9001" : null,
+                  ].filter(Boolean).join(" · ")}</span>
+                </div>
+              )}
               <div className="sum-r"><span className="sum-k">{t("Zugang")}</span><span className="sum-v">{t("Free. Liste und Eckdaten unbegrenzt, 3 Bewertungen je 30 Tage")}</span></div>
             </div>
             {!matched && <div className="note note-i">{t("Sobald ihr eine Vergabe gewinnt, erkennen wir das und fragen, ob wir euer Profil ergänzen dürfen.")}</div>}

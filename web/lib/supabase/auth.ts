@@ -8,6 +8,11 @@ export type Profile = ReturnType<typeof buildProfile> & {
    *  beim Lesen beides zulassen, sonst verliert ein bestehendes Konto seine Identität. */
   confirmedEntities?: (string | { name: string; beleg: "kennung" | "selbstauskunft"; wins?: number })[];
   branche?: string;
+  /** Was der Nutzer im Eignungs-Check auf der Startseite angegeben hat. Drei der sechs
+   *  Angaben haben schon ein Profilfeld (Grösse, PQ/ISO als `capabilities`); Haftpflicht-
+   *  HÖHE, Referenzanzahl und Umsatz haben noch keins. Sie reisen trotzdem mit, damit
+   *  niemand ein zweites Mal gefragt werden muss, sobald die Felder da sind. */
+  checkAngaben?: import("@/lib/checkUebergabe").CheckAngaben;
 };
 
 export async function register(email: string, password: string) {

@@ -327,3 +327,47 @@ export function wirkung(profil: Profil, requiredKeys: string[]): { offen: number
     + Object.values(profil.attributes).filter((a) => a.zustand === "abgeleitet").length;
   return { offen, ablaufend, abgelaufen, abgeleitet_offen };
 }
+
+/* Die Angaben aus dem Eignungs-Check ins Firmenprofil übernehmen (§5.3).
+ *
+ * Der Check auf der Startseite fragt Betriebshaftpflicht, Präqualifikation und ISO ab —
+ * dieselben Anforderungen, die `recommendation.js` in `REQUIRED_KEYS` führt und über
+ * `profile.attributes` liest. Ohne diese Übernahme beantwortet der Nutzer sie zweimal.
+ *
+ * ⚠ `zustand: "angegeben"`, nicht `"belegt"`. Es ist Selbstauskunft aus einem Klick-Check;
+ * ein Nachweis liegt uns nicht vor. Der Unterschied ist nicht kosmetisch — `coverage()`
+ * zählt beides, aber `abgeleitet` nicht, und die Oberfläche zeigt die Beleglage an.
+ *
+ * ⚠ ÜBERSCHREIBT NICHTS. Wer im Firmenprofil schon geantwortet hat, hat es genauer getan
+ * als mit sechs Klicks auf der Startseite. Gefüllt werden nur leere Plätze.
+ *
+ * Ohne Sitzung (Testlauf, oder Konto noch nicht bestätigt) gibt `patchProfil` sauber
+ * `no-session` zurück — dann bleiben die Rohwerte am Onboarding-Profil (`checkAngaben`)
+ * und können später nachgezogen werden.
+ */
+export function uebernimmCheck(a: {
+  haftpflicht: number | null; pq: boolean; iso9001: boolean; iso14001: boolean;
+  gefragt?: string[];
+}): Promise<{ ok: boolean; error?: string }> {
+  return patchProfil("check-uebernahme", (p, by) => {
+    const stempel = { zustand: "angegeben" as Zustand,
+                      changed_at: new Date().toISOString(), changed_by: by };
+    const setz = (key: string, wert: AttributeAnswer) => {
+      if (p.attributes[key]) return;            // schon beantwortet → nicht anfassen
+      p.attributes[key] = wert;
+    };
+    if (a.haftpflicht && a.haftpflicht > 0) {
+      setz("berufshaftpflicht", { art: "schwelle", value: a.haftpflicht, einheit: "€", ...stempel });
+    }
+    // Ein „nein" ist eine Antwort, kein fehlender Wert — sonst fragt die Oberfläche erneut.
+    //
+    // ⚠ ABER NUR, WO WIRKLICH GEFRAGT WURDE. Der Check stellt je Fachgebiet nur die
+    // Nachweisfragen, die dort vorkommen; die übrigen stehen als `false` da, weil das der
+    // Vorgabewert ist. Ein solches „nein" hier zu speichern hiesse, dem Nutzer eine Antwort
+    // zuzuschreiben, die er nie gegeben hat — und `coverage()` würde sie mitzählen.
+    const gefragt = new Set(a.gefragt ?? []);
+    if (gefragt.has("pq")) setz("praequalifikation", { art: "binaer", value: a.pq, ...stempel });
+    if (gefragt.has("iso9001")) setz("iso_9001", { art: "binaer", value: a.iso9001, ...stempel });
+    if (gefragt.has("iso14001")) setz("iso_14001", { art: "binaer", value: a.iso14001, ...stempel });
+  });
+}
