@@ -2352,3 +2352,16 @@ td.c-band .passung i{display:none}
 /* Die Gründe sind sechs kleine Knöpfe. Auf schmalen Fenstern brechen sie um, statt die Zeile
    zu sprengen — die Merkliste bleibt eine Liste. */
 .ck-gruende .ck-btn { font-size: 10.5px; padding: 2px 7px; }
+
+/* VERGABESTELLE BEOBACHTEN (Aktivierung D, 2026-09-01). Steht in der Überschrift des
+   Käufer-Abschnitts, also dort, wo man sich für die Stelle interessiert.
+
+   Zurückhaltend, weil es kein Hauptweg ist: ein Umriss, der erst beim Einschalten Farbe
+   bekommt. Und `aria-pressed` trägt den Zustand, nicht nur die Farbe. */
+.bwatch { margin-left: var(--s3); font-size: var(--t-meta); font-weight: 600; padding: 3px 10px;
+  border: 1px solid var(--line-strong); border-radius: 99px; background: var(--surface);
+  color: var(--ink-500); cursor: pointer; vertical-align: middle; }
+.bwatch:hover { background: var(--surface-3); }
+.bwatch[aria-pressed="true"] { background: var(--signal-wash); border-color: var(--signal);
+  color: var(--signal-deep); }
+.bwatch[disabled] { opacity: .5; cursor: default; }

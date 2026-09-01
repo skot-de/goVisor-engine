@@ -2243,7 +2243,18 @@ function renderBuyer(l){
     <div class="gatelayout ${free?'':'solo'}">
     <div class="gatemain">
     <section class="bsec">
-      <h4>${tk("Ist der Käufer aktiv?")}</h4>
+      <h4>${tk("Ist der Käufer aktiv?")}
+        ${/* AKTIVIERUNG D: die Stelle beobachten, an der Fundstelle. Der Schalter steht in der
+             Ueberschrift des Kaeufer-Abschnitts, also genau dort, wo man sich fuer die Stelle
+             interessiert — nicht in einem Menue.
+             ⚠ KEINE VORHERSAGE. Der Vorschlag aus dem Uebergabepapier, einen Ausschreibungs-
+             Rhythmus zu nennen, ist aus unseren Daten nicht belegbar; die Messung steht in
+             `lib/supabase/buyerWatch.ts`. Der Schalter verspricht nur, was er halten kann. */''}
+        <button class="bwatch" data-buyerwatch="${esc(l.buyer||'')}" aria-pressed="false"
+          title="${esc(tk("Wir sagen euch Bescheid, wenn diese Stelle etwas ausschreibt."))}">
+          ${tk("Stelle beobachten")}
+        </button>
+      </h4>
       <div class="bstats">
         <div class="bstat"><span class="bstat-k">${tk("Vergaben gesamt")}</span><span class="bstat-v">${bnum(d.total)}</span><span class="bstat-m">${d.zeitraum}</span></div>
         <div class="bstat"><span class="bstat-k">${tk("Vergaben pro Jahr")}</span><span class="bstat-v">${bnum(d.perYear)}</span></div>

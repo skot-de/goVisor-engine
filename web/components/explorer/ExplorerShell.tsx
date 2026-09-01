@@ -768,6 +768,23 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
         break;
       }
       case "openlead": openLead(value); break;
+      /* Vergabestelle beobachten (Aktivierung D).
+         ⚠ Der Knopf springt erst um, wenn das Schreiben GEKLAPPT hat. Ein Schalter, der
+         sofort umschaltet und still nichts speichert, ist schlimmer als keiner: der Nutzer
+         glaubt, er bekommt Bescheid, und hört nie wieder etwas. */
+      case "buyerwatch": {
+        if (!value) break;
+        const an = el.getAttribute("aria-pressed") !== "true";
+        el.setAttribute("disabled", "true");
+        import("@/lib/supabase/buyerWatch").then(async ({ toggleBuyerWatch }) => {
+          const neu = await toggleBuyerWatch(value, an);
+          el.removeAttribute("disabled");
+          if (neu === null) return;                       // nicht gespeichert: Knopf bleibt
+          el.setAttribute("aria-pressed", String(neu));
+          el.textContent = neu ? t("Wird beobachtet") : t("Stelle beobachten");
+        });
+        break;
+      }
       // #24/#25: Firmenprofil des Zuschlags-Gewinners (eigene Seite) + Merken aus dem Zuschlag-Detail
       case "firma": if (value) window.location.href = "/firma?id=" + encodeURIComponent(value); break;
       case "merk": toggleStar(value); break;

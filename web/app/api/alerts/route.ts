@@ -27,9 +27,10 @@ export async function GET() {
   const { data: { user } } = await sb.auth.getUser();
   if (!user) return NextResponse.json({ alerts: [], ungelesen: 0 });
 
-  const [{ data: watch }, { data: prefs }] = await Promise.all([
+  const [{ data: watch }, { data: prefs }, { data: stellen }] = await Promise.all([
     sb.from("user_watchlist").select("lead_id").eq("user_id", user.id),
     sb.from("user_alert_settings").select("*").eq("user_id", user.id).maybeSingle(),
+    sb.from("user_buyer_watch").select("buyer_key, buyer_name").eq("user_id", user.id),
   ]);
 
   if (watch?.length) {
@@ -44,6 +45,35 @@ export async function GET() {
     }
     // `ignoreDuplicates`: ein bereits gelesener Hinweis darf nicht wieder auf ungelesen
     // springen, nur weil die Frist noch läuft.
+    if (neu.length) await sb.from("user_alerts").upsert(neu, {
+      onConflict: "user_id,lead_id,typ", ignoreDuplicates: true,
+    });
+  }
+
+  /* Beobachtete Vergabestellen (Aktivierung D). Fuer jede offene Ausschreibung mit noch
+     laufender Frist ein Hinweis; der Unique-Index (user, lead, typ) macht daraus genau EINEN.
+     Eine Vorhersage gibt es nicht (s. `lib/supabase/buyerWatch.ts`), nur die Meldung.
+
+     ⚠ HOECHSTENS ZEHN JE STELLE UND ABRUF. Wer DB Netz beobachtet, bekaeme sonst beim ersten
+     Klick hunderte Meldungen und findet danach seine Fristen nicht mehr wieder. Dieselbe
+     Ueberlegung wie beim Deckel auf die Bitten im Ueberblick: ein Posteingang, der ueberlaeuft,
+     ist so nutzlos wie ein leerer. Die uebrigen kommen beim naechsten Abruf. */
+  if (stellen?.length) {
+    const fristen = await leadFristen();
+    const beobachtet = new Map((stellen as { buyer_key: string; buyer_name: string | null }[])
+      .map((s) => [s.buyer_key, s.buyer_name]));
+    const proStelle = new Map<string, number>();
+    const neu: Record<string, unknown>[] = [];
+    for (const lead of fristen.values()) {
+      if (lead.src !== "f02" || lead.tage == null || lead.tage < 0) continue;
+      const key = String(lead.buyer || "").trim().toLowerCase().slice(0, 120);
+      if (!key || !beobachtet.has(key)) continue;
+      const n = proStelle.get(key) ?? 0;
+      if (n >= 10) continue;
+      proStelle.set(key, n + 1);
+      neu.push({ user_id: user.id, lead_id: lead.id, typ: "buyer_neu",
+                 titel: lead.titel ?? beobachtet.get(key), tage: lead.tage });
+    }
     if (neu.length) await sb.from("user_alerts").upsert(neu, {
       onConflict: "user_id,lead_id,typ", ignoreDuplicates: true,
     });

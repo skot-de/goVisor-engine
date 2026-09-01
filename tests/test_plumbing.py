@@ -4561,17 +4561,24 @@ def _export_web_leads_teil(name: str):
     return raum[name]
 
 
-def test_fristzeile_traegt_genau_die_sechs_gebrauchten_felder():
-    """⚠ Jedes Feld mehr ist ein Feld, das 43.735 Mal mitgeschleppt wird.
+def test_fristzeile_traegt_genau_die_gebrauchten_felder():
+    """⚠ Jedes Feld mehr ist ein Feld, das 43.397 Mal mitgeschleppt wird.
 
-    Gemessen: sieben `leads-<branche>.json` sind 110 MB, dieselben sechs Felder 6,7 MB.
+    Gemessen: sieben `leads-<branche>.json` sind 110 MB, dieselben Felder 7,2 MB.
+
+    ⚠ `buyer` kam am 2026-09-01 dazu (siebtes Feld), fuer die beobachtete Vergabestelle. Der
+    Zuwachs ist begruendet und der einzige andere Weg zum Kaeufernamen waeren wieder die 110
+    MB — genau das, wovon diese Datei die Abkehr ist. Wer ein ACHTES ergaenzen will, braucht
+    denselben Nachweis: welcher Weg waere sonst noetig, und was kostet er?
     """
     zeile = _export_web_leads_teil("_frist_zeile")({
         "id": "x1", "titel": "T", "src": "ted", "tage": 5, "endTage": 9,
-        "timing": {"src": "echt"}, "beschreibung": "…" * 2000, "lose": [1, 2, 3],
+        "buyerShort": "Stadt X", "timing": {"src": "echt"},
+        "beschreibung": "…" * 2000, "lose": [1, 2, 3],
     })
-    assert set(zeile) == {"id", "titel", "src", "tage", "endTage", "endeEcht"}
+    assert set(zeile) == {"id", "titel", "src", "tage", "endTage", "endeEcht", "buyer"}
     assert zeile["endeEcht"] is True
+    assert zeile["buyer"] == "Stadt X"
 
 
 def test_endeEcht_ist_nur_bei_echt_wahr():

@@ -2,9 +2,12 @@
  * Primär: „Angebotsfrist naht" (14/3 Tage vor Frist, nur offene Leads). Sekundär: „Vertrag
  * läuft aus" (90/30 Tage, nur wo Ende ECHT ist — §9: kein Countdown auf geschätztem Ende). */
 
-export type AlertType = "deadline_14d" | "deadline_3d" | "expiry_90d" | "expiry_30d";
+export type AlertType = "deadline_14d" | "deadline_3d" | "expiry_90d" | "expiry_30d"
+  // Neue Ausschreibung einer beobachteten Vergabestelle (Aktivierung D).
+  | "buyer_neu";
 export type LeadTiming = {
   id: string; titel?: string; src?: string;      // 'f02'=offen, 'auslauf'=Vertragsende
+  buyer?: string | null;                           // fuer die beobachtete Vergabestelle
   tage?: number | null;                            // Tage bis Angebotsfrist
   endTage?: number | null;                         // Tage bis Vertragsende
   endeEcht?: boolean;                              // Vertragsende belegt (nicht geschätzt)
@@ -60,9 +63,10 @@ export function sentFlagFor(t: AlertType): keyof WatchState {
 export function alertText(a: DueAlert): { betreff: string; zeile: string } {
   const m: Record<AlertType, string> = {
     deadline_3d: `Angebotsfrist in ${a.days} Tag(en)`,
+    buyer_neu: "Neue Ausschreibung einer beobachteten Vergabestelle",
     deadline_14d: `Angebotsfrist in ${a.days} Tagen`,
     expiry_30d: `Vertrag läuft in ${a.days} Tagen aus`,
     expiry_90d: `Vertrag läuft in ${a.days} Tagen aus`,
   };
-  return { betreff: `goVisor: ${m[a.type]} — ${a.titel.slice(0, 60)}`, zeile: `${m[a.type]}: ${a.titel}` };
+  return { betreff: `goVisor: ${m[a.type]}, ${a.titel.slice(0, 60)}`, zeile: `${m[a.type]}: ${a.titel}` };
 }

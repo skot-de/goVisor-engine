@@ -788,9 +788,14 @@ FRISTEN: list[dict] = []
 
 
 def _frist_zeile(l: dict) -> dict:
+    # ⚠ `buyer` kam am 2026-09-01 dazu, fuer die beobachtete Vergabestelle (Aktivierung D).
+    # Der Posteingang muss wissen, WER ausschreibt, und der einzige andere Weg dorthin waere,
+    # die sieben vollen Lead-Dateien zu lesen — 110 MB fuer ein Namensfeld. Genau davon ist
+    # diese Datei die Abkehr. Der kurze Name reicht: er steht auch in der Meldung.
     return {"id": l.get("id"), "titel": l.get("titel"), "src": l.get("src"),
             "tage": l.get("tage"), "endTage": l.get("endTage"),
-            "endeEcht": (l.get("timing") or {}).get("src") == "echt"}
+            "endeEcht": (l.get("timing") or {}).get("src") == "echt",
+            "buyer": l.get("buyerShort") or l.get("buyer")}
 
 
 def export_branche(key):
