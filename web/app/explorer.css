@@ -2341,3 +2341,14 @@ td.c-band .passung i{display:none}
    steht mehr, wenn du es wissen willst. */
 .hat-beleg { border-bottom: 1px dotted var(--ink-300, #B7C2BC); cursor: help; }
 .hat-beleg:hover { border-bottom-color: var(--signal-deep); }
+
+/* AKTIVIERUNG C (2026-09-01): die Frage nach abgelaufener Frist. Sie steht in der Zeile, in
+   der bis dahin „Ich bewerbe mich →" auch dann stand, wenn die Frist längst durch war.
+
+   Die Frage ist kursiv und leise, die Antworten sind Knöpfe. Wer nicht antworten will,
+   überliest sie; wer antwortet, braucht einen Klick. Kein Formular, kein Dialog. */
+.ck-frage, .ck-gruende { display: inline-flex; align-items: center; gap: var(--s2); flex-wrap: wrap; }
+.ck-frage em, .ck-gruende em { font-style: normal; font-size: var(--t-meta); color: var(--ink-500); }
+/* Die Gründe sind sechs kleine Knöpfe. Auf schmalen Fenstern brechen sie um, statt die Zeile
+   zu sprengen — die Merkliste bleibt eine Liste. */
+.ck-gruende .ck-btn { font-size: 10.5px; padding: 2px 7px; }

@@ -20,7 +20,7 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { currentUser, logout, loadProfile } from "@/lib/supabase/auth";
 import { recordLeadClick, recordAnalysis } from "@/lib/analytics";
-import { syncWatchlist } from "@/lib/supabase/watchlist";
+import { syncWatchlist, loadWatchlist, type MerkZeile } from "@/lib/supabase/watchlist";
 import { Kalender } from "./Kalender";
 import { Cockpit } from "./Cockpit";
 import { getOrCreateCalendarFeed } from "@/lib/supabase/calendar";
@@ -590,11 +590,31 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
     const l = CORE.find((x) => x.id === id);
     if (l) {
       l.merk = l.merk ? null : "manuell";
-      syncWatchlist(id, !!l.merk);
+      syncWatchlist(id, !!l.merk, { titel: l.titel as string, buyer: (l as { buyer?: string }).buyer });
       logEvent(l, "watch", l.merk ? t("Zur Merkliste hinzugefügt") : t("Von der Merkliste entfernt"));
     }
     bump();
   }
+
+  /* Gemerkte Vorgänge, die es im Frontend-Export NICHT MEHR GIBT.
+   *
+   * ⚠ Sie sind der eigentliche Auslöser für die Ergebnisfrage. `export_web_leads.py` wirft
+   * offene Ausschreibungen mit abgelaufener echter Frist heraus („nicht mehr biet-bar"), und
+   * damit verschwand ein gemerkter Vorgang am Tag nach der Frist spurlos. Gemessen am
+   * 2026-09-01: `frist.tage` wird im Frontend NIE negativ, das Minimum ist 0. Jede Bedingung
+   * auf „< 0" ist deshalb toter Code — die Anzeige „abgelaufen" im Cockpit war es seit jeher.
+   *
+   * Was fehlt, kommt aus der Merkliste selbst, die seit heute Titel und Käufer mitführt. */
+  const [verwaist, setVerwaist] = useState<MerkZeile[]>([]);
+  useEffect(() => {
+    let ab = false;
+    loadWatchlist().then((zeilen) => {
+      if (ab) return;
+      const bekannt = new Set(CORE.map((l) => l.id));
+      setVerwaist(zeilen.filter((z) => !bekannt.has(z.lead_id)));
+    });
+    return () => { ab = true; };
+  }, [tick]);
 
   // ── Cockpit (#17) — Pipeline-/Ergebnis-Übergänge (client-seitig; #11-Meldung serverseitig) ──
   function ckApply(id: string) { const l = CORE.find((x) => x.id === id) as (Lead & { pipe?: string }) | undefined; if (l) l.pipe = "beworben"; bump(); }
@@ -605,6 +625,34 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
     bump();
   }
   function ckConfirm(id: string) { const l = CORE.find((x) => x.id === id) as (Lead & { cockpitProv?: string }) | undefined; if (l) l.cockpitProv = "bestaetigt"; bump(); }
+
+  /* Ergebnismeldung nach abgelaufener Frist (Aktivierung C). ⚠ DIE ERSTE, DIE WIRKLICH
+     SCHREIBT. Die Cockpit-Handler darueber aendern nur den Zustand im Browser; der Kommentar
+     versprach „#11-Meldung serverseitig", und `reportOutcome` wurde von hier nie gerufen. Die
+     Moat-Tabelle `user_outcomes` gibt es seit Ticket #11, sie war nur nicht angeschlossen.
+
+     ⚠ Zuerst den fernen Stand, dann den lokalen: scheitert das Schreiben (keine Sitzung,
+     Netz weg), soll die Oberflaeche NICHT so tun, als sei die Antwort angekommen. Eine
+     Meldung, die niemand hat, ist schlimmer als eine, die nicht abgegeben wurde. */
+  async function ckMitgeboten(id: string, mitgeboten: boolean, grund?: string) {
+    const l = CORE.find((x) => x.id === id) as (Lead & {
+      titel?: string; buyer?: string; volumen?: { wert?: string }; pipe?: string;
+      outcome?: string; cockpitProv?: string }) | undefined;
+    const { reportOutcome } = await import("@/lib/supabase/outcomes");
+    const r = await reportOutcome({
+      lead_id: id, applied: mitgeboten,
+      dismiss_reason: mitgeboten ? null : (grund as never),
+      titel: l?.titel ?? null, buyer_name: l?.buyer ?? null,
+    });
+    if (!r.ok) return;
+    if (l) {
+      // „Ja" fuehrt in die Pipeline (das Ergebnis kommt spaeter), „nein" schliesst den
+      // Vorgang ab. Beides ist eine Angabe des Nutzers, also `korrigiert`, nicht `abgeleitet`.
+      if (mitgeboten) l.pipe = "wartet"; else l.outcome = "verworfen";
+      l.cockpitProv = "korrigiert";
+    }
+    bump();
+  }
 
   // ── Lead-Detail öffnen/schließen/Tabs ──────────────────────────────────────
   function openLead(id: string) {
@@ -1339,6 +1387,8 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
                   onStatus={ckStatus}
                   onOutcome={ckOutcome}
                   onConfirm={ckConfirm}
+                  onMitgeboten={ckMitgeboten}
+                  verwaist={verwaist}
                 />
               </div>
             ) : (

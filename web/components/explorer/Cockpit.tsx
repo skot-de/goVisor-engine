@@ -36,18 +36,35 @@ function Prov({ state }: { state?: string }) {
     : state === "bestaetigt" ? t("Von Ihnen bestätigt") : t("Von Ihnen ergänzt/korrigiert")}>{t(lbl)}</span>;
 }
 
+/* Gruende, warum ein beobachteter Vorgang doch nicht beboten wurde. ⚠ Es sind die Werte aus
+ * `DismissReason` (lib/supabase/outcomes.ts), nicht neu erfundene: die Spalte gibt es, die
+ * Tabelle nimmt genau diese entgegen, und ein siebter Grund hier waere ein Wert, den niemand
+ * auswerten kann. Das Uebergabepapier nennt vier; die Tabelle kann sechs, also fragen wir sechs. */
+const GRUENDE: [string, string][] = [
+  ["cpv_mismatch", "passte fachlich nicht"], ["region", "zu weit weg"],
+  ["too_small", "zu klein"], ["too_big", "zu groß"],
+  ["no_capacity", "keine Kapazität"], ["other", "anderer Grund"],
+];
+
 export function Cockpit({
-  rows, onSelect, onApply, onStatus, onOutcome, onConfirm,
+  rows, onSelect, onApply, onStatus, onOutcome, onConfirm, onMitgeboten, verwaist = [],
 }: {
   rows: Lead[];
+  /* Gemerkte Vorgänge, die aus dem Export gefallen sind — die Frist ist durch. Sie tragen
+     nur Titel und Käufer, mehr steht in der Merkliste nicht. Genau für sie ist die Frage
+     nach dem Ergebnis da. */
+  verwaist?: { lead_id: string; titel: string | null; buyer_name: string | null }[];
   onSelect: (id: string) => void;
   onApply: (id: string) => void;
   onStatus: (id: string, s: string) => void;
   onOutcome: (id: string, o: "gewonnen" | "verloren") => void;
   onConfirm: (id: string) => void;
+  onMitgeboten?: (id: string, mitgeboten: boolean, grund?: string) => void;
 }) {
   const { t } = useSprache();
   const [open, setOpen] = useState({ beob: true, aktiv: true, hist: false });
+  // Welcher Vorgang wartet gerade auf den Grund? Genau einer, nie mehrere.
+  const [grundFuer, setGrundFuer] = useState<string | null>(null);
 
   const { beob, aktiv, hist } = useMemo(() => {
     const beob: Lead[] = [], aktiv: Lead[] = [], hist: Lead[] = [];
@@ -88,12 +105,52 @@ export function Cockpit({
   return (
     <div className="ck-wrap">
       <Area k="beob" title={t("Beobachtet")} unter={t("Zukunft, was ich angehen will")} n={beob.length}>
+        {/* ⚠ ZUERST DIE ABGELAUFENEN. Sie sind das Einzige in dieser Liste, wo eine Antwort
+            verlorengeht, wenn man sie übersieht: der Vorgang ist vorbei, die Frage nach dem
+            Ergebnis stellt sich genau einmal. Alles andere kann warten. */}
+        {verwaist.map((v) => (
+          <div className="ck-row" key={v.lead_id}>
+            <button className="ck-row-main" onClick={() => onSelect(v.lead_id)}>
+              <span className="ck-row-t">{v.titel || t("(ohne Titel)")}</span>
+              <span className="ck-row-b">{v.buyer_name || ""}</span>
+            </button>
+            <div className="ck-row-act">
+              <span className="ck-frist risk">{t("abgelaufen")}</span>
+              {grundFuer === v.lead_id ? (
+                <span className="ck-gruende">
+                  <em>{t("Woran lag es?")}</em>
+                  {GRUENDE.map(([k, lbl]) => (
+                    <button key={k} className="ck-btn ghost"
+                            onClick={() => { onMitgeboten?.(v.lead_id, false, k); setGrundFuer(null); }}>
+                      {t(lbl)}
+                    </button>
+                  ))}
+                </span>
+              ) : (
+                <span className="ck-frage">
+                  <em>{t("Habt ihr mitgeboten?")}</em>
+                  <button className="ck-btn" onClick={() => onMitgeboten?.(v.lead_id, true)}>{t("Ja")}</button>
+                  <button className="ck-btn ghost" onClick={() => setGrundFuer(v.lead_id)}>{t("Nein")}</button>
+                </span>
+              )}
+            </div>
+          </div>
+        ))}
         {beob.length ? beob.map((l) => (
           <Row key={l.id} l={l}>
             {l.frist?.tage != null && (
               <span className={`ck-frist ${l.frist.tage < 3 ? "risk" : l.frist.tage <= 14 ? "flag" : ""}`}>
                 {l.frist.tage < 0 ? t("abgelaufen") : t("noch {n} T", { n: l.frist.tage })}</span>
             )}
+            {/* ⚠ IST DIE FRIST DURCH, IST „Ich bewerbe mich" FALSCH. Bis zum 2026-09-01 stand
+                der Knopf auch an abgelaufenen Vorgaengen und fuehrte ins Leere. Genau dieser
+                Moment ist die wertvollste Frage, die wir stellen koennen: die Bieterzahl steht
+                in keiner Bekanntmachung, sie entsteht nur, wenn jemand sie uns sagt.
+                Ein Klick, kein Formular. Der Grund kommt erst NACH einem „nein", und nur dann. */}
+            {/* ⚠ HIER KEIN „abgelaufen"-Zweig. `frist.tage` wird im Frontend nie negativ
+                (gemessen 2026-09-01: Minimum 0) — abgelaufene Vorgänge fallen aus dem Export
+                und stehen oben unter `verwaist`. Eine Bedingung auf „< 0" wäre toter Code,
+                der aussieht wie eine Funktion. */}
             <button className="ck-btn" onClick={() => onApply(l.id)}>{t("Ich bewerbe mich →")}</button>
           </Row>
         )) : <div className="ck-empty">{t("Noch nichts beobachtet. Merkt euch Ausschreibungen (☆) in der Akquise.")}</div>}
