@@ -113,6 +113,16 @@ def gold_integrity(cfg: Config, country: str = "DE") -> list[tuple[str, int]]:
          "entities.parquet", "entity_id"),
         ("buyer_traeger.entity → entities", "buyer_traeger.parquet", "entity_id",
          "entities.parquet", "entity_id"),
+        # ── Nachtrag 2026-09-01: die LLM-Auswertung als Tabelle ──────────────────────
+        # Eltern ist `quality`, NICHT `leads`: ausgewertet wird jeder Vorgang mit
+        # Unterlagen, und 42,8 % davon sind keine offenen Leads (Zuschlaege, abgelaufene).
+        # Gegen `leads` gepruegt gaebe es 151.427 „Waisen", die alle richtig sind —
+        # ein Fehlalarm, der die Pruefung wertlos machen wuerde. Gegen `quality`
+        # gemessen 2026-09-01: 0 Waisen bei 7.188 bzw. 396.284 Zeilen.
+        ("doc_analysis.notice → quality", "doc_analysis.parquet", "notice_id",
+         "quality.parquet", "notice_id"),
+        ("doc_checklist.notice → quality", "doc_checklist.parquet", "notice_id",
+         "quality.parquet", "notice_id"),
         ("incumbent_tenure.notice → quality", "incumbent_tenure.parquet", "notice_id",
          "quality.parquet", "notice_id"),
         ("notice_enrichment.notice → quality", "notice_enrichment.parquet", "notice_id",
