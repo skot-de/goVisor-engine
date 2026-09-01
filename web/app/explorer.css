@@ -2288,15 +2288,36 @@ td.c-band .passung i{display:none}
 /* MARKTÜBLICH in der Vergabestellen-Kachel (2026-09-01). Der Wert stand seit jeher in der
    Käufersicht und fehlte in der Anbieter-Sicht, obwohl beide dieselbe Datei lesen.
 
-   Bewusst LEISE: eine dritte Zeile unter Label und Wert, kleiner als die Fussnote daneben.
-   Der Bezug soll die Zahl einordnen, nicht mit ihr um Aufmerksamkeit ringen. Und bewusst
-   OHNE Ampelfarbe: für einen Anbieter ist eine Stelle mit wenigen Bietern attraktiv, nicht
-   schlecht. Wer hier rot einfärbt, behauptet eine Richtung, die es nicht gibt. */
-.bstat-markt { display: block; margin-top: 3px; font-size: 10.5px; line-height: 1.4;
+   ⚠ ERSTE FASSUNG WAR EINE GRAUE TEXTZEILE, und sie ging unter. Vier Graustufen auf einer
+   Kachel, und die Kachel MIT Abweichung sah aus wie die ohne. Der Bezug war da und das
+   Signal war weg. Jetzt trägt eine Leiste den Rang, der Text nur noch die Zahl.
+
+   ⚠ RANG STATT WERTSKALA. Die Kennzahlen sind verschieden schief: DB Netz hat 5.848
+   Vergaben im Jahr bei einem Median von 112 — auf einer Wertachse klebte der Rest links am
+   Rand. Auf der Rangachse liegt das Band immer bei 25 bis 75 % und der Strich in der Mitte.
+   Jede Kachel sieht damit gleich aus, und der Punkt ist zwischen Kacheln vergleichbar.
+
+   ⚠ KEINE AMPELFARBE. Für einen Anbieter ist eine Stelle mit wenigen Bietern attraktiv,
+   nicht schlecht. Der Punkt wird deshalb nur KRÄFTIGER, wenn die Stelle am Rand liegt,
+   nicht rot oder grün. */
+.bstat-markt { display: block; margin-top: 5px; font-size: 10.5px; line-height: 1.4;
   color: var(--ink-400); font-variant-numeric: tabular-nums; }
 .bstat-markt b { font-weight: 600; color: var(--ink-500); }
-/* Das Viertel ist der eigentliche Hinweis: „marktüblich 62 %" allein sagt noch nicht, ob
-   diese Stelle auffällt. Deshalb bekommt es die einzige Auszeichnung in der Zeile. */
-.bstat-markt em { font-style: normal; margin-left: 6px; padding: 1px 5px; border-radius: 3px;
-  background: var(--surface-3, #F1F3F2); color: var(--ink-500); font-size: 9.5px;
-  font-weight: 600; letter-spacing: .02em; white-space: nowrap; }
+.bstat-markt em { font-style: normal; color: var(--ink-500); font-weight: 600; }
+
+.bstat-leiste { position: relative; display: block; height: 4px; margin: 0 0 4px;
+  background: var(--surface-3, #F1F3F2); border-radius: 2px; overflow: visible; }
+/* Das mittlere Feld: wo die Hälfte aller Stellen liegt. */
+.bstat-leiste .band { position: absolute; left: 25%; width: 50%; top: 0; bottom: 0;
+  background: var(--line-strong, #CFD6D3); border-radius: 2px; }
+/* Der Median. Ein Strich, kein Klotz — er ist der Bezug, nicht die Aussage. */
+.bstat-leiste .mitte { position: absolute; left: 50%; top: -1px; bottom: -1px; width: 1px;
+  background: var(--ink-400); opacity: .55; }
+/* Diese Stelle. Der einzige Punkt, der sich bewegt, also der einzige, der auffallen darf. */
+.bstat-leiste .punkt { position: absolute; top: 50%; width: 7px; height: 7px;
+  margin: -3.5px 0 0 -3.5px; border-radius: 50%; background: var(--ink-500);
+  border: 1.5px solid var(--surface, #fff); }
+.bstat-markt.weit .punkt { background: var(--ink-900); width: 9px; height: 9px;
+  margin: -4.5px 0 0 -4.5px; }
+.bstat-markt.weit { color: var(--ink-500); }
+

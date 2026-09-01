@@ -350,7 +350,8 @@ function Vergabestellen({ data, onOpenBuyer }: { data: Strat; onOpenBuyer: (s: S
 const MIND_STELLEN = 10;
 const MIND_FAELLE = 8;
 
-type Lage = { med: number; unten: number; oben: number; n: number; gleich: boolean };
+type Lage = { med: number; unten: number; oben: number; n: number; gleich: boolean;
+              werte: number[] };
 
 function marktLage(alle: Stelle[], pick: (s: Stelle) => number | null | undefined): Lage | null {
   const v = alle.map(pick).filter((x): x is number => x != null && Number.isFinite(x))
@@ -358,7 +359,7 @@ function marktLage(alle: Stelle[], pick: (s: Stelle) => number | null | undefine
   if (v.length < MIND_STELLEN) return null;
   const bei = (p: number) => v[Math.min(v.length - 1, Math.floor(v.length * p))];
   return { med: bei(0.5), unten: bei(0.25), oben: bei(0.75), n: v.length,
-           gleich: v[0] === v[v.length - 1] };
+           gleich: v[0] === v[v.length - 1], werte: v };
 }
 
 /** Quoten-Feld als Zahl, aber nur wenn es belastbar ist. */
@@ -367,29 +368,63 @@ const ausQuote = (feld: "kmu" | "preis" | "wechsel" | "neuAnteil") => (s: Stelle
   return q && q.n >= MIND_FAELLE ? q.pct : null;
 };
 
+/** Wo steht dieser Wert unter seinesgleichen? 0 bis 1. */
+function rang(lage: Lage, eigen: number): number {
+  let unter = 0;
+  for (const x of lage.werte) if (x < eigen) unter++;
+  return unter / Math.max(1, lage.werte.length - 1);
+}
+
 function Marktzeile({ eigen, lage, einheit = "" }: {
   eigen: number | null | undefined; lage: Lage | null; einheit?: string;
 }) {
   const { t } = useSprache();
   if (lage == null) return null;
   const zahl = (v: number) => v.toLocaleString("de-DE", { maximumFractionDigits: 1 }) + einheit;
-  // Viertel statt erfundener Schwelle: „weicht ab" braucht sonst eine Grenze, die niemand
-  // begründen kann. Die Verteilung liefert sie mit.
+
   // ⚠ OHNE STREUUNG GIBT ES KEINE LAGE. Liegen oberes und unteres Viertel auf demselben
-  // Wert, ist jede Stelle gleichzeitig in beiden, und die Bedingung unten stempelte JEDER
-  // Stelle „oberes Viertel" auf. Am 2026-09-01 gemessen: in der Schweiz tragen alle 104
-  // ausgewerteten Stellen denselben KMU-Anteil von 100 %; DE hat 64 verschiedene Werte,
-  // AT 31. Die Schweizer KMU-Kennzeichnung unterscheidet dort also nichts, und das
-  // gehoert gesagt statt in ein Viertel-Etikett verpackt.
+  // Wert, ist jede Stelle gleichzeitig in beiden. Am 2026-09-01 gemessen: in der Schweiz
+  // tragen alle 104 ausgewerteten Stellen denselben KMU-Anteil von 100 %; DE hat 64
+  // verschiedene Werte, AT 31. Dort gehoert das gesagt, nicht in ein Etikett verpackt.
+  if (lage.gleich) {
+    return (
+      <span className="bstat-markt">
+        {t("marktüblich")} <b>{zahl(lage.med)}</b> <em>{t("bei allen Stellen gleich")}</em>
+      </span>
+    );
+  }
+
+  /* ⚠ DIE LEISTE ZEIGT DEN RANG, NICHT DEN WERT. Erste Fassung war eine graue Textzeile
+   * („marktüblich 87 %") und ging in vier Graustufen unter — die Kachel MIT Abweichung sah
+   * aus wie die ohne, und „48 gegen 87" musste man im Kopf rechnen.
+   *
+   * Warum Rang statt Wertskala: die Kennzahlen sind verschieden schief. DB Netz hat 5.848
+   * Vergaben im Jahr bei einem Median von 112 — auf einer Wertachse klebte der ganze Rest
+   * links am Rand. Auf der Rangachse liegt das Band immer bei 25 bis 75 % und der Strich
+   * immer in der Mitte, also sieht jede Kachel gleich aus und der Punkt ist sofort
+   * vergleichbar. Das ist zugleich das „Viertel" aus der Beschriftung, nur sichtbar. */
+  const r = eigen == null ? null : rang(lage, eigen);
+  // ⚠ Auch ohne `gleich` kann die MITTE flach sein: die Werte streuen insgesamt, aber das
+  // mittlere Viertel liegt auf einem Punkt. Dann ist `eigen >= oben` und `eigen <= unten`
+  // gleichzeitig wahr, und die erste Bedingung gewinnt — eine Stelle mitten im Feld trüge
+  // „oberes Viertel". Ohne Streuung im Band gibt es kein Viertel.
   const streuung = lage.oben > lage.unten;
-  const pos = lage.gleich ? t("bei allen Stellen gleich")
-    : !streuung || eigen == null ? null
-    : eigen >= lage.oben ? t("oberes Viertel")
-    : eigen <= lage.unten ? t("unteres Viertel") : null;
+  const pos = r == null || !streuung ? null
+    : eigen! >= lage.oben ? t("oberes Viertel")
+    : eigen! <= lage.unten ? t("unteres Viertel") : null;
+  const weit = pos != null;
   return (
-    <span className="bstat-markt" title={t("Median aus {n} Vergabestellen derselben Branche", { n: lage.n })}>
-      {t("marktüblich")} <b>{zahl(lage.med)}</b>
-      {pos ? <em>{pos}</em> : null}
+    <span className={`bstat-markt ${weit ? "weit" : ""}`}
+          title={t("Median aus {n} Vergabestellen derselben Branche", { n: lage.n })}>
+      <span className="bstat-leiste" aria-hidden="true">
+        <i className="band" />
+        <i className="mitte" />
+        {r != null ? <i className="punkt" style={{ left: `${Math.round(r * 100)}%` }} /> : null}
+      </span>
+      <span className="bstat-markt-t">
+        {t("marktüblich")} <b>{zahl(lage.med)}</b>
+        {pos ? <> <em>{pos}</em></> : null}
+      </span>
     </span>
   );
 }
