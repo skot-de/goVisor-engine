@@ -82,6 +82,18 @@ def test_breite_statt_zufall():
         assert max(tage.values()) <= 1, f"{fach}: mehrere Vorgänge am selben Fristtag"
 
 
+def test_kein_kaeufername_traegt_seine_anschrift():
+    """⚠ Das Feld heisst `buyerShort` und ist es nicht. Gemessen am 2026-09-01: „Gemeinde
+    Motten, Fuldaer Str. 11, 97786 Motten, Tel.: +49 974891910, Fax: +49 97" — bei 80
+    Zeichen gekappt, mitten in der Faxnummer. Im Explorer faellt das nicht auf, auf der
+    ersten Seite, die ein Fremder liest, schon."""
+    for fach, eintraege in _probe().items():
+        for x in eintraege:
+            for teil in x["k"].split(", ")[1:]:
+                assert not re.search(r"\d|Tel\.|Fax|E-Mail", teil, re.I), \
+                    f"{fach}: Anschrift im Namen — {x['k']}"
+
+
 def test_nur_oeffentliche_felder():
     """Was hier steht, ist ohnehin in jeder Bekanntmachung öffentlich. Bewertung, Passung,
     Strategie und Dokumentanalyse sind die Arbeit, für die man sich anmeldet — sie dürfen

@@ -302,6 +302,31 @@ def _region_widerspricht(kaeufer: str, region: str, nuts: str | None) -> bool:
     return False
 
 
+# Woran man erkennt, dass hinter dem Komma keine Behoerde mehr kommt, sondern ihre Anschrift.
+# ⚠ Gemessen am 2026-09-01: „Gemeinde Motten, Fuldaer Str. 11, 97786 Motten, Tel.: +49
+# 974891910, Fax: +49 97" — 80 Zeichen Kappung mitten in der Faxnummer. Das Feld heisst
+# `buyerShort` und ist es nicht; im Explorer faellt es nicht auf, auf der ersten Seite schon.
+import re as _re
+# Hinter einem Komma steht im Namen einer Behoerde keine Ziffer — ausser es ist die
+# Anschrift („, Fuldaer Str. 11", „, 97786 Motten", „, Tel.: +49 …"). Eine Ziffer als
+# Erkennungszeichen faengt alle drei Formen, waehrend die erste Fassung nur zwei fing:
+# sie verlangte das Strassenwort ohne Leerzeichen davor und liess „Fuldaer Str. 11" durch.
+_ANSCHRIFT = _re.compile(r"\d|Tel\.|Telefon|Fax|E-Mail", _re.I)
+
+
+def _kaeufer_kurz(name: str) -> str:
+    """Behoerdenname ohne angehaengte Anschrift. Schneidet am ersten Komma, hinter dem eine
+    Adresse beginnt — nicht an jedem Komma, denn „Landeshauptstadt Magdeburg, Die
+    Oberbuergermeisterin" ist der vollstaendige Name und gehoert erhalten."""
+    teile = name.split(", ")
+    behalten = [teile[0]]
+    for t in teile[1:]:
+        if _ANSCHRIFT.search(t):
+            break
+        behalten.append(t)
+    return ", ".join(behalten)
+
+
 # Zeichen, die auf beschaedigten Text hindeuten. Ein Kaeufername wie „DB InfraGO AG ?
 # Geschaeftsbereich" ist inhaltlich richtig und sieht trotzdem nach Fehler aus — auf der
 # ersten Seite, die ein Fremder sieht, ist das teurer als der eine fehlende Eintrag.
@@ -353,7 +378,8 @@ def leseprobe(root, fachliste) -> dict:
         for l in leads:
             frist = l.get("frist") or {}
             tage = frist.get("tage")
-            titel, kaeufer = (l.get("titel") or "").strip(), (l.get("buyerShort") or "").strip()
+            titel = (l.get("titel") or "").strip()
+            kaeufer = _kaeufer_kurz((l.get("buyerShort") or "").strip())
             # Fenster: weit genug weg, um einen ausgefallenen Tageslauf zu ueberleben, nah
             # genug, um eine Frist zu sein, auf die man reagieren kann.
             if not (isinstance(tage, int) and 7 <= tage <= 180):
