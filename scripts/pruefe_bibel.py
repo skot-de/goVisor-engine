@@ -295,6 +295,16 @@ def _behauptungen() -> list[tuple[str, str, bool, str]]:
                     f"nicht eingetragen: {_fehlt}" if _fehlt
                     else f"{len(_kz.DOC_SIGNALE)} Signale, alle eingetragen"))
 
+
+    # Kapitel 06 behauptet: das Kennzahlen-Verzeichnis ist VOLLSTAENDIG, nicht beispielhaft.
+    # Es darf wachsen; faellt es unter den Stand vom 2026-09-01, hat jemand etwas geloescht,
+    # ohne es zu merken — und dann stimmt die Zahl im Kapitel nicht mehr.
+    from govisor import kennzahlen as _kzv
+    _plaetze = len(_kzv.ALLE)
+    aus.append(("06", "das Kennzahlen-Verzeichnis fuehrt mindestens 135 Plaetze ueber 11 Flaechen",
+                _plaetze >= 135 and len(_kzv.nach_flaeche()) >= 11,
+                f"{_plaetze} Plaetze, {len(_kzv.nach_flaeche())} Flaechen"))
+
     return aus
 
 

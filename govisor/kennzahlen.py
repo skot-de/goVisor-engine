@@ -1,36 +1,49 @@
-"""Kennzahlen-Verzeichnis: was eine Zahl ist, woher sie kommt, wogegen sie auffällt.
+"""Kennzahlen-Verzeichnis: was eine Zahl ist, wo sie erscheint, wogegen sie auffällt.
 
 WARUM ES DIESE DATEI GIBT. Am 2026-09-01 hat sich herausgestellt, dass `docsignals` fünfzehn
-Anforderungs-Signale aus den Vergabeunterlagen erkennt, `doc_signals.parquet` alle fünfzehn
-trägt, und **sieben davon je im Frontend ankommen**. Verlorengegangen sind sie an einer
-einzigen Stelle: `export_doc_signals.py` zählte seine Spalten von Hand auf. Dieselbe Liste
-stand danach ein zweites Mal im API-Typ und ein drittes Mal im Renderer. Dreimal pflegbar,
-dreimal vergessbar.
+Anforderungs-Signale erkennt, `doc_signals.parquet` alle fünfzehn trägt, und **sieben davon
+je im Frontend ankamen**. Verloren gingen sie an handgetippten Spaltenlisten: eine im Export
+der Signale, eine im Lead-Export, eine im API-Typ, eine im Renderer. Viermal dieselbe Liste,
+viermal pflegbar, viermal vergessbar. Betroffen waren `binding_until` (5.747 Sätze),
+`penalty_pct` (4.066), `site_visit` (3.723), `site_visit_mandatory` (3.723),
+`presentation_required` (3.576) und `skonto_pct` (393).
 
-Betroffen waren `binding_until` (5.747 Sätze), `penalty_pct` (4.066), `site_visit` (3.723),
-`site_visit_mandatory` (3.723), `presentation_required` (3.576) und `skonto_pct` (393). Sie
-wurden gebaut, gemessen, gespeichert und nie gezeigt.
-
-WAS HIER STEHT UND WAS NICHT. Dies ist kein zweiter Ort für Zahlen, sondern der Ort für ihre
-EIGENSCHAFTEN: wie sie heisst, woher sie kommt, in welcher Einheit sie steht und — das ist
-der Kern — **wogegen sie verglichen wird**. Ohne Bezugsgrösse kann eine Zahl nie auffallen;
-sie ist dann Hintergrund, und das ist eine Einordnung, keine Abwertung.
-
-⚠ DIE BEZUGSGRÖSSE IST DIE KATEGORIE. Nicht „Marktdaten" gegen „Firmendaten" und nicht
-„wichtig" gegen „unwichtig" — beides wäre eine Meinung. Wogegen verglichen wird, ist eine
-Eigenschaft der Kennzahl und entscheidet zugleich über die Darstellung: nur was einen Bezug
-hat, bekommt eine Leiste.
+⚠ DIE BEZUGSGRÖSSE IST DIE KATEGORIE. Nicht „Marktdaten gegen Firmendaten", nicht „wichtig
+gegen unwichtig" — beides wäre eine Meinung. **Wogegen verglichen wird** ist eine Eigenschaft
+der Kennzahl, und sie entscheidet zugleich über die Darstellung: nur was einen Bezug hat,
+kann auffällig werden und eine Leiste bekommen.
 
     markt    gegen den Branchen- oder Gesamtwert
     vorwert  gegen den eigenen Stand von vorher (braucht Historie, die es noch nicht gibt)
     profil   gegen eine Schwelle im Firmenprofil
     keine    beschreibend oder Datenlage; bleibt sichtbar, aber in der Detailebene
 
-⚠ VOLLSTÄNDIG IST NUR, WAS HIER STEHT. Das Verzeichnis deckt heute die Dokument-Signale und
-die Vergabestellen-Kacheln ab. Die übrigen Kennzahlen des Frontends sind erfasst, aber noch
-nicht eingetragen (Stand 2026-09-01: 127 gezählt, davon 21 hier). Wer eine neue Kennzahl
-baut, trägt sie ein; `tests/test_kennzahlen.py` hält fest, dass keine ohne Bezugsgrösse
-durchgeht und dass der Export nichts fallen lässt.
+`keine` ist eine ENTSCHEIDUNG, kein Platzhalter: eine Zahl ohne Vergleichswert kann nie
+auffallen und gehört dauerhaft nach unten. Das ist keine Abwertung, sondern die Entlastung —
+gut ein Viertel des Bestands fällt darunter und muss nie um Aufmerksamkeit konkurrieren.
+
+ZWEI GENAUIGKEITSSTUFEN, und der Unterschied ist wichtig.
+`spalte` trägt den EXAKTEN Namen dort, wo die Zahl entsteht. Den gibt es nur, wo eine
+einzelne Spalte sie liefert (Dokument-Signale, Vergabestellen-Kacheln); dort hängen Export,
+API-Typ und Renderer daran, und `tests/test_kennzahlen.py` hält die drei zusammen.
+Alles andere nennt nur `quelle` — die Datei oder Funktion, in der es entsteht. Eine Zahl, die
+im Browser aus dem Profil gerechnet wird, HAT keine Quellspalte, und so zu tun als hätte sie
+eine wäre schlimmer als die Lücke.
+
+⚠ VOLLSTÄNDIG HEISST: alles, was ein Nutzer sieht. Stand 2026-09-01 sind das **135
+Kennzahl-Plätze über elf Flächen** — Plätze, nicht Metriken: dieselbe Zahl kann auf zwei
+Bildschirmen stehen und dort verschiedene Bezüge haben. Wer eine neue baut, trägt sie ein;
+sonst ist sie in der nächsten Zählung wieder ein Fund.
+
+Die Verteilung sagt mehr als die Summe:
+
+    markt    58   die grösste Gruppe und die meiste offene Arbeit
+    keine    39   beschreibend; kann nie auffallen, gehört dauerhaft nach unten
+    profil   23   vergleicht gegen ein Feld, das wir schon haben
+    vorwert  15   braucht Historie je Nutzer, die es noch nicht gibt
+
+Nur 19 der 135 tragen eine exakte Quellspalte. Das ist keine Schwäche des Verzeichnisses,
+sondern die Lage: die meisten Zahlen entstehen in einer Rechnung, nicht in einer Spalte.
 """
 from __future__ import annotations
 
@@ -41,90 +54,323 @@ BEZUEGE = frozenset({"markt", "vorwert", "profil", "keine"})
 
 @dataclass(frozen=True)
 class Kennzahl:
-    """Eine Zahl, die im Frontend erscheint.
-
-    `quelle`  Spaltenname dort, wo sie entsteht (Parquet, Gold-Tabelle).
-    `schluessel`  Name, unter dem sie im Frontend ankommt. Weicht bewusst ab, wo der
-              technische Name im Produkt nichts zu suchen hat (`guarantee_required` →
-              `guarantee`).
-    `bezug`   siehe oben. `keine` ist eine gültige Antwort, kein Platzhalter.
-    `wogegen` in Worten, was der Vergleichswert IST. Leer nur bei `bezug="keine"`.
-    """
+    """Eine Zahl, die im Frontend erscheint."""
 
     schluessel: str
-    quelle: str
     label: str
-    einheit: str
     bezug: str
     wogegen: str = ""
+    flaeche: str = ""
+    quelle: str = ""
+    spalte: str = ""
+    einheit: str = ""
 
     def __post_init__(self) -> None:
         if self.bezug not in BEZUEGE:
             raise ValueError(f"{self.schluessel}: unbekannter Bezug {self.bezug!r}")
+        # ⚠ Ein Bezug ohne benannten Vergleichswert ist eine unerfüllte Zusage: die Anzeige
+        # verspricht eine Einordnung, und niemand kann sagen, wogegen.
         if self.bezug != "keine" and not self.wogegen:
             raise ValueError(f"{self.schluessel}: Bezug {self.bezug!r} ohne Vergleichswert")
 
 
+def _k(schluessel: str, label: str, bezug: str, wogegen: str = "") -> Kennzahl:
+    """Kurzform für die Inventarzeilen — Fläche und Quelle setzt `_mit` darunter."""
+    return Kennzahl(schluessel, label, bezug, wogegen)
+
+
+def _mit(gruppe: tuple[Kennzahl, ...], flaeche: str, quelle: str) -> tuple[Kennzahl, ...]:
+    from dataclasses import replace
+    return tuple(replace(k, flaeche=flaeche, quelle=quelle) for k in gruppe)
+
+
 # ── Anforderungen aus den Vergabeunterlagen ──────────────────────────────────────────────
 # Quelle: govisor/docsignals.py → data/docs/<L>/doc_signals.parquet → web/data/doc-signals.json
-#
-# ⚠ Die Reihenfolge ist die Anzeigereihenfolge im Anforderungs-Block. `evidence` steht
-# bewusst NICHT hier: es ist der Belegtext je Signal, keine eigene Kennzahl.
+# ⚠ Die EINZIGE Gruppe mit exakten Quellspalten, an denen drei Stellen im Code hängen.
+# Reihenfolge = Anzeigereihenfolge im Anforderungs-Block. `evidence` steht bewusst nicht hier:
+# es ist der Belegtext je Signal, keine eigene Kennzahl.
+def _s(schluessel: str, spalte: str, label: str, einheit: str, bezug: str, wogegen: str = "") -> Kennzahl:
+    return Kennzahl(schluessel, label, bezug, wogegen, "unterlagen",
+                    "doc_signals.parquet", spalte, einheit)
+
+
 DOC_SIGNALE: tuple[Kennzahl, ...] = (
-    Kennzahl("guarantee", "guarantee_required", "Sicherheit / Bürgschaft", "ja/nein",
-             "profil", "euer Bürgschaftsrahmen"),
-    Kennzahl("bindingDays", "binding_days", "Bindefrist", "Tage",
-             "markt", "übliche Bindefrist im Regelwerk"),
+    _s("guarantee", "guarantee_required", "Sicherheit / Bürgschaft", "ja/nein",
+       "profil", "euer Bürgschaftsrahmen"),
+    _s("bindingDays", "binding_days", "Bindefrist", "Tage",
+       "markt", "übliche Bindefrist im Regelwerk"),
     # ⚠ Das Datum ist NICHT dieselbe Kennzahl wie die Dauer. „90 Tage" sagt, wie lange ihr
-    # gebunden seid; „bis 14.11." sagt, ob es in eure Auslastung passt. Beide werden erhoben.
-    Kennzahl("bindingUntil", "binding_until", "Bindefrist bis", "Datum",
-             "keine"),
-    Kennzahl("eligibility", "eligibility_count", "Eignungsnachweise", "Anzahl",
-             "profil", "was ihr hinterlegt habt"),
-    Kennzahl("certificates", "certificates", "Geforderte Zertifikate", "Liste",
-             "profil", "eure Zertifikate"),
-    Kennzahl("variants", "variants_allowed", "Nebenangebote", "ja/nein",
-             "keine"),
-    Kennzahl("framework", "framework", "Rahmenvereinbarung", "ja/nein",
-             "keine"),
-    Kennzahl("weights", "award_weights", "Zuschlagsgewichte", "Prozent",
-             "markt", "übliche Gewichtung im Feld"),
-    # ⚠ Der Ortstermin ist mehr als eine Anzeige. Ist er PFLICHT und liegt der Ort weit
-    # ausserhalb eurer Regionen, ist das ein echter Nicht-bieten-Grund und gehoert zu den
-    # Blockern, nicht in eine Zeile. Deshalb `profil`.
-    Kennzahl("siteVisit", "site_visit", "Ortstermin", "ja/nein",
-             "keine"),
-    Kennzahl("siteVisitMandatory", "site_visit_mandatory", "Ortstermin verpflichtend", "ja/nein",
-             "profil", "eure Regionen"),
-    Kennzahl("presentationRequired", "presentation_required", "Präsentation gefordert", "ja/nein",
-             "profil", "habt ihr die Leute dafür"),
-    Kennzahl("penaltyPct", "penalty_pct", "Vertragsstrafe", "Prozent",
-             "markt", "übliche Vertragsstrafe im Feld"),
-    Kennzahl("skontoPct", "skonto_pct", "Skonto", "Prozent",
-             "markt", "übliches Skonto im Feld"),
+    # gebunden seid; „bis 14.11." sagt, ob es in eure Auslastung passt. Im Bestand ist das
+    # Datum ausserdem vierzigmal häufiger ablesbar (5.747 gegen 150 Sätze).
+    _s("bindingUntil", "binding_until", "Bindefrist bis", "Datum", "keine"),
+    _s("eligibility", "eligibility_count", "Eignungsnachweise", "Anzahl",
+       "profil", "was ihr hinterlegt habt"),
+    _s("certificates", "certificates", "Geforderte Zertifikate", "Liste",
+       "profil", "eure Zertifikate"),
+    _s("variants", "variants_allowed", "Nebenangebote", "ja/nein", "keine"),
+    _s("framework", "framework", "Rahmenvereinbarung", "ja/nein", "keine"),
+    _s("weights", "award_weights", "Zuschlagsgewichte", "Prozent",
+       "markt", "übliche Gewichtung im Feld"),
+    _s("siteVisit", "site_visit", "Ortstermin", "ja/nein", "keine"),
+    # ⚠ Mehr als eine Anzeige: ist der Termin PFLICHT und liegt er ausserhalb eurer Regionen,
+    # ist das ein Zulassungsgrund und steht als Blocker in `matchLead`. 3.723 Vorgänge mit
+    # erkanntem Termin, davon 108 verpflichtend.
+    _s("siteVisitMandatory", "site_visit_mandatory", "Ortstermin verpflichtend", "ja/nein",
+       "profil", "eure Regionen"),
+    _s("presentationRequired", "presentation_required", "Präsentation gefordert", "ja/nein",
+       "profil", "habt ihr die Leute dafür"),
+    _s("penaltyPct", "penalty_pct", "Vertragsstrafe", "Prozent",
+       "markt", "übliche Vertragsstrafe im Feld"),
+    _s("skontoPct", "skonto_pct", "Skonto", "Prozent", "markt", "übliches Skonto im Feld"),
 )
 
-# ── Vergabestellen-Kacheln (Anbieter-Sicht, Strategie → Vergabestellen) ──────────────────
-# Quelle: scripts/export_strategie.py → web/data/strategie.json, Feld `stellen`.
+# ── Vergabestellen-Kacheln (Anbieter-Sicht) ──────────────────────────────────────────────
 # Der Vergleichswert ist überall derselbe: der Median über die Vergabestellen derselben
 # Branche, gerechnet in `StrategieView.marktLage`.
 _BRANCHE = "Median der Vergabestellen derselben Branche"
-VERGABESTELLEN: tuple[Kennzahl, ...] = (
-    Kennzahl("vergabenJahr", "vergabenJahr", "Vergaben pro Jahr", "Anzahl", "markt", _BRANCHE),
-    Kennzahl("neuAnteil", "neuAnteil", "Neue Anbieter (36 Mon.)", "Prozent", "markt", _BRANCHE),
-    Kennzahl("bieterMedian", "bieterMedian", "Ø Bieter je Vergabe", "Anzahl", "markt", _BRANCHE),
-    Kennzahl("kmu", "kmu", "Zuschläge an KMU", "Prozent", "markt", _BRANCHE),
-    Kennzahl("preis", "preis", "Nur über den Preis entschieden", "Prozent", "markt", _BRANCHE),
-    Kennzahl("wechsel", "wechsel", "Wechsel bei Nachfolgevergaben", "Prozent", "markt", _BRANCHE),
+VERGABESTELLEN: tuple[Kennzahl, ...] = tuple(
+    Kennzahl(s, lab, "markt", _BRANCHE, "strategie", "strategie.json", s, einh)
+    for s, lab, einh in (
+        ("vergabenJahr", "Vergaben pro Jahr", "Anzahl"),
+        ("neuAnteil", "Neue Anbieter (36 Mon.)", "Prozent"),
+        ("bieterMedian", "Ø Bieter je Vergabe", "Anzahl"),
+        ("kmu", "Zuschläge an KMU", "Prozent"),
+        ("preis", "Nur über den Preis entschieden", "Prozent"),
+        ("wechsel", "Wechsel bei Nachfolgevergaben", "Prozent"),
+    )
 )
 
-ALLE: tuple[Kennzahl, ...] = DOC_SIGNALE + VERGABESTELLEN
+# ═════════════════════════════════════════════════════════════════════════════════════════
+# ⚠ EINE ZEILE JE KENNZAHL UND FLÄCHE, nicht je Kennzahl. „Vergaben pro Jahr" steht beim
+# Käufer im Lead-Detail UND als Kachel in der Strategie; das sind zwei Plätze mit womöglich
+# verschiedenem Bezug, und der Leser sucht nach Bildschirm, nicht nach Metrik. Was hier NICHT
+# stehen darf, ist dieselbe Kennzahl zweimal auf DEMSELBEN Bildschirm — elf solche Zeilen
+# sind beim Aufbau entstanden und wieder raus.
+#
+# ⚠ Und nicht blind entdoppeln: „Vergaben pro Jahr (Anbieter)" ist die Zahl einer FIRMA, nicht
+# einer Vergabestelle, und „Rahmenvereinbarung (Name)" ist eine Tabellenspalte, nicht das
+# Ja/Nein-Signal aus den Unterlagen. Ein Abgleich über den Namen hätte beide gelöscht.
+# ═════════════════════════════════════════════════════════════════════════════════════════
+# Das Inventar: alles, was ein Nutzer sonst noch sieht. Gezählt am 2026-09-01 aus dem
+# Quelltext, Fläche für Fläche.
+# ═════════════════════════════════════════════════════════════════════════════════════════
+
+# ── Lead-Liste ────────────────────────────────────────────────────────────────────────────
+# Die Spalten der Trefferliste.
+# Quelle: explorerCore.COLS
+_LISTE: tuple[Kennzahl, ...] = (
+    _k("empfehlung", "Empfehlung", "profil", "Relevanz und Blocker aus matchLead"),
+    _k("relevanz", "Relevanz", "profil", "Feld, Region, Volumen gegen euer Profil"),
+    _k("passung0Bis100", "Passung 0 bis 100", "profil", "dieselbe Rechnung, feiner aufgelöst"),
+    _k("chanceVerdraengbarkeit", "Chance (Verdrängbarkeit)", "markt", "Verdrängbarkeit im Branchenmittel"),
+    _k("aufwand", "Aufwand", "markt", "üblicher Aufwand im selben Feld"),
+    _k("konkurrenzBieterzahl", "Konkurrenz (Bieterzahl)", "markt", "Ø Bieter je Vergabe im Feld"),
+    _k("volumen", "Volumen", "profil", "volMin und volMax"),
+    _k("wettbewerbErstmalsAusgeschrieben", "Wettbewerb (erstmals ausgeschrieben)", "keine"),
+    _k("amtsinhaber", "Amtsinhaber", "keine"),
+    _k("netzwerkWieVieleSuchenPartner", "Netzwerk (wie viele suchen Partner)", "keine"),
+)
+
+# ── Lead-Detail ───────────────────────────────────────────────────────────────────────────
+# Uebersicht, Anforderungen, Kaeufer, Markt.
+# Quelle: api/lead-detail
+_LEAD_DETAIL: tuple[Kennzahl, ...] = (
+    _k("vergabenImSegment", "Vergaben im Segment", "markt", "Segmentgrösse gegen alle Segmente"),
+    _k("chancenScore", "Chancen-Score", "markt", "Perzentil über alle Segmente"),
+    _k("chronischErfolgloseBedarfe", "Chronisch erfolglose Bedarfe", "markt", "Anteil im Feld"),
+    _k("erfolgloseAusschreibungen", "Erfolglose Ausschreibungen", "markt", "Aufhebungsquote im Feld"),
+    _k("nurEinBieter", "Nur ein Bieter", "markt", "Einzelbieter-Quote im Feld"),
+    _k("vergabenGesamtKaeufer", "Vergaben gesamt (Käufer)", "keine"),
+    _k("vergabenProJahrKaeufer", "Vergaben pro Jahr (Käufer)", "markt", "Median aller Vergabestellen"),
+    _k("bekanntmachungBisZuschlag", "Bekanntmachung bis Zuschlag", "markt", "Median der Entscheidungsdauer"),
+    _k("typischerAuftragswertMedian", "Typischer Auftragswert (Median)", "profil", "eure Wertspanne"),
+    _k("bekanntesVolumen", "Bekanntes Volumen", "keine"),
+    _k("vergabenMitNurEinemBieterKaeufer", "Vergaben mit nur einem Bieter (Käufer)", "markt", "Marktüblich in der Branche"),
+    _k("bieterJeAusschreibungKaeufer", "Bieter je Ausschreibung (Käufer)", "markt", "Marktüblich in der Branche"),
+    _k("verschiedeneGewinnerKaeufer", "Verschiedene Gewinner (Käufer)", "markt", "Konzentration marktüblich"),
+    _k("anzahlZuschlagskriterien", "Anzahl Zuschlagskriterien", "markt", "üblich im Feld"),
+    _k("ampelEinschaetzungAusDenUnterlagen", "Ampel-Einschätzung aus den Unterlagen", "profil", "eure Nachweise gegen die Anforderungen"),
+    _k("bieterChecklisteErfuellungsgrad", "Bieter-Checkliste, Erfüllungsgrad", "profil", "abgehakt gegen gefordert"),
+    _k("fristInTagen", "Frist in Tagen", "keine"),
+    _k("vertragsende", "Vertragsende", "keine"),
+    _k("amtsinhaberSeitJahren", "Amtsinhaber seit Jahren", "markt", "übliche Verweildauer im Feld"),
+    _k("amtsinhaberZyklen", "Amtsinhaber-Zyklen", "markt", "übliche Zyklenzahl"),
+    _k("erfolgloseVersucheDiesesBedarfs", "Erfolglose Versuche dieses Bedarfs", "markt", "Anteil chronischer Bedarfe im Feld"),
+    _k("anzahlLose", "Anzahl Lose", "keine"),
+    _k("aufwandstreiberListe", "Aufwandstreiber (Liste)", "keine"),
+)
+
+# ── Strategie ─────────────────────────────────────────────────────────────────────────────
+# Zehn Bereiche, die dichteste Flaeche des Produkts.
+# Quelle: export_strategie.py
+_STRATEGIE: tuple[Kennzahl, ...] = (
+    _k("auslaufendeVertraege", "Auslaufende Verträge", "vorwert", "Stand der Vorwoche"),
+    _k("volumenBelegtPipeline", "Volumen belegt (Pipeline)", "keine"),
+    _k("volumenGeschaetzt", "Volumen geschätzt", "keine"),
+    _k("ohneWertangabe", "Ohne Wertangabe", "keine"),
+    _k("anzahlVertraegeInDerPipeline", "Anzahl Verträge in der Pipeline", "vorwert", "Stand der Vorwoche"),
+    _k("rahmenOhneErneutenWettbewerb", "Rahmen ohne erneuten Wettbewerb", "markt", "Anteil marktüblich"),
+    _k("groessteEinzelpostenAusschreibung", "Grösste Einzelposten: Ausschreibung", "keine"),
+    _k("groessteEinzelpostenVergabestelle", "Grösste Einzelposten: Vergabestelle", "keine"),
+    _k("groessteEinzelpostenWert", "Grösste Einzelposten: Wert", "profil", "eure Alleingrenze"),
+    _k("groessteEinzelpostenVertragsende", "Grösste Einzelposten: Vertragsende", "keine"),
+    _k("offenheitEinstufung", "Offenheit (Einstufung)", "markt", "abgeleitet aus den drei Zeilen darüber"),
+    _k("wechselEinstufung", "Wechsel (Einstufung)", "markt", "abgeleitet"),
+    _k("derStaerksteAnbieterHaelt", "Der stärkste Anbieter hält", "markt", "Konzentration marktüblich"),
+    _k("zuschlaegeJeVergabestelleAnteil", "Zuschläge je Vergabestelle, Anteil", "markt", "Spalte „vs. Markt\" steht schon daneben"),
+    _k("vergabenJeCpv36Mon", "Vergaben je CPV (36 Mon.)", "markt", "Feldgrösse gegen alle Felder"),
+    _k("trend12MonateFeld", "Trend 12 Monate (Feld)", "vorwert", "Vorjahresfenster"),
+    _k("buergschaftsquoteImFeld", "Bürgschaftsquote im Feld", "profil", "euer Rahmen"),
+    _k("naeheNachbarfeld", "Nähe (Nachbarfeld)", "keine"),
+    _k("gemeinsameAnbieterNachbarfeld", "Gemeinsame Anbieter (Nachbarfeld)", "markt", "Überlappung marktüblich"),
+    _k("einstiegsfreundlichFeld", "Einstiegsfreundlich (Feld)", "markt", "abgeleitet aus Bieterzahl und Neuzugängen"),
+    _k("bieterImFeldEinstiegsfenster", "Bieter im Feld (Einstiegsfenster)", "markt", "marktüblich"),
+    _k("wertEinstiegsfenster", "Wert (Einstiegsfenster)", "profil", "eure Wertspanne"),
+    _k("fristEinstiegsfenster", "Frist (Einstiegsfenster)", "keine"),
+    _k("belegtGesperrtBindung", "Belegt gesperrt (Bindung)", "markt", "Anteil gesperrten Volumens marktüblich"),
+    _k("gelisteteNamentlichBekannt", "Gelistete namentlich bekannt (%)", "keine"),
+    _k("gelisteteUnbekannt", "Gelistete unbekannt", "keine"),
+    _k("volumenBelegtBindung", "Volumen belegt (Bindung)", "keine"),
+    _k("rahmenvereinbarungName", "Rahmenvereinbarung (Name)", "keine"),
+    _k("gelistetJaNein", "Gelistet (ja/nein)", "keine"),
+    _k("wertRahmen", "Wert (Rahmen)", "profil", "eure Wertspanne"),
+    _k("laeuftAusRahmen", "Läuft aus (Rahmen)", "keine"),
+    _k("fensterAbNaechsterEinstieg", "Fenster ab (nächster Einstieg)", "vorwert", "ist ein Fenster seit letzter Woche aufgegangen?"),
+    _k("werHoltWasZuschlaegeJeAnbieter", "Wer holt was (Zuschläge je Anbieter)", "markt", "Marktanteil"),
+    _k("werHaeltWasVerteidigung", "Wer hält was (Verteidigung)", "markt", "marktübliche Verteidigungsquote"),
+    _k("fachgebietAnbieter", "Fachgebiet (Anbieter)", "keine"),
+    _k("vergabenProJahrAnbieter", "Vergaben pro Jahr (Anbieter)", "markt", "Median der Anbieter im Feld"),
+    _k("eigeneZuschlaege36Mon", "Eigene Zuschläge (36 Mon.)", "vorwert", "Vorjahresfenster"),
+    _k("eigeneVergabestellenAnzahl", "Eigene Vergabestellen (Anzahl)", "markt", "Streuung marktüblich"),
+    _k("regelwerkAusschreibungenDarunter", "Regelwerk: Ausschreibungen darunter", "profil", "euer bevorzugter Rahmen"),
+    _k("regelwerkVolumenBelegt", "Regelwerk: Volumen belegt", "profil", "eure Wertspanne"),
+    _k("nachweisGefordertInNVergaben", "Nachweis: gefordert in n Vergaben", "profil", "habt ihr ihn?"),
+    _k("vergabenIn36MonatenBereichskopf", "Vergaben in 36 Monaten (Bereichskopf)", "markt", "Feldgrösse"),
+    _k("verschiedeneAnbieterBereichskopf", "Verschiedene Anbieter (Bereichskopf)", "markt", "Wettbewerbsdichte marktüblich"),
+    _k("duennGemessenAusNVergaben", "Dünn, gemessen aus n Vergaben", "keine"),
+)
+
+# ── Regionen ──────────────────────────────────────────────────────────────────────────────
+# Geografische Verteilung.
+# Quelle: export_strategie.py
+_REGIONEN: tuple[Kennzahl, ...] = (
+    _k("medianDerKreise", "Median der Kreise", "markt", "steht schon als Bezug daneben"),
+    _k("vergabenJeKreis", "Vergaben je Kreis", "markt", "Median der Kreise"),
+    _k("vergabenInEurenRegionen", "Vergaben in euren Regionen", "profil", "regions aus dem Profil"),
+    _k("vergabenAusserhalbEurerRegionen", "Vergaben ausserhalb eurer Regionen", "profil", "regions"),
+    _k("volumenJeKreis", "Volumen je Kreis", "markt", "Median der Kreise"),
+    _k("kreiseOhneAmtlichenKontext", "Kreise ohne amtlichen Kontext", "keine"),
+    _k("veraenderungJeKreis", "Veränderung je Kreis", "vorwert", "Vorjahresfenster"),
+    _k("kreisnameUndZuordnung", "Kreisname und Zuordnung", "keine"),
+)
+
+# ── Vergabeblick (Kaeufersicht) ───────────────────────────────────────────────────────────
+# ⚠ Die einzige Flaeche mit einem normativen Ziel: mehr Bieter ist dort besser.
+# Nur hier ist eine Ampelfarbe berechtigt.
+# Quelle: export_strategie.py
+_VERGABEBLICK: tuple[Kennzahl, ...] = (
+    _k("vergaben36Mon", "Vergaben (36 Mon.)", "markt", "„Marktüblich\" steht daneben"),
+    _k("kmuAnteil", "KMU-Anteil", "markt", "„Marktüblich in Ihrer Branche\""),
+    _k("reinUeberPreis", "Rein über Preis", "markt", "„Marktüblich\""),
+    _k("wechselquote", "Wechselquote", "markt", "„Marktüblich\""),
+    _k("neuzugaengeProJahr", "Neuzugänge pro Jahr", "markt", "„Marktüblich\""),
+    _k("basisAusNLosenDuennBeiNFaellen", "Basis: aus n Losen, dünn bei n Fällen", "keine"),
+)
+
+# ── Firmenprofil ──────────────────────────────────────────────────────────────────────────
+# Bilanz einer Firma.
+# Quelle: export_firma_profiles.py
+_FIRMENPROFIL: tuple[Kennzahl, ...] = (
+    _k("zuschlaege36Monate", "Zuschläge 36 Monate", "markt", "Median der Anbieter im Feld"),
+    _k("volumenGesamt", "Volumen gesamt", "keine"),
+    _k("medianAuftragswert", "Median-Auftragswert", "markt", "Median im Feld"),
+    _k("verteidigungsquote", "Verteidigungsquote", "markt", "„Markt n %\" steht daneben"),
+    _k("laeuftAusIn18Monaten", "Läuft aus in ≤ 18 Monaten", "vorwert", "Stand der Vorwoche"),
+)
+
+# ── Treffergueete ─────────────────────────────────────────────────────────────────────────
+# Wie gut kennt uns das Profil, und was wuerde eine Aenderung bringen.
+# Quelle: api/trefferguete
+_TREFFERGUETE: tuple[Kennzahl, ...] = (
+    _k("trefferquote", "Trefferquote", "vorwert", "eigener Vorwert"),
+    _k("volumenGewonnen", "Volumen gewonnen", "vorwert", "eigener Vorwert"),
+    _k("wasEureListeJetztAendernWuerde", "Was eure Liste jetzt ändern würde", "profil", "Wirkung einer Profiländerung"),
+    _k("profilabdeckung", "Profilabdeckung", "profil", "60 % Mindestabdeckung"),
+    _k("wasWirNichtVerbessernKoennen4Gruende", "Was wir nicht verbessern können (4 Gründe)", "keine"),
+)
+
+# ── Marktpuls ─────────────────────────────────────────────────────────────────────────────
+# Saison und Jahresverlauf.
+# Quelle: export_marktpuls.py
+_MARKTPULS: tuple[Kennzahl, ...] = (
+    _k("laufendeAusschreibungen", "Laufende Ausschreibungen", "vorwert", "Vorwoche"),
+    _k("zuschlaegeLetzteNTage", "Zuschläge (letzte n Tage)", "vorwert", "Vorperiode"),
+    _k("aufhebungenLetzteNTage", "Aufhebungen (letzte n Tage)", "markt", "Aufhebungsquote marktüblich"),
+    _k("frischAberOhneVeroeffentlichteFrist", "Frisch, aber ohne veröffentlichte Frist", "keine"),
+    _k("saisonkurve", "Saisonkurve", "vorwert", "Vorjahre 2004 bis 2025"),
+    _k("jahresverlauf", "Jahresverlauf", "vorwert", "Vorjahre"),
+)
+
+# ── Cockpit ───────────────────────────────────────────────────────────────────────────────
+# Merkliste, Pipeline, Ergebnisse.
+# Quelle: lokal (Nutzerzustand)
+_COCKPIT: tuple[Kennzahl, ...] = (
+    _k("merklisteAnzahl", "Merkliste (Anzahl)", "keine"),
+    _k("pipelineJeStufe", "Pipeline je Stufe", "vorwert", "Vorwoche"),
+    _k("ergebnisseGewonnenVerloren", "Ergebnisse (gewonnen/verloren)", "vorwert", "Vorperiode"),
+    _k("abgeleitetGegenBestaetigt", "Abgeleitet gegen bestätigt", "keine"),
+)
+
+# ── Eignungs-Check (oeffentlich) ──────────────────────────────────────────────────────────
+# Ohne Konto sichtbar. ⚠ Was hier steht, liest ein Fremder als Erstes von uns.
+# Quelle: export_landing.py
+_EIGNUNGSCHECK: tuple[Kennzahl, ...] = (
+    _k("nVonMVerfahrenHaettenGepasst", "n von m Verfahren hätten gepasst", "markt", "m ist die Bezugsgrösse"),
+    _k("davonHeuteNochOffen", "Davon heute noch offen", "keine"),
+    _k("anforderungBelegtInN", "Anforderung belegt in n %", "markt", "Anteil über die ausgewerteten Unterlagen"),
+    _k("wertverteilungInStufen", "Wertverteilung in Stufen", "markt", "Verteilung über den Zuschnitt"),
+    _k("grundlageNAusgewerteteUnterlagen", "Grundlage: n ausgewertete Unterlagen", "keine"),
+)
 
 
-def nach_schluessel(gruppe: tuple[Kennzahl, ...] = ALLE) -> dict[str, Kennzahl]:
-    return {k.schluessel: k for k in gruppe}
+_FLAECHEN = (
+    (_LISTE, "liste", "explorerCore.COLS"),
+    (_LEAD_DETAIL, "lead-detail", "api/lead-detail"),
+    (_STRATEGIE, "strategie", "export_strategie.py"),
+    (_REGIONEN, "regionen", "export_strategie.py"),
+    (_VERGABEBLICK, "vergabeblick", "export_strategie.py"),
+    (_FIRMENPROFIL, "firmenprofil", "export_firma_profiles.py"),
+    (_TREFFERGUETE, "trefferguete", "api/trefferguete"),
+    (_MARKTPULS, "marktpuls", "export_marktpuls.py"),
+    (_COCKPIT, "cockpit", "lokal (Nutzerzustand)"),
+    (_EIGNUNGSCHECK, "eignungscheck", "export_landing.py"),
+)
+
+INVENTAR: tuple[Kennzahl, ...] = tuple(
+    k for gruppe, flaeche, quelle in _FLAECHEN for k in _mit(gruppe, flaeche, quelle)
+)
+
+ALLE: tuple[Kennzahl, ...] = DOC_SIGNALE + VERGABESTELLEN + INVENTAR
+
+
+def nach_flaeche() -> dict[str, tuple[Kennzahl, ...]]:
+    raus: dict[str, list[Kennzahl]] = {}
+    for k in ALLE:
+        raus.setdefault(k.flaeche, []).append(k)
+    return {f: tuple(v) for f, v in raus.items()}
+
+
+def nach_bezug() -> dict[str, tuple[Kennzahl, ...]]:
+    raus: dict[str, list[Kennzahl]] = {}
+    for k in ALLE:
+        raus.setdefault(k.bezug, []).append(k)
+    return {b: tuple(v) for b, v in raus.items()}
 
 
 def spalten(gruppe: tuple[Kennzahl, ...]) -> list[str]:
-    """Quellspalten der Gruppe — damit ein Export sie nicht von Hand aufzählen muss."""
-    return [k.quelle for k in gruppe]
+    """Quellspalten einer Gruppe — damit ein Export sie nicht von Hand aufzählen muss.
+
+    ⚠ Nur sinnvoll für Gruppen mit exakten Spalten (DOC_SIGNALE, VERGABESTELLEN). Eine
+    Kennzahl ohne `spalte` fällt heraus, statt einen erfundenen Namen zu liefern.
+    """
+    return [k.spalte for k in gruppe if k.spalte]

@@ -81,6 +81,46 @@ def test_der_renderer_zeigt_sie_auch():
         assert f"s.{k.schluessel}" in block, f"{k.schluessel} wird nicht angezeigt"
 
 
+def test_das_inventar_ist_vollstaendig():
+    """⚠ „Halbfertig" war Svens Wort dafür, und er hatte recht: ein Verzeichnis, das nur die
+    gerade angefassten Kennzahlen führt, ist eine Notiz, kein Verzeichnis. Die Zahl darf
+    wachsen; fällt sie, hat jemand etwas gelöscht, ohne es zu merken."""
+    assert len(kz.ALLE) >= 135, f"nur noch {len(kz.ALLE)} Kennzahl-Plätze"
+    assert len(kz.nach_flaeche()) >= 11, "eine ganze Fläche fehlt"
+
+
+def test_keine_kennzahl_steht_zweimal_auf_derselben_flaeche():
+    """⚠ Elf solche Zeilen sind beim Aufbau entstanden: dieselbe Kachel einmal mit exakter
+    Quellspalte und einmal aus dem Inventar. Dieselbe Zahl auf ZWEI Flächen ist dagegen in
+    Ordnung und Absicht."""
+    import re
+    gesehen = set()
+    for k in kz.ALLE:
+        # ⚠ Die KLAMMER NICHT WEGWERFEN. Sie ist hier die Unterscheidung, nicht Beiwerk:
+        # „Volumen belegt (Pipeline)" und „Volumen belegt (Bindung)" sind zwei Zahlen in
+        # zwei Bereichen derselben Ansicht, und „Vergaben pro Jahr (Anbieter)" ist die Zahl
+        # einer Firma, nicht einer Vergabestelle. Ein Abgleich ohne Klammer meldete sie als
+        # Doppelung und hätte beim Aufräumen echte Kennzahlen gelöscht.
+        norm = re.sub(r"[^a-zäöüß0-9]", "", k.label.lower())
+        paar = (k.flaeche, norm)
+        assert paar not in gesehen, f"{k.label} steht zweimal auf {k.flaeche}"
+        gesehen.add(paar)
+
+
+def test_jede_flaeche_nennt_ihre_quelle():
+    for k in kz.ALLE:
+        assert k.flaeche, f"{k.schluessel} ohne Fläche"
+        assert k.quelle, f"{k.schluessel} ohne Quelle"
+
+
+def test_eine_spalte_gibt_es_nur_wo_es_eine_gibt():
+    """⚠ Ein erfundener Spaltenname wäre schlimmer als die Lücke: der Export würde ihn
+    auswählen und scheitern, oder schlimmer, still eine falsche Spalte lesen."""
+    mit = [k for k in kz.ALLE if k.spalte]
+    assert all(k.flaeche in ("unterlagen", "strategie") for k in mit)
+    assert len(mit) == len(kz.DOC_SIGNALE) + len(kz.VERGABESTELLEN)
+
+
 def test_die_bezugsgroessen_stimmen_mit_der_anzeige():
     """Nur was einen Bezug hat, darf eine Leiste bekommen. Umgekehrt: eine Kennzahl mit
     Bezug `markt` und ohne Vergleichswert in der Anzeige ist eine unerfüllte Zusage."""

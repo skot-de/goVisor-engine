@@ -50,7 +50,22 @@ jeden davon anzeigen. Ein neues Signal fällt damit auf, statt liegenzubleiben.
 ⚠ **Und jede Kennzahl nennt dort ihre Bezugsgrösse** (`markt` / `vorwert` / `profil` /
 `keine`). Das ist keine Verzierung: eine Zahl ohne Vergleichswert kann nie auffällig werden
 und gehört dauerhaft in die Detailebene. Wer eine Kennzahl einträgt und keinen Bezug
-benennen kann, hat sie noch nicht verstanden — der Konstruktor lässt sie dann auch nicht zu.
+benennen kann, hat sie noch nicht verstanden; der Konstruktor lässt sie dann auch nicht zu.
+
+**Das Verzeichnis ist vollständig, nicht beispielhaft.** Stand 2026-09-01 stehen dort **135
+Kennzahl-Plätze über elf Flächen**, also alles, was ein Nutzer sieht. Die Verteilung sagt
+mehr als die Summe: 58 brauchen einen Marktwert, 39 können keinen haben und gehören dauerhaft
+nach unten, 23 vergleichen gegen ein Profilfeld, das wir schon haben, und 15 warten auf eine
+Historie je Nutzer, die es noch nicht gibt.
+
+⚠ **Plätze, nicht Metriken.** Dieselbe Zahl darf auf zwei Bildschirmen stehen und dort
+verschiedene Bezüge haben; gesucht wird nach Bildschirm, nicht nach Metrik. Verboten ist nur
+dieselbe Kennzahl zweimal auf DEMSELBEN Bildschirm.
+
+⚠ **Und nicht über den Namen entdoppeln.** Beim Aufbau meldete ein Abgleich, der Klammern
+wegwarf, drei Doppelungen, die keine waren: „Volumen belegt (Pipeline)" gegen „(Bindung)",
+„Wert (Einstiegsfenster)" gegen „(Rahmen)", „Vergaben pro Jahr" gegen „(Anbieter)". Die
+Klammer ist dort die Unterscheidung. Ein blindes Aufräumen hätte echte Kennzahlen gelöscht.
 
 **Merksatz für neue Länder wie für neue Felder:** wo eine Spaltenliste getippt wird, geht
 etwas verloren. Nicht heute, aber beim nächsten Feld.
