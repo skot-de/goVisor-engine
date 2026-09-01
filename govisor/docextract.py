@@ -245,14 +245,37 @@ def verarbeite(doctype: str, text: str, source_file: str, parsed: list) -> dict:
     """
     allowed = set(_TASKS[doctype]["req_types"]) if doctype in _TASKS else set()
     items, rejected = [], 0
+    # ⚠ WARUM DIE VERWERFUNGEN GETRENNT GEZAEHLT WERDEN (2026-09-01).
+    #
+    # Bisher lief alles in EINEN Zaehler. Damit war nicht beantwortbar, was am 2026-09-01
+    # zur Frage stand: von 4.747 Vorgaengen ohne Zuschlagskriterien-Dokument tragen 82,8 %
+    # das Wort trotzdem im Volltext, und bei 91,1 % lagen ausschliesslich Doktypen vor, die
+    # `zuschlagskriterium` gar nicht melden DUERFEN (`aufforderung`, `leistungsbeschreibung`
+    # …). Ob das Modell die Kriterien also findet und wir sie wegwerfen, oder ob es sie nicht
+    # findet, liess sich aus einer einzigen Zahl nicht ablesen.
+    #
+    # Drei Gruende, drei Zaehler — und der Unterschied ist keine Feinheit:
+    #   `beleg`  = das Modell hat behauptet, was nicht im Text steht  → Modellqualitaet
+    #   `typ`    = das Modell hat etwas Richtiges gemeldet, das dieser Doktyp nicht melden
+    #              darf                                                → UNSERE Regel
+    #   `schema` = kaputte Antwort                                     → Formatproblem
+    #
+    # `rejected` bleibt als Summe erhalten, damit nichts bricht, was darauf zaehlt.
+    gruende = {"schema": 0, "typ": 0, "beleg": 0}
     for raw_item in (parsed or [])[:_MAX_ITEMS]:
-        if not validate_item(raw_item, allowed):
+        if not validate_item(raw_item, None):
             rejected += 1
+            gruende["schema"] += 1
+            continue
+        if allowed and raw_item.get("req_type") not in allowed:
+            rejected += 1
+            gruende["typ"] += 1
             continue
         marking = raw_item["marking"]
         quote = raw_item.get("quote") or ""
         if marking in doctax.MARKINGS_REQUIRE_QUOTE and not verify_quote(quote, text):
             rejected += 1                                     # Belegpflicht verletzt → verwerfen (§6a.2)
+            gruende["beleg"] += 1
             continue
         rt = raw_item["req_type"]
         # Rechenbare Zusatzfelder (`wert_num`, `wert_einheit`, `wert_datum`, `wert_tage`).
@@ -272,4 +295,4 @@ def verarbeite(doctype: str, text: str, source_file: str, parsed: list) -> dict:
             "source_page": raw_item.get("source_page"),
             "marking": marking,
         })
-    return {"items": items, "rejected": rejected}
+    return {"items": items, "rejected": rejected, "rejected_gruende": gruende}

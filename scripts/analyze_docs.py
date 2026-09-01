@@ -363,6 +363,10 @@ def analyze_notice(files: list, structured: dict | None = None,
     # nach oben — wie viele LLM-Aufrufe es gab und wie viele davon unlesbar zurückkamen.
     llm_aufrufe, formatfehler = 0, 0
     rejected, sent_chars, truncated = 0, 0, []
+    # Verwerfungen nach Ursache — trennt Modellqualitaet (`beleg`) von UNSERER Regel
+    # (`typ`). Ohne diese Trennung war nicht beantwortbar, ob wir richtige Funde
+    # wegwerfen, weil der Doktyp sie nicht melden darf. S. docextract.verarbeite.
+    rej_gruende = {"schema": 0, "typ": 0, "beleg": 0}
     aus_dubletten = 0
     lb_art = None
     llm_started = False
@@ -416,6 +420,8 @@ def analyze_notice(files: list, structured: dict | None = None,
                                         docextract._parse_array(roh) or [])
         checklist.extend(res.get("items", []))
         rejected += res.get("rejected", 0)
+        for _g, _n in (res.get("rejected_gruende") or {}).items():
+            rej_gruende[_g] = rej_gruende.get(_g, 0) + _n
         if not res.get("skipped"):
             llm_aufrufe += 1
             if res.get("parse_error"):
@@ -448,6 +454,7 @@ def analyze_notice(files: list, structured: dict | None = None,
         "parsed_files": parsed_files,
         "other_documents": other_docs,
         "rejected_items": rejected,
+        "rejected_gruende": rej_gruende,
         "llm_aufrufe": llm_aufrufe,
         "formatfehler": formatfehler,
         "token_cost": round(sent_chars / CHARS_PER_TOKEN),
