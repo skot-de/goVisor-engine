@@ -1307,6 +1307,15 @@ echo ""
 $PY scripts/pruefe_verdrahtung.py \
   || echo "  → Verdrahtungspruefung meldet Befunde. Details: python3 scripts/pruefe_verdrahtung.py --offen"
 
+# ── Sonde 5: haelt ein endgueltiges Urteil noch? ─────────────────────────────────────────
+# Stati aus DAUERHAFT/KEIN_FEHLSCHLAG werden NIE WIEDER angefasst. Zwischen dem 20. und dem
+# 31.08. sind neun solcher Vermerke von Hand widerlegt worden, immer derselbe Satzbau: aus
+# dem Verhalten eines Portals wurde eine Eigenschaft des Vorgangs. Diese Sonde sucht die
+# Klasse selbst, damit es keine Handrunde mehr braucht.
+# ⚠ Sie schreibt nichts (Temp-Verzeichnis) und darf deshalb neben einem Abrufer laufen.
+$PY scripts/pruefe_endgueltige.py --stichprobe 8 \
+  || echo "  → Ein endgueltiges Urteil haelt nicht mehr. Details: python3 scripts/pruefe_endgueltige.py --offen"
+
 # ── BIBEL-PRUEFUNG ───────────────────────────────────────────────────────────────────────
 #
 # Die Laender-Bibel (docs/laender/) altert anders als Code: sie faellt nicht um, sie wird

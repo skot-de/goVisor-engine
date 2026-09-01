@@ -195,6 +195,26 @@ kein Einwand, sondern der Grund, warum der falsche Teil so lange unbemerkt blieb
 kamen zwei als *dauerhaft* abgeschriebene Gruppen (171 + 78): dort hielt das Urteil, aber
 mit einer Begründung, die sich widerlegen liess.
 
+### Die Prüfung ist jetzt eine Sonde, keine Handrunde
+
+Elf Abrufer von Hand nachzuprüfen war richtig — es einmal im Jahr zu wiederholen wäre es
+nicht. **Neun der geprüften Vermerke sind gefallen, und immer mit demselben Satzbau**: aus
+dem Verhalten eines Portals wurde eine Eigenschaft des Vorgangs. Ein endgültiges Urteil ist
+damit eine prüfbare Behauptung wie jede Zahl in diesem Projekt, und es wird behandelt wie
+eine:
+
+    python3 scripts/pruefe_endgueltige.py [--stichprobe N] [--offen]
+
+Sie zieht je Gruppe (Portal × Status) eine Stichprobe aus allem, was in DAUERHAFT oder
+KEIN_FEHLSCHLAG liegt, und lässt den **echten** Abrufer erneut laufen. Ein Urteil gilt als
+gefallen, wenn mindestens drei Sätze und mindestens 30 % zurückkehren — die zweite Bedingung
+verhindert, dass ein einzelner wiederveröffentlichter Vorgang eine ganze Klasse umwirft.
+Geeicht an den Messungen: rib `abgelaufen` 72 % (fiel), rib `nur_bekanntmachung` 17 % (hält),
+`weg` 3 % (hält). Sie läuft am Ende von `daily_leads.sh` als **Sonde 5**.
+
+⚠ Sie schreibt nichts und darf deshalb neben einem laufenden Abrufer laufen — der einzige
+Zugriff auf `data/docs`, für den das gilt.
+
 ⚠ **Eine Umleitung ist kein Urteil.** RIB leitet nicht mehr verfügbare Vorgänge auf
 `/public/unavailable` um, und der Abrufer schloss daraus `abgelaufen` — ein Status aus
 DAUERHAFT, also „nie wieder versuchen". Bei netserver, subreport, evergabe-online und aumass
