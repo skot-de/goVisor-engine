@@ -1019,6 +1019,14 @@ $PY scripts/export_doc_text.py || echo "  ⚠ doc-text.json nicht geschrieben �
 # Analyse-Arbeiters (252 MB) und bleibt lokal; das Frontend liest eine Datei je Vorgang.
 # Ohne diesen Aufruf zeigt das Lead-Detail die Auswertungen vom letzten Export.
 $PY scripts/export_doc_analysis.py || echo "  ⚠ doc-analysis nicht zerlegt — Lead-Detail zeigt weiter den alten Auswertungsstand."
+# Und dieselbe Auswertung in die GOLD-EBENE, als abfragbare Tabellen.
+#
+# ⚠ WARUM DAS NOETIG IST: bis zum 2026-09-01 lag die LLM-Auswertung ausschliesslich als
+# 7.188 lose JSON in `web/data/doc-analysis/` — also im Auslieferungsverzeichnis. 633.078
+# Einzelaussagen aus 165 Mio Token, das einzige Artefakt mit echten Kosten, und weder
+# abfragbar noch verbindbar noch dauerhaft: ein Neubau von `web/data` haette es gekostet.
+# Direkt hinter den Erzeuger gestellt, aus demselben Grund wie der Export darueber.
+$PY scripts/build_doc_analysis.py || echo "  ⚠ doc_analysis/doc_checklist nicht gebaut — die Auswertung bleibt auf dem alten Tabellenstand."
 # Verfahrenskalender (#16) — MUSS nach `export_doc_analysis` laufen: er liest die
 # Splitterdateien, die dort entstehen. Baut je offenem Lead die Terminliste aus
 # Bekanntmachung (Angebotsfrist) und Unterlagen (Bindefrist, Bieterfragen, Ortstermin …).
