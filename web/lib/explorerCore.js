@@ -1097,6 +1097,27 @@ function renderDocs(l){
       </ol>
       <div class="va-status" data-upstatus="${l.id}"></div>
     </section>`;
+    /* ⚠ AUS DIESEM LAND HABEN WIR NOCH NICHTS. Gemessen am 2026-09-01: Deutschland hat
+       Volltext fuer 9.788 Vorgaenge, Oesterreich und die Schweiz fuer NULL — bei zusammen
+       2.783 offenen Vergaben. Wer dort bietet, sieht bei uns nie eine Auswertung.
+
+       Die Bitte ist deshalb eine andere: nicht „lade hoch, dann geht es schneller", sondern
+       „ihr waert die ersten". Das ist der ehrlichste Hebel, den wir haben, und zugleich der
+       einzige Weg zu Unterlagen aus Portalen, an die wir nicht herankommen.
+
+       ⚠ `landOhneDocs` ist eine MESSUNG aus dem Export, kein fester Satz. Kommt die erste
+       Unterlage, verschwindet die Bitte von allein. Ein hart geschriebenes „keine einzige"
+       wuerde ab dem Tag luegen, ohne dass es jemand merkt. */
+    if (l.landOhneDocs) return `<section class="sec va-empty">
+      <h4>${tk("Vergabe-Analyse")}<span class="cov">${tk("noch keine Unterlagen aus diesem Land")}</span></h4>
+      <p class="va-sum">${tk("Aus diesem Land liegen uns bisher keine Vergabeunterlagen vor. Eure wären die ersten, und sie helfen allen, die hier bieten.")}</p>
+      <ol class="va-steps">
+        <li><span class="va-step-n">1</span><div>${dl}${zugang}</div></li>
+        <li><span class="va-step-n">2</span><div><button class="va-upload-btn" data-uploaddocs="${l.id}">${tk("Hier hochladen (ZIP/PDF)")}</button></div></li>
+        <li><span class="va-step-n">3</span><div class="va-step-res">${tk("Ampel + Checkliste erscheinen automatisch")}</div></li>
+      </ol>
+      <div class="va-status" data-upstatus="${l.id}"></div>
+    </section>`;
     return `<section class="sec va-empty">
       <h4>${tk("Vergabe-Analyse")}<span class="cov">${tk("aus euren Unterlagen")}</span></h4>
       <p class="va-sum">${tk("Aus den Vergabeunterlagen machen wir in Sekunden eine")}<b>${tk("Ampel-Einschätzung")}</b>${tk(", eine abhakbare")}<b>${tk("Bieter-Checkliste")}</b>${tk("(K.o.-Kriterien, Eignungsnachweise, Zuschlagsgewichte) und")}<b>${tk("füllen Firmenangaben vor")}</b>.</p>

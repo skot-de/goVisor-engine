@@ -324,6 +324,32 @@ KAT = (f"read_parquet('{_KAT_PATH}')" if pathlib.Path(_KAT_PATH).exists() else
        "(SELECT NULL::VARCHAR notice_id, NULL::VARCHAR branche WHERE false)")
 # Dokument-Signale (aus den Vergabeunterlagen extrahiert): überschreiben die dünnen eForms-
 # Aufwand-Felder, wo Unterlagen vorliegen. Guard: fehlt die Tabelle, leerer Stub.
+# ── Welche Laender haben ueberhaupt Vergabeunterlagen? ───────────────────────────────────
+# Fuer die Bitte an der Fundstelle (Aktivierung A). Gemessen am 2026-09-01: DE hat Volltext
+# fuer 9.788 Vorgaenge, AT und CH fuer **null** — bei zusammen 2.783 offenen Vergaben.
+#
+# ⚠ ALS MESSUNG, NICHT ALS SATZ. „Aus Oesterreich haben wir keine einzige Unterlage" ist heute
+# wahr und ist es an dem Tag nicht mehr, an dem die erste kommt. Ein fester Satz wuerde dann
+# luegen, ohne dass es jemand merkt — die Sorte Fehler, die dieses Projekt teuer bezahlt hat.
+# Der Export rechnet es jede Nacht neu; steht dort erst eine Unterlage, verschwindet die Bitte.
+def _laender_ohne_unterlagen() -> set[str]:
+    raus = set()
+    for land in ("DE", "AT", "CH"):
+        pfad = pathlib.Path(f"data/docs/{land}/doc_text.parquet")
+        if not pfad.exists():
+            raus.add(land)
+            continue
+        try:
+            n = con.execute(f"select count(distinct notice_id) from read_parquet('{pfad.as_posix()}')").fetchone()[0]
+        except Exception:                                          # noqa: BLE001
+            n = 0
+        if not n:
+            raus.add(land)
+    return raus
+
+
+OHNE_UNTERLAGEN = _laender_ohne_unterlagen()
+
 _DS_PATH = f"data/docs/{'DE'}/doc_signals.parquet"
 DS = (f"read_parquet('{_DS_PATH}')" if pathlib.Path(_DS_PATH).exists() else
       "(SELECT NULL::VARCHAR notice_id, NULL::BOOLEAN guarantee_required, NULL::BIGINT binding_days, "
@@ -1024,6 +1050,9 @@ def export_branche(key):
             # Vergabe-Land aus der country-Spalte (DE-Gold hat keine → NULL → Default DE;
             # CH-Gold trägt 'CH'). Speist den DACH-Länderfilter.
             "land": g("country") or "DE",
+            # Aus diesem Land liegt uns NOCH KEINE einzige Vergabeunterlage vor. Steuert die
+            # Bitte in der Vergabe-Analyse; siehe `_laender_ohne_unterlagen`.
+            "landOhneDocs": (g("country") or "DE") in OHNE_UNTERLAGEN,
               # Abgeleitetes Bundesland nur, wo keines dasteht — und mit Herkunft,
               # damit die Anzeige es kennzeichnen kann (s. `regionQuelle`).
               "region": g("buyer_region_name") or g("region") or g("region_abgeleitet_name") or "",
