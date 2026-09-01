@@ -125,6 +125,11 @@ def gold_integrity(cfg: Config, country: str = "DE") -> list[tuple[str, int]]:
          "quality.parquet", "notice_id"),
         ("doc_verworfen.notice → quality", "doc_verworfen.parquet", "notice_id",
          "quality.parquet", "notice_id"),
+        # Dieselbe Herkunft wie die drei darueber: `doc_qa_stand` zaehlt Fragenkataloge
+        # aus `doc_text`, also aus derselben Grundgesamtheit. Gegen `leads` gepruegt
+        # waere es derselbe Fehlalarm.
+        ("doc_qa_stand.notice → quality", "doc_qa_stand.parquet", "notice_id",
+         "quality.parquet", "notice_id"),
         ("incumbent_tenure.notice → quality", "incumbent_tenure.parquet", "notice_id",
          "quality.parquet", "notice_id"),
         ("notice_enrichment.notice → quality", "notice_enrichment.parquet", "notice_id",

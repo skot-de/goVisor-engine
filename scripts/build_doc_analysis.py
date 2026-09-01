@@ -43,6 +43,8 @@ import sys
 from datetime import datetime, timezone
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
+# Seit der Sprecher-Zuordnung braucht dieses Skript `govisor` — vorher kam es ohne aus.
+sys.path.insert(0, str(ROOT))
 
 # Kopf-Felder je Vorgang. `doctypes_seen`, `parsed_files` und Co. sind Listen — sie werden
 # gezaehlt statt gespeichert; wer die Namen braucht, geht an die Rohdatei. Eine Zahl in der
@@ -157,7 +159,8 @@ def _beleg(pos: dict) -> str | None:
 CHECK_SPALTEN = (
     "notice_id VARCHAR, nr BIGINT, req_type VARCHAR, bereich VARCHAR, theme VARCHAR, label VARCHAR, "
     "value VARCHAR, unit VARCHAR, wert_num DOUBLE, quote VARCHAR, beleg VARCHAR, "
-    "source_file VARCHAR, source_page VARCHAR, marking VARCHAR, parser VARCHAR"
+    "source_file VARCHAR, source_page VARCHAR, marking VARCHAR, parser VARCHAR, "
+    "sprecher VARCHAR"
 )
 
 
@@ -227,6 +230,61 @@ def lies(quelle: pathlib.Path) -> tuple[list, list, list, int]:
     return kopf, punkte, verworfen, kaputt
 
 
+def sprecher_nachtragen(punkte: list, land: str) -> tuple[list, dict]:
+    """Je Anforderung: wer hat den Satz gesagt?
+
+    Fuer alles ausser Fragenkatalogen ist die Antwort trivial und trotzdem wichtig: in
+    einer Leistungsbeschreibung spricht die Vergabestelle. Erst im Fragenkatalog stehen
+    zwei Stimmen nebeneinander, und nur dort muss gerechnet werden.
+
+    ⚠ Ohne `doc_text` (heute AT und CH) bleibt es bei `unklar` fuer die Fragenkataloge —
+    NICHT bei `vergabestelle`. Eine fehlende Quelle darf keine Zuschreibung erzeugen.
+    """
+    from govisor import doctypes, sprecher as sp
+    from govisor.docextract import _normalize
+
+    betroffen = {i for i, z in enumerate(punkte)
+                 if z[11] and doctypes.classify(str(z[11])) == "fragenantworten"}
+    ergebnis = [sp.VERGABESTELLE] * len(punkte)
+    zaehler: dict = {}
+    if not betroffen:
+        return [z + (sp.VERGABESTELLE,) for z in punkte], zaehler
+
+    quelle = ROOT / "data" / "docs" / land / "doc_text.parquet"
+    texte: dict = {}
+    if quelle.exists():
+        import duckdb
+        ids = sorted({punkte[i][0] for i in betroffen})
+        con = duckdb.connect()
+        con.register("_ids", __import__("pyarrow").table({"id": ids}))
+        for nid, _datei, roh in con.execute(
+                f"select notice_id, file, text from read_parquet('{quelle}') "
+                "where notice_id in (select id from _ids) and status='ok'").fetchall():
+            r = str(roh)
+            n, k = sp.indexkarte(r)
+            if n:
+                texte.setdefault(nid, []).append((r, n, k))
+        con.close()
+
+    for i in betroffen:
+        z = punkte[i]
+        zitat = _normalize(str(z[9] or ""))
+        wer = sp.UNKLAR
+        for roh, norm, karte in texte.get(z[0], []):
+            # ⚠ Ueber ALLE Dateien des Vorgangs suchen, nicht nur ueber `source_file`.
+            # `source_file` ist eine Zuschreibung des Modells: in der ersten Messung war
+            # das Zitat bei 47 % in der angegebenen Datei nicht auffindbar, ueber alle
+            # Dateien nur noch bei 15 %.
+            w = sp.zuordnen(roh, norm, karte, zitat, str(z[9] or ""))
+            if w != sp.UNKLAR:
+                wer = w
+                break
+        ergebnis[i] = wer
+    for i in betroffen:
+        zaehler[ergebnis[i]] = zaehler.get(ergebnis[i], 0) + 1
+    return [z + (ergebnis[i],) for i, z in enumerate(punkte)], zaehler
+
+
 def schreibe(con, pfad: pathlib.Path, zeilen: list, spalten: str) -> None:
     """Wie `gold._write`: ueber Arrow statt executemany — bei 400.000 Zeilen ist das der
     Unterschied zwischen Sekunden und Minuten."""
@@ -257,6 +315,7 @@ def main() -> int:
         return 0
 
     kopf, punkte, verworfen, kaputt = lies(quelle)
+    punkte, sprecher_zaehler = sprecher_nachtragen(punkte, a.land)
     if not kopf:
         print(f"  {quelle} ist leer — nichts zu tun.")
         return 0
@@ -269,6 +328,11 @@ def main() -> int:
     schreibe(con, ziel / a.land / "doc_verworfen.parquet", verworfen, VERWORFEN_SPALTEN)
     con.close()
 
+    if sprecher_zaehler:
+        # ⚠ Diese Zeile laut ausgeben. `unklar` ist hier die Mehrheit und muss es sein
+        # duerfen — verschwiegen sieht die Zuordnung vollstaendiger aus, als sie ist.
+        print("    Sprecher in Fragenkatalogen: " + ", ".join(
+            f"{k} {v:,}" for k, v in sorted(sprecher_zaehler.items(), key=lambda x: -x[1])))
     mit_zitat = sum(1 for z in punkte if z[9])
     mit_beleg = sum(1 for z in punkte if z[10])
     # Unbekannte Typen laut melden, nicht in einen Sammeltopf schieben.
