@@ -1122,6 +1122,21 @@ function renderDocs(l){
     if(s.certificates && s.certificates.length) rows.push(['Geforderte Zertifikate', s.certificates.join(', ')]);
     if(s.variants!=null) rows.push(['Nebenangebote', s.variants?'zugelassen':tk("nicht zugelassen")]);
     if(s.framework) rows.push(['Rahmenvereinbarung', 'ja']);
+    /* ⚠ Sechs Signale wurden bis zum 2026-09-01 erhoben und nie gezeigt. Sie fielen im
+       Export aus einer handgetippten Spaltenliste (s. govisor/kennzahlen.py).
+
+       Die Reihenfolge folgt dem, was eine Bietentscheidung kippt: erst was Aufwand macht
+       (Ortstermin, Praesentation), dann was Geld kostet (Vertragsstrafe), dann die Frist,
+       dann das Angenehme (Skonto). */
+    if(s.siteVisit) rows.push([tk('Ortstermin'), s.siteVisitMandatory
+      ? tk("verpflichtend") : tk("vorgesehen")]);
+    if(s.presentationRequired) rows.push([tk('Präsentation'), tk("gefordert")]);
+    if(s.penaltyPct!=null) rows.push([tk('Vertragsstrafe'), `${s.penaltyPct} %`]);
+    /* Die Bindefrist steht zweimal, und das ist Absicht: „90 Tage" sagt, wie lange ihr
+       gebunden seid, „bis 14.11." sagt, ob es in eure Auslastung passt. Das Datum ist im
+       Bestand ausserdem viel haeufiger ablesbar (5.747 gegen 150 Saetze). */
+    if(s.bindingUntil) rows.push([tk('Bindefrist bis'), s.bindingUntil]);
+    if(s.skontoPct!=null) rows.push([tk('Skonto'), `${s.skontoPct} %`]);
     const w = (s.weights && Object.keys(s.weights).length) ? s.weights : null;
     if(!rows.length && !w) return '';
     return `<section class="sec">

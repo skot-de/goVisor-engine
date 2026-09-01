@@ -142,6 +142,20 @@ def _behauptungen() -> list[tuple[str, str, bool, str]]:
                 "ocds" not in code and "decp" not in code,
                 "Code gefunden" if ("ocds" in code or "decp" in code) else "kein Code"))
 
+    # Kein NUTS-Vorgabewert im Bestand (Kapitel 12, D11/D12). Gegen SILBER geprueft, nicht
+    # gegen die Behauptung: der Fehler bestand ja gerade darin, dass ein gefuelltes Feld
+    # wie ein belegtes aussah. Faellt diese Zeile, hat eine Quelle wieder die Anschrift
+    # ihres Absenders an die Kaeufer verteilt.
+    spec3 = importlib.util.spec_from_file_location(
+        "pnv", ROOT / "scripts" / "pruefe_nuts_vorgabe.py")
+    pnv = importlib.util.module_from_spec(spec3)
+    spec3.loader.exec_module(pnv)
+    vorgabe = [f"{b['land']}/{b['nuts']}" for land in pnv._laender()
+               for b in pnv.befunde(land)
+               if b["verdaechtig"] and (land, b["nuts"]) not in pnv.AUSNAHMEN]
+    aus.append(("12", "keine Regionskennung verhaelt sich wie ein Vorgabewert",
+                not vorgabe, ", ".join(vorgabe) or "keine"))
+
     # Dokumentabdeckung AT/CH (Kapitel 03) — gegen die DATEN, nicht gegen has_documents.
     for land in ("AT", "CH"):
         p = ROOT / "data" / "docs" / land / "doc_text.parquet"
@@ -254,6 +268,32 @@ def _behauptungen() -> list[tuple[str, str, bool, str]]:
                 "capabilities" not in _rec and "profile.attributes" in _rec,
                 f"capabilities={'kommt vor' if 'capabilities' in _rec else 'kommt nicht vor'}, "
                 f"attributes={'kommt vor' if 'profile.attributes' in _rec else 'FEHLT'}"))
+
+
+    # Kapitel 06 behauptet: der Dokument-Signal-Export zaehlt seine Spalten NICHT mehr selbst
+    # auf, sondern liest sie aus `govisor/kennzahlen.py`. Genau dort gingen am 2026-09-01
+    # sechs Signale verloren — erkannt fuenfzehn, geschrieben sieben. Wer die Liste wieder
+    # von Hand tippt, macht das Kapitel falsch, und die naechsten Felder verschwinden still.
+    _exp = (ROOT / "scripts" / "export_doc_signals.py").read_text(encoding="utf-8")
+    _ohne_doc = re.sub(r'^"""(?:.|\n)*?"""', "", _exp, count=1)
+    _aus_verzeichnis = "kennzahlen.DOC_SIGNALE" in _ohne_doc
+    aus.append(("06", "der Doc-Signal-Export liest seine Spalten aus dem Kennzahlen-Verzeichnis",
+                _aus_verzeichnis,
+                "liest aus dem Verzeichnis" if _aus_verzeichnis
+                else "zaehlt die Spalten wieder selbst auf"))
+
+    # Und: jede Spalte im Parquet muss im Verzeichnis stehen. Ein neues Signal soll auffallen.
+    _sig = ROOT / "data" / "docs" / "DE" / "doc_signals.parquet"
+    if _sig.exists():
+        import duckdb as _dd
+        from govisor import kennzahlen as _kz
+        _spalten = {c[0] for c in _dd.connect().execute(
+            f"describe select * from read_parquet('{_sig.as_posix()}') limit 1").fetchall()}
+        _fehlt = sorted(_spalten - {"notice_id", "evidence"} - set(_kz.spalten(_kz.DOC_SIGNALE)))
+        aus.append(("06", "jedes Dokument-Signal im Parquet steht im Kennzahlen-Verzeichnis",
+                    not _fehlt,
+                    f"nicht eingetragen: {_fehlt}" if _fehlt
+                    else f"{len(_kz.DOC_SIGNALE)} Signale, alle eingetragen"))
 
     return aus
 

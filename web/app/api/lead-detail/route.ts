@@ -51,10 +51,19 @@ async function ladeVolltext(id: string): Promise<DocText | undefined> {
 
 // Strukturierte Anforderungs-Signale aus den Vergabeunterlagen (doc-signals.json, aus
 // signals-docs → export_doc_signals.py), je notice_id.
+// ⚠ DIESE LISTE MUSS VOLLSTAENDIG BLEIBEN. Bis zum 2026-09-01 nannte sie sieben Felder,
+// waehrend `doc_signals.parquet` fuenfzehn trug — sechs Signale waren gebaut, gemessen,
+// gespeichert und wurden nie gezeigt (binding_until 5.747 Saetze, penalty_pct 4.066,
+// site_visit 3.723, presentation_required 3.576, skonto_pct 393). Die Spalten stehen jetzt
+// in `govisor/kennzahlen.py`; `tests/test_kennzahlen.py` haelt fest, dass dieser Typ genau
+// deren Schluessel fuehrt.
 type DocSignals = {
-  guarantee: boolean | null; bindingDays: number | null; eligibility: number | null;
-  certificates: string[]; variants: boolean | null; framework: boolean | null;
-  weights: Record<string, number> | null;
+  guarantee: boolean | null; bindingDays: number | null; bindingUntil: string | null;
+  eligibility: number | null; certificates: string[]; variants: boolean | null;
+  framework: boolean | null; weights: Record<string, number> | null;
+  siteVisit: boolean | null; siteVisitMandatory: boolean | null;
+  presentationRequired: boolean | null;
+  penaltyPct: number | null; skontoPct: number | null;
 };
 let docSignals: Record<string, DocSignals> | null = null;
 async function loadDocSignals(): Promise<Record<string, DocSignals>> {

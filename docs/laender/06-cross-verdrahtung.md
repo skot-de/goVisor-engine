@@ -10,6 +10,51 @@ aufruft — nur eine Schicht weiter aussen. Genau das ist passiert: die 16 Gold-
 [Kapitel 05](05-gold-kette.md) waren gebaut, und der Export las **weiter nur DE**. Ohne
 diesen zweiten Schritt wäre die ganze Arbeit stumm verpufft.
 
+## ⚠ Die handgetippte Spaltenliste ist die dritte Form desselben Fehlers
+
+Kapitel 05 kennt den Builder, den niemand aufruft. Dieses Kapitel kennt den Export, der nur
+DE liest. Am 2026-09-01 kam die dritte Form dazu, und sie ist die leiseste: **der Export, der
+seine Spalten selbst aufzählt.**
+
+`govisor/docsignals.py` erkennt **fünfzehn** Anforderungs-Signale in den Vergabeunterlagen,
+`doc_signals.parquet` trägt alle fünfzehn — und `export_doc_signals.py` schrieb **sieben**
+davon ins Frontend. Dieselbe Liste stand danach ein zweites Mal im API-Typ und ein drittes
+Mal im Renderer. Verloren waren:
+
+| Signal | belegte Sätze |
+|---|---:|
+| `binding_until` | 5.747 |
+| `penalty_pct` (Vertragsstrafe) | 4.066 |
+| `site_visit` | 3.723 |
+| `site_visit_mandatory` | 3.723 |
+| `presentation_required` | 3.576 |
+| `skonto_pct` | 393 |
+
+**Warum es keine der bestehenden Prüfungen fand.** Die Verdrahtungssonden vergleichen, ob
+eine DATEI erzeugt und gelesen wird. Diese Datei wurde erzeugt und gelesen. Der Verlust
+steckte eine Ebene tiefer, in den Spalten, und dort schaut keine Sonde hin. Auch die
+Länderparität greift nicht: es fehlte in allen Ländern gleich.
+
+**Die Abhilfe ist kein weiterer Test, sondern eine Quelle.** Die Felder stehen jetzt in
+[`govisor/kennzahlen.py`](../../govisor/kennzahlen.py), und der Export liest sie von dort:
+
+```python
+felder = kennzahlen.DOC_SIGNALE
+spalten = ", ".join(k.quelle for k in felder)
+```
+
+`tests/test_kennzahlen.py` hält die drei Stellen zusammen: jede Parquet-Spalte muss im
+Verzeichnis stehen, der API-Typ muss genau dessen Schlüssel führen, und der Renderer muss
+jeden davon anzeigen. Ein neues Signal fällt damit auf, statt liegenzubleiben.
+
+⚠ **Und jede Kennzahl nennt dort ihre Bezugsgrösse** (`markt` / `vorwert` / `profil` /
+`keine`). Das ist keine Verzierung: eine Zahl ohne Vergleichswert kann nie auffällig werden
+und gehört dauerhaft in die Detailebene. Wer eine Kennzahl einträgt und keinen Bezug
+benennen kann, hat sie noch nicht verstanden — der Konstruktor lässt sie dann auch nicht zu.
+
+**Merksatz für neue Länder wie für neue Felder:** wo eine Spaltenliste getippt wird, geht
+etwas verloren. Nicht heute, aber beim nächsten Feld.
+
 ## Die Werkzeuge in `scripts/export_web_leads.py`
 
 ```python
