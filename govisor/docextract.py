@@ -112,6 +112,24 @@ _TASKS: dict[str, dict] = {
 }
 
 _MIN_QUOTE_LEN = 16          # alphanumerische Mindestlänge (kürzere „Zitate" sind kein Beleg)
+# Kurz, aber EINDEUTIG — zweiter Weg zum Beleg (2026-09-01, gemessen).
+#
+# Die Belegprüfung verwarf 920 Zitate, davon 536 (58,3 %) allein an der Längenschwelle. Der
+# Verdacht „die Schwelle ist zu hoch" lag nahe und war zu einfach: von den Verworfenen kommen
+# 350 (38,0 %) im Volltext GAR NICHT vor — echte Erfindungen, die die Prüfung zu Recht fängt.
+# Ein blosses Absenken hätte sie alle hereingelassen.
+#
+# Der tragfähige Unterschied ist nicht die Länge, sondern die EINDEUTIGKEIT: ein Zitat, das im
+# Dokument genau einmal vorkommt, zeigt auf eine Stelle — auch wenn es kurz ist. Gemessen:
+# 268 der Verworfenen (29,1 %) treffen genau einmal, und es ist genau die Sorte, die uns
+# fehlt — „X Urkalkulation", „Zone 9: Mo.-Sa. 9-22 Uhr", „Menge: 165 Meter". Formular-
+# ankreuzungen, Fristen, LV-Positionen. 147 (16,0 %) kommen mehrfach vor und bleiben draussen.
+#
+# ⚠ WARUM 10 UND NICHT 6. Bei 6 Zeichen kämen 262 statt 240 zurück — aber darunter „X nein"
+# und „12 m". Die sind statistisch eindeutig und als Beleg fuer einen MENSCHEN wertlos: sie
+# sagen nicht, worauf sie sich beziehen. Die Grenze liegt dort, wo ein Zitat noch etwas
+# aussagt, nicht dort, wo es noch auffindbar ist.
+_MIN_EINDEUTIG = 10
 _MAX_ITEMS = 40              # Deckel je Dokument (Ausreißer/Prompt-Injection-Flut bändigen)
 _MAX_VERWORFEN = 5           # Stichprobe des Verworfenen je Dokument — Fehlermuster, nicht Vollzähligkeit
 
@@ -130,11 +148,21 @@ def _normalize(s: str) -> str:
 
 
 def verify_quote(quote: str, text: str) -> bool:
-    """Wörtliches Zitat im Quelltext auffindbar (artefakt-normalisiert)? Belegpflicht §6a.2."""
+    """Wörtliches Zitat im Quelltext auffindbar (artefakt-normalisiert)? Belegpflicht §6a.2.
+
+    Zwei Wege zum Beleg, und der zweite ist der neue:
+      1. ab `_MIN_QUOTE_LEN` Zeichen genügt, dass das Zitat VORKOMMT,
+      2. darunter muss es GENAU EINMAL vorkommen — dann zeigt es trotzdem auf eine Stelle.
+
+    ⚠ Weg 2 ist teurer: `count` liest den ganzen Text, `in` bricht beim ersten Treffer ab.
+    Deshalb steht er hinter der Längenprüfung und nicht davor — der Normalfall bleibt schnell.
+    """
     q = _normalize(quote)
-    if len(q) < _MIN_QUOTE_LEN:
+    if len(q) >= _MIN_QUOTE_LEN:
+        return q in _normalize(text)
+    if len(q) < _MIN_EINDEUTIG:
         return False
-    return q in _normalize(text)
+    return _normalize(text).count(q) == 1
 
 
 def validate_item(item: dict, allowed_req_types: set[str] | None = None) -> bool:
