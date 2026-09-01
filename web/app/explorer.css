@@ -2284,3 +2284,19 @@ a.lb-kachel{text-decoration:none}
 /* In der Liste nur die Zahl (das Wort blendet passungAchse(l,true) selbst aus). */
 td.c-band .passung{margin-left:4px}
 td.c-band .passung i{display:none}
+
+/* MARKTÜBLICH in der Vergabestellen-Kachel (2026-09-01). Der Wert stand seit jeher in der
+   Käufersicht und fehlte in der Anbieter-Sicht, obwohl beide dieselbe Datei lesen.
+
+   Bewusst LEISE: eine dritte Zeile unter Label und Wert, kleiner als die Fussnote daneben.
+   Der Bezug soll die Zahl einordnen, nicht mit ihr um Aufmerksamkeit ringen. Und bewusst
+   OHNE Ampelfarbe: für einen Anbieter ist eine Stelle mit wenigen Bietern attraktiv, nicht
+   schlecht. Wer hier rot einfärbt, behauptet eine Richtung, die es nicht gibt. */
+.bstat-markt { display: block; margin-top: 3px; font-size: 10.5px; line-height: 1.4;
+  color: var(--ink-400); font-variant-numeric: tabular-nums; }
+.bstat-markt b { font-weight: 600; color: var(--ink-500); }
+/* Das Viertel ist der eigentliche Hinweis: „marktüblich 62 %" allein sagt noch nicht, ob
+   diese Stelle auffällt. Deshalb bekommt es die einzige Auszeichnung in der Zeile. */
+.bstat-markt em { font-style: normal; margin-left: 6px; padding: 1px 5px; border-radius: 3px;
+  background: var(--surface-3, #F1F3F2); color: var(--ink-500); font-size: 9.5px;
+  font-weight: 600; letter-spacing: .02em; white-space: nowrap; }

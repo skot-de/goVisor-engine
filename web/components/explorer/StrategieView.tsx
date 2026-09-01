@@ -327,9 +327,85 @@ function Vergabestellen({ data, onOpenBuyer }: { data: Strat; onOpenBuyer: (s: S
   );
 }
 
-/* Detailansicht je Stelle — Lieferantenbild + Konzentration (§5.3) */
-function StelleDetail({ s, onBack }: { s: Stelle; onBack: () => void }) {
+/* ── Marktüblich ────────────────────────────────────────────────────────────────────────
+ * Der Median über die Vergabestellen DERSELBEN Branche. Genau die Rechnung, die die
+ * Käufersicht (`VergabeblickView`) unter „Marktüblich" schon zeigt; sie stand dort seit
+ * jeher und in der Anbieter-Sicht nicht, obwohl beide dieselbe Datei lesen
+ * (`/api/strategie`) und `stellen` auch im Bieter-Kontext unredigiert bleibt.
+ *
+ * ⚠ ZWEI SCHWELLEN, BEIDE GEMESSEN, NICHT GERATEN.
+ * 1 · Eine einzelne Quote zählt nur mit `n >= 8` mit. Das ist dieselbe Grenze, die `Q` in
+ *     dieser Datei für „nicht mehr dünn" benutzt. Ein Median aus dünnen Quoten wäre eine
+ *     glatte Zahl über lauter Unsicherheiten.
+ * 2 · Unter zehn beitragenden Stellen gibt es GAR KEINEN Marktwert. Am 2026-09-01
+ *     nachgemessen: in DE tragen 39 bis 60 Stellen je Kennzahl, in AT 13 bis 59, in der
+ *     **Schweiz aber nur 1 bis 6 bei der Wechselquote**. Ein „marktüblich" aus drei Stellen
+ *     wäre dort eine erfundene Zahl mit dem Anschein einer Messung. Lieber keine Zeile.
+ *
+ * ⚠ KEINE WERTUNG. Die Käufersicht färbt „schlechter als der Markt" rot, weil eine
+ * Vergabestelle ein normatives Ziel hat: mehr Bieter ist besser. Ein Anbieter hat das
+ * nicht. Eine Stelle mit wenigen Bietern ist für ihn ATTRAKTIV, nicht schlecht; „nur über
+ * den Preis" ist gut, wenn er günstig ist, und schlecht, wenn er über Qualität punktet.
+ * Hier steht deshalb nur, wo die Stelle liegt, nie ob das gut ist. */
+const MIND_STELLEN = 10;
+const MIND_FAELLE = 8;
+
+type Lage = { med: number; unten: number; oben: number; n: number; gleich: boolean };
+
+function marktLage(alle: Stelle[], pick: (s: Stelle) => number | null | undefined): Lage | null {
+  const v = alle.map(pick).filter((x): x is number => x != null && Number.isFinite(x))
+                .sort((a, b) => a - b);
+  if (v.length < MIND_STELLEN) return null;
+  const bei = (p: number) => v[Math.min(v.length - 1, Math.floor(v.length * p))];
+  return { med: bei(0.5), unten: bei(0.25), oben: bei(0.75), n: v.length,
+           gleich: v[0] === v[v.length - 1] };
+}
+
+/** Quoten-Feld als Zahl, aber nur wenn es belastbar ist. */
+const ausQuote = (feld: "kmu" | "preis" | "wechsel" | "neuAnteil") => (s: Stelle) => {
+  const q = s[feld] as Quote | undefined;
+  return q && q.n >= MIND_FAELLE ? q.pct : null;
+};
+
+function Marktzeile({ eigen, lage, einheit = "" }: {
+  eigen: number | null | undefined; lage: Lage | null; einheit?: string;
+}) {
   const { t } = useSprache();
+  if (lage == null) return null;
+  const zahl = (v: number) => v.toLocaleString("de-DE", { maximumFractionDigits: 1 }) + einheit;
+  // Viertel statt erfundener Schwelle: „weicht ab" braucht sonst eine Grenze, die niemand
+  // begründen kann. Die Verteilung liefert sie mit.
+  // ⚠ OHNE STREUUNG GIBT ES KEINE LAGE. Liegen oberes und unteres Viertel auf demselben
+  // Wert, ist jede Stelle gleichzeitig in beiden, und die Bedingung unten stempelte JEDER
+  // Stelle „oberes Viertel" auf. Am 2026-09-01 gemessen: in der Schweiz tragen alle 104
+  // ausgewerteten Stellen denselben KMU-Anteil von 100 %; DE hat 64 verschiedene Werte,
+  // AT 31. Die Schweizer KMU-Kennzeichnung unterscheidet dort also nichts, und das
+  // gehoert gesagt statt in ein Viertel-Etikett verpackt.
+  const streuung = lage.oben > lage.unten;
+  const pos = lage.gleich ? t("bei allen Stellen gleich")
+    : !streuung || eigen == null ? null
+    : eigen >= lage.oben ? t("oberes Viertel")
+    : eigen <= lage.unten ? t("unteres Viertel") : null;
+  return (
+    <span className="bstat-markt" title={t("Median aus {n} Vergabestellen derselben Branche", { n: lage.n })}>
+      {t("marktüblich")} <b>{zahl(lage.med)}</b>
+      {pos ? <em>{pos}</em> : null}
+    </span>
+  );
+}
+
+/* Detailansicht je Stelle — Lieferantenbild + Konzentration (§5.3) */
+function StelleDetail({ s, alle, onBack }: { s: Stelle; alle: Stelle[]; onBack: () => void }) {
+  const { t } = useSprache();
+  // Marktüblich je Kennzahl: EINMAL rechnen, nicht sechsmal in der Darstellung.
+  const m = useMemo(() => ({
+    vergabenJahr: marktLage(alle, (x) => x.vergabenJahr),
+    neuAnteil: marktLage(alle, ausQuote("neuAnteil")),
+    bieterMedian: marktLage(alle, (x) => x.bieterMedian),
+    kmu: marktLage(alle, ausQuote("kmu")),
+    preis: marktLage(alle, ausQuote("preis")),
+    wechsel: marktLage(alle, ausQuote("wechsel")),
+  }), [alle]);
   // `konz` bleibt der deutsche Vergleichsschlüssel (s. `konzCls`) — übersetzt wird erst beim Rendern.
   const konz = s.top1 == null ? null : s.top1 < 25 ? "fragmentiert" : s.top1 <= 50 ? "moderat" : "oligopol";
   const konzCls = konz === "fragmentiert" ? "ok" : konz === "moderat" ? "mid" : "risk";
@@ -344,20 +420,26 @@ function StelleDetail({ s, onBack }: { s: Stelle; onBack: () => void }) {
 
       <div className="bstats">
         <div className="bstat"><span className="bstat-k">{t("Vergaben pro Jahr")}</span>
-          <span className="bstat-v"><span className="v-num">{s.vergabenJahr}</span></span></div>
+          <span className="bstat-v"><span className="v-num">{s.vergabenJahr}</span></span>
+          <Marktzeile eigen={s.vergabenJahr} lage={m.vergabenJahr} /></div>
         <div className="bstat"><span className="bstat-k">{t("Neue Anbieter (36 Mon.)")}</span>
           <span className="bstat-v">{s.neuAnteil ? <Q q={s.neuAnteil} /> : <span className="v-sparse">{t("nicht messbar")}</span>}</span>
-          <span className="bstat-m">{s.neuAnteil ? t("{neu} von {gesamt} Anbietern", { neu: s.neueAnbieter, gesamt: s.anbieterGesamt }) : t("Stelle zu kurz in den Daten")}</span></div>
+          <span className="bstat-m">{s.neuAnteil ? t("{neu} von {gesamt} Anbietern", { neu: s.neueAnbieter, gesamt: s.anbieterGesamt }) : t("Stelle zu kurz in den Daten")}</span>
+          <Marktzeile eigen={s.neuAnteil?.pct} lage={m.neuAnteil} einheit=" %" /></div>
         <div className="bstat"><span className="bstat-k">{t("Ø Bieter je Vergabe")}</span>
           <span className="bstat-v">{s.bieterMedian != null ? <span className="v-num">{s.bieterMedian}</span> : <span className="v-sparse">{t("zu wenig Daten")}</span>}</span>
-          <span className="bstat-m">{s.bieterN ? t("aus {n} Vergaben", { n: s.bieterN }) : ""}</span></div>
+          <span className="bstat-m">{s.bieterN ? t("aus {n} Vergaben", { n: s.bieterN }) : ""}</span>
+          <Marktzeile eigen={s.bieterMedian} lage={m.bieterMedian} /></div>
         <div className="bstat"><span className="bstat-k">{t("Zuschläge an KMU")}</span>
-          <span className="bstat-v"><Q q={s.kmu} /></span></div>
+          <span className="bstat-v"><Q q={s.kmu} /></span>
+          <Marktzeile eigen={s.kmu?.pct} lage={m.kmu} einheit=" %" /></div>
         <div className="bstat"><span className="bstat-k">{t("Nur über den Preis entschieden")}</span>
-          <span className="bstat-v"><Q q={s.preis} /></span></div>
+          <span className="bstat-v"><Q q={s.preis} /></span>
+          <Marktzeile eigen={s.preis?.pct} lage={m.preis} einheit=" %" /></div>
         <div className="bstat"><span className="bstat-k">{t("Wechsel bei Nachfolgevergaben")}</span>
           <span className="bstat-v"><Q q={s.wechsel} /></span>
-          <span className="bstat-m">{t("braucht verkettete Vorgänger, oft dünn")}</span></div>
+          <span className="bstat-m">{t("braucht verkettete Vorgänger, oft dünn")}</span>
+          <Marktzeile eigen={s.wechsel?.pct} lage={m.wechsel} einheit=" %" /></div>
       </div>
 
       {konz ? (
@@ -884,7 +966,7 @@ export function StrategieView({
           ? (data ? <Pipeline data={data} /> : <div className="st-head"><div><h4>{t("Pipeline")}</h4><p className="st-frage">{t("Lade Aggregate …")}</p></div></div>)
           : sektion === "stellen"
           ? (!data ? <div className="st-head"><div><h4>{t("Vergabestellen")}</h4><p className="st-frage">{t("Lade Aggregate …")}</p></div></div>
-             : offeneStelle ? <StelleDetail s={offeneStelle} onBack={() => setOffeneStelle(null)} />
+             : offeneStelle ? <StelleDetail s={offeneStelle} alle={data?.stellen ?? []} onBack={() => setOffeneStelle(null)} />
              : <Vergabestellen data={data} onOpenBuyer={setOffeneStelle} />)
           : sektion === "felder"
           ? (data ? <Felder data={data} /> : <div className="st-head"><div><h4>{t("Felder")}</h4><p className="st-frage">{t("Lade Aggregate …")}</p></div></div>)
