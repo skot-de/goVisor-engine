@@ -909,9 +909,14 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
             if (l) { Object.assign(l, d); logEvent(l, "analyze", t("Vergabeunterlagen hochgeladen & analysiert")); }
             // §5-4: Käufer nicht in den Unterlagen gefunden → Rückfrage (Analyse trotzdem gezeigt).
             const mm = (d as { leadMismatch?: { expected_buyer?: string } }).leadMismatch;
-            if (statusEl) statusEl.innerHTML = mm
-              ? `<span style="color:#b91c1c">${t("⚠ Diese Unterlagen erwähnen den Auftraggeber „{buyer}\" nicht, gehören sie wirklich zu diesem Lead? Die Analyse ist unten trotzdem angezeigt.", { buyer: (mm.expected_buyer || "").replace(/[<>&]/g, "") })}</span>`
-              : "";
+            // Tagesdeckel für hochgeladene Unterlagen erreicht: die Datei liegt bereits,
+            // nur die Auswertung wartet. Das MUSS dastehen — sonst sieht der Nutzer einen
+            // erfolgreichen Upload ohne Ergebnis und ohne Grund und lädt morgen erneut hoch.
+            const wartet = (d as { lbAnalyseWartet?: boolean }).lbAnalyseWartet;
+            const teile: string[] = [];
+            if (mm) teile.push(`<span style="color:#b91c1c">${t("⚠ Diese Unterlagen erwähnen den Auftraggeber „{buyer}\" nicht, gehören sie wirklich zu diesem Lead? Die Analyse ist unten trotzdem angezeigt.", { buyer: (mm.expected_buyer || "").replace(/[<>&]/g, "") })}</span>`);
+            if (wartet) teile.push(`<span style="color:#92400e">${t("Die Unterlagen sind gespeichert. Ausgewertet werden sie im nächsten Tageslauf ab 00:30 Uhr, weil das Auswertungskontingent für hochgeladene Unterlagen heute aufgebraucht ist. Sie müssen nichts noch einmal hochladen.")}</span>`);
+            if (statusEl) statusEl.innerHTML = teile.join("<br>");
             bump();
           } catch {
             if (statusEl) statusEl.textContent = t("Upload fehlgeschlagen.");

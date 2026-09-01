@@ -464,6 +464,26 @@ RESERVE_USD = float(os.environ.get("GOVISOR_RESERVE_USD", "1.00"))
 TAG_USD = float(os.environ.get("GOVISOR_TAG_USD", "6.00"))
 LIMIT_USD = float(os.environ.get("GOVISOR_LIMIT_USD", "5.00"))
 
+# ⚠ **EIGENER TAGESDECKEL FUER HOCHGELADENE UNTERLAGEN.** Ein Nutzer, der eine fehlende
+# Vergabeunterlage hochlaedt, soll seine Auswertung SOFORT bekommen und nicht bis zum
+# naechsten Tageslauf warten — auch dann nicht, wenn der allgemeine Tagesdeckel schon
+# gerissen ist. Deshalb steht `upload` in `VORRANG` und geht an `TAG_USD` vorbei.
+#
+# Genau deshalb braucht es hier eine zweite Grenze. Ohne sie waere der Vorrang ein Loch
+# im Deckel: beliebig viele Uploads, beliebig viele Dollar, und die einzige verbleibende
+# Bremse waere die Reserve — also das leere Konto. Ein Vorrang ohne eigene Obergrenze ist
+# kein Vorrang, sondern eine Abschaffung der Obergrenze.
+#
+# 2,00 $ sind gerechnet, nicht geraten: 0,048 $ je Vorgang (gemessen ueber 310 Vorgaenge)
+# ergeben rund 41 Uploads am Tag. Solange niemand weiss, wie oft die Funktion genutzt wird,
+# ist das die vorsichtige Seite — die Zahl gehoert angehoben, sobald echte Nutzung vorliegt,
+# nicht vorher.
+#
+# Was der Vorrang NICHT aushebelt: die Reserve (das Konto wird nicht leergeraeumt) und
+# das Lauf-Limit (eine Schleife bleibt eine Schleife). Beide gelten unveraendert weiter.
+UPLOAD_TAG_USD = float(os.environ.get("GOVISOR_UPLOAD_TAG_USD", "2.00"))
+VORRANG = ("upload",)        # Zwecke, die am allgemeinen Tagesdeckel vorbei duerfen
+
 # ── SCHONUNG: EIN TOPF, DEN DIE PRODUKTION NICHT ANRUEHRT ────────────────────────────
 #
 # Der Testtopf (`GOVISOR_TEST_USD`) begrenzt bisher nur den Pruefstand — er SCHUETZT ihn
@@ -482,6 +502,7 @@ SCHONUNG_USD = float(os.environ.get("GOVISOR_SCHONUNG_USD", "0.50"))
 GESCHONT = ("pruefstand", "bench")      # Zwecke, die aus dem geschonten Topf zahlen duerfen
 _TAKT = int(os.environ.get("GOVISOR_BUDGET_TAKT", "20"))
 
+_zweck_puffer: dict = {"tag": None, "bis": 0.0, "summen": {}}
 _geld_sperre = threading.Lock()
 _geld = {"start": None, "start_verbrauch": None, "stand": None, "verbrauch": None,
          "n": 0, "naechste": 1, "gewarnt": False, "stopp": None}
@@ -577,6 +598,45 @@ def _tagesbuch(stand: float) -> float:
     return max(0.0, float(d.get("start_stand", stand)) - stand)
 
 
+def _tagesbuch_zweck(zweck: str) -> float:
+    """Was HEUTE unter diesem Zweck gebucht wurde — aus dem Kostenbuch, nicht aus dem Konto.
+
+    ⚠ Warum nicht wie `_tagesbuch()` ueber den Kontostand: der Kontostand kennt keine
+    Zwecke. Er sagt, wie viel der Tag gekostet hat, nicht wofuer. Fuer eine Grenze, die
+    nur EINEN Zweck begrenzen soll, ist er blind.
+
+    ⚠ Was das kostet: das Kostenbuch kann Zeilen mit `kosten_usd: null` enthalten (der
+    Anbieter liefert die Kosten nicht immer mit). Diese Zeilen zaehlen hier als 0, die
+    Summe ist also eine **Untergrenze**. Das ist die richtige Richtung fuer beide
+    Verwendungen: beim Upload-Deckel wird im Zweifel etwas zu spaet gebremst (begrenzt
+    durch die Reserve), beim Abzug vom allgemeinen Deckel im Zweifel zu wenig abgezogen —
+    also zu frueh gebremst. Zu frueh bremsen ist der harmlose Fehler.
+
+    ⚠ `kostenbuch.lokaler_tag`, nicht `ts.startswith(heute)`. Dieselbe Falle wie in
+    `_tagesbuch()`: das Buch stempelt UTC, `heute` ist ein Ortsdatum. Der Praefixvergleich
+    verfehlt das Fenster 00:00-02:00 Ortszeit — also genau den Nachtlauf.
+    """
+    heute = _dt.date.today().isoformat()
+    zs = _zweck_puffer
+    if zs.get("tag") == heute and zs.get("bis", 0) > time.monotonic():
+        return float(zs["summen"].get(zweck, 0.0))
+    summen: dict = {}
+    try:
+        for z in kostenbuch.lies():
+            if z.get("kosten_usd") is None or kostenbuch.lokaler_tag(z) != heute:
+                continue
+            k = z.get("zweck")
+            summen[k] = summen.get(k, 0.0) + float(z["kosten_usd"])
+    except Exception:                                         # noqa: BLE001
+        # Ein unlesbares Kostenbuch darf keine Bremse ausfallen lassen. 0 heisst hier:
+        # der Upload-Deckel greift nicht, aber Reserve und Lauf-Limit gelten weiter.
+        return 0.0
+    # Kurz gepuffert: die Wache laeuft alle ~20 Aufrufe, das Buch waechst unbegrenzt.
+    # 60 s Unschaerfe kosten hoechstens eine Handvoll Cent ueber dem Deckel.
+    _zweck_puffer.update(tag=heute, bis=time.monotonic() + 60.0, summen=summen)
+    return float(summen.get(zweck, 0.0))
+
+
 def _schreibe_tagesbuch(pfad, d) -> None:
     """⚠ Ein stilles Scheitern hier macht den Tagesdeckel wirkungslos — es wird geklagt."""
     import json as _json
@@ -632,7 +692,8 @@ def _geldwache() -> None:
             # hatte statt beim Start — dazwischen lief ein anderer Prozess. Wer den Wert
             # im eigenen Protokoll hat, muss nicht raten.
             print(f"  Geldwache: Start bei {stand:.2f} $ "
-                  f"(Reserve {RESERVE_USD:.2f} · Lauf {LIMIT_USD:.2f} · Tag {TAG_USD:.2f})",
+                  f"(Reserve {RESERVE_USD:.2f} · Lauf {LIMIT_USD:.2f} · Tag {TAG_USD:.2f} · "
+                  f"Upload {UPLOAD_TAG_USD:.2f})",
                   flush=True)
         # ⚠ NICHT die Kontostandsdifferenz. Das ist im Modul die vierte Stelle derselben
         # Klasse — Tagesbuch, Abgleich und jetzt der Lauf-Deckel. Laedt jemand mitten im
@@ -654,10 +715,39 @@ def _geldwache() -> None:
         # Genau die Schaetzung lag am 22.08. um das Vierfache daneben.
         je_aufruf = ausgegeben / n if n and ausgegeben > 0 else 0.0
         # Fuer alles ausser dem Pruefstand liegen die Grenzen um die Schonung straffer.
-        schonung = 0.0 if getattr(_KONTEXT, "zweck", None) in GESCHONT else SCHONUNG_USD
+        _zweck = getattr(_KONTEXT, "zweck", None)
+        schonung = 0.0 if _zweck in GESCHONT else SCHONUNG_USD
+        # ── WELCHER DECKEL GILT ──────────────────────────────────────────────────────
+        # Zwecke aus `VORRANG` (heute: hochgeladene Unterlagen) zaehlen gegen ihren
+        # EIGENEN Tagesdeckel, nicht gegen den allgemeinen. Sie laufen also weiter, wenn
+        # der Tageslauf seinen Deckel schon gerissen hat — das ist der Sinn des Vorrangs.
+        #
+        # ⚠ Und umgekehrt genauso wichtig: was der Upload verbraucht hat, wird dem
+        # allgemeinen Deckel wieder ABGEZOGEN. Sonst frisst ein Tag mit vielen Uploads
+        # das Budget des Analyse-Arbeiters auf — genau der Fehler, der am 2026-08-23
+        # schon einmal einen Arbeitstag gekostet hat („wer zuerst da ist, nimmt alles").
+        # Zwei Toepfe heisst zwei Toepfe, in beide Richtungen.
+        #
+        # Die Schonung wird dem Upload-Deckel NICHT abgezogen: sie schuetzt den Pruefstand
+        # auf Kontoebene, und dort greift sie ueber die Reserve, die auch fuer Uploads gilt.
+        # Zweimal abziehen waere doppelt gezaehlt.
+        _vorrang = _zweck in VORRANG
+        _upload_heute = _tagesbuch_zweck("upload")
+        # ⚠ `_tagesbuch()` IMMER rufen, auch im Vorrang-Zweig, obwohl der Wert dort nicht
+        # gebraucht wird: die Funktion FUEHRT das Tagesbuch (Datumswechsel, Startstand).
+        # Nur im Nicht-Vorrang-Zweig gerufen, haengt der Anker davon ab, ob an diesem Tag
+        # zuerst ein Upload oder der Arbeiter lief — dieselbe Klasse von Reihenfolge-
+        # abhaengigkeit, die das Modul an drei anderen Stellen schon einmal hatte.
+        _tagesstand = _tagesbuch(stand)
+        if _vorrang:
+            deckel = UPLOAD_TAG_USD if UPLOAD_TAG_USD else None
+            heute = _upload_heute
+        else:
+            deckel = (TAG_USD - schonung) if TAG_USD else None
+            heute = max(0.0, _tagesstand - _upload_heute)
         luft = min(LIMIT_USD - ausgegeben if LIMIT_USD else float("inf"),
                    stand - RESERVE_USD - schonung,
-                   TAG_USD - schonung - _tagesbuch(stand) if TAG_USD else float("inf"))
+                   (deckel - heute) if deckel is not None else float("inf"))
         if je_aufruf > 0:
             # Halbe Luft als Sicherheitsabstand: lieber einmal zu oft fragen als einmal
             # zu spaet. Ein Kontostand-Abruf kostet nichts ausser einer Sekunde.
@@ -666,12 +756,19 @@ def _geldwache() -> None:
             schritte = _TAKT
         _geld["naechste"] = n + schritte
 
-        heute = _tagesbuch(stand)
         grund = None
-        if TAG_USD and heute > TAG_USD - schonung:
-            grund = (f"heute schon {heute:.2f} $ ausgegeben (Tagesdeckel {TAG_USD:.2f} $"
-                     + (f" minus {schonung:.2f} $ Schonung für den Prüfstand" if schonung
-                        else "") + ") — abgebrochen. Anheben: GOVISOR_TAG_USD")
+        if deckel is not None and heute > deckel:
+            if _vorrang:
+                grund = (f"für hochgeladene Unterlagen sind heute schon {heute:.2f} $ "
+                         f"ausgegeben (eigener Tagesdeckel {UPLOAD_TAG_USD:.2f} $) — "
+                         "abgebrochen. Anheben: GOVISOR_UPLOAD_TAG_USD")
+            else:
+                grund = (f"heute schon {heute:.2f} $ ausgegeben (Tagesdeckel {TAG_USD:.2f} $"
+                         + (f" minus {schonung:.2f} $ Schonung für den Prüfstand" if schonung
+                            else "")
+                         + (f", ohne {_upload_heute:.2f} $ für hochgeladene Unterlagen"
+                            if _upload_heute else "")
+                         + ") — abgebrochen. Anheben: GOVISOR_TAG_USD")
         elif stand < RESERVE_USD + schonung:
             grund = (f"Guthaben {stand:.2f} $ unter der Reserve von "
                      f"{RESERVE_USD + schonung:.2f} $"

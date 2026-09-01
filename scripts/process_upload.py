@@ -16,7 +16,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT / "scripts"))
-from govisor import docpipe, docsignals, docparse, docupload   # noqa: E402
+from govisor import docpipe, docsignals, docparse, docupload, llm   # noqa: E402
 import analyze_docs as ad                                       # noqa: E402  (analyze_notice + LLM/Multi-Key)
 
 DATA = ROOT / "web" / "data"
@@ -143,7 +143,29 @@ def main() -> int:
     # Typisierte Analyse: Parser-Schiene + priorisierte LLM-Extraktion (§6)
     structured = {n: r for n, e, d in raw if (r := docparse.parse(n, e, d))}
     files = [(n, texts.get(n, "")) for n, _, _ in raw]
-    an = ad.analyze_notice(files, structured=structured)
+    # ── ZWECK UND EIGENER DECKEL ────────────────────────────────────────────────────
+    # `zweck="upload"` ist hier nicht nur Buchhaltung, sondern die Weiche: `llm.VORRANG`
+    # laesst diesen Aufruf am allgemeinen Tagesdeckel vorbei, damit ein Nutzer, der eine
+    # fehlende Unterlage hochlaedt, seine Auswertung sofort bekommt und nicht bis 00:30
+    # wartet. Dafuer gilt `llm.UPLOAD_TAG_USD` als eigene Obergrenze.
+    #
+    # ⚠ Ohne diesen Rahmen liefe der Upload mit `zweck=None` — er zaehlte gegen den
+    # allgemeinen Deckel UND haette keinen Vorrang. Beides waere falsch, und beides waere
+    # im Betrieb nicht aufgefallen, weil trotzdem eine Auswertung herauskaeme.
+    try:
+        with llm.kontext(zweck="upload", vorgang=nid):
+            an = ad.analyze_notice(files, structured=structured)
+    except llm.BudgetErschoepft:
+        # ⚠ EHRLICH BLEIBEN. Der Text darf nicht „gleich fertig" versprechen: ist der
+        # Upload-Deckel erreicht, laeuft die Auswertung erst im naechsten Tageslauf.
+        # Der Volltext oben ist bereits gespeichert, die Datei ist also nicht verloren —
+        # das gehoert in die Meldung, sonst laedt der Nutzer sie morgen noch einmal hoch.
+        # ⚠ Nur ein Kennzeichen, KEIN fertiger Satz. Der Text gehoert in den Client, weil
+        # nur dort `t()` greift; eine hier gebaute Meldung waere in jeder anderen Sprache
+        # deutsch — dieselbe Falle, die die i18n-Mechanik schon zweimal erwischt hat.
+        res["lbAnalyseWartet"] = True
+        print(json.dumps(res, ensure_ascii=False))
+        return 0
     if an:
         an = {**an, **herkunft}          # s. o.: die Herkunft gehoert in den Satz, nicht in die Antwort
         da = _load("doc-analysis.json"); da[nid] = an; _save("doc-analysis.json", da)

@@ -819,3 +819,99 @@ def test_kurzes_zitat_gilt_nur_wenn_eindeutig():
 
     # der lange Normalfall bleibt unveraendert
     assert verify_quote("Der Bieter reicht X Urkalkulation ein", text)
+
+
+# ── UPLOAD-DECKEL: VORRANG MIT EIGENER OBERGRENZE ────────────────────────────────────
+#
+# Der Vorrang fuer hochgeladene Unterlagen ist genau die Sorte Aenderung, die still kaputt
+# geht: faellt der Zweck weg, laeuft der Upload einfach gegen den allgemeinen Deckel und
+# wartet bis 00:30 — das Ergebnis sieht nicht falsch aus, es kommt nur spaeter. Und faellt
+# der eigene Deckel weg, merkt es niemand, bis die Rechnung kommt. Deshalb wird hier das
+# VERHALTEN geprueft, nicht die Anwesenheit der Konstanten.
+
+def _wache_stellen(monkeypatch, *, stand, tag_allgemein, tag_upload):
+    """Geldwache mit gestellten Zahlen, damit die Entscheidung pruefbar wird."""
+    from govisor import llm
+    monkeypatch.setattr(llm, "kontostand", lambda frisch=False: stand)
+    monkeypatch.setattr(llm, "_tagesbuch", lambda s: tag_allgemein)
+    monkeypatch.setattr(llm, "_tagesbuch_zweck", lambda z: tag_upload if z == "upload" else 0.0)
+    llm._geld.update(start=stand, start_verbrauch=0.0, verbrauch=0.0,
+                     n=0, naechste=0, gewarnt=False, stopp=None)
+    return llm
+
+
+def _laeuft(llm, zweck):
+    """True, wenn die Wache diesen Zweck durchlaesst."""
+    llm._geld["stopp"] = None
+    llm._geld["n"] = 0
+    llm._geld["naechste"] = 0
+    with llm.kontext(zweck=zweck):
+        try:
+            llm._geldwache()
+            return True, ""
+        except llm.BudgetErschoepft as e:
+            return False, str(e)
+
+
+def test_upload_laeuft_weiter_wenn_der_tagesdeckel_gerissen_ist(monkeypatch):
+    """Der allgemeine Deckel ist voll, der Upload-Topf leer → Analyse ja, Upload ja."""
+    llm = _wache_stellen(monkeypatch, stand=50.0,
+                         tag_allgemein=llm_tag() + 1.0, tag_upload=0.0)
+    ok_analyse, grund = _laeuft(llm, "analyse")
+    assert not ok_analyse, "Der allgemeine Tagesdeckel haette greifen muessen"
+    assert "Tagesdeckel" in grund
+    ok_upload, _ = _laeuft(llm, "upload")
+    assert ok_upload, ("Hochgeladene Unterlagen muessen am allgemeinen Tagesdeckel vorbei — "
+                       "sonst wartet der Nutzer bis zum naechsten Tageslauf, obwohl ihm "
+                       "sofortige Auswertung zugesagt wurde.")
+
+
+def test_upload_hat_eine_eigene_obergrenze(monkeypatch):
+    """Vorrang ohne eigenen Deckel waere die Abschaffung des Deckels."""
+    from govisor import llm as _l
+    llm = _wache_stellen(monkeypatch, stand=50.0, tag_allgemein=0.0,
+                         tag_upload=_l.UPLOAD_TAG_USD + 0.01)
+    ok, grund = _laeuft(llm, "upload")
+    assert not ok, "Der eigene Upload-Tagesdeckel hat nicht gegriffen"
+    assert "hochgeladene" in grund.lower() and "GOVISOR_UPLOAD_TAG_USD" in grund, grund
+
+
+def test_upload_haelt_die_reserve_trotzdem_ein(monkeypatch):
+    """Vorrang heisst Vorrang vor dem Tagesdeckel, nicht vor dem leeren Konto."""
+    from govisor import llm as _l
+    llm = _wache_stellen(monkeypatch, stand=_l.RESERVE_USD - 0.01,
+                         tag_allgemein=0.0, tag_upload=0.0)
+    ok, grund = _laeuft(llm, "upload")
+    assert not ok, "Die Reserve muss auch fuer hochgeladene Unterlagen gelten"
+    assert "Reserve" in grund, grund
+
+
+def test_upload_frisst_dem_arbeiter_sein_budget_nicht(monkeypatch):
+    """Zwei Toepfe in BEIDE Richtungen: was der Upload verbraucht, zaehlt dem Tageslauf nicht."""
+    from govisor import llm as _l
+    # Der Tag hat insgesamt so viel gekostet wie der Deckel erlaubt — aber alles davon
+    # ging auf Uploads. Der Arbeiter muss trotzdem laufen duerfen.
+    voll = _l.TAG_USD - _l.SCHONUNG_USD
+    llm = _wache_stellen(monkeypatch, stand=50.0, tag_allgemein=voll + 0.5, tag_upload=voll + 0.5)
+    ok, grund = _laeuft(llm, "analyse")
+    assert ok, ("Upload-Ausgaben duerfen dem allgemeinen Tagesdeckel nicht angerechnet "
+                f"werden, sonst nimmt wer zuerst da ist alles. Grund: {grund}")
+
+
+def test_upload_setzt_seinen_zweck_und_meldet_ehrlich():
+    """Ohne `zweck='upload'` gibt es keinen Vorrang — und ohne Anzeige keine Ehrlichkeit."""
+    from govisor import llm as _l
+    quelle = (ROOT / "scripts" / "process_upload.py").read_text(encoding="utf-8")
+    assert 'zweck="upload"' in quelle, "process_upload.py setzt den Zweck nicht"
+    assert "upload" in _l.VORRANG, "llm.VORRANG kennt den Upload nicht"
+    assert "BudgetErschoepft" in quelle, "der Deckel wird im Upload nicht abgefangen"
+    assert "lbAnalyseWartet" in quelle, "der Upload meldet das Warten nicht zurueck"
+    schale = (ROOT / "web" / "components" / "explorer" / "ExplorerShell.tsx").read_text(encoding="utf-8")
+    assert "lbAnalyseWartet" in schale, (
+        "Der Client zeigt die Wartemeldung nicht an — der Nutzer saehe einen "
+        "erfolgreichen Upload ohne Auswertung und ohne Grund.")
+
+
+def llm_tag() -> float:
+    from govisor import llm as _l
+    return _l.TAG_USD - _l.SCHONUNG_USD
