@@ -59,6 +59,10 @@ def _kopf(notice_id: str, d: dict, stand: str) -> tuple:
         len(d.get("parsed_files") or []), len(d.get("doctypes_seen") or []),
         len(d.get("missing_expected") or []), len(d.get("truncated_doctypes") or []),
         int(d.get("rejected_items") or 0),
+        # Aufgeschluesselt ab 2026-09-01; aeltere Auswertungen tragen sie nicht (dann 0).
+        int((d.get("rejected_gruende") or {}).get("schema") or 0),
+        int((d.get("rejected_gruende") or {}).get("typ") or 0),
+        int((d.get("rejected_gruende") or {}).get("beleg") or 0),
         int(d.get("token_cost") or 0),
         d.get("provider"), d.get("model"), stand,
     )
@@ -69,7 +73,8 @@ KOPF_SPALTEN = (
     "n_checklist BIGINT, n_eignung BIGINT, n_zuschlag BIGINT, n_fristen BIGINT, "
     "n_ko_kriterien BIGINT, n_aufwand BIGINT, n_positions BIGINT, "
     "n_parsed_files BIGINT, n_doctypes BIGINT, n_missing_expected BIGINT, "
-    "n_truncated BIGINT, rejected_items BIGINT, token_cost BIGINT, "
+    "n_truncated BIGINT, rejected_items BIGINT, "
+    "rej_schema BIGINT, rej_typ BIGINT, rej_beleg BIGINT, token_cost BIGINT, "
     "provider VARCHAR, model VARCHAR, stand VARCHAR"
 )
 
