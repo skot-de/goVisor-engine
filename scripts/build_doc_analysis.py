@@ -73,8 +73,44 @@ KOPF_SPALTEN = (
     "provider VARCHAR, model VARCHAR, stand VARCHAR"
 )
 
+# ── Bereich: die Gruppierung, die `theme` nie war ────────────────────────────────────
+#
+# ⚠ `theme` aus der LLM-Auswertung ist eine VERLUSTBEHAFTETE UMKODIERUNG von `req_type`:
+# gemessen am 2026-09-01 bildet jeder der 18 req_type-Werte auf genau ein Thema ab, die
+# Spalte traegt also keine eigene Information. 70,5 % landen auf „sonstiges" — nicht weil die
+# Zuordnung scheitert, sondern weil das Vokabular eignungs-zentriert ist (Referenzen,
+# Zertifikate, Personal) und die Haelfte des Materials Vertrags- und Formalienfragen sind.
+# `zuschlagskriterium → projektorganisation` ist dabei schlicht falsch.
+#
+# `bereich` ordnet stattdessen nach der FRAGE, die ein Bieter stellt. Vollstaendig, explizit,
+# ohne Textanalyse — `req_type` traegt die Trennung bereits sauber.
+#
+# ⚠ KEIN STILLER SAMMELTOPF. Ein unbekannter req_type wird „unbekannt", nicht heimlich
+# einem Bereich zugeschlagen — sonst wandert eine neue Kategorie unbemerkt in eine falsche
+# Gruppe und faellt niemandem auf. `test_bereiche_decken_alle_req_types` schlaegt dann an.
+BEREICH = {
+    # Wer darf ueberhaupt bieten?
+    "eignung_personal": "eignung", "eignung_technisch": "eignung",
+    "referenz_anzahl": "eignung", "referenz_mindestwert": "eignung",
+    "zertifikat": "eignung", "berufshaftpflicht": "eignung", "mindestumsatz": "eignung",
+    # Was wird gekauft?
+    "technische_mindestanforderung": "leistung", "leistung_menge": "leistung",
+    # Zu welchen Bedingungen?
+    "haftung": "vertrag", "vertragsstrafe": "vertrag",
+    "kuendigung": "vertrag", "laufzeit": "vertrag",
+    # Was muss ich ausfuellen und beilegen?
+    "formalie": "formalitaet", "einzureichendes_dokument": "formalitaet",
+    # Wann?
+    "frist": "termin",
+    # Woran scheitere ich sofort?
+    "ausschlussgrund": "ausschluss",
+    # Wonach wird entschieden?
+    "zuschlagskriterium": "zuschlag",
+}
+
+
 CHECK_SPALTEN = (
-    "notice_id VARCHAR, nr BIGINT, req_type VARCHAR, theme VARCHAR, label VARCHAR, "
+    "notice_id VARCHAR, nr BIGINT, req_type VARCHAR, bereich VARCHAR, theme VARCHAR, label VARCHAR, "
     "value VARCHAR, unit VARCHAR, wert_num DOUBLE, quote VARCHAR, "
     "source_file VARCHAR, source_page VARCHAR, marking VARCHAR, parser VARCHAR"
 )
@@ -108,9 +144,10 @@ def lies(quelle: pathlib.Path) -> tuple[list, list, int]:
         for i, it in enumerate(d.get("checklist") or [], start=1):
             if not isinstance(it, dict):
                 continue
+            rt = it.get("req_type")
             punkte.append((
                 notice_id, i,
-                it.get("req_type"), it.get("theme"), it.get("label"),
+                rt, BEREICH.get(rt, "unbekannt"), it.get("theme"), it.get("label"),
                 None if it.get("value") is None else str(it.get("value")),
                 it.get("unit"), _zahl(it.get("wert_num")),
                 it.get("quote"), it.get("source_file"),
@@ -161,7 +198,11 @@ def main() -> int:
     schreibe(con, ziel / a.land / "doc_checklist.parquet", punkte, CHECK_SPALTEN)
     con.close()
 
-    mit_zitat = sum(1 for z in punkte if z[8])
+    mit_zitat = sum(1 for z in punkte if z[9])
+    # Unbekannte Typen laut melden, nicht in einen Sammeltopf schieben.
+    unbek = sorted({z[2] for z in punkte if z[3] == "unbekannt" and z[2]})
+    if unbek:
+        print(f"  ⚠ req_type ohne Bereich: {', '.join(unbek[:8])} — BEREICH ergaenzen.")
     print(f"  doc_analysis : {len(kopf):,} Vorgaenge")
     print(f"  doc_checklist: {len(punkte):,} Anforderungen, davon {mit_zitat:,} "
           f"({mit_zitat/max(len(punkte),1)*100:.1f} %) mit Zitat")
