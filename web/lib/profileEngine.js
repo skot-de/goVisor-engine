@@ -208,14 +208,37 @@ export function matchLead(lead, p, leadValue) {
   // „Keine Bietergemeinschaften" (#27 §6.3) unterdrückt den Partner-Zusatz.
   if (p.maxAlleine != null && leadValue != null && leadValue > p.maxAlleine && !ex.keine_bietergemeinschaft) {
     partner = true;
-    blocker.push({ art: 'partner', text: `Auftrag über eurer Alleingrenze (${fmtEur(p.maxAlleine)}) — realistisch nur mit Partner.` });
+    blocker.push({ art: 'partner', text: `Auftrag über eurer Alleingrenze (${fmtEur(p.maxAlleine)}), realistisch nur mit Partner.` });
   }
   // Bürgschaft: fordert der Lead eine Bürgschaft und sprengt sie euren Rahmen?
   const fordertBuerg = leadFordertBuergschaft(lead);
   if (fordertBuerg && p.buergschaft != null && leadValue != null && leadValue * BUERG_QUOTE > p.buergschaft) {
     blocker.push({ art: 'buergschaft', text: `Geforderte Bürgschaft (~${fmtEur(leadValue * BUERG_QUOTE)}) übersteigt euren Rahmen (${fmtEur(p.buergschaft)}).` });
   } else if (fordertBuerg && p.buergschaft == null) {
-    blocker.push({ art: 'buergschaft_offen', text: 'fordert eine Bürgschaft — hinterlegt euren Rahmen, dann prüfen wir das.' });
+    blocker.push({ art: 'buergschaft_offen', text: 'fordert eine Bürgschaft. Hinterlegt euren Rahmen, dann prüfen wir das.' });
+  }
+
+  /* Verpflichtender Ortstermin ausserhalb eures Gebiets.
+   *
+   * Ein Pflichttermin ist eine Zulassungsbedingung: wer nicht erscheint, darf nicht bieten.
+   * Innerhalb des eigenen Gebiets ist das ein Vormittag und keine Meldung wert; weit
+   * ausserhalb kippt es die Rechnung, und zwar BEVOR man die Unterlagen liest.
+   *
+   * ⚠ KEIN AUSSCHLUSS, sondern ein Hinweis wie der Partner-Fall. Man KANN hinfahren, und
+   * bei einem grossen Auftrag lohnt es sich. Die Relevanz zu nullen hiesse, dem Nutzer die
+   * Entscheidung abzunehmen, die ihm gehoert. Deshalb `art: 'ortstermin'` und kein
+   * `hartBlock`.
+   *
+   * ⚠ DREIWERTIG GELESEN. `ortsterminPflicht` ist nur gesetzt, wenn ueberhaupt ein Termin
+   * erkannt wurde; `null` heisst „die Unterlagen sagen nichts", nicht „kein Termin". Aus
+   * einer fehlenden Angabe darf keine Entwarnung werden.
+   *
+   * Gemessen am 2026-09-01: 3.723 Vorgaenge mit erkanntem Ortstermin, davon 108
+   * verpflichtend. Der Fall ist selten — und genau deshalb faellt er im Alltag durch, bis
+   * jemand vor der Absage steht. */
+  if (lead.anf && lead.anf.ortsterminPflicht === true && region === 'no') {
+    blocker.push({ art: 'ortstermin',
+      text: 'verlangt einen verpflichtenden Ortstermin außerhalb eures Gebiets. Ohne Teilnahme kein Angebot.' });
   }
 
   // ── Relevanz-Stufe + Passungszahl ──────────────────────────────────────────

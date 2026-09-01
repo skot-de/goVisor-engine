@@ -386,6 +386,14 @@ function LeerBriefing({ rows, alle = [], onPick, onGoto }: {
       { key: "vol", n: imFeld.filter((l) => teilStatus(l, "vol") === "no").length,
         titel: t("Außerhalb eurer Wertspanne"),
         text: t("liegen über oder unter der Spanne, die ihr angegeben habt.") },
+      /* ⚠ Der Ortstermin gehört HIERHIN und nicht nur ins Lead-Detail. Ein Pflichttermin
+         ist eine Zulassungsbedingung: wer nicht erscheint, darf nicht bieten. Wer das erst
+         beim Lesen der Unterlagen merkt, hat den Vorgang schon in der Merkliste. Gemessen
+         2026-09-01: 3.723 Vorgänge mit erkanntem Termin, davon 108 verpflichtend — selten,
+         und genau deshalb fällt er im Alltag durch. */
+      { key: "ortstermin", n: imFeld.filter((l) => blockerArt(l, "ortstermin")).length,
+        titel: t("Pflicht-Ortstermin außerhalb eures Gebiets"),
+        text: t("verlangen einen Termin vor Ort, an dem ihr teilnehmen müsst, um bieten zu dürfen.") },
     ].filter((x) => x.n > 0).sort((a, z) => z.n - a.n);
 
     return { offen, heiss, kuenftig, netz, zuschlaege, netzKaeufer, gewinner, luecken, imFeld, tageOf };

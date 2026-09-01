@@ -182,7 +182,8 @@ E = _union("lead_export", key="lead_id")
 _FILL_DA = any(pathlib.Path("data/gold").glob("*/lead_region_fill.parquet"))
 REGION_FILL = (_union("lead_region_fill", key="lead_id") if _FILL_DA else
                "(SELECT NULL::VARCHAR AS lead_id, NULL::VARCHAR AS buyer_nuts1_abgeleitet, "
-               "NULL::VARCHAR AS quelle WHERE false)")
+               "NULL::VARCHAR AS quelle, NULL::BOOLEAN AS widerspruch, "
+               "NULL::VARCHAR AS widerspruch_ort_nuts1 WHERE false)")
 CL = f"read_parquet('{G}/dim_cpv_label.parquet')"
 DC = f"read_parquet('{G}/dim_cpv.parquet')"
 # ⚠ ÜBER ALLE LÄNDER, nicht nur DE. Bis zum 2026-08-22 stand hier `{G}/lead_lot.parquet`
@@ -781,11 +782,24 @@ def export_branche(key):
                  ds.guarantee_required AS doc_guarantee, ds.binding_days AS doc_binding,
                  ds.eligibility_count AS doc_eligibility, ds.certificates AS doc_certs,
                  ds.variants_allowed AS doc_variants,
+                 -- ⚠ VIERTE STELLE MIT DERSELBEN HANDGETIPPTEN LISTE. `doc_signals` traegt
+                 -- fuenfzehn Spalten; hier standen fuenf. Die drei unten kippen eine
+                 -- Bietentscheidung und muessen deshalb schon in der LISTE liegen, nicht
+                 -- erst im Detail: ein Blocker, den man erst nach dem Oeffnen sieht,
+                 -- filtert nichts. Welche Signale es gibt, steht in `govisor/kennzahlen.py`.
+                 ds.site_visit AS doc_ortstermin,
+                 ds.site_visit_mandatory AS doc_ortstermin_pflicht,
+                 ds.presentation_required AS doc_praesentation,
                  -- Herkunft mitliefern statt nur den Wert: die Anzeige soll sagen koennen,
                  -- dass ein Bundesland ABGELEITET ist. Ein stillschweigend ergaenzter Wert
                  -- sieht aus wie eine Quelle — und danach wird gefiltert.
                  dn1.name AS region_abgeleitet_name,
-                 CASE WHEN e.buyer_nuts1 IS NOT NULL AND e.buyer_nuts1 <> '' THEN 'amtlich'
+                 -- ⚠ `widerspruechlich` steht VOR `amtlich`. Ein Wert, dem der
+                 -- Kaeuferort widerspricht, ist nicht belegt — er steht nur da.
+                 -- Bis zum 2026-09-01 hiessen 172 Magdeburger Leads unter
+                 -- „Nordrhein-Westfalen" `amtlich` (s. scripts/region_ableiten.py).
+                 CASE WHEN coalesce(rf.widerspruch, false) THEN 'widerspruechlich'
+                      WHEN e.buyer_nuts1 IS NOT NULL AND e.buyer_nuts1 <> '' THEN 'amtlich'
                       WHEN rf.buyer_nuts1_abgeleitet IS NOT NULL THEN 'abgeleitet'
                  END AS region_quelle
           FROM {E} e
@@ -1013,7 +1027,10 @@ def export_branche(key):
               # Abgeleitetes Bundesland nur, wo keines dasteht — und mit Herkunft,
               # damit die Anzeige es kennzeichnen kann (s. `regionQuelle`).
               "region": g("buyer_region_name") or g("region") or g("region_abgeleitet_name") or "",
-              "regionQuelle": g("region_quelle") or ("amtlich" if g("buyer_nuts1") else None),
+              # Kein `or "amtlich"`-Notausgang mehr: `region_quelle` deckt jetzt auch
+              # den Widerspruchsfall ab, und ein Fallback wuerde ihn wieder zu
+              # „belegt" machen — genau der Fehler, der behoben wurde.
+              "regionQuelle": g("region_quelle"),
               "nuts": g("buyer_nuts") or "",
             # Koordinate (Käufersitz) für die echte PLZ-Umkreissuche (Haversine im Frontend);
             # None, wenn kein Geo-Bezug (bundesweite/ortsungebundene Leads) — ehrlich leer.
@@ -1097,6 +1114,16 @@ def export_branche(key):
                 "bietergemeinschaft": (bool(g("consortium_allowed"))
                                        if g("consortium_allowed") is not None else None),
                 "zertifikate": (str(g("doc_certs")).split(",") if g("doc_certs") else []),
+                # ⚠ Ortstermin: DREI Zustaende, und der mittlere ist der wichtige.
+                # `None` = die Unterlagen sagen nichts. `True/False` bei `pflicht` gilt nur,
+                # wenn ueberhaupt ein Termin erkannt wurde — sonst waere „nicht
+                # verpflichtend" eine Aussage ueber einen Termin, den es nicht gibt.
+                # Gemessen 2026-09-01: 3.723 Vorgaenge mit Termin, davon 108 verpflichtend.
+                "ortstermin": (bool(g("doc_ortstermin")) if g("doc_ortstermin") is not None else None),
+                "ortsterminPflicht": (bool(g("doc_ortstermin_pflicht"))
+                                      if g("doc_ortstermin") else None),
+                "praesentation": (bool(g("doc_praesentation"))
+                                  if g("doc_praesentation") is not None else None),
                 "quelle": ("unterlagen" if g("doc_eligibility") or g("doc_guarantee") is not None else "eforms"),
             },
             "status": "ungesichtet", "seen": None, "merk": None,
