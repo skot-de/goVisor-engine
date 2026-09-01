@@ -113,6 +113,7 @@ _TASKS: dict[str, dict] = {
 
 _MIN_QUOTE_LEN = 16          # alphanumerische Mindestlänge (kürzere „Zitate" sind kein Beleg)
 _MAX_ITEMS = 40              # Deckel je Dokument (Ausreißer/Prompt-Injection-Flut bändigen)
+_MAX_VERWORFEN = 5           # Stichprobe des Verworfenen je Dokument — Fehlermuster, nicht Vollzähligkeit
 
 
 def supported(doctype: str) -> bool:
@@ -262,20 +263,44 @@ def verarbeite(doctype: str, text: str, source_file: str, parsed: list) -> dict:
     #
     # `rejected` bleibt als Summe erhalten, damit nichts bricht, was darauf zaehlt.
     gruende = {"schema": 0, "typ": 0, "beleg": 0}
+    # ⚠ EINE STICHPROBE DES VERWORFENEN AUFHEBEN, nicht nur zaehlen.
+    #
+    # Am 2026-09-01 gemessen: 96,2 % aller Verwerfungen sind `beleg` — das Modell behauptet
+    # etwas, das nicht woertlich im Text steht. Damit ist bekannt, DASS es scheitert, aber
+    # nicht WORAN. Eine Zahl laesst sich nicht diagnostizieren: paraphrasiert das Modell?
+    # Zitiert es aus einer Tabelle, die die PDF-Extraktion zerlegt hat? Ueberspringt es
+    # Zeilenumbrueche falsch? Ohne das verworfene Zitat ist jede Antwort geraten.
+    #
+    # Gedeckelt auf `_MAX_VERWORFEN` je Dokument und auf 300 Zeichen je Zitat: es geht um
+    # Fehlermuster, nicht um Vollstaendigkeit. Kostet keine Token.
+    verworfen_proben = []
+
+    def _merke(grund, item):
+        if len(verworfen_proben) < _MAX_VERWORFEN:
+            verworfen_proben.append({
+                "grund": grund,
+                "req_type": (item or {}).get("req_type"),
+                "marking": (item or {}).get("marking"),
+                "quote": str((item or {}).get("quote") or "")[:300],
+            })
+
     for raw_item in (parsed or [])[:_MAX_ITEMS]:
         if not validate_item(raw_item, None):
             rejected += 1
             gruende["schema"] += 1
+            _merke("schema", raw_item if isinstance(raw_item, dict) else None)
             continue
         if allowed and raw_item.get("req_type") not in allowed:
             rejected += 1
             gruende["typ"] += 1
+            _merke("typ", raw_item)
             continue
         marking = raw_item["marking"]
         quote = raw_item.get("quote") or ""
         if marking in doctax.MARKINGS_REQUIRE_QUOTE and not verify_quote(quote, text):
             rejected += 1                                     # Belegpflicht verletzt → verwerfen (§6a.2)
             gruende["beleg"] += 1
+            _merke("beleg", raw_item)
             continue
         rt = raw_item["req_type"]
         # Rechenbare Zusatzfelder (`wert_num`, `wert_einheit`, `wert_datum`, `wert_tage`).
@@ -295,4 +320,5 @@ def verarbeite(doctype: str, text: str, source_file: str, parsed: list) -> dict:
             "source_page": raw_item.get("source_page"),
             "marking": marking,
         })
-    return {"items": items, "rejected": rejected, "rejected_gruende": gruende}
+    return {"items": items, "rejected": rejected, "rejected_gruende": gruende,
+            "rejected_proben": verworfen_proben}

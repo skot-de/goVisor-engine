@@ -367,6 +367,7 @@ def analyze_notice(files: list, structured: dict | None = None,
     # (`typ`). Ohne diese Trennung war nicht beantwortbar, ob wir richtige Funde
     # wegwerfen, weil der Doktyp sie nicht melden darf. S. docextract.verarbeite.
     rej_gruende = {"schema": 0, "typ": 0, "beleg": 0}
+    rej_proben = []          # Stichprobe des Verworfenen — WORAN es scheitert, nicht nur wie oft
     aus_dubletten = 0
     lb_art = None
     llm_started = False
@@ -422,6 +423,9 @@ def analyze_notice(files: list, structured: dict | None = None,
         rejected += res.get("rejected", 0)
         for _g, _n in (res.get("rejected_gruende") or {}).items():
             rej_gruende[_g] = rej_gruende.get(_g, 0) + _n
+        for _pr in (res.get("rejected_proben") or []):
+            if len(rej_proben) < 12:
+                rej_proben.append({**_pr, "doctype": dt})
         if not res.get("skipped"):
             llm_aufrufe += 1
             if res.get("parse_error"):
@@ -455,6 +459,7 @@ def analyze_notice(files: list, structured: dict | None = None,
         "other_documents": other_docs,
         "rejected_items": rejected,
         "rejected_gruende": rej_gruende,
+        "rejected_proben": rej_proben,
         "llm_aufrufe": llm_aufrufe,
         "formatfehler": formatfehler,
         "token_cost": round(sent_chars / CHARS_PER_TOKEN),
