@@ -70,6 +70,44 @@ Klammer ist dort die Unterscheidung. Ein blindes Aufräumen hätte echte Kennzah
 **Merksatz für neue Länder wie für neue Felder:** wo eine Spaltenliste getippt wird, geht
 etwas verloren. Nicht heute, aber beim nächsten Feld.
 
+### Der Beleg gehört zur Zahl, und er war der schlimmste Fall
+
+`evidence` trägt je Signal den Satz aus der Vergabeunterlage, auf den sich die Behauptung
+stützt. Median 88 Zeichen, **9.409 von 9.788 Vorgängen mit Volltext = 96 %** (gemessen
+2026-09-01), seit jeher vollständig, seit jeher unsichtbar. In einem Produkt, dessen Verkaufsargument Belegbarkeit
+ist, war das die teuerste Lücke von allen.
+
+⚠ **Und beinahe wäre sie geblieben.** Beim Aufbau des Verzeichnisses stand `evidence`
+ausdrücklich NICHT drin, mit der Begründung „Belegtext, keine eigene Kennzahl". Als Kennzahl
+stimmt das. Als Entscheidung war es falsch: damit hatte der Beleg **gar keinen Ort**, an dem
+jemand merkt, dass er nicht ankommt. Wer etwas aus einem Verzeichnis ausschliesst, muss sagen
+können, wo es stattdessen geführt wird; sonst hat er es nicht eingeordnet, sondern versteckt.
+
+⚠ **Beim Anzeigen entstand ein Sicherheitsloch.** Damit der Beleg-Span durchkommt, musste das
+`esc()` aus der Zeilendarstellung verschwinden. Seitdem escaped **jede** `rows.push`-Stelle
+selbst, und das ist keine Formsache: Zertifikatsnamen und das Bindefrist-Datum kommen aus
+Vergabeunterlagen, also aus Text, den jemand anderes geschrieben hat.
+`tests/test_beleg.py::test_jede_zeile_escaped_selbst` prüft es, weil eine neue Zeile ohne
+`esc()` im Code völlig harmlos aussieht.
+
+### Was das Verzeichnis über den Rest sagt
+
+Es führt seit dem 2026-09-01 auch, was **noch nicht angezeigt wird** (Fläche `geplant`, 12
+Einträge aus der Übergabe „einzigartige Kennzahlen + Aktivierung"). Das ist der Zweck: eine
+Kennzahl, die niemand führt, wird beim nächsten Zählen wieder als Fund entdeckt.
+
+⚠ **Zehn der zwölf haben heute keine Datengrundlage.** `doc_checklist`, `doc_analysis`,
+`doc_verworfen` und `document_duplicates` existieren als Dateien nicht; sie sind im Tageslauf
+verdrahtet und entstehen erstmals in der Nacht auf den 02.09. Wer eine davon bauen will,
+prüft zuerst, ob die Datei da ist. Die Zahlen im Papier stammen aus einer Probefassung.
+
+⚠ **Zwei der fünfzehn Papier-Kennzahlen laufen bereits** und stehen deshalb nicht unter
+`geplant`: die bezifferte Vertragsstrafe und die Zuschlagsgewichtung aus den Unterlagen. Der
+Übergabe nach ist Letztere der stärkste Neuzugang; sie rendert seit jeher mit Balken. Ihr
+fehlt keine Anzeige, ihr fehlt **Abdeckung**: am 2026-09-01 waren es 205 von 1.829 offenen
+Vorgängen mit mehreren Zuschlagskriterien. Das ist der Unterschied, auf den es bei diesen Kennzahlen ankommt, und er
+verschwindet, wenn man „nicht sichtbar" und „nicht gebaut" verwechselt.
+
 ## Die Werkzeuge in `scripts/export_web_leads.py`
 
 ```python

@@ -1116,32 +1116,68 @@ function renderDocs(l){
 
   const anforderungen = (!l.lbAnalyse && l.lbSignals) ? (()=>{
     const s = l.lbSignals, rows = [];
-    if(s.guarantee!=null) rows.push([tk('Sicherheit / Bürgschaft'), s.guarantee?tk('gefordert'):tk("nicht gefordert")]);
-    if(s.bindingDays!=null) rows.push([tk('Bindefrist'), tk('{n} Tage', {n: s.bindingDays})]);
-    if(s.eligibility) rows.push(['Eignungsnachweise', s.eligibility+tk(" im Text genannt")]);
-    if(s.certificates && s.certificates.length) rows.push(['Geforderte Zertifikate', s.certificates.join(', ')]);
-    if(s.variants!=null) rows.push(['Nebenangebote', s.variants?'zugelassen':tk("nicht zugelassen")]);
-    if(s.framework) rows.push(['Rahmenvereinbarung', 'ja']);
+    /* DER BELEG ZUR BEHAUPTUNG. `evidence` traegt je Signal den Satz aus dem Dokument
+       (Median 88 Zeichen) und lag bis zum 2026-09-01 vollstaendig vor, ohne je im Frontend
+       anzukommen — 9.409 von 9.788 Vorgaengen mit Volltext.
+
+       ⚠ Am Zeigen, nicht im Fliesstext. Fuenf Zitate zu je 88 Zeichen wuerden den Block
+       verdoppeln und die Anforderungen selbst unlesbar machen. Der Beleg gehoert dorthin,
+       wo der Zweifel entsteht: an die Zeile, ueber die man stolpert. */
+    let beleg = {};
+    try { beleg = s.evidence ? JSON.parse(s.evidence) : {}; } catch { beleg = {}; }
+    /* ⚠ Das Zitat ist ein AUSSCHNITT und beginnt oft mitten im Wort („che, Vertragsstrafe").
+       Auf Wortgrenzen beschneiden und Auslassungspunkte setzen: es bleibt ein Fragment, sieht
+       aber nicht nach Fehler aus.
+       NICHT angefasst wird die Trennung aus dem PDF („erfor- derlich"). Sie sieht schlechter
+       aus, aber „Bau- und Betriebskosten" ist dieselbe Zeichenfolge — wer sie zusammenzieht,
+       zerstoert echte Bindestriche. Lieber sichtbar unschoen als still falsch. */
+    const zitat = (roh) => {
+      let z = String(roh).trim();
+      // Vorn das angebrochene Wort wegnehmen: „che, Vertragsstrafe" ist kein Satzanfang.
+      if (!/^[A-ZÄÖÜ0-9„"(]/.test(z)) z = '… ' + z.replace(/^\S+\s+/, '');
+      /* ⚠ HINTEN NICHTS WEGNEHMEN. Die erste Fassung schnitt das letzte Wort ab, wenn das
+         Zitat nicht auf einem Satzzeichen endete — und machte aus „Bindefrist: 30.10.2026"
+         ein „Bindefrist: …". Ausgerechnet die Zahl, wegen der man hinschaut.
+         Kurze Zitate sind meist vollstaendig und bekommen gar nichts. */
+      if (z.length >= 40 && !/[.!?»"]$/.test(z)) z += ' …';
+      return z;
+    };
+    const mitBeleg = (schluessel, wert) => {
+      const z = beleg[schluessel];
+      return z ? `<span class="hat-beleg" title="${esc(zitat(z))}">${esc(wert)}</span>` : esc(wert);
+    };
+    if(s.guarantee!=null) rows.push([tk('Sicherheit / Bürgschaft'),
+      mitBeleg('guarantee_evidence', s.guarantee?tk('gefordert'):tk("nicht gefordert"))]);
+    if(s.bindingDays!=null) rows.push([tk('Bindefrist'),
+      mitBeleg('binding_evidence', tk('{n} Tage', {n: s.bindingDays}))]);
+    if(s.eligibility) rows.push(['Eignungsnachweise', esc(s.eligibility+tk(" im Text genannt"))]);
+    // ⚠ AUS DEM DOKUMENT. Zertifikatsnamen kommen aus fremdem Text und muessen escapen.
+    if(s.certificates && s.certificates.length) rows.push(['Geforderte Zertifikate', esc(s.certificates.join(', '))]);
+    if(s.variants!=null) rows.push(['Nebenangebote', esc(s.variants?'zugelassen':tk("nicht zugelassen"))]);
+    if(s.framework) rows.push(['Rahmenvereinbarung', esc('ja')]);
     /* ⚠ Sechs Signale wurden bis zum 2026-09-01 erhoben und nie gezeigt. Sie fielen im
        Export aus einer handgetippten Spaltenliste (s. govisor/kennzahlen.py).
 
        Die Reihenfolge folgt dem, was eine Bietentscheidung kippt: erst was Aufwand macht
        (Ortstermin, Praesentation), dann was Geld kostet (Vertragsstrafe), dann die Frist,
        dann das Angenehme (Skonto). */
-    if(s.siteVisit) rows.push([tk('Ortstermin'), s.siteVisitMandatory
-      ? tk("verpflichtend") : tk("vorgesehen")]);
-    if(s.presentationRequired) rows.push([tk('Präsentation'), tk("gefordert")]);
-    if(s.penaltyPct!=null) rows.push([tk('Vertragsstrafe'), `${s.penaltyPct} %`]);
+    if(s.siteVisit) rows.push([tk('Ortstermin'),
+      mitBeleg('site_visit_evidence', s.siteVisitMandatory ? tk("verpflichtend") : tk("vorgesehen"))]);
+    if(s.presentationRequired) rows.push([tk('Präsentation'),
+      mitBeleg('presentation_evidence', tk("gefordert"))]);
+    if(s.penaltyPct!=null) rows.push([tk('Vertragsstrafe'),
+      mitBeleg('penalty_evidence', `${s.penaltyPct} %`)]);
     /* Die Bindefrist steht zweimal, und das ist Absicht: „90 Tage" sagt, wie lange ihr
        gebunden seid, „bis 14.11." sagt, ob es in eure Auslastung passt. Das Datum ist im
        Bestand ausserdem viel haeufiger ablesbar (5.747 gegen 150 Saetze). */
-    if(s.bindingUntil) rows.push([tk('Bindefrist bis'), s.bindingUntil]);
-    if(s.skontoPct!=null) rows.push([tk('Skonto'), `${s.skontoPct} %`]);
+    // ⚠ AUS DEM DOKUMENT, s. Zertifikate.
+    if(s.bindingUntil) rows.push([tk('Bindefrist bis'), esc(s.bindingUntil)]);
+    if(s.skontoPct!=null) rows.push([tk('Skonto'), esc(`${s.skontoPct} %`)]);
     const w = (s.weights && Object.keys(s.weights).length) ? s.weights : null;
     if(!rows.length && !w) return '';
     return `<section class="sec">
       <h4>${tk("Anforderungen")}<span class="cov">${tk("aus den Vergabeunterlagen extrahiert")}</span></h4>
-      ${rows.length ? `<div class="kv">${rows.map(([k,v])=>`<div class="kvi"><span class="k">${k}</span><span class="vv"><span class="v">${esc(v)}</span></span></div>`).join('')}</div>` : ''}
+      ${rows.length ? `<div class="kv">${rows.map(([k,v])=>`<div class="kvi"><span class="k">${k}</span><span class="vv"><span class="v">${/* ⚠ v IST FERTIGES HTML. Jede `rows.push`-Stelle escaped selbst, weil `mitBeleg` einen Span liefert und hier kein `esc()` mehr steht. Zertifikatsnamen und Bindefrist-Datum kommen aus Vergabeunterlagen, also aus fremdem Text — wer hier eine Zeile ergaenzt, MUSS `esc()` benutzen. */''}${v}</span></span></div>`).join('')}</div>` : ''}
       ${w ? `<div class="zug"><div class="zug-h">${tk("Zuschlagsgewichte")}</div>${Object.entries(w).map(([k,v])=>`<div class="zug-row"><span class="zug-k">${esc(k)}</span><span class="zug-bar"><i style="width:${Math.max(3,Math.min(100,Number(v)||0))}%"></i></span><span class="zug-v">${esc(String(v))} %</span></div>`).join('')}</div>` : ''}
     </section>`;
   })() : '';

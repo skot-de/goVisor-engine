@@ -87,8 +87,14 @@ def _mit(gruppe: tuple[Kennzahl, ...], flaeche: str, quelle: str) -> tuple[Kennz
 # ── Anforderungen aus den Vergabeunterlagen ──────────────────────────────────────────────
 # Quelle: govisor/docsignals.py → data/docs/<L>/doc_signals.parquet → web/data/doc-signals.json
 # ⚠ Die EINZIGE Gruppe mit exakten Quellspalten, an denen drei Stellen im Code hängen.
-# Reihenfolge = Anzeigereihenfolge im Anforderungs-Block. `evidence` steht bewusst nicht hier:
-# es ist der Belegtext je Signal, keine eigene Kennzahl.
+# Reihenfolge = Anzeigereihenfolge im Anforderungs-Block.
+#
+# ⚠ `evidence` STAND HIER ZUERST NICHT, mit der Begründung „Belegtext, keine eigene
+# Kennzahl". Als Kennzahl stimmt das, als Entscheidung war es falsch: damit hatte der Beleg
+# GAR KEINEN Ort, an dem jemand merkt, dass er unverdrahtet ist — genau die Lücke, gegen die
+# dieses Verzeichnis antritt. Die Übergabe der Parallelsitzung hat ihn am selben Tag als
+# „gebaut, aber nicht verdrahtet" gelistet. Er steht jetzt drin, mit `bezug="keine"`, weil er
+# nichts vergleicht, sondern belegt.
 def _s(schluessel: str, spalte: str, label: str, einheit: str, bezug: str, wogegen: str = "") -> Kennzahl:
     return Kennzahl(schluessel, label, bezug, wogegen, "unterlagen",
                     "doc_signals.parquet", spalte, einheit)
@@ -122,6 +128,10 @@ DOC_SIGNALE: tuple[Kennzahl, ...] = (
     _s("penaltyPct", "penalty_pct", "Vertragsstrafe", "Prozent",
        "markt", "übliche Vertragsstrafe im Feld"),
     _s("skontoPct", "skonto_pct", "Skonto", "Prozent", "markt", "übliches Skonto im Feld"),
+    # Der Beleg zur Behauptung: je Signal das Zitat aus dem Dokument (Median 88 Zeichen).
+    # Deckung 9.409 von 9.788 Vorgängen mit Volltext = 96 %. Er vergleicht nichts, er
+    # belegt — deshalb `keine`, und deshalb gehört er nach unten und nicht in eine Leiste.
+    _s("evidence", "evidence", "Beleg aus dem Dokument", "Zitat", "keine"),
 )
 
 # ── Vergabestellen-Kacheln (Anbieter-Sicht) ──────────────────────────────────────────────
@@ -333,6 +343,49 @@ _EIGNUNGSCHECK: tuple[Kennzahl, ...] = (
 )
 
 
+# ── Aus der Übergabe „einzigartige Kennzahlen + Aktivierung" (01.09.) ────────────────────
+# Kennzahlen, die nur entstehen, weil wir BEIDE Seiten haben: die öffentliche Bekanntmachung
+# und die aus den Unterlagen gewonnenen Werte. Wer nur eine hat, kann sie nicht rechnen.
+#
+# ⚠ SIE STEHEN HIER, OBWOHL DIE MEISTEN NOCH NICHT ANGEZEIGT WERDEN. Das ist der Zweck: eine
+# Kennzahl, die niemand fuehrt, wird beim naechsten Zaehlen wieder als Fund entdeckt. Der
+# Zustand steht im Kommentar, nicht in einem Feld — ein Feld „fertig ja/nein" wuerde altern,
+# ohne dass es jemand merkt.
+#
+# ⚠ ZEHN VON FUENFZEHN HABEN AM 01.09. KEINE DATENGRUNDLAGE. `doc_checklist`,
+# `doc_analysis`, `doc_verworfen` und `document_duplicates` existieren als Dateien NICHT;
+# sie sind seit Commit 07bbd26 im Tageslauf verdrahtet und entstehen erstmals in der Nacht
+# auf den 02.09. Die Zahlen im Papier stammen aus einer Probefassung im Sitzungs-Scratch.
+# ⚠ ZWEI DER FUENFZEHN STEHEN NICHT HIER, weil sie schon LAUFEN. Die „Vertragsstrafe
+# beziffert" ist `penaltyPct` (seit 01.09. verdrahtet), und die „Zuschlagsgewichtung aus den
+# Unterlagen" — im Papier als staerkster Neuzugang gefuehrt — ist `award_weights` und rendert
+# seit jeher mit Balken. Ihnen fehlt keine Anzeige, ihnen fehlt ABDECKUNG: 205 von 1.829
+# offenen Vorgaengen mit mehreren Zuschlagskriterien. Sie doppelt einzutragen haette den
+# Eindruck erzeugt, da sei noch etwas zu bauen.
+_UEBERGABE: tuple[Kennzahl, ...] = (
+    _k("aufwandGegenZeitfenster", "Aufwand gegen Zeitfenster", "markt",
+       "Median 34 Tage über alle Vorgänge, unabhängig vom Aufwand"),
+    _k("strengeAlsPerzentil", "Strenge als Perzentil je Bereich", "markt",
+       "Median und 90. Perzentil aller analysierten Vorgänge"),
+    _k("fingerabdruckVergabestelle", "Fingerabdruck der Vergabestelle", "markt",
+       "wie oft die Stelle etwas verlangt gegen marktweit"),
+    _k("formularaufwand", "Formularaufwand", "markt", "Median 22 Pflichtfelder"),
+    _k("mengengeruest", "Mengengerüst", "keine"),
+    _k("bezifferteSchwellen", "Bezifferte Schwellen als Vergleichsgruppe", "markt",
+       "Median und Quartil derselben Anforderungsart"),
+    _k("standardtextAnteil", "Standardtext-Anteil", "markt",
+       "Median 10 %, oberes Viertel 27 %"),
+    _k("fristwiderspruch", "Widerspruch bei der Angebotsfrist", "keine"),
+    _k("verlaesslichkeitAuswertung", "Verlässlichkeit je Auswertung", "keine"),
+    _k("anforderungsDrift", "Anforderungs-Drift", "vorwert",
+       "dieselbe Vergabestelle in der vorigen Runde"),
+    _k("wirkungHuerdenBieterzahl", "Wirkung von Hürden auf die Bieterzahl", "markt",
+       "Bieterzahl vergleichbarer Vergaben ohne diese Hürde"),
+    _k("aufwandJeEuro", "Aufwand je Euro Auftragswert", "markt",
+       "Median 0,15 Anforderungen je 1.000 EUR"),
+)
+
+
 _FLAECHEN = (
     (_LISTE, "liste", "explorerCore.COLS"),
     (_LEAD_DETAIL, "lead-detail", "api/lead-detail"),
@@ -344,6 +397,9 @@ _FLAECHEN = (
     (_MARKTPULS, "marktpuls", "export_marktpuls.py"),
     (_COCKPIT, "cockpit", "lokal (Nutzerzustand)"),
     (_EIGNUNGSCHECK, "eignungscheck", "export_landing.py"),
+    # ⚠ Fläche „geplant": noch nirgends angezeigt. Sie steht bewusst in derselben Liste,
+    # damit die Zählung ehrlich bleibt und niemand sie zweimal entdeckt.
+    (_UEBERGABE, "geplant", "docs/uebergabe-kennzahlen-aktivierung.md"),
 )
 
 INVENTAR: tuple[Kennzahl, ...] = tuple(

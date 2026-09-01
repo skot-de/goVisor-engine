@@ -2329,3 +2329,15 @@ td.c-band .passung i{display:none}
 .bstat-markt.weit em { color: var(--signal-deep); }
 .bstat-markt.weit { color: var(--ink-500); }
 
+
+/* BELEG AUS DEM DOKUMENT (2026-09-01). `evidence` lag seit jeher vollständig vor und kam nie
+   im Frontend an: je Signal der Satz aus der Vergabeunterlage, Median 88 Zeichen.
+
+   Bewusst am ZEIGEN und nicht im Fliesstext. Fünf Zitate zu je 88 Zeichen verdoppeln den
+   Anforderungs-Block und machen die Anforderungen selbst unlesbar. Der Beleg gehört dorthin,
+   wo der Zweifel entsteht: an die Zeile, über die man stolpert.
+
+   Die gepunktete Linie ist dieselbe Sprache, die `.val[data-src=duenn]` schon spricht: hier
+   steht mehr, wenn du es wissen willst. */
+.hat-beleg { border-bottom: 1px dotted var(--ink-300, #B7C2BC); cursor: help; }
+.hat-beleg:hover { border-bottom-color: var(--signal-deep); }

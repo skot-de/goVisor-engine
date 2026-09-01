@@ -64,6 +64,9 @@ type DocSignals = {
   siteVisit: boolean | null; siteVisitMandatory: boolean | null;
   presentationRequired: boolean | null;
   penaltyPct: number | null; skontoPct: number | null;
+  // Je Signal das Zitat aus dem Dokument. Kein Messwert, sondern der Beleg dafuer, dass die
+  // Zeile darueber nicht geraten ist. Kommt als JSON-Text aus dem Parquet.
+  evidence: string | null;
 };
 let docSignals: Record<string, DocSignals> | null = null;
 async function loadDocSignals(): Promise<Record<string, DocSignals>> {

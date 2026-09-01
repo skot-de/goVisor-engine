@@ -301,9 +301,16 @@ def _behauptungen() -> list[tuple[str, str, bool, str]]:
     # ohne es zu merken — und dann stimmt die Zahl im Kapitel nicht mehr.
     from govisor import kennzahlen as _kzv
     _plaetze = len(_kzv.ALLE)
-    aus.append(("06", "das Kennzahlen-Verzeichnis fuehrt mindestens 135 Plaetze ueber 11 Flaechen",
-                _plaetze >= 135 and len(_kzv.nach_flaeche()) >= 11,
+    aus.append(("06", "das Kennzahlen-Verzeichnis fuehrt mindestens 148 Plaetze ueber 12 Flaechen",
+                _plaetze >= 148 and len(_kzv.nach_flaeche()) >= 12,
                 f"{_plaetze} Plaetze, {len(_kzv.nach_flaeche())} Flaechen"))
+
+    # Kapitel 06 behauptet: der Beleg aus dem Dokument kommt an. Er lag jahrelang vollstaendig
+    # vor und wurde nie gezeigt; faellt er wieder heraus, ist es genau derselbe Zustand.
+    _core = (ROOT / "web" / "lib" / "explorerCore.js").read_text(encoding="utf-8")
+    aus.append(("06", "der Beleg aus dem Dokument wird im Anforderungs-Block gezeigt",
+                "mitBeleg" in _core and "hat-beleg" in _core,
+                "verdrahtet" if "mitBeleg" in _core else "wieder unsichtbar"))
 
     return aus
 
