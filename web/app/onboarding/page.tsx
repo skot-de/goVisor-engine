@@ -17,6 +17,7 @@ import "../explorer.css";
 import "../zugang.css";
 import { CheckMitbringsel } from "@/components/CheckMitbringsel";
 import "../landing-oeffentlich.css";
+import { staatenAufzaehlung } from "@/lib/staaten";
 
 /* Onboarding — portiert aus INPUT/Design/govisor-onboarding-v1.4.html.
    Registrierung + Firmen-Matching + Profil in einem ganzseitigen Flow. Die Demo-ENTITIES
@@ -755,7 +756,7 @@ function testMailErlaubt(mail: string): boolean {
                 Konto an? Erscheint nur, wenn der Check in dieser Sitzung gelaufen ist. */}
             <CheckMitbringsel />
             <h1>{t("Alle öffentlichen Ausschreibungen.")}<br />{t("Die eine, die zu euch passt.")}</h1>
-            <p className="lede">{t("goVisor liest jede öffentliche Vergabe in Deutschland und filtert die heraus, auf die ihr euch bewerben solltet. Kostenlos starten, ohne Zahlungsdaten.")}</p>
+            <p className="lede">{t("goVisor liest jede öffentliche Vergabe in {laender} und filtert die heraus, auf die ihr euch bewerben solltet. Kostenlos starten, ohne Zahlungsdaten.", { laender: staatenAufzaehlung(t) })}</p>
             <div className="field">
               <label className="lbl" htmlFor="mail">{t("Geschäftliche E-Mail")}</label>
               <input className="inp" id="mail" type="email" value={email} autoComplete="email"

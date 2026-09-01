@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { useSprache } from "@/lib/i18n";
 import "./marktpuls.css";
+import { LAND_IN } from "@/lib/staaten";
 
 /**
  * Marktpuls — Saisonalität + aktuelle Marktlage.
@@ -143,9 +144,9 @@ const LAND_LABEL: Record<string, string> = {
   DE: "Deutschland", AT: "Österreich", CH: "Schweiz", EU: "Übrige EU-Länder",
 };
 /* Eigene Form für „in …": „in der Schweiz", nicht „in Schweiz". Die Präposition steckt im
- * Satz, der Artikel am Land — zusammengesetzte Sätze aus Bausteinen brechen sonst in jeder
- * Sprache an genau dieser Stelle. */
-const LAND_IN: Record<string, string> = { DE: "Deutschland", AT: "Österreich", CH: "der Schweiz" };
+ * Satz, der Artikel am Land. Die Begründung ist geblieben, die Liste ist nach `lib/staaten`
+ * gewandert — sie wurde von zwei Dateien gebraucht. */
+// Sie steht bei den übrigen Importen oben.
 const BRANCHE_LABEL: Record<string, string> = {
   bau: "Bau & Infrastruktur", it: "IT & Software", beratung: "Beratung & Dienstleistung",
   medizin: "Medizin & Gesundheit", sicherheit: "Sicherheit", energie: "Energie & Versorgung",

@@ -3,6 +3,7 @@
 import { useSprache } from "@/lib/i18n";
 
 import { BRANCHEN } from "@/lib/explorerCore";
+import { STAATEN } from "@/lib/staaten";
 
 export type Adv = {
   phases: string[];                 // auslauf | f02 | f01 | award
@@ -60,9 +61,10 @@ const LEISTUNG: [string, string][] = [["dienst", "Dienstleistung"], ["liefer", "
 const RAHMEN: [string, string][] = [["vgv", "VgV"], ["vob", "VOB/A"], ["uvgo", "UVgO"], ["sektvo", "SektVO"]];
 const BAND: [string, string][] = [["niedrig", "niedrig"], ["mittel", "mittel"], ["hoch", "hoch"]];
 const ART: [string, string][] = [["rahmen", "Rahmenvertrag"], ["wiederkehrend", "Wiederkehrend"], ["einzel", "Einzelauftrag"]];
-// DACH-Vergabeland. Alle drei tragen Daten (DE ~21k, CH ~1,7k, AT ~1,1k) — der Filter greift
-// auf `l.land` (ExplorerShell). AT = offeneVergaben.at, CH = simap.ch.
-const STAATEN: [string, string][] = [["DE", "Deutschland"], ["AT", "Österreich"], ["CH", "Schweiz"]];
+// DACH-Vergabeland — der Filter greift auf `l.land` (ExplorerShell).
+// AT = offeneVergaben.at, CH = simap.ch. Die Liste stand hier ein zweites Mal; sie kommt
+// jetzt aus `lib/staaten`, damit ein viertes Land nicht an einer von zwei Stellen fehlt.
+// Sie steht bei den übrigen Importen oben.
 export const LAENDER: [string, string][] = [
   ["DE1", "Baden-Württemberg"], ["DE2", "Bayern"], ["DE3", "Berlin"], ["DE4", "Brandenburg"],
   ["DE5", "Bremen"], ["DE6", "Hamburg"], ["DE7", "Hessen"], ["DE8", "Mecklenburg-Vorp."],

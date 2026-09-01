@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { Suspense, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { login, magicLink, passwortVergessen } from "@/lib/supabase/auth";
@@ -27,7 +27,30 @@ function deutsch(m: string | null): string | null {
   return m;
 }
 
+/* ⚠ WARUM DIESE SEITE ZWEIGETEILT IST.
+ * `useSearchParams()` zwingt Next zum Rendern auf dem Client. Ohne eine `<Suspense>`-Grenze
+ * darum bricht `next build` ab — und zwar NUR dort: `next dev` bleibt grün, die laufende
+ * Seite auch. Genau deshalb ist es vom 18.08. bis zum 01.09.2026 unbemerkt geblieben; ein
+ * frisches Deployment wäre in dieser Zeit gescheitert.
+ *
+ * Die Grenze umschliesst absichtlich nur das Formular, nicht die Hülle: Kopfzeile und Rail
+ * werden vorab gerendert und stehen sofort. Ein `fallback={null}` hätte die Seite beim
+ * Aufbau leer blitzen lassen — die Rail ist hier der einzige Ausgang zurück in die Leads. */
 export default function LoginPage() {
+  return (
+    <div className="app">
+      <AppTop />
+      <div className="body">
+        <AppRail gesperrt />
+        <Suspense fallback={<div className="main seitenmain zugang" />}>
+          <LoginFormular />
+        </Suspense>
+      </div>
+    </div>
+  );
+}
+
+function LoginFormular() {
   const router = useRouter();
   const params = useSearchParams();
   const [email, setEmail] = useState("");
@@ -86,10 +109,6 @@ export default function LoginPage() {
   // ein eigener Rahmen VOR ihr unterstellte eine Schranke, die es gar nicht gibt. Und die
   // Rail ist der Ausgang: von hier kommt man jederzeit zurueck in die Leads.
   return (
-    <div className="app">
-      <AppTop />
-      <div className="body">
-        <AppRail gesperrt />
         <div className="main seitenmain zugang">
         <div className="card">
           <h1>Willkommen zurück.</h1>
@@ -126,7 +145,5 @@ export default function LoginPage() {
           </div>
         </div>
         </div>
-      </div>
-    </div>
   );
 }
