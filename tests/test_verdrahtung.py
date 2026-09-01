@@ -781,3 +781,41 @@ def test_verwerfungsgruende_summieren_sich():
     assert g["beleg"] == 1, f"das unbelegte Zitat muss als `beleg` zaehlen: {g}"
     assert g["schema"] == 1, f"der kaputte Eintrag muss als `schema` zaehlen: {g}"
     assert len(res["items"]) == 1, "der gueltige Eintrag muss durchkommen"
+
+
+def test_kurzes_zitat_gilt_nur_wenn_eindeutig():
+    """Die Belegpflicht wurde gelockert — aber genau so weit, dass keine Erfindung durchkommt.
+
+    Gemessen am 2026-09-01 an 920 abgelehnten Zitaten: 536 (58,3 %) scheiterten allein an der
+    Laengenschwelle von 16 Zeichen. Der naheliegende Schluss „die Schwelle ist zu hoch" war
+    falsch — von den Verworfenen kommen 350 (38,0 %) im Volltext GAR NICHT vor. Ein blosses
+    Absenken haette 350 Erfindungen hereingelassen.
+
+    Der tragfaehige Unterschied ist die EINDEUTIGKEIT: 268 (29,1 %) treffen genau einmal, und
+    das sind die Belege, die uns fehlen — Formularankreuzungen, Fristen, LV-Positionen.
+    147 (16,0 %) treffen mehrfach und bleiben draussen.
+
+    Der Test haelt beide Seiten fest. Faellt eine, ist die Regel entweder wieder zu streng
+    (die kurzen Belege fehlen) oder zu lax (Erfindungen kommen durch).
+    """
+    from govisor.docextract import verify_quote
+
+    text = ("Der Bieter reicht X Urkalkulation ein. Menge: 165 Meter. "
+            "Zone 9: Mo.-Sa. 9-22 Uhr. psch psch psch. Angebot in Textform.")
+
+    # kurz, aber genau einmal → gilt
+    assert verify_quote("X Urkalkulation", text)
+    assert verify_quote("Menge: 165 Meter", text)
+
+    # kurz und MEHRFACH → gilt nicht, sonst waere jeder Zufallstreffer ein Beleg
+    assert not verify_quote("psch", text)
+
+    # unter dem Boden → gilt nicht, auch wenn eindeutig: „X nein" zeigt zwar auf eine
+    # Stelle, sagt einem Menschen aber nicht, worauf es sich bezieht.
+    assert not verify_quote("in Textform"[:6], text)
+
+    # gar nicht vorhanden → gilt nicht, egal wie lang
+    assert not verify_quote("Ein Satz, der in diesem Dokument nirgends steht", text)
+
+    # der lange Normalfall bleibt unveraendert
+    assert verify_quote("Der Bieter reicht X Urkalkulation ein", text)
