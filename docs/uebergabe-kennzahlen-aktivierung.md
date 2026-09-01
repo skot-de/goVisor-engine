@@ -95,20 +95,20 @@ Datensatz, wir gewinnen Daten, an die niemand sonst kommt.
 
 | Auslöser | Text an der Fundstelle | Was wir gewinnen |
 |---|---|---|
-| `missing_expected`: Zuschlagskriterien fehlen (**4.747**) | „Die Zuschlagskriterien stehen nicht in den Unterlagen, die wir haben. Laden Sie die Wertungsmatrix hoch, dann ergänzen wir die Auswertung." | die häufigste Einzellücke |
+| `missing_expected`: Zuschlagskriterien fehlen (**4.747**) | „Die Zuschlagskriterien stehen nicht in den Unterlagen, die wir haben. Ladet die Wertungsmatrix hoch, dann ergänzen wir die Auswertung." | die häufigste Einzellücke |
 | Eignung fehlt (**1.710**), Aufforderung fehlt (**1.107**) | analog | zweit- und dritthäufigste |
-| Vorgang ganz ohne Unterlagen | „Zu dieser Ausschreibung liegen uns keine Unterlagen vor. Haben Sie Zugang zum Portal?" | Portale, an die wir nicht kommen (vergabe24) |
+| Vorgang ganz ohne Unterlagen | „Zu dieser Ausschreibung liegen uns keine Unterlagen vor. Habt ihr Zugang zum Portal?" | Portale, an die wir nicht kommen (vergabe24) |
 | Land AT oder CH | dieselbe Bitte, doppelt gewichtet | **0 % Dokumentenabdeckung** in AT und CH |
-| **Bieterfragen und Antworten** | „Haben Sie Antworten der Vergabestelle erhalten? Die helfen allen Bietern." | existieren in unseren Daten **nicht** und sind **nicht abgreifbar** (siehe `bieterfragen-feasibility.md`). Stärkstes Ziel überhaupt |
+| **Bieterfragen und Antworten** | „Habt ihr Antworten der Vergabestelle erhalten? Die helfen allen Bietern." | existieren in unseren Daten **nicht** und sind **nicht abgreifbar** (siehe `bieterfragen-feasibility.md`). Stärkstes Ziel überhaupt |
 
 ### B — Aktivierung, die die Passung schärft
 
 | Auslöser | Text | Was wir gewinnen |
 |---|---|---|
-| Passungszahl unvollständig | „Wir kennen Ihre Referenzen noch nicht. Zwei Angaben genügen für eine belastbare Zahl." | schließt die Lücke aus `govisor-userflow-befunde`: der Eignungs-Check **sammelt** Haftpflicht, Präqualifikation und ISO und **wirft sie weg**. Genau hier andocken |
+| Passungszahl unvollständig | „Wir kennen eure Referenzen noch nicht. Zwei Angaben genügen für eine belastbare Zahl." | schließt die Lücke aus `govisor-userflow-befunde`: der Eignungs-Check **sammelt** Haftpflicht, Präqualifikation und ISO und **wirft sie weg**. Genau hier andocken |
 | Kennzahl 9 feuert (Fristwiderspruch) | „Die Unterlagen nennen den 21.10., die Bekanntmachung den 16.09. Welche Frist gilt?" | Nutzer prüft für uns, wir lernen die Trefferquote des Filters |
 | Eintrag in `doc_verworfen` | „Hier waren wir uns nicht sicher. Stimmt das so?" | schließt die Lernschleife mit dem Nutzer im Kreis |
-| Kennzahl 8 hoch (viel Standardtext) | „Rund 60 % dieser Unterlagen sind Standardtext, den Sie kennen. Sollen wir nur das Abweichende zeigen?" | Nutzung als Signal, dass unsere Erkennung stimmt |
+| Kennzahl 8 hoch (viel Standardtext) | „Rund 60 % dieser Unterlagen sind Standardtext, den ihr kennt. Sollen wir nur das Abweichende zeigen?" | Nutzung als Signal, dass unsere Erkennung stimmt |
 | **Pflicht-Ortstermin außerhalb der Regionen** (**108**) | „Dieser Vorgang verlangt einen Ortstermin, an dem ihr teilnehmen müsst, und er liegt außerhalb eures Gebiets. Fahrt ihr trotzdem hin?" | prüft die **Regionsgrenze**, die wir aus der Historie ableiten und nie gegenmessen |
 
 **Zum Ortstermin.** Der Blocker steht seit dem 01.09. in `matchLead` und speist sich aus
@@ -122,28 +122,31 @@ Die Zahl ist klein und das ist hier ein Vorteil: 108 von 3.723 erkannten Ortster
 verpflichtend. Der Auslöser feuert also selten genug, um nicht zur Tapete zu werden, und der
 Einsatz ist im Einzelfall hoch (wer nicht erscheint, darf nicht bieten).
 
-⚠ **Anrede.** Die Texte oben siezen, das Produkt duzt. Gemessen am 01.09.: die Anbieter-Seite
-benutzt durchweg „ihr/euch" (`profileEngine`, `DetailPanel`, Anmeldung, Onboarding), gesiezt
-wird ausschließlich die **Käufersicht** (`VergabeblickView`: „Wie steht Ihre Stelle da?").
-Aktivierung sitzt auf der Anbieter-Seite, gehört also ins Du. Sechs Textstellen sind
-betroffen; sie stehen hier bewusst noch im Original, damit die Änderung eine Entscheidung
-bleibt und keine stille Korrektur.
+⚠ **Anrede: durchgehend „ihr/euch", entschieden am 01.09.** Die Texte in diesem Papier
+siezten zunächst. Gemessen: die Anbieter-Seite des Produkts benutzt durchweg „ihr/euch"
+(`profileEngine`, `DetailPanel`, Anmeldung, Onboarding), gesiezt wird ausschließlich die
+**Käufersicht** (`VergabeblickView`: „Wie steht Ihre Stelle da?"). Aktivierung sitzt auf der
+Anbieter-Seite, also Du. **Zehn Textstellen** in Teil 2 sind umgestellt.
+
+⚠ Wer hier Texte ergänzt: das Zitat aus der Käufersicht bleibt gesiezt. Es ist kein
+vergessener Rest, sondern die zweite Zielgruppe. Ein Suchen-und-Ersetzen über das ganze
+Papier zerstört genau diese Unterscheidung.
 
 ### C — Aktivierung, die uns Marktdaten bringt
 
 | Auslöser | Text | Was wir gewinnen |
 |---|---|---|
-| Frist abgelaufen, Nutzer hatte den Lead offen | „Haben Sie mitgeboten?" | **Bieterzahl**, die sonst nirgends steht |
+| Frist abgelaufen, Nutzer hatte den Lead offen | „Habt ihr mitgeboten?" | **Bieterzahl**, die sonst nirgends steht |
 | Antwort „nein" | „Woran lag es?" mit vier Ankreuzgründen | die wertvollsten Produktdaten überhaupt: **welche Hürde schreckt tatsächlich ab**. Speist Kennzahl 13 |
-| Zuschlag an einen Dritten | „Kennen Sie das Unternehmen?" | Entity-Resolution bei den Gewinnern |
-| Rahmenvertrag läuft aus | „Sind Sie heute Auftragnehmer?" | Amtsinhaber-Erkennung ohne Zuschlagsdaten |
+| Zuschlag an einen Dritten | „Kennt ihr das Unternehmen?" | Entity-Resolution bei den Gewinnern |
+| Rahmenvertrag läuft aus | „Seid ihr heute Auftragnehmer?" | Amtsinhaber-Erkennung ohne Zuschlagsdaten |
 
 ### D — Aktivierung ohne Datengewinn, rein Bindung
 
 - **Frist merken.** Ein Klick, Erinnerung vor Ablauf.
-- **Vergabestelle beobachten.** „Diese Stelle schreibt etwa alle vier Jahre aus. Sollen wir Sie erinnern?"
+- **Vergabestelle beobachten.** „Diese Stelle schreibt etwa alle vier Jahre aus. Sollen wir euch erinnern?"
   Speist sich aus `buyer_loyalty` und `retender_signal`.
-- **Partner suchen.** „Sie erfüllen 8 von 10 Anforderungen. Für die restlichen zwei einen Partner suchen?"
+- **Partner suchen.** „Ihr erfüllt 8 von 10 Anforderungen. Für die restlichen zwei einen Partner suchen?"
   Der Unterbau steht bereits (siehe `govisor-partnersuche`), wartet nur auf das Dashboard.
 
 ### Kosten
