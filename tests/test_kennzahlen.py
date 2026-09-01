@@ -42,6 +42,24 @@ def test_der_export_zaehlt_keine_spalten_mehr_auf():
     assert "guarantee_required, binding_days" not in code, "wieder eine getippte Spaltenliste"
 
 
+def test_der_export_laeuft_wirklich_durch():
+    """⚠ Ein Test, der nur den Import prüft, hätte den Fehler NICHT gefunden. Beim Ausbau des
+    Verzeichnisses wurde `quelle` von der Spalte zur Datei; der Export las weiter `quelle`
+    und baute `SELECT notice_id, doc_signals.parquet, doc_signals.parquet, …`. Die
+    Textprüfung darunter war grün, das Skript kaputt. Deshalb hier die echte Rechnung."""
+    quelle = (WURZEL / "scripts" / "export_doc_signals.py").read_text(encoding="utf-8")
+    assert "kennzahlen.spalten(felder)" in quelle, "baut die Spaltenliste wieder selbst"
+    assert "k.quelle ==" not in quelle, "vergleicht wieder gegen die Datei statt die Spalte"
+    # Die Spaltenliste muss gegen das echte Parquet binden.
+    src = WURZEL / "data" / "docs" / "DE" / "doc_signals.parquet"
+    if not src.exists():
+        return
+    import duckdb
+    spalten = ", ".join(kz.spalten(kz.DOC_SIGNALE))
+    duckdb.connect().execute(
+        f"select notice_id, {spalten} from read_parquet('{src.as_posix()}') limit 1").fetchall()
+
+
 def test_das_parquet_traegt_keine_unbekannte_spalte():
     """Ein neues Signal in `docsignals` soll AUFFALLEN, nicht liegenbleiben. Läuft nur, wenn
     das Parquet da ist — sonst ist nichts zu prüfen."""

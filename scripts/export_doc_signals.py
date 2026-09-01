@@ -43,7 +43,7 @@ def main() -> int:
     # `govisor.kennzahlen`, und ein Wächter prüft, dass das Parquet keine Spalte trägt, die
     # dort fehlt — ein neues Signal fällt damit auf, statt lautlos liegenzubleiben.
     felder = kennzahlen.DOC_SIGNALE
-    spalten = ", ".join(k.quelle for k in felder)
+    spalten = ", ".join(kennzahlen.spalten(felder))
     rows = con.execute(
         f"SELECT notice_id, {spalten} FROM read_parquet('{SRC.as_posix()}')"
     ).fetchall()
@@ -53,13 +53,13 @@ def main() -> int:
         nid, werte = zeile[0], zeile[1:]
         obj = {}
         for k, v in zip(felder, werte):
-            if k.quelle == "award_weights":
+            if k.spalte == "award_weights":
                 # Als JSON gespeichert, damit die Gewichtung ihre Kriteriennamen behält.
                 try:
                     v = json.loads(v) if v else None
                 except (json.JSONDecodeError, TypeError):
                     v = None
-            elif k.quelle == "certificates":
+            elif k.spalte == "certificates":
                 v = [c.strip() for c in v.split(",")] if v else []
             obj[k.schluessel] = v
         # Nur Vorgänge mit mindestens EINEM belegten Signal aufnehmen.
