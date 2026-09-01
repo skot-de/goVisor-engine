@@ -2313,11 +2313,19 @@ td.c-band .passung i{display:none}
 /* Der Median. Ein Strich, kein Klotz — er ist der Bezug, nicht die Aussage. */
 .bstat-leiste .mitte { position: absolute; left: 50%; top: -1px; bottom: -1px; width: 1px;
   background: var(--ink-400); opacity: .55; }
-/* Diese Stelle. Der einzige Punkt, der sich bewegt, also der einzige, der auffallen darf. */
-.bstat-leiste .punkt { position: absolute; top: 50%; width: 7px; height: 7px;
-  margin: -3.5px 0 0 -3.5px; border-radius: 50%; background: var(--ink-500);
-  border: 1.5px solid var(--surface, #fff); }
-.bstat-markt.weit .punkt { background: var(--ink-900); width: 9px; height: 9px;
-  margin: -4.5px 0 0 -4.5px; }
+/* Diese Stelle. Der einzige Punkt, der sich bewegt, also der einzige, der auffallen darf.
+   ⚠ GRÜN, und das ist KEINE Ampel. Die Käufersicht führt dieselbe Unterscheidung seit jeher:
+   `i.mine` ist `--signal`, `i.med` ist `--ink-400`, und die Warnfarbe `--flag` bleibt dort,
+   wo es ein normatives Ziel gibt. Grün heisst hier „das seid ihr", nicht „das ist gut".
+   Erste Fassung liess die Farbe weg, aus Sorge vor genau dieser Verwechslung — Ergebnis
+   waren fünf Graustufen je Kachel und sechs Kacheln ohne einen einzigen Anker fürs Auge. */
+.bstat-leiste .punkt { position: absolute; top: 50%; width: 8px; height: 8px;
+  margin: -4px 0 0 -4px; border-radius: 50%; background: var(--signal);
+  border: 1.5px solid var(--surface, #fff); box-shadow: 0 0 0 1px rgba(0,0,0,.04); }
+/* Am Rand des Feldes: dunkler und etwas grösser. Dieselbe Farbe, mehr Gewicht — die Lage
+   ist die Aussage, nicht eine zweite Bedeutung. */
+.bstat-markt.weit .punkt { background: var(--signal-deep); width: 10px; height: 10px;
+  margin: -5px 0 0 -5px; }
+.bstat-markt.weit em { color: var(--signal-deep); }
 .bstat-markt.weit { color: var(--ink-500); }
 
