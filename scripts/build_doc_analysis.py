@@ -109,9 +109,49 @@ BEREICH = {
 }
 
 
+# ── Beleg fuer die Parser-Eintraege ─────────────────────────────────────────────────
+#
+# Gemessen am 2026-09-01: alle 36.887 parser-erzeugten Eintraege trugen die Quelldatei, aber
+# WEDER Zitat NOCH Seite. Ein Eintrag lautete „Leistungsverzeichnis (GAEB, 27 Positionen)" —
+# eine Zusammenfassung, die niemand nachpruefen kann, ohne die Datei zu oeffnen und zu zaehlen.
+#
+# Das Material dafuer lag die ganze Zeit daneben: `positions[]` in derselben Auswertung fuehrt
+# die GAEB-Positionen woertlich (rno, Menge, Einheit, Text), die Formularfelder mit Namen und
+# Pflichtkennzeichen, die XLSX-Blaetter mit Spaltenkoepfen.
+#
+# ⚠ NICHT IN `quote`. Diese Spalte bedeutet „woertliches Zitat, gegen den Volltext geprueft"
+# (`docextract.verify_quote`) — das ist die Zusicherung, auf der die Glaubwuerdigkeit ruht.
+# Ein zusammengesetzter Auszug dort hinein wuerde die Zitatquote auf ~100 % springen lassen
+# und genau die Unterscheidung zerstoeren, die sie wertvoll macht. Deshalb `beleg` daneben:
+# nachpruefbar, aber als Auszug gekennzeichnet. `marking` bleibt „Extrahiert".
+def _beleg(pos: dict) -> str | None:
+    """Aus einem `positions`-Eintrag einen nachpruefbaren Auszug bauen."""
+    art = (pos.get("parser") or "").split("-")[0]
+    if art == "gaeb":
+        teile = [f"{p.get('rno')} · {p.get('qty')} {p.get('unit')} · {p.get('text')}"
+                 for p in (pos.get("positions") or [])[:3] if isinstance(p, dict)]
+        return " | ".join(t for t in teile if t.strip(" ·")) or None
+    if art == "pdf_fields":
+        felder = [f for f in (pos.get("fields") or []) if isinstance(f, dict)]
+        pflicht = [f.get("name") for f in felder if f.get("required")]
+        namen = pflicht[:6] or [f.get("name") for f in felder[:6]]
+        vor = "Pflichtfelder" if pflicht else "Felder"
+        namen = [n for n in namen if n]
+        return f"{vor}: " + ", ".join(namen) if namen else None
+    if art == "xlsx":
+        teile = []
+        for b in (pos.get("sheets") or [])[:2]:
+            if not isinstance(b, dict):
+                continue
+            spalten = [str(c).replace("\n", " ")[:40] for c in (b.get("columns") or [])[:4]]
+            teile.append(f"{b.get('name')}: " + ", ".join(spalten))
+        return " | ".join(teile) or None
+    return None
+
+
 CHECK_SPALTEN = (
     "notice_id VARCHAR, nr BIGINT, req_type VARCHAR, bereich VARCHAR, theme VARCHAR, label VARCHAR, "
-    "value VARCHAR, unit VARCHAR, wert_num DOUBLE, quote VARCHAR, "
+    "value VARCHAR, unit VARCHAR, wert_num DOUBLE, quote VARCHAR, beleg VARCHAR, "
     "source_file VARCHAR, source_page VARCHAR, marking VARCHAR, parser VARCHAR"
 )
 
@@ -139,6 +179,13 @@ def lies(quelle: pathlib.Path) -> tuple[list, list, int]:
             kaputt += 1
             continue
         notice_id = pfad.stem
+        # Belege je (Datei, Parser) vorbereiten — der Checklisten-Eintrag nennt beides.
+        belege = {}
+        for pos in d.get("positions") or []:
+            if isinstance(pos, dict) and pos.get("file"):
+                b = _beleg(pos)
+                if b:
+                    belege[(pos["file"], (pos.get("parser") or "").split("-")[0])] = b[:600]
         stand = datetime.fromtimestamp(pfad.stat().st_mtime, timezone.utc).date().isoformat()
         kopf.append(_kopf(notice_id, d, stand))
         for i, it in enumerate(d.get("checklist") or [], start=1):
@@ -150,7 +197,9 @@ def lies(quelle: pathlib.Path) -> tuple[list, list, int]:
                 rt, BEREICH.get(rt, "unbekannt"), it.get("theme"), it.get("label"),
                 None if it.get("value") is None else str(it.get("value")),
                 it.get("unit"), _zahl(it.get("wert_num")),
-                it.get("quote"), it.get("source_file"),
+                it.get("quote"),
+                belege.get((it.get("source_file"), (it.get("parser") or "").split("-")[0])),
+                it.get("source_file"),
                 None if it.get("source_page") is None else str(it.get("source_page")),
                 it.get("marking"), it.get("parser"),
             ))
@@ -199,13 +248,15 @@ def main() -> int:
     con.close()
 
     mit_zitat = sum(1 for z in punkte if z[9])
+    mit_beleg = sum(1 for z in punkte if z[10])
     # Unbekannte Typen laut melden, nicht in einen Sammeltopf schieben.
     unbek = sorted({z[2] for z in punkte if z[3] == "unbekannt" and z[2]})
     if unbek:
         print(f"  ⚠ req_type ohne Bereich: {', '.join(unbek[:8])} — BEREICH ergaenzen.")
     print(f"  doc_analysis : {len(kopf):,} Vorgaenge")
     print(f"  doc_checklist: {len(punkte):,} Anforderungen, davon {mit_zitat:,} "
-          f"({mit_zitat/max(len(punkte),1)*100:.1f} %) mit Zitat")
+          f"({mit_zitat/max(len(punkte),1)*100:.1f} %) mit Zitat, "
+          f"{mit_beleg:,} mit Parser-Beleg")
     if kaputt:
         print(f"  ⚠ {kaputt} Datei(en) nicht lesbar — uebersprungen, nicht stillschweigend gezaehlt.")
     return 0
