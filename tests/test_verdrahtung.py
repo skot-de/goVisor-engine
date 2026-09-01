@@ -688,3 +688,52 @@ def test_passwortregel_haelt_was_der_hinweis_verspricht():
         assert "pwPruefung" in quelle, f"{datei} benutzt die gemeinsame Passwortregel nicht"
     einstellungen = (web / "app" / "settings" / "page.tsx").read_text(encoding="utf-8")
     assert "pw.length < 8" not in einstellungen, "die alte 8-Zeichen-Regel ist zurueck"
+
+
+def test_bereiche_decken_alle_req_types():
+    """Eine neue Anforderungsart darf nicht stillschweigend in einer falschen Gruppe landen.
+
+    `theme` aus der LLM-Auswertung war eine verlustbehaftete Umkodierung von `req_type`:
+    gemessen am 2026-09-01 bildete jeder der 18 Typen auf genau ein Thema ab, 70,5 % landeten
+    auf „sonstiges". Nicht weil die Zuordnung scheiterte, sondern weil das Vokabular
+    eignungs-zentriert war und die Haelfte des Materials Vertrags- und Formalienfragen sind.
+
+    `BEREICH` ordnet stattdessen nach der Frage, die ein Bieter stellt. Der Preis dafuer ist
+    eine Pflegestelle: kommt ein neuer `req_type` dazu, muss er eingetragen werden. Genau
+    deshalb gibt es keinen stillen Sammeltopf — Unbekanntes wird `unbekannt` und faellt hier
+    auf. Ein Default haette den Fehler unsichtbar gemacht, und das ist die Sorte Fehler, die
+    Monate ueberlebt.
+    """
+    import json
+    import sys
+    sys.path.insert(0, str(ROOT / "scripts"))
+    import importlib.util
+    spec = importlib.util.spec_from_file_location("bda", ROOT / "scripts" / "build_doc_analysis.py")
+    bda = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(bda)
+
+    erlaubt = {"eignung", "leistung", "vertrag", "formalitaet", "termin", "ausschluss", "zuschlag"}
+    assert set(bda.BEREICH.values()) <= erlaubt, \
+        f"unbekannter Bereich in der Zuordnung: {set(bda.BEREICH.values()) - erlaubt}"
+
+    quelle = ROOT / "web" / "data" / "doc-analysis"
+    if not quelle.is_dir():
+        pytest.skip("keine Auswertung vorhanden")
+
+    # Gegen die ECHTEN Daten, nicht gegen eine Liste im Test: eine Stichprobe reicht, um
+    # einen neu auftauchenden Typ zu bemerken, und haelt den Lauf kurz.
+    fehlend = set()
+    for i, pfad in enumerate(sorted(quelle.glob("*.json"))):
+        if i >= 400:
+            break
+        try:
+            d = json.loads(pfad.read_text(encoding="utf-8"))
+        except Exception:                                  # noqa: BLE001
+            continue
+        for it in d.get("checklist") or []:
+            rt = it.get("req_type")
+            if rt and rt not in bda.BEREICH:
+                fehlend.add(rt)
+    assert not fehlend, (
+        "req_type ohne Bereich — in `BEREICH` eintragen, nicht in einen Sammeltopf schieben:\n  "
+        + "\n  ".join(sorted(fehlend)))
