@@ -737,3 +737,47 @@ def test_bereiche_decken_alle_req_types():
     assert not fehlend, (
         "req_type ohne Bereich — in `BEREICH` eintragen, nicht in einen Sammeltopf schieben:\n  "
         + "\n  ".join(sorted(fehlend)))
+
+
+def test_verwerfungsgruende_summieren_sich():
+    """Drei Zaehler, eine Summe — sonst verschwindet eine Ursache unbemerkt.
+
+    Bis zum 2026-09-01 zaehlte `verarbeite` alle Verwerfungen in EINE Zahl. Damit war die
+    entscheidende Frage nicht beantwortbar: von 4.747 Vorgaengen ohne
+    Zuschlagskriterien-Dokument tragen 82,8 % das Wort trotzdem im Volltext, und bei 91,1 %
+    lagen ausschliesslich Doktypen vor, die `zuschlagskriterium` gar nicht melden DUERFEN.
+    Findet das Modell die Kriterien und wir werfen sie weg — oder findet es sie nicht? Eine
+    einzelne Zahl kann das nicht sagen.
+
+    Jetzt: `beleg` = Modellqualitaet, `typ` = unsere Regel, `schema` = Formatproblem. Der
+    Test haelt fest, dass die drei zusammen `rejected` ergeben. Kommt eine vierte Ursache
+    dazu, ohne einen eigenen Zaehler zu bekommen, faellt sie hier auf statt still in einer
+    der drei zu verschwinden.
+    """
+    from govisor import docextract
+
+    doctype = "aufforderung"
+    text = "Die Angebotsfrist endet am 30.09.2026 um 10:00 Uhr."
+    roh = [
+        # gueltig und belegt
+        {"req_type": "frist", "value": "30.09.2026", "unit": None,
+         "quote": "Die Angebotsfrist endet am 30.09.2026", "marking": "Zitat"},
+        # richtiger Typ, aber fuer diesen Doktyp nicht erlaubt → `typ`
+        {"req_type": "zuschlagskriterium", "value": "50", "unit": "%",
+         "quote": "Die Angebotsfrist endet am 30.09.2026", "marking": "Zitat"},
+        # Zitat steht nicht im Text → `beleg`
+        {"req_type": "frist", "value": "1", "unit": None,
+         "quote": "Ein Satz, der im Dokument nirgends vorkommt und lang genug ist",
+         "marking": "Zitat"},
+        # kaputt → `schema`
+        {"req_type": "gibtesnicht", "marking": "Zitat", "quote": "x"},
+    ]
+    res = docextract.verarbeite(doctype, text, "datei.pdf", roh)
+    g = res["rejected_gruende"]
+
+    assert sum(g.values()) == res["rejected"], \
+        f"Gruende {g} ergeben nicht die Summe {res['rejected']}"
+    assert g["typ"] == 1, f"der nicht erlaubte Typ muss als `typ` zaehlen, nicht anders: {g}"
+    assert g["beleg"] == 1, f"das unbelegte Zitat muss als `beleg` zaehlen: {g}"
+    assert g["schema"] == 1, f"der kaputte Eintrag muss als `schema` zaehlen: {g}"
+    assert len(res["items"]) == 1, "der gueltige Eintrag muss durchkommen"
