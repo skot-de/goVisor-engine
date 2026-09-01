@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useMemo, useState } from "react";
 import { loadProfile, saveProfile } from "@/lib/supabase/auth";
+import { PROFILE_KEY, profilGeaendert } from "@/lib/useProfil";
 import { parseWert } from "@/lib/explorerCore";
 import { loadDeclarations, declare, confirmDeclarations, needsConfirmation, ageMonths, type Declaration } from "@/lib/supabase/declarations";
 import { loadOutcomes, reportOutcome, removeOutcome, computeBilanz, type UserOutcome, type OutcomeResult, type LossReason } from "@/lib/supabase/outcomes";
@@ -36,6 +37,24 @@ type Gap = { key: string; label: string; affected: number; text: string; kind: "
 // `pre` = nächtlich vorberechnete Werte (user_gap_effects, #11 §7) — bevorzugt, sonst On-Demand.
 // `label`/`text` bleiben hier UNübersetzt (Modul-Ebene, sonst friert die Sprache ein) — sie sind
 // die Übersetzungsschlüssel und werden erst an der Render-Stelle durch `t()` geschickt.
+/* ⚠ ZWEI PROFILE, UND DIESE ANSICHT LAS DAS FALSCHE. `loadProfile()` holt ausschliesslich
+ * aus Supabase; der Explorer und `matchLead` rechnen aber mit dem Profil aus dem Browser
+ * (`govisor.profile.v1`). Am 2026-09-01 gemessen: das Tagesbriefing meldete 668 Leads mit
+ * offener Buergschaft, und die Treffergueete sagte im selben Klick „Noch kein Profil
+ * hinterlegt". Aufgefallen erst, als der Hinweis im Briefing HIERHIN verlinkt wurde — vorher
+ * fuehrte er auf eine Sammelseite, und niemand sah die beiden Aussagen nebeneinander.
+ *
+ * `useProfil` macht es seit jeher richtig: lokal sofort, fern nur wenn es dort etwas gibt.
+ * Dieselbe Reihenfolge, nicht der Haken selbst — diese Ansicht muss auch SCHREIBEN. */
+function ausSpeicher(): Profile {
+  if (typeof window === "undefined") return null;
+  try {
+    const roh = localStorage.getItem(PROFILE_KEY);
+    return roh ? (JSON.parse(roh) as Profile) : null;
+  } catch { return null; }
+}
+
+
 function computeGaps(leads: Lead[], p: Profile, pre?: Record<string, number>): Gap[] {
   if (!p) return [];
   const gaps: Gap[] = [];
@@ -73,12 +92,13 @@ export function Trefferguete({ aktiveBranche }: { aktiveBranche: string }) {
 
   async function reloadAll() {
     const [pr, dc, oc] = await Promise.all([loadProfile().catch(() => null), loadDeclarations().catch(() => []), loadOutcomes().catch(() => [])]);
-    setProfile(pr); setDecls(dc); setOutcomes(oc);
+    setProfile(pr ?? ausSpeicher()); setDecls(dc); setOutcomes(oc);
   }
   useEffect(() => {
     (async () => {
-      const pr = await loadProfile().catch(() => null);
-      if (pr === null) {
+      const fern = await loadProfile().catch(() => null);
+      const pr = fern ?? ausSpeicher();
+      if (fern === null && pr === null) {
         // eingeloggt? loadProfile gibt null bei fehlender Session ODER leerem Profil — unterscheiden:
         const { createClient } = await import("@/lib/supabase/client");
         const { data: { user } } = await createClient().auth.getUser();
@@ -106,6 +126,15 @@ export function Trefferguete({ aktiveBranche }: { aktiveBranche: string }) {
     const before = gap.affected;
     const next = { ...profile, [gap.key]: value };
     const r = await saveProfile(next);
+    /* ⚠ AUCH IN DEN BROWSER SCHREIBEN. Der Explorer rechnet mit `govisor.profile.v1`, nicht
+       mit Supabase. Ohne diese Zeile trägt der Nutzer seinen Bürgschaftsrahmen hier ein,
+       bekommt „668 Leads ändern ihre Relevanzstufe" zu lesen — und in der Liste ändert sich
+       nichts, weil die den fernen Stand gar nicht liest. Das Ereignis weckt die offenen
+       Ansichten, ohne dass jemand neu lädt. */
+    try {
+      localStorage.setItem(PROFILE_KEY, JSON.stringify(next));
+      profilGeaendert();
+    } catch { /* Speicherquote: der ferne Stand steht trotzdem */ }
     if (r.ok) {
       // zusätzlich als Angabe protokollieren (einheitlicher Bestand §8.1)
       await declare({ kind: gap.key === "buergschaft" ? "guarantee" : "capacity", key: gap.key, value, source: "trefferguete" });

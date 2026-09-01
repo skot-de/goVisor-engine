@@ -1475,6 +1475,11 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
                 // etwas einfärben — deshalb dieselben Wege wie über die Rail.
                 if (ziel === "netzwerk") return switchView("netzwerk");
                 if (ziel === "strategie") return switchView("potenzial");
+                /* Die Treffergüte ist der EINZIGE Ort, an dem eine offene Angabe direkt
+                   gefüllt werden kann (`BetragInput`: Betrag eintippen, Enter). Der Hinweis
+                   im Überblick führte bis zum 2026-09-01 auf `/unternehmen`, wo genau diese
+                   zwei Felder nicht stehen. */
+                if (ziel === "trefferguete") { switchView("potenzial"); setStratSektion("trefferguete"); return; }
                 if (ziel === "award") return setAdv((a) => ({ ...a, phases: ["award"] }));
                 if (ziel === "vorschau") return setPhasenOffen(2);
                 // Zurück auf die erste Phase — der Weg, der aus dem Überblick fehlte.

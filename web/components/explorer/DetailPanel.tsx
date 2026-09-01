@@ -57,7 +57,7 @@ export function DetailPanel({
   rows?: BriefLead[];
   alle?: BriefLead[];
   onPickLead?: (id: string) => void;
-  onGoto?: (ziel: "netzwerk" | "strategie" | "award" | "vorschau" | "jetzt") => void;
+  onGoto?: (ziel: "netzwerk" | "strategie" | "award" | "vorschau" | "jetzt" | "trefferguete") => void;
   onTab: (k: string) => void;
   onClose: () => void;
   onExpand: () => void;
@@ -318,7 +318,7 @@ export function DetailPanel({
 function LeerBriefing({ rows, alle = [], onPick, onGoto }: {
   rows: BriefLead[]; alle?: BriefLead[];
   onPick?: (id: string) => void;
-  onGoto?: (ziel: "netzwerk" | "strategie" | "award" | "vorschau" | "jetzt") => void;
+  onGoto?: (ziel: "netzwerk" | "strategie" | "award" | "vorschau" | "jetzt" | "trefferguete") => void;
 }) {
   const { t } = useSprache();
   /* Drei Spalten nach Zeithorizont, nicht nach Datenherkunft:
@@ -373,27 +373,34 @@ function LeerBriefing({ rows, alle = [], onPick, onGoto }: {
       ((l.match as { teile?: { dim: string; status: string }[] } | undefined)?.teile ?? [])
         .find((x) => x.dim === dim)?.status;
 
+    /* ⚠ JEDE LÜCKE BRAUCHT IHR EIGENES ZIEL. Bis zum 2026-09-01 führten alle vier auf
+       `/unternehmen` — eine Seite, auf der man die Hälfte davon gar nicht ändern kann. Ein
+       Hinweis, der ins falsche Zimmer zeigt, ist keine Einladung, sondern eine Sackgasse.
+
+       Zwei der Lücken haben ein EINGABEFELD, und zwar in der Treffergüte (`BetragInput`,
+       Betrag eintippen, Enter). Die anderen sind keine leeren Felder, sondern Einladungen,
+       das Profil zu WEITEN („arbeitet ihr dort doch?"), und das geschieht im Eignungsprofil. */
     const luecken = [
-      { key: "buerg", n: imFeld.filter((l) => blockerArt(l, "buergschaft_offen")).length,
+      { key: "buerg", ziel: "trefferguete", n: imFeld.filter((l) => blockerArt(l, "buergschaft_offen")).length,
         titel: t("Bürgschaftsrahmen fehlt"),
-        text: t("fordern eine Bürgschaft. Ohne euren Rahmen können wir nicht sagen, ob ihr sie stemmt.") },
-      { key: "allein", n: imFeld.filter((l) => blockerArt(l, "partner")).length,
+        text: t("fordern eine Bürgschaft. Tragt den Rahmen ein, den eure Bank stellt, dann prüfen wir sie mit.") },
+      { key: "allein", ziel: "trefferguete", n: imFeld.filter((l) => blockerArt(l, "partner")).length,
         titel: t("Über eurer Alleingrenze"),
-        text: t("sind größer, als ihr allein stemmt, mit Partner wären sie erreichbar.") },
-      { key: "region", n: imFeld.filter((l) => teilStatus(l, "region") === "no").length,
+        text: t("sind größer, als ihr allein stemmt. Sagt uns eure Grenze, dann trennen wir Partner-Fälle von Absagen.") },
+      { key: "region", ziel: "profil", n: imFeld.filter((l) => teilStatus(l, "region") === "no").length,
         titel: t("Außerhalb eurer Regionen"),
-        text: t("passen fachlich, liegen aber außerhalb. Arbeitet ihr dort doch?") },
-      { key: "vol", n: imFeld.filter((l) => teilStatus(l, "vol") === "no").length,
+        text: t("passen fachlich, liegen aber außerhalb. Arbeitet ihr dort doch? Dann nehmt die Region auf.") },
+      { key: "vol", ziel: "profil", n: imFeld.filter((l) => teilStatus(l, "vol") === "no").length,
         titel: t("Außerhalb eurer Wertspanne"),
-        text: t("liegen über oder unter der Spanne, die ihr angegeben habt.") },
+        text: t("liegen über oder unter eurer Spanne. Passt sie an, wenn ihr dort doch bietet.") },
       /* ⚠ Der Ortstermin gehört HIERHIN und nicht nur ins Lead-Detail. Ein Pflichttermin
          ist eine Zulassungsbedingung: wer nicht erscheint, darf nicht bieten. Wer das erst
          beim Lesen der Unterlagen merkt, hat den Vorgang schon in der Merkliste. Gemessen
          2026-09-01: 3.723 Vorgänge mit erkanntem Termin, davon 108 verpflichtend — selten,
          und genau deshalb fällt er im Alltag durch. */
-      { key: "ortstermin", n: imFeld.filter((l) => blockerArt(l, "ortstermin")).length,
+      { key: "ortstermin", ziel: "profil", n: imFeld.filter((l) => blockerArt(l, "ortstermin")).length,
         titel: t("Pflicht-Ortstermin außerhalb eures Gebiets"),
-        text: t("verlangen einen Termin vor Ort, an dem ihr teilnehmen müsst, um bieten zu dürfen.") },
+        text: t("verlangen einen Termin vor Ort, an dem ihr teilnehmen müsst. Fahrt ihr hin? Dann gehört die Region ins Profil.") },
     ].filter((x) => x.n > 0).sort((a, z) => z.n - a.n);
 
     return { offen, heiss, kuenftig, netz, zuschlaege, netzKaeufer, gewinner, luecken, imFeld, tageOf };
@@ -473,11 +480,20 @@ function LeerBriefing({ rows, alle = [], onPick, onGoto }: {
           <h4><span className="lb-dot luecke" />{t("Was euch bremst")}</h4>
           {b.luecken.length ? (<>
             <p className="lb-n2">{b.luecken[0].n.toLocaleString("de-DE")}<em>{b.luecken[0].titel.toLowerCase()}</em></p>
+            {/* ⚠ Höchstens drei, nach Anzahl sortiert. An einem Bestand können fünf Lücken
+                gleichzeitig offen sein; fünf Bitten auf einem Bildschirm sind keine
+                Einladung mehr, sondern eine Mängelliste. Die drei mit der größten Wirkung
+                gewinnen. */}
             {b.luecken.slice(0, 3).map((g) => (
-              <a key={g.key} className="lb-kachel" href="/unternehmen">
-                <b>{g.n.toLocaleString("de-DE")}</b>
-                <span><i>{g.titel}</i> — {g.text}</span>
-              </a>
+              g.ziel === "trefferguete"
+                ? <button key={g.key} className="lb-kachel" onClick={() => onGoto?.("trefferguete")}>
+                    <b>{g.n.toLocaleString("de-DE")}</b>
+                    <span><i>{g.titel}</i>. {g.text}</span>
+                  </button>
+                : <a key={g.key} className="lb-kachel" href="/unternehmen">
+                    <b>{g.n.toLocaleString("de-DE")}</b>
+                    <span><i>{g.titel}</i>. {g.text}</span>
+                  </a>
             ))}
           </>) : (
             <p className="lb-nix">{b.imFeld.length
