@@ -123,6 +123,8 @@ def gold_integrity(cfg: Config, country: str = "DE") -> list[tuple[str, int]]:
          "quality.parquet", "notice_id"),
         ("doc_checklist.notice → quality", "doc_checklist.parquet", "notice_id",
          "quality.parquet", "notice_id"),
+        ("doc_verworfen.notice → quality", "doc_verworfen.parquet", "notice_id",
+         "quality.parquet", "notice_id"),
         ("incumbent_tenure.notice → quality", "incumbent_tenure.parquet", "notice_id",
          "quality.parquet", "notice_id"),
         ("notice_enrichment.notice → quality", "notice_enrichment.parquet", "notice_id",

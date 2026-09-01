@@ -172,8 +172,14 @@ def _zahl(v):
         return None
 
 
-def lies(quelle: pathlib.Path) -> tuple[list, list, int]:
-    kopf, punkte, kaputt = [], [], 0
+VERWORFEN_SPALTEN = (
+    "notice_id VARCHAR, nr BIGINT, grund VARCHAR, doctype VARCHAR, "
+    "req_type VARCHAR, marking VARCHAR, quote VARCHAR"
+)
+
+
+def lies(quelle: pathlib.Path) -> tuple[list, list, list, int]:
+    kopf, punkte, verworfen, kaputt = [], [], [], 0
     for pfad in sorted(quelle.glob("*.json")):
         try:
             d = json.loads(pfad.read_text(encoding="utf-8"))
@@ -193,6 +199,16 @@ def lies(quelle: pathlib.Path) -> tuple[list, list, int]:
                     belege[(pos["file"], (pos.get("parser") or "").split("-")[0])] = b[:600]
         stand = datetime.fromtimestamp(pfad.stat().st_mtime, timezone.utc).date().isoformat()
         kopf.append(_kopf(notice_id, d, stand))
+        # ⚠ AUCH DAS VERWORFENE GEHOERT IN DIE EBENE, nicht nur ins Auslieferungsverzeichnis.
+        # Es ist die einzige Auskunft darueber, WORAN die Auswertung scheitert — 96,2 % der
+        # Verwerfungen sind Belegpflicht-Verstoesse, und ohne das abgelehnte Zitat ist jede
+        # Erklaerung dafuer geraten. Dieselbe Begruendung wie fuer die Auswertung selbst.
+        for j, vw in enumerate(d.get("rejected_proben") or [], start=1):
+            if not isinstance(vw, dict):
+                continue
+            verworfen.append((notice_id, j, vw.get("grund"), vw.get("doctype"),
+                              vw.get("req_type"), vw.get("marking"),
+                              str(vw.get("quote") or "")[:300]))
         for i, it in enumerate(d.get("checklist") or [], start=1):
             if not isinstance(it, dict):
                 continue
@@ -208,7 +224,7 @@ def lies(quelle: pathlib.Path) -> tuple[list, list, int]:
                 None if it.get("source_page") is None else str(it.get("source_page")),
                 it.get("marking"), it.get("parser"),
             ))
-    return kopf, punkte, kaputt
+    return kopf, punkte, verworfen, kaputt
 
 
 def schreibe(con, pfad: pathlib.Path, zeilen: list, spalten: str) -> None:
@@ -240,7 +256,7 @@ def main() -> int:
         print(f"  keine Auswertung unter {quelle} — nichts zu tun.")
         return 0
 
-    kopf, punkte, kaputt = lies(quelle)
+    kopf, punkte, verworfen, kaputt = lies(quelle)
     if not kopf:
         print(f"  {quelle} ist leer — nichts zu tun.")
         return 0
@@ -250,6 +266,7 @@ def main() -> int:
     con = duckdb.connect()
     schreibe(con, ziel / a.land / "doc_analysis.parquet", kopf, KOPF_SPALTEN)
     schreibe(con, ziel / a.land / "doc_checklist.parquet", punkte, CHECK_SPALTEN)
+    schreibe(con, ziel / a.land / "doc_verworfen.parquet", verworfen, VERWORFEN_SPALTEN)
     con.close()
 
     mit_zitat = sum(1 for z in punkte if z[9])
@@ -262,6 +279,7 @@ def main() -> int:
     print(f"  doc_checklist: {len(punkte):,} Anforderungen, davon {mit_zitat:,} "
           f"({mit_zitat/max(len(punkte),1)*100:.1f} %) mit Zitat, "
           f"{mit_beleg:,} mit Parser-Beleg")
+    print(f"  doc_verworfen: {len(verworfen):,} Stichproben abgelehnter Eintraege")
     if kaputt:
         print(f"  ⚠ {kaputt} Datei(en) nicht lesbar — uebersprungen, nicht stillschweigend gezaehlt.")
     return 0
