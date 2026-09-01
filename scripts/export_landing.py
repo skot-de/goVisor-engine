@@ -264,6 +264,140 @@ def anforderungs_katalog(analysen: dict, fach_von_lead: dict, offene_leads: set)
     return {"katalog": katalog, "profile": profile, "texte": texte}
 
 
+# Landeshauptstaedte, deren Name im Kaeufernamen eindeutig auf ein Bundesland zeigt. NUR fuer
+# die Gegenprobe der Leseprobe — kein Ersatz fuer eine ordentliche Ortszuordnung.
+# ⚠ Warum es sie gibt: am 2026-09-01 standen 172 Vergaben der Landeshauptstadt Magdeburg unter
+# „Nordrhein-Westfalen", weil ihre NUTS auf DEA22 (Bonn) steht — und wir fuehren den Wert als
+# „amtlich". 391 DE-Leads sind so betroffen. Das gehoert in der Pipeline behoben (eigenes
+# Ticket); hier zaehlt nur, dass so ein Fall nicht als ERSTES auf der oeffentlichen Seite
+# steht. Ein sichtbar falsches Bundesland kostet mehr Glaubwuerdigkeit, als die eine Zeile
+# Inhalt wert ist.
+LANDESHAUPTSTADT = {
+    "Magdeburg": "Sachsen-Anhalt", "Dresden": "Sachsen", "Kiel": "Schleswig-Holstein",
+    "Erfurt": "Thüringen", "Mainz": "Rheinland-Pfalz", "Schwerin": "Mecklenburg-Vorpommern",
+    "Potsdam": "Brandenburg", "Saarbrücken": "Saarland", "Hannover": "Niedersachsen",
+    "Wiesbaden": "Hessen", "Düsseldorf": "Nordrhein-Westfalen", "Stuttgart": "Baden-Württemberg",
+    "München": "Bayern",
+}
+
+
+def _region_widerspricht(kaeufer: str, region: str, nuts: str | None) -> bool:
+    """Ist die Regionsangabe erkennbar falsch? Zwei Pruefungen, beide gemessen.
+
+    ⚠ 1 · DER BONN-KLUMPEN. `DEA22` (Bonn) traegt 92 verschiedene `buyer_town` — dreimal so
+    viele wie die naechste NUTS. 391 DE-Leads sitzen nachweislich woanders, und wir fuehren
+    den Wert trotzdem als „amtlich". Fuer die Leseprobe deshalb: DEA22 nur, wenn der Kaeufer
+    auch Bonn im Namen traegt. Kein Ersatz fuer die Reparatur in der Pipeline (eigenes
+    Ticket), sondern eine Tuer, die zuhaelt, bis die repariert ist.
+
+    ⚠ 2 · Die Hauptstadtliste allein reichte nicht: „Lutherstadt Wittenberg" stand unter
+    Nordrhein-Westfalen und rutschte durch, weil Wittenberg keine Landeshauptstadt ist.
+    Beide Pruefungen zusammen, nicht eine davon.
+    """
+    if nuts == "DEA22" and "Bonn" not in kaeufer:
+        return True
+    for stadt, land in LANDESHAUPTSTADT.items():
+        if stadt in kaeufer and region and region != land:
+            return True
+    return False
+
+
+# Zeichen, die auf beschaedigten Text hindeuten. Ein Kaeufername wie „DB InfraGO AG ?
+# Geschaeftsbereich" ist inhaltlich richtig und sieht trotzdem nach Fehler aus — auf der
+# ersten Seite, die ein Fremder sieht, ist das teurer als der eine fehlende Eintrag.
+KAPUTT = ("?", "\ufffd", "??")
+
+
+def leseprobe(root, fachliste) -> dict:
+    """Ein paar ECHTE offene Vergaben je Fachgebiet — die Leseprobe vor der Anmeldung.
+
+    WARUM. Der Eignungs-Check auf der Startseite endet mit „177 passende offene Vergaben
+    ansehen" und dahinter stand bis zum 2026-09-01 die Konto-Pflicht: ein Versprechen,
+    gefolgt von einer Mauer. Wer wissen wollte, ob sich goVisor lohnt, sah nie einen Lead.
+    Sven hat entschieden, eine Leseprobe zu zeigen.
+
+    WAS DRIN STEHT UND WAS NICHT. Titel, Auftraggeber, Region, Angebotsfrist, Wert — das,
+    was in jeder Bekanntmachung ohnehin oeffentlich ist. **Nicht** die Bewertung, die
+    Passung, die Strategie oder die Dokumentanalyse; das ist die Arbeit, fuer die man sich
+    anmeldet.
+
+    ⚠ `frist.tage`, NICHT `endTage`. Die erste Fassung filterte auf `endTage` — das ist
+    `days_to_expiry`, also das VERTRAGSENDE fuer das Auslauf-Radar, nicht die Angebotsfrist
+    (`days_to_deadline`). Sie haette auslaufende Vertraege als „jetzt bewerben" ausgegeben.
+    Aufgefallen ist es nur daran, dass jeder gewaehlte Vorgang die Frist „heute" trug.
+
+    ⚠ NUR BELEGTE FRISTEN (`src == "echt"`). Eine geschaetzte Frist ist fuer die interne
+    Sortierung brauchbar, aber nicht fuer die erste Zeile, die ein Fremder von uns liest.
+    Der Vorrat traegt es: im kleinsten Fachgebiet bleiben 81 Vorgaenge uebrig.
+
+    ⚠ VORRAT STATT EINZELSTUECK, dieselbe Lehre wie beim Beispielvorgang darueber: es
+    wandern 18 je Fachgebiet in die Datei, und die Seite zeigt nur die, deren Frist noch
+    laeuft. Faellt der Tageslauf aus, traegt ein Export ueber Wochen, ohne dass jemals ein
+    abgelaufener Vorgang gezeigt wird.
+
+    ⚠ HOECHSTENS ZWEI JE REGION. Ohne die Bremse stand fuenfmal dieselbe Grossstadt
+    untereinander — die Leseprobe soll die Breite zeigen, nicht den Zufall der Sortierung.
+    """
+    import json as _json
+
+    raus: dict[str, list] = {}
+    for f in fachliste:
+        schluessel = f["schluessel"]
+        try:
+            leads = _json.loads((root / "web/data" / f"leads-{schluessel}.json")
+                                .read_text(encoding="utf-8"))
+            leads = leads if isinstance(leads, list) else list(leads.values())
+        except Exception:                                      # noqa: BLE001
+            continue
+        kandidaten = []
+        for l in leads:
+            frist = l.get("frist") or {}
+            tage = frist.get("tage")
+            titel, kaeufer = (l.get("titel") or "").strip(), (l.get("buyerShort") or "").strip()
+            # Fenster: weit genug weg, um einen ausgefallenen Tageslauf zu ueberleben, nah
+            # genug, um eine Frist zu sein, auf die man reagieren kann.
+            if not (isinstance(tage, int) and 7 <= tage <= 180):
+                continue
+            if frist.get("src") != "echt" or not titel or not kaeufer or not frist.get("date"):
+                continue
+            region = (l.get("region") or "").strip()
+            if _region_widerspricht(kaeufer, region, l.get("nuts")):
+                continue
+            if any(z in kaeufer or z in titel for z in KAPUTT):
+                continue
+            # ⚠ DER WERT TRAEGT SEINE HERKUNFT MIT. Gemessen am 2026-09-01: unter den
+            # Bau-Vergaben mit belegter Frist hat KEINE EINZIGE einen belegten Wert — alle
+            # sind CPV-Median-Schaetzungen, „383.180 €" allein 2.752-mal. Als Auftragswert
+            # dieser Vergabe gezeigt waere das eine erfundene Zahl. Also wandert `vs` mit,
+            # und die Seite schreibt „geschaetzt" daran oder laesst es weg.
+            volumen = l.get("volumen") or {}
+            wert, wert_quelle = volumen.get("wert"), volumen.get("src")
+            kandidaten.append((tage, {
+                "t": titel[:110], "k": kaeufer[:80], "r": region or None,
+                "l": l.get("land"), "f": frist["date"], "d": tage,
+                "v": wert if wert_quelle in ("echt", "schaetz") else None,
+                "vs": wert_quelle if wert_quelle in ("echt", "schaetz") else None,
+            }))
+        kandidaten.sort(key=lambda k: k[0])                    # naechste Frist zuerst
+        # ⚠ HOECHSTENS EINER JE FRISTTAG. Ohne die Bremse trugen alle fuenf gezeigten
+        # Vorgaenge dasselbe Datum — die Sortierung nimmt sonst schlicht den naechsten
+        # Stichtag und raeumt ihn leer. Fuenfmal „Frist 08.09.2026" untereinander liest sich
+        # wie ein Fehler, nicht wie ein Angebot.
+        gewaehlt, je_region, je_tag = [], Counter(), Counter()
+        for _, eintrag in kandidaten:
+            raum = eintrag["r"] or eintrag["l"] or "?"
+            if je_region[raum] >= 2 or je_tag[eintrag["f"]] >= 1:
+                continue
+            je_region[raum] += 1
+            je_tag[eintrag["f"]] += 1
+            gewaehlt.append(eintrag)
+            if len(gewaehlt) == 18:
+                break
+        if gewaehlt:
+            raus[schluessel] = gewaehlt
+    return raus
+
+
 def eignungs_check(root, fachliste, analysen: dict) -> dict:
     """Der Würfel für den öffentlichen Eignungs-Check."""
     import json as _json
@@ -596,6 +730,9 @@ def main() -> int:
         "beispiel": beispiel,
         "beispiele": beispiele,
         "check": eignungs_check(ROOT, fach, analysen_fuer_check),
+        # Die Leseprobe vor der Anmeldung. Steht bewusst in DERSELBEN Datei wie der Check —
+        # kein neues API-Tor, das jemand aus Versehen offen laesst, und serverless-tauglich.
+        "leseprobe": leseprobe(ROOT, fach),
         "masse": masse,
     }
     ZIEL.write_text(json.dumps(daten, ensure_ascii=False), encoding="utf-8")

@@ -72,7 +72,21 @@ export type Check = {
     unter25k: number; ab1m: number };
 };
 
+/** Ein Vorgang der Leseprobe. Kurze Schlüssel, weil die Datei bei jedem Aufruf der
+ *  Startseite mitgeht: t=Titel, k=Käufer, r=Region, l=Land, f=Frist, d=Tage, v=Wert,
+ *  vs=Herkunft des Werts. Gebaut von `scripts/export_landing.py`. */
+export type Probe = { t: string; k: string; r: string | null; l: string | null;
+                      f: string; d: number; v: string | null; vs: string | null };
+export type Leseprobe = Record<string, Probe[]>;
+
 const nf = (n: number) => n.toLocaleString("de-DE");
+
+/** „08.09.2026" → Date. Die Datei liefert deutsche Schreibweise, `new Date(str)` läse sie
+ *  als ungültig und jeder Vorgang wäre abgelaufen. */
+function alsDatum(deutsch: string): Date | null {
+  const m = /^(\d{2})\.(\d{2})\.(\d{4})$/.exec(deutsch);
+  return m ? new Date(Number(m[3]), Number(m[2]) - 1, Number(m[1])) : null;
+}
 /** Welche Regionsschlüssel zu welchem Land gehören — nur DE ist unterhalb der Landesebene
  *  aufgelöst (16 Länder); AT und CH tragen im Bestand keine belastbare Regionalzuordnung. */
 const LAENDER: Record<string, string[]> = {
@@ -118,8 +132,9 @@ function Leiste({ titel, hinweis, optionen, wert, setzen }: {
   );
 }
 
-export function EignungsCheck({ check, fachgebiete }: {
+export function EignungsCheck({ check, fachgebiete, leseprobe }: {
   check: Check; fachgebiete: { schluessel: string; label: string; offen: number }[];
+  leseprobe?: Leseprobe;
 }) {
   // Bewusst OHNE Vorauswahl: das rechte Feld soll auffordern, nicht schon Ergebnisse
   // zeigen, die niemand angefragt hat. Der erste Klick auf eine Kachel ist der Einstieg.
@@ -207,6 +222,30 @@ export function EignungsCheck({ check, fachgebiete }: {
     }
     return { passt, offen: offenPasst, mit };
   }, [profil, antwort, hat]);
+
+  /* Die Leseprobe: ein paar echte offene Vergaben, bevor die Anmeldung kommt.
+   *
+   * ⚠ ABGELAUFENE FRISTEN FALLEN HIER RAUS, nicht erst im Export. Die Datei wird nachts
+   * gebaut und trägt Vorrat; fällt der Tageslauf aus, stünde sonst irgendwann ein Vorgang
+   * da, auf den sich niemand mehr bewerben kann. Das ist die erste Zeile, die ein Fremder
+   * von uns liest, und sie muss stimmen.
+   *
+   * Die eigene Region zuerst, dann der Rest: wer Bayern gewählt hat, soll Bayern sehen,
+   * aber lieber einen Vorgang aus Hessen als eine leere Liste. */
+  const proben = useMemo(() => {
+    const leer = { liste: [] as Probe[], ausRegion: 0 };
+    if (!fach) return leer;
+    const alle = leseprobe?.[fach] ?? [];
+    const heute = new Date(); heute.setHours(0, 0, 0, 0);
+    const laufend = alle.filter((x) => { const d = alsDatum(x.f); return d !== null && d >= heute; });
+    const passt = (x: Probe) =>
+      region === "alle" ? true
+      : LAENDER[region] ? x.l === region
+      : x.r === region;
+    const eigene = laufend.filter(passt);
+    return { liste: [...eigene, ...laufend.filter((x) => !passt(x))].slice(0, 5),
+             ausRegion: Math.min(eigene.length, 5) };
+  }, [fach, region, leseprobe]);
 
   /** Je Katalogzeile: erfüllt ihr das, und woran erkennt man es. */
   const zeilen = useMemo(() => (katalog?.zeilen ?? []).map((z) => {
@@ -467,6 +506,62 @@ export function EignungsCheck({ check, fachgebiete }: {
                         <span className="ec-marke">gemessen, nicht geschätzt</span>
                       </p>
                     )}
+
+                    {/* ── Leseprobe ───────────────────────────────────────────────────
+                        Bis zum 2026-09-01 endete die Auswertung mit „177 passende offene
+                        Vergaben ansehen" und dahinter der Anmeldemauer: ein Versprechen,
+                        gefolgt von einer Mauer. Wer wissen wollte, ob sich goVisor lohnt,
+                        sah nie einen Lead. Sven hat entschieden, ein paar zu zeigen.
+
+                        Was hier steht, ist ohnehin öffentlich: Titel, Auftraggeber, Region,
+                        Frist. Was fehlt, ist die Arbeit, für die man sich anmeldet, und der
+                        Kasten darunter sagt das ausdrücklich statt es zu verschweigen. */}
+                    {proben.liste.length > 0 ? (
+                      <div className="ec-probe">
+                        <h4 className="ec-probe-kopf">Ein Blick hinein, ohne Anmeldung</h4>
+                        <ul className="ec-probe-liste">
+                          {proben.liste.map((x, i) => (
+                            <li key={i} className="ec-probe-zeile">
+                              <span className="ec-probe-titel">{x.t}</span>
+                              <span className="ec-probe-meta">
+                                {x.k}
+                                {x.r || x.l ? ` · ${x.r ?? x.l}` : ""}
+                                {` · Frist ${x.f}`}
+                                {/* ⚠ Der Wert trägt seine Herkunft. Unter den offenen
+                                    Vergaben ist derzeit KEIN Auftragswert belegt; alles
+                                    sind CPV-Median-Schätzungen. Als Wert dieser Vergabe
+                                    gezeigt wäre das eine erfundene Zahl. */}
+                                {x.v && x.vs === "echt" ? ` · ${x.v}` : ""}
+                                {x.v && x.vs === "schaetz" ? ` · geschätzt ${x.v}` : ""}
+                              </span>
+                            </li>
+                          ))}
+                        </ul>
+                        {/* ⚠ „Fünf von 169, die zu eurem Zuschnitt passen" stand hier zuerst
+                            und war falsch: die 169 sind das Ergebnis der Eignungsrechnung
+                            oben, die fünf sind einfach offene Vergaben aus Fachgebiet und
+                            Region. Sie sind NICHT gegen die Angaben geprüft. Ein Satz, der
+                            zwei Zahlen aneinanderlegt, die nichts miteinander zu tun haben,
+                            ist genau die Sorte Behauptung, die dieses Produkt nicht macht. */}
+                        <p className="ec-probe-fuss">
+                          Offene Vergaben aus {eigenerKatalog ? fachLabel : "eurem Fachgebiet"}
+                          {/* ⚠ „in Bayern" durfte nicht dastehen, solange nur einer von fünf
+                              aus Bayern kam. Der Vorrat führt je Region höchstens zwei
+                              Vorgänge, damit die Leseprobe die Breite zeigt; in einer
+                              einzelnen Region wird sie deshalb schnell dünn. Lieber die
+                              Auffüllung benennen als eine Ortsangabe behaupten, die vier
+                              der fünf Zeilen widerlegen. */}
+                          {region === "alle" || proben.ausRegion === 0 ? ""
+                            : proben.ausRegion === proben.liste.length ? ` in ${regionLabel}`
+                            : ` (${proben.ausRegion} davon in ${regionLabel})`}
+                          , die nächsten Fristen zuerst. Gegen eure Angaben geprüft sind sie
+                          nicht, das steht in der Auswertung darüber. Was hier fehlt: die
+                          Anforderungen aus den Vergabeunterlagen, die Passung zu eurem Profil
+                          und wer bisher gewonnen hat. Dafür braucht es ein Konto, kostenlos
+                          und ohne Zahlungsdaten.
+                        </p>
+                      </div>
+                    ) : null}
 
                     <p className="ec-fuss">
                       Grundlage: {nf(katalog?.n ?? 0)} ausgewertete Vergabeunterlagen

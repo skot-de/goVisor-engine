@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { loadDataFile } from "@/lib/dataSource";
-import { EignungsCheck, type Check } from "./EignungsCheck";
+import { EignungsCheck, type Check, type Leseprobe } from "./EignungsCheck";
 import { RelevanzEcho } from "./RelevanzEcho";
 import "../app/landing-oeffentlich.css";
 
@@ -38,6 +38,7 @@ type Zahlen = {
   beispiel: Beispiel | null;
   beispiele?: Beispiel[];
   check?: Check;
+  leseprobe?: Leseprobe;
   masse?: {
     offen: number;
     verdraengbar: Record<string, number>;
@@ -188,7 +189,7 @@ export async function Landing() {
           landing.json, entfällt der Abschnitt — lieber nichts als ein Formular, das nichts
           rechnet. */}
       {z?.check && z.fachgebiete?.length ? (
-        <EignungsCheck check={z.check} fachgebiete={z.fachgebiete} />
+        <EignungsCheck check={z.check} fachgebiete={z.fachgebiete} leseprobe={z.leseprobe} />
       ) : null}
 
       {/* DREI MASSE. Aus der Vorlage `INPUT/…/govisor-landing-v28.html` („KPIs die wirklich

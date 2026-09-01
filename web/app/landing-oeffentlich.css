@@ -735,3 +735,30 @@ body:has(> .lp) { background: #E4E8E6; }
 .lp-nav a.lp-knopf-linie:hover, .lp-knopf-linie:hover { background: var(--surface-2, #FAFBFA);
   border-color: var(--ink-400, #8C9B95); color: var(--ink-900, #12211D);
   box-shadow: none; transform: none; }
+
+/* LESEPROBE. Ein paar echte offene Vergaben am Ende der Auswertung, bevor die Anmeldung
+   kommt (2026-09-01). Bis dahin endete der Check mit „177 passende offene Vergaben ansehen"
+   und dahinter der Mauer: ein Versprechen, gefolgt von einer Mauer.
+
+   Bewusst RUHIG gehalten. Der Blickfang der Auswertung ist die grosse Zahl darüber; die
+   Leseprobe belegt sie, sie soll ihr nicht die Aufmerksamkeit wegnehmen. Deshalb dieselbe
+   Schriftgrösse wie die Katalogzeilen, kein Rahmen um jede Zeile, nur eine Trennlinie. */
+.ec-probe { margin: 22px 0 0; padding: 16px 0 0; border-top: 1px solid var(--linie, #E3EAE7); }
+.ec-probe-kopf { font-size: 13px; font-weight: 650; letter-spacing: -.01em; margin: 0 0 10px;
+  color: var(--ink-700, #2F3E38); }
+.ec-probe-liste { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 9px; }
+.ec-probe-zeile { display: flex; flex-direction: column; gap: 2px; }
+.ec-probe-titel { font-size: 13.5px; font-weight: 600; line-height: 1.4; letter-spacing: -.01em;
+  color: var(--ink-800, #1E2B26); }
+/* Lange Behördennamen sind der Normalfall, nicht die Ausnahme („Die Republik Österreich
+   Bund, die Bundesbeschaffung GmbH sowie alle weiteren Auftraggeber …"). Eine Zeile, dann
+   Schluss — sonst schiebt ein einziger Vorgang die ganze Liste auseinander. */
+.ec-probe-meta { font-size: 11.5px; line-height: 1.5; color: var(--ink-500, #64766F);
+  font-variant-numeric: tabular-nums; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ec-probe-fuss { font-size: 11.5px; line-height: 1.6; color: var(--ink-400, #8C9B95); margin: 12px 0 0; }
+
+@media (max-width: 900px) {
+  /* Auf dem Telefon ist Abschneiden schlechter als Umbrechen: die Zeile trägt die Frist,
+     und die steht am Ende. */
+  .ec-probe-meta { white-space: normal; overflow: visible; }
+}
