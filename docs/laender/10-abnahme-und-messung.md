@@ -210,6 +210,169 @@ Ein paar echte Beispiele, was hinter einer schönen Zahl steckte:
 | 96,6 % `documents_url` | fast alles da | 33 % kommen tatsächlich durch den Trichter |
 | 78 % Doktyp-Erkennung | Fortschritt | Zuschlagskriterien **sanken** (Fehlalarm bereinigt) |
 | 7 % Incumbent-Rate | belastbar | Paarungs-Artefakt der alten `contract_chains` |
+| Median 22 Pflichtfelder | Formularaufwand je Vorgang | 93 % der Formulare setzen das Pflicht-Kennzeichen gar nicht |
+| 200.010 LV-Positionen | ein riesiges Leistungsverzeichnis | ein Lastgang: Viertelstundenwerte eines Jahres |
+| 198.584 einordenbare Zahlen | eine breite Vergleichsbasis | 2.208; der Rest hat keine Einheit oder keine gemeinsame Grösse |
+| „fast alle bei 5 %" | ein enger Markt | zwei Zahlen im Verhältnis 1:25 (5 % Obergrenze, 0,20 % je Werktag) |
+| 5× genau −1 Tag Fristabweichung | ein Off-by-one bei uns | verlängerte Fristen: 51 % liegen auf Wochenvielfachen |
+
+## Wenn ein Fehlalarm teurer ist als ein verpasster Befund
+
+Die meisten Kennzahlen dürfen im Zweifel melden: „Vertragsstrafe höher als üblich" kostet den
+Leser dreissig Sekunden, wenn sie danebenliegt. Bei **einer** ist es umgekehrt — der
+Fristwiderspruch. Wer dort einen Fehlalarm sieht, plant um oder verwirft die Vergabe.
+
+Für diese Klasse gelten drei zusätzliche Regeln:
+
+- ⚠ **Der Beleg muss die Behauptung tragen, nicht nur begleiten.** Ein Zitat „Ablauf der
+  Angebotsfrist Datum Uhrzeit" (das Etikett eines Formularfelds) stand als Beweis für einen
+  28-Tage-Widerspruch da und enthielt kein einziges Datum. Prüfen, ob der Beleg den Wert
+  wirklich enthält — 7 % taten es nicht.
+- ⚠ **Der Ausschnitt liegt um den Beweis, nicht am Satzanfang.** Die Kürzung auf 150 Zeichen
+  schnitt genau das Datum weg, weil es erst nach 150 Zeichen kam. Dieselbe Falle hat schon
+  einmal aus „Bindefrist: 30.10.2026" ein „Bindefrist: …" gemacht.
+- ⚠ **Im Zweifel schweigen, auch wenn der Befund echt sein könnte.** „Die Angebotsfrist endet am
+  10.09.2027" bei einer Bekanntmachung für 2026 ist entweder ein Jahresdreher des Auftraggebers
+  (ein wertvoller Fund) oder ein Lesefehler von uns. Ohne das Dokument zu öffnen ist beides
+  ununterscheidbar, also wird nichts gemeldet. Ein verpasster echter Fund kostet weniger als ein
+  erfundener.
+
+**Und eine Regel für die Aussage selbst:** wo zwei Quellen sich widersprechen und die Daten nicht
+sagen, welche recht hat, darf die Anzeige es auch nicht sagen. Beide Werte nennen, den Beleg
+dazu, und den einen Satz, der unabhängig davon stimmt.
+
+## Der Rahmen ist selten der, den man zuerst vermutet
+
+Vier Kennzahlen dieser Reihe brauchten eine Vergleichsgruppe, und **dreimal war die naheliegende
+die falsche**:
+
+| Kennzahl | naheliegend | gemessen richtig | Spreizung |
+|---|---|---|---|
+| Aufwand gegen Zeitfenster | der Markt | **Regelwerk** (Mindestfristen) | — |
+| Leistungsverzeichnis | CPV-Abteilung | **Gewerk** (CPV 4-stellig) | 5,4× |
+| Bezifferte Schwellen | Anforderungsart | **Art × Einheit × Ausprägung** | 25× |
+| Standardtext-Anteil | Regelwerk | **Textmenge** | 4,1× gegen 1,8× |
+
+Beim Standardtext lag das Regelwerk besonders nahe: es trennt sichtbar (UVgO 42 %, VOB 25 %),
+und bei Kennzahl 1 war es die richtige Antwort gewesen. Es ist trotzdem der schwächere Rahmen.
+
+**Das Verfahren, das die Frage entscheidet, kostet eine Abfrage:** die Kandidaten-Rahmen
+kreuzweise auftragen und die Spreizung der Mediane vergleichen. Der stärkere Rahmen ist der,
+dessen Muster sich *innerhalb* des anderen wiederholt — beim Standardtext fällt der Anteil in
+**jedem** Regelwerk mit wachsender Textmenge, aber die Regelwerks-Reihenfolge dreht sich nicht
+um.
+
+⚠ **Und der Grund muss inhaltlich benennbar sein.** Grosse Pakete tragen ein eigenes
+Leistungsverzeichnis und eigene technische Anlagen — deshalb sinkt der Kopie-Anteil. Wer einen
+Rahmen nur wählt, weil er die grössere Zahl liefert, hat eine Korrelation gefunden und keine
+Erklärung.
+
+## Zwei Zahlen unter einem Namen
+
+Eine Anforderungsart kann zwei verschiedene Grössen enthalten, die denselben Namen und dieselbe
+Einheit tragen. Die Vertragsstrafe ist der Musterfall: **5 % Obergrenze** und **0,20 % je
+Werktag** heissen beide „Vertragsstrafe" und stehen beide in Prozent — im Verhältnis 1:25. Wer
+sie zusammen mittelt, bekommt eine Zahl, die für keine von beiden gilt; wer nur eine anzeigt,
+sagt dem Nutzer nicht, welche er sieht.
+
+**Woran man es erkennt.** Die Verteilung ist zweigipflig, und der Abstand ist zu gross für
+Streuung: Werte um 0,1 bis 0,3 neben Werten um 5 bis 10. Ein Median dazwischen (hier: 1,0 im
+unzugeordneten Rest) ist das Warnzeichen — er liegt dort, wo keine echte Vergabe liegt.
+
+⚠ **Und die Unterscheidung steht im Text, nicht in einem Feld.** Drei Regeln dafür, alle drei
+teuer erkauft:
+
+- **Das Einheitenfeld ist oft Fliesstext.** „der Auftragssumme je angefangenen Werktag", „€ je
+  Vorfall", „pro Woche". Wer nur bekannte Einheiten akzeptiert, verwirft die beste Auskunft.
+- ⚠ **Geschwisterzeilen teilen sich das Zitat.** Beide Zahlen stammen aus einem Satz, also
+  bekommen beide Zeilen denselben Beleg. Nur die zeilengenauen Felder unterscheiden sie —
+  sie müssen **Vorrang** haben, sonst fallen genau die Vorgänge heraus, die beide Zahlen nennen.
+- **Eine dritte Bezugsgrösse ist kein Sonderfall der zweiten.** „Pro Woche" ist kein Tagessatz
+  und „je Vorfall" auch nicht. Wer sie einsammelt, weil sie „ungefähr passen", baut Fehlalarme.
+
+Wo der Text nichts hergibt, bleibt die Zahl **ohne Etikett und ohne Vergleich**. Das ist besser
+als ein Etikett, das in einem von vier Fällen falsch ist.
+
+## Die Driftprüfung gehört in den Lauf, nicht ins Protokoll
+
+Der Abschnitt darunter beschreibt, wie man prüft, ob eine Zahl den Vorgang misst oder uns. Beim
+Bau von Kennzahl 6 kam die zweite Hälfte dazu: **dieses Urteil darf nicht von Hand gefällt und
+dann eingefroren werden.** Eine Liste „diese Gruppen sind stabil" ist in drei Monaten falsch,
+ohne dass es jemand merkt — neue Quellen, neue Abrufquoten, andere Verteilung.
+
+`scripts/export_schwellen.py` rechnet sie deshalb bei jedem Lauf selbst: Median der flach
+gelesenen Vorgänge gegen Median der tief gelesenen, und wer weiter als um den Faktor 1,5
+auseinanderläuft, fliegt raus. Was rausfliegt, wird **mit Grund gemeldet** — eine stille Auswahl
+liest sich später wie „mehr gab es nicht", und die nächste Sitzung sucht die fehlenden Werte im
+Renderer.
+
+⚠ **Zwei Regeln, die dabei teuer erkauft sind:**
+
+- **Stabilität ist notwendig, nicht hinreichend.** `technische_mindestanforderung / Prozent`
+  besteht die Prüfung mühelos und ist trotzdem unvergleichbar: 20 % Steigung gegen 20 %
+  Recyclinganteil. Die Frage „benennt die Gruppe EINE Grösse?" ist ein Urteil und bleibt eines.
+- **Die naheliegende Erklärung für eine Drift ist oft falsch.** Beim Mindestumsatz lag „tief
+  gelesene Vorgänge sind grosse Vergaben" auf der Hand. Die Schwelle korreliert aber nicht mit
+  dem Auftragswert (0,24), und der Anstieg bleibt innerhalb jedes Regelwerks bestehen. Wer eine
+  Drift wegerklären will, muss den Erklärungsversuch selbst messen.
+
+## Steht die Zahl schon irgendwo?
+
+Die billigste Frage von allen, und sie wird am zuverlässigsten vergessen. Beim Bau von Kennzahl
+5 („Umfang des Leistungsverzeichnisses") war der Export fertig, die Route verdrahtet und der
+Renderer geschrieben, bevor beim ersten Blick in die laufende App auffiel: der Block
+„Leistungsumfang" zeigte die Zahl seit Monaten an, samt Mengen je Einheit und Positionstabelle.
+
+Der Schaden wäre nicht ein Fehler gewesen, sondern eine **Doppelung** — zwei Kacheln, die
+dieselbe Zahl sagen, in einer Oberfläche, die ohnehin an zu vielen Kennzahlen trägt. Solche
+Doppelungen fallen im Code nie auf, weil beide Wege für sich richtig sind.
+
+Zwei Handgriffe vor dem Bauen:
+
+- **Im Frontend nach der Zahl suchen, nicht nach dem Kennzahl-Namen.** Die Übergabe nannte sie
+  „Mengengerüst", die App nennt sie „Leistungsumfang". Ein Namensvergleich hätte nichts gefunden.
+- ⚠ **Und wenn sie schon da ist, prüfen, aus WELCHER Quelle.** Die angezeigte Zahl kam aus den
+  geparsten Positionen (`doc_positions.parquet`), der neue Export leitete sie aus
+  `doc_checklist` ab. Zwei Quellen für dieselbe Zahl sind immer die schlechtere Lösung, und hier
+  war die zweite zusätzlich falsch: ihre Spitzenwerte waren Lastgänge, keine Positionen. Wer
+  ergänzt, liest dieselbe Quelle wie der Block, den er ergänzt.
+
+Was am Ende gebaut wurde, ist deshalb **nur der Vergleich**, angehängt an die vorhandene Zeile.
+Eine Kennzahl muss keine eigene Kachel bekommen, um eine zu sein.
+
+## Misst die Zahl den Vorgang oder misst sie uns?
+
+Die Frage steht hier eigenhändig, weil sie sich nicht wie ein Fehler anfühlt. Eine Zahl aus den
+Vergabeunterlagen kann handwerklich sauber gerechnet, gut belegt und trotzdem eine Aussage über
+**unsere Abrufquote** sein statt über die Ausschreibung. Sie sieht dann genau so aus wie eine
+echte Kennzahl.
+
+**Der Test dauert eine Abfrage.** Den Wert in Klassen nach Lesetiefe legen (Zahl der geparsten
+Dateien) und den Median je Klasse ansehen:
+
+| | 1-5 Dateien | 6-15 | 16-40 | Urteil |
+|---|---|---|---|---|
+| Anforderungen je Bereich (Kennzahl 2) | stabil | stabil | stabil | **trägt** |
+| Formulare je Vorgang (Kennzahl 4) | 2 | 7 | 16 | **trägt nicht** |
+| Felder je Vorgang (Kennzahl 4) | 60 | 327 | 606 | **trägt nicht** |
+| Felder je Formular (Kennzahl 4) | 27 | 41 | 38 | trägt |
+
+Wächst der Median mit der Lesetiefe, misst die Zahl uns. Zwei Auswege gibt es, und einer davon
+ist eine Falle:
+
+- ⚠ **Die Falle: „dann nehme ich nur die vollständigen Vorgänge".** Klingt zwingend und half
+  nicht. In den 165 Vorgängen, deren Unterlagen komplett aus **einem** ZIP kamen, wuchs derselbe
+  Median genauso (1 → 6 → 18). Vollständig heisst nicht vergleichbar: grosse Vergaben haben
+  grosse Pakete. Ein Plateau ist der Beleg, den man sucht, und es gab keins.
+- **Der Ausweg: auf Anwesenheit zurückgehen.** Was wir gesehen haben, ist da. Nur das Gegenteil
+  dürfen wir nicht behaupten. Eine Anwesenheits-Kennzahl sagt nie „wenig" und bekommt **keinen
+  Marktvergleich** — der marktweite Wert stammt aus derselben Untererfassung, und dagegen
+  gemessen sähe jeder tief gelesene Vorgang extremer aus als er ist. Sie trägt dafür eine
+  absolute Schwelle, und die darf aus der Verteilung stammen.
+
+**Und die Bezugsgrösse ist die zweite Hälfte der Antwort.** `keine` ist kein Eingeständnis,
+sondern manchmal die einzige richtige Angabe: siehe `govisor/kennzahlen.py`, wo jede Kennzahl
+sagen muss, wogegen sie vergleicht.
 
 ## Was in die Dokumentation gehört
 

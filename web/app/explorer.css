@@ -2418,6 +2418,83 @@ td.c-band .passung i{display:none}
 .profil-z span { color: var(--ink-500); font-variant-numeric: tabular-nums; }
 .profil-huerde b { color: var(--flag); }
 
+/* WIDERSPRUCH BEI DER ANGEBOTSFRIST (Kennzahl 9, 2026-09-02).
+
+   ⚠ Die einzige Zeile in dieser Ansicht, die WARNROT trägt statt bernstein. Ein übersehener
+   Fristwiderspruch kostet die Abgabe, und das ist eine andere Klasse als „Vertragsstrafe höher
+   als üblich". Deshalb steht sie auch nicht klein hinter einem Wert, sondern als eigener Kasten
+   über dem Submissionstermin.
+
+   ⚠ Und sie behauptet nicht, welche Seite recht hat: die Häufungen liegen auf Vielfachen von
+   sieben, also auf verlängerten Fristen, und mal ist das Dokument der neuere Stand, mal die
+   Bekanntmachung. Der Kasten nennt beide Daten und den einen Satz, der immer stimmt. */
+.frist-konflikt { width: 100%; padding: 10px 13px; border-radius: 8px;
+  background: var(--risk-wash); box-shadow: inset 2px 0 0 var(--risk); }
+.fk-kopf { margin: 0 0 3px; font-size: var(--t-sm); font-weight: 650; color: var(--risk); }
+.fk-satz { margin: 0; font-size: var(--t-sm); color: var(--ink-700); line-height: 1.55;
+  font-variant-numeric: tabular-nums; }
+.fk-beleg { margin: 6px 0 0; font-size: var(--t-meta); color: var(--ink-500); line-height: 1.5;
+  overflow-wrap: anywhere; }
+.fk-datei { display: block; font-family: var(--mono); font-size: 10px; color: var(--ink-400);
+  margin-top: 2px; }
+
+/* STANDARDTEXT-ANTEIL (Kennzahl 8, 2026-09-02). Wie viel dieser Unterlagen steht wortgleich
+   auch in anderen Vergaben?
+
+   ⚠ Kein Warnton, auch nicht bei 80 %. Ein hoher Anteil ist keine schlechte Nachricht, sondern
+   weniger Arbeit — farbig ist in dieser Ansicht, was Geld oder Ausschluss kostet. Über dem
+   oberen Viertel wird die Zeile nur kräftiger, nicht bunt. */
+.rt-std { color: var(--ink-400); }
+.rt-std-viel { color: var(--ink-700); font-weight: 600; }
+
+/* BEZIFFERTE SCHWELLE GEGEN IHRE GRUPPE (Kennzahl 6, 2026-09-02). Ist diese Deckungssumme
+   üblich oder die Hürde, an der man sich das Angebot spart?
+
+   ⚠ Sie steht neben der Zahl, nicht darunter, und tritt bewusst zurück: die geforderte Zahl
+   ist die Nachricht, der Vergleich ordnet sie ein. Sie erscheint nur nach oben und nur echt
+   über dem oberen Viertel — bei zwei Gruppen fällt das Quartil mit dem Median zusammen
+   (Vertragsstrafe 5 %, Referenzen 3), dort stünde sie sonst beim Üblichen.
+
+   Kein eigener Kasten: von 223.570 Zahlen sind rund 2.500 vergleichbar, ein Kasten dafür wäre
+   in den meisten Vorgängen leer. */
+.cl-hoch { margin-left: 8px; font-size: var(--t-meta); font-weight: 500; color: var(--flag);
+  white-space: nowrap; font-variant-numeric: tabular-nums; }
+
+/* UMFANG DER FORMULARE (Kennzahl 4, 2026-09-02). Steckt ein Formular drin, das nicht in einer
+   Stunde ausgefüllt ist?
+
+   ⚠ Zwei Stufen, und nur die obere ist farbig. Ab 400 Feldern (die obersten 12 %) ist es
+   Arbeit von Tagen und bekommt die Warnfarbe; darunter ist es ein Vordruck und bleibt eine
+   graue Notiz. Ohne diese Trennung stünde bei fast der Hälfte aller Vorgänge ein Warnhinweis,
+   und einer, der immer leuchtet, sagt nichts mehr.
+
+   ⚠ Kennzahl 5 (Leistungsverzeichnis) steht NICHT hier, obwohl sie dieselbe Frage beantwortet.
+   Ihre Zahl stand längst im Block „Leistungsumfang"; sie ergänzt dort nur den Gewerksvergleich
+   (`.lu-mehr`). Zwei Kacheln mit derselben Zahl wären die Sorte Doppelung, die eine Oberfläche
+   unlesbar macht. Dass die beiden ohnehin Verschiedenes messen, ist gemessen: Korrelation
+   -0,02, von 803 grossen Verzeichnissen haben nur 79 auch ein grosses Formular.
+
+   Der Dateiname steht klein darunter, weil er die einzige Prüfmöglichkeit ist: die Zahl selbst
+   kann der Nutzer nur nachzählen, indem er genau diese Datei öffnet. */
+.umfang { margin: 0 0 var(--s4); padding: var(--s3) var(--s4); background: var(--surface-2);
+  border-radius: var(--r); }
+.umfang-k { display: block; font-family: var(--mono); font-size: 9.5px; font-weight: 600;
+  letter-spacing: .1em; text-transform: uppercase; color: var(--ink-400); margin-bottom: var(--s2); }
+.umfang-l { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column;
+  gap: var(--s2); }
+.umfang-z { padding-left: 10px; box-shadow: inset 2px 0 0 var(--line); }
+.umfang-warn { box-shadow: inset 2px 0 0 var(--flag); }
+.umfang-s { margin: 0; font-size: var(--t-sm); color: var(--ink-700);
+  font-variant-numeric: tabular-nums; }
+.umfang-warn .umfang-s { color: var(--ink-900); font-weight: 650; }
+.umfang-d { margin: 3px 0 0; font-size: var(--t-meta); color: var(--ink-500);
+  overflow-wrap: anywhere; }
+/* Der Gewerksvergleich zum Leistungsverzeichnis (Kennzahl 5). Er hängt an der vorhandenen
+   Zeile und tritt bewusst zurück: die Zahl ist die Nachricht, der Vergleich ordnet sie ein. */
+.lu-mehr { color: var(--flag); font-weight: 600; }
+.umfang-b { display: block; font-family: var(--mono); font-size: 10px; color: var(--ink-400);
+  margin-top: 2px; overflow-wrap: anywhere; }
+
 /* FINGERABDRUCK DER VERGABESTELLE (Kennzahl 3, 2026-09-02). Was verlangt diese Stelle fast
    immer, das andere selten verlangen?
 

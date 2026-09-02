@@ -24,12 +24,221 @@ Gemeinsames Merkmal: jede braucht **beide** Seiten, die öffentliche Bekanntmach
 | 1 | **Aufwand gegen Zeitfenster** | Median 34 Tage, **unabhängig vom Aufwand** (9 bis 109 Anforderungen). Härtester Fall: 120 Anforderungen in 12 Tagen | 3.096 Vorgänge |
 | 2 | **Strenge als Perzentil je Bereich** | Median / 90. Perzentil: Leistung 26/39, Formalitäten 19/39, Vertrag 6/18, Ausschluss 5, Eignung 3, Zuschlag 3 | alle analysierten |
 | 3 | **Fingerabdruck der Vergabestelle** | z. B. BARMER verlangt Referenz-Mindestwert in 9 von 9 Verfahren, marktweit 6 % | 415 Stellen mit ≥3 Verfahren |
-| 4 | **Formularaufwand** | Median 22 Pflichtfelder, Maximum 192 | 93.938 Dokumentforderungen |
-| 5 | **Mengengerüst** | 495.891 LV-Positionen mit Menge und Einheit | 2.228 offene Leads |
-| 6 | **Bezifferte Schwellen als Vergleichsgruppe** | 198.584 Zahlen, einordenbar gegen Median und Quartil | `wert_num` |
-| 7 | **Vertragsstrafe beziffert** | fast alle bei 5 %, Ausreißer nach unten (Fraunhofer 2,2 %) | 13.370, davon 10.106 beziffert |
-| 8 | **Standardtext-Anteil** | Median **≥10 %**, oberes Viertel **≥27 %**, **13 %** der Vorgänge sind zu über der Hälfte Kopie | Stichprobe 517 Vorgänge |
-| 9 | **Widerspruch bei der Angebotsfrist** | **26 von 1.653 (1,6 %)** nennen in den Unterlagen eine **spätere** Frist als die Bekanntmachung; 70 (4,2 %) eine frühere | belegte Fristen beidseitig |
+| 4 | ~~**Formularaufwand**~~ → **Umfang der Formulare** | ⚠ **korrigiert, siehe unten** — gebaut als „grösstes einzelnes Formular", Median 23 Felder je Formular, 12 % der Vorgänge über 400 | 31.799 Formulare in 5.469 Vorgängen |
+| 5 | ~~**Mengengerüst**~~ → **Umfang des Leistungsverzeichnisses** | ⚠ **korrigiert, siehe unten** — gebaut als Gewerksvergleich zur bereits angezeigten Positionszahl | 1.382 Vorgänge in 12 Gewerken |
+| 6 | **Bezifferte Schwelle gegen ihre Gruppe** | ⚠ **stark eingeschränkt, siehe unten** — von 223.570 Zahlen sind 2.208 einordenbar (1 %) | 10 Gruppen |
+| 7 | **Vertragsstrafe beziffert** | ⚠ **zwei Zahlen, nicht eine, siehe unten** — 5 % ist die Obergrenze, 0,20 % der Tagessatz | 4.796 zugeordnet von 11.182 |
+| 8 | **Standardtext-Anteil** | am vollen Bestand **29 % / 51 %**, 26 % über der Hälfte Kopie — gut das Dreifache der Stichprobe | 9.246 Vorgänge, 1,32 Mio. Absätze |
+| 9 | **Widerspruch bei der Angebotsfrist** | bestätigt: 1,4 % später, 4,1 % früher — gemeldet werden 97 Vorgänge nach vier Filtern | 1.958 Vorgänge mit beiden Seiten |
+
+**Zu 7 (aufgeteilt am 2026-09-02, beim Bauen):** „fast alle bei 5 %" stimmt — für die
+**Obergrenze**. Vertragsstrafen gibt es als zwei verschiedene Zahlen, und sie stehen im
+Verhältnis **1:25**:
+
+| | n | Median | oberes Viertel |
+|---|---|---|---|
+| Obergrenze („insgesamt höchstens") | 3.958 | **5,00 %** | 5,00 % |
+| Tagessatz („je Werktag") | 838 | **0,20 %** | 0,20 % |
+
+⚠ **Die Kennzahl galt als fertig und war es nicht.** Das Verzeichnis führte sie als `penaltyPct`
+mit Bezug „markt"; angezeigt wurde `${s.penaltyPct} %` — ohne jeden Vergleichswert. Schlimmer:
+die Zahl war **zweideutig**. „Vertragsstrafe 0,3 %" konnte eine sehr milde Obergrenze oder ein
+harter Tagessatz sein, und die Anzeige sagte nicht welches. Von den 4.114 Werten in
+`penalty_pct` lassen sich 67 % ohne Beleg keiner der beiden zuordnen.
+
+**Drei Funde beim Bauen, alle drei erst in den Daten sichtbar:**
+
+1. **Das Einheitenfeld ist Fliesstext, kein Symbol.** „der Auftragssumme je angefangenen
+   Werktag", „€ je Vorfall", „pro Woche", „maximal" — 2.123 Zeilen tragen so etwas. Die erste
+   Fassung verwarf sie alle, weil sie keine bekannte Einheit fand. Der Text ist aber der beste
+   Beleg, den es gibt: er sagt Geld oder Prozent **und** die Ausprägung.
+2. ⚠ **Geschwisterzeilen teilen sich das Zitat.** Ein Vorgang mit „0,1 % je angefangenen
+   Werktag" und „10 % insgesamt" hat für **beide** Zeilen denselben Belegsatz; nur das
+   Einheitenfeld ist zeilengenau. Wer den gemeinsamen Text zuerst liest, bekommt bei genau den
+   Vorgängen keine Zuordnung, die beide Zahlen nennen — also bei den interessanten. Das
+   Einheitenfeld hat deshalb Vorrang; es entscheidet in 442 Fällen, das Zitat in 5.799.
+3. **„Pro Woche" ist kein Tagessatz.** 134 Zeilen sagen „pro Woche", 44 „pro
+   Überschreitungsfall": eigene Bezugsgrössen. Ein Wochensatz von 0,5 % neben Tagessätzen von
+   0,20 % wäre ein Fehlalarm. Sie fallen heraus.
+
+Angezeigt wird jetzt die Ausprägung („0,3 % je Werktag") und, wo der Wert über dem oberen
+Viertel seiner eigenen Gruppe liegt, der Vergleich. Ein Beleg, der weder Tagessatz noch
+Obergrenze hergibt, bekommt beides nicht — die Zahl bleibt nackt statt falsch beschriftet.
+
+**Zu 6 (eingeschränkt am 2026-09-02, beim Bauen):** Zahlen gibt es sogar mehr als versprochen
+(223.570 statt 198.584), einordenbar ist rund **ein Prozent**. Drei Filter liegen dazwischen, und
+jeder steht für eine eigene Fehlerart:
+
+1. **Ohne Einheit kein Vergleich.** Bei `technische_mindestanforderung` fehlt sie in 66 % der
+   Fälle, bei `vertragsstrafe` in 81 %, bei `zertifikat` in 97 %. „Median 20" ist 20 mm oder 20
+   Jahre. ⚠ Und eine Einheit kann einen **Faktor** tragen: „1,5 Mio. EUR" gegen „1.500.000 EUR"
+   verglichen wäre ein Fehler um das Millionenfache. Solche Schreibweisen werden verworfen, nicht
+   geraten.
+2. **Die Gruppe muss eine Grösse benennen.** Ein Urteil, kein Rechenschritt. Draussen sind unter
+   anderem `technische_mindestanforderung` („mindestens 20 %" — wovon? Steigung, Recyclinganteil,
+   Rabatt), `frist` (Bindefrist und Ausführungsfrist im selben Topf) und `leistung_menge`
+   (mischt Türen und Schrauben, und ist Kennzahl 5). ⚠ **Stabilität allein reicht nicht:**
+   `technische_mindestanforderung / Prozent` besteht die Driftprüfung mühelos und ist trotzdem
+   unvergleichbar.
+3. ⚠ **Misst die Zahl den Vorgang oder misst sie uns?** Diese Prüfung rechnet der Export bei
+   **jedem Lauf** neu, statt das Urteil von heute einzufrieren. Durchgefallen sind unter anderem:
+
+   | Gruppe | flach gelesen | tief gelesen | |
+   |---|---|---|---|
+   | Mindestumsatz / EUR | 400.000 | 1.000.000 | 2,5× |
+   | Referenz-Mindestwert / EUR | 500.000 | 300.000 | 1,7× |
+   | Vertragsstrafe / EUR | 1.250 | 75 | 16,7× (gemischte Skala) |
+
+   ⚠ **Beim Mindestumsatz war die naheliegende Erklärung falsch.** „Tief gelesene Vorgänge sind
+   grosse Vergaben, die verlangen eben mehr" klingt zwingend: nachgemessen korreliert die
+   Schwelle **nicht** mit dem Auftragswert (0,24; bei der Berufshaftpflicht sogar −0,09), und der
+   Anstieg bleibt **innerhalb jedes Regelwerks** bestehen (VgV 480.000 → 1.500.000). Es ist
+   unsere Lesetiefe.
+
+**Und ein Fund, der erst im Beleg auffiel:** die Deckungssummen sind nach **Schadensart**
+gestaffelt und spreizen dabei um das Sechsfache. Schlimmer noch, **28 % aller Belege nennen eine
+kombinierte Deckung** („Mindestdeckungssumme von 3 Mio. EUR für Personen-, Sach- und
+Vermögensschäden") — eine Summe für alles. Die abgekürzten Glieder tragen das Wort „schäden"
+nicht, deshalb traf die Schlagwortsuche nur das letzte und verglich eine kombinierte Deckung
+gegen reine Vermögensschaden-Summen. Sie hat jetzt eine eigene Gruppe, und ein Fehlalarm ist
+dadurch zu Recht verschwunden.
+
+**Sie hat keine eigene Anzeige.** Die Zahl stand seit jeher in der Checklistenzeile; ergänzt ist
+nur die Einordnung daneben, und nur nach oben: eine niedrigere Deckungssumme ändert keine
+Entscheidung. Bei zwei Gruppen fällt das obere Viertel mit dem Median zusammen (Vertragsstrafe
+5 %, Referenzen 3), deshalb greift der Vergleich nur bei **echt darüber**.
+
+**Zu 5 (korrigiert am 2026-09-02, beim Bauen):** die „495.891 LV-Positionen" **liegen
+nirgends**. Sie wurden beim Parsen gezählt und nie gespeichert: `docpipe.py` macht aus
+GAEB-Positionen Text, damit sie durchsuchbar sind. Zwei weitere Befunde beim Nachbauen, und
+beide sind Lehren für die nächste Kennzahl:
+
+1. ⚠ **Die Zahl stand längst in der App.** Der Block „Leistungsumfang" zeigt `nPositionen` aus
+   `doc-struktur.json` seit jeher, samt Mengen je Einheit und Positionstabelle. Eine zweite
+   Kachel mit derselben Zahl wäre Doppelung gewesen. Gebaut ist deshalb **nur der Vergleich**,
+   und er hängt an der vorhandenen Zeile. *Wer eine Kennzahl baut, sucht zuerst, ob ihre Zahl
+   schon irgendwo steht.*
+2. ⚠ **Die erste Quelle war die falsche.** Der erste Versuch zählte `leistung_menge`-Zeilen aus
+   `doc_checklist` statt der geparsten Positionen. Er sah weniger Vorgänge, und an seiner Spitze
+   standen **Lastgänge**: Viertelstundenwerte eines Jahres in einer Tabelle, bis 200.010 Zeilen.
+   „200.010 Positionen zu bepreisen" wäre bei jeder Stromausschreibung falsch gewesen.
+
+   | | Vorgänge | Median | Maximum |
+   |---|---|---|---|
+   | `doc_positions` (geparst, benutzt) | 3.770 | 96 | 9.411 |
+   | `doc_checklist` (abgeleitet, verworfen) | 2.812 | 83 | **200.010** |
+
+**Verglichen wird je Gewerk (CPV 4-stellig), nicht global.** Innerhalb von CPV 45 spreizen die
+Mediane **5,4-fach**: Installationsarbeiten (4533) 292 Positionen, Anstricharbeiten (4544) 54.
+Ein Median über alle Bauarbeiten markierte jedes normale Installations-LV als gross. Ein
+verkürzter CPV („45" ohne Gewerk, 239 Vorgänge) bekommt **keinen** Vergleich: „neun von zehn
+Verzeichnissen dieses Gewerks" über einen Topf, in dem jedes Gewerk liegt, wäre eine Behauptung,
+die das Wort nicht deckt.
+
+**Und sie darf vergleichen, wo Kennzahl 4 es nicht darf** — gemessen, nicht gesetzt: das grösste
+LV je Vorgang ist über die Lesetiefe stabil (69 → 96 → 78), die Formularsummen wachsen monoton
+mit. Angezeigt wird der Vergleich nur am oberen Rand: „üblich sind 292" bei einem LV im
+Mittelfeld ist keine Nachricht, sondern eine Zeile mehr.
+
+**Zu 4 (korrigiert am 2026-09-02, beim Bauen):** von „Median 22 Pflichtfelder, Maximum
+192" hält nichts, und die drei Gründe sind drei verschiedene Fehlerarten. Es lohnt sich, sie
+auseinanderzuhalten, weil die dritte in jeder weiteren Kennzahl aus Dokumenten wieder auftauchen
+kann.
+
+1. **Falsche Grösse.** „Pflicht" ist ein Kennzeichen im PDF, das kaum jemand setzt: **93 %**
+   aller 31.799 Formulare tragen null Pflichtfelder, auch **92 %** derjenigen mit über 50
+   Feldern. Ein 95-Felder-Vergabeformular ohne ein einziges Pflichtfeld gibt es nicht. Die Zahl
+   misst die Formularsoftware, nicht die Vergabe.
+2. **Falsche Ebene.** Die „22" stimmt sogar fast (gemessen 23), aber je **Formular**, nicht je
+   Vorgang. Je Vorgang liegt der Median der Pflichtfelder bei **0**, drei Viertel haben gar keine.
+3. ⚠ **Falscher Messgegenstand, und das ist die teure.** Summen je Vorgang wachsen mit der Zahl
+   gelesener Dateien: **2 → 7 → 16** Formulare bei 1-5 / 6-15 / 16-40 gelesenen Dateien, Felder
+   **60 → 327 → 606**. Ein Plateau gibt es bei keiner Lesetiefe, und auch keins in den 165
+   Vorgängen, deren Unterlagen vollständig aus **einem** ZIP kamen. Wer diese Summe anzeigt,
+   zeigt unsere Abrufquote als Eigenschaft der Ausschreibung.
+
+Gebaut ist deshalb nur, was von der Lesetiefe unabhängig ist: **Anwesenheit**. Ein Formular, das
+wir gesehen haben, ist da; seine Abwesenheit dürfen wir nicht behaupten. Die Kennzahl sagt nie
+„wenig Aufwand" und hat **keinen Marktvergleich** — ein marktweiter Median stammt aus derselben
+Untererfassung, und dagegen verglichen sähe jeder tief gelesene Vorgang extremer aus als er ist.
+
+Angezeigt wird ab 100 Feldern (47 % der Vorgänge mit Formularen) eine graue Notiz, ab 400 (12 %)
+ein Warnhinweis. Von den 636 Vorgängen über 400 Feldern sind 472 VHB-Formblätter, also
+Preisblätter: das ist Kalkulationsarbeit von Tagen, und sie steht nirgends in der Bekanntmachung.
+
+**Zu 9 (gebaut am 2026-09-02):** die Zahlen des Papiers sind bestätigt — von 1.958 Vorgängen
+mit beiden Seiten stimmen 94,5 % überein, 4,1 % nennen in den Unterlagen eine **frühere** Frist,
+1,4 % eine **spätere** (Papier: 4,2 % und 1,6 %).
+
+⚠ **Ein Fehlalarm kostet hier eine Angebotsabgabe.** Deshalb vier Filter, und jeder stammt aus
+den Belegen, nicht aus einer Schätzung:
+
+1. **Nur die Angebotsfrist.** `req_type='frist'` mischt Binde-, Zuschlags-, Ausführungs-,
+   Rückfrage- und Lieferfristen. Von 33.399 Fristzeilen benennen 4.586 eindeutig die
+   Angebotsfrist (13,7 %).
+2. **Höchstens 30 Tage Abweichung.** Innerhalb davon lauten die Zitate durchweg „Ablauf der
+   Angebotsfrist Datum … Uhrzeit …". Darüber steht anderes: `-66 Tage` ein Seitenkopf
+   („VERGABEUNTERLAGE · Seite 26 von 653"), `+435` eine Lieferfrist aus der Vertragsphase,
+   `-1268` ein Rückblick auf 2023.
+   ⚠ Die **±365-Tage-Fälle** („Die Angebotsfrist endet am 10.09.2027") bleiben bewusst stumm:
+   das *kann* ein echter Jahresdreher des Auftraggebers sein — und genau deshalb wird er nicht
+   gemeldet. Ohne das Dokument zu öffnen lässt sich sein Tippfehler nicht von unserem Lesefehler
+   unterscheiden. Bei einer Frist ist Schweigen billiger als Raten.
+3. **Keine Seitenköpfe.**
+4. **Der Beleg muss das Datum tragen**, das er belegen soll. 93 % tun das ohnehin, **0 % nennen
+   ein anderes** (das wäre das Alarmzeichen), 7 % gar keines — dort stammt der Wert aus einem
+   Formularfeld und das Zitat ist nur dessen Etikett. Kostet 3 von 100 Fällen.
+
+⚠ **Und ein Befund, der die Kennzahl entlastet hat.** Fünf Fälle mit genau −1 Tag hintereinander
+sahen zuerst nach einem Datumsfehler von uns aus. Die Verteilung spitzt aber auf **Vielfachen
+von sieben** (−14: 18 Fälle, −7: 17, +14: 5; **51 von 100 sind exakte Wochenvielfache**, zufällig
+wären es 14 %) — das ist die Signatur verlängerter Fristen. Bei einem Off-by-one wäre der Gipfel
+bei ±1; dort liegen 6 %.
+
+**Die Anzeige urteilt deshalb nicht, welche Seite recht hat.** Mal bleibt das alte Dokument nach
+einer Verlängerung liegen, mal trägt das Dokument die Verlängerung und die Bekanntmachung nicht
+(„Ablauf der Angebotsfrist nach Verlängerung: 23.09.2026" steht so in den Unterlagen). Genannt
+werden beide Daten, der Beleg mit Dateiname — und der eine Satz, der immer stimmt: **die frühere
+Angabe ist die sichere.** Als einzige Kennzahl dieser Reihe in Warnrot.
+
+**Zu 8 (gebaut am 2026-09-02):** die Untergrenzen-Warnung des Papiers stimmt, und zwar
+deutlich. Am vollen Bestand (9.690 Vorgänge, 1,32 Mio. verschiedene Absätze, 4,2 Mrd. Zeichen,
+rund 90 Sekunden Rechenzeit):
+
+| | Papier (600 Vorgänge) | voller Bestand |
+|---|---|---|
+| Median | ≥10 % | **29 %** |
+| oberes Viertel | ≥27 % | **51 %** |
+| über die Hälfte Kopie | 13 % | **26 %** |
+
+⚠ **Die Vergleichsgruppe ist die TEXTMENGE, nicht das Regelwerk** — das war nicht die erste
+Vermutung. Das Regelwerk trennt sichtbar, die Textmenge doppelt so stark, und ihr Muster
+wiederholt sich *innerhalb* jedes Regelwerks:
+
+| | 50–200 Tsd. | 200–800 Tsd. | über 800 Tsd. |
+|---|---|---|---|
+| VOB | 41 % | 23 % | 10 % |
+| VgV | 37 % | 26 % | 5 % |
+| UVgO | 46 % | 36 % | zu dünn |
+| sonst | 42 % | 25 % | 12 % |
+
+Spreizung: **Textmenge 4,1×**, Regelwerk 1,8×. Der Grund ist inhaltlich, nicht statistisch:
+grosse Pakete tragen ein eigenes Leistungsverzeichnis und eigene technische Anlagen, und die
+stehen nirgends sonst. Wer global vergleicht, nennt jede kleine Vergabe „viel Kopie" und jede
+grosse „ungewöhnlich eigen".
+
+⚠ **Unter 50 Tsd. Zeichen ist die Zahl Rauschen:** dort landen 35 % der Vorgänge bei genau 0 %
+(darüber 3 %) — zu wenige Absätze, um überhaupt Partner finden zu können. Sie bekommen keinen
+Wert statt eines schlechten. Das kostet 444 von 9.690 Vorgängen.
+
+**Negativbefund, geprüft und verworfen:** Geschwistervergaben (ein Projekt in mehreren Losen,
+gleiche Dateien) blähen die Zahl **nicht** auf. Nur 5,6 % der Standardabsätze erreichen die
+Dreier-Schwelle ausschliesslich über Geschwister; Median und Anteil der 100-Prozent-Fälle sind
+identisch, ob man je Vorgang oder je Projekt zählt.
+
+**Angezeigt** wird sie im Kopf des Volltext-Blocks, direkt neben „1.152 Tsd. Zeichen" — dort
+entscheidet jemand, ob er das liest. **Ohne Warnfarbe:** ein hoher Anteil ist keine schlechte
+Nachricht, sondern weniger Arbeit.
 
 **Zu 8:** gemessen innerhalb von 600 Vorgängen, Absätze ab 120 Zeichen, Standardtext =
 wortgleich in ≥3 Vorgängen. Im vollen Bestand finden mehr Absätze Partner, die Werte sind

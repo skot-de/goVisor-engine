@@ -148,10 +148,20 @@ def test_jede_flaeche_nennt_ihre_quelle():
 
 def test_eine_spalte_gibt_es_nur_wo_es_eine_gibt():
     """⚠ Ein erfundener Spaltenname wäre schlimmer als die Lücke: der Export würde ihn
-    auswählen und scheitern, oder schlimmer, still eine falsche Spalte lesen."""
-    mit = [k for k in kz.ALLE if k.spalte]
-    assert all(k.flaeche in ("unterlagen", "strategie") for k in mit)
-    assert len(mit) == len(kz.DOC_SIGNALE) + len(kz.VERGABESTELLEN)
+    auswählen und scheitern, oder schlimmer, still eine falsche Spalte lesen.
+
+    ⚠ FRÜHER STAND HIER EINE LISTE — zwei erlaubte Flächen und eine Summe, die genau
+    aufgehen musste. Sie ist an Kennzahl 4 zerbrochen, und zwar zu Recht: eine handgetippte
+    Liste, die bei jeder neuen Kennzahl nachgepflegt werden will, ist dieselbe Fehlerform,
+    gegen die dieses Verzeichnis überhaupt angelegt wurde. Geprüft wird jetzt die Sache
+    selbst: taucht der Spaltenname irgendwo im Code auf, der ihn liest oder schreibt?
+    Erfundene Namen fallen damit auf, ohne dass jemand eine Liste pflegt."""
+    dateien = [p for muster in ("govisor/*.py", "scripts/*.py", "web/lib/*.js")
+               for p in WURZEL.glob(muster)]
+    text = "\n".join(p.read_text(encoding="utf-8", errors="ignore") for p in dateien
+                     if p.name != "kennzahlen.py")
+    erfunden = sorted({k.spalte for k in kz.ALLE if k.spalte and k.spalte not in text})
+    assert not erfunden, f"Spaltennamen, die nirgends gelesen werden: {erfunden}"
 
 
 def test_die_bezugsgroessen_stimmen_mit_der_anzeige():

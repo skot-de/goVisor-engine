@@ -94,6 +94,105 @@ async function loadStellenprofil(): Promise<Stellenprofil> {
   return stellenprofil!;
 }
 
+/* Widerspruch bei der Angebotsfrist (Kennzahl 9). Die Bekanntmachung sagt „02.09.", die
+ * Unterlagen sagen „Ablauf der Angebotsfrist: 01.09., 18:00 Uhr". Wer der Bekanntmachung
+ * folgt, kommt einen Tag zu spaet.
+ *
+ * ⚠ EIN FEHLALARM IST HIER TEURER ALS EIN VERPASSTER BEFUND. Gemeldet wird nur, was den Beleg
+ * eindeutig als Angebotsfrist ausweist UND hoechstens 30 Tage abweicht — darueber stehen
+ * Lieferfristen, Seitenkoepfe und Jahresdreher (s. `export_fristwiderspruch.py`).
+ *
+ * ⚠ SIE SAGT NIE „DIE FRIST STIMMT". Beide Seiten liegen nur bei 1.958 von 14.994 Vorgaengen
+ * vor. Anwesenheit, kein Freispruch — deshalb Bezug `keine`. */
+type Fristwiderspruch = { dok: string; bek: string; tage: number; beleg: string; datei: string };
+let fristwiderspruch: Record<string, Fristwiderspruch> | null = null;
+async function loadFristwiderspruch(): Promise<Record<string, Fristwiderspruch>> {
+  if (fristwiderspruch) return fristwiderspruch;
+  try { const roh = await loadDataFile("fristwiderspruch.json"); fristwiderspruch = roh ? JSON.parse(roh) : {}; }
+  catch { fristwiderspruch = {}; }
+  return fristwiderspruch!;
+}
+
+/* Standardtext-Anteil (Kennzahl 8): wie viel dieser Unterlagen steht wortgleich auch in
+ * anderen Vergaben? „1.152 Tsd. Zeichen" ueber dem Volltext sagt nicht, ob das 1.152 Tsd.
+ * Zeichen Arbeit sind.
+ *
+ * ⚠ Gemessen je ABSATZ (ab 120 Zeichen, wortgleich in mindestens drei Vorgaengen), nicht je
+ * Datei: ganze Dateien sind nur in 2,1 % der Faelle identisch, ein geaendertes Datum im Kopf
+ * genuegt. `document_duplicates` beantwortet also eine andere Frage.
+ *
+ * ⚠ DER VERGLEICH IST SCHON AUFGELOEST. Das Band haengt an der GEMESSENEN Zeichenzahl; hier
+ * ist nur `lbChars` bekannt, und das ist die ausgelieferte Laenge. Wer neu einordnete, traefe
+ * ein anderes Band (der Anteil sinkt von 41 % auf 10 %, wenn das Paket waechst). */
+type Standardtext = { a: number; median: number; hoch: number };
+let standardtext: Record<string, Standardtext> | null = null;
+async function loadStandardtext(): Promise<Record<string, Standardtext>> {
+  if (standardtext) return standardtext;
+  try { const roh = await loadDataFile("standardtext.json"); standardtext = roh ? (JSON.parse(roh).leads || {}) : {}; }
+  catch { standardtext = {}; }
+  return standardtext!;
+}
+
+/* Bezifferte Schwellen im Vergleich (Kennzahl 6). „Berufshaftpflicht 5 Mio. EUR fuer
+ * Personenschaeden" steht seit jeher in der Checkliste; der Vergleich fehlte.
+ *
+ * ⚠ EINE WINZIGE DATEI OHNE VORGANGSBEZUG: nur Gruppenwerte, dazu die REGELN, mit denen der
+ * Renderer denselben Gruppenschluessel bildet. Zwei gepflegte Einheitenlisten (hier und dort)
+ * waeren zwei Listen, die auseinanderlaufen — dieselbe Fehlerform wie die handgetippte
+ * Spaltenliste bei den Doc-Signalen.
+ *
+ * ⚠ VON 223.570 ZAHLEN SIND RUND 2.500 VERGLEICHBAR. Ohne Einheit kein Vergleich (bei
+ * `technische_mindestanforderung` fehlt sie in 66 % der Faelle), die Gruppe muss EINE Groesse
+ * benennen („mindestens 20 %" — wovon?), und sie muss die Driftpruefung bestehen: der
+ * Mindestumsatz faellt mit 2,5× durch, weil sein Median mit unserer Lesetiefe waechst und NICHT
+ * mit dem Auftragswert (Korrelation 0,24). Details in `scripts/export_schwellen.py`. */
+type Schwellen = {
+  gruppen: Record<string, { n: number; median: number; hoch: number; label: string }>;
+  einheiten: Record<string, string[]>;
+  auspraegungen: Record<string, {
+    dimension: string; einheitOptional: boolean; sonst: string | null;
+    regeln: { name: string; muster: string; sperre: string | null; band: [number, number] | null }[];
+  }>;
+};
+let schwellen: Schwellen | null = null;
+async function loadSchwellen(): Promise<Schwellen | null> {
+  if (schwellen) return schwellen;
+  try { const roh = await loadDataFile("schwellen.json"); schwellen = roh ? JSON.parse(roh) : null; }
+  catch { schwellen = null; }
+  return schwellen;
+}
+
+/* Umfang der Angebotsarbeit (Kennzahlen 4 und 5): das groesste Formular zum Ausfuellen und
+ * das groesste Leistungsverzeichnis zum Bepreisen. Beides verschiebt die Angebotsplanung um
+ * Tage und steht nirgends in der Bekanntmachung.
+ *
+ * ⚠ SIE MESSEN NICHT DASSELBE, obwohl ein VHB 223 ein Feld je LV-Position hat: Korrelation
+ * -0,02, und von 803 Vorgaengen mit grossem LV haben nur 79 auch ein grosses Formular. Zwei
+ * Zeilen in einem Block, nicht eine Zahl.
+ *
+ * ⚠ NUR DAS LV TRAEGT EINEN VERGLEICH, und das ist gemessen, nicht gesetzt. Das groesste LV
+ * je Vorgang ist ueber die Lesetiefe stabil (69 → 96 → 78); die Formularsumme waechst monoton
+ * mit (2 → 7 → 16). Ein Marktwert aus derselben Untererfassung liesse jeden tief gelesenen
+ * Vorgang extremer aussehen als er ist.
+ *
+ * ⚠ UND DER LV-VERGLEICH GILT JE GEWERK (CPV 4-stellig). Innerhalb von CPV 45 spreizen die
+ * Mediane 5,4-fach: Installation 292 Positionen, Anstrich 54. `median`/`hoch` fehlen, wenn das
+ * Gewerk unter 40 Vorgaenge hat — dann steht die Zahl ohne Vergleich, nicht mit einem falschen.
+ *
+ * ⚠ `datei` und `beleg` stammen aus fremden Vergabeunterlagen. Wer sie rendert, escaped sie
+ * selbst (s. `explorerCore.js`, die kv-Zeile escaped nicht mehr fuer den Aufrufer). */
+type Umfang = {
+  formular?: { felder: number; datei: string; hinweis: boolean; beleg?: string };
+  lv?: { pos: number; datei: string; hinweis: boolean; gewerk?: string; median?: number; hoch?: number };
+};
+let umfang: Record<string, Umfang> | null = null;
+async function loadUmfang(): Promise<Record<string, Umfang>> {
+  if (umfang) return umfang;
+  try { const roh = await loadDataFile("umfang.json"); umfang = roh ? JSON.parse(roh) : {}; }
+  catch { umfang = {}; }
+  return umfang!;
+}
+
 /* Anforderungsprofil (Kennzahl 2): je Bereich die Anzahl, dazu Median und oberstes Zehntel.
  *
  * ⚠ Jeder Bereich traegt seine ART mit (`huerde` / `aufwand` / `umfang`). Die Uebergabe nennt
@@ -264,6 +363,14 @@ export async function GET(req: Request) {
     const land2 = String((detail as { land?: string }).land || "DE");
     const abdruck = kaeufer ? sp.stellen[`${land2}:${kaeufer}`] : undefined;
     if (abdruck?.length) detail.lbStelle = abdruck.slice(0, 3);
+    const uf = (await loadUmfang())[id];
+    if (uf) detail.lbUmfang = uf;
+    const sw = await loadSchwellen();
+    if (sw) detail.lbSchwellen = sw;
+    const stt = (await loadStandardtext())[id];
+    if (stt) detail.lbStandard = stt;
+    const fw2 = (await loadFristwiderspruch())[id];
+    if (fw2) detail.lbFristWiderspruch = fw2;
     // Dateiliste des Portals — was dort LIEGT, ohne dass wir es gelesen haben.
     const li = await ladeDateiliste(id);
     if (li) detail.lbListe = li;

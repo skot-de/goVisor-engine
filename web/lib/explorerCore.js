@@ -1045,6 +1045,208 @@ function renderProfilBlock(l){
     <ul class="profil-l">${p.map(zeile).join('')}</ul></div>`;
 }
 
+/* KENNZAHL 6 — die bezifferte Schwelle gegen ihre Vergleichsgruppe.
+ *
+ * „Berufshaftpflicht 5 Mio. EUR fuer Personenschaeden" steht seit jeher in der Checkliste. Ob
+ * das ueblich ist oder die Huerde, an der man sich das Angebot spart, stand nirgends.
+ *
+ * ⚠ DIE REGELN KOMMEN AUS DER DATEI, NICHT AUS DIESEM CODE. `einheiten`, `schadensarten` und
+ * `gestaffelt` liefert `export_schwellen.py` mit, damit der Gruppenschluessel hier
+ * ZEICHENGLEICH entsteht. Eine zweite Einheitenliste im Frontend waere eine zweite Liste, die
+ * auseinanderlaeuft — dieselbe Fehlerform wie die handgetippte Spaltenliste bei den Signalen.
+ *
+ * ⚠ NUR ECHT UEBER DEM OBEREN VIERTEL. Bei zwei Gruppen faellt das Quartil mit dem Median
+ * zusammen (Vertragsstrafe 5 %, Referenzen 3): die Werte liegen so dicht beieinander, dass
+ * „oberes Viertel" sonst genau beim Ueblichen stuende. `>` statt `>=` loest das, ohne die
+ * Gruppen zu verlieren — 10 % Vertragsstrafe faellt auf, 5 % nicht.
+ *
+ * ⚠ UND NUR NACH OBEN. Eine niedrigere Schwelle als ueblich aendert keine Entscheidung: man
+ * bewirbt sich nicht, WEIL die Deckungssumme klein ist. */
+/* Die Unterart aus dem Beleg — EINE Stelle, zwei Aufrufer (Checklistenzeile und die
+ * Vertragsstrafe im Anforderungsblock). `null` heisst: nicht vergleichbar.
+ *
+ * ⚠ DIE SPERRE IST NICHT SCHMUCK. „0,2 % je Werktag, insgesamt hoechstens 5 %" nennt BEIDE
+ * Zahlen in einem Satz; ohne sie landet der Tagessatz in der Obergrenzen-Gruppe und zerlegt
+ * deren Median. Solche Belege fallen lieber ganz raus.
+ *
+ * ⚠ DAS BAND FAENGT AB, WAS TROTZDEM EURO IST. Bei der Vertragsstrafe darf der Beleg die
+ * fehlende Einheit ersetzen (sie fehlt in 81 % der Faelle); „insgesamt hoechstens 25.000" ist
+ * dann aber keine 25.000 Prozent. */
+function regelTreffer(cfg, text, wert){
+  for(const r of (cfg.regeln || [])){
+    if(!new RegExp(r.muster, 'i').test(text)) continue;
+    if(r.sperre && new RegExp(r.sperre, 'i').test(text)) continue;
+    if(r.band && !(wert >= r.band[0] && wert <= r.band[1])) return null;
+    return r.name;
+  }
+  return cfg.sonst;
+}
+
+/* ⚠ EINHEITENFELD ZUERST, und das ist gemessen. Geschwisterzeilen teilen sich das Zitat: ein
+ * Vorgang mit „0,1 % der Auftragssumme je angefangenen Werktag" und „10 % der Auftragssumme"
+ * hat fuer BEIDE denselben Belegsatz, nur das Einheitenfeld ist zeilengenau. Wer den
+ * gemeinsamen Text zuerst liest, bekommt bei genau den Vorgaengen keine Zuordnung, die beide
+ * Zahlen nennen. Das Einheitenfeld entscheidet in 442 Faellen, das Zitat in 5.799. */
+function auspraegungVon(cfg, einheit, zitat, wert){
+  if(!cfg) return '';
+  const ein = String(einheit || '').toLowerCase();
+  if(ein.trim()){
+    const t = regelTreffer(cfg, ein, wert);
+    if(t !== null && t !== '' && t !== cfg.sonst) return t;
+  }
+  return regelTreffer(cfg, ein + ' ' + String(zitat || '').toLowerCase(), wert);
+}
+
+function schwellenVergleich(it, l){
+  const S = l.lbSchwellen;
+  if(!S || !S.gruppen) return '';
+  const wert = Number(it.wert_num != null ? it.wert_num : it.value);
+  if(!isFinite(wert)) return '';
+  const einheit = String(it.unit || '').trim().toLowerCase();
+  const cfg = (S.auspraegungen || {})[it.req_type];
+  let dim = '';
+  for(const [d, liste] of Object.entries(S.einheiten || {})){ if(liste.indexOf(einheit) >= 0){ dim = d; break; } }
+  /* ⚠ BEIDE FELDER SIND BELEG. Bei der Vertragsstrafe ist das Einheitenfeld Fliesstext („der
+     Auftragssumme je angefangenen Werktag", „€ je Vorfall", „pro Woche") und traegt oft den
+     halben Satz; in 81 % der Faelle fehlt es ganz und das Zitat traegt alles. Der Beleg
+     entscheidet dann AUCH ueber Geld gegen Prozent — sonst laese man „€ je Vorfall" als
+     Prozentsatz. Das Band darunter faengt ab, was trotzdem durchrutscht. */
+  const text = (einheit + ' ' + String(it.quote || '')).toLowerCase();
+  if(!dim && cfg && cfg.einheitOptional){
+    for(const [d, muster] of Object.entries(cfg.dimensionMuster || {})){
+      if(new RegExp(muster, 'i').test(text)){ dim = d; break; }
+    }
+    if(!dim && !einheit) dim = cfg.dimension;
+  }
+  if(!dim) return '';
+  const art = auspraegungVon(cfg, einheit, it.quote, wert);
+  if(art == null) return '';
+  const land = String(l.land || 'DE');
+  const g = S.gruppen[`${land}|${it.req_type}|${dim}|${art}`];
+  if(!g || !(wert > g.hoch)) return '';
+  const sp = aktuelleSprache();
+  const zahl = x => Number(x).toLocaleString(sp === 'de' ? 'de-DE' : sp, {maximumFractionDigits: 2});
+  const einh = dim === 'prozent' ? ' %' : '';
+  return `<span class="cl-hoch" title="${esc(tk("Vergleichsgruppe: {label}, {n} Werte", {label: g.label + (art ? ' · ' + art : ''), n: g.n}))}">${
+    tk("höher als bei drei von vier Vergaben, üblich {m}", {m: zahl(g.median) + einh})}</span>`;
+}
+
+
+/* KENNZAHL 9 — Widerspruch bei der Angebotsfrist.
+ *
+ * Die einzige Kennzahl dieser Reihe, bei der ein Fehlalarm eine Angebotsabgabe kosten kann,
+ * und die einzige, die deshalb rot statt bernstein ist.
+ *
+ * ⚠ SIE BEHAUPTET NICHT, WELCHE SEITE RECHT HAT. Die Verteilung der Abweichungen spitzt auf
+ * VIELFACHEN VON SIEBEN (-14 Tage: 18 Faelle, -7: 17, +14: 5; 51 von 100 sind exakte
+ * Wochenvielfache, zufaellig waeren es 14 %) — das ist die Signatur verlaengerter Fristen. Mal
+ * bleibt das alte Dokument liegen, mal traegt das Dokument die Verlaengerung und die
+ * Bekanntmachung nicht („Ablauf der Angebotsfrist nach Verlaengerung: 23.09.2026"). Die einzige
+ * Aussage, die immer stimmt, ist: die FRUEHERE Angabe ist die sichere.
+ *
+ * ⚠ UND SIE SAGT NIE „DIE FRIST STIMMT". Beide Seiten liegen nur bei 1.958 von 14.994
+ * Vorgaengen vor. Ein Widerspruch, den wir sehen, ist da; einer, den wir nicht sehen, kann
+ * trotzdem existieren.
+ *
+ * ⚠ BELEG UND DATEINAME KOMMEN AUS FREMDEN UNTERLAGEN. Beide durch `esc()`. */
+function fristWiderspruch(l){
+  const w = l.lbFristWiderspruch;
+  if(!w || !w.tage) return '';
+  const frueher = w.tage < 0;
+  const de = s => { const t = String(s||'').split('-'); return t.length===3 ? `${t[2]}.${t[1]}.${t[0]}` : String(s||''); };
+  return `<div class="frist-konflikt">
+    <p class="fk-kopf">${tk("Die Unterlagen nennen eine andere Angebotsfrist")}</p>
+    <p class="fk-satz">${tk("Unterlagen: {a} · Bekanntmachung: {b} · {n} Tage Unterschied.",
+      {a: de(w.dok), b: de(w.bek), n: Math.abs(w.tage)})}
+      ${frueher ? tk("Meist eine verlängerte Frist, bei der das Dokument nicht nachgezogen wurde.")
+                : tk("Meist eine Verlängerung, die nur in den Unterlagen steht.")}
+      ${tk("Die frühere Angabe ist die sichere.")}</p>
+    <p class="fk-beleg">„${esc(w.beleg)}"<span class="fk-datei">${esc(w.datei)}</span></p></div>`;
+}
+
+/* KENNZAHL 8 — wie viel davon ist Standardtext?
+ *
+ * „1.152 Tsd. Zeichen" sagt nicht, ob das 1.152 Tsd. Zeichen Arbeit sind. Steht drei Viertel
+ * davon wortgleich in anderen Vergaben, steckt die Arbeit im letzten Viertel.
+ *
+ * ⚠ SIE STEHT IM VOLLTEXT-KOPF UND NICHT IN EINER EIGENEN KACHEL. Genau dort entscheidet
+ * jemand, ob er das liest — und dort steht die Zahl, die sie einordnet.
+ *
+ * ⚠ KEIN WARNTON. Ein hoher Anteil ist keine schlechte Nachricht, sondern weniger Arbeit. Die
+ * Zeile bleibt deshalb grau; farbig ist in dieser Ansicht, was Geld oder Ausschluss kostet.
+ *
+ * ⚠ VERGLICHEN WIRD JE TEXTMENGE, aufgeloest im Export. Sie trennt 4,1-fach (klein 41 %,
+ * mittel 25 %, gross 10 %), das Regelwerk nur 1,8-fach, und das Muster gilt innerhalb jedes
+ * Regelwerks: grosse Pakete tragen ein eigenes Leistungsverzeichnis, und das steht nirgends
+ * sonst. Ein globaler Median nennte jede kleine Vergabe „viel Kopie". */
+function standardtextAnteil(l){
+  const st = l.lbStandard;
+  if(!st || st.a == null) return '';
+  const viel = st.hoch != null && st.a > st.hoch;
+  return `<span class="rt-std${viel ? ' rt-std-viel' : ''}" title="${esc(
+    tk("Absätze ab 120 Zeichen, die wortgleich in mindestens drei Vergaben stehen. Üblich sind bei diesem Umfang {m} %.", {m: st.median}))}"> · ${
+    tk("{n} % Standardtext", {n: st.a})}${viel ? ' ' + tk("(üblich {m} %)", {m: st.median}) : ''}</span>`;
+}
+
+/* KENNZAHL 5 — das Leistungsverzeichnis, verglichen je Gewerk.
+ *
+ * ⚠ SIE BRINGT KEINE EIGENE ZAHL MIT. `nPositionen` steht im Block „Leistungsumfang" seit
+ * jeher; ihm fehlte nur, wogegen der Nutzer sie halten soll. Eine zweite Kachel mit derselben
+ * Zahl waere Doppelung gewesen — wer eine Kennzahl baut, sucht zuerst, ob ihre Zahl schon
+ * irgendwo steht.
+ *
+ * ⚠ JE GEWERK, NICHT GLOBAL. Innerhalb von CPV 45 spreizen die Mediane 5,4-fach
+ * (Installation 292 Positionen, Anstrich 54). Fehlt der Vergleichswert, weil das Gewerk unter
+ * 40 Vorgaenge hat, steht die Zahl allein — besser als ein Vergleich, der zwei Gewerke mischt.
+ *
+ * ⚠ NUR DER OBERE RAND. Erst stand hier auch „ueblich sind {m}" fuer jeden Vorgang; das ist
+ * bei einem LV im Mittelfeld keine Nachricht, sondern eine Zeile mehr. Gezeigt wird der
+ * Vergleich nur, wo er eine Entscheidung aendert: wenn dieses Verzeichnis groesser ist als
+ * neun von zehn seines Gewerks. */
+function lvVergleich(l, n){
+  const v = l.lbUmfang && l.lbUmfang.lv;
+  if(!v || v.hoch == null || !n || n < v.hoch) return '';
+  const sp = aktuelleSprache();
+  const zahl = x => Number(x).toLocaleString(sp === 'de' ? 'de-DE' : sp);
+  return ` <span class="lu-mehr">${tk("Neun von zehn Verzeichnissen dieses Gewerks sind kleiner (üblich {m}).", {m: zahl(v.median)})}</span>`;
+}
+
+/* KENNZAHL 4 — das groesste einzelne Formular.
+ *
+ * ⚠ SIE ZAEHLT EIN FORMULAR, NICHT DEN VORGANG. Die Uebergabe verspricht „Formularaufwand,
+ * Median 22 Pflichtfelder"; beide Haelften halten nicht. „Pflicht" ist ein Kennzeichen im PDF,
+ * das 93 % aller Formulare gar nicht setzen (auch 92 % derer mit ueber 50 Feldern), und die 22
+ * ist der Median je FORMULAR, nicht je Vorgang.
+ *
+ * ⚠ UND SUMMEN JE VORGANG MESSEN UNS. Formulare je Vorgang wachsen 2 → 7 → 16 mit der Zahl
+ * gelesener Dateien, Felder 60 → 327 → 606; kein Plateau bei irgendeiner Lesetiefe, auch nicht
+ * bei vollstaendigen ZIP-Paketen. Wer die Summe anzeigt, zeigt unsere Abrufquote.
+ *
+ * WAS BLEIBT: Anwesenheit. Ein Formular, das wir gesehen haben, ist da. Deshalb sagt dieser
+ * Block nie „wenig Aufwand" und hat keinen Marktvergleich — ein marktweiter Median stammt aus
+ * derselben Untererfassung, und dagegen verglichen saehe jeder tief gelesene Vorgang extremer
+ * aus als er ist. Kennzahl 5 darf einen tragen, weil ihre Zahl ueber die Lesetiefe stabil ist;
+ * sie steht im Block „Leistungsumfang", wo ihre Zahl ohnehin schon stand.
+ *
+ * ⚠ DATEINAME UND FELDNAMEN KOMMEN AUS FREMDEN UNTERLAGEN. Beide durch `esc()`. */
+function renderUmfangBlock(l){
+  const f = l.lbUmfang && l.lbUmfang.formular;
+  if(!f || !f.felder) return '';
+  /* ⚠ Die Zahl ist vierstellig und wird gelesen, nicht ueberflogen: „3456" bremst, „3.456"
+     nicht. Der Trenner folgt der OBERFLAECHENSPRACHE, nicht fest `de-DE` — im englischen
+     Katalog liest sich „3.456" als drei Komma vier. */
+  const sp = aktuelleSprache();
+  const zahl = Number(f.felder).toLocaleString(sp === 'de' ? 'de-DE' : sp);
+  const satz = f.hinweis
+    ? tk("{n} Felder in einem einzigen Formular. Das ist Kalkulationsarbeit von Tagen, nicht von Minuten.", {n: zahl})
+    : tk("{n} Felder im umfangreichsten Formular.", {n: zahl});
+  const beleg = f.beleg ? `<span class="umfang-b">${esc(f.beleg)}</span>` : '';
+  return `<div class="umfang"><span class="umfang-k">${tk("Umfang der Formulare")}</span>
+    <ul class="umfang-l"><li class="umfang-z${f.hinweis ? ' umfang-warn' : ''}">
+      <p class="umfang-s">${satz}</p>
+      <p class="umfang-d">${esc(f.datei)}${beleg}</p></li></ul></div>`;
+}
+
 /* KENNZAHL 1 — Aufwand gegen Zeitfenster.
  *
  * ⚠ DIE ERSTE DEUTUNG WAR FALSCH. Der Median liegt bei 34 Tagen, in jeder Aufwandsklasse
@@ -1115,7 +1317,18 @@ function renderChecklistBlock(a, l){
   let tot=0, dn=0;
 
   const itemHtml = it=>{
-    const val = it.value!=null && it.value!=='' ? ` <span class="cl-val">${esc(String(it.value))}${it.unit?(' '+esc(String(it.unit))):''}</span>` : '';
+    /* ⚠ „3000000 EUR" neben „üblich 1.000.000" liest sich wie zwei verschiedene Groessen. Der
+       Rohwert kommt als Zeichenkette aus der Extraktion; formatiert wird nur, wenn `wert_num`
+       ihn als Zahl bestaetigt — sonst stuende hier bei „ca. 5" oder „5 bis 10" Unsinn. */
+    const _fw = Number(it.wert_num);
+    const _roh = String(it.value);
+    const _zeig = (isFinite(_fw) && _roh.replace(/[^\d]/g, '') === String(Math.round(_fw)).replace(/[^\d]/g, ''))
+      ? _fw.toLocaleString(aktuelleSprache()==='de' ? 'de-DE' : aktuelleSprache(), {maximumFractionDigits: 2})
+      : _roh;
+    const val = it.value!=null && it.value!=='' ? ` <span class="cl-val">${esc(_zeig)}${it.unit?(' '+esc(String(it.unit))):''}</span>` : '';
+    /* ⚠ Der Vergleich steht NEBEN dem `<b>`, nicht darin: im Kopf ist alles fett, und eine
+       fette Einordnung schriee lauter als die Zahl, die sie einordnet. */
+    const vgl = schwellenVergleich(it, l);
     const isDone = !!done[it._i]; if(!isDone) {} // Zählung s.u.
     tot++; if(isDone) dn++;
     const q = it.quote
@@ -1128,13 +1341,14 @@ function renderChecklistBlock(a, l){
         <button class="btn btn-q btn-sm" data-clnutzen='${esc(kombi)}'>${tk("Aus Bibliothek")}</button>
         <button class="btn btn-p btn-sm" data-clkombi='${esc(kombi)}'>${tk("Kopieren &amp; speichern")}</button></span></div></div>`;
     return `<article class="item${isDone?' done':''}" data-clitem="${it._i}">
-      <div class="ih"><button class="dchk" data-clchk="${it._i}">✓</button><b>${esc(it.label||it.req_type)}${val}</b></div>
+      <div class="ih"><button class="dchk" data-clchk="${it._i}">✓</button><b>${esc(it.label||it.req_type)}${val}</b>${vgl}</div>
       <div class="dsum">${tk("Abgehakt.")}<button class="re" data-clchk="${it._i}">${tk("wieder öffnen")}</button></div>
       <div class="ibody">${q}${block}</div></article>`;
   };
 
   const fensterHtml = renderFensterBlock(a, l);
   const profilHtml = renderProfilBlock(l);
+  const umfangHtml = renderUmfangBlock(l);
   const groupsHtml = _CL_GROUPS.map(([id,title,set])=>{
     const gi = items.filter(it=>set.has(it.req_type)); if(!gi.length) return '';
     return `<details class="grp" id="clg-${id}"${id==='ko'?' open':''}><summary><span class="caret">›</span>${title}<span class="cnt">${gi.length}</span></summary><div class="gbody">${gi.map(itemHtml).join('')}</div></details>`;
@@ -1165,7 +1379,7 @@ function renderChecklistBlock(a, l){
 
   // a2 Erstnutzer: leere Bibliothek → die Textbausteine sind noch generische Vorlagen (§9.1).
   const firstday = !_clHasBlocks() ? `<div class="cl-firstday">${tk("Eure Bausteinbibliothek ist noch leer, die Textvorschläge unten sind generische Vorlagen.")}<a href="/bausteine" class="link">${tk("Bibliothek füllen →")}</a>${tk("Dann setzt goVisor eure echten Referenzen und Zertifikate ein statt Platzhalter.")}</div>` : '';
-  return `<div class="va-checklist" data-clroot="${l.id}">${chead}${firstday}${fensterHtml}${profilHtml}${toc}${groupsHtml}${offen}${weitere}</div>`;
+  return `<div class="va-checklist" data-clroot="${l.id}">${chead}${firstday}${fensterHtml}${profilHtml}${umfangHtml}${toc}${groupsHtml}${offen}${weitere}</div>`;
 }
 
 // Download-Knopf für unsere extrahierte Tabelle (nicht für die Original-Unterlagen — die
@@ -1339,8 +1553,21 @@ function renderDocs(l){
       mitBeleg('site_visit_evidence', s.siteVisitMandatory ? tk("verpflichtend") : tk("vorgesehen"))]);
     if(s.presentationRequired) rows.push([tk('Präsentation'),
       mitBeleg('presentation_evidence', tk("gefordert"))]);
-    if(s.penaltyPct!=null) rows.push([tk('Vertragsstrafe'),
-      mitBeleg('penalty_evidence', `${s.penaltyPct} %`)]);
+    /* ⚠ KENNZAHL 7. „Vertragsstrafe 0,3 %" allein ist zweideutig: je Werktag oder insgesamt?
+       Der Unterschied ist der Faktor 25 (0,20 % gegen 5 %), und 67 % der Werte in
+       `penalty_pct` lassen sich ohne Beleg nicht zuordnen. Wo der Beleg es hergibt, steht die
+       Ausprägung dabei; wo nicht, bleibt die Zahl nackt statt falsch beschriftet.
+       Das Verzeichnis fuehrt `penaltyPct` seit dem 01.09. mit Bezug „markt" — angezeigt wurde
+       der Vergleich nie. */
+    if(s.penaltyPct!=null){
+      const cfgS = l.lbSchwellen && (l.lbSchwellen.auspraegungen||{})['vertragsstrafe'];
+      const artS = auspraegungVon(cfgS, '', beleg['penalty_evidence'], Number(s.penaltyPct));
+      const wieS = artS === 'Tagessatz' ? tk("je Werktag") : artS === 'Obergrenze' ? tk("insgesamt") : '';
+      const vglS = schwellenVergleich(
+        {req_type:'vertragsstrafe', unit:'%', wert_num:s.penaltyPct, quote:beleg['penalty_evidence']}, l);
+      rows.push([tk('Vertragsstrafe'),
+        mitBeleg('penalty_evidence', `${s.penaltyPct} %${wieS ? ' ' + wieS : ''}`) + vglS]);
+    }
     /* Die Bindefrist steht zweimal, und das ist Absicht: „90 Tage" sagt, wie lange ihr
        gebunden seid, „bis 14.11." sagt, ob es in eure Auslastung passt. Das Datum ist im
        Bestand ausserdem viel haeufiger ablesbar (5.747 gegen 150 Saetze). */
@@ -1368,7 +1595,7 @@ function renderDocs(l){
       ? tk("aus dem GAEB-Leistungsverzeichnis") : tk("aus dem Preisblatt der Unterlagen");
     return `<section class="sec">
       <h4>${tk("Leistungsumfang")}<span class="cov">${herkunft}</span>${csvLink(l.id,'lv')}</h4>
-      <p class="lu-sum">${tk("{n} Positionen im Leistungsverzeichnis.", {n: zahl(s.nPositionen)})}</p>
+      <p class="lu-sum">${tk("{n} Positionen im Leistungsverzeichnis.", {n: zahl(s.nPositionen)})}${lvVergleich(l, s.nPositionen)}</p>
       ${mengen.length ? `<div class="lu-mengen">${mengen.map(([e,v])=>
         `<span class="lu-chip"><b>${esc(zahl(v))}</b> ${esc(e)}</span>`).join('')}</div>` : ''}
       ${pos.length ? `<table class="lu-tab"><thead><tr>
@@ -1410,7 +1637,7 @@ function renderDocs(l){
   const volltext = l.lbText ? `<section class="sec sec-raw">
       <h4>${tk("Leistungsbeschreibung")}<span class="cov">aus den Vergabeunterlagen · ${l.lbFiles||1} Datei${(l.lbFiles||1)===1?'':'en'}</span></h4>
       <details class="rawtext"${l.lbAnalyse?'':' open'}>
-        <summary><span class="rt-open">${tk("Volltext aus den Unterlagen")}</span><span class="rt-len">${Math.round((l.lbChars||l.lbText.length)/1000)} Tsd. Zeichen${l.lbTruncated?tk(" · gekürzt"):''}</span></summary>
+        <summary><span class="rt-open">${tk("Volltext aus den Unterlagen")}</span><span class="rt-len">${Math.round((l.lbChars||l.lbText.length)/1000)} Tsd. Zeichen${l.lbTruncated?tk(" · gekürzt"):''}${standardtextAnteil(l)}</span></summary>
         <div class="rt-body lb-doc">${l.lbText.split(/\n\n+/).slice(0,400).map(p=>`<p>${esc(p.trim())}</p>`).join('')}</div>
       </details>
     </section>` : '';
@@ -1755,6 +1982,7 @@ function renderTeilnahme(l){
               : tk('noch {n} Tage', {n: tage});
             return `<span class="v">${body}${est?' <span class="vm">voraussichtlich</span>':''}</span>${pdotT(est?'schaetz':'echt')}`;
           })()}</span></div>
+        ${fristWiderspruch(l) ? `<div class="kvi kvi-full">${fristWiderspruch(l)}</div>` : ''}
         <div class="kvi kvi-full"><span class="k">${tk("Submissionstermin")}</span>
           <span class="vv">${l.submission
             ? `${iv(l.submission,'echt')}<span class="vm">${l.rahmen==='vob'?tk("öffentliche Öffnung. Teilnahme möglich, ihr seht die Mitbieter"):tk("öffentliche Angebotsöffnung")}</span>`

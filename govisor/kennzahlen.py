@@ -125,8 +125,12 @@ DOC_SIGNALE: tuple[Kennzahl, ...] = (
        "profil", "eure Regionen"),
     _s("presentationRequired", "presentation_required", "Präsentation gefordert", "ja/nein",
        "profil", "habt ihr die Leute dafür"),
+    # ⚠ Die Bezugsgroesse war eine unerfuellte Zusage: „markt" stand hier, angezeigt wurde
+    # bis zum 02.09. nur die nackte Zahl. Verglichen wird jetzt je AUSPRAEGUNG (Tagessatz
+    # gegen Obergrenze), nicht „im Feld" — die Streuung zwischen den beiden ist 25-fach und
+    # damit groesser als jeder Branchenunterschied.
     _s("penaltyPct", "penalty_pct", "Vertragsstrafe", "Prozent",
-       "markt", "übliche Vertragsstrafe im Feld"),
+       "markt", "Median derselben Ausprägung (Tagessatz oder Obergrenze)"),
     _s("skontoPct", "skonto_pct", "Skonto", "Prozent", "markt", "übliches Skonto im Feld"),
     # Der Beleg zur Behauptung: je Signal das Zitat aus dem Dokument (Median 88 Zeichen).
     # Deckung 9.409 von 9.788 Vorgängen mit Volltext = 96 %. Er vergleicht nichts, er
@@ -362,14 +366,16 @@ _EIGNUNGSCHECK: tuple[Kennzahl, ...] = (
 # seit jeher mit Balken. Ihnen fehlt keine Anzeige, ihnen fehlt ABDECKUNG: 205 von 1.829
 # offenen Vorgaengen mit mehreren Zuschlagskriterien. Sie doppelt einzutragen haette den
 # Eindruck erzeugt, da sei noch etwas zu bauen.
+#
+# ⚠ NACHTRAG 02.09., UND ER KORRIGIERT DEN ABSATZ DARUEBER. „Laeuft" stimmte fuer die Anzeige
+# der ZAHL, nicht fuer die Kennzahl. `penaltyPct` stand mit Bezug „markt" im Verzeichnis und
+# rendert `${s.penaltyPct} %` — ohne jeden Vergleichswert. Schlimmer: die Zahl war zweideutig.
+# Vertragsstrafen gibt es als TAGESSATZ und als OBERGRENZE, im Verhaeltnis 1:25 (0,20 % je
+# Werktag gegen 5 % insgesamt), und 67 % der 4.114 Werte in `penalty_pct` lassen sich ohne
+# Beleg keiner der beiden zuordnen. „Vertragsstrafe 0,3 %" konnte also eine milde Obergrenze
+# oder ein harter Tagessatz sein, und die Anzeige sagte nicht welches. Beides ist jetzt
+# ergaenzt (s. `schwelleVergleich`); die Trennung liefert `export_schwellen.py` als Regel mit.
 _UEBERGABE: tuple[Kennzahl, ...] = (
-    _k("formularaufwand", "Formularaufwand", "markt", "Median 22 Pflichtfelder"),
-    _k("mengengeruest", "Mengengerüst", "keine"),
-    _k("bezifferteSchwellen", "Bezifferte Schwellen als Vergleichsgruppe", "markt",
-       "Median und Quartil derselben Anforderungsart"),
-    _k("standardtextAnteil", "Standardtext-Anteil", "markt",
-       "Median 10 %, oberes Viertel 27 %"),
-    _k("fristwiderspruch", "Widerspruch bei der Angebotsfrist", "keine"),
     _k("verlaesslichkeitAuswertung", "Verlässlichkeit je Auswertung", "keine"),
     _k("anforderungsDrift", "Anforderungs-Drift", "vorwert",
        "dieselbe Vergabestelle in der vorigen Runde"),
@@ -420,6 +426,137 @@ _AKTIVIERUNG: tuple[Kennzahl, ...] = (
 # zwischen 28 und 40 Tagen, weil dort die gesetzlichen Mindestfristen liegen. Unterschwellig
 # gelten andere: unter den Vorgaengen mit hoechstens 28 Tagen sind 21 % UVgO, im Rest 4 %.
 # Ein Vergleichswert, der zwei Rechtsgrundlagen mischt, ist keiner.
+# ── Umfang der Formulare (Kennzahl 4, gebaut am 2026-09-02) ─────────────────────────────
+# Sie stand als `formularaufwand` unter `geplant`, mit der Bezugsgroesse „markt, Median 22
+# Pflichtfelder". Nachgemessen haelt davon nichts, und die drei Gruende sind drei verschiedene
+# Fehlerarten — es lohnt sich, sie auseinanderzuhalten:
+#
+#   1. FALSCHE GROESSE. „Pflicht" ist ein Kennzeichen im PDF, das kaum jemand setzt: 93 % aller
+#      31.799 Formulare tragen null Pflichtfelder, auch 92 % derjenigen mit ueber 50 Feldern.
+#      Ein 95-Felder-Vergabeformular ohne ein einziges Pflichtfeld gibt es nicht. Die Zahl
+#      misst die Formularsoftware.
+#   2. FALSCHE EBENE. Die „22" stimmt sogar (gemessen 23), aber je FORMULAR, nicht je Vorgang.
+#   3. ⚠ FALSCHER MESSGEGENSTAND, und das ist die teure. Summen je Vorgang wachsen mit der
+#      Zahl gelesener Dateien: 2 → 7 → 16 Formulare, 60 → 327 → 606 Felder. Kein Plateau bei
+#      irgendeiner Lesetiefe, und auch keins in den 165 Vorgaengen, deren Unterlagen
+#      vollstaendig aus EINEM ZIP kamen. Wer das anzeigt, zeigt unsere Abrufquote.
+#
+# ⚠ DESHALB BEZUG `keine`, OBWOHL EINE SCHWELLE DRINSTECKT. Die 400 Felder stammen aus der
+# Marktverteilung (oberste 12 %), aber ein laufender Marktvergleich waere falsch: der
+# marktweite Wert stammt aus derselben Untererfassung wie der eigene, und dagegen verglichen
+# saehe jeder tief gelesene Vorgang extremer aus als er ist. Die Kennzahl behauptet nur
+# Anwesenheit und sagt nie „wenig Aufwand".
+# ── Widerspruch bei der Angebotsfrist (Kennzahl 9, gebaut am 2026-09-02) ────────────────
+# Die einzige der Reihe, bei der ein Fehlalarm eine Angebotsabgabe kosten kann. Gemessen an
+# allen Vorgaengen mit beiden Seiten (1.958): 94,5 % stimmen ueberein, 4,1 % nennen in den
+# Unterlagen eine FRUEHERE Frist, 1,4 % eine SPAETERE — die Uebergabe nennt 4,2 % und 1,6 %.
+#
+# ⚠ DREI FILTER, ALLE AN BELEGEN GEPRUEFT: (1) nur was der Beleg eindeutig als Angebotsfrist
+# ausweist — `req_type='frist'` mischt Binde-, Zuschlags-, Ausfuehrungs- und Lieferfristen;
+# (2) hoechstens 30 Tage Abweichung, denn darueber stehen Seitenkopf-Daten („Seite 26 von
+# 653"), Lieferfristen aus der Vertragsphase und Jahresdreher; (3) keine Seitenkoepfe.
+#
+# ⚠ DIE ±365-TAGE-FAELLE BLEIBEN BEWUSST STUMM. „Die Angebotsfrist endet am 10.09.2027" kann
+# ein echter Jahresdreher des Auftraggebers sein — und genau deshalb wird er nicht gemeldet:
+# ohne das Dokument zu oeffnen laesst sich sein Tippfehler nicht von unserem Lesefehler
+# unterscheiden. Bei einer Frist ist Schweigen billiger als Raten.
+#
+# ⚠ UND SIE SAGT NICHT, WELCHE SEITE RECHT HAT. Die Abweichungen spitzen auf VIELFACHEN VON
+# SIEBEN (51 von 100 sind exakte Wochenvielfache, zufaellig waeren es 14 %): das ist die
+# Signatur verlaengerter Fristen. Mal bleibt das alte Dokument liegen, mal traegt das Dokument
+# die Verlaengerung und die Bekanntmachung nicht. Die Anzeige nennt beide Daten und den einen
+# Satz, der immer stimmt: die fruehere Angabe ist die sichere.
+_FRISTWIDERSPRUCH: tuple[Kennzahl, ...] = (
+    Kennzahl("fristwiderspruch", "Widerspruch bei der Angebotsfrist", "keine", "",
+             "lead-detail", "export_fristwiderspruch.py", "deadline_date", "Tage"),
+)
+
+# ── Standardtext-Anteil (Kennzahl 8, gebaut am 2026-09-02) ──────────────────────────────
+# Die Uebergabe nennt Median 10 %, oberes Viertel 27 % — und sagt selbst, dass das eine
+# Untergrenze ist: sie mass in 600 Vorgaengen. Am vollen Bestand (9.690 Vorgaenge, 1,32 Mio.
+# verschiedene Absaetze, 4,2 Mrd. Zeichen) sind es **29 % / 51 %**, gut das Dreifache.
+#
+# ⚠ JE ABSATZ, NICHT JE DATEI. `document_duplicates` gibt es laengst (4.902 Paare), aber ganze
+# Dateien sind nur in 2,1 % der Faelle identisch — ein geaendertes Datum im Kopf genuegt.
+#
+# ⚠ DIE VERGLEICHSGRUPPE IST DIE TEXTMENGE, und das war nicht die erste Vermutung. Das
+# Regelwerk trennt sichtbar (UVgO 42 %, VOB 25 %, Spreizung 1,8×), die Textmenge doppelt so
+# stark (klein 41 %, mittel 25 %, gross 10 %, Spreizung 4,1×) — und ihr Muster wiederholt sich
+# INNERHALB jedes Regelwerks. Der Grund ist inhaltlich: grosse Pakete tragen ein eigenes
+# Leistungsverzeichnis und eigene technische Anlagen, die nirgends sonst stehen.
+#
+# ⚠ UNTER 50 TSD. ZEICHEN IST DIE ZAHL RAUSCHEN: dort landen 35 % der Vorgaenge bei genau 0 %
+# (darueber 3 %). Sie bekommen keinen Wert statt eines schlechten.
+#
+# ⚠ SIE HAELT DIE DRIFTPRUEFUNG AUS, WEIL SIE EIN VERHAELTNIS IST: 25 % → 34 % → 32 % → 36 %
+# ueber die Lesetiefe, nicht monoton, Korrelation 0,13. Absolute Zaehlungen aus denselben
+# Dokumenten tun das nicht (Kennzahl 4: 2 → 7 → 16 Formulare).
+_STANDARDTEXT: tuple[Kennzahl, ...] = (
+    Kennzahl("standardtextAnteil", "Standardtext-Anteil", "markt",
+             "Median und oberes Viertel derselben Textmengen-Klasse",
+             "lead-detail", "export_standardtext.py", "text", "Prozent"),
+)
+
+# ── Bezifferte Schwellen im Vergleich (Kennzahl 6, gebaut am 2026-09-02) ────────────────
+# Die Uebergabe verspricht „198.584 Zahlen, einordenbar gegen Median und Quartil derselben
+# Anforderungsart". Zahlen gibt es sogar mehr (223.570), einordenbar sind rund 2.500 — ein
+# Prozent. Drei Filter liegen dazwischen, und jeder steht fuer eine eigene Fehlerart:
+#
+#   1. OHNE EINHEIT KEIN VERGLEICH. Bei `technische_mindestanforderung` fehlt sie in 66 % der
+#      Faelle, bei `vertragsstrafe` in 81 %, bei `zertifikat` in 97 %. „Median 20" ist 20 mm
+#      oder 20 Jahre. ⚠ Und eine Einheit kann einen FAKTOR tragen: „1,5 Mio. EUR" gegen
+#      „1.500.000 EUR" verglichen ist ein Fehler um das Millionenfache — solche Schreibweisen
+#      werden verworfen, nicht geraten.
+#   2. DIE GRUPPE MUSS EINE GROESSE BENENNEN. Ein Urteil, kein Rechenschritt, deshalb als
+#      Liste mit Begruendung im Export. Verworfen: `technische_mindestanforderung`
+#      („mindestens 20 %" — wovon?), `frist` (Bindefrist und Ausfuehrungsfrist im selben Topf),
+#      `leistung_menge` (mischt Tueren und Schrauben, und ist Kennzahl 5).
+#      ⚠ Bei den Versicherungen reicht der `req_type` nicht: die Deckungssummen sind nach
+#      SCHADENSART gestaffelt und spreizen dabei sechsfach (allgemein 500.000, Umwelt 3 Mio.).
+#   3. ⚠ MISST DIE ZAHL DEN VORGANG ODER UNS? Diese Pruefung rechnet der Export bei JEDEM Lauf
+#      selbst, statt das Urteil von heute einzufrieren. Durchgefallen sind u. a. der
+#      Mindestumsatz (2,5×) und die Vertragsstrafe in EUR (16,7×, gemischte Skala).
+#      ⚠ Beim Mindestumsatz war die naheliegende Erklaerung falsch: „tief gelesene Vorgaenge
+#      sind grosse Vergaben" — die Schwelle korreliert NICHT mit dem Auftragswert (0,24), und
+#      der Anstieg bleibt innerhalb jedes Regelwerks (VgV 480.000 → 1.500.000).
+#
+# ⚠ SIE HAT KEINE EIGENE ANZEIGE. Die Zahl stand seit jeher in der Checklistenzeile; ergaenzt
+# ist nur die Einordnung daneben. Wie bei Kennzahl 5: erst suchen, ob die Zahl schon da ist.
+_SCHWELLEN: tuple[Kennzahl, ...] = (
+    Kennzahl("schwelleVergleich", "Bezifferte Schwelle gegen ihre Gruppe", "markt",
+             "Median und oberes Viertel derselben Anforderungsart, Einheit und Schadensart",
+             "lead-detail", "export_schwellen.py", "wert_num", "je Gruppe"),
+)
+
+# ── Umfang des Leistungsverzeichnisses (Kennzahl 5, gebaut am 2026-09-02) ───────────────
+# Sie stand als `mengengeruest` unter `geplant`: „495.891 LV-Positionen mit Menge und Einheit".
+# Diese Zahl LIEGT NIRGENDS — sie wurde beim Parsen gezaehlt und nie gespeichert, `docpipe.py`
+# macht aus GAEB-Positionen Text. Was liegt, sind extrahierte `leistung_menge`-Zeilen.
+#
+# ⚠ UND DIE ZERFALLEN IN ZWEI GRUPPEN, von denen eine unbrauchbar ist:
+#     GAEB/LV             3.494 Zeilen · Median 86 · max   6.953 · ueber 5.000:   2
+#     Preisblatt/Tabelle  6.327 Zeilen · Median 56 · max 200.010 · ueber 5.000: 263
+# Die Spitze der zweiten sind LASTGAENGE — Viertelstundenwerte eines Jahres (35.040 Zeilen),
+# keine zu kalkulierenden Positionen. „200.010 Positionen zu bepreisen" waere bei jeder
+# Stromausschreibung falsch. GAEB (.x83/.x81/.x86) ist per Format ein Leistungsverzeichnis;
+# die Trennung braucht keine Namensliste.
+#
+# ⚠ SIE DARF EINEN VERGLEICH TRAGEN UND KENNZAHL 4 NICHT — gemessen, nicht gesetzt. Das
+# groesste LV je Vorgang ist ueber die Lesetiefe STABIL (69 → 96 → 78) und es gibt genau eins
+# je Vorgang; die Formularsummen wachsen monoton mit. Verglichen wird je GEWERK (CPV
+# 4-stellig): innerhalb von CPV 45 spreizen die Mediane 5,4-fach (Installation 292, Anstrich
+# 54). Unter 40 Vorgaengen im Gewerk steht die Zahl ohne Vergleich.
+#
+# ⚠ Die beiden messen NICHT dasselbe, obwohl ein VHB 223 ein Feld je LV-Position hat:
+# Korrelation -0,02, von 803 grossen LV haben nur 79 auch ein grosses Formular.
+_FORMULAR: tuple[Kennzahl, ...] = (
+    Kennzahl("formularUmfang", "Umfang der Formulare", "keine", "",
+             "lead-detail", "export_umfang.py", "wert_num", "Felder"),
+    Kennzahl("lvUmfang", "Umfang des Leistungsverzeichnisses", "markt",
+             "Leistungsverzeichnisse desselben Gewerks (CPV 4-stellig, ab 40 Vorgängen)",
+             "lead-detail", "export_umfang.py", "wert_num", "Positionen"),
+)
+
 # ── Fingerabdruck der Vergabestelle (Kennzahl 3, gebaut am 2026-09-02) ───────────────────
 # ⚠ Nur die sieben Anforderungsarten unter 25 % Marktanteil. Dass eine Stelle
 # `einzureichendes_dokument` (92 % marktweit) immer verlangt, ist keine Eigenschaft der
@@ -485,7 +622,9 @@ INVENTAR: tuple[Kennzahl, ...] = tuple(
 )
 
 ALLE: tuple[Kennzahl, ...] = (DOC_SIGNALE + VERGABESTELLEN + _ZEITFENSTER
-                              + _ANFORDERUNGSPROFIL + _STELLENPROFIL + INVENTAR)
+                              + _ANFORDERUNGSPROFIL + _STELLENPROFIL + _FORMULAR
+                              + _SCHWELLEN + _STANDARDTEXT
+                              + _FRISTWIDERSPRUCH + INVENTAR)
 
 
 def nach_flaeche() -> dict[str, tuple[Kennzahl, ...]]:

@@ -1006,6 +1006,18 @@ if $PY -m govisor.cli signals-docs; then
   $PY scripts/export_anforderungsprofil.py || echo "  ⚠ anforderungsprofil.json nicht geschrieben — Kennzahl 2 fehlt im Detail."
   # Fingerabdruck der Vergabestelle (Kennzahl 3).
   $PY scripts/export_stellenprofil.py || echo "  ⚠ stellenprofil.json nicht geschrieben — Kennzahl 3 fehlt im Detail."
+  # Umfang der Angebotsarbeit (Kennzahlen 4 und 5): groesstes Formular und groesstes
+  # GAEB-Leistungsverzeichnis. Liest `doc_checklist` und fuer den Gewerksvergleich `lead_export`.
+  $PY scripts/export_umfang.py || echo "  ⚠ umfang.json nicht geschrieben — Kennzahlen 4 und 5 fehlen im Detail."
+  # Bezifferte Schwellen (Kennzahl 6). Winzige Datei: nur Gruppenwerte und die Regeln, mit
+  # denen der Renderer denselben Gruppenschluessel bildet.
+  $PY scripts/export_schwellen.py || echo "  ⚠ schwellen.json nicht geschrieben — Kennzahl 6 fehlt im Detail."
+  # Standardtext-Anteil (Kennzahl 8). Liest den VOLLTEXT (4,2 Mrd. Zeichen in DE) und braucht
+  # rund 90 Sekunden — der einzige Schritt hier, der nicht in Sekunden durchlaeuft.
+  $PY scripts/export_standardtext.py || echo "  ⚠ standardtext.json nicht geschrieben — Kennzahl 8 fehlt im Detail."
+  # Fristwiderspruch (Kennzahl 9). Vergleicht die belegte Angebotsfrist aus den Unterlagen mit
+  # der aus der Bekanntmachung. ⚠ Ein Fehlalarm kostet hier eine Abgabe, s. Filter im Skript.
+  $PY scripts/export_fristwiderspruch.py || echo "  ⚠ fristwiderspruch.json nicht geschrieben — Kennzahl 9 fehlt im Detail."
 else
   echo "  ⚠ Signal-Extraktion übersprungen."
 fi
