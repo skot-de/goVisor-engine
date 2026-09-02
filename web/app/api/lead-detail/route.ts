@@ -94,6 +94,29 @@ async function loadStellenprofil(): Promise<Stellenprofil> {
   return stellenprofil!;
 }
 
+/* Aenderungen an den Vergabeunterlagen. Die Stelle stellt eine neue Fassung ein; wer auf der
+ * alten kalkuliert hat, rechnet falsch und erfaehrt es nicht — das Portal zeigt nur die neueste.
+ *
+ * ⚠ NICHT die „Anforderungs-Drift" aus der Uebergabe. Die meint zwei Runden derselben Stelle
+ * und ist strukturell nicht rechenbar: `contract_succession` und `doc_checklist` sind disjunkt
+ * (0 Paare), weil Unterlagen nur waehrend laufender Frist existieren. Hier geht es um die Drift
+ * INNERHALB des Verfahrens — frueher da und naeher an der Entscheidung.
+ *
+ * ⚠ VERGLICHEN WIRD DER LETZTE SCHRITT, nicht Fassung 1 gegen die neueste: wer die Unterlagen
+ * gestern gezogen hat, will wissen, was seitdem passiert ist.
+ *
+ * ⚠ Dateinamen stammen aus fremden Unterlagen. Wer sie rendert, escaped sie. */
+type Unterlagenstand = { version: number; vorige: number; nVersionen: number;
+                         geaendert: string[]; nGeaendert: number;
+                         neu: string[]; nNeu: number; nWeg: number };
+let unterlagenstand: Record<string, Unterlagenstand> | null = null;
+async function loadUnterlagenstand(): Promise<Record<string, Unterlagenstand>> {
+  if (unterlagenstand) return unterlagenstand;
+  try { const roh = await loadDataFile("unterlagenstand.json"); unterlagenstand = roh ? JSON.parse(roh) : {}; }
+  catch { unterlagenstand = {}; }
+  return unterlagenstand!;
+}
+
 /* Bieterfragen und Antworten. Waehrend der Angebotsfrist fragen Bewerber die Vergabestelle,
  * und die Antworten muessen ALLEN Bietern zugaenglich sein (§ 20 Abs. 3 EU-VgV). Wer sie nicht
  * liest, rechnet auf einem ueberholten Stand.
@@ -397,6 +420,8 @@ export async function GET(req: Request) {
     if (fw2) detail.lbFristWiderspruch = fw2;
     const bf = (await loadBieterfragen())[id];
     if (bf) detail.lbFragen = bf;
+    const us = (await loadUnterlagenstand())[id];
+    if (us) detail.lbStand = us;
     // Dateiliste des Portals — was dort LIEGT, ohne dass wir es gelesen haben.
     const li = await ladeDateiliste(id);
     if (li) detail.lbListe = li;

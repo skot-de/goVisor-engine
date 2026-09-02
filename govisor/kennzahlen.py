@@ -445,6 +445,33 @@ _AKTIVIERUNG: tuple[Kennzahl, ...] = (
 # marktweite Wert stammt aus derselben Untererfassung wie der eigene, und dagegen verglichen
 # saehe jeder tief gelesene Vorgang extremer aus als er ist. Die Kennzahl behauptet nur
 # Anwesenheit und sagt nie „wenig Aufwand".
+# ── Aenderungen an den Vergabeunterlagen (gebaut am 2026-09-02) ─────────────────────────
+# ⚠ SIE IST NICHT DIE „ANFORDERUNGS-DRIFT", und die bleibt deshalb unter `geplant`. Das Papier
+# meint dort „dieselbe Stelle, zwei Runden: verschaerft?" — und das ist mit den heutigen Daten
+# NICHT RECHENBAR, strukturell:
+#
+#     contract_succession × doc_checklist  =  0 Paare
+#     Nachfolger mit Unterlagen: 0 · Vorgaenger mit Unterlagen: 0
+#
+# Unterlagen existieren nur waehrend laufender Angebotsfrist, ein Vorgaenger ist per Definition
+# abgeschlossen. Die beiden Bestaende sind disjunkt und bleiben es, solange wir Dokumente nach
+# dem Zuschlag nicht aufbewahren. Wer die Kennzahl bauen will, braucht zuerst diese Aufbewahrung
+# — oder den Zeitverlauf unserer eigenen Laeufe, der laut Papier „mit dem Lauf 02.09." beginnt.
+#
+# Gebaut ist stattdessen die Drift INNERHALB des laufenden Verfahrens: 209 Vorgaenge tragen
+# mehrere Fassungen, 93 davon noch offen, und alle 93 haben im letzten Schritt eine Aenderung
+# (Median 3 Dateien).
+#
+# ⚠ DIE FASSUNG STECKT AUCH IM ZIP-NAMEN. Der Pfad lautet
+# `Z42-2025-0209_Version 1.zip::Anlage 510-...`; wer nur das Verzeichnis normalisiert, haelt
+# jede Datei der neuen Fassung fuer neu — gemessen „56 neu, 54 weg", von denen 47 byte-gleich
+# waren. Der dritte Namensartefakt an einem Tag, nach den Lastgaengen und den Katalog-Staenden.
+_UNTERLAGENSTAND: tuple[Kennzahl, ...] = (
+    Kennzahl("unterlagenAenderung", "Änderungen an den Vergabeunterlagen", "vorwert",
+             "die vorige Fassung derselben Unterlagen",
+             "lead-detail", "export_unterlagenstand.py", "file", "Dateien"),
+)
+
 # ── Bieterfragen und Antworten (gebaut am 2026-09-02) ───────────────────────────────────
 # ⚠ SIE STEHT IM PAPIER ALS „EXISTIEREN NICHT UND SIND NICHT ABGREIFBAR" — und zwar unter den
 # Aktivierungs-Auslоesern, mit dem Zusatz „staerkstes Ziel ueberhaupt". Die zitierte
@@ -681,7 +708,8 @@ ALLE: tuple[Kennzahl, ...] = (DOC_SIGNALE + VERGABESTELLEN + _ZEITFENSTER
                               + _SCHWELLEN + _STANDARDTEXT
                               + _FRISTWIDERSPRUCH
                               + _VERLAESSLICHKEIT
-                              + _BIETERFRAGEN + INVENTAR)
+                              + _BIETERFRAGEN
+                              + _UNTERLAGENSTAND + INVENTAR)
 
 
 def nach_flaeche() -> dict[str, tuple[Kennzahl, ...]]:

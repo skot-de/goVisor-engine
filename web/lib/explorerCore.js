@@ -1156,6 +1156,38 @@ function schwellenVergleich(it, l){
 
 
 
+/* AENDERUNGEN AN DEN VERGABEUNTERLAGEN.
+ *
+ * Die Vergabestelle stellt eine neue Fassung ein; das Portal zeigt nur die neueste. Wer die
+ * Unterlagen vor zwei Wochen gezogen und seitdem kalkuliert hat, merkt nichts.
+ *
+ * ⚠ „GEAENDERT" IST DER GEFAEHRLICHE FALL, nicht „neu": gleicher Dateiname, anderer Inhalt.
+ * Wer die Datei schon hat, sieht keinen Anlass, sie noch einmal zu ziehen. Deshalb steht sie
+ * zuerst und wird namentlich genannt, waehrend Neuzugaenge nur gezaehlt werden.
+ *
+ * ⚠ SIE IST NICHT DIE „ANFORDERUNGS-DRIFT" AUS DER UEBERGABE. Die meint zwei Runden derselben
+ * Stelle und ist nicht rechenbar: Unterlagen existieren nur waehrend laufender Frist,
+ * Vorgaenger sind abgeschlossen — `contract_succession` × `doc_checklist` ergibt 0 Paare.
+ *
+ * ⚠ DATEINAMEN AUS FREMDEN UNTERLAGEN. Durch `esc()`. */
+function renderUnterlagenstand(l){
+  const u = l.lbStand;
+  if(!u || !(u.nGeaendert || u.nNeu || u.nWeg)) return '';
+  const teile = [];
+  if(u.nGeaendert) teile.push(tk("{n} geändert", {n: u.nGeaendert}));
+  if(u.nNeu) teile.push(tk("{n} neu", {n: u.nNeu}));
+  if(u.nWeg) teile.push(tk("{n} entfernt", {n: u.nWeg}));
+  const namen = u.geaendert && u.geaendert.length
+    ? `<p class="us-n">${u.geaendert.map(x => esc(x)).join(' · ')}${
+        u.nGeaendert > u.geaendert.length ? ' ' + tk("und {n} weitere", {n: u.nGeaendert - u.geaendert.length}) : ''}</p>`
+    : '';
+  return `<div class="us">
+    <p class="us-k">${tk("Fassung {v} der Unterlagen. Seit Fassung {a}: {liste}.",
+      {v: u.version, a: u.vorige, liste: teile.join(', ')})}</p>
+    ${namen}
+    <p class="us-h">${tk("Habt ihr auf einer früheren Fassung gerechnet, prüft diese Dateien zuerst.")}</p></div>`;
+}
+
 /* BIETERFRAGEN UND ANTWORTEN.
  *
  * Waehrend der Angebotsfrist fragen Bewerber die Vergabestelle; die Antworten muessen ALLEN
@@ -1463,7 +1495,7 @@ function renderChecklistBlock(a, l){
     + (other.length?`<button class="tchip" data-cljump="clg-weit">${tk("Weitere")}<span class="n">${other.length}</span></button>`:'');
 
   const portal = (l.unterlagen&&l.unterlagen.url) ? `<a href="${esc(l.unterlagen.url)}" target="_blank" rel="noopener" class="link">${tk("Zum Vergabeportal ↗")}</a>` : '';
-  const chead = `<div class="chead"><div class="r1"><span class="stand">Stand der Unterlagen: ${l.lbFiles||1} Datei${(l.lbFiles||1)===1?'':'en'}</span>${portal}</div>
+  const chead = `<div class="chead">${renderUnterlagenstand(l)}<div class="r1"><span class="stand">Stand der Unterlagen: ${l.lbFiles||1} Datei${(l.lbFiles||1)===1?'':'en'}</span>${portal}</div>
     ${verlaesslichkeit(a)}
     <div class="disc">Bitte regelmäßig prüfen, ob neue Unterlagen vorliegen. LLM-gestützte Analyse — kann Fehler enthalten. Jede Angabe ist mit Fundstelle im Originaldokument belegt${a.rejected_items>0&&!verlaesslichkeit(a)?`; ${a.rejected_items} unbelegte Aussagen wurden verworfen`:''}; maßgeblich bleiben die Vergabeunterlagen.</div></div>`;
   const toc = `<div class="toc"><div class="th"><b>${tk("Eure Checkliste")}</b><span class="pr"><span class="cl-doneN">${dn}</span> von ${tot} erledigt</span></div><div class="chips">${chips}<button class="tchip all" data-clcollapse>${tk("Alle zuklappen")}</button></div><div class="tprog"><i class="cl-tprog" style="width:${tot?Math.round(dn/tot*100):0}%"></i></div></div>`;

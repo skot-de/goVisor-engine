@@ -2422,6 +2422,22 @@ td.c-band .passung i{display:none}
 .profil-z span { color: var(--ink-500); font-variant-numeric: tabular-nums; }
 .profil-huerde b { color: var(--flag); }
 
+/* ÄNDERUNGEN AN DEN VERGABEUNTERLAGEN (2026-09-02).
+
+   ⚠ Warnrot wie der Fristwiderspruch, und aus demselben Grund: wer auf einer alten Fassung
+   kalkuliert hat, verliert Geld oder das Angebot. Das ist eine andere Klasse als „mehr
+   Anforderungen als üblich".
+
+   ⚠ Sie steht ganz oben im Kopf der Checkliste, VOR dem Stand der Unterlagen. Wer sie unter
+   der Checkliste fände, hätte schon zwanzig Punkte auf einer überholten Grundlage abgehakt. */
+.us { margin: 0 0 11px; padding: 10px 13px; border-radius: 8px; background: var(--risk-wash);
+  box-shadow: inset 2px 0 0 var(--risk); }
+.us-k { margin: 0; font-size: 13px; font-weight: 650; color: var(--risk);
+  font-variant-numeric: tabular-nums; }
+.us-n { margin: 5px 0 0; font-size: var(--t-meta); color: var(--ink-700); line-height: 1.55;
+  overflow-wrap: anywhere; }
+.us-h { margin: 5px 0 0; font-size: var(--t-meta); color: var(--ink-500); }
+
 /* BIETERFRAGEN UND ANTWORTEN (2026-09-02).
 
    ⚠ Als Zitatliste gestaltet, nicht als Frage-Antwort-Tabelle. Eine Tabelle mit den Spalten

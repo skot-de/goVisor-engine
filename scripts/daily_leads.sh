@@ -1020,6 +1020,8 @@ if $PY -m govisor.cli signals-docs; then
   $PY scripts/export_fristwiderspruch.py || echo "  ⚠ fristwiderspruch.json nicht geschrieben — Kennzahl 9 fehlt im Detail."
   # Bieterfragen und Antworten. Liest den Volltext der Q&A-Dokumente; braucht `doc_qa_stand`.
   $PY scripts/export_bieterfragen.py || echo "  ⚠ bieterfragen.json nicht geschrieben — Bieterfragen fehlen im Detail."
+  # Aenderungen an den Unterlagen: vergleicht die Fassungen im Dokumentpfad.
+  $PY scripts/export_unterlagenstand.py || echo "  ⚠ unterlagenstand.json nicht geschrieben — Fassungsänderungen fehlen."
 else
   echo "  ⚠ Signal-Extraktion übersprungen."
 fi

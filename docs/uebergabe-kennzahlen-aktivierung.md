@@ -166,6 +166,32 @@ Angezeigt wird ab 100 Feldern (47 % der Vorgänge mit Formularen) eine graue Not
 ein Warnhinweis. Von den 636 Vorgängen über 400 Feldern sind 472 VHB-Formblätter, also
 Preisblätter: das ist Kalkulationsarbeit von Tagen, und sie steht nirgends in der Bekanntmachung.
 
+**Zu 12 (nicht rechenbar, geprüft am 2026-09-02):** die Anforderungs-Drift zwischen zwei
+Runden derselben Stelle lässt sich mit den heutigen Daten nicht bilden, und zwar **strukturell**,
+nicht wegen einer Lücke:
+
+    contract_succession × doc_checklist  =  0 Paare
+    Nachfolger mit Unterlagen: 0  ·  Vorgänger mit Unterlagen: 0
+
+Vergabeunterlagen existieren nur **während laufender Angebotsfrist**; ein Vorgänger ist per
+Definition abgeschlossen. Die beiden Bestände sind disjunkt und bleiben es, solange wir Dokumente
+nach dem Zuschlag nicht aufbewahren. Der Eintrag bleibt deshalb offen — mit dem Blocker
+daneben, damit die nächste Sitzung nicht dieselbe Sackgasse ausmisst.
+
+**Gebaut ist stattdessen die Drift INNERHALB des Verfahrens**, und sie ist näher an der
+Entscheidung: eine Verschärfung zwei Runden zurück ist Marktkunde, eine geänderte Datei seit
+gestern kostet Geld. **209 Vorgänge tragen mehrere Fassungen, 93 davon noch offen — und alle 93
+haben im letzten Schritt eine Änderung** (Median 3 Dateien). Betroffen sind genau die Dateien,
+auf die es ankommt: `Leistungsverzeichnis`, `Anlage 201 Eignungskriterien`, `Anlage 100
+Bewerbungsbedingungen`.
+
+⚠ **Verglichen wird der letzte Schritt**, nicht Fassung 1 gegen die neueste: wer die Unterlagen
+gestern gezogen hat, will wissen, was seitdem passiert ist.
+
+⚠ **„Geändert" ist der gefährliche Fall, nicht „neu"** — gleicher Dateiname, anderer Inhalt. Wer
+die Datei schon hat, sieht keinen Anlass, sie noch einmal zu ziehen. Die geänderten werden
+deshalb namentlich genannt, Neuzugänge nur gezählt.
+
 **Zu den Bieterfragen (widerlegt am 2026-09-02):** das Papier führt sie als stärkstes Ziel
 überhaupt und behauptet zugleich, sie existierten in unseren Daten **nicht** und seien **nicht
 abgreifbar**. Die erste Hälfte stimmt, die zweite nicht mehr.
@@ -317,7 +343,7 @@ in den Unterlagen. Die 70 Fälle „Unterlagen früher" sind der zweite Hinweis:
 
 | # | Kennzahl | Frühestens |
 |---|---|---|
-| 12 | **Anforderungs-Drift** (dieselbe Stelle, zwei Runden: verschärft?) | Historie beginnt mit dem Lauf 02.09. |
+| 12 | **Anforderungs-Drift** (dieselbe Stelle, zwei Runden: verschärft?) | ⚠ **nicht rechenbar, siehe unten** — stattdessen die Drift im laufenden Verfahren gebaut |
 | 13 | **Wirkung von Hürden auf die Bieterzahl** | heute 987 verbindbar, wächst mit jedem Zuschlag |
 
 ### Geprüft und verworfen

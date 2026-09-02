@@ -215,6 +215,31 @@ Ein paar echte Beispiele, was hinter einer schönen Zahl steckte:
 | 198.584 einordenbare Zahlen | eine breite Vergleichsbasis | 2.208; der Rest hat keine Einheit oder keine gemeinsame Grösse |
 | „fast alle bei 5 %" | ein enger Markt | zwei Zahlen im Verhältnis 1:25 (5 % Obergrenze, 0,20 % je Werktag) |
 | 5× genau −1 Tag Fristabweichung | ein Off-by-one bei uns | verlängerte Fristen: 51 % liegen auf Wochenvielfachen |
+| „56 Dateien neu, 54 entfernt" | die Stelle hat das Paket umgebaut | die Fassung steckt im ZIP-Namen; 47 waren byte-gleich |
+
+## Derselbe Inhalt unter anderem Namen
+
+An einem einzigen Tag drei Mal dieselbe Fehlerform, und jedes Mal sah die falsche Zahl
+beeindruckend aus:
+
+| Zahl | sah aus wie | war |
+|---|---|---|
+| 200.010 „LV-Positionen" | ein riesiges Leistungsverzeichnis | ein Lastgang, im Einheitenfeld als „Positionen" geführt |
+| 264 Bieterfragen | ein Verfahren mit sehr vielen Fragen | ein Katalog mit 66 Fragen, in vier Ständen abgelegt |
+| 56 neue Dateien | ein umgebautes Vergabepaket | dieselben Dateien, der ZIP-Name trägt die Fassung |
+
+**Die gemeinsame Form:** derselbe Inhalt erscheint unter mehreren Namen, und eine Zählung über
+Namen multipliziert ihn. Sie fällt nicht auf, weil das Ergebnis plausibel wirkt — grosse Vergaben
+haben eben viele Positionen, viele Fragen, viele Dateien.
+
+**Die Gegenprobe kostet eine Zeile: über den INHALT zählen, nicht über den Namen.** Prüfsumme
+oder Hash je Dokument, Text je Absatz, Wert je Zeile. Weicht die Zahl danach stark ab, war der
+Name das Problem.
+
+⚠ **Und die Normalisierung muss den GANZEN Bezeichner erfassen.** Beim Fassungsvergleich lag die
+Versionsnummer sowohl im Verzeichnis (`Version 1/`) als auch im ZIP-Namen
+(`Z42-2025-0209_Version 1.zip::`). Wer nur das Verzeichnis normalisiert, hat die Hälfte des
+Problems behoben und merkt es nicht — das Ergebnis ist immer noch plausibel, nur falsch.
 
 ## Wann ein Rahmen zur Entschuldigung wird
 
