@@ -110,6 +110,16 @@ ENGINES: tuple[tuple[str, re.Pattern], ...] = (
     ("madrid",        re.compile(r"contratos-publicos\.comunidad\.madrid", re.I)),
     ("galicia",       re.compile(r"contratosdegalicia\.gal", re.I)),
     ("navarra",       re.compile(r"portalcontratacion\.navarra\.es", re.I)),
+    # ── IT, am 2026-09-03 bestimmt. Landschaft aus regionalen Einkaufszentralen plus
+    # der nationalen Consip — 538 Domains, aber wenige Systeme dahinter.
+    ("consip",        re.compile(r"acquistinretepa\.it", re.I)),
+    ("aria-sintel",   re.compile(r"sintel\.regione\.lombardia|ariaspa\.it", re.I)),
+    ("soresa",        re.compile(r"soresa\.it", re.I)),
+    ("start-toscana", re.compile(r"start\.toscana\.it|/tendering/tenders/", re.I)),
+    ("intercenter",   re.compile(r"(sater|intercenter)\.regione\.emilia-romagna", re.I)),
+    ("albofornitori", re.compile(r"albofornitori\.it|/alboeproc/", re.I)),
+    ("enel",          re.compile(r"enel\.com", re.I)),
+    ("lazio-crea",    re.compile(r"centraleacquisti\.regione\.lazio", re.I)),
     ("ted-esender",   re.compile(r"ted\.europa\.eu", re.I)),
 )
 
@@ -126,7 +136,8 @@ def sammle(land: str, monat: str) -> tuple[collections.Counter, collections.Coun
     paket = ROOT / "data" / "cache" / f"ted_{monat}.tar.gz"
     if not paket.exists():
         raise SystemExit(f"  Paket fehlt: {paket}")
-    a3 = {"FR": b"FRA", "ES": b"ESP", "IT": b"ITA", "NL": b"NLD", "PL": b"POL",
+    a3 = {"FR": b"FRA", "ES": b"ESP", "IT": b"ITA", "NL": b"NLD", "PL": b"POL", "NO": b"NOR",
+          "LT": b"LTU", "HR": b"HRV", "SI": b"SVN", "SK": b"SVK", "EE": b"EST", "CH": b"CHE",
           "DE": b"DEU", "AT": b"AUT", "SE": b"SWE", "PT": b"PRT", "CZ": b"CZE",
           "BG": b"BGR", "LV": b"LVA", "BE": b"BEL", "DK": b"DNK", "FI": b"FIN",
           "RO": b"ROU", "HU": b"HUN", "GR": b"GRC", "EL": b"GRC", "IE": b"IRL"}.get(land.upper())

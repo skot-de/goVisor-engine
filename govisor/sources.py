@@ -485,6 +485,45 @@ DOC_REGISTRY: list[Source] = [
            "sondiert", portals=5, ebene="unterlagen", ertrag="ungeprueft",
            coverage="zusammen ~1 % — ungeprueft", overlap="ungeprueft",
            url="https://portalcontratacion.navarra.es"),
+    # ── IT, sondiert am 2026-09-03 · Kapitel: docs/sondierung/it.md ───────────────────
+    # ⚠ Italien hat KEIN dominantes System: 538 Domains, groesste Engine 10 %.
+    Source("sond-it-soresa", "Soresa (Kampanien)", "", "IT", "beides",
+           "sondiert", portals=2, ebene="unterlagen", ertrag="dateien",
+           coverage="4 % der IT-Ausschreibungen — und 99 % der Adressen fuehren tief",
+           overlap="✅ OFFEN, am 2026-09-03 belegt: portale.soresa.it zeigt die Vergabe, "
+                   "siaps.soresa.it liefert die Dateien (dort keine robots.txt, 404). "
+                   "`Disciplinare di gara.pdf` anonym geholt: 1.476.938 Bytes, 43 Seiten, "
+                   "blankes curl — die Groesse stimmt aufs Byte mit der im Link genannten. "
+                   "Der Link traegt Name, Groesse UND SHA256.",
+           url="https://portale.soresa.it"),
+    Source("sond-it-toscana", "START Toscana", "", "IT", "beides",
+           "sondiert", portals=1, ebene="unterlagen", ertrag="gesperrt",
+           coverage="4 %, Adressen zu 87 % tief",
+           overlap="⛔ Blaettern erlaubt (/tendering/ frei), Herunterladen verboten: robots "
+                   "sperrt */attachments/download/*, */document-requests/download/* in vier "
+                   "Varianten. Dritter Fall dieser Art nach Open Nexus und LoginTrade (PL).",
+           url="https://start.toscana.it"),
+    Source("sond-it-aria", "ARIA/Sintel (Lombardei)", "", "IT", "beides",
+           "sondiert", portals=2, ebene="unterlagen", ertrag="gesperrt",
+           coverage="10 % — die groesste IT-Engine",
+           overlap="🎯 KEINE SPERRE, ABER KEINE ADRESSE. Kein robots.txt (404), nichts "
+                   "untersagt. Aber 89 % der Adressen zeigen nur auf die Portalwurzel oder "
+                   "auf `tabsNavigation.do?selected=15` — eine Ansicht, keine Vergabe. "
+                   "Dieselbe Kategorie wie Madrid: der Weg endet VOR dem Portal.",
+           url="https://www.sintel.regione.lombardia.it"),
+    Source("sond-it-consip", "Consip / acquistinretepa (national)", "", "IT", "beides",
+           "sondiert", portals=1, ebene="unterlagen", ertrag="ungeprueft",
+           coverage="4 % — die nationale Plattform",
+           overlap="🟡 robots `Disallow: /` MIT Ausnahmen: /opencms/opencms/ (der von TED "
+                   "verlinkte Pfad) und /downloadservices/ sind ausdruecklich erlaubt. "
+                   "Ungeprueft, weil 57 % der Consip-Adressen nicht tiefer als die "
+                   "Portalwurzel fuehren — der Weg endet vorher.",
+           url="https://www.acquistinretepa.it"),
+    Source("sond-it-rest", "Enel, Intercenter, Albofornitori, Lazio + Schwanz", "", "IT",
+           "beides", "sondiert", portals=530, ebene="unterlagen", ertrag="ungeprueft",
+           coverage="zusammen 78 % — ⚠ der 61-%-Schwanz ist der interessanteste offene "
+                    "Posten: 3.339 Adressen mit 72 % Tiefe auf hunderten Domains",
+           overlap="ungeprueft", url="https://www.albofornitori.it"),
     # ── ANGEBUNDEN ────────────────────────────────────────────────────────────────────
     Source("doc-cosinex-de", "cosinex/DTVP-Unterlagen", "docfetch-cosinex", "DE", "beides",
            "live", portals=40, ebene="unterlagen", ertrag="dateien", modul="govisor.docfetch",
