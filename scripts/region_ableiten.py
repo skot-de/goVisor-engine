@@ -287,6 +287,42 @@ def ort_im_namen(name: str, orte: dict[str, str], sortiert: list[str]) -> str | 
     return None
 
 
+def region_korrekturen(land: str) -> dict[tuple[str, str], tuple[str, str]]:
+    """Von Hand geprueft: (Kaeufername, PLZ) → (Regionskennung ALT, NEU).
+
+    Die Gegenprobe unten kann sagen, DASS Anschrift und Regionsangabe auseinanderlaufen.
+    Welche Seite recht hat, kann sie nicht sagen — dafuer braucht es einen Blick auf den
+    Fall. Diese Datei ist dieser Blick, einmal getan und aufgeschrieben; dieselbe Bauart
+    wie ``curated/<L>_entity_aliases.csv``: **belegt und von Hand geprueft, kein
+    Namensstamm-Automatismus.**
+
+    Am 2026-09-02 gingen so alle 80 deutschen Funde durch. Der entscheidende Zeuge war
+    meist der Kaeufer selbst: die AOK PLUS nennt in 899 eigenen Saetzen Thueringen und in
+    145 Sachsen, und die 20 gemeldeten Leads gehoerten zur Minderheit. Wo eine Behoerde
+    ihre eigene Region hundertfach gleich angibt, ist die Ausreisserzeile der Fehler.
+
+    ⚠ ``region_neu == region_alt`` heisst **geprueft und richtig** — dann schweigt der
+    Marker, statt weiter zu melden. Die BKK VerbundPlus sitzt in Biberach (DE1) und
+    fuehrt Muenchen nur als Zweitanschrift; ihre Angabe stimmt, die Anschrift auf der
+    Bekanntmachung ist die schwaechere Auskunft.
+
+    ⚠ Der Schluessel ist Name UND PLZ. Zieht eine Behoerde um, greift die Korrektur nicht
+    mehr — das ist gewollt: eine neue Anschrift ist ein neuer Fall, kein stiller Erbe.
+    ``tests/test_plumbing.py`` haelt tote Zeilen fest, damit die Datei nicht verrottet.
+    """
+    quelle = ROOT / "curated" / f"{land}_region_korrektur.csv"
+    if not quelle.exists():
+        return {}
+    aus: dict[tuple[str, str], tuple[str, str]] = {}
+    with quelle.open(encoding="utf-8") as f:
+        for z in csv.DictReader(f):
+            name, plz = (z.get("buyer_name") or "").strip(), (z.get("plz") or "").strip()
+            alt, neu = (z.get("region_alt") or "").strip(), (z.get("region_neu") or "").strip()
+            if name and plz and alt and neu:
+                aus[(name, plz)] = (alt, neu)
+    return aus
+
+
 def plz_verzeichnis(land: str) -> dict[str, str]:
     """Postleitzahl → Regions-Kennung, nur wo die PLZ in genau EINER Region liegt.
 
@@ -429,11 +465,29 @@ def fuer_land(land: str, probe: bool) -> int:
             anschrift[lead_id] = reg
             standorte.setdefault(name or "", set()).add(reg)
     stellen = REGION_STELLEN[land]
-    widersprueche, pruefbar_v, fremdformat = [], 0, 0
-    mehrere_standorte = leistungsort_stuetzt = 0
+    kuratiert = region_korrekturen(land)
+    widersprueche, korrigiert, pruefbar_v, fremdformat = [], [], 0, 0
+    mehrere_standorte = leistungsort_stuetzt = bestaetigt = 0
+    genutzt: set[tuple[str, str]] = set()
     for lead_id, name, nuts1, markt in vorhanden:
         if nuts1 not in gueltig:
             fremdformat += 1
+            continue
+        # ── Von Hand geprueft schlaegt jedes Tor ──────────────────────────────────
+        # Bewusst VOR den Toren: eine kuratierte Zeile ist eine Aussage ueber den Fall,
+        # kein Verdacht. Sie muss auch dort greifen, wo ein Tor den Verdacht gar nicht
+        # erst aufkommen laesst — sonst blieben von den 20 falsch verorteten AOK-PLUS-
+        # Leads genau die stehen, die der Leistungsort deckt.
+        urteil = kuratiert.get(((name or "").strip(),
+                                str(plz_je_lead.get(lead_id, "")).strip()))
+        if urteil and urteil[0] == nuts1:
+            genutzt.add(((name or "").strip(), str(plz_je_lead.get(lead_id, "")).strip()))
+            if urteil[1] == nuts1:
+                bestaetigt += 1                      # geprueft und richtig — nichts melden
+            else:
+                korrigiert.append({"lead_id": lead_id, "buyer_nuts1_abgeleitet": urteil[1],
+                                   "quelle": "korrektur_kuratiert", "widerspruch": False,
+                                   "widerspruch_ort_nuts1": nuts1})
             continue
         reg = anschrift.get(lead_id)
         if reg is None:
@@ -469,7 +523,7 @@ def fuer_land(land: str, probe: bool) -> int:
     for zeile in aus:
         zeile["widerspruch"] = False
         zeile["widerspruch_ort_nuts1"] = None
-    df = pd.DataFrame(aus + widersprueche)
+    df = pd.DataFrame(aus + korrigiert + widersprueche)
     gesamt = len(zeilen)
     if not gesamt:
         print(f"  {land}: kein Lead ohne Region.")
@@ -493,6 +547,12 @@ def fuer_land(land: str, probe: bool) -> int:
         print(f"  uebergangen: {mehrere_standorte:,} Leads, deren Kaeufer mehrere Anschriften "
               f"fuehrt (Niederlassungen) · {leistungsort_stuetzt:,} Leads, deren Leistungsort "
               f"die Region stuetzt — beides ist kein Fehler.")
+    if kuratiert:
+        tot = sorted(set(kuratiert) - genutzt)
+        print(f"  Kuratiert: {len(korrigiert):,} Leads korrigiert · {bestaetigt:,} geprueft "
+              f"und bestaetigt · {len(kuratiert)-len(tot):,} von {len(kuratiert):,} Zeilen "
+              f"greifen" + (f" · ⚠ {len(tot)} tote Zeile(n): "
+                            + "; ".join(f"{n} ({z})" for n, z in tot[:3]) if tot else ""))
     if fremdformat:
         print(f"  ⚠ {fremdformat:,} Leads tragen im Regionsfeld KEINE gueltige "
               f"{land}-Regionskennung (Kantonskuerzel, Extra-Regio) — nicht pruefbar, "

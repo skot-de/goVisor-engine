@@ -1,0 +1,39 @@
+buyer_name,plz,region_alt,region_neu,beleg,stand
+AOK PLUS - Die Gesundheitskasse für Sachsen und Thüringen,99084,DED,DEG,Anschrift Erfurt; die Kasse selbst nennt in 899 Saetzen DEG und nur in 145 DED,2026-09-02
+ProVitako Marketing- und Dienstleistungsgesellschaft der Kommunalen IT-Dienstleister eG,10117,DE2,DE3,Anschrift Berlin-Mitte; eigene Angabe 164x DE3 gegen 54x DE2,2026-09-02
+Knappschaftsklinikum Saar GmbH / Klinik Sulzbach,66280,DE2,DEC,66280 Sulzbach/Saar; eigene Angabe 15x DEC gegen 7x DE2,2026-09-02
+BäderBetriebe Frankfurt GmbH,60329,DE4,DE7,60329 Frankfurt am Main; eigene Angabe 166x DE7 gegen 19x DE4,2026-09-02
+Retzow Immobilien GmbH & Co. KG,17248,DE4,DE8,"17248 Rechlin/Laerz, Mecklenburgische Seenplatte; eigene Angabe 46x DE8 gegen 10x DE4",2026-09-02
+Pleißental-Klinik Werdau,08412,DEG,DED,"Werdau liegt im Landkreis Zwickau; Name und PLZ sagen DED, das NUTS-Feld steht durchgaengig falsch",2026-09-02
+Gemeinde Reiskirchen,35447,DE3,DE7,"35447 Reiskirchen, Landkreis Giessen; eigene Angabe 43x DE7 gegen 2x DE3",2026-09-02
+Gemeinde Reiskrichen,35447,DE3,DE7,"dieselbe Gemeinde, im Namen vertippt; 35447 Reiskirchen, Landkreis Giessen",2026-09-02
+"Bundesamt für Infrastruktur, Umweltschutz und Dienstleistungen der Bundeswehr",53123,DE2,DEA,Dienstsitz Bonn 53123; eigene Angabe 2.127x DEA,2026-09-02
+Stadt Lauter-Bernsbach,08315,DEG,DED,"08315 Bernsbach, Erzgebirgskreis; Ortsname im Kaeufernamen bestaetigt DED",2026-09-02
+Gebäude- und Flächenmanagement der Stadt Freiberg,09599,DEG,DED,"09599 Freiberg, Sachsen — der Ortsname steht im Kaeufernamen",2026-09-02
+Landkreis Calw Eigenbetrieb Immobilien der KKH Calw und Nagold,75365,DE2,DE1,75365 Calw; eigene Angabe 123x DE1 gegen 2x DE2,2026-09-02
+"Ministerium für Verkehr Baden-Württemberg, Abteilung 2",70173,DEA,DE1,Dienstsitz Stuttgart; eigene Angabe 332x DE1 gegen 11x DEA,2026-09-02
+Stadt Ulm Liegenschaften und Wirtschaftsförderung Grundstücksverwaltung,89073,DEF,DE1,89073 Ulm; der Ortsname steht im Kaeufernamen,2026-09-02
+Regiebetrieb des Landkreises Gifhorn,38518,DEF,DE9,"38518 Gifhorn, Niedersachsen; der Ortsname steht im Kaeufernamen",2026-09-02
+Landkreis Rastatt,76437,DE2,DE1,76437 Rastatt; eigene Angabe 44x DE1 gegen 2x DE2,2026-09-02
+Bauamt/Vergabestelle,39164,DE3,DEE,"39164 Wanzleben-Boerde, Boerdekreis; der Kaeufername sagt nichts, die Anschrift alles",2026-09-02
+traffiQ - Lokale Nahverkehrsgesellschaft mbH,60313,DE4,DE7,"Nahverkehrsgesellschaft der Stadt Frankfurt am Main, 60313",2026-09-02
+Diakonie-Klinikum Schwäbisch Hall gGmbH,74523,DEA,DE1,74523 Schwaebisch Hall; eigene Angabe 138x DE1 gegen 3x DEA,2026-09-02
+Gemeinde Sachsen b. Ansbach,91623,DED,DE2,"die Gemeinde HEISST Sachsen und liegt in Mittelfranken, 91623",2026-09-02
+Studierendenwerk Vorderpfalz,76829,DE2,DEB,76829 Landau in der Pfalz; eigene Angabe 4x DEB gegen 2x DE2,2026-09-02
+"Bundesamt für Ausrüstung, Informationstechnik und Nutzung der Bundeswehr (BAAINBw)",56073,DEF,DEB,Dienstsitz Koblenz; eigene Angabe 3.863x DEB,2026-09-02
+"Bundesamt für Ausrüstung, Informationstechnik und Nutzung, Referat E2.4",56073,DEA,DEB,"dasselbe Amt, anderer Referatsname; Dienstsitz Koblenz",2026-09-02
+Stadt Erftstadt,50374,DE2,DEA,"50374 Erftstadt, Rhein-Erft-Kreis; eigene Angabe 257x DEA gegen 1x DE2",2026-09-02
+Städtisches Klinikum Karlsruhe gGmbH,76133,DE7,DE1,76133 Karlsruhe; eigene Angabe 482x DE1,2026-09-02
+Stadt Pottenstein,91278,DE1,DE2,"91278 Pottenstein, Fraenkische Schweiz; eigene Angabe 15x DE2 gegen 1x DE1",2026-09-02
+Gemeinde Obernzell,94130,DE1,DE2,"94130 Obernzell, Landkreis Passau; Ortsname und PLZ sagen DE2, das NUTS-Feld steht durchgaengig falsch",2026-09-02
+Abiomed Europe GmbH,52074,DE3,DEA,"52074 Aachen — der Ortsname steht polnisch da (Akwizgran), die PLZ eindeutig",2026-09-02
+"Kreis Herzogtum Lauenburg, der Landrat, Fachdienst Oepnv",23909,DEG,DEF,"Kreissitz Ratzeburg 23909, Schleswig-Holstein",2026-09-02
+Magistrat Stadt Eppstein,65817,DEB,DE7,"65817 Eppstein, Main-Taunus-Kreis",2026-09-02
+Kommunale Informationsverarbeitung Thüringen GmbH,99867,DE7,DEG,99867 Gotha; das Land steht im Kaeufernamen,2026-09-02
+Hansestadt Buxtehude,21614,DE8,DE9,"21614 Buxtehude, Landkreis Stade; eigene Angabe 114x DE9 gegen 1x DE8",2026-09-02
+Landratsamt Ostalbkreis - Zentrale Vergabestelle,73430,DE2,DE1,"73430 Aalen, Ostalbkreis; eigene Angabe 127x DE1 gegen 1x DE2",2026-09-02
+Amt Peitz für die Gemeinde Teichland,03185,DED,DE4,"03185 Peitz, Landkreis Spree-Neisse; der Ortsname steht im Kaeufernamen",2026-09-02
+in.Stuttgart Veranstaltungsgesellschaft mbH & Co. KG,70372,DE9,DE1,70372 Stuttgart; eigene Angabe 35x DE1,2026-09-02
+Stadt Luenen,44532,DE1,DEA,"44532 Luenen, Kreis Unna; der Ortsname steht im Kaeufernamen",2026-09-02
+ENNI Stadt & Service Niederrhein AöR,47441,DE8,DEA,"47441 Moers, Niederrhein; eigene Angabe 116x DEA gegen 2x DE8",2026-09-02
+BKK VerbundPlus,80333,DE1,DE1,"kein Fehler: Sitz ist Biberach an der Riss (88400, DE1), Muenchen ist eine Zweitanschrift",2026-09-02

@@ -181,6 +181,48 @@ AT        6.621             85    34   ← andere Basis: prüfbar war 1.362
 CH        7.191             30    43   ← prüfbar war 4.841
 ```
 
+## Die 80 deutschen Funde: durchgegangen und korrigiert (2026-09-02)
+
+Der Marker sagt, DASS Anschrift und Regionsangabe auseinanderlaufen. **Welche Seite recht
+hat, kann er nicht sagen** — dafür braucht es einen Blick auf den Fall. Alle 80 sind
+einzeln durchgegangen; der entscheidende Zeuge war meist der Käufer selbst, weil dieselbe
+Behörde in Silber hundertfach vorkommt:
+
+```
+AOK PLUS      eigene Angabe 899× Thüringen gegen 145× Sachsen, Anschrift Erfurt
+BAAINBw       eigene Angabe 3.863× Rheinland-Pfalz, Dienstsitz Koblenz
+Buxtehude     eigene Angabe 114× Niedersachsen gegen 1× Mecklenburg-Vorpommern
+```
+
+**Wo eine Behörde ihre Region hundertfach gleich angibt, ist die Ausreisserzeile der
+Fehler.** Ergebnis: 37 Fälle korrigiert, **1 bestätigt** — die BKK VerbundPlus sitzt in
+Biberach (DE1) und führt München nur als Zweitanschrift, ihre Angabe stimmt.
+
+Das Urteil steht in `curated/DE_region_korrektur.csv`, versioniert im Repo, mit Beleg je
+Zeile — dieselbe Bauart wie `DE_entity_aliases.csv`: **von Hand geprüft, kein
+Namensstamm-Automatismus.** Schlüssel ist Käufername **und** PLZ; zieht eine Behörde um,
+greift die Zeile nicht mehr, und das ist gewollt. Ein Test hält tote Zeilen fest.
+
+⚠ `region_neu == region_alt` heisst **geprüft und richtig** — dann schweigt der Marker,
+statt weiter zu melden. Ohne diese Möglichkeit hätte eine Kuratierung nur einen Ausgang,
+und der bestätigte Fall bliebe für immer rot.
+
+⚠ **Die Korrektur greift VOR den drei Toren.** Eine kuratierte Zeile ist eine Aussage über
+den Fall, kein Verdacht — sie muss auch dort wirken, wo ein Tor den Verdacht gar nicht
+erst aufkommen lässt. Deshalb sind es **93 korrigierte Leads, nicht 80**: bei der AOK PLUS
+deckte das Leistungsort-Veto 13 weitere Leads mit derselben falschen Angabe.
+
+⚠ **Korrigiert werden muss die KENNUNG, nicht nur das Label.** Der Regionsfilter im
+Explorer prüft `l.nuts.startsWith(code)` (`ORTE` in `web/lib/explorerCore.js` kennt nur
+die 16 dreistelligen Kennungen). Wer nur `region` setzt, repariert die Anzeige und lässt
+den Filter falsch — der Lead sähe richtig aus und stünde weiter im falschen Bundesland.
+
+⚠ **Und der Marker selbst wird bis heute nirgends angezeigt.** `regionQuelle` steht in
+`web/data/leads-*.json` (150 × `widerspruechlich`, gemessen 2026-09-02), aber **kein
+einziger Treffer in `web/`** liest das Feld. Der sichtbare Teil dieser Kette ist allein
+der Wert von `region` — deshalb korrigiert die Kuratierung ihn und verlässt sich nicht
+auf ein Etikett. Die Anzeige des Etiketts ist offen.
+
 ⚠ **Was in AT übrig bleibt, ist eine ehrliche Grenze.** 75 der 85 Funde sind zwei
 Käufer — Flughafen Wien AG (Sitz Schwechat/AT12, meldet AT13) und OMV Austria E&P. Eine
 Organisation mit EINER Anschrift, deren Sitz in einer anderen Region liegt als die, die

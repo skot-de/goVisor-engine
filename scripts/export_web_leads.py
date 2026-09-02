@@ -825,11 +825,21 @@ def export_branche(key):
                  -- dass ein Bundesland ABGELEITET ist. Ein stillschweigend ergaenzter Wert
                  -- sieht aus wie eine Quelle — und danach wird gefiltert.
                  dn1.name AS region_abgeleitet_name,
+                 -- Die Kennung dazu, nicht nur den Namen: der Regionsfilter im Explorer
+                 -- prueft `l.nuts.startsWith(code)`, nicht das Label. Wer nur den Namen
+                 -- korrigiert, repariert die Anzeige und laesst den Filter falsch.
+                 rf.buyer_nuts1_abgeleitet AS region_abgeleitet_nuts,
                  -- ⚠ `widerspruechlich` steht VOR `amtlich`. Ein Wert, dem der
                  -- Kaeuferort widerspricht, ist nicht belegt — er steht nur da.
                  -- Bis zum 2026-09-01 hiessen 172 Magdeburger Leads unter
                  -- „Nordrhein-Westfalen" `amtlich` (s. scripts/region_ableiten.py).
-                 CASE WHEN coalesce(rf.widerspruch, false) THEN 'widerspruechlich'
+                 -- ⚠ `korrigiert` steht GANZ VORN. Diese Leads tragen eine amtliche
+                 -- Regionsangabe — nur eine falsche, von Hand geprueft und in
+                 -- `curated/<L>_region_korrektur.csv` belegt. Ohne diesen Zweig gaelte
+                 -- der Ausgangswert weiter als `amtlich` und wuerde die Korrektur
+                 -- ueberstimmen.
+                 CASE WHEN rf.quelle = 'korrektur_kuratiert' THEN 'korrigiert'
+                      WHEN coalesce(rf.widerspruch, false) THEN 'widerspruechlich'
                       WHEN e.buyer_nuts1 IS NOT NULL AND e.buyer_nuts1 <> '' THEN 'amtlich'
                       WHEN rf.buyer_nuts1_abgeleitet IS NOT NULL THEN 'abgeleitet'
                  END AS region_quelle
@@ -984,6 +994,9 @@ def export_branche(key):
         wechsel = LVL.get(g("switch_chance"), "na")
         if wechsel == "na":
             wechsel = LVL.get(g("pred_konk"), "na")             # Angreifbarkeit grob aus Vorgänger-Wettbewerb
+        # Von Hand geprueft und belegt (`curated/<L>_region_korrektur.csv`) — die
+        # einzige Herkunft, die den amtlichen Wert ueberstimmen darf.
+        _region_korr = g("region_quelle") == "korrigiert"
         pred_chain = g("pred_chain")
         kette = ({"tiefe": int(pred_chain),
                   "seit": str(int(g("pred_since"))) if g("pred_since") else ""}
@@ -1060,12 +1073,23 @@ def export_branche(key):
             "landOhneDocs": (g("country") or "DE") in OHNE_UNTERLAGEN,
               # Abgeleitetes Bundesland nur, wo keines dasteht — und mit Herkunft,
               # damit die Anzeige es kennzeichnen kann (s. `regionQuelle`).
-              "region": g("buyer_region_name") or g("region") or g("region_abgeleitet_name") or "",
+              # ⚠ Eine kuratierte Korrektur schlaegt den amtlichen Wert — sonst haette
+              # sie keine Wirkung, denn `buyer_region_name` steht ja gerade da (und ist
+              # falsch). Nur fuer `korrigiert`, nicht fuer `widerspruechlich`: dort
+              # wissen wir, DASS etwas nicht stimmt, aber nicht, was richtig waere.
+              "region": ((g("region_abgeleitet_name") if _region_korr else None)
+                         or g("buyer_region_name") or g("region")
+                         or g("region_abgeleitet_name") or ""),
               # Kein `or "amtlich"`-Notausgang mehr: `region_quelle` deckt jetzt auch
               # den Widerspruchsfall ab, und ein Fallback wuerde ihn wieder zu
               # „belegt" machen — genau der Fehler, der behoben wurde.
               "regionQuelle": g("region_quelle"),
-              "nuts": g("buyer_nuts") or "",
+              # Der Regionsfilter prueft NUTS-Praefixe, nicht das Label (`ORTE` im
+              # Explorer kennt nur die 16 dreistelligen Laenderkennungen). Eine Korrektur
+              # muss deshalb hier ankommen, sonst findet der Filter den Lead weiter im
+              # falschen Bundesland — der Fehler waere nur unsichtbar, nicht behoben.
+              "nuts": ((g("region_abgeleitet_nuts") if _region_korr else None)
+                       or g("buyer_nuts") or ""),
             # Koordinate (Käufersitz) für die echte PLZ-Umkreissuche (Haversine im Frontend);
             # None, wenn kein Geo-Bezug (bundesweite/ortsungebundene Leads) — ehrlich leer.
             "lat": round(float(r["geo_lat"]), 4) if g("geo_lat") is not None else None,

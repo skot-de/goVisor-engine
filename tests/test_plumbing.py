@@ -4445,6 +4445,76 @@ def test_gegenprobe_prueft_die_plz_nicht_den_ortsnamen():
     assert "12529" not in plz
 
 
+def test_kuratierte_regionskorrektur_ist_vollstaendig_und_lebendig():
+    """Eine kuratierte Datei verrottet lautlos: der Käufer benennt sich um, die Zeile
+    greift nicht mehr, und niemand merkt es — der Lead steht wieder im falschen
+    Bundesland. Geprüft wird deshalb die Form JEDER Zeile und, wo Gold vorliegt, ob sie
+    noch einen Lead trifft."""
+    import csv as _csv
+    import importlib.util
+    wurzel = pathlib.Path(__file__).resolve().parent.parent
+    datei = wurzel / "curated" / "DE_region_korrektur.csv"
+    assert datei.exists(), "curated/DE_region_korrektur.csv fehlt"
+    REGIONEN = {f"DE{x}" for x in "123456789ABCDEFG"}
+    zeilen = list(_csv.DictReader(datei.open(encoding="utf-8")))
+    assert zeilen, "leere Korrekturtabelle"
+    for z in zeilen:
+        assert z["region_alt"] in REGIONEN and z["region_neu"] in REGIONEN, z
+        assert z["plz"].isdigit() and len(z["plz"]) == 5, z
+        # Ohne Beleg ist es keine Kuratierung, sondern eine Meinung.
+        assert len(z["beleg"] or "") > 20, f"Zeile ohne Beleg: {z['buyer_name']}"
+        assert (z["stand"] or "").count("-") == 2, z
+
+    spec = importlib.util.spec_from_file_location(
+        "region_ableiten", wurzel / "scripts" / "region_ableiten.py")
+    ra = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(ra)
+    assert len(ra.region_korrekturen("DE")) == len(zeilen), (
+        "der Leser verliert Zeilen — Spaltennamen geaendert?")
+    if not _has("lead_export"):
+        pytest.skip("lead_export nicht gebaut")
+    import duckdb as _d
+    con = _d.connect()
+    plz = dict(con.execute(f"""SELECT notice_id, any_value(postal_code)
+        FROM read_parquet('{pathlib.Path(G).parent.parent / "silver/DE/notice_parties"}/*/*.parquet')
+        WHERE role = 'buyer' AND postal_code IS NOT NULL GROUP BY 1""").fetchall())
+    leads = con.execute(f"""SELECT lead_id, buyer_name, buyer_nuts1
+        FROM read_parquet('{G}/lead_export.parquet')
+        WHERE buyer_nuts1 IS NOT NULL AND buyer_nuts1 <> ''""").fetchall()
+    getroffen = set()
+    for lid, name, n1 in leads:
+        schl = ((name or "").strip(), str(plz.get(lid, "")).strip())
+        u = ra.region_korrekturen("DE").get(schl)
+        if u and u[0] == n1:
+            getroffen.add(schl)
+    tot = {(z["buyer_name"], z["plz"]) for z in zeilen} - getroffen
+    assert not tot, (
+        f"{len(tot)} kuratierte Zeile(n) treffen keinen Lead mehr — Umbenennung, "
+        f"Umzug oder ein Fix an der Quelle: {sorted(tot)[:3]}")
+
+
+def test_kuratierte_korrektur_schlaegt_den_amtlichen_wert():
+    """Die Korrektur muss BEIDES erreichen: das Label und die NUTS-Kennung.
+
+    Der Regionsfilter im Explorer prüft `l.nuts.startsWith(code)`, nicht den Namen
+    (`ORTE` in `web/lib/explorerCore.js` kennt nur die 16 dreistelligen Kennungen). Wer
+    nur `region` korrigiert, repariert die Anzeige und lässt den Filter falsch — der
+    Lead sähe richtig aus und stünde weiter im falschen Bundesland."""
+    wurzel = pathlib.Path(__file__).resolve().parent.parent
+    roh = (wurzel / "scripts" / "export_web_leads.py").read_text(encoding="utf-8")
+    code = "\n".join(z for z in roh.splitlines() if not z.strip().lstrip("-").startswith("#"))
+    assert "'korrektur_kuratiert' THEN 'korrigiert'" in code
+    assert "region_abgeleitet_nuts" in code, "die korrigierte NUTS-Kennung wird nicht exportiert"
+    # Um `"regionQuelle":` herum steht der Lead-Datensatz — `"region":` allein kommt
+    # auch im Los-Datensatz vor und traefe die falsche Stelle.
+    mitte = code.index('"regionQuelle":')
+    block = code[mitte - 700:mitte + 700]
+    for feld in ('"region":', '"nuts":'):
+        stelle = block.index(feld)
+        assert "_region_korr" in block[stelle:stelle + 200], (
+            f"{feld} bevorzugt die kuratierte Korrektur nicht")
+
+
 def test_export_liest_attribute_und_regionsfuellung_ueber_alle_laender():
     """Zwei DE-feste Pfade mitten in einem sonst laenderfaehigen Export: der
     Angebotsaufwand lag fuer AT/CH bei genau 0 %, und die Regionsableitung waere
