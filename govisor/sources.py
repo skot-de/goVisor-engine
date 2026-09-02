@@ -395,13 +395,37 @@ DOC_REGISTRY: list[Source] = [
                    "Nicht abgerufen.",
            url="https://platformazakupowa.pl"),
     Source("sond-pl-marketplanet", "Marketplanet (*.ezamawiajacy.pl)", "", "PL", "beides",
-           "sondiert", portals=1, ebene="unterlagen", ertrag="ungeprueft",
-           coverage="21 % — mandantenfaehig, eine Subdomain je Vergabestelle",
-           overlap="ungeprueft", url="https://oneplace.marketplanet.pl"),
-    Source("sond-pl-rest", "eb2b, logintrade, propublico", "", "PL", "beides",
-           "sondiert", portals=3, ebene="unterlagen", ertrag="ungeprueft",
-           coverage="zusammen 18 % (8 + 6 + 4)", overlap="ungeprueft",
+           "sondiert", portals=1, ebene="unterlagen", ertrag="gesperrt",
+           coverage="21 % oberschwellig, 17 % unterschwellig — mandantenfaehig",
+           overlap="🟡 FREI IM BROWSER, NICHT PER SKRIPT. Keine robots.txt, Dokumentenliste "
+                   "offen, Pfad heisst `/app/demand/notice/public/…/downloadsiwz`. Der "
+                   "Download ist aber zweistufig: ein POST liefert `/repository/download/"
+                   "zip/<token>`, und der Token ist SITZUNGSGEBUNDEN — curl bekommt 404. "
+                   "Kein Konto noetig, aber kein Automat. Wie Bund/AI in DE.",
+           url="https://oneplace.marketplanet.pl"),
+    Source("sond-pl-eb2b", "eB2B", "", "PL", "beides",
+           "sondiert", portals=1, ebene="unterlagen", ertrag="gesperrt",
+           coverage="8 % oberschwellig, 4 % unterschwellig",
+           overlap="🟡 Katalog oeffentlich (5.142 Verfahren, als „Oeffentlich\" markiert), "
+                   "Verfahrensseite rendert nur Banner und Navigation. ⚠ Ob Cookie-Wand "
+                   "oder Anmeldepflicht, NICHT GETRENNT: dafuer muesste die Zustimmung "
+                   "erteilt werden, und der Banner laesst nur „Akzeptieren\" oder "
+                   "„Seite verlassen\" zu.",
            url="https://platforma.eb2b.com.pl"),
+    Source("sond-pl-logintrade", "LoginTrade", "", "PL", "beides",
+           "sondiert", portals=1, ebene="unterlagen", ertrag="gesperrt",
+           coverage="6 % ober- wie unterschwellig",
+           overlap="⛔ robots.txt verbietet zweimal punktgenau die Dokumente: "
+                   "`Disallow: /zalaczniki/` (poln. Anlagen) und `Disallow: /DocumentService`. "
+                   "Nicht abgerufen.",
+           url="https://logintrade.net"),
+    Source("sond-pl-propublico", "e-propublico.pl", "", "PL", "beides",
+           "sondiert", portals=1, ebene="unterlagen", ertrag="gesperrt",
+           coverage="4 % oberschwellig, 3 % unterschwellig",
+           overlap="⛔ Login-Wand: die Startseite leitet auf /Account/SignIn. (Die "
+                   "Zertifikatskette wird unvollstaendig ausgeliefert — Schoenheitsfehler, "
+                   "keine Schranke.)",
+           url="https://e-propublico.pl"),
     # ── ANGEBUNDEN ────────────────────────────────────────────────────────────────────
     Source("doc-cosinex-de", "cosinex/DTVP-Unterlagen", "docfetch-cosinex", "DE", "beides",
            "live", portals=40, ebene="unterlagen", ertrag="dateien", modul="govisor.docfetch",

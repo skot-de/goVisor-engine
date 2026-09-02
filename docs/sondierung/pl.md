@@ -144,16 +144,57 @@ unsichtbar ist, ist damit **mindestens so groß wie die sichtbare.**
 **Das verbessert die Lage.** Die eine Engine, die nachweislich offen ist, ist unterschwellig
 die größte — 35 % statt 19 %. Und genau dort liegt die Menge.
 
-## 7. Was ungeprüft blieb
+## 7. Die vier übrigen Engines — geprüft am 2026-09-02
 
-Ehrlich benannt, damit niemand die Kapitel für vollständig hält:
-
-| | Anteil | Stand |
+| Engine | ober / unter | Urteil |
 |---|---:|---|
-| `marketplanet` | 21 / 17 % | **ungeprüft** |
-| `eb2b` | 8 / 4 % | **ungeprüft** |
-| `logintrade` | 6 / 6 % | **ungeprüft** |
-| `propublico` | 4 / 3 % | **ungeprüft** |
-| unbekannt | 11 % | **ungeprüft** |
+| `marketplanet` | 21 / 17 % | 🟡 **frei im Browser, nicht per Skript** |
+| `eb2b` | 8 / 4 % | 🟡 **Katalog öffentlich, Unterlagen nicht** |
+| `logintrade` | 6 / 6 % | ⛔ **robots.txt verbietet die Anlagen** |
+| `propublico` | 4 / 3 % | ⛔ **Login-Wand** |
 
-Geprüft sind 49 % der oberschwelligen und 66 % der unterschwelligen Ebene.
+**`marketplanet`** hat keine robots.txt. Die Dokumentenliste steht offen samt Dateinamen
+und Größen, der Pfad heißt sogar `/app/demand/notice/**public**/…/downloadsiwz`. Der
+Download läuft aber zweistufig: ein POST liefert eine signierte Adresse unter
+`/repository/download/zip/<token>`, und die ist **sitzungsgebunden** — im Browser
+funktioniert sie, mit blankem `curl` kommt eine 404-Seite. Kein Konto nötig, aber kein
+Automat. Dieselbe Kategorie wie Bund und AI-evergabe in Deutschland.
+
+**`eb2b`** hat keine robots.txt, und die Verfahrensliste ist öffentlich (5.142 Einträge,
+als „Öffentlich" gekennzeichnet, 13 KB gerendert). Die **Verfahrensseite** dagegen rendert
+nur Navigation und Cookie-Banner (2 KB), keine Unterlagen. Der Banner lässt nur
+„Akzeptieren" oder „Seite verlassen" zu. ⚠ Ob Cookie-Wand oder Anmeldepflicht die Ursache
+ist, habe ich **nicht getrennt** — dafür müsste ich die Zustimmung erteilen, und das ist
+keine Entscheidung, die ich von mir aus treffe.
+
+**`logintrade`** ist der klarste Fall nach Open Nexus:
+```
+User-agent: *
+Disallow: /zalaczniki/        ← „załączniki" = Anlagen
+Disallow: /DocumentService
+```
+Zweimal punktgenau die Dokumente. Nicht abgerufen.
+
+**`propublico`** leitet die Startseite auf `/Account/SignIn` um. (Die Zertifikatskette
+wird unvollständig ausgeliefert — ein technischer Schönheitsfehler, keine Schranke.)
+
+## 8. Polen vollständig
+
+| Engine | ober | unter | Urteil |
+|---|---:|---:|---|
+| `ezamowienia` | 19 % | **35 %** | ✅ **offen, skriptfähig** |
+| `openNexus` | 30 % | 31 % | ⛔ robots verbietet die Dateien |
+| `marketplanet` | 21 % | 17 % | 🟡 nur im Browser |
+| `eb2b` | 8 % | 4 % | 🟡 Zustimmung/Anmeldung |
+| `logintrade` | 6 % | 6 % | ⛔ robots verbietet die Anlagen |
+| `propublico` | 4 % | 3 % | ⛔ Login |
+| unbekannt | 11 % | 4 % | offen |
+
+**Skriptfähig sind 19 % oberschwellig und 35 % unterschwellig — beides dieselbe Engine,
+die staatliche Plattform.** Alles Private ist zu, verboten oder browsergebunden.
+
+⚠ **Bemerkenswert und für die anderen Länder zu prüfen:** die beiden Sperren stammen
+nicht von Vergabestellen, sondern von **kommerziellen Betreibern**, die ihre Datei-Pfade
+gezielt in die robots.txt setzen. Der Staat gibt heraus, die privaten Plattformen nicht.
+Wenn sich dieses Muster wiederholt, ist die Frage je Land nicht „welche Engines gibt es",
+sondern **„wie groß ist der staatliche Anteil"**.
