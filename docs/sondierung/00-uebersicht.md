@@ -129,7 +129,30 @@ gegen eine Adresse ohne Vergabe-Kennung kein Parser.
 **FR und SE würde ich nicht anfassen.** Nicht weil es schwer wäre, sondern weil die
 Betreiber es untersagt haben.
 
-## 6. Noch nicht geprüft
+## 6. ⚠ Eine Ebene fehlt in allen zwölf Kapiteln
+
+`CLAUDE.md` verlangt bei jedem neuen Land **drei** Ebenen, nicht zwei:
+
+1. oberschwellig (TED) — geprüft
+2. unterschwellig (nationale Pflichtveröffentlichung) — teils geprüft (PL, ES, FR)
+3. **Fonds-Ebene** — Vergaben von **Empfängern öffentlicher Fördermittel**, die selbst
+   keine öffentlichen Auftraggeber sind. Die Wettbewerbspflicht gilt EU-weit, die
+   Sichtbarkeit ist rein national.
+
+**Die dritte habe ich in keinem der zwölf Länder geprüft.** Die Anweisung sagt sogar, warum
+das passiert: sie ist in DACH fast leer und wird deshalb regelmäßig vergessen. Genau das ist
+mir passiert.
+
+**Ein erster Blick (2026-09-03), für das eine Land, wo das Portal bekannt ist:**
+Polens `bazakonkurencyjnosci.funduszeeuropejskie.gov.pl` hat **keine robots-Sperre**, aber
+`/api/announcements` antwortet anonym mit **HTTP 401**. Ob die öffentliche Weboberfläche
+ohne Anmeldung Ausschreibungen zeigt, ist offen.
+
+⚠ Für die übrigen elf Länder ist die Fonds-Ebene **nicht einmal identifiziert**. Je mehr
+Kohäsionsmittel ein Land bekommt, desto größer dieser sonst unsichtbare Markt — und die
+Sondierung sagt darüber bisher nichts.
+
+## 7. Noch nicht geprüft
 
 18 Länder mit zusammen 20,3 % der EU-Ausschreibungen, alle unter 2 % einzeln. Dazu
 innerhalb der geprüften Länder: FR der 25-%-Schwanz und die unterschwellige Ebene,
