@@ -167,6 +167,43 @@ def _silber_union(tabelle: str) -> str:
 
 E = _union("lead_export", key="lead_id")
 
+
+# ── VERGABENUMMER ────────────────────────────────────────────────────────────────────────
+# Die Nummer, die auf dem Briefkopf der Vergabestelle steht („23-091676", „S-KALKAR-2024-0002",
+# „AL 119/23"). Ohne sie kann niemand einen Vorgang suchen, den er in der Hand haelt: der Lead
+# traegt sonst nur unsere interne `id`.
+#
+# ⚠ DER PFAD MUSS DEN LOS-ZWEIG AUSSCHLIESSEN. `ProcurementProjectLot.ProcurementProject.ID`
+# sieht fast gleich aus und traegt 124.145-mal den Platzhalter `LOT-0000` sowie 40.103 UUIDs —
+# gemessen 2026-09-02. Der Zweig ohne `Lot` hat davon 8 bzw. 826. Wer mit `%` abkuerzt, baut
+# eine Suche, die bei „LOT-0000" tausende Treffer meldet.
+def _vergabenummern() -> dict:
+    """notice_id → Vergabenummer, ueber alle Laender. Leer, wenn keine Attribute vorliegen.
+
+    ⚠ SILBER, NICHT GOLD — und dafuer gibt es hier schon einen Helfer. Die erste Fassung nahm
+    `_union()`, das Pfade unter `data/gold/<L>/` baut, und zeigte damit auf
+    `data/gold/DE/attributes.parquet`: existiert nicht, null Treffer, keine Fehlermeldung.
+    `_silber_union()` kennt den Jahrespartitionen-Baum und ueberspringt Laender ohne die
+    Tabelle."""
+    import duckdb
+    A = _silber_union("attributes")
+    if "WHERE false" in A:
+        return {}
+    con = duckdb.connect()
+    try:
+        return {str(a): str(b).strip() for a, b in con.execute(f"""
+            select notice_id, min(value) from {A}
+            where path like '%.ProcurementProject.ID'
+              and path not like '%ProcurementProjectLot%'
+              and value is not null and trim(value) <> ''
+              and not lower(value) like 'lot-%'
+            group by 1""").fetchall()}
+    except Exception:
+        return {}
+
+
+VERGABENUMMER = _vergabenummern()
+
 # ── ABGELEITETE BUNDESLÄNDER ─────────────────────────────────────────────────────────────
 # `scripts/region_ableiten.py` schliesst die grösste sichtbare Lücke des Bestands: bei den
 # OFFENEN Leads fehlte das Bundesland zu 40 % (6.460 von 16.096), weil die unterschwelligen
@@ -1028,6 +1065,9 @@ def export_branche(key):
             # Anzeige-Labels setzt das Frontend über lib/labels.js (applyLabels) — so bleibt
             # die JSON sprachfrei und eine 2. Sprache ist ein Frontend-Katalog, kein Re-Export.
             "id": r["lead_id"], "branche": key, "src": src,
+            # Die Nummer vom Briefkopf — Grundlage der Suche nach einem konkreten Vorgang.
+            **({"vergabenr": VERGABENUMMER[r["lead_id"]]}
+               if r["lead_id"] in VERGABENUMMER else {}),
             # ZUSAETZLICHE HINWEISE (`web/lib/hinweise.ts`). Die Komponente war gebaut, im
             # Detail-Panel eingehaengt — und rendete IMMER nichts, weil keines dieser Felder
             # im JSON stand. Die Werte lagen die ganze Zeit in der Abfrage; es fehlte nur

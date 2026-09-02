@@ -285,6 +285,7 @@ function matchToken(l,t){
     const reach = (t.radius && PLACE_RADIUS[t.value]?.[t.radius]) || [t.value];
     return reach.some(code => (l.nuts||'').startsWith(code));
   }
+  if(t.type==='kennung')  return l.id===t.value;
   if(t.type==='phase')    return l.src===t.value;
   if(t.type==='leistung') return l.naturKat===t.value;
   if(t.type==='rahmen')   return l.rahmen===t.value;
@@ -296,6 +297,8 @@ function matchToken(l,t){
 /* Wo wurde ein Suchwort gefunden? Ohne diesen Beleg wirken Volltext-Treffer wie Fehler. */
 function fundstelle(l, wort){
   const w = wort.toLowerCase();
+  if(l.vergabenr && _kennNorm(l.vergabenr) === _kennNorm(wort))
+    return {ort: 'Vergabenummer', text: l.vergabenr};
   if((l.titel||'').toLowerCase().includes(w)) return {ort:'Titel', text:null};
   if((l.natur||'').toLowerCase().includes(w) || (cpvLabel(l)||'').toLowerCase().includes(w))
     return {ort:'Leistungsart', text:null};
@@ -327,8 +330,47 @@ function toggleToken(tok){
   syncLocationColumn();
 }
 
+/* ── SUCHE NACH KENNUNG ──────────────────────────────────────────────────────────────────
+ *
+ * Wer einen Vorgang in der Hand haelt, hat eine Nummer: die Vergabenummer vom Briefkopf
+ * („23-091676", „S-KALKAR-2024-0002", „AL 119/23"), die TED-Veroeffentlichungsnummer oder
+ * unsere interne Kennung. Bis zum 2026-09-02 fand die Suche keine davon — und las eine
+ * vier- bis fuenfstellige Zahl sogar als POSTLEITZAHL. Wer `23091` eintippte, bekam eine
+ * Umkreissuche um Weiden.
+ *
+ * ⚠ NORMALISIERT WIRD HART: Kleinschreibung, alles ausser Buchstaben und Ziffern raus. Sonst
+ * scheitert die Suche an der Schreibweise — dieselbe Nummer steht als `23-091676`, `23/091676`
+ * und `23 091676`. Bei exakten Kennungen ist das ungefaehrlich; sie sind lang genug, dass
+ * Kollisionen nicht vorkommen.
+ *
+ * ⚠ UND DIE VEROEFFENTLICHUNGSNUMMER HAT ZWEI SCHREIBWEISEN: `552165-2026` (amtlich, TED)
+ * und `552165_2026` (unsere `notice_id`). Beide muessen treffen — der Nutzer kopiert die eine,
+ * wir speichern die andere.
+ */
+const _kennNorm = s => String(s || '').toLowerCase().replace(/[^a-z0-9]+/g, '');
+let _kennIndex = null;
+function kennungIndex(){
+  if(_kennIndex) return _kennIndex;
+  _kennIndex = new Map();
+  for(const l of LEADS){
+    for(const k of [l.vergabenr, l.id, String(l.id || '').replace('_', '-')]){
+      const n = _kennNorm(k);
+      // ⚠ Zu kurze Kennungen nicht aufnehmen: „12" oder „A1" traefen zufaellig.
+      if(n.length >= 4 && !_kennIndex.has(n)) _kennIndex.set(n, l.id);
+    }
+  }
+  return _kennIndex;
+}
+
 function classifyQuery(raw){
   const q = raw.trim().toLowerCase(); if(!q) return null;
+  /* ⚠ EXAKTE KENNUNG SCHLAEGT ALLES, auch die PLZ-Regel darunter. Eine Zahl, die genau eine
+     bekannte Vergabenummer trifft, ist ein staerkeres Signal als ein Formatverdacht: 289
+     Vergabenummern im Bestand sind reine vier- bis fuenfstellige Zahlen und waeren sonst
+     dauerhaft als Postleitzahl gelesen worden. Trifft nichts, faellt es durch — dann bleibt
+     `12345` eine PLZ. */
+  const _k = kennungIndex().get(_kennNorm(q));
+  if(_k) return {type:'kennung', value:_k, label:tk('Kennung {q}', {q: raw.trim()})};
   if(ORTE[q]) return {type:'ort',label:ORTE[q].label,value:ORTE[q].region};
   // Exakter Stadtname → Umkreis-Token (Enter ohne Vorschlagswahl).
   const _c = PLZ_GEO._cities && PLZ_GEO._cities.DE && PLZ_GEO._cities.DE[q];
@@ -505,7 +547,11 @@ function visible(){
   const groups = {};
   for(const t of searchTokens){ (groups[t.type] ||= []).push(t); }
   return LEADS.filter(l => {
-    if(l.branche !== aktiveBranche) return false;   // Grundraum: Branche aus Profil/Wechsel
+    /* ⚠ EINE KENNUNG HEBT DEN BRANCHENFILTER AUF. Wer eine Nummer einfuegt, sitzt fast
+       immer in der falschen Branche — der Grundraum ist eine Vermutung ueber das Interesse,
+       die exakte Kennung ist eine Ansage. Ohne diese Ausnahme faende die Suche den Vorgang,
+       den der Nutzer nachweislich meint, in vier von fuenf Faellen nicht. */
+    if(!groups.kennung && l.branche !== aktiveBranche) return false;
     // Bestand = Verträge, in denen wir drin sind. Akquise = alles andere.
     if(filters.kandidaten) return !!l.eigenKandidat && l.eigenBestaetigt!==false;
     // Netzwerk-relevant = Mehrlos-Vergaben: dort kann ein Partner weitere Lose abdecken.
@@ -3080,6 +3126,7 @@ function getState(){
 // LEADS bleibt dieselbe Array-Referenz, die alle Closures lesen — nur der Inhalt wechselt.
 function setLeads(arr){
   LEADS.length = 0;
+  _kennIndex = null;   // der Kennungs-Index gehoert zu DIESEM Bestand
   // Export liefert nur Codes → hier in die Anzeige-Sprache übersetzen (labels.js).
   for(const l of arr) LEADS.push(applyLabels(l));
   // Echtes Profil (aus Onboarding, kein branche-relatives Preset) → neue Leads sofort scoren.
