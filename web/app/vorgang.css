@@ -1,0 +1,69 @@
+/* Vorgangsakte. Lehnt sich an firma.css an: dieselbe Kartenbreite, dieselben Tags. */
+.vg-wrap { max-width: 880px; margin: 0 auto; padding: 28px 20px 64px; }
+.vg-load, .vg-leer { max-width: 880px; margin: 48px auto; padding: 0 20px;
+                     color: var(--fg-2, #667); }
+
+.vg-kopf { border-bottom: 1px solid var(--line, #e3e5ea); padding-bottom: 18px;
+           margin-bottom: 26px; }
+.vg-kopf h1 { font-size: 1.5rem; line-height: 1.25; margin: 10px 0 6px;
+              text-wrap: balance; }
+.vg-zeile { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.vg-nr { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .78rem;
+         color: var(--fg-2, #667); }
+.vg-meta { color: var(--fg-2, #667); font-size: .86rem; }
+
+.vg-tag { font-size: .72rem; padding: 2px 8px; border-radius: 99px; white-space: nowrap;
+          background: var(--chip, #eef0f4); color: var(--fg-2, #556); }
+.vg-tag.ok { background: #e6f4ea; color: #1a6b34; }
+.vg-tag.warn { background: #fdf0e3; color: #8a5212; }
+
+.vg-block { margin-bottom: 34px; }
+.vg-block h2 { font-size: .82rem; text-transform: uppercase; letter-spacing: .06em;
+               color: var(--fg-2, #667); margin-bottom: 12px; }
+.vg-hinweis { font-size: .85rem; color: var(--fg-2, #667); line-height: 1.55;
+              max-width: 62ch; }
+.fs { font-size: .78rem; color: var(--fg-2, #778); }
+
+/* Verlauf: eine Zeile je Ereignis, Korrekturen desselben Tages bereits zusammengefasst. */
+.vg-verlauf { list-style: none; padding: 0; margin: 0; }
+.vg-verlauf li { display: grid; grid-template-columns: 96px 1fr auto auto; gap: 12px;
+                 align-items: baseline; padding: 9px 0 9px 14px;
+                 border-left: 2px solid var(--line, #e3e5ea); position: relative; }
+.vg-verlauf li::before { content: ""; position: absolute; left: -5px; top: 15px;
+                         width: 8px; height: 8px; border-radius: 50%;
+                         background: var(--line, #c8ccd4); }
+.vg-verlauf li.aus::before { background: #2f6fdd; }
+.vg-verlauf li.zu::before { background: #1a6b34; }
+.vg-verlauf li.kor::before { background: #d08a2a; }
+.vg-datum { font-variant-numeric: tabular-nums; font-size: .82rem;
+            color: var(--fg-2, #667); }
+.vg-art { font-weight: 600; font-size: .9rem; }
+.vg-art em { font-style: normal; font-weight: 400; font-size: .78rem;
+             color: var(--fg-2, #778); margin-left: 8px; }
+.vg-ids { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .74rem;
+          color: var(--fg-2, #889); }
+
+.vg-dok { border: 1px solid var(--line, #e3e5ea); border-radius: 8px; padding: 12px 14px;
+          margin-bottom: 12px; }
+.vg-dok-kopf { display: flex; flex-wrap: wrap; gap: 10px; align-items: center;
+               margin-bottom: 8px; }
+.vg-dateien { list-style: none; padding: 0; margin: 0; max-height: 320px; overflow-y: auto; }
+.vg-dateien li { display: flex; gap: 8px; align-items: baseline; padding: 3px 0;
+                 font-size: .82rem; }
+.vg-typ { flex: 0 0 auto; font-size: .68rem; padding: 1px 6px; border-radius: 4px;
+          background: var(--chip, #eef0f4); color: var(--fg-2, #667); }
+
+.vg-kette { list-style: none; padding: 0; margin: 0; }
+.vg-kette li { display: flex; gap: 12px; align-items: baseline; padding: 7px 0;
+               border-bottom: 1px solid var(--line, #eef0f3); }
+.vg-kette li.hier { background: var(--chip, #f5f7fa); margin: 0 -8px; padding: 7px 8px;
+                    border-radius: 6px; }
+.vg-jahr { font-variant-numeric: tabular-nums; font-size: .82rem; flex: 0 0 42px;
+           color: var(--fg-2, #667); }
+.vg-kette button { background: none; border: 0; padding: 0; text-align: left; font: inherit;
+                   color: var(--akzent, #2f6fdd); cursor: pointer; }
+.vg-kette button:hover { text-decoration: underline; }
+
+@media (max-width: 640px) {
+  .vg-verlauf li { grid-template-columns: 1fr; gap: 2px; }
+}

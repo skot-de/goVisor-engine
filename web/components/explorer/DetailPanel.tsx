@@ -40,6 +40,40 @@ const ExpandIcon = (full: boolean) =>
     ? "M9 3H5a2 2 0 0 0-2 2v4M15 3h4a2 2 0 0 1 2 2v4M9 21H5a2 2 0 0 1-2-2v-4M15 21h4a2 2 0 0 0 2-2v-4"
     : "M3 9V5a2 2 0 0 1 2-2h4M21 9V5a2 2 0 0 0-2-2h-4M3 15v4a2 2 0 0 0 2 2h4M21 15v4a2 2 0 0 1-2 2h-4";
 
+/* Verweis auf die Vorgangsakte — Ausschreibung, Korrekturen, Unterlagen und Zuschlag unter
+ * einer Nummer (scripts/export_vorgaenge.py, /api/vorgang).
+ *
+ * ⚠ NUR ANZEIGEN, WENN ES SIE WIRKLICH GIBT. Aufbereitet sind rund 36.000 Vorgaenge, nicht
+ * alle 1,47 Mio. Ein Verweis, der auf „keine Akte hinterlegt" fuehrt, ist schlechter als
+ * gar keiner. Deshalb antwortet die Route mit 200 und `vorhanden: false`, statt mit 404:
+ * ein Lead ohne Akte ist hier der Normalfall und keine Stoerung.
+ *
+ * Ein Abruf je Lead, ~200 Byte. Das Nachschlagewerk dahinter (3,6 MB) bleibt auf dem
+ * Server; es in den Browser zu laden, um EINE Zeile zu entscheiden, waere teurer als
+ * jeder einzelne dieser Abrufe. */
+function VorgangHinweis({ leadId }: { leadId: string }) {
+  const { t } = useSprache();
+  const [vorgang, setVorgang] = useState<string | null>(null);
+  useEffect(() => {
+    let abgemeldet = false;
+    setVorgang(null);
+    fetch(`/api/vorgang?lead=${encodeURIComponent(leadId)}`)
+      .then((r) => r.json())
+      .then((d) => { if (!abgemeldet && d?.vorhanden && d.akte?.id) setVorgang(d.akte.id); })
+      .catch(() => {});
+    return () => { abgemeldet = true; };
+  }, [leadId]);
+  if (!vorgang) return null;
+  return (
+    <>
+      <span className="eb-sep">·</span>
+      <a className="eb-vorgang" href={`/vorgang?lead=${encodeURIComponent(leadId)}`}>
+        {t("Vorgang ansehen")}
+      </a>
+    </>
+  );
+}
+
 export function DetailPanel({
   activeId, activeTab, mode, tick, buyerDemo, aktiveRegion, accountLimit,
   rows = [], alle = [], onPickLead, onGoto,
@@ -150,6 +184,7 @@ export function DetailPanel({
             {/* amtliche CPV-Bezeichnung in der Oberflaechensprache — nicht `l.cpvLabel` direkt */}
             <span>{cpvLabel(l)}</span>
             {analysed ? <span className="seen-mark">{t("analysiert")}</span> : null}
+            <VorgangHinweis leadId={l.id} />
           </div>
           <div className="dactions">
             {isFree ? (

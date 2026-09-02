@@ -2564,3 +2564,7 @@ td.c-band .passung i{display:none}
 .abdruck-l span { color: var(--ink-700); font-variant-numeric: tabular-nums; }
 .abdruck-l em { font-style: normal; margin-left: auto; font-size: var(--t-meta);
   color: var(--ink-500); font-variant-numeric: tabular-nums; }
+
+/* Verweis auf die Vorgangsakte in der Eyebrow-Zeile der Detailansicht. */
+.eb-vorgang { color: var(--signal-deep, #2f6fdd); text-decoration: none; }
+.eb-vorgang:hover { text-decoration: underline; }

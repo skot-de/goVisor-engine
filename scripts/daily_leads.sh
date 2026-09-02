@@ -1154,6 +1154,13 @@ if $PY scripts/export_web_leads.py; then
   # 70 MB. Laeuft NACH den Leads, weil es `lead_export` liest.
   $PY scripts/export_firma_profiles.py \
     || echo "  ⚠ Firmenprofile nicht gebaut — /firma bleibt auf altem Stand."
+  # Vorgangsakten (/vorgang): Ausschreibung, Korrekturen, Unterlagen und Zuschlag unter einer
+  # Nummer. MUSS NACH DEN LEADS LAUFEN — es liest `web/data/leads-*.json`, um die Produktmenge
+  # zu bestimmen (rund 36.000 von 1,47 Mio. Vorgaengen). Vorher gelesen wuerde es die Menge
+  # von gestern aufbereiten, und das faellt niemandem auf: alte Akten sehen aus wie frische.
+  # Braucht ausserdem build_vorgaenge.py (Z. 1058) und export_doc_listing.py (Z. 1076) davor.
+  $PY scripts/export_vorgaenge.py \
+    || echo "  ⚠ Vorgangsakten nicht gebaut — /vorgang bleibt auf altem Stand."
   # Strategie-Aggregate: eigener Export, weil er 36 Monate braucht (unternehmerische
   # Planung), während die Lead-Liste auf 24 gedeckelt ist (Handlungsrelevanz). Fehlte
   # bisher im Tageslauf — /api/strategie las deshalb einen Stand vom 28. Juli.

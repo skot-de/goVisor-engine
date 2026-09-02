@@ -1,0 +1,250 @@
+"use client";
+import { useEffect, useState } from "react";
+import { useSprache } from "@/lib/i18n";
+
+/* Die Vorgangsakte: Ausschreibung, Korrekturen, Unterlagen und Zuschlag unter EINER Nummer.
+ *
+ * Bis hierher waren das drei getrennte Welten. Eine Vergabe war ein Lead, ihre Korrekturen
+ * waren weitere Leads, ihr Zuschlag lag in `awards`, ihre Dateien in `doc-listing` — und
+ * nichts davon wusste voneinander. `data/gold/<L>/vorgaenge.parquet` fuehrt sie seit dem
+ * 2026-09-01 zusammen; diese Seite ist der erste Ort, an dem man das sieht.
+ *
+ * ⚠ DREI STELLEN, AN DENEN DIE SEITE EHRLICH SEIN MUSS, statt Vollstaendigkeit zu suggerieren:
+ *   1. Wie der Vorgang zusammengesetzt wurde (amtlich verknuepft vs. ueber Rueckverweis).
+ *   2. Dass eine Dateiliste nicht dasselbe ist wie gelesene Unterlagen.
+ *   3. Dass alte Vorgaenge fast nie Dateien haben, WEIL wir erst seit August 2026 abrufen,
+ *      und nicht, weil es keine gab. */
+
+type Verlauf = { datum: string | null; art: string; label: string; n: number;
+                 ids: string[]; unterlagen: boolean };
+type Dok = { notice: string; quelle: string | null; url: string | null; gelesen: boolean;
+             n: number; dateien: Array<{ name: string; typ: string }>; gekuerzt: number };
+type Glied = { vorgang: string; position: number; jahr: number | null;
+               konfidenz: number | null; titel: string | null };
+type Akte = {
+  id: string; land: string; titel: string | null; cpv: string | null; schluessel: string;
+  vollstaendig: boolean; von: string | null; bis: string | null;
+  zahlen: Record<string, number>; verlauf: Verlauf[]; dokumente: Dok[];
+  kette?: { kette: string; position: number; n_glieder: number; min_konfidenz: number | null;
+            methode: string; dauerangebot: boolean; gekuerzt: number; glieder: Glied[] };
+};
+type Antwort = { vorhanden: boolean; akte?: Akte; grund?: string; error?: string };
+
+const MONATE = ["Januar", "Februar", "März", "April", "Mai", "Juni",
+                "Juli", "August", "September", "Oktober", "November", "Dezember"];
+
+// ⚠ OHNE `t()`, WEIL DAS DATUM KEIN SATZ IST. Der Leerfall dagegen schon — der geht in
+// der Anzeige durch `t("ohne Datum")` und nicht hier, wo es kein `t` gibt.
+const tag = (d: string): string => {
+  const [j, m, t] = d.split("-");
+  return `${t}.${m}.${j}`;
+};
+const monat = (d: string | null): string => {
+  if (!d) return "";
+  const [j, m] = d.split("-");
+  return `${MONATE[Number(m) - 1]} ${j}`;
+};
+
+// Wie der Schluessel zustande kam. Das ist keine Nebensache: eine ueber Rueckverweise
+// zusammengesetzte Akte darf nicht aussehen wie eine amtlich verknuepfte.
+const HERKUNFT: Record<string, { text: string; ton: string }> = {
+  folder: { text: "amtlich verknüpft", ton: "ok" },
+  rueckref: { text: "über Rückverweis verknüpft", ton: "" },
+  allein: { text: "einzeln, keine Verknüpfung gefunden", ton: "warn" },
+};
+
+const ART_TON: Record<string, string> = {
+  cn: "aus", can: "zu", corrigendum: "kor", pin: "vor", other: "",
+};
+
+export function Vorgangsakte() {
+  const { t } = useSprache();
+  const [id, setId] = useState<string | null>(null);
+  const [land, setLand] = useState<string>("DE");
+  const [lead, setLead] = useState<string | null>(null);
+  const [antwort, setAntwort] = useState<Antwort | null>(null);
+  const [laedt, setLaedt] = useState(false);
+
+  useEffect(() => {
+    const lies = () => {
+      const p = new URLSearchParams(window.location.search);
+      setId(p.get("id"));
+      setLand((p.get("land") || "DE").toUpperCase());
+      setLead(p.get("lead"));
+    };
+    lies();
+    window.addEventListener("popstate", lies);
+    return () => window.removeEventListener("popstate", lies);
+  }, []);
+
+  useEffect(() => {
+    if (!id && !lead) { setAntwort(null); return; }
+    setLaedt(true);
+    const q = id
+      ? `id=${encodeURIComponent(id)}&land=${encodeURIComponent(land)}`
+      : `lead=${encodeURIComponent(lead!)}`;
+    fetch(`/api/vorgang?${q}`)
+      .then((r) => r.json())
+      .then(setAntwort)
+      .catch(() => setAntwort({ vorhanden: false, error: "nicht erreichbar" }))
+      .finally(() => setLaedt(false));
+  }, [id, land, lead]);
+
+  // ⚠ DAS LAND MUSS MIT. Ohne es faellt der Sprung auf die Vorgabe `DE` zurueck und eine
+  // oesterreichische Kette landet bei der deutschen Akte mit derselben Nummer — es gibt 48
+  // solche Nummern. Eine Kette verlaesst ihr Land nicht, also ist es immer das der Akte.
+  const oeffne = (ziel: string, zielLand: string) => {
+    window.history.pushState(
+      {}, "", `/vorgang?id=${encodeURIComponent(ziel)}&land=${encodeURIComponent(zielLand)}`);
+    setLead(null);
+    setLand(zielLand);
+    setId(ziel);
+  };
+
+  if (!id && !lead) {
+    return (
+      <div className="vg-wrap">
+        <header className="vg-kopf">
+          <h1>{t("Vorgang")}</h1>
+          <p>{t("Ein Vorgang führt Ausschreibung, Korrekturen, Unterlagen und Zuschlag unter einer Nummer zusammen. Erreichbar aus einer Vergabe heraus oder über den Deep-Link mit der Vorgangsnummer.")}</p>
+        </header>
+      </div>
+    );
+  }
+  if (laedt) return <div className="vg-load">{t("Lade Vorgang …")}</div>;
+  if (!antwort) return null;
+
+  if (antwort.error) {
+    return <div className="vg-wrap"><p className="vg-leer">{antwort.error}</p></div>;
+  }
+  if (!antwort.vorhanden || !antwort.akte) {
+    return (
+      <div className="vg-wrap">
+        <p className="vg-leer">
+          {t("Zu dieser Vergabe ist keine Akte hinterlegt.")}{" "}
+          {t("Aufbereitet sind die Vorgänge der heute ausgeschriebenen Vergaben samt ihrer Vorgeschichte.")}
+        </p>
+      </div>
+    );
+  }
+
+  const a = antwort.akte;
+  const h = HERKUNFT[a.schluessel] || { text: a.schluessel, ton: "" };
+  const z = a.zahlen;
+  // Weist irgendein Ereignis des Vorgangs Unterlagen aus? Entscheidet den Leertext unten.
+  const angekuendigt = a.verlauf.some((e) => e.unterlagen);
+
+  return (
+    <div className="vg-wrap">
+      <header className="vg-kopf">
+        <div className="vg-zeile">
+          <span className="vg-nr">{a.id}</span>
+          <span className={`vg-tag ${h.ton}`}>{t(h.text)}</span>
+          {a.vollstaendig
+            ? <span className="vg-tag ok">{t("Ausschreibung und Zuschlag vorhanden")}</span>
+            : <span className="vg-tag">{t("Zuschlag noch offen")}</span>}
+        </div>
+        <h1>{a.titel || t("ohne Titel")}</h1>
+        <p className="vg-meta">
+          {a.cpv ? <>{t("CPV {c}", { c: a.cpv })} · </> : null}
+          {a.von ? t("{von} bis {bis}", { von: monat(a.von), bis: monat(a.bis) }) : null}
+          {" · "}
+          {z.bekanntmachungen === 1
+            ? t("eine Bekanntmachung")
+            : t("{n} Bekanntmachungen", { n: z.bekanntmachungen })}
+        </p>
+      </header>
+
+      <section className="vg-block">
+        <h2>{t("Verlauf")}</h2>
+        <ol className="vg-verlauf">
+          {a.verlauf.map((e, i) => (
+            <li key={i} className={ART_TON[e.art] || ""}>
+              <span className="vg-datum">{e.datum ? tag(e.datum) : t("ohne Datum")}</span>
+              <span className="vg-art">
+                {t(e.label)}
+                {e.n > 1 ? <em>{t("{n} am selben Tag", { n: e.n })}</em> : null}
+              </span>
+              <span className="vg-ids">
+                {e.ids.slice(0, 3).join(", ")}
+                {e.ids.length > 3 ? ` +${e.ids.length - 3}` : ""}
+              </span>
+              {e.unterlagen ? <span className="vg-tag ok">{t("Unterlagen")}</span> : null}
+            </li>
+          ))}
+        </ol>
+      </section>
+
+      <section className="vg-block">
+        <h2>{t("Unterlagen")}</h2>
+        {a.dokumente.length === 0 ? (
+          <p className="vg-hinweis">
+            {/* ⚠ ZWEI VERSCHIEDENE DINGE, DIE BEIDE „keine Unterlagen" HEISSEN. `unterlagen`
+                am Verlaufseintrag sagt, dass die Vergabe Unterlagen AUSWEIST; eine leere
+                `dokumente`-Liste sagt, dass wir die DATEILISTE nicht abgerufen haben. Der
+                erste Entwurf schob beides aufs Alter und behauptete das auch bei einer
+                Vergabe vom 31.08.2026, deren Unterlagen im Verlauf daneben standen. */}
+            {angekuendigt
+              ? <>{t("Diese Vergabe weist Unterlagen aus, abgerufen haben wir die Dateiliste noch nicht.")}{" "}
+                 {t("Der Abruf läuft laufend nach; welche Portale ihn zulassen, steht in der Herkunft der jeweiligen Vergabe.")}</>
+              : <>{t("Zu diesem Vorgang liegt keine Dateiliste vor.")}{" "}
+                 {t("Unterlagen holen wir erst seit August 2026 ein; ältere Vorgänge tragen deshalb Bekanntmachungen und Zuschlag, aber selten Dateien. Rückwirkend gibt sie kein Portal heraus.")}</>}
+          </p>
+        ) : (
+          a.dokumente.map((d) => (
+            <div key={d.notice} className="vg-dok">
+              <div className="vg-dok-kopf">
+                <strong>{t("{n} Dateien", { n: d.n })}</strong>
+                <span className="fs">{d.quelle}</span>
+                {/* Der Unterschied zwischen „gelesen" und „nur gelistet" muss stehen
+                    bleiben. Eine Dateiliste ist ein Inhaltsverzeichnis, kein Inhalt. */}
+                <span className={`vg-tag ${d.gelesen ? "ok" : "warn"}`}>
+                  {d.gelesen ? t("gelesen") : t("nur gelistet")}
+                </span>
+                {d.url ? <a href={d.url} target="_blank" rel="noopener noreferrer">
+                  {t("zum Portal")}</a> : null}
+              </div>
+              <ul className="vg-dateien">
+                {d.dateien.map((f, i) => (
+                  <li key={i}><span className={`vg-typ t-${f.typ}`}>{t(f.typ)}</span>{f.name}</li>
+                ))}
+              </ul>
+              {d.gekuerzt > 0
+                ? <p className="fs">{t("und {n} weitere Dateien", { n: d.gekuerzt })}</p>
+                : null}
+            </div>
+          ))
+        )}
+      </section>
+
+      {a.kette ? (
+        <section className="vg-block">
+          <h2>{t("Vorgeschichte")}</h2>
+          <p className="vg-hinweis">
+            {t("{n} Vergaben, die inhaltlich aufeinander folgen.", { n: a.kette.n_glieder })}
+            {" "}
+            {a.kette.dauerangebot
+              ? t("Der Takt ist hoch: das sieht nach einem laufenden Abruf aus, nicht nach einzelnen Neuvergaben.")
+              : t("Die Verknüpfung ist erschlossen, nicht amtlich. Sie beruht auf Käufer und Leistung.")}
+          </p>
+          <ol className="vg-kette">
+            {a.kette.glieder.map((g) => (
+              <li key={g.vorgang} className={g.vorgang === a.id ? "hier" : ""}>
+                <span className="vg-jahr">{g.jahr ?? "?"}</span>
+                {g.vorgang === a.id
+                  ? <strong>{g.titel || t("ohne Titel")}</strong>
+                  : <button type="button" onClick={() => oeffne(g.vorgang, a.land)}>
+                      {g.titel || t("ohne Titel")}</button>}
+                {g.vorgang === a.id
+                  ? <span className="vg-tag ok">{t("dieser Vorgang")}</span> : null}
+              </li>
+            ))}
+          </ol>
+          {a.kette.gekuerzt > 0
+            ? <p className="fs">{t("{n} weitere Glieder in dieser Kette", { n: a.kette.gekuerzt })}</p>
+            : null}
+        </section>
+      ) : null}
+    </div>
+  );
+}
