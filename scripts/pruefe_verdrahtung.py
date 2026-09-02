@@ -125,6 +125,14 @@ BEWUSST_NUR_DE: dict[str, str] = {
     "lead_kategorie": "Kategorie-Wasserfall liest DE-Dubletten und DE-Vokabular",
     "bronze_inventory": "Inventar der DE-Bronze-Pakete (TED-Vollabzug)",
     "document_duplicates": "Dokument-Dublettenwall; AT/CH haben 0 % Dokumentabdeckung",
+    # Dieselbe Ursache wie eine Zeile darueber, und derselbe Weg hinaus: die Erzeuger sind
+    # laenderfaehig (`--land`), AT und CH haben nur kein `doc_text`. Geprueft am 2026-09-02:
+    # beide Laender laufen sauber durch und melden „nichts zu tun". Kommen dort Dokumente
+    # an, entstehen diese Tabellen von selbst — dann gehoeren die vier Zeilen gestrichen.
+    "doc_analysis": "Auswertung der Vergabeunterlagen; AT/CH haben 0 % Dokumentabdeckung",
+    "doc_checklist": "gehoert zu doc_analysis, dieselbe Quelle",
+    "doc_verworfen": "gehoert zu doc_analysis, dieselbe Quelle",
+    "doc_qa_stand": "zaehlt Fragenkataloge aus doc_text; AT/CH haben 0 % Dokumentabdeckung",
     "lead_region_fill": "Bundesland-Auffuellung, deutsche NUTS-Systematik",
 }
 
