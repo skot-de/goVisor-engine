@@ -150,9 +150,59 @@ die habe ich nicht angefragt. Von den übrigen 620:
 | Fehlerseite (403/404) | 4 % |
 | **tot** (DNS, Zertifikat, TLS) | **26 %** |
 
+### 🎯 Madrid (4 %) — die Adresse zeigt auf gar keine Vergabe
+
+Madrids Hauptseite lebt (HTTP 200), zwei Nebenhosts nicht (`edicion.contratos-publicos…`
+und `contratospublicos…` ohne Bindestrich — derselbe Schreibfehler wie in Andalusien).
+
+Die robots.txt ist differenziert und sperrt unter anderem
+`Disallow: /sites/default/files/**PCON**/*` — PCON dürfte für *Pliegos de Condiciones*
+stehen, also die Unterlagen — sowie `/contratos?` mit Abfrageparametern. Der Pfad
+`/contratos` selbst ist erlaubt.
+
+**Geprüft werden musste das aber gar nicht, denn der Weg endet früher.** Madrids
+Unterlagen-Adressen in TED nennen keine Vergabe:
+
+| Adresse | Häufigkeit |
+|---|---:|
+| `https://contratos-publicos.comunidad.madrid/` | **162** |
+| `https://contratos-publicos.comunidad.madrid` | 85 |
+| `.../contratos` | 71 |
+
+Von 380 Madrider Adressen tragen **0 %** eine Vergabe-Kennung. Der häufigste
+„Unterlagen-Link" ist 162-mal die **Startseite**.
+
+### 🎯 Und das ist keine Madrider Eigenheit
+
+| Engine | Adressen | mit Vergabe-Kennung |
+|---|---:|---:|
+| PLACSP | 3.958 | **99 %** |
+| Katalonien | 438 | 38 % |
+| Baskenland | 748 | **0 %** |
+| Madrid | 380 | **0 %** |
+| Andalusien | 278 | **0 %** |
+
+**Eine fünfte Kategorie, und sie sitzt nicht im Portal, sondern in der Bekanntmachung:**
+Host erreichbar, robots erlaubend, Datei vorhanden — und trotzdem kein Weg hin, weil die
+Adresse die Vergabe nicht benennt. Wer sie finden will, muss auf dem Portal nach Titel
+oder Aktenzeichen suchen. Das ist ein anderes und viel schwereres Problem als ein Abrufer.
+
+Über alle vier Länder, mit dem einzigen zwischen ihnen vergleichbaren Maß — Adressen, die
+nichts als eine Portalwurzel enthalten:
+
+| | FR | PL | ES | DE |
+|---|---:|---:|---:|---:|
+| nur Wurzel | **39 %** | 29 % | 23 % | 23 % |
+
+⚠ **Eine Warnung zur eigenen Messung:** die Spalte „mit Vergabe-Kennung" ist zwischen
+Ländern **nicht** vergleichbar, weil die Kennungsformate sich unterscheiden. Deutschland
+erscheint mit 23 %, obwohl es das bestabgedeckte Land ist — cosinex benutzt Kennungen wie
+`/notice/CXVHY5UYT89EY6Y8/`, die kein Ziffernmuster tragen und durch mein Raster fallen.
+Innerhalb Spaniens ist die Spalte belastbar, zwischen Ländern nicht.
+
 ### Ungeprüft
 
-Madrid (4 %) und Navarra (1 %), soweit ihre Hosts leben.
+Navarra (1 %) und der Rest des Schwanzes.
 
 ## 3. Was Spanien für den Plan bedeutet
 

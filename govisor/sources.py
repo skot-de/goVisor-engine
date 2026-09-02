@@ -471,11 +471,20 @@ DOC_REGISTRY: list[Source] = [
                    "dem korrigierten Host antwortet mit HTTP 200. ⚠ Eine Adresse in TED ist "
                    "kein Beleg, dass es die Seite gibt.",
            url="https://www.juntadeandalucia.es"),
-    Source("sond-es-rest", "Madrid, Navarra u. a.", "", "ES", "beides",
-           "sondiert", portals=6, ebene="unterlagen", ertrag="ungeprueft",
-           coverage="zusammen ~5 % — ungeprueft. ⚠ Madrid traegt denselben Hostnamen-Fehler "
-                   "wie Andalusien in kleinerem Massstab: zwei Subdomains loesen nicht auf.",
-           overlap="ungeprueft", url="https://contratos-publicos.comunidad.madrid"),
+    Source("sond-es-madrid", "Madrid (contratos-publicos.comunidad.madrid)", "", "ES",
+           "beides", "sondiert", portals=1, ebene="unterlagen", ertrag="gesperrt",
+           coverage="4 % der ES-Ausschreibungen",
+           overlap="🎯 DIE ADRESSE ZEIGT AUF GAR KEINE VERGABE. Von 380 Madrider "
+                   "TED-Adressen tragen 0 % eine Vergabe-Kennung; die haeufigste ist "
+                   "162-mal die blosse STARTSEITE. Der Weg endet vor dem Portal, nicht "
+                   "an ihm. Dazu: robots sperrt /sites/default/files/PCON/* (Pliegos de "
+                   "Condiciones) und /contratos? mit Parametern; zwei Nebenhosts loesen "
+                   "nicht auf (derselbe Schreibfehler wie Andalusien).",
+           url="https://contratos-publicos.comunidad.madrid"),
+    Source("sond-es-rest", "Navarra u. a.", "", "ES", "beides",
+           "sondiert", portals=5, ebene="unterlagen", ertrag="ungeprueft",
+           coverage="zusammen ~1 % — ungeprueft", overlap="ungeprueft",
+           url="https://portalcontratacion.navarra.es"),
     # ── ANGEBUNDEN ────────────────────────────────────────────────────────────────────
     Source("doc-cosinex-de", "cosinex/DTVP-Unterlagen", "docfetch-cosinex", "DE", "beides",
            "live", portals=40, ebene="unterlagen", ertrag="dateien", modul="govisor.docfetch",
