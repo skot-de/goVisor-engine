@@ -156,6 +156,28 @@ def _behauptungen() -> list[tuple[str, str, bool, str]]:
     aus.append(("12", "keine Regionskennung verhaelt sich wie ein Vorgabewert",
                 not vorgabe, ", ".join(vorgabe) or "keine"))
 
+    # Der Dublettenwall zeigt auf nichts Verschwundenes (Kapitel 04, Falle G8).
+    #
+    # ⚠ Gegen die DATEN, nicht gegen den Code. Der Fehler war ja gerade, dass die
+    # Vereinigung im Fensterlauf fachlich richtig aussah: sie traegt weiter, was der Lauf
+    # nicht angesehen hat — und schleppte dabei mit, was es nicht mehr GIBT. Nationale
+    # Quellen ziehen Bekanntmachungen zurueck; atverg baut sein Silber taeglich neu aus dem
+    # Dump, der Satz ist danach weg. Gemessen 2026-09-02: 28 Zeilen auf 7 zurueckgezogenen
+    # Kennungen.
+    #
+    # GEBORGT statt nachgebaut. Hier stand zuerst eine eigene Anti-Join-Abfrage — also eine
+    # zweite Fassung derselben Frage, und damit der Anfang genau der Doppelpflege, die
+    # Pruefung 3 in dieser Datei sonst anprangert. Der Waechter besitzt die Abfrage; das
+    # Register fragt ihn nur.
+    spec4 = importlib.util.spec_from_file_location(
+        "pgi", ROOT / "scripts" / "pruefe_gold_integritaet.py")
+    pgi = importlib.util.module_from_spec(spec4)
+    spec4.loader.exec_module(pgi)
+    waisen = [f"{land}: {label} {n}" for land in pgi._laender()
+              for label, n in pgi.befunde(land)]
+    aus.append(("04", "kein Gold-Fremdschluessel zeigt auf eine zurueckgezogene Kennung",
+                not waisen, "; ".join(waisen) or "keine Waisen"))
+
     # Dokumentabdeckung AT/CH (Kapitel 03) — gegen die DATEN, nicht gegen has_documents.
     for land in ("AT", "CH"):
         p = ROOT / "data" / "docs" / land / "doc_text.parquet"

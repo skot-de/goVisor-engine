@@ -98,6 +98,16 @@ ist ein Grund hinzusehen, keiner den Lauf wegzuwerfen.
   ändern; dann wäre aus dem täglichen Rauschen ein täglicher Fehlschlag geworden.
 - **`pruefe_verdrahtung.py`** — alle Gold-Dateien, relativ zum Lauf ihres Landes. Merkt,
   wenn **ein** Schritt fehlt.
+- **`pruefe_gold_integritaet.py`** — jeder Fremdschlüssel in Gold muss auflösen, in **jedem**
+  Land. Merkt, wenn eine Eltern-Tabelle ersetzt wurde, während die Kind-Tabelle stehenblieb.
+  ⚠ Die Prüfung selbst (`verify.gold_integrity`) ist alt; **aufgerufen** hat sie der
+  Tageslauf bis zum 2026-09-02 nie. Sie hing an `python -m govisor.cli verify`, und der
+  prüft davor jeden Monat seit 2004 gegen die TED-Search-API — ein Netzlauf, den niemand
+  täglich startet. Die Integrität allein kostet über DE+AT+CH zusammen **1,3 s** (gemessen
+  2026-09-02); teuer war ausschliesslich das Beiwerk. Aufgefallen ist die Lücke an
+  28 Waisen im Dublettenwall (AT), die mindestens einen Tag unbemerkt dastanden.
+  **Die Länder kommen von der Platte**, nicht aus einer Liste — sonst prüft der Wächter
+  ein viertes Land stillschweigend nicht.
 
 Beide werden gebraucht: stehen alle Länder gleichzeitig, wandert der Bezugspunkt der Sonde
 mit und sie ist blind.
