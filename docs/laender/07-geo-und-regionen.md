@@ -50,6 +50,29 @@ Zwei Wege:
 1. **Gleicher Käufer** — derselbe Name trägt in einem anderen Lead eine Region → übernehmen.
 2. **Ortsname** — im Käufernamen steckt ein Ort, der eindeutig zu einer Region gehört.
 
+⚠ **Weg 1 braucht eine MEHRHEIT, kein `any_value` (korrigiert 2026-09-02).** Bis dahin
+stand dort `any_value(buyer_nuts1)`, und das wählt bei einem Käufer mit mehreren Regionen
+beliebig aus — zwei Läufe über denselben Bestand meldeten für DE einmal 5.002 und einmal
+5.003 Ableitungen. Kein Randfall: **in Österreich hingen 8.352 von 9.373 Weg-1-Leads
+(89 %) an einem uneinigen Namen**, weil ÖBB und ASFINAG bundesweit ausschreiben. Jetzt
+gewinnt die häufigste Region des Käufers; bei Gleichstand wird nichts abgeleitet — dieselbe
+Regel, die der Selbsttest weiter unten anwendet.
+
+⚠ **Und Weg 1 prüfte die Werte nicht auf GÜLTIGKEIT.** Der Riegel der Gegenprobe („nur
+echte Regionskennungen") war nie auf diese Seite übertragen worden. In der gebauten Datei
+standen deshalb 199 österreichische `ATZZ` (Extra-Regio), 2 Schweizer `BS`
+(Kantonskürzel) — und **4 deutsche `BE3`, das ist Brüssel** (gemessen 2026-09-02). Sie
+lösen in `dim_nuts` gegen nichts auf, standen im Export also als „abgeleitet" mit leerer
+Region da. Lehrbuchfall der Fehlerklasse **„Fix nur auf einer Seite angewandt"**.
+
+Der Fang dafür sitzt jetzt in `verify.gold_integrity` und prüft nicht die Zeile, sondern
+den WERT: `lead_region_fill.buyer_nuts1_abgeleitet → dim_nuts.nuts_code`. Kein
+Fremdschlüssel hatte je auf diese Spalte gezeigt, deshalb hat nichts widersprochen.
+
+Nach beidem (2026-09-02): DE 5.012 → 5.002 Ableitungen, AT 9.557 → 9.479, CH 3 → 1 —
+und die Widerspruchsquote des Selbsttests fällt in AT von 10,8 % auf 3,3 %, weil Weg 1
+keine gewürfelten Werte mehr gegen Weg 2 stellt.
+
 Gemessen DE: Weg 1 allein 32 %, Weg 2 allein 20 %, beide 29 %, gar nicht 19 % — zusammen
 **83 %**.
 
@@ -91,6 +114,219 @@ Zwei weitere Regeln aus der DE-Erfahrung:
   in „Wiesendendorf" findet und „ahlen" in „Zahlenwerk".
 - **Der längste Treffer gewinnt.** „Stadt Neustadt am Rübenberge" traf sonst auf
   „neustadt" (Thüringen) statt auf den vollen Namen.
+- **Eindeutig heisst: auch der Basisname ist eindeutig** (seit 2026-09-02). Der Riegel
+  verglich VOLLE Schreibweisen und lief damit an sich selbst vorbei: die PLZ-Datei führt
+  „Weilheim an der Teck" (BW), „Weilheim in Oberbayern" (BY) und ein blosses „Weilheim"
+  (BW) — drei Zeichenketten, also galt „weilheim" als eindeutig. „Staatliches Bauamt
+  Weilheim", das in 82362 Weilheim i.OB sitzt, bekam Baden-Württemberg. Dieselbe Klasse:
+  „heidenheim", „esslingen", „ehingen", „dillingen", „koenigstein" — und ausgerechnet
+  „neustadt", das der Docstring als Musterbeispiel eines ausgeschlossenen Namens nennt.
+  Geprüft wird deshalb auf **Wortpräfixe**: ein Name ist nur eindeutig, wenn keine
+  längere Ortsbezeichnung in einer anderen Region mit denselben Wörtern beginnt. Kosten:
+  10 von 5.012 Ableitungen; Ertrag: Selbsttest-Widerspruch 8,5 % → 5,0 % (2026-09-02).
+
+## ⚠ Die PLZ-Datei von geonames ist kein Ortsverzeichnis
+
+Sie führt jede Postleitzahl auf — und die Deutsche Post vergibt eigene an Grosskunden.
+Dort steht dann die **Firma**, wo man den Ort erwartet: „siemens", „bosch",
+„a nattermann cie gmbh", „BERLIN-KÖLNISCHE VERSICHERUNGEN". Gemessen 2026-09-02:
+
+```
+DE   5.317 von 17.628 Namen sind keine Orte  (30 %, gemessen 2026-09-02)
+AT       0            CH       1                     ← eine deutsche Eigenart
+```
+
+Ein Käufername, der eine solche Zeichenfolge enthält, bekäme ein erfundenes Bundesland.
+Gefiltert wird gegen den geonames-**Gazetteer** (`<LAND>_gazetteer.txt`, Merkmalsklasse
+P = bewohnter Ort, A = Verwaltungseinheit).
+
+⚠ **Die Reihenfolge der beiden Riegel ist nicht beliebig.** Erst Firmen raus, dann
+Namen vergleichen. Eine einzige Kölner Versicherung mit „BERLIN" im Namen macht sonst
+„berlin" mehrdeutig — der Basisnamen-Riegel wirft die Hauptstadt aus dem Verzeichnis und
+kostet 32 belegte Widerspruchsfunde.
+
+⚠ **EU-weit offen:** der Gazetteer liegt bisher nur für DE. Für Länder ohne Datei bleibt
+der Filter aus — vertretbar, solange die PLZ-Datei dort sauber ist (für AT/CH nachgemessen),
+aber vor jedem neuen Land nachzuzählen.
+
+## Die Gegenprobe: gegen die PLZ, nicht gegen den Ortsnamen
+
+Dieselbe Mechanik prüft auch die Leads, die schon eine Region TRAGEN — sonst gilt ein
+dastehender Wert unbesehen als belegt (s. Fallenkatalog D13).
+
+⚠ **Der erste Zeuge war der falsche.** Die Fassung vom 2026-09-01 prüfte gegen den
+ORTSNAMEN und meldete 336 Widersprüche, sichtbar im Frontend als
+`regionQuelle='widersprüchlich'`. Am 2026-09-02 wurde **jeder einzelne** gegen die
+Käufer-PLZ aus Silber nachgeprüft — Vollerhebung, keine Stichprobe:
+
+```
+entscheidbar (PLZ eindeutig)               274 von 336
+  Region stimmt, der Ortsname war falsch   134   49 %   ← Fehlalarm
+  Region wirklich falsch                   140   51 %
+nicht entscheidbar                          62          ← 61 davon der BER
+```
+
+Der Marker sagte also jedem zweiten Mal etwas Falsches über einen richtigen Wert.
+
+**Die PLZ ist der bessere Zeuge, und zwar in beide Richtungen** (gemessen 2026-09-02):
+
+```
+                 Ortsname                       Postleitzahl
+prüfbar          7 % der Leads mit Region       97 %
+eindeutig        95 % der Namen                 99,8 %   (AT 97,8 %, CH 99,4 %)
+```
+
+Sie kennt keine Namensvarianten, keinen Behördenzusatz und keine Umlautfaltung — die
+Falle aus Kapitel 14 (`Łódź` → `['d']`) trifft sie gar nicht erst. Die verbleibenden
+Mehrdeutigkeiten sind echt und keine Schwäche: 12529 liegt gleichzeitig in Schönefeld
+(Brandenburg) und in Berlin, die Grenzlage des Hauptstadtflughafens. Solche PLZ melden
+nichts.
+
+**Drei Tore, damit der Marker nur meldet, was ein Fehler IST:**
+
+1. **Gültige Regionskennung**, nicht Präfix + Länge. „DEZ"/„ATZZ" sind Extra-Regio und
+   bestehen jeden Längentest (DE 9, AT 513, CH 784 Leads, 2026-09-02).
+2. **Ein Standort.** Führt ein Käufer mehrere Anschriften, ist eine abweichende Region
+   keine Falschangabe, sondern eine andere Niederlassung — Autobahn GmbH, BWI, DB Netz,
+   BAAINBw, Deutsche Rentenversicherung Berlin-Brandenburg. DE 189 → 120 Funde.
+3. **Veto des Leistungsorts.** Stützt `perf_nuts` (unabhängiger Zeuge, nicht aus der
+   Käufer-NUTS abgeleitet) die Region, der die Anschrift widerspricht, ist sie keine
+   Falschangabe, sondern eine Aussage über den Auftrag: die AOK PLUS sitzt in Erfurt und
+   schreibt für Sachsen aus. DE 120 → 80 Funde.
+   ⚠ Nur als Veto, nie als Kronzeuge: `perf_nuts` ist bei DE 33 %, AT 10 % gefüllt.
+
+Stand nach der Korrektur (2026-09-02, `--probe`):
+
+```
+        prüfbar   Widersprüche   vorher (Ortsname)
+DE       81.611             80   336
+AT        6.621             85    34   ← andere Basis: prüfbar war 1.362
+CH        7.191             30    43   ← prüfbar war 4.841
+```
+
+## Die 80 deutschen Funde: durchgegangen und korrigiert (2026-09-02)
+
+Der Marker sagt, DASS Anschrift und Regionsangabe auseinanderlaufen. **Welche Seite recht
+hat, kann er nicht sagen** — dafür braucht es einen Blick auf den Fall. Alle 80 sind
+einzeln durchgegangen; der entscheidende Zeuge war meist der Käufer selbst, weil dieselbe
+Behörde in Silber hundertfach vorkommt:
+
+```
+AOK PLUS      eigene Angabe 899× Thüringen gegen 145× Sachsen, Anschrift Erfurt
+BAAINBw       eigene Angabe 3.863× Rheinland-Pfalz, Dienstsitz Koblenz
+Buxtehude     eigene Angabe 114× Niedersachsen gegen 1× Mecklenburg-Vorpommern
+```
+
+**Wo eine Behörde ihre Region hundertfach gleich angibt, ist die Ausreisserzeile der
+Fehler.** Ergebnis: 37 Fälle korrigiert, **1 bestätigt** — die BKK VerbundPlus sitzt in
+Biberach (DE1) und führt München nur als Zweitanschrift, ihre Angabe stimmt.
+
+Das Urteil steht in `curated/DE_region_korrektur.csv`, versioniert im Repo, mit Beleg je
+Zeile — dieselbe Bauart wie `DE_entity_aliases.csv`: **von Hand geprüft, kein
+Namensstamm-Automatismus.** Schlüssel ist Käufername **und** PLZ; zieht eine Behörde um,
+greift die Zeile nicht mehr, und das ist gewollt. Ein Test hält tote Zeilen fest.
+
+⚠ `region_neu == region_alt` heisst **geprüft und richtig** — dann schweigt der Marker,
+statt weiter zu melden. Ohne diese Möglichkeit hätte eine Kuratierung nur einen Ausgang,
+und der bestätigte Fall bliebe für immer rot.
+
+⚠ **Die Korrektur greift VOR den drei Toren.** Eine kuratierte Zeile ist eine Aussage über
+den Fall, kein Verdacht — sie muss auch dort wirken, wo ein Tor den Verdacht gar nicht
+erst aufkommen lässt. Deshalb sind es **93 korrigierte Leads, nicht 80**: bei der AOK PLUS
+deckte das Leistungsort-Veto 13 weitere Leads mit derselben falschen Angabe.
+
+⚠ **Korrigiert werden muss die KENNUNG, nicht nur das Label.** Der Regionsfilter im
+Explorer prüft `l.nuts.startsWith(code)` (`ORTE` in `web/lib/explorerCore.js` kennt nur
+die 16 dreistelligen Kennungen). Wer nur `region` setzt, repariert die Anzeige und lässt
+den Filter falsch — der Lead sähe richtig aus und stünde weiter im falschen Bundesland.
+
+⚠ **Und der Marker selbst wird bis heute nirgends angezeigt.** `regionQuelle` steht in
+`web/data/leads-*.json` (150 × `widerspruechlich`, gemessen 2026-09-02), aber **kein
+einziger Treffer in `web/`** liest das Feld. Der sichtbare Teil dieser Kette ist allein
+der Wert von `region` — deshalb korrigiert die Kuratierung ihn und verlässt sich nicht
+auf ein Etikett. Die Anzeige des Etiketts ist offen.
+
+## AT und CH: dasselbe Verfahren, ein anderes Ergebnis (2026-09-02)
+
+Auch die 85 österreichischen und 30 Schweizer Funde sind einzeln durchgegangen. Der
+Befund ist ein anderer als in Deutschland und für jedes weitere Land der wichtigere:
+
+**In Österreich benennt `buyer_nuts` überwiegend den LEISTUNGSORT, nicht den Sitz.**
+Die Titel sagen es wörtlich:
+
+```
+steht=AT33  „E90094/29/2-Dion7/2025 … 6020 Innsbruck, Wärmepumpe"      Republik Österreich
+steht=AT31  „Projektsteuerung, KZ-Gedenkstätte Gusen, 4222 Langenstein" Burghauptmannschaft
+steht=AT22  „A99 NLR E-MOB Netzanschlüsse Steiermark"                   ASFINAG
+steht=AT12  „Donau-Streckenpflege 2023-2028 Los OST"                    via donau (Wien)
+steht=AT21  „Wartung Scanning Electron Microscope"                      SAL, Standort Villach
+```
+
+Von 85 Funden waren **59 keine Fehler**, sondern Leistungsorte oder Zweitstandorte;
+**genau einer** war ein echter Regionsfehler: OMV Austria E&P GmbH (Sitz Gänserndorf,
+2230) stand auf Wien, während derselbe Käufer 8 weitere Leads korrekt unter
+Niederösterreich führt und die Titel Schönkirchen und Gänserndorf nennen.
+
+In der Schweiz dasselbe Muster in kleinerer Zahl: 5 echte Fehler (SBB-Einheiten
+„Standort Bern" auf Zürich, Swissgrid Aarau auf Appenzell A.Rh., Spital Uster auf Bern),
+7 bestätigte Fälle. **Neu und wichtig: die Anschrift ist in der Romandie oft die des
+beauftragten Dienstleisters** — „Direction générale de l'environnement … de l'Etat de
+Vaud (Loyco SA)" trägt eine Genfer PLZ, die Schulgemeinde St-Prex eine Freiburger.
+Der Klammerzusatz im Namen ist das Erkennungszeichen.
+
+**Daraus ein viertes Tor: das Veto des Titels.** Nennt der Auftragstitel einen Ort, der
+in der angegebenen Region liegt, steht dort der Leistungsort und keine Falschangabe.
+Gemessen 2026-09-02: DE 393, AT 386, CH 541 Leads übergangen — und **bei den DE-Funden
+greift es 0-mal**, es schwächt die deutschen Befunde also nicht.
+
+⚠ Das Veto darf nur SCHWEIGEN lassen, nie etwas behaupten. Ein Ortsname im Titel ist ein
+Hinweis, kein Beleg; als Widerspruchsgrund taugt er nicht.
+
+Stand nach allen vier Toren und der Kuratierung (2026-09-02, `--probe`):
+
+```
+      korrigiert   bestätigt   offen   Zeilen in curated/
+DE            93           1       0   38
+AT            26          61       0    8
+CH            16          14       0   13
+```
+
+## Wenn zwei Seiten sich widersprechen: eine Ebene tiefer gehen
+
+Der letzte offene Fall (gemessen 2026-09-02) — RAILplus AG, 8 Leads, Anschrift 5001 Aarau,
+Angabe Bern, beide
+Seiten in sich schlüssig — liess sich **nicht** durch Abwägen klären, sondern durch einen
+Blick in `silver/<L>/attributes`. Dort steht der Adressblock des Käufers, so wie er im
+eForms-Satz steht:
+
+```
+PostalAddress.StreetName             = Hintere Bahnhofstrasse 48
+PostalAddress.CityName               = Aarau
+PostalAddress.PostalZone             = 5001
+PostalAddress.CountrySubentityCode   = CH021        ← Bern
+Contact.Telephone                    = +41 62 561 42 59   (Vorwahl 062 = Aarau)
+```
+
+**Der Widerspruch steckt im Satz selbst, nicht in unserer Kette.** Vier Felder desselben
+Blocks sagen Aargau, eines sagt Bern; ein weiterer RAILplus-Satz nennt selbst CH033. Und
+im selben Dokument trägt Simap.ch (Holzikofenweg 36, 3003 Bern) genau dieselbe CH021 —
+der naheliegende Verdacht ist ein Formularvorgabewert.
+
+⚠ **Trotzdem KEIN Parser-Fix.** Nachgemessen: von 27.594 Käufersätzen mit CH-NUTS und
+auflösbarer PLZ weichen **180 (0,65 %)** ab, CH021 in 39 von 4.539 Fällen (0,9 %) — keine
+Vorgabe, die durchschlägt, sondern verstreute Falscheingaben. Ein Fix an der Quelle würde
+hier ein Muster reparieren, das es nicht gibt. Das ist der Unterschied zum DÖE-Fund in
+Deutschland (dort: 33.966 Käuferzeilen, EIN Absender, 100 %).
+
+**Die Lehre für den nächsten unentscheidbaren Fall:** bevor man ihn als `widersprüchlich`
+stehen lässt, `attributes` nach dem Adressblock fragen. Silber führt den Satz feldweise
+mit — Strasse, Ort, PLZ, Telefon sind vier Zeugen, wo die Gold-Ebene nur zwei zeigt.
+
+⚠ **Die alte Sorge um den Flughafen Wien hat sich nicht bestätigt.** Er trägt eine Wiener
+PLZ (1300 Wien-Flughafen) und nennt sich in 241 von 308 eigenen Sätzen Wien (gemessen
+2026-09-02), obwohl er in
+Schwechat liegt. Das ist keine Falschangabe, sondern die Selbstbeschreibung des Käufers —
+in der Tabelle als „geprüft und richtig" festgehalten, damit der Marker schweigt.
 
 ## Verwaltungsnamen an geonames knüpfen
 

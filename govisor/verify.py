@@ -99,6 +99,13 @@ def gold_integrity(cfg: Config, country: str = "DE") -> list[tuple[str, int]]:
          "leads.parquet", "lead_id"),
         ("lead_region_fill.lead_id → leads", "lead_region_fill.parquet", "lead_id",
          "leads.parquet", "lead_id"),
+        # ⚠ Nicht nur die Zeile pruefen, sondern den WERT. Bis zum 2026-09-02 reichte die
+        # Ableitung durch, was im Bestand stand, ohne es gegen die Regionsliste zu halten:
+        # 199 oesterreichische Leads erbten `ATZZ` (Extra-Regio), 2 Schweizer `BS`
+        # (Kantonskuerzel) — und 4 deutsche `BE3`, also Bruessel. Kein Fremdschluessel
+        # hat widersprochen, weil keiner auf diese Spalte zeigte.
+        ("lead_region_fill.region → dim_nuts", "lead_region_fill.parquet",
+         "buyer_nuts1_abgeleitet", "dim_nuts.parquet", "nuts_code"),
         ("value_band_effektiv.lead_id → leads", "value_band_effektiv.parquet", "lead_id",
          "leads.parquet", "lead_id"),
         ("review_queue.notice → quality", "review_queue.parquet", "notice_id",

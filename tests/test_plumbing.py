@@ -4386,6 +4386,193 @@ def test_keine_orte_kennt_die_oesterreichische_falle():
         assert wort in ra._KEINE_ORTE
 
 
+def test_ortsverzeichnis_riegelt_auch_den_basisnamen():
+    """„weilheim" galt als eindeutig, weil „Weilheim in Oberbayern" anders geschrieben ist.
+
+    Der Eindeutigkeits-Riegel verglich bis zum 2026-09-02 VOLLE Namen. Damit bekam
+    „Staatliches Bauamt Weilheim" (82362 Weilheim i.OB, Bayern) Baden-Wuerttemberg —
+    24 Leads, und dieselbe Klasse traf „Heidenheim", „Esslingen", „Ehingen",
+    „Dillingen" und ausgerechnet „neustadt", das der Docstring als Musterbeispiel
+    eines ausgeschlossenen Namens nennt.
+
+    Zweite Haelfte derselben Sache: die geonames-PLZ-Datei fuehrt deutsche Grosskunden
+    unter ihrem FIRMENnamen. Ohne diesen Filter macht eine einzige Koelner Versicherung
+    („BERLIN-KOELNISCHE VERSICHERUNGEN") den Namen „berlin" mehrdeutig — der Riegel
+    wuerde dann die Hauptstadt aus dem Verzeichnis werfen.
+    """
+    import importlib.util
+    wurzel = pathlib.Path(__file__).resolve().parent.parent
+    if not (wurzel / "data/reference/geonames/DE.txt").exists():
+        pytest.skip("geonames-Ortsdatei fehlt")
+    spec = importlib.util.spec_from_file_location(
+        "region_ableiten", wurzel / "scripts" / "region_ableiten.py")
+    ra = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(ra)
+    orte = ra.ortsverzeichnis("DE")
+    for zweideutig in ("weilheim", "heidenheim", "neustadt", "esslingen", "ehingen",
+                       "dillingen", "koenigstein"):
+        assert zweideutig not in orte, (
+            f"'{zweideutig}' steht wieder im Ortsverzeichnis — vergleicht der Riegel "
+            f"wieder nur volle Schreibweisen statt der Wortpraefixe?")
+    # Die Gegenprobe: eindeutige Namen bleiben. „berlin" faellt nur, wenn der
+    # Firmenfilter aus ist — dann ist die Reihenfolge der beiden Riegel vertauscht.
+    for eindeutig in ("berlin", "erfurt", "quakenbrueck", "weilheim an der teck"):
+        assert orte.get(eindeutig), f"'{eindeutig}' fehlt im Ortsverzeichnis"
+
+
+def test_gegenprobe_prueft_die_plz_nicht_den_ortsnamen():
+    """Der Ortsname war der falsche Zeuge: 134 von 274 entscheidbaren Widerspruechen
+    (49 %) waren Fehlalarm — die Region stimmte, der Ortsname war zweideutig. Geprueft
+    wird seit dem 2026-09-02 gegen die Kaeufer-PLZ (99,8 % eindeutig statt 95 %,
+    bei 97 % der Leads mit Region vorhanden statt bei 7 %)."""
+    import importlib.util
+    wurzel = pathlib.Path(__file__).resolve().parent.parent
+    spec = importlib.util.spec_from_file_location(
+        "region_ableiten", wurzel / "scripts" / "region_ableiten.py")
+    ra = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(ra)
+    quelle = (wurzel / "scripts" / "region_ableiten.py").read_text(encoding="utf-8")
+    assert "plz_verzeichnis" in quelle and "_kaeufer_plz" in quelle
+    block = quelle.split("Widerspruch Anschrift")[-1].split("def ")[0]
+    assert "plz_reg.get(" in block and " orte.get(" not in block, (
+        "die Gegenprobe greift wieder auf das Ortsverzeichnis statt auf die PLZ zurueck")
+    if not (wurzel / "data/reference/geonames/DE.txt").exists():
+        pytest.skip("geonames-Ortsdatei fehlt")
+    plz = ra.plz_verzeichnis("DE")
+    assert plz.get("82362") == "DE2", "82362 Weilheim i.OB liegt in Bayern"
+    # 12529 liegt gleichzeitig in Schoenefeld (BB) und Berlin — die Grenzlage des BER.
+    # Genau solche PLZ duerfen NICHTS melden, sonst ist der Flughafen wieder ein „Fehler".
+    assert "12529" not in plz
+
+
+def test_regionsableitung_ist_reproduzierbar_und_gueltig():
+    """Zwei Läufe über denselben Bestand müssen dasselbe ergeben — und nur echte
+    Regionskennungen liefern.
+
+    Beides war verletzt, und beides fiel monatelang nicht auf. `any_value(buyer_nuts1)`
+    wählte bei einem Käufer mit mehreren Regionen beliebig: zwei Läufe meldeten für DE
+    einmal 5.002 und einmal 5.003 Ableitungen. In Österreich hingen 8.352 von 9.373
+    Weg-1-Leads (89 %) an so einem Namen, weil ÖBB und ASFINAG bundesweit ausschreiben.
+
+    Und der Gültigkeitsriegel der Gegenprobe war nie auf die Ableitung übertragen: in der
+    gebauten Datei standen 199 österreichische `ATZZ`, 2 Schweizer `BS` — und 4 deutsche
+    `BE3`, also Brüssel. Sie lösen in `dim_nuts` gegen nichts auf, standen im Export aber
+    als „abgeleitet" da."""
+    import importlib.util
+    wurzel = pathlib.Path(__file__).resolve().parent.parent
+    spec = importlib.util.spec_from_file_location(
+        "region_ableiten", wurzel / "scripts" / "region_ableiten.py")
+    ra = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(ra)
+    quelle = (wurzel / "scripts" / "region_ableiten.py").read_text(encoding="utf-8")
+    code = "\n".join(z for z in quelle.splitlines() if not z.strip().startswith("#"))
+    assert "any_value(buyer_nuts1)" not in code, (
+        "Weg 1 waehlt wieder beliebig — `any_value` ueber mehrere Regionen ist nicht "
+        "reproduzierbar")
+
+    gepruft = 0
+    for land in ra.LAENDER:
+        gold = wurzel / "data" / "gold" / land / "lead_export.parquet"
+        if not gold.exists():
+            continue
+        gepruft += 1
+        import io, contextlib
+        laeufe = []
+        for _ in range(2):
+            with contextlib.redirect_stdout(io.StringIO()):
+                laeufe.append(ra.fuer_land(land, probe=True))
+        assert laeufe[0] == laeufe[1], (
+            f"{land}: zwei Laeufe ueber denselben Bestand ergeben {laeufe[0]} und "
+            f"{laeufe[1]} Zeilen")
+    if not gepruft:
+        pytest.skip("keine Gold-Ebene gebaut")
+
+
+def test_kuratierte_regionskorrektur_ist_vollstaendig_und_lebendig():
+    """Eine kuratierte Datei verrottet lautlos: der Käufer benennt sich um, die Zeile
+    greift nicht mehr, und niemand merkt es — der Lead steht wieder im falschen
+    Bundesland. Geprüft wird deshalb die Form JEDER Zeile und, wo Gold vorliegt, ob sie
+    noch einen Lead trifft.
+
+    ⚠ Über ALLE Länder, nicht nur DE. Die Regionsebene sitzt je Land woanders (DE 3, AT 4,
+    CH 5 Stellen) und die PLZ ist unterschiedlich lang (DE 5, AT/CH 4) — eine auf DE
+    getippte Prüfung würde die AT- und CH-Dateien entweder durchwinken oder grundlos
+    ablehnen."""
+    import csv as _csv
+    import importlib.util
+    wurzel = pathlib.Path(__file__).resolve().parent.parent
+    spec = importlib.util.spec_from_file_location(
+        "region_ableiten", wurzel / "scripts" / "region_ableiten.py")
+    ra = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(ra)
+
+    gesehen = 0
+    for land in ra.LAENDER:
+        datei = wurzel / "curated" / f"{land}_region_korrektur.csv"
+        if not datei.exists():
+            continue
+        gesehen += 1
+        gueltig = set(ra._verwaltungseinheiten(land).values())
+        assert gueltig, f"{land}: keine Regionsliste — dim_nuts fehlt?"
+        zeilen = list(_csv.DictReader(datei.open(encoding="utf-8")))
+        assert zeilen, f"{land}: leere Korrekturtabelle"
+        for z in zeilen:
+            assert z["region_alt"] in gueltig and z["region_neu"] in gueltig, (land, z)
+            assert z["plz"].isdigit(), (land, z)
+            # Ohne Beleg ist es keine Kuratierung, sondern eine Meinung.
+            assert len(z["beleg"] or "") > 20, f"{land}: Zeile ohne Beleg: {z['buyer_name']}"
+            assert (z["stand"] or "").count("-") == 2, (land, z)
+        assert len(ra.region_korrekturen(land)) == len(zeilen), (
+            f"{land}: der Leser verliert Zeilen — doppelter Schluessel oder "
+            f"Spaltennamen geaendert?")
+
+        gold = wurzel / "data" / "gold" / land / "lead_export.parquet"
+        silber = wurzel / "data" / "silver" / land / "notice_parties"
+        if not (gold.exists() and silber.exists()):
+            continue
+        import duckdb as _d
+        con = _d.connect()
+        plz = dict(con.execute(f"""SELECT notice_id, any_value(postal_code)
+            FROM read_parquet('{silber.as_posix()}/*/*.parquet')
+            WHERE role = 'buyer' AND postal_code IS NOT NULL GROUP BY 1""").fetchall())
+        urteile = ra.region_korrekturen(land)
+        getroffen = set()
+        for lid, name, n1 in con.execute(f"""SELECT lead_id, buyer_name, buyer_nuts1
+                FROM read_parquet('{gold.as_posix()}')
+                WHERE buyer_nuts1 IS NOT NULL AND buyer_nuts1 <> ''""").fetchall():
+            schl = ((name or "").strip(), str(plz.get(lid, "")).strip(), n1)
+            if schl in urteile:
+                getroffen.add(schl)
+        tot = set(urteile) - getroffen
+        assert not tot, (
+            f"{land}: {len(tot)} kuratierte Zeile(n) treffen keinen Lead mehr — "
+            f"Umbenennung, Umzug oder ein Fix an der Quelle: {sorted(tot)[:3]}")
+    if not gesehen:
+        pytest.skip("keine kuratierte Regionstabelle vorhanden")
+
+
+def test_kuratierte_korrektur_schlaegt_den_amtlichen_wert():
+    """Die Korrektur muss BEIDES erreichen: das Label und die NUTS-Kennung.
+
+    Der Regionsfilter im Explorer prüft `l.nuts.startsWith(code)`, nicht den Namen
+    (`ORTE` in `web/lib/explorerCore.js` kennt nur die 16 dreistelligen Kennungen). Wer
+    nur `region` korrigiert, repariert die Anzeige und lässt den Filter falsch — der
+    Lead sähe richtig aus und stünde weiter im falschen Bundesland."""
+    wurzel = pathlib.Path(__file__).resolve().parent.parent
+    roh = (wurzel / "scripts" / "export_web_leads.py").read_text(encoding="utf-8")
+    code = "\n".join(z for z in roh.splitlines() if not z.strip().lstrip("-").startswith("#"))
+    assert "'korrektur_kuratiert' THEN 'korrigiert'" in code
+    assert "region_abgeleitet_nuts" in code, "die korrigierte NUTS-Kennung wird nicht exportiert"
+    # Um `"regionQuelle":` herum steht der Lead-Datensatz — `"region":` allein kommt
+    # auch im Los-Datensatz vor und traefe die falsche Stelle.
+    mitte = code.index('"regionQuelle":')
+    block = code[mitte - 700:mitte + 700]
+    for feld in ('"region":', '"nuts":'):
+        stelle = block.index(feld)
+        assert "_region_korr" in block[stelle:stelle + 200], (
+            f"{feld} bevorzugt die kuratierte Korrektur nicht")
+
+
 def test_export_liest_attribute_und_regionsfuellung_ueber_alle_laender():
     """Zwei DE-feste Pfade mitten in einem sonst laenderfaehigen Export: der
     Angebotsaufwand lag fuer AT/CH bei genau 0 %, und die Regionsableitung waere
