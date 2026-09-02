@@ -4386,6 +4386,65 @@ def test_keine_orte_kennt_die_oesterreichische_falle():
         assert wort in ra._KEINE_ORTE
 
 
+def test_ortsverzeichnis_riegelt_auch_den_basisnamen():
+    """„weilheim" galt als eindeutig, weil „Weilheim in Oberbayern" anders geschrieben ist.
+
+    Der Eindeutigkeits-Riegel verglich bis zum 2026-09-02 VOLLE Namen. Damit bekam
+    „Staatliches Bauamt Weilheim" (82362 Weilheim i.OB, Bayern) Baden-Wuerttemberg —
+    24 Leads, und dieselbe Klasse traf „Heidenheim", „Esslingen", „Ehingen",
+    „Dillingen" und ausgerechnet „neustadt", das der Docstring als Musterbeispiel
+    eines ausgeschlossenen Namens nennt.
+
+    Zweite Haelfte derselben Sache: die geonames-PLZ-Datei fuehrt deutsche Grosskunden
+    unter ihrem FIRMENnamen. Ohne diesen Filter macht eine einzige Koelner Versicherung
+    („BERLIN-KOELNISCHE VERSICHERUNGEN") den Namen „berlin" mehrdeutig — der Riegel
+    wuerde dann die Hauptstadt aus dem Verzeichnis werfen.
+    """
+    import importlib.util
+    wurzel = pathlib.Path(__file__).resolve().parent.parent
+    if not (wurzel / "data/reference/geonames/DE.txt").exists():
+        pytest.skip("geonames-Ortsdatei fehlt")
+    spec = importlib.util.spec_from_file_location(
+        "region_ableiten", wurzel / "scripts" / "region_ableiten.py")
+    ra = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(ra)
+    orte = ra.ortsverzeichnis("DE")
+    for zweideutig in ("weilheim", "heidenheim", "neustadt", "esslingen", "ehingen",
+                       "dillingen", "koenigstein"):
+        assert zweideutig not in orte, (
+            f"'{zweideutig}' steht wieder im Ortsverzeichnis — vergleicht der Riegel "
+            f"wieder nur volle Schreibweisen statt der Wortpraefixe?")
+    # Die Gegenprobe: eindeutige Namen bleiben. „berlin" faellt nur, wenn der
+    # Firmenfilter aus ist — dann ist die Reihenfolge der beiden Riegel vertauscht.
+    for eindeutig in ("berlin", "erfurt", "quakenbrueck", "weilheim an der teck"):
+        assert orte.get(eindeutig), f"'{eindeutig}' fehlt im Ortsverzeichnis"
+
+
+def test_gegenprobe_prueft_die_plz_nicht_den_ortsnamen():
+    """Der Ortsname war der falsche Zeuge: 134 von 274 entscheidbaren Widerspruechen
+    (49 %) waren Fehlalarm — die Region stimmte, der Ortsname war zweideutig. Geprueft
+    wird seit dem 2026-09-02 gegen die Kaeufer-PLZ (99,8 % eindeutig statt 95 %,
+    bei 97 % der Leads mit Region vorhanden statt bei 7 %)."""
+    import importlib.util
+    wurzel = pathlib.Path(__file__).resolve().parent.parent
+    spec = importlib.util.spec_from_file_location(
+        "region_ableiten", wurzel / "scripts" / "region_ableiten.py")
+    ra = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(ra)
+    quelle = (wurzel / "scripts" / "region_ableiten.py").read_text(encoding="utf-8")
+    assert "plz_verzeichnis" in quelle and "_kaeufer_plz" in quelle
+    block = quelle.split("Widerspruch Anschrift")[-1].split("def ")[0]
+    assert "plz_reg.get(" in block and " orte.get(" not in block, (
+        "die Gegenprobe greift wieder auf das Ortsverzeichnis statt auf die PLZ zurueck")
+    if not (wurzel / "data/reference/geonames/DE.txt").exists():
+        pytest.skip("geonames-Ortsdatei fehlt")
+    plz = ra.plz_verzeichnis("DE")
+    assert plz.get("82362") == "DE2", "82362 Weilheim i.OB liegt in Bayern"
+    # 12529 liegt gleichzeitig in Schoenefeld (BB) und Berlin — die Grenzlage des BER.
+    # Genau solche PLZ duerfen NICHTS melden, sonst ist der Flughafen wieder ein „Fehler".
+    assert "12529" not in plz
+
+
 def test_export_liest_attribute_und_regionsfuellung_ueber_alle_laender():
     """Zwei DE-feste Pfade mitten in einem sonst laenderfaehigen Export: der
     Angebotsaufwand lag fuer AT/CH bei genau 0 %, und die Regionsableitung waere

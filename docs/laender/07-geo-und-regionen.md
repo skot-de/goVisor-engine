@@ -91,6 +91,101 @@ Zwei weitere Regeln aus der DE-Erfahrung:
   in „Wiesendendorf" findet und „ahlen" in „Zahlenwerk".
 - **Der längste Treffer gewinnt.** „Stadt Neustadt am Rübenberge" traf sonst auf
   „neustadt" (Thüringen) statt auf den vollen Namen.
+- **Eindeutig heisst: auch der Basisname ist eindeutig** (seit 2026-09-02). Der Riegel
+  verglich VOLLE Schreibweisen und lief damit an sich selbst vorbei: die PLZ-Datei führt
+  „Weilheim an der Teck" (BW), „Weilheim in Oberbayern" (BY) und ein blosses „Weilheim"
+  (BW) — drei Zeichenketten, also galt „weilheim" als eindeutig. „Staatliches Bauamt
+  Weilheim", das in 82362 Weilheim i.OB sitzt, bekam Baden-Württemberg. Dieselbe Klasse:
+  „heidenheim", „esslingen", „ehingen", „dillingen", „koenigstein" — und ausgerechnet
+  „neustadt", das der Docstring als Musterbeispiel eines ausgeschlossenen Namens nennt.
+  Geprüft wird deshalb auf **Wortpräfixe**: ein Name ist nur eindeutig, wenn keine
+  längere Ortsbezeichnung in einer anderen Region mit denselben Wörtern beginnt. Kosten:
+  10 von 5.012 Ableitungen; Ertrag: Selbsttest-Widerspruch 8,5 % → 5,0 % (2026-09-02).
+
+## ⚠ Die PLZ-Datei von geonames ist kein Ortsverzeichnis
+
+Sie führt jede Postleitzahl auf — und die Deutsche Post vergibt eigene an Grosskunden.
+Dort steht dann die **Firma**, wo man den Ort erwartet: „siemens", „bosch",
+„a nattermann cie gmbh", „BERLIN-KÖLNISCHE VERSICHERUNGEN". Gemessen 2026-09-02:
+
+```
+DE   5.317 von 17.628 Namen sind keine Orte  (30 %, gemessen 2026-09-02)
+AT       0            CH       1                     ← eine deutsche Eigenart
+```
+
+Ein Käufername, der eine solche Zeichenfolge enthält, bekäme ein erfundenes Bundesland.
+Gefiltert wird gegen den geonames-**Gazetteer** (`<LAND>_gazetteer.txt`, Merkmalsklasse
+P = bewohnter Ort, A = Verwaltungseinheit).
+
+⚠ **Die Reihenfolge der beiden Riegel ist nicht beliebig.** Erst Firmen raus, dann
+Namen vergleichen. Eine einzige Kölner Versicherung mit „BERLIN" im Namen macht sonst
+„berlin" mehrdeutig — der Basisnamen-Riegel wirft die Hauptstadt aus dem Verzeichnis und
+kostet 32 belegte Widerspruchsfunde.
+
+⚠ **EU-weit offen:** der Gazetteer liegt bisher nur für DE. Für Länder ohne Datei bleibt
+der Filter aus — vertretbar, solange die PLZ-Datei dort sauber ist (für AT/CH nachgemessen),
+aber vor jedem neuen Land nachzuzählen.
+
+## Die Gegenprobe: gegen die PLZ, nicht gegen den Ortsnamen
+
+Dieselbe Mechanik prüft auch die Leads, die schon eine Region TRAGEN — sonst gilt ein
+dastehender Wert unbesehen als belegt (s. Fallenkatalog D13).
+
+⚠ **Der erste Zeuge war der falsche.** Die Fassung vom 2026-09-01 prüfte gegen den
+ORTSNAMEN und meldete 336 Widersprüche, sichtbar im Frontend als
+`regionQuelle='widersprüchlich'`. Am 2026-09-02 wurde **jeder einzelne** gegen die
+Käufer-PLZ aus Silber nachgeprüft — Vollerhebung, keine Stichprobe:
+
+```
+entscheidbar (PLZ eindeutig)               274 von 336
+  Region stimmt, der Ortsname war falsch   134   49 %   ← Fehlalarm
+  Region wirklich falsch                   140   51 %
+nicht entscheidbar                          62          ← 61 davon der BER
+```
+
+Der Marker sagte also jedem zweiten Mal etwas Falsches über einen richtigen Wert.
+
+**Die PLZ ist der bessere Zeuge, und zwar in beide Richtungen** (gemessen 2026-09-02):
+
+```
+                 Ortsname                       Postleitzahl
+prüfbar          7 % der Leads mit Region       97 %
+eindeutig        95 % der Namen                 99,8 %   (AT 97,8 %, CH 99,4 %)
+```
+
+Sie kennt keine Namensvarianten, keinen Behördenzusatz und keine Umlautfaltung — die
+Falle aus Kapitel 14 (`Łódź` → `['d']`) trifft sie gar nicht erst. Die verbleibenden
+Mehrdeutigkeiten sind echt und keine Schwäche: 12529 liegt gleichzeitig in Schönefeld
+(Brandenburg) und in Berlin, die Grenzlage des Hauptstadtflughafens. Solche PLZ melden
+nichts.
+
+**Drei Tore, damit der Marker nur meldet, was ein Fehler IST:**
+
+1. **Gültige Regionskennung**, nicht Präfix + Länge. „DEZ"/„ATZZ" sind Extra-Regio und
+   bestehen jeden Längentest (DE 9, AT 513, CH 784 Leads, 2026-09-02).
+2. **Ein Standort.** Führt ein Käufer mehrere Anschriften, ist eine abweichende Region
+   keine Falschangabe, sondern eine andere Niederlassung — Autobahn GmbH, BWI, DB Netz,
+   BAAINBw, Deutsche Rentenversicherung Berlin-Brandenburg. DE 189 → 120 Funde.
+3. **Veto des Leistungsorts.** Stützt `perf_nuts` (unabhängiger Zeuge, nicht aus der
+   Käufer-NUTS abgeleitet) die Region, der die Anschrift widerspricht, ist sie keine
+   Falschangabe, sondern eine Aussage über den Auftrag: die AOK PLUS sitzt in Erfurt und
+   schreibt für Sachsen aus. DE 120 → 80 Funde.
+   ⚠ Nur als Veto, nie als Kronzeuge: `perf_nuts` ist bei DE 33 %, AT 10 % gefüllt.
+
+Stand nach der Korrektur (2026-09-02, `--probe`):
+
+```
+        prüfbar   Widersprüche   vorher (Ortsname)
+DE       81.611             80   336
+AT        6.621             85    34   ← andere Basis: prüfbar war 1.362
+CH        7.191             30    43   ← prüfbar war 4.841
+```
+
+⚠ **Was in AT übrig bleibt, ist eine ehrliche Grenze.** 75 der 85 Funde sind zwei
+Käufer — Flughafen Wien AG (Sitz Schwechat/AT12, meldet AT13) und OMV Austria E&P. Eine
+Organisation mit EINER Anschrift, deren Sitz in einer anderen Region liegt als die, die
+sie angibt, ist aus einem einzelnen Satz nicht von einem Tippfehler zu unterscheiden.
+In DE trägt diese Klasse 3 % der Funde, in AT 80 %.
 
 ## Verwaltungsnamen an geonames knüpfen
 
