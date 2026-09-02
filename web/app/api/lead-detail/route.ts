@@ -76,6 +76,22 @@ async function loadDocSignals(): Promise<Record<string, DocSignals>> {
   return docSignals!;
 }
 
+/* Anforderungsprofil (Kennzahl 2): je Bereich die Anzahl, dazu Median und oberstes Zehntel.
+ *
+ * ⚠ Jeder Bereich traegt seine ART mit (`huerde` / `aufwand` / `umfang`). Die Uebergabe nennt
+ * die Kennzahl „Strenge", und fuer die Haelfte der Bereiche stimmt das nicht: `formalitaet`
+ * sind ausfuellbare Formulare, `leistung` ist Umfang. Nur `eignung` und `ausschluss` sind
+ * Huerden. Das Wort in der Anzeige haengt an der Art, nicht an der Zahl. */
+type Profil = { bereiche: Record<string, { n: number; median: number; hoch: number; art: string }>;
+                leads: Record<string, Record<string, number>> };
+let profil: Profil | null = null;
+async function loadProfil(): Promise<Profil> {
+  if (profil) return profil;
+  try { const roh = await loadDataFile("anforderungsprofil.json"); profil = roh ? JSON.parse(roh) : { bereiche: {}, leads: {} }; }
+  catch { profil = { bereiche: {}, leads: {} }; }
+  return profil!;
+}
+
 /* Zeitfenster gegen Aufwand (Kennzahl 1). Eine kleine Datei: je Vorgang die Tage zwischen
  * Bekanntmachung und Frist, dazu Median und Viertel je Land.
  *
@@ -198,6 +214,30 @@ export async function GET(req: Request) {
     const eintrag = fw.leads[id];
     const lage = eintrag ? fw.rahmen[`${eintrag.land}:${eintrag.rahmen}`] : undefined;
     if (eintrag && lage && an) detail.lbFenster = { tage: eintrag.tage, rahmen: eintrag.rahmen, ...lage };
+    /* Anforderungsprofil: nur die Bereiche, in denen dieser Vorgang im obersten Zehntel
+       liegt. ⚠ Hoechstens zwei, nach Abstand zum Median sortiert — sieben Zeilen „mehr als
+       ueblich" waeren keine Aussage mehr, sondern eine Tabelle. */
+    const pf = await loadProfil();
+    const zahlen = pf.leads[id];
+    if (zahlen && an) {
+      const land = String((detail as { land?: string }).land || "DE");
+      const auffaellig = Object.entries(zahlen)
+        .map(([bereich, k]) => ({ bereich, k, lage: pf.bereiche[`${land}:${bereich}`] }))
+        .filter((x) => x.lage && x.k >= x.lage.hoch)
+        /* ⚠ ART VOR VERHAELTNIS. Zuerst sortierte ich nur nach dem Vielfachen des Medians —
+           dann stand „Zuschlagskriterien 21 statt 3" (Umfang, 7-fach) VOR
+           „Ausschlusskriterien 17 statt 5" (Huerde, 3,4-fach). Eine Huerde kann die
+           Bewerbung kosten, ein langer Text nicht. Bei nur zwei Plaetzen entscheidet die
+           Reihenfolge darueber, was der Nutzer ueberhaupt zu sehen bekommt. */
+        .sort((a, b) => {
+          const rang = (art: string) => (art === "huerde" ? 0 : art === "aufwand" ? 1 : 2);
+          const d = rang(a.lage!.art) - rang(b.lage!.art);
+          return d !== 0 ? d : (b.k / b.lage!.median) - (a.k / a.lage!.median);
+        })
+        .slice(0, 2)
+        .map((x) => ({ bereich: x.bereich, k: x.k, median: x.lage!.median, art: x.lage!.art }));
+      if (auffaellig.length) detail.lbProfil = auffaellig;
+    }
     // Dateiliste des Portals — was dort LIEGT, ohne dass wir es gelesen haben.
     const li = await ladeDateiliste(id);
     if (li) detail.lbListe = li;

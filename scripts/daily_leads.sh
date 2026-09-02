@@ -1002,6 +1002,8 @@ if $PY -m govisor.cli signals-docs; then
   # Veroeffentlichungsdatum aus Silber — laeuft deshalb NACH der Gold-Kette, nicht davor.
   # ⚠ Fehlt die Datei, verschwindet die Zeile im Lead-Detail lautlos. Deshalb laut melden.
   $PY scripts/export_fenster.py || echo "  ⚠ fenster.json nicht geschrieben — Kennzahl 1 fehlt im Detail."
+  # Anforderungsprofil (Kennzahl 2). Braucht `doc_checklist` in Gold.
+  $PY scripts/export_anforderungsprofil.py || echo "  ⚠ anforderungsprofil.json nicht geschrieben — Kennzahl 2 fehlt im Detail."
 else
   echo "  ⚠ Signal-Extraktion übersprungen."
 fi

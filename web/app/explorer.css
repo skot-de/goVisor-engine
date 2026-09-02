@@ -2401,3 +2401,19 @@ td.c-band .passung i{display:none}
 /* Widersprüchlich ist etwas anderes als abgeleitet: hier steht ein Wert, dem eine andere
    Angabe derselben Quelle widerspricht. Das verdient die Warnfarbe, nicht die graue. */
 .rq-wid { background: var(--flag-wash); color: var(--flag); }
+
+/* ANFORDERUNGSPROFIL (Kennzahl 2, 2026-09-02). Worin verlangt dieser Vorgang mehr als üblich?
+
+   ⚠ Die Farbe folgt der ART, nicht der Zahl. Eine Hürde (Eignung, Ausschluss) kann die
+   Bewerbung kosten und bekommt die Warnfarbe; Aufwand und Umfang sind Arbeit, keine
+   Hindernisse, und bleiben grau. Die Übergabe nennt die Kennzahl „Strenge" und meint alle
+   Bereiche gleich, aber ein ausführliches Leistungsverzeichnis ist nicht streng. */
+.profil { margin: 0 0 var(--s4); padding: var(--s3) var(--s4); background: var(--surface-2);
+  border-radius: var(--r); }
+.profil-k { display: block; font-family: var(--mono); font-size: 9.5px; font-weight: 600;
+  letter-spacing: .1em; text-transform: uppercase; color: var(--ink-400); margin-bottom: var(--s2); }
+.profil-l { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 5px; }
+.profil-z { display: flex; flex-wrap: wrap; gap: 8px; align-items: baseline; font-size: var(--t-sm); }
+.profil-z b { font-weight: 650; color: var(--ink-900); }
+.profil-z span { color: var(--ink-500); font-variant-numeric: tabular-nums; }
+.profil-huerde b { color: var(--flag); }

@@ -363,8 +363,6 @@ _EIGNUNGSCHECK: tuple[Kennzahl, ...] = (
 # offenen Vorgaengen mit mehreren Zuschlagskriterien. Sie doppelt einzutragen haette den
 # Eindruck erzeugt, da sei noch etwas zu bauen.
 _UEBERGABE: tuple[Kennzahl, ...] = (
-    _k("strengeAlsPerzentil", "Strenge als Perzentil je Bereich", "markt",
-       "Median und 90. Perzentil aller analysierten Vorgänge"),
     _k("fingerabdruckVergabestelle", "Fingerabdruck der Vergabestelle", "markt",
        "wie oft die Stelle etwas verlangt gegen marktweit"),
     _k("formularaufwand", "Formularaufwand", "markt", "Median 22 Pflichtfelder"),
@@ -424,6 +422,31 @@ _AKTIVIERUNG: tuple[Kennzahl, ...] = (
 # zwischen 28 und 40 Tagen, weil dort die gesetzlichen Mindestfristen liegen. Unterschwellig
 # gelten andere: unter den Vorgaengen mit hoechstens 28 Tagen sind 21 % UVgO, im Rest 4 %.
 # Ein Vergleichswert, der zwei Rechtsgrundlagen mischt, ist keiner.
+# ── Anforderungsprofil (Kennzahl 2, gebaut am 2026-09-02) ────────────────────────────────
+# ⚠ Die Uebergabe nennt sie „Strenge als Perzentil je Bereich". Das Wort stimmt fuer die
+# Haelfte der Bereiche nicht: `formalitaet` sind ausfuellbare Formulare (Aufwand),
+# `leistung` ist Umfang. Huerden sind nur `eignung` und `ausschluss`. Der Eintrag heisst
+# deshalb anders als im Papier — und die Anzeige waehlt ihr Wort nach der Art des Bereichs.
+_ANFORDERUNGSPROFIL: tuple[Kennzahl, ...] = tuple(
+    Kennzahl(f"profil_{b}", lab, "markt",
+             "Median und oberstes Zehntel desselben Bereichs, je Land",
+             # ⚠ KEIN `spalte`. Der Bereichsname ist ein Spalten-WERT (`doc_checklist.bereich`),
+             # kein Spaltenname; das Feld traegt den exakten Namen der Quellspalte, an dem
+             # Export, API-Typ und Renderer haengen. Ihn hier zu missbrauchen hiesse, den
+             # einen Vertrag aufzuweichen, der das Verzeichnis pruefbar macht — der Waechter
+             # hat es sofort gemeldet.
+             "lead-detail", "export_anforderungsprofil.py", "", "Anzahl")
+    for b, lab in (
+        ("eignung", "Anforderungsprofil: Eignungsnachweise"),
+        ("ausschluss", "Anforderungsprofil: Ausschlusskriterien"),
+        ("formalitaet", "Anforderungsprofil: Formalitäten"),
+        ("termin", "Anforderungsprofil: Termine und Fristen"),
+        ("leistung", "Anforderungsprofil: Leistungsbeschreibung"),
+        ("vertrag", "Anforderungsprofil: Vertragsbedingungen"),
+        ("zuschlag", "Anforderungsprofil: Zuschlagskriterien"),
+    )
+)
+
 _ZEITFENSTER: tuple[Kennzahl, ...] = (
     Kennzahl("aufwandGegenZeitfenster", "Aufwand gegen Zeitfenster", "markt",
              "Median desselben Regelwerks (VgV / VOB/A / UVgO), je Land",
@@ -452,7 +475,8 @@ INVENTAR: tuple[Kennzahl, ...] = tuple(
     k for gruppe, flaeche, quelle in _FLAECHEN for k in _mit(gruppe, flaeche, quelle)
 )
 
-ALLE: tuple[Kennzahl, ...] = DOC_SIGNALE + VERGABESTELLEN + _ZEITFENSTER + INVENTAR
+ALLE: tuple[Kennzahl, ...] = (DOC_SIGNALE + VERGABESTELLEN + _ZEITFENSTER
+                              + _ANFORDERUNGSPROFIL + INVENTAR)
 
 
 def nach_flaeche() -> dict[str, tuple[Kennzahl, ...]]:

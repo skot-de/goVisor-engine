@@ -981,6 +981,43 @@ function _clHasBlocks(){ try{ return (JSON.parse(localStorage.getItem('govisor.b
 
 // §7 Checkliste im Prototyp-Design: Kopf (Stand+Haftung) · TOC · funktionale
 // Gruppen mit Zitat+Fundstelle+Kennzeichnung+editierbarem Baustein+Kombi-Button+Abhaken.
+/* KENNZAHL 2 — Anforderungsprofil: worin verlangt dieser Vorgang mehr als üblich?
+ *
+ * ⚠ „STRENGE" IST FUER DIE HAELFTE DER BEREICHE DAS FALSCHE WORT, und das entscheidet die
+ * Anzeige. Nachgesehen, was drinsteht:
+ *
+ *     eignung      „Technische Mindesteignung", „Mindestanzahl vergleichbarer Referenzen"
+ *     ausschluss   „Ausschluss-/Mindestbedingung"          → HUERDEN, sie schliessen aus
+ *     formalitaet  „Ausfuellbares Formular (61 Felder)"    → AUFWAND, kein Hindernis
+ *     leistung     „Leistungsumfang / Menge"               → UMFANG, ausfuehrlich ist nicht streng
+ *
+ * Jeder Bereich traegt deshalb seine Art mit, und das Wort haengt daran. Alles „streng" zu
+ * nennen waere eine Behauptung, die die Daten nicht hergeben.
+ *
+ * ⚠ GEPRUEFT, DASS DIE ZAHL DIE VERGABE MISST UND NICHT UNS: die Mediane sind ueber die Zahl
+ * gelesener Dateien stabil (leistung 25/25/25/26, eignung 3/3/3/3), Korrelation 0,196. Genau
+ * die Pruefung, an der Kennzahl 1 fast gescheitert waere. */
+const _BEREICH_NAME = {
+  eignung: "Eignungsnachweise", ausschluss: "Ausschlusskriterien",
+  formalitaet: "Formalitäten", termin: "Termine und Fristen",
+  leistung: "Leistungsbeschreibung", vertrag: "Vertragsbedingungen", zuschlag: "Zuschlagskriterien",
+};
+function renderProfilBlock(l){
+  const p = l.lbProfil;
+  if(!Array.isArray(p) || !p.length) return '';
+  const zeile = x => {
+    const name = _BEREICH_NAME[x.bereich] || x.bereich;
+    const satz = x.art === 'huerde'
+      ? tk("{n} statt üblich {m}. Eine Hürde mehr als bei neun von zehn Verfahren.", {n: x.k, m: x.median})
+      : x.art === 'aufwand'
+      ? tk("{n} statt üblich {m}. Das ist Arbeit, kein Hindernis.", {n: x.k, m: x.median})
+      : tk("{n} statt üblich {m}. Mehr zu lesen, nicht zwingend mehr zu erfüllen.", {n: x.k, m: x.median});
+    return `<li class="profil-z profil-${esc(x.art)}"><b>${tk(name)}</b><span>${satz}</span></li>`;
+  };
+  return `<div class="profil"><span class="profil-k">${tk("Verlangt mehr als üblich")}</span>
+    <ul class="profil-l">${p.map(zeile).join('')}</ul></div>`;
+}
+
 /* KENNZAHL 1 — Aufwand gegen Zeitfenster.
  *
  * ⚠ DIE ERSTE DEUTUNG WAR FALSCH. Der Median liegt bei 34 Tagen, in jeder Aufwandsklasse
@@ -1070,6 +1107,7 @@ function renderChecklistBlock(a, l){
   };
 
   const fensterHtml = renderFensterBlock(a, l);
+  const profilHtml = renderProfilBlock(l);
   const groupsHtml = _CL_GROUPS.map(([id,title,set])=>{
     const gi = items.filter(it=>set.has(it.req_type)); if(!gi.length) return '';
     return `<details class="grp" id="clg-${id}"${id==='ko'?' open':''}><summary><span class="caret">›</span>${title}<span class="cnt">${gi.length}</span></summary><div class="gbody">${gi.map(itemHtml).join('')}</div></details>`;
@@ -1100,7 +1138,7 @@ function renderChecklistBlock(a, l){
 
   // a2 Erstnutzer: leere Bibliothek → die Textbausteine sind noch generische Vorlagen (§9.1).
   const firstday = !_clHasBlocks() ? `<div class="cl-firstday">${tk("Eure Bausteinbibliothek ist noch leer, die Textvorschläge unten sind generische Vorlagen.")}<a href="/bausteine" class="link">${tk("Bibliothek füllen →")}</a>${tk("Dann setzt goVisor eure echten Referenzen und Zertifikate ein statt Platzhalter.")}</div>` : '';
-  return `<div class="va-checklist" data-clroot="${l.id}">${chead}${firstday}${fensterHtml}${toc}${groupsHtml}${offen}${weitere}</div>`;
+  return `<div class="va-checklist" data-clroot="${l.id}">${chead}${firstday}${fensterHtml}${profilHtml}${toc}${groupsHtml}${offen}${weitere}</div>`;
 }
 
 // Download-Knopf für unsere extrahierte Tabelle (nicht für die Original-Unterlagen — die
