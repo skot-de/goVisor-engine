@@ -47,6 +47,40 @@ def test_die_hochladestrecke_bleibt_dieselbe():
     assert "data-uploaddocs" in block and "data-upstatus" in block
 
 
+def test_die_drei_fehlenden_arten_werden_erfragt():
+    """⚠ Bis zum 2026-09-01 kannte diese Stelle nur die Zuschlagskriterien. Gemessen über
+    8.675 Analysen fehlen drei Arten regelmässig: Zuschlagskriterien 5.978, Eignung 2.099,
+    Aufforderung 1.431."""
+    block = CORE[CORE.index("const FEHLT = {"):CORE.index("const fehlend =")]
+    for art in ("zuschlagskriterien", "eignung", "aufforderung"):
+        assert f"{art}:" in block, f"{art} wird nicht erfragt"
+
+
+def test_die_bitte_ist_spezifisch():
+    """⚠ „Ladet die Unterlagen hoch" hilft niemandem, der schon welche geschickt hat. Jede
+    Bitte muss sagen, WELCHE Datei gebraucht wird."""
+    block = CORE[CORE.index("const FEHLT = {"):CORE.index("const fehlend =")]
+    for wort in ("Wertungsmatrix", "Eignungsformular", "Fristen und Formvorgaben"):
+        assert wort in block, f"die Bitte nennt {wort} nicht"
+
+
+def test_keine_sackgasse_mehr():
+    """⚠ Vorher endete der Abschnitt mit „Bitte selbst prüfen" — richtig, aber der Nutzer
+    erfuhr, dass etwas fehlt, und konnte nichts tun."""
+    assert "Bitte selbst prüfen" not in CORE
+    stelle = CORE[CORE.index("const offen = fehlend.length"):]
+    stelle = stelle[:stelle.index("</details>`")]
+    assert "data-uploaddocs" in stelle, "die Bitte hat keinen Knopf"
+
+
+def test_die_sprungmarke_zaehlt_alle():
+    """Eine „Offen 1" über drei Lücken wäre schlicht falsch."""
+    assert "hasMissZ" not in CORE
+    assert 'data-cljump="clg-offen"' in CORE
+    stelle = CORE[CORE.index('data-cljump="clg-offen"') - 120:CORE.index('data-cljump="clg-offen"') + 160]
+    assert "fehlend.length" in stelle
+
+
 def test_der_deckel_und_die_ehrliche_meldung_stehen():
     """⚠ Regel 2 des Papiers: nie mehr versprechen, als wir halten. Beides war schon da, und
     es muss bleiben — ohne den eigenen Deckel liefe der Upload gegen den allgemeinen und

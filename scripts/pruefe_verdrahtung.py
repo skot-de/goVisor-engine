@@ -110,6 +110,22 @@ AUSNAHMEN_WEB: dict[str, str] = {
 }
 
 # ── Sonde 2: Laenderparitaet ────────────────────────────────────────────────
+# ⚠ DIE LAENDER STEHEN NICHT MEHR HIER. Bis zum 2026-09-02 war die Liste fest
+# (`("DE","AT","CH")`), und damit haette ein viertes Land die Sonde stillschweigend
+# ausgehebelt: seine Tabellen waeren in keiner Pruefung vorgekommen, weil das Land nicht in
+# der Liste stand. Genau die Fehlerklasse, die diese Datei sonst jagt — nur eine Ebene
+# hoeher, im Pruefwerkzeug selbst.
+#
+# Die Laender kommen jetzt aus dem, was auf der Platte liegt. Wer Polen aufnimmt, muss hier
+# nichts eintragen; die Sonde bemerkt es beim naechsten Lauf von allein.
+def _laender(wurzel: pathlib.Path) -> tuple[str, ...]:
+    """Welche Laender haben eine Gold-Ebene? Aus dem Verzeichnis, nicht aus einer Liste."""
+    return tuple(sorted(p.name for p in wurzel.iterdir()
+                        if p.is_dir() and any(p.glob("*.parquet"))))
+
+
+# Rueckfall fuer Aufrufer, die ohne Wurzel arbeiten (und fuer die Tests). Kein Ersatz fuer
+# die Messung oben, nur eine Notleine, wenn es gar keine Gold-Ebene gibt.
 LAENDER = ("DE", "AT", "CH")
 
 # BEWUSST: gibt es zu Recht nur in DE. Der Grund muss die QUELLE nennen, nicht den
@@ -119,6 +135,15 @@ BEWUSST_NUR_DE: dict[str, str] = {
     "doe_demand": "DOeE ist eine rein deutsche Unterschwellenquelle",
     "buyer_profile": "wird vom DOeE-Builder miterzeugt, haengt an derselben Quelle",
     "entity_impressum_beleg": "deutsche Impressumspflicht (§5 DDG) — kein AT/CH-Gegenstueck",
+    # ⚠ NICHT „lohnt sich nicht", sondern gemessen: am 2026-09-01 lagen in AT und CH NULL
+    # Vergabeunterlagen im Volltext (DE: 9.788 Vorgaenge) bei zusammen 2.783 offenen
+    # Vergaben. Eine Dokumentanalyse ohne Dokumente ergibt keine Tabelle, nicht einmal eine
+    # leere. Kommt die erste Unterlage herein (die Bitte dafuer steht seit dem 01.09. in der
+    # Vergabe-Analyse), gehoert dieser Eintrag geprueft.
+    "doc_analysis": "keine Vergabeunterlagen in AT/CH (0 gegen 9.788 Vorgaenge, 2026-09-01)",
+    "doc_checklist": "gehoert zu doc_analysis, dieselbe Quelle",
+    "doc_verworfen": "gehoert zu doc_analysis, dieselbe Quelle",
+    "doc_qa_stand": "gehoert zu doc_analysis, dieselbe Quelle",
     "entity_merge_map": "Entity-Aufloesung ist auf das deutsche Handelsregister getunt",
     "entity_merge_urteil": "gehoert zu entity_merge_map",
     "succession_llm_edges": "LLM-Lauf auf dem DE-Bestand, bewusst nicht auf AT/CH ausgeweitet",
@@ -427,21 +452,31 @@ def sonde_paritaet(zeige_offen: bool = False,
     if not da:
         print("  keine Gold-Ebene gefunden — Sonde uebersprungen")
         return []
+    # Gemessen statt gelistet, s. `_laender`.
+    laender_da = _laender(wurzel) or LAENDER
 
     fehler: list[str] = []
     offen: list[str] = []
     for tabelle, laender in sorted(da.items()):
-        fehlend = [l for l in LAENDER if l not in laender]
-        if not fehlend or "DE" not in laender:
-            continue          # in allen Laendern da, oder gar nicht in DE (kein Paritaets-Fall)
+        fehlend = [l for l in laender_da if l not in laender]
+        # ⚠ FRUEHER STAND HIER `"DE" not in laender`. Eine Tabelle, die es in AT und CH gibt
+        # und in DE nicht, galt damit als „kein Paritaetsfall" und fiel durch — obwohl das
+        # genauso eine Luecke ist. Die Sonde fragt jetzt nur noch, ob eine Tabelle in ALLEN
+        # Laendern liegt, die eine Gold-Ebene haben, und nicht mehr, welches Land das erste ist.
+        if not fehlend:
+            continue
         if tabelle in BEWUSST_NUR_DE or tabelle in AUSNAHMEN_FRISCHE or tabelle in LEICHEN:
             continue
         if tabelle in OFFEN_NUR_DE:
             offen.append(f"    OFFEN   {tabelle} fehlt in {','.join(fehlend)}: "
                          f"{OFFEN_NUR_DE[tabelle]}")
             continue
-        fehler.append(f"{tabelle} gibt es nur in DE (fehlt in {','.join(fehlend)}) und "
-                      f"steht in keiner Liste — bewusste Luecke oder Verdrahtungsfehler?")
+        # ⚠ Sagen, WO sie liegt, nicht „nur in DE". Der alte Satz war eine Annahme ueber das
+        # Ergebnis: bei einer Tabelle, die es in AT und CH gibt und in DE nicht, stand dort
+        # „gibt es nur in DE" — und wer das las, suchte am falschen Ort.
+        fehler.append(f"{tabelle} gibt es in {','.join(sorted(laender))}, fehlt in "
+                      f"{','.join(fehlend)} und steht in keiner Liste — bewusste Luecke "
+                      f"oder Verdrahtungsfehler?")
     if offen:
         if zeige_offen:
             print("\n".join(offen))

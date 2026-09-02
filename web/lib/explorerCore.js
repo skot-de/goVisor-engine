@@ -967,9 +967,25 @@ function _clHasBlocks(){ try{ return (JSON.parse(localStorage.getItem('govisor.b
 // Gruppen mit Zitat+Fundstelle+Kennzeichnung+editierbarem Baustein+Kombi-Button+Abhaken.
 function renderChecklistBlock(a, l){
   const items = (a.checklist||[]).map((it,i)=>({...it, _i:i}));
-  const hasMissZ = (a.missing_expected||[]).includes('zuschlagskriterien');
+  /* AKTIVIERUNG A: welche erwarteten Unterlagen fehlen, und was dagegen zu tun ist.
+     Bis zum 2026-09-01 kannte diese Stelle nur die Zuschlagskriterien und endete in einer
+     Sackgasse („Bitte selbst pruefen"). Gemessen ueber 8.675 Analysen fehlen aber drei Arten
+     regelmaessig: Zuschlagskriterien 5.978, Eignung 2.099, Aufforderung 1.431 — zusammen die
+     haeufigsten Luecken ueberhaupt.
+
+     ⚠ Die Bitte ist SPEZIFISCH. „Ladet die Unterlagen hoch" hilft niemandem weiter, der schon
+     welche geschickt hat; „die Wertungsmatrix fehlt" sagt, WELCHE Datei gebraucht wird. */
+  const FEHLT = {
+    zuschlagskriterien: ["Zuschlagskriterien",
+      "Die Zuschlagskriterien stehen nicht in den Unterlagen, die uns vorliegen. Ladet die Wertungsmatrix hoch, dann ergänzen wir die Auswertung."],
+    eignung: ["Eignungsnachweise",
+      "Welche Eignungsnachweise verlangt werden, steht nicht in den Unterlagen, die uns vorliegen. Ladet das Eignungsformular hoch, dann prüfen wir es gegen euer Profil."],
+    aufforderung: ["Aufforderung zur Angebotsabgabe",
+      "Die Aufforderung zur Angebotsabgabe fehlt uns. Sie trägt Fristen und Formvorgaben; ladet sie hoch, dann ergänzen wir beides."],
+  };
+  const fehlend = (a.missing_expected||[]).filter(m => FEHLT[m]);
   const other = a.other_documents||[];
-  if(!items.length && !hasMissZ && !other.length) return '';
+  if(!items.length && !fehlend.length && !other.length) return '';
   const done = _clDone(l.id);
   let tot=0, dn=0;
 
@@ -997,12 +1013,22 @@ function renderChecklistBlock(a, l){
     return `<details class="grp" id="clg-${id}"${id==='ko'?' open':''}><summary><span class="caret">›</span>${title}<span class="cnt">${gi.length}</span></summary><div class="gbody">${gi.map(itemHtml).join('')}</div></details>`;
   }).join('');
   // §7.4 Offen (Zuschlag nicht gefunden) + §7.5 Weitere Dokumente
-  const offen = hasMissZ ? `<details class="grp" id="clg-offen"><summary><span class="caret">›</span>${tk("Offen")}<span class="cnt">1</span></summary><div class="gbody"><article class="item"><div class="ih"><span style="width:19px;text-align:center;color:var(--ink-400)">—</span><b>${tk("Zuschlagskriterien")}</b><span class="mark m-a" style="margin-left:auto">${tk("Nicht gefunden")}</span></div><div class="ibody"><div class="block" style="color:var(--ink-500);font-size:13px;line-height:1.6">${tk("In den Unterlagen nicht eindeutig auffindbar. Bitte selbst prüfen.")}</div></div></article></div></details>` : '';
+  /* ⚠ EINE BITTE, KEIN BEFUND. Vorher stand hier „In den Unterlagen nicht eindeutig
+     auffindbar. Bitte selbst pruefen." — richtig, aber eine Sackgasse: der Nutzer erfaehrt,
+     dass etwas fehlt, und kann nichts tun. Jetzt steht daneben, WELCHE Datei hilft und ein
+     Knopf, der sie entgegennimmt. Derselbe Upload-Weg wie ueberall, kein zweiter Pfad. */
+  const offen = fehlend.length ? `<details class="grp" id="clg-offen" open><summary><span class="caret">›</span>${tk("Offen")}<span class="cnt">${fehlend.length}</span></summary><div class="gbody">${
+    fehlend.map(m=>`<article class="item"><div class="ih"><span style="width:19px;text-align:center;color:var(--ink-400)">—</span><b>${tk(FEHLT[m][0])}</b><span class="mark m-a" style="margin-left:auto">${tk("Nicht gefunden")}</span></div>
+      <div class="ibody"><div class="block" style="color:var(--ink-500);font-size:13px;line-height:1.6">
+        ${tk(FEHLT[m][1])}
+        <div style="margin-top:var(--s3)"><button class="va-upload-btn" data-uploaddocs="${l.id}">${tk("Hier hochladen (ZIP/PDF)")}</button></div>
+      </div></div></article>`).join('')
+  }</div></details>` : '';
   const weitere = other.length ? `<details class="grp" id="clg-weit"><summary><span class="caret">›</span>${tk("Weitere Dokumente")}<span class="cnt">${other.length}</span></summary><div class="gbody"><div class="flist" style="margin-bottom:11px">${other.slice(0,20).map(f=>`<div class="f"><span class="dot">·</span> ${esc(f)}</div>`).join('')}</div></div></details>` : '';
 
   // TOC-Chips je nicht-leerer Gruppe
   const chips = _CL_GROUPS.map(([id,title,set])=>{ const n=items.filter(it=>set.has(it.req_type)).length; return n?`<button class="tchip" data-cljump="clg-${id}">${esc(title)} <span class="n">${n}</span></button>`:''; }).join('')
-    + (hasMissZ?`<button class="tchip" data-cljump="clg-offen">${tk("Offen")}<span class="n">1</span></button>`:'')
+    + (fehlend.length?`<button class="tchip" data-cljump="clg-offen">${tk("Offen")}<span class="n">${fehlend.length}</span></button>`:'')
     + (other.length?`<button class="tchip" data-cljump="clg-weit">${tk("Weitere")}<span class="n">${other.length}</span></button>`:'');
 
   const portal = (l.unterlagen&&l.unterlagen.url) ? `<a href="${esc(l.unterlagen.url)}" target="_blank" rel="noopener" class="link">${tk("Zum Vergabeportal ↗")}</a>` : '';

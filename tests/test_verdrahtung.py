@@ -174,6 +174,46 @@ def test_keine_ausnahme_fuer_etwas_das_es_nicht_mehr_gibt(name):
 
 
 @pytest.mark.skipif(not _gold_da(), reason="keine Gold-Ebene (frische CI ohne Ingest)")
+def _pv():
+    """Das Pruefskript als Modul. Es liegt in `scripts/`, nicht im Paket."""
+    import importlib.util
+    import pathlib as _p
+    pfad = _p.Path(__file__).resolve().parent.parent / "scripts" / "pruefe_verdrahtung.py"
+    spec = importlib.util.spec_from_file_location("pv", pfad)
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    return mod
+
+
+def test_die_sonde_kennt_ihre_laender_nicht_auswendig(tmp_path):
+    """⚠ Die Fehlerklasse dieses Skripts, eine Ebene hoeher: im Pruefwerkzeug selbst.
+
+    Bis zum 2026-09-02 stand `LAENDER = ("DE","AT","CH")` fest. Ein viertes Land haette die
+    Sonde damit stillschweigend ausgehebelt — seine Tabellen waeren in keiner Pruefung
+    vorgekommen, weil das Land nicht in der Liste stand. Genau so ist Polen zwei Monate lang
+    mit 326.485 Bekanntmachungen in Silber gelegen, ohne dass eine Sonde etwas meldete.
+    """
+    for land in ("DE", "AT", "PL"):
+        (tmp_path / land).mkdir()
+        (tmp_path / land / "leads.parquet").write_bytes(b"x")
+    assert _pv()._laender(tmp_path) == ("AT", "DE", "PL"), "Polen wird nicht erkannt"
+
+
+def test_eine_tabelle_ohne_DE_faellt_nicht_durch(tmp_path):
+    """⚠ Frueher stand in der Bedingung `"DE" not in laender: continue`. Eine Tabelle, die es
+    in AT und CH gibt und in DE nicht, galt damit als „kein Paritaetsfall" und fiel durch —
+    obwohl das genauso eine Luecke ist."""
+    for land in ("DE", "AT", "PL"):
+        (tmp_path / land).mkdir()
+        (tmp_path / land / "leads.parquet").write_bytes(b"x")
+    (tmp_path / "PL" / "nur_polen.parquet").write_bytes(b"x")
+    befunde = _pv().sonde_paritaet(wurzel=tmp_path)
+    assert any("nur_polen" in b for b in befunde), "eine Tabelle ohne DE wird uebersehen"
+    # ⚠ Und die Meldung sagt, WO sie liegt. „gibt es nur in DE" waere hier schlicht falsch
+    # gewesen und haette jeden an den falschen Ort geschickt.
+    assert any("gibt es in PL" in b for b in befunde)
+
+
 def test_die_echte_datenlage_ist_sauber():
     """Der eigentliche Waechter: neue Verdrahtungsfehler lassen ab sofort die
     Suite fallen, nicht erst den Zufall."""
