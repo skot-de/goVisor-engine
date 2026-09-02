@@ -196,7 +196,22 @@ def test_die_sonde_kennt_ihre_laender_nicht_auswendig(tmp_path):
     for land in ("DE", "AT", "PL"):
         (tmp_path / land).mkdir()
         (tmp_path / land / "leads.parquet").write_bytes(b"x")
-    assert _pv()._laender(tmp_path) == ("AT", "DE", "PL"), "Polen wird nicht erkannt"
+    # ⚠ NACHGESCHAERFT AM 2026-09-02. Bis dahin galt: jedes Land mit Gold zaehlt mit. Dann
+    # schrieb `build_vorgaenge.py` als erster laenderagnostischer Schritt auch fuer PL und EU
+    # — beide dokumentierte Baustellen — und die Paritaetspruefung meldete 40 bestehende
+    # Tabellen als Luecke. Die Regel lautet jetzt: ein Land mit Gold zaehlt mit, ES SEI DENN
+    # es steht als Baustelle in `BEWUSST_OHNE_GOLD`. Der Kern bleibt: KEINE fest eingetippte
+    # Laenderliste — faellt der Eintrag, zaehlt das Land ab dem naechsten Lauf voll mit.
+    pv = _pv()
+    assert pv._laender(tmp_path) == ("AT", "DE"), "die Baustelle PL zaehlt weiter mit"
+    assert "PL" in pv.BEWUSST_OHNE_GOLD, "PL muesste als Baustelle eingetragen sein"
+    ohne_pl = {k: v for k, v in pv.BEWUSST_OHNE_GOLD.items() if k != "PL"}
+    alt_liste, pv.BEWUSST_OHNE_GOLD = pv.BEWUSST_OHNE_GOLD, ohne_pl
+    try:
+        assert pv._laender(tmp_path) == ("AT", "DE", "PL"), \
+            "ohne Baustellen-Eintrag muss Polen sofort mitzaehlen — sonst steht die Liste doch im Code"
+    finally:
+        pv.BEWUSST_OHNE_GOLD = alt_liste
 
 
 def test_eine_tabelle_ohne_DE_faellt_nicht_durch(tmp_path):

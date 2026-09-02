@@ -1051,6 +1051,11 @@ $PY scripts/export_doc_analysis.py || echo "  ⚠ doc-analysis nicht zerlegt —
 # abfragbar noch verbindbar noch dauerhaft: ein Neubau von `web/data` haette es gekostet.
 # Direkt hinter den Erzeuger gestellt, aus demselben Grund wie der Export darueber.
 $PY scripts/build_doc_analysis.py || echo "  ⚠ doc_analysis/doc_checklist nicht gebaut — die Auswertung bleibt auf dem alten Tabellenstand."
+
+# Vorgaenge: Ausschreibung + Dokumente + Zuschlag unter EINER Kennung. Laeuft NACH
+# `build_doc_analysis`, weil es `doc_checklist` liest, um die Unterlagen anzuhaengen.
+# Alle Laender in einem Lauf, rund 25 Sekunden.
+$PY scripts/build_vorgaenge.py || echo "  ⚠ vorgaenge/vorgang_notice nicht gebaut — die Vorgangsakte bleibt auf dem alten Stand."
 # Verfahrenskalender (#16) — MUSS nach `export_doc_analysis` laufen: er liest die
 # Splitterdateien, die dort entstehen. Baut je offenem Lead die Terminliste aus
 # Bekanntmachung (Angebotsfrist) und Unterlagen (Bindefrist, Bieterfragen, Ortstermin …).

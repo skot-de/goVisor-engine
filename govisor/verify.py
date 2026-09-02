@@ -128,6 +128,17 @@ def gold_integrity(cfg: Config, country: str = "DE") -> list[tuple[str, int]]:
         # gemessen 2026-09-01: 0 Waisen bei 7.188 bzw. 396.284 Zeilen.
         ("doc_analysis.notice → quality", "doc_analysis.parquet", "notice_id",
          "quality.parquet", "notice_id"),
+        # ⚠ Vorgaenge: beide Tabellen haengen an `notice_id`. `vorgang_notice` ist die
+        # Mitgliedschaft (welche Bekanntmachung gehoert in welche Akte) — eine Waise dort
+        # laesst eine Bekanntmachung lautlos aus ihrem Vorgang fallen.
+        ("vorgang_notice.notice → quality", "vorgang_notice.parquet", "notice_id",
+         "quality.parquet", "notice_id"),
+        # ⚠ Eine Waise hier heisst: ein Kettenglied zeigt auf einen Vorgang, den es nicht
+        # gibt — die Kette bricht in der Mitte, ohne dass es jemand sieht.
+        ("vorgang_kette.vorgang → vorgaenge", "vorgang_kette.parquet", "vorgang_id",
+         "vorgaenge.parquet", "vorgang_id"),
+        ("vorgang_kette.kette → vorgaenge", "vorgang_kette.parquet", "kette_id",
+         "vorgaenge.parquet", "vorgang_id"),
         ("doc_checklist.notice → quality", "doc_checklist.parquet", "notice_id",
          "quality.parquet", "notice_id"),
         ("doc_verworfen.notice → quality", "doc_verworfen.parquet", "notice_id",

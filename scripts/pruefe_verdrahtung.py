@@ -109,6 +109,13 @@ AUSNAHMEN_WEB: dict[str, str] = {
     "outreach.json": "internes Vertriebswerkzeug, laeuft von Hand",
 }
 
+BEWUSST_OHNE_GOLD: dict[str, str] = {
+    "EU": "Sammelablage fuer Bekanntmachungen ohne eindeutiges Land (282 Saetze, 15 Laender)",
+    "PL": "angefangen und liegengeblieben: 326.485 Saetze, letzte Publikation 2026-06-29. "
+          "KEINE Entscheidung, sondern eine Baustelle — s. docs/land-onboarding.md",
+}
+
+
 # ── Sonde 2: Laenderparitaet ────────────────────────────────────────────────
 # ⚠ DIE LAENDER STEHEN NICHT MEHR HIER. Bis zum 2026-09-02 war die Liste fest
 # (`("DE","AT","CH")`), und damit haette ein viertes Land die Sonde stillschweigend
@@ -119,9 +126,20 @@ AUSNAHMEN_WEB: dict[str, str] = {
 # Die Laender kommen jetzt aus dem, was auf der Platte liegt. Wer Polen aufnimmt, muss hier
 # nichts eintragen; die Sonde bemerkt es beim naechsten Lauf von allein.
 def _laender(wurzel: pathlib.Path) -> tuple[str, ...]:
-    """Welche Laender haben eine Gold-Ebene? Aus dem Verzeichnis, nicht aus einer Liste."""
+    """Welche Laender sind AUFGENOMMEN? Aus dem Verzeichnis, nicht aus einer Liste.
+
+    ⚠ EINE ANGEFANGENE BAUSTELLE IST KEIN AUFGENOMMENES LAND. Am 2026-09-02 hat
+    `build_vorgaenge.py` als erster laenderagnostischer Schritt auch fuer EU und PL
+    geschrieben — beide stehen in `BEWUSST_OHNE_GOLD`. Damit galten sie ploetzlich als
+    Gold-Laender, und die Paritaetspruefung meldete 40 bestehende Tabellen als Luecke. Die
+    Sonde ertrank in Befunden, die alle schon dokumentiert waren.
+
+    Wer hier ausgenommen wird, verschwindet NICHT: Sonde 4 meldet ihn weiter als offene
+    Baustelle, mit Grund. Faellt der Eintrag aus `BEWUSST_OHNE_GOLD` (weil das Land fertig
+    aufgenommen wurde), zaehlt es ab dem naechsten Lauf wieder voll mit."""
     return tuple(sorted(p.name for p in wurzel.iterdir()
-                        if p.is_dir() and any(p.glob("*.parquet"))))
+                        if p.is_dir() and any(p.glob("*.parquet"))
+                        and p.name not in BEWUSST_OHNE_GOLD))
 
 
 # Rueckfall fuer Aufrufer, die ohne Wurzel arbeiten (und fuer die Tests). Kein Ersatz fuer
@@ -182,11 +200,7 @@ OFFEN_NUR_DE: dict[str, str] = {}
 # `data/gold` steht; ein Land, das es nie dorthin geschafft hat, ist fuer sie unsichtbar.
 SILBER = ROOT / "data" / "silver"
 
-BEWUSST_OHNE_GOLD: dict[str, str] = {
-    "EU": "Sammelablage fuer Bekanntmachungen ohne eindeutiges Land (282 Saetze, 15 Laender)",
-    "PL": "angefangen und liegengeblieben: 326.485 Saetze, letzte Publikation 2026-06-29. "
-          "KEINE Entscheidung, sondern eine Baustelle — s. docs/land-onboarding.md",
-}
+
 
 
 def sonde_laender(zeige_offen: bool = False) -> list[str]:
