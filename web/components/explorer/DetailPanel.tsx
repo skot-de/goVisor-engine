@@ -4,7 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import { Hinweise } from "./Hinweise";
 import { Dokumente } from "./Dokumente";
 import {
-  LEADS, WF, STAR, applyState,
+  LEADS, WF, STAR, BRANCHEN, applyState,
   renderUebersicht, renderTeilnahme, renderAnalyse, renderMarkt, renderBuyer,
   renderTeam, renderGate, renderDocs,
   cpvLabel,
@@ -42,7 +42,7 @@ const ExpandIcon = (full: boolean) =>
 
 export function DetailPanel({
   activeId, activeTab, mode, tick, buyerDemo, aktiveRegion, accountLimit,
-  rows = [], alle = [], fehlenderLead = null, onPickLead, onGoto,
+  rows = [], alle = [], fremderLead = null, onPickLead, onGoto,
   onTab, onClose, onExpand, onWf, onStar, onBodyAction,
 }: {
   activeId: string | null;
@@ -58,8 +58,9 @@ export function DetailPanel({
   alle?: BriefLead[];
   // Kennung, die geoeffnet werden SOLLTE, im geladenen Grundraum aber nicht liegt (Deep-Link
   // aus einer anderen Branche, Verlaufszeile einer Vergabestelle). Die Shell entscheidet das
-  // vor dem Oeffnen; hier wird es nur noch angezeigt.
-  fehlenderLead?: string | null;
+  // vor dem Oeffnen und laedt den richtigen Grundraum nach; hier wird nur angezeigt, woran
+  // es gerade ist. `unbekannt` ist der einzige Endzustand — die anderen beiden gehen vorbei.
+  fremderLead?: { id: string; stand: "sucht" | "wechselt" | "unbekannt"; branche?: string } | null;
   onPickLead?: (id: string) => void;
   onGoto?: (ziel: "netzwerk" | "strategie" | "award" | "vorschau" | "jetzt" | "trefferguete") => void;
   onTab: (k: string) => void;
@@ -115,8 +116,8 @@ export function DetailPanel({
   // Leerzustand = Tagesbriefing statt Platzhalter: was ist neu, was drängt, was lohnt sich.
   // Alle Zahlen aus der AKTUELL gefilterten Liste gerechnet — keine erfundenen Werte.
   if (!activeId) {
-    return fehlenderLead
-      ? <NichtGeladen id={fehlenderLead} onClose={onClose} />
+    return fremderLead
+      ? <FremderGrundraum lead={fremderLead} onClose={onClose} />
       : <LeerBriefing rows={rows} alle={alle} onPick={onPickLead} onGoto={onGoto} />;
   }
 
@@ -129,7 +130,7 @@ export function DetailPanel({
      Der Zweig hier bleibt als Netz für den Fall, dass `LEADS` unter einem offenen Lead
      ausgetauscht wird (Grundraumwechsel), bevor React die neue `activeId` sieht. */
   const l = (LEADS as Lead[]).find((x) => x.id === activeId);
-  if (!l) return <NichtGeladen id={activeId} onClose={onClose} />;
+  if (!l) return <FremderGrundraum lead={{ id: activeId, stand: "unbekannt" }} onClose={onClose} />;
   // Sprachfassungen kommen aus dem Detail-JSON (per Object.assign an den Lead gehaengt).
   // Fehlen sie, bleibt alles beim einsprachigen Verhalten — kein Sonderfall im Markup.
   const sprachen: string[] = Array.isArray((l as { sprachen?: string[] }).sprachen)
@@ -330,23 +331,51 @@ export function DetailPanel({
   );
 }
 
-/* Eine Kennung, zu der es im geladenen Grundraum keinen Lead gibt.
+/* Eine Kennung, die der geladene Grundraum nicht enthält — und was daraus wird.
  *
  * Der Fall ist kein Fehler des Nutzers und keine kaputte Datenlage: `LEADS` trägt immer nur
  * EINEN Grundraum (`/api/leads?branche=…`), während Kennungen auch von ausserhalb kommen —
  * aus dem Vergabe-Verlauf einer Vergabestelle (`buyer_recent_awards` läuft über alle
  * Branchen) und aus `?lead=`-Links. Bis zum 2026-09-02 endete genau das in einem stillen
  * `TypeError`: das Panel öffnete sich, fand nichts und stürzte beim ersten Feldzugriff ab.
- * Ein leerer Zustand, der sagt was los ist, ist auch deshalb besser als ein verschluckter
- * Klick — sonst wirkt die Zeile im Käufer-Verlauf einfach kaputt. */
-function NichtGeladen({ id, onClose }: { id: string; onClose: () => void }) {
+ *
+ * ⚠ DREI ZUSTÄNDE, NICHT EINER. Der Grundraumwechsel lädt eine Datei von bis zu 42 MB; das
+ * dauert sichtbar. Wäre das Warten derselbe Zustand wie „gibt es nicht", stünde sekundenlang
+ * eine Absage auf dem Schirm, die sich danach als falsch herausstellt — und wer nach zwei
+ * Sekunden wegklickt, hat eine Fehlmeldung gelesen. Deshalb sagt das Warten, WOHIN es geht.
+ */
+function FremderGrundraum({ lead, onClose }: {
+  lead: { id: string; stand: "sucht" | "wechselt" | "unbekannt"; branche?: string };
+  onClose: () => void;
+}) {
   const { t } = useSprache();
+  const raum = (BRANCHEN as Record<string, string>)[lead.branche || ""] || lead.branche || "";
+
+  if (lead.stand !== "unbekannt") {
+    return (
+      <div className="lb">
+        <div className="lb-head">
+          <p className="lb-h">
+            {lead.stand === "sucht"
+              ? t("Ausschreibung wird gesucht …")
+              : t("Wechselt zu {raum} …", { raum: t(raum) })}
+          </p>
+          <p className="lb-l">
+            {lead.stand === "sucht"
+              ? t("Kennung {id} gehört zu einem anderen Grundraum. Wir suchen, zu welchem.", { id: lead.id })
+              : t("Kennung {id} liegt dort. Der Grundraum wird geladen, dann öffnet sich die Ausschreibung.", { id: lead.id })}
+          </p>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="lb">
       <div className="lb-head">
-        <p className="lb-h">{t("Diese Ausschreibung liegt nicht im geladenen Grundraum")}</p>
+        <p className="lb-h">{t("Diese Ausschreibung finden wir nicht")}</p>
         <p className="lb-l">
-          {t("Kennung {id} — sie gehört zu einer anderen Branche oder ist nicht mehr im Bestand. Wechselt oben den Grundraum, dann steht sie zur Verfügung.", { id })}
+          {t("Kennung {id} liegt in keinem Grundraum — sie ist nicht mehr im Bestand oder war nie darin.", { id: lead.id })}
         </p>
         <button className="lb-h4btn" onClick={onClose}>{t("Zurück zum Überblick")}</button>
       </div>

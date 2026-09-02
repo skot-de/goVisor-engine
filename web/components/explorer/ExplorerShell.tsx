@@ -139,8 +139,13 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
   const [activeId, setActiveId] = useState<string | null>(null);
   /* Kennung, die geoeffnet werden sollte, im geladenen Grundraum aber nicht liegt.
      `activeId` DARF sie nicht aufnehmen — das Detail loest `activeId` gegen `LEADS` auf und
-     stuerzte sonst ab (s. `openLead`). Getrennter Zustand, damit man es trotzdem sagen kann. */
-  const [fehlenderLead, setFehlenderLead] = useState<string | null>(null);
+     stuerzte sonst ab (s. `openLead`). Getrennter Zustand, damit man es trotzdem sagen kann.
+     `stand` unterscheidet die drei Faelle, die sich fuer den Nutzer voellig verschieden
+     anfuehlen: wir suchen noch, wir laden gerade den anderen Grundraum, oder es gibt sie
+     wirklich nicht. Ein gemeinsamer „nicht da"-Zustand haette das Warten wie ein Scheitern
+     aussehen lassen. */
+  const [fremderLead, setFremderLead] =
+    useState<{ id: string; stand: "sucht" | "wechselt" | "unbekannt"; branche?: string } | null>(null);
   const [activeTab, setActiveTab] = useState("uebersicht");
   const [mode, setMode] = useState<"browse" | "read" | "full">("browse");
   const [buyerDemo, setBuyerDemo] = useState("dbnetz");
@@ -287,11 +292,15 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
           } else if (!dl.branche || dl.branche === aktiveBranche) {
             /* Der Grundraum, auf den der Link zeigte, ist geladen — die Kennung ist trotzdem
                nicht dabei. Bis zum 2026-09-02 blieb der Link hier einfach wirkungslos: keine
-               Meldung, kein Hinweis, die Liste stand da wie ohne Parameter. Jetzt sagt es das
-               Panel. (Ohne `?branche=` ist der geladene Grundraum der einzige, den wir prüfen
-               können — deshalb gilt schon der erste Abruf als Antwort.) */
+               Meldung, kein Hinweis, die Liste stand da wie ohne Parameter.
+               Jetzt geht er denselben Weg wie ein Klick im Käufer-Verlauf: nachschlagen, wo
+               die Kennung liegt, und dorthin wechseln. Ein `?lead=` ohne `?branche=` ist
+               damit ein vollwertiger Link — vorher musste der Absender den Grundraum kennen
+               und mitschicken, sonst führte sein Link ins Nichts.
+               Endet terminierend: verortet der Server die Kennung im bereits geladenen
+               Grundraum, sagt `holeFremdenLead` „kennen wir nicht", statt erneut zu wechseln. */
             deepRef.current = null;
-            setFehlenderLead(dl.lead);
+            holeFremdenLead(dl.lead, dl.tab);
           }
         }
       })
@@ -683,8 +692,8 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
        und stuerzte beim ersten Feldzugriff ab („Cannot read properties of undefined").
        Der Rest der Funktion hat den Fall laengst mitgedacht (`if (l && …)`) — nur die eine
        Zeile, die ihn ueberhaupt erst erzeugt, tat es nicht. Also hier, vor allem anderen. */
-    if (!l) { setFehlenderLead(id); setActiveId(null); setMode("browse"); return; }
-    setFehlenderLead(null);
+    if (!l) { holeFremdenLead(id); return; }
+    setFremderLead(null);
     if (l.status === "ungesichtet") l.status = "gesichtet";
     // Verlauf nie ganz leer: beim ERSTEN Öffnen einen Auftakt-Eintrag setzen (length-Guard → einmalig).
     if (!l.log || (l.log as unknown[]).length === 0) logEvent(l, "create", t("Lead in goVisor geöffnet"));
@@ -704,9 +713,48 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
         .catch(() => detailLoaded.current.delete(id));
     }
   }
+  /* Ein Lead aus einem ANDEREN Grundraum: nachschlagen, wo er liegt, und dorthin wechseln.
+   *
+   * WARUM ÜBERHAUPT. Der Vergabe-Verlauf einer Vergabestelle (`data-openlead`) zeigt
+   * Zuschläge über alle Branchen — dort ist der Sprung in einen fremden Grundraum der
+   * Normalfall, nicht die Ausnahme. Bis hierher endete er in einer Meldung „wechselt oben
+   * den Grundraum": richtig, aber es dem Nutzer aufzutragen, was wir selbst tun können.
+   *
+   * ⚠ WARUM EINE MARKE UND KEIN `cancelled`-Flag. Zwischen Klick und Antwort kann der
+   * Nutzer längst etwas anderes geöffnet haben. Eine späte Antwort würde ihn dann aus
+   * seinem Lead heraus in einen Grundraumwechsel reissen, den er nicht mehr wollte —
+   * schlimmer als gar keine Antwort, weil er nichts angefasst hat.
+   *
+   * ⚠ WARUM `deepRef` UND NICHT DIREKT ÖFFNEN. Der Grundraum ist erst nach dem Abruf da;
+   * `openLead` hier aufzurufen fände wieder nichts. `deepRef` ist genau der Vermerk
+   * „öffne das, sobald die Liste steht" — der Deep-Link nutzt ihn seit jeher, samt der
+   * Behandlung des Falls, dass die Kennung auch dort nicht auftaucht. */
+  const fremdMarke = useRef(0);
+  async function holeFremdenLead(id: string, tab = "uebersicht") {
+    setActiveId(null);
+    setMode("browse");
+    setFremderLead({ id, stand: "sucht" });
+    const marke = ++fremdMarke.current;
+    let branche: string | null = null;
+    try {
+      const r = await fetch(`/api/lead-branche?id=${encodeURIComponent(id)}`);
+      if (r.ok) branche = ((await r.json()) as { branche?: string | null }).branche ?? null;
+    } catch { /* Netz weg → wie „kennen wir nicht", unten ehrlich benannt */ }
+    if (marke !== fremdMarke.current) return;   // der Nutzer ist längst woanders
+    /* `branche === aktiveBranche` heisst: der Server verortet die Kennung in dem Grundraum,
+       der bereits geladen ist — und dort liegt sie nachweislich nicht. Ein Wechsel dorthin
+       wäre eine Schleife, die nie ankommt. Dann ist der Bestand älter oder neuer als die
+       geladene Liste, und das ist ein „kennen wir nicht", kein Ladevorgang. */
+    if (!branche || branche === aktiveBranche) { setFremderLead({ id, stand: "unbekannt" }); return; }
+    setFremderLead({ id, stand: "wechselt", branche });
+    deepRef.current = { lead: id, tab, branche };
+    brancheManual.current = true;   // der Wechsel soll stehen bleiben, nicht vom Profil überschrieben werden
+    setAktiveBranche(branche);
+  }
+
   function closeLead() {
     setActiveId(null);
-    setFehlenderLead(null);
+    setFremderLead(null);
     setMode("browse");
   }
   function setTab(k: string) {
@@ -1221,8 +1269,12 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
 
   // Der Grundraumwechsel ist der Weg, den die „nicht geladen"-Meldung vorschlägt — also
   // muss er sie auch wieder wegräumen.
-  function setBranche(k: string) { brancheManual.current = true; setAktiveBranche(k); setActiveId(null); setFehlenderLead(null); }
-  function resetBranche() { setAktiveBranche(profilBranche); setActiveId(null); setFehlenderLead(null); }
+  /* ⚠ Auch den Vermerk loeschen: waehlt der Nutzer waehrend eines laufenden Nachladens von
+     Hand einen Grundraum, darf ihm die alte Kennung nicht hinterherspringen. Die Marke
+     hochzuzaehlen entwertet die noch fliegende Antwort. */
+  function fremdAbbrechen() { fremdMarke.current++; deepRef.current = null; setFremderLead(null); }
+  function setBranche(k: string) { brancheManual.current = true; setAktiveBranche(k); setActiveId(null); fremdAbbrechen(); }
+  function resetBranche() { setAktiveBranche(profilBranche); setActiveId(null); fremdAbbrechen(); }
 
   // Tastatur
   useEffect(() => {
@@ -1568,7 +1620,7 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
               accountLimit={accountLimit}
               rows={rows}
               alle={alleRows}
-              fehlenderLead={fehlenderLead}
+              fremderLead={fremderLead}
               onGoto={(ziel) => {
                 // Ein Klick im Überblick soll die Ansicht wirklich wechseln, nicht nur
                 // etwas einfärben — deshalb dieselben Wege wie über die Rail.

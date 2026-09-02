@@ -27,6 +27,15 @@ WURZEL = Path(__file__).resolve().parent.parent
 WEB = WURZEL / "web"
 SHELL = (WEB / "components" / "explorer" / "ExplorerShell.tsx").read_text(encoding="utf-8")
 PANEL = (WEB / "components" / "explorer" / "DetailPanel.tsx").read_text(encoding="utf-8")
+# ⚠ Nachsichtig lesen, damit eine FEHLENDE Route den betroffenen Test rot macht statt die
+# ganze Datei beim Einsammeln zu sprengen. Sonst nimmt ein geloeschter Endpunkt auch die
+# zwoelf Pruefungen mit, die mit ihm nichts zu tun haben — und die Meldung sagt „Import-
+# fehler" statt „der Endpunkt fehlt".
+_R = WEB / "app" / "api" / "lead-branche" / "route.ts"
+ROUTE = _R.read_text(encoding="utf-8") if _R.exists() else ""
+INDEX = (WEB / "lib" / "leadIndex.ts").read_text(encoding="utf-8")
+MIDDLEWARE = (WEB / "middleware.ts").read_text(encoding="utf-8")
+EXPORT = (WURZEL / "scripts" / "export_web_leads.py").read_text(encoding="utf-8")
 
 
 def _funktion(quelle: str, kopf: str) -> str:
@@ -107,21 +116,106 @@ def test_die_unbekannte_kennung_landet_nicht_in_activeid():
     einem Sonderfall drumherum."""
     code = _ohne_kommentar(_funktion(SHELL, "function openLead(id: string)"))
     kopf = code[:code.index("setActiveId(id)")]
-    assert "setFehlenderLead(id)" in kopf
-    assert "setActiveId(null)" in kopf
+    assert "holeFremdenLead(id)" in kopf
+    hole = _ohne_kommentar(_funktion(SHELL, "async function holeFremdenLead"))
+    assert "setActiveId(null)" in hole
 
 
-def test_der_deeplink_verschluckt_die_kennung_nicht_mehr():
-    """Ein `?lead=<fremde-id>` war vorher wirkungslos: die Liste stand da wie ohne Parameter,
-    ohne jeden Hinweis. Sobald der angefragte Grundraum geladen ist, muss es gesagt werden."""
+# ── 2. Das Nachladen: der Klick landet dort, wo der Lead liegt ───────────────────────
+
+def test_der_fremde_grundraum_wird_nachgeschlagen_und_gewechselt():
+    """⚠ DER KERN DIESER STUFE. Im Käufer-Verlauf ist der Sprung in einen anderen Grundraum
+    der Normalfall, nicht die Ausnahme (`buyer_recent_awards` läuft über alle Branchen).
+    Dem Nutzer aufzutragen, was wir selbst tun können, ist eine halbe Antwort."""
+    hole = _ohne_kommentar(_funktion(SHELL, "async function holeFremdenLead"))
+    assert "/api/lead-branche?id=" in hole, "Es wird gar nicht nachgeschlagen"
+    assert "encodeURIComponent(id)" in hole, "Kennung ungeschützt in die URL"
+    assert "setAktiveBranche(branche)" in hole, "Es wird nachgeschlagen, aber nicht gewechselt"
+    # Der Vermerk, der das Öffnen nach dem Laden auslöst — sonst wechselt die Ansicht den
+    # Grundraum und der Lead bleibt trotzdem zu.
+    assert "deepRef.current = { lead: id" in hole
+
+
+def test_das_nachladen_dreht_sich_nicht_im_kreis():
+    """⚠ Verortet der Server die Kennung im BEREITS geladenen Grundraum, wäre ein Wechsel
+    dorthin eine Schleife, die nie ankommt: laden, nicht finden, nachschlagen, laden …"""
+    hole = _ohne_kommentar(_funktion(SHELL, "async function holeFremdenLead"))
+    m = re.search(r"if \(!branche \|\| branche === aktiveBranche\)[^\n]*return", hole)
+    assert m, "Kein Abbruch, wenn der Server auf den geladenen Grundraum zeigt"
+    assert m.start() < hole.index("setAktiveBranche(branche)"), (
+        "Der Abbruch steht hinter dem Wechsel — die Schleife läuft trotzdem an")
+
+
+def test_eine_spaete_antwort_reisst_den_nutzer_nicht_heraus():
+    """⚠ Zwischen Klick und Antwort kann der Nutzer längst etwas anderes offen haben. Eine
+    verspätete Antwort würde ihn dann in einen Grundraumwechsel reissen, den er nicht mehr
+    wollte — und er hat nichts angefasst."""
+    hole = _ohne_kommentar(_funktion(SHELL, "async function holeFremdenLead"))
+    assert "++fremdMarke.current" in hole, "Kein Merkmal, an dem eine alte Antwort erkennbar wäre"
+    m = re.search(r"if \(marke !== fremdMarke\.current\) return", hole)
+    assert m, "Die Marke wird gesetzt, aber nie geprüft"
+    assert m.start() < hole.index("setAktiveBranche(branche)"), (
+        "Die Prüfung steht hinter dem Wechsel und kommt zu spät")
+    # Ein Wechsel VON HAND muss die fliegende Antwort ebenfalls entwerten.
+    assert "fremdMarke.current++" in _funktion(SHELL, "function fremdAbbrechen()")
+    for weg in ("function setBranche(k: string)", "function resetBranche()"):
+        assert "fremdAbbrechen()" in _funktion(SHELL, weg), f"{weg} bricht das Nachladen nicht ab"
+
+
+def test_der_deeplink_geht_denselben_weg():
+    """Ein `?lead=` ohne `?branche=` war vorher nur so gut wie die Kenntnis des Absenders:
+    wer den Grundraum nicht mitschickte, verschickte einen toten Link."""
     code = _ohne_kommentar(SHELL)
     assert "dl.branche" in code, "Der Deep-Link merkt sich den angefragten Grundraum nicht"
-    stelle = code[code.index("deepRef.current = { lead"):]
+    stelle = code[code.index("deepRef.current = { lead, tab"):]
     stelle = stelle[:stelle.index("aktiveBranche, bump]")]
-    assert "setFehlenderLead(dl.lead)" in stelle
+    assert "holeFremdenLead(dl.lead, dl.tab)" in stelle, (
+        "Der Deep-Link hat einen eigenen Weg statt des gemeinsamen")
 
 
-# ── 2. Die Fundstelle: keine behauptete Auflösung mehr ───────────────────────────────
+def test_der_endpunkt_gibt_nur_den_grundraum_heraus():
+    """⚠ Eine Route, die den LEAD selbst lieferte, wäre ein zweiter Weg an dieselben Daten —
+    vorbei an der Redaktion je Tarif in `/api/lead-detail`, und jede Gate-Regel müsste dort
+    noch einmal nachgebaut werden."""
+    assert ROUTE, "Es gibt keinen Endpunkt `/api/lead-branche` — ohne ihn kann die Anwendung "\
+                  "nicht wissen, welchen Grundraum sie laden soll"
+    code = _ohne_kommentar(ROUTE)
+    assert "leadBranchen()" in code
+    assert "{ branche }" in code
+    for verboten in ("titel", "beschreibung", "loadDataFile", "lead-detail"):
+        assert verboten not in code, f"Die Route reicht mehr heraus als den Grundraum: {verboten}"
+    # Nicht in OFFEN → hinter dem Anmelde-Tor, wie /api/leads auch.
+    assert '"/api/lead-branche"' not in MIDDLEWARE, "Der Endpunkt steht offen"
+
+
+def test_der_index_nimmt_den_billigen_weg_zuerst():
+    """⚠ Der Rückfall liest sieben Dateien à 110 MB — in einem ANFRAGEPFAD, nicht in einem
+    Nachtlauf. Er muss existieren (sonst ist das Nachladen bis zum nächsten Export tot),
+    aber er muss sich auch melden."""
+    code = _ohne_kommentar(INDEX)
+    assert code.index("brancheAusSchlankerDatei()") < code.index("brancheAusAllenBranchen()")
+    rueck = _funktion(INDEX, "async function brancheAusAllenBranchen")
+    assert "console.error" in rueck, "Der teure Rückfall läuft still"
+
+    schlank = _funktion(INDEX, "async function brancheAusSchlankerDatei")
+    # ⚠ Ein Export von VOR dieser Änderung hat das Feld nicht. Ohne diese Prüfung entstünde
+    # ein Index, der zu JEDER Kennung „kein Grundraum" sagt — das sähe aus wie eine Antwort.
+    assert 'typeof arr[0]?.branche !== "string"' in schlank, (
+        "Ein Export ohne `branche` würde als leerer Index durchgehen")
+
+    # Und der Index darf nicht bei jeder Anfrage neu gebaut werden.
+    assert "ausSpeicher" in code and "inSpeicher" in code
+
+
+def test_der_export_traegt_den_grundraum():
+    """Gebaut, aber nicht verdrahtet — die häufigste Fehlerklasse hier. Der schnelle Weg im
+    Index existiert nur, wenn der Export das Feld auch schreibt."""
+    block = EXPORT[EXPORT.index("def _frist_zeile"):EXPORT.index("def export_branche")]
+    assert '"branche": branche' in block
+    assert "_frist_zeile(l, key)" in EXPORT, "Der Grundraum wird nicht mitgegeben"
+
+
+# ── 3. Die Fundstelle: keine behauptete Auflösung mehr ───────────────────────────────
 
 def test_detailpanel_behauptet_den_lead_nicht_mehr():
     """⚠ `find(…)!` war eine Behauptung, keine Prüfung: das Ausrufezeichen versprach dem
@@ -134,7 +228,7 @@ def test_detailpanel_behauptet_den_lead_nicht_mehr():
 
     # Und der Fehlschlag hat einen eigenen Zweig, statt in den Feldzugriff zu laufen.
     kopf = code[:code.index(".sprachen")]
-    assert re.search(r"if \(!l\) return <NichtGeladen", kopf), (
+    assert re.search(r"if \(!l\) return <FremderGrundraum", kopf), (
         "Kein Zweig für den nicht gefundenen Lead vor dem ersten Feldzugriff")
 
 
@@ -147,26 +241,36 @@ def test_kein_optional_chaining_als_pflaster():
     assert "l?.titel" not in code
 
 
-# ── 3. Verdrahtung: gebaut UND aufgerufen ────────────────────────────────────────────
+# ── 4. Verdrahtung: gebaut UND aufgerufen ────────────────────────────────────────────
 
 def test_der_leerzustand_ist_verdrahtet():
     """Die häufigste Fehlerklasse in diesem Projekt: der Baustein stimmt, nur ruft ihn
-    niemand auf. `NichtGeladen` nützt nichts, wenn die Shell den Zustand nicht durchreicht."""
-    assert "function NichtGeladen(" in PANEL
-    assert "fehlenderLead?: string | null;" in PANEL, "Das Panel nimmt den Zustand nicht an"
-    assert "fehlenderLead={fehlenderLead}" in SHELL, "Die Shell reicht den Zustand nicht durch"
+    niemand auf. `FremderGrundraum` nützt nichts, wenn die Shell den Zustand nicht durchreicht."""
+    assert "function FremderGrundraum(" in PANEL
+    assert 'stand: "sucht" | "wechselt" | "unbekannt"' in PANEL, "Das Panel nimmt den Zustand nicht an"
+    assert "fremderLead={fremderLead}" in SHELL, "Die Shell reicht den Zustand nicht durch"
 
     # Der Zustand muss auch wieder verschwinden — sonst bleibt die Meldung stehen, während
     # daneben längst ein Lead offen ist.
-    for weg in ("function closeLead()", "function setBranche(k: string)"):
-        assert "setFehlenderLead(null)" in _funktion(SHELL, weg), (
-            f"{weg} räumt die Meldung nicht weg")
+    assert "setFremderLead(null)" in _funktion(SHELL, "function closeLead()")
+    assert "setFremderLead(null)" in _funktion(SHELL, "function fremdAbbrechen()")
 
 
-def test_die_meldung_sagt_was_los_ist():
-    """Ein verschluckter Klick lässt die Zeile im Käufer-Verlauf kaputt aussehen. Die Meldung
-    muss den Grund nennen UND den Weg — der Lead existiert ja, nur in einem anderen
-    Grundraum."""
-    rumpf = _funktion(PANEL, "function NichtGeladen(")
-    assert "Grundraum" in rumpf
+def test_warten_sieht_nicht_aus_wie_scheitern():
+    """⚠ Der Grundraumwechsel lädt bis zu 42 MB, das dauert sichtbar. Wäre das Warten
+    derselbe Zustand wie „gibt es nicht", stünde sekundenlang eine Absage auf dem Schirm,
+    die sich danach als falsch herausstellt — und wer vorher wegklickt, hat eine Fehlmeldung
+    gelesen."""
+    rumpf = _funktion(PANEL, "function FremderGrundraum(")
+    assert 'lead.stand !== "unbekannt"' in rumpf, "Warten und Scheitern sind derselbe Zweig"
+    # Das Warten sagt, WOHIN es geht — sonst ist es nur ein Spinner.
+    assert "{raum}" in rumpf
+    assert "BRANCHEN" in rumpf, "Der Grundraum wird als roher Schlüssel gezeigt, nicht als Name"
+    # Nur der Endzustand bekommt den Ausweg; ein „Zurück" mitten im Laden bricht etwas ab,
+    # was gleich von selbst fertig ist. Geprüft wird der ZWEIG, nicht die Funktion: `onClose`
+    # steht auch in der Parameterliste, und daran wäre die Prüfung sonst hängengeblieben.
+    warte = rumpf[rumpf.index('lead.stand !== "unbekannt"'):]
+    warte = warte[:warte.index("return (", warte.index("}\n\n  return ("))]
+    assert "onClick={onClose}" not in warte, "Der Wartezustand bietet schon einen Ausweg an"
+    assert "onClick={onClose}" in rumpf, "Der Endzustand hat keinen Ausweg"
     assert "{id}" in rumpf, "Die Meldung nennt die Kennung nicht, über die sie spricht"

@@ -4757,21 +4757,29 @@ def test_fristzeile_traegt_genau_die_gebrauchten_felder():
     Zuwachs ist begruendet und der einzige andere Weg zum Kaeufernamen waeren wieder die 110
     MB — genau das, wovon diese Datei die Abkehr ist. Wer ein ACHTES ergaenzen will, braucht
     denselben Nachweis: welcher Weg waere sonst noetig, und was kostet er?
+
+    ⚠ `branche` kam am 2026-09-02 dazu (achtes Feld). DER NACHWEIS: der Vergabe-Verlauf einer
+    Vergabestelle zeigt Zuschlaege ueber ALLE Branchen, die geladene Liste traegt aber nur
+    einen Grundraum. Ein Klick dorthin muss wissen, welchen Grundraum er laden soll. Der
+    einzige andere Weg waeren wieder die sieben vollen Dateien — diesmal aber in einem
+    ANFRAGEPFAD (`/api/lead-branche`, ein Klick des Nutzers) statt in einem Nachtlauf. Das
+    ist derselbe Nachweis wie bei `buyer`, nur teurer, wenn man ihn nicht erbringt.
     """
     zeile = _export_web_leads_teil("_frist_zeile")({
         "id": "x1", "titel": "T", "src": "ted", "tage": 5, "endTage": 9,
         "buyerShort": "Stadt X", "timing": {"src": "echt"},
         "beschreibung": "…" * 2000, "lose": [1, 2, 3],
-    })
-    assert set(zeile) == {"id", "titel", "src", "tage", "endTage", "endeEcht", "buyer"}
+    }, "it")
+    assert set(zeile) == {"id", "titel", "src", "tage", "endTage", "endeEcht", "buyer", "branche"}
     assert zeile["endeEcht"] is True
     assert zeile["buyer"] == "Stadt X"
+    assert zeile["branche"] == "it"
 
 
 def test_endeEcht_ist_nur_bei_echt_wahr():
     z = _export_web_leads_teil("_frist_zeile")
-    assert z({"timing": {"src": "geschaetzt"}})["endeEcht"] is False
-    assert z({})["endeEcht"] is False          # kein timing → nicht echt, nicht Absturz
+    assert z({"timing": {"src": "geschaetzt"}}, "it")["endeEcht"] is False
+    assert z({}, "it")["endeEcht"] is False    # kein timing → nicht echt, nicht Absturz
 
 
 def test_leadfristen_liest_die_schlanke_datei_zuerst():
