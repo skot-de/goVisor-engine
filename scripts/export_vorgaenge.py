@@ -82,6 +82,15 @@ KETTE_GUETE = ((0.80, "belastbar"), (0.70, "plausibel"), (0.0, "schwach"))
 # Unterhalb dieser Grenze wird ein einzelnes Glied als duenn gekennzeichnet.
 GLIED_DUENN = 0.70
 
+# Ab wann wir Vergabeunterlagen ueberhaupt abrufen. Vorher gibt es keine, und kein Portal
+# gibt sie rueckwirkend heraus.
+#
+# ⚠ DIESES DATUM ENTSCHEIDET, WELCHE ERKLAERUNG STIMMT. Der erste Entwurf schob eine
+# fehlende Dateiliste IMMER aufs Alter — und behauptete das am 2026-09-02 auch bei 7.453
+# Akten, die von August 2026 oder spaeter sind. Einer Vergabe vom 26.08.2026 zu sagen,
+# aeltere Vorgaenge haetten deshalb selten Dateien, ist schlicht falsch.
+ABRUF_START = "2026-08-01"
+
 
 def dateiname(land: str, vorgang_id: str) -> str:
     """Land + Vorgangsnummer → Dateiname. Muss in `web/lib/vorgangsakte.ts` identisch sein.
@@ -187,6 +196,26 @@ def _listing(notice_id: str) -> dict | None:
         "dateien": dateien[:MAX_DATEIEN],
         "gekuerzt": max(0, len(dateien) - MAX_DATEIEN),
     }
+
+
+def _unterlagen_grund(akte: dict) -> str | None:
+    """Warum zu diesem Vorgang keine Dateiliste vorliegt. `None`, wenn eine vorliegt.
+
+    Drei verschiedene Gruende, die alle „keine Unterlagen" heissen und in der Anzeige
+    verschiedene Saetze verdienen:
+
+      angekuendigt    Die Vergabe weist Unterlagen aus, wir haben die Liste nicht geholt.
+      vor_abrufstart  Der Vorgang liegt vor `ABRUF_START` — es gibt schlicht keine.
+      kein_abruf      Der Vorgang ist neu genug, aber kein Portal hat eine Liste hergegeben.
+
+    ⚠ DIE DRITTE ZEILE IST DER GRUND FUER DIESE FUNKTION. Ohne sie bekamen 7.453 aktuelle
+    Vorgaenge die Alters-Erklaerung, die auf sie nicht zutrifft.
+    """
+    if akte["dokumente"]:
+        return None
+    if any(e["unterlagen"] for e in akte["verlauf"]):
+        return "angekuendigt"
+    return "vor_abrufstart" if (akte["bis"] or "") < ABRUF_START else "kein_abruf"
 
 
 def _verlauf(teile: list[dict]) -> list[dict]:
@@ -317,6 +346,7 @@ def _akten(con: duckdb.DuckDBPyConnection, land: str,
             "verlauf": _verlauf(meine),
             "dokumente": [d for d in (_listing(t["notice_id"]) for t in meine) if d],
         }
+        akte["unterlagen_grund"] = _unterlagen_grund(akte)
         if vid in ketten:
             kk = dict(ketten[vid])
             alle = sorted(kette_glieder[kk["kette"]], key=lambda x: x["position"])

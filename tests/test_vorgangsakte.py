@@ -418,3 +418,53 @@ def test_herkunft_widerspricht_der_kette_nicht():
     block = tsx.split("const HERKUNFT:")[1].split("};")[0]
     assert "keine Verknüpfung gefunden" not in block
     assert "nur eine Bekanntmachung" in block
+
+
+# ── Warum keine Unterlagen da sind ──────────────────────────────────────────────────
+
+def _akte(dokumente=(), unterlagen=False, bis="2026-08-26"):
+    return {"dokumente": list(dokumente), "bis": bis,
+            "verlauf": [{"unterlagen": unterlagen}]}
+
+
+def test_grund_entfaellt_wenn_dateien_da_sind():
+    assert M._unterlagen_grund(_akte(dokumente=[{"n": 3}])) is None
+
+
+def test_angekuendigt_schlaegt_das_datum():
+    """Wenn die Vergabe Unterlagen ausweist, ist das der Grund, egal wie alt sie ist."""
+    assert M._unterlagen_grund(_akte(unterlagen=True, bis="2015-01-01")) == "angekuendigt"
+
+
+def test_alt_bekommt_die_alterserklaerung():
+    assert M._unterlagen_grund(_akte(bis="2015-01-01")) == "vor_abrufstart"
+
+
+def test_neu_bekommt_NICHT_die_alterserklaerung():
+    """⚠ Der erste Entwurf schob eine fehlende Dateiliste IMMER aufs Alter und sagte einer
+    Vergabe vom 26.08.2026, ältere Vorgänge trügen deshalb selten Dateien. Gemessen am
+    2026-09-02: 7.453 Akten bekamen so eine Erklärung, die auf sie nicht zutrifft."""
+    assert M._unterlagen_grund(_akte(bis="2026-08-26")) == "kein_abruf"
+    assert M._unterlagen_grund(_akte(bis="2026-12-01")) == "kein_abruf"
+
+
+def test_grenze_ist_der_abrufstart():
+    assert M._unterlagen_grund(_akte(bis=M.ABRUF_START)) == "kein_abruf"
+    assert M._unterlagen_grund(_akte(bis="2026-07-31")) == "vor_abrufstart"
+
+
+def test_anzeige_raet_den_grund_nicht():
+    """Der Grund kommt aus dem Export. Eine Anzeige, die ihn selbst herleitet, kennt eine
+    Regel, die der Export nicht kennt."""
+    tsx = _ohne_kommentare(
+        (WURZEL / "web" / "components" / "explorer" / "Vorgangsakte.tsx").read_text(encoding="utf-8"))
+    assert "a.unterlagen_grund" in tsx
+    assert "verlauf.some" not in tsx, "Anzeige leitet den Grund wieder selbst her"
+
+
+def test_jeder_grund_hat_einen_eigenen_satz():
+    tsx = (WURZEL / "web" / "components" / "explorer" / "Vorgangsakte.tsx").read_text(encoding="utf-8")
+    for satz in ("Unterlagen holen wir erst seit August 2026 ein",
+                 "Nicht jedes Portal gibt eine Liste der Unterlagen ohne Anmeldung heraus",
+                 "Diese Vergabe weist Unterlagen aus"):
+        assert satz in tsx

@@ -26,6 +26,7 @@ type Akte = {
   id: string; land: string; titel: string | null; cpv: string | null; schluessel: string;
   vollstaendig: boolean; von: string | null; bis: string | null;
   zahlen: Record<string, number>; verlauf: Verlauf[]; dokumente: Dok[];
+  unterlagen_grund: "angekuendigt" | "vor_abrufstart" | "kein_abruf" | null;
   kette?: { kette: string; position: number; n_glieder: number; min_konfidenz: number | null;
             methode: string; dauerangebot: boolean; gekuerzt: number; glieder: Glied[];
             guete: "belastbar" | "plausibel" | "schwach" | null;
@@ -162,7 +163,6 @@ export function Vorgangsakte() {
   const h = HERKUNFT[a.schluessel] || { text: a.schluessel, ton: "" };
   const z = a.zahlen;
   // Weist irgendein Ereignis des Vorgangs Unterlagen aus? Entscheidet den Leertext unten.
-  const angekuendigt = a.verlauf.some((e) => e.unterlagen);
   const guete = a.kette?.guete ? GUETE[a.kette.guete] : null;
 
   return (
@@ -210,16 +210,18 @@ export function Vorgangsakte() {
         <h2>{t("Unterlagen")}</h2>
         {a.dokumente.length === 0 ? (
           <p className="vg-hinweis">
-            {/* ⚠ ZWEI VERSCHIEDENE DINGE, DIE BEIDE „keine Unterlagen" HEISSEN. `unterlagen`
-                am Verlaufseintrag sagt, dass die Vergabe Unterlagen AUSWEIST; eine leere
-                `dokumente`-Liste sagt, dass wir die DATEILISTE nicht abgerufen haben. Der
-                erste Entwurf schob beides aufs Alter und behauptete das auch bei einer
-                Vergabe vom 31.08.2026, deren Unterlagen im Verlauf daneben standen. */}
-            {angekuendigt
+            {/* ⚠ DREI GRUENDE, DIE ALLE „keine Unterlagen" HEISSEN. Der Grund kommt aus dem
+                Export (`_unterlagen_grund`), damit die Anzeige ihn nicht raten muss: der
+                erste Entwurf schob es IMMER aufs Alter und behauptete das auch bei 7.453
+                Vorgaengen von August 2026 oder spaeter, denen es nicht galt. */}
+            {a.unterlagen_grund === "angekuendigt"
               ? <>{t("Diese Vergabe weist Unterlagen aus, abgerufen haben wir die Dateiliste noch nicht.")}{" "}
                  {t("Der Abruf läuft laufend nach; welche Portale ihn zulassen, steht in der Herkunft der jeweiligen Vergabe.")}</>
-              : <>{t("Zu diesem Vorgang liegt keine Dateiliste vor.")}{" "}
-                 {t("Unterlagen holen wir erst seit August 2026 ein; ältere Vorgänge tragen deshalb Bekanntmachungen und Zuschlag, aber selten Dateien. Rückwirkend gibt sie kein Portal heraus.")}</>}
+              : a.unterlagen_grund === "vor_abrufstart"
+                ? <>{t("Zu diesem Vorgang liegt keine Dateiliste vor.")}{" "}
+                   {t("Unterlagen holen wir erst seit August 2026 ein; ältere Vorgänge tragen deshalb Bekanntmachungen und Zuschlag, aber selten Dateien. Rückwirkend gibt sie kein Portal heraus.")}</>
+                : <>{t("Zu diesem Vorgang liegt keine Dateiliste vor.")}{" "}
+                   {t("Nicht jedes Portal gibt eine Liste der Unterlagen ohne Anmeldung heraus. Woher wir sie bekommen, steht in der Herkunft der jeweiligen Vergabe.")}</>}
           </p>
         ) : (
           a.dokumente.map((d) => (
