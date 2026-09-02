@@ -67,3 +67,8 @@
 @media (max-width: 640px) {
   .vg-verlauf li { grid-template-columns: 1fr; gap: 2px; }
 }
+
+/* Güte-Vermerk neben der Überschrift und am einzelnen Glied. */
+.vg-block h2 { display: flex; align-items: center; gap: 10px; }
+.vg-block h2 .vg-tag { text-transform: none; letter-spacing: 0; }
+.vg-kette li .vg-tag { flex: 0 0 auto; }

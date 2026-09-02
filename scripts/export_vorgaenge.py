@@ -67,6 +67,21 @@ KETTE_FENSTER = 12
 # MUSS mit `web/lib/vorgangsakte.ts` uebereinstimmen.
 BUENDEL_STELLEN = 2
 
+# Wie belastbar eine Kette ist, in drei Baendern: (Untergrenze, Name).
+#
+# ⚠ DIE BAENDER STEHEN IN DEN DATEN, NICHT IM RENDERER. Sonst kennt die Anzeige eine
+# Schwelle, die der Export nicht kennt, und beide laufen beim naechsten Anfassen
+# auseinander — dieselbe Regel wie bei `export_schwellen.py`.
+#
+# ⚠ UND SIE SIND GEMESSEN, NICHT GERATEN. Die Verteilung der 189.000 Kanten hat drei klare
+# Spitzen: 28.538 bei genau 0,70 (das ist `llm_adjudicated`, pauschal), 8.096 bei 0,80 und
+# 28.520 bei 0,95 (beides `content_unique`), darunter eine diffuse Masse von 0,55 bis 0,69.
+# Zwei Baender waeren zu grob, vier haetten keine Entsprechung in den Daten.
+KETTE_GUETE = ((0.80, "belastbar"), (0.70, "plausibel"), (0.0, "schwach"))
+
+# Unterhalb dieser Grenze wird ein einzelnes Glied als duenn gekennzeichnet.
+GLIED_DUENN = 0.70
+
 
 def dateiname(land: str, vorgang_id: str) -> str:
     """Land + Vorgangsnummer → Dateiname. Muss in `web/lib/vorgangsakte.ts` identisch sein.
@@ -200,6 +215,21 @@ def _verlauf(teile: list[dict]) -> list[dict]:
     return verlauf
 
 
+def _guete(min_konfidenz: float | None) -> str | None:
+    """Konfidenz des schwaechsten Glieds → Band. `None`, wenn es keine Zahl gibt.
+
+    Eine Kette ist so belastbar wie ihr schwaechstes Glied; deshalb entscheidet das Minimum
+    und nicht der Durchschnitt. Ein Durchschnitt verwischt genau den Fall, um den es geht:
+    vier gute Verknuepfungen und eine geratene sehen darin aus wie fuenf mittelmaessige.
+    """
+    if min_konfidenz is None:
+        return None
+    for grenze, name in KETTE_GUETE:
+        if min_konfidenz >= grenze:
+            return name
+    return KETTE_GUETE[-1][1]
+
+
 def _fenster(glieder: list[dict], position: int) -> list[dict]:
     """Die KETTE_FENSTER Glieder um die eigene Position herum, Reihenfolge erhalten.
 
@@ -292,8 +322,18 @@ def _akten(con: duckdb.DuckDBPyConnection, land: str,
             fenster = _fenster(alle, kk["position"])
             for gl in fenster:
                 gl["titel"] = titel.get(gl["vorgang"])
+            for gl in fenster:
+                # Am einzelnen Glied, nicht nur oben: die Kette kann an genau EINER Stelle
+                # duenn sein, und dann will man wissen, an welcher.
+                gl["duenn"] = (gl["konfidenz"] is not None
+                               and gl["konfidenz"] < GLIED_DUENN)
             kk["glieder"] = fenster
             kk["gekuerzt"] = len(alle) - len(fenster)
+            kk["guete"] = _guete(kk["min_konfidenz"])
+            # ⚠ Das schwaechste Glied kann AUSSERHALB des Fensters liegen. Dann traegt die
+            # Kette zu Recht ein schwaches Band, ohne dass ein sichtbares Glied markiert
+            # ist — die Anzeige muss das sagen koennen, statt widerspruechlich auszusehen.
+            kk["duennes_glied_sichtbar"] = any(g["duenn"] for g in fenster)
             akte["kette"] = kk
         akten[(land, vid)] = akte
     return akten

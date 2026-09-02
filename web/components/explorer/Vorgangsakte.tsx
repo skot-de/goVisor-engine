@@ -20,13 +20,15 @@ type Verlauf = { datum: string | null; art: string; label: string; n: number;
 type Dok = { notice: string; quelle: string | null; url: string | null; gelesen: boolean;
              n: number; dateien: Array<{ name: string; typ: string }>; gekuerzt: number };
 type Glied = { vorgang: string; position: number; jahr: number | null;
-               konfidenz: number | null; titel: string | null };
+               konfidenz: number | null; titel: string | null; duenn: boolean };
 type Akte = {
   id: string; land: string; titel: string | null; cpv: string | null; schluessel: string;
   vollstaendig: boolean; von: string | null; bis: string | null;
   zahlen: Record<string, number>; verlauf: Verlauf[]; dokumente: Dok[];
   kette?: { kette: string; position: number; n_glieder: number; min_konfidenz: number | null;
-            methode: string; dauerangebot: boolean; gekuerzt: number; glieder: Glied[] };
+            methode: string; dauerangebot: boolean; gekuerzt: number; glieder: Glied[];
+            guete: "belastbar" | "plausibel" | "schwach" | null;
+            duennes_glied_sichtbar: boolean };
 };
 type Antwort = { vorhanden: boolean; akte?: Akte; grund?: string; error?: string };
 
@@ -51,6 +53,29 @@ const HERKUNFT: Record<string, { text: string; ton: string }> = {
   folder: { text: "amtlich verknüpft", ton: "ok" },
   rueckref: { text: "über Rückverweis verknüpft", ton: "" },
   allein: { text: "einzeln, keine Verknüpfung gefunden", ton: "warn" },
+};
+
+/* Wie belastbar die Vorgeschichte ist. Die Bänder kommen aus `export_vorgaenge.KETTE_GUETE`
+ * und sind gemessen, nicht geschätzt; hier steht nur, wie sie heissen und aussehen.
+ *
+ * ⚠ WARUM DAS UEBERHAUPT AN DIE OBERFLAECHE MUSS. Eine Kette ist NIE amtlich, sondern
+ * erschlossen — und 64 % der Ketten sitzen im schwächsten Band. Sie alle mit demselben
+ * Satz zu zeigen, macht aus einer knappen Aehnlichkeit dieselbe Aussage wie aus einem
+ * starken Inhaltsvergleich. Genau diese Unterscheidung trifft die Anzeige bei den
+ * Unterlagen ja auch („gelesen" gegen „nur gelistet"). */
+const GUETE: Record<string, { text: string; ton: string; satz: string }> = {
+  belastbar: {
+    text: "Verknüpfung belastbar", ton: "ok",
+    satz: "Die Vorgänge sind über einen starken Inhaltsvergleich verknüpft. Amtlich ist die Verbindung trotzdem nicht.",
+  },
+  plausibel: {
+    text: "Verknüpfung plausibel", ton: "",
+    satz: "Die Verknüpfung ist plausibel, aber nicht belegt. Sie beruht auf Käufer und Leistung.",
+  },
+  schwach: {
+    text: "Verknüpfung schwach", ton: "warn",
+    satz: "Die Verknüpfung beruht auf einer knappen Ähnlichkeit. Als Hinweis brauchbar, als Beleg nicht.",
+  },
 };
 
 const ART_TON: Record<string, string> = {
@@ -133,6 +158,7 @@ export function Vorgangsakte() {
   const z = a.zahlen;
   // Weist irgendein Ereignis des Vorgangs Unterlagen aus? Entscheidet den Leertext unten.
   const angekuendigt = a.verlauf.some((e) => e.unterlagen);
+  const guete = a.kette?.guete ? GUETE[a.kette.guete] : null;
 
   return (
     <div className="vg-wrap">
@@ -219,18 +245,31 @@ export function Vorgangsakte() {
 
       {a.kette ? (
         <section className="vg-block">
-          <h2>{t("Vorgeschichte")}</h2>
+          <h2>
+            {t("Vorgeschichte")}
+            {guete ? <span className={`vg-tag ${guete.ton}`}>{t(guete.text)}</span> : null}
+          </h2>
           <p className="vg-hinweis">
             {t("{n} Vergaben, die inhaltlich aufeinander folgen.", { n: a.kette.n_glieder })}
             {" "}
+            {guete ? t(guete.satz) : t("Die Verknüpfung ist erschlossen, nicht amtlich. Sie beruht auf Käufer und Leistung.")}
             {a.kette.dauerangebot
-              ? t("Der Takt ist hoch: das sieht nach einem laufenden Abruf aus, nicht nach einzelnen Neuvergaben.")
-              : t("Die Verknüpfung ist erschlossen, nicht amtlich. Sie beruht auf Käufer und Leistung.")}
+              ? <> {t("Der Takt ist hoch: das sieht nach einem laufenden Abruf aus, nicht nach einzelnen Neuvergaben.")}</>
+              : null}
+            {/* Das schwaechste Glied kann ausserhalb des angezeigten Fensters liegen. Ohne
+                diesen Satz widerspricht sich die Seite: oben „schwach", unten kein einziges
+                markiertes Glied. */}
+            {guete && a.kette.guete === "schwach" && !a.kette.duennes_glied_sichtbar
+              ? <> {t("Die dünne Stelle liegt ausserhalb der hier gezeigten Glieder.")}</>
+              : null}
           </p>
           <ol className="vg-kette">
             {a.kette.glieder.map((g) => (
               <li key={g.vorgang} className={g.vorgang === a.id ? "hier" : ""}>
                 <span className="vg-jahr">{g.jahr ?? "?"}</span>
+                {g.duenn
+                  ? <span className="vg-tag warn" title={t("Der Anschluss an den Vorgänger ist hier nur knapp belegt.")}>{t("hier dünn")}</span>
+                  : null}
                 {g.vorgang === a.id
                   ? <strong>{g.titel || t("ohne Titel")}</strong>
                   : <button type="button" onClick={() => oeffne(g.vorgang, a.land)}>

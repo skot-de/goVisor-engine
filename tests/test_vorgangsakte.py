@@ -319,3 +319,62 @@ def test_buendel_auf_der_platte_sind_lesbar():
     for weg in dateien[:24]:
         with open(weg, encoding="utf-8") as f:
             _json.loads(f.read(), parse_constant=_knall)
+
+
+# ── Güte der Kette ──────────────────────────────────────────────────────────────────
+
+@pytest.mark.parametrize("mk,erwartet", [
+    (0.95, "belastbar"), (0.80, "belastbar"),
+    (0.79, "plausibel"), (0.70, "plausibel"),
+    (0.69, "schwach"), (0.55, "schwach"), (0.0, "schwach"),
+    (None, None),
+])
+def test_guete_baender(mk, erwartet):
+    assert M._guete(mk) == erwartet
+
+
+def test_guete_folgt_dem_schwaechsten_glied():
+    """Eine Kette ist so belastbar wie ihr schwächstes Glied, deshalb entscheidet das
+    Minimum. Ein Durchschnitt verwischt genau den Fall, um den es geht: vier gute
+    Verknüpfungen und eine geratene sähen darin aus wie fünf mittelmässige."""
+    quelle = _ohne_kommentare_py(SKRIPT.read_text(encoding="utf-8"))
+    assert "min_konfidenz" in quelle.split("def _guete(")[1].split("def ")[0] \
+        or 'kk["min_konfidenz"]' in quelle
+
+
+def test_baender_stehen_in_den_daten_nicht_im_renderer():
+    """Sonst kennt die Anzeige eine Schwelle, die der Export nicht kennt, und beide laufen
+    beim nächsten Anfassen auseinander. Dieselbe Regel wie bei `export_schwellen.py`."""
+    tsx = (WURZEL / "web" / "components" / "explorer" / "Vorgangsakte.tsx").read_text(encoding="utf-8")
+    kern = _ohne_kommentare(tsx)
+    for zahl in ("0.8", "0.80", "0.7", "0.70", "0.55"):
+        assert f"guete >= {zahl}" not in kern and f"konfidenz < {zahl}" not in kern, \
+            f"Schwelle {zahl} steht in der Anzeige statt im Export"
+    assert 'a.kette?.guete ? GUETE[a.kette.guete]' in kern
+
+
+def test_jedes_band_hat_einen_eigenen_satz():
+    """Drei Bänder und ein Satz für alle wären dasselbe Problem in neu."""
+    tsx = (WURZEL / "web" / "components" / "explorer" / "Vorgangsakte.tsx").read_text(encoding="utf-8")
+    block = tsx.split("const GUETE:")[1].split("};")[0]
+    # `satz: "` mit Anfuehrungszeichen — sonst zaehlt die Typzeile `satz: string` mit.
+    saetze = [z.strip() for z in block.splitlines() if 'satz: "' in z]
+    assert len(saetze) == 3 and len(set(saetze)) == 3
+
+
+def test_duennes_glied_wird_am_glied_markiert():
+    """Die Kette kann an genau EINER Stelle dünn sein, und dann will man wissen, an welcher."""
+    quelle = SKRIPT.read_text(encoding="utf-8")
+    assert "GLIED_DUENN" in quelle
+    tsx = (WURZEL / "web" / "components" / "explorer" / "Vorgangsakte.tsx").read_text(encoding="utf-8")
+    assert "g.duenn" in tsx
+
+
+def test_schwache_kette_ohne_sichtbares_glied_sagt_es():
+    """⚠ Das schwächste Glied kann ausserhalb des Kettenfensters liegen: gemessen 271 Fälle.
+    Ohne diesen Hinweis widerspricht sich die Seite, oben „schwach" und unten kein einziges
+    markiertes Glied."""
+    quelle = SKRIPT.read_text(encoding="utf-8")
+    assert "duennes_glied_sichtbar" in quelle
+    tsx = (WURZEL / "web" / "components" / "explorer" / "Vorgangsakte.tsx").read_text(encoding="utf-8")
+    assert "duennes_glied_sichtbar" in tsx
