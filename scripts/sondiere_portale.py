@@ -29,12 +29,29 @@ from urllib.parse import urlsplit
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
-from govisor import bulk                                             # noqa: E402
+from govisor import bulk, flatten                                    # noqa: E402
 
-# Beide Felder nennen das Portal: der Deeplink zu den Unterlagen und der Kommunikations-
-# kanal. Fuer DE sind sie bei offenen Vergaben zu 96,6 % gefuellt.
-URL_FELDER = re.compile(
-    rb'<cbc:URI>(https?://[^<]{6,300})<|<cbc:EndpointID[^>]*>(https?://[^<]{6,300})<')
+# ⚠ UEBER DEN PFAD, NICHT UEBER DAS ELEMENT. Die erste Fassung nahm jede `cbc:URI` und
+# jede `cbc:EndpointID` — und zaehlte damit Dinge mit, die keine Portale sind. In Polen
+# waren das 1.376 Treffer auf `uzp.gov.pl` (die Krajowa Izba Odwolawcza, also die
+# NACHPRUEFUNGSSTELLE) und 809 auf `epuap.gov.pl` (das Einlegen der Beschwerde). Beide
+# stehen als Pflichtangabe in jeder Bekanntmachung; als Portale gelesen ergaeben sie ein
+# voellig falsches Bild. Dazu kaemen Gesetzeslinks und Organisations-Webseiten.
+#
+# Diese Pfade tragen wirklich das Portal (an 400 PL-Bekanntmachungen ausgezaehlt):
+ZAEHLT = (
+    # Der Unterlagen-Deeplink — das Feld, auf das es ankommt. Dieselbe Auswahl trifft
+    # `gold.py` fuer `lead_export.documents_url`.
+    "CallForTendersDocumentReference.Attachment.ExternalReference.URI",
+    "TenderRecipientParty.EndpointID",      # wohin das Angebot geht
+    "TenderingProcess.AccessToolsURI",      # der Kommunikationskanal
+)
+# ⚠ Und diese NICHT, obwohl sie URLs tragen:
+IGNORIERT = (
+    "Organizations.Organization",           # Kontaktdaten — hier steckt die Nachpruefungsstelle
+    "LegislationDocumentReference",         # Gesetzestexte, keine Vergabeunterlagen
+    "BuyerProfileURI",                      # Beschafferprofil, nicht das Verfahren
+)
 LAND = re.compile(rb'listName="country"[^>]*>([A-Z]{3})<')
 
 # Engine am PFAD erkennen, nicht am Domainnamen — das ist sprachunabhaengig und gilt in
@@ -63,6 +80,17 @@ ENGINES: tuple[tuple[str, re.Pattern], ...] = (
     ("achatpublic",   re.compile(r"achatpublic\.com|/sdm/ent/", re.I)),
     ("xmarches-php",  re.compile(r"detailConsultation\.php", re.I)),
     ("marches-securises", re.compile(r"marches-securises\.fr", re.I)),
+    # ── PL, am 2026-09-02 an den URL-Pfaden des Juni-Pakets bestimmt ──────────────────
+    # Wie in FR laufen viele Domains auf wenigen Systemen: `*.ezamawiajacy.pl` ist EIN
+    # mandantenfaehiges Portal (Marketplanet) mit einer Subdomain je Vergabestelle, und
+    # `platformazakupowa.plk-sa.pl` ist eine Weissmarke von `platformazakupowa.pl`.
+    ("openNexus",     re.compile(r"platformazakupowa\.", re.I)),
+    ("ezamowienia",   re.compile(r"ezamowienia\.gov\.pl|/mp-client/", re.I)),
+    ("marketplanet",  re.compile(r"\.ezamawiajacy\.pl", re.I)),
+    ("eb2b",          re.compile(r"\.eb2b\.com\.pl|open-preview-auction", re.I)),
+    ("logintrade",    re.compile(r"\.logintrade\.net", re.I)),
+    ("propublico",    re.compile(r"e-propublico\.pl", re.I)),
+    ("smartpzp",      re.compile(r"smartpzp\.pl", re.I)),
     ("ted-esender",   re.compile(r"ted\.europa\.eu", re.I)),
 )
 
@@ -99,11 +127,20 @@ def sammle(land: str, monat: str) -> tuple[collections.Counter, collections.Coun
                         continue
                 gesamt += 1
                 gefunden = set()
-                for tr in URL_FELDER.finditer(roh):
-                    u = (tr.group(1) or tr.group(2)).decode("utf-8", "replace")
-                    host = urlsplit(u).netloc.lower().removeprefix("www.")
+                try:
+                    paare = flatten.leaves(roh)
+                except Exception:                              # noqa: BLE001
+                    paare = []
+                for pfad, wert in paare:
+                    if not wert.startswith("http"):
+                        continue
+                    if any(x in pfad for x in IGNORIERT):
+                        continue
+                    if not any(x in pfad for x in ZAEHLT):
+                        continue
+                    host = urlsplit(wert).netloc.lower().removeprefix("www.")
                     if host:
-                        gefunden.add((host, engine(u)))
+                        gefunden.add((host, engine(wert)))
                 if gefunden:
                     mit_url += 1
                 for host, eng in gefunden:

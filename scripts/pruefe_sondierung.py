@@ -36,8 +36,22 @@ SONDIERUNG_DATEN = "data/sondierung"
 SONDIERUNG_PAPIERE = "docs/sondierung"
 
 
-def _hat_tabellen(land: str) -> list[str]:
-    """Verzeichnisse, in denen dieses Land Tabellen liegen hat."""
+def _hat_tabellen(land: str, ebene: str = "bekanntmachung") -> list[str]:
+    """Belege dafuer, dass dieses Land AUF DIESER EBENE aufgenommen ist.
+
+    ⚠ DIE EBENE ZU UNTERSCHEIDEN IST NICHT PEDANTERIE, sie ist der Unterschied zwischen
+    einer richtigen und einer falschen Warnung. Polen hat seit dem Vorgangs-Bau echte
+    Gold-Tabellen auf BEKANNTMACHUNGSEBENE — auf Unterlagenebene ist dort nichts
+    angebunden, und genau die wird sondiert. Eine Regel, die nur „hat Tabellen" fragt,
+    verbietet die Sondierung eines halb aufgenommenen Landes und waere damit im ersten
+    echten Fall im Weg gewesen.
+    """
+    if ebene == "unterlagen":
+        # Das Gegenstueck zu `data/gold` auf Unterlagenebene: liegen dort Dateien?
+        d = ROOT / "data" / "docs" / land
+        if d.is_dir() and any(x.is_dir() for x in d.iterdir()):
+            return [f"data/docs/{land}"]
+        return []
     treffer = []
     for rel in AUFNAHME_PFADE:
         d = ROOT / rel / land
@@ -51,9 +65,12 @@ def befunde() -> list[str]:
     raus: list[str] = []
     sondierte = {s.country for s in sources.REGISTRY if s.status == SONDIERT}
 
-    # 1 · Ein sondiertes Land darf keine Tabellen haben.
-    for land in sorted(sondierte):
-        for pfad in _hat_tabellen(land):
+    # 1 · Ein sondiertes Land darf AUF SEINER EBENE nicht schon aufgenommen sein.
+    for s in sources.REGISTRY:
+        if s.status != SONDIERT:
+            continue
+        land = s.country
+        for pfad in _hat_tabellen(land, s.ebene):
             raus.append(
                 f"{land} steht auf '{SONDIERT}', hat aber Tabellen in {pfad} — "
                 f"entweder ist das Land laengst aufgenommen (dann Status heben) oder es "
@@ -101,8 +118,13 @@ def befunde() -> list[str]:
             land = land_dir.name
             if land not in sondierte:
                 continue
+            # ⚠ Auch hier die Ebene: ein Land mit Bekanntmachungs-Gold, das auf
+            # UNTERLAGENebene sondiert wird, ist kein Widerspruch, sondern der Normalfall
+            # beim Ausbau. Gefragt ist, ob es fuer die BEKANNTMACHUNGEN einen nicht-
+            # sondierten Eintrag gibt.
             eintraege = [s.id for s in sources.REGISTRY
-                         if s.country == land and s.status != SONDIERT]
+                         if s.country == land and s.status != SONDIERT
+                         and s.ebene == "bekanntmachung"]
             if not eintraege:
                 raus.append(
                     f"{rel}/{land} existiert, aber {land} wird ausschliesslich als "

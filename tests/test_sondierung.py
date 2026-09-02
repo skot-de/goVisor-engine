@@ -124,3 +124,32 @@ def test_ungeprueft_gehoert_allein_der_sondierung(monkeypatch):
                                   connector="docfetch-xx", ebene="unterlagen",
                                   ertrag="ungeprueft")])
     assert any("ungeprueft" in z and "doc-xx" in z for z in w.befunde())
+
+
+def test_halb_aufgenommenes_land_darf_auf_der_anderen_ebene_sondiert_werden(monkeypatch):
+    """DER FALL, DER DIE REGEL GESCHAERFT HAT.
+
+    Polen hat seit dem Vorgangs-Bau echte Gold-Tabellen auf BEKANNTMACHUNGSEBENE. Auf
+    Unterlagenebene ist dort nichts angebunden — und genau die wird sondiert. Die erste
+    Fassung fragte nur „hat das Land Tabellen?" und haette damit die Sondierung eines
+    halb aufgenommenen Landes verboten: im ersten echten Fall im Weg.
+
+    Gegenprobe: `data/docs/PL` gibt es nicht, also ist auf DIESER Ebene nichts aufgenommen.
+    """
+    w = _wache()
+    monkeypatch.setattr(w.sources, "REGISTRY",
+                        [_eintrag(id="sond-pl-doc", country="PL", ebene="unterlagen",
+                                  ertrag="ungeprueft"),
+                         # der bestehende Bekanntmachungs-Eintrag, damit Regel 4 ruhig bleibt
+                         Source(id="ted-pl", name="TED PL", connector="ted-bulk",
+                                country="PL", tier="oberschwellig", status="candidate")])
+    assert w.befunde() == [], w.befunde()
+
+
+def test_und_auf_derselben_ebene_faellt_es_weiterhin_auf(monkeypatch):
+    """Die Verschaerfung darf die Regel nicht aushoehlen: DE hat Unterlagen im Bestand."""
+    w = _wache()
+    monkeypatch.setattr(w.sources, "REGISTRY",
+                        [_eintrag(id="sond-de-doc", country="DE", ebene="unterlagen",
+                                  ertrag="ungeprueft")])
+    assert any("data/docs/DE" in z for z in w.befunde()), w.befunde()

@@ -370,6 +370,38 @@ DOC_REGISTRY: list[Source] = [
            overlap="unbestimmt — der von TED veroeffentlichte Einstieg fuehrt auf 404, "
                    "die Seite wurde umgebaut. Neuer Einstiegspunkt zu finden.",
            url="https://www.marches-securises.fr"),
+    # ── PL, sondiert am 2026-09-02 · Kapitel: docs/sondierung/pl.md ───────────────────
+    # ⚠ Polen hat Gold auf BEKANNTMACHUNGSEBENE (aus dem Vorgangs-Bau), auf Unterlagen-
+    # ebene nichts. Genau deshalb unterscheidet `pruefe_sondierung.py` seit heute die
+    # Ebenen — die erste Fassung haette diese vier Zeilen faelschlich beanstandet.
+    Source("sond-pl-ezamowienia", "ezamowienia.gov.pl (staatliche Plattform)", "", "PL",
+           "beides", "sondiert", portals=1, ebene="unterlagen", ertrag="dateien",
+           coverage="19 % der PL-Bekanntmachungen mit Portal-URL — und ueber die BZP-API "
+                    "zusaetzlich die UNTERSCHWELLIGE Ebene (`isTenderAmountBelowEU`).",
+           overlap="✅ OFFEN, am 2026-09-02 belegt: /mo-board/api/v1/notice (ohne Antrag), "
+                   "/mp-readmodels/api/Search/GetTenderDocuments und "
+                   "/mp-readmodels/api/Tender/DownloadDocument liefern anonym ein PDF "
+                   "(464.178 B, 25 Seiten, blankes curl). Jede Bekanntmachung traegt das "
+                   "Pflichtfeld „Zamawiający zastrzega dostęp…: Nie\". ⚠ robots.txt enthaelt "
+                   "nur `as` — kaputt, keine Erlaubnis: Takt selbst setzen.",
+           url="https://ezamowienia.gov.pl"),
+    Source("sond-pl-opennexus", "Open Nexus (platformazakupowa.pl)", "", "PL", "beides",
+           "sondiert", portals=1, ebene="unterlagen", ertrag="gesperrt",
+           coverage="30 % — die groesste PL-Engine",
+           overlap="⛔ VERBOTEN, NICHT VERSCHLOSSEN. Die Dateien haengen offen an der "
+                   "Vergabeseite (/file/get_new/<hash>.pdf), und genau dieser Pfad steht "
+                   "in der robots.txt: `Allow: / · Disallow: /file/get_new/*` bei "
+                   "`Crawl-delay: 900`. Durchsuchen erlaubt, Herunterladen untersagt. "
+                   "Nicht abgerufen.",
+           url="https://platformazakupowa.pl"),
+    Source("sond-pl-marketplanet", "Marketplanet (*.ezamawiajacy.pl)", "", "PL", "beides",
+           "sondiert", portals=1, ebene="unterlagen", ertrag="ungeprueft",
+           coverage="21 % — mandantenfaehig, eine Subdomain je Vergabestelle",
+           overlap="ungeprueft", url="https://oneplace.marketplanet.pl"),
+    Source("sond-pl-rest", "eb2b, logintrade, propublico", "", "PL", "beides",
+           "sondiert", portals=3, ebene="unterlagen", ertrag="ungeprueft",
+           coverage="zusammen 18 % (8 + 6 + 4)", overlap="ungeprueft",
+           url="https://platforma.eb2b.com.pl"),
     # ── ANGEBUNDEN ────────────────────────────────────────────────────────────────────
     Source("doc-cosinex-de", "cosinex/DTVP-Unterlagen", "docfetch-cosinex", "DE", "beides",
            "live", portals=40, ebene="unterlagen", ertrag="dateien", modul="govisor.docfetch",
