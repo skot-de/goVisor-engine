@@ -386,6 +386,32 @@ _UEBERGABE: tuple[Kennzahl, ...] = (
 )
 
 
+# ── Was die Aktivierung mitbringt (2026-09-02) ───────────────────────────────────────────
+# ⚠ EINE AKTIVIERUNG IST KEINE KENNZAHL. „Habt ihr mitgeboten?" ist eine Frage, „Stelle
+# beobachten" ein Schalter, die Bitten um Unterlagen sind Text. Sie gehoeren nicht hierher.
+#
+# Was hierher gehoert, sind die ZAHLEN, die dabei auf dem Bildschirm landen. Sie sind beim
+# Bauen entstanden und waeren beim naechsten Zaehlen wieder als Fund aufgetaucht — genau der
+# Zustand, gegen den dieses Verzeichnis angelegt wurde.
+#
+# ⚠ Die fuenf Luecken-Hinweise vergleichen alle gegen ein PROFILFELD, keiner gegen den Markt.
+# Das ist kein Zufall: eine Luecke ist per Definition der Abstand zwischen dem, was ein
+# Vorgang verlangt, und dem, was ihr hinterlegt habt.
+_AKTIVIERUNG: tuple[Kennzahl, ...] = (
+    _k("luecke_buergschaft", "Lücke: Bürgschaftsrahmen fehlt", "profil",
+       "euer Bürgschaftsrahmen, falls hinterlegt"),
+    _k("luecke_alleingrenze", "Lücke: über eurer Alleingrenze", "profil", "`maxAlleine`"),
+    _k("luecke_region", "Lücke: außerhalb eurer Regionen", "profil", "`regions`"),
+    _k("luecke_wertspanne", "Lücke: außerhalb eurer Wertspanne", "profil", "`volMin`/`volMax`"),
+    _k("luecke_ortstermin", "Lücke: Pflicht-Ortstermin außerhalb des Gebiets", "profil",
+       "`regions` gegen den Ortstermin aus den Unterlagen"),
+    # Wie viele erwartete Unterlagen bei DIESEM Vorgang fehlen. Kein Marktwert: dass anderswo
+    # dieselbe Art fehlt, aendert nichts daran, dass sie hier fehlt.
+    _k("fehlende_unterlagen", "Offen: erwartete Unterlagen fehlen", "keine"),
+    _k("posteingang_ungelesen", "Ungelesene Hinweise", "keine"),
+)
+
+
 _FLAECHEN = (
     (_LISTE, "liste", "explorerCore.COLS"),
     (_LEAD_DETAIL, "lead-detail", "api/lead-detail"),
@@ -400,6 +426,7 @@ _FLAECHEN = (
     # ⚠ Fläche „geplant": noch nirgends angezeigt. Sie steht bewusst in derselben Liste,
     # damit die Zählung ehrlich bleibt und niemand sie zweimal entdeckt.
     (_UEBERGABE, "geplant", "docs/uebergabe-kennzahlen-aktivierung.md"),
+    (_AKTIVIERUNG, "aktivierung", "DetailPanel/explorerCore/api-alerts"),
 )
 
 INVENTAR: tuple[Kennzahl, ...] = tuple(

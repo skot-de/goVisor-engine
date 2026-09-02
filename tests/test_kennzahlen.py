@@ -103,8 +103,23 @@ def test_das_inventar_ist_vollstaendig():
     """⚠ „Halbfertig" war Svens Wort dafür, und er hatte recht: ein Verzeichnis, das nur die
     gerade angefassten Kennzahlen führt, ist eine Notiz, kein Verzeichnis. Die Zahl darf
     wachsen; fällt sie, hat jemand etwas gelöscht, ohne es zu merken."""
-    assert len(kz.ALLE) >= 135, f"nur noch {len(kz.ALLE)} Kennzahl-Plätze"
-    assert len(kz.nach_flaeche()) >= 11, "eine ganze Fläche fehlt"
+    assert len(kz.ALLE) >= 155, f"nur noch {len(kz.ALLE)} Kennzahl-Plätze"
+    assert len(kz.nach_flaeche()) >= 13, "eine ganze Fläche fehlt"
+
+
+def test_die_aktivierung_bringt_ihre_zahlen_mit():
+    """⚠ Eine Aktivierung ist keine Kennzahl: „Habt ihr mitgeboten?" ist eine Frage, „Stelle
+    beobachten" ein Schalter. Aber sie bringen ZAHLEN auf den Bildschirm, und die waren beim
+    ersten Bauen nicht eingetragen — genau der Zustand, gegen den es dieses Verzeichnis gibt.
+
+    Die fünf Lücken vergleichen alle gegen ein Profilfeld. Das ist kein Zufall: eine Lücke
+    ist der Abstand zwischen dem, was ein Vorgang verlangt, und dem, was ihr hinterlegt habt.
+    Wer eine davon auf `markt` setzt, hat sie missverstanden."""
+    akt = kz.nach_flaeche().get("aktivierung", ())
+    assert len(akt) >= 7, "die Aktivierung hat mehr Zahlen als eingetragen"
+    luecken = [k for k in akt if k.schluessel.startswith("luecke_")]
+    assert len(luecken) == 5
+    assert all(k.bezug == "profil" for k in luecken)
 
 
 def test_keine_kennzahl_steht_zweimal_auf_derselben_flaeche():

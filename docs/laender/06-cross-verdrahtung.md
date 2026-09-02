@@ -52,11 +52,22 @@ jeden davon anzeigen. Ein neues Signal fällt damit auf, statt liegenzubleiben.
 und gehört dauerhaft in die Detailebene. Wer eine Kennzahl einträgt und keinen Bezug
 benennen kann, hat sie noch nicht verstanden; der Konstruktor lässt sie dann auch nicht zu.
 
-**Das Verzeichnis ist vollständig, nicht beispielhaft.** Stand 2026-09-01 stehen dort **135
-Kennzahl-Plätze über elf Flächen**, also alles, was ein Nutzer sieht. Die Verteilung sagt
+**Das Verzeichnis ist vollständig, nicht beispielhaft.** Stand 2026-09-02 stehen dort **155
+Kennzahl-Plätze über dreizehn Flächen**, also alles, was ein Nutzer sieht. Die Verteilung sagt
 mehr als die Summe: 58 brauchen einen Marktwert, 39 können keinen haben und gehören dauerhaft
 nach unten, 23 vergleichen gegen ein Profilfeld, das wir schon haben, und 15 warten auf eine
 Historie je Nutzer, die es noch nicht gibt.
+
+⚠ **Eine Aktivierung ist keine Kennzahl, ihre Zahlen sind es.** Am 2026-09-02 kamen sieben
+Einträge dazu (Fläche `aktivierung`): die fünf Lücken-Hinweise des Tagesbriefings, die Zahl
+fehlender erwarteter Unterlagen und die ungelesenen Hinweise. Die Fragen und Schalter selbst
+(„Habt ihr mitgeboten?", „Stelle beobachten", die Bitten um Unterlagen) stehen bewusst NICHT
+drin, sie messen nichts. Beim ersten Bauen fehlten die Zahlen trotzdem, und sie wären beim
+nächsten Zählen wieder als Fund aufgetaucht.
+
+⚠ **Alle fünf Lücken vergleichen gegen ein Profilfeld, keine gegen den Markt.** Das ist kein
+Zufall: eine Lücke IST der Abstand zwischen dem, was ein Vorgang verlangt, und dem, was
+hinterlegt ist. Wer eine davon auf `markt` setzt, hat sie missverstanden.
 
 ⚠ **Plätze, nicht Metriken.** Dieselbe Zahl darf auf zwei Bildschirmen stehen und dort
 verschiedene Bezüge haben; gesucht wird nach Bildschirm, nicht nach Metrik. Verboten ist nur

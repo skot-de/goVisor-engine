@@ -301,8 +301,8 @@ def _behauptungen() -> list[tuple[str, str, bool, str]]:
     # ohne es zu merken — und dann stimmt die Zahl im Kapitel nicht mehr.
     from govisor import kennzahlen as _kzv
     _plaetze = len(_kzv.ALLE)
-    aus.append(("06", "das Kennzahlen-Verzeichnis fuehrt mindestens 148 Plaetze ueber 12 Flaechen",
-                _plaetze >= 148 and len(_kzv.nach_flaeche()) >= 12,
+    aus.append(("06", "das Kennzahlen-Verzeichnis fuehrt mindestens 155 Plaetze ueber 13 Flaechen",
+                _plaetze >= 155 and len(_kzv.nach_flaeche()) >= 13,
                 f"{_plaetze} Plaetze, {len(_kzv.nach_flaeche())} Flaechen"))
 
     # Kapitel 06 behauptet: der Beleg aus dem Dokument kommt an. Er lag jahrelang vollstaendig
