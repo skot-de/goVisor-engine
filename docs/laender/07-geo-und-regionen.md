@@ -50,6 +50,29 @@ Zwei Wege:
 1. **Gleicher Käufer** — derselbe Name trägt in einem anderen Lead eine Region → übernehmen.
 2. **Ortsname** — im Käufernamen steckt ein Ort, der eindeutig zu einer Region gehört.
 
+⚠ **Weg 1 braucht eine MEHRHEIT, kein `any_value` (korrigiert 2026-09-02).** Bis dahin
+stand dort `any_value(buyer_nuts1)`, und das wählt bei einem Käufer mit mehreren Regionen
+beliebig aus — zwei Läufe über denselben Bestand meldeten für DE einmal 5.002 und einmal
+5.003 Ableitungen. Kein Randfall: **in Österreich hingen 8.352 von 9.373 Weg-1-Leads
+(89 %) an einem uneinigen Namen**, weil ÖBB und ASFINAG bundesweit ausschreiben. Jetzt
+gewinnt die häufigste Region des Käufers; bei Gleichstand wird nichts abgeleitet — dieselbe
+Regel, die der Selbsttest weiter unten anwendet.
+
+⚠ **Und Weg 1 prüfte die Werte nicht auf GÜLTIGKEIT.** Der Riegel der Gegenprobe („nur
+echte Regionskennungen") war nie auf diese Seite übertragen worden. In der gebauten Datei
+standen deshalb 199 österreichische `ATZZ` (Extra-Regio), 2 Schweizer `BS`
+(Kantonskürzel) — und **4 deutsche `BE3`, das ist Brüssel** (gemessen 2026-09-02). Sie
+lösen in `dim_nuts` gegen nichts auf, standen im Export also als „abgeleitet" mit leerer
+Region da. Lehrbuchfall der Fehlerklasse **„Fix nur auf einer Seite angewandt"**.
+
+Der Fang dafür sitzt jetzt in `verify.gold_integrity` und prüft nicht die Zeile, sondern
+den WERT: `lead_region_fill.buyer_nuts1_abgeleitet → dim_nuts.nuts_code`. Kein
+Fremdschlüssel hatte je auf diese Spalte gezeigt, deshalb hat nichts widersprochen.
+
+Nach beidem (2026-09-02): DE 5.012 → 5.002 Ableitungen, AT 9.557 → 9.479, CH 3 → 1 —
+und die Widerspruchsquote des Selbsttests fällt in AT von 10,8 % auf 3,3 %, weil Weg 1
+keine gewürfelten Werte mehr gegen Weg 2 stellt.
+
 Gemessen DE: Weg 1 allein 32 %, Weg 2 allein 20 %, beide 29 %, gar nicht 19 % — zusammen
 **83 %**.
 

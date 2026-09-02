@@ -4445,6 +4445,49 @@ def test_gegenprobe_prueft_die_plz_nicht_den_ortsnamen():
     assert "12529" not in plz
 
 
+def test_regionsableitung_ist_reproduzierbar_und_gueltig():
+    """Zwei Läufe über denselben Bestand müssen dasselbe ergeben — und nur echte
+    Regionskennungen liefern.
+
+    Beides war verletzt, und beides fiel monatelang nicht auf. `any_value(buyer_nuts1)`
+    wählte bei einem Käufer mit mehreren Regionen beliebig: zwei Läufe meldeten für DE
+    einmal 5.002 und einmal 5.003 Ableitungen. In Österreich hingen 8.352 von 9.373
+    Weg-1-Leads (89 %) an so einem Namen, weil ÖBB und ASFINAG bundesweit ausschreiben.
+
+    Und der Gültigkeitsriegel der Gegenprobe war nie auf die Ableitung übertragen: in der
+    gebauten Datei standen 199 österreichische `ATZZ`, 2 Schweizer `BS` — und 4 deutsche
+    `BE3`, also Brüssel. Sie lösen in `dim_nuts` gegen nichts auf, standen im Export aber
+    als „abgeleitet" da."""
+    import importlib.util
+    wurzel = pathlib.Path(__file__).resolve().parent.parent
+    spec = importlib.util.spec_from_file_location(
+        "region_ableiten", wurzel / "scripts" / "region_ableiten.py")
+    ra = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(ra)
+    quelle = (wurzel / "scripts" / "region_ableiten.py").read_text(encoding="utf-8")
+    code = "\n".join(z for z in quelle.splitlines() if not z.strip().startswith("#"))
+    assert "any_value(buyer_nuts1)" not in code, (
+        "Weg 1 waehlt wieder beliebig — `any_value` ueber mehrere Regionen ist nicht "
+        "reproduzierbar")
+
+    gepruft = 0
+    for land in ra.LAENDER:
+        gold = wurzel / "data" / "gold" / land / "lead_export.parquet"
+        if not gold.exists():
+            continue
+        gepruft += 1
+        import io, contextlib
+        laeufe = []
+        for _ in range(2):
+            with contextlib.redirect_stdout(io.StringIO()):
+                laeufe.append(ra.fuer_land(land, probe=True))
+        assert laeufe[0] == laeufe[1], (
+            f"{land}: zwei Laeufe ueber denselben Bestand ergeben {laeufe[0]} und "
+            f"{laeufe[1]} Zeilen")
+    if not gepruft:
+        pytest.skip("keine Gold-Ebene gebaut")
+
+
 def test_kuratierte_regionskorrektur_ist_vollstaendig_und_lebendig():
     """Eine kuratierte Datei verrottet lautlos: der Käufer benennt sich um, die Zeile
     greift nicht mehr, und niemand merkt es — der Lead steht wieder im falschen

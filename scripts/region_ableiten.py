@@ -370,6 +370,9 @@ def _kaeufer_plz(con, land: str) -> dict[str, str]:
     quelle = (ROOT / "data/silver" / land / "notice_parties").as_posix()
     if not Path(quelle).exists():
         return {}
+    # ⚠ `any_value` ist hier NICHT der Fehler, den Weg 1 hatte: nachgemessen am
+    # 2026-09-02 traegt keine einzige Bekanntmachung zwei verschiedene Kaeufer-PLZ
+    # (0 von 1.580.051 DE, 129.214 AT, 122.152 CH). Die Gruppe hat genau einen Wert.
     return dict(con.execute(f"""
         SELECT notice_id, any_value(postal_code) FROM '{quelle}/*/*.parquet'
         WHERE role = 'buyer' AND postal_code IS NOT NULL AND postal_code <> ''
@@ -387,13 +390,44 @@ def fuer_land(land: str, probe: bool) -> int:
     if not Path(le).exists():
         print(f"  {land}: keine Gold-Ebene — uebersprungen.")
         return 0
-    zeilen = con.execute(f"""
-        WITH bekannt AS (SELECT buyer_name, any_value(buyer_nuts1) AS nuts1
-                         FROM '{le}' WHERE buyer_nuts1 IS NOT NULL AND buyer_nuts1 <> ''
-                         GROUP BY 1)
-        SELECT l.lead_id, l.buyer_name, b.nuts1
-        FROM '{le}' l LEFT JOIN bekannt b ON b.buyer_name = l.buyer_name
-        WHERE l.buyer_nuts1 IS NULL OR l.buyer_nuts1 = ''""").fetchall()
+    # Die gueltigen Regionskennungen des Landes — gebraucht von BEIDEN Seiten: von der
+    # Ableitung (Weg 1 darf kein `ATZZ` weiterreichen) und von der Gegenprobe.
+    gueltig = set(_verwaltungseinheiten(land).values())
+    # ── Weg 1: derselbe Kaeufername traegt anderswo eine Region ───────────────────
+    # ⚠ MEHRHEIT, NICHT `any_value` (seit 2026-09-02). Bis dahin stand hier
+    # `any_value(buyer_nuts1)` — und das waehlt bei einem Kaeufer mit MEHREREN Regionen
+    # beliebig. Zwei Laeufe ueber denselben Bestand lieferten deshalb einmal 5.002 und
+    # einmal 5.003 deutsche Ableitungen. Es ist kein Randfall: in Oesterreich haengen
+    # 8.352 von 9.373 Weg-1-Leads (89 %) an einem uneinigen Namen, weil OeBB und ASFINAG
+    # bundesweit ausschreiben (gemessen 2026-09-02).
+    #
+    # ⚠ Und die Werte wurden nicht auf GUELTIGKEIT geprueft — der Riegel der Gegenprobe
+    # weiter unten war nie auf diese Seite uebertragen worden. Ergebnis in der gebauten
+    # Datei: 199 oesterreichische Leads erbten `ATZZ` (Extra-Regio), 2 Schweizer `BS`
+    # (Kantonskuerzel) und **4 deutsche `BE3` — das ist Bruessel.** Sie loesen in
+    # `dim_nuts` gegen nichts auf, standen im Export also als „abgeleitet" mit leerer
+    # Region da. Genau die Fehlerklasse „Fix nur auf einer Seite angewandt".
+    #
+    # Bei GLEICHSTAND wird nichts abgeleitet — dieselbe Regel, die der Selbsttest
+    # weiter unten anwendet: wer hier eine Seite waehlt, raet, und danach wird gefiltert.
+    zaehlung = con.execute(f"""
+        SELECT buyer_name, buyer_nuts1, count(*) FROM '{le}'
+        WHERE buyer_nuts1 IS NOT NULL AND buyer_nuts1 <> '' GROUP BY 1, 2""").fetchall()
+    je_name: dict[str, list[tuple[int, str]]] = {}
+    for name, code, anzahl in zaehlung:
+        if code in gueltig:
+            je_name.setdefault(name, []).append((anzahl, code))
+    mehrheit: dict[str, str] = {}
+    for name, werte in je_name.items():
+        # Sortierschluessel mit dem CODE als zweitem Glied: gleiche Zahlen sollen nicht
+        # in Einfuegereihenfolge stehen, sonst waere die Auswahl wieder vom Zufall abhaengig.
+        werte.sort(key=lambda x: (-x[0], x[1]))
+        if len(werte) == 1 or werte[0][0] > werte[1][0]:
+            mehrheit[name] = werte[0][1]
+    zeilen = [(lead_id, name, mehrheit.get(name))
+              for lead_id, name in con.execute(f"""
+        SELECT lead_id, buyer_name FROM '{le}'
+        WHERE buyer_nuts1 IS NULL OR buyer_nuts1 = ''""").fetchall()]
     # ── Gegenprobe: die Leads, die SEHR WOHL eine Region tragen ────────────────────
     # Bis zum 2026-09-01 wurde hier nur ergaenzt, nie geprueft. Ein dastehender Wert
     # galt als belegt (`regionQuelle='amtlich'`) — auch dann, wenn der Kaeuferort ihm
@@ -453,7 +487,6 @@ def fuer_land(land: str, probe: bool) -> int:
     # deshalb gegen die LISTE der gueltigen Kennungen, nicht mehr ueber Praefix+Laenge:
     # „DEZ" ist drei Zeichen lang und faengt mit DE an, ist aber keine Region.
     # Die Formatluecke gehoert gesondert behandelt und steht als offener Punkt.
-    gueltig = set(_verwaltungseinheiten(land).values())
     plz_reg = plz_verzeichnis(land)
     plz_je_lead = _kaeufer_plz(con, land)
     # ── Tor „ein Standort" ────────────────────────────────────────────────────────
