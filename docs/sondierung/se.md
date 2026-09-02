@@ -29,5 +29,17 @@ TendSign gehört zu Mercell und trägt eine eigene Domain — mit demselben `Dis
 `s2c.mercell.com` in den Niederlanden. **Mercell sperrt seine Vergabeplattformen
 länderübergreifend**, unabhängig vom Hostnamen.
 
-Da Mercell auch Norwegen, Dänemark, Finnland und das Baltikum bedient, ist damit ein
-erheblicher Teil Nordeuropas vorab beantwortet — negativ.
+⚠ **Diese Aussage habe ich zunächst überdehnt und noch am selben Abend korrigiert.** Ich
+hatte geschrieben, damit seien „Norwegen, Dänemark, Finnland und das Baltikum vorab
+eingetrübt". Gemessen stimmt das **nur für Norwegen**:
+
+| Land | Mercell-Anteil |
+|---|---:|
+| NO | **63 %** (permalink.mercell 42 + tendsign 20) |
+| DK | 11 % |
+| FI | 1 % |
+| LT / LV / EE | **0 %** |
+
+Das Baltikum ist von Mercell **gar nicht** berührt — und dort liegt der größte Hebel der
+ganzen Sondierung (`baltikum.md`). Aus einem echten Befund einen Ländervorbehalt zu machen,
+den ich nicht gemessen hatte, war voreilig.

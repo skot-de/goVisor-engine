@@ -615,6 +615,41 @@ DOC_REGISTRY: list[Source] = [
                    "upphandlingen\" fuehrt ohne href in einen nicht oeffentlichen Bereich. "
                    "Damit ist SE praktisch zu: 88 % robots-gesperrt, der Rest ohne Dateien.",
            url="https://annonser.clira.io"),
+    # ── BALTIKUM, sondiert am 2026-09-03 · Kapitel: docs/sondierung/baltikum.md ───────
+    # ⚠ EIN-PLATTFORM-LAENDER: LV und EE haben in einem ganzen Monat je EINE Domain, LT
+    # praktisch auch. Ein Abrufer deckt ein ganzes Land — das beste Verhaeltnis von
+    # Aufwand zu Ertrag der ganzen Sondierung (LV: 565 Ausschreibungen je Domain,
+    # gegen 3 in Italien).
+    Source("sond-lt-cvpis", "CVP IS (viesiejipirkimai.lt)", "", "LT", "beides",
+           "sondiert", portals=1, ebene="unterlagen", ertrag="dateien",
+           coverage="99 % Litauens — ein Land, eine Plattform",
+           overlap="✅ OFFEN, am 2026-09-03 belegt. Keine robots.txt. Dreistufig, und der "
+                   "Name sagt die Absicht: listContractDocuments.do → "
+                   "downloadDocForAnonymous() → prepareAnonymousDownload.do → "
+                   "downloadContractDocument.do. Geholt: 410.064 B ZIP mit SIEBEN echten "
+                   "Vergabedokumenten (Vertragsentwurf, technische Spezifikation, ESPD, "
+                   "Vergabebedingungen), anonym, blankes curl. ⚠ Die Dokumentenliste ist "
+                   "SERVERGERENDERT — curl kommt ohne Browser aus, anders als fast ueberall "
+                   "sonst. Der Aufbau gleicht dem franzoesischen AWS-Achat, nur OHNE CAPTCHA.",
+           url="https://viesiejipirkimai.lt"),
+    Source("sond-lv-eis", "EIS (eis.gov.lv)", "", "LV", "beides",
+           "sondiert", portals=1, ebene="unterlagen", ertrag="liste",
+           coverage="100 % Lettlands — EINE Domain im ganzen Monat",
+           overlap="🟡 Offen sichtbar, Abrufweg ungeklaert. Keine robots-Sperre, die "
+                   "Vergabeseite listet die Dokumente vollstaendig (im geprueften Fall 33 "
+                   "Eintraege mit Typ, Datum, Bezeichnung), der Link heisst „Lejupielādēt "
+                   "datni\" (Datei herunterladen). Er ruft aber viewDocument(), das ein Modal "
+                   "PER POST oeffnet — der Dateiendpunkt ist so nicht greifbar. KEIN Hinweis "
+                   "auf eine Schranke. Nachzuholen: ein Land mit einer einzigen Plattform "
+                   "ist die Muehe wert.",
+           url="https://www.eis.gov.lv"),
+    Source("sond-ee-rhr", "RHR (riigihanked.riik.ee)", "", "EE", "beides",
+           "sondiert", portals=1, ebene="unterlagen", ertrag="ungeprueft",
+           coverage="100 % Estlands — EINE Domain",
+           overlap="⚪ Ungeprueft. Keine robots-Sperre. Die TED-Adressen sind Deeplinks mit "
+                   "Fragment-Routing (#/procurement/<id>/documents) — eine JS-Anwendung, "
+                   "deren API erst zu finden ist; ein geratener Endpunkt gab 404.",
+           url="https://riigihanked.riik.ee"),
     # ── ANGEBUNDEN ────────────────────────────────────────────────────────────────────
     Source("doc-cosinex-de", "cosinex/DTVP-Unterlagen", "docfetch-cosinex", "DE", "beides",
            "live", portals=40, ebene="unterlagen", ertrag="dateien", modul="govisor.docfetch",
