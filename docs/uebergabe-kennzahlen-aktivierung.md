@@ -166,6 +166,43 @@ Angezeigt wird ab 100 Feldern (47 % der Vorgänge mit Formularen) eine graue Not
 ein Warnhinweis. Von den 636 Vorgängen über 400 Feldern sind 472 VHB-Formblätter, also
 Preisblätter: das ist Kalkulationsarbeit von Tagen, und sie steht nirgends in der Bekanntmachung.
 
+**Zu 13 (Negativbefund, gemessen am 2026-09-02):** die Datenlage ist besser als beim Nachbarn —
+**1.114** offene Vorgänge haben Unterlagen *und* eine Bieterzahl. ⚠ Aber die Bieterzahl gehört
+zum **Vorgänger**, die Anforderungen zum aktuellen Verfahren; die Verbindung ist der Käufer,
+nicht der Vorgang. Und der Effekt ist nicht da:
+
+1. **Über die Hürdenzahl: kein Signal.** Median 4,0 / 3,0 / 4,0 / 4,0 bei 0 / 1–2 / 3–5 / 6+
+   Hürden; Einzelbieteranteil 19 / 16 / 18 / 21 %.
+2. **Je Anforderungsart sah es nach etwas aus** — und war der Lesetiefe-Effekt eine Ebene höher.
+   Die scheinbar wirksamen Arten kommen in 70–90 % der Vorgänge vor, die „ohne"-Gruppe sind dünn
+   gelesene Fälle. Die echten Hürden standen bei **4,0 gegen 4,0**.
+3. ⚠ **Innerhalb einer Wertklasse erschien der Effekt dann doch** — und die **Replikation** hat
+   ihn zerlegt:
+
+| Hürde | <250k | 250k–1M | >1M |
+|---|---|---|---|
+| Referenz-Mindestwert | — | **2,0 / 4,0** | — |
+| Berufshaftpflicht | 3,5 / 1,0 | 3,0 / 4,0 | — |
+| Eignung Personal | 3,0 / 1,0 | 3,0 / 4,0 | 5,0 / 3,0 |
+| Zertifikat | 3,0 / 1,0 | 4,0 / 4,0 | 5,0 / 3,0 |
+
+Keine einzige Hürde zeigt in allen drei Klassen dieselbe Richtung. **Hätte ich nur die mittlere
+Klasse gemessen, stünde jetzt „Referenz-Mindestwert halbiert das Bieterfeld" in der App.**
+
+⚠ **Warum die kleine Klasse alles umdreht:** 1.486 ihrer 1.694 Vorgänge haben weniger als fünf
+extrahierte Anforderungen, und deren Median-Bieterzahl ist **1,0** (der Rest: 4,0). Es ist immer
+dieselbe Menge kaum gelesener Vorgänge, die als „ohne Hürde" gilt.
+
+Der gemeinsame Treiber ist die **Grösse**: die Bieterzahl steigt mit der Lesetiefe (3 → 4 → 5 → 5)
+und mit dem Auftragswert (3 → 4 → 5) in derselben Form.
+
+⚠ **Die Bieterzahl selbst ist nicht das Problem** — 1/2/3/4/5 mit natürlichem Abfall, die 999
+kommt genau einmal vor. Der Befund steht auf sauberen Daten.
+
+**Was es bräuchte:** Bieterzahlen am *selben* Vorgang, dessen Unterlagen wir gelesen haben — also
+die Aufbewahrung von Dokumenten über den Zuschlag hinaus. Dieselbe Voraussetzung wie bei der
+Anforderungs-Drift.
+
 **Zu 12 (nicht rechenbar, geprüft am 2026-09-02):** die Anforderungs-Drift zwischen zwei
 Runden derselben Stelle lässt sich mit den heutigen Daten nicht bilden, und zwar **strukturell**,
 nicht wegen einer Lücke:
@@ -344,7 +381,7 @@ in den Unterlagen. Die 70 Fälle „Unterlagen früher" sind der zweite Hinweis:
 | # | Kennzahl | Frühestens |
 |---|---|---|
 | 12 | **Anforderungs-Drift** (dieselbe Stelle, zwei Runden: verschärft?) | ⚠ **nicht rechenbar, siehe unten** — stattdessen die Drift im laufenden Verfahren gebaut |
-| 13 | **Wirkung von Hürden auf die Bieterzahl** | heute 987 verbindbar, wächst mit jedem Zuschlag |
+| 13 | **Wirkung von Hürden auf die Bieterzahl** | ⚠ **nachgemessen, Effekt nicht vorhanden** — siehe unten. 1.114 verbindbar, aber die Bieterzahl gehört zum Vorgänger |
 
 ### Geprüft und verworfen
 

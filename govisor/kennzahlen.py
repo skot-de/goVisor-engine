@@ -445,6 +445,41 @@ _AKTIVIERUNG: tuple[Kennzahl, ...] = (
 # marktweite Wert stammt aus derselben Untererfassung wie der eigene, und dagegen verglichen
 # saehe jeder tief gelesene Vorgang extremer aus als er ist. Die Kennzahl behauptet nur
 # Anwesenheit und sagt nie „wenig Aufwand".
+# ── ⚠ NEGATIVBEFUND: Wirkung von Huerden auf die Bieterzahl (geprueft am 2026-09-02) ────
+# Der Eintrag `wirkungHuerdenBieterzahl` bleibt unter `geplant`, aber NICHT, weil noch niemand
+# hingesehen haette. Es ist nachgemessen, und der Effekt ist nicht da.
+#
+# Die Datenlage ist besser als beim Nachbarn (Kennzahl 12 des Papiers): 1.114 offene Vorgaenge
+# haben Unterlagen UND eine Bieterzahl ueber `lead_predecessor`. ⚠ Aber die Bieterzahl gehoert
+# zum VORGAENGER, die Anforderungen zum aktuellen Verfahren — die Verbindung ist der Kaeufer,
+# nicht der Vorgang.
+#
+#   1. Ueber die HUERDENZAHL: kein Signal. Median 4,0 / 3,0 / 4,0 / 4,0 bei 0 / 1-2 / 3-5 / 6+
+#      Huerden, Einzelbieteranteil 19 / 16 / 18 / 21 %.
+#   2. Je ANFORDERUNGSART sah es zuerst nach etwas aus — und war der Lesetiefe-Effekt eine
+#      Ebene hoeher: die scheinbar wirksamen Arten kommen in 70 bis 90 % der Vorgaenge vor, die
+#      „ohne"-Gruppe sind duenn gelesene Faelle. Die echten Huerden (Mindestumsatz,
+#      Berufshaftpflicht, Zertifikat) standen bei 4,0 gegen 4,0.
+#   3. ⚠ INNERHALB EINER WERTKLASSE erschien der Effekt dann doch — und die REPLIKATION hat ihn
+#      zerlegt. In 250k-1M sank die Bieterzahl bei vier Huerden (Referenz-Mindestwert 2,0 gegen
+#      4,0), in <250k STIEG sie bei allen acht, in >1M ebenso. Keine einzige Huerde zeigt in
+#      allen drei Klassen dieselbe Richtung.
+#
+# ⚠ DER GRUND, warum die kleine Klasse alles umdreht: 1.486 ihrer 1.694 Vorgaenge haben weniger
+# als fuenf extrahierte Anforderungen, und deren Median-Bieterzahl ist 1,0 (der Rest: 4,0). Es
+# ist immer dieselbe Menge kaum gelesener Vorgaenge, die als „ohne Huerde" gilt.
+#
+# Der gemeinsame Treiber ist die GROESSE: die Bieterzahl steigt mit der Lesetiefe (3 → 4 → 5 → 5)
+# und mit dem Auftragswert (3 → 4 → 5) in derselben Form. Grosse Vergaben haben mehr Dokumente
+# UND mehr Bieter.
+#
+# ⚠ Die Bieterzahl selbst ist NICHT das Problem: 1/2/3/4/5 mit natuerlichem Abfall, die 999
+# kommt genau einmal vor. Der Befund steht auf sauberen Daten.
+#
+# WAS ES BRAUCHTE: Bieterzahlen am SELBEN Vorgang, dessen Unterlagen wir gelesen haben — also
+# die Aufbewahrung von Dokumenten ueber den Zuschlag hinaus. Dieselbe Voraussetzung wie bei
+# `anforderungsDrift`.
+
 # ── Aenderungen an den Vergabeunterlagen (gebaut am 2026-09-02) ─────────────────────────
 # ⚠ SIE IST NICHT DIE „ANFORDERUNGS-DRIFT", und die bleibt deshalb unter `geplant`. Das Papier
 # meint dort „dieselbe Stelle, zwei Runden: verschaerft?" — und das ist mit den heutigen Daten

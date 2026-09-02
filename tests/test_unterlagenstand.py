@@ -102,6 +102,21 @@ def test_der_grund_steht_im_verzeichnis():
     assert "contract_succession" in stelle and "0 Paare" in stelle
 
 
+def test_huerdenwirkung_bleibt_offen_mit_grund():
+    """⚠ ZWEITER NEGATIVBEFUND, gemessen am 2026-09-02. Die Wirkung von Hürden auf die
+    Bieterzahl ist nicht da: über die Hürdenzahl kein Signal, je Anforderungsart nur der
+    Lesetiefe-Effekt, und der einzige Treffer innerhalb einer Wertklasse dreht in den
+    Nachbarklassen die Richtung um.
+
+    Der Eintrag bleibt offen — aber der Grund steht daneben, damit die nächste Sitzung nicht
+    dieselbe Messung noch einmal fährt und beim vorletzten Schritt stehenbleibt."""
+    from govisor import kennzahlen as K
+    offen = {x.schluessel for x in K.ALLE if x.flaeche == "geplant"}
+    assert "wirkungHuerdenBieterzahl" in offen
+    txt = (WURZEL / "govisor" / "kennzahlen.py").read_text(encoding="utf-8")
+    assert "NEGATIVBEFUND" in txt and "Replikation" in txt.replace("REPLIKATION", "Replikation")
+
+
 # ── die Sonde ───────────────────────────────────────────────────────────────────────────
 
 def test_die_sonde_laeuft_gruen():

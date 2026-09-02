@@ -217,6 +217,33 @@ Ein paar echte Beispiele, was hinter einer schönen Zahl steckte:
 | 5× genau −1 Tag Fristabweichung | ein Off-by-one bei uns | verlängerte Fristen: 51 % liegen auf Wochenvielfachen |
 | „56 Dateien neu, 54 entfernt" | die Stelle hat das Paket umgebaut | die Fassung steckt im ZIP-Namen; 47 waren byte-gleich |
 
+## Ein Effekt, der nur in einer Schicht steht, ist keiner
+
+Beim Prüfen der Hürden-Wirkung auf die Bieterzahl war der Befund zweimal fertig, bevor er kippte.
+Der Ablauf lohnt sich als Muster, weil jeder Zwischenstand plausibel aussah:
+
+| Schritt | Ergebnis | Deutung, die nahelag |
+|---|---|---|
+| Hürden **zählen** | 4,0 / 3,0 / 4,0 / 4,0 | „kein Effekt, fertig" |
+| je **Anforderungsart** | fünf Arten mit 4,0 gegen 3,0 | „doch ein Effekt!" |
+| dieselben Arten **nach Verbreitung** | wirksam nur bei Arten in 70–90 % der Fälle | Lesetiefe, nicht Hürde |
+| innerhalb **einer Wertklasse** | Referenz-Mindestwert 2,0 gegen 4,0 | „jetzt aber" |
+| dieselbe Prüfung in **allen Klassen** | Richtung dreht sich | nichts davon hält |
+
+⚠ **Der vorletzte Schritt hätte eine falsche Aussage in die App gebracht.** „Referenz-Mindestwert
+halbiert das Bieterfeld" ist eine starke, verkäufliche Zahl, sie stand mit n=42 und einer sauber
+kontrollierten Wertklasse da — und in den beiden Nachbarklassen zeigt dieselbe Hürde die
+Gegenrichtung.
+
+**Die Regel:** wer eine Störgrösse durch Schichtung herausnimmt, misst in **allen** Schichten,
+nicht in der, die trägt. Ein echter Effekt zeigt in jeder Schicht dieselbe Richtung; die Stärke
+darf schwanken. Dreht die Richtung, war die Schicht der Effekt.
+
+⚠ **Und die Kontrollgruppe muss man sich ansehen, nicht nur zählen.** Die „ohne Hürde"-Gruppe der
+kleinsten Klasse war zu 88 % dieselbe Menge kaum gelesener Vorgänge mit Median 1,0 Bieter — bei
+*jeder* geprüften Hürde. Eine Kontrollgruppe, die bei acht verschiedenen Tests identisch aussieht,
+ist keine Kontrollgruppe, sondern ein Artefakt.
+
 ## Derselbe Inhalt unter anderem Namen
 
 An einem einzigen Tag drei Mal dieselbe Fehlerform, und jedes Mal sah die falsche Zahl
