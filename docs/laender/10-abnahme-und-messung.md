@@ -217,6 +217,41 @@ Ein paar echte Beispiele, was hinter einer schönen Zahl steckte:
 | 5× genau −1 Tag Fristabweichung | ein Off-by-one bei uns | verlängerte Fristen: 51 % liegen auf Wochenvielfachen |
 | „56 Dateien neu, 54 entfernt" | die Stelle hat das Paket umgebaut | die Fassung steckt im ZIP-Namen; 47 waren byte-gleich |
 
+## Was ist der Nenner eigentlich?
+
+Der „Aufwand je Euro Auftragswert" hat am 2026-09-02 **jede formale Prüfung dieses Kapitels
+bestanden** und sagt trotzdem nichts. Das ist der lehrreichste Fall, weil das ganze Werkzeug
+versagt hat:
+
+| Prüfung | Ergebnis |
+|---|---|
+| Genug Masse? | 3.795 Vorgänge |
+| Reproduziert die Vorgabe? | Median 0,153 gegen versprochene 0,15 |
+| Driftprüfung über die Lesetiefe? | Faktor 1,28 — besteht |
+| Richtiger Vergleichsrahmen? | keiner nötig, es ist ein Verhältnis |
+
+Was sie erledigt hat, war eine Frage, die in keiner Prüfliste stand: **was ist der Nenner
+eigentlich?** Antwort: **kein einziger** der 7.968 Vorgänge mit Unterlagen hat einen
+veröffentlichten Auftragswert. Alle 3.795 Werte sind Schätzungen unseres eigenen Modells, und
+**14 verschiedene Schätzwerte decken die Hälfte aller Vorgänge ab**.
+
+Die Kennzahl war also unsere Extraktion geteilt durch unsere Schätzung. Beide Hälften sind
+Ausgaben derselben Pipeline. Kein Test in diesem Kapitel fragt danach — Drift, Rahmen,
+Replikation, Belegpflicht prüfen alle, ob die Zahl *stabil und richtig gerechnet* ist, nicht ob
+sie *etwas ausserhalb von uns* misst.
+
+**Die Frage vor allen anderen lautet deshalb: kommt jede Hälfte des Bruchs von aussen?** Wo eine
+Seite unser eigenes Ergebnis ist, misst die Kennzahl bestenfalls die Beziehung zweier
+Pipeline-Schritte. Konkret zu prüfen:
+
+- Gibt es ein Feld, das *gemessen* von *geschätzt* trennt? (Hier: `value_source`. Es gab es, und
+  die erste Messung hat beide vermischt.)
+- Wie viele **verschiedene** Werte hat der Nenner? Ein Modell, das Segmentmediane ausgibt,
+  verrät sich an wenigen, häufig wiederholten Zahlen — 447 verschiedene auf 3.795 Vorgänge, der
+  häufigste 387-mal.
+- Ist die nützliche Hälfte anderswo schon ehrlicher gebaut? Hier ja: Kennzahl 2 vergleicht
+  Anforderungen gegen den Markt, ohne geldförmige Scheingenauigkeit.
+
 ## Ein Effekt, der nur in einer Schicht steht, ist keiner
 
 Beim Prüfen der Hürden-Wirkung auf die Bieterzahl war der Befund zweimal fertig, bevor er kippte.

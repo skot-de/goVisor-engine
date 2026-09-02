@@ -502,7 +502,7 @@ Beispiel: Bekanntmachung „Technik · Preis", Unterlagen „Optik/Gesamteindruc
 Das ändert eine Bietentscheidung. Die Deckung ist allein durch die Dokumentenabdeckung begrenzt,
 sie wächst also mit jeder Aktivierung aus Teil 2 A.
 
-### 15 — Aufwand je Euro Auftragswert *(brauchbar als Filter, nicht als Schlagzeile)*
+### 15 — Aufwand je Euro Auftragswert *(⚠ nachgemessen 02.09.: rechenbar, stabil, ohne Aussage)*
 
 - Median **0,15** Anforderungen je 1.000 EUR, Viertel bei 0,085 und 0,24
 - Spreizung nur **3-fach**, damit als Kennzahl unauffällig
@@ -510,8 +510,41 @@ sie wächst also mit jeder Aktivierung aus Teil 2 A.
   **54,6 Mio EUR**. Gleicher Aufwand, siebzehntausendfacher Auftrag
 - Basis 3.463 Vorgänge mit Wert und Anforderungszahl
 
-Einsatz: als Ausschlussfilter für kleine Bieter („unverhältnismäßiger Aufwand ausblenden"),
-nicht als angezeigte Zahl.
+⚠ **Nachgemessen am 2026-09-02 — der unangenehmste der drei Fälle: die Kennzahl besteht jede
+formale Prüfung und sagt trotzdem nichts.**
+
+| Prüfung | Ergebnis |
+|---|---|
+| Rechenbar | 3.795 Vorgänge mit Unterlagen und Wert |
+| Reproduziert die Zahl oben | Median **0,153** je 1.000 EUR |
+| Driftprüfung über die Lesetiefe | 0,136 → 0,156 → 0,174 → 0,169 = Faktor **1,28**, besteht |
+
+⚠ **Der Nenner ist nie Geld, das jemand veröffentlicht hat:**
+
+| | |
+|---|---|
+| Vorgänge mit Unterlagen | 7.968 |
+| davon mit **echtem** Wert (`value_source = actual`) | **0** |
+| davon mit Schätzung | 3.795 |
+| verschiedene Werte darin | 447 |
+| **Schätzwerte, die die Hälfte aller Vorgänge abdecken** | **14** |
+
+Der Median-Schätzwert ist in drei von vier Lesetiefe-Klassen **dieselbe Zahl** (379.674 EUR). Die
+Kennzahl wäre also *unsere Extraktion geteilt durch unsere Schätzung* — beide Hälften tragen etwa
+gleich viel bei (Korrelation 0,66 zur Anforderungszahl, −0,69 zum Schätzwert; die Hälften selbst
+mit 0,10 unabhängig). ⚠ Auch die *interessanten Ränder* oben stehen auf Schätzwerten: die
+3.218 EUR sind keine veröffentlichte Zahl.
+
+⚠ **Und die nützliche Hälfte gibt es schon:** Anforderungen im Verhältnis zum Üblichen ist
+**Kennzahl 2**, je Bereich, gegen den Markt, ohne geldförmige Scheingenauigkeit. Die Streuung des
+Verhältnisses (Faktor 2,8 zwischen den Quartilen) ist kaum grösser als die der reinen
+Anforderungszahl (2,0).
+
+**Auch als Filter fragwürdig:** unverhältnismässigen Aufwand auszublenden würde Vorgänge
+verstecken, deren Verhältniszahl zur Hälfte aus einer 14-stufigen Schätzleiter stammt.
+
+**Was es bräuchte:** echte Auftragswerte an Vorgängen, deren Unterlagen wir gelesen haben —
+derselbe Infrastrukturschritt wie bei 13 und 14.
 
 ### Zusätzlich geprüft und verworfen
 

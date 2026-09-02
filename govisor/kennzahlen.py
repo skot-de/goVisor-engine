@@ -445,6 +445,65 @@ _AKTIVIERUNG: tuple[Kennzahl, ...] = (
 # marktweite Wert stammt aus derselben Untererfassung wie der eigene, und dagegen verglichen
 # saehe jeder tief gelesene Vorgang extremer aus als er ist. Die Kennzahl behauptet nur
 # Anwesenheit und sagt nie „wenig Aufwand".
+# ── ⚠ KORREKTUR ZU DEN DREI BLOCKERN (2026-09-02, nach Nachfrage) ───────────────────────
+# Bei `anforderungsDrift`, `wirkungHuerdenBieterzahl` und `aufwandJeEuro` steht unten dreimal
+# „was es braeuchte: Aufbewahrung von Dokumenten ueber den Zuschlag hinaus". DAS IST FALSCH,
+# und der Irrtum ist lehrreich: aus „die Bestaende ueberschneiden sich nicht" wurde
+# stillschweigend „wir werfen etwas weg". Nachgesehen:
+#
+#   1. DAS MAPPING GIBT ES LAENGST. `award_tender_link` verbindet Zuschlags- und
+#      Ausschreibungsbekanntmachung ueber die Veroeffentlichungsnummer (`method =
+#      'ref_publication'`), 373.190 Zeilen — ein amtlicher Verweis, keine Schaetzung. Die
+#      Dokumente haengen ohnehin an derselben `notice_id`.
+#   2. NIEMAND LOESCHT. `web/data/doc-analysis/` waechst (8.104 Dateien = 8.104 Zeilen in
+#      `doc_analysis`); kein Skript raeumt dort auf. Die Auszuege bleiben also erhalten.
+#   3. ES IST NUR ZU FRUEH. Der Dokumentbestand ist zwei Wochen alt (Auswertungen vom 22.08.
+#      bis 02.09.), die Fristen der erfassten Vorgaenge beginnen am 02.09., und zwischen
+#      Ausschreibung und Zuschlag liegen im Median 114 Tage (p75 167, p90 273).
+#
+#      → erste Ueberschneidungen um Januar 2027, p75 Maerz, p90 Juni 2027.
+#
+# ⚠ DIE EINZIGE ECHTE GEFAHR ist, dass jemand `web/data/doc-analysis/` aufraeumt, weil es
+# „alte, abgelaufene Vorgaenge" enthaelt. Genau die sind der Rohstoff. Der Auszug kostet
+# 19,6 MB (doc_checklist 18,6 + doc_analysis 1,0) gegen 239 GB Original-PDFs — die PDFs darf
+# man wegwerfen, die Auszuege nicht.
+
+# ── ⚠ NEGATIVBEFUND: Aufwand je Euro Auftragswert (geprueft am 2026-09-02) ──────────────
+# `aufwandJeEuro` bleibt unter `geplant`, und dieser Fall ist der unangenehmste der drei: die
+# Kennzahl BESTEHT JEDE FORMALE PRUEFUNG und sagt trotzdem nichts.
+#
+#   rechenbar     3.795 Vorgaenge mit Unterlagen und Wert
+#   reproduziert  Median 0,153 Anforderungen je 1.000 EUR (das Papier nennt 0,15)
+#   stabil        Driftpruefung 0,136 → 0,156 → 0,174 → 0,169 = Faktor 1,28, unter der Schwelle
+#
+# ⚠ UND DER NENNER IST NIE GELD, DAS JEMAND VEROEFFENTLICHT HAT:
+#
+#     Vorgaenge mit Unterlagen                              7.968
+#     davon mit ECHTEM Wert (`value_source = 'actual'`)          0
+#     davon mit Schaetzung                                   3.795
+#     verschiedene Werte darin                                 447
+#     Schaetzwerte, die die HAELFTE aller Vorgaenge abdecken     14
+#
+# Dieselbe Disjunktheit wie bei `anforderungsDrift` und `wirkungHuerdenBieterzahl`: echte Werte
+# stehen in Zuschlagsbekanntmachungen, Unterlagen gibt es nur bei offenen Verfahren. Der
+# Median-Schaetzwert ist in drei von vier Lesetiefe-Klassen DIESELBE ZAHL (379.674 EUR).
+#
+# Die Kennzahl waere also unsere Extraktion geteilt durch unsere Schaetzung. Beide Haelften
+# tragen etwa gleich viel (Korrelation zum Verhaeltnis 0,66 zur Anforderungszahl, -0,69 zum
+# Schaetzwert; die Haelften selbst sind mit 0,10 unabhaengig). Was der Nenner an Streuung
+# beisteuert, ist die Segmentzuordnung unseres Schaetzers — fuer die halbe Population eine
+# 14-stufige Leiter.
+#
+# ⚠ UND DIE NUETZLICHE HAELFTE GIBT ES SCHON: Anforderungen im Verhaeltnis zum Ueblichen ist
+# `_ANFORDERUNGSPROFIL` (Kennzahl 2), je Bereich, gegen den Markt, ohne geldfoermige
+# Scheingenauigkeit. Die Streuung des Verhaeltnisses (Faktor 2,8 zwischen den Quartilen) ist
+# kaum groesser als die der reinen Anforderungszahl (2,0).
+#
+# WAS ES BRAEUCHTE: echte Auftragswerte an Vorgaengen, deren Unterlagen wir gelesen haben.
+# „80 Anforderungen fuer einen Auftrag ueber 40.000 Euro" waere eine starke Aussage. ⚠ Und das
+# kommt VON SELBST — s. „Korrektur zu den drei Blockern" oben: das Mapping gibt es, geloescht
+# wird nichts, es ist nur zu frueh. Erste Ueberschneidungen um Januar 2027.
+
 # ── ⚠ NEGATIVBEFUND: Wirkung von Huerden auf die Bieterzahl (geprueft am 2026-09-02) ────
 # Der Eintrag `wirkungHuerdenBieterzahl` bleibt unter `geplant`, aber NICHT, weil noch niemand
 # hingesehen haette. Es ist nachgemessen, und der Effekt ist nicht da.
@@ -476,9 +535,9 @@ _AKTIVIERUNG: tuple[Kennzahl, ...] = (
 # ⚠ Die Bieterzahl selbst ist NICHT das Problem: 1/2/3/4/5 mit natuerlichem Abfall, die 999
 # kommt genau einmal vor. Der Befund steht auf sauberen Daten.
 #
-# WAS ES BRAUCHTE: Bieterzahlen am SELBEN Vorgang, dessen Unterlagen wir gelesen haben — also
-# die Aufbewahrung von Dokumenten ueber den Zuschlag hinaus. Dieselbe Voraussetzung wie bei
-# `anforderungsDrift`.
+# WAS ES BRAUCHTE: Bieterzahlen am SELBEN Vorgang, dessen Unterlagen wir gelesen haben. ⚠ Auch
+# das kommt von selbst — s. „Korrektur zu den drei Blockern": es ist nur zu frueh, nicht
+# unmoeglich. Erste Ueberschneidungen um Januar 2027.
 
 # ── Aenderungen an den Vergabeunterlagen (gebaut am 2026-09-02) ─────────────────────────
 # ⚠ SIE IST NICHT DIE „ANFORDERUNGS-DRIFT", und die bleibt deshalb unter `geplant`. Das Papier
@@ -489,9 +548,9 @@ _AKTIVIERUNG: tuple[Kennzahl, ...] = (
 #     Nachfolger mit Unterlagen: 0 · Vorgaenger mit Unterlagen: 0
 #
 # Unterlagen existieren nur waehrend laufender Angebotsfrist, ein Vorgaenger ist per Definition
-# abgeschlossen. Die beiden Bestaende sind disjunkt und bleiben es, solange wir Dokumente nach
-# dem Zuschlag nicht aufbewahren. Wer die Kennzahl bauen will, braucht zuerst diese Aufbewahrung
-# — oder den Zeitverlauf unserer eigenen Laeufe, der laut Papier „mit dem Lauf 02.09." beginnt.
+# abgeschlossen. ⚠ Die Bestaende sind HEUTE disjunkt, aber nicht dauerhaft: s. „Korrektur zu den
+# drei Blockern" oben. Das Mapping gibt es, geloescht wird nichts, der Bestand ist nur zwei
+# Wochen alt. Erste Ueberschneidungen um Januar 2027.
 #
 # Gebaut ist stattdessen die Drift INNERHALB des laufenden Verfahrens: 209 Vorgaenge tragen
 # mehrere Fassungen, 93 davon noch offen, und alle 93 haben im letzten Schritt eine Aenderung

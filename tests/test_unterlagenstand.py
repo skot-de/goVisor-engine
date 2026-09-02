@@ -117,6 +117,20 @@ def test_huerdenwirkung_bleibt_offen_mit_grund():
     assert "NEGATIVBEFUND" in txt and "Replikation" in txt.replace("REPLIKATION", "Replikation")
 
 
+def test_aufwandjeeuro_bleibt_offen_mit_grund():
+    """⚠ DRITTER NEGATIVBEFUND, und der unangenehmste: die Kennzahl besteht jede formale
+    Prüfung — rechenbar, reproduziert die Vorgabe (0,153 gegen 0,15), Driftfaktor 1,28 — und
+    sagt trotzdem nichts. Kein einziger der 7.968 Vorgänge mit Unterlagen hat einen
+    veröffentlichten Auftragswert; alle 3.795 Werte sind Schätzungen, und 14 davon decken die
+    Hälfte ab. Der Bruch hätte unsere Extraktion durch unsere Schätzung geteilt."""
+    from govisor import kennzahlen as K
+    offen = {x.schluessel for x in K.ALLE if x.flaeche == "geplant"}
+    assert "aufwandJeEuro" in offen
+    txt = (WURZEL / "govisor" / "kennzahlen.py").read_text(encoding="utf-8")
+    stelle = txt[txt.index("NEGATIVBEFUND: Aufwand je Euro"):][:2600]
+    assert "value_source" in stelle and "379.674" in stelle
+
+
 # ── die Sonde ───────────────────────────────────────────────────────────────────────────
 
 def test_die_sonde_laeuft_gruen():
