@@ -363,8 +363,6 @@ _EIGNUNGSCHECK: tuple[Kennzahl, ...] = (
 # offenen Vorgaengen mit mehreren Zuschlagskriterien. Sie doppelt einzutragen haette den
 # Eindruck erzeugt, da sei noch etwas zu bauen.
 _UEBERGABE: tuple[Kennzahl, ...] = (
-    _k("fingerabdruckVergabestelle", "Fingerabdruck der Vergabestelle", "markt",
-       "wie oft die Stelle etwas verlangt gegen marktweit"),
     _k("formularaufwand", "Formularaufwand", "markt", "Median 22 Pflichtfelder"),
     _k("mengengeruest", "Mengengerüst", "keine"),
     _k("bezifferteSchwellen", "Bezifferte Schwellen als Vergleichsgruppe", "markt",
@@ -422,6 +420,17 @@ _AKTIVIERUNG: tuple[Kennzahl, ...] = (
 # zwischen 28 und 40 Tagen, weil dort die gesetzlichen Mindestfristen liegen. Unterschwellig
 # gelten andere: unter den Vorgaengen mit hoechstens 28 Tagen sind 21 % UVgO, im Rest 4 %.
 # Ein Vergleichswert, der zwei Rechtsgrundlagen mischt, ist keiner.
+# ── Fingerabdruck der Vergabestelle (Kennzahl 3, gebaut am 2026-09-02) ───────────────────
+# ⚠ Nur die sieben Anforderungsarten unter 25 % Marktanteil. Dass eine Stelle
+# `einzureichendes_dokument` (92 % marktweit) immer verlangt, ist keine Eigenschaft der
+# Stelle, sondern des Verfahrens. Und mindestens fuenf Verfahren: „3 von 3" ist rechnerisch
+# auffaellig und trotzdem duenn.
+_STELLENPROFIL: tuple[Kennzahl, ...] = (
+    Kennzahl("fingerabdruckVergabestelle", "Fingerabdruck der Vergabestelle", "markt",
+             "Marktanteil derselben Anforderungsart, je Land",
+             "lead-detail", "export_stellenprofil.py", "", "Anteil"),
+)
+
 # ── Anforderungsprofil (Kennzahl 2, gebaut am 2026-09-02) ────────────────────────────────
 # ⚠ Die Uebergabe nennt sie „Strenge als Perzentil je Bereich". Das Wort stimmt fuer die
 # Haelfte der Bereiche nicht: `formalitaet` sind ausfuellbare Formulare (Aufwand),
@@ -476,7 +485,7 @@ INVENTAR: tuple[Kennzahl, ...] = tuple(
 )
 
 ALLE: tuple[Kennzahl, ...] = (DOC_SIGNALE + VERGABESTELLEN + _ZEITFENSTER
-                              + _ANFORDERUNGSPROFIL + INVENTAR)
+                              + _ANFORDERUNGSPROFIL + _STELLENPROFIL + INVENTAR)
 
 
 def nach_flaeche() -> dict[str, tuple[Kennzahl, ...]]:

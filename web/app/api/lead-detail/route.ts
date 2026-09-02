@@ -76,6 +76,24 @@ async function loadDocSignals(): Promise<Record<string, DocSignals>> {
   return docSignals!;
 }
 
+/* Fingerabdruck der Vergabestelle (Kennzahl 3): was verlangt DIESE Stelle fast immer, das
+ * andere selten verlangen? Wer das vor dem Oeffnen der Unterlagen weiss, legt die Nachweise
+ * bereit, statt sie nachzureichen.
+ *
+ * ⚠ Der Schluessel ist der KAEUFERNAME, klein und getrimmt. `lead_export` traegt keine
+ * Entitaets-Kennung, und einen Join gegen Gold gibt es im Frontend nicht. Folge: zwei
+ * Schreibweisen derselben Stelle zaehlen getrennt — der Fingerabdruck wird dadurch
+ * schwaecher, nie falsch. */
+type Stellenprofil = { markt: Record<string, number>;
+                       stellen: Record<string, { typ: string; label: string; k: number; n: number; markt: number }[]> };
+let stellenprofil: Stellenprofil | null = null;
+async function loadStellenprofil(): Promise<Stellenprofil> {
+  if (stellenprofil) return stellenprofil;
+  try { const roh = await loadDataFile("stellenprofil.json"); stellenprofil = roh ? JSON.parse(roh) : { markt: {}, stellen: {} }; }
+  catch { stellenprofil = { markt: {}, stellen: {} }; }
+  return stellenprofil!;
+}
+
 /* Anforderungsprofil (Kennzahl 2): je Bereich die Anzahl, dazu Median und oberstes Zehntel.
  *
  * ⚠ Jeder Bereich traegt seine ART mit (`huerde` / `aufwand` / `umfang`). Die Uebergabe nennt
@@ -238,6 +256,14 @@ export async function GET(req: Request) {
         .map((x) => ({ bereich: x.bereich, k: x.k, median: x.lage!.median, art: x.lage!.art }));
       if (auffaellig.length) detail.lbProfil = auffaellig;
     }
+
+    /* ⚠ Nur was die Stelle DEUTLICH oefter verlangt als der Markt. Ein Fingerabdruck, der
+       die Marktrate nur trifft, ist keiner — dann ist es Verfahrensroutine. */
+    const sp = await loadStellenprofil();
+    const kaeufer = String((detail as { buyer?: string }).buyer || "").trim().toLowerCase().slice(0, 120);
+    const land2 = String((detail as { land?: string }).land || "DE");
+    const abdruck = kaeufer ? sp.stellen[`${land2}:${kaeufer}`] : undefined;
+    if (abdruck?.length) detail.lbStelle = abdruck.slice(0, 3);
     // Dateiliste des Portals — was dort LIEGT, ohne dass wir es gelesen haben.
     const li = await ladeDateiliste(id);
     if (li) detail.lbListe = li;

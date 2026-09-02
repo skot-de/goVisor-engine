@@ -981,6 +981,33 @@ function _clHasBlocks(){ try{ return (JSON.parse(localStorage.getItem('govisor.b
 
 // §7 Checkliste im Prototyp-Design: Kopf (Stand+Haftung) · TOC · funktionale
 // Gruppen mit Zitat+Fundstelle+Kennzeichnung+editierbarem Baustein+Kombi-Button+Abhaken.
+/* KENNZAHL 3 — Fingerabdruck der Vergabestelle.
+ *
+ * Was verlangt DIESE Stelle fast immer, das andere selten verlangen? „Landeshauptstadt
+ * Muenchen: Mindestumsatz in 11 von 11, marktweit 10 %." Wer das VOR dem Oeffnen der
+ * Unterlagen weiss, legt den Nachweis bereit, statt ihn nachzureichen.
+ *
+ * ⚠ NUR SELTENE ARTEN. `einzureichendes_dokument` steht in 92 % aller Vorgaenge; dass eine
+ * Stelle es immer verlangt, ist keine Eigenschaft der Stelle, sondern des Verfahrens.
+ * Gewertet werden nur die sieben Arten unter 25 % Marktanteil — und die sind zugleich die
+ * einzigen, die den Bieter etwas kosten.
+ *
+ * ⚠ MINDESTENS FUENF VERFAHREN. Bei dreien ist „3 von 3" rechnerisch auffaellig und trotzdem
+ * duenn (die Uebergabe nimmt drei, das waeren 143 Abdruecke statt 54). Ein Muster aus drei
+ * Faellen sieht aus wie eines aus achtzehn — genau die Verwechslung, gegen die in diesem
+ * Projekt die halbe Bibel steht.
+ *
+ * ⚠ Er steht im KAEUFER-Abschnitt, nicht bei den Anforderungen: es ist eine Aussage ueber die
+ * Stelle, die auch fuer ihre naechste Ausschreibung gilt. */
+function renderStellenprofil(l){
+  const a = l.lbStelle;
+  if(!Array.isArray(a) || !a.length) return '';
+  return `<div class="abdruck"><span class="abdruck-k">${tk("Diese Stelle verlangt fast immer")}</span>
+    <ul class="abdruck-l">${a.map(x=>`<li><b>${tk(x.label)}</b>
+      <span>${tk("in {k} von {n} Verfahren", {k: x.k, n: x.n})}</span>
+      <em>${tk("marktweit {p} %", {p: x.markt})}</em></li>`).join('')}</ul></div>`;
+}
+
 /* KENNZAHL 2 — Anforderungsprofil: worin verlangt dieser Vorgang mehr als üblich?
  *
  * ⚠ „STRENGE" IST FUER DIE HAELFTE DER BEREICHE DAS FALSCHE WORT, und das entscheidet die
@@ -2381,6 +2408,7 @@ function renderBuyer(l){
           ${tk("Stelle beobachten")}
         </button>
       </h4>
+      ${renderStellenprofil(l)}
       <div class="bstats">
         <div class="bstat"><span class="bstat-k">${tk("Vergaben gesamt")}</span><span class="bstat-v">${bnum(d.total)}</span><span class="bstat-m">${d.zeitraum}</span></div>
         <div class="bstat"><span class="bstat-k">${tk("Vergaben pro Jahr")}</span><span class="bstat-v">${bnum(d.perYear)}</span></div>

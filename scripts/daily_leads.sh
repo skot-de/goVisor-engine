@@ -1004,6 +1004,8 @@ if $PY -m govisor.cli signals-docs; then
   $PY scripts/export_fenster.py || echo "  ⚠ fenster.json nicht geschrieben — Kennzahl 1 fehlt im Detail."
   # Anforderungsprofil (Kennzahl 2). Braucht `doc_checklist` in Gold.
   $PY scripts/export_anforderungsprofil.py || echo "  ⚠ anforderungsprofil.json nicht geschrieben — Kennzahl 2 fehlt im Detail."
+  # Fingerabdruck der Vergabestelle (Kennzahl 3).
+  $PY scripts/export_stellenprofil.py || echo "  ⚠ stellenprofil.json nicht geschrieben — Kennzahl 3 fehlt im Detail."
 else
   echo "  ⚠ Signal-Extraktion übersprungen."
 fi
