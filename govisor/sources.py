@@ -337,25 +337,32 @@ DOC_REGISTRY: list[Source] = [
     # Portal-URL). Kein franzoesisches Portal wurde dafuer beruehrt — die Engine steht im
     # URL-Pfad, den TED selbst veroeffentlicht. Kapitel: docs/sondierung/fr.md
     Source("sond-fr-aws", "AWS-Achat (marches-publics.info)", "", "FR", "beides",
-           "sondiert", portals=1, ebene="unterlagen", ertrag="ungeprueft",
+           "sondiert", portals=1, ebene="unterlagen", ertrag="gesperrt",
            coverage="25 % der FR-Bekanntmachungen mit Portal-URL (1.682 im Juni 2026)",
-           overlap="⚠ TED veroeffentlicht als Unterlagen-Link `fuseaction=dematEnt.login&type=DCE` "
-                   "— Indiz auf eine Login-Wand, NICHT gemessen",
+           overlap="CAPTCHA. Der anonyme Abruf wird ausdruecklich angeboten (arrêté du "
+                   "14/12/2009), das Formular verlangt aber `captchaVal` gegen ein Bild. "
+                   "Fuer einen Menschen gangbar, fuer einen Automaten nicht — ⚠ eigene "
+                   "Kategorie, KEINE Login-Wand: es braucht kein Konto.",
            url="https://www.marches-publics.info"),
-    Source("sond-fr-atexo", "Atexo/MPE (Maximilien, Mégalis, Alsace u. a.)", "", "FR", "beides",
-           "sondiert", portals=5, ebene="unterlagen", ertrag="ungeprueft",
-           coverage="14 % (927), verteilt auf mindestens 5 Domains mit identischem Pfad",
-           overlap="⚠ ein Teil des 31-%-Schwanzes duerfte ebenfalls Atexo sein: Wurzel-URLs "
-                   "ohne Pfad lassen sich nicht zuordnen",
+    Source("sond-fr-atexo", "Atexo/MPE (PLACE, Maximilien, Mégalis, Alsace u. a.)", "", "FR",
+           "beides", "sondiert", portals=6, ebene="unterlagen", ertrag="gesperrt",
+           coverage="25 % — ⚠ PLACE laeuft auf derselben Engine, damit 14 % + 11 % zusammen",
+           overlap="Login-Wand, an zwei Instanzen bestaetigt: „Vous devez être connecté pour "
+                   "accéder aux actions ci-dessous\". Die SUCHE ist frei (PLACE listet 2.374 "
+                   "laufende Vergaben anonym), die DATEIEN nicht.",
            url="https://marches.maximilien.fr"),
     Source("sond-fr-achatpublic", "achatpublic.com", "", "FR", "beides",
+           "sondiert", portals=1, ebene="unterlagen", ertrag="gesperrt",
+           coverage="12 % (830)",
+           overlap="robots.txt verbietet es: `User-agent: * → Disallow: /`, Freigabeliste "
+                   "nur fuer benannte Suchmaschinen. Die Seite wurde deshalb nicht aufgerufen.",
+           url="https://www.achatpublic.com"),
+    Source("sond-fr-securises", "marches-securises.fr (Atline)", "", "FR", "beides",
            "sondiert", portals=1, ebene="unterlagen", ertrag="ungeprueft",
-           coverage="12 % (830)", overlap="", url="https://www.achatpublic.com"),
-    Source("sond-fr-place", "PLACE (marches-publics.gouv.fr)", "", "FR", "beides",
-           "sondiert", portals=1, ebene="unterlagen", ertrag="ungeprueft",
-           coverage="11 % (760) — die staatliche Plattform",
-           overlap="DECP-Open-Data betrifft die Vergabedaten; ob auch die Unterlagen, ist offen",
-           url="https://www.marches-publics.gouv.fr"),
+           coverage="5 % (358)",
+           overlap="unbestimmt — der von TED veroeffentlichte Einstieg fuehrt auf 404, "
+                   "die Seite wurde umgebaut. Neuer Einstiegspunkt zu finden.",
+           url="https://www.marches-securises.fr"),
     # ── ANGEBUNDEN ────────────────────────────────────────────────────────────────────
     Source("doc-cosinex-de", "cosinex/DTVP-Unterlagen", "docfetch-cosinex", "DE", "beides",
            "live", portals=40, ebene="unterlagen", ertrag="dateien", modul="govisor.docfetch",

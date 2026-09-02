@@ -66,30 +66,75 @@ auf die Startseite zeigt (`https://demat-ampa.fr`), lässt sich nicht zuordnen. 
 Schwanzes sind mit hoher Wahrscheinlichkeit weitere Atexo-Instanzen. Das ist zu prüfen,
 bevor jemand aus den 31 % einen Aufwand ableitet.
 
-## 4. Schranke — noch nicht geprüft
+## 4. Schranke — geprüft am 2026-09-02
 
-**Frage 3 des Auftrags ist offen.** Sie verlangt, ein Portal anzusehen, und das ist der
-Schritt, der zuerst nach der offiziellen Schnittstelle fragt und robots.txt liest.
+Vier Engines angesehen, je eine Vergabe, robots.txt zuerst, keine Konten, kein CAPTCHA
+gelöst. Ergebnis:
 
-Ein Hinweis liegt aber schon in den TED-Daten selbst, ganz ohne Zugriff:
+| Engine | Anteil | robots.txt | Urteil |
+|---|---:|---|---|
+| `aws-achat` | 25 % | keine (404) | **CAPTCHA** — anonymer Abruf wird angeboten, ist aber durch ein Bildrätsel gesperrt |
+| `atexo-mpe` inkl. PLACE | **25 %** | alles erlaubt | **Login-Wand**, an zwei Instanzen bestätigt |
+| `achatpublic` | 12 % | **`Disallow: /`** | **gesperrt** — nur benannte Suchmaschinen zugelassen, wir nicht |
+| `marches-securises` | 5 % | keine | **unbestimmt** — der TED-Einstieg führt auf 404, die Seite wurde umgebaut |
+| unbekannt | 31 % | — | offen |
 
-```
-https://www.marches-publics.info/mpiaws/index.cfm?fuseaction=dematEnt.login&type=DCE&IDM=1827025
-```
+**Von den 62 %, die ich bestimmen konnte, ist nichts ohne Schranke einsammelbar.**
 
-Die URL, die **TED als Unterlagen-Link veröffentlicht**, nennt `fuseaction=dematEnt.**login**`
-und `type=**DCE**` — das Dossier de Consultation des Entreprises hinter einer Anmeldung.
-Bei 25 % Anteil wäre das die größte französische Engine hinter einer Schranke.
+### Was jede Zeile wirklich sagt
 
-⚠ Das ist ein **Indiz aus einem Dateinamen, keine Messung.** Es kann sein, dass die
-Login-Seite nur der beworbene Weg ist und ein anonymer Download daneben existiert. Genau
-das klärt Schritt 4 — und erst danach gehört hier eine Ampel hin.
+**`aws-achat` — und hier lag ich vorher falsch.** Ich hatte aus dem URL-Namen
+`fuseaction=dematEnt.login` auf eine Login-Wand geschlossen. Die Seite sagt das Gegenteil:
 
-## 5. Was als Nächstes zu tun ist
+> „Conformément à l'arrêté du 14/12/2009, vous avez la possibilité de retirer le DCE en
+> **mode anonyme**."
 
-1. Den langen Schwanz auf Atexo prüfen (mehr Monate lesen, damit tiefe Links auftauchen).
-2. Die 75-%-Lücke aufklären: fehlt der Link, oder ist es die Notice-Art?
-3. Schritt 4 für die vier großen Engines — **eine** Vergabe je Engine, offizielle
-   Schnittstelle zuerst, robots.txt vorher, keine Konten.
-4. DECP: Frankreich hat einen Open-Data-Auftrag für Vergabedaten. Ob er die **Unterlagen**
-   umfasst oder nur die Vergabedaten, ist offen und wäre die billigste aller Türen.
+Der anonyme Abruf ist französische Rechtspflicht und wird angeboten. Das Formular dahinter
+verlangt aber `captchaVal` gegen ein Bild unter `/captcha/Captcha_*.png`. Für einen
+Menschen gangbar, für einen Automaten nicht — und CAPTCHA ist eine Grenze, keine Hürde.
+
+⚠ **Das ist eine eigene Kategorie**, nicht dasselbe wie eine Login-Wand: es braucht kein
+Konto, nur einen Menschen. Wer Frankreich manuell erschließen will, kommt hier durch.
+
+**`atexo-mpe` — die Engine ist dieselbe, die Konfiguration auch.** Getestet auf PLACE
+(staatlich) und Maximilien (Île-de-France), beide mit identischem Wortlaut:
+
+> „Vous devez être connecté pour accéder aux actions ci-dessous."
+
+Der Download-Link heißt auf beiden `EntrepriseDemandeTelechargementDce`. Die öffentliche
+**Suche** ist frei (PLACE listet 2.374 laufende Vergaben ohne Anmeldung), die **Dateien**
+nicht. Damit ist der Katalog holbar, der Inhalt nicht.
+
+**`achatpublic` — kein Zugangsproblem, ein Verbot.** `User-agent: * → Disallow: /`, mit
+einer Freigabeliste, auf der Bingbot, Googlebot und ein paar andere stehen. Wir nicht.
+Die Seite wurde deshalb nicht aufgerufen.
+
+### Ein Nebenbefund, der zu unseren Kennzahlen passt
+
+AWS schreibt auf der eigenen Hinweisseite:
+
+> „à l'échelle de la plateforme AWS (qui publie environ 150 avis par jour), **28 % des avis
+> font l'objet d'une modification, d'un rectificatif, d'une correspondance, ou d'un sans
+> suite**"
+
+Der Betreiber beziffert die Fortschreibungsquote selbst auf 28 %. Das ist eine unabhängige
+Bestätigung der Kennzahl „Fortschreibungsdichte" aus `docs/bieterfragen-datenmodell.md` —
+und ein Hinweis, dass sie in Frankreich ähnlich trägt wie in Deutschland.
+
+## 5. Was daraus folgt
+
+**Für einen Automaten ist Frankreich heute zu.** Nicht wegen fehlender Konnektoren, sondern
+wegen CAPTCHA (25 %), Login (25 %) und robots-Verbot (12 %).
+
+**Für einen Menschen ist ein Viertel offen.** Der anonyme AWS-Weg braucht kein Konto, nur
+jemanden, der das Bildrätsel löst. Das ist der „du lieferst"-Pfad, den die DACH-Karte für
+die Login-Engines schon kennt.
+
+### Offen geblieben
+
+1. Der 31-%-Schwanz: mehr Monate lesen, damit tiefe Links auftauchen und sich zeigt,
+   wie viel davon ebenfalls Atexo ist.
+2. `marches-securises` (5 %): neuer Einstiegspunkt zu finden.
+3. **DECP.** Frankreich hat einen Open-Data-Auftrag für Vergabedaten. Ob er die
+   **Unterlagen** umfasst, ist ungeprüft — und wäre die einzige Tür, die alle drei
+   Schranken umginge.
