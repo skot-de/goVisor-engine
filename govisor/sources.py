@@ -587,9 +587,34 @@ DOC_REGISTRY: list[Source] = [
     Source("sond-nl-mercell", "Mercell (s2c.mercell.com)", "", "NL", "beides",
            "sondiert", portals=1, ebene="unterlagen", ertrag="ungeprueft",
            coverage="22 % der NL-Ausschreibungen",
-           overlap="⚠ VORZIEHEN: Mercell ist ein nordisch-europaeischer Anbieter, der in "
-                   "mehreren Laendern auftaucht. Eine Pruefung zahlt auf mehrere zugleich ein.",
+           overlap="⛔ GESPERRT. `s2c.mercell.com/robots.txt` = `User-agent: * / Disallow: /` "
+                   "fuer die ganze Vergabeplattform. (Die Marketingseite www.mercell.com "
+                   "sperrt dagegen nur neun einzelne Seiten — zwei Hosts, zwei Antworten.) "
+                   "⚠ Das gilt laenderuebergreifend: Mercell bedient Nordeuropa, das "
+                   "Baltikum und Benelux, ueberall dieselbe Plattform.",
            url="https://www.mercell.com"),
+    # ── SE, sondiert am 2026-09-03 · Kapitel: docs/sondierung/se.md ───────────────────
+    Source("sond-se-tendsign", "TendSign (Mercell Schweden)", "", "SE", "beides",
+           "sondiert", portals=1, ebene="unterlagen", ertrag="gesperrt",
+           coverage="52 % der SE-Ausschreibungen",
+           overlap="⛔ `User-agent: * / Disallow: /`. Eigene Domain, aber dasselbe Urteil wie "
+                   "s2c.mercell.com in NL — Mercell sperrt seine Vergabeplattformen "
+                   "LAENDERUEBERGREIFEND, unabhaengig vom Hostnamen. Betrifft damit auch NO, "
+                   "DK, FI und das Baltikum vorab.",
+           url="https://tendsign.com"),
+    Source("sond-se-eavrop", "e-avrop.com", "", "SE", "beides",
+           "sondiert", portals=1, ebene="unterlagen", ertrag="gesperrt",
+           coverage="36 %",
+           overlap="⛔ `Disallow: /` mit einer einzigen Ausnahme (/Places.aspx).",
+           url="https://www.e-avrop.com"),
+    Source("sond-se-clira", "Clira / Esource", "", "SE", "beides",
+           "sondiert", portals=1, ebene="unterlagen", ertrag="liste",
+           coverage="11 % — der einzige nicht gesperrte Teil Schwedens",
+           overlap="🟡 Keine robots-Sperre. Die oeffentliche Seite zeigt eine ZUSAMMENFASSUNG "
+                   "(Titel, Fristen, Beschreibung), keine Dokumente; der Knopf „Till "
+                   "upphandlingen\" fuehrt ohne href in einen nicht oeffentlichen Bereich. "
+                   "Damit ist SE praktisch zu: 88 % robots-gesperrt, der Rest ohne Dateien.",
+           url="https://annonser.clira.io"),
     # ── ANGEBUNDEN ────────────────────────────────────────────────────────────────────
     Source("doc-cosinex-de", "cosinex/DTVP-Unterlagen", "docfetch-cosinex", "DE", "beides",
            "live", portals=40, ebene="unterlagen", ertrag="dateien", modul="govisor.docfetch",

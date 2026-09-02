@@ -60,11 +60,18 @@ Nichts, was Vergaben, Dokumente oder die API betrifft.
 Inlichtingen als eigene Kategorie. Was wir in Deutschland aus Dateinamen erraten müssen,
 steht hier als Feld.
 
-## 3. Ungeprüft
+## 3. ⛔ Mercell (22 %) — gesperrt, und zwar länderübergreifend
 
-`s2c.mercell.com` (22 %) — Mercell ist ein nordisch-europäischer Anbieter, der auch in
-anderen Ländern auftaucht. Eine Prüfung dort zahlt auf mehrere Länder zugleich ein und
-gehört deshalb vorgezogen.
+Vorgezogen geprüft, weil Mercell in mehreren Ländern auftaucht. Zwei Hosts, zwei Antworten:
+
+| Host | robots.txt |
+|---|---|
+| `s2c.mercell.com` (die Vergabeplattform) | **`User-agent: * / Disallow: /`** |
+| `www.mercell.com` (Marketing/Suche) | nur neun einzelne Seiten gesperrt |
+
+**Die Plattform selbst ist vollständig untersagt.** Da Mercell Nordeuropa, das Baltikum
+und Benelux mit derselben Software bedient, gilt dieses Urteil überall dort mit — was die
+Sondierung der nordischen Länder von vornherein eintrübt.
 
 ## 4. Stand nach acht Ländern
 
