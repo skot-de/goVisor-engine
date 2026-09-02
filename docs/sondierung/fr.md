@@ -135,6 +135,31 @@ die Login-Engines schon kennt.
 1. Der 31-%-Schwanz: mehr Monate lesen, damit tiefe Links auftauchen und sich zeigt,
    wie viel davon ebenfalls Atexo ist.
 2. `marches-securises` (5 %): neuer Einstiegspunkt zu finden.
-3. **DECP.** Frankreich hat einen Open-Data-Auftrag für Vergabedaten. Ob er die
-   **Unterlagen** umfasst, ist ungeprüft — und wäre die einzige Tür, die alle drei
-   Schranken umginge.
+## 6. DECP — geprüft am 2026-09-02, und es ist keine Tür
+
+Am offiziellen Schema gemessen (`139bercy/format-commande-publique`, v2.0.3), nicht an
+einer Beschreibung.
+
+**Für die Unterlagen: nichts.** Das Schema enthält **null Treffer** für `dce`, `dossier`,
+`document`, `piece`, `fichier`, `attach`, `url`, `lien` und `telecharg`. Es führt genau
+zwei Objekte, `marche` und `contrat-concession`, mit Käufer, CPV, Laufzeit, Preisform,
+Ausführungsort, Unterauftragsakten und Änderungen.
+
+**Und es setzt zu spät an.** DECP sind Daten **nach dem Zuschlag**. Für eine laufende
+Ausschreibung, deren Unterlagen gerade verfügbar sind, gibt es dort nichts — und genau
+die sind der verfallende Teil.
+
+**Wofür DECP trotzdem taugt, und das ist nicht wenig:** die Veröffentlichungspflicht
+greift **ab 40.000 EUR netto** (README des Schemas). Das ist weit unter den EU-Schwellen,
+also genau die unterschwellige Ebene, zu der TED schweigt. Als Antwort auf **Frage 1**
+des Auftrags ist DECP für Frankreich damit die gefundene Quelle — als Antwort auf
+**Frage 2 und 3** ist sie keine.
+
+Der Eintrag `fr-decp` steht bereits in der Registry (`status=candidate`,
+`tier=unterschwellig`) und trägt diese beiden Grenzen jetzt im Klartext.
+
+### Offen geblieben
+
+1. Der 31-%-Schwanz: mehr Monate lesen, damit tiefe Links auftauchen und sich zeigt,
+   wie viel davon ebenfalls Atexo ist.
+2. `marches-securises` (5 %): neuer Einstiegspunkt zu finden.

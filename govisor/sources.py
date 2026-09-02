@@ -296,8 +296,15 @@ REGISTRY: list[Source] = [
     # Frankreich: TED-FR liefert oberschwellig; DECP ergänzt unterschwellig (Pendant zu DÖE/atverg),
     # offizielle Pflicht-Open-Data, konsolidiert als Parquet (nativ zu unserem Stack) + CSV.
     Source("fr-decp", "France DECP (unterschwellig)", "decp-bulk", "FR", "unterschwellig", "candidate",
-           portals=1, coverage="Données Essentielles Commande Publique, konsolidiert Parquet/CSV, tägl.",
-           overlap="ergänzt TED-FR nach unten (données essentielles, Pflicht seit 2019)",
+           portals=1, coverage="Données Essentielles Commande Publique, konsolidiert Parquet/CSV, "
+                    "tägl. AB 40.000 EUR NETTO (README des Schemas, gemessen 2026-09-02) — also "
+                    "unterhalb der EU-Schwellen, wo TED nichts hat.",
+           overlap="ergänzt TED-FR nach unten (Pflicht seit 2019). ⚠ ZWEI GRENZEN, beide am "
+                   "Schema v2.0.3 gemessen: (1) KEINE UNTERLAGEN — null Treffer für "
+                   "dce/dossier/document/fichier/url im ganzen Schema, es führt nur `marche` "
+                   "und `contrat-concession`. (2) NACH DEM ZUSCHLAG — Käufer, CPV, Laufzeit, "
+                   "Unterauftragsakte, Änderungen, aber keine laufende Ausschreibung. Für die "
+                   "Dokumentenfrage ist DECP keine Tür.",
            url="https://www.data.gouv.fr/datasets/donnees-essentielles-de-la-commande-publique-consolidees-format-tabulaire"),
 ]
 
