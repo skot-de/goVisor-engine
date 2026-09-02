@@ -429,23 +429,25 @@ DOC_REGISTRY: list[Source] = [
     # ── ES, sondiert am 2026-09-02 · Kapitel: docs/sondierung/es.md ───────────────────
     Source("sond-es-placsp", "PLACSP (contrataciondelestado.es)", "", "ES", "beides",
            "sondiert", portals=1, ebene="unterlagen", ertrag="gesperrt",
-           coverage="63 % der ES-Portal-URLs — die staatliche Pflichtplattform",
+           coverage="63 % der ES-Ausschreibungen — die staatliche Pflichtplattform",
            overlap="⛔ robots.txt: `User-agent: * / Disallow: /` fuer die GANZE Seite. ⚠ Und "
                    "zugleich betreibt sie einen dokumentierten Open-Data-Ausgang (ZIP + "
                    "ATOM-Syndikation, CODICE-XML, Werkzeug OpenPLACSP unter EUPL) — auf "
                    "demselben gesperrten Host. Der Umweg ueber datos.gob.es traegt auch "
-                   "nicht, dessen robots sperrt /api/ und die Exporte. Das ist eine Frage "
+                   "nicht (sperrt /api/ und die Exporte), und der ZWEITE PLACSP-Host "
+                   "contrataciondelsectorpublico.gob.es sperrt identisch — die Sperre ist konsistent, nicht versehentlich. Das ist eine Frage "
                    "AN DEN BETREIBER, kein Fall fuer einen Umweg. Nicht abgerufen.",
            url="https://contrataciondelestado.es"),
     Source("sond-es-catalunya", "Katalonien (contractaciopublica.cat)", "", "ES", "beides",
            "sondiert", portals=1, ebene="unterlagen", ertrag="dateien",
-           coverage="14 % der ES-Portal-URLs",
+           coverage="5 % der ES-Ausschreibungen — ⚠ nach unten korrigiert, die zuerst gemeldeten 14 % stammten aus Domain-Nennungen ueber ALLE Notice-Arten",
            overlap="✅ OFFEN, am 2026-09-02 belegt: /portal-api/descarrega-document/<id>/<hash> "
                    "liefert anonym ein PDF (572.366 B, 24 Seiten, blankes curl). Die "
                    "kooperativste robots.txt der Sondierung — `Allow: /` mit Crawl-delay 1, "
-                   "60/min und Wunschzeit 18:00-07:00. ⚠ Belegt an einem PROFIL-Dokument, "
-                   "nicht an den Pliegos einer laufenden Vergabe. ⚠ TED verlinkt hier nur "
-                   "das Kaeuferprofil, nicht die Vergabe — ein Schritt mehr zur Datei.",
+                   "60/min und Wunschzeit 18:00-07:00. ✅ Am 2026-09-02 an ECHTEN Pliegos "
+                   "nachgeholt: PCAP einer am selben Tag veroeffentlichten Ausschreibung, "
+                   "859.193 B, 30 Seiten, anonym. ⚠ TED verlinkt hier nur das Kaeuferprofil, "
+                   "nicht die Vergabe — ein Schritt mehr zur Datei.",
            url="https://contractaciopublica.cat"),
     Source("sond-es-euskadi", "Baskenland (contratacion.euskadi.eus)", "", "ES", "beides",
            "sondiert", portals=1, ebene="unterlagen", ertrag="gesperrt",

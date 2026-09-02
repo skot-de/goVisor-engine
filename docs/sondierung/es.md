@@ -7,28 +7,44 @@ Fall geprüft, robots.txt zuerst, keine Konten.
 
 ---
 
-## 1. Mengengerüst — und eine ganz andere Struktur
+## 1. Mengengerüst
+
+⚠ **Die Zahlen dieses Kapitels wurden am 2026-09-02 korrigiert.** Die erste Fassung zählte
+alle Notice-Arten und meldete 40 % Portalabdeckung — den schlechtesten Wert der Sondierung.
+Das war mein Nenner, nicht Spanien:
+
+| Notice-Art | ES | mit Unterlagen-Link |
+|---|---:|---:|
+| **ContractNotice** | 2.458 | **100 %** |
+| ContractAwardNotice | 3.499 | 0 % |
+| PriorInformationNotice | 396 | 3 % |
+
+Zuschlagsbekanntmachungen tragen keinen Unterlagen-Link, weil die Vergabe vorbei ist.
+Spanien hat besonders viele davon, deshalb sah es am schlechtesten aus. Gezählt wird jetzt
+nur `ContractNotice`, und dann liegen alle drei Länder bei 97 bis 99 %.
 
 | | ES | FR | PL |
 |---|---:|---:|---:|
-| Bekanntmachungen Juni | 6.876 | 8.027 | 10.179 |
-| mit Portal-URL | **40 %** | 69 % | 53 % |
-| verschiedene Domains | **75** | 449 | 513 |
+| Ausschreibungen Juni | 2.458 | 5.683 | 5.381 |
+| mit Portal-URL | **99 %** | 97 % | 99 % |
+| verschiedene Domains | **75** | 443 | 511 |
 
-**75 Domains gegen 449 und 513.** Spanien ist dramatisch zentralisierter — und die Spitze
-ist fast durchweg **öffentliche Hand**: Staatsplattform, dann die Regionen.
+**75 Domains gegen 443 und 511.** Spanien ist dramatisch zentralisierter, und die Spitze ist
+fast durchweg **öffentliche Hand**.
 
-⚠ Die 40 % Portalabdeckung sind der niedrigste bisher gemessene Wert und ungeklärt.
-
-| Portal | Anteil | Träger |
+| Engine | Anteil | Träger |
 |---|---:|---|
-| contrataciondelestado.es (PLACSP) | **63 %** | Staat |
-| contractaciopublica.cat | 14 % | Katalonien |
-| contratacion.euskadi.eus | 8,5 % | Baskenland |
-| comunidad.madrid | 3 % | Madrid |
-| junta-andalucia.es (4 Hosts) | 7 % | Andalusien |
-| contratosdegalicia.gal | 1 % | Galicien |
-| portalcontratacion.navarra.es | 1 % | Navarra |
+| `placsp` | **63 %** | Staat |
+| `euskadi` | 9 % | Baskenland |
+| `andalucia` | 8 % | Andalusien |
+| `cat-pscp` | **5 %** | Katalonien |
+| `madrid` | 4 % | Madrid |
+| `galicia` / `navarra` | je 1 % | Regionen |
+| unbekannt | 9 % | |
+
+⚠ **Zweite Korrektur:** Katalonien trägt **5 %**, nicht die zuerst gemeldeten 14 %. Die
+höhere Zahl stammte aus Domain-Nennungen über alle Notice-Arten. Andalusien ist damit
+größer als Katalonien — und ungeprüft.
 
 ## 2. Schranke — geprüft
 
@@ -47,9 +63,14 @@ Wesen nach für Maschinen gedacht — und liegt auf demselben Host, den robots.t
 ⚠ Auch der Umweg über das nationale Portal `datos.gob.es` trägt nicht: dessen robots.txt
 sperrt `/api/` und die Datenexporte.
 
+⚠ **Am 2026-09-02 nachgeprüft:** PLACSP betreibt einen **zweiten Host**,
+`contrataciondelsectorpublico.gob.es`. Auch dort steht `User-agent: * / Disallow: /`.
+Die Sperre ist also **konsistent, nicht versehentlich auf einem Server** — und es gibt
+keinen unbelasteten Weg zu denselben Daten.
+
 **Das ist keine technische Frage, sondern eine an den Betreiber.** Ein `Disallow: /` neben
-einem Open-Data-Angebot ist vermutlich Unachtsamkeit — aufzulösen ist es durch Nachfragen,
-nicht durch einen Umweg. Nicht abgerufen.
+einem Open-Data-Angebot ist vermutlich Unachtsamkeit — aufzulösen durch Nachfragen, nicht
+durch einen Umweg. Nicht abgerufen.
 
 ### ✅ Katalonien (14 %) — offen, und die kooperativste robots.txt der Sondierung
 
@@ -70,10 +91,15 @@ GET /portal-api/descarrega-document/<docId>/<hash>                 → PDF
 ```
 → **HTTP 200, `application/pdf`, 572.366 Bytes, 24 Seiten.** Keine Sitzung, kein Cookie.
 
-⚠ **Ehrlich zur Reichweite dieses Belegs:** geprüft wurde an einem Dokument des
-Käuferprofils (Jahresvergabeplan), nicht an den Pliegos einer laufenden Vergabe. Derselbe
-`descarrega-document`-Endpunkt bedient beides, aber der Beweis steht bisher nur für den
-einen Fall.
+✅ **Am 2026-09-02 an echten Vergabeunterlagen nachgeholt.** An einer **am selben Tag
+veröffentlichten** Ausschreibung (Ajuntament de Cabra del Camp, Frist 22.09.):
+
+```
+GET /portal-api/detall-publicacio-expedient/300873140          → JSON mit „plecsDeClausulesAdministratives"
+GET /portal-api/descarrega-document/302562190/C0217B60…        → PCAP ALT CAMP.pdf
+```
+→ **HTTP 200, `application/pdf`, 859.193 Bytes, 30 Seiten.** Anonym, blankes `curl`.
+Das sind die Pliegos selbst, nicht ein Profildokument. Die Frage ist damit geklärt.
 
 ⚠ Und eine Eigenheit, die beim Bauen zählt: **TED verlinkt bei Katalonien nur das
 Käuferprofil, nicht die einzelne Vergabe.** Der Deeplink ist gröber als in DE oder PL — der

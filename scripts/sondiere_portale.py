@@ -53,6 +53,16 @@ IGNORIERT = (
     "BuyerProfileURI",                      # Beschafferprofil, nicht das Verfahren
 )
 LAND = re.compile(rb'listName="country"[^>]*>([A-Z]{3})<')
+# ⚠ NUR AUSSCHREIBUNGEN ZAEHLEN. Die erste Fassung nahm jede Notice-Art und meldete fuer
+# Spanien 40 % Portalabdeckung — den schlechtesten Wert der Sondierung. Gemessen am
+# 2026-09-02 war das mein Nenner, nicht das Land:
+#     ContractNotice          ES 2.458 / PL 5.381   → 100 % bzw. 99 % mit Unterlagen-Link
+#     ContractAwardNotice     ES 3.499 / PL 4.708   →   0 %  (die Vergabe ist vorbei)
+#     PriorInformationNotice  ES   396 / PL    90   →   3-6 %
+# Spanien hat besonders viele Zuschlaege, deshalb sah es dort am schlechtesten aus. Eine
+# Quote, deren Nenner Faelle enthaelt, die das Gemessene gar nicht haben KOENNEN, misst
+# die Zusammensetzung des Nenners.
+AUSSCHREIBUNG = re.compile(rb'<(ContractNotice)[ >]')
 
 # Engine am PFAD erkennen, nicht am Domainnamen — das ist sprachunabhaengig und gilt in
 # Portugal wie in Estland. Die DACH-Muster sind gemessen; die uebrigen sind Kandidaten,
@@ -91,6 +101,15 @@ ENGINES: tuple[tuple[str, re.Pattern], ...] = (
     ("logintrade",    re.compile(r"\.logintrade\.net", re.I)),
     ("propublico",    re.compile(r"e-propublico\.pl", re.I)),
     ("smartpzp",      re.compile(r"smartpzp\.pl", re.I)),
+    # ── ES, am 2026-09-02 bestimmt. Anders als FR und PL fast durchweg oeffentliche
+    # Hand: die staatliche Pflichtplattform, dann die autonomen Regionen.
+    ("placsp",        re.compile(r"contrataciondelestado\.es|contrataciondelsectorpublico\.gob\.es", re.I)),
+    ("cat-pscp",      re.compile(r"contractaciopublica\.(cat|gencat)|gencat\.cat", re.I)),
+    ("euskadi",       re.compile(r"contratacion\.euskadi\.eus", re.I)),
+    ("andalucia",     re.compile(r"junta-?andalucia\.es|juntadeandalucia\.es", re.I)),
+    ("madrid",        re.compile(r"contratos-publicos\.comunidad\.madrid", re.I)),
+    ("galicia",       re.compile(r"contratosdegalicia\.gal", re.I)),
+    ("navarra",       re.compile(r"portalcontratacion\.navarra\.es", re.I)),
     ("ted-esender",   re.compile(r"ted\.europa\.eu", re.I)),
 )
 
@@ -125,6 +144,8 @@ def sammle(land: str, monat: str) -> tuple[collections.Counter, collections.Coun
                     c = LAND.search(kopf)
                     if not c or c.group(1) != a3:
                         continue
+                if not AUSSCHREIBUNG.search(roh[:4000]):
+                    continue
                 gesamt += 1
                 gefunden = set()
                 try:
@@ -173,7 +194,7 @@ def main() -> int:
     }, ensure_ascii=False, indent=2), encoding="utf-8")
 
     print(f"── {a.land.upper()} · {a.monat} ──")
-    print(f"  Bekanntmachungen           {gesamt:,}")
+    print(f"  Ausschreibungen (ContractNotice) {gesamt:,}")
     if not gesamt:
         return 0
     print(f"  davon mit Portal-URL       {mit_url:,} ({mit_url/gesamt*100:.0f} %)")
