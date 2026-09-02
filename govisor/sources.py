@@ -550,6 +550,26 @@ DOC_REGISTRY: list[Source] = [
            overlap="🎯 Alle drei verlinken AUSSCHLIESSLICH Kaeuferprofile, nie eine Vergabe "
                    "(0 % Tiefe bei 950 Adressen). Ungeprueft, weil der Weg vorher endet.",
            url="https://www.tenderarena.cz"),
+    # ── BE, sondiert am 2026-09-03 · Kapitel: docs/sondierung/be.md ───────────────────
+    Source("sond-be-bosa", "BOSA eProcurement (publicprocurement.be)", "", "BE", "beides",
+           "sondiert", portals=1, ebene="unterlagen", ertrag="ungeprueft",
+           coverage="73 % der BE-Ausschreibungen, Linktiefe 96 %",
+           overlap="⚠ NICHT ABGESCHLOSSEN, UND ZWAR WEGEN EINES AUSFALLS. Keine robots-Sperre "
+                   "(weiches 404), Dokumentenliste oeffentlich sichtbar samt „Alle Dokumente "
+                   "herunterladen\", saubere REST-API (/api/dos/publication-workspaces/<uuid>"
+                   "/{documents,archive}). Aber seit 2026-09-03 nachmittags antwortet sie "
+                   "durchgaengig mit HTTP 500 — zwei Vorgaenge, drei Endpunkte, mit und ohne "
+                   "Sitzung, AUCH AUS DEM BROWSER. Das ist keine Schranke, sondern ein "
+                   "Ausfall. Alle Anzeichen sprechen fuer offen, belegt ist es nicht. "
+                   "NACHZUHOLEN, sobald die Plattform wieder antwortet.",
+           url="https://www.publicprocurement.be"),
+    Source("sond-be-3p", "3P (cloud.3p.eu)", "", "BE", "beides",
+           "sondiert", portals=1, ebene="unterlagen", ertrag="ungeprueft",
+           coverage="26 %, Linktiefe 100 % (/Downloads/1/1649/6U/2026)",
+           overlap="Kein robots.txt (404). Leitet auf eine Laenderauswahl mit Cookie-Banner; "
+                   "die Laenderwahl waere ein gewoehnlicher Klick, die Cookie-Zustimmung "
+                   "nicht. Ungeprueft.",
+           url="https://cloud.3p.eu"),
     # ── ANGEBUNDEN ────────────────────────────────────────────────────────────────────
     Source("doc-cosinex-de", "cosinex/DTVP-Unterlagen", "docfetch-cosinex", "DE", "beides",
            "live", portals=40, ebene="unterlagen", ertrag="dateien", modul="govisor.docfetch",
