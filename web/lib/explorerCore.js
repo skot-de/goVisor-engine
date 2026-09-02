@@ -695,6 +695,13 @@ function cellHTML(l, key){
         ? `<span class="rq rq-abl" title="${esc(tk("Nicht veröffentlicht, aus dem Namen der Vergabestelle erschlossen."))}">${tk("abgeleitet")}</span>`
         : q === 'widerspruechlich'
         ? `<span class="rq rq-wid" title="${esc(tk("Die amtliche Kennung widerspricht dem Ort der Vergabestelle. Der Wert steht da, belegt ist er nicht."))}">${tk("unsicher")}</span>`
+        /* Vierter Wert seit 2026-09-02. NICHT mit `abgeleitet` zusammenlegen: dort war
+           nichts veröffentlicht, hier stand ein amtlicher Wert da und war falsch — der
+           Tooltip von `abgeleitet` ("nicht veröffentlicht, aus dem Namen erschlossen")
+           wäre für diese Leads in beiden Hälften unwahr. Beleg je Fall in
+           curated/<L>_region_korrektur.csv. */
+        : q === 'korrigiert'
+        ? `<span class="rq rq-kor" title="${esc(tk("Die amtliche Kennung war falsch. Von Hand geprüft und anhand der Anschrift der Vergabestelle korrigiert."))}">${tk("korrigiert")}</span>`
         : '';
       return `<td class="c-region">${esc(tk(l.region))}${mark}</td>`;
     }

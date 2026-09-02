@@ -41,7 +41,7 @@ def test_amtlich_bekommt_kein_etikett():
 
 def test_die_werte_sind_die_der_daten():
     """⚠ Ein vierter Wert im Export, den die Anzeige nicht kennt, verschwände lautlos."""
-    bekannt = {"amtlich", "abgeleitet", "widerspruechlich"}
+    bekannt = {"amtlich", "abgeleitet", "widerspruechlich", "korrigiert"}
     gefunden = set()
     for f in glob.glob(str(WURZEL / "web" / "data" / "leads-*.json")):
         if "fristen" in f or "ohne" in f:
