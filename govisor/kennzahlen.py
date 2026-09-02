@@ -416,11 +416,17 @@ _AKTIVIERUNG: tuple[Kennzahl, ...] = (
 #
 # ⚠ SIE BRAUCHT BEIDE SEITEN und ist deshalb eine der wenigen, die sonst niemand rechnen
 # kann: die Bekanntmachung sagt wann veroeffentlicht und wann Frist, die Unterlagen sagen wie
-# viel Arbeit. Gemessen ueber 3.400 Vorgaenge: Median 34 Tage, in JEDER Aufwandsklasse
-# (bis 10 Anforderungen 33 Tage, ueber 100 Anforderungen 35), Korrelation 0,08.
+# viel Arbeit.
+#
+# ⚠ UND IHRE BEZUGSGROESSE IST DAS REGELWERK, NICHT DER MARKT INSGESAMT. Der Median liegt bei
+# 34 Tagen in jeder Aufwandsklasse (Korrelation 0,08) — das sah nach „der Markt gibt dieselbe
+# Zeit, egal wie viel Arbeit drinsteckt" aus und ist es nicht: 68 % aller Fenster liegen
+# zwischen 28 und 40 Tagen, weil dort die gesetzlichen Mindestfristen liegen. Unterschwellig
+# gelten andere: unter den Vorgaengen mit hoechstens 28 Tagen sind 21 % UVgO, im Rest 4 %.
+# Ein Vergleichswert, der zwei Rechtsgrundlagen mischt, ist keiner.
 _ZEITFENSTER: tuple[Kennzahl, ...] = (
     Kennzahl("aufwandGegenZeitfenster", "Aufwand gegen Zeitfenster", "markt",
-             "Median über alle Vorgänge mit ausgewerteten Unterlagen, je Land",
+             "Median desselben Regelwerks (VgV / VOB/A / UVgO), je Land",
              "lead-detail", "export_fenster.py", "", "Tage"),
 )
 

@@ -967,38 +967,46 @@ function _clHasBlocks(){ try{ return (JSON.parse(localStorage.getItem('govisor.b
 // Gruppen mit Zitat+Fundstelle+Kennzeichnung+editierbarem Baustein+Kombi-Button+Abhaken.
 /* KENNZAHL 1 — Aufwand gegen Zeitfenster.
  *
- * DER BEFUND, gemessen am 2026-09-02 ueber 3.400 Vorgaenge: zwischen Bekanntmachung und
- * Frist liegen im Median 34 Tage, und zwar UNABHAENGIG vom Aufwand. Von „bis 10
- * Anforderungen" (33 Tage) bis „ueber 100" (35 Tage); Korrelation 0,08, also keine.
- * Ein Verfahren mit 186 Anforderungen bekommt dieselbe Zeit wie eines mit dreien.
+ * ⚠ DIE ERSTE DEUTUNG WAR FALSCH. Der Median liegt bei 34 Tagen, in jeder Aufwandsklasse
+ * (bis 10 Anforderungen 33 Tage, ueber 100 Anforderungen 35), Korrelation 0,08. Daraus wurde
+ * zuerst „der Markt gibt dieselbe Zeit, egal wie viel Arbeit drinsteckt". Klingt gut, stimmt
+ * nicht: 68 % aller Fenster liegen zwischen 28 und 40 Tagen, die haeufigsten Werte sind 30
+ * bis 36 — dort liegen die gesetzlichen Mindestfristen. Die Frist reagiert nicht auf den
+ * Aufwand, weil sie ueberhaupt nicht auf ihn reagieren soll.
  *
- * ⚠ SIE BRAUCHT BEIDE SEITEN. Die Bekanntmachung sagt, wann veroeffentlicht und wann Frist;
- * die Unterlagen sagen, wie viel Arbeit drinsteckt. Wer nur eine hat, kann sie nicht rechnen
- * — und niemand sonst hat beide. Deshalb steht sie hier und nicht bei den Fristen.
+ * ⚠ UND DER VERGLEICH GEHT NUR JE REGELWERK. Unter den Vorgaengen mit hoechstens 28 Tagen
+ * sind 21 % UVgO, im Rest 4 %: unterschwellig gelten andere Mindestfristen. Ein globaler
+ * Median haette jede UVgO-Vergabe als „knapp" markiert, obwohl sie ihrem Rahmen entspricht.
+ * Die Bezugsgroessen-Regel in ihrer strengsten Form: ein Vergleichswert, der zwei
+ * Rechtsgrundlagen mischt, ist keiner.
  *
- * ⚠ NUR WENN ES ETWAS ZU SAGEN GIBT. Liegt das Fenster im mittleren Feld, ist die Zeile eine
- * Selbstverstaendlichkeit und bleibt weg. Gezeigt wird sie, wo sie eng ist — dort kippt sie
- * eine Bietentscheidung, und dort steht sie sonst nirgends. */
+ * WAS BLEIBT: die Kennzahl braucht BEIDE Seiten und kann deshalb sonst niemand rechnen. Die
+ * Aussage ist nur enger — nicht „der Markt ist blind fuer den Aufwand", sondern „diese
+ * Vergabe gibt weniger Zeit als neun von zehn ihres Regelwerks, bei so vielen Anforderungen".
+ *
+ * ⚠ Nur der ENGE Fall und nur im zehnten Perzentil. Erste Fassung zeigte beide Raender am
+ * Viertel — die Zeile erschien bei 51 % aller Vorgaenge. Und „mehr Zeit als ueblich" aendert
+ * keine Entscheidung: man bewirbt sich nicht, WEIL viel Zeit ist. */
+const _RAHMEN_NAME = { vgv: 'VgV', vob: 'VOB/A', uvgo: 'UVgO', sonst: null };
 function renderFensterBlock(a, l){
   const f = l.lbFenster;
-  if(!f || f.tage == null || !f.median) return '';
+  if(!f || f.tage == null || !f.median || f.eng == null) return '';
   const n = (a.checklist||[]).length;
   if(!n) return '';
-  /* ⚠ NUR DER ENGE FALL, und der nur im zehnten Perzentil.
-     Erste Fassung zeigte beide Raender am Viertel — die Zeile erschien bei 51 % aller
-     Vorgaenge, also bei jedem zweiten. Eine Zeile, die immer dasteht, liest bald niemand.
-     Und „mehr Zeit als ueblich" aendert keine Entscheidung: man bewirbt sich nicht, WEIL
-     viel Zeit ist. Der enge Fall dagegen kippt sie, und zwar bevor man die Liste durchgeht. */
-  if(f.eng == null || f.tage > f.eng) return '';
-  // Rang auf der Achse: dieselbe Sprache wie die Marktzeile der Vergabestellen.
+  if(f.tage > f.eng) return '';
   const spanne = Math.max(1, f.oben - f.unten);
   const pos = Math.max(0, Math.min(100, Math.round(((f.tage - f.unten) / spanne) * 50 + 25)));
+  // Den Rahmen NENNEN, wenn wir ihn kennen: „marktueblich 34 Tage" ohne Angabe, unter welcher
+  // Ordnung, waere genau die Vermischung, die der Vergleich vermeidet.
+  const rn = _RAHMEN_NAME[f.rahmen];
+  const bezug = rn
+    ? tk("üblich sind {d} Tage unter {r}", {d: f.median, r: rn})
+    : tk("üblich sind {d} Tage in vergleichbaren Verfahren", {d: f.median});
   return `<div class="fenster eng">
     <span class="fenster-t">${tk("{n} Anforderungen in {d} Tagen", {n: n, d: f.tage})}</span>
     <span class="bstat-leiste" aria-hidden="true"><i class="band"></i><i class="mitte"></i>
       <i class="punkt" style="left:${pos}%"></i></span>
-    <span class="fenster-m">${tk("marktüblich {d} Tage, unabhängig vom Aufwand")
-      .replace('{d}', f.median)}<em>${tk("engstes Zehntel")}</em></span>
+    <span class="fenster-m">${bezug}<em>${tk("engstes Zehntel")}</em></span>
   </div>`;
 }
 

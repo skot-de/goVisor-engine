@@ -82,13 +82,14 @@ async function loadDocSignals(): Promise<Record<string, DocSignals>> {
  * ⚠ Warum sie ueberhaupt getrennt liegt: das Veroeffentlichungsdatum steht in SILBER, nicht
  * in `lead_export`. Der grosse Lead-Export haette dafuer einen Join gebraucht, den es dort
  * nicht gibt (s. `scripts/export_fenster.py`). */
-type Fenster = { laender: Record<string, { n: number; median: number; unten: number; oben: number }>;
-                 leads: Record<string, number> };
+type FensterLage = { n: number; median: number; unten: number; oben: number; eng: number };
+type Fenster = { rahmen: Record<string, FensterLage>;
+                 leads: Record<string, { tage: number; rahmen: string; land: string }> };
 let fenster: Fenster | null = null;
 async function loadFenster(): Promise<Fenster> {
   if (fenster) return fenster;
-  try { const roh = await loadDataFile("fenster.json"); fenster = roh ? JSON.parse(roh) : { laender: {}, leads: {} }; }
-  catch { fenster = { laender: {}, leads: {} }; }
+  try { const roh = await loadDataFile("fenster.json"); fenster = roh ? JSON.parse(roh) : { rahmen: {}, leads: {} }; }
+  catch { fenster = { rahmen: {}, leads: {} }; }
   return fenster!;
 }
 
@@ -189,10 +190,14 @@ export async function GET(req: Request) {
     /* ⚠ NUR WENN BEIDE SEITEN DA SIND. Das Fenster allein sagt nichts („34 Tage" ist eine
        Frist), die Anforderungszahl allein auch nicht. Erst zusammen entsteht die Aussage,
        und genau deshalb kann sie sonst niemand rechnen. */
+    /* ⚠ VERGLICHEN WIRD JE REGELWERK, nicht global. Die Frist ist gesetzlich geregelt und
+       streut deshalb kaum; unterschwellig (UVgO) gelten andere Mindestfristen. Ein globaler
+       Median markierte jede UVgO-Vergabe als „knapp", obwohl sie ihrem eigenen Rahmen
+       entspricht: unter den Vorgaengen mit hoechstens 28 Tagen sind 21 % UVgO, im Rest 4 %. */
     const fw = await loadFenster();
-    const tage = fw.leads[id];
-    const lage = fw.laender[String((detail as { land?: string }).land || "DE")];
-    if (tage != null && lage && an) detail.lbFenster = { tage, ...lage };
+    const eintrag = fw.leads[id];
+    const lage = eintrag ? fw.rahmen[`${eintrag.land}:${eintrag.rahmen}`] : undefined;
+    if (eintrag && lage && an) detail.lbFenster = { tage: eintrag.tage, rahmen: eintrag.rahmen, ...lage };
     // Dateiliste des Portals — was dort LIEGT, ohne dass wir es gelesen haben.
     const li = await ladeDateiliste(id);
     if (li) detail.lbListe = li;

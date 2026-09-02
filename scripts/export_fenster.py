@@ -1,31 +1,45 @@
 #!/usr/bin/env python3
 """Aufwand gegen Zeitfenster → web/data/fenster.json (Kennzahl 1 der Übergabe).
 
-DER BEFUND. Zwischen Bekanntmachung und Angebotsfrist liegen im Median **34 Tage**, und zwar
-UNABHÄNGIG davon, wie viel Arbeit das Verfahren macht. Gemessen am 2026-09-02 über 3.400
-Vorgänge mit ausgewerteten Unterlagen:
+⚠ DIE ERSTE DEUTUNG WAR FALSCH, und sie klang besser als sie war. Gemessen über 3.400
+Vorgänge liegt der Median bei 34 Tagen, in JEDER Aufwandsklasse (bis 10 Anforderungen 33
+Tage, über 100 Anforderungen 35), Korrelation 0,08. Daraus wurde zuerst: „der Markt gibt
+dieselbe Zeit, egal wie viel Arbeit drinsteckt."
 
-    bis 10 Anforderungen   102 Vorgänge   Median 33 Tage
-    11 bis 25              246            34
-    26 bis 50              847            34
-    51 bis 100           1.979            34
-    über 100               226            35
+Sven, beim Lesen: „also zwischen unter 10 Anforderungen und über 100 liegen zwei Tage?!"
 
-Korrelation zwischen Anforderungszahl und Fenster: **0,08**, also keine. Ein Verfahren mit 186
-Anforderungen bekommt dieselbe Zeit wie eines mit dreien.
+Nachgemessen ist die Flachheit **kein Marktverhalten, sondern eine Vorgabe**: 68 % aller
+Fenster liegen zwischen 28 und 40 Tagen, die häufigsten Werte sind 30 bis 36. Dort liegen die
+gesetzlichen Mindestfristen für offene Verfahren. Die Frist reagiert nicht auf den Aufwand,
+weil sie überhaupt nicht auf ihn reagieren soll — sie ist geregelt. Das ist ein anderer Satz
+als der erste, und der einzige, den die Daten tragen.
 
-⚠ WARUM DAS EINE KENNZAHL IST UND KEINE ANEKDOTE. Sie braucht BEIDE Seiten: die
-Bekanntmachung (wann veröffentlicht, wann Frist) und die Unterlagen (wie viele Anforderungen).
-Wer nur eine hat, kann sie nicht rechnen — und niemand sonst hat beide.
+⚠ UND DAS KIPPTE AUCH DEN VERGLEICH. Die kurzen Fenster sind kein aggressiver Auftraggeber,
+sondern ein anderes Regelwerk: unter den Vorgängen mit ≤ 28 Tagen sind 21 % UVgO, im Rest nur
+4 %. Unterschwellig gelten andere Mindestfristen. Ein globaler Median hätte also jede
+UVgO-Vergabe als „knapp" markiert, obwohl sie ihrem eigenen Rahmen entspricht.
+
+    vgv    1.832 Vorgänge   Median 34   Viertel 32–38   p10 30
+    vob    1.280            34          31–40           28
+    uvgo     183            30          26–37           20
+    sonst    105            40          32–52           31
+
+Verglichen wird deshalb JE REGELWERK. Das ist die Bezugsgrössen-Regel in ihrer strengsten
+Form: ein Vergleichswert, der zwei Rechtsgrundlagen mischt, ist kein Vergleichswert.
+
+WAS BLEIBT. Die Kennzahl braucht weiterhin BEIDE Seiten — die Bekanntmachung (wann
+veröffentlicht, wann Frist) und die Unterlagen (wie viele Anforderungen) — und niemand sonst
+hat beide. Die Aussage ist nur enger: nicht „der Markt ist blind für den Aufwand", sondern
+„diese Vergabe gibt weniger Zeit als neun von zehn ihres Regelwerks, bei so vielen
+Anforderungen".
 
 ⚠ DAS VERÖFFENTLICHUNGSDATUM LIEGT NICHT IN GOLD. `lead_export` trägt `deadline_date`, aber
 kein `publication_date`; das steht in Silber. Deshalb dieses eigene Skript statt einer Zeile
-im grossen Lead-Export: dort gäbe es den Join nicht ohne Umbau.
+im grossen Lead-Export.
 
-⚠ FENSTER ZWISCHEN 1 UND 365 TAGEN. Alles darunter ist ein Datenfehler (Frist vor
-Veröffentlichung), alles darüber sind Rahmenvereinbarungen und dynamische Systeme, deren
-„Frist" kein Zeitfenster für ein Angebot ist. Ohne diese Grenze verschiebt ein Vorgang mit
-Frist 2029 den Median um Wochen.
+⚠ FENSTER ZWISCHEN 1 UND 365 TAGEN. Darunter ist es ein Datenfehler (Frist vor
+Veröffentlichung), darüber sind es Rahmenvereinbarungen, deren „Frist" kein Zeitfenster für
+ein Angebot ist. EIN Vorgang mit Frist 2029 verschöbe den Median um Wochen.
 
 Aufruf: python3 scripts/export_fenster.py
 """
@@ -44,9 +58,22 @@ OUT = ROOT / "web" / "data" / "fenster.json"
 UNTEN, OBEN = 1, 365
 
 
+def _rahmen(roh: str | None) -> str:
+    """Regelwerk in vier Klassen. ⚠ Der Rohwert ist Freitext aus der Bekanntmachung; die
+    Klassen sind grob, aber sie trennen die MINDESTFRISTEN, und darum geht es hier."""
+    r = (roh or "").lower()
+    if "uvgo" in r:
+        return "uvgo"
+    if "vob" in r:
+        return "vob"
+    if "vgv" in r:
+        return "vgv"
+    return "sonst"
+
+
 def main() -> int:
     con = duckdb.connect()
-    raus: dict = {"laender": {}, "leads": {}}
+    raus: dict = {"rahmen": {}, "leads": {}}
     for land in ("DE", "AT", "CH"):
         A = ROOT / "data" / "gold" / land / "doc_analysis.parquet"
         L = ROOT / "data" / "gold" / land / "lead_export.parquet"
@@ -57,7 +84,7 @@ def main() -> int:
             zeilen = con.execute(f"""
               select a.notice_id,
                      date_diff('day', n.pub, l.deadline_date) AS fenster,
-                     a.n_checklist
+                     l.regulatory_regime
               from read_parquet('{A.as_posix()}') a
               join read_parquet('{L.as_posix()}') l on l.lead_id = a.notice_id
               join (select notice_id, max(publication_date) pub
@@ -67,31 +94,36 @@ def main() -> int:
                 and date_diff('day', n.pub, l.deadline_date) between {UNTEN} and {OBEN}
             """).fetchall()
         except Exception as e:                                     # noqa: BLE001
-            print(f"  {land}: {type(e).__name__} — übersprungen ({str(e)[:70]})")
+            print(f"  {land}: {type(e).__name__} — uebersprungen ({str(e)[:70]})")
             continue
         if not zeilen:
             continue
-        werte = sorted(int(z[1]) for z in zeilen)
-        bei = lambda p: werte[min(len(werte) - 1, int(len(werte) * p))]   # noqa: E731
-        # ⚠ `eng` ist das ZEHNTE Perzentil, nicht das Viertel. Mit dem Viertel erschien die
-        # Zeile bei 51 % aller Vorgaenge (26 % eng, 25 % weit) — bei jedem zweiten, also
-        # Tapete. Beim zehnten Perzentil sind es 11 %, und die tragen dann auch etwas:
-        # 28 Tage oder weniger fuer eine Anforderungsliste, die im Median 34 bekommt.
-        raus["laender"][land] = {
-            "n": len(werte), "median": bei(0.5),
-            "unten": bei(0.25), "oben": bei(0.75), "eng": bei(0.10),
-        }
-        for nid, fenster, _ in zeilen:
-            raus["leads"][nid] = int(fenster)
-        print(f"  {land}: {len(werte):,} Vorgänge · Median {bei(0.5)} Tage "
-              f"(Viertel {bei(0.25)} bis {bei(0.75)}, eng ab {bei(0.10)})")
+        je_rahmen: dict[str, list[int]] = {}
+        for nid, fenster, regime in zeilen:
+            r = _rahmen(regime)
+            je_rahmen.setdefault(r, []).append(int(fenster))
+            raus["leads"][nid] = {"tage": int(fenster), "rahmen": r, "land": land}
+        for r, werte in sorted(je_rahmen.items()):
+            # ⚠ Unter 30 Vorgaengen kein Vergleichswert. Ein Median aus zwoelf Faellen sieht
+            # aus wie einer aus zwoelfhundert und traegt nicht dasselbe.
+            if len(werte) < 30:
+                print(f"  {land}/{r}: nur {len(werte)} Vorgaenge — kein Vergleichswert")
+                continue
+            werte.sort()
+            bei = lambda p: werte[min(len(werte) - 1, int(len(werte) * p))]   # noqa: E731
+            raus["rahmen"][f"{land}:{r}"] = {
+                "n": len(werte), "median": bei(0.5),
+                "unten": bei(0.25), "oben": bei(0.75), "eng": bei(0.10),
+            }
+            print(f"  {land}/{r:<5} {len(werte):>5} Vorgaenge · Median {bei(0.5)} · "
+                  f"Viertel {bei(0.25)}–{bei(0.75)} · eng ab {bei(0.10)}")
 
-    if not raus["laender"]:
+    if not raus["rahmen"]:
         print("FEHLT: keine Datengrundlage — erst `doc_analysis` bauen lassen.")
         return 1
     OUT.write_text(json.dumps(raus, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
-    print(f"Zeitfenster: {len(raus['leads']):,} Vorgänge → {OUT.name} "
-          f"({OUT.stat().st_size / 1024:.0f} kB)")
+    print(f"Zeitfenster: {len(raus['leads']):,} Vorgaenge, {len(raus['rahmen'])} Vergleichsgruppen "
+          f"→ {OUT.name} ({OUT.stat().st_size / 1024:.0f} kB)")
     return 0
 
 
