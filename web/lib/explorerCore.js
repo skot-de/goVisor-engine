@@ -1104,11 +1104,11 @@ function auspraegungVon(cfg, einheit, zitat, wert){
   return regelTreffer(cfg, ein + ' ' + String(zitat || '').toLowerCase(), wert);
 }
 
-function schwellenVergleich(it, l){
+function schwellenTreffer(it, l){
   const S = l.lbSchwellen;
-  if(!S || !S.gruppen) return '';
+  if(!S || !S.gruppen) return null;
   const wert = Number(it.wert_num != null ? it.wert_num : it.value);
-  if(!isFinite(wert)) return '';
+  if(!isFinite(wert)) return null;
   const einheit = String(it.unit || '').trim().toLowerCase();
   const cfg = (S.auspraegungen || {})[it.req_type];
   let dim = '';
@@ -1117,7 +1117,7 @@ function schwellenVergleich(it, l){
      Auftragssumme je angefangenen Werktag", „€ je Vorfall", „pro Woche") und traegt oft den
      halben Satz; in 81 % der Faelle fehlt es ganz und das Zitat traegt alles. Der Beleg
      entscheidet dann AUCH ueber Geld gegen Prozent — sonst laese man „€ je Vorfall" als
-     Prozentsatz. Das Band darunter faengt ab, was trotzdem durchrutscht. */
+     Prozentsatz. Das Band in `auspraegungVon` faengt ab, was trotzdem durchrutscht. */
   const text = (einheit + ' ' + String(it.quote || '')).toLowerCase();
   if(!dim && cfg && cfg.einheitOptional){
     for(const [d, muster] of Object.entries(cfg.dimensionMuster || {})){
@@ -1125,18 +1125,35 @@ function schwellenVergleich(it, l){
     }
     if(!dim && !einheit) dim = cfg.dimension;
   }
-  if(!dim) return '';
+  if(!dim) return null;
   const art = auspraegungVon(cfg, einheit, it.quote, wert);
-  if(art == null) return '';
+  if(art == null) return null;
   const land = String(l.land || 'DE');
-  const g = S.gruppen[`${land}|${it.req_type}|${dim}|${art}`];
-  if(!g || !(wert > g.hoch)) return '';
+  return {wert: wert, dim: dim, einheit: einheit,
+          gruppe: S.gruppen[`${land}|${it.req_type}|${dim}|${art}`] || null, art: art};
+}
+
+/* ⚠ „Vertragsstrafe 10" NEBEN „ueblich 5 %" ist keine Zeile, sondern ein Raetsel. Bei 81 % der
+ * Vertragsstrafen ist das Einheitenfeld leer, die Einheit steckt im Beleg — dann traegt der
+ * Wert selbst keine. Ergaenzt wird sie NUR, wenn die volle Zuordnung durchgelaufen ist
+ * (Auspraegung erkannt UND im Plausibilitaetsband): ohne das Band stuende bei „insgesamt
+ * hoechstens 25.000" ein „25.000 %". */
+function schwellenEinheit(it, l){
+  if(String(it.unit || '').trim()) return '';
+  const t = schwellenTreffer(it, l);
+  return (t && t.dim === 'prozent') ? ' %' : '';
+}
+
+function schwellenVergleich(it, l){
+  const t = schwellenTreffer(it, l);
+  if(!t || !t.gruppe || !(t.wert > t.gruppe.hoch)) return '';
   const sp = aktuelleSprache();
   const zahl = x => Number(x).toLocaleString(sp === 'de' ? 'de-DE' : sp, {maximumFractionDigits: 2});
-  const einh = dim === 'prozent' ? ' %' : '';
-  return `<span class="cl-hoch" title="${esc(tk("Vergleichsgruppe: {label}, {n} Werte", {label: g.label + (art ? ' · ' + art : ''), n: g.n}))}">${
-    tk("höher als bei drei von vier Vergaben, üblich {m}", {m: zahl(g.median) + einh})}</span>`;
+  const einh = t.dim === 'prozent' ? ' %' : '';
+  return `<span class="cl-hoch" title="${esc(tk("Vergleichsgruppe: {label}, {n} Werte", {label: t.gruppe.label + (t.art ? ' · ' + t.art : ''), n: t.gruppe.n}))}">${
+    tk("höher als bei drei von vier Vergaben, üblich {m}", {m: zahl(t.gruppe.median) + einh})}</span>`;
 }
+
 
 
 /* KENNZAHL 9 — Widerspruch bei der Angebotsfrist.
@@ -1332,7 +1349,7 @@ function renderChecklistBlock(a, l){
     const _zeig = (isFinite(_fw) && _roh.replace(/[^\d]/g, '') === String(Math.round(_fw)).replace(/[^\d]/g, ''))
       ? _fw.toLocaleString(aktuelleSprache()==='de' ? 'de-DE' : aktuelleSprache(), {maximumFractionDigits: 2})
       : _roh;
-    const val = it.value!=null && it.value!=='' ? ` <span class="cl-val">${esc(_zeig)}${it.unit?(' '+esc(String(it.unit))):''}</span>` : '';
+    const val = it.value!=null && it.value!=='' ? ` <span class="cl-val">${esc(_zeig)}${it.unit?(' '+esc(String(it.unit))):esc(schwellenEinheit(it, l))}</span>` : '';
     /* ⚠ Der Vergleich steht NEBEN dem `<b>`, nicht darin: im Kopf ist alles fett, und eine
        fette Einordnung schriee lauter als die Zahl, die sie einordnet. */
     const vgl = schwellenVergleich(it, l);

@@ -198,7 +198,7 @@ def test_regeln_kommen_aus_der_datei():
     """⚠ Zwei gepflegte Einheitenlisten wären zwei Listen, die auseinanderlaufen — dieselbe
     Fehlerform wie die handgetippte Spaltenliste bei den Doc-Signalen. Der Renderer liest die
     Regeln aus der Datei, statt eigene zu führen."""
-    b = _block("schwellenVergleich")
+    b = _block("schwellenTreffer")
     assert "S.einheiten" in b and "S.auspraegungen" in b
     for wort in ("'eur'", '"eur"', "personenschäden"):
         assert wort not in b.lower(), f"eigene Liste im Frontend: {wort}"
@@ -209,7 +209,8 @@ def test_renderer_wendet_die_gelieferten_regeln_an():
     auch anwenden, und zwar VOLLSTÄNDIG. Fehlt die Sperre, landet „0,2 % je Werktag, insgesamt
     höchstens 5 %" in der Obergrenzen-Gruppe; fehlt das Band, wird ein Eurobetrag als Prozent
     gelesen."""
-    b = _block("schwellenVergleich") + _block("auspraegungVon") + _block("regelTreffer")
+    b = (_block("schwellenTreffer") + _block("schwellenVergleich")
+         + _block("auspraegungVon") + _block("regelTreffer"))
     for teil in ("S.auspraegungen", "r.muster", "r.sperre", "r.band", "cfg.einheitOptional",
                  "cfg.dimension", "cfg.sonst"):
         assert teil in b, f"der Renderer wertet {teil} nicht aus"
@@ -230,8 +231,8 @@ def test_nur_echt_ueber_dem_oberen_viertel():
     """⚠ Bei zwei Gruppen fällt das Quartil mit dem Median zusammen (Vertragsstrafe 5 %,
     Referenzen 3). Mit `>=` stünde die Einordnung dort genau beim Üblichen."""
     b = _block("schwellenVergleich")
-    assert "wert > g.hoch" in b, "greift auch beim Median"
-    assert "wert < g" not in b, "eine niedrigere Schwelle ändert keine Entscheidung"
+    assert "t.wert > t.gruppe.hoch" in b, "greift auch beim Median"
+    assert "wert < " not in b, "eine niedrigere Schwelle ändert keine Entscheidung"
 
 
 def test_der_vergleich_ist_nicht_fett():
@@ -244,11 +245,24 @@ def test_der_vergleich_ist_nicht_fett():
 
 def test_gruppenschluessel_traegt_das_land():
     """⚠ Ohne Land vergliche ein Schweizer Vorgang gegen deutsche Deckungssummen."""
-    b = _block("schwellenVergleich")
+    b = _block("schwellenTreffer")
     assert "${land}|${it.req_type}|${dim}|${art}" in b
     if DATEI.exists():
         g = json.loads(DATEI.read_text(encoding="utf-8"))["gruppen"]
         assert all(len(k.split("|")) == 4 and len(k.split("|")[0]) == 2 for k in g)
+
+
+def test_die_einheit_wird_nur_bei_voller_zuordnung_ergaenzt():
+    """⚠ „Vertragsstrafe 10" neben „üblich 5 %" ist keine Zeile, sondern ein Rätsel: bei 81 %
+    der Vertragsstrafen ist das Einheitenfeld leer, die Einheit steckt im Beleg. Ergänzt wird
+    sie nur, wenn die volle Zuordnung durchlief — ohne das Plausibilitätsband stünde bei
+    „insgesamt höchstens 25.000" ein „25.000 %"."""
+    b = _block("schwellenEinheit")
+    assert "String(it.unit || '').trim()" in b, "eine vorhandene Einheit darf nicht überschrieben werden"
+    assert "schwellenTreffer(it, l)" in b, "die Einheit entsteht ohne die volle Prüfung"
+    zeile = CORE[CORE.index('const val = it.value!=null'):]
+    zeile = zeile[:zeile.index("\n")]
+    assert "schwellenEinheit(it, l)" in zeile and "it.unit?" in zeile
 
 
 # ── Ausliefergut ────────────────────────────────────────────────────────────────────────
