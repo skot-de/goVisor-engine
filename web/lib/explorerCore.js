@@ -681,7 +681,23 @@ function cellHTML(l, key){
       return `<td class="c-empf"><span class="empf rec-${r.cls}" title="${esc(tk(r.grund))}">${tk(r.label)}</span>` +
              `<span class="empf-grund">${esc(tk(r.grund))}</span></td>`;
     }
-    case 'region': return `<td class="c-region">${esc(tk(l.region||''))}</td>`;
+    /* ⚠ DIE HERKUNFT GEHOERT AN DEN WERT. `regionQuelle` liegt seit jeher an 42.660 Leads
+       und wurde im Frontend NIRGENDS gelesen. Die Begruendung steht im Export selbst: „Ein
+       stillschweigend ergaenzter Wert sieht aus wie eine Quelle — und danach wird gefiltert."
+       Genau das ist passiert. Gemessen am 2026-09-02: 69,3 % amtlich, **25,6 % von uns
+       abgeleitet**, 0,4 % widerspruechlich, 4,8 % ohne Angabe.
+       Ein Viertel aller Bundeslaender in dieser Spalte hat also niemand veroeffentlicht,
+       sondern wir haben es aus dem Kaeufernamen erschlossen. */
+    case 'region': {
+      if(!l.region) return `<td class="c-region"></td>`;
+      const q = l.regionQuelle;
+      const mark = q === 'abgeleitet'
+        ? `<span class="rq rq-abl" title="${esc(tk("Nicht veröffentlicht, aus dem Namen der Vergabestelle erschlossen."))}">${tk("abgeleitet")}</span>`
+        : q === 'widerspruechlich'
+        ? `<span class="rq rq-wid" title="${esc(tk("Die amtliche Kennung widerspricht dem Ort der Vergabestelle. Der Wert steht da, belegt ist er nicht."))}">${tk("unsicher")}</span>`
+        : '';
+      return `<td class="c-region">${esc(tk(l.region))}${mark}</td>`;
+    }
     case 'inc': return `<td class="c-inc">${l.incumbent ? val(l.incumbent.name, l.incumbent.src) : `<span style="color:var(--ink-300)">${tk('offen')}</span>`}</td>`;
     case 'status': return `<td class="c-status"><span class="stat">${tk(l.seen || (l.status==='ungesichtet'?'neu':'gesichtet'))}</span></td>`;
     case 'wf': return `<td class="c-wf">${l.userStatus ? wfPill(l.userStatus) : '<span class="wf-none">—</span>'}</td>`;

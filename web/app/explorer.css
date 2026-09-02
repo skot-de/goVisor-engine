@@ -2385,3 +2385,19 @@ td.c-band .passung i{display:none}
 .fenster-m { font-size: var(--t-meta); color: var(--ink-500); font-variant-numeric: tabular-nums; }
 .fenster-m em { font-style: normal; margin-left: 6px; font-weight: 600; color: var(--ink-700); }
 .fenster.eng .fenster-m em { color: var(--flag); }
+
+/* HERKUNFT DER REGION (2026-09-02). `regionQuelle` lag seit jeher an 42.660 Leads und wurde
+   nirgends gelesen: 25,6 % aller Bundesländer in dieser Spalte hat niemand veröffentlicht,
+   wir haben sie aus dem Namen der Vergabestelle erschlossen.
+
+   Die Begründung steht im Export selbst: „Ein stillschweigend ergänzter Wert sieht aus wie
+   eine Quelle, und danach wird gefiltert."
+
+   Leise gehalten: der Wert bleibt die Hauptsache, die Herkunft ist die Fussnote daran. Kein
+   Rot, denn abgeleitet heisst nicht falsch. */
+.rq { margin-left: 5px; font-size: 9px; font-weight: 600; letter-spacing: .03em;
+  padding: 1px 4px; border-radius: 3px; cursor: help; vertical-align: 1px; }
+.rq-abl { background: var(--surface-3); color: var(--ink-400); }
+/* Widersprüchlich ist etwas anderes als abgeleitet: hier steht ein Wert, dem eine andere
+   Angabe derselben Quelle widerspricht. Das verdient die Warnfarbe, nicht die graue. */
+.rq-wid { background: var(--flag-wash); color: var(--flag); }
