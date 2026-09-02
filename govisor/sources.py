@@ -460,10 +460,22 @@ DOC_REGISTRY: list[Source] = [
            coverage="1 %",
            overlap="⛔ `disallow: /` mit fuenf namentlich erlaubten Seiten.",
            url="https://www.contratosdegalicia.gal"),
-    Source("sond-es-rest", "Madrid, Andalusien, Navarra u. a.", "", "ES", "beides",
-           "sondiert", portals=7, ebene="unterlagen", ertrag="ungeprueft",
-           coverage="zusammen ~13 % — ungeprueft", overlap="ungeprueft",
-           url="https://contratos-publicos.comunidad.madrid"),
+    Source("sond-es-andalucia", "Andalusien (Junta de Andalucía)", "", "ES", "beides",
+           "sondiert", portals=5, ebene="unterlagen", ertrag="gesperrt",
+           coverage="8 % der ES-Ausschreibungen",
+           overlap="🔗 NICHT GESPERRT, SONDERN KAPUTT — eine eigene Kategorie. 170 von 206 "
+                   "Bezuegen (83 %) zeigen auf tote Hosts: `sirecftdpriexp.chap.junta-"
+                   "andalucia.es` loest gar nicht auf (86), `ceh.junta-andalucia.es` hat ein "
+                   "Zertifikat fuer *.juntadeandalucia.es OHNE Bindestrich (52), sspa gibt "
+                   "403 (26). Ursache ist ein Schreibfehler im Hostnamen; derselbe Pfad auf "
+                   "dem korrigierten Host antwortet mit HTTP 200. ⚠ Eine Adresse in TED ist "
+                   "kein Beleg, dass es die Seite gibt.",
+           url="https://www.juntadeandalucia.es"),
+    Source("sond-es-rest", "Madrid, Navarra u. a.", "", "ES", "beides",
+           "sondiert", portals=6, ebene="unterlagen", ertrag="ungeprueft",
+           coverage="zusammen ~5 % — ungeprueft. ⚠ Madrid traegt denselben Hostnamen-Fehler "
+                   "wie Andalusien in kleinerem Massstab: zwei Subdomains loesen nicht auf.",
+           overlap="ungeprueft", url="https://contratos-publicos.comunidad.madrid"),
     # ── ANGEBUNDEN ────────────────────────────────────────────────────────────────────
     Source("doc-cosinex-de", "cosinex/DTVP-Unterlagen", "docfetch-cosinex", "DE", "beides",
            "live", portals=40, ebene="unterlagen", ertrag="dateien", modul="govisor.docfetch",

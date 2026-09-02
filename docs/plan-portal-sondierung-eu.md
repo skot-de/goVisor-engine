@@ -151,6 +151,16 @@ haben:
 | `frei_browser` | rechtlich frei, technisch nur im Browser (Wicket-State, 418-Anti-Bot) | 20 % |
 | `login` | Registrierung nötig → für mich Endstation | 14 % |
 | `abo` | kommerzieller Aggregator | 1 % |
+| `captcha` | anonymer Abruf angeboten, aber per Bildrätsel gesperrt | FR: 25 % |
+| `verboten` | technisch offen, aber robots.txt untersagt genau die Dateien | PL: 36 % |
+| `tot` | die in TED veröffentlichte Adresse existiert nicht (DNS, Zertifikat) | ES: 26 % des Prüfbaren |
+
+⚠ **Die letzten drei sind erst durch die Sondierung entstanden**, keine davon war im
+ursprünglichen Entwurf. `captcha` ist keine Login-Wand (es braucht kein Konto, nur einen
+Menschen), `verboten` ist keine technische Schranke (die Datei hängt offen da, der
+Betreiber untersagt nur den Abruf), und `tot` ist überhaupt keine Schranke, sondern ein
+Fehler in der Bekanntmachung. Wer die drei in „geht nicht" zusammenwirft, verliert genau
+die Unterscheidung, an der die Entscheidung hängt.
 
 ⚠ Deutschland ist dabei die **Obergrenze, nicht der Durchschnitt**: AT und CH liegen
 vollständig hinter Anmeldung. Wer aus den 32 % eine EU-Erwartung ableitet, rechnet sich

@@ -114,10 +114,45 @@ Vergabebekanntmachungen selbst.
 
 `disallow: /`, mit fünf namentlich erlaubten Seiten (Startseite, Fragen, Abo, Anleitung).
 
+### 🔗 Andalusien (8 %) — nicht gesperrt, sondern kaputt
+
+**Eine neue Kategorie, und sie war in keinem der bisherigen Länder aufgetaucht.** Andalusien
+sperrt nichts. Seine Adressen führen nur ins Leere:
+
+| Host | Bezüge | Zustand |
+|---|---:|---|
+| `sirecftdpriexp.chap.junta-andalucia.es` | 86 | ⛔ **DNS löst nicht auf** |
+| `ceh.junta-andalucia.es` | 52 | ⛔ **Zertifikat passt nicht** (es gilt für `*.juntadeandalucia.es`, ohne Bindestrich) |
+| `sspa.juntadeandalucia.es` | 26 | ⚠ HTTP 403 |
+| `sirecbkdexp.chap.junta-andalucia.es` | 6 | ⛔ DNS löst nicht auf |
+| `juntadeandalucia.es` | 32 | ✓ erreichbar |
+
+**170 von 206 Bezügen (83 %) sind tot oder abweisend.**
+
+Die Ursache ist ein **Schreibfehler im Hostnamen**: die Bekanntmachungen nennen
+`junta-andalucia.es` mit Bindestrich, das Zertifikat gilt für `juntadeandalucia.es` ohne.
+Derselbe Pfad, auf den korrigierten Host gelegt, antwortet mit HTTP 200 — es ist dieselbe
+Anwendung, nur unter dem richtigen Namen. (Sie ist allerdings eine JS-Anwendung ohne
+servergerenderten Inhalt; von dort zu den Dateien wäre noch ein Stück Weg.)
+
+⚠ Ein Fund mit Signalwirkung: **eine Adresse in TED ist kein Beleg, dass es die Seite
+gibt.** Madrid trägt denselben Fehler in kleinerem Maßstab — `contratospublicos.comunidad.madrid`
+(ohne Bindestrich, 10 Bezüge) und `edicion.contratos-publicos…` (12) lösen ebenfalls nicht auf.
+
+### Erreichbarkeit insgesamt
+
+Von 2.713 spanischen Portalbezügen gehen **1.978 (73 %) auf robots-gesperrte Hosts** —
+die habe ich nicht angefragt. Von den übrigen 620:
+
+| | |
+|---|---:|
+| erreichbar | **70 %** |
+| Fehlerseite (403/404) | 4 % |
+| **tot** (DNS, Zertifikat, TLS) | **26 %** |
+
 ### Ungeprüft
 
-Madrid (3 %), Andalusien (7 %), Navarra (1 %) und der Rest des Schwanzes.
-Geprüft sind damit **87 %** der spanischen Portal-URLs.
+Madrid (4 %) und Navarra (1 %), soweit ihre Hosts leben.
 
 ## 3. Was Spanien für den Plan bedeutet
 
