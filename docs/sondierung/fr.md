@@ -163,3 +163,20 @@ Der Eintrag `fr-decp` steht bereits in der Registry (`status=candidate`,
 1. Der 31-%-Schwanz: mehr Monate lesen, damit tiefe Links auftauchen und sich zeigt,
    wie viel davon ebenfalls Atexo ist.
 2. `marches-securises` (5 %): neuer Einstiegspunkt zu finden.
+
+---
+
+## 7. Was ungeprüft blieb — und eine Lücke, die schwerer wiegt
+
+**Ungeprüft:** der 25-%-Schwanz unbekannter Domains und `marches-securises` (6 %).
+Geprüft sind damit **75 %** der Portale, die in TED erscheinen.
+
+⚠ **Und die schwerere Lücke: die unterschwellige Ebene ist hier gar nicht gemessen.**
+Alle Zahlen dieses Kapitels stammen aus TED, und TED führt nur oberschwellige Vergaben.
+Welche Portale in Frankreich **unterhalb** der Schwelle bedienen, ist offen — DECP ist
+keine Antwort darauf, weil es Daten nach dem Zuschlag liefert, keine laufenden Verfahren
+und keine Portalangabe.
+
+In Polen ließ sich diese Ebene über die BZP-API direkt messen; sie erwies sich als
+**mindestens so groß wie die oberschwellige** und **anders gewichtet**. Für Frankreich
+fehlt ein solcher Zugang bislang. Ohne ihn ist dieses Kapitel eine halbe Antwort.

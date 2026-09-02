@@ -101,10 +101,25 @@ Engines sind am URL-Pfad erkennbar, nicht am Domainnamen: `/Satellite/` = cosine
 **Ergebnis:** Engine → Länder-Karte. Erst hier zeigt sich, wie viel Arbeit wirklich
 ansteht: jede Engine, die in fünf Ländern läuft, wird einmal geprüft und einmal gebaut.
 
-### Schritt 3 — Unterschwellige Portale *(Recherche, keine Messung)*
+### Schritt 3 — Unterschwellige Portale
 
-⚠ **Der schwächste Schritt, und das muss sichtbar bleiben.** Unterschwellige Vergaben
-stehen definitionsgemäß **nicht** in TED. Sie sind aus unseren Daten nicht ableitbar.
+⚠ **HIER LAG DER PLAN FALSCH, und der Fehler ist strukturell.** Schritt 1 leitet die
+Portallandschaft aus TED ab — und TED enthält **nur oberschwellige** Vergaben. Ein Portal,
+das ausschließlich unterhalb der Schwelle bedient, taucht in Schritt 1 **nie** auf. Was
+dabei herauskommt, ist nicht die Portallandschaft eines Landes, sondern die Portale, die
+in TED erscheinen. Das ist nicht dasselbe, und der Unterschied ist groß:
+
+**Am 2026-09-02 in Polen gemessen** (über die BZP-API, die die unterschwellige Ebene führt):
+an EINEM Tag mindestens 400 unterschwellige Ausschreibungen — gegen ~340 pro Tag
+oberschwellig in TED. **Die unsichtbare Ebene ist mindestens so groß wie die gemessene.**
+
+Und sie ist **anders gewichtet**: `ezamowienia` trägt oberschwellig 19 %, unterschwellig
+aber 35 %; `openNexus` 30 % gegen 31 %; `marketplanet` 21 % gegen 17 %. Wer die
+Reihenfolge des Ausbaus aus Schritt 1 allein ableitet, priorisiert falsch.
+
+**Deshalb gilt ab jetzt:** wo ein Land eine unterschwellige Quelle mit Schnittstelle hat
+(Polen: BZP-API), wird die Landschaft **von dort** gemessen, nicht aus TED. Erst wo es
+keine gibt, bleibt Schreibtischarbeit — und die trägt `status=research`.
 
 Je Land also Schreibtischarbeit: Gibt es eine verpflichtende nationale Plattform auch
 unterhalb der Schwelle? Wer betreibt sie? Gibt es eine offene Schnittstelle? Deutschland

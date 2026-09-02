@@ -117,3 +117,43 @@ bisher gefundene, der auch die unterschwellige Ebene mitbringt.
 ⚠ Vor dem Bauen: die robots.txt von `ezamowienia.gov.pl` enthält buchstäblich nur `as`,
 also keine Regel. Das ist keine Erlaubnis, sondern eine kaputte Datei. Bei einem Abholer
 gehört ein höflicher Takt gesetzt, unabhängig davon, dass niemand ihn verlangt.
+
+---
+
+## 6. Nachtrag 2026-09-02: die unterschwellige Ebene, direkt gemessen
+
+Die Abschnitte oben stützen sich auf TED — und TED kennt nur oberschwellige Vergaben.
+Über die BZP-API lässt sich die andere Ebene **direkt** messen, und sie sieht anders aus.
+
+**Größe:** an einem Tag (01.09.) mindestens **400** unterschwellige Ausschreibungen; 400
+ist die Seitenobergrenze der API, der wahre Wert liegt darüber. Zum Vergleich: TED-Polen
+hat ~340 Bekanntmachungen am Tag über **alle** Notice-Arten. Die Ebene, die aus TED
+unsichtbar ist, ist damit **mindestens so groß wie die sichtbare.**
+
+**Gewichtung, je Bekanntmachung gezählt:**
+
+| Engine | oberschwellig (TED) | unterschwellig (BZP) |
+|---|---:|---:|
+| `ezamowienia` | 19 % | **35 %** |
+| `openNexus` | 30 % | 31 % |
+| `marketplanet` | 21 % | 17 % |
+| `logintrade` | 6 % | 6 % |
+| `eb2b` | 8 % | 4 % |
+| `propublico` | 4 % | 3 % |
+
+**Das verbessert die Lage.** Die eine Engine, die nachweislich offen ist, ist unterschwellig
+die größte — 35 % statt 19 %. Und genau dort liegt die Menge.
+
+## 7. Was ungeprüft blieb
+
+Ehrlich benannt, damit niemand die Kapitel für vollständig hält:
+
+| | Anteil | Stand |
+|---|---:|---|
+| `marketplanet` | 21 / 17 % | **ungeprüft** |
+| `eb2b` | 8 / 4 % | **ungeprüft** |
+| `logintrade` | 6 / 6 % | **ungeprüft** |
+| `propublico` | 4 / 3 % | **ungeprüft** |
+| unbekannt | 11 % | **ungeprüft** |
+
+Geprüft sind 49 % der oberschwelligen und 66 % der unterschwelligen Ebene.
