@@ -81,10 +81,20 @@ der Mittelwert aussagekräftig.**
 (öffentlicher Webservice neben einer Zugangsdaten-API). Beide Male wäre der Weg über die
 Oberfläche schlechter gewesen.
 
-**Ein Anbieter kann ein halbes Nordeuropa vorab entscheiden.** Mercell sperrt seine
-Vergabeplattformen unabhängig vom Hostnamen — `s2c.mercell.com` (NL) und `tendsign.com`
-(SE) tragen beide `Disallow: /`. Damit sind Norwegen, Dänemark, Finnland und das Baltikum
-vorab eingetrübt, ohne dass sie geprüft wären.
+**Ein Anbieter kann mehrere Länder auf einmal entscheiden — aber weniger, als man denkt.**
+Mercell sperrt seine Vergabeplattformen unabhängig vom Hostnamen: `s2c.mercell.com` (NL)
+und `tendsign.com` (SE) tragen beide `Disallow: /`.
+
+⚠ Ich hatte daraus zunächst geschlossen, damit seien „Norwegen, Dänemark, Finnland und das
+Baltikum vorab eingetrübt". **Gemessen stimmt das nur für Norwegen:**
+
+| NO | DK | FI | LT / LV / EE |
+|---:|---:|---:|---:|
+| **63 %** | 11 % | 1 % | **0 %** |
+
+Das Baltikum ist von Mercell gar nicht berührt — und liegt ausgerechnet dort, wo der größte
+Hebel ist. Aus einem echten Befund einen Ländervorbehalt zu machen, den man nicht gemessen
+hat, kostet mehr, als er spart.
 
 **Ein Viertel bis zwei Fünftel aller Unterlagen-Links zeigen auf eine Portalstartseite:**
 FR 39 %, PL 29 %, ES 23 %, DE 23 %. Das ist unabhängig von jeder Schranke einfach kein Weg.
@@ -102,7 +112,7 @@ Gefragt war, was es kostet, EU-weit Vergabeunterlagen einzusammeln.
 26 bis 52 € im Monat).
 
 **Und die Konnektoren sind es auch nicht allein.** Sie helfen nur dort, wo eine Tür offen
-ist — heute bei rund 17 % der EU-Ausschreibungen. Für die übrigen 83 % ändert kein Abrufer
+ist — heute bei rund 19 % der EU-Ausschreibungen. Für die übrigen 81 % ändert kein Abrufer
 etwas: gegen ein `Disallow: /file*` hilft keine Technik, gegen ein CAPTCHA kein Konto,
 gegen eine Adresse ohne Vergabe-Kennung kein Parser.
 
@@ -121,7 +131,7 @@ Betreiber es untersagt haben.
 
 ## 6. Noch nicht geprüft
 
-21 Länder mit zusammen 24,7 % der EU-Ausschreibungen, alle unter 2 % einzeln. Dazu
+18 Länder mit zusammen 20,3 % der EU-Ausschreibungen, alle unter 2 % einzeln. Dazu
 innerhalb der geprüften Länder: FR der 25-%-Schwanz und die unterschwellige Ebene,
 PL 11 % Unbekanntes, IT der 61-%-Schwanz (3.339 Adressen mit 72 % Tiefe — der größte
 offene Posten überhaupt), ES Navarra, BE der Nachholtermin.
