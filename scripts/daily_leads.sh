@@ -1364,6 +1364,19 @@ $PY scripts/pruefe_endgueltige.py --stichprobe 8 \
 $PY scripts/pruefe_nuts_vorgabe.py \
   || echo "  → NUTS-Waechter meldet einen Vorgabewert. Details: python3 scripts/pruefe_nuts_vorgabe.py --alle"
 
+# ── SONDIERUNG GEGEN AUFNAHME ────────────────────────────────────────────────────────────
+#
+# Ein sondiertes Land ist angesehen, nicht angebunden. Der Unterschied verschwindet leise:
+# beim Bau der Vorgangs-Tabellen wurde nebenbei fuer PL und EU geschrieben, damit galten
+# beide als aufgenommene Laender, und die Paritaetssonde meldete 40 bestehende Tabellen als
+# Luecke. Niemand hatte Polen aufgenommen — es sah nur so aus.
+#
+# Bei einer EU-weiten Sondierung droht derselbe Fehler dreissigmal, deshalb steht die Wache
+# HIER und nicht nur im Test: sie vergleicht den Zustand auf der Platte mit der Registry,
+# und zwar an dem Tag, an dem geschrieben wurde. Warnung, kein Abbruch — wie die uebrigen.
+$PY scripts/pruefe_sondierung.py \
+  || echo "  → Sondierungs-Waechter meldet Befunde. Details: python3 scripts/pruefe_sondierung.py"
+
 # ── BIBEL-PRUEFUNG ───────────────────────────────────────────────────────────────────────
 #
 # Die Laender-Bibel (docs/laender/) altert anders als Code: sie faellt nicht um, sie wird

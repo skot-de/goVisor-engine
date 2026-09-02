@@ -80,7 +80,17 @@ ERTRAEGE = ("dateien", "liste", "gesperrt")
 #   prepared  = Code/Brücke fertig, wartet nur auf den Voll-Ingest (z. B. Speicher)
 #   candidate = identifiziert, gleiche technische Basis, noch kein Ingest-Lauf
 #   research  = Quelle existiert, technische Basis noch zu klären (eigener Spike)
-STATUSES = ("live", "prepared", "candidate", "research")
+#   sondiert  = ANGESEHEN UND BEURTEILT, NICHT ANGEBUNDEN. Wir wissen, welche Portale es
+#               gibt und ob eine Schranke davorsteht — mehr nicht. Kein Ingest, keine
+#               Tabelle, kein Konnektor.
+#
+# ⚠ Warum `sondiert` einen eigenen Wert braucht und nicht `research` mitbenutzt: `research`
+# heisst „diese QUELLE ist noch zu klaeren", `sondiert` heisst „dieses LAND ist erkundet".
+# Der Unterschied ist der, an dem Polen gestolpert ist: beim Bau der Vorgangs-Tabellen wurde
+# nebenbei fuer PL und EU geschrieben, damit galten beide als aufgenommene Laender, und die
+# Paritaetssonde meldete 40 bestehende Tabellen als Luecke. Niemand hatte Polen aufgenommen,
+# es sah nur so aus. `scripts/pruefe_sondierung.py` haelt die Trennung maschinell.
+STATUSES = ("live", "prepared", "candidate", "research", "sondiert")
 
 
 @dataclass(frozen=True)
