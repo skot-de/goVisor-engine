@@ -426,6 +426,42 @@ DOC_REGISTRY: list[Source] = [
                    "Zertifikatskette wird unvollstaendig ausgeliefert — Schoenheitsfehler, "
                    "keine Schranke.)",
            url="https://e-propublico.pl"),
+    # ── ES, sondiert am 2026-09-02 · Kapitel: docs/sondierung/es.md ───────────────────
+    Source("sond-es-placsp", "PLACSP (contrataciondelestado.es)", "", "ES", "beides",
+           "sondiert", portals=1, ebene="unterlagen", ertrag="gesperrt",
+           coverage="63 % der ES-Portal-URLs — die staatliche Pflichtplattform",
+           overlap="⛔ robots.txt: `User-agent: * / Disallow: /` fuer die GANZE Seite. ⚠ Und "
+                   "zugleich betreibt sie einen dokumentierten Open-Data-Ausgang (ZIP + "
+                   "ATOM-Syndikation, CODICE-XML, Werkzeug OpenPLACSP unter EUPL) — auf "
+                   "demselben gesperrten Host. Der Umweg ueber datos.gob.es traegt auch "
+                   "nicht, dessen robots sperrt /api/ und die Exporte. Das ist eine Frage "
+                   "AN DEN BETREIBER, kein Fall fuer einen Umweg. Nicht abgerufen.",
+           url="https://contrataciondelestado.es"),
+    Source("sond-es-catalunya", "Katalonien (contractaciopublica.cat)", "", "ES", "beides",
+           "sondiert", portals=1, ebene="unterlagen", ertrag="dateien",
+           coverage="14 % der ES-Portal-URLs",
+           overlap="✅ OFFEN, am 2026-09-02 belegt: /portal-api/descarrega-document/<id>/<hash> "
+                   "liefert anonym ein PDF (572.366 B, 24 Seiten, blankes curl). Die "
+                   "kooperativste robots.txt der Sondierung — `Allow: /` mit Crawl-delay 1, "
+                   "60/min und Wunschzeit 18:00-07:00. ⚠ Belegt an einem PROFIL-Dokument, "
+                   "nicht an den Pliegos einer laufenden Vergabe. ⚠ TED verlinkt hier nur "
+                   "das Kaeuferprofil, nicht die Vergabe — ein Schritt mehr zur Datei.",
+           url="https://contractaciopublica.cat"),
+    Source("sond-es-euskadi", "Baskenland (contratacion.euskadi.eus)", "", "ES", "beides",
+           "sondiert", portals=1, ebene="unterlagen", ertrag="gesperrt",
+           coverage="8,5 %",
+           overlap="⛔ robots.txt sperrt unter vielem anderen ausgerechnet "
+                   "`/anuncio_contratacion/` — die Vergabebekanntmachungen selbst.",
+           url="https://www.contratacion.euskadi.eus"),
+    Source("sond-es-galicia", "Galicien (contratosdegalicia.gal)", "", "ES", "beides",
+           "sondiert", portals=1, ebene="unterlagen", ertrag="gesperrt",
+           coverage="1 %",
+           overlap="⛔ `disallow: /` mit fuenf namentlich erlaubten Seiten.",
+           url="https://www.contratosdegalicia.gal"),
+    Source("sond-es-rest", "Madrid, Andalusien, Navarra u. a.", "", "ES", "beides",
+           "sondiert", portals=7, ebene="unterlagen", ertrag="ungeprueft",
+           coverage="zusammen ~13 % — ungeprueft", overlap="ungeprueft",
+           url="https://contratos-publicos.comunidad.madrid"),
     # ── ANGEBUNDEN ────────────────────────────────────────────────────────────────────
     Source("doc-cosinex-de", "cosinex/DTVP-Unterlagen", "docfetch-cosinex", "DE", "beides",
            "live", portals=40, ebene="unterlagen", ertrag="dateien", modul="govisor.docfetch",
