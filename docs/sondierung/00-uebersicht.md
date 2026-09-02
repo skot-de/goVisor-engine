@@ -1,6 +1,6 @@
 # Portal-Sondierung EU — Gesamtschau
 
-**Stand 2026-09-03.** Neun Länder geprüft, zusammen **75,3 %** aller EU-Ausschreibungen.
+**Stand 2026-09-03.** Zwölf Länder geprüft, zusammen **79,7 %** aller EU-Ausschreibungen.
 Alle Zahlen am TED-Monatspaket 2026-06 gemessen, alle Urteile an mindestens einem echten
 Abruf belegt. Kein Konto, kein CAPTCHA, robots.txt immer zuerst.
 
@@ -19,12 +19,26 @@ Abruf belegt. Kein Konto, kein CAPTCHA, robots.txt immer zuerst.
 | **PL** | 14,6 % | **19 %** ober / **35 %** unter | staatliche Plattform |
 | **ES** | 6,7 % | **5 %** | Katalonien |
 | **IT** | 4,9 % | **4 %** | Soresa (Kampanien) |
+| **LT** | 2,0 % | **99 %** | ein Land, eine Plattform |
 | **BE** | 3,6 % | *offen* | Plattform fällt gerade aus |
+| **LV** | 1,5 % | *offen* | eine Plattform, Abrufweg ungeklärt |
+| **EE** | 0,9 % | *offen* | eine Plattform, ungeprüft |
 | **SE** | 2,0 % | **0 %** | 88 % robots-gesperrt |
 | **FR** | 15,4 % | **0 %** | CAPTCHA + Login + robots |
 
-**Gewichtet über die geprüften Länder: rund 17 % der EU-Ausschreibungen sind heute über
-einen erlaubten, anonymen Weg erreichbar.** Deutschland allein trägt davon zwei Drittel.
+**Gewichtet über die geprüften Länder: rund 19 % der EU-Ausschreibungen sind heute über
+einen erlaubten, anonymen Weg erreichbar.** Deutschland allein trägt davon die Hälfte.
+
+⚠ **Und ein Maß, das wichtiger ist als die Landesgröße: Ausschreibungen je Domain.**
+
+| | LV | EE | LT | NL | SE | DE | PL | FR | IT |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| Domains | **1** | **1** | 2 | ~6 | 7 | — | 511 | 443 | 538 |
+| je Domain | **565** | **325** | **369** | ~150 | 105 | ~50 | 11 | 13 | **3** |
+
+Ein Abrufer für Lettland deckt ein ganzes Land. Ein Abrufer für Italien deckt drei
+Ausschreibungen. **Wer nach Ertrag je Abrufer sortiert statt nach Landesgröße, fängt im
+Baltikum an** — auch wenn die Länder klein sind.
 
 ## 2. Fünf Arten, wie eine Tür zu sein kann
 
@@ -94,11 +108,13 @@ gegen eine Adresse ohne Vergabe-Kennung kein Parser.
 
 **Die Reihenfolge, die sich aus den Zahlen ergibt:**
 
-1. **NL** (73 % offen, offizielle API, sauberste Datenlage) — ein Abrufer, drei Endpunkte
-2. **CZ** (28 %, E-ZAK, leere robots.txt, 53 % Adressentiefe)
-3. **PL** (staatliche Plattform, und sie bringt die unterschwellige Ebene mit)
-4. **ES/IT** je eine Region (5 bzw. 4 %) — kleiner Ertrag, aber sauber belegt
-5. **BE** nachholen, sobald die Plattform wieder antwortet
+1. **LT** (99 % offen, EINE Plattform, servergerenderte Listen — `curl` reicht)
+2. **NL** (73 % offen, offizielle API, sauberste Datenlage) — ein Abrufer, drei Endpunkte
+3. **CZ** (28 %, E-ZAK, leere robots.txt, 53 % Adressentiefe)
+4. **PL** (staatliche Plattform, und sie bringt die unterschwellige Ebene mit)
+5. **LV** nachholen (eine Plattform, keine Schranke, nur der POST-Modal-Weg fehlt)
+6. **ES/IT** je eine Region (5 bzw. 4 %) — kleiner Ertrag, aber sauber belegt
+7. **BE** nachholen, sobald die Plattform wieder antwortet
 
 **FR und SE würde ich nicht anfassen.** Nicht weil es schwer wäre, sondern weil die
 Betreiber es untersagt haben.
