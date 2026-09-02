@@ -2401,6 +2401,10 @@ td.c-band .passung i{display:none}
 /* Widersprüchlich ist etwas anderes als abgeleitet: hier steht ein Wert, dem eine andere
    Angabe derselben Quelle widerspricht. Das verdient die Warnfarbe, nicht die graue. */
 .rq-wid { background: var(--flag-wash); color: var(--flag); }
+/* Korrigiert ist das Gegenteil einer Warnung: hier ist der Zweifel bereits ausgeräumt,
+   der Wert ist belastbarer als der amtliche daneben. Deshalb die ruhige Farbe, nicht die
+   Warnfarbe — sonst läse sich eine erledigte Prüfung wie ein offenes Problem. */
+.rq-kor { background: var(--surface-3); color: var(--ink-400); }
 
 /* ANFORDERUNGSPROFIL (Kennzahl 2, 2026-09-02). Worin verlangt dieser Vorgang mehr als üblich?
 
