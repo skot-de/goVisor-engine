@@ -76,6 +76,40 @@ async function loadDocSignals(): Promise<Record<string, DocSignals>> {
   return docSignals!;
 }
 
+/* Fingerabdruck der Vergabestelle (Kennzahl 3): was verlangt DIESE Stelle fast immer, das
+ * andere selten verlangen? Wer das vor dem Oeffnen der Unterlagen weiss, legt die Nachweise
+ * bereit, statt sie nachzureichen.
+ *
+ * ⚠ Der Schluessel ist der KAEUFERNAME, klein und getrimmt. `lead_export` traegt keine
+ * Entitaets-Kennung, und einen Join gegen Gold gibt es im Frontend nicht. Folge: zwei
+ * Schreibweisen derselben Stelle zaehlen getrennt — der Fingerabdruck wird dadurch
+ * schwaecher, nie falsch. */
+type Stellenprofil = { markt: Record<string, number>;
+                       stellen: Record<string, { typ: string; label: string; k: number; n: number; markt: number }[]> };
+let stellenprofil: Stellenprofil | null = null;
+async function loadStellenprofil(): Promise<Stellenprofil> {
+  if (stellenprofil) return stellenprofil;
+  try { const roh = await loadDataFile("stellenprofil.json"); stellenprofil = roh ? JSON.parse(roh) : { markt: {}, stellen: {} }; }
+  catch { stellenprofil = { markt: {}, stellen: {} }; }
+  return stellenprofil!;
+}
+
+/* Anforderungsprofil (Kennzahl 2): je Bereich die Anzahl, dazu Median und oberstes Zehntel.
+ *
+ * ⚠ Jeder Bereich traegt seine ART mit (`huerde` / `aufwand` / `umfang`). Die Uebergabe nennt
+ * die Kennzahl „Strenge", und fuer die Haelfte der Bereiche stimmt das nicht: `formalitaet`
+ * sind ausfuellbare Formulare, `leistung` ist Umfang. Nur `eignung` und `ausschluss` sind
+ * Huerden. Das Wort in der Anzeige haengt an der Art, nicht an der Zahl. */
+type Profil = { bereiche: Record<string, { n: number; median: number; hoch: number; art: string }>;
+                leads: Record<string, Record<string, number>> };
+let profil: Profil | null = null;
+async function loadProfil(): Promise<Profil> {
+  if (profil) return profil;
+  try { const roh = await loadDataFile("anforderungsprofil.json"); profil = roh ? JSON.parse(roh) : { bereiche: {}, leads: {} }; }
+  catch { profil = { bereiche: {}, leads: {} }; }
+  return profil!;
+}
+
 /* Zeitfenster gegen Aufwand (Kennzahl 1). Eine kleine Datei: je Vorgang die Tage zwischen
  * Bekanntmachung und Frist, dazu Median und Viertel je Land.
  *
@@ -198,6 +232,38 @@ export async function GET(req: Request) {
     const eintrag = fw.leads[id];
     const lage = eintrag ? fw.rahmen[`${eintrag.land}:${eintrag.rahmen}`] : undefined;
     if (eintrag && lage && an) detail.lbFenster = { tage: eintrag.tage, rahmen: eintrag.rahmen, ...lage };
+    /* Anforderungsprofil: nur die Bereiche, in denen dieser Vorgang im obersten Zehntel
+       liegt. ⚠ Hoechstens zwei, nach Abstand zum Median sortiert — sieben Zeilen „mehr als
+       ueblich" waeren keine Aussage mehr, sondern eine Tabelle. */
+    const pf = await loadProfil();
+    const zahlen = pf.leads[id];
+    if (zahlen && an) {
+      const land = String((detail as { land?: string }).land || "DE");
+      const auffaellig = Object.entries(zahlen)
+        .map(([bereich, k]) => ({ bereich, k, lage: pf.bereiche[`${land}:${bereich}`] }))
+        .filter((x) => x.lage && x.k >= x.lage.hoch)
+        /* ⚠ ART VOR VERHAELTNIS. Zuerst sortierte ich nur nach dem Vielfachen des Medians —
+           dann stand „Zuschlagskriterien 21 statt 3" (Umfang, 7-fach) VOR
+           „Ausschlusskriterien 17 statt 5" (Huerde, 3,4-fach). Eine Huerde kann die
+           Bewerbung kosten, ein langer Text nicht. Bei nur zwei Plaetzen entscheidet die
+           Reihenfolge darueber, was der Nutzer ueberhaupt zu sehen bekommt. */
+        .sort((a, b) => {
+          const rang = (art: string) => (art === "huerde" ? 0 : art === "aufwand" ? 1 : 2);
+          const d = rang(a.lage!.art) - rang(b.lage!.art);
+          return d !== 0 ? d : (b.k / b.lage!.median) - (a.k / a.lage!.median);
+        })
+        .slice(0, 2)
+        .map((x) => ({ bereich: x.bereich, k: x.k, median: x.lage!.median, art: x.lage!.art }));
+      if (auffaellig.length) detail.lbProfil = auffaellig;
+    }
+
+    /* ⚠ Nur was die Stelle DEUTLICH oefter verlangt als der Markt. Ein Fingerabdruck, der
+       die Marktrate nur trifft, ist keiner — dann ist es Verfahrensroutine. */
+    const sp = await loadStellenprofil();
+    const kaeufer = String((detail as { buyer?: string }).buyer || "").trim().toLowerCase().slice(0, 120);
+    const land2 = String((detail as { land?: string }).land || "DE");
+    const abdruck = kaeufer ? sp.stellen[`${land2}:${kaeufer}`] : undefined;
+    if (abdruck?.length) detail.lbStelle = abdruck.slice(0, 3);
     // Dateiliste des Portals — was dort LIEGT, ohne dass wir es gelesen haben.
     const li = await ladeDateiliste(id);
     if (li) detail.lbListe = li;
