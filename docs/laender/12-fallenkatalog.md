@@ -113,6 +113,7 @@
 | G5 | **`git add -A` mit zweiter Sitzung** | zweimal fremde Änderungen mitcommittet |
 | G6 | **Falsche Parameter beim Neubau** | `--ab-jahr 2026` statt `2004 --alle-arten` schrieb die Tabelle schmaler |
 | G7 | **`SIGALRM` von Playwright verschluckt** | Abrufer hängt und meldet nichts |
+| G8 | **Quelle zieht zurück, Bestand hält fest** | 28 Waisen im Dublettenwall (AT, 2026-09-02); `verify` sah es, der Tageslauf rief es nie auf |
 
 ## H · Fallen beim Bauen von Kennzahlen
 

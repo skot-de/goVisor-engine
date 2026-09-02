@@ -513,6 +513,7 @@ def schreibe(paare: list[dict], country: str = "DE", vereinigen: bool = False) -
         nach_schluessel.update({(z["master_id"], z["duplicate_id"]): z for z in paare})
         paare = list(nach_schluessel.values())
         print(f"  vereinigt: {vor_n:,} im Bestand + {len(paare) - vor_n:,} neu = {len(paare):,}")
+        paare = _ohne_verschwundene(paare, country)
 
     pq.write_table(pa.Table.from_pylist(paare, schema=pa.schema([
         ("master_id", pa.string()), ("duplicate_id", pa.string()),
@@ -522,6 +523,59 @@ def schreibe(paare: list[dict], country: str = "DE", vereinigen: bool = False) -
         ("tage_abstand", pa.int64()), ("ergaenzt", pa.string())])),
         ziel, compression="zstd")
     return ziel
+
+
+def _ohne_verschwundene(paare: list[dict], country: str) -> list[dict]:
+    """Mitgeschleppte Paare wegwerfen, deren Bekanntmachung es in Silber nicht mehr gibt.
+
+    Das Gegenstueck zum Vereinigen. Der Bestand darf tragen, was der Fensterlauf NICHT
+    ANGESEHEN hat — nicht, was es NICHT MEHR GIBT. Ohne diesen Schnitt ist die Vereinigung
+    eine Einbahnstrasse: eine Kennung, die einmal drinsteht, kommt nie wieder heraus.
+
+    **Warum das kein theoretischer Fall ist.** Nationale Quellen ziehen Bekanntmachungen
+    zurueck; TED tut das nicht, und genau deshalb faellt es nur bei AT/CH auf. atverg baut
+    sein Silber komplett aus dem TAEGLICHEN Dump neu (`atverg.build_silver`), ein
+    zurueckgezogener Satz verschwindet also beim naechsten Lauf aus Silber und aus
+    `quality`. Gemessen 2026-09-02: offenevergaben.at hat zwischen dem 31.08. und dem
+    02.09. **15 Kennungen** zurueckgezogen (bei 150 neuen), 7 davon standen als Dublette
+    in der Firewall — 28 Zeilen, die auf nichts mehr zeigten. `verify.gold_integrity`
+    meldete sie als Waisen `notice_duplicates.duplicate → quality`.
+
+    Der Sonntagslauf heilte das von selbst (volle Historie, `vereinigen=False`, die Datei
+    wird ersetzt) — aber erst nach bis zu sechs roten Tagen. Ein Pruefer, der die halbe
+    Woche rot steht, ohne dass etwas kaputt ist, wird nicht mehr gelesen; das ist der
+    eigentliche Schaden.
+
+    **Der Bestand wird nur GESCHNITTEN, wenn Silber etwas hergibt.** Ist die Id-Menge leer
+    oder die Abfrage nicht lesbar, bleibt alles stehen: ein halb gebautes oder gerade
+    laufendes Silber darf die ueber Jahre gesammelte Firewall nicht ausloeschen.
+    """
+    if not paare:
+        return paare
+    g = glob.glob(f"{ROOT}/data/silver/{country}/notices/**/*.parquet", recursive=True)
+    if not g:
+        return paare
+    ids = sorted({z["master_id"] for z in paare} | {z["duplicate_id"] for z in paare})
+    try:
+        con = _db.connect()
+        con.execute("CREATE TEMP TABLE _kandidat (notice_id VARCHAR)")
+        con.executemany("INSERT INTO _kandidat VALUES (?)", [(i,) for i in ids])
+        lebt = {r[0] for r in con.execute(
+            f"""SELECT k.notice_id FROM _kandidat k
+                WHERE EXISTS (SELECT 1 FROM read_parquet({g!r}) n
+                              WHERE n.notice_id = k.notice_id)""").fetchall()}
+    except Exception as e:
+        print(f"  ⚠ Silber-Abgleich nicht moeglich ({e}) — der Bestand bleibt unbeschnitten.")
+        return paare
+    if not lebt:                       # Silber leer/kaputt: nichts wegwerfen (s. Docstring)
+        print("  ⚠ Silber lieferte keine einzige Kennung — der Bestand bleibt unbeschnitten.")
+        return paare
+    behalten = [z for z in paare
+                if z["master_id"] in lebt and z["duplicate_id"] in lebt]
+    if len(behalten) < len(paare):
+        print(f"  zurueckgezogen: {len(paare) - len(behalten):,} Paare ohne Satz in Silber "
+              f"entfernt = {len(behalten):,}")
+    return behalten
 
 
 def anreichern(country: str = "DE") -> dict:

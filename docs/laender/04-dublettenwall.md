@@ -107,6 +107,32 @@ verschmilzt fremde Häuser.
 - **Quellenrang.** `QUELLEN_RANG` entscheidet, welche Seite Master wird: die reichere
   Quelle, bei Gleichstand der frühere Satz.
 
+## Der Bestand darf tragen, was ungesehen blieb — nicht, was es nicht mehr gibt
+
+Der Nachtlauf paart seit dem 2026-08-17 nur ein **rollendes Fenster** (190 Tage) und
+**vereinigt** sein Ergebnis mit der Datei, statt sie zu ersetzen
+(`schreibe(..., vereinigen=True)`). Ohne die Vereinigung verlöre der erste Nachtlauf alle
+Paare aus den Vorjahren. Sonntags läuft die volle Historie und **ersetzt** die Datei.
+
+⚠ **Die Vereinigung war eine Einbahnstraße.** Eine Kennung, die einmal drinstand, kam nie
+wieder heraus — auch dann nicht, wenn die Quelle die Bekanntmachung **zurückzog**. TED tut
+das nicht, nationale Quellen schon: `atverg` baut sein Silber komplett aus dem **täglichen**
+Dump neu, ein zurückgezogener Satz ist danach weder in Silber noch in `quality`.
+
+Gemessen 2026-09-02: offenevergaben.at nahm zwischen dem 31.08. und dem 02.09. **15 Kennungen**
+aus dem Dump (bei 150 neuen); 7 davon standen als Dublette in der Firewall und hinterließen
+**28 Zeilen, die auf nichts mehr zeigten**. Der Sonntagslauf heilte das von selbst — aber erst
+nach bis zu sechs roten Tagen. Genau das ist der Schaden: ein Prüfer, der die halbe Woche rot
+steht, ohne dass etwas kaputt ist, wird nicht mehr gelesen.
+
+Deshalb schneidet `_ohne_verschwundene` den vereinigten Bestand gegen Silber. **Nur wenn
+Silber etwas hergibt** — ist die Id-Menge leer oder die Abfrage nicht lesbar, bleibt alles
+stehen. Ein Lauf während eines Silber-Neubaus darf die über Jahre gesammelte Firewall nicht
+auslöschen; der Schnitt wäre sonst gefährlicher als der Fehler, den er behebt.
+
+Für ein neues Land heißt das: **fragen, ob die Quelle zurückzieht.** Wer nur nachliefert
+(TED), merkt davon nichts; wer täglich neu baut, braucht den Schnitt.
+
 ## Ein Ausschluss ist sicher
 
 **DTVP** ist der eine Fall, bei dem ein Ausschluss ohne Beleglage zulässig ist.
