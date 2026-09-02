@@ -120,6 +120,13 @@ ENGINES: tuple[tuple[str, re.Pattern], ...] = (
     ("albofornitori", re.compile(r"albofornitori\.it|/alboeproc/", re.I)),
     ("enel",          re.compile(r"enel\.com", re.I)),
     ("lazio-crea",    re.compile(r"centraleacquisti\.regione\.lazio", re.I)),
+    # ── CZ, am 2026-09-03 bestimmt. `ezak.*` und `zakazky.*` sind Instanzen DERSELBEN
+    # Software (E-ZAK), je Organisation eine Subdomain — wie Atexo in FR.
+    ("nen-nipez",     re.compile(r"nen\.nipez\.cz", re.I)),
+    ("tenderarena",   re.compile(r"tenderarena\.cz", re.I)),
+    ("egordion",      re.compile(r"egordion\.cz|nabidkaGORDION", re.I)),
+    ("vhodne-uver",   re.compile(r"vhodne-uverejneni\.cz", re.I)),
+    ("ezak",          re.compile(r"(^|//)(ezak|zakazky)\.[a-z0-9-]+\.cz|/dns_display|/contract_display", re.I)),
     ("ted-esender",   re.compile(r"ted\.europa\.eu", re.I)),
 )
 
@@ -138,6 +145,7 @@ def sammle(land: str, monat: str) -> tuple[collections.Counter, collections.Coun
         raise SystemExit(f"  Paket fehlt: {paket}")
     a3 = {"FR": b"FRA", "ES": b"ESP", "IT": b"ITA", "NL": b"NLD", "PL": b"POL", "NO": b"NOR",
           "LT": b"LTU", "HR": b"HRV", "SI": b"SVN", "SK": b"SVK", "EE": b"EST", "CH": b"CHE",
+          "BE": b"BEL", "IE": b"IRL", "GR": b"GRC", "EL": b"GRC",
           "DE": b"DEU", "AT": b"AUT", "SE": b"SWE", "PT": b"PRT", "CZ": b"CZE",
           "BG": b"BGR", "LV": b"LVA", "BE": b"BEL", "DK": b"DNK", "FI": b"FIN",
           "RO": b"ROU", "HU": b"HUN", "GR": b"GRC", "EL": b"GRC", "IE": b"IRL"}.get(land.upper())

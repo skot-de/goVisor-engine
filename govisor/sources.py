@@ -524,6 +524,32 @@ DOC_REGISTRY: list[Source] = [
            coverage="zusammen 78 % — ⚠ der 61-%-Schwanz ist der interessanteste offene "
                     "Posten: 3.339 Adressen mit 72 % Tiefe auf hunderten Domains",
            overlap="ungeprueft", url="https://www.albofornitori.it"),
+    # ── CZ, sondiert am 2026-09-03 · Kapitel: docs/sondierung/cz.md ───────────────────
+    Source("sond-cz-ezak", "E-ZAK (mandantenfaehig, ezak.*/zakazky.*)", "", "CZ", "beides",
+           "sondiert", portals=40, ebene="unterlagen", ertrag="dateien",
+           coverage="28 % der CZ-Ausschreibungen; 53 % der Adressen fuehren auf EINE Vergabe "
+                    "— der beste Wert des Landes",
+           overlap="✅ OFFEN, am 2026-09-03 belegt. Drei Instanzen geprueft (cuni.cz, "
+                   "fnbrno.cz, vsb.cz): alle mit LEERER robots.txt (200, 0 Bytes). "
+                   "contract_display_<id>.html zeigt die Vergabe, document_<id>/<hash>-<name> "
+                   "liefert die Datei — 30.879 B Word-Dokument, anonym, blankes curl. "
+                   "⚠ Wie Atexo in FR: viele Subdomains, EINE Software.",
+           url="https://www.ezak.cz"),
+    Source("sond-cz-nen", "NEN / nipez (staatliche Pflichtplattform)", "", "CZ", "beides",
+           "sondiert", portals=1, ebene="unterlagen", ertrag="gesperrt",
+           coverage="28 %, aber nur 13 % der Adressen fuehren auf eine Vergabe",
+           overlap="⛔ Blaettern erlaubt, Herunterladen verboten. /verejne-zakazky/ ist frei "
+                   "und zeigt die Dokumente offen an, aber alle liegen unter /file?id=… und "
+                   "robots sagt `Disallow: /file*`, `/*Soubor.aspx*` (soubor = Datei), "
+                   "`/*LWOpenFileAdapter.aspx*`, Crawl-delay 10. VIERTER Fall dieser Art "
+                   "nach Open Nexus, LoginTrade und START Toscana. Nicht abgerufen.",
+           url="https://nen.nipez.cz"),
+    Source("sond-cz-kommerziell", "Tender Arena, eGordion, vhodne-uverejneni", "", "CZ",
+           "beides", "sondiert", portals=3, ebene="unterlagen", ertrag="ungeprueft",
+           coverage="zusammen 38 %",
+           overlap="🎯 Alle drei verlinken AUSSCHLIESSLICH Kaeuferprofile, nie eine Vergabe "
+                   "(0 % Tiefe bei 950 Adressen). Ungeprueft, weil der Weg vorher endet.",
+           url="https://www.tenderarena.cz"),
     # ── ANGEBUNDEN ────────────────────────────────────────────────────────────────────
     Source("doc-cosinex-de", "cosinex/DTVP-Unterlagen", "docfetch-cosinex", "DE", "beides",
            "live", portals=40, ebene="unterlagen", ertrag="dateien", modul="govisor.docfetch",
