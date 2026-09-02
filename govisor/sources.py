@@ -570,6 +570,26 @@ DOC_REGISTRY: list[Source] = [
                    "die Laenderwahl waere ein gewoehnlicher Klick, die Cookie-Zustimmung "
                    "nicht. Ungeprueft.",
            url="https://cloud.3p.eu"),
+    # ── NL, sondiert am 2026-09-03 · Kapitel: docs/sondierung/nl.md ───────────────────
+    Source("sond-nl-tenderned", "TenderNed (nationale Pflichtplattform)", "", "NL", "beides",
+           "sondiert", portals=1, ebene="unterlagen", ertrag="dateien",
+           coverage="73 % der NL-Ausschreibungen; die API meldet 145.155 Publikationen",
+           overlap="✅ OFFEN UEBER DIE OFFIZIELLE SCHNITTSTELLE — der beste bisher gemessene "
+                   "Wert. Zwei APIs: eine XML-API MIT Zugangsdaten (nicht genutzt) und ein "
+                   "OEFFENTLICHER Publikations-Webservice ohne Anmeldung. "
+                   "/papi/tenderned-rs-tns/v2/publicaties/<id>/documenten liefert Name, Typ, "
+                   "Groesse, Kategorie und virusIndicatie; .../<docId>/content die Datei: "
+                   "51.586 B Word-Dokument, exakt die gemeldete Groesse, blankes curl. "
+                   "robots sperrt nur CMS-Verwaltungspfade. ⚠ `publicatieCategorie` "
+                   "kennzeichnet die Nota van Inlichtingen — die Bieterfragen als FELD, was "
+                   "wir in DE aus Dateinamen erraten muessen.",
+           url="https://www.tenderned.nl"),
+    Source("sond-nl-mercell", "Mercell (s2c.mercell.com)", "", "NL", "beides",
+           "sondiert", portals=1, ebene="unterlagen", ertrag="ungeprueft",
+           coverage="22 % der NL-Ausschreibungen",
+           overlap="⚠ VORZIEHEN: Mercell ist ein nordisch-europaeischer Anbieter, der in "
+                   "mehreren Laendern auftaucht. Eine Pruefung zahlt auf mehrere zugleich ein.",
+           url="https://www.mercell.com"),
     # ── ANGEBUNDEN ────────────────────────────────────────────────────────────────────
     Source("doc-cosinex-de", "cosinex/DTVP-Unterlagen", "docfetch-cosinex", "DE", "beides",
            "live", portals=40, ebene="unterlagen", ertrag="dateien", modul="govisor.docfetch",
