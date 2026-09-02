@@ -20,7 +20,8 @@ type Verlauf = { datum: string | null; art: string; label: string; n: number;
 type Dok = { notice: string; quelle: string | null; url: string | null; gelesen: boolean;
              n: number; dateien: Array<{ name: string; typ: string }>; gekuerzt: number };
 type Glied = { vorgang: string; position: number; jahr: number | null;
-               konfidenz: number | null; titel: string | null; duenn: boolean };
+               konfidenz: number | null; titel: string | null; duenn: boolean;
+               wurzel: boolean; anschluss_direkt: boolean; vorgaenger_jahr: number | null };
 type Akte = {
   id: string; land: string; titel: string | null; cpv: string | null; schluessel: string;
   vollstaendig: boolean; von: string | null; bis: string | null;
@@ -50,9 +51,13 @@ const monat = (d: string | null): string => {
 // Wie der Schluessel zustande kam. Das ist keine Nebensache: eine ueber Rueckverweise
 // zusammengesetzte Akte darf nicht aussehen wie eine amtlich verknuepfte.
 const HERKUNFT: Record<string, { text: string; ton: string }> = {
-  folder: { text: "amtlich verknüpft", ton: "ok" },
-  rueckref: { text: "über Rückverweis verknüpft", ton: "" },
-  allein: { text: "einzeln, keine Verknüpfung gefunden", ton: "warn" },
+  folder: { text: "Bekanntmachungen amtlich verknüpft", ton: "ok" },
+  rueckref: { text: "Bekanntmachungen über Rückverweis verknüpft", ton: "" },
+  // ⚠ HIESS BIS ZUM 2026-09-02 „einzeln, keine Verknuepfung gefunden" — und stand damit bei
+  // 6.048 Akten DIREKT UEBER einer Vorgeschichte mit mehreren Gliedern. Der Vermerk meint
+  // die Bekanntmachungen DIESES Vorgangs, die Kette meint die Nachfolge zwischen Vorgaengen;
+  // zwei verschiedene Dinge, die im alten Wortlaut wie ein Widerspruch aussahen.
+  allein: { text: "nur eine Bekanntmachung", ton: "" },
 };
 
 /* Wie belastbar die Vorgeschichte ist. Die Bänder kommen aus `export_vorgaenge.KETTE_GUETE`
@@ -267,8 +272,19 @@ export function Vorgangsakte() {
             {a.kette.glieder.map((g) => (
               <li key={g.vorgang} className={g.vorgang === a.id ? "hier" : ""}>
                 <span className="vg-jahr">{g.jahr ?? "?"}</span>
+                {/* ⚠ DIE LISTE IST NACH JAHR SORTIERT, DIE NACHFOLGE IST EIN BAUM. 58 % der
+                    angezeigten Glieder folgen NICHT auf die Zeile darueber, weil Nachfolger
+                    verzweigen: mehrere Vergaben koennen denselben Vorgaenger haben. Ein
+                    Vermerk, der stillschweigend die Zeile darueber meint, sagt deshalb in
+                    der Mehrzahl der Faelle etwas Falsches. Darum steht hier, worauf das
+                    Glied tatsaechlich folgt. */}
+                {g.wurzel
+                  ? <span className="vg-tag">{t("Anfang der Kette")}</span>
+                  : !g.anschluss_direkt && g.vorgaenger_jahr
+                    ? <span className="vg-tag">{t("folgt auf {jahr}", { jahr: g.vorgaenger_jahr })}</span>
+                    : null}
                 {g.duenn
-                  ? <span className="vg-tag warn" title={t("Der Anschluss an den Vorgänger ist hier nur knapp belegt.")}>{t("hier dünn")}</span>
+                  ? <span className="vg-tag warn" title={t("Der Anschluss an den Vorgänger ist nur knapp belegt.")}>{t("Anschluss knapp")}</span>
                   : null}
                 {g.vorgang === a.id
                   ? <strong>{g.titel || t("ohne Titel")}</strong>

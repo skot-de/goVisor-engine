@@ -378,3 +378,43 @@ def test_schwache_kette_ohne_sichtbares_glied_sagt_es():
     assert "duennes_glied_sichtbar" in quelle
     tsx = (WURZEL / "web" / "components" / "explorer" / "Vorgangsakte.tsx").read_text(encoding="utf-8")
     assert "duennes_glied_sichtbar" in tsx
+
+
+# ── Der Vorgaenger ist nicht die Zeile darueber ─────────────────────────────────────
+
+def test_kette_traegt_ihren_vorgaenger():
+    """⚠ `vorgang_kette` speicherte bis zum 2026-09-02 NICHT, wer der Vorgänger ist. Die
+    Anzeige musste ihn also raten, und sie riet die Zeile darüber. Gemessen: 70.521 der
+    120.737 angezeigten Glieder (58 %) folgen NICHT auf die Zeile darüber, weil Nachfolger
+    verzweigen und mehrere Vergaben denselben Vorgänger haben können."""
+    bau = (WURZEL / "scripts" / "build_vorgaenge.py").read_text(encoding="utf-8")
+    assert "vorgaenger VARCHAR" in bau
+    quelle = SKRIPT.read_text(encoding="utf-8")
+    assert "anschluss_direkt" in quelle and "vorgaenger_jahr" in quelle
+
+
+def test_anzeige_behauptet_keine_nachbarschaft():
+    """Ein Vermerk, der stillschweigend die Zeile darüber meint, sagt in der Mehrzahl der
+    Fälle etwas Falsches. Er muss den Vorgänger benennen oder schweigen."""
+    tsx = _ohne_kommentare(
+        (WURZEL / "web" / "components" / "explorer" / "Vorgangsakte.tsx").read_text(encoding="utf-8"))
+    assert "g.anschluss_direkt" in tsx and "g.wurzel" in tsx
+    assert "hier dünn" not in tsx, "alter Wortlaut behauptet Nachbarschaft"
+
+
+def test_position_ist_ein_zeitrang_kein_kettenrang():
+    """Die Sortierung nach Jahr ist Absicht (eine Ansicht will einen Zeitstrahl), aber sie
+    darf nicht als Kettenreihenfolge gelesen werden. In 3.189 Fällen sitzt die Wurzel
+    mitten in der Kette, weil die erschlossene Nachfolge rückwärts in der Zeit zeigt."""
+    bau = (WURZEL / "scripts" / "build_vorgaenge.py").read_text(encoding="utf-8")
+    assert "position` IST EIN ZEITRANG" in bau
+
+
+def test_herkunft_widerspricht_der_kette_nicht():
+    """⚠ „einzeln, keine Verknüpfung gefunden" stand bei 6.048 Akten direkt über einer
+    Vorgeschichte mit mehreren Gliedern. Der Vermerk meint die Bekanntmachungen DIESES
+    Vorgangs, die Kette die Nachfolge zwischen Vorgängen."""
+    tsx = (WURZEL / "web" / "components" / "explorer" / "Vorgangsakte.tsx").read_text(encoding="utf-8")
+    block = tsx.split("const HERKUNFT:")[1].split("};")[0]
+    assert "keine Verknüpfung gefunden" not in block
+    assert "nur eine Bekanntmachung" in block

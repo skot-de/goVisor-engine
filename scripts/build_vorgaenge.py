@@ -75,7 +75,7 @@ SPALTEN_N = ("land VARCHAR, vorgang_id VARCHAR, notice_id VARCHAR, notice_kind V
 SPALTEN_K = ("land VARCHAR, kette_id VARCHAR, vorgang_id VARCHAR, position BIGINT, "
              "n_glieder BIGINT, jahr BIGINT, konfidenz_zum_vorgaenger DOUBLE, "
              "min_konfidenz DOUBLE, methode VARCHAR, n_titel BIGINT, "
-             "glieder_pro_jahr DOUBLE, dauerangebot BOOLEAN")
+             "glieder_pro_jahr DOUBLE, dauerangebot BOOLEAN, vorgaenger VARCHAR")
 
 
 def _laender() -> list[str]:
@@ -240,11 +240,18 @@ def baue_ketten(con, land: str) -> tuple[int, int]:
         takt = len(geordnet) / spanne
         titel = {" ".join(kopf.get(v, (0, ""))[1].lower().split())[:60] for v in geordnet}
         titel.discard("")
+        # ⚠ `position` IST EIN ZEITRANG, KEIN KETTENRANG. Sortiert wird nach Jahr, weil eine
+        # Ansicht einen Zeitstrahl will. Der Vorgaenger einer Vergabe ist deshalb NICHT
+        # zwangslaeufig die Zeile darueber: in 3.189 Faellen sitzt die Wurzel (die ohne
+        # Vorgaenger) mitten in der Kette, weil die erschlossene Nachfolge rueckwaerts in
+        # der Zeit zeigt. Ohne die Spalte `vorgaenger` kann eine Anzeige die Konfidenz
+        # keinem sichtbaren Uebergang zuordnen und behauptet stillschweigend den falschen.
         for i, v in enumerate(geordnet, 1):
             e = bester.get(v)
             zeilen.append((land, kette_id, v, i, len(geordnet), kopf.get(v, (0, ""))[0],
                            e[2] if e else None, mini, e[3] if e else "",
-                           len(titel), round(takt, 2), takt > DAUERANGEBOT_TAKT))
+                           len(titel), round(takt, 2), takt > DAUERANGEBOT_TAKT,
+                           e[1] if e else None))
     _schreibe(con, gold / "vorgang_kette.parquet", zeilen, SPALTEN_K)
     return len({z[1] for z in zeilen}), len(zeilen)
 

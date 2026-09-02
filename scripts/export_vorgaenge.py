@@ -287,14 +287,15 @@ def _akten(con: duckdb.DuckDBPyConnection, land: str,
     kette_glieder = defaultdict(list)
     for r in con.execute(f"""
         select k.kette_id, k.vorgang_id, k.position, k.n_glieder, k.jahr,
-               k.konfidenz_zum_vorgaenger, k.min_konfidenz, k.methode, k.dauerangebot
+               k.konfidenz_zum_vorgaenger, k.min_konfidenz, k.methode, k.dauerangebot,
+               k.vorgaenger
         from read_parquet('{g}/vorgang_kette.parquet') k
         join _m m on m.vorgang_id = k.vorgang_id
     """).fetchall():
         ketten[r[1]] = {"kette": r[0], "position": r[2], "n_glieder": r[3],
                         "min_konfidenz": r[6], "methode": r[7], "dauerangebot": bool(r[8])}
         kette_glieder[r[0]].append({"vorgang": r[1], "position": r[2], "jahr": r[4],
-                                    "konfidenz": r[5]})
+                                    "konfidenz": r[5], "vorgaenger": r[9]})
 
     titel = {k["vorgang_id"]: k.get("titel") for k in kopf}
     akten = {}
@@ -322,11 +323,21 @@ def _akten(con: duckdb.DuckDBPyConnection, land: str,
             fenster = _fenster(alle, kk["position"])
             for gl in fenster:
                 gl["titel"] = titel.get(gl["vorgang"])
-            for gl in fenster:
+            # ⚠ DIE ZEILE DARUEBER IST NICHT ZWANGSLAEUFIG DER VORGAENGER. Sortiert wird
+            # nach Jahr; in 3.189 Faellen zeigt die erschlossene Nachfolge rueckwaerts in
+            # der Zeit. Ohne diese Pruefung setzt die Anzeige ihr „hier duenn" an einen
+            # Uebergang, den es so nicht gibt — sie sagt dann etwas Falsches, nicht nur
+            # etwas Ungenaues.
+            jahr_von = {g["vorgang"]: g["jahr"] for g in alle}
+            for i, gl in enumerate(fenster):
                 # Am einzelnen Glied, nicht nur oben: die Kette kann an genau EINER Stelle
                 # duenn sein, und dann will man wissen, an welcher.
                 gl["duenn"] = (gl["konfidenz"] is not None
                                and gl["konfidenz"] < GLIED_DUENN)
+                gl["wurzel"] = gl["vorgaenger"] is None
+                davor = fenster[i - 1]["vorgang"] if i > 0 else None
+                gl["anschluss_direkt"] = gl["vorgaenger"] is not None and gl["vorgaenger"] == davor
+                gl["vorgaenger_jahr"] = jahr_von.get(gl["vorgaenger"])
             kk["glieder"] = fenster
             kk["gekuerzt"] = len(alle) - len(fenster)
             kk["guete"] = _guete(kk["min_konfidenz"])
