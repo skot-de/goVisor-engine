@@ -4449,48 +4449,63 @@ def test_kuratierte_regionskorrektur_ist_vollstaendig_und_lebendig():
     """Eine kuratierte Datei verrottet lautlos: der Käufer benennt sich um, die Zeile
     greift nicht mehr, und niemand merkt es — der Lead steht wieder im falschen
     Bundesland. Geprüft wird deshalb die Form JEDER Zeile und, wo Gold vorliegt, ob sie
-    noch einen Lead trifft."""
+    noch einen Lead trifft.
+
+    ⚠ Über ALLE Länder, nicht nur DE. Die Regionsebene sitzt je Land woanders (DE 3, AT 4,
+    CH 5 Stellen) und die PLZ ist unterschiedlich lang (DE 5, AT/CH 4) — eine auf DE
+    getippte Prüfung würde die AT- und CH-Dateien entweder durchwinken oder grundlos
+    ablehnen."""
     import csv as _csv
     import importlib.util
     wurzel = pathlib.Path(__file__).resolve().parent.parent
-    datei = wurzel / "curated" / "DE_region_korrektur.csv"
-    assert datei.exists(), "curated/DE_region_korrektur.csv fehlt"
-    REGIONEN = {f"DE{x}" for x in "123456789ABCDEFG"}
-    zeilen = list(_csv.DictReader(datei.open(encoding="utf-8")))
-    assert zeilen, "leere Korrekturtabelle"
-    for z in zeilen:
-        assert z["region_alt"] in REGIONEN and z["region_neu"] in REGIONEN, z
-        assert z["plz"].isdigit() and len(z["plz"]) == 5, z
-        # Ohne Beleg ist es keine Kuratierung, sondern eine Meinung.
-        assert len(z["beleg"] or "") > 20, f"Zeile ohne Beleg: {z['buyer_name']}"
-        assert (z["stand"] or "").count("-") == 2, z
-
     spec = importlib.util.spec_from_file_location(
         "region_ableiten", wurzel / "scripts" / "region_ableiten.py")
     ra = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(ra)
-    assert len(ra.region_korrekturen("DE")) == len(zeilen), (
-        "der Leser verliert Zeilen — Spaltennamen geaendert?")
-    if not _has("lead_export"):
-        pytest.skip("lead_export nicht gebaut")
-    import duckdb as _d
-    con = _d.connect()
-    plz = dict(con.execute(f"""SELECT notice_id, any_value(postal_code)
-        FROM read_parquet('{pathlib.Path(G).parent.parent / "silver/DE/notice_parties"}/*/*.parquet')
-        WHERE role = 'buyer' AND postal_code IS NOT NULL GROUP BY 1""").fetchall())
-    leads = con.execute(f"""SELECT lead_id, buyer_name, buyer_nuts1
-        FROM read_parquet('{G}/lead_export.parquet')
-        WHERE buyer_nuts1 IS NOT NULL AND buyer_nuts1 <> ''""").fetchall()
-    getroffen = set()
-    for lid, name, n1 in leads:
-        schl = ((name or "").strip(), str(plz.get(lid, "")).strip())
-        u = ra.region_korrekturen("DE").get(schl)
-        if u and u[0] == n1:
-            getroffen.add(schl)
-    tot = {(z["buyer_name"], z["plz"]) for z in zeilen} - getroffen
-    assert not tot, (
-        f"{len(tot)} kuratierte Zeile(n) treffen keinen Lead mehr — Umbenennung, "
-        f"Umzug oder ein Fix an der Quelle: {sorted(tot)[:3]}")
+
+    gesehen = 0
+    for land in ra.LAENDER:
+        datei = wurzel / "curated" / f"{land}_region_korrektur.csv"
+        if not datei.exists():
+            continue
+        gesehen += 1
+        gueltig = set(ra._verwaltungseinheiten(land).values())
+        assert gueltig, f"{land}: keine Regionsliste — dim_nuts fehlt?"
+        zeilen = list(_csv.DictReader(datei.open(encoding="utf-8")))
+        assert zeilen, f"{land}: leere Korrekturtabelle"
+        for z in zeilen:
+            assert z["region_alt"] in gueltig and z["region_neu"] in gueltig, (land, z)
+            assert z["plz"].isdigit(), (land, z)
+            # Ohne Beleg ist es keine Kuratierung, sondern eine Meinung.
+            assert len(z["beleg"] or "") > 20, f"{land}: Zeile ohne Beleg: {z['buyer_name']}"
+            assert (z["stand"] or "").count("-") == 2, (land, z)
+        assert len(ra.region_korrekturen(land)) == len(zeilen), (
+            f"{land}: der Leser verliert Zeilen — doppelter Schluessel oder "
+            f"Spaltennamen geaendert?")
+
+        gold = wurzel / "data" / "gold" / land / "lead_export.parquet"
+        silber = wurzel / "data" / "silver" / land / "notice_parties"
+        if not (gold.exists() and silber.exists()):
+            continue
+        import duckdb as _d
+        con = _d.connect()
+        plz = dict(con.execute(f"""SELECT notice_id, any_value(postal_code)
+            FROM read_parquet('{silber.as_posix()}/*/*.parquet')
+            WHERE role = 'buyer' AND postal_code IS NOT NULL GROUP BY 1""").fetchall())
+        urteile = ra.region_korrekturen(land)
+        getroffen = set()
+        for lid, name, n1 in con.execute(f"""SELECT lead_id, buyer_name, buyer_nuts1
+                FROM read_parquet('{gold.as_posix()}')
+                WHERE buyer_nuts1 IS NOT NULL AND buyer_nuts1 <> ''""").fetchall():
+            schl = ((name or "").strip(), str(plz.get(lid, "")).strip(), n1)
+            if schl in urteile:
+                getroffen.add(schl)
+        tot = set(urteile) - getroffen
+        assert not tot, (
+            f"{land}: {len(tot)} kuratierte Zeile(n) treffen keinen Lead mehr — "
+            f"Umbenennung, Umzug oder ein Fix an der Quelle: {sorted(tot)[:3]}")
+    if not gesehen:
+        pytest.skip("keine kuratierte Regionstabelle vorhanden")
 
 
 def test_kuratierte_korrektur_schlaegt_den_amtlichen_wert():

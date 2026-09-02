@@ -1,0 +1,9 @@
+buyer_name,plz,region_alt,region_neu,beleg,stand
+Flughafen Wien AG,1300,AT13,AT13,"kein Fehler: Postanschrift 1300 Wien-Flughafen, eigene Angabe 241x Wien gegen 67x NOe — der Flughafen liegt in Schwechat (AT12), die Gesellschaft nennt sich Wien",2026-09-02
+OMV Austria Exploration & Production GmbH,2230,AT13,AT12,"Sitz Gaenserndorf 2230; derselbe Kaeufer fuehrt 8 Leads unter AT12, und die AT13-Titel nennen Schoenkirchen und Gaenserndorf — beide Niederoesterreich",2026-09-02
+Magistrat der Stadt Wien - Magistratsabteilung 31,1060,AT12,AT12,"kein Fehler: Wiener Wasser beschafft fuer die Hochquellenleitungen in NOe — ein Los heisst „Platzgestaltung Kaiserbrunn"", und Kaiserbrunn liegt im Hoellental",2026-09-02
+Autobahnen- und Schnellstraßen-Finanzierungs-Aktiengesellschaft,1030,AT22,AT22,"kein Fehler: der Titel nennt den Leistungsort — „A99 NLR E-MOB Netzanschluesse Steiermark""",2026-09-02
+AGES - Österreichische Agentur für Gesundheit und Ernährungssicherheit GmbH,1220,AT33,AT33,kein Fehler: Massenspektrometer fuer das AGES-Institut Innsbruck; die Wiener Zentrale beschafft fuer den Standort,2026-09-02
+Silicon Austria Labs GmbH,8010,AT21,AT21,kein Fehler: Wartung eines Elektronenmikroskops am SAL-Standort Villach (AT21); 13 weitere SAL-Leads stehen korrekt auf AT22 (Graz),2026-09-02
+AGES - Österreichische Agentur für Gesundheit und Ernährungssicherheit GmbH,1220,AT22,AT22,"kein Fehler: Sequencing-System fuer das AGES-Institut Graz; dieselbe Zentrale, anderer Standort",2026-09-02
+via donau - Österreichische Wasserstraßen-Gesellschaft mbH (Zentrale),1220,AT12,AT12,"kein Fehler: „Donau-Streckenpflege Los OST"" — die Donaustrecke oestlich von Wien liegt in Niederoesterreich",2026-09-02

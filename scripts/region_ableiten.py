@@ -287,8 +287,14 @@ def ort_im_namen(name: str, orte: dict[str, str], sortiert: list[str]) -> str | 
     return None
 
 
-def region_korrekturen(land: str) -> dict[tuple[str, str], tuple[str, str]]:
-    """Von Hand geprueft: (Kaeufername, PLZ) → (Regionskennung ALT, NEU).
+def region_korrekturen(land: str) -> dict[tuple[str, str, str], str]:
+    """Von Hand geprueft: (Kaeufername, PLZ, Kennung ALT) → Kennung NEU.
+
+    ⚠ Die ALTE Kennung gehoert in den Schluessel, nicht in den Wert. Dieselbe Stelle
+    unter derselben Anschrift kann mehrere falsche Angaben tragen: die AGES in Wien 1220
+    meldete einmal Tirol und einmal Steiermark. Mit (Name, PLZ) als Schluessel haette die
+    zweite Zeile die erste ueberschrieben — lautlos, und eine der beiden Korrekturen
+    waere verschwunden.
 
     Die Gegenprobe unten kann sagen, DASS Anschrift und Regionsangabe auseinanderlaufen.
     Welche Seite recht hat, kann sie nicht sagen — dafuer braucht es einen Blick auf den
@@ -313,13 +319,13 @@ def region_korrekturen(land: str) -> dict[tuple[str, str], tuple[str, str]]:
     quelle = ROOT / "curated" / f"{land}_region_korrektur.csv"
     if not quelle.exists():
         return {}
-    aus: dict[tuple[str, str], tuple[str, str]] = {}
+    aus: dict[tuple[str, str, str], str] = {}
     with quelle.open(encoding="utf-8") as f:
         for z in csv.DictReader(f):
             name, plz = (z.get("buyer_name") or "").strip(), (z.get("plz") or "").strip()
             alt, neu = (z.get("region_alt") or "").strip(), (z.get("region_neu") or "").strip()
             if name and plz and alt and neu:
-                aus[(name, plz)] = (alt, neu)
+                aus[(name, plz, alt)] = neu
     return aus
 
 
@@ -396,7 +402,7 @@ def fuer_land(land: str, probe: bool) -> int:
     # `govisor/schema._iter_named_ausserhalb`), und nichts an der Kette hat widersprochen.
     vorhanden = con.execute(f"""
         SELECT lead_id, buyer_name, buyer_nuts1,
-               CASE WHEN market_region_known THEN market_nuts3 END
+               CASE WHEN market_region_known THEN market_nuts3 END, title
         FROM '{le}' WHERE buyer_nuts1 IS NOT NULL AND buyer_nuts1 <> ''""").fetchall()
 
     orte = ortsverzeichnis(land)
@@ -459,7 +465,7 @@ def fuer_land(land: str, probe: bool) -> int:
     # wegfallen, sind genau die Klasse, die niemand als Fehler lesen soll.
     anschrift: dict[str, str] = {}
     standorte: dict[str, set[str]] = {}
-    for lead_id, name, nuts1, _markt in vorhanden:
+    for lead_id, name, nuts1, _markt, _titel in vorhanden:
         reg = plz_reg.get(str(plz_je_lead.get(lead_id, "")).strip())
         if reg:
             anschrift[lead_id] = reg
@@ -467,9 +473,9 @@ def fuer_land(land: str, probe: bool) -> int:
     stellen = REGION_STELLEN[land]
     kuratiert = region_korrekturen(land)
     widersprueche, korrigiert, pruefbar_v, fremdformat = [], [], 0, 0
-    mehrere_standorte = leistungsort_stuetzt = bestaetigt = 0
+    mehrere_standorte = leistungsort_stuetzt = titel_stuetzt = bestaetigt = 0
     genutzt: set[tuple[str, str]] = set()
-    for lead_id, name, nuts1, markt in vorhanden:
+    for lead_id, name, nuts1, markt, titel in vorhanden:
         if nuts1 not in gueltig:
             fremdformat += 1
             continue
@@ -478,14 +484,15 @@ def fuer_land(land: str, probe: bool) -> int:
         # kein Verdacht. Sie muss auch dort greifen, wo ein Tor den Verdacht gar nicht
         # erst aufkommen laesst — sonst blieben von den 20 falsch verorteten AOK-PLUS-
         # Leads genau die stehen, die der Leistungsort deckt.
-        urteil = kuratiert.get(((name or "").strip(),
-                                str(plz_je_lead.get(lead_id, "")).strip()))
-        if urteil and urteil[0] == nuts1:
-            genutzt.add(((name or "").strip(), str(plz_je_lead.get(lead_id, "")).strip()))
-            if urteil[1] == nuts1:
+        schluessel = ((name or "").strip(),
+                      str(plz_je_lead.get(lead_id, "")).strip(), nuts1)
+        neu = kuratiert.get(schluessel)
+        if neu:
+            genutzt.add(schluessel)
+            if neu == nuts1:
                 bestaetigt += 1                      # geprueft und richtig — nichts melden
             else:
-                korrigiert.append({"lead_id": lead_id, "buyer_nuts1_abgeleitet": urteil[1],
+                korrigiert.append({"lead_id": lead_id, "buyer_nuts1_abgeleitet": neu,
                                    "quelle": "korrektur_kuratiert", "widerspruch": False,
                                    "widerspruch_ort_nuts1": nuts1})
             continue
@@ -511,6 +518,21 @@ def fuer_land(land: str, probe: bool) -> int:
         # macht, hat fuer neun von zehn oesterreichischen Faellen keinen.
         if markt and markt[:stellen] == nuts1:
             leistungsort_stuetzt += 1
+            continue
+        # ── Veto des Titels ───────────────────────────────────────────────────────
+        # Dasselbe Argument, nur mit dem Zeugen, den es fast immer gibt: nennt der
+        # AUFTRAGSTITEL einen Ort, der in der angegebenen Region liegt, dann steht dort
+        # der Leistungsort und keine Falschangabe.
+        #     „E90094/29/2-Dion7/2025 6020 Innsbruck …"          → Tirol, wie angegeben
+        #     „Projektsteuerung, KZ-Gedenkstaette Gusen, 4222 …" → Oberoesterreich
+        #     „Programm Knoten Bern, AS25 Wendegleis Muensingen" → Bern
+        # In Oesterreich ist das die HAUPTKLASSE: von 85 Funden waren nach Durchsicht
+        # 59 keine Fehler, sondern Leistungsorte (gemessen 2026-09-02). In Deutschland
+        # greift dieses Veto bei 0 von 80 — es schwaecht die deutschen Funde also nicht.
+        # ⚠ Es darf nur SCHWEIGEN lassen, nie etwas behaupten: ein Ortsname im Titel ist
+        # ein Hinweis, kein Beleg. Als Widerspruchsgrund taugt er nicht.
+        if titel and ort_im_namen(titel, orte, []) == nuts1:
+            titel_stuetzt += 1
             continue
         if reg != nuts1:
             widersprueche.append({"lead_id": lead_id, "buyer_nuts1_abgeleitet": None,
@@ -543,16 +565,17 @@ def fuer_land(land: str, probe: bool) -> int:
         print(f"  Gegenprobe: von {pruefbar_v:,} Leads MIT Region widersprechen "
               f"{len(widersprueche):,} ({len(widersprueche)/pruefbar_v:.2%}) der Kaeufer-PLZ "
               f"— sie heissen im Export nicht mehr `amtlich`, sondern `widerspruechlich`.")
-    if mehrere_standorte or leistungsort_stuetzt:
+    if mehrere_standorte or leistungsort_stuetzt or titel_stuetzt:
         print(f"  uebergangen: {mehrere_standorte:,} Leads, deren Kaeufer mehrere Anschriften "
-              f"fuehrt (Niederlassungen) · {leistungsort_stuetzt:,} Leads, deren Leistungsort "
-              f"die Region stuetzt — beides ist kein Fehler.")
+              f"fuehrt (Niederlassungen) · {leistungsort_stuetzt:,} mit stuetzendem "
+              f"Leistungsort · {titel_stuetzt:,} mit stuetzendem Ortsnamen im Titel — "
+              f"nichts davon ist ein Fehler.")
     if kuratiert:
         tot = sorted(set(kuratiert) - genutzt)
         print(f"  Kuratiert: {len(korrigiert):,} Leads korrigiert · {bestaetigt:,} geprueft "
               f"und bestaetigt · {len(kuratiert)-len(tot):,} von {len(kuratiert):,} Zeilen "
               f"greifen" + (f" · ⚠ {len(tot)} tote Zeile(n): "
-                            + "; ".join(f"{n} ({z})" for n, z in tot[:3]) if tot else ""))
+                            + "; ".join(f"{n} ({z}, {a})" for n, z, a in tot[:3]) if tot else ""))
     if fremdformat:
         print(f"  ⚠ {fremdformat:,} Leads tragen im Regionsfeld KEINE gueltige "
               f"{land}-Regionskennung (Kantonskuerzel, Extra-Regio) — nicht pruefbar, "

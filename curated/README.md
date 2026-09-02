@@ -10,7 +10,7 @@ menschliche Arbeit enthält und nicht aus den Daten ableitbar ist, gehört desha
 | `DE_entity_aliases.csv` | belegte Umbenennungen (DB InfraGO ↔ DB Netz, gleiche HRB) | **nein** — recherchiert |
 | `vergabestellen_kuratierung_worklist.csv` | Arbeitsliste fragmentierter Vergabestellen | halb — Analyse-Ausgabe, aber Einstiegspunkt |
 | `DE_kategorie_korrektur.csv` | Kategorie-Korrekturen; speisen auch den Prompt (Lernschleife) | **nein** |
-| `DE_region_korrektur.csv` | geprüfte Bundesland-Korrekturen je (Käufername, PLZ) | **nein** — Fall für Fall belegt |
+| `<L>_region_korrektur.csv` | geprüfte Regions-Urteile je (Käufername, PLZ, alte Kennung) — DE/AT/CH | **nein** — Fall für Fall belegt |
 
 ## Was NICHT hierher gehört
 

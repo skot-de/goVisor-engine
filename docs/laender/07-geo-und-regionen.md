@@ -223,11 +223,62 @@ einziger Treffer in `web/`** liest das Feld. Der sichtbare Teil dieser Kette ist
 der Wert von `region` — deshalb korrigiert die Kuratierung ihn und verlässt sich nicht
 auf ein Etikett. Die Anzeige des Etiketts ist offen.
 
-⚠ **Was in AT übrig bleibt, ist eine ehrliche Grenze.** 75 der 85 Funde sind zwei
-Käufer — Flughafen Wien AG (Sitz Schwechat/AT12, meldet AT13) und OMV Austria E&P. Eine
-Organisation mit EINER Anschrift, deren Sitz in einer anderen Region liegt als die, die
-sie angibt, ist aus einem einzelnen Satz nicht von einem Tippfehler zu unterscheiden.
-In DE trägt diese Klasse 3 % der Funde, in AT 80 %.
+## AT und CH: dasselbe Verfahren, ein anderes Ergebnis (2026-09-02)
+
+Auch die 85 österreichischen und 30 Schweizer Funde sind einzeln durchgegangen. Der
+Befund ist ein anderer als in Deutschland und für jedes weitere Land der wichtigere:
+
+**In Österreich benennt `buyer_nuts` überwiegend den LEISTUNGSORT, nicht den Sitz.**
+Die Titel sagen es wörtlich:
+
+```
+steht=AT33  „E90094/29/2-Dion7/2025 … 6020 Innsbruck, Wärmepumpe"      Republik Österreich
+steht=AT31  „Projektsteuerung, KZ-Gedenkstätte Gusen, 4222 Langenstein" Burghauptmannschaft
+steht=AT22  „A99 NLR E-MOB Netzanschlüsse Steiermark"                   ASFINAG
+steht=AT12  „Donau-Streckenpflege 2023-2028 Los OST"                    via donau (Wien)
+steht=AT21  „Wartung Scanning Electron Microscope"                      SAL, Standort Villach
+```
+
+Von 85 Funden waren **59 keine Fehler**, sondern Leistungsorte oder Zweitstandorte;
+**genau einer** war ein echter Regionsfehler: OMV Austria E&P GmbH (Sitz Gänserndorf,
+2230) stand auf Wien, während derselbe Käufer 8 weitere Leads korrekt unter
+Niederösterreich führt und die Titel Schönkirchen und Gänserndorf nennen.
+
+In der Schweiz dasselbe Muster in kleinerer Zahl: 5 echte Fehler (SBB-Einheiten
+„Standort Bern" auf Zürich, Swissgrid Aarau auf Appenzell A.Rh., Spital Uster auf Bern),
+7 bestätigte Fälle. **Neu und wichtig: die Anschrift ist in der Romandie oft die des
+beauftragten Dienstleisters** — „Direction générale de l'environnement … de l'Etat de
+Vaud (Loyco SA)" trägt eine Genfer PLZ, die Schulgemeinde St-Prex eine Freiburger.
+Der Klammerzusatz im Namen ist das Erkennungszeichen.
+
+**Daraus ein viertes Tor: das Veto des Titels.** Nennt der Auftragstitel einen Ort, der
+in der angegebenen Region liegt, steht dort der Leistungsort und keine Falschangabe.
+Gemessen 2026-09-02: DE 393, AT 386, CH 541 Leads übergangen — und **bei den DE-Funden
+greift es 0-mal**, es schwächt die deutschen Befunde also nicht.
+
+⚠ Das Veto darf nur SCHWEIGEN lassen, nie etwas behaupten. Ein Ortsname im Titel ist ein
+Hinweis, kein Beleg; als Widerspruchsgrund taugt er nicht.
+
+Stand nach allen vier Toren und der Kuratierung (2026-09-02, `--probe`):
+
+```
+      korrigiert   bestätigt   offen   Zeilen in curated/
+DE            93           1       0   38
+AT            26          61       0    8
+CH             8          14       8   12
+```
+
+⚠ **Ein Fall bleibt offen, und das ist richtig so.** Die RAILplus AG (8 Leads, gemessen 2026-09-02) führt
+durchgängig die Anschrift 5001 Aarau und gibt durchgängig Bern an — beide Seiten in sich
+schlüssig, keine dritte Auskunft. Genau dafür gibt es das Etikett `widersprüchlich`. Wer
+es wegkuratiert, ohne den Fall zu klären, macht aus einer ehrlichen Unsicherheit eine
+falsche Gewissheit.
+
+⚠ **Die alte Sorge um den Flughafen Wien hat sich nicht bestätigt.** Er trägt eine Wiener
+PLZ (1300 Wien-Flughafen) und nennt sich in 241 von 308 eigenen Sätzen Wien (gemessen
+2026-09-02), obwohl er in
+Schwechat liegt. Das ist keine Falschangabe, sondern die Selbstbeschreibung des Käufers —
+in der Tabelle als „geprüft und richtig" festgehalten, damit der Marker schweigt.
 
 ## Verwaltungsnamen an geonames knüpfen
 
