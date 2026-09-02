@@ -11,3 +11,4 @@ Service de l'environnement,1110,CH022,CH022,"kein Fehler: die Waadt nennt ihre S
 Swissgrid AG - Engineering & Construction,5001,CH053,CH033,"Swissgrid sitzt in Aarau 5001, eigene Angabe 336x Aargau; CH053 (Appenzell A.Rh.) hat mit dem Leitungsprojekt nichts zu tun",2026-09-02
 SBB CFF FFS Einkauf Bauprojekte Standort Bern,3000,CH040,CH021,"dieselbe Einheit, kuerzerer Name; Sitz Bern steht im Namen",2026-09-02
 Spital Uster AG,8610,CH021,CH040,Spital Uster liegt in Uster 8610; eigene Angabe 11x Zuerich gegen 2x Bern,2026-09-02
+RAILplus AG,5001,CH021,CH033,"Sitz Hintere Bahnhofstrasse 48, 5001 Aarau (Kanton Aargau) — Strasse, Ort, PLZ und Telefonvorwahl 062 stehen in allen 11 Quellsaetzen so da, einer nennt selbst CH033; das CountrySubentityCode=CH021 im eForms-Satz ist eine Falscheingabe und gleicht der NUTS von Simap.ch (3003 Bern) im selben Dokument",2026-09-02

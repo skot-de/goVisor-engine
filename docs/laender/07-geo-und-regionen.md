@@ -265,14 +265,39 @@ Stand nach allen vier Toren und der Kuratierung (2026-09-02, `--probe`):
       korrigiert   bestätigt   offen   Zeilen in curated/
 DE            93           1       0   38
 AT            26          61       0    8
-CH             8          14       8   12
+CH            16          14       0   13
 ```
 
-⚠ **Ein Fall bleibt offen, und das ist richtig so.** Die RAILplus AG (8 Leads, gemessen 2026-09-02) führt
-durchgängig die Anschrift 5001 Aarau und gibt durchgängig Bern an — beide Seiten in sich
-schlüssig, keine dritte Auskunft. Genau dafür gibt es das Etikett `widersprüchlich`. Wer
-es wegkuratiert, ohne den Fall zu klären, macht aus einer ehrlichen Unsicherheit eine
-falsche Gewissheit.
+## Wenn zwei Seiten sich widersprechen: eine Ebene tiefer gehen
+
+Der letzte offene Fall (gemessen 2026-09-02) — RAILplus AG, 8 Leads, Anschrift 5001 Aarau,
+Angabe Bern, beide
+Seiten in sich schlüssig — liess sich **nicht** durch Abwägen klären, sondern durch einen
+Blick in `silver/<L>/attributes`. Dort steht der Adressblock des Käufers, so wie er im
+eForms-Satz steht:
+
+```
+PostalAddress.StreetName             = Hintere Bahnhofstrasse 48
+PostalAddress.CityName               = Aarau
+PostalAddress.PostalZone             = 5001
+PostalAddress.CountrySubentityCode   = CH021        ← Bern
+Contact.Telephone                    = +41 62 561 42 59   (Vorwahl 062 = Aarau)
+```
+
+**Der Widerspruch steckt im Satz selbst, nicht in unserer Kette.** Vier Felder desselben
+Blocks sagen Aargau, eines sagt Bern; ein weiterer RAILplus-Satz nennt selbst CH033. Und
+im selben Dokument trägt Simap.ch (Holzikofenweg 36, 3003 Bern) genau dieselbe CH021 —
+der naheliegende Verdacht ist ein Formularvorgabewert.
+
+⚠ **Trotzdem KEIN Parser-Fix.** Nachgemessen: von 27.594 Käufersätzen mit CH-NUTS und
+auflösbarer PLZ weichen **180 (0,65 %)** ab, CH021 in 39 von 4.539 Fällen (0,9 %) — keine
+Vorgabe, die durchschlägt, sondern verstreute Falscheingaben. Ein Fix an der Quelle würde
+hier ein Muster reparieren, das es nicht gibt. Das ist der Unterschied zum DÖE-Fund in
+Deutschland (dort: 33.966 Käuferzeilen, EIN Absender, 100 %).
+
+**Die Lehre für den nächsten unentscheidbaren Fall:** bevor man ihn als `widersprüchlich`
+stehen lässt, `attributes` nach dem Adressblock fragen. Silber führt den Satz feldweise
+mit — Strasse, Ort, PLZ, Telefon sind vier Zeugen, wo die Gold-Ebene nur zwei zeigt.
 
 ⚠ **Die alte Sorge um den Flughafen Wien hat sich nicht bestätigt.** Er trägt eine Wiener
 PLZ (1300 Wien-Flughafen) und nennt sich in 241 von 308 eigenen Sätzen Wien (gemessen
