@@ -965,6 +965,43 @@ function _clHasBlocks(){ try{ return (JSON.parse(localStorage.getItem('govisor.b
 
 // §7 Checkliste im Prototyp-Design: Kopf (Stand+Haftung) · TOC · funktionale
 // Gruppen mit Zitat+Fundstelle+Kennzeichnung+editierbarem Baustein+Kombi-Button+Abhaken.
+/* KENNZAHL 1 — Aufwand gegen Zeitfenster.
+ *
+ * DER BEFUND, gemessen am 2026-09-02 ueber 3.400 Vorgaenge: zwischen Bekanntmachung und
+ * Frist liegen im Median 34 Tage, und zwar UNABHAENGIG vom Aufwand. Von „bis 10
+ * Anforderungen" (33 Tage) bis „ueber 100" (35 Tage); Korrelation 0,08, also keine.
+ * Ein Verfahren mit 186 Anforderungen bekommt dieselbe Zeit wie eines mit dreien.
+ *
+ * ⚠ SIE BRAUCHT BEIDE SEITEN. Die Bekanntmachung sagt, wann veroeffentlicht und wann Frist;
+ * die Unterlagen sagen, wie viel Arbeit drinsteckt. Wer nur eine hat, kann sie nicht rechnen
+ * — und niemand sonst hat beide. Deshalb steht sie hier und nicht bei den Fristen.
+ *
+ * ⚠ NUR WENN ES ETWAS ZU SAGEN GIBT. Liegt das Fenster im mittleren Feld, ist die Zeile eine
+ * Selbstverstaendlichkeit und bleibt weg. Gezeigt wird sie, wo sie eng ist — dort kippt sie
+ * eine Bietentscheidung, und dort steht sie sonst nirgends. */
+function renderFensterBlock(a, l){
+  const f = l.lbFenster;
+  if(!f || f.tage == null || !f.median) return '';
+  const n = (a.checklist||[]).length;
+  if(!n) return '';
+  /* ⚠ NUR DER ENGE FALL, und der nur im zehnten Perzentil.
+     Erste Fassung zeigte beide Raender am Viertel — die Zeile erschien bei 51 % aller
+     Vorgaenge, also bei jedem zweiten. Eine Zeile, die immer dasteht, liest bald niemand.
+     Und „mehr Zeit als ueblich" aendert keine Entscheidung: man bewirbt sich nicht, WEIL
+     viel Zeit ist. Der enge Fall dagegen kippt sie, und zwar bevor man die Liste durchgeht. */
+  if(f.eng == null || f.tage > f.eng) return '';
+  // Rang auf der Achse: dieselbe Sprache wie die Marktzeile der Vergabestellen.
+  const spanne = Math.max(1, f.oben - f.unten);
+  const pos = Math.max(0, Math.min(100, Math.round(((f.tage - f.unten) / spanne) * 50 + 25)));
+  return `<div class="fenster eng">
+    <span class="fenster-t">${tk("{n} Anforderungen in {d} Tagen", {n: n, d: f.tage})}</span>
+    <span class="bstat-leiste" aria-hidden="true"><i class="band"></i><i class="mitte"></i>
+      <i class="punkt" style="left:${pos}%"></i></span>
+    <span class="fenster-m">${tk("marktüblich {d} Tage, unabhängig vom Aufwand")
+      .replace('{d}', f.median)}<em>${tk("engstes Zehntel")}</em></span>
+  </div>`;
+}
+
 function renderChecklistBlock(a, l){
   const items = (a.checklist||[]).map((it,i)=>({...it, _i:i}));
   /* AKTIVIERUNG A: welche erwarteten Unterlagen fehlen, und was dagegen zu tun ist.
@@ -1008,6 +1045,7 @@ function renderChecklistBlock(a, l){
       <div class="ibody">${q}${block}</div></article>`;
   };
 
+  const fensterHtml = renderFensterBlock(a, l);
   const groupsHtml = _CL_GROUPS.map(([id,title,set])=>{
     const gi = items.filter(it=>set.has(it.req_type)); if(!gi.length) return '';
     return `<details class="grp" id="clg-${id}"${id==='ko'?' open':''}><summary><span class="caret">›</span>${title}<span class="cnt">${gi.length}</span></summary><div class="gbody">${gi.map(itemHtml).join('')}</div></details>`;
@@ -1038,7 +1076,7 @@ function renderChecklistBlock(a, l){
 
   // a2 Erstnutzer: leere Bibliothek → die Textbausteine sind noch generische Vorlagen (§9.1).
   const firstday = !_clHasBlocks() ? `<div class="cl-firstday">${tk("Eure Bausteinbibliothek ist noch leer, die Textvorschläge unten sind generische Vorlagen.")}<a href="/bausteine" class="link">${tk("Bibliothek füllen →")}</a>${tk("Dann setzt goVisor eure echten Referenzen und Zertifikate ein statt Platzhalter.")}</div>` : '';
-  return `<div class="va-checklist" data-clroot="${l.id}">${chead}${firstday}${toc}${groupsHtml}${offen}${weitere}</div>`;
+  return `<div class="va-checklist" data-clroot="${l.id}">${chead}${firstday}${fensterHtml}${toc}${groupsHtml}${offen}${weitere}</div>`;
 }
 
 // Download-Knopf für unsere extrahierte Tabelle (nicht für die Original-Unterlagen — die

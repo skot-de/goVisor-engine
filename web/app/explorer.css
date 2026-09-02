@@ -2365,3 +2365,23 @@ td.c-band .passung i{display:none}
 .bwatch[aria-pressed="true"] { background: var(--signal-wash); border-color: var(--signal);
   color: var(--signal-deep); }
 .bwatch[disabled] { opacity: .5; cursor: default; }
+
+/* AUFWAND GEGEN ZEITFENSTER (Kennzahl 1, 2026-09-02). Steht VOR der Checkliste: sie sagt,
+   wie viel Zeit für genau diese Liste bleibt.
+
+   Der Befund dahinter: zwischen Bekanntmachung und Frist liegen im Median 34 Tage,
+   unabhängig vom Aufwand (Korrelation 0,08 über 3.400 Vorgänge). Ein Verfahren mit 186
+   Anforderungen bekommt dieselbe Zeit wie eines mit dreien.
+
+   ⚠ Sie erscheint nur, wenn das Fenster am Rand liegt. Im mittleren Feld wäre sie eine
+   Selbstverständlichkeit, und eine Zeile, die immer dasteht, liest bald niemand mehr. */
+.fenster { display: flex; flex-direction: column; gap: 3px; margin: 0 0 var(--s4);
+  padding: var(--s3) var(--s4); background: var(--surface-2); border-radius: var(--r);
+  border-left: 3px solid var(--line-strong); }
+.fenster.eng { border-left-color: var(--flag); }
+.fenster-t { font-size: var(--t-lg); font-weight: 650; letter-spacing: -.01em;
+  color: var(--ink-900); font-variant-numeric: tabular-nums; }
+.fenster .bstat-leiste { max-width: 220px; margin: 4px 0 2px; }
+.fenster-m { font-size: var(--t-meta); color: var(--ink-500); font-variant-numeric: tabular-nums; }
+.fenster-m em { font-style: normal; margin-left: 6px; font-weight: 600; color: var(--ink-700); }
+.fenster.eng .fenster-m em { color: var(--flag); }

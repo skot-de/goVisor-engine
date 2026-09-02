@@ -998,6 +998,10 @@ $PY -m govisor.dokdubletten --country DE \
 step "Unterlagen auswerten → Anforderungs-Signale"
 if $PY -m govisor.cli signals-docs; then
   $PY scripts/export_doc_signals.py || echo "  ⚠ doc-signals.json nicht geschrieben."
+  # Aufwand gegen Zeitfenster (Kennzahl 1). Braucht `doc_analysis` in Gold UND das
+  # Veroeffentlichungsdatum aus Silber — laeuft deshalb NACH der Gold-Kette, nicht davor.
+  # ⚠ Fehlt die Datei, verschwindet die Zeile im Lead-Detail lautlos. Deshalb laut melden.
+  $PY scripts/export_fenster.py || echo "  ⚠ fenster.json nicht geschrieben — Kennzahl 1 fehlt im Detail."
 else
   echo "  ⚠ Signal-Extraktion übersprungen."
 fi
@@ -1323,6 +1327,17 @@ $PY scripts/pruefe_verdrahtung.py \
 # ⚠ Sie schreibt nichts (Temp-Verzeichnis) und darf deshalb neben einem Abrufer laufen.
 $PY scripts/pruefe_endgueltige.py --stichprobe 8 \
   || echo "  → Ein endgueltiges Urteil haelt nicht mehr. Details: python3 scripts/pruefe_endgueltige.py --offen"
+
+# ── Sonde 6: eine Regionskennung, die in Wahrheit ein Vorgabewert ist ────────────────────
+# Der Anlass (2026-09-01): die DÖE-Quelle kannte ueber ihren GESAMTEN Bestand genau einen
+# NUTS-Wert — DEA22, den Sitz des eSenders. Er stand auf 33.966 Kaeuferzeilen in 393 Orten,
+# und im Frontend landeten 172 Magdeburger Leads unter „Nordrhein-Westfalen", als
+# `regionQuelle='amtlich'`. Nichts ist dabei gescheitert; die Regions-ABDECKUNG stieg sogar.
+# ⚠ Die Sonde prueft SILBER, nicht Gold — dort schreibt der Parser hin, und dort faellt es
+# auf, bevor es sich ueber Entities, Leads und Frontend verteilt. Sie liest nur.
+# Warnung, kein Abbruch — wie die uebrigen Sonden.
+$PY scripts/pruefe_nuts_vorgabe.py \
+  || echo "  → NUTS-Waechter meldet einen Vorgabewert. Details: python3 scripts/pruefe_nuts_vorgabe.py --alle"
 
 # ── BIBEL-PRUEFUNG ───────────────────────────────────────────────────────────────────────
 #

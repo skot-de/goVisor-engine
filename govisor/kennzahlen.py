@@ -363,8 +363,6 @@ _EIGNUNGSCHECK: tuple[Kennzahl, ...] = (
 # offenen Vorgaengen mit mehreren Zuschlagskriterien. Sie doppelt einzutragen haette den
 # Eindruck erzeugt, da sei noch etwas zu bauen.
 _UEBERGABE: tuple[Kennzahl, ...] = (
-    _k("aufwandGegenZeitfenster", "Aufwand gegen Zeitfenster", "markt",
-       "Median 34 Tage über alle Vorgänge, unabhängig vom Aufwand"),
     _k("strengeAlsPerzentil", "Strenge als Perzentil je Bereich", "markt",
        "Median und 90. Perzentil aller analysierten Vorgänge"),
     _k("fingerabdruckVergabestelle", "Fingerabdruck der Vergabestelle", "markt",
@@ -411,6 +409,21 @@ _AKTIVIERUNG: tuple[Kennzahl, ...] = (
     _k("posteingang_ungelesen", "Ungelesene Hinweise", "keine"),
 )
 
+# ── Aufwand gegen Zeitfenster (Kennzahl 1, gebaut am 2026-09-02) ─────────────────────────
+# Sie stand bis dahin unter `geplant`. Wer eine Kennzahl baut und den Eintrag stehen laesst,
+# schickt die naechste Sitzung auf die Suche nach Arbeit, die es nicht mehr gibt — dieselbe
+# Alterung, gegen die dieses Verzeichnis angelegt wurde. Ein Waechter haelt es jetzt fest.
+#
+# ⚠ SIE BRAUCHT BEIDE SEITEN und ist deshalb eine der wenigen, die sonst niemand rechnen
+# kann: die Bekanntmachung sagt wann veroeffentlicht und wann Frist, die Unterlagen sagen wie
+# viel Arbeit. Gemessen ueber 3.400 Vorgaenge: Median 34 Tage, in JEDER Aufwandsklasse
+# (bis 10 Anforderungen 33 Tage, ueber 100 Anforderungen 35), Korrelation 0,08.
+_ZEITFENSTER: tuple[Kennzahl, ...] = (
+    Kennzahl("aufwandGegenZeitfenster", "Aufwand gegen Zeitfenster", "markt",
+             "Median über alle Vorgänge mit ausgewerteten Unterlagen, je Land",
+             "lead-detail", "export_fenster.py", "", "Tage"),
+)
+
 
 _FLAECHEN = (
     (_LISTE, "liste", "explorerCore.COLS"),
@@ -433,7 +446,7 @@ INVENTAR: tuple[Kennzahl, ...] = tuple(
     k for gruppe, flaeche, quelle in _FLAECHEN for k in _mit(gruppe, flaeche, quelle)
 )
 
-ALLE: tuple[Kennzahl, ...] = DOC_SIGNALE + VERGABESTELLEN + INVENTAR
+ALLE: tuple[Kennzahl, ...] = DOC_SIGNALE + VERGABESTELLEN + _ZEITFENSTER + INVENTAR
 
 
 def nach_flaeche() -> dict[str, tuple[Kennzahl, ...]]:
