@@ -282,6 +282,35 @@ Vor der Erweiterung hatten **760 von 4.743 DE-Notices in 2016-01 (16 %) gar kein
 
 **Reihenfolge ist kritisch:** `TOTAL_QUANTITY_OR_SCOPE` kommt auch in `CONTRACT` vor (81 %), dort aber als Zusatzfeld *neben* der Beschreibung. Es darf nur als letzte Rückfallebene greifen, sonst überschreibt es auf dem häufigsten Formular überhaupt die richtige Antwort. `tests/test_schema.py` sichert das ab.
 
+## Was DÖE über den Käufer NICHT sagt (gemessen 2026-09-01)
+
+Der unterschwellige DÖE-Dialekt (`eforms-sdk-0.1`) führt den Käufer inline unter
+`ContractingParty/Party` — aber **ohne Regionskennung**. Nachgemessen über den gesamten
+Bestand: von 392.868 DÖE-Käuferzeilen trug **nicht eine einzige** ein eigenes
+`CountrySubentityCode`.
+
+Was stattdessen dastand, war die Anschrift des **eSenders**. Im selben Party-Block hängt
+`cac:ServiceProviderParty` — bei DÖE ausnahmslos das *Beschaffungsamt des BMI*, Bonn, mit
+`DEA22` und der Leitweg-ID `0204: 991-1405-10`. Beide Werte sind über den ganzen Bestand
+**konstant** (465 von 465 Notices einer Stichprobe). Der Parser suchte über den ganzen
+Teilbaum und fand genau sie:
+
+| | vor dem Fix | Wirklichkeit |
+|---|---|---|
+| NUTS-Werte im DÖE-Bestand | genau einer: `DEA22` | der Käufer hat keinen |
+| Käuferzeilen mit dieser NUTS | 33.966 in 393 Orten | 3.135 sitzen wirklich in Bonn |
+| Käufernamen unter der Leitweg-ID | 1.831 | eine Behörde |
+
+**Die Konsequenz war nicht nur ein falsches Bundesland.** Über die geteilte Kennung
+verschmolzen 1.831 Käufer zu einer Entität (13.401 Parteizeilen, benannt nach
+„Landeshauptstadt Magdeburg"); 162 von 225 Leads unter diesem Namen gehörten jemand
+anderem. Behoben in `schema._iter_named_ausserhalb`, Wächter `scripts/pruefe_nuts_vorgabe.py`,
+Fallen D11/D12/D13 und C15 in [`laender/12-fallenkatalog.md`](laender/12-fallenkatalog.md).
+
+> Ohne Regionskennung ist DÖE nicht schlechter, nur ehrlicher: die Leads fallen jetzt in
+> die Ableitung aus Käufername und Ort (`scripts/region_ableiten.py`) und tragen dort
+> `regionQuelle='abgeleitet'` statt eines erfundenen `amtlich`.
+
 ## Zwei Fallstricke
 
 **Sprachfassungen.** Die Bulk-XML enthält meist nur `CATEGORY="ORIGINAL"`, aber nicht immer: in `2023-06` haben 587 Dateien zwei Formularsektionen, 10 haben drei und **303 haben 24** (alle Amtssprachen). Wer die erste Sektion nimmt, bekommt dort zufällige Sprache. `parse()` selektiert deshalb auf `CATEGORY="ORIGINAL"`.

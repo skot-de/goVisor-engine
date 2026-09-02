@@ -446,6 +446,15 @@ scheitert der Pooler, s. Auto-Memory.)
   (der `eforms-sdk-0.1`-Dialekt kennt keine Losstruktur). DÖE liefert 9,7 % aller Bau-Leads
   (CPV 45), aber 0 % bei Finanz/Nahrung und 0,1 % bei Pharma — unterschwellig heisst kommunaler
   Bau und Wartung, nicht „ueberall etwas mehr".
+  ⚠ **DÖE nennt den Käufer, aber nie seine Region.** Kein einziger DÖE-Käufer trägt ein
+  eigenes `CountrySubentityCode` — was bis zum 2026-09-01 dort stand, war die Anschrift des
+  **eSenders** (Beschaffungsamt des BMI, Bonn: `DEA22` und Leitweg `0204: 991-1405-10`, beide
+  über den ganzen Bestand konstant). Der Parser suchte über den ganzen Party-Teilbaum und fand
+  sie: 33.966 Käuferzeilen in 393 Orten, und über die geteilte Kennung verschmolzen 1.831
+  Käufer zu EINER Entität. Wer einen Käuferblock ausliest, nimmt
+  `schema._iter_named_ausserhalb`, nicht `_iter_named` — sonst erbt der Käufer die Anschrift
+  seines Absenders. Zahlen und Folgen: `docs/data-sources.md`, Abschnitt „Was DÖE über den
+  Käufer NICHT sagt"; Wächter `scripts/pruefe_nuts_vorgabe.py`.
 
 ### Fallstrick, der schon zugeschlagen hat
 `build_lead_cpv` wurde einmal **über** `build_doe_buyer_profile` geschrieben. Der CLI-Aufruf

@@ -27,6 +27,16 @@ Gemessen: Weg 1 allein 32 %, Weg 2 allein 20 %, beide 29 %, gar nicht 19 % — z
 sagen. Die Abweichungsquote steht im Lauf und ist die einzige ehrliche Auskunft über die
 Verlässlichkeit dieser Ableitung; ohne sie wäre es Raten mit Nachkommastellen.
 
+**Die Gegenprobe (seit 2026-09-01).** Dasselbe Ortsverzeichnis prüft auch die Leads, die
+schon eine Region TRAGEN. Bis dahin galt ein dastehender Wert unbesehen als belegt und
+ging als `regionQuelle='amtlich'` ins Frontend — auch wenn der Käuferort ihm offen
+widersprach. So standen 172 Leads der Landeshauptstadt Magdeburg unter „Nordrhein-
+Westfalen": ein Parser-Fehlgriff auf die NUTS des eSenders (behoben in
+`govisor/schema._iter_named_ausserhalb`), den die ganze Kette widerspruchslos
+weitergereicht hat. Solche Leads heissen jetzt `widersprüchlich`, nicht `amtlich`.
+Es ist derselbe Grundsatz wie beim Selbsttest oben: **markieren statt wegwerfen** —
+der Wert bleibt stehen, nur die Behauptung „belegt" fällt weg.
+
 ⚠️ Geschrieben wird eine eigene Datei (`lead_region_fill.parquet`), nicht `lead_export`.
 Wer die Ableitung nicht mag, löscht die Datei — abgeleitete Werte tragen ausserdem ihre
 Herkunft mit, damit sie in der Anzeige unterscheidbar bleiben.
@@ -221,6 +231,16 @@ def fuer_land(land: str, probe: bool) -> int:
         SELECT l.lead_id, l.buyer_name, b.nuts1
         FROM '{le}' l LEFT JOIN bekannt b ON b.buyer_name = l.buyer_name
         WHERE l.buyer_nuts1 IS NULL OR l.buyer_nuts1 = ''""").fetchall()
+    # ── Gegenprobe: die Leads, die SEHR WOHL eine Region tragen ────────────────────
+    # Bis zum 2026-09-01 wurde hier nur ergaenzt, nie geprueft. Ein dastehender Wert
+    # galt als belegt (`regionQuelle='amtlich'`) — auch dann, wenn der Kaeuferort ihm
+    # offen widersprach. Genau so standen 172 Magdeburger Leads unter „Nordrhein-
+    # Westfalen": der Parser hatte die NUTS des eSenders gegriffen (behoben in
+    # `govisor/schema._iter_named_ausserhalb`), und nichts an der Kette hat widersprochen.
+    vorhanden = con.execute(f"""
+        SELECT lead_id, buyer_town, buyer_nuts1 FROM '{le}'
+        WHERE buyer_nuts1 IS NOT NULL AND buyer_nuts1 <> ''
+          AND buyer_town IS NOT NULL AND buyer_town <> ''""").fetchall()
 
     orte = ortsverzeichnis(land)
     if not orte:
@@ -250,18 +270,57 @@ def fuer_land(land: str, probe: bool) -> int:
             continue
         aus.append({"lead_id": lead_id, "buyer_nuts1_abgeleitet": nuts1, "quelle": quelle})
 
-    df = pd.DataFrame(aus)
+    # Widerspruch Ort ↔ Region. Geprueft wird gegen den ORTSNAMEN des Kaeufers, nicht
+    # gegen seinen Namen: der Ort ist ein Anschriftsfeld, der Name Behoerdendeutsch.
+    # Nur eindeutige Ortsnamen zaehlen (`ortsverzeichnis` wirft mehrdeutige raus) —
+    # sonst meldete jedes zweite „Halle"/„Weilheim"/„Dillingen" einen Widerspruch.
+    # ⚠ NUR echte Regionskennungen vergleichen. In CH stehen im selben Feld auch
+    # Kantonskuerzel („ZH", „VD", „AG") statt NUTS — 793 von 8.211 Leads, in AT 329
+    # von 7.401 (gemessen 2026-09-01). Ohne diesen Riegel meldete die Gegenprobe fuer
+    # die Schweiz 11 % Widerspruch und benannte damit ein FORMATproblem als
+    # Ortswiderspruch. Ein falsches Etikett ist schlimmer als kein Etikett; die
+    # Formatluecke gehoert gesondert behandelt und steht als offener Punkt.
+    stellen = REGION_STELLEN[land]
+    widersprueche, pruefbar_v, fremdformat = [], 0, 0
+    for lead_id, town, nuts1 in vorhanden:
+        if not (nuts1.startswith(land) and len(nuts1) == stellen):
+            fremdformat += 1
+            continue
+        ort_reg = orte.get(" ".join(_worte(town)))
+        if ort_reg is None:
+            continue
+        pruefbar_v += 1
+        if ort_reg != nuts1:
+            widersprueche.append({"lead_id": lead_id, "buyer_nuts1_abgeleitet": None,
+                                  "quelle": "widerspruch_ort", "widerspruch": True,
+                                  "widerspruch_ort_nuts1": ort_reg})
+
+    for zeile in aus:
+        zeile["widerspruch"] = False
+        zeile["widerspruch_ort_nuts1"] = None
+    df = pd.DataFrame(aus + widersprueche)
     gesamt = len(zeilen)
     if not gesamt:
         print(f"  {land}: kein Lead ohne Region.")
         return 0
-    print(f"  {land}: {gesamt:,} Leads ohne Region · {len(df):,} abgeleitet ({len(df)/gesamt:.0%})")
-    if not df.empty:
-        print("  " + " · ".join(f"{k}: {v:,}" for k, v in df.quelle.value_counts().items()))
+    # ⚠ `len(aus)`, NICHT `len(df)`: seit der Gegenprobe stehen in `df` auch die
+    # Widerspruchs-Zeilen, und die leiten nichts ab — sie nehmen etwas zurueck.
+    print(f"  {land}: {gesamt:,} Leads ohne Region · {len(aus):,} abgeleitet "
+          f"({len(aus)/gesamt:.0%})")
+    if aus:
+        herkunft = pd.Series([z["quelle"] for z in aus]).value_counts()
+        print("  " + " · ".join(f"{k}: {v:,}" for k, v in herkunft.items()))
     pruefbar = einig + uneinig
     if pruefbar:
         print(f"  Selbsttest: wo beide Wege greifen ({pruefbar:,}), widersprechen sie sich "
               f"{uneinig:,}-mal ({uneinig/pruefbar:.1%}) — diese Leads bleiben leer.")
+    if pruefbar_v:
+        print(f"  Gegenprobe: von {pruefbar_v:,} Leads MIT Region widersprechen "
+              f"{len(widersprueche):,} ({len(widersprueche)/pruefbar_v:.1%}) dem Kaeuferort "
+              f"— sie heissen im Export nicht mehr `amtlich`, sondern `widerspruechlich`.")
+    if fremdformat:
+        print(f"  ⚠ {fremdformat:,} Leads tragen im Regionsfeld KEINE {land}-NUTS "
+              f"(z. B. ein Kantons-/Landeskuerzel) — nicht pruefbar, offener Punkt.")
     if probe:
         print("  (Probe — nichts geschrieben)")
         return len(df)

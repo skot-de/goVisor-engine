@@ -57,6 +57,7 @@
 | C12 | **Ein Wort, zwei Bedeutungen** | „bestätigt" hiess an einer Stelle „Firma gefunden", an der anderen „Zugehörigkeit belegt" — der Abschlussbildschirm meldete beides gleichzeitig |
 | C13 | **Regel widerspricht dem Hinweis daneben** | beide fuer sich vertretbar, zusammen ein Widerspruch, und keine Zusicherung faengt ihn: der Passwortpruefer wies genau die Passphrase ab, die er empfahl |
 | C14 | **Dieselbe Regel an drei Stellen** | die SCHWAECHSTE gewinnt, weil sie erreichbar bleibt: Anlegen verlangte 12 Zeichen, die Einstellungen liessen 8 durch |
+| C15 | **Kennung des Absenders als Kennung des Käufers** | Derselbe Fehlgriff wie D11, eine Zeile weiter — und teurer: `0204: 991-1405-10` (Beschaffungsamt des BMI) landete auf 33.966 DÖE-Käuferzeilen mit **1.831 verschiedenen Namen** und wurde zu EINER Entität `id:leitweg:991-1405-10` mit 13.401 Parteizeilen, benannt nach „Landeshauptstadt Magdeburg". 162 von 225 Leads unter diesem Namen gehörten jemand anderem (Deutscher Bundestag, Bundesagentur für Arbeit, TU Ilmenau). Gemessen 2026-09-01, behoben mit D11 |
 
 ## D · Fallen bei Orten und Regionen
 
@@ -72,6 +73,9 @@
 | D8 | **Bundesweite Vergaben fallen aus dem Filter** | 4.144 DE-Leads, Regel war doppelt implementiert |
 | D9 | **Quelle liefert nationale Kürzel statt NUTS** | simap: `ZH`/`VD`/`BE` roh in `performance_nuts`; 4.850 Zuschläge ohne Region, `BE` = Bern **oder Belgien** |
 | D10 | **Regionsfilter je Verbraucher statt an der Quelle** | dieselbe DE-Annahme steckte in vier Exportern; Fix gehört in den Parser |
+| D11 | **Anschrift des ABSENDERS als Anschrift des Käufers** | Der Käufer hat im eForms-XML kein NUTS-Feld, der eSender-Block darunter schon — und ein Suchlauf über den ganzen Teilbaum findet dessen Wert. DÖE kannte dadurch **genau einen** NUTS im gesamten Bestand: `DEA22` (Bonn, Sitz des Beschaffungsamts des BMI), auf 33.966 Käuferzeilen in 393 Orten, 30.831 davon nachweislich nicht in Bonn. Behoben 2026-09-01 (`schema._iter_named_ausserhalb`), Wächter: `scripts/pruefe_nuts_vorgabe.py` |
+| D12 | **Wächter, der den eigenen Fund verpasst hätte** | Der naheliegende Test „eine NUTS mit auffällig vielen Orten" trennt NICHT: `DEA22` spannte 92 Orte, der ehrliche Höchstwert im Bestand liegt bei 110 (`DED42`, lauter Kleinstädte). Was trennt, ist die **Streuung der fremden Masse**: bei `DEA22` über 6 Bundesländer, bei jeder ehrlichen Kennung über höchstens 2 (Namensdoppelungen wie Halle, Weilheim, Dillingen) — gemessen 2026-09-01 über DE/AT/CH |
+| D13 | **Ein dastehender Wert gilt als belegt** | `regionQuelle='amtlich'` sagte nur „ein NUTS steht da", nie „er passt zum Käuferort". 172 Magdeburger Leads standen so unter „Nordrhein-Westfalen", als belegt markiert. Die Gegenprobe in `region_ableiten.py` prüft seit 2026-09-01 auch die Leads, die schon eine Region tragen: DE 633 von 60.311 (1,0 %), AT 35 von 1.363, CH 44 von 4.818 |
 
 ## E · Fallen bei Sprachen
 

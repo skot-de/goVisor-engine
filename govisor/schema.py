@@ -340,6 +340,55 @@ def _iter_named(root: ET.Element, name: str) -> Iterator[ET.Element]:
             yield elem
 
 
+# Teilbäume, in denen eine ZWEITE Partei steckt. Wer den Käufer aus einem Party-Block
+# liest, darf dort nicht hineinlaufen — s. `_iter_named_ausserhalb`.
+_FREMDE_PARTEI_TAGS = ("ServiceProviderParty",)
+
+
+def _iter_named_ausserhalb(root: ET.Element, name: str,
+                           ueberspringen: tuple[str, ...]) -> Iterator[ET.Element]:
+    """Wie `_iter_named`, aber ohne die Teilbäume unter `ueberspringen`.
+
+    ⚠ DAS IST DER FIX ZU EINEM STILLEN FEHLER, DER 30.831 KÄUFER FALSCH VERORTET HAT.
+    `_iter_named` steigt in den GANZEN Teilbaum ab. Im eForms-Käuferblock hängt aber eine
+    zweite Partei mit eigener Anschrift::
+
+        <ContractingParty><Party>
+           <PartyName><Name>Landesbetrieb … Sachsen-Anhalt</Name></PartyName>
+           <PostalAddress><CityName>Magdeburg</CityName>      ← KEIN NUTS-Feld
+                          <PostalZone>39104</PostalZone></PostalAddress>
+           <ServiceProviderParty>                             ← der eSender, nicht der Käufer
+              <Party><PostalAddress><CityName>Bonn</CityName>
+                     <CountrySubentityCode>DEA22</CountrySubentityCode>
+
+    Der Käufer trägt selbst KEIN `CountrySubentityCode`; das einzige im Dokument gehört
+    dem eSender (Beschaffungsamt des BMI, Bonn). Ein Suchlauf über den ganzen Teilbaum
+    findet genau dieses eine — und schreibt Bonn an einen Käufer in Magdeburg.
+
+    Gemessen am 2026-09-01 über `silver/DE/notice_parties`: die DÖE-Quelle kannte
+    **exakt einen** NUTS-Wert, `DEA22`, auf 33.966 Käuferzeilen in 393 verschiedenen
+    Orten — kein einziger Käufer hatte je einen eigenen. 30.831 davon sassen nachweislich
+    nicht in Bonn; die übrigen 3.135 stimmten nur zufällig (Beschaffungsamt und BImA
+    sitzen wirklich dort). Im Frontend standen so 172 Leads der Landeshauptstadt
+    Magdeburg unter „Nordrhein-Westfalen" — und weil ein NUTS dastand, mit
+    `regionQuelle='amtlich'`.
+
+    Der Fehler fällt nicht auf, weil nichts scheitert: ein Käufer OHNE eigene NUTS sieht
+    nach dem falschen Griff aus wie einer MIT — nur eben mit der Anschrift des Absenders.
+    """
+    def wandern(elem: ET.Element) -> Iterator[ET.Element]:
+        for kind in elem:
+            if _local(kind) in ueberspringen:
+                continue
+            if _local(kind) == name:
+                yield kind
+            yield from wandern(kind)
+
+    if _local(root) == name:
+        yield root
+    yield from wandern(root)
+
+
 def _text_of(elem: ET.Element) -> str:
     return " ".join(t.strip() for t in elem.itertext() if t.strip())
 
@@ -2011,26 +2060,35 @@ def _parse_eforms(root: ET.Element, notice_id: str) -> Notice:
             party = next(iter(_iter_named(cp, "Party")), None)
             if party is None:
                 continue
+            # ⚠ AUSSERHALB des eSender-Teilbaums lesen, sonst erbt der Käufer dessen
+            # Anschrift. Alles hier — Name, Kennung, Ort, PLZ, NUTS, Web, Kontakt —
+            # geht über `_iter_named_ausserhalb`; die Begründung und die gemessenen
+            # Zahlen stehen dort. Es genügt NICHT, nur die NUTS zu schützen: hat ein
+            # Käufer keine eigene `PostalAddress`, greift derselbe Abstieg auch Ort
+            # und PLZ des Absenders ab.
+            def _aus(wurzel, tag):
+                return _iter_named_ausserhalb(wurzel, tag, _FREMDE_PARTEI_TAGS)
+
             nm = None
-            for pn in _iter_named(party, "PartyName"):
-                nm = next((_text_of(e) for e in _iter_named(pn, "Name") if _text_of(e)), None)
+            for pn in _aus(party, "PartyName"):
+                nm = next((_text_of(e) for e in _aus(pn, "Name") if _text_of(e)), None)
                 if nm:
                     break
             if not nm:
                 continue
             buyer_name = nm
             def _pick(tag):
-                return next((_text_of(e) for e in _iter_named(party, tag) if _text_of(e)), None)
+                return next((_text_of(e) for e in _aus(party, tag) if _text_of(e)), None)
             # Kontaktdaten NICHT vergessen: sie stehen inline unter Party/Contact und
             # waren bisher nicht gelesen — gemessen 0 % E-Mail/Telefon/Web bei 258.246
             # DÖE-Käuferzeilen, obwohl im XML zu 60 / 48 / 39 % vorhanden. `contact` ist
             # bei DÖE oft die einzige Spur zur zuständigen Person.
-            contact = next(iter(_iter_named(party, "Contact")), None)
+            contact = next(iter(_aus(party, "Contact")), None)
 
             def _from_contact(tag):
                 if contact is None:
                     return None
-                return next((_text_of(e) for e in _iter_named(contact, tag) if _text_of(e)),
+                return next((_text_of(e) for e in _aus(contact, tag) if _text_of(e)),
                             None)
 
             parties.append(Party(
