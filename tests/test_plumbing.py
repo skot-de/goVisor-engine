@@ -800,7 +800,12 @@ def test_source_registry_is_wellformed():
         # das Meldeformular"), und so ein Eintrag hat keine technische Basis, die man
         # benennen koennte. Ihn zu erfinden waere schlimmer als die Luecke: der naechste
         # Leser haelt sie fuer einen halbfertigen Connector.
-        if s.status == "research" and not s.connector:
+        # ⚠ `sondiert` gehoert seit 2026-09-02 dazu, aus demselben Grund und mit einer
+        # Verschaerfung: ein sondierter Eintrag darf nicht nur ohne Connector stehen, er
+        # MUSS es. Wir haben das Portal gesehen, nicht angebunden. Wer einen Connector
+        # eintraegt, hebt den Status — `scripts/pruefe_sondierung.py` prueft die
+        # Gegenrichtung, damit die Luecke nicht als halbfertiger Abrufer gelesen wird.
+        if s.status in ("research", "sondiert") and not s.connector:
             assert s.coverage, f"{s.id}: Befund ohne Connector braucht eine Begruendung"
             continue
         assert s.connector in erlaubt, f"{s.id}: unbekannter Connector {s.connector}"

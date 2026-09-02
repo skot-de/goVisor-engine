@@ -81,6 +81,15 @@ def befunde() -> list[str]:
                         f"das Handbuch gehoert den aufgenommenen Laendern. "
                         f"Sondierungen nach {SONDIERUNG_PAPIERE}/.")
 
+    # 5 · `ertrag="ungeprueft"` ist die Kennzeichnung der Sondierung — sie darf nirgends
+    #     sonst stehen. Sonst versteckt sich eine angebundene Quelle hinter einem Wort,
+    #     das „nie gemessen" bedeutet, und die Ertragstabelle mischt Befund und Vermutung.
+    for s in sources.REGISTRY:
+        if s.ertrag == "ungeprueft" and s.status != SONDIERT:
+            raus.append(
+                f"{s.id} traegt ertrag='ungeprueft', steht aber auf '{s.status}' — "
+                f"'ungeprueft' gehoert allein der Sondierung.")
+
     # 4 · Die Umkehrung, und sie ist die wichtigere: ein Land MIT Tabellen darf nicht als
     #     sondiert gefuehrt werden. Regel 1 sieht es aus Sicht der Registry, Regel 4 aus
     #     Sicht der Platte — bei Polen war die Platte schneller als die Registry.

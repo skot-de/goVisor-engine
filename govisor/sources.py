@@ -73,7 +73,15 @@ DOC_CONNECTORS = {
 #   dateien   = echte Vergabeunterlagen im Bestand
 #   liste     = nur Dateinamen/Grössen/Daten (beantwortet »gibt es ein LV«, ohne eine Datei)
 #   gesperrt  = gebaut, Zugang aber verweigert oder an eine Entscheidung gebunden
-ERTRAEGE = ("dateien", "liste", "gesperrt")
+#   ungeprueft = SONDIERT, ABER NIE ANGEFASST. Wir kennen die Engine und ihre Groesse; ob
+#               sie Dateien herausgibt, hat niemand geprueft.
+#
+# ⚠ `ungeprueft` ist kein Platzhalter fuer „kommt noch", sondern eine Aussage: die drei
+# anderen Werte sind GEMESSEN, dieser ist es ausdruecklich nicht. Wer die drei und diesen
+# in einer Tabelle nebeneinanderstellt, muss die Spalte mit ausgeben — sonst sieht eine
+# Vermutung aus wie ein Befund. Deshalb darf er nur bei `status="sondiert"` stehen; eine
+# Regel in `scripts/pruefe_sondierung.py` haelt das fest.
+ERTRAEGE = ("dateien", "liste", "gesperrt", "ungeprueft")
 
 # --- Status einer Quelle ---------------------------------------------------------------------
 #   live      = ingestet, im Produkt sichtbar
@@ -318,6 +326,37 @@ for _i, _s in enumerate(REGISTRY):
 # `docliste-*` und simap sind fertig gebaut und liefern trotzdem keine Datei.
 # ------------------------------------------------------------------------------------------
 DOC_REGISTRY: list[Source] = [
+    # ── SONDIERT, NICHT ANGEBUNDEN ────────────────────────────────────────────────────
+    #
+    # ⚠ Diese Eintraege tragen `status="sondiert"` und KEINEN Konnektor. Sie sagen: wir
+    # wissen, dass es diese Engine gibt und wie gross sie ist — wir holen dort nichts.
+    # Wer anbindet, traegt den Konnektor ein UND hebt den Status; in dieser Reihenfolge,
+    # nie umgekehrt. `scripts/pruefe_sondierung.py` haelt das fest.
+    #
+    # Gemessen am TED-Monatspaket 2026-06 (8.027 FR-Bekanntmachungen, 6.016 mit
+    # Portal-URL). Kein franzoesisches Portal wurde dafuer beruehrt — die Engine steht im
+    # URL-Pfad, den TED selbst veroeffentlicht. Kapitel: docs/sondierung/fr.md
+    Source("sond-fr-aws", "AWS-Achat (marches-publics.info)", "", "FR", "beides",
+           "sondiert", portals=1, ebene="unterlagen", ertrag="ungeprueft",
+           coverage="25 % der FR-Bekanntmachungen mit Portal-URL (1.682 im Juni 2026)",
+           overlap="⚠ TED veroeffentlicht als Unterlagen-Link `fuseaction=dematEnt.login&type=DCE` "
+                   "— Indiz auf eine Login-Wand, NICHT gemessen",
+           url="https://www.marches-publics.info"),
+    Source("sond-fr-atexo", "Atexo/MPE (Maximilien, Mégalis, Alsace u. a.)", "", "FR", "beides",
+           "sondiert", portals=5, ebene="unterlagen", ertrag="ungeprueft",
+           coverage="14 % (927), verteilt auf mindestens 5 Domains mit identischem Pfad",
+           overlap="⚠ ein Teil des 31-%-Schwanzes duerfte ebenfalls Atexo sein: Wurzel-URLs "
+                   "ohne Pfad lassen sich nicht zuordnen",
+           url="https://marches.maximilien.fr"),
+    Source("sond-fr-achatpublic", "achatpublic.com", "", "FR", "beides",
+           "sondiert", portals=1, ebene="unterlagen", ertrag="ungeprueft",
+           coverage="12 % (830)", overlap="", url="https://www.achatpublic.com"),
+    Source("sond-fr-place", "PLACE (marches-publics.gouv.fr)", "", "FR", "beides",
+           "sondiert", portals=1, ebene="unterlagen", ertrag="ungeprueft",
+           coverage="11 % (760) — die staatliche Plattform",
+           overlap="DECP-Open-Data betrifft die Vergabedaten; ob auch die Unterlagen, ist offen",
+           url="https://www.marches-publics.gouv.fr"),
+    # ── ANGEBUNDEN ────────────────────────────────────────────────────────────────────
     Source("doc-cosinex-de", "cosinex/DTVP-Unterlagen", "docfetch-cosinex", "DE", "beides",
            "live", portals=40, ebene="unterlagen", ertrag="dateien", modul="govisor.docfetch",
            coverage="3.921 offene Leads mit Link, 2.457 mit Unterlagen im Bestand (63 %) — Stand 15.08.",

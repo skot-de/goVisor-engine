@@ -1115,12 +1115,21 @@ def test_registry_dokument_eintraege_sind_vollstaendig():
 
     for s in sources.unterlagen():
         assert s.ertrag in sources.ERTRAEGE, f"{s.id}: Ertrag '{s.ertrag}'"
-        assert s.connector in sources.DOC_CONNECTORS, f"{s.id}: Connector '{s.connector}'"
         assert s.status in sources.STATUSES, f"{s.id}: Status '{s.status}'"
+        # ⚠ SONDIERTE EINTRAEGE HABEN BEWUSST WEDER KONNEKTOR NOCH MODUL. Sie beschreiben
+        # ein Portal, das wir GESEHEN haben, nicht eines, das wir abrufen. Der Test entstand,
+        # als jede Dokumentquelle ein gebauter Abrufer war; seit der EU-Sondierung gilt das
+        # nicht mehr. Fuer sie prueft `scripts/pruefe_sondierung.py` das Gegenteil: dass dort
+        # KEIN Konnektor steht, weil ein Befund kein Anschluss ist.
+        if s.status == "sondiert":
+            assert not s.connector, f"{s.id}: sondiert, traegt aber Connector '{s.connector}'"
+            assert not s.modul, f"{s.id}: sondiert, traegt aber Modul '{s.modul}'"
+            continue
+        assert s.connector in sources.DOC_CONNECTORS, f"{s.id}: Connector '{s.connector}'"
         assert s.modul.startswith("govisor."), f"{s.id}: Modul fehlt"
         assert importlib.util.find_spec(s.modul) is not None, f"{s.id}: {s.modul} gibt es nicht"
     # Jeder deklarierte Doc-Connector wird auch benutzt — sonst verrottet die Liste.
-    benutzt = {s.connector for s in sources.unterlagen()}
+    benutzt = {s.connector for s in sources.unterlagen() if s.status != "sondiert"}
     assert benutzt == set(sources.DOC_CONNECTORS), (
         f"unbenutzt: {set(sources.DOC_CONNECTORS) - benutzt}")
 

@@ -109,3 +109,18 @@ def test_der_echte_bestand_ist_sauber():
     """Und die Registry, wie sie heute wirklich aussieht."""
     w = _wache()
     assert w.befunde() == []
+
+
+def test_ungeprueft_gehoert_allein_der_sondierung(monkeypatch):
+    """Regel 5 — `ertrag='ungeprueft'` heisst „nie gemessen".
+
+    Stuende es an einer angebundenen Quelle, saehe eine Vermutung in der Ertragstabelle
+    aus wie ein Befund — dieselbe Vermischung, die `fassung_quelle` und `sprecher`
+    anderswo verhindern.
+    """
+    w = _wache()
+    monkeypatch.setattr(w.sources, "REGISTRY",
+                        [_eintrag(id="doc-xx", country="XX", status="live",
+                                  connector="docfetch-xx", ebene="unterlagen",
+                                  ertrag="ungeprueft")])
+    assert any("ungeprueft" in z and "doc-xx" in z for z in w.befunde())
