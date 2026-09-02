@@ -42,7 +42,7 @@ const ExpandIcon = (full: boolean) =>
 
 export function DetailPanel({
   activeId, activeTab, mode, tick, buyerDemo, aktiveRegion, accountLimit,
-  rows = [], alle = [], onPickLead, onGoto,
+  rows = [], alle = [], fehlenderLead = null, onPickLead, onGoto,
   onTab, onClose, onExpand, onWf, onStar, onBodyAction,
 }: {
   activeId: string | null;
@@ -56,6 +56,10 @@ export function DetailPanel({
   // (nicht der lokale Lead-Typ), damit die Shell ihre eigene Lead-Form durchreichen kann.
   rows?: BriefLead[];
   alle?: BriefLead[];
+  // Kennung, die geoeffnet werden SOLLTE, im geladenen Grundraum aber nicht liegt (Deep-Link
+  // aus einer anderen Branche, Verlaufszeile einer Vergabestelle). Die Shell entscheidet das
+  // vor dem Oeffnen; hier wird es nur noch angezeigt.
+  fehlenderLead?: string | null;
   onPickLead?: (id: string) => void;
   onGoto?: (ziel: "netzwerk" | "strategie" | "award" | "vorschau" | "jetzt" | "trefferguete") => void;
   onTab: (k: string) => void;
@@ -110,9 +114,22 @@ export function DetailPanel({
 
   // Leerzustand = Tagesbriefing statt Platzhalter: was ist neu, was drängt, was lohnt sich.
   // Alle Zahlen aus der AKTUELL gefilterten Liste gerechnet — keine erfundenen Werte.
-  if (!activeId) return <LeerBriefing rows={rows} alle={alle} onPick={onPickLead} onGoto={onGoto} />;
+  if (!activeId) {
+    return fehlenderLead
+      ? <NichtGeladen id={fehlenderLead} onClose={onClose} />
+      : <LeerBriefing rows={rows} alle={alle} onPick={onPickLead} onGoto={onGoto} />;
+  }
 
-  const l = (LEADS as Lead[]).find((x) => x.id === activeId)!;
+  /* ⚠ Hier stand `…find(…)!`. Das Ausrufezeichen war eine Behauptung, keine Prüfung: es
+     versprach dem Compiler, dass zu JEDER `activeId` ein Lead in `LEADS` liegt. Das gilt
+     nicht — `LEADS` trägt nur den GELADENEN Grundraum, und geöffnet wurde auch aus dem
+     Käufer-Verlauf und per `?lead=`-Deep-Link, beides branchenübergreifend. Der Absturz
+     fiel erst zwei Zeilen später bei `.sprachen` auf; die Ursache ist diese Zeile und der
+     Aufrufer, der eine unbekannte Kennung überhaupt gesetzt hat (siehe `openLead`).
+     Der Zweig hier bleibt als Netz für den Fall, dass `LEADS` unter einem offenen Lead
+     ausgetauscht wird (Grundraumwechsel), bevor React die neue `activeId` sieht. */
+  const l = (LEADS as Lead[]).find((x) => x.id === activeId);
+  if (!l) return <NichtGeladen id={activeId} onClose={onClose} />;
   // Sprachfassungen kommen aus dem Detail-JSON (per Object.assign an den Lead gehaengt).
   // Fehlen sie, bleibt alles beim einsprachigen Verhalten — kein Sonderfall im Markup.
   const sprachen: string[] = Array.isArray((l as { sprachen?: string[] }).sprachen)
@@ -310,6 +327,30 @@ export function DetailPanel({
 
       <div onClick={handleBody} dangerouslySetInnerHTML={{ __html: bodyHtml }} />
     </>
+  );
+}
+
+/* Eine Kennung, zu der es im geladenen Grundraum keinen Lead gibt.
+ *
+ * Der Fall ist kein Fehler des Nutzers und keine kaputte Datenlage: `LEADS` trägt immer nur
+ * EINEN Grundraum (`/api/leads?branche=…`), während Kennungen auch von ausserhalb kommen —
+ * aus dem Vergabe-Verlauf einer Vergabestelle (`buyer_recent_awards` läuft über alle
+ * Branchen) und aus `?lead=`-Links. Bis zum 2026-09-02 endete genau das in einem stillen
+ * `TypeError`: das Panel öffnete sich, fand nichts und stürzte beim ersten Feldzugriff ab.
+ * Ein leerer Zustand, der sagt was los ist, ist auch deshalb besser als ein verschluckter
+ * Klick — sonst wirkt die Zeile im Käufer-Verlauf einfach kaputt. */
+function NichtGeladen({ id, onClose }: { id: string; onClose: () => void }) {
+  const { t } = useSprache();
+  return (
+    <div className="lb">
+      <div className="lb-head">
+        <p className="lb-h">{t("Diese Ausschreibung liegt nicht im geladenen Grundraum")}</p>
+        <p className="lb-l">
+          {t("Kennung {id} — sie gehört zu einer anderen Branche oder ist nicht mehr im Bestand. Wechselt oben den Grundraum, dann steht sie zur Verfügung.", { id })}
+        </p>
+        <button className="lb-h4btn" onClick={onClose}>{t("Zurück zum Überblick")}</button>
+      </div>
+    </div>
   );
 }
 

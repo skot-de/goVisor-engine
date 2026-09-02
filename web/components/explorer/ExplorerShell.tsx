@@ -137,6 +137,10 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
   const [sortDir, setSortDir] = useState(1);
   const [awAlertOff, setAwAlertOff] = useState(false);   // #24 Zuschlag-Alert-Band ausgeblendet
   const [activeId, setActiveId] = useState<string | null>(null);
+  /* Kennung, die geoeffnet werden sollte, im geladenen Grundraum aber nicht liegt.
+     `activeId` DARF sie nicht aufnehmen — das Detail loest `activeId` gegen `LEADS` auf und
+     stuerzte sonst ab (s. `openLead`). Getrennter Zustand, damit man es trotzdem sagen kann. */
+  const [fehlenderLead, setFehlenderLead] = useState<string | null>(null);
   const [activeTab, setActiveTab] = useState("uebersicht");
   const [mode, setMode] = useState<"browse" | "read" | "full">("browse");
   const [buyerDemo, setBuyerDemo] = useState("dbnetz");
@@ -238,12 +242,14 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
   // Echte Leads aus der Gold-Schicht laden — bei Mount und bei jedem Grundraum-Wechsel.
   // Deep-Link: ?lead=<id>&branche=<br>&tab=docs öffnet einen Lead direkt (z. B. eine analysierte
   // Unterlagen-Checkliste), ohne die Liste durchsuchen zu müssen. Einmalig beim Laden.
-  const deepRef = useRef<{ lead: string; tab: string } | null>(null);
+  // `branche` wird mitgeführt, um zu wissen, WANN der Link endgültig ins Leere zeigt: solange
+  // der angefragte Grundraum noch nicht geladen ist, ist „nicht dabei" bloss „noch nicht da".
+  const deepRef = useRef<{ lead: string; tab: string; branche: string | null } | null>(null);
   useEffect(() => {
     const p = new URLSearchParams(window.location.search);
     const lead = p.get("lead");
     if (!lead) return;
-    deepRef.current = { lead, tab: p.get("tab") || "docs" };
+    deepRef.current = { lead, tab: p.get("tab") || "docs", branche: p.get("branche") };
     const br = p.get("branche");
     if (br) { brancheManual.current = true; setAktiveBranche(br); }   // expliziter Deep-Link gewinnt vor Profil-Ableitung
   }, []);
@@ -272,9 +278,21 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
         setLoading(false);
         bump();
         const dl = deepRef.current;
-        if (dl && Array.isArray(data) && data.some((x: { id?: string }) => String(x.id) === dl.lead)) {
-          deepRef.current = null;
-          setTimeout(() => { openLead(dl.lead); setTimeout(() => setActiveTab(dl.tab), 0); }, 0);
+        if (dl && Array.isArray(data)) {
+          if (data.some((x: { id?: string }) => String(x.id) === dl.lead)) {
+            deepRef.current = null;
+            // `openLead` prüft selbst nochmal — zwischen diesem Timeout und seinem Lauf kann
+            // ein zweiter Grundraum-Abruf `LEADS` bereits wieder ausgetauscht haben.
+            setTimeout(() => { openLead(dl.lead); setTimeout(() => setActiveTab(dl.tab), 0); }, 0);
+          } else if (!dl.branche || dl.branche === aktiveBranche) {
+            /* Der Grundraum, auf den der Link zeigte, ist geladen — die Kennung ist trotzdem
+               nicht dabei. Bis zum 2026-09-02 blieb der Link hier einfach wirkungslos: keine
+               Meldung, kein Hinweis, die Liste stand da wie ohne Parameter. Jetzt sagt es das
+               Panel. (Ohne `?branche=` ist der geladene Grundraum der einzige, den wir prüfen
+               können — deshalb gilt schon der erste Abruf als Antwort.) */
+            deepRef.current = null;
+            setFehlenderLead(dl.lead);
+          }
         }
       })
       .catch(() => { if (!cancelled) setLoading(false); });
@@ -657,9 +675,19 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
   // ── Lead-Detail öffnen/schließen/Tabs ──────────────────────────────────────
   function openLead(id: string) {
     const l = CORE.find((x) => x.id === id) as (Lead & { status?: string; beschreibung?: string; log?: unknown[] }) | undefined;
-    if (l && l.status === "ungesichtet") l.status = "gesichtet";
+    /* ⛔ DAS TOR. Bis zum 2026-09-02 lief `setActiveId(id)` unbedingt durch — auch fuer eine
+       Kennung, die `LEADS` gar nicht kennt. `LEADS` traegt immer nur EINEN Grundraum, die
+       Kennungen kommen aber auch von ausserhalb: der Vergabe-Verlauf einer Vergabestelle
+       (`data-openlead`, gespeist aus `buyer_recent_awards` ueber ALLE Branchen) und der
+       `?lead=`-Deep-Link. Das Detail loest `activeId` gegen `LEADS` auf, bekam `undefined`
+       und stuerzte beim ersten Feldzugriff ab („Cannot read properties of undefined").
+       Der Rest der Funktion hat den Fall laengst mitgedacht (`if (l && …)`) — nur die eine
+       Zeile, die ihn ueberhaupt erst erzeugt, tat es nicht. Also hier, vor allem anderen. */
+    if (!l) { setFehlenderLead(id); setActiveId(null); setMode("browse"); return; }
+    setFehlenderLead(null);
+    if (l.status === "ungesichtet") l.status = "gesichtet";
     // Verlauf nie ganz leer: beim ERSTEN Öffnen einen Auftakt-Eintrag setzen (length-Guard → einmalig).
-    if (l && (!l.log || (l.log as unknown[]).length === 0)) logEvent(l, "create", t("Lead in goVisor geöffnet"));
+    if (!l.log || (l.log as unknown[]).length === 0) logEvent(l, "create", t("Lead in goVisor geöffnet"));
     setActiveId(id);
     setActiveTab("uebersicht");
     setMode("read");
@@ -668,7 +696,7 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
     // festgehalten werden — sie aendert sich, sobald Unterlagen nachkommen.
     recordLeadClick(id, l);   // erster Detail-Klick, fuer die Historie (war einmal das Fee-Gate)
     // Schwere Felder (Beschreibung + Vergabestellen-Profil) einmalig nachladen.
-    if (l && !detailLoaded.current.has(id)) {
+    if (!detailLoaded.current.has(id)) {
       detailLoaded.current.add(id);
       fetch(`/api/lead-detail?branche=${aktiveBranche}&id=${encodeURIComponent(id)}`)
         .then((r) => r.json())
@@ -678,6 +706,7 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
   }
   function closeLead() {
     setActiveId(null);
+    setFehlenderLead(null);
     setMode("browse");
   }
   function setTab(k: string) {
@@ -1190,8 +1219,10 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
     return () => window.removeEventListener("popstate", onPop);
   }, [bump]);
 
-  function setBranche(k: string) { brancheManual.current = true; setAktiveBranche(k); setActiveId(null); }
-  function resetBranche() { setAktiveBranche(profilBranche); setActiveId(null); }
+  // Der Grundraumwechsel ist der Weg, den die „nicht geladen"-Meldung vorschlägt — also
+  // muss er sie auch wieder wegräumen.
+  function setBranche(k: string) { brancheManual.current = true; setAktiveBranche(k); setActiveId(null); setFehlenderLead(null); }
+  function resetBranche() { setAktiveBranche(profilBranche); setActiveId(null); setFehlenderLead(null); }
 
   // Tastatur
   useEffect(() => {
@@ -1537,6 +1568,7 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
               accountLimit={accountLimit}
               rows={rows}
               alle={alleRows}
+              fehlenderLead={fehlenderLead}
               onGoto={(ziel) => {
                 // Ein Klick im Überblick soll die Ansicht wirklich wechseln, nicht nur
                 // etwas einfärben — deshalb dieselben Wege wie über die Rail.
