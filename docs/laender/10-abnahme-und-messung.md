@@ -216,6 +216,35 @@ Ein paar echte Beispiele, was hinter einer schönen Zahl steckte:
 | „fast alle bei 5 %" | ein enger Markt | zwei Zahlen im Verhältnis 1:25 (5 % Obergrenze, 0,20 % je Werktag) |
 | 5× genau −1 Tag Fristabweichung | ein Off-by-one bei uns | verlängerte Fristen: 51 % liegen auf Wochenvielfachen |
 
+## Wann ein Rahmen zur Entschuldigung wird
+
+Der Abschnitt weiter unten sagt: vergleiche im richtigen Rahmen, sonst misst du die Vergabeart
+statt der Vergabe. Bei **einer** Kennzahl kippt diese Regel, und es lohnt zu wissen, woran man
+den Fall erkennt.
+
+Die Verlässlichkeit je Auswertung (Kennzahl 10) misst nicht die Vergabe, sondern **uns**: wie
+viele Aussagen des Modells sich nicht belegen liessen. Diese Quote spreizt **3,2-fach nach
+Modell** — gpt-5.6-luna 4 %, gemini-2.5-flash 8 %, Llama-3.3-70B 11 %. Nach der üblichen Regel
+müsste man je Modell vergleichen. Das wäre falsch: eine dünne Auswertung ist dünn, egal welches
+Werkzeug sie erzeugt hat. Der Rahmen nähme dem Nutzer genau die Information, die ihn angeht, und
+schriebe unsere Werkzeugwahl als Naturgesetz fest.
+
+**Die Unterscheidung:**
+
+| | Rahmen nimmt heraus | richtig? |
+|---|---|---|
+| Kennzahl über die **Vergabe** | Streuung, die dem Vorgang äusserlich ist (Regelwerk, Gewerk, Textmenge) | ja |
+| Kennzahl über **unsere Arbeit** | Streuung, die aus unseren eigenen Entscheidungen stammt | nein |
+
+Die Prüffrage lautet: **wäre der Rahmen eine Entschuldigung?** „Für ein Llama-Modell ist das
+normal" entschuldigt; „für ein Anstrich-Leistungsverzeichnis ist das normal" erklärt. Das erste
+darf nicht in eine Kennzahl.
+
+⚠ **Und wo kein Vergleichswert angezeigt wird, muss trotzdem etwas die Schwelle bewachen.** Diese
+Kennzahl hat keinen Export, in dem eine Driftprüfung mitlaufen könnte. Also prüft ein Test die
+Schwelle gegen den echten Bestand und wird rot, wenn das oberste Zehntel weit wegwandert. Eine
+Konstante ohne Wächter ist eine Konstante, die still veraltet.
+
 ## Wenn ein Fehlalarm teurer ist als ein verpasster Befund
 
 Die meisten Kennzahlen dürfen im Zweifel melden: „Vertragsstrafe höher als üblich" kostet den

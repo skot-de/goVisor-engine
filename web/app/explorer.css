@@ -2422,6 +2422,37 @@ td.c-band .passung i{display:none}
 .profil-z span { color: var(--ink-500); font-variant-numeric: tabular-nums; }
 .profil-huerde b { color: var(--flag); }
 
+/* BIETERFRAGEN UND ANTWORTEN (2026-09-02).
+
+   ⚠ Als Zitatliste gestaltet, nicht als Frage-Antwort-Tabelle. Eine Tabelle mit den Spalten
+   „Frage" und „Antwort" behauptete eine Zuordnung, die die Daten nicht hergeben: die Marke im
+   Dokument trennt Abschnitte, sie sagt nicht, welcher Teil was ist. Nur 35 % der Abschnitte
+   enthalten überhaupt ein Fragezeichen.
+
+   Der Dateiname steht an jedem Abschnitt, weil er die einzige Prüfmöglichkeit ist. */
+.bf-kopf { margin: 0 0 var(--s3); font-size: 12.5px; line-height: 1.55; color: var(--ink-500); }
+.bf-l { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column;
+  gap: var(--s2); }
+.bf-z { padding: 9px 12px; border-radius: 7px; background: var(--surface-2); }
+.bf-z q { display: block; font-size: 13px; line-height: 1.6; color: var(--ink-700);
+  quotes: "\201E" "\201C"; }
+.bf-d { display: block; margin-top: 4px; font-family: var(--mono); font-size: 10px;
+  color: var(--ink-400); overflow-wrap: anywhere; }
+.bf-mehr { margin: var(--s2) 0 0; font-size: var(--t-meta); color: var(--ink-400); }
+
+/* VERLÄSSLICHKEIT JE AUSWERTUNG (Kennzahl 10, 2026-09-02).
+
+   ⚠ Bernstein, nicht warnrot: ein hoher Verwurfsanteil heisst LÜCKENHAFT, nicht falsch. Was
+   angezeigt wird, hat die Belegprüfung bestanden — was sie nicht bestand, ist gar nicht erst
+   da. Der Nutzer soll nachlesen, nicht misstrauen.
+
+   ⚠ Sie ersetzt den Halbsatz im Haftungshinweis, statt ihn zu doppeln: dort stand die Zahl
+   schon, nur ohne Bedeutung. Zwei Stellen mit derselben Zahl wären die Sorte Doppelung, die
+   eine Oberfläche unlesbar macht. */
+.verl { margin: 9px 0 0; padding: 8px 11px; border-radius: 7px; background: var(--flag-wash);
+  box-shadow: inset 2px 0 0 var(--flag); font-size: 12.5px; line-height: 1.55;
+  color: var(--ink-700); font-variant-numeric: tabular-nums; }
+
 /* WIDERSPRUCH BEI DER ANGEBOTSFRIST (Kennzahl 9, 2026-09-02).
 
    ⚠ Die einzige Zeile in dieser Ansicht, die WARNROT trägt statt bernstein. Ein übersehener

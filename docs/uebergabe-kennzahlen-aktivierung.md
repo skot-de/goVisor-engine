@@ -166,6 +166,62 @@ Angezeigt wird ab 100 Feldern (47 % der Vorgänge mit Formularen) eine graue Not
 ein Warnhinweis. Von den 636 Vorgängen über 400 Feldern sind 472 VHB-Formblätter, also
 Preisblätter: das ist Kalkulationsarbeit von Tagen, und sie steht nirgends in der Bekanntmachung.
 
+**Zu den Bieterfragen (widerlegt am 2026-09-02):** das Papier führt sie als stärkstes Ziel
+überhaupt und behauptet zugleich, sie existierten in unseren Daten **nicht** und seien **nicht
+abgreifbar**. Die erste Hälfte stimmt, die zweite nicht mehr.
+
+⚠ **Die zitierte Machbarkeitsstudie ist nicht falsch, sondern überholt.** Sie hat am 27.07. die
+**eForms-Attribute der Bekanntmachungen** durchsucht (475,3 Mio. Zeilen) und dort zu Recht nichts
+gefunden. Die Q&A stecken in den **Vergabeunterlagen** — als Bieterinformation,
+Bieterfragenkatalog, Bieterrundschreiben. Gemessen:
+
+| | |
+|---|---|
+| Vorgänge mit Fragerunde (`doc_qa_stand`) | **257** |
+| davon mit lesbarem Text | **172** |
+| verschiedene Abschnitte | **1.336** (Median 4 je Vorgang) |
+| noch offene Vergaben | **71** |
+
+*Wer eine Machbarkeitsstudie zitiert, prüft, welche Quelle sie untersucht hat.*
+
+**Was gebaut ist:** ein Block im Lead-Detail, der die Abschnitte zeigt, jeden mit seinem
+Dokument, und die Rechtslage nennt — § 20 Abs. 3 EU-VgV: die Auskünfte müssen allen Bietern
+zugänglich sein, gelten also auch für den, der nicht gefragt hat.
+
+⚠ **Es sind Abschnitte, keine Frage-Antwort-Paare.** Die Marke im Dokument trennt, sie ordnet
+nicht: nur **35 %** der Abschnitte enthalten überhaupt ein Fragezeichen. Zwei Spalten Frage und
+Antwort behaupteten eine Zuordnung, die die Daten nicht hergeben.
+
+⚠ **Entdubliert wird über den Text, nicht über den Dateinamen.** Derselbe Bieterfragenkatalog
+liegt als Stand 10.08., 13.08. und 20.08. im Paket; ohne diese Regel zählte er viermal
+(gemessen 264 Marken statt 66).
+
+**Die Aktivierung aus dem Papier bleibt sinnvoll** — für die Vorgänge ohne Fragerunde in unseren
+Daten. Sie ist nicht gebaut.
+
+**Zu 11 (gebaut am 2026-09-02, in meiner Reihe die zehnte):** sie ist die einzige, die nicht
+die Vergabe misst, sondern **uns**. Jede Aussage des Modells muss sich mit einem Zitat belegen
+lassen; was das nicht schafft, wird verworfen.
+
+⚠ **Sie brauchte keinen Export.** `rejected_items` lag längst im Lead-Detail, und im
+Haftungshinweis stand sogar die Zahl („12 unbelegte Aussagen wurden verworfen"). Was fehlte, war
+nicht die Zahl, sondern ihre Bedeutung. Der Halbsatz weicht jetzt, wenn die Zeile steht — zwei
+Stellen mit derselben Zahl wären Doppelung.
+
+**Und die Bedeutung ist nicht die naheliegende:** ein hoher Verwurfsanteil heisst **lückenhaft,
+nicht falsch**. Angezeigt wird nur, was die Belegprüfung bestanden hat. Gemessen über 8.104
+Auswertungen: ab 50 % Verwurf fallen die behaltenen Punkte von 59 auf 20, die fehlenden
+Doktypen steigen von 1 auf 2. Verteilung: Median 8 %, p75 17 %, p90 30 %, über 50 % nur 2,4 %.
+
+⚠ **Fast alles sind Belegfehler:** 3.967 von 4.006 aufgeschlüsselten Verwürfen (99 %) scheiterten
+an der Zitatprüfung, 39 am Schema, 0 am Typ. Die Aufschlüsselung `rej_schema`/`rej_typ`/`rej_beleg`
+gibt es aber **erst seit dem 02.09.** — 916 von 8.104 Auswertungen. Wer sie auswertet, misst den
+neuen Bestand, nicht den ganzen.
+
+⚠ **Absichtlich nicht nach Modell gerahmt**, obwohl die Quote 3,2-fach spreizt (gpt-5.6-luna 4 %,
+gemini-2.5-flash 8 %, Llama-3.3-70B 11 %). Das ist der Punkt, an dem die sonst richtige Regel
+„vergleiche im richtigen Rahmen" kippt — Begründung in der Bibel.
+
 **Zu 9 (gebaut am 2026-09-02):** die Zahlen des Papiers sind bestätigt — von 1.958 Vorgängen
 mit beiden Seiten stimmen 94,5 % überein, 4,1 % nennen in den Unterlagen eine **frühere** Frist,
 1,4 % eine **spätere** (Papier: 4,2 % und 1,6 %).
@@ -255,7 +311,7 @@ in den Unterlagen. Die 70 Fälle „Unterlagen früher" sind der zweite Hinweis:
 | # | Kennzahl | Zustand |
 |---|---|---|
 | 10 | **`evidence`** | 35,6 % Abdeckung, höchster Wert aller Signale, kommt im Frontend nie an |
-| 11 | **Verlässlichkeit je Auswertung** | aus `rejected_items` und `doc_verworfen` ableitbar |
+| 11 | **Verlässlichkeit je Auswertung** | ✅ gebaut 02.09. — ohne Export, s. unten |
 
 ### Braucht Zeit
 
@@ -308,7 +364,7 @@ Datensatz, wir gewinnen Daten, an die niemand sonst kommt.
 | Eignung fehlt (**1.710**), Aufforderung fehlt (**1.107**) | analog | zweit- und dritthäufigste |
 | Vorgang ganz ohne Unterlagen | „Zu dieser Ausschreibung liegen uns keine Unterlagen vor. Habt ihr Zugang zum Portal?" | Portale, an die wir nicht kommen (vergabe24) |
 | Land AT oder CH | dieselbe Bitte, doppelt gewichtet | **0 % Dokumentenabdeckung** in AT und CH |
-| **Bieterfragen und Antworten** | „Habt ihr Antworten der Vergabestelle erhalten? Die helfen allen Bietern." | existieren in unseren Daten **nicht** und sind **nicht abgreifbar** (siehe `bieterfragen-feasibility.md`). Stärkstes Ziel überhaupt |
+| **Bieterfragen und Antworten** | wir haben sie | ⚠ **Annahme widerlegt, siehe unten.** 257 Vorgänge mit Fragerunde, 172 mit lesbarem Text, 71 noch offen. Seit 02.09. im Lead-Detail |
 
 ### B — Aktivierung, die die Passung schärft
 

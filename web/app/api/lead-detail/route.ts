@@ -94,6 +94,30 @@ async function loadStellenprofil(): Promise<Stellenprofil> {
   return stellenprofil!;
 }
 
+/* Bieterfragen und Antworten. Waehrend der Angebotsfrist fragen Bewerber die Vergabestelle,
+ * und die Antworten muessen ALLEN Bietern zugaenglich sein (§ 20 Abs. 3 EU-VgV). Wer sie nicht
+ * liest, rechnet auf einem ueberholten Stand.
+ *
+ * ⚠ DIE UEBERGABE SAGT, ES GEBE SIE NICHT — und beruft sich auf eine Machbarkeitsstudie, die
+ * die eForms-ATTRIBUTE der Bekanntmachungen durchsucht hat. Dort stimmt das. Die Q&A stecken
+ * in den UNTERLAGEN („Bieterinformation", „Bieterfragenkatalog"): 257 Vorgaenge, 172 mit
+ * lesbarem Text. Wer eine Studie zitiert, prueft, welche Quelle sie untersucht hat.
+ *
+ * ⚠ ES SIND ABSCHNITTE, KEINE FRAGE-ANTWORT-PAARE. Die Marke („Frage 3:", „Zu Frage 3:")
+ * trennt, sagt aber nicht, ob das Folgende Frage oder Antwort ist — nur 35 % enthalten ein
+ * Fragezeichen. Die Anzeige behauptet deshalb keine Ordnung, die die Daten nicht hergeben.
+ *
+ * ⚠ `text` und `datei` stammen aus fremden Unterlagen. Wer sie rendert, escaped sie. */
+type Bieterfragen = { n: number; dateien: string[]; nDateien: number;
+                      auszug: { text: string; datei: string }[] };
+let bieterfragen: Record<string, Bieterfragen> | null = null;
+async function loadBieterfragen(): Promise<Record<string, Bieterfragen>> {
+  if (bieterfragen) return bieterfragen;
+  try { const roh = await loadDataFile("bieterfragen.json"); bieterfragen = roh ? JSON.parse(roh) : {}; }
+  catch { bieterfragen = {}; }
+  return bieterfragen!;
+}
+
 /* Widerspruch bei der Angebotsfrist (Kennzahl 9). Die Bekanntmachung sagt „02.09.", die
  * Unterlagen sagen „Ablauf der Angebotsfrist: 01.09., 18:00 Uhr". Wer der Bekanntmachung
  * folgt, kommt einen Tag zu spaet.
@@ -371,6 +395,8 @@ export async function GET(req: Request) {
     if (stt) detail.lbStandard = stt;
     const fw2 = (await loadFristwiderspruch())[id];
     if (fw2) detail.lbFristWiderspruch = fw2;
+    const bf = (await loadBieterfragen())[id];
+    if (bf) detail.lbFragen = bf;
     // Dateiliste des Portals — was dort LIEGT, ohne dass wir es gelesen haben.
     const li = await ladeDateiliste(id);
     if (li) detail.lbListe = li;

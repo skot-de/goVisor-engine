@@ -15,7 +15,19 @@ publiziert. Lassen sie sich automatisiert einholen und auswerten, und was folgt 
 
 ---
 
-## 1. Sind Bieterfragen/Antworten in unseren vorhandenen Daten? — Nein.
+> ⚠ **NACHTRAG 2026-09-02: Die Antwort unten gilt nur für die untersuchte Quelle.**
+> Diese Studie hat die **eForms-Attribute der Bekanntmachungen** durchsucht — dort stimmt das
+> Ergebnis. Die Bieterfragen stecken jedoch in den **Vergabeunterlagen** (Bieterinformation,
+> Bieterfragenkatalog, Bieterrundschreiben): 257 Vorgänge, 172 mit lesbarem Text, 1.336
+> Abschnitte. Sie sind seit dem 02.09. im Lead-Detail sichtbar
+> (`scripts/export_bieterfragen.py`).
+>
+> Das Übergabepapier hat aus dieser Studie ein *existiert nicht und ist nicht abgreifbar*
+> gemacht und damit das nach eigener Einschätzung stärkste Ziel für erledigt erklärt. Eine
+> Studie beantwortet die Frage, die sie gestellt hat — nicht die, für die man sie später
+> zitiert.
+
+## 1. Sind Bieterfragen/Antworten in unseren vorhandenen Daten? — In den Bekanntmachungen nein.
 
 Das `attributes`-Sammelfeld (475,3 Mio. path/value-Zeilen) nach allen plausiblen
 eForms-/Legacy-Pfaden durchsucht. Ergebnis:

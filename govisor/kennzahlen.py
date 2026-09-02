@@ -376,7 +376,6 @@ _EIGNUNGSCHECK: tuple[Kennzahl, ...] = (
 # oder ein harter Tagessatz sein, und die Anzeige sagte nicht welches. Beides ist jetzt
 # ergaenzt (s. `schwelleVergleich`); die Trennung liefert `export_schwellen.py` als Regel mit.
 _UEBERGABE: tuple[Kennzahl, ...] = (
-    _k("verlaesslichkeitAuswertung", "Verlässlichkeit je Auswertung", "keine"),
     _k("anforderungsDrift", "Anforderungs-Drift", "vorwert",
        "dieselbe Vergabestelle in der vorigen Runde"),
     _k("wirkungHuerdenBieterzahl", "Wirkung von Hürden auf die Bieterzahl", "markt",
@@ -446,6 +445,62 @@ _AKTIVIERUNG: tuple[Kennzahl, ...] = (
 # marktweite Wert stammt aus derselben Untererfassung wie der eigene, und dagegen verglichen
 # saehe jeder tief gelesene Vorgang extremer aus als er ist. Die Kennzahl behauptet nur
 # Anwesenheit und sagt nie „wenig Aufwand".
+# ── Bieterfragen und Antworten (gebaut am 2026-09-02) ───────────────────────────────────
+# ⚠ SIE STEHT IM PAPIER ALS „EXISTIEREN NICHT UND SIND NICHT ABGREIFBAR" — und zwar unter den
+# Aktivierungs-Auslоesern, mit dem Zusatz „staerkstes Ziel ueberhaupt". Die zitierte
+# Machbarkeitsstudie (`docs/bieterfragen-feasibility.md`, 27.07.) ist nicht falsch, sondern
+# UEBERHOLT: sie durchsuchte die eForms-ATTRIBUTE der Bekanntmachungen (475,3 Mio. Zeilen) und
+# fand dort zu Recht nichts. Die Q&A stecken in den UNTERLAGEN.
+#
+#     Wer eine Machbarkeitsstudie zitiert, prueft, WELCHE Quelle sie untersucht hat.
+#
+# Gemessen: 257 Vorgaenge mit Fragerunde, 172 mit lesbarem Text, 1.336 verschiedene
+# Abschnitte, 71 Vorgaenge noch offen.
+#
+# ⚠ ABSCHNITTE, KEINE FRAGE-ANTWORT-PAARE. Die Marke („Frage 3:", „Zu Frage 3:") trennt, sie
+# ordnet nicht — nur 35 % der Abschnitte enthalten ein Fragezeichen. Eine Tabelle mit den
+# Spalten „Frage" und „Antwort" behauptete eine Zuordnung, die die Daten nicht hergeben.
+#
+# ⚠ ENTDUBLIERT WIRD UEBER DEN TEXT, nicht ueber den Dateinamen: derselbe Katalog liegt als
+# Stand 10.08., 13.08. und 20.08. im Paket (gemessen 264 Marken statt 66).
+_BIETERFRAGEN: tuple[Kennzahl, ...] = (
+    Kennzahl("bieterfragen", "Bieterfragen und Antworten", "keine", "",
+             "lead-detail", "export_bieterfragen.py", "n_fragen", "Abschnitte"),
+)
+
+# ── Verlaesslichkeit je Auswertung (Kennzahl 10, gebaut am 2026-09-02) ──────────────────
+# Die einzige der Reihe, die nicht die Vergabe misst, sondern UNS. Jede Aussage des Modells
+# muss sich mit einem Zitat belegen lassen; was das nicht schafft, wird verworfen.
+#
+# ⚠ SIE BRAUCHT KEINEN EXPORT. `rejected_items` liegt in `lbAnalyse`, die Zahl der behaltenen
+# Punkte auch — die Quote entsteht im Renderer. Was fehlte, war nicht die Zahl (sie stand als
+# nackter Halbsatz im Haftungshinweis), sondern ihre Bedeutung.
+#
+# ⚠ EIN HOHER ANTEIL HEISST LUECKENHAFT, NICHT FALSCH. Angezeigt wird nur, was die
+# Belegpruefung bestanden hat. Gemessen ueber 8.104 Auswertungen: ab 50 % Verwurf fallen die
+# behaltenen Punkte von 59 auf 20, die fehlenden Doktypen steigen von 1 auf 2.
+# Verteilung: Median 8 %, p75 17 %, p90 30 %, ueber 50 % nur 2,4 %.
+#
+# ⚠ FAST ALLES SIND BELEGFEHLER: 3.967 von 4.006 aufgeschluesselten Verwuerfen (99 %)
+# scheiterten an der Zitatpruefung, 39 am Schema, 0 am Typ. ⚠ Die Aufschluesselung
+# (`rej_schema`/`rej_typ`/`rej_beleg`) gibt es allerdings erst seit dem 02.09. — 916 von 8.104
+# Auswertungen. Wer sie auswertet, misst den neuen Bestand, nicht den ganzen.
+#
+# ⚠ ABSICHTLICH NICHT NACH MODELL GERAHMT, obwohl die Quote 3,2-fach spreizt (gpt-5.6-luna 4 %,
+# gemini-2.5-flash 8 %, Llama-3.3-70B 11 %). Das ist der Punkt, an dem die sonst richtige Regel
+# „vergleiche im richtigen Rahmen" KIPPT: bei Kennzahlen ueber die Vergabe nimmt ein Rahmen
+# fremde Streuung heraus, hier waere er eine Entschuldigung fuer unsere eigene Werkzeugwahl.
+# Eine duenne Auswertung ist duenn, egal welches Modell sie erzeugt hat.
+#
+# ⚠ BEZUG `keine` MIT SCHWELLE, kein angezeigter Vergleichswert. „Ueblich sind 8 %" waere eine
+# Aussage ueber unseren Bestand, die den Nutzer nichts angeht — er will wissen, ob er hier
+# selbst nachlesen muss. Die Schwelle (30 %, oberstes Zehntel) haelt ein Test gegen den echten
+# Bestand nach, damit sie nicht still altert.
+_VERLAESSLICHKEIT: tuple[Kennzahl, ...] = (
+    Kennzahl("verlaesslichkeitAuswertung", "Verlässlichkeit je Auswertung", "keine", "",
+             "lead-detail", "explorerCore (aus lbAnalyse)", "rejected_items", "Anteil"),
+)
+
 # ── Widerspruch bei der Angebotsfrist (Kennzahl 9, gebaut am 2026-09-02) ────────────────
 # Die einzige der Reihe, bei der ein Fehlalarm eine Angebotsabgabe kosten kann. Gemessen an
 # allen Vorgaengen mit beiden Seiten (1.958): 94,5 % stimmen ueberein, 4,1 % nennen in den
@@ -624,7 +679,9 @@ INVENTAR: tuple[Kennzahl, ...] = tuple(
 ALLE: tuple[Kennzahl, ...] = (DOC_SIGNALE + VERGABESTELLEN + _ZEITFENSTER
                               + _ANFORDERUNGSPROFIL + _STELLENPROFIL + _FORMULAR
                               + _SCHWELLEN + _STANDARDTEXT
-                              + _FRISTWIDERSPRUCH + INVENTAR)
+                              + _FRISTWIDERSPRUCH
+                              + _VERLAESSLICHKEIT
+                              + _BIETERFRAGEN + INVENTAR)
 
 
 def nach_flaeche() -> dict[str, tuple[Kennzahl, ...]]:

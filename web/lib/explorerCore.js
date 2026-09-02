@@ -1156,6 +1156,72 @@ function schwellenVergleich(it, l){
 
 
 
+/* BIETERFRAGEN UND ANTWORTEN.
+ *
+ * Waehrend der Angebotsfrist fragen Bewerber die Vergabestelle; die Antworten muessen ALLEN
+ * Bietern zugaenglich sein (§ 20 Abs. 3 EU-VgV, § 12a EU-VOB/A). Wer sie nicht liest, rechnet
+ * auf einem ueberholten Stand — und merkt es nicht.
+ *
+ * ⚠ DIE UEBERGABE FUEHRT SIE ALS „existieren nicht und sind nicht abgreifbar". Die zitierte
+ * Machbarkeitsstudie hat die eForms-Attribute der BEKANNTMACHUNGEN durchsucht; dort stimmt es.
+ * In den UNTERLAGEN liegen sie: 257 Vorgaenge, 172 mit lesbarem Text, davon 71 noch offen.
+ *
+ * ⚠ ABSCHNITTE, KEINE PAARE. Die Marke trennt, sie ordnet nicht: nur 35 % der Abschnitte
+ * enthalten ein Fragezeichen, der Rest sind Antworten oder Fortsetzungen. Der Block sagt
+ * deshalb „Abschnitte" und nennt zu jedem die Datei — wer es genau wissen will, oeffnet sie.
+ *
+ * ⚠ TEXT UND DATEINAME KOMMEN AUS FREMDEN UNTERLAGEN. Beide durch `esc()`. */
+function renderBieterfragen(l){
+  const b = l.lbFragen;
+  if(!b || !b.auszug || !b.auszug.length) return '';
+  const mehr = b.n > b.auszug.length
+    ? `<p class="bf-mehr">${tk("Auszug, {a} von {b} Abschnitten. Vollständig in den Unterlagen.", {a: b.auszug.length, b: b.n})}</p>`
+    : '';
+  return `<section class="sec">
+    <h4>${tk("Bieterfragen und Antworten")}<span class="cov">${
+      tk("aus {n} Dokument(en) der Vergabestelle", {n: b.nDateien})}</span></h4>
+    <p class="bf-kopf">${tk("Die Vergabestelle muss diese Auskünfte allen Bietern zugänglich machen. Sie gelten also auch für euch, ob ihr gefragt habt oder nicht.")}</p>
+    <ul class="bf-l">${b.auszug.map(x =>
+      `<li class="bf-z"><q>${esc(x.text)}</q><span class="bf-d">${esc(x.datei)}</span></li>`).join('')}</ul>
+    ${mehr}</section>`;
+}
+
+/* KENNZAHL 10 — wie verlaesslich ist DIESE Auswertung?
+ *
+ * Die einzige der Reihe, die nicht die Vergabe misst, sondern uns. Jede Aussage des Modells
+ * muss sich mit einem Zitat aus dem Dokument belegen lassen; was das nicht schafft, wird
+ * verworfen. `rejected_items` stand bisher als nackte Zahl im Haftungshinweis („12 unbelegte
+ * Aussagen wurden verworfen") — die Zahl war da, ihre Bedeutung nicht.
+ *
+ * ⚠ EIN HOHER ANTEIL HEISST LUECKENHAFT, NICHT FALSCH. Was angezeigt wird, hat die Belegpruefung
+ * bestanden; was sie nicht bestand, ist gar nicht erst da. Gemessen ueber 8.104 Auswertungen:
+ * ab 50 % Verwurf fallen die behaltenen Punkte von 59 auf 20 und die fehlenden Doktypen
+ * steigen von 1 auf 2. Der Nutzer soll also nicht misstrauen, sondern selbst nachlesen.
+ *
+ * ⚠ UND ES SIND FAST AUSSCHLIESSLICH BELEGFEHLER: von 4.006 aufgeschluesselten Verwuerfen sind
+ * 3.967 (99 %) an der Zitatpruefung gescheitert, 39 am Schema, 0 am Typ. Die Aufschluesselung
+ * gibt es allerdings erst seit dem 02.09. (916 von 8.104 Auswertungen) — die Summe steht
+ * ueberall, der Grund nur neuerdings. Deshalb stuetzt sich die Anzeige auf die Summe.
+ *
+ * ⚠ ABSICHTLICH NICHT NACH MODELL GERAHMT, obwohl die Quote 3,2-fach spreizt (gpt-5.6-luna
+ * 4 %, gemini-2.5-flash 8 %, Llama-3.3-70B 11 %). Bei Kennzahlen ueber die VERGABE nimmt ein
+ * Rahmen fremde Streuung heraus; hier waere er eine Entschuldigung fuer unsere eigene
+ * Werkzeugwahl. Eine duenne Auswertung ist duenn, egal welches Modell sie erzeugt hat.
+ *
+ * ⚠ UND SIE MISST NICHT DIE LESETIEFE: die Quote liegt bei 8 % / 8 % / 8 % / 6 % ueber
+ * 1-3 / 4-7 / 8-15 / 16+ gelesene Dateien. */
+const VERWURF_HOCH = 0.30;   // oberstes Zehntel; Median 8 %, p75 17 %, ueber 50 % nur 2,4 %
+
+function verlaesslichkeit(a){
+  const verworfen = Number(a && a.rejected_items) || 0;
+  const behalten = (a && a.checklist ? a.checklist.length : 0);
+  const ganz = verworfen + behalten;
+  if(!verworfen || !ganz || verworfen / ganz <= VERWURF_HOCH) return '';
+  return `<p class="verl">${tk(
+    "Von {g} geprüften Aussagen ließen sich {n} nicht im Dokument belegen und wurden verworfen. Diese Auswertung ist lückenhafter als die meisten — lest die Unterlagen hier besonders selbst.",
+    {g: ganz, n: verworfen})}</p>`;
+}
+
 /* KENNZAHL 9 — Widerspruch bei der Angebotsfrist.
  *
  * Die einzige Kennzahl dieser Reihe, bei der ein Fehlalarm eine Angebotsabgabe kosten kann,
@@ -1398,7 +1464,8 @@ function renderChecklistBlock(a, l){
 
   const portal = (l.unterlagen&&l.unterlagen.url) ? `<a href="${esc(l.unterlagen.url)}" target="_blank" rel="noopener" class="link">${tk("Zum Vergabeportal ↗")}</a>` : '';
   const chead = `<div class="chead"><div class="r1"><span class="stand">Stand der Unterlagen: ${l.lbFiles||1} Datei${(l.lbFiles||1)===1?'':'en'}</span>${portal}</div>
-    <div class="disc">Bitte regelmäßig prüfen, ob neue Unterlagen vorliegen. LLM-gestützte Analyse — kann Fehler enthalten. Jede Angabe ist mit Fundstelle im Originaldokument belegt${a.rejected_items>0?`; ${a.rejected_items} unbelegte Aussagen wurden verworfen`:''}; maßgeblich bleiben die Vergabeunterlagen.</div></div>`;
+    ${verlaesslichkeit(a)}
+    <div class="disc">Bitte regelmäßig prüfen, ob neue Unterlagen vorliegen. LLM-gestützte Analyse — kann Fehler enthalten. Jede Angabe ist mit Fundstelle im Originaldokument belegt${a.rejected_items>0&&!verlaesslichkeit(a)?`; ${a.rejected_items} unbelegte Aussagen wurden verworfen`:''}; maßgeblich bleiben die Vergabeunterlagen.</div></div>`;
   const toc = `<div class="toc"><div class="th"><b>${tk("Eure Checkliste")}</b><span class="pr"><span class="cl-doneN">${dn}</span> von ${tot} erledigt</span></div><div class="chips">${chips}<button class="tchip all" data-clcollapse>${tk("Alle zuklappen")}</button></div><div class="tprog"><i class="cl-tprog" style="width:${tot?Math.round(dn/tot*100):0}%"></i></div></div>`;
 
   // a2 Erstnutzer: leere Bibliothek → die Textbausteine sind noch generische Vorlagen (§9.1).
@@ -1666,6 +1733,8 @@ function renderDocs(l){
       </details>
     </section>` : '';
 
+  const fragen = renderBieterfragen(l);
+
   /* Dateiliste des Portals — was dort LIEGT, ohne dass wir es gelesen haben.
      ⚠ Die Trennung ist der ganze Punkt. subreport (DE) und vergabeportal.at (AT) geben die
      Dateien nur gegen Anmeldung heraus, die LISTE aber öffentlich. Gemessen 2026-08-22:
@@ -1698,7 +1767,7 @@ function renderDocs(l){
       ${rest ? `<p class="dl-rest">${tk("und {n} weitere").replace('{n}', rest)}</p>` : ''}
     </section>`;})() : '';
 
-  return `<div class="dbody dbody-ov">${head}${anforderungen}${kriterien}${umfang}${liste}${volltext}</div>`;
+  return `<div class="dbody dbody-ov">${head}${anforderungen}${kriterien}${umfang}${liste}${volltext}${fragen}</div>`;
 }
 
 // #24 Zuschlag-Detail (Ticket §5): gleiche Detailstruktur wie ein Lead, andere Frage —

@@ -1018,6 +1018,8 @@ if $PY -m govisor.cli signals-docs; then
   # Fristwiderspruch (Kennzahl 9). Vergleicht die belegte Angebotsfrist aus den Unterlagen mit
   # der aus der Bekanntmachung. ⚠ Ein Fehlalarm kostet hier eine Abgabe, s. Filter im Skript.
   $PY scripts/export_fristwiderspruch.py || echo "  ⚠ fristwiderspruch.json nicht geschrieben — Kennzahl 9 fehlt im Detail."
+  # Bieterfragen und Antworten. Liest den Volltext der Q&A-Dokumente; braucht `doc_qa_stand`.
+  $PY scripts/export_bieterfragen.py || echo "  ⚠ bieterfragen.json nicht geschrieben — Bieterfragen fehlen im Detail."
 else
   echo "  ⚠ Signal-Extraktion übersprungen."
 fi

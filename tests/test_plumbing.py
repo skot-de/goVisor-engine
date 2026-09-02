@@ -1967,6 +1967,13 @@ def test_keine_uebersetzung_in_modul_konstanten():
     import re
     from pathlib import Path
     quelle = (Path(__file__).resolve().parent.parent / "web" / "lib" / "explorerCore.js").read_text()
+    # ⚠ NACHGESTELLTE KOMMENTARE ABSCHNEIDEN, sonst schliesst der Bereich nie. Der Test hing
+    # am 2026-09-02 an `const VERWURF_HOCH = 0.30;   // oberstes Zehntel …`: die Zeile endet
+    # auf dem Kommentar, nicht auf dem Semikolon, also blieb `in_const` fuer den ganzen Rest
+    # der Datei offen und JEDES spaetere `tk()` galt als Treffer. Eine skalare Konstante mit
+    # Kommentar reichte, um den Waechter unbrauchbar zu machen — er meldete drei Fundstellen,
+    # von denen keine ein Problem war.
+    ohne_kommentar = lambda z: re.sub(r"\s//.*$", "", z).rstrip()
     tiefe, in_const, treffer = 0, False, []
     for nr, zeile in enumerate(quelle.split("\n"), 1):
         if re.match(r"^(const|let|var)\s+[A-Z_a-z]", zeile) and not re.search(r"=>|function", zeile):
@@ -1975,7 +1982,7 @@ def test_keine_uebersetzung_in_modul_konstanten():
             tiefe += zeile.count("{") + zeile.count("[") - zeile.count("}") - zeile.count("]")
             if "tk(" in zeile:
                 treffer.append(f"{nr}: {zeile.strip()[:70]}")
-            if tiefe <= 0 and zeile.rstrip().endswith((";", "};", "];")):
+            if tiefe <= 0 and ohne_kommentar(zeile).endswith((";", "};", "];")):
                 in_const = False
     assert not treffer, "tk() in Modul-Konstante (Sprache eingefroren):\n  " + "\n  ".join(treffer[:8])
 
