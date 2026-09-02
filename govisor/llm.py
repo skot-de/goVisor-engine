@@ -454,14 +454,27 @@ RESERVE_USD = float(os.environ.get("GOVISOR_RESERVE_USD", "1.00"))
 # und kam so am 22.08. auf ~11 $ an einem Tag, ohne dass irgendeine Bremse falsch lag.
 # Bei 0,045 $ je Vorgang und einer offenen Beschaffungsluecke von ~5.983 Vergaben waeren
 # das rund 271 $, die sonst niemand geplant haette.
-# 6,00 $ statt der ersten 3,00 — gerechnet, nicht geraten. Zufluss ~233 Vergaben je
-# Kalendertag (Fristen der naechsten 42 Tage durch 42; Gegenprobe ueber Bestand geteilt
-# durch mittlere Laufzeit: 311). Kosten 0,048 $ je Vorgang (gemessen ueber 310 Vorgaenge).
-# Bei der heutigen Abdeckung von 43 % sind das ~5,7 $/Tag mit 10 % Puffer; 3,00 $ reichten
-# nicht einmal dafuer und wurden am 22.08. nach 4,02 $ gerissen, waehrend 886 Vorgaenge
-# warteten. Bei VOLLER Abdeckung waeren es 12–16 $/Tag — dann traegt erst der Stapelweg
+# ── 3,00 $ seit dem 2026-09-02, und die Zahl ist KEINE Rechnung mehr ────────────────
+#
+# Gerechnet waeren es 6,00: Zufluss ~233 Vergaben je Kalendertag (Fristen der naechsten
+# 42 Tage durch 42; Gegenprobe ueber Bestand geteilt durch mittlere Laufzeit: 311), Kosten
+# 0,048 $ je Vorgang (gemessen ueber 310 Vorgaenge), bei 43 % Abdeckung also ~5,7 $/Tag mit
+# 10 % Puffer. Bei VOLLER Abdeckung waeren es 12–16 $/Tag — dann traegt erst der Stapelweg
 # (halber Preis) und der Dublettenwall (−22 %) die Rechnung.
-TAG_USD = float(os.environ.get("GOVISOR_TAG_USD", "6.00"))
+#
+# Der Deckel steht trotzdem auf 3,00, weil das Produkt noch keinen Kunden hat und die
+# Aufgabe gerade lautet: die Mechanik pruefen, nicht den Bestand vervollstaendigen. Fuer
+# das Pruefen genuegen die 8.104 bereits ausgewerteten Vorgaenge; Vollstaendigkeit braucht
+# erst der erste zahlende Nutzer.
+#
+# ⚠ WAS DAS KOSTET, damit es niemand fuer eine Optimierung haelt: bei 3,00 $ schafft der
+# Arbeiter ~62 Vorgaenge am Tag, der Dokumentenarbeiter holt mehr herein. Der Rueckstau
+# (2026-09-02: 1.560 von 9.664) SCHLIESST SICH NICHT, er waechst langsam. Das ist die
+# bewusst gekaufte Seite der Entscheidung, kein Fehler. Zurueckdrehen ist eine Zeile.
+#
+# ⚠ Die Historie zur Einordnung: 89 % aller je gebuchten LLM-Kosten (95,89 von 107,70 $)
+# fielen an ZWEI Tagen an, dem 24. und 25.08., als es diesen Deckel noch nicht gab.
+TAG_USD = float(os.environ.get("GOVISOR_TAG_USD", "3.00"))
 LIMIT_USD = float(os.environ.get("GOVISOR_LIMIT_USD", "5.00"))
 
 # ⚠ **EIGENER TAGESDECKEL FUER HOCHGELADENE UNTERLAGEN.** Ein Nutzer, der eine fehlende
