@@ -56,12 +56,12 @@ abgerufen. Nicht: „gebaut". Gebaut ist davon nur Deutschland.
 | **CY** | 0,3 % | **100 %** | 0,0 % | ✅ European Dynamics | [european-dynamics](european-dynamics.md) |
 | **AT** | 0,1 % | ? | **76,4 %** ⚠ | ✅ angebunden | — |
 | **IS** | 0,1 % | ? | 17,9 % | ⚪ nur TED | — |
-| **RO** | 0,0 % | ? | **50,0 %** ⚠ | ⚪ nur TED, ⚠ nur 44 Links/Jahr | — |
+| **RO** | ⚠ *neu* | **offen** | 15,1 % | ✅ `e-licitatie.ro` 99,7 %, zweiphasig | [ro](ro.md) |
 
-⚠ **RO steht in dieser Tabelle noch mit den alten, falschen Zahlen** (0,0 % Anteil).
-Nach der Reparatur der Muster: `e-licitatie.ro` **99,7 %**, 1.257 Ausschreibungen im Monat,
-**offen** — siehe [ro](ro.md). Die Anteilsspalte stimmt erst nach einem Neulauf von
-`sondiere_tief.py`.
+⚠ **Die Spalte „EU-Anteil" steht noch auf den alten Mustern.** RO und AT waren darin
+untermessen (RO 5 statt 1.257 Ausschreibungen im Monat, AT 46 statt 584); die Skripte sind
+repariert, aber `data/sondierung/_tief/` ist noch nicht neu gebaut. Einzelheiten:
+[`linktiefe.md`](linktiefe.md) §4.
 
 ## 3. Ertrag je Abrufer — die Achse, die zählt
 
@@ -115,6 +115,8 @@ brauchen alle drei denselben sitzungsführenden Abrufer** (POST mit Formularzust
   ([fonds-ebene](fonds-ebene.md)).
 - **Die unterschwellige Ebene** ist nur dort geklärt, wo sie im selben Register liegt
   (IE, SI, HU, BG teilweise).
-- ⚠ **Rumänien: 44 Unterlagen-Links im Jahr.** Bei der Landesgrösse ist das kein Ergebnis,
-  sondern eine Auffälligkeit — entweder verlinkt RO nicht, oder unsere Extraktion greift
-  dort nicht.
+- ✅ **Rumänien ist erledigt** — und die Auffälligkeit („44 Links im Jahr") war unsere
+  Extraktion, nicht das Land. `e-licitatie.ro` trägt 99,7 % und ist offen ([ro](ro.md)).
+- ⚠ **Österreich ist nachzumessen.** Derselbe Muster-Fehler zeigte 46 statt 584
+  Ausschreibungen im Monat; die 76,4 % „ohne Verfahren" in der Tabelle oben stammen aus
+  einer Stichprobe von 33 Links und sind wertlos.
