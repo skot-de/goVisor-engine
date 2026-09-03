@@ -26,6 +26,27 @@ locales.active()         # Default ist DE — das ist die Falle
 `normalize_company` benutzt, muss `locales.use(country)` aufrufen. `dedupe.py` tat es
 jahrelang nicht (s. [Kapitel 04](04-dublettenwall.md)).
 
+## Wie viel ein Profil ausmacht — und woran man es misst
+
+Fünf Profile stehen da: **DE, FR, CH, AT, LU** (Stand 2026-09-03). Die eine Kennzahl, an
+der ein neues Profil abgenommen wird, ist die Abdeckung von `public_name` auf den
+**Käufernennungen des Landes** — sie sagt, ob die öffentliche Hand als solche erkannt wird:
+
+| Land | mit DE-Standardprofil | mit eigenem Profil | Grundlage |
+|---|---:|---:|---|
+| AT | — | **72,1 %** | 401.716 Käufernennungen |
+| LU | 0,4 % | **74,5 %** | 6.142 Bekanntmachungen, 762 Käufernamen (2026-09-03) |
+
+⚠ **0,4 % ist die ehrliche Zahl für „kein Profil".** Luxemburg arbeitet auf Französisch
+(fr 4.734 · en 1.114 · de 266); ein deutsches Muster trifft dort so gut wie nichts. Wer
+ein Land ohne Profil einliest, bekommt keine Fehlermeldung — er bekommt eine Datenbank, in
+der die öffentliche Hand als Firma gilt.
+
+⚠ **Was ein Regex-Profil NICHT löst: derselbe Käufer in zwei Sprachen.** „European
+Commission" (110 Nennungen) und „Commission européenne" (69) sind dasselbe Haus und
+bleiben zwei Entitäten. DACH hatte diesen Fall nie — er kommt mit jedem mehrsprachigen
+Land und gehört der Entity-Resolution, nicht dem Profil.
+
 ## Rechtsformen: messen, welche fehlt
 
 Ein einziges fehlendes Muster kostet Hunderte Paare. Gemessen an AT:
