@@ -468,3 +468,83 @@ def test_jeder_grund_hat_einen_eigenen_satz():
                  "Nicht jedes Portal gibt eine Liste der Unterlagen ohne Anmeldung heraus",
                  "Diese Vergabe weist Unterlagen aus"):
         assert satz in tsx
+
+
+# ── Vierte Stufe: heimatlose Zuschlaege ─────────────────────────────────────────────
+
+BAU = (WURZEL / "scripts" / "build_vorgaenge.py").read_text(encoding="utf-8")
+
+
+def test_andocken_ist_nicht_transitiv():
+    """⚠ „gleicher Käufer + gleicher Titel + Zeitfenster" als Verschmelzung wird TRANSITIV:
+    A passt zu B, B zu C, C zu D. Über ein gleitendes Halbjahresfenster entstanden dabei
+    Gruppen von 630, 533 und 462 Vorgängen — ein Jahrzehnt „d-münchen: gebäudereinigung" in
+    einer Akte. Kandidaten hängen sich an Ziele, Ziele nie aneinander."""
+    kern = _ohne_kommentare_py(BAU).split("def _andocken(")[1].split("\ndef ")[0]
+    assert "union" not in kern.lower() and "find(" not in kern
+
+
+def test_eigene_folderid_ist_ein_veto():
+    """Trägt der Kandidat eine amtliche Verfahrenskennung, hat der Auftraggeber selbst
+    gesagt, dass es ein anderes Verfahren ist. Eine Schätzung darf das nicht überstimmen."""
+    kern = _ohne_kommentare_py(BAU).split("def _andocken(")[1].split("\ndef ")[0]
+    # ast.unparse normalisiert Anfuehrungszeichen — beide Formen zulassen.
+    assert 'beste == "folder"' in kern or "beste == 'folder'" in kern
+
+
+def test_mehrdeutiges_bleibt_liegen():
+    """Ein falsches Zusammenlegen behauptet eine Einheit, die es nicht gibt, und ist teurer
+    als ein verpasstes. 47.546 Kandidaten bleiben deshalb bewusst liegen."""
+    kern = _ohne_kommentare_py(BAU).split("def _andocken(")[1].split("\ndef ")[0]
+    assert "len(passend) == 1" in kern
+
+
+def test_kandidat_hat_keine_eigene_ausschreibung():
+    """Zwei Vorgänge mit je eigener Ausschreibung sind zwei Vergaben. Genau daran hängt die
+    Unterscheidung zwischen Bruchstück und jährlicher Wiederausschreibung: „D-Dresden:
+    Auftausalz" laeuft 2004 bis 2008 jedes Jahr mit eigener Ausschreibung UND eigenem
+    Zuschlag und darf NICHT zusammenfallen."""
+    kern = _ohne_kommentare_py(BAU).split("def _andocken(")[1].split("\ndef ")[0]
+    assert "cn > 0 or n != 1" in kern
+
+
+def test_kaeufer_kommt_aus_dem_laufenden_durchgang():
+    """⚠ Der erste Entwurf las den Käufer über `vorgang_notice.parquet` — die AUSGABE des
+    vorherigen Laufs. Nach jeder Änderung am Schlüssel hätte die Stufe stumm ins Leere
+    gegriffen."""
+    kern = _ohne_kommentare_py(BAU).split("def _andocken(")[1].split("\ndef ")[0]
+    assert "vorgang_notice" not in kern
+    assert "zeilen_n" in kern
+
+
+def test_angedocktes_wird_ausgewiesen():
+    """Über Käufer und Titel zugeordnet ist erschlossen, nicht amtlich. Wie bei der Kette
+    gehört das an die Oberfläche und nicht nur in die Tabelle."""
+    assert "n_angedockt BIGINT" in BAU
+    assert '"angedockt"' in SKRIPT.read_text(encoding="utf-8")
+    tsx = (WURZEL / "web" / "components" / "explorer" / "Vorgangsakte.tsx").read_text(encoding="utf-8")
+    assert "z.angedockt" in tsx
+
+
+def test_laender_ohne_party_entity_werden_benannt():
+    """PL und EU führen keine `party_entity` — dort greift die Stufe nicht. Das ist eine
+    Lücke, keine Eigenschaft, und muss im Lauf sichtbar sein statt still zu bleiben."""
+    kern = BAU.split("def _andocken(")[1].split("\ndef ")[0]
+    assert "Andocken uebersprungen" in kern
+
+
+def test_kein_gezaehlter_satz_ohne_einzahlfassung():
+    """⚠ ZWEIMAL DERSELBE FEHLER AN EINEM TAG: erst „1 Bekanntmachungen", dann
+    „1 Zuschläge". Jeder Satz mit einem gezählten Platzhalter braucht eine Einzahlfassung,
+    sonst schreibt die Seite bei genau einem Element falsches Deutsch.
+
+    Geprüft werden Sätze, die mit `{n} ` beginnen und auf ein Mehrzahl-Wort enden — die
+    Form, in der der Fehler beide Male auftrat."""
+    import re
+    tsx = (WURZEL / "web" / "components" / "explorer" / "Vorgangsakte.tsx").read_text(encoding="utf-8")
+    gezaehlt = re.findall(r't\("(\{n\} [^"]+)"', tsx)
+    # Zulaessig ist eine Einzahlfassung (`=== 1 ?`) ODER ein Waechter, der die Eins gar
+    # nicht erst durchlaesst (`> 1 ?`) — beides verhindert „1 Zuschläge".
+    ohne = [k for k in gezaehlt
+            if "=== 1" not in (v := tsx.split(f't("{k}"')[0][-300:]) and "> 1" not in v]
+    assert not ohne, "gezählte Sätze ohne Einzahlfassung: " + repr(ohne)

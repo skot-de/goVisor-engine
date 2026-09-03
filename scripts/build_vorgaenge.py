@@ -64,12 +64,18 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 RANG = {"folder": 0, "rueckref": 1, "allein": 2}
 DAUERANGEBOT_TAKT = 4.0   # Glieder je Jahr; darueber ist es kein Neuausschreibungs-Rhythmus
 
+# Vierte Stufe: wie weit ein heimatloser Zuschlag zurueckgreifen darf, um seine Ausschreibung
+# zu finden. Gemessen bei 12 und 24 Monaten: das laengere Fenster ordnet WENIGER zu (56.529
+# statt 57.260), weil mehr Ausschreibungen passen und der Fall damit mehrdeutig wird.
+ANDOCK_TAGE = 372
+
 SPALTEN_V = ("land VARCHAR, vorgang_id VARCHAR, schluessel_quelle VARCHAR, "
              "n_bekanntmachungen BIGINT, n_ausschreibung BIGINT, n_zuschlag BIGINT, "
              "n_korrektur BIGINT, n_vorinfo BIGINT, "
              "erste_veroeffentlichung DATE, letzte_veroeffentlichung DATE, "
              "titel VARCHAR, cpv VARCHAR, vollstaendig BOOLEAN, "
-             "hat_unterlagen BOOLEAN, n_dokumente BIGINT, n_anforderungen BIGINT")
+             "hat_unterlagen BOOLEAN, n_dokumente BIGINT, n_anforderungen BIGINT, "
+             "n_angedockt BIGINT")
 SPALTEN_N = ("land VARCHAR, vorgang_id VARCHAR, notice_id VARCHAR, notice_kind VARCHAR, "
              "jahr BIGINT, veroeffentlicht DATE, hat_unterlagen BOOLEAN")
 SPALTEN_K = ("land VARCHAR, kette_id VARCHAR, vorgang_id VARCHAR, position BIGINT, "
@@ -108,6 +114,98 @@ def _schreibe(con, pfad: pathlib.Path, zeilen: list, spalten: str) -> None:
         con.execute("INSERT INTO _t SELECT * FROM _arrow")
         con.unregister("_arrow")
     con.execute(f"COPY _t TO '{pfad.as_posix()}' (FORMAT PARQUET)")
+
+
+def _andocken(con, land: str, gruppen: dict, zeilen_n: list) -> dict[str, str]:
+    """Vierte Stufe des Wasserfalls: heimatlose Zuschlaege an ihre Ausschreibung.
+
+    **Das Problem.** Ein Zuschlag ohne `ContractFolderID` und ohne Rueckverweis wird zu
+    einem eigenen Vorgang. Er sieht dann aus wie eine zweite Vergabe und landet als solche
+    in der Kette — gemessen am 2026-09-02: 17 % der Ketten enthielten zwei Glieder mit
+    identischem Titel weniger als zwoelf Monate auseinander, also eine Vergabe in Stuecken.
+
+    **Die Regel, und warum sie so eng ist.** Ein Kandidat dockt an, wenn er
+      * genau EINE Bekanntmachung hat und KEINE eigene Ausschreibung (`cn`),
+      * seinen Schluessel NICHT aus einer amtlichen `ContractFolderID` bezieht,
+      * und genau EINE gleichnamige Ausschreibung desselben Kaeufers innerhalb von
+        `ANDOCK_TAGE` vor sich findet.
+    Passen mehrere, passiert nichts. Ein falsches Zusammenlegen behauptet eine Einheit, die
+    es nicht gibt, und ist teurer als ein verpasstes: 47.546 Kandidaten bleiben deshalb
+    bewusst liegen.
+
+    ⚠ WARUM NICHT EINFACH „gleicher Kaeufer + gleicher Titel + Zeitfenster". Weil so ein
+    Zusammenlegen TRANSITIV wird: A passt zu B, B zu C, C zu D. Ueber ein gleitendes
+    Halbjahresfenster entstanden dabei Gruppen von 630, 533 und 462 Vorgaengen — ein
+    ganzes Jahrzehnt „d-muenchen: gebaeudereinigung" in einer Akte. Hier gibt es keine
+    Transitivitaet: Kandidaten haengen sich an Ziele, Ziele nie aneinander.
+
+    ⚠ EINE EIGENE `ContractFolderID` IST EIN VETO. Traegt der Kandidat eine, hat der
+    Auftraggeber selbst gesagt, dass es ein anderes Verfahren ist. 20.380 Kandidaten sind
+    dadurch geschuetzt; sie zu ueberstimmen hiesse, eine Schaetzung ueber eine Angabe zu
+    stellen.
+
+    ⚠ BRAUCHT `party_entity`. PL und EU fuehren keine — dort greift die Stufe nicht, und
+    das ist eine Luecke, keine Eigenschaft (s. `docs/laender/`).
+    """
+    pe = ROOT / "data" / "gold" / land / "party_entity.parquet"
+    if not pe.exists():
+        print(f"      Andocken uebersprungen: {land} hat keine party_entity")
+        return {}
+
+    fakten: dict[str, tuple] = {}
+    for vid, teile in gruppen.items():
+        daten = sorted(t[2] for t in teile if t[2])
+        aus = [t for t in teile if t[1] == "cn"] or teile
+        titel = " ".join(str(aus[0][3] or "").lower().split())
+        if not titel or not daten:
+            continue
+        beste = min((t[0] for t in teile), key=lambda q: RANG[q])
+        fakten[vid] = (titel, daten[0], sum(1 for t in teile if t[1] == "cn"),
+                       len(teile), beste)
+
+    # ⚠ DIE ZUORDNUNG MUSS AUS DEM LAUFENDEN DURCHGANG KOMMEN. Der erste Entwurf las den
+    # Kaeufer ueber `vorgang_notice.parquet` — also ueber die AUSGABE des vorherigen Laufs.
+    # Deren Vorgangsnummern sind nicht die, die gerade entstehen; nach jeder Aenderung am
+    # Schluessel haette die Stufe stumm ins Leere gegriffen.
+    je_notice = {str(a): str(b) for a, b in con.execute(
+        f"select notice_id, min(entity_id) from read_parquet('{pe.as_posix()}') "
+        "where role = 'buyer' group by 1").fetchall()}
+    kaeufer: dict[str, str] = {}
+    for _land, vid, nid, *_rest in zeilen_n:
+        k = je_notice.get(nid)
+        if k and (vid not in kaeufer or k < kaeufer[vid]):
+            kaeufer[vid] = k
+    if not kaeufer:
+        print(f"      Andocken uebersprungen: {land} ohne Kaeuferzuordnung")
+        return {}
+
+    nach: dict[tuple, list] = collections.defaultdict(list)
+    for vid, (titel, datum, cn, n, beste) in fakten.items():
+        k = kaeufer.get(vid)
+        if k:
+            nach[(k, titel)].append((vid, datum, cn, n, beste))
+
+    karte: dict[str, str] = {}
+    mehrdeutig = veto = 0
+    for _, liste in nach.items():
+        ziele = [x for x in liste if x[2] > 0]
+        if not ziele:
+            continue
+        for vid, datum, cn, n, beste in liste:
+            if cn > 0 or n != 1:
+                continue
+            if beste == "folder":
+                veto += 1
+                continue
+            passend = [z for z in ziele
+                       if z[1] <= datum and (datum - z[1]).days <= ANDOCK_TAGE]
+            if len(passend) == 1:
+                karte[vid] = passend[0][0]
+            elif len(passend) > 1:
+                mehrdeutig += 1
+    print(f"      Andocken: {len(karte):,} heimatlose Zuschlaege zugeordnet · "
+          f"{veto:,} durch eigene FolderID geschuetzt · {mehrdeutig:,} mehrdeutig gelassen")
+    return karte
 
 
 def baue(con, land: str) -> tuple[int, int]:
@@ -156,6 +254,20 @@ def baue(con, land: str) -> tuple[int, int]:
         zeilen_n.append((land, vid, s_nid, str(kind or ""), int(jahr or 0), datum, bool(dok)))
         gruppen[vid].append((quelle, str(kind or ""), datum, titel, cpv, dok))
 
+    # Vierte Stufe: heimatlose Zuschlaege an ihre Ausschreibung. Laeuft NACH der Gruppierung,
+    # weil sie Gruppen-Eigenschaften braucht (hat der Vorgang eine eigene Ausschreibung?).
+    karte = _andocken(con, land, gruppen, zeilen_n)
+    angedockt: dict[str, int] = collections.Counter()
+    if karte:
+        zeilen_n = [(l, karte.get(v, v), *rest) for l, v, *rest in zeilen_n]
+        neue: dict[str, list] = collections.defaultdict(list)
+        for vid, teile in gruppen.items():
+            ziel = karte.get(vid, vid)
+            if ziel != vid:
+                angedockt[ziel] += len(teile)
+            neue[ziel].extend(teile)
+        gruppen = neue
+
     zeilen_v: list = []
     for vid, teile in gruppen.items():
         arten = collections.Counter(t[1] for t in teile)
@@ -176,7 +288,7 @@ def baue(con, land: str) -> tuple[int, int]:
             daten[0] if daten else None, daten[-1] if daten else None,
             (aus[0][3] or None), (aus[0][4] or None),
             arten.get("cn", 0) > 0 and arten.get("can", 0) > 0,
-            dokumente > 0, dokumente, anforderungen))
+            dokumente > 0, dokumente, anforderungen, angedockt.get(vid, 0)))
 
     _schreibe(con, gold / "vorgaenge.parquet", zeilen_v, SPALTEN_V)
     _schreibe(con, gold / "vorgang_notice.parquet", zeilen_n, SPALTEN_N)

@@ -342,7 +342,12 @@ def _akten(con: duckdb.DuckDBPyConnection, land: str,
             "bis": _tag(k.get("letzte_veroeffentlichung")),
             "zahlen": {a: int(k.get(f"n_{a}") or 0)
                        for a in ("bekanntmachungen", "ausschreibung", "zuschlag",
-                                 "korrektur", "vorinfo", "dokumente", "anforderungen")},
+                                 "korrektur", "vorinfo", "dokumente", "anforderungen",
+                                 # ⚠ MUSS SICHTBAR SEIN. Zuschlaege, die ueber Kaeufer und
+                                 # Titel zugeordnet wurden, sind erschlossen und nicht
+                                 # amtlich verknuepft — wie bei der Kette gehoert das an die
+                                 # Oberflaeche und nicht nur in die Tabelle.
+                                 "angedockt")},
             "verlauf": _verlauf(meine),
             "dokumente": [d for d in (_listing(t["notice_id"]) for t in meine) if d],
         }

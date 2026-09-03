@@ -180,6 +180,11 @@ export function Vorgangsakte() {
           {a.cpv ? <>{t("CPV {c}", { c: a.cpv })} · </> : null}
           {a.von ? t("{von} bis {bis}", { von: monat(a.von), bis: monat(a.bis) }) : null}
           {" · "}
+          {z.angedockt > 0
+            ? <>{z.angedockt === 1
+                  ? t("ein Zuschlag über Käufer und Titel zugeordnet, nicht amtlich verknüpft.")
+                  : t("{n} Zuschläge über Käufer und Titel zugeordnet, nicht amtlich verknüpft.", { n: z.angedockt })}{" · "}</>
+            : null}
           {z.bekanntmachungen === 1
             ? t("eine Bekanntmachung")
             : t("{n} Bekanntmachungen", { n: z.bekanntmachungen })}
@@ -227,7 +232,7 @@ export function Vorgangsakte() {
           a.dokumente.map((d) => (
             <div key={d.notice} className="vg-dok">
               <div className="vg-dok-kopf">
-                <strong>{t("{n} Dateien", { n: d.n })}</strong>
+                <strong>{d.n === 1 ? t("eine Datei") : t("{n} Dateien", { n: d.n })}</strong>
                 <span className="fs">{d.quelle}</span>
                 {/* Der Unterschied zwischen „gelesen" und „nur gelistet" muss stehen
                     bleiben. Eine Dateiliste ist ein Inhaltsverzeichnis, kein Inhalt. */}
@@ -257,7 +262,9 @@ export function Vorgangsakte() {
             {guete ? <span className={`vg-tag ${guete.ton}`}>{t(guete.text)}</span> : null}
           </h2>
           <p className="vg-hinweis">
-            {t("{n} Vergaben, die inhaltlich aufeinander folgen.", { n: a.kette.n_glieder })}
+            {a.kette.n_glieder === 1
+              ? t("Eine weitere Vergabe hängt inhaltlich mit dieser zusammen.")
+              : t("{n} Vergaben, die inhaltlich aufeinander folgen.", { n: a.kette.n_glieder })}
             {" "}
             {guete ? t(guete.satz) : t("Die Verknüpfung ist erschlossen, nicht amtlich. Sie beruht auf Käufer und Leistung.")}
             {a.kette.dauerangebot
@@ -298,7 +305,9 @@ export function Vorgangsakte() {
             ))}
           </ol>
           {a.kette.gekuerzt > 0
-            ? <p className="fs">{t("{n} weitere Glieder in dieser Kette", { n: a.kette.gekuerzt })}</p>
+            ? <p className="fs">{a.kette.gekuerzt === 1
+                ? t("ein weiteres Glied in dieser Kette")
+                : t("{n} weitere Glieder in dieser Kette", { n: a.kette.gekuerzt })}</p>
             : null}
         </section>
       ) : null}
