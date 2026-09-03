@@ -720,6 +720,26 @@ DOC_REGISTRY: list[Source] = [
                    "`Disallow: /app/docmgmt`. Der Dateiendpunkt liegt EXAKT im gesperrten "
                    "Pfad. Fuenfter Fall dieser Bauart. Nicht abgerufen.",
            url="https://eu.eu-supply.com"),
+    # ── Mercell (NO/NL/DK/DE/FI/LU), sondiert am 2026-09-03 · docs/sondierung/mercell.md ─
+    Source("sond-mercell", "Mercell (NO, NL, DK, DE, FI, LU)", "", "NO", "beides",
+           "sondiert", portals=3, ebene="unterlagen", ertrag="gesperrt",
+           coverage="groesste Laenderreichweite aller Anbieter: NO 286, NL 202, DK 39, DE 18, "
+                    "FI 7, LU 2 (ein Monat)",
+           overlap="⛔ KEIN HEBEL — und zwar ZWEIMAL, aus verschiedenen Gruenden. ⚠ Wer 'Mercell' "
+                   "als EINE Quelle behandelt, misst falsch: es sind drei Hosts. "
+                   "(1) s2c.mercell.com traegt NL 203, DE 18, LU 2 und sperrt mit 69 Bytes: "
+                   "'# Tell robots not to crawl the website / User-agent: * / Disallow: /'. "
+                   "(2) mercell.com (NO 285, DK 218) ERLAUBT crawlen — die robots nimmt nur DREI "
+                   "einzelne Vergaben aus. Die Seite zeigt anonym Verfahrensart, Fristen, Kaeufer "
+                   "UND 17 DATEINAMEN, und der Abrufweg steht im Quelltext: "
+                   "/m/file/GetFile.ashx?id=<n>&version=0. Der Aufruf gibt aber HTTP 403 mit "
+                   "'Just a moment… Enable JavaScript and cookies' — eine CLOUDFLARE-BOT-PRUEFUNG. "
+                   "Die ist eine Grenze, keine Huerde; nicht umgangen, auch nicht mit einem "
+                   "Browser, der sie bestehen wuerde. "
+                   "(3) supplierportal.c1.app.mercell.com: FI 7, NO 1, DK 2 — 0,2 %, ungeprueft. "
+                   "⚠ WAS BLEIBT: der KATALOG ist oeffentlich (Titel, Fristen, Kaeufer, "
+                   "Dateinamen). Fuer eine Lead-Liste reicht das, fuer Dokumentenanalyse nicht.",
+           url="https://www.mercell.com"),
     # ── RO, sondiert am 2026-09-03 · Kapitel: docs/sondierung/ro.md ───────────────────
     Source("sond-ro-seap", "SEAP/SICAP (RO)", "", "RO", "beides",
            "sondiert", portals=1, ebene="unterlagen", ertrag="offen",
