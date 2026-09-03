@@ -305,9 +305,22 @@ def main():
             },
         }
 
-    (OUT / "firma-profiles.json").write_text(json.dumps(out, ensure_ascii=False, default=str))
-    print(f"{len(out)} Firmenprofile → web/data/firma-profiles.json ({(OUT/'firma-profiles.json').stat().st_size/1e6:.1f} MB)")
+    # ⚠ KEINE SAMMELDATEI MEHR. `firma-profiles.json` war 67,6 MB und wurde jede Nacht
+    # geschrieben und hochgeladen — fuer einen Rueckfallpfad, den seit dem 2026-08-25
+    # niemand mehr braucht. Gemessen am 2026-09-03: `firma/` fuehrt alle 38.386 Profile,
+    # KEIN einziges stand nur in der Sammeldatei, und der einzige Leser
+    # (`web/lib/firmaProfiles.ts`) hat beim Benutzen laut ins Protokoll geschrieben. Der
+    # Uebergang, den sie absichern sollte, ist vorbei.
+    #
+    # Aktiv entfernen, nicht nur nicht mehr schreiben: eine liegengebliebene Datei sieht
+    # aus wie ein aktueller Stand und wuerde beim naechsten Upload wieder mitgehen.
+    alt = OUT / "firma-profiles.json"
+    if alt.exists():
+        mb = alt.stat().st_size / 1e6
+        alt.unlink()
+        print(f"  alte Sammeldatei entfernt ({mb:.1f} MB) — es gilt web/data/firma/")
     schreibe_je_firma(out)
+    print(f"{len(out)} Firmenprofile → web/data/firma/")
     return 0
 
 

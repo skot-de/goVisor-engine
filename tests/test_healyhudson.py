@@ -1618,7 +1618,11 @@ def test_datendateien_werden_zwischengespeichert():
         "Geholtes wird nicht abgelegt — dann bringt der Speicher nichts"
 
     for datei, schluessel in (("suppliers.ts", "suppliers:geparst"),
-                              ("firmaProfiles.ts", "firma-profiles:geparst"),
+                              # Der Schluessel `firma-profiles:geparst` gehoerte zum
+                              # Rueckfall auf die 67,6-MB-Sammeldatei, entfernt am
+                              # 2026-09-03. `firma:bestand` ist der verbliebene Literal-
+                              # Schluessel derselben Datei — die Zusicherung ist dieselbe.
+                              ("firmaProfiles.ts", "firma:bestand"),
                               ("outreach.ts", "outreach:geparst")):
         text = (ROOT / "web" / "lib" / datei).read_text(encoding="utf-8")
         assert schluessel in text, f"{datei} hält seinen Bestand wieder ohne Verfall"

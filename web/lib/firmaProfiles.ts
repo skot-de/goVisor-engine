@@ -39,35 +39,22 @@ export async function loadFirmaProfil(id: string): Promise<Profile | null> {
       return inSpeicher(schluessel, p, roh.length);
     }
   } catch {
-    /* faellt unten auf die Sammeldatei zurueck */
+    /* faellt auf null zurueck — die Route unterscheidet das ueber `firmaBestand` */
   }
-  return ausSammeldatei(id);
+  return null;
 }
 
-/* ⚠ ÜBERGANG, kein Dauerzustand. Solange im Objektspeicher noch keine `firma/`-Dateien
- * liegen (erster Lauf nach dem Umbau), muss die Route trotzdem antworten. Das kostet dann
- * aber wieder die vollen 67 MB — deshalb LAUT, nicht stillschweigend: eine Zeile im
- * Protokoll ist der Unterschied zwischen „Uebergang laeuft" und „wir haben nichts gewonnen
- * und niemand hat es gemerkt". */
-let gewarnt = false;
-async function ausSammeldatei(id: string): Promise<Profile | null> {
-  const fertig = ausSpeicher<Record<string, Profile>>("firma-profiles:geparst");
-  if (fertig) return fertig[id] ?? null;
-  if (!gewarnt) {
-    console.error("[firma] Rückfall auf firma-profiles.json (67 MB) — `firma/` fehlt im "
-                  + "Datenspeicher. export_firma_profiles.py laufen lassen und hochladen.");
-    gewarnt = true;
-  }
-  try {
-    const raw = await loadDataFile("firma-profiles.json");
-    if (!raw) return null;
-    const alle = inSpeicher("firma-profiles:geparst",
-                            JSON.parse(raw) as Record<string, Profile>, raw.length);
-    return alle[id] ?? null;
-  } catch {
-    return null;
-  }
-}
+/* ⚠ HIER STAND EIN RUECKFALL AUF `firma-profiles.json`, ENTFERNT AM 2026-09-03.
+ *
+ * Er sollte den Uebergang absichern, solange im Objektspeicher noch keine `firma/`-Dateien
+ * lagen — und kostete dafuer 67,6 MB, die jede Nacht geschrieben und hochgeladen wurden.
+ * Gemessen an diesem Tag: `firma/` fuehrt alle 38.386 Profile, KEIN einziges stand nur in
+ * der Sammeldatei. Der Uebergang war vorbei, das Netz darunter nicht mehr.
+ *
+ * Was an seine Stelle tritt, ist keine Luecke: fehlt eine Datei, liefert `loadFirmaProfil`
+ * `null`, und `/api/firma` unterscheidet ueber `firmaBestand()` weiter zwischen „diese
+ * Firma hat kein Profil" (404) und „die Profile sind gar nicht geladen" (503). Genau diese
+ * Unterscheidung war der Grund, aus dem `firma-stand.json` eingefuehrt wurde. */
 
 /** Wie viele Profile der Datenspeicher fuehrt — `null`, wenn er sie gar nicht hat.
  *
