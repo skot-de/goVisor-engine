@@ -1094,13 +1094,25 @@ def test_registry_addiert_die_beiden_ebenen_nicht():
     assert s["connectors"] == len(sources.CONNECTORS)
     assert s["quellen_total"] == len(sources.bekanntmachungen())
     assert s["unterlagen_total"] == len(sources.unterlagen()) == len(sources.DOC_REGISTRY)
-    # Die beiden Mengen überschneiden sich nicht und ergeben zusammen die Registry.
-    assert not ({x.id for x in sources.bekanntmachungen()}
-                & {x.id for x in sources.unterlagen()})
-    assert len(sources.bekanntmachungen()) + len(sources.unterlagen()) == len(sources.REGISTRY)
-    # Kein Abrufer taucht in der Bekanntmachungs-Matrix auf.
+    # ⚠ SEIT DEM 2026-09-03 DREI EBENEN, nicht zwei. Die Fonds-Ebene (Vergaben von
+    # Foerdermittelempfaengern, die selbst keine oeffentlichen Auftraggeber sind) verlangt
+    # CLAUDE.md ausdruecklich; die Portal-Sondierung hat sie nachgetragen. Die ABSICHT
+    # dieses Tests bleibt unveraendert — die Ebenen duerfen sich nicht vermischen und keine
+    # Zahl darf mehr Abdeckung behaupten, als da ist. Nur die Summe braucht den dritten
+    # Summanden. Wer hier eine vierte Ebene einfuehrt, faellt an derselben Zeile auf.
+    assert s["fonds_total"] == len(sources.fonds()) == len(sources.FONDS_REGISTRY)
+    mengen = [{x.id for x in sources.bekanntmachungen()},
+              {x.id for x in sources.unterlagen()},
+              {x.id for x in sources.fonds()}]
+    for i, a in enumerate(mengen):
+        for b in mengen[i + 1:]:
+            assert not (a & b), "die Ebenen ueberschneiden sich"
+    assert sum(len(m) for m in mengen) == len(sources.REGISTRY), (
+        "jeder Eintrag gehoert genau EINER Ebene")
+    # Kein Abrufer und kein Fonds-Register taucht in der Bekanntmachungs-Matrix auf.
     namen = {n for _, _, n, _ in sources.dach_matrix()}
     assert not (namen & {x.name for x in sources.unterlagen()})
+    assert not (namen & {x.name for x in sources.fonds()})
 
 
 def test_registry_dokument_eintraege_sind_vollstaendig():

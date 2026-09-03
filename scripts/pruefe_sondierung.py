@@ -52,6 +52,16 @@ def _hat_tabellen(land: str, ebene: str = "bekanntmachung") -> list[str]:
         if d.is_dir() and any(x.is_dir() for x in d.iterdir()):
             return [f"data/docs/{land}"]
         return []
+    if ebene == "fonds":
+        # ⚠ Die dritte Ebene (Vergaben von Foerdermittelempfaengern) hat noch GAR KEINEN
+        # Aufnahmeort — sie ist nirgends angebunden. `data/gold/<land>` ist hier KEIN
+        # Beleg: Polen ist auf Bekanntmachungsebene aufgenommen und auf der Fonds-Ebene
+        # nicht einmal erreichbar (die API gibt 401). Die erste Fassung dieser Regel
+        # kannte nur zwei Ebenen und schlug deshalb sofort an, als die dritte dazukam.
+        d = ROOT / "data" / "fonds" / land
+        if d.is_dir() and any(d.glob("**/*.parquet")):
+            return [f"data/fonds/{land}"]
+        return []
     treffer = []
     for rel in AUFNAHME_PFADE:
         d = ROOT / rel / land

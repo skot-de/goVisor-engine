@@ -153,3 +153,19 @@ def test_und_auf_derselben_ebene_faellt_es_weiterhin_auf(monkeypatch):
                         [_eintrag(id="sond-de-doc", country="DE", ebene="unterlagen",
                                   ertrag="ungeprueft")])
     assert any("data/docs/DE" in z for z in w.befunde()), w.befunde()
+
+
+def test_fondsebene_kollidiert_nicht_mit_aufgenommener_bekanntmachungsebene(monkeypatch):
+    """DIE DRITTE EBENE, und sie hat die Regel beim ersten Eintrag umgeworfen.
+
+    CLAUDE.md verlangt drei Ebenen; die Taxonomie kannte zwei. Als die Fonds-Ebene
+    (Vergaben von Foerdermittelempfaengern) als `bekanntmachung` eingetragen wurde,
+    schlug die Wache sofort an — Polen IST auf Bekanntmachungsebene aufgenommen. Der
+    Fehler lag nicht im Eintrag, sondern in einem Wertevorrat, der einen Wert zu kurz war.
+    """
+    w = _wache()
+    monkeypatch.setattr(w.sources, "REGISTRY",
+                        [_eintrag(id="sond-pl-fonds", country="PL", ebene="fonds"),
+                         Source(id="ted-pl", name="TED PL", connector="ted-bulk",
+                                country="PL", tier="oberschwellig", status="candidate")])
+    assert w.befunde() == [], w.befunde()

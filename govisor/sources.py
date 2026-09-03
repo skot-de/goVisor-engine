@@ -114,7 +114,13 @@ class Source:
     overlap: str = ""           # bekannte Überschneidung mit anderen Quellen (Ehrlichkeit)
     url: str = ""
     # --- zweite Ebene: Vergabeunterlagen -----------------------------------------------------
-    ebene: str = "bekanntmachung"   # "bekanntmachung" | "unterlagen"
+    # ⚠ DREI Ebenen, nicht zwei. CLAUDE.md verlangt sie ausdruecklich, und die
+    # Portal-Sondierung hat am 2026-09-03 gezeigt, warum zwei nicht reichen: die
+    # Fonds-Ebene (Vergaben von Foerdermittelempfaengern, die selbst KEINE oeffentlichen
+    # Auftraggeber sind) ist weder das eine noch das andere. Als "bekanntmachung"
+    # eingetragen loeste sie sofort die Sondierungs-Wache aus, weil Polen auf DIESER
+    # Ebene laengst aufgenommen ist — die Taxonomie war schlicht einen Wert zu kurz.
+    ebene: str = "bekanntmachung"   # "bekanntmachung" | "unterlagen" | "fonds"
     ertrag: str = ""                # nur bei ebene="unterlagen": aus ERTRAEGE
     modul: str = ""                 # nur bei ebene="unterlagen": das Python-Modul
 
@@ -757,7 +763,40 @@ DOC_REGISTRY: list[Source] = [
            url="https://www.simap.ch"),
 ]
 
+# ── EBENE 3: FONDS ────────────────────────────────────────────────────────────────────────
+#
+# ⚠ EIGENE LISTE, nicht in DOC_REGISTRY. Als die beiden ersten Eintraege dort landeten,
+# fiel `test_registry_addiert_die_beiden_ebenen_nicht` — zu Recht: DOC_REGISTRY ist die
+# Liste der DOKUMENT-ABRUFER, und ein Fonds-Register ist keiner. Derselbe Gedanke wie im
+# Docstring oben: Ebenen werden nicht vermischt, damit keine Zahl entsteht, die mehr
+# Abdeckung behauptet, als da ist.
+FONDS_REGISTRY: list[Source] = [
+    # ── FONDS-EBENE, sondiert am 2026-09-03 · Kapitel: docs/sondierung/fonds-ebene.md ──
+    # ⚠ DIE DRITTE EBENE aus CLAUDE.md: Vergaben von Empfaengern oeffentlicher Foerdermittel,
+    # die selbst KEINE oeffentlichen Auftraggeber sind. Sie fehlte in allen zwoelf
+    # Laenderkapiteln — hier nachgearbeitet.
+    Source("sond-cz-fonds", "OPPIK/OPTAK/NPO-Register (zakazky.agentura-api.org)", "", "CZ",
+           "unterschwellig", "sondiert", portals=1, ebene="fonds", ertrag="",
+           coverage="8.663 Vergaben von Foerdermittelempfaengern — private Firmen als "
+                    "Auftraggeber. Zum Vergleich: CZ hatte im Juni 1.621 TED-Ausschreibungen.",
+           overlap="✅ OEFFENTLICH UND MASCHINENLESBAR. Keine robots.txt. POST /nacist_verejny "
+                   "(DataTables) liefert anonym recordsTotal 8.663 mit Auftraggeber, IČ, Titel, "
+                   "Art, Frist, Veroeffentlichung und geschaetztem Wert. Der Betreiber bietet "
+                   "Excel- und PDF-Export selbst an. ⚠ Ob dort auch UNTERLAGEN haengen, ist "
+                   "ungeprueft. ⚠ Bauart beachten: das Register gehoert einem Programmtraeger, "
+                   "nicht dem Land — andere Operationelle Programme koennen eigene fuehren.",
+           url="https://zakazky.agentura-api.org"),
+    Source("sond-pl-fonds", "Baza Konkurencyjności", "", "PL", "unterschwellig",
+           "sondiert", portals=1, ebene="fonds", ertrag="",
+           coverage="Fonds-Ebene Polens, in CLAUDE.md namentlich genannt",
+           overlap="🟡 Keine robots-Sperre, API-Basis /api/ belegt (cookies, statements, "
+                   "general-content antworten 200). Aber /api/announcements gibt anonym "
+                   "HTTP 401. Ob die Weboberflaeche ohne Anmeldung etwas zeigt, ist offen.",
+           url="https://bazakonkurencyjnosci.funduszeeuropejskie.gov.pl"),
+]
+
 REGISTRY += DOC_REGISTRY
+REGISTRY += FONDS_REGISTRY
 
 
 # ------------------------------------------------------------------------------------------
@@ -771,6 +810,15 @@ def bekanntmachungen() -> list[Source]:
 def unterlagen() -> list[Source]:
     """Nur Ebene 2 (Dokument-Abrufer)."""
     return [s for s in REGISTRY if s.ebene == "unterlagen"]
+
+
+def fonds() -> list[Source]:
+    """Nur Ebene 3: Vergaben von Foerdermittelempfaengern ohne Auftraggeber-Eigenschaft.
+
+    ⚠ Wird NIE zu `bekanntmachungen()` addiert. Es ist ein anderer Markt mit anderen
+    Auftraggebern (private Firmen), nicht mehr Abdeckung desselben.
+    """
+    return [s for s in REGISTRY if s.ebene == "fonds"]
 
 
 def summary() -> dict:
@@ -793,6 +841,9 @@ def summary() -> dict:
         "unterlagen_total": len(ul),
         "unterlagen_live": sum(1 for s in ul if s.status == "live"),
         "unterlagen_nach_ertrag": {e: sum(1 for s in ul if s.ertrag == e) for e in ERTRAEGE},
+        # --- Ebene 3, wieder eigene Schluessel: anderer Markt, nicht mehr vom selben ---
+        "fonds_total": len(fonds()),
+        "fonds_laender": sorted({s.country for s in fonds()}),
         "unterlagen_laender": sorted({s.country for s in ul}),
     }
 
