@@ -83,6 +83,30 @@ anonyme Sitzung bekam den Datenstrom, er wurde nur von der Sandkasten-Umgebung a
 JavaScript-Hülle, und der Download ist ein **POST mit `javax.faces.ViewState`**. Ein
 Abrufer braucht eine Sitzung, kein Adressmuster.
 
+### Nachgehakt am 2026-09-03 — der POST ist winzig, die Sitzung ist das Problem
+
+Der Download-POST wurde im Browser abgefangen. Er hat **neun Felder**:
+
+```
+socLang=0 · org.apache.myfaces.trinidad.faces.FORM=f1
+Adf-Window-Id=<id> · Adf-Page-Id=0 · javax.faces.ViewState=<state>
+event=t1:0:cb1        ← Tabelle t1, ZEILE 0, Knopf 1 — die Zeile wählt die Datei
+event.t1:0:cb1=<m xmlns="http://oracle.com/richClient/comm"><k v="type"><s>action</s></k></m>
+oracle.adf.view.rich.PROCESS=t1:0:cb1
+oracle.adf.view.rich.RESPONSE_EXPECTED=no
+```
+
+Und `javax.faces.ViewState` **steht im schlichten HTML** (`!-iimhb7pz2`) — es muss nicht aus
+JavaScript geholt werden.
+
+⚠ **Woran der Nachbau scheitert:** die Seite liefert `Adf-Window-Id=`**`winnoloop`** — einen
+Platzhalter. Die echte Fensterkennung und der `_afrLoop`-Zähler entstehen erst im
+JavaScript-Bootstrap; ohne sie beantwortet der Server den POST mit der **ganzen Seite**
+statt einer ADF-Teilantwort.
+
+**Die Aufgabe ist damit genau umrissen:** nicht „irgendeine Sitzung", sondern der
+ADF-Fenster-Bootstrap. Der Abruf danach ist trivial.
+
 ### Das ist bereits die dritte Plattform dieser Bauform
 
 | Land | Plattform | Form |

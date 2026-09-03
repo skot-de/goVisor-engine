@@ -639,9 +639,18 @@ DOC_REGISTRY: list[Source] = [
                    "sonst. Der Aufbau gleicht dem franzoesischen AWS-Achat, nur OHNE CAPTCHA.",
            url="https://viesiejipirkimai.lt"),
     Source("sond-lv-eis", "EIS (eis.gov.lv)", "", "LV", "beides",
-           "sondiert", portals=1, ebene="unterlagen", ertrag="liste",
+           "sondiert", portals=1, ebene="unterlagen", ertrag="offen",
            coverage="100 % Lettlands — EINE Domain im ganzen Monat",
-           overlap="🟡 Offen sichtbar, Abrufweg ungeklaert. Keine robots-Sperre, die "
+           overlap="✅ GELOEST 2026-09-03, ZWEISTUFIG: (1) GET /EKEIS/Supplier/Procurement/<id> — "
+                   "im onclick jeder Zeile steht das JSON im Klartext (Id, DocumentLinkTypeCode, "
+                   "ProcurementIdentifier); (2) GET /EKEIS/Document/DownloadDocumentFilesInZip?"
+                   "Id=&DocumentLinkTypeCode=&ProcurementIdentifier= → ein ZIP je Eintrag. "
+                   "Belegt: 3 von 3 (39.377/19.275/65.078 B). ⚠ .edoc ist ein lettischer "
+                   "SIGNATURBEHAELTER — dritte Verpackungsart nach IT .p7m und RO .p7s. "
+                   "⚠ Der POST auf /Document/ViewDocument ist NICHT noetig (nur das Modal); wer "
+                   "ihn geht, braucht __RequestVerificationToken ALS KOPFZEILE — als Formularfeld "
+                   "abgelehnt ('Neveiksmiga drosibas parbaude'). "
+                   "Frueherer Stand: Abrufweg ungeklaert. Keine robots-Sperre, die "
                    "Vergabeseite listet die Dokumente vollstaendig (im geprueften Fall 33 "
                    "Eintraege mit Typ, Datum, Bezeichnung), der Link heisst „Lejupielādēt "
                    "datni\" (Datei herunterladen). Er ruft aber viewDocument(), das ein Modal "
@@ -650,9 +659,17 @@ DOC_REGISTRY: list[Source] = [
                    "ist die Muehe wert.",
            url="https://www.eis.gov.lv"),
     Source("sond-ee-rhr", "RHR (riigihanked.riik.ee)", "", "EE", "beides",
-           "sondiert", portals=1, ebene="unterlagen", ertrag="ungeprueft",
+           "sondiert", portals=1, ebene="unterlagen", ertrag="offen",
            coverage="100 % Estlands — EINE Domain",
-           overlap="🟡 Liste offen, Dateiendpunkt nicht gefunden. Keine robots.txt. Zwei "
+           overlap="✅ GELOEST 2026-09-03: der Endpunkt heisst documents-temp-url, darauf kommt "
+                   "man nicht durch Raten. (1) GET /rhr/api/public/v1/procurement/<id>/"
+                   "documents-temp-url → {'value':'/filetransfer/client/shared/package/<guid>'}; "
+                   "(2) GET diesen Pfad → files.zip. Belegt: 19.307.558 B, 9 Dateien "
+                   "(Vergabepass, ESPD-XML, Eignungs-/Wertungskriterien, technische Beschreibung, "
+                   "Vertragsbedingungen, englische Fassung als ZIP IM ZIP). "
+                   "⚠ Fuenf geratene Pfade gaben 500; gefunden durch Klick auf 'Laadi alla "
+                   "kehtivad hanke dokumendid' und Mitlesen. Wo Raten 500 gibt, hilft nur Zusehen. "
+                   "Frueherer Stand: Dateiendpunkt nicht gefunden. Keine robots.txt. Zwei "
                    "offizielle Wege ohne Anmeldung: „Avaandmed\" (Monatspakete + "
                    "Maschinenschnittstelle, naechtlich, eForms-XSD — aber nur BEKANNTMACHUNGEN, "
                    "wie DECP in FR) und eine oeffentliche REST-API /rhr/api/public/v1/. "

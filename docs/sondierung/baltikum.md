@@ -57,7 +57,7 @@ BPS AK Pirkimo salygos.docx                              ← Vergabebedingungen
 ⚠ Und ein praktischer Vorteil: die **Dokumentenliste ist servergerendert**. `curl` bekommt
 sie ohne Browser — anders als bei fast allen anderen Plattformen dieser Sondierung.
 
-## 3. 🟡 Lettland — offen sichtbar, Abrufweg ungeklärt
+## 3. ✅ Lettland — gelöst
 
 `eis.gov.lv` (EIS), 100 % des Landes. Keine robots-Sperre.
 
@@ -75,9 +75,30 @@ Damit ist der eigentliche Dateiendpunkt nicht ohne Weiteres greifbar. **Kein Hin
 eine Schranke** — die Liste ist öffentlich, nichts verlangt Anmeldung. Nur der Weg ist
 verwinkelter als bei Litauen.
 
-**Nachzuholen.** Ein Land mit einer einzigen Plattform ist die Mühe wert.
+### ✅ Gelöst am 2026-09-03 — zweistufig, und der Umweg war unnötig
 
-## 4. 🟡 Estland — Liste offen, Dateiendpunkt nicht gefunden
+```
+1  GET /EKEIS/Supplier/Procurement/<id>
+       → im onclick jeder Zeile steht das JSON im Klartext:
+         viewDocument({"Id":8274642,"DocumentLinkTypeCode":"PRCDOC",
+                       "ProcurementIdentifier":"173645", …}, "/EKEIS/Document/ViewDocument")
+
+2  GET /EKEIS/Document/DownloadDocumentFilesInZip
+        ?Id=8274642&DocumentLinkTypeCode=PRCDOC&ProcurementIdentifier=173645
+       → 200, ein ZIP je Dokumenteintrag
+```
+
+**Belegt: 3 von 3** (39.377 / 19.275 / 65.078 Bytes), Inhalt u. a.
+`TNP_OPNPRT_20260616151730.edoc` und `Prot_2_atv.docx`.
+
+⚠ **`.edoc` ist ein lettischer Signaturbehälter** — die dritte Verpackungsart nach Italiens
+`.p7m` und Rumäniens `.p7s`.
+
+⚠ Der `POST /EKEIS/Document/ViewDocument` ist **nicht nötig**; er liefert nur das Modal. Wer
+ihn doch geht, braucht das `__RequestVerificationToken` **als Kopfzeile** — als Formularfeld
+wird es abgelehnt (*„Neveiksmīga drošības pārbaude"*).
+
+## 4. ✅ Estland — gelöst
 
 `riigihanked.riik.ee` (RHR), 100 % des Landes, keine robots.txt (404).
 
@@ -109,8 +130,22 @@ Signal, und der Klick im Browser löste keinen Netzaufruf aus, den ich mitlesen 
 kam **HTTP 200 und 586 KB**. Die Schnittstelle war nie zu — meine Kopfzeile war zu eng.
 Wer bei einer 500 aufhört, hält eine offene Tür für verschlossen.
 
-**Nachzuholen.** Ein Land, eine Plattform, Dokumente ausdrücklich als öffentlich markiert —
-es fehlt nur der letzte Aufruf.
+### ✅ Gelöst am 2026-09-03 — der Endpunkt heisst anders als jeder geratene Pfad
+
+```
+1  GET /rhr/api/public/v1/procurement/<id>/documents-temp-url
+       → {"value":"/filetransfer/client/shared/package/820ad173-d4c2-4f32-818e-0b30a1ca6c76"}
+2  GET https://riigihanked.riik.ee<value>
+       → 200, files.zip
+```
+
+**Belegt: 19.307.558 Bytes, 9 Dateien** — Vergabepass, `ESPD_v2.0_laiendatud.xml`,
+Eignungs- und Wertungskriterien, technische Beschreibung, Vertragsbedingungen, dazu die
+englische Fassung als **ZIP im ZIP**.
+
+⚠ Fünf geratene Pfade gaben 500; der richtige heisst **`documents-temp-url`** — darauf kommt
+man nicht. Gefunden durch Klick auf *„Laadi alla kehtivad hanke dokumendid"* und Mitlesen.
+**Wo Raten 500 gibt, hilft nur Zusehen.**
 
 ## 5. Warum das für den Plan zählt
 
