@@ -57,6 +57,7 @@ from datetime import date, timedelta
 from pathlib import Path
 
 from . import docfetch_queue as _queue
+from .schema import normalize_notice_id
 
 ROOT = Path(__file__).resolve().parent.parent
 
@@ -154,8 +155,16 @@ def hole_vergabe(cid: str, pg, ziel: Path, dry_run: bool = False) -> dict:
     pg.wait_for_timeout(_WARTE_MS)
     mb = _dossier_mb(pg)
     if mb is None:
-        return {"status": "leer", "bytes": 0, "n_files": 0,
-                "note": "Aucune piece jointe (Frist vorbei oder nie eingestellt)"}
+        # ⚠ „leer" fuer alles ist kein Status (Bibel 03: „Ein Status ist eine Behauptung —
+        # und bisher hielt keine einzige stand"). Die Warteschlange enthaelt NUR Vergaben
+        # mit Frist in der Zukunft; „Aucune piece jointe" kann hier also nicht „Frist
+        # vorbei" heissen. Zwei unterscheidbare Faelle bleiben, und sie werden benannt:
+        offen_bis = pg.inner_text("body")
+        if "Consultation" in offen_bis and "cl" in offen_bis and "tur" in offen_bis:
+            return {"status": "geschlossen", "bytes": 0, "n_files": 0,
+                    "note": "Portal fuehrt die Vergabe als geschlossen, TED-Frist noch offen"}
+        return {"status": "noch_ohne_anlage", "bytes": 0, "n_files": 0,
+                "note": "Frist laeuft, aber kein Dossier eingestellt — erneut versuchen"}
     if MAX_MB and mb > MAX_MB:
         return {"status": "zu_gross", "bytes": 0, "n_files": 0,
                 "note": f"{mb:.1f} MB > {MAX_MB:.0f} MB — ⚠ in LU dauerhaft verloren"}
@@ -212,7 +221,12 @@ def lauf(limit: int | None = None, dry_run: bool = False, tage: int = 45) -> dic
         cid = kennung(url)
         if not cid:
             continue
-        lead_id = nummer or cid
+        # ⚠ KANONISCHE FORM, NICHT DIE TED-SCHREIBWEISE. Die API liefert „533534-2026"
+        # mit Bindestrich; Silber und Gold fuehren „533534_2026". Die erste Fassung dieses
+        # Abrufers legte die Ordner mit Bindestrich an — genau die Drift, die am 2026-07-29
+        # eine Migration ueber 217,7 Mio. Kennungen gekostet hat (CLAUDE.md). Ohne diese
+        # Zeile verbindet sich der Vorgang spaeter mit NICHTS, und zwar lautlos.
+        lead_id = normalize_notice_id(nummer) if nummer else cid
         ziel = out_root / lead_id / f"Vergabeunterlagen_lu_{cid}.zip"
         if ziel.exists() and ziel.stat().st_size > 0:
             continue
