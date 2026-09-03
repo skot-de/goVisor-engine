@@ -59,16 +59,16 @@ export function vorgangDateiname(land: string, id: string): string {
   return createHash("sha1").update(`${land}:${id}`, "utf8").digest("hex");
 }
 
-/** Wie viele Zeichen des Hashes den Bündelnamen bilden: 2 → 256 Bündel.
+/** Wie viele Zeichen des Hashes den Bündelnamen bilden: 3 → 4.096 Bündel.
  *  MUSS mit `export_vorgaenge.BUENDEL_STELLEN` übereinstimmen. */
-const BUENDEL_STELLEN = 2;
+const BUENDEL_STELLEN = 3;
 
 /** Eine Akte. `null`, wenn sie nicht exportiert ist.
  *
  * ⚠ 256 BUENDEL, NICHT 53.872 EINZELDATEIEN — und auch keine Sammeldatei. Beide Extreme
  * sind hier schon einmal schiefgegangen: `firma-profiles.json` lud 67 MB, um 1,6 KB zu
  * liefern, und die Einzeldateien liessen `next build` im Node-Heap sterben, weil Next den
- * Projektbaum abgeht (156.000 Dateien unter `web/data`). Ein Bündel ist im Median 239 KB
+ * Projektbaum abgeht (156.000 Dateien unter `web/data`). Ein Bündel ist im Median 21 KB
  * gross; es liegt danach im Speicher und bedient jede weitere Akte daraus umsonst. */
 export async function loadVorgang(land: string, id: string): Promise<Akte | null> {
   if (!id || !land) return null;

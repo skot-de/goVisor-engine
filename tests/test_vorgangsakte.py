@@ -282,12 +282,17 @@ def test_buendel_statt_einzeldateien():
     `doc-analysis/` zusammen standen rund 156.000 Dateien unter `web/data`.
 
     Eine Sammeldatei ist aber genauso falsch — daran ist `firma-profiles.json` gescheitert
-    (67 MB laden, um 1,6 KB zu liefern). 256 Bündel liegen dazwischen.
+    (67 MB laden, um 1,6 KB zu liefern). 4.096 Bündel liegen dazwischen.
+
+    ⚠ Die Bündelzahl ist ZUGLEICH die Dateizahl (Build-Grenze, gemessen bei ~156.000) UND
+    die Schreibeinheit: ein Bündel wird als Ganzes neu geschrieben, sobald eine Akte darin
+    sich ändert. Bei 256 Bündeln kostete das 87 MB Upload je Nacht, bei 4.096 einen
+    Bruchteil. Beide Grenzen zusammen ergeben das Fenster, in dem die Zahl liegen muss.
     """
     quelle = SKRIPT.read_text(encoding="utf-8")
     kern = quelle.split("def schreibe(")[1]
     assert "buendel" in kern.lower()
-    assert 16 ** M.BUENDEL_STELLEN == 256
+    assert 16 ** M.BUENDEL_STELLEN == 4096
 
 
 def test_geschriebenes_json_ist_gueltiges_json():

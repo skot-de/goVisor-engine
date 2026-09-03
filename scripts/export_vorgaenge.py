@@ -63,9 +63,20 @@ ARTEN = {"cn": "Ausschreibung", "can": "Zuschlag", "corrigendum": "Korrektur",
 # ausser der Auflistung.
 KETTE_FENSTER = 12
 
-# Wie viele Zeichen des Aktenhashes den Buendelnamen bilden: 2 → 256 Buendel.
+# Wie viele Zeichen des Aktenhashes den Buendelnamen bilden: 3 → 4.096 Buendel.
 # MUSS mit `web/lib/vorgangsakte.ts` uebereinstimmen.
-BUENDEL_STELLEN = 2
+#
+# ⚠ WARUM NICHT 256, WIE ZUERST GEBAUT. Ein Buendel wird als GANZES neu geschrieben, sobald
+# EINE Akte darin sich aendert — und weil der Hash streut, treffen schon 0,5 % geaenderte
+# Akten praktisch jedes Buendel. Bei 256 Buendeln (median 347 KB) laed der Nachtlauf dafuer
+# 87 MB hoch; bei 4.096 (median 21 KB) ist es ein Bruchteil davon, und jeder Aufruf einer
+# Akte holt ebenfalls 21 statt 347 KB.
+#
+# ⚠ UND WARUM NICHT NOCH FEINER. Die Zahl der Buendel ist zugleich die Zahl der Dateien
+# unter `web/data`, und daran ist `next build` schon einmal gestorben: bei rund 156.000
+# Dateien im Node-Heap (SIGABRT). Mit 4.096 sind es 107.529 — geprueft, Build gruen in 35 s.
+# Die Menge waechst kuenftig in die Buendel hinein, nicht in ihre Anzahl.
+BUENDEL_STELLEN = 3
 
 # Wie belastbar eine Kette ist, in drei Baendern: (Untergrenze, Name).
 #
