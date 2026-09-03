@@ -1008,11 +1008,24 @@ step "Unterlagen entpacken → Volltext-Index"
 #     zweiten Sitzung — ZWEI Prozesse schrieben gleichzeitig `doc_text.parquet`. Das
 #     Lauf-Lock schuetzt Laeufe gegeneinander, nicht gegen einen direkten Aufruf. Wer auf
 #     eine gemeinsame Datei schreibt, braucht sein eigenes.
+# ⚠ DER INDEXER LIEF NUR FUER DE — auch nachdem der LU-Abrufer am 2026-09-03 in den
+# Tageslauf kam. Das ist die haesslichste Form der Luecke: das Sammeln war verdrahtet, das
+# Auswerten nicht. Die ZIPs lagen auf der Platte, `doc_text` kannte sie nicht, und nichts
+# war rot — ein Land sammelt dann Unterlagen, die niemand je liest.
+# ⚠ LU laeuft INNERHALB desselben Locks: `doc_text.parquet` liegt je Land getrennt, aber
+# der Indexer ist derselbe Prozess, und zwei davon gleichzeitig war schon einmal der Fehler
+# (s. Absatz 2 oben). Nacheinander, nicht parallel.
+_IXLAENDER="DE LU"
+_index_alle() {
+  for _L in $_IXLAENDER; do
+    mit_limit 2700 $PY -m govisor.cli index-docs --country "$_L" \
+      || echo "  ⚠ Index $_L unvollständig — Auswertung läuft über den vorhandenen Textbestand."
+  done
+}
 _IXLOCK="$ROOT/data/.index_docs.lock"
 if mkdir "$_IXLOCK" 2>/dev/null; then
   echo $$ > "$_IXLOCK/pid"
-  mit_limit 2700 $PY -m govisor.cli index-docs --country DE \
-    || echo "  ⚠ Index unvollständig — Auswertung läuft über den vorhandenen Textbestand."
+  _index_alle
   rm -rf "$_IXLOCK"
 else
   _alt="$(cat "$_IXLOCK/pid" 2>/dev/null | tr -d '[:space:]')"
@@ -1021,8 +1034,7 @@ else
   else
     echo "  ⚠ Verwaistes Index-Lock — uebernommen."
     rm -rf "$_IXLOCK" && mkdir "$_IXLOCK" && echo $$ > "$_IXLOCK/pid"
-    mit_limit 2700 $PY -m govisor.cli index-docs --country DE \
-      || echo "  ⚠ Index unvollständig — Auswertung läuft über den vorhandenen Textbestand."
+    _index_alle
     rm -rf "$_IXLOCK"
   fi
 fi
