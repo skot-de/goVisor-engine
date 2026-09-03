@@ -83,6 +83,42 @@ def _sql_liste(pfade: list[str]) -> str:
     return "[" + ", ".join(f"'{p}'" for p in pfade) + "], union_by_name=true"
 
 
+# ── LAENDER-VORRANG ────────────────────────────────────────────────────────────────────
+# `LAND_PRIO="LU,DE"` arbeitet luxemburgische Vorgaenge vor deutschen ab. Nicht gesetzt =
+# unveraendertes Verhalten: der Rang ist dann die Konstante 0 und die Sortierung dieselbe.
+#
+# ⚠ WO DER RANG SITZT, IST DIE EIGENTLICHE ENTSCHEIDUNG — er steht HINTER „offen zuerst"
+# und VOR der Frist. Sven am 2026-08-18: „lass die alten, alt sein, die werten wir fuer
+# uebungs- und nachnutzungszwecke aus." Ein Laenderrang VOR `phase='open'` wuerde ein
+# ABGELAUFENES luxemburgisches Dokument vor eine laufende deutsche Vergabe schieben und
+# genau das Geld verbrennen, das jene Regel spart. Vorrang heisst hier: unter den
+# Vorgaengen, auf die man noch bieten kann, kommt das bevorzugte Land zuerst.
+#
+# ⚠ Wer ein Land WIRKLICH allein will, nimmt `LAND=LU` — ein Filter, kein Rang, und genau
+# dafuer da (etwa um die franzoesischen Doktyp-Muster erstmals zu messen).
+LAND_PRIO = [x.strip().upper() for x in os.environ.get("LAND_PRIO", "").split(",") if x.strip()]
+
+
+def _land_rang_sql(spalte: str) -> str:
+    """Vorrangliste → ein ORDER-BY-Glied MIT abschliessendem Komma, oder ein leerer String.
+
+    Nicht genannte Laender kommen NACH den genannten, untereinander unveraendert sortiert.
+
+    ⚠ OHNE LISTE WIRD GAR KEIN TERM AUSGEGEBEN — kein Platzhalter. Zwei Anlaeufe sind daran
+    gescheitert, und beide erst zur LAUFZEIT, also im Dienst beim Geldausgeben:
+      · `0`    ist im ORDER BY eine SPALTENNUMMER, keine Konstante
+               → „ORDER term out of range - should be between 1 and 3"
+      · `NULL` ist ein Literal ohne Wirkung und wird ebenfalls abgewiesen
+               → „ORDER BY non-integer literal has no effect"
+    Ein leerer String laesst die Zeile schlicht verschwinden; das Komma haengt deshalb HIER
+    dran und nicht an der Aufrufstelle.
+    """
+    if not LAND_PRIO:
+        return ""
+    zweige = " ".join(f"WHEN '{cc}' THEN {i}" for i, cc in enumerate(LAND_PRIO))
+    return f"CASE {spalte} {zweige} ELSE {len(LAND_PRIO)} END,"
+
+
 DOC_TEXTE = _laender_pfade("data/docs", "doc_text.parquet")
 LEAD_EXPORTE = _laender_pfade("data/gold", "lead_export.parquet")
 SRC_SQL = _sql_liste(DOC_TEXTE)
@@ -735,8 +771,14 @@ def _lauf() -> int:
     # die zur Demo noch aktuell sind. Was kein Lead mehr ist, kommt zuletzt.
     LE_SQL = LEAD_EXPORT_SQL
     rows = con.execute(
-        f"""WITH t AS (SELECT notice_id, file, text
-                       FROM read_parquet({SRC_SQL})
+        f"""WITH t AS (SELECT notice_id, file, text,
+                              -- ⚠ `doc_text` fuehrt KEINE Landesspalte. Das Land steckt im
+                              -- Pfad (data/docs/<LAND>/doc_text.parquet); `filename=true`
+                              -- ist der einzige Weg, es je Zeile mitzubekommen. Ueber den
+                              -- Lead ginge es nicht: Vorgaenge OHNE Lead haetten dann gar
+                              -- keins und fielen aus jedem Rang heraus.
+                              regexp_extract(filename, 'docs/([A-Z][A-Z])/', 1) AS land
+                       FROM read_parquet({SRC_SQL}, filename=true)
                        -- `ocr` zaehlt wie `ok`: ein bildreines PDF, das die Texterkennung
                        -- durchlaufen hat UND den Fachvokabeltest bestand, ist inhaltlich
                        -- dasselbe wie ein durchsuchbares. Gemessen 2026-08-18: 3,23 Mio.
@@ -746,6 +788,7 @@ def _lauf() -> int:
             SELECT t.notice_id, t.file, t.text
             FROM t LEFT JOIN read_parquet({LE_SQL}) l ON l.lead_id = t.notice_id
             ORDER BY (l.phase = 'open') DESC NULLS LAST,
+                     {_land_rang_sql('t.land')}
                      l.deadline_date DESC NULLS LAST,
                      t.notice_id DESC"""
     ).fetchall()
