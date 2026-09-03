@@ -720,6 +720,49 @@ DOC_REGISTRY: list[Source] = [
                    "`Disallow: /app/docmgmt`. Der Dateiendpunkt liegt EXAKT im gesperrten "
                    "Pfad. Fuenfter Fall dieser Bauart. Nicht abgerufen.",
            url="https://eu.eu-supply.com"),
+    # ── GR, sondiert am 2026-09-03 · Kapitel: docs/sondierung/gr.md ───────────────────
+    Source("sond-gr-esidis", "ΕΣΗΔΗΣ/Promitheus (GR)", "", "GR", "beides",
+           "sondiert", portals=1, ebene="unterlagen", ertrag="teilweise",
+           coverage="ΕΣΗΔΗΣ stellt 89,3 % des GR-Unterlagen-Felds, ABER nur nepps-search "
+                    "(32,2 %, davon 97 % tief) verlinkt wirklich Verfahren",
+           overlap="🟡 BEDINGT OFFEN. Ausschreibung + Dokumentenliste anonym sichtbar (Reiter "
+                   "'Συννημένα Αρχεία': DIAKIRYXI, Zusammenfassung, ESPD als PDF und XML), kein "
+                   "Login, kein CAPTCHA, keine robots.txt (404). ⚠ Aber der Download ist ein "
+                   "Oracle-ADF-POST mit javax.faces.ViewState, kein GET — curl bekommt nur eine "
+                   "JS-Huelle. DRITTE Plattform dieser Bauform nach eis.gov.lv (LV) und AnoGov "
+                   "(PT): EIN sitzungsfuehrender Abrufer loest drei Laender. "
+                   "⚠ PageNotFound.jspx kommt mit HTTP 200 — Titel pruefen, nicht den Code. "
+                   "⚠ Kennungen sind griechische Grossbuchstaben (9Μ3ΘΩΞ2-8Λ9), nicht lateinisch.",
+           url="https://nepps-search.eprocurement.gov.gr"),
+    Source("sond-gr-esidis-nepps", "ΕΣΗΔΗΣ nepps + publicworks (GR)", "", "GR", "beides",
+           "sondiert", portals=2, ebene="unterlagen", ertrag="gesperrt",
+           coverage="14,4 % der Nennungen — aber zu 99 % Startseiten-Links (nepps: 163 von 165), "
+                    "also fast wertlos",
+           overlap="⛔ GESPERRT: 'User-agent: * / Disallow: /'. ⚠ Es ist die STANDARDDATEI der "
+                   "Oracle E-Business Suite ('managed automatically … AutoConfig', Kopfzeile von "
+                   "2008) — die Sperre ist vermutlich keine Entscheidung des Betreibers, sondern "
+                   "eine Beigabe der Software; andere Namen desselben Systems haben gar keine "
+                   "robots.txt. Das aendert NICHTS: 'die haben das nicht so gemeint' ist dieselbe "
+                   "Umgehungslogik wie sich ClaudeBot zu nennen (s. sond-sk-uvo).",
+           url="https://nepps.eprocurement.gov.gr"),
+    Source("sond-gr-diavgeia", "Διαύγεια (GR, Transparenzportal)", "", "GR", "ausschreibung",
+           "sondiert", portals=1, ebene="bekanntmachung", ertrag="teilweise",
+           coverage="/opendata/search filterbar: type=Δ.2.1 → 17.602 Vorgaenge",
+           overlap="🟡 METADATEN OFFEN, DATEIEN GESPERRT. robots (120 B, vollstaendig gelesen) "
+                   "sperrt /doc/*, /decision/view, /luminapi/api/decisions/*, /f/all/ada/*. "
+                   "⚠ Die ERLAUBTE Schnittstelle /opendata/decisions/<ADA> gibt als documentUrl "
+                   "genau den gesperrten /doc/-Pfad heraus — ein arglos gebauter Abrufer laeuft "
+                   "direkt hinein. Nicht abgerufen. "
+                   "⚠ FALLE: ein falscher Parametername wird STILL ignoriert. decisionType= statt "
+                   "type= gibt total 2.972.077 statt 17.602 zurueck, ohne Fehler und ohne Hinweis.",
+           url="https://diavgeia.gov.gr"),
+    Source("sond-gr-kimdis", "ΚΗΜΔΗΣ (GR, unterschwellig)", "", "GR", "ausschreibung",
+           "sondiert", portals=1, ebene="bekanntmachung", ertrag="gesperrt",
+           coverage="zentrales Register oeffentlicher Auftraege; Umfang nicht messbar",
+           overlap="⛔ ANMELDUNG. cerpp.eprocurement.gov.gr liefert schon unter /robots.txt ein "
+                   "Login-Formular (POST an access.eprocurement.gov.gr/oam/…, Oracle Access "
+                   "Manager). Kein Konto, keine Zugangsdaten — stehende Regel.",
+           url="https://cerpp.eprocurement.gov.gr"),
     # ── PT, sondiert am 2026-09-03 · Kapitel: docs/sondierung/pt.md ───────────────────
     Source("sond-pt-acingov", "AcinGov (PT)", "", "PT", "beides",
            "sondiert", portals=1, ebene="unterlagen", ertrag="offen",
