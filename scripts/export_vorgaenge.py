@@ -245,6 +245,12 @@ def _verlauf(teile: list[dict]) -> list[dict]:
             # Ein fehlendes Feld darf den Export nicht anhalten.
             "n": sum(1 for t in gruppe if not t.get("dublette")) or len(gruppe),
             "dubletten": sum(1 for t in gruppe if t.get("dublette")),
+            # ⚠ EIN EINTRAG KANN NUR AUS ZWEITMELDUNGEN BESTEHEN. Die Zweitmeldung eines
+            # anderen Portals traegt oft ein anderes Datum als das Original und bekommt
+            # damit eine eigene Zeile im Verlauf. Ohne diese Unterscheidung stand dort
+            # „Ausschreibung · dazu eine Zweitmeldung" — bei einer Zeile, die SELBST die
+            # Zweitmeldung ist und keine hat.
+            "nur_zweitmeldung": all(t.get("dublette") for t in gruppe),
             "ids": sorted(t["notice_id"] for t in gruppe),
             "unterlagen": any(t["hat_unterlagen"] for t in gruppe),
         })
@@ -362,7 +368,7 @@ def _akten(con: duckdb.DuckDBPyConnection, land: str,
             "zahlen": {a: int(k.get(f"n_{a}") or 0)
                        for a in ("bekanntmachungen", "ausschreibung", "zuschlag",
                                  "korrektur", "vorinfo", "dokumente", "anforderungen",
-                                 "dubletten",
+                                 "dubletten", "verschmolzen",
                                  # ⚠ MUSS SICHTBAR SEIN. Zuschlaege, die ueber Kaeufer und
                                  # Titel zugeordnet wurden, sind erschlossen und nicht
                                  # amtlich verknuepft — wie bei der Kette gehoert das an die

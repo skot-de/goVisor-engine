@@ -16,7 +16,8 @@ import { useSprache } from "@/lib/i18n";
  *      und nicht, weil es keine gab. */
 
 type Verlauf = { datum: string | null; art: string; label: string; n: number;
-                 dubletten: number; ids: string[]; unterlagen: boolean };
+                 dubletten: number; nur_zweitmeldung: boolean;
+                 ids: string[]; unterlagen: boolean };
 type Dok = { notice: string; quelle: string | null; url: string | null; gelesen: boolean;
              n: number; dateien: Array<{ name: string; typ: string }>; gekuerzt: number };
 type Glied = { vorgang: string; position: number; jahr: number | null;
@@ -187,6 +188,13 @@ export function Vorgangsakte() {
           {a.cpv ? <>{t("CPV {c}", { c: a.cpv })} · </> : null}
           {a.von ? t("{von} bis {bis}", { von: monat(a.von), bis: monat(a.bis) }) : null}
           {" · "}
+          {/* Zwei Portale hatten dieselbe Vergabe getrennt gemeldet; diese Akte fuehrt sie
+              zusammen. Auch das ist erschlossen und gehoert deshalb an die Oberflaeche. */}
+          {z.verschmolzen > 0
+            ? <>{z.verschmolzen === 1
+                  ? t("eine Doppelmeldung eines zweiten Portals zusammengeführt")
+                  : t("{n} Doppelmeldungen zweiter Portale zusammengeführt", { n: z.verschmolzen })}{" · "}</>
+            : null}
           {z.angedockt > 0
             ? <>{z.angedockt === 1
                   ? t("ein Zuschlag über Käufer und Titel zugeordnet, nicht amtlich verknüpft.")
@@ -209,11 +217,13 @@ export function Vorgangsakte() {
                 {e.n > 1 ? <em>{t("{n} am selben Tag", { n: e.n })}</em> : null}
                 {/* Dieselbe Vergabe, von einem zweiten Portal gemeldet. Sie bleibt sichtbar,
                     zaehlt aber nicht als weiteres Ereignis. */}
-                {e.dubletten > 0
-                  ? <em>{e.dubletten === 1
-                      ? t("dazu eine Zweitmeldung")
-                      : t("dazu {n} Zweitmeldungen", { n: e.dubletten })}</em>
-                  : null}
+                {e.nur_zweitmeldung
+                  ? <em>{t("Meldung eines zweiten Portals")}</em>
+                  : e.dubletten > 0
+                    ? <em>{e.dubletten === 1
+                        ? t("dazu eine Zweitmeldung")
+                        : t("dazu {n} Zweitmeldungen", { n: e.dubletten })}</em>
+                    : null}
               </span>
               <span className="vg-ids">
                 {e.ids.slice(0, 3).join(", ")}

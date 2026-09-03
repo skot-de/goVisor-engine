@@ -634,3 +634,85 @@ def test_zweitmeldung_zaehlt_nicht_als_ereignis():
     v = M._verlauf([_bm("a", "can", 5), _bm("b", "can", 5), _bm("c", "can", 5, dublette=True)])
     assert v[0]["n"] == 2 and v[0]["dubletten"] == 1
     assert "c" in v[0]["ids"], "die Zweitmeldung muss sichtbar bleiben"
+
+
+# ── Fuenfte Stufe: dieselbe Vergabe als zwei Vorgaenge ──────────────────────────────
+
+def _kern5():
+    return _ohne_kommentare_py(BAU).split("def _vorgangsdubletten(")[1].split("\ndef ")[0]
+
+
+def test_zeitgrenze_auf_vorgangsebene():
+    """⚠ Der Beleg der Firewall gilt für zwei BEKANNTMACHUNGEN binnen 90 Tagen. Ein VORGANG
+    kann Jahre umspannen; hebt man das Paar ungeprüft hoch, verschmilzt eine Akte von 2011
+    mit einer von 2023. Genau so entstand im Versuch eine Akte mit 150 Zuschlägen über
+    zwölf Jahre."""
+    assert "VORGANG_DUBLETTE_TAGE = 90" in BAU
+    assert "VORGANG_DUBLETTE_TAGE" in _kern5()
+
+
+def test_zeitgrenze_ist_uebernommen_nicht_getunt():
+    """90 Tage ist die Kappung, die `govisor/dedupe.py` selbst anlegt. Eine frei gewählte
+    Zahl wäre hier eine zweite, unbelegte Schwelle."""
+    grenze = (WURZEL / "govisor" / "dedupe.py").read_text(encoding="utf-8")
+    assert "90" in grenze, "dedupe.py kappt nicht mehr bei 90 — Grenze neu begründen"
+
+
+def test_fuenfte_stufe_ist_nicht_transitiv():
+    """⚠ Eine freie Verschmelzung über denselben Belegen erzeugte Gruppen von 148 Vorgängen:
+    A gleicht B, B gleicht C, C gleicht D, und über ein gleitendes 90-Tage-Fenster läuft man
+    durch ein Jahr."""
+    kern = _kern5()
+    assert "union" not in kern.lower() and "find(" not in kern
+    assert "if vx in master" in kern
+
+
+def test_fuenfte_stufe_hat_dasselbe_folder_veto():
+    kern = _kern5()
+    assert "'folder'" in kern or '"folder"' in kern
+
+
+def test_mehrdeutiges_bleibt_auch_hier_liegen():
+    assert "len(ms) == 1" in _kern5()
+
+
+def test_reihenfolge_der_stufen():
+    """⚠ DIE REIHENFOLGE IST DER HALBE NUTZEN. Erst nach dem Andocken stehen die Nummern
+    fest; und erst nachdem die fünfte Stufe zwei doppelte Vorgänge zusammengeführt hat,
+    liegen Master und Zweitmeldung in derselben Akte, wo `_dubletten` sie von der Zählung
+    ausnimmt. Umgekehrt sortiert wäre jede Stufe für sich richtig und das Ergebnis falsch.
+
+    Belegt: die Markierung sprang dadurch in AT von 404 auf 36.149."""
+    quelle = _ohne_kommentare_py(BAU)
+    kern = quelle.split("def baue(")[1].split("\ndef ")[0]
+    i_and = kern.index("_andocken(")
+    i_vdu = kern.index("_vorgangsdubletten(")
+    i_dub = kern.index("_dubletten(con")
+    assert i_and < i_vdu < i_dub, "Stufenreihenfolge vertauscht"
+
+
+def test_zusammenfuehrung_wird_ausgewiesen():
+    assert "n_verschmolzen BIGINT" in BAU
+    assert '"verschmolzen"' in SKRIPT.read_text(encoding="utf-8")
+    tsx = (WURZEL / "web" / "components" / "explorer" / "Vorgangsakte.tsx").read_text(encoding="utf-8")
+    assert "z.verschmolzen" in tsx
+
+
+def test_anwenden_zaehlt_zwei_verschiedene_dinge():
+    """Die vierte Stufe zählt aufgenommene BEKANNTMACHUNGEN, die fünfte aufgenommene
+    VORGAENGE. Eine gemeinsame Zählweise wäre in einer der beiden Zahlen falsch."""
+    kern = _ohne_kommentare_py(BAU).split("def _anwenden(")[1].split("\ndef ")[0]
+    assert "len(teile) if zaehle_teile else 1" in kern
+
+
+def test_reine_zweitmeldungszeile_behauptet_kein_ereignis():
+    """⚠ Die Zweitmeldung eines anderen Portals trägt oft ein anderes Datum als das Original
+    und bekommt damit eine eigene Zeile. Ohne die Unterscheidung stand dort „Ausschreibung ·
+    dazu eine Zweitmeldung" — bei einer Zeile, die SELBST die Zweitmeldung ist. Gemessen:
+    5.199 solcher Zeilen."""
+    v = M._verlauf([_bm("a", "cn", 5, dublette=True)])
+    assert v[0]["nur_zweitmeldung"] is True
+    v2 = M._verlauf([_bm("a", "cn", 5), _bm("b", "cn", 5, dublette=True)])
+    assert v2[0]["nur_zweitmeldung"] is False
+    tsx = (WURZEL / "web" / "components" / "explorer" / "Vorgangsakte.tsx").read_text(encoding="utf-8")
+    assert "e.nur_zweitmeldung" in tsx

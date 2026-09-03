@@ -75,10 +75,19 @@ SPALTEN_V = ("land VARCHAR, vorgang_id VARCHAR, schluessel_quelle VARCHAR, "
              "erste_veroeffentlichung DATE, letzte_veroeffentlichung DATE, "
              "titel VARCHAR, cpv VARCHAR, vollstaendig BOOLEAN, "
              "hat_unterlagen BOOLEAN, n_dokumente BIGINT, n_anforderungen BIGINT, "
-             "n_angedockt BIGINT, n_dubletten BIGINT")
+             "n_angedockt BIGINT, n_dubletten BIGINT, n_verschmolzen BIGINT")
 # Nur dieser Beleg wird geglaubt. `nur_titel`, `nur_titel_kurz` und `geschwister` sind
 # schwaechere Indizien; `export_web_leads.py` traut aus demselben Grund ebenfalls nur diesem.
 DUBLETTEN_BELEG = "kaeufer_und_titel"
+
+# Wie weit die ERSTVEROEFFENTLICHUNGEN zweier Vorgaenge auseinanderliegen duerfen, damit
+# sie als dieselbe Vergabe gelten.
+#
+# ⚠ NICHT GETUNT, SONDERN UEBERNOMMEN: `govisor/dedupe.py` kappt seine Paare bei 90 Tagen.
+# Auf Bekanntmachungsebene gilt das schon; beim Heben auf die Vorgangsebene geht die Naehe
+# aber verloren, denn ein Vorgang kann sich ueber Jahre erstrecken. Ohne diese Grenze
+# entstand eine Akte von 2011 bis 2023 mit 150 Zuschlaegen — ein Jahrzehnt, keine Vergabe.
+VORGANG_DUBLETTE_TAGE = 90
 
 SPALTEN_N = ("land VARCHAR, vorgang_id VARCHAR, notice_id VARCHAR, notice_kind VARCHAR, "
              "jahr BIGINT, veroeffentlicht DATE, hat_unterlagen BOOLEAN, dublette BOOLEAN")
@@ -118,6 +127,92 @@ def _schreibe(con, pfad: pathlib.Path, zeilen: list, spalten: str) -> None:
         con.execute("INSERT INTO _t SELECT * FROM _arrow")
         con.unregister("_arrow")
     con.execute(f"COPY _t TO '{pfad.as_posix()}' (FORMAT PARQUET)")
+
+
+def _anwenden(karte: dict[str, str], zeilen_n: list, gruppen: dict,
+              zaehle_teile: bool = False) -> tuple[list, dict, dict]:
+    """Eine Zuordnung „alte Nummer → Zielnummer" auf Bekanntmachungen und Gruppen anwenden.
+
+    Vierte und fuenfte Stufe unterscheiden sich darin, WAS sie zuordnen, nicht darin, wie
+    das Ergebnis eingearbeitet wird. `zaehle_teile` trennt die beiden Zaehlweisen: die
+    vierte Stufe zaehlt aufgenommene BEKANNTMACHUNGEN, die fuenfte aufgenommene VORGAENGE.
+    """
+    zaehler: dict[str, int] = collections.Counter()
+    if not karte:
+        return zeilen_n, gruppen, zaehler
+    zeilen_n = [(l, karte.get(v, v), *rest) for l, v, *rest in zeilen_n]
+    neue: dict[str, list] = collections.defaultdict(list)
+    for vid, teile in gruppen.items():
+        ziel = karte.get(vid, vid)
+        if ziel != vid:
+            zaehler[ziel] += len(teile) if zaehle_teile else 1
+        neue[ziel].extend(teile)
+    return zeilen_n, neue, zaehler
+
+
+def _vorgangsdubletten(con, land: str, gruppen: dict, zeilen_n: list) -> dict[str, str]:
+    """Fuenfte Stufe: dieselbe Vergabe, die als ZWEI Vorgaenge existiert.
+
+    **Das Problem.** Melden zwei Portale dieselbe Vergabe und bekommen die beiden Meldungen
+    verschiedene Schluessel, entstehen zwei Akten fuer einen Vorgang. Die Firewall weiss
+    laengst, dass es dieselbe ist; die Vorgangsebene zog daraus bisher keine Folgerung.
+
+    **Die Regel, in derselben Form wie `_andocken`.** Eine Zweitmeldung haengt sich an ihren
+    Master; Master haengen sich NIE aneinander. Vetos:
+      * der Kandidat ist selbst Master eines anderen Paares,
+      * er bezieht seinen Schluessel aus einer amtlichen `ContractFolderID`,
+      * die Erstveroeffentlichungen liegen weiter als `VORGANG_DUBLETTE_TAGE` auseinander,
+      * es passt mehr als ein Master.
+
+    ⚠ OHNE DIE ZEITGRENZE WAERE ES FALSCH, und zwar spektakulaer. Der Beleg der Firewall
+    gilt fuer zwei BEKANNTMACHUNGEN binnen 90 Tagen. Ein VORGANG kann aber Jahre umspannen;
+    hebt man das Paar ungeprueft hoch, verschmilzt eine Akte von 2011 mit einer von 2023.
+    Genau so entstand im Versuch eine Akte mit 150 Zuschlaegen ueber zwoelf Jahre.
+
+    ⚠ UND OHNE DIE NICHT-TRANSITIVITAET EBENSO. Eine freie Verschmelzung ueber denselben
+    Belegen erzeugte Gruppen von 148 Vorgaengen: A gleicht B, B gleicht C, C gleicht D, und
+    ueber ein gleitendes 90-Tage-Fenster laeuft man durch ein Jahr.
+
+    Was danach noch zusammenliegt, ist ein Rahmenvertrag mit vielen Abrufen — und der DARF
+    eine grosse Akte sein (s. Kopf dieser Datei). Groesstes Ziel nach allen Sperren: +34.
+    """
+    d = ROOT / "data" / "gold" / land / "notice_duplicates.parquet"
+    if not d.exists():
+        return {}
+    vorgang_von = {nid: vid for _l, vid, nid, *_r in zeilen_n}
+    erste, quelle_von = {}, {}
+    for vid, teile in gruppen.items():
+        daten = sorted(t[2] for t in teile if t[2])
+        if daten:
+            erste[vid] = daten[0]
+        quelle_von[vid] = min((t[0] for t in teile), key=lambda q: RANG[q])
+
+    paare = con.execute(
+        f"select distinct master_id, duplicate_id from read_parquet('{d.as_posix()}') "
+        f"where beleg = '{DUBLETTEN_BELEG}'").fetchall()
+    roh: list[tuple[str, str]] = []
+    for m, x in paare:
+        vm, vx = vorgang_von.get(str(m)), vorgang_von.get(str(x))
+        if vm and vx and vm != vx:
+            roh.append((vm, vx))
+    master = {vm for vm, _vx in roh}
+
+    kandidaten: dict[str, set[str]] = collections.defaultdict(set)
+    veto = 0
+    for vm, vx in roh:
+        if vx in master or quelle_von.get(vx) == "folder":
+            veto += 1
+            continue
+        a, b = erste.get(vm), erste.get(vx)
+        if a is None or b is None or abs((a - b).days) > VORGANG_DUBLETTE_TAGE:
+            veto += 1
+            continue
+        kandidaten[vx].add(vm)
+    karte = {vx: next(iter(ms)) for vx, ms in kandidaten.items() if len(ms) == 1}
+    mehrdeutig = sum(1 for ms in kandidaten.values() if len(ms) > 1)
+    print(f"      Vorgangsdubletten: {len(karte):,} doppelte Vorgaenge zusammengefuehrt · "
+          f"{veto:,} durch Veto oder Zeitgrenze gehalten · {mehrdeutig:,} mehrdeutig")
+    return karte
 
 
 def _dubletten(con, land: str, zeilen_n: list) -> set[str]:
@@ -304,17 +399,16 @@ def baue(con, land: str) -> tuple[int, int]:
 
     # Vierte Stufe: heimatlose Zuschlaege an ihre Ausschreibung. Laeuft NACH der Gruppierung,
     # weil sie Gruppen-Eigenschaften braucht (hat der Vorgang eine eigene Ausschreibung?).
-    karte = _andocken(con, land, gruppen, zeilen_n)
-    angedockt: dict[str, int] = collections.Counter()
-    if karte:
-        zeilen_n = [(l, karte.get(v, v), *rest) for l, v, *rest in zeilen_n]
-        neue: dict[str, list] = collections.defaultdict(list)
-        for vid, teile in gruppen.items():
-            ziel = karte.get(vid, vid)
-            if ziel != vid:
-                angedockt[ziel] += len(teile)
-            neue[ziel].extend(teile)
-        gruppen = neue
+    zeilen_n, gruppen, angedockt = _anwenden(
+        _andocken(con, land, gruppen, zeilen_n), zeilen_n, gruppen, zaehle_teile=True)
+
+    # ⚠ FUENFTE STUFE ZWISCHEN VIERTER UND DUBLETTENMARKIERUNG, und die Reihenfolge ist der
+    # halbe Nutzen. Erst NACH dem Andocken stehen die endgueltigen Nummern fest; und erst
+    # NACHDEM hier zwei doppelte Vorgaenge zusammengefuehrt sind, liegen Master und
+    # Zweitmeldung in derselben Akte — wo `_dubletten` sie dann von der Zaehlung ausnimmt.
+    # Umgekehrt sortiert waere jede Stufe fuer sich richtig und das Ergebnis trotzdem falsch.
+    zeilen_n, gruppen, verschmolzen = _anwenden(
+        _vorgangsdubletten(con, land, gruppen, zeilen_n), zeilen_n, gruppen)
 
     # Zweitmeldungen derselben Vergabe im selben Vorgang. MUSS nach dem Andocken laufen:
     # erst dort landen Master und Zweitmeldung ueberhaupt in einer Akte.
@@ -347,7 +441,8 @@ def baue(con, land: str) -> tuple[int, int]:
             daten[0] if daten else None, daten[-1] if daten else None,
             (aus[0][3] or None), (aus[0][4] or None),
             arten.get("cn", 0) > 0 and arten.get("can", 0) > 0,
-            dokumente > 0, dokumente, anforderungen, angedockt.get(vid, 0), n_dubl))
+            dokumente > 0, dokumente, anforderungen, angedockt.get(vid, 0), n_dubl,
+            verschmolzen.get(vid, 0)))
 
     _schreibe(con, gold / "vorgaenge.parquet", zeilen_v, SPALTEN_V)
     _schreibe(con, gold / "vorgang_notice.parquet", zeilen_n, SPALTEN_N)
