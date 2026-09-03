@@ -186,8 +186,16 @@ zusammen fünf Minuten brauchen:
    rein inländischen. Gemessenes Beispiel: PORR war auffindbar, Implenia Schweiz nicht.
 2. **Zuschlagsansicht** — `web/data/awards-*.json` nach `land` auszählen. Steht dort nur
    DE, ist entweder die Quelle DE-fest oder das Feld hartkodiert; beides ist vorgekommen.
-3. **Firmenprofil** — in `web/data/firma-profiles.json` prüfen, ob Profile dieses Landes
-   eine echte `hauptregion` tragen. Ein Regionsfilter à la `nuts1 LIKE 'DE_'` liess dort
+3. **Firmenprofil** — in `web/data/firma/` prüfen, ob Profile dieses Landes eine echte
+   `hauptregion` tragen (Verzeichnis, eine Datei je Firma; `firma-index.json` ist das
+   Verzeichnis darüber). ⚠ Hier stand bis zum 2026-09-03 die Sammeldatei
+   `firma-profiles.json` (ohne Backtick-Pfad genannt, denn es gibt sie nicht mehr — sonst
+   schlägt `test_laender_bibel_verweist_nur_auf_vorhandenes` an). Sie war 67,6 MB, wurde
+   jede Nacht neu geschrieben und hochgeladen, und `scripts/export_firma_profiles.py`
+   **löscht sie inzwischen aktiv**: eine liegengebliebene Datei sähe aus wie ein aktueller
+   Stand. Wer nach dem alten Pfad greift, findet nichts.
+
+   Ein Regionsfilter à la `nuts1 LIKE 'DE_'` liess dort
    **null von 38.307** Profilen mit AT/CH-Region übrig.
 
 ⚠ Die Zahl allein genügt nicht. Nach dem Unionieren stiegen die Namensdubletten im

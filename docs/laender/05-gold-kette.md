@@ -90,8 +90,10 @@ python3 scripts/pruefe_verdrahtung.py --offen
   Sie parst den Syntaxbaum, damit Docstrings und Kommentare nicht mitzählen.
 
 Sonde 1 deckt seit dem 2026-08-23 auch `web/data` ab. Vorher sah sie nur `data/gold` und
-übersah damit die Schicht, die der Nutzer zu sehen bekommt: `firma-profiles.json` war
-23 Tage alt, weil sein Erzeuger in **keinem** Lauf steht.
+übersah damit die Schicht, die der Nutzer zu sehen bekommt: die damalige Sammeldatei
+`firma-profiles.json` war 23 Tage alt, weil ihr Erzeuger in **keinem** Lauf stand. (Die
+Datei gibt es seit dem 2026-09-03 nicht mehr — es gilt `web/data/firma/`. Der Befund bleibt
+gültig, er handelt von der Sonde, nicht von der Datei.)
 
 Ausnahmen stehen als **Code im Skript**, nie in einer Textdatei, und
 `tests/test_verdrahtung.py` hält sie ehrlich: ohne Begründung, für etwas Gelöschtes oder

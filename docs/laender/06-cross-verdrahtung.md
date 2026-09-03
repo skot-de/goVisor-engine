@@ -282,10 +282,18 @@ Bewusst DE-only und damit **kein** Mangel: `export_landing.py` (Startseiten-Zahl
 gemischte Qualitäten wären keine Zahl), `export_supabase.py` (Push ist ohnehin aus),
 `qualitaet_bericht.py` und `gap_effects.py` (interne Berichte).
 
-⚠ **Offen geblieben:** `firma-profiles.json` ist mit den drei Ländern auf **67 MB**
-(gemessen 2026-08-23)
-gewachsen und wird vom Frontend als Ganzes geparst. Das trägt heute (Cache-Grenze 256 MB),
-skaliert aber nicht auf weitere Länder — dieselbe Sharding-Frage wie bei den Detail-Dateien.
+✅ **Erledigt (stand hier bis 2026-09-03 als „offen"):** die Firmenprofile lagen als EINE
+Datei von 67 MB, die das Frontend als Ganzes parste — bei jedem Kaltstart, um genau ein
+Profil von 1,6 KB zu liefern. Am 2026-08-25 in `web/data/firma/` aufgeteilt (eine Datei je
+Firma, `firma-index.json` darüber), am 2026-09-03 die Sammeldatei entfernt: sie wurde
+weiterhin jede Nacht geschrieben und hochgeladen, obwohl alle 38.386 Profile im Verzeichnis
+standen und kein einziges nur in ihr.
+
+⚠ **Die Lehre daran ist nicht das Sharding, sondern die Verweildauer.** Der Eintrag stand
+neun Tage lang als „offen", nachdem er gelöst war, und beschrieb zuletzt eine Datei, die es
+nicht mehr gab. Ein Papier, das offene Punkte sammelt, muss auch das Schliessen festhalten —
+sonst arbeitet der nächste an etwas, das längst erledigt ist, oder hält eine erledigte Zeile
+für den aktuellen Stand. Dieselbe Sharding-Frage bei den Detail-Dateien ist WEITERHIN offen.
 
 ## Die Abnahme dieses Tors
 
