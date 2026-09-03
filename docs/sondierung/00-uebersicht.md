@@ -4,8 +4,10 @@
 > einziges dieser Länder hat einen Connector, eine Tabelle oder ein Kapitel in
 > `docs/laender/`. Ausnahmen: DE, AT, CH und PL sind angebunden (PL nur in Silber).
 
-**Stand 2026-09-03.** Grundlage: 410.605 Unterlagen-Links über 12 Monate
-(`data/sondierung/_tief/`), Linktiefe über 3 Monate (`scripts/miss_linktiefe.py`).
+**Stand 2026-09-03, nach dem Neulauf mit reparierten Mustern.** Grundlage: **442.276
+Ausschreibungen / 436.661 Unterlagen-Links** über 12 Monate (`data/sondierung/_tief/`),
+Linktiefe über 3 Monate (`scripts/miss_linktiefe.py`). **31 Länder** — Rumänien, Österreich
+und Liechtenstein waren mit den alten Mustern unsichtbar oder untermessen.
 
 ---
 
@@ -13,55 +15,53 @@
 
 | | Anteil der EU-Unterlagen-Links |
 |---|---:|
-| **gemessen erreichbar** | **24,6 %** |
-| auf ungeklärten Ländern | 9,2 % |
-| belegt nicht erreichbar | 66,3 % |
+| **gemessen erreichbar** | **28,7 %** |
+| belegt nicht erreichbar | 64,0 % |
+| ungeklärt (BE, NO, GR, AT, IS, LI) | 7,3 % |
 
 ⚠ **Was „erreichbar" heisst:** ohne Anmeldung, ohne CAPTCHA, ohne robots-Verstoss belegt
 abgerufen. Nicht: „gebaut". Gebaut ist davon nur Deutschland.
 
-⚠ Und **die 66,3 % sind kein technisches Urteil.** Der grösste Einzelposten ist Frankreich
-(14,0 % der EU, 0 % erreichbar) — dort ist die Grenze CAPTCHA und Anmeldung, nicht Können.
+⚠ Und **die 64,0 % sind kein technisches Urteil.** Der grösste Einzelposten ist Frankreich
+(13,2 % der EU, 0 % erreichbar) — dort ist die Grenze CAPTCHA und Anmeldung, nicht Können.
+Dahinter Polen (15,2 %, nur teilweise) und Deutschland (20,4 %, 32 % — das einzige gebaute
+Land).
 
 ## 2. Alle Länder
 
-| Land | EU-Anteil | offen | Links ohne Verfahren | Lage | Kapitel |
+| Land | EU-Anteil | offen | ohne Verfahren | Lage | Kapitel |
 |---|---:|---:|---:|---|---|
-| **DE** | 21,0 % | 32 % | 1,4 % | ✅ angebunden, 13 Abrufer | — |
-| **PL** | 16,2 % | 19 % ober / 35 % unter | 45,0 % ⚠ | 🟡 Silber ohne Gold | [pl](pl.md) |
-| **FR** | 14,0 % | **0 %** | 33,6 % ⚠ | ⛔ CAPTCHA + Login + robots | [fr](fr.md) |
-| **ES** | 6,7 % | 5 % | 21,5 % ⚠ | 🟡 nur Katalonien | [es](es.md) |
-| **IT** | 4,6 % | 15,1 % | 42,1 % ⚠ | 🟡 538 Domains | [it](it.md) |
-| **CZ** | 4,5 % | 28 % | **62,2 %** ⚠ | 🟡 verlinkt Käuferprofile | [cz](cz.md) |
-| **BE** | 3,3 % | ? | 2,5 % | ⚪ API antwortete 500 | [be](be.md) |
-| **NL** | 2,6 % | **73 %** | 0,7 % | ✅ offizielle API | [nl](nl.md) |
-| **SE** | 2,6 % | **0 %** | 0,1 % | ⛔ 88 % robots-gesperrt | [se](se.md) |
-| **PT** | 2,3 % | **88,8 %** | 1,5 % | ✅ Vortal + AcinGov | [pt](pt.md) |
-| **BG** | 2,2 % | **97 %** | 0,0 % | ✅ robots sagt `Allow: /` | [bg](bg.md) |
-| **LT** | 2,0 % | **~99 %** | 0,4 % | ✅ European Dynamics | [baltikum](baltikum.md) |
-| **HR** | 1,9 % | **0 %** | 0,0 % | ⛔ `Allow: /$` — nur Startseite | [hr](hr.md) |
-| **FI** | 1,9 % | 9,2 % | 2,8 % | 🟡 Zwei-Klassen-Land | [fi](fi.md) |
-| **NO** | 1,8 % | ? | 0,6 % | ⚪ Mercell/EU-Supply | [se](se.md) |
-| **SI** | 1,6 % | **100 %** | 0,0 % | ✅ ein GET auf die Datei | [si](si.md) |
-| **LV** | 1,6 % | ? | 0,0 % | 🟡 Liste offen, Weg ungeklärt | [baltikum](baltikum.md) |
-| **CH** | 1,5 % | 0 % | 0,0 % | ⛔ Anmeldung (Sven-Entscheid) | — |
-| **IE** | 1,4 % | **86 %** | 1,6 % | ✅ European Dynamics | [ie](ie.md) |
-| **HU** | 1,1 % | **64 %** | 0,0 % | ✅ typisiert an der Quelle | [hu](hu.md) |
-| **SK** | 1,1 % | **0 %** | 0,5 % | ⛔ Freigabeliste | [sk](sk.md) |
-| **DK** | 0,9 % | 17,5 % | 11,9 % | 🟡 6 Plattformen, 6 Antworten | [dk](dk.md) |
-| **GR** | 0,9 % | *bedingt* | **40,8 %** ⚠ | 🟡 sichtbar, Sitzung nötig | [gr](gr.md) |
-| **EE** | 0,9 % | ? | 0,3 % | 🟡 Liste offen, Dateiweg fehlt | [baltikum](baltikum.md) |
-| **LU** | 0,5 % | *offen* | 1,5 % | ⏳ nur bis Fristende | [lu](lu.md) |
-| **MT** | 0,3 % | **100 %** | 0,6 % | ✅ European Dynamics | [european-dynamics](european-dynamics.md) |
-| **CY** | 0,3 % | **100 %** | 0,0 % | ✅ European Dynamics | [european-dynamics](european-dynamics.md) |
-| **AT** | ⚠ *neu* | — | 31,5 % | ✅ angebunden · `*.vergabeportal.at` 49,7 % | — |
-| **IS** | 0,1 % | ? | 17,9 % | ⚪ nur TED | — |
-| **RO** | ⚠ *neu* | **offen** | 15,1 % | ✅ `e-licitatie.ro` 99,7 %, zweiphasig | [ro](ro.md) |
-
-⚠ **Die Spalte „EU-Anteil" steht noch auf den alten Mustern.** RO und AT waren darin
-untermessen (RO 5 statt 1.257 Ausschreibungen im Monat, AT 46 statt 584); die Skripte sind
-repariert, aber `data/sondierung/_tief/` ist noch nicht neu gebaut. Einzelheiten:
-[`linktiefe.md`](linktiefe.md) §4.
+| **DE** | 20.4 % | 32 % | 3,3 % | ✅ angebunden, 13 Abrufer | — |
+| **PL** | 15.2 % | 19 / 35 % | 45,0 % ⚠ | 🟡 Silber ohne Gold | [pl](pl.md) |
+| **FR** | 13.2 % | **0 %** | 33,6 % ⚠ | ⛔ CAPTCHA + Login | [fr](fr.md) |
+| **ES** | 6.5 % | 5 % | 20,0 % ⚠ | 🟡 nur Katalonien | [es](es.md) |
+| **IT** | 4.3 % | 15,1 % | 42,1 % ⚠ | 🟡 538 Domains | [it](it.md) |
+| **CZ** | 4.2 % | 28 % | 62,2 % ⚠ | 🟡 verlinkt Käuferprofile | [cz](cz.md) |
+| **RO** | 3.2 % | **~85 %** | 15,1 % | ✅ `e-licitatie.ro` 99,7 %, zweiphasig | [ro](ro.md) |
+| **BE** | 3.1 % | ? | 2,5 % | 🟡 Token fehlt, Weg dokumentiert | [be](be.md) |
+| **SE** | 3.1 % | **0 %** | 0,1 % | ⛔ 88 % robots-gesperrt | [se](se.md) |
+| **NL** | 2.4 % | **73 %** | 0,7 % | ✅ offizielle API | [nl](nl.md) |
+| **PT** | 2.2 % | **88,8 %** | 1,5 % | ✅ Vortal + AcinGov | [pt](pt.md) |
+| **BG** | 2.1 % | **97 %** | 0,0 % | ✅ robots sagt `Allow: /` | [bg](bg.md) |
+| **LT** | 1.8 % | **~99 %** | 0,4 % | ✅ European Dynamics | [baltikum](baltikum.md) |
+| **HR** | 1.8 % | **0 %** | 0,0 % | ⛔ `Allow: /$` — nur Startseite | [hr](hr.md) |
+| **FI** | 1.8 % | 9,2 % | 2,8 % | 🟡 Zwei-Klassen-Land | [fi](fi.md) |
+| **NO** | 1.7 % | ? | 0,6 % | ⚪ Mercell/EU-Supply gesperrt | [mercell](mercell.md) |
+| **SI** | 1.5 % | **100 %** | 0,0 % | ✅ ein GET auf die Datei | [si](si.md) |
+| **AT** | 1.5 % | ? | 31,5 % ⚠ | ✅ angebunden, Unterlagen hinter Anmeldung | — |
+| **LV** | 1.5 % | **100 %** | 0,0 % | ✅ zweistufig, `.edoc` | [baltikum](baltikum.md) |
+| **CH** | 1.4 % | 0 % | 0,0 % | ⛔ Anmeldung | — |
+| **IE** | 1.4 % | **86 %** | 1,6 % | ✅ European Dynamics | [ie](ie.md) |
+| **HU** | 1.1 % | **64 %** | 0,0 % | ✅ typisiert an der Quelle | [hu](hu.md) |
+| **SK** | 1.0 % | **0 %** | 0,5 % | ⛔ Freigabeliste | [sk](sk.md) |
+| **DK** | 0.9 % | 17,5 % | 11,9 % | 🟡 6 Plattformen, 6 Antworten | [dk](dk.md) |
+| **GR** | 0.9 % | *bedingt* | 40,8 % ⚠ | 🟡 ADF-Bootstrap fehlt | [gr](gr.md) |
+| **EE** | 0.8 % | **100 %** | 0,3 % | ✅ `documents-temp-url` | [baltikum](baltikum.md) |
+| **LU** | 0.4 % | **100 %** | 1,5 % | ⏳ offen, nur bis Fristende | [lu](lu.md) |
+| **MT** | 0.3 % | **100 %** | 0,6 % | ✅ European Dynamics | [european-dynamics](european-dynamics.md) |
+| **CY** | 0.3 % | **100 %** | 0,0 % | ✅ European Dynamics | [european-dynamics](european-dynamics.md) |
+| **IS** | 0.1 % | ? | 17,9 % | ⚪ nur TED | — |
+| **LI** | 0.0 % | ? | 0,0 % | ⚪ nur TED | — |
 
 ## 3. Ertrag je Abrufer — die Achse, die zählt
 
@@ -108,9 +108,10 @@ brauchen alle drei denselben sitzungsführenden Abrufer** (POST mit Formularzust
 
 ## 6. Was offen bleibt
 
-- **Neun Länder ohne belastbare Zahl** (9,2 % des Volumens): BE, NO, LV, EE, GR, LU, AT,
-  IS, RO.
-- **Mercell** — sechs Länder, nie als Abrufer geprüft.
+- **Sechs Länder ohne belastbare Zahl** (7,3 %): BE, NO, GR, AT, IS, LI. ✅ RO, LU, LV und
+  EE sind seit dem 2026-09-03 gelöst und tragen zusammen **5,4 Punkte** zur Gesamtzahl bei.
+- ✅ **Mercell ist geprüft und kein Hebel** ([mercell](mercell.md)): NL/DE/LU per robots
+  gesperrt, NO/DK hinter einer Cloudflare-Bot-Prüfung.
 - **Die Fonds-Ebene** — nur CZ und PL untersucht, zehn Länder offen
   ([fonds-ebene](fonds-ebene.md)).
 - **Die unterschwellige Ebene** ist nur dort geklärt, wo sie im selben Register liegt
