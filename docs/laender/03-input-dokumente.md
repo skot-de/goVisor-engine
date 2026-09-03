@@ -447,6 +447,57 @@ statt Ergebnisspeicher**. Gemessen sind **22 % des Textbestands Kopie**.
 
 ⚠ Nur belegte Master verwenden — 46 % der Kandidaten hielten der Prüfung stand.
 
+## Die Kette hinter dem Abruf — und wo sie je Land entscheidet
+
+Der Abruf ist nur die erste von sechs Stufen. Sie hingen bis zum 2026-09-03 fast alle an
+Deutschland fest; seitdem lesen sie, **was daliegt**:
+
+```
+docfetch_*        ZIPs  → data/docs/<LAND>/<notice_id>/
+index-docs        ZIPs  → data/docs/<LAND>/doc_text.parquet      ← Parser, KEIN LLM
+signals-docs      Text  → doc_signals.parquet
+analyze_docs.py   Text  → web/data/doc-analysis.json             ← hier kostet es Geld
+build_doc_analysis      → gold/<LAND>/doc_analysis + doc_checklist
+export_doc_*            → web/data/…                             ← was das Frontend liest
+```
+
+⚠ **KEIN Länderparameter mit Vorgabe DE — das war die Entwurfsentscheidung.** Einen Parameter
+muss jemand *setzen*, und genau das wird vergessen: am 2026-09-03 lief der LU-Abrufer im
+Tageslauf, während `index-docs` an jeder Stelle auf `--country DE` stand. Unterlagen wurden
+gesammelt, die niemand las, und nichts wurde rot (Falle A14). `analyze_docs`, `export_doc_text`
+und `export_doc_signals` vereinigen deshalb `data/docs/*/`; `index-docs` und `signals-docs`
+laufen im Tageslauf über eine gemeinsame Länderliste.
+
+### Zwei Schalter, und sie tun Verschiedenes
+
+| | Wirkung |
+|---|---|
+| `LAND_PRIO="DE,AT,CH"` | **Vorgabe.** Reihenfolge in der Warteschlange. Ungenannte Länder (heute LU) kommen zuletzt |
+| `LAND=LU` | **Filter.** Nur dieses Land — für gezielte Messungen, etwa der französischen Doktyp-Muster |
+
+⚠ **Wo der Länderrang sitzt, ist die eigentliche Entscheidung**: hinter `phase='open'`, vor der
+Frist. Sven am 2026-08-18: *„lass die alten, alt sein."* Ein Rang **vor** der Offen-Prüfung
+schöbe ein abgelaufenes Dokument des bevorzugten Landes vor eine laufende Vergabe eines
+anderen — und verbrennt genau das Geld, das jene Regel spart.
+
+⚠ Das Land kommt aus dem **Dateipfad** (`filename=true` + `regexp_extract`), nicht aus dem
+Lead: `doc_text` führt keine Landesspalte, und über den Lead-Join hätten Vorgänge ohne Lead
+gar keins und fielen aus jedem Rang.
+
+### Hochgeladene Unterlagen gehen an der Warteschlange vorbei
+
+Ein Upload wartet auf nichts. `/api/lead-docs` ruft `scripts/process_upload.py` **synchron**
+(Index → Parser → LLM → Signale) und gibt das Ergebnis zurück; dazu steht `upload` in
+`llm.VORRANG` und geht am allgemeinen Tagesdeckel vorbei, mit eigener Obergrenze
+`GOVISOR_UPLOAD_TAG_USD`. **Ein Länderrang in der Warteschlange hat für Uploads deshalb null
+Wirkung** — wer dort etwas für Uploads einstellt, baut eine Attrappe.
+
+⚠ **Der Upload-Pfad trug bis zum 2026-09-03 ein festes „DE"** (Falle B6). Jeder Upload landete
+unter Deutschland, egal woher der Lead stammte. Es fällt nirgends auf — die Analyse läuft
+durch, das Ergebnis stimmt, nur das Land ist falsch. Und es traf ausgerechnet **AT und CH**:
+dort ist der Upload wegen 0 % Portalabdeckung die einzige Dokumentquelle. Das Land wird jetzt
+vom Client mitgeschickt und **vor** der Pfadbildung gegen eine feste Liste geprüft.
+
 ## Für ein neues Land
 
 1. Welche Portale nennt die Bekanntmachung überhaupt? (`documents_url` auszählen)

@@ -19,6 +19,7 @@
 | A11 | **Beide Enden richtig, die Leitung fehlt** | Nichts wird rot, weil jede Seite fuer sich tut, was dasteht. Faellt nur auf, wenn jemand den Weg abgeht. | Eignungs-Check sammelte sechs Angaben, der Aufruf ins Onboarding war ein blankes `<a href>` — alles weg, und das Onboarding fragt sie nie |
 | A12 | **Ins falsche Profil geschrieben** | Die Reparatur ist fertig, typgeprueft und wirkungslos: es gibt zwei Profile, und `capabilities` liest niemand | 2026-08-31, s. [Kapitel 09](09-frontend-und-i18n.md) |
 | A13 | **Vorgabewert als Antwort gelesen** | Eine nie gestellte Frage steht als `false` da; wer den Zustand uebernimmt, schreibt ein „nein", das niemand gesagt hat — und die Abdeckung steigt | Check zeigt je Fachgebiet nur die Nachweise des Feldes (Bau 2, IT 3) |
+| A14 | **Sammeln verdrahtet, Auswerten nicht** | Der Abrufer meldet täglich „ok", die Dateien liegen auf der Platte, und niemand liest sie. Nichts wird rot: ein Land sammelt Unterlagen, die nie zu Text werden. | `index-docs` stand an JEDER Stelle auf `--country DE` — auch nachdem der LU-Abrufer in den Tageslauf kam (2026-09-03). Eine Stufe früher als A10: dort war der Vermerk falsch, hier fehlt der Leser ganz |
 | A10 | **Statusmeldung als Befund gelesen** | Ein Abrufer meldet „keine Datei"; niemand fragt, ob er an der richtigen Stelle gesucht hat. Der Fehler wirft keine Ausnahme und sieht im Bericht wie erledigte Arbeit aus. | seit 2026-08-24: acht Abrufer geprüft, acht Vermerke gefallen, 549 Vorgänge — s. [Kapitel 03](03-input-dokumente.md) |
 
 ## B · Fallen beim Zusammenführen von Ländern
@@ -30,6 +31,7 @@
 | B3 | **Wächter fragt nach DE** | fällt DE aus, sind AT/CH mit abgeschaltet | `_FILL = {G}/lead_region_fill.parquet` |
 | B4 | **Silber-Glob DE-fest** | mitten in einem sonst länderfähigen Export | `ATTR` → Angebotsaufwand AT/CH genau 0 % |
 | B5 | **Zwei Schichten derselben Annahme** | die zweite verschluckt die Reparatur der ersten | `region_ableiten` DE-only **und** Export DE-only |
+| B6 | **Schreibpfad fest auf ein Land** | Nicht ein Leser, sondern der SCHREIBER legt falsch ab — danach ist die Herkunft im Bestand unwiederbringlich falsch, und jede Länderauswertung stimmt dazu passend. | `/api/lead-docs` und `process_upload.py` schrieben JEDEN Upload nach `data/docs/DE/`. ⚠ Es traf ausgerechnet AT und CH: dort ist der Upload wegen 0 % Portalabdeckung die EINZIGE Dokumentquelle. Gefunden 2026-09-03 |
 | B6 | **Glob ins Leere** | DuckDB wirft einen Laufzeitfehler, kein leeres Ergebnis | CH hat keine `award_criteria` |
 | B7 | **Namenskollision über Grenzen** | 22 Käufernamen in mehr als einem Land | trifft 463 von 117.241 Leads |
 | B8 | **PLZ-Kollision** | AT und CH sind beide 4-stellig | 1010 = Wien AT / Lausanne CH |
@@ -102,6 +104,7 @@
 | F5 | **Nur den Füllgrad messen** | CH-Kriterien 100 % gefüllt, 29 % davon reine Etiketten |
 | F6 | **Falscher Schlüssel beim Nachmessen** | 0 % in allen Ländern heisst meist: den Schlüssel gibt es nicht |
 | F7 | **Namenssuche hält Leichen für lebendig** | einziger Treffer war ein Kommentar, der die Ablösung erklärt |
+| F8 | **Den Vorgabefall nicht mitprüfen** | Der Sonderfall wird getestet, der Normalbetrieb nicht — dabei läuft er millionenfach öfter. Ein Länderrang im `ORDER BY` brauchte ohne Vorrangliste einen Platzhalter; `0` ist dort eine SPALTENNUMMER („ORDER term out of range"), `NULL` ein Literal ohne Wirkung („non-integer literal has no effect"). Beide hätten JEDEN Lauf ohne Vorrangliste zerlegt, und beide erst zur Laufzeit im Dienst. Richtig ist, gar keinen Term auszugeben. Gefunden 2026-09-03 an einem künstlich gebauten Zwei-Länder-Fall, nicht an echten Daten — die hatten nur ein Land |
 
 ## G · Fallen im Betrieb
 

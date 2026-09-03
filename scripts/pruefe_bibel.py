@@ -137,6 +137,45 @@ def _behauptungen() -> list[tuple[str, str, bool, str]]:
     aus.append(("07", "Regions-Ebene DE 3 / AT 4 / CH 5 / LU 3, in ALLEN DREI Dateien gleich",
                 passt, f"{gold._REGION_STELLEN} vs {ra.REGION_STELLEN} vs {dritte}"))
 
+    # ── Kapitel 03: die Dokumentenkette ──────────────────────────────────────────────
+    #
+    # ⚠ DREI AUSSAGEN, DIE ALLE STILL ALTERN WUERDEN. Keine davon bricht einen Test, wenn
+    # sie kippt — sie stehen in Fliesstext, waehrend der Code darunter weiterlaeuft.
+    import re as _re
+    _ad = (ROOT / "scripts" / "analyze_docs.py").read_text(encoding="utf-8")
+
+    # (1) Die Vorgabe der Warteschlange. Kapitel 03 nennt sie namentlich.
+    m = _re.search(r'os\.environ\.get\("LAND_PRIO",\s*"([^"]*)"\)', _ad)
+    aus.append(("03", "LAND_PRIO-Vorgabe ist DE,AT,CH — LU faellt bewusst hinten an",
+                bool(m) and m.group(1) == "DE,AT,CH",
+                f"gefunden: {m.group(1) if m else 'kein Vorgabewert'}"))
+
+    # (2) Der Laenderrang steht HINTER `phase='open'`. Kippt die Reihenfolge, wird aus
+    #     „Vorrang unter den offenen" ein „abgelaufenes Lieblingsland zuerst" — und genau
+    #     das verbrennt das Geld, das die Offen-Regel spart.
+    i_open = _ad.find("(l.phase = 'open') DESC NULLS LAST")
+    i_rang = _ad.find("_land_rang_sql('t.land')")
+    aus.append(("03", "Laenderrang steht HINTER phase='open', vor der Frist",
+                i_open > 0 and i_rang > i_open,
+                f"open@{i_open} rang@{i_rang}"))
+
+    # (3) Uploads gehen an der Warteschlange vorbei. Faellt `upload` aus VORRANG, muessten
+    #     Kapitel 03 UND 15 umgeschrieben werden — beide sagen ausdruecklich, dass ein
+    #     Laenderrang fuer Uploads wirkungslos ist.
+    from govisor import llm as _llm
+    aus.append(("03", "hochgeladene Unterlagen gehen am Tagesdeckel vorbei (llm.VORRANG)",
+                "upload" in _llm.VORRANG, f"VORRANG={_llm.VORRANG}"))
+
+    # (4) Die erlaubten Upload-Laender stehen in ZWEI Sprachen an ZWEI Stellen — Route und
+    #     Python. Sie gehen in einen DATEIPFAD; laufen sie auseinander, legt die eine Seite
+    #     ab, was die andere nie erwartet.
+    _rt = (ROOT / "web" / "app" / "api" / "lead-docs" / "route.ts").read_text(encoding="utf-8")
+    _pu = (ROOT / "scripts" / "process_upload.py").read_text(encoding="utf-8")
+    ts = set(_re.findall(r'"([A-Z]{2})"', (_re.search(r'LAENDER = new Set\(\[([^\]]*)\]', _rt) or _re.match("", "")).group(1) if _re.search(r'LAENDER = new Set\(\[([^\]]*)\]', _rt) else ""))
+    py = set(_re.findall(r'"([A-Z]{2})"', (_re.search(r'_ERLAUBT = \(([^)]*)\)', _pu) or _re.match("", "")).group(1) if _re.search(r'_ERLAUBT = \(([^)]*)\)', _pu) else ""))
+    aus.append(("15", "Upload-Laenderliste in route.ts und process_upload.py gleich",
+                bool(ts) and ts == py, f"route={sorted(ts)} python={sorted(py)}"))
+
     # 26 Kantone auf 26 NUTS (Kapitel 07/14).
     from govisor import simap
     aus.append(("07", "26 Kantone auf 26 verschiedene NUTS-3",

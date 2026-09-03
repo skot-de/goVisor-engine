@@ -44,6 +44,30 @@ Sortiert nach dem Zeitpunkt, zu dem man sie braucht.
 | `govisor/dedupe.py` | nichts — **wenn** `locales.use(country)` bereits greift. Prüfen. |
 | `data/curated/<LAND>_entity_aliases.csv` | optional, kuratierte Umbenennungen |
 
+## Dokumente
+
+⚠ **Diesen Abschnitt gab es bis zum 2026-09-03 nicht** — und genau deshalb blieb die
+Dokumentenkette bei Deutschland stehen, während drei Länder daneben lagen. Der Abrufer stand
+in der Liste, alles dahinter nicht.
+
+| Datei | Was |
+|-------|-----|
+| `scripts/daily_leads.sh` → `_IXLAENDER` | **die eine Liste** für `index-docs` UND `signals-docs`. Beide laufen darüber, damit sie nicht auseinanderlaufen |
+| `scripts/analyze_docs.py` | nichts eintragen — vereinigt `data/docs/*/`. Prüfen, dass das so bleibt |
+| `scripts/export_doc_text.py`, `export_doc_signals.py` | dito, vereinigen `data/docs/*/` |
+| `scripts/build_doc_analysis.py`, `export_doc_struktur.py` | nehmen `--land`/`--country` — im Aufrufer setzen |
+| `scripts/export_doc_listing.py` | Portal-Dateiliste je Land; nur eintragen, wenn das Land ein Listenportal hat |
+| `web/app/api/lead-docs/route.ts` → `LAENDER` | erlaubte Werte für den Upload-Pfad |
+| `scripts/process_upload.py` → `_ERLAUBT` | dieselbe Liste eine Ebene tiefer |
+| `scripts/export_anforderungsprofil.py`, `export_stellenprofil.py`, `export_fenster.py` | lesen `doc_checklist`/`doc_analysis` je Land |
+
+⚠ **Ein Land hier zu vergessen wirft keinen Fehler.** Die Schleifen prüfen je Land auf die
+Datei und überspringen, was fehlt — das ist richtig, macht das Vergessen aber unsichtbar.
+Die Gegenprobe unten ist deshalb nicht optional.
+
+⚠ **Und was NICHT einzutragen ist:** ein Länderrang für Uploads. Hochgeladene Unterlagen gehen
+synchron durch (`llm.VORRANG`) und sehen die Warteschlange nie — s. [Kapitel 03](03-input-dokumente.md).
+
 ## Gold
 
 | Datei | Was |
