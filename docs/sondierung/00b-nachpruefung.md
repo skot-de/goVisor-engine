@@ -143,10 +143,12 @@ Bildrätsel gesperrt.
 | CZ | 28 % | **28 % + Josephine** (proebiz, offen belegt) |
 | PL | 19 / 35 % | **+ Josephine**, dazu ein ungeprüfter Versorger-Schwanz |
 | FR | 0 % | **0 %, jetzt an zwei Engines belegt statt einer** |
-| IT | 4 % | 4 %, aber **23,7 % waren nie angesehen** — jetzt teils geprüft, überwiegend gesperrt |
+| IT | 4 % | **15,1 %** — s. § 8: zwei offene Familien im übersehenen Schwanz |
 | LT/LV/EE | „eine Plattform" | **bestätigt**, über zwölf Monate deutlicher |
 
-## 7. Was weiterhin offen ist
+## 7. Was nach der ERSTEN Runde offen blieb
+
+*(Die zweite Runde unten hat das meiste abgearbeitet — dies ist der Stand von davor.)*
 
 - **Polens Versorger-Portale** (7,6 % des Landes, robots erlauben): ungeprüft
 - **Italiens neue Familien** `traspare`, `acquistitelematici`, `aflink`, `areacom`:
