@@ -558,16 +558,27 @@ DOC_REGISTRY: list[Source] = [
            url="https://www.tenderarena.cz"),
     # ── BE, sondiert am 2026-09-03 · Kapitel: docs/sondierung/be.md ───────────────────
     Source("sond-be-bosa", "BOSA eProcurement (publicprocurement.be)", "", "BE", "beides",
-           "sondiert", portals=1, ebene="unterlagen", ertrag="ungeprueft",
-           coverage="73 % der BE-Ausschreibungen, Linktiefe 96 %",
-           overlap="⚠ NICHT ABGESCHLOSSEN, UND ZWAR WEGEN EINES AUSFALLS. Keine robots-Sperre "
-                   "(weiches 404), Dokumentenliste oeffentlich sichtbar samt „Alle Dokumente "
-                   "herunterladen\", saubere REST-API (/api/dos/publication-workspaces/<uuid>"
-                   "/{documents,archive}). Aber seit 2026-09-03 nachmittags antwortet sie "
-                   "durchgaengig mit HTTP 500 — zwei Vorgaenge, drei Endpunkte, mit und ohne "
-                   "Sitzung, AUCH AUS DEM BROWSER. Das ist keine Schranke, sondern ein "
-                   "Ausfall. Alle Anzeichen sprechen fuer offen, belegt ist es nicht. "
-                   "NACHZUHOLEN, sobald die Plattform wieder antwortet.",
+           "sondiert", portals=1, ebene="unterlagen", ertrag="teilweise",
+           coverage="60,5 % des BE-Unterlagen-Felds (8.141 von 13.446); 2,5 % der Links ohne "
+                    "Verfahren",
+           overlap="⚠ FRUEHERER EINTRAG WAR FALSCH. Er sagte, die API antworte 'AUCH AUS DEM "
+                   "BROWSER' mit 500, und schloss auf einen AUSFALL. Beides stimmt nicht: im "
+                   "Netzprotokoll steht dieselbe Adresse einmal mit 500 und einmal mit 200. "
+                   "🟡 DER 500er IST EIN FEHLENDER KOPF. Die Anwendung schickt bei JEDEM Aufruf "
+                   "'Authorization: Bearer <JWT>' — auch beim anonymen Blaettern. Ohne Token "
+                   "antwortet die Schnittstelle mit 500 statt 401; das ist die schlechteste Art, "
+                   "'dir fehlt ein Kopf' zu sagen, und sie hat neun Kapitel lang ein ganzes Land "
+                   "gekostet. Fuenfter Fall dieser Klasse nach EE/PT/BG/RO — und der "
+                   "irrefuehrendste, weil ein 500 wie ein Serverfehler aussieht. "
+                   "✅ Sichtbarkeit: Dokumentenliste anonym vollstaendig (Titel, Sprache, Version, "
+                   "Datum, darunter 'Question_Answer.docx'), Knopf 'Alle Dokumente herunterladen', "
+                   "Endpunkte /api/dos/publication-workspaces/<uuid>/{documents,archive}. "
+                   "⛔ NICHT GEGANGEN: das Token kommt aus einem Keycloak, dessen Zugangsdaten "
+                   "OFFEN in env.config.js stehen (VITE_AUTH_REALM=supplier, "
+                   "VITE_AUTH_CLIENTID=frontend-public, VITE_AUTH_CLIENTSECRET im Klartext). Ein "
+                   "Client-Secret zu verwenden ist eine Entscheidung, keine Messung — sie gehoert "
+                   "Sven. Belegt ist: nicht gesperrt, sichtbar, Weg dokumentiert. Nicht belegt: "
+                   "dass der Abruf danach durchlaeuft.",
            url="https://www.publicprocurement.be"),
     Source("sond-be-3p", "3P (cloud.3p.eu)", "", "BE", "beides",
            "sondiert", portals=1, ebene="unterlagen", ertrag="ungeprueft",

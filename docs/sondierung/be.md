@@ -1,80 +1,106 @@
 # Sondierung Belgien
 
-> ⚠ **SONDIERT, NICHT AUFGENOMMEN.** Keine Zeile in `data/gold` oder `data/silver`.
-> ⚠ **UND NICHT ABGESCHLOSSEN** — siehe § 3.
+> ⚠ **SONDIERT, NICHT AUFGENOMMEN.**
 
-**Stand 2026-09-03.** Landschaft aus dem TED-Monatspaket 2026-06.
+**Stand 2026-09-03.** Zweiter Anlauf — der erste endete bei „die API antwortete 500".
 
 ---
 
-## 1. Mengengerüst — zwei Systeme, sonst nichts
+## 1. Zwei Plattformen
 
-1.309 Ausschreibungen im Juni. Belgien ist das am stärksten konzentrierte Land der
-bisherigen Sondierung:
-
-| Portal | Bezüge | Anteil | Linktiefe |
-|---|---:|---:|---:|
-| `publicprocurement.be` (BOSA, föderal) | 1.226 | **73 %** | 96 % |
-| `cloud.3p.eu` | 433 | 26 % | **100 %** |
-| `ec.europa.eu` + `webgate.ec.europa.eu` | 135 | — | — |
-| Rest (Bahn, Elia, Fluxys, Häfen …) | ~20 | 1 % | |
-
-⚠ Die 135 Bezüge auf `ec.europa.eu` sind **EU-Institutionen**, die von Brüssel aus unter
-BE veröffentlichen — kein belgisches Portal. Wer Belgien zählt, zählt sie mit, obwohl sie
-nicht dazugehören.
-
-## 2. Was geprüft ist
-
-**Keine robots.txt auf beiden Hauptseiten.** `publicprocurement.be/robots.txt` liefert die
-Anwendungshülle (weiches 404), `cloud.3p.eu/robots.txt` ein echtes 404. Nichts untersagt.
-
-**Die Dokumente liegen öffentlich.** Die Vergabeseite der föderalen Plattform zeigt ohne
-Anmeldung Titel, Sprachen, Version und Veröffentlichungsdatum jedes Dokuments, dazu einen
-Knopf „Alle Dokumente herunterladen".
-
-**Und es gibt eine saubere REST-Oberfläche:**
-```
-/api/dos/publication-workspaces/<uuid>                → der Vorgang
-/api/dos/publication-workspaces/<uuid>/documents      → die Dokumentenliste
-/api/dos/publication-workspaces/<uuid>/archive        → alle Dateien als Archiv
-```
-
-## 3. ⚠ Warum Belgien offen bleibt
-
-**Die API antwortet seit dem Nachmittag des 2026-09-03 durchgängig mit HTTP 500** — für
-zwei verschiedene Vorgänge, für alle drei Endpunkte, mit und ohne Sitzungskeks, und
-**auch aus dem Browser heraus**, der wenige Minuten zuvor noch 200 bekommen hatte.
-
-```
-{"details":"Error id 3f59ed8c-83fa-4505-8de2-85e4c8ce04c0-353","stack":""}
-```
-
-Das ist **keine Schranke, sondern ein Ausfall.** Ein Urteil wäre hier falsch, in beide
-Richtungen: „gesperrt" wäre unwahr, „offen" unbelegt.
-
-**Alle Anzeichen sprechen für offen** — keine robots-Sperre, öffentlich sichtbare
-Dokumentenliste, ein Sammel-Download-Knopf ohne Anmeldung, eine ordentliche REST-API. Aber
-belegt ist es nicht, und in dieser Sondierung zählt nur, was heruntergeladen wurde.
-
-**Nachzuholen**, sobald die Plattform wieder antwortet.
-
-## 4. Ungeprüft
-
-`cloud.3p.eu` (26 %) leitet auf eine Länderauswahl mit Cookie-Banner. Die Länderwahl wäre
-ein gewöhnlicher Klick, die Cookie-Zustimmung ist eine Entscheidung, die ich nicht von mir
-aus treffe. Die Adressen sind zu 100 % tief (`/Downloads/1/1649/6U/2026`), das Portal
-also grundsätzlich aussichtsreich.
-
-## 5. Stand nach sieben Ländern
-
-| Land | Anteil EU | bestätigt skriptfähig |
+| | Anteil | |
 |---|---:|---|
-| DE | 21,2 % | 32 % |
-| FR | 15,4 % | **0 %** |
-| PL | 14,6 % | 19 % / 35 % |
-| ES | 6,7 % | 5 % |
-| IT | 4,9 % | 4 % |
-| CZ | 4,4 % | **28 %** |
-| **BE** | **3,6 %** | **offen (Ausfall)** |
+| `publicprocurement.be` (BOSA e-Procurement) | **60,5 %** (8.141) | 🟡 → §3 |
+| `cloud.3p.eu` (3P) | **33,9 %** (4.554) | ⚠ Zustimmungsbanner |
+| `ec.europa.eu` + Rest (21 Domains) | 5,6 % | — |
 
-Zusammen **70,8 %** aller EU-Ausschreibungen.
+Links ohne Verfahren: nur **2,5 %** — sauber verlinkt.
+
+## 2. ⚠ `cloud.3p.eu` — ein Cookie-Banner steht davor
+
+Die Adressen heissen `/Downloads/1/1649/6U/2026`, also vielversprechend. Der Abruf liefert
+aber eine **3-KB-Zwischenseite**: Länderwahl (België / Belgique / France) plus
+
+> *„This site makes use of cookies to improve your user experience. Read our cookie
+> policy" [Submit]*
+
+keine robots-Sperre (404). **Nicht durchgeklickt** — ein Zustimmungsbanner anzunehmen ist
+eine Erklärung im Namen des Nutzers, keine Beobachtung. Offen, ob dahinter die Dateien
+liegen.
+
+## 3. 🟡 BOSA — offen sichtbar, und der 500er war ein fehlender Kopf
+
+**Die Dokumentenseite zeigt anonym alles**: Titel, Sprache, Dokumentversion,
+Veröffentlichungsdatum, dazu einen Knopf „Alle Dokumente herunterladen".
+
+```
+202500459 - Hoogspanningscellen onderhoud - Selectieleidraad.docx / .pdf
+202500459 Hoogspanningscellen onderhoud - Question_Answer.docx     ← Bieterfragen
+6-7- VBS T infra SE Veiligheidsvoorschriften … .pdf
+Bijlage onderaanneming … .docx · toegang tractiestation_kust.pdf   …
+```
+
+Die beiden Endpunkte:
+```
+GET /api/dos/publication-workspaces/<guid>/documents?full=false&type=WORKSPACE&…
+GET /api/dos/publication-workspaces/<guid>/archive?full=false
+```
+
+**Aus `curl`: 8 von 8 Versuchen HTTP 500**, Antwort nur
+`{"details":"Error id …","stack":""}`. Genau daran war der erste Anlauf gescheitert.
+
+⚠ **Es war nicht der Server und nicht eine Sperre.** Im Netzprotokoll des Browsers stand
+dieselbe Adresse einmal mit 500 und einmal mit 200 — die Anwendung ruft zweimal. Der
+Unterschied lag in den Kopfzeilen:
+
+```
+Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6…
+Accept-Language: de
+BelGov-Trace-Id: 540906a3-3de7-4b2b-a51e-5919fd3af184
+```
+
+**Die Anwendung schickt ein Bearer-Token — auch beim anonymen Blättern.** Ohne das Token
+antwortet die Schnittstelle mit 500 statt 401. Das ist die schlechteste Art, „dir fehlt ein
+Kopf" zu sagen, und sie hat diese Sondierung ein ganzes Land gekostet.
+
+> **Fünfter Fall derselben Klasse** — nach EE (`Accept:`), PT (curl-Kennung), PT/BG (leerer
+> Parameter) und RO (`Referer`). ⚠ Und der bisher irreführendste: ein **500** liest sich wie
+> ein Serverfehler, nicht wie eine fehlende Angabe.
+
+## 4. ⛔ Wo ich angehalten habe
+
+Das Token stammt aus einem Keycloak, und die Zugangsdaten dafür stehen **offen in der
+Konfigurationsdatei**, die jeder Besucher lädt:
+
+```
+VITE_AUTH_URL:      https://www.publicprocurement.be/auth
+VITE_AUTH_REALM:    supplier
+VITE_AUTH_CLIENTID: frontend-public
+VITE_AUTH_CLIENTSECRET: <steht dort im Klartext>
+```
+
+⚠ **Das ist ein Zugangsmerkmal, auch wenn es öffentlich ausgeliefert wird.** Damit ein Token
+zu holen wäre technisch trivial und rechtlich vermutlich unbedenklich — es ist derselbe
+anonyme Zugang, den jeder Browser bekommt, ohne Konto und ohne Personendaten.
+
+**Ich habe es nicht getan.** Ein Client-Secret zu verwenden ist eine Entscheidung, keine
+Messung. Sie gehört Sven.
+
+**Was damit belegt ist:** Belgien ist nicht gesperrt, die Dokumente sind anonym sichtbar,
+es gibt einen `archive`-Endpunkt für das ganze Paket, und der einzige fehlende Schritt ist
+ein Token, dessen Beschaffungsweg offen dokumentiert ist.
+**Was nicht belegt ist:** dass der Abruf danach durchläuft.
+
+## 5. Ergebnis
+
+| | |
+|---|---|
+| Sichtbarkeit | ✅ vollständig anonym (Titel, Version, Datum, Sprache) |
+| robots | ✅ nichts untersagt |
+| Abruf BOSA (60,5 %) | 🟡 **ein Bearer-Token fehlt** — Weg dokumentiert, nicht gegangen |
+| Abruf 3P (33,9 %) | ⚠ Zustimmungsbanner davor, nicht angenommen |
+| Links ohne Verfahren | 2,5 % |
+
+⚠ **Und eine Lehre über Belgien hinaus:** „die API antwortete 500" war neun Kapitel lang
+der Grund, Belgien liegen zu lassen. Ein Fehlercode ist kein Befund, solange nicht geklärt
+ist, **worüber** er spricht.
