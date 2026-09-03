@@ -213,9 +213,12 @@ const FACETS = {
   leistung:{ label:'Leistung', opts:[
     {v:'dienst',l:'Dienstleistung'},{v:'liefer',l:'Lieferung'},{v:'bau',l:'Bauleistung'}], match:(l,v)=>l.naturKat===v },
 };
-// Land-Codes → Anzeigename (Detail-Eckdaten + Filter-Panel). DACH-Fundament: aktuell trägt
-// nur DE Daten, AT/CH sind im Filter vorbereitet und greifen, sobald ihre Pipelines andocken.
-const LAND_LABEL = {DE:'Deutschland', AT:"Österreich", CH:'Schweiz'};
+// Land-Codes → Anzeigename (Detail-Eckdaten + Filter-Panel). Nicht mehr nur DACH: LU kam
+// am 2026-09-03 dazu. ⚠ Diese Liste beschreibt, was DARGESTELLT werden kann — nicht, was wir
+// VERSPRECHEN. Das Versprechen steht in lib/staaten.ts und darf erst wachsen, wenn ein Land
+// wirklich Leads liefert; sonst wandert es laut jener Datei „von allein mit", und zwar in
+// eine Unwahrheit.
+const LAND_LABEL = {DE:'Deutschland', AT:"Österreich", CH:'Schweiz', LU:'Luxemburg'};
 
 // Ort→Region (Demo). Echt: NUTS-Geokodierung.
 // Region-Filter über echte NUTS1-Präfixe (Leistungsort/Käufersitz der Leads).
@@ -250,9 +253,15 @@ function setPlzLand(l){ PLZ_LAND = l || ''; }
 function plzLookup(q){
   if(/^\d{5}$/.test(q)) return (PLZ_GEO.DE || {})[q] || null;
   if(/^\d{4}$/.test(q)){
-    const pref = (PLZ_LAND === 'CH' || PLZ_LAND === 'AT') ? PLZ_LAND : null;
+    // ⚠ LUXEMBURG IST DER DRITTE VIERSTELLIGE. „1234" kann Schweiz, Oesterreich ODER
+    // Luxemburg sein — die Zahl allein ist nicht aufloesbar. Deshalb entscheidet zuerst
+    // der gesetzte Laenderfilter, und erst danach greift die Reihenfolge.
+    // ⚠ PLZ_GEO.LU ist heute LEER: data/reference/geonames/LU.txt fehlt, die LU-Suche
+    // faellt also auf CH/AT durch. Kein Fehler dieser Zeile, sondern eine offene
+    // Datenluecke — sie schliesst sich, sobald dim_plz Luxemburg fuehrt.
+    const pref = (PLZ_LAND === 'CH' || PLZ_LAND === 'AT' || PLZ_LAND === 'LU') ? PLZ_LAND : null;
     if(pref && (PLZ_GEO[pref] || {})[q]) return PLZ_GEO[pref][q];
-    return (PLZ_GEO.CH || {})[q] || (PLZ_GEO.AT || {})[q] || null;   // CH zuerst (live)
+    return (PLZ_GEO.CH || {})[q] || (PLZ_GEO.AT || {})[q] || (PLZ_GEO.LU || {})[q] || null;
   }
   return null;
 }
@@ -3292,7 +3301,9 @@ export {
  * aber Belgien. Deshalb wird NUR gegen die drei bekannten Laender geprueft und sonst auf
  * DE zurueckgefallen — raten waere hier schlimmer als der Standard.
  */
-const LAND_AUS_NUTS = { DE: 'DE', AT: 'AT', CH: 'CH' };
+// LU0… ist eindeutig und kollidiert mit nichts — anders als das „BE" oben, das im
+// Kantonskuerzel Bern und im NUTS-Raum Belgien heisst.
+const LAND_AUS_NUTS = { DE: 'DE', AT: 'AT', CH: 'CH', LU: 'LU' };
 function nutzerLand() {
   const regionen = (userProfile && userProfile.regions) || [];
   for (const r of regionen) {

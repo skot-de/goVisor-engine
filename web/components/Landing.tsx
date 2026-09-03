@@ -48,7 +48,8 @@ type Zahlen = {
   };
 };
 
-const LAND_NAME: Record<string, string> = { DE: "Deutschland", AT: "Österreich", CH: "Schweiz" };
+// ⚠ Zaehlt aus, was im Bestand liegt — ohne Eintrag stuende hier der rohe Code („LU 6.142").
+const LAND_NAME: Record<string, string> = { DE: "Deutschland", AT: "Österreich", CH: "Schweiz", LU: "Luxemburg" };
 const nf = (n: number) => n.toLocaleString("de-DE");
 
 /**
