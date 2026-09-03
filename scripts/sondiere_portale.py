@@ -52,7 +52,10 @@ IGNORIERT = (
     "LegislationDocumentReference",         # Gesetzestexte, keine Vergabeunterlagen
     "BuyerProfileURI",                      # Beschafferprofil, nicht das Verfahren
 )
-LAND = re.compile(rb'listName="country"[^>]*>([A-Z]{3})<')
+# ⚠ BEIDE Codelisten-Namen. Rumaenien schreibt AUSSCHLIESSLICH listName="eforms-country";
+# mit dem alten Muster war es in der ganzen Sondierung unsichtbar (64 statt 3.866 im Juni).
+# govisor/schema.py:1799 kennt beide seit laengerem — die Skripte hier hatten es nicht.
+LAND = re.compile(rb'listName="(?:eforms-)?country"[^>]*>([A-Z]{3})<')
 # ⚠ NUR AUSSCHREIBUNGEN ZAEHLEN. Die erste Fassung nahm jede Notice-Art und meldete fuer
 # Spanien 40 % Portalabdeckung — den schlechtesten Wert der Sondierung. Gemessen am
 # 2026-09-02 war das mein Nenner, nicht das Land:
@@ -62,7 +65,9 @@ LAND = re.compile(rb'listName="country"[^>]*>([A-Z]{3})<')
 # Spanien hat besonders viele Zuschlaege, deshalb sah es dort am schlechtesten aus. Eine
 # Quote, deren Nenner Faelle enthaelt, die das Gemessene gar nicht haben KOENNEN, misst
 # die Zusammensetzung des Nenners.
-AUSSCHREIBUNG = re.compile(rb'<(ContractNotice)[ >]')
+# ⚠ Der Namensraum-Praefix MUSS optional sein. Ohne ihn fehlten ContractNotices aus
+# RO (1.252), AT (816), ES (523), SE (513) und DE (260) in EINEM Monat.
+AUSSCHREIBUNG = re.compile(rb'<(?:[A-Za-z0-9]+:)?(ContractNotice)[ >]')
 
 # Engine am PFAD erkennen, nicht am Domainnamen — das ist sprachunabhaengig und gilt in
 # Portugal wie in Estland. Die DACH-Muster sind gemessen; die uebrigen sind Kandidaten,

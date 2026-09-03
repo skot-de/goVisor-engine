@@ -88,3 +88,52 @@ hätte dem Baltikum-Kapitel widersprochen, ohne dass jemand nachgesehen hätte, 
 **Die Lehre:** eine Heuristik, die je Messung anders lautet, ist keine Messung. Sie gehört
 an eine Stelle, mit Gegenproben — `scripts/miss_linktiefe.py` trägt zwölf davon im
 Kommentar, darunter ausdrücklich die Fälle, die **flach bleiben müssen**.
+
+---
+
+## 4. ⚠ Nachtrag 2026-09-03: zwei Muster-Fehler machten zwei Länder unsichtbar
+
+Beim Nachgehen einer Auffälligkeit (Rumänien mit 44 Unterlagen-Links im Jahr) kamen **zwei
+Fehler in den Sondierungsskripten** heraus. Beide betrafen `sondiere_tief.py`,
+`sondiere_portale.py` und `miss_linktiefe.py` — **nicht** die Pipeline.
+
+**1. Der Codelisten-Name.** Rumänien schreibt ausschliesslich:
+```xml
+<cbc:IdentificationCode listName="eforms-country">ROU</cbc:IdentificationCode>
+```
+Die Skripte kannten nur `listName="country"`. ⚠ `govisor/schema.py:1799` führt
+`COUNTRY_LIST_NAMES = (None, "country", "eforms-country")` **seit längerem** — mit einem
+Kommentar, dass genau das schon einmal aufgefallen war. Die Sondierung hat die Lehre nicht
+übernommen.
+
+**2. Der Namensraum-Präfix.** `<(ContractNotice)[ >]` verfehlt jede Wurzel mit Präfix
+(`<efac:ContractNotice`). Betroffen: RO, AT, ES, SE, DE.
+
+**Gegenprobe an einem Monat, gleiche Einheit, vorher/nachher:**
+
+| Land | vorher | jetzt | Diff |
+|---|---:|---:|---:|
+| **RO** | 5 | **1.257** | +1.252 |
+| **AT** | 46 | **584** | +538 |
+| ES | 2.458 | 2.745 | +287 |
+| SE | 738 | 989 | +251 |
+| DE | 7.811 | 7.948 | +137 |
+| **gesamt** | 36.833 | **39.318** | **+6,7 %** |
+
+Gegen TED gehalten: die API nennt für Rumänien im Juni **3.866** Bekanntmachungen; unser
+Paket enthielt sie, wir haben sie nur nicht erkannt (Bulgarien 2.700/2.696 und Niederlande
+2.031/2.024 stimmten überein — die Methode war richtig, das Muster nicht).
+
+**Was das an den Länderkapiteln ändert:**
+
+| Land | alt | neu |
+|---|---|---|
+| **RO** | „44 Links/Jahr, nur TED" | **`e-licitatie.ro` 99,7 %**, 3.607 Ausschreibungen/3 Mon., 15,1 % ohne Verfahren — ein **Ein-Plattform-Land**, bisher unsichtbar |
+| **AT** | „33 Links, 76,4 % ohne Verfahren" | 1.668 Ausschreibungen/3 Mon., **90 Domains**, `*.vergabeportal.at` führend, 31,5 % ohne Verfahren |
+
+ES, SE und DE verschieben sich um 3–12 % — ihre Urteile (5 % / 0 % / 32 %) ändert das nicht.
+
+⚠ **Die Lehre, und sie ist unangenehm:** eine Auffälligkeit, die ich in der Übersicht als
+Randnotiz abgelegt hatte („RO 44 Links — eher ein Problem unserer Extraktion"), war genau
+das. Sie stand da, richtig benannt, und wurde nicht verfolgt, bis Sven nachfragte.
+**Eine notierte Auffälligkeit ist keine erledigte.**

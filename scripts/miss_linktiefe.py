@@ -30,8 +30,13 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 from govisor import bulk, flatten                                    # noqa: E402
 
-AUSSCHREIBUNG = re.compile(rb'<(ContractNotice)[ >]')
-LAND = re.compile(rb'listName="country"[^>]*>([A-Z]{3})<')
+# ⚠ Der Namensraum-Praefix MUSS optional sein. Ohne ihn fehlten ContractNotices aus
+# RO (1.252), AT (816), ES (523), SE (513) und DE (260) in EINEM Monat.
+AUSSCHREIBUNG = re.compile(rb'<(?:[A-Za-z0-9]+:)?(ContractNotice)[ >]')
+# ⚠ BEIDE Codelisten-Namen. Rumaenien schreibt AUSSCHLIESSLICH listName="eforms-country";
+# mit dem alten Muster war es in der ganzen Sondierung unsichtbar (64 statt 3.866 im Juni).
+# govisor/schema.py:1799 kennt beide seit laengerem — die Skripte hier hatten es nicht.
+LAND = re.compile(rb'listName="(?:eforms-)?country"[^>]*>([A-Z]{3})<')
 A3 = {"DEU": "DE", "FRA": "FR", "POL": "PL", "ESP": "ES", "ITA": "IT", "CZE": "CZ",
       "BEL": "BE", "NLD": "NL", "SWE": "SE", "LTU": "LT", "BGR": "BG", "NOR": "NO",
       "PRT": "PT", "HRV": "HR", "FIN": "FI", "SVN": "SI", "CHE": "CH", "LVA": "LV",
