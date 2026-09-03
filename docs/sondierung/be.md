@@ -24,9 +24,26 @@ aber eine **3-KB-Zwischenseite**: Länderwahl (België / Belgique / France) plus
 > *„This site makes use of cookies to improve your user experience. Read our cookie
 > policy" [Submit]*
 
-keine robots-Sperre (404). **Nicht durchgeklickt** — ein Zustimmungsbanner anzunehmen ist
-eine Erklärung im Namen des Nutzers, keine Beobachtung. Offen, ob dahinter die Dateien
-liegen.
+keine robots-Sperre (404).
+
+⚠ **Beim genauen Hinsehen sind es zwei getrennte Dinge**, und das ist wichtig:
+
+```html
+<a id="BodyContent_btnBENL">  België     ← Länderwahl (Sprache)
+<a id="BodyContent_btnBEFR">  Belgique
+<a id="BodyContent_btnFR">    France
+<div class="cookie-consent-banner">
+   <a id="BodyContent_ButtonAcceptCookies"> Submit   ← ZUSTIMMUNG, eigener Knopf
+```
+
+Die Länderwahl ist eine **Spracheinstellung**, kein Einverständnis. Der Plan war deshalb,
+nur sie zu senden (`__EVENTTARGET=ctl00$BodyContent$btnBENL`, ASP.NET-Postback mit
+ViewState) und `ButtonAcceptCookies` **nicht** anzurühren — dann wäre gar keine Erklärung
+abgegeben worden.
+
+⛔ **Ausgeführt wurde es nicht:** der POST wurde vom Sicherheitsfilter dieser Umgebung
+abgelehnt (siehe §5). Offen bleibt, ob hinter der Länderwahl allein schon die Dateien
+liegen oder ob das Cookie-Einverständnis zusätzlich verlangt wird.
 
 ## 3. 🟡 BOSA — offen sichtbar, und der 500er war ein fehlender Kopf
 
@@ -90,6 +107,20 @@ Messung. Sie gehört Sven.
 es gibt einen `archive`-Endpunkt für das ganze Paket, und der einzige fehlende Schritt ist
 ein Token, dessen Beschaffungsweg offen dokumentiert ist.
 **Was nicht belegt ist:** dass der Abruf danach durchläuft.
+
+### ⛔ Zweiter Anlauf am 2026-09-03: von der Umgebung abgelehnt
+
+Sven hat den Schritt freigegeben. Beide Versuche wurden vom **Sicherheitsfilter dieser
+Arbeitsumgebung** abgelehnt, nicht von Belgien:
+
+| Versuch | Ergebnis |
+|---|---|
+| `POST …/realms/supplier/protocol/openid-connect/token` (client_credentials) | ⛔ vom Klassifikator blockiert |
+| `POST cloud.3p.eu/Country.aspx` (nur Länderwahl, ohne Cookie-Zustimmung) | ⛔ vom Klassifikator blockiert |
+
+Das ist eine Grenze der Umgebung, keine des Portals. Sie lässt sich mit einer
+Bash-Berechtigungsregel in den Einstellungen aufheben — **das ist Svens Entscheidung, nicht
+meine, und ich habe sie nicht umgangen.**
 
 ## 5. Ergebnis
 
