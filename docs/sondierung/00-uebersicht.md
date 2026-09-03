@@ -58,6 +58,11 @@ abgerufen. Nicht: „gebaut". Gebaut ist davon nur Deutschland.
 | **IS** | 0,1 % | ? | 17,9 % | ⚪ nur TED | — |
 | **RO** | 0,0 % | ? | **50,0 %** ⚠ | ⚪ nur TED, ⚠ nur 44 Links/Jahr | — |
 
+⚠ **RO steht in dieser Tabelle noch mit den alten, falschen Zahlen** (0,0 % Anteil).
+Nach der Reparatur der Muster: `e-licitatie.ro` **99,7 %**, 1.257 Ausschreibungen im Monat,
+**offen** — siehe [ro](ro.md). Die Anteilsspalte stimmt erst nach einem Neulauf von
+`sondiere_tief.py`.
+
 ## 3. Ertrag je Abrufer — die Achse, die zählt
 
 Wer nach Landesgrösse sortiert, fängt in Frankreich an und bekommt null. Wer nach

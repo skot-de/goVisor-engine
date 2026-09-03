@@ -720,6 +720,31 @@ DOC_REGISTRY: list[Source] = [
                    "`Disallow: /app/docmgmt`. Der Dateiendpunkt liegt EXAKT im gesperrten "
                    "Pfad. Fuenfter Fall dieser Bauart. Nicht abgerufen.",
            url="https://eu.eu-supply.com"),
+    # ── RO, sondiert am 2026-09-03 · Kapitel: docs/sondierung/ro.md ───────────────────
+    Source("sond-ro-seap", "SEAP/SICAP (RO)", "", "RO", "beides",
+           "sondiert", portals=1, ebene="unterlagen", ertrag="offen",
+           coverage="99,7 % des rumaenischen Unterlagen-Felds (3.591 von 3.603 in 3 Monaten); "
+                    "1.257 Ausschreibungen/Monat; 15,1 % der Links ohne Verfahren",
+           overlap="✅ OFFEN — und BIS ZUM 2026-09-03 IN DER GANZEN SONDIERUNG UNSICHTBAR: zwei "
+                   "Muster-Fehler in unseren Skripten (listName='eforms-country', "
+                   "Namensraum-Praefix) zeigten 5 statt 1.257 Ausschreibungen im Monat. "
+                   "robots: weiches 404, nichts untersagt. Die Bekanntmachung sagt selbst "
+                   "'access direct, nerestrictionat, complet si gratuit'. "
+                   "⏳ ERSTE ZWEIPHASIGE QUELLE: das Archiv wird auf Anfrage gebaut. "
+                   "AddArchiveForNotice → GetArchiveStatus (1=offen, 2/4=wird erzeugt, 3=fertig) "
+                   "→ DownloadArchive. Von 15 Anforderungen waren nach kurzer Zeit 6 fertig. "
+                   "⚠ REFERER PFLICHT: ohne ihn 403 'Referrer cannot be null'. Eine "
+                   "wahrheitsgemaesse Herkunftsangabe ist keine Falschangabe. "
+                   "⭐ Der Knopf heisst 'arhiva documentatie SI CLARIFICARI' — Unterlagen UND "
+                   "Bieterfragen in EINEM Paket; belegt: 'Raspuns consolidat' im Archiv. "
+                   "⚠ VERPACKUNG: 7 von 9 Dateien sind .p7s (PKCS#7-Signaturumschlag wie IT .p7m); "
+                   "'Formulare.rar.p7s' ist RAR in Signatur in ZIP — dreifach verschachtelt. "
+                   "⚠ MENGE: die groesste der Sondierung. Median 13,2 MB, Mittel 76,7 MB, "
+                   "groesstes Archiv 374,9 MB je Vergabe → grob 190 GB bis 1,1 TB im Jahr. "
+                   "GetArchiveStatus liefert fileSize VOR dem Abruf — zwingend nutzen. "
+                   "⚠ Die Statusantwort enthaelt einen internen UNC-Pfad des Betreibers "
+                   "(\\\\Fserver14\\FShare2\\SICAPPROD\\…) — gehoert NICHT in Bronze.",
+           url="https://e-licitatie.ro"),
     # ── LU, sondiert am 2026-09-03 · Kapitel: docs/sondierung/lu.md ───────────────────
     Source("sond-lu-pmp", "Portail des marchés publics (LU)", "", "LU", "beides",
            "sondiert", portals=1, ebene="unterlagen", ertrag="teilweise",
