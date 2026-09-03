@@ -720,6 +720,28 @@ DOC_REGISTRY: list[Source] = [
                    "`Disallow: /app/docmgmt`. Der Dateiendpunkt liegt EXAKT im gesperrten "
                    "Pfad. Fuenfter Fall dieser Bauart. Nicht abgerufen.",
            url="https://eu.eu-supply.com"),
+    # ── BG, sondiert am 2026-09-03 · Kapitel: docs/sondierung/bg.md ───────────────────
+    Source("sond-bg-caiseop", "ЦАИС ЕОП (BG)", "", "BG", "beides",
+           "sondiert", portals=1, ebene="unterlagen", ertrag="offen",
+           coverage="100,0 % des bulgarischen Unterlagen-Felds (9.135 von 9.137); 100 % der "
+                    "Links nennen ein Verfahren; 97 % der Vergaben tragen Dokumente (28 von 29)",
+           overlap="✅ DER SAUBERSTE FALL DER SONDIERUNG. robots.txt sagt ausdruecklich "
+                   "'User-agent: * / Allow: /' — die erste ERLAUBNIS statt Sperre oder Schweigen. "
+                   "Drei anonyme Aufrufe: GetPublishedTenderDetails(tenderId, ianaTimeZone) → "
+                   "GetSignedUrlByDocumentId(documentId) → vorsignierte S3-Adresse. "
+                   "⚠ Die S3-Adresse gilt nur 30 min (X-Amz-Expires=1800), darf also nicht "
+                   "zwischengespeichert werden. "
+                   "⚠ Die Schnittstelle liefert MD5Hash UND Size je Dokument — Integritaetspruefung "
+                   "frei Haus, sonst nirgends in der Sondierung. Belegt: MD5 stimmte exakt. "
+                   "✅ AUFZAEHLBAR OHNE TED: GetPublishedTendersBySpecified → ResultsCount 1.403 "
+                   "laufende Vergaben, geblaettert; je Treffer IsEUFunding, IsGreenCriteria und "
+                   "AggregateOfferCount (= Zahl der Angebote, sonst nur aus dem Zuschlag). "
+                   "⚠ PERSONENDATEN: je Dokument stehen Owner (Klarname), OwnerId, CreatedById und "
+                   "PersonalDataConsent in der Antwort — gehoeren NICHT ungefiltert in Bronze. "
+                   "⚠ UMFANG: 274,7 MB aus 29 Vergaben = 9,5 MB je Vergabe, grob 85 GB/Jahr. "
+                   "⚠ Der erste 500er war ein FEHLENDER PARAMETER (ianaTimeZone), kein Verbot — "
+                   "die Signatur steht im Klartext unter /NX1Service.svc/js.",
+           url="https://app.eop.bg"),
     # ── IE/MT/CY, sondiert am 2026-09-03 · Kapitel: docs/sondierung/ie.md +
     #    docs/sondierung/european-dynamics.md ──────────────────────────────────────────
     Source("sond-ie-etenders", "eTenders (IE)", "", "IE", "beides",

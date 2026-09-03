@@ -31,6 +31,7 @@ Abruf belegt. Kein Konto, kein CAPTCHA, robots.txt immer zuerst.
 | **IE** | 1,4 % | **86 %** | European Dynamics, wie LT |
 | **MT** | 0,3 % | **100 %** | derselbe Abrufer (7 von 7) |
 | **CY** | 0,2 % | **100 %** | derselbe Abrufer (7 von 7) |
+| **BG** | 2,2 % | **97 %** | robots sagt ausdrücklich `Allow: /`, aufzählbar |
 | **SK** | 1,2 % | **0 %** | ⛔ Freigabeliste in der robots.txt |
 | **BE** | 3,6 % | *offen* | Plattform fällt gerade aus |
 | **LV** | 1,5 % | *offen* | eine Plattform, Abrufweg ungeklärt |
