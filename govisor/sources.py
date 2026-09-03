@@ -720,6 +720,23 @@ DOC_REGISTRY: list[Source] = [
                    "`Disallow: /app/docmgmt`. Der Dateiendpunkt liegt EXAKT im gesperrten "
                    "Pfad. Fuenfter Fall dieser Bauart. Nicht abgerufen.",
            url="https://eu.eu-supply.com"),
+    # ── HR, sondiert am 2026-09-03 · Kapitel: docs/sondierung/hr.md ───────────────────
+    Source("sond-hr-eojn", "EOJN (HR)", "", "HR", "beides",
+           "sondiert", portals=1, ebene="unterlagen", ertrag="gesperrt",
+           coverage="99,9 % des kroatischen Unterlagen-Felds (7.946 von 7.955); 100,0 % der "
+                    "Links nennen ein Verfahren (2.062 von 2.062, kein einziger Startseiten-Link)",
+           overlap="⛔ GESPERRT DURCH EINE EINZELFREIGABE. robots.txt (37 B, byte-genau gelesen): "
+                   "'user-agent: * / Allow: /$ / Disallow: /'. Das $ ist eine Endverankerung — "
+                   "erlaubt ist GENAU die Wurzel, jede Vergabe (/tender-eo/84749) ist untersagt. "
+                   "⚠ Kein Standardartefakt: 'Allow: /$' steht in keiner Software-Vorlage, das hat "
+                   "jemand so gemeint (anders als GR-nepps, wo es die Oracle-Beigabe von 2008 war). "
+                   "KEIN ERSATZWEG: data.gov.hr hat keine auffindbare Schnittstelle; data.europa.eu "
+                   "liefert 194 Treffer, aber nur Tabellen EINZELNER GEMEINDEN; die "
+                   "Vorgaengerplattform eojn.nn.hr erlaubt zwar per robots, fuehrt aber zur "
+                   "Anmeldung und ist abgeloest. "
+                   "⚠ Technisch waere es der beste Fall der Sondierung gewesen — nach Volumen das "
+                   "groesste noch offene Ein-Plattform-Land (1,9 % der EU).",
+           url="https://eojn.hr"),
     # ── BG, sondiert am 2026-09-03 · Kapitel: docs/sondierung/bg.md ───────────────────
     Source("sond-bg-caiseop", "ЦАИС ЕОП (BG)", "", "BG", "beides",
            "sondiert", portals=1, ebene="unterlagen", ertrag="offen",
