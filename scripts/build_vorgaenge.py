@@ -58,8 +58,14 @@ from __future__ import annotations
 import argparse
 import collections
 import pathlib
+import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
+# ⚠ VOR JEDEM `govisor`-IMPORT. Der Tageslauf laeuft unter launchd ohne PYTHONPATH; ohne
+# diese Zeile bricht das Skript dort ab, und zwar stumm (s. tests/test_plumbing.py,
+# `test_skripte_finden_govisor_ohne_pythonpath`). Genau dieser Test hat den Fehler beim
+# Einbau des `FENSTER_TAGE`-Imports am 2026-09-02 gefangen.
+sys.path.insert(0, str(ROOT))
 
 RANG = {"folder": 0, "rueckref": 1, "allein": 2}
 DAUERANGEBOT_TAKT = 4.0   # Glieder je Jahr; darueber ist es kein Neuausschreibungs-Rhythmus
@@ -83,11 +89,16 @@ DUBLETTEN_BELEG = "kaeufer_und_titel"
 # Wie weit die ERSTVEROEFFENTLICHUNGEN zweier Vorgaenge auseinanderliegen duerfen, damit
 # sie als dieselbe Vergabe gelten.
 #
-# ⚠ NICHT GETUNT, SONDERN UEBERNOMMEN: `govisor/dedupe.py` kappt seine Paare bei 90 Tagen.
-# Auf Bekanntmachungsebene gilt das schon; beim Heben auf die Vorgangsebene geht die Naehe
-# aber verloren, denn ein Vorgang kann sich ueber Jahre erstrecken. Ohne diese Grenze
-# entstand eine Akte von 2011 bis 2023 mit 150 Zuschlaegen — ein Jahrzehnt, keine Vergabe.
-VORGANG_DUBLETTE_TAGE = 90
+# ⚠ NICHT ABGESCHRIEBEN, SONDERN GEHOLT. `govisor.dedupe.FENSTER_TAGE` ist an 8.788
+# sicheren Paaren gemessen (Median 2 Tage, 96 % binnen 90) — und dort steht ausdruecklich,
+# dass 180 Tage „gleichnamige Wiederholungsvergaben einfangen", also genau den Fehler, den
+# diese Grenze hier verhindern soll. Die Zahl zweimal zu pflegen hiesse, sie einmal zu
+# vergessen; deshalb der Import statt einer Konstanten.
+#
+# Auf Bekanntmachungsebene gilt die Grenze schon; beim Heben auf die VORGANGSEBENE geht die
+# Naehe verloren, denn ein Vorgang kann sich ueber Jahre erstrecken. Ohne sie entstand eine
+# Akte von 2011 bis 2023 mit 150 Zuschlaegen — ein Jahrzehnt, keine Vergabe.
+from govisor.dedupe import FENSTER_TAGE as VORGANG_DUBLETTE_TAGE
 
 SPALTEN_N = ("land VARCHAR, vorgang_id VARCHAR, notice_id VARCHAR, notice_kind VARCHAR, "
              "jahr BIGINT, veroeffentlicht DATE, hat_unterlagen BOOLEAN, dublette BOOLEAN")

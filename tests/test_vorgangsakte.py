@@ -475,6 +475,13 @@ def test_jeder_grund_hat_einen_eigenen_satz():
 BAU = (WURZEL / "scripts" / "build_vorgaenge.py").read_text(encoding="utf-8")
 
 
+def _modul_bau():
+    spec = importlib.util.spec_from_file_location("_bv", WURZEL / "scripts" / "build_vorgaenge.py")
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    return mod
+
+
 def test_andocken_ist_nicht_transitiv():
     """⚠ „gleicher Käufer + gleicher Titel + Zeitfenster" als Verschmelzung wird TRANSITIV:
     A passt zu B, B zu C, C zu D. Über ein gleitendes Halbjahresfenster entstanden dabei
@@ -647,15 +654,19 @@ def test_zeitgrenze_auf_vorgangsebene():
     kann Jahre umspannen; hebt man das Paar ungeprüft hoch, verschmilzt eine Akte von 2011
     mit einer von 2023. Genau so entstand im Versuch eine Akte mit 150 Zuschlägen über
     zwölf Jahre."""
-    assert "VORGANG_DUBLETTE_TAGE = 90" in BAU
+    assert _modul_bau().VORGANG_DUBLETTE_TAGE == 90
     assert "VORGANG_DUBLETTE_TAGE" in _kern5()
 
 
-def test_zeitgrenze_ist_uebernommen_nicht_getunt():
-    """90 Tage ist die Kappung, die `govisor/dedupe.py` selbst anlegt. Eine frei gewählte
-    Zahl wäre hier eine zweite, unbelegte Schwelle."""
-    grenze = (WURZEL / "govisor" / "dedupe.py").read_text(encoding="utf-8")
-    assert "90" in grenze, "dedupe.py kappt nicht mehr bei 90 — Grenze neu begründen"
+def test_zeitgrenze_ist_geholt_nicht_abgeschrieben():
+    """⚠ Der erste Test hier prüfte `"90" in dedupe.py` — das trifft auch auf „190" zu und
+    hätte eine Änderung auf 180 durchgewinkt. Jetzt hängt die Grenze am Import: sie KANN
+    nicht auseinanderlaufen."""
+    from govisor.dedupe import FENSTER_TAGE
+    modul = _modul_bau()
+    assert modul.VORGANG_DUBLETTE_TAGE == FENSTER_TAGE
+    assert "from govisor.dedupe import FENSTER_TAGE" in BAU
+    assert "VORGANG_DUBLETTE_TAGE = 9" not in BAU, "Zahl wieder abgeschrieben"
 
 
 def test_fuenfte_stufe_ist_nicht_transitiv():
