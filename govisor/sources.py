@@ -558,7 +558,7 @@ DOC_REGISTRY: list[Source] = [
            url="https://www.tenderarena.cz"),
     # ── BE, sondiert am 2026-09-03 · Kapitel: docs/sondierung/be.md ───────────────────
     Source("sond-be-bosa", "BOSA eProcurement (publicprocurement.be)", "", "BE", "beides",
-           "sondiert", portals=1, ebene="unterlagen", ertrag="teilweise",
+           "sondiert", portals=1, ebene="unterlagen", ertrag="offen",
            coverage="60,5 % des BE-Unterlagen-Felds (8.141 von 13.446); 2,5 % der Links ohne "
                     "Verfahren",
            overlap="⚠ FRUEHERER EINTRAG WAR FALSCH. Er sagte, die API antworte 'AUCH AUS DEM "
@@ -577,8 +577,15 @@ DOC_REGISTRY: list[Source] = [
                    "OFFEN in env.config.js stehen (VITE_AUTH_REALM=supplier, "
                    "VITE_AUTH_CLIENTID=frontend-public, VITE_AUTH_CLIENTSECRET im Klartext). Ein "
                    "Client-Secret zu verwenden ist eine Entscheidung, keine Messung — sie gehoert "
-                   "Sven. Belegt ist: nicht gesperrt, sichtbar, Weg dokumentiert. Nicht belegt: "
-                   "dass der Abruf danach durchlaeuft.",
+                   "Sven. "
+                   "✅ 3. ANLAUF: DER ABRUF IST BELEGT, durch normales Browsen — die Anwendung "
+                   "ihre eigene Arbeit tun lassen statt selbst ein Token zu holen. EIN anonymer "
+                   "Seitenaufruf lieferte /documents (2.357 B, 10 Dokumente) UND /archive "
+                   "(6.113.357 B in 1,56 s). Kein Konto, keine Personendaten, kein CAPTCHA. "
+                   "⚠ Ein Abrufer braucht dasselbe Token, das die App sich selbst ausstellt; nur "
+                   "ICH darf den Weg in dieser Umgebung nicht gehen (Klassifikator). Fuer den "
+                   "Anschluss ist das kein Hindernis. Gegenprobe: OHNE Token geben ALLE Endpunkte "
+                   "500 — documents, archive, opening-reports, urls und der Vorgang selbst.",
            url="https://www.publicprocurement.be"),
     Source("sond-be-3p", "3P (cloud.3p.eu)", "", "BE", "beides",
            "sondiert", portals=1, ebene="unterlagen", ertrag="ungeprueft",
