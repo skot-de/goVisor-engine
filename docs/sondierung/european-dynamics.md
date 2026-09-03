@@ -84,10 +84,32 @@ das drei Länder, eine Bauart.
 - **je Land** — wie gross ist der Markt, welche Ebenen gibt es, wo liegen die Daten
 - **je Bauart** — welcher Abrufer öffnet wie viele Länder auf einmal
 
-Die zweite ist bisher gar nicht geführt worden. Ein Anfang wäre, die Hersteller-Merkmale
-(`/epps/`, `jsessionid`+JSF, Oracle ADF `ViewState`, Jaggaer, cosinex, E-ZAK, ProeBiz,
-Mercell, EU-Supply) über alle 30 Länderdateien zu zählen — **das ist noch nicht geschehen**
-und wäre vermutlich der billigste noch offene Fund der ganzen Sondierung.
+## 3a. Die Hersteller-Zählung, nachgeholt
+
+Über den letzten Monat, Merkmal am **Host** (bzw. `/epps/` am Pfad), je Land nur einmal:
+
+| Hersteller | Länder | Treffer | Verteilung |
+|---|---:|---:|---|
+| **European Dynamics** | 4 | 1.514 | LT 732, IE 537, MT 144, CY 101 |
+| cosinex/DTVP | 2 | 1.048 | DE 1.046, LU 2 |
+| E-ZAK | 1 | 575 | CZ 575 |
+| **Mercell** | **6** | 554 | NO 286, NL 202, DK 39, DE 18, FI 7, LU 2 |
+| Vortal | 2 | 312 | PT 310, ES 2 |
+| **EU-Supply** | 3 | 189 | NO 99, DK 87, NL 3 |
+| Jaggaer | 4 | 113 | FR 74, IT 32, ES 5, IE 2 |
+| ProeBiz/Josephine | 3 | 37 | PL 17, CZ 14, SK 6 |
+
+**Mercell steht in sechs Ländern und ist nie als Abrufer geprüft worden** — bisher nur als
+Abdeckungsgrad vermessen (NO 63 %, DK 11 %, FI 1 %, Baltikum 0 %). Zusammen mit EU-Supply
+deckt es **42 % von Dänemark**, dem einzigen zersplitterten der noch offenen Länder.
+
+⚠ **Und eine Falle, die diese Zählung fast unbrauchbar gemacht hätte.** Der erste Durchlauf
+suchte das Muster in der **ganzen Adresse** statt im Host und meldete „E-ZAK: CZ 606,
+**SK 365**" — was die Slowakei von 0 % auf offen gehoben hätte. Es war ein Teilstring-
+Zufall: der slowakische Pfad `/vyhladavani`**`e-zak`**`aziek/` enthält das Muster.
+
+Beinahe hätte ich ein abgeschlossenes Kapitel auf einem Messfehler korrigiert. **Ein
+Herstellermerkmal gehört an den Host, nicht an die Adresse** — Pfade tragen Landessprache.
 
 ## 4. Was hier ausdrücklich NICHT geprüft ist
 
