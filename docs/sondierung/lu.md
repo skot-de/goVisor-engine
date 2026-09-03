@@ -146,3 +146,53 @@ Problem.**
 | Besonderheit | 8 % EU-Institutionen (EIB, EuGH, Kommission) |
 
 **Nicht geprüft:** die unterschwellige Ebene und die Fonds-Ebene.
+
+
+---
+
+## 9. Wie viel wäre es? (gemessen 2026-09-03)
+
+Weil Luxemburg das einzige nicht-deutsche Land ohne Archiv ist, hängt an der Menge eine
+Entscheidung. Gemessen an **zehn laufenden** Vergaben, aus der Grössenangabe der Seite
+(`Dossier de soumission - X Mo`), ohne einen einzigen Download:
+
+```
+  0,09   0,72   1,41   3,07   4,41   9,47   26,15   109,17   138,98   614,41   MB
+```
+
+| | |
+|---|---:|
+| Median | **6,94 MB** |
+| Mittel | **90,79 MB** |
+| grösstes | **614,41 MB** (eine Vergabe) |
+| Anteil mit Anlagen | 10 von 10 |
+
+⚠ **Die Verteilung ist extrem schief** — drei von zehn liegen über 100 MB. Bei 1.618
+Vergaben im Jahr heisst das:
+
+| Schwelle | aufgenommen | GB/Jahr |
+|---|---|---:|
+| **ohne** | 100 % | **143,5** |
+| ≤ 200 MB | 90 % | 46,4 |
+| ≤ 50 MB | 70 % | **7,2** |
+| ≤ 20 MB | 60 % | 3,0 |
+
+⚠ **Und hier ist eine Grössenschwelle etwas anderes als überall sonst.** In Bulgarien oder
+Slowenien bedeutet „übersprungen" nur „später holen". **In Luxemburg bedeutet es
+verloren** — die Datei ist nach Fristende weg. Eine 50-MB-Schwelle wirft damit dauerhaft
+genau die Vergaben weg, die am meisten enthalten: die 614-MB-Vergabe ist ein Bauvorhaben
+mit Planunterlagen, ebenso die mit 139 und 109 MB.
+
+**Die Wahl ist also nicht „7 GB oder 143 GB", sondern „70 % für immer oder 100 % für
+immer".**
+
+### Verlustrate
+
+1.618 Vergaben im Jahr sind **rund 135 im Monat**. Das ist der Preis des Wartens, und er
+läuft weiter, solange kein Abrufer da ist.
+
+### ⚠ Der eigentliche Aufwand ist nicht die Platte
+
+Der Abruf braucht **zwei PRADO-Formularschritte mit 11.840 Zeichen Sitzungszustand**
+(§4). Das ist ein eigener Abrufer mit Zustandsführung, kein `curl`-Einzeiler — mehr Arbeit
+als bei Slowenien, Bulgarien und Estland **zusammen**, für 0,4 % des EU-Volumens.
