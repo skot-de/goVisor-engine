@@ -720,6 +720,35 @@ DOC_REGISTRY: list[Source] = [
                    "`Disallow: /app/docmgmt`. Der Dateiendpunkt liegt EXAKT im gesperrten "
                    "Pfad. Fuenfter Fall dieser Bauart. Nicht abgerufen.",
            url="https://eu.eu-supply.com"),
+    # ── SI, sondiert am 2026-09-03 · Kapitel: docs/sondierung/si.md ───────────────────
+    Source("sond-si-enarocanje", "Portal javnih naročil (SI)", "", "SI", "beides",
+           "sondiert", portals=1, ebene="unterlagen", ertrag="offen",
+           coverage="100,0 % des slowenischen Unterlagen-Felds (6.463 von 6.466); 0,0 % der "
+                    "Links ohne Verfahren",
+           overlap="✅ DER EINFACHSTE ABRUF DER SONDIERUNG. TED verlinkt nicht die Vergabeseite, "
+                   "sondern die DATEI: /api/datoteka/get?id=<base64 von '552686;RD za objavo.zip'>. "
+                   "Ein GET, keine Sitzung, kein Zwischenschritt. robots.txt: HTTP 404, 0 Bytes. "
+                   "39 von 39 Adressen abgerufen, 150,3 MB, Schnitt 3,9 MB je Datei. "
+                   "⚠ DAS PORTAL LAEDT reCAPTCHA — der Dateiendpunkt braucht KEINES (39/39 ohne). "
+                   "Ein CAPTCHA auf der Suchmaske heisst nicht, dass der Abruf eines hat; wer dort "
+                   "abbricht, traegt ein offenes Land als gesperrt ein. "
+                   "⚠ Die Kennung ist eine laufende Nummer und damit ratbar — WIR FOLGEN NUR den "
+                   "Adressen, die TED nennt; Durchprobieren waere ein Abgriff jenseits des "
+                   "Veroeffentlichten und wurde nicht getan. "
+                   "⚠ UMFANG: jede Datei ist ein eigener TED-Link → 6.466 x 3,9 MB ≈ 25 GB/Jahr.",
+           url="https://www.enarocanje.si"),
+    Source("sond-si-ejn", "e-JN Liste des Innenministeriums (SI)", "", "SI", "ausschreibung",
+           "sondiert", portals=1, ebene="bekanntmachung", ertrag="offen",
+           coverage="amtliche Liste laufender Vergaben; 70 % der Eintraege sind unterschwellig",
+           overlap="✅ VOM MINISTERIUM SELBST HERAUSGEGEBEN (podatki.gov.si nennt sie als offene "
+                   "Daten, Stelle: Ministrstvo za notranje zadeve in javno upravo). "
+                   "Servergerendert, keine robots-Sperre (404), KEIN CAPTCHA, HTTP 200. Felder: "
+                   "Kaeufer, Titel, Aktenzeichen, Verfahrensart, Zeitstempel, JN-Nummer. "
+                   "⚠ 31 von 50 sind 'Narocilo male vrednosti' (Kleinauftrag) + 4 'Evidencno "
+                   "narocilo' → 70 % erreichen TED NIE. Zentrale unterschwellige Quelle wie in PL, "
+                   "nicht zersplittert wie DE. "
+                   "⚠ Blaettern (PrimeFaces) und Reichweite der Liste UNGEPRUEFT.",
+           url="https://ejn.gov.si"),
     # ── HR, sondiert am 2026-09-03 · Kapitel: docs/sondierung/hr.md ───────────────────
     Source("sond-hr-eojn", "EOJN (HR)", "", "HR", "beides",
            "sondiert", portals=1, ebene="unterlagen", ertrag="gesperrt",
