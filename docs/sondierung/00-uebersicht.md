@@ -34,6 +34,7 @@ Abruf belegt. Kein Konto, kein CAPTCHA, robots.txt immer zuerst.
 | **BG** | 2,2 % | **97 %** | robots sagt ausdrücklich `Allow: /`, aufzählbar |
 | **HR** | 1,9 % | **0 %** | ⛔ `Allow: /$` — nur die Startseite freigegeben |
 | **SI** | 1,6 % | **100 %** | ein GET direkt auf die Datei, 39 von 39 |
+| **HU** | 1,1 % | **64 %** | Dokumenttyp an der Quelle, ZIP serverseitig gebündelt |
 | **SK** | 1,2 % | **0 %** | ⛔ Freigabeliste in der robots.txt |
 | **BE** | 3,6 % | *offen* | Plattform fällt gerade aus |
 | **LV** | 1,5 % | *offen* | eine Plattform, Abrufweg ungeklärt |

@@ -720,6 +720,38 @@ DOC_REGISTRY: list[Source] = [
                    "`Disallow: /app/docmgmt`. Der Dateiendpunkt liegt EXAKT im gesperrten "
                    "Pfad. Fuenfter Fall dieser Bauart. Nicht abgerufen.",
            url="https://eu.eu-supply.com"),
+    # ── HU, sondiert am 2026-09-03 · Kapitel: docs/sondierung/hu.md ───────────────────
+    Source("sond-hu-ekr", "EKR (HU)", "", "HU", "beides",
+           "sondiert", portals=1, ebene="unterlagen", ertrag="offen",
+           coverage="99,3 % des ungarischen Unterlagen-Felds (4.644 von 4.678); 0,0 % der Links "
+                    "ohne Verfahren; 64 % der Vergaben tragen Dokumente (16 von 25, 68 Dateien)",
+           overlap="✅ OFFEN, vier ausdruecklich oeffentliche Endpunkte (/api/PUBLIC/…): eljaras, "
+                   "kereso, szotar, document. Nichts musste geraten werden. "
+                   "⭐ DER DATEIABRUF BUENDELT SERVERSEITIG: POST /public/document mit "
+                   "{'dokumentIdList':[15 GUIDs]} gibt EIN ZIP (8,95 MB) statt 15 Abrufe — das "
+                   "kann kein anderes Portal der Sondierung. "
+                   "⭐ DOKUMENTTYP AN DER QUELLE VERGEBEN (dokumentumTipus.kod): "
+                   "KOZBESZERZESI_DOKUMENTACIO, MUSZAKI_LEIRAS, SZERZODES_TERVEZET, "
+                   "KIEGESZITO_TAJEKOZTATAS_NYUJTASA (= Bieterfragen), RESZLETES_ARTABLAZAT. "
+                   "Der Doktyp-Parser darf das NICHT ueberstimmen — durchreichen, nicht raten. "
+                   "⚠ ELOZETES_VITARENDEZES (vorherige Streitschlichtung) ist eine Gattung, die "
+                   "goVisor NIRGENDS kennt: foermliche Ruege gegen die Vergabebedingungen vor "
+                   "Angebotsabgabe, samt Antwort. Schaerferes Signal als eine Frage. 3 von 25. "
+                   "⚠ Leere dokumentumList ist eine ANTWORT, kein Fehler (gueltiger Stand, 1–6 "
+                   "Bekanntmachungen) — nicht als Fehlschlag wiederholen. "
+                   "⚠ ZIP-Eintragsnamen kommen in alter Kodierung an (Egys+?g+?r-gy+?jtem+?ny).",
+           url="https://ekr.gov.hu"),
+    Source("sond-hu-ekr-kereso", "EKR Suche (HU, beide Ebenen)", "", "HU", "ausschreibung",
+           "sondiert", portals=1, ebene="bekanntmachung", ertrag="offen",
+           coverage="4.417 laufende Vergaben, 45 Seiten; 60 % davon erreichen TED nie",
+           overlap="✅ /eljarastar/api/public/kereso?jovobeli=true&aktualis=true&offset=&limit= — "
+                   "anonym, geblaettert. Nach Verfahrensordnung (Stichprobe 100): Unios 40 % "
+                   "(oberschwellig), EPK 37 %, Nemzeti 23 % → 60 % NATIONAL. Zentrale Quelle fuer "
+                   "beide Ebenen wie PL und SI, kein zweites Portal. "
+                   "Dazu /public/szotar/{CPV_KODOK,NUTS_KODOK,ELJARAS_TIPUS,ELJARAS_SZAKASZ} — "
+                   "die Referenzvokabulare oeffentlich mitgeliefert. "
+                   "⚠ Reichweite des Archivs nicht ausgelotet (Filter steht auf laufend+kuenftig).",
+           url="https://ekr.gov.hu/eljarastar/eljarasok"),
     # ── SI, sondiert am 2026-09-03 · Kapitel: docs/sondierung/si.md ───────────────────
     Source("sond-si-enarocanje", "Portal javnih naročil (SI)", "", "SI", "beides",
            "sondiert", portals=1, ebene="unterlagen", ertrag="offen",
