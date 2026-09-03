@@ -720,6 +720,44 @@ DOC_REGISTRY: list[Source] = [
                    "`Disallow: /app/docmgmt`. Der Dateiendpunkt liegt EXAKT im gesperrten "
                    "Pfad. Fuenfter Fall dieser Bauart. Nicht abgerufen.",
            url="https://eu.eu-supply.com"),
+    # ── FI, sondiert am 2026-09-03 · Kapitel: docs/sondierung/fi.md ───────────────────
+    Source("sond-fi-hilma", "HILMA (FI)", "", "FI", "beides",
+           "sondiert", portals=1, ebene="unterlagen", ertrag="offen",
+           coverage="9,2 % des finnischen Unterlagen-Felds (714 von 7.771); 6 von 7 Vergaben "
+                    "tragen Anhaenge, 29 von 29 Dateien geladen, 0 Fehlschlaege",
+           overlap="✅ OFFEN, reine Schnittstellenkette: GET /web/api/public/procedure/<pid>/"
+                   "enotice/<nid> → attachments[{id,name}] → GET cdn.…/public-attachments/<id>. "
+                   "⚠ Das '/web/' davor war der ganze Unterschied — vier geratene Pfade gaben "
+                   "sauberes JSON-404; gefunden nur durch Mitlesen der laufenden Anwendung. "
+                   "Der Dateihost (Azure) gibt auf robots.txt 401 — Antwort eines Objektspeichers "
+                   "auf ein fehlendes Objekt, keine Regel (wie Bulgariens S3-403). "
+                   "🎁 Beigaben: die Ansicht rendert eForms MIT BT-Feldnummern im Klartext, und "
+                   "das CDN liefert die eForms-SDK-Codelisten (1.10 und 1.13) als JSON.",
+           url="https://www.hankintailmoitukset.fi"),
+    Source("sond-fi-cloudia", "Cloudia Tarjouspalvelu (FI)", "", "FI", "beides",
+           "sondiert", portals=1, ebene="unterlagen", ertrag="gesperrt",
+           coverage="82,4 % des finnischen Unterlagen-Felds (6.404 von 7.771)",
+           overlap="⛔ ANMELDUNG. 7 von 7 TED-Adressen liefern dieselbe Huelle mit "
+                   "<input type='password'>; im Browser antwortet die Anwendung 'No access right "
+                   "to the function'. Keine robots-Sperre — die Grenze ist ein Konto, keine Regel. "
+                   "⚠ HILMA IST KEIN HINTEREINGANG: ueber 668 FI-Ausschreibungen eines Monats "
+                   "liegen 546 NUR auf Cloudia, 55 NUR auf HILMA und NULL auf beiden. HILMA hostet "
+                   "Unterlagen nur fuer Verfahren, die dort selbst angelegt wurden — das sagt die "
+                   "Plattform auf ihrer eigenen Seite, und die 0 Ueberschneidungen belegen es. "
+                   "Finnland ist damit kein Ein-Plattform-Land, sondern ein Zwei-Klassen-Land: "
+                   "offen oder zu, je nachdem welches Werkzeug die Vergabestelle gekauft hat.",
+           url="https://tarjouspalvelu.fi"),
+    Source("sond-fi-schwanz", "Kleinplattformen (FI)", "", "FI", "beides",
+           "sondiert", portals=83, ebene="unterlagen", ertrag="teilweise",
+           coverage="8,4 % ueber 83 Domains; nur drei stichprobenartig geprueft",
+           overlap="🟡 GEMISCHT, und das Muster steht in den Adressen: 'rfq2REGISTRATION', "
+                   "'/fi/REGISTER/<hash>', 'Quotations/SIGNUP.aspx' — die kleineren Plattformen "
+                   "verlangen ein Konto und sagen es im Pfad. "
+                   "⛔ bem.buildercom.net (1,9 %) sperrt ausdruecklich: robots.txt 26 Bytes, "
+                   "'User-Agent: * / Disallow: /'. "
+                   "sokobid.sokopro.fi und pris.haahtela.fi untersagen nichts, zeigen aber ohne "
+                   "Anwendung keinen Inhalt — nicht weiter geprueft (zusammen 1,6 %).",
+           url="https://bem.buildercom.net"),
     # ── HU, sondiert am 2026-09-03 · Kapitel: docs/sondierung/hu.md ───────────────────
     Source("sond-hu-ekr", "EKR (HU)", "", "HU", "beides",
            "sondiert", portals=1, ebene="unterlagen", ertrag="offen",
