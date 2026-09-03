@@ -720,6 +720,46 @@ DOC_REGISTRY: list[Source] = [
                    "`Disallow: /app/docmgmt`. Der Dateiendpunkt liegt EXAKT im gesperrten "
                    "Pfad. Fuenfter Fall dieser Bauart. Nicht abgerufen.",
            url="https://eu.eu-supply.com"),
+    # ── IE/MT/CY, sondiert am 2026-09-03 · Kapitel: docs/sondierung/ie.md +
+    #    docs/sondierung/european-dynamics.md ──────────────────────────────────────────
+    Source("sond-ie-etenders", "eTenders (IE)", "", "IE", "beides",
+           "sondiert", portals=1, ebene="unterlagen", ertrag="offen",
+           coverage="98,9 % des irischen Unterlagen-Felds (5.845 von 5.912, 12 Monate); "
+                    "99 % der Links nennen ein Verfahren — die sauberste Verlinkung der Sondierung",
+           overlap="✅ OFFEN, 86 % GEMESSEN (nicht geschaetzt): 38 von 44 Vergaben anonym mit "
+                   "Dokumenten (199 Dateien), 6 hinter CAS-Anmeldung. Dieselbe European-Dynamics-"
+                   "Kette wie LT: listContractDocuments.do → prepareAnonymousDownload.do → "
+                   "downloadContractDocument.do, servergerendert, ohne Browser. "
+                   "⚠ Die 14 % Anmeldepflicht sind kein Rauschen — ein Abrufer darf die Umleitung "
+                   "nicht als Fehler zaehlen. "
+                   "⚠ Die mitgelieferte c4t_*.xml traegt die WERTUNGSSTRUKTUR typisiert "
+                   "(procedure, eval-type, Lose, Kriterienbaum) — Zuschlagskriterien geschenkt. "
+                   "Unterschwellig liegt auf DERSELBEN Plattform (Suchfilter 'Threshold: Below'), "
+                   "2.931 laufende Vergaben oeffentlich. ⚠ Blaettern ungeloest: d-*-p=N liefert "
+                   "bei 1, 2 und 5 dieselben zehn Kennungen.",
+           url="https://www.etenders.gov.ie"),
+    Source("sond-mt-etenders", "eTenders (MT)", "", "MT", "beides",
+           "sondiert", portals=1, ebene="unterlagen", ertrag="offen",
+           coverage="145 Nennungen im letzten Monat; in KEINEM frueheren Kapitel vorgekommen",
+           overlap="✅ OFFEN, 7 von 7 anonym (64 Dateien, 0 Anmeldungen), keine robots.txt. "
+                   "Dieselbe European-Dynamics-Kette wie LT und IE — GEFUNDEN, indem nach der "
+                   "SOFTWARE statt nach dem Land gesucht wurde. "
+                   "⚠ Lieferte eine 'Clarification Note 4.pdf' = Bieterfragen-Dokument, auf "
+                   "Englisch (einfacher zu erkennen als das portugiesische 'Resposta Erros e "
+                   "Omissoes'). ⚠ Stichprobe nur 7 — IE zeigte seine 14 % Anmeldepflicht erst "
+                   "bei 44. Unterschwellige Ebene ungeprueft.",
+           url="https://www.etenders.gov.mt"),
+    Source("sond-cy-eprocurement", "eProcurement (CY)", "", "CY", "beides",
+           "sondiert", portals=1, ebene="unterlagen", ertrag="offen",
+           coverage="104 Nennungen im letzten Monat; in KEINEM frueheren Kapitel vorgekommen",
+           overlap="✅ OFFEN, 7 von 7 anonym (46 Dateien, 0 Anmeldungen), keine robots.txt. "
+                   "Dieselbe European-Dynamics-Kette. "
+                   "⚠ ZEICHENSATZ-FALLE: der Dateiname kam als '------ 11 ---------- R2.docx' an "
+                   "— griechischer Text, zerschossen in der Content-Disposition-KOPFZEILE (nicht "
+                   "im Inhalt). Gleiche Stelle wie Łódź → ['d'] und die griechischen Kennungen. "
+                   "Wer Dateien unter dem gemeldeten Namen ablegt, verliert die Bezeichnung. "
+                   "⚠ Stichprobe nur 7. Unterschwellige Ebene ungeprueft.",
+           url="https://www.eprocurement.gov.cy"),
     # ── GR, sondiert am 2026-09-03 · Kapitel: docs/sondierung/gr.md ───────────────────
     Source("sond-gr-esidis", "ΕΣΗΔΗΣ/Promitheus (GR)", "", "GR", "beides",
            "sondiert", portals=1, ebene="unterlagen", ertrag="teilweise",
