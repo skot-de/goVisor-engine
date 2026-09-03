@@ -15,9 +15,9 @@ und Liechtenstein waren mit den alten Mustern unsichtbar oder untermessen.
 
 | | Anteil der EU-Unterlagen-Links |
 |---|---:|
-| **gemessen erreichbar** | **28,7 %** |
-| belegt nicht erreichbar | 64,0 % |
-| ungeklärt (BE, NO, GR, AT, IS, LI) | 7,3 % |
+| **gemessen erreichbar** | **30,6 %** |
+| belegt nicht erreichbar | 65,2 % |
+| ungeklärt (NO, GR, AT, IS, LI) | 4,2 % |
 
 ⚠ **Was „erreichbar" heisst:** ohne Anmeldung, ohne CAPTCHA, ohne robots-Verstoss belegt
 abgerufen. Nicht: „gebaut". Gebaut ist davon nur Deutschland.
@@ -108,8 +108,11 @@ brauchen alle drei denselben sitzungsführenden Abrufer** (POST mit Formularzust
 
 ## 6. Was offen bleibt
 
-- **Sechs Länder ohne belastbare Zahl** (7,3 %): BE, NO, GR, AT, IS, LI. ✅ RO, LU, LV und
-  EE sind seit dem 2026-09-03 gelöst und tragen zusammen **5,4 Punkte** zur Gesamtzahl bei.
+- **Fünf Länder ohne belastbare Zahl** (4,2 %): NO, GR, AT, IS, LI. ✅ RO, LU, LV, EE **und
+  BE** sind am 2026-09-03 gelöst worden und tragen zusammen **7,3 Punkte** bei.
+- ⚠ **Belgiens zweite Hälfte** (`cloud.3p.eu`, 33,9 % des Landes) ist ungeprüft: davor steht
+  ein Cookie-Zustimmungsbanner. Die Länderwahl daneben ist ein eigener Knopf — wer nur sie
+  sendet, gibt keine Erklärung ab ([be](be.md) §2).
 - ✅ **Mercell ist geprüft und kein Hebel** ([mercell](mercell.md)): NL/DE/LU per robots
   gesperrt, NO/DK hinter einer Cloudflare-Bot-Prüfung.
 - **Die Fonds-Ebene** — nur CZ und PL untersucht, zehn Länder offen
