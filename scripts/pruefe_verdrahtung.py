@@ -186,10 +186,20 @@ BEWUSST_NUR_DE: dict[str, str] = {
     "lead_kategorie": "Kategorie-Wasserfall liest DE-Dubletten und DE-Vokabular",
     "bronze_inventory": "Inventar der DE-Bronze-Pakete (TED-Vollabzug)",
     "document_duplicates": "Dokument-Dublettenwall; AT/CH haben 0 % Dokumentabdeckung",
-    # Dieselbe Ursache wie eine Zeile darueber, und derselbe Weg hinaus: die Erzeuger sind
-    # laenderfaehig (`--land`), AT und CH haben nur kein `doc_text`. Geprueft am 2026-09-02:
-    # beide Laender laufen sauber durch und melden „nichts zu tun". Kommen dort Dokumente
-    # an, entstehen diese Tabellen von selbst — dann gehoeren die vier Zeilen gestrichen.
+    # Dieselbe Ursache wie eine Zeile darueber: AT und CH haben kein `doc_text`.
+    #
+    # ⚠ ABER NICHT DERSELBE WEG HINAUS — hier stand bis zum 2026-09-03, die Erzeuger seien
+    # „laenderfaehig (`--land`)" und die Tabellen entstuenden „von selbst", sobald Dokumente
+    # ankommen. Das gilt fuer den Dublettenwall eine Zeile darueber, NICHT fuer die
+    # LLM-Auswertung: `scripts/analyze_docs.py:45` haelt `SRC` fest auf
+    # data/docs/DE/doc_text.parquet — eine Modulkonstante, kein Parameter — und liest
+    # dreimal `gold/DE/lead_export.parquet`. Sein eigener Docstring verspricht in Zeile 4
+    # „data/docs/<country>/doc_text.parquet"; der Code loest das nicht ein.
+    # Gemessen 2026-09-03: 10 DE-feste Stellen ueber 7 Skripte der Dokument-Kette
+    # (analyze_docs 4, export_doc_struktur 2, je 1 in build_doc_analysis, export_doc_text,
+    # export_doc_signals, export_doc_listing).
+    # Fuer LU heisst das: indiziert wird seit heute, ausgewertet nicht. Wer diese Zeilen
+    # streichen will, muss vorher die Kette parametrisieren — nicht auf Daten warten.
     "doc_analysis": "Auswertung der Vergabeunterlagen; AT/CH haben 0 % Dokumentabdeckung",
     "doc_checklist": "gehoert zu doc_analysis, dieselbe Quelle",
     "doc_verworfen": "gehoert zu doc_analysis, dieselbe Quelle",
