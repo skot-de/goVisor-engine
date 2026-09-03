@@ -646,9 +646,17 @@ DOC_REGISTRY: list[Source] = [
     Source("sond-ee-rhr", "RHR (riigihanked.riik.ee)", "", "EE", "beides",
            "sondiert", portals=1, ebene="unterlagen", ertrag="ungeprueft",
            coverage="100 % Estlands — EINE Domain",
-           overlap="⚪ Ungeprueft. Keine robots-Sperre. Die TED-Adressen sind Deeplinks mit "
-                   "Fragment-Routing (#/procurement/<id>/documents) — eine JS-Anwendung, "
-                   "deren API erst zu finden ist; ein geratener Endpunkt gab 404.",
+           overlap="🟡 Liste offen, Dateiendpunkt nicht gefunden. Keine robots.txt. Zwei "
+                   "offizielle Wege ohne Anmeldung: „Avaandmed\" (Monatspakete + "
+                   "Maschinenschnittstelle, naechtlich, eForms-XSD — aber nur BEKANNTMACHUNGEN, "
+                   "wie DECP in FR) und eine oeffentliche REST-API /rhr/api/public/v1/. "
+                   "proc-vers/<id>/documents/general-info liefert anonym 9 Dokumente mit "
+                   "name, fileName, fileSize, failservId und visibilityCode=PUBLIC. Fuenf "
+                   "plausible Dateipfade probiert, alle 500 — ⚠ die API antwortet auf "
+                   "UNBEKANNTE Pfade mit 500 statt 404, Raten gibt also kein Signal. "
+                   "⚠ Und: `Accept: application/json` allein ergab 500, erst "
+                   "`application/json, text/plain, */*` gab 200 und 586 KB. Wer bei einer "
+                   "500 aufhoert, haelt eine offene Tuer fuer verschlossen.",
            url="https://riigihanked.riik.ee"),
     # ── ANGEBUNDEN ────────────────────────────────────────────────────────────────────
     Source("doc-cosinex-de", "cosinex/DTVP-Unterlagen", "docfetch-cosinex", "DE", "beides",

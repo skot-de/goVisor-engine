@@ -77,15 +77,40 @@ verwinkelter als bei Litauen.
 
 **Nachzuholen.** Ein Land mit einer einzigen Plattform ist die Mühe wert.
 
-## 4. ⚪ Estland — ungeprüft
+## 4. 🟡 Estland — Liste offen, Dateiendpunkt nicht gefunden
 
-`riigihanked.riik.ee` (RHR), 100 % des Landes, keine robots-Sperre. Die TED-Adressen sind
-Deeplinks mit Fragment-Routing:
+`riigihanked.riik.ee` (RHR), 100 % des Landes, keine robots.txt (404).
+
+**Zwei offizielle Wege, beide ohne Anmeldung:**
+
+Die Seite führt einen Menüpunkt **„Avaandmed"** (offene Daten). Er sagt: Bekanntmachungen
+gibt es **monatsweise zum Herunterladen oder über eine Maschinenschnittstelle**, nächtlich
+aktualisiert, im eForms-XSD-Schema. ⚠ Das betrifft die **Bekanntmachungen**, nicht die
+Unterlagen — dasselbe Muster wie DECP in Frankreich.
+
+Und eine öffentliche REST-API unter `/rhr/api/public/v1/`:
+
 ```
-https://riigihanked.riik.ee/rhr-web/#/procurement/10174386/documents?group=B
+GET /rhr/api/public/v1/proc-vers/<verId>/documents/general-info
+    → 200, JSON: procurementDocuments[] mit name, fileName, fileSize,
+      failservId, visibilityCode, documentSubtypeCode
 ```
-Das `#` heißt: eine JS-Anwendung, deren API erst zu finden ist. Ein erster geratener
-Endpunkt (`/rhr-web/api/public/procurements/<id>`) gab 404.
+
+Geprüft an einer Vergabe der Eesti Pank: **9 Dokumente**, alle mit
+`visibilityCode: "PUBLIC"` — die Plattform kennzeichnet sie ausdrücklich als öffentlich.
+
+**Den Dateiendpunkt habe ich nicht gefunden.** Fünf plausible Pfade probiert (`failserv/`,
+`file/`, `document/<id>/file`, …) — alle 500. ⚠ Und das ist die Falle: **diese API
+antwortet auf einen unbekannten Pfad mit 500, nicht mit 404.** Raten liefert also kein
+Signal, und der Klick im Browser löste keinen Netzaufruf aus, den ich mitlesen konnte.
+
+⚠ **Ein Fund, der für jede weitere API zählt:** mein erster Aufruf mit
+`Accept: application/json` gab **500**. Mit `Accept: application/json, text/plain, */*`
+kam **HTTP 200 und 586 KB**. Die Schnittstelle war nie zu — meine Kopfzeile war zu eng.
+Wer bei einer 500 aufhört, hält eine offene Tür für verschlossen.
+
+**Nachzuholen.** Ein Land, eine Plattform, Dokumente ausdrücklich als öffentlich markiert —
+es fehlt nur der letzte Aufruf.
 
 ## 5. Warum das für den Plan zählt
 
