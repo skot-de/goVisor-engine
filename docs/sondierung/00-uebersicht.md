@@ -31,37 +31,37 @@ Land).
 
 | Land | EU-Anteil | offen | ohne Verfahren | Lage | Kapitel |
 |---|---:|---:|---:|---|---|
-| **DE** | 20.4 % | 32 % | 3,3 % | ✅ angebunden, 13 Abrufer | — |
-| **PL** | 15.2 % | 19 / 35 % | 45,0 % ⚠ | 🟡 Silber ohne Gold | [pl](pl.md) |
-| **FR** | 13.2 % | **0 %** | 33,6 % ⚠ | ⛔ CAPTCHA + Login | [fr](fr.md) |
-| **ES** | 6.5 % | 5 % | 20,0 % ⚠ | 🟡 nur Katalonien | [es](es.md) |
-| **IT** | 4.3 % | 15,1 % | 42,1 % ⚠ | 🟡 538 Domains | [it](it.md) |
-| **CZ** | 4.2 % | 28 % | 62,2 % ⚠ | 🟡 verlinkt Käuferprofile | [cz](cz.md) |
-| **RO** | 3.2 % | **~85 %** | 15,1 % | ✅ `e-licitatie.ro` 99,7 %, zweiphasig | [ro](ro.md) |
-| **BE** | 3.1 % | ? | 2,5 % | 🟡 Token fehlt, Weg dokumentiert | [be](be.md) |
-| **SE** | 3.1 % | **0 %** | 0,1 % | ⛔ 88 % robots-gesperrt | [se](se.md) |
-| **NL** | 2.4 % | **73 %** | 0,7 % | ✅ offizielle API | [nl](nl.md) |
-| **PT** | 2.2 % | **88,8 %** | 1,5 % | ✅ Vortal + AcinGov | [pt](pt.md) |
-| **BG** | 2.1 % | **97 %** | 0,0 % | ✅ robots sagt `Allow: /` | [bg](bg.md) |
-| **LT** | 1.8 % | **~99 %** | 0,4 % | ✅ European Dynamics | [baltikum](baltikum.md) |
-| **HR** | 1.8 % | **0 %** | 0,0 % | ⛔ `Allow: /$` — nur Startseite | [hr](hr.md) |
-| **FI** | 1.8 % | 9,2 % | 2,8 % | 🟡 Zwei-Klassen-Land | [fi](fi.md) |
-| **NO** | 1.7 % | ? | 0,6 % | ⚪ Mercell/EU-Supply gesperrt | [mercell](mercell.md) |
-| **SI** | 1.5 % | **100 %** | 0,0 % | ✅ ein GET auf die Datei | [si](si.md) |
-| **AT** | 1.5 % | ? | 31,5 % ⚠ | ✅ angebunden, Unterlagen hinter Anmeldung | — |
-| **LV** | 1.5 % | **100 %** | 0,0 % | ✅ zweistufig, `.edoc` | [baltikum](baltikum.md) |
-| **CH** | 1.4 % | 0 % | 0,0 % | ⛔ Anmeldung | — |
-| **IE** | 1.4 % | **86 %** | 1,6 % | ✅ European Dynamics | [ie](ie.md) |
-| **HU** | 1.1 % | **64 %** | 0,0 % | ✅ typisiert an der Quelle | [hu](hu.md) |
-| **SK** | 1.0 % | **0 %** | 0,5 % | ⛔ Freigabeliste | [sk](sk.md) |
-| **DK** | 0.9 % | 17,5 % | 11,9 % | 🟡 6 Plattformen, 6 Antworten | [dk](dk.md) |
-| **GR** | 0.9 % | *bedingt* | 40,8 % ⚠ | 🟡 ADF-Bootstrap fehlt | [gr](gr.md) |
-| **EE** | 0.8 % | **100 %** | 0,3 % | ✅ `documents-temp-url` | [baltikum](baltikum.md) |
-| **LU** | 0.4 % | **100 %** | 1,5 % | ⏳ offen, nur bis Fristende | [lu](lu.md) |
-| **MT** | 0.3 % | **100 %** | 0,6 % | ✅ European Dynamics | [european-dynamics](european-dynamics.md) |
-| **CY** | 0.3 % | **100 %** | 0,0 % | ✅ European Dynamics | [european-dynamics](european-dynamics.md) |
-| **IS** | 0.1 % | ? | 17,9 % | ⚪ nur TED | — |
-| **LI** | 0.0 % | ? | 0,0 % | ⚪ nur TED | — |
+| **DE** | 20,4 % | 32 % | 3,3 % | ✅ angebunden, 13 Abrufer | — |
+| **PL** | 15,2 % | 19 / 35 % | 45,0 % ⚠ | 🟡 Silber ohne Gold | [pl](pl.md) |
+| **FR** | 13,2 % | **0 %** | 33,6 % ⚠ | ⛔ CAPTCHA + Login | [fr](fr.md) |
+| **ES** | 6,5 % | 5 % | 20,0 % ⚠ | 🟡 nur Katalonien | [es](es.md) |
+| **IT** | 4,3 % | 15,1 % | 42,1 % ⚠ | 🟡 538 Domains | [it](it.md) |
+| **CZ** | 4,2 % | 28 % | 62,2 % ⚠ | 🟡 verlinkt Käuferprofile | [cz](cz.md) |
+| **RO** | 3,2 % | **~85 %** | 15,1 % | ✅ `e-licitatie.ro` 99,7 %, zweiphasig | [ro](ro.md) |
+| **BE** | 3,1 % | **60,5 %** | 2,5 % | ✅ BOSA belegt (6,1 MB anonym) · ⛔ 3P: reCAPTCHA | [be](be.md) |
+| **SE** | 3,1 % | **0 %** | 0,1 % | ⛔ 88 % robots-gesperrt | [se](se.md) |
+| **NL** | 2,4 % | **73 %** | 0,7 % | ✅ offizielle API | [nl](nl.md) |
+| **PT** | 2,2 % | **88,8 %** | 1,5 % | ✅ Vortal + AcinGov | [pt](pt.md) |
+| **BG** | 2,1 % | **97 %** | 0,0 % | ✅ robots sagt `Allow: /` | [bg](bg.md) |
+| **LT** | 1,8 % | **~99 %** | 0,4 % | ✅ European Dynamics | [baltikum](baltikum.md) |
+| **HR** | 1,8 % | **0 %** | 0,0 % | ⛔ `Allow: /$` — nur Startseite | [hr](hr.md) |
+| **FI** | 1,8 % | 9,2 % | 2,8 % | 🟡 Zwei-Klassen-Land | [fi](fi.md) |
+| **NO** | 1,7 % | ? | 0,6 % | ⚪ Mercell/EU-Supply gesperrt | [mercell](mercell.md) |
+| **SI** | 1,5 % | **100 %** | 0,0 % | ✅ ein GET auf die Datei | [si](si.md) |
+| **AT** | 1,5 % | ? | 31,5 % ⚠ | ✅ angebunden, Unterlagen hinter Anmeldung | — |
+| **LV** | 1,5 % | **100 %** | 0,0 % | ✅ zweistufig, `.edoc` | [baltikum](baltikum.md) |
+| **CH** | 1,4 % | 0 % | 0,0 % | ⛔ Anmeldung | — |
+| **IE** | 1,4 % | **86 %** | 1,6 % | ✅ European Dynamics | [ie](ie.md) |
+| **HU** | 1,1 % | **64 %** | 0,0 % | ✅ typisiert an der Quelle | [hu](hu.md) |
+| **SK** | 1,0 % | **0 %** | 0,5 % | ⛔ Freigabeliste | [sk](sk.md) |
+| **DK** | 0,9 % | 17,5 % | 11,9 % | 🟡 6 Plattformen, 6 Antworten | [dk](dk.md) |
+| **GR** | 0,9 % | *bedingt* | 40,8 % ⚠ | 🟡 ADF-Bootstrap fehlt | [gr](gr.md) |
+| **EE** | 0,8 % | **100 %** | 0,3 % | ✅ `documents-temp-url` | [baltikum](baltikum.md) |
+| **LU** | 0,4 % | **100 %** | 1,5 % | ⏳ offen, nur bis Fristende | [lu](lu.md) |
+| **MT** | 0,3 % | **100 %** | 0,6 % | ✅ European Dynamics | [european-dynamics](european-dynamics.md) |
+| **CY** | 0,3 % | **100 %** | 0,0 % | ✅ European Dynamics | [european-dynamics](european-dynamics.md) |
+| **IS** | 0,1 % | ? | 17,9 % | ⚪ nur TED | — |
+| **LI** | 0,0 % | ? | 0,0 % | ⚪ nur TED | — |
 
 ## 3. Ertrag je Abrufer — die Achse, die zählt
 
