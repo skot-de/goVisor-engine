@@ -52,7 +52,7 @@ CONNECTORS = {
 # Sie einfach unter CONNECTORS zu mischen wäre aber genau die Vanity-Metrik, gegen die der
 # Modul-Docstring oben argumentiert: aus 8 Connectoren würden 20, ohne dass eine einzige
 # Bekanntmachung mehr hereinkäme. Zwei Ebenen, zwei Zahlen — `Source.ebene` trennt sie, und
-# `summary()`/`dach_matrix()` rechnen sie NICHT zusammen.
+# `summary()`/`laender_matrix()` rechnen sie NICHT zusammen.
 DOC_CONNECTORS = {
     "docfetch-cosinex":    "cosinex/DTVP-Projektraum — Sammel-ZIP, grösste DE-Familie",
     "docfetch-rib":        "RIB »meinauftrag« — Einzeldateien über requests",
@@ -1353,9 +1353,29 @@ def summary() -> dict:
     }
 
 
-def dach_matrix() -> list[tuple]:
-    """DACH-Abdeckung als Matrix (Land × Schwelle) → beste Quelle + Status. Fürs 100%-DACH-Ziel:
-    zeigt, was live/prepared ist und wo die bewusste Restlücke bleibt."""
+def _matrix_laender() -> list[str]:
+    """Welche Laender die Matrizen zeigen — aus der Registry, nicht aus einem Tupel.
+
+    ⚠ HIER STAND ("DE", "AT", "CH"). Solange goVisor DACH war, stimmte das; am 2026-09-03 kam
+    Luxemburg live dazu und fehlte in beiden Matrizen — also genau in dem Bericht, der zeigen
+    soll, „wo die bewusste Restluecke bleibt". Ein Land, das live ist und im Ueberblick nicht
+    vorkommt, ist der blinde Fleck, den der Bericht verhindern soll.
+    DACH zuerst, weil der Bestand dort liegt; alles weitere alphabetisch.
+    """
+    da = ["DE", "AT", "CH"]
+    weitere = sorted({s.country for s in REGISTRY
+                      if s.country not in da and s.status in ("live", "prepared")})
+    return da + weitere
+
+
+def laender_matrix() -> list[tuple]:
+    """Abdeckung als Matrix (Land × Schwelle) → beste Quelle + Status. Zeigt, was live oder
+    prepared ist und wo die bewusste Restlücke bleibt.
+
+    ⚠ HIESS BIS ZUM 2026-09-03 `laender_matrix`. Der Name war eine Aussage ueber den Inhalt, und
+    sobald ein viertes Land dazukam, war er falsch. Ein Bericht, der sich „DACH" nennt und
+    Luxemburg zeigt, oder einer, der Luxemburg verschweigt: beides schlecht.
+    """
     def best(country, tier):
         # relevante Quellen: exakter Tier oder "beides". ⚠ NUR Ebene 1 — sonst gewänne hier
         # ein Dokument-Abrufer die Zeile »AT unterschwellig«, obwohl er keine einzige
@@ -1368,7 +1388,7 @@ def dach_matrix() -> list[tuple]:
         s = min(cand, key=lambda x: order[x.status])
         return (s.name, s.status)
     rows = []
-    for cc in ("DE", "AT", "CH"):
+    for cc in _matrix_laender():
         for tier in ("oberschwellig", "unterschwellig"):
             name, status = best(cc, tier)
             rows.append((cc, tier, name, status))
@@ -1378,11 +1398,11 @@ def dach_matrix() -> list[tuple]:
 def unterlagen_matrix() -> list[tuple]:
     """DACH-Abdeckung auf der UNTERLAGEN-Ebene: Land → was wir dort tatsächlich bekommen.
 
-    Die Gegenfrage zu `dach_matrix()`. Bei den Bekanntmachungen ist DACH gelöst; hier trennt
+    Die Gegenfrage zu `laender_matrix()`. Bei den Bekanntmachungen ist DACH gelöst; hier trennt
     sich, wo wir Dateien holen, wo nur Dateilisten, und wo gar nichts.
     """
     rows = []
-    for cc in ("DE", "AT", "CH"):
+    for cc in _matrix_laender():
         ul = [s for s in unterlagen() if s.country == cc]
         for e in ERTRAEGE:
             treffer = [s for s in ul if s.ertrag == e]
@@ -1423,7 +1443,7 @@ def format_overview() -> str:
         lines.append(f"{src.name:<38}{src.connector:<14}{src.country:<5}{src.tier:<15}{src.status}")
     # DACH-Abdeckungsmatrix (das 100%-Ziel)
     lines += ["", "DACH-Abdeckung (Land × Schwelle → beste Quelle):", "-" * 78]
-    for cc, tier, name, status in dach_matrix():
+    for cc, tier, name, status in laender_matrix():
         mark = {"live": "✅", "prepared": "🟡", "candidate": "🟠", "research": "⚪", "fehlt": "❌"}.get(status, "")
         lines.append(f"  {cc}  {tier:<15} {mark} {name}  [{status}]")
 

@@ -74,7 +74,10 @@ def _rahmen(roh: str | None) -> str:
 def main() -> int:
     con = duckdb.connect()
     raus: dict = {"rahmen": {}, "leads": {}}
-    for land in ("DE", "AT", "CH"):
+    # ⚠ LU seit 2026-09-03. Die Schleife prueft je Land auf die Datei und ueberspringt,
+    # was fehlt — ein Land hier zu vergessen wirft also KEINEN Fehler, es zaehlt nur
+    # nicht mit. Genau so hat LU 279 Leads lang gefehlt, ohne dass etwas rot wurde.
+    for land in ("DE", "AT", "CH", "LU"):
         A = ROOT / "data" / "gold" / land / "doc_analysis.parquet"
         L = ROOT / "data" / "gold" / land / "lead_export.parquet"
         N = ROOT / "data" / "silver" / land / "notices"

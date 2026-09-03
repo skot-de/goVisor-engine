@@ -54,7 +54,10 @@ LABEL = {
 def main() -> int:
     con = duckdb.connect()
     raus: dict = {"markt": {}, "stellen": {}}
-    for land in ("DE", "AT", "CH"):
+    # ⚠ LU seit 2026-09-03. Die Schleife prueft je Land auf die Datei und ueberspringt,
+    # was fehlt — ein Land hier zu vergessen wirft also KEINEN Fehler, es zaehlt nur
+    # nicht mit. Genau so hat LU 279 Leads lang gefehlt, ohne dass etwas rot wurde.
+    for land in ("DE", "AT", "CH", "LU"):
         C = ROOT / "data" / "gold" / land / "doc_checklist.parquet"
         L = ROOT / "data" / "gold" / land / "lead_export.parquet"
         if not (C.exists() and L.exists()):

@@ -76,7 +76,7 @@ behauptet wird.
 from govisor import sources
 sources.STATUSES      # ('live', 'prepared', 'candidate', 'research')
 sources.by_country("AT")
-sources.dach_matrix()
+sources.laender_matrix()
 ```
 
 Die vier Status ehrlich verwenden:

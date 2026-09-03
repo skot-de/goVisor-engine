@@ -513,8 +513,8 @@ def eignungs_check(root, fachliste, analysen: dict) -> dict:
     summe: dict[str, int] = defaultdict(int)
     for k, z in zellen.items():
         summe[k.split("|", 1)[1]] += z["offen"]
-    laender_raeume = [r for r in ("alle", "DE", "AT", "CH") if summe.get(r)]
-    bundeslaender = sorted((r for r in summe if r not in ("alle", "DE", "AT", "CH")),
+    laender_raeume = [r for r in ("alle", "DE", "AT", "CH", "LU") if summe.get(r)]
+    bundeslaender = sorted((r for r in summe if r not in ("alle", "DE", "AT", "CH", "LU")),
                            key=lambda r: -summe[r])
     regionen = ([{"schluessel": r, "label": {"alle": "überall", "DE": "Deutschland gesamt",
                                              "AT": "Österreich", "CH": "Schweiz"}[r],
@@ -564,7 +564,10 @@ def main() -> int:
     con = duckdb.connect()
     laender: dict[str, dict] = {}
     gesamt = offen = 0
-    for land in ("DE", "AT", "CH"):
+    # ⚠ LU seit 2026-09-03. Die Schleife prueft je Land auf die Datei und ueberspringt,
+    # was fehlt — ein Land hier zu vergessen wirft also KEINEN Fehler, es zaehlt nur
+    # nicht mit. Genau so hat LU 279 Leads lang gefehlt, ohne dass etwas rot wurde.
+    for land in ("DE", "AT", "CH", "LU"):
         p = ROOT / "data/gold" / land / "lead_export.parquet"
         if not p.exists():
             continue

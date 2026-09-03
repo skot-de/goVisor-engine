@@ -819,7 +819,7 @@ def test_source_registry_is_wellformed():
     assert summ["quellen_live"] == len([s for s in sources.bekanntmachungen()
                                         if s.status == "live"])
     # DACH-Matrix: DE + CH beide Schwellen abgedeckt, AT ist die offene Arbeit
-    dach = {(cc, tier): status for cc, tier, _, status in sources.dach_matrix()}
+    dach = {(cc, tier): status for cc, tier, _, status in sources.laender_matrix()}
     assert dach[("DE", "oberschwellig")] == "live" and dach[("DE", "unterschwellig")] == "live"
     assert dach[("CH", "oberschwellig")] == "live" and dach[("CH", "unterschwellig")] == "live"
     assert dach[("AT", "unterschwellig")] in ("candidate", "prepared", "live")
@@ -4330,7 +4330,10 @@ def test_strategie_json_ist_nach_land_verschluesselt():
     assert "DE" in daten, "strategie.json traegt keine Laenderebene"
     assert "it" not in daten, "strategie.json ist noch flach nach Branche verschluesselt"
     for land, branchen in daten.items():
-        assert land in ("DE", "AT", "CH"), f"unerwartetes Land: {land}"
+        # ⚠ MUSS zu scripts/export_strategie.py:LAENDER passen. Diese Liste ist die
+        # ERWARTUNG, nicht die Wahrheit — als LU am 2026-09-03 dazukam, war sie nachzuziehen,
+        # nicht der Export.
+        assert land in ("DE", "AT", "CH", "LU"), f"unerwartetes Land: {land}"
         assert "wettbewerb" in next(iter(branchen.values())), f"{land} traegt keine Sektionen"
 
 

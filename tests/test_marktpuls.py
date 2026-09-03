@@ -1084,7 +1084,7 @@ def test_registry_addiert_die_beiden_ebenen_nicht():
 
     Die Registry argumentiert in ihrem eigenen Docstring gegen die Vanity-Metrik „200+
     Quellen". Die 13 Dokument-Abrufer einfach mitzuzählen wäre genau das: aus 8 Connectoren
-    würden 21, ohne dass eine einzige Bekanntmachung mehr hereinkäme. Und in `dach_matrix()`
+    würden 21, ohne dass eine einzige Bekanntmachung mehr hereinkäme. Und in `laender_matrix()`
     gewänne sonst ein Abrufer die Zeile „CH unterschwellig", obwohl er null Bekanntmachungen
     liefert — die Matrix behauptete Abdeckung, wo keine ist.
     """
@@ -1110,7 +1110,7 @@ def test_registry_addiert_die_beiden_ebenen_nicht():
     assert sum(len(m) for m in mengen) == len(sources.REGISTRY), (
         "jeder Eintrag gehoert genau EINER Ebene")
     # Kein Abrufer und kein Fonds-Register taucht in der Bekanntmachungs-Matrix auf.
-    namen = {n for _, _, n, _ in sources.dach_matrix()}
+    namen = {n for _, _, n, _ in sources.laender_matrix()}
     assert not (namen & {x.name for x in sources.unterlagen()})
     assert not (namen & {x.name for x in sources.fonds()})
 
