@@ -27,13 +27,25 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from govisor import kennzahlen  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
-SRC = ROOT / "data" / "docs" / "DE" / "doc_signals.parquet"
+# ⚠ ALLE LAENDER — gleiche Begruendung wie in export_doc_text.py: die Ausgabe ist nach
+# `notice_id` verschluesselt, TED-Nummern sind eindeutig, und ein Laenderparameter waere nur
+# eine weitere Stelle, an der jemand ein Land vergessen kann.
+def _quellen() -> list[Path]:
+    return sorted((ROOT / "data" / "docs").glob("*/doc_signals.parquet"))
+
+
+def _qlist() -> str:
+    q = _quellen()
+    return "[" + ", ".join(f"'{x.as_posix()}'" for x in q) + "]" if q else "['']"
+
+
 OUT = ROOT / "web" / "data" / "doc-signals.json"
 
 
 def main() -> int:
-    if not SRC.exists():
-        print(f"FEHLT: {SRC} — erst `signals-docs` laufen lassen.")
+    if not _quellen():
+        print(f"FEHLT: kein doc_signals.parquet unter {ROOT / 'data' / 'docs'} "
+              f"— erst `signals-docs` laufen lassen.")
         return 1
     con = duckdb.connect()
     # ⚠ KEINE HANDGETIPPTE SPALTENLISTE MEHR. Genau hier gingen am 2026-09-01 sechs Felder
@@ -45,7 +57,7 @@ def main() -> int:
     felder = kennzahlen.DOC_SIGNALE
     spalten = ", ".join(kennzahlen.spalten(felder))
     rows = con.execute(
-        f"SELECT notice_id, {spalten} FROM read_parquet('{SRC.as_posix()}')"
+        f"SELECT notice_id, {spalten} FROM read_parquet({_qlist()})"
     ).fetchall()
 
     out = {}

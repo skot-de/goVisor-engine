@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Vergabe-Analyse (Ticket #23) — typisierte, belegpflichtige Extraktion je Dokumenttyp.
 
-Input:  data/docs/<country>/doc_text.parquet (aus `index-docs`).
+Input:  data/docs/$LAND/doc_text.parquet (aus `index-docs`), Vorgabe LAND=DE.
 Output: web/data/doc-analysis.json {notice_id: {ampel, zusammenfassung, checklist[],
         rejected_items, token_cost, doctypes_seen[], missing_expected[], + rückwärts-
         kompatible ko_kriterien/eignung/zuschlag/fristen/aufwand/vorausfuellbar}}.
@@ -42,7 +42,53 @@ from govisor import doctypes, docextract, docparse, doctax, docpipe  # noqa: E40
 from govisor import lbauswahl, dokdubletten  # noqa: E402
 from govisor.docpipe import SQL_BRAUCHBAR  # noqa: E402
 
-SRC = ROOT / "data" / "docs" / "DE" / "doc_text.parquet"
+# ⚠ LAND STEUERT DIE EINGABEN, NICHT DIE AUSGABE. Bis zum 2026-09-03 stand hier „DE" fest —
+# eine Modulkonstante, waehrend Zeile 4 des Docstrings „data/docs/<country>/doc_text.parquet"
+# versprach. Der Docstring beschrieb, was jemand vorhatte.
+# Die AUSGABE bleibt EINE Datei: `doc-analysis.json` ist nach `notice_id` verschluesselt, und
+# TED-Nummern sind laenderuebergreifend eindeutig. DE- und LU-Ergebnisse stehen also
+# nebeneinander darin, statt sich zu verdraengen — die Sperre weiter unten sorgt dafuer, dass
+# immer nur EIN Lauf schreibt.
+# OHNE `LAND` laufen ALLE Laender, die Text haben — mit `LAND=LU` nur eines (fuer gezielte
+# Messungen, etwa der franzoesischen Doktyp-Muster, die noch an keinem Dokument geprueft sind).
+#
+# ⚠ WARUM ALLE STATT EINES MIT VORGABE DE: ein Laenderparameter muss GESETZT werden, und
+# genau das wird vergessen. Am 2026-09-03 lief der LU-Abrufer im Tageslauf, der LU-Indexer
+# nicht — Unterlagen wurden gesammelt, die niemand las, und nichts wurde rot. Was daliegt,
+# wird gelesen. Die Reihenfolge entscheidet ohnehin die FRIST, nicht das Land: offene Leads
+# zuerst, darin die mit der spaetesten Frist. Ein luxemburgisches Verfahren, auf das man noch
+# bieten kann, gehoert vor ein abgelaufenes deutsches.
+LAND = os.environ.get("LAND", "").upper()
+
+
+def _laender_pfade(unter: str, datei: str) -> list[str]:
+    """Alle `<unter>/<land>/<datei>`, oder nur das eine Land, wenn LAND gesetzt ist."""
+    basis = ROOT / unter
+    if LAND:
+        p = basis / LAND / datei
+        return [p.as_posix()] if p.exists() else []
+    return sorted(x.as_posix() for x in basis.glob(f"*/{datei}"))
+
+
+def _sql_liste(pfade: list[str]) -> str:
+    """Die Pfade als Argumente fuer `read_parquet(...)`.
+
+    ⚠ MIT `union_by_name=true`. Ohne das bricht der Lauf, sobald ein Land eine Spalte mehr
+    oder weniger fuehrt — und genau das passiert, weil Gold je Land unterschiedlich weit
+    gebaut ist. Projektidiom; steht an jeder anderen Vereinigungsstelle auch so.
+    Leer waere ein Syntaxfehler; der Aufrufer prueft vorher auf Leere.
+    """
+    if not pfade:
+        return "['']"
+    return "[" + ", ".join(f"'{p}'" for p in pfade) + "], union_by_name=true"
+
+
+DOC_TEXTE = _laender_pfade("data/docs", "doc_text.parquet")
+LEAD_EXPORTE = _laender_pfade("data/gold", "lead_export.parquet")
+SRC_SQL = _sql_liste(DOC_TEXTE)
+LEAD_EXPORT_SQL = _sql_liste(LEAD_EXPORTE)
+# Fuer Meldungen und den `if not …exists()`-Test weiter unten.
+SRC = Path(DOC_TEXTE[0]) if DOC_TEXTE else ROOT / "data" / "docs" / "DE" / "doc_text.parquet"
 OUT = ROOT / "web" / "data" / "doc-analysis.json"
 # Sicherungen vor einer Neuberechnung. Bewusst AUSSERHALB von `web/data`: das Verzeichnis
 # wird ausgeliefert, eine Sicherung nicht. Sie werden NICHT automatisch geloescht — sie
@@ -484,10 +530,18 @@ def structured_for_notice(notice_id: str, docs_root: Path = None) -> dict:
     aus data/docs/<country>/<notice_id>/ neu. Fehlende Verzeichnisse → leeres dict.
     """
     import glob
-    root = docs_root or (SRC.parent)
-    ndir = root / notice_id
     out = {}
-    if not ndir.exists():
+    # ⚠ DER VORGANG BESTIMMT DAS LAND, NICHT DIE ERSTE QUELLE. Hier stand `SRC.parent` — mit
+    # nur DE war das richtig, mit mehreren Laendern zeigt es auf das ERSTE Verzeichnis, und
+    # eine luxemburgische Datei wuerde unter data/docs/DE/ gesucht. Ergebnis waere kein
+    # Fehler, sondern ein leeres dict: die Parser-Schiene faellt still aus, und im Ergebnis
+    # fehlen genau die Aussagen, die aus den Original-Bytes kommen.
+    if docs_root is not None:
+        kandidaten = [docs_root / notice_id]
+    else:
+        kandidaten = [Path(t).parent / notice_id for t in DOC_TEXTE]
+    ndir = next((k for k in kandidaten if k.exists()), None)
+    if ndir is None:
         return out
     for z in glob.glob(str(ndir / "*.zip")):
         try:
@@ -512,7 +566,7 @@ def _bestand() -> tuple[dict, dict]:
     import duckdb
     con = duckdb.connect()
     rows = con.execute(
-        f"""SELECT notice_id, file, text FROM read_parquet('{SRC.as_posix()}')
+        f"""SELECT notice_id, file, text FROM read_parquet({SRC_SQL})
             WHERE {SQL_BRAUCHBAR} AND text IS NOT NULL AND length(text) > 120""").fetchall()
     con.close()
     per = defaultdict(list)
@@ -532,7 +586,7 @@ def offene_vorgaenge(limit: int) -> list[tuple[str, list, dict]]:
     per, fertig = _bestand()
     todo = [n for n in per if n not in fertig]
     offen = {r[0] for r in duckdb.connect().execute(
-        f"""SELECT lead_id FROM read_parquet('{ROOT}/data/gold/DE/lead_export.parquet')
+        f"""SELECT lead_id FROM read_parquet({LEAD_EXPORT_SQL})
             WHERE phase='open' AND deadline_date > current_date""").fetchall()}
     todo = [n for n in todo if n in offen][:limit]
     return [(n, per[n], structured_for_notice(n)) for n in todo]
@@ -679,10 +733,10 @@ def _lauf() -> int:
     # spaeter erschien. Sortiert wird deshalb ueber den Lead: offene Ausschreibungen zuerst,
     # darin die mit der spaetesten Frist — das sind die, auf die man noch bieten kann und
     # die zur Demo noch aktuell sind. Was kein Lead mehr ist, kommt zuletzt.
-    LE = (ROOT / "data/gold/DE/lead_export.parquet").as_posix()
+    LE_SQL = LEAD_EXPORT_SQL
     rows = con.execute(
         f"""WITH t AS (SELECT notice_id, file, text
-                       FROM read_parquet('{SRC.as_posix()}')
+                       FROM read_parquet({SRC_SQL})
                        -- `ocr` zaehlt wie `ok`: ein bildreines PDF, das die Texterkennung
                        -- durchlaufen hat UND den Fachvokabeltest bestand, ist inhaltlich
                        -- dasselbe wie ein durchsuchbares. Gemessen 2026-08-18: 3,23 Mio.
@@ -690,7 +744,7 @@ def _lauf() -> int:
                        -- bekommt also mehr Material je Vorgang, nicht mehr Vorgaenge.
                        WHERE {SQL_BRAUCHBAR} AND text IS NOT NULL AND length(text) > 120)
             SELECT t.notice_id, t.file, t.text
-            FROM t LEFT JOIN read_parquet('{LE}') l ON l.lead_id = t.notice_id
+            FROM t LEFT JOIN read_parquet({LE_SQL}) l ON l.lead_id = t.notice_id
             ORDER BY (l.phase = 'open') DESC NULLS LAST,
                      l.deadline_date DESC NULLS LAST,
                      t.notice_id DESC"""
@@ -742,7 +796,7 @@ def _lauf() -> int:
     if NUR_OFFENE:
         import duckdb as _d
         offen = {r[0] for r in _d.connect().execute(
-            f"""SELECT lead_id FROM read_parquet('{ROOT}/data/gold/DE/lead_export.parquet')
+            f"""SELECT lead_id FROM read_parquet({LEAD_EXPORT_SQL})
                 WHERE phase='open' AND deadline_date > current_date""").fetchall()}
 
     neu_ab = [x.strip() for x in os.environ.get("NEU_AB_MODELL", "").split(",") if x.strip()]

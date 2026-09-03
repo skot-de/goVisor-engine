@@ -21,7 +21,23 @@ ROOT = Path(__file__).resolve().parent.parent
 # PYTHONPATH; ein Import davor bricht stumm ab (s. test_skripte_finden_govisor_ohne_pythonpath).
 sys.path.insert(0, str(ROOT))
 from govisor.docpipe import SQL_BRAUCHBAR, ueberholte  # noqa: E402
-SRC = ROOT / "data" / "docs" / "DE" / "doc_text.parquet"
+# ⚠ ALLE LAENDER, NICHT NUR DE. Hier stand `docs/DE/doc_text.parquet` fest. Die Ausgabe ist
+# nach `notice_id` verschluesselt, und TED-Nummern sind laenderuebergreifend eindeutig — es
+# gibt also keinen Grund, je Land getrennt auszuliefern, wohl aber einen, keins zu vergessen.
+# Ein Laenderparameter waere die schlechtere Loesung gewesen: dann muss ihn jemand SETZEN,
+# und genau das ist bei LU am 2026-09-03 vergessen worden (der Abrufer lief, der Indexer
+# nicht). Was daliegt, wird gelesen.
+def _quellen() -> list[Path]:
+    return sorted((ROOT / "data" / "docs").glob("*/doc_text.parquet"))
+
+
+def _qlist() -> str:
+    """Die Quellen als DuckDB-Liste. Leer waere ein Syntaxfehler, deshalb ein Platzhalter,
+    der garantiert nichts liefert — der Aufrufer prueft `_quellen()` ohnehin vorher."""
+    q = _quellen()
+    return "[" + ", ".join(f"'{x.as_posix()}'" for x in q) + "]" if q else "['']"
+
+
 # Eine Datei je Vorgang — der einzige Weg, auf dem der Volltext ausgeliefert wird.
 JE_VORGANG = ROOT / "web" / "data" / "doc-text"
 # Verzeichnis OHNE Text: wer da ist, wie viele Zeichen, aus wie vielen Dateien. Rund 200 KB
@@ -72,7 +88,7 @@ def _abdruecke(con) -> dict[str, str]:
         f"""SELECT notice_id,
                    count(*) || ':' || coalesce(sum(n_chars), 0) || ':'
                    || md5(string_agg(file || '\x1f' || status, '\x1e' ORDER BY file, status))
-            FROM read_parquet('{SRC.as_posix()}')
+            FROM read_parquet({_qlist()})
             WHERE {SQL_BRAUCHBAR} AND text IS NOT NULL AND length(text) > 0
             GROUP BY 1""").fetchall()
     return {str(a): str(b) for a, b in zeilen}
@@ -107,9 +123,15 @@ def clean(t: str) -> str:
 
 
 def _quelle_stand() -> dict:
-    """Fingerabdruck der Quelle: Zeitstempel und Groesse. Beides billig, beides genug."""
-    st = SRC.stat()
-    return {"mtime": int(st.st_mtime), "groesse": st.st_size}
+    """Fingerabdruck der Quellen: Zeitstempel und Groesse. Beides billig, beides genug.
+
+    ⚠ Ueber ALLE Laender summiert — sonst wuerde ein neues LU-doc_text den Stand nicht
+    veraendern und der Export haelt sich faelschlich fuer aktuell.
+    """
+    q = _quellen()
+    return {"mtime": max((int(x.stat().st_mtime) for x in q), default=0),
+            "groesse": sum(x.stat().st_size for x in q),
+            "laender": [x.parent.name for x in q]}
 
 
 def main(argv=None) -> int:
@@ -121,8 +143,9 @@ def main(argv=None) -> int:
                          "zerrissene Vorgaenge meldet)")
     a = ap.parse_args(argv)
 
-    if not SRC.exists():
-        print(f"FEHLT: {SRC} — erst `index-docs` laufen lassen.")
+    if not _quellen():
+        print(f"FEHLT: kein doc_text.parquet unter {ROOT / 'data' / 'docs'} "
+              f"— erst `index-docs` laufen lassen.")
         return 1
 
     stand = _quelle_stand()
@@ -173,7 +196,7 @@ def main(argv=None) -> int:
     ordnung = "ORDER BY notice_id, file" if a.sortieren else ""
     con.execute(
         f"""SELECT notice_id, file, filetype, text
-            FROM read_parquet('{SRC.as_posix()}')
+            FROM read_parquet({_qlist()})
             SEMI JOIN _zu USING (notice_id)
             -- `ocr` wie `ok` — s. govisor/docpipe.py: der Zustand entsteht nur, wenn die
             -- Texterkennung Fachvokabular fand (>= 3 Begriffe der Vergabesprache).

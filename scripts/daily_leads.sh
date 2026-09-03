@@ -1062,7 +1062,18 @@ $PY -m govisor.dokdubletten --country DE \
   || echo "  ⚠ Dokument-Dubletten nicht neu gebildet — die Analyse zahlt Wiederholungen erneut."
 
 step "Unterlagen auswerten → Anforderungs-Signale"
-if $PY -m govisor.cli signals-docs; then
+# ⚠ `signals-docs` nimmt EIN Land (Vorgabe DE) und wurde ohne Angabe gerufen — LU waere
+# also nie signalisiert worden, auch mit indiziertem Text. Dieselbe Schleife wie beim
+# Indexer; `_IXLAENDER` ist bewusst dieselbe Liste, damit die beiden nicht auseinanderlaufen.
+_signale_alle() {
+  _ok=1
+  for _L in $_IXLAENDER; do
+    $PY -m govisor.cli signals-docs --country "$_L" \
+      || { _ok=0; echo "  ⚠ Signale $_L fehlgeschlagen."; }
+  done
+  [ "$_ok" = 1 ]
+}
+if _signale_alle; then
   $PY scripts/export_doc_signals.py || echo "  ⚠ doc-signals.json nicht geschrieben."
   # Aufwand gegen Zeitfenster (Kennzahl 1). Braucht `doc_analysis` in Gold UND das
   # Veroeffentlichungsdatum aus Silber — laeuft deshalb NACH der Gold-Kette, nicht davor.

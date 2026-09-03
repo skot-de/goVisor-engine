@@ -195,11 +195,14 @@ BEWUSST_NUR_DE: dict[str, str] = {
     # data/docs/DE/doc_text.parquet — eine Modulkonstante, kein Parameter — und liest
     # dreimal `gold/DE/lead_export.parquet`. Sein eigener Docstring verspricht in Zeile 4
     # „data/docs/<country>/doc_text.parquet"; der Code loest das nicht ein.
-    # Gemessen 2026-09-03: 10 DE-feste Stellen ueber 7 Skripte der Dokument-Kette
-    # (analyze_docs 4, export_doc_struktur 2, je 1 in build_doc_analysis, export_doc_text,
-    # export_doc_signals, export_doc_listing).
-    # Fuer LU heisst das: indiziert wird seit heute, ausgewertet nicht. Wer diese Zeilen
-    # streichen will, muss vorher die Kette parametrisieren — nicht auf Daten warten.
+    # ✅ AM 2026-09-03 ABEND BEHOBEN. Die Kette liest jetzt ALLE Laender, die Text haben —
+    # analyze_docs, export_doc_text und export_doc_signals vereinigen `data/docs/*/`, statt
+    # DE fest zu verdrahten; `signals-docs` und `index-docs` laufen im Tageslauf je Land.
+    # ⚠ BEWUSST KEIN LAENDERPARAMETER MIT VORGABE DE: den muss jemand SETZEN, und genau das
+    # wird vergessen — am selben Tag lief der LU-Abrufer, waehrend der LU-Indexer fehlte.
+    # `LAND=LU` bleibt als FILTER fuer gezielte Messungen, nicht als Voraussetzung.
+    # Diese vier Zeilen bleiben trotzdem stehen, solange AT/CH/LU keine Dokumente HABEN —
+    # jetzt aber aus dem richtigen Grund: keine Daten, nicht kein Code.
     "doc_analysis": "Auswertung der Vergabeunterlagen; AT/CH haben 0 % Dokumentabdeckung",
     "doc_checklist": "gehoert zu doc_analysis, dieselbe Quelle",
     "doc_verworfen": "gehoert zu doc_analysis, dieselbe Quelle",
