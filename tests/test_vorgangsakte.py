@@ -771,3 +771,16 @@ def test_zeitraum_deckt_ab_was_die_akte_zeigt():
         "der Zeitraum rechnet wieder ohne die Zweitmeldungen"
     assert "arten = collections.Counter(t[1] for t in teile)" in kern, \
         "die Zaehlung darf die Zweitmeldungen NICHT mitzaehlen"
+
+
+def test_verify_kennt_die_beiden_wichtigsten_beziehungen():
+    """⚠ `verify.py` prüfte drei Vorgangs-Beziehungen und liess die WICHTIGSTE aus:
+    `vorgang_notice.vorgang_id`. Zeigt sie ins Leere, existiert die Akte einer
+    Bekanntmachung nicht und die Ansicht lässt sie lautlos weg — und genau diese Nummern
+    schreibt `build_vorgaenge.py` seit dem 2026-09-02 in drei Stufen um.
+
+    Dazu die neue Spalte `vorgaenger`: eine Waise dort heisst „folgt auf X", und X gibt es
+    nicht."""
+    v = (WURZEL / "govisor" / "verify.py").read_text(encoding="utf-8")
+    assert '"vorgang_notice.parquet", "vorgang_id"' in v
+    assert '"vorgang_kette.parquet", "vorgaenger"' in v

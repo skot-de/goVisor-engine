@@ -139,6 +139,20 @@ def gold_integrity(cfg: Config, country: str = "DE") -> list[tuple[str, int]]:
          "vorgaenge.parquet", "vorgang_id"),
         ("vorgang_kette.kette → vorgaenge", "vorgang_kette.parquet", "kette_id",
          "vorgaenge.parquet", "vorgang_id"),
+        # ⚠ NACHTRAG 2026-09-02: die drei Beziehungen darueber liessen die WICHTIGSTE aus.
+        # `vorgang_notice.vorgang_id` ist die Zuordnung selbst — zeigt sie ins Leere, gibt
+        # es eine Bekanntmachung, deren Akte nicht existiert, und die Vorgangsansicht laesst
+        # sie lautlos weg. Gerade weil `build_vorgaenge.py` diese Nummern seit dem 2026-09-02
+        # in drei Stufen UMSCHREIBT (Andocken, Vorgangsdubletten), ist das der Ort, an dem ein
+        # Fehler dort zuerst sichtbar wuerde.
+        ("vorgang_notice.vorgang → vorgaenge", "vorgang_notice.parquet", "vorgang_id",
+         "vorgaenge.parquet", "vorgang_id"),
+        # ⚠ Der Vorgaenger eines Kettenglieds. Eine Waise heisst: „folgt auf X", und X gibt
+        # es nicht — die Anzeige behauptet dann eine Vorgeschichte, die niemand nachschlagen
+        # kann. Gemessen am 2026-09-02 gab es 34 solcher Kanten (Zyklusschutz), sie fallen
+        # jetzt im Bauer weg; diese Pruefung haelt fest, dass es so bleibt.
+        ("vorgang_kette.vorgaenger → vorgaenge", "vorgang_kette.parquet", "vorgaenger",
+         "vorgaenge.parquet", "vorgang_id"),
         ("doc_checklist.notice → quality", "doc_checklist.parquet", "notice_id",
          "quality.parquet", "notice_id"),
         ("doc_verworfen.notice → quality", "doc_verworfen.parquet", "notice_id",
