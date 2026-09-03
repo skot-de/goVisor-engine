@@ -3518,7 +3518,13 @@ def _lead_context_sql(cfg: Config, country: str) -> str:
 #     AT  4  NUTS-2 = Bundesland          (AT13 = Wien; AT1 waere „Ostoesterreich")
 #     CH  5  NUTS-3 = Kanton              (CH021 = Bern; CH0 waere die ganze Schweiz)
 # Unbekannte Laender bekommen 3 — dieselbe Annahme wie bisher, aber jetzt sichtbar.
-_REGION_STELLEN = {"DE": 3, "AT": 4, "CH": 5}
+# ⚠ LU IST EINE EINZIGE REGION. Der NUTS-Katalog fuehrt fuer Luxemburg genau VIER Codes —
+# LU, LU0, LU00, LU000 — und alle vier heissen „Luxembourg" (geprueft an
+# data/reference/nuts/NUTS_AT_2024.csv). Es gibt dort also keine Regionsebene, auf der man
+# filtern koennte; drei Stellen ergeben einen einzigen Eimer „LU0", und das ist die richtige
+# Antwort, nicht ein Defekt. Wer hier 5 einsetzt, um „genauer" zu sein, bekommt dasselbe
+# Ergebnis mit laengerem Schluessel.
+_REGION_STELLEN = {"DE": 3, "AT": 4, "CH": 5, "LU": 3}
 
 
 def build_lead_export(cfg: Config, country: str = "DE"):

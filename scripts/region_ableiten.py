@@ -83,8 +83,10 @@ ROOT = Path(__file__).resolve().parent.parent
 # Die Namensliste je Land kommt aus `dim_nuts` des Landes und nicht aus einer getippten
 # Konstante: die 9 oesterreichischen Bundeslaender und 26 Schweizer Kantone stehen dort
 # bereits, in der Schreibweise, die auch die Anzeige verwendet („Bern / Berne").
-LAENDER = ("DE", "AT", "CH")
-REGION_STELLEN = {"DE": 3, "AT": 4, "CH": 5}
+LAENDER = ("DE", "AT", "CH", "LU")
+# ⚠ LU: eine einzige Region (LU/LU0/LU00/LU000, alle „Luxembourg"). Muss zu
+# `gold._REGION_STELLEN` passen — ein Test haelt beides zusammen.
+REGION_STELLEN = {"DE": 3, "AT": 4, "CH": 5, "LU": 3}
 
 # DE bleibt auf der getippten Liste: geonames fuehrt die deutschen Laender auch auf
 # Englisch, und die Zuordnung Name→NUTS ist hier historisch geprueft (s. u.).

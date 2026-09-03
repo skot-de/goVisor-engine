@@ -83,7 +83,13 @@ DOC_CONNECTORS = {
 # in einer Tabelle nebeneinanderstellt, muss die Spalte mit ausgeben — sonst sieht eine
 # Vermutung aus wie ein Befund. Deshalb darf er nur bei `status="sondiert"` stehen; eine
 # Regel in `scripts/pruefe_sondierung.py` haelt das fest.
-ERTRAEGE = ("dateien", "liste", "gesperrt", "ungeprueft")
+# ⚠ ZWEI VOKABULARE IN EINEM FELD, und das ist Absicht.
+#   dateien/liste/gesperrt  = was ein GEBAUTER Abrufer tatsaechlich liefert
+#   offen/teilweise/ungeprueft = was eine SONDIERUNG festgestellt hat, ohne Abrufer
+# Die zweite Haelfte kam mit der Portal-Sondierung dazu (26 Laender) und fehlte hier —
+# 21 Eintraege trugen sie schon, waehrend die Liste sie verbot. Aufgefallen erst beim
+# Lauf der VOLLEN Suite; enge Testauswahlen hatten es 20 Commits lang verdeckt.
+ERTRAEGE = ("dateien", "liste", "gesperrt", "ungeprueft", "offen", "teilweise")
 
 # --- Status einer Quelle ---------------------------------------------------------------------
 #   live      = ingestet, im Produkt sichtbar
@@ -803,36 +809,6 @@ DOC_REGISTRY: list[Source] = [
                    "(\\\\Fserver14\\FShare2\\SICAPPROD\\…) — gehoert NICHT in Bronze.",
            url="https://e-licitatie.ro"),
     # ── LU, sondiert am 2026-09-03 · Kapitel: docs/sondierung/lu.md ───────────────────
-    Source("sond-lu-pmp", "Portail des marchés publics (LU) — Sondierungsbefund", "", "LU",
-           "beides", "sondiert", portals=1, ebene="bekanntmachung", ertrag="teilweise",
-           coverage="87,0 % des luxemburgischen Unterlagen-Felds (1.618 von 1.859); EIN einziges "
-                    "orgAcronyme (t5y) fuer das ganze Land",
-           overlap="🟡 OFFEN, ABER MIT ZEITFENSTER. robots.txt: 'User-agent: * / Disallow:' — ein "
-                   "LEERES Disallow, also ausdruecklich alles erlaubt (2. Erlaubnis nach BG). "
-                   "Keine Anmeldung, kein CAPTCHA. Software ist ATEXO/MPE wie Frankreichs PLACE — "
-                   "dort scheiterte es an CAPTCHA+Login, hier nicht: gleiche Software, andere "
-                   "Konfiguration. "
-                   "⏳ ⚠ DER ENTSCHEIDENDE FUND: DIE UNTERLAGEN VERSCHWINDEN NACH FRISTENDE. Alle "
-                   "30 Vergaben aus TED-Paketen der letzten 3 Monate meldeten 'Aucune piece n'a "
-                   "ete jointe'; drei LAUFENDE Vergaben aus der Portalsuche trugen 'Dossier de "
-                   "soumission' mit 4,41 / 1,41 / 26,15 MB. Fuer LU gibt es KEINE nachtraegliche "
-                   "Ernte — ein Abrufer muss dem laufenden Bestand folgen, nicht dem TED-Archiv. "
-                   "Erster Zeitfenster-Fall der Sondierung; gehoert als eigene Frage in jede "
-                   "weitere Pruefung. "
-                   "✅ ABRUFWEG BELEGT (2026-09-03, von Sven freigegeben): ZWEI anonyme "
-                   "Formularschritte (RadioGroup=choixAnonyme → PRADO_POSTBACK_TARGET=completeDownload) "
-                   "liefern 4.626.716 Bytes mit 6 Dokumenten, ohne Personendaten. ⚠ PRADO_PAGESTATE "
-                   "ist 11.840 Zeichen und muss mitgefuehrt werden — Sitzung noetig, kein Adressbauplan. "
-                   "⚠ ZIP-Namen mit verstuemmelten Umlauten (dritter Fall nach CY und HU). "
-                   "Der Weg beginnt bei /index.php?page=Entreprise."
-                   "EntrepriseDemandeTelechargementDce&id=<n> ist ohne Anmeldung erreichbar und "
-                   "bietet ausdruecklich 'Je souhaite telecharger ANONYMEMENT le Dossier' "
-                   "(Feld choixAnonyme), ohne Personendaten. Das ist EIN POST — nicht abgesendet, "
-                   "weil ein Formular abzusenden eine Handlung ist und Svens Zustimmung braucht. "
-                   "🇪🇺 BESONDERHEIT: 8 % der 'LU'-Ausschreibungen stammen von EU-Institutionen mit "
-                   "Sitz in Luxemburg (ec.europa.eu 6,9 %, eib.org 1,6 %, curia.europa.eu 1,5 %) — "
-                   "wer LU-Zahlen mit anderen Laendern vergleicht, vergleicht nicht dasselbe.",
-           url="https://pmp.b2g.etat.lu"),
     # ── DK, sondiert am 2026-09-03 · Kapitel: docs/sondierung/dk.md ───────────────────
     Source("sond-dk-ethics", "Ethics (DK)", "", "DK", "beides",
            "sondiert", portals=1, ebene="unterlagen", ertrag="offen",
@@ -932,17 +908,6 @@ DOC_REGISTRY: list[Source] = [
                    "Bekanntmachungen) — nicht als Fehlschlag wiederholen. "
                    "⚠ ZIP-Eintragsnamen kommen in alter Kodierung an (Egys+?g+?r-gy+?jtem+?ny).",
            url="https://ekr.gov.hu"),
-    Source("sond-hu-ekr-kereso", "EKR Suche (HU, beide Ebenen)", "", "HU", "ausschreibung",
-           "sondiert", portals=1, ebene="bekanntmachung", ertrag="offen",
-           coverage="4.417 laufende Vergaben, 45 Seiten; 60 % davon erreichen TED nie",
-           overlap="✅ /eljarastar/api/public/kereso?jovobeli=true&aktualis=true&offset=&limit= — "
-                   "anonym, geblaettert. Nach Verfahrensordnung (Stichprobe 100): Unios 40 % "
-                   "(oberschwellig), EPK 37 %, Nemzeti 23 % → 60 % NATIONAL. Zentrale Quelle fuer "
-                   "beide Ebenen wie PL und SI, kein zweites Portal. "
-                   "Dazu /public/szotar/{CPV_KODOK,NUTS_KODOK,ELJARAS_TIPUS,ELJARAS_SZAKASZ} — "
-                   "die Referenzvokabulare oeffentlich mitgeliefert. "
-                   "⚠ Reichweite des Archivs nicht ausgelotet (Filter steht auf laufend+kuenftig).",
-           url="https://ekr.gov.hu/eljarastar/eljarasok"),
     # ── SI, sondiert am 2026-09-03 · Kapitel: docs/sondierung/si.md ───────────────────
     Source("sond-si-enarocanje", "Portal javnih naročil (SI)", "", "SI", "beides",
            "sondiert", portals=1, ebene="unterlagen", ertrag="offen",
@@ -960,18 +925,6 @@ DOC_REGISTRY: list[Source] = [
                    "Veroeffentlichten und wurde nicht getan. "
                    "⚠ UMFANG: jede Datei ist ein eigener TED-Link → 6.466 x 3,9 MB ≈ 25 GB/Jahr.",
            url="https://www.enarocanje.si"),
-    Source("sond-si-ejn", "e-JN Liste des Innenministeriums (SI)", "", "SI", "ausschreibung",
-           "sondiert", portals=1, ebene="bekanntmachung", ertrag="offen",
-           coverage="amtliche Liste laufender Vergaben; 70 % der Eintraege sind unterschwellig",
-           overlap="✅ VOM MINISTERIUM SELBST HERAUSGEGEBEN (podatki.gov.si nennt sie als offene "
-                   "Daten, Stelle: Ministrstvo za notranje zadeve in javno upravo). "
-                   "Servergerendert, keine robots-Sperre (404), KEIN CAPTCHA, HTTP 200. Felder: "
-                   "Kaeufer, Titel, Aktenzeichen, Verfahrensart, Zeitstempel, JN-Nummer. "
-                   "⚠ 31 von 50 sind 'Narocilo male vrednosti' (Kleinauftrag) + 4 'Evidencno "
-                   "narocilo' → 70 % erreichen TED NIE. Zentrale unterschwellige Quelle wie in PL, "
-                   "nicht zersplittert wie DE. "
-                   "⚠ Blaettern (PrimeFaces) und Reichweite der Liste UNGEPRUEFT.",
-           url="https://ejn.gov.si"),
     # ── HR, sondiert am 2026-09-03 · Kapitel: docs/sondierung/hr.md ───────────────────
     Source("sond-hr-eojn", "EOJN (HR)", "", "HR", "beides",
            "sondiert", portals=1, ebene="unterlagen", ertrag="gesperrt",
@@ -1076,24 +1029,6 @@ DOC_REGISTRY: list[Source] = [
                    "robots.txt. Das aendert NICHTS: 'die haben das nicht so gemeint' ist dieselbe "
                    "Umgehungslogik wie sich ClaudeBot zu nennen (s. sond-sk-uvo).",
            url="https://nepps.eprocurement.gov.gr"),
-    Source("sond-gr-diavgeia", "Διαύγεια (GR, Transparenzportal)", "", "GR", "ausschreibung",
-           "sondiert", portals=1, ebene="bekanntmachung", ertrag="teilweise",
-           coverage="/opendata/search filterbar: type=Δ.2.1 → 17.602 Vorgaenge",
-           overlap="🟡 METADATEN OFFEN, DATEIEN GESPERRT. robots (120 B, vollstaendig gelesen) "
-                   "sperrt /doc/*, /decision/view, /luminapi/api/decisions/*, /f/all/ada/*. "
-                   "⚠ Die ERLAUBTE Schnittstelle /opendata/decisions/<ADA> gibt als documentUrl "
-                   "genau den gesperrten /doc/-Pfad heraus — ein arglos gebauter Abrufer laeuft "
-                   "direkt hinein. Nicht abgerufen. "
-                   "⚠ FALLE: ein falscher Parametername wird STILL ignoriert. decisionType= statt "
-                   "type= gibt total 2.972.077 statt 17.602 zurueck, ohne Fehler und ohne Hinweis.",
-           url="https://diavgeia.gov.gr"),
-    Source("sond-gr-kimdis", "ΚΗΜΔΗΣ (GR, unterschwellig)", "", "GR", "ausschreibung",
-           "sondiert", portals=1, ebene="bekanntmachung", ertrag="gesperrt",
-           coverage="zentrales Register oeffentlicher Auftraege; Umfang nicht messbar",
-           overlap="⛔ ANMELDUNG. cerpp.eprocurement.gov.gr liefert schon unter /robots.txt ein "
-                   "Login-Formular (POST an access.eprocurement.gov.gr/oam/…, Oracle Access "
-                   "Manager). Kein Konto, keine Zugangsdaten — stehende Regel.",
-           url="https://cerpp.eprocurement.gov.gr"),
     # ── PT, sondiert am 2026-09-03 · Kapitel: docs/sondierung/pt.md ───────────────────
     Source("sond-pt-acingov", "AcinGov (PT)", "", "PT", "beides",
            "sondiert", portals=1, ebene="unterlagen", ertrag="offen",
@@ -1131,15 +1066,6 @@ DOC_REGISTRY: list[Source] = [
                    "ein JSF-Formular mit jsessionid statt per GET. Gleiche Bauform wie eis.gov.lv "
                    "(Modal per POST) — wer eines loest, loest vermutlich beide.",
            url="https://www.anogov.com"),
-    Source("sond-pt-base", "Portal BASE (PT, unterschwellig)", "", "PT", "ausschreibung",
-           "sondiert", portals=1, ebene="bekanntmachung", ertrag="ungeprueft",
-           coverage="nationales Pflichtportal; Umfang nicht gemessen",
-           overlap="⚪ UNGEPRUEFT, NICHT GESPERRT. Keine robots-Sperre (404), aber jeder Aufruf "
-                   "jenseits der Startseite gab HTTP 999 mit WebKnight-Firewall-Meldung. Das ist "
-                   "ein Filter, kein Verbot — nicht weiter beklopft, bis geklaert ist, was ihn "
-                   "ausloest. ⚠ Vortals SearchTenders fuehrt bereits unterschwellige Verfahren; "
-                   "ob das BASE ersetzt oder nur ueberlappt, ist offen.",
-           url="https://www.base.gov.pt"),
     # ── SK, sondiert am 2026-09-03 · Kapitel: docs/sondierung/sk.md ───────────────────
     Source("sond-sk-uvo", "ÚVO (uvo.gov.sk)", "", "SK", "beides",
            "sondiert", portals=1, ebene="unterlagen", ertrag="gesperrt",
@@ -1307,6 +1233,96 @@ FONDS_REGISTRY: list[Source] = [
                    "HTTP 401. Ob die Weboberflaeche ohne Anmeldung etwas zeigt, ist offen.",
            url="https://bazakonkurencyjnosci.funduszeeuropejskie.gov.pl"),
 ]
+
+# ── Sondierungsbefunde auf der BEKANNTMACHUNGS-Ebene ────────────────────────────────────
+# ⚠ WARUM SIE HIER STEHEN UND NICHT IN DOC_REGISTRY. Sie beschreiben Portale, die
+# BEKANNTMACHUNGEN fuehren (unterschwellige Register, Transparenzportale), nicht
+# Unterlagen. In DOC_REGISTRY eingereiht haben sie die Invariante gebrochen, die
+# `tests/test_marktpuls.py` haelt: DOC_REGISTRY == unterlagen(). Sechs Eintraege lagen
+# dort falsch — der Test hat es gefunden, nicht ich.
+SOND_BEKANNTMACHUNG: list[Source] = [
+    Source("sond-lu-pmp", "Portail des marchés publics (LU) — Sondierungsbefund", "", "LU",
+           "beides", "sondiert", portals=1, ebene="bekanntmachung", ertrag="teilweise",
+           coverage="87,0 % des luxemburgischen Unterlagen-Felds (1.618 von 1.859); EIN einziges "
+                    "orgAcronyme (t5y) fuer das ganze Land",
+           overlap="🟡 OFFEN, ABER MIT ZEITFENSTER. robots.txt: 'User-agent: * / Disallow:' — ein "
+                   "LEERES Disallow, also ausdruecklich alles erlaubt (2. Erlaubnis nach BG). "
+                   "Keine Anmeldung, kein CAPTCHA. Software ist ATEXO/MPE wie Frankreichs PLACE — "
+                   "dort scheiterte es an CAPTCHA+Login, hier nicht: gleiche Software, andere "
+                   "Konfiguration. "
+                   "⏳ ⚠ DER ENTSCHEIDENDE FUND: DIE UNTERLAGEN VERSCHWINDEN NACH FRISTENDE. Alle "
+                   "30 Vergaben aus TED-Paketen der letzten 3 Monate meldeten 'Aucune piece n'a "
+                   "ete jointe'; drei LAUFENDE Vergaben aus der Portalsuche trugen 'Dossier de "
+                   "soumission' mit 4,41 / 1,41 / 26,15 MB. Fuer LU gibt es KEINE nachtraegliche "
+                   "Ernte — ein Abrufer muss dem laufenden Bestand folgen, nicht dem TED-Archiv. "
+                   "Erster Zeitfenster-Fall der Sondierung; gehoert als eigene Frage in jede "
+                   "weitere Pruefung. "
+                   "✅ ABRUFWEG BELEGT (2026-09-03, von Sven freigegeben): ZWEI anonyme "
+                   "Formularschritte (RadioGroup=choixAnonyme → PRADO_POSTBACK_TARGET=completeDownload) "
+                   "liefern 4.626.716 Bytes mit 6 Dokumenten, ohne Personendaten. ⚠ PRADO_PAGESTATE "
+                   "ist 11.840 Zeichen und muss mitgefuehrt werden — Sitzung noetig, kein Adressbauplan. "
+                   "⚠ ZIP-Namen mit verstuemmelten Umlauten (dritter Fall nach CY und HU). "
+                   "Der Weg beginnt bei /index.php?page=Entreprise."
+                   "EntrepriseDemandeTelechargementDce&id=<n> ist ohne Anmeldung erreichbar und "
+                   "bietet ausdruecklich 'Je souhaite telecharger ANONYMEMENT le Dossier' "
+                   "(Feld choixAnonyme), ohne Personendaten. Das ist EIN POST — nicht abgesendet, "
+                   "weil ein Formular abzusenden eine Handlung ist und Svens Zustimmung braucht. "
+                   "🇪🇺 BESONDERHEIT: 8 % der 'LU'-Ausschreibungen stammen von EU-Institutionen mit "
+                   "Sitz in Luxemburg (ec.europa.eu 6,9 %, eib.org 1,6 %, curia.europa.eu 1,5 %) — "
+                   "wer LU-Zahlen mit anderen Laendern vergleicht, vergleicht nicht dasselbe.",
+           url="https://pmp.b2g.etat.lu"),
+    Source("sond-hu-ekr-kereso", "EKR Suche (HU, beide Ebenen)", "", "HU", "ausschreibung",
+           "sondiert", portals=1, ebene="bekanntmachung", ertrag="offen",
+           coverage="4.417 laufende Vergaben, 45 Seiten; 60 % davon erreichen TED nie",
+           overlap="✅ /eljarastar/api/public/kereso?jovobeli=true&aktualis=true&offset=&limit= — "
+                   "anonym, geblaettert. Nach Verfahrensordnung (Stichprobe 100): Unios 40 % "
+                   "(oberschwellig), EPK 37 %, Nemzeti 23 % → 60 % NATIONAL. Zentrale Quelle fuer "
+                   "beide Ebenen wie PL und SI, kein zweites Portal. "
+                   "Dazu /public/szotar/{CPV_KODOK,NUTS_KODOK,ELJARAS_TIPUS,ELJARAS_SZAKASZ} — "
+                   "die Referenzvokabulare oeffentlich mitgeliefert. "
+                   "⚠ Reichweite des Archivs nicht ausgelotet (Filter steht auf laufend+kuenftig).",
+           url="https://ekr.gov.hu/eljarastar/eljarasok"),
+    Source("sond-si-ejn", "e-JN Liste des Innenministeriums (SI)", "", "SI", "ausschreibung",
+           "sondiert", portals=1, ebene="bekanntmachung", ertrag="offen",
+           coverage="amtliche Liste laufender Vergaben; 70 % der Eintraege sind unterschwellig",
+           overlap="✅ VOM MINISTERIUM SELBST HERAUSGEGEBEN (podatki.gov.si nennt sie als offene "
+                   "Daten, Stelle: Ministrstvo za notranje zadeve in javno upravo). "
+                   "Servergerendert, keine robots-Sperre (404), KEIN CAPTCHA, HTTP 200. Felder: "
+                   "Kaeufer, Titel, Aktenzeichen, Verfahrensart, Zeitstempel, JN-Nummer. "
+                   "⚠ 31 von 50 sind 'Narocilo male vrednosti' (Kleinauftrag) + 4 'Evidencno "
+                   "narocilo' → 70 % erreichen TED NIE. Zentrale unterschwellige Quelle wie in PL, "
+                   "nicht zersplittert wie DE. "
+                   "⚠ Blaettern (PrimeFaces) und Reichweite der Liste UNGEPRUEFT.",
+           url="https://ejn.gov.si"),
+    Source("sond-gr-diavgeia", "Διαύγεια (GR, Transparenzportal)", "", "GR", "ausschreibung",
+           "sondiert", portals=1, ebene="bekanntmachung", ertrag="teilweise",
+           coverage="/opendata/search filterbar: type=Δ.2.1 → 17.602 Vorgaenge",
+           overlap="🟡 METADATEN OFFEN, DATEIEN GESPERRT. robots (120 B, vollstaendig gelesen) "
+                   "sperrt /doc/*, /decision/view, /luminapi/api/decisions/*, /f/all/ada/*. "
+                   "⚠ Die ERLAUBTE Schnittstelle /opendata/decisions/<ADA> gibt als documentUrl "
+                   "genau den gesperrten /doc/-Pfad heraus — ein arglos gebauter Abrufer laeuft "
+                   "direkt hinein. Nicht abgerufen. "
+                   "⚠ FALLE: ein falscher Parametername wird STILL ignoriert. decisionType= statt "
+                   "type= gibt total 2.972.077 statt 17.602 zurueck, ohne Fehler und ohne Hinweis.",
+           url="https://diavgeia.gov.gr"),
+    Source("sond-gr-kimdis", "ΚΗΜΔΗΣ (GR, unterschwellig)", "", "GR", "ausschreibung",
+           "sondiert", portals=1, ebene="bekanntmachung", ertrag="gesperrt",
+           coverage="zentrales Register oeffentlicher Auftraege; Umfang nicht messbar",
+           overlap="⛔ ANMELDUNG. cerpp.eprocurement.gov.gr liefert schon unter /robots.txt ein "
+                   "Login-Formular (POST an access.eprocurement.gov.gr/oam/…, Oracle Access "
+                   "Manager). Kein Konto, keine Zugangsdaten — stehende Regel.",
+           url="https://cerpp.eprocurement.gov.gr"),
+    Source("sond-pt-base", "Portal BASE (PT, unterschwellig)", "", "PT", "ausschreibung",
+           "sondiert", portals=1, ebene="bekanntmachung", ertrag="ungeprueft",
+           coverage="nationales Pflichtportal; Umfang nicht gemessen",
+           overlap="⚪ UNGEPRUEFT, NICHT GESPERRT. Keine robots-Sperre (404), aber jeder Aufruf "
+                   "jenseits der Startseite gab HTTP 999 mit WebKnight-Firewall-Meldung. Das ist "
+                   "ein Filter, kein Verbot — nicht weiter beklopft, bis geklaert ist, was ihn "
+                   "ausloest. ⚠ Vortals SearchTenders fuehrt bereits unterschwellige Verfahren; "
+                   "ob das BASE ersetzt oder nur ueberlappt, ist offen.",
+           url="https://www.base.gov.pt"),
+]
+REGISTRY += SOND_BEKANNTMACHUNG
 
 REGISTRY += DOC_REGISTRY
 REGISTRY += FONDS_REGISTRY

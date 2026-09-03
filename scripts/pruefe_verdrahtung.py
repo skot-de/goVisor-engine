@@ -113,6 +113,11 @@ BEWUSST_OHNE_GOLD: dict[str, str] = {
     "EU": "Sammelablage fuer Bekanntmachungen ohne eindeutiges Land (282 Saetze, 15 Laender)",
     "PL": "angefangen und liegengeblieben: 326.485 Saetze, letzte Publikation 2026-06-29. "
           "KEINE Entscheidung, sondern eine Baustelle — s. docs/land-onboarding.md",
+    "LU": "seit 2026-09-03 im Ingest (ab 2024-01), Dokument-Abrufer live "
+          "(govisor.docfetch_lu). Gold fehlt noch, und zwar bewusst in dieser Reihenfolge: "
+          "LU loescht die Unterlagen nach Fristende, der Abruf hatte also Vorrang vor der "
+          "Auswertung. ⚠ Vor dem Gold-Lauf fehlt das Locale-Profil (locales.use('LU') wirft "
+          "KeyError) — ohne es laeuft die Entity-Aufloesung mit dem DE-Default.",
 }
 
 

@@ -74,7 +74,10 @@ def _bronze_path(pub: str, ym: str, country: str = "DE") -> Path:
     return BRONZE / country / ym / f"{pub}.xml"
 
 
-LAND3 = {"DE": "DEU", "AT": "AUT", "CH": "CHE"}   # TED nutzt ISO-alpha-3
+# ⚠ LU steht hier, der Live-Abruf laeuft aber erst mit einem Locale-Profil: Zeile 159
+# bricht sonst ab („FEHLER: keine Locale"). Das ist die strengere Fassung der Warnung aus
+# Kapitel 15 der Laender-Bibel — er laeuft nicht mit dem DE-Default, er laeuft gar nicht.
+LAND3 = {"DE": "DEU", "AT": "AUT", "CH": "CHE", "LU": "LUX"}   # TED nutzt ISO-alpha-3
 
 
 def list_notices(since: str, until: str, limit: int | None, country: str = "DE") -> list[str]:

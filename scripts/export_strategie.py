@@ -39,7 +39,9 @@ VORLAUF: list = []
 # Die Quellen sind bewusst MODULWEIT und werden je Land neu gesetzt: die Auswertungs-
 # funktionen bauen ihr SQL aus diesen Namen, und sie alle auf einen Parameter umzustellen
 # waere ein Umbau von 700 Zeilen fuer denselben Effekt.
-LAENDER = ["DE", "AT", "CH"]
+# ⚠ LU steht hier, obwohl es noch kein Gold hat: die Ausgabe ueberspringt Laender ohne
+# Tabellen von selbst, und ein fehlender Eintrag waere spaeter die stillere Luecke.
+LAENDER = ["DE", "AT", "CH", "LU"]
 
 
 def quellen_setzen(land: str) -> None:

@@ -118,8 +118,11 @@ def _behauptungen() -> list[tuple[str, str, bool, str]]:
         "ra", ROOT / "scripts" / "region_ableiten.py")
     ra = importlib.util.module_from_spec(spec2)
     spec2.loader.exec_module(ra)
-    passt = gold._REGION_STELLEN == ra.REGION_STELLEN == {"DE": 3, "AT": 4, "CH": 5}
-    aus.append(("07", "Regions-Ebene DE 3 / AT 4 / CH 5, in beiden Dateien gleich",
+    # ⚠ LU steht auf 3 und hat trotzdem nur EINE Region: der NUTS-Katalog fuehrt fuer
+    # Luxemburg genau vier Codes (LU, LU0, LU00, LU000), alle „Luxembourg". Drei Stellen
+    # ergeben einen einzigen Eimer — das ist die richtige Antwort, kein Defekt.
+    passt = gold._REGION_STELLEN == ra.REGION_STELLEN == {"DE": 3, "AT": 4, "CH": 5, "LU": 3}
+    aus.append(("07", "Regions-Ebene DE 3 / AT 4 / CH 5 / LU 3, in beiden Dateien gleich",
                 passt, f"{gold._REGION_STELLEN} vs {ra.REGION_STELLEN}"))
 
     # 26 Kantone auf 26 NUTS (Kapitel 07/14).
