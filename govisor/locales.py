@@ -377,7 +377,139 @@ AT = Locale(
 )
 
 
-LOCALES = {loc.code: loc for loc in (DE, FR, CH, AT)}
+# ---------------------------------------------------------------------------
+# LU — an 6.142 luxemburgischen Bekanntmachungen (2024-01 bis 2026-06) gemessen:
+# 762 Käufernamen, 2.647 Firmennamen. Nicht aus dem Gedächtnis gesetzt.
+#
+# ⚠ ZUERST: dieser Bestand war beim ersten Einlesen zu 22 % NICHT luxemburgisch.
+# Der TED-eSender („Publications Office of the European Union") sitzt in Luxemburg
+# und zählte als Käufer — s. schema._eforms_buyer_org_ids. Alle Zahlen hier stehen
+# NACH dem Fix; wer sie nachrechnet und höhere findet, misst den alten Fehler mit.
+#
+# Vier Eigenheiten, die gemessen aufgefallen sind und die Muster tragen:
+#
+#   1. FRANZÖSISCH IST DIE ARBEITSSPRACHE, nicht Deutsch. Gemessen: fr 4.734,
+#      en 1.114, de 266. Ein DE-Profil trifft hier fast nichts.
+#   2. S.À R.L. IN SIEBEN SCHREIBWEISEN: sarl (205), sàrl (152), s.à r.l. (145),
+#      s. à r. l. (27), s.a.r.l. (21), s.a r.l. (19), s.àr.l. (16). Das ist dieselbe
+#      Falle wie „Ges.m.b.H." in Österreich: ein Muster muss ALLE fassen, sonst
+#      zerfällt eine Firma in sieben. Deshalb `s\.?\s?a\.?\s?r\.?\s?l\.?` mit
+#      optionalen Punkten UND Leerzeichen an jeder Fuge.
+#   3. DERSELBE KÄUFER IN ZWEI SPRACHEN. „European Commission, DG ESTAT" und
+#      „Commission européenne, OIL" sind dasselbe Haus. Das hat DACH nie gehabt,
+#      und `subdivision` muss deshalb die Trennwörter beider Sprachen kennen.
+#      ⚠ Die Sprachdublette selbst löst das Profil NICHT — das bliebe Aufgabe der
+#      Entity-Resolution und ist hier bewusst offen.
+#   4. EU-EINRICHTUNGEN SIND EIN ACHTEL DES MARKTES. EIB (310), Parlament (118),
+#      Eurostat (69), Kommission (68), Amt für Veröffentlichungen (63), ESPON
+#      (115), EuroHPC (58) — zusammen rund 12 % aller LU-Bekanntmachungen. Sie
+#      sitzen wirklich in Luxemburg und gehören dazu; `public_name` führt sie
+#      deshalb ausdrücklich, sonst gälte der grösste Auftraggeber als Firma.
+#
+# ⚠ Akzente sind KEIN Problem: entities.strip_accents macht NFKD und wirft die
+# Kombinationszeichen weg, „l'État" und „l'Etat" fallen zusammen (geprüft). Das
+# gilt für Französisch — NICHT für Polnisch, wo `Ł` kein Kombinationszeichen ist
+# (s. Kapitel 14 der Länder-Bibel).
+#
+# ⚠ Ein bewusst getragener Fehlgriff: `\bag\b` frisst „AG Insurance" (belgischer
+# Versicherer, AG gehört zum Namen). Gemessen: 1 Fall in 3.409 Namen. Dieselbe
+# Risikoklasse, die das AT-Profil trägt.
+# ---------------------------------------------------------------------------
+LU = Locale(
+    "LU", name="Luxemburg (erste Fassung — an TED-LUX-Daten geprüft, nicht abschließend)",
+    # Die einheimischen Formen zuerst, dann die grenznahen (DE/BE/FR/NL) und die
+    # internationalen — Luxemburg vergibt stark an ausländische Bieter.
+    legal_forms=(r"societe a responsabilite limitee", r"societe anonyme",
+                 r"societe cooperative", r"societe civile immobiliere",
+                 r"association sans but lucratif",
+                 # ⚠ Die lange Form MUSS vor die kurze: sonst frisst das kürzere
+                 # Muster nur das „sarl" und lässt „societe" stehen.
+                 r"s\.?\s?a\.?\s?r\.?\s?l\.?", r"\bsarl\b", r"\bsecs\b", r"\bscsp\b",
+                 r"\bs\.?c\.?s\.?\b", r"\bs\.?c\.?a\.?\b", r"\bscop\b",
+                 r"\basbl\b", r"a\.?\s?s\.?\s?b\.?\s?l\.?",
+                 r"\bgie\b", r"\beeig\b", r"\bsepcav\b", r"\bsicav\b", r"\bsicar\b",
+                 r"s\.?\s?a\.?(?![a-z])", r"\bsa\b",
+                 r"\bgmbh\b", r"\bag\b", r"\bkg\b", r"\bohg\b", r"\bse\b",
+                 r"\bsprl\b", r"\bsrl\b", r"\bspa\b", r"\bsnc\b", r"\bsas\b",
+                 r"\bb\.?\s?v\.?\b", r"\bn\.?\s?v\.?\b", r"\bltd\b", r"\bplc\b",
+                 r"\bgbr\b", r"\bug\b"),
+    representation=r"\s*[,/;–-]?\s*(represente(e)? par|vertreten durch|represented by)\b.*$",
+    # „Ministère de l'Éducation nationale, de l'Enfance et de la Jeunesse" bleibt
+    # ganz — getrennt wird nur an echten Organisationseinheiten.
+    subdivision=(r"\s*[,/|;–-]\s*(direction generale|direction|division|departement|"
+                 r"service central|service|office|unite|cellule|"
+                 r"directorate-general|directorate|department|unit|"
+                 r"generaldirektion|abteilung|dienststelle|"
+                 # ⚠ Die Kürzel der EU-Dienststellen — dieselbe Regel wie „Magistrat der
+                 # Stadt Wien - Magistratsabteilung 34" im AT-Profil: die Generaldirektion
+                 # ist eine Abteilung, kein eigener Auftraggeber. Gemessen: fasst 10 Namen
+                 # zu 5 Häusern zusammen, bei 0 Fehlgriffen in 3.409 Namen.
+                 r"dg|oil|oib|inlo|scic)\b.*$"),
+    unit_numbers=_NEVER,
+    lead_articles=r"^(le|la|les|l|du|de la|des|der|die|das|the)\s+",
+    consortium=(r"\b(groupement|consortium|consorzio|bietergemeinschaft|"
+                r"arbeitsgemeinschaft|arge\b|joint venture|momentane)"),
+    association=r"\b(asbl|association|fondation|stiftung|verein|federation|syndicat\b)",
+    # Luxemburg vergibt auf drei Ebenen: Staat (ministere/administration/etat),
+    # Gemeinde (commune/ville/administration communale) und Zweckverband
+    # (syndicat intercommunal — 121 Nennungen, eine tragende Bauform).
+    # Dazu die EU-Einrichtungen, s. Punkt 4 oben.
+    public=(r"(administration communale|administration|ministere|etat du grand|"
+            r"grand-?duche|gouvernement|commune de|\bville de\b|syndicat|"
+            r"fonds du logement|fonds belval|\bfonds\b|centre hospitalier|"
+            r"chambre des|police grand|armee luxembourgeoise|"
+            r"european (commission|parliament|investment bank|court|union)|"
+            r"commission europeenne|parlement europeen|banque europeenne|"
+            r"publications office|eurostat|espon|eurohpc|"
+            r"cour de justice|court of justice)"),
+    trade_word=(r"(construction|batiment|genie civil|electric|informatique|logiciel|"
+                r"nettoyage|entretien|maintenance|transport|ingenierie|architecte|"
+                r"securite|conseil|formation|"
+                r"bau\b|elektro|reinigung|wartung|planung|"
+                r"software|cleaning|engineering|consulting|security)"),
+    person=rf"^(?:dr\.|prof\.|m\.|mme\.?|herr|frau|mr\.?|ms\.?)?\s*{_NAME_PART}(?:\s+{_NAME_PART}){{1,2}}$",
+    text_winner_marker=r"adjudicataire|attributaire|zuschlagsempfanger|contractor|titulaire",
+    text_skip=r"^(le|la|lot|section|denomination|nom et|siehe|nummer|v\.|—|-|adresse)",
+    text_not_awarded="non attribue|non adjuge|kein zuschlag|not awarded",
+    # ⚠ pt.lu und internet.lu sind die einheimischen Massenanbieter — wo in DE
+    # t-online steht. Ohne sie gälte jede Firma mit pt.lu-Adresse als eigene Gruppe.
+    freemail={"gmail", "googlemail", "pt", "internet", "vo", "education",
+              "gmx", "hotmail", "outlook", "yahoo", "live", "icloud",
+              "protonmail", "proton", "hotmail", "orange", "post"},
+    # ⚠ Luxemburg hat KEINE eigene Behörden-SLD wie admin.ch oder bund.de: der
+    # Staat nutzt <ressort>.public.lu, die Gemeinden <gemeinde>.lu. Deshalb trägt
+    # public_name hier die Last fast allein.
+    public_domain_slds={"public", "etat", "gouvernement", "europa", "eib", "cec"},
+    public_name=(r"administration|ministere|commune|\bville\b|syndicat|etat\b|"
+                 r"grand-?duche|gouvernement|fonds\b|"
+                 r"centre hospitalier|hopital|clinique|universite|university|"
+                 r"lycee|ecole|police|armee|chambre des|"
+                 r"european|europeen|europeenne|eurostat|espon|eurohpc|"
+                 r"commission|parliament|parlement|investment bank|"
+                 r"institute of|luxembourg institute"),
+    kind_framework_kw="accord.?cadre|contrat.?cadre|rahmenvertrag|rahmenvereinbarung|framework",
+    kind_recurring_kw=("entretien|maintenance|nettoyage|exploitation|licence|support|"
+                       "location|abonnement|gestion|surveillance|"
+                       "wartung|unterhalt|reinigung|betrieb|lizenz|miete"),
+    kind_oneoff_kw=("construction|renovation|demolition|amenagement|transformation|"
+                    "extension|assainissement|"
+                    "neubau|umbau|sanierung|erweiterung|rueckbau"),
+    register_path=None,   # TODO: RCS Luxembourg (Registre de Commerce et des Sociétés)
+    cpi={},               # TODO: STATEC-Preisindex; ohne ihn bleibt value_real_2020 nominal
+    # ⚠ EINE EINZIGE REGION, und das ist kein Fehler. Der NUTS-Katalog führt für
+    # Luxemburg genau vier Codes — LU, LU0, LU00, LU000 — und alle heissen
+    # „Luxembourg". Eine Umkreissuche über Regionen ist hier sinnlos; wer Nähe
+    # braucht, nimmt die PLZ-Ebene (s. gold._REGION_STELLEN, LU: 3).
+    nuts_region={"LU0": "Luxembourg"},
+    succ_stopwords=("le la les l du de des et pour avec sur dans lot lots marche marches "
+                    "travaux fourniture fournitures prestation prestations service services "
+                    "commune ville administration etat public appel offre offres "
+                    "der die das und fuer los lose "
+                    "the and for of tender lot supply services contract").split(),
+)
+
+
+LOCALES = {loc.code: loc for loc in (DE, FR, CH, AT, LU)}
 _active = DE
 
 
