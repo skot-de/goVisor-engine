@@ -129,6 +129,27 @@ def _schreibe(con, pfad: pathlib.Path, zeilen: list, spalten: str) -> None:
     con.execute(f"COPY _t TO '{pfad.as_posix()}' (FORMAT PARQUET)")
 
 
+def _leitbekanntmachung(teile: list) -> tuple:
+    """Aus welcher Bekanntmachung Titel und CPV der Akte kommen.
+
+    ⚠ Titel und CPV kommen aus der AUSSCHREIBUNG, nicht aus dem Zuschlag: der Zuschlag
+    traegt oft nur „Vergabe von …" oder den Losnamen.
+
+    ⚠ UND AUS DER FRUEHESTEN, NICHT AUS EINER BELIEBIGEN. Bis zur fuenften Stufe war das
+    egal — eine Akte hatte meist genau eine Ausschreibung. Seit Akten zusammengefuehrt
+    werden, koennen mehrere darin liegen, und `teile[0]` haengt dann an der Reihenfolge,
+    in der DuckDB die Bekanntmachungen liest. Die hat kein `order by` und darf sich
+    aendern; der Titel einer Akte wuerde zwischen zwei Laeufen springen, ohne dass sich
+    an den Daten etwas geaendert hat. Zwei Laeufe am 2026-09-02 waren zwar gleich — aber
+    „hat bisher gehalten" ist keine Eigenschaft, sondern ein Zufall mit gutem Ruf.
+
+    Sortiert wird nach Datum, dann nach Kennung: das Datum ist die Aussage, die Kennung
+    nur der Gleichstandsbrecher.
+    """
+    aus = [t for t in teile if t[1] == "cn"] or teile
+    return min(aus, key=lambda t: (t[2] is None, t[2], t[6]))
+
+
 def _anwenden(karte: dict[str, str], zeilen_n: list, gruppen: dict,
               zaehle_teile: bool = False) -> tuple[list, dict, dict]:
     """Eine Zuordnung „alte Nummer → Zielnummer" auf Bekanntmachungen und Gruppen anwenden.
@@ -298,8 +319,7 @@ def _andocken(con, land: str, gruppen: dict, zeilen_n: list) -> dict[str, str]:
     fakten: dict[str, tuple] = {}
     for vid, teile in gruppen.items():
         daten = sorted(t[2] for t in teile if t[2])
-        aus = [t for t in teile if t[1] == "cn"] or teile
-        titel = " ".join(str(aus[0][3] or "").lower().split())
+        titel = " ".join(str(_leitbekanntmachung(teile)[3] or "").lower().split())
         if not titel or not daten:
             continue
         beste = min((t[0] for t in teile), key=lambda q: RANG[q])
@@ -424,10 +444,14 @@ def baue(con, land: str) -> tuple[int, int]:
         n_dubl = sum(1 for t in alle_teile if t[6] in dubl)
         teile = [t for t in alle_teile if t[6] not in dubl] or alle_teile
         arten = collections.Counter(t[1] for t in teile)
-        daten = sorted(t[2] for t in teile if t[2])
-        # ⚠ Titel und CPV kommen aus der AUSSCHREIBUNG, nicht aus dem Zuschlag: der Zuschlag
-        # traegt oft nur „Vergabe von …" oder den Losnamen.
-        aus = [t for t in teile if t[1] == "cn"] or teile
+        # ⚠ DER ZEITRAUM ZAEHLT ALLE, DIE ZAHLEN NICHT. Zwei verschiedene Fragen: „wie viele
+        # Ereignisse hatte dieser Vorgang" (da ist eine Zweitmeldung keines) und „welchen
+        # Zeitraum deckt diese Akte ab" (da gehoert sie dazu, denn sie steht im Verlauf).
+        # Aus `teile` gerechnet log der Kopf: 3.032 Akten nannten einen Zeitraum, in dem
+        # eine sichtbare Verlaufszeile gar nicht lag — im WAMOS-Beispiel „Mai 2024 bis
+        # April 2025" ueber einer Zeile vom 31.03.2024.
+        daten = sorted(t[2] for t in alle_teile if t[2])
+        aus = [_leitbekanntmachung(teile)]
         # ⚠ DIE STAERKSTE REGEL DER GRUPPE GEWINNT, nicht die erste Bekanntmachung. Bei einer
         # Rueckverweis-Kette traegt nur das KIND einen Verweis; die Wurzel faellt fuer sich auf
         # `allein` und gruppiert trotzdem richtig. Wer das Erstbeste nimmt, meldet je nach
@@ -489,7 +513,19 @@ def baue_ketten(con, land: str) -> tuple[int, int]:
         if len(mitglieder) < 2:
             continue
         geordnet = sorted(mitglieder, key=lambda v: (kopf.get(v, (0, ""))[0], v))
-        konfs = [bester[v][2] for v in geordnet if v in bester]
+        # ⚠ EIN VORGAENGER AUSSERHALB DER EIGENEN KETTE IST KEIN VORGAENGER. Der
+        # Zyklusschutz in `wurzel()` bricht den Lauf ab, wenn die geschaetzte Nachfolge im
+        # Kreis zeigt; zwei Knoten desselben Kreises koennen dadurch in verschiedenen Ketten
+        # landen, und die Kante zeigt dann ins Leere. Gemessen: 34 von 186.304 Gliedern.
+        #
+        # ⚠ UND DIE KANTE MUSS VOR DER KONFIDENZ FALLEN, nicht danach. Der erste Anlauf
+        # entwertete sie erst beim Schreiben der Zeile — `min_konfidenz` rechnete sie
+        # trotzdem mit, und sechs Ketten meldeten ein Minimum, das zu keinem ihrer Glieder
+        # gehoerte. Eine Zahl, die aus einer verworfenen Kante stammt, ist schlimmer als
+        # keine: sie sieht gerechnet aus.
+        drin = set(geordnet)
+        kanten = {v: (e if (e := bester.get(v)) and e[1] in drin else None) for v in geordnet}
+        konfs = [e[2] for e in kanten.values() if e]
         mini = min(konfs) if konfs else None
         # ⚠ DER TAKT TRENNT NEUAUSSCHREIBUNG VON DAUERANGEBOT, nicht der Titel. Die erste
         # Fassung markierte Ketten mit nur EINEM Titel — und traf daneben: die laengste Kette
@@ -512,8 +548,10 @@ def baue_ketten(con, land: str) -> tuple[int, int]:
         # Vorgaenger) mitten in der Kette, weil die erschlossene Nachfolge rueckwaerts in
         # der Zeit zeigt. Ohne die Spalte `vorgaenger` kann eine Anzeige die Konfidenz
         # keinem sichtbaren Uebergang zuordnen und behauptet stillschweigend den falschen.
+        # Lieber keine Angabe als eine, die auf nichts zeigt — die Anzeige sagt dann
+        # „Anfang der Kette", was hier auch stimmt: in DIESER Kette ist es der Anfang.
         for i, v in enumerate(geordnet, 1):
-            e = bester.get(v)
+            e = kanten[v]
             zeilen.append((land, kette_id, v, i, len(geordnet), kopf.get(v, (0, ""))[0],
                            e[2] if e else None, mini, e[3] if e else "",
                            len(titel), round(takt, 2), takt > DAUERANGEBOT_TAKT,

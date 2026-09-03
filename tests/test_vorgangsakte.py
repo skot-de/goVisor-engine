@@ -716,3 +716,42 @@ def test_reine_zweitmeldungszeile_behauptet_kein_ereignis():
     assert v2[0]["nur_zweitmeldung"] is False
     tsx = (WURZEL / "web" / "components" / "explorer" / "Vorgangsakte.tsx").read_text(encoding="utf-8")
     assert "e.nur_zweitmeldung" in tsx
+
+
+# ── Invarianten, die nach den Stufen halten muessen ─────────────────────────────────
+
+def test_leitbekanntmachung_ist_nicht_von_der_reihenfolge_abhaengig():
+    """⚠ Bis zur fünften Stufe hatte eine Akte meist genau eine Ausschreibung, und `teile[0]`
+    war harmlos. Seit Akten zusammengeführt werden, liegen mehrere darin — und die Abfrage
+    hat kein `order by`. Gemessen: 206 österreichische Akten haben dadurch einen anderen
+    Titel bekommen, hingen also an der Lesereihenfolge von DuckDB."""
+    kern = _ohne_kommentare_py(BAU).split("def _leitbekanntmachung(")[1].split("\ndef ")[0]
+    assert "min(aus, key=" in kern
+    assert "aus[0]" not in kern, "greift wieder auf das erste Element zu"
+
+
+def test_vorgaenger_zeigt_nie_aus_der_kette_heraus():
+    """⚠ Der Zyklusschutz in `wurzel()` bricht ab, wenn die geschätzte Nachfolge im Kreis
+    zeigt; zwei Knoten desselben Kreises landen dann in verschiedenen Ketten und die Kante
+    zeigt ins Leere. Gemessen waren es 34 von 186.304 Gliedern."""
+    kern = _ohne_kommentare_py(BAU).split("def baue_ketten(")[1]
+    assert "drin = set(geordnet)" in kern
+    assert "e[1] in drin" in kern, "Kante wird nicht mehr gegen die eigene Kette geprueft"
+    # ⚠ UND VOR DER KONFIDENZ: der erste Anlauf entwertete die Kante erst beim Schreiben,
+    # `min_konfidenz` rechnete sie mit, und sechs Ketten meldeten ein Minimum, das zu keinem
+    # ihrer Glieder gehoerte.
+    assert kern.index("kanten = ") < kern.index("konfs = "), \
+        "Konfidenz wird vor dem Verwerfen der Kante gerechnet"
+
+
+def test_zeitraum_deckt_ab_was_die_akte_zeigt():
+    """⚠ Zwei verschiedene Fragen: „wie viele Ereignisse hatte dieser Vorgang" (da ist eine
+    Zweitmeldung keines) und „welchen Zeitraum deckt diese Akte ab" (da gehört sie dazu,
+    denn sie steht im Verlauf). Aus der bereinigten Menge gerechnet log der Kopf: 3.032
+    Akten nannten einen Zeitraum, in dem eine sichtbare Verlaufszeile gar nicht lag."""
+    # ⚠ `ast.unparse` klammert Generatorausdruecke — deshalb ohne die Klammern pruefen.
+    kern = _ohne_kommentare_py(BAU).split("def baue(")[1].split("\ndef ")[0].replace("((", "(")
+    assert "daten = sorted(t[2] for t in alle_teile if t[2])" in kern, \
+        "der Zeitraum rechnet wieder ohne die Zweitmeldungen"
+    assert "arten = collections.Counter(t[1] for t in teile)" in kern, \
+        "die Zaehlung darf die Zweitmeldungen NICHT mitzaehlen"

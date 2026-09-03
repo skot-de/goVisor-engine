@@ -89,7 +89,10 @@ def test_grosse_vorgaenge_werden_gezaehlt_nicht_gekappt():
 def test_titel_kommt_aus_der_ausschreibung():
     """Der Zuschlag trägt oft nur „Vergabe von …" oder den Losnamen."""
     k = _koerper("baue")
-    assert '[t for t in teile if t[1] == "cn"] or teile' in k
+    # Seit dem 2026-09-02 steht die Auswahl in `_leitbekanntmachung` — sie waehlt jetzt
+    # zusaetzlich die FRUEHESTE Ausschreibung, weil zusammengefuehrte Akten mehrere haben.
+    k2 = QUELLE.split("def _leitbekanntmachung(")[1].split("\ndef ")[0]
+    assert '[t for t in teile if t[1] == "cn"] or teile' in k2
 
 
 # ── EU-weit ─────────────────────────────────────────────────────────────────────────────
