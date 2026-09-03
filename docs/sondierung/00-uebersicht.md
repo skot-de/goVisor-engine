@@ -24,8 +24,10 @@ Abruf belegt. Kein Konto, kein CAPTCHA, robots.txt immer zuerst.
 | **CZ** | 4,4 % | **28 % + Josephine** | E-ZAK, leere robots.txt; ProeBiz nachgetragen |
 | **PL** | 14,6 % | **19 %** ober / **35 %** unter | staatliche Plattform |
 | **ES** | 6,7 % | **5 %** | Katalonien |
-| **IT** | 4,9 % | **4 %** | Soresa (Kampanien) |
+| **IT** | 4,9 % | **15,1 %** | Soresa + acquistitelematici + traspare (nachgetragen) |
 | **LT** | 2,0 % | **99 %** | ein Land, eine Plattform |
+| **PT** | 1,6 % | **88,8 %** | Vortal + AcinGov, beide belegt |
+| **SK** | 1,2 % | **0 %** | ⛔ Freigabeliste in der robots.txt |
 | **BE** | 3,6 % | *offen* | Plattform fällt gerade aus |
 | **LV** | 1,5 % | *offen* | eine Plattform, Abrufweg ungeklärt |
 | **EE** | 0,9 % | *offen* | eine Plattform, Liste offen, Dateiweg fehlt |
@@ -34,6 +36,11 @@ Abruf belegt. Kein Konto, kein CAPTCHA, robots.txt immer zuerst.
 
 **Gewichtet über die geprüften Länder: rund 19 % der EU-Ausschreibungen sind heute über
 einen erlaubten, anonymen Weg erreichbar.** Deutschland allein trägt davon die Hälfte.
+
+⚠ **Die 19 % sind der Stand der ersten Runde und inzwischen zu niedrig** — IT ist von 4 auf
+15,1 % gestiegen, PT und SK kamen dazu. Die Zahl ist bewusst nicht nachgerechnet: sie wäre
+am nächsten Land wieder alt. Wer sie braucht, rechnet sie aus der Tabelle darüber, und zwar
+an dem Tag, an dem er sie braucht.
 
 ⚠ **Und ein Maß, das wichtiger ist als die Landesgröße: Ausschreibungen je Domain.**
 
