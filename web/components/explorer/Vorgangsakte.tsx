@@ -24,7 +24,8 @@ type Glied = { vorgang: string; position: number; jahr: number | null;
                wurzel: boolean; anschluss_direkt: boolean; vorgaenger_jahr: number | null };
 type Akte = {
   id: string; land: string; titel: string | null; cpv: string | null; schluessel: string;
-  vollstaendig: boolean; von: string | null; bis: string | null;
+  vollstaendig: boolean;
+  vollstaendig_beleg: "amtlich" | "erschlossen" | null; von: string | null; bis: string | null;
   zahlen: Record<string, number>; verlauf: Verlauf[]; dokumente: Dok[];
   unterlagen_grund: "angekuendigt" | "vor_abrufstart" | "kein_abruf" | null;
   kette?: { kette: string; position: number; n_glieder: number; min_konfidenz: number | null;
@@ -171,9 +172,15 @@ export function Vorgangsakte() {
         <div className="vg-zeile">
           <span className="vg-nr">{a.id}</span>
           <span className={`vg-tag ${h.ton}`}>{t(h.text)}</span>
-          {a.vollstaendig
-            ? <span className="vg-tag ok">{t("Ausschreibung und Zuschlag vorhanden")}</span>
-            : <span className="vg-tag">{t("Zuschlag noch offen")}</span>}
+          {/* ⚠ GRUEN NUR, WENN ES AUCH BELEGT IST. Bei 62.795 Akten steht der Zuschlag nur
+              deshalb hier, weil er ueber Kaeufer und Titel zugeordnet wurde. Diese Plakette
+              hat dieselbe Pflicht wie die Kette darunter: sagen, worauf sie ruht. */}
+          {!a.vollstaendig
+            ? <span className="vg-tag">{t("Zuschlag noch offen")}</span>
+            : a.vollstaendig_beleg === "erschlossen"
+              ? <span className="vg-tag" title={t("Der Zuschlag trägt keine amtliche Verknüpfung zu dieser Ausschreibung.")}>
+                  {t("Zuschlag zugeordnet, nicht amtlich verknüpft")}</span>
+              : <span className="vg-tag ok">{t("Ausschreibung und Zuschlag vorhanden")}</span>}
         </div>
         <h1>{a.titel || t("ohne Titel")}</h1>
         <p className="vg-meta">

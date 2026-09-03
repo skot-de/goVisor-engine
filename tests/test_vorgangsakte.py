@@ -548,3 +548,27 @@ def test_kein_gezaehlter_satz_ohne_einzahlfassung():
     ohne = [k for k in gezaehlt
             if "=== 1" not in (v := tsx.split(f't("{k}"')[0][-300:]) and "> 1" not in v]
     assert not ohne, "gezählte Sätze ohne Einzahlfassung: " + repr(ohne)
+
+
+# ── Worauf die Vollstaendigkeit ruht ────────────────────────────────────────────────
+
+def test_vollstaendigkeit_sagt_worauf_sie_ruht():
+    """⚠ 62.795 Akten (9,7 % aller vollständigen) sind es NUR, weil `_andocken` ihren
+    Zuschlag über Käufer und Titel zugeordnet hat. Eine grüne Plakette „Ausschreibung und
+    Zuschlag vorhanden" behauptet dort eine Tatsache, wo eine Schätzung steht — derselbe
+    Fehler, den die Kette und die Unterlagen schon hinter sich haben, eine Ebene höher."""
+    quelle = SKRIPT.read_text(encoding="utf-8")
+    assert '"vollstaendig_beleg"' in quelle
+    tsx = _ohne_kommentare(
+        (WURZEL / "web" / "components" / "explorer" / "Vorgangsakte.tsx").read_text(encoding="utf-8"))
+    assert 'a.vollstaendig_beleg === "erschlossen"' in tsx
+    # Die gruene Plakette darf NUR am amtlich belegten Zweig haengen.
+    gruen = tsx.split('vg-tag ok">{t("Ausschreibung und Zuschlag vorhanden")')[0][-400:]
+    assert "erschlossen" in gruen, "gruene Plakette haengt nicht hinter der Belegpruefung"
+
+
+def test_beleg_ist_null_wenn_unvollstaendig():
+    """Ein Beleg für etwas, das nicht behauptet wird, waere ein Widerspruch in der Akte."""
+    quelle = SKRIPT.read_text(encoding="utf-8")
+    kern = quelle.split('"vollstaendig_beleg": (')[1].split("),")[0]
+    assert 'None if not k.get("vollstaendig")' in kern

@@ -338,6 +338,17 @@ def _akten(con: duckdb.DuckDBPyConnection, land: str,
             "cpv": k.get("cpv"),
             "schluessel": k.get("schluessel_quelle"),
             "vollstaendig": bool(k.get("vollstaendig")),
+            # ⚠ WORAUF DIE VOLLSTAENDIGKEIT RUHT. 62.795 Akten (9,7 % aller vollstaendigen)
+            # sind es NUR, weil `_andocken` ihren Zuschlag ueber Kaeufer und Titel zugeordnet
+            # hat. Eine gruene Plakette „Ausschreibung und Zuschlag vorhanden" behauptet dort
+            # eine Tatsache, wo eine Schaetzung steht — derselbe Fehler, den die Kette und die
+            # Unterlagen schon hinter sich haben, eine Ebene hoeher.
+            "vollstaendig_beleg": (
+                None if not k.get("vollstaendig")
+                else "erschlossen"
+                if (k.get("n_angedockt") or 0) > 0
+                and (k.get("n_zuschlag") or 0) == (k.get("n_angedockt") or 0)
+                else "amtlich"),
             "von": _tag(k.get("erste_veroeffentlichung")),
             "bis": _tag(k.get("letzte_veroeffentlichung")),
             "zahlen": {a: int(k.get(f"n_{a}") or 0)
