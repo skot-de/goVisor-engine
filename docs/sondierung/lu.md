@@ -85,15 +85,30 @@ Personendaten — dieselbe Konstruktion wie Litauens `downloadDocForAnonymous`, 
 Formular statt als Verweiskette. Frankreich hat an dieser Stelle ein CAPTCHA, Luxemburg
 nicht.
 
-⚠ **Und hier habe ich angehalten.** Ein Formular abzusenden ist eine Handlung, keine
-Beobachtung — auch wenn sie keine Daten verlangt. Die stehende Regel dieser Sitzung sagt,
-dass ich das nicht ohne ausdrückliche Zustimmung tue.
+### ✅ Nachgeholt am 2026-09-03 — der Weg trägt
 
-**Was damit belegt ist:** die Unterlagen existieren, sind bezifferbar (4,41 / 1,41 / 26,15
-MB), die Seite ist ohne Anmeldung erreichbar, und der Betreiber benennt den anonymen Weg
-selbst.
-**Was nicht belegt ist:** dass das Absenden tatsächlich die Datei liefert. Das ist **ein
-POST** — die Entscheidung darüber gehört Sven, nicht mir.
+Sven hat den Schritt freigegeben. Es sind **zwei** Formularschritte, beide anonym:
+
+```
+1  POST …DemandeTelechargementDce&id=543959   RadioGroup = choixAnonyme
+       → Antwort enthält completeDownload / telechargementPartiel
+2  POST dieselbe Adresse                       PRADO_POSTBACK_TARGET = …$completeDownload
+       → 200, application/zip
+```
+
+**Belegt: 4.626.716 Bytes, 6 Dokumente**, keine Personendaten eingegeben:
+
+```
+260717_mar_Appel à candidatures Mat. cuisine.pdf        1,87 MB
+260717_mar_Annexe 2 - Tableau des lots Mat. cuisine.pdf 2,05 MB
+260717_mar_Annexe 1 - Membres.pdf · Annexe 3/4/5 …
+```
+
+⚠ **Zeichensatz:** die ZIP-Einträge kommen als `Documents ?? fournir.pdf` an — `à` verstümmelt.
+Dieselbe Familie wie Zyperns Kopfzeile und Ungarns ZIP-Namen. Dritter Fall.
+
+⚠ Der Zustand (`PRADO_PAGESTATE`) ist **11.840 Zeichen** gross und muss zwischen den beiden
+Aufrufen mitgeführt werden — ein Abrufer braucht hier eine Sitzung, keinen Adressbauplan.
 
 ## 5. ⚠ Zwei eigene Fehler auf dem Weg
 
