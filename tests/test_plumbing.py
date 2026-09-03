@@ -842,7 +842,13 @@ def test_source_registry_is_wellformed():
     # Silber, 10.947 der 18.284 AT-Gold-Leads tragen die `atv-`-Kennung. Ein Nachhinker, den
     # man notiert statt behebt, wird zur Fussnote — und Fussnoten liest niemand zweimal.
     live_ids = {s.id for s in sources.bekanntmachungen() if s.status == "live"}
-    assert live_ids == {"ted-de", "ted-at", "doe-de", "simap-ch", "netserver-de", "offeneverg-at"}
+    assert live_ids == {"ted-de", "ted-at", "ted-lu", "doe-de", "simap-ch",
+                        "netserver-de", "offeneverg-at"}, (
+        # ⚠ `ted-lu` kam am 2026-09-03 dazu, OHNE dass jemand einen Status getippt hat:
+        # `_ted_status` leitet ihn aus der Datenlage ab, und mit `data/gold/LU` sprang das
+        # Land von `candidate` auf `live`. Genau so ist es gebaut — deshalb faellt hier die
+        # ERWARTUNG nach, nicht die Ableitung.
+        f"live: {sorted(live_ids)}")
     # Polen: Silber liegt, Gold nicht — die Ableitung muss das sehen.
     assert any(s.id == "ted-pl" and s.status == "prepared" for s in sources.REGISTRY)
 

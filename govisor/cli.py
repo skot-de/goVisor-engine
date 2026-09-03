@@ -499,8 +499,15 @@ def main(argv: list[str] | None = None) -> int:
         print("lead-anford.:", f"{gold.build_lead_requirement(cfg, c):,} Eignungsanforderungen (darf ich bieten?)")
         print("lead-partei :", f"{gold.build_lead_party(cfg, c):,} Beteiligte (Kontakt der Vergabestelle)")
         print("bronze-inv. :", f"{gold.build_bronze_inventory(cfg, c):,} Roh-Feldpfade (Was steckt im XML?)")
-        print("doe-buyer   :", f"{gold.build_doe_buyer_profile(cfg, c):,} Käufer-Profile (Unterschwellenmarkt)")
-        print("doe-demand  :", f"{gold.build_doe_demand(cfg, c):,} Nachfrage-Zellen (CPV-Div × NUTS-3 × Jahr)")
+        # ⚠ DÖE IST EINE DEUTSCHE QUELLE (oeffentlichevergabe.de, unterschwellige
+        # Pflichtveroeffentlichung). Diese beiden Bauten liefen bis zum 2026-09-03 fuer JEDES
+        # Land und legten fuer LU zwei LEERE Tabellen an. Leere Tabellen sind hier nicht
+        # harmlos: die Laenderparitaets-Sonde meldete daraufhin „doe_buyer_profile liegt fuer
+        # DE und LU vor, wird aber nur aus DE gelesen" — ein Befund ueber etwas, das es gar
+        # nicht geben sollte. Der Nachtlauf-Weg (build_dach_gold) ruft sie zu Recht nie auf.
+        if c == "DE":
+            print("doe-buyer   :", f"{gold.build_doe_buyer_profile(cfg, c):,} Käufer-Profile (Unterschwellenmarkt)")
+            print("doe-demand  :", f"{gold.build_doe_demand(cfg, c):,} Nachfrage-Zellen (CPV-Div × NUTS-3 × Jahr)")
         print("buyer-profile:", f"{gold.build_buyer_profile(cfg, c):,} Vergabestellen-Profile")
         print("buyer-awards:", f"{gold.build_buyer_recent_awards(cfg, c):,} Award-Feed-Zeilen (letzte 20/Käufer)")
         print("region-kpi  :", f"{gold.build_region_kpi(cfg, c):,} Regionen (Nachfrage × Destatis-Kontext)")

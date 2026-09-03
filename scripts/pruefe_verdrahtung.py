@@ -109,15 +109,28 @@ AUSNAHMEN_WEB: dict[str, str] = {
     "outreach.json": "internes Vertriebswerkzeug, laeuft von Hand",
 }
 
+# ⚠ ZWEI TABELLEN, DIE ES NUR MIT FUND GIBT. `govisor.dedupe` schreibt `notice_duplicates`
+# und `notice_enrichment` erst, wenn es etwas zu schreiben gibt. Fuer LU lief der Wall am
+# 2026-09-03 ueber 6.115 Bekanntmachungen und meldete „Keine Dubletten gefunden" — die
+# Dateien fehlen also aus dem richtigen Grund.
+# ⚠ Das widerspricht dem Grundsatz, den die DACH-KETTE selbst notiert („leere Tabelle, wenn
+# keine kuratierte CSV — Nachfolger brauchen die DATEI"). Bewusst NICHT hier geradegezogen:
+# das Schreibverhalten von dedupe zu aendern trifft DE, AT und CH mit, und dafuer ist heute
+# Abend der falsche Zeitpunkt. Steht als offener Punkt.
+OHNE_FUND_KEINE_DATEI: dict[str, set[str]] = {
+    "LU": {"notice_duplicates", "notice_enrichment"},
+}
+
 BEWUSST_OHNE_GOLD: dict[str, str] = {
     "EU": "Sammelablage fuer Bekanntmachungen ohne eindeutiges Land (282 Saetze, 15 Laender)",
     "PL": "angefangen und liegengeblieben: 326.485 Saetze, letzte Publikation 2026-06-29. "
           "KEINE Entscheidung, sondern eine Baustelle — s. docs/land-onboarding.md",
-    "LU": "seit 2026-09-03 im Ingest (ab 2024-01), Dokument-Abrufer live "
-          "(govisor.docfetch_lu). Gold fehlt noch, und zwar bewusst in dieser Reihenfolge: "
-          "LU loescht die Unterlagen nach Fristende, der Abruf hatte also Vorrang vor der "
-          "Auswertung. ⚠ Vor dem Gold-Lauf fehlt das Locale-Profil (locales.use('LU') wirft "
-          "KeyError) — ohne es laeuft die Entity-Aufloesung mit dem DE-Default.",
+    # ⚠ LU STAND HIER BIS ZUM 2026-09-03 ABEND und ist bewusst raus: Gold ist gebaut
+    # (42 Schritte ueber build_dach_gold, 279 Leads) und das Locale-Profil existiert. Der
+    # Eintrag behauptete beides als fehlend — eine Ausnahme, die laenger lebt als ihr Grund,
+    # ist schlimmer als keine: sie entschuldigt eine Luecke, die es nicht mehr gibt, und
+    # deckt kuenftige zu. ⚠ Die Suite hat das NICHT gemeldet; sie prueft, ob eine Ausnahme
+    # begruendet ist, nicht ob die Begruendung noch stimmt.
 }
 
 
@@ -485,6 +498,11 @@ def sonde_paritaet(zeige_offen: bool = False,
         if not fehlend:
             continue
         if tabelle in BEWUSST_NUR_DE or tabelle in AUSNAHMEN_FRISCHE or tabelle in LEICHEN:
+            continue
+        # Tabellen, die es nur mit Fund gibt (s. OHNE_FUND_KEINE_DATEI): fehlen sie GENAU
+        # in den dort genannten Laendern, ist das kein Befund.
+        erwartet_leer = {l for l, tn in OHNE_FUND_KEINE_DATEI.items() if tabelle in tn}
+        if fehlend and set(fehlend) <= erwartet_leer:
             continue
         if tabelle in OFFEN_NUR_DE:
             offen.append(f"    OFFEN   {tabelle} fehlt in {','.join(fehlend)}: "

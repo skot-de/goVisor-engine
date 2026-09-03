@@ -4602,13 +4602,27 @@ def build_dim_plz(cfg: Config, country: str = "DE"):
 
     g = cfg.gold_dir / country
     gn = cfg.data_dir / "reference" / "geonames"
-    files = [(gn / f"{cc}.txt").as_posix() for cc in ("DE", "CH", "AT") if (gn / f"{cc}.txt").exists()]
+    # ⚠ DER SATZ IM DOCSTRING WAR UNWAHR. Hier stand ("DE", "CH", "AT") fest verdrahtet,
+    # waehrend darueber steht „Es werden alle vorhandenen {CC}.txt gelesen". Am 2026-09-03 lag
+    # LU.txt im Verzeichnis und wurde stillschweigend uebergangen — kein Fehler, keine leere
+    # Tabelle, nur ein Land ohne Umkreissuche.
+    # ⚠ NUR die PLZ-Dateien, und die heissen genau „<CC>.txt" mit ZWEI Buchstaben. Im selben
+    # Verzeichnis liegen `DE_gazetteer.txt` (19 Spalten, ein voellig anderer GeoNames-Satz)
+    # und `readme.txt`. Ein blosses *.txt las sie mit und liess den Aufbau abstuerzen —
+    # die alte feste Liste hatte also einen Grund, nur den falschen Mechanismus.
+    files = sorted(x.as_posix() for x in gn.glob("??.txt"))
     src = "[" + ", ".join(f"'{f}'" for f in files) + "]"
     out = (g / "dim_plz.parquet").as_posix()
     con = _db.connect()
     con.execute(f"""
         COPY (
-          SELECT country, plz,
+          SELECT country,
+                 -- LUXEMBURG SCHREIBT SEINE PLZ AUF ZWEI ARTEN. GeoNames fuehrt durchgehend
+                 -- „L-4968", TED gemischt: in lead_party stehen „L-2950" UND „1000"/„8070"
+                 -- nebeneinander (gemessen 2026-09-03). Ein Join auf die rohe PLZ traefe die
+                 -- Haelfte. Kanonisch sind die vier Ziffern — das tippt der Nutzer, und das
+                 -- erwartet plzLookup im Frontend.
+                 regexp_replace(plz, '^[A-Z][A-Z]?-', '') AS plz,
                  round(avg(lat), 5) AS lat,
                  round(avg(lon), 5) AS lon,
                  any_value(ort) AS ort,
@@ -4618,7 +4632,7 @@ def build_dim_plz(cfg: Config, country: str = "DE"):
                  'a1':'VARCHAR','rb':'VARCHAR','a2':'VARCHAR','kreis':'VARCHAR','a3':'VARCHAR',
                  'lat':'DOUBLE','lon':'DOUBLE','acc':'VARCHAR'}})
           WHERE lat IS NOT NULL AND lon IS NOT NULL
-          GROUP BY country, plz
+          GROUP BY country, regexp_replace(plz, '^[A-Z][A-Z]?-', '')
         ) TO '{out}' (FORMAT PARQUET, COMPRESSION ZSTD)
     """)
     n = con.execute(f"SELECT count(*) FROM read_parquet('{out}')").fetchone()[0]
@@ -4643,7 +4657,14 @@ def build_lead_geo(cfg: Config, country: str = "DE"):
     DP = f"'{(g / 'dim_plz.parquet').as_posix()}'"
     out = (g / "lead_geo.parquet").as_posix()
     # PLZ-Stellenzahl je Land: DE 5-stellig, CH/AT 4-stellig (disjunkt → dieselbe dim_plz).
-    _pd = 4 if country in ("CH", "AT") else 5
+    # ⚠ STELLENZAHL DER PLZ, und sie scheitert LAUTLOS, wenn ein Land fehlt: der Ausdruck
+    # `[0-9]{5}` trifft eine vierstellige PLZ nicht, der Lead faellt auf den Ortsnamen
+    # zurueck, und die Abdeckung sieht weiter gut aus — nur die Genauigkeit ist weg.
+    # Gemessen am 2026-09-03: LU stand nicht drin, also 0 von 279 Leads ueber die PLZ,
+    # alle 275 ueber den Ort. Kein Fehler im Log, keine leere Tabelle.
+    # Wer ein Land aufnimmt, traegt es HIER ein — die Vorgabe 5 ist eine Annahme, kein Wissen.
+    _PLZ_STELLEN = {"DE": 5, "AT": 4, "CH": 4, "LU": 4}
+    _pd = _PLZ_STELLEN.get(country, 5)
     con = _db.connect(); con.execute("SET threads=4")
     con.execute(f"""
         COPY (
