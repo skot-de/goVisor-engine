@@ -149,7 +149,7 @@ def _laender(wurzel: pathlib.Path) -> tuple[str, ...]:
 
 # Rueckfall fuer Aufrufer, die ohne Wurzel arbeiten (und fuer die Tests). Kein Ersatz fuer
 # die Messung oben, nur eine Notleine, wenn es gar keine Gold-Ebene gibt.
-LAENDER = ("DE", "AT", "CH")
+LAENDER = ("DE", "AT", "CH", "LU")
 
 # BEWUSST: gibt es zu Recht nur in DE. Der Grund muss die QUELLE nennen, nicht den
 # Aufwand — „lohnt sich nicht" ist keine Begruendung, sondern eine Vertagung.

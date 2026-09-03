@@ -21,6 +21,12 @@ sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent.parent))
 from govisor import db as _db  # noqa: E402
 from govisor.testvergaben import sql_bedingung as _testvergabe_sql
 
+# ⚠ EINE Liste, nicht drei. Bis zum 2026-09-03 stand („DE", „AT", „CH") an DREI Stellen in
+# dieser Datei — Falle C14 der Laender-Bibel: wer ein Land aufnimmt, trifft zwei davon und
+# uebersieht die dritte, und dann fehlt es genau in einer Kennzahl. Wer hier ergaenzt,
+# ergaenzt ueberall.
+LAENDER = ("DE", "AT", "CH", "LU")
+
 TODAY = date.today()
 
 
@@ -307,7 +313,7 @@ def _portal_case(spalte: str) -> str:
 
 def _quellen_je_lead() -> str:
     dups = []
-    for land in ("DE", "AT", "CH"):
+    for land in LAENDER:
         d = pathlib.Path(f"data/gold/{land}/notice_duplicates.parquet")
         if d.exists():
             dups.append(d.as_posix())
@@ -326,7 +332,7 @@ def _quellen_je_lead() -> str:
 def _frist_veroeffentlicht() -> str:
     import glob as _g
     g = []
-    for land in ("DE", "AT", "CH"):
+    for land in LAENDER:
         g += _g.glob(f"data/silver/{land}/notices/**/*.parquet", recursive=True)
     if not g:
         return "(SELECT NULL::VARCHAR notice_id, NULL::DATE frist_pub WHERE false)"
@@ -371,7 +377,7 @@ KAT = (f"read_parquet('{_KAT_PATH}')" if pathlib.Path(_KAT_PATH).exists() else
 # Der Export rechnet es jede Nacht neu; steht dort erst eine Unterlage, verschwindet die Bitte.
 def _laender_ohne_unterlagen() -> set[str]:
     raus = set()
-    for land in ("DE", "AT", "CH"):
+    for land in LAENDER:
         pfad = pathlib.Path(f"data/docs/{land}/doc_text.parquet")
         if not pfad.exists():
             raus.add(land)

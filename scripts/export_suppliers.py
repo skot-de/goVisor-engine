@@ -349,7 +349,12 @@ rows = con.execute(f"""
 # `len(r) == 3 and r.startswith('DE')` verwarf deshalb JEDE oesterreichische und
 # schweizerische Region — die Firmen waren nach der Umstellung auffindbar und standen
 # ohne Einsatzgebiet da.
-_STELLEN = {"DE": 3, "AT": 4, "CH": 5}
+# ⚠ DRITTE KOPIE derselben Zuordnung: gold._REGION_STELLEN und
+# scripts/region_ableiten.py:REGION_STELLEN fuehren sie ebenfalls. `pruefe_bibel.py` haelt
+# jetzt ALLE DREI zusammen — bis zum 2026-09-03 nur zwei, und diese hier haette LU
+# stillschweigend verloren: `soll` waere None, und `if soll and …` verwirft dann jede
+# luxemburgische Region. Genau der Fehler, den der Absatz darueber fuer AT/CH beschreibt.
+_STELLEN = {"DE": 3, "AT": 4, "CH": 5, "LU": 3}
 
 
 def clean_nuts(regs):

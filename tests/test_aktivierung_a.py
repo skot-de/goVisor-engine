@@ -32,11 +32,21 @@ def test_die_messung_zaehlt_wirklich():
     assert "if not n:" in block, "eine leere Datei muss als fehlend gelten"
 
 
-def test_alle_drei_laender_werden_geprueft():
-    """⚠ EU-weit-Grundsatz. Eine Messung, die nur DE kennt, meldet AT und CH nie."""
+def test_alle_laender_werden_geprueft():
+    """⚠ EU-weit-Grundsatz. Eine Messung, die nur DE kennt, meldet die anderen nie.
+
+    ⚠ DIESER TEST PRUEFTE FRUEHER DIE FALSCHE SACHE. Er suchte die Literale „DE"/„AT"/„CH"
+    im Quelltext des Blocks — und wurde damit rot, als die drei fest verdrahteten Tupel am
+    2026-09-03 zu EINER Konstante zusammengefasst wurden. Der Code war besser geworden, der
+    Waechter blind. Er prueft jetzt die Konstante selbst und dass der Block sie benutzt:
+    das haelt dieselbe Zusicherung, ohne die Verdopplung zu erzwingen, die er eigentlich
+    verhindern soll.
+    """
     block = EXPORT[EXPORT.index("def _laender_ohne_unterlagen"):EXPORT.index("OHNE_UNTERLAGEN =")]
-    for land in ("DE", "AT", "CH"):
-        assert f'"{land}"' in block
+    assert "for land in LAENDER:" in block, "der Block muss die gemeinsame Liste benutzen"
+    zeile = next(z for z in EXPORT.splitlines() if z.startswith("LAENDER = "))
+    for land in ("DE", "AT", "CH", "LU"):
+        assert f'"{land}"' in zeile, f"{land} fehlt in export_web_leads.LAENDER"
 
 
 def test_die_hochladestrecke_bleibt_dieselbe():

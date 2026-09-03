@@ -121,9 +121,21 @@ def _behauptungen() -> list[tuple[str, str, bool, str]]:
     # ⚠ LU steht auf 3 und hat trotzdem nur EINE Region: der NUTS-Katalog fuehrt fuer
     # Luxemburg genau vier Codes (LU, LU0, LU00, LU000), alle „Luxembourg". Drei Stellen
     # ergeben einen einzigen Eimer — das ist die richtige Antwort, kein Defekt.
-    passt = gold._REGION_STELLEN == ra.REGION_STELLEN == {"DE": 3, "AT": 4, "CH": 5, "LU": 3}
-    aus.append(("07", "Regions-Ebene DE 3 / AT 4 / CH 5 / LU 3, in beiden Dateien gleich",
-                passt, f"{gold._REGION_STELLEN} vs {ra.REGION_STELLEN}"))
+    # ⚠ DREI Dateien, nicht zwei. `scripts/export_suppliers.py:_STELLEN` fuehrt dieselbe
+    # Zuordnung ein drittes Mal und hing bis zum 2026-09-03 frei: dort fehlte LU, und
+    # `clean_nuts` haette damit JEDE luxemburgische Region verworfen, ohne dass etwas rot wird.
+    spec3 = importlib.util.spec_from_file_location(
+        "es", ROOT / "scripts" / "export_suppliers.py")
+    try:
+        es = importlib.util.module_from_spec(spec3)
+        spec3.loader.exec_module(es)
+        dritte = es._STELLEN
+    except Exception as e:                                   # noqa: BLE001
+        dritte = f"nicht ladbar: {type(e).__name__}"
+    soll = {"DE": 3, "AT": 4, "CH": 5, "LU": 3}
+    passt = gold._REGION_STELLEN == ra.REGION_STELLEN == dritte == soll
+    aus.append(("07", "Regions-Ebene DE 3 / AT 4 / CH 5 / LU 3, in ALLEN DREI Dateien gleich",
+                passt, f"{gold._REGION_STELLEN} vs {ra.REGION_STELLEN} vs {dritte}"))
 
     # 26 Kantone auf 26 NUTS (Kapitel 07/14).
     from govisor import simap

@@ -141,7 +141,7 @@ export type MarktpulsDaten = {
 /* `EU` ist im Bestand kein Land, sondern der Sammel-Topf für alles ausserhalb der drei
  * geführten Länder — er heisst deshalb auch so, statt als „EU" ein Gebiet vorzutäuschen. */
 const LAND_LABEL: Record<string, string> = {
-  DE: "Deutschland", AT: "Österreich", CH: "Schweiz", EU: "Übrige EU-Länder",
+  DE: "Deutschland", AT: "Österreich", CH: "Schweiz", LU: "Luxemburg", EU: "Übrige EU-Länder",
 };
 /* Eigene Form für „in …": „in der Schweiz", nicht „in Schweiz". Die Präposition steckt im
  * Satz, der Artikel am Land. Die Begründung ist geblieben, die Liste ist nach `lib/staaten`

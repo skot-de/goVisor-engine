@@ -280,7 +280,9 @@ if __name__ == "__main__":
     ap.add_argument("--limit", type=int, help="nur N Notices (zum Testen)")
     ap.add_argument("--workers", type=int, default=3,
                     help="TED rate-limitet — mehr als 3 provoziert HTTP 429")
-    ap.add_argument("--country", default="DE", choices=("DE", "AT", "CH"),
+    ap.add_argument("--country", default="DE", choices=("DE", "AT", "CH", "LU"),   # ⚠ MUSS zu LAND3 passen — am 2026-09-03 stand LU
+                    #   dort schon und hier noch nicht: argparse wies --country LU ab,
+                    #   waehrend der Code laengst dafuer gebaut war.
                     help="Käuferland; TED liefert AT/CH über dieselbe API")
     a = ap.parse_args()
     today = time.strftime("%Y-%m-%d")

@@ -17,7 +17,9 @@ import { redactStrategie } from "@/lib/redact";
 // sah deutsche Vergabestellen und deutsche Wettbewerbsdichte, ausgegeben als seine. Eine
 // DACH-Summe waere keine Loesung gewesen, sondern dieselbe Verwechslung mit mehr Zahlen:
 // „wer vergibt in meinem Feld" ist eine Frage an EINEN Markt.
-const LAENDER = new Set(["DE", "AT", "CH"]);
+// ⚠ MUSS zu scripts/export_strategie.py:LAENDER passen. Stand 2026-09-03 baute der
+// Export LU und diese Menge wies ?land=LU ab — die Daten lagen da, die Tuer war zu.
+const LAENDER = new Set(["DE", "AT", "CH", "LU"]);
 
 export async function GET(req: Request) {
   const p = new URL(req.url).searchParams;

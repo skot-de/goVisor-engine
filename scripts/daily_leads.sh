@@ -527,6 +527,14 @@ step "TED-Live AT"
 $PY scripts/fetch_ted_live.py --country AT --workers 3 \
   && echo "  TED-AT ok." || echo "  ⚠ TED-AT fehlgeschlagen — AT bleibt auf OffeneVergaben allein."
 
+# ⚠ LU BRAUCHT DEN LIVE-ABRUF DRINGENDER ALS JEDES ANDERE LAND. Luxemburg haelt die
+# Vergabeunterlagen nach Fristende NICHT vor (gemessen 2026-09-03, dieselbe Gruppe wie DE).
+# Wer aufs Monatsarchiv wartet, bekommt die Bekanntmachung — die Unterlagen sind dann weg.
+# Der Tagesabruf ist hier keine Frischhaltung, sondern die einzige Gelegenheit.
+step "TED-Live LU"
+$PY scripts/fetch_ted_live.py --country LU --workers 3 \
+  && echo "  TED-LU ok." || echo "  ⚠ TED-LU fehlgeschlagen — ⏳ heutige LU-Unterlagen moeglicherweise verloren."
+
 step "OffeneVergaben.at (AT)"
 mit_grenze "$GRENZE_ABRUF" $PY -m govisor.cli ingest-atverg --country AT --silver \
   && echo "  atverg ok." || echo "  ⚠ OffeneVergaben.at fehlgeschlagen — AT bleibt auf altem Stand."
@@ -714,9 +722,9 @@ else
   _DEDUPE_MODUS="rollendes Fenster 190 Tage (+ Saetze ohne Datum)"
   _DEDUPE_ARGS="--fenster-tage 190"
 fi
-step "Dubletten-Firewall + Anreicherung (DE/AT/CH)"
+step "Dubletten-Firewall + Anreicherung (DE/AT/CH/LU)"
 echo "  Modus: $_DEDUPE_MODUS"
-for L in DE AT CH; do
+for L in DE AT CH LU; do
   # shellcheck disable=SC2086  # _DEDUPE_ARGS ist bewusst wortgetrennt
   $PY -m govisor.dedupe --country "$L" --ab-jahr 2004 --alle-arten --anreichern $_DEDUPE_ARGS \
     || echo "  ⚠ Dublettencheck $L fehlgeschlagen — Anreicherung bleibt auf altem Stand."
@@ -735,7 +743,10 @@ $PY -m govisor.kategorie --country DE --schreiben \
   || echo "  ⚠ Kategorie-Ableitung fehlgeschlagen — die Leads ohne CPV bleiben 'Ohne Kategorie'."
 
 step "AT/CH-Gold (volle Pipeline, 26 Schritte je Land)"
-$PY scripts/build_dach_gold.py --laender AT,CH --as-of "$TODAY" \
+# ⚠ LU laeuft HIER mit, nicht ueber `cli gold`. Der CLI-Weg zieht build_hr_index() mit —
+# den deutschen Handelsregister-Index mit 5,5 Mio. Firmen — und der ist fuer Luxemburg weder
+# zustaendig noch bezahlbar. Genau deshalb gehen AT und CH schon diesen Weg.
+$PY scripts/build_dach_gold.py --laender AT,CH,LU --as-of "$TODAY" \
   && echo "  AT/CH-Gold ok." \
   || echo "  ⚠ AT/CH-Gold unvollstaendig — beide Laender bleiben auf dem letzten Stand."
 
@@ -1080,12 +1091,12 @@ $PY scripts/build_vorgaenge.py || echo "  ⚠ vorgaenge/vorgang_notice nicht geb
 # Bekanntmachung (Angebotsfrist) und Unterlagen (Bindefrist, Bieterfragen, Ortstermin …).
 # Nur klassifizierte Termine; was sich keiner Art zuordnen laesst, wird gezaehlt und
 # verworfen — sonst stuende das Druckdatum einer PDF im Kalender.
-# ⚠ ALLE DREI LAENDER, auch wenn heute nur DE etwas liefert: AT und CH haben bei den
+# ⚠ ALLE VIER LAENDER, auch wenn heute fast nur DE etwas liefert (LU: 3 Vorgaenge): AT und CH haben bei den
 # Vergabeunterlagen 0 % Abdeckung, ihr Lauf schreibt also nichts. Er ist trotzdem richtig
 # hier — am Tag, an dem die ersten AT-Unterlagen ankommen, steht der Kalender ohne
 # Zutun. Und er ist seit dem 2026-08-25 gefahrlos: bis dahin haette ein AT-Lauf ALLE
 # 2.945 DE-Dateien geloescht (die Reinigung las „leer" als „alles verwaist").
-for L in DE AT CH; do
+for L in DE AT CH LU; do
   $PY scripts/export_kalender.py --country "$L" \
     || echo "  ⚠ Verfahrenskalender $L nicht gebaut — die Terminliste bleibt auf altem Stand."
 done
