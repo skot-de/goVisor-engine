@@ -1080,8 +1080,20 @@ $PY scripts/export_doc_listing.py || echo "  ⚠ Dateilisten nicht exportiert �
 # selbst — „wie viel wovon" und „woran werde ich gemessen". Läuft über den vorhandenen
 # Archiv-Bestand, braucht kein Netz und keine LLM, also täglich unproblematisch.
 # Reihenfolge ist Pflicht: extract_criteria liest doc_lv.parquet aus extract_positions.
+# ⚠ SONNTAGS VOLL, wie die Dubletten-Firewall — und aus demselben Grund. `extract_positions`
+# uebernimmt seit dem 2026-09-03 unveraenderte Vorgaenge aus dem letzten Lauf, statt jede
+# Nacht 10.216 Archive neu zu entpacken. Der Merker erkennt geaenderte ARCHIVE zuverlaessig,
+# aber nicht jede denkbare Aenderung am Leser; `PARSER_STAND` deckt die bewussten ab, der
+# Wochenlauf die unbewussten. Er faellt auf einen Tag, an dem niemand auf frische Zahlen
+# wartet.
 step "Leistungsverzeichnisse + Kriterienmatrizen aus den Unterlagen"
-if $PY scripts/extract_positions.py --country DE; then
+_LV_ARGS=""
+if [ "$(date +%u)" = "7" ]; then
+  _LV_ARGS="--voll"
+  echo "  Sonntag: alle Archive neu lesen (kein Merker)."
+fi
+# shellcheck disable=SC2086  # _LV_ARGS ist bewusst wortgetrennt
+if $PY scripts/extract_positions.py --country DE $_LV_ARGS; then
   $PY scripts/extract_criteria.py --country DE || echo "  ⚠ Kriterien-Extraktion übersprungen."
   $PY scripts/export_doc_struktur.py --country DE || echo "  ⚠ doc-struktur.json nicht geschrieben."
 else

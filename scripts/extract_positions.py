@@ -118,15 +118,111 @@ def _archive(vorgang: Path):
     return sorted(vorgang.glob("*.zip"))
 
 
-def sammle(country: str, limit: int | None) -> tuple[list[dict], list[dict]]:
+# ⚠ HOCHZAEHLEN, WENN SICH AM PARSEN ETWAS AENDERT. Der Merker unten ueberspringt alles,
+# was seit dem letzten Lauf unveraendert ist — er kennt aber nur die ARCHIVE, nicht den
+# Code. Ein verbesserter GAEB- oder XLSX-Leser wuerde deshalb lautlos nie angewandt: die
+# alten Ergebnisse blieben stehen und saehen frisch aus. Diese Zahl im Fingerabdruck macht
+# aus einer Parser-Aenderung eine Neuberechnung.
+PARSER_STAND = 1
+
+
+def _fingerabdruck(vorgang: Path) -> str:
+    """Woran man erkennt, dass sich an einem Vorgang nichts geaendert hat.
+
+    Anzahl, Groesse und juengste Aenderung seiner Archive — plus `PARSER_STAND`. Kein Hash
+    ueber den Inhalt: der kostet genau das Lesen, das hier gespart werden soll.
+    """
+    zs = _archive(vorgang)
+    teile = [f"{z.name}:{st.st_size}:{int(st.st_mtime)}"
+             for z in zs if (st := z.stat())]
+    return f"v{PARSER_STAND}|" + "|".join(teile)
+
+
+def _stand_lesen(root: Path) -> dict[str, str]:
+    """Fingerabdruecke des letzten Laufs. Leer, wenn es keinen gab."""
+    p = root / "doc_positions_stand.parquet"
+    if not p.exists():
+        return {}
+    import duckdb
+    try:
+        return {str(a): str(b) for a, b in duckdb.connect().execute(
+            f"select notice_id, fingerabdruck from read_parquet('{p.as_posix()}')").fetchall()}
+    except Exception:
+        return {}
+
+
+def _alte_zeilen(root: Path) -> tuple[dict[str, list], dict[str, dict], bool]:
+    """Positionen und LV-Zeilen des letzten Laufs, nach Vorgang sortiert.
+
+    ⚠ OHNE DIESE ZEILEN DARF NICHTS UEBERSPRUNGEN WERDEN. Der Merker sagt nur „unveraendert";
+    die Ergebnisse muessen trotzdem aus dem letzten Lauf uebernommen werden, sonst schrumpft
+    die Ausgabe bei jedem Lauf um alles, was gerade nicht neu gerechnet wurde.
+    """
+    import duckdb
+    con = duckdb.connect()
+    pos: dict[str, list] = {}
+    lv: dict[str, dict] = {}
+    pp, lp = root / "doc_positions.parquet", root / "doc_lv.parquet"
+    vorhanden = pp.exists() and lp.exists()
+    if pp.exists():
+        for r in con.execute(f"select * from read_parquet('{pp.as_posix()}')").fetchall():
+            pos.setdefault(str(r[0]), []).append(
+                {"notice_id": r[0], "quelle": r[1], "datei": r[2], "rno": r[3],
+                 "menge": r[4], "einheit": r[5], "text": r[6]})
+    if lp.exists():
+        for r in con.execute(f"select * from read_parquet('{lp.as_posix()}')").fetchall():
+            lv[str(r[0])] = {"notice_id": r[0], "n_positionen": r[1],
+                             "mengen_je_einheit": r[2], "xlsx_blaetter": r[3]}
+    return pos, lv, vorhanden
+
+
+def sammle(country: str, limit: int | None,
+           voll: bool = False) -> tuple[list[dict], list[dict], dict[str, str], tuple[int, int]]:
+    """Leistungsverzeichnisse aller Vorgaenge — unveraenderte uebernommen statt neu gelesen.
+
+    ⚠ WARUM UEBERHAUPT. Bis zum 2026-09-03 entpackte dieser Schritt JEDE Nacht alle
+    Archive neu, auch die von vorgestern. Gemessen ueber 23 Nachtlaeufe: der Bestand wuchs
+    um 187 %, die Dauer schwankte dabei um den Faktor 14 (357 s bis 4.999 s) — bei
+    IDENTISCHEM Bestand von 2.316 Vorgaengen einmal 434 s und einmal 1.970 s. Die Zeit haengt
+    also kaum am Umfang, sondern daran, ob gleichzeitig jemand dieselbe Platte benutzt; und
+    `data` ist ein Symlink auf ein externes Volume, auf dem die beiden Dokument-Arbeiter
+    rund um die Uhr schreiben. Wer weniger liest, streitet weniger.
+
+    ⚠ „NICHTS GEFUNDEN" IST AUCH EIN ERGEBNIS. Nur 4.011 der 10.216 Vorgaenge haben
+    ueberhaupt ein Leistungsverzeichnis. Wuerde der Merker nur die Treffer kennen, liefe der
+    Schritt fuer die anderen 6.200 jede Nacht erneut — also fuer die Mehrheit. Deshalb
+    haelt `doc_positions_stand.parquet` einen Fingerabdruck fuer JEDEN geprueften Vorgang.
+    """
     root = ROOT / "data" / "docs" / country
     vorgaenge = sorted(p for p in root.iterdir() if p.is_dir())
     if limit:
         vorgaenge = vorgaenge[:limit]
+    stand = {} if voll else _stand_lesen(root)
+    alt_pos, alt_lv, alt_da = ({}, {}, False) if voll else _alte_zeilen(root)
     positionen: list[dict] = []
     lv: list[dict] = []
+    neuer_stand: dict[str, str] = {}
+    uebernommen = gelesen = 0
     for v in vorgaenge:
         nid = v.name
+        fa = _fingerabdruck(v)
+        neuer_stand[nid] = fa
+        # ⚠ GEPRUEFT UND NICHTS GEFUNDEN IST AUCH EIN ERGEBNIS — und der haeufigste Fall:
+        # nur 4.011 der 10.216 Vorgaenge haben ueberhaupt ein Leistungsverzeichnis. Die
+        # Bedingung darf deshalb NICHT verlangen, dass der Vorgang in der alten Ausgabe
+        # steht; sonst laesst sie genau die 6.200 durch, um die es beim Sparen geht. Der
+        # erste Entwurf tat das und haette fast nichts gespart.
+        #
+        # Was sie stattdessen verlangt: die Ausgabedateien muessen ueberhaupt da sein.
+        # Fehlen sie (geloescht, verschoben), gibt es nichts zu uebernehmen, und der
+        # Merker allein wuerde die Zeilen fuer immer verschwinden lassen.
+        if alt_da and stand.get(nid) == fa:
+            positionen.extend(alt_pos.get(nid, []))
+            if nid in alt_lv:
+                lv.append(alt_lv[nid])
+            uebernommen += 1
+            continue
+        gelesen += 1
         n_pos = 0
         mengen: Counter = Counter()
         blaetter: list[dict] = []
@@ -194,7 +290,7 @@ def sammle(country: str, limit: int | None) -> tuple[list[dict], list[dict]]:
                                                 ensure_ascii=False) if mengen else None,
                 "xlsx_blaetter": json.dumps(blaetter[:20], ensure_ascii=False) if blaetter else None,
             })
-    return positionen, lv
+    return positionen, lv, neuer_stand, (uebernommen, gelesen)
 
 
 def _zahl(s) -> float | None:
@@ -206,11 +302,11 @@ def _zahl(s) -> float | None:
         return None
 
 
-def main(country: str, limit: int | None) -> int:
+def main(country: str, limit: int | None, voll: bool = False) -> int:
     import pyarrow as pa
     import pyarrow.parquet as pq
 
-    positionen, lv = sammle(country, limit)
+    positionen, lv, stand, (uebernommen, gelesen) = sammle(country, limit, voll)
     root = ROOT / "data" / "docs" / country
     if positionen:
         pq.write_table(pa.Table.from_pylist(positionen, schema=pa.schema([
@@ -222,9 +318,24 @@ def main(country: str, limit: int | None) -> int:
             ("notice_id", pa.string()), ("n_positionen", pa.int64()),
             ("mengen_je_einheit", pa.string()), ("xlsx_blaetter", pa.string())])),
             root / "doc_lv.parquet", compression="zstd")
+    # ⚠ DER MERKER ZULETZT. Stirbt der Lauf zwischen den Ergebnissen und ihm, ist der
+    # Merker aelter als die Daten — dann wird beim naechsten Mal zu viel gelesen, was
+    # Zeit kostet, aber nichts kaputt macht. Andersherum waere es ein Datenverlust:
+    # ein Merker ohne die zugehoerigen Zeilen laesst sie fuer immer uebersprungen.
+    #
+    # ⚠ UND NUR, WENN DIE ERGEBNISSE AUCH GESCHRIEBEN WURDEN. Bei `--limit` sieht der Lauf
+    # nur einen Ausschnitt; einen Merker daraus zu schreiben hiesse, den Rest als geprueft
+    # zu markieren, ohne ihn angesehen zu haben.
+    if stand and limit is None:
+        pq.write_table(pa.Table.from_pylist(
+            [{"notice_id": k, "fingerabdruck": v} for k, v in sorted(stand.items())],
+            schema=pa.schema([("notice_id", pa.string()), ("fingerabdruck", pa.string())])),
+            root / "doc_positions_stand.parquet", compression="zstd")
     mit_gaeb = len({p["notice_id"] for p in positionen})
     print(f"Leistungsverzeichnisse {country}: {len(positionen):,} Positionen aus {mit_gaeb} Vorgängen "
           f"(GAEB), {len(lv)} Vorgänge mit LV insgesamt")
+    print(f"  {gelesen:,} Vorgänge gelesen, {uebernommen:,} unverändert übernommen"
+          + ("  (--voll: alles gelesen)" if voll else ""))
     return 0
 
 
@@ -232,5 +343,7 @@ if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("--country", default="DE")
     ap.add_argument("--limit", type=int, default=None)
+    ap.add_argument("--voll", action="store_true",
+                    help="alles neu lesen statt Unveraendertes zu uebernehmen")
     a = ap.parse_args()
-    sys.exit(main(a.country, a.limit))
+    sys.exit(main(a.country, a.limit, a.voll))
