@@ -40,9 +40,63 @@ CAP = 60_000  # Zeichen je Vorgang im JSON
 # Die Quelle wird ausschliesslich von `index-docs` geschrieben. Aendert sie sich nicht, kann
 # sich das Ergebnis nicht aendern — dann genuegt ein Blick auf Zeitstempel und Groesse.
 STAND = ROOT / "data" / ".doc_text_export.json"
+# ⚠ EIN ZWEITER MERKER, EINE EBENE FEINER. `STAND` oben beantwortet „hat sich die Quelle
+# ueberhaupt geruehrt" — und im Nachtlauf lautet die Antwort IMMER ja, weil die
+# Dokument-Arbeiter rund um die Uhr in dieselbe Datei schreiben. Der grobe Waechter greift
+# damit nie, und der Lauf verarbeitete alle 243.478 Zeilen neu, um am Ende festzustellen,
+# dass sich an fast keinem Vorgang etwas geaendert hat.
+#
+# Dieser hier haelt je VORGANG einen Fingerabdruck. Er kostet 1,6 s (eine Aggregation ohne
+# die Textspalte, `n_chars` steht ohnehin in der Quelle) und erspart das Lesen des Textes
+# fuer alles Unveraenderte.
+JE_VORGANG_STAND = ROOT / "data" / ".doc_text_je_vorgang.json"
 
 _WS = re.compile(r"[ \t]+")
 _NL = re.compile(r"\n{3,}")
+
+
+def _sicher(nid: str) -> str:
+    """Kennung → Dateiname. Der Name wird zum URL-Pfad; ein `../` waere ein Pfadwechsel."""
+    return "".join(c for c in nid if c.isalnum() or c in "-_")
+
+
+def _abdruecke(con) -> dict[str, str]:
+    """Je Vorgang ein Fingerabdruck, ohne die Textspalte anzufassen.
+
+    Dateinamen gehoeren hinein, nicht nur Zahlen: `ueberholte()` entscheidet ANHAND DER
+    NAMEN, welche Fassung ausgeliefert wird. Ein Nachtrag, der eine Datei ersetzt, kann
+    Zeilenzahl und Zeichensumme unveraendert lassen und trotzdem ein anderes Ergebnis
+    erzeugen.
+    """
+    zeilen = con.execute(
+        f"""SELECT notice_id,
+                   count(*) || ':' || coalesce(sum(n_chars), 0) || ':'
+                   || md5(string_agg(file || '\x1f' || status, '\x1e' ORDER BY file, status))
+            FROM read_parquet('{SRC.as_posix()}')
+            WHERE {SQL_BRAUCHBAR} AND text IS NOT NULL AND length(text) > 0
+            GROUP BY 1""").fetchall()
+    return {str(a): str(b) for a, b in zeilen}
+
+
+def _alter_index() -> dict[str, dict]:
+    """Der Index des letzten Laufs — die Quelle fuer alles, was uebernommen wird."""
+    if not INDEX.exists():
+        return {}
+    try:
+        roh = json.loads(INDEX.read_text(encoding="utf-8"))
+        return roh if isinstance(roh, dict) else {}
+    except (json.JSONDecodeError, OSError):
+        return {}
+
+
+def _alte_abdruecke() -> dict[str, str]:
+    if not JE_VORGANG_STAND.exists():
+        return {}
+    try:
+        roh = json.loads(JE_VORGANG_STAND.read_text(encoding="utf-8"))
+        return roh if isinstance(roh, dict) else {}
+    except (json.JSONDecodeError, OSError):
+        return {}
 
 
 def clean(t: str) -> str:
@@ -101,10 +155,26 @@ def main(argv=None) -> int:
     # nicht ein Fehler, sondern ein WACKELN: derselbe Lauf schrieb mal 50, mal 62 Dateien,
     # und die Zeichensumme wanderte. Ein Ergebnis, das sich bei gleicher Eingabe aendert,
     # ist schlimmer als ein langsames.
+    # ── Was hat sich ueberhaupt geruehrt? ───────────────────────────────────────────
+    abdruecke = _abdruecke(con)
+    alt_abdruck = {} if a.erzwingen else _alte_abdruecke()
+    alt_index = {} if a.erzwingen else _alter_index()
+    # ⚠ „GEPRUEFT UND NICHTS AUSZULIEFERN" IST AUCH EIN ERGEBNIS. Ein Vorgang, dessen
+    # Dateien alle als ueberholt gelten, steht in KEINEM Index — er darf trotzdem als
+    # erledigt gelten, sonst wird er jede Nacht erneut gelesen. Es entscheidet allein der
+    # Fingerabdruck, nicht die Anwesenheit im Index. Genau diesen Fehler hatte ich am
+    # selben Tag in `extract_positions.py` schon einmal gebaut.
+    unveraendert = {n for n, fa in abdruecke.items() if alt_abdruck.get(n) == fa}
+    zu_lesen = [n for n in abdruecke if n not in unveraendert]
+    con.execute("create or replace temp table _zu (notice_id varchar)")
+    if zu_lesen:
+        con.executemany("insert into _zu values (?)", [(n,) for n in zu_lesen])
+
     ordnung = "ORDER BY notice_id, file" if a.sortieren else ""
     con.execute(
         f"""SELECT notice_id, file, filetype, text
             FROM read_parquet('{SRC.as_posix()}')
+            SEMI JOIN _zu USING (notice_id)
             -- `ocr` wie `ok` — s. govisor/docpipe.py: der Zustand entsteht nur, wenn die
             -- Texterkennung Fachvokabular fand (>= 3 Begriffe der Vergabesprache).
             -- Gemessen 2026-08-18: 404 Vorgaenge bekommen dadurch zusaetzlichen Text,
@@ -117,6 +187,14 @@ def main(argv=None) -> int:
     JE_VORGANG.mkdir(parents=True, exist_ok=True)
     vorhanden = {f.stem for f in JE_VORGANG.glob("*.json")}
     index: dict[str, dict] = {}
+    # Unveraenderte uebernehmen: ihr Eintrag kommt aus dem alten Index, ihre Datei liegt
+    # schon da und wird unten NICHT als verwaist geloescht.
+    uebernommen = 0
+    for nid in unveraendert:
+        uebernommen += 1
+        vorhanden.discard(_sicher(nid))
+        if nid in alt_index:
+            index[nid] = alt_index[nid]
     zerrissen: list[str] = []
     geschrieben = 0
     zeichen_gesamt = 0
@@ -143,7 +221,7 @@ def main(argv=None) -> int:
         zeichen_gesamt += v["chars"]
         # Der Dateiname wird zum URL-Pfad. Alles, was dort nichts zu suchen hat, faellt weg —
         # ein `../` in einer notice_id waere sonst ein Pfadwechsel beim Ausliefern.
-        sicher = "".join(c for c in nid if c.isalnum() or c in "-_")
+        sicher = _sicher(nid)
         if not sicher:
             return
         ziel = JE_VORGANG / f"{sicher}.json"
@@ -194,6 +272,10 @@ def main(argv=None) -> int:
     # Erst NACH dem Schreiben vermerken: bricht der Lauf vorher ab, laeuft der naechste
     # wieder an, statt eine halbe Ausgabe fuer fertig zu halten.
     STAND.write_text(json.dumps(stand), encoding="utf-8")
+    # ⚠ ZULETZT, aus demselben Grund wie der grobe Stand darueber: bricht der Lauf vorher
+    # ab, wird beim naechsten Mal zu viel gelesen. Das kostet Zeit. Andersherum gaelten
+    # Vorgaenge als fertig, deren Zeilen nie geschrieben wurden.
+    JE_VORGANG_STAND.write_text(json.dumps(abdruecke, separators=(",", ":")), encoding="utf-8")
 
     if zerrissen:
         print(f"  ⚠ {len(zerrissen):,} Vorgaenge liegen NICHT am Stueck in der Quelle "
@@ -201,8 +283,14 @@ def main(argv=None) -> int:
               f"Lauf mit --sortieren wiederholen.")
     if ueberholt_gesamt:
         print(f"  {ueberholt_gesamt:,} überholte Dateien aus Nachträgen übersprungen")
-    print(f"LB-Volltext: {len(index)} Vorgänge ({zeichen_gesamt:,} Zeichen gesamt)")
-    print(f"  je Vorgang: {geschrieben:,} geschrieben, {len(vorhanden):,} verwaiste entfernt "
+    # ⚠ AUS DEM INDEX, NICHT AUS DEM ZAEHLER. `zeichen_gesamt` zaehlt nur, was dieser Lauf
+    # verarbeitet hat — seit unveraenderte Vorgaenge uebernommen werden, meldete die Zeile
+    # „0 Zeichen gesamt" neben einem Index mit vier Milliarden. Eine Zahl, die bei gesunder
+    # Lage Null sagt, laesst einen kaputten Lauf wie einen gesunden aussehen.
+    gesamt = sum(int(v.get("chars") or 0) for v in index.values())
+    print(f"LB-Volltext: {len(index)} Vorgänge ({gesamt:,} Zeichen gesamt)")
+    print(f"  je Vorgang: {geschrieben:,} geschrieben, {uebernommen:,} unveraendert "
+          f"uebernommen, {len(vorhanden):,} verwaiste entfernt "
           f"→ {JE_VORGANG.relative_to(ROOT)}/")
     return 0
 
