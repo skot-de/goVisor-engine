@@ -101,3 +101,56 @@ def test_ernte_reserve_deckt_die_gemessene_ernte():
         f"  Faktor              {reserve / schlimmster:.2f}×  (verlangt: {MINDEST_FAKTOR}×)\n"
         f"  Werte: {', '.join(f'{x:.0f}' for x in sorted(gemessen))}\n"
         f"Entweder die Reserve erhoehen oder einen Erntesc hritt guenstiger machen.")
+
+
+# ── Zwischenzeiten im Frontend-Export ───────────────────────────────────────────────
+
+def _frontend_block() -> str:
+    quelle = LAUF.read_text(encoding="utf-8")
+    return quelle.split('step "Frontend-Daten exportieren')[1].split('step "')[0]
+
+
+def test_jedes_skript_im_frontend_export_wird_gemessen():
+    """⚠ Zehn Skripte lagen unter EINER Zeitmessung. Am 2026-09-03 stand dafür eine einzige
+    Zahl im Protokoll (Median 575 s), und „welches davon" war nur durch Subtraktion zu
+    beantworten — sechs von Hand messen, den Rest ausrechnen. Das Ergebnis war eine
+    Schätzung mit Fehlerbalken, wo eine Messung hätte stehen können."""
+    import re
+    # ⚠ ZEILENWEISE, NICHT MIT RUECKSCHAU. `(?<!teil )` prueft die vier Zeichen direkt vor
+    # `$PY` — dort steht aber der Skriptname, nicht `teil`. Das Muster meldete deshalb ALLE
+    # zehn als ungemessen, auch die umschlossenen; ein Test, der immer anschlaegt, sagt
+    # nichts.
+    ungemessen = []
+    for zeile in _frontend_block().splitlines():
+        m = re.search(r"\$PY scripts/([a-z_]+)\.py", zeile)
+        if m and f"teil {m.group(1)} $PY" not in zeile:
+            ungemessen.append(m.group(1))
+    assert not ungemessen, f"ohne Zwischenzeit: {ungemessen}"
+
+
+def test_teil_reicht_den_rueckgabewert_durch():
+    """⚠ Die Aufrufer hängen `|| echo "⚠ …"` an oder stehen in einem `if`. Verschluckt der
+    Helfer den Code, meldet kein einziger Schritt mehr einen Fehlschlag — und ein stiller
+    Ausfall ist genau das, was dieser Lauf sonst überall bekämpft."""
+    quelle = LAUF.read_text(encoding="utf-8")
+    kern = quelle.split("teil() {")[1].split("\n}")[0]
+    assert "local code=$?" in kern
+    assert "return $code" in kern
+
+
+def test_zwischenzeit_geht_auf_stderr():
+    """⚠ Zwei Aufrufe schicken ihre Ausgabe nach `/dev/null`. Stünde die Zeile auf stdout,
+    verschwände sie mit. `exec > >(tee …) 2>&1` führt stderr ohnehin ins selbe Protokoll."""
+    quelle = LAUF.read_text(encoding="utf-8")
+    kern = quelle.split("teil() {")[1].split("\n}")[0]
+    assert "1>&2" in kern
+
+
+def test_zwischenzeiten_kollidieren_nicht_mit_den_schrittzeiten():
+    """`_ernte_minuten` sucht `⏱ <Schrittname> — Ns`. Hiesse ein Skript wie ein Schritt,
+    zählte der Wächter die Zwischenzeit als Schrittdauer mit."""
+    import re
+    quelle = LAUF.read_text(encoding="utf-8")
+    skripte = {m.group(1) for m in re.finditer(r"teil ([a-z_]+) \$PY", quelle)}
+    schritte = {m.group(1) for m in re.finditer(r'step "(.+)"', quelle)}
+    assert not (skripte & schritte)

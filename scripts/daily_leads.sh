@@ -392,6 +392,30 @@ step() {
   echo ""; echo "▶ $(date '+%T')  $*"
 }
 
+# ── ZWISCHENZEIT JE SKRIPT ────────────────────────────────────────────────────────────
+#
+# WARUM. Der Frontend-Export ist EIN Schritt mit zehn Skripten darin. Am 2026-09-03 stand
+# dafuer im Protokoll eine einzige Zahl (Median 575 s), und die Frage „welches davon" war
+# nur durch Subtraktion zu beantworten: sechs Skripte von Hand messen, den Rest ausrechnen.
+# Das Ergebnis war eine Schaetzung mit Fehlerbalken, wo eine Messung haette stehen koennen.
+#
+# ⚠ AUF STDERR, NICHT AUF STDOUT. Zwei der Aufrufe schicken ihre Ausgabe nach `/dev/null`;
+# stuende die Zeile auf stdout, verschwaende sie mit. `exec > >(tee …) 2>&1` weiter oben
+# fuehrt stderr ohnehin ins selbe Protokoll.
+#
+# ⚠ RUECKGABEWERT DURCHREICHEN. Die Aufrufer haengen `|| echo "⚠ …"` an oder stehen in
+# einem `if`; verschluckt der Helfer den Code, meldet kein einziger Schritt mehr einen
+# Fehlschlag — und ein stiller Ausfall ist genau das, was dieser Lauf sonst ueberall
+# bekaempft.
+teil() {
+  local name="$1"; shift
+  local start=$SECONDS
+  "$@"
+  local code=$?
+  printf '    ⏱ %s — %ds\n' "$name" "$(( SECONDS - start ))" 1>&2
+  return $code
+}
+
 # ── ZEITGRENZE JE SCHRITT ─────────────────────────────────────────────────────────────
 #
 # WARUM. Am 2026-08-16 fror der Lauf 10,5 Stunden ein. Der Playwright-Browser des
@@ -1178,12 +1202,12 @@ $PY scripts/region_ableiten.py \
   || echo "  ⚠ Regions-Ableitung fehlgeschlagen — Bundeslaender bleiben so lueckenhaft wie die Quelle."
 
 step "Frontend-Daten exportieren (web/data)"
-if $PY scripts/export_web_leads.py; then
+if teil export_web_leads $PY scripts/export_web_leads.py; then
   # ACHTUNG: export_web_leads.py schreibt plz-geo.json komplett neu und wirft dabei den
   # Stadt-Index `_cities` weg (Umkreissuche über Stadtnamen). Der Index MUSS direkt danach
   # neu gebaut werden, sonst findet die Stadtsuche im Frontend nichts mehr.
-  $PY scripts/build_city_index.py || echo "  ⚠ Stadt-Index nicht gebaut — Umkreissuche über Städte fällt aus."
-  $PY scripts/export_suppliers.py || echo "  ⚠ Lieferanten-Index nicht gebaut — Onboarding-Matching bleibt auf altem Stand."
+  teil build_city_index $PY scripts/build_city_index.py || echo "  ⚠ Stadt-Index nicht gebaut — Umkreissuche über Städte fällt aus."
+  teil export_suppliers $PY scripts/export_suppliers.py || echo "  ⚠ Lieferanten-Index nicht gebaut — Onboarding-Matching bleibt auf altem Stand."
   # ── ZWEI PRODUKTWEGE, DIE BIS 2026-08-23 IN KEINEM LAUF STANDEN ────────────────────
   #
   # Beide schreiben nach `web/data` und wurden trotzdem nie gebaut. Aufgefallen ist es
@@ -1191,46 +1215,46 @@ if $PY scripts/export_web_leads.py; then
   # `firma-profiles.json` war 23 TAGE alt (16,6 MB) und speist die /firma-Seite.
   # Klassischer Fall von „gebaut, aber nicht verdrahtet" — eine Ebene weiter aussen als
   # die Gold-Builder, und deshalb von Sonde 1 lange nicht gesehen.
-  $PY scripts/export_web_awards.py \
+  teil export_web_awards $PY scripts/export_web_awards.py \
     || echo "  ⚠ Zuschlagsphase nicht gebaut — die Ansicht bleibt auf altem Stand."
   # 70 MB. Laeuft NACH den Leads, weil es `lead_export` liest.
-  $PY scripts/export_firma_profiles.py \
+  teil export_firma_profiles $PY scripts/export_firma_profiles.py \
     || echo "  ⚠ Firmenprofile nicht gebaut — /firma bleibt auf altem Stand."
   # Vorgangsakten (/vorgang): Ausschreibung, Korrekturen, Unterlagen und Zuschlag unter einer
   # Nummer. MUSS NACH DEN LEADS LAUFEN — es liest `web/data/leads-*.json`, um die Produktmenge
   # zu bestimmen (rund 36.000 von 1,47 Mio. Vorgaengen). Vorher gelesen wuerde es die Menge
   # von gestern aufbereiten, und das faellt niemandem auf: alte Akten sehen aus wie frische.
   # Braucht ausserdem build_vorgaenge.py (Z. 1058) und export_doc_listing.py (Z. 1076) davor.
-  $PY scripts/export_vorgaenge.py \
+  teil export_vorgaenge $PY scripts/export_vorgaenge.py \
     || echo "  ⚠ Vorgangsakten nicht gebaut — /vorgang bleibt auf altem Stand."
   # Strategie-Aggregate: eigener Export, weil er 36 Monate braucht (unternehmerische
   # Planung), während die Lead-Liste auf 24 gedeckelt ist (Handlungsrelevanz). Fehlte
   # bisher im Tageslauf — /api/strategie las deshalb einen Stand vom 28. Juli.
-  $PY scripts/export_strategie.py >/dev/null \
+  teil export_strategie $PY scripts/export_strategie.py >/dev/null \
     || echo "  ⚠ Strategie-Aggregate nicht gebaut — die Strategie-Ansicht bleibt auf altem Stand."
   # Regionalansicht (Strategie-Sektion „Region"): region_kpi.parquet → web/data/regionen.json.
   # 174 KB, reines Umformen, unter einer Sekunde. Ohne diesen Schritt bliebe die Ansicht auf
   # dem Stand des Tages stehen, an dem sie gebaut wurde — und niemand saehe es, denn eine
   # alte Regionsdatei sieht genauso aus wie eine frische. Genau so verlor `export_doc_text`
   # monatelang unbemerkt den Anschluss.
-  $PY scripts/export_regionen.py \
+  teil export_regionen $PY scripts/export_regionen.py \
     || echo "  ⚠ Regionen-Export fehlgeschlagen — die Regionalansicht bleibt auf altem Stand."
     # Zahlen der oeffentlichen Startseite. Sie stehen dort NICHT im Quelltext, weil eine
     # getippte Zahl in dem Moment veraltet, in dem sie jemand tippt — und niemand merkt es.
-    $PY scripts/export_landing.py \
+    teil export_landing $PY scripts/export_landing.py \
       || echo "  ⚠ Startseiten-Zahlen nicht aktualisiert — die Startseite zeigt den alten Stand."
   # web/data liegt seit dem 2026-08-18 NICHT mehr in Git (s. .gitignore dort). Damit ist
   # dieser Schritt die einzige Bruecke zwischen dem Export hier und dem Deployment: ohne ihn
   # zeigt die Cloud-Fassung den Stand des letzten Uploads, und niemand sieht es, denn alte
   # Daten sehen aus wie frische. Ist kein Speicher konfiguriert, sagt das Skript das und
   # bricht den Tageslauf NICHT ab — lokal ist die Platte weiterhin die Quelle.
-  $PY scripts/upload_web_data.py \
+  teil upload_web_data $PY scripts/upload_web_data.py \
     || echo "  ⚠ Upload uebersprungen oder unvollstaendig — Deployment bleibt auf altem Stand."
 
   # Qualitaetsbericht ZULETZT: er misst, was die Schritte davor hinterlassen haben. Jede
   # Zahl darin wurde bis zum 2026-08-18 von Hand ermittelt — und was von Hand gemessen wird,
   # misst niemand taeglich. Genau so blieben 14 statt 4.499 Volltexte monatelang unbemerkt.
-  $PY scripts/qualitaet_bericht.py >/dev/null \
+  teil qualitaet_bericht $PY scripts/qualitaet_bericht.py >/dev/null \
     || echo "  ⚠ Qualitaetsbericht nicht geschrieben — Verschlechterungen faellen dann niemandem auf."
   echo "  Frontend-Daten ok."
 else
