@@ -137,3 +137,30 @@ ES, SE und DE verschieben sich um 3–12 % — ihre Urteile (5 % / 0 % / 32 %) �
 Randnotiz abgelegt hatte („RO 44 Links — eher ein Problem unserer Extraktion"), war genau
 das. Sie stand da, richtig benannt, und wurde nicht verfolgt, bis Sven nachfragte.
 **Eine notierte Auffälligkeit ist keine erledigte.**
+
+## 5. Stand des Neulaufs (2026-09-03)
+
+Die reparierten Skripte sind **geprüft, aber die kanonischen Dateien sind noch alt.**
+
+Ein Probelauf über **einen** Monat (Ausgabe in den Notizordner, nicht nach `data/`) bestätigt
+die Reparatur:
+
+| | alt | Probelauf |
+|---|---:|---:|
+| Länder | 30 | **31** (LI kam dazu) |
+| RO | 6 tief / 6 flach | **1.067 / 189** → 15,0 % |
+| AT | 33 / 107 | **380 / 199** → 34,4 % |
+| CZ | — | 60,5 % ⚠ |
+| GR | — | 41,0 % ⚠ |
+
+⚠ **`data/sondierung/_tief/` und `linktiefe.json` stehen weiterhin auf den alten Mustern.**
+Der Neulauf schreibt nach `data/` und wurde **nicht gestartet**, weil `scripts/laeuft_was.sh`
+laufende Prozesse meldet (Healy-Hudson-Abrufer, `analyze_docs`, zwei Arbeiter der zweiten
+Sitzung).
+
+**Zu tun, sobald die Bahn frei ist:**
+```
+scripts/laeuft_was.sh && python3 scripts/sondiere_tief.py --monate 12
+scripts/laeuft_was.sh && python3 scripts/miss_linktiefe.py --monate 3
+```
+Danach stimmt auch die Spalte „EU-Anteil" in [`00-uebersicht.md`](00-uebersicht.md).
