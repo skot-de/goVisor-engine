@@ -720,6 +720,32 @@ DOC_REGISTRY: list[Source] = [
                    "`Disallow: /app/docmgmt`. Der Dateiendpunkt liegt EXAKT im gesperrten "
                    "Pfad. Fuenfter Fall dieser Bauart. Nicht abgerufen.",
            url="https://eu.eu-supply.com"),
+    # ── LU, sondiert am 2026-09-03 · Kapitel: docs/sondierung/lu.md ───────────────────
+    Source("sond-lu-pmp", "Portail des marchés publics (LU)", "", "LU", "beides",
+           "sondiert", portals=1, ebene="unterlagen", ertrag="teilweise",
+           coverage="87,0 % des luxemburgischen Unterlagen-Felds (1.618 von 1.859); EIN einziges "
+                    "orgAcronyme (t5y) fuer das ganze Land",
+           overlap="🟡 OFFEN, ABER MIT ZEITFENSTER. robots.txt: 'User-agent: * / Disallow:' — ein "
+                   "LEERES Disallow, also ausdruecklich alles erlaubt (2. Erlaubnis nach BG). "
+                   "Keine Anmeldung, kein CAPTCHA. Software ist ATEXO/MPE wie Frankreichs PLACE — "
+                   "dort scheiterte es an CAPTCHA+Login, hier nicht: gleiche Software, andere "
+                   "Konfiguration. "
+                   "⏳ ⚠ DER ENTSCHEIDENDE FUND: DIE UNTERLAGEN VERSCHWINDEN NACH FRISTENDE. Alle "
+                   "30 Vergaben aus TED-Paketen der letzten 3 Monate meldeten 'Aucune piece n'a "
+                   "ete jointe'; drei LAUFENDE Vergaben aus der Portalsuche trugen 'Dossier de "
+                   "soumission' mit 4,41 / 1,41 / 26,15 MB. Fuer LU gibt es KEINE nachtraegliche "
+                   "Ernte — ein Abrufer muss dem laufenden Bestand folgen, nicht dem TED-Archiv. "
+                   "Erster Zeitfenster-Fall der Sondierung; gehoert als eigene Frage in jede "
+                   "weitere Pruefung. "
+                   "🟡 ABRUFWEG NICHT ABGESCHLOSSEN: /index.php?page=Entreprise."
+                   "EntrepriseDemandeTelechargementDce&id=<n> ist ohne Anmeldung erreichbar und "
+                   "bietet ausdruecklich 'Je souhaite telecharger ANONYMEMENT le Dossier' "
+                   "(Feld choixAnonyme), ohne Personendaten. Das ist EIN POST — nicht abgesendet, "
+                   "weil ein Formular abzusenden eine Handlung ist und Svens Zustimmung braucht. "
+                   "🇪🇺 BESONDERHEIT: 8 % der 'LU'-Ausschreibungen stammen von EU-Institutionen mit "
+                   "Sitz in Luxemburg (ec.europa.eu 6,9 %, eib.org 1,6 %, curia.europa.eu 1,5 %) — "
+                   "wer LU-Zahlen mit anderen Laendern vergleicht, vergleicht nicht dasselbe.",
+           url="https://pmp.b2g.etat.lu"),
     # ── DK, sondiert am 2026-09-03 · Kapitel: docs/sondierung/dk.md ───────────────────
     Source("sond-dk-ethics", "Ethics (DK)", "", "DK", "beides",
            "sondiert", portals=1, ebene="unterlagen", ertrag="offen",
