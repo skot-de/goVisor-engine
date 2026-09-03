@@ -54,7 +54,7 @@ abgerufen. Nicht: „gebaut". Gebaut ist davon nur Deutschland.
 | **LU** | 0,5 % | *offen* | 1,5 % | ⏳ nur bis Fristende | [lu](lu.md) |
 | **MT** | 0,3 % | **100 %** | 0,6 % | ✅ European Dynamics | [european-dynamics](european-dynamics.md) |
 | **CY** | 0,3 % | **100 %** | 0,0 % | ✅ European Dynamics | [european-dynamics](european-dynamics.md) |
-| **AT** | 0,1 % | ? | **76,4 %** ⚠ | ✅ angebunden | — |
+| **AT** | ⚠ *neu* | — | 31,5 % | ✅ angebunden · `*.vergabeportal.at` 49,7 % | — |
 | **IS** | 0,1 % | ? | 17,9 % | ⚪ nur TED | — |
 | **RO** | ⚠ *neu* | **offen** | 15,1 % | ✅ `e-licitatie.ro` 99,7 %, zweiphasig | [ro](ro.md) |
 
@@ -117,6 +117,8 @@ brauchen alle drei denselben sitzungsführenden Abrufer** (POST mit Formularzust
   (IE, SI, HU, BG teilweise).
 - ✅ **Rumänien ist erledigt** — und die Auffälligkeit („44 Links im Jahr") war unsere
   Extraktion, nicht das Land. `e-licitatie.ro` trägt 99,7 % und ist offen ([ro](ro.md)).
-- ⚠ **Österreich ist nachzumessen.** Derselbe Muster-Fehler zeigte 46 statt 584
-  Ausschreibungen im Monat; die 76,4 % „ohne Verfahren" in der Tabelle oben stammen aus
-  einer Stichprobe von 33 Links und sind wertlos.
+- ✅ **Österreich ist nachgemessen und damit erledigt.** 1.668 Ausschreibungen in 3 Monaten,
+  90 Domains, `*.vergabeportal.at` 49,7 % · `wien.gv.at` 14,7 % · `provia.at` 9,7 %,
+  31,5 % der Links ohne Verfahren (vorher stand hier 76,4 % aus 33 Links — wertlos).
+  ⚠ **Keine weitere Sondierung**: AT ist angebunden, und die Lage ist mehrfach geprüft —
+  ohne Anmeldung kommt man nicht an die Unterlagen (Sven, stehende Entscheidung).
