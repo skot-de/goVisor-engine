@@ -2,18 +2,28 @@
 """Eine hochgeladene Vergabeunterlage → §5-Prüfkette → Pipeline → Ergebnis je notice_id.
 
 Verarbeitet NUR den einen ``notice_id`` (kein Korpus-Rebuild): Dateien in
-``data/docs/DE/<notice_id>/`` → Sicherheitsprüfungen (§5, in Reihenfolge) → Volltext (docpipe)
+``data/docs/<LAND>/<notice_id>/`` → Sicherheitsprüfungen (§5, in Reihenfolge) → Volltext (docpipe)
 → Parser-Schiene (docparse) + typisierte LLM-Extraktion (analyze_docs) → Signale (docsignals).
 Aktualisiert web/data/{doc-text,doc-signals,doc-analysis}.json und gibt die Detail-Felder
 (lbText/lbSignals/lbAnalyse) als JSON auf stdout aus.
 
-Aufruf:  python3 scripts/process_upload.py <notice_id>
+Aufruf:  python3 scripts/process_upload.py <notice_id> [buyer] [LAND]   (LAND-Vorgabe: DE)
 """
 import json
 import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+# ⚠ DAS LAND STAND HIER FEST AUF „DE". Ein schweizerischer oder oesterreichischer Kunde, der
+# seine Unterlagen hochlaedt, bekam sie unter Deutschland abgelegt — und weil AT und CH bei
+# den Portalen 0 % Abdeckung haben, sind SELBST HOCHGELADENE Dateien dort die EINZIGE
+# Dokumentquelle. Genau die wurden also falsch einsortiert. Gemessen faellt es nicht auf:
+# die Analyse laeuft durch, das Ergebnis stimmt, nur das Land ist falsch — und damit jede
+# Laenderstatistik und die Pfad-Herkunft, an der die Warteschlange den Rang festmacht.
+_ERLAUBT = ("DE", "AT", "CH", "LU")
+LAND = (sys.argv[3].upper() if len(sys.argv) > 3 else "DE")
+if LAND not in _ERLAUBT:                       # nie ungeprueft in einen Pfad
+    LAND = "DE"
 sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT / "scripts"))
 from govisor import docpipe, docsignals, docparse, docupload, llm   # noqa: E402
@@ -25,7 +35,7 @@ CAP_TEXT = 60_000
 
 def collect(nid: str) -> list[tuple[str, str, bytes]]:
     """Alle Dateien des Vorgangs als (name, ext, bytes) — ZIPs entpackt (docpipe, nested-safe)."""
-    d = ROOT / "data" / "docs" / "DE" / nid
+    d = ROOT / "data" / "docs" / LAND / nid
     out = []
     if not d.exists():
         return out

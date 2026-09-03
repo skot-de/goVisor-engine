@@ -964,9 +964,16 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
           if (statusEl) statusEl.textContent = t("Lade hoch und analysiere … (kann bis ~30 s dauern)");
           const fd = new FormData();
           fd.append("file", file);
-          const lb = (CORE.find((x) => x.id === value) as (Lead & { buyer?: string }) | undefined)?.buyer || "";
+          const lbLead = CORE.find((x) => x.id === value) as (Lead & { buyer?: string; land?: string }) | undefined;
+          const lb = lbLead?.buyer || "";
+          // ⚠ DAS LAND MUSS MIT. Ohne es legt der Endpunkt jeden Upload unter „DE" ab — und
+          // weil AT und CH bei den Portalen 0 % Dokumentabdeckung haben, sind selbst
+          // hochgeladene Dateien dort die EINZIGE Quelle. Genau die landeten im falschen
+          // Land. Fehlt `land` am Lead, bleibt es bei der Vorgabe des Endpunkts.
+          const ll = lbLead?.land || "";
           try {
-            const r = await fetch(`/api/lead-docs?id=${encodeURIComponent(value)}&buyer=${encodeURIComponent(lb)}`,
+            const r = await fetch(`/api/lead-docs?id=${encodeURIComponent(value)}&buyer=${encodeURIComponent(lb)}`
+              + (ll ? `&land=${encodeURIComponent(ll)}` : ""),
               { method: "POST", body: fd });
             const d = await r.json();
             if (!r.ok || d.error) { if (statusEl) statusEl.textContent = t("Fehler: {grund}", { grund: d.error || r.status }); return; }

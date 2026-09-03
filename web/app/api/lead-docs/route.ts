@@ -18,10 +18,15 @@ export const maxDuration = 120;
 const ROOT = path.resolve(process.cwd(), "..");   // Server-cwd ist web/ → Repo-Wurzel eine Ebene höher
 const ALLOWED = /\.(zip|pdf|docx?|xlsx?|txt|html?)$/i;
 
-function runPipeline(id: string, buyer: string): Promise<Record<string, unknown>> {
+// ⚠ Ein Land, das in einen DATEIPFAD geht, wird gegen eine feste Liste geprüft — nie
+// durchgereicht. `id` hat oben schon sein Muster; hier gilt dasselbe eine Ebene tiefer.
+const LAENDER = new Set(["DE", "AT", "CH", "LU"]);
+
+function runPipeline(id: string, buyer: string, land: string): Promise<Record<string, unknown>> {
   return new Promise((resolve, reject) => {
-    const args = ["scripts/process_upload.py", id];
-    if (buyer) args.push(buyer.slice(0, 200));       // §5-4 Lead-Zuordnung (Käufer-Abgleich)
+    // ⚠ Das Land ist das DRITTE Argument und setzt `buyer` voraus. Ohne Käufer muss ein
+    // leerer Platzhalter mit, sonst rutscht das Land auf die Käufer-Position.
+    const args = ["scripts/process_upload.py", id, buyer ? buyer.slice(0, 200) : "", land];
     const p = spawn("python3", args, { cwd: ROOT });
     let out = "", err = "";
     p.stdout.on("data", (d) => (out += d));
@@ -43,6 +48,15 @@ export async function POST(req: Request) {
   const u = new URL(req.url);
   const id = u.searchParams.get("id") || "";
   const buyer = u.searchParams.get("buyer") || "";
+  // ⚠ HIER STAND KEIN LAND, UND DER PFAD UNTEN WAR FEST „DE". Ein schweizerischer oder
+  // österreichischer Kunde bekam seinen Upload unter Deutschland abgelegt. Das wiegt
+  // schwerer als es klingt: AT und CH haben bei den Portalen 0 % Dokumentabdeckung, selbst
+  // hochgeladene Dateien sind dort also die EINZIGE Quelle — und genau die wurden falsch
+  // einsortiert. Fehlt der Wert (ältere Clients), bleibt es bei DE.
+  const land = (u.searchParams.get("land") || "DE").toUpperCase();
+  if (!LAENDER.has(land)) {
+    return NextResponse.json({ error: "unbekanntes Land" }, { status: 400 });
+  }
   // notice_id-Muster erzwingen → kein Path-Traversal (keine / oder .).
   if (!/^[0-9A-Za-z_-]{3,40}$/.test(id)) {
     return NextResponse.json({ error: "ungültige id" }, { status: 400 });
@@ -84,7 +98,7 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "Dateityp nicht unterstützt (ZIP/PDF/DOCX/XLSX)" }, { status: 400 });
   }
 
-  const dir = path.join(ROOT, "data", "docs", "DE", id);
+  const dir = path.join(ROOT, "data", "docs", land, id);
   await mkdir(dir, { recursive: true });
   await writeFile(path.join(dir, safe), Buffer.from(await file.arrayBuffer()));
 
@@ -99,7 +113,7 @@ export async function POST(req: Request) {
   }
 
   try {
-    return NextResponse.json(await runPipeline(id, buyer));
+    return NextResponse.json(await runPipeline(id, buyer, land));
   } catch (e) {
     return NextResponse.json({ error: String((e as Error).message).slice(0, 300) }, { status: 500 });
   }

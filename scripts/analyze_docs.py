@@ -96,7 +96,12 @@ def _sql_liste(pfade: list[str]) -> str:
 #
 # ⚠ Wer ein Land WIRKLICH allein will, nimmt `LAND=LU` — ein Filter, kein Rang, und genau
 # dafuer da (etwa um die franzoesischen Doktyp-Muster erstmals zu messen).
-LAND_PRIO = [x.strip().upper() for x in os.environ.get("LAND_PRIO", "").split(",") if x.strip()]
+# VORGABE: Deutschland zuerst, Luxemburg zuletzt. Sven am 2026-09-03: „lass DE auf erster
+# stelle. LU ist erst einmal nur zum material sammeln." LU steht deshalb NICHT in der Liste
+# und faellt damit hinter alle genannten — Material sammeln heisst indizieren, nicht
+# auswerten. Wer LU doch auswerten will, nimmt `LAND=LU` (Filter) oder setzt LAND_PRIO um.
+LAND_PRIO = [x.strip().upper()
+             for x in os.environ.get("LAND_PRIO", "DE,AT,CH").split(",") if x.strip()]
 
 
 def _land_rang_sql(spalte: str) -> str:
