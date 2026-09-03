@@ -720,6 +720,22 @@ DOC_REGISTRY: list[Source] = [
                    "`Disallow: /app/docmgmt`. Der Dateiendpunkt liegt EXAKT im gesperrten "
                    "Pfad. Fuenfter Fall dieser Bauart. Nicht abgerufen.",
            url="https://eu.eu-supply.com"),
+    # ── SK, sondiert am 2026-09-03 · Kapitel: docs/sondierung/sk.md ───────────────────
+    Source("sond-sk-uvo", "ÚVO (uvo.gov.sk)", "", "SK", "beides",
+           "sondiert", portals=1, ebene="unterlagen", ertrag="gesperrt",
+           coverage="95,8 % des slowakischen Unterlagen-Felds (4.383 von 4.577, 12 Monate) — "
+                    "nach dem Baltikum der konzentrierteste Markt, mit tiefen Adressen "
+                    "(/vyhladavanie-zakaziek/dokumenty/<id>)",
+           overlap="⛔ GESPERRT DURCH EINE FREIGABELISTE, nicht durch eine Pfadsperre. Die "
+                   "robots.txt nennt Googlebot, bingbot, Applebot, GPTBot, ClaudeBot, "
+                   "PerplexityBot u. a. mit Crawl-delay und `Disallow: /private/` — und "
+                   "schliesst mit `User-agent: * / Disallow: /`. Wer nicht genannt ist, ist "
+                   "ganz gesperrt. ⚠ Dass ClaudeBot dort steht, ist KEIN Freibrief: das ist "
+                   "der Suchindex-Crawler, nicht dieses Werkzeug; sich seinen Namen zu geben "
+                   "waere eine Falschangabe. ⚠ Meine Vermutung „SK ist ein ProeBiz-Land\" war "
+                   "falsch — ProeBiz ist dort der ABGABEORT (1.099), nicht die Unterlagen"
+                   "quelle (124).",
+           url="https://www.uvo.gov.sk"),
     # ── ANGEBUNDEN ────────────────────────────────────────────────────────────────────
     Source("doc-cosinex-de", "cosinex/DTVP-Unterlagen", "docfetch-cosinex", "DE", "beides",
            "live", portals=40, ebene="unterlagen", ertrag="dateien", modul="govisor.docfetch",
