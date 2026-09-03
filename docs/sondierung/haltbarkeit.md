@@ -172,3 +172,79 @@ Damit ist die Frage „jetzt sammeln oder später?" endgültig entschärft:
 
 ⚠ **Der einzige echte Verlust, der noch läuft, ist Luxemburg.** Alles andere kann warten,
 bis ein Parser da ist, der etwas damit anfängt.
+
+
+---
+
+# Teil 3: Deutschland — und eine Korrektur an Teil 1
+
+Sven fragte nach: *„willst du mir damit sagen, dass ich selbst in Deutschland auf eine
+Ausschreibung von 2016 klicken und die Dokumente noch runterladen kann?"*
+
+**Nein. Und in Deutschland nicht einmal für 2025.**
+
+## 10. ⚠ Deutschland verhält sich anders als der EU-Schnitt
+
+In Teil 2 stand, vor 2020 zeigten 83–96 % der `URL_DOCUMENT` auf **Käufer-Webseiten**, die
+verrotten. **Für Deutschland stimmt das nicht.** Die deutschen Werte zeigen schon 2016 auf
+zentrale Plattformen:
+
+| Jahr | DE-Bekanntmachungen mit `URL_DOCUMENT` | häufigste Ziele |
+|---|---:|---|
+| 2016 | 25 % | evergabe.nrw · evergabe-online · dtvp · subreport |
+| 2018 | 41 % | evergabe-online · dtvp · meinauftrag.rib · evergabe.nrw |
+| 2020 | 42 % | dtvp · meinauftrag.rib · subreport · deutsche-evergabe |
+| 2022 | 43 % | dtvp · meinauftrag.rib · subreport · evergabe-online |
+
+Deutschland hatte seine eVergabe-Plattformen also **früh**. Der EU-Befund „Käuferseiten
+verrotten" beschreibt Polen, Bulgarien, Slowenien — nicht Deutschland.
+
+## 11. ⛔ Und trotzdem ist nichts mehr da — auch aus 2026
+
+Geprüft, je drei Adressen pro Jahrgang:
+
+| Jahrgang | DTVP | RIB »meinauftrag« | evergabe.nrw |
+|---|---|---|---|
+| 2016 / 2018 / 2020 / 2022 | ⛔ 404 | ⛔ „no longer publicly available" | ⛔ |
+| **2024-06** | ⛔ **404** | — | — |
+| **2025-01** | — | ⛔ **„no longer publicly available"** | ⛔ **404** |
+| **2025-06** | ⛔ **404** | ⛔ | — |
+| **2026-01** | ⛔ **404** | ⛔ | — |
+
+Die Plattformen sagen es selbst:
+
+> **RIB:** *„Announcement not found. The desired announcement is no longer publicly
+> available."*
+> **DTVP:** *„Ein unerwarteter Fehler ist aufgetreten."* (HTTP 404)
+
+⚠ **Selbst eine Bekanntmachung vom Januar 2026 — acht Monate alt — ist weg.** Die deutschen
+Plattformen entfernen die Unterlagen binnen Monaten nach Fristende, nicht nach Jahren.
+
+*(Nicht abschliessend geklärt: `evergabe-online.de` gibt HTTP 400 mit „Cookies benötigt",
+`deutsche-evergabe.de` und `subreport.de` antworten mit 200, aber ohne erkennbaren Inhalt.
+Drei von sechs Plattformen sind eindeutig, drei unklar.)*
+
+## 12. ⚠ Damit ist meine Aussage aus Teil 1 für Deutschland falsch
+
+Teil 1 schloss: *„ausser Luxemburg zwingt uns nichts, heute loszulaufen."* Das galt für die
+zehn geprüften **Ein-Plattform-Länder** — dort lagen 14 Monate alte Unterlagen noch bereit.
+
+**Für Deutschland gilt das Gegenteil.** Und das erklärt rückwirkend, warum goVisor
+13 deutsche Abrufer hat, die täglich laufen: in Deutschland ist Sammeln **die einzige
+Möglichkeit**. Unser Bestand — **244 GB, 10.165 Vergabe-ZIPs, alle 2026 geholt** — existiert
+nur, weil er live abgegriffen wurde. Nachholen wäre unmöglich.
+
+## 13. Die berichtigte Regel
+
+**Aufbewahrung ist Plattformsache, nicht Ländersache — und sie schwankt extrem.**
+
+| | |
+|---|---|
+| **SI, BG, EE** | Jahre. Belegt bis **2022** abrufbar |
+| LT, IE, CY, MT, PT, HU, LV, RO | ≥ 14 Monate belegt |
+| **LU** | ⏳ bis Fristende |
+| **DE (DTVP, RIB, NRW)** | ⛔ **Monate** — 2026-01 ist schon weg |
+
+⚠ **Wer für ein neues Land entscheidet, ob gesammelt werden muss, misst das an der
+Plattform — nicht am Land und nicht am EU-Durchschnitt.** Der Test kostet drei Abrufe:
+eine Vergabe von heute, eine von vor einem Jahr, eine von vor drei Jahren.
