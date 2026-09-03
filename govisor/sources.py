@@ -692,6 +692,34 @@ DOC_REGISTRY: list[Source] = [
                    "nach oeffentlichem Zugang — aber der Server verweigert schon die "
                    "robots.txt mit 403. Nicht weiter verfolgt.",
            url="https://community.vortal.biz"),
+    # ── ZWEITE RUNDE 2026-09-03 · docs/sondierung/00b-nachpruefung.md §8-11 ───────────
+    Source("sond-it-acquistitelematici", "acquistitelematici.it (222 Instanzen)", "", "IT",
+           "beides", "sondiert", portals=222, ebene="unterlagen", ertrag="dateien",
+           coverage="6,1 % Italiens ueber 222 Domains — groesser als Soresa",
+           overlap="✅ OFFEN, belegt: /tender/<id> listet die Dokumente, "
+                   "/tender/documenti/<id>/<name>?dmsDoc=1 liefert sie. 165.633 B "
+                   "p7m-Behaelter mit 24-seitigem PDF (Capitolato speciale), anonym.",
+           url="https://rovigo.acquistitelematici.it"),
+    Source("sond-it-traspare", "traspare.com (137 Instanzen)", "", "IT", "beides",
+           "sondiert", portals=137, ebene="unterlagen", ertrag="dateien",
+           coverage="5,0 % Italiens ueber 137 Domains",
+           overlap="✅ OFFEN, belegt: /announcements/<id> zeigt die Vergabe, "
+                   "/fs_PUBLIC_action?do=download_document&id=… liefert die Datei — "
+                   "20.788.918 B, 35-seitiges PDF, anonym.",
+           url="https://montedoro.traspare.com"),
+    Source("sond-it-tuttogare", "tuttogare.it (179 Instanzen)", "", "IT", "beides",
+           "sondiert", portals=179, ebene="unterlagen", ertrag="gesperrt",
+           coverage="4,6 % Italiens", overlap="⛔ robots sperrt die Dateipfade.",
+           url="https://www.tuttogare.it"),
+    Source("sond-eu-supply", "EU-Supply (NO, DK, NL, FR, IE, DE)", "", "NO", "beides",
+           "sondiert", portals=1, ebene="unterlagen", ertrag="gesperrt",
+           coverage="NO 3.389, DK 3.166, NL 154, FR 46, IE 42, DE 32 (12 Monate)",
+           overlap="⛔ Die Vergabeseite ist OEFFENTLICH (Public RFT, kein Anmeldefeld) und "
+                   "braucht nur einen Sitzungskeks. Aber der Download baut sich als "
+                   "strDomain + '/app/docmgmt/downloadPublicDocument.asp' — und robots sagt "
+                   "`Disallow: /app/docmgmt`. Der Dateiendpunkt liegt EXAKT im gesperrten "
+                   "Pfad. Fuenfter Fall dieser Bauart. Nicht abgerufen.",
+           url="https://eu.eu-supply.com"),
     # ── ANGEBUNDEN ────────────────────────────────────────────────────────────────────
     Source("doc-cosinex-de", "cosinex/DTVP-Unterlagen", "docfetch-cosinex", "DE", "beides",
            "live", portals=40, ebene="unterlagen", ertrag="dateien", modul="govisor.docfetch",

@@ -154,3 +154,81 @@ Bildrätsel gesperrt.
 - **Spaniens** `larioja`, `diba`, `adif`: ungeprüft
 - **Vortal** (ES/PT): 403 auf robots.txt, nicht weiter verfolgt
 - der Schwanz **unter** 100 Nennungen in allen Ländern
+
+
+---
+
+# Zweite Runde (2026-09-03, abends)
+
+## 8. Italien: von 4 % auf 15,1 %
+
+Der italienische Schwanz besteht aus **mandantenfähigen Familien**, die ich alle übersehen
+hatte. Über zwölf Monate: 2.204 Domains, aber sie kollabieren zu wenigen Systemen.
+
+| Familie | Domains | Anteil IT | Urteil |
+|---|---:|---:|---|
+| **`acquistitelematici`** | **222** | **6,1 %** | ✅ **offen** |
+| **`traspare`** | **137** | **5,0 %** | ✅ **offen** |
+| `tuttogare` | 179 | 4,6 % | ⛔ Dateipfade gesperrt |
+| `DettaglioProcedura` (aflink, areacom, sardegnacat) | 11 | 3,0 % | 🟡 Seite öffentlich, keine Anlagen gerendert |
+| `PortaleAppalti` (Maggioli) | 24 | 2,1 % | ⛔ `Disallow: /`, Ausnahmen nur für Googlebot |
+| `asmecomm` | 2 | 1,0 % | ungeprüft |
+
+**`acquistitelematici`** (`rovigo.acquistitelematici.it/tender/168`): die Vergabeseite
+listet 13 Dokumente mit direkten Pfaden `/tender/documenti/<id>/<name>?dmsDoc=1`. Geholt:
+**165.633 Bytes**, ein signierter `.p7m`-Behälter mit einem **24-seitigen PDF** darin
+(Capitolato speciale). Anonym.
+
+**`traspare`** (`montedoro.traspare.com`): der Pfad heißt `/fs_**public**_action?do=
+download_document&id=…`. Geholt: **20.788.918 Bytes, 35-seitiges PDF**. Anonym.
+
+**Mit Soresa (4 %) sind das 15,1 % Italiens** — fast das Vierfache dessen, was im Kapitel
+stand, und alles aus dem Teil, den ich als „unbekannt" abgehakt hatte.
+
+## 9. ⛔ EU-Supply — der Download liegt im gesperrten Pfad
+
+Der größte ungeprüfte länderübergreifende Anbieter: **NO 3.389, DK 3.166**, dazu NL, FR,
+IE, DE. Ein Test hätte zwei Länder entschieden.
+
+Die Vergabeseite ist **öffentlich** (`Public RFT`, kein Anmeldefeld) — sie braucht nur einen
+Sitzungskeks, sonst leitet sie im Kreis. Die Dokumentenliste zeigt echte Dateien
+(*„Del 1_Konkurransegrunnlag teleskopamfi.pdf"*).
+
+Der Download baut sich aber so:
+```js
+strDownloadPublicDocumentURL = strDomain + '/app/docmgmt/downloadPublicDocument.asp'
+```
+und die robots.txt sagt:
+```
+Disallow: /app/docmgmt
+```
+
+**Der Dateiendpunkt liegt exakt im gesperrten Pfad.** Fünfter Fall dieser Bauart nach Open
+Nexus, LoginTrade, START Toscana und NEN. Nicht abgerufen.
+
+## 10. Polens Versorger — überwiegend schon beurteilt
+
+Der 7,6-%-Schwanz sah nach eigenen Systemen aus, ist aber größtenteils **Marketplanet**:
+`swpp2.gkpge.pl/app/demand/notice/public/…` und `zamowienia.um.warszawa.pl/pn/umw/demand/…`
+tragen denselben Pfad wie die schon geprüften `*.ezamawiajacy.pl` — Urteil „nur im Browser"
+gilt mit.
+
+`przetargi.wody.gov.pl` (1.515, eigenes System): **HTTP 401**.
+
+## 11. Die Anbieterkarte über alle Länder
+
+Erst diese Sicht zeigt, wo ein Test mehrere Länder entscheidet:
+
+| Anbieter | Länder (Nennungen, 12 Monate) | Urteil |
+|---|---|---|
+| `mercell` / `tendsign` | SE 12.754 · NO 11.247 · NL 7.502 · DK 1.084 · IS 466 · DE 425 | ⛔ `Disallow: /` |
+| `marketplanet` | PL 40.715 | 🟡 nur im Browser |
+| `vortal` | **PT 9.251** · ES 258 | ⚠ 403 auf robots.txt |
+| `eu-supply` | NO 3.389 · DK 3.166 · NL 154 · FR 46 · IE 42 · DE 32 | ⛔ Download im gesperrten Pfad |
+| `bravosolution` | FR 2.425 · IT 466 · ES 70 | ⛔ `Disallow: /esop` + Login |
+| **`proebiz`** | **SK 1.472** · CZ 869 · PL 854 | ✅ **offen** |
+
+⚠ **Zwei Länder hängen damit an einem einzigen Anbieter, und beide sind nicht sondiert:**
+Portugal ist praktisch ein Vortal-Land (9.251 Nennungen), die Slowakei praktisch ein
+ProeBiz-Land — und ProeBiz ist offen. **Die Slowakei wäre damit vermutlich das nächste
+offene Land, ohne einen einzigen neuen Abrufer.**
