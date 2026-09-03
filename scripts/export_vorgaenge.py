@@ -30,6 +30,7 @@ Aufruf: python3 scripts/export_vorgaenge.py [--land DE]
 import argparse
 import hashlib
 import json
+import re
 import sys
 from collections import defaultdict
 from pathlib import Path
@@ -41,6 +42,25 @@ sys.path.insert(0, str(ROOT))
 
 OUT = ROOT / "web" / "data"
 JE_VORGANG = OUT / "vorgang"
+# ⚠ ZWEI NAMENSRAEUME, WEIL ES ZWEI ZUGRIFFSMUSTER GIBT. `vorgang/` haelt die Akten der
+# heute sichtbaren Vergaben — der heisse Pfad, aus jedem Lead verlinkt, im Median 21 KB je
+# Buendel. `vorgang-archiv/` haelt alles Uebrige (1,88 Mio.), das seltener und einzeln
+# nachgeschlagen wird; dort sind die Buendel rund 350 KB gross.
+#
+# Alles in EINEN Namensraum zu werfen waere die schlechtere Wahl: 1,47 GB auf 4.096 Buendel
+# ergaeben 360 KB — auch fuer den Klick aus der Trefferliste, der heute 21 KB kostet. Und
+# feiner zu buendeln geht nicht: die Buendelzahl IST die Dateizahl, und daran ist
+# `next build` bei rund 156.000 gestorben.
+ARCHIV = OUT / "vorgang-archiv"
+# Kennung → Vorgang, gebuendelt wie die Akten selbst.
+#
+# ⚠ NICHT ALS EINE DATEI. Als `vorgang-lead.json` war sie 3,6 MB, solange sie nur die
+# Produktmenge fuehrte. Mit allen 3,15 Mio. Bekanntmachungen wurde sie 132 MB — und die
+# Route laedt sie komplett in den Speicher, um EINE Zeile zu beantworten. Das ist derselbe
+# Fehler, an dem `firma-profiles.json` gescheitert ist, nur eine Tabelle weiter.
+KENNUNG = OUT / "vorgang-kennung"
+# Kuerzere Suchformen werden nicht aufgenommen — sie treffen alles und nichts.
+KENNUNG_MIND = 4
 LISTINGS = OUT / "doc-listing"
 
 # Mehr Dateinamen als das trägt keine Ansicht sinnvoll; die längste Liste hat 486.
@@ -135,6 +155,20 @@ def _temp(con: duckdb.DuckDBPyConnection, name: str, spalte: str, werte) -> None
         con.executemany(f"insert into {name} values (?)", [(w,) for w in liste])
 
 
+def kenn_norm(s: str) -> str:
+    """Kennung → Suchform. MUSS mit `web/lib/explorerCore.js` (`_kennNorm`) uebereinstimmen.
+
+    Wer eine Nummer abtippt, tippt sie anders: `BA090-26`, `ba090/26`, `BA 090 26`. Ohne
+    Vereinheitlichung findet die Suche nur den Glueckstreffer.
+    """
+    return re.sub(r"[^a-z0-9]+", "", str(s or "").lower())
+
+
+def kenn_datei(schluessel: str) -> str:
+    """Kennung → Buendelname. MUSS mit `web/lib/vorgangsakte.ts` uebereinstimmen."""
+    return hashlib.sha1(schluessel.encode("utf-8")).hexdigest()[:BUENDEL_STELLEN]
+
+
 def _sichtbare_leads() -> set[str]:
     """Die Vergaben, die der Explorer wirklich zeigt.
 
@@ -157,6 +191,19 @@ def _sichtbare_leads() -> set[str]:
             if isinstance(l, dict) and l.get("id"):
                 ids.add(str(l["id"]))
     return ids
+
+
+def _alle_vorgaenge(con: duckdb.DuckDBPyConnection, land: str) -> set[str]:
+    """Jeder Vorgang des Landes — die Grundlage des Archivs.
+
+    ⚠ WARUM UEBERHAUPT ALLE. Aufbereitet waren bis zum 2026-09-03 nur die 53.867 Vorgaenge
+    heute sichtbarer Vergaben, also 2,8 % von 1.932.060. Eine Vergabe von 2015 war damit
+    nicht auffindbar — und genau danach war die erste Frage gestellt worden. 695.399
+    Vorgaenge stammen aus 2020 oder frueher.
+    """
+    g = f"data/gold/{land}"
+    return {r[0] for r in con.execute(
+        f"select vorgang_id from read_parquet('{g}/vorgaenge.parquet')").fetchall()}
 
 
 def _menge(con: duckdb.DuckDBPyConnection, land: str, sichtbar: set[str]) -> set[str]:
@@ -422,62 +469,135 @@ def _akten(con: duckdb.DuckDBPyConnection, land: str,
     return akten
 
 
-def schreibe(akten: dict[tuple[str, str], dict], nachschlag: dict[str, str]) -> None:
-    """Die Akten in 256 Buendel, nicht in 53.872 Einzeldateien.
+def _buendeln(akten: dict[tuple[str, str], dict], ziel: Path, was: str,
+              raeumen: bool = True) -> None:
+    """Akten in Buendel schreiben; nur Geaendertes anfassen, Verwaistes entfernen.
 
-    ⚠ WARUM NICHT EINE DATEI JE AKTE, wie bei `firma/` und `doc-analysis/`. Dort sind es
-    38.307 bzw. 8.106 Stueck; zusammen mit den 53.872 Akten stuenden rund 156.000 Dateien
-    unter `web/data`, und `next build` starb daran reproduzierbar im Node-Heap (SIGABRT,
-    Stapel in `node::fs::AfterStat`) — Next geht beim Bauen den Projektbaum ab. Mit
-    `--max-old-space-size=8192` lief er wieder, aber ein hochgedrehter Heap verschiebt die
-    Grenze nur; die Zahl der Akten waechst mit jedem Land und jedem Jahr weiter.
-
-    ⚠ UND WARUM NICHT EINE EINZIGE SAMMELDATEI. Genau daran ist `firma-profiles.json`
-    gescheitert: 67 MB laden, um 1,6 KB zu liefern. Ein Buendel ist im Median 150 KB gross
-    und damit die richtige Ladeeinheit zwischen beiden Fehlern.
-
-    Der Buendelname sind die ersten zwei Zeichen des Aktenhashes — dieselbe Funktion, die
-    `web/lib/vorgangsakte.ts` benutzt, also kann nichts auseinanderlaufen.
+    ⚠ `raeumen=False` BEI EINEM TEILLAUF. Das Wegraeumen setzt voraus, dass die uebergebene
+    Menge VOLLSTAENDIG ist. Mit `--land CH` ist sie es nicht — und der erste Versuch loeschte
+    prompt 1.785 Buendel der anderen Laender, waehrend der Lauf „erfolgreich" meldete. Ein
+    Teillauf darf ergaenzen, nie aufraeumen.
     """
-    JE_VORGANG.mkdir(parents=True, exist_ok=True)
-    vorher = {p.name for p in JE_VORGANG.glob("*.json")}
+    ziel.mkdir(parents=True, exist_ok=True)
+    vorher = {p.name for p in ziel.glob("*.json")}
     buendel: dict[str, dict[str, dict]] = defaultdict(dict)
     for (land, vid), akte in akten.items():
         h = dateiname(land, vid)
         buendel[h[:BUENDEL_STELLEN]][h] = akte
-
     neu = gleich = 0
     for name, inhalt in sorted(buendel.items()):
         datei = f"{name}.json"
-        ziel = JE_VORGANG / datei
-        # ⚠ `allow_nan=False` IST DER RIEGEL, NICHT DIE FEINHEIT. Ohne ihn schreibt
-        # `json.dumps` fuer `float('nan')` das nackte `NaN` — gueltiges Python, ungueltiges
-        # JSON — und der Fehler taucht erst beim Lesen im Browser auf, weit weg von hier.
-        # Mit ihm bricht der Export an der Stelle ab, an der der Wert entsteht.
+        pfad = ziel / datei
         text = json.dumps(inhalt, ensure_ascii=False, default=str, sort_keys=True,
                           allow_nan=False)
-        # Nur Geaendertes schreiben — sonst laedt der naechtliche Abgleich alles erneut hoch.
-        if ziel.exists() and ziel.read_text(encoding="utf-8") == text:
+        if pfad.exists() and pfad.read_text(encoding="utf-8") == text:
             gleich += 1
         else:
-            ziel.write_text(text, encoding="utf-8")
+            pfad.write_text(text, encoding="utf-8")
+            neu += 1
+        vorher.discard(datei)
+    if raeumen:
+        for tot in vorher:
+            (ziel / tot).unlink(missing_ok=True)
+    print(f"  {was}: {len(akten):,} Akten in {len(buendel):,} Buendeln · {neu:,} geschrieben, "
+          f"{gleich:,} unveraendert, "
+          f"{len(vorher):,} " + ("entfernt" if raeumen else "fremde behalten (Teillauf)")
+          + f" → {ziel.name}/")
+
+
+def _kennungen(nachschlag: dict[str, str], akten: set[tuple[str, str]]) -> None:
+    """Der Suchindex: jede Kennung, unter der ein Vorgang auffindbar sein soll.
+
+    Aufgenommen wird beides, und zwar bewusst doppelt:
+      * die Kennung, WIE SIE DASTEHT (`525589_2025`, `folder:4679…`) — daran haengt der
+        Verweis aus der Detailansicht, der die exakte Bekanntmachungs-ID kennt;
+      * ihre Suchform (`kenn_norm`) — daran haengt das Suchfeld, denn wer eine Nummer
+        abtippt, tippt sie anders.
+
+    ⚠ ERST DIE EXAKTE, DANN DIE SUCHFORM. Zwei verschiedene Kennungen koennen dieselbe
+    Suchform haben; wer die exakte ueberschreibt, verliert den sicheren Treffer zugunsten
+    eines geratenen. Die exakte gewinnt deshalb immer.
+
+    ⚠ ZU KURZES WIRD NICHT AUFGENOMMEN. `kenn_norm("1")` ist `"1"` — eine solche Kennung
+    trifft alles und nichts. Dieselbe Grenze wie in der Trefferlisten-Suche.
+    """
+    KENNUNG.mkdir(parents=True, exist_ok=True)
+    eimer: dict[str, dict[str, str]] = defaultdict(dict)
+    n_exakt = n_such = 0
+    for kennung, ziel in nachschlag.items():
+        eimer[kenn_datei(kennung)][kennung] = ziel
+        n_exakt += 1
+    for land, vid in akten:
+        eimer[kenn_datei(vid)].setdefault(vid, f"{land}:{vid}")
+        n_exakt += 1
+    # Suchformen zuletzt und nur, wo noch nichts steht — die exakte Kennung gewinnt.
+    for kennung, ziel in list(nachschlag.items()):
+        k = kenn_norm(kennung)
+        if len(k) >= KENNUNG_MIND and k != kennung:
+            if eimer[kenn_datei(k)].setdefault(k, ziel) is ziel:
+                n_such += 1
+    for land, vid in akten:
+        k = kenn_norm(vid)
+        if len(k) >= KENNUNG_MIND and k != vid:
+            if eimer[kenn_datei(k)].setdefault(k, f"{land}:{vid}") == f"{land}:{vid}":
+                n_such += 1
+
+    vorher = {p.name for p in KENNUNG.glob("*.json")}
+    neu = gleich = 0
+    for name, inhalt in sorted(eimer.items()):
+        datei = f"{name}.json"
+        ziel_p = KENNUNG / datei
+        text = json.dumps(inhalt, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
+        if ziel_p.exists() and ziel_p.read_text(encoding="utf-8") == text:
+            gleich += 1
+        else:
+            ziel_p.write_text(text, encoding="utf-8")
             neu += 1
         vorher.discard(datei)
     for tot in vorher:
-        (JE_VORGANG / tot).unlink(missing_ok=True)
+        (KENNUNG / tot).unlink(missing_ok=True)
+    # Die alte Sammeldatei aktiv entfernen: 132 MB, die niemand mehr liest, saehen sonst
+    # aus wie ein aktueller Stand und gingen beim naechsten Upload wieder mit.
+    (OUT / "vorgang-lead.json").unlink(missing_ok=True)
+    print(f"  Kennungen: {n_exakt:,} exakt + {n_such:,} Suchformen in {len(eimer):,} "
+          f"Buendeln · {neu:,} geschrieben, {gleich:,} unveraendert → {KENNUNG.name}/")
+
+
+def schreibe(produkt: dict[tuple[str, str], dict],
+             archiv: dict[tuple[str, str], dict],
+             nachschlag: dict[str, str], voll: bool = True) -> None:
+    """Zwei Buendelmengen, ein Nachschlagewerk.
+
+    ⚠ WARUM GEBUENDELT UND NICHT EINE DATEI JE AKTE. Zusammen mit `firma/` und
+    `doc-analysis/` stuenden sonst rund 156.000 Dateien unter `web/data`, und `next build`
+    starb daran reproduzierbar im Node-Heap (SIGABRT, Stapel in `node::fs::AfterStat`).
+
+    ⚠ UND WARUM NICHT EINE SAMMELDATEI. Daran ist `firma-profiles.json` gescheitert:
+    67 MB laden, um 1,6 KB zu liefern.
+
+    ⚠ UND WARUM ZWEI MENGEN. Die 1,93 Mio. Akten sind zusammen 1,47 GB; auf 4.096 Buendel
+    waeren das 360 KB je Abruf — auch fuer den Klick aus der Trefferliste, der im heissen
+    Pfad 21 KB kostet. Getrennt bleibt der haeufige Weg billig und das seltene Nachschlagen
+    im Archiv bezahlbar.
+    """
+    _buendeln(produkt, JE_VORGANG, "Produktmenge", raeumen=voll)
+    _buendeln(archiv, ARCHIV, "Archiv", raeumen=voll)
 
     # ⚠ SERVERSEITIG, NICHT IM BROWSER. Bekanntmachung → Vorgang, damit die Detailansicht
-    # einer Vergabe ihre Akte verlinken kann. Die Datei ist ~3 MB; sie liegt im Cache der
-    # Route und geht NIE an den Browser. Ins Lead-Json gehoert sie nicht: dann traegt jeder
-    # der 42.678 Leads ein weiteres Feld, das 41.999 Nutzer nie anfassen.
-    (OUT / "vorgang-lead.json").write_text(
-        json.dumps(nachschlag, ensure_ascii=False, sort_keys=True), encoding="utf-8")
+    # einer Vergabe ihre Akte verlinken kann. Die Datei liegt im Cache der Route und geht NIE
+    # an den Browser. Ins Lead-Json gehoert sie auch nicht: dann traegt jeder Lead ein
+    # weiteres Feld, das fast niemand anfasst — und `export_web_leads.py` haette eine zweite
+    # Quelle fuer dieselbe Zuordnung.
+    if voll:
+        _kennungen(nachschlag, set(produkt) | set(archiv))
+    else:
+        print("  Kennungsindex NICHT geschrieben (Teillauf) — er braucht alle Laender.")
     # Trennt „diesen Vorgang gibt es nicht" (404) von „die Akten fehlen" (503) — dieselbe
     # Unterscheidung, die `firma-stand.json` nach einem echten Vorfall bekommen hat.
-    (OUT / "vorgang-stand.json").write_text(
-        json.dumps({"n": len(akten), "n_lead": len(nachschlag)}), encoding="utf-8")
-    print(f"  Buendel: {neu:,} geschrieben, {gleich:,} unveraendert, "
-          f"{len(vorher):,} entfernt → web/data/vorgang/")
+    if voll:
+        (OUT / "vorgang-stand.json").write_text(
+            json.dumps({"n": len(produkt), "n_archiv": len(archiv),
+                        "n_lead": len(nachschlag)}), encoding="utf-8")
 
 
 def _laender(gewuenscht: str | None) -> list[str]:
@@ -499,6 +619,8 @@ def _laender(gewuenscht: str | None) -> list[str]:
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--land", default=None, help="nur dieses Land (sonst alle mit Vorgaengen)")
+    ap.add_argument("--ohne-archiv", action="store_true",
+                    help="nur die Produktmenge bauen (schnell; das Archiv bleibt stehen)")
     a = ap.parse_args()
     con = duckdb.connect()
 
@@ -507,28 +629,36 @@ def main() -> int:
         raise SystemExit("web/data/leads-*.json fehlt oder ist leer — "
                          "erst export_web_leads.py laufen lassen.")
 
-    # ⚠ ALLE LAENDER SAMMELN, DANN EINMAL SCHREIBEN. `schreibe` raeumt weg, was nicht in der
+    # ⚠ ALLE LAENDER SAMMELN, DANN EINMAL SCHREIBEN. `_buendeln` raeumt weg, was nicht in der
     # uebergebenen Menge steht. Je Land zu schreiben hiesse, dass das zweite Land die Akten
     # des ersten wieder loescht — und der Lauf saehe dabei erfolgreich aus.
-    akten: dict[tuple[str, str], dict] = {}
+    produkt: dict[tuple[str, str], dict] = {}
+    archiv: dict[tuple[str, str], dict] = {}
     nachschlag: dict[str, str] = {}
     for land in _laender(a.land):
         menge = _menge(con, land, sichtbar)
-        if not menge:
+        alle = _alle_vorgaenge(con, land) if not a.ohne_archiv else menge
+        if not alle:
             continue
-        teil = _akten(con, land, menge)
-        akten.update(teil)
+        teil = _akten(con, land, alle)
         for (l, vid), akte in teil.items():
+            (produkt if vid in menge else archiv)[(l, vid)] = akte
             for e in akte["verlauf"]:
                 for nid in e["ids"]:
                     nachschlag[nid] = f"{l}:{vid}"
+        print(f"      {land}: {sum(1 for k in teil if k[1] in menge):,} Produktakten, "
+              f"{sum(1 for k in teil if k[1] not in menge):,} Archivakten")
 
-    mit_dok = sum(1 for x in akten.values() if x["dokumente"])
-    mit_kette = sum(1 for x in akten.values() if x.get("kette"))
-    mit_zuschlag = sum(1 for x in akten.values() if x["zahlen"]["zuschlag"] > 0)
-    print(f"  {len(akten):,} Akten · {mit_zuschlag:,} mit Zuschlag · "
-          f"{mit_kette:,} in einer Kette · {mit_dok:,} mit Dateiliste")
-    schreibe(akten, nachschlag)
+    mit_dok = sum(1 for x in produkt.values() if x["dokumente"])
+    mit_kette = sum(1 for x in {**produkt, **archiv}.values() if x.get("kette"))
+    mit_zuschlag = sum(1 for x in produkt.values() if x["zahlen"]["zuschlag"] > 0)
+    print(f"  {len(produkt):,} Produktakten ({mit_zuschlag:,} mit Zuschlag, "
+          f"{mit_dok:,} mit Dateiliste) · {len(archiv):,} Archivakten · "
+          f"{mit_kette:,} in einer Kette")
+    # ⚠ Ein Teillauf (`--land`, `--ohne-archiv`) darf weder aufraeumen noch das
+    # Nachschlagewerk ueberschreiben: beide setzen Vollstaendigkeit voraus.
+    voll = a.land is None and not a.ohne_archiv
+    schreibe(produkt, archiv, nachschlag, voll=voll)
     return 0
 
 

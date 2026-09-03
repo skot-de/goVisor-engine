@@ -95,6 +95,8 @@ export function Vorgangsakte() {
   const [id, setId] = useState<string | null>(null);
   const [land, setLand] = useState<string>("DE");
   const [lead, setLead] = useState<string | null>(null);
+  const [frage, setFrage] = useState<string | null>(null);
+  const [eingabe, setEingabe] = useState("");
   const [antwort, setAntwort] = useState<Antwort | null>(null);
   const [laedt, setLaedt] = useState(false);
 
@@ -104,6 +106,9 @@ export function Vorgangsakte() {
       setId(p.get("id"));
       setLand((p.get("land") || "DE").toUpperCase());
       setLead(p.get("lead"));
+      const q = p.get("q");
+      setFrage(q);
+      setEingabe(q || "");
     };
     lies();
     window.addEventListener("popstate", lies);
@@ -111,21 +116,44 @@ export function Vorgangsakte() {
   }, []);
 
   useEffect(() => {
-    if (!id && !lead) { setAntwort(null); return; }
+    if (!id && !lead && !frage) { setAntwort(null); return; }
     setLaedt(true);
     const q = id
       ? `id=${encodeURIComponent(id)}&land=${encodeURIComponent(land)}`
-      : `lead=${encodeURIComponent(lead!)}`;
+      : lead
+        ? `lead=${encodeURIComponent(lead)}`
+        : `q=${encodeURIComponent(frage!)}`;
     fetch(`/api/vorgang?${q}`)
       .then((r) => r.json())
       .then(setAntwort)
       .catch(() => setAntwort({ vorhanden: false, error: "nicht erreichbar" }))
       .finally(() => setLaedt(false));
-  }, [id, land, lead]);
+  }, [id, land, lead, frage]);
 
   // ⚠ DAS LAND MUSS MIT. Ohne es faellt der Sprung auf die Vorgabe `DE` zurueck und eine
   // oesterreichische Kette landet bei der deutschen Akte mit derselben Nummer — es gibt 48
   // solche Nummern. Eine Kette verlaesst ihr Land nicht, also ist es immer das der Akte.
+  const suche = (was: string) => {
+    const w = was.trim();
+    if (!w) return;
+    window.history.pushState({}, "", `/vorgang?q=${encodeURIComponent(w)}`);
+    setId(null);
+    setLead(null);
+    setFrage(w);
+  };
+
+  const feld = (
+    <form className="vg-suche" onSubmit={(e) => { e.preventDefault(); suche(eingabe); }}>
+      <input
+        value={eingabe}
+        onChange={(e) => setEingabe(e.target.value)}
+        placeholder={t("Vergabenummer, Bekanntmachung oder Vorgangsnummer")}
+        aria-label={t("Vorgang suchen")}
+      />
+      <button type="submit">{t("Suchen")}</button>
+    </form>
+  );
+
   const oeffne = (ziel: string, zielLand: string) => {
     window.history.pushState(
       {}, "", `/vorgang?id=${encodeURIComponent(ziel)}&land=${encodeURIComponent(zielLand)}`);
@@ -134,13 +162,14 @@ export function Vorgangsakte() {
     setId(ziel);
   };
 
-  if (!id && !lead) {
+  if (!id && !lead && !frage) {
     return (
       <div className="vg-wrap">
         <header className="vg-kopf">
           <h1>{t("Vorgang")}</h1>
-          <p>{t("Ein Vorgang führt Ausschreibung, Korrekturen, Unterlagen und Zuschlag unter einer Nummer zusammen. Erreichbar aus einer Vergabe heraus oder über den Deep-Link mit der Vorgangsnummer.")}</p>
+          <p>{t("Ein Vorgang führt Ausschreibung, Korrekturen, Unterlagen und Zuschlag unter einer Nummer zusammen. Auch abgeschlossene: nachschlagbar ist jede Vergabe, die wir je gesehen haben, nicht nur die heute offenen.")}</p>
         </header>
+        {feld}
       </div>
     );
   }
@@ -148,14 +177,15 @@ export function Vorgangsakte() {
   if (!antwort) return null;
 
   if (antwort.error) {
-    return <div className="vg-wrap"><p className="vg-leer">{antwort.error}</p></div>;
+    return <div className="vg-wrap">{feld}<p className="vg-leer">{antwort.error}</p></div>;
   }
   if (!antwort.vorhanden || !antwort.akte) {
     return (
       <div className="vg-wrap">
+        {feld}
         <p className="vg-leer">
-          {t("Zu dieser Vergabe ist keine Akte hinterlegt.")}{" "}
-          {t("Aufbereitet sind die Vorgänge der heute ausgeschriebenen Vergaben samt ihrer Vorgeschichte.")}
+          {t("Unter dieser Kennung ist kein Vorgang zu finden.")}{" "}
+          {t("Gesucht wird nach der Vergabenummer, der Nummer einer Bekanntmachung oder der Vorgangsnummer selbst.")}
         </p>
       </div>
     );
@@ -169,6 +199,7 @@ export function Vorgangsakte() {
 
   return (
     <div className="vg-wrap">
+      {feld}
       <header className="vg-kopf">
         <div className="vg-zeile">
           <span className="vg-nr">{a.id}</span>

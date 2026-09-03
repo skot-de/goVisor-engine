@@ -27,7 +27,15 @@ export async function GET(req: Request) {
   if (!art || !ID_OK.test(id)) {
     return NextResponse.json({ error: "id/was ungültig" }, { status: 400 });
   }
-  const csv = await loadDataFile(`${art.dir}/${id}.csv`);
+  // ⚠ BEIDE VERZEICHNISSE WOERTLICH. Hier stand ein Ladeaufruf mit `art.dir` als Variable.
+  // `pruefe_verdrahtung.sonde_nutzlast` baut ihre Leser-Muster aus diesen Vorlagen und
+  // ersetzt jeden eingesetzten Ausdruck durch „ein beliebiges Pfadstueck" — daraus wurde
+  // ein Muster, das JEDES Verzeichnis mit CSV-Dateien als gelesen gelten liess. Die Sonde
+  // konnte dort also kein totes Auslieferungsgut mehr finden. Gefunden am 2026-09-03 durch
+  // `test_kein_ladeaufruf_mit_variablem_verzeichnis`.
+  const csv = art.dir === "lv"
+    ? await loadDataFile(`lv/${id}.csv`)
+    : await loadDataFile(`kriterien/${id}.csv`);
   if (!csv) {
     return NextResponse.json({ error: "keine Daten für diesen Vorgang" }, { status: 404 });
   }

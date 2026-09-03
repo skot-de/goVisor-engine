@@ -70,48 +70,95 @@ const BUENDEL_STELLEN = 3;
  * liefern, und die Einzeldateien liessen `next build` im Node-Heap sterben, weil Next den
  * Projektbaum abgeht (156.000 Dateien unter `web/data`). Ein Bündel ist im Median 21 KB
  * gross; es liegt danach im Speicher und bedient jede weitere Akte daraus umsonst. */
+/** Rohtext → geparstes Buendel, gepuffert. `null`, wenn es das Buendel nicht gibt.
+ *
+ * ⚠ DER PFAD WIRD HIER NICHT GEBAUT, SONDERN UEBERGEBEN — und das Verzeichnis MUSS beim
+ * Aufrufer woertlich dastehen. `pruefe_verdrahtung.sonde_nutzlast` zieht ihre Leser-Muster
+ * aus den Vorlagen der Ladeaufrufe und ersetzt jeden eingesetzten Ausdruck durch „ein
+ * beliebiges Pfadstueck". Steht das Verzeichnis als Variable darin, entsteht ein Muster,
+ * das JEDES Verzeichnis trifft — die Sonde, die tote Ausliefergueter findet, ist dann blind
+ * fuer alle. Genau das ist am 2026-09-03 passiert; aufgefallen ist es nur, weil die Sonde
+ * einen Selbsttest hat (`test_nutzlast_erkennt_verzeichnisse_ueber_ein_beispiel`).
+ *
+ * ⚠ UND DASSELBE GILT FUER KOMMENTARE: die Sonde liest die Datei als Text. Ein Beispiel des
+ * falschen Aufrufs, hier zur Erklaerung hingeschrieben, blendet sie genauso. Deshalb steht
+ * er oben in Worten und nicht als Code. */
+function _merke(schluessel: string, roh: string | null): Record<string, Akte> | null {
+  if (!roh) return inSpeicher(schluessel, null, 100);
+  try {
+    return inSpeicher(schluessel, JSON.parse(roh) as Record<string, Akte>, roh.length);
+  } catch {
+    return inSpeicher(schluessel, null, 100);
+  }
+}
+
 export async function loadVorgang(land: string, id: string): Promise<Akte | null> {
   if (!id || !land) return null;
   const h = vorgangDateiname(land, id);
   const name = h.slice(0, BUENDEL_STELLEN);
-  let buendel = ausSpeicher<Record<string, Akte>>(`vorgang-buendel:${name}`);
-  if (!buendel) {
-    try {
-      const roh = await loadDataFile(`vorgang/${name}.json`);
-      if (!roh) return null;
-      buendel = inSpeicher(`vorgang-buendel:${name}`,
-                           JSON.parse(roh) as Record<string, Akte>, roh.length);
-    } catch {
-      return null;
-    }
+
+  let heiss = ausSpeicher<Record<string, Akte> | null>(`vorgang:${name}`);
+  if (heiss === undefined) {
+    heiss = _merke(`vorgang:${name}`, await loadDataFile(`vorgang/${name}.json`));
   }
-  return buendel[h] ?? null;
+  if (heiss?.[h]) return heiss[h];
+
+  let archiv = ausSpeicher<Record<string, Akte> | null>(`vorgang-archiv:${name}`);
+  if (archiv === undefined) {
+    archiv = _merke(`vorgang-archiv:${name}`,
+                    await loadDataFile(`vorgang-archiv/${name}.json`));
+  }
+  return archiv?.[h] ?? null;
 }
 
-/** Bekanntmachung → Vorgangsnummer, damit die Detailansicht einer Vergabe ihre Akte findet.
+/** Kennung → Suchform. MUSS mit `export_vorgaenge.kenn_norm` uebereinstimmen. */
+export function kennNorm(s: string): string {
+  return String(s || "").toLowerCase().replace(/[^a-z0-9]+/g, "");
+}
+
+/** Kennung → Buendelname. MUSS mit `export_vorgaenge.kenn_datei` uebereinstimmen. */
+function kennDatei(schluessel: string): string {
+  return createHash("sha1").update(schluessel, "utf8").digest("hex").slice(0, BUENDEL_STELLEN);
+}
+
+/** Kennung → Vorgang. Nimmt die exakte Bekanntmachungs-ID ebenso wie eine getippte Nummer.
  *
- * ⚠ BLEIBT SERVERSEITIG. Das Nachschlagewerk ist 3,6 MB. Es liegt im Speicher der Instanz
- * und geht NIE an den Browser. Ins Lead-Json gehoert es auch nicht: dann traegt jeder der
- * 42.678 Leads ein Feld, das fast niemand anfasst — und `export_web_leads.py` haette eine
- * zweite Quelle fuer dieselbe Zuordnung. */
+ * ⚠ FRUEHER EINE DATEI, JETZT GEBUENDELT. `vorgang-lead.json` war 3,6 MB, solange nur die
+ * Produktmenge darin stand; mit allen 3,15 Mio. Bekanntmachungen wurde sie 132 MB — und
+ * diese Funktion lud sie KOMPLETT, um eine Zeile zu beantworten. Genau der Fehler, an dem
+ * `firma-profiles.json` gescheitert ist.
+ *
+ * ⚠ ERST EXAKT, DANN SUCHFORM. Zwei Kennungen koennen dieselbe Suchform haben; wer gleich
+ * normalisiert, tauscht einen sicheren Treffer gegen einen geratenen. */
 export async function vorgangZuLead(
   leadId: string,
 ): Promise<{ land: string; id: string } | null> {
   if (!leadId) return null;
-  let karte = ausSpeicher<Record<string, string>>("vorgang-lead:geparst");
-  if (!karte) {
-    const roh = await loadDataFile("vorgang-lead.json");
-    if (!roh) return null;
-    karte = inSpeicher("vorgang-lead:geparst",
-                       JSON.parse(roh) as Record<string, string>, roh.length);
-  }
-  const eintrag = karte[leadId];
+  const eintrag = (await _kennung(leadId)) ?? (await _kennung(kennNorm(leadId)));
   if (!eintrag) return null;
   // Form `LAND:<nummer>` — die Nummer enthaelt selbst Doppelpunkte (`folder:…`), deshalb
   // NUR am ersten trennen.
   const schnitt = eintrag.indexOf(":");
   if (schnitt < 1) return null;
   return { land: eintrag.slice(0, schnitt), id: eintrag.slice(schnitt + 1) };
+}
+
+async function _kennung(schluessel: string): Promise<string | null> {
+  if (!schluessel || schluessel.length < 2) return null;
+  const name = kennDatei(schluessel);
+  const cacheKey = `vorgang-kennung:${name}`;
+  let karte = ausSpeicher<Record<string, string> | null>(cacheKey);
+  if (karte === undefined) {
+    try {
+      const roh = await loadDataFile(`vorgang-kennung/${name}.json`);
+      karte = inSpeicher(cacheKey,
+                         roh ? (JSON.parse(roh) as Record<string, string>) : null,
+                         roh ? roh.length : 100);
+    } catch {
+      karte = inSpeicher(cacheKey, null, 100);
+    }
+  }
+  return karte?.[schluessel] ?? null;
 }
 
 /** Wie viele Akten der Datenspeicher führt — `null`, wenn er sie gar nicht hat.

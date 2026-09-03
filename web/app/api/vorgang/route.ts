@@ -11,16 +11,35 @@ export const runtime = "nodejs";
 // `folder:<uuid>` und `pub:<nummer>` — mehr Formen erzeugt build_vorgaenge.py nicht.
 const ID_RE = /^(folder|pub):[0-9A-Za-z:._-]{1,120}$/;
 const LEAD_RE = /^[0-9A-Za-z._-]{1,64}$/;
+// Was ein Mensch in ein Suchfeld tippt: Nummern mit Schraegstrichen, Leerzeichen, Punkten.
+// Bewusst weiter als LEAD_RE — und bewusst begrenzt, denn der Wert wird zum Schluessel
+// eines Buendels und nicht zu einem Pfad.
+const SUCHE_RE = /^[0-9A-Za-z /._:-]{2,80}$/;
 const LAND_RE = /^[A-Z]{2}$/;
 
 export async function GET(req: Request) {
   const q = new URL(req.url).searchParams;
   const lead = q.get("lead") || "";
+  const suche = q.get("q") || "";
   let id = q.get("id") || "";
   // ⚠ DAS LAND IST TEIL DES SCHLUESSELS, nicht Beiwerk: 48 Vorgangsnummern kommen in mehr
   // als einem Land vor. `DE` als Vorgabe ist eine Bequemlichkeit fuer getippte Links, keine
   // Annahme ueber den Geltungsbereich — exportiert werden AT, CH, DE und EU.
   let land = (q.get("land") || "DE").toUpperCase();
+
+  // Suchfeld: eine getippte Kennung. Geht denselben Weg wie der Verweis aus der
+  // Detailansicht — erst exakt, dann ueber die Suchform.
+  if (!id && !lead && suche) {
+    if (!SUCHE_RE.test(suche)) {
+      return NextResponse.json({ vorhanden: false, grund: "keine gültige Kennung" });
+    }
+    const treffer = await vorgangZuLead(suche.trim());
+    if (!treffer) {
+      return NextResponse.json({ vorhanden: false, grund: "nicht gefunden" });
+    }
+    id = treffer.id;
+    land = treffer.land;
+  }
 
   if (!id && lead) {
     if (!LEAD_RE.test(lead)) {

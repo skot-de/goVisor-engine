@@ -784,3 +784,103 @@ def test_verify_kennt_die_beiden_wichtigsten_beziehungen():
     v = (WURZEL / "govisor" / "verify.py").read_text(encoding="utf-8")
     assert '"vorgang_notice.parquet", "vorgang_id"' in v
     assert '"vorgang_kette.parquet", "vorgaenger"' in v
+
+
+# ── Stufe 6: alles nachschlagbar, nicht nur das Offene ──────────────────────────────
+
+def test_archiv_und_produktmenge_sind_getrennt():
+    """⚠ Alle 1,93 Mio. Akten sind zusammen 1,47 GB; auf 4.096 Bündel wären das 419 KB je
+    Abruf — auch für den Klick aus der Trefferliste, der im heissen Pfad 21 KB kostet.
+    Getrennt bleibt der häufige Weg billig und das seltene Nachschlagen bezahlbar."""
+    quelle = SKRIPT.read_text(encoding="utf-8")
+    assert 'ARCHIV = OUT / "vorgang-archiv"' in quelle
+    ts = (WURZEL / "web" / "lib" / "vorgangsakte.ts").read_text(encoding="utf-8")
+    kern = ts.split("export async function loadVorgang(")[1].split("\nexport ")[0]
+    assert kern.index("`vorgang/${name}.json`") < kern.index("`vorgang-archiv/${name}.json`"), \
+        "das Archiv wird vor dem heissen Pfad gelesen"
+
+
+def test_teillauf_raeumt_nicht_auf():
+    """⚠ `--land CH` loeschte im ersten Versuch 1.785 Bündel der anderen Länder, während
+    der Lauf „erfolgreich" meldete. Das Wegräumen setzt eine VOLLSTÄNDIGE Menge voraus."""
+    quelle = SKRIPT.read_text(encoding="utf-8")
+    assert "raeumen: bool = True" in quelle
+    assert "voll = a.land is None and not a.ohne_archiv" in quelle
+
+
+@pytest.mark.parametrize("roh,erwartet", [
+    ("BA090-26", "ba09026"), ("ba 090 26", "ba09026"), ("100141/2015", "1001412015"),
+    ("pub:100141-2015", "pub1001412015"), ("", ""),
+])
+def test_suchform(roh, erwartet):
+    assert M.kenn_norm(roh) == erwartet
+
+
+def test_suchform_ist_in_python_und_ts_dieselbe():
+    """Läuft sie auseinander, sucht die Oberfläche nach Schlüsseln, die der Export nie
+    geschrieben hat."""
+    ts = (WURZEL / "web" / "lib" / "vorgangsakte.ts").read_text(encoding="utf-8")
+    assert 'replace(/[^a-z0-9]+/g, "")' in ts and "toLowerCase()" in ts
+    kern = SKRIPT.read_text(encoding="utf-8").split("def kenn_norm(")[1].split("\ndef ")[0]
+    assert 'r"[^a-z0-9]+"' in kern and ".lower()" in kern
+
+
+def test_exakte_kennung_schlaegt_die_suchform():
+    """⚠ Zwei verschiedene Kennungen können dieselbe Suchform haben. Wer die exakte
+    überschreibt, tauscht einen sicheren Treffer gegen einen geratenen."""
+    kern = SKRIPT.read_text(encoding="utf-8").split("def _kennungen(")[1].split("\ndef ")[0]
+    i_exakt = kern.index("eimer[kenn_datei(kennung)][kennung] = ziel")
+    i_such = kern.index("setdefault(k, ziel)")
+    assert i_exakt < i_such
+    ts = (WURZEL / "web" / "lib" / "vorgangsakte.ts").read_text(encoding="utf-8")
+    assert "(await _kennung(leadId)) ?? (await _kennung(kennNorm(leadId)))" in ts
+
+
+def test_zu_kurze_kennungen_kommen_nicht_in_den_index():
+    """`kenn_norm("1")` ist `"1"` — eine solche Kennung trifft alles und nichts."""
+    quelle = SKRIPT.read_text(encoding="utf-8")
+    assert "KENNUNG_MIND = 4" in quelle
+    kern = quelle.split("def _kennungen(")[1].split("\ndef ")[0]
+    assert "len(k) >= KENNUNG_MIND" in kern
+
+
+def test_die_132_mb_datei_wird_aktiv_entfernt():
+    """⚠ `vorgang-lead.json` wuchs von 3,6 MB auf 132 MB, als sie alle 3,15 Mio.
+    Bekanntmachungen führte — und die Route lud sie KOMPLETT für eine Zeile. Eine
+    liegengebliebene Datei sähe aus wie ein aktueller Stand."""
+    kern = SKRIPT.read_text(encoding="utf-8").split("def _kennungen(")[1].split("\ndef ")[0]
+    assert '(OUT / "vorgang-lead.json").unlink(missing_ok=True)' in kern
+    ts = (WURZEL / "web" / "lib" / "vorgangsakte.ts").read_text(encoding="utf-8")
+    kern_ts = ts.split("export async function vorgangZuLead(")[1].split("\n}")[0]
+    assert "vorgang-lead.json" not in kern_ts
+
+
+def test_suchfeld_nimmt_eine_getippte_nummer():
+    tsx = (WURZEL / "web" / "components" / "explorer" / "Vorgangsakte.tsx").read_text(encoding="utf-8")
+    assert "vg-suche" in tsx and "q=${encodeURIComponent" in tsx
+    route = (WURZEL / "web" / "app" / "api" / "vorgang" / "route.ts").read_text(encoding="utf-8")
+    assert "SUCHE_RE" in route and 'q.get("q")' in route
+
+
+def test_kein_ladeaufruf_mit_variablem_verzeichnis():
+    """⚠ `sonde_nutzlast` zieht ihre Leser-Muster aus den Vorlagen der Ladeaufrufe und
+    ersetzt jeden eingesetzten Ausdruck durch `[^/]+`. Steht das Verzeichnis als Variable
+    darin, entsteht `^[^/]+/[^/]+\\.json$` — ein Muster, das JEDES Verzeichnis trifft, und
+    die Sonde ist blind für alle toten Ausliefergüter. Genau das ist am 2026-09-03 passiert.
+
+    ⚠ Gilt auch für KOMMENTARE: die Sonde liest die Datei als Text. Ein Beispiel des
+    falschen Aufrufs, zur Erklärung hingeschrieben, blendet sie genauso — auch das ist an
+    diesem Tag passiert, eine Minute nach der Reparatur.
+    """
+    import re
+    web = WURZEL / "web"
+    treffer = []
+    for datei in web.rglob("*"):
+        if (not datei.is_file() or datei.suffix not in {".ts", ".tsx", ".js", ".mjs"}
+                or "node_modules" in datei.parts):
+            continue
+        for roh in re.findall(r'loadDataFile\(\s*[`"\']([^`"\']+)[`"\']',
+                              datei.read_text(encoding="utf-8", errors="replace")):
+            if roh.startswith("${"):
+                treffer.append(f"{datei.relative_to(web)}: {roh}")
+    assert not treffer, "Ladeaufruf mit variablem Verzeichnis: " + ", ".join(treffer)
