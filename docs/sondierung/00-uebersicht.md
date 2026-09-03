@@ -22,7 +22,7 @@ Abruf belegt. Kein Konto, kein CAPTCHA, robots.txt immer zuerst.
 | **LT** | 2,0 % | **99 %** | ein Land, eine Plattform |
 | **BE** | 3,6 % | *offen* | Plattform fällt gerade aus |
 | **LV** | 1,5 % | *offen* | eine Plattform, Abrufweg ungeklärt |
-| **EE** | 0,9 % | *offen* | eine Plattform, ungeprüft |
+| **EE** | 0,9 % | *offen* | eine Plattform, Liste offen, Dateiweg fehlt |
 | **SE** | 2,0 % | **0 %** | 88 % robots-gesperrt |
 | **FR** | 15,4 % | **0 %** | CAPTCHA + Login + robots |
 
@@ -129,7 +129,31 @@ gegen eine Adresse ohne Vergabe-Kennung kein Parser.
 **FR und SE würde ich nicht anfassen.** Nicht weil es schwer wäre, sondern weil die
 Betreiber es untersagt haben.
 
-## 6. ⚠ Eine Ebene fehlt in allen zwölf Kapiteln
+## 6. Die dritte Ebene — nachgearbeitet
+
+`CLAUDE.md` verlangt bei jedem Land **drei** Ebenen. Meine zwölf Kapitel deckten zwei; die
+dritte ist am 2026-09-03 nachgetragen (`fonds-ebene.md`).
+
+| Land | Fonds-Register | Zustand |
+|---|---|---|
+| **CZ** | `zakazky.agentura-api.org` | ✅ **offen** — 8.663 Vergaben, öffentlicher Endpunkt, Export vom Betreiber angeboten |
+| **PL** | Baza Konkurencyjności | 🟡 keine robots-Sperre, aber `/api/announcements` = 401 |
+| DACH | — | geprüft 2026-08-18: kein eigenes Verzeichnis |
+| übrige 10 | — | ⚪ **nicht recherchiert** |
+
+⚠ **Der tschechische Fund ist der größte Einzelbefund der ganzen Sondierung.** Das Register
+führt **8.663** Vergaben — Tschechien hatte im Juni **1.621** TED-Ausschreibungen. Erster
+Datensatz: ein privates Hotelunternehmen mit einer Ausschreibung über 43.986.500 CZK, das
+in **keinem** der in zwölf Kapiteln vermessenen Portale steht.
+
+Diese Ebene ist die einzige, in der die Auftraggeber **private Unternehmen** sind — und
+kein Wettbewerber sammelt sie, weil sie nicht in TED steht.
+
+⚠ **Bauart beachten:** nicht ein Register je Land, sondern eines **je Programmträger**.
+`agentura-api.org` deckt OPPIK/OPTAK/NPO; andere Operationelle Programme können eigene
+führen. Wer „das eine Portal je Land" sucht, findet womöglich nur eines von mehreren.
+
+## 6b. Wie die Lücke aufgefallen ist
 
 `CLAUDE.md` verlangt bei jedem neuen Land **drei** Ebenen, nicht zwei:
 
