@@ -76,6 +76,69 @@ Wer nach Landesgrösse sortiert, fängt in Frankreich an und bekommt null. Wer n
 | **LT + IE + MT + CY** | 99/86/100/100 % | **ein einziger** (European Dynamics) |
 | **HU** | 64 % | ein POST, ZIP serverseitig gebündelt |
 
+## 3a. Datenmengen je Land — Größenordnung, keine Budgetzahl
+
+⚠ **Zuerst die Falle: ein „Unterlagen-Link" bedeutet nicht überall dasselbe.** In Bulgarien,
+Rumänien und Ungarn ist ein Link **eine Vergabe** (deren Dokumente in einem Paket kommen);
+in Slowenien ist jeder Link **eine einzelne Datei**. Wer beides gleich hochrechnet, liegt um
+den Faktor der durchschnittlichen Dateizahl daneben.
+
+| Land | Links/Jahr | Einheit | MB je Einheit | n | GB/Jahr |
+|---|---:|---|---:|---:|---:|
+| **RO** | 14.080 | Vergabe | 13,2 (Median) | 6 | **154** |
+| **BG** | 9.140 | Vergabe | 9,5 | 29 | **82** |
+| **EE** | 3.558 | Vergabe | 19,3 | **1** | 67 |
+| **BE** | 13.448 | Vergabe | 6,1 | **1** | 48 |
+| **HU** | 4.678 | Vergabe | 9,0 | **1** | 26 |
+| **SI** | 6.466 | **Datei** | 3,9 | 39 | **25** |
+| **DK** | 3.741 | Vergabe | ~25 | **1** | 16 |
+| **PT** | 9.435 | Vergabe | 1,6 | 12 | 13 |
+| **LU** | 1.859 | Vergabe | 4,6 | **1** | 8 |
+| **IE** | 5.912 | Vergabe | ~1 *(geschätzt)* | 38 | 5 |
+| MT · FI · CY | | Vergabe | 0,5–1,1 | 6–7 | je ~1 |
+| **LV** | 6.366 | Dokumenteintrag | 0,04 | 3 | <1 |
+| | | | | **Summe** | **≈ 448 GB/Jahr** |
+
+### ⚠ Was diese Zahl nicht ist
+
+**Kein Budget.** Fünf der Länder stehen auf einer **einzigen** gemessenen Vergabe (n=1). Ein
+zweiter Fall kann sie halbieren oder verdreifachen.
+
+**Und die Spannweite ist enorm.** Rumänien allein:
+
+| | GB/Jahr |
+|---|---:|
+| mit dem **Median** (13,2 MB) | 154 |
+| mit dem **Mittel** (76,7 MB) | **895** |
+
+Faktor **5,8**, weil ein einziges Archiv der Stichprobe 374,9 MB gross war. Bei
+Vergabeunterlagen entscheiden die Ausreisser — CAD-Zeichnungen, Baupläne, Bildanhänge.
+
+### ⚠ Und die grossen Länder fehlen ganz
+
+Für sieben offene Länder gibt es **keine** Grössenmessung, obwohl sie zusammen die meisten
+Abrufe ausmachen:
+
+```
+DE 28.444 · PL 12.640 · LT 7.959 · NL 7.796 · CZ 5.164 · IT 2.863 · ES 1.418
+= 66.284 abzurufende Einheiten ohne Groessenschaetzung
+```
+
+Bei 5 MB je Einheit wären das **324 GB**, bei 15 MB **971 GB**. Die Spanne ist die Aussage.
+
+### Was daraus folgt
+
+**Grössenordnung für alles, was heute belegt offen ist: 0,8 bis 2 TB im Jahr.** Nicht
+zehn, nicht hundert.
+
+Zwei praktische Schlüsse:
+
+- ⚠ **Eine Grössenschwelle ist Pflicht, keine Kür.** Drei Portale liefern die Dateigrösse
+  **vor** dem Abruf: Bulgarien (`fileSize` samt MD5), Rumänien (`fileSize` im Archivstatus),
+  Dänemark (`length` je Eintrag). Wer sie nicht nutzt, lädt 375-MB-Archive blind.
+- **Rumänien ist der Kostentreiber**, nicht Deutschland. Ein einziges Land trägt je nach
+  Ausreisserlage ein Drittel bis die Hälfte der gesamten Menge.
+
 ## 4. Die zweite Achse: nach Software statt nach Land
 
 Portale werden je Hersteller gebaut, nicht je Land. Gezählt am Host, letzter Monat:
