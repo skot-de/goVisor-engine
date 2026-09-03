@@ -1,5 +1,11 @@
 # Portal-Sondierung EU — Gesamtschau
 
+> ⚠ **NACHGEPRÜFT AM 2026-09-03 — und die erste Fassung war zu eng.** Sie las EINEN Monat,
+> EIN Feld und je Land nur die obersten zwölf Domains. In Italien blieben damit **23,7 %**
+> ungeprüft, in Frankreich **14,8 %**, und drei länderübergreifende Anbieter fehlten ganz
+> (einer davon offen). Was das ändert, steht in **[`00b-nachpruefung.md`](00b-nachpruefung.md)**
+> — diese Übersicht ist danach fortgeschrieben.
+
 **Stand 2026-09-03.** Zwölf Länder geprüft, zusammen **79,7 %** aller EU-Ausschreibungen.
 Alle Zahlen am TED-Monatspaket 2026-06 gemessen, alle Urteile an mindestens einem echten
 Abruf belegt. Kein Konto, kein CAPTCHA, robots.txt immer zuerst.
@@ -15,7 +21,7 @@ Abruf belegt. Kein Konto, kein CAPTCHA, robots.txt immer zuerst.
 |---|---:|---:|---|
 | **NL** | 2,5 % | **73 %** | offizielle öffentliche API |
 | **DE** | 21,2 % | **32 %** | 13 Abrufer gebaut |
-| **CZ** | 4,4 % | **28 %** | E-ZAK, leere robots.txt |
+| **CZ** | 4,4 % | **28 % + Josephine** | E-ZAK, leere robots.txt; ProeBiz nachgetragen |
 | **PL** | 14,6 % | **19 %** ober / **35 %** unter | staatliche Plattform |
 | **ES** | 6,7 % | **5 %** | Katalonien |
 | **IT** | 4,9 % | **4 %** | Soresa (Kampanien) |

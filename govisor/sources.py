@@ -664,6 +664,34 @@ DOC_REGISTRY: list[Source] = [
                    "`application/json, text/plain, */*` gab 200 und 586 KB. Wer bei einer "
                    "500 aufhoert, haelt eine offene Tuer fuer verschlossen.",
            url="https://riigihanked.riik.ee"),
+    # ── LAENDERUEBERGREIFEND, in der Nachpruefung 2026-09-03 gefunden ─────────────────
+    # ⚠ Diese drei fehlten in ALLEN zwoelf Kapiteln — der teuerste Teil des Methodenfehlers,
+    # weil eine Pruefung mehrere Laender abgedeckt haette. Details: docs/sondierung/
+    # 00b-nachpruefung.md
+    Source("sond-proebiz", "Josephine / ProeBiz (CZ, PL, SK)", "", "CZ", "beides",
+           "sondiert", portals=2, ebene="unterlagen", ertrag="dateien",
+           coverage="josephine.proebiz.com: PL 849, CZ 268 · profily.proebiz.com: CZ 565 "
+                    "(12 Monate). Bedient auch die Slowakei.",
+           overlap="✅ OFFEN, am 2026-09-03 belegt. robots.txt: `User-agent: *` OHNE jede "
+                   "Disallow-Zeile. /pl/tender/<id>/summary listet die Dokumente, "
+                   ".../download/<id> liefert sie: 871.707 B ZIP mit SWZ.pdf (854 kB), "
+                   "Vertragsentwurf, ESPD und Erklaerungen — anonym, blankes curl. "
+                   "⚠ Ein Abrufer deckt drei Laender.",
+           url="https://josephine.proebiz.com"),
+    Source("sond-bravosolution", "BravoSolution / Jaggaer", "", "FR", "beides",
+           "sondiert", portals=3, ebene="unterlagen", ertrag="gesperrt",
+           coverage="sncf 1.237, ratp 856, seamilano — Versorger und Verkehrsbetriebe "
+                    "mehrerer Laender",
+           overlap="⛔ robots: `Disallow: /esop` — und /esop IST der Anwendungspfad; die "
+                   "Adresse fuehrt auf /esop/guest/login.do. Gesperrt UND Login.",
+           url="https://www.jaggaer.com"),
+    Source("sond-vortal", "Vortal (ES, PT)", "", "ES", "beides",
+           "sondiert", portals=1, ebene="unterlagen", ertrag="ungeprueft",
+           coverage="community.vortal.biz: ES 255; Heimatmarkt Portugal",
+           overlap="⚠ Der Pfad heisst /Public/public-tender-documents/<token>, klingt also "
+                   "nach oeffentlichem Zugang — aber der Server verweigert schon die "
+                   "robots.txt mit 403. Nicht weiter verfolgt.",
+           url="https://community.vortal.biz"),
     # ── ANGEBUNDEN ────────────────────────────────────────────────────────────────────
     Source("doc-cosinex-de", "cosinex/DTVP-Unterlagen", "docfetch-cosinex", "DE", "beides",
            "live", portals=40, ebene="unterlagen", ertrag="dateien", modul="govisor.docfetch",
