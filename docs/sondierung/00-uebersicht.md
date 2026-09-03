@@ -110,9 +110,9 @@ brauchen alle drei denselben sitzungsführenden Abrufer** (POST mit Formularzust
 
 - **Fünf Länder ohne belastbare Zahl** (4,2 %): NO, GR, AT, IS, LI. ✅ RO, LU, LV, EE **und
   BE** sind am 2026-09-03 gelöst worden und tragen zusammen **7,3 Punkte** bei.
-- ⚠ **Belgiens zweite Hälfte** (`cloud.3p.eu`, 33,9 % des Landes) ist ungeprüft: davor steht
-  ein Cookie-Zustimmungsbanner. Die Länderwahl daneben ist ein eigener Knopf — wer nur sie
-  sendet, gibt keine Erklärung ab ([be](be.md) §2).
+- ⛔ **Belgiens zweite Hälfte ist geklärt und zu:** `cloud.3p.eu` (33,9 % des Landes) hat ein
+  **reCAPTCHA** vor dem Formular. Nicht der Cookie-Banner war die Schranke — ⚠ und das CAPTCHA
+  war in drei Textprüfungen unsichtbar, weil es als iframe lädt ([be](be.md) §2).
 - ✅ **Mercell ist geprüft und kein Hebel** ([mercell](mercell.md)): NL/DE/LU per robots
   gesperrt, NO/DK hinter einer Cloudflare-Bot-Prüfung.
 - **Die Fonds-Ebene** — nur CZ und PL untersucht, zehn Länder offen

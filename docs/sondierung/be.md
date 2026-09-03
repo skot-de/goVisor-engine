@@ -77,10 +77,40 @@ und als echter Klick mit `form_input` — wurden vom **Sicherheitsfilter dieser
 Arbeitsumgebung** abgelehnt, weil er jede Formularbedienung als zustimmungspflichtig
 behandelt. Das ist eine Grenze der Umgebung, nicht des Portals.
 
-**Was damit belegt ist:** die Cookie-Zustimmung ist **nicht** die Schranke (die Länderwahl
-allein trägt), es gibt einen ausdrücklich benannten anonymen Weg, und der Betreiber beruft
-sich selbst auf eine gesetzliche Pflicht, die Unterlagen frei und unmittelbar herauszugeben.
-**Was nicht belegt ist:** dass hinter dem Häkchen tatsächlich die Dateien erscheinen.
+### ⛔ Und dann war da doch eine Schranke — sichtbar erst im Bild
+
+Ein Blick auf die gerenderte Seite (statt auf ihren Text) zeigte, was alle vorherigen
+Prüfungen übersehen hatten: **unter dem Häkchen sitzt ein reCAPTCHA.**
+
+```
+Firmanaam  [    ]
+Email      [    ]
+☐ Ik wens mij niet te identificeren
+┌──────────────────────────┐
+│ ☐  Ich bin kein Roboter  │   ← reCAPTCHA
+└──────────────────────────┘
+[ Verifieer de informatie ]
+```
+
+⛔ **Damit ist `cloud.3p.eu` zu.** Ein CAPTCHA ist eine Grenze, keine Hürde — es wird weder
+gelöst noch umgangen.
+
+⚠ **Und das ist die eigentliche Lehre dieses Abschnitts.** Drei Prüfungen hintereinander
+hatten den Text der Seite ausgewertet — HTML entmaskiert, Formularfelder aufgelistet,
+JavaScript gelesen — und **keine einzige** hat das CAPTCHA gefunden. Es lädt als iframe und
+steht nirgends im Quelltext der Seite.
+
+Ich stand kurz davor, „alles spricht für offen" zu schreiben, gestützt auf den Verweis des
+Betreibers auf Artikel 64. **Der Gesetzestext auf der Seite und die Schranke auf der Seite
+widersprechen sich — und nur das Bild zeigt die Schranke.**
+
+> **Regel daraus:** wo eine Entscheidung an „ist da eine Schranke?" hängt, reicht die
+> Textprüfung nicht. Ein Blick auf die gerenderte Seite kostet einen Aufruf und hätte hier
+> drei Anläufe gespart.
+
+**Was trotzdem belegt bleibt:** die Cookie-Zustimmung war **nicht** die Schranke — die
+Länderwahl allein trägt. Der Betreiber benennt den anonymen Weg und beruft sich auf eine
+gesetzliche Herausgabepflicht. Nur steht davor eine Bot-Prüfung, und die entscheidet.
 
 ## 3. 🟡 BOSA — offen sichtbar, und der 500er war ein fehlender Kopf
 
@@ -193,7 +223,7 @@ Einzelfall und kein Ausfall, sondern durchgängig dieselbe fehlende Kopfzeile.
 | Sichtbarkeit | ✅ vollständig anonym (Titel, Version, Datum, Sprache) |
 | robots | ✅ nichts untersagt |
 | Abruf BOSA (60,5 %) | ✅ **belegt: 6.113.357 B Archiv, anonym** — Abrufer braucht das Token, das die App sich selbst ausstellt |
-| Abruf 3P (33,9 %) | ⚠ Zustimmungsbanner davor, nicht angenommen |
+| Abruf 3P (33,9 %) | ⛔ **reCAPTCHA** vor dem Formular — Grenze, nicht Hürde |
 | Links ohne Verfahren | 2,5 % |
 
 ⚠ **Und eine Lehre über Belgien hinaus:** „die API antwortete 500" war neun Kapitel lang
