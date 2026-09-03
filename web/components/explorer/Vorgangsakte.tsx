@@ -16,7 +16,7 @@ import { useSprache } from "@/lib/i18n";
  *      und nicht, weil es keine gab. */
 
 type Verlauf = { datum: string | null; art: string; label: string; n: number;
-                 ids: string[]; unterlagen: boolean };
+                 dubletten: number; ids: string[]; unterlagen: boolean };
 type Dok = { notice: string; quelle: string | null; url: string | null; gelesen: boolean;
              n: number; dateien: Array<{ name: string; typ: string }>; gekuerzt: number };
 type Glied = { vorgang: string; position: number; jahr: number | null;
@@ -207,6 +207,13 @@ export function Vorgangsakte() {
               <span className="vg-art">
                 {t(e.label)}
                 {e.n > 1 ? <em>{t("{n} am selben Tag", { n: e.n })}</em> : null}
+                {/* Dieselbe Vergabe, von einem zweiten Portal gemeldet. Sie bleibt sichtbar,
+                    zaehlt aber nicht als weiteres Ereignis. */}
+                {e.dubletten > 0
+                  ? <em>{e.dubletten === 1
+                      ? t("dazu eine Zweitmeldung")
+                      : t("dazu {n} Zweitmeldungen", { n: e.dubletten })}</em>
+                  : null}
               </span>
               <span className="vg-ids">
                 {e.ids.slice(0, 3).join(", ")}

@@ -75,9 +75,13 @@ SPALTEN_V = ("land VARCHAR, vorgang_id VARCHAR, schluessel_quelle VARCHAR, "
              "erste_veroeffentlichung DATE, letzte_veroeffentlichung DATE, "
              "titel VARCHAR, cpv VARCHAR, vollstaendig BOOLEAN, "
              "hat_unterlagen BOOLEAN, n_dokumente BIGINT, n_anforderungen BIGINT, "
-             "n_angedockt BIGINT")
+             "n_angedockt BIGINT, n_dubletten BIGINT")
+# Nur dieser Beleg wird geglaubt. `nur_titel`, `nur_titel_kurz` und `geschwister` sind
+# schwaechere Indizien; `export_web_leads.py` traut aus demselben Grund ebenfalls nur diesem.
+DUBLETTEN_BELEG = "kaeufer_und_titel"
+
 SPALTEN_N = ("land VARCHAR, vorgang_id VARCHAR, notice_id VARCHAR, notice_kind VARCHAR, "
-             "jahr BIGINT, veroeffentlicht DATE, hat_unterlagen BOOLEAN")
+             "jahr BIGINT, veroeffentlicht DATE, hat_unterlagen BOOLEAN, dublette BOOLEAN")
 SPALTEN_K = ("land VARCHAR, kette_id VARCHAR, vorgang_id VARCHAR, position BIGINT, "
              "n_glieder BIGINT, jahr BIGINT, konfidenz_zum_vorgaenger DOUBLE, "
              "min_konfidenz DOUBLE, methode VARCHAR, n_titel BIGINT, "
@@ -114,6 +118,50 @@ def _schreibe(con, pfad: pathlib.Path, zeilen: list, spalten: str) -> None:
         con.execute("INSERT INTO _t SELECT * FROM _arrow")
         con.unregister("_arrow")
     con.execute(f"COPY _t TO '{pfad.as_posix()}' (FORMAT PARQUET)")
+
+
+def _dubletten(con, land: str, zeilen_n: list) -> set[str]:
+    """Welche Bekanntmachungen sind eine Zweitmeldung IM SELBEN VORGANG?
+
+    **Warum ueberhaupt.** `govisor/dedupe.py` erkennt seit langem, wenn zwei Quellen
+    dieselbe Vergabe melden, und schreibt das nach `notice_duplicates.parquet`. Die
+    Vorgangsebene hat diese Tabelle NIE gelesen. Folge: liegen Master und Zweitmeldung in
+    derselben Akte, zaehlt sie beide — im Zuercher Beispiel sieben Zuschlaege fuer sechs
+    Lose, eine falsche Zahl an prominenter Stelle.
+
+    ⚠ NUR WENN DER MASTER IN DERSELBEN AKTE LIEGT. Gemessen am 2026-09-02 trifft das auf
+    einen kleinen Teil zu: DE 1.545 von 20.786 belegten Dubletten (7 %), AT 404 (1 %),
+    CH 5.930 (55 %). Bei allen uebrigen steht der Master in einem ANDEREN Vorgang — dort
+    ist die Zweitmeldung das einzige, was diese Vergabe in dieser Akte belegt. Sie zu
+    entwerten hiesse, eine Bekanntmachung verschwinden zu lassen, die kein anderer Eintrag
+    ersetzt. Dass dieselbe Vergabe dann zweimal als Vorgang existiert, ist ein anderes
+    Problem und wird hier NICHT geloest.
+
+    ⚠ WER SELBST MASTER IST, WIRD NICHT ENTWERTET. 456 Bekanntmachungen in DE stehen in der
+    einen Zeile als Duplikat und in der naechsten als Master. Ohne diese Sperre koennte eine
+    Akte beide Seiten eines Paares verlieren.
+
+    Markiert, nicht geloescht — dieselbe Regel wie in der Firewall selbst: die Bekanntmachung
+    bleibt in der Akte und im Verlauf sichtbar, sie zaehlt nur nicht ein zweites Mal.
+    """
+    d = ROOT / "data" / "gold" / land / "notice_duplicates.parquet"
+    if not d.exists():
+        return set()
+    vorgang_von = {nid: vid for _l, vid, nid, *_r in zeilen_n}
+    paare = con.execute(
+        f"select distinct master_id, duplicate_id from read_parquet('{d.as_posix()}') "
+        f"where beleg = '{DUBLETTEN_BELEG}'").fetchall()
+    master = {str(m) for m, _x in paare}
+    markiert: set[str] = set()
+    for m, x in paare:
+        m, x = str(m), str(x)
+        if x in master:
+            continue
+        if vorgang_von.get(x) and vorgang_von.get(x) == vorgang_von.get(m):
+            markiert.add(x)
+    print(f"      Dubletten: {len(markiert):,} Zweitmeldungen im selben Vorgang markiert "
+          f"(von {len({str(x) for _m, x in paare}):,} belegten)")
+    return markiert
 
 
 def _andocken(con, land: str, gruppen: dict, zeilen_n: list) -> dict[str, str]:
@@ -252,7 +300,7 @@ def baue(con, land: str) -> tuple[int, int]:
             vid, quelle = f"pub:{s_pn or s_nid}", "allein"
         dok = mit_docs.get(s_nid)
         zeilen_n.append((land, vid, s_nid, str(kind or ""), int(jahr or 0), datum, bool(dok)))
-        gruppen[vid].append((quelle, str(kind or ""), datum, titel, cpv, dok))
+        gruppen[vid].append((quelle, str(kind or ""), datum, titel, cpv, dok, s_nid))
 
     # Vierte Stufe: heimatlose Zuschlaege an ihre Ausschreibung. Laeuft NACH der Gruppierung,
     # weil sie Gruppen-Eigenschaften braucht (hat der Vorgang eine eigene Ausschreibung?).
@@ -268,8 +316,19 @@ def baue(con, land: str) -> tuple[int, int]:
             neue[ziel].extend(teile)
         gruppen = neue
 
+    # Zweitmeldungen derselben Vergabe im selben Vorgang. MUSS nach dem Andocken laufen:
+    # erst dort landen Master und Zweitmeldung ueberhaupt in einer Akte.
+    dubl = _dubletten(con, land, zeilen_n)
+    zeilen_n = [(*z, z[2] in dubl) for z in zeilen_n]
+
     zeilen_v: list = []
-    for vid, teile in gruppen.items():
+    for vid, alle_teile in gruppen.items():
+        # ⚠ MARKIERT, NICHT GELOESCHT. Die Zweitmeldung bleibt in `vorgang_notice` und damit
+        # im Verlauf der Akte sichtbar — sie zaehlt nur nicht ein zweites Mal. Wer sie
+        # wegwirft, verliert die Spur zur zweiten Quelle, und genau die ist der Beleg dafuer,
+        # dass wir beide Portale gelesen haben.
+        n_dubl = sum(1 for t in alle_teile if t[6] in dubl)
+        teile = [t for t in alle_teile if t[6] not in dubl] or alle_teile
         arten = collections.Counter(t[1] for t in teile)
         daten = sorted(t[2] for t in teile if t[2])
         # ⚠ Titel und CPV kommen aus der AUSSCHREIBUNG, nicht aus dem Zuschlag: der Zuschlag
@@ -288,7 +347,7 @@ def baue(con, land: str) -> tuple[int, int]:
             daten[0] if daten else None, daten[-1] if daten else None,
             (aus[0][3] or None), (aus[0][4] or None),
             arten.get("cn", 0) > 0 and arten.get("can", 0) > 0,
-            dokumente > 0, dokumente, anforderungen, angedockt.get(vid, 0)))
+            dokumente > 0, dokumente, anforderungen, angedockt.get(vid, 0), n_dubl))
 
     _schreibe(con, gold / "vorgaenge.parquet", zeilen_v, SPALTEN_V)
     _schreibe(con, gold / "vorgang_notice.parquet", zeilen_n, SPALTEN_N)

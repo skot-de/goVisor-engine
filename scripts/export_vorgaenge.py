@@ -237,7 +237,14 @@ def _verlauf(teile: list[dict]) -> list[dict]:
             "datum": _tag(datum),
             "art": art,
             "label": ARTEN.get(art, art),
-            "n": len(gruppe),
+            # ⚠ `n` ZAEHLT OHNE ZWEITMELDUNGEN. Sie bleiben in `ids` sichtbar — die Spur zur
+            # zweiten Quelle ist der Beleg dafuer, dass wir beide Portale gelesen haben —
+            # aber sie sind nicht noch ein Ereignis. Genau daran hingen im Zuercher Beispiel
+            # sieben Zuschlaege fuer sechs Lose.
+            # `.get`, nicht `[...]`: fehlt das Kennzeichen, ist es keine Zweitmeldung.
+            # Ein fehlendes Feld darf den Export nicht anhalten.
+            "n": sum(1 for t in gruppe if not t.get("dublette")) or len(gruppe),
+            "dubletten": sum(1 for t in gruppe if t.get("dublette")),
             "ids": sorted(t["notice_id"] for t in gruppe),
             "unterlagen": any(t["hat_unterlagen"] for t in gruppe),
         })
@@ -305,12 +312,13 @@ def _akten(con: duckdb.DuckDBPyConnection, land: str,
     teile = defaultdict(list)
     for r in con.execute(f"""
         select vn.vorgang_id, vn.notice_id, vn.notice_kind, vn.jahr,
-               vn.veroeffentlicht, vn.hat_unterlagen
+               vn.veroeffentlicht, vn.hat_unterlagen, vn.dublette
         from read_parquet('{g}/vorgang_notice.parquet') vn
         join _m m on m.vorgang_id = vn.vorgang_id
     """).fetchall():
         teile[r[0]].append({"notice_id": r[1], "notice_kind": r[2], "jahr": r[3],
-                            "veroeffentlicht": r[4], "hat_unterlagen": r[5]})
+                            "veroeffentlicht": r[4], "hat_unterlagen": r[5],
+                            "dublette": bool(r[6])})
 
     ketten: dict[str, dict] = {}
     kette_glieder = defaultdict(list)
@@ -354,6 +362,7 @@ def _akten(con: duckdb.DuckDBPyConnection, land: str,
             "zahlen": {a: int(k.get(f"n_{a}") or 0)
                        for a in ("bekanntmachungen", "ausschreibung", "zuschlag",
                                  "korrektur", "vorinfo", "dokumente", "anforderungen",
+                                 "dubletten",
                                  # ⚠ MUSS SICHTBAR SEIN. Zuschlaege, die ueber Kaeufer und
                                  # Titel zugeordnet wurden, sind erschlossen und nicht
                                  # amtlich verknuepft — wie bei der Kette gehoert das an die

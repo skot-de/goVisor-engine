@@ -76,8 +76,8 @@ def test_unbekannte_art_faellt_nicht_weg():
 
 # ── Verlauf ─────────────────────────────────────────────────────────────────────────
 
-def _bm(nid, kind, tag, unterlagen=False):
-    return {"notice_id": nid, "notice_kind": kind,
+def _bm(nid, kind, tag, unterlagen=False, dublette=False):
+    return {"notice_id": nid, "notice_kind": kind, "dublette": dublette,
             "veroeffentlicht": date(2025, 1, tag), "hat_unterlagen": unterlagen}
 
 
@@ -572,3 +572,65 @@ def test_beleg_ist_null_wenn_unvollstaendig():
     quelle = SKRIPT.read_text(encoding="utf-8")
     kern = quelle.split('"vollstaendig_beleg": (')[1].split("),")[0]
     assert 'None if not k.get("vollstaendig")' in kern
+
+
+# ── Zweitmeldungen derselben Vergabe ────────────────────────────────────────────────
+
+def test_nur_der_starke_beleg_zaehlt():
+    """`nur_titel`, `nur_titel_kurz` und `geschwister` sind schwächere Indizien.
+    `export_web_leads.py` traut aus demselben Grund nur `kaeufer_und_titel`."""
+    assert 'DUBLETTEN_BELEG = "kaeufer_und_titel"' in BAU
+    kern = _ohne_kommentare_py(BAU).split("def _dubletten(")[1].split("\ndef ")[0]
+    assert "DUBLETTEN_BELEG" in kern
+
+
+def test_nur_wenn_der_master_in_derselben_akte_liegt():
+    """⚠ Gemessen am 2026-09-02: von den belegten Dubletten hat nur ein Teil den Master in
+    derselben Akte (DE 1.545 von 20.786, AT 404 von 50.481, CH 5.930 von 10.800). Bei allen
+    übrigen steht der Master in einem ANDEREN Vorgang; dort ist die Zweitmeldung das
+    einzige, was diese Vergabe in dieser Akte belegt. Sie zu entwerten liesse eine
+    Bekanntmachung verschwinden, die nichts ersetzt."""
+    kern = _ohne_kommentare_py(BAU).split("def _dubletten(")[1].split("\ndef ")[0]
+    assert "vorgang_von.get(x) == vorgang_von.get(m)" in kern
+
+
+def test_wer_selbst_master_ist_wird_nicht_entwertet():
+    """456 Bekanntmachungen in DE stehen in der einen Zeile als Duplikat und in der
+    nächsten als Master. Ohne die Sperre könnte eine Akte beide Seiten verlieren."""
+    kern = _ohne_kommentare_py(BAU).split("def _dubletten(")[1].split("\ndef ")[0]
+    assert "if x in master:" in kern
+
+
+def test_markiert_statt_geloescht():
+    """Die Regel der Firewall selbst. Wer die Zweitmeldung wegwirft, verliert die Spur zur
+    zweiten Quelle — und genau die belegt, dass wir beide Portale gelesen haben."""
+    assert "dublette BOOLEAN" in BAU
+    quelle = SKRIPT.read_text(encoding="utf-8")
+    # Sie bleibt in den sichtbaren Kennungen des Verlaufseintrags stehen.
+    kern = quelle.split("def _verlauf(")[1].split("\ndef ")[0]
+    assert '"ids": sorted(t["notice_id"] for t in gruppe)' in kern
+    assert '"dubletten": sum(' in kern
+
+
+def test_verlaufseintrag_zaehlt_ohne_zweitmeldungen():
+    """Daran hingen im Zürcher Beispiel sieben Zuschläge für sechs Lose."""
+    kern = SKRIPT.read_text(encoding="utf-8").split("def _verlauf(")[1].split("\ndef ")[0]
+    assert 'sum(1 for t in gruppe if not t.get("dublette"))' in kern
+
+
+def test_dubletten_stehen_in_der_akte():
+    tsx = (WURZEL / "web" / "components" / "explorer" / "Vorgangsakte.tsx").read_text(encoding="utf-8")
+    assert "e.dubletten" in tsx
+
+
+def test_fehlendes_dublettenkennzeichen_haelt_den_export_nicht_an():
+    """Ein Verlaufseintrag ohne das Feld ist keine Zweitmeldung, kein Absturz."""
+    v = M._verlauf([{"notice_id": "x", "notice_kind": "cn",
+                     "veroeffentlicht": date(2025, 1, 5), "hat_unterlagen": False}])
+    assert v[0]["n"] == 1 and v[0]["dubletten"] == 0
+
+
+def test_zweitmeldung_zaehlt_nicht_als_ereignis():
+    v = M._verlauf([_bm("a", "can", 5), _bm("b", "can", 5), _bm("c", "can", 5, dublette=True)])
+    assert v[0]["n"] == 2 and v[0]["dubletten"] == 1
+    assert "c" in v[0]["ids"], "die Zweitmeldung muss sichtbar bleiben"
