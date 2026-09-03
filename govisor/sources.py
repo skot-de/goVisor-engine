@@ -720,6 +720,52 @@ DOC_REGISTRY: list[Source] = [
                    "`Disallow: /app/docmgmt`. Der Dateiendpunkt liegt EXAKT im gesperrten "
                    "Pfad. Fuenfter Fall dieser Bauart. Nicht abgerufen.",
            url="https://eu.eu-supply.com"),
+    # ── PT, sondiert am 2026-09-03 · Kapitel: docs/sondierung/pt.md ───────────────────
+    Source("sond-pt-acingov", "AcinGov (PT)", "", "PT", "beides",
+           "sondiert", portals=1, ebene="unterlagen", ertrag="offen",
+           coverage="40,2 % des portugiesischen Unterlagen-Felds (3.791 von 9.435, 12 Monate)",
+           overlap="✅ OFFEN, der einfachste Fall der Sondierung: TED verlinkt die Datei direkt, "
+                   "ein GET liefert das ZIP (3 von 3 geprueft, 1,9/2,1/0,65 MB, echte Caderno de "
+                   "Encargos + Programa Concurso). robots.txt 34 Bytes, sperrt NUR MJ12bot. "
+                   "⚠ Der Tippfehler 'donwloadProcedurePiece' steht so beim Betreiber. "
+                   "⚠ Erster Abruf gab 403 — das war der curl-Standardkopf, nicht die Tuer; mit "
+                   "eigener Kennung sofort 200.",
+           url="https://www.acingov.pt"),
+    Source("sond-pt-vortal", "Vortal Community (PT, ES, AD)", "", "PT", "beides",
+           "sondiert", portals=1, ebene="unterlagen", ertrag="offen",
+           coverage="48,6 % des portugiesischen Unterlagen-Felds (4.585 von 9.435, 12 Monate); "
+                    "Heimatmarkt PT, dazu ES und Andorra",
+           overlap="✅ OFFEN ueber eine DREISTUFIGE Kette, aber hinter der falschen ersten Tuer: "
+                   "GetPublicTenderInformation gibt bei 10 von 10 Vergaben documentList=[] trotz "
+                   "tenderIsPublished=true. Der Weg geht ueber contractNoticeUrl → "
+                   "GetContractNoticeDocuments?contractNoticeUId=PT1.NTC.* → PublicDownload?token=. "
+                   "9 von 9 Vergaben, 90 Dateien; ein PDF vollstaendig (49 Seiten, 1,03 MB). "
+                   "⚠ languageCode MUSS gefuellt sein, leer gibt 500 (wie in EE). "
+                   "⚠ robots.txt gibt 403 — auch im echten Browser, fuer niemanden abrufbar. RFC "
+                   "9309 liest 4xx als 'keine Beschraenkung', und der Betreiber nennt die Route "
+                   "dreimal 'public' (PublicTenderDocuments/PublicDownload). Einschaetzung, keine "
+                   "Messung — vor einem Anschluss klaeren. "
+                   "🎁 Nebenfund: POST /api/Tendering/SearchTenders liefert anonym 220.826 Vergaben "
+                   "inkl. UNTERSCHWELLIGER ('sem Publicacao no JOUE') und Andorra, das kein TED-Land ist.",
+           url="https://community.vortal.biz"),
+    Source("sond-pt-anogov", "AnoGov / compraspt (PT)", "", "PT", "beides",
+           "sondiert", portals=2, ebene="unterlagen", ertrag="teilweise",
+           coverage="9,3 % des portugiesischen Unterlagen-Felds; beide fahren dieselbe Software "
+                    "(/faces/app/acessoDocs.jsp?codigoAcesso=)",
+           overlap="🟡 Liste OFFEN ohne Anmeldung (Seitentitel 'List of Documents', kein Passwort"
+                   "feld, 7 echte Dateien inkl. DEUCP.zip = ESPD), aber der Download laeuft ueber "
+                   "ein JSF-Formular mit jsessionid statt per GET. Gleiche Bauform wie eis.gov.lv "
+                   "(Modal per POST) — wer eines loest, loest vermutlich beide.",
+           url="https://www.anogov.com"),
+    Source("sond-pt-base", "Portal BASE (PT, unterschwellig)", "", "PT", "ausschreibung",
+           "sondiert", portals=1, ebene="bekanntmachung", ertrag="ungeprueft",
+           coverage="nationales Pflichtportal; Umfang nicht gemessen",
+           overlap="⚪ UNGEPRUEFT, NICHT GESPERRT. Keine robots-Sperre (404), aber jeder Aufruf "
+                   "jenseits der Startseite gab HTTP 999 mit WebKnight-Firewall-Meldung. Das ist "
+                   "ein Filter, kein Verbot — nicht weiter beklopft, bis geklaert ist, was ihn "
+                   "ausloest. ⚠ Vortals SearchTenders fuehrt bereits unterschwellige Verfahren; "
+                   "ob das BASE ersetzt oder nur ueberlappt, ist offen.",
+           url="https://www.base.gov.pt"),
     # ── SK, sondiert am 2026-09-03 · Kapitel: docs/sondierung/sk.md ───────────────────
     Source("sond-sk-uvo", "ÚVO (uvo.gov.sk)", "", "SK", "beides",
            "sondiert", portals=1, ebene="unterlagen", ertrag="gesperrt",
