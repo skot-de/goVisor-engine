@@ -1772,7 +1772,25 @@ def _eforms_buyer_org_ids(root: ET.Element) -> list[str]:
     """
     ids: list[str] = []
     for party in _iter_named(root, "ContractingParty"):
+        # ⚠ EIN ContractingParty-BLOCK MUSS KEINEN KAEUFER ENTHALTEN. eForms haengt den
+        # Absender in dieselbe Huelle:
+        #     <cac:ContractingParty><cac:Party><cac:ServiceProviderParty>
+        #        <cbc:ServiceTypeCode listName="organisation-role">TED eSender</...>
+        #        <cac:Party><cac:PartyIdentification><cbc:ID>ORG-0000</...>
+        # ORG-0000 ist das „Publications Office of the European Union" — und das sitzt in
+        # LUXEMBURG. Ohne diese Zeile zaehlt der Herausgeber von TED als Kaeufer, und jede
+        # so gebaute Bekanntmachung wird zu einer luxemburgischen.
+        #
+        # Warum es ein Jahr lang niemand sah: fuer DE, AT und PL ist der Fehler unsichtbar,
+        # weil LU dort nie gesucht wird. Er faellt erst auf, wenn man LU einliest — dann
+        # sofort und heftig: im Paket 2024-05 waren 3.743 von 3.922 Saetzen fremd (4,6 %
+        # echtes LU), darunter polnische Krankenhaeuser und spanische Gemeinden.
+        # Gemessen am 2026-09-03 an data/raw/LU.
+        fremd = {i for spp in _iter_named(party, "ServiceProviderParty")
+                 for i in _iter_named(spp, "PartyIdentification")}
         for identification in _iter_named(party, "PartyIdentification"):
+            if identification in fremd:
+                continue
             org_id, _ = _first_child_text(identification, ("ID",))
             if org_id and org_id not in ids:
                 ids.append(org_id)

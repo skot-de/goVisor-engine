@@ -1,6 +1,6 @@
 """Parser tests, one per schema generation plus the traps found in real data."""
 
-from govisor import schema
+from govisor import normalize, schema
 
 LEGACY_2014 = b"""<?xml version="1.0" encoding="UTF-8"?>
 <TED_EXPORT VERSION="R2.0.9">
@@ -872,3 +872,64 @@ def test_doe_inline_buyer_carries_contact_details():
     assert buyer.phone == "+49 123 4567"
     assert buyer.contact_person == "Frau Beispiel"
     assert buyer.url == "https://www.musterstadt.de"
+
+
+def test_ted_esender_zaehlt_nicht_als_kaeufer():
+    """Der Herausgeber von TED darf keine Vergabe nach Luxemburg ziehen.
+
+    ⚠ DER FEHLER, DEN DIESER TEST FESTHAELT. eForms haengt den Absender in dieselbe
+    Huelle wie den Kaeufer — ein zweiter <cac:ContractingParty>-Block, der statt einer
+    Kaeuferpartei eine <cac:ServiceProviderParty> traegt. Darin steht ORG-0000, das
+    „Publications Office of the European Union", und das sitzt in LUXEMBURG.
+
+    Solange nur DE, AT und PL eingelesen wurden, war das unsichtbar: LU stand in keiner
+    Suchmenge. Beim ersten LU-Ingest (2026-09-03) schlug es sofort durch — im Paket
+    2024-05 waren 3.743 von 3.922 Saetzen fremd, darunter polnische Krankenhaeuser,
+    katalanische Kliniken und griechische Gemeinden. Echtes Luxemburg: 4,6 %.
+
+    Die Bekanntmachung unten ist auf das Wesentliche gekuerzt und traegt die Struktur
+    verbatim aus 303266_2024 (Miejskie Przedsiebiorstwo Oczyszczania, Torun).
+    """
+    xml = b"""<?xml version="1.0" encoding="UTF-8"?>
+<ContractNotice xmlns="urn:oasis:names:specification:ubl:schema:xsd:ContractNotice-2"
+  xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+  xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+  xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1">
+  <cac:ContractingParty>
+    <cac:Party><cac:PartyIdentification><cbc:ID>ORG-0001</cbc:ID></cac:PartyIdentification></cac:Party>
+  </cac:ContractingParty>
+  <cac:ContractingParty>
+    <cac:Party><cac:ServiceProviderParty>
+      <cbc:ServiceTypeCode listName="organisation-role">TED eSender</cbc:ServiceTypeCode>
+      <cac:Party><cac:PartyIdentification><cbc:ID>ORG-0000</cbc:ID></cac:PartyIdentification></cac:Party>
+    </cac:ServiceProviderParty></cac:Party>
+  </cac:ContractingParty>
+  <efac:Organizations>
+    <efac:Organization><efac:Company>
+      <cac:PartyIdentification><cbc:ID>ORG-0001</cbc:ID></cac:PartyIdentification>
+      <cac:PartyName><cbc:Name>Miejskie Przedsiebiorstwo Oczyszczania</cbc:Name></cac:PartyName>
+      <cac:PostalAddress><cac:Country>
+        <cbc:IdentificationCode listName="country">POL</cbc:IdentificationCode>
+      </cac:Country></cac:PostalAddress>
+    </efac:Company></efac:Organization>
+    <efac:Organization><efac:Company>
+      <cac:PartyIdentification><cbc:ID>ORG-0000</cbc:ID></cac:PartyIdentification>
+      <cac:PartyName><cbc:Name>Publications Office of the European Union</cbc:Name></cac:PartyName>
+      <cac:PostalAddress><cac:Country>
+        <cbc:IdentificationCode listName="country">LUX</cbc:IdentificationCode>
+      </cac:Country></cac:PostalAddress>
+    </efac:Company></efac:Organization>
+  </efac:Organizations>
+</ContractNotice>"""
+    notice = schema.parse(xml, "303266_2024")
+
+    # Der Kaeufer ist polnisch — und NUR polnisch.
+    assert notice.country == "PL"
+    assert "LU" not in (notice.buyer_countries or []), (
+        "Das Publications Office ist als Kaeufer durchgerutscht — der eSender-Riegel in "
+        "_eforms_buyer_org_ids greift nicht mehr."
+    )
+
+    # Und die Laenderregel schickt sie nicht nach Luxemburg.
+    assert not normalize.gehoert_zu_land(notice, "LU")
+    assert normalize.gehoert_zu_land(notice, "PL")
