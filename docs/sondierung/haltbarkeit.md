@@ -248,3 +248,72 @@ nur, weil er live abgegriffen wurde. Nachholen wäre unmöglich.
 ⚠ **Wer für ein neues Land entscheidet, ob gesammelt werden muss, misst das an der
 Plattform — nicht am Land und nicht am EU-Durchschnitt.** Der Test kostet drei Abrufe:
 eine Vergabe von heute, eine von vor einem Jahr, eine von vor drei Jahren.
+
+---
+
+# Teil 4: Die systematische Matrix (2026-09-03)
+
+`scripts/pruefe_aufbewahrung.py`, je Land der **eigene** Abrufweg, je Zelle **drei** Adressen.
+
+## 14. Wie viele von drei Vergaben liefern noch Dokumente?
+
+| Land | 3 Mon. | 8 Mon. | 15 Mon. | 27 Mon. | **51 Mon.** |
+|---|---|---|---|---|---|
+| **SI** | 3/3 | 3/3 | 3/3 | 3/3 | **3/3** |
+| **EE** | 3/3 | 3/3 | 3/3 | 3/3 | **3/3** (33,7 MB) |
+| **DK** | 3/3 | 2/3 | 3/3 | 2/3 | **3/3** |
+| **BG** | 3/3 | 3/3 | 3/3 | 3/3 | 2/3 |
+| **HU** | 2/3 | 3/3 | 3/3 | 2/3 | 2/3 (51 Dok!) |
+| **RO** | 2/3 | 2/3 | 1/3 | ⏳ | **belegt: 557 MB** |
+| **IE** | 2/3 | 3/3 | 3/3 | 3/3 | 0/1 |
+| **CY** | 3/3 | 3/3 | 3/3 | 3/3 | **0/3** |
+| **LT** | 3/3 | 3/3 | 3/3 | ✅ *(s. u.)* | ? |
+| **MT** | 3/3 | 2/3 | 3/3 | **0/3** | 0/3 |
+| **PT** | 3/3 | 1/3 | 2/3 | 1/3 | **0/3** |
+| **LU** | **0/3** | **0/3** | **0/3** | **0/3** | — |
+| **DE** | **0/3** | **0/3** | **0/3** | **0/3** | **0/3** |
+| NL | — | — | — | — | — (Sonde fehlt) |
+
+## 15. Drei Gruppen
+
+**a) Langzeit-Archive — vier Jahre und mehr.**
+`SI`, `EE`, `DK`, `BG`, `HU`, `RO`. Slowenien und Estland liefern 2022er Unterlagen
+vollständig; Estland eine 33,7-MB-Datei, Rumänien ein **557-MB-Archiv**, Ungarn eine
+Vergabe mit **51 Dokumenten**.
+
+**b) Mittelfrist — ein bis zwei Jahre.**
+`IE`, `CY`, `MT`, `PT`. Malta bricht bei 27 Monaten, Zypern zwischen 27 und 51, Portugal
+schwankt (AcinGov hält, AnoGov verlangt teils Anmeldung).
+
+**c) ⛔ Kein Archiv.**
+`LU` (nach Fristende weg) und **`DE`** — **null in allen fünf Jahrgängen, auch bei drei
+Monate alten Vergaben.** DTVP und RIB antworten wörtlich *„no longer publicly available"*.
+
+## 16. ⚠ Zwei Zellen waren mein Fehler, nicht der der Portale
+
+**Litauen 2024/2022** meldete „HTTP 302, 0 Dokumente". Ursache: TED verlinkt dort die
+**alte** Adressform `pirkimai.eviesiejipirkimai.lt/app/rfq/**rwlentrance_s.asp**`, und meine
+Sonde suchte nach `downloadDocForAnonymous`. Über `publicpurchase_docs.asp` kamen
+**2 Download-Aufrufe und 3 Dateinamen** — Litauen hält also. Sonde nachgebessert.
+
+**Rumänien** meldete dreimal „Archiv wird erzeugt". Das ist kein „weg": beim Nachfassen
+stand die 2022er Vergabe auf **Status 3 mit 557,0 MB**. ⚠ Wer die zweiphasige Quelle mit
+einer einzigen Abfrage prüft, hält sie für leer.
+
+> **Die Lehre gilt für jede künftige Prüfung:** eine Sonde, die eine Adressform oder eine
+> Wartezeit nicht kennt, meldet „weg" — und „weg" sieht aus wie ein Befund.
+
+## 17. Was daraus folgt
+
+| | |
+|---|---|
+| **Sammeln zwingend** | **DE** · **LU** — sonst ist es verloren |
+| **Sammeln optional** | IE, CY, MT, PT — Fenster von ein bis zwei Jahren |
+| **Sammeln unnötig** | SI, EE, DK, BG, HU, RO, LT — die Portale sind das Archiv |
+
+⚠ **Und das erklärt goVisors Bauart rückwirkend.** Die 13 deutschen Abrufer, die täglich
+laufen, sind keine Fleissarbeit — sie sind in Deutschland die **einzige** Möglichkeit. Die
+244 GB in `data/docs/DE` gäbe es sonst nicht, und sie liessen sich nicht nachholen.
+
+**Für alle anderen Länder ist die Reihenfolge damit umgekehrt:** erst der Parser, dann der
+Abrufer. Die Dokumente laufen nicht weg.

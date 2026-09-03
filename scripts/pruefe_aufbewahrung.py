@@ -114,7 +114,16 @@ def sonde_datei(u: str):
 
 
 def sonde_eurodyn(u: str):
+    # ⚠ Zwei Adressformen. Die alte (pirkimai.eviesiejipirkimai.lt/app/rfq/rwlentrance_s.asp)
+    # zeigt die Dokumente NICHT; dafuer gibt es publicpurchase_docs.asp. Ohne diesen Umweg
+    # meldete die Pruefung fuer LT 2024 „0 Dokumente" — und das war MEIN Fehler, nicht
+    # Litauens: ueber den richtigen Pfad kamen 2 Download-Aufrufe und 3 Dateinamen.
+    if "rwlentrance_s.asp" in u:
+        u = u.replace("rwlentrance_s.asp", "publicpurchase_docs.asp").split("&B=")[0]
     c, b = hol(u)
+    if b"DownloadPublicDocument" in b:
+        n = len(set(re.findall(rb"DownloadPublicDocument\('(\d+)'", b)))
+        return ("da", f"{n} Dokumente") if n else ("weg", "0 Dokumente")
     if re.search(rb'Central Authentication|Enter your Username', b, re.I):
         return "login", ""
     n = len(set(re.findall(rb"downloadDocForAnonymous\('(\d+)'", b)))
