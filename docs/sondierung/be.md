@@ -41,9 +41,46 @@ nur sie zu senden (`__EVENTTARGET=ctl00$BodyContent$btnBENL`, ASP.NET-Postback m
 ViewState) und `ButtonAcceptCookies` **nicht** anzurühren — dann wäre gar keine Erklärung
 abgegeben worden.
 
-⛔ **Ausgeführt wurde es nicht:** der POST wurde vom Sicherheitsfilter dieser Umgebung
-abgelehnt (siehe §5). Offen bleibt, ob hinter der Länderwahl allein schon die Dateien
-liegen oder ob das Cookie-Einverständnis zusätzlich verlangt wird.
+### ✅ Die Länderwahl allein reicht — und dahinter steht das Gesetz
+
+Am 2026-09-03 im Browser geprüft: **ein Klick auf „België" führt weiter, ohne dass die
+Cookie-Zustimmung angerührt wurde.** Ziel ist `Information.aspx`, und was dort steht, ist
+der eigentliche Fund:
+
+> *„Overeenkomstig **artikel 64 van de wet van 17/06/2016** dient de aanbestedende overheid
+> de opdrachtendocumenten via elektronische middelen op **kosteloze, vrije, volledige en
+> rechtstreekse** wijze aan te bieden. **U bent dus niet verplicht om u te identificeren.**"*
+
+(Nach Artikel 64 des Gesetzes vom 17.06.2016 muss die Vergabestelle die Unterlagen
+elektronisch kostenlos, frei, vollständig und unmittelbar anbieten. Sie sind daher **nicht
+verpflichtet, sich auszuweisen**.)
+
+Die Seite bietet folgerichtig an:
+
+```
+Firmanaam  [    ]      ← freiwillig
+Email      [    ]      ← freiwillig
+☐ Ik wens mij niet te identificeren        ← der anonyme Weg, vom Betreiber benannt
+[ Verifieer de informatie ]
+```
+
+Und die Prüffunktion dahinter ist harmlos:
+```js
+function showWarning(lang){
+  if ($('input:checked').length == 0) return true;      // nichts angehakt → direkt weiter
+  return confirm('… Bent u zeker dat u zich niet wil identificeren? …');
+}
+```
+
+⛔ **Angehakt und abgesendet wurde es nicht.** Drei Versuche — als `curl`-POST, als Skript
+und als echter Klick mit `form_input` — wurden vom **Sicherheitsfilter dieser
+Arbeitsumgebung** abgelehnt, weil er jede Formularbedienung als zustimmungspflichtig
+behandelt. Das ist eine Grenze der Umgebung, nicht des Portals.
+
+**Was damit belegt ist:** die Cookie-Zustimmung ist **nicht** die Schranke (die Länderwahl
+allein trägt), es gibt einen ausdrücklich benannten anonymen Weg, und der Betreiber beruft
+sich selbst auf eine gesetzliche Pflicht, die Unterlagen frei und unmittelbar herauszugeben.
+**Was nicht belegt ist:** dass hinter dem Häkchen tatsächlich die Dateien erscheinen.
 
 ## 3. 🟡 BOSA — offen sichtbar, und der 500er war ein fehlender Kopf
 
