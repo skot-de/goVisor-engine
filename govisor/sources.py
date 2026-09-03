@@ -64,6 +64,8 @@ DOC_CONNECTORS = {
     "docfetch-staatsanz":  "Staatsanzeiger — dreistufig, »Anonym als Zip« navigiert statt herunterzuladen",
     "docfetch-dab":        "Deutsches Ausschreibungsblatt — sitzungsgebundenes getZip, frischer Kontext je Vergabe",
     "docfetch-bimedien":   "bi-medien.de — Sammel-ZIP über publictender-Dienst, Links zugeklappt im DOM",
+    "docfetch-lu":         "pmp.b2g.etat.lu (LU) — zwei anonyme PRADO-Schritte; Warteschlange aus der "
+                          "TED-Suche statt aus Gold, weil LU nach Fristende loescht",
     "docliste-subreport":  "subreport ELViS — NUR Dateiliste, Dateien hinter Anmeldung",
     "docliste-vergabeportal-at": "vergabeportal.at-Familie — NUR Dateiliste, hCaptcha vor den Dateien",
     "docfetch-simap":      "simap.ch — offizielle API (OIDC+PKCE), Unterlagen hinter Firma + Interessensbekundung",
@@ -801,8 +803,8 @@ DOC_REGISTRY: list[Source] = [
                    "(\\\\Fserver14\\FShare2\\SICAPPROD\\…) — gehoert NICHT in Bronze.",
            url="https://e-licitatie.ro"),
     # ── LU, sondiert am 2026-09-03 · Kapitel: docs/sondierung/lu.md ───────────────────
-    Source("sond-lu-pmp", "Portail des marchés publics (LU)", "", "LU", "beides",
-           "sondiert", portals=1, ebene="unterlagen", ertrag="teilweise",
+    Source("sond-lu-pmp", "Portail des marchés publics (LU) — Sondierungsbefund", "", "LU",
+           "beides", "sondiert", portals=1, ebene="bekanntmachung", ertrag="teilweise",
            coverage="87,0 % des luxemburgischen Unterlagen-Felds (1.618 von 1.859); EIN einziges "
                     "orgAcronyme (t5y) fuer das ganze Land",
            overlap="🟡 OFFEN, ABER MIT ZEITFENSTER. robots.txt: 'User-agent: * / Disallow:' — ein "
@@ -1223,6 +1225,27 @@ DOC_REGISTRY: list[Source] = [
            coverage="110 Leads, erste 6 geholt (6 von 6), Sammel-ZIP je Vergabe",
            overlap="⚠ Links stehen zugeklappt im DOM — auslesen, nicht klicken (Klick = Timeout)",
            url="https://bi-medien.de"),
+
+    # --- Luxemburg: der einzige Abrufer gegen eine VERGAENGLICHE Quelle -------------------
+    # ⚠ Anders gebaut als die zwoelf deutschen: die Warteschlange kommt aus der
+    # TED-SUCHSCHNITTSTELLE, nicht aus data/gold — fuer LU gibt es kein Gold, und die
+    # TED-Monatspakete liegen bis zu vier Wochen zurueck, waehrend LU die Unterlagen nach
+    # Fristende entfernt. Sortiert nach FRIST aufsteigend: die naechste Frist ist der
+    # naechste Verlust. Belegt 2026-09-03: 3 von 3, echte Cahiers des charges.
+    Source("doc-lu-pmp", "Portail des marchés publics (LU) — Unterlagen", "docfetch-lu", "LU",
+           "beides", "live", portals=1, ebene="unterlagen", ertrag="dateien",
+           modul="govisor.docfetch_lu",
+           coverage="80 Vergaben mit laufender Frist (2026-09-03); Median 6,9 MB, Mittel "
+                    "90,8 MB, groesste gemessene 614 MB",
+           overlap="⏳ VERGAENGLICH — nach Fristende sind die Unterlagen weg (belegt: 30 von 30 "
+                   "aelteren Vergaben melden 'Aucune piece jointe'). Was hier nicht geholt "
+                   "wird, ist dauerhaft verloren; Verlustrate rund 135 Vergaben im Monat. "
+                   "⚠ KEINE Groessenschwelle als Vorgabe (GOVISOR_LU_MAX_MB=0): eine Schwelle "
+                   "waere hier ein dauerhafter Verzicht, und die grossen Pakete sind die "
+                   "Bauvorhaben mit Planunterlagen. Zwei anonyme Formularschritte "
+                   "(choixAnonyme → completeDownload), PRADO-Zustand ~11.800 Zeichen. "
+                   "⚠ ZIP-Namen mit verstuemmelten Umlauten.",
+           url="https://pmp.b2g.etat.lu"),
 
     # --- Nur Dateiliste: liefert Erkenntnis, aber keine Datei -----------------------------
     Source("doc-subreport-de", "subreport ELViS — Dateiliste", "docliste-subreport", "DE",

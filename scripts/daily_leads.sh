@@ -889,6 +889,25 @@ fi
   mit_grenze "$GRENZE_ABRUF" $PY -m govisor.vergabeportal_at --limit 60 \
     || echo "  ⚠ AT-Dateilisten unvollstaendig."
 
+  # ⏳ LUXEMBURG — der einzige Abrufer gegen eine VERGAENGLICHE Quelle.
+  #
+  # ⚠ WARUM ER HIER STEHT UND NICHT IM RUECKSTAU-ARBEITER. Nach Fristende sind die
+  # luxemburgischen Unterlagen WEG (belegt: 30 von 30 aelteren Vergaben melden „Aucune
+  # piece jointe", docs/sondierung/haltbarkeit.md §14). Es gibt dort also keinen
+  # Rueckstau, den man abarbeiten koennte — nur einen Zulauf, den man verpasst oder
+  # nicht. Verlustrate rund 135 Vergaben im Monat.
+  #
+  # ⚠ Seine Warteschlange kommt aus der TED-SUCHSCHNITTSTELLE, nicht aus data/gold: fuer
+  # LU gibt es kein Gold, und die Monatspakete liegen bis zu vier Wochen zurueck —
+  # laenger als manche luxemburgische Frist. Sortiert nach Frist aufsteigend.
+  #
+  # ⚠ KEINE Groessenschwelle. Median 6,9 MB, aber gemessen bis 614 MB je Vergabe; eine
+  # Schwelle waere hier ein dauerhafter Verzicht auf die Bauvorhaben mit Planunterlagen.
+  # Das Lauf-Budget (GOVISOR_LU_BUDGET_MB, Vorgabe 8000) bremst statt auszuschliessen.
+  step "Luxemburg-Unterlagen (vergaenglich — jetzt oder nie)"
+  mit_grenze "$GRENZE_ABRUF" $PY -m govisor.docfetch_lu --limit 40 \
+    || echo "  ⚠ LU-Unterlagen unvollstaendig — ⏳ diese Vergaben sind moeglicherweise verloren."
+
 else
   echo ""
   echo "▶ Neue Quellen (healyhudson + die VIER Unterlagen-Fetcher) ABGESCHALTET."
