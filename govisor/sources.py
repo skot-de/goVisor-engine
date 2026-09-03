@@ -720,6 +720,46 @@ DOC_REGISTRY: list[Source] = [
                    "`Disallow: /app/docmgmt`. Der Dateiendpunkt liegt EXAKT im gesperrten "
                    "Pfad. Fuenfter Fall dieser Bauart. Nicht abgerufen.",
            url="https://eu.eu-supply.com"),
+    # ── DK, sondiert am 2026-09-03 · Kapitel: docs/sondierung/dk.md ───────────────────
+    Source("sond-dk-ethics", "Ethics (DK)", "", "DK", "beides",
+           "sondiert", portals=1, ebene="unterlagen", ertrag="offen",
+           coverage="17,5 % des daenischen Unterlagen-Felds (656 von 3.741); 8 von 8 Vergaben "
+                    "geantwortet, 142 Dokumenteintraege",
+           overlap="✅ OFFEN, zwei Aufrufe: GET /ethics/publicTenderDocs/<guid> → tenderDocs[] → "
+                   "GET /ethics/publicTenderDoc/<guid>/downloadFolder/<docId> (ein ZIP je Ordner). "
+                   "Seite heisst 'Offentligt udbudsmateriale', keine robots.txt (404). "
+                   "🎁 Die Eintraege tragen MD5 UND SHA1 (md5, checksum) — mehr als Bulgarien, das "
+                   "nur MD5 gibt — dazu length, state=PUBLISHED, cat und folderFiles. "
+                   "⚠ UMFANG: ein einziger Ordner ('07-Tegninger') war 64.440.964 Bytes; eine "
+                   "einzelne Bauzeichnung 7 MB. Die length-Angabe VOR dem Abruf nutzen.",
+           url="https://www.ethics.dk"),
+    Source("sond-dk-eusupply", "EU-Supply CTM (DK, NO, NL)", "", "DK", "beides",
+           "sondiert", portals=1, ebene="unterlagen", ertrag="gesperrt",
+           coverage="28,3 % des daenischen Unterlagen-Felds (1.058); nach der Herstellerzaehlung "
+                    "auch NO 99 und NL 3",
+           overlap="⛔ LISTE ERLAUBT, DATEIEN GESPERRT — der lehrreichste Fall des Kapitels. Die "
+                   "robots.txt sperrt '/app/docmgmt'. Die TED-Adresse fuehrt aber auf "
+                   "/app/rfq/publicpurchase_docs.asp (NICHT gesperrt), und diese Seite liefert "
+                   "anonym 107 Dateinamen mit Verweisen javascript:DownloadPublicDocument(…). "
+                   "⚠ Die Funktionsdefinition zeigt: strDownloadPublicDocumentURL = strDomain + "
+                   "'/app/docmgmt/downloadPublicDocument.asp' — die Dateien liegen genau unter dem "
+                   "gesperrten Pfad. Dieselbe Konstruktion wie GR-Διαύγεια. KEINE Datei abgerufen. "
+                   "⚠ REGEL: ein Funktionsname ist keine Erlaubnis. 'DownloadPublic…' sagt, wofuer "
+                   "der Betreiber die Funktion haelt; die robots.txt sagt, was er von Abrufern "
+                   "will. ⚠ Gilt auch fuer NO und NL — dieselbe robots.txt, derselbe Pfad.",
+           url="https://eu.eu-supply.com"),
+    Source("sond-dk-rest", "comdia, Mercell, iBinder, Amgros (DK)", "", "DK", "beides",
+           "sondiert", portals=4, ebene="unterlagen", ertrag="gesperrt",
+           coverage="comdia 16,2 % · Mercell 14,1 % · Amgros 5,4 % · iBinder 2,9 % = 38,6 %",
+           overlap="⛔ comdia leitet auf /Login.aspx mit Passwortfeld (robots sperrt nur "
+                   "/keepAlive.aspx — die Grenze ist ein Konto, keine Regel). Mercell leitet auf "
+                   "'Sign in / Tender access' (kommerzieller Dienst). Amgros verlinkt aus TED "
+                   "AUSSCHLIESSLICH die Startseite. "
+                   "⚠ iBinder ist die Warnung, die zu merken lohnt: die Adresse endet auf '/public' "
+                   "und landet trotzdem auf signin.ibinder.com mit E-Mail und Passwort. "
+                   "Gegenstueck zur slowenischen Lehre (CAPTCHA auf der Suchmaske heisst nicht "
+                   "CAPTCHA am Abruf): DAS WORT 'public' IM PFAD IST KEIN VERSPRECHEN.",
+           url="https://www.comdia.com"),
     # ── FI, sondiert am 2026-09-03 · Kapitel: docs/sondierung/fi.md ───────────────────
     Source("sond-fi-hilma", "HILMA (FI)", "", "FI", "beides",
            "sondiert", portals=1, ebene="unterlagen", ertrag="offen",

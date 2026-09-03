@@ -36,6 +36,7 @@ Abruf belegt. Kein Konto, kein CAPTCHA, robots.txt immer zuerst.
 | **SI** | 1,6 % | **100 %** | ein GET direkt auf die Datei, 39 von 39 |
 | **HU** | 1,1 % | **64 %** | Dokumenttyp an der Quelle, ZIP serverseitig gebündelt |
 | **FI** | 1,9 % | **9 %** | Zwei-Klassen-Land: HILMA offen, Cloudia (82 %) Anmeldung |
+| **DK** | 0,9 % | **17,5 %** | 6 Plattformen, 6 Antworten; EU-Supply sperrt genau den Dateipfad |
 | **SK** | 1,2 % | **0 %** | ⛔ Freigabeliste in der robots.txt |
 | **BE** | 3,6 % | *offen* | Plattform fällt gerade aus |
 | **LV** | 1,5 % | *offen* | eine Plattform, Abrufweg ungeklärt |
