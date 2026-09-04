@@ -11,6 +11,13 @@ Provenance-Regeln (Ticket §3):
 - Fallzahl-Schwellen (§3.1) gelten für jeden Quoten-KPI.
 """
 import duckdb, json, pathlib
+import sys
+
+ROOT = pathlib.Path(__file__).resolve().parent.parent
+# ⚠ ERST den Projektpfad, DANN `govisor` importieren. Unter launchd gibt es kein
+# PYTHONPATH; ein Import davor bricht stumm ab (s. test_skripte_finden_govisor_ohne_pythonpath).
+sys.path.insert(0, str(ROOT))
+from govisor.laender import AKTIV as _AKTIV  # noqa: E402
 
 OUT = pathlib.Path("web/data"); OUT.mkdir(parents=True, exist_ok=True)
 con = duckdb.connect(); con.execute("SET threads=4")
@@ -41,7 +48,9 @@ VORLAUF: list = []
 # waere ein Umbau von 700 Zeilen fuer denselben Effekt.
 # ⚠ LU steht hier, obwohl es noch kein Gold hat: die Ausgabe ueberspringt Laender ohne
 # Tabellen von selbst, und ein fehlender Eintrag waere spaeter die stillere Luecke.
-LAENDER = ["DE", "AT", "CH", "LU"]
+# ⚠ Eine Stelle: `govisor/laender.py`. Hier stand eine eigene Liste — bis zum
+# 2026-09-04 gab es ein Dutzend davon, und Luxemburg fehlte in der Haelfte.
+LAENDER = list(_AKTIV)
 
 
 def quellen_setzen(land: str) -> None:

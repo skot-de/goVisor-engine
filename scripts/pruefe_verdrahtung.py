@@ -61,6 +61,10 @@ import re
 import sys
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
+# ⚠ ERST den Projektpfad, DANN `govisor` importieren. Unter launchd gibt es kein
+# PYTHONPATH; ein Import davor bricht stumm ab (s. test_skripte_finden_govisor_ohne_pythonpath).
+sys.path.insert(0, str(ROOT))
+from govisor.laender import AKTIV as _AKTIV  # noqa: E402
 GOLD = ROOT / "data" / "gold"
 
 # ── Sonde 1: Frische ────────────────────────────────────────────────────────
@@ -162,7 +166,9 @@ def _laender(wurzel: pathlib.Path) -> tuple[str, ...]:
 
 # Rueckfall fuer Aufrufer, die ohne Wurzel arbeiten (und fuer die Tests). Kein Ersatz fuer
 # die Messung oben, nur eine Notleine, wenn es gar keine Gold-Ebene gibt.
-LAENDER = ("DE", "AT", "CH", "LU")
+# ⚠ Eine Stelle: `govisor/laender.py`. Hier stand eine eigene Liste — bis zum
+# 2026-09-04 gab es ein Dutzend davon, und Luxemburg fehlte in der Haelfte.
+LAENDER = _AKTIV
 
 # BEWUSST: gibt es zu Recht nur in DE. Der Grund muss die QUELLE nennen, nicht den
 # Aufwand — „lohnt sich nicht" ist keine Begruendung, sondern eine Vertagung.

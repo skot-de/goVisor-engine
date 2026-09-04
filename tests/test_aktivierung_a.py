@@ -44,9 +44,13 @@ def test_alle_laender_werden_geprueft():
     """
     block = EXPORT[EXPORT.index("def _laender_ohne_unterlagen"):EXPORT.index("OHNE_UNTERLAGEN =")]
     assert "for land in LAENDER:" in block, "der Block muss die gemeinsame Liste benutzen"
-    zeile = next(z for z in EXPORT.splitlines() if z.startswith("LAENDER = "))
+    # ⚠ SEIT DEM 2026-09-04 LEITET DIE DATEI AB: `LAENDER = _AKTIV`. Auf Literale zu pruefen
+    # hiesse jetzt, die Verdopplung zu ERZWINGEN, die der Umbau gerade beseitigt hat — genau
+    # der Fehler, den dieser Test schon einmal gemacht hat (siehe Absatz oben).
+    assert "laender import AKTIV" in EXPORT, "export_web_leads leitet die Laender nicht mehr ab"
+    from govisor.laender import AKTIV
     for land in ("DE", "AT", "CH", "LU"):
-        assert f'"{land}"' in zeile, f"{land} fehlt in export_web_leads.LAENDER"
+        assert land in AKTIV, f"{land} fehlt in govisor.laender.AKTIV"
 
 
 def test_die_hochladestrecke_bleibt_dieselbe():

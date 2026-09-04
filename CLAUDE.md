@@ -64,9 +64,21 @@ laesst eine undatierte Zahl dort gar nicht durch).
   erste Messung, wenn sie zutreffen: **13 Währung** (die Schweiz hat `value_eur` bei 1 %
   gefüllt, DE bei 91 % — jede wertbasierte Kennzahl faellt aus) und **14 Schrift** (die
   Wortfaltung kennt nur ä ö ü ß; `Łódź` wird zu `['d']`). **15 Eintragungsliste** nennt
-  jede Datei, in der ein Land bekannt gemacht werden muss. ⚠ `govisor/countries.py` führt
-  die Ländercodes (Ingest/Parser), NICHT welche Länder die Pipeline baut — das sind eigene
-  `LAENDER`-Tupel in fünf Dateien. Die
+  jede Datei, in der ein Land bekannt gemacht werden muss.
+  ⚠ **DREI EBENEN, NICHT ZWEI.** `govisor/countries.py` führt die Ländercodes (Vokabular,
+  Ingest/Parser). **`govisor/laender.py:AKTIV`** sagt, welche Länder die Pipeline BAUT —
+  seit dem 2026-09-04 die EINE Stelle; vorher ein Dutzend eigener `LAENDER`-Tupel, in denen
+  Luxemburg zur Hälfte fehlte. Und die **Wertetabellen** (`_REGION_STELLEN`,
+  `_PLZ_STELLEN`, `locales.LOCALES`, `LAND_LABEL` …) tragen Länderwissen, das keine Liste
+  erfinden kann; für sie gibt es keinen Ersatz, nur einen Wächter:
+
+      python3 scripts/pruefe_laender_tabellen.py --alle
+
+  ⚠ Er ist der wichtigere Teil, weil diese Tabellen **lautlos** scheitern: als LU dazukam,
+  fiel der Lead ohne `_PLZ_STELLEN`-Eintrag auf den Ortsnamen zurück — Abdeckung blieb
+  279/279, nur die Genauigkeit war weg (0 statt 127 Leads über die PLZ). Kein Fehler, keine
+  leere Tabelle, keine Ausnahme.
+  Die
   Liste ist die Summe eines Tages, an dem Österreich nachgemessen wurde — sechs Wochen
   nachdem es „fertig" war. Bindefrist 0 %, Bürgschaft 0 %, Nebenangebote 0 %, Lose 0 %,
   bei 57 % nicht einmal ein Link zur Quelle, während die Schweiz auf 51 % stand und die

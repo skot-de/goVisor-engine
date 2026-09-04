@@ -1,15 +1,32 @@
 # 15 · Eintragungsliste — wo ein Land überall bekannt gemacht wird
 
-> **Es gibt zwei Ebenen, und nur eine hat eine Registry.**
+> **Es gibt DREI Ebenen. Zwei haben seit dem 2026-09-04 eine Registry, die dritte nicht —
+> und das ist der Kern dieses Kapitels.**
 >
-> `govisor/countries.py` führt die **Ländercodes** — Alpha-2, Alpha-3 und Name, plus die
-> Aliase, die TED über zwanzig Jahre gesammelt hat (`GR`→`EL`, `GB`→`UK`). Sie ist
-> ausdrücklich dafür gebaut, dass „adding a country stays a one-line change", und wird von
-> `config.py`, `schema.py` und `verify.py` benutzt — also von Ingest und Parser.
+> 1. **Ländercodes** — `govisor/countries.py`: Alpha-2, Alpha-3, Name, plus die Aliase, die
+>    TED über zwanzig Jahre gesammelt hat (`GR`→`EL`, `GB`→`UK`). Das *Vokabular*. Sie kennt
+>    Bulgarien; gebaut wird es deshalb noch lange nicht.
+> 2. **Welche Länder die Pipeline BAUT** — `govisor/laender.py:AKTIV`. ⚠ Hier standen bis
+>    zum 2026-09-04 eigene `LAENDER`-Tupel in einem Dutzend Dateien, und Luxemburg fehlte in
+>    der Hälfte. Neun Dateien leiten jetzt ab; `tests/test_laender.py` hält sie davon ab,
+>    wieder eine eigene Liste zu schreiben.
+> 3. **Wertetabellen** — `gold._REGION_STELLEN`, `_PLZ_STELLEN`, `locales.LOCALES`,
+>    `LAND_LABEL` … ⚠ **Für die kann es keine Registry geben**: eine Liste erfindet `DE=5,
+>    AT=4` nicht, das ist Länderwissen, das jemand messen muss. Sie bleiben von Hand gepflegt
+>    — aber ein *fehlender* Eintrag ist seitdem laut:
 >
-> Welche Länder die **Pipeline tatsächlich baut**, steht dort NICHT. Das sind eigene
-> `LAENDER`-Tupel in mindestens fünf Dateien. Diese Liste ist der Ersatz dafür; sie wird
-> beim Aufnehmen eines Landes abgearbeitet und beim Abschluss gegengelesen.
+> ```bash
+> python3 scripts/pruefe_laender_tabellen.py --alle
+> ```
+>
+> ⚠ **Warum dieser Wächter der wichtigere Teil ist.** Die Tabellen scheitern lautlos. Als LU
+> dazukam: `_PLZ_STELLEN` fehlte → der Lead fiel auf den Ortsnamen zurück, die Abdeckung
+> blieb 279/279, nur die Genauigkeit war weg (0 statt 127 Leads über die PLZ).
+> `export_suppliers._STELLEN` fehlte → jede LU-Region verworfen. `locales` fehlte → alles
+> lief mit dem DE-Default. Kein Fehler, keine leere Tabelle, keine Ausnahme.
+>
+> Diese Liste unten bleibt trotzdem: sie sagt, was man beim Aufnehmen ABARBEITET. Der
+> Wächter sagt, was man dabei VERGESSEN hat.
 
 Sortiert nach dem Zeitpunkt, zu dem man sie braucht.
 

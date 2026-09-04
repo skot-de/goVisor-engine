@@ -20,12 +20,15 @@ sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent.parent))
 
 from govisor import db as _db  # noqa: E402
 from govisor.testvergaben import sql_bedingung as _testvergabe_sql
+from govisor.laender import AKTIV as _AKTIV  # noqa: E402
 
 # ⚠ EINE Liste, nicht drei. Bis zum 2026-09-03 stand („DE", „AT", „CH") an DREI Stellen in
 # dieser Datei — Falle C14 der Laender-Bibel: wer ein Land aufnimmt, trifft zwei davon und
 # uebersieht die dritte, und dann fehlt es genau in einer Kennzahl. Wer hier ergaenzt,
 # ergaenzt ueberall.
-LAENDER = ("DE", "AT", "CH", "LU")
+# ⚠ Eine Stelle: `govisor/laender.py`. Hier stand eine eigene Liste — bis zum
+# 2026-09-04 gab es ein Dutzend davon, und Luxemburg fehlte in der Haelfte.
+LAENDER = _AKTIV
 
 TODAY = date.today()
 

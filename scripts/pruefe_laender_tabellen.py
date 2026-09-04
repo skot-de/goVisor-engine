@@ -101,6 +101,12 @@ class Tabelle:
         return gefunden, ""
 
 
+# ⚠ VIER EINTRAEGE STANDEN HIER UND SIND SEIT DEM 2026-09-04 WEG — nicht weil sie
+# unwichtig waeren, sondern weil sie keine eigene Liste mehr HALTEN: `process_upload`,
+# `export_strategie`, `export_web_leads` und `pruefe_verdrahtung` lesen jetzt
+# `govisor.laender.AKTIV`. Was ableitet, kann nicht abdriften.
+# ⚠ Damit niemand versehentlich eine Literalliste zurueckschreibt, prueft
+# `tests/test_laender.py::test_die_abgeleiteten_leiten_wirklich_ab` genau das.
 TABELLEN: list[Tabelle] = [
     Tabelle("gold._REGION_STELLEN", "govisor/gold.py",
             r"_REGION_STELLEN\s*=\s*\{([^}]*)\}",
@@ -125,9 +131,6 @@ TABELLEN: list[Tabelle] = [
     Tabelle("fetch_ted_live --country", "scripts/fetch_ted_live.py",
             r'add_argument\("--country".*?choices=\(([^)]*)\)',
             "argparse weist `--country <LAND>` ab, obwohl der Code laengst dafuer gebaut ist"),
-    Tabelle("process_upload._ERLAUBT", "scripts/process_upload.py",
-            r"_ERLAUBT\s*=\s*\(([^)]*)\)",
-            "der Upload faellt auf DE zurueck und wird im falschen Land abgelegt"),
     Tabelle("lead-docs route LAENDER", "web/app/api/lead-docs/route.ts",
             r"LAENDER = new Set\(\[([^\]]*)\]",
             'der Upload-Endpunkt weist das Land mit 400 ab'),
@@ -146,16 +149,6 @@ TABELLEN: list[Tabelle] = [
     Tabelle("Marktpuls.LAND_LABEL", "web/components/Marktpuls.tsx",
             r"const LAND_LABEL: Record<string, string> = \{([^}]*)\}",
             'das Land faellt in den Sammeltopf der uebrigen EU-Laender'),
-    Tabelle("export_strategie.LAENDER", "scripts/export_strategie.py",
-            r"^LAENDER\s*=\s*\[([^\]]*)\]",
-            "die Strategie-Ansicht wird fuer das Land nicht gebaut", flags=re.M),
-    Tabelle("export_web_leads.LAENDER", "scripts/export_web_leads.py",
-            r"^LAENDER\s*=\s*\(([^)]*)\)",
-            "Dubletten-, Frist- und Unterlagen-Kennzahlen zaehlen das Land nicht mit",
-            flags=re.M),
-    Tabelle("pruefe_verdrahtung.LAENDER", "scripts/pruefe_verdrahtung.py",
-            r"^LAENDER\s*=\s*\(([^)]*)\)",
-            "die Verdrahtungssonde prueft das Land ueberhaupt nicht", flags=re.M),
 ]
 
 
@@ -164,6 +157,12 @@ TABELLEN: list[Tabelle] = [
 # Drei Listen enthalten absichtlich nicht alle aktiven Länder. Sie hier nur wegzulassen wäre
 # eine stille Ausnahme — deshalb stehen sie MIT Begründung da, und `tests/` hält sie ehrlich.
 BEWUSST_UNVOLLSTAENDIG: dict[str, str] = {
+    "scripts/build_city_index.py:_cities":
+        "schreibt fest {'DE': ...}. KEIN Versehen und im Skript selbst begruendet: fuer AT/CH "
+        "fehlt der Gazetteer als Positivliste echter Ortsnamen (es gibt nur DE_gazetteer.txt), "
+        "und die Firmennamen-Ausschlussliste ist auf deutsche Rechtsformen getrimmt. Ein naiver "
+        "Durchlauf waere schlechter als keiner - er brachte Organisationsnamen als Staedte in "
+        "die Suche. Folge heute: die Stadt-Umkreissuche findet fuer AT/CH/LU nichts.",
     "web/lib/staaten.ts:STAATEN":
         'das oeffentliche VERSPRECHEN (jede Vergabe in ...). Es hinkt absichtlich hinterher: '
         "LU liefert noch keine Leads. Die Datei sagt selbst, ein viertes Land sei 'eine Zeile, "

@@ -60,12 +60,17 @@ Aufruf::  scripts/region_ableiten.py [--probe]
 """
 from __future__ import annotations
 
+import sys
 import argparse
 import csv
 import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+# ⚠ ERST den Projektpfad, DANN `govisor` importieren. Unter launchd gibt es kein
+# PYTHONPATH; ein Import davor bricht stumm ab (s. test_skripte_finden_govisor_ohne_pythonpath).
+sys.path.insert(0, str(ROOT))
+from govisor.laender import AKTIV as _AKTIV  # noqa: E402
 
 # ── JE LAND ──────────────────────────────────────────────────────────────────────────
 # Bis 2026-08-23 lief dieses Skript ausschliesslich fuer Deutschland. Gemessen fielen
@@ -83,7 +88,9 @@ ROOT = Path(__file__).resolve().parent.parent
 # Die Namensliste je Land kommt aus `dim_nuts` des Landes und nicht aus einer getippten
 # Konstante: die 9 oesterreichischen Bundeslaender und 26 Schweizer Kantone stehen dort
 # bereits, in der Schreibweise, die auch die Anzeige verwendet („Bern / Berne").
-LAENDER = ("DE", "AT", "CH", "LU")
+# ⚠ Eine Stelle: `govisor/laender.py`. Hier stand eine eigene Liste — bis zum
+# 2026-09-04 gab es ein Dutzend davon, und Luxemburg fehlte in der Haelfte.
+LAENDER = _AKTIV
 # ⚠ LU: eine einzige Region (LU/LU0/LU00/LU000, alle „Luxembourg"). Muss zu
 # `gold._REGION_STELLEN` passen — ein Test haelt beides zusammen.
 REGION_STELLEN = {"DE": 3, "AT": 4, "CH": 5, "LU": 3}

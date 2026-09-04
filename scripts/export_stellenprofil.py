@@ -30,12 +30,17 @@ Aufruf: python3 scripts/export_stellenprofil.py
 """
 from __future__ import annotations
 
+import sys
 import json
 from pathlib import Path
 
 import duckdb
 
 ROOT = Path(__file__).resolve().parent.parent
+# ⚠ ERST den Projektpfad, DANN `govisor` importieren. Unter launchd gibt es kein
+# PYTHONPATH; ein Import davor bricht stumm ab (s. test_skripte_finden_govisor_ohne_pythonpath).
+sys.path.insert(0, str(ROOT))
+from govisor.laender import AKTIV as _AKTIV  # noqa: E402
 OUT = ROOT / "web" / "data" / "stellenprofil.json"
 
 MIND_VERFAHREN = 5           # weniger ist kein Muster, nur ein Zufall mit drei Belegen
@@ -57,7 +62,8 @@ def main() -> int:
     # ⚠ LU seit 2026-09-03. Die Schleife prueft je Land auf die Datei und ueberspringt,
     # was fehlt — ein Land hier zu vergessen wirft also KEINEN Fehler, es zaehlt nur
     # nicht mit. Genau so hat LU 279 Leads lang gefehlt, ohne dass etwas rot wurde.
-    for land in ("DE", "AT", "CH", "LU"):
+    # ⚠ Eine Stelle: `govisor/laender.py`. Hier stand eine eigene Liste.
+    for land in _AKTIV:
         C = ROOT / "data" / "gold" / land / "doc_checklist.parquet"
         L = ROOT / "data" / "gold" / land / "lead_export.parquet"
         if not (C.exists() and L.exists()):

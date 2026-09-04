@@ -14,13 +14,17 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT))
+from govisor.laender import AKTIV as _AKTIV  # noqa: E402
 # ⚠ DAS LAND STAND HIER FEST AUF „DE". Ein schweizerischer oder oesterreichischer Kunde, der
 # seine Unterlagen hochlaedt, bekam sie unter Deutschland abgelegt — und weil AT und CH bei
 # den Portalen 0 % Abdeckung haben, sind SELBST HOCHGELADENE Dateien dort die EINZIGE
 # Dokumentquelle. Genau die wurden also falsch einsortiert. Gemessen faellt es nicht auf:
 # die Analyse laeuft durch, das Ergebnis stimmt, nur das Land ist falsch — und damit jede
 # Laenderstatistik und die Pfad-Herkunft, an der die Warteschlange den Rang festmacht.
-_ERLAUBT = ("DE", "AT", "CH", "LU")
+# ⚠ Die Sicherheitspruefung SELBST bleibt hier — sie schuetzt einen DATEIPFAD.
+# Abgeleitet ist nur die Menge, nicht die Pruefung: Tiefenstaffelung, keine Verdopplung.
+_ERLAUBT = _AKTIV
 LAND = (sys.argv[3].upper() if len(sys.argv) > 3 else "DE")
 if LAND not in _ERLAUBT:                       # nie ungeprueft in einen Pfad
     LAND = "DE"

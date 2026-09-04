@@ -14,12 +14,17 @@ Aufruf::  scripts/export_landing.py
 """
 from __future__ import annotations
 
+import sys
 import json
 from collections import Counter
 from datetime import date
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+# ⚠ ERST den Projektpfad, DANN `govisor` importieren. Unter launchd gibt es kein
+# PYTHONPATH; ein Import davor bricht stumm ab (s. test_skripte_finden_govisor_ohne_pythonpath).
+sys.path.insert(0, str(ROOT))
+from govisor.laender import AKTIV as _AKTIV  # noqa: E402
 ZIEL = ROOT / "web/data/landing.json"
 
 
@@ -514,7 +519,7 @@ def eignungs_check(root, fachliste, analysen: dict) -> dict:
     for k, z in zellen.items():
         summe[k.split("|", 1)[1]] += z["offen"]
     laender_raeume = [r for r in ("alle", "DE", "AT", "CH", "LU") if summe.get(r)]
-    bundeslaender = sorted((r for r in summe if r not in ("alle", "DE", "AT", "CH", "LU")),
+    bundeslaender = sorted((r for r in summe if r not in ("alle", *_AKTIV)),
                            key=lambda r: -summe[r])
     regionen = ([{"schluessel": r, "label": {"alle": "überall", "DE": "Deutschland gesamt",
                                              "AT": "Österreich", "CH": "Schweiz"}[r],
@@ -567,7 +572,8 @@ def main() -> int:
     # ⚠ LU seit 2026-09-03. Die Schleife prueft je Land auf die Datei und ueberspringt,
     # was fehlt — ein Land hier zu vergessen wirft also KEINEN Fehler, es zaehlt nur
     # nicht mit. Genau so hat LU 279 Leads lang gefehlt, ohne dass etwas rot wurde.
-    for land in ("DE", "AT", "CH", "LU"):
+    # ⚠ Eine Stelle: `govisor/laender.py`. Hier stand eine eigene Liste.
+    for land in _AKTIV:
         p = ROOT / "data/gold" / land / "lead_export.parquet"
         if not p.exists():
             continue

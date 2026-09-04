@@ -52,6 +52,10 @@ from pathlib import Path
 import duckdb
 
 ROOT = Path(__file__).resolve().parent.parent
+# ⚠ ERST den Projektpfad, DANN `govisor` importieren. Unter launchd gibt es kein
+# PYTHONPATH; ein Import davor bricht stumm ab (s. test_skripte_finden_govisor_ohne_pythonpath).
+sys.path.insert(0, str(ROOT))
+from govisor.laender import AKTIV as _AKTIV  # noqa: E402
 sys.path.insert(0, str(ROOT))
 
 OUT = ROOT / "web" / "data" / "fenster.json"
@@ -77,7 +81,8 @@ def main() -> int:
     # ⚠ LU seit 2026-09-03. Die Schleife prueft je Land auf die Datei und ueberspringt,
     # was fehlt — ein Land hier zu vergessen wirft also KEINEN Fehler, es zaehlt nur
     # nicht mit. Genau so hat LU 279 Leads lang gefehlt, ohne dass etwas rot wurde.
-    for land in ("DE", "AT", "CH", "LU"):
+    # ⚠ Eine Stelle: `govisor/laender.py`. Hier stand eine eigene Liste.
+    for land in _AKTIV:
         A = ROOT / "data" / "gold" / land / "doc_analysis.parquet"
         L = ROOT / "data" / "gold" / land / "lead_export.parquet"
         N = ROOT / "data" / "silver" / land / "notices"

@@ -172,9 +172,19 @@ def _behauptungen() -> list[tuple[str, str, bool, str]]:
     _rt = (ROOT / "web" / "app" / "api" / "lead-docs" / "route.ts").read_text(encoding="utf-8")
     _pu = (ROOT / "scripts" / "process_upload.py").read_text(encoding="utf-8")
     ts = set(_re.findall(r'"([A-Z]{2})"', (_re.search(r'LAENDER = new Set\(\[([^\]]*)\]', _rt) or _re.match("", "")).group(1) if _re.search(r'LAENDER = new Set\(\[([^\]]*)\]', _rt) else ""))
-    py = set(_re.findall(r'"([A-Z]{2})"', (_re.search(r'_ERLAUBT = \(([^)]*)\)', _pu) or _re.match("", "")).group(1) if _re.search(r'_ERLAUBT = \(([^)]*)\)', _pu) else ""))
+    # ⚠ SEIT DEM 2026-09-04 LEITET DIE PYTHON-SEITE AB: `_ERLAUBT = _AKTIV`. Ein Muster,
+    # das nach Literalen sucht, findet dort nichts mehr — und meldete prompt „python=[]",
+    # also einen Unterschied, wo keiner ist. Verglichen wird jetzt gegen die QUELLE.
+    from govisor.laender import AKTIV as _AKTIV_LISTE
+    leitet_ab = "_ERLAUBT = _AKTIV" in _pu
+    py = set(_AKTIV_LISTE) if leitet_ab else set(
+        _re.findall(r'"([A-Z]{2})"', (_re.search(r'_ERLAUBT = \(([^)]*)\)', _pu) or
+                                      _re.match("", "")).group(1)
+                    if _re.search(r'_ERLAUBT = \(([^)]*)\)', _pu) else ""))
     aus.append(("15", "Upload-Laenderliste in route.ts und process_upload.py gleich",
-                bool(ts) and ts == py, f"route={sorted(ts)} python={sorted(py)}"))
+                bool(ts) and ts == py,
+                f"route={sorted(ts)} python={sorted(py)}"
+                + (" (abgeleitet aus laender.AKTIV)" if leitet_ab else "")))
 
     # 26 Kantone auf 26 NUTS (Kapitel 07/14).
     from govisor import simap
