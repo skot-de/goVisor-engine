@@ -970,3 +970,67 @@ def test_upload_setzt_seinen_zweck_und_meldet_ehrlich():
 def llm_tag() -> float:
     from govisor import llm as _l
     return _l.TAG_USD - _l.SCHONUNG_USD
+
+
+# ---- Sonde 6: Baugrenze --------------------------------------------------------
+def _baugrenze():
+    import importlib.util
+    spec = importlib.util.spec_from_file_location(
+        "_pv", ROOT / "scripts" / "pruefe_verdrahtung.py")
+    m = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(m)
+    return m
+
+
+def _baum(wurzel, verteilung: dict[str, int]):
+    for name, n in verteilung.items():
+        d = wurzel / name
+        d.mkdir(parents=True, exist_ok=True)
+        for i in range(n):
+            (d / f"{i}.json").write_text("{}", encoding="utf-8")
+
+
+def test_baugrenze_schweigt_unter_der_warnschwelle(tmp_path):
+    m = _baugrenze()
+    _baum(tmp_path, {"firma": 20, "doc-text": 5})
+    assert m.sonde_baugrenze(wurzel=tmp_path) == []
+
+
+def test_baugrenze_meldet_ueber_der_warnschwelle(tmp_path, monkeypatch):
+    """Die eigentliche Gegenprobe: schlaegt sie an, wenn es eng wird?
+
+    ⚠ WARUM DIESE SONDE UEBERHAUPT GEBRAUCHT WIRD. `next build` stirbt bei rund 156.000
+    Dateien unter `web/data` reproduzierbar im Node-Heap. Das steht seit Wochen an zwei
+    Stellen im Code — und NICHTS zaehlte die Dateien. Der Deckel schlaegt erst beim Bauen
+    ein, und kein Alltagslauf faehrt `next build`; genau so blieb der `/login`-Fehler
+    vierzehn Tage unsichtbar. Ein SIGABRT im Node-Heap sieht dazu nach zu wenig Speicher
+    aus, nicht nach zu vielen Dateien.
+    """
+    m = _baugrenze()
+    monkeypatch.setattr(m, "BAUWARNUNG", 30)
+    monkeypatch.setattr(m, "BAUGRENZE", 40)
+    _baum(tmp_path, {"firma": 25, "suppliers": 10})
+    befunde = m.sonde_baugrenze(wurzel=tmp_path)
+    assert len(befunde) == 1, befunde
+    assert "35" in befunde[0], befunde[0]           # gezaehlt
+    assert "firma 25" in befunde[0], befunde[0]     # und benannt, wo man buendeln muesste
+
+
+def test_baugrenze_haelt_stand_und_grenze_beieinander():
+    """Die Zahl darf nicht an drei Orten auseinanderlaufen.
+
+    Sie steht im Exporteur, im Frontend-Lader und jetzt in der Sonde. Laufen sie
+    auseinander, buendelt jemand gegen eine Grenze, die es nicht gibt.
+    """
+    m = _baugrenze()
+    for datei in ("scripts/export_vorgaenge.py", "web/lib/vorgangsakte.ts"):
+        text = (ROOT / datei).read_text(encoding="utf-8")
+        assert "156.000" in text or str(m.BAUGRENZE) in text, (
+            f"{datei} nennt die Baugrenze nicht mehr — oder anders als die Sonde "
+            f"({m.BAUGRENZE:,}).")
+
+
+def test_baugrenze_ohne_verzeichnis_ist_kein_befund(tmp_path):
+    """Frische Arbeitskopie ohne Export: kein Befund, kein Absturz."""
+    m = _baugrenze()
+    assert m.sonde_baugrenze(wurzel=tmp_path / "gibtsnicht") == []

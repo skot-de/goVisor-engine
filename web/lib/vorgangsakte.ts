@@ -8,10 +8,14 @@ import { loadDataFile, ausSpeicher, inSpeicher } from "@/lib/dataSource";
  * Grund ist derselbe, aus dem `firma-profiles.json` am 2026-08-25 aufgeteilt wurde — eine
  * Sammeldatei laedt bei jedem Kaltstart alles, um genau einen Eintrag zu liefern.
  *
- * ⚠ NICHT ALLE VORGAENGE. Gold fuehrt 1,47 Mio.; hier liegen die rund 36.000, die eine
- * heute sichtbare Vergabe enthalten, samt aller Glieder ihrer Ketten. Alles andere
- * beantwortet diese Datei mit `null` — was nicht heisst, dass es den Vorgang nicht gibt,
- * sondern dass er nicht exportiert ist. Die Route muss den Unterschied benennen. */
+ * ⚠ NICHT ALLE VORGAENGE. In `vorgang/` liegen die Akten mit einer heute sichtbaren
+ * Vergabe (gemessen 2026-09-04: 54.252), in `vorgang-archiv/` die Glieder ihrer Ketten
+ * und die abgelaufenen (1.734.199). Alles andere beantwortet diese Datei mit `null` — was
+ * nicht heisst, dass es den Vorgang nicht gibt, sondern dass er nicht exportiert ist. Die
+ * Route muss den Unterschied benennen.
+ *
+ * Die Zahlen stehen zur Laufzeit in `web/data/vorgang-stand.json` (`n`, `n_archiv`,
+ * `n_lead`) — wer sie hier im Kommentar liest, liest einen Stand, keinen Messwert. */
 
 export type Verlaufseintrag = {
   datum: string | null;
@@ -65,11 +69,17 @@ const BUENDEL_STELLEN = 3;
 
 /** Eine Akte. `null`, wenn sie nicht exportiert ist.
  *
- * ⚠ 256 BUENDEL, NICHT 53.872 EINZELDATEIEN — und auch keine Sammeldatei. Beide Extreme
+ * ⚠ 4.096 BUENDEL, NICHT EINE DATEI JE AKTE — und auch keine Sammeldatei. Beide Extreme
  * sind hier schon einmal schiefgegangen: `firma-profiles.json` lud 67 MB, um 1,6 KB zu
  * liefern, und die Einzeldateien liessen `next build` im Node-Heap sterben, weil Next den
- * Projektbaum abgeht (156.000 Dateien unter `web/data`). Ein Bündel ist im Median 21 KB
- * gross; es liegt danach im Speicher und bedient jede weitere Akte daraus umsonst. */
+ * Projektbaum abgeht (bei rund 156.000 Dateien unter `web/data`; Stand 2026-09-04:
+ * 116.307, bewacht von `pruefe_verdrahtung.py --sonde baugrenze`). Ein Produkt-Buendel ist
+ * im Median 21 KB gross, ein Archiv-Buendel 386 KB; es liegt danach im Speicher und bedient
+ * jede weitere Akte daraus umsonst.
+ *
+ * ⚠ Die Buendelzahl folgt aus `BUENDEL_STELLEN` (3 Hexstellen → 16³ = 4.096) und stand hier
+ * jahrelang als „256" — das waeren zwei Stellen. Wer daran die Dateizahl gegen die
+ * Baugrenze rechnet, verrechnet sich um das Sechzehnfache. */
 /** Rohtext → geparstes Buendel, gepuffert. `null`, wenn es das Buendel nicht gibt.
  *
  * ⚠ DER PFAD WIRD HIER NICHT GEBAUT, SONDERN UEBERGEBEN — und das Verzeichnis MUSS beim

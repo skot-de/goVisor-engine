@@ -65,7 +65,8 @@ einem Deployment üblich, lokal nicht — vor der Umsetzung einmal am echten Hos
 **Befund.** `export_vorgaenge` bündelt Akten nach `sha1(land:vorgang_id)[:3]` — 4.096 Bündel,
 gleichmässig gefüllt. Das ist bewusst so gebaut, und die Begründung im Skript ist richtig:
 256 Bündel wären beim Upload teurer, feiner scheitert an der Dateigrenze von `next build`
-(bei ~156.000 Dateien SIGABRT, heute 107.529).
+(bei ~156.000 Dateien SIGABRT; Stand 2026-09-04: 116.307, bewacht von
+`pruefe_verdrahtung.py --sonde baugrenze`).
 
 Nur streut ein gleichmässiger Schlüssel eben auch die Änderungen. Gemessen im Lauf vom
 2026-09-04:

@@ -56,6 +56,7 @@ from __future__ import annotations
 import argparse
 import collections
 import datetime as dt
+import os
 import pathlib
 import re
 import sys
@@ -626,10 +627,62 @@ def sonde_nutzlast(zeige_offen: bool = False, wurzel: pathlib.Path | None = None
     return befunde
 
 
+# Ab dieser Dateizahl unter `web/data` ist `next build` reproduzierbar gestorben — SIGABRT,
+# Stapel in `node::fs::AfterStat`. Die Zahl steht so in `scripts/export_vorgaenge.py` und
+# `web/lib/vorgangsakte.ts`; sie ist der Grund, aus dem Vorgangsakten gebuendelt werden.
+BAUGRENZE = 156_000
+# Ab hier melden. 130.000 sind 83 % der Grenze und lassen bei der gemessenen Rate von rund
+# 340 neuen Dateien am Tag etwa zwei Monate Zeit — genug, um zu handeln statt zu hetzen.
+BAUWARNUNG = 130_000
+
+
+def sonde_baugrenze(zeige_offen: bool = False,
+                    wurzel: pathlib.Path | None = None) -> list[str]:
+    """Wie nah ist `web/data` an der Dateizahl, an der `next build` stirbt?
+
+    ⚠ WARUM DAS EINE SONDE BRAUCHT UND KEIN TEST. Die Grenze ist an zwei Stellen im Code
+    beschrieben und war trotzdem unbewacht: NICHTS zaehlte die Dateien. Der Deckel schlaegt
+    erst beim Bauen ein — und kein Alltagslauf faehrt `next build`. Genau daran war der
+    `/login`-Fehler vierzehn Tage lang unsichtbar. Ein Absturz im Node-Heap sieht ausserdem
+    nach einem Speicherproblem aus, nicht nach zu vielen Dateien; ohne diese Zahl sucht man
+    an der falschen Stelle.
+
+    ⚠ UND WARUM NICHT DIE TAGESRATE ALARMIERT. Gemessen am 2026-09-04 wachsen die
+    Verzeichnisse um rund 340 Dateien am Tag — damit reichte die Luft ueber hundert Tage.
+    Gefaehrlich ist nicht das Rinnsal, sondern das naechste „eine Datei je X": `firma/` und
+    `suppliers/` legten an EINEM Tag 75.389 Dateien an, fast das Doppelte der heutigen
+    Restluft. Deshalb misst die Sonde den Stand, nicht die Rate, und nennt die groessten
+    Verzeichnisse — dort entscheidet sich, wo man buendelt.
+    """
+    ziel = wurzel or WEB
+    if not ziel.exists():
+        return []                       # frische Arbeitskopie ohne Export — kein Befund
+
+    je_verzeichnis: dict[str, int] = {}
+    for pfad, _, dateien in os.walk(ziel):
+        teil = os.path.relpath(pfad, ziel).split(os.sep)[0]
+        name = "(direkt)" if teil == "." else teil
+        je_verzeichnis[name] = je_verzeichnis.get(name, 0) + len(dateien)
+    gesamt = sum(je_verzeichnis.values())
+
+    groesste = sorted(je_verzeichnis.items(), key=lambda kv: -kv[1])[:5]
+    if zeige_offen:
+        print(f"    {gesamt:,} Dateien unter web/data · Luft bis {BAUGRENZE:,}: "
+              f"{BAUGRENZE - gesamt:,}")
+        for name, n in groesste:
+            print(f"      {name:<20}{n:>9,}")
+
+    if gesamt < BAUWARNUNG:
+        return []
+    return [f"Baugrenze: {gesamt:,} Dateien unter web/data — `next build` stirbt bei rund "
+            f"{BAUGRENZE:,} (SIGABRT im Node-Heap). Noch {BAUGRENZE - gesamt:,} frei. "
+            f"Groesste: " + ", ".join(f"{n} {v:,}" for n, v in groesste[:3])]
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--sonde", choices=("frische", "paritaet", "pfade", "laender",
-                                       "nutzlast", "alle"), default="alle")
+                                       "nutzlast", "baugrenze", "alle"), default="alle")
     ap.add_argument("--offen", action="store_true",
                     help="bekannte Luecken und Leichen mit auflisten")
     a = ap.parse_args()
@@ -661,6 +714,12 @@ def main() -> int:
         f = sonde_nutzlast(a.offen)
         alles += f
         print(f"    {len(f)} unerklaerte Ausliefergueter")
+
+    if a.sonde in ("baugrenze", "alle"):
+        print("── Sonde 6: Baugrenze (wie nah ist web/data an der Dateizahl, die `next build` toetet?) ──")
+        f = sonde_baugrenze(a.offen)
+        alles += f
+        print(f"    {len(f)} Befund(e)")
 
     if alles:
         print("\n⚠ Verdrahtungspruefung: " + str(len(alles)) + " Befund(e)")
