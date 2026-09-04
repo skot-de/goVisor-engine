@@ -296,6 +296,55 @@ def ort_im_namen(name: str, orte: dict[str, str], sortiert: list[str]) -> str | 
     return None
 
 
+def einheit_im_namen(name: str, einheiten: dict[str, str]) -> str | None:
+    """Die Verwaltungseinheit (Bundesland/Kanton), die als GANZE WORTFOLGE im Namen steht.
+
+    ⚠ WARUM ES DIESEN DRITTEN WEG GIBT. Nach `gleicher_kaeufer` und `ortsname` blieben am
+    2026-09-04 noch 1.269 offene DE-Leads ohne Region — und 1.195 davon tragen nicht einmal
+    eine Kaeufer-PLZ, es gibt also nichts abzuleiten. Aber 208 nennen ihr Land im NAMEN:
+    „Vermoegens- und Hochbauverwaltung Baden-Wuerttemberg" (90), „Landeswohlfahrtsverband
+    Hessen" (60). Der Ortsabgleich greift dort nicht, weil das keine Staedte sind.
+
+    ⚠ ZWEI FALLEN, DIE EINE NAIVE FASSUNG STELLT — beide in der Probe schon gesehen:
+
+      · TEILZEICHENKETTE. „Sachsen" steckt in „Sachsenforst" und in „Sachsen-Anhalt". Diese
+        Fassung nutzt darum `_worte` und ganze Wortfolgen, wie `ort_im_namen`. Der Preis ist
+        ehrlich: „Staatsbetrieb Sachsenforst" faellt raus, weil „sachsenforst" EIN Wort ist.
+        Lieber 14 Leads weniger als ein Verfahren zur Klasse „ahlen in Zahlenwerk".
+      · MEHRDEUTIGKEIT. „Deutsche Rentenversicherung Berlin-Brandenburg" nennt ZWEI Laender.
+        Wer hier eines waehlt, raet — und nach diesem Wert wird gefiltert. Zwei verschiedene
+        Codes heissen deshalb: kein Ergebnis.
+
+    ⚠ Und es ist NICHT deutsch: `_verwaltungseinheiten(land)` liefert Name→Code fuer jedes
+    Land (AT 9 Bundeslaender, CH 31 Kantonsnamen). Eine eigene DE-Liste waere genau die
+    Sorte Altlast, die der EU-weit-Grundsatz meint.
+
+    **Gemessen am 2026-09-04 (DE):** 116 Leads bekommen ihre Region allein ueber diesen Weg,
+    240 weitere steigen von einem auf mehrere einige Wege. NETTO nur +25 abgeleitete — denn
+    die Widerspruchsquote des Selbsttests steigt von 5,6 % auf 8,5 %, und 91 vorher
+    abgeleitete Leads werden jetzt verworfen.
+    ⚠ DAS IST EIN GEWINN, KEIN SCHADEN. An 19 pruefbaren Widerspruechen (Kaeufer-PLZ als
+    Zeuge) lag in **19 von 19** der Verwaltungsname richtig und der Ortsname falsch:
+    „Landgesellschaft Sachsen-Anhalt GmbH" wurde ueber das Wort „anhalt" einem BAYERISCHEN
+    Ort zugeordnet. Die 91 waren also schon vorher falsch — sie sahen nur nicht so aus.
+    Wo der Weg gegen die PLZ pruefbar war, lag er 30-mal von 30 richtig.
+    """
+    worte = _worte(name or "")
+    if not worte:
+        return None
+    # Längste Wortfolge zuerst — „sachsen anhalt" schlägt „sachsen", weil es die
+    # spezifischere Aussage ist. Dieselbe Regel wie bei `ort_im_namen`.
+    treffer: list[tuple[int, int, str]] = []          # (start, laenge, code)
+    for laenge in range(min(4, len(worte)), 0, -1):
+        for i in range(len(worte) - laenge + 1):
+            folge = " ".join(worte[i:i + laenge])
+            code = einheiten.get(folge)
+            if code and not any(a <= i < a + l for a, l, _ in treffer):
+                treffer.append((i, laenge, code))
+    codes = {c for _, _, c in treffer}
+    return codes.pop() if len(codes) == 1 else None
+
+
 def region_korrekturen(land: str) -> dict[tuple[str, str, str], str]:
     """Von Hand geprueft: (Kaeufername, PLZ, Kennung ALT) → Kennung NEU.
 
@@ -477,24 +526,39 @@ def fuer_land(land: str, probe: bool) -> int:
     # eine Viertelstunde statt zwei Sekunden.
     sortiert = []                                # Wortfolgen-Abgleich braucht keine Sortierung
     aus, einig, uneinig = [], 0, 0
+    # Verwaltungsnamen einmal falten — dieselbe Zerlegung wie beim Ortsabgleich, sonst
+    # trifft „Baden-Württemberg" sein eigenes gefaltetes „baden wuerttemberg" nicht.
+    einheiten_gefaltet = {" ".join(_worte(k)): v
+                          for k, v in _verwaltungseinheiten(land).items() if _worte(k)}
     for lead_id, name, ueber_kaeufer in zeilen:
-        ueber_ort = ort_im_namen(name, orte, sortiert)
-        if ueber_kaeufer and ueber_ort:
-            if ueber_kaeufer == ueber_ort:
-                einig += 1
-                quelle, nuts1 = "beide_wege", ueber_kaeufer
-            else:
-                # ⚠ WIDERSPRUCH HEISST VERZICHT. „Landesbetrieb Straßenbau NRW, Regionalniederlassung
-                # Rhein-Sieg" — der Käufer sitzt woanders als der Ortsname im Titel. Wer hier eine
-                # Seite wählt, rät; und geraten wird nach diesem Wert gefiltert.
-                uneinig += 1
-                continue
-        elif ueber_kaeufer:
-            quelle, nuts1 = "gleicher_kaeufer", ueber_kaeufer
-        elif ueber_ort:
-            quelle, nuts1 = "ortsname", ueber_ort
-        else:
+        # ⚠ DREI WEGE SEIT DEM 2026-09-04, und der Selbsttest gilt fuer ALLE. Der dritte
+        # (`verwaltungsname`) ist der SCHWAECHSTE: der Name einer Landesbehoerde sagt ihre
+        # Zustaendigkeit, nicht zwingend den Ort der Leistung. Genau deshalb darf er nicht
+        # an der Pruefung vorbei — er wird wie die anderen verworfen, sobald er widerspricht.
+        signale = {
+            "gleicher_kaeufer": ueber_kaeufer,
+            "ortsname": ort_im_namen(name, orte, sortiert),
+            "verwaltungsname": einheit_im_namen(name, einheiten_gefaltet),
+        }
+        aktiv = {k: v for k, v in signale.items() if v}
+        if not aktiv:
             continue
+        werte = set(aktiv.values())
+        if len(werte) > 1:
+            # ⚠ WIDERSPRUCH HEISST VERZICHT. „Landesbetrieb Straßenbau NRW, Regionalniederlassung
+            # Rhein-Sieg" — der Käufer sitzt woanders als der Ortsname im Titel. Wer hier eine
+            # Seite wählt, rät; und geraten wird nach diesem Wert gefiltert.
+            uneinig += 1
+            continue
+        nuts1 = werte.pop()
+        if len(aktiv) > 1:
+            einig += 1
+            # ⚠ Der Wert „beide_wege" bleibt, auch wenn es jetzt drei sein koennen: er steht
+            # im Bestand und in der Ausgabe. „Mehr als ein Weg war sich einig" ist dieselbe
+            # Aussage; ein neuer Wert waere nur eine Umbenennung mit Folgekosten.
+            quelle = "beide_wege"
+        else:
+            quelle = next(iter(aktiv))
         aus.append({"lead_id": lead_id, "buyer_nuts1_abgeleitet": nuts1, "quelle": quelle})
 
     # ── Widerspruch Anschrift ↔ Region ────────────────────────────────────────────
