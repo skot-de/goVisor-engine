@@ -277,7 +277,13 @@ def _addr_party(addr: dict, role: str, seq: int, nid: str) -> dict | None:
         "notice_id": nid, "role": role, "seq": seq,
         "name": _pick(addr.get("name")), "national_id": addr.get("id"),
         "town": _pick(addr.get("city")), "postal_code": addr.get("postalCode"),
-        "country": addr.get("countryId") or "CH", "nuts": addr.get("cantonId"),
+        "country": addr.get("countryId") or "CH",
+        # ⚠ `_nuts()` AUCH HIER. Bis zum 2026-09-04 stand hier `addr.get("cantonId")` roh —
+        # die Umsetzung gab es nur fuer den Leistungsort (Zeile ~334). Die Kaeuferpartei
+        # trug also „ZH" statt „CH040", und `lead_geo.nuts` kommt genau von dort: 829 Leads
+        # fielen aus jeder Regionsauswertung, weil ihr Wert kein NUTS war.
+        # ⚠ Und „BE" ist der gefaehrliche Fall: hier Bern, im NUTS-Raum BELGIEN.
+        "nuts": _nuts(addr.get("cantonId")),
         # PII bleibt in Silber (server-seitig); die Frontend-Grenze zieht der Export.
         "email": addr.get("email"), "phone": addr.get("phone"),
         "contact_person": _pick(addr.get("contactPerson")), "url": _pick(addr.get("url")),

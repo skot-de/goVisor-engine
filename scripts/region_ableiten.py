@@ -402,6 +402,26 @@ def fuer_land(land: str, probe: bool) -> int:
     # Die gueltigen Regionskennungen des Landes — gebraucht von BEIDEN Seiten: von der
     # Ableitung (Weg 1 darf kein `ATZZ` weiterreichen) und von der Gegenprobe.
     gueltig = set(_verwaltungseinheiten(land).values())
+
+    # ⚠ EIN WERT IM FELD IST NOCH KEINE REGION. Bis zum 2026-09-04 galt jeder nicht-leere
+    # `buyer_nuts1` als „hat Region": der Lead wurde nur auf WIDERSPRUCH geprueft und nie
+    # gefuellt. Damit fielen genau die Leads durch, die Hilfe gebraucht haetten —
+    # gemessen: 829 CH-Leads mit rohem Kantonskuerzel („ZH", „BE") und 518 AT-Leads mit dem
+    # blossen Landescode „AT" oder Extra-Regio „ATZ". Beides ist kein NUTS dieser Ebene.
+    #
+    # Zwei getrennte Antworten, weil es zwei verschiedene Faelle sind:
+    #   CH  das Kuerzel IST auflösbar — `simap._KANTON_NUTS` deckt alle 829 zu 100 %.
+    #       ⚠ „BE" ist dabei der gefaehrliche: hier Bern, im NUTS-Raum Belgien.
+    #   AT  „AT" (Landesebene) und „ATZ" (Extra-Regio) sind nicht aufloesbar — sie gelten
+    #       ab jetzt als KEINE Region, damit die PLZ-Ableitung sie ueberhaupt erreicht.
+    #       236 der 518 tragen eine Kaeufer-PLZ.
+    # ⚠ NICHT als „bundesweit" behandeln: `is_nationwide` heisst „die Leistung ist
+    # ortsunabhaengig", der Landescode heisst „wir kennen den Kaeufer nur grob". Wer das
+    # verwechselt, spuelt ortsgebundene Vergaben in jede Umkreissuche.
+    from govisor.simap import _KANTON_NUTS as _KANTONE
+    _zweige = " ".join(f"WHEN '{k}' THEN '{v}'" for k, v in _KANTONE.items())
+    NORM = f"CASE upper(trim(buyer_nuts1)) {_zweige} ELSE buyer_nuts1 END"
+    _in = ", ".join(f"'{g}'" for g in sorted(gueltig)) or "''"
     # ── Weg 1: derselbe Kaeufername traegt anderswo eine Region ───────────────────
     # ⚠ MEHRHEIT, NICHT `any_value` (seit 2026-09-02). Bis dahin stand hier
     # `any_value(buyer_nuts1)` — und das waehlt bei einem Kaeufer mit MEHREREN Regionen
@@ -436,7 +456,8 @@ def fuer_land(land: str, probe: bool) -> int:
     zeilen = [(lead_id, name, mehrheit.get(name))
               for lead_id, name in con.execute(f"""
         SELECT lead_id, buyer_name FROM '{le}'
-        WHERE buyer_nuts1 IS NULL OR buyer_nuts1 = ''""").fetchall()]
+        WHERE buyer_nuts1 IS NULL OR buyer_nuts1 = ''
+           OR {NORM} NOT IN ({_in})""").fetchall()]
     # ── Gegenprobe: die Leads, die SEHR WOHL eine Region tragen ────────────────────
     # Bis zum 2026-09-01 wurde hier nur ergaenzt, nie geprueft. Ein dastehender Wert
     # galt als belegt (`regionQuelle='amtlich'`) — auch dann, wenn der Kaeuferort ihm
@@ -444,9 +465,9 @@ def fuer_land(land: str, probe: bool) -> int:
     # Westfalen": der Parser hatte die NUTS des eSenders gegriffen (behoben in
     # `govisor/schema._iter_named_ausserhalb`), und nichts an der Kette hat widersprochen.
     vorhanden = con.execute(f"""
-        SELECT lead_id, buyer_name, buyer_nuts1,
+        SELECT lead_id, buyer_name, {NORM},
                CASE WHEN market_region_known THEN market_nuts3 END, title
-        FROM '{le}' WHERE buyer_nuts1 IS NOT NULL AND buyer_nuts1 <> ''""").fetchall()
+        FROM '{le}' WHERE {NORM} IN ({_in})""").fetchall()
 
     orte = ortsverzeichnis(land)
     if not orte:
