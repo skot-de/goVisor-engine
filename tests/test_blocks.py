@@ -56,3 +56,69 @@ def test_assign_theme_and_keywords():
 def test_participation_tuple_is_minimal():
     t = blocks.participation_tuple("prof-1", "notice-9")
     assert t == {"profile_id": "prof-1", "notice_id": "notice-9", "participated": True}
+
+
+# ---- EU-weit: die Schwaerzung galt nur fuer Deutschland ------------------------
+import pytest
+
+
+@pytest.mark.parametrize("land,text", [
+    ("AT (Marker + Vorwahl)", "Tel: +43 1 4000 12345"),
+    ("AT (nur Vorwahl)",      "Erreichbar unter +43 1 4000 12345"),
+    ("CH",                    "Erreichbar unter +41 44 412 11 11"),
+    ("LU",                    "Erreichbar unter +352 4796 1"),
+    ("DE (Marker)",           "Rueckfragen an Tel. 030 12345678"),
+    ("DE (Vorwahl)",          "Erreichbar unter +49 30 12345678"),
+])
+def test_telefon_wird_in_jedem_aktiven_land_geschwaerzt(land, text):
+    """⚠ GEMESSEN AM 2026-09-04: nur Deutschland war gedeckt.
+
+    Das Muster verlangte einen Marker (Tel/Fon/Mobil/Fax) ODER die Vorwahl `+49`. Zwei
+    Loecher daraus:
+
+      · Die Vorwahl war auf DE festgenagelt — `+43`, `+41`, `+352` fielen durch.
+      · Nach dem Marker verlangte es eine ZIFFER (`\\(?\\d`). „Tel: +43 …" scheiterte damit
+        am Pluszeichen — Marker vorhanden, trotzdem nicht geschwaerzt. In DE rettete nur
+        der zweite Zweig `\\+49`.
+
+    Das ist der EU-weit-Grundsatz: eine Funktion gilt fuer ALLE Laender, DE ist nur der
+    Testfall. Und es trifft hier Personendaten in Bausteinen, die mit `sichtbarkeit='firma'`
+    an alle mit belegtem Anspruch gehen (supabase/0016).
+    """
+    clean, repl = pii.redact(text)
+    assert "[Telefon]" in clean, f"{land}: Nummer bleibt stehen — {clean}"
+    assert repl and repl[0]["typ"] == "telefon"
+
+
+@pytest.mark.parametrize("text", [
+    "Ansprechpartner: Max Mustermann",
+    "Ansprechpartner: Élodie Lefèvre",
+    "Ansprechpartner: Łukasz Kowalski",
+])
+def test_namen_auch_ohne_deutsche_umlaute(text):
+    """`[A-ZÄÖÜ][a-zäöüß]+` kannte nur deutsche Namen.
+
+    In Luxemburg (franzoesisch) und bei jedem nicht-deutschen Namen in DE/AT/CH blieb er
+    stehen. Die Buchstaben stehen im Muster ausgeschrieben und nicht als Unicode-Bereich:
+    Latin Extended-A wechselt Gross und Klein im Zickzack (Ā ā Ă ă …), ein Bereich wuerde
+    beide Faelle vermischen und jedes GROSSGESCHRIEBENE Wort zum Namen machen.
+    """
+    clean, repl = pii.redact(text)
+    assert "[Ansprechpartner]" in clean, f"Name bleibt stehen — {clean}"
+    assert any(r["typ"] == "name" for r in repl)
+
+
+@pytest.mark.parametrize("text", [
+    "Nachtrag von +1.234.567,89 EUR",
+    "Vergabenummer 2026 4711 0815",
+    "Musterstadt 80331 Bayern",
+])
+def test_die_erweiterung_macht_keine_telefonnummern_aus_zahlen(text):
+    """Die Enge bleibt, wo sie hingehoert.
+
+    Ohne Marker braucht es weiterhin ein „+" mit Laendervorwahl, und `[\\d\\s()/-]` enthaelt
+    bewusst weder Punkt noch Komma — „+1.234.567,89" bricht am ersten Punkt ab. Sonst haette
+    die laenderneutrale Vorwahl aus jedem Betrag eine Telefonnummer gemacht.
+    """
+    clean, repl = pii.redact(text)
+    assert not [r for r in repl if r["typ"] == "telefon"], f"faelschlich geschwaerzt: {clean}"

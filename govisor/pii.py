@@ -17,10 +17,38 @@ import re
 _EMAIL = re.compile(r"\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\b")
 # Telefon NUR mit Marker (Tel/Fon/Mobil/Fax) oder internationaler Vorwahl — sonst träfe es
 # Beträge, Aktenzeichen, Postleitzahlen.
+#
+# ⚠ **DIE VORWAHL WAR AUF `+49` FESTGENAGELT — UND DER MARKER VERTRUG KEIN „+".** Beides
+# zusammen liess in AT, CH und LU jede Nummer stehen, gemessen am 2026-09-04:
+#
+#     "Tel: +43 1 4000 12345"      NICHT geschwaerzt   ← Marker DA, aber `\(?\d` verlangt
+#                                                        eine Ziffer, und „+" ist keine
+#     "+41 44 412 11 11"           NICHT geschwaerzt
+#     "+352 4796 1"                NICHT geschwaerzt
+#     "Tel. 030 12345678"          geschwaerzt
+#     "+49 30 12345678"            geschwaerzt          ← nur weil der zweite Zweig griff
+#
+# Deutschland war also durch den `\+49`-Zweig gedeckt und alle anderen aktiven Laender nicht.
+# Das ist der EU-weit-Grundsatz: eine Funktion gilt fuer ALLE Laender, DE ist nur der
+# Testfall. Die Vorwahl ist jetzt laenderneutral, und nach dem Marker darf eine stehen.
+#
+# Die Enge bleibt, wo sie hingehoert: OHNE Marker braucht es weiterhin ein „+" mit
+# Laendervorwahl. `[\d\s()/-]` enthaelt bewusst weder Punkt noch Komma — „+1.234.567,89"
+# bricht damit am ersten Punkt ab und wird nicht zur Telefonnummer.
+_INT_VORWAHL = r"\+\d{1,3}[\s/-]?"
+_TEL_MARKER = r"(?:Tel(?:efon)?|Fon|Mobil|Handy|Fax)\.?\s*:?\s*"
 _PHONE = re.compile(
-    r"(?:(?:Tel(?:efon)?|Fon|Mobil|Handy|Fax)\.?\s*:?\s*|\+49[\s/-]?)"
-    r"\(?\d[\d\s()/-]{5,}\d", re.I)
-_NAME = r"[A-ZÄÖÜ][a-zäöüß]+(?:-[A-ZÄÖÜ][a-zäöüß]+)?"
+    rf"(?:{_TEL_MARKER}(?:{_INT_VORWAHL})?|{_INT_VORWAHL})\(?\d[\d\s()/-]{{5,}}\d", re.I)
+
+# ⚠ **NAMEN GAB ES NUR MIT DEUTSCHEN UMLAUTEN.** `[A-ZÄÖÜ][a-zäöüß]+` traf „Max Mustermann",
+# aber weder „Élodie Lefèvre" noch „Łukasz Kowalski" — in LU (franzoesisch) und bei jedem
+# nicht-deutschen Namen in DE/AT/CH blieb der Name stehen. Die Buchstaben stehen bewusst
+# ausgeschrieben statt als Unicode-Bereich: Latin Extended-A wechselt Gross und Klein im
+# Zickzack (Ā ā Ă ă …), ein Bereich wuerde also beide Faelle vermischen und jedes
+# GROSSGESCHRIEBENE Wort zum Namen machen.
+_GROSS = "A-ZÄÖÜÀÁÂÃÅÆÇÈÉÊËÌÍÎÏÑÒÓÔÕØÙÚÛÝŁŚŻŹĆŃŘŠŽ"
+_KLEIN = "a-zäöüßàáâãåæçèéêëìíîïñòóôõøùúûýÿłśżźćńřšž"
+_NAME = rf"[{_GROSS}][{_KLEIN}]+(?:-[{_GROSS}][{_KLEIN}]+)?"
 # „Herr/Frau [Titel] Vorname Nachname"
 _TITLE_NAME = re.compile(
     rf"\b(?:Herr|Frau|Hr\.|Fr\.)\s+(?:Dr\.\s+|Prof\.\s+|Dipl\.[-\wäöü]*\s+)?{_NAME}(?:\s+{_NAME}){{0,2}}")
