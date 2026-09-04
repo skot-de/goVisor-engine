@@ -1095,6 +1095,15 @@ if _signale_alle; then
   # Fristwiderspruch (Kennzahl 9). Vergleicht die belegte Angebotsfrist aus den Unterlagen mit
   # der aus der Bekanntmachung. ⚠ Ein Fehlalarm kostet hier eine Abgabe, s. Filter im Skript.
   $PY scripts/export_fristwiderspruch.py || echo "  ⚠ fristwiderspruch.json nicht geschrieben — Kennzahl 9 fehlt im Detail."
+  # ⚠ DER ERZEUGER FEHLTE, DER VERBRAUCHER LIEF. Die Zeile darunter sagt seit jeher
+  # "braucht doc_qa_stand" — gebaut hat es nachts NIEMAND. Zuletzt lief
+  # build_doc_qa_stand.py am 2026-09-01 von Hand; die Frische-Sonde meldete die Tabelle
+  # am 2026-09-04 mit 2,2 Tagen Rueckstand. Falle A1: gebaut, aber nicht verdrahtet.
+  # Laeuft ueber dieselbe Liste wie der Indexer — die Tabelle liest doc_text.
+  for _L in $_IXLAENDER; do
+    $PY scripts/build_doc_qa_stand.py --land "$_L" \
+      || echo "  ⚠ doc_qa_stand $_L nicht gebaut — Bieterfragen bleiben auf altem Stand."
+  done
   # Bieterfragen und Antworten. Liest den Volltext der Q&A-Dokumente; braucht `doc_qa_stand`.
   $PY scripts/export_bieterfragen.py || echo "  ⚠ bieterfragen.json nicht geschrieben — Bieterfragen fehlen im Detail."
   # Aenderungen an den Unterlagen: vergleicht die Fassungen im Dokumentpfad.
@@ -1439,6 +1448,14 @@ done
 echo ""
 $PY scripts/pruefe_verdrahtung.py \
   || echo "  → Verdrahtungspruefung meldet Befunde. Details: python3 scripts/pruefe_verdrahtung.py --offen"
+
+# ⚠ WERTETABELLEN. Die Verdrahtungssonde darueber fragt „wird es GEBAUT?" — diese hier fragt
+# „kennt es das LAND?". Zwei verschiedene Ausfaelle: eine Tabelle kann taeglich frisch
+# gebaut werden und trotzdem ein Land nicht kennen. Genau das war am 2026-09-03 dreimal der
+# Fall (PLZ-Stellen, Regionslaengen, Locale) — kein Fehler, keine leere Datei, nur ein
+# schlechteres Ergebnis. Deshalb laeuft sie direkt daneben.
+$PY scripts/pruefe_laender_tabellen.py \
+  || echo "  → Wertetabellen unvollstaendig. Details: python3 scripts/pruefe_laender_tabellen.py --alle"
 
 # ── Sonde 5: haelt ein endgueltiges Urteil noch? ─────────────────────────────────────────
 # Stati aus DAUERHAFT/KEIN_FEHLSCHLAG werden NIE WIEDER angefasst. Zwischen dem 20. und dem
