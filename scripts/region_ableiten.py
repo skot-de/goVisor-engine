@@ -62,6 +62,7 @@ from __future__ import annotations
 
 import sys
 import argparse
+import bisect
 import csv
 import re
 from pathlib import Path
@@ -293,6 +294,29 @@ def ort_im_namen(name: str, orte: dict[str, str], sortiert: list[str]) -> str | 
             folge = " ".join(worte[i:i + laenge])
             if folge in orte:
                 return orte[folge]
+            # ⚠ EINDEUTIGES PRAEFIX ZAEHLT WIE EIN TREFFER — und zwar HIER, vor den kuerzeren
+            # Folgen, nicht danach. „Betriebshof Bad Homburg" wurde sonst dem saarlaendischen
+            # „Homburg" (DEC) zugeschlagen, obwohl das Verzeichnis „bad homburg vor der hoehe"
+            # (DE7, Hessen) fuehrt: die Folge „bad homburg" ist kein Schluessel, also fiel der
+            # Abgleich auf das kuerzere Wort zurueck — ins falsche Bundesland.
+            # Amtliche Ortsnamen sind laenger als das, was ein Kaeufer schreibt; die Kurzform
+            # ist der Normalfall, nicht die Ausnahme.
+            #
+            # ⚠ ZWEI RIEGEL, sonst waere es Raten:
+            #   · mindestens ZWEI Woerter — ein einzelnes „bad" oder „sankt" ist kein Ort.
+            #   · GENAU EIN Eintrag darf so beginnen. „neustadt" ist Praefix von Dutzenden;
+            #     dort bleibt es beim Nichts, und das ist richtig.
+            if laenge >= 2:
+                # ⚠ ueber `sortiert` per Bisektion, NICHT ueber alle 11.520 Eintraege je
+                # Wortfolge. Die erste Fassung tat genau das und kostete den DE-Lauf ~60 s
+                # zusaetzlich — fuer 15 Namen. Ein Riegel darf nicht teurer sein als das,
+                # was er verhindert.
+                a = bisect.bisect_left(sortiert, folge + " ")
+                b = bisect.bisect_left(sortiert, folge + "!")   # '!' > ' ' im ASCII
+                if b > a:
+                    treffer = {orte[k] for k in sortiert[a:b]}
+                    if len(treffer) == 1:
+                        return treffer.pop()
     return None
 
 
@@ -524,7 +548,9 @@ def fuer_land(land: str, probe: bool) -> int:
         return 0
     # Einmal nach Länge sortieren statt je Name — 17.000 Einträge mal 6.500 Namen wäre sonst
     # eine Viertelstunde statt zwei Sekunden.
-    sortiert = []                                # Wortfolgen-Abgleich braucht keine Sortierung
+    # ⚠ JETZT BRAUCHT ER SIE DOCH: die Praefix-Stufe sucht per Bisektion. Der alte
+    # Kommentar galt, solange nur exakt verglichen wurde.
+    sortiert = sorted(orte)
     aus, einig, uneinig = [], 0, 0
     # Verwaltungsnamen einmal falten — dieselbe Zerlegung wie beim Ortsabgleich, sonst
     # trifft „Baden-Württemberg" sein eigenes gefaltetes „baden wuerttemberg" nicht.

@@ -110,3 +110,37 @@ def test_der_ortsabgleich_kennt_die_kollision_wirklich(ra):
     # Waeren es ploetzlich viele, haette sich am Ortsverzeichnis etwas Grundlegendes
     # geaendert — dann gehoert die Regel neu bewertet, nicht stillschweigend ausgeweitet.
     assert kollision <= {"hessen", "sachsen"}, f"neue Namensgleichheit: {kollision}"
+
+
+def test_eindeutiges_praefix_schlaegt_das_kuerzere_wort(ra):
+    """⚠ „Betriebshof Bad Homburg" lag im SAARLAND.
+
+    Das Verzeichnis fuehrt „bad homburg vor der hoehe" (DE7, Hessen) und „homburg" (DEC,
+    Saarland). Die Folge „bad homburg" ist kein Schluessel — also fiel der Abgleich auf das
+    kuerzere Wort zurueck, ins falsche Bundesland. Amtliche Ortsnamen sind laenger als das,
+    was ein Kaeufer schreibt; die Kurzform ist der Normalfall.
+
+    Zwei Riegel halten es davon ab, Raten zu werden, und beide stehen hier:
+      · mindestens ZWEI Woerter  — „Stadt Neustadt" bleibt ohne Ergebnis
+      · GENAU EIN Eintrag        — „neustadt" ist Praefix von Dutzenden
+    """
+    orte = ra.ortsverzeichnis("DE")
+    if not orte:
+        pytest.skip("kein Ortsverzeichnis")
+    srt = sorted(orte)
+    assert ra.ort_im_namen("Betriebshof Bad Homburg", orte, srt) == "DE7"
+    assert ra.ort_im_namen("Stadt Neustadt", orte, srt) is None
+    # Der echte Saarlaender bleibt unberuehrt.
+    assert ra.ort_im_namen("Amt Homburg", orte, srt) == "DEC"
+
+
+def test_die_praefixsuche_laeuft_ueber_bisektion():
+    """⚠ Ein Riegel darf nicht teurer sein als das, was er verhindert.
+
+    Die erste Fassung tastete je Wortfolge alle 11.520 Eintraege ab und verlangsamte den
+    DE-Lauf von 1,9 s auf 77 s — fuer 15 Namen. Jetzt Bisektion ueber `sortiert`.
+    """
+    quelle = (WURZEL / "scripts" / "region_ableiten.py").read_text(encoding="utf-8")
+    block = quelle[quelle.index("def ort_im_namen"):quelle.index("def einheit_im_namen")]
+    assert "bisect.bisect_left(sortiert" in block
+    assert "orte.items() if k.startswith" not in block, "keine Vollabtastung je Wortfolge"
