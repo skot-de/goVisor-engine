@@ -67,11 +67,31 @@ echo "── goVisor-Prozesse ──"
 # Verlangt wird der Interpreter DAVOR (`… /Python scripts/x.py`) — sonst schlaegt die
 # Pruefung schon bei einem Editor an, der den Dateinamen im Titel fuehrt, und eine
 # Pruefung, die staendig grundlos anschlaegt, liest bald niemand mehr.
-_proc="$(ps -Ao pid=,command= | grep -E '[g]ovisor\.|[Pp]ython[0-9.]* +[^ ]*scripts/[a-z_]+\.py|[d]okumente_arbeiter|[a]nalyse_arbeiter|[d]aily_leads' || true)"
+# ⚠ HUELLEN SIND KEINE PROZESSE. Eine Kommandozeile der Form `<shell> -c '<grosser String>'`
+# ENTHAELT den gesuchten Namen, fuehrt ihn aber nicht aus — sie hat ihn hoechstens gestartet,
+# und dann laeuft das echte Kind ohnehin als eigene Zeile mit. Gemessen am 2026-09-04 meldete
+# diese Pruefung drei solcher Huellen als laufende Arbeit:
+#
+#     ⛔ 82771 /bin/zsh -c source /Users/…/shell-snapshots/snapshot-zsh-….sh …
+#     ⛔ 85126 /bin/zsh -c source /Users/…/snapshot-zsh-….sh … messe_buendel_drift …
+#
+# Das ist derselbe Fehler, den der Absatz darueber fuer den Editor-Titel beschreibt, nur
+# eine Ebene hoeher — und er wiegt schwerer: wer staendig grundlos „⛔ NICHT starten" liest,
+# hoert irgendwann auf hinzusehen. Genau dann rutscht die echte Kollision durch.
+#
+# Ein `exec` in der Huelle ersetzt sie durch den echten Befehl; dann steht dort kein `-c`
+# mehr und die Zeile bleibt drin. Es geht also nichts verloren.
+_proc="$(ps -Ao pid=,command= \
+  | grep -E '[g]ovisor\.|[Pp]ython[0-9.]* +[^ ]*scripts/[a-z_]+\.py|[d]okumente_arbeiter|[a]nalyse_arbeiter|[d]aily_leads' \
+  | grep -vE '^ *[0-9]+ +[^ ]*(ba|z|k)?sh +-c ' || true)"
 if [ -n "$_proc" ]; then
   # Zeichen vor JEDE Zeile — `printf %s` mit mehrzeiliger Variable setzt es nur vor die
   # erste, der Rest sieht dann aus wie Fliesstext und wird ueberlesen.
   echo "$_proc" | sed 's|/[^ ]*/Python ||' | cut -c1-110 | head -8 | sed 's/^/  ⛔ /'
+  # ⚠ `head -8` schnitt bisher STILL ab. Bei neun laufenden Prozessen sah die Liste aus wie
+  # acht — und wer nach einem bestimmten sucht und ihn nicht findet, schliesst das Falsche.
+  _n="$(echo "$_proc" | wc -l | tr -d ' ')"
+  [ "${_n:-0}" -gt 8 ] && echo "  ⛔ … und $(( _n - 8 )) weitere (insgesamt $_n)"
   frei=1
 else
   echo "  ✓ keine"

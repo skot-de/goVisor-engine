@@ -28,6 +28,7 @@ from __future__ import annotations
 import argparse
 import collections
 import datetime as dt
+import re
 import hashlib
 import json
 import sys
@@ -69,8 +70,19 @@ def _wer_baut() -> list[str]:
         return ["ps nicht lesbar — im Zweifel warten"]
     treffer = []
     for zeile in roh.splitlines():
-        if any(w in zeile for w in SCHREIBER) and "messe_buendel_drift" not in zeile:
-            treffer.append(zeile.strip()[:100])
+        if not any(w in zeile for w in SCHREIBER):
+            continue
+        if "messe_buendel_drift" in zeile:
+            continue
+        # ⚠ HUELLEN SIND KEINE PROZESSE — dieselbe Regel wie in `scripts/laeuft_was.sh`.
+        # Eine Zeile der Form `<shell> -c '<grosser String>'` ENTHAELT den Namen, fuehrt ihn
+        # aber nicht aus. Am 2026-09-04 hielt genau so eine Huelle diese Wache auf: der
+        # Tageslauf war seit zwanzig Minuten fertig, die zsh-Huelle, aus der er gestartet
+        # wurde, stand noch in `ps` — und die Aufnahme wartete weiter auf einen Lauf, den es
+        # nicht mehr gab. Das echte Kind laeuft ohnehin als eigene Zeile mit.
+        if re.search(r"^\s*\d+\s+\S*(ba|z|k)?sh\s+-c\s", zeile):
+            continue
+        treffer.append(zeile.strip()[:100])
     return treffer
 
 
@@ -102,7 +114,10 @@ def warte_auf_ruhe(ruhe_s: int = 600, geduld_s: int = 21600) -> bool:
             return True
         grund = (f"laeuft: {baut[0]}" if baut
                  else f"letzter Schreibzugriff vor {still/60:.1f} min (noetig: {ruhe_s/60:.0f})")
-        print(f"  ⏳ {grund}")
+        # ⚠ `flush=True`, WEIL DIESE ZEILE DURCH EINE PIPE GEHT. Python puffert dann
+        # blockweise: die Wartemeldungen erschienen erst am Ende — eine Wache, die nichts
+        # sagt, sieht aus wie ein Haenger, und man bricht sie ab.
+        print(f"  ⏳ {grund}", flush=True)
         time.sleep(120)
     print("  ✖ Keine Ruhe innerhalb der Geduld. Abgebrochen.", file=sys.stderr)
     return False
