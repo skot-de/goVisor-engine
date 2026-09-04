@@ -169,16 +169,71 @@ Die Reihenfolge folgt dem Verhältnis von Ertrag zu Risiko, nicht der Größe de
 Anmelde-Tor. Punkt 1 der Liste — ob der Host überhaupt komprimiert ausliefert — bleibt
 ebenfalls offen, es ist nichts deployt. Beides gehört zum ersten Go-live-Durchgang.
 
-### Schritt 2 — P2, Vorbereitung (ein Tag)
+### Schritt 2 — P2, Vorbereitung ▣ läuft, Zwischenstand 2026-09-04
 
-1. **Messen, ob alte Akten wirklich unveränderlich sind:** einen Lauf lang aufzeichnen,
-   welche Bündel sich ändern, und deren Vorgänge nach Alter aufschlüsseln. Ergibt die
-   Messung, dass auch alte Akten regelmässig berührt werden, fällt P2 ersatzlos weg.
-2. Erst wenn die Messung trägt: Schlüssel entwerfen, Dateizahl gegen die
-   `next build`-Grenze rechnen (heute 107.529 von ~156.000).
+Werkzeug: `scripts/messe_buendel_drift.py` (`--aufnehmen` / `--vergleichen`). Es hält je
+Akte eine Prüfsumme fest und schlüsselt die Unterschiede nach Alter auf.
 
-**Abnahme:** eine Zahl, die sagt, wie viele der nächtlich geschriebenen Bündel alte
-Vorgänge betreffen.
+**Warum nicht über Zeitstempel.** Der naheliegende Weg trägt nicht. Eine Datei-Zeit sagt,
+welches BÜNDEL geschrieben wurde, nicht welche AKTE sich geändert hat — und ein Bündel wird
+schon wegen einer von rund vierhundert Akten neu geschrieben. Am Messtag kam dazu, dass
+Läufe aus einer zweiten Sitzung um 07:57 und 08:41 sämtliche Archiv-Bündel anfassten; die
+Zeitstempel waren als Signal wertlos.
+
+#### Was schon gemessen ist
+
+**Der Hash-Schlüssel mischt vollständig — die Voraussetzung für P2 hält.** Stichprobe über
+300 der 4.096 Archiv-Bündel, 106.271 datierte Akten:
+
+```
+Akten aelter als 2 Jahre        77,2 %
+Buendel mit NUR alten Akten     0 von 300   (0,0 %)
+Buendel gemischt              300 von 300   (100,0 %)
+```
+
+Heute kann also keine einzige alte Akte verschont werden: jedes Bündel enthält Frisches und
+wird deshalb jede Nacht angefasst. Genau das würde eine Altersstufe im Schlüssel ändern.
+
+**Was NICHT trägt: „enthält Frisches" als Vorhersage.** Auf der sauberen Produktmenge
+(4.096 Bündel, 54.252 Akten) gekreuzt:
+
+```
+Bezug „letzte 90 Tage"     neu geschrieben   unveraendert
+  enthaelt Frisches                  2.356          1.654
+  nur Altes                             37             49
+```
+
+1.654 Bündel mit frischen Akten blieben unangetastet. Der Bezug zum Alter ist also da, aber
+er ist kein Automatismus.
+
+⚠ **Eigener Fehlgriff, hier korrigiert.** Die 79,8 % weiter oben stammen aus allen 1,99 Mio
+DE-Bekanntmachungen. Ich hatte sie zunächst auf die 54.252 Produktakten übertragen — falsch:
+die Produktmenge ist naturgemäss jung, dort liegt der Anteil alter Akten bei 22 %. Für P2
+zählt das ARCHIV (1.734.199 Akten), und dort gelten die 77,2 % oben.
+
+#### Was noch fehlt: die eine Zahl
+
+Ein erster Vergleich lief, taugt aber nicht als Urteil: die Aufnahme lag mitten in einem
+Archiv-Neuaufbau (601.260 Akten festgehalten, am Ende standen 1.734.199 da). Belastbar ist
+daraus nur ein Teilbefund — **von den 652.488 Akten, die zum Aufnahmezeitpunkt existierten,
+hat sich danach keine einzige geändert und keine ist verschwunden.**
+
+Das Werkzeug wurde daraufhin zweimal geschärft, beide Male mit Gegenprobe:
+
+- Die Aufnahme wartet nun auf zehn Minuten Ruhe **und** darauf, dass kein bauender Prozess
+  läuft. Eine Ruhefrist allein reichte nicht: der Export pausiert zwischen seinen
+  Abschnitten länger, als die erste Frist von drei Minuten lang war.
+- Der Vergleich meldet einen Neuaufbau (Aktenzahl bewegt sich um mehr als 20 %) und gibt
+  dann ausdrücklich KEIN Urteil ab, statt eine schöne Quote zu drucken.
+- Das Alter einer Akte kommt aus ihrem jüngsten Ereignis, nicht aus `bis`. Sonst gälte eine
+  Akte mit Vertragsende 2023 als alt, auch wenn 2026 ein Zuschlag dazukam — und gerade die
+  bewegen sich.
+
+**Nächster Schritt:** Aufnahme nach dem laufenden Export, Vergleich nach dem Nachtlauf.
+Erst dann steht die Zahl.
+
+**Abnahme:** eine Zahl, die sagt, wie oft sich Akten älter als zwei Jahre zwischen zwei
+vollständigen Läufen ändern. Über 0,1 % fällt P2 ersatzlos weg.
 
 ### Schritt 3 — P2, Umsetzung (zwei Tage)
 

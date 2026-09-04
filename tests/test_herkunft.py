@@ -120,3 +120,59 @@ def test_was_nicht_gemessen_ist_traegt_ein_sichtbares_zeichen():
                 f"{'Detail ok' if hat_pdot else 'DETAIL fehlt'}")
     assert not ohne_zeichen, (
         "Herkuenfte ohne sichtbares Zeichen:\n  " + "\n  ".join(ohne_zeichen))
+
+
+# ---- Die Richtung der Abbildungstabellen ---------------------------------------
+EXPORT = ROOT / "scripts" / "export_web_leads.py"
+
+
+def _herkunftstabellen() -> dict[str, str]:
+    """Die `*_SRC`-Tabellen als Rohtext — gelesen, nicht importiert.
+
+    Importieren hiesse duckdb und die halbe Pipeline zu laden, nur um vier Zeilen zu lesen.
+    Dieselbe Entscheidung wie bei `_bekannte_herkuenfte()` eine Datei weiter oben.
+    """
+    quelle = EXPORT.read_text(encoding="utf-8")
+    return dict(re.findall(r"^([A-Z_]+_SRC)\s*=\s*(\{[^}]*\})", quelle, re.M))
+
+
+def test_keine_herkunftstabelle_haelt_unbekanntes_fuer_gemessen():
+    """Wo nichts angegeben ist, darf nicht „gemessen" herauskommen.
+
+    ⚠ DIE ASYMMETRIE IST DER GRUND. Belegte Werte tragen KEINE Markierung — das ist bewusst
+    so, sonst wäre die Oberfläche ein Punktefeld. Genau deshalb ist „echt" der einzige Wert,
+    zu dem man nicht raten darf: er ist die stille Vorgabe, und eine stille Vorgabe für
+    „ich weiss es nicht" verwandelt eine Wissenslücke in eine Behauptung.
+
+    `INC_SRC` war am 2026-09-04 die einzige der vier Tabellen, die das tat (`None: "echt"`,
+    dazu `.get(..., "echt")`), während VAL_SRC/TIM_SRC auf „unbekannt" und KONK_SRC auf „na"
+    abbildeten. Gemessen betraf es 0 Leads — der Weg dorthin war zugewachsen, nicht zu. Der
+    Test hält die Richtung fest, damit der nächste neue Wert von oben nicht durchrutscht.
+    """
+    tabellen = _herkunftstabellen()
+    assert len(tabellen) >= 4, f"Herkunftstabellen nicht erkannt: {sorted(tabellen)}"
+
+    falsch = [n for n, block in tabellen.items()
+              if re.search(r"None\s*:\s*[\"']echt[\"']", block)]
+    assert not falsch, (
+        f"Diese Tabellen bilden „nichts angegeben\" auf „echt\" ab: {falsch}. "
+        "Richtig ist „unsicher\" oder „unbekannt\" — je nachdem, was die Anzeige kennt.")
+
+
+def test_kein_rueckfall_auf_echt_bei_unbekanntem_schluessel():
+    """`.get(x, "echt")` ist derselbe Fehler, nur eine Zeile später.
+
+    Die Tabelle kann noch so sauber sein: ein Vorgabewert „echt" beim Nachschlagen macht
+    jeden Wert, den `govisor/gold.py` neu erfindet, zur unmarkierten Behauptung. Und Gold
+    erfindet welche — `lead_predecessor` trägt heute `'content'` (Konfidenz 0,6), das keine
+    der vier Tabellen kennt.
+    """
+    quelle = EXPORT.read_text(encoding="utf-8")
+    # ⚠ EINE KLAMMERSTUFE MUSS DAS MUSTER AUSHALTEN. Der erste Entwurf stand auf `[^)]*?`
+    # und war damit blind: der echte Aufruf lautet `INC_SRC.get(g("incumbent_source"), "echt")`
+    # — die innere Klammer beendete die Zeichenklasse, das Muster traf nichts, und die
+    # Gegenprobe mit zurueckgebautem Fehler lief gruen durch.
+    treffer = re.findall(
+        r"([A-Z_]+_SRC)\.get\((?:[^()]|\([^()]*\))*,\s*[\"']echt[\"']\s*\)", quelle)
+    assert not treffer, (
+        f"Rückfall auf „echt\" bei unbekanntem Schlüssel: {sorted(set(treffer))}")

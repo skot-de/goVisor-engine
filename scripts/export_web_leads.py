@@ -744,7 +744,19 @@ NATURKAT = {"services": "dienst", "supplies": "liefer", "works": "bau"}
 VAL_SRC = {"actual": "echt", "estimated": "schaetz", "unknown": "unbekannt", None: "unbekannt"}
 TIM_SRC = {"actual": "echt", "estimated": "schaetz", "uncertain": "unsicher", "unknown": "unbekannt", None: "unbekannt"}
 KONK_SRC = {"actual": "echt", "unknown": "unbekannt", "na": "na", None: "na"}
-INC_SRC = {"actual": "echt", "uncertain": "unsicher", None: "echt"}
+# ⚠ VORGABE „unsicher", NICHT „echt" — ALS EINZIGE DER VIER TABELLEN WAR SIE FALSCH HERUM.
+# VAL_SRC und TIM_SRC bilden Unbekanntes auf „unbekannt" ab, KONK_SRC auf „na"; nur INC_SRC
+# machte aus „nichts angegeben" ein „gemessen". Das ist die falsche Richtung für ein System,
+# dessen ganze Aussagekraft an der Asymmetrie hängt: Belegtes trägt KEINE Markierung, also
+# bedeutet jede unmarkierte Angabe „wir haben das gesehen". Ein Wert, den diese Tabelle nicht
+# kennt, wird damit stillschweigend zur Behauptung.
+#
+# Gemessen am 2026-09-04, bevor geändert wurde: 0 von 20.472 ausgelieferten Amtsinhabern
+# betroffen — die Lücke leckte NICHT. `govisor/gold.py` kennt zwar einen vierten Wert
+# (`'content'`, Konfidenz 0.6, aus Käufer+CPV+Titelüberlappung auf einen früheren Zuschlag),
+# aber der Zweig `use_pred` fängt ihn davor ab und setzt korrekt „unsicher". Das ist ein
+# Riegel gegen den nächsten neuen Wert von oben, keine Reparatur einer offenen Wunde.
+INC_SRC = {"actual": "echt", "uncertain": "unsicher", None: "unsicher"}
 LVL = {"high": "hoch", "medium": "mittel", "low": "niedrig", "na": "na", None: "na"}
 KONK_LVL = {"low": "gering", "medium": "mittel", "high": "hoch", "na": "na", None: "na"}
 RAHMEN_OK = {"vgv", "vob", "uvgo", "sektvo"}
@@ -1063,7 +1075,7 @@ def export_branche(key):
         elif g("incumbent_name"):
             inc_obj = {"name": r["incumbent_name"],
                        "seit": str(int(r["incumbent_since_year"])) if g("incumbent_since_year") else "",
-                       "src": INC_SRC.get(g("incumbent_source"), "echt"), "hint": "",
+                       "src": INC_SRC.get(g("incumbent_source"), "unsicher"), "hint": "",
                        "groupId": g("incumbent_group_id"),
                        "conf": float(r["incumbent_confidence"]) if g("incumbent_confidence") is not None else None}
         else:
