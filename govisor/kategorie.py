@@ -72,7 +72,6 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 
 MODELL = "google/gemini-2.5-flash-lite"
-URL = "https://openrouter.ai/api/v1/chat/completions"
 BATCH = 30
 LERN_BEISPIELE = 40        # so viele Korrekturen gehen als Beispiele in den Prompt
 TITEL_MAX = 160
@@ -81,14 +80,6 @@ TITEL_MAX = 160
 # irgendetwas, und ein falsch einsortierter Lead ist schlimmer als ein unsortierter: er
 # taucht in einer Fachsuche auf, in die er nicht gehoert, und verdraengt dort einen echten.
 UNBEKANNT = "99"
-
-
-def _key() -> str | None:
-    p = os.environ.get("OPENROUTER_KEY_FILE", str(ROOT / ".secrets" / "openrouter.key"))
-    try:
-        return Path(p).read_text(encoding="utf-8").strip() or None
-    except OSError:
-        return None
 
 
 def korrektur_pfad(country: str) -> Path:
@@ -221,10 +212,32 @@ def _prompt(kat: dict, beispiele: list[dict]) -> str:
     return txt
 
 
-def frag_modell(faelle: list[tuple[str, str]], kat: dict, beispiele: list[dict],
-                key: str) -> dict[str, str]:
-    """Titel → Division. Fehlschlaege sind LEER, nicht geraten."""
-    import requests
+def frag_modell(faelle: list[tuple[str, str]], kat: dict,
+                beispiele: list[dict]) -> dict[str, str]:
+    """Titel → Division. Fehlschlaege sind LEER, nicht geraten.
+
+    ⚠ **UEBER `llm.chat`, NICHT MIT EIGENEM `requests.post`.** Bis zum 2026-09-04 stand hier
+    ein eigener Aufruf gegen `openrouter.ai/api/v1/chat/completions`, mit eigenem
+    Schluessel-Leser und eigener Wiederholschleife. Das lief damit an drei Einrichtungen
+    vorbei, die es fuer genau diesen Zweck gibt:
+
+      · der **Geldwache** — der Tagesdeckel und die Reserve in `llm._geldwache()` galten
+        fuer diesen Weg nicht. Er konnte das Guthaben leerlaufen lassen, waehrend die
+        gebremsten Wege sich fuer geschuetzt hielten.
+      · dem **Kostenbuch** — die Buchungen fehlten. Die naechtliche Modellmarkt-Rechnung
+        („Mischung 3.0:1 Eingabe/Ausgabe, gemessen an 24.455 Buchungen") stand damit auf
+        unvollstaendigen Zahlen, und `kostenbericht.py` unterschaetzte die Ausgaben.
+      · dem **Bodenpreis** — `llm.mit_boden()` waehlt denselben Modellnamen beim guenstigeren
+        Anbieter (gemessen: halber Preis). Dieser Weg zahlte Listenpreis.
+
+    Gemessen im Lauf vom 2026-09-04: 1.179 Titel, 40 Stapel, jede Nacht. Kein grosser Betrag,
+    aber unsichtbar — und eine Bremse, an der ein Weg vorbeifuehrt, ist keine Bremse.
+
+    Der frühere Parameter `key` ist weg: `llm` liest seine Schlüssel selbst und kann
+    rotieren. Ihn tot mitzuschleppen hätte den nächsten Leser glauben lassen, hier werde
+    noch ein eigener Schlüssel gebraucht.
+    """
+    from . import llm
 
     sys_prompt = _prompt(kat, beispiele)
     out: dict[str, str] = {}
@@ -238,37 +251,53 @@ def frag_modell(faelle: list[tuple[str, str]], kat: dict, beispiele: list[dict],
         # modellabgeleiteten NetServer-Zeilen trugen **60** einen Doppelpunkt zu viel
         # (12 %). Kennungen ohne Doppelpunkt (TED, DOeE) waren zu 0 von 1.199 betroffen.
         erlaubt = {n for n, _ in teil}
-        body = {"model": MODELL, "temperature": 0,
-                "messages": [{"role": "system", "content": sys_prompt},
-                             {"role": "user", "content": "\n".join(
-                                 f'id={n} | "{(t or "")[:TITEL_MAX]}"' for n, t in teil)}]}
-        for versuch in range(3):
-            try:
-                r = requests.post(URL, headers={"Authorization": f"Bearer {key}",
-                                  "Content-Type": "application/json"}, json=body, timeout=120)
-                if r.status_code == 200:
-                    txt = r.json()["choices"][0]["message"]["content"]
-                    txt = re.sub(r"^```json|^```|```$", "", txt.strip(), flags=re.M).strip()
-                    for v in json.loads(txt).get("v", []):
-                        d = str(v.get("div", "")).zfill(2)
-                        if d not in kat:                 # UNBEKANNT und Muell fallen hier raus
-                            continue
-                        # ⚠ DIE KENNUNG AUS DER ANTWORT IST NICHT VERTRAUENSWUERDIG. Sie
-                        # wurde bisher ungeprueft uebernommen und landete so in einer
-                        # Gold-Tabelle, in der sie auf NICHTS zeigte — 60 Leads mit
-                        # ermittelter Branche, die im Produkt „Ohne Kategorie" blieben,
-                        # weil der Join ins Leere lief. Ein Schluessel, den ein Modell
-                        # zurueckgibt, gehoert gegen die gesendete Menge geprueft.
-                        roh = str(v.get("id", ""))
-                        nid = roh if roh in erlaubt else roh.strip().rstrip(":")
-                        if nid in erlaubt:
-                            out[nid] = d
-                        else:
-                            verworfen.append(roh)
-                    break
-            except Exception as e:
-                if versuch == 2:
-                    print(f"  Batch-Fehler: {type(e).__name__}: {str(e)[:70]}", flush=True)
+        nachricht = [{"role": "system", "content": sys_prompt},
+                     {"role": "user", "content": "\n".join(
+                         f'id={n} | "{(t or "")[:TITEL_MAX]}"' for n, t in teil)}]
+        try:
+            with llm.kontext(zweck="kategorie"):
+                txt = llm.chat(nachricht, model=MODELL, temperature=0,
+                               timeout=120, max_retries=3)
+        except llm.BudgetErschoepft as e:
+            # ⚠ NICHT WEITERSTAPELN. Die Wache ist klebrig: einmal gefallen, wirft jeder
+            # weitere Aufruf sofort. Vierzig Stapel durchzulaufen, die alle scheitern,
+            # erzeugt vierzig gleiche Zeilen und verdeckt den einen Grund.
+            print(f"  Budget erschoepft, Ableitung abgebrochen: {e}", flush=True)
+            break
+        except Exception as e:                                  # noqa: BLE001
+            print(f"  Batch-Fehler: {type(e).__name__}: {str(e)[:70]}", flush=True)
+            # ⚠ NICHT JEDER FEHLSCHLAG IST VORUEBERGEHEND — aber auch nicht jeder ist
+            # endgueltig. `AllKeysExhausted` faellt schon bei einem haengenden Endpunkt,
+            # das waere ein schlechter Grund, vierzig Stapel abzublasen. Endgueltig ist
+            # es erst, wenn KEIN Schluessel mehr kann; ein 402 mustert ihn prozessweit aus.
+            # Also das echte Signal fragen statt die Ausnahme zu deuten.
+            if not llm.available_keys():
+                print("  kein nutzbarer Schluessel mehr — Ableitung abgebrochen.", flush=True)
+                break
+            print(f"  {min(i + BATCH, len(faelle))}/{len(faelle)}", flush=True)
+            continue
+        try:
+            txt = re.sub(r"^```json|^```|```$", "", txt.strip(), flags=re.M).strip()
+            for v in json.loads(txt).get("v", []):
+                d = str(v.get("div", "")).zfill(2)
+                if d not in kat:                 # UNBEKANNT und Muell fallen hier raus
+                    continue
+                # ⚠ DIE KENNUNG AUS DER ANTWORT IST NICHT VERTRAUENSWUERDIG. Sie
+                # wurde bisher ungeprueft uebernommen und landete so in einer
+                # Gold-Tabelle, in der sie auf NICHTS zeigte — 60 Leads mit
+                # ermittelter Branche, die im Produkt „Ohne Kategorie" blieben,
+                # weil der Join ins Leere lief. Ein Schluessel, den ein Modell
+                # zurueckgibt, gehoert gegen die gesendete Menge geprueft.
+                roh = str(v.get("id", ""))
+                nid = roh if roh in erlaubt else roh.strip().rstrip(":")
+                if nid in erlaubt:
+                    out[nid] = d
+                else:
+                    verworfen.append(roh)
+        except Exception as e:                                  # noqa: BLE001
+            # Eine unlesbare Antwort ist ein leerer Stapel, kein Abbruch — dieselbe Regel
+            # wie oben im Kopf: „Fehlschlaege sind LEER, nicht geraten."
+            print(f"  Antwort unlesbar: {type(e).__name__}: {str(e)[:70]}", flush=True)
         print(f"  {min(i + BATCH, len(faelle))}/{len(faelle)}", flush=True)
     if verworfen:
         # Laut sagen, nicht stillschweigend schlucken: wer das Trennzeichen oder den
@@ -309,14 +338,18 @@ def bestimme(country: str = "DE", mit_modell: bool = True) -> list[dict]:
         for q in ("korrektur", "zwilling", "regelwerk")))
 
     if mit_modell and offen_fuers_modell:
-        key = _key()
-        if not key:
+        # ⚠ ÜBER `llm`, NICHT ÜBER EINE EIGENE SCHLÜSSELDATEI. Der frühere `_key()` las nur
+        # `.secrets/openrouter.key` — den EINEN Schlüssel. `llm` kennt zusätzlich die
+        # Mehrfachdatei und mustert leergelaufene aus; wer selbst liest, meldet „kein
+        # Schlüssel", während `llm` noch zwei hätte, oder umgekehrt.
+        from . import llm as _llm
+        if not _llm.available_keys():
             print("  ⚠ kein OpenRouter-Schluessel — Modellstufe uebersprungen.")
         else:
             beispiele = lade_korrekturen(country)[:LERN_BEISPIELE]
             if beispiele:
                 print(f"  Lernschleife: {len(beispiele)} Korrekturen im Prompt")
-            for nid, d in frag_modell(offen_fuers_modell, kat, beispiele, key).items():
+            for nid, d in frag_modell(offen_fuers_modell, kat, beispiele).items():
                 zeilen.append(dict(notice_id=nid, division=d, branche=kat[d][1],
                                    quelle="modell", modell=MODELL, stand=stand))
     rest = len(offen) - len(zeilen)

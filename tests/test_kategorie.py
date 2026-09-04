@@ -11,24 +11,25 @@ _KAT = {"45": ("Bauarbeiten", None), "72": ("IT-Dienste", None)}
 
 
 def _frag(K, faelle, antwort):
-    """`frag_modell` mit gestubbter Gegenstelle — kein Netz, kein Geld."""
+    """`frag_modell` mit gestubbter Gegenstelle — kein Netz, kein Geld.
+
+    ⚠ GESTUBBT WIRD JETZT `llm.chat`, NICHT `requests.post`. Bis zum 2026-09-04 rief die
+    Kategorie-Ableitung OpenRouter selbst an — ohne Geldwache, ohne Kostenbuch, ohne
+    Bodenpreis. Dieser Helfer stubbte deshalb die HTTP-Schicht. Seit der Umstellung laeuft
+    der Aufruf ueber `govisor.llm.chat`; ein Stub auf `requests.post` wuerde die echte
+    Bremse nicht mehr treffen und den Test entweder ins Netz laufen lassen oder gruen
+    luegen.
+    """
     import json
 
-    import requests
+    from govisor import llm
 
-    class _Antwort:
-        status_code = 200
-
-        @staticmethod
-        def json():
-            return {"choices": [{"message": {"content": json.dumps({"v": antwort})}}]}
-
-    alt = requests.post
-    requests.post = lambda *a, **kw: _Antwort()
+    alt = llm.chat
+    llm.chat = lambda messages, **kw: json.dumps({"v": antwort})
     try:
-        return K.frag_modell(faelle, _KAT, [], "testkey")
+        return K.frag_modell(faelle, _KAT, [])
     finally:
-        requests.post = alt
+        llm.chat = alt
 
 
 def test_wasserfall_reihenfolge_nach_belegkraft():
