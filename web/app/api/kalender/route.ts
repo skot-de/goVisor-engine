@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
-import { loadDataFile } from "@/lib/dataSource";
+import { ladeMitGrund, DATEN_STOERUNG } from "@/lib/dataSource";
+import { STOERUNG_ANTWORT } from "@/lib/ladegrund.js";
 import { bremse } from "@/lib/rateLimit";
 
 /* Verfahrenstermine mehrerer Leads — für die Terminansicht der Merkliste.
@@ -35,16 +36,32 @@ export async function GET(req: NextRequest) {
     .slice(0, MAX_IDS);
   if (!ids.length) return NextResponse.json({});
 
+  /* ⚠ „KEINE TERMINE" UND „ICH KOMME NICHT DRAN" SIND NICHT DASSELBE.
+   *
+   * Der Absatz oben ist richtig: nicht jeder Lead hat eine Datei, und dann fehlt der Eintrag
+   * zu Recht. Nur konnte diese Route den zweiten Fall nicht sehen — `loadDataFile` gab fuer
+   * jeden Fehlschlag `null` zurueck, auch fuer „Speicher antwortet 500". Bei unerreichbarem
+   * Datenspeicher meldete sie also fuer JEDEN Lead „keine Termine", mit HTTP 200.
+   *
+   * Das ist die teuerste Stelle fuer diese Verwechslung im ganzen Produkt: hier stehen
+   * Bindefrist und letzter Tag fuer Bieterfragen — Termine, nach denen jemand seinen
+   * Kalender richtet. Eine ausgefallene Abfrage, die wie „nichts zu beachten" aussieht,
+   * kostet eine Abgabe. */
+  let stoerung = false;
   const paare = await Promise.all(
     ids.map(async (id) => {
       try {
-        const txt = await loadDataFile(`kalender/${id}.json`);
-        return txt ? ([id, JSON.parse(txt)] as const) : null;
+        const { text, grund } = await ladeMitGrund(`kalender/${id}.json`);
+        if (grund === DATEN_STOERUNG) stoerung = true;
+        return text ? ([id, JSON.parse(text)] as const) : null;
       } catch {
         return null; // fehlt oder kaputt → dieser Lead hat eben keine Termine
       }
     }),
   );
+  // Eine einzige Stoerung genuegt: dann ist die Antwort unvollstaendig, und welche Leads
+  // wirklich terminlos sind, weiss niemand mehr.
+  if (stoerung) return NextResponse.json(STOERUNG_ANTWORT, { status: 503 });
 
   const aus: Record<string, unknown> = {};
   for (const p of paare) if (p) aus[p[0]] = p[1];

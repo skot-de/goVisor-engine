@@ -1,5 +1,15 @@
 import { NextResponse } from "next/server";
-import { loadDataFile } from "@/lib/dataSource";
+import { ladeMitGrund, DATEN_STOERUNG } from "@/lib/dataSource";
+import { STOERUNG_ANTWORT } from "@/lib/ladegrund.js";
+
+/* ⚠ EIN AUSFALL DARF SICH HIER NICHT EINBRENNEN. `CORPUS` und `GEO` werden EINMAL
+ * gesetzt und nie zurückgesetzt. War der Datenspeicher beim ersten Aufruf nicht
+ * erreichbar, stand dort bis zum naechsten Neustart des Prozesses ein LEERER Korpus —
+ * und die Route meldete jeder Suche „0 Treffer" mit HTTP 200, auch lange nachdem der
+ * Speicher wieder da war. Aus einer voruebergehenden Stoerung wurde so eine dauerhafte
+ * Falschauskunft. Deshalb: bei einer Stoerung wird NICHT zwischengespeichert, sondern
+ * geworfen — und der naechste Aufruf versucht es neu. */
+class DatenStoerung extends Error {}
 
 // `ohne` mitzählen: sonst fehlen die CPV-losen Vergaben still in jedem Zähler und in der
 // Geo-Aggregation — dieselbe Klasse Fehler wie eine fehlende Route, nur unsichtbarer.
@@ -45,18 +55,24 @@ async function loadCorpus(): Promise<Record<string, string[]>> {
   if (corpusPromise) return corpusPromise;
   corpusPromise = (async () => {
     const out: Record<string, string[]> = {};
+    let stoerung = false;
     for (const b of BRANCHEN) {
       try {
-        const raw = await loadDataFile(`leads-${b}.json`);
+        const { text: raw, grund } = await ladeMitGrund(`leads-${b}.json`);
+        if (grund === DATEN_STOERUNG) stoerung = true;
         const arr = raw ? (JSON.parse(raw) as RawLead[]) : [];
         out[b] = Array.isArray(arr) ? arr.map(searchText) : [];
       } catch {
         out[b] = [];
       }
     }
+    if (stoerung) throw new DatenStoerung();
     CORPUS = out;
     return out;
   })();
+  // Der gemerkte Fehlschlag darf nicht selbst haengenbleiben — sonst wirft jeder weitere
+  // Aufruf dieselbe alte Stoerung, auch wenn der Speicher laengst wieder antwortet.
+  corpusPromise.catch(() => { corpusPromise = null; });
   return corpusPromise;
 }
 
@@ -66,9 +82,11 @@ async function loadGeo(): Promise<Record<string, ([number, number] | null)[]>> {
   if (geoPromise) return geoPromise;
   geoPromise = (async () => {
     const out: Record<string, ([number, number] | null)[]> = {};
+    let stoerung = false;
     for (const b of BRANCHEN) {
       try {
-        const raw = await loadDataFile(`leads-${b}.json`);
+        const { text: raw, grund } = await ladeMitGrund(`leads-${b}.json`);
+        if (grund === DATEN_STOERUNG) stoerung = true;
         const arr = raw ? (JSON.parse(raw) as RawLead[]) : [];
         out[b] = Array.isArray(arr)
           ? arr.map((l) => (typeof l.lat === "number" && typeof l.lon === "number" ? [l.lat, l.lon] : null))
@@ -77,9 +95,11 @@ async function loadGeo(): Promise<Record<string, ([number, number] | null)[]>> {
         out[b] = [];
       }
     }
+    if (stoerung) throw new DatenStoerung();
     GEO = out;
     return out;
   })();
+  geoPromise.catch(() => { geoPromise = null; });
   return geoPromise;
 }
 
@@ -91,8 +111,9 @@ export async function GET(req: Request) {
 
   // Ohne Query UND ohne Geo: die vollen Totale (unverändertes Verhalten).
   if (!q && !hasGeo) {
-    const json = await loadDataFile("branchen.json");
-    return new NextResponse(json ?? "{}", {
+    const { text, grund } = await ladeMitGrund("branchen.json");
+    if (grund === DATEN_STOERUNG) return NextResponse.json(STOERUNG_ANTWORT, { status: 503 });
+    return new NextResponse(text ?? "{}", {
       headers: { "content-type": "application/json", "cache-control": "no-store" },
     });
   }
@@ -100,8 +121,17 @@ export async function GET(req: Request) {
   // Treffer je Branche unter dem aktiven Filter zählen — Text (mehrere Wörter → UND, wie im
   // Client) und/oder Umkreis (Haversine), über denselben Lead-Index kombiniert.
   const terms = q ? q.split(/\s+/).filter(Boolean) : [];
-  const corpus = terms.length ? await loadCorpus() : null;
-  const geo = hasGeo ? await loadGeo() : null;
+  let corpus: Record<string, string[]> | null = null;
+  let geo: Record<string, ([number, number] | null)[]> | null = null;
+  try {
+    corpus = terms.length ? await loadCorpus() : null;
+    geo = hasGeo ? await loadGeo() : null;
+  } catch (e) {
+    if (e instanceof DatenStoerung) {
+      return NextResponse.json(STOERUNG_ANTWORT, { status: 503 });
+    }
+    throw e;
+  }
   const counts: Record<string, number> = {};
   for (const b of BRANCHEN) {
     const texts = corpus?.[b] || [];

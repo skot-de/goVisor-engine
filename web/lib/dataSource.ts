@@ -4,6 +4,10 @@ import { createHash } from "node:crypto";
 import path from "node:path";
 import { signierterGet } from "@/lib/s3sign";
 import { erstelleCache } from "@/lib/dataCache";
+import { grundAus, OK, STOERUNG } from "@/lib/ladegrund.js";
+
+export type Ladegrund = "ok" | "fehlt" | "stoerung";
+export const DATEN_STOERUNG = STOERUNG;
 
 /**
  * Lädt eine Web-Daten-Datei (leads-<branche>.json, suppliers.json, doc-text/…) aus dem
@@ -51,50 +55,84 @@ export function inSpeicher<T>(schluessel: string, wert: T, bytes: number): T {
   return wert;
 }
 
-export async function loadDataFile(name: string): Promise<string | null> {
+/**
+ * Wie `loadDataFile`, aber sie sagt auch WARUM nichts kam.
+ *
+ * ⚠ WOZU DAS GUT IST. Bis zum 2026-09-04 gab `loadDataFile` fuer jeden Fehlschlag `null`
+ * zurueck: Datei nicht da, S3 antwortet 500, Netz weg, Signatur abgelehnt. Die Aufrufer
+ * konnten das nicht unterscheiden und machten daraus durchweg ein leeres Ergebnis mit
+ * HTTP 200 — `/api/branchen` zeigte jede Branche mit 0 Leads, `/api/plz-geo` lieferte `{}`
+ * (die Umkreissuche findet dann nichts), `/api/kalender` gar keine Fristen. Bei
+ * unerreichbarem Speicher sah das Produkt aus, als gaebe es nichts zu finden.
+ *
+ * Der Kommentar unten fordert die Unterscheidung seit jeher („eine Störung, die man sehen
+ * muss"); sie stand nur im `console.error` und erreichte den Aufrufer nie. Ein Protokoll
+ * im Server-Log sieht niemand, der die Seite benutzt.
+ */
+export async function ladeMitGrund(
+  name: string,
+): Promise<{ text: string | null; grund: Ladegrund }> {
   const zugang = s3Zugang();
+  // Protokoll des Ferngriffs — die Bewertung macht `lib/ladegrund.js`, damit `node` sie
+  // pruefen kann (diese Datei traegt `server-only` und ist dort unladbar).
+  const spur: { ferngriff: boolean; status: number | null; ausnahme: boolean; platte: boolean } =
+    { ferngriff: false, status: null, ausnahme: false, platte: false };
+
   if (zugang) {
+    spur.ferngriff = true;
     const gepuffert = speicher.hole(name);
-    if (typeof gepuffert === "string") return gepuffert;
+    if (typeof gepuffert === "string") return { text: gepuffert, grund: OK };
     try {
       const praefix = process.env.DATA_S3_PREFIX?.replace(/^\/+|\/+$/g, "");
       const { url, kopf } = await signierterGet(zugang, praefix ? `${praefix}/${name}` : name);
       const res = await fetch(url, { headers: kopf, cache: "no-store" });
+      spur.status = res.status;
       if (res.ok) {
         const text = await res.text();
         speicher.setze(name, text, text.length);
-        return text;
+        return { text, grund: OK };
       }
       // 404 ist eine Antwort, kein Fehler: die Datei gibt es dort nicht. Alles andere ist
       // eine Störung, die man sehen muss — sonst fällt sie stumm auf die Platte zurück und
       // ein Deployment liefert alte oder gar keine Daten, ohne dass es jemand merkt.
       if (res.status !== 404) console.error(`[data] ${name}: HTTP ${res.status} vom Speicher`);
     } catch (e) {
+      spur.ausnahme = true;
       console.error(`[data] ${name}: Speicher nicht erreichbar —`,
                     e instanceof Error ? e.message : e);
     }
   } else {
     const base = process.env.DATA_BASE_URL?.replace(/\/$/, "");
     if (base) {
+      spur.ferngriff = true;
       const gepuffert = speicher.hole(name);
-      if (typeof gepuffert === "string") return gepuffert;
+      if (typeof gepuffert === "string") return { text: gepuffert, grund: OK };
       try {
         const res = await fetch(`${base}/${name}`, { cache: "no-store" });
+        spur.status = res.status;
         if (res.ok) {
           const text = await res.text();
           speicher.setze(name, text, text.length);
-          return text;
+          return { text, grund: OK };
         }
       } catch {
+        spur.ausnahme = true;
         /* Netz-/Storage-Fehler → auf Disk-Fallback ausweichen */
       }
     }
   }
   try {
-    return await readFile(path.join(process.cwd(), "data", name), "utf-8");
+    const text = await readFile(path.join(process.cwd(), "data", name), "utf-8");
+    spur.platte = true;
+    return { text, grund: OK };
   } catch {
-    return null;
+    return { text: null, grund: grundAus(spur) as Ladegrund };
   }
+}
+
+/** Der alte, knappe Weg — unveraendert fuer alle Aufrufer, denen der Grund gleich ist. */
+export async function loadDataFile(name: string): Promise<string | null> {
+  return (await ladeMitGrund(name)).text;
 }
 
 

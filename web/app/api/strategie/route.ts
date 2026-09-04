@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
-import { loadDataFile } from "@/lib/dataSource";
+import { ladeMitGrund, DATEN_STOERUNG } from "@/lib/dataSource";
+import { STOERUNG_ANTWORT } from "@/lib/ladegrund.js";
 import { getTier } from "@/lib/tier";
 import { redactStrategie } from "@/lib/redact";
 
@@ -28,7 +29,10 @@ export async function GET(req: Request) {
   const gewuenscht = (p.get("land") || "").toUpperCase();
   const land = LAENDER.has(gewuenscht) ? gewuenscht : "DE";
   try {
-    const roh = await loadDataFile("strategie.json");
+    const { text: roh, grund } = await ladeMitGrund("strategie.json");
+    // Das ausdrueckliche `status: 200` stand hier fuer „es gibt keine Aggregate". Bei einer
+    // Speicherstoerung ist das keine Auskunft, sondern ein Ausfall in ihrer Verkleidung.
+    if (grund === DATEN_STOERUNG) return NextResponse.json(STOERUNG_ANTWORT, { status: 503 });
     if (!roh) return NextResponse.json({}, { status: 200 });
     const datei = JSON.parse(roh);
     // Rueckfall auf die alte, flache Form: waehrend eines Deployments kann eine Datei
