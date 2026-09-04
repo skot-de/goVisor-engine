@@ -1034,3 +1034,120 @@ def test_baugrenze_ohne_verzeichnis_ist_kein_befund(tmp_path):
     """Frische Arbeitskopie ohne Export: kein Befund, kein Absturz."""
     m = _baugrenze()
     assert m.sonde_baugrenze(wurzel=tmp_path / "gibtsnicht") == []
+
+
+# ---- Sonde 7: Module ----------------------------------------------------------
+def _webbaum(wurzel, dateien: dict[str, str]):
+    for pfad, inhalt in dateien.items():
+        z = wurzel / pfad
+        z.parent.mkdir(parents=True, exist_ok=True)
+        z.write_text(inhalt, encoding="utf-8")
+    return wurzel
+
+
+def test_module_findet_eine_datei_die_niemand_importiert(tmp_path):
+    """⚠ DER FUND, DER DIESE SONDE AUSGELOEST HAT. `web/lib/identityGate.ts` ist ein
+    fail-closed gebautes Sicherheitstor mit eigenem Sperrtext („Diese Funktion ist gesperrt,
+    bis eure Zugehoerigkeit zur Firma bestaetigt ist") — und KEINE Stelle importiert es. Wer
+    die Datei liest, haelt die Zugaenge fuer geschuetzt. Die Fehlerklasse ist die des Hauses:
+    gebaut, nicht verdrahtet — nur eben im Frontend, wo bis dahin keine Sonde hinsah.
+    """
+    m = _baugrenze()
+    w = _webbaum(tmp_path, {
+        "lib/genutzt.ts": "export const a = 1;",
+        "lib/tot.ts": "export const b = 2;",
+        "app/seite.tsx": 'import { a } from "@/lib/genutzt";',
+    })
+    befunde = m.sonde_module(wurzel=w)
+    assert len(befunde) == 1, befunde
+    assert "lib/tot.ts" in befunde[0]
+
+
+def test_module_kennt_den_import_ueber_das_verzeichnis(tmp_path):
+    """Ein `index` wird ueber SEIN VERZEICHNIS importiert.
+
+    ⚠ `lib/i18n/index.tsx` heisst im Import `@/lib/i18n`. Ohne diese Regel meldete die Sonde
+    jedes Index-Modul als Leiche — beim Bauen genau hier passiert.
+    """
+    m = _baugrenze()
+    w = _webbaum(tmp_path, {
+        "lib/i18n/index.tsx": "export const t = 1;",
+        "app/seite.tsx": 'import { t } from "@/lib/i18n";',
+    })
+    assert m.sonde_module(wurzel=w) == []
+
+
+def test_module_schweigt_bei_begruendeter_ausnahme(tmp_path, monkeypatch):
+    """Eine benannte Ausnahme ist kein Befund — eine unbenannte schon."""
+    m = _baugrenze()
+    monkeypatch.setitem(m.AUSNAHMEN_MODULE, "lib/tot.ts", "steht als Stub bis zum Start")
+    w = _webbaum(tmp_path, {"lib/tot.ts": "export const b = 2;"})
+    assert m.sonde_module(wurzel=w) == []
+
+
+def test_jede_modul_ausnahme_hat_eine_begruendung():
+    """Eine Ausnahme ohne Grund ist ein Schweigen, kein Befund."""
+    m = _baugrenze()
+    for name, grund in m.AUSNAHMEN_MODULE.items():
+        assert len(grund) > 20, f"{name} steht ohne belastbare Begruendung in der Liste"
+
+
+def test_keine_modul_ausnahme_fuer_etwas_das_es_nicht_mehr_gibt():
+    """Eine Ausnahme fuer eine geloeschte Datei ist toter Ballast — und sie verdeckt, dass
+    die Liste seit Monaten niemand gelesen hat."""
+    m = _baugrenze()
+    fehlt = [n for n in m.AUSNAHMEN_MODULE if not (ROOT / "web" / n).exists()]
+    assert not fehlt, f"AUSNAHMEN_MODULE nennt Dateien, die es nicht mehr gibt: {fehlt}"
+
+
+# ---- Wer ein Skript LAEDT, fuehrt es aus --------------------------------------
+def _ohne_main_schutz() -> set[str]:
+    """Skripte, bei denen ein blosser Import die ganze Arbeit erledigt."""
+    return {p.stem for p in (ROOT / "scripts").glob("*.py")
+            if "__main__" not in p.read_text(encoding="utf-8", errors="replace")}
+
+
+def test_keine_pruefung_fuehrt_einen_export_aus():
+    """Ein Werkzeug, das nachsehen soll, darf nichts schreiben.
+
+    ⚠ DER FUND, GEMESSEN AM 2026-09-04. `pruefe_bibel.py` lud `scripts/export_suppliers.py`
+    ueber `exec_module`, um EINE Konstante zu lesen. Das Skript hat keinen `__main__`-Schutz:
+    der gesamte Export laeuft auf Modulebene. Jeder Import fuehrte damit die vollstaendige
+    Lieferanten-Ausgabe aus — DuckDB ueber Gold, 46 MB `suppliers.json` schreiben, 37.930
+    Einzeldateien anfassen und verwaiste LOESCHEN. Im Nachtlauf stand derselbe Export
+    zweimal im Protokoll:
+
+        daily-2026-09-04-0031.log:899   37930 Lieferanten → web/data/suppliers.json
+        daily-2026-09-04-0031.log:1061  37930 Lieferanten → web/data/suppliers.json
+
+    Die zweite Zeile war die Pruefung. Wer sie von Hand aufrief, waehrend ein Export lief,
+    schrieb mitten hinein. Behoben, indem der Wert jetzt mit `ast` aus dem Quelltext GELESEN
+    wird — ohne eine einzige Anweisung auszufuehren.
+
+    Diese Regel haelt es allgemein: kein `spec_from_file_location` auf ein Skript, das beim
+    Import arbeitet. Entweder man liest den Quelltext, oder das Skript bekommt einen
+    `__main__`-Schutz.
+    """
+    import ast
+    ungeschuetzt = _ohne_main_schutz()
+    assert "export_suppliers" in ungeschuetzt, (
+        "export_suppliers.py hat jetzt einen __main__-Schutz — dann darf diese Ausnahme weg "
+        "und der Test kann strenger werden.")
+
+    befunde: list[str] = []
+    for p in sorted(list((ROOT / "tests").glob("*.py")) + list((ROOT / "scripts").glob("*.py"))):
+        try:
+            baum = ast.parse(p.read_text(encoding="utf-8", errors="replace"))
+        except SyntaxError:
+            continue
+        for k in ast.walk(baum):
+            if not (isinstance(k, ast.Call) and isinstance(k.func, ast.Attribute)
+                    and k.func.attr == "spec_from_file_location" and len(k.args) >= 2):
+                continue
+            ziel = ast.unparse(k.args[1])
+            for name in ungeschuetzt:
+                if f'"{name}.py"' in ziel or f"'{name}.py'" in ziel:
+                    befunde.append(f"{p.relative_to(ROOT)}:{k.lineno} laedt {name}.py")
+    assert not befunde, (
+        "Diese Stellen fuehren beim Laden ein ganzes Skript aus:\n  " + "\n  ".join(befunde)
+        + "\nEntweder den Quelltext lesen (ast) oder dem Skript einen __main__-Schutz geben.")

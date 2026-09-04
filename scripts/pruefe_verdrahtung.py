@@ -679,10 +679,75 @@ def sonde_baugrenze(zeige_offen: bool = False,
             f"Groesste: " + ", ".join(f"{n} {v:,}" for n, v in groesste[:3])]
 
 
+# Module unter `web/lib`, die heute niemand importiert. JEDER Eintrag braucht einen Grund;
+# eine Ausnahme fuer eine Datei, die es nicht mehr gibt, laesst die Suite rot werden.
+AUSNAHMEN_MODULE: dict[str, str] = {
+    "lib/stripe.ts": "Zahlungs-Stub (UMGESETZT=false), noch an keiner Route; der Riegel "
+                     "dagegen steht in tests/test_golive_riegel.py",
+    "lib/identityGate.ts": "Leiche der am 2026-08-21 gestrichenen Erfolgspraemie; wird beim "
+                           "Scharfschalten von Stripe eingefordert (tests/test_golive_riegel.py)",
+}
+
+
+def sonde_module(zeige_offen: bool = False,
+                 wurzel: pathlib.Path | None = None) -> list[str]:
+    r"""Welches Modul unter `web/lib` importiert niemand?
+
+    ⚠ DIE HAUSFEHLERKLASSE, IM EINEN BEREICH OHNE SONDE. Sonde 1 bis 5 sehen die Datenkette
+    und die Ausliefergueter; im Frontend-CODE schaute bisher nichts hin. Gefunden hat diese
+    Sonde am 2026-09-04 zwei Faelle, darunter `identityGate.ts`: ein fail-closed gebautes
+    Sicherheitstor mit eigenem Sperrtext, das KEINE Stelle aufruft. Wer die Datei liest,
+    haelt die Zugaenge fuer geschuetzt.
+
+    ⚠ MODULE, NICHT EINZELNE EXPORTE — und das ist eine Entscheidung gegen einen Fehlschlag.
+    Der erste Entwurf zaehlte je EXPORT die Fundstellen im Quelltext. Er musste dafuer
+    Kommentare und Zeichenketten entfernen (sonst gilt ein Name in seiner eigenen
+    Fehlermeldung als Benutzung) — und daran ist er gescheitert: ein regulaerer Ausdruck in
+    `impressum.ts` (`href\s*=\s*["\']…`) sieht fuer jeden linearen Filter wie eine
+    Zeichenkette aus, verschluckte 9.797 Zeichen und liess fuenf lebende Pruefschritte als
+    Leichen erscheinen. Regex von Division zu unterscheiden braucht einen Parser.
+
+    Auf Modulebene braucht es das alles nicht: ein Import ist eine `from "…"`-Zeile, die
+    steht eindeutig da. Zwei Befunde statt achtzehn, beide echt, kein Fehlalarm.
+    """
+    web = (wurzel or ROOT / "web")
+    if not (web / "lib").is_dir():
+        return []
+
+    ENDUNGEN = {".ts", ".tsx", ".js", ".mjs"}
+    quellen = [p for p in web.rglob("*")
+               if p.suffix in ENDUNGEN and "node_modules" not in p.parts]
+    text = {p: p.read_text(encoding="utf-8", errors="replace") for p in quellen}
+
+    befunde: list[str] = []
+    for modul in sorted(web.glob("lib/**/*")):
+        if modul.suffix not in ENDUNGEN or "node_modules" in modul.parts:
+            continue
+        rel = modul.relative_to(web).as_posix()
+        ohne = modul.relative_to(web).with_suffix("").as_posix()
+        # ⚠ EIN `index` WIRD UEBER SEIN VERZEICHNIS IMPORTIERT. `lib/i18n/index.tsx` heisst
+        # im Import `@/lib/i18n` — ohne diese Zeile meldet die Sonde jedes Index-Modul.
+        wege = {ohne, modul.stem}
+        if modul.stem == "index":
+            wege.add(modul.parent.relative_to(web).as_posix())
+            wege.add(modul.parent.name)
+        muster = re.compile("|".join(
+            rf'["\'][^"\']*(?:@/)?{re.escape(w)}["\']' for w in sorted(wege)))
+        if any(muster.search(q) for datei, q in text.items() if datei != modul):
+            continue
+        if rel in AUSNAHMEN_MODULE:
+            if zeige_offen:
+                print(f"    (erklaert) {rel}: {AUSNAHMEN_MODULE[rel]}")
+            continue
+        befunde.append(f"Module: {rel} wird von niemandem importiert")
+    return befunde
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--sonde", choices=("frische", "paritaet", "pfade", "laender",
-                                       "nutzlast", "baugrenze", "alle"), default="alle")
+                                       "nutzlast", "baugrenze", "module", "alle"),
+                    default="alle")
     ap.add_argument("--offen", action="store_true",
                     help="bekannte Luecken und Leichen mit auflisten")
     a = ap.parse_args()
@@ -714,6 +779,12 @@ def main() -> int:
         f = sonde_nutzlast(a.offen)
         alles += f
         print(f"    {len(f)} unerklaerte Ausliefergueter")
+
+    if a.sonde in ("module", "alle"):
+        print("── Sonde 7: Module (welche Datei in web/lib importiert niemand?) ──")
+        f = sonde_module(a.offen)
+        alles += f
+        print(f"    {len(f)} unerklaerte Leichen")
 
     if a.sonde in ("baugrenze", "alle"):
         print("── Sonde 6: Baugrenze (wie nah ist web/data an der Dateizahl, die `next build` toetet?) ──")

@@ -124,14 +124,32 @@ def _behauptungen() -> list[tuple[str, str, bool, str]]:
     # ⚠ DREI Dateien, nicht zwei. `scripts/export_suppliers.py:_STELLEN` fuehrt dieselbe
     # Zuordnung ein drittes Mal und hing bis zum 2026-09-03 frei: dort fehlte LU, und
     # `clean_nuts` haette damit JEDE luxemburgische Region verworfen, ohne dass etwas rot wird.
-    spec3 = importlib.util.spec_from_file_location(
-        "es", ROOT / "scripts" / "export_suppliers.py")
+    # ⚠ GELESEN, NICHT AUSGEFUEHRT — UND DAS IST KEIN STIL, SONDERN EINE REPARATUR.
+    #
+    # Hier stand `exec_module(export_suppliers)`, um an diese eine Konstante zu kommen.
+    # `scripts/export_suppliers.py` hat aber keinen `__main__`-Schutz: der GESAMTE Export
+    # laeuft auf Modulebene. Ein Import fuehrte damit die vollstaendige Lieferanten-Ausgabe
+    # aus — DuckDB-Abfragen ueber Gold, 46 MB `suppliers.json` schreiben, 37.930 Einzel-
+    # dateien anfassen und verwaiste LOESCHEN. Jede Nacht, zweimal derselbe Export:
+    #
+    #     daily-2026-09-04-0031.log:899   37930 Lieferanten → web/data/suppliers.json
+    #     daily-2026-09-04-0031.log:1061  37930 Lieferanten → web/data/suppliers.json
+    #
+    # Die zweite Zeile ist diese Pruefung. Ein Werkzeug, das nachsehen soll, schrieb und
+    # loeschte Produktdaten — und wer es von Hand aufrief, waehrend ein Export lief, tat es
+    # mitten hinein. Der Wert steht als Literal in einer Zeile; `ast` liest ihn, ohne eine
+    # einzige Anweisung auszufuehren.
+    import ast as _ast
+    dritte: object = "nicht gefunden"
     try:
-        es = importlib.util.module_from_spec(spec3)
-        spec3.loader.exec_module(es)
-        dritte = es._STELLEN
+        _quelle = (ROOT / "scripts" / "export_suppliers.py").read_text(encoding="utf-8")
+        for _k in _ast.parse(_quelle).body:
+            if (isinstance(_k, _ast.Assign) and len(_k.targets) == 1
+                    and isinstance(_k.targets[0], _ast.Name)
+                    and _k.targets[0].id == "_STELLEN"):
+                dritte = _ast.literal_eval(_k.value)
     except Exception as e:                                   # noqa: BLE001
-        dritte = f"nicht ladbar: {type(e).__name__}"
+        dritte = f"nicht lesbar: {type(e).__name__}"
     soll = {"DE": 3, "AT": 4, "CH": 5, "LU": 3}
     passt = gold._REGION_STELLEN == ra.REGION_STELLEN == dritte == soll
     aus.append(("07", "Regions-Ebene DE 3 / AT 4 / CH 5 / LU 3, in ALLEN DREI Dateien gleich",
