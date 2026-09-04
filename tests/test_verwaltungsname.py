@@ -77,3 +77,36 @@ def test_der_weg_haengt_im_selbsttest(ra):
     assert '"verwaltungsname": einheit_im_namen' in block
     assert "if len(werte) > 1:" in block, "der Widerspruchs-Riegel muss ALLE Signale sehen"
     assert "uneinig += 1" in block
+
+
+def test_namensgleiche_orte_werden_berechnet_nicht_getippt():
+    """⚠ DORF SCHLAEGT BUNDESLAND — zwei Namen, und sie kosteten 78 Leads.
+
+    Im deutschen Ortsverzeichnis heisst „hessen" ein Ort im Landkreis Harz (DEE) und
+    „sachsen" einer bei Ansbach (DE2). Der Ortsabgleich lieferte fuer
+    „Landeswohlfahrtsverband Hessen" also DEE, der Verwaltungsname DE7 — Widerspruch, beide
+    verworfen. In einem KAEUFERNAMEN ist die Landesbehoerde die weit wahrscheinlichere
+    Lesart als das Dorf.
+
+    Der Test haelt zweierlei fest: dass die Menge BERECHNET wird, und dass der Ortstreffer
+    dabei WEGFAELLT statt zu gewinnen — eine Mehrheit von eins waere keine.
+    """
+    quelle = (WURZEL / "scripts" / "region_ableiten.py").read_text(encoding="utf-8")
+    assert "namensgleich = {k for k, v in einheiten_gefaltet.items()" in quelle, (
+        "die Menge muss aus den Daten kommen, nicht aus einer getippten Liste")
+    block = quelle[quelle.index("namensgleich = {"):quelle.index('aus.append({"lead_id"')]
+    assert 'signale["ortsname"] = None' in block, (
+        "der Ortstreffer muss WEGFALLEN, nicht ueberstimmt werden")
+
+
+def test_der_ortsabgleich_kennt_die_kollision_wirklich(ra):
+    """Gegenprobe an den echten Daten: „hessen" und „sachsen" zeigen woanders hin."""
+    orte = ra.ortsverzeichnis("DE")
+    einheiten = ra._verwaltungseinheiten("DE")
+    if not orte or not einheiten:
+        pytest.skip("kein Ortsverzeichnis")
+    gefaltet = {" ".join(ra._worte(k)): v for k, v in einheiten.items() if ra._worte(k)}
+    kollision = {k for k, v in gefaltet.items() if orte.get(k) not in (None, v)}
+    # Waeren es ploetzlich viele, haette sich am Ortsverzeichnis etwas Grundlegendes
+    # geaendert — dann gehoert die Regel neu bewertet, nicht stillschweigend ausgeweitet.
+    assert kollision <= {"hessen", "sachsen"}, f"neue Namensgleichheit: {kollision}"

@@ -530,6 +530,20 @@ def fuer_land(land: str, probe: bool) -> int:
     # trifft „Baden-Württemberg" sein eigenes gefaltetes „baden wuerttemberg" nicht.
     einheiten_gefaltet = {" ".join(_worte(k)): v
                           for k, v in _verwaltungseinheiten(land).items() if _worte(k)}
+    # ⚠ DORF SCHLAEGT BUNDESLAND — zwei Namen, und sie kosteten 78 Leads.
+    # Im deutschen Ortsverzeichnis heisst „hessen" ein Ort im Landkreis Harz (also DEE) und
+    # „sachsen" einer bei Ansbach (DE2). Der Ortsabgleich lieferte deshalb fuer
+    # „Landeswohlfahrtsverband Hessen" die Kennung DEE, der Verwaltungsname DE7 — Widerspruch,
+    # beide verworfen. In einem KAEUFERNAMEN ist die Landesbehoerde die weit wahrscheinlichere
+    # Lesart als das Dorf: „Landeswohlfahrtsverband" und „Deutsche Rentenversicherung" sind
+    # keine Gemeindeverwaltungen.
+    # ⚠ Die Menge wird BERECHNET, nicht getippt: Schnittmenge aus Ortsverzeichnis und
+    # Verwaltungseinheiten, wo beide auf verschiedene Regionen zeigen. Fuer AT und CH ist sie
+    # heute leer — sie entsteht von selbst, wenn dort ein solcher Name auftaucht.
+    namensgleich = {k for k, v in einheiten_gefaltet.items() if orte.get(k) not in (None, v)}
+    if namensgleich:
+        print(f"  Namensgleich (Ort heisst wie eine Verwaltungseinheit, liegt aber woanders): "
+              f"{', '.join(sorted(namensgleich))} — hier gilt die Verwaltungseinheit.")
     for lead_id, name, ueber_kaeufer in zeilen:
         # ⚠ DREI WEGE SEIT DEM 2026-09-04, und der Selbsttest gilt fuer ALLE. Der dritte
         # (`verwaltungsname`) ist der SCHWAECHSTE: der Name einer Landesbehoerde sagt ihre
@@ -540,6 +554,13 @@ def fuer_land(land: str, probe: bool) -> int:
             "ortsname": ort_im_namen(name, orte, sortiert),
             "verwaltungsname": einheit_im_namen(name, einheiten_gefaltet),
         }
+        # ⚠ Bei Namensgleichheit faellt der Ortstreffer WEG, statt zu widersprechen.
+        # Nicht „der Verwaltungsname gewinnt die Abstimmung" — das waere eine Mehrheit von
+        # eins. Der Ortstreffer ist in diesem Fall schlicht kein Zeuge.
+        if (signale["verwaltungsname"] and signale["ortsname"]
+                and signale["ortsname"] != signale["verwaltungsname"]
+                and any(w in namensgleich for w in _worte(name or ""))):
+            signale["ortsname"] = None
         aktiv = {k: v for k, v in signale.items() if v}
         if not aktiv:
             continue
