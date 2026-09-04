@@ -183,6 +183,19 @@ def main() -> int:
     if an:
         an = {**an, **herkunft}          # s. o.: die Herkunft gehoert in den Satz, nicht in die Antwort
         da = _load("doc-analysis.json"); da[nid] = an; _save("doc-analysis.json", da)
+        # ⚠ DIESE ZEILE VEROEFFENTLICHT — UND ZWAR SOFORT UND FUER ALLE. Das ist der Grund,
+        # aus dem `govisor/docsafety.py` existiert (§12.2: „im selben Lead sitzen
+        # konkurrierende Bieter"), und genau hier fehlt es: `visibility_after()` sollte
+        # entscheiden, ob eine hochgeladene Auswertung ueberhaupt geteilt wird. Gemessen am
+        # 2026-09-04 ruft dieses Modul niemand auf. Der Vorgang selbst ist damit offen —
+        # wer hochlaedt, ueberschreibt, was seine Mitbewerber sehen.
+        #
+        # Der Anker dafuer ist da: 268 von 400 zufaelligen Analysen (67 %) tragen ein
+        # Datum in `fristen[].wert`. Was fehlt, ist die Frist des LEADS an dieser Stelle
+        # und eine Entscheidung, was „privat" ohne nutzereigenen Speicher heisst —
+        # naheliegend: dem Hochladenden antworten, aber diese Zeile hier auslassen.
+        # Ausfuehrlich im Kopf von `govisor/docsafety.py`.
+        #
         # ⚠ Auch als Einzeldatei schreiben. Das Frontend liest `doc-analysis/<id>.json`;
         # die Sammeldatei ist nur noch Arbeitsstand und wird nicht ausgeliefert. Ohne diese
         # Zeile war die frische Analyse fuer JEDEN ANDEREN unsichtbar, bis der Nachtlauf

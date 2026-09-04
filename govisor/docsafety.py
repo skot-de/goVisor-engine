@@ -7,6 +7,38 @@ unabhängigem Upload ODER widerspruchsfreiem Abgleich mit exakter Angebotsfrist 
 Checkliste für andere sichtbar). Dazu die Free/Pro-Quote (§14) und der Zeitkanal-Schutz (§12.4).
 
 Reine, testbare Logik — Persistenz/RLS liegt im Datenmodell (supabase/0006), das Timing im Endpunkt.
+
+⚠ **RUHEND — NICHTS HIERAUS WIRD HEUTE AUFGERUFEN.** Gemessen am 2026-09-04: keine einzige
+Funktion dieses Moduls hat einen Aufrufer ausserhalb von `tests/test_docsafety.py`. Es ist
+das einzige Modul in `govisor/`, auf das das zutrifft. Der Upload laeuft trotzdem:
+
+    /api/lead-docs      jeder angemeldete Nutzer, beliebige notice_id, keine Nutzerpruefung
+          ↓
+    process_upload.py   schreibt web/data/doc-analysis/<id>.json  (GETEILTE Produktdaten)
+          ↓
+    /api/lead-detail    liest genau die und zeigt sie ALLEN Nutzern dieses Leads
+
+Damit ist der Fall, gegen den §12.2 geschrieben wurde, offen: ein Bieter kann die Analyse,
+die seine Mitbewerber im selben Lead sehen, ueberschreiben. Der Schritt, der das erlaubt,
+war eine fuer sich richtige Entscheidung — der Kommentar an der Schreibstelle in
+`process_upload.py` begruendet sie mit der Sichtbarkeit fuer andere. Zwei getrennt
+getroffene, je richtige Entscheidungen heben einander auf.
+
+**DER ANKER IST DA — die Sperre ist heute baubar.** `visibility_after` haengt an
+`deadline_exact`, dem exakten Vergleich der Angebotsfrist. Gemessen an 400 zufaelligen
+Analysen aus `web/data/doc-analysis/`: **268 (67 %)** tragen ein Datum in
+``fristen[].wert`` (``"2026-10-16"``, ``"01.01.2027"``, ``"2026-08-18 10:00"``). Die
+uebrigen 33 % fielen auf ``private`` — genau das Verhalten, das §12.2 als bekannte Grenze
+beschreibt, und die sichere Richtung.
+
+⚠ Beim Messen selbst danebengegriffen: der erste Versuch suchte ein Feld ``datum``, das es
+nicht gibt, und meldete **0 von 400**. Daraus waere der Schluss „die Sperre kann gar nicht
+tragen" geworden — die bequemste aller falschen Antworten. Die Werte stehen unter ``wert``.
+
+Was zum Anschliessen fehlt, ist keine Extraktion mehr, sondern zwei Entscheidungen:
+woher `process_upload.py` die Frist des Leads bekommt, und was ``private`` ohne
+nutzereigenen Speicher heisst (naheliegend: dem Hochladenden antworten, aber NICHT nach
+`web/data/doc-analysis/` schreiben). Beides ist Produktentscheidung, nicht Technik.
 """
 from __future__ import annotations
 
