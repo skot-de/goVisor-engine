@@ -155,7 +155,7 @@ nichts zu sparen, ohne etwas wegzunehmen.
 
 Die Reihenfolge folgt dem Verhältnis von Ertrag zu Risiko, nicht der Größe der Zahl.
 
-### Schritt 1 — P1, Cache-Header (ein halber Tag)
+### Schritt 1 — P1, Cache-Header ✅ erledigt 2026-09-04
 
 1. Am echten Host prüfen, ob Antworten komprimiert ausgeliefert werden.
 2. `ETag` aus `stat()` der Quelldatei; `must-revalidate` statt `no-store`.
@@ -163,6 +163,11 @@ Die Reihenfolge folgt dem Verhältnis von Ertrag zu Risiko, nicht der Größe de
 4. Test: nach einem Nachtlauf muss sich der `ETag` geändert haben.
 
 **Abnahme:** ein Grundraumwechsel hin und zurück überträgt die Daten genau einmal.
+
+⚠ **Teilweise erfüllt.** Die Regel (`web/lib/etag.js`) ist über `node` vollständig geprüft,
+13 Fälle. Der echte Rundlauf gegen den Server **nicht**: `/api/leads` liegt hinter dem
+Anmelde-Tor. Punkt 1 der Liste — ob der Host überhaupt komprimiert ausliefert — bleibt
+ebenfalls offen, es ist nichts deployt. Beides gehört zum ersten Go-live-Durchgang.
 
 ### Schritt 2 — P2, Vorbereitung (ein Tag)
 

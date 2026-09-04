@@ -1792,3 +1792,45 @@ def test_die_hinweislogik_erinnert_an_jede_echte_frist():
     skript = ROOT / "web" / "scripts" / "pruefe-hinweise.mjs"
     p = subprocess.run(["node", str(skript)], capture_output=True, text=True)
     assert p.returncode == 0, f"die Hinweislogik erinnert falsch:\n{p.stdout}{p.stderr}"
+
+
+def test_der_listenabruf_laedt_nicht_bei_jedem_aufruf_neu():
+    """47,2 MB roh, 5,6 MB gzip — bei Daten, die sich einmal am Tag ändern.
+
+    `/api/leads` setzte `cache-control: no-store`. Jeder Neuladevorgang und jeder Wechsel
+    des Grundraums kostete damit erneut 5,6 MB, auch der Wechsel zurück eine Minute später.
+    Gemessen am 2026-09-04 an `leads-bau.json`: 47,2 MB / 5,6 MB gzip (8,4×), 18.731 Leads,
+    dazu 103 ms `JSON.parse` fürs Zusammenführen mit den Zuschlägen.
+
+    Der Test hält drei Eigenschaften fest, jede einzeln verlierbar:
+
+    · `no-store` ist weg — sonst ist der ganze Umbau wirkungslos.
+    · Die Marken werden VOR dem Rumpf geholt. Steht die Reihenfolge andersherum, baut die
+      Route die 47 MB auch dann, wenn sie am Ende nur `304` sagt — der Nutzer spart die
+      Übertragung, der Server nichts.
+    · Der `304`-Zweig existiert überhaupt.
+
+    ⚠ NICHT geprüft: der echte Rundlauf gegen den Server. `/api/leads` liegt hinter dem
+    Anmelde-Tor, und anmelden kann ich mich nicht. Die REGEL dahinter (`lib/etag.js`) ist
+    dafür über `node` vollständig geprüft — der Weg dorthin bleibt Lesen.
+    """
+    import subprocess
+
+    quelle = (ROOT / "web" / "app" / "api" / "leads" / "route.ts").read_text(encoding="utf-8")
+    ohne_prosa = "\n".join(z.split("//")[0] for z in quelle.splitlines()
+                           if not z.strip().startswith("*"))
+
+    assert '"no-store"' not in ohne_prosa, \
+        "der Listenabruf setzt wieder no-store — jeder Aufruf kostet dann erneut 5,6 MB"
+    assert "dateiMarke" in ohne_prosa, "die Route ermittelt keine Marke mehr"
+    assert "304" in ohne_prosa, "der 304-Zweig fehlt — dann gibt es nichts zu sparen"
+
+    marke = ohne_prosa.index("dateiMarke")
+    rumpf = ohne_prosa.index("loadDataFile(`leads-")
+    assert marke < rumpf, (
+        "die Marken werden erst NACH dem Laden geholt — dann baut die Route die volle "
+        "Antwort auch fuer ein 304")
+
+    skript = ROOT / "web" / "scripts" / "pruefe-etag.mjs"
+    p = subprocess.run(["node", str(skript)], capture_output=True, text=True)
+    assert p.returncode == 0, f"die ETag-Regel stimmt nicht:\n{p.stdout}{p.stderr}"

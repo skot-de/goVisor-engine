@@ -1,5 +1,6 @@
 import "server-only";
-import { readFile } from "node:fs/promises";
+import { readFile, stat } from "node:fs/promises";
+import { createHash } from "node:crypto";
 import path from "node:path";
 import { signierterGet } from "@/lib/s3sign";
 import { erstelleCache } from "@/lib/dataCache";
@@ -94,4 +95,48 @@ export async function loadDataFile(name: string): Promise<string | null> {
   } catch {
     return null;
   }
+}
+
+
+/**
+ * Eine Marke, die sich ändert, wenn sich der Inhalt ändert — Grundlage für `ETag`.
+ *
+ * **Warum das gebraucht wird.** `/api/leads` lieferte die ganze Branchendatei mit
+ * `cache-control: no-store`. Gemessen am 2026-09-04: `leads-bau.json` sind 47,2 MB roh und
+ * 5,6 MB gzip. Die Daten ändern sich EINMAL AM TAG — trotzdem kostete jeder Neuladevorgang
+ * und jeder Wechsel des Grundraums erneut 5,6 MB, auch der Wechsel zurück eine Minute
+ * später.
+ *
+ * Zwei Wege, zwei Antworten, weil sie verschiedene Eigenschaften haben:
+ *
+ *   · Platte (Entwicklung): `stat()` gibt Zeitstempel und Grösse. Billig und exakt — und
+ *     der Plattenweg ist bewusst NICHT zwischengespeichert, damit man nach einem Export
+ *     sofort die neuen Zahlen sieht. Eine Marke aus dem Inhalt wäre hier ein Rückschritt.
+ *   · Objektspeicher (Betrieb): dort gibt es kein `stat()`. Die Marke ist eine Prüfsumme
+ *     des Inhalts, EINMAL berechnet und im selben Zwischenspeicher gehalten wie der Inhalt.
+ *     Über 47 MB kostet das rund eine Zehntelsekunde, aber nur beim ersten Aufruf je
+ *     Speicherfenster.
+ *
+ * ⚠ `null` heisst „kann ich nicht sagen", nicht „unverändert". Der Aufrufer darf daraus
+ * KEINEN ETag bauen — sonst bekäme ein Client eine Marke, die stehen bleibt, während sich
+ * die Daten bewegen, und sähe alte Zahlen für frisch an.
+ */
+export async function dateiMarke(name: string): Promise<string | null> {
+  const entfernt = s3Zugang() !== null || !!process.env.DATA_BASE_URL;
+  if (!entfernt) {
+    try {
+      const st = await stat(path.join(process.cwd(), "data", name));
+      return `${Math.round(st.mtimeMs).toString(36)}-${st.size.toString(36)}`;
+    } catch {
+      return null;                       // gibt es nicht → keine Marke, kein ETag
+    }
+  }
+  const schluessel = `marke:${name}`;
+  const gemerkt = speicher.hole(schluessel);
+  if (typeof gemerkt === "string") return gemerkt;
+  const text = await loadDataFile(name);
+  if (text === null) return null;
+  const marke = createHash("sha1").update(text).digest("base64url").slice(0, 22);
+  speicher.setze(schluessel, marke, marke.length);
+  return marke;
 }
