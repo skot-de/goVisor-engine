@@ -884,3 +884,39 @@ def test_kein_ladeaufruf_mit_variablem_verzeichnis():
             if roh.startswith("${"):
                 treffer.append(f"{datei.relative_to(web)}: {roh}")
     assert not treffer, "Ladeaufruf mit variablem Verzeichnis: " + ", ".join(treffer)
+
+
+# ── Das Archiv hört an der Landesgrenze des Produkts auf ────────────────────────────
+
+def test_archiv_folgt_dem_produkt_nicht_dem_silberbestand():
+    """⚠ `build_vorgaenge` nimmt seine Länder aus SILBER und baut für alles, was dort liegt
+    — am 2026-09-04 sechs Länder, während das Produkt vier zeigt. Ohne Grenze lieferte das
+    Archiv 144.723 Akten für PL und EU aus, die aussehen wie eine deutsche: ohne Kette, ohne
+    Dublettenprüfung, ohne die vierte und fünfte Schlüsselstufe, weil dort die Gold-Kette
+    fehlt (PL hat 3 Tabellen, DE hat 72).
+
+    ⚠ Die Grenze ist NICHT „sondiert gegen aufgenommen". PL ist auf Bekanntmachungsebene
+    aufgenommen, `pruefe_sondierung.py` sagt das ausdrücklich. Die Frage ist nicht, ob wir
+    das Land kennen, sondern ob ein Nutzer dort etwas findet."""
+    quelle = SKRIPT.read_text(encoding="utf-8")
+    assert "def _produktlaender()" in quelle
+    kern = quelle.split("def main(")[1]
+    assert "land not in produktlaender and not menge" in kern
+    assert "land in produktlaender" in kern
+
+
+def test_ein_erreichbarer_vorgang_bleibt_auch_ohne_produktland():
+    """Zwei Vorgänge auf EU-Ebene sind aus einem sichtbaren Lead erreichbar. Sie zu
+    verwerfen, weil „EU" kein Produktland ist, risse genau den Verweis ab, für den die
+    Akte gebaut wurde. Die Produktmenge folgt dem Lead, nur das Archiv der Landesgrenze."""
+    kern = SKRIPT.read_text(encoding="utf-8").split("def main(")[1]
+    # Die Bedingung darf nur greifen, wenn es AUCH keinen sichtbaren Lead gibt.
+    assert "and not menge" in kern.split("land not in produktlaender")[1][:40]
+
+
+def test_produktlaender_kommen_aus_den_leads():
+    """Dieselbe Quelle wie die sichtbaren Vergaben — eine zweite Liste im Code wäre eine
+    zweite Wahrheit, die jemand pflegen müsste."""
+    kern = SKRIPT.read_text(encoding="utf-8").split("def _produktlaender(")[1].split("\ndef ")[0]
+    assert 'OUT.glob("leads-*.json")' in kern
+    assert '"land"' in kern

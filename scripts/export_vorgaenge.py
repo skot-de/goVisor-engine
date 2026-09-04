@@ -169,6 +169,32 @@ def kenn_datei(schluessel: str) -> str:
     return hashlib.sha1(schluessel.encode("utf-8")).hexdigest()[:BUENDEL_STELLEN]
 
 
+def _produktlaender() -> set[str]:
+    """Welche Laender das Produkt ueberhaupt zeigt — aus derselben Quelle wie die Leads.
+
+    ⚠ WARUM DAS ARCHIV EINE GRENZE BRAUCHT. `build_vorgaenge` nimmt seine Laender aus
+    SILBER und baut fuer alles, was dort liegt. Gemessen am 2026-09-04 waren das sechs
+    Laender, das Produkt zeigt aber vier: PL (144.590 Vorgaenge) und EU stehen in keiner
+    Trefferliste. Ohne Grenze lieferte das Archiv fuer sie Akten aus, die aussehen wie eine
+    deutsche — nur ohne Kette, ohne Dublettenpruefung und ohne die vierte und fuenfte
+    Schluesselstufe, weil dort die Gold-Kette fehlt (PL hat 3 Tabellen, DE hat 72).
+
+    ⚠ NICHT „sondiert gegen aufgenommen". Das waere die falsche Grenze: PL IST auf
+    Bekanntmachungsebene aufgenommen, `pruefe_sondierung.py` sagt das ausdruecklich. Die
+    Frage ist nicht, ob wir das Land kennen, sondern ob ein Nutzer dort etwas findet.
+    """
+    laender: set[str] = set()
+    for p in sorted(OUT.glob("leads-*.json")):
+        try:
+            roh = json.loads(p.read_text(encoding="utf-8"))
+        except (json.JSONDecodeError, OSError):
+            continue
+        for l in (roh if isinstance(roh, list) else roh.get("leads", [])):
+            if isinstance(l, dict) and l.get("land"):
+                laender.add(str(l["land"]).upper())
+    return laender
+
+
 def _sichtbare_leads() -> set[str]:
     """Die Vergaben, die der Explorer wirklich zeigt.
 
@@ -191,6 +217,11 @@ def _sichtbare_leads() -> set[str]:
             if isinstance(l, dict) and l.get("id"):
                 ids.add(str(l["id"]))
     return ids
+
+
+def _zaehle(con: duckdb.DuckDBPyConnection, land: str) -> int:
+    return con.execute(
+        f"select count(*) from read_parquet('data/gold/{land}/vorgaenge.parquet')").fetchone()[0]
 
 
 def _alle_vorgaenge(con: duckdb.DuckDBPyConnection, land: str) -> set[str]:
@@ -635,9 +666,21 @@ def main() -> int:
     produkt: dict[tuple[str, str], dict] = {}
     archiv: dict[tuple[str, str], dict] = {}
     nachschlag: dict[str, str] = {}
+    produktlaender = _produktlaender()
+    if not produktlaender:
+        raise SystemExit("keine Laender in web/data/leads-*.json — erst export_web_leads.py")
     for land in _laender(a.land):
         menge = _menge(con, land, sichtbar)
-        alle = _alle_vorgaenge(con, land) if not a.ohne_archiv else menge
+        # ⚠ DAS ARCHIV FOLGT DEM PRODUKT, DIE PRODUKTMENGE DEM LEAD. Ein Vorgang, den ein
+        # sichtbarer Lead erreicht, bleibt IMMER — auch wenn sein Land sonst nicht gezeigt
+        # wird (es gibt zwei solche auf EU-Ebene). Nur das Archiv hoert an der Landesgrenze
+        # des Produkts auf.
+        if land not in produktlaender and not menge:
+            print(f"  {land}: kein Produktland und kein sichtbarer Lead — uebersprungen "
+                  f"({_zaehle(con, land):,} Vorgaenge bleiben in Gold)")
+            continue
+        alle = (_alle_vorgaenge(con, land)
+                if (not a.ohne_archiv and land in produktlaender) else menge)
         if not alle:
             continue
         teil = _akten(con, land, alle)
