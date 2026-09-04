@@ -403,9 +403,13 @@ Konsequenzen fürs Bauen:
   `GOVISOR_SUPABASE_GOV_PUSH=1` gelegt (**Vorgabe: aus**), Aufräumen via
   `scripts/supabase_schlank.py --ausfuehren`. Die Datenkette läuft unverändert lokal weiter —
   **kein Rückstand**, beim Go-live ein einziger Push.
-  ⚠️ Offener Punkt, dabei gefunden: die RLS-Idee „nur `authenticated` liest → Registrierung
-  schaltet Leads frei" greift nicht mehr. `/api/leads` hat **kein Auth-Gate**; heute schützt
-  allein die Blackout-Middleware. Vor dem Go-live zu entscheiden.
+  ✅ **Erledigt** (nachgeprüft 2026-08-31 und 2026-09-04 gegen den laufenden Server):
+  `/api/leads`, `/api/branchen` und `/api/lead-detail` antworten ohne Sitzung mit `401`.
+  Die Middleware sperrt alles ausser der `OFFEN`-Liste; die Baustellen-Sperre ist nicht mehr
+  der einzige Schutz. Hier stand bis dahin „`/api/leads` hat **kein Auth-Gate**" — das galt
+  einmal und war seit Wochen falsch. ⚠ Der Satz stand zusätzlich in `docs/cloud-azure.md`:
+  eine Aussage an zwei Stellen altert an beiden, und wer nur eine korrigiert, hinterlässt
+  einen Widerspruch statt einer Antwort.
   Entwicklungs-Sample (historisch, für den alten Weg) neu ziehen:
   `python3 scripts/supabase_dev_sample.py [--size N] [--dry-run]`. Das Sample ist
   **geschichtet** (Phase × Quelle × Beschreibungstiefe × Mehrlosigkeit) plus erzwungene
