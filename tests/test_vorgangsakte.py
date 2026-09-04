@@ -914,9 +914,51 @@ def test_ein_erreichbarer_vorgang_bleibt_auch_ohne_produktland():
     assert "and not menge" in kern.split("land not in produktlaender")[1][:40]
 
 
-def test_produktlaender_kommen_aus_den_leads():
-    """Dieselbe Quelle wie die sichtbaren Vergaben — eine zweite Liste im Code wäre eine
-    zweite Wahrheit, die jemand pflegen müsste."""
-    kern = SKRIPT.read_text(encoding="utf-8").split("def _produktlaender(")[1].split("\ndef ")[0]
-    assert 'OUT.glob("leads-*.json")' in kern
-    assert '"land"' in kern
+def test_produktlaender_kommen_aus_der_zentralen_liste():
+    """⚠ ERKLAERT, NICHT ABGELEITET. Der erste Entwurf las die Länder aus
+    `web/data/leads-*.json`, also aus dem Ergebnis. `govisor/laender.py` begründet, warum
+    das für bauenden Code falsch ist — es ist zirkulär: „Luxemburg hätte nie Gold bekommen,
+    weil es kein Gold hatte." Eine zweite abgeleitete Liste wäre ausserdem eine zweite
+    Wahrheit; die Gegenprobe hält `pruefe_laender_tabellen.py` schon bereit."""
+    from govisor.laender import AKTIV
+    quelle = SKRIPT.read_text(encoding="utf-8")
+    assert "from govisor.laender import AKTIV" in quelle
+    # Ohne Docstring-Strippen prueft der Test die BEGRUENDUNG (die den alten Weg nennt)
+    # statt des Codes — dieselbe Falle, die heute schon mehrfach zugeschlagen hat.
+    kern = _ohne_kommentare_py(quelle).split("def _produktlaender(")[1].split("\ndef ")[0]
+    assert "return AKTIV" in kern
+    assert "leads-*.json" not in kern, "die Laender werden wieder abgeleitet"
+    assert M._produktlaender() == AKTIV
+
+
+def test_teillauf_mischt_statt_zu_ersetzen():
+    """⚠ EIN BUENDEL ENTHAELT AKTEN ALLER LAENDER — der Hash streut, er sortiert nicht nach
+    Land. Ein Teillauf, der ein Bündel aus seiner eigenen Menge neu schreibt, wirft jede
+    fremde Akte darin weg. Gemessen am 2026-09-04 nach einem `--land LU`: das DE-Archiv fiel
+    von 1.377.324 auf 475.096 Akten, AT von 282.136 auf 97.502. Nichts meldete einen Fehler;
+    der Lauf sagte „2.682 geschrieben, 1.414 fremde behalten".
+
+    `raeumen=False` allein genügt also nicht — es verhindert nur das Löschen ganzer Dateien,
+    nicht das Ausleeren ihres Inhalts.
+    """
+    kern = SKRIPT.read_text(encoding="utf-8").split("def _buendeln(")[1].split("\ndef ")[0]
+    assert "if not raeumen and pfad.exists():" in kern
+    assert "{**bestand, **inhalt}" in kern
+
+
+def test_teillauf_mischt_wirklich(tmp_path, monkeypatch):
+    """Nicht die Absicht prüfen, sondern das Verhalten: eine fremde Akte im selben Bündel
+    muss den Teillauf überleben."""
+    import json as _json
+    ziel = tmp_path / "b"
+    fremd = {"id": "pub:fremd", "land": "DE"}
+    eigen = {"id": "pub:eigen", "land": "LU"}
+    h_f, h_e = M.dateiname("DE", "pub:fremd"), M.dateiname("LU", "pub:eigen")
+    # Beide im selben Bündel erzwingen, indem die Datei von Hand angelegt wird.
+    ziel.mkdir()
+    (ziel / f"{h_e[:M.BUENDEL_STELLEN]}.json").write_text(
+        _json.dumps({h_f: fremd}, ensure_ascii=False), encoding="utf-8")
+    M._buendeln({("LU", "pub:eigen"): eigen}, ziel, "Probe", raeumen=False)
+    drin = _json.loads((ziel / f"{h_e[:M.BUENDEL_STELLEN]}.json").read_text(encoding="utf-8"))
+    assert h_e in drin, "die eigene Akte fehlt"
+    assert h_f in drin, "die fremde Akte wurde weggeworfen"

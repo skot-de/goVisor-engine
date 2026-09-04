@@ -39,6 +39,7 @@ import duckdb
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
+from govisor.laender import AKTIV  # noqa: E402
 
 OUT = ROOT / "web" / "data"
 JE_VORGANG = OUT / "vorgang"
@@ -169,30 +170,23 @@ def kenn_datei(schluessel: str) -> str:
     return hashlib.sha1(schluessel.encode("utf-8")).hexdigest()[:BUENDEL_STELLEN]
 
 
-def _produktlaender() -> set[str]:
-    """Welche Laender das Produkt ueberhaupt zeigt — aus derselben Quelle wie die Leads.
+def _produktlaender() -> tuple[str, ...]:
+    """Welche Laender das Produkt zeigt — aus `govisor/laender.py`, nicht aus den Daten.
 
     ⚠ WARUM DAS ARCHIV EINE GRENZE BRAUCHT. `build_vorgaenge` nimmt seine Laender aus
     SILBER und baut fuer alles, was dort liegt. Gemessen am 2026-09-04 waren das sechs
-    Laender, das Produkt zeigt aber vier: PL (144.590 Vorgaenge) und EU stehen in keiner
+    Laender, gebaut werden vier: PL (144.590 Vorgaenge) und EU stehen in keiner
     Trefferliste. Ohne Grenze lieferte das Archiv fuer sie Akten aus, die aussehen wie eine
     deutsche — nur ohne Kette, ohne Dublettenpruefung und ohne die vierte und fuenfte
     Schluesselstufe, weil dort die Gold-Kette fehlt (PL hat 3 Tabellen, DE hat 72).
 
-    ⚠ NICHT „sondiert gegen aufgenommen". Das waere die falsche Grenze: PL IST auf
-    Bekanntmachungsebene aufgenommen, `pruefe_sondierung.py` sagt das ausdruecklich. Die
-    Frage ist nicht, ob wir das Land kennen, sondern ob ein Nutzer dort etwas findet.
+    ⚠ ERKLAERT, NICHT ABGELEITET. Der erste Entwurf las die Laender aus
+    `web/data/leads-*.json` — also aus dem Ergebnis. `govisor/laender.py` begruendet, warum
+    das fuer bauenden Code falsch ist: es ist zirkulaer. „Luxemburg haette nie Gold
+    bekommen, weil es kein Gold hatte." Eine zweite abgeleitete Liste waere ausserdem eine
+    zweite Wahrheit; `pruefe_laender_tabellen.py` haelt die Gegenprobe schon bereit.
     """
-    laender: set[str] = set()
-    for p in sorted(OUT.glob("leads-*.json")):
-        try:
-            roh = json.loads(p.read_text(encoding="utf-8"))
-        except (json.JSONDecodeError, OSError):
-            continue
-        for l in (roh if isinstance(roh, list) else roh.get("leads", [])):
-            if isinstance(l, dict) and l.get("land"):
-                laender.add(str(l["land"]).upper())
-    return laender
+    return AKTIV
 
 
 def _sichtbare_leads() -> set[str]:
@@ -504,10 +498,20 @@ def _buendeln(akten: dict[tuple[str, str], dict], ziel: Path, was: str,
               raeumen: bool = True) -> None:
     """Akten in Buendel schreiben; nur Geaendertes anfassen, Verwaistes entfernen.
 
-    ⚠ `raeumen=False` BEI EINEM TEILLAUF. Das Wegraeumen setzt voraus, dass die uebergebene
-    Menge VOLLSTAENDIG ist. Mit `--land CH` ist sie es nicht — und der erste Versuch loeschte
-    prompt 1.785 Buendel der anderen Laender, waehrend der Lauf „erfolgreich" meldete. Ein
-    Teillauf darf ergaenzen, nie aufraeumen.
+    ⚠ `raeumen=False` BEI EINEM TEILLAUF — UND DAS REICHTE NICHT. Das Wegraeumen setzt
+    voraus, dass die uebergebene Menge VOLLSTAENDIG ist. Mit `--land CH` ist sie es nicht;
+    der erste Versuch loeschte prompt 1.785 Buendel der anderen Laender, waehrend der Lauf
+    „erfolgreich" meldete.
+
+    ⚠ DER ZWEITE, SCHLIMMERE FEHLER STECKTE IM SCHREIBEN SELBST. Ein Buendel enthaelt Akten
+    ALLER Laender — der Hash streut, er sortiert nicht nach Land. Ein Teillauf, der ein
+    Buendel aus seiner eigenen Menge neu schreibt, wirft damit jede fremde Akte darin weg.
+    Gemessen am 2026-09-04 nach einem `--land LU`: das DE-Archiv fiel von 1.377.324 auf
+    475.096 Akten, AT von 282.136 auf 97.502. Nichts meldete einen Fehler; der Lauf sagte
+    „2.682 geschrieben, 1.414 fremde behalten".
+
+    Deshalb MISCHT ein Teillauf in den Bestand, statt ihn zu ersetzen. Er darf ergaenzen und
+    aendern, nie entfernen — weder ganze Buendel noch Eintraege darin.
     """
     ziel.mkdir(parents=True, exist_ok=True)
     vorher = {p.name for p in ziel.glob("*.json")}
@@ -519,6 +523,15 @@ def _buendeln(akten: dict[tuple[str, str], dict], ziel: Path, was: str,
     for name, inhalt in sorted(buendel.items()):
         datei = f"{name}.json"
         pfad = ziel / datei
+        if not raeumen and pfad.exists():
+            # Teillauf: den Bestand lesen und die eigenen Akten HINEINLEGEN, statt ihn zu
+            # ersetzen. Ohne das verschwinden alle fremden Akten dieses Buendels.
+            try:
+                bestand = json.loads(pfad.read_text(encoding="utf-8"))
+                if isinstance(bestand, dict):
+                    inhalt = {**bestand, **inhalt}
+            except (json.JSONDecodeError, OSError):
+                pass          # unlesbar → neu schreiben ist besser als abbrechen
         text = json.dumps(inhalt, ensure_ascii=False, default=str, sort_keys=True,
                           allow_nan=False)
         if pfad.exists() and pfad.read_text(encoding="utf-8") == text:
@@ -667,8 +680,6 @@ def main() -> int:
     archiv: dict[tuple[str, str], dict] = {}
     nachschlag: dict[str, str] = {}
     produktlaender = _produktlaender()
-    if not produktlaender:
-        raise SystemExit("keine Laender in web/data/leads-*.json — erst export_web_leads.py")
     for land in _laender(a.land):
         menge = _menge(con, land, sichtbar)
         # ⚠ DAS ARCHIV FOLGT DEM PRODUKT, DIE PRODUKTMENGE DEM LEAD. Ein Vorgang, den ein
