@@ -58,7 +58,13 @@ export const copy = {
     get sub() {
       return ueb(
         "Öffentliche Vergaben stehen alle in TED. Vollständig, und praktisch unbenutzbar: " +
-        "roh, dubliert, ohne Kontext. goVisor bereitet sie auf — und markiert jeden Wert mit " +
+        "roh, dubliert, ohne Kontext. goVisor bereitet sie auf, und markiert jeden Wert mit " +
+        // ⚠ KOMMA, KEIN GEDANKENSTRICH — und das ist hier kein Stilfrage, sondern die
+        // Uebersetzung. Der deutsche Satz IST der Schluessel; im Katalog steht er mit
+        // Komma (die Gedankenstrich-Regel wurde dort angewandt, hier vergessen). Mit
+        // Strich fand `tk()` nichts und lieferte still Deutsch aus — an genau der
+        // Stelle, die jeder EN- und FR-Besucher als Erstes unter der Ueberschrift liest.
+        // Dieselbe Verwechslung wie bei `metaDescription` zwei Getter weiter oben.
         "seiner Herkunft. Gemessenes ist gemessen. Geschätztes trägt einen Punkt. Was fehlt, " +
         "bleibt sichtbar leer, statt plausibel erfunden zu werden.");
     },

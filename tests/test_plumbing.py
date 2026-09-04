@@ -1835,34 +1835,140 @@ def test_platzhalter_bleiben_in_jeder_sprache_erhalten():
                 f"{name}: Platzhalter weichen ab bei {schluessel!r} → {wert!r}"
 
 
+def _ohne_kommentare(quelle: str) -> str:
+    """Kommentare weg, Zeichenketten unberuehrt.
+
+    ⚠ NOETIG, WEIL DER WAECHTER TEXT LIEST. Ein Beispielsatz, der zur Erklaerung in einem
+    Kommentar steht, sieht fuer ein Muster wie ein echter Aufruf aus — und der Waechter
+    meldete dann einen Fehler, den es nicht gibt. Beim Bauen genau hier passiert.
+    """
+    aus, i, n = [], 0, len(quelle)
+    while i < n:
+        c = quelle[i]
+        if c in '"\'`':
+            j = i + 1
+            while j < n and quelle[j] != c:
+                j += 2 if quelle[j] == "\\" else 1
+            aus.append(quelle[i:j + 1]); i = j + 1
+        elif quelle.startswith("//", i):
+            j = quelle.find("\n", i); i = n if j < 0 else j
+        elif quelle.startswith("/*", i):
+            j = quelle.find("*/", i); i = n if j < 0 else j + 2
+        else:
+            aus.append(c); i += 1
+    return "".join(aus)
+
+
+_UEBERSETZER = re.compile(r"\b(?:t|tk|ueb)\(")
+_NUR_LITERALE = re.compile(r'\s*"(?:[^"\\]|\\.)*"(\s*\+\s*"(?:[^"\\]|\\.)*")*\s*')
+
+
+def _erstes_argument(arg: str) -> str:
+    """Nur das erste Argument, getrennt am Komma AUSSERHALB der Zeichenketten.
+
+    ⚠ EIN SCHLICHTES `split(",")` ZERSCHNEIDET DEN SATZ. Genau daran ist der erste Entwurf
+    gescheitert: die langen Saetze der Startseite tragen selbst Kommas („Vollstaendig, und
+    praktisch unbenutzbar"), und der Waechter pruefte dann ein Bruchstueck als Schluessel.
+    Ergebnis: er erkannte 12 kurze Schluessel und keinen einzigen langen — also ausgerechnet
+    die Saetze nicht, um die es geht.
+    """
+    i, n = 0, len(arg)
+    while i < n:
+        c = arg[i]
+        if c == '"':
+            j = i + 1
+            while j < n and arg[j] != '"':
+                j += 2 if arg[j] == "\\" else 1
+            i = j + 1
+        elif c == ",":
+            return arg[:i]
+        else:
+            i += 1
+    return arg
+
+
+def _uebersetzte_schluessel(quelle: str):
+    """Alle Schluessel, die im Quelltext durch eine Uebersetzungsfunktion laufen.
+
+    ⚠ VERKETTUNG MUSS ZUSAMMENGESETZT WERDEN. Lange Saetze stehen im Code als
+    `"teil eins " + "teil zwei"`; der Schluessel ist der GANZE Satz. Ein Muster, das nur das
+    erste Literal nimmt, prueft einen Schluessel, den es nie gab — und meldet ihn als fehlend
+    oder, schlimmer, findet ihn zufaellig und uebersieht die Luecke.
+    """
+    for m in _UEBERSETZER.finditer(quelle):
+        i, tiefe = m.end(), 1
+        while i < len(quelle) and tiefe:
+            if quelle[i] == "(":
+                tiefe += 1
+            elif quelle[i] == ")":
+                tiefe -= 1
+            i += 1
+        arg = quelle[m.end():i - 1]
+        kern = _erstes_argument(arg)
+        if not _NUR_LITERALE.fullmatch(kern):
+            continue            # dynamisch zusammengebaut — nicht statisch pruefbar
+        yield "".join(t.replace('\\"', '"').replace("\\\\", "\\")
+                      for t in re.findall(r'"((?:[^"\\]|\\.)*)"', kern))
+
+
 def test_verdrahtete_texte_sind_uebersetzt():
     """Jeder deutsche Literal-Schluessel, der im Code durch `t(...)` laeuft, muss im
     Katalog stehen. Sonst ist die Stelle zwar verdrahtet, bleibt aber auf Deutsch —
     genau die Art halbfertiger Zustand, die man am Bildschirm uebersieht.
 
-    Geprueft werden nur `t("…")`-Aufrufe mit einem deutschen Literal (Umlaut oder
-    deutsches Funktionswort); Punkt-Schluessel wie `nav.akquise` bedienen den
+    Geprueft werden `t(...)`, `tk(...)` und `ueb(...)` mit einem deutschen Literal (Umlaut
+    oder deutsches Funktionswort); Punkt-Schluessel wie `nav.akquise` bedienen den
     strukturierten Katalog und sind hier nicht gemeint.
+
+    ⚠ DREI LOECHER, DIE DIESER WAECHTER HATTE — und die am 2026-09-04 zugeschlagen haben.
+    Er las `t(` und `tk(`, aber nicht `ueb(`; er las `lib/**/*.js` und `lib/**/*.tsx`, aber
+    nicht `lib/**/*.ts`; und er nahm bei verketteten Saetzen nur das erste Stueck. Alle drei
+    trafen dieselbe Datei: `web/lib/copy.ts`, die Textquelle der Startseite. Darin stand der
+    Untertitel mit Gedankenstrich („bereitet sie auf — und markiert"), im Katalog aber mit
+    Komma. `tk()` fand nichts und lieferte still den deutschen Satz aus: jeder EN- und
+    FR-Besucher las die zweite Zeile der Startseite auf Deutsch. Der Kommentar bei
+    `metaDescription` beschreibt denselben Vorfall zwei Getter weiter oben — er war also
+    schon einmal da und ist wiedergekommen, weil ihn niemand mass.
     """
-    import re
     from pathlib import Path
     web = Path(__file__).resolve().parent.parent / "web"
-    en, fr = _flach_kataloge()
+    en, _fr = _flach_kataloge()
     deutsch = re.compile(r"[äöüÄÖÜß]|\b(der|die|das|und|oder|nicht|kein|keine|mit|von|bei|"
                          r"für|aus|auf|ist|sind|wie|was|wo|wenn|nur|alle|eine|zum|zur|im|am)\b")
     fehlend: list[str] = []
     dateien = (sorted(web.glob("components/**/*.tsx")) + sorted(web.glob("app/**/*.tsx"))
-               + sorted(web.glob("lib/**/*.js")) + sorted(web.glob("lib/**/*.tsx")))
+               + sorted(web.glob("lib/**/*.js")) + sorted(web.glob("lib/**/*.tsx"))
+               + sorted(web.glob("lib/**/*.ts")))
     for p in dateien:
-        # `t(...)` in React, `tk(...)` in den Prototyp-Renderern — dieselben Kataloge.
-        for m in re.finditer(r'\bt[k]?\(\s*"((?:[^"\\]|\\.)*)"', p.read_text()):
-            # Quelltext-Escapes aufloesen: im Katalog steht der Satz, nicht `\\"`.
-            k = m.group(1).replace('\\"', '"').replace("\\\\", "\\")
+        for k in _uebersetzte_schluessel(_ohne_kommentare(p.read_text(encoding="utf-8"))):
             if "." in k and " " not in k:
                 continue                      # strukturierter Punkt-Schluessel
             if deutsch.search(k) and k not in en:
                 fehlend.append(f"{p.relative_to(web)}: {k!r}")
     assert not fehlend, "verdrahtet, aber nicht uebersetzt:\n  " + "\n  ".join(fehlend[:12])
+
+
+def test_der_waechter_liest_die_datei_der_startseite():
+    """Gegenprobe auf den Waechter selbst: sieht er `copy.ts` ueberhaupt?
+
+    Ein Waechter, der die Datei nicht liest, ist gruen und blind. Genau so war es: `copy.ts`
+    fiel durch die Dateiliste (`.ts` fehlte) UND durch das Muster (`ueb` fehlte).
+    """
+    from pathlib import Path
+    web = Path(__file__).resolve().parent.parent / "web"
+    quelle = _ohne_kommentare((web / "lib" / "copy.ts").read_text(encoding="utf-8"))
+    gefunden = list(_uebersetzte_schluessel(quelle))
+    # 18 `ueb(`-Aufrufe stehen in der Datei (gemessen 2026-09-04). Die Schwelle liegt knapp
+    # darunter, damit ein neuer Text den Test nicht rot macht — aber hoch genug, dass ein
+    # weggerutschtes Muster auffaellt.
+    assert len(gefunden) >= 16, f"nur {len(gefunden)} Schluessel in copy.ts erkannt"
+    # ⚠ DER EIGENTLICHE PUNKT. Der Untertitel der Startseite ist 305 Zeichen lang und steht
+    # im Code als Verkettung ueber vier Zeilen. Ein Waechter, der ihn nicht ZUSAMMENSETZT,
+    # sieht nur „Öffentliche Vergaben stehen alle in TED. Vollstaendig," — einen Schluessel,
+    # den es nie gab. Der erste Entwurf tat genau das und fand 12 kurze Schluessel statt 18.
+    lang = [k for k in gefunden if len(k) > 200]
+    assert lang, ("kein verketteter Langsatz erkannt — die Zusammensetzung greift nicht, "
+                  "und lange Saetze werden gegen einen halben Schluessel geprueft")
 
 
 def test_texttabellen_hinter_t_sind_uebersetzt():
