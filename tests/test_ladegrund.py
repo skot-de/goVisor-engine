@@ -96,3 +96,53 @@ def test_branchen_brennt_einen_ausfall_nicht_ein():
         assert f"{merker}.catch(() => {{ {merker} = null; }});" in q, (
             f"`{merker}` behaelt einen fehlgeschlagenen Versuch — dann wirft auch jeder "
             f"spaetere Aufruf dieselbe alte Stoerung, obwohl der Speicher wieder da ist.")
+
+
+# ---- Der Hinweislauf ----------------------------------------------------------
+LAUF = WEB / "app" / "api" / "alerts" / "run" / "route.ts"
+
+
+def test_hinweislauf_verschickt_nicht_ins_leere():
+    """Ein leerer Fristen-Index ist keine Auskunft, sondern ein Ausfall.
+
+    ⚠ SO WAR ES. `/api/alerts/run` ueberspringt jede Beobachtung, deren Lead im Index fehlt
+    (`if (!lead) continue`). Ist der Datenspeicher nicht erreichbar, liefert `leadFristen()`
+    eine LEERE Karte — der Lauf ging dann sauber durch, verschickte nichts und meldete
+    `{ ok: true }`. Der Scheduler sieht 200, und niemand erfaehrt, dass an diesem Tag keine
+    einzige Fristwarnung hinausging.
+
+    Dieselbe Sorge steht schon zweimal im Code: einmal fuer den fehlenden Mail-Provider
+    („der Lauf haette Hinweise VERBRAUCHT, die niemand bekommen hat"), einmal im Kopf von
+    `lib/leadIndex.ts` fuer den falschen Lesepfad („waere gruen gemeldet"). Beide Male war
+    die Ursache eine andere und der Schaden derselbe.
+    """
+    q = LAUF.read_text(encoding="utf-8")
+    assert "leadFristenMitGrund" in q, (
+        "der Lauf holt die Fristen ohne Grund — dann kann er einen Ausfall nicht von "
+        "„keine faelligen Hinweise\" unterscheiden.")
+    assert "503" in q, "der Lauf meldet den Ausfall nicht"
+
+
+def test_der_lauf_bricht_ab_bevor_er_etwas_verbraucht():
+    """Die Reihenfolge ist hier der ganze Schutz.
+
+    Ein Abbruch NACH dem Setzen der `*_sent`-Flags waere schlimmer als gar keiner: die
+    Hinweise waeren verbraucht und kaemen nie wieder. `dueAlerts` liefert sie danach nicht
+    mehr.
+    """
+    q = LAUF.read_text(encoding="utf-8")
+    abbruch = q.index("if (stoerung)")
+    for was, marke in (("der Versand", "await send("),
+                       ("das Setzen der *_sent-Flags", "flagUpdates.push")):
+        assert abbruch < q.index(marke), (
+            f"Der Stoerungs-Abbruch steht NACH {was}. Dann sind die Hinweise verbraucht, "
+            f"bevor jemand merkt, dass nichts ankam.")
+
+
+def test_fristen_haben_einen_ladeweg_nicht_zwei():
+    """`leadFristen` muss ueber `leadFristenMitGrund` laufen — sonst driften zwei Wege."""
+    q = (WEB / "lib" / "leadIndex.ts").read_text(encoding="utf-8")
+    i = q.index("export async function leadFristen(")
+    assert "leadFristenMitGrund" in q[i:i + 240], (
+        "`leadFristen` liest wieder selbst — dann gibt es zwei Ladewege, und die Aufrufer "
+        "waehlen zufaellig, welcher von beiden den Ausfall sieht.")

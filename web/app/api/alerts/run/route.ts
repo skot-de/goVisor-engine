@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { dueAlerts, sentFlagFor, alertText } from "@/lib/alerts";
-import { leadFristen } from "@/lib/leadIndex";
+import { leadFristenMitGrund } from "@/lib/leadIndex";
 import { send, mailAktiv } from "@/lib/email";
 import { requireCronSecret } from "@/lib/cronAuth";
 
@@ -29,7 +29,27 @@ async function run(req: NextRequest) {
     admin.from("user_alert_settings").select("*"),
     admin.from("user_profiles").select("id,email"),
   ]);
-  const leadIdx = await leadFristen();
+  /* ⚠ EIN LEERER FRISTEN-INDEX IST KEINE AUSKUNFT.
+   *
+   * Die Schleife darunter ueberspringt jede Beobachtung, deren Lead im Index fehlt
+   * (`if (!lead) continue`). Ist der Datenspeicher nicht erreichbar, ist der Index LEER —
+   * dann laeuft der Lauf sauber durch, verschickt nichts und meldet `{ ok: true }`. Der
+   * Scheduler sieht 200, und niemand erfaehrt, dass an diesem Tag keine einzige
+   * Fristwarnung hinausging.
+   *
+   * Genau diese Ueberlegung steht schon zweimal in dieser Datei: einmal fuer den fehlenden
+   * Mail-Provider („der Lauf haette Hinweise VERBRAUCHT, die niemand bekommen hat"), einmal
+   * im Kopf von `lib/leadIndex.ts` fuer den falschen Lesepfad. Beide Male war die Sorge
+   * dieselbe — ein gruener Lauf, der nichts getan hat. */
+  const { index: leadIdx, stoerung } = await leadFristenMitGrund();
+  if (stoerung) {
+    return NextResponse.json({
+      ok: false,
+      error: "datenspeicher-nicht-erreichbar",
+      hinweis: "Fristen nicht lesbar — es wurde NICHTS verschickt und nichts als zugestellt "
+             + "markiert. Der Lauf muss wiederholt werden.",
+    }, { status: 503 });
+  }
   const prefsBy = new Map((prefsRows || []).map((p) => [p.user_id, p]));
   const emailBy = new Map((profiles || []).map((p) => [p.id, p.email]));
   const DEFAULT_PREFS = { deadline_warning_enabled: true, expiry_warning_enabled: false };
