@@ -60,7 +60,14 @@ auf nahe null.
 ⚠ Voraussetzung: die Antwort muss überhaupt komprimiert ausgeliefert werden. Das ist auf
 einem Deployment üblich, lokal nicht — vor der Umsetzung einmal am echten Host nachsehen.
 
-## P2 · Die Vorgangsbündel streuen Änderungen absichtlich
+## P2 · Die Vorgangsbündel streuen Änderungen absichtlich ❌ WIDERLEGT
+
+> **Gemessen am 2026-09-05, siehe Schritt 2.** Die Annahme dieses Abschnitts — alte Akten
+> ändern sich nicht mehr — hält nicht: sie stellen **92 % aller nächtlichen Änderungen**.
+> Und bei gleicher Bündelzahl schlägt ein schlichter, feinerer Hash die Alterstufe um 21 %.
+> Der Hebel ist die Granularität, nicht das Alter. Der Rest dieses Abschnitts steht als
+> Beleg dafür, wie plausibel die falsche These war.
+
 
 **Befund.** `export_vorgaenge` bündelt Akten nach `sha1(land:vorgang_id)[:3]` — 4.096 Bündel,
 gleichmässig gefüllt. Das ist bewusst so gebaut, und die Begründung im Skript ist richtig:
@@ -170,81 +177,56 @@ Die Reihenfolge folgt dem Verhältnis von Ertrag zu Risiko, nicht der Größe de
 Anmelde-Tor. Punkt 1 der Liste — ob der Host überhaupt komprimiert ausliefert — bleibt
 ebenfalls offen, es ist nichts deployt. Beides gehört zum ersten Go-live-Durchgang.
 
-### Schritt 2 — P2, Vorbereitung ▣ läuft, Zwischenstand 2026-09-04
+### Schritt 2 — P2, Messung ✅ abgeschlossen 2026-09-05 · **P2 fällt**
 
-Werkzeug: `scripts/messe_buendel_drift.py` (`--aufnehmen` / `--vergleichen`). Es hält je
-Akte eine Prüfsumme fest und schlüsselt die Unterschiede nach Alter auf.
+Gemessen mit `scripts/messe_buendel_drift.py`: eine Aufnahme je Akte am 2026-09-04 09:56,
+verglichen nach dem Nachtlauf vom 2026-09-05 03:34.
 
-**Warum nicht über Zeitstempel.** Der naheliegende Weg trägt nicht. Eine Datei-Zeit sagt,
-welches BÜNDEL geschrieben wurde, nicht welche AKTE sich geändert hat — und ein Bündel wird
-schon wegen einer von rund vierhundert Akten neu geschrieben. Am Messtag kam dazu, dass
-Läufe aus einer zweiten Sitzung um 07:57 und 08:41 sämtliche Archiv-Bündel anfassten; die
-Zeitstempel waren als Signal wertlos.
+#### 1. Alte Akten sind NICHT unveränderlich
 
-#### Was schon gemessen ist
-
-**Der Hash-Schlüssel mischt vollständig — die Voraussetzung für P2 hält.** Stichprobe über
-300 der 4.096 Archiv-Bündel, 106.271 datierte Akten:
+Das war die Annahme, auf der P2 stand. Sie hält nicht:
 
 ```
-Akten aelter als 2 Jahre        77,2 %
-Buendel mit NUR alten Akten     0 von 300   (0,0 %)
-Buendel gemischt              300 von 300   (100,0 %)
+vorgang-archiv   1.397 von 1.733.129 Akten geaendert (0,08 %)
+  letzte 90 Tage      22 von    52.012   0,04 %
+  90 Tage bis 2 J.    83 von   279.261   0,03 %
+  aelter als 2 Jahre 1.292 von 1.120.437  0,12 %   ← 92 % ALLER Aenderungen
 ```
 
-Heute kann also keine einzige alte Akte verschont werden: jedes Bündel enthält Frisches und
-wird deshalb jede Nacht angefasst. Genau das würde eine Altersstufe im Schlüssel ändern.
+Alte Akten ändern sich nicht nur, sie sind die **Mehrheit** der Änderungen — anteilig
+häufiger als frische. In der Produktmenge noch deutlicher: 1,65 % bei alten gegen 0,74 %
+bei frischen.
 
-**Was NICHT trägt: „enthält Frisches" als Vorhersage.** Auf der sauberen Produktmenge
-(4.096 Bündel, 54.252 Akten) gekreuzt:
+#### 2. Und selbst wenn: die Alterstufe ist der falsche Hebel
 
-```
-Bezug „letzte 90 Tage"     neu geschrieben   unveraendert
-  enthaelt Frisches                  2.356          1.654
-  nur Altes                             37             49
-```
+Entscheidend ist nicht, ob Akten sich ändern, sondern wie viele AKTEN dadurch neu
+geschrieben werden. Simuliert auf den echten Daten des Archivs (1.736.042 Akten,
+4.310 berührt), bei jeweils gleicher Bündelzahl:
 
-1.654 Bündel mit frischen Akten blieben unangetastet. Der Bezug zum Alter ist also da, aber
-er ist kein Automatismus.
+| Schlüssel | Bündel | neu | Akten neu geschrieben |
+|---|---:|---:|---:|
+| heute `hash[:3]` | 4.096 | 2.693 | 1.143.115 |
+| `Alter + hash[:2]` | 1.024 | 862 | 1.561.977 |
+| `Alter + hash[:3]` | 16.384 | 3.669 | 507.598 |
+| **`hash[:3] + 2 Bit` (ohne Alter)** | **16.384** | 3.780 | **402.896** |
 
-⚠ **Eigener Fehlgriff, hier korrigiert.** Die 79,8 % weiter oben stammen aus allen 1,99 Mio
-DE-Bekanntmachungen. Ich hatte sie zunächst auf die 54.252 Produktakten übertragen — falsch:
-die Produktmenge ist naturgemäss jung, dort liegt der Anteil alter Akten bei 22 %. Für P2
-zählt das ARCHIV (1.734.199 Akten), und dort gelten die 77,2 % oben.
+Die letzten beiden Zeilen sind der eigentliche Befund: bei **derselben** Bündelzahl schlägt
+der schlichte, feinere Hash die Alterstufe um 21 %. Die Alterstufe ist also nicht nur
+wirkungslos, sie ist schlechter — sie erzeugt ungleich grosse Bündel (die Stufe „alt" hält
+65 % der Akten in einem Viertel der Bündel), und jedes Anfassen kostet entsprechend mehr.
 
-#### Was noch fehlt: die eine Zahl
+**Der Hebel ist die Granularität, nicht das Alter.** Und die ist bereits gedeckelt: mehr
+Bündel heisst mehr Dateien, und `next build` stirbt bei rund 156.000 (Sonde 6, Stand
+116.307). Das Archiv von 4.096 auf 16.384 zu bringen kostet +12.288 Dateien — knapp ein
+Drittel der verbliebenen Luft für rund 65 % weniger Schreibvolumen (1,07 → 0,38 GB je Nacht).
 
-Ein erster Vergleich lief, taugt aber nicht als Urteil: die Aufnahme lag mitten in einem
-Archiv-Neuaufbau (601.260 Akten festgehalten, am Ende standen 1.734.199 da). Belastbar ist
-daraus nur ein Teilbefund — **von den 652.488 Akten, die zum Aufnahmezeitpunkt existierten,
-hat sich danach keine einzige geändert und keine ist verschwunden.**
+**Abnahme erfüllt:** die Zahl liegt vor, und sie sagt Nein.
 
-Das Werkzeug wurde daraufhin zweimal geschärft, beide Male mit Gegenprobe:
+### Schritt 3 — ~~P2, Umsetzung~~ gestrichen
 
-- Die Aufnahme wartet nun auf zehn Minuten Ruhe **und** darauf, dass kein bauender Prozess
-  läuft. Eine Ruhefrist allein reichte nicht: der Export pausiert zwischen seinen
-  Abschnitten länger, als die erste Frist von drei Minuten lang war.
-- Der Vergleich meldet einen Neuaufbau (Aktenzahl bewegt sich um mehr als 20 %) und gibt
-  dann ausdrücklich KEIN Urteil ab, statt eine schöne Quote zu drucken.
-- Das Alter einer Akte kommt aus ihrem jüngsten Ereignis, nicht aus `bis`. Sonst gälte eine
-  Akte mit Vertragsende 2023 als alt, auch wenn 2026 ein Zuschlag dazukam — und gerade die
-  bewegen sich.
-
-**Nächster Schritt:** Aufnahme nach dem laufenden Export, Vergleich nach dem Nachtlauf.
-Erst dann steht die Zahl.
-
-**Abnahme:** eine Zahl, die sagt, wie oft sich Akten älter als zwei Jahre zwischen zwei
-vollständigen Läufen ändern. Über 0,1 % fällt P2 ersatzlos weg.
-
-### Schritt 3 — P2, Umsetzung (zwei Tage)
-
-1. Schlüssel in `export_vorgaenge.py` **und** `web/lib/vorgangsakte.ts` ändern — sie müssen
-   übereinstimmen, das steht schon als Warnung im Skript.
-2. Einmalige vollständige Neuschreibung, alter Bestand bleibt bis zur Abnahme liegen.
-3. `next build` fahren: die Dateizahl ist die harte Grenze.
-
-**Abnahme:** zwei Nachtläufe hintereinander schreiben unter 15 % der Bündel neu, und eine
-Stichprobe von Akten ist über die Oberfläche unverändert erreichbar.
+Der Umbau entfällt. Zwei Tage gespart, und das Wissen bleibt: wer das Schreibvolumen des
+Archivs senken will, dreht an der Zahl der Hexstellen und rechnet vorher gegen die
+Baugrenze — nicht am Alter.
 
 ### Schritt 4 — P4, Messung (ein Tag, dann Entscheidung)
 
