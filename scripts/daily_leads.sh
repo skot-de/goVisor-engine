@@ -49,7 +49,16 @@ fi
 
 LOG_DIR="$ROOT/data/logs"
 LOCK="$ROOT/data/.daily_leads.lock"
-PY="python3"
+# ⚠ `-u`, UND ZWAR ZENTRAL. Zeile 291 leitet die ganze Ausgabe durch `tee` — also durch eine
+# PIPE, und dort puffert Python blockweise. Der Waechter in `mit_grenze` misst aber die
+# GROESSE der Logdatei: was im Puffer steht, sieht fuer ihn aus wie Stillstand.
+# In der Nacht zum 2026-09-05 hat das simap.ch gekostet — der Schritt arbeitete, sagte 35
+# Minuten nichts und wurde abgeschossen; CH blieb einen Tag alt. Das war kein simap-Problem,
+# sondern galt fuer JEDEN Python-Schritt hier; bei simap fiel es nur zuerst auf, weil er
+# ohnehin selten etwas sagt.
+# ⚠ `$PY` wird an 77 Stellen UNQUOTED benutzt und vertraegt die zwei Woerter; ein `"$PY"`
+# gibt es nirgends (geprueft). Wer eines einfuehrt, bricht alles.
+PY="python3 -u"
 
 # ── ARBEITSSPEICHER UND TEMP AUF DIE EXTERNE PLATTE ───────────────────────────────────────
 #
