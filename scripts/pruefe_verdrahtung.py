@@ -731,8 +731,15 @@ def sonde_module(zeige_offen: bool = False,
         if modul.stem == "index":
             wege.add(modul.parent.relative_to(web).as_posix())
             wege.add(modul.parent.name)
+        # ⚠ DIE ENDUNG DARF MITSTEHEN. Der erste Entwurf verlangte das schliessende
+        # Anfuehrungszeichen unmittelbar nach dem Modulnamen — ein Import der Form
+        # `from "@/lib/ladegrund.js"` fiel damit durch, und die Sonde meldete in ihrer
+        # ERSTEN Nacht prompt ein Modul als Leiche, das an fuenf Stellen importiert wird
+        # (daily-2026-09-05-0030.log). Ein Fehlalarm ist hier besonders teuer: eine Sonde,
+        # die grundlos anschlaegt, liest nach zwei Wochen niemand mehr.
         muster = re.compile("|".join(
-            rf'["\'][^"\']*(?:@/)?{re.escape(w)}["\']' for w in sorted(wege)))
+            rf'["\'][^"\']*(?:@/)?{re.escape(w)}(?:\.(?:js|mjs|ts|tsx))?["\']'
+            for w in sorted(wege)))
         if any(muster.search(q) for datei, q in text.items() if datei != modul):
             continue
         if rel in AUSNAHMEN_MODULE:

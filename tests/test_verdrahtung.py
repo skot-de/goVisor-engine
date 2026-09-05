@@ -1151,3 +1151,22 @@ def test_keine_pruefung_fuehrt_einen_export_aus():
     assert not befunde, (
         "Diese Stellen fuehren beim Laden ein ganzes Skript aus:\n  " + "\n  ".join(befunde)
         + "\nEntweder den Quelltext lesen (ast) oder dem Skript einen __main__-Schutz geben.")
+
+
+def test_module_erkennt_einen_import_mit_endung(tmp_path):
+    """⚠ DER FEHLALARM AUS DER ERSTEN NACHT.
+
+    Das Muster verlangte das schliessende Anfuehrungszeichen unmittelbar nach dem
+    Modulnamen. Ein Import der Form `from "@/lib/ladegrund.js"` fiel damit durch, und die
+    Sonde meldete im Nachtlauf vom 2026-09-05 ein Modul als Leiche, das an fuenf Stellen
+    importiert wird. Ein Fehlalarm wiegt hier schwerer als ein uebersehener Fund: eine
+    Sonde, die grundlos anschlaegt, liest nach zwei Wochen niemand mehr.
+    """
+    m = _baugrenze()
+    w = _webbaum(tmp_path, {
+        "lib/mitEndung.js": "export const a = 1;",
+        "lib/ohneEndung.ts": "export const b = 2;",
+        "app/seite.tsx": ('import { a } from "@/lib/mitEndung.js";\n'
+                          'import { b } from "@/lib/ohneEndung";\n'),
+    })
+    assert m.sonde_module(wurzel=w) == []
