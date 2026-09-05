@@ -77,3 +77,42 @@ def test_der_join_steht_und_ist_zeilentreu_begruendet():
     assert "Zeilentreu" in zweig or "zeilentreu" in zweig, (
         "Die Begruendung zur Zeilentreue fehlt. Ein Join ohne diese Pruefung ist die "
         "haeufigste Art, in einer Aggregation still zu verdoppeln.")
+
+
+# ---- Dieselbe Klasse, anderes Feld: die Bieterzahl ------------------------------
+def test_eine_unplausible_bieterzahl_gilt_nicht_als_gemessen():
+    """⚠ EINE VORHANDENE ZAHL WAR IMMER „GEMESSEN".
+
+    `competition_source` machte aus jedem vorhandenen `num_tenders` ein `actual` — auch
+    dann, wenn die Qualitaetspruefung die Zahl als `bieterzahl_unplausibel` erkannt hatte.
+    Gemessen am 2026-09-05: 7 ausgelieferte Leads, deren Wettbewerbsangabe damit unmarkiert
+    hinausging. Dieselbe Klasse wie bei der Laufzeit, nur ein anderes Feld.
+    """
+    assert "bieter_plausibel" in GOLD, (
+        "Die Bieter-Plausibilitaet wird nicht mehr mitgefuehrt.")
+    assert "'bieterzahl_unplausibel'" in GOLD, (
+        "Das Flag wird nicht mehr gelesen.")
+    i = GOLD.index("AS competition_source")
+    block = GOLD[max(0, i - 600):i]
+    assert "bieter_plausibel" in block, (
+        "`competition_source` fragt die Plausibilitaet nicht — dann ist jede vorhandene "
+        "Zahl wieder „gemessen\".")
+
+
+def test_unplausibel_heisst_unsicher_und_nicht_unbekannt():
+    """Die Zahl steht da und wird weiter gezeigt — nur markiert.
+
+    `unknown` waere eine andere und falsche Aussage („wir wissen es nicht"): wir wissen es,
+    wir trauen es nur nicht. Die Oberflaeche kennt `unsicher` — „Unsicher · Datenlage
+    widersprüchlich" (SRC_TEXT in `web/lib/explorerCore.js`).
+    """
+    i = GOLD.index("AS competition_source")
+    block = GOLD[max(0, i - 600):i]
+    assert "'uncertain'" in block, "der unplausible Fall wird nicht auf `uncertain` abgebildet"
+
+    export = (ROOT / "scripts" / "export_web_leads.py").read_text(encoding="utf-8")
+    j = export.index("KONK_SRC = {")
+    tabelle = export[j:j + 200]
+    assert '"uncertain": "unsicher"' in tabelle, (
+        "`KONK_SRC` kennt `uncertain` nicht — der Wert erreichte die Oberflaeche dann als "
+        "unbekannter Schluessel, der Punkt bliebe durchsichtig und saehe aus wie gemessen.")

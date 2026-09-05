@@ -743,7 +743,8 @@ SRC = {"expiring": "auslauf", "open": "f02", "planned": "f01"}
 NATURKAT = {"services": "dienst", "supplies": "liefer", "works": "bau"}
 VAL_SRC = {"actual": "echt", "estimated": "schaetz", "unknown": "unbekannt", None: "unbekannt"}
 TIM_SRC = {"actual": "echt", "estimated": "schaetz", "uncertain": "unsicher", "unknown": "unbekannt", None: "unbekannt"}
-KONK_SRC = {"actual": "echt", "unknown": "unbekannt", "na": "na", None: "na"}
+KONK_SRC = {"actual": "echt", "uncertain": "unsicher", "unknown": "unbekannt",
+            "na": "na", None: "na"}
 # ⚠ VORGABE „unsicher", NICHT „echt" — ALS EINZIGE DER VIER TABELLEN WAR SIE FALSCH HERUM.
 # VAL_SRC und TIM_SRC bilden Unbekanntes auf „unbekannt" ab, KONK_SRC auf „na"; nur INC_SRC
 # machte aus „nichts angegeben" ein „gemessen". Das ist die falsche Richtung für ein System,

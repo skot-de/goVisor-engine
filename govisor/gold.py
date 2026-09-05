@@ -913,6 +913,10 @@ def build_leads(cfg: Config, country: str = "DE", reference_date: str | None = N
           coalesce(NOT list_has_any(q.quality_flags,
                    ['laufzeit_unplausibel','ende_vor_vergabe','datum_absurd',
                     'datum_start_nach_ende']), true) AS termin_plausibel,
+          -- Dieselbe Ueberlegung fuer die Bieterzahl: eine Zahl, die die Qualitaetspruefung
+          -- als unplausibel erkannt hat, ist kein gemessener Wettbewerb.
+          coalesce(NOT list_contains(q.quality_flags, 'bieterzahl_unplausibel'), true)
+                                                      AS bieter_plausibel,
           {_kind_sql('n.title', 'n.cpv_main')} AS contract_kind,
           q.final_value_clean AS value_clean,
           {VU} AS value_used,
@@ -3693,8 +3697,18 @@ def build_lead_export(cfg: Config, country: str = "DE"):
             d.single_bidder,
             CASE d.bidder_bucket WHEN 'einzel' THEN 'low' WHEN 'wenig' THEN 'medium'
                  WHEN 'viel' THEN 'high' ELSE 'na' END AS competition_level,
+            -- ⚠ EINE VORHANDENE ZAHL WAR HIER IMMER „GEMESSEN". Auch dann, wenn die
+            -- Qualitaetspruefung sie als `bieterzahl_unplausibel` erkannt hatte — gemessen
+            -- am 2026-09-05 traf das 7 ausgelieferte Leads, deren Wettbewerbsangabe damit
+            -- unmarkiert hinausging. Dieselbe Klasse wie bei `termin_plausibel` einen
+            -- Abschnitt weiter oben, nur ein anderes Feld.
+            --
+            -- `uncertain`, NICHT `unknown`: die Zahl steht da, wir zeigen sie weiter — nur
+            -- eben markiert. „Unbekannt" waere eine andere und falsche Aussage.
             CASE WHEN d.source IN ('f01','f02') THEN 'na'
-                 WHEN d.num_tenders IS NOT NULL THEN 'actual' ELSE 'unknown' END AS competition_source,
+                 WHEN d.num_tenders IS NULL THEN 'unknown'
+                 WHEN NOT coalesce(d.bieter_plausibel, true) THEN 'uncertain'
+                 ELSE 'actual' END                    AS competition_source,
             -- Zuschlagskriterien: „gewinne ich ueber den Preis oder ueber das Konzept?"
             -- Gewichte sind JE LOS normiert; bei Mehrlos-Ausschreibungen steht hier der
             -- Median ueber die Lose, und `criteria_uniform` sagt, ob die Lose ueberhaupt
