@@ -905,7 +905,14 @@ def build_leads(cfg: Config, country: str = "DE", reference_date: str | None = N
           date_diff('month', DATE '{ref}', {END}) AS months_to_expiry,
           CASE WHEN n.end_date IS NOT NULL THEN 'Vertragsende'
                WHEN dur.dm IS NOT NULL THEN 'aus Laufzeit geschätzt' END AS faellig_basis,
-          coalesce(NOT list_contains(q.quality_flags, 'laufzeit_unplausibel'), true) AS termin_plausibel,
+          -- ⚠ VIER FLAGS, NICHT EINS. Bis zum 2026-09-05 stand hier nur
+          -- `laufzeit_unplausibel`. `ende_vor_vergabe` (Vertragsende VOR der Vergabe),
+          -- `datum_absurd` und `datum_start_nach_ende` sagen dasselbe ueber dieselbe
+          -- Zahl — sie machten die Zeitangabe aber nicht unsicher. Gemessen: 2 Leads
+          -- gingen deshalb mit `timing_source='actual'` hinaus, also unmarkiert.
+          coalesce(NOT list_has_any(q.quality_flags,
+                   ['laufzeit_unplausibel','ende_vor_vergabe','datum_absurd',
+                    'datum_start_nach_ende']), true) AS termin_plausibel,
           {_kind_sql('n.title', 'n.cpv_main')} AS contract_kind,
           q.final_value_clean AS value_clean,
           {VU} AS value_used,
@@ -3152,7 +3159,22 @@ def build_prospective_leads(cfg: Config, country: str = "DE", reference_date: st
             {_FRIST_EFF} AS contract_end,
             date_diff('month', DATE '{ref}', {_FRIST_EFF}) AS months_to_expiry,
             CASE n.notice_kind WHEN 'cn' THEN 'Angebotsfrist' ELSE 'Vorinformation' END AS faellig_basis,
-            true AS termin_plausibel,
+            -- ⚠ HIER STAND `true` — UND DAMIT GALT JEDE OFFENE AUSSCHREIBUNG ALS PLAUSIBEL.
+            --
+            -- Der Auslauf-Zweig oben liest dieselbe Aussage aus den Qualitaetsflags
+            -- (`laufzeit_unplausibel`); dieser Zweig behauptete sie. Folge, gemessen am
+            -- 2026-09-05: 73 ausgelieferte f02-Leads trugen eine Vertragslaufzeit von 26 bis
+            -- 169 Jahren (Median 48) — und `timing_source` stand auf 'actual', der Wert ging
+            -- also UNMARKIERT hinaus. Die Qualitaetspruefung hatte sie laengst erkannt und
+            -- in `review_queue` gelegt, wo sie niemand liest.
+            --
+            -- Das ist der Markenkern, an genau der Stelle, an der er gilt: „Gemessenes ist
+            -- gemessen, Geschaetztes ist markiert." Eine Laufzeit von 169 Jahren ist kein
+            -- gemessener Wert, sondern ein erkannter Datenfehler.
+            coalesce(NOT list_has_any(q.quality_flags,
+                   ['laufzeit_unplausibel','ende_vor_vergabe','datum_absurd',
+                    'datum_start_nach_ende']), true)
+                                                      AS termin_plausibel,
             {_kind_sql('n.title', 'n.cpv_main')} AS contract_kind,
             {VU} AS value_used,
             CASE WHEN {VU} IS NOT NULL THEN 'geschaetzt' ELSE 'unbekannt' END AS value_source,
@@ -3165,6 +3187,10 @@ def build_prospective_leads(cfg: Config, country: str = "DE", reference_date: st
             true AS ist_hauptlos, 1 AS lose_im_cluster
           FROM '{N}' n
           JOIN buyer b ON b.notice_id=n.notice_id
+          -- Zeilentreu: `quality.parquet` traegt genau eine Zeile je `notice_id` (geprueft
+          -- am 2026-09-05: 2.275.460 Zeilen, ebenso viele verschiedene Kennungen), und
+          -- `build_quality` laeuft im Lauf des Landes VOR diesem Schritt.
+          LEFT JOIN '{Q}' q ON q.notice_id=n.notice_id
           LEFT JOIN '{DD}' dd ON dd.year=n.year
           LEFT JOIN '{DC}' dc ON dc.division=substr(n.cpv_main,1,2)
           {_frist_joins_sql(cfg, country)}{_kategorie_join_sql(cfg, country)}
