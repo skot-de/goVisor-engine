@@ -141,6 +141,16 @@ def download(cfg: Config, country: str = "CH", max_pages: int | None = None,
         except Exception:
             pass
         buckets[_month_of(p)].append({"summary": p, "detail": detail})
+        # ⚠ HERZSCHLAG. Vorher meldete dieser Schritt sich erst NACH allen Detailabrufen —
+        # er schwieg also ueber seine ganze Laufzeit. Die Wache im Tageslauf misst aber
+        # genau diese Stille („keine Ausgabe seit 30 min") und nicht den Stillstand: in der
+        # Nacht zum 2026-09-05 war simap.ch sechsmal langsamer als sonst (2.084 s statt
+        # ~350 s), der Schritt arbeitete einwandfrei und wurde trotzdem abgeschossen — CH
+        # blieb einen Tag auf altem Stand. Ein Lauf, der nichts sagt, ist von einem haengenden
+        # nicht zu unterscheiden.
+        if n_total % 50 == 0:
+            print(f"  {country}: {n_total} Publikationen geholt ({n_detail_ok} mit Detail) …",
+                  flush=True)
         if delay:
             time.sleep(delay)
     for month, records in buckets.items():
