@@ -949,8 +949,27 @@ def build_leads(cfg: Config, country: str = "DE", reference_date: str | None = N
     """)
     # Lead-Dedup (kein Verlust): Mehrfach-Lose desselben Projekts teilen Käufer +
     # Amtsinhaber + Vertragsende + CPV-Klasse. Alle Zeilen bleiben; das wertvollste
-    # Los je Cluster wird als Hauptlos markiert (ist_hauptlos), plus Los-Zahl — der
-    # Radar zeigt per Default nur Hauptlose, die anderen sind über ein Flag da.
+    # Los je Cluster wird als Hauptlos markiert (ist_hauptlos), plus Los-Zahl.
+    #
+    # ⚠ **DER RADAR ZEIGT NICHT NUR HAUPTLOSE.** Hier stand genau das („per Default nur
+    # Hauptlose, die anderen sind über ein Flag da"), und es stimmt nicht. Gemessen am
+    # 2026-09-06:
+    #
+    #     leads.parquet        91.143 Zeilen · 10.367 KEIN Hauptlos (11,4 %)
+    #                          13.527 sitzen in einem Cluster > 1 (14,8 %)
+    #     lead_export          fuehrt WEDER `ist_hauptlos` NOCH `lose_im_cluster`
+    #     export_web_leads.py  liest beide nicht
+    #     explorerCore.js      kennt beide nicht
+    #
+    # Die Markierung entsteht also und endet hier. In der Trefferliste steht jedes Los als
+    # eigener Lead: 67 Bloecke mit je zehn oder mehr Leads gleichen Kaeufers, Titels und
+    # gleicher Frist, zusammen 1.140 Leads. Der groesste — ein Bahnprojekt — flutet die
+    # Liste mit 86 Zeilen (verschiedene Bekanntmachungen, verschiedene Werte, gleicher Kopf).
+    #
+    # Ob das falsch IST, ist eine Produktfrage: jedes Los ist ein eigenes Angebot, und wer
+    # nur Hauptlose sieht, verpasst 10.367 Gelegenheiten. Falsch war nur die Behauptung.
+    # Wer die Filterung nachruesten will, braucht beide Spalten in `lead_export` — heute
+    # fallen sie eine Stufe vorher weg.
     key = "buyer_entity, incumbent_entity, contract_end, cpv_class"
     con.execute(f"""
         CREATE TABLE leads_dd AS
