@@ -167,8 +167,16 @@ def test_kein_offen_eintrag_ist_laengst_erledigt():
 @pytest.mark.parametrize("name", sorted(ALLE_LISTEN))
 def test_keine_ausnahme_fuer_etwas_das_es_nicht_mehr_gibt(name):
     """Eine Ausnahme fuer eine geloeschte Tabelle ist toter Ballast — und sie
-    verdeckt, dass die Liste seit Jahren niemand gelesen hat."""
-    vorhanden = {p.stem for p in (ROOT / "data" / "gold").glob("*/*.parquet")}
+    verdeckt, dass die Liste seit Jahren niemand gelesen hat.
+
+    ⚠ ZWEI SCHLUESSELFORMEN seit dem 2026-09-06. Eine Ausnahme galt bisher fuer ALLE
+    Laender (`bronze_inventory`) — damit haette eine Ausnahme fuer LU auch den taeglich
+    gebauten DE-Rueckstand entschuldigt. Die Form `LAND/tabelle` grenzt sie ein. Dieser Test
+    muss beide kennen, sonst meldet er die praezisere Ausnahme als tot.
+    """
+    gold = ROOT / "data" / "gold"
+    vorhanden = {p.stem for p in gold.glob("*/*.parquet")}
+    vorhanden |= {f"{p.parent.name}/{p.stem}" for p in gold.glob("*/*.parquet")}
     tot = [t for t in ALLE_LISTEN[name] if t not in vorhanden]
     assert not tot, f"{name} nennt Tabellen, die es nicht mehr gibt: {sorted(tot)}"
 

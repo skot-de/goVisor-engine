@@ -88,6 +88,26 @@ AUSNAHMEN_FRISCHE: dict[str, str] = {
         "Impressum-Abgleich, eigener Lauf mit Netzzugriff — nicht im Nachtlauf",
     "lead_export.vor-vollpipeline":
         "Sicherungskopie vom Umstieg auf die Vollpipeline (13.08.), bewusst eingefroren",
+    # ⚠ LAENDERBEZOGEN — sonst entschuldigt die Ausnahme auch DE, wo dieselbe Tabelle
+    # taeglich gebaut wird und ein Rueckstand ein echter Befund waere.
+    #
+    # Beide Dateien sind Ueberbleibsel aus einer Zeit, in der LU ueber `cli gold` lief.
+    # Heute laeuft `cli gold` NUR fuer DE (daily_leads.sh: `--country DE`); AT, CH und LU
+    # gehen ueber `scripts/build_dach_gold.py`, und der baut keine von beiden — gemessen am
+    # 2026-09-06: null Fundstellen. AT und CH haben sie folgerichtig gar nicht.
+    #
+    # Gelesen wird fuer LU nichts davon: `bronze_inventory` nur von
+    # `scripts/export_field_inventory.py` (Pfad fest auf `data/gold/DE/`), `buyer_profile`
+    # nur von `govisor/verify.py`, einem Handbefehl. Sie altern also fuer immer und faerbten
+    # die Sonde dauerhaft rot — und eine Sonde, die immer anschlaegt, liest bald niemand mehr.
+    #
+    # SAUBERER waere, die beiden Dateien zu loeschen. Das ist eine Entscheidung ueber fremde
+    # Daten auf der externen Platte und gehoert nicht in einen Nebensatz; deshalb hier
+    # benannt. Verschwinden sie, faellt diese Ausnahme durch
+    # `test_keine_ausnahme_fuer_etwas_das_es_nicht_mehr_gibt` von selbst auf.
+    "LU/bronze_inventory": "LU laeuft ueber build_dach_gold.py, das die Tabelle nicht baut; "
+                           "gelesen wird sie nur DE-fest in export_field_inventory.py",
+    "LU/buyer_profile": "dieselbe Ursache; gelesen nur vom Handbefehl `govisor verify`",
 }
 
 # Dateien, die NIEMAND mehr baut und niemand mehr liest. Am 2026-08-23 waren das
@@ -437,7 +457,7 @@ def sonde_frische(zeige_offen: bool = False,
                 if zeige_offen:
                     print(f"    LEICHE  {land}/{f.stem}: {LEICHEN[f.stem]}")
                 continue
-            if f.stem in AUSNAHMEN_FRISCHE:
+            if f.stem in AUSNAHMEN_FRISCHE or f"{land}/{f.stem}" in AUSNAHMEN_FRISCHE:
                 continue
             fehler.append(f"{land}/{f.name} haengt {rueck:.1f} Tage zurueck — "
                           f"wird der Schritt im Lauf des Landes ueberhaupt aufgerufen?")

@@ -128,7 +128,10 @@ _EXPORT_VOCAB = {
     "incumbent_source": {"actual", "uncertain", None},
     "switch_chance": {"high", "medium", "low", "na"},
     "competition_level": {"low", "medium", "high", "na"},
-    "competition_source": {"actual", "unknown", "na"},
+    # `uncertain` seit 2026-09-05: eine vorhandene Bieterzahl, die die
+    # Qualitaetspruefung als `bieterzahl_unplausibel` erkannt hat, ist kein gemessener
+    # Wettbewerb mehr. Nicht `unknown` — die Zahl steht da, sie ist nur markiert.
+    "competition_source": {"actual", "uncertain", "unknown", "na"},
     # Kontext aus dem `attributes`-Sammelfeld (eForms-Codes + Legacy-Labels auf EIN
     # englisches Vokabular gemappt). Waechst das Mapping, muss es hier mitwachsen —
     # sonst rutscht ein roher eForms-Code wie `cga-mun` ins Frontend.
