@@ -71,7 +71,26 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 
-MODELL = "google/gemini-2.5-flash-lite"
+# ⚠ HIER STAND `MODELL = "google/gemini-2.5-flash-lite"` — FEST VERDRAHTET, bis zum
+# 2026-09-06. Das Modell steht nicht einmal auf der Freigabeliste (`data/modellfreigabe.json`
+# kennt nur `google/gemini-2.5-flash` und `openai/gpt-5.6-luna`). Der Schritt umging damit
+# Pruefstand, Freigabe UND die taegliche Wahl des Waechters — und niemandem fiel es auf,
+# weil er ohnehin an einer anderen Sache scheiterte: dem Preisdeckel (s. `llm._DECKEL_ABSAGE`).
+#
+# Gemessen an diesem Tag: KEIN einziger erfolgreicher Aufruf seit Einfuehrung. Das
+# Kostenbuch kennt drei Eintraege zum Zweck `kategorie`, alle mit null Token. 2.065
+# laufende Ausschreibungen blieben dadurch jede Nacht ohne Kategorie.
+#
+# ⚠ ERST BEIM AUFRUF ERFRAGEN, NICHT BEIM IMPORT. `gewaehltes_modell()` liest
+# `data/modellwahl.json`; beim Import ausgewertet froere die Wahl auf den Stand ein, den
+# der Prozess beim Start vorfand — bei einem Arbeiter, der Stunden laeuft, ist das die
+# Entscheidung von gestern.
+# ⚠ Der Import steht INNEN, wie die beiden anderen `llm`-Nutzungen dieser Datei. `llm`
+# baut beim Import die Geldwache auf und liest den Kontostand; auf Modulebene gezogen
+# kostet das jeden Aufruf von `kategorie` — auch `--ohne-modell`, der gar kein Modell will.
+def _modell() -> str:
+    from . import llm
+    return llm.gewaehltes_modell()
 BATCH = 30
 LERN_BEISPIELE = 40        # so viele Korrekturen gehen als Beispiele in den Prompt
 TITEL_MAX = 160
@@ -256,7 +275,7 @@ def frag_modell(faelle: list[tuple[str, str]], kat: dict,
                          f'id={n} | "{(t or "")[:TITEL_MAX]}"' for n, t in teil)}]
         try:
             with llm.kontext(zweck="kategorie"):
-                txt = llm.chat(nachricht, model=MODELL, temperature=0,
+                txt = llm.chat(nachricht, model=_modell(), temperature=0,
                                timeout=120, max_retries=3)
         except llm.BudgetErschoepft as e:
             # ⚠ NICHT WEITERSTAPELN. Die Wache ist klebrig: einmal gefallen, wirft jeder
@@ -351,7 +370,7 @@ def bestimme(country: str = "DE", mit_modell: bool = True) -> list[dict]:
                 print(f"  Lernschleife: {len(beispiele)} Korrekturen im Prompt")
             for nid, d in frag_modell(offen_fuers_modell, kat, beispiele).items():
                 zeilen.append(dict(notice_id=nid, division=d, branche=kat[d][1],
-                                   quelle="modell", modell=MODELL, stand=stand))
+                                   quelle="modell", modell=_modell(), stand=stand))
     rest = len(offen) - len(zeilen)
     print(f"  modell {sum(1 for z in zeilen if z['quelle'] == 'modell'):,}"
           f" · bleibt Ohne Kategorie {rest:,}")

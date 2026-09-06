@@ -17,6 +17,7 @@ from __future__ import annotations
 
 import contextlib
 import datetime as _dt
+import json
 import os
 import sys
 import threading
@@ -423,6 +424,75 @@ def anbieter_stand() -> list[dict]:
              "keys": len(a["keys"]),
              "frei": sum(1 for k in a["keys"] if k not in _EXHAUSTED)}
             for a in _anbieter()]
+
+
+# Woran man erkennt, dass der PREISDECKEL den Aufruf abgewiesen hat.
+#
+# ⚠ ZWEI FORMULIERUNGEN, UND DIE ZWEITE HAT DREI TAGE LANG NIEMAND GESEHEN. Der Rueckfall
+# „einmal ohne Deckel" gab es seit dem 2026-08-24, er prueft aber auf das Wort `provider`
+# („no allowed providers"). Fuer einen Deckel, den KEIN Endpunkt einhaelt, antwortet
+# OpenRouter anders: „No endpoints found that satisfy the max price for this request" —
+# ohne das Wort. Der Rueckfall griff deshalb nie.
+#
+# Gemessen am 2026-09-06: `govisor.kategorie` scheiterte daran in JEDEM Nachtlauf, 44 Mal
+# je Lauf, und hat seit seiner Einfuehrung KEINEN einzigen erfolgreichen Aufruf gehabt —
+# das Kostenbuch kennt drei Eintraege, alle mit null Token. 2.065 Ausschreibungen bleiben
+# dadurch jede Nacht ohne Kategorie.
+#
+# ⚠ UND ES TRIFFT NICHT NUR EIN EXOTISCHES MODELL. Auch `google/gemini-2.5-flash`, der
+# freigegebene Titelverteidiger, laeuft mit abgeleitetem Deckel in diesen 404. Dass es
+# nicht auffaellt, liegt allein daran, dass die Modellwahl gerade auf `openai/gpt-5.6-luna`
+# steht, dessen Boden erreichbar ist. Schaltet der Waechter zurueck, steht alles still.
+_DECKEL_ABSAGE = ("no allowed providers", "satisfy the max price", "no endpoints found")
+
+
+def _deckel_abgelehnt(text: str) -> bool:
+    t = (text or "").lower()
+    return any(w in t for w in _DECKEL_ABSAGE)
+
+
+def gewaehltes_modell(hoechstens_tage: int = 7) -> str:
+    """Welches Modell gilt — nach derselben Rangfolge, die `scripts/analyze_docs.py` faehrt.
+
+        1. `OR_MODEL_FEST`  ausdruecklicher Zwang (Messungen, Fehlersuche)
+        2. die entschiedene Wahl aus `data/modellwahl.json` (nur freigegebene Modelle)
+        3. `OR_MODEL` bzw. die Vorgabe dieses Moduls
+
+    ⚠ WARUM ES DIESE FUNKTION BRAUCHT. `govisor/kategorie.py` trug bis zum 2026-09-06 ein
+    fest verdrahtetes `MODELL = "google/gemini-2.5-flash-lite"` — ein Modell, das gar nicht
+    auf der Freigabeliste steht. Damit umging der Schritt Pruefstand, Freigabe UND die
+    taegliche Wahl des Waechters. Aufgefallen ist es erst, als er an einer ganz anderen
+    Sache scheiterte; bis dahin lief er drei Wochen ins Leere, ohne dass die Modellwahl
+    ueberhaupt eine Rolle spielte.
+
+    ⚠ VERALTETES WIRD IGNORIERT. Steht die Datei laenger als eine Woche, ist der Waechter
+    offenbar nicht mehr gelaufen; dann gilt wieder die Vorgabe. Eine alte Entscheidung
+    stillschweigend weiterzufahren waere die schlechtere Sorte Automatik.
+
+    ⚠ ZWEITE FASSUNG DERSELBEN LOGIK. `analyze_docs._entschiedene_wahl` macht dasselbe und
+    ist aelter; sie gehoert bei naechster Gelegenheit hierher verlegt. Bis dahin gilt: wer
+    die Rangfolge aendert, aendert sie an BEIDEN Stellen.
+    """
+    wahl = None
+    pfad = Path(__file__).resolve().parent.parent / "data" / "modellwahl.json"
+    # ⚠ NICHT `except Exception`. Beim Einbau dieser Funktion am 2026-09-06 fehlten `json`
+    # und `ROOT` im Modul; ein breiter Fang hat den `NameError` verschluckt und still die
+    # Vorgabe geliefert — ein Ausfall, der wie ein funktionierender Standard aussieht, also
+    # genau die Sorte Fehler, wegen der diese Funktion ueberhaupt entstanden ist. Gefangen
+    # wird nur, was hier wirklich passieren kann: Datei fehlt, kaputt, oder ohne `stand`.
+    try:
+        d = json.loads(pfad.read_text(encoding="utf-8"))
+        alter = (_dt.date.today() - _dt.date.fromisoformat(d["stand"])).days
+        if alter <= hoechstens_tage:
+            wahl = d.get("modell") or None
+        else:
+            print(f"⚠ Modellwahl vom {d['stand']} ist {alter} Tage alt — es gilt die "
+                  f"Vorgabe. Laeuft `scripts/modellwaechter.py` noch?",
+                  file=sys.stderr, flush=True)
+    except (OSError, json.JSONDecodeError, KeyError, ValueError):
+        wahl = None
+    return (os.environ.get("OR_MODEL_FEST") or wahl
+            or os.environ.get("OR_MODEL") or _MODELL_ROH)
 
 
 def _is_credit_error(status: int, text: str) -> bool:
@@ -964,7 +1034,7 @@ def chat(messages: list[dict], model: str | None = None, temperature: float = 0,
                     # Lauf daran scheitern zu lassen waere schlimmer als der doppelte
                     # Preis — aber es gehoert sichtbar ins Buch, wie oft das passiert.
                     if (400 <= r.status_code < 500 and extra.get("provider", {}).get("max_price")
-                            and "provider" in r.text.lower() and not ohne_deckel):
+                            and _deckel_abgelehnt(r.text) and not ohne_deckel):
                         ohne_deckel = True      # gilt nur fuer DIESEN Key, s. `sende` oben
                         last_err = f"Preisdeckel liess niemanden zu ({anb['name']}) — einmal ohne"
                         continue

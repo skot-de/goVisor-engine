@@ -129,7 +129,10 @@ def test_kategorie_liest_die_antwort_und_prueft_die_kennung(monkeypatch):
     monkeypatch.setattr(llm, "chat", falsches_chat)
     aus = k.frag_modell([("a1", "Dachsanierung"), ("b2", "Serverwartung")], KAT, [])
     assert aus == {"a1": "45"}, aus
-    assert gesehen["modell"] == k.MODELL, "das Modell wird nicht mehr durchgereicht"
+    # Bis zum 2026-09-06 stand hier `k.MODELL` — eine fest verdrahtete Konstante, die
+    # Pruefstand, Freigabe und Modellwahl umging. Die Zusicherung ist dieselbe geblieben:
+    # was `_modell()` liefert, muss bei `llm.chat` ankommen.
+    assert gesehen["modell"] == k._modell(), "das Modell wird nicht mehr durchgereicht"
     assert gesehen["n"] == 2, "System- und Nutzernachricht muessen beide ankommen"
 
 
