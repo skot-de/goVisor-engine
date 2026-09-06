@@ -199,6 +199,38 @@ def _behauptungen() -> list[tuple[str, str, bool, str]]:
         _re.findall(r'"([A-Z]{2})"', (_re.search(r'_ERLAUBT = \(([^)]*)\)', _pu) or
                                       _re.match("", "")).group(1)
                     if _re.search(r'_ERLAUBT = \(([^)]*)\)', _pu) else ""))
+    # ── Kapitel 10: die Sonden ───────────────────────────────────────────────────────
+    #
+    # ⚠ Kapitel 10 nennt sie namentlich und mit Zahl. Kommt eine dazu, ist die Ueberschrift
+    # „Die sieben Sonden" still falsch — und wer die Liste liest, haelt sie fuer vollstaendig.
+    import re as _re2
+    _pv_src = (ROOT / "scripts" / "pruefe_verdrahtung.py").read_text(encoding="utf-8")
+    _sonden = sorted(set(_re2.findall(r"^def (sonde_\w+)", _pv_src, _re2.M)))
+    _kap10 = (ROOT / "docs" / "laender" / "10-abnahme-und-messung.md").read_text(encoding="utf-8")
+    aus.append(("10", "Kapitel 10 zaehlt so viele Sonden, wie es gibt",
+                len(_sonden) == 7 and "Die sieben Sonden" in _kap10,
+                f"{len(_sonden)} Sonden im Code: {', '.join(s.replace('sonde_','') for s in _sonden)}"))
+
+    # Die Baugrenze steht an drei Stellen. Laufen sie auseinander, buendelt jemand gegen
+    # eine Grenze, die es nicht gibt.
+    _grenze_ok = all("156.000" in t or "156_000" in t for t in (
+        _pv_src,
+        (ROOT / "scripts" / "export_vorgaenge.py").read_text(encoding="utf-8"),
+        (ROOT / "web" / "lib" / "vorgangsakte.ts").read_text(encoding="utf-8")))
+    aus.append(("10/12", "Baugrenze ~156.000 steht in Sonde, Exporteur und Frontend gleich",
+                _grenze_ok, "drei Stellen geprueft"))
+
+    # ── Kapitel 12: „beschrieben, nicht gebaut" (A15) ────────────────────────────────
+    #
+    # Der Katalog nennt `ist_hauptlos` als Beispiel: berechnet, aber von niemandem gelesen.
+    # Wird es verdrahtet, ist der Eintrag falsch — und A15 verliert seinen Beleg.
+    _gold_src = (ROOT / "govisor" / "gold.py").read_text(encoding="utf-8")
+    _hl_verbraucher = [r for r in ("scripts/export_web_leads.py", "web/lib/explorerCore.js")
+                       if "hauptlos" in (ROOT / r).read_text(encoding="utf-8")]
+    aus.append(("12", "A15-Beleg: `ist_hauptlos` wird berechnet und von niemandem gelesen",
+                "ist_hauptlos" in _gold_src and not _hl_verbraucher,
+                f"Verbraucher: {_hl_verbraucher or 'keine'}"))
+
     aus.append(("15", "Upload-Laenderliste in route.ts und process_upload.py gleich",
                 bool(ts) and ts == py,
                 f"route={sorted(ts)} python={sorted(py)}"

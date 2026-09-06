@@ -25,11 +25,34 @@ dort steht, kann verrotten, ohne dass es jemand merkt.
 ```bash
 python3 -m pytest tests/ -q                    # muss GRÜN sein, vor dem Commit
 python3 -m govisor.cli verify --country XX     # FK-Integrität
-python3 scripts/pruefe_verdrahtung.py --offen  # Sonde 1-4: Frische, Parität, Pfade, Länder
+python3 scripts/pruefe_verdrahtung.py --offen  # Sonde 1-7, s. u.
+npm --prefix web run build                     # ⚠ faehrt sonst NIEMAND
 python3 scripts/pruefe_bibel.py --offen        # altert die Anleitung selbst?
 cd web && npx tsc --noEmit                     # Typprüfung
 cd web && for f in scripts/pruefe-*.mjs; do node "$f"; done
 ```
+
+### Die sieben Sonden
+
+`pruefe_verdrahtung.py` sucht die Fehlerklasse, die kein Unit-Test findet: jedes Stück für
+sich korrekt, aber niemand ruft es.
+
+| Sonde | Frage | Zuletzt gefunden |
+|---|---|---|
+| 1 Frische | Welche Gold-Datei hängt zurück? | `LU/bronze_inventory` + `LU/buyer_profile` 2,3 Tage — `cli gold` läuft nur für DE, `build_dach_gold.py` baut beide nicht (2026-09-06) |
+| 2 Parität | Was gibt es nur in DE? | — |
+| 3 Pfade | Wer liest nur DE? | — |
+| 4 Länder | Wer liegt in Silber, ohne in Gold anzukommen? | — |
+| 5 Nutzlast | Wer liest, was wir ausliefern? | — |
+| **6 Baugrenze** | Wie nah ist `web/data` an der Dateizahl, die `next build` tötet? | 116.307 von ~156.000 (2026-09-04) |
+| **7 Module** | Welche Datei in `web/lib` importiert niemand? | `identityGate.ts` — ein fail-closed gebautes Sicherheitstor, das KEINE Stelle aufruft |
+
+⚠ **Ausnahmen sind länderbezogen möglich** (`LAND/tabelle`). Der blosse Tabellenname
+entschuldigte sonst auch das Land, in dem dieselbe Tabelle täglich gebaut wird.
+
+⚠ **`npm run build` fährt sonst niemand.** Kein Alltagslauf ruft ihn — genau daran war ein
+`/login`-Fehler vierzehn Tage unsichtbar. Er prüft zugleich die Dateizahl gegen die
+Baugrenze, denn dort schlägt sie ein.
 
 ⚠ **Nie mit roter Suite committen.** Dreimal passiert, dreimal derselbe Ärger:
 `export_web_awards.py` ohne `sys.path` (launchd-Falle), `build_quality` band `n.title`
