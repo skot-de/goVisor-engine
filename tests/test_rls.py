@@ -17,6 +17,15 @@ OFFEN_MIT_GRUND = {
 }
 
 
+# ⚠ `for <op>` IST OPTIONAL — und fehlt es, gilt die Policy fuer ALLE Operationen.
+# Die erste Fassung dieses Musters verlangte es und sah damit 18 von 34 Policies. Sie meldete
+# trotzdem „sauber": ein Waechter, der die Haelfte nicht liest, findet in der anderen Haelfte
+# eben nichts. Genau deshalb prueft `test_der_waechter_sieht_alle_policies` unten die ZAHL.
+_POLICY = re.compile(
+    r'create policy\s+"?([A-Za-z0-9_]+)"?\s+on\s+([\w.]+)'
+    r'(?:\s+as\s+\w+)?(?:\s+for\s+(\w+))?(?:\s+to\s+[\w,\s]+)?([^;]*);', re.I | re.S)
+
+
 def _policies() -> dict[tuple[str, str], tuple[str, str, str]]:
     """Die GELTENDEN Policies: `(tabelle, name)` → `(datei, operation, bedingung)`.
 
@@ -27,13 +36,34 @@ def _policies() -> dict[tuple[str, str], tuple[str, str, str]]:
     """
     geltend: dict[tuple[str, str], tuple[str, str, str]] = {}
     for f in MIGRATIONEN:                      # sortiert = Anwendungsreihenfolge
-        t = f.read_text(encoding="utf-8")
-        for m in re.finditer(
-                r'create policy\s+"([^"]+)"\s+on\s+(?:public\.)?(\w+)\s+for\s+(\w+)([^;]*);',
-                t, re.I | re.S):
-            name, tab, op, rest = m.group(1), m.group(2), m.group(3), m.group(4)
-            geltend[(tab, name)] = (f.name, op, " ".join(rest.split()))
+        for m in _POLICY.finditer(f.read_text(encoding="utf-8")):
+            name, tab = m.group(1), m.group(2).removeprefix("public.")
+            op = (m.group(3) or "all").lower()
+            geltend[(tab, name)] = (f.name, op, " ".join(m.group(4).split()))
     return geltend
+
+
+def test_der_waechter_sieht_alle_policies():
+    """⚠ EIN MUSTER, DAS DIE HAELFTE UEBERSIEHT, MELDET SAUBERKEIT.
+
+    Die erste Fassung von `_POLICY` verlangte eine `for`-Klausel. Die ist aber optional —
+    ohne sie gilt die Policy fuer ALLE Operationen, und genau so sind hier neun geschrieben
+    (`alerts_rw_own`, `contracts_rw_own`, `declarations_rw_own` …). Der Waechter sah 18 von
+    34 und meldete „sauber"; in der Haelfte, die er las, war ja nichts.
+
+    Deshalb prueft er jetzt seine eigene Ausbeute gegen die schlichte Zahl der
+    `create policy`-Vorkommen. Ein Parser, der nicht nachzaehlt, was er gefunden hat, ist
+    ein Parser, dem man nicht glauben darf.
+    """
+    roh = sum(len(re.findall(r"create policy", f.read_text(encoding="utf-8"), re.I))
+              for f in MIGRATIONEN)
+    # `drop policy` + `create policy` derselben Kennung zaehlt roh doppelt; der Bestand ist
+    # deshalb kleiner oder gleich. Deutlich weniger heisst: das Muster greift nicht.
+    gefunden = len(_policies())
+    assert gefunden >= roh - 4, (
+        f"Das Muster findet nur {gefunden} von {roh} `create policy`-Vorkommen. "
+        f"Eine Schreibweise wird nicht erkannt — und in dem, was nicht gelesen wird, "
+        f"findet der Waechter nie etwas.")
 
 
 def test_jede_tabelle_hat_rls_eingeschaltet():
