@@ -26,7 +26,7 @@ import pytest
 
 ROOT = Path(__file__).resolve().parent.parent
 WEB = ROOT / "web"
-ROUTEN = ("branchen", "plz-geo", "markt", "strategie", "kalender")
+ROUTEN = ("branchen", "plz-geo", "markt", "strategie", "kalender", "lead-export")
 
 
 def test_die_regel_stimmt():
@@ -60,6 +60,32 @@ def test_route_unterscheidet_ausfall_von_leer(route):
     ueber_merker = any("= true" in q[i:i + 120] for i in stellen) and "503" in q
     assert direkt or ueber_merker, (
         f"/api/{route} erkennt die Stoerung, antwortet aber nicht mit 503.")
+
+
+def test_keine_route_laedt_mehr_ohne_grund():
+    """Die Kehrichtung ist fertig — und bleibt es.
+
+    Gemessen am 2026-09-06: alle Routen, die `web/data` lesen, unterscheiden jetzt einen
+    Ausfall von einem leeren Ergebnis. Drei kamen ohne Aenderung aus, weil sie schon vorher
+    bei `null` mit 503 antworteten (`leads`, `marktpuls`, `regionen`) — dort sind fehlende
+    Datei und Stoerung gleich zu behandeln, weil die Datei immer da sein MUSS.
+
+    ⚠ `health` ist die begruendete Ausnahme: es MELDET den Datenstand, statt sich auf ihn zu
+    verlassen. Ein fehlender Stand ist dort die Antwort, nicht ein Fehler.
+    """
+    import re as _re
+    offen = []
+    for p in sorted((WEB / "app" / "api").glob("**/route.ts")):
+        q = p.read_text(encoding="utf-8")
+        if not _re.search(r"\bloadDataFile\(", q):
+            continue
+        name = str(p.relative_to(WEB / "app" / "api")).replace("/route.ts", "")
+        if name == "health":
+            continue
+        if "503" not in q:
+            offen.append(name)
+    assert not offen, (
+        "Diese Routen laden aus `web/data` und kennen keinen Stoerfall: " + ", ".join(offen))
 
 
 def test_der_knappe_weg_bleibt_derselbe_weg():

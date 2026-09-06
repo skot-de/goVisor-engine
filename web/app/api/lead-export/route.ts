@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
-import { loadDataFile } from "@/lib/dataSource";
+import { ladeMitGrund, DATEN_STOERUNG } from "@/lib/dataSource";
+import { STOERUNG_ANTWORT } from "@/lib/ladegrund.js";
 
 /**
  * Rohdaten-Download je Vorgang: Leistungsverzeichnis bzw. Kriterienmatrix als CSV.
@@ -33,9 +34,16 @@ export async function GET(req: Request) {
   // ein Muster, das JEDES Verzeichnis mit CSV-Dateien als gelesen gelten liess. Die Sonde
   // konnte dort also kein totes Auslieferungsgut mehr finden. Gefunden am 2026-09-03 durch
   // `test_kein_ladeaufruf_mit_variablem_verzeichnis`.
-  const csv = art.dir === "lv"
-    ? await loadDataFile(`lv/${id}.csv`)
-    : await loadDataFile(`kriterien/${id}.csv`);
+  const { text: csv, grund } = art.dir === "lv"
+    ? await ladeMitGrund(`lv/${id}.csv`)
+    : await ladeMitGrund(`kriterien/${id}.csv`);
+  // ⚠ 404 IST EINE AUSSAGE UEBER DIE VERGABE: „fuer diesen Vorgang gibt es kein
+  // Leistungsverzeichnis". Bei unerreichbarem Speicher waere das eine Behauptung ueber eine
+  // Datei, in die niemand geschaut hat — und der Nutzer sucht die Unterlagen danach
+  // woanders. Fallenkatalog A16, in seiner kleinsten Form.
+  if (grund === DATEN_STOERUNG) {
+    return NextResponse.json(STOERUNG_ANTWORT, { status: 503 });
+  }
   if (!csv) {
     return NextResponse.json({ error: "keine Daten für diesen Vorgang" }, { status: 404 });
   }
