@@ -154,3 +154,29 @@ def test_zwischenzeiten_kollidieren_nicht_mit_den_schrittzeiten():
     skripte = {m.group(1) for m in re.finditer(r"teil ([a-z_]+) \$PY", quelle)}
     schritte = {m.group(1) for m in re.finditer(r'step "(.+)"', quelle)}
     assert not (skripte & schritte)
+
+
+def test_kein_schrittname_traegt_eine_variable():
+    """Der Schrittname ist der Schluessel der Zeitmessung.
+
+    Im Protokoll steht `⏱ <Name> — <n>s`. Der Name ist damit die einzige Handhabe, die Dauer
+    eines Schritts ueber mehrere Naechte zu verfolgen. Steht eine Variable darin, heisst der
+    Schritt jede Nacht anders — und die Reihe zerfaellt.
+
+    ⚠ GEMESSEN AM 2026-09-06: `step "Gold-Rebuild (Leads mit Stichtag $TODAY)"` liess
+    ausgerechnet den GROESSTEN Schritt in Einzelnamen zerfallen. Von 61 verschiedenen
+    Schrittnamen aus 14 Naechten waren **13 derselbe** Gold-Rebuild. Seine Entwicklung war
+    damit unsichtbar — und genau die will Schritt 4 des Effizienzplans messen.
+
+    Wandernde Angaben (Stichtag, Land, Zahl) gehoeren in die AUSGABE des Schritts, nicht in
+    seinen Namen.
+    """
+    import re
+    from pathlib import Path
+    quelle = (Path(__file__).resolve().parent.parent / "scripts" / "daily_leads.sh"
+              ).read_text(encoding="utf-8")
+    treffer = [z.strip() for z in quelle.splitlines()
+               if re.match(r'\s*step\s+"', z) and "$" in z]
+    assert not treffer, (
+        "Diese Schrittnamen tragen eine Variable und zerfallen damit ueber die Naechte:\n  "
+        + "\n  ".join(treffer))

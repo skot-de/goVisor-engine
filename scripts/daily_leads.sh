@@ -784,7 +784,14 @@ $PY scripts/build_dach_gold.py --laender AT,CH,LU --as-of "$TODAY" \
   || echo "  ⚠ AT/CH-Gold unvollstaendig — beide Laender bleiben auf dem letzten Stand."
 
 # 2) Gold neu mit heutigem Stichtag — refresht Leads, Fristen, months_to_expiry. FATAL bei Fehler.
-step "Gold-Rebuild (Leads mit Stichtag $TODAY)"
+# ⚠ KEIN DATUM IM SCHRITTNAMEN. Der Name ist der Schluessel, unter dem `⏱ <Name> — <n>s`
+# im Protokoll steht — und damit die einzige Handhabe, die Dauer eines Schritts ueber
+# mehrere Naechte zu verfolgen. Mit dem Stichtag darin zerfiel ausgerechnet der GROESSTE
+# Schritt in lauter Einzelnamen: 13 von 61 verschiedenen Schrittnamen aus 14 Naechten
+# waren derselbe „Gold-Rebuild". Seine Entwicklung war damit unsichtbar — und genau die
+# will Schritt 4 des Effizienzplans messen. Der Stichtag steht jetzt in der AUSGABE.
+step "Gold-Rebuild"
+echo "  Stichtag: $TODAY"
 if ! $PY -m govisor.cli gold --country DE --as-of "$TODAY"; then
   echo "  ✖ Gold-Rebuild fehlgeschlagen — KEIN Supabase-Push (kein Halb-Stand nach oben)."
   echo "Abbruch nach ${SECONDS}s."

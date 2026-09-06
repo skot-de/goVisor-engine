@@ -7,22 +7,48 @@ bleiben, bis sie abgearbeitet sind.
 ## Der Ist-Zustand in drei Zahlen
 
 ```
-Nachtlauf           119 min, davon drei Schritte 62 %
+Nachtlauf           87–180 min werktags, 274 min sonntags (voller Neuaufbau, Absicht)
 Ausliefergut        4,03 GB in 116.260 Dateien (Upload-Auswahl)
 Listenabruf         47,2 MB roh / 5,6 MB gzip — bei JEDEM Aufruf neu
 ```
 
-### Nachtlauf, oberste Ebene (2026-09-04)
+### Nachtlauf, oberste Ebene — nachgemessen 2026-09-06
 
-| Schritt | min | Anteil |
+⚠ **Die Dauer schwankt stark, und eine einzelne Nacht taugt nicht als Grundlage.** Sechs
+Läufe:
+
+| Lauf | Tag | Dauer |
+|---|---|---:|
+| 2026-09-02 | Mi | 163 min |
+| 2026-09-03 | Do | **87 min** |
+| 2026-09-04 | Fr | 119 min |
+| 2026-09-05 | Sa | 180 min |
+| 2026-09-06 | **So** | **274 min** |
+
+Drei verschiedene Ursachen, keine davon ein Trend:
+
+- **Sonntag ist Absicht.** `extract_positions` liest dann alle Archive neu („Sonntag: alle
+  Archive neu lesen (kein Merker)"), die Dubletten-Firewall die volle Historie ab 2004.
+  Zusammen 174 der 274 min. An Werktagen kosten dieselben Schritte 17 s und 88 s.
+- **2026-09-05:** `simap.ch` hing 35 min und wurde von der Wache abgeschossen (seither
+  behoben — der Schritt arbeitete, er schwieg nur).
+- Der Rest ist Tagesschwankung der Netzabrufe.
+
+Median-Dauer je Schritt über sechs Läufe, absteigend:
+
+| Schritt | Median s | max s |
 |---|---:|---:|
-| Gold-Rebuild | 32,1 | 27 % |
-| Frontend-Daten exportieren | 26,7 | 22 % |
-| Healy-Hudson-Bekanntmachungen | 14,9 | 13 % |
-| DÖE-Ingest | 6,2 | 5 % |
-| übrige (13 Schritte) | 33,1 | 28 % |
+| Gold-Rebuild | 1.925 | 2.478 |
+| Frontend-Daten exportieren | 1.459 | 1.610 |
+| export_vorgaenge | 1.107 | 1.250 |
+| Leistungsverzeichnisse + Kriterienmatrizen | 919 | 5.308 (So) |
+| Healy-Hudson-Bekanntmachungen | 862 | 894 |
+| DÖE-Ingest | 374 | 1.346 |
 
-Im Frontend-Export dominiert **`export_vorgaenge` mit 18,4 min** — zwei Drittel des Schritts.
+⚠ **Bis zum 2026-09-06 liess sich diese Tabelle nicht automatisch bilden.** Der Schrittname
+trug den Stichtag (`Gold-Rebuild (Leads mit Stichtag 2026-09-04)`), und damit zerfiel
+ausgerechnet der grösste Schritt in Einzelnamen: 13 von 61 verschiedenen Schrittnamen aus 14
+Nächten waren derselbe Gold-Rebuild. Behoben; `tests/test_daily.py` hält es fest.
 
 ### Ausliefergut
 
