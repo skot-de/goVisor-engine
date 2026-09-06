@@ -146,3 +146,92 @@ def test_fristen_haben_einen_ladeweg_nicht_zwei():
     assert "leadFristenMitGrund" in q[i:i + 240], (
         "`leadFristen` liest wieder selbst — dann gibt es zwei Ladewege, und die Aufrufer "
         "waehlen zufaellig, welcher von beiden den Ausfall sieht.")
+
+
+# ---- Der iCal-Feed: die gefaehrlichste leere Antwort ---------------------------
+FEED = WEB / "app" / "api" / "calendar" / "[token]" / "route.ts"
+
+
+def test_der_kalender_feed_liefert_lieber_nichts_als_leer():
+    """⚠ EIN LEERER KALENDER IST DIE GEFAEHRLICHSTE ANTWORT DIESER ROUTE.
+
+    Ein Kalenderprogramm, das ein gueltiges, leeres ICS mit Status 200 bekommt, meldet
+    keinen Fehler — es loescht die Termine und schweigt. Der Nutzer merkt es, wenn er eine
+    Frist verpasst hat. Bei 503 behalten die Programme den letzten erfolgreichen Stand.
+
+    ⚠ Die Route beschreibt dieselbe Gefahr seit jeher fuer eine ANDERE Ursache („Direkt
+    gelesen bliebe der Kalender-Feed still leer — abonniert, aber ohne einen einzigen
+    Termin"). Behoben wurde damals der PFAD; der Fall „Speicher nicht erreichbar" fuehrte
+    weiterhin zum selben Ergebnis. Fallenkatalog A16.
+    """
+    q = FEED.read_text(encoding="utf-8")
+    assert "ladeMitGrund" in q, (
+        "Der Feed laedt ohne Grund — dann kann er einen Ausfall nicht von „keine Fristen\" "
+        "unterscheiden.")
+    # ⚠ VOKABELN GENUEGEN NICHT — Falle F10 aus dem Fallenkatalog, und ich bin ihr beim
+    # Schreiben dieses Tests sofort wieder aufgesessen: mit entferntem Abbruch blieb er
+    # gruen, weil `DATEN_STOERUNG` und `503` weiterhin in Kommentaren und Zuweisungen
+    # standen. Gesucht ist der ZUSAMMENHANG: ein Merker, der gesetzt wird, und eine 503,
+    # die auf ihn hoert.
+    import re as _re
+    assert _re.search(r"grund === DATEN_STOERUNG\) stoerung = true", q), (
+        "Kein Merker, der auf eine Speicherstoerung gesetzt wird.")
+    treffer = _re.search(r"if \(stoerung\)[^}]*503", q, _re.S)
+    assert treffer, (
+        "Der Merker fuehrt zu keiner 503 — dann geht der leere Kalender trotzdem hinaus.")
+
+
+def test_der_abbruch_steht_vor_dem_zusammenbau_des_kalenders():
+    """Die Reihenfolge entscheidet, ob die Antwort halb oder gar nicht kommt.
+
+    Ein halber Kalender ist schlimmer als gar keiner: er sieht vollstaendig aus. Schon EINE
+    nicht ladbare Branchendatei bedeutet, dass genau deren Fristen fehlen.
+    """
+    q = FEED.read_text(encoding="utf-8")
+    abbruch = q.index("if (stoerung)")
+    assert abbruch < q.index('"BEGIN:VCALENDAR"'), (
+        "Der Stoerungs-Abbruch steht NACH dem Zusammenbau — dann geht der halbe Kalender "
+        "trotzdem hinaus.")
+    assert abbruch > q.index("for (const b of BRANCHEN)"), (
+        "Der Abbruch steht VOR dem Sammeln — dann kann er gar keine Stoerung gesehen haben.")
+
+
+# ---- Sieben Zwischenspeicher, ein Fehler --------------------------------------
+DETAIL = WEB / "app" / "api" / "lead-detail" / "route.ts"
+GEMERKT = ("docSignals", "stellenprofil", "unterlagenstand", "bieterfragen",
+           "fristwiderspruch", "standardtext", "schwellen")
+
+
+def test_kein_ausfall_brennt_sich_in_die_detailansicht_ein():
+    """⚠ DIESELBE FALLE WIE IN `/api/branchen`, NUR SIEBENFACH.
+
+    Jeder dieser Zwischenspeicher stand als Modulvariable da und fiel bei einem Fehlschlag
+    auf `{}`. Die Wache davor lautet `if (x) return x;` — und `{}` ist wahr. War der
+    Datenspeicher beim ERSTEN Aufruf einer Instanz nicht erreichbar, blieben sieben
+    Abschnitte der Detailansicht bis zum naechsten Neustart leer: Dokumentsignale,
+    Vergabestellen-Profil, Unterlagenstand, Bieterfragen, Fristwiderspruch,
+    Standardtext-Anteil, Schwellenwerte.
+
+    Ein FEHLENDES Ergebnis darf weiter gemerkt werden — dass es die Datei nicht gibt, ist
+    eine Auskunft. Nur die Stoerung nicht. Fallenkatalog A16.
+    """
+    q = DETAIL.read_text(encoding="utf-8")
+    assert "async function ohneEinbrennen" in q, (
+        "Der gemeinsame Helfer fehlt — dann steht die Regel siebenmal einzeln da und "
+        "laeuft beim ersten Nachziehen auseinander.")
+    for name in GEMERKT:
+        assert f"if (merken) {name} = wert;" in q, (
+            f"`{name}` wird wieder unbedingt gemerkt — eine Stoerung brennt sich dann "
+            f"bis zum Neustart ein.")
+    assert "grund !== DATEN_STOERUNG" in q, "der Helfer unterscheidet nicht mehr"
+
+
+def test_die_hauptdatei_der_detailansicht_bleibt_streng():
+    """Bei der Hauptdatei ist Leere kein gueltiger Zustand.
+
+    Ohne `detail-<branche>.json` gibt es keine Detailansicht — dort ist 503 richtig, und das
+    war schon so. Der Unterschied zu den sieben Nebendateien ist Absicht: die duerfen fehlen.
+    """
+    q = DETAIL.read_text(encoding="utf-8")
+    assert 'if (!raw) throw new Error("keine Detaildaten")' in q
+    assert '{ status: 503 }' in q

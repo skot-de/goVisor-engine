@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { loadDataFile } from "@/lib/dataSource";
+import { loadDataFile, ladeMitGrund, DATEN_STOERUNG } from "@/lib/dataSource";
 import { getTier } from "@/lib/tier";
 import { redactDetail } from "@/lib/redact";
 
@@ -68,12 +68,35 @@ type DocSignals = {
   // Zeile darueber nicht geraten ist. Kommt als JSON-Text aus dem Parquet.
   evidence: string | null;
 };
+/* Einmal laden und behalten — aber einen AUSFALL nicht einbrennen.
+ *
+ * ⚠ SIEBEN ZWISCHENSPEICHER HATTEN DENSELBEN FEHLER. Jeder stand als Modulvariable da und
+ * fiel bei einem Fehlschlag auf `{}`; die Wache davor lautet `if (x) return x;` — und `{}`
+ * ist wahr. War der Datenspeicher beim ERSTEN Aufruf einer Instanz nicht erreichbar, blieben
+ * sieben Abschnitte der Detailansicht bis zum naechsten Neustart leer: Dokumentsignale,
+ * Vergabestellen-Profil, Unterlagenstand, Bieterfragen, Fristwiderspruch, Standardtext-
+ * Anteil und Schwellenwerte. Aus einer voruebergehenden Stoerung wurde eine dauerhafte
+ * Falschauskunft — dieselbe Falle wie in `/api/branchen`, nur siebenfach.
+ *
+ * Ein FEHLENDES Ergebnis wird weiter gemerkt: dass es die Datei nicht gibt, ist eine
+ * Auskunft und aendert sich nicht im Minutentakt. Nur die Stoerung nicht.
+ */
+async function ohneEinbrennen<T>(
+  datei: string, bauen: (roh: string | null) => T,
+): Promise<{ wert: T; merken: boolean }> {
+  const { text, grund } = await ladeMitGrund(datei);
+  let wert: T;
+  try { wert = bauen(text); } catch { wert = bauen(null); }
+  return { wert, merken: grund !== DATEN_STOERUNG };
+}
+
 let docSignals: Record<string, DocSignals> | null = null;
 async function loadDocSignals(): Promise<Record<string, DocSignals>> {
   if (docSignals) return docSignals;
-  try { const raw = await loadDataFile("doc-signals.json"); docSignals = raw ? JSON.parse(raw) : {}; }
-  catch { docSignals = {}; }
-  return docSignals!;
+  const { wert, merken } = await ohneEinbrennen(
+    "doc-signals.json", (r) => (r ? JSON.parse(r) as Record<string, DocSignals> : {}));
+  if (merken) docSignals = wert;
+  return wert;
 }
 
 /* Fingerabdruck der Vergabestelle (Kennzahl 3): was verlangt DIESE Stelle fast immer, das
@@ -89,9 +112,10 @@ type Stellenprofil = { markt: Record<string, number>;
 let stellenprofil: Stellenprofil | null = null;
 async function loadStellenprofil(): Promise<Stellenprofil> {
   if (stellenprofil) return stellenprofil;
-  try { const roh = await loadDataFile("stellenprofil.json"); stellenprofil = roh ? JSON.parse(roh) : { markt: {}, stellen: {} }; }
-  catch { stellenprofil = { markt: {}, stellen: {} }; }
-  return stellenprofil!;
+  const { wert, merken } = await ohneEinbrennen(
+    "stellenprofil.json", (r) => (r ? JSON.parse(r) as Stellenprofil : { markt: {}, stellen: {} }));
+  if (merken) stellenprofil = wert;
+  return wert;
 }
 
 /* Aenderungen an den Vergabeunterlagen. Die Stelle stellt eine neue Fassung ein; wer auf der
@@ -112,9 +136,10 @@ type Unterlagenstand = { version: number; vorige: number; nVersionen: number;
 let unterlagenstand: Record<string, Unterlagenstand> | null = null;
 async function loadUnterlagenstand(): Promise<Record<string, Unterlagenstand>> {
   if (unterlagenstand) return unterlagenstand;
-  try { const roh = await loadDataFile("unterlagenstand.json"); unterlagenstand = roh ? JSON.parse(roh) : {}; }
-  catch { unterlagenstand = {}; }
-  return unterlagenstand!;
+  const { wert, merken } = await ohneEinbrennen(
+    "unterlagenstand.json", (r) => (r ? JSON.parse(r) as Record<string, Unterlagenstand> : {}));
+  if (merken) unterlagenstand = wert;
+  return wert;
 }
 
 /* Bieterfragen und Antworten. Waehrend der Angebotsfrist fragen Bewerber die Vergabestelle,
@@ -136,9 +161,10 @@ type Bieterfragen = { n: number; dateien: string[]; nDateien: number;
 let bieterfragen: Record<string, Bieterfragen> | null = null;
 async function loadBieterfragen(): Promise<Record<string, Bieterfragen>> {
   if (bieterfragen) return bieterfragen;
-  try { const roh = await loadDataFile("bieterfragen.json"); bieterfragen = roh ? JSON.parse(roh) : {}; }
-  catch { bieterfragen = {}; }
-  return bieterfragen!;
+  const { wert, merken } = await ohneEinbrennen(
+    "bieterfragen.json", (r) => (r ? JSON.parse(r) as Record<string, Bieterfragen> : {}));
+  if (merken) bieterfragen = wert;
+  return wert;
 }
 
 /* Widerspruch bei der Angebotsfrist (Kennzahl 9). Die Bekanntmachung sagt „02.09.", die
@@ -155,9 +181,10 @@ type Fristwiderspruch = { dok: string; bek: string; tage: number; beleg: string;
 let fristwiderspruch: Record<string, Fristwiderspruch> | null = null;
 async function loadFristwiderspruch(): Promise<Record<string, Fristwiderspruch>> {
   if (fristwiderspruch) return fristwiderspruch;
-  try { const roh = await loadDataFile("fristwiderspruch.json"); fristwiderspruch = roh ? JSON.parse(roh) : {}; }
-  catch { fristwiderspruch = {}; }
-  return fristwiderspruch!;
+  const { wert, merken } = await ohneEinbrennen(
+    "fristwiderspruch.json", (r) => (r ? JSON.parse(r) as Record<string, Fristwiderspruch> : {}));
+  if (merken) fristwiderspruch = wert;
+  return wert;
 }
 
 /* Standardtext-Anteil (Kennzahl 8): wie viel dieser Unterlagen steht wortgleich auch in
@@ -175,9 +202,10 @@ type Standardtext = { a: number; median: number; hoch: number };
 let standardtext: Record<string, Standardtext> | null = null;
 async function loadStandardtext(): Promise<Record<string, Standardtext>> {
   if (standardtext) return standardtext;
-  try { const roh = await loadDataFile("standardtext.json"); standardtext = roh ? (JSON.parse(roh).leads || {}) : {}; }
-  catch { standardtext = {}; }
-  return standardtext!;
+  const { wert, merken } = await ohneEinbrennen(
+    "standardtext.json", (r) => (r ? (JSON.parse(r).leads || {}) as Record<string, Standardtext> : {}));
+  if (merken) standardtext = wert;
+  return wert;
 }
 
 /* Bezifferte Schwellen im Vergleich (Kennzahl 6). „Berufshaftpflicht 5 Mio. EUR fuer
@@ -204,9 +232,10 @@ type Schwellen = {
 let schwellen: Schwellen | null = null;
 async function loadSchwellen(): Promise<Schwellen | null> {
   if (schwellen) return schwellen;
-  try { const roh = await loadDataFile("schwellen.json"); schwellen = roh ? JSON.parse(roh) : null; }
-  catch { schwellen = null; }
-  return schwellen;
+  const { wert, merken } = await ohneEinbrennen(
+    "schwellen.json", (r) => (r ? JSON.parse(r) as Schwellen : null));
+  if (merken) schwellen = wert;
+  return wert;
 }
 
 /* Umfang der Angebotsarbeit (Kennzahlen 4 und 5): das groesste Formular zum Ausfuellen und

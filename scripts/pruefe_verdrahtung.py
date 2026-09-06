@@ -604,7 +604,12 @@ def _leser_muster() -> list[re.Pattern]:
                 or "node_modules" in datei.parts):
             continue
         text = datei.read_text(encoding="utf-8", errors="replace")
-        for roh in re.findall(r'loadDataFile\(\s*[`"\']([^`"\']+)[`"\']', text):
+        # ⚠ BEIDE LADEFUNKTIONEN. Seit dem 2026-09-04 gibt es `ladeMitGrund`, das neben dem
+        # Text auch sagt, WARUM nichts kam. Die Sonde kannte nur `loadDataFile` — und
+        # meldete nach der Umstellung von `/api/lead-detail` und dem iCal-Feed prompt
+        # gelesene Verzeichnisse als tote Ausliefergueter. Aufgefallen ist es nur, weil
+        # diese Sonde einen Selbsttest hat.
+        for roh in re.findall(r'(?:loadDataFile|ladeMitGrund)\(\s*[`"\']([^`"\']+)[`"\']', text):
             muster.append(re.compile("^" + re.sub(r"\\\$\\\{[^}]*\\\}", "[^/]+",
                                                   re.escape(roh)) + "$"))
         for roh in re.findall(r'[`"\']([A-Za-z0-9_./-]+\.(?:json|csv))[`"\']', text):

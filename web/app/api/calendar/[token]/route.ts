@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { loadDataFile } from "@/lib/dataSource";
+import { ladeMitGrund, DATEN_STOERUNG } from "@/lib/dataSource";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { bremse } from "@/lib/rateLimit";
 // ⚠ Maskieren und Falten liegen in Plain JS, damit `node` sie laden und
@@ -51,6 +51,21 @@ export async function GET(req: Request, { params }: { params: Promise<{ token: s
   // manchen Nutzern sichtbar und entsprechend schwer zu finden.
   const stamp = new Date().toISOString().replace(/[-:]/g, "").replace(/\.\d{3}/, "");
   const events: string[] = [];
+  /* ⚠ EIN LEERER KALENDER IST DIE GEFAEHRLICHSTE ANTWORT, DIE DIESE ROUTE GEBEN KANN.
+   *
+   * Ein Kalenderprogramm, das ein gueltiges, leeres ICS mit Status 200 bekommt, meldet
+   * keinen Fehler — es loescht die Termine und schweigt. Der Nutzer merkt es, wenn er eine
+   * Frist verpasst hat. Bei 503 behalten die Programme dagegen den letzten erfolgreichen
+   * Stand und versuchen es spaeter wieder.
+   *
+   * Der Absatz oben beschreibt dieselbe Gefahr fuer eine andere Ursache („Direkt gelesen
+   * bliebe der Kalender-Feed still leer"). Behoben wurde damals der PFAD; der Fall
+   * „Speicher nicht erreichbar" fuehrte weiterhin zum selben Ergebnis.
+   *
+   * ⚠ Schon EINE Stoerung genuegt. Laedt sechs von sieben Branchendateien und die siebte
+   * nicht, fehlen genau die Fristen dieser Branche — ein halber Kalender ist schlimmer als
+   * gar keiner, weil er vollstaendig aussieht. */
+  let stoerung = false;
   for (const b of BRANCHEN) {
     if (!want.size) break;
     let arr: Array<{ id: string; titel?: string; buyer?: string; frist?: { date?: string | null; src?: string } | null }>;
@@ -58,7 +73,8 @@ export async function GET(req: Request, { params }: { params: Promise<{ token: s
       // ⚠ Über den Daten-Loader, nicht von der Platte: auf einem Deployment liegt
       // web/data im Objektspeicher (DATA_BASE_URL). Direkt gelesen bliebe der
       // Kalender-Feed still leer — abonniert, aber ohne einen einzigen Termin.
-      const roh = await loadDataFile(`leads-${b}.json`);
+      const { text: roh, grund } = await ladeMitGrund(`leads-${b}.json`);
+      if (grund === DATEN_STOERUNG) stoerung = true;
       if (!roh) continue;
       arr = JSON.parse(roh);
     } catch { continue; }
@@ -96,7 +112,8 @@ export async function GET(req: Request, { params }: { params: Promise<{ token: s
       art: string; datum: string; label: string; quelle: string;
       beleg?: string | null; konflikt?: boolean; abweichung_tage?: number }> } | null = null;
     try {
-      const roh = await loadDataFile(`kalender/${sicher}.json`);
+      const { text: roh, grund } = await ladeMitGrund(`kalender/${sicher}.json`);
+      if (grund === DATEN_STOERUNG) stoerung = true;
       if (roh) eintrag = JSON.parse(roh);
     } catch { continue; }   // kein Kalender fuer diesen Lead ist kein Fehler
     for (const t of eintrag?.termine ?? []) {
@@ -117,6 +134,12 @@ export async function GET(req: Request, { params }: { params: Promise<{ token: s
         "END:VEVENT",
       ].map(falte).join("\r\n"));
     }
+  }
+
+  // Lieber gar keine Antwort als eine unvollstaendige, die vollstaendig aussieht.
+  if (stoerung) {
+    return new NextResponse("Fristen gerade nicht abrufbar — bitte spaeter erneut.",
+                            { status: 503, headers: { "retry-after": "900" } });
   }
 
   const ics = [
