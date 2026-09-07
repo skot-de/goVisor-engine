@@ -14,38 +14,43 @@ Die Domain sagt, **wer** verlinkt; sie sagt nicht, **ob etwas dahintersteht**.
 
 ## 2. Das Ergebnis
 
+⚠ **Stand nach dem Neulauf** (§5). Wer diese Tabelle mit einer älteren Fassung vergleicht:
+DE, ES, SE, AT und RO stehen hier anders, weil sie vorher mit den kaputten Mustern aus §4
+gemessen waren — AT mit 33 Links statt 1.130, RO mit 6 statt 3.058.
+
 | Land | tief | Startseite | ohne Verfahren |
 |---|---:|---:|---:|
-| DE | 21.769 | 300 | 1,4 % |
-| **PL** | 9.086 | 7.439 | **45,0 %** ⚠ |
+| DE | 21.920 | 748 | 3,3 % |
 | **FR** | 10.035 | 5.071 | **33,6 %** ⚠ |
-| **ES** | 5.586 | 1.533 | **21,5 %** ⚠ |
-| **IT** | 3.125 | 2.270 | **42,1 %** ⚠ |
-| **CZ** | 1.804 | 2.970 | **62,2 %** ⚠ |
+| **PL** | 9.086 | 7.439 | **45,0 %** ⚠ |
+| **ES** | 6.119 | 1.533 | **20,0 %** ⚠ |
+| SE | 3.669 | 4 | 0,1 % |
 | BE | 3.487 | 91 | 2,5 % |
-| SE | 2.820 | 4 | 0,1 % |
+| **IT** | 3.125 | 2.270 | **42,1 %** ⚠ |
+| RO | 3.058 | 543 | 15,1 % |
 | NL | 2.645 | 19 | 0,7 % |
-| FI | 2.174 | 63 | 2,8 % |
 | PT | 2.199 | 33 | 1,5 % |
+| FI | 2.174 | 63 | 2,8 % |
 | LT | 2.168 | 8 | 0,4 % |
 | **HR** | 2.062 | 0 | **0,0 %** |
 | **BG** | 2.056 | 1 | **0,0 %** |
 | NO | 1.999 | 12 | 0,6 % |
 | **SI** | 1.875 | 0 | **0,0 %** |
-| CH | 1.717 | 0 | 0,0 % |
-| IE | 1.659 | 27 | 1,6 % |
+| **CZ** | 1.804 | 2.970 | **62,2 %** ⚠ |
+| **CH** | 1.717 | 0 | **0,0 %** |
 | **LV** | 1.678 | 0 | **0,0 %** |
+| IE | 1.659 | 27 | 1,6 % |
 | **HU** | 1.164 | 0 | **0,0 %** |
+| **AT** | 1.130 | 519 | **31,5 %** ⚠ |
 | SK | 1.069 | 5 | 0,5 % |
+| EE | 948 | 3 | 0,3 % |
 | DK | 871 | 118 | 11,9 % |
 | **GR** | 567 | 391 | **40,8 %** ⚠ |
-| EE | 948 | 3 | 0,3 % |
 | LU | 521 | 8 | 1,5 % |
 | MT | 348 | 2 | 0,6 % |
 | **CY** | 287 | 0 | **0,0 %** |
-| **AT** | 33 | 107 | **76,4 %** ⚠ |
 | IS | 110 | 24 | 17,9 % |
-| **RO** | 6 | 6 | **50,0 %** ⚠ |
+| **LI** | 44 | 0 | **0,0 %** |
 
 **Tschechien ist der auffälligste Fall: 62,2 %.** Der Grund steht in den Adressen —
 `nen.nipez.cz/profil/MVCR` ist ein **Käuferprofil**, nicht ein Verfahren. Tschechische
@@ -77,7 +82,7 @@ Was die Reparaturen bewirkt haben:
 |---|---:|---:|
 | EE | 99,8 % ohne Verfahren | **0,3 %** |
 | CH | 100,0 % | **0,0 %** |
-| ES | 87,6 % | **21,5 %** |
+| ES | 87,6 % | **21,5 %** *(heute 20,0 % — der Musterfix aus §4 kam danach)* |
 | DK | 28,4 % | 11,9 % |
 | HR | 0 % tief | **100 % tief** |
 
@@ -138,29 +143,23 @@ Randnotiz abgelegt hatte („RO 44 Links — eher ein Problem unserer Extraktion
 das. Sie stand da, richtig benannt, und wurde nicht verfolgt, bis Sven nachfragte.
 **Eine notierte Auffälligkeit ist keine erledigte.**
 
-## 5. Stand des Neulaufs (2026-09-03)
+## 5. Der Neulauf ist durch (Stand 2026-09-07)
 
-Die reparierten Skripte sind **geprüft, aber die kanonischen Dateien sind noch alt.**
+Beide Läufe sind gelaufen, `data/sondierung/_tief/` und `linktiefe.json` tragen die
+reparierten Muster. Die Tabelle in §2 und die Spalten in
+[`00-uebersicht.md`](00-uebersicht.md) stehen auf diesen Daten.
 
-Ein Probelauf über **einen** Monat (Ausgabe in den Notizordner, nicht nach `data/`) bestätigt
-die Reparatur:
-
-| | alt | Probelauf |
+| | vorher | jetzt |
 |---|---:|---:|
-| Länder | 30 | **31** (LI kam dazu) |
-| RO | 6 tief / 6 flach | **1.067 / 189** → 15,0 % |
-| AT | 33 / 107 | **380 / 199** → 34,4 % |
-| CZ | — | 60,5 % ⚠ |
-| GR | — | 41,0 % ⚠ |
+| Länder in `linktiefe.json` | 30 | **31** (LI kam dazu) |
+| RO | 6 tief / 6 flach → 50,0 % | **3.058 / 543** → 15,1 % |
+| AT | 33 / 107 → 76,4 % | **1.130 / 519** → 31,5 % |
+| DE | 21.769 / 300 → 1,4 % | 21.920 / **748** → 3,3 % |
+| ES | 5.586 / 1.533 → 21,5 % | **6.119** / 1.533 → 20,0 % |
+| SE | 2.820 / 4 | **3.669** / 4 |
 
-⚠ **`data/sondierung/_tief/` und `linktiefe.json` stehen weiterhin auf den alten Mustern.**
-Der Neulauf schreibt nach `data/` und wurde **nicht gestartet**, weil `scripts/laeuft_was.sh`
-laufende Prozesse meldet (Healy-Hudson-Abrufer, `analyze_docs`, zwei Arbeiter der zweiten
-Sitzung).
-
-**Zu tun, sobald die Bahn frei ist:**
-```
-scripts/laeuft_was.sh && python3 scripts/sondiere_tief.py --monate 12
-scripts/laeuft_was.sh && python3 scripts/miss_linktiefe.py --monate 3
-```
-Danach stimmt auch die Spalte „EU-Anteil" in [`00-uebersicht.md`](00-uebersicht.md).
+⚠ **Die Lehre aus der Nachprüfung am 2026-09-07:** dieser Abschnitt stand noch Tage nach
+dem Lauf auf *„wurde nicht gestartet"*, und die Tabelle in §2 trug die alten Zahlen —
+während `00-uebersicht.md` längst die neuen zeigte. Zwei Dokumente derselben Messung
+widersprachen sich, und keins war als veraltet erkennbar. **Ein Neulauf ist erst fertig,
+wenn die Dokumente mitgezogen sind, die ihn ankündigen.**

@@ -1,4 +1,4 @@
-# Sondierung: Übersicht über alle 30 TED-Länder
+# Sondierung: Übersicht über alle 31 TED-Länder
 
 > ⚠ **SONDIERT, NICHT AUFGENOMMEN.** Was hier „offen" heisst, ist gemessen — aber kein
 > einziges dieser Länder hat einen Connector, eine Tabelle oder ein Kapitel in
@@ -22,10 +22,12 @@ und Liechtenstein waren mit den alten Mustern unsichtbar oder untermessen.
 ⚠ **Was „erreichbar" heisst:** ohne Anmeldung, ohne CAPTCHA, ohne robots-Verstoss belegt
 abgerufen. Nicht: „gebaut". Gebaut ist davon nur Deutschland.
 
-⚠ Und **die 64,0 % sind kein technisches Urteil.** Der grösste Einzelposten ist Frankreich
-(13,2 % der EU, 0 % erreichbar) — dort ist die Grenze CAPTCHA und Anmeldung, nicht Können.
-Dahinter Polen (15,2 %, nur teilweise) und Deutschland (20,4 %, 32 % — das einzige gebaute
-Land).
+⚠ Und **die 65,2 % sind kein technisches Urteil.** Wer sie aufteilt, findet an der Spitze
+nicht das schwierigste, sondern das grösste Land: **Deutschland trägt 13,8 Punkte** bei —
+das einzige gebaute Land, und trotzdem sind zwei Drittel seiner Links zu. Danach
+**Frankreich mit 13,2** (0 % erreichbar, Grenze ist CAPTCHA und Anmeldung, nicht Können)
+und **Polen mit 12,3**. ⚠ Frankreich ist das grösste **ganz** geschlossene Land, nicht der
+grösste Posten — hier stand bis zum 2026-09-07 beides durcheinander.
 
 ## 2. Alle Länder
 
@@ -98,6 +100,27 @@ den Faktor der durchschnittlichen Dateizahl daneben.
 | MT · FI · CY | | Vergabe | 0,5–1,1 | 6–7 | je ~1 |
 | **LV** | 6.366 | Dokumenteintrag | 0,04 | 3 | <1 |
 | | | | | **Summe** | **≈ 448 GB/Jahr** |
+
+### ⚠ Nachgeprüft am 2026-09-07: die Größenstichprobe ist älter als die Messung daneben
+
+Die Tabelle oben entstand **vor** der Haltbarkeitsmatrix
+([haltbarkeit](haltbarkeit.md) §14). Die hat für drei Länder eigene Größen mitgemessen —
+und sie widersprechen:
+
+| Land | Tabelle oben | `aufbewahrung.json` | GB/Jahr damit |
+|---|---|---|---:|
+| **EE** | 19,3 MB aus **einer** Vergabe → 67 GB | 15 Proben, Median **1,4**, Mittel **5,0** | **5 bis 17** statt 67 |
+| **BG** | 9,5 MB (n=29) → 82 GB | 14 Proben, Median **1,1**, Mittel **4,8** | **10 bis 42** statt 82 |
+| **RO** | Median 13,2 / Mittel 76,7, grösste 374,9 MB | 6 Proben, Median **12,1** / Mittel **106,5**, grösste **557,0** | 142 bis **1.245** |
+
+⚠ **Estland ist der Fall, der weh tut.** Es steht als drittgrösster Posten in der Tabelle,
+und zwar allein wegen der **einen** 19,3-MB-Vergabe der Eesti Pank. Fünfzehn spätere Proben
+sagen: das war der Ausreisser, nicht der Normalfall.
+
+**Was das an der Aussage ändert: nichts an der Größenordnung, viel an der Spitze.** EE und
+BG schrumpfen zusammen um rund 120 GB, Rumänien wächst am oberen Rand auf über ein Terabyte
+allein. Die Spanne 0,8 bis 2 TB hält — sie wird nur noch stärker von **einem** Land
+getragen.
 
 ### ⚠ Was diese Zahl nicht ist
 

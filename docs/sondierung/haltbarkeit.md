@@ -234,6 +234,9 @@ zehn geprüften **Ein-Plattform-Länder** — dort lagen 14 Monate alte Unterlag
 Möglichkeit**. Unser Bestand — **244 GB, 10.165 Vergabe-ZIPs, alle 2026 geholt** — existiert
 nur, weil er live abgegriffen wurde. Nachholen wäre unmöglich.
 
+*(Nachgemessen am 2026-09-07: **255 GB, 10.653 ZIPs** — in vier Tagen 488 dazu. Die Zahl
+wächst täglich; sie ist ein Stand, keine Konstante.)*
+
 ## 13. Die berichtigte Regel
 
 **Aufbewahrung ist Plattformsache, nicht Ländersache — und sie schwankt extrem.**
@@ -272,7 +275,13 @@ eine Vergabe von heute, eine von vor einem Jahr, eine von vor drei Jahren.
 | **PT** | 3/3 | 1/3 | 2/3 | 1/3 | **0/3** |
 | **LU** | **0/3** | **0/3** | **0/3** | **0/3** | — |
 | **DE** | **0/3** | **0/3** | **0/3** | **0/3** | **0/3** |
-| NL | — | — | — | — | — (Sonde fehlt) |
+| NL | ⚠ | ⚠ | ⚠ | ⚠ | ⚠ **15× dieselbe Seite** |
+
+⚠ **Niederlande, berichtigt am 2026-09-07.** Hier stand „Sonde fehlt" — das stimmt nicht.
+Die Sonde lief, und zwar in allen fünfzehn Zellen: **HTTP 200, jedes Mal exakt 72.303
+Bytes**. Sie hat also nie ein Dokument gesehen, sondern immer dieselbe Rahmenseite.
+**Eine Sonde, die überall dasselbe zurückgibt, misst nichts** — und das ist etwas anderes
+als eine fehlende Sonde: sie sieht wie ein Ergebnis aus.
 
 ## 15. Drei Gruppen
 

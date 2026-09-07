@@ -17,10 +17,15 @@ AcinGov, 90 Dateien aus neun Vergaben bei Vortal.
 |---|---:|---|
 | **`community.vortal.biz`** | **48,6 %** (4.585) | ✅ offen, dreistufige Kette |
 | **`acingov.pt`** | **40,2 %** (3.791) | ✅ offen, ein einziger GET |
-| `anogov.com` + `compraspt.com` (dieselbe Software) | 9,3 % | 🟡 Liste offen, Download per JSF-POST |
-| Rest (21 Domains) | 1,9 % | ungeprüft |
+| `anogov.com` + `compraspt.com` (dieselbe Software) | 8,8 % | 🟡 Liste offen, Download per JSF-POST |
+| Rest (21 Domains) | 2,4 % | ungeprüft |
 
 25 Domains insgesamt, 9.435 Nennungen über zwölf Monate.
+
+⚠ **Berichtigt am 2026-09-07.** Hier stand 9,3 % / 1,9 %. Nachgezählt sind es **8,8 %**:
+`anogov.com` 8,31 % + `compraspt.com` 0,48 % + `www2.compraspt.com` 0,06 % + `anogov.pt`
+0,01 %. Auf 9,3 % kommt nur, wer `comprasnasaude.pt` (0,43 %) mitzählt — **dass das
+dieselbe Software ist, war nie belegt.** Der Rest ist entsprechend 2,4 % statt 1,9 %.
 
 ## 2. ✅ AcinGov (40,2 %) — der einfachste Fall der Sondierung
 
