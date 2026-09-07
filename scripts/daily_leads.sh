@@ -1505,6 +1505,26 @@ $PY scripts/pruefe_nuts_vorgabe.py \
 # und zwar an dem Tag, an dem geschrieben wurde. Warnung, kein Abbruch — wie die uebrigen.
 $PY scripts/pruefe_sondierung.py \
   || echo "  → Sondierungs-Waechter meldet Befunde. Details: python3 scripts/pruefe_sondierung.py"
+
+# ── ABDECKUNG: FEHLT UNS EIN GANZER MONAT? ───────────────────────────────────────────────
+#
+# Am 2026-09-07 fiel auf, dass Luxemburg fuer Juli NULL Bekanntmachungen hatte und fuer
+# August 16 statt ~250. Die Monatspakete waren beim Onboarding einmal von Hand geladen
+# worden, danach lief nur `fetch_ted_live.py` — und der kam fuer LU erst Ende August dazu.
+# Dazwischen lag ein Loch von zwei Monaten, in dem auch drei bereits geholte
+# Vergabeunterlagen keine Ausschreibung fanden.
+#
+# ⚠ DREI WAECHTER LIEFEN JEDE NACHT UND SCHWIEGEN. `pruefe_verdrahtung` misst das ALTER von
+# Dateien, nicht ihr Fehlen. `pruefe_sondierung` trennt sondiert von aufgenommen, zaehlt
+# aber nichts. Und `govisor verify` prueft BRONZE, das seit der Umstellung auf den
+# Live-Abruf in JEDEM Land im Juni endet — es meldet seitdem fuer alle Folgemonate „FEHLT",
+# auch fuer Deutschland, wo nichts fehlt.
+#
+# Diese Sonde fragt Silber gegen die TED-API, und zwar nur die TED-Herkunft: die anderen
+# Quellen (DTVP, DOeE, NetServer, atverg, simap) wuerden ein Loch sonst zudecken.
+# Warnung, kein Abbruch — wie die uebrigen.
+$PY scripts/pruefe_abdeckung.py \
+  || echo "  → Abdeckungs-Waechter meldet Befunde. Details: python3 scripts/pruefe_abdeckung.py"
 $PY scripts/pruefe_sondierungszahlen.py \
   || echo "  → Sondierungszahlen weichen von den Messdateien ab. Details: python3 scripts/pruefe_sondierungszahlen.py --alle"
 

@@ -34,9 +34,20 @@ AKTIV: tuple[str, ...] = ("DE", "AT", "CH", "LU")
 # Angefangen und liegengeblieben — MIT Begründung, damit „fehlt" nicht wie „vergessen"
 # aussieht. Wer eines davon aufnimmt, verschiebt es nach AKTIV und arbeitet
 # `docs/laender/15-eintragungsliste.md` ab.
+#
+# ⚠ DIESER EINTRAG IST KEINE FORMALIE. Beide standen hier, während ihre Gold-Tabellen
+# trotzdem jede Nacht neu entstanden — `build_vorgaenge` nahm seine Länder aus SILBER
+# statt aus dieser Liste. Ein Land aus `AKTIV` zu nehmen genügt also nicht, solange
+# irgendein Schritt den Bestand fragt statt die Entscheidung.
 UNVOLLSTAENDIG: dict[str, str] = {
-    "PL": "326.485 Sätze in Silber, kein Gold. KEINE Entscheidung, sondern eine Baustelle.",
-    "EU": "Sammelablage für Bekanntmachungen ohne eindeutiges Land — kein Land, sondern ein Rest.",
+    "PL": "Am 2026-09-07 zurückgebaut: Gold gelöscht, Silber (1,9 GB, 326.485 Sätze) bleibt. "
+          "Vorher war es eine Baustelle, die wie ein Land aussah — `build_vorgaenge` legte "
+          "aus Silber heraus Gold-Tabellen an, und damit galt PL in Sonden, Exporten und "
+          "der Vorgangsakte als aufgenommen. Wer es aufnehmen will, fängt bei der "
+          "Gold-Kette an; die Rohdaten liegen bereit.",
+    "EU": "Am 2026-09-07 zurückgebaut, gleiche Geschichte. Kein Land, sondern die "
+          "Sammelablage für Bekanntmachungen ohne eindeutiges Land — 135 Stück. Sie hier "
+          "als Land zu führen hat mehr Verwirrung gestiftet als Nutzen gebracht.",
 }
 
 

@@ -97,12 +97,23 @@ def test_titel_kommt_aus_der_ausschreibung():
 
 # ── EU-weit ─────────────────────────────────────────────────────────────────────────────
 
-def test_laender_kommen_vom_bestand():
+def test_laender_kommen_aus_der_entscheidung_nicht_vom_bestand():
+    """⚠ HIER STAND DAS GEGENTEIL — und die alte Regel war die Ursache eines echten
+    Fehlers. „Aus dem Bestand" heisst: aus Silber, und dort liegen auch Länder, die nur
+    SONDIERT sind. Dieser Bauer legte für sie Gold-Tabellen an, und damit sahen PL und EU
+    aus wie aufgenommene Länder — in Sonden, in Exporten und in der Vorgangsakte. Der
+    Tageslauf beschreibt den Vorfall selbst: „Niemand hatte Polen aufgenommen — es sah nur
+    so aus."
+
+    Welche Länder gebaut werden, ist eine ENTSCHEIDUNG und steht in `govisor/laender.py`.
+    Der Bestand darf nur noch begrenzen (kein Silber → nichts zu bauen), nie erweitern.
+    """
     fn = next(n for n in ast.walk(ast.parse(QUELLE))
               if isinstance(n, ast.FunctionDef) and n.name == "_laender")
     text = ast.get_source_segment(QUELLE, fn)
-    assert "iterdir()" in text
-    assert not re.search(r'"(DE|AT|CH|PL)"', text), "harte Länderliste"
+    assert "AKTIV" in text, "die Laenderliste kommt wieder aus dem Bestand"
+    assert not re.search(r'"(DE|AT|CH|LU|PL)"', text), "harte Länderliste im Bauer"
+    assert "from govisor.laender import AKTIV" in QUELLE
 
 
 def test_kein_de_fester_pfad():
@@ -111,14 +122,24 @@ def test_kein_de_fester_pfad():
     assert 'land' in _koerper("baue")
 
 
-def test_alle_laender_haben_die_tabelle():
+def test_jedes_gebaute_land_hat_die_tabelle():
+    """⚠ Geprüft wird gegen `AKTIV`, NICHT gegen den Silberbestand. Vorher stand hier
+    „alle Länder in Silber" — und damit verlangte der Test genau die Tabellen, deren
+    Entstehen der eigentliche Fehler war: PL und EU bekamen Gold, ohne je aufgenommen zu
+    sein. Ein Test, der einen Defekt einfordert, hält ihn fest."""
+    from govisor.laender import AKTIV
     silber = WURZEL / "data" / "silver"
     if not silber.is_dir():
         return
-    laender = [p.name for p in silber.iterdir() if p.is_dir() and (p / "notices").is_dir()]
-    fehlen = [l for l in laender
-              if not (WURZEL / "data" / "gold" / l / "vorgaenge.parquet").exists()]
+    fehlen = [l for l in AKTIV
+              if (silber / l / "notices").is_dir()
+              and not (WURZEL / "data" / "gold" / l / "vorgaenge.parquet").exists()]
     assert not fehlen, f"ohne Vorgänge: {fehlen}"
+    # Und die Gegenrichtung: nichts Gebautes ausserhalb der Entscheidung.
+    gold = WURZEL / "data" / "gold"
+    zuviel = [p.name for p in gold.iterdir()
+              if p.is_dir() and (p / "vorgaenge.parquet").exists() and p.name not in AKTIV]
+    assert not zuviel, f"Vorgänge für nicht aufgenommene Länder: {zuviel}"
 
 
 # ── die Ketten ──────────────────────────────────────────────────────────────────────────

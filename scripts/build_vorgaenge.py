@@ -66,6 +66,7 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 # `test_skripte_finden_govisor_ohne_pythonpath`). Genau dieser Test hat den Fehler beim
 # Einbau des `FENSTER_TAGE`-Imports am 2026-09-02 gefangen.
 sys.path.insert(0, str(ROOT))
+from govisor.laender import AKTIV  # noqa: E402
 
 RANG = {"folder": 0, "rueckref": 1, "allein": 2}
 DAUERANGEBOT_TAKT = 4.0   # Glieder je Jahr; darueber ist es kein Neuausschreibungs-Rhythmus
@@ -109,10 +110,20 @@ SPALTEN_K = ("land VARCHAR, kette_id VARCHAR, vorgang_id VARCHAR, position BIGIN
 
 
 def _laender() -> list[str]:
-    """Aus dem Bestand, nicht aus einer Liste im Code."""
-    s = ROOT / "data" / "silver"
-    return sorted(p.name for p in s.iterdir()
-                  if p.is_dir() and (p / "notices").is_dir()) if s.exists() else []
+    """Die Laender, die gebaut werden — aus `govisor/laender.py`, nicht aus dem Bestand.
+
+    ⚠ HIER STAND „aus dem Bestand, nicht aus einer Liste im Code" — und genau das war der
+    Fehler. Silber enthaelt auch Laender, die nur SONDIERT sind; dieser Bauer legte fuer sie
+    Gold-Tabellen an, und damit sahen sie aus wie aufgenommene Laender. Der Tageslauf
+    beschreibt den Vorfall selbst: „beim Bau der Vorgangs-Tabellen wurde nebenbei fuer PL
+    und EU geschrieben, damit galten beide als aufgenommene Laender, und die Paritaetssonde
+    meldete 40 bestehende Tabellen als Luecke. Niemand hatte Polen aufgenommen — es sah nur
+    so aus."
+
+    Der Bestand ist die falsche Quelle fuer eine Frage, die eine ENTSCHEIDUNG ist. Aus
+    Silber abgeleitet baut dieser Schritt fuer alles, was jemand einmal geladen hat.
+    """
+    return [l for l in AKTIV if (ROOT / "data" / "silver" / l / "notices").is_dir()]
 
 
 def _wurzel(ref: dict[str, str], pn: str) -> str:
