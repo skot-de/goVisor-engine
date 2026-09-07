@@ -1178,3 +1178,34 @@ def test_module_erkennt_einen_import_mit_endung(tmp_path):
                           'import { b } from "@/lib/ohneEndung";\n'),
     })
     assert m.sonde_module(wurzel=w) == []
+
+
+def test_die_erklaerten_waechter_gibt_es_noch():
+    """Eine Ausnahmeliste, die niemand prueft, wird zur Amnestie.
+
+    `scripts/pruefe_waechter.py` fuehrt 16 Faelle, in denen ein Test absichtlich prueft, dass
+    eine BEGRUENDUNG dasteht („`RUHEND` muss im Kopf stehen"). Ohne diese Liste meldete das
+    Werkzeug 17 Treffer bei einem echten Fehler — unbrauchbar. Mit ihr ist es scharf.
+
+    ⚠ Die Gefahr liegt in der Gegenrichtung: verschwindet die Datei oder wird die Stelle
+    umgeschrieben, bleibt der Eintrag stehen und deckt kuenftig etwas anderes ab. Deshalb
+    dieselbe Regel wie fuer die Ausnahmen der Verdrahtungssonden — jeder Eintrag muss auf
+    eine Datei zeigen, die es gibt, und auf ein Wort, das dort steht.
+    """
+    import importlib.util
+    import sys
+    sys.dont_write_bytecode = True          # ⚠ F9, sonst gegen alten Bytecode gemessen
+    spec = importlib.util.spec_from_file_location(
+        "pw", ROOT / "scripts" / "pruefe_waechter.py")
+    pw = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(pw)
+
+    for (datei, wort), grund in pw.ERKLAERT.items():
+        p = ROOT / datei
+        assert p.exists(), f"{datei} gibt es nicht mehr — der Eintrag deckt nun etwas anderes"
+        assert grund.strip(), f"{datei}: Ausnahme ohne Begruendung"
+        if wort.startswith("\\\\"):
+            continue                        # Werkzeuggrenze, s. Kommentar dort
+        assert wort in p.read_text(encoding="utf-8"), (
+            f"{datei}: {wort!r} steht dort nicht mehr. Entweder ist die Begruendung weg, "
+            f"die der Waechter schuetzen soll, oder der Eintrag ist eine Leiche.")

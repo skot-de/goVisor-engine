@@ -100,7 +100,7 @@
 
 | # | Falle | Gemessen |
 |---|-------|----------|
-| F1 | **Test zählt Prosa mit** | dreimal: `readdir`, `server-only`, `{G}/lead_lot.parquet` — Kommentare vorher entfernen |
+| F1 | **Test zählt Prosa mit** | dreimal: `readdir`, `server-only`, `{G}/lead_lot.parquet` — Kommentare vorher entfernen. **Messbar** seit 2026-09-07: `scripts/pruefe_waechter.py` hoert waehrend eines Suite-Laufs mit, welches Wort in welcher Datei gesucht wird, und haelt jeden Treffer gegen die entkommentierte Fassung. Anlass fuer den Lauf ist jede **Umbenennung** (F12) und jede fremde Wache, der man trauen will. Stand 2026-09-07: 0 offen, 16 erklaerte Begruendungswaechter |
 | F2 | **Test leiht sich einen echten Listeneintrag** | brach, als die Liste geleert wurde, mit einer Meldung vom Falschen |
 | F3 | **Nicht-deterministischer Export** | Sortier-Gleichstand machte jeden Vorher/Nachher-Vergleich wertlos |
 | F4 | **Datenzuwachs als Regression fehldeuten** | 346 Abweichungen, tatsächlich Zuwachs seit dem Nachtlauf |
@@ -116,6 +116,7 @@
 | F15 | **Der Parser zaehlt nicht nach, was er gefunden hat** | Ein Muster, das nur einen TEIL der Eingabe erkennt, meldet Sauberkeit — in dem, was es nicht liest, findet es ja nichts. Anders als F12 fehlt hier keine einzelne Stelle, sondern eine ganze Schreibweise. Gegenmittel: die Ausbeute gegen eine schlichte Zaehlung pruefen (`create policy` kommt 36-mal vor, der Parser findet 34 — passt; findet er 18, stimmt etwas nicht). | Der RLS-Waechter vom 2026-09-06 verlangte eine `for`-Klausel. Die ist optional; ohne sie gilt die Policy fuer ALLE Operationen, und genau so sind neun geschrieben (`alerts_rw_own`, `contracts_rw_own`, …). Er sah **18 von 34** und meldete „sauber" — und ich hatte ihn als Sicherheitspruefung committet. Am Tag darauf gefunden |
 | F14 | **Migrationen ohne Reihenfolge gelesen** | Wer alle `.sql` gleichzeitig durchsucht, sieht abgeloeste Regeln als geltend — und uebersieht umgekehrt, dass eine spaetere Datei eine fruehere ersetzt. Bei Migrationen gewinnt die LETZTE. | Beim Bauen des RLS-Waechters: die erste Messung meldete drei `using (true)`, von denen zwei seit `0019` nicht mehr galten |
 | F13 | **Der Waechter liest die eigene Dokumentation** | Wer im Quelltext nach einem Namen sucht, findet auch den Kommentar, der ihn erklaert — und haelt die reparierte Datei fuer den Fund. Drei Mal in einer Sitzung. | Endpunkt-Regel fand ihren eigenen Erklaertext in `kategorie.py`; i18n-Waechter fand einen Beispielsatz im Kommentar; Cron-Test fand den Pfad in seinem eigenen Kommentar. Gegenmittel: den SYNTAXBAUM fragen, nicht den Text |
+| F16 | **Die Wache wird geprueft, ihre STELLE nicht** | Ein Test kann belegen, dass eine Sicherheitspruefung aufgerufen wird, und trotzdem nichts wert sein: steht sie hinter der ersten teuren Zeile, hat ein fremder Aufrufer den Lauf schon angestossen, bevor sie abweist. Bei einer Wache gehoert die REIHENFOLGE mitgeprueft — eingefuehrt, aufgerufen, Urteil eingeholt, abgebrochen, und das alles VOR dem ersten Datenzugriff. | 2026-09-07 an `/api/alerts/run`: der Test suchte `"requireCronSecret" in quelle or "CRON_SECRET" in quelle`. Der zweite Zweig traf den Kopfkommentar der Route (F13). Gemessen: Einfuhr UND Aufruf entfernt, der Endpunkt voellig offen — der Test blieb gruen. Der Endpunkt verschickt E-Mails und setzt danach die `*_sent`-Flags: wer ihn ausloest, VERBRAUCHT fremde Hinweise, sie kommen nie wieder |
 
 ## G · Fallen im Betrieb
 
@@ -144,6 +145,7 @@
 | H4 | **Harte Datumspflicht** | `publication_date`-Pflicht verwarf 93 % von DÖE |
 | H5 | **Anreicherung lockern** | „Titel identisch genügt": 28 → 393 Werte, mit fremden Fristen |
 | H6 | **Quellen zusammen zitieren** | TED 43,5 % reich / Ø 1,68 Lose gegen DÖE 20,8 % / Ø 1,00 |
+| H7 | **Grenze auf dem genauen Wert, Anzeige auf dem gerundeten** | Wer im SQL `v < ges * 0,25` filtert und danach `round(100 * v / ges)` ausgibt, hat zwischen beiden einen halben Prozentpunkt Luft: eine Art mit 24,7 % kommt durch und steht in der Oberflaeche als „marktweit 25 %“ — neben einer Regel, die „unter 25 %“ verspricht. Die Grenze gehoert auf die Zahl, die der Nutzer LIEST. ⚠ Und sie gehoert nach Python: DuckDB rundet 24,5 auf, Python ab (round-half-to-even) — wer an zwei Stellen rundet, bekommt zwei Wahrheiten. | 2026-09-07: `DE:referenz_anzahl` wuchs in genau dieses Band und machte die Suite rot. Die Zahl war nicht falsch, Filter und Anzeige waren uneins. Der Bruch stand seit dem Tag im Code, an dem der Test geschrieben wurde, und wurde erst getroffen, als ein Wert dorthin wanderte |
 
 ## Die Meta-Regel
 

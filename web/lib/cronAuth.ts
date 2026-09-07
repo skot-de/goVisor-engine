@@ -1,5 +1,6 @@
 import "server-only";
 import { NextRequest, NextResponse } from "next/server";
+import { cronUrteil, DURCH, UNKONFIGURIERT } from "@/lib/cronWache.js";
 
 /**
  * Fail-closed Auth für cron-/scheduler-getriggerte Server-Endpunkte (Alerts, Billing-Draft).
@@ -9,12 +10,16 @@ import { NextRequest, NextResponse } from "next/server";
  * Jetzt fail-closed: ohne gesetztes Secret ist der Endpunkt deaktiviert (503), mit Secret nur bei
  * passendem Header (Vercel-Cron sendet `Authorization: Bearer $CRON_SECRET`; manuell `x-cron-secret`).
  *
+ * Die ENTSCHEIDUNG steht in `lib/cronWache.js` — Plain JS, damit `node` sie ohne Next-Laufzeit
+ * prüfen kann. Hier bleibt nur die Übersetzung in HTTP.
+ *
  * Gibt eine Fehler-Response zurück, wenn der Aufruf abzulehnen ist — sonst `null` (durchlassen).
  */
 export function requireCronSecret(req: NextRequest): NextResponse | null {
-  const secret = process.env.CRON_SECRET;
-  if (!secret) return NextResponse.json({ ok: false, error: "CRON_SECRET nicht konfiguriert" }, { status: 503 });
-  const ok = req.headers.get("x-cron-secret") === secret ||
-    req.headers.get("authorization") === `Bearer ${secret}`;
-  return ok ? null : NextResponse.json({ ok: false, error: "forbidden" }, { status: 403 });
+  const urteil = cronUrteil(process.env.CRON_SECRET, (n) => req.headers.get(n));
+  if (urteil === DURCH) return null;
+  if (urteil === UNKONFIGURIERT) {
+    return NextResponse.json({ ok: false, error: "CRON_SECRET nicht konfiguriert" }, { status: 503 });
+  }
+  return NextResponse.json({ ok: false, error: "forbidden" }, { status: 403 });
 }

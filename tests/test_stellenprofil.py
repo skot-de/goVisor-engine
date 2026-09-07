@@ -70,3 +70,62 @@ def test_der_schluessel_ist_dokumentiert_schwach():
     falsch — und wer das nicht weiss, sucht später den Fehler an der falschen Stelle."""
     assert "KÄUFERNAME" in EXPORT.upper()
     assert "schwächer, nie falsch" in EXPORT
+
+
+def test_gefiltert_wird_auf_derselben_zahl_die_ausgegeben_wird():
+    """⚠ DIE GRENZE UND DIE ANZEIGE MUESSEN DIESELBE ZAHL MEINEN.
+
+    Bis zum 2026-09-07 zog das SQL die Grenze am genauen Anteil (`v < ges * MARKT_MAX`) und
+    die Ausgabe rundete danach auf ganze Prozent. Dazwischen liegt ein halber Prozentpunkt:
+    eine Art mit 24,7 % kam durch und stand in der Oberflaeche als „marktweit 25 %" — neben
+    einer Regel, die „unter 25 %" verspricht. `DE:referenz_anzahl` ist genau dort
+    hineingewachsen; der Test darueber wurde rot, und die Zahl war nicht einmal falsch.
+
+    ⚠ Und die Grenze gehoert nach Python: DuckDB rundet 24,5 auf, Python ab
+    (round-half-to-even). Wer an zwei Stellen rundet, bekommt zwei Wahrheiten.
+
+    Geprueft wird der ZUSAMMENHANG ueber den Syntaxbaum, nicht ein Wort: der Ausdruck, der
+    gegen `MARKT_MAX` verglichen wird, muss derselbe sein, der nach `raus["markt"]` geht.
+    """
+    import ast
+    baum = ast.parse(EXPORT)
+
+    verglichen = {
+        ast.unparse(k.left)
+        for k in ast.walk(baum) if isinstance(k, ast.Compare)
+        if any("MARKT_MAX" in ast.unparse(c) for c in k.comparators)
+    }
+    assert verglichen, "die Grenze MARKT_MAX wird nirgends in Python verglichen"
+
+    def _geht_nach_markt(ziel) -> bool:
+        """`raus["markt"][…] = …` — strukturell, nicht als Text.
+
+        ⚠ Der erste Entwurf suchte '"markt"' im entparsten Ziel und fand nie etwas:
+        `ast.unparse` schreibt einfache Anfuehrungszeichen. Ein Test, der auf die
+        Schreibweise seiner eigenen Ausgabe hereinfaellt, ist derselbe Fehler eine Ebene
+        hoeher."""
+        while isinstance(ziel, ast.Subscript):
+            k = ziel.slice
+            if isinstance(k, ast.Constant) and k.value == "markt":
+                return True
+            ziel = ziel.value
+        return False
+
+    ausgegeben = {
+        ast.unparse(z.value)
+        for z in ast.walk(baum) if isinstance(z, ast.Assign)
+        if any(_geht_nach_markt(t) for t in z.targets)
+    }
+    assert ausgegeben, 'nichts wird mehr nach raus["markt"] geschrieben'
+
+    assert verglichen & ausgegeben, (
+        f"gefiltert wird auf {sorted(verglichen)}, ausgegeben wird {sorted(ausgegeben)} — "
+        f"zwei Zahlen fuer dieselbe Aussage. Genau daran ist der Filter am 2026-09-07 "
+        f"an der Anzeige vorbeigelaufen.")
+
+    # Und die Grenze darf nicht in ein SQL zurueckwandern: dort rundet DuckDB anders.
+    for knoten in ast.walk(baum):
+        if isinstance(knoten, ast.JoinedStr) and "MARKT_MAX" in ast.unparse(knoten):
+            assert "select" not in ast.unparse(knoten).lower(), (
+                "MARKT_MAX steht wieder in einem SQL — dann rundet DuckDB die Grenze und "
+                "Python die Anzeige, und die beiden sind sich bei x,5 % nicht einig.")

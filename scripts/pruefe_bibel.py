@@ -426,6 +426,30 @@ def _behauptungen() -> list[tuple[str, str, bool, str]]:
                 "mitBeleg" in _core and "hat-beleg" in _core,
                 "verdrahtet" if "mitBeleg" in _core else "wieder unsichtbar"))
 
+    # Kapitel 12/F1 behauptet: es gibt 16 erklaerte Begruendungswaechter und keinen offenen.
+    # ⚠ Nur die LISTE wird hier geprueft, nicht der Lauf: `pruefe_waechter.py` braucht einen
+    # vollen Suite-Lauf (~90 s) und gehoert deshalb nicht in jede Bibel-Pruefung. Was hier
+    # verrotten koennte, ist die Zahl im Kapitel — und genau die steht in der Liste.
+    spec3 = importlib.util.spec_from_file_location(
+        "pw", ROOT / "scripts" / "pruefe_waechter.py")
+    pw = importlib.util.module_from_spec(spec3)
+    spec3.loader.exec_module(pw)
+    _erklaert = len(pw.ERKLAERT)
+    aus.append(("12", "16 erklaerte Begruendungswaechter in pruefe_waechter.py",
+                _erklaert == 16, f"{_erklaert} Eintraege"))
+
+    # Kapitel 12/F16 behauptet: die Cron-Wache steht VOR dem ersten Datenzugriff.
+    # Der Test in tests/test_healyhudson.py prueft dasselbe schaerfer; hier steht es, damit
+    # die AUSSAGE im Kapitel nicht stehenbleibt, wenn die Route einmal verschwindet.
+    _cron = ROOT / "web" / "app" / "api" / "alerts" / "run" / "route.ts"
+    _txt = _cron.read_text(encoding="utf-8") if _cron.exists() else ""
+    _ohne = "\n".join(z.split("//")[0] for z in _txt.splitlines())
+    _w, _t = _ohne.find("requireCronSecret("), _ohne.find("createAdminClient(")
+    aus.append(("12", "die Cron-Wache steht vor dem ersten Datenzugriff",
+                _w > 0 and (_t < 0 or _w < _t),
+                "vor createAdminClient" if _w > 0 and (_t < 0 or _w < _t)
+                else ("Wache fehlt" if _w < 0 else "Wache steht dahinter")))
+
     return aus
 
 

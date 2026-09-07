@@ -71,17 +71,32 @@ def main() -> int:
         ges = con.execute(f"select count(distinct notice_id) from read_parquet('{C.as_posix()}')").fetchone()[0]
         if not ges:
             continue
-        arten = [t for t, v in con.execute(f"""
+        haeufigkeit = con.execute(f"""
             select req_type, count(distinct notice_id) v
             from read_parquet('{C.as_posix()}') where req_type is not null group by 1
-            having v >= {MIND_MARKT} and v < {ges} * {MARKT_MAX}""").fetchall()]
+            having v >= {MIND_MARKT}""").fetchall()
+        # ⚠ GEFILTERT WIRD AUF DER ZAHL, DIE DER NUTZER LIEST.
+        #
+        # Bis zum 2026-09-07 stand die Grenze im SQL (`v < ges * MARKT_MAX`) und die Ausgabe
+        # rundete danach. Zwischen beiden liegt ein halber Prozentpunkt: bei einem Anteil von
+        # 24,7 % kam die Art durch den Filter und erschien in der Oberflaeche als „marktweit
+        # 25 %" — neben einer Regel, die „unter 25 %" verspricht. `DE:referenz_anzahl` ist an
+        # dem Tag genau dort hineingewachsen und hat die Suite rot gemacht; die Zahl war nicht
+        # falsch, Filter und Anzeige waren uneins.
+        #
+        # ⚠ Und die Grenze gehoert nach Python, nicht ins SQL: DuckDB rundet 24,5 auf 25 auf,
+        # Python rundet auf 24 ab (round-half-to-even). Wer an zwei Stellen rundet, hat
+        # frueher oder spaeter zwei Wahrheiten.
+        arten = []
+        for t, v in haeufigkeit:
+            anteil = round(100 * v / ges)
+            if anteil < 100 * MARKT_MAX:
+                arten.append(t)
+                raus["markt"][f"{land}:{t}"] = anteil
         if not arten:
             print(f"  {land}: keine hinreichend seltene Anforderungsart")
             continue
         liste = ",".join(f"'{a}'" for a in arten)
-        for t, v in con.execute(f"""select req_type, count(distinct notice_id)
-            from read_parquet('{C.as_posix()}') where req_type in ({liste}) group by 1""").fetchall():
-            raus["markt"][f"{land}:{t}"] = round(100 * v / ges)
         for name, typ, k, n in con.execute(f"""
           with v as (select distinct c.notice_id, l.buyer_name
                      from read_parquet('{C.as_posix()}') c

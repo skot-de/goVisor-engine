@@ -25,6 +25,22 @@ ZEILE_HB = ["", "SektVo",
             "Flughafen Bremen GmbH", "06.08.2026", "07.09.2026", ""]
 
 
+def _blockkommentare(text: str):
+    """Spannen aller `/* … */`-Bloecke. Zeichenweise, damit `*/` in einem String nicht
+    versehentlich einen Block schliesst — fuer die Zwecke hier reicht das."""
+    spannen, i = [], 0
+    while True:
+        a = text.find("/*", i)
+        if a < 0:
+            return spannen
+        e = text.find("*/", a + 2)
+        if e < 0:
+            spannen.append((a, len(text)))
+            return spannen
+        spannen.append((a, e + 2))
+        i = e + 2
+
+
 def test_vergabestelle_kommt_getrennt_heraus():
     """Der Kern. Vorher steckte „Flughafen Bremen GmbH" im Titel-String fest."""
     s = hh.zerlege(ZEILE_HB, "HB")
@@ -1384,8 +1400,20 @@ def test_posteingang_verbraucht_keine_hinweise():
     # Auf den IMPORT prüfen, nicht auf das Wort: beide Dateien erklären in einem Kommentar,
     # warum sie `readdir` gerade NICHT benutzen. Ein Test, der Prosa mitzählt, zwingt einen
     # dazu, die Begründung zu löschen.
+    #
+    # ⚠ UND GENAU DAS TAT DIE ZEILE DARUNTER — bis zum 2026-09-07. Sie suchte `loadDataFile`
+    # als Wort. Seit der Umstellung auf `ladeMitGrund` (2026-09-04) steht dieser Name in
+    # `leadIndex.ts` nur noch in der Erklaerung, warum die Datei NICHT von der Platte liest.
+    # Der Waechter traf also seit drei Tagen ausschliesslich Prosa: haette jemand den Index
+    # auf `readdir` umgebaut und den Kommentar stehen lassen, waere er gruen geblieben. Die
+    # Warnung stand drei Zeilen darueber, geschrieben von derselben Hand.
+    import re as _re
     idx = (ROOT / "web" / "lib" / "leadIndex.ts").read_text(encoding="utf-8")
-    assert "loadDataFile" in idx, "der Hinweis-Index geht nicht mehr über den Daten-Loader"
+    einfuhr = [z for z in idx.splitlines() if z.lstrip().startswith("import ")]
+    assert any(_re.search(r"\b(ladeMitGrund|loadDataFile)\b", z) and "dataSource" in z
+               for z in einfuhr), (
+        "der Hinweis-Index geht nicht mehr über den Daten-Loader — er fuehrt weder "
+        "`ladeMitGrund` noch `loadDataFile` aus `lib/dataSource` ein")
     for name, text in (("leadIndex.ts", idx), ("alerts/run", run)):
         assert "node:fs" not in text, f"{name} liest wieder direkt von der Platte"
 
@@ -1759,9 +1787,50 @@ def test_jeder_cron_kommt_durch_beide_tore_und_sichert_sich_selbst():
         datei = ROOT / "web" / "app" / pfad.lstrip("/") / "route.ts"
         assert datei.exists(), f"{pfad}: Route nicht gefunden"
         quelle = datei.read_text(encoding="utf-8")
-        assert "requireCronSecret" in quelle or "CRON_SECRET" in quelle, (
-            f"{pfad} ist offen erreichbar und prueft den Aufrufer NICHT. Ein Cron-Endpunkt "
-            f"ohne eigenes Geheimnis ist eine Schaltflaeche fuer jeden.")
+        # ⚠ VOKABELN GENUEGEN NICHT — UND HIER GENUEGTEN SIE ZWEIFACH NICHT.
+        # Bis zum 2026-09-07 stand hier `"requireCronSecret" in quelle or "CRON_SECRET" in
+        # quelle`. Der Kopfkommentar der Route erklaert die Absicherung und nennt dabei
+        # `CRON_SECRET`; der zweite Zweig traf also die Begruendung. Gemessen: Einfuhr UND
+        # Aufruf entfernt, der Endpunkt voellig offen — der Test blieb gruen.
+        #
+        # Gesucht ist der ZUSAMMENHANG, und zwar in dieser Reihenfolge:
+        #   1. die Wache wird eingefuehrt,
+        #   2. sie wird im Rumpf AUFGERUFEN,
+        #   3. ihr Urteil fuehrt zu einem sofortigen Abbruch,
+        #   4. und das alles VOR der ersten teuren Zeile.
+        # Punkt 4 ist der eigentliche: eine Wache hinter dem Datenbankzugriff schuetzt
+        # nichts mehr, sie meldet nur noch, dass sie zu spaet kam.
+        ohne_prosa = "\n".join(z.split("//")[0] for z in quelle.splitlines())
+        for anfang, ende in _blockkommentare(ohne_prosa):
+            ohne_prosa = ohne_prosa[:anfang] + " " * (ende - anfang) + ohne_prosa[ende:]
+
+        assert 'from "@/lib/cronAuth"' in ohne_prosa, (
+            f"{pfad} fuehrt die Cron-Wache nicht ein. Ein Cron-Endpunkt ohne eigenes "
+            f"Geheimnis ist eine Schaltflaeche fuer jeden.")
+        aufruf = ohne_prosa.find("requireCronSecret(")
+        assert aufruf > 0, f"{pfad} ruft die Cron-Wache nicht auf (nur eingefuehrt)"
+        assert "return deny" in ohne_prosa[aufruf:aufruf + 200], (
+            f"{pfad} holt das Urteil der Cron-Wache ein und bricht nicht ab — dann laeuft "
+            f"der Endpunkt fuer jeden Aufrufer weiter.")
+
+        # Vor der ersten Zeile, die etwas kostet oder verraet.
+        for teure in ("createAdminClient(", "await send(", "admin.from("):
+            i = ohne_prosa.find(teure)
+            if i > 0:
+                assert aufruf < i, (
+                    f"{pfad}: die Cron-Wache steht HINTER `{teure}` — bis dahin hat ein "
+                    f"fremder Aufrufer den Lauf schon angestossen.")
+
+
+def test_die_cron_regel_stimmt():
+    """Der Node-Pruefer gegen die ECHTE Regel aus `lib/cronWache.js`, nicht gegen eine
+    Abschrift. Die Verdrahtung prueft der Test darueber; hier geht es um das Urteil selbst —
+    vor allem um den historischen Fehler, bei FEHLENDEM Geheimnis aufzumachen statt
+    zuzumachen."""
+    import subprocess
+    skript = ROOT / "web" / "scripts" / "pruefe-cronwache.mjs"
+    p = subprocess.run(["node", str(skript)], capture_output=True, text=True)
+    assert p.returncode == 0, f"die Cron-Regel stimmt nicht:\n{p.stdout}{p.stderr}"
 
 
 def test_die_hinweislogik_erinnert_an_jede_echte_frist():
