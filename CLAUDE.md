@@ -180,6 +180,15 @@ laesst eine undatierte Zahl dort gar nicht durch).
   der Code darunter sich bewegte (nach 30 Tagen ein Fehlschlag, nicht nur ein Hinweis).
   **Wer eine prüfbare Aussage in die Bibel schreibt, trägt sie ins Register dort ein** —
   was nur im Fliesstext steht, kann verrotten, ohne dass es jemand merkt.
+
+      python3 scripts/pruefe_sondierungszahlen.py [--alle]
+
+  Dasselbe für die **Sondierungspapiere**: jede Prozentangabe in `docs/sondierung/`
+  wird aus `data/sondierung/` neu gerechnet — Kopfzahl, EU-Anteile, Linktiefe,
+  Aufbewahrungsmatrix, Datenmengen, belegte Domain-Anteile (`N von M`). ⚠ Der Anlass:
+  ein Neulauf ersetzte die Daten und liess fünf Länderzeilen in `linktiefe.md` stehen —
+  AT 76,4 % statt 31,5 %, tagelang, neben einem Papier mit den neuen Zahlen. **Ein
+  Neulauf ist erst fertig, wenn die Dokumente mitgezogen sind, die ihn ankündigen.**
   ⚠ Drei Dinge, die man dabei wissen muss: der ältere **Altersbericht** im selben Skript ist
   eine handgepflegte Liste von sechs Eckpfeilern — genau deshalb hat er `lead_lot` nie
   gemeldet. Beide bleiben, weil sie verschiedene Ausfälle sehen (Altersbericht: der ganze

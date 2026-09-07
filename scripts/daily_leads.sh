@@ -1505,6 +1505,8 @@ $PY scripts/pruefe_nuts_vorgabe.py \
 # und zwar an dem Tag, an dem geschrieben wurde. Warnung, kein Abbruch — wie die uebrigen.
 $PY scripts/pruefe_sondierung.py \
   || echo "  → Sondierungs-Waechter meldet Befunde. Details: python3 scripts/pruefe_sondierung.py"
+$PY scripts/pruefe_sondierungszahlen.py \
+  || echo "  → Sondierungszahlen weichen von den Messdateien ab. Details: python3 scripts/pruefe_sondierungszahlen.py --alle"
 
 # ── BIBEL-PRUEFUNG ───────────────────────────────────────────────────────────────────────
 #

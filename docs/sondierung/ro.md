@@ -33,8 +33,8 @@ Bekanntmachungen — die Grössenordnung stimmt jetzt. (Bulgarien 2.700/2.696 un
 
 | | |
 |---|---:|
-| `e-licitatie.ro` (SEAP/SICAP) | **99,7 %** (3.591 von 3.603) |
-| Domains insgesamt | 10 (die übrigen neun zusammen: **12** Nennungen) |
+| `e-licitatie.ro` (SEAP/SICAP) | **99,7 %** (14.041 von 14.080, 12 Monate) |
+| Domains insgesamt | 16 (die übrigen 15 zusammen: **39** Nennungen) |
 | Links ohne Verfahren | 15,1 % |
 | robots.txt | weiches 404 — **nichts untersagt** |
 

@@ -11,8 +11,8 @@
 
 | | |
 |---|---:|
-| `app.eop.bg` (ЦАИС ЕОП) am Unterlagen-Feld | **100,0 %** (9.135 von 9.137, 12 Monate) |
-| Domains insgesamt | 3 (die anderen zwei je **1** Nennung) |
+| `app.eop.bg` (ЦАИС ЕОП) am Unterlagen-Feld | **99,9 %** (9.135 von 9.140, 12 Monate) |
+| Domains insgesamt | 4 (die anderen drei zusammen: **5** Nennungen) |
 | Links, die ein Verfahren nennen | **100 %** (2.056 von 2.056) |
 | Vergaben mit abrufbaren Dokumenten | **97 %** (28 von 29) |
 

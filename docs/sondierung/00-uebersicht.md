@@ -89,38 +89,39 @@ den Faktor der durchschnittlichen Dateizahl daneben.
 |---|---:|---|---:|---:|---:|
 | **RO** | 14.080 | Vergabe | 13,2 (Median) | 6 | **154** |
 | **BG** | 9.140 | Vergabe | 9,5 | 29 | **82** |
-| **EE** | 3.558 | Vergabe | 19,3 | **1** | 67 |
 | **BE** | 13.448 | Vergabe | 6,1 | **1** | 48 |
 | **HU** | 4.678 | Vergabe | 9,0 | **1** | 26 |
 | **SI** | 6.466 | **Datei** | 3,9 | 39 | **25** |
+| **EE** | 3.558 | Vergabe | 5,0 | 15 | 17 |
 | **DK** | 3.741 | Vergabe | ~25 | **1** | 16 |
 | **PT** | 9.435 | Vergabe | 1,6 | 12 | 13 |
 | **LU** | 1.859 | Vergabe | 4,6 | **1** | 8 |
 | **IE** | 5.912 | Vergabe | ~1 *(geschätzt)* | 38 | 5 |
 | MT · FI · CY | | Vergabe | 0,5–1,1 | 6–7 | je ~1 |
 | **LV** | 6.366 | Dokumenteintrag | 0,04 | 3 | <1 |
-| | | | | **Summe** | **≈ 448 GB/Jahr** |
+| | | | | **Summe** | **≈ 398 GB/Jahr** |
 
-### ⚠ Nachgeprüft am 2026-09-07: die Größenstichprobe ist älter als die Messung daneben
+### ⚠ Nachgeprüft am 2026-09-07: die Größenstichprobe war älter als die Messung daneben
 
-Die Tabelle oben entstand **vor** der Haltbarkeitsmatrix
-([haltbarkeit](haltbarkeit.md) §14). Die hat für drei Länder eigene Größen mitgemessen —
-und sie widersprechen:
+Die Tabelle oben entstand **vor** der Haltbarkeitsmatrix ([haltbarkeit](haltbarkeit.md)
+§14). Die hat für drei Länder eigene Größen mitgemessen, und für Estland widersprachen sie:
 
-| Land | Tabelle oben | `aufbewahrung.json` | GB/Jahr damit |
-|---|---|---|---:|
-| **EE** | 19,3 MB aus **einer** Vergabe → 67 GB | 15 Proben, Median **1,4**, Mittel **5,0** | **5 bis 17** statt 67 |
-| **BG** | 9,5 MB (n=29) → 82 GB | 14 Proben, Median **1,1**, Mittel **4,8** | **10 bis 42** statt 82 |
-| **RO** | Median 13,2 / Mittel 76,7, grösste 374,9 MB | 6 Proben, Median **12,1** / Mittel **106,5**, grösste **557,0** | 142 bis **1.245** |
+| Land | vorher | die Messung daneben | jetzt |
+|---|---|---|---|
+| **EE** | 19,3 MB aus **einer** Vergabe → 67 GB | 15 Proben, Mittel **5,0** MB | **17 GB**, oben eingesetzt |
+| **BG** | 9,5 MB (n=29) | 14 Proben, Mittel 4,8 MB | **unverändert** — die eigene Stichprobe ist die grössere |
+| **RO** | Median 13,2 MB (n=6) | 6 Proben, Median 12,1 MB | **unverändert** — dieselbe Grössenordnung |
 
-⚠ **Estland ist der Fall, der weh tut.** Es steht als drittgrösster Posten in der Tabelle,
+⚠ **Estland war der Fall, der weh tat.** Es stand als drittgrösster Posten der Tabelle,
 und zwar allein wegen der **einen** 19,3-MB-Vergabe der Eesti Pank. Fünfzehn spätere Proben
-sagen: das war der Ausreisser, nicht der Normalfall.
+sagen 5,0 MB im Mittel — das war der Ausreisser, nicht der Normalfall. Die Summe fällt
+damit von 448 auf **398 GB/Jahr**.
 
-**Was das an der Aussage ändert: nichts an der Größenordnung, viel an der Spitze.** EE und
-BG schrumpfen zusammen um rund 120 GB, Rumänien wächst am oberen Rand auf über ein Terabyte
-allein. Die Spanne 0,8 bis 2 TB hält — sie wird nur noch stärker von **einem** Land
-getragen.
+⚠ **Bulgarien bleibt ein offener Widerspruch:** 9,5 MB gegen 4,8 MB, Faktor zwei, beide
+Stichproben zweistellig. Hier ist nicht entschieden, sondern die grössere behalten.
+
+`scripts/pruefe_sondierungszahlen.py` schlägt an, sobald eine Zeile dieser Tabelle und die
+Proben in `aufbewahrung.json` um mehr als das Doppelte auseinanderlaufen.
 
 ### ⚠ Was diese Zahl nicht ist
 
@@ -151,8 +152,9 @@ Bei 5 MB je Einheit wären das **324 GB**, bei 15 MB **971 GB**. Die Spanne ist 
 
 ### Was daraus folgt
 
-**Grössenordnung für alles, was heute belegt offen ist: 0,8 bis 2 TB im Jahr.** Nicht
-zehn, nicht hundert.
+**Grössenordnung für alles, was heute belegt offen ist: 0,7 bis 2 TB im Jahr.** Nicht
+zehn, nicht hundert. (398 GB gemessen, dazu 324 bis 971 GB geschätzt für die sieben
+Länder ohne Grössenmessung — und Rumänien allein verschiebt die Obergrenze.)
 
 Zwei praktische Schlüsse:
 
