@@ -70,6 +70,66 @@ BEFUNDE = mk.ORDNER / "befunde.json"
 # entscheidet einmal taeglich, der Lauf liest nur ab.
 WAHL = ROOT / "data" / "modellwahl.json"
 
+# ── TEMPO ALS ZWEITE SPERRE, NEBEN GUETE UND PREIS ───────────────────────────────────────
+#
+# ⚠ DER FALL, DER DAS NOETIG MACHT. Am 2026-08-27 wechselte der Waechter auf
+# `openai/gpt-5.6-luna`, weil es 62 % billiger ist und im gepaarten Versuch gleichwertig
+# (6:8, p=0.791). Gemessen im eigenen Kostenbuch ist es aber **sechs- bis siebenmal
+# langsamer** als der Vorgaenger:
+#
+#     openai/gpt-5.6-luna       2,4 → 4,3 s je 1k Token   (unsere Wahl)
+#     google/gemini-2.5-flash              0,59
+#     inception/mercury-2.5                0,49
+#     minimax/minimax-m3              1,10 – 1,23
+#
+# Die Kategorie-Ableitung wuchs dadurch von 589 auf 3.973 Sekunden, und der ganze
+# Nachtlauf von 155 auf 426 Minuten — bei einer harten Grenze von 480. Ein Prueffstand,
+# der Guete und Preis vergleicht, aber nicht die Dauer, kauft Geschwindigkeit gegen Cent
+# ein; die Nacht hat aber nur acht Stunden, und die kann man nicht nachkaufen.
+#
+# ⚠ DIE SPERRE MISST GEGEN DEN SCHNELLSTEN, NICHT GEGEN DEN AMTIERENDEN. Gegen den
+# Amtierenden gemessen koennte sie einen langsamen Amtierenden nie absetzen — sie haette
+# den heutigen Zustand zementiert, statt ihn zu heilen.
+#
+# ⚠ UND SIE BRAUCHT BELEGE. Ein Modell ohne genug Aufrufe wird nicht gesperrt, sondern
+# durchgelassen: „bei jedem Zweifel der Amtierende" heisst hier, dass die Sperre einen
+# Wechsel nur VERHINDERN darf, nie einen falschen ausloesen.
+TEMPO_FAKTOR = float(os.environ.get("GOVISOR_TEMPO_FAKTOR", "2.0"))
+TEMPO_MIND_AUFRUFE = 20        # weniger ist Rauschen, kein Befund
+TEMPO_TAGE = 14                # Fenster, in dem gemessen wird
+
+
+def tempo_je_modell(tage: int = TEMPO_TAGE) -> dict[str, tuple[float, int]]:
+    """Median Sekunden je 1.000 Token, je Modell — aus dem eigenen Kostenbuch.
+
+    Keine neue Messung: `llm.chat` schreibt Dauer und Token seit dem 2026-08-24 zu jedem
+    Aufruf mit. Was hier entsteht, ist die Auswertung von Produktionsverkehr, nicht ein
+    Laborwert — und damit genau das, was der Nachtlauf tatsaechlich erlebt.
+    """
+    import statistics
+    from datetime import timedelta
+    buch = ROOT / "data" / "llm_kosten.jsonl"
+    if not buch.exists():
+        return {}
+    grenze = (datetime.now(timezone.utc) - timedelta(days=tage)).isoformat()
+    werte: dict[str, list[float]] = {}
+    try:
+        with buch.open(encoding="utf-8") as f:
+            for zeile in f:
+                try:
+                    r = json.loads(zeile)
+                except json.JSONDecodeError:
+                    continue
+                if r.get("ts", "") < grenze:
+                    continue
+                sek = r.get("sekunden") or 0
+                tok = (r.get("eingabe_token") or 0) + (r.get("ausgabe_token") or 0)
+                if sek > 0 and tok > 0 and r.get("modell"):
+                    werte.setdefault(r["modell"], []).append(sek / tok * 1000)
+    except OSError:
+        return {}
+    return {m: (statistics.median(v), len(v)) for m, v in werte.items()}
+
 # Gewichtung von Eingabe- gegen Ausgabepreis.
 #
 # ⚠ HIER STAND 15:1 UND DAS WAR UM DEN FAKTOR 11 DANEBEN. Die Annahme „Vergabeunterlagen
@@ -203,6 +263,33 @@ def waehle() -> int:
         return 0
 
     kandidaten.sort()
+
+    # ── TEMPO-SPERRE ────────────────────────────────────────────────────────────────
+    # Gemessen gegen den SCHNELLSTEN belegten Kandidaten, nicht gegen den Amtierenden:
+    # sonst koennte ein langsamer Amtierender sich selbst nie absetzen.
+    tempo = tempo_je_modell()
+    belegt = {mid: tempo[mid][0] for _p, mid, _b in kandidaten
+              if mid in tempo and tempo[mid][1] >= TEMPO_MIND_AUFRUFE}
+    gesperrt: dict[str, str] = {}
+    if len(belegt) >= 2:
+        schnellster = min(belegt.values())
+        grenze = schnellster * TEMPO_FAKTOR
+        for mid, sek in belegt.items():
+            if sek > grenze:
+                gesperrt[mid] = (f"{sek:.2f} s/1k Token, {sek / schnellster:.1f}× langsamer "
+                                 f"als der schnellste belegte ({schnellster:.2f})")
+        # ⚠ NIE ALLES SPERREN. Blieben keine uebrig, gaebe die Sperre die Wahl auf —
+        # und der Lauf faehrt dann ungebremst weiter, statt wenigstens den Amtierenden
+        # zu nehmen. Dieselbe Linie wie ueberall in dieser Datei.
+        if len(gesperrt) >= len(kandidaten):
+            print("  ⚠ Tempo-Sperre haette ALLE Kandidaten verworfen — sie greift nicht.",
+                  file=sys.stderr)
+            gesperrt = {}
+    for mid, grund in gesperrt.items():
+        print(f"  ⏳ {mid} wegen Tempo uebersprungen: {grund}", file=sys.stderr)
+    if gesperrt:
+        kandidaten = [k for k in kandidaten if k[1] not in gesperrt]
+
     preis, gewaehlt, boden = kandidaten[0]
     print(f"  Mischung {g_ein:.1f}:{g_aus:.0f} Eingabe/Ausgabe ({herkunft})", file=sys.stderr)
     for p, mid, b in kandidaten:
@@ -214,8 +301,10 @@ def waehle() -> int:
         spar = f", spart {(1 - preis / amt) * 100:.0f} %" if amt else ""
         print(f"  ⇄ Wechsel von {AMTIEREND} auf {gewaehlt}{spar} — beide freigegeben.",
               file=sys.stderr)
-    hinterlege(gewaehlt, f"billigstes freigegebenes Modell, {preis:.3f} $/Mio gemischt "
-                         f"über {boden['endpunkt']}")
+    t = tempo.get(gewaehlt)
+    hinterlege(gewaehlt, f"billigstes freigegebenes Modell mit tauglichem Tempo, "
+                         f"{preis:.3f} $/Mio gemischt über {boden['endpunkt']}"
+                         + (f", {t[0]:.2f} s/1k Token" if t else ""))
     print(gewaehlt)                                       # ← das Einzige auf stdout
     return 0
 

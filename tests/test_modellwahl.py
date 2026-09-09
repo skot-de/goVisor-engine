@@ -601,3 +601,57 @@ def test_veraltete_grundlinie_wird_wirklich_neu_gemessen(buehne_unbenutzt=None):
     veraltet2 = not ps.grundlinie_aktuell(jung)
     vorhanden2 = None if veraltet2 else (jung.get("grundlinie") or {}).get("je_vorgang")
     assert not veraltet2 and len(vorhanden2) == 4
+
+
+# ── Tempo als zweite Sperre, neben Güte und Preis ───────────────────────────────────
+
+_WAECHTER = (ROOT / "scripts" / "modellwaechter.py").read_text(encoding="utf-8")
+
+
+def test_tempo_wird_gemessen_nicht_geschaetzt():
+    """Die Dauer kommt aus dem eigenen Kostenbuch — Produktionsverkehr, kein Laborwert.
+    `llm.chat` schreibt sie seit dem 2026-08-24 zu jedem Aufruf mit."""
+    kern = _WAECHTER.split("def tempo_je_modell(")[1].split("\ndef ")[0]
+    assert "llm_kosten.jsonl" in kern
+    assert "sekunden" in kern and "eingabe_token" in kern
+
+
+def test_tempo_sperre_misst_gegen_den_schnellsten():
+    """⚠ Gegen den AMTIERENDEN gemessen könnte ein langsamer Amtierender sich selbst nie
+    absetzen — die Sperre hätte den Zustand zementiert, den sie heilen soll. Genau der Fall
+    lag am 2026-09-09 vor: `openai/gpt-5.6-luna` war amtierend UND 4,8× langsamer (3,28
+    gegen 0,68 s je 1k Token) als das einzige andere freigegebene Modell."""
+    kern = _WAECHTER.split("# ── TEMPO-SPERRE")[1].split("preis, gewaehlt, boden")[0]
+    assert "schnellster = min(belegt.values())" in kern
+    assert "AMTIEREND" not in kern, "die Sperre misst wieder gegen den Amtierenden"
+
+
+def test_tempo_sperre_braucht_belege():
+    """Ein Modell ohne genug Aufrufe wird durchgelassen, nicht gesperrt. „Bei jedem Zweifel
+    der Amtierende" heisst hier: die Sperre darf einen Wechsel nur VERHINDERN, nie einen
+    falschen auslösen."""
+    kern = _WAECHTER.split("# ── TEMPO-SPERRE")[1].split("preis, gewaehlt, boden")[0]
+    assert "tempo[mid][1] >= TEMPO_MIND_AUFRUFE" in kern
+    assert "len(belegt) >= 2" in kern
+
+
+def test_tempo_sperre_verwirft_nie_alle():
+    """Blieben keine Kandidaten übrig, gäbe die Sperre die Wahl auf — dieselbe Linie wie
+    überall in dieser Datei: nie den Lauf verhindern."""
+    kern = _WAECHTER.split("# ── TEMPO-SPERRE")[1].split("preis, gewaehlt, boden")[0]
+    assert "if len(gesperrt) >= len(kandidaten):" in kern
+
+
+def test_gesperrtes_modell_wird_mit_grund_gemeldet():
+    """Ein stiller Ausschluss wäre schlimmer als keiner: niemand fände heraus, warum das
+    billigste Modell nicht genommen wurde."""
+    kern = _WAECHTER.split("# ── TEMPO-SPERRE")[1].split("preis, gewaehlt, boden")[0]
+    assert "wegen Tempo uebersprungen" in kern and "langsamer" in kern
+
+
+def test_der_vorfall_steht_an_der_konstante():
+    """⚠ Er gehört an die Konstante, nicht nur ins Protokoll: der Wechsel auf das 62 %
+    billigere Modell hat den Nachtlauf von 155 auf 426 Minuten getrieben, bei einer harten
+    Grenze von 480."""
+    kopf = _WAECHTER.split("TEMPO_FAKTOR")[0][-2200:]
+    assert "426" in kopf and "480" in kopf
