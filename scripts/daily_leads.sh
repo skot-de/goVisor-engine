@@ -652,8 +652,12 @@ if [ "${GOVISOR_NEUE_QUELLEN:-1}" = "1" ]; then
   # kannten wir 508 ueber die Unterlagen-Links. ⚠ Die Liste WUERFELT je Abruf ~25 Zeilen —
   # deshalb Runden mit Dublettenfilter, und der Bestand fuellt sich ueber die Tage.
   step "Healy-Hudson-Bekanntmachungen (alle 16 Laender, rotierende Liste)"
+  # ⚠ SEIT 2026-09-09 heisst ein Fehlschlag hier „KEIN Bundesland erreichbar". Vorher stand
+  # an dieser Stelle „Import unvollstaendig" — derselbe Wortlaut, den jede einzelne
+  # Landeszeile ohnehin traegt, weil die Liste je Abruf wuerfelt. Dass zweimal in drei
+  # Naechten gar nichts geholt wurde, sah deshalb aus wie der Normalfall.
   mit_grenze "$GRENZE_ABRUF" $PY -m govisor.healyhudson --alle --runden 12 \
-    || echo "  ⚠ Healy-Hudson-Import unvollstaendig."
+    || echo "  ⚠ Healy-Hudson: kein einziges Bundesland erreichbar."
   # Bronze → Silber. Ohne diesen Schritt sammelt healyhudson nur JSONL und es entsteht
   # KEIN einziger Lead — genau der Zustand, in dem die Quelle bis zum 2026-08-14 war.
   # Eigener Aufruf statt Teil des Imports: der Abruf kann unvollstaendig sein (die Liste

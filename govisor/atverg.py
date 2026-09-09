@@ -33,6 +33,7 @@ from __future__ import annotations
 
 import re
 import ssl
+import time
 import urllib.error
 import urllib.request
 import zipfile
@@ -45,6 +46,14 @@ _PAGE = "https://offenevergaben.at/downloads/kerndaten_dump_daily?format=csv"
 _ZIP_RE = re.compile(r"https://offenevergaben\.at/tmp/kerndaten_dailydump_\d+_[a-z0-9]+\.zip")
 _UA = "goVisor/0.1 (data engine; +https://offenevergaben.at)"
 _ctx: ssl.SSLContext | None = None
+
+# ⚠ DIE QUELLE KRIECHT MANCHMAL, UND DAS IST KEIN FEHLER. Gemessene Schrittdauern im
+# September: 30 s · 30 s · 30 s · 974 s (ging noch durch) · 30 s · 30 s · 1352 s (gestorben).
+# Der Server erzeugt den Tagesabzug beim Aufruf; wenn er dabei ins Stocken kommt, laeuft die
+# Wartezeit auf die Statuszeile ab. Bis zum 2026-09-09 gab es KEINEN zweiten Versuch — ein
+# langsamer Moment kostete den ganzen Tagesabzug und 22 Minuten Laufzeit.
+_VERSUCHE = 3
+_PAUSE_S = 30         # zwischen den Versuchen, wachsend (30 s, 60 s)
 
 
 def _get(url: str) -> bytes:
@@ -74,13 +83,34 @@ def download(cfg: Config, country: str = "AT", stamp: str | None = None) -> Path
     ``stamp`` überschreibt den Datei-Stempel (Default: heute), damit der Lauf reproduzierbar bleibt.
     Gibt den Bronze-Pfad zurück.
     """
-    html = _get(_PAGE).decode("utf-8", "replace")
-    m = _ZIP_RE.search(html)
-    if not m:
-        raise RuntimeError("ZIP-Link nicht in der OffeneVergaben-Downloads-Seite gefunden "
-                           "(HTML-Struktur geändert? _ZIP_RE prüfen)")
-    zip_url = m.group(0)
-    blob = _get(zip_url)
+    # ⚠ DER WIEDERHOLVERSUCH MUSS BEI DER SEITE ANFANGEN, nicht bei der ZIP. Die
+    # Downloads-Seite erzeugt die Adresse je Aufruf frisch mit Zeitstempel und Hash
+    # (`/tmp/kerndaten_dailydump_<ts>_<hash>.zip`); eine alte Adresse ein zweites Mal zu
+    # holen, holt bestenfalls einen abgelaufenen Verweis.
+    zip_url, blob = "", b""
+    for versuch in range(1, _VERSUCHE + 1):
+        try:
+            html = _get(_PAGE).decode("utf-8", "replace")
+            m = _ZIP_RE.search(html)
+            if not m:
+                raise RuntimeError(
+                    "ZIP-Link nicht in der OffeneVergaben-Downloads-Seite gefunden "
+                    "(HTML-Struktur geändert? _ZIP_RE prüfen)")
+            zip_url = m.group(0)
+            blob = _get(zip_url)
+            break
+        except OSError as e:
+            # ⚠ NUR NETZFEHLER — und `OSError` ist hier die richtige Klammer, nicht die zu
+            # weite: `urllib.error.URLError` UND `TimeoutError` sind beide Unterklassen
+            # davon, alle drei einzeln aufzuzaehlen faengt keinen Fall mehr. Ein geänderter
+            # Seitenaufbau (RuntimeError oben) ist dagegen KEIN Fall für einen zweiten
+            # Versuch — dreimal dasselbe zu holen verdeckt ihn nur.
+            if versuch == _VERSUCHE:
+                raise
+            pause = _PAUSE_S * versuch
+            print(f"atverg {country}: Versuch {versuch}/{_VERSUCHE} fehlgeschlagen "
+                  f"({type(e).__name__}) — neuer Anlauf in {pause} s", flush=True)
+            time.sleep(pause)
     out_dir = _raw_dir(cfg, country)
     out_dir.mkdir(parents=True, exist_ok=True)
     out = out_dir / f"{stamp or date.today().isoformat()}.zip"

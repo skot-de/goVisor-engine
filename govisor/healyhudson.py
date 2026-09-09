@@ -86,6 +86,14 @@ _WARTE_MS = 4500
 _HOEFLICH_MS = 1200
 _TROCKEN = 4          # so viele Runden ohne Neues gelten als ausgeschoepft
 _MAX_RUNDEN = 40      # Notbremse; die Coupon-Collector-Schaetzung fuer BY liegt bei ~95
+# ⚠ WARUM AUSSETZER GEZAEHLT UND NICHT DURCHGEREICHT WERDEN. Bis zum 2026-09-09 lief jeder
+# `pg.goto` ungeschuetzt. Ein einziger Zeitablauf (45 s) flog aus der Runden-Schleife durch
+# die Laender-Schleife nach oben und beendete den Prozess — und weil Bronze erst HINTER der
+# Schleife geschrieben wird, war auch alles Eingesammelte weg. Am 2026-09-07 riss `BL=03`
+# (Niedersachsen), am 2026-09-09 `BL=01` (Schleswig-Holstein); Schleswig-Holstein steht an
+# erster Stelle, deshalb kam nicht eine einzige Laenderzeile ins Protokoll. Zwei von drei
+# Naechten: 0 statt 16 Laender, 873 s Laufzeit fuer nichts.
+_AUSSETZER = 3        # so viele gescheiterte Runden am Stueck geben EIN Land auf
 
 _ANZAHL = re.compile(r"Anzahl:\s*([\d.]+)")
 _DATUM = re.compile(r"^\d{2}\.\d{2}\.\d{4}$")
@@ -169,18 +177,32 @@ def hole_land(kuerzel: str, pg, runden: int) -> dict:
     saetze: dict[str, dict] = {}
     gemeldet = None
     leer = 0
+    aussetzer = 0
+    fehler = 0
     for runde in range(runden):
-        pg.goto(url, wait_until="domcontentloaded")
-        pg.wait_for_timeout(_WARTE_MS)
-        text = pg.evaluate("() => document.body.innerText")
+        # ⚠ DER ABRUF, NICHT DIE AUSWERTUNG. Nur was am Netz haengt, steht im `try` — ein
+        # Fehler im Zerlegen ist ein Programmfehler und soll laut sein, kein „Aussetzer".
+        try:
+            pg.goto(url, wait_until="domcontentloaded")
+            pg.wait_for_timeout(_WARTE_MS)
+            text = pg.evaluate("() => document.body.innerText")
+            zeilen = pg.evaluate(
+                """() => [...document.querySelectorAll('tr')].slice(1)
+                     .map(r => [...r.querySelectorAll('td')]
+                                 .map(c => c.innerText.replace(/\\s+/g, ' ').trim()))
+                     .filter(z => z.length > 1)""")
+        except Exception as e:                           # noqa: BLE001
+            aussetzer += 1
+            fehler += 1
+            print(f"  {kuerzel}: Runde {runde + 1} nicht erreichbar "
+                  f"({type(e).__name__}) — {aussetzer}. Aussetzer am Stueck", flush=True)
+            if aussetzer >= _AUSSETZER:
+                break
+            continue
+        aussetzer = 0
         if gemeldet is None:
             m = _ANZAHL.search(text)
             gemeldet = int(m.group(1).replace(".", "")) if m else 0
-        zeilen = pg.evaluate(
-            """() => [...document.querySelectorAll('tr')].slice(1)
-                 .map(r => [...r.querySelectorAll('td')]
-                             .map(c => c.innerText.replace(/\\s+/g, ' ').trim()))
-                 .filter(z => z.length > 1)""")
         neu = 0
         for z in zeilen:
             s = zerlege(z, kuerzel)
@@ -192,22 +214,37 @@ def hole_land(kuerzel: str, pg, runden: int) -> dict:
             break
         pg.wait_for_timeout(_HOEFLICH_MS)
     return {"land": kuerzel, "name": name, "gemeldet": gemeldet or 0,
-            "geholt": len(saetze), "runden": runde + 1, "saetze": list(saetze.values())}
+            "geholt": len(saetze), "runden": runde + 1, "fehler": fehler,
+            "saetze": list(saetze.values())}
 
 
 def lauf(kuerzel: list[str], runden: int, dry_run: bool) -> dict:
     from playwright.sync_api import sync_playwright
 
     ergebnisse = []
+    ausgefallen: list[str] = []
     with sync_playwright() as p:
         b = p.chromium.launch(headless=True)
         ctx = b.new_context()
         pg = ctx.new_page()
         pg.set_default_timeout(45000)
         for k in kuerzel:
-            r = hole_land(k, pg, runden)
+            try:
+                r = hole_land(k, pg, runden)
+            except Exception as e:                       # noqa: BLE001
+                # Bis hierher kommt nur, was `hole_land` selbst nicht auffangen konnte —
+                # etwa ein abgestuerzter Browser. Auch dann laufen die uebrigen Laender.
+                ausgefallen.append(k)
+                print(f"  {k}  {LAENDER[k][1]:<24}    ⛔ ausgefallen "
+                      f"({type(e).__name__}) — die uebrigen laufen weiter", flush=True)
+                continue
             quote = f"{100 * r['geholt'] / r['gemeldet']:.0f}%" if r["gemeldet"] else "—"
             marke = "" if r["geholt"] >= r["gemeldet"] else "  ⚠ unvollständig"
+            # ⚠ „unvollstaendig" heisst: die Liste hat nicht alles gezeigt (sie wuerfelt) —
+            # das ist der Normalfall. „Aussetzer" heisst: das Portal antwortete nicht. Zwei
+            # verschiedene Dinge, und bis zum 2026-09-09 trugen sie denselben Wortlaut.
+            if r["fehler"]:
+                marke += f"  ⚠ {r['fehler']} Aussetzer"
             print(f"  {k}  {r['name']:<24} {r['geholt']:>4} von {r['gemeldet']:>4} "
                   f"({quote:>4}) in {r['runden']} Runden{marke}", flush=True)
             ergebnisse.append(r)
@@ -216,6 +253,9 @@ def lauf(kuerzel: list[str], runden: int, dry_run: bool) -> dict:
 
     alle = [s for r in ergebnisse for s in r["saetze"]]
     ges_gem = sum(r["gemeldet"] for r in ergebnisse)
+    if ausgefallen:
+        print(f"  ⛔ ausgefallen: {', '.join(ausgefallen)} — "
+              f"{len(ergebnisse)} von {len(kuerzel)} Laendern geholt.")
     print(f"\nHealy Hudson: {len(alle)} Vorgänge von {ges_gem} gemeldeten "
           f"({100 * len(alle) / ges_gem:.0f} %)" if ges_gem else "\nnichts geholt.")
     # KEIN stilles Abschneiden: was fehlt, wird benannt.
@@ -228,7 +268,8 @@ def lauf(kuerzel: list[str], runden: int, dry_run: bool) -> dict:
     if dry_run:
         for s in alle[:3]:
             print("   ", json.dumps(s, ensure_ascii=False)[:170])
-        return {"geholt": len(alle), "gemeldet": ges_gem}
+        return {"geholt": len(alle), "gemeldet": ges_gem,
+                "ausgefallen": ausgefallen, "laender": len(ergebnisse)}
 
     out = ROOT / "data" / "raw_healyhudson"
     out.mkdir(parents=True, exist_ok=True)
@@ -247,7 +288,8 @@ def lauf(kuerzel: list[str], runden: int, dry_run: bool) -> dict:
         for s in frisch:
             fh.write(json.dumps(s, ensure_ascii=False) + "\n")
     print(f"→ {ziel}  ({len(frisch)} neu, {len(alle) - len(frisch)} bereits bekannt)")
-    return {"geholt": len(alle), "neu": len(frisch), "gemeldet": ges_gem}
+    return {"geholt": len(alle), "neu": len(frisch), "gemeldet": ges_gem,
+            "ausgefallen": ausgefallen, "laender": len(ergebnisse)}
 
 
 
@@ -475,7 +517,14 @@ def main(argv: list[str] | None = None) -> int:
         p.error(f"unbekannte Länderkürzel: {unbekannt}. Erlaubt: {', '.join(LAENDER)}")
     if not k:
         p.error("--laender oder --alle angeben")
-    lauf(k, min(a.runden, _MAX_RUNDEN), a.dry_run)
+    r = lauf(k, min(a.runden, _MAX_RUNDEN), a.dry_run)
+    # ⚠ DER FEHLERCODE MEINT JETZT ETWAS ANDERES als bis zum 2026-09-09: nicht mehr „ein
+    # Zeitablauf irgendwo", sondern „kein einziges Bundesland erreichbar". Ein Ausfall in
+    # einem Land ist eine Zeile im Protokoll, kein roter Schritt — sonst faerbt die
+    # unzuverlaessigste Landesseite den ganzen Abruf rot, obwohl fuenfzehn geliefert haben.
+    if r.get("laender") == 0:
+        print("⛔ kein einziges Bundesland erreichbar — Portal down oder Browser kaputt.")
+        return 1
     return 0
 
 
