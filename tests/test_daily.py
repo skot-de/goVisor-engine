@@ -180,3 +180,69 @@ def test_kein_schrittname_traegt_eine_variable():
     assert not treffer, (
         "Diese Schrittnamen tragen eine Variable und zerfallen damit ueber die Naechte:\n  "
         + "\n  ".join(treffer))
+
+
+# ── Zeitstempel je Zeile ────────────────────────────────────────────────────────────
+
+def _praefixer() -> str:
+    """Der `exec`-Block, der jede Ausgabezeile mit der Uhrzeit versieht."""
+    q = LAUF.read_text(encoding="utf-8")
+    return q.split("exec > >(")[1].split('| tee -a "$LOG") 2>&1')[0]
+
+
+def test_jede_zeile_bekommt_die_uhrzeit():
+    """⚠ Die Schrittzeiten (`⏱`) sagen, WELCHER Schritt lange brauchte, nicht WO darin die
+    Zeit blieb. Am 2026-09-09 stand „DÖE-Ingest 5148s" bei exakt derselben Arbeit, die zwei
+    Tage vorher 1498s kostete — und ohne Zeitstempel liess sich nicht unterscheiden, ob es
+    am Warten auf die Gegenstelle lag, an Wiederholungen oder an der eigenen Rechnung."""
+    assert '%H:%M:%S' in _praefixer()
+
+
+def test_praefixer_nutzt_PY_nicht_bares_python():
+    """Unter launchd ist die Umgebung eine andere; `$PY` ist die Fassung, die der ganze
+    Lauf benutzt. Ein bares `python3` waere eine zweite Annahme an derselben Stelle."""
+    assert "$PY -c" in _praefixer()
+
+
+def test_praefixer_ist_ungepuffert():
+    """Sonst haengt die Ausgabe im Puffer und die Zeitstempel messen Puffer-Leerungen statt
+    Arbeit — genau der Fehler, der am 2026-09-05 in den Python-Schritten gefunden wurde."""
+    quelle = LAUF.read_text(encoding="utf-8")
+    assert 'PY="python3 -u"' in quelle
+
+
+def test_praefixer_ueberlebt_muell_im_strom():
+    """⚠ Stirbt er, geht das Protokoll eines Siebenstundenlaufs verloren und der Lauf
+    schreibt in eine tote Pipe. Ein einziges ungültiges UTF-8-Byte würde genügen.
+
+    Geprüft wird das VERHALTEN, nicht die Absicht: der echte Block wird ausgeführt."""
+    import subprocess
+    import tempfile
+    with tempfile.TemporaryDirectory() as d:
+        skript = (f'set -uo pipefail\nPY="python3 -u"\nLOG={d}/x.log\n'
+                  f'exec > >({_praefixer()}| tee -a "$LOG") 2>&1\n'
+                  r'printf "eins\nkaputt: \xff\xfe\nzwei\n"' + "\n")
+        subprocess.run(["bash", "-c", skript], capture_output=True, timeout=60)
+        # ⚠ NICHT SCHLAFEN, SONDERN WARTEN. Die Prozess-Substitution wird nach dem
+        # Skriptende abgebaut; ein festes `sleep(1)` reicht auf einer belasteten Maschine
+        # nicht und macht den Test zum Flackern. Genau das ist am 2026-09-09 passiert:
+        # allein gruen, im Gesamtlauf rot. Ein Test, der unter Last rot wird, erzieht
+        # dazu, Rot zu ignorieren.
+        import time
+        ziel, frist = Path(f"{d}/x.log"), time.time() + 20
+        text = ""
+        while time.time() < frist:
+            text = ziel.read_text(encoding="utf-8", errors="replace") if ziel.exists() else ""
+            if "zwei" in text:
+                break
+            time.sleep(0.05)
+    assert "eins" in text and "zwei" in text, "nach dem Muell wurde nichts mehr geschrieben"
+    assert re.search(r"\[\d\d:\d\d:\d\d\] zwei", text), "die Zeile hat keinen Zeitstempel"
+
+
+def test_bestehende_leser_vertragen_das_praefix():
+    """`test_daily` selbst sucht mit `re.search` nach `⏱ … — Ns`; ein Präfix davor darf das
+    nicht brechen. Sonst misst die Ernte-Reserve ab morgen nichts mehr."""
+    zeile = "[04:07:12]   ⏱ Gold-Rebuild (Leads mit Stichtag 2026-09-09) — 243s"
+    m = re.search(r"⏱ Gold-Rebuild \(Leads mit Stichtag 2026-09-09\) — (\d+)s", zeile)
+    assert m and m.group(1) == "243"

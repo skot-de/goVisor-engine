@@ -297,7 +297,38 @@ mkdir -p "$LOG_DIR"
 # Ein Lauf = eine Datei. Das trennt auch die Historie: Schrittdauern zu vergleichen ist
 # unmoeglich, solange zwei Laeufe ineinander stehen.
 LOG="$LOG_DIR/daily-$TODAY-$(date '+%H%M').log"
-exec > >(tee -a "$LOG") 2>&1
+# ⚠ ZEITSTEMPEL JE ZEILE, seit 2026-09-09. Die Schrittzeiten (`⏱`) sagen, WELCHER Schritt
+# lange brauchte, aber nicht WO darin die Zeit blieb. Am 2026-09-09 stand im Protokoll
+# „DÖE-Ingest 5148s" bei exakt derselben Arbeit, die zwei Tage vorher 1498s gekostet hatte
+# — und ohne Zeitstempel liess sich nicht unterscheiden, ob es am Warten auf die
+# Gegenstelle lag, an Wiederholungen oder an der eigenen Rechnung. Ich habe deshalb Platte,
+# Netz und Arbeitsmenge einzeln ausgeschlossen, statt es ablesen zu koennen.
+#
+# Ein Praefix vor JEDER Zeile macht jeden Schritt messbar, der ueberhaupt Fortschritt
+# ausgibt (DÖE meldet je Monat, simap je Seite) — ohne Eingriff in ein einziges Modul.
+#
+# ⚠ ZEILENWEISE UND UNGEPUFFERT (`python3 -u`), sonst haengt die Ausgabe im Puffer und die
+# Zeitstempel messen Puffer-Leerungen statt Arbeit — genau der Fehler, den die
+# Parallelsitzung am 2026-09-05 in den Python-Schritten gefunden hat.
+#
+# Bestehende Leser vertragen das Praefix: `logs.sh` tailt nur, `tests/test_daily.py` sucht
+# mit `re.search` nach `⏱ … — Ns`, `pruefe_bibel.py` greppt mit Zeilennummern.
+# ⚠ ROBUST GEGEN MUELL IM STROM. Stirbt der Praefixer, geht das Protokoll eines
+# Siebenstundenlaufs verloren und der Lauf schreibt in eine tote Pipe. Ein einziges
+# ungueltiges UTF-8-Byte aus einem Abrufer wuerde dafuer genuegen — deshalb
+# `errors="replace"` auf beiden Seiten und ein Auffangnetz um die Schleife.
+exec > >($PY -c '
+import sys, time
+sys.stdin.reconfigure(errors="replace")
+sys.stdout.reconfigure(errors="replace")
+try:
+    for _z in sys.stdin:
+        sys.stdout.write(time.strftime("[%H:%M:%S] ") + _z)
+except Exception:
+    # Lieber ohne Zeitstempel weiterschreiben als den Lauf blind machen.
+    for _z in sys.stdin:
+        sys.stdout.write(_z)
+' | tee -a "$LOG") 2>&1
 echo "════════════════════════════════════════════════════════════════"
 echo "goVisor Tageslauf  $(date '+%F %T')  (Monat $MONTH, Stichtag $TODAY)"
 echo "════════════════════════════════════════════════════════════════"
