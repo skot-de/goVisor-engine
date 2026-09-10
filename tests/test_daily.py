@@ -246,3 +246,136 @@ def test_bestehende_leser_vertragen_das_praefix():
     zeile = "[04:07:12]   ⏱ Gold-Rebuild (Leads mit Stichtag 2026-09-09) — 243s"
     m = re.search(r"⏱ Gold-Rebuild \(Leads mit Stichtag 2026-09-09\) — (\d+)s", zeile)
     assert m and m.group(1) == "243"
+
+
+def test_der_warnungszaehler_vertraegt_das_praefix():
+    """⚠ DER LESER, DEN DIE PRÄFIX-EINFÜHRUNG ÜBERSAH — und er steht in derselben Datei.
+
+    `abschluss()` zählt die Warnungen eines Laufs mit einem Muster, das an `^` hängt. Mit
+    dem Zeitstempel davor traf es nichts mehr: der Lauf vom 2026-09-10 meldete **0
+    Warnungen**, während sechs im Protokoll standen, darunter die Ausfälle von TED-Live
+    und DTVP. Eine Kennzahl, die immer null ist, liest niemand — genau die Falle, gegen die
+    der Zähler 2026-08-25 überhaupt erst verschärft worden war.
+
+    Der Test liest das Muster AUS DEM SKRIPT, nicht aus einer Kopie. Eine Kopie altert mit
+    und beweist am Ende nur, dass zwei Stellen denselben Fehler haben.
+    """
+    m = re.search(r"warn=\$\(grep -cE '([^']+)'", LAUF.read_text(encoding="utf-8"))
+    assert m, "Die Zeile, die Warnungen zählt, ist nicht mehr auffindbar."
+    muster = m.group(1).replace("[[:space:]]", r"\s")
+
+    treffen_muss = [
+        "[01:43:23]   ⚠ TED-Live fehlgeschlagen — Bestand bleibt auf altem Stand.",
+        "  ⚠ ohne Praefix, wie die Protokolle bis zum 2026-09-08",
+        "⚠ ganz ohne Einzug",
+    ]
+    # ⚠ Und die Gegenprobe, die den Zähler 2026-08-25 erst brauchbar gemacht hat: das
+    # Zeichen dient MITTEN in der Zeile als Marker. Wer die einrechnet, zählt jede Nacht
+    # dieselbe Zahl — und ein Lauf, in dem wirklich etwas kaputtging, sähe genauso aus.
+    treffen_nicht = [
+        "[05:10:21]   SH  Schleswig-Holstein   19 von 21 (90%)  ⚠ unvollständig",
+        "   gesamt simap → Serie 'simap' (beginnt_spaeter), ab 2024: 859 … 1,933 ⚠2024=6Mon",
+    ]
+    for z in treffen_muss:
+        assert re.match(muster, z), f"Warnung nicht gezählt: {z!r}"
+    for z in treffen_nicht:
+        assert not re.match(muster, z), f"Inline-Marker fälschlich gezählt: {z!r}"
+
+
+def test_der_zaehler_findet_die_warnungen_im_letzten_protokoll():
+    """Gegenprobe am echten Bestand: ein Lauf mit Warnungen darf nicht auf null stehen."""
+    protokolle = sorted(LOGS.glob("daily-*.log"))[-3:]
+    if not protokolle:
+        pytest.skip("keine Protokolle — frische Arbeitskopie")
+    m = re.search(r"warn=\$\(grep -cE '([^']+)'", LAUF.read_text(encoding="utf-8"))
+    muster = re.compile(m.group(1).replace("[[:space:]]", r"\s"))
+    for log in protokolle:
+        zeilen = log.read_text(errors="replace").splitlines()
+        gezaehlt = sum(1 for z in zeilen if muster.match(z))
+        # Jede Zeile, die (nach optionalem Zeitstempel) mit dem Zeichen beginnt, ist eine
+        # Warnung — egal wie das Skript sie sucht.
+        echte = sum(1 for z in zeilen if re.match(r"^(\[[0-9:]+\]\s*)?\s*⚠", z))
+        assert gezaehlt == echte, (
+            f"{log.name}: der Zaehler des Skripts findet {gezaehlt}, im Protokoll stehen "
+            f"{echte} Warnzeilen.")
+
+
+# ─────────────────────────────────────────── Aufschub statt Abbruch (seit 2026-09-10)
+
+# Die Schritte, die einen Tag warten koennen, ohne dass etwas verloren geht: sie lesen
+# Dokumente, die morgen noch da sind, und der Dauerarbeiter macht einen davon ohnehin
+# jede Runde. ⚠ Alles andere hinter dem Gold-Rebuild ist das PRODUKT — Export, Waechter,
+# Ertragsbericht — und darf nie aufgeschoben werden.
+AUFSCHIEBBAR = (
+    "_index_alle",                     # Volltext-Index (Stufe 1 des Dauerarbeiters)
+    "govisor.dokdubletten",            # Dokument-Dubletten
+    "_signale_alle",                   # Anforderungs-Signale
+    "export_doc_text.py",              # doc-text.json
+    "extract_positions.py",            # Leistungsverzeichnisse
+    "build_marktpuls.py",              # Marktpuls
+    "gap_effects.py",                  # Vorberechnung
+)
+
+
+def test_die_teuren_ernteschritte_stehen_unter_der_aufschub_regel():
+    """⚠ DER FALL VOM 2026-09-10. Der Lauf riss die 8 h und verlor 20 von 49 Schritten —
+    darunter JEDEN Frontend-Export, obwohl Gold längst fertig war. `web/data` stand einen
+    Tag still.
+
+    Der Grund war die Reihenfolge: die teuersten Ernteschritte sind aufschiebbar, stehen
+    aber VOR dem Export, der es nicht ist. `ERNTE_RESERVE` half nicht — die schützt die
+    Ernte vor den ABRUFERN, nicht vor sich selbst.
+    """
+    text = LAUF.read_text(encoding="utf-8")
+    assert "nur_mit_zeit()" in text, "Die Aufschub-Regel fehlt."
+    fehlt = [n for n in AUFSCHIEBBAR
+             if not re.search(r"nur_mit_zeit [^\n]*" + re.escape(n), text)]
+    assert fehlt == [], (
+        f"Diese Schritte laufen ohne Aufschub-Regel: {fehlt}. Wer hier einen teuren "
+        f"Schritt einhängt, ohne ihn zu schützen, verliert beim nächsten langen Lauf "
+        f"wieder den Export.")
+
+
+def test_der_export_steht_nicht_unter_der_aufschub_regel():
+    """Die Gegenprobe — sonst schiebt der Lauf irgendwann genau das auf, was er liefern
+    soll, und meldet dabei brav „fertig"."""
+    text = LAUF.read_text(encoding="utf-8")
+    for pflicht in ("export_web_leads", "export_landing", "build_city_index"):
+        assert not re.search(r"nur_mit_zeit [^\n]*" + re.escape(pflicht), text), (
+            f"{pflicht} ist aufschiebbar gemacht worden — das ist das Produkt.")
+
+
+def test_ernte_kern_deckt_den_gemessenen_pflichtteil():
+    """Wie die Ernte-Reserve: eine Zahl, die aus einer Messung stammt, altert mit ihr."""
+    text = LAUF.read_text(encoding="utf-8")
+    m = re.search(r"ERNTE_KERN=\$\{GOVISOR_ERNTE_KERN:-(\d+)\}", text)
+    assert m, "ERNTE_KERN ist nicht mehr auffindbar."
+    reserve = int(m.group(1))
+    KERN = ("Bundeslaender ableiten", "Frontend-Daten exportieren", "Ertragsbericht",
+            "Namenswoerter-Tabelle")
+    gemessen = []
+    for log in sorted(LOGS.glob("daily-*.log"))[-LAEUFE:]:
+        paare = re.findall(r"⏱ (.+?) — (\d+)s", log.read_text(errors="replace"))
+        s = sum(int(x) for n, x in paare if any(n.startswith(k) for k in KERN))
+        if s:
+            gemessen.append(s)
+    if not gemessen:
+        pytest.skip("keine Protokolle mit Pflichtteil")
+    schlimmster = max(gemessen)
+    assert reserve >= schlimmster * MINDEST_FAKTOR, (
+        f"ERNTE_KERN = {reserve // 60} min, der schlimmste gemessene Pflichtteil lag bei "
+        f"{schlimmster // 60} min. Der Abstand ist unter {MINDEST_FAKTOR}× gefallen.")
+
+
+def test_der_maschinen_mitschreiber_wird_gestartet_und_beendet():
+    """Ein Mitschreiber, der den Lauf überlebt, läuft bis zum Neustart weiter."""
+    text = LAUF.read_text(encoding="utf-8")
+    assert "maschine_mitschreiben.sh" in text, "Der Mitschreiber wird nicht gestartet."
+    assert 'kill "$MASCHINE_PID"' in text, "Der Mitschreiber wird nicht beendet."
+    # ⚠ Und zwar im `trap`, nicht am Ende des Skripts: ein Lauf, der an der Zeitgrenze
+    # stirbt, kommt am Ende nie an.
+    i_trap = text.index("abschluss()")
+    i_kill = text.index('kill "$MASCHINE_PID"')
+    i_ende = text.index("# ══ ERNTE VOR ABRUF")
+    assert i_trap < i_kill < i_ende, "Das Beenden steht nicht in abschluss()."
+    assert (ROOT / "scripts" / "maschine_mitschreiben.sh").exists()

@@ -219,9 +219,35 @@ abschluss() {
   # Mit dem strengeren Filter: 3, 3, 3, 3, 3, 4, 3, 5. Am 25.08. sind die zwei zusaetz-
   # lichen der Verdrahtungsbefund und die Deflator-Naeherung — also genau das, was man
   # sehen will. Wer die Rohzahl braucht: `grep -c '⚠' data/logs/daily-*.log`.
-  local warn; warn=$(grep -cE '^[[:space:]]*⚠' "${LOG:-/dev/null}" 2>/dev/null); warn=${warn:-0}
+  #
+  # ⚠ DAS ZEITSTEMPEL-PRAEFIX GEHOERT MIT INS MUSTER. Seit dem 2026-09-09 steht vor jeder
+  # Zeile `[HH:MM:SS] ` — und `^[[:space:]]*⚠` traf danach NICHTS mehr. Der Lauf vom
+  # 2026-09-10 meldete „0 Warnungen", waehrend sechs im Protokoll standen, darunter zwei
+  # Ausfaelle (TED-Live und DTVP). Der Kommentar oben zaehlt drei Leser auf, die das
+  # Praefix vertragen; der vierte steht achtzig Zeilen darunter in derselben Datei.
+  # Die Lehre: wer ein Praefix einfuehrt, sucht nicht nach Lesern — er sucht nach `^`.
+  local warn; warn=$(grep -cE '^(\[[0-9:]+\][[:space:]]*)?[[:space:]]*⚠' "${LOG:-/dev/null}" 2>/dev/null); warn=${warn:-0}
   local zustand="fertig"
   [ "$rc" -ne 0 ] && zustand="ABGEBROCHEN (Code $rc)"
+  # Aufgeschobene Schritte gehoeren in die Abschlusszeile: sonst sieht ein Lauf, der die
+  # Haelfte der Ernte hat liegen lassen, genauso aus wie einer, der alles geschafft hat.
+  local aufschub=""
+  [ "${_AUFGESCHOBEN:-0}" -gt 0 ] && aufschub=" · ${_AUFGESCHOBEN} aufgeschoben"
+  # Den Mitschreiber beenden und in EINEM Satz sagen, wie eng es auf der Maschine war.
+  # ⚠ Der schlimmste Wert, nicht der Durchschnitt: ein Mittel ueber acht Stunden verduennt
+  # genau die Minuten, in denen alles stand.
+  [ -n "${MASCHINE_PID:-}" ] && kill "$MASCHINE_PID" 2>/dev/null
+  local eng=""
+  if [ -s "${MASCHINE_TSV:-/dev/null}" ]; then
+    eng=$(awk -F'\t' '
+      NR>1 { if ($3+0 > sw) sw = $3+0
+             if (f == "" || $4+0 < f) f = $4+0
+             if ($5+0 > pi) pi = $5+0
+             n++ }
+      END { if (n) printf " · Maschine: bis %.1f GB ausgelagert, min %d MB frei, Spitze %d Einlagerungen/s", sw/1024, f, pi }' \
+          "$MASCHINE_TSV")
+  fi
+  aufschub="$aufschub$eng"
   [ -n "$_SCHRITT_NAME" ] && [ "$rc" -ne 0 ] && zustand="$zustand bei: $_SCHRITT_NAME"
   # Uebersprungene Abrufer GEHOEREN in den Bericht. Ohne sie sieht ein gekuerzter Lauf
   # aus wie ein vollstaendiger: die Auswertung lief ja durch, es fehlen bloss die
@@ -230,8 +256,8 @@ abschluss() {
   [ "${_ABRUF_UEBERSPRUNGEN:-0}" -gt 0 ] \
     && gekuerzt=" · ${_ABRUF_UEBERSPRUNGEN} Abrufe uebersprungen (Zeitbudget)"
   {
-    printf '%s  %s · %d min · %s Warnungen%s\n' \
-      "$(date '+%Y-%m-%d %H:%M')" "$zustand" "$dauer" "$warn" "$gekuerzt"
+    printf '%s  %s · %d min · %s Warnungen%s%s\n' \
+      "$(date '+%Y-%m-%d %H:%M')" "$zustand" "$dauer" "$warn" "$gekuerzt" "$aufschub"
   } > "$ROOT/data/logs/letzter_lauf.txt"
   echo ""
   echo "── $(cat "$ROOT/data/logs/letzter_lauf.txt")"
@@ -329,6 +355,21 @@ except Exception:
     for _z in sys.stdin:
         sys.stdout.write(_z)
 ' | tee -a "$LOG") 2>&1
+
+# ── ZUSTAND DER MASCHINE MITSCHREIBEN ────────────────────────────────────────────────
+# ⚠ Weil die Schritte nicht langsam sind, sondern STEHEN. In der Nacht zum 2026-09-10
+# brauchte simap fuer 50 Publikationen 27 s — und viermal 15 bis 18 Minuten. Dasselbe bei
+# DÖE (5 s je Monat, dann 16 min) und der Kategorie-Ableitung (4 s je Stapel, dann 33 min).
+# Es trifft Netz- UND reine Rechenschritte gleichermassen, also liegt es an dieser
+# Maschine, nicht an den Gegenstellen. Der Verdacht heisst Auslagerung: 16 GB RAM, und
+# eine Stichprobe am 2026-09-10 zeigte 61 MB freien Speicher, 13,4 GB Auslagerung und fast
+# 3.000 Seiten-Einlagerungen je Sekunde auf eine USB-SSD. Ein Verdacht ist keine Messung —
+# deshalb schreibt der Lauf ab jetzt alle 30 s mit, und die Abschlusszeile nennt den
+# schlimmsten Wert. Um 03:21 sieht sonst niemand in die Aktivitaetsanzeige.
+MASCHINE_TSV="$LOG_DIR/maschine-$TODAY-$(date '+%H%M').tsv"
+"$ROOT/scripts/maschine_mitschreiben.sh" "$MASCHINE_TSV" 30 &
+MASCHINE_PID=$!
+
 echo "════════════════════════════════════════════════════════════════"
 echo "goVisor Tageslauf  $(date '+%F %T')  (Monat $MONTH, Stichtag $TODAY)"
 echo "════════════════════════════════════════════════════════════════"
@@ -396,6 +437,41 @@ $PY scripts/modellpruefung.py \
 # `tests/test_daily.py::test_ernte_reserve_deckt_die_gemessene_ernte` rechnet das gegen die
 # echten Protokolle nach und wird rot, wenn der Abstand wieder schmilzt.
 ERNTE_RESERVE=${GOVISOR_ERNTE_RESERVE:-12000}   # 200 min
+
+# ⚠ UND EINE ZWEITE RESERVE, SEIT 2026-09-10. `ERNTE_RESERVE` schuetzt die Ernte vor den
+# ABRUFERN — das half am 2026-09-10 nichts, weil die Ernte sich selbst gefressen hat: der
+# Lauf lief 494 min, riss die 8 h und verlor **20 von 49 Schritten**, darunter JEDEN
+# Frontend-Export. `web/data` stand danach einen Tag still, obwohl Gold frisch war.
+#
+# Der Grund ist die Reihenfolge: die teuersten Ernteschritte sind aufschiebbar
+# (Volltext-Index, Dokument-Dubletten, Signale, Leistungsverzeichnisse, Marktpuls,
+# gap_effects — alle holen morgen nach), und ausgerechnet sie stehen VOR dem Export, der
+# nicht aufschiebbar ist. Wer oben abschneidet, verliert unten das Produkt.
+#
+# Gemessen ueber neun Laeufe (02.09.–09.09.), Pflichtteil am Ende — Bundeslaender,
+# Frontend-Export, Namenswoerter, Ertragsbericht:
+#
+#     3 · 4 · 4 · 5 · 7 · 21 · 24 · 26 · 26 min
+#
+# 60 min ist gut das Doppelte des schlimmsten Falls und deckt zusaetzlich die Waechter,
+# den Supabase-Block und den Ertragsbericht, die keine eigene Schrittzeit ausweisen.
+ERNTE_KERN=${GOVISOR_ERNTE_KERN:-3600}          # 60 min
+
+# Fuehrt "$@" nur aus, solange noch Zeit fuer den Pflichtteil bleibt. Sonst: Meldung und
+# weiter — KEIN Abbruch. Ein aufgeschobener Schritt kostet einen Tag Frische, ein
+# abgeschnittener Lauf kostet den Tag komplett.
+nur_mit_zeit() {
+  local rest=$(( GRENZE_GESAMT - SECONDS ))
+  if [ "$rest" -lt "$ERNTE_KERN" ]; then
+    echo "  ⏭ aufgeschoben — noch $(( rest / 60 )) min bis zur Gesamtgrenze, "\
+         "$(( ERNTE_KERN / 60 )) min sind fuer Export und Waechter reserviert."
+    echo "     Der Schritt holt morgen nach; das Frontend bekommt heute trotzdem frische Daten."
+    _AUFGESCHOBEN=$(( ${_AUFGESCHOBEN:-0} + 1 ))
+    return 0
+  fi
+  "$@"
+}
+_AUFGESCHOBEN=0
 
 # Darf noch ein Abrufer starten? Die Beschaffung ist nach oben offen (gemessen 1.622 min
 # im schlimmsten Fall), die Auswertung dahinter ist es nicht. Also teilen sich ALLE
@@ -1076,7 +1152,7 @@ _index_alle() {
 _IXLOCK="$ROOT/data/.index_docs.lock"
 if mkdir "$_IXLOCK" 2>/dev/null; then
   echo $$ > "$_IXLOCK/pid"
-  _index_alle
+  nur_mit_zeit _index_alle
   rm -rf "$_IXLOCK"
 else
   _alt="$(cat "$_IXLOCK/pid" 2>/dev/null | tr -d '[:space:]')"
@@ -1085,7 +1161,7 @@ else
   else
     echo "  ⚠ Verwaistes Index-Lock — uebernommen."
     rm -rf "$_IXLOCK" && mkdir "$_IXLOCK" && echo $$ > "$_IXLOCK/pid"
-    _index_alle
+    nur_mit_zeit _index_alle
     rm -rf "$_IXLOCK"
   fi
 fi
@@ -1109,7 +1185,7 @@ fi
 # (s. `docs/laender/03-input-dokumente.md`). Das Modul sagt es selbst, wenn kein Textindex
 # da ist, statt still nichts zu tun — ein Land, das Unterlagen bekommt, kommt hier dazu.
 step "Dokument-Dubletten (gleiche Datei → ein Master)"
-$PY -m govisor.dokdubletten --country DE \
+nur_mit_zeit $PY -m govisor.dokdubletten --country DE \
   || echo "  ⚠ Dokument-Dubletten nicht neu gebildet — die Analyse zahlt Wiederholungen erneut."
 
 step "Unterlagen auswerten → Anforderungs-Signale"
@@ -1124,7 +1200,7 @@ _signale_alle() {
   done
   [ "$_ok" = 1 ]
 }
-if _signale_alle; then
+if nur_mit_zeit _signale_alle; then
   $PY scripts/export_doc_signals.py || echo "  ⚠ doc-signals.json nicht geschrieben."
   # Aufwand gegen Zeitfenster (Kennzahl 1). Braucht `doc_analysis` in Gold UND das
   # Veroeffentlichungsdatum aus Silber — laeuft deshalb NACH der Gold-Kette, nicht davor.
@@ -1175,7 +1251,7 @@ fi
 # kein Schritt schlug fehl, die Datei existierte. Sie war bloss uralt. Genau dagegen
 # hilft es, den Export NEBEN den Erzeuger zu stellen statt ihn einmal von Hand zu fahren.
 step "Unterlagen-Volltext exportieren (doc-text.json)"
-$PY scripts/export_doc_text.py || echo "  ⚠ doc-text.json nicht geschrieben — Lead-Detail zeigt weiter den alten Textstand."
+nur_mit_zeit $PY scripts/export_doc_text.py || echo "  ⚠ doc-text.json nicht geschrieben — Lead-Detail zeigt weiter den alten Textstand."
 # Dasselbe fuer die LLM-Auswertungen: `doc-analysis.json` ist der Arbeitsstand des
 # Analyse-Arbeiters (252 MB) und bleibt lokal; das Frontend liest eine Datei je Vorgang.
 # Ohne diesen Aufruf zeigt das Lead-Detail die Auswertungen vom letzten Export.
@@ -1230,7 +1306,7 @@ if [ "$(date +%u)" = "7" ]; then
   echo "  Sonntag: alle Archive neu lesen (kein Merker)."
 fi
 # shellcheck disable=SC2086  # _LV_ARGS ist bewusst wortgetrennt
-if $PY scripts/extract_positions.py --country DE $_LV_ARGS; then
+if nur_mit_zeit $PY scripts/extract_positions.py --country DE $_LV_ARGS; then
   $PY scripts/extract_criteria.py --country DE || echo "  ⚠ Kriterien-Extraktion übersprungen."
   $PY scripts/export_doc_struktur.py --country DE || echo "  ⚠ doc-struktur.json nicht geschrieben."
 else
@@ -1255,7 +1331,7 @@ fi   # Ende Phase „dokumente"
 
 # Ab hier: VEROEFFENTLICHEN — laeuft in JEDER Phase, s. Erklaerung oben.
 step "Marktpuls berechnen (Saison + Jahre 2004-2025 + Lage)"
-$PY scripts/build_marktpuls.py --ab-jahr 2004 || echo "  ⚠ marktpuls.json bleibt auf dem letzten Stand — die Anzeige weist das aus."
+nur_mit_zeit $PY scripts/build_marktpuls.py --ab-jahr 2004 || echo "  ⚠ marktpuls.json bleibt auf dem letzten Stand — die Anzeige weist das aus."
 
 step "Namenswoerter-Tabelle (Grundlage des Impressum-Pruefers)"
 # Die Tabelle sagt, wie selten ein Wort in Firmennamen ist. Der Impressum-Pruefer
@@ -1419,7 +1495,7 @@ if [ -n "${SUPABASE_URL:-}" ] && [ -n "${SUPABASE_SERVICE_KEY:-}" ]; then
     echo "  · gov_*-Push übersprungen (GOVISOR_SUPABASE_GOV_PUSH≠1) — Supabase hält nur Nutzerdaten."
   fi
   step "gap_effects vorberechnen (#11 §7)"
-  $PY scripts/gap_effects.py || echo "  ⚠ gap_effects übersprungen (nicht kritisch)."
+  nur_mit_zeit $PY scripts/gap_effects.py || echo "  ⚠ gap_effects übersprungen (nicht kritisch)."
 else
   echo "  ⚠ Keine Supabase-Creds (.secrets/supabase.txt) — Export übersprungen."
 fi
