@@ -91,9 +91,13 @@ def test_ein_ausgefallenes_land_beendet_nicht_die_uebrigen(monkeypatch, capsys):
                 "saetze": [{"schluessel": f"{kuerzel}-1"}, {"schluessel": f"{kuerzel}-2"}]}
 
     monkeypatch.setattr(healyhudson, "hole_land", stub)
-    monkeypatch.setattr(healyhudson, "sync_playwright", _fake_playwright(), raising=False)
+    monkeypatch.setattr(healyhudson, "_playwright", _fake_playwright())
     r = healyhudson.lauf(["SH", "HH", "NI"], runden=3, dry_run=True)
-    assert gesehen == ["SH", "HH", "NI"], "nach dem Ausfall wurde abgebrochen"
+    # ⚠ SH steht ZWEIMAL drin, und das ist seit dem 2026-09-10 richtig: ein Land, das gar
+    # nichts liefert, ist der einzige Hinweis auf einen toten Browser — also wird der
+    # Browser neu gestartet und dasselbe Land noch einmal versucht. Erst der zweite
+    # Fehlschlag gilt.
+    assert gesehen == ["SH", "SH", "HH", "NI"], "nach dem Ausfall wurde abgebrochen"
     assert r["ausgefallen"] == ["SH"]
     assert r["laender"] == 2
     assert r["geholt"] == 4, "die Saetze der ueberlebenden Laender fehlen"
@@ -103,7 +107,7 @@ def test_ein_ausgefallenes_land_beendet_nicht_die_uebrigen(monkeypatch, capsys):
 def test_fehlercode_nur_wenn_kein_land_durchkam(monkeypatch):
     """⚠ Sonst faerbt die unzuverlaessigste Landesseite den ganzen Schritt rot — und der
     Nachtlauf meldet dasselbe, ob ein Land fehlt oder alle sechzehn."""
-    monkeypatch.setattr(healyhudson, "sync_playwright", _fake_playwright(), raising=False)
+    monkeypatch.setattr(healyhudson, "_playwright", _fake_playwright())
 
     monkeypatch.setattr(healyhudson, "hole_land",
                         lambda k, pg, r: (_ for _ in ()).throw(TimeoutError("tot")))
@@ -115,8 +119,14 @@ def test_fehlercode_nur_wenn_kein_land_durchkam(monkeypatch):
     assert healyhudson.main(["--laender", "SH,HH", "--dry-run"]) == 0
 
 
-def _fake_playwright():
-    """`lauf` holt sich Playwright erst im Funktionsrumpf — hier ein Ersatz ohne Browser."""
+def _fake_playwright(zustand=None, startet_nicht_ab=None):
+    """`lauf` holt sich Playwright erst im Funktionsrumpf — hier ein Ersatz ohne Browser.
+
+    `zustand["starts"]` zaehlt die Browser-Starts; `startet_nicht_ab` laesst den Start ab
+    dem n-ten Mal scheitern (der Fall „Chromium kommt gar nicht mehr hoch").
+    """
+    zustand = {"starts": 0} if zustand is None else zustand
+
     class Ctx:
         def new_page(self):
             return FakeSeite(set())
@@ -133,6 +143,9 @@ def _fake_playwright():
 
     class Chromium:
         def launch(self, **kw):
+            zustand["starts"] = zustand.get("starts", 0) + 1
+            if startet_nicht_ab and zustand["starts"] >= startet_nicht_ab:
+                raise TimeoutError("BrowserType.launch: Timeout 180000ms exceeded.")
             return Browser()
 
     class P:
@@ -145,6 +158,81 @@ def _fake_playwright():
             return False
 
     return lambda: P()
+
+
+def _satz(k, geholt=2, fehler=0, gemeldet=2):
+    return {"land": k, "name": healyhudson.LAENDER.get(k, (None, k))[1], "gemeldet": gemeldet,
+            "geholt": geholt, "runden": 3, "fehler": fehler,
+            "saetze": [{"schluessel": f"{k}-{i}"} for i in range(geholt)]}
+
+
+def test_ein_toter_browser_wird_neu_gestartet(monkeypatch, capsys):
+    """⚠ DER FALL VOM 2026-09-10, eine Ebene tiefer. Der Schutz von gestern hat den
+    Absturz gefangen — und damit sichtbar gemacht, was darunter lag: Schleswig-Holstein
+    kam mit 19 von 21 durch, dann fielen die uebrigen FUENFZEHN Laender **in derselben
+    Sekunde** aus. Kein Zeitablauf, sondern eine tote Seite: `pg` blieb kaputt fuer den
+    ganzen Rest der Schleife. Ein aufgefangener Absturz ohne Neustart ist ein leiser
+    Absturz.
+    """
+    zustand = {"starts": 0}
+    monkeypatch.setattr(healyhudson, "_playwright", _fake_playwright(zustand))
+
+    def stub(k, pg, runden):
+        if k == "SH":
+            return _satz(k, geholt=19, gemeldet=21)
+        if zustand["starts"] < 2:                 # Seite tot, bis neu gestartet wird
+            return _satz(k, geholt=0, fehler=healyhudson._AUSSETZER, gemeldet=0)
+        return _satz(k, geholt=5, gemeldet=5)
+
+    monkeypatch.setattr(healyhudson, "hole_land", stub)
+    r = healyhudson.lauf(["SH", "HH", "NI", "HB"], runden=3, dry_run=True)
+    assert zustand["starts"] == 2, "Der Browser wurde nicht neu gestartet."
+    assert r["ausgefallen"] == [], r
+    assert r["laender"] == 4, "Nach dem Neustart fehlen Laender."
+    assert r["geholt"] == 19 + 5 * 3
+    assert "Browser neu starten (1/3)" in capsys.readouterr().out
+
+
+def test_die_neustarts_sind_gedeckelt(monkeypatch, capsys):
+    """Eine Maschine, auf der Chromium dauerhaft stirbt, soll nicht sechzehn Browser
+    starten — jeder Start kostete am 2026-09-10 bis zu drei Minuten."""
+    zustand = {"starts": 0}
+    monkeypatch.setattr(healyhudson, "_playwright", _fake_playwright(zustand))
+    monkeypatch.setattr(healyhudson, "hole_land",
+                        lambda k, pg, r: _satz(k, geholt=0,
+                                               fehler=healyhudson._AUSSETZER, gemeldet=0))
+    healyhudson.lauf(list(healyhudson.LAENDER)[:8], runden=3, dry_run=True)
+    assert zustand["starts"] == 1 + healyhudson._NEUSTARTS, zustand
+
+
+def test_wenn_chromium_gar_nicht_mehr_hochkommt(monkeypatch, capsys):
+    """Dann faellt der Rest aus — aber benannt, und was vorher geholt wurde, bleibt."""
+    zustand = {"starts": 0}
+    monkeypatch.setattr(healyhudson, "_playwright",
+                        _fake_playwright(zustand, startet_nicht_ab=2))
+
+    def stub(k, pg, runden):
+        if k == "SH":
+            return _satz(k, geholt=19, gemeldet=21)
+        return _satz(k, geholt=0, fehler=healyhudson._AUSSETZER, gemeldet=0)
+
+    monkeypatch.setattr(healyhudson, "hole_land", stub)
+    r = healyhudson.lauf(["SH", "HH", "NI"], runden=3, dry_run=True)
+    assert r["geholt"] == 19, "Die Saetze vor dem Ausfall gingen verloren."
+    assert set(r["ausgefallen"]) == {"HH", "NI"}, r
+    assert "Browser startet nicht mehr" in capsys.readouterr().out
+
+
+def test_die_fehlermeldung_nennt_mehr_als_die_klasse(monkeypatch, capsys):
+    """⚠ Eigener Befund: am 2026-09-10 stand fuenfzehnmal „(Error)" im Protokoll —
+    Playwrights Sammelklasse. Dass dahinter „Target page … has been closed" steckte, war
+    daraus nicht zu sehen, und die Diagnose kostete einen Tag."""
+    monkeypatch.setattr(healyhudson, "_playwright", _fake_playwright())
+    monkeypatch.setattr(healyhudson, "hole_land", lambda k, pg, r: (_ for _ in ()).throw(
+        RuntimeError("Target page, context or browser has been closed")))
+    healyhudson.lauf(["SH"], runden=3, dry_run=True)
+    aus = capsys.readouterr().out
+    assert "has been closed" in aus, aus
 
 
 # ─────────────────────────────────────────────────── OffeneVergaben.at

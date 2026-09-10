@@ -94,6 +94,13 @@ _MAX_RUNDEN = 40      # Notbremse; die Coupon-Collector-Schaetzung fuer BY liegt
 # erster Stelle, deshalb kam nicht eine einzige Laenderzeile ins Protokoll. Zwei von drei
 # Naechten: 0 statt 16 Laender, 873 s Laufzeit fuer nichts.
 _AUSSETZER = 3        # so viele gescheiterte Runden am Stueck geben EIN Land auf
+# ⚠ WARUM EIN NEUSTART DAZUKOMMT. Der Schutz oben hat am 2026-09-10 den Absturz gefangen —
+# und dabei sichtbar gemacht, was darunter lag: Schleswig-Holstein kam mit 19 von 21 durch,
+# dann fielen die uebrigen FUENFZEHN Laender in derselben Sekunde mit je drei Aussetzern
+# aus. In derselben Sekunde heisst: kein Zeitablauf, sondern eine tote Seite. Der Browser
+# war weg, und `pg` blieb es fuer den ganzen Rest der Schleife.
+# Ein aufgefangener Absturz ohne Neustart ist nur ein leiser Absturz.
+_NEUSTARTS = 3        # so oft darf der Browser je Lauf neu gestartet werden
 
 _ANZAHL = re.compile(r"Anzahl:\s*([\d.]+)")
 _DATUM = re.compile(r"^\d{2}\.\d{2}\.\d{4}$")
@@ -218,25 +225,79 @@ def hole_land(kuerzel: str, pg, runden: int) -> dict:
             "saetze": list(saetze.values())}
 
 
-def lauf(kuerzel: list[str], runden: int, dry_run: bool) -> dict:
-    from playwright.sync_api import sync_playwright
+def _playwright():
+    """Playwright erst beim Aufruf laden — und ueber EINE Stelle, damit es pruefbar ist.
 
+    ⚠ Der Import stand bis zum 2026-09-10 im Rumpf von `lauf`. Damit war der Browserstart
+    von aussen nicht ersetzbar: ein Test, der einen toten Browser nachstellen wollte,
+    startete stattdessen einen echten — und bewies nichts. Genau der Teil, der in jener
+    Nacht ausgefallen ist, war der einzige ohne Gegenprobe.
+    """
+    from playwright.sync_api import sync_playwright
+    return sync_playwright()
+
+
+def lauf(kuerzel: list[str], runden: int, dry_run: bool) -> dict:
     ergebnisse = []
     ausgefallen: list[str] = []
-    with sync_playwright() as p:
-        b = p.chromium.launch(headless=True)
-        ctx = b.new_context()
-        pg = ctx.new_page()
-        pg.set_default_timeout(45000)
+    with _playwright() as p:
+
+        def frisch():
+            """Neuer Browser, neuer Kontext, neue Seite."""
+            br = p.chromium.launch(headless=True)
+            kt = br.new_context()
+            sei = kt.new_page()
+            sei.set_default_timeout(45000)
+            return br, kt, sei
+
+        def zu(br, kt):
+            for x in (kt, br):
+                try:
+                    x.close()
+                except Exception:                        # noqa: BLE001
+                    pass                                 # ein toter Browser wehrt sich nicht
+
+        b, ctx, pg = frisch()
+        neustarts = 0
+        browser_hin = False
         for k in kuerzel:
-            try:
-                r = hole_land(k, pg, runden)
-            except Exception as e:                       # noqa: BLE001
-                # Bis hierher kommt nur, was `hole_land` selbst nicht auffangen konnte —
-                # etwa ein abgestuerzter Browser. Auch dann laufen die uebrigen Laender.
+            if browser_hin:
                 ausgefallen.append(k)
-                print(f"  {k}  {LAENDER[k][1]:<24}    ⛔ ausgefallen "
-                      f"({type(e).__name__}) — die uebrigen laufen weiter", flush=True)
+                continue
+            r = None
+            for versuch in (1, 2):
+                try:
+                    r = hole_land(k, pg, runden)
+                    fehlschlag = r["fehler"] >= _AUSSETZER and r["geholt"] == 0
+                    grund = f"{r['fehler']} Aussetzer, nichts geholt"
+                except Exception as e:                   # noqa: BLE001
+                    r, fehlschlag = None, True
+                    # ⚠ MIT MELDUNG, nicht nur mit Klassennamen. Am 2026-09-10 stand
+                    # fuenfzehnmal „(Error)" im Protokoll — Playwrights Sammelklasse. Dass
+                    # dahinter „Target page, context or browser has been closed" steckte,
+                    # war daraus nicht zu sehen, und die Diagnose kostete einen Tag.
+                    grund = f"{type(e).__name__}: {str(e).splitlines()[0][:90]}"
+                if not fehlschlag or versuch == 2 or neustarts >= _NEUSTARTS:
+                    break
+                # Ein Land, das gar nichts liefert, ist der einzige Hinweis, den wir auf
+                # einen toten Browser haben — `pg.is_closed()` bleibt bei einem
+                # abgestuerzten Ziel falsch.
+                neustarts += 1
+                print(f"  {k}: {grund} → Browser neu starten "
+                      f"({neustarts}/{_NEUSTARTS})", flush=True)
+                zu(b, ctx)
+                try:
+                    b, ctx, pg = frisch()
+                except Exception as e:                   # noqa: BLE001
+                    print(f"  ⛔ Browser startet nicht mehr ({type(e).__name__}) — "
+                          f"der Rest des Laufs faellt aus.", flush=True)
+                    browser_hin = True
+                    r = None
+                    break
+            if r is None:
+                ausgefallen.append(k)
+                print(f"  {k}  {LAENDER[k][1]:<24}    ⛔ ausgefallen ({grund})",
+                      flush=True)
                 continue
             quote = f"{100 * r['geholt'] / r['gemeldet']:.0f}%" if r["gemeldet"] else "—"
             marke = "" if r["geholt"] >= r["gemeldet"] else "  ⚠ unvollständig"

@@ -3267,8 +3267,13 @@ def test_abrufer_werden_nach_erwarteter_ausbeute_gewaehlt():
     arbeiter = (wurzel / "scripts" / "dokumente_arbeiter.sh").read_text(encoding="utf-8")
     assert "--rueckstand" in arbeiter, "der Arbeiter waehlt noch reihum"
     assert "ABRUF_LIMIT:-150" in arbeiter, "das alte Limit von 40 band vor der Stunde"
+    # ⚠ Die Auswahl selbst steht seit 2026-09-10 in `waehle_abrufer.sh` — sie war im
+    # Arbeiter eingebaut, dreimal geaendert und nie ausgefuehrt geprueft, und ist genau
+    # dort eingefroren (`tests/test_abrufer_auswahl.py` faehrt sie jetzt wirklich).
+    assert "waehle_abrufer.sh" in arbeiter, "der Arbeiter benutzt die geprüfte Regel nicht"
+    waehle = (wurzel / "scripts" / "waehle_abrufer.sh").read_text(encoding="utf-8")
     # Zwei feste Plaetze nach Erwartung, einer rotierend — sonst verhungert der Schwanz.
-    assert "SORTIERT[0]" in arbeiter and "RUNDE - 1" in arbeiter
+    assert "SORTIERT[0]" in waehle and "RUNDE - 1" in waehle
 
 
 def test_analyse_arbeiter_schlaeft_wenn_nichts_zu_tun_ist():
@@ -3764,12 +3769,16 @@ def test_kein_abrufer_bekommt_eine_stunde_fuer_vier_vorgaenge():
     dritte Stunde so verschenkt, während netserver (967) und subreport (852) warteten.
     """
     quelle = (pathlib.Path(__file__).resolve().parent.parent
-              / "scripts" / "dokumente_arbeiter.sh").read_text(encoding="utf-8")
+              / "scripts" / "waehle_abrufer.sh").read_text(encoding="utf-8")
     assert "ABRUF_MINDEST" in quelle, "der dritte Platz filtert nicht nach Rückstau"
-    assert "$3 >= m" in quelle, "gefiltert wird auf der falschen Spalte (erwartet: holbar)"
+    assert "$3 + 0 >= m" in quelle, "gefiltert wird auf der falschen Spalte (erwartet: holbar)"
     # ⚠ Rückfallebene: sobald der Rückstau abgearbeitet ist, darf der Schritt nicht
     # stillstehen, nur weil niemand mehr die Mindestmenge erreicht.
-    assert "-lt 3" in quelle, "ohne Rückfall steht der Abruf bei kleinem Rückstau still"
+    assert "-lt 2" in quelle, "ohne Rückfall steht der Abruf bei kleinem Rückstau still"
+    # ⚠ UND DIE ZWEITE UNTERGRENZE, seit 2026-09-10: mit nur EINER Schwelle stand die
+    # Rotation still, sobald genau drei Abrufer darueber lagen. Die Lehre vom 22.08.
+    # (keine Stunde für vier Vorgänge) haelt jetzt `ABRUF_MINDEST_KLEIN`.
+    assert "ABRUF_MINDEST_KLEIN" in quelle, "der dritte Platz hat keine eigene Untergrenze"
 
 
 def test_abrufer_laufen_gleichzeitig_und_messen_den_speicher():

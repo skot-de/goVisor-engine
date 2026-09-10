@@ -163,36 +163,18 @@ while true; do
   #
   # Die Läufe enden gemessen an der ZEITGRENZE, nicht am Limit: eine Stunde ist also immer
   # voll ausgelastet, wenn genug da ist. Bei vier Vorgängen ist sie es nicht.
-  MINDEST="${ABRUF_MINDEST:-50}"
-  RUECKSTAND="$($PY scripts/rueckstau.py --rueckstand 2>/dev/null \
-                 | awk -F'\t' -v m="$MINDEST" '$3 >= m {print $1}')"
-  # Reicht das nicht für drei, die kleineren dazunehmen — sonst steht der Schritt still,
-  # sobald der Rückstau abgearbeitet ist.
-  if [ "$(echo "$RUECKSTAND" | grep -c .)" -lt 3 ]; then
-    RUECKSTAND="$($PY scripts/rueckstau.py --rueckstand 2>/dev/null | awk -F'\t' '$2 > 0 {print $1}')"
-  fi
-  if [ -z "$RUECKSTAND" ]; then
-    sag "  Kein Rückstau ermittelbar — nehme die Rotation."
-    RUECKSTAND="evergabe_online cosinex subreport netserver ausschreibungsblatt healyhudson
-                staatsanzeiger vergabeportal_at aumass bimedien evergabe simap_docs"
-  fi
-  # shellcheck disable=SC2206
-  SORTIERT=($RUECKSTAND)
-  # Der Zaehler lebt in einer Datei, nicht in einer Variablen: sonst faengt der Arbeiter
-  # nach jedem Neustart wieder beim selben Abrufer an — und die hinteren kaemen nie dran.
+  # ⚠ DIE AUSWAHL STEHT SEIT 2026-09-10 IN `scripts/waehle_abrufer.sh`. Sie war hier
+  # eingebaut, dreimal geaendert und nie geprueft — und ist am 2026-09-10 eingefroren:
+  # exakt drei Abrufer lagen ueber der Untergrenze, und `2 + (RUNDE-1) % (3-2)` ist immer
+  # 2. Der dritte Platz stand damit fest auf `netserver`. An einem Tag gemessen: 143
+  # Runden, davon netserver 140 — die uebrigen acht Abrufer null. Wer die Regel lesen oder
+  # aendern will, findet sie samt Begruendung und Test dort.
   ZAEHLER="$ROOT/data/.abrufer_runde"
   RUNDE=$(( $(cat "$ZAEHLER" 2>/dev/null || echo 0) + 1 ))
   echo "$RUNDE" > "$ZAEHLER" 2>/dev/null || true
-  DRAN=("${SORTIERT[0]}")
-  [ ${#SORTIERT[@]} -gt 1 ] && DRAN+=("${SORTIERT[1]}")
-  # Der dritte rotiert durch ALLE mit Rueckstau — auch die kleinen kommen so dran.
-  # ⚠ `RUNDE - 1`, nicht `RUNDE`: sonst faengt die Rotation nicht beim naechstbesten an,
-  # sondern beim schlechtesten. Rang 3 (evergabe_online, 96 % Ausbeute) waere so erst in
-  # Runde 9 drangekommen.
-  if [ ${#SORTIERT[@]} -gt 2 ]; then
-    IDX=$(( 2 + ((RUNDE - 1) % (${#SORTIERT[@]} - 2)) ))
-    DRAN+=("${SORTIERT[$IDX]}")
-  fi
+  # shellcheck disable=SC2207
+  DRAN=($($PY scripts/rueckstau.py --rueckstand 2>/dev/null \
+            | "$ROOT/scripts/waehle_abrufer.sh" "$RUNDE"))
   sag "  Runde $RUNDE — dran: ${DRAN[*]}"
 
   # ── WIE VIELE GLEICHZEITIG ────────────────────────────────────────────────────────
