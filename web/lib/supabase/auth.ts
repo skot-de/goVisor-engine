@@ -1,6 +1,6 @@
 "use client";
 import { createClient } from "./client";
-import type { buildProfile } from "@/lib/profileEngine";
+import { buildProfile } from "@/lib/profileEngine";
 
 export type Profile = ReturnType<typeof buildProfile> & {
   identityId?: string;
@@ -108,5 +108,21 @@ export async function loadProfile(): Promise<Profile | null> {
   const { data: { user } } = await supabase.auth.getUser();
   if (!user) return null;
   const { data } = await supabase.from("user_profiles").select("profile").eq("id", user.id).single();
-  return (data?.profile as Profile) ?? null;
+  if (!data?.profile) return null;
+  // ⚠ DER CAST WAR EINE BEHAUPTUNG, KEINE PRUEFUNG.
+  //
+  // Hier stand `data?.profile as Profile`. `Profile` ist `ReturnType<typeof buildProfile>`,
+  // also ein Typ mit rund zwanzig Pflichtfeldern — zur Laufzeit kam aber schlicht das
+  // jsonb aus der Datenbank zurueck, mit genau den Feldern, die jemand hineingeschrieben
+  // hat. Der Cast hat die Luecke nicht geschlossen, sondern unsichtbar gemacht.
+  //
+  // Was daraus folgte, gemessen am 2026-09-11: fehlt im Blob `nachbarFields`, stirbt
+  // `matchLead` an `p.nachbarFields.includes(...)` — und zwar beim ERSTEN Rendern der
+  // Lead-Liste. Der Nutzer sieht „Application error: a client-side exception has occurred",
+  // sonst nichts. Kein Hinweis, keine halbe Seite, kein Weg zurueck.
+  //
+  // `buildProfile` fuellt genau dafuer jedes Feld mit einem Vorgabewert (`input.x || []`).
+  // Es hier anzuwenden kostet nichts und macht die Oberflaeche unempfindlich gegen jedes
+  // Profil, das aelter, schmaler oder von Hand gesetzt ist.
+  return buildProfile(data.profile) as Profile;
 }

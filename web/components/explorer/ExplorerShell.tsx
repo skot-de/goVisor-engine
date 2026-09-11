@@ -211,7 +211,13 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
       }
       try {
         const raw = localStorage.getItem(PROFILE_KEY);
-        if (raw) setRealProfile(JSON.parse(raw));
+        // ⚠ ZWEITER LADEPFAD, GLEICHE LUECKE. `loadProfile()` normalisiert seit dem
+        // 2026-09-11 ueber `buildProfile`; dieser Zweig hier tat es nicht. Ein im Speicher
+        // abgelegtes Profil aus einer aelteren Fassung (oder eines, das nie alle Felder
+        // hatte) liess `matchLead` an `p.nachbarFields.includes(...)` sterben — und zwar
+        // NUR bei dem Nutzer, dessen Browser es liegen hat. Genau die Sorte Fehler, die
+        // man selbst nie sieht.
+        if (raw) setRealProfile(buildProfile(JSON.parse(raw)) as Profile);
       } catch { /* ungültig → ignorieren */ }
     })();
   }, []);
