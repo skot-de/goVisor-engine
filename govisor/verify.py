@@ -304,13 +304,16 @@ class MonthCheck:
         return 100.0 * self.delta / self.api_country
 
 
-def api_count(year: int, month: int, country: str | None = None,
-              attempts: int = 3) -> int | None:
-    """Wie viele Notices hat TED für diesen Monat? None, wenn nicht abfragbar."""
-    end = _MONTH_END[month]
-    query = f"publication-date>={year}{month:02d}01 AND publication-date<={year}{month:02d}{end}"
-    if country:
-        query += f" AND buyer-country={country}"
+def _api_total(query: str, attempts: int = 3) -> int | None:
+    """Trefferzahl einer TED-Abfrage. None, wenn nicht abfragbar.
+
+    ⚠ EINE NULL IST KEINE ANTWORT, SONDERN EINE NICHT-ANTWORT. Gemessen am 2026-09-11:
+    dieselbe Tagesabfrage (`publication-date` auf EINEN Tag, DEU) lieferte im ersten
+    Anlauf **0** und eine Minute spaeter dreimal hintereinander **540**. Wer die Null
+    glaubt, baut einen Waechter, der bei jedem Schluckauf der Gegenstelle „ein ganzer Tag
+    fehlt" meldet — und nach der dritten Fehlmeldung schaut niemand mehr hin.
+    Deshalb gilt eine Null als unbeantwortet und wird wiederholt.
+    """
     for attempt in range(attempts):
         try:
             response = requests.post(
@@ -320,11 +323,36 @@ def api_count(year: int, month: int, country: str | None = None,
                 timeout=90,
             )
             if response.status_code == 200:
-                return response.json().get("totalNoticeCount")
+                n = response.json().get("totalNoticeCount")
+                if n:
+                    return n
         except requests.RequestException:
             pass
         time.sleep(3 * (attempt + 1))
     return None
+
+
+def api_count(year: int, month: int, country: str | None = None,
+              attempts: int = 3) -> int | None:
+    """Wie viele Notices hat TED für diesen Monat? None, wenn nicht abfragbar."""
+    end = _MONTH_END[month]
+    query = f"publication-date>={year}{month:02d}01 AND publication-date<={year}{month:02d}{end}"
+    if country:
+        query += f" AND buyer-country={country}"
+    return _api_total(query, attempts)
+
+
+def api_count_zeitraum(von, bis, country: str | None = None,
+                       attempts: int = 3) -> int | None:
+    """Wie viele Notices hat TED zwischen zwei Daten (beide einschliesslich)?
+
+    Dieselbe Abfrage wie `api_count`, nur mit freien Grenzen — fuer die Tagesaufloesung
+    im laufenden Monat, die ein einzelnes ausgefallenes Abrufdatum sichtbar macht.
+    """
+    query = f"publication-date>={von:%Y%m%d} AND publication-date<={bis:%Y%m%d}"
+    if country:
+        query += f" AND buyer-country={country}"
+    return _api_total(query, attempts)
 
 
 def count_bronze(path: Path) -> tuple[int | None, bool, str | None]:
