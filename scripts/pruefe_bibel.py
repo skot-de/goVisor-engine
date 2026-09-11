@@ -450,6 +450,25 @@ def _behauptungen() -> list[tuple[str, str, bool, str]]:
                 "vor createAdminClient" if _w > 0 and (_t < 0 or _w < _t)
                 else ("Wache fehlt" if _w < 0 else "Wache steht dahinter")))
 
+    # Kapitel 12/F18 behauptet: `solo:id:keineAngabe` und `solo:id:DE` traegen im
+    # IST-ZUSTAND je genau eine Firma — sie sind Bruecken fuer kuenftige Merges, keine
+    # falschen Merges. Faellt das, ist es kein Schoenheitsfehler mehr, sondern erfundene
+    # Historie im Bestand, und die Aussage im Kapitel stimmt nicht mehr.
+    _ei = ROOT / "data" / "gold" / "DE" / "entity_identity.parquet"
+    _en = ROOT / "data" / "gold" / "DE" / "entities.parquet"
+    if _ei.exists() and _en.exists():
+        import duckdb as _dd2
+        _schlimmste = _dd2.connect().execute(f"""
+            select max(f) from (
+              select count(distinct e.canonical_name) f
+              from read_parquet('{_ei.as_posix()}') i
+              join read_parquet('{_en.as_posix()}') e using (entity_id)
+              where i.identity_id like 'solo:id:%'
+              group by i.identity_id)""").fetchone()[0] or 0
+        aus.append(("12", "keine solo:id-Entitaet fuehrt mehrere Firmen",
+                    _schlimmste <= 1,
+                    f"schlimmste fuehrt {_schlimmste} Firmen"))
+
     return aus
 
 
