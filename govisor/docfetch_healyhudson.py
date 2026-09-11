@@ -205,10 +205,9 @@ def hole_vergabe(url: str, pg, tmp: Path, dry_run: bool = False) -> dict:
 
 def _schreibe_zip(ziel: Path, dateien: list[tuple[str, bytes]]) -> int:
     """Einzeldateien → ein ZIP. Ist die einzige Datei schon ein ZIP, wird sie durchgereicht."""
-    ziel.parent.mkdir(parents=True, exist_ok=True)
     if len(dateien) == 1 and dateien[0][0].lower().endswith(".zip"):
-        ziel.write_bytes(dateien[0][1])
-        return ziel.stat().st_size
+        # ⚠ Atomar — s. `_queue.schreibe_atomar`.
+        return _queue.schreibe_atomar(ziel, dateien[0][1])
     puffer = io.BytesIO()
     gesehen: dict[str, int] = {}
     with zipfile.ZipFile(puffer, "w", zipfile.ZIP_DEFLATED) as z:
@@ -220,8 +219,7 @@ def _schreibe_zip(ziel: Path, dateien: list[tuple[str, bytes]]) -> int:
             else:
                 gesehen[name] = 0
             z.writestr(name, blob)
-    ziel.write_bytes(puffer.getvalue())
-    return ziel.stat().st_size
+    return _queue.schreibe_atomar(ziel, puffer.getvalue())
 
 
 def lauf(limit: int | None = None, dry_run: bool = False, country: str = "DE") -> dict:

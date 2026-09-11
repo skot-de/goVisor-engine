@@ -246,8 +246,8 @@ def lauf(limit: int | None = None, dry_run: bool = False, country: str = "DE") -
         for z in ziele:
             if z.exists():
                 continue
-            z.parent.mkdir(parents=True, exist_ok=True)
-            z.write_bytes(quelle.read_bytes())
+            # ⚠ Atomar — s. `_queue.schreibe_atomar`.
+            _queue.schreibe_atomar(z, quelle.read_bytes())
             kopiert += 1
     if kopiert:
         print(f"  {kopiert} Kopien für Leads auf derselben Vergabe (kein zweiter Abruf)")

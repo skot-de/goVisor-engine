@@ -90,12 +90,11 @@ def _als_zip(ziel: Path, name: str, blob: bytes) -> int:
     import io
     import zipfile
 
-    ziel.parent.mkdir(parents=True, exist_ok=True)
     puffer = io.BytesIO()
     with zipfile.ZipFile(puffer, "w", zipfile.ZIP_DEFLATED) as z:
         z.writestr(name, blob)
-    ziel.write_bytes(puffer.getvalue())
-    return ziel.stat().st_size
+    # ⚠ Atomar — s. `_queue.schreibe_atomar`.
+    return _queue.schreibe_atomar(ziel, puffer.getvalue())
 
 
 def hole_vergabe(url: str, pg, ziel: Path, dry_run: bool = False) -> dict:
@@ -217,8 +216,8 @@ def _hole(url: str, pg, ziel: Path, dry_run: bool, gefangen: list) -> dict:
             n = sum(1 for i in z.infolist() if not i.is_dir())
     except zipfile.BadZipFile:
         return {"status": "fehler", "bytes": len(blob), "n_files": 0, "note": "kein ZIP"}
-    ziel.parent.mkdir(parents=True, exist_ok=True)
-    ziel.write_bytes(blob)
+    # ⚠ Atomar — s. `_queue.schreibe_atomar`.
+    _queue.schreibe_atomar(ziel, blob)
     return {"status": "downloaded", "bytes": len(blob), "n_files": n, "note": ""}
 
 

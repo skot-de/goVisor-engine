@@ -12,6 +12,8 @@ Es war nie ein Fetcher-Problem.
 from __future__ import annotations
 
 import datetime as dt
+import os
+import pathlib
 
 from govisor import docfetch_queue as q
 
@@ -153,6 +155,7 @@ def test_jeder_abrufer_liest_und_schreibt_das_manifest():
     und wurde nie gelesen. Diese 389 Vorgänge wurden bei jedem Lauf erneut bei einem
     fremden Portal angefragt.
     """
+    import os
     import pathlib
     import re
 
@@ -384,3 +387,66 @@ def test_rib_nimmt_die_bekanntmachung_wenn_es_keine_unterlagen_gibt():
         p = urlparse("https://www.meinauftrag.rib.de" + pfad).path.rstrip("/")
         ist = p.endswith("/public/unavailable") or p.endswith("/public/publications")
         assert ist == erwartet, f"{pfad} falsch eingestuft"
+
+
+# ───────────────────────────── Abbruchfeste Schreibstellen (seit 2026-09-11)
+
+def test_schreibt_ueber_einen_zwischennamen(tmp_path):
+    """Das Ziel darf erst existieren, wenn es vollstaendig ist."""
+    from govisor import docfetch_queue as q
+
+    ziel = tmp_path / "tief" / "Vergabeunterlagen_x.zip"
+    n = q.schreibe_atomar(ziel, b"vollstaendig")
+    assert n == len(b"vollstaendig")
+    assert ziel.read_bytes() == b"vollstaendig"
+    # Kein Zwischenname bleibt liegen — sonst waechst der Dokumentenbaum mit Muell.
+    assert sorted(x.name for x in ziel.parent.iterdir()) == [ziel.name]
+
+
+def test_der_zwischenname_gehoert_einem_schreiber(tmp_path, monkeypatch):
+    """⚠ Dieselbe Lehre wie bei `schreibe`: seit es die `Wache` gibt, kann ein zweiter
+    Schreiber existieren. Zwei Schreiber auf EINEM gemeinsamen `.part` schreiben
+    ineinander, und das `replace` danach macht den Schaden dauerhaft."""
+    from govisor import docfetch_queue as q
+
+    gesehen = []
+    echt = pathlib.Path.write_bytes
+
+    def spion(self, daten):
+        gesehen.append(self.name)
+        return echt(self, daten)
+
+    monkeypatch.setattr(pathlib.Path, "write_bytes", spion)
+    q.schreibe_atomar(tmp_path / "a.zip", b"x")
+    assert gesehen and gesehen[0].endswith(".part"), gesehen
+    assert str(os.getpid()) in gesehen[0], (
+        f"Der Zwischenname {gesehen[0]} traegt keine Prozessnummer — zwei gleichzeitige "
+        f"Schreiber teilen ihn sich dann wieder.")
+
+
+def test_kein_abrufer_schreibt_direkt_auf_den_zielnamen():
+    """⚠ DER BEFUND VOM 2026-09-11. Die Hauptstrasse jedes Abrufers schrieb laengst ueber
+    `.part` — acht Nebenstellen in sieben Modulen aber nicht: die Kopien fuer
+    Geschwister-Leads und die kleinen ZIP-Bauer. Ein Abbruch mittendrin hinterlaesst dort
+    ein halbes ZIP UNTER DEM RICHTIGEN NAMEN, und das sieht fuer jeden spaeteren Leser
+    aus wie ein fertiges Paket: die Kandidatenwahl ueberspringt den Vorgang, und erst der
+    Entpacker stolpert — Tage spaeter, ohne Bezug zum Abbruch.
+
+    Aufgefallen ist es nur, weil vor einem Neustart des Arbeiters die Frage gestellt
+    wurde, was ein Abbruch hinterlaesst. Dieser Test stellt sie ab jetzt bei jedem Lauf.
+    """
+    wurzel = pathlib.Path(__file__).resolve().parent.parent
+    treffer = []
+    for datei in sorted((wurzel / "govisor").glob("docfetch*.py")):
+        for nr, zeile in enumerate(datei.read_text(encoding="utf-8").splitlines(), 1):
+            if ".write_bytes(" not in zeile or zeile.lstrip().startswith("#"):
+                continue
+            ziel = zeile.split(".write_bytes(")[0].strip().split()[-1]
+            # Erlaubt ist nur, wer auf einen Zwischennamen schreibt.
+            if any(w in ziel for w in ("teil", "tmp", "temp", "part")):
+                continue
+            treffer.append(f"{datei.name}:{nr}  {zeile.strip()[:70]}")
+    assert treffer == [], (
+        "Diese Stellen schreiben direkt auf den Zielnamen — ein Abbruch hinterlaesst dort "
+        "ein halbes ZIP, das wie ein fertiges aussieht. `_queue.schreibe_atomar` benutzen:"
+        "\n  " + "\n  ".join(treffer))

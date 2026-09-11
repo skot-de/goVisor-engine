@@ -195,8 +195,8 @@ def lauf(limit: int | None = None, dry_run: bool = False, country: str = "DE") -
             geladen_mb += r["bytes"] / 1024**2
             if r["status"] == "downloaded":
                 for zwilling in geschwister.get(url, []):
-                    zwilling.parent.mkdir(parents=True, exist_ok=True)
-                    zwilling.write_bytes(ziel.read_bytes())
+                    # ⚠ Atomar — s. `_queue.schreibe_atomar`.
+                    _queue.schreibe_atomar(zwilling, ziel.read_bytes())
             info = (f"{r['n_files']} Dateien  {r['bytes']/1024**2:.1f} MB"
                     if r["status"] == "downloaded" else f"{r['status']} ({r['note'][:44]})")
             print(f"  [{i}/{len(offen)}] {lead_id[:16]:<16} {info}", flush=True)

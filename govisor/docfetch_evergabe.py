@@ -423,9 +423,7 @@ def lauf(limit: int | None = None, dry_run: bool = False, country: str = "DE") -
             # sieht fuer jeden spaeteren Leser aus wie ein fertiges Paket. Der Abrufer ist
             # ausdruecklich abbrechbar („Erneut aufrufen setzt fort") — dann muss auch
             # jede seiner Schreibstellen einen Abbruch vertragen.
-            teil = z.with_suffix(".part")
-            teil.write_bytes(quelle.read_bytes())
-            teil.replace(z)
+            _queue.schreibe_atomar(z, quelle.read_bytes())
             kopiert += 1
     if kopiert:
         print(f"  {kopiert} Kopien für Leads auf derselben Vergabe (kein zweiter Abruf)")

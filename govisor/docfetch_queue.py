@@ -345,6 +345,40 @@ def schreibe(out_root: Path, name: str, saetze: list[dict], id_feld: str = "lead
     return len(zeilen)
 
 
+
+def schreibe_atomar(ziel: Path, daten: bytes) -> int:
+    """Bytes → Datei, ueber einen Zwischennamen. Gibt die geschriebene Groesse zurueck.
+
+    ⚠ WARUM ES DIESE FUNKTION GIBT — und warum sie hier steht und nicht achtmal einzeln.
+    Am 2026-09-11 wurde der Dokumenten-Arbeiter mitten in einem Abruf neu gestartet. Die
+    Frage davor war: was hinterlaesst ein Abbruch? Die Hauptstrasse jedes Abrufers schreibt
+    laengst ueber `.part` — aber acht Nebenstellen in sieben Modulen schrieben mit
+    `write_bytes` DIREKT auf den Zielnamen:
+
+        docfetch_evergabe:420 · ausschreibungsblatt:235 · bimedien:199 · aumass:250
+        healyhudson:210 und 223 · evergabe_online:287 · staatsanzeiger:97 und 221
+
+    Ein Abbruch mittendrin hinterlaesst dort ein halbes ZIP UNTER DEM RICHTIGEN NAMEN.
+    Fuer jeden spaeteren Leser sieht das aus wie ein fertiges Paket: die Kandidatenwahl
+    ueberspringt den Vorgang („liegt schon auf der Platte"), und erst der Entpacker
+    stolpert — Tage spaeter, ohne Bezug zum Abbruch.
+
+    ⚠ Die Abrufer sind ausdruecklich abbrechbar; sie enden an einer Zeitgrenze und melden
+    „Erneut aufrufen setzt fort". Dann muss JEDE ihrer Schreibstellen einen Abbruch
+    vertragen, nicht nur die, an die man beim Bauen zuerst gedacht hat.
+
+    ⚠ Und der Zwischenname traegt Prozess- und Threadnummer — dieselbe Lehre wie bei
+    `schreibe` oben: seit es die `Wache` gibt, kann ein zweiter Schreiber existieren, und
+    zwei Schreiber auf EINEM gemeinsamen `.part` schreiben ineinander. Das anschliessende
+    `replace` macht den Schaden dann dauerhaft.
+    """
+    ziel.parent.mkdir(parents=True, exist_ok=True)
+    teil = ziel.with_suffix(f".{_os.getpid()}.{_threading.get_ident()}.part")
+    teil.write_bytes(daten)
+    teil.replace(ziel)
+    return len(daten)
+
+
 def _wann(s: dict) -> dt.date:
     w = s.get("versucht_am")
     if isinstance(w, dt.datetime):
