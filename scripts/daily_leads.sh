@@ -1450,8 +1450,26 @@ if teil export_web_leads $PY scripts/export_web_leads.py; then
   # zeigt die Cloud-Fassung den Stand des letzten Uploads, und niemand sieht es, denn alte
   # Daten sehen aus wie frische. Ist kein Speicher konfiguriert, sagt das Skript das und
   # bricht den Tageslauf NICHT ab — lokal ist die Platte weiterhin die Quelle.
-  teil upload_web_data $PY scripts/upload_web_data.py \
-    || echo "  ⚠ Upload uebersprungen oder unvollstaendig — Deployment bleibt auf altem Stand."
+  # ⚠ DREI AUSGAENGE, DREI TOENE — seit 2026-09-11. Hier stand EIN `|| echo "⚠ …"`, und
+  # damit klang „es ist kein Speicher eingerichtet" genauso wie „der Upload ist gescheitert".
+  # Die Warnung stand deshalb JEDE Nacht im Protokoll, seit es den Schritt gibt: Sven hat
+  # zu Recht gefragt, warum ein bewusster Zustand als Fehler gemeldet wird. Und die Antwort
+  # ist unangenehm — weil eine Warnung, die immer dasteht, genau die eine Nacht verdeckt,
+  # in der der Upload wirklich scheitert. Dann waere sie wortgleich gewesen.
+  #
+  # ⚠ Was NICHT hierher gehoert: dass `web/data` lokal bleibt, ist harmlos (es liest
+  # niemand, und es ist aus Gold jederzeit neu baubar). Das echte Risiko ist der
+  # Dokumentkorpus — 456 GB, die es GENAU EINMAL gibt, auf einer externen SSD, und deren
+  # deutsche Haelfte sich nicht nachholen laesst (DTVP und RIB loeschen binnen Monaten,
+  # gemessen in `docs/sondierung/haltbarkeit.md`). Der liegt an `--quelle docs` und ist
+  # eine Entscheidung ueber Geld und Ort, kein Protokolleintrag.
+  teil upload_web_data $PY scripts/upload_web_data.py && _UPLOAD=0 || _UPLOAD=$?
+  case "${_UPLOAD:-0}" in
+    0) ;;
+    3) echo "  · Kein Speicher eingerichtet — web/data bleibt lokal. Bewusster Zustand:"
+       echo "    es liest gerade niemand von dort, und aus Gold ist es neu baubar." ;;
+    *) echo "  ⚠ Upload unvollstaendig (Code $_UPLOAD) — Deployment bleibt auf altem Stand." ;;
+  esac
 
   # Qualitaetsbericht ZULETZT: er misst, was die Schritte davor hinterlassen haben. Jede
   # Zahl darin wurde bis zum 2026-08-18 von Hand ermittelt — und was von Hand gemessen wird,

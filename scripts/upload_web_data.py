@@ -45,6 +45,13 @@ Aufruf::
     scripts/upload_web_data.py --probe          # nur zeigen, was hochginge
     scripts/upload_web_data.py                  # nur Geaendertes
     scripts/upload_web_data.py --alles
+
+Rueckgabecodes — der Aufrufer muss „nicht eingerichtet" von „kaputt" unterscheiden koennen:
+
+    0  fertig (auch: nichts zu tun)
+    1  Upload fehlgeschlagen            → Warnung, das Deployment bleibt alt
+    2  Quellverzeichnis fehlt           → Warnung, da stimmt etwas nicht
+    3  kein Speicher konfiguriert       → ZUSTAND, keine Warnung
 """
 from __future__ import annotations
 
@@ -270,10 +277,21 @@ def main() -> int:
                  "Ohne Speicher gibt es den Dokumentkorpus weiterhin GENAU EINMAL, auf der\n"
                  "    externen SSD. Der Rest der Plattform ist aus ihm regenerierbar, er selbst\n"
                  "    aus nichts.")
-        print("  ✖ Nicht konfiguriert. Erwartet entweder DATA_AZURE_URL (SAS) oder "
+        # ⚠ EIGENER RUECKGABECODE, seit 2026-09-11. „Kein Speicher konfiguriert" ist ein
+        # ZUSTAND, kein Fehlschlag — solange kein Deployment an `web/data` haengt, ist der
+        # Upload schlicht nicht noetig. Bis hierher gab es dafuer dieselbe 2 wie fuer
+        # „Quellverzeichnis fehlt", und der Tageslauf machte aus beidem dieselbe Warnung:
+        # `⚠ Upload uebersprungen oder unvollstaendig — Deployment bleibt auf altem Stand.`
+        # Diese Zeile stand JEDE Nacht im Protokoll, seit es den Schritt gibt. Eine Warnung,
+        # die immer dasteht, verdeckt die eine Nacht, in der der Upload wirklich scheitert
+        # — und genau dann waere sie wortgleich.
+        #
+        # 3 = nicht konfiguriert (Zustand) · 2 = Quelle fehlt (Defekt) · 1 = Upload
+        # fehlgeschlagen (Defekt) · 0 = fertig.
+        print("  · Kein Speicher konfiguriert. Erwartet entweder DATA_AZURE_URL (SAS) oder "
               "DATA_S3_ENDPOINT + DATA_S3_BUCKET + DATA_S3_KEY_ID + DATA_S3_SECRET.\n"
               f"    {folge}", file=sys.stderr)
-        return 2 if not a.probe else 0
+        return 3 if not a.probe else 0
 
     hoch, gleich, fehler, bytes_hoch = 0, 0, 0, 0
     for p in dateien:

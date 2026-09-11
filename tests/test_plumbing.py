@@ -5028,3 +5028,43 @@ def test_beide_dauerarbeiter_halten_den_rechner_wach():
     for name in ("dokumente_arbeiter.sh", "analyse_arbeiter.sh"):
         q = (wurzel / "scripts" / name).read_text(encoding="utf-8")
         assert "caffeinate -i -w $$" in q, f"{name} haelt den Rechner nicht wach"
+
+
+def test_nicht_eingerichtet_ist_kein_fehlschlag():
+    """⚠ Der Upload meldete JEDE Nacht `⚠ Upload uebersprungen oder unvollstaendig`, seit es
+    ihn gibt — weil „kein Speicher konfiguriert" denselben Rückgabecode trug wie ein echter
+    Fehlschlag. Sven hat gefragt, warum ein bewusster Zustand als Fehler dasteht, und die
+    Antwort ist unangenehm: eine Warnung, die immer dasteht, verdeckt genau die eine Nacht,
+    in der der Upload wirklich scheitert. Sie wäre wortgleich gewesen.
+
+    Drei Ausgänge, drei Töne: 3 = Zustand (kein ⚠), 2 und 1 = Defekt (⚠).
+    """
+    wurzel = pathlib.Path(__file__).resolve().parent.parent
+    upl = (wurzel / "scripts" / "upload_web_data.py").read_text(encoding="utf-8")
+    # Der eigene Code fuer „nicht konfiguriert" — sonst ist er von „Quelle fehlt" (2)
+    # nicht zu unterscheiden, und beide landen wieder unter demselben Satz.
+    assert "return 3 if not a.probe else 0" in upl, (
+        'kein eigener Rueckgabecode mehr fuer „kein Speicher konfiguriert"')
+    assert "Quellverzeichnis fehlt" in upl, "die Codes sind nirgends erklaert"
+
+    lauf = (wurzel / "scripts" / "daily_leads.sh").read_text(encoding="utf-8")
+    block = lauf[lauf.index("teil upload_web_data"):]
+    block = block[:block.index("esac") + 4]
+    assert "case" in block and '3)' in block, "der Tageslauf unterscheidet die Faelle nicht"
+    # Der Zustandszweig darf KEIN ⚠ tragen — daran haengt der Warnungszaehler.
+    zustand = block[block.index("3)"):block.index("*)")]
+    assert "⚠" not in zustand, "der bewusste Zustand wird wieder als Warnung gezaehlt"
+    assert "⚠" in block[block.index("*)"):], "ein echter Fehlschlag ist keine Warnung mehr"
+
+
+def test_der_zustandszweig_wird_nicht_als_warnung_gezaehlt():
+    """Die Gegenprobe am echten Muster: `abschluss()` zaehlt Zeilen, die (nach Zeitstempel)
+    mit ⚠ beginnen. Die Zustandszeile darf nicht darunterfallen — sonst ist die Trennung
+    kosmetisch und die Kennzahl bleibt vergiftet."""
+    wurzel = pathlib.Path(__file__).resolve().parent.parent
+    lauf = (wurzel / "scripts" / "daily_leads.sh").read_text(encoding="utf-8")
+    m = re.search(r"warn=\$\(grep -cE '([^']+)'", lauf)
+    muster = re.compile(m.group(1).replace("[[:space:]]", r"\s"))
+    zeile = "[08:27:29]   · Kein Speicher eingerichtet — web/data bleibt lokal."
+    assert not muster.match(zeile), f"gezaehlt: {zeile}"
+    assert muster.match("[08:27:29]   ⚠ Upload unvollstaendig (Code 1) — Deployment alt.")
