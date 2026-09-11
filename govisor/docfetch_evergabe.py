@@ -417,7 +417,15 @@ def lauf(limit: int | None = None, dry_run: bool = False, country: str = "DE") -
             if z.exists():
                 continue
             z.parent.mkdir(parents=True, exist_ok=True)
-            z.write_bytes(quelle.read_bytes())
+            # ⚠ UEBER `.part`, wie der Abruf selbst (Zeile 251). Diese Kopie war die
+            # einzige Stelle im Pfad, die direkt auf den Zielnamen schrieb — ein Abbruch
+            # mitten darin hinterlaesst ein halbes ZIP UNTER DEM RICHTIGEN NAMEN, und das
+            # sieht fuer jeden spaeteren Leser aus wie ein fertiges Paket. Der Abrufer ist
+            # ausdruecklich abbrechbar („Erneut aufrufen setzt fort") — dann muss auch
+            # jede seiner Schreibstellen einen Abbruch vertragen.
+            teil = z.with_suffix(".part")
+            teil.write_bytes(quelle.read_bytes())
+            teil.replace(z)
             kopiert += 1
     if kopiert:
         print(f"  {kopiert} Kopien für Leads auf derselben Vergabe (kein zweiter Abruf)")
