@@ -114,13 +114,29 @@ def verknuepfe(cfg, country: str = "DE", schreiben: bool = True) -> dict:
     ergebnis = {"bedarfe_offen": len(bedarfe), "leads_geprueft": len(leads),
                 "verknuepft": len(treffer)}
 
-    if treffer and schreiben:
+    # ⚠ AUCH BEI NULL TREFFERN SCHREIBEN, seit 2026-09-11. Vorher entstand die Datei nur,
+    # wenn es etwas zu verknuepfen gab — und damit ist „gemessen, nichts gefunden" von
+    # „nie gelaufen" nicht zu unterscheiden. Genau daran hing der Befund der
+    # Verdrahtungspruefung: AT (60 chronische Bedarfe), CH (7) und LU (1) liefern bei
+    # JACCARD_MIN = 0.55 derzeit null Treffer, also gab es dort keine Datei, also meldete
+    # die Sonde eine Luecke, die keine war — und die echte Luecke (der Schritt lief nur
+    # fuer DE) stand daneben und sah genauso aus.
+    if schreiben:
         import pyarrow as pa
         import pyarrow.parquet as pq
         felder = ["lead_id", "need_title", "fail_attempts", "fail_years",
                   "first_fail_year", "last_fail_year", "aehnlichkeit"]
-        pq.write_table(pa.Table.from_pylist([{k: t[k] for k in felder} for t in treffer]),
-                       gold / "lead_retender.parquet", compression="zstd")
+        schema = pa.schema([
+            ("lead_id", pa.string()), ("need_title", pa.string()),
+            ("fail_attempts", pa.int64()), ("fail_years", pa.int64()),
+            ("first_fail_year", pa.int64()), ("last_fail_year", pa.int64()),
+            ("aehnlichkeit", pa.float64()),
+        ])
+        # ⚠ Mit ausdruecklichem Schema: `from_pylist([])` ergaebe eine Tabelle ganz ohne
+        # Spalten, und die naechste Pruefung faende `lead_id` nicht mehr.
+        tab = pa.Table.from_pylist([{k: t[k] for k in felder} for t in treffer],
+                                   schema=schema)
+        pq.write_table(tab, gold / "lead_retender.parquet", compression="zstd")
         ergebnis["geschrieben"] = str(gold / "lead_retender.parquet")
 
     con.close()

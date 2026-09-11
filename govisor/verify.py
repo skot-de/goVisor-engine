@@ -78,6 +78,12 @@ def gold_integrity(cfg: Config, country: str = "DE") -> list[tuple[str, int]]:
          "entities.parquet", "entity_id"),
         ("buyer_recent_awards.lead_id → leads", "buyer_recent_awards.parquet", "lead_id",
          "leads.parquet", "lead_id"),
+        # ⚠ Nachtrag 2026-09-11. `lead_retender` trug seit dem 2026-08-25 einen `lead_id`
+        # und stand in keiner Pruefung — aufgefallen ist es erst, als die Tabelle in einem
+        # zweiten Land entstand. Eine Tabelle, die es nur einmal gibt, faellt in einer
+        # Laenderpruefung nicht auf; eine, die es zweimal gibt, schon.
+        ("lead_retender.lead_id → leads", "lead_retender.parquet", "lead_id",
+         "leads.parquet", "lead_id"),
         # ── Nachtrag 2026-08-25 ──────────────────────────────────────────────────────
         # Diese Liste war auf 22 Pruefungen stehengeblieben, waehrend `data/gold/<L>`
         # auf 64 Tabellen gewachsen ist — 44 davon kamen hier nicht vor, darunter die

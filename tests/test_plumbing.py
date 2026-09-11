@@ -5015,3 +5015,16 @@ def test_upload_laesst_arbeitsstaende_und_sicherungen_liegen(tmp_path):
     for name in fuer_uns:
         assert name.split("/")[-1] in gewaehlt, f"{name} fehlt im Upload — das Frontend liest es"
     assert "notiz.txt" not in gewaehlt, "fremde Dateitypen gehen mit hoch"
+
+
+def test_beide_dauerarbeiter_halten_den_rechner_wach():
+    """⚠ Derselbe Befund wie beim Tageslauf, nur schlimmer: die Arbeiter laufen rund um
+    die Uhr. Am 2026-09-11 schlief der Rechner 344 von 405 Minuten — und die Arbeiter
+    drehten in den wachen Sekunden eine Runde, meldeten „0 offen" und schliefen mit.
+
+    `-i -w $$`: nur Leerlauf-Schlaf, nur solange DIESER Arbeiter läuft.
+    """
+    wurzel = pathlib.Path(__file__).resolve().parent.parent
+    for name in ("dokumente_arbeiter.sh", "analyse_arbeiter.sh"):
+        q = (wurzel / "scripts" / name).read_text(encoding="utf-8")
+        assert "caffeinate -i -w $$" in q, f"{name} haelt den Rechner nicht wach"

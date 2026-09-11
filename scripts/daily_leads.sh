@@ -369,6 +369,37 @@ except Exception:
 MASCHINE_TSV="$LOG_DIR/maschine-$TODAY-$(date '+%H%M').tsv"
 "$ROOT/scripts/maschine_mitschreiben.sh" "$MASCHINE_TSV" 30 &
 MASCHINE_PID=$!
+# ⚠ Aus der Auftragsverwaltung nehmen, sonst meldet die Shell beim Beenden
+# „Terminated: 15" mitten in die Abschlusszeile — so geschehen am 2026-09-11.
+disown %% 2>/dev/null || true
+
+# ── DEN RECHNER WACH HALTEN, SOLANGE DIESER LAUF LAEUFT ──────────────────────────────
+#
+# ⚠ DER GROESSTE EINZELBEFUND DIESER WOCHE, und er lag nicht im Code. Gemessen in der
+# Nacht zum 2026-09-11 (`data/logs/maschine-2026-09-11-0143.tsv` gegen `pmset -g log`):
+#
+#     01:44:08  Sleep     'Maintenance Sleep' … 1007 secs
+#     02:00:55  DarkWake
+#     02:01:55  Sleep     … 1033 secs
+#     02:19:08  DarkWake
+#
+# Der Rechner schlaeft WAEHREND des Laufs: rund 17 Minuten Schlaf, dann 45 Sekunden
+# Arbeit, dann wieder Schlaf. 30 Einfrierungen, zusammen **344 von 405 Minuten** — 85 %
+# der Laufzeit. Die tatsaechliche Arbeit waren 61 Minuten.
+#
+# Das erklaert rueckwirkend alles, was in dieser Woche wie ein Fehler aussah: simap
+# braucht fuer 50 Publikationen mal 27 s und mal 17 min; TED-Live meldet „timed out after
+# 960323 ms" (= ein Schlaffenster); Chromium reisst den Startzeitablauf von 180 s. Und
+# der Speicherdruck war eine falsche Faehrte — mehrere Einfrierungen passierten mit
+# 4,6 GB freiem Speicher.
+#
+# ⚠ `-i` (idle sleep), NICHT `-d` oder `-s`: der Bildschirm darf schlafen, der Rechner
+# nicht. Und `-w $$` bindet es an DIESEN Lauf — danach schlaeft die Maschine wieder wie
+# vorher. Kein `pmset`, keine dauerhafte Aenderung, keine Administratorrechte.
+if command -v caffeinate >/dev/null 2>&1; then
+  caffeinate -i -w $$ &
+  disown 2>/dev/null || true
+fi
 
 echo "════════════════════════════════════════════════════════════════"
 echo "goVisor Tageslauf  $(date '+%F %T')  (Monat $MONTH, Stichtag $TODAY)"
@@ -927,9 +958,21 @@ echo "  Gold ok."
 # sie steht ausdruecklich hier, statt still zu bleiben.
 #
 # NACH dem Gold-Rebuild: gelesen werden `retender_signal` und `lead_export`, beides Gold.
+# ⚠ UND ER LIEF NUR FUER DEUTSCHLAND — drei Wochen lang, obwohl das Modul `--country`
+# kennt und AT, CH und LU beide Vorstufen tragen (`retender_signal` und `lead_export`).
+# Gemeldet hat es die Verdrahtungspruefung am 2026-09-11: „lead_retender gibt es in DE,
+# fehlt in AT,CH,LU und steht in keiner Liste". Genau dafuer ist Sonde 2 da — der Befund
+# stand im Protokoll, sobald der Lauf ueberhaupt bis zu den Waechtern kam.
+#
+# Die Laenderliste kommt aus `govisor/laender.py`, nicht aus dieser Datei: eine getippte
+# Liste im Nachtlauf ist die naechste Stelle, die beim fuenften Land vergessen wird.
+_AKTIV="$($PY -c 'from govisor.laender import AKTIV; print(" ".join(AKTIV))' 2>/dev/null)"
+[ -z "$_AKTIV" ] && _AKTIV="DE AT CH LU"     # Rueckfall, falls der Import scheitert
 step "Zweitversuch-Kennzeichnung (chronische Bedarfe → offene Leads)"
-$PY -m govisor.retender_link --country DE \
-  || echo "  ⚠ lead_retender nicht gebaut — die Zweitversuch-Marke bleibt auf altem Stand."
+for L in $_AKTIV; do
+  $PY -m govisor.retender_link --country "$L" \
+    || echo "  ⚠ lead_retender $L nicht gebaut — die Zweitversuch-Marke bleibt auf altem Stand."
+done
 
 # ══ AB HIER: BESCHAFFUNG ═════════════════════════════════════════════════════════════
 # Alles zwischen dieser Marke und der Auswertung weiter unten ist nach oben offen und

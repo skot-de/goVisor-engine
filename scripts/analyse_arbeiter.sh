@@ -42,6 +42,34 @@ LOCK="$ROOT/data/.daily_leads.lock"
 # permitted"). Sie zweimal zu treffen, reicht: was der Dienst zum Laufen braucht, liegt ab
 # hier nicht mehr auf der Datenplatte.
 EIGEN="${GOVISOR_ANALYSE_LOCK:-$HOME/Library/Caches/eu.govisor/analyse_arbeiter.lock}"
+
+# ── DEN RECHNER WACH HALTEN, SOLANGE DIESER ARBEITER LAEUFT ──────────────────────────
+#
+# ⚠ DER GROESSTE EINZELBEFUND DIESER WOCHE, und er lag nicht im Code. Gemessen in der
+# Nacht zum 2026-09-11 (`data/logs/maschine-2026-09-11-0143.tsv` gegen `pmset -g log`):
+#
+#     01:44:08  Sleep     'Maintenance Sleep' … 1007 secs
+#     02:00:55  DarkWake
+#     02:01:55  Sleep     … 1033 secs
+#     02:19:08  DarkWake
+#
+# Der Rechner schlaeft WAEHREND des Laufs: rund 17 Minuten Schlaf, dann 45 Sekunden
+# Arbeit, dann wieder Schlaf. 30 Einfrierungen, zusammen **344 von 405 Minuten** — 85 %
+# der Laufzeit. Die tatsaechliche Arbeit waren 61 Minuten.
+#
+# Das erklaert rueckwirkend alles, was in dieser Woche wie ein Fehler aussah: simap
+# braucht fuer 50 Publikationen mal 27 s und mal 17 min; TED-Live meldet „timed out after
+# 960323 ms" (= ein Schlaffenster); Chromium reisst den Startzeitablauf von 180 s. Und
+# der Speicherdruck war eine falsche Faehrte — mehrere Einfrierungen passierten mit
+# 4,6 GB freiem Speicher.
+#
+# ⚠ `-i` (idle sleep), NICHT `-d` oder `-s`: der Bildschirm darf schlafen, der Rechner
+# nicht. Und `-w $$` bindet es an DIESEN Lauf — danach schlaeft die Maschine wieder wie
+# vorher. Kein `pmset`, keine dauerhafte Aenderung, keine Administratorrechte.
+if command -v caffeinate >/dev/null 2>&1; then
+  caffeinate -i -w $$ &
+  disown 2>/dev/null || true
+fi
 mkdir -p "$(dirname "$EIGEN")"
 # ⚠ NICHT nach data/logs/. `data` ist ein Symlink auf die externe Platte, und ein NEU
 # angelegter launchd-Dienst hat dort keine Schreibrechte (macOS vergibt den Zugriff auf

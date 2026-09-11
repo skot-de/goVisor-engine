@@ -379,3 +379,50 @@ def test_der_maschinen_mitschreiber_wird_gestartet_und_beendet():
     i_ende = text.index("# ══ ERNTE VOR ABRUF")
     assert i_trap < i_kill < i_ende, "Das Beenden steht nicht in abschluss()."
     assert (ROOT / "scripts" / "maschine_mitschreiben.sh").exists()
+
+
+# ───────────────────────────── Der Rechner muss wach bleiben (seit 2026-09-11)
+
+def test_der_lauf_haelt_den_rechner_wach():
+    """⚠ DER GRÖSSTE EINZELBEFUND DIESER WOCHE, und er lag nicht im Code.
+
+    Der Mitschreiber sollte alle 30 s eine Zeile schreiben und schaffte in 405 Minuten
+    **151 statt 810**. Die Lücken waren 16 bis 18 Minuten lang, dreissigmal, zusammen
+    **344 von 405 Minuten**. `pmset -g log` nennt den Grund auf die Sekunde genau:
+
+        01:44:08  Sleep     'Maintenance Sleep' … 1007 secs
+        02:00:55  DarkWake
+
+    Der Rechner schläft während des Laufs. Die tatsächliche Arbeit waren 61 Minuten — der
+    Rest war Schlaf, und jeder Zeitablauf dieser Woche (curl nach 960 s, Chromium nach
+    180 s) fiel in ein Schlaffenster.
+    """
+    text = LAUF.read_text(encoding="utf-8")
+    assert "caffeinate" in text, "Nichts hält den Rechner wach — der Lauf verschläft sich."
+    # ⚠ `-i`, nicht `-d`/`-s`: der Bildschirm darf schlafen, die Maschine nicht.
+    # `-w $$` bindet es an DIESEN Lauf, danach schläft sie wieder wie vorher.
+    assert re.search(r"caffeinate -i -w \$\$", text), (
+        "caffeinate ohne `-i -w $$` — entweder hält es den Bildschirm wach (unnötig) "
+        "oder es überlebt den Lauf (dann schläft die Maschine nie wieder).")
+
+
+def test_der_mitschreiber_meldet_sich_nicht_beim_beenden():
+    """Ohne `disown` schreibt die Shell „Terminated: 15" mitten in die Abschlusszeile —
+    so geschehen am 2026-09-11, direkt hinter der Zusammenfassung des Laufs."""
+    text = LAUF.read_text(encoding="utf-8")
+    i = text.index("maschine_mitschreiben.sh")
+    assert "disown" in text[i:i + 400], "Der Mitschreiber bleibt in der Auftragsverwaltung."
+
+
+def test_der_zweitversuch_laeuft_fuer_alle_aktiven_laender():
+    """⚠ Er lief drei Wochen nur für DE, obwohl das Modul `--country` kennt und AT, CH und
+    LU beide Vorstufen tragen. Gemeldet hat es die Verdrahtungsprüfung am 2026-09-11 —
+    aber erst, als ein Lauf überhaupt wieder bis zu den Wächtern kam."""
+    text = LAUF.read_text(encoding="utf-8")
+    i = text.index("govisor.retender_link")
+    zeile = text[text.rindex("\n", 0, i) + 1:text.index("\n", i)]
+    assert "--country DE" not in zeile, "Der Zweitversuch hängt wieder an einem Land."
+    assert '"$L"' in zeile, zeile
+    # Die Liste kommt aus `govisor/laender.py` — eine getippte Liste im Nachtlauf ist die
+    # Stelle, die beim fünften Land vergessen wird.
+    assert "from govisor.laender import AKTIV" in text
