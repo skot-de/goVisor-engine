@@ -19,22 +19,19 @@ Gemerkt hat es niemand. Drei unabhängige Wächter liefen jede Nacht und schwieg
 Diese Prüfung fragt deshalb das, was zählt: liegt in SILBER ungefähr so viel, wie TED für
 diesen Monat kennt?
 
-⚠ **Der laufende Monat wurde übersprungen — und genau dort war das nächste Loch.**
-Bis zum 2026-09-11 endete diese Prüfung beim letzten abgeschlossenen Monat, mit der
-Begründung „der laufende füllt sich noch". Das stimmt für den Monat als Ganzes und ist
-für einen ABGESCHLOSSENEN TAG falsch: am 2026-09-09 holte `fetch_ted_live` für
-Deutschland **0 von 676** Bekanntmachungen, am 2026-09-10 ebenso wenig — der Abruf lief
-in einen Zeitablauf, weil der Rechner mitten im Lauf schlief. Die Sonde meldete in beiden
-Nächten `✓ alle geprueften Monate vollstaendig`, weil sie auf August schaute.
+⚠ **Der laufende Monat wurde übersprungen — und genau dort war ein Loch.** Bis zum
+2026-09-11 endete diese Prüfung beim letzten abgeschlossenen Monat, mit der Begründung
+„der laufende füllt sich noch". Am 2026-09-09 holte `fetch_ted_live` für Deutschland
+**0 von 676** Bekanntmachungen (der Abruf lief in einen Zeitablauf, weil der Rechner mitten
+im Lauf schlief), und die Sonde meldete zwei Nächte lang `✓ alle geprueften Monate
+vollstaendig` — sie schaute auf August. Deshalb zweite Stufe: der laufende Monat.
 
-Deshalb zweite Stufe: **der laufende Monat, tageweise.** Ein Tag, der ein paar Tage alt
-ist, ist fertig — was dann fehlt, fehlt.
-
-⚠ **Kleine Länder werden nicht tageweise beurteilt.** Bei 40 Bekanntmachungen am Tag sind
-58 % Rauschen, bei 676 sind 0 % ein Befund. Gemessen am 2026-09-11: DE 493/Tag, CH 40,
-AT 32, LU 6 — nur Deutschland trägt eine Tagesaussage. Für die übrigen ist die
-**Fenstersumme** das feinste ehrliche Mass; sie findet ein systematisches Loch genauso,
-nur einen Tag später.
+⚠ **ABER NUR ALS FENSTERSUMME, NICHT TAGEWEISE.** Die erste Fassung verglich Tag gegen Tag
+und lag falsch: unser `publication_date` und die TED-Facette `publication-date` sind
+**nicht dasselbe Feld**. Von acht Bekanntmachungen, die TED unter dem 2026-09-11 führt,
+liegen alle acht bei uns — zwei unter dem 09.09., sechs unter dem 10.09. Die Sonde meldete
+trotzdem „0 von 569". Über genug Tage mittelt sich der Versatz heraus, über einen nicht.
+Die Karenz von 4 Tagen ist gemessen, nicht geschätzt (Zahlen in `laufender_monat`).
 
 ⚠ **100 % sind nicht zu erwarten, und 90 % sind kein Befund.** Die TED-Facette
 `buyer-country` zählt mehr, als uns gehört: EU-Einrichtungen erscheinen unter der Facette
@@ -113,7 +110,7 @@ def _silber_zeitraum(land: str, von: dt.date, bis: dt.date) -> int | None:
 
 
 def laufender_monat(land: str, cc: str, tage: int, karenz: int,
-                    schwelle: float, boden: int) -> list[str]:
+                    schwelle: float) -> list[str]:
     """Der laufende Monat, tageweise. Gibt die Befunde zurueck (leer = sauber)."""
     heute = dt.date.today()
     bis = heute - dt.timedelta(days=karenz)
@@ -136,38 +133,30 @@ def laufender_monat(land: str, cc: str, tage: int, karenz: int,
         befunde.append(f"{land} {von:%Y-%m-%d}..{bis:%Y-%m-%d}: {ist_ges:,} von "
                        f"{soll_ges:,} ({anteil*100:.0f} %)")
 
-    # ⚠ TAGESAUFLOESUNG NUR, WO DIE MENGE SIE TRAEGT — und das entscheidet der Schnitt
-    # ueber das Fenster, nicht der einzelne Tag. Im ersten Anlauf lief sie fuer jedes Land,
-    # und die Schweiz meldete am 2026-09-07 „29 von 103 (28 %)" — bei einer Fenstersumme
-    # von 100 %. Da fehlte nichts, die Bekanntmachungen lagen nur an einem anderen Tag.
-    # Ein Waechter, der Zuordnung als Verlust meldet, erzeugt genau die Nachtwarnung, die
-    # nach drei Tagen niemand mehr liest.
+    # ⚠ HIER STAND EINE TAGESREGEL, UND SIE WAR FALSCH GEBAUT — entfernt am 2026-09-13,
+    # zwei Tage nachdem ich sie eingebaut hatte. Sie verglich `publication_date` aus unserem
+    # Silber mit der TED-Facette `publication-date`. **Das sind nicht dieselben Felder.**
     #
-    # Gemessen am 2026-09-11: DE 493 Bekanntmachungen je Tag, CH 40, AT 32, LU 6. Nur
-    # Deutschland traegt eine Tagesaussage; fuer die anderen drei ist die Fenstersumme das
-    # feinste ehrliche Mass.
-    tage_im_fenster = (bis - von).days + 1
-    if soll_ges / tage_im_fenster < boden:
-        zeilen.append(f"Ø {soll_ges / tage_im_fenster:.0f}/Tag — zu klein fuer Tagesaufloesung")
-        print(f"  {land}: " + " · ".join(zeilen))
-        return befunde
-
-    duenn = 0
-    tag = von
-    while tag <= bis:
-        soll = api_count_zeitraum(tag, tag, cc)
-        if not soll or soll < boden:
-            duenn += 1                              # Wochenende, Feiertag
-            tag += dt.timedelta(days=1)
-            continue
-        ist = _silber_zeitraum(land, tag, tag) or 0
-        q = ist / soll
-        if q < schwelle:
-            zeilen.append(f"{tag:%d.%m.} {ist:,}/{soll:,} {q*100:.0f}% ⚠")
-            befunde.append(f"{land} {tag:%Y-%m-%d}: {ist:,} von {soll:,} ({q*100:.0f} %)")
-        tag += dt.timedelta(days=1)
-    if duenn:
-        zeilen.append(f"{duenn} Tag(e) zu klein zum Beurteilen")
+    # Nachgewiesen Stueck fuer Stueck: von acht Bekanntmachungen, die TED unter dem
+    # 2026-09-11 fuehrt, liegen ALLE ACHT bei uns — zwei unter dem 09.09., sechs unter dem
+    # 10.09. Es fehlte nichts. Die Sonde meldete trotzdem „DE 2026-09-11: 0 von 569 (0 %)",
+    # und am Tag davor „10.09.: 400 von 612 (65 %)". Der Versatz geht in beide Richtungen:
+    # am 04.09. haben wir 598 und TED 540, am 08.09. 647 gegen 577.
+    #
+    # ⚠ Der eine echte Fund (09.09., 0 von 676) war Glueck, nicht Konstruktion: an dem Tag
+    # war die Datei wirklich leer, weil der Abruf in einen Zeitablauf lief. Eine Regel, die
+    # einmal zufaellig richtig liegt und danach jede Nacht schreit, ist schlechter als keine
+    # — sie kostet den Wert aller uebrigen Meldungen mit.
+    #
+    # Was bleibt, ist die FENSTERSUMME: ueber genug Tage mittelt sich der Versatz heraus.
+    # Gemessen am 2026-09-13 ueber alle vier Laender, Fenster ab Monatsanfang:
+    #
+    #     Karenz 2 Tage:  DE 85 % · AT 86 % · CH  89 % · LU  75 %   ← Versatz zieht runter
+    #     Karenz 3 Tage:  DE 94 % · AT 95 % · CH 100 % · LU  85 %
+    #     Karenz 4 Tage:  DE 98 % · AT 103 % · CH 100 % · LU 102 %  ← sauber
+    #
+    # Deshalb Karenz 4 als Vorgabe. Wer sie kleiner stellt, misst den Versatz statt der
+    # Abdeckung.
     print(f"  {land}: " + " · ".join(zeilen))
     return befunde
 
@@ -179,10 +168,9 @@ def main() -> int:
                     help="ab welchem Anteil es als vollstaendig gilt")
     ap.add_argument("--tage", type=int, default=12,
                     help="wie weit der laufende Monat tageweise geprueft wird")
-    ap.add_argument("--karenz", type=int, default=2,
-                    help="so viele Tage gelten noch als offen (Nachmeldungen)")
-    ap.add_argument("--tagesboden", type=int, default=100,
-                    help="ab so vielen TED-Bekanntmachungen wird ein Tag einzeln beurteilt")
+    ap.add_argument("--karenz", type=int, default=4,
+                    help="so viele Tage gelten noch als offen — deckt auch den Versatz "
+                         "zwischen unserem publication_date und der TED-Facette (s. Modul)")
     a = ap.parse_args()
 
     heute = dt.date.today()
@@ -215,11 +203,11 @@ def main() -> int:
                                f"({anteil*100:.0f} %)")
         print(f"  {land}: " + " · ".join(zeilen))
     print()
-    print(f"── Laufender Monat, tageweise (Karenz {a.karenz} Tage) ──")
+    print(f"── Laufender Monat, Fenstersumme (Karenz {a.karenz} Tage) ──")
     for land in AKTIV:
         cc = ALPHA3.get(land)
         if cc:
-            befunde += laufender_monat(land, cc, a.tage, a.karenz, a.schwelle, a.tagesboden)
+            befunde += laufender_monat(land, cc, a.tage, a.karenz, a.schwelle)
     print()
     if befunde:
         print(f"  ⚠ {len(befunde)} Zeitraum/Zeitraeume unter {a.schwelle*100:.0f} %:")

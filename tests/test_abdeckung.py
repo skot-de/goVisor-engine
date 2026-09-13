@@ -111,42 +111,52 @@ def test_eine_null_von_ted_gilt_als_nicht_beantwortet(monkeypatch):
     assert len(rufe) == 3, "Die Null wurde geglaubt statt wiederholt."
 
 
-def test_kleine_laender_werden_nicht_tageweise_beurteilt(monkeypatch, capsys):
-    """⚠ Im ersten Anlauf lief die Tagesaufloesung fuer jedes Land, und die Schweiz meldete
-    am 2026-09-07 „29 von 103 (28 %)" — bei einer Fenstersumme von **100 %**. Da fehlte
-    nichts, die Bekanntmachungen lagen an einem anderen Tag. Zuordnung ist kein Verlust."""
+def test_es_wird_nicht_tageweise_gegen_ted_verglichen():
+    """⚠ DIE REGEL, DIE ICH ZWEI TAGE LANG DRIN HATTE, WAR FALSCH GEBAUT.
+
+    Sie verglich unser `publication_date` mit der TED-Facette `publication-date` — und das
+    sind **nicht dieselben Felder**. Nachgewiesen Stück für Stück am 2026-09-13: von acht
+    Bekanntmachungen, die TED unter dem 2026-09-11 führt, liegen ALLE ACHT bei uns, zwei
+    unter dem 09.09. und sechs unter dem 10.09. Es fehlte nichts. Die Sonde meldete
+    trotzdem „DE 2026-09-11: 0 von 569 (0 %)".
+
+    Der Versatz geht in beide Richtungen (04.09.: wir 598, TED 540 — 08.09.: wir 647,
+    TED 577), lässt sich also nicht wegrechnen. Über genug Tage mittelt er sich heraus,
+    über einen nicht.
+
+    ⚠ Der eine echte Fund (09.09., 0 von 676) war Glück, nicht Konstruktion: die Datei war
+    an dem Tag wirklich leer. Eine Regel, die einmal zufällig richtig liegt und danach
+    jede Nacht schreit, ist schlechter als keine — sie entwertet alle übrigen Meldungen mit.
+    """
+    kern = QUELLE.split("def laufender_monat(")[1].split("\ndef ")[0]
+    assert "api_count_zeitraum(tag, tag" not in kern, \
+        "Die Tagesregel ist zurück — sie vergleicht zwei verschiedene Datumsfelder."
+    assert "while tag <= bis" not in kern, "Es wird wieder tageweise geschleift."
+    assert "nicht dieselben Felder" in QUELLE, \
+        "Die Begruendung fehlt — dann baut sie der Naechste wieder ein."
+
+
+def test_die_karenz_deckt_den_datumsversatz():
+    """Vier Tage sind gemessen, nicht geschätzt. Am 2026-09-13 über alle vier Länder:
+
+        Karenz 2:  DE 85 % · AT  86 % · CH  89 % · LU  75 %   ← LU faellt durch
+        Karenz 3:  DE 94 % · AT  95 % · CH 100 % · LU  85 %
+        Karenz 4:  DE 98 % · AT 103 % · CH 100 % · LU 102 %
+
+    Wer sie kleiner stellt, misst den Versatz statt der Abdeckung — und bekommt jede Nacht
+    eine Meldung, hinter der nichts steckt.
+    """
+    assert 'ap.add_argument("--karenz", type=int, default=4' in QUELLE
+    assert "Karenz 4 Tage:" in QUELLE, "die Messung hinter der Zahl steht nirgends"
+
+
+def test_ein_leeres_fenster_wird_gemeldet(monkeypatch, capsys):
+    """Was die Fenstersumme weiterhin findet: ein Land, das systematisch zurückfaellt."""
     m = _modul()
-    tage = []
-    monkeypatch.setattr(m, "_silber_zeitraum", lambda land, von, bis: 364)
-
-    def ted(von, bis, cc, attempts=3):
-        if von == bis:
-            tage.append(von)
-            return 103
-        return 363
-
-    monkeypatch.setattr(m, "api_count_zeitraum", ted)
-    befunde = m.laufender_monat("CH", "CHE", tage=9, karenz=2, schwelle=0.8, boden=100)
-    assert befunde == [], befunde
-    assert tage == [], "Fuer ein kleines Land wurden Einzeltage abgefragt."
-    assert "zu klein fuer Tagesaufloesung" in capsys.readouterr().out
-
-
-def test_ein_ausgefallener_tag_wird_gemeldet(monkeypatch, capsys):
-    """Der Fall vom 2026-09-09: ein Tag ganz ohne Abruf, in einem sonst gesunden Fenster.
-    ⚠ Die Fenstersumme allein haette ihn NICHT gefunden — sie lag bei 81 % und damit ueber
-    der Schwelle. Erst der Tag zeigt ihn."""
-    m = _modul()
-    heute = dt.date.today()
-    loch = heute - dt.timedelta(days=2)
-
-    monkeypatch.setattr(m, "api_count_zeitraum",
-                        lambda von, bis, cc, attempts=3: 676 if von == bis else 4438)
-    monkeypatch.setattr(m, "_silber_zeitraum",
-                        lambda land, von, bis: 0 if von == bis == loch else
-                        (3574 if von != bis else 600))
-    befunde = m.laufender_monat("DE", "DEU", tage=9, karenz=2, schwelle=0.8, boden=100)
-    assert any(f"{loch}" in b and "0 von 676" in b for b in befunde), befunde
+    monkeypatch.setattr(m, "api_count_zeitraum", lambda von, bis, cc, attempts=3: 5000)
+    monkeypatch.setattr(m, "_silber_zeitraum", lambda land, von, bis: 1000)
+    befunde = m.laufender_monat("DE", "DEU", tage=9, karenz=4, schwelle=0.8)
+    assert len(befunde) == 1 and "20 %" in befunde[0], befunde
 
 
 def test_das_fenster_greift_nie_in_den_vormonat(monkeypatch):
@@ -161,6 +171,6 @@ def test_das_fenster_greift_nie_in_den_vormonat(monkeypatch):
 
     monkeypatch.setattr(m, "api_count_zeitraum", ted)
     monkeypatch.setattr(m, "_silber_zeitraum", lambda land, von, bis: 1000)
-    m.laufender_monat("DE", "DEU", tage=60, karenz=2, schwelle=0.8, boden=100000)
+    m.laufender_monat("DE", "DEU", tage=60, karenz=4, schwelle=0.8)
     heute = dt.date.today()
     assert gesehen["von"] >= dt.date(heute.year, heute.month, 1), gesehen
