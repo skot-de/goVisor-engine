@@ -58,6 +58,31 @@ _COSINEX_RE = re.compile(
     r"^(?P<origin>https?://[^/]+)/(?P<base>[A-Za-z0-9_-]{2,20})/"
     r"(?:public/company/project|notice)/(?P<cx>CX[A-Z0-9]{6,})", re.I)
 
+# Dasselbe Muster fuer DuckDB — als KONSTANTE, nicht als Literal im f-String.
+#
+# ⚠ HIER LAG 22 TAGE LANG DER GROESSTE STILLE AUSFALL DIESES ABRUFERS. Am 2026-08-22 kam
+# das Muster oben in die SQL-Abfrage von `fetch_batch` — direkt als Literal in einen
+# f-String. Python liest `{2,20}` dort als Platzhalter und setzt den Ausdruck ein:
+#
+#     Quelltext:   '/[A-Za-z0-9_-]{2,20}/(public/company/project|notice)/CX[A-Z0-9]{6,}'
+#     ausgefuehrt: '/[A-Za-z0-9_-](2, 20)/(public/company/project|notice)/CX[A-Z0-9](6,)'
+#
+# Das Muster traf danach **null** Zeilen. Uebrig blieb der zweite Zweig
+# (`meinauftrag.rib.de`) mit 718 Vorgaengen, die laengst auf der Platte lagen — der Abrufer
+# meldete deshalb Runde fuer Runde „0 Vorgaenge" und sah dabei gesund aus.
+#
+# ⚠ Und die Zahl, die es haette zeigen muessen, kam aus einer ANDEREN Rechnung:
+# `rueckstau.py` ordnet ueber `is_cosinex()` zu, also ueber das Python-Muster oben — das
+# heil ist. Der Rueckstau stieg damit taeglich (2.007 → 2.227), waehrend der Abrufer nichts
+# tat, und beides zusammen las sich wie „grosser Rueckstand, wird langsam abgearbeitet".
+# Gemessen am 2026-09-13: 0 Treffer mit dem kaputten Muster, **3.409** mit dem heilen.
+#
+# Die Lehre steckt in der Bauform, nicht im Tippfehler: **ein Regex mit `{n,m}` gehoert
+# nie in einen f-String.** Als Konstante interpoliert (`{_SQL_COSINEX}`) kann dasselbe
+# nicht wieder passieren, und `tests/test_docfetch_cosinex.py` faehrt das Muster jetzt
+# durch DuckDB gegen echte Adressen.
+_SQL_COSINEX = (r"/[A-Za-z0-9_-]{2,20}/(public/company/project|notice)/CX[A-Z0-9]{6,}")
+
 
 def is_cosinex(url: str) -> bool:
     return bool(url and _COSINEX_RE.match(url))
@@ -220,7 +245,7 @@ def fetch_batch(cfg: Config, country: str = "DE", limit: int | None = None,
               -- vorfiltern, damit nicht 7.000 ungedeckte Vorgaenge durchlaufen.
               -- Basispfad frei, Kennung streng (s. `_COSINEX_RE`): `/Vergabe/notice/CX…`
               -- beim Landesbetrieb NRW gehoert genauso dazu wie `/Satellite/notice/CX…`.
-              AND (regexp_matches(documents_url, '/[A-Za-z0-9_-]{2,20}/(public/company/project|notice)/CX[A-Z0-9]{6,}')
+              AND (regexp_matches(documents_url, '{_SQL_COSINEX}')
                    OR documents_url LIKE '%meinauftrag.rib.de%')
               -- Nur LAUFENDE Verfahren. Die Unterlagen haengen nur waehrend der Angebots-
               -- frist am Portal; danach liefert der Endpoint die Landingpage (Status

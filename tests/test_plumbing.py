@@ -3862,16 +3862,39 @@ def test_sql_vorfilter_und_regex_sind_sich_einig():
     """Zwei Orte, dieselbe Frage — der SQL-Vorfilter in `fetch_batch` und `_COSINEX_RE`.
 
     Läuft einer dem anderen davon, holt der Abrufer entweder zu wenig (Vorfilter zu eng)
-    oder verwirft hinterher (Regex zu eng). Bis zum 22.08. waren beide auf „Satellite"
-    festgelegt; beim Weiten musste die SQL mitwandern.
+    oder verwirft hinterher (Regex zu eng).
+
+    ⚠ **DIESER TEST HAT 22 TAGE LANG DANEBENGELEGEN, UND ZWAR GRÜN.** Er stand ab dem
+    2026-08-22 genau für diesen Fall da und prüfte mit `inspect.getsource`, ob
+    `CX[A-Z0-9]{6,}` im Quelltext von `fetch_batch` vorkommt. Das tat es — im **Quelltext**.
+    Ausgeführt wurde etwas anderes: das Muster steckte in einem f-String, und Python las
+    `{2,20}` als Platzhalter und ersetzte es durch `(2, 20)`. Der Vorfilter traf danach
+    null Zeilen, cosinex holte 22 Tage nichts, und dieser Test war die ganze Zeit grün.
+
+    **Ein Test, der Quelltext liest, prüft das Rezept und nicht das Gericht.** Er wurde
+    deshalb umgebaut: er führt beide Muster jetzt aus und vergleicht ihre Treffer.
     """
-    import inspect
+    import duckdb
 
     from govisor import docfetch
 
-    quelle = inspect.getsource(docfetch.fetch_batch)
-    assert "CX[A-Z0-9]{6,}" in quelle, "der SQL-Vorfilter kennt die CX-Kennung nicht"
-    assert "V?MP)?Satellite" not in quelle, "der SQL-Vorfilter hängt noch an „Satellite\""
+    con = duckdb.connect()
+    beispiele = (
+        "https://www.dtvp.de/Satellite/notice/CXS0YHFDYD5DTW42",
+        "https://evergabe.blb.nrw.de/Vergabe/notice/CXS7YYXYTTTY2T2E",
+        "https://vergabe.hilgmbh.de/VMPSatellite/notice/CXT6YYDYTV749DQ2/documents",
+    )
+    for url in beispiele:
+        py = docfetch.is_cosinex(url)
+        sql = con.execute("SELECT regexp_matches(?, ?)",
+                          [url, docfetch._SQL_COSINEX]).fetchone()[0]
+        assert py == sql is True, (
+            f"{url}: Python sagt {py}, SQL sagt {sql} — die beiden Orte sind sich uneinig")
+    # Und die Gegenprobe, damit das Muster nicht einfach alles durchlaesst.
+    fremd = "https://www.evergabe-online.de/tenderdetails.html?id=123456"
+    assert not docfetch.is_cosinex(fremd)
+    assert not con.execute("SELECT regexp_matches(?, ?)",
+                           [fremd, docfetch._SQL_COSINEX]).fetchone()[0]
 
 
 def test_dokumenten_firewall_hat_dieselbe_form_wie_die_ausschreibungs_firewall():
