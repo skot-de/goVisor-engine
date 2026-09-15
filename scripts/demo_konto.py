@@ -62,6 +62,8 @@ def main() -> int:
     ap.add_argument("--app", default="http://localhost:3000", help="Adresse der laufenden App")
     ap.add_argument("--ziel", default="/leads", help="wohin nach dem Anmelden")
     ap.add_argument("--trocken", action="store_true", help="nur zeigen, nichts schreiben")
+    ap.add_argument("--loeschen", action="store_true",
+                    help="das Konto WEGRAEUMEN statt anlegen — fuer Probelaeufe")
     a = ap.parse_args()
 
     e = env()
@@ -70,6 +72,36 @@ def main() -> int:
     if not url or not key:
         sys.exit("  ✖ NEXT_PUBLIC_SUPABASE_URL oder SUPABASE_SECRET_KEY fehlt in web/.env.local")
     kopf = {"apikey": key, "Authorization": f"Bearer {key}", "Content-Type": "application/json"}
+
+    # ── Wegraeumen (Probelaeufe) ──────────────────────────────────────────────
+    #
+    # ⚠ WOFUER DAS DA IST. Wer den Anmeldeweg vorher durchspielt, verbraucht die Adresse:
+    # eine zweite Registrierung damit scheitert mit „User already registered" — und zwar
+    # vor Publikum, weil man es erst am Termintag wieder versucht. Also mit einer
+    # Wegwerf-Adresse proben und sie danach hiermit wegraeumen.
+    if a.loeschen:
+        r = requests.get(f"{url}/auth/v1/admin/users", headers=kopf,
+                         params={"page": 1, "per_page": 200}, timeout=30)
+        if not r.ok:
+            sys.exit(f"  ✖ Kontenliste nicht lesbar: {r.status_code}")
+        treffer = [u for u in (r.json().get("users") or [])
+                   if (u.get("email") or "").lower() == a.email.lower()]
+        if not treffer:
+            print(f"  Kein Konto fuer {a.email} — nichts zu tun.")
+            return 0
+        # ⛔ Die eigene Adresse und die Admin-Adressen sind tabu. Ein Skript, das ein
+        # Vorfuehr-Konto aufraeumt, darf nicht aus Versehen das Konto loeschen, mit dem
+        # man sich selbst anmeldet.
+        geschuetzt = {x.strip().lower() for x in e.get("ADMIN_EMAILS", "").split(",") if x.strip()}
+        if a.email.lower() in geschuetzt:
+            sys.exit(f"  ⛔ {a.email} steht in ADMIN_EMAILS — wird nicht geloescht.")
+        uid = treffer[0]["id"]
+        d = requests.delete(f"{url}/auth/v1/admin/users/{uid}", headers=kopf, timeout=30)
+        if not d.ok:
+            sys.exit(f"  ✖ Loeschen fehlgeschlagen: {d.status_code} {d.text[:200]}")
+        print(f"  Konto {a.email} geloescht ({uid[:8]}…). Die Adresse ist wieder frei.")
+        print("  ⚠ `user_profiles` haengt per ON DELETE CASCADE daran und geht mit.")
+        return 0
 
     # ── 1. Die Firma aus der ECHTEN Suche holen ───────────────────────────────
     try:

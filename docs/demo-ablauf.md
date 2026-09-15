@@ -72,6 +72,29 @@ reisst das Netz, landet man auf der Anmeldemaske. Notausgang: bei Schritt 4 aufh
 
 **Tunnel bleibt hängen** → `pkill -f 'cloudflared tunnel --url'; lsof -ti tcp:3000 | xargs kill`
 
+## 4b · Vorher einmal durchspielen
+
+⚠ **Nicht mit `info@klostermann-hamm.de` proben.** Wer den Anmeldeweg testet, verbraucht
+die Adresse: der zweite Versuch scheitert mit „User already registered", und das merkt man
+erst am Termintag. Mit einer Wegwerf-Adresse proben und sie danach wegräumen:
+
+    # 1. Bestätigungspflicht aus (Schritt 1a), sonst lässt sich der Weg nicht testen
+    # 2. Tunnel starten
+    scripts/demo_tunnel.sh
+
+    # 3. Auf dem iPad durchgehen — mit probe@klostermann-hamm.de registrieren
+    # 4. Danach die Probe wegräumen:
+    python3 scripts/demo_konto.py --firma "H. Klostermann Baugesellschaft mbH" \
+                                  --email probe@klostermann-hamm.de --loeschen
+
+Das Löschen nimmt `user_profiles` per `ON DELETE CASCADE` mit und weigert sich bei jeder
+Adresse aus `ADMIN_EMAILS` — ein Aufräumskript darf nicht das Konto löschen, mit dem man
+sich selbst anmeldet.
+
+Ohne die Bestätigungspflicht-Umstellung lassen sich immerhin die Schritte 1–4 und 6–7
+proben: Landing, Firmensuche und Explorer brauchen keine frische Registrierung. Für den
+Explorer den vorbereiteten Anmeldelink nehmen (Abschnitt 4).
+
 ## 5 · Was die Zahlen aushalten
 
 Sie sind gemessen, nicht gerundet — ein Investor, der nachfragt, bekommt eine Antwort:
