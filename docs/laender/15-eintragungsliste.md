@@ -92,6 +92,7 @@ synchron durch (`llm.VORRANG`) und sehen die Warteschlange nie — s. [Kapitel 0
 | `govisor/gold.py` → `_REGION_STELLEN` | **NUTS-Stelle der Verwaltungseinheit** ([Kapitel 07](07-geo-und-regionen.md)) |
 | `scripts/build_dach_gold.py` | Land in den Lauf; `KETTE` prüfen, ob alle Schritte country-fähig sind |
 | `scripts/pruefe_verdrahtung.py` → `LAENDER` | Land aufnehmen, sonst prüft die Sonde es nicht |
+| `data/reference/waehrungskurse.json` | **nur wenn das Land nicht in Euro rechnet.** `python3 scripts/fetch_ezb_kurse.py --waehrungen XXX` holt die EZB-Jahresdurchschnitte; führt die EZB die Währung nicht, ist das eine Entscheidung und kein Nebenschauplatz ([Kapitel 13](13-waehrung-und-werte.md)) |
 
 ## Regionen und Geo
 
@@ -141,6 +142,13 @@ lange:
 `scripts/backfill_notice_text.py` · `scripts/migrate_fremde_notices.py` ·
 `scripts/rename_notice_text_columns.py` · `scripts/normalize_languages.py` ·
 `scripts/preisstufen_analyse.py`
+
+✅ **Seit 2026-09-15 ist hier nichts mehr einzutragen.** Alle fünf leiten ihre Vorgabe aus
+`laender.AKTIV` ab (`default=",".join(_AKTIV)`, bei den TED-nahen zusätzlich `"EU"`), statt
+eine eigene Liste zu führen. Sie standen zuletzt auf `DE,AT,CH` — Luxemburg fehlte in allen
+fünf, seit es dazukam. Der Eintrag bleibt als **Prüfpunkt** stehen: wer eines dieser
+Skripte anfasst, prüft, dass die Ableitung nicht wieder zu einer getippten Liste wird
+(`tests/test_laender.py` hält dagegen).
 
 ## Gegenprobe zum Schluss
 

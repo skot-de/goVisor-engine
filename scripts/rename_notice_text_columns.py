@@ -29,12 +29,20 @@ from pathlib import Path
 import duckdb
 
 ROOT = Path(__file__).resolve().parent.parent
+# ⚠ ERST der Projektpfad, DANN `govisor` — unter launchd gibt es kein PYTHONPATH.
+import sys as _sys                                                   # noqa: E402
+_sys.path.insert(0, str(ROOT))                                       # noqa: E402
+from govisor.laender import AKTIV as _AKTIV                          # noqa: E402
 UMBENENNUNG = {"feld": "field", "wert": "value"}
 
 
 def _dateien() -> list[Path]:
     aus: list[Path] = []
-    for land in ("DE", "AT", "CH", "EU"):
+    # ⚠ VORGABE AUS `govisor/laender.py`, nicht getippt. Diese Skripte laufen selten — und
+    # genau deshalb faellt ein fehlendes Land hier nicht auf, sondern erst in einem Jahr,
+    # wenn jemand sie braucht. Kapitel 15 der Bibel sagt es woertlich: "Wer sie spaeter
+    # braucht und das Land fehlt, sucht lange." Am 2026-09-15 fehlte Luxemburg in allen fuenf.
+    for land in (*_AKTIV, "EU"):
         aus += sorted((ROOT / "data" / "silver" / land / "notice_text").glob("*/*.parquet"))
         p = ROOT / "data" / "gold" / land / "lead_text.parquet"
         if p.exists():

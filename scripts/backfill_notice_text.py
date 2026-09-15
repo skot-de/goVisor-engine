@@ -36,6 +36,10 @@ import pyarrow as pa
 import pyarrow.parquet as pq
 
 ROOT = Path(__file__).resolve().parent.parent
+# ⚠ ERST der Projektpfad, DANN `govisor` — unter launchd gibt es kein PYTHONPATH.
+import sys as _sys                                                   # noqa: E402
+_sys.path.insert(0, str(ROOT))                                       # noqa: E402
+from govisor.laender import AKTIV as _AKTIV                          # noqa: E402
 sys.path.insert(0, str(ROOT))
 
 from govisor import bulk, model, normalize, schema  # noqa: E402  (Pfad muss zuerst stehen)
@@ -176,7 +180,11 @@ def main(laender: list[str], neu: bool, limit: int | None) -> int:
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
-    ap.add_argument("--laender", default="DE,AT,CH,EU")
+    # ⚠ VORGABE AUS `govisor/laender.py`, nicht getippt. Diese Skripte laufen selten — und
+    # genau deshalb faellt ein fehlendes Land hier nicht auf, sondern erst in einem Jahr,
+    # wenn jemand sie braucht. Kapitel 15 der Bibel sagt es woertlich: "Wer sie spaeter
+    # braucht und das Land fehlt, sucht lange." Am 2026-09-15 fehlte Luxemburg in allen fuenf.
+    ap.add_argument("--laender", default=",".join((*_AKTIV, "EU")))
     ap.add_argument("--neu", action="store_true", help="auch fertige Monate neu bauen")
     ap.add_argument("--limit", type=int, help="nur N Notices je Land (zum Testen)")
     a = ap.parse_args()

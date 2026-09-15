@@ -355,6 +355,62 @@ def build_dim_cpv(cfg: Config, country: str = "DE"):
 # ein Join, keine eingebrannte Spalte — Faktoren korrigierbar, ohne Silber-Rebuild.
 
 
+# ── WAEHRUNGSUMRECHNUNG ────────────────────────────────────────────────────────────────
+#
+# ⚠ BIS ZUM 2026-09-15 WURDEN FREMDWAEHRUNGEN VERWORFEN, NICHT UMGERECHNET.
+# `final_value_clean` fuellte nur bei `value_currency = 'EUR'` — und die Schweiz
+# veroeffentlicht in Franken. Gemessen an dem Tag: Silber traegt fuer CH bei **52.537 von
+# 123.956** Bekanntmachungen einen Wert, in Gold kamen **76 von 8.400** Leads an. 1 %.
+#
+# Der Parser war nie das Problem; die Werte gingen eine Zeile spaeter verloren. Was daran
+# haengt, steht in Kapitel 13 der Bibel: Gebuehren-Band, `value_anchor`, die Wert-Achse von
+# `market_opportunity`, `region_kpi`, die Strategie-Ansicht. Die Schweiz sah aus wie ein
+# kleiner Markt — „2.479 Vertraege, davon 2.477 ohne Wert".
+#
+# ⚠ EIN UMGERECHNETER WERT IST KEIN GEMESSENER. Kapitel 13 verlangt ausdruecklich, die
+# Herkunft zu kennzeichnen — deshalb das Qualitaetsmerkmal `waehrung_umgerechnet`. Es
+# ersetzt `waehrung_fremd` NICHT, sondern tritt daneben: das erste sagt „nicht in Euro",
+# das zweite „von uns umgerechnet, mit Jahresdurchschnitt".
+_KURSE_DATEI = Path(__file__).resolve().parent.parent / "data" / "reference" / "waehrungskurse.json"
+
+
+def _kurse() -> dict[str, dict[int, float]]:
+    """Waehrung → {Jahr: Einheiten je EUR}. Leer, wenn die Datei fehlt."""
+    import json as _json
+    try:
+        roh = _json.loads(_KURSE_DATEI.read_text(encoding="utf-8"))["kurse"]
+    except Exception:                                                # noqa: BLE001
+        return {}
+    return {w: {int(j): float(k) for j, k in reihe.items()} for w, reihe in roh.items()}
+
+
+def _wert_in_eur_sql(betrag: str = "final_value", waehrung: str = "value_currency",
+                     jahr: str = "year(publication_date)") -> str:
+    """SQL: Betrag in Euro, oder NULL wenn wir den Kurs nicht kennen.
+
+    ⚠ Die EZB-Reihe nennt Einheiten der FREMDWAEHRUNG je Euro (2015: 1,0679 CHF je EUR).
+    Umgerechnet wird deshalb mit `betrag / kurs`, nicht mal — ein vertauschtes Verhaeltnis
+    faellt bei CHF kaum auf (der Kurs liegt nahe 1) und verdoppelt bei anderen Waehrungen
+    still die Marktgroesse.
+
+    ⚠ Fuer das laufende Jahr gibt es noch keinen Jahresdurchschnitt; dann gilt der juengste
+    vorhandene Kurs. Das ist eine Naeherung und wird als solche gekennzeichnet.
+    """
+    kurse = _kurse()
+    if not kurse:
+        return f"CASE WHEN {waehrung} = 'EUR' OR {waehrung} IS NULL THEN {betrag} END"
+    zweige = []
+    for w, reihe in kurse.items():
+        if not reihe:
+            continue
+        letztes = max(reihe)
+        fall = " ".join(f"WHEN {j} THEN {k}" for j, k in sorted(reihe.items()))
+        zweige.append(f"WHEN {waehrung} = '{w}' THEN {betrag} / "
+                      f"(CASE {jahr} {fall} ELSE {reihe[letztes]} END)")
+    return (f"CASE WHEN {waehrung} = 'EUR' OR {waehrung} IS NULL THEN {betrag} "
+            + " ".join(zweige) + " END")
+
+
 def build_dim_deflator(cfg: Config, country: str = "DE"):
     """Jahr → Faktor auf Preise 2020. final_value * factor = realer Wert.
 
@@ -397,6 +453,11 @@ def build_quality(cfg: Config, country: str = "DE"):
     ist, sonst NULL. Aggregate über die clean-Spalte sind damit von Haus aus
     sauber; der Rohwert bleibt in Silber erhalten.
 
+    ⚠ Die Spalte ist in EURO, auch wenn der Auftrag es nicht war. Fremdwährungen werden
+    mit dem EZB-Jahresdurchschnitt des Veröffentlichungsjahres umgerechnet und tragen
+    dafür ZWEI Marken: ``waehrung_fremd`` (nicht in Euro ausgeschrieben) und
+    ``waehrung_umgerechnet`` (der Euro-Betrag ist von uns gerechnet, nicht gemessen).
+
     Belegt an DE: 82.002 Vergaben (~29% der bewerteten CANs) tragen einen
     Platzhalter unter 100 € — echte öffentliche Aufträge beginnen ~1.000 €.
     Ohne Bereinigung ist der Median-Deal um 45% zu niedrig.
@@ -409,7 +470,10 @@ def build_quality(cfg: Config, country: str = "DE"):
     out = cfg.gold_dir / country / "quality.parquet"
     out.parent.mkdir(parents=True, exist_ok=True)
     # Jeder ERKENNBARE Defekt wird geflaggt (nicht weggeworfen). final_value_clean
-    # ist nur dann gesetzt, wenn plausibel UND in EUR. Harte Fehler laufen von hier
+    # ist gesetzt, wenn der Betrag plausibel ist UND wir ihn in Euro ausdruecken koennen:
+    # Euro direkt, Fremdwaehrung ueber den EZB-Jahresdurchschnitt, alles ohne Kurs bleibt
+    # NULL. Bis 2026-09-15 stand hier ein reiner EUR-Filter — er kostete die Schweiz 99 %
+    # ihrer Werte. Harte Fehler laufen von hier
     # in die Review-Queue. Zusätzlich `verfahren_status` (kein Defekt, sondern
     # Signal): CANs ohne Gewinner UND ohne Award-Daten = erfolglos/aufgehoben —
     # wertvoller Lead-Hinweis (weniger Konkurrenz beim Re-Tender), kein Fehler.
@@ -471,6 +535,15 @@ def build_quality(cfg: Config, country: str = "DE"):
               CASE WHEN final_value > 1e9 THEN 'wert_absurd_hoch' END,
               CASE WHEN final_value IS NOT NULL AND value_currency IS NOT NULL
                         AND value_currency <> 'EUR' THEN 'waehrung_fremd' END,
+              -- ⚠ TRITT NEBEN `waehrung_fremd`, ersetzt es nicht: das eine sagt „nicht in
+              -- Euro", das zweite „von uns umgerechnet, mit dem EZB-Jahresdurchschnitt".
+              -- Kapitel 13 der Bibel verlangt genau diese Trennung — ein umgerechneter
+              -- Wert ist kein gemessener, und die Oberflaeche darf keine Genauigkeit
+              -- behaupten, die es nicht gibt.
+              CASE WHEN final_value IS NOT NULL AND value_currency IS NOT NULL
+                        AND value_currency <> 'EUR'
+                        AND ({_wert_in_eur_sql()}) IS NOT NULL
+                   THEN 'waehrung_umgerechnet' END,
               CASE WHEN final_value IS NOT NULL AND value_currency IS NULL
                    THEN 'waehrung_angenommen' END,
               CASE WHEN estimated_value < 0 THEN 'schaetzwert_negativ' END,
@@ -501,9 +574,16 @@ def build_quality(cfg: Config, country: str = "DE"):
               CASE WHEN bad_bid THEN 'bieterzahl_unplausibel' END,
               CASE WHEN notice_kind='corrigendum' THEN 'korrektur_nicht_zaehlen' END
             ], x -> x IS NOT NULL) AS quality_flags,
-            CASE WHEN final_value >= 100 AND final_value <= 1e9
-                      AND (value_currency = 'EUR' OR value_currency IS NULL)
-                 THEN final_value END AS final_value_clean,
+            -- ⚠ UMRECHNEN STATT VERWERFEN (2026-09-15). Hier stand
+            -- `AND (value_currency = 'EUR' OR value_currency IS NULL)` — Fremdwaehrungen
+            -- fielen damit heraus, statt umgerechnet zu werden. Die Schweiz verlor so
+            -- 99 % ihrer Werte (76 von 8.400 Leads, obwohl Silber 52.537 Werte traegt).
+            -- Die Pruefung auf Plausibilitaet gilt jetzt dem EURO-Betrag, nicht dem
+            -- Rohbetrag: 100 CHF sind nicht 100 EUR, und die Untergrenze soll Cent-
+            -- Platzhalter fangen, nicht kleine Waehrungen benachteiligen.
+            CASE WHEN ({_wert_in_eur_sql()}) >= 100
+                      AND ({_wert_in_eur_sql()}) <= 1e9
+                 THEN ({_wert_in_eur_sql()}) END AS final_value_clean,
             CASE WHEN notice_kind='can' AND has_winner THEN 'vergeben'
                  -- Open-House-Rabattverträge (§130a SGB V): strukturell ohne Gewinner
                  -- (offener Beitritt), KEIN erfolgloses Verfahren → eigener Status, fällt
@@ -881,13 +961,17 @@ def build_leads(cfg: Config, country: str = "DE", reference_date: str | None = N
     # das 402 oesterreichische Auslauf-Leads, die sonst „unbekannt" blieben — klein, aber der
     # Wert traegt das Gebuehrenband, und „unbekannt" ist dort die teuerste Antwort.
     # Waehrungssperre wie oben: der uebernommene Wert bringt seine Waehrung mit.
-    VU = ("COALESCE(q.final_value_clean, "
-          "CASE WHEN n.estimated_value BETWEEN 1000 AND 1e9 "
-          "     AND (n.value_currency='EUR' OR n.value_currency IS NULL) "
-          "     THEN n.estimated_value END, "
-          "CASE WHEN try_cast(wrtq.w AS DOUBLE) BETWEEN 1000 AND 1e9 "
-          "     AND (wrtq.waehrung='EUR' OR wrtq.waehrung IS NULL) "
-          "     THEN try_cast(wrtq.w AS DOUBLE) END)")
+    # ⚠ WAEHRUNGSSPERRE WURDE UMRECHNUNG (2026-09-15). Die Sperre war richtig gedacht
+    # — keine Fremdwaehrung still als Euro — aber sie warf den Wert weg, statt ihn
+    # umzurechnen. Jetzt gilt derselbe EZB-Jahresdurchschnitt wie bei `final_value_clean`;
+    # was wir nicht umrechnen koennen (AED etwa fuehrt die EZB nicht), faellt weiter aus.
+    _EV = _wert_in_eur_sql("n.estimated_value", "n.value_currency",
+                           "year(n.publication_date)")
+    _WV = _wert_in_eur_sql("try_cast(wrtq.w AS DOUBLE)", "wrtq.waehrung",
+                           "year(n.publication_date)")
+    VU = (f"COALESCE(q.final_value_clean, "
+          f"CASE WHEN ({_EV}) BETWEEN 1000 AND 1e9 THEN ({_EV}) END, "
+          f"CASE WHEN ({_WV}) BETWEEN 1000 AND 1e9 THEN ({_WV}) END)")
     VUR = f"({VU} * dd.factor_to_2020)"
     con.execute(f"""
         CREATE TABLE leads AS
@@ -917,6 +1001,13 @@ def build_leads(cfg: Config, country: str = "DE", reference_date: str | None = N
           -- als unplausibel erkannt hat, ist kein gemessener Wettbewerb.
           coalesce(NOT list_contains(q.quality_flags, 'bieterzahl_unplausibel'), true)
                                                       AS bieter_plausibel,
+          -- ⚠ EIN UMGERECHNETER WERT IST KEIN GEMESSENER. `value_source` bleibt 'final' —
+          -- der Endwert IST der Endwert — aber die Oberflaeche muss sagen koennen, dass
+          -- der Euro-Betrag ueber den EZB-Jahresdurchschnitt entstanden ist. Kapitel 13
+          -- der Laender-Bibel verlangt genau diese Kennzeichnung; ohne sie sieht ein
+          -- Schweizer Auftrag aus wie ein in Euro ausgeschriebener.
+          coalesce(list_contains(q.quality_flags, 'waehrung_umgerechnet'), false)
+                                                      AS wert_umgerechnet,
           {_kind_sql('n.title', 'n.cpv_main')} AS contract_kind,
           q.final_value_clean AS value_clean,
           {VU} AS value_used,
@@ -3151,13 +3242,14 @@ def build_prospective_leads(cfg: Config, country: str = "DE", reference_date: st
     # geprueft wie die eigene. Der Kommentar des abgeloesten Skripts sagte es richtig:
     # „damit keine Fremdwaehrung stillschweigend als Euro gilt".
     _plaus = "BETWEEN 1000 AND 1e9"
+    # Umrechnung statt Sperre, siehe `build_leads` — beide Stufen, gleicher Kurs.
+    _EV = _wert_in_eur_sql("n.estimated_value", "n.value_currency",
+                           "year(n.publication_date)")
+    _WV = _wert_in_eur_sql("try_cast(wrtq.w AS DOUBLE)", "wrtq.waehrung",
+                           "year(n.publication_date)")
     VU = (f"coalesce("
-          f"CASE WHEN n.estimated_value {_plaus} "
-          f"     AND (n.value_currency='EUR' OR n.value_currency IS NULL) "
-          f"     THEN n.estimated_value END, "
-          f"CASE WHEN try_cast(wrtq.w AS DOUBLE) {_plaus} "
-          f"     AND (wrtq.waehrung='EUR' OR wrtq.waehrung IS NULL) "
-          f"     THEN try_cast(wrtq.w AS DOUBLE) END)")
+          f"CASE WHEN ({_EV}) {_plaus} THEN ({_EV}) END, "
+          f"CASE WHEN ({_WV}) {_plaus} THEN ({_WV}) END)")
     VUR = f"({VU} * dd.factor_to_2020)"
     out = g / "leads.parquet"
     con.execute(f"""
@@ -3198,6 +3290,11 @@ def build_prospective_leads(cfg: Config, country: str = "DE", reference_date: st
                    ['laufzeit_unplausibel','ende_vor_vergabe','datum_absurd',
                     'datum_start_nach_ende']), true)
                                                       AS termin_plausibel,
+            -- Gleiche Kennzeichnung wie im Auslauf-Zweig; die beiden Stroeme treffen sich
+            -- in `leads.parquet` unter `UNION ALL BY NAME` und muessen dieselbe Spalte
+            -- fuehren, sonst traegt die eine Haelfte stumm NULL.
+            coalesce(list_contains(q.quality_flags, 'waehrung_umgerechnet'), false)
+                                                      AS wert_umgerechnet,
             {_kind_sql('n.title', 'n.cpv_main')} AS contract_kind,
             {VU} AS value_used,
             CASE WHEN {VU} IS NOT NULL THEN 'geschaetzt' ELSE 'unbekannt' END AS value_source,
@@ -3670,6 +3767,12 @@ def build_lead_export(cfg: Config, country: str = "DE"):
             CASE d.band_source WHEN 'echt' THEN 'actual'
                  WHEN 'geschaetzt' THEN 'estimated' WHEN 'imputiert' THEN 'estimated'
                  ELSE 'unknown' END                   AS value_source,
+            -- ⚠ `value_source` sagt, WIE SICHER der Wert ist; das hier sagt, ob der
+            -- EURO-BETRAG gerechnet ist. Zwei verschiedene Fragen: ein Schweizer Zuschlag
+            -- ist ein gemessener Endwert ('actual') UND in Euro umgerechnet. Kapitel 13
+            -- der Laender-Bibel begruendet, warum das nicht in `value_source` gehoert —
+            -- dessen Vokabular ist fest und wird hart verglichen.
+            coalesce(d.wert_umgerechnet, false)       AS value_converted,
             -- Timing: Frist-DATUM + Tage (der eigentliche Alert) und Auslauf in Monaten
             d.deadline_date,
             datediff('day', current_date, d.deadline_date) AS days_to_deadline,
@@ -3925,8 +4028,13 @@ def build_lead_lot(cfg: Config, country: str = "DE"):
             lo.title                                  AS lot_title,
             lo.description                            AS lot_description,
             length(lo.description)                    AS lot_description_length,
-            -- Wert nur, wenn er auch eine Waehrung traegt; Fremdwaehrung ehrlich benannt
-            CASE WHEN lo.value_currency='EUR' THEN lo.value_amount END AS lot_value_eur,
+            -- Wert in Euro: eigene Waehrung durchgereicht, fremde mit dem EZB-Jahres-
+            -- durchschnitt umgerechnet. `lot_value_currency` bleibt daneben stehen, damit
+            -- jeder sieht, worin der Auftrag urspruenglich ausgeschrieben war.
+            -- ⚠ Die Lose-Abfrage kennt kein `publication_date` (kein `n` im FROM). Das Jahr
+            -- kommt darum aus dem Losbeginn; fehlt auch der, greift der juengste Kurs.
+            {_wert_in_eur_sql("lo.value_amount", "lo.value_currency",
+                              "year(lo.start_date)")} AS lot_value_eur,
             lo.value_currency                         AS lot_value_currency,
             lo.start_date, lo.end_date, lo.duration_months,
             CASE WHEN length(lo.performance_nuts) >= 5

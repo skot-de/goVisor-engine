@@ -30,6 +30,52 @@ Fenster (`--fenster-tage 190`).
 **Für ein neues Land:** jeden Schritt durchgehen und fragen, ob er das Land kennt. Die
 meisten nehmen `--laender` oder `--country`; einige nicht, und die sind der Punkt.
 
+## Die Uhr — ein Lauf, der nicht endet, liefert nichts
+
+Der Tageslauf hat **zwei** Zeitgrenzen, und die zweite ist die wichtigere:
+
+| Grösse | Vorgabe | Bedeutung |
+|--------|---------|-----------|
+| `GOVISOR_GRENZE_GESAMT` | 28.800 s (8 h) | ab hier bricht der Lauf ab — `exit 75` (EX_TEMPFAIL), nicht Fehler |
+| `GOVISOR_ERNTE_KERN` | 3.600 s (60 min) | **reserviert** für Export, Wächter und Ertragsbericht |
+
+`nur_mit_zeit()` steht vor sieben aufschiebbaren Schritten. Bleibt weniger als der
+Erntekern übrig, meldet der Schritt „⏭ aufgeschoben" und der Lauf geht weiter — **kein
+Abbruch**. Die Regel dahinter:
+
+> **Ein aufgeschobener Schritt kostet einen Tag Frische. Ein abgeschnittener Lauf kostet
+> den Tag komplett.**
+
+Wer oben abschneidet, verliert unten das Produkt: Bundesländer, Frontend-Export,
+Namenswörter und Ertragsbericht stehen am **Ende** der Kette. Die 60 Minuten sind gemessen,
+nicht geschätzt — über neun Läufe (02.09.–09.09.) brauchte der Pflichtteil
+3 · 4 · 4 · 5 · 7 · 21 · 24 · 26 · 26 min, also gut das Doppelte des schlimmsten Falls.
+
+⚠ **`exit 75` statt `exit 1`.** „Nicht gelaufen, später erneut versuchen" ist etwas anderes
+als „kaputt". Ein Lauf, der am Zeitdeckel endet, darf den Betreiber nicht so alarmieren wie
+einer, der an einer Ausnahme stirbt.
+
+**Der Anlass:** ein Lauf am 2026-09-09 lief 494 Minuten und wurde abgebrochen — ohne
+Frontend-Export, ohne Wächter, ohne Bericht. Mit Deckel und Erntekern liegen die Läufe
+seitdem bei 59 bis 83 Minuten.
+
+## Die Maschine muss wach bleiben
+
+⚠ **Der Mac schläft mitten im Nachtlauf ein, und nichts daran sieht nach einem Fehler aus.**
+Gemessen in der Nacht zum 2026-09-10: von 405 Minuten Laufzeit schlief die Maschine **344**.
+Die Schritte liefen alle, sie liefen nur nicht.
+
+```bash
+caffeinate -i -w $$ &     # haelt wach, solange der Lauf lebt; stirbt mit ihm
+```
+
+`-i` verhindert nur den **Leerlauf**-Schlaf, nicht den Deckel-zu-Schlaf, und `-w $$` bindet
+die Lebensdauer an den Lauf: kein verwaister Prozess, der die Maschine tagelang wach hält.
+
+Wer wissen will, ob es hilft — `scripts/maschine_mitschreiben.sh` schreibt alle 30 Sekunden
+Last, Swap, freien Speicher und Pageins nach `data/logs/maschine-<datum>.tsv`. Ohne diese
+Mitschrift war „der Lauf war langsam" nicht von „die Maschine schlief" zu unterscheiden.
+
 ## ⛔ Laufkollisionen prüfen — vor JEDEM schreibenden Schritt
 
 ```bash
@@ -78,9 +124,38 @@ Zwei Dinge scheitern **stumm**:
 Dazu die klassische Falle: ein Skript, das `govisor` importiert, ohne `sys.path` zu setzen.
 Unter launchd fehlt das Arbeitsverzeichnis. Genau so fiel `export_web_awards.py` aus.
 
-## Der Altersbericht und die Sonde
+## Die beiden Dauerarbeiter
 
-Beide laufen am Ende, beide **warnen nur** und brechen nicht ab: ein veralteter Baustein
+Neben dem Tageslauf laufen **zwei** launchd-Dienste rund um die Uhr:
+
+| Dienst | Skript | Was |
+|--------|--------|-----|
+| `eu.govisor.dokumente` | `scripts/dokumente_arbeiter.sh` | holt Vergabeunterlagen |
+| `eu.govisor.analyse` | `scripts/analyse_arbeiter.sh` | analysiert, was geholt wurde |
+
+⚠ **Seit dem 2026-08-18 holt der Tageslauf keine Unterlagen mehr** („das macht der
+Dauerarbeiter"). Damit ist jede Prüfung, die nur `daily_leads.sh` liest, auf einem Auge
+blind — die eigentliche Arbeit steht woanders. Genau so blieb `rueckstau.py` vier Wochen
+lang auf `data/gold/DE` festgenagelt: Adressen aus LU, AT und CH kommen in deutschen Leads
+nicht vor, ihr Rückstau stand dauerhaft auf 0, und **ein leerer Rückstau sieht aus wie
+erledigte Arbeit**. Sonde 3 liest deshalb heute auch die Arbeiter, nicht nur den Tageslauf
+(Fallen G28 und G31 in [Kapitel 12](12-fallenkatalog.md)).
+
+### Wer als Nächstes drankommt
+
+`scripts/waehle_abrufer.sh` wählt je Runde drei Abrufer: **zwei** aus dem Feld mit
+nennenswertem Rückstau (`ABRUF_MINDEST`, Vorgabe 50) und **einen**, der über alle rotiert,
+bei denen sich eine Stunde noch lohnt (`ABRUF_MINDEST_KLEIN`, Vorgabe 10) — abzüglich der
+beiden schon gewählten.
+
+⚠ **Die Rotation stand still, und nichts zeigte es.** Bei drei Kandidaten in der Liste ist
+`2 + (RUNDE-1) % (3-2)` **immer 2**: der dritte Platz bekam über Wochen denselben Abrufer.
+Eine Rotation, die nicht rotiert, sieht in jeder einzelnen Runde völlig richtig aus — sie
+fällt nur auf, wenn man mehrere Runden nebeneinanderlegt.
+
+## Die neun Wächter am Ende des Laufs
+
+Alle laufen am Ende, alle **warnen nur** und brechen nicht ab: ein veralteter Baustein
 ist ein Grund hinzusehen, keiner den Lauf wegzuwerfen.
 
 - **Altersbericht** — handgepflegte Liste von sechs Eckpfeilern, absolute Frische. Merkt,
@@ -109,8 +184,28 @@ ist ein Grund hinzusehen, keiner den Lauf wegzuwerfen.
   **Die Länder kommen von der Platte**, nicht aus einer Liste — sonst prüft der Wächter
   ein viertes Land stillschweigend nicht.
 
-Beide werden gebraucht: stehen alle Länder gleichzeitig, wandert der Bezugspunkt der Sonde
-mit und sie ist blind.
+- **`pruefe_laender_tabellen.py`** — trägt **jede** Wertetabelle jedes aktive Land?
+  `_REGION_STELLEN`, `_PLZ_STELLEN`, `locales`, `LAND_LABEL` … Eine zentrale Länderliste
+  kann `DE=5, AT=4` nicht erfinden, aber sie kann einen fehlenden Eintrag laut machen
+  ([Kapitel 15](15-eintragungsliste.md)).
+- **`pruefe_abdeckung.py`** — kommt überhaupt noch etwas an, und ist die Geschichte
+  vollzählig? Drei Stufen: abgeschlossene Monate, laufender Monat als Fenstersumme,
+  und eingelesene Bronze-Monate gegen die Pakete im Cache
+  ([Kapitel 02](02-input-ausschreibungen.md)).
+- **`pruefe_nuts_vorgabe.py`** — findet eine Regionskennung, die in Wahrheit ein
+  Vorgabewert ist. Anlass: DÖE trug über den gesamten Bestand **genau einen** NUTS-Wert
+  (`DEA22`, Bonn) auf 33.966 Käuferzeilen in 393 verschiedenen Orten.
+- **`pruefe_endgueltige.py`** — hält ein endgültiges Urteil noch? Wer einen Abrufer als
+  „verschlossen" abhakt, darf das nicht auf ewig glauben; von elf handgeprüften
+  Dokument-Abrufern hielten neun Urteile nicht.
+- **`pruefe_sondierung.py`** + **`pruefe_sondierungszahlen.py`** — halten die
+  Sondierungs-Unterlagen fest, dass ein *angesehenes* Land kein *angebundenes* ist, und
+  rechnen jeden Prozentsatz darin aus den Messdaten nach. Eine Zahl in einem Dokument
+  altert schneller als der Code darunter.
+
+Alle werden gebraucht, und keiner ersetzt einen anderen: stehen alle Länder gleichzeitig,
+wandert der Bezugspunkt der Verdrahtungs-Sonde mit und sie ist blind — während der
+Altersbericht genau dann anschlägt.
 
 ## Geldwache
 
@@ -128,7 +223,8 @@ Hier nur, was man für den Betrieb wissen muss.
 |--------|---------|---------|
 | `GOVISOR_RESERVE_USD` | 1,00 $ | Guthaben ganz leerlaufen |
 | `GOVISOR_LIMIT_USD` | 5,00 $ | ein einzelner Lauf |
-| `GOVISOR_TAG_USD` | 6,00 $ | der Tag |
+| `GOVISOR_TAG_USD` | 5,00 $ | der Tag (angehoben von 2,00 auf 5,00 am 2026-09-14) |
+| `GOVISOR_UPLOAD_TAG_USD` | 2,00 $ | **eigener Topf.** Ein Upload wartet nicht: der Nutzer steht davor. Deshalb steht `upload` in `llm.VORRANG` und geht am Tagesdeckel vorbei — aber nicht an allem |
 | `GOVISOR_SCHONUNG_USD` | 0,50 $ | dass die Produktion dem Prüfstand nichts übrig lässt |
 | `OR_MAX_TOKENS` | 56.000 | davonlaufende Ausgabe |
 | `OR_FRIST` | 600 s | hängende Aufrufe |

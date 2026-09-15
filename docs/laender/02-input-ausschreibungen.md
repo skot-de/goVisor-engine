@@ -46,6 +46,7 @@ späteren Messungen wertlos, weil sich Quellen dramatisch unterscheiden:
 | DE | `doe` | oeffentlichevergabe.de, unterschwellig |
 | AT | `atverg` | offenevergaben.at |
 | CH | `simap` | simap.ch |
+| LU | `legacy` / `eforms` / `text` | **nur TED** — Luxemburg hat keine nationale Quelle angebunden (Stand 2026-09-15): 22.848 / 6.684 / 8.868 von 38.400 |
 
 **Quellen niemals zusammen zitieren.** Gemessen: TED liefert 43,5 % reiche Beschreibungen
 bei Ø 1,68 Losen, DÖE nur 20,8 % bei Ø 1,00 — der `eforms-sdk-0.1`-Dialekt von DÖE kennt
@@ -68,6 +69,7 @@ Gemessenes DACH-Beispiel (2026-08-23), Frist je Quelle:
 DE  legacy 67 %   doe 95 %   eforms 79 %   text 0 %
 AT  atverg 72 %   legacy 54 %   eforms 65 %   text 0 %
 CH  legacy 98 %   eforms 98 %   simap 100 %
+LU  legacy 64 %   eforms 83 %   text 0 %          (gemessen 2026-09-15)
 ```
 
 `text` bei 0 % ist kein Fehler: das Vor-XML-Textformat kennt das Feld nicht.
@@ -159,11 +161,45 @@ Gemessener Bestand (2026-08-23):
 DE  814.393 Zuschläge von 2.263.244 Bekanntmachungen   (gemessen 2026-08-23)
 AT  228.920 von   420.311
 CH   51.919 von   121.375
+LU    13.337 von    38.400   (gemessen 2026-09-15)
 ```
 
 ⚠ Bei den Dubletten und beim Marktpuls braucht es deshalb `--alle-arten`: das ist die
 **Veröffentlichungs**-Sicht statt der Lead-Sicht. Gemessen 2026-08-13: von 4.345
 AT-Treffern, die nur sie fanden, waren **3.403 Zuschläge**; in CH 2.385 von 2.695.
+
+## Ist der Bestand vollständig — und zwar in DREI Richtungen?
+
+„Der Ingest lief" heisst nicht „der Bestand stimmt". Ein Land kann auf jeder Skala, die man
+gerade anschaut, tadellos aussehen und trotzdem die Hälfte fehlen. `scripts/pruefe_abdeckung.py`
+prüft deshalb drei Zeiträume, und **jeder einzelne war schon der blinde Fleck der anderen
+beiden**:
+
+| Stufe | Frage | Warum es die anderen nicht finden |
+|-------|-------|-----------------------------------|
+| **Abgeschlossene Monate** | Sind die letzten 6 Monate vollzählig? | Sieht die Gegenwart nicht und die Geschichte nicht |
+| **Laufender Monat** | Kommt gerade etwas an? | Nur als **Fenstersumme**, nie tagesgenau — s. unten |
+| **Historie** | Liegen Pakete im Cache, die nie eingelesen wurden? | Die einzige Stufe, die zwanzig fehlende Jahre sieht |
+
+**Der Fall, der die dritte Stufe erzwungen hat:** Luxemburgs Bestand begann am 2023-12-27,
+während TED seit Jahren 2.000 bis 2.400 LU-Bekanntmachungen im Jahr führt. Rund 40.000
+Bekanntmachungen aus zwanzig Jahren fehlten — und die Monatspakete lagen die ganze Zeit im
+Cache. Auf den ersten beiden Stufen war LU makellos. Nach dem Nachziehen: **6.723 → 38.400**
+Bekanntmachungen, Spanne jetzt 2004-01-02 bis heute (gemessen 2026-09-15).
+
+Die dritte Stufe braucht kein Netz und keine API: sie vergleicht die eingelesenen
+Bronze-Monate mit den Paketen, die ohnehin im Cache liegen.
+
+> ⚠ **Der laufende Monat lässt sich NICHT tagesgenau prüfen.** Der nahe liegende Test —
+> „unser `publication_date` gegen die `publication-date`-Facette von TED" — vergleicht zwei
+> verschiedene Begriffe. Gegenprobe an 8 Bekanntmachungen, die TED auf den 11.09. datiert:
+> alle acht liegen bei uns unter dem 09. oder 10.09. Die Regel meldete Lücken, wo keine
+> waren. Geblieben ist die **Fenstersumme** mit vier Tagen Karenz — gemessen liefert Karenz 2
+> nur 75–89 % des TED-Standes, Karenz 4 dagegen 98–103 %.
+>
+> Der eine echte Treffer der Tagesregel (09.09., 0 von 676) war Glück, nicht Konstruktion.
+> Eine Regel, die aus dem richtigen Grund richtig liegt, ist etwas anderes als eine, die
+> zufällig trifft — und nur die erste darf man behalten.
 
 ## Was, wenn das Land kein CPV führt?
 
@@ -221,3 +257,6 @@ kommt aus der Partition (`year=…/`), nicht aus der Zeile.
 - eine Tabelle „Feldabdeckung je `schema_gen`" ist gemessen und abgelegt
 - IDs sind kanonisch (Test grün)
 - Sprachfassungen sind entweder da oder es ist belegt, dass die Quelle nur eine führt
+- `python3 scripts/pruefe_abdeckung.py` ist für das Land grün — **alle drei Stufen**, auch
+  die Historie. Ein Land, das nur die letzten Monate kennt, ist nicht eingelesen, sondern
+  angefangen.

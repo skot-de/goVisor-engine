@@ -2344,10 +2344,16 @@ def test_uebernommener_wert_traegt_seine_waehrung():
     j = gold.split("def _frist_joins_sql")[1].split("\ndef ")[0]
     assert "c.quelle_notice_id = w.quelle_notice_id" in j, \
         "Wert und Währung müssen aus demselben Quellsatz stammen"
-    # Beide Lead-Bauer prüfen die Währung des übernommenen Wertes.
+    # Beide Lead-Bauer prüfen die Währung des übernommenen Wertes. Seit 2026-09-15
+    # ist die Prüfung eine UMRECHNUNG statt einer Sperre: `_wert_in_eur_sql` reicht EUR
+    # durch, rechnet Fremdwährungen mit dem EZB-Jahresdurchschnitt um und liefert NULL,
+    # wo wir keinen Kurs kennen. Die Absicht des abgelösten Skripts bleibt damit
+    # gewahrt — keine Fremdwährung gilt stillschweigend als Euro —, aber die Schweiz
+    # verliert nicht mehr 99 % ihrer Werte. Siehe tests/test_waehrungsumrechnung.py.
     for bauer in ("def build_leads", "def build_prospective_leads"):
         b = gold.split(bauer)[1].split("\ndef ")[0]
-        assert "wrtq.waehrung='EUR'" in b, f"{bauer}: Währungssperre fehlt"
+        assert '_wert_in_eur_sql("try_cast(wrtq.w AS DOUBLE)", "wrtq.waehrung"' in b, \
+            f"{bauer}: die Währung des übernommenen Wertes wird nicht geprüft"
 
 
 def test_skripte_finden_govisor_ohne_pythonpath():

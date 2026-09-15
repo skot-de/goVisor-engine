@@ -35,6 +35,10 @@ from pathlib import Path
 import duckdb
 
 ROOT = Path(__file__).resolve().parent.parent
+# ⚠ ERST der Projektpfad, DANN `govisor` — unter launchd gibt es kein PYTHONPATH.
+import sys as _sys                                                   # noqa: E402
+_sys.path.insert(0, str(ROOT))                                       # noqa: E402
+from govisor.laender import AKTIV as _AKTIV                          # noqa: E402
 sys.path.insert(0, str(ROOT))
 
 from govisor import model  # noqa: E402  (Pfad muss zuerst stehen)
@@ -187,7 +191,11 @@ def main(laender: list[str], dry: bool) -> int:
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
-    ap.add_argument("--laender", default="DE,AT,CH")
+    # ⚠ VORGABE AUS `govisor/laender.py`, nicht getippt. Diese Skripte laufen selten — und
+    # genau deshalb faellt ein fehlendes Land hier nicht auf, sondern erst in einem Jahr,
+    # wenn jemand sie braucht. Kapitel 15 der Bibel sagt es woertlich: "Wer sie spaeter
+    # braucht und das Land fehlt, sucht lange." Am 2026-09-15 fehlte Luxemburg in allen fuenf.
+    ap.add_argument("--laender", default=",".join(_AKTIV))
     ap.add_argument("--dry-run", dest="dry", action="store_true")
     a = ap.parse_args()
     sys.exit(main([x.strip() for x in a.laender.split(",") if x.strip()], a.dry))
