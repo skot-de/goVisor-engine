@@ -123,3 +123,60 @@ def test_ch_werte_kommen_tatsaechlich_an():
     con.close()
     assert neu > alt * 10, (
         f"CH-Werte alt {alt:,} → neu {neu:,} — die Umrechnung greift nicht (erwartet ~25x)")
+
+
+# ── Die Kurse muessen frisch sein, nicht nur vorhanden ────────────────────────────────
+
+def test_kursabruf_haengt_im_tageslauf_vor_dem_goldbau():
+    """⚠ Die Fehlerklasse dieses Projekts: gebaut, nicht verdrahtet.
+
+    Eine Kursdatei, die jemand einmal von Hand geholt hat, ist genau so lange richtig, wie
+    sich die Welt nicht bewegt. Und die Reihenfolge ist kein Detail: `_wert_in_eur_sql()`
+    liest die Datei beim Bauen der SQL-Ausdruecke — steht der Abruf hinter dem Gold-Bau,
+    rechnet jeder Lauf mit den Kursen des Vortages.
+    """
+    lauf = (ROOT / "scripts" / "daily_leads.sh").read_text(encoding="utf-8")
+    assert "fetch_ezb_kurse.py" in lauf, (
+        "Der Kursabruf steht nicht im Tageslauf — die Umrechnung friert auf dem Stand der "
+        "letzten Handholung ein.")
+    assert lauf.index("fetch_ezb_kurse.py") < lauf.index("build_dach_gold.py"), (
+        "Der Kursabruf steht NACH dem Gold-Bau. Dann gelten im Gold von heute die Kurse "
+        "von gestern.")
+
+
+def test_laufendes_jahr_wird_gemittelt_statt_geerbt():
+    """Der Vorjahreskurs ist fuer das laufende Jahr eine schlechte Naeherung.
+
+    Gemessen am 2026-09-15: HUF lag 7,1 % vom Jahresschnitt 2025 entfernt, NOK 5,0 %.
+    Deshalb holt das Skript fuer das laufende Jahr die Monatsreihe und mittelt sie.
+    """
+    holer = (ROOT / "scripts" / "fetch_ezb_kurse.py").read_text(encoding="utf-8")
+    assert "_hole_laufend" in holer and "M.{waehrung}.EUR" in holer, (
+        "Kein laufender Jahresdurchschnitt aus der Monatsreihe — das laufende Jahr erbt "
+        "still den Vorjahreskurs.")
+
+
+@pytest.mark.skipif(not (ROOT / "data" / "reference" / "waehrungskurse.json").exists(),
+                    reason="keine Kursdatei auf dieser Maschine")
+def test_kurse_sind_nicht_veraltet():
+    """Eine Kursdatei ohne Frist ist eine Behauptung ueber die Vergangenheit.
+
+    30 Tage, dieselbe Frist wie beim Bibel-Nachlauf: darunter ein Anstoss zum Hinsehen,
+    darueber ein Fehlschlag. Der Tageslauf holt taeglich; schlaegt das hier an, laeuft der
+    Abruf seit einem Monat ins Leere, ohne dass etwas rot wurde.
+    """
+    import datetime as dt
+    import json as _json
+    roh = _json.loads((ROOT / "data" / "reference" / "waehrungskurse.json")
+                      .read_text(encoding="utf-8"))
+    geholt = dt.date.fromisoformat(roh["geholt_am"])
+    alter = (dt.date.today() - geholt).days
+    assert alter <= 30, (
+        f"Die Kurse sind {alter} Tage alt (geholt {geholt}). Nachziehen mit: "
+        "python3 scripts/fetch_ezb_kurse.py")
+    # Und das laufende Jahr muss drinstehen, sonst faellt jede Vergabe von heute auf den
+    # ELSE-Zweig und wird mit dem Vorjahreskurs gerechnet.
+    jahr = str(dt.date.today().year)
+    chf = roh["kurse"].get("CHF", {})
+    assert jahr in chf, (
+        f"Kein CHF-Kurs fuer {jahr} — Vergaben aus diesem Jahr erben den Vorjahreskurs.")

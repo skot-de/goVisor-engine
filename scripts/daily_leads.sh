@@ -917,6 +917,23 @@ step "Kategorie-Ableitung fuer Ausschreibungen ohne CPV"
 $PY -m govisor.kategorie --country DE --schreiben \
   || echo "  ⚠ Kategorie-Ableitung fehlgeschlagen — die Leads ohne CPV bleiben 'Ohne Kategorie'."
 
+# WAEHRUNGSKURSE VOR DEM GOLD-BAU. `gold._wert_in_eur_sql()` liest
+# `data/reference/waehrungskurse.json` beim Bauen der SQL-Ausdruecke — die Datei muss also
+# stehen, BEVOR irgendein Land Gold baut, sonst rechnet dieser Lauf mit den Kursen von
+# gestern (oder, beim ersten Mal, gar nicht).
+#
+# ⚠ WARUM TAEGLICH, obwohl der EZB-Jahresdurchschnitt sich nur einmal im Jahr aendert:
+# fuer das LAUFENDE Jahr gibt es keinen, und das Skript mittelt dafuer die bisher
+# veroeffentlichten Monate. Dieser Wert bewegt sich — HUF steht 2026 sieben Prozent vom
+# Jahresschnitt 2025 entfernt. Eine Kursdatei, die jemand einmal von Hand geholt hat, ist
+# genau so lange richtig, wie sich die Welt nicht bewegt.
+#
+# ⚠ KEIN ABBRUCH. Faellt die EZB aus, bleibt die alte Datei stehen und der Lauf rechnet
+# mit ihr weiter. Alte Kurse sind besser als keine Werte — und der naechste Lauf holt nach.
+step "Waehrungskurse (EZB-Referenzkurse)"
+$PY scripts/fetch_ezb_kurse.py \
+  || echo "  ⚠ Kursabruf fehlgeschlagen — es gelten die Kurse der letzten erfolgreichen Holung."
+
 step "AT/CH-Gold (volle Pipeline, 26 Schritte je Land)"
 # ⚠ LU laeuft HIER mit, nicht ueber `cli gold`. Der CLI-Weg zieht build_hr_index() mit —
 # den deutschen Handelsregister-Index mit 5,5 Mio. Firmen — und der ist fuer Luxemburg weder

@@ -21,9 +21,18 @@ fuer eine einzelne Vergabe genauer, der Jahresschnitt fuer Zeitreihen richtig �
 Zahlen hier gehen in Zeitreihen (Marktgroesse je Jahr, Preisbaender, Regionsvergleich). Ein
 Tageskurs wuerde dort Wechselkursrauschen als Marktbewegung ausweisen.
 
-⚠ **Das laufende Jahr fehlt in der Reihe**, solange es nicht abgeschlossen ist. Der
-Verbraucher nimmt dafuer den juengsten vorhandenen Kurs und kennzeichnet das — eine
-Umrechnung mit dem Vorjahreskurs ist eine Naeherung, keine Messung.
+⚠ **Das laufende Jahr hat noch keinen Jahresdurchschnitt.** Der Vorjahreskurs waere dafuer
+eine schlechte Naeherung — 2022 bis 2025 hat sich der Franken um 13 % bewegt, und eine
+Vergabe von heute mit dem Kurs von vorletztem Jahr umzurechnen ist genau die Sorte stiller
+Fehler, die dieses Projekt jagt. Deshalb holt dieses Skript fuer das laufende Jahr die
+**Monatsreihe** (`M`) und mittelt die bisher veroeffentlichten Monate: ein *laufender*
+Jahresdurchschnitt, der mit jedem Monat genauer wird und am Jahresende gegen den echten
+ausgetauscht wird. Welche Jahre so entstanden sind, steht im Block `laufend` der Zieldatei.
+
+⚠ **Und deshalb gehoert der Aufruf in den Tageslauf**, nicht in die Hand. Eine Kursdatei,
+die jemand einmal geholt hat, ist genau so lange richtig, wie sich die Welt nicht bewegt.
+`daily_leads.sh` ruft das Skript vor dem Gold-Bau; faellt der Abruf aus, bleibt die alte
+Datei stehen und der Lauf geht weiter — alte Kurse sind besser als keine.
 
 Aufruf:  python3 scripts/fetch_ezb_kurse.py [--ab 2004] [--waehrungen CHF]
 """
@@ -68,6 +77,36 @@ def _hole(waehrung: str, ab: int, bis: int) -> dict[int, float]:
     return aus
 
 
+def _hole_laufend(waehrung: str, jahr: int) -> tuple[float | None, int]:
+    """Laufender Jahresdurchschnitt aus der Monatsreihe. (Mittel, Anzahl Monate).
+
+    ⚠ Ungewichtetes Mittel der bisher veroeffentlichten Monate — nicht das Mittel der
+    Tageskurse. Der Unterschied liegt im Promillebereich und die Alternative waere, 250
+    Tageswerte je Waehrung zu holen; die EZB veroeffentlicht den echten Jahresdurchschnitt
+    ohnehin im Januar, und dann ersetzt er diesen Wert.
+    """
+    url = (f"{BASIS}/M.{waehrung}.EUR.SP00.A"
+           f"?format=csvdata&startPeriod={jahr}-01&endPeriod={jahr}-12")
+    ctx = ssl.create_default_context()
+    try:
+        import certifi
+        ctx.load_verify_locations(certifi.where())
+    except Exception:                                                # noqa: BLE001
+        ctx = ssl._create_unverified_context()
+    req = urllib.request.Request(url, headers={"User-Agent": _UA})
+    with urllib.request.urlopen(req, timeout=90, context=ctx) as r:
+        text = r.read().decode("utf-8", "replace")
+    werte = []
+    for zeile in csv.DictReader(io.StringIO(text)):
+        try:
+            werte.append(float(zeile["OBS_VALUE"]))
+        except (KeyError, TypeError, ValueError):
+            continue
+    if not werte:
+        return None, 0
+    return sum(werte) / len(werte), len(werte)
+
+
 def main(argv: list[str] | None = None) -> int:
     p = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     p.add_argument("--ab", type=int, default=2004, help="erstes Jahr (Vorgabe 2004)")
@@ -83,6 +122,7 @@ def main(argv: list[str] | None = None) -> int:
 
     bis = date.today().year
     kurse: dict[str, dict[str, float]] = {}
+    laufend: dict[str, dict[str, int]] = {}
     for w in [x.strip().upper() for x in a.waehrungen.split(",") if x.strip()]:
         # ⚠ EINE FEHLENDE REIHE DARF DEN LAUF NICHT KIPPEN. Die EZB fuehrt nicht jede
         # Waehrung ueber den ganzen Zeitraum (ISK etwa ruht seit 2008), und ein 404 fuer
@@ -99,13 +139,38 @@ def main(argv: list[str] | None = None) -> int:
         jahre = sorted(reihe)
         print(f"  {w}: {len(reihe)} Jahre, {jahre[0]}–{jahre[-1]} · "
               f"{jahre[0]} {reihe[jahre[0]]:.4f} → {jahre[-1]} {reihe[jahre[-1]]:.4f}")
+
+        # Laufendes Jahr aus der Monatsreihe. ⚠ Nur, wenn der Jahresdurchschnitt wirklich
+        # noch fehlt: sobald die EZB ihn im Januar veroeffentlicht, hat er Vorrang vor
+        # jedem selbst gemittelten Wert.
+        if bis in reihe:
+            continue
+        try:
+            mittel, monate = _hole_laufend(w, bis)
+        except Exception as e:                                       # noqa: BLE001
+            print(f"     ⚠ {bis}: {type(e).__name__} — laufendes Jahr ohne Kurs")
+            continue
+        if mittel is None:
+            print(f"     ⚠ {bis}: noch kein Monat veroeffentlicht")
+            continue
+        kurse[w][str(bis)] = round(mittel, 6)
+        laufend[w] = {"jahr": bis, "monate": monate}
+        vorjahr = reihe.get(bis - 1)
+        drift = f" · {100 * (mittel / vorjahr - 1):+.1f} % gegen {bis - 1}" if vorjahr else ""
+        print(f"     {bis} laufend: {mittel:.4f} aus {monate} Monat(en){drift}")
     if not kurse:
         return 1
     if a.trocken:
         return 0
-    inhalt = {"quelle": "EZB-Referenzkurse (data-api.ecb.europa.eu, EXR, Frequenz A)",
+    inhalt = {"quelle": "EZB-Referenzkurse (data-api.ecb.europa.eu, EXR, "
+                        "Frequenz A; laufendes Jahr gemittelt aus Frequenz M)",
               "bedeutung": "Einheiten der Fremdwaehrung je 1 EUR — umrechnen mit betrag/kurs",
-              "geholt_am": date.today().isoformat(), "kurse": kurse}
+              "geholt_am": date.today().isoformat(),
+              # ⚠ Welche Jahreswerte NICHT der amtliche Jahresdurchschnitt sind, sondern
+              # ein laufendes Mittel der bisherigen Monate. Wer mit diesen Zahlen rechnet,
+              # muss es wissen koennen, ohne den Code zu lesen.
+              "laufend": laufend,
+              "kurse": kurse}
     ZIEL.parent.mkdir(parents=True, exist_ok=True)
     teil = ZIEL.with_suffix(".teil")
     teil.write_text(json.dumps(inhalt, ensure_ascii=False, indent=1), encoding="utf-8")

@@ -84,8 +84,40 @@ DKK und ISK.
 | Währung mit Kurs | `betrag / kurs des Veröffentlichungsjahres` |
 | Währung ohne Kurs (z. B. AED) | **NULL** — ohne Kurs gibt es keinen Euro-Betrag |
 
-Für das **laufende Jahr** gibt es noch keinen Jahresdurchschnitt; dann gilt der jüngste
-vorhandene Kurs. Das ist eine Näherung, und sie ist im Code als solche benannt.
+Die Kurse sind **nicht fest eingetragen.** Sie kommen täglich aus der EZB-Schnittstelle und
+stehen als Jahresreihe in der Datei; der Code kennt keine einzige Zahl.
+
+### Das laufende Jahr — und warum der Abruf in den Tageslauf gehört
+
+Für das laufende Jahr veröffentlicht die EZB noch keinen Jahresdurchschnitt. Den
+Vorjahreskurs zu erben wäre eine schlechte Näherung, und zwar messbar: am 2026-09-15 lag
+HUF **7,1 %** vom Jahresschnitt 2025 entfernt, NOK 5,0 %, USD 2,9 %, CHF 1,7 %.
+
+Deshalb holt `fetch_ezb_kurse.py` für das laufende Jahr zusätzlich die **Monatsreihe**
+(`M.<WÄHRUNG>.EUR.SP00.A`) und mittelt die bisher veröffentlichten Monate — ein *laufender*
+Jahresdurchschnitt, der mit jedem Monat genauer wird. Sobald die EZB im Januar den echten
+Jahreswert veröffentlicht, hat er Vorrang und der gemittelte verschwindet.
+
+Welche Jahreswerte so entstanden sind, steht im Block `laufend` der Zieldatei — wer mit den
+Zahlen rechnet, muss das wissen können, ohne den Code zu lesen.
+
+```
+CHF  2026 laufend: 0.9212 aus 8 Monaten · -1,7 % gegen 2025
+HUF  2026 laufend: 369.4938 aus 8 Monaten · -7,1 % gegen 2025
+```
+
+> ⚠ **Der Abruf hängt im Tageslauf, VOR dem Gold-Bau.** Beides zählt. Eine Kursdatei, die
+> jemand einmal von Hand geholt hat, ist genau so lange richtig, wie sich die Welt nicht
+> bewegt — und `_wert_in_eur_sql()` liest die Datei beim **Bauen** der SQL-Ausdrücke, also
+> gilt im Gold von heute, was zu diesem Zeitpunkt auf der Platte lag. Stünde der Abruf
+> dahinter, rechnete jeder Lauf mit den Kursen des Vortages.
+>
+> Fällt die EZB aus, bleibt die alte Datei stehen und der Lauf geht weiter: alte Kurse sind
+> besser als keine Werte. `tests/test_waehrungsumrechnung.py` hält beides fest — die
+> Verdrahtung, die Reihenfolge und eine **30-Tage-Frist** auf `geholt_am`.
+
+⚠ Erst jenseits aller bekannten Jahre greift der Notnagel: dann gilt der jüngste vorhandene
+Kurs. Das ist der Fall, den man nie sehen sollte.
 
 Verdrahtet ist der Ausdruck an **vier** Stellen — wer eine neue Wertquelle baut, muss ihn
 dort ebenfalls einsetzen:
