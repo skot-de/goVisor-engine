@@ -403,3 +403,63 @@ def test_neuberechnung_wirft_nur_weg_was_sie_ersetzt():
     assert "if not sicherung.exists()" not in block, \
         "die Sicherung darf nicht uebersprungen werden, wenn es schon eine gibt"
     assert "vor_neurechnung-" in block, "Sicherung ohne Laufmarke — ein zweiter Lauf ueberschriebe sie"
+
+
+# ── Thema einer Anforderung: aus dem Text, nicht aus dem Typ ────────────────────────────
+#
+# Anlass (2026-09-15): `theme` in doc_checklist war eine reine Funktion von `req_type` —
+# alle 18 Typen bildeten auf genau ein Thema ab, 70,5 % der 571.677 Zeilen landeten auf
+# „sonstiges", und ALLE 10.508 Zuschlagskriterien trugen „projektorganisation". Eine Spalte,
+# die sich vollstaendig aus einer anderen ableitet, traegt keine Information.
+
+def test_thema_kommt_aus_dem_text_nicht_aus_dem_typ():
+    """Zwei Zuschlagskriterien, gleicher req_type, verschiedene Themen."""
+    assert doctax.theme_fuer_anforderung(
+        "zuschlagskriterium", "Nachhaltigkeitskonzept und CO2-Bilanz") == "nachhaltigkeit"
+    assert doctax.theme_fuer_anforderung(
+        "zuschlagskriterium", "Qualifikation der eingesetzten Fachkraft") == "personal_qualifikation"
+
+
+def test_zuschlagskriterium_faellt_nicht_mehr_auf_projektorganisation():
+    """Der Rueckfall darf kein Thema behaupten, das der Typ nicht hergibt."""
+    assert doctax.theme_for("zuschlagskriterium") == "sonstiges"
+    # „Preis" trifft kein Muster — dann lieber ehrlich nichts sagen als das Falsche.
+    assert doctax.theme_fuer_anforderung("zuschlagskriterium", "Preis") == "sonstiges"
+
+
+def test_rueckfall_bleibt_wo_der_typ_wirklich_traegt():
+    """Bei den Eignungsarten ist die Typ-Zuordnung konstruktiv richtig und muss halten."""
+    assert doctax.theme_fuer_anforderung("zertifikat", "") == "zertifikate_qm"
+    assert doctax.theme_fuer_anforderung("referenz_anzahl", None) == "referenzen"
+
+
+def test_erster_treffer_gewinnt_also_konkretes_zuerst():
+    """value schlaegt quote: das Konkrete steht vorn, der Beleg dahinter."""
+    assert doctax.theme_fuer_anforderung(
+        "zuschlagskriterium", "ISO 9001", "Das Unternehmen gruendete sich 1998") == "zertifikate_qm"
+
+
+def test_blocks_kann_nur_themen_der_taxonomie_liefern():
+    """Strukturwaechter: assign_theme darf nie ein Thema erfinden, das doctax nicht kennt."""
+    from govisor.blocks import _THEME_KW
+    fremd = {t for t, _ in _THEME_KW} - set(doctax.THEMES)
+    assert not fremd, f"blocks kennt Themen, die doctax nicht hat: {fremd}"
+
+
+def test_kein_aufrufer_bestimmt_das_thema_noch_ueber_den_typ():
+    """Die Fehlerklasse, nicht der Einzelfall.
+
+    Wer eine Anforderung baut und dafuer `theme_for(req_type)` nimmt, erzeugt wieder eine
+    Spalte ohne Information. Erlaubt bleibt der Aufruf nur dort, wo es gar keinen Text gibt
+    (die Sammelzeile „... und N weitere Dateien"), und das steht dort als Begruendung.
+    """
+    import ast, pathlib
+    for datei in ("govisor/docextract.py", "scripts/analyze_docs.py"):
+        quelle = pathlib.Path(datei).read_text(encoding="utf-8")
+        baum = ast.parse(quelle)
+        treffer = [k for k in ast.walk(baum)
+                   if isinstance(k, ast.Call) and isinstance(k.func, ast.Attribute)
+                   and k.func.attr == "theme_for"]
+        assert len(treffer) <= 1, (
+            f"{datei}: {len(treffer)}× theme_for — Anforderungen bekommen ihr Thema "
+            f"aus dem Text (theme_fuer_anforderung), nicht aus dem req_type")

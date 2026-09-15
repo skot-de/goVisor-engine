@@ -23,6 +23,25 @@ Preis-Analyse und offene Punkte. Fachliche Messwerte stehen in `data-sources.md`
   die Serving-Ebene.
 - **DE komplett, alle CPV.** Kein Branchenfilter beim Import. IT (~9%) ist eine
   `WHERE`-Sicht, kein Import-Filter. Land ist überall Parameter (EU-erweiterbar).
+- **Das Thema einer Anforderung kommt aus ihrem Text, nicht aus ihrem Typ**
+  (2026-09-15, `doctax.theme_fuer_anforderung`). Vorher schlug `theme_for(req_type)`
+  in einer festen Tabelle nach. Gemessen an 571.677 Zeilen bildete damit **jeder der
+  18 req_type-Werte auf genau ein Thema ab** — eine Spalte, die sich vollständig aus
+  einer anderen ableitet und deshalb keine Information trägt, sondern welche vortäuscht.
+  Am sichtbarsten bei den Zuschlagskriterien: alle 10.508 trugen `projektorganisation`,
+  obwohl ein Zuschlagskriterium alles sein kann, von Preis bis Nachhaltigkeit.
+  `govisor/blocks.py:assign_theme` konnte das schon, nur rief es niemand dafür auf —
+  **erklärt und nie verdrahtet**, die Umkehrung unserer häufigsten Fehlerklasse.
+  Der Typ bleibt der Rückfall, wo er konstruktiv stimmt (`zertifikat` →
+  `zertifikate_qm`), und sagt sonst `sonstiges`.
+  ⚠ Das Ergebnis ist **ehrlicher, nicht reicher**: an 400 echten Zuschlagskriterien
+  gemessen bekommen 9 % ein belegtes Thema, 91 % sagen jetzt „unbekannt" statt etwas
+  Falsches. Der Gewinn ist die Verdrahtung: eine Anforderung kann jetzt den passenden
+  Profil-Baustein anziehen, was §9.4 seit jeher versprach.
+  ⚠ Dieselbe Tabelle steht als Seed in `supabase/0006_doc_analysis.sql` und muss
+  mitwandern; `test_sql_taxonomy_seed_matches_doctax` hält das fest (sie ist beim
+  Umbau prompt rot geworden). `data/gold/*/doc_checklist.parquet` trägt die alten
+  Themen bis zum nächsten Neuaufbau.
 
 ## Firmengruppen (redaktionell, editierbar)
 

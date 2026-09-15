@@ -342,7 +342,8 @@ def _parser_item(name: str, s: dict) -> dict | None:
                               s["n_fields"], "Felder")
     else:
         return None
-    return {"req_type": rt, "label": lbl, "theme": doctax.theme_for(rt), "value": val, "unit": unit,
+    return {"req_type": rt, "label": lbl,
+            "theme": doctax.theme_fuer_anforderung(rt, lbl, val), "value": val, "unit": unit,
             "quote": "", "source_file": name, "source_page": None, "marking": "Extrahiert", "parser": p}
 
 
@@ -376,7 +377,9 @@ def _pflicht_items(dateien: list[str]) -> list[dict]:
             items.append({
                 "req_type": "einzureichendes_dokument",
                 "label": kurz if pflichtig else f"{kurz} (verbleibt beim Bieter)",
-                "theme": doctax.theme_for("einzureichendes_dokument"),
+                # Der Dateiname ist hier die einzige Substanz, und er traegt sie oft:
+                # „Eigenerklaerung_Zertifikate.pdf" gehoert zu zertifikate_qm.
+                "theme": doctax.theme_fuer_anforderung("einzureichendes_dokument", kurz),
                 "value": kurz, "unit": None, "quote": "", "source_file": name,
                 "source_page": None, "marking": "Abgeleitet",
                 "pflicht": art,
@@ -385,6 +388,7 @@ def _pflicht_items(dateien: list[str]) -> list[dict]:
             items.append({
                 "req_type": "einzureichendes_dokument",
                 "label": f"... und {len(liste) - PFLICHT_MAX} weitere Dateien in „{art}\"",
+                # Sammelzeile ohne eigenen Inhalt: hier ist der Typ-Rueckfall richtig.
                 "theme": doctax.theme_for("einzureichendes_dokument"),
                 "value": len(liste) - PFLICHT_MAX, "unit": "Dateien", "quote": "",
                 "source_file": "", "source_page": None, "marking": "Abgeleitet",

@@ -32,7 +32,7 @@ ist die **Deploy-Schicht** — gebaut und gegen das Dev-Sample geprüft, scharf 
 **Ziel:** aus generischem LLM-Call → typisierte, belegpflichtige Extraktion je Dokumenttyp.
 
 **Bau-Schritte:**
-1. **Anforderungs-Taxonomie** (`govisor/doctax.py`): fester Enum `req_type` (`referenz_mindestwert`, `mindestumsatz`, `zertifikat`, `ausschlussgrund`, `zuschlagskriterium`, `frist`, `vertragsstrafe`, `haftung`, `laufzeit`, …) + `theme`-Mapping (§9.4). Speist #15.
+1. **Anforderungs-Taxonomie** (`govisor/doctax.py`): fester Enum `req_type` (`referenz_mindestwert`, `mindestumsatz`, `zertifikat`, `ausschlussgrund`, `zuschlagskriterium`, `frist`, `vertragsstrafe`, `haftung`, `laufzeit`, …) + `theme` (§9.4). ⚠ Seit 2026-09-15 kommt das Thema aus dem **Text** der Anforderung (`theme_fuer_anforderung`), nicht mehr aus einer festen req_type→theme-Tabelle; die war eine verlustbehaftete Umkodierung. Begründung in `docs/entscheidungen-und-kontext.md`. Speist #15.
 2. **Typisierte Schemata je Doktyp** (§6a.3): fünf JSON-Schemata (Eignung/Bewerbungsbed., Zuschlag, LB, Vertrag, Aufforderung), je 2–3 Few-Shot-Beispiele aus echten Unterlagen. Mindestfelder: `req_type, value, unit, quote, source_file, source_page, marking`.
 3. **`govisor/docextract.py`** — je Doktyp eine Aufgabe (eigener Prompt+Schema) statt Universalabfrage. Structured-Output erzwingen; schema-invalide Antwort → 1× wiederholen, sonst verwerfen (§6a.1).
 4. **Zitat-Verifikation** (§6a.2, Pflicht): jedes `quote` normalisiert (Whitespace/Umbrüche) im Quelltext suchen; nicht gefunden → Eintrag **verwerfen**. `rejected_items`-Zähler je Analyse.

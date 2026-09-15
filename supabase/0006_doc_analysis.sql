@@ -129,7 +129,11 @@ insert into public.doc_requirement_types (req_type, label, theme) values
   ('eignung_technisch','Technische Mindesteignung','technische_ausstattung'),
   ('eignung_personal','Personelle Eignung / Qualifikation','personal_qualifikation'),
   ('berufshaftpflicht','Berufs-/Betriebshaftpflicht-Deckung','unternehmensdarstellung'),
-  ('zuschlagskriterium','Zuschlagskriterium mit Gewicht','projektorganisation'),
+  -- 2026-09-15: war 'projektorganisation' fuer JEDES Zuschlagskriterium. Das Thema kommt
+  -- jetzt aus dem Text der Anforderung (doctax.theme_fuer_anforderung); der Typ-Rueckfall
+  -- sagt nichts mehr, weil er nichts weiss. Muss mit doctax.REQ_TYPES gleich bleiben,
+  -- test_sql_taxonomy_seed_matches_doctax haelt das fest.
+  ('zuschlagskriterium','Zuschlagskriterium mit Gewicht','sonstiges'),
   ('leistung_menge','Leistungsumfang / Menge','sonstiges'),
   ('technische_mindestanforderung','Technische Mindestanforderung','technische_ausstattung'),
   ('vertragsstrafe','Vertragsstrafe','sonstiges'),

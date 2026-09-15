@@ -87,7 +87,12 @@ KOPF_SPALTEN = (
 # Spalte traegt also keine eigene Information. 70,5 % landen auf „sonstiges" — nicht weil die
 # Zuordnung scheitert, sondern weil das Vokabular eignungs-zentriert ist (Referenzen,
 # Zertifikate, Personal) und die Haelfte des Materials Vertrags- und Formalienfragen sind.
-# `zuschlagskriterium → projektorganisation` ist dabei schlicht falsch.
+# `zuschlagskriterium → projektorganisation` war dabei schlicht falsch.
+#
+# ✅ BEHOBEN 2026-09-15: `doctax.theme_fuer_anforderung` bestimmt das Thema aus dem Text
+# der Anforderung. `bereich` bleibt trotzdem — es ordnet nach der Frage des Bieters, das
+# Thema nach dem Inhalt; zwei verschiedene Schnitte, beide gebraucht. ⚠ Bestandsdaten in
+# `doc_checklist.parquet` tragen die alten Themen bis zum naechsten Neuaufbau.
 #
 # `bereich` ordnet stattdessen nach der FRAGE, die ein Bieter stellt. Vollstaendig, explizit,
 # ohne Textanalyse — `req_type` traegt die Trennung bereits sauber.

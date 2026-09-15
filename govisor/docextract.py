@@ -340,7 +340,10 @@ def verarbeite(doctype: str, text: str, source_file: str, parsed: list) -> dict:
             **norm,
             "req_type": rt,
             "label": doctax.REQ_TYPES[rt][0],
-            "theme": doctax.theme_for(rt),
+            # Thema aus dem TEXT der Anforderung, nicht aus ihrem Typ (s. doctax). `value`
+            # traegt die Substanz, `quote` den Beleg; `label` ist je req_type konstant und
+            # taugt deshalb nur als letzter Versuch.
+            "theme": doctax.theme_fuer_anforderung(rt, raw_item.get("value"), quote),
             "value": raw_item.get("value"),
             "unit": raw_item.get("unit"),
             "quote": quote,

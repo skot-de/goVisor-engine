@@ -4,8 +4,9 @@ Anforderungen werden **semantisch** klassifiziert (``req_type``), nicht über Te
 die Taxonomie ist verfahrensübergreifend gültig und ist ein **Klassifikationsziel, kein
 Textcache** (Q1b). Sie speist #15 und die Themenzuordnung der Bausteine (§9.3/§9.4).
 
-Jeder ``req_type`` trägt ein festes ``theme`` aus der Bausteine-Themen-Taxonomie (§9.4), damit
-eine extrahierte Anforderung direkt den passenden Profil-Baustein anziehen kann.
+Das Thema einer Anforderung (§9.4) bestimmt ``theme_fuer_anforderung`` aus ihrem **Text**,
+damit sie den passenden Profil-Baustein anziehen kann. ``theme_for(req_type)`` ist nur noch
+der Rückfall für Anforderungen, deren Text nichts hergibt.
 """
 from __future__ import annotations
 
@@ -28,7 +29,12 @@ REQ_TYPES: dict[str, tuple[str, str]] = {
     "eignung_personal":              ("Personelle Eignung / Qualifikation", "personal_qualifikation"),
     "berufshaftpflicht":             ("Berufs-/Betriebshaftpflicht-Deckung", "unternehmensdarstellung"),
     # Zuschlag (§6a.3 Zuschlagskriterien)
-    "zuschlagskriterium":            ("Zuschlagskriterium mit Gewicht", "projektorganisation"),
+    # ⚠ Hier stand bis zum 2026-09-15 "projektorganisation" — fuer ALLE 10.508 Zuschlags-
+    # kriterien im Bestand, weil das Thema aus dem Typ kam und nicht aus dem Inhalt. Ein
+    # Zuschlagskriterium kann aber alles sein: Preis, Nachhaltigkeit, Personal. Der Typ sagt
+    # darueber nichts, also sagt der Rueckfall jetzt auch nichts. Das Thema kommt aus dem Text,
+    # s. `theme_fuer_anforderung`. Befund stand seit dem 2026-09-01 in build_doc_analysis.py.
+    "zuschlagskriterium":            ("Zuschlagskriterium mit Gewicht", "sonstiges"),
     # Leistungsbeschreibung
     "leistung_menge":                ("Leistungsumfang / Menge", "sonstiges"),
     "technische_mindestanforderung": ("Technische Mindestanforderung", "technische_ausstattung"),
@@ -51,8 +57,40 @@ MARKINGS_REQUIRE_QUOTE: frozenset[str] = frozenset({"Zitat", "Extrahiert"})
 
 
 def theme_for(req_type: str) -> str:
-    """Bausteine-Thema (§9.4) für einen req_type; ``sonstiges`` für Unbekanntes."""
+    """Bausteine-Thema (§9.4) allein aus dem req_type; ``sonstiges`` für Unbekanntes.
+
+    ⚠ NUR als Rückfall gedacht. Der req_type trennt die **Art** der Anforderung
+    (Frist, Formalie, Zuschlagskriterium), nicht ihr **Thema**. Wer diese Funktion
+    direkt benutzt, bekommt für jeden req_type genau einen Wert und damit eine Spalte
+    ohne eigene Information. Für Anforderungen: ``theme_fuer_anforderung``.
+    """
     return REQ_TYPES.get(req_type, ("", "sonstiges"))[1]
+
+
+def theme_fuer_anforderung(req_type: str, *texte: object) -> str:
+    """Bausteine-Thema (§9.4) einer Anforderung, aus ihrem **Text** bestimmt.
+
+    Der erste Text, der ein Themenmuster trifft, gewinnt; deshalb das Konkreteste zuerst
+    übergeben (``value`` vor ``quote`` vor ``label``). Trifft keiner, greift der Rückfall
+    über den req_type — der ist für die Eignungsarten (``zertifikat`` → ``zertifikate_qm``,
+    ``referenz_anzahl`` → ``referenzen``) richtig konstruiert und sonst ``sonstiges``.
+
+    ⚠ WARUM NICHT ÜBER DEN TYP. Am 2026-09-15 gemessen: alle 18 req_type-Werte bildeten auf
+    genau ein Thema ab, 70,5 % der 571.677 Zeilen landeten auf ``sonstiges``, und **alle**
+    10.508 Zuschlagskriterien trugen ``projektorganisation``. Eine Spalte, die sich vollständig
+    aus einer anderen ableitet, trägt keine Information — sie täuscht nur welche vor.
+    """
+    from .blocks import assign_theme  # spät, damit doctax importierbar bleibt ohne blocks
+    for t in texte:
+        if t is None:
+            continue
+        s = str(t).strip()
+        if not s:
+            continue
+        thema = assign_theme(s)
+        if thema != "sonstiges":
+            return thema
+    return theme_for(req_type)
 
 
 def is_valid_req_type(req_type: str) -> bool:
