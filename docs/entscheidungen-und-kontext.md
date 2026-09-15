@@ -71,6 +71,13 @@ Größen-Bänder: für Analytik/Dashboard schätzbar (mehrere Signale nötig, CP
 zu grob), fürs Billing nur auf echten Werten. Attribution-Gate: Fee nur auf
 in-platform bearbeitete Leads (TED zeigt „gewonnen", nicht „wegen goVisor").
 
+## Angebotsmodul (Bauplan, 2026-09-15)
+
+Alles Kuenftige sammelt sich in einem eigenen Ordner, getrennt vom Geltenden. Darin der Bauplan „Die Akte als Anker": **[docs/weiterentwicklung/](weiterentwicklung/README.md)**. Kernentscheidung `(nutzer, land, vorgang_id)`, fuenf Stufen,
+jede mit Abbruchbedingung. ⚠ Zwei Funde, die beim Pruefen aufkamen: die Vorgangskennung ist
+NICHT stabil (4.809 verschwanden bei einem Neuaufbau, Umzugskarte noetig), und Stufe 1 ist
+ein Umzug von `user_watchlist` (haengt an `lead_id`), kein Neubau.
+
 ## Offene Punkte (benannt, nicht gebaut)
 
 - **Entity-ID-Härtung verifizieren** — Incumbent-Rate sollte von 7% (Artefakt
