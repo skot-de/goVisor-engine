@@ -1717,6 +1717,21 @@ $PY scripts/pruefe_abdeckung.py \
 $PY scripts/pruefe_sondierungszahlen.py \
   || echo "  → Sondierungszahlen weichen von den Messdateien ab. Details: python3 scripts/pruefe_sondierungszahlen.py --alle"
 
+# ── WERTE: BETRAEGE, DIE KEINER LESEN KANN ───────────────────────────────────────────────
+#
+# Am 2026-09-15 gefunden: 86.177 Bekanntmachungen ueber vier Laender trugen einen Endwert
+# OHNE Waehrung, ueber den ganzen Zeitraum 2010–2024. Eine Zeile im Legacy-Parser suchte
+# die Waehrung am Wertknoten, wo sie nicht steht — sie haengt am Eltern-Knoten. Dahinter
+# versteckt: derselbe Leser warf bei formatierten Betraegen („189 945 844,15") das
+# Dezimalkomma weg und las das Hundertfache.
+#
+# ⚠ GEMELDET WURDE ES DIE GANZE ZEIT. Gold setzt `waehrung_angenommen`, wenn ein Wert ohne
+# Waehrung dasteht. Das Merkmal beschreibt eine DATENLAGE und wurde zur Tarnkappe fuer
+# einen PARSER-FEHLER — weil die Zahl nie jemandem vorgelegt wurde. Genau das tut diese
+# Sonde. Warnung, kein Abbruch — wie die uebrigen.
+$PY scripts/pruefe_werte.py \
+  || echo "  → Wert-Waechter meldet Befunde. Details: python3 scripts/pruefe_werte.py"
+
 # ── GOLD-INTEGRITAET: jeder Fremdschluessel muss aufloesen ───────────────────────────────
 # Die aelteste Pruefung im Haus und bis zum 2026-09-02 die einzige, die der Tageslauf NIE
 # aufrief. Sie steckte in `python -m govisor.cli verify`, und der prueft davor jeden Monat

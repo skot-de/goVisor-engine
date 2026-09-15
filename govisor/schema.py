@@ -668,6 +668,24 @@ def _ojs_amount(text: str | None) -> float | None:
         return None
 
 
+def _kosten_betrag(elem: ET.Element) -> float | None:
+    """Betrag eines ``VALUE_COST``-Knotens — ``@FMTVAL`` zuerst.
+
+    ⚠ DER TEXTKNOTEN IST FORMATIERT, DAS ATTRIBUT NICHT. TED schreibt den Vor-2014-Wert
+    zweimal: als lesbaren Text (``189 945 844,15``) und maschinenlesbar in ``@FMTVAL``
+    (``189945844.15``). Wer den Text mit ``_to_amount`` liest, verliert das Dezimalkomma
+    und bekommt das **Hundertfache** — gemessen am 2026-09-15 traf das allein in DE
+    15.080 Bekanntmachungen, darunter ein Schweizer Tunnellos mit 19 Mrd statt 190 Mio.
+    """
+    roh = elem.attrib.get("FMTVAL")
+    if roh:
+        # FMTVAL fuehrt den Punkt als DEZIMALtrenner — also `_to_amount`, nicht `_ojs_amount`.
+        betrag = _to_amount(roh)
+        if betrag is not None:
+            return betrag
+    return _ojs_amount(elem.text)
+
+
 def _ojs_addr_field(addr: ET.Element, tag: str) -> str | None:
     for elem in _iter_named(addr, tag):
         val = _text_of(elem)
@@ -1499,14 +1517,50 @@ def _parse_legacy(root: ET.Element, notice_id: str) -> Notice:
     final, cur_f = _first_amount(scope, ("VAL_TOTAL",), ("CURRENCY",))
     if final is None:
         # Vor-2014: Endwert je Los in COSTS_RANGE_AND_CURRENCY_WITH_VAT_RATE/VALUE_COST.
+        #
+        # ⚠ HIER STAND `_first_amount(costs, ("VALUE_COST",), ("CURRENCY",))` — mit zwei
+        # Fehlern in einer Zeile, und beide sahen wie normale Daten aus:
+        #
+        #   1. `_to_amount` wirft das Dezimalkomma weg. `189 945 844,15` wurde zu
+        #      18.994.584.415 — das Hundertfache. Der Code WUSSTE davon: `_ojs_amount`
+        #      existiert seit Langem genau dafuer, wurde hier aber nicht benutzt.
+        #   2. Die Waehrung haengt am ELTERN-Knoten
+        #      (`COSTS_RANGE_AND_CURRENCY_WITH_VAT_RATE@CURRENCY`), nicht am `VALUE_COST`.
+        #      `_first_amount` sucht sie am Wertknoten und fand nie eine — **100 %** der
+        #      Bekanntmachungen auf diesem Pfad trugen `value_currency IS NULL`.
+        #
+        # Fehler 2 hat Fehler 1 versteckt: ohne Waehrung fielen die Saetze bis zum
+        # 2026-09-15 aus `final_value_clean` heraus und wurden nie nachgerechnet. Als die
+        # Waehrungsumrechnung sie hereinholte, standen 19 Mrd CHF fuer ein Tunnellos da.
         total = 0.0
         for costs in _iter_named(scope, "COSTS_RANGE_AND_CURRENCY_WITH_VAT_RATE"):
-            amt, cur = _first_amount(costs, ("VALUE_COST",), ("CURRENCY",))
-            if amt is not None:
+            for vc in _iter_named(costs, "VALUE_COST"):
+                amt = _kosten_betrag(vc)
+                if amt is None:
+                    continue
                 total += amt
-                cur_f = cur_f or cur
+                cur_f = cur_f or costs.attrib.get("CURRENCY") or vc.attrib.get("CURRENCY")
+                break
         if total:
             final = total
+    if estimated is None:
+        # ⚠ VOR-2014-SCHAETZWERT WURDE NIE GELESEN. `VAL_ESTIMATED_TOTAL` gibt es erst in
+        # den 2014er-Formularen; davor heisst der Knoten
+        # `INITIAL_ESTIMATED_TOTAL_VALUE_CONTRACT` mit `VALUE_COST` darunter und der
+        # Waehrung wieder am Eltern-Knoten. Der OJS-Zweig liest ihn seit Langem
+        # (s. `_parse_internal_ojs`), der Legacy-Zweig nicht — gemessen am 2026-09-15
+        # blieben dadurch 26.383 Schaetzwerte leer, die im XML danebenstanden
+        # (DE 23.663, AT 2.072, LU 648).
+        for est in _iter_named(scope, "INITIAL_ESTIMATED_TOTAL_VALUE_CONTRACT"):
+            for vc in _iter_named(est, "VALUE_COST"):
+                betrag = _kosten_betrag(vc)
+                if betrag is None:
+                    continue
+                estimated = betrag
+                cur_e = cur_e or est.attrib.get("CURRENCY") or vc.attrib.get("CURRENCY")
+                break
+            if estimated is not None:
+                break
     award_date = (_first_date(scope, ("DATE_CONCLUSION_CONTRACT",))
                   or _legacy_composite_date(scope, "CONTRACT_AWARD_DATE"))
     start_date = _first_date(scope, ("DATE_START",))

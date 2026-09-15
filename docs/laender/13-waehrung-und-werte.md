@@ -229,20 +229,74 @@ oder die Näherung ausdrücklich als solche stehen lassen — aber nie stillschw
 - **Die Schätzung trifft nur ~42 % das richtige Band.** Deshalb ist die Preisstufe ein
   Flat-per-Band-Modell und kein Prozentsatz auf einen geratenen Wert.
 
-## Offen: die Sätze ohne Währung
+## Die Sätze ohne Währung — aufgeklärt am 2026-09-15
 
-**⚠ Aufgenommen 2026-09-15, nicht behoben.** In CH tragen **1.474** Bekanntmachungen einen
-Wert **ohne** Währung — alle `can`, alle aus dem Fenster 2016-08 bis 2017-08, also eine
-abgegrenzte Parser-Ära. Ihr Median liegt bei **17,1 Mio**, gegen 698 Tsd bei den
-CHF-Sätzen desselben Landes. Sie gelten nach der TED-Konvention als Euro.
+Beim Nachsehen stellte sich heraus: es sind nicht 1.474, sondern **86.177** über vier
+Länder, und es war nie eine Datenlage, sondern ein Parser-Fehler.
 
-Zwei Dinge daran sind zu klären, bevor jemand mit diesen Zahlen rechnet:
+```
+Endwert ohne Währung        Zeitraum
+  DE  74.051                2010-03-10 – 2024-02-02
+  AT   8.425                2010-03-10 – 2024-01-05
+  LU   2.227                2011-01-04 – 2023-11-28
+  CH   1.474                2016-08-09 – 2017-08-17
+```
 
-1. **„Leer heisst Euro" ist eine TED-Konvention, keine Naturkonstante.** In einem Land,
-   das nicht in Euro rechnet, ist die wahrscheinlichere Lesart die Landeswährung.
-2. **Der Faktor 25 erklärt sich damit trotzdem nicht.** CHF→EUR verschöbe den Median um
-   rund 7 %, nicht um das 25-fache. Dahinter steckt etwas anderes — eine andere Einheit,
-   eine Rahmensumme oder ein Parser-Fehler jener Ära. Das ist zu messen, nicht zu raten.
+**100 %** dieser Sätze holen ihren Wert über den Vor-2014-Pfad
+`COSTS_RANGE_AND_CURRENCY_WITH_VAT_RATE/VALUE_COST`, und in dieser einen Zeile standen
+**zwei** Fehler:
+
+```python
+amt, cur = _first_amount(costs, ("VALUE_COST",), ("CURRENCY",))
+```
+
+1. **Die Währung hängt am Eltern-Knoten**, nicht am Wertknoten. `_first_amount` sucht sie
+   am `VALUE_COST` und fand nie eine.
+2. **`_to_amount` wirft das Dezimalkomma weg.** `189 945 844,15` wurde zu
+   18.994.584.415 — das Hundertfache. Rund 57 % der betroffenen Sätze tragen den Faktor.
+   Der Code wusste davon: `_ojs_amount` existiert seit Langem genau für diese Lesart und
+   wurde an dieser Stelle nicht benutzt.
+
+**Und der zweite Fehler hat den ersten versteckt.** Ohne Währung fielen die Sätze aus
+`final_value_clean` heraus, also rechnete sie nie jemand nach. Die Plausibilitätsgrenze
+von 1 Mrd stand die ganze Zeit daneben und hat die 19 Mrd **nie gesehen** — eine Prüfung
+hinter einem Filter prüft nur, was der Filter durchlässt. Sichtbar wurde beides erst, als
+die Währungsumrechnung die Sätze hereinholte: der eine Fix legte den anderen Fehler frei.
+
+### Behoben
+
+`schema._kosten_betrag()` liest **`@FMTVAL` zuerst** — TED schreibt den Betrag zweimal,
+lesbar und maschinenlesbar, und nur das Attribut hängt nicht am Format. Fehlt es, greift
+die europäische Lesart. Die Währung kommt vom Eltern-Knoten.
+
+> ⚠ Die beiden Lesarten sind **gegenläufig**: im Text ist der Punkt Tausender-Trenner
+> (`1.234.567,89`), in `@FMTVAL` Dezimal-Trenner (`1234567.89`). Wer sie verwechselt,
+> erzeugt denselben Faktor 100 aus der anderen Richtung. `tests/test_legacy_kostenwert.py`
+> hält beide Richtungen fest.
+
+Gegengeprüft an drei echten Bronze-Dateien (2785_2017: 4.226.600.976,20 EUR;
+371305_2012: 1.148.695.080,00 EUR; 249447_2011: 784.621.625,10 EUR) — alle drei liefern
+nach der Reparatur Betrag **und** Währung wie im XML.
+
+### Der Fund daneben: 26.383 fehlende Schätzwerte
+
+Derselbe Block las den Vor-2014-**Schätzwert** überhaupt nicht.
+`VAL_ESTIMATED_TOTAL` gibt es erst in den 2014er-Formularen; davor heisst der Knoten
+`INITIAL_ESTIMATED_TOTAL_VALUE_CONTRACT`. Der OJS-Zweig las ihn seit Langem, der
+Legacy-Zweig nicht — DE 23.663, AT 2.072, LU 648 Schätzwerte blieben leer, die im XML
+danebenstanden. Ebenfalls behoben.
+
+### ⚠ Was noch aussteht
+
+**Die Reparatur sitzt im Parser, also in der Bronze→Silber-Strecke.** Bis Silber für die
+betroffenen Länder neu gebaut ist, tragen die Daten die alten Zahlen:
+
+```bash
+python3 -m govisor.cli silver --country XX --max-pages 0 --silber
+```
+
+`scripts/pruefe_werte.py` sagt jede Nacht, wie weit das ist — solange es Befunde meldet,
+steht der Neubau aus.
 
 ## Prüfung für die Abnahme
 

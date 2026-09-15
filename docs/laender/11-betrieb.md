@@ -153,7 +153,7 @@ beiden schon gewählten.
 Eine Rotation, die nicht rotiert, sieht in jeder einzelnen Runde völlig richtig aus — sie
 fällt nur auf, wenn man mehrere Runden nebeneinanderlegt.
 
-## Die neun Wächter am Ende des Laufs
+## Die zehn Wächter am Ende des Laufs
 
 Alle laufen am Ende, alle **warnen nur** und brechen nicht ab: ein veralteter Baustein
 ist ein Grund hinzusehen, keiner den Lauf wegzuwerfen.
@@ -198,6 +198,12 @@ ist ein Grund hinzusehen, keiner den Lauf wegzuwerfen.
 - **`pruefe_endgueltige.py`** — hält ein endgültiges Urteil noch? Wer einen Abrufer als
   „verschlossen" abhakt, darf das nicht auf ewig glauben; von elf handgeprüften
   Dokument-Abrufern hielten neun Urteile nicht.
+- **`pruefe_werte.py`** — Beträge, die keiner lesen kann. Zwei Fragen: wie viele Werte
+  haben **keine Währung**, und wie viele liegen über der Plausibilitätsgrenze von 1 Mrd?
+  ⚠ Der Anlass ist die lehrreichste Falle des Jahres: Gold meldete die 86.177 Sätze ohne
+  Währung die ganze Zeit als `waehrung_angenommen` — ein Merkmal, das eine *Datenlage*
+  beschreiben soll und zur Tarnkappe für einen *Parser-Fehler* wurde. Die Zahl wurde nur
+  nie jemandem vorgelegt. Fallen H11–H13 in [Kapitel 12](12-fallenkatalog.md).
 - **`pruefe_sondierung.py`** + **`pruefe_sondierungszahlen.py`** — halten die
   Sondierungs-Unterlagen fest, dass ein *angesehenes* Land kein *angebundenes* ist, und
   rechnen jeden Prozentsatz darin aus den Messdaten nach. Eine Zahl in einem Dokument
