@@ -846,15 +846,22 @@ def ch_extras_for(ids):
 FRISTEN: list[dict] = []
 
 
-def _frist_zeile(l: dict) -> dict:
+def _frist_zeile(l: dict, branche: str) -> dict:
     # ⚠ `buyer` kam am 2026-09-01 dazu, fuer die beobachtete Vergabestelle (Aktivierung D).
     # Der Posteingang muss wissen, WER ausschreibt, und der einzige andere Weg dorthin waere,
     # die sieben vollen Lead-Dateien zu lesen — 110 MB fuer ein Namensfeld. Genau davon ist
     # diese Datei die Abkehr. Der kurze Name reicht: er steht auch in der Meldung.
+    #
+    # ⚠ `branche` kam am 2026-09-02 dazu, aus demselben Grund. Der Vergabe-Verlauf einer
+    # Vergabestelle zeigt Zuschlaege ueber ALLE Branchen; ein Klick dorthin muss wissen,
+    # welchen Grundraum er laden soll (`web/lib/leadIndex.ts::leadBranchen`). Ohne dieses
+    # Feld faellt der Nachschlag auf die sieben vollen Dateien zurueck — 110 MB fuer einen
+    # Klick, und zwar in einem ANFRAGEPFAD, nicht in einem Nachtlauf.
     return {"id": l.get("id"), "titel": l.get("titel"), "src": l.get("src"),
             "tage": l.get("tage"), "endTage": l.get("endTage"),
             "endeEcht": (l.get("timing") or {}).get("src") == "echt",
-            "buyer": l.get("buyerShort") or l.get("buyer")}
+            "buyer": l.get("buyerShort") or l.get("buyer"),
+            "branche": branche}
 
 
 def export_branche(key):
@@ -1351,7 +1358,7 @@ def export_branche(key):
                            "sprachfassungen": fassungen.get(l["id"]) if len(sp) > 1 else None}
     (OUT / f"leads-{key}.json").write_text(json.dumps(leads, ensure_ascii=False, sort_keys=True))
     (OUT / f"detail-{key}.json").write_text(json.dumps(detail, ensure_ascii=False, sort_keys=True))
-    FRISTEN.extend(_frist_zeile(l) for l in leads)
+    FRISTEN.extend(_frist_zeile(l, key) for l in leads)
     return len(leads)
 
 

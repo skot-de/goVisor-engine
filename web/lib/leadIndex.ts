@@ -1,5 +1,5 @@
 import "server-only";
-import { ladeMitGrund, DATEN_STOERUNG } from "@/lib/dataSource";
+import { ladeMitGrund, DATEN_STOERUNG, ausSpeicher, inSpeicher } from "@/lib/dataSource";
 import type { LeadTiming } from "@/lib/alerts";
 
 /* Fristen aller Leads, nach ID. Grundlage für Hinweise (Posteingang und E-Mail-Lauf).
@@ -93,4 +93,81 @@ async function ausAllenBranchen(): Promise<{ index: Map<string, LeadTiming>; sto
     }
   }
   return { index: idx, stoerung };
+}
+
+/* ── Welcher Grundraum trägt diese Kennung? ───────────────────────────────────────────
+ *
+ * WOFÜR. Der Vergabe-Verlauf einer Vergabestelle zeigt Zuschläge über ALLE Branchen
+ * (`buyer_recent_awards`), die geladene Liste trägt aber immer nur EINEN Grundraum. Ein
+ * Klick auf eine Zeile aus einem anderen Grundraum lief bis zum 2026-09-02 in einen
+ * `TypeError`, danach in eine Meldung „wechselt oben den Grundraum". Damit die Anwendung
+ * das selbst tut, muss sie wissen, WOHIN — und das weiß nur der Server.
+ *
+ * ⚠ WARUM EIN INDEX UND KEINE SUCHE JE ANFRAGE. Die Alternative wäre, die Branchendateien
+ * der Reihe nach zu lesen, bis die Kennung auftaucht: im Mittel dreieinhalb Dateien, also
+ * Dutzende MB pro Klick. Der Index ist eine Map über alle Kennungen und liegt im gemeinsamen
+ * Zwischenspeicher (Byte-Budget + Verfallszeit wie die Datendateien, s. `lib/dataCache.js`)
+ * — gebaut wird er höchstens einmal je Verfallsfenster. */
+const IDX_SCHLUESSEL = "idx:lead-branche";
+
+export async function leadBranchen(): Promise<Map<string, string>> {
+  const zwischen = ausSpeicher<Map<string, string>>(IDX_SCHLUESSEL);
+  if (zwischen) return zwischen;
+  const idx = (await brancheAusSchlankerDatei()) ?? (await brancheAusAllenBranchen());
+  // Gewicht fürs Budget grob geschätzt: Kennung + Branchenname + Map-Overhead je Eintrag.
+  // Genauer zu messen lohnt nicht — es geht um die Verdrängungsreihenfolge, nicht um Buchhaltung.
+  return inSpeicher(IDX_SCHLUESSEL, idx, idx.size * 96);
+}
+
+/** Der schnelle Weg: dieselbe schlanke Datei wie die Fristen, die seit dem 2026-09-02 auch
+ *  den Grundraum je Kennung trägt (`scripts/export_web_leads.py::_frist_zeile`). */
+async function brancheAusSchlankerDatei(): Promise<Map<string, string> | null> {
+  // ⚠ UEBER `ladeMitGrund`, NICHT `loadDataFile`. Der Zweig, aus dem diese Funktion
+  // stammt, entstand vor der Umstellung am 2026-09-04. Zwei Ladepfade nebeneinander sind
+  // genau das, was `ladeMitGrund` abgeschafft hat — und hier haette der alte Pfad einen
+  // Speicherausfall wie „Datei fehlt" aussehen lassen. Der Rueckfall auf
+  // `brancheAusAllenBranchen` ist bei einer Stoerung richtig (er kann es auch nicht
+  // besser), aber er darf nicht auf einer Verwechslung beruhen.
+  const { text: roh, grund } = await ladeMitGrund("leads-fristen.json");
+  if (!roh || grund === DATEN_STOERUNG) return null;
+  try {
+    const arr = JSON.parse(roh) as { id?: unknown; branche?: unknown }[];
+    if (!Array.isArray(arr) || !arr.length) return null;
+    // ⚠ Ein Export von VOR dieser Änderung hat das Feld nicht. Dann ist die Datei nicht etwa
+    // leer, sondern liefert lauter `undefined` — ein Index, der zu JEDER Kennung „kein
+    // Grundraum" sagt, sähe aus wie „die Ausschreibung gibt es nicht". Das wäre schlimmer
+    // als kein Index, weil es wie eine Antwort aussieht.
+    if (typeof arr[0]?.branche !== "string") return null;
+    const idx = new Map<string, string>();
+    for (const l of arr) if (typeof l.branche === "string") idx.set(String(l.id), l.branche);
+    return idx;
+  } catch {
+    return null;
+  }
+}
+
+/* ⚠ UEBERGANG, kein Dauerzustand — genau wie bei den Fristen oben. Solange der Export ohne
+ * `branche` gelaufen ist, muss das Nachladen trotzdem funktionieren; es kostet dann aber die
+ * 110 MB, die diese Datei gerade abschaffen sollte. Deshalb LAUT. */
+let brancheGewarnt = false;
+async function brancheAusAllenBranchen(): Promise<Map<string, string>> {
+  if (!brancheGewarnt) {
+    console.error("[lead-branche] Rückfall auf sieben leads-<branche>.json (110 MB) — "
+                  + "leads-fristen.json trägt kein `branche`. export_web_leads.py laufen "
+                  + "lassen und hochladen.");
+    brancheGewarnt = true;
+  }
+  const idx = new Map<string, string>();
+  for (const b of BRANCHEN) {
+    const { text: roh } = await ladeMitGrund(`leads-${b}.json`);
+    if (!roh) continue;
+    let arr: { id?: unknown }[];
+    try { arr = JSON.parse(roh); } catch { continue; }
+    if (!Array.isArray(arr)) continue;
+    // Erster Treffer gewinnt: eine Kennung kann in mehreren Grundräumen liegen (Mehr-CPV),
+    // und die Reihenfolge hier ist dieselbe wie im Export — sonst wechselte die Antwort
+    // zwischen zwei Aufrufen, ohne dass sich an den Daten etwas geändert hätte.
+    for (const l of arr) if (!idx.has(String(l.id))) idx.set(String(l.id), b);
+  }
+  return idx;
 }
