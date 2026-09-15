@@ -65,6 +65,7 @@ ROOT = pathlib.Path(__file__).resolve().parents[1]
 # ⚠ ERST den Projektpfad, DANN `govisor` importieren. Unter launchd gibt es kein
 # PYTHONPATH; ein Import davor bricht stumm ab (s. test_skripte_finden_govisor_ohne_pythonpath).
 sys.path.insert(0, str(ROOT))
+from govisor import sources as S            # noqa: E402
 from govisor.laender import AKTIV as _AKTIV  # noqa: E402
 GOLD = ROOT / "data" / "gold"
 
@@ -286,7 +287,7 @@ def sonde_laender(zeige_offen: bool = False) -> list[str]:
     return fehler
 
 
-# ── Sonde 3: DE-feste Pfade im Nachtlauf ────────────────────────────────────
+# ── Sonde 3: DE-feste Pfade in Nachtlauf UND Dauerarbeitern ────────────────────────────────────
 # Sonde 1 und 2 sehen die GOLD-Ebene. Sie merken nicht, wenn eine Tabelle sauber je Land
 # gebaut wird und der Verbraucher trotzdem nur `data/gold/DE` liest — und genau dort sass
 # die Haelfte aller Funde: `buyer_stats`, `market_opportunity`, `lead_predecessor`, `ATTR`,
@@ -294,7 +295,20 @@ def sonde_laender(zeige_offen: bool = False) -> list[str]:
 #
 # Geprueft wird, was im NACHTLAUF steht. Ein Analyse-Skript, das niemand taeglich ruft,
 # blockiert kein Land; ein Exporter schon.
+# ⚠ NICHT NUR DER NACHTLAUF — seit 2026-09-15. Hier stand allein `daily_leads.sh`, mit der
+# Begruendung „ein Analyse-Skript, das niemand taeglich ruft, blockiert kein Land". Der Satz
+# stimmt; die Auswahl war trotzdem zu eng, denn die beiden DAUERARBEITER laufen rund um die
+# Uhr und standen nicht darin.
+#
+# Was das gekostet hat: `scripts/rueckstau.py` entscheidet, welcher Dokument-Abrufer
+# drankommt, und las `data/gold/DE` — fest. Luxemburgische, oesterreichische und
+# schweizerische Adressen kommen in deutschen Leads nicht vor, also stand deren Rueckstau
+# dauerhaft auf 0 und sie wurden nie gewaehlt. Vier Wochen lang hat damit niemand die
+# Unterlagen dieser drei Laender geholt (LU 169 Vorgaenge, AT 254, CH 1.599) — und bei
+# Luxemburg verschwinden sie nach Fristende. Diese Sonde meldete die ganze Zeit „sauber".
 NACHTLAUF = ROOT / "scripts" / "daily_leads.sh"
+ARBEITER = [ROOT / "scripts" / "dokumente_arbeiter.sh",
+            ROOT / "scripts" / "analyse_arbeiter.sh"]
 
 # Wer zu Recht nur DE liest. Der Grund muss sagen, WARUM das Land dort nichts zu suchen
 # hat — „noch nicht umgestellt" ist kein Grund, sondern der Befund selbst.
@@ -311,6 +325,14 @@ BEWUSST_NUR_DE_SKRIPTE: dict[str, str] = {
         "interne Wirkungsanalyse, kein Produktweg",
     "pruefe_verdrahtung.py":
         "dieses Skript selbst; die Treffer sind die Begruendungstexte oben",
+    # ── dazugekommen 2026-09-15, als die Sonde auch Segmentpfade und die Arbeiter sah ──
+    "analyze_docs.py":
+        "die eine Nennung ist ein RUECKFALL fuer Meldungen (`SRC = DOC_TEXTE[0] if … else`); "
+        "gelesen wird ueber `_laender_pfade` aus JEDEM Land mit Volltext",
+    "pruefe_bibel.py":
+        "prueft Bibel-Behauptungen gegen die Live-Daten, und die betroffenen Aussagen "
+        "handeln vom deutschen Bestand (doc_signals, entity_identity). ⚠ Das gilt, solange "
+        "die Bibel dort keine Laenderaussagen fuehrt — kommt eine dazu, faellt die Ausnahme",
 }
 
 # OFFEN: liest nur DE, muesste es aber nicht. Jede Zeile ist eine Baustelle mit
@@ -321,7 +343,93 @@ BEWUSST_NUR_DE_SKRIPTE: dict[str, str] = {
 #   export_web_awards.py      379 → 1.019 Zuschlaege (DE 379, AT 334, CH 306)
 #   export_firma_profiles.py  AT 2.685 / CH 84 Profile mit echter Hauptregion
 # Die Liste bleibt leer stehen, weil der naechste Fund dieselbe Form haben wird.
-OFFEN_NUR_DE_SKRIPTE: dict[str, str] = {}
+OFFEN_NUR_DE_SKRIPTE: dict[str, str] = {
+    # ⚠ Die ersten beiden Eintraege dieser Liste, gefunden am 2026-09-15 von der erweiterten
+    # Sonde. Beide waren vorher unsichtbar: der eine laeuft im Dauerarbeiter statt im
+    # Nachtlauf, der andere baut seinen Pfad aus Segmenten.
+    "dokumente_stand.py":
+        "der Trichter-Bericht nach jeder Arbeiterrunde liest `gold/DE` und `docs/DE`. ⚠ Er "
+        "ist damit ausgerechnet der Bericht, der den Fund vom 2026-09-15 verdeckt hat: "
+        "vier Wochen ohne Unterlagen in LU, AT und CH, und der Stand zeigte nur Deutschland",
+    "build_namenswoerter.py":
+        "die Haeufigkeitstabelle kommt aus `gold/DE/entities.parquet`. Der Impressum-Pruefer "
+        "entscheidet daran, welches Wort eines Firmennamens das seltene ist — fuer "
+        "oesterreichische und schweizerische Firmen kennt er keine Seltenheit und haelt "
+        "jedes Wort fuer gleich unterscheidend. Genau das verursachte am 2026-08-17 "
+        "gemessen 5,5 % Fehlbestaetigungen",
+}
+
+
+def _ist_deutsche_quelle(name: str) -> bool:
+    """Ein Abrufer fuer ein DEUTSCHES Portal darf fest auf DE zeigen — das ist keine
+    Verdrahtungsluecke, sondern die Sache selbst.
+
+    ⚠ Als REGEL, nicht als Liste. Dreizehn Eintraege „deutsches Portal" in den Ausnahmen
+    waeren dreizehn Zeilen, die nichts erklaeren und beim vierzehnten Abrufer vergessen
+    werden. Die Registry weiss es ohnehin: `sources.DOC_REGISTRY` fuehrt je Quelle das Land.
+    """
+    modul = name[:-3] if name.endswith(".py") else name
+    for q in S.DOC_REGISTRY:
+        if q.modul and q.modul == modul and (getattr(q, "country", "DE") or "DE") == "DE":
+            return True
+    return False
+
+
+def _doppelt_gezaehlt(baum) -> int:
+    """Wie viele Treffer beide Zweige gemeinsam haben.
+
+    ⚠ `ROOT / "data/gold/DE"` ist EIN Pfad, wird aber zweimal gefunden: einmal als
+    Zeichenkette, einmal als Segmentkette. Ohne diesen Abzug zaehlt die Sonde doppelt — und
+    die `_union`-Regel („eine Nennung ist erlaubt") greift dann nie, weil aus der einen
+    erlaubten Nennung zwei werden. Gemessen beim Umbau am 2026-09-15 an
+    `export_firma_profiles.py`: gemeldet 2, tatsaechlich 1, und die Regel haette es
+    freigegeben.
+    """
+    import ast
+    n = 0
+    for knoten in ast.walk(baum):
+        if isinstance(knoten, ast.BinOp) and isinstance(knoten.op, ast.Div):
+            for teil in (knoten.left, knoten.right):
+                if isinstance(teil, ast.Constant) and isinstance(teil.value, str) \
+                        and any(m in teil.value for m in _DE_MUSTER):
+                    n += 1
+    return n
+
+
+def _pfad_ketten(baum) -> list[str]:
+    """Pfade, die mit `/` aus Teilen gebaut werden — `ROOT / "data" / "gold" / "DE"` → den
+    Text `data/gold/DE`. Nicht-Konstanten werden zu einem Trennzeichen, damit
+    `docs / land / datei` nicht als `docs/DE/...` durchgeht.
+    """
+    import ast
+    # ⚠ NUR DIE AEUSSERSTE KETTE. `ast.walk` besucht auch die inneren Knoten, und
+    # `ROOT / "data" / "gold" / "DE" / "dim_cpv.parquet"` enthaelt als Teilkette
+    # `ROOT / "data" / "gold" / "DE"` — ohne den Dateinamen. Die `dim_`-Ausnahme greift dann
+    # an der Teilkette nicht, und eine Dimensionstabelle wird als Landesbindung gemeldet.
+    innen = {id(k) for n in ast.walk(baum)
+             if isinstance(n, ast.BinOp) and isinstance(n.op, ast.Div)
+             for k in (n.left, n.right)
+             if isinstance(k, ast.BinOp) and isinstance(k.op, ast.Div)}
+    aus: list[str] = []
+    for knoten in ast.walk(baum):
+        if not (isinstance(knoten, ast.BinOp) and isinstance(knoten.op, ast.Div)):
+            continue
+        if id(knoten) in innen:
+            continue
+        teile: list[str] = []
+
+        def sammle(n) -> None:
+            if isinstance(n, ast.BinOp) and isinstance(n.op, ast.Div):
+                sammle(n.left)
+                sammle(n.right)
+            elif isinstance(n, ast.Constant) and isinstance(n.value, str):
+                teile.append(n.value)
+            else:
+                teile.append("\x00")          # Variable: bricht die Kette bewusst
+
+        sammle(knoten)
+        aus.append("/".join(teile))
+    return aus
 
 
 def _de_feste_pfade(skript: pathlib.Path) -> int:
@@ -356,6 +464,20 @@ def _de_feste_pfade(skript: pathlib.Path) -> int:
                 and id(knoten) not in docs \
                 and any(m in knoten.value for m in _DE_MUSTER):
             n += 1
+    # ⚠ UND PFADE AUS SEGMENTEN, seit 2026-09-15. Die Suche oben findet nur ganze
+    # Zeichenketten. Geschrieben stand in `rueckstau.py` aber
+    #
+    #     ROOT / "data" / "gold" / "DE" / "lead_export.parquet"
+    #
+    # — vier einzelne Konstanten, und `"DE"` allein ist kein Treffer. Die Sonde deckte damit
+    # die Schreibweise ab, in der der Fehler im August auftrat, nicht die vom September.
+    # `dim_*` bleibt aussen vor: Dimensionstabellen (CPV-Bezeichnungen, NUTS-Namen) gelten
+    # laenderuebergreifend und liegen bewusst nur einmal.
+    for kette in _pfad_ketten(baum):
+        if any(m in kette for m in _DE_MUSTER) and "/dim_" not in kette:
+            n += 1
+    n -= _doppelt_gezaehlt(baum)
+
     # ⚠ EINE Nennung ist erlaubt, WENN das Skript `_union` definiert: `G = "data/gold/DE"`
     # ist dort die BASIS, der die uebrigen Laender angehaengt werden (DE zuerst, weil es
     # das vollstaendigste Schema hat). Das als Ausnahme je Skript zu fuehren waere eine
@@ -381,11 +503,27 @@ def sonde_pfade(zeige_offen: bool = False) -> list[str]:
         print("  daily_leads.sh nicht gefunden — Sonde uebersprungen")
         return []
     import re
-    genannt = sorted(set(re.findall(r"scripts/([a-z_0-9]+\.py)", NACHTLAUF.read_text(encoding="utf-8"))))
+    # ⚠ AUCH DIE MODULE, nicht nur `scripts/*.py`. Die Abrufer laufen als `-m govisor.x`;
+    # wer nur nach Skriptpfaden sucht, sieht die halbe Beschaffung nicht.
+    genannt: dict[str, pathlib.Path] = {}
+    # ⚠ `NACHTLAUF` bleibt eine eigene Variable und wird HIER gelesen, nicht beim Laden
+    # des Moduls: `tests/test_verdrahtung.py` setzt sie um, um die Sonde an einem
+    # Miniatur-Nachtlauf zu pruefen. Eine Liste, die beim Import festgezurrt wird, laesst
+    # sich nicht mehr umbiegen — und ein Waechter ohne Test ist eine Behauptung.
+    for lauf in [NACHTLAUF, *ARBEITER]:
+        if not lauf.exists():
+            continue
+        q = lauf.read_text(encoding="utf-8")
+        for name in re.findall(r"scripts/([a-z_0-9]+\.py)", q):
+            genannt[name] = ROOT / "scripts" / name
+        for modul in re.findall(r"-m (govisor\.[a-z_0-9]+)", q):
+            genannt[modul] = ROOT / "govisor" / (modul.split(".", 1)[1] + ".py")
     fehler: list[str] = []
     offen: list[str] = []
-    for name in genannt:
-        n = _de_feste_pfade(ROOT / "scripts" / name)
+    for name in sorted(genannt):
+        if _ist_deutsche_quelle(name):
+            continue
+        n = _de_feste_pfade(genannt[name])
         if not n or name in BEWUSST_NUR_DE_SKRIPTE:
             continue
         if name in OFFEN_NUR_DE_SKRIPTE:
@@ -802,7 +940,7 @@ def main() -> int:
         alles += f
         print(f"    {len(f)} unerklaerte Laender")
     if a.sonde in ("pfade", "alle"):
-        print("── Sonde 3: DE-feste Pfade im Nachtlauf (wer liest nur DE?) ──")
+        print("── Sonde 3: DE-feste Pfade in Nachtlauf und Arbeitern (wer liest nur DE?) ──")
         f = sonde_pfade(a.offen)
         alles += f
         print(f"    {len(f)} unerklaerte DE-Bindungen")

@@ -1209,3 +1209,105 @@ def test_die_erklaerten_waechter_gibt_es_noch():
         assert wort in p.read_text(encoding="utf-8"), (
             f"{datei}: {wort!r} steht dort nicht mehr. Entweder ist die Begruendung weg, "
             f"die der Waechter schuetzen soll, oder der Eintrag ist eine Leiche.")
+
+
+# ───────────────────── Sonde 3, erweitert am 2026-09-15
+
+def test_pfade_findet_auch_zusammengesetzte_pfade(tmp_path, monkeypatch):
+    """⚠ DER FALL, DER DURCHRUTSCHTE. `scripts/rueckstau.py` entscheidet, welcher
+    Dokument-Abrufer drankommt, und las `data/gold/DE` — aber geschrieben als Segmente:
+
+        ROOT / "data" / "gold" / "DE" / "lead_export.parquet"
+
+    Vier einzelne Konstanten, und `"DE"` allein ist kein Treffer. Die Sonde deckte damit die
+    Schreibweise ab, in der der Fehler im August auftrat, nicht die vom September. Folge:
+    vier Wochen lang holte niemand die Unterlagen von LU, AT und CH — und bei Luxemburg
+    verschwinden sie nach Fristende.
+    """
+    lauf = tmp_path / "daily_leads.sh"
+    lauf.write_text("$PY scripts/segmente.py\n")
+    (tmp_path / "scripts").mkdir()
+    (tmp_path / "scripts" / "segmente.py").write_text(
+        'import pathlib\nROOT = pathlib.Path(".")\n'
+        'L = ROOT / "data" / "gold" / "DE" / "lead_export.parquet"\n')
+    monkeypatch.setattr(pv, "NACHTLAUF", lauf)
+    monkeypatch.setattr(pv, "ARBEITER", [])
+    monkeypatch.setattr(pv, "ROOT", tmp_path)
+    fehler = pv.sonde_pfade()
+    assert len(fehler) == 1 and "segmente.py" in fehler[0], fehler
+
+
+def test_pfade_sieht_auch_die_dauerarbeiter(tmp_path, monkeypatch):
+    """⚠ Die zweite Haelfte desselben Fundes: die Sonde prüfte nur `daily_leads.sh`. Die
+    beiden Dauerarbeiter laufen rund um die Uhr und standen nicht darin — `rueckstau.py`
+    und `analyze_docs.py` liefen dort, ungeprüft."""
+    nacht = tmp_path / "daily_leads.sh"
+    nacht.write_text("# hier steht nichts\n")
+    arbeiter = tmp_path / "dokumente_arbeiter.sh"
+    arbeiter.write_text("$PY scripts/nur_im_arbeiter.py\n")
+    (tmp_path / "scripts").mkdir()
+    (tmp_path / "scripts" / "nur_im_arbeiter.py").write_text('G = "data/gold/DE"\n')
+    monkeypatch.setattr(pv, "NACHTLAUF", nacht)
+    monkeypatch.setattr(pv, "ARBEITER", [arbeiter])
+    monkeypatch.setattr(pv, "ROOT", tmp_path)
+    fehler = pv.sonde_pfade()
+    assert len(fehler) == 1 and "nur_im_arbeiter.py" in fehler[0], fehler
+
+
+def test_pfade_sieht_auch_module(tmp_path, monkeypatch):
+    """Die Abrufer laufen als `-m govisor.x`; wer nur nach `scripts/*.py` sucht, sieht die
+    halbe Beschaffung nicht."""
+    lauf = tmp_path / "daily_leads.sh"
+    lauf.write_text("$PY -m govisor.beispielmodul --limit 5\n")
+    (tmp_path / "govisor").mkdir()
+    (tmp_path / "govisor" / "beispielmodul.py").write_text('G = "data/docs/DE"\n')
+    (tmp_path / "scripts").mkdir()
+    monkeypatch.setattr(pv, "NACHTLAUF", lauf)
+    monkeypatch.setattr(pv, "ARBEITER", [])
+    monkeypatch.setattr(pv, "ROOT", tmp_path)
+    fehler = pv.sonde_pfade()
+    assert len(fehler) == 1 and "govisor.beispielmodul" in fehler[0], fehler
+
+
+def test_pfade_laesst_dimensionstabellen_durch(tmp_path, monkeypatch):
+    """⚠ Eine Dimensionstabelle ist keine Landesbindung. `dim_cpv` traegt die CPV-
+    Bezeichnungen und gilt fuer alle Laender; sie liegt bewusst nur einmal. Ohne diese
+    Ausnahme meldet die Sonde `govisor/kategorie.py` — und wer sie dann „repariert",
+    kopiert eine Vokabeltabelle viermal."""
+    lauf = tmp_path / "daily_leads.sh"
+    lauf.write_text("$PY scripts/mit_dimension.py\n")
+    (tmp_path / "scripts").mkdir()
+    (tmp_path / "scripts" / "mit_dimension.py").write_text(
+        'import pathlib\nROOT = pathlib.Path(".")\n'
+        'p = ROOT / "data" / "gold" / "DE" / "dim_cpv.parquet"\n')
+    monkeypatch.setattr(pv, "NACHTLAUF", lauf)
+    monkeypatch.setattr(pv, "ARBEITER", [])
+    monkeypatch.setattr(pv, "ROOT", tmp_path)
+    assert pv.sonde_pfade() == []
+
+
+def test_pfade_zaehlt_einen_pfad_nur_einmal(tmp_path, monkeypatch):
+    """⚠ `ROOT / "data/gold/DE"` wird von BEIDEN Zweigen gefunden — als Zeichenkette und als
+    Segmentkette. Ohne Abzug zaehlt die Sonde doppelt, und die `_union`-Regel („eine
+    Nennung ist die erlaubte Basis") greift nie mehr, weil aus einer zwei werden. Gemessen
+    beim Umbau an `export_firma_profiles.py`: gemeldet 2, tatsaechlich 1."""
+    lauf = tmp_path / "daily_leads.sh"
+    lauf.write_text("$PY scripts/mit_union.py\n")
+    (tmp_path / "scripts").mkdir()
+    (tmp_path / "scripts" / "mit_union.py").write_text(
+        'import pathlib\nROOT = pathlib.Path(".")\n'
+        'G = str(ROOT / "data/gold/DE")\n'
+        'def _union(t):\n    return G + t\n')
+    monkeypatch.setattr(pv, "NACHTLAUF", lauf)
+    monkeypatch.setattr(pv, "ARBEITER", [])
+    monkeypatch.setattr(pv, "ROOT", tmp_path)
+    assert pv.sonde_pfade() == []
+
+
+def test_deutsche_portale_brauchen_keine_ausnahme():
+    """⚠ Als Regel, nicht als Liste. Dreizehn Eintraege „deutsches Portal" waeren dreizehn
+    Zeilen, die nichts erklaeren — und beim vierzehnten Abrufer vergessen werden."""
+    assert pv._ist_deutsche_quelle("govisor.docfetch_netserver")
+    assert pv._ist_deutsche_quelle("govisor.subreport")
+    assert not pv._ist_deutsche_quelle("govisor.simap_docs"), "CH ist kein deutsches Portal"
+    assert not pv._ist_deutsche_quelle("scripts/rueckstau.py")
