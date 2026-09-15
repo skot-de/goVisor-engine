@@ -93,21 +93,22 @@ AUSNAHMEN_FRISCHE: dict[str, str] = {
     #
     # Beide Dateien sind Ueberbleibsel aus einer Zeit, in der LU ueber `cli gold` lief.
     # Heute laeuft `cli gold` NUR fuer DE (daily_leads.sh: `--country DE`); AT, CH und LU
-    # gehen ueber `scripts/build_dach_gold.py`, und der baut keine von beiden — gemessen am
-    # 2026-09-06: null Fundstellen. AT und CH haben sie folgerichtig gar nicht.
+    # gehen ueber `scripts/build_dach_gold.py`.
     #
-    # Gelesen wird fuer LU nichts davon: `bronze_inventory` nur von
-    # `scripts/export_field_inventory.py` (Pfad fest auf `data/gold/DE/`), `buyer_profile`
-    # nur von `govisor/verify.py`, einem Handbefehl. Sie altern also fuer immer und faerbten
-    # die Sonde dauerhaft rot — und eine Sonde, die immer anschlaegt, liest bald niemand mehr.
+    # ⚠ `buyer_profile` STAND HIER BIS ZUM 2026-09-15 und ist bewusst raus: die Tabelle wird
+    # seither fuer alle Laender gebaut (KETTE in build_dach_gold.py), AT 1.214, CH 1.291,
+    # LU 44 Profile. Der Eintrag hat den Zustand richtig beschrieben — und ihn damit elf
+    # Tage zugedeckt. Aufgefallen ist es erst, als der Gold-Waechter in seiner ERSTEN Nacht
+    # 20 Waisen meldete: LUs Datei stammte vom Onboarding am 03.09., `entities` darunter war
+    # vom 15.09. Eine Ausnahme, die eine Luecke benennt statt sie zu schliessen, altert
+    # genau so.
     #
-    # SAUBERER waere, die beiden Dateien zu loeschen. Das ist eine Entscheidung ueber fremde
-    # Daten auf der externen Platte und gehoert nicht in einen Nebensatz; deshalb hier
-    # benannt. Verschwinden sie, faellt diese Ausnahme durch
-    # `test_keine_ausnahme_fuer_etwas_das_es_nicht_mehr_gibt` von selbst auf.
+    # `bronze_inventory` bleibt: sie wird weiterhin nirgends gebaut ausser ueber den
+    # Handbefehl und nur DE-fest gelesen (`scripts/export_field_inventory.py`). Sie traegt
+    # keinen Fremdschluessel, faellt dem Gold-Waechter also nicht auf — das ist kein Freibrief,
+    # sondern der Grund, warum sie hier stehen muss.
     "LU/bronze_inventory": "LU laeuft ueber build_dach_gold.py, das die Tabelle nicht baut; "
                            "gelesen wird sie nur DE-fest in export_field_inventory.py",
-    "LU/buyer_profile": "dieselbe Ursache; gelesen nur vom Handbefehl `govisor verify`",
 }
 
 # Dateien, die NIEMAND mehr baut und niemand mehr liest. Am 2026-08-23 waren das

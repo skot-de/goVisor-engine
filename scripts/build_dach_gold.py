@@ -100,6 +100,17 @@ KETTE: list[tuple[str, str]] = [
     ("build_lead_requirement",     "Eignungsanforderungen je Lead (darf ich bieten?)"),
     ("build_lead_party",           "Beteiligte je Lead (Kontakt der Vergabestelle)"),
     ("build_buyer_recent_awards",  "letzte Zuschläge je Käufer (Vergabestelle-Tab)"),
+    # ⚠ NACHGETRAGEN AM 2026-09-15. `buyer_profile` lief nur ueber `govisor.cli gold`,
+    # also nur fuer DE. LU trug trotzdem eine Datei — vom Onboarding am 03.09., als der
+    # Handbefehl einmal lief. Danach baute sie niemand mehr, waehrend `entities` jede
+    # Nacht neu entstand: am 15.09. zeigten 20 ihrer `buyer_entity` auf Entitaeten, die
+    # es nicht mehr gab. Eine Waise scheitert nicht, sie wird still weggejoint.
+    #
+    # Gefunden hat das der Gold-Waechter in seiner ERSTEN Nacht. Die Verdrahtungspruefung
+    # kannte die Datei laengst — als begruendete Ausnahme („LU laeuft ueber
+    # build_dach_gold.py, das die Tabelle nicht baut"). Die Ausnahme beschrieb den
+    # Zustand richtig und hat ihn damit elf Tage lang zugedeckt.
+    ("build_buyer_profile",        "Vergabestellen-Profil je Käufer (war DE-only)"),
     ("build_region_kpi",           "Regions-Kennzahlen je NUTS-3"),
 ]
 

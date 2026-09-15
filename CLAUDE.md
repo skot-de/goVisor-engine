@@ -255,6 +255,13 @@ gilt, sind die Entscheidungen und Begruendungen darin; die Zahlen holt
   Krankheit wie beim Altersbericht: eine handgepflegte Liste, die aufhört zu wachsen.
   17 Pruefungen sind nachgetragen, dazu drei fuer Schluessel, die Entitaet ODER Gruppe
   sein duerfen. Wer eine Gold-Tabelle mit Fremdschluessel anlegt, traegt sie dort ein.
+  ⚠ **Und bis zum 2026-09-02 rief sie niemand auf.** `gold_integrity` hing an
+  `python -m govisor.cli verify`, das davor jeden Monat seit 2004 gegen die TED-Search-API
+  prueft — ein Netzlauf, den man nicht taeglich startet, und der Tageslauf tat es nie. Die
+  Integritaet allein kostet ueber DE+AT+CH zusammen 1,3 s; teuer war nur das Beiwerk.
+  Sie laeuft jetzt als `scripts/pruefe_gold_integritaet.py` in jeder Nacht (Laender von der
+  Platte, nicht aus einer Liste). Aufgefallen ist die Luecke an 28 Waisen im Dublettenwall,
+  die AT einen Tag lang unbemerkt trug — s. `docs/laender/04-dublettenwall.md`.
 
 ### Weitere Grundlagen (2026-07-19, Forts.)
 - **`avg_decision_days`** in `buyer_stats` (cn→can via `ref_publication_number`, ~42 % Coverage,

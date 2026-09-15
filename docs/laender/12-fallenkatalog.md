@@ -132,6 +132,7 @@
 | G5 | **`git add -A` mit zweiter Sitzung** | zweimal fremde Änderungen mitcommittet |
 | G6 | **Falsche Parameter beim Neubau** | `--ab-jahr 2026` statt `2004 --alle-arten` schrieb die Tabelle schmaler |
 | G7 | **`SIGALRM` von Playwright verschluckt** | Abrufer hängt und meldet nichts |
+| G8 | **Quelle zieht zurück, Bestand hält fest** | 28 Waisen im Dublettenwall (AT, 2026-09-02); `verify` sah es, der Tageslauf rief es nie auf |
 
 | G8 | **Huelle statt Prozess** | Eine Kommandozeile `<shell> -c '<grosser String>'` ENTHAELT den gesuchten Namen, fuehrt ihn aber nicht aus. Die Kollisionspruefung meldet dann Arbeit, die es nicht gibt — und wer staendig grundlos „⛔ NICHT starten" liest, hoert auf hinzusehen. Genau dann rutscht die echte Kollision durch. | 2026-09-04: drei zsh-Huellen in der Liste. Gefiltert wird jetzt auf `<shell> -c`; vorher gemessen, dass alle drei Startarten (`./x.sh`, `bash x.sh`, `sh -c x.sh`) weiterhin als `bash <pfad>` gefunden werden |
 | G9 | **Der Schrittname traegt ein Datum** | Der Name ist der Schluessel der Zeitmessung (`⏱ <Name> — <n>s`). Steht eine Variable darin, heisst der Schritt jede Nacht anders und die Reihe zerfaellt — unbemerkt, weil jede einzelne Nacht plausibel aussieht. | `step "Gold-Rebuild (Leads mit Stichtag $TODAY)"`: 13 von 61 Schrittnamen aus 14 Naechten waren derselbe, groesste Schritt. Wandernde Angaben gehoeren in die AUSGABE |

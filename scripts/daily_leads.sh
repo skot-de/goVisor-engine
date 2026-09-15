@@ -1700,6 +1700,21 @@ $PY scripts/pruefe_abdeckung.py \
 $PY scripts/pruefe_sondierungszahlen.py \
   || echo "  → Sondierungszahlen weichen von den Messdateien ab. Details: python3 scripts/pruefe_sondierungszahlen.py --alle"
 
+# ── GOLD-INTEGRITAET: jeder Fremdschluessel muss aufloesen ───────────────────────────────
+# Die aelteste Pruefung im Haus und bis zum 2026-09-02 die einzige, die der Tageslauf NIE
+# aufrief. Sie steckte in `python -m govisor.cli verify`, und der prueft davor jeden Monat
+# seit 2004 gegen die TED-Search-API — ein Netzlauf ueber rund 270 Monate. Niemand ruft das
+# taeglich auf. Die Integritaet selbst kostet ueber DE+AT+CH zusammen 1,3 Sekunden
+# (gemessen 2026-09-02); teuer war immer nur das Beiwerk.
+#
+# Gefunden wurde die Luecke an 28 Waisen in `notice_duplicates` (AT): offenevergaben.at
+# hatte 15 Kennungen zurueckgezogen, die Dubletten-Firewall hielt sie fest. Niemand haette
+# das gesehen — eine Waise scheitert nicht, sie wird still weggejoint, und der Lead fehlt.
+# ⚠ Die Laender kommen von der Platte, nicht aus einer Liste (s. Skriptkopf).
+# Warnung, kein Abbruch — wie die uebrigen Sonden.
+$PY scripts/pruefe_gold_integritaet.py \
+  || echo "  → Gold-Waechter meldet Waisen. Details: python3 scripts/pruefe_gold_integritaet.py --land <L>"
+
 # ── BIBEL-PRUEFUNG ───────────────────────────────────────────────────────────────────────
 #
 # Die Laender-Bibel (docs/laender/) altert anders als Code: sie faellt nicht um, sie wird
