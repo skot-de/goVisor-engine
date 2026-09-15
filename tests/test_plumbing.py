@@ -5099,3 +5099,64 @@ def test_der_zustandszweig_wird_nicht_als_warnung_gezaehlt():
     zeile = "[08:27:29]   · Kein Speicher eingerichtet — web/data bleibt lokal."
     assert not muster.match(zeile), f"gezaehlt: {zeile}"
     assert muster.match("[08:27:29]   ⚠ Upload unvollstaendig (Code 1) — Deployment alt.")
+
+
+def test_dokumentenstand_zeigt_jedes_land():
+    """⚠ DER BERICHT, DER DEN EIGENEN BEFUND VERDECKT HAT.
+
+    `dokumente_stand.py` läuft nach jeder Arbeiterrunde und war auf `data/gold/DE` und
+    `data/docs/DE` verdrahtet. Vier Wochen lang holte niemand die Unterlagen von LU, AT und
+    CH — und der Trichter zeigte einen gesunden deutschen Verlauf, in dem die anderen gar
+    nicht vorkamen. Ein Bericht, der ein Land nicht kennt, meldet für dieses Land nicht
+    „null", sondern **nichts**. Und nichts sieht aus wie kein Problem.
+
+    ⚠ Die Summe allein genügt nicht: 41 % über alle Länder liest sich gesund, während
+    Österreich bei 0 % steht. Deshalb zusätzlich die Zeile je Land.
+    """
+    wurzel = pathlib.Path(__file__).resolve().parent.parent
+    q = (wurzel / "scripts" / "dokumente_stand.py").read_text(encoding="utf-8")
+    assert "from govisor.laender import AKTIV" in q, "die Länderliste fehlt"
+    assert "for land in AKTIV" in q, "es wird nicht über die Länder geschleift"
+    assert "Je Land" in q, "die Aufschlüsselung je Land fehlt — die Summe verdeckt sie"
+    # ⚠ NICHT ueber den Quelltext pruefen — in `main()` steht das Wort `data/docs/DE` in
+    # einem KOMMENTAR, der erklaert, wie der Abgleich frueher lief. Wer Prosa mitzaehlt,
+    # zwingt dazu, die Begruendung zu loeschen; dieselbe Falle steht im Fallenkatalog und
+    # in `pruefe_verdrahtung.py`, und ich bin beim Schreiben dieses Tests hineingelaufen.
+    # Also das Verhalten: `_mengen` muss fuer ein Nicht-DE-Land etwas zurueckgeben.
+    import importlib.util
+
+    spec = importlib.util.spec_from_file_location(
+        "_ds", wurzel / "scripts" / "dokumente_stand.py")
+    ds = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(ds)
+    assert ds._gold("CH").name == "CH" and ds._docs("LU").name == "LU"
+    if (wurzel / "data" / "gold" / "CH" / "lead_export.parquet").exists():
+        import duckdb
+
+        offen, mit_link, _zips = ds._mengen(duckdb.connect(), "CH")
+        assert offen, "fuer die Schweiz kommt nichts zurueck — der Bericht ist wieder blind"
+
+
+def test_namenswoerter_kennen_alle_laender():
+    """⚠ Der Impressum-Prüfer entscheidet am seltensten Wort eines Firmennamens — und die
+    Häufigkeitstabelle kam aus `gold/DE/entities.parquet`, also aus EINEM Land.
+
+    Damit galt jede österreichische, schweizerische und luxemburgische Wortform als selten
+    und also als unterscheidend. Gemessen beim Umbau am 2026-09-15, als die übrigen 97.202
+    Namen dazukamen:
+
+        sa      296 →  4.919     (Société Anonyme — 17× häufiger als DE allein wusste)
+        ag    7.760 → 21.232     (die Schweizer Rechtsform)
+        dazu neu: kanton, commune, einwohnergemeinde, ziviltechniker, landesregierung
+
+    Genau diese Klasse verursachte am 2026-08-17 gemessen 5,5 % Fehlbestätigungen. Und der
+    Prüfer ist ausdrücklich grenzüberschreitend gedacht: sein Docstring nennt § 5 DDG (DE)
+    und § 5 ECG (AT) nebeneinander.
+    """
+    wurzel = pathlib.Path(__file__).resolve().parent.parent
+    q = (wurzel / "scripts" / "build_namenswoerter.py").read_text(encoding="utf-8")
+    assert "from govisor.laender import AKTIV" in q
+    kern = q.split("def bauen(")[1].split("\ndef ")[0]
+    assert '"DE"' not in kern and "gold/DE" not in kern, "bauen() liest wieder nur DE"
+    assert "union_by_name=true" in kern, \
+        "ohne union_by_name bricht der Bau, sobald ein Land eine Spalte weniger führt"

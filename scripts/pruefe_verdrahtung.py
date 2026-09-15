@@ -344,19 +344,10 @@ BEWUSST_NUR_DE_SKRIPTE: dict[str, str] = {
 #   export_firma_profiles.py  AT 2.685 / CH 84 Profile mit echter Hauptregion
 # Die Liste bleibt leer stehen, weil der naechste Fund dieselbe Form haben wird.
 OFFEN_NUR_DE_SKRIPTE: dict[str, str] = {
-    # ⚠ Die ersten beiden Eintraege dieser Liste, gefunden am 2026-09-15 von der erweiterten
-    # Sonde. Beide waren vorher unsichtbar: der eine laeuft im Dauerarbeiter statt im
-    # Nachtlauf, der andere baut seinen Pfad aus Segmenten.
-    "dokumente_stand.py":
-        "der Trichter-Bericht nach jeder Arbeiterrunde liest `gold/DE` und `docs/DE`. ⚠ Er "
-        "ist damit ausgerechnet der Bericht, der den Fund vom 2026-09-15 verdeckt hat: "
-        "vier Wochen ohne Unterlagen in LU, AT und CH, und der Stand zeigte nur Deutschland",
-    "build_namenswoerter.py":
-        "die Haeufigkeitstabelle kommt aus `gold/DE/entities.parquet`. Der Impressum-Pruefer "
-        "entscheidet daran, welches Wort eines Firmennamens das seltene ist — fuer "
-        "oesterreichische und schweizerische Firmen kennt er keine Seltenheit und haelt "
-        "jedes Wort fuer gleich unterscheidend. Genau das verursachte am 2026-08-17 "
-        "gemessen 5,5 % Fehlbestaetigungen",
+    # ⚠ Die Liste stand seit dem 2026-08-23 leer, mit dem Satz „sie bleibt leer stehen, weil
+    # der naechste Fund dieselbe Form haben wird". Am 2026-09-15 fuellte die erweiterte
+    # Sonde sie mit zwei Eintraegen — und am selben Tag waren beide erledigt. Sie bleibt
+    # wieder leer stehen, aus demselben Grund.
 }
 
 

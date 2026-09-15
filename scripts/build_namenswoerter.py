@@ -41,7 +41,24 @@ sys.path.insert(0, str(ROOT))
 
 from govisor.impressum import falte  # noqa: E402
 
-QUELLE = ROOT / "data" / "gold" / "DE" / "entities.parquet"
+# ⚠ HIER STAND `gold/DE/entities.parquet`, EIN Land — und der Pruefer entscheidet daran,
+# welches Wort eines Firmennamens das seltene ist.
+#
+# Fuer oesterreichische und schweizerische Firmen kannte er damit gar keine Seltenheit: was
+# in deutschen Namen selten ist, gilt dort als unterscheidend, auch wenn es die Rechtsform
+# des halben Landes ist. Genau diese Fehlerklasse hat am 2026-08-17 gemessen **5,5 %
+# Fehlbestaetigungen** verursacht — und der Pruefer ist ausdruecklich grenzueberschreitend
+# gedacht: sein eigener Docstring nennt § 5 DDG (DE) und § 5 ECG (AT) nebeneinander.
+#
+# Die Seltenheit eines Wortes ist keine nationale Groesse: „Bau" ist ueberall haeufig,
+# „Widnau" ueberall selten. Was ein Land allein NICHT sieht, sind die Wortformen der
+# anderen — und die entscheiden.
+from govisor.laender import AKTIV  # noqa: E402
+
+
+def _quellen() -> list[Path]:
+    return [q for land in AKTIV
+            if (q := ROOT / "data" / "gold" / land / "entities.parquet").exists()]
 ZIEL = ROOT / "data" / "reference" / "namenswoerter.json"
 # Zweitschrift fuers Frontend: `web/` wird als eigenes Paket deployt und kann nicht auf
 # `data/` zugreifen (Symlink, ausserhalb des Repos). Beide Zwillinge brauchen aber
@@ -50,16 +67,25 @@ ZIEL_WEB = ROOT / "web" / "data" / "namenswoerter.json"
 
 
 def bauen(ab: int) -> dict:
-    if not QUELLE.exists():
-        raise SystemExit(f"fehlt: {QUELLE} — erst `gold` bauen")
+    quellen = _quellen()
+    if not quellen:
+        raise SystemExit("keine entities.parquet gefunden — erst `gold` bauen")
     con = duckdb.connect()
+    # ⚠ `union_by_name=true`: Gold ist je Land unterschiedlich weit gebaut, und eine
+    # fehlende Spalte darf den Bau nicht abbrechen. Projektidiom.
+    liste = "[" + ", ".join(f"'{q.as_posix()}'" for q in quellen) + "], union_by_name=true"
     namen = [r[0] for r in con.execute(
-        f"SELECT DISTINCT canonical_name FROM '{QUELLE}' "
+        f"SELECT DISTINCT canonical_name FROM read_parquet({liste}) "
         "WHERE canonical_name IS NOT NULL").fetchall()]
+    je_land = {q.parent.name: con.execute(
+        f"SELECT count(DISTINCT canonical_name) FROM '{q.as_posix()}' "
+        "WHERE canonical_name IS NOT NULL").fetchone()[0] for q in quellen}
+    print("  Namen je Land: " + " · ".join(f"{k} {v:,}" for k, v in je_land.items()),
+          flush=True)
     z: collections.Counter[str] = collections.Counter()
     for n in namen:
         z.update(set(falte(n).split()) - {""})
-    return {"n_namen": len(namen), "schwelle": ab,
+    return {"n_namen": len(namen), "schwelle": ab, "laender": je_land,
             "zaehler": {w: k for w, k in z.items() if k >= ab}}
 
 

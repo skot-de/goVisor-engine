@@ -21,8 +21,31 @@ from pathlib import Path
 import duckdb
 
 ROOT = Path(__file__).resolve().parent.parent
-G = ROOT / "data/gold/DE"
 W = ROOT / "web/data"
+
+# ⚠ HIER STAND `G = ROOT / "data/gold/DE"`, und der Bericht zeigte deshalb nur Deutschland.
+#
+# Das ist nicht Kosmetik: dieser Trichter ist die Auskunft, die nach JEDER Arbeiterrunde
+# ins Protokoll geht — und er hat vier Wochen lang verdeckt, dass in Luxemburg, Oesterreich
+# und der Schweiz ueberhaupt keine Unterlagen geholt wurden. Er zeigte einen gesunden
+# deutschen Trichter, und der Rest kam darin nicht vor. Aufgefallen ist es erst am
+# 2026-09-15, als Sven fragte, warum Luxemburg drei ZIPs hat.
+#
+# ⚠ Ein Bericht, der nur ein Land kennt, meldet fuer die anderen nicht „null" — er meldet
+# GAR NICHTS. Und nichts sieht aus wie kein Problem.
+# ⚠ ERST der Projektpfad, DANN `govisor`. Unter launchd gibt es kein PYTHONPATH; ein
+# Import davor bricht stumm ab (s. `test_skripte_finden_govisor_ohne_pythonpath`).
+import sys                                                           # noqa: E402
+sys.path.insert(0, str(ROOT))                                        # noqa: E402
+from govisor.laender import AKTIV                                    # noqa: E402
+
+
+def _gold(land: str) -> Path:
+    return ROOT / "data" / "gold" / land
+
+
+def _docs(land: str) -> Path:
+    return ROOT / "data" / "docs" / land
 
 
 def lade(name: str) -> set:
@@ -110,16 +133,39 @@ def _preis_je_vorgang() -> tuple[float | None, str]:
     return summe / len(vorgaenge), f"bezahlt, gemessen an {len(vorgaenge):,} Vorgaengen"
 
 
+def _mengen(con, land: str) -> tuple[set, set, set]:
+    """Offene Leads, davon mit Unterlagen-Link, und was an ZIPs auf der Platte liegt."""
+    le = (_gold(land) / "lead_export.parquet")
+    if not le.exists():
+        return set(), set(), set()
+    q = le.as_posix()
+    # ⚠ `coalesce(country, '<land>')`: aeltere Zeilen tragen die Spalte nicht. Mit einem
+    # festen 'DE' als Ersatzwert — so stand es hier — faellt in JEDEM anderen Land jede
+    # Zeile ohne Landesangabe heraus, und der Trichter zeigt dort eine leere Menge.
+    offen = {r[0] for r in con.execute(
+        f"SELECT lead_id FROM '{q}' WHERE phase='open' "
+        f"AND coalesce(country, '{land}') = '{land}'").fetchall()}
+    mit_link = {r[0] for r in con.execute(
+        f"SELECT lead_id FROM '{q}' WHERE phase='open' "
+        f"AND coalesce(country, '{land}') = '{land}' AND documents_url IS NOT NULL").fetchall()}
+    d = _docs(land)
+    zips = {x.name for x in d.iterdir() if x.is_dir() and any(x.glob("*.zip"))} \
+        if d.exists() else set()
+    return offen, mit_link, zips
+
+
 def main() -> int:
     con = duckdb.connect()
-    le = (G / "lead_export.parquet").as_posix()
-    offen = {r[0] for r in con.execute(
-        f"SELECT lead_id FROM '{le}' WHERE phase='open' AND coalesce(country,'DE')='DE'").fetchall()}
-    mit_link = {r[0] for r in con.execute(
-        f"""SELECT lead_id FROM '{le}' WHERE phase='open' AND coalesce(country,'DE')='DE'
-            AND documents_url IS NOT NULL""").fetchall()}
-    zips = {d.name for d in (ROOT / "data/docs/DE").iterdir()
-            if d.is_dir() and any(d.glob("*.zip"))} if (ROOT / "data/docs/DE").exists() else set()
+    offen, mit_link, zips = set(), set(), set()
+    je_land: list[tuple[str, set, set, set]] = []
+    for land in AKTIV:
+        o, m, z = _mengen(con, land)
+        if not o:
+            continue
+        je_land.append((land, o, m, z))
+        offen |= o
+        mit_link |= m
+        zips |= z
 
     # ⚠ DIE KETTE ENDET AM VOLLTEXT — danach zweigt sie sich. Bis zum 2026-08-25 stand
     # hier eine Reihe von sechs Stufen, jede als Prozent „der Stufe davor". Zwei Fehler
@@ -153,7 +199,19 @@ def main() -> int:
     volltext = kette[-1][1]
     zweige = [("Signale", offen & lade("doc-signals")),
               ("LLM-Analyse", offen & lade("doc-analysis"))]
-    print("\n  Dokumenten-Trichter (offene Leads):")
+    # ⚠ JE LAND, NICHT NUR DIE SUMME. Ein Gesamttrichter haette den Fund vom 2026-09-15
+    # genauso verdeckt: 41 % ueber alle Laender sieht gesund aus, waehrend Luxemburg bei
+    # 2 % steht und Oesterreich bei 0. Die Summe ist die Auskunft fuer den Betrieb, die
+    # Zeile je Land ist die Auskunft ueber das Produkt.
+    if len(je_land) > 1:
+        print("\n  Je Land (offene Leads · mit Link · ZIP geholt):")
+        for land, o, m, z in je_land:
+            hat = len(z & m)
+            quote = f"{hat / len(m):>4.0%}" if m else "   —"
+            marke = "" if not m or hat / len(m) >= 0.10 else "   ⚠"
+            print(f"    {land}  {len(o):>6,} · {len(m):>6,} · {hat:>6,}  {quote}{marke}")
+
+    print("\n  Dokumenten-Trichter (offene Leads, alle Laender):")
     vor = None
     for name, s in kette:
         n = len(s)
