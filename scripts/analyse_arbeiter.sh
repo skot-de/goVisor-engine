@@ -160,6 +160,10 @@ while true; do
   # des Abbruchs bis zu 40 unterwegs — bei 0,42 $ je Vorgang also bis zu 17 $ Ueberschuss.
   # Bei 8 sind es hoechstens 3 $.
   LIMIT=400 PARALLEL="${PARALLEL:-8}" \
+    # ⚠ NUR_OFFENE FILTERT SEIT 2026-09-15 NICHTS MEHR. Die Variable steuert nur noch,
+    # ob eine Neuberechnung (`NEU_AB_MODELL`) abgelaufene Vorgaenge stehen laesst.
+    # Die Arbeitsreihenfolge macht die Auswahl: offene Leads zuerst, abgelaufene
+    # dahinter — sie fallen nicht mehr raus, sie warten (Sven, 2026-09-15).
     NUR_OFFENE="${NUR_OFFENE:-1}" \
     BUDGET_USD="${BUDGET_USD:-8}" \
     OR_MODEL="${OR_MODEL:-google/gemini-2.5-flash}" \

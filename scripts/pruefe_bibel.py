@@ -270,7 +270,10 @@ def _behauptungen() -> list[tuple[str, str, bool, str]]:
     aus.append(("12", "keine Regionskennung verhaelt sich wie ein Vorgabewert",
                 not vorgabe, ", ".join(vorgabe) or "keine"))
 
-    # Der Dublettenwall zeigt auf nichts Verschwundenes (Kapitel 04, Falle G8).
+    # Der Dublettenwall zeigt auf nichts Verschwundenes (Kapitel 04, Falle G27).
+    # ⚠ Die Falle hiess bis zum 2026-09-15 G8 — diese Nummer war schon vergeben
+    # („Huelle statt Prozess", seit 2026-09-04). Zwei Fallen mit derselben Nummer
+    # loest spaeter niemand mehr auf; die juengere ist gewandert, die aeltere bleibt.
     #
     # ⚠ Gegen die DATEN, nicht gegen den Code. Der Fehler war ja gerade, dass die
     # Vereinigung im Fensterlauf fachlich richtig aussah: sie traegt weiter, was der Lauf

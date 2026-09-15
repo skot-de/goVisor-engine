@@ -94,3 +94,45 @@ def test_fassungsquelle_wird_immer_mitgefuehrt():
     ohne = m.zeile("x", "DE", [("Bieterfragen.pdf", ECHTER_KATALOG)], None)
     mit = m.zeile("x", "DE", [("Version 3/Bieterfragen.pdf", ECHTER_KATALOG)], None)
     assert ohne[4] == "dokumentzahl" and mit[4] == "version"
+
+
+# ───────────────── Reihenfolge der Analyse-Warteschlange (seit 2026-09-15)
+
+def test_offene_vorgaenge_stehen_vor_abgelaufenen():
+    """⚠ Bis zum 2026-09-15 warf `NUR_OFFENE=1` abgelaufene Vorgaenge aus der Arbeitsliste.
+    Sven: „so dass die anderen nicht rausfallen, sondern einfach weiter hinten in der
+    Warteschlange stehen."
+
+    Der Filter ist weg; die Reihenfolge muss es jetzt allein leisten. Der Test rechnet die
+    Reihenfolge mit derselben Sortierung wie `analyze_docs` und verlangt: **kein
+    abgelaufener Vorgang vor einem offenen.** Faellt `ORDER BY (l.phase = 'open') DESC` je
+    aus der Abfrage, kostet das kein Ergebnis, sondern Geld an der falschen Stelle — und
+    zwar lautlos.
+    """
+    import duckdb
+    import pathlib
+
+    import pytest
+
+    wurzel = pathlib.Path(__file__).resolve().parent.parent
+    doc = wurzel / "data" / "docs" / "DE" / "doc_text.parquet"
+    lead = wurzel / "data" / "gold" / "DE" / "lead_export.parquet"
+    if not (doc.exists() and lead.exists()):
+        pytest.skip("keine Gold-/Textdaten — frische Arbeitskopie")
+
+    reihe = duckdb.connect().execute(f"""
+        WITH t AS (SELECT DISTINCT notice_id FROM read_parquet('{doc.as_posix()}')
+                   WHERE text IS NOT NULL AND length(text) > 120)
+        SELECT (l.phase = 'open') AS offen
+        FROM t LEFT JOIN read_parquet('{lead.as_posix()}') l ON l.lead_id = t.notice_id
+        ORDER BY (l.phase = 'open') DESC NULLS LAST,
+                 l.deadline_date DESC NULLS LAST, t.notice_id DESC
+        LIMIT 20000""").fetchall()
+    folge = [bool(r[0]) for r in reihe]
+    if True not in folge:
+        pytest.skip("gerade kein offener Vorgang mit Text")
+    letzter_offener = len(folge) - 1 - folge[::-1].index(True)
+    dazwischen = folge[:letzter_offener].count(False)
+    assert dazwischen == 0, (
+        f"{dazwischen} abgelaufene Vorgaenge stehen VOR dem letzten offenen — die "
+        f"Warteschlange arbeitet die falschen zuerst ab.")

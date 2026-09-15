@@ -31,6 +31,7 @@ import duckdb
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
+from govisor import db                      # noqa: E402
 from govisor.llm import _geld as _llm_geld  # noqa: E402
 from govisor.llm import (chat, letzter_anbieter, anbieter_stand,  # noqa: E402
                          kontext as llm_kontext, mit_boden as llm_mit_boden,
@@ -762,7 +763,9 @@ def _lauf() -> int:
     if (grund := _lohnt_sich()):
         print(f"⏸  Runde uebersprungen: {grund}", flush=True)
         return 0
-    con = duckdb.connect()
+    # Hausverbindung: Speichergrenze und Auslagerung auf die grosse Platte
+    # (`data/.tmp`), nicht auf die 36-GB-Systemplatte.
+    con = db.connect()
     # REIHENFOLGE NACH AKTUALITAET, nicht nach notice_id.
     #
     # Sven am 2026-08-18: „fang mit den neuesten ausschreibungen an und arbeite dich zu den
@@ -775,50 +778,36 @@ def _lauf() -> int:
     # darin die mit der spaetesten Frist — das sind die, auf die man noch bieten kann und
     # die zur Demo noch aktuell sind. Was kein Lead mehr ist, kommt zuletzt.
     LE_SQL = LEAD_EXPORT_SQL
-    rows = con.execute(
-        f"""WITH t AS (SELECT notice_id, file, text,
-                              -- ⚠ `doc_text` fuehrt KEINE Landesspalte. Das Land steckt im
-                              -- Pfad (data/docs/<LAND>/doc_text.parquet); `filename=true`
-                              -- ist der einzige Weg, es je Zeile mitzubekommen. Ueber den
-                              -- Lead ginge es nicht: Vorgaenge OHNE Lead haetten dann gar
-                              -- keins und fielen aus jedem Rang heraus.
+    # ⚠ NUR DIE KENNUNGEN, KEIN TEXT — seit 2026-09-15.
+    #
+    # Hier stand dieselbe Abfrage MIT `t.file, t.text`, und ihr `fetchall()` holte den
+    # gesamten Volltextbestand in eine Python-Liste, um daraus die 400 Vorgaenge einer Runde
+    # auszuwaehlen. Gemessen am 2026-09-15: **324.368 Zeilen mit 5,7 GiB Text**. Auf einer
+    # 16-GB-Maschine ging das lange knapp gut und kippte, als die cosinex-Reparatur vom
+    # 13.09. binnen zwei Tagen 2.200 liegengebliebene Vergabeunterlagen nachlieferte:
+    #
+    #     _duckdb.OutOfMemoryException: failed to pin block of size 256.0 KiB
+    #                                   (12.7 GiB/12.7 GiB used)
+    #
+    # Die Analyse stand danach **30 Stunden** — jede Runde brach ab, die Warteschlange wuchs
+    # von 488 auf 2.031. ⚠ Und der Ausfall sah harmlos aus: „⚠ Runde abgebrochen", zwei
+    # Minuten Pause, naechster Versuch. Ein Fehler, der sich selbst wiederholt, meldet sich
+    # nicht lauter als einer, der einmal passiert.
+    #
+    # Die Reihenfolge unten ist unveraendert; nur der Text kommt jetzt spaeter und nur fuer
+    # den Stapel, den die Runde wirklich anfasst.
+    kennungen = [n for (n,) in con.execute(
+        f"""WITH t AS (SELECT DISTINCT notice_id,
                               regexp_extract(filename, 'docs/([A-Z][A-Z])/', 1) AS land
                        FROM read_parquet({SRC_SQL}, filename=true)
-                       -- `ocr` zaehlt wie `ok`: ein bildreines PDF, das die Texterkennung
-                       -- durchlaufen hat UND den Fachvokabeltest bestand, ist inhaltlich
-                       -- dasselbe wie ein durchsuchbares. Gemessen 2026-08-18: 3,23 Mio.
-                       -- Zeichen in 404 Vorgaengen, die alle auch `ok`-Text haben. Der LLM
-                       -- bekommt also mehr Material je Vorgang, nicht mehr Vorgaenge.
                        WHERE {SQL_BRAUCHBAR} AND text IS NOT NULL AND length(text) > 120)
-            SELECT t.notice_id, t.file, t.text
+            SELECT t.notice_id
             FROM t LEFT JOIN read_parquet({LE_SQL}) l ON l.lead_id = t.notice_id
             ORDER BY (l.phase = 'open') DESC NULLS LAST,
                      {_land_rang_sql('t.land')}
                      l.deadline_date DESC NULLS LAST,
                      t.notice_id DESC"""
-    ).fetchall()
-    per_notice = defaultdict(list)
-    for nid, file, text in rows:
-        per_notice[nid].append((file, text))
-
-    # ── NACHTRAEGE: ueberholte Fassungen aussortieren ───────────────────────────────────
-    #
-    # `docpipe` markiert sie seit dem 21.08. schon beim Indizieren (`status='ueberholt'`).
-    # Der Filter hier gilt dem, was VORHER indiziert wurde: 1.291 Dateien in 84 Vorgaengen,
-    # 17,2 Mio. Zeichen. Ohne ihn saehe das Modell dort zwei Angebotsfristen nebeneinander
-    # und haette keine Angabe, welche gilt.
-    #
-    # ⚠ Je DATEI, nicht je Fassung — s. `docpipe.ueberholte`. Von 4.464 Dateien in aelteren
-    # Fassungen fehlen 3.173 in der juengsten; Portale liefern Nachtraege, keine Neuausgaben.
-    _weg = 0
-    for nid, dateien in per_notice.items():
-        raus = docpipe.ueberholte(f for f, _ in dateien)
-        if raus:
-            per_notice[nid] = [(f, t) for f, t in dateien if f not in raus]
-            _weg += len(raus)
-    if _weg:
-        print(f"  {_weg:,} überholte Dateien aus Nachträgen übersprungen", flush=True)
-
+    ).fetchall()]
     out = json.loads(OUT.read_text(encoding="utf-8")) if OUT.exists() else {}
 
     # Dokument-Dubletten: (doctype, Pruefsumme) → Master. Leer, wenn die Datei fehlt —
@@ -840,8 +829,13 @@ def _lauf() -> int:
     # am Ende weniger als vorher.
     # Die offenen Leads werden HIER schon gebraucht, nicht erst beim Filtern unten: die
     # Neuberechnung darf nur wegwerfen, was sie auch wieder herstellt (s. gleich).
+    # ⚠ IMMER berechnen, nicht nur bei `NUR_OFFENE`. Seit der Filter weg ist, steuert diese
+    # Menge nichts mehr — sie ERKLAERT nur noch: die Neuberechnung oben braucht sie, und die
+    # Stapelmeldung sagt damit, wie viele der anstehenden Vorgaenge eine laufende Frist
+    # haben. Am Anfang war sie an `NUR_OFFENE` gebunden; ohne die Variable log die Meldung
+    # „2 mit laufender Frist" auch dann, wenn keiner geprueft worden war.
     offen: set[str] | None = None
-    if NUR_OFFENE:
+    if True:
         import duckdb as _d
         offen = {r[0] for r in _d.connect().execute(
             f"""SELECT lead_id FROM read_parquet({LEAD_EXPORT_SQL})
@@ -898,28 +892,70 @@ def _lauf() -> int:
             print(f"  {uebersprungen} Treffer mit abgelaufener Frist bleiben stehen — "
                   f"NUR_OFFENE=1 wuerde sie nicht neu rechnen.", flush=True)
 
-    todo = [(nid, files) for nid, files in per_notice.items() if nid not in out]
-
-    # NUR OFFENE. Gemessen 2026-08-21: von 940 nie analysierten Vorgaengen sind **110**
-    # offen, bei den uebrigen 830 ist die Frist durch. Eine Analyse kostet dort dasselbe
-    # und nuetzt niemandem — bei 0,42 $ je Vorgang sind das 350 $ fuer nichts.
-    if offen is not None:
-        vorher = len(todo)
-        todo = [t for t in todo if t[0] in offen]
-        print(f"Nur offene Ausschreibungen: {len(todo)} von {vorher}", flush=True)
-    # ⚠ VOR dem LIMIT festhalten, wie viel wirklich anliegt. Diese Zahl geht unten in
-    # `.llm_stand.json` und steuert die Pause des Analyse-Arbeiters. Der hat sie sich bis
-    # zum 2026-08-25 selbst ausgerechnet — als Differenz aus Textindex und Ergebnisdatei,
-    # also VOR dem NUR_OFFENE-Filter. Am 25.08. standen dort 22 Vorgaenge, von denen kein
-    # einziger eine laufende Frist hatte: der Arbeiter sah 22 „Wartende", bekam „Zu
-    # analysieren: 0" und drehte trotzdem alle 30 Sekunden eine Runde. 31 Leerrunden in
-    # einer halben Stunde, jede mit einem Python-Start ueber eine 358-MB-Datei.
+    # ⚠ OFFENE ZUERST — ABER DIE UEBRIGEN FALLEN NICHT RAUS (Sven, 2026-09-15).
     #
-    # Wer die Pause steuert, muss dieselbe Menge zaehlen wie der, der die Arbeit macht.
-    # Deshalb sagt es der Lauf selbst, statt es den Arbeiter schaetzen zu lassen.
-    anliegend = len(todo)
-    if LIMIT:
-        todo = todo[:LIMIT]
+    # Hier stand ein harter Filter: `NUR_OFFENE=1` warf jeden Vorgang mit abgelaufener
+    # Frist aus der Arbeitsliste. Die Rechnung dahinter war gut — am 2026-08-21 waren von
+    # 940 nie analysierten Vorgaengen nur 110 offen, und bei 0,42 $ je Vorgang haetten die
+    # uebrigen 830 rund 350 $ gekostet, ohne jemandem zu nuetzen.
+    #
+    # Zwei Dinge haben sich geaendert. Erstens der Preis: gemessen kostet ein Vorgang heute
+    # **0,0181 $**, nicht 0,42 — die 2.031 in der Schlange sind rund 37 $, nicht 850.
+    # Zweitens die Einsicht, dass „gefiltert" hier „nie wieder" hiess: was einmal durch das
+    # Raster fiel, kam auch dann nicht zurueck, wenn spaeter Luft gewesen waere.
+    #
+    # Die Reihenfolge leistet dasselbe ohne den Verlust: `ORDER BY (l.phase = 'open') DESC`
+    # steht an erster Stelle der Kennungs-Abfrage oben. Ein abgelaufener Vorgang steht damit
+    # hinter JEDEM offenen — er kommt dran, wenn die offenen abgearbeitet sind, und keine
+    # Minute frueher. `offen` bleibt berechnet, weil die Neuberechnung oben es braucht.
+    warteschlange = [n for n in kennungen if n not in out]
+    stapel = warteschlange[:LIMIT] if LIMIT else warteschlange
+    if not stapel:
+        print("Nichts zu analysieren.", flush=True)
+        return 0
+    _offene = len([n for n in stapel if offen is None or n in offen])
+    print(f"Warteschlange: {len(warteschlange):,} · Stapel dieser Runde: {len(stapel):,} "
+          f"({_offene:,} mit laufender Frist)", flush=True)
+
+    # Und JETZT erst der Text — nur fuer den Stapel.
+    rows = con.execute(
+        f"""SELECT notice_id, file, text FROM read_parquet({SRC_SQL})
+            WHERE notice_id IN ? AND {SQL_BRAUCHBAR}
+              AND text IS NOT NULL AND length(text) > 120""", [stapel]).fetchall()
+    per_notice = defaultdict(list)
+    for nid, file, text in rows:
+        per_notice[nid].append((file, text))
+
+    # ── NACHTRAEGE: ueberholte Fassungen aussortieren ───────────────────────────────────
+    #
+    # `docpipe` markiert sie seit dem 21.08. schon beim Indizieren (`status='ueberholt'`).
+    # Der Filter hier gilt dem, was VORHER indiziert wurde: 1.291 Dateien in 84 Vorgaengen,
+    # 17,2 Mio. Zeichen. Ohne ihn saehe das Modell dort zwei Angebotsfristen nebeneinander
+    # und haette keine Angabe, welche gilt.
+    #
+    # ⚠ Je DATEI, nicht je Fassung — s. `docpipe.ueberholte`. Von 4.464 Dateien in aelteren
+    # Fassungen fehlen 3.173 in der juengsten; Portale liefern Nachtraege, keine Neuausgaben.
+    _weg = 0
+    for nid, dateien in per_notice.items():
+        raus = docpipe.ueberholte(f for f, _ in dateien)
+        if raus:
+            per_notice[nid] = [(f, t) for f, t in dateien if f not in raus]
+            _weg += len(raus)
+    if _weg:
+        print(f"  {_weg:,} überholte Dateien aus Nachträgen übersprungen", flush=True)
+
+
+    # In der Reihenfolge des Stapels, nicht in der eines Woerterbuchs.
+    todo = [(nid, per_notice[nid]) for nid in stapel if per_notice.get(nid)]
+
+    # ⚠ `anliegend` ist die GANZE Warteschlange, nicht der Stapel. Diese Zahl geht unten in
+    # `.llm_stand.json` und steuert die Pause des Analyse-Arbeiters. Er hat sie sich bis zum
+    # 2026-08-25 selbst ausgerechnet — als Differenz aus Textindex und Ergebnisdatei — und
+    # zaehlte damit etwas anderes als der Lauf: 22 „Wartende", „Zu analysieren: 0", und
+    # trotzdem alle 30 Sekunden eine neue Runde. 31 Leerrunden in einer halben Stunde, jede
+    # mit einem Python-Start ueber eine 358-MB-Datei. Wer die Pause steuert, muss dieselbe
+    # Menge zaehlen wie der, der die Arbeit macht.
+    anliegend = len(warteschlange)
     print(f"Zu analysieren: {len(todo)} (von {len(per_notice)}) · Modell {MODEL} · {PARALLEL} parallel", flush=True)
 
     # ── PARALLEL, aber mit einem Schreiber ───────────────────────────────────────────

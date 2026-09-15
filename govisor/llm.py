@@ -544,7 +544,20 @@ RESERVE_USD = float(os.environ.get("GOVISOR_RESERVE_USD", "1.00"))
 #
 # ⚠ Die Historie zur Einordnung: 89 % aller je gebuchten LLM-Kosten (95,89 von 107,70 $)
 # fielen an ZWEI Tagen an, dem 24. und 25.08., als es diesen Deckel noch nicht gab.
-TAG_USD = float(os.environ.get("GOVISOR_TAG_USD", "3.00"))
+#
+# ── 2026-09-15: 3,00 → 5,00 $ (Sven) ─────────────────────────────────────────────────
+# Der Anlass ist gemessen, nicht gefuehlt. Die cosinex-Reparatur vom 13.09. hat in zwei
+# Tagen 2.200 liegengebliebene Vergabeunterlagen nachgeliefert; die Warteschlange der
+# Analyse stieg damit auf 2.031 Vorgaenge. Zugleich ist der Preis je Vorgang gefallen —
+# gemessen **0,0181 $** statt der 0,42 $, mit denen die Zahl oben gerechnet wurde:
+#
+#     3,00 $  →  ~165 Vorgaenge am Tag  →  12 Tage fuer die Schlange
+#     5,00 $  →  ~275 Vorgaenge am Tag  →   7 Tage
+#
+# ⚠ Der Deckel bleibt ein Deckel. Er ist nicht die Antwort auf „wie werde ich schneller",
+# sondern die Versicherung gegen den 24./25.08.: 95,89 $ an zwei Tagen, ohne dass jemand
+# es bemerkte, bevor die Rechnung kam.
+TAG_USD = float(os.environ.get("GOVISOR_TAG_USD", "5.00"))
 LIMIT_USD = float(os.environ.get("GOVISOR_LIMIT_USD", "5.00"))
 
 # ⚠ **EIGENER TAGESDECKEL FUER HOCHGELADENE UNTERLAGEN.** Ein Nutzer, der eine fehlende
