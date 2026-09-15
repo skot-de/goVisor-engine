@@ -101,11 +101,29 @@ _ERFOLG = ("downloaded", "nur_liste")
 _KEIN_VERSUCH = ("exists",)
 
 
+def _land_von(kurz: str) -> str:
+    """Zu welchem Land gehoert dieser Abrufer? Aus der Registry, nicht geraten.
+
+    ⚠ Bis zum 2026-09-15 stand ueberall fest `data/docs/DE`. Fuer `docfetch_lu`,
+    `vergabeportal_at` und `simap_docs` ist das schlicht das falsche Verzeichnis: ihre
+    Manifeste und ihre Dokumente liegen unter LU, AT und CH. Die Folge war kein Fehler,
+    sondern Stille — ein Abrufer ohne Rueckstau kommt nie dran.
+    """
+    for q in S.DOC_REGISTRY:
+        if q.modul and q.modul.rsplit(".", 1)[-1].replace("docfetch_", "").replace("docfetch", "cosinex") == kurz:
+            return getattr(q, "country", "DE") or "DE"
+    return "DE"
+
+
+def _manifest_ort(kurz: str):
+    return ROOT / "data" / "docs" / _land_von(kurz)
+
+
 def _ausbeute(kurz: str, tage: int = 7) -> float | None:
     """Anteil erfolgreicher Abrufe der letzten Tage. ``None``, wenn es keine Historie gibt."""
     import duckdb
 
-    verz = ROOT / "data" / "docs" / "DE"
+    verz = _manifest_ort(kurz)
     # cosinex schreibt in `_manifest.parquet` ohne Namenszusatz — historisch der erste.
     pfad = verz / (f"_manifest_{kurz}.parquet" if kurz != "cosinex" else "_manifest.parquet")
     if not pfad.exists():
@@ -154,12 +172,43 @@ def rueckstand() -> list[tuple[str, int]]:
 
     from govisor.docfetch_queue import filtere, frueher
 
-    L = (ROOT / "data" / "gold" / "DE" / "lead_export.parquet").as_posix()
-    T = (ROOT / "data" / "docs" / "DE" / "doc_text.parquet").as_posix()
+    # ⚠ ALLE AKTIVEN LAENDER, NICHT NUR DE — seit 2026-09-15.
+    #
+    # Hier stand `data/gold/DE/lead_export.parquet`, fest. Diese Funktion entscheidet, WER
+    # drankommt: der Dauerarbeiter waehlt seine Abrufer nach dem Rueckstau, den sie hier
+    # bekommen. Und weil luxemburgische, oesterreichische und schweizerische Adressen in
+    # DEUTSCHEN Leads nicht vorkommen, stand ihr Rueckstau dauerhaft auf 0 — sie wurden
+    # nie gewaehlt.
+    #
+    # Seit dem 2026-08-18 holt der Tageslauf keine Unterlagen mehr („das macht der
+    # Dauerarbeiter"). Vier Wochen lang hat damit NIEMAND die Unterlagen von LU, AT und CH
+    # geholt. Gemessen am 2026-09-15, als es auffiel:
+    #
+    #     LU    169 abrufbare Vorgaenge  (Manifest kannte 3)
+    #     AT    254
+    #     CH  1.599
+    #
+    # ⚠ Bei Luxemburg ist das nicht nachholbar: dort verschwinden die Unterlagen nach
+    # Fristende. Ein Abrufer, der nicht auf der Liste steht, sieht aus wie einer, der
+    # nichts zu tun hat — und ein leerer Rueckstau wie erledigte Arbeit.
+    #
+    # Die Laenderliste kommt aus `govisor/laender.py`, nicht aus einer zweiten Aufzaehlung.
+    from govisor.laender import AKTIV
+
+    def _vorhanden(unter: str, datei: str) -> list[str]:
+        return [q.as_posix() for l in AKTIV
+                if (q := ROOT / "data" / unter / l / datei).exists()]
+
+    leads = _vorhanden("gold", "lead_export.parquet")
+    texte = _vorhanden("docs", "doc_text.parquet")
+    if not leads:
+        return []
     con = duckdb.connect()
+    L = "[" + ", ".join(f"'{x}'" for x in leads) + "], union_by_name=true"
     schon = {n for (n,) in con.execute(
-        f"SELECT DISTINCT notice_id FROM read_parquet('{T}')").fetchall()} \
-        if (ROOT / "data" / "docs" / "DE" / "doc_text.parquet").exists() else set()
+        "SELECT DISTINCT notice_id FROM read_parquet(["
+        + ", ".join(f"'{x}'" for x in texte) + "], union_by_name=true)").fetchall()} \
+        if texte else set()
     # ⚠ OPEN HOUSE GEHOERT NICHT IN DEN RUECKSTAU. Dort tritt man einem Rabattvertrag BEI,
     # statt zu bieten; die Unterlagen liegen systematisch hinter der Teilnahme, und die
     # Abrufer schliessen sie deshalb schon in ihrer eigenen Auswahl aus. Zaehlt man sie mit,
@@ -167,7 +216,7 @@ def rueckstand() -> list[tuple[str, int]]:
     # Vergaben sind **1.172 Open House** (67 %) und weitere 253 als `gated` bereits gelernt —
     # wirklich holbar sind 307. Ueber alle Abrufer: 1.953 der 7.936 sind Open House (25 %).
     offen = con.execute(f"""
-        SELECT lead_id, documents_url FROM read_parquet('{L}')
+        SELECT lead_id, documents_url FROM read_parquet({L})
         WHERE phase='open' AND deadline_date > current_date AND documents_url IS NOT NULL
           AND coalesce(procedure_kind, '') <> 'open_house'
     """).fetchall()
@@ -191,7 +240,8 @@ def rueckstand() -> list[tuple[str, int]]:
         # Frueher Gescheitertes zaehlt ebenfalls nicht: der Abrufer wuerde es gar nicht
         # erst anfassen (`filtere`), es blaeht nur die Zahl auf, nach der wir sortieren.
         try:
-            treffer, _ = filtere(treffer, frueher(ROOT / "data" / "docs" / "DE", kurz),
+            # ⚠ Das Manifest liegt beim Land des Abrufers, nicht bei DE.
+            treffer, _ = filtere(treffer, frueher(_manifest_ort(kurz), kurz),
                                  lead_id=lambda x: x[0])
         except Exception:                                     # noqa: BLE001
             pass

@@ -450,3 +450,39 @@ def test_kein_abrufer_schreibt_direkt_auf_den_zielnamen():
         "Diese Stellen schreiben direkt auf den Zielnamen — ein Abbruch hinterlaesst dort "
         "ein halbes ZIP, das wie ein fertiges aussieht. `_queue.schreibe_atomar` benutzen:"
         "\n  " + "\n  ".join(treffer))
+
+
+def test_manifest_vertraegt_ein_altes_zeitstempel_manifest(tmp_path):
+    """⚠ DER FEHLER, DER LUXEMBURG DAS GEDAECHTNIS NAHM.
+
+    `schreibe` setzt `versucht_am` als `datetime.date`. Aeltere Manifeste fuehren die Spalte
+    als TIMESTAMP, und beim Fortschreiben trifft dann `datetime` auf `date`:
+
+        ArrowTypeError: object of type <class 'datetime.date'> cannot be converted to int
+
+    Tueckisch ist nicht der Fehler, sondern WO er auftritt: am Ende eines Abrufs, in der
+    Wache gefangen. Der Lauf meldet trotzdem „51 versucht · 51 geladen" und endet mit Code 0.
+    Die Pakete liegen auf der Platte, das Gedaechtnis bleibt stehen — und beim naechsten Lauf
+    werden dieselben Vergaben erneut geholt. Bei Luxemburg lief das seit dem 2026-09-03:
+    **3 Eintraege im Manifest, 54 ZIPs auf der Platte.**
+    """
+    import datetime as dt
+
+    import pyarrow as pa
+    import pyarrow.parquet as pq
+
+    from govisor import docfetch_queue as q
+
+    ziel = tmp_path / "_manifest_probe.parquet"
+    pq.write_table(pa.Table.from_pylist([{
+        "lead_id": "A", "status": "downloaded", "bytes": 1, "n_files": 1,
+        "note": "", "url": "u", "versucht_am": dt.datetime(2026, 9, 3)}]), ziel)
+
+    n = q.schreibe(tmp_path, "probe", [{"lead_id": "B", "status": "downloaded",
+                                        "bytes": 2, "n_files": 1, "note": "", "url": "u"}])
+    assert n == 2, "der neue Satz kam nicht ins Manifest"
+    zeilen = pq.read_table(ziel).to_pylist()
+    assert {z["lead_id"] for z in zeilen} == {"A", "B"}, "die Vorgeschichte ging verloren"
+    # ⚠ Und die Spalte muss danach EIN Typ sein, sonst scheitert der naechste Lauf wieder.
+    assert all(isinstance(z["versucht_am"], dt.date) for z in zeilen)
+    assert not any(isinstance(z["versucht_am"], dt.datetime) for z in zeilen)

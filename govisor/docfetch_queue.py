@@ -114,6 +114,12 @@ BLOCKIERT = {
     # NICHT „konto" — ein Konto hilft hier nicht, und es wird auch nichts versucht. Eigene
     # Klasse, damit sichtbar bleibt: dort LIEGEN Unterlagen, sie sind nur nicht für uns.
     "passwortgeschuetzt":   "passwort",
+    # ⚠ Am 2026-09-15 zum ersten Mal in der Praxis gefordert: bis dahin hing die Schweiz
+    # gar nicht in der Warteschlange, weil der Rueckstau nur DE rechnete. Beim
+    # Anschliessen kam simap.ch mit **1.599** offenen Vergaben sofort auf Platz eins,
+    # und die Stichprobe antwortete `403 — Interessensbekundung erforderlich`. Ohne
+    # diesen Eintrag waeren das 1.599 Anfragen in JEDER Runde gewesen. Der Eintrag
+    # stand schon da; er hatte nur noch nie etwas zu tun.
     "interesse_noetig":     "interesse",   # simap: Interesse muss bekundet werden
     "interesse_abgelehnt":  "interesse",
     # ⚠ NICHT „konto", sondern UNSER Problem. Die Seite laedt, sie ist nur anders gebaut als
@@ -307,17 +313,27 @@ def schreibe(out_root: Path, name: str, saetze: list[dict], id_feld: str = "lead
     if not saetze:
         return 0
     heute = dt.date.today()
+
+    def _datum(w):
+        """Alles auf `date` — Parquet gibt je nach Alter der Datei `datetime` zurueck."""
+        if isinstance(w, dt.datetime):
+            return w.date()
+        return w if isinstance(w, dt.date) else heute
     # Normalisiert wird beim SCHREIBEN, nicht erst beim Lesen: sonst stünde die abweichende
     # Schreibweise dauerhaft in der Datei und jede Auswertung daneben müsste sie kennen.
     neu = [{**s, "status": normalisiere(s.get("status")),
             "versucht_am": s.get("versucht_am") or heute} for s in saetze]
     p = _pfad(out_root, name)
-    alt: list[dict] = []
+    alt_roh: list[dict] = []
     if p.exists():
         try:
-            alt = pq.read_table(p).to_pylist()
+            alt_roh = pq.read_table(p).to_pylist()
         except Exception:                                 # noqa: BLE001
-            alt = []          # unlesbares Altmanifest kostet Historie, nicht den Lauf
+            alt_roh = []      # unlesbares Altmanifest kostet Historie, nicht den Lauf
+    # ⚠ Auch der Altbestand wird auf `date` gezogen. Eine EINZIGE alte Zeile mit TIMESTAMP
+    # bringt sonst den ganzen Schreibvorgang zu Fall — und zwar den, der gerade 51 frisch
+    # geholte Vergaben eintragen wollte.
+    alt = [{**s, "versucht_am": _datum(s.get("versucht_am"))} for s in alt_roh]
 
     # Je Kennung nur der jüngste Satz — sonst wächst die Datei mit jedem Lauf ohne Nutzen.
     je_id: dict[str, dict] = {}

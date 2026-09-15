@@ -174,3 +174,40 @@ def test_das_fenster_greift_nie_in_den_vormonat(monkeypatch):
     m.laufender_monat("DE", "DEU", tage=60, karenz=4, schwelle=0.8)
     heute = dt.date.today()
     assert gesehen["von"] >= dt.date(heute.year, heute.month, 1), gesehen
+
+
+def test_ein_halb_eingelesenes_land_faellt_auf(monkeypatch, tmp_path, capsys):
+    """⚠ Sven am 2026-09-15: „gibts nur 6700 bekanntmachungen?!" — ja, und es war ein Loch.
+
+    Luxemburgs Bestand begann am 2023-12-27, obwohl TED seit Jahren rund 2.000 bis 2.400
+    im Jahr fuehrt: es fehlten **rund 40.000 Bekanntmachungen aus zwanzig Jahren**, und die
+    Monatspakete dafuer lagen die ganze Zeit im Cache. Beim Onboarding wurde nur der
+    Live-Abruf eingeschaltet.
+
+    ⚠ Die beiden Stufen darueber konnten es nicht sehen: die eine prueft sechs
+    abgeschlossene Monate, die andere den laufenden. Einem Land, dem zwanzig JAHRE fehlen,
+    sieht man das auf keiner der beiden Zeitskalen an.
+    """
+    m = _modul()
+    (tmp_path / "data" / "cache").mkdir(parents=True)
+    for i in range(1, 11):
+        (tmp_path / "data" / "cache" / f"ted_2020-{i:02d}.tar.gz").touch()
+    (tmp_path / "data" / "raw" / "DE").mkdir(parents=True)
+    for i in range(1, 11):
+        (tmp_path / "data" / "raw" / "DE" / f"2020-{i:02d}.tar.gz").touch()
+    (tmp_path / "data" / "raw" / "LU").mkdir(parents=True)
+    (tmp_path / "data" / "raw" / "LU" / "2020-10.tar.gz").touch()      # angefangen und liegengeblieben
+    (tmp_path / "data" / "raw" / "CH").mkdir(parents=True)             # nie ueber Pakete gelaufen
+
+    monkeypatch.setattr(m, "ROOT", tmp_path)
+    monkeypatch.setattr(m, "AKTIV", ("DE", "LU", "CH"))
+    monkeypatch.setattr(m, "_silber_beginn", lambda land: "2024-01-01")
+    befunde = m.historie()
+    aus = capsys.readouterr().out
+
+    assert any("LU" in b and "ungenutzt im Cache" in b for b in befunde), befunde
+    assert not any("DE" in b for b in befunde), "das vollstaendige Land wurde gemeldet"
+    # ⚠ Ein Land ganz ohne Paket-Ingest ist eine Bauentscheidung (CH laeuft ueber simap.ch),
+    # kein Versehen — es gehoert in die Ausgabe, aber nicht in die Befunde.
+    assert not any("CH" in b for b in befunde), befunde
+    assert "CH" in aus and "Live-Abruf" in aus

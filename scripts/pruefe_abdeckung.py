@@ -161,6 +161,70 @@ def laufender_monat(land: str, cc: str, tage: int, karenz: int,
     return befunde
 
 
+def historie(schwelle_anteil: float = 0.9) -> list[str]:
+    """Reicht die Historie eines Landes so weit zurueck wie die Pakete, die wir haben?
+
+    ⚠ WARUM DIESE DRITTE STUFE — Sven am 2026-09-15: „gibts nur 6700 bekanntmachungen?!"
+
+    Ja, und das war ein Loch, keine Marktlage. Luxemburgs Bestand begann am **2023-12-27**,
+    waehrend TED fuer LU seit Jahren rund 2.000 bis 2.400 Bekanntmachungen im Jahr fuehrt:
+
+        2019   TED 1.808   wir 0        2023   TED 2.278   wir 3
+        2021   TED 2.077   wir 0        2024   TED 2.226   wir 2.177
+        2022   TED 2.237   wir 0        2025   TED 2.458   wir 2.544
+
+    Es fehlen also rund **40.000 Bekanntmachungen aus zwanzig Jahren** — und die
+    Monatspakete dafuer liegen im Cache. Beim Onboarding wurde nur der Live-Abruf
+    eingeschaltet; die Geschichte hat nie jemand nachgeladen.
+
+    ⚠ Und die beiden Stufen darueber konnten es nicht sehen: die eine prueft sechs
+    abgeschlossene Monate, die andere den laufenden. Ein Land, dem zwanzig JAHRE fehlen,
+    sieht auf beiden Zeitskalen tadellos aus.
+
+    Die Regel hier braucht kein Netz: sie vergleicht die eingelesenen Bronze-Monate eines
+    Landes mit den Paketen, die im Cache liegen. Gemeldet wird nur, wer ANGEFANGEN und
+    aufgehoert hat — ein Land ganz ohne Bronze (die Schweiz kommt ueber simap.ch und den
+    Live-Abruf) ist eine Bauentscheidung, kein Versehen.
+    """
+    pakete = len(list((ROOT / "data" / "cache").glob("ted_*.tar.gz")))
+    befunde: list[str] = []
+    if not pakete:
+        return befunde
+    print(f"── Historie gegen {pakete} Monatspakete im Cache ──")
+    for land in AKTIV:
+        bronze = len(list((ROOT / "data" / "raw" / land).glob("*.tar.gz"))) \
+            if (ROOT / "data" / "raw" / land).is_dir() else 0
+        von = _silber_beginn(land)
+        rest = pakete - bronze
+        marke = ""
+        if 0 < bronze < pakete * schwelle_anteil:
+            marke = f"  ⚠ {rest} Pakete nie eingelesen"
+            befunde.append(f"{land}: Historie ab {von}, aber nur {bronze} von {pakete} "
+                           f"Monatspaketen eingelesen — {rest} liegen ungenutzt im Cache")
+        elif bronze == 0:
+            marke = "  (kein Paket-Ingest — Quelle laeuft ueber Live-Abruf)"
+        print(f"  {land}: ab {von or '?'} · {bronze:>3} von {pakete} Paketen{marke}")
+    return befunde
+
+
+def _silber_beginn(land: str):
+    import duckdb
+    p = ROOT / "data" / "silver" / land / "notices"
+    if not p.is_dir():
+        return None
+    try:
+        # ⚠ NICHT das blanke Minimum. Oesterreich traegt mindestens einen Satz mit
+        # `0001-01-01` — ein Platzhalter aus der Quelle, kein Datum. Ungefiltert meldet die
+        # Zeile „ab 0001-01-01" und sagt damit nichts mehr ueber die Historie aus.
+        # TED gibt es seit den Neunzigern; alles davor ist Papier, nicht Bestand.
+        return duckdb.connect().execute(
+            f"select min(publication_date) from read_parquet('{p.as_posix()}/**/*.parquet') "
+            f"where publication_date >= DATE '1990-01-01'"
+        ).fetchone()[0]
+    except Exception:                                                # noqa: BLE001
+        return None
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--monate", type=int, default=6, help="wie weit zurueck (ohne den laufenden)")
@@ -202,6 +266,8 @@ def main() -> int:
                 befunde.append(f"{land} {jahr}-{monat:02d}: {ist:,} von {soll:,} "
                                f"({anteil*100:.0f} %)")
         print(f"  {land}: " + " · ".join(zeilen))
+    print()
+    befunde += historie()
     print()
     print(f"── Laufender Monat, Fenstersumme (Karenz {a.karenz} Tage) ──")
     for land in AKTIV:
