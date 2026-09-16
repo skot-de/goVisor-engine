@@ -1619,7 +1619,8 @@ for eintrag in \
   "data/docs/DE/doc_text.parquet:7:Volltext-Index der Unterlagen" \
   "data/docs/DE/doc_signals.parquet:7:Anforderungs-Signale" \
   "web/data/leads-bau.json:1:Frontend-Daten" \
-  "web/data/marktpuls.json:2:Marktpuls"
+  "web/data/marktpuls.json:2:Marktpuls" \
+  "web/data/marktpuls-jahre.json:2:Marktpuls Jahres-Schichten"
 do
   _d="${eintrag%%:*}"; _rest="${eintrag#*:}"; _max="${_rest%%:*}"; _name="${_rest#*:}"
   _t="$(alter_tage "$ROOT/$_d")"

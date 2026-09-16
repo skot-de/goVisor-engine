@@ -243,6 +243,15 @@ def test_belege_stehen_in_den_sprachkatalogen():
 def test_erzeugte_datei_haelt_den_vertrag():
     p = ROOT / "web" / "data" / "marktpuls.json"
     d = json.loads(p.read_text(encoding="utf-8"))
+    # ⚠ DIE GRENZE GILT DER DATEI, DIE JEDER BEKOMMT. Seit Stand 4 liegen die beiden
+    # Jahres-Schichten daneben und werden erst geholt, wenn jemand die Jahresansicht
+    # oeffnet — sie zaehlen deshalb nicht gegen dieses Budget.
+    #
+    # Warum ueberhaupt getrennt: die Schichten trugen 27,6 von 52,0 KB und wuchsen mit
+    # JEDEM Kalenderjahr um rund 300 Byte weiter. Das Budget war damit strukturell
+    # erreicht, nicht aus Nachlaessigkeit — vorher hatte schon jemand 5 KB herausgeholt
+    # (`pct_naiv` nur im Gesamtblock, `stabil` nur wenn wahr). Gemessen 2026-09-16:
+    # 52,0 KB → **23,0 KB** Hauptdatei + 27,0 KB Nebendatei.
     assert p.stat().st_size < 50 * 1024, "Briefing §5: JSON unter 50 KB"
     for feld in ("schema", "erzeugt", "stand", "laender", "fenster", "coverage", "saison", "lage"):
         assert feld in d, feld
@@ -289,6 +298,27 @@ def test_erzeugte_datei_haelt_den_vertrag():
 
     if d["schema"] < 2:
         return
+
+    # ── Stand 4: die Jahres-Schichten liegen in der Nebendatei ──────────────────────────
+    # ⚠ DER ZEIGER IST PFLICHT. Ohne `nachladen.jahre` sieht eine Stand-4-Datei fuer die
+    # Anzeige aus wie eine Stand-1-Datei ohne Jahres-Layer: der Umschalter verschwaende,
+    # und zwar lautlos — kein Fehler, keine leere Ansicht, nur eine fehlende Funktion.
+    if d["schema"] >= 4:
+        assert "jahre" not in d and "bieter" not in d, (
+            "Stand 4 traegt die Jahres-Schichten NICHT in der Hauptdatei — sonst ist die "
+            "Aufteilung umsonst und das Budget wieder auf Kante")
+        zeiger = d.get("nachladen", {}).get("jahre")
+        assert zeiger, "Stand 4 ohne `nachladen.jahre` — der Umschalter verschwaende"
+        neben = p.with_name(zeiger)
+        assert neben.exists(), f"{zeiger} fehlt — der Zeiger geht ins Leere"
+        n = json.loads(neben.read_text(encoding="utf-8"))
+        # ⚠ EIN LAUF, EIN STAND. Zwei getrennt gebaute Dateien zeigen sonst zwei Zeitpunkte
+        # unter einer Ueberschrift, und niemand sieht es.
+        assert n["erzeugt"] == d["erzeugt"] and n["stand"] == d["stand"], (
+            "Haupt- und Nebendatei stammen aus verschiedenen Laeufen")
+        assert n["schema"] == d["schema"]
+        d = {**d, **{k: n[k] for k in ("jahre", "bieter")}}
+
     j = d["jahre"]
     assert j["achse"] == list(range(j["von"], j["bis"] + 1))
     # Das laufende Jahr ist per Definition ein Teiljahr — steht es in der Achse, zeichnet

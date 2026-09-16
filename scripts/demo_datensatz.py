@@ -49,7 +49,11 @@ BLOECKE = ("belegt", "ko", "eig", "zus", "fri", "pos", "auf")
 NEBEN = ("branchen.json", "plz-geo.json", "anforderungsprofil.json", "bieterfragen.json",
          "schwellen.json", "standardtext.json", "stellenprofil.json", "umfang.json",
          "unterlagenstand.json", "fenster.json", "fristwiderspruch.json", "landing.json",
-         "doc-signals.json", "doc-struktur.json", "regionen.json", "marktpuls.json")
+         "doc-signals.json", "doc-struktur.json", "regionen.json", "marktpuls.json",
+         # ⚠ GEHOERT DAZU, auch wenn sie erst nachgeladen wird. Fehlt sie im Demo-Satz,
+         # zeigt die Jahresansicht dort ins Leere — und zwar nur dort, also genau da, wo
+         # niemand hinsieht, bevor sie jemand vorfuehrt.
+         "marktpuls-jahre.json")
 
 
 def bloecke(d: dict) -> dict:

@@ -784,7 +784,10 @@ _FLAECHEN = (
     (_VERGABEBLICK, "vergabeblick", "export_strategie.py"),
     (_FIRMENPROFIL, "firmenprofil", "export_firma_profiles.py"),
     (_TREFFERGUETE, "trefferguete", "api/trefferguete"),
-    (_MARKTPULS, "marktpuls", "export_marktpuls.py"),
+    # ⚠ `export_marktpuls.py` gibt es nicht und gab es nie — der Bauer heisst
+    # `build_marktpuls.py`. Ein Verweis auf eine Datei, die es nicht gibt, ist schlimmer
+    # als keiner: er sieht aus wie eine Antwort. Korrigiert 2026-09-16.
+    (_MARKTPULS, "marktpuls", "build_marktpuls.py"),
     (_COCKPIT, "cockpit", "lokal (Nutzerzustand)"),
     (_EIGNUNGSCHECK, "eignungscheck", "export_landing.py"),
     # ⚠ Fläche „geplant": noch nirgends angezeigt. Sie steht bewusst in derselben Liste,

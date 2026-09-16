@@ -127,6 +127,11 @@ export type MarktpulsDaten = {
   jahre?: MarktpulsJahre;
   /** optional wie `jahre` — eine Datei nach Stand 1/2 führt den Layer nicht. */
   bieter?: MarktpulsBieter;
+  /** Stand 4: die beiden Jahres-Schichten liegen in einer eigenen Datei und werden erst
+   *  geholt, wenn jemand die Jahresansicht öffnet. ⚠ Dieser Zeiger ist der einzige
+   *  Unterschied zwischen „es gibt keine Schichten" (Stand 1) und „sie liegen daneben" —
+   *  ohne ihn verschwände der Umschalter, ohne dass irgendetwas fehlschlägt. */
+  nachladen?: { jahre?: string };
   lage: {
     stand: string; fenster_tage: number;
     je_land: Record<string, MarktpulsLageLand>;
@@ -732,17 +737,28 @@ function BieterDiagramm({ d, land, branche }: {
 
 /* ── Komponente ───────────────────────────────────────────────────────────── */
 export default function Marktpuls({
-  daten, src = "/api/marktpuls", titel, zeigeLage = true,
+  daten, src = "/api/marktpuls", srcJahre = "/api/marktpuls/jahre", titel, zeigeLage = true,
 }: {
   daten?: MarktpulsDaten | null;
   src?: string;
+  srcJahre?: string;
   titel?: string;
   zeigeLage?: boolean;
 }) {
   const { t } = useSprache();
   const [geholt, setGeholt] = useState<MarktpulsDaten | null>(null);
   const [fehler, setFehler] = useState(false);
-  const d = daten ?? geholt;
+  /** Die nachgeladenen Jahres-Schichten (Stand 4). Getrennt gehalten, nicht in die
+   *  Basisdaten hineingeschrieben: `daten` kommt als Prop von der Server-Komponente und
+   *  gehört uns nicht. */
+  const [schichten, setSchichten] = useState<
+    Pick<MarktpulsDaten, "jahre" | "bieter"> | null>(null);
+  const basis = daten ?? geholt;
+  /** Basis + nachgeladene Schichten. Führt die Basisdatei die Schichten schon (Stand 3
+   *  oder früher), bleibt alles wie bisher — dann wird auch nichts nachgeladen. */
+  const d = useMemo<MarktpulsDaten | null>(
+    () => (basis && schichten ? { ...basis, ...schichten } : basis),
+    [basis, schichten]);
 
   useEffect(() => {
     if (daten) return;                       // vorgeladen → kein Nachladen (Briefing §5)
@@ -761,11 +777,44 @@ export default function Marktpuls({
   const [ansicht, setAnsicht] = useState<"saison" | "jahre" | "bieter">("saison");
   const aktivesLand = land ?? d?.gesamt_key ?? "gesamt";
   // Eine Datei nach Stand 1 kennt `jahre` nicht — dann gibt es den Umschalter nicht,
-  // statt auf eine leere Ansicht zu zeigen.
-  const hatJahre = !!d?.jahre?.achse?.length;
-  const hatBieter = !!d?.bieter && Object.keys(d.bieter.reihen).length > 0;
-  const zeigeJahre = hatJahre && ansicht === "jahre";
-  const zeigeBieter = hatBieter && ansicht === "bieter";
+  // statt auf eine leere Ansicht zu zeigen. Seit Stand 4 gibt es einen dritten Fall: die
+  // Schichten liegen daneben und sind noch nicht geholt. Dann soll der Umschalter DA sein
+  // (es gibt sie ja), nur die Ansicht dahinter ist einen Augenblick leer.
+  const kannNachladen = !!basis?.nachladen?.jahre;
+  const [nachladeFehler, setNachladeFehler] = useState(false);
+
+  /* ⚠ ERST BEIM ÖFFNEN, UND NUR EINMAL. Die beiden Jahres-Schichten sind 16 KB und werden
+     auf der Startansicht (Saison) nicht gebraucht. Sie werden geholt, sobald jemand auf
+     „Jahre" oder „Bieter" umschaltet — danach liegen sie im State und im HTTP-Cache.
+
+     ⚠ Ein Fehlschlag darf die Seite nicht kosten: schlägt der Abruf fehl, verschwindet der
+     Umschalter wieder und die Saison bleibt stehen. Ein halber Marktpuls ist besser als
+     eine Fehlerseite. */
+  useEffect(() => {
+    if (!kannNachladen || schichten || nachladeFehler) return;
+    if (ansicht === "saison") return;
+    let lebt = true;
+    fetch(srcJahre, { cache: "force-cache" })
+      .then((r) => (r.ok ? r.json() : Promise.reject(new Error(String(r.status)))))
+      .then((j) => {
+        if (!lebt) return;
+        const teil = j as Pick<MarktpulsDaten, "jahre" | "bieter">;
+        setSchichten({ jahre: teil.jahre, bieter: teil.bieter });
+      })
+      .catch(() => { if (lebt) setNachladeFehler(true); });
+    return () => { lebt = false; };
+  }, [ansicht, kannNachladen, schichten, nachladeFehler, srcJahre]);
+
+  const hatJahre = (!!d?.jahre?.achse?.length) || (kannNachladen && !nachladeFehler);
+  const hatBieter = (!!d?.bieter && Object.keys(d.bieter.reihen).length > 0)
+    || (kannNachladen && !nachladeFehler);
+  // ⚠ `zeige*` verlangt die DATEN, nicht nur die Möglichkeit — sonst rendert die Ansicht
+  // gegen `d.jahre!` und stirbt an dem Ausrufezeichen, während der Abruf noch läuft.
+  const geladenJahre = !!d?.jahre?.achse?.length;
+  const geladenBieter = !!d?.bieter && Object.keys(d.bieter.reihen).length > 0;
+  const zeigeJahre = geladenJahre && ansicht === "jahre";
+  const zeigeBieter = geladenBieter && ansicht === "bieter";
+  const laedtSchicht = ansicht !== "saison" && kannNachladen && !schichten && !nachladeFehler;
 
   if (fehler) return <div className="mp-wrap"><p className="mp-sub">{t(TXT.ladefehler)}</p></div>;
   if (!d) return <div className="mp-wrap"><p className="mp-sub">{t(TXT.laedt)}</p></div>;
@@ -896,7 +945,11 @@ export default function Marktpuls({
       </div>
 
       {/* ── Teil 1: Saisonalität ODER Jahres-Layer ── */}
-      {zeigeBieter ? (
+      {/* ⚠ Der Ladezustand braucht dieselbe Höhe wie das Diagramm, sonst springt die Seite
+          beim Umschalten. `mp-nachlade-platz` hält sie frei. */}
+      {laedtSchicht ? (
+        <div className="mp-nachlade-platz"><p className="mp-sub">{t(TXT.laedt)}</p></div>
+      ) : zeigeBieter ? (
         <BieterDiagramm d={d} land={aktivesLand} branche={branche} />
       ) : zeigeJahre ? (
         <>

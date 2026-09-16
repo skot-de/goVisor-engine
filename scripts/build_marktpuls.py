@@ -134,6 +134,11 @@ GOLD = ROOT / "data" / "gold"
 FENSTER_JAHRE = 5           # Briefing §3.1: letzte 5 vollständige Jahre
 MIN_FAELLE = 200            # Briefing §3.4: Mindestfallzahl je Land×Branche-Kombination
 LAGE_TAGE = 30              # Briefing §4.1: Zuschläge/Aufhebungen der letzten 30 Tage
+# ⚠ ZWEITE DATEI (Stand 4). Die Jahres-Schichten liegen daneben und werden erst geladen,
+# wenn jemand die Jahresansicht oeffnet. Der Name steht hier EINMAL und wandert ueber
+# `nachladen` in die Hauptdatei — die Anzeige tippt ihn nicht.
+NEBENDATEI = "marktpuls-jahre.json"
+
 AUSREISSER_PCT = 25.0       # Briefing §7: ab welcher Abweichung ein Monat hervorgehoben wird
 # --- Wann ein Monat im Befundsatz BENANNT werden darf ---------------------------
 # Früher entschied allein `AUSREISSER_PCT` über einen Fenster-Durchschnitt. Das war aus zwei
@@ -478,7 +483,15 @@ def saison_block(con, wo: str, jahre: list[int], stab: dict[int, dict] | None = 
         FROM voll v JOIN jm ON jm.jahr = v.jahr
         GROUP BY 1 ORDER BY 1
     """).fetchall()
-    monate = [{"m": int(m), "avg": round(a, 1)} for m, a, _ in rows]
+    # ⚠ KEINE NACHKOMMASTELLE. `avg` ist die Ø-Zahl der Verfahren je Kalendermonat — die
+    # Anzeige rundet sie ohnehin (`Math.round(m.avg)` und `zahl()` mit 0 Nachkommastellen
+    # in `Marktpuls.tsx`), die Stelle war also nie sichtbar. Gemessen am 2026-09-16 kostete
+    # sie **838 Byte** von einem 50-KB-Budget, das zu dem Zeitpunkt um 829 Byte gerissen war.
+    #
+    # ⚠ Das ist eine Ersparnis ohne Informationsverlust, aber KEINE Loesung fuer das Budget:
+    # die beiden Jahres-Schichten wachsen mit jedem Kalenderjahr um rund 300 Byte. Wer hier
+    # das naechste Mal ansteht, braucht eine Entscheidung, keine Nachkommastelle.
+    monate = [{"m": int(m), "avg": round(a)} for m, a, _ in rows]
     total = sum(r[1] for r in rows) * len(jahre)
     jahresmittel = sum(r[1] for r in rows) / 12 if rows else 0.0
     stab = stab or {}
@@ -1135,13 +1148,22 @@ def bauen(laender: list[str], n_jahre: int, heute: dt.date, ab_jahr: int | None 
     con.close()
 
     return {
+        # 4 = `jahre` und `bieter` liegen in einer ZWEITEN Datei (`marktpuls-jahre.json`)
+        #     und werden erst geladen, wenn jemand die Jahresansicht oeffnet. Grund: die
+        #     beiden Schichten waren 27,6 von 52,0 KB, und sie wachsen mit JEDEM Kalender-
+        #     jahr um rund 300 Byte weiter — das 50-KB-Budget aus Briefing §5 war damit
+        #     strukturell erreicht, nicht aus Nachlaessigkeit. Die Hauptdatei faellt auf
+        #     rund 24 KB und waechst nur noch mit den Daten, nicht mit der Zeit.
+        #     ⚠ `nachladen` sagt der Anzeige, dass es die Schichten GIBT. Ohne diesen
+        #     Zeiger waere eine Stand-4-Datei von einer Stand-1-Datei nicht zu
+        #     unterscheiden, und der Umschalter verschwaende stillschweigend.
         # 3 = Single-Bid-Layer (`bieter`); Befund steht jetzt auf Richtungstreue statt
         #     auf einer Schwelle und trägt seinen Beleg; `saison.*.jahre` und die
         #     durchgängigen `pct_naiv` sind entfallen (beide ungenutzt, 5 KB).
         # 2 = Jahres-Layer dazugekommen (`jahre`), `coverage.*.bestand_von` neu.
         # Die Anzeige muss mit einer Datei ohne `jahre` weiter zurechtkommen (Stand 1),
         # sonst bricht sie am ersten Deploy, bei dem Skript und Frontend nicht Schritt halten.
-        "schema": 3,
+        "schema": 4,
         "erzeugt": dt.datetime.now().isoformat(timespec="seconds"),
         "stand": heute.isoformat(),
         "laender": laender,
@@ -1155,6 +1177,18 @@ def bauen(laender: list[str], n_jahre: int, heute: dt.date, ab_jahr: int | None 
         "bieter": bieter,
         "lage": lage,
     }
+
+
+def _atomar(ziel: pathlib.Path, text: str) -> None:
+    """Erst in eine Nebendatei, dann umbenennen — nie eine halb geschriebene JSON.
+
+    ⚠ Zwei Dateien, die zusammengehoeren, duerfen sich nicht gegenseitig ueberholen: ein
+    abgebrochener Lauf darf keine Hauptdatei hinterlassen, die auf eine halbe Nebendatei
+    zeigt. `os.replace` ist auf demselben Dateisystem atomar.
+    """
+    teil = ziel.with_suffix(ziel.suffix + ".teil")
+    teil.write_text(text, encoding="utf-8")
+    teil.replace(ziel)
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -1181,7 +1215,24 @@ def main(argv: list[str] | None = None) -> int:
     heute = dt.date.fromisoformat(args.stichtag) if args.stichtag else dt.date.today()
 
     daten = bauen(laender, args.jahre, heute, args.ab_jahr)
+    # ── AUFTEILEN (Stand 4) ────────────────────────────────────────────────────────────
+    # Die beiden Jahres-Schichten wandern in eine eigene Datei. Sie tragen zusammen ueber
+    # die Haelfte des JSON und werden nur gebraucht, wenn jemand die Jahresansicht oeffnet;
+    # die Startansicht ist die Saison.
+    neben = pathlib.Path(args.out).with_name(NEBENDATEI)
+    jahres_teil = {
+        "schema": daten["schema"],
+        "erzeugt": daten["erzeugt"],
+        "stand": daten["stand"],
+        "jahre": daten.pop("jahre"),
+        "bieter": daten.pop("bieter"),
+    }
+    # ⚠ Der Zeiger MUSS mitgeschrieben werden, sonst sieht eine Stand-4-Datei fuer die
+    # Anzeige aus wie eine Stand-1-Datei ohne Jahres-Layer — und der Umschalter
+    # verschwaende, ohne dass irgendetwas fehlschlaegt.
+    daten["nachladen"] = {"jahre": NEBENDATEI}
     text = json.dumps(daten, ensure_ascii=False, separators=(",", ":"))
+    text_jahre = json.dumps(jahres_teil, ensure_ascii=False, separators=(",", ":"))
 
     print(f"Länder: {', '.join(laender)} | Fenster {daten['fenster']['von']}–{daten['fenster']['bis']}")
     for c, cov in daten["coverage"].items():
@@ -1193,7 +1244,7 @@ def main(argv: list[str] | None = None) -> int:
     print(f"  Jahresmittel {g['jahresmittel']:,.0f}/Monat, Befund {g['befund']}")
     print("  " + "  ".join(f"{m['m']:>2}:{m['pct']:+.0f}%" for m in g["monate"]))
 
-    j = daten["jahre"]
+    j = jahres_teil["jahre"]
     print(f"\nJahres-Layer {j['von']}–{j['bis']} ({len(j['achse'])} Jahre, "
           f"{j['laufendes_jahr']} als laufendes Jahr ausgelassen)")
     for land in [GESAMT] + laender:
@@ -1212,14 +1263,22 @@ def main(argv: list[str] | None = None) -> int:
                   f"{' ' + str(rest) if rest else ''}")
 
     print(f"\n  Lage: {daten['lage']['je_land'][GESAMT]}")
-    print(f"  JSON {len(text)/1024:.1f} KB")
+    print(f"  JSON {len(text)/1024:.1f} KB + {len(text_jahre)/1024:.1f} KB "
+          f"Jahres-Schichten (nachgeladen)")
 
     if args.dry_run:
         return 0
     out = pathlib.Path(args.out)
     out.parent.mkdir(parents=True, exist_ok=True)
-    out.write_text(text, encoding="utf-8")
-    print(f"→ {out}")
+    # ⚠ ZWEI DATEIEN, EIN LAUF, GLEICHE STEMPEL. `erzeugt`/`stand` stehen in beiden — wer
+    # sie getrennt baute, bekaeme zwei Staende unter einer Ansicht. Geschrieben wird die
+    # Nebendatei ZUERST: faellt der Lauf dazwischen aus, zeigt die Hauptdatei noch auf
+    # nichts Neues, statt auf eine Datei, die es nicht gibt.
+    neben.parent.mkdir(parents=True, exist_ok=True)
+    _atomar(neben, text_jahre)
+    _atomar(out, text)
+    print(f"→ {out}  ({len(text)/1024:.1f} KB)")
+    print(f"→ {neben}  ({len(text_jahre)/1024:.1f} KB, wird erst bei der Jahresansicht geladen)")
     return 0
 
 

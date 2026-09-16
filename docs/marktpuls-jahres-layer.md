@@ -20,6 +20,39 @@ Bruchstellen markiert. Umschalter „Ansicht: Monate im Jahr / Jahre" im Element
 Gemessen: Achse **2004–2025**, 1.137.719 Verfahren, JSON **37,0 KB** (Grenze 50 KB),
 Laufzeit **44 s** statt 40 s.
 
+> **Nachtrag 2026-09-16 — die Schicht liegt jetzt in einer eigenen Datei (Stand 4).**
+>
+> Aus 37,0 KB wurden 52,0 KB: Luxemburgs Historie reicht seit dem Silber-Neubau bis 2004
+> zurück, und der Bieter-Layer kam dazu. Damit war das 50-KB-Budget aus Briefing §5
+> gerissen — und zwar **strukturell**, nicht aus Nachlässigkeit: die beiden Jahres-Schichten
+> wachsen mit **jedem Kalenderjahr** um rund 300 Byte, ganz ohne neue Daten. Vorher hatte
+> schon jemand 5 KB herausgeholt (`pct_naiv` nur im Gesamtblock, `stabil` nur wenn wahr);
+> das Fett war weg.
+>
+> | Datei | Inhalt | Grösse | Wann geladen |
+> |-------|--------|--------|--------------|
+> | `marktpuls.json` | Saison, Coverage, Lage | **23,0 KB** | mit der Seite |
+> | `marktpuls-jahre.json` | `jahre`, `bieter` | **27,0 KB** | erst beim Umschalten auf „Jahre" oder „Bieter" |
+>
+> Die Startansicht ist die Saison; die Jahres-Schichten braucht dort niemand. Die
+> Hauptdatei wächst jetzt nur noch mit den Daten, nicht mehr mit der Zeit.
+>
+> ⚠ **Der Zeiger ist der Kern.** `marktpuls.json` trägt `nachladen: {"jahre": …}`. Ohne ihn
+> sähe eine Stand-4-Datei für die Anzeige aus wie eine Stand-1-Datei ohne Jahres-Layer:
+> der Umschalter verschwände, und zwar lautlos — kein Fehler, keine leere Ansicht, nur eine
+> fehlende Funktion. `tests/test_marktpuls.py` hält den Zeiger, die Existenz der Nebendatei
+> und **gleiche `erzeugt`/`stand` in beiden** fest (zwei getrennt gebaute Dateien zeigten
+> sonst zwei Zeitpunkte unter einer Überschrift).
+>
+> Eingetragen ist die Nebendatei ausserdem im Altersbericht (`daily_leads.sh`) und im
+> Demo-Datensatz (`demo_datensatz.py`) — fehlte sie dort, zeigte die Jahresansicht
+> ausgerechnet in der Vorführung ins Leere.
+>
+> Geladen wird über `/api/marktpuls/jahre`; die Route ist genauso gesichert wie die
+> Hauptroute und antwortet bei fehlender Datei mit **503, nicht 404** — die Datei fehlt
+> nicht, weil es sie nicht gibt, sondern weil ein Lauf sie nicht geschrieben hat. Die
+> Anzeige blendet den Umschalter dann aus und zeigt die Saison weiter.
+
 ---
 
 ## 2. Die Regel, die alle Länder gleich behandelt

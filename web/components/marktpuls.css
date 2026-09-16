@@ -207,3 +207,11 @@
   display: block; font-size: var(--t-meta, 11px); color: var(--ink-400, #8c9b95);
   font-variant-numeric: tabular-nums; margin-top: 1px;
 }
+
+/* Platzhalter, während die Jahres-Schichten nachgeladen werden (Stand 4). ⚠ Dieselbe
+   Höhe wie `.mp-bars` plus Achsenbeschriftung — ohne sie springt die Seite beim
+   Umschalten, und ein Sprung sieht aus wie ein Fehler. */
+.mp-nachlade-platz {
+  margin-top: 14px; height: 168px;
+  display: flex; align-items: center; justify-content: center;
+}
