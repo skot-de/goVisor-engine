@@ -74,7 +74,7 @@ def test_waehrung_kommt_vom_eltern_knoten():
 
 
 def test_ohne_fmtval_greift_die_europaeische_lesart():
-    """`@FMTVAL` ist der sichere Weg, aber nicht der einzige."""
+    """Der Text traegt die Zahl auch ohne Attribut."""
     n = schema.parse(_XML_OHNE_FMTVAL, "346910_2016")
     assert n.final_value == 189_945_844.15, (
         f"Ohne FMTVAL kommt {n.final_value:,.2f} heraus — der Textknoten muss europaeisch "
@@ -88,11 +88,33 @@ def test_fmtval_wird_nicht_europaeisch_gelesen():
     Im Text ist der Punkt ein TAUSENDER-Trenner (`1.234.567,89`), in `@FMTVAL` ist er der
     DEZIMAL-Trenner (`189945844.15`). Wer `@FMTVAL` durch die europaeische Lesart schickt,
     macht aus 189.945.844,15 die Zahl 18.994.584.415 — denselben Faktor 100, nur aus der
-    anderen Richtung.
+    anderen Richtung. Hier steht kein Text, also greift der Rueckfall.
     """
     import xml.etree.ElementTree as ET
-    elem = ET.fromstring('<VALUE_COST FMTVAL="1234567.89">1 234 567,89</VALUE_COST>')
+    elem = ET.fromstring('<VALUE_COST FMTVAL="1234567.89"></VALUE_COST>')
     assert schema._kosten_betrag(elem) == 1_234_567.89
+
+
+def test_der_text_schlaegt_ein_kaputtes_fmtval():
+    """⚠ `@FMTVAL` SIEHT maschinenlesbar aus und ist es in den alten Jahrgaengen nicht.
+
+    Gemessen am 2026-09-15 in EINEM Dokument (LU 226973_2011) vier Schreibweisen:
+
+        Text          @FMTVAL                Verhaeltnis
+        3 636 304     3636304000000000000    x 10^12
+        1 000 000     100000000              x 100 (Cent)
+        900 000       9000000000             x 10000
+        900 000       900000.00              richtig
+
+    Der erste Reparaturversuch bevorzugte `@FMTVAL` und machte aus einem Auftrag ueber
+    3,6 Mio EUR einen ueber 3,6 Trillionen — schlimmer als der Fehler davor. Diese Probe
+    haelt den Vorrang fest: **der Text gilt.**
+    """
+    import xml.etree.ElementTree as ET
+    elem = ET.fromstring(
+        '<VALUE_COST FMTVAL="3636304000000000000">3 636 304</VALUE_COST>')
+    assert schema._kosten_betrag(elem) == 3_636_304.0, (
+        "Ein kaputtes @FMTVAL darf den lesbaren Text nicht schlagen.")
 
 
 # ── Der Schaetzwert derselben Aera ────────────────────────────────────────────────────
@@ -133,3 +155,31 @@ def test_neuer_knoten_hat_vorrang_vor_dem_alten():
     assert n.estimated_value == 777.0, (
         f"estimated_value ist {n.estimated_value!r} — der alte Knoten hat den neuen "
         "ueberschrieben.")
+
+
+# ── Die Kennung des Textformats ───────────────────────────────────────────────────────
+
+_TEXT = (b"ND: 68-2005\nTD: 7 - Auftragsbekanntmachung\nCY: DE\nAU: Stadt Musterhausen\n"
+         b"TI: Lieferung von Buerostuehlen\nPD: 20050104\nOL: DE\nTX: Beschreibung.\n")
+
+
+def test_textformat_kennung_wird_kanonisch():
+    """⚠ `ND` ueberschrieb die schon normalisierte Kennung — mit Bindestrich.
+
+    `silver.build_month` normalisiert den Dateinamen ueber `schema.normalize_notice_id`;
+    `_parse_text` warf das Ergebnis wieder weg und nahm das `ND`-Feld roh. Ergebnis
+    (gemessen 2026-09-16, nach dem ersten Silber-Neubau seit Monaten): **246.908**
+    DE-Bekanntmachungen in der Form `68-2005` statt `68_2005`, dazu AT 41.706 und
+    LU 8.868 — 100 % der Quelle `text`, Jahrgaenge 2004–2010.
+
+    ⚠ **Die Lehre ist groesser als der Fehler.** Es gab dafuer schon eine
+    „Einmal-Migration" (`scripts/normalize_notice_ids.py`), die den Bestand geheilt hat.
+    Eine Migration ist aber keine Einmal-Sache, solange der Erzeuger den Fehler weiter
+    erzeugt: sie verdeckt die Ursache, bis jemand neu baut. Hier lagen zwischen Heilung
+    und Rueckfall zwei Monate, und aufgefallen ist es nur, weil ein Test den Bestand
+    prueft statt den Code.
+    """
+    n = schema.parse(_TEXT, "68_2005")
+    assert n.notice_id == "68_2005", (
+        f"notice_id ist {n.notice_id!r} — die Form mit Bindestrich laesst beim naechsten "
+        "Re-Ingest alle Gold-Zeilen darauf verwaisen.")

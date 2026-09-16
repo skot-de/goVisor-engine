@@ -265,14 +265,30 @@ die Währungsumrechnung die Sätze hereinholte: der eine Fix legte den anderen F
 
 ### Behoben
 
-`schema._kosten_betrag()` liest **`@FMTVAL` zuerst** — TED schreibt den Betrag zweimal,
-lesbar und maschinenlesbar, und nur das Attribut hängt nicht am Format. Fehlt es, greift
-die europäische Lesart. Die Währung kommt vom Eltern-Knoten.
+`schema._kosten_betrag()` liest den **Textknoten**, europäisch: Leerzeichen und Punkt sind
+Tausender, das Komma ist der Dezimaltrenner. `@FMTVAL` bleibt Rückfall für Knoten ohne
+Text. Die Währung kommt vom Eltern-Knoten.
 
-> ⚠ Die beiden Lesarten sind **gegenläufig**: im Text ist der Punkt Tausender-Trenner
-> (`1.234.567,89`), in `@FMTVAL` Dezimal-Trenner (`1234567.89`). Wer sie verwechselt,
-> erzeugt denselben Faktor 100 aus der anderen Richtung. `tests/test_legacy_kostenwert.py`
-> hält beide Richtungen fest.
+> ⚠ **Der erste Reparaturversuch griff nach `@FMTVAL` — und war schlimmer als der Fehler.**
+> Das Attribut sieht maschinenlesbar aus und ist in den alten Jahrgängen nicht normiert.
+> In einer einzigen Datei (LU 226973_2011) stehen vier Varianten nebeneinander:
+>
+> ```
+> Text          @FMTVAL                Verhältnis
+> 3 636 304     3636304000000000000    × 10¹²
+> 1 000 000     100000000              × 100  (Cent)
+> 900 000       9000000000             × 10000
+> 900 000       900000.00              richtig
+> ```
+>
+> Aus einem Auftrag über 3,6 Mio EUR wurde einer über 3,6 Trillionen. Aufgefallen ist es
+> nur, weil `pruefe_werte.py` nach dem Neubau sofort wieder rot meldete — **der Wächter
+> fand den Fehler in seiner eigenen Reparatur.** Falle H14 in
+> [Kapitel 12](12-fallenkatalog.md).
+>
+> ⚠ Und die beiden Lesarten sind **gegenläufig**: im Text ist der Punkt Tausender-Trenner
+> (`1.234.567,89`), in `@FMTVAL` Dezimal-Trenner (`1234567.89`).
+> `tests/test_legacy_kostenwert.py` hält beide Richtungen fest.
 
 Gegengeprüft an drei echten Bronze-Dateien (2785_2017: 4.226.600.976,20 EUR;
 371305_2012: 1.148.695.080,00 EUR; 249447_2011: 784.621.625,10 EUR) — alle drei liefern
@@ -286,17 +302,73 @@ Derselbe Block las den Vor-2014-**Schätzwert** überhaupt nicht.
 Legacy-Zweig nicht — DE 23.663, AT 2.072, LU 648 Schätzwerte blieben leer, die im XML
 danebenstanden. Ebenfalls behoben.
 
+### Was der Neubau gebracht hat
+
+Ausgeführt in der Nacht zum 2026-09-16, alle vier Länder, danach der reguläre Nachtlauf
+(72 min) über das neue Silber:
+
+```
+Silber            ohne Währung        Werte > 1 Mrd      Schätzwerte
+  DE       74.051 →      0        2.177 →   211      +23.663
+  AT        8.425 →      0          354 →    34       +2.072
+  LU        2.227 →      0           56 →    14         +648
+  CH        1.474 →      0           49 →    11           ±0
+```
+
+Und im ausgelieferten Gold — die Zahl, um die es die ganze Zeit ging:
+
+```
+Leads mit Wert      vorher      nachher
+  CH                  1 %         96 %   (8.070 von 8.401, davon 6.550 umgerechnet)
+  DE                             91 %
+  AT                             98 %
+  LU                             60 %
+```
+
+`waehrung_angenommen` steht in allen vier Ländern auf **0**. Die Abnahmeschwelle dieses
+Kapitels („unter 50 % ist das Land nicht wertfähig") ist damit überall gerissen — LU mit
+60 % am knappsten, und das ist der nächste Punkt zum Hinsehen.
+
+⚠ **Zwei Dinge fielen beim Neubau auf, die nichts mit Währung zu tun hatten** und ohne ihn
+weiter unentdeckt geblieben wären:
+
+- **246.908 + 41.706 + 8.868 Kennungen kamen in der falschen Form zurück.** Das Textformat
+  (2004–2010) führt die Nummer als `68-2005`, und `_parse_text` überschrieb damit die
+  bereits kanonische Kennung. Es gab dafür eine „Einmal-Migration" — die den Bestand
+  geheilt und die Ursache verdeckt hatte. ⚠ **Eine Migration ist keine Einmal-Sache,
+  solange der Erzeuger den Fehler weiter erzeugt.**
+- **Die Migration selbst war DE-fest** und kannte `master_id`/`duplicate_id` des
+  Dublettenwalls nicht — 11 AT-Waisen, gefunden von `pruefe_gold_integritaet`, nicht vom
+  Migrationsskript. Beides behoben, beides jetzt über `laender.AKTIV`.
+
 ### ⚠ Was noch aussteht
 
 **Die Reparatur sitzt im Parser, also in der Bronze→Silber-Strecke.** Bis Silber für die
-betroffenen Länder neu gebaut ist, tragen die Daten die alten Zahlen:
+betroffenen Länder neu gebaut ist, tragen die Daten die alten Zahlen.
 
-```bash
-python3 -m govisor.cli silver --country XX --max-pages 0 --silber
-```
+⚠ **Und der Weg dorthin ist nicht für alle Länder derselbe** — das ist die Falle in diesem
+Absatz. Es gibt zwei Bronze-Bestände, und welcher gilt, sieht man an den Dateinamen im
+Silber:
+
+| Bronze | Silber heisst | Neubau |
+|--------|---------------|--------|
+| `data/raw/<LAND>/<YYYY-MM>.tar.gz` (Monatspakete) | `2016-08.parquet` | `python3 -m govisor.cli silver --country XX --force` |
+| `data/raw_live/<LAND>/…/<pub>.xml` (Live-Abruf) | `2016-08-live.parquet` | `python3 scripts/fetch_ted_live.py --country XX --nur-silber` |
+
+Die Schweiz hat **kein** Monatspaket-Bronze (`silver.available_months` liefert 0) — ihr
+gesamter TED-Bestand kam über den Live-Abruf, und `cli silver --country CH` täte
+klaglos gar nichts. Genau so sieht ein Neubau aus, der nicht stattgefunden hat.
+
+`--nur-silber` holt nichts aus dem Netz: es parst die vorhandenen XML neu und schreibt sie
+über **denselben** Weg wie der Live-Abruf (`_mit_bestand`), sodass die Nachbarquellen
+desselben Monats (simap, atverg, DÖE) unberührt bleiben. Dafür gibt es das Bronze — der
+Code sagt es selbst: „ein späterer Parser-Fix läuft über lokale Dateien statt 13k neuer
+Requests."
 
 `scripts/pruefe_werte.py` sagt jede Nacht, wie weit das ist — solange es Befunde meldet,
-steht der Neubau aus.
+steht der Neubau aus. Für DE, AT, CH und LU ist er am 2026-09-16 erledigt; offen bleiben
+**EU** (8 von 69 Werten über 1 Mrd) und **PL** (348 von 125.084) — Altbestände der
+zurückgebauten Länder, nicht geprüft.
 
 ## Prüfung für die Abnahme
 

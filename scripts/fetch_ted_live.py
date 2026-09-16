@@ -153,6 +153,60 @@ def _mit_bestand(out: Path, neu: pa.Table, table_schema, neue_ids: set[str]) -> 
     return pa.concat_tables([alt, neu])
 
 
+def _bronze_dateien(country: str) -> list[Path]:
+    """Alle roh gespeicherten XML dieses Landes — fuer den Neubau ohne Netz.
+
+    ⚠ DIE ORDNER SIND NICHT EINHEITLICH BENANNT. Der taegliche Lauf legt je Monat ab
+    (`2026-09/`), die Historien-Nachzuege je Jahr (`2016-01/` enthaelt ganz 2016). Beide
+    Formen liegen nebeneinander, und beide sind gueltig — der Zielmonat kommt ohnehin aus
+    dem `publication_date` im XML, nie aus dem Ordnernamen.
+    """
+    wurzel = BRONZE / country
+    if not wurzel.is_dir():
+        return []
+    return sorted(wurzel.glob("*/*.xml"))
+
+
+def neu_aus_bronze(country: str, workers: int = 4) -> int:
+    """Silber aus dem vorhandenen Roh-XML neu bauen — **ohne einen einzigen Request**.
+
+    Genau dafuer gibt es das Bronze: „ein spaeterer Parser-Fix laeuft ueber lokale Dateien
+    statt 13k neuer Requests" (s. `_fetch_xml`). Am 2026-09-15 war das kein Gedankenspiel
+    mehr — die Vor-2014-Waehrung wurde am falschen Knoten gesucht, und 1.474 Schweizer
+    Zuschlaege trugen deshalb einen Wert ohne Waehrung, ueber die Haelfte davon zusaetzlich
+    das Hundertfache.
+
+    ⚠ Geschrieben wird ueber DENSELBEN Weg wie beim Live-Abruf (`_mit_bestand`): der
+    Bestand der Datei bleibt stehen, nur die neu geparsten Kennungen werden ersetzt. Ein
+    Neubau darf die Nachbarquellen desselben Monats (simap, atverg, DOeE) nicht anfassen.
+    """
+    dateien = _bronze_dateien(country)
+    if not dateien:
+        log(f"Kein Roh-XML unter {BRONZE / country} — nichts neu zu bauen.")
+        return 0
+
+    # ⚠ IN STAPELN, NICHT AM STUECK. `_schreibe` sammelt ALLE Zeilen im Speicher und
+    # schreibt erst am Ende — beim Live-Abruf sind das ein paar tausend Bekanntmachungen
+    # eines Monats, beim Neubau aber der ganze Bestand. Gemessen am 2026-09-15: nach 48
+    # Sekunden und rund 5.000 Dateien stand der Prozess bei 737 MB und wuchs weiter, auf
+    # einer Maschine mit 0,1 GB frei und 4,9 GB Swap in Benutzung. Ein Neubau, der die
+    # Maschine ins Swappen treibt, ist kein Neubau, sondern ein Ausfall mit Nebenwirkung.
+    #
+    # Die Ordner sind die natuerliche Grenze (je Monat oder je Jahr, s. `_bronze_dateien`).
+    # Zwei Stapel duerfen denselben Zielmonat treffen: `_mit_bestand` ersetzt nur die
+    # Kennungen des Stapels und laesst den Rest der Datei stehen.
+    stapel: dict[str, list[Path]] = defaultdict(list)
+    for d in dateien:
+        stapel[d.parent.name].append(d)
+    log(f"{country}: {len(dateien):,} XML in {len(stapel)} Stapel(n) — Neubau ohne Netz")
+    gesamt = 0
+    for i, (name, teil) in enumerate(sorted(stapel.items()), 1):
+        log(f"[{i}/{len(stapel)}] {name}: {len(teil):,} XML")
+        gesamt += _schreibe(country, [(p.stem, p) for p in teil], workers, seit=None)
+    log(f"{country}: {gesamt:,} Bekanntmachungen neu gebaut.")
+    return gesamt
+
+
 def main(since: str, until: str, limit: int | None, workers: int, country: str = "DE") -> int:
     cfg = Config(countries=(country,), data_dir="data")
     # Ohne Locale würden deutsche Heuristiken (Freemail-Domains, Bundes-Käufer,
@@ -170,6 +224,28 @@ def main(since: str, until: str, limit: int | None, workers: int, country: str =
     if not pubs:
         return 0
 
+    return _schreibe(country, [(pub, None) for pub in pubs], workers, seit=since)
+
+
+def _schreibe(country: str, aufgaben: list[tuple[str, Path | None]], workers: int,
+              seit: str | None) -> int:
+    """Parst die Aufgaben und schreibt Silber. `aufgaben` ist (Veroeffentlichungsnummer,
+    lokale Datei oder None). Mit Datei wird nichts geholt — das ist der Neubau-Weg.
+
+    ⚠ EIN EINZIGER SCHREIBWEG fuer Abruf und Neubau. Zwei Funktionen, die dasselbe
+    Parquet schreiben, driften auseinander, sobald eine von beiden gepflegt wird — und
+    `_mit_bestand` ist genau die Stelle, an der ein Drift Zeilen kostet.
+    """
+    cfg = Config(countries=(country,), data_dir="data")
+    # ⚠ DIE LOCALE GEHOERT AN DEN SCHREIBWEG, nicht an den Abruf. Sie stand nur in `main`
+    # — ein zweiter Aufrufer (der Neubau aus Bronze) haette fremdsprachige Namen still
+    # nach deutschen Regeln normalisiert. Lieber abbrechen als danebenliegen.
+    if country not in locales.LOCALES:
+        log(f"FEHLER: keine Locale für {country}.")
+        return 0
+    locales.use(country)
+    if not aufgaben:
+        return 0
     by_month = defaultdict(lambda: {name: [] for name in model.TABLES})
     fails = 0
     fremd = 0
@@ -182,7 +258,7 @@ def main(since: str, until: str, limit: int | None, workers: int, country: str =
         13k neuer Requests) UND der tägliche Lauf wird idempotent: schon geholte Notices
         werden übersprungen.
         """
-        ym_guess = since[:7]
+        ym_guess = (seit or "")[:7]
         cached = _bronze_path(pub, ym_guess, country)
         if cached.exists() and cached.stat().st_size > 500:
             return cached.read_bytes()
@@ -198,9 +274,12 @@ def main(since: str, until: str, limit: int | None, workers: int, country: str =
             time.sleep(1.5 * (2 ** attempt))       # 429 → warten und erneut
         return None
 
-    def work(pub):
+    def work(aufgabe):
+        pub, datei = aufgabe
         try:
-            raw = _fetch_xml(pub)
+            # ⚠ LIEGT DIE DATEI SCHON DA, WIRD NICHT GEHOLT. Das ist der ganze Unterschied
+            # zwischen Abruf und Neubau — und der Grund, warum das Bronze existiert.
+            raw = datei.read_bytes() if datei is not None else _fetch_xml(pub)
             if raw is None:
                 return pub, None, None
             # KANONISCHE ID — sonst schreibt der Live-Pfad `540447-2026`, während das
@@ -213,7 +292,7 @@ def main(since: str, until: str, limit: int | None, workers: int, country: str =
 
     done = 0
     with ThreadPoolExecutor(max_workers=workers) as pool:
-        for pub, notice, raw in pool.map(work, pubs):
+        for pub, notice, raw in pool.map(work, aufgaben):
             done += 1
             if notice is None:
                 fails += 1
@@ -225,13 +304,21 @@ def main(since: str, until: str, limit: int | None, workers: int, country: str =
             if not normalize.gehoert_zu_land(notice, country):
                 fremd += 1
                 continue
-            pd = notice.publication_date or since
+            # ⚠ OHNE `publication_date` GIBT ES KEINEN ZIELMONAT. Im Abruf faellt das
+            # Fenster-Startdatum ein; beim Neubau aus Bronze gibt es keins, und raten
+            # waere schlimmer als auslassen — der Satz steht ja bereits im Silber, nur
+            # eben mit den alten Zahlen. Er bleibt, statt in einen falschen Monat zu
+            # wandern und dort seinen Zwilling zu ueberschreiben.
+            pd = notice.publication_date or seit
+            if not pd:
+                fails += 1
+                continue
             year, month = int(pd[:4]), int(pd[5:7])
             rows = normalize.rows(notice, raw, country, year, month)
             for table, table_rows in rows.items():
                 by_month[(year, month)][table].extend(table_rows)
             if done % 500 == 0:
-                log(f"    {done:,}/{len(pubs):,} geholt")
+                log(f"    {done:,}/{len(aufgaben):,} verarbeitet")
 
     written = 0
     for (year, month), buckets in sorted(by_month.items()):
@@ -269,7 +356,8 @@ def main(since: str, until: str, limit: int | None, workers: int, country: str =
     # Die Fremd-Zahl gehört ins Protokoll, nicht ins Schweigen: greift die Regel eines
     # Tages zu scharf, fällt es nur hier auf.
     zusatz = f", {fremd:,} nicht zu {country} gehörend" if fremd else ""
-    log(f"FERTIG: {written:,} Notices live ergänzt ({fails} Fehlschläge{zusatz}). Jetzt `gold` rebuilden.")
+    was = "live ergänzt" if seit else "aus Bronze neu gebaut"
+    log(f"FERTIG: {written:,} Notices {was} ({fails} Fehlschläge{zusatz}). Jetzt `gold` rebuilden.")
     return written
 
 
@@ -284,6 +372,10 @@ if __name__ == "__main__":
                     #   dort schon und hier noch nicht: argparse wies --country LU ab,
                     #   waehrend der Code laengst dafuer gebaut war.
                     help="Käuferland; TED liefert AT/CH über dieselbe API")
+    ap.add_argument("--nur-silber", dest="nur_silber", action="store_true",
+                    help="Silber aus dem vorhandenen data/raw_live neu bauen, ohne Netz")
     a = ap.parse_args()
+    if a.nur_silber:
+        raise SystemExit(0 if neu_aus_bronze(a.country, a.workers) >= 0 else 1)
     today = time.strftime("%Y-%m-%d")
     main(a.since or today[:8] + "01", a.until or today, a.limit, a.workers, a.country)

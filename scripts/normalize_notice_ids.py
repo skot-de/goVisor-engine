@@ -30,6 +30,7 @@ from __future__ import annotations
 
 import argparse
 import glob
+import pathlib
 import os
 import sys
 
@@ -42,6 +43,12 @@ NORMALIZE_COLS = {
     "predecessor", "successor",             # Nachfolge-Kanten (sind notice_ids)
     "cand1", "cand2",                       # LLM-Queue-Kandidaten (notice_ids)
     "award_notice_id", "tender_notice_id",  # Award↔Ausschreibung-Verknüpfung (notice_ids)
+    # ⚠ NACHGETRAGEN 2026-09-16. Der Dublettenwall verweist mit diesen beiden auf Silber,
+    # und sie fehlten hier. Folge nach dem Silber-Neubau: 11 AT-Waisen in
+    # `notice_duplicates.duplicate → quality` — genau die Konstellation „Eltern-Tabelle
+    # erneuert, Kind-Tabelle stehengeblieben", fuer die es `pruefe_gold_integritaet` gibt.
+    # Gefunden hat sie nicht dieses Skript, sondern der Waechter.
+    "master_id", "duplicate_id",            # Dublettenwall → Silber (notice_ids)
 }
 # Defensive Sperrliste — diese Namen NIE anfassen, auch wenn sie das Muster tragen.
 PROTECTED = {"publication_number", "ref_publication_number",
@@ -81,17 +88,32 @@ def process(con, path, apply):
     return changed, len(targets)
 
 
+# Die eine Laenderliste — nie eine eigene tippen (s. Kapitel 15 der Laender-Bibel).
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent.parent))
+from govisor.laender import AKTIV as _AKTIV  # noqa: E402
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--apply", action="store_true", help="schreibt (sonst Dry-Run)")
     ap.add_argument("--data-dir", default="data")
+    # ⚠ WAR BIS 2026-09-16 AUF DE FESTGENAGELT — dieselbe Fehlerform wie G28/G31 im
+    # Fallenkatalog. Beim Silber-Neubau am 2026-09-15 kamen die Bindestrich-Kennungen in
+    # DREI Laendern zurueck (DE 246.908, AT 41.706, LU 8.868); geheilt haette dieses
+    # Skript nur die deutschen, und die beiden anderen waeren still stehengeblieben.
+    ap.add_argument("--laender", default=",".join(_AKTIV),
+                    help=f"Komma-Liste (Vorgabe: {','.join(_AKTIV)})")
     args = ap.parse_args()
 
+    laender = [x.strip().upper() for x in args.laender.split(",") if x.strip()]
     con = duckdb.connect()
-    silver = sorted(glob.glob(f"{args.data_dir}/silver/DE/**/*.parquet", recursive=True))
-    gold = sorted(glob.glob(f"{args.data_dir}/gold/DE/*.parquet"))
+    silver, gold = [], []
+    for land in laender:
+        silver += sorted(glob.glob(f"{args.data_dir}/silver/{land}/**/*.parquet", recursive=True))
+        gold += sorted(glob.glob(f"{args.data_dir}/gold/{land}/*.parquet"))
     mode = "APPLY" if args.apply else "DRY-RUN"
-    print(f"=== notice_id-Kanonisierung [{mode}] — {len(silver)} Silber- + {len(gold)} Gold-Dateien ===\n")
+    print(f"=== notice_id-Kanonisierung [{mode}] — {','.join(laender)} — "
+          f"{len(silver)} Silber- + {len(gold)} Gold-Dateien ===\n")
 
     total_changed = 0
     per_table: dict[str, list] = {}
@@ -105,7 +127,8 @@ def main():
             continue
         # Silber nach Tabelle gruppieren, Gold je Datei
         if "/silver/" in path:
-            key = "silver/" + path.split("/silver/DE/")[1].split("/")[0]
+            _rest = path.split("/silver/")[1].split("/", 1)[1]
+            key = "silver/" + _rest.split("/")[0]
         else:
             key = "gold/" + os.path.basename(path)
         c, f = per_table.setdefault(key, [0, 0])
@@ -126,19 +149,23 @@ def main():
     # NICHT kanonisch ist. DÖE-IDs (UUID / reine Zahl) sind ein eigener Namensraum und matchen
     # das Muster gar nicht — sie dürfen (und müssen) unangetastet bleiben, nicht mitzählen.
     print("\n=== Verifikation ===")
-    N = f"{args.data_dir}/silver/DE/notices/*/*.parquet"
     canon = CANON.format(c="notice_id")
-    rest = con.execute(
-        f"SELECT count(*) FROM read_parquet('{N}', hive_partitioning=1) "
-        f"WHERE regexp_matches(notice_id, '^0*[0-9]+[-_][0-9]{{4}}$') AND notice_id <> {canon}"
-    ).fetchone()[0]
-    print(f"  Silber-notices im TED-Format, aber nicht kanonisch (muss 0 sein): {rest:,}")
-    orph = con.execute(
-        f"SELECT count(*) FROM read_parquet('{args.data_dir}/gold/DE/leads.parquet') l "
-        f"WHERE NOT EXISTS (SELECT 1 FROM read_parquet('{N}', hive_partitioning=1) n "
-        f"WHERE n.notice_id = l.lead_id)").fetchone()[0]
-    print(f"  leads-Waisen (echter Datengap, unverändert ~551 erwartet): {orph:,}")
-    return 0 if rest == 0 else 1
+    rest_gesamt = 0
+    for land in laender:
+        N = f"{args.data_dir}/silver/{land}/notices/*/*.parquet"
+        if not glob.glob(N):
+            continue
+        rest = con.execute(
+            f"SELECT count(*) FROM read_parquet('{N}', hive_partitioning=1) "
+            f"WHERE regexp_matches(notice_id, '^0*[0-9]+[-_][0-9]{{4}}$') AND notice_id <> {canon}"
+        ).fetchone()[0]
+        rest_gesamt += rest
+        L = f"{args.data_dir}/gold/{land}/leads.parquet"
+        orph = "—"
+        if os.path.exists(L):
+            orph = f"{con.execute(f'SELECT count(*) FROM read_parquet({L!r}) l WHERE NOT EXISTS (SELECT 1 FROM read_parquet({N!r}, hive_partitioning=1) n WHERE n.notice_id = l.lead_id)').fetchone()[0]:,}"
+        print(f"  {land}: nicht kanonisch (muss 0 sein) {rest:>8,} · leads-Waisen {orph}")
+    return 0 if rest_gesamt == 0 else 1
 
 
 if __name__ == "__main__":

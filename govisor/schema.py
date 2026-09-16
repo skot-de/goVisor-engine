@@ -581,7 +581,20 @@ def _text_winners(tx: str) -> list[str]:
 
 def _parse_text(raw: bytes, notice_id: str) -> Notice:
     fields = _text_fields(flatten.decode_text(raw))
-    nd = (fields.get("ND") or notice_id).split()[0].strip() or notice_id
+    # ⚠ `ND` UEBERSCHREIBT DIE SCHON KANONISCHE KENNUNG. `silver.build_month` normalisiert
+    # den Dateinamen (`schema.normalize_notice_id`), und diese Zeile warf das Ergebnis
+    # wieder weg: das Textformat fuehrt die Nummer als `68-2005`, also mit Bindestrich.
+    #
+    # Der Befund vom 2026-09-16: **246.908 Bekanntmachungen in DE** (100 % der Quelle
+    # `text`, Jahrgaenge 2004–2010), dazu AT 41.706 und LU 8.868. Sie standen kanonisch
+    # im Silber, weil `scripts/normalize_notice_ids.py` sie einmal geheilt hatte — und
+    # kamen beim ersten Neubau seitdem alle zurueck.
+    #
+    # ⚠ DAS IST DIE EIGENTLICHE LEHRE: eine „Einmal-Migration" ist keine, solange der
+    # Erzeuger den Fehler weiter erzeugt. Sie heilt den Bestand und verdeckt die Ursache,
+    # bis jemand neu baut — hier zwei Monate spaeter.
+    nd = normalize_notice_id(
+        (fields.get("ND") or notice_id).split()[0].strip() or notice_id)
     td = (fields.get("TD") or "").strip()
     kind = _TD_KIND.get(td[:1], "other")
 
@@ -669,21 +682,34 @@ def _ojs_amount(text: str | None) -> float | None:
 
 
 def _kosten_betrag(elem: ET.Element) -> float | None:
-    """Betrag eines ``VALUE_COST``-Knotens — ``@FMTVAL`` zuerst.
+    """Betrag eines ``VALUE_COST``-Knotens — **der Textknoten gilt**, nicht ``@FMTVAL``.
 
-    ⚠ DER TEXTKNOTEN IST FORMATIERT, DAS ATTRIBUT NICHT. TED schreibt den Vor-2014-Wert
-    zweimal: als lesbaren Text (``189 945 844,15``) und maschinenlesbar in ``@FMTVAL``
-    (``189945844.15``). Wer den Text mit ``_to_amount`` liest, verliert das Dezimalkomma
-    und bekommt das **Hundertfache** — gemessen am 2026-09-15 traf das allein in DE
-    15.080 Bekanntmachungen, darunter ein Schweizer Tunnellos mit 19 Mrd statt 190 Mio.
+    ⚠ ZWEIMAL GESCHRIEBEN, EINMAL VERLAESSLICH. TED fuehrt den Vor-2014-Wert als lesbaren
+    Text (``189 945 844,15``) und daneben in ``@FMTVAL``. Das Attribut sieht wie die
+    maschinenlesbare Fassung aus — und ist es in den alten Jahrgaengen nicht. Gemessen am
+    2026-09-15 in EINEM einzigen Dokument (LU 226973_2011):
+
+        Text          @FMTVAL                  Verhaeltnis
+        3 636 304     3636304000000000000      x 10^12
+        1 000 000     100000000                x 100   (Cent)
+        900 000       9000000000               x 10000
+        900 000       900000.00                richtig
+
+    Vier Schreibweisen in derselben Datei. Wer ``@FMTVAL`` bevorzugt, bekommt aus einem
+    Auftrag ueber 3,6 Mio EUR einen ueber 3,6 Trillionen — genau das ist beim ersten
+    Reparaturversuch passiert, und es war schlimmer als der Fehler davor.
+
+    Der Text ist dagegen eindeutig, SOLANGE man ihn europaeisch liest: Leerzeichen und
+    Punkt sind Tausender, das Komma ist der Dezimaltrenner. Genau das tut ``_ojs_amount``.
+    ``@FMTVAL`` bleibt als Rueckfall fuer Knoten ohne Text — dort ist eine unsichere Zahl
+    immer noch besser als keine.
     """
-    roh = elem.attrib.get("FMTVAL")
-    if roh:
-        # FMTVAL fuehrt den Punkt als DEZIMALtrenner — also `_to_amount`, nicht `_ojs_amount`.
-        betrag = _to_amount(roh)
-        if betrag is not None:
-            return betrag
-    return _ojs_amount(elem.text)
+    betrag = _ojs_amount(elem.text)
+    if betrag is not None:
+        return betrag
+    # ⚠ Hier fuehrt der Punkt DEZIMAL (`189945844.15`), im Text dagegen TAUSENDER — also
+    # `_to_amount`, nicht `_ojs_amount`. Die beiden Lesarten sind gegenlaeufig.
+    return _to_amount(elem.attrib.get("FMTVAL"))
 
 
 def _ojs_addr_field(addr: ET.Element, tag: str) -> str | None:
