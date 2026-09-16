@@ -108,9 +108,41 @@ zusammen 39 %, ungeprüft.
 **Frankreich war zu. Polen ist zu einem Fünftel offen — und das offene Fünftel ist die
 staatliche Plattform, also der Teil, der nicht morgen seine Meinung ändert.**
 
+## 4b. ⚠ Die Blaetterung ist kaputt, und sie sagt es nicht
+
+**Gemessen 2026-09-16.** `/mo-board/api/v1/notice` nimmt `PageNumber` entgegen und
+**ignoriert es**. Seite 1, 2 und 3 liefern denselben Inhalt:
+
+    Seite 1: 100 Eintraege, erster 2025/BZP 00356428/01
+    Seite 2: 100 Eintraege, erster 2025/BZP 00356428/01
+    Seite 3: 100 Eintraege, erster 2025/BZP 00356428/01
+    → 100 verschiedene Nummern aus 300 Eintraegen
+
+Die Antwort ist gueltiges JSON, hat die richtige Laenge und enthaelt keinen Hinweis. Wer
+blaettert und zaehlt, zaehlt Kopien. Beim Vermessen der unterschwelligen Ebene ergab das
+**30.000 Bekanntmachungen fuer den August 2025** — in Wahrheit sechzigmal dieselben 500.
+
+Was NICHT hilft:
+- `PageSize` ist bei **500** gedeckelt (`musi być równa lub mniejsza niż '500'`).
+- Der Zeitfilter greift **nur auf Tagesebene**. `PublicationDateFrom=2025-08-01T00:00:00`
+  bis `…T05:59:59` liefert Eintraege von 05 bis 08 Uhr; die Uhrzeit wird verworfen.
+- Ein einzelner Tag reisst die 500 bereits (01.08.2025: volle Seite, alle unterschwellig).
+
+**Folge fuer einen Abrufer:** Er kann ueber diesen Endpunkt **nicht vollstaendig ernten**.
+Mehr als 500 Bekanntmachungen je Tag sind nicht erreichbar, und es gibt keine Rueckmeldung
+darueber, wie viele fehlen. Vor dem Bauen muss geklaert werden, ob ein anderer Parameter
+(`offset`, `skip`, `continuationToken`) existiert oder ob die OCDS-Schnittstelle daneben
+einen vollstaendigen Abzug erlaubt.
+
+**Was trotzdem belegt ist:** Am 01.08.2025 trug das nationale Portal **mindestens 500**
+unterschwellige Bekanntmachungen und **null** oberschwellige. Polen meldete im Jahr
+107.657 Bekanntmachungen an TED, also rund 430 je Werktag. Die nationale Ebene ist damit
+**mindestens so gross wie die TED-Ebene**. Als Prozentzahl ist das nicht belastbar.
+
 ## 5. Empfehlung
 
-Ein Abholer für `ezamowienia` ist **drei Endpunkte weit** und braucht weder Konto noch
+Ein Abholer für `ezamowienia` ist **drei Endpunkte weit** (⚠ aber s. §4b: die
+Blaetterung ist kaputt) und braucht weder Konto noch
 Browser-Automatik. Er wäre der erste Abrufer außerhalb Deutschlands — und der einzige
 bisher gefundene, der auch die unterschwellige Ebene mitbringt.
 

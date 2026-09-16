@@ -14,6 +14,7 @@ Kuenftige, in `docs/` daneben das Geltende, in `docs/laender/` das Geprueft-Gelt
 |---|---|---|---|
 | [angebotsmodul-bauplan.md](angebotsmodul-bauplan.md) | Bauplan | 2026-09-15 | Die Verfahrensakte als Anker eines Angebotsmoduls. Fuenf Stufen, jede mit Abbruchbedingung. **Zuarbeit `build_anlaufvergleich.py` ist gebaut.** |
 | [mappe-an-der-kette.md](mappe-an-der-kette.md) | Konzept | 2026-09-15 | Die Angebotsmappe haengt an der Kette statt am Kalender. Drei Zustaende, davon einer (Vorwarnung) ohne Wettbewerbsentsprechung. |
+| [der-groessere-markt.md](der-groessere-markt.md) | Konzept | 2026-09-15 | Deutschen Betrieben passende EU-Vergaben vorschlagen, mit Lueckenliste. ⚠ Auslaendische Leads fehlen ganz im Bestand. |
 | [betriebskosten.md](betriebskosten.md) | Rechnung | 2026-09-15 | Was der Betrieb kostet, gemessen. Listenpreise am 11.09.2026 nachgeschlagen. |
 | [preisstufen-vorschlag.md](preisstufen-vorschlag.md) | Vorschlag | 2026-09-15 | Drei Pakete, geschnitten nach Tiefe der Antwort. ⚠ Die Betraege sind **nicht** gemessen. |
 | [kurzprofil-partner.md](kurzprofil-partner.md) | Unterlage | 2026-09-15 | Kurzprofil fuer Partner- und Investorengespraeche. |
