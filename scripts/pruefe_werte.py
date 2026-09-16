@@ -51,6 +51,14 @@ ANTEIL_OHNE_WAEHRUNG = 0.01        # 1 % der Saetze mit Wert
 GRENZE_EUR = 1e9
 ANTEIL_UEBER_GRENZE = 0.002        # 0,2 %
 
+# ⚠ EINE QUOTE BRAUCHT EINEN NENNER, DER SIE TRAEGT. Bei 69 bewerteten Bekanntmachungen
+# (EU-Bestand, gemessen 2026-09-16) sind acht echte Milliardenrahmen 11,6 % — die Sonde
+# meldete Alarm fuer eine Datenlage, die voellig in Ordnung ist. Sieben der acht sind
+# dasselbe OCRE-Cloud-Rahmenwerk von GEANT, der achte eine HVDC-Umrichterstation.
+# Unterhalb dieses Nenners sagt ein Anteil nichts; dann zaehlt nur die absolute Zahl,
+# und die ist hier zu klein fuer eine Aussage.
+MINDEST_NENNER = 500
+
 
 def _laender() -> list[str]:
     """Welche Laender haben Silber? Gemessen, nicht gelistet."""
@@ -65,13 +73,20 @@ def befunde(land: str) -> list[str]:
     """Klartext-Befunde — leer heisst sauber."""
     import duckdb
 
+    from govisor.gold import _wert_in_eur_sql
+
     muster = (ROOT / "data" / "silver" / land / "notices" / "**" / "*.parquet").as_posix()
+    # ⚠ DIE GRENZE GILT DEM EURO-BETRAG, NICHT DEM ROHBETRAG — sonst hat diese Sonde
+    # genau die Falle, vor der sie warnt (H9 im Fallenkatalog). Gemessen am 2026-09-16 an
+    # Polen: **348** Werte ueber 1 Mrd roh, aber nur **75** ueber 1 Mrd Euro. Eine Milliarde
+    # Zloty sind 236 Mio Euro; die Sonde haette Polen fuer seine Waehrung bestraft.
+    eur = _wert_in_eur_sql()
     con = duckdb.connect()
     try:
         mit_wert, ohne_waehrung, ueber = con.execute(f"""
             SELECT count(*),
                    count(*) FILTER (WHERE value_currency IS NULL),
-                   count(*) FILTER (WHERE final_value > {GRENZE_EUR})
+                   count(*) FILTER (WHERE ({eur}) > {GRENZE_EUR})
             FROM read_parquet('{muster}') WHERE final_value IS NOT NULL""").fetchone()
     finally:
         con.close()
@@ -84,9 +99,9 @@ def befunde(land: str) -> list[str]:
             f"{ohne_waehrung:,} von {mit_wert:,} Werten ohne Waehrung "
             f"({100 * ohne_waehrung / mit_wert:.1f} %) — ein ganzer Jahrgang ohne "
             f"Waehrung ist ein Parser-Fehler, keine Datenlage")
-    if ueber / mit_wert > ANTEIL_UEBER_GRENZE:
+    if mit_wert >= MINDEST_NENNER and ueber / mit_wert > ANTEIL_UEBER_GRENZE:
         aus.append(
-            f"{ueber:,} von {mit_wert:,} Werten ueber {GRENZE_EUR:,.0f} "
+            f"{ueber:,} von {mit_wert:,} Werten ueber {GRENZE_EUR:,.0f} EUR "
             f"({100 * ueber / mit_wert:.2f} %) — typisch fuer einen Faktorfehler beim "
             f"Lesen formatierter Betraege")
     return aus
@@ -103,15 +118,35 @@ def main(argv: list[str] | None = None) -> int:
         print("Kein Silber gefunden — nichts zu pruefen.")
         return 0
 
+    # ⚠ DIE LAENDER KOMMEN VON DER PLATTE, damit ein neues nicht stillschweigend
+    # uebersprungen wird. Gemeldet wird aber nur, was die Pipeline auch BAUT: unter
+    # `data/silver` liegen Altbestaende zurueckgebauter Laender (PL, EU), und ein
+    # Waechter, der jede Nacht ueber Daten klagt, die niemand pflegt, erzieht zum
+    # Wegsehen. Sie stehen darum unter dem Strich, nicht im Befund.
+    from govisor.laender import AKTIV
+
     schlimm = 0
+    ruhend: list[str] = []
     for land in laender:
         zeilen = befunde(land)
+        if land not in AKTIV:
+            # Immer nennen, nie alarmieren: der Bestand existiert, wird aber nicht
+            # gepflegt. Verschwiege ihn die Sonde, waere er beim naechsten Anlauf
+            # vergessen; alarmierte sie, erzoege sie zum Wegsehen.
+            ruhend.append(f"{land}{' ⚠' if zeilen else ''}")
+            continue
         if not zeilen:
             print(f"  {land}: sauber")
             continue
         schlimm += 1
         for z in zeilen:
             print(f"  ⚠ {land}: {z}")
+    if ruhend:
+        print(f"\n  ruhende Bestaende (liegen auf der Platte, stehen nicht in AKTIV, "
+              f"werden nicht gebaut): {' · '.join(ruhend)}")
+        print("     ⚠ = traegt Befunde. Kein Alarm — diese Daten pflegt niemand. Wer eines "
+              "dieser Laender\n       wiederbelebt, baut Silber zuerst neu "
+              "(s. Kapitel 13 der Laender-Bibel).")
     if schlimm:
         print(f"\n⚠ {schlimm} Land/Laender mit Wert-Befunden.")
         return 1

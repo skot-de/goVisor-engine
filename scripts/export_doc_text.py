@@ -84,14 +84,35 @@ def _abdruecke(con) -> dict[str, str]:
     Zeilenzahl und Zeichensumme unveraendert lassen und trotzdem ein anderes Ergebnis
     erzeugen.
     """
-    zeilen = con.execute(
-        f"""SELECT notice_id,
+    abfrage = f"""SELECT notice_id,
                    count(*) || ':' || coalesce(sum(n_chars), 0) || ':'
                    || md5(string_agg(file || '\x1f' || status, '\x1e' ORDER BY file, status))
             FROM read_parquet({_qlist()})
             WHERE {SQL_BRAUCHBAR} AND text IS NOT NULL AND length(text) > 0
-            GROUP BY 1""").fetchall()
-    return {str(a): str(b) for a, b in zeilen}
+            GROUP BY 1"""
+    # ⚠ WENIGER FAEDEN STATT MEHR SPEICHER. Die geordnete `string_agg` je Gruppe laeuft
+    # in JEDEM Faden mit eigenem Zwischenstand; bei vier Faeden und 1 GB Grenze reicht es
+    # nicht mehr. Gemessen am 2026-09-16 ueber 14.110 Vorgaenge: threads=4 stirbt mit
+    # OutOfMemoryException, threads=2 laeuft in **4 Sekunden** durch.
+    #
+    # ⚠ DAS IST DER SCHRITT, DER DREI NAECHTE AM STUECK AUSFIEL (14.–16.09.2026) und sich
+    # NICHT selbst geheilt hat — im Gegenteil: der Bestand waechst taeglich, also scheitert
+    # jeder Folgelauf sicherer als der davor. Deshalb wird hier nicht eine Zahl gesetzt und
+    # gehofft, sondern heruntergeschaltet, bis es geht. Und `preserve_insertion_order=false`
+    # bleibt tabu, auch wenn DuckDB es vorschlaegt — s. der Kommentar in `main()`.
+    letzte: Exception | None = None
+    for faeden in (4, 2, 1):
+        try:
+            con.execute(f"SET threads={faeden}")
+            zeilen = con.execute(abfrage).fetchall()
+            if faeden < 4:
+                print(f"  (Fingerabdruecke mit threads={faeden} — bei mehr reicht der "
+                      f"Speicher nicht)")
+            return {str(a): str(b) for a, b in zeilen}
+        except duckdb.OutOfMemoryException as e:                     # noqa: PERF203
+            letzte = e
+            print(f"  ⚠ threads={faeden}: Speicher reicht nicht, schalte herunter.")
+    raise letzte
 
 
 def _alter_index() -> dict[str, dict]:
@@ -172,6 +193,20 @@ def main(argv=None) -> int:
     # zaehlt der Lauf das und sagt es laut. `--sortieren` erzwingt dann den alten Weg mit
     # genug Speicher. Eine stillschweigende Annahme waere hier ein halber Volltext.
     con.execute(f"SET memory_limit='{'6GB' if a.sortieren else '1GB'}'")
+    # ⚠ OHNE AUSLAGERUNGSVERZEICHNIS IST DIE GRENZE EINE WAND, KEIN DECKEL. Die 1 GB oben
+    # sind Absicht (die Maschine ist knapp), aber DuckDB kann darunter nur arbeiten, wenn
+    # es ueberlaufen darf. Fehlte das, starb der Schritt an der Gruppierung in
+    # `_abdruecke` — drei Naechte am Stueck (14., 15. und 16.09.2026):
+    #
+    #     OutOfMemoryException: failed to allocate data of size 256.0 KiB
+    #     (953.5 MiB/953.6 MiB used)
+    #
+    # ⚠ UND ES HAT SICH NICHT VON SELBST GEHEILT. Der Bestand waechst taeglich, also
+    # scheiterte jeder Folgelauf sicherer als der davor; `web/data/doc-text` stand seit
+    # dem 2026-09-13. Gemeldet wurde es jede Nacht — als eine von 13 Warnungen, und
+    # `pruefe_verdrahtung` zaehlte die Tage mit. Gelesen hat es niemand.
+    con.execute(f"SET temp_directory='{(ROOT / 'data' / 'tmp').as_posix()}'")
+    con.execute("SET max_temp_directory_size='20GB'")
     # ⚠ `preserve_insertion_order=false` DARF HIER NICHT STEHEN. Ich hatte es gesetzt, weil
     # DuckDB es bei Speichernot selbst vorschlaegt — es erlaubt aber ausdruecklich, Zeilen
     # umzuordnen, und genau darauf beruht die Gruppierung ohne ORDER BY. Die Folge war
