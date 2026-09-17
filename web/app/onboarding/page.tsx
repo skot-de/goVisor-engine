@@ -189,6 +189,33 @@ function FirmaFakten({ m }: { m: Match }) {
   );
 }
 
+/* Hat der Einheiten-Schritt ueberhaupt eine Frage zu stellen?
+ *
+ * „Gehoeren diese Einheiten zu euch?" ist bei EINER Einheit keine Frage, sondern eine
+ * Liste mit einem Eintrag, den man anhaken soll, um weiterzukommen. Gemessen am
+ * 2026-09-17 ueber 37.946 Firmen: 30.174 (79,5 %) haben genau eine Einheit, 4.584 zwei,
+ * 886 fuenf oder mehr.
+ *
+ * ⚠ NUR UEBERSPRINGEN, WENN DIE EINE EINHEIT BELEGT IST. Ist sie blosse Selbstauskunft,
+ * traegt der Schritt eine Warnung: „Wir merken uns diese Einheiten aber als
+ * Selbstauskunft … diese Zuschlaege zaehlen als eure Historie, und die zugehoerigen
+ * Ausschreibungen erscheinen euch als eigene, die ihr verteidigen muesst." Sie
+ * stillschweigend zu uebergehen hiesse, eine Zustimmung anzunehmen, die niemand gegeben
+ * hat — genau der Zustand, den die Plausibilitaetsbremse vom 2026-08-21 abgeschafft hat.
+ *
+ * Die Ausnahme kostet fast nichts: von den 30.174 Ein-Einheit-Firmen sind 30.172 belegt
+ * und 2 nicht.
+ *
+ * ⚠ EINE REGEL, WEIL ES ZWEI WEGE GIBT. In diesen Bildschirm fuehren der normale Pfad
+ * und der Token-Pfad. Auf dem Token-Pfad stand `anzahl > 1` ohne Belegpruefung — zwei
+ * Regeln fuer dieselbe Frage, und sie waren bereits auseinandergelaufen.
+ */
+function hatEtwasZuEntscheiden(ms: Member[]): boolean {
+  if (ms.length > 1) return true;
+  if (ms.length === 0) return false;
+  return ms[0]?.conf !== "belegt";
+}
+
 export default function OnboardingPage() {
   const { t } = useSprache();
   const router = useRouter();
@@ -324,7 +351,8 @@ export default function OnboardingPage() {
     return () => clearTimeout(timer);
   }, [eingabe, screen]);
 
-  const ladeMitglieder = useCallback(async (m: Match): Promise<number> => {
+
+  const ladeMitglieder = useCallback(async (m: Match): Promise<Member[]> => {
     try {
       const d = await fetch(`/api/entity-group?id=${encodeURIComponent(m.id)}`).then((r) => r.json());
       const ms: Member[] = d.members || [];
@@ -346,8 +374,11 @@ export default function OnboardingPage() {
       // selbst bestätigt, die Namensgleichheit ist also mehr als eine Vermutung.
       const groesste = ms.reduce((b, m, i) => (m.wins > (ms[b]?.wins ?? -1) ? i : b), 0);
       setAktiv(new Set(belegte.length ? belegte : ms.length ? [String(groesste)] : []));
-      return ms.length;
-    } catch { setMembers([]); setAktiv(new Set()); return 0; }
+      // ⚠ Die Mitglieder selbst zurueckgeben, nicht ihre Zahl. Der Aufrufer entscheidet,
+      // ob der Einheiten-Schritt ueberhaupt etwas zu fragen hat — dafuer braucht er die
+      // BELEGLAGE, und `members` ist im selben Takt noch der alte Zustand.
+      return ms;
+    } catch { setMembers([]); setAktiv(new Set()); return []; }
   }, []);
 
   // Der Abgleich läuft, sobald eine Firma angezeigt wird — nicht erst beim Abschluss,
@@ -424,8 +455,24 @@ export default function OnboardingPage() {
       grund: [beleg?.grund, imp && imp.urteil !== "nicht_pruefbar"
         ? `Impressum: ${imp.grund}` : null].filter(Boolean).join(" · "),
     }).catch(() => undefined);
-    await ladeMitglieder(m);
-    geheZu("profil");
+    const ms = await ladeMitglieder(m);
+    /* ── Schritt 3 ueberspringen, wenn es nichts zu entscheiden gibt ───────────────────
+     *
+     * „Gehoeren diese Einheiten zu euch?" ist eine Frage. Bei EINER Einheit ist es keine —
+     * eine Liste mit einem Eintrag, den man anhaken soll, um weiterzukommen. Gemessen am
+     * 2026-09-17 ueber 37.946 Firmen: 30.174 (79,5 %) haben genau eine Einheit.
+     *
+     * ⚠ NUR WENN SIE BELEGT IST. Ist die eine Einheit blosse Selbstauskunft, traegt der
+     * Schritt eine Warnung („Wir merken uns diese Einheiten aber als Selbstauskunft …
+     * diese Zuschlaege zaehlen als eure Historie"). Sie stillschweigend zu uebergehen
+     * hiesse, eine Zustimmung anzunehmen, die niemand gegeben hat — das ist genau der
+     * Zustand, den die Plausibilitaetsbremse vom 2026-08-21 abgeschafft hat.
+     * Gemessen: von den 30.174 Ein-Einheit-Firmen sind 30.172 belegt und 2 nicht. Die
+     * Ausnahme kostet also fast nichts und bewahrt die Zusage.
+     *
+     * `aktiv` ist bereits gesetzt (oben in `ladeMitglieder`), `confirmedEntities` wird
+     * daraus gebaut wie sonst auch — uebersprungen wird die FRAGE, nicht die Erfassung. */
+    geheZu(hatEtwasZuEntscheiden(ms) ? "profil" : "fertig");
   }
 
   // Konto anlegen (Registrierung), dann Firmen-Erkennung. Bei „E-Mail existiert" → Login anbieten.
@@ -550,12 +597,12 @@ function testMailErlaubt(mail: string): boolean {
       if (b.conf !== "fremd") {
         const m = { id: tokenFirma.id, name: tokenFirma.name } as Match;
         setMatched(m);
-        const anzahl = await ladeMitglieder(m);
-        // „Gehoeren diese Einheiten zu euch?" ist nur dann eine Frage, wenn es MEHRERE
-        // gibt. Bei Klostermann ist es genau eine — der Screen haette einen Klick
-        // gekostet und nichts entschieden. Bei CANCOM mit vielen Schwestern ist die
-        // Frage echt und bleibt stehen.
-        geheZu(anzahl > 1 ? "profil" : "fertig");
+        const ms = await ladeMitglieder(m);
+        /* ⚠ DIESELBE REGEL WIE AUF DEM ANDEREN WEG. Hier stand `anzahl > 1` — das sprang
+           auch dann ueber den Schritt, wenn die eine Einheit blosse Selbstauskunft war,
+           und uebersah damit die Warnung, die dort haengt. Zwei Wege in denselben
+           Bildschirm mit zwei Regeln laufen auseinander; sie waren es bereits. */
+        geheZu(hatEtwasZuEntscheiden(ms) ? "profil" : "fertig");
         return;
       }
       // Fremde Domain: Vorbelegung faellt weg, es geht den normalen Weg weiter.
