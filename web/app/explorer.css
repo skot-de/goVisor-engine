@@ -2568,3 +2568,23 @@ td.c-band .passung i{display:none}
 /* Verweis auf die Vorgangsakte in der Eyebrow-Zeile der Detailansicht. */
 .eb-vorgang { color: var(--signal-deep, #2f6fdd); text-decoration: none; }
 .eb-vorgang:hover { text-decoration: underline; }
+
+/* ── Spalte „Unterlagen": ausgewertete Vergabeunterlagen ──────────────────────────────
+   Die Zahl ist die Dichte (Pruefpunkte), die kleine Zahl daneben die K.-o.-Kriterien.
+   ⚠ Die Ampel faerbt nur den Rand, nicht die Flaeche: 88,5 % aller Auswertungen sind
+   gelb — eine flaechige Einfaerbung wuerde die Spalte zu einem Farbblock machen, in dem
+   die Zahl untergeht, und dabei eine Unterscheidung behaupten, die es nicht gibt. */
+td.c-doks{width:84px;text-align:center}
+td.c-doks .dok{display:inline-flex;align-items:baseline;gap:3px;padding:1px 6px;
+  border-radius:9px;background:var(--surface-3);border:1px solid var(--line);
+  font-variant-numeric:tabular-nums;line-height:1.5}
+td.c-doks .dok b{font-weight:600;font-size:12px}
+td.c-doks .dok i{font-style:normal;font-size:10px;opacity:.65}
+td.c-doks .dok i::before{content:"·";margin-right:3px;opacity:.5}
+td.c-doks .dok-gruen{border-color:var(--ok,#2e7d32)}
+td.c-doks .dok-rot{border-color:var(--bad,#c62828)}
+/* „ausgewertet, aber nichts gefunden" ist ein Befund und darf nicht wie „nicht
+   ausgewertet" aussehen — deshalb eine 0 im Rahmen, kein Strich. */
+td.c-doks .dok-leer{display:inline-block;padding:1px 6px;border-radius:9px;
+  border:1px dashed var(--line-strong);font-size:11px;opacity:.7}
+td.c-doks .dok-na{opacity:.3}

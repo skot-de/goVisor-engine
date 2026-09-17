@@ -43,3 +43,8 @@ data/zielliste.csv
 # ⚠ FOLGE FUER EIN FRISCHES KLON: web/data ist leer. Entweder `DATA_BASE_URL` setzen
 # oder die Exporte einmal laufen lassen (scripts/daily_leads.sh).
 web/data/
+# ⚠ Ebenso der geduennte Demo-Satz (`scripts/demo_datensatz.py`): 59 MB, 425 Dateien,
+# erzeugt aus `web/data` und jederzeit neu herstellbar. Aus derselben Datei erzeugt,
+# derselbe Grund. Am 2026-09-17 stand er als unversionierter Berg da und waere beim
+# naechsten `git add .` mitgegangen.
+web/data-demo/

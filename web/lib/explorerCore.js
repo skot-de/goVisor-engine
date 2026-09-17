@@ -505,6 +505,10 @@ const COLS = [
   {key:'region',label:'Region',    on:false},
   {key:'inc',   label:'Amtsinhaber', on:false},
   {key:'status',label:'Sichtung',  on:false},
+  /* ⚠ STANDARDMAESSIG AN. Das Merkmal trennt schaerfer als alles andere in dieser Tabelle:
+     9,4 % der Leads haben ausgewertete Unterlagen. Zum Vergleich der bestehende Filter
+     „nur mit Link zu den Vergabeunterlagen": 97,3 % erfuellen ihn. */
+  {key:'doks',  label:'Unterlagen', on:true,  th:'center'},
 ];
 
 /* ── Chance/Bieter-Lücke/Frist + visible()/sorted() ── */
@@ -624,6 +628,10 @@ function sorted(rows){
       case 'relevanz': return l.relevanz === 'na' ? -1 : (l.passung ?? 0);
       case 'wechsel': return LVL[l.wechsel];
       case 'aufwand': return LVL[aufwandStufe(l).stufe];
+      // Dichte absteigend: der am besten ausgewertete Vorgang zuerst. Ohne Auswertung ans
+      // Ende, nicht an den Anfang — `-1` waere die kleinste Zahl und zoege die leeren nach
+      // vorn, sobald jemand die Richtung umdreht.
+      case 'doks': return l.docAn ? -l.docAn.pruef : 1e9;
       case 'konk': { const m={gering:1,mittel:2,hoch:3}; return m[l.konk.stufe]||9; }
       case 'buyer': return l.buyerShort;
       case 'src': return l.src;
@@ -728,6 +736,27 @@ function cellHTML(l, key){
         ? tk("Die Bekanntmachung nennt keine Anforderungen, wir schätzen den Aufwand nicht.")
         : tk(tk("Nur {n} von mindestens 2 nötigen Angaben bekannt, zu wenig für eine belastbare Einstufung."), {n: a.bekannt});
       return `<td class="c-band">${bandMeter(a.stufe, true, tk('Angebotsaufwand'), naHint)}</td>`;
+    }
+    case 'doks': {
+      /* ⚠ DIE AMPEL IST HIER NICHT DIE HAUPTSACHE. Gemessen ueber alle 10.951 Auswertungen
+         sind 88,5 % gelb — als Unterscheidungsmerkmal taugt sie nicht. Was traegt, ist die
+         DICHTE: Pruefpunkte streuen von 0 bis 186 bei einem Median von 57. Die Ampel steht
+         deshalb nur im Titel, die Zahl in der Zelle. */
+      if(!l.docAn)
+        return `<td class="c-doks"><span class="dok-na" title="${esc(tk("Fuer diesen Vorgang liegen keine ausgewerteten Vergabeunterlagen vor."))}">—</span></td>`;
+      const a = l.docAn;
+      // 206 Auswertungen haben eine leere Checkliste. „Ausgewertet, 0 Pruefpunkte" ist ein
+      // anderer Zustand als „nicht ausgewertet" und darf nicht wie er aussehen.
+      if(!a.pruef)
+        return `<td class="c-doks"><span class="dok-leer" title="${esc(tk("Unterlagen ausgewertet, aber kein Pruefpunkt gefunden."))}">0</span></td>`;
+      // Einzahl/Mehrzahl getrennt: „aus 1 Dokumenten" ist der Satz, an dem man sieht, dass
+      // niemand hingeschaut hat. 1.590 Auswertungen tragen genau ein Dokument.
+      const titel = tk(a.dok === 1
+                       ? "{p} Pruefpunkte, {k} K.-o.-Kriterien aus einem Dokument. Ampel: {a}"
+                       : "{p} Pruefpunkte, {k} K.-o.-Kriterien aus {d} Dokumenten. Ampel: {a}",
+                       {p: a.pruef, k: a.ko, d: a.dok, a: tk(a.ampel || "unbekannt")});
+      return `<td class="c-doks"><span class="dok dok-${esc(a.ampel || "na")}" title="${esc(titel)}">`
+           + `<b>${a.pruef}</b>${a.ko ? `<i>${a.ko}</i>` : ""}</span></td>`;
     }
     case 'empf': {
       if(l.src==='award') return awardEmpfCell(l);
@@ -3133,6 +3162,28 @@ function getState(){
 
 // Echte Leads aus der Gold-Schicht in den Kern schieben (ersetzt den Demo-Seed).
 // LEADS bleibt dieselbe Array-Referenz, die alle Closures lesen — nur der Inhalt wechselt.
+/* ── Ausgewertete Vergabeunterlagen an die Leads heften ──────────────────────────────
+ *
+ * WOFUER. `scripts/export_doc_analysis.py` wertet Vergabeunterlagen aus und schreibt je
+ * Vorgang Pruefpunkte, K.-o.-Kriterien und eine Ampel. Bis zum 2026-09-17 las diesen Index
+ * NIEMAND — die Liste konnte nicht sagen, welcher Vorgang ausgewertet ist.
+ *
+ * ⚠ WARUM NICHT IM EXPORT MITGESCHRIEBEN. Die beiden Quellen bewegen sich verschieden
+ * schnell: der Dokumenten-Arbeiter laeuft staendig, der Lead-Export einmal taeglich. Im
+ * Lead eingebacken waere eine frische Auswertung bis zum naechsten Export unsichtbar, und
+ * 47 MB muessten neu ausgeliefert werden, damit eine Zahl ankommt.
+ *
+ * Der Index deckt nur einen Teil des Bestands: gemessen 4.122 von 43.676 Leads (9,4 %).
+ * Das ist kein Fehler, sondern der Trichter — nur ein Bruchteil der Vergaben gibt die
+ * Unterlagen ueberhaupt heraus. Leads ohne Eintrag bekommen `docAn = null`. */
+function applyAnalyse(idx){
+  if(!idx) return;
+  for(const l of LEADS){
+    const a = idx[String(l.id)];
+    l.docAn = a ? {ampel: a.ampel || null, pruef: a.pruef|0, ko: a.ko|0, dok: a.dok|0} : null;
+  }
+}
+
 function setLeads(arr){
   LEADS.length = 0;
   _kennIndex = null;   // der Kennungs-Index gehoert zu DIESEM Bestand
@@ -3285,6 +3336,7 @@ export {
   MEINE_FIRMA, LEADS, BRANCHEN, RAHMEN, RAHMEN_NACHWEIS, FACETS, ORTE, PLZ, PLACE_RADIUS,
   COLS, SRC_TEXT, WF, LVL, TOKICON, RADII, NETZ_FREI_MAX, STAR, ME,
   aufwandStufe, leadText, matchToken, fundstelle, hervorheben, hasToken, toggleToken,
+  applyAnalyse,
   classifyQuery, val, bandMeter, wfPill, konkCell, chanceCap, istEigen, bieterLuecke,
   fristCell, visible, syncLocationColumn, sorted, cellHTML, tokenLabel, suggestList,
 };

@@ -74,7 +74,20 @@ def main() -> int:
             ziel.write_text(text, encoding="utf-8")
             geschrieben += 1
         vorher.discard(f"{sicher}.json")
-        index[sicher] = {"ampel": eintrag.get("ampel") if isinstance(eintrag, dict) else None}
+        # ⚠ NICHT NUR DIE AMPEL. Gemessen am 2026-09-17 sind 88,5 % aller Ampeln gelb
+        # (9.695 von 10.951) — als Sortier- oder Filtermerkmal traegt sie damit fast nichts.
+        # Was trennt, ist die DICHTE: `checklist` streut 0 bis 186 bei einem Median von 57.
+        # Die Zahlen liegen hier ohnehin in der Hand; sie wegzuwerfen und die Liste spaeter
+        # 10.951 Einzeldateien lesen zu lassen, waere der teuerste Weg zu derselben Zahl.
+        _cl = eintrag.get("checklist") or [] if isinstance(eintrag, dict) else []
+        _ko = eintrag.get("ko_kriterien") or [] if isinstance(eintrag, dict) else []
+        _pf = eintrag.get("parsed_files") or [] if isinstance(eintrag, dict) else []
+        index[sicher] = {
+            "ampel": eintrag.get("ampel") if isinstance(eintrag, dict) else None,
+            "pruef": len(_cl),   # Pruefpunkte aus der Checkliste
+            "ko":    len(_ko),   # K.-o.-Kriterien
+            "dok":   len(_pf),   # ausgewertete Einzeldokumente
+        }
 
     # Was der Arbeitsstand nicht mehr kennt, gehoert auch nicht mehr ins Frontend.
     for tot in vorher:

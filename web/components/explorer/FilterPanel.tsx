@@ -27,6 +27,11 @@ export type Adv = {
   multiLot: boolean;
   hasDetail: boolean;              // nur mit ausführlicher Beschreibung
   unterlagen: boolean;             // nur mit Vergabeunterlagen-Link
+  /** Nur Vorgaenge, deren Unterlagen WIR ausgewertet haben (Checkliste, K.-o.-Kriterien).
+   *  ⚠ Nicht mit `unterlagen` verwechseln: einen LINK haben 97,3 % der Leads, eine
+   *  AUSWERTUNG 9,4 %. Das eine siebt nichts, das andere ist das schaerfste Merkmal
+   *  der Tabelle. */
+  ausgewertet: boolean;
   staaten: string[];               // DACH-Vergabeland: DE | AT | CH (alle mit Daten)
 };
 
@@ -34,7 +39,7 @@ export const emptyAdv: Adv = {
   phases: [], horizon: null, cpvFields: [], regionAxis: "perf", regions: [], nationwide: false,
   buyer: "", leistung: [], art: [], rahmen: [], valMin: null, valMax: null,
   neu: "all", wenigWettbewerb: false, aufwand: [], buergschaft: "all", chance: [], relevanz: [], multiLot: false,
-  hasDetail: false, unterlagen: false, staaten: [],
+  hasDetail: false, unterlagen: false, ausgewertet: false, staaten: [],
 };
 
 export function advCount(a: Adv): number {
@@ -44,7 +49,7 @@ export function advCount(a: Adv): number {
     (a.valMin != null ? 1 : 0) + (a.valMax != null ? 1 : 0) +
     (a.neu !== "all" ? 1 : 0) + (a.wenigWettbewerb ? 1 : 0) + a.aufwand.length +
     (a.buergschaft !== "all" ? 1 : 0) + a.chance.length + a.relevanz.length + (a.multiLot ? 1 : 0) +
-    (a.hasDetail ? 1 : 0) + (a.unterlagen ? 1 : 0) + a.staaten.length
+    (a.hasDetail ? 1 : 0) + (a.unterlagen ? 1 : 0) + (a.ausgewertet ? 1 : 0) + a.staaten.length
   );
 }
 
@@ -295,6 +300,7 @@ export function FilterPanel({
             <label className="fp-check"><input type="checkbox" checked={adv.multiLot} onChange={() => set({ multiLot: !adv.multiLot })} /><span>{t("Nur mit mehreren Losen")}</span></label>
             <label className="fp-check"><input type="checkbox" checked={adv.hasDetail} onChange={() => set({ hasDetail: !adv.hasDetail })} /><span>{t("Nur mit ausführlicher Beschreibung")}</span></label>
             <label className="fp-check"><input type="checkbox" checked={adv.unterlagen} onChange={() => set({ unterlagen: !adv.unterlagen })} /><span>{t("Nur mit Link zu den Vergabeunterlagen")}</span></label>
+            <label className="fp-check"><input type="checkbox" checked={adv.ausgewertet} onChange={() => set({ ausgewertet: !adv.ausgewertet })} /><span>{t("Nur mit ausgewerteten Unterlagen")}</span></label>
           </section>
         </div>
 

@@ -6,6 +6,7 @@ import {
   suggestList, classifyQuery, netzInteresse, netzFreigabe, offeneGruppen, angaben, setLeads, setMarket, setBestand,
   setNachbarn, setNetzZustand, toggleNetzLos, netzLoseVon, setPlzGeo, setPlzLand,
   setProfile, setUserContracts, parseWert, aufwandStufe,
+  applyAnalyse,
 } from "@/lib/explorerCore";
 import { loadContracts } from "@/lib/supabase/contracts";
 import { buildProfile, brancheFromProfile } from "@/lib/profileEngine";
@@ -75,6 +76,10 @@ function postFilter(rows: Lead[], a: Adv): Lead[] {
     if (a.rahmen.length && !a.rahmen.includes(String(l.rahmen))) return false;
     if (a.hasDetail && !l.hasDetail) return false;
     if (a.unterlagen && !l.unterlagen) return false;
+    /* ⚠ NICHT DASSELBE wie `a.unterlagen`. Jener Filter fragt, ob es einen LINK auf die
+       Vergabeunterlagen gibt — den haben 97,3 % der Leads, er siebt also praktisch nichts.
+       Dieser fragt, ob WIR sie ausgewertet haben: 9,4 %. */
+    if (a.ausgewertet && !l.docAn) return false;
     if (a.valMin != null || a.valMax != null) {
       const v = parseWert((l.volumen as { wert?: string } | undefined)?.wert);
       if (v != null) {
@@ -186,6 +191,10 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
   const bump = useCallback(() => setTick((n) => n + 1), []);
   const [branchenCounts, setBranchenCounts] = useState<Record<string, number>>({});
   const [loading, setLoading] = useState(true);
+  /* Ausgewertete Vergabeunterlagen je Kennung. `null` = noch nicht geladen ODER Ausfall —
+   * die Liste darf dann KEINE Marke „nicht ausgewertet" zeigen, denn das waere eine
+   * Aussage ueber die Daten, wo in Wahrheit die Auskunft fehlt. */
+  const [analyse, setAnalyse] = useState<Record<string, { ampel: string | null; pruef: number; ko: number; dok: number }> | null>(null);
 
   const [userEmail, setUserEmail] = useState<string | null>(null);
   // Echter Zugangsstatus statt hartkodiertem „Pro"-Aufkleber (Free bis der Account etwas anderes sagt).
@@ -343,6 +352,26 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
   // PLZ→Koordinate-Tabelle einmal laden (für die echte Umkreissuche). ~450 KB, cache-fähig.
   useEffect(() => {
     fetch("/api/plz-geo").then((r) => r.json()).then(setPlzGeo).catch(() => {});
+  }, []);
+
+  /* Auswertungen der Vergabeunterlagen einmal laden — sie haengen nicht am Grundraum.
+   * ~0,4 MB gegen 47 MB Leads, deshalb eine eigene Route (s. `/api/doc-analysis`).
+   * Bei 503 (Datenspeicher weg) bleibt `analyse` auf `null`: keine Marke ist richtig,
+   * eine Marke „nicht ausgewertet" waere falsch. */
+  /* ⚠ NACH JEDEM LEADWECHSEL NEU AUFTRAGEN. `setLeads` ersetzt die Lead-Objekte im Kern
+   * komplett (`LEADS.length = 0`), damit auch jedes `docAn`, das vorher daranhing. Ein
+   * einmaliges Auftragen beim Eintreffen des Index haette also genau bis zum naechsten
+   * Grundraumwechsel gehalten — und danach waere die Spalte still leer geblieben, was wie
+   * „nichts ausgewertet" aussieht statt wie ein verlorener Zustand. */
+  useEffect(() => {
+    if (analyse) { applyAnalyse(analyse); bump(); }
+  }, [analyse, aktiveBranche, bump]);
+
+  useEffect(() => {
+    fetch("/api/doc-analysis")
+      .then((r) => (r.ok ? r.json() : null))
+      .then((d) => { if (d && typeof d === "object") setAnalyse(d); })
+      .catch(() => {});
   }, []);
   // Aktiver DACH-Länderfilter → getippte 4-stellige PLZ (CH/AT kollidieren) dorthin auflösen.
   useEffect(() => {

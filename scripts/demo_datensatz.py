@@ -153,6 +153,20 @@ def main() -> int:
         if q.exists():
             shutil.copy2(q, ziel / "doc-analysis" / q.name)
 
+    # ⚠ DER INDEX MUSS MIT. Bis zum 2026-09-17 kopierte dieser Lauf die Einzelanalysen,
+    # aber nicht `doc-analysis-index.json` — im Demo-Datensatz fehlte die Datei ganz.
+    # Solange sie niemand las, fiel das nicht auf; seit die Liste eine Spalte „Unterlagen"
+    # hat, saehe eine Vorfuehrung ohne sie so aus, als waere KEIN Vorgang ausgewertet.
+    # Das waere die schlechtere Sorte Fehler: eine Behauptung ueber die Daten statt einer
+    # sichtbaren Luecke. Mitgenommen wird nur, was auch als Lead im Demo-Satz steht.
+    aidx = QUELLE / "doc-analysis-index.json"
+    if aidx.exists():
+        roh = json.loads(aidx.read_text(encoding="utf-8"))
+        schlank = {k: v for k, v in roh.items() if k in behalten}
+        (ziel / "doc-analysis-index.json").write_text(
+            json.dumps(schlank, ensure_ascii=False, sort_keys=True), encoding="utf-8")
+        print(f"  doc-analysis-index  {len(schlank):>6} von {len(roh):>6}")
+
     fristen = QUELLE / "leads-fristen.json"
     if fristen.exists():
         roh = json.loads(fristen.read_text(encoding="utf-8"))

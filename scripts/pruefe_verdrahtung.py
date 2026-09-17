@@ -721,9 +721,26 @@ AUSNAHMEN_NUTZLAST: dict[str, str] = {
     # Schnittstelle aussieht, wird irgendwann als eine benutzt. Entscheidung (2026-08-25):
     # verdrahten oder streichen.
     "firma-index.json": "2,6 MB Verzeichnis der Firmenprofile — geschrieben, nie gelesen (offen seit 2026-08-25)",
-    "doc-analysis-index.json": "Ampel je Vorgang — geschrieben, nie gelesen (offen seit 2026-08-25)",
+    # doc-analysis-index.json: am 2026-09-17 verdrahtet (Spalte „Unterlagen" in der
+    # Lead-Liste, `web/lib/docAnalysis.ts`, Waechter `pruefe-analyse-sichtbar.mjs`).
+    # ⚠ Der Eintrag stand hier seit dem 2026-08-25 mit dem Vermerk „verdrahten oder
+    # streichen" — drei Wochen, in denen 10.951 fertige Auswertungen unsichtbar blieben.
+    # Aufgefallen ist es nicht dieser Liste, sondern einer Frage in einer Vorfuehrung.
+    # Wer hier etwas eintraegt, setzt ein Datum dazu und nimmt sich den Fall vor.
     "doc-listing-index.json": "Dateizahl je Vorgang — geschrieben, nie gelesen (offen seit 2026-08-25)",
 }
+
+
+def _ohne_kommentare(text: str) -> str:
+    """Quelltext ohne `/* */` und `//` — fuer Pruefungen, die Verhalten messen sollen.
+
+    ⚠ Bewusst grob: ein `//` in einer Zeichenkette (etwa in einer URL) faellt mit weg.
+    Fuer den Zweck hier ist das die sichere Richtung — eine URL ist kein Dateiname im
+    Sinne dieser Sonde, und ein Muster zu VERLIEREN erzeugt hoechstens einen Fehlalarm,
+    waehrend ein Muster zu viel eine echte Luecke verdeckt.
+    """
+    text = re.sub(r"/\*.*?\*/", "", text, flags=re.S)
+    return re.sub(r"(^|[^:])//.*$", r"\1", text, flags=re.M)
 
 
 def _leser_muster() -> list[re.Pattern]:
@@ -731,7 +748,14 @@ def _leser_muster() -> list[re.Pattern]:
     muster: list[re.Pattern] = []
     for datei in (ROOT / "web").rglob("*"):
         if (not datei.is_file() or datei.suffix not in {".ts", ".tsx", ".js", ".mjs"}
-                or "node_modules" in datei.parts):
+                or "node_modules" in datei.parts or ".next" in datei.parts
+                # ⚠ WAECHTER ZAEHLEN NICHT ALS LESER. `web/scripts/pruefe-*.mjs` liest die
+                # Ausliefergueter, um sie zu PRUEFEN — das macht sie nicht nuetzlich. Zaehlte
+                # man sie mit, waere eine Datei „verdrahtet", sobald jemand einen Test dafuer
+                # schreibt. Genau das ist hier am 2026-09-17 passiert: die Sonde blieb gruen,
+                # nachdem der einzige echte Leser von `doc-analysis-index.json` umgebogen war,
+                # weil der frisch geschriebene Waechter die Datei noch oeffnete.
+                or "scripts" in datei.parts):
             continue
         text = datei.read_text(encoding="utf-8", errors="replace")
         # ⚠ BEIDE LADEFUNKTIONEN. Seit dem 2026-09-04 gibt es `ladeMitGrund`, das neben dem
@@ -742,7 +766,16 @@ def _leser_muster() -> list[re.Pattern]:
         for roh in re.findall(r'(?:loadDataFile|ladeMitGrund)\(\s*[`"\']([^`"\']+)[`"\']', text):
             muster.append(re.compile("^" + re.sub(r"\\\$\\\{[^}]*\\\}", "[^/]+",
                                                   re.escape(roh)) + "$"))
-        for roh in re.findall(r'[`"\']([A-Za-z0-9_./-]+\.(?:json|csv))[`"\']', text):
+        # ⚠ NICHT AUS KOMMENTAREN. Bis zum 2026-09-17 lief dieses Muster ueber den ROHEN
+        # Quelltext — ein Dateiname in einer Prosazeile reichte, damit die Datei als
+        # „gelesen" galt. Gemessen: 28 von 74 Namen standen ausschliesslich in Kommentaren.
+        # Das ist genau die Fehlerklasse, die diese Sonde finden SOLL, nur in ihr selbst:
+        # sie prueft Wortschatz statt Verhalten. Aufgefallen beim Verdrahten von
+        # `doc-analysis-index.json` — die Sonde blieb gruen, nachdem der einzige echte
+        # Leser auf eine andere Datei umgebogen worden war, weil der Name noch im
+        # Kommentar darueber stand.
+        for roh in re.findall(r'[`"\']([A-Za-z0-9_./-]+\.(?:json|csv))[`"\']',
+                              _ohne_kommentare(text)):
             muster.append(re.compile("^" + re.escape(roh) + "$"))
     return muster
 
