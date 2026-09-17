@@ -10,7 +10,6 @@ werden.
 |---|-------|---------|-------------|
 | [06](06-demokonto-cpv6.md) | Demokonto auf CPV-6 | mittel | Demo zeigt das Produkt unter Wert |
 | [07](07-dubletten.md) | Dubletten-Cluster schliessen | gross | 9.001 Leads, ~5 % |
-| [02](02-passungszahl.md) | Passungszahl | klein oder gross | Weggabelung, siehe Datei |
 
 ## Erledigt
 
@@ -51,6 +50,11 @@ werden.
   Uebersprungen bei genau einer BELEGTEN Einheit (79,5 %, nicht die im Auftrag behaupteten
   96,9 %). Der Token-Weg hatte die Abkuerzung schon — ohne die Belegpruefung.
 
+- **[02](02-passungszahl.md) Passungszahl** — 2026-09-17, Commit b5ac1ab. Sven waehlte
+  „acht Stufen ehrlich zeigen". Sieben Segmente statt `86/100`, Tooltip nennt jetzt die
+  Gruende. Der Kommentar im Code kannte das Problem seit jeher und zeichnete trotzdem
+  einen Nenner von 100.
+
 ## Offen, mit korrigierter Grundlage
 
 - **[09b](09-ladezustand.md) Nutzlast** — die Annahme im Auftrag war falsch. Die 47 MB
@@ -60,6 +64,12 @@ werden.
   pruefbar ist und doppelte Kodierung die Liste fuer jeden zerstoeren wuerde.
 
 ## Neu aufgenommen (beim Arbeiten gefunden)
+
+- **Zwei Oberflaechentexte tragen noch Gedankenstriche** (`explorerCore.js`, Texte zu
+  Dokumentnamen und zur unterschwelligen Ebene). Die Hausregel verbietet sie
+  (`memory/govisor-keine-gedankenstriche.md`). ⚠ Nicht trivial: der deutsche Satz IST der
+  Uebersetzungsschluessel, jede Aenderung zieht `flat.en.json` und `flat.fr.json` mit —
+  sonst faellt die Stelle stumm auf Deutsch zurueck.
 
 - **Zwei Tests sind rot und waren es schon vorher.** `test_kurse_sind_nicht_veraltet`
   (Waehrungskurse aelter als 30 Tage) und `test_standardtext::test_ausgabe_haelt_die_form`
