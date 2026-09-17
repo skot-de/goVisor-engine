@@ -24,6 +24,7 @@ const FunnelIcon = (
 export function LeadTable({
   rows,
   limit,
+  laedt,
   fuss,
   abschnitte,
   sortKey,
@@ -43,6 +44,14 @@ export function LeadTable({
   rows: Lead[];
   /** Nur die ersten `limit` Zeilen rendern (inkrementelles Nachwachsen beim Scrollen). */
   limit: number;
+  /** Die Daten sind noch unterwegs.
+   *
+   *  ⚠ DRITTER ZUSTAND, NICHT ZWEITER. „Keine Leads" ist eine Aussage ueber die Daten;
+   *  waehrend des Ladens ist sie falsch. Bis zum 2026-09-17 sah der Nutzer nach der
+   *  Anmeldung rund zwoelf Sekunden lang „Keine Leads mit diesen Filtern. Passe die
+   *  Filter an oder wechsle den Grundraum." — eine Aufforderung, an Filtern zu drehen,
+   *  die nichts mit dem Problem zu tun hatten. */
+  laedt?: boolean;
   /** Abschluss-Zeile unter der letzten Ausschreibung (Vorauswahl aufheben). */
   fuss?: React.ReactNode;
   /** Abschnitte statt einer flachen Liste — Zwischenzeile vor jeder Gruppe. */
@@ -253,10 +262,18 @@ export function LeadTable({
         ) : (
           <tr className="emptyrow">
             <td colSpan={colspan}>
-              <div className="empty-t">
-                <b>Keine Leads mit diesen Filtern.</b> Passe die Filter an oder wechsle den
-                Grundraum.
-              </div>
+              {laedt ? (
+                <div className="empty-t lade-t" aria-live="polite">
+                  <span className="lade-punkte" aria-hidden="true"><i /><i /><i /></span>
+                  <b>{t("Ausschreibungen werden geladen.")}</b>{" "}
+                  {t("Das dauert beim ersten Aufruf einige Sekunden.")}
+                </div>
+              ) : (
+                <div className="empty-t">
+                  <b>{t("Keine Leads mit diesen Filtern.")}</b>{" "}
+                  {t("Passe die Filter an oder wechsle den Grundraum.")}
+                </div>
+              )}
             </td>
           </tr>
         )}

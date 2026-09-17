@@ -204,7 +204,6 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
   const [userEmail, setUserEmail] = useState<string | null>(null);
   // Echter Zugangsstatus statt hartkodiertem „Pro"-Aufkleber (Free bis der Account etwas anderes sagt).
   const [plan, setPlan] = useState<"free" | "paid" | "cancelled">("free");
-  const [planOpen, setPlanOpen] = useState(false);
   // Vorauswahl = das Produktversprechen („wir sortieren vor, ihr arbeitet nur das Sinnvolle ab").
   // Standard AN; ohne Profil wirkungslos, weil dann keine Relevanz berechnet werden kann.
   const [vorauswahl, setVorauswahl] = useState(true);
@@ -1464,9 +1463,17 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
         ) : (
           <>
             <span className="tcount">
-              {/* Nenner auf DERSELBEN Grundmenge wie die Anzeige — in der
+              {/* ⚠ WAEHREND DES LADENS KEINE ZAHL. Hier stand unbedingt „{rows.length} von
+                  {…}" — beim ersten Aufruf sind beide 0, und „0 von 0" ist eine Aussage
+                  ueber die Daten, keine ueber den Ladezustand. Gemeldet nach der Anmeldung
+                  in einer Vorfuehrung: „hab mich durchgeklickt, nun sind noch weniger
+                  infos da". Der Zustand dauert rund zwoelf Sekunden.
+
+                  Der Nenner steht auf DERSELBEN Grundmenge wie die Anzeige — in der
                   Zuschlags-Sicht sind das die Zuschläge, sonst die offenen. */}
-              <b>{rows.length}</b> {t("von")} <span>{zuschlagsSicht ? alleRows.length : alleRows.filter((l) => l.src !== "award").length}</span>
+              {loading
+                ? <span className="tcount-laedt">{t("lädt")}</span>
+                : <><b>{rows.length}</b> {t("von")} <span>{zuschlagsSicht ? alleRows.length : alleRows.filter((l) => l.src !== "award").length}</span></>}
             </span>
             {tokens.length > 0 ? (
               <FilterBar
@@ -1598,6 +1605,7 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
               <LeadTable
                 rows={rows}
                 limit={renderCount}
+                laedt={loading}
                 // Die Vorauswahl steht am ENDE der Liste: dort kommt man beim Lesen an, und
                 // dort ist die Frage „ist das alles?" tatsächlich aktuell. Als Banner darüber
                 // wurde sie weggeklickt, bevor man einen Lead gesehen hatte. Stilles Filtern
