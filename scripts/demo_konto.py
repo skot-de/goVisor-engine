@@ -49,6 +49,17 @@ ROOT = Path(__file__).resolve().parent.parent
 ENV = ROOT / "web/.env.local"
 
 
+# Bundesland-Beschriftungen, deckungsgleich mit `web/lib/filterMarken.js`. Nur die
+# NUTS1-Codes, die `regions` tragen kann.
+LAENDER = {
+    "DE1": "Baden-Württemberg", "DE2": "Bayern", "DE3": "Berlin", "DE4": "Brandenburg",
+    "DE5": "Bremen", "DE6": "Hamburg", "DE7": "Hessen", "DE8": "Mecklenburg-Vorp.",
+    "DE9": "Niedersachsen", "DEA": "Nordrhein-Westf.", "DEB": "Rheinland-Pfalz",
+    "DEC": "Saarland", "DED": "Sachsen", "DEE": "Sachsen-Anhalt",
+    "DEF": "Schleswig-Holstein", "DEG": "Thüringen",
+}
+
+
 def env() -> dict[str, str]:
     if not ENV.exists():
         sys.exit(f"  ✖ {ENV} fehlt.")
@@ -109,9 +120,17 @@ def main() -> int:
     # Deployment laeuft dieselbe Anfrage in die schwarze Seite — und die ist HTML, kein
     # JSON, also scheiterte das Skript mit „Expecting value: line 1 column 1".
     # Eine Fehlermeldung, die nach „App laeuft nicht" aussieht und „App ist gesperrt" heisst.
+    #
+    # ⚠ UND ER MUSS AUCH GEGEN `localhost` MIT. Hier stand `if … and not
+    # a.app.startswith("http://localhost")`, begruendet mit „dort ist NODE_ENV=development
+    # und die Sperre aus". Das gilt fuer `next dev` — nicht fuer `next start`, also fuer
+    # jeden Produktionsbau, den man lokal zum Pruefen startet. Genau dort scheiterte der
+    # Trockenlauf am 2026-09-17 mit derselben Meldung, gegen die der Kommentar darueber
+    # schuetzen soll. Den Schluessel mitzuschicken, wo er nicht gebraucht wird, kostet
+    # nichts; ihn wegzulassen, wo er gebraucht wird, kostet eine falsche Fehlersuche.
     parameter = {"q": a.firma}
     schluessel = env().get("PREVIEW_KEY", "").strip().strip('"\'')
-    if schluessel and not a.app.startswith("http://localhost"):
+    if schluessel:
         parameter["preview"] = schluessel
     try:
         r = requests.get(f"{a.app}/api/entity-search", params=parameter, timeout=30)
@@ -136,6 +155,17 @@ def main() -> int:
           f"seit {f.get('seit')}")
     for x in felder[:4]:
         print(f"                CPV {x['cpv4']} · {x['label'][:46]} ({x['wins']})")
+    # ⚠ SICHTBAR MACHEN, WAS FRUEHER STILL WEGFIEL. Bis zum 2026-09-17 nahm dieses Skript
+    # nur die Viersteller mit; dass die gewerkscharfen Sechsteller fehlten, sah man dem
+    # Lauf nicht an — nur den schlechteren Treffern in der Vorfuehrung.
+    sechs = f.get("fields6") or []
+    if sechs:
+        print(f"  Gewerke:    {len(sechs)} CPV-6-Volltreffer "
+              f"({', '.join(x['cpv6'] for x in sechs[:6])}"
+              f"{' …' if len(sechs) > 6 else ''})")
+    else:
+        print("  ⚠ Gewerke:  keine CPV-6-Codes — die Passung faellt auf CPV-4-Verhalten "
+              "zurueck (Aufzug und Elektro sind dann dasselbe Gewerk).")
     if len(treffer) > 1:
         print(f"  ⚠ {len(treffer)} Treffer — genommen wird der erste. Die uebrigen: "
               f"{', '.join(t['name'][:28] for t in treffer[1:4])}")
@@ -194,6 +224,34 @@ def main() -> int:
     # Zugehoerigkeit erst ueber Domain oder Adresse (siehe onboarding/page.tsx). Ein
     # Vorfuehr-Konto, das sich selbst als belegt ausgibt, waere dieselbe Sorte Behauptung,
     # gegen die der ganze Onboarding-Beleg gebaut ist.
+    # ⚠ DIESELBEN FELDER WIE DAS ONBOARDING, sonst zeigt die Vorfuehrung ein schwaecheres
+    # Produkt als das echte. Bis zum 2026-09-17 nahm dieses Skript nur `fields` (CPV-4) —
+    # `fields6` fiel weg, und damit fiel die Passung auf CPV-4-Verhalten zurueck:
+    # `profileEngine.js` sagt es ausdruecklich an („Alt-Profile ohne cpvFields6 →
+    # CPV-4-Verhalten"), Aufzug (453131) und Elektro (453112) waren dann dasselbe Gewerk.
+    #
+    # ⚠ DER GEWINN IST NICHT „MEHR TREFFER", SONDERN EHRLICHERE. Gemessen am 2026-09-17
+    # fuer H. Klostermann ueber 18.511 Bau-Leads:
+    #
+    #     Profil                     hoch  mittel   Volltreffer  Nachbarfeld
+    #     frueher: nur cpvFields     3532       0          3532            0
+    #     + cpvWins + Bestand        3532       0          3532            0
+    #     + Regionen                  812    2720          3532            0
+    #     + cpvFields6 (jetzt)        300    3232          1045         2487
+    #
+    # Ohne die Sechsteller galten 3.532 Vorgaenge als Volltreffer; mit ihnen sind es
+    # 1.045, und 2.487 stellen sich als NACHBARGEWERK heraus. Die Vorfuehrung zeigte also
+    # nicht zu wenige Treffer, sondern zu viele falsche.
+    #
+    # Ebenfalls gefehlt haben `cpvWins`, `regionTyp` und `regionLabels`. Die Regionen sind
+    # der zweite grosse Posten (hoch 3.532 → 812). `cpvWins` treibt den Bestands-Bonus
+    # (#27 §6.2); er verschiebt die Stufen, ohne die Relevanzbaender zu kreuzen — messbar
+    # an der Stufe, nicht an den Baendern.
+    #
+    # Die Zuordnung steht in `web/app/onboarding/page.tsx` im `buildProfile`-Aufruf.
+    # `tests/test_demoprofil.py` haelt beide Seiten gegeneinander.
+    felder6 = f.get("fields6") or []
+    regionen = f.get("regions") or []
     profil = {
         "id": user_id, "email": a.email,
         "company_name": f["name"], "identity_id": f["id"],
@@ -201,7 +259,7 @@ def main() -> int:
         "confirmed_entities": [f["name"]],
         "cpv_fields": [x["cpv4"] for x in felder],
         "cpv_labels": [x["label"] for x in felder],
-        "regions": f.get("regions") or [],
+        "regions": regionen,
         "branche": "bau",
         "known_from_ted": False,
         "profile": {"firma": f["name"], "identityId": f["id"],
@@ -209,8 +267,16 @@ def main() -> int:
                     "confirmedEntities": [{"name": f["name"], "beleg": "selbstauskunft",
                                            "wins": f.get("wins")}],
                     "cpvFields": [x["cpv4"] for x in felder],
-                    "cpvLabels": [x["label"] for x in felder],
-                    "regions": f.get("regions") or [], "branche": "bau",
+                    "cpvLabels": [x.get("label") or x["cpv4"] for x in felder],
+                    # Gewerkscharfe Sechsteller: trennt Aufzug (453131) von Elektro (453112).
+                    "cpvFields6": [x["cpv6"] for x in felder6],
+                    # Zuschlaege je Feld — Grundlage des Bestands-Bonus.
+                    "cpvWins": {x["cpv4"]: x.get("wins") for x in felder},
+                    "regions": regionen,
+                    "regionTyp": f.get("regionTyp"),
+                    "regionLabels": [LAENDER.get(r, r) for r in regionen],
+                    "zielrichtung": "bestand",
+                    "branche": "bau",
                     "quelle": "scripts/demo_konto.py — Vorfuehrung"},
     }
     r = requests.post(f"{url}/rest/v1/user_profiles", headers={
