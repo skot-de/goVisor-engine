@@ -606,7 +606,7 @@ function testMailErlaubt(mail: string): boolean {
       : (rs.includes(r) ? rs.filter((x) => x !== r) : [...rs.filter((x) => x !== "Bundesweit"), r]));
   }
 
-  function fertigstellen() {
+  async function fertigstellen() {
     let profile;
     // Was der Check hergibt, bevor die Zweige sich trennen — er gilt in beiden.
     const ausCheck = checkAngaben ? alsProfilfelder(checkAngaben) : null;
@@ -655,16 +655,32 @@ function testMailErlaubt(mail: string): boolean {
     }
     try { localStorage.setItem(PROFILE_KEY, JSON.stringify(profile)); } catch { /* Quota */ }
     // Verbraucht. Sonst belegt ein zweiter Durchlauf still mit den Zahlen des ersten vor.
+    track(EV.ONBOARDING_DONE, { matched: !!matched, entities: matched ? aktiv.size : 0 });
+
+    // ⚠ REIHENFOLGE UND `await` — BEIDES NOETIG. Hier stand ein Wettlauf.
+    //
+    // `uebernimmCheck` und `saveProfile` schreiben BEIDE nach `user_profiles.profile`, und
+    // beide liefen ohne `await` los. `uebernimmCheck` liest den Blob, aendert darin die
+    // Nachweisfelder und schreibt ihn ZURUECK — also den Stand, den es beim Lesen vorfand.
+    // Kam es nach `saveProfile` an, ueberschrieb es das gerade gespeicherte Engine-Profil
+    // mit einer Fassung ohne `cpvFields`, `regions` und `branche`.
+    //
+    // Gemessen am 2026-09-17 an einem frisch angelegten Konto: der Blob trug nur noch die
+    // Firmenprofil-Felder. Folge in der Oberflaeche: `brancheFromProfile` fand nichts, der
+    // Explorer fiel auf den Vorgaberaum „it" zurueck, und das Bau-Profil filterte die
+    // IT-Liste auf **0 von 7.013**. Der Nutzer sieht „Keine Leads mit diesen Filtern" —
+    // direkt nach dem Onboarding, das ihm gerade 509 Zuschlaege bestaetigt hat.
+    //
+    // Erst das Engine-Profil schreiben, dann den Check daraufsetzen. `await`, damit die
+    // zweite Schreibung den fertigen Stand liest und nicht den davor.
+    await saveProfile(profile).catch(() => {});
     if (checkAngaben) {
       // Die Nachweise gehoeren ins FIRMENPROFIL — nur dort liest `recommendation.js` sie.
       // Ohne Sitzung (Testlauf) faellt das sauber auf `no-session`; die Rohwerte reisen
       // dann am Profil mit und koennen spaeter nachgezogen werden.
-      uebernimmCheck(checkAngaben).catch(() => {});
+      await uebernimmCheck(checkAngaben).catch(() => {});
       checkVerwerfen();
     }
-    track(EV.ONBOARDING_DONE, { matched: !!matched, entities: matched ? aktiv.size : 0 });
-    // Bei aktiver Session zusätzlich nach Supabase (sonst bleibt es lokal, bis bestätigt+angemeldet).
-    saveProfile(profile).catch(() => {});
     // ⚠ Zeigte bis zum 2026-08-21 auf „/" — und seit die oeffentliche Startseite dort
     // wohnt (2026-08-20), landete „Leads ansehen" auf der Werbeseite statt in der Liste.
     // Wer angemeldet ist, wird von „/" zwar nach „/leads" geschickt; im Testlauf und in
