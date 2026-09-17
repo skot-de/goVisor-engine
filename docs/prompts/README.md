@@ -8,8 +8,6 @@ werden.
 
 | # | Thema | Aufwand | Warum jetzt |
 |---|-------|---------|-------------|
-| [06](06-demokonto-cpv6.md) | Demokonto auf CPV-6 | mittel | Demo zeigt das Produkt unter Wert |
-| [07](07-dubletten.md) | Dubletten-Cluster schliessen | gross | 9.001 Leads, ~5 % |
 
 ## Erledigt
 
@@ -55,8 +53,21 @@ werden.
   Gruende. Der Kommentar im Code kannte das Problem seit jeher und zeichnete trotzdem
   einen Nenner von 100.
 
+- **[06](06-demokonto-cpv6.md) Demokonto** — 2026-09-17, Commit af49722. `fields6`,
+  `cpvWins`, `regionTyp`, `regionLabels` fehlten. Mit den Sechstellern sind von 3.532
+  angeblichen Volltreffern noch 1.045 uebrig; 2.487 sind Nachbargewerke. Die Vorfuehrung
+  zeigte nicht zu wenige Treffer, sondern zu viele falsche.
+- **[07](07-dubletten.md) Dubletten, Teil (a)** — 2026-09-17, Commit 2b3206e. 361 Paare
+  schlossen Leads aus, ohne je die 90-Tage-Regel bestanden zu haben. Eigene Belegstufe,
+  aber nur fuer die enthaltenen Titel (248); 118 mit identischem Titel bleiben belastbar.
+
 ## Offen, mit korrigierter Grundlage
 
+- **[07](07-dubletten.md) Dubletten, Teil (b)** — ⚠ die vorgeschlagene Loesung
+  (Union-Find) ist nachweislich falsch: groesstes Cluster 4.720 Knoten mit 923
+  verschiedenen Titeln. 4.637 ueberzaehlige Vorgaenge bleiben, aber KEIN einziger liegt in
+  einem vollstaendigen Cluster. Die eigentliche Frage ist, warum Kanten FEHLEN — drei
+  identische OIC-Ankuendigungen paaren nicht miteinander. Verdacht: die Seed-Wahl.
 - **[09b](09-ladezustand.md) Nutzlast** — die Annahme im Auftrag war falsch. Die 47 MB
   gehen nie ueber die Leitung (gzip: 5,6 MB), und die Liste braucht fast alle Felder;
   nachladbar sind 9 %, nicht 50 %. Der echte Hebel ist **Brotli** (5,65 → 2,96 MB bei
