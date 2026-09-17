@@ -2588,3 +2588,19 @@ td.c-doks .dok-rot{border-color:var(--bad,#c62828)}
 td.c-doks .dok-leer{display:inline-block;padding:1px 6px;border-radius:9px;
   border:1px dashed var(--line-strong);font-size:11px;opacity:.7}
 td.c-doks .dok-na{opacity:.3}
+
+/* ── Aktive Filter als einzeln abwerfbare Marken ──────────────────────────────────────
+   Steht ueber der Liste, nicht im Filterfeld: die Frage „warum ist die Liste so kurz"
+   stellt sich beim Lesen der Liste, nicht beim Einstellen. */
+.fmarken{display:flex;flex-wrap:wrap;gap:6px;align-items:center;
+  padding:8px 12px;border-bottom:1px solid var(--line);background:var(--surface-2)}
+.fmarken .fm-k{font-size:11px;letter-spacing:.02em;opacity:.6;margin-right:2px}
+.fmarken .fm{display:inline-flex;align-items:center;gap:6px;padding:2px 6px 2px 9px;
+  border:1px solid var(--line-strong);border-radius:11px;background:var(--surface-1);
+  font-size:12px;line-height:1.7;cursor:pointer;color:inherit}
+.fmarken .fm:hover{border-color:var(--accent,#3b6ea5)}
+.fmarken .fm i{font-style:normal;font-size:10px;opacity:.5}
+.fmarken .fm:hover i{opacity:1}
+.fmarken .fm-alle{margin-left:4px;padding:2px 8px;border:0;background:none;cursor:pointer;
+  font-size:11px;text-decoration:underline;opacity:.7;color:inherit}
+.fmarken .fm-alle:hover{opacity:1}

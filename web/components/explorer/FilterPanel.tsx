@@ -4,6 +4,26 @@ import { useSprache } from "@/lib/i18n";
 
 import { BRANCHEN } from "@/lib/explorerCore";
 import { STAATEN } from "@/lib/staaten";
+/* ⚠ Beschriftungen und Markenlogik liegen in Plain JS, damit der Waechter
+ * `pruefe-filtermarken.mjs` die echte Funktion fahren kann (s. dortiger Kopf). */
+import { PHASEN, HORIZONTE as _HORIZONTE, LEISTUNG, RAHMEN, BAND, ART, LAENDER,
+         filterMarken as _filterMarken } from "@/lib/filterMarken.js";
+export { LAENDER };
+const HORIZONTE = _HORIZONTE as [number, string][];
+
+export type FilterMarke = { schluessel: string; text: string; weg: Partial<Adv> };
+
+/* ⚠ DIE TYPGRENZE STEHT HIER, DIE LOGIK IM JS-MODUL. Plain JS kennt die Literaltypen
+ * von `Adv` nicht — `neu` kaeme als `string` zurueck statt als `"all" | "neu" | "folge"`,
+ * und `setAdv` liesse sich damit nicht fuettern. Diese Huelle ist ausdruecklich KEINE
+ * zweite Fassung der Logik: sie reicht durch. Wer hier etwas rechnet, hat den Grund fuer
+ * die Aufteilung aufgehoben (s. Kopf von `lib/filterMarken.js`). */
+export function filterMarken(
+  a: Adv, segmente: Segment[],
+  t: (k: string, v?: Record<string, string | number>) => string,
+): FilterMarke[] {
+  return _filterMarken(a, segmente, t) as FilterMarke[];
+}
 
 export type Adv = {
   phases: string[];                 // auslauf | f02 | f01 | award
@@ -55,27 +75,11 @@ export function advCount(a: Adv): number {
 
 export type Segment = { cpv4: string; label: string; n: number };
 
-const PHASEN: [string, string][] = [
-  ["auslauf", "Auslaufende Verträge"],
-  ["f02", "Aktive Ausschreibungen"],
-  ["f01", "Ankündigungen"],
-  ["award", "Zuschlag erteilt"],
-];
-const HORIZONTE: [number, string][] = [[1, "1 Mon."], [3, "3 Mon."], [6, "6 Mon."], [12, "12 Mon."], [18, "18 Mon."]];
-const LEISTUNG: [string, string][] = [["dienst", "Dienstleistung"], ["liefer", "Lieferung"], ["bau", "Bauleistung"]];
-const RAHMEN: [string, string][] = [["vgv", "VgV"], ["vob", "VOB/A"], ["uvgo", "UVgO"], ["sektvo", "SektVO"]];
-const BAND: [string, string][] = [["niedrig", "niedrig"], ["mittel", "mittel"], ["hoch", "hoch"]];
-const ART: [string, string][] = [["rahmen", "Rahmenvertrag"], ["wiederkehrend", "Wiederkehrend"], ["einzel", "Einzelauftrag"]];
+
 // DACH-Vergabeland — der Filter greift auf `l.land` (ExplorerShell).
 // AT = offeneVergaben.at, CH = simap.ch. Die Liste stand hier ein zweites Mal; sie kommt
 // jetzt aus `lib/staaten`, damit ein viertes Land nicht an einer von zwei Stellen fehlt.
 // Sie steht bei den übrigen Importen oben.
-export const LAENDER: [string, string][] = [
-  ["DE1", "Baden-Württemberg"], ["DE2", "Bayern"], ["DE3", "Berlin"], ["DE4", "Brandenburg"],
-  ["DE5", "Bremen"], ["DE6", "Hamburg"], ["DE7", "Hessen"], ["DE8", "Mecklenburg-Vorp."],
-  ["DE9", "Niedersachsen"], ["DEA", "Nordrhein-Westf."], ["DEB", "Rheinland-Pfalz"], ["DEC", "Saarland"],
-  ["DED", "Sachsen"], ["DEE", "Sachsen-Anhalt"], ["DEF", "Schleswig-Holstein"], ["DEG", "Thüringen"],
-];
 
 const toggle = (arr: string[], v: string) => (arr.includes(v) ? arr.filter((x) => x !== v) : [...arr, v]);
 const parseEur = (s: string): number | null => {

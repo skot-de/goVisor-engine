@@ -1937,7 +1937,14 @@ def test_verdrahtete_texte_sind_uebersetzt():
     web = Path(__file__).resolve().parent.parent / "web"
     en, _fr = _flach_kataloge()
     deutsch = re.compile(r"[äöüÄÖÜß]|\b(der|die|das|und|oder|nicht|kein|keine|mit|von|bei|"
-                         r"für|aus|auf|ist|sind|wie|was|wo|wenn|nur|alle|eine|zum|zur|im|am)\b")
+                         r"für|aus|auf|ist|sind|wie|was|wo|wenn|nur|alle|eine|zum|zur|im|am)\b",
+                         # ⚠ OHNE `re.I` GREIFT DIE WORTLISTE NUR KLEINGESCHRIEBEN. Jeder Satz,
+                         # der mit einem Funktionswort BEGINNT („Alle aufheben", „Zur
+                         # Startseite", „Was euch bremst"), galt als nicht-deutsch und wurde
+                         # uebersprungen. Gemessen am 2026-09-17: ein Schluessel rutschte so
+                         # durch (`Zur Startseite` im Onboarding, fuer EN- und FR-Besucher auf
+                         # Deutsch). Wenig — aber die Zahl waechst still mit jedem neuen Satz.
+                         re.I)
     fehlend: list[str] = []
     dateien = (sorted(web.glob("components/**/*.tsx")) + sorted(web.glob("app/**/*.tsx"))
                + sorted(web.glob("lib/**/*.js")) + sorted(web.glob("lib/**/*.tsx"))
@@ -1996,7 +2003,14 @@ def test_texttabellen_hinter_t_sind_uebersetzt():
     web = Path(__file__).resolve().parent.parent / "web"
     en, _fr = _flach_kataloge()
     deutsch = re.compile(r"[äöüÄÖÜß]|\b(der|die|das|und|oder|nicht|kein|keine|mit|von|bei|"
-                         r"für|aus|auf|ist|sind|wie|was|wo|wenn|nur|alle|eine|zum|zur|im|am)\b")
+                         r"für|aus|auf|ist|sind|wie|was|wo|wenn|nur|alle|eine|zum|zur|im|am)\b",
+                         # ⚠ OHNE `re.I` GREIFT DIE WORTLISTE NUR KLEINGESCHRIEBEN. Jeder Satz,
+                         # der mit einem Funktionswort BEGINNT („Alle aufheben", „Zur
+                         # Startseite", „Was euch bremst"), galt als nicht-deutsch und wurde
+                         # uebersprungen. Gemessen am 2026-09-17: ein Schluessel rutschte so
+                         # durch (`Zur Startseite` im Onboarding, fuer EN- und FR-Besucher auf
+                         # Deutsch). Wenig — aber die Zahl waechst still mit jedem neuen Satz.
+                         re.I)
     # `t(NAME.feld)` oder `t(NAME[…])` — der Punkt bzw. die Klammer unterscheidet die
     # Tabellen-Nutzung vom Literal-Aufruf, den der Guard darueber schon abdeckt.
     nutzung = re.compile(r"\bt[k]?\(\s*([A-Z][A-Z0-9_]{2,})\s*[.\[]")

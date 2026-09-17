@@ -10,7 +10,7 @@ import {
 } from "@/lib/explorerCore";
 import { loadContracts } from "@/lib/supabase/contracts";
 import { buildProfile, brancheFromProfile } from "@/lib/profileEngine";
-import { FilterPanel, emptyAdv, advCount, type Adv, type Segment } from "./FilterPanel";
+import { FilterPanel, emptyAdv, advCount, filterMarken, type Adv, type Segment } from "./FilterPanel";
 import { LeadTable } from "./LeadTable";
 import { DetailPanel } from "./DetailPanel";
 import { StrategieView, SEKTIONEN } from "./StrategieView";
@@ -1564,6 +1564,29 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
                       {t("Zuschläge ansehen")}
                     </button>
                     <button className="aw-alert-x" onClick={() => setAwAlertOff(true)} aria-label={t("Ausblenden")}>✕</button>
+                  </div>
+                );
+              })()}
+              {/* ── Was ist eingestellt? ──────────────────────────────────────────────
+                  Bis zum 2026-09-17 stand hier nur eine Zahl neben „Filter". Wer das Feld
+                  zuklappte, wusste danach nicht mehr, was die Liste beschneidet — und bei
+                  einer kuerzeren Liste als erwartet ist genau das die erste Frage.
+                  Jede Marke nimmt GENAU ihre Einstellung zurueck; „Alle aufheben" setzt
+                  das Feld zurueck, laesst Suchworte und Grundraum aber stehen: die sind
+                  keine Filter und stehen an eigener Stelle. */}
+              {(() => {
+                const marken = filterMarken(adv, cpvSegments, t);
+                if (!marken.length) return null;
+                return (
+                  <div className="fmarken" role="group" aria-label={t("Aktive Filter")}>
+                    <span className="fm-k">{t("Gefiltert nach")}</span>
+                    {marken.map((m) => (
+                      <button key={m.schluessel} className="fm" onClick={() => setAdv((a) => ({ ...a, ...m.weg }))}
+                              title={t("Diesen Filter aufheben")}>
+                        <span>{m.text}</span><i aria-hidden="true">✕</i>
+                      </button>
+                    ))}
+                    <button className="fm-alle" onClick={() => setAdv(emptyAdv)}>{t("Alle aufheben")}</button>
                   </div>
                 );
               })()}
