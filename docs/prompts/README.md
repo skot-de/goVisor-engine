@@ -8,7 +8,6 @@ werden.
 
 | # | Thema | Aufwand | Warum jetzt |
 |---|-------|---------|-------------|
-| [04](04-analyse-ampel.md) | Analyse-Ampel sichtbar machen | klein | 10.951 fertige Auswertungen liest niemand |
 | [09a](09-ladezustand.md) | Ladezustand statt „0 von 0" | klein | schlimmster Moment der Vorfuehrung |
 | [03](03-filteranzeige.md) | Aktive Filter anzeigen | klein | Zaehlung existiert schon |
 | [01](01-zeitfilter.md) | Zeitfilter vereinheitlichen | mittel | Filter unterschlaegt sichtbare Fristen |
@@ -19,6 +18,25 @@ werden.
 | [09b](09-ladezustand.md) | Nutzlast 49,6 → 25,5 MB | gross | eine offene Entscheidung (`anf`) |
 | [08](08-onboarding-schritt3.md) | Onboarding Schritt 3 | klein | 96,9 % sehen eine Ein-Element-Liste |
 | [02](02-passungszahl.md) | Passungszahl | klein oder gross | Weggabelung, siehe Datei |
+
+## Erledigt
+
+- **[04](04-analyse-ampel.md) Analyse-Ampel** — 2026-09-17, Commit 7216336. Spalte
+  „Unterlagen" samt Filter und Sortierung. Dabei zwei Luecken im Verdrahtungs-Waechter
+  gefunden und behoben: er zaehlte Dateinamen aus Kommentaren als Leser (28 von 74) und
+  Pruefskripte ebenfalls. Und: der Fund lag seit dem 2026-08-25 auf einer Ausnahmeliste
+  mit dem Vermerk „verdrahten oder streichen", drei Wochen lang unangetastet.
+
+## Neu aufgenommen (beim Arbeiten gefunden)
+
+- **Zwei Tests sind rot und waren es schon vorher.** `test_kurse_sind_nicht_veraltet`
+  (Waehrungskurse aelter als 30 Tage) und `test_standardtext::test_ausgabe_haelt_die_form`
+  (Textmengen-Baender trennen nicht mehr, [27, 44] statt >= 54). Beides Datendrift, kein
+  Codefehler — aber ein dauerhaft roter Test ist ein Waechter, den man zu ignorieren lernt.
+- **`firma-index.json` und `doc-listing-index.json`** stehen weiterhin auf der
+  Ausnahmeliste in `pruefe_verdrahtung.py`, beide seit dem 2026-08-25 „geschrieben, nie
+  gelesen". Jetzt, wo die Sonde schaerfer misst, lohnt die Entscheidung: verdrahten oder
+  streichen.
 
 ## Was nicht in dieser Liste steht
 
