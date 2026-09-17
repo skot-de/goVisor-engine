@@ -79,16 +79,17 @@ aufraeumen() {
 }
 trap aufraeumen EXIT INT TERM
 
-echo "── 2/3  Server starten"
-( cd "$WEB" && exec caffeinate -s npx next start -p "$PORT" ) &
-SERVER=$!
-
-for _ in $(seq 1 60); do
-  curl -sf -o /dev/null "http://127.0.0.1:$PORT/api/health" && break
-  sleep 1
-done
-
-echo "── 3/3  Tunnel oeffnen"
+# ⚠ ERST DER TUNNEL, DANN DER SERVER — und das ist keine Kosmetik.
+#
+# Next baut `request.url` aus dem `Host`-Header. Hinter einem Tunnel steht dort die INTERNE
+# Adresse (`localhost:3000`), nicht die, unter der der Besucher kommt. Gemessen am
+# 2026-09-17: die Umleitung nach der Anmeldung ging auf `https://localhost:3000/leads` —
+# auf dem eigenen Rechner unsichtbar, auf einem iPad eine tote Seite, und zwar genau in dem
+# Moment, in dem sich jemand gerade angemeldet hat.
+#
+# Ein Quick Tunnel vergibt seine Adresse erst beim Start, also muss er zuerst laufen. Dass
+# er in den paar Sekunden bis zum Server 502 liefert, sieht niemand.
+echo "── 2/3  Tunnel oeffnen"
 PROTO=$(mktemp)   # vom Trap oben aufgeraeumt
 cloudflared tunnel --url "http://127.0.0.1:$PORT" --no-autoupdate >"$PROTO" 2>&1 &
 TUNNEL=$!
@@ -103,6 +104,15 @@ done
 if [ -z "$ADRESSE" ]; then
   echo "⛔ Keine Tunnel-Adresse erhalten. Protokoll:"; tail -20 "$PROTO"; exit 1
 fi
+
+echo "── 3/3  Server starten (kennt jetzt seine oeffentliche Adresse)"
+( cd "$WEB" && OEFFENTLICHE_URL="$ADRESSE" exec caffeinate -s npx next start -p "$PORT" ) &
+SERVER=$!
+
+for _ in $(seq 1 60); do
+  curl -sf -o /dev/null "http://127.0.0.1:$PORT/api/health" && break
+  sleep 1
+done
 
 echo
 echo "════════════════════════════════════════════════════════════════════════"

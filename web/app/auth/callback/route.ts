@@ -33,6 +33,40 @@ export const dynamic = "force-dynamic";
 // jeder Bibliotheksversion, ohne dass es hier jemandem auffiele.
 const TYPEN = new Set<EmailOtpType>(["magiclink", "recovery", "invite", "email", "email_change", "signup"]);
 
+/**
+ * Die Adresse, unter der uns der BESUCHER erreicht — nicht die, unter der wir lauschen.
+ *
+ * ⚠ GEMESSEN AM 2026-09-17 HINTER EINEM CLOUDFLARE-TUNNEL. `request.url` baut Next aus dem
+ * `Host`-Header, und der trug `localhost:3000` — die interne Adresse. Die Umleitung nach der
+ * Anmeldung ging damit auf `https://localhost:3000/leads`: auf dem eigenen Rechner unsichtbar,
+ * auf einem iPad eine tote Seite. Genau in dem Moment, in dem jemand sich gerade angemeldet
+ * hat.
+ *
+ * `OEFFENTLICHE_URL` setzt der Aufrufer, der sie kennt (`scripts/demo_tunnel.sh`, nachdem der
+ * Tunnel seine Adresse vergeben hat). Fehlt sie, bleibt alles wie bisher — hinter keinem Proxy
+ * ist `request.url` richtig.
+ */
+function basis(request: NextRequest): string {
+  const aussen = process.env.OEFFENTLICHE_URL?.trim();
+  if (!aussen) return request.url;
+  try {
+    // Pfad und Abfrage der EIGENEN Anfrage behalten, nur Schema und Host austauschen.
+    const innen = new URL(request.url);
+    const draussen = new URL(aussen);
+    innen.protocol = draussen.protocol;
+    // ⚠ ERST den Port leeren. `url.host = "beispiel.de"` ohne Portangabe laesst den
+    // ALTEN Port stehen — gemessen: aus localhost:3000 wurde
+    // `https://<tunnel>.trycloudflare.com:3000/login`, also wieder eine tote Adresse,
+    // nur mit richtigem Hostnamen. Die URL-Schnittstelle ueberschreibt hier nicht, sie
+    // ergaenzt.
+    innen.port = "";
+    innen.host = draussen.host;
+    return innen.toString();
+  } catch {
+    return request.url;          // unbrauchbarer Wert darf nichts kaputtmachen
+  }
+}
+
 /** Nur seiteneigene Ziele. `//fremde.de` ist ein gueltiger Pfadanfang und landet woanders. */
 function sicheresZiel(roh: string | null): string {
   if (!roh || !roh.startsWith("/") || roh.startsWith("//")) return "/leads";
@@ -60,12 +94,12 @@ export async function GET(request: NextRequest) {
   }
 
   if (fehler) {
-    const ziel = new URL("/login", request.url);
+    const ziel = new URL("/login", basis(request));
     ziel.searchParams.set("fehler", fehler);
     return NextResponse.redirect(ziel);
   }
 
-  const antwort = NextResponse.redirect(new URL(weiter, request.url));
+  const antwort = NextResponse.redirect(new URL(weiter, basis(request)));
 
   // VORHANG: live liegt die App hinter der Coming-Soon-Sperre. Ohne diese Zeile käme man
   // per Mail zwar herein und stünde danach vor einer schwarzen Seite. Ein eingelöster

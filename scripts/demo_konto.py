@@ -104,13 +104,28 @@ def main() -> int:
         return 0
 
     # ── 1. Die Firma aus der ECHTEN Suche holen ───────────────────────────────
+    # ⚠ DER VORSCHAU-SCHLUESSEL MUSS MIT. Gegen `localhost` faellt das nicht auf: dort ist
+    # NODE_ENV=development und die Baustellen-Sperre aus. Gegen einen Tunnel oder ein
+    # Deployment laeuft dieselbe Anfrage in die schwarze Seite — und die ist HTML, kein
+    # JSON, also scheiterte das Skript mit „Expecting value: line 1 column 1".
+    # Eine Fehlermeldung, die nach „App laeuft nicht" aussieht und „App ist gesperrt" heisst.
+    parameter = {"q": a.firma}
+    schluessel = env().get("PREVIEW_KEY", "").strip().strip('"\'')
+    if schluessel and not a.app.startswith("http://localhost"):
+        parameter["preview"] = schluessel
     try:
-        r = requests.get(f"{a.app}/api/entity-search", params={"q": a.firma}, timeout=30)
+        r = requests.get(f"{a.app}/api/entity-search", params=parameter, timeout=30)
         r.raise_for_status()
         treffer = r.json().get("matches") or []
     except Exception as ex:
+        hinweis = ""
+        if "Expecting value" in str(ex):
+            hinweis = ("\n    Die Antwort war kein JSON — vermutlich die Baustellen-Seite. "
+                       "Steht PREVIEW_KEY in web/.env.local, und laeuft der Server mit "
+                       "demselben Wert?")
         sys.exit(f"  ✖ Firmensuche nicht erreichbar ({ex}).\n"
-                 f"    Laeuft die App unter {a.app}? Ohne sie gibt es kein belegtes Profil.")
+                 f"    Laeuft die App unter {a.app}? Ohne sie gibt es kein belegtes "
+                 f"Profil.{hinweis}")
     if not treffer:
         sys.exit(f"  ✖ Die Firmensuche kennt {a.firma!r} nicht. Kein Profil ohne Beleg.")
     f = treffer[0]

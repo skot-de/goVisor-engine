@@ -45,9 +45,9 @@ sieht jeder Fremde eine leere schwarze Seite — so gewollt.
 | | Was | Konto nötig |
 |---|---|---|
 | 1 | `/t/017d72c50939b898` — „Für euch haben wir das schon gemacht" | nein |
-| 2 | Kernaussage: **99 % der Aufträge von zwei Auftraggebern** (DB Netz, DB Station&Service), gezählt über 507 Zuschläge | nein |
-| 3 | Fünf offene Ausschreibungen bei Verkehrsbetrieben, **alle mit laufender Frist** | nein |
-| 4 | Weiter ins Onboarding, Firma suchen: **507 Zuschläge, 6 Auftraggeber, seit 2010** erscheinen, bevor ein Konto existiert | nein |
+| 2 | Kernaussage: **99 % der Aufträge von zwei Auftraggebern** (DB Netz, DB Station&Service), gezählt über 509 Zuschläge | nein |
+| 3 | Fünf offene Ausschreibungen bei Verkehrsbetrieben, **alle mit laufender Frist** (neu erzeugt 16.09.; Fristen 21.09. ×3, 30.09., 07.10.) | nein |
+| 4 | Weiter ins Onboarding, Firma suchen: **509 Zuschläge, 6 Auftraggeber, seit 2010** erscheinen, bevor ein Konto existiert | nein |
 | 5 | Registrieren mit **info@klostermann-hamm.de** → Beleg wird grün | wird angelegt |
 | 6 | Explorer: ~300 von 19.000 Vorgängen auf das Profil gefiltert, Relevanz-Werte | ja |
 | 7 | Ein Vorgang mit voller Dokumentanalyse öffnen | ja |
@@ -56,6 +56,10 @@ sieht jeder Fremde eine leere schwarze Seite — so gewollt.
 existiert seit dem 11.09. als vorbereitetes Konto; eine erneute Registrierung damit
 scheitert mit „User already registered" — vor Publikum. Der Beleg funktioniert für jede
 Adresse der Domain, weil der Landing-Token ihn trägt (gemessen).
+
+⚠ **Dieser Schirm hat fünf Tage Haltbarkeit.** Drei der fünf Fristen enden am **21.09.**
+Danach zeigt die Landing-Seite abgelaufene Verfahren, solange `outreach.json` nicht neu
+erzeugt wird. Für einen Termin nach dem 21.09. vorher neu bauen.
 
 ## 4 · Wenn etwas hakt
 
@@ -99,15 +103,18 @@ Explorer den vorbereiteten Anmeldelink nehmen (Abschnitt 4).
 
 Sie sind gemessen, nicht gerundet — ein Investor, der nachfragt, bekommt eine Antwort:
 
-* **507 Zuschläge** für Klostermann stammen aus der Lieferantenbasis, dieselbe Quelle, die
+* **509 Zuschläge** für Klostermann stammen aus der Lieferantenbasis, dieselbe Quelle, die
   das Onboarding durchsucht. Die Schreibvariante ohne Leerzeichen (107) ist darin
-  **enthalten**, nicht daneben.
-* **178 Vorgänge** im Demo-Datensatz haben alle sieben Analyse-Blöcke gefüllt (belegte
+  **enthalten**, nicht daneben. ⚠ `outreach.json` wurde am **16.09.** neu erzeugt, damit
+  Landing-Seite und Onboarding dieselbe Zahl zeigen; vorher standen dort 508 gegen 509.
+  Wer den Bestand weiterlaufen lässt, bekommt die Abweichung zurück: sie wächst täglich.
+
+* **758 Vorgänge** im Demo-Datensatz haben alle sieben Analyse-Blöcke gefüllt (belegte
   Zitate, K.-o.-Kriterien, Eignung, Zuschlag, Fristen, LV-Positionen, Aufwand) — von
-  10.431 Analysen insgesamt. Die Liste zeigt bewusst auch gewöhnliche Vorgänge: eine
+  10.598 Analysen insgesamt. Die Liste zeigt bewusst auch gewöhnliche Vorgänge: eine
   Trefferliste, in der jeder Vorgang vollständig ausgewertet ist, wäre eine Behauptung.
-* **Der Spitzenvorgang** trägt 122 belegte Zitate, 19 K.-o.-Kriterien, 35
-  Eignungsnachweise und 40 Zuschlagskriterien.
+* **Der Spitzenvorgang** (`587907_2026`, Tragkraftspritzenfahrzeug) trägt 135 belegte
+  Zitate, 18 K.-o.-Kriterien, 35 Eignungsnachweise und 40 Zuschlagskriterien.
 * Was **nicht** stimmt, wenn jemand nachbohrt: die Entity-Auflösung trennt dieselbe Firma
   noch über Schreibvarianten hinweg (`Bauges.` gegen `Baugesellschaft`, ARGE-Formen). Das
   ist bekannt, gemessen und bewusst nicht automatisch behoben — die naheliegende Regel
