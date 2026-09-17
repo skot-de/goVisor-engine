@@ -470,8 +470,43 @@ def _paare_finden(saetze: list[dict], haeufigkeit: dict | None = None) -> list[d
             # gehoben und dabei fremde Fristen uebernommen. Die Stufe steht deshalb in
             # der Tabelle, damit jeder Verbraucher selbst entscheidet.
             kurz = min(len(s["w"]), len(t["w"])) < 6
+            # ⚠ OHNE DATUM HAT DIE ±90-TAGE-REGEL NIE GEGRIFFEN. `_in_zeitscheiben`
+            # laesst datumslose Saetze bewusst in JEDER Scheibe mitlaufen — sie „koennen
+            # mit allem paaren". Das ist als Kandidatenregel richtig; als BELEG ist es
+            # etwas anderes. Ein solches Paar hat die Hauptbedingung der Firewall nicht
+            # bestanden, sondern uebersprungen.
+            #
+            # Gemessen am 2026-09-17 ueber 115.044 DE-Paare: jedes Paar MIT Datum liegt
+            # innerhalb von 90 Tagen (Median 27, Maximum exakt 90) — die Regel greift
+            # also lueckenlos, wo sie greifen kann. 18.331 Paare (15,9 %) tragen kein
+            # Datum, darunter 361 mit `kaeufer_und_titel`. Genau diese 361 schliessen
+            # heute Leads aus, ohne je auf den Abstand geprueft worden zu sein.
+            #
+            # Beispiel aus dem Bestand: „Neubau Optical Imaging Center- OIC." (2017) wurde
+            # mit „E94.1 OIC - Neubau Optical Imaging Center/VE 4.11 Montageschienen"
+            # gepaart. Dasselbe Bauprojekt, aber sechs Jahre und eine andere
+            # Vergabeeinheit auseinander — von 68 Vorgaengen dieses Projekts sind rund 60
+            # eigenstaendige Gewerke. Mit Datum waere das Paar an den 90 Tagen gescheitert.
+            #
+            # ⚠ NICHT VERWERFEN, SONDERN EIGENE STUFE — wie bei `geschwister`. Wer sie
+            # braucht, kann sie lesen; der Ausschluss in `gold.py` nimmt nur
+            # `kaeufer_und_titel` und laesst sie damit stehen. Das ist die Richtung, in die
+            # diese Firewall seit jeher faellt: markieren statt loeschen.
+            #
+            # ⚠ ABER NUR DIE ENTHALTENEN. Ohne Datum trennt die Wortmenge sauber, und zwar
+            # gemessen: von 366 datumslosen `kaeufer_und_titel`-Paaren tragen 111
+            # IDENTISCHE Wortmengen („SPA Loessnig, Sanierung Rundlaufbahn" doppelt) und
+            # 255 eine ENTHALTENE („Erweiterung Stadtbad Plauen - Los VM 004 -
+            # Abbrucharbeiten" gegen „Erweiterung Stadtbad Plauen").
+            #
+            # Identische Titel bei identischem Kaeufer sind auch ohne Datum ein Beleg — da
+            # gibt es nichts, was der Abstand noch entscheiden koennte. Eine Enthaltung
+            # dagegen ist genau der Fall, den die 90 Tage abfangen sollen: dieselbe
+            # Baustelle, anderes Los, Jahre spaeter. Die Stufe trifft deshalb nur sie.
+            ohne_datum = not (s["d"] and t["d"]) and s["w"] != t["w"]
             beleg = ("geschwister" if geschwister
-                     else "kaeufer_und_titel" if gleicher_kaeufer
+                     else ("kaeufer_und_titel_ohne_datum" if ohne_datum
+                           else "kaeufer_und_titel") if gleicher_kaeufer
                      else "nur_titel_kurz" if kurz else "nur_titel")
             # Master = reichere Quelle. Bei Gleichstand der frühere Satz.
             a, b = (s, t) if QUELLEN_RANG.get(s["gen"], 9) <= QUELLEN_RANG.get(t["gen"], 9) else (t, s)
