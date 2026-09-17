@@ -112,5 +112,27 @@ export async function GET(request: NextRequest) {
       httpOnly: true, sameSite: "lax", secure: true, path: "/", maxAge: 60 * 60 * 24 * 30,
     });
   }
+
+  // ⚠ DERSELBE GRUND, ZWEITER SCHLUESSEL — und ohne ihn bleibt der Vorhang zu.
+  //
+  // Der Block darueber oeffnet den Vorhang nur ueber `ZUGANG_PFAD`. Ist der nicht gesetzt
+  // (und das ist er in keinem unserer Setups), passiert hier nichts, und der zweite
+  // Riegel — `PREVIEW_KEY` — bleibt geschlossen. Gemessen am 2026-09-17 ueber einen
+  // Tunnel: Anmeldelink auf einem Geraet OHNE vorherigen `?preview=`-Aufruf → Token wird
+  // eingeloest, Umleitung auf `/leads`, und dort steht eine LEERE SCHWARZE SEITE. Der
+  // Nutzer hat sich gerade erfolgreich angemeldet und sieht nichts.
+  //
+  // Das trifft genau den Fall, fuer den Anmeldelinks da sind: ein anderes Geraet. Auf dem
+  // eigenen Rechner faellt es nie auf, weil der Cookie vom Entwickeln noch liegt.
+  //
+  // Die Begruendung ist dieselbe wie oben: ein eingeloester Supabase-Einmal-Token ist ein
+  // staerkerer Nachweis als die Kenntnis des Schluessels, der denselben Vorhang oeffnet.
+  // FAIL-CLOSED bleibt: ohne gesetzten `PREVIEW_KEY` gibt es diesen Weg nicht.
+  const schluessel = process.env.PREVIEW_KEY ?? "";
+  if (schluessel) {
+    antwort.cookies.set("gv_preview", schluessel, {
+      httpOnly: true, sameSite: "lax", secure: true, path: "/", maxAge: 60 * 60 * 24 * 30,
+    });
+  }
   return antwort;
 }
