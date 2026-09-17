@@ -10,8 +10,6 @@ werden.
 |---|-------|---------|-------------|
 | [09a](09-ladezustand.md) | Ladezustand statt „0 von 0" | klein | schlimmster Moment der Vorfuehrung |
 | [06](06-demokonto-cpv6.md) | Demokonto auf CPV-6 | mittel | Demo zeigt das Produkt unter Wert |
-| [05](05-suche.md) | Suche: Lose und Vergabenummer | mittel | 3 von 36 unauffindbar, plus Widerspruch |
-| [10](10-schreibwettlauf.md) | Weitere Schreibwettlaeufe | mittel | eine Stelle behoben, Klasse offen |
 | [07](07-dubletten.md) | Dubletten-Cluster schliessen | gross | 9.001 Leads, ~5 % |
 | [09b](09-ladezustand.md) | Nutzlast 49,6 → 25,5 MB | gross | eine offene Entscheidung (`anf`) |
 | [08](08-onboarding-schritt3.md) | Onboarding Schritt 3 | klein | 96,9 % sehen eine Ein-Element-Liste |
@@ -32,6 +30,17 @@ werden.
 - **[01](01-zeitfilter.md) Zeitfilter** — 2026-09-17, Commit bfe11bc. Die Reihenfolge stand
   dreimal im Code, einmal verkehrt. Jetzt einmal, als `handlungsFrist`. Ein-Monats-Horizont
   8.214 → 15.092 Leads.
+
+- **[05](05-suche.md) Suche** — 2026-09-17, Commit 617b151. Lose und Vergabenummer im
+  Heuhaufen; `fundstelle` hatte zwei tote Zweige. Dazu `pruefe-demoworte.mjs`, das die
+  Drehbuchworte gegen den Demo-Satz faehrt — und beim ersten Lauf sofort einen Fall fand.
+- **[10](10-schreibwettlauf.md) Schreibwettlaeufe** — 2026-09-17, Commit 5a151a3. Vier
+  Schreiber gefunden, zwei mit Lese-Zyklus auf denselben Blob, zwei mit dauerhafter
+  Spaltung Spalte/Blob. Der Wettlauf ist abgeschafft, nicht gereiht.
+
+  ⚠ **OFFEN FUER SVEN: `supabase/0020_profil_atomar_mischen.sql` einspielen.** DDL laeuft
+  von dieser Maschine nicht. Bis dahin faellt der Code laut auf den alten Weg zurueck —
+  er funktioniert, aber das Lost-Update-Fenster ist offen.
 
 ## Neu aufgenommen (beim Arbeiten gefunden)
 
