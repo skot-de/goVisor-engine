@@ -547,6 +547,36 @@ function awardEmpfCell(l){
   return `<td class="c-empf"><span class="empf-grund" title="${esc(tk("Hohe Feldüberschneidung. Direkter Wettbewerb, keine Kontaktempfehlung"))}">${tk("direkter Wettbewerb")}</span></td>`;
 }
 
+/* ── Wann muss ich handeln? ──────────────────────────────────────────────────────────
+ *
+ * Ein Lead traegt bis zu ZWEI Daten, und sie bedeuten Verschiedenes:
+ *   `tage`    Angebotsfrist  — wann muss ich abgeben
+ *   `endTage` Vertragsende   — wann wird neu vergeben
+ *
+ * Laeuft eine Ausschreibung, ist die Frist die Antwort; das Vertragsende geht mich dann
+ * nichts mehr an. Laeuft keine, ist das Vertragsende der frueheste Zeitpunkt, zu dem
+ * ueberhaupt etwas passiert. Also: Frist zuerst, Vertragsende als Rueckfall.
+ *
+ * ⚠ WARUM DAS EINE FUNKTION IST UND NICHT DREIMAL HINGESCHRIEBEN. Bis zum 2026-09-17 stand
+ * die Regel an drei Stellen — und an einer davon andersherum:
+ *
+ *   fristCell      `tage` zuerst   (zeigt „N Tage bis Schluss" bzw. „Vertragsende")
+ *   Sortierung     `tage` zuerst
+ *   Zeithorizont-Filter (ExplorerShell)   `endTage` ZUERST
+ *
+ * Damit verschwieg der Filter genau die Leads, die die Spalte als dringend auswies. Ein
+ * Lead mit `tage: 4` und `endTage: 800` stand sichtbar mit „4 Tage" in der Liste und fiel
+ * aus dem Ein-Monats-Filter, weil der 800 mass. Gemessen ueber 43.676 Leads: 6.041 Leads
+ * (13,8 %) tragen diese Kombination, und der Ein-Monats-Filter zeigte 8.214 statt 15.092.
+ *
+ * Aufgefallen ist es nicht durch einen Test, sondern durch einen Nutzer: „wenn ich nach
+ * Vertragsende 1 Monat filtere, zeigt er mir nur zwei Leads mit 8 Tagen Frist, geh ich auf
+ * egal sind da noch viele andere mit 4 Tagen."
+ */
+function handlungsFrist(l){
+  return l.tage != null ? l.tage : (l.endTage != null ? l.endTage : null);
+}
+
 function fristCell(l){
   if(l.tage != null){                       // offene Ausschreibung: Countdown
     const urg = l.tage <= 14;
@@ -618,7 +648,7 @@ function sorted(rows){
       case 'ranking': return -topScore(l);
       // #24 Zuschlag: innerhalb der Phase nach Zuschlagsdatum absteigend (frisch zuerst) → ago aufsteigend
       case 'frist': return l.src==='award' ? (l.award ? l.award.ago : 9999)
-                         : l.tage != null ? l.tage : (l.endTage!=null ? l.endTage : 9999);
+                         : (handlungsFrist(l) ?? 9999);
       case 'vol': return l.volumen.src==='unbekannt' ? -1 : parseFloat(String(l.volumen.wert).replace(/[^\d,]/g,'').replace(',','.'))||0;
       case 'empf': return l.src==='award' ? 9 : recForList(l).rank;   // #26 §4.1 Aussagestärke, stärkste zuerst
       /* Passungszahl statt Stufe: dieselbe Richtung, nur feiner. Sie ist monoton aus
@@ -3336,7 +3366,7 @@ export {
   MEINE_FIRMA, LEADS, BRANCHEN, RAHMEN, RAHMEN_NACHWEIS, FACETS, ORTE, PLZ, PLACE_RADIUS,
   COLS, SRC_TEXT, WF, LVL, TOKICON, RADII, NETZ_FREI_MAX, STAR, ME,
   aufwandStufe, leadText, matchToken, fundstelle, hervorheben, hasToken, toggleToken,
-  applyAnalyse,
+  applyAnalyse, handlungsFrist,
   classifyQuery, val, bandMeter, wfPill, konkCell, chanceCap, istEigen, bieterLuecke,
   fristCell, visible, syncLocationColumn, sorted, cellHTML, tokenLabel, suggestList,
 };

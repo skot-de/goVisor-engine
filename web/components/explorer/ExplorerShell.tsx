@@ -6,7 +6,7 @@ import {
   suggestList, classifyQuery, netzInteresse, netzFreigabe, offeneGruppen, angaben, setLeads, setMarket, setBestand,
   setNachbarn, setNetzZustand, toggleNetzLos, netzLoseVon, setPlzGeo, setPlzLand,
   setProfile, setUserContracts, parseWert, aufwandStufe,
-  applyAnalyse,
+  applyAnalyse, handlungsFrist,
 } from "@/lib/explorerCore";
 import { loadContracts } from "@/lib/supabase/contracts";
 import { buildProfile, brancheFromProfile } from "@/lib/profileEngine";
@@ -60,7 +60,12 @@ function postFilter(rows: Lead[], a: Adv): Lead[] {
     if (a.staaten.length && !a.staaten.includes(String(l.land || "DE"))) return false;
     if (a.phases.length && !a.phases.includes(String(l.src))) return false;
     if (a.horizon != null) {
-      const days = (l.endTage as number | null) ?? (l.tage as number | null);
+      /* ⚠ DIESELBE REGEL WIE SPALTE UND SORTIERUNG. Hier stand `endTage ?? tage` — genau
+         andersherum als `fristCell` und die Sortierung. Ein Lead mit `tage: 4` und
+         `endTage: 800` stand sichtbar mit „4 Tage" in der Liste und fiel trotzdem aus dem
+         Ein-Monats-Filter. Die Regel liegt jetzt in `handlungsFrist` im Kern; drei Kopien
+         einer Reihenfolge laufen auseinander, und hier war es bereits passiert. */
+      const days = handlungsFrist(l as { tage?: number | null; endTage?: number | null });
       if (days == null || days < 0 || days / 30 > a.horizon) return false;
     }
     if (a.regions.length || a.nationwide) {
