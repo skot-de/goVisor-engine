@@ -190,7 +190,25 @@ export function EignungsCheck({ check, fachgebiete, leseprobe }: {
     const stufe = check.stufen[groesse];
     speichern({
       fach, region,
-      volMin: stufe?.von ?? null,
+      // ⚠ NUR DIE OBERGRENZE. Die Frage darueber lautet „Aufträge bis zu welcher Grösse
+      // könnt ihr stemmen?" — das ist eine Frage nach der KAPAZITAET, nicht nach einer
+      // Spanne. Bis zum 2026-09-17 reiste die Untergrenze der gewaehlten Stufe mit, und
+      // `matchLead` warf damit jeden kleineren Auftrag raus („unter eurer Spanne").
+      //
+      // Gemessen am Bau-Bestand: 15.363 von 16.718 Leads mit Wertangabe liegen unter
+      // 2 Mio € (91,9 %, Median 389.854 €). Wer „2,0 Mio – 10,0 Mio" waehlte, weil er bis
+      // 10 Mio stemmen kann, sah danach SECHS Ausschreibungen statt dreihundert — und die
+      // Oberflaeche nannte als Grund „3.098 ausserhalb eurer Wertspanne", also eine
+      // Angabe, die er nie gemacht hat.
+      //
+      // Sven beim eigenen Durchlauf: „wenn ich sage 2-10mio, dann will ich doch auch die
+      // kleinen? hab das als bis 10mio verstanden." Wenn der Erbauer die eigene Frage so
+      // liest, liest ein Kunde sie auch so.
+      //
+      // Eine Untergrenze kann sinnvoll sein — ein 5.000-€-Auftrag lohnt fuer niemanden.
+      // Aber dann muss man danach FRAGEN. Sie aus einer Kapazitaetsangabe abzuleiten ist
+      // eine Behauptung ueber den Nutzer, die er nie aufgestellt hat.
+      volMin: null,
       volMax: stufe?.bis ?? null,
       haftpflicht: stufenwert("haftpflicht"),
       referenzen: stufenwert("referenzen"),
