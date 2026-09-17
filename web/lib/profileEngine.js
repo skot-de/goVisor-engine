@@ -29,7 +29,11 @@ export function emptyProfile() {
     // `brancheFromProfile` kann die Branche zwar aus den CPV-Feldern ableiten — aber nur
     // als Rueckfall. Eine ausdrueckliche Angabe schlaegt jede Ableitung, und genau die
     // ging verloren.
-    branche: null,            // Grundraum, ausdruecklich gesetzt (schlaegt die CPV-Ableitung)
+    /** @type {string|null} Grundraum, ausdruecklich gesetzt (schlaegt die CPV-Ableitung).
+     *  ⚠ Die Annotation ist noetig, nicht schmueckend: ohne sie inferiert TypeScript aus
+     *  `null` den Typ `null`, und der Schnitt mit `branche?: string` in
+     *  `supabase/auth.ts` wird zu `never` — die ganze Profile-Form kippt. */
+    branche: null,
     nachbarFields: [],        // angrenzende Felder (teil-relevant, kein Volltreffer)
     regions: null,           // Array NUTS-Präfixe; null = bundesweit tätig
     regionTyp: null,         // 'regional'|'teilregional'|'bundesweit' — aus der Historie gemessen

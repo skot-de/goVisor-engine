@@ -7,7 +7,10 @@ export type Profile = ReturnType<typeof buildProfile> & {
   /** Bestätigte Einheiten MIT Beleglage. Alte Profile tragen hier reine Namen (string) —
    *  beim Lesen beides zulassen, sonst verliert ein bestehendes Konto seine Identität. */
   confirmedEntities?: (string | { name: string; beleg: "kennung" | "selbstauskunft"; wins?: number })[];
-  branche?: string;
+  // ⚠ `branche` steht NICHT mehr hier. Es wird seit dem 2026-09-17 von `buildProfile`
+  // selbst gefuehrt (`string | null`); eine zweite Deklaration hier (`string | undefined`)
+  // liess den Schnitt zu `never` zusammenfallen und nahm damit die ganze Profile-Form mit.
+  // Ein Feld, eine Quelle.
   /** Was der Nutzer im Eignungs-Check auf der Startseite angegeben hat. Drei der sechs
    *  Angaben haben schon ein Profilfeld (Grösse, PQ/ISO als `capabilities`); Haftpflicht-
    *  HÖHE, Referenzanzahl und Umsatz haben noch keins. Sie reisen trotzdem mit, damit

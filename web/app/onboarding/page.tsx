@@ -645,11 +645,16 @@ function testMailErlaubt(mail: string): boolean {
       profile = {
         ...buildProfile({
           firma: eingabe.trim() || null, entityConfidence: null,
+          // ⚠ Die Branche gehoert HIER hinein, nicht danebengesetzt. Bis zum 2026-09-17
+          // stand unten `branche: branche || undefined` — das kollidierte, sobald
+          // `buildProfile` das Feld selbst fuehrt (`string | null` gegen
+          // `string | undefined`), und TypeScript reduzierte den Profile-Schnitt auf
+          // `never`. Ein Feld, ein Weg.
+          branche: branche || null,
           cpvFields: [], regions: nuts,
           regionLabels: nuts.map((r) => r === "BUND" ? "Bund" : (LAENDER.find((l) => l[0] === r)?.[1] || r)),
           ...(ausCheck ?? {}),
         }),
-        branche: branche || undefined,
         ...(checkAngaben ? { checkAngaben } : {}),
       };
     }
