@@ -1,4 +1,5 @@
 "use client";
+import { mischeProfilBlob } from "./profilBlob";
 import { createClient } from "./client";
 import { buildProfile } from "@/lib/profileEngine";
 
@@ -56,11 +57,19 @@ export async function saveProfile(profile: Profile): Promise<{ ok: boolean; reas
   const supabase = createClient();
   const { data: { user } } = await supabase.auth.getUser();
   if (!user) return { ok: false, reason: "no-session" };
-  // Merge-sicher: der profile-Blob trägt auch die #27-Eignungsangaben (stammdaten, references,
-  // certificates, attributes, exclusions, zielrichtung, branchen, role, history). Ein Onboarding-
-  // Save würde sie sonst wegschreiben (kein Datenverlust). Leere/Default-Werte nicht drüberbügeln.
-  const { data: existing } = await supabase.from("user_profiles").select("profile").eq("id", user.id).single();
-  const prev = (existing?.profile as Record<string, unknown> | null) ?? {};
+  /* Der profile-Blob traegt auch die #27-Eignungsangaben (stammdaten, references,
+   * certificates, attributes, exclusions, zielrichtung, branchen, role, history). Ein
+   * Onboarding-Save darf sie nicht wegschreiben.
+   *
+   * ⚠ HIER STAND EIN LESE-AENDERE-SCHREIBE-ZYKLUS: den bisherigen Blob laden, leere
+   * #27-Felder aus ihm zurueckholen, alles zusammen zurueckschreiben. Zwischen Lesen und
+   * Schreiben lag ein Fenster, in dem `patchProfil` (unternehmen.ts) denselben Blob
+   * schrieb — dessen Aenderung war dann weg.
+   *
+   * Der Merge passiert jetzt in der Datenbank (`merge_profile`, s. profilBlob.ts). Damit
+   * ist das Lesen ueberfluessig UND die Erhaltungsschleife: was der Patch nicht nennt,
+   * bleibt ohnehin stehen. Leere Felder werden deshalb WEGGELASSEN statt nachgefuellt —
+   * dieselbe Wirkung, eine Runde weniger und kein Fenster. */
   const blob: Record<string, unknown> = { ...(profile as unknown as Record<string, unknown>) };
   const K27 = ["stammdaten", "references", "certificates", "attributes", "exclusions", "zielrichtung", "branchen", "role", "history"];
   for (const k of K27) {
@@ -68,8 +77,12 @@ export async function saveProfile(profile: Profile): Promise<{ ok: boolean; reas
     const leer = inc == null || inc === "ausgewogen"
       || (Array.isArray(inc) && inc.length === 0)
       || (typeof inc === "object" && !Array.isArray(inc) && Object.keys(inc as object).length === 0);
-    if (leer && prev[k] !== undefined) blob[k] = prev[k];
+    if (leer) delete blob[k];
   }
+  const misch = await mischeProfilBlob(blob);
+  if (!misch.ok) return { ok: false, reason: misch.error };
+  /* Die Spalten daneben sind einwertig und werden nur von hier geschrieben — dort ist
+   * „der letzte gewinnt" die richtige Regel, und ein eigenes Fenster entsteht nicht. */
   const { error } = await supabase.from("user_profiles").update({
     company_name: profile.firma ?? null,
     identity_id: profile.identityId ?? null,
@@ -88,7 +101,6 @@ export async function saveProfile(profile: Profile): Promise<{ ok: boolean; reas
     vol_max: profile.volMax ?? null,
     branche: profile.branche ?? null,
     known_from_ted: profile.entityConfidence === "confirmed",
-    profile: blob,
   }).eq("id", user.id);
   return { ok: !error, reason: error?.message };
 }

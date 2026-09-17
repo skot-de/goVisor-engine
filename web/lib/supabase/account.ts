@@ -1,4 +1,6 @@
 "use client";
+import { loadProfile, saveProfile } from "@/lib/supabase/auth";
+import { buildProfile } from "@/lib/profileEngine";
 import { createClient } from "./client";
 
 /* Account-/Settings-Operationen (Ticket #10). Alles RLS-gebunden über die Session. */
@@ -24,15 +26,46 @@ export async function loadAccount(): Promise<AccountRow | null> {
   return (data as AccountRow) ?? null;
 }
 
+/**
+ * Profilfelder aus `/settings` speichern.
+ *
+ * ⚠ HIER STAND EIN REINES SPALTEN-UPDATE, UND DAS WAR EIN STILLER DATENVERLUST.
+ *
+ * `user_profiles` haelt dieselben Angaben zweimal: als Spalten (`vol_min`, `regions`, …)
+ * und im `profile`-jsonb (`volMin`, `regions`, …). Die Spalten liest NUR `/settings`
+ * selbst, um sein eigenes Formular zu fuellen. Die Passung liest `loadProfile()`, und das
+ * liest ausschliesslich den Blob.
+ *
+ * Wer also in `/settings` seine Wertspanne oder seine Regionen aenderte, schrieb in
+ * Felder, die kein Treffer je ansieht. Die Seite meldete dazu „Profil gespeichert, wirkt
+ * beim naechsten Laden auf die Relevanz." — ein Versprechen, das der Code nicht hielt.
+ *
+ * Nachgewiesen am 2026-09-17 an der Datenbank: ein Profil trug `vol_min` 2.000.000 und
+ * `vol_max` 10.000.000 in den Spalten und `null`/`null` im Blob. Fuer die Passung hatte
+ * dieser Nutzer keine Wertgrenze.
+ *
+ * ⚠ DIE LOESUNG IST NICHT, BEIDES ZU SCHREIBEN, sondern EINEN Schreibweg zu haben.
+ * Zwei Schreiber auf dieselbe Angabe laufen auseinander — das ist keine Prognose, es ist
+ * hier bereits gemessen worden. `saveProfile` schreibt Blob UND Spalten in einem Zug und
+ * bewahrt dabei die #27-Eignungsangaben; diese Funktion reicht nur noch dorthin durch.
+ */
 export async function saveProfileFields(fields: Partial<{
   company_name: string | null; regions: string[]; region_labels: string[];
   vol_min: number | null; vol_max: number | null; branche: string | null;
 }>): Promise<{ ok: boolean; error?: string }> {
-  const sb = createClient();
-  const { data: { user } } = await sb.auth.getUser();
-  if (!user) return { ok: false, error: "no-session" };
-  const { error } = await sb.from("user_profiles").update(fields).eq("id", user.id);
-  return { ok: !error, error: error?.message };
+  // Der Blob ist die Wahrheit (s. `loadProfile`). Fehlt er — Konto ohne Onboarding —, ist
+  // ein leeres Grundprofil der richtige Anfang; `buildProfile` fuellt jedes Feld mit einem
+  // Vorgabewert, sonst stirbt `matchLead` spaeter an einem fehlenden Array.
+  const vorher = (await loadProfile()) ?? buildProfile({});
+  const patch: Record<string, unknown> = { ...vorher };
+  if ("company_name" in fields) patch.firma = fields.company_name ?? null;
+  if ("branche" in fields) patch.branche = fields.branche ?? null;
+  if ("regions" in fields) patch.regions = fields.regions ?? [];
+  if ("region_labels" in fields) patch.regionLabels = fields.region_labels ?? [];
+  if ("vol_min" in fields) patch.volMin = fields.vol_min ?? null;
+  if ("vol_max" in fields) patch.volMax = fields.vol_max ?? null;
+  const { ok, reason } = await saveProfile(patch as Parameters<typeof saveProfile>[0]);
+  return { ok, error: reason };
 }
 
 const DEFAULT_ALERTS: AlertSettings = {

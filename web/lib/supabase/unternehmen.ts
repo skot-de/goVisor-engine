@@ -1,4 +1,5 @@
 "use client";
+import { mischeProfilBlob, geaenderteFelder } from "./profilBlob";
 import { createClient } from "./client";
 
 /* #27 Eignungsprofil — Stammdaten („Unser Unternehmen").
@@ -176,12 +177,23 @@ async function patchProfil(feld: string, mutate: (p: Profil, by: string | null) 
   const { data: { user } } = await sb.auth.getUser();
   if (!user) return { ok: false, error: "no-session" };
   const { data } = await sb.from("user_profiles").select("profile").eq("id", user.id).single();
-  const profile = coerceProfil(data?.profile as Record<string, unknown> | null);
+  const roh = (data?.profile as Record<string, unknown> | null) ?? {};
+  const profile = coerceProfil(roh);
   const by = user.email ?? null;
+  // Was `coerceProfil` ergaenzt hat, ist noch keine Aenderung DIESES Aufrufs — der
+  // Vergleich laeuft deshalb gegen den normalisierten Stand, nicht gegen das rohe jsonb.
+  const vorher = JSON.parse(JSON.stringify(profile)) as Record<string, unknown>;
   mutate(profile, by);
   profile.history = [{ feld, at: new Date().toISOString(), by }, ...profile.history].slice(0, 200);
-  const { error } = await sb.from("user_profiles").update({ profile }).eq("id", user.id);
-  return { ok: !error, error: error?.message };
+  /* ⚠ NUR DIE GEAENDERTEN FELDER, nicht der ganze Blob. Hier stand
+     `.update({ profile })` — das schrieb den kompletten Stand von VOR dem Lesen zurueck
+     und loeschte damit alles, was `saveProfile` (auth.ts) im Fenster dazwischen
+     geschrieben hatte. Der Kommentar oben („Verhindert Lost-Updates zwischen Sektionen")
+     galt nur gegen andere Aufrufe DIESER Funktion, nicht gegen den zweiten Schreiber.
+     Details und der Weg ohne Fenster: `lib/supabase/profilBlob.ts`. */
+  const patch = geaenderteFelder(vorher, profile as unknown as Record<string, unknown>);
+  if (!Object.keys(patch).length) return { ok: true };
+  return mischeProfilBlob(patch);
 }
 
 export async function loadProfil(): Promise<{ profil: Profil; ctx: ProfilContext } | null> {
@@ -285,8 +297,15 @@ export async function saveIdentityCorrection(identityId: string, companyName: st
   if (companyName) patch.company_name = companyName;
   const { error } = await sb.from("user_profiles").update(patch).eq("id", user.id);
   if (error) return { ok: false, error: error.message };
-  // History-Vermerk der Korrektur
-  await patchProfil("entity-korrektur", () => { /* Zuordnung in Spalten, hier nur Protokoll */ });
+  /* ⚠ DER FIRMENNAME STEHT ZWEIMAL: als Spalte `company_name` und im Blob als `firma`.
+     Gelesen wird fuer die Passung NUR der Blob (`loadProfile`). Bis zum 2026-09-17 schrieb
+     diese Funktion allein die Spalte — eine Identitaets-Korrektur kam damit im Profil nie
+     an, obwohl sie gespeichert aussah. Dieselbe Spaltung hatte `/settings`, und dort war
+     sie an den Daten nachweisbar: ein Profil trug 2.000.000/10.000.000 in den Spalten und
+     null/null im Blob. Der History-Vermerk faehrt den Namen jetzt mit. */
+  await patchProfil("entity-korrektur", (pr) => {
+    if (companyName) (pr as unknown as Record<string, unknown>).firma = companyName;
+  });
   return { ok: true };
 }
 
