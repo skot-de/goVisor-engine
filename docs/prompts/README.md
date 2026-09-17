@@ -8,11 +8,8 @@ werden.
 
 | # | Thema | Aufwand | Warum jetzt |
 |---|-------|---------|-------------|
-| [09a](09-ladezustand.md) | Ladezustand statt „0 von 0" | klein | schlimmster Moment der Vorfuehrung |
 | [06](06-demokonto-cpv6.md) | Demokonto auf CPV-6 | mittel | Demo zeigt das Produkt unter Wert |
 | [07](07-dubletten.md) | Dubletten-Cluster schliessen | gross | 9.001 Leads, ~5 % |
-| [09b](09-ladezustand.md) | Nutzlast 49,6 → 25,5 MB | gross | eine offene Entscheidung (`anf`) |
-| [08](08-onboarding-schritt3.md) | Onboarding Schritt 3 | klein | 96,9 % sehen eine Ein-Element-Liste |
 | [02](02-passungszahl.md) | Passungszahl | klein oder gross | Weggabelung, siehe Datei |
 
 ## Erledigt
@@ -46,6 +43,21 @@ werden.
 
   Eine Restzeile bleibt: ein Profil traegt die Wertspanne noch nur in den Spalten. Sie
   heilt beim naechsten Speichern aus /settings von selbst.
+
+- **[09a](09-ladezustand.md) Ladezustand** — 2026-09-17, Commit d833cf6. `loading`
+  existierte und wurde von niemandem gelesen. Die neue Sonde prueft die KLASSE: 262
+  `useState` geprueft, dabei `planOpen` als tote Zeile gefunden.
+- **[08](08-onboarding-schritt3.md) Onboarding Schritt 3** — 2026-09-17, Commit f4da344.
+  Uebersprungen bei genau einer BELEGTEN Einheit (79,5 %, nicht die im Auftrag behaupteten
+  96,9 %). Der Token-Weg hatte die Abkuerzung schon — ohne die Belegpruefung.
+
+## Offen, mit korrigierter Grundlage
+
+- **[09b](09-ladezustand.md) Nutzlast** — die Annahme im Auftrag war falsch. Die 47 MB
+  gehen nie ueber die Leitung (gzip: 5,6 MB), und die Liste braucht fast alle Felder;
+  nachladbar sind 9 %, nicht 50 %. Der echte Hebel ist **Brotli** (5,65 → 2,96 MB bei
+  Qualitaet 11, vorberechnet). Nicht gebaut, weil `/api/leads` ohne Anmeldung nicht
+  pruefbar ist und doppelte Kodierung die Liste fuer jeden zerstoeren wuerde.
 
 ## Neu aufgenommen (beim Arbeiten gefunden)
 
