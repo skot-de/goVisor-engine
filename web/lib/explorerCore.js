@@ -474,19 +474,63 @@ const bandMeter = (level, risk, cap, naTitle) => {
  * frueher oder spaeter ohne ihren Vorbehalt.
  *
  * ⚠ Die Zahl ist eine Rangzahl zum Sortieren, KEIN Prozentsatz und keine
- * Gewinnwahrscheinlichkeit. Deshalb steht „/100" dran und nie ein Prozentzeichen. Sie kennt
- * genau acht Werte (0·14·29·43·57·71·86·100), weil `s` in Halbschritten springt; eine feinere
- * Darstellung wuerde Genauigkeit behaupten, die es nicht gibt. Herkunft: profileEngine.js.
+ * Gewinnwahrscheinlichkeit. Sie kennt genau acht Werte (0·14·29·43·57·71·86·100), weil `s`
+ * in Halbschritten springt; eine feinere Darstellung wuerde Genauigkeit behaupten, die es
+ * nicht gibt. Herkunft: profileEngine.js.
+ *
+ * ⚠ GENAU DAS STAND HIER SCHON — und darunter wurde trotzdem „86/100" gezeichnet. Der
+ * Satz „eine feinere Darstellung wuerde Genauigkeit behaupten, die es nicht gibt" war
+ * richtig; die Begruendung daneben („deshalb steht /100 dran und nie ein Prozentzeichen")
+ * hat nur das Prozentzeichen abgewehrt, nicht die Skala dahinter. Ein Nenner von 100
+ * behauptet hundert Abstufungen, ob ein %-Zeichen danebensteht oder nicht.
+ *
+ * Seit dem 2026-09-17 zeigt die Achse die STUFE (0 bis 7) als Segmente. Die Zahl bleibt
+ * im Datenmodell und sortiert weiter. Aufgefallen ist es nicht diesem Kommentar, sondern
+ * einem Nutzer: „alle leads haben relevanz 86, kann auch nicht sein oder?"
  * Die kalibrierte Zahl des Hauses ist eine andere (dim_displaceability, ECE 0,016). */
 const BELEG_WORT = { reich: "belegt", mittel: "teils belegt", duenn: "nur Kopfdaten" };
+/* ── Die Passung als STUFE, nicht als Prozentzahl ────────────────────────────────────
+ *
+ * ⚠ HIER STAND „86/100". Die Zahl kann nur acht Werte annehmen — 0, 14, 29, 43, 57, 71,
+ * 86, 100 — weil sie aus vier Zuschlaegen in Halbschritten gebaut wird (s.
+ * `passungsStufe` in profileEngine.js). „von 100" behauptete hundert Abstufungen, wo es
+ * acht gibt, und 86 ist die haeufigste davon: Feld, Region und Volumen passen, kein
+ * Zielrichtungsbonus. Genau deshalb sah es aus wie ein Platzhalter.
+ *
+ * Gemeldet am 2026-09-17: „alle leads haben relevanz 86, kann auch nicht sein oder?"
+ * Die Rechnung war richtig. Die Darstellung hat eine Feinheit behauptet, die es nicht
+ * gibt — und der Kopf von `passungsZahl` sagt seit jeher das Gegenteil: „die STUFE bleibt
+ * die Aussage; die Zahl dient dem Sortieren."
+ *
+ * ⚠ DER TOOLTIP NENNT JETZT DIE GRUENDE. `matchLead` rechnet `teile` ohnehin („Feld ✓ ·
+ * Region ✓ · Volumen unbekannt"); die Achse hat sie bisher nicht gezeigt. Eine Stufe ohne
+ * Begruendung ist genauso undurchsichtig wie eine Zahl ohne Begruendung. */
 function passungAchse(l, kompakt){
   if(l.passung == null) return '';
   const d = dichte(l);
   const wort = tk(BELEG_WORT[d] || BELEG_WORT.duenn);
-  const titel = tk("Passung {n} von 100. Eine Rangzahl zum Sortieren, kein Prozentsatz und keine Gewinnwahrscheinlichkeit. Beleglage: {beleg}.",
-                   { n: l.passung, beleg: wort });
-  return `<span class="passung" data-beleg="${d}" title="${esc(titel)}">`
-       + `<b>${l.passung}</b><i>/100</i>`
+  // ⚠ Rueckfall auf die Zahl NUR fuer Altbestand ohne `passungStufe` (Leads, die vor
+  //    dieser Aenderung gescort wurden). Neu gerechnet wird die Stufe immer mitgeliefert.
+  const stufe = l.passungStufe != null ? l.passungStufe
+              : Math.max(0, Math.min(7, Math.round(l.passung / (100 / 7))));
+  const gruende = (l.match && l.match.teile && l.match.teile.length)
+    ? l.match.teile.map(t => `${tk(t.label)}: ${tk(t.text)}`).join(' · ') : '';
+  const titel = tk("Passung: Stufe {n} von {max}. Eine Rangordnung, kein Prozentsatz und keine Gewinnwahrscheinlichkeit. Beleglage: {beleg}.",
+                   { n: stufe, max: 7, beleg: wort })
+              // ⚠ Kein Gedankenstrich in Oberflaechentexten (Hausregel, s.
+              //    memory/govisor-keine-gedankenstriche.md). Der Punkt trennt hier
+              //    genauso, und die Gruende tragen ohnehin schon „·" zwischen sich.
+              + (gruende ? ` ${gruende}` : '');
+  /* ⚠ `<span>` FUER DIE SEGMENTE, NICHT `<i>`. In `explorer.css` steht seit jeher
+     `td.c-band .passung i{display:none}` — gedacht fuer das alte „/100", das in der engen
+     Spalte wegfallen sollte. Mit `<i>`-Segmenten waere die neue Anzeige dort unsichtbar
+     gewesen, und zwar lautlos: kein Fehler, nur eine leere Zelle. Eine Ueberbietung per
+     Spezifitaet waere die schlechtere Antwort — sie laesst die Falle liegen. */
+  const segs = Array.from({length: 7}, (_, i) =>
+    `<span class="${i < stufe ? 'an' : ''}"></span>`).join('');
+  return `<span class="passung" data-beleg="${d}" data-stufe="${stufe}" title="${esc(titel)}">`
+       + `<span class="p-stufen" aria-hidden="true">${segs}</span>`
+       + `<span class="p-sr">${tk("Stufe {n} von {max}", {n: stufe, max: 7})}</span>`
        + (kompakt ? '' : `<em>${esc(wort)}</em>`)
        + `</span>`;
 }
@@ -3342,7 +3386,7 @@ function scoreLeadPerLot(l, profile, v){
 /* Alle Leads gegen das aktive Profil scoren — setzt relevanz, relWhy und das
  * volle match-Objekt (Blocker/Partner) für die Detail-Erklärung. */
 function scoreAll(){
-  if(!userProfile){ for(const l of LEADS){ l.relevanz='na'; l.passung=null; l.match=null; l.bestLot=null; l.eigen=false; l.eigenBestaetigt=false; } return; }
+  if(!userProfile){ for(const l of LEADS){ l.relevanz='na'; l.passung=null; l.passungStufe=null; l.match=null; l.bestLot=null; l.eigen=false; l.eigenBestaetigt=false; } return; }
   const myId = userProfile.identityId || null;
   /* Die angehakten Einheiten aus dem Onboarding. Bis zum 2026-08-21 wurden sie NIRGENDS
      gelesen: gescort wurde allein gegen `identityId`, also gegen die ganze Gruppe. Der
@@ -3358,7 +3402,12 @@ function scoreAll(){
     const v = parseWert(l.volumen && l.volumen.wert);
     const { m, bestLot } = scoreLeadPerLot(l, userProfile, v);
     l.relevanz = m.relevanz;
-    l.passung = m.passung;      // 0–100, Rangzahl zur Stufe; null ohne Profil
+    l.passung = m.passung;      // 0–100, Rangzahl zum SORTIEREN; null ohne Profil
+    /* ⚠ DIE STUFE IST DIE AUSSAGE, NICHT DIE ZAHL. `passung` kann nur acht Werte annehmen
+       (0/14/29/43/57/71/86/100) — als „86 von 100" sieht das aus wie ein Prozentsatz mit
+       hundert Abstufungen. `stufe` ist dieselbe Information ohne die Behauptung: 0 bis 7.
+       Gemeldet am 2026-09-17: „alle leads haben relevanz 86, kann auch nicht sein oder?" */
+    l.passungStufe = m.stufe;
     l.match = m;
     l.bestLot = bestLot;   // {nr,titel,region,cpv} des passenden Loses, oder null
     l.relWhy = whyHtml(m);

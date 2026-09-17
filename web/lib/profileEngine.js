@@ -142,8 +142,39 @@ export function passungsZahl(s) {
   return Math.max(0, Math.min(100, v));
 }
 
+/* ── Wie viele Stufen hat diese Zahl WIRKLICH? ────────────────────────────────────────
+ *
+ * `s` wird aus vier Zuschlaegen gebaut und kann nur Vielfache von 0,5 zwischen 2 und 5,5
+ * annehmen. `passungsZahl` streckt das auf 0 bis 100 — und damit sieht die Anzeige wie
+ * ein Prozentsatz mit hundert Abstufungen aus, waehrend es genau ACHT gibt:
+ *
+ *     s      2,0  2,5  3,0  3,5  4,0  4,5  5,0  5,5
+ *     Zahl     0   14   29   43   57   71   86  100
+ *     Stufe    0    1    2    3    4    5    6    7
+ *
+ * 86 bedeutet: Feldtreffer voll, Region passt, Volumen passt, kein Zielrichtungsbonus.
+ * Das ist der Normalfall eines gut passenden Leads — deshalb stand die Zahl am
+ * 2026-09-17 bei so vielen Leads, dass sie wie ein Platzhalter wirkte („alle leads haben
+ * relevanz 86, kann auch nicht sein oder?"). Die Rechnung war richtig; die DARSTELLUNG
+ * hat eine Feinheit behauptet, die es nicht gibt.
+ *
+ * ⚠ DIE ZAHL BLEIBT — sie sortiert. Der Kopf von `passungsZahl` sagt das seit jeher:
+ * „die STUFE bleibt die Aussage; die Zahl dient dem Sortieren und einem Mindestwert."
+ * Geaendert wird, was der Nutzer SIEHT, nicht was die Liste rechnet.
+ *
+ * ⚠ NICHT AUS DER 100er-ZAHL ZURUECKRECHNEN. `Math.round(passung / (100/7))` trifft heute
+ * zufaellig richtig, weil die acht Werte gleichmaessig liegen. Aendert jemand einen
+ * Zuschlag von 0,5 auf 0,25, stimmt die Ruecktransformation stumm nicht mehr. Die Stufe
+ * kommt deshalb direkt aus `s`.
+ */
+export const PASSUNG_STUFEN = 7;
+export function passungsStufe(s) {
+  const v = Math.round((s - S_MIN) / 0.5);
+  return Math.max(0, Math.min(PASSUNG_STUFEN, v));
+}
+
 export function matchLead(lead, p, leadValue) {
-  if (!hasProfile(p)) return { relevanz: 'na', passung: null, teile: [], blocker: [], partner: false };
+  if (!hasProfile(p)) return { relevanz: 'na', passung: null, stufe: null, teile: [], blocker: [], partner: false };
 
   const teile = [];        // {dim, label, status, text}
   const blocker = [];      // harte Ausschluss-/Warnhinweise
@@ -258,10 +289,10 @@ export function matchLead(lead, p, leadValue) {
 
   // ── Relevanz-Stufe + Passungszahl ──────────────────────────────────────────
   const hartBlock = blocker.some((b) => b.art === 'buergschaft');
-  let relevanz, passung;
-  if (ausgeschlossen) { relevanz = 'niedrig'; passung = 0; }   // #27 §6.3: Ausschluss → aus der Relevanz
-  else if (feld === 'aussen') { relevanz = 'niedrig'; passung = 0; }
-  else if (hartBlock) { relevanz = 'niedrig'; passung = 0; }
+  let relevanz, passung, stufe;
+  if (ausgeschlossen) { relevanz = 'niedrig'; passung = 0; stufe = 0; }   // #27 §6.3: Ausschluss → aus der Relevanz
+  else if (feld === 'aussen') { relevanz = 'niedrig'; passung = 0; stufe = 0; }
+  else if (hartBlock) { relevanz = 'niedrig'; passung = 0; stufe = 0; }
   else {
     let s = 2;                                  // Feldtreffer ist die Basis
     if (feld === 'ok') s++;                      // voller Feldtreffer statt Nachbar
@@ -272,9 +303,10 @@ export function matchLead(lead, p, leadValue) {
     else if (p.zielrichtung === 'expandieren' && feld === 'nachbar') s += 0.5;
     relevanz = s >= 4.5 ? 'hoch' : s >= 3 ? 'mittel' : 'niedrig';
     passung = passungsZahl(s);
+    stufe = passungsStufe(s);
   }
 
-  return { relevanz, passung, teile, blocker, partner };
+  return { relevanz, passung, stufe, teile, blocker, partner };
 }
 
 /* Kompakte HTML-Zeile „Feld ✓ · Region ✓ · Volumen unbekannt" — kompatibel zum
