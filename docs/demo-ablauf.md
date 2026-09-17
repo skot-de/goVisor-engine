@@ -119,3 +119,31 @@ Sie sind gemessen, nicht gerundet — ein Investor, der nachfragt, bekommt eine 
   noch über Schreibvarianten hinweg (`Bauges.` gegen `Baugesellschaft`, ARGE-Formen). Das
   ist bekannt, gemessen und bewusst nicht automatisch behoben — die naheliegende Regel
   zöge 25.250 Zuschläge in einen Klumpen. Siehe `scripts/pruefe_entity_dubletten.py`.
+
+## Suchworte der Vorführung
+
+⚠ **Diese Liste wird geprüft.** `web/scripts/pruefe-demoworte.mjs` fährt jedes Wort gegen
+`web/data-demo/` und meldet, welche ins Leere laufen. Wer ein Wort ins Drehbuch nimmt,
+trägt es hier ein.
+
+Der Anlass: am 17.09.2026 wurde mitten in der Vorführung „such nach Ubstadt" empfohlen.
+Geprüft worden war der Vollbestand; im gedünnten Demo-Satz kommt weder Ubstadt noch
+Rottweil vor. Die Suche lief ins Leere, und es sah aus wie ein Suchfehler.
+`scripts/demo_datensatz.py` siebt nach Informationsdichte und lässt dabei ganze Regionen
+fallen — der Vollbestand sagt nichts darüber, was in der Vorführung sichtbar ist.
+
+⚠ **Nur Worte für die LEAD-Suche.** Der Firmenname (`H. Klostermann`) gehört nicht hierher:
+er wird im Onboarding in die Firmensuche getippt und liegt in `suppliers.json`, nicht in den
+Leads. Genau das hat der Prüfer bei seinem ersten Lauf gemeldet.
+
+```suchworte
+bahn
+weichen
+brandschutz
+sanierung
+rohbau
+hamm
+```
+
+Trefferzahlen im Demo-Satz (945 Leads, Stand 17.09.2026): bahn 31, weichen 11,
+brandschutz 14, sanierung 54, rohbau 4, hamm 2.

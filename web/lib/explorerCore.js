@@ -283,7 +283,29 @@ const PLACE_RADIUS = {
 // Volltext-Basis der Suche: Titel + Käufer + Leistung + Beschreibung + Stichworte.
 // Beschreibung ist bei echten Leads der eigentliche Inhalt (Titel oft nur ein Zweizeiler),
 // deshalb mitgesucht — findet Begriffe, die nur im Beschreibungstext stehen.
-const leadText = l => (l.titel+' '+l.buyer+' '+l.buyerShort+' '+l.natur+' '+(l.beschreibung||'')+' '+(l.kw||[]).map(k=>k.w).join(' ')).toLowerCase();
+/* Der durchsuchte Text eines Leads.
+ *
+ * ⚠ LOSE UND VERGABENUMMER GEHOEREN DAZU. Bis zum 2026-09-17 fehlten beide, und
+ * `fundstelle()` unten hatte deshalb zwei tote Zweige: sie konnte „Vergabenummer" und
+ * „Los N" als Fundort melden, obwohl `matchToken` solche Treffer nie erzeugen konnte.
+ * Eine Funktion beschrieb einen Trefferfall, den es nicht gab.
+ *
+ * Gemessen ueber 43.676 Leads: 68 % der Bau-Leads tragen Lose, und bei Mehrlos-Vergaben
+ * steht im Los-Titel regelmaessig der ORT und das eigentliche Gewerk — im Haupttitel
+ * dagegen nur „Neubau Verwaltungsgebaeude, Lose 1-7". Eine Ortssuche fand diese Vorgaenge
+ * nicht: „rottweil" 19 → 22 Treffer, „hamm" 72 → 86.
+ *
+ * ⚠ PREIS, GEMESSEN. Der Heuhaufen waechst um 15 % (22,8 → 26,3 Mio. Zeichen). Eine
+ * Suchrunde im groessten Grundraum kostet damit 13,3 statt 10,4 ms — unter einem
+ * Bildaufbau, also unmerklich beim Tippen.
+ *
+ * ⚠ DER NAECHSTE HEBEL, falls es doch bremst: den Text je Lead EINMAL bauen und behalten
+ * statt bei jedem Anschlag neu zu falten. Gemessen 14,4 → 2,1 ms, also siebenmal
+ * schneller. Der Preis sind 20 MB Speicher im Grundraum `bau` (auf 47 MB JSON, +21 %) —
+ * deshalb heute NICHT eingebaut: die Nutzlast ist bereits das groessere Problem
+ * (s. `docs/prompts/09-ladezustand.md`). Die Zahlen stehen hier, damit die Entscheidung
+ * ohne neue Messung umkehrbar ist. */
+const leadText = l => (l.titel+' '+l.buyer+' '+l.buyerShort+' '+l.natur+' '+(l.beschreibung||'')+' '+(l.kw||[]).map(k=>k.w).join(' ')+' '+(l.lose||[]).map(x=>x.titel||'').join(' ')+' '+(l.vergabenr||'')).toLowerCase();
 
 function matchToken(l,t){
   if(t.type==='ort'){
@@ -307,6 +329,14 @@ function matchToken(l,t){
 function fundstelle(l, wort){
   const w = wort.toLowerCase();
   if(l.vergabenr && _kennNorm(l.vergabenr) === _kennNorm(wort))
+    return {ort: 'Vergabenummer', text: l.vergabenr};
+  /* ⚠ AUCH DER TEILTREFFER BRAUCHT EINEN BELEG. Der Zweig darueber vergleicht NORMALISIERT
+     und exakt; die Volltextsuche vergleicht als Teilzeichenkette. Seit die Nummer im
+     Heuhaufen liegt, kann ein Lead also ueber ein Stueck seiner Vergabenummer gefunden
+     werden, waehrend der exakte Vergleich daneben liegt — und dann faende `fundstelle`
+     nichts, obwohl es einen Treffer gab. Genau das ist der Zustand, den der Kopf dieser
+     Funktion ausschliessen soll: „ohne diesen Beleg wirken Volltext-Treffer wie Fehler." */
+  if((l.vergabenr||'').toLowerCase().includes(w))
     return {ort: 'Vergabenummer', text: l.vergabenr};
   if((l.titel||'').toLowerCase().includes(w)) return {ort:'Titel', text:null};
   if((l.natur||'').toLowerCase().includes(w) || (cpvLabel(l)||'').toLowerCase().includes(w))
