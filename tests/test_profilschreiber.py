@@ -47,10 +47,12 @@ def test_die_sonde_laeuft_gruen():
 def test_die_migration_liegt_bereit():
     """Der Merge gehoert in die Datenbank, sonst bleibt das Fenster offen.
 
-    ⚠ Solange `supabase/0020_profil_atomar_mischen.sql` nicht eingespielt ist, faellt
-    `mischeProfilBlob` auf Lesen-Aendern-Schreiben zurueck — laut, aber es faellt zurueck.
-    Diese Pruefung haelt wenigstens die Datei fest; einspielen muss sie ein Mensch ueber
-    den Supabase-Dashboard-SQL-Editor (DDL laeuft von dieser Maschine nicht).
+    Eingespielt am 2026-09-17 mit `python3 scripts/migrate.py`. Gegen die Datenbank
+    geprueft (Transaktion mit Ruecknahme): der Patch setzt `volMin`, waehrend `cpvFields`
+    mit allen sechs Eintraegen stehen bleibt.
+
+    ⚠ Der Rueckfall in `mischeProfilBlob` bleibt trotzdem noetig — eine frische Umgebung
+    ohne diese Migration muss speichern koennen, und zwar hoerbar.
     """
     sql = WURZEL / "supabase" / "0020_profil_atomar_mischen.sql"
     assert sql.exists(), "Migration fehlt — der atomare Merge hat keine Grundlage"

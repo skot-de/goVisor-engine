@@ -38,9 +38,14 @@ werden.
   Schreiber gefunden, zwei mit Lese-Zyklus auf denselben Blob, zwei mit dauerhafter
   Spaltung Spalte/Blob. Der Wettlauf ist abgeschafft, nicht gereiht.
 
-  ⚠ **OFFEN FUER SVEN: `supabase/0020_profil_atomar_mischen.sql` einspielen.** DDL laeuft
-  von dieser Maschine nicht. Bis dahin faellt der Code laut auf den alten Weg zurueck —
-  er funktioniert, aber das Lost-Update-Fenster ist offen.
+  Migration **eingespielt** am 2026-09-17 mit `python3 scripts/migrate.py`. Gegen die
+  Datenbank geprueft: `volMin` wird gesetzt, `cpvFields` bleibt vollstaendig (Transaktion
+  mit Ruecknahme). Ich hatte den Punkt faelschlich als „muss ein Mensch machen" notiert —
+  der Weg steht in `memory/govisor-supabase-projekt.md`, ich hatte den veralteten
+  MEMORY.md-Eintrag der GETEILTEN Instanz gelesen.
+
+  Eine Restzeile bleibt: ein Profil traegt die Wertspanne noch nur in den Spalten. Sie
+  heilt beim naechsten Speichern aus /settings von selbst.
 
 ## Neu aufgenommen (beim Arbeiten gefunden)
 
