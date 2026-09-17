@@ -20,6 +20,16 @@ export function emptyProfile() {
     cpvFields6: [],           // CPV6-Codes: gewerkscharfe Volltreffer-Menge (trennt Aufzug≠Elektro)
     cpvLabels: [],           // Klartext-Labels zu cpvFields (nur Anzeige)
     cpvWins: {},             // cpv4 → eigene Zuschläge (aus dem Onboarding-Match, für Direktvergleich)
+    // ⚠ GEHOERT HIERHER, WEIL `brancheFromProfile` ES LIEST. Das Feld fehlte, und
+    // `buildProfile` warf es damit weg — unsichtbar, solange niemand ein rohes Profil
+    // durch die Normalisierung schickte. Seit `loadProfile` das am 2026-09-17 tut, kam
+    // ein Profil mit `branche: "bau"` als `branche: undefined` zurueck; der Explorer fiel
+    // auf den Vorgaberaum „it" zurueck und zeigte **0 von 0**.
+    //
+    // `brancheFromProfile` kann die Branche zwar aus den CPV-Feldern ableiten — aber nur
+    // als Rueckfall. Eine ausdrueckliche Angabe schlaegt jede Ableitung, und genau die
+    // ging verloren.
+    branche: null,            // Grundraum, ausdruecklich gesetzt (schlaegt die CPV-Ableitung)
     nachbarFields: [],        // angrenzende Felder (teil-relevant, kein Volltreffer)
     regions: null,           // Array NUTS-Präfixe; null = bundesweit tätig
     regionTyp: null,         // 'regional'|'teilregional'|'bundesweit' — aus der Historie gemessen
@@ -46,6 +56,7 @@ export function buildProfile(input) {
   p.cpvFields6 = input.cpvFields6 || [];
   p.cpvLabels = input.cpvLabels || [];
   p.cpvWins = input.cpvWins || {};
+  p.branche = input.branche || null;
   p.nachbarFields = input.nachbarFields || [];
   p.regions = (input.regions && input.regions.length) ? input.regions : null;   // leer = bundesweit
   p.regionTyp = input.regionTyp || null;

@@ -15,7 +15,7 @@
  * Das ist die Fehlerklasse „sieht aus wie eine Aussage über die Welt, ist eine über unsere
  * Leitung": der Typ sagte „vollständig", geprüft hat es niemand.
  */
-import { buildProfile, matchLead } from "../lib/profileEngine.js";
+import { buildProfile, matchLead, brancheFromProfile } from "../lib/profileEngine.js";
 
 let fehler = 0;
 const pruefe = (name, bedingung) => {
@@ -57,6 +57,35 @@ pruefe("ein ROHES Profil laesst matchLead sterben (deshalb muss normalisiert wer
 let normalOk = true;
 try { matchLead(LEAD, voll); matchLead(FREMD, voll); } catch { normalOk = false; }
 pruefe("ein normalisiertes Profil traegt durch matchLead", normalOk);
+
+// ── ⚠ FALLE 2: DIE NORMALISIERUNG DARF NICHTS WEGWERFEN ───────────────────────
+// `buildProfile` kopiert FELDWEISE. Was `emptyProfile` nicht kennt, faellt still heraus —
+// und seit `loadProfile` jedes Profil durch die Normalisierung schickt, trifft das echte
+// Nutzerdaten. Gemessen am 2026-09-17: `branche` fehlte in der Liste. Ein Profil mit
+// `branche: "bau"` kam als `undefined` zurueck, der Explorer fiel auf „it" und zeigte
+// **0 von 0** — nach einem Onboarding, das gerade 509 Zuschlaege bestaetigt hatte.
+//
+// Geprueft wird deshalb nicht „ist `branche` da", sondern die Regel dahinter: jedes Feld,
+// das hineingeht, muss auch wieder herauskommen.
+const HINEIN = {
+  branche: "bau", firma: "Testfirma", entityConfidence: "belegt",
+  cpvFields: ["4522"], cpvFields6: ["452210"], cpvLabels: ["Hochbau"],
+  cpvWins: { "4522": 7 }, nachbarFields: ["4521"], regions: ["DEA"],
+  regionTyp: "nuts1", regionLabels: ["Nordrhein-Westfalen"],
+  volMin: 1000, volMax: 2000, maxAlleine: 500, buergschaft: 50,
+  capabilities: ["iso_9001"], exclusions: ["x"], zielrichtung: "wachstum",
+};
+const heraus = buildProfile(HINEIN);
+for (const [feld, wert] of Object.entries(HINEIN)) {
+  const da = JSON.stringify(heraus[feld]) === JSON.stringify(wert);
+  pruefe(`buildProfile behaelt ${feld}`, da);
+}
+
+// Und die Ableitung bleibt der Rueckfall, nicht der Vorrang.
+pruefe("eine ausdrueckliche Branche schlaegt die CPV-Ableitung",
+  brancheFromProfile(buildProfile({ branche: "medizin", cpvFields: ["4522"] })) === "medizin");
+pruefe("ohne Angabe wird aus den CPV abgeleitet",
+  brancheFromProfile(buildProfile({ cpvFields: ["4522"] })) === "bau");
 
 // ── Auch das leere Profil darf nicht sterben ──────────────────────────────────
 let leerOk = true;
