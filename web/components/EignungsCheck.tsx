@@ -539,18 +539,36 @@ export function EignungsCheck({ check, fachgebiete, leseprobe }: {
                         <h4 className="ec-probe-kopf">Ein Blick hinein, ohne Anmeldung</h4>
                         <ul className="ec-probe-liste">
                           {proben.liste.map((x, i) => (
+                            /* ⚠ DIE ZEILEN SAHEN NICHT NACH VORGAENGEN AUS. Bis zum
+                               2026-09-18 waren sie bewusst schmucklos — „kein Rahmen um
+                               jede Zeile, nur eine Trennlinie", damit die Leseprobe der
+                               Auswertung darueber nicht die Aufmerksamkeit nimmt. Das ging
+                               zu weit: zwischen dem Fliesstext darueber und der Fussnote
+                               darunter las sich die Liste wie eine Anmerkung, und genau
+                               das Einzige, was ein Interessent ohne Konto SEHEN kann, ging
+                               unter.
+
+                               Die Absicht bleibt (kein Aufschrei, keine Kachelwand), die
+                               Form aendert sich: jede Zeile bekommt einen Rand und die
+                               Frist ihren eigenen Platz. Die Frist ist es, die aus einer
+                               Zeile einen Vorgang macht — sie sagt, dass etwas laeuft. */
                             <li key={i} className="ec-probe-zeile">
-                              <span className="ec-probe-titel">{x.t}</span>
-                              <span className="ec-probe-meta">
-                                {x.k}
-                                {x.r || x.l ? ` · ${x.r ?? x.l}` : ""}
-                                {` · Frist ${x.f}`}
-                                {/* ⚠ Der Wert trägt seine Herkunft. Unter den offenen
-                                    Vergaben ist derzeit KEIN Auftragswert belegt; alles
-                                    sind CPV-Median-Schätzungen. Als Wert dieser Vergabe
-                                    gezeigt wäre das eine erfundene Zahl. */}
-                                {x.v && x.vs === "echt" ? ` · ${x.v}` : ""}
-                                {x.v && x.vs === "schaetz" ? ` · geschätzt ${x.v}` : ""}
+                              <div className="ec-probe-text">
+                                <span className="ec-probe-titel">{x.t}</span>
+                                <span className="ec-probe-meta">
+                                  {x.k}
+                                  {x.r || x.l ? ` · ${x.r ?? x.l}` : ""}
+                                  {/* ⚠ Der Wert trägt seine Herkunft. Unter den offenen
+                                      Vergaben ist derzeit KEIN Auftragswert belegt; alles
+                                      sind CPV-Median-Schätzungen. Als Wert dieser Vergabe
+                                      gezeigt wäre das eine erfundene Zahl. */}
+                                  {x.v && x.vs === "echt" ? ` · ${x.v}` : ""}
+                                  {x.v && x.vs === "schaetz" ? ` · geschätzt ${x.v}` : ""}
+                                </span>
+                              </div>
+                              <span className="ec-probe-frist">
+                                <span className="ec-probe-frist-k">Frist</span>
+                                <b>{x.f}</b>
                               </span>
                             </li>
                           ))}
