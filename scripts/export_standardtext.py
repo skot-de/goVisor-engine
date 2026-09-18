@@ -75,6 +75,36 @@ BAENDER: tuple[tuple[int, int, str], ...] = (
 )
 MIND_BAND = 20       # je Lesetiefe-Band, sonst ist die Driftpruefung selbst Rauschen
 FLACH, TIEF = 7, 8
+# ⚠ AUSGEMESSEN AM 2026-09-18 — DIE SCHWELLE MISST NICHT, WAS SIE MESSEN SOLL.
+#
+# Der Test vergleicht den Median flach gelesener Vorgaenge (1-7 Dateien) mit dem tief
+# gelesener (>=8) und verwirft ein Band, wenn das VERHAELTNIS 1,5 reisst. Ein Verhaeltnis
+# ist skalenabhaengig: bei Medianen um 9 % bewegt ein Prozentpunkt es um 0,11, bei 44 %
+# nur um 0,02.
+#
+# Gemessen ueber DE, mit einer Nullverteilung aus 400 ZUFAELLIGEN Teilungen derselben
+# Zahlen (gleiche Gruppengroessen) als Vergleichsmassstab:
+#
+#     Band       n     flach   tief   Drift   Δ Punkte   Zufall p95
+#     klein   5.207    43,9%  52,9%    1,20      +9,0         1,06
+#     mittel  7.171    27,1%  32,6%    1,20      +5,4         1,06
+#     gross   1.664     9,1%  14,7%    1,61      +5,6         1,27
+#
+# Drei Befunde:
+#   1. ALLE DREI Baender driften, und alle drei liegen klar ueber dem Zufall. Die
+#      Tiefenabhaengigkeit ist keine Eigenheit grosser Vorgaenge.
+#   2. In Prozentpunkten driftet `klein` am STAERKSTEN (+9,0), `gross` weniger (+5,6).
+#      Die Schwelle wirft also das Band raus, das am wenigsten driftet.
+#   3. Die Nullverteilung zeigt warum: zufaelliges Teilen erzeugt bei `gross` schon 1,27,
+#      bei den anderen 1,06. Die Schwelle misst „ist die Basis klein", nicht „misst das
+#      Band die Lesetiefe".
+#
+# ⚠ NICHT GEAENDERT, weil die Folge eine Produktentscheidung ist und keine technische:
+# die Drift ist vermutlich ECHT (Vorgaenge mit vielen Dateien tragen mehr Formularwerk,
+# und Formularwerk IST Standardtext). Dann waere der Drifttest der falsche Waechter, und
+# was fehlt, ist die Offenlegung neben der Zahl. Wer hier etwas aendert, entscheidet
+# zwischen: Verhaeltnis behalten (gross fliegt, 1.675 Vorgaenge ohne Vergleichswert),
+# auf Prozentpunkte umstellen (dann faellt `klein`), oder den Test streichen.
 MAX_DRIFT = 1.5
 BLOCK = 300          # Vorgaenge je Abfrage — 4,2 Mrd. Zeichen passen nicht in einen Rutsch
 
