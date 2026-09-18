@@ -31,9 +31,53 @@ Zürich          → ['zuerich']          ✓ DACH funktioniert
 `Łódź` würde als „d" gesucht, nichts gefunden, das Feld bliebe leer — und ein leeres Feld
 sieht aus wie eine Quelle, die nichts hergibt.
 
-Dieselbe Faltung trägt auch die **Wortmengen des Dublettenwalls** (`worte()` in
-`govisor/dedupe.py`). Zwei polnische Titel, die sich unterscheiden, könnten nach der
-Faltung gleich aussehen — oder umgekehrt.
+## ⚠ Es sind ZWEI Faltungen, nicht eine (nachgemessen 2026-09-18)
+
+Hier stand bis heute, der Dublettenwall trage „dieselbe Faltung". Das stimmt nicht.
+`govisor/dedupe.worte()` arbeitet ganz anders: `[a-zà-ÿA-ZÀ-Þ0-9]{3,}` — ein
+**Latin-1-Bereich**, der Akzente BEHÄLT und alles darüber als Trenner nimmt. Gemessen:
+
+| Ort | `dedupe.worte()` | `region_ableiten._worte()` |
+|-----|------------------|----------------------------|
+| Łódź | `[]` | `['d']` |
+| Gdańsk | `['gda']` | `['gda', 'sk']` |
+| Kraków | `['kraków']` | `['krak', 'w']` |
+| Częstochowa | `['stochowa']` | `['cz', 'stochowa']` |
+| Ústí nad Labem | `['labem','nad','ústí']` | `['st','nad','labem']` |
+| Zürich | `['zürich']` | `['zuerich']` |
+
+Die letzte Zeile ist die wichtigste: **die beiden weichen schon in DACH voneinander ab.**
+Wer eine der Faltungen repariert, hat die andere nicht mit repariert, und wer sie für
+identisch hält, prüft die falsche.
+
+### Der Blindgänger, den das freilegt
+
+`dedupe._wiederholung()` (seit 2026-09-18) verlangt **identische Wortmengen**, um zwei
+Bekanntmachungen derselben Quelle als Wiederholung desselben Vorgangs zu werten. Ein Ort,
+der bei der Faltung spurlos verschwindet, trägt zur Unterscheidung nichts bei:
+
+```
+Przebudowa drogi gminnej w miejscowości Łódź    → ['drogi','gminnej','miejscowo','przebudowa']
+Przebudowa drogi gminnej w miejscowości Łomża   → ['drogi','gminnej','miejscowo','przebudowa']
+
+_wiederholung()  →  True
+```
+
+Zwei **verschiedene** Strassenbauvergaben derselben Gemeinde, gleiche CPV, kleine Gruppe.
+Eine davon würde in `gold.py` aus der ausgelieferten Liste ausgeschlossen. Kein Fehler,
+keine Meldung, ein Lead weniger.
+
+⚠ **Das Netz `MIN_WORTE = 3` fängt das NICHT.** Es verwirft nur Titel mit weniger als drei
+Wörtern; hier bleiben vier übrig. Es schützt gegen den offensichtlichen Fall (`Łódź` allein
+ergibt `[]`) und gerade nicht gegen den gefährlichen. Umgekehrt ist auch die Trennung im
+Beispiel `Łódź` gegen `Gdańsk` weiter oben **Zufall**: sie unterscheiden sich nur, weil von
+`Gdańsk` das Bruchstück `gda` übrig bleibt und von `Łódź` nichts.
+
+Im Ist-Zustand richtet das keinen Schaden an: Polen steht in `BEWUSST_OHNE_GOLD`, die
+Firewall läuft nur über DACH. Es ist ein Blindgänger, kein Brand — und er liegt genau auf
+dem Weg, den der erste Nicht-DACH-Connector nimmt. Wächter:
+`tests/test_zeichen_faltung.py` wird rot, sobald ein Land ausserhalb DACH in
+`laender.AKTIV` steht, ohne dass die Faltung seine Buchstaben kennt.
 
 ## Die zweite Faltung ist besser, aber nicht vollständig
 

@@ -155,6 +155,42 @@ def lauf(limit: int | None = None, dry_run: bool = False, country: str = "DE") -
     """Der Stapellauf ueber die Warteschlange."""
 ```
 
+### ⚠ Jede Datei atomar schreiben, auch die Nebenstellen (2026-09-16)
+
+`hole_vergabe` schreibt eine Datei. Sie **muss** über einen Zwischennamen gehen und erst
+danach umbenannt werden — `schreibe_atomar` in `govisor/docfetch_queue.py` tut das, und
+jeder Abrufer importiert die Warteschlange ohnehin.
+
+Der Grund ist der stillste Schaden, den diese Achse kennt: **ein halbes ZIP unter dem
+richtigen Namen.** Bricht der Abruf mittendrin ab, liegt eine Datei da, die vollständig
+aussieht. Die Kandidatenwahl überspringt den Vorgang beim nächsten Lauf („liegt schon auf
+der Platte"), und erst der Entpacker stolpert — Tage später, ohne erkennbaren Bezug zum
+Abbruch.
+
+Gemessen am 2026-09-16: die Hauptstrasse jedes Abrufers holte korrekt über `.part` und
+`replace`, **acht Nebenstellen in sieben Modulen** nicht. Es sind die Kopien für
+Geschwister-Leads (dieselbe Vergabe, zweiter Lead) und die kleinen ZIP-Bauer — also genau
+die Stellen, die man beim Bauen als Nebensache behandelt.
+
+⚠ **Der Zwischenname trägt Prozess- und Threadnummer, nicht nur `.part`.** Seit es die
+`Wache` gibt, kann ein zweiter Schreiber existieren, und zwei Schreiber auf EINEM
+gemeinsamen Zwischennamen schreiben ineinander. Das `replace` danach macht den Schaden
+dauerhaft.
+
+Wer einen neuen Abrufer baut, schreibt **keine** eigene Schreibroutine. Ein Wächter macht
+jede neue direkte Schreibstelle in `govisor/docfetch*.py` rot.
+
+### ⚠ Die Absage des Portals lesen, nicht nur den HTTP-Code (2026-09-15/16)
+
+Zwei Abrufer trugen Urteile, die niemand belegen konnte: `healyhudson` und
+`staatsanzeiger` lieferten Fehlerseiten mit **HTTP 200**. Für den Abrufer sah das aus wie
+eine Antwort, und der daraus abgeleitete Status war falsch — bei `subreport` bedeuteten
+„0 Dateien" sogar **vier verschiedene Dinge** gleichzeitig.
+
+Beim Anbinden gehört deshalb dazu: die Fehlerseite des Portals einmal im Klartext ansehen
+und ihre Formulierungen im Parser unterscheiden. Ein Portal, das höflich absagt, sagt
+trotzdem ab.
+
 ### Der Status ist das Wichtigste am Rückgabewert
 
 `hole_vergabe` gibt **keinen Bool zurück**, sondern einen Status, den
