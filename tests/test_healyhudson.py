@@ -1772,7 +1772,7 @@ def test_jeder_cron_kommt_durch_beide_tore_und_sichert_sich_selbst():
     offen_block = mw[mw.index("const OFFEN = ["):]
     offen_block = offen_block[:offen_block.index("]")]
     ohne_kommentar = "\n".join(z.split("//")[0] for z in
-                               mw[mw.index("if (BLACKOUT)"):mw.index("return blackPage();")]
+                               mw[mw.index("if (BLACKOUT)"):mw.index("return blackPage(")]
                                .splitlines())
     vorhang = ohne_kommentar
 

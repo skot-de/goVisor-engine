@@ -151,7 +151,38 @@ function nichtGefunden() {
   });
 }
 
-function blackPage() {
+function blackPage(pfad: string) {
+  // ⚠ EINE HTML-SEITE MIT 200 IST FUER MASCHINELLE ABNEHMER EINE STILLE FALSCHANTWORT.
+  // Genau daran haengen die vier Ausnahmen weiter unten: Gesundheitsprobe, Kalender-Feed,
+  // `robots.txt` und Hinweislauf standen alle einmal hier drin und bekamen „200 OK" plus
+  // schwarzes HTML — die Ueberwachung meldete „alles gut", das Kalenderprogramm zeigte
+  // einen leeren Kalender, der Crawler las kaputte Regeln, der Scheduler lief ins Leere.
+  // Jedes Mal war die Antwort erfolgreich und der Inhalt falsch.
+  //
+  // `/api/*` ist derselbe Fall, nur nie aufgefallen, weil waehrend der Sperre niemand die
+  // Schnittstelle von aussen aufruft. Gemessen am 2026-09-18: `/api/leads` antwortete mit
+  // 200, `content-type: text/html` und der schwarzen Seite; ein Client, der JSON erwartet,
+  // bekommt „OK" und bricht erst beim Auswerten ab — mit einem Fehler, der nach kaputten
+  // Daten aussieht statt nach einer geschlossenen Tuer.
+  //
+  // 503 statt 403 oder 404: die Sperre ist ein Zustand, keine Rechtefrage, und sie gilt
+  // fuer JEDEN `/api/`-Pfad gleich. Damit verraet die Antwort nicht mehr als die schwarze
+  // Seite auch — sie sagt es nur in einer Sprache, die ein Programm versteht.
+  //
+  // ⚠ DER GRUNDSATZ STAND SCHON IN DIESER DATEI: `zumLogin` trennt genau so (401 statt
+  // Umleitung, „eine HTML-Seite als Antwort auf einen Datenabruf ist fuer den Aufrufer
+  // unbrauchbar"). Nur die Sperre hat ihn nie mitbekommen — sie ist spaeter dazugekommen
+  // und hat die Unterscheidung nicht geerbt.
+  if (pfad.startsWith("/api/")) {
+    return new NextResponse(JSON.stringify({ fehler: "gesperrt", grund: "Noch nicht freigeschaltet." }), {
+      status: 503,
+      headers: {
+        "content-type": "application/json; charset=utf-8",
+        "cache-control": "no-store",
+        "x-robots-tag": "noindex, nofollow",
+      },
+    });
+  }
   return new NextResponse(BLACK_PAGE, {
     status: 200,
     headers: {
@@ -205,7 +236,7 @@ export async function middleware(request: NextRequest) {
         && !pfad.startsWith("/api/calendar/")
         && pfad !== "/robots.txt" && pfad !== "/sitemap.xml"
         && pfad !== "/api/alerts/run")
-      return blackPage();
+      return blackPage(pfad);
     // Schlüssel gültig → volle App; bei frischem ?preview den Cookie setzen (Folgeseiten ohne Query).
     const { response: res, email } = await updateSession(request);
     if (istIntern(pfad) && !istAdmin(email)) return nichtGefunden();

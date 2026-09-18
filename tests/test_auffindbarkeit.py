@@ -11,6 +11,32 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 WEB = ROOT / "web"
+
+
+def _ohne_kommentar(s: str) -> str:
+    """`//` und `/* */` raus — sonst prueft der Test die Begruendung statt den Code (F13).
+
+    ⚠ Am 2026-09-18 sind an einem Tag fuenf Waechter darauf hereingefallen: der Kommentar
+    ueber einer Stelle nennt naturgemaess genau die Worte, auf die die Pruefung anspringt.
+    Die Laenge bleibt erhalten (Leerzeichen statt Zeichen), damit Zeilennummern stimmen.
+    """
+    raus, i, n = [], 0, len(s)
+    while i < n:
+        if s[i] == "/" and i + 1 < n and s[i + 1] == "/":
+            while i < n and s[i] != "\n":
+                raus.append(" ")
+                i += 1
+            continue
+        if s[i] == "/" and i + 1 < n and s[i + 1] == "*":
+            while i < n and not (s[i] == "*" and i + 1 < n and s[i + 1] == "/"):
+                raus.append("\n" if s[i] == "\n" else " ")
+                i += 1
+            raus.append("  ")
+            i += 2
+            continue
+        raus.append(s[i])
+        i += 1
+    return "".join(raus)
 LAYOUT = WEB / "app" / "layout.tsx"
 
 # Die Seiten, die ein Fremder ohne Konto sieht. Nur sie sind überhaupt indizierbar —
@@ -52,7 +78,7 @@ def test_robots_und_sitemap_gibt_es_und_sie_sind_erreichbar():
 
     # Und durch die Baustellen-Sperre: eine schwarze HTML-Seite als Antwort auf robots.txt
     # liest kein Crawler als Regelwerk, er faellt auf „alles erlaubt" zurueck.
-    vorhang = mw[mw.index("if (BLACKOUT)"):mw.index("return blackPage();")]
+    vorhang = mw[mw.index("if (BLACKOUT)"):mw.index("return blackPage(")]
     for pfad in ("/robots.txt", "/sitemap.xml"):
         assert pfad in vorhang, f"{pfad} kommt nicht mehr durch die Baustellen-Sperre"
 
@@ -122,3 +148,45 @@ def test_die_startseite_bleibt_eine_server_komponente():
         "Landing.tsx ist eine Client-Komponente geworden. Das muss nicht heissen, dass der "
         "Text verschwindet — aber er haengt dann an dem, was im Browser passiert, und genau "
         "das laesst sich von hier aus nicht mehr pruefen.")
+
+def test_die_sperre_antwortet_maschinen_nicht_mit_200():
+    """Eine HTML-Seite mit „200 OK" ist fuer einen Programm-Abnehmer eine stille Falschantwort.
+
+    ⚠ DIESE DATEI TRAEGT DEN BEFUND SCHON VIERMAL, jedes Mal als Ausnahme statt als Regel:
+    Gesundheitsprobe, Kalender-Feed, `robots.txt` und Hinweislauf standen alle einmal hinter
+    der Sperre und bekamen 200 plus schwarzes HTML. Die Ueberwachung meldete „alles gut", das
+    Kalenderprogramm zeigte einen leeren Kalender, der Crawler las kaputte Regeln.
+
+    Gemessen am 2026-09-18 gegen den laufenden Server: `/api/leads` ohne Vorschau-Cookie
+    antwortete mit `HTTP 200`, `content-type: text/html` und 208 Byte schwarzer Seite. Wer
+    JSON erwartet, bekommt „OK" und scheitert erst beim Auswerten — mit einem Fehler, der
+    nach kaputten Daten aussieht statt nach einer geschlossenen Tuer.
+
+    Geprueft wird der Rumpf OHNE Kommentare: der Kommentar ueber der Stelle nennt genau die
+    Worte, auf die dieser Test anspringt (Fallenkatalog F13).
+    """
+    roh = (WEB / "middleware.ts").read_text(encoding="utf-8")
+    code = _ohne_kommentar(roh)
+    i = code.index("function blackPage(")
+    rumpf = code[i:code.index("\nexport async function middleware", i)]
+
+    assert "/api/" in rumpf, (
+        "blackPage() unterscheidet nicht mehr zwischen Seite und Schnittstelle — damit "
+        "bekommt jeder API-Aufruf hinter der Sperre wieder 200 und HTML")
+
+    # ⚠ DAS FENSTER MUSS AM HTML-ZWEIG ENDEN. Eine erste Fassung nahm 400 Zeichen ab dem
+    #   ersten `return new NextResponse` und lief damit in den Seiten-Zweig hinein, der zu
+    #   Recht 200 traegt — der Test war rot, obwohl der Code stimmte. Dieselbe verschluckende
+    #   Fensterung wie in den Dubletten-Waechtern (dort mit Vorausschau geloest).
+    zweig = rumpf[rumpf.index("/api/"):]
+    lage = zweig[:zweig.index("BLACK_PAGE")]
+    assert "status: 200" not in lage, (
+        "der API-Zweig antwortet weiter mit 200. Genau das macht die Antwort fuer ein "
+        "Programm ununterscheidbar von einem Erfolg")
+    assert "application/json" in lage, (
+        "der API-Zweig liefert kein JSON — ein Client, der JSON erwartet, bricht beim "
+        "Auswerten ab statt die geschlossene Tuer zu lesen")
+
+    assert "return blackPage(pfad)" in code, (
+        "blackPage() bekommt den Pfad nicht mehr uebergeben und kann gar nicht "
+        "unterscheiden — der Zweig oben waere dann toter Code")
