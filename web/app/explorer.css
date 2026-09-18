@@ -2690,3 +2690,19 @@ tr:hover .lt-hide, .lt-hide:focus-visible, .lt-hide.an{opacity:1}
 .lt-hide:hover{color:var(--ink-700)}
 .lt-hide.an{color:var(--ink-600)}
 @media (prefers-reduced-motion:reduce){.lt-hide{transition:none}}
+
+
+/* ── Gespeicherte Ansichten ────────────────────────────────────────────────────────
+ * Der Loeschknopf sitzt AM Chip, nicht daneben: er gehoert zu genau dieser Ansicht, und
+ * eine eigene Reihe „Loeschen"-Knoepfe waere nicht zuzuordnen. Leise, bis man hinfaehrt. */
+.fp-gesp{display:inline-flex; align-items:center}
+.fp-gesp-x{
+  background:none; border:0; cursor:pointer; padding:0 5px; margin-left:-2px;
+  font-size:15px; line-height:1; color:var(--ink-400); opacity:.6;
+}
+.fp-gesp:hover .fp-gesp-x, .fp-gesp-x:focus-visible{opacity:1; color:var(--ink-700)}
+.fp-name{
+  flex:1 1 150px; min-width:120px; padding:5px 9px; font:inherit; font-size:13px;
+  border:1px solid var(--line); border-radius:7px; background:var(--bg-0); color:var(--ink-800);
+}
+.fp-name:focus-visible{outline:2px solid var(--acc); outline-offset:1px}

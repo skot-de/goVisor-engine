@@ -28,6 +28,8 @@ import { currentUser, logout, loadProfile } from "@/lib/supabase/auth";
 import { recordLeadClick, recordAnalysis } from "@/lib/analytics";
 import { syncWatchlist, loadWatchlist, type MerkZeile } from "@/lib/supabase/watchlist";
 import { syncAusgeblendet, loadAusgeblendet } from "@/lib/supabase/ausgeblendet";
+import { ladeFilter, speichereFilter, loescheFilter, merkeGebrauch, mischen,
+         type GespeicherterFilter } from "@/lib/supabase/filterspeicher";
 import { Kalender } from "./Kalender";
 import { Cockpit } from "./Cockpit";
 import { getOrCreateCalendarFeed } from "@/lib/supabase/calendar";
@@ -153,6 +155,7 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
    * Gegenstueck zum Stern. ⚠ Nicht nur Kosmetik: jede Ablehnung ist ein negatives Beispiel
    * fuer die Passung, und sie kostet EINEN Klick. Wer eine Pflichtbegruendung davorsetzt,
    * bekommt keine Daten. Ohne Anmeldung bleibt es reiner UI-Zustand (s. ausgeblendet.ts). */
+  const [gespeicherteFilter, setGespeicherteFilter] = useState<GespeicherterFilter[]>([]);
   const [ausgeblendet, setAusgeblendet] = useState<Set<string>>(new Set());
   const [zeigeAusgeblendete, setZeigeAusgeblendete] = useState(false);
   const [sortKey, setSortKey] = useState("frist");
@@ -733,6 +736,56 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
     if (!l) return;
     (l.log = (l.log as unknown[]) || []).push({ kind, text, who: t("Du"), ts: t("gerade eben") });
   }
+  /* ── Die Sicht als Paket ───────────────────────────────────────────────────────────
+   *
+   * ⚠ MEHR ALS `adv`. Wer „mein Filter" speichert, erwartet die Liste zurueck, wie sie war:
+   * Grundraum, Schnellfilter, Suchtext, Suchtoken und Sortierung gehoeren dazu. Nur den
+   * Filterzustand zu sichern gibt eine fremde Liste zurueck, und der Nutzer haelt das
+   * Speichern fuer kaputt.
+   *
+   * ⚠ SUCHTEXT UND TOKEN BEIDE. Token entstehen nicht nur aus dem Text — ein Klick auf
+   * einen Kaeufer erzeugt auch eines. Nur der Text zurueck ergaebe eine andere Liste. */
+  function sichtEinsammeln(): Record<string, unknown> {
+    return { adv, filters, query, tokens, branche: aktiveBranche, sortKey, sortDir };
+  }
+
+  function sichtZurueckspielen(z: Record<string, unknown>) {
+    // ⚠ NIE UNGEPRUEFT UEBERNEHMEN. `mischen` haelt einen alten Filter gegen die heutige
+    //    Form: fehlende Schluessel bekommen ihren Vorgabewert, unbekannte fliegen raus,
+    //    typfremde bleiben liegen. Ohne das laedt ein alter Filter scheinbar sauber und
+    //    filtert anders — lautlos.
+    setAdv(mischen(emptyAdv, z.adv));
+    setFilters((f) => mischen(f, z.filters));
+    setQuery(typeof z.query === "string" ? z.query : "");
+    setTokens(Array.isArray(z.tokens) ? (z.tokens as Token[]) : []);
+    if (typeof z.branche === "string" && z.branche) setAktiveBranche(z.branche);
+    if (typeof z.sortKey === "string") {
+      autoSort.current = false;   // sonst ueberschreibt die Auto-Sortierung sofort wieder
+      setSortKey(z.sortKey);
+      setSortDir(z.sortDir === -1 ? -1 : 1);
+    }
+  }
+
+  async function filterSpeichern(name: string) {
+    const zeile = await speichereFilter(name, sichtEinsammeln());
+    if (zeile) setGespeicherteFilter((l) => [zeile, ...l.filter((x) => x.id !== zeile.id)]);
+  }
+
+  /* ⚠ Nimmt bewusst die SCHMALE Form entgegen. `FilterPanel` ist eine reine Darstellung
+   * und soll den Speichertyp nicht kennen; die vollstaendige Zeile holen wir uns hier aus
+   * der eigenen Liste. Der umgekehrte Weg haette den Speicher in die Oberflaeche gezogen. */
+  function filterLaden(f: { id: string; zustand: Record<string, unknown> }) {
+    sichtZurueckspielen(f.zustand);
+    merkeGebrauch(f.id);
+    const voll = gespeicherteFilter.find((x) => x.id === f.id);
+    if (voll) setGespeicherteFilter((l) => [voll, ...l.filter((x) => x.id !== f.id)]);
+  }
+
+  async function filterLoeschen(id: string) {
+    await loescheFilter(id);
+    setGespeicherteFilter((l) => l.filter((x) => x.id !== id));
+  }
+
   /** Vorgang ausblenden oder wieder zeigen. Optimistisch, Supabase folgt. */
   function toggleAusblenden(id: string) {
     const l = CORE.find((x) => x.id === id);
@@ -771,6 +824,12 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
    * auf „< 0" ist deshalb toter Code — die Anzeige „abgelaufen" im Cockpit war es seit jeher.
    *
    * Was fehlt, kommt aus der Merkliste selbst, die seit heute Titel und Käufer mitführt. */
+  useEffect(() => {
+    let ab = false;
+    ladeFilter().then((f) => { if (!ab) setGespeicherteFilter(f); });
+    return () => { ab = true; };
+  }, []);
+
   useEffect(() => {
     let ab = false;
     loadAusgeblendet().then((m) => {
@@ -1868,6 +1927,10 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
         ausgeblendetImTreffer={ausgeblendetImTreffer}
         zeigeAusgeblendete={zeigeAusgeblendete}
         onToggleAusgeblendete={() => setZeigeAusgeblendete((v) => !v)}
+        gespeicherteFilter={gespeicherteFilter}
+        onFilterSpeichern={filterSpeichern}
+        onFilterLaden={filterLaden}
+        onFilterLoeschen={filterLoeschen}
         onSetBranche={setBranche}
         onResetBranche={resetBranche}
         segments={cpvSegments}

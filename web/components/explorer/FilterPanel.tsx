@@ -1,5 +1,7 @@
 "use client";
 
+import { useState } from "react";
+
 import { useSprache } from "@/lib/i18n";
 
 import { BRANCHEN } from "@/lib/explorerCore";
@@ -102,11 +104,16 @@ export function FilterPanel({
   open, adv, resultCount, segments, onChange, onClose, onReset,
   branche, profilBranche, brancheCounts, onSetBranche, onResetBranche,
   facetZahlen, ausgeblendetImTreffer, zeigeAusgeblendete, onToggleAusgeblendete,
+  gespeicherteFilter, onFilterSpeichern, onFilterLaden, onFilterLoeschen,
 }: {
   open: boolean; adv: Adv; resultCount: number; segments: Segment[];
   /** Je Facette und Wert: wie viele Treffer ergaebe dieser Chip STATT der aktuellen Wahl.
    *  Leer, solange nichts gezaehlt wurde — dann rendert `Zahl` nichts. */
   facetZahlen?: Record<string, Record<string, number>>;
+  gespeicherteFilter?: { id: string; name: string; zustand: Record<string, unknown> }[];
+  onFilterSpeichern?: (name: string) => void;
+  onFilterLaden?: (f: { id: string; name: string; zustand: Record<string, unknown> }) => void;
+  onFilterLoeschen?: (id: string) => void;
   ausgeblendetImTreffer?: number;
   zeigeAusgeblendete?: boolean;
   onToggleAusgeblendete?: () => void;
@@ -118,6 +125,17 @@ export function FilterPanel({
 }) {
   const { t, lang } = useSprache();
   const set = (patch: Partial<Adv>) => onChange({ ...adv, ...patch });
+  /* ⚠ KEIN `prompt()`. Der Systemdialog ist auf dem iPad ein Fremdkoerper, laesst sich nicht
+   * gestalten und bricht die Tastaturbedienung. Stattdessen ein Feld, das erst auf Klick
+   * erscheint — und mit Enter speichert, weil sonst niemand den zweiten Knopf findet. */
+  const [nameOffen, setNameOffen] = useState(false);
+  const [name, setName] = useState("");
+  function speichern() {
+    const n = name.trim();
+    if (!n) return;
+    onFilterSpeichern?.(n);
+    setName(""); setNameOffen(false);
+  }
   const isPreset = adv.horizon != null && HORIZONTE.some(([m]) => m === adv.horizon);
 
   return (
@@ -151,6 +169,38 @@ export function FilterPanel({
                 {t("Zurück zu {b}", { b: t((BRANCHEN as Record<string, string>)[profilBranche]) })}
               </button>
             ) : null}
+          </section>
+
+          {/* ── Gespeicherte Ansichten ──────────────────────────────────────────────
+              Ganz oben, weil sie ein Sprungbrett sind: wer eine gespeicherte Sicht sucht,
+              will nicht erst an allen Facetten vorbei. */}
+          <section className="fp-sec">
+            <h5>{t("Gespeicherte Ansichten")}</h5>
+            {(gespeicherteFilter?.length ?? 0) > 0 && (
+              <div className="fp-chips" style={{ marginBottom: 8 }}>
+                {gespeicherteFilter!.map((f) => (
+                  <span key={f.id} className="fp-gesp">
+                    <button className="fp-chip" onClick={() => onFilterLaden?.(f)}>{f.name}</button>
+                    <button className="fp-gesp-x" onClick={() => onFilterLoeschen?.(f.id)}
+                            aria-label={t("Gespeicherte Ansicht löschen")} title={t("Gespeicherte Ansicht löschen")}>×</button>
+                  </span>
+                ))}
+              </div>
+            )}
+            {nameOffen ? (
+              <div className="fp-chips">
+                <input className="fp-name" value={name} autoFocus maxLength={80}
+                       placeholder={t("Name der Ansicht")}
+                       onChange={(e) => setName(e.target.value)}
+                       onKeyDown={(e) => { if (e.key === "Enter") speichern();
+                                           if (e.key === "Escape") { setName(""); setNameOffen(false); } }} />
+                <button className="fp-chip on" onClick={speichern}>{t("Sichern")}</button>
+              </div>
+            ) : (
+              <button className="fp-chip" onClick={() => setNameOffen(true)}>
+                {t("Diese Ansicht speichern")}
+              </button>
+            )}
           </section>
 
           {/* ⚠ GANZ OBEN, WEIL ER EINE LUECKE ERKLAERT. Wer etwas ausgeblendet hat, sieht
