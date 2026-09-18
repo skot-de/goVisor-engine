@@ -68,42 +68,27 @@ Nicht verworfen, nur markiert — wie im Rest der Firewall.
 ⚠ **Die Wirkung erreicht die Oberflaeche erst mit dem naechsten Nachtlauf.** Geaendert ist
 `data/gold/DE/notice_duplicates.parquet`; `web/data/leads-*.json` entsteht erst im Export.
 
-### (b) Ketten-Cluster — OFFEN, und NICHT durch Clustern loesbar
+### (b) Ketten-Cluster — URSACHE GEFUNDEN, BEHOBEN am 2026-09-18
 
-Auf der belastbaren Stufe bleiben 2.193 Cluster mit mehr als einem Ueberlebenden,
-zusammen 4.637 ueberzaehlige Vorgaenge. Die entscheidende Messung:
+Die Frage war: warum FEHLEN Kanten? Drei identische OIC-Ankuendigungen paarten nicht
+miteinander. Die Antwort steht in `_paare_finden`:
 
-    Cluster mit >= 2 Knoten          19.042
-      vollstaendig (jede Kante da)   16.367  (86 %)
-      nur verkettet                   2.675
+    if s["gen"] == t["gen"]:
+        continue      # dieselbe Quelle dedupliziert sich selbst schon
 
-    ueberzaehlige Vorgaenge           4.637
-      davon in vollstaendigen Cluster:    0
-      in Ketten:                      4.637
+Alle drei sind `legacy` — dieselbe Quelle. Sie KONNTEN einander per Konstruktion nie
+finden. Deshalb lag keiner der 4.637 ueberzaehligen Vorgaenge in einem vollstaendigen
+Cluster: die Kanten innerhalb einer Quelle gab es nie. Die Annahme stimmt nicht, eForms
+und TED veroeffentlichen Korrekturen als eigene Bekanntmachung.
 
-**Kein einziger der 4.637 Faelle liegt in einem vollstaendigen Cluster.** Jeder beruht auf
-unvollstaendiger paarweiser Evidenz. „Transitivitaet schliessen" hiesse hier immer:
-entscheiden, wo nicht gemessen wurde.
+Gemessen ueber die DE-Ausschreibungen ab 2025:
 
-Beide Fehlerarten stecken in denselben Clustern:
+    identischer Titel + Kaeufer + Stufe, <= 90 Tage, DIESELBE Quelle   77.341
+      davon stehen BEIDE in der ausgelieferten Liste                    8.797
 
-    ECHTE LUECKE     „Neubau Optical Imaging Center (OIC)" dreimal, drei ueberleben
-    UEBERZOGEN       „LVR-Klinikum … Moeblierung / Tragwerksplanung / Sicherheitsdienst"
-                     in EINEM Cluster, verkettet ueber den Standortnamen
-
-Blind zu schliessen heilt das erste und verschlimmert das zweite.
-
-## Aufgabe (fuer den, der (b) angeht)
-
-1. **Erst messen, warum die Kanten fehlen.** Bei den drei OIC-Ankuendigungen mit
-   identischem Titel und identischem Kaeufer MUESSTE ein Paar entstehen. Es entsteht
-   nicht. Die Seed-Wahl („die drei seltensten indizierten Woerter") ist der erste
-   Verdaechtige.
-2. Erst wenn die Kanten vollstaendig sind, ist Clustern sinnvoll — und dann nur ueber
-   VOLLSTAENDIGE Cluster, nie ueber Ketten.
-3. Die Gegenprobe ist Pflicht: nach jeder Aenderung die Groesse des groessten Clusters und
-   die Zahl der verschiedenen Titel darin messen. 4.720 Knoten mit 923 Titeln ist der
-   Zustand, in den man zurueckfaellt.
+⚠ **Die Schwierigkeit ist die Serie, nicht die Dublette.** Vier Belege zusammen plus ein
+Gruppendeckel trennen sie (s. `dedupe._wiederholung`). Ergebnis: 17.173 Paare, davon 9
+aus der 219er-Rabatt-Serie; Wirkung auf die heutige Liste 527 Paare von 43.683 Leads.
 
 ## Was NICHT hilft
 

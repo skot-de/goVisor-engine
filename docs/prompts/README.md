@@ -61,13 +61,13 @@ werden.
   schlossen Leads aus, ohne je die 90-Tage-Regel bestanden zu haben. Eigene Belegstufe,
   aber nur fuer die enthaltenen Titel (248); 118 mit identischem Titel bleiben belastbar.
 
+- **[07](07-dubletten.md) Dubletten, Teil (b)** — 2026-09-18, Commit a60f0b1. Die
+  fehlenden Kanten lagen an `if s["gen"] == t["gen"]: continue` — Paare innerhalb einer
+  Quelle wurden nie geprueft. 8.797 davon sind beim Nutzer doppelt sichtbar. Neue Stufe
+  `gleiche_quelle_wiederholt` mit vier Belegen und Gruppendeckel gegen Serien.
+
 ## Offen, mit korrigierter Grundlage
 
-- **[07](07-dubletten.md) Dubletten, Teil (b)** — ⚠ die vorgeschlagene Loesung
-  (Union-Find) ist nachweislich falsch: groesstes Cluster 4.720 Knoten mit 923
-  verschiedenen Titeln. 4.637 ueberzaehlige Vorgaenge bleiben, aber KEIN einziger liegt in
-  einem vollstaendigen Cluster. Die eigentliche Frage ist, warum Kanten FEHLEN — drei
-  identische OIC-Ankuendigungen paaren nicht miteinander. Verdacht: die Seed-Wahl.
 - **[09b](09-ladezustand.md) Nutzlast** — die Annahme im Auftrag war falsch. Die 47 MB
   gehen nie ueber die Leitung (gzip: 5,6 MB), und die Liste braucht fast alle Felder;
   nachladbar sind 9 %, nicht 50 %. Der echte Hebel ist **Brotli** (5,65 → 2,96 MB bei
