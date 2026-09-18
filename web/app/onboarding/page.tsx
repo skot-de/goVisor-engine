@@ -212,6 +212,34 @@ function FirmaFakten({ m }: { m: Match }) {
  * ⚠ AN `members.length` HAENGEN, NICHT AN `matched`. `matched` ist auch bei mehreren
  * Einheiten gesetzt und taugt als Bedingung nicht.
  */
+/** Darf Schritt 3 entfallen?
+ *
+ * Sven am 2026-09-18 an einem Bildschirm mit genau einer Einheit: „hat die seite keinen
+ * mehrwert, sondern kostet nur zeit und ein klick". Stimmt — Schritt 2 hat gerade gefragt
+ * „arbeitest du bei {firma}?" und bestaetigen lassen; Schritt 3 legt dieselbe Firma noch
+ * einmal als Liste mit einem Eintrag vor und will ein zweites Ja.
+ *
+ * ⚠ NUR WENN DIE EINHEIT BELEGT IST. Ist sie blosse Selbstauskunft, traegt der Schritt
+ * eine Warnung („… als Selbstauskunft … diese Zuschlaege zaehlen als eure Historie"). Sie
+ * stillschweigend zu uebergehen hiesse, eine Zustimmung anzunehmen, die niemand gegeben
+ * hat — genau der Zustand, den die Plausibilitaetsbremse vom 2026-08-21 abgeschafft hat.
+ * Gemessen: von den 30.174 Ein-Einheit-Firmen sind 30.172 belegt und 2 nicht. Die Ausnahme
+ * kostet fast nichts und bewahrt die Zusage.
+ *
+ * ⚠ UEBERSPRUNGEN WIRD DIE FRAGE, NICHT DIE ERFASSUNG. `aktiv` ist in `ladeMitglieder`
+ * bereits gesetzt, und `fertigstellen()` baut `confirmedEntities` daraus — der Sprung
+ * aendert nichts daran, was gespeichert wird.
+ *
+ * ⚠ Diese Regel gab es schon einmal und sie wurde am 2026-09-18 vormittags entfernt, weil
+ * ein Arbeitsauftrag verlangte, den Schritt zu ERHALTEN. Der Grund dort war die Zusage
+ * „{n} Siege fliessen in euer Profil" — die steht aber auch auf dem Abschlussbildschirm
+ * („Siege im Profil"), den der Sprung ansteuert. Verloren geht sie also nicht.
+ */
+function darfUeberspringen(ms: Member[]): boolean {
+  return ms.length === 1 && ms[0].conf === "belegt";
+}
+
+
 function istEineFrage(ms: Member[]): boolean {
   return ms.length !== 1;
 }
@@ -472,7 +500,7 @@ export default function OnboardingPage() {
      *
      * `aktiv` ist bereits gesetzt (oben in `ladeMitglieder`), `confirmedEntities` wird
      * daraus gebaut wie sonst auch — uebersprungen wird die FRAGE, nicht die Erfassung. */
-    geheZu("profil");
+    geheZu(darfUeberspringen(ms) ? "fertig" : "profil");
   }
 
   // Konto anlegen (Registrierung), dann Firmen-Erkennung. Bei „E-Mail existiert" → Login anbieten.
@@ -602,7 +630,7 @@ function testMailErlaubt(mail: string): boolean {
            auch dann ueber den Schritt, wenn die eine Einheit blosse Selbstauskunft war,
            und uebersah damit die Warnung, die dort haengt. Zwei Wege in denselben
            Bildschirm mit zwei Regeln laufen auseinander; sie waren es bereits. */
-        geheZu("profil");
+        geheZu(darfUeberspringen(ms) ? "fertig" : "profil");
         return;
       }
       // Fremde Domain: Vorbelegung faellt weg, es geht den normalen Weg weiter.

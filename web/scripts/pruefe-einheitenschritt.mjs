@@ -49,15 +49,52 @@ if (a < 0) {
   }
 }
 
-/* ── 1b. DER SCHRITT WIRD NICHT UEBERSPRUNGEN ─────────────────────────────────────── */
-// ⚠ Genau das war die falsche Loesung. Wer hier wieder `? "profil" : "fertig"` schreibt,
-// nimmt dem Nutzer die Zusage, die den Schritt rechtfertigt.
+/* ── 1b. DER SCHRITT WIRD UEBERSPRUNGEN — ABER NUR BEI BELEGTER EINHEIT───────────── */
+// ⚠ DIESE REGEL IST AM 2026-09-18 ZWEIMAL GEKIPPT. Vormittags wurde der Sprung entfernt,
+// weil ein Arbeitsauftrag verlangte, den Schritt zu ERHALTEN: er traegt die Zusage „{n}
+// Siege fliessen in euer Profil". Nachmittags hat Sven an einem Bildschirm mit genau einer
+// Einheit entschieden: „hat die seite keinen mehrwert, sondern kostet nur zeit und ein
+// klick". Beides stimmt — aufgeloest ist es dadurch, dass die Zusage auch auf dem
+// Abschlussbildschirm steht („Siege im Profil"), den der Sprung ansteuert. Verloren geht
+// sie nicht, sie kommt eine Seite spaeter.
+//
+// ⚠ DIE AUSNAHME IST DER TEIL, DER ZAEHLT. Ist die eine Einheit blosse Selbstauskunft,
+// traegt der Schritt eine Warnung; sie stillschweigend zu uebergehen hiesse, eine
+// Zustimmung anzunehmen, die niemand gegeben hat. Wer `darfUeberspringen` auf
+// `ms.length === 1` verkuerzt, faellt hier durch.
 const code0 = seite.replace(/\/\*[\s\S]*?\*\//g, "").replace(/(^|[^:])\/\/.*$/gm, "$1");
-for (const m of code0.matchAll(/geheZu\(([\s\S]{0,90}?)\?\s*"(\w+)"\s*:\s*"(\w+)"\)/g)) {
-  if ([m[2], m[3]].includes("profil") && [m[2], m[3]].includes("fertig")) {
-    klage("Der Einheiten-Schritt wird wieder uebersprungen. Er traegt die Zusage, dass "
-        + "die Einheiten als Identitaet gemerkt werden. Ohne ihn wird aus einem Treffer "
-        + "nie ein Profil.");
+const b = code0.indexOf("function darfUeberspringen");
+if (b < 0) {
+  klage("`darfUeberspringen` fehlt — der Schritt wird wieder immer gezeigt, auch wo es "
+      + "nichts zu entscheiden gibt.");
+} else {
+  const rumpf = code0.slice(b, code0.indexOf("}", b));
+  if (!/conf\s*===\s*"belegt"/.test(rumpf)) {
+    klage("`darfUeberspringen` prueft die Beleglage nicht. Dann wird auch bei blosser "
+        + "Selbstauskunft uebersprungen — samt der Warnung, die dort haengt.");
+  }
+  if (!/length\s*===\s*1/.test(rumpf)) {
+    klage("`darfUeberspringen` prueft die Anzahl nicht. Bei mehreren Einheiten ist die "
+        + "Frage eine echte und darf nicht entfallen.");
+  }
+  /* ⚠ Die Funktion HIER herausschneiden, nicht `js` von oben leihen: das ist im
+     else-Zweig von Abschnitt 1 gebunden und hier nicht sichtbar. Beim ersten Versuch
+     war genau das der Fehler — und er blieb unbemerkt, weil dieser ganze Block in
+     einem nicht geschlossenen `/*` steckte und gar nicht lief. */
+  const q = seite.indexOf("function darfUeberspringen");
+  const js2 = seite.slice(q, seite.indexOf("\n}", q) + 3).replace("(ms: Member[]): boolean", "(ms)");
+  const regel2 = new Function(`${js2}\nreturn darfUeberspringen;`)();
+  const SPRUNG = [
+    ["eine belegte Einheit",        [{ name: "A", conf: "belegt",   method: "x", wins: 5 }], true],
+    ["eine unsichere Einheit",      [{ name: "A", conf: "unsicher", method: "x", wins: 5 }], false],
+    ["zwei belegte Einheiten",      [{ name: "A", conf: "belegt",   method: "x", wins: 5 },
+                                     { name: "B", conf: "belegt",   method: "x", wins: 2 }], false],
+    ["keine Einheit",               [], false],
+  ];
+  for (const [name, ms, erwartet] of SPRUNG) {
+    if (regel2(ms) !== erwartet) {
+      klage(`darfUeberspringen(${name}) = ${regel2(ms)}, erwartet ${erwartet}`);
+    }
   }
 }
 
@@ -70,14 +107,17 @@ if (/ergänzen|ergaenzen|hinzufügen|hinzufuegen/.test(seite.slice(seite.indexOf
       + "nicht — `EntityKorrektur` ersetzt die Zuordnung, sie ergaenzt keine Einheit.");
 }
 
-/* ── 2. Beide Wege fuehren in den Schritt ─────────────────────────────────────────── */
-// In den Bildschirm fuehren der normale Pfad und der Token-Pfad. Faellt einer weg, sieht
-// ein Teil der Nutzer die Zusage nie — und es faellt niemandem auf, weil der andere Weg
-// funktioniert.
-const wege = [...code0.matchAll(/geheZu\("profil"\)/g)].length;
+/* ── 2. BEIDE WEGE BENUTZEN DIESELBE REGEL────────────────────────────────────────── */
+// In den Bildschirm fuehren der normale Pfad und der Token-Pfad. ⚠ Auf dem Token-Pfad
+// stand einmal `anzahl > 1` ohne Belegpruefung — zwei Wege in denselben Bildschirm mit
+// zwei Regeln laufen auseinander, und zwar unbemerkt, weil der andere Weg funktioniert.
+const wege = [...code0.matchAll(/geheZu\(\s*darfUeberspringen\([^)]*\)\s*\?/g)].length;
 if (wege < 2) {
-  klage(`Nur ${wege} Weg(e) fuehren in den Einheiten-Schritt — es gibt zwei (normaler `
-      + "Pfad und Token-Pfad).");
+  klage(`Nur ${wege} Weg(e) entscheiden ueber \`darfUeberspringen\` — es gibt zwei `
+      + "(normaler Pfad und Token-Pfad). Der andere springt nach eigener Regel.");
+}
+if ([...code0.matchAll(/geheZu\("profil"\)/g)].length > 0) {
+  klage("Ein Weg fuehrt unbedingt in den Einheiten-Schritt, ohne die Regel zu fragen.");
 }
 
 /* ── 3. Gegen die echten Daten: lohnt es sich ueberhaupt? ─────────────────────────── */
@@ -95,7 +135,7 @@ if (existsSync(lief)) {
   }
   console.log(`  ${ges.toLocaleString("de")} Firmen, ${eins.toLocaleString("de")} mit EINER Einheit `
             + `(${(100 * eins / ges).toFixed(1)} %), davon ${einsBelegt.toLocaleString("de")} belegt`);
-  console.log(`  → ${(100 * eins / ges).toFixed(1)} % sehen eine AUSSAGE statt einer Frage`);
+  console.log(`  → ${(100 * eins / ges).toFixed(1)} % sparen den Klick; der Rest entscheidet wirklich etwas`);
   // ⚠ Faellt der Anteil stark, ist die Abkuerzung ihren Aufwand nicht mehr wert — dann
   //    gehoert sie geprueft, nicht stillschweigend weitergeschleppt.
   if (eins / ges < 0.4) {
@@ -105,5 +145,5 @@ if (existsSync(lief)) {
 }
 
 console.log(fehler ? `\n✗ ${fehler} Befund(e)`
-                   : "\n✓ Der Schritt bleibt, und er fragt nur, wo es etwas zu fragen gibt");
+                   : "\n✓ Der Schritt entfaellt, wo er nichts fragt — und bleibt, wo er warnt");
 process.exit(fehler ? 1 : 0);

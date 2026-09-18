@@ -4,11 +4,23 @@
 zu euch?". Bei EINER Einheit ist das keine Frage, sondern eine Liste mit einem Eintrag,
 ueber den in Schritt 2 gerade entschieden wurde.
 
-⚠ DER SCHRITT WIRD NICHT UEBERSPRUNGEN, und das ist der Kern. Eine erste Fassung vom
-2026-09-17 sprang bei einer belegten Einheit direkt zu „fertig" — die falsche Loesung. Der
-Schritt traegt die Zusage „Mit der Bestaetigung merken wir uns diese Einheiten als eure
-Identitaet. {n} Siege fliessen in euer Profil."; das ist die Stelle, an der aus „wir kennen
-euch" ein Profil wird. Sie wegzulassen waere schlechter als eine unpassende Ueberschrift.
+⚠ DIESE REGEL IST AM 2026-09-18 ZWEIMAL GEKIPPT, und beide Male mit Grund.
+
+Vormittags wurde der Sprung ENTFERNT: der Schritt traegt die Zusage „Mit der Bestaetigung
+merken wir uns diese Einheiten als eure Identitaet. {n} Siege fliessen in euer Profil." —
+die Stelle, an der aus „wir kennen euch" ein Profil wird.
+
+Nachmittags hat Sven an einem Bildschirm mit genau einer Einheit entschieden: „hat die
+seite keinen mehrwert, sondern kostet nur zeit und ein klick". Auch richtig: Schritt 2 hat
+gerade „arbeitest du bei {firma}?" gefragt und bestaetigen lassen.
+
+Aufgeloest ist der Widerspruch nicht durch Nachgeben, sondern durch Nachsehen: die Zusage
+steht AUCH auf dem Abschlussbildschirm („Siege im Profil"), den der Sprung ansteuert. Sie
+kommt also eine Seite spaeter, statt zu verschwinden. Der Einwand von vormittags war
+berechtigt und ist erledigt, nicht uebergangen.
+
+⚠ Uebersprungen wird nur bei einer BELEGTEN Einheit. Gemessen: 30.175 von 37.948 Firmen
+sparen den Klick, zwei behalten die Warnung, die bei blosser Selbstauskunft dort haengt.
 
 Gemessen am 2026-09-18, zwei Grundmengen — beide richtig, verschiedene Fragen:
 
@@ -46,7 +58,7 @@ def test_die_sonde_laeuft_gruen():
         return
     r = subprocess.run(["node", str(SONDE)], capture_output=True, text=True, cwd=WURZEL)
     assert r.returncode == 0, r.stdout[-900:] + r.stderr[-400:]
-    assert "Der Schritt bleibt, und er fragt nur, wo es etwas zu fragen gibt" in r.stdout
+    assert "Der Schritt entfaellt, wo er nichts fragt — und bleibt, wo er warnt" in r.stdout
 
 
 def test_die_beleglage_wandert_weiter_ins_profil():
