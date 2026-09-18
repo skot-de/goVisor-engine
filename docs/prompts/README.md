@@ -68,11 +68,10 @@ werden.
 
 ## Offen, mit korrigierter Grundlage
 
-- **[09b](09-ladezustand.md) Nutzlast** — die Annahme im Auftrag war falsch. Die 47 MB
-  gehen nie ueber die Leitung (gzip: 5,6 MB), und die Liste braucht fast alle Felder;
-  nachladbar sind 9 %, nicht 50 %. Der echte Hebel ist **Brotli** (5,65 → 2,96 MB bei
-  Qualitaet 11, vorberechnet). Nicht gebaut, weil `/api/leads` ohne Anmeldung nicht
-  pruefbar ist und doppelte Kodierung die Liste fuer jeden zerstoeren wuerde.
+- **[09b](09-ladezustand.md) Nutzlast** — 2026-09-18 erledigt. ⚠ Die Grundlage war
+  wieder falsch: es ging nie um Brotli gegen gzip, es gab GAR KEINE Komprimierung.
+  `next start` komprimiert Route-Handler nicht — 46 MB gingen roh raus, bei 30 Mbit/s
+  12,3 Sekunden. Jetzt 3,9 MB.
 
 ## Neu aufgenommen (beim Arbeiten gefunden)
 

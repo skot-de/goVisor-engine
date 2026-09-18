@@ -3,6 +3,7 @@ import { loadDataFile, dateiMarke } from "@/lib/dataSource";
 // ⚠ Die ETag-Regel liegt in Plain JS, damit `node` sie pruefen kann —
 // `dataSource.ts` traegt `server-only` und waere fuer einen Test unerreichbar.
 import { etagAus, unveraendert } from "@/lib/etag";
+import { komprimiert } from "@/lib/komprimiert";
 
 // Echte Leads aus der Gold-Schicht (per scripts/export_web_leads.py als JSON abgelegt), geladen
 // über den konfigurierbaren Daten-Loader (lokal oder Object-Storage via DATA_BASE_URL).
@@ -14,7 +15,14 @@ import { etagAus, unveraendert } from "@/lib/etag";
 const BRANCHEN = new Set(["it", "bau", "medizin", "beratung", "sicherheit", "energie",
                           "ohne"]);
 
-/* Wie der Browser die Antwort behandeln darf.
+/* ⚠ HIER STAND, DIE ANTWORT SEI „5,6 MB gzip". Das war die Groesse, die eine
+ * Komprimierung ERGEBEN WUERDE — nicht die, die ankommt. Gemessen am 2026-09-18 mit
+ * angemeldeter Sitzung: `next start` gzippt statische Dateien, aber KEINE einzige
+ * API-Antwort. Diese Route lieferte 46.044.875 Bytes ohne `Content-Encoding`. Bei
+ * 30 Mbit/s sind das 12,3 Sekunden — genau die Zeit, die gemeldet wurde.
+ * Der Weg ueber `komprimiert()` macht daraus 3,76 MB (Brotli q=4) und rund eine Sekunde.
+ *
+ * Wie der Browser die Antwort behandeln darf.
  *
  * `must-revalidate` mit `max-age=0`: bei JEDEM Aufruf wird nachgefragt, aber nur uebertragen,
  * wenn sich etwas geaendert hat. Keine veralteten Zahlen, und der Rueckweg kostet ein paar
@@ -63,14 +71,13 @@ export async function GET(req: Request) {
       const leads = JSON.parse(json);
       const awards = JSON.parse(awardsRaw);
       if (Array.isArray(leads) && Array.isArray(awards)) {
-        return NextResponse.json([...awards, ...leads], {
-          headers: { "cache-control": CACHE, ...(etag ? { etag } : {}) },
-        });
+        return komprimiert(req, JSON.stringify([...awards, ...leads]),
+          { "content-type": "application/json", "cache-control": CACHE,
+            ...(etag ? { etag } : {}) }, etag);
       }
     } catch { /* fällt auf reine Leads zurück */ }
   }
-  return new NextResponse(json, {
-    headers: { "content-type": "application/json", "cache-control": CACHE,
-               ...(etag ? { etag } : {}) },
-  });
+  return komprimiert(req, json,
+    { "content-type": "application/json", "cache-control": CACHE,
+      ...(etag ? { etag } : {}) }, etag);
 }

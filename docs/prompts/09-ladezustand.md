@@ -38,62 +38,51 @@ eine Hilfsfunktion gelesen werden. Die 25,5 MB sind nicht erreichbar.
 (`buyerProfile`, `marktSegment`, `sprachfassungen`) und dupliziert nichts. Diese Trennung
 ist schon passiert; eine zweite gibt es nicht zu holen.
 
-### Wo die Zeit wirklich hingeht
+### Wo die Zeit wirklich hingeht — KORRIGIERT am 2026-09-18
 
-    Server: JSON.parse + JSON.stringify (Zuschlags-Mischung)    220 ms
-    Uebertragung: 5,6 MB gzip  ← der ganze Rest
-    Client: JSON.parse                                          130 ms
-    Client: matchLead ueber 18.511 Leads                          18 ms
+⚠ **Die Zahl „5,6 MB gzip" war keine Messung.** Sie stand als Kommentar in `/api/leads`
+und beschrieb, was eine Komprimierung ERGEBEN WUERDE. Ich habe sie am 2026-09-17
+weitergereicht, ohne sie zu pruefen — weil ich ohne Anmeldung nicht an die Route kam.
 
-⚠ **Die 47 MB gehen nie ueber die Leitung.** Der Server gzippt auf 5,6 MB (12 %). Die
-Zahl „49,6 MB" war die ROHE Groesse. In einem Cafe ueber einen Tunnel sind 5,6 MB
-trotzdem der dominierende Posten — dort entstanden die zwoelf Sekunden.
+Mit angemeldeter Sitzung gemessen:
 
-### Der Hebel, der wirklich existiert: Brotli
+    /api/leads?branche=bau      46.044.875 Bytes   Content-Encoding: KEINE
+    /api/plz-geo                 1.463.245 Bytes   Content-Encoding: KEINE
+    /api/doc-analysis              649.499 Bytes   Content-Encoding: KEINE
+    /_next/static/chunks/*.js        1.905 Bytes   Content-Encoding: gzip
 
-Der Server liefert NUR gzip, auch wenn der Client `br` anbietet (gemessen: die Antwort
-traegt `Content-Encoding: gzip` selbst bei `Accept-Encoding: br, gzip`). Next.js'
-eingebaute Komprimierung kann kein Brotli.
+`next start` komprimiert statische Dateien, aber KEINE Route-Handler-Antwort. Die 43,9 MB
+gingen roh ueber die Leitung. Bei 30 Mbit/s sind das **12,3 Sekunden** — genau die Zeit,
+die gemeldet wurde. Es war nie eine Brotli-gegen-gzip-Frage; es war gar keine
+Komprimierung.
 
-    Ausgang    47,3 MB roh   →   gzip 5,65 MB
+    Verfahren      Groesse   Rechenzeit   Ersparnis
+    gzip level 6   5,56 MB      260 ms      -87 %
+    brotli q=1     5,55 MB       66 ms      -87 %
+    brotli q=4     3,76 MB      111 ms      -91 %   ← gewaehlt
+    brotli q=5     3,51 MB      219 ms      -92 %
 
-    Brotli q=1    5,61 MB    -1 %        62 ms
-    Brotli q=4    3,79 MB   -33 %       105 ms
-    Brotli q=5    3,53 MB   -38 %       217 ms
-    Brotli q=9    3,20 MB   -43 %       519 ms
-    Brotli q=11   2,96 MB   -48 %    34.642 ms   ← nur vorberechnet
+### BEHOBEN am 2026-09-18
 
-Die Daten aendern sich einmal taeglich. **Vorberechnen mit q=11 ist die richtige Antwort:**
-2,96 MB statt 5,65 MB, also 48 % weniger Uebertragung bei null Rechenzeit je Anfrage.
+`web/lib/komprimiert.ts` handelt br vor gzip aus, setzt `Vary: Accept-Encoding` und legt
+das Ergebnis unter (ETag + Verfahren) ab. Verdrahtet in `/api/leads`, `/api/plz-geo`,
+`/api/doc-analysis`. Gemessen an der laufenden Anwendung:
 
-## Aufgabe
+    /api/leads?branche=bau   46,0 → 3,9 MB   (-91 %)
+    /api/plz-geo              1,40 → 0,46 MB (-67 %)
+    /api/doc-analysis         0,62 → 0,10 MB (-84 %)
 
-1. `scripts/export_web_leads.py` (oder ein Nachschritt) schreibt je Datei eine
-   `.br`-Fassung mit Qualitaet 11.
-2. `/api/leads` liefert bei `Accept-Encoding: br` die vorkomprimierten Bytes mit
-   `Content-Encoding: br`, sonst den bisherigen Weg.
-3. Dasselbe fuer die anderen grossen Auslieferungen (`suppliers.json`, `detail-*.json`).
+Der Waechter prueft nicht die Kopfzeile, sondern ENTPACKT und vergleicht Byte fuer Byte
+gegen die unkomprimierte Fassung — eine gesetzte Kopfzeile ohne passenden Rumpf zeigt der
+Browser als kaputte Seite, nicht als Fehler.
 
-### ⚠ WARUM DAS AM 2026-09-17 NICHT GEBAUT WURDE
+### Der Weg zur Anmeldung, der das ueberhaupt erst pruefbar machte
 
-Ich komme ohne Anmeldung nicht an `/api/leads` — die Route antwortet mit 401, und ein
-Passwort fuer ein Konto habe ich nicht (s. `memory/govisor-frontend-gehoert-mir.md`).
-Eine Komprimierungsaenderung an der wichtigsten Route ungeprueft auszuliefern, waere die
-falsche Wette: setzt Next zusaetzlich seinen eigenen gzip darueber, ist die Antwort
-doppelt kodiert und die Lead-Liste fuer JEDEN kaputt.
+    python3 scripts/pruefkonto.py        legt `pruef@govisor.invalid` an (mailfrei)
+    node web/scripts/pruefanmeldung.mjs  laesst `@supabase/ssr` selbst anmelden und
+                                         gibt die Cookie-Zeile aus
 
-**Wer das baut, braucht zuerst einen Weg, die Route angemeldet abzurufen.** Danach ist
-die Pruefung einfach: Antwort abrufen, dekomprimieren, mit der unkomprimierten Fassung
-Byte fuer Byte vergleichen.
+⚠ Das Cookie-Format wird NICHT nachgebaut. `@supabase/ssr` kodiert base64-praefixiert und
+zerlegt bei Bedarf auf mehrere Cookies; jede Nachbildung waere beim naechsten Update still
+falsch. Das Skript faengt ab, was die echte Bibliothek setzt.
 
-### ⚠ ZWEITE FRAGE VORHER KLAEREN
-
-Vercel und Cloudflare komprimieren an der Kante selbst mit Brotli. Wenn dort ausgeliefert
-wird, ist der Gewinn moeglicherweise schon da und diese Arbeit umsonst — die zwoelf
-Sekunden entstanden ueber einen Quick Tunnel, nicht in Produktion. Erst messen, was die
-Antwort in der echten Umgebung traegt, dann bauen.
-
-## Abnahme
-- Uebertragene Bytes vorher/nachher aus dem Netzwerkprotokoll, nicht geschaetzt.
-- Ein Test, der die ausgelieferten Bytes dekomprimiert und gegen die Quelldatei haelt.
-- Ein Test, der rot wird, wenn `Content-Encoding` und tatsaechliche Kodierung auseinanderfallen.

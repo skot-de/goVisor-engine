@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { analyseIndexMitGrund } from "@/lib/docAnalysis";
 import { dateiMarke } from "@/lib/dataSource";
 import { etagAus, unveraendert } from "@/lib/etag.js";
+import { komprimiert } from "@/lib/komprimiert";
 
 export const dynamic = "force-dynamic";
 const CACHE = "public, max-age=0, must-revalidate";
@@ -35,7 +36,10 @@ export async function GET(req: Request) {
     return NextResponse.json({ error: "Datenspeicher antwortet nicht" }, { status: 503 });
   }
 
-  return NextResponse.json(Object.fromEntries(index), {
-    headers: { "cache-control": CACHE, ...(etag ? { etag } : {}) },
-  });
+  // ⚠ Komprimiert, weil Next Route-Handler NICHT komprimiert (gemessen 2026-09-18,
+  // s. Kopf von `lib/komprimiert.ts`). 0,65 MB roh sind kein Drama, aber diese Route
+  // laeuft bei JEDEM Seitenaufruf mit — und dieselbe Zeile spart 90 % davon.
+  return komprimiert(req, JSON.stringify(Object.fromEntries(index)),
+    { "content-type": "application/json", "cache-control": CACHE,
+      ...(etag ? { etag } : {}) }, etag);
 }
