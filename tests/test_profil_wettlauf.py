@@ -18,6 +18,25 @@ ueberschrieb er das gerade gespeicherte Engine-Profil.
 Eignungs-Check und eine erkannte Firma. Wer ohne Check durchs Onboarding geht — und so
 entstehen alle vorbereiteten Testkonten — bekommt ein heiles Profil. Der Weg, der bricht,
 ist ausgerechnet der vollstaendige.
+
+⚠ WAS DIESER TEST SEIT DEM 2026-09-18 NOCH BEWACHT — UND WAS NICHT MEHR.
+
+Das MUSTER ist inzwischen strukturell beseitigt: `merge_profile` (supabase/0020) mischt
+in der Datenbank, beide Schreiber gehen durch `lib/supabase/profilBlob.ts`, und weil sie
+VERSCHIEDENE Schluessel anfassen, ueberleben beide — nachgewiesen unter echter
+Nebenlaeufigkeit in `scripts/pruefe_profil_nebenlaeufig.py`:
+
+    alter Weg (lesen-aendern-schreiben)   0 von 12 Runden vollstaendig
+    merge_profile (atomar)               12 von 12 Runden vollstaendig
+
+Gegen LOST UPDATES braucht es diesen Test also nicht mehr. Er ist trotzdem NICHT geloescht,
+weil er eine zweite Eigenschaft bewacht, die der Merge nicht herstellt: ein Schreibvorgang
+ohne `await` kann schlicht NICHT ANKOMMEN, wenn die Seite vorher weiterschaltet. Der
+atomare Merge macht aus einem verlorenen Rennen keinen Gewinner — er macht nur aus zwei
+Schreibern zwei, die sich nicht gegenseitig loeschen. Wer gar nicht schreibt, schreibt
+auch atomar nicht.
+
+Der Testname sagt das weiterhin richtig: „zuerst UND ABGEWARTET".
 """
 import re
 from pathlib import Path
