@@ -141,11 +141,87 @@ def test_ausgabe_haelt_die_form():
     if not DATEI.exists():
         return
     d = json.loads(DATEI.read_text(encoding="utf-8"))
-    assert set(d) == {"leads", "baender"}
+    assert set(d) == {"leads", "baender", "verworfen", "ohne_vergleich"}
     assert d["leads"] and d["baender"]
     for v in d["leads"].values():
         assert set(v) == {"a", "median", "hoch"}
         assert 0 <= v["a"] <= 100 and v["hoch"] >= v["median"]
-    # ⚠ Die Bänder müssen sich unterscheiden, sonst war die Einteilung umsonst.
-    med = sorted(g["median"] for g in d["baender"].values())
-    assert med[-1] >= 2 * med[0], f"die Textmengen-Bänder trennen nicht mehr: {med}"
+
+
+def test_ein_verworfenes_band_steht_im_auslieferstand():
+    """⚠ WARUM DIESER TEST DEN ALTEN ERSETZT HAT. Hier stand `med[-1] >= 2 * med[0]` — „die
+    Bänder müssen sich unterscheiden". Am 2026-09-17 wurde er rot und meldete „die
+    Textmengen-Bänder trennen nicht mehr: [28, 44]".
+
+    Das war richtig gemessen und falsch benannt. Die beiden Bänder trennen weiterhin
+    (44 % gegen 28 %); was fehlte, war das DRITTE: `DE:gross` fiel aus der Driftpruefung
+    (1,53×, tags darauf 1,62×), und die 2×-Schwelle stammte aus einer Welt mit drei Bändern,
+    in der die Spanne von `klein` bis `gross` reichte.
+
+    Die Folge war die eigentliche Nachricht und stand nirgends: **1.329 Vorgaenge** — die
+    mit den meisten Unterlagen, ueber 800.000 Zeichen — verloren ihren Vergleichswert und
+    tragen die Kennzahl seither gar nicht. Sichtbar nur in einer Zeile Nachtlauf-Log.
+
+    Dieser Test prueft deshalb, was tatsaechlich schiefgehen kann: dass ein Band lautlos
+    verschwindet.
+    """
+    if not DATEI.exists():
+        return
+    d = json.loads(DATEI.read_text(encoding="utf-8"))
+    ordnung = [name for _, _, name in _modul().BAENDER]
+
+    laender = {k.split(":")[0] for k in list(d["baender"]) + list(d["verworfen"])}
+    for land in sorted(laender):
+        for name in ordnung:
+            schl = f"{land}:{name}"
+            assert schl in d["baender"] or schl in d["verworfen"], (
+                f"{schl} steht weder unter den tragenden noch unter den verworfenen Bändern. "
+                f"Ein Band, das aus beiden Listen faellt, nimmt die Vergleichswerte seiner "
+                f"Vorgaenge mit — ohne dass irgendetwas bricht.")
+
+    for schl, grund in d["verworfen"].items():
+        assert grund and len(grund) > 8, f"{schl} ist verworfen, ohne zu sagen warum"
+
+    # ⚠ Ein verworfenes Band KOSTET Vorgaenge ihren Vergleichswert. Steht die Zahl nicht
+    #   daneben, ist der Verlust wieder unsichtbar — genau der Zustand vom 17.09.
+    if d["verworfen"]:
+        assert d["ohne_vergleich"] > 0, (
+            f"{len(d['verworfen'])} Bänder sind verworfen, aber kein einziger Vorgang soll "
+            f"seinen Vergleichswert verloren haben. Eine der beiden Zahlen luegt.")
+
+
+def test_mehr_text_heisst_weniger_standardtext():
+    """Die inhaltliche Behauptung der Einteilung — und sie ueberlebt ein fehlendes Band.
+
+    ⚠ Eine Verhaeltnisschwelle tut das nicht: sie haengt daran, WELCHE Bänder gerade
+    tragen, und wird rot, sobald eines wegfaellt — mit einer Meldung ueber die falsche
+    Sache. Die Ordnung ist die eigentliche Aussage: je mehr Text ein Vorgang hat, desto
+    geringer der Anteil wiederholter Absätze. Gemessen am 2026-09-18 ueber DE:
+    klein 44 % · mittel 28 % · gross 9-15 %.
+    """
+    if not DATEI.exists():
+        return
+    d = json.loads(DATEI.read_text(encoding="utf-8"))
+    ordnung = [name for _, _, name in _modul().BAENDER]
+
+    je_land = {}
+    for schl, g in d["baender"].items():
+        land, name = schl.split(":", 1)
+        je_land.setdefault(land, []).append((ordnung.index(name), name, g["median"]))
+
+    geprueft = 0
+    for land, eintraege in sorted(je_land.items()):
+        if len(eintraege) < 2:
+            continue                       # ein einzelnes Band traegt keine Ordnung
+        eintraege.sort()
+        med = [m for _, _, m in eintraege]
+        assert med == sorted(med, reverse=True), (
+            f"{land}: der Standardtext-Anteil steigt mit der Textmenge statt zu fallen "
+            f"({', '.join(f'{n} {m} %' for _, n, m in eintraege)}). Dann misst die Kennzahl "
+            f"nicht mehr, was ihr Titel behauptet.")
+        assert med[0] >= 1.3 * med[-1], (
+            f"{land}: die Bänder liegen zu dicht beieinander "
+            f"({', '.join(f'{n} {m} %' for _, n, m in eintraege)}) — dann war die Einteilung "
+            f"umsonst und ein einziger Vergleichswert taete es auch.")
+        geprueft += 1
+    assert geprueft, "kein Land traegt zwei Bänder — die Einteilung vergleicht nichts mehr"

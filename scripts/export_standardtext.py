@@ -131,7 +131,7 @@ def main() -> int:
     con = duckdb.connect()
     leads: dict[str, int] = {}
     lage: dict[str, dict] = {}
-    verworfen: list[str] = []
+    verworfen: dict[str, str] = {}
     for land in _laender():
         T = f"read_parquet('{(ROOT / 'data' / 'docs' / land / 'doc_text.parquet').as_posix()}')"
         A = ROOT / "data" / "gold" / land / "doc_analysis.parquet"
@@ -153,7 +153,7 @@ def main() -> int:
                 leads[nid] = {"a": round(100 * v), "band": b}
         for r, werte in gruppen.items():
             if len(werte) < MIND_RAHMEN:
-                verworfen.append(f"{land}:{r}: nur {len(werte)} Vorgaenge")
+                verworfen[f"{land}:{r}"] = f"nur {len(werte)} Vorgaenge"
                 continue
             flach = [v for v, t in werte if 1 <= t <= FLACH]
             tief = [v for v, t in werte if t >= TIEF]
@@ -161,8 +161,8 @@ def main() -> int:
                 a, b2 = statistics.median(flach), statistics.median(tief)
                 drift = max(a, b2) / max(min(a, b2), 1e-9)
                 if drift > MAX_DRIFT:
-                    verworfen.append(f"{land}:{r}: Drift {drift:.2f}× "
-                                     f"({a:.0%} flach → {b2:.0%} tief) — misst die Lesetiefe")
+                    verworfen[f"{land}:{r}"] = (f"Drift {drift:.2f}× "
+                                                f"({a:.0%} flach → {b2:.0%} tief) — misst die Lesetiefe")
                     continue
             alle = sorted(v for v, _ in werte)
             lage[f"{land}:{r}"] = {"n": len(alle), "median": round(100 * statistics.median(alle)),
@@ -170,8 +170,8 @@ def main() -> int:
         print(f"  {land}: {len(anteil):,} Vorgaenge gemessen · {len(leads):,} mit genug Text · "
               f"{sum(1 for k in lage if k.startswith(land))} Bänder tragen einen Vergleich")
 
-    for zeile in verworfen:
-        print(f"     verworfen  {zeile}")
+    for schl, grund in verworfen.items():
+        print(f"     verworfen  {schl}: {grund}")
     if not leads:
         print("FEHLT: kein Volltext — erst `doc_text` bauen lassen.")
         return 1
@@ -182,9 +182,28 @@ def main() -> int:
             (v for k, v in lage.items() if k.endswith(":" + eintrag["band"])), None)
         if g:
             fertig[land_nid] = {"a": eintrag["a"], "median": g["median"], "hoch": g["hoch"]}
-    OUT.write_text(json.dumps({"leads": fertig, "baender": lage},
-                              ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
-    print(f"Standardtext → {OUT.name} ({OUT.stat().st_size / 1024:.0f} kB)")
+    # ⚠ DAS VERWORFENE GEHOERT INS AUSLIEFERGUT, NICHT NUR INS LOG. Am 2026-09-17 fiel
+    #   `DE:gross` aus der Driftpruefung (1,53×, tags darauf 1,62×). Folge: 1.329 Vorgaenge —
+    #   ausgerechnet die mit den MEISTEN Unterlagen, ueber 800k Zeichen — verloren ihren
+    #   Vergleichswert und tragen die Kennzahl seither gar nicht mehr. Sichtbar war das an
+    #   genau einer Stelle: einer Zeile im Nachtlauf-Log, die niemand liest.
+    #
+    #   Der Test darunter wurde rot, meldete aber „die Textmengen-Bänder trennen nicht mehr"
+    #   — richtig gemessen, falsch benannt. Die Baender trennen noch (44 % gegen 28 %); was
+    #   fehlte, war das dritte. Ein Waechter, der die Wirkung sieht und die Ursache nicht
+    #   nennt, kostet jedes Mal dieselbe halbe Stunde.
+    ohne = len(leads) - len(fertig)
+    # ⚠ ATOMAR SCHREIBEN. `write_text` auf eine Datei, die der laufende Server liest,
+    #   liefert dem Leser mit etwas Pech halbes JSON — und `ladeMitGrund` macht daraus eine
+    #   503, also eine Stoerungsmeldung fuer einen Vorgang, der voellig in Ordnung ist.
+    #   Das Zeitfenster ist klein und der Fehler danach nicht mehr nachstellbar.
+    _teil = OUT.with_suffix(".json.part")
+    _teil.write_text(json.dumps({"leads": fertig, "baender": lage,
+                                 "verworfen": verworfen, "ohne_vergleich": ohne},
+                                ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+    _teil.replace(OUT)
+    print(f"Standardtext → {OUT.name} ({OUT.stat().st_size / 1024:.0f} kB)"
+          + (f" · {ohne:,} Vorgaenge ohne Vergleichswert" if ohne else ""))
     return 0
 
 
