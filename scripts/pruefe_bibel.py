@@ -602,6 +602,37 @@ def stand_uebersicht() -> None:
         print(f"  {datei.name:38} {d.isoformat():12} {(heute - d).days} Tage")
 
 
+# ── Pruefung 5: Fallen-Nummern ──────────────────────────────────────────────
+# Der Fallenkatalog wird nur ANGEHAENGT, und wer anhaengt, sieht sich die hoechste Nummer
+# seines Abschnitts an — oder glaubt sie zu sehen.
+#
+# ⚠ GEMESSEN AM 2026-09-18: `B6` und `G13` gab es je zweimal. Das erste Paar lag da, ohne
+# dass es jemandem aufgefallen waere; das zweite habe ich selbst erzeugt, weil ich die
+# G-Reihe bis G12 durchgesehen und den Rest angenommen hatte — sie geht bis G32.
+#
+# Eine doppelte Nummer bricht nichts, sie macht nur jeden Verweis mehrdeutig. Und der
+# Katalog LEBT von Verweisen: im Quelltext stehen an Dutzenden Stellen Saetze wie
+# „Fallenkatalog G8" oder „(F13)". Zeigt so ein Verweis auf zwei Eintraege, liest der
+# Naechste die falsche Falle und haelt seinen Fehler fuer einen anderen.
+def pruefung_fallennummern(zeige_offen: bool = False) -> list[str]:
+    import collections
+    datei = KAPITEL / "12-fallenkatalog.md"
+    if not datei.exists():
+        return ["docs/laender/12-fallenkatalog.md fehlt"]
+    ids = re.findall(r"^\| ([A-H]\d+) \|", datei.read_text(encoding="utf-8"), re.M)
+    fehler = [f"Fallennummer {k!r} ist {n}-mal vergeben — jeder Verweis darauf ist mehrdeutig"
+              for k, n in sorted(collections.Counter(ids).items()) if n > 1]
+    if zeige_offen:
+        proz = collections.defaultdict(list)
+        for i in ids:
+            proz[i[0]].append(int(i[1:]))
+        for b in sorted(proz):
+            luecken = [x for x in range(1, max(proz[b]) + 1) if x not in proz[b]]
+            print(f"    {b}: {len(proz[b])} Eintraege, hoechste {max(proz[b])}"
+                  + (f", Luecken {luecken}" if luecken else ""))
+    return fehler
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--offen", action="store_true")
@@ -615,7 +646,8 @@ def main() -> int:
     for name, fn in (("1: Datierung (Zahl ohne Datum)", pruefung_datierung),
                      ("2: Behauptungen gegen die Live-Daten", pruefung_behauptungen),
                      ("3: Doppelpflege mit CLAUDE.md", pruefung_doppelpflege),
-                     ("4: Nachlauf (Code bewegt, Kapitel still)", pruefung_nachlauf)):
+                     ("4: Nachlauf (Code bewegt, Kapitel still)", pruefung_nachlauf),
+                     ("5: Fallen-Nummern (doppelt vergeben?)", pruefung_fallennummern)):
         print(f"── Pruefung {name} ──")
         f = fn(a.offen)
         alles += f
