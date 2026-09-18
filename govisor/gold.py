@@ -3181,7 +3181,19 @@ def _redundante_zweitquelle_sql(cfg: Config, country: str, spalte: str = "n.noti
               LEFT JOIN (SELECT notice_id, max(wert) w FROM {ANR}
                          WHERE feld='submission_deadline_verlaengert' GROUP BY 1) v
                      ON v.notice_id = d.master_id
-              WHERE d.beleg = 'kaeufer_und_titel'
+              -- ⚠ DIE STUFEN EINZELN NENNEN, nie per Praefix. `kaeufer_und_titel`
+              -- beginnt gleich wie `kaeufer_und_titel_ohne_datum`, und ein LIKE wuerde
+              -- die ungepruefte Stufe stillschweigend wieder einschliessen. Ein Test
+              -- verbietet LIKE an dieser Stelle ausdruecklich.
+              --
+              -- `gleiche_quelle_wiederholt` seit 2026-09-18: dieselbe Quelle
+              -- veroeffentlicht denselben Vorgang mehrfach (eForms/TED-Korrekturen).
+              -- Die Stufe verlangt vier Belege auf einmal — identische Wortmenge,
+              -- gleicher Kaeufer, gleiche Frist, gleiche CPV-Menge — plus einen
+              -- Gruppendeckel gegen Serien. Gemessen: 17.173 Paare, davon 9 aus der
+              -- 219er-Serie „Rabattvereinbarungen nach §130a"; auf die heutige Liste
+              -- wirken 527 Paare. Details im Kopf von `dedupe._wiederholung`.
+              WHERE d.beleg IN ('kaeufer_und_titel', 'gleiche_quelle_wiederholt')
                 -- ⚠ EIN EINZIGES NULL WUERDE DIESE BEDINGUNG TOETEN — und zwar in die
                 -- teure Richtung. `x NOT IN (…, NULL)` ist fuer JEDES x niemals wahr
                 -- (x <> NULL ergibt UNKNOWN), also faellt nicht die Dublette raus,

@@ -370,6 +370,58 @@ def _in_zeitscheiben(saetze: list[dict]) -> list[dict]:
     return list(zusammen.values())
 
 
+# Wie oft darf derselbe Titel beim selben Kaeufer in derselben Quelle vorkommen, damit es
+# noch eine WIEDERHOLUNG und keine SERIE ist? Gemessen (s. `_wiederholung`): bei Deckel 3
+# bleiben von 6.630 Paaren der 219er-Serie „Rabattvereinbarungen nach §130a" genau 3 uebrig.
+SERIEN_DECKEL = 3
+
+
+def _wiederholung(s: dict, t: dict, gruppe: dict) -> bool:
+    """Sind das zwei Veroeffentlichungen DESSELBEN Vorgangs in DERSELBEN Quelle?
+
+    ⚠ WARUM ES DIESE FRAGE UEBERHAUPT GIBT. `_paare_finden` uebersprang Paare gleicher
+    Quelle mit der Begruendung „dieselbe Quelle dedupliziert sich selbst schon". Gemessen
+    am 2026-09-17 ueber die DE-Ausschreibungen ab 2025: 77.341 Paare tragen identischen
+    Titel, identischen Kaeufer, dieselbe Stufe und liegen binnen 90 Tagen — aus DERSELBEN
+    Quelle. Bei 8.797 davon stehen BEIDE Saetze in der ausgelieferten Liste, der Nutzer
+    sieht sie also doppelt. Die Annahme stimmt nicht; eForms und TED veroeffentlichen
+    Korrekturen als eigene Bekanntmachung.
+
+    Gemeldet als „nun sehe ich direkt auf der startseite 4mal den gleichen lead".
+
+    ⚠ DIE SCHWIERIGKEIT IST DIE SERIE. Derselbe Titel beim selben Kaeufer heisst nicht
+    immer dieselbe Vergabe: „Abschluss nicht-exklusiver Rabattvereinbarungen nach §130a"
+    steht 219-mal bei einer Krankenkasse — ein Open-House-Verfahren je Praeparat. Ebenso
+    „Erweiterung und Sanierung Klinikum Altmuehlfranken" 53-mal, einmal je Gewerk. Diese
+    zusammenzufassen hiesse, echte Vergaben zu loeschen.
+
+    Vier Bedingungen zusammen trennen das, jede einzeln gemessen:
+
+        identische WORTMENGE   nicht Enthaltung — „… Los VM 004" ist ein Los, keine Kopie
+        gleicher Kaeufer       ueber die Normalform, wie ueberall hier
+        gleiche FRIST          eine Wiederholung erbt sie; eine Serie hat eigene
+        gleiche CPV-Menge      dito
+        Gruppe <= SERIEN_DECKEL  eine Wiederholung passiert zwei-, dreimal; eine Serie oft
+
+    Wirkung des Deckels, gemessen ueber dieselbe Menge:
+
+        ohne Deckel   20.271 Paare, davon 6.630 aus der Rabatt-Serie
+        Deckel 3       7.679 Paare, davon     3 aus der Rabatt-Serie
+
+    Stichprobe von 9 Paaren unter der Regel, einzeln geprueft: 9 echte Wiederholungen
+    (gleiche Frist, 1 bis 29 Tage Abstand, Titel identisch bis zur Losnummer).
+    """
+    if s["w"] != t["w"]:
+        return False                      # Enthaltung genuegt hier NICHT
+    if not s["buyer"] or s["buyer"] != t["buyer"]:
+        return False
+    if not (s["frist"] and t["frist"] and s["frist"] == t["frist"]):
+        return False
+    if not (s["cpv"] and t["cpv"] and s["cpv"] == t["cpv"]):
+        return False
+    return gruppe.get((s["w"], s["buyer"], s["gen"]), 0) <= SERIEN_DECKEL
+
+
 def _paare_finden(saetze: list[dict], haeufigkeit: dict | None = None) -> list[dict]:
     """Der eigentliche Abgleich über eine (Teil-)Menge von Sätzen.
 
@@ -383,6 +435,13 @@ def _paare_finden(saetze: list[dict], haeufigkeit: dict | None = None) -> list[d
     for i, s in enumerate(saetze):
         for w in s["w"]:
             inv[w].append(i)
+
+    # Wie gross ist die Gruppe „gleicher Titel, gleicher Kaeufer, gleiche Quelle"? Das
+    # trennt Wiederholung von Serie (s. `_wiederholung`). Einmal je Lauf, nicht je Paar.
+    gruppe: dict[tuple, int] = defaultdict(int)
+    for s in saetze:
+        if s["buyer"]:
+            gruppe[(s["w"], s["buyer"], s["gen"])] += 1
 
     _df = (lambda w: haeufigkeit.get(w, 0)) if haeufigkeit else (lambda w: len(inv[w]))
 
@@ -419,8 +478,15 @@ def _paare_finden(saetze: list[dict], haeufigkeit: dict | None = None) -> list[d
                 continue
             gesehen.add(schluessel)
             t = saetze[j]
-            if s["gen"] == t["gen"]:
-                continue                  # dieselbe Quelle dedupliziert sich selbst schon
+            # ⚠ HIER STAND `continue` MIT DER BEGRUENDUNG „dieselbe Quelle dedupliziert
+            # sich selbst schon". Gemessen stimmt das nicht: 8.797 Paare gleicher Quelle
+            # stehen BEIDE in der ausgelieferten Liste. eForms und TED veroeffentlichen
+            # Korrekturen als eigene Bekanntmachung. Details und Messwerte stehen im Kopf
+            # von `_wiederholung` — die Ausnahme ist eng und verlangt vier Belege auf
+            # einmal.
+            gleiche_quelle = s["gen"] == t["gen"]
+            if gleiche_quelle and not _wiederholung(s, t, gruppe):
+                continue
             # STUFEN-SPERRE. Eine Vorinformation und die Bekanntmachung derselben Vergabe
             # tragen denselben Titel und denselben Kaeufer — sie sind aber zwei SCHRITTE
             # eines Verfahrens, keine Dublette. Gemessen 2026-08-13 vor dieser Sperre:
@@ -504,12 +570,29 @@ def _paare_finden(saetze: list[dict], haeufigkeit: dict | None = None) -> list[d
             # dagegen ist genau der Fall, den die 90 Tage abfangen sollen: dieselbe
             # Baustelle, anderes Los, Jahre spaeter. Die Stufe trifft deshalb nur sie.
             ohne_datum = not (s["d"] and t["d"]) and s["w"] != t["w"]
-            beleg = ("geschwister" if geschwister
+            # Eigene Stufe, damit die Wirkung sichtbar und umkehrbar bleibt: der Ausschluss
+            # in `gold.py` nennt die Stufen einzeln.
+            beleg = ("gleiche_quelle_wiederholt" if gleiche_quelle
+                     else "geschwister" if geschwister
                      else ("kaeufer_und_titel_ohne_datum" if ohne_datum
                            else "kaeufer_und_titel") if gleicher_kaeufer
                      else "nur_titel_kurz" if kurz else "nur_titel")
-            # Master = reichere Quelle. Bei Gleichstand der frühere Satz.
-            a, b = (s, t) if QUELLEN_RANG.get(s["gen"], 9) <= QUELLEN_RANG.get(t["gen"], 9) else (t, s)
+            # Master = reichere Quelle.
+            #
+            # ⚠ BEI GLEICHSTAND ENTSCHIED DIE ITERATIONSREIHENFOLGE. Der Kommentar sagte
+            # „bei Gleichstand der fruehere Satz", der Code nahm aber einfach `s` — und
+            # welcher Satz das ist, haengt an der Reihenfolge der Kandidatenmenge. Solange
+            # nur Paare VERSCHIEDENER Quellen entstanden, fiel das kaum auf; seit es
+            # Wiederholungen derselben Quelle gibt (`gleiche_quelle_wiederholt`), ist
+            # Gleichstand der Normalfall. Ein Abgleich, dessen Ergebnis zwischen zwei
+            # Laeufen schwankt, laesst sich weder pruefen noch reproduzieren — denselben
+            # Satz traegt die Seed-Sortierung 150 Zeilen weiter oben.
+            #
+            # Jetzt entscheidet bei Gleichstand das Datum (der frueheste Satz ist die
+            # urspruengliche Bekanntmachung), bei gleichem Datum die Kennung.
+            def _rang(x):
+                return (QUELLEN_RANG.get(x["gen"], 9), x["d"] or dt.date.max, str(x["id"]))
+            a, b = (s, t) if _rang(s) <= _rang(t) else (t, s)
             paare.append({
                 "master_id": a["id"], "duplicate_id": b["id"],
                 "master_quelle": a["gen"], "duplicate_quelle": b["gen"],

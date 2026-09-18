@@ -2251,7 +2251,16 @@ def test_zweitquellen_ausschluss_prueft_den_master():
     src = (Path(__file__).resolve().parent.parent / "govisor" / "gold.py").read_text(
         encoding="utf-8")
     b = src.split("def _redundante_zweitquelle_sql")[1].split("\ndef ")[0]
-    assert "d.beleg = 'kaeufer_und_titel'" in b
+    # ⚠ DIE BELEGSTUFEN WERDEN EINZELN AUFGEZAEHLT, nie per Praefix gefangen. Bis zum
+    # 2026-09-17 stand hier `d.beleg = 'kaeufer_und_titel'`; seither gibt es zwei weitere
+    # Stufen, deren Namen damit BEGINNEN — `kaeufer_und_titel_ohne_datum` (Paare, die die
+    # 90-Tage-Regel nie bestanden haben) darf ausdruecklich NICHT ausschliessen. Ein LIKE
+    # oder `starts_with` an dieser Stelle wuerde sie stillschweigend wieder einschliessen.
+    assert "'kaeufer_und_titel'" in b, "die belastbare Stufe schliesst nicht mehr aus"
+    assert "'kaeufer_und_titel_ohne_datum'" not in b, (
+        "der Ausschluss nimmt wieder Paare, die nie auf den 90-Tage-Abstand geprueft wurden")
+    for lasch in ("beleg LIKE", "starts_with(d.beleg", "beleg ILIKE"):
+        assert lasch not in b, f"`{lasch}` faengt auch die ungepruefte Stufe"
     # Der Stichtag ist parametrisiert: er MUSS derselbe sein wie die Lead-Zugehoerigkeit,
     # sonst laufen Ausschluss und Zugehoerigkeit bei einem `--as-of` auseinander und die
     # Vergabe verschwindet ganz. `current_date` bleibt nur die Rueckfallebene ohne Stichtag.

@@ -101,8 +101,11 @@ def test_der_ausschluss_nimmt_nur_geprueft_belegte_paare():
     code = _quelle(GOLD)
     i = code.index("notice_duplicates.parquet")
     block = code[i:i + 3000]
-    assert "d.beleg = 'kaeufer_und_titel'" in block, (
+    assert "'kaeufer_und_titel'" in block, (
         "der Ausschluss filtert nicht mehr auf die belastbare Belegstufe")
+    # ⚠ Die ungepruefte Stufe darf NICHT dabei sein.
+    assert "'kaeufer_und_titel_ohne_datum'" not in block, (
+        "der Ausschluss nimmt wieder Paare, die nie auf den 90-Tage-Abstand geprueft wurden")
     for lasch in ("beleg LIKE 'kaeufer_und_titel", "starts_with(d.beleg", "d.beleg ILIKE"):
         assert lasch not in block, (
             f"`{lasch}` faengt auch `kaeufer_und_titel_ohne_datum` — die ungeprueften "
