@@ -1841,10 +1841,27 @@ tr.wf-verworfen .ttitel{color:var(--ink-400);text-decoration:line-through;text-d
 .lb-k{font-size:11px;color:var(--ink-400)}
 .lb-sec{margin-bottom:18px}
 .lb-sec h4{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-400);margin-bottom:7px}
+/* ── KEIN RAHMEN UM DIE ZEILEN ──────────────────────────────────────────────────
+   ⚠ Sven am 2026-09-18 vor dem Ueberblick: „balken mit balken mit balken". Buchstaeblich:
+   bis zu 20 gerahmte `lb-row` plus 3 gerahmte `lb-kachel`, in vier Spalten, unter einer
+   Tabelle, die selbst aus gerahmten Zeilen besteht. Dreimal dieselbe Behandlung ineinander,
+   und der Rand trug nichts bei — die Zeilen stehen ohnehin untereinander.
+
+   Der Rahmen bleibt dort, wo er etwas BEDEUTET: an den drei Kacheln unter „Was euch
+   bremst". Das sind Handlungsaufforderungen, keine Aufzaehlung.
+
+   ⚠ DER RAND WAR DAS EINZIGE SIGNAL, DASS DIESE ZEILEN ANKLICKBAR SIND (sie oeffnen den
+   Lead). Ihn ersatzlos zu streichen haette Unruhe gegen eine unsichtbare Funktion
+   getauscht. Deshalb traegt der Titel beim Ueberfahren die Signalfarbe, und das
+   Hintergrundband reicht ueber die Spaltenbreite hinaus (`margin` gegen `padding`), damit
+   es als Zeile lesbar ist und nicht als Kasten um den Text. */
 .lb-row{display:flex;align-items:baseline;justify-content:space-between;gap:12px;width:100%;text-align:left;
-  padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:var(--surface);cursor:pointer;
-  font:inherit;margin-bottom:6px;transition:.15s}
-.lb-row:hover{border-color:var(--signal);background:var(--surface-2)}
+  padding:7px 8px;margin:0 -8px;border:0;border-radius:6px;background:none;cursor:pointer;
+  font:inherit;transition:.15s}
+.lb-row:hover{background:var(--surface-2)}
+.lb-row:hover .lb-row-t{color:var(--signal)}
+/* Tastaturbedienung sichtbar lassen — ohne Rand ist der Fokus sonst voellig unsichtbar. */
+.lb-row:focus-visible{outline:2px solid var(--signal);outline-offset:1px}
 .lb-row-t{font-size:13px;color:var(--ink-900);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .lb-row-s{font-size:11.5px;color:var(--ink-400);white-space:nowrap;flex:none}
 .lb-empty{font-size:13px;color:var(--ink-500);line-height:1.55;max-width:52ch}
