@@ -31,11 +31,17 @@ def _satz(**kw):
     return basis
 
 
-def test_die_vier_belege_muessen_alle_zutreffen():
+def test_die_belege_muessen_alle_zutreffen():
     """Jede einzelne Bedingung ist notwendig — fehlt eine, ist es keine Wiederholung.
 
     ⚠ Die Wortmenge muss IDENTISCH sein, Enthaltung genuegt nicht: „… Los VM 004 -
     Abbrucharbeiten" gegen „Erweiterung Stadtbad Plauen" ist ein Los, keine Kopie.
+
+    ⚠ DIE FRIST DARF SICH UNTERSCHEIDEN. Eine erste Fassung verlangte dieselbe Frist und
+    schloss damit genau den Fall aus, um den es geht: eine Berichtigung erscheint, WEIL
+    sich etwas geaendert hat, und das Haeufigste ist die Frist. Beide Faelle, die diese
+    Arbeit ausgeloest haben (AT „SONNENKRAFTWERK NOE", CH „Pont Sous-Terre"), fielen
+    daran durch. Wer die Bedingung wieder einbaut, macht die Behebung rueckgaengig.
     """
     a = _satz(id="1")
     gruppe = {(a["w"], a["buyer"], a["gen"]): 2}
@@ -44,15 +50,41 @@ def test_die_vier_belege_muessen_alle_zutreffen():
     faelle = {
         "andere Wortmenge (Enthaltung)": _satz(id="2", w=a["w"] | {"los"}),
         "anderer Kaeufer": _satz(id="2", buyer="stadt woanders"),
-        "andere Frist": _satz(id="2", frist="2026-10-01"),
         "andere CPV": _satz(id="2", cpv="45320000"),
-        "Frist fehlt": _satz(id="2", frist=None),
         "CPV fehlt": _satz(id="2", cpv=None),
     }
     for name, b in faelle.items():
         g = {(a["w"], a["buyer"], a["gen"]): 2, (b["w"], b["buyer"], b["gen"]): 2}
         assert not dedupe._wiederholung(a, b, g), (
             f"{name!r} wird faelschlich als Wiederholung gewertet")
+
+    # ⚠ UND DAS MUSS WEITER GREIFEN: geaenderte Frist ist der Normalfall, nicht der
+    #    Ausschlussgrund. Genau hier lagen die beiden gemeldeten Faelle.
+    verlaengert = _satz(id="2", frist="2026-10-01")
+    g = {(a["w"], a["buyer"], a["gen"]): 2}
+    assert dedupe._wiederholung(a, verlaengert, g), (
+        "eine Fristverlaengerung wird nicht als Wiederholung erkannt. Genau daran sind "
+        "SONNENKRAFTWERK NOE (10.09. auf 22.09.) und Pont Sous-Terre (30.09. auf 21.10.) "
+        "durchgefallen")
+
+
+def test_bei_wiederholung_gewinnt_die_juengere_bekanntmachung():
+    """Sonst traegt der Master die Frist von VOR der Berichtigung.
+
+    ⚠ Eine falsche Frist kostet das Angebot, eine doppelte Zeile einen Blick. Ausserdem
+    schliesst `gold.py` nur aus, solange der MASTER noch laeuft — mit dem abgelaufenen
+    Satz als Master bliebe die Dublette ohnehin stehen.
+
+    Gemessen ueber 14.327 Paare mit geaenderter Frist: in 99,0 % traegt die spaetere
+    Bekanntmachung die spaetere Frist. Die Vermutung ist damit belegt, nicht geraten.
+    """
+    quelle = (WURZEL / "govisor" / "dedupe.py").read_text(encoding="utf-8")
+    i = quelle.index("if gleiche_quelle:")
+    block = quelle[i:quelle.index("else:", i)]
+    assert ">=" in block and 'x["d"]' not in block, (
+        "die Master-Wahl bei gleicher Quelle richtet sich nicht mehr nach dem spaeteren Datum")
+    assert 'dt.date.min' in block, (
+        "ein Satz ohne Datum wuerde sonst zum Master und traegt gar keine Frist")
 
 
 def test_serien_werden_nicht_zusammengefasst():

@@ -1,6 +1,6 @@
 # Erstaufruf: 12 Sekunden — und der Grund ist ein anderer als gedacht
 
-## Teil (a): Ladezustand — ERLEDIGT am 2026-09-17
+## Teil (a): Ladezustand — ERLEDIGT 2026-09-17, VERVOLLSTAENDIGT 2026-09-18
 
 Nach der Anmeldung stand „0 von 0" auf dem Schirm, darunter „Keine Leads mit diesen
 Filtern. Passe die Filter an oder wechsle den Grundraum." Beides sind Aussagen ueber die
@@ -11,7 +11,23 @@ Der Zustand `loading` existierte bereits in `ExplorerShell.tsx` und wurde von NI
 gelesen — gesetzt, gepflegt, nie benutzt. Vierter Fall „gebaut, nicht verdrahtet" an
 diesem Tag.
 
-Jetzt gibt es den dritten Zustand neben „leer" und „gefuellt".
+⚠ **Die erste Fassung hatte nur ZWEI der vier Zustaende.** Der Auftrag verlangte drei
+(*laedt*, *leer*, *gefiltert-leer*), und Falle 1 verlangte einen vierten: scheitert der
+Abruf, muss die Anzeige das sagen — `ladeMitGrund` liefert dafuer `DATEN_STOERUNG`.
+
+Genau das fehlte. Der Fehlerzweig setzte `setLoading(false)`, und die Liste sagte wieder
+„Keine Leads mit diesen Filtern“: derselbe Fehler, eine Ursache weiter. Dazu kam, dass
+`r.json()` auch auf eine 503-Antwort angewandt wurde; `Array.isArray` war dann falsch, und
+uebrig blieb eine leere Liste ohne Begruendung.
+
+Jetzt vier Zustaende, in dieser Reihenfolge — eine Stoerung WAEHREND des Ladens ist eine
+Stoerung, keine Ladeanzeige, die nie endet:
+
+    stoerung    Die Ausschreibungen konnten nicht geladen werden.
+                Das liegt an uns, nicht an euren Filtern.
+    laedt       Ausschreibungen werden geladen.
+    gefiltert   Keine Leads mit diesen Filtern.  (nur wenn welche gesetzt sind)
+    leer        In diesem Grundraum ist gerade nichts offen.
 
 ## Teil (b): Die Nutzlast — DIE ANNAHME WAR FALSCH
 
@@ -75,6 +91,41 @@ das Ergebnis unter (ETag + Verfahren) ab. Verdrahtet in `/api/leads`, `/api/plz-
 Der Waechter prueft nicht die Kopfzeile, sondern ENTPACKT und vergleicht Byte fuer Byte
 gegen die unkomprimierte Fassung — eine gesetzte Kopfzeile ohne passenden Rumpf zeigt der
 Browser als kaputte Seite, nicht als Fehler.
+
+### Die Feldliste: was nach der Komprimierung wirklich kostet
+
+⚠ **Der Auftrag rechnet in ROHEN Bytes, und das kehrt die Reihenfolge um.** Gemessen an
+`leads-bau.json` (41,9 MB roh → 3,68 MB brotli), je Feld einzeln weggelassen:
+
+    Feld            roh gespart   brotli gespart   Anteil an der Uebertragung
+    beschreibung        6,2 MB         1,58 MB        42,9 %   <- der eigentliche Posten
+    incumbent           2,0 MB         0,25 MB         6,7 %
+    lose                2,1 MB         0,23 MB         6,4 %
+    unterlagen          2,6 MB         0,23 MB         6,2 %
+    cpvLabel*           2,2 MB         0,10 MB         2,7 %
+    anf                 4,3 MB         0,09 MB         2,4 %
+
+**`anf` ist entschieden: es bleibt.** Der Auftrag nennt es die eine echte Entscheidung mit
+5 MB — auf der Leitung sind es 90 kB. Die Struktur ist hochgradig wiederholt und
+komprimiert sich weg. Der Nutzer verliert nichts, weil nichts zu gewinnen ist; die
+erklaerbare Passung (`matchLead.teile`) bleibt unangetastet.
+
+**Die CPV-Labels bleiben ebenfalls, obwohl sie 17-fach redundant sind.** 3.051
+verschiedene CPV-Codes tragen die Labels von 42.813 Leads; als Tabelle waeren es 298 kB
+statt 4,3 MB. Nach Brotli sind es netto **139 kB** — fuer eine neue Route, einen zweiten
+Abruf, einen Wettlauf beim ersten Rendern und eine Override-Mechanik (der Export faellt
+auf `buyer_activity` zurueck, das Label ist also nicht garantiert CPV-rein; heute weicht
+bei 42.813 Leads keiner ab, morgen vielleicht doch). Der Tausch lohnt nicht.
+
+**Der einzige Posten, der traegt, ist `beschreibung`** — 42,9 % der Uebertragung, weil
+Prosa je Lead einzigartig ist und sich nicht wegkomprimieren laesst. ⚠ Aber der Auftrag
+nennt es „nur im Detail-Panel“, und das stimmt nicht: die VOLLTEXTSUCHE laeuft darueber
+(`leadText` in `explorerCore.js`). Wer es weglaesst, nimmt der Liste die Suche.
+
+Das ist die offene Frage, und sie ist eine Produktfrage: eine gekuerzte Fassung fuer die
+Suche mitschicken (etwa die ersten 400 Zeichen) und den Rest dem Detail ueberlassen? Dann
+findet die Suche weniger. Oder die Suche serverseitig? Dann kostet jeder Tastendruck eine
+Anfrage. Beides ist zu messen, bevor es gebaut wird.
 
 ### Der Weg zur Anmeldung, der das ueberhaupt erst pruefbar machte
 

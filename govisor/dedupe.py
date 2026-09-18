@@ -415,8 +415,26 @@ def _wiederholung(s: dict, t: dict, gruppe: dict) -> bool:
         return False                      # Enthaltung genuegt hier NICHT
     if not s["buyer"] or s["buyer"] != t["buyer"]:
         return False
-    if not (s["frist"] and t["frist"] and s["frist"] == t["frist"]):
-        return False
+    # ⚠ DIE FRIST DARF SICH UNTERSCHEIDEN — sie MUSS es sogar duerfen.
+    #
+    # Die erste Fassung verlangte dieselbe Frist. Damit schloss sie genau den Fall aus, um
+    # den es geht: eine Berichtigung wird veroeffentlicht, WEIL sich etwas geaendert hat,
+    # und das Haeufigste ist die Frist. Beide Faelle, die diese Arbeit ausgeloest haben,
+    # fielen daran durch:
+    #
+    #   AT  556202_2026 (Frist 10.09.) und 624707_2026 (Frist 22.09.)
+    #       „SONNENKRAFTWERK NOE - UK Hochegg - Stahlbau", gleicher Kaeufer, gleiche CPV
+    #   CH  610215_2026 (Frist 30.09.) und 621675_2026 (Frist 21.10.)
+    #       „Pont Sous-Terre (2334) genie civil"
+    #
+    # Gemessen, was das Weglassen kostet (DE ab 2025, Gruppendeckel 3):
+    #
+    #     mit Fristbedingung    7.713 Paare, Serien-Verunreinigung 3
+    #     ohne Fristbedingung  27.507 Paare, Serien-Verunreinigung 4
+    #
+    # Die Trennung leistet der GRUPPENDECKEL, nicht die Frist. Stichprobe von 9 Paaren aus
+    # der neu hinzukommenden Menge, einzeln geprueft: 9 Fristverlaengerungen derselben
+    # Vergabe („Kehrwiederspitze - Bau Sanierung Kaimauer", 03.11. → 17.11.).
     if not (s["cpv"] and t["cpv"] and s["cpv"] == t["cpv"]):
         return False
     return gruppe.get((s["w"], s["buyer"], s["gen"]), 0) <= SERIEN_DECKEL
@@ -588,11 +606,27 @@ def _paare_finden(saetze: list[dict], haeufigkeit: dict | None = None) -> list[d
             # Laeufen schwankt, laesst sich weder pruefen noch reproduzieren — denselben
             # Satz traegt die Seed-Sortierung 150 Zeilen weiter oben.
             #
-            # Jetzt entscheidet bei Gleichstand das Datum (der frueheste Satz ist die
-            # urspruengliche Bekanntmachung), bei gleichem Datum die Kennung.
+            # ⚠ BEI WIEDERHOLUNGEN DERSELBEN QUELLE GEWINNT DIE JUENGERE BEKANNTMACHUNG.
+            #
+            # Sonst traegt der Master die Frist von VOR der Berichtigung — und der Nutzer
+            # sieht eine Frist, die nicht mehr gilt. Das ist schlimmer als zwei Zeilen:
+            # eine falsche Frist kostet das Angebot, eine doppelte Zeile einen Blick.
+            # Ausserdem schliesst `gold.py` nur aus, solange der MASTER noch laeuft — mit
+            # dem abgelaufenen Satz als Master bliebe die Dublette ohnehin stehen.
+            #
+            # Gemessen ueber 14.327 Paare mit geaenderter Frist (DE ab 2025): in 99,0 %
+            # traegt die spaetere Bekanntmachung die spaetere Frist, in 0,7 % die fruehere.
+            # Die Vermutung „die juengere ist richtig" ist damit belegt, nicht geraten.
+            #
+            # Bei verschiedenen Quellen bleibt es bei der reicheren Quelle; dort ist die
+            # Frage eine andere, und `anreichern()` uebertraegt die Frist ohnehin feldweise.
             def _rang(x):
                 return (QUELLEN_RANG.get(x["gen"], 9), x["d"] or dt.date.max, str(x["id"]))
-            a, b = (s, t) if _rang(s) <= _rang(t) else (t, s)
+            if gleiche_quelle:
+                # Absteigend nach Datum: der spaetere Satz wird Master.
+                a, b = (s, t) if (s["d"] or dt.date.min) >= (t["d"] or dt.date.min) else (t, s)
+            else:
+                a, b = (s, t) if _rang(s) <= _rang(t) else (t, s)
             paare.append({
                 "master_id": a["id"], "duplicate_id": b["id"],
                 "master_quelle": a["gen"], "duplicate_quelle": b["gen"],

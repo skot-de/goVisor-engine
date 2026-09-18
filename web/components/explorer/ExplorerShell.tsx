@@ -199,6 +199,14 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
   /* Ausgewertete Vergabeunterlagen je Kennung. `null` = noch nicht geladen ODER Ausfall —
    * die Liste darf dann KEINE Marke „nicht ausgewertet" zeigen, denn das waere eine
    * Aussage ueber die Daten, wo in Wahrheit die Auskunft fehlt. */
+  /* Der Abruf ist GESCHEITERT — zu unterscheiden von „nichts gefunden".
+   *
+   * ⚠ A16 im Fallenkatalog, und `lib/ladegrund.js` hat die Unterscheidung serverseitig
+   * seit dem 2026-09-04: „gibt es nicht" gegen „komme nicht dran". An dieser Stelle war
+   * sie nie angeschlossen — der Fehlerzweig setzte `loading = false`, und die Liste sagte
+   * „Keine Leads mit diesen Filtern". Aus einem Ausfall wurde eine Auskunft, samt
+   * Handlungsvorschlag an den Falschen. */
+  const [stoerung, setStoerung] = useState(false);
   const [analyse, setAnalyse] = useState<Record<string, { ampel: string | null; pruef: number; ko: number; dok: number }> | null>(null);
 
   const [userEmail, setUserEmail] = useState<string | null>(null);
@@ -293,12 +301,18 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
   useEffect(() => {
     let cancelled = false;
     setLoading(true);
+    setStoerung(false);
     detailLoaded.current.clear();
     fetch(`/api/leads?branche=${aktiveBranche}`)
-      .then((r) => r.json())
+      // ⚠ DER STATUS ZAEHLT, NICHT NUR DER RUMPF. Die Route antwortet bei fehlenden Daten
+      // mit 503 (s. `/api/leads`, „keine Daten — export_web_leads.py laufen lassen");
+      // `r.json()` machte daraus ein Objekt, `Array.isArray` war falsch, und uebrig blieb
+      // eine leere Liste ohne Begruendung.
+      .then((r) => (r.ok ? r.json() : Promise.reject(new Error(`HTTP ${r.status}`))))
       .then((data) => {
         if (cancelled) return;
         if (Array.isArray(data)) { setLeads(data); setActiveId(null); }
+        else throw new Error("keine Liste");
         setLoading(false);
         bump();
         const dl = deepRef.current;
@@ -323,7 +337,14 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
           }
         }
       })
-      .catch(() => { if (!cancelled) setLoading(false); });
+      .catch(() => {
+        // ⚠ NICHT NUR `setLoading(false)`. Genau das stand hier, und danach zeigte die
+        // Liste „Keine Leads mit diesen Filtern" — eine Aussage ueber die Daten, wo in
+        // Wahrheit die Auskunft fehlt, samt Rat an den Falschen.
+        if (cancelled) return;
+        setLoading(false);
+        setStoerung(true);
+      });
     return () => { cancelled = true; };
   }, [aktiveBranche, bump]);
 
@@ -1471,7 +1492,9 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
 
                   Der Nenner steht auf DERSELBEN Grundmenge wie die Anzeige — in der
                   Zuschlags-Sicht sind das die Zuschläge, sonst die offenen. */}
-              {loading
+              {stoerung
+                ? <span className="tcount-stoer">{t("nicht geladen")}</span>
+                : loading
                 ? <span className="tcount-laedt">{t("lädt")}</span>
                 : <><b>{rows.length}</b> {t("von")} <span>{zuschlagsSicht ? alleRows.length : alleRows.filter((l) => l.src !== "award").length}</span></>}
             </span>
@@ -1606,6 +1629,10 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
                 rows={rows}
                 limit={renderCount}
                 laedt={loading}
+                stoerung={stoerung}
+                // „mit diesen Filtern" nur sagen, wenn es welche gibt — sonst ist der Rat
+                // falsch adressiert. Suchworte zaehlen mit: sie beschneiden genauso.
+                gefiltert={advCount(adv) > 0 || tokens.length > 0}
                 // Die Vorauswahl steht am ENDE der Liste: dort kommt man beim Lesen an, und
                 // dort ist die Frage „ist das alles?" tatsächlich aktuell. Als Banner darüber
                 // wurde sie weggeklickt, bevor man einen Lead gesehen hatte. Stilles Filtern

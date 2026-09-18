@@ -25,6 +25,8 @@ export function LeadTable({
   rows,
   limit,
   laedt,
+  stoerung,
+  gefiltert,
   fuss,
   abschnitte,
   sortKey,
@@ -52,6 +54,20 @@ export function LeadTable({
    *  Filter an oder wechsle den Grundraum." — eine Aufforderung, an Filtern zu drehen,
    *  die nichts mit dem Problem zu tun hatten. */
   laedt?: boolean;
+  /** Der Abruf ist GESCHEITERT — nicht „nichts gefunden".
+   *
+   *  ⚠ A16 im Fallenkatalog: „Ein leeres Ergebnis ist eine AUSSAGE. Kommt sie auch dann,
+   *  wenn niemand nachgesehen hat, ist ein Ausfall zur Auskunft geworden." Dieselbe
+   *  Unterscheidung steht seit dem 2026-09-04 in `lib/ladegrund.js` — sie war an dieser
+   *  Stelle nur nie angeschlossen. Bis zum 2026-09-18 setzte der Fehlerzweig schlicht
+   *  `loading = false`, und die Liste sagte „Keine Leads mit diesen Filtern": genau die
+   *  Aufforderung, an Filtern zu drehen, die mit dem Problem nichts zu tun haben. */
+  stoerung?: boolean;
+  /** Sind ueberhaupt Filter oder Suchworte gesetzt?
+   *
+   *  ⚠ DRITTER ZUSTAND. „Keine Leads MIT DIESEN FILTERN" ist falsch, wenn keine gesetzt
+   *  sind — dann liegt es am Grundraum, und der Rat geht ins Leere. */
+  gefiltert?: boolean;
   /** Abschluss-Zeile unter der letzten Ausschreibung (Vorauswahl aufheben). */
   fuss?: React.ReactNode;
   /** Abschnitte statt einer flachen Liste — Zwischenzeile vor jeder Gruppe. */
@@ -262,16 +278,30 @@ export function LeadTable({
         ) : (
           <tr className="emptyrow">
             <td colSpan={colspan}>
-              {laedt ? (
+              {/* ⚠ VIER ZUSTAENDE, NICHT ZWEI. Nur die letzten beiden duerfen eine
+                  Aussage ueber die DATEN treffen; die ersten beiden sagen etwas ueber
+                  UNS. Die Reihenfolge ist wichtig: eine Stoerung waehrend des Ladens ist
+                  eine Stoerung, keine Ladeanzeige, die nie endet (Fallenkatalog A16). */}
+              {stoerung ? (
+                <div className="empty-t stoer-t" role="alert">
+                  <b>{t("Die Ausschreibungen konnten nicht geladen werden.")}</b>{" "}
+                  {t("Das liegt an uns, nicht an euren Filtern. Bitte neu laden.")}
+                </div>
+              ) : laedt ? (
                 <div className="empty-t lade-t" aria-live="polite">
                   <span className="lade-punkte" aria-hidden="true"><i /><i /><i /></span>
                   <b>{t("Ausschreibungen werden geladen.")}</b>{" "}
                   {t("Das dauert beim ersten Aufruf einige Sekunden.")}
                 </div>
-              ) : (
+              ) : gefiltert ? (
                 <div className="empty-t">
                   <b>{t("Keine Leads mit diesen Filtern.")}</b>{" "}
                   {t("Passe die Filter an oder wechsle den Grundraum.")}
+                </div>
+              ) : (
+                <div className="empty-t">
+                  <b>{t("In diesem Grundraum ist gerade nichts offen.")}</b>{" "}
+                  {t("Wechsle den Grundraum oder schau später noch einmal.")}
                 </div>
               )}
             </td>

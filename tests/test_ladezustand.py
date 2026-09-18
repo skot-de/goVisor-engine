@@ -56,3 +56,44 @@ def test_die_liste_kennt_den_dritten_zustand():
     davor = tabelle[max(0, i - 600):i]
     assert "laedt ?" in davor, ("Der Leer-Text haengt nicht am Ladezustand — er erscheint "
                                 "wieder waehrend des Ladens und nennt eine falsche Ursache")
+
+
+def test_die_liste_kennt_vier_zustaende():
+    """laedt · Stoerung · gefiltert-leer · leer — nur die letzten beiden sind Aussagen.
+
+    ⚠ FALLENKATALOG A16: „Ein leeres Ergebnis ist eine AUSSAGE. Kommt sie auch dann, wenn
+    niemand nachgesehen hat, ist ein Ausfall zur Auskunft geworden." Dieselbe
+    Unterscheidung steht seit dem 2026-09-04 in `lib/ladegrund.js` („gibt es nicht" gegen
+    „komme nicht dran") — an dieser Stelle war sie nur nie angeschlossen.
+
+    Bis zum 2026-09-18 setzte der Fehlerzweig schlicht `setLoading(false)`, und die Liste
+    sagte „Keine Leads mit diesen Filtern": ein Ausfall als Auskunft, samt Rat an den
+    Falschen. Der dritte Zustand fehlte ebenso — ohne gesetzte Filter ist „mit diesen
+    Filtern" schlicht unwahr.
+    """
+    import re
+    roh = (WURZEL / "web" / "components" / "explorer" / "LeadTable.tsx").read_text(encoding="utf-8")
+    tab = re.sub(r"(?m)(^|[^:])//.*$", r"\1", re.sub(r"/\*.*?\*/", "", roh, flags=re.S))
+    for zustand in ("stoerung ?", "laedt ?", "gefiltert ?"):
+        assert zustand in tab, f"Zustand `{zustand}` fehlt — vier Zustaende, nicht zwei"
+    # Die Reihenfolge ist Teil der Aussage: eine Stoerung WAEHREND des Ladens ist eine
+    # Stoerung, keine Ladeanzeige, die nie endet.
+    assert tab.index("stoerung ?") < tab.index("laedt ?") < tab.index("gefiltert ?"), (
+        "die Zustaende stehen in falscher Reihenfolge — eine Stoerung waehrend des Ladens "
+        "wuerde als Ladeanzeige erscheinen und nie enden")
+
+
+def test_der_fehlerzweig_meldet_die_stoerung():
+    """Ein gescheiterter Abruf darf nicht als leere Liste enden.
+
+    ⚠ Und der STATUS zaehlt, nicht nur der Rumpf: `/api/leads` antwortet bei fehlenden
+    Daten mit 503. `r.json()` machte daraus ein Objekt, `Array.isArray` war falsch, und
+    uebrig blieb eine leere Liste ohne Begruendung.
+    """
+    import re
+    roh = (WURZEL / "web" / "components" / "explorer" / "ExplorerShell.tsx").read_text(encoding="utf-8")
+    quelle = re.sub(r"(?m)(^|[^:])//.*$", r"\1", re.sub(r"/\*.*?\*/", "", roh, flags=re.S))
+    i = quelle.index("fetch(`/api/leads")
+    block = quelle[i:quelle.index("}, [aktiveBranche", i)]
+    assert "r.ok" in block, "der HTTP-Status wird nicht geprueft — 503 saehe aus wie leere Daten"
+    assert "setStoerung(true)" in block, "der Fehlerzweig meldet die Stoerung nicht"

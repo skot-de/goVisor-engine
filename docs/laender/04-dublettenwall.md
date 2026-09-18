@@ -45,6 +45,8 @@ Jedes Paar bekommt eine **Beleglage**, keine Schwelle:
 | `nur_titel` | Titel enthalten, anderer Käufer | nur ansehen |
 | `nur_titel_kurz` | wie oben, aber **kurzer** Titel (< 6 Wörter) | nur ansehen |
 | `geschwister` | **beide** Titel tragen eigene Wörter | nur ansehen |
+| `gleiche_quelle_wiederholt` | dieselbe Quelle, derselbe Vorgang erneut veröffentlicht | Ausblenden |
+| `kaeufer_und_titel_ohne_datum` | wie `kaeufer_und_titel`, aber ein Satz trägt **kein Datum** | nur ansehen |
 
 Die beiden schwachen Klassen sind kein Versäumnis:
 
@@ -58,6 +60,64 @@ Die beiden schwachen Klassen sind kein Versäumnis:
 
 **Die Anreicherung fasst nur `kaeufer_und_titel` an.** Alles andere steht in der Tabelle
 und wird nicht verwendet. Das ist die Regel, an der man nicht dreht.
+
+## Dieselbe Quelle dedupliziert sich NICHT selbst (2026-09-18)
+
+Bis dahin übersprang `_paare_finden` jedes Paar gleicher Quelle:
+
+```python
+if s["gen"] == t["gen"]:
+    continue      # dieselbe Quelle dedupliziert sich selbst schon
+```
+
+Die Annahme stimmt nicht. eForms und TED veröffentlichen **Berichtigungen als eigene
+Bekanntmachung**. Gemessen über die DE-Ausschreibungen ab 2025: 77.341 Paare tragen
+identischen Titel, identischen Käufer, dieselbe Stufe und liegen binnen 90 Tagen — aus
+DERSELBEN Quelle. Bei **8.797** davon stehen beide Sätze in der ausgelieferten Liste.
+
+Gemeldet wurden zwei Fälle, beide über einen gemeinsamen Dritten erkannt, untereinander
+aber nicht:
+
+```
+AT  556202_2026 (Frist 10.09.)  ↔  624707_2026 (Frist 22.09.)   beide eforms
+CH  610215_2026 (Frist 30.09.)  ↔  621675_2026 (Frist 21.10.)   beide eforms
+```
+
+⚠ **Die Schwierigkeit ist die Serie, nicht die Dublette.** Derselbe Titel beim selben
+Käufer heißt nicht dieselbe Vergabe: „Abschluss nicht-exklusiver Rabattvereinbarungen nach
+§130a" steht 219-mal bei einer Krankenkasse (Open House je Präparat), „Erweiterung und
+Sanierung Klinikum Altmühlfranken" 53-mal (je Gewerk). Vier Belege zusammen plus ein
+**Gruppendeckel** trennen das (`_wiederholung`):
+
+    identische WORTMENGE    nicht Enthaltung — „… Los VM 004" ist ein Los, keine Kopie
+    gleicher Käufer         über die Normalform, wie überall hier
+    gleiche CPV-Menge
+    Gruppe <= SERIEN_DECKEL eine Wiederholung passiert zwei-, dreimal; eine Serie oft
+
+    ohne Deckel   20.271 Paare, davon 6.630 aus der Rabatt-Serie
+    Deckel 3       7.679 Paare, davon     3
+
+⚠ **Die Frist darf sich unterscheiden — sie muss es dürfen.** Eine erste Fassung verlangte
+dieselbe Frist und schloss damit genau den Fall aus, um den es geht: eine Berichtigung
+erscheint, WEIL sich etwas geändert hat. Beide gemeldeten Fälle fielen daran durch. Die
+Trennung leistet der Gruppendeckel, nicht die Frist (7.713 → 27.507 Paare, Serie 3 → 4).
+
+## Wer überlebt: bei Wiederholung die JÜNGERE Bekanntmachung
+
+Der Quellenrang entscheidet weiterhin zwischen verschiedenen Quellen (die reichere
+gewinnt). Bei **Wiederholungen derselben Quelle** gilt seit dem 2026-09-18 das Gegenteil
+der alten Gleichstandsregel: nicht der frühere, sondern der **spätere** Satz wird Master.
+
+Sonst trägt der Master die Frist von VOR der Berichtigung, und der Nutzer sieht eine
+Frist, die nicht mehr gilt — schlimmer als zwei Zeilen. Gemessen über 14.327 Paare mit
+geänderter Frist (DE ab 2025):
+
+    spätere Bekanntmachung hat spätere Frist   14.180   99,0 %
+    spätere hat frühere Frist                     102    0,7 %
+    eine Frist fehlt                               45    0,3 %
+
+⚠ Und es wirkt doppelt: `gold.py` blendet nur aus, solange der MASTER noch läuft. Mit dem
+abgelaufenen Satz als Master bliebe die Dublette ohnehin stehen.
 
 ## Käufergleichheit: zwei Wege
 
@@ -105,7 +165,13 @@ verschmilzt fremde Häuser.
   wirft „Los 1" und „Los 2" zusammen.
 - **Geschwister-Sperre.** Siehe oben.
 - **Quellenrang.** `QUELLEN_RANG` entscheidet, welche Seite Master wird: die reichere
-  Quelle, bei Gleichstand der frühere Satz.
+  Quelle, bei Gleichstand der frühere Satz — ⚠ **ausser bei `gleiche_quelle_wiederholt`**,
+  dort gewinnt die JÜNGERE Bekanntmachung (eigener Abschnitt oben).
+  ⚠ Die Regel „bei Gleichstand der frühere" stand hier, war im Code aber nie umgesetzt:
+  er nahm schlicht `s`, und welcher Satz das ist, hängt an der Reihenfolge der
+  Kandidatenmenge. Solange nur Paare verschiedener Quellen entstanden, fiel das kaum auf;
+  mit Wiederholungen derselben Quelle ist Gleichstand der Normalfall. Seit dem 2026-09-18
+  entscheidet Datum, dann Kennung.
 
 ## Der Bestand darf tragen, was ungesehen blieb — nicht, was es nicht mehr gibt
 
