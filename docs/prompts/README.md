@@ -75,6 +75,12 @@ werden.
 
 ## Neu aufgenommen (beim Arbeiten gefunden)
 
+- **[11](11-doktypen-auswertung.md) Erkannte Doktypen, die nie ausgewertet werden** —
+  `AUSWERTUNG` kennt sechs Typen; `doctypes.classify()` erkennt mehr. `eigenerklaerung`
+  (13.131 Dateien in 4.835 Vorgaengen) und `informationsblatt` (5.396 / 3.836) tragen
+  Eignungsanforderungen und landen als „Weitere Dokumente" im Papierkorb. ⚠ Erweitern
+  kostet LLM-Aufrufe — Kostenschaetzung und Stichprobe gehoeren VOR den Umbau.
+
 - **Zwei Oberflaechentexte tragen noch Gedankenstriche** (`explorerCore.js`, Texte zu
   Dokumentnamen und zur unterschwelligen Ebene). Die Hausregel verbietet sie
   (`memory/govisor-keine-gedankenstriche.md`). ⚠ Nicht trivial: der deutsche Satz IST der
