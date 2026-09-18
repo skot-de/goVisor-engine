@@ -54,6 +54,18 @@
 .zugang .btn-s:hover{border-color:var(--ink-400)}
 .zugang .btn-t{color:var(--ink-500);padding:11px 4px;background:none}
 .zugang .btn-t:hover{color:var(--ink-900);text-decoration:underline}
+/* ── Die ruhige Zeile unter dem Knopf ──────────────────────────────────────────
+   ⚠ RUHIG IST HIER EINE ANFORDERUNG, keine Geschmacksfrage. Sie steht direkt unter dem
+   einen Knopf, auf den vier Schritte hingearbeitet haben; faellt sie auf, nimmt sie ihm
+   die Aufmerksamkeit, und dann waere der Hinweiskasten zurueck, den er ersetzt.
+   Kleiner Grad, gedeckte Farbe, kein Rahmen, kein Symbol. Der Link traegt die Farbe. */
+.zugang .sum-schaerfe{font-size:12px;line-height:1.6;color:var(--ink-400,#8C9B95);
+  margin:10px 0 0;max-width:62ch}
+.zugang .sum-schaerfe-link{color:var(--gruen,#1F6F4A);text-decoration:none;
+  border-bottom:1px solid currentColor;padding-bottom:1px;white-space:nowrap}
+.zugang .sum-schaerfe-link:hover{opacity:.75}
+.zugang .sum-schaerfe-link:focus-visible{outline:2px solid var(--gruen,#1F6F4A);outline-offset:3px}
+
 .zugang .btnrow{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:24px}
 .zugang .btnrow.split{justify-content:space-between}
 

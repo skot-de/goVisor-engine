@@ -2328,5 +2328,9 @@
   "Ausgeblendet": "Masqué",
   "Wieder eingeblendet": "Réaffiché",
   "Ausgeblendete mitzeigen": "Afficher aussi les masqués",
-  "Wieder einblenden": "Réafficher"
+  "Wieder einblenden": "Réafficher",
+  "Noch keine Nachweise hinterlegt. Ohne sie können wir nicht sagen, wo ihr ausgeschlossen würdet.": "Aucun justificatif enregistré. Sans eux, nous ne pouvons pas dire où vous seriez exclus.",
+  "{n} von {m} Nachweisen habt ihr angegeben. Die übrigen entscheiden mit, ob eine Vergabe für euch überhaupt in Frage kommt.": "Vous avez fourni {n} justificatifs sur {m}. Les autres déterminent si un marché vous est accessible.",
+  "Alle {m} Nachweise aus eurem Check sind hinterlegt. Weitere Angaben schärfen die Liste zusätzlich.": "Les {m} justificatifs de votre vérification sont enregistrés. D'autres informations affinent encore la liste.",
+  "Profil ergänzen": "Compléter le profil"
 }

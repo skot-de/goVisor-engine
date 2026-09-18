@@ -296,6 +296,31 @@ export default function OnboardingPage() {
    * nie bemerken, und die Zahl wirkt trotzdem auf jede Lead-Bewertung. */
   const [checkAngaben] = useState(() =>
     (typeof window === "undefined" ? null : checkLesen()));
+
+  /* Wie viele der Nachweisfragen, die der Check ueberhaupt GESTELLT hat, tragen eine
+   * Antwort? Sven am 2026-09-18: die Zusammenfassung soll sagen, dass ein schaerferes
+   * Profil die Liste verbessert — „mit der zahl", nicht als Behauptung.
+   *
+   * ⚠ WARUM DIESE ZAHL UND NICHT „betrifft N Leads". `Trefferguete` rechnet genau das aus
+   * und waere die schoenere Aussage; sie braucht aber die Lead-Menge, und die laedt dieser
+   * Bildschirm nicht (`leads-<branche>.json` sind 47 MB). Eine Zahl, fuer die man 47 MB
+   * holt, bevor der Nutzer den Knopf gedrueckt hat, ist den Satz nicht wert.
+   *
+   * ⚠ BOOLESCHE FRAGEN GELTEN ALS BEANTWORTET, wenn sie gestellt wurden: dort ist `false`
+   * ein „nein", keine Luecke. Nur die bezifferten Felder koennen offen sein. Das ist
+   * dieselbe Unterscheidung, die `gefragt` ueberhaupt erst noetig gemacht hat — aus einer
+   * nicht gestellten Frage ein „nein" zu machen legt dem Nutzer Worte in den Mund. */
+  const nachweisStand = (() => {
+    const g = checkAngaben?.gefragt ?? [];
+    if (!g.length) return null;
+    const beziffert: Record<string, number | null | undefined> = {
+      haftpflicht: checkAngaben?.haftpflicht,
+      referenzen: checkAngaben?.referenzen,
+      umsatz: checkAngaben?.umsatz,
+    };
+    const da = g.filter((k) => (k in beziffert ? beziffert[k] != null : true)).length;
+    return { da, gesamt: g.length };
+  })();
   // ── ZURÜCK ────────────────────────────────────────────────────────────────────────
   // Sven beim Anlegen eines Profils: „es wäre schön, wenn man bei der anmeldung auch
   // zurück springen kann." Es gab Rückwege, aber nur auf zwei Bildschirmen — wer sich
@@ -1252,6 +1277,21 @@ function testMailErlaubt(mail: string): boolean {
             <div className="btnrow">
               <button className="btn btn-p" onClick={fertigstellen}>{t("Leads ansehen")}</button>
             </div>
+            {/* ⚠ EINE ZEILE, KEIN KASTEN. Ein Hinweiskasten ueber dem Knopf konkurriert mit
+                dem einen Versprechen, auf das vier Schritte hingearbeitet haben — und „ihr
+                koennt noch verfeinern" liest sich direkt nach dem Fertigwerden wie „du bist
+                noch nicht fertig". Darunter, ruhig, mit der Zahl statt einer Behauptung. */}
+            <p className="sum-schaerfe">
+              {nachweisStand === null
+                ? t("Noch keine Nachweise hinterlegt. Ohne sie können wir nicht sagen, wo ihr ausgeschlossen würdet.")
+                : nachweisStand.da < nachweisStand.gesamt
+                  ? t("{n} von {m} Nachweisen habt ihr angegeben. Die übrigen entscheiden mit, ob eine Vergabe für euch überhaupt in Frage kommt.",
+                      { n: nachweisStand.da, m: nachweisStand.gesamt })
+                  : t("Alle {m} Nachweise aus eurem Check sind hinterlegt. Weitere Angaben schärfen die Liste zusätzlich.",
+                      { m: nachweisStand.gesamt })}
+              {" "}
+              <Link href="/unternehmen" className="sum-schaerfe-link">{t("Profil ergänzen")}</Link>
+            </p>
           </div>
         )}
     </>

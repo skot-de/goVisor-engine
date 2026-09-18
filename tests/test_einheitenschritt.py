@@ -81,3 +81,75 @@ def test_die_beleglage_wandert_weiter_ins_profil():
     lade = seite[seite.index("const ladeMitglieder"):]
     assert "setAktiv(" in lade[:lade.index("\n  }, [")], (
         "`aktiv` wird nicht mehr beim Laden gesetzt — im uebersprungenen Fall waere es leer")
+
+
+# ── Die Zeile zum Nachschärfen ─────────────────────────────────────────────────────────
+
+SEITE = WURZEL / "web" / "app" / "onboarding" / "page.tsx"
+
+
+def _ohne_kommentar_tsx(s: str) -> str:
+    """`//` und `/* */` raus — sonst prueft der Test die Begruendung (F13)."""
+    raus, i, n = [], 0, len(s)
+    while i < n:
+        if s[i] == "/" and i + 1 < n and s[i + 1] == "/":
+            while i < n and s[i] != "\n":
+                raus.append(" ")
+                i += 1
+            continue
+        if s[i] == "/" and i + 1 < n and s[i + 1] == "*":
+            while i < n and not (s[i] == "*" and i + 1 < n and s[i + 1] == "/"):
+                raus.append("\n" if s[i] == "\n" else " ")
+                i += 1
+            raus.append("  ")
+            i += 2
+            continue
+        raus.append(s[i])
+        i += 1
+    return "".join(raus)
+
+
+def test_die_zeile_steht_unter_dem_knopf():
+    """⚠ DIE REIHENFOLGE IST DIE ANFORDERUNG, nicht das Beiwerk.
+
+    Sven wollte einen Hinweis aufs Nachschaerfen. Ein Kasten DARUEBER konkurriert mit dem
+    einen Versprechen, auf das vier Schritte hingearbeitet haben — und „ihr koennt noch
+    verfeinern" liest sich direkt nach dem Fertigwerden wie „du bist noch nicht fertig".
+    Wer die Zeile nach oben zieht, hat den Kasten zurueck, den sie ersetzt.
+    """
+    code = _ohne_kommentar_tsx(SEITE.read_text(encoding="utf-8"))
+    i_knopf = code.index('onClick={fertigstellen}')
+    i_zeile = code.index('className="sum-schaerfe"')
+    assert i_knopf < i_zeile, (
+        "Die Schaerfe-Zeile steht VOR dem Knopf zum Weitergehen. Sie soll ihn begleiten, "
+        "nicht ihm die Aufmerksamkeit nehmen.")
+
+
+def test_die_zeile_nennt_eine_zahl_statt_einer_behauptung():
+    """„Optimiert eure Suchergebnisse" ist eine Behauptung ohne Beleg. Die Zeile nennt,
+    wie viele der GESTELLTEN Nachweisfragen eine Antwort tragen — und wo es nichts zu
+    zaehlen gibt, sagt sie das, statt eine Zahl zu erfinden."""
+    code = _ohne_kommentar_tsx(SEITE.read_text(encoding="utf-8"))
+    block = code[code.index('className="sum-schaerfe"'):]
+    block = block[:block.index("</p>")]
+    assert "nachweisStand" in block, "die Zeile rechnet nicht mehr, sie behauptet"
+    assert "{n} von {m}" in block or "{ n:" in block, "in der Zeile steht keine Zahl mehr"
+    assert "/unternehmen" in block, "der Link aufs Eignungsprofil fehlt"
+
+
+def test_gestellte_ja_nein_fragen_gelten_als_beantwortet():
+    """⚠ Bei einer GESTELLTEN Ja/Nein-Frage ist `false` ein „nein", keine Luecke. Sie als
+    offen zu zaehlen wuerde die Zahl kleiner zeigen, als sie ist — und dem Nutzer eine
+    Aufgabe andichten, die er schon erledigt hat.
+
+    Das ist dieselbe Unterscheidung, die `gefragt` ueberhaupt erst noetig gemacht hat: aus
+    einer NICHT gestellten Frage ein „nein" zu machen legt ihm Worte in den Mund.
+    """
+    code = _ohne_kommentar_tsx(SEITE.read_text(encoding="utf-8"))
+    i = code.index("const nachweisStand")
+    block = code[i:code.index("})();", i)]
+    assert "beziffert" in block, "die Unterscheidung zwischen bezifferten und Ja/Nein-Feldern fehlt"
+    for feld in ("haftpflicht", "referenzen", "umsatz"):
+        assert feld in block, f"das bezifferte Feld {feld!r} wird nicht mehr geprueft"
+    assert "pq" not in block.replace("checkAngaben?.", ""), (
+        "eine Ja/Nein-Frage wird als bezifferte Luecke gezaehlt")
