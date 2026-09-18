@@ -1,85 +1,105 @@
-# Erkannt, einschlaegig, nicht ausgewertet: 4.835 Vorgaenge
+# Erkannte Doktypen, die nie ausgewertet werden — ABGEARBEITET 2026-09-18
 
-## Der Befund
+## Ergebnis vorweg
 
-`scripts/analyze_docs.py` wertet nur Dokumente aus, deren Doktyp in `AUSWERTUNG` steht:
+**Die Liste `AUSWERTUNG` wird NICHT erweitert.** Und es gibt einen zweiten Befund, der
+zehnmal billiger ist und mehr bringt: **566 Vorgaenge aus dem Altbestand tragen 913
+Dokumente, deren Typ laengst auf der Liste steht.**
 
-    aufforderung · eignung · fragenantworten · leistungsbeschreibung · vertrag · zuschlagskriterien
+## Schritt 1: die Kosten, aus dem Kostenbuch gerechnet
 
-Alles andere landet in `other_documents` („Weitere Dokumente", §7.5) und wird nie gelesen.
-`govisor/doctypes.py` erkennt aber mehr Typen als diese sechs — und zwei davon tragen
-genau das, wofuer das Produkt gebaut ist.
+`token_cost` in den Analysedateien sind TOKEN, keine Dollar. Der Preis kommt aus
+`data/llm_kosten.jsonl`, 34.391 Aufrufe mit Token UND Kosten:
 
-Gemessen am 2026-09-18 ueber alle 11.144 Auswertungen (100.215 Dateien in
-`other_documents`):
+    google/gemini-2.5-flash   23.384 Aufrufe · 304,6 Mio Token · 146,89 USD
+                              → 0,000482 USD je 1.000 Token
 
-    Dateien   Vorgaenge   Doktyp
-     51.616      8.404    sonstiges              zu Recht
-     17.874      3.405    technische_anlage      Plaene, Ansichten, Lageplaene — zu Recht
-     13.131      4.835    eigenerklaerung        ⚠ traegt Eignungsanforderungen
-      5.396      3.836    informationsblatt      ⚠ z. B. „Wichtige Hinweise zu
-                                                    Sicherheitsleistungen"
-      5.087      4.256    datenschutz            zu Recht
-      3.194      2.143    preisblatt             offen
-      2.986      1.823    formblatt              ⚠ vermutlich einschlaegig
+Gemessen ueber 11.144 Auswertungen: 240,7 Mio Token fuer 58.765 ausgewertete Dokumente,
+also **4.096 Token je Dokument**. Bisher ausgegeben: 116,02 USD.
 
-Konkrete Beispiele, durch `doctypes.classify()` gefahren:
+    Doktyp              Dateien        Token      USD (einmalig)
+    eigenerklaerung      13.131   53.784.901       25,92
+    informationsblatt     5.396   22.102.150       10,65
+    formblatt             2.986   12.230.730        5,90
+    preisblatt            3.194   13.082.703        6,31
 
-    eigenerklaerung    315 26 A14 Bietergemeinschaftserklaerung.pdf
-    eigenerklaerung    Formblatt 124 Eigenerklaerung Nachunternehmer.pdf
-    informationsblatt  02_Wichtige Hinweise zu Sicherheitsleistungen.pdf
+    eigenerklaerung + informationsblatt                36,58 USD
+    laufend je Nacht (~200 neue Vorgaenge)              0,66 USD
 
-Eine Bietergemeinschaftserklaerung sagt, ob man als Gemeinschaft bieten darf. Ein Blatt
-ueber Sicherheitsleistungen nennt die Buergschaft. Beides steht heute in keinem Profil.
+Bezahlbar. Die Frage ist also nicht, ob man es sich leisten kann, sondern ob es etwas
+bringt.
 
-## Wie es aufgefallen ist
+## Schritt 2: die Stichprobe — und sie sagt nein
 
-Nicht durch eine Sonde, sondern beim Nachgehen einer anderen Zahl. `pruefe-dichte.mjs`
-meldete 421 Leads mit Volltext ohne verwertbaren Inhalt. Davon:
+⚠ **Was in den `eigenerklaerung`-Dokumenten steht**, aus dem Volltext gelesen:
 
-    385   Auswertung laeuft noch — eine Warteschlange, kein Fehler
-     35   einziges Dokument ist die Bekanntmachung selbst — zu Recht nichts zu holen
-      1   Auswertung mit Dokumenten, aber ohne Anforderungen
+    Eigenerklärung RUS / Bezug Russland          EU-VO 2022/576, Sanktionserklaerung
+    Eigenerklärung zu Finanzsanktionen (NU)      dito, fuer Nachunternehmer
+    Ausschlussgruende §§ 123, 124 GWB            gesetzlicher Standard
+    Einheitliche Europäische Eigenerklärung      Text ist „; ; . ; ; ? ; ; ?"
 
-Die 421 waren also harmlos. Beim Aufschluesseln fiel auf, dass 1.525 der 11.144
-Auswertungen (13,7 %) GAR KEIN ausgewertetes Vergabedokument haben — und von dort fuehrte
-die Spur zu `AUSWERTUNG`.
+Das sind **Formulare zum Unterschreiben**, keine Quellen von Anforderungen. Die EEE hat
+nicht einmal extrahierbaren Text — ein leeres Ausfuellformular.
 
-## ⚠ Was das kostet, bevor jemand die Liste erweitert
+`informationsblatt` ist ueberwiegend Verfahrenshinweis: elektronische Angebotsabgabe,
+Datenschutz, Nutzung der Vergabeplattform.
 
-`AUSWERTUNG` zu erweitern heisst: das LLM liest 13.131 (bzw. 18.527) Dokumente mehr. Das
-ist kein Schalter, das ist Geld.
+Ueber alle Dateien ausgezaehlt (Namensklassen, grob aber breit):
 
-**Vor dem Umbau zu klaeren, in dieser Reihenfolge:**
+    Doktyp              inhaltstragend   Verfahren   unklar
+    eigenerklaerung            9 %           0 %      91 %   (Bietergemeinschaft_Erklaerung …)
+    informationsblatt          3 %          51 %      46 %
+    formblatt                  3 %           4 %      93 %
 
-1. **Was kostet ein Dokument?** `token_cost` steht in jeder Analyse-Datei. Daraus einen
-   Mittelwert ziehen und hochrechnen — die Zahl gehoert in den Auftrag, nicht in die
-   Rueckschau. `memory/govisor-geldwache.md`: die Bremse sitzt in `llm.chat()`, nicht im
-   Aufrufer.
-2. **Bringt es etwas?** Eine Stichprobe von 20 `eigenerklaerung`-Dokumenten von Hand
-   durchsehen: wie viele tragen eine Anforderung, die nicht schon aus `eignung` kommt?
-   Wenn die Eigenerklaerung nur wiederholt, was die Aufforderung sagt, ist der Gewinn null
-   und die Kosten sind echt.
-3. **Reicht ein Teil?** `formblatt` und `preisblatt` sind unklar; `datenschutz` und
-   `technische_anlage` sind es nicht. Wer alles aufnimmt, zahlt fuer Plaene.
+Fuer 36,58 USD bekaeme man ueberwiegend Unterschriftsformulare. **Der Auftrag hat den Fall
+selbst vorweggenommen:** „Wenn die Eigenerklaerung nur wiederholt, was die Aufforderung
+sagt, ist der Gewinn null und die Kosten sind echt."
 
-## ⚠ Eine zweite Auffaelligkeit, kleiner, aber unerklaert
+⚠ Es gibt eine echte Teilmenge — `BbgVergG_Mindestlohn_NUN.pdf`,
+`VHB_BY_216_Verzeichnis_vorzulegende_Unterlagen` —, aber sie ueber den Dateinamen zu
+fischen waere eine bruechige Regel fuer wenige Prozent. Wer sie will, baut sie als eigene
+Doktyp-Regel in `doctypes.py`, nicht als Erweiterung von `AUSWERTUNG`.
 
-254 Dateien in `other_documents` klassifizieren ueber den NAMEN als `fragenantworten`,
-211 als `aufforderung`, 174 als `leistungsbeschreibung` — alle drei stehen in
-`AUSWERTUNG`. Sie haetten also ausgewertet werden muessen.
+## Der zweite Befund: 913 Dokumente, deren Typ schon auf der Liste steht
 
-Die wahrscheinliche Erklaerung: `analyze_docs` ruft `classify(name, text)` MIT der
-Inhaltsprobe, meine Messung nur mit dem Namen. Die Inhaltsprobe hat dann anders
-entschieden. Das kann richtig sein (der Name luegt) oder falsch (die Probe traf eine
-Deckblattseite). ⚠ Das ist zu pruefen, bevor man an `AUSWERTUNG` dreht — sonst behebt man
-die falsche Haelfte.
+Beim Nachgehen der „254 fragenantworten" aus dem urspruenglichen Verdacht kamen **931**
+Dateien heraus, deren NAME einen AUSWERTUNGS-Typ ergibt und die trotzdem in
+`other_documents` liegen:
+
+    254  fragenantworten        „Bieterfragen-Antworten_VV1-5_Version11.pdf"
+    211  aufforderung           „VHB_ANGEBOTSSCHREIBEN", „Formblatt213_Angebot"
+    174  leistungsbeschreibung  „LV_HLS_KIT_Neubau_ohne Preise.pdf"
+    152  vertrag
+    128  eignung                „VHB-124" — die Eigenerklaerung zur Eignung
+     12  zuschlagskriterien
+
+⚠ **Das ist KEIN Defekt im laufenden Betrieb.** Nach Auswertungsdatum aufgeschluesselt:
+
+    ohne `analysiert_am` (Altbestand)   913
+    ab dem 10.09.2026                     3   (in zehn Tagen)
+
+913 von 931 stammen aus Auswertungen, die das Feld `analysiert_am` noch nicht tragen —
+also von vor der Verbesserung des Klassifizierers. Der Zweig in `analyze_docs.py` ist
+korrekt: was in `AUSWERTUNG` steht, landet nicht in `other_documents`.
+
+**Es ist ein Rueckstand, und er ist billig aufzuloesen:**
+
+    566 Vorgaenge betroffen
+    nur die fehlplatzierten Dateien    1,80 USD
+    ganze Vorgaenge neu (3.990 Dok.)   7,88 USD
+
+Fuer 7,88 USD kommen 254 Bieterfragen-Antworten und 122 Eignungsnachweise in die
+Auswertung — Dokumente, die Fristen aendern und Nachweise fordern. Das ist der
+zehnfache Gegenwert der 36,58 USD, die die Typ-Erweiterung gekostet haette.
+
+## Aufgabe (offen)
+
+Die 566 Altbestands-Vorgaenge neu auswerten lassen. ⚠ Das kostet echtes Geld auf Svens
+Schluessel — deshalb nicht ohne ausdrueckliche Ansage. Der Analyse-Arbeiter
+(`scripts/analyse_arbeiter.sh`) laeuft ohnehin; es braucht einen Weg, genau diese
+Vorgaenge erneut in die Schlange zu stellen.
 
 ## Abnahme
-
-- Kostenschaetzung je zusaetzlichem Doktyp, aus `token_cost` gerechnet, im Commit.
-- Stichprobe von 20 Dokumenten je aufgenommenem Typ, handgeprueft, mit Ergebnis.
 - Zahl der Vorgaenge mit `anf.quelle=unterlagen` vorher/nachher — das ist der Beleg.
-- ⚠ `pruefe-dichte.mjs` muss danach weiter gruen sein: mehr ausgewertete Dokumente heissen
-  mehr Leads, die „reich" behaupten, und die Invariante gegen `unterlagen.gelesen` gilt
-  unveraendert.
+- `pruefe-dichte.mjs` muss danach gruen bleiben.
+- Tatsaechliche Kosten aus dem Kostenbuch gegen die geschaetzten 7,88 USD halten.

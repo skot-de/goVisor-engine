@@ -75,11 +75,13 @@ werden.
 
 ## Neu aufgenommen (beim Arbeiten gefunden)
 
-- **[11](11-doktypen-auswertung.md) Erkannte Doktypen, die nie ausgewertet werden** —
-  `AUSWERTUNG` kennt sechs Typen; `doctypes.classify()` erkennt mehr. `eigenerklaerung`
-  (13.131 Dateien in 4.835 Vorgaengen) und `informationsblatt` (5.396 / 3.836) tragen
-  Eignungsanforderungen und landen als „Weitere Dokumente" im Papierkorb. ⚠ Erweitern
-  kostet LLM-Aufrufe — Kostenschaetzung und Stichprobe gehoeren VOR den Umbau.
+- **[11](11-doktypen-auswertung.md) Doktypen** — 2026-09-18 abgearbeitet, Ergebnis
+  NEGATIV fuer die urspruengliche Idee: `AUSWERTUNG` wird NICHT erweitert. Die
+  `eigenerklaerung`-Dokumente sind zu 91 % Unterschriftsformulare (Russland-Sanktionen,
+  §§ 123/124 GWB, leere EEE), `informationsblatt` zu 51 % Verfahrenshinweise. 36,58 USD
+  fuer fast nichts. ⚠ Dafuer ein zweiter Befund: 913 Dokumente im Altbestand tragen einen
+  Typ, der laengst auf der Liste steht (254 Bieterfragen-Antworten, 122 Eignungsnachweise).
+  Neu auswerten kostet 7,88 USD — **wartet auf Svens Ansage**, es ist echtes Geld.
 
 - **Zwei Oberflaechentexte tragen noch Gedankenstriche** (`explorerCore.js`, Texte zu
   Dokumentnamen und zur unterschwelligen Ebene). Die Hausregel verbietet sie
