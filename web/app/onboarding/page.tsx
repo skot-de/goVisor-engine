@@ -189,31 +189,31 @@ function FirmaFakten({ m }: { m: Match }) {
   );
 }
 
-/* Hat der Einheiten-Schritt ueberhaupt eine Frage zu stellen?
+/* Ist der Einheiten-Schritt eine FRAGE oder eine AUSSAGE?
  *
- * „Gehoeren diese Einheiten zu euch?" ist bei EINER Einheit keine Frage, sondern eine
- * Liste mit einem Eintrag, den man anhaken soll, um weiterzukommen. Gemessen am
- * 2026-09-17 ueber 37.946 Firmen: 30.174 (79,5 %) haben genau eine Einheit, 4.584 zwei,
- * 886 fuenf oder mehr.
+ * ⚠ ER WIRD NICHT UEBERSPRUNGEN, UND DAS IST DER PUNKT. Eine erste Fassung vom 2026-09-17
+ * sprang bei einer belegten Einheit direkt zu „fertig". Das war falsch: der Schritt traegt
+ * die Zusage „Mit der Bestaetigung merken wir uns diese Einheiten als eure Identitaet.
+ * {n} Siege fliessen in euer Profil." Das ist die Stelle, an der aus „wir kennen euch" ein
+ * Profil wird. Diese Zusage wegzulassen waere schlechter als eine unpassende Ueberschrift.
  *
- * ⚠ NUR UEBERSPRINGEN, WENN DIE EINE EINHEIT BELEGT IST. Ist sie blosse Selbstauskunft,
- * traegt der Schritt eine Warnung: „Wir merken uns diese Einheiten aber als
- * Selbstauskunft … diese Zuschlaege zaehlen als eure Historie, und die zugehoerigen
- * Ausschreibungen erscheinen euch als eigene, die ihr verteidigen muesst." Sie
- * stillschweigend zu uebergehen hiesse, eine Zustimmung anzunehmen, die niemand gegeben
- * hat — genau der Zustand, den die Plausibilitaetsbremse vom 2026-08-21 abgeschafft hat.
+ * Falsch ist nicht der Schritt, sondern die FRAGE. Bei genau einer Einheit steht dort eine
+ * Liste mit einem Eintrag — ueber den in Schritt 2 gerade entschieden wurde — und darueber
+ * ein Ja/Nein, auf das es nur eine Antwort gibt.
  *
- * Die Ausnahme kostet fast nichts: von den 30.174 Ein-Einheit-Firmen sind 30.172 belegt
- * und 2 nicht.
+ * Gemessen am 2026-09-18, zwei Grundmengen, beide richtig:
  *
- * ⚠ EINE REGEL, WEIL ES ZWEI WEGE GIBT. In diesen Bildschirm fuehren der normale Pfad
- * und der Token-Pfad. Auf dem Token-Pfad stand `anzahl > 1` ohne Belegpruefung — zwei
- * Regeln fuer dieselbe Frage, und sie waren bereits auseinandergelaufen.
+ *     alle DE-Identitaeten (entity_identity.parquet)  304.994 · 96,9 % mit EINER Einheit
+ *     Firmen, die das Onboarding findet (suppliers)    37.948 · 79,5 % mit EINER Einheit
+ *
+ * Die zweite ist die einschlaegige: Schritt 3 erreicht nur, wer in Schritt 2 einen Treffer
+ * aus `suppliers.json` bestaetigt hat.
+ *
+ * ⚠ AN `members.length` HAENGEN, NICHT AN `matched`. `matched` ist auch bei mehreren
+ * Einheiten gesetzt und taugt als Bedingung nicht.
  */
-function hatEtwasZuEntscheiden(ms: Member[]): boolean {
-  if (ms.length > 1) return true;
-  if (ms.length === 0) return false;
-  return ms[0]?.conf !== "belegt";
+function istEineFrage(ms: Member[]): boolean {
+  return ms.length !== 1;
 }
 
 export default function OnboardingPage() {
@@ -472,7 +472,7 @@ export default function OnboardingPage() {
      *
      * `aktiv` ist bereits gesetzt (oben in `ladeMitglieder`), `confirmedEntities` wird
      * daraus gebaut wie sonst auch — uebersprungen wird die FRAGE, nicht die Erfassung. */
-    geheZu(hatEtwasZuEntscheiden(ms) ? "profil" : "fertig");
+    geheZu("profil");
   }
 
   // Konto anlegen (Registrierung), dann Firmen-Erkennung. Bei „E-Mail existiert" → Login anbieten.
@@ -602,7 +602,7 @@ function testMailErlaubt(mail: string): boolean {
            auch dann ueber den Schritt, wenn die eine Einheit blosse Selbstauskunft war,
            und uebersah damit die Warnung, die dort haengt. Zwei Wege in denselben
            Bildschirm mit zwei Regeln laufen auseinander; sie waren es bereits. */
-        geheZu(hatEtwasZuEntscheiden(ms) ? "profil" : "fertig");
+        geheZu("profil");
         return;
       }
       // Fremde Domain: Vorbelegung faellt weg, es geht den normalen Weg weiter.
@@ -1056,8 +1056,28 @@ function testMailErlaubt(mail: string): boolean {
         {/* 4 · Gruppe = Identität */}
         {screen === "profil" && matched && (
           <div className="card wide">
-            <h1>{t("Gehören diese Einheiten zu euch?")}</h1>
-            <p className="lede">{t("Öffentliche Auftraggeber schreiben denselben Konzern unterschiedlich. Wir rechnen Siege aller aktiven Einheiten zusammen, sonst übersehen wir eure eigenen Aufträge.")}</p>
+            {/* ⚠ FRAGE ODER AUSSAGE — der Schritt bleibt in beiden Faellen.
+                Bei genau einer Einheit ist „Gehoeren diese Einheiten zu euch?" eine
+                Scheinfrage: eine Liste mit einem Eintrag, ueber den in Schritt 2 gerade
+                entschieden wurde, und darueber ein Ja/Nein mit nur einer Antwort.
+                Gleiche Seite, gleiche Knoepfe, gleiche Zahlen — nur keine Scheinfrage. */}
+            {istEineFrage(members) ? (
+              <>
+                <h1>{t("Gehören diese Einheiten zu euch?")}</h1>
+                <p className="lede">{t("Öffentliche Auftraggeber schreiben denselben Konzern unterschiedlich. Wir rechnen Siege aller aktiven Einheiten zusammen, sonst übersehen wir eure eigenen Aufträge.")}</p>
+              </>
+            ) : (
+              <>
+                <h1>{t("Das ist euer Bestand")}</h1>
+                {/* ⚠ KEIN VERSPRECHEN, DAS DAS PRODUKT NICHT HAELT. Der Auftrag liess
+                    ausdruecklich offen, ob eine Einheit spaeter ERGAENZT werden kann.
+                    Geprueft am 2026-09-18: kann sie nicht. `EntityKorrektur` unter
+                    „Unternehmen" ERSETZT die Zuordnung („Falsche Gesellschaft
+                    zugeordnet?"), sie fuegt nichts hinzu. Der Text sagt deshalb, was
+                    wirklich geht. */}
+                <p className="lede">{t("Öffentliche Auftraggeber schreiben denselben Konzern unterschiedlich. Wir haben unter diesem Namen genau eine Einheit gefunden. Ist das die falsche Gesellschaft, könnt ihr die Zuordnung später unter Unternehmen berichtigen.")}</p>
+              </>
+            )}
             {members.length ? (
               <div className="ents">
                 {members.map((m, i) => (

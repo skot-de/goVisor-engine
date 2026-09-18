@@ -1,11 +1,23 @@
-"""Stellt der Einheiten-Schritt eine Frage — oder kostet er nur einen Klick?
+"""Stellt der Einheiten-Schritt eine Frage, wo es nichts zu fragen gibt?
 
 ⚠ WARUM DIESE DATEI EXISTIERT. Schritt 3 des Onboardings fragt „Gehoeren diese Einheiten
 zu euch?". Bei EINER Einheit ist das keine Frage, sondern eine Liste mit einem Eintrag,
-den man anhaken soll, um weiterzukommen — mitten im Trichter.
+ueber den in Schritt 2 gerade entschieden wurde.
 
-Gemessen am 2026-09-17 ueber 37.946 Firmen: 30.174 (79,5 %) haben genau eine Einheit.
-(Der urspruengliche Auftrag nannte 96,9 % — die Zahl war falsch und ist hier korrigiert.)
+⚠ DER SCHRITT WIRD NICHT UEBERSPRUNGEN, und das ist der Kern. Eine erste Fassung vom
+2026-09-17 sprang bei einer belegten Einheit direkt zu „fertig" — die falsche Loesung. Der
+Schritt traegt die Zusage „Mit der Bestaetigung merken wir uns diese Einheiten als eure
+Identitaet. {n} Siege fliessen in euer Profil."; das ist die Stelle, an der aus „wir kennen
+euch" ein Profil wird. Sie wegzulassen waere schlechter als eine unpassende Ueberschrift.
+
+Gemessen am 2026-09-18, zwei Grundmengen — beide richtig, verschiedene Fragen:
+
+    alle DE-Identitaeten (entity_identity.parquet)  304.994 · 96,9 % mit EINER Einheit
+    Firmen, die das Onboarding findet (suppliers)    37.948 · 79,5 % mit EINER Einheit
+
+Die zweite ist die einschlaegige: Schritt 3 erreicht nur, wer in Schritt 2 einen Treffer
+aus `suppliers.json` bestaetigt hat. ⚠ Ich hatte die erste Zahl als falsch bezeichnet —
+sie war es nicht, ich hatte eine andere Grundmenge gemessen.
 """
 import shutil
 import subprocess
@@ -26,14 +38,15 @@ def test_die_sonde_laeuft_gruen():
     Token-Pfad stand `anzahl > 1` ohne Belegpruefung, die zwei Regeln waren bereits
     auseinandergelaufen.
 
-    Gegengeprueft am 2026-09-17: rot, wenn (a) die Belegpruefung entfaellt, (b) ein Weg
-    wieder seine eigene Regel baut.
+    Gegengeprueft am 2026-09-18: rot, wenn (a) der Schritt wieder uebersprungen wird,
+    (b) die Scheinfrage zurueckkehrt, (c) der Text verspricht, eine Einheit spaeter zu
+    ERGAENZEN — das kann das Produkt nicht, `EntityKorrektur` ersetzt nur die Zuordnung.
     """
     if not shutil.which("node"):
         return
     r = subprocess.run(["node", str(SONDE)], capture_output=True, text=True, cwd=WURZEL)
     assert r.returncode == 0, r.stdout[-900:] + r.stderr[-400:]
-    assert "Der Schritt erscheint genau dann, wenn er etwas fragt" in r.stdout
+    assert "Der Schritt bleibt, und er fragt nur, wo es etwas zu fragen gibt" in r.stdout
 
 
 def test_die_beleglage_wandert_weiter_ins_profil():
