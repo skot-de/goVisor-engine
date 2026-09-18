@@ -101,13 +101,55 @@ def test_das_band_wird_im_export_aufgeloest():
     assert "st.median" in b and "st.hoch" in b
 
 
-def test_driftpruefung_laeuft_mit():
-    """Sie hält sie aus, weil sie ein Verhältnis ist — geprüft wird trotzdem bei jedem Lauf,
-    statt das Urteil von heute einzufrieren."""
-    k = _körper("main")
-    assert "MAX_DRIFT" in k and "n_parsed_files" in k and "verworfen" in k
+def test_kein_band_faellt_mehr_an_der_drift():
+    """⚠ HIER STAND DAS GEGENTEIL: „Driftpruefung laeuft mit". Am 2026-09-18 ausgemessen
+    und gestrichen.
+
+    Die Pruefung verglich flach gelesene Vorgaenge (1-7 Dateien) mit tief gelesenen (>=8)
+    und verwarf ein Band, wenn das VERHAELTNIS der Mediane 1,5 riss. Gemessen, mit 400
+    zufaelligen Teilungen derselben Zahlen als Massstab:
+
+        Band       n     flach   tief   Verhaeltnis   Δ Punkte   Zufall p95
+        klein   5.207    43,9%  52,9%          1,20       +9,0         1,06
+        mittel  7.171    27,1%  32,6%          1,20       +5,4         1,06
+        gross   1.664     9,1%  14,7%          1,61       +5,6         1,27
+
+    Alle drei Baender driften und alle drei liegen klar ueber dem Zufall. In
+    Prozentpunkten driftet `klein` am staerksten (+9,0) und blieb stehen, `gross` am
+    wenigsten (+5,6) und flog — ein Verhaeltnis misst hier die Basisgroesse, nicht die
+    Drift. Folge des Ausschlusses waren 1.675 Vorgaenge ohne Vergleichswert, ausgerechnet
+    die am besten dokumentierten.
+
+    Dieser Test faengt das Wiedereinbauen. Wer die Pruefung zurueckholen will, misst sie
+    vorher neu (`scripts/miss_driftschwelle.py`) — dann faellt dieser Test, und das ist
+    die Gelegenheit, die Begruendung mitzuliefern.
+    """
     m = _modul()
-    assert m.MAX_DRIFT <= 1.5
+    assert not hasattr(m, "MAX_DRIFT"), (
+        "MAX_DRIFT ist zurueck. Die Schwelle war gemessen ungeeignet: sie warf das Band "
+        "raus, das am wenigsten driftet")
+    if not DATEI.exists():
+        return
+    d = json.loads(DATEI.read_text(encoding="utf-8"))
+    mit_drift = {k: g for k, g in d["verworfen"].items() if "Drift" in g}
+    assert not mit_drift, (
+        f"{len(mit_drift)} Bänder sind wieder an einer Driftpruefung gescheitert: "
+        f"{sorted(mit_drift)}")
+
+
+def test_die_schwellen_behalten_ihre_eigene_driftpruefung():
+    """⚠ `scripts/export_schwellen.py` fuehrt dieselben Konstantennamen und eine eigene
+    Driftpruefung. Sie bleibt, und zwar mit Absicht: dort sind es EURO-Betraege, die Drift
+    laeuft nach UNTEN (500.000 flach → 250.000 tief), und gemessen wurde sie nie. Wer die
+    Begruendung vom Standardtext dorthin uebertraegt, uebertraegt eine Messung, die es
+    fuer jene Zahlen nicht gibt."""
+    # ⚠ AUF DIE ZUWEISUNG PRUEFEN, nicht auf das Wort. Die erste Fassung suchte
+    #   `"MAX_DRIFT" in q` — und fand es in der VERWENDUNGSZEILE (`if drift > MAX_DRIFT`),
+    #   auch nachdem die Definition entfernt war. Der Rueckbau lief gruen durch (F12).
+    q = (WURZEL / "scripts" / "export_schwellen.py").read_text(encoding="utf-8")
+    assert re.search(r"^MAX_DRIFT\s*=", q, re.M), (
+        "die Driftpruefung der Geldschwellen ist mitgestrichen worden — sie war nie "
+        "Gegenstand der Messung vom 2026-09-18")
 
 
 # ── Anzeige ─────────────────────────────────────────────────────────────────────────────
@@ -182,12 +224,20 @@ def test_ein_verworfenes_band_steht_im_auslieferstand():
     for schl, grund in d["verworfen"].items():
         assert grund and len(grund) > 8, f"{schl} ist verworfen, ohne zu sagen warum"
 
-    # ⚠ Ein verworfenes Band KOSTET Vorgaenge ihren Vergleichswert. Steht die Zahl nicht
-    #   daneben, ist der Verlust wieder unsichtbar — genau der Zustand vom 17.09.
-    if d["verworfen"]:
-        assert d["ohne_vergleich"] > 0, (
-            f"{len(d['verworfen'])} Bänder sind verworfen, aber kein einziger Vorgang soll "
-            f"seinen Vergleichswert verloren haben. Eine der beiden Zahlen luegt.")
+    # ⚠ DIE FOLGERUNG GILT NUR IN EINE RICHTUNG, und die erste Fassung dieses Tests hatte
+    #   sie umgedreht. Ein verworfenes Band kostet NICHT zwangslaeufig Vergleichswerte:
+    #   `main()` loest ueber `lage.get(f"DE:{band}")` auf und faengt damit jedes Land ab,
+    #   dessen eigene Baender zu duenn sind. Am 2026-09-18 sind alle drei LU-Baender
+    #   verworfen und trotzdem `ohne_vergleich == 0` — die 45 LU-Vorgaenge bekommen die
+    #   deutschen Werte.
+    #
+    #   Umgekehrt gilt es sehr wohl: einen Vergleichswert verliert ein Vorgang NUR, weil
+    #   sein Band verworfen wurde. Steht dann nichts unter `verworfen`, fehlt die
+    #   Begruendung — und genau das war der Zustand vom 17.09.
+    if d["ohne_vergleich"]:
+        assert d["verworfen"], (
+            f"{d['ohne_vergleich']} Vorgaenge haben keinen Vergleichswert, aber kein Band "
+            f"ist verworfen. Dann sagt nichts, warum sie ihn verloren haben.")
 
 
 def test_mehr_text_heisst_weniger_standardtext():

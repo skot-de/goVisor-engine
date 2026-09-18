@@ -73,39 +73,6 @@ MIND_RAHMEN = 100    # weniger tragen keinen Median
 BAENDER: tuple[tuple[int, int, str], ...] = (
     (50_000, 200_000, "klein"), (200_000, 800_000, "mittel"), (800_000, 10**12, "gross"),
 )
-MIND_BAND = 20       # je Lesetiefe-Band, sonst ist die Driftpruefung selbst Rauschen
-FLACH, TIEF = 7, 8
-# ⚠ AUSGEMESSEN AM 2026-09-18 — DIE SCHWELLE MISST NICHT, WAS SIE MESSEN SOLL.
-#
-# Der Test vergleicht den Median flach gelesener Vorgaenge (1-7 Dateien) mit dem tief
-# gelesener (>=8) und verwirft ein Band, wenn das VERHAELTNIS 1,5 reisst. Ein Verhaeltnis
-# ist skalenabhaengig: bei Medianen um 9 % bewegt ein Prozentpunkt es um 0,11, bei 44 %
-# nur um 0,02.
-#
-# Gemessen ueber DE, mit einer Nullverteilung aus 400 ZUFAELLIGEN Teilungen derselben
-# Zahlen (gleiche Gruppengroessen) als Vergleichsmassstab:
-#
-#     Band       n     flach   tief   Drift   Δ Punkte   Zufall p95
-#     klein   5.207    43,9%  52,9%    1,20      +9,0         1,06
-#     mittel  7.171    27,1%  32,6%    1,20      +5,4         1,06
-#     gross   1.664     9,1%  14,7%    1,61      +5,6         1,27
-#
-# Drei Befunde:
-#   1. ALLE DREI Baender driften, und alle drei liegen klar ueber dem Zufall. Die
-#      Tiefenabhaengigkeit ist keine Eigenheit grosser Vorgaenge.
-#   2. In Prozentpunkten driftet `klein` am STAERKSTEN (+9,0), `gross` weniger (+5,6).
-#      Die Schwelle wirft also das Band raus, das am wenigsten driftet.
-#   3. Die Nullverteilung zeigt warum: zufaelliges Teilen erzeugt bei `gross` schon 1,27,
-#      bei den anderen 1,06. Die Schwelle misst „ist die Basis klein", nicht „misst das
-#      Band die Lesetiefe".
-#
-# ⚠ NICHT GEAENDERT, weil die Folge eine Produktentscheidung ist und keine technische:
-# die Drift ist vermutlich ECHT (Vorgaenge mit vielen Dateien tragen mehr Formularwerk,
-# und Formularwerk IST Standardtext). Dann waere der Drifttest der falsche Waechter, und
-# was fehlt, ist die Offenlegung neben der Zahl. Wer hier etwas aendert, entscheidet
-# zwischen: Verhaeltnis behalten (gross fliegt, 1.675 Vorgaenge ohne Vergleichswert),
-# auf Prozentpunkte umstellen (dann faellt `klein`), oder den Test streichen.
-MAX_DRIFT = 1.5
 BLOCK = 300          # Vorgaenge je Abfrage — 4,2 Mrd. Zeichen passen nicht in einen Rutsch
 
 _ABSATZ = re.compile(r"\n\s*\n|\r\n\s*\r\n")
@@ -185,15 +152,38 @@ def main() -> int:
             if len(werte) < MIND_RAHMEN:
                 verworfen[f"{land}:{r}"] = f"nur {len(werte)} Vorgaenge"
                 continue
-            flach = [v for v, t in werte if 1 <= t <= FLACH]
-            tief = [v for v, t in werte if t >= TIEF]
-            if len(flach) >= MIND_BAND and len(tief) >= MIND_BAND:
-                a, b2 = statistics.median(flach), statistics.median(tief)
-                drift = max(a, b2) / max(min(a, b2), 1e-9)
-                if drift > MAX_DRIFT:
-                    verworfen[f"{land}:{r}"] = (f"Drift {drift:.2f}× "
-                                                f"({a:.0%} flach → {b2:.0%} tief) — misst die Lesetiefe")
-                    continue
+            # ⛔ HIER STAND EINE DRIFTPRUEFUNG. Sie verglich flach gelesene Vorgaenge
+            #    (1-7 Dateien) mit tief gelesenen (>=8) und verwarf ein Band, wenn das
+            #    VERHAELTNIS der Mediane 1,5 riss. Am 2026-09-18 ausgemessen und gestrichen
+            #    (Sven entschied nach der Messung) — `scripts/miss_driftschwelle.py` fuehrt
+            #    sie jederzeit wieder vor:
+            #
+            #      Band       n     flach   tief   Verhaeltnis   Δ Punkte   Zufall p95
+            #      klein   5.207    43,9%  52,9%          1,20       +9,0         1,06
+            #      mittel  7.171    27,1%  32,6%          1,20       +5,4         1,06
+            #      gross   1.664     9,1%  14,7%          1,61       +5,6         1,27
+            #
+            #    Drei Gruende, jeder fuer sich ausreichend:
+            #
+            #    1. ALLE DREI Baender driften, alle drei klar ueber dem Zufall (die Spalte
+            #       rechts ist die Drift aus 400 ZUFAELLIGEN Teilungen derselben Zahlen).
+            #       Die Pruefung traf also nicht ein auffaelliges Band, sondern das mit der
+            #       kleinsten Basis.
+            #    2. In Prozentpunkten driftet `klein` am STAERKSTEN (+9,0) und blieb stehen;
+            #       `gross` driftet am wenigsten (+5,6) und flog. Ein Verhaeltnis ist
+            #       skalenabhaengig: bei 9 % bewegt ein Prozentpunkt es um 0,11, bei 44 %
+            #       um 0,02.
+            #    3. Die Drift ist vermutlich ECHT und erwuenscht: Vorgaenge mit vielen
+            #       Dateien tragen mehr Formularwerk, und Formularwerk IST Standardtext.
+            #       Dass die Kennzahl mit der Menge der Unterlagen zusammenhaengt, ist der
+            #       Grund, warum es die Baender ueberhaupt gibt — ein zweiter Waechter, der
+            #       dieselbe Eigenschaft bestraft, nimmt 1.675 gut dokumentierten Vorgaengen
+            #       ihre Kennzahl weg.
+            #
+            # ⚠ `scripts/export_schwellen.py` hat eine EIGENE Driftpruefung mit denselben
+            #    Konstantennamen. Sie bleibt: dort sind es Euro-Betraege, die Drift laeuft
+            #    nach UNTEN, und gemessen wurde sie nie. Wer diese Begruendung dorthin
+            #    uebertraegt, uebertraegt eine Messung, die es fuer jene Zahlen nicht gibt.
             alle = sorted(v for v, _ in werte)
             lage[f"{land}:{r}"] = {"n": len(alle), "median": round(100 * statistics.median(alle)),
                                    "hoch": round(100 * statistics.quantiles(alle, n=4)[2])}
@@ -207,6 +197,18 @@ def main() -> int:
         return 1
     # Vergleichswerte je Lead aufloesen, damit die Anzeige nur noch formatiert.
     fertig = {}
+    # ⚠ DE-FESTER RUECKFALL, und er rettet mehr als er soll. `lage.get("DE:…")` steht
+    #    VORNE, nicht als Notnagel: ein luxemburgischer Vorgang wird also gegen DEUTSCHE
+    #    Werte verglichen, auch wenn Luxemburg eigene traegt. Heute faellt das nicht auf,
+    #    weil nur DE Baender hat (AT und CH haben keinen Volltext, LU ist zu duenn) — der
+    #    Tag, an dem es auffaellt, ist der Tag, an dem ein zweites Land genug Unterlagen
+    #    hat, und dann sieht niemand, dass die Vergleichszahl aus dem falschen Land kommt.
+    #
+    #    Reparieren hiesse, das Land im Eintrag mitzufuehren (`leads[nid]` kennt es nicht,
+    #    nur die Schleife darueber). Bewusst NICHT hier miterledigt, weil es eine eigene
+    #    Entscheidung ist: Standardtext-Anteile sind laenderuebergreifend vermutlich
+    #    vergleichbar, und ein duennes Eigenband waere schlechter als ein dickes fremdes.
+    #    Gemessen 2026-09-18: 45 LU-Vorgaenge haengen daran.
     for land_nid, eintrag in leads.items():
         g = lage.get(f"DE:{eintrag['band']}") or next(
             (v for k, v in lage.items() if k.endswith(":" + eintrag["band"])), None)
