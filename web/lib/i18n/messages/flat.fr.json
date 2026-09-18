@@ -2324,5 +2324,9 @@
   "kleinstes": "le plus petit",
   "Firmenname sichtbar nach Freigabe": "Nom de l'entreprise visible après validation",
   "ohne Angabe": "non indiqué",
-  "zu wenige Siege": "trop peu de victoires"
+  "zu wenige Siege": "trop peu de victoires",
+  "Ausgeblendet": "Masqué",
+  "Wieder eingeblendet": "Réaffiché",
+  "Ausgeblendete mitzeigen": "Afficher aussi les masqués",
+  "Wieder einblenden": "Réafficher"
 }

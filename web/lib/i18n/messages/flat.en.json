@@ -2324,5 +2324,9 @@
   "kleinstes": "smallest",
   "Firmenname sichtbar nach Freigabe": "Company name visible once released",
   "ohne Angabe": "not stated",
-  "zu wenige Siege": "too few wins"
+  "zu wenige Siege": "too few wins",
+  "Ausgeblendet": "Hidden",
+  "Wieder eingeblendet": "Shown again",
+  "Ausgeblendete mitzeigen": "Include hidden",
+  "Wieder einblenden": "Show again"
 }

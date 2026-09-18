@@ -536,6 +536,9 @@ function passungAchse(l, kompakt){
 }
 
 const STAR = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linejoin="round"><path d="m12 4 2.4 4.9 5.4.8-3.9 3.8.9 5.4-4.8-2.5-4.8 2.5.9-5.4-3.9-3.8 5.4-.8L12 4Z"/></svg>`;
+/* Durchgestrichenes Auge: „nicht mehr zeigen". Kein Papierkorb und kein Kreuz —
+ * beides liest sich wie „loeschen", und geloescht wird nichts. */
+const AUGE_AUS = `<svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 3l18 18"/><path d="M10.6 5.2A9.9 9.9 0 0 1 12 5c5 0 9 4.5 9 7 0 .9-.5 2-1.4 3.1"/><path d="M6.3 6.7C3.9 8.2 3 10.2 3 12c0 2.5 4 7 9 7 1.6 0 3-.4 4.2-1.1"/><path d="M9.9 9.9a3 3 0 0 0 4.2 4.2"/></svg>`;
 const LVL = {hoch:3, mittel:2, niedrig:1, na:0};
 const WF = {
   interessant:{label:'Interessant', cls:'wf-int'},
@@ -781,7 +784,13 @@ function cellHTML(l, key){
       return `<td class="c-own"><button class="owntog ${drin?'on':''}" data-own="${l.id}:${drin?'nein':'ja'}"
         title="${esc(tk(drin?'Aus dem Bestand entfernen':'Zum Bestand hinzufügen'))}">${drin?'−':'+'}</button></td>`;
     }
-    case 'star': return `<td class="c-star"><button class="tstar" data-star="${l.id}" ${l.merk?`data-merk="${l.merk}"`:''} aria-label="Merken">${STAR}</button></td>`;
+    /* ⚠ ZWEI KNOEPFE IN EINER ZELLE, und der zweite ist absichtlich leiser. Merken und
+       Ausblenden sind Gegenstuecke, aber nicht gleichwertig: ein Knopf, der Treffer
+       verschwinden laesst, darf nicht der auffaelligste der Zeile sein. Er erscheint
+       beim Ueberfahren (s. `.lt-hide` in explorer.css) und bleibt sichtbar, solange
+       etwas ausgeblendet ist. Das Klicken faengt `handleRowClick` per Delegation ab. */
+    case 'star': return `<td class="c-star"><button class="tstar" data-star="${l.id}" ${l.merk?`data-merk="${l.merk}"`:''} aria-label="Merken">${STAR}</button>`
+      + `<button class="lt-hide${l.aus?' an':''}" data-hide="${l.id}" aria-label="${l.aus?'Wieder einblenden':'Ausblenden'}" title="${l.aus?'Wieder einblenden':'Ausblenden'}">${AUGE_AUS}</button></td>`;
     case 'src': return `<td class="c-src"><span class="srcpill src-${l.src}">${l.srcLabel}</span></td>`;
     case 'titel': {
       const wort = (searchTokens.find(t=>t.type==='text')||{}).value;

@@ -36,6 +36,7 @@ export function LeadTable({
   onSort,
   onSelect,
   onStar,
+  onHide,
   onNetz,
   onOwn,
   onHeadFilter,
@@ -80,6 +81,7 @@ export function LeadTable({
   onSort: (key: string) => void;
   onSelect: (id: string) => void;
   onStar: (id: string) => void;
+  onHide?: (id: string) => void;
   onNetz: (id: string) => void;
   onOwn: (id: string, ans: string) => void;
   onHeadFilter: (facet: string, rect: DOMRect) => void;
@@ -127,6 +129,8 @@ export function LeadTable({
     const t = e.target as HTMLElement;
     const star = t.closest<HTMLElement>("[data-star]");
     if (star) { e.stopPropagation(); onStar(star.dataset.star!); return; }
+    const hide = t.closest<HTMLElement>("[data-hide]");
+    if (hide) { e.stopPropagation(); onHide?.(hide.dataset.hide!); return; }
     const ni = t.closest<HTMLElement>("[data-netzint]");
     if (ni) { e.stopPropagation(); onNetz(ni.dataset.netzint!); return; }
     const own = t.closest<HTMLElement>("[data-own]");

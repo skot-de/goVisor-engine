@@ -11,6 +11,11 @@ import {
 import { loadContracts } from "@/lib/supabase/contracts";
 import { buildProfile, brancheFromProfile } from "@/lib/profileEngine";
 import { FilterPanel, emptyAdv, advCount, filterMarken, type Adv, type Segment } from "./FilterPanel";
+/* Wertelisten fuer die Trefferzahlen an den Filtern. ⚠ Dieselbe Quelle, die FilterPanel
+ * rendert — zwei Listen liefen sonst auseinander, und die Zahl staende am falschen Chip. */
+import { PHASEN as PHASEN_DEF, LEISTUNG, RAHMEN, BAND, ART } from "@/lib/filterMarken.js";
+import { STAATEN } from "@/lib/staaten";
+const PHASEN_KEYS = (PHASEN_DEF as [string, string][]).map((x) => x[0]);
 import { LeadTable } from "./LeadTable";
 import { DetailPanel } from "./DetailPanel";
 import { StrategieView, SEKTIONEN } from "./StrategieView";
@@ -22,6 +27,7 @@ import Link from "next/link";
 import { currentUser, logout, loadProfile } from "@/lib/supabase/auth";
 import { recordLeadClick, recordAnalysis } from "@/lib/analytics";
 import { syncWatchlist, loadWatchlist, type MerkZeile } from "@/lib/supabase/watchlist";
+import { syncAusgeblendet, loadAusgeblendet } from "@/lib/supabase/ausgeblendet";
 import { Kalender } from "./Kalender";
 import { Cockpit } from "./Cockpit";
 import { getOrCreateCalendarFeed } from "@/lib/supabase/calendar";
@@ -143,6 +149,12 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
     ungesichtet: false, gemerkt: initialSlug === "watchlist", kandidaten: false,
     netz: initialSlug === "network", relevant: false,
   });
+  /* ── Ausgeblendete Vorgaenge (0021) ────────────────────────────────────────────────
+   * Gegenstueck zum Stern. ⚠ Nicht nur Kosmetik: jede Ablehnung ist ein negatives Beispiel
+   * fuer die Passung, und sie kostet EINEN Klick. Wer eine Pflichtbegruendung davorsetzt,
+   * bekommt keine Daten. Ohne Anmeldung bleibt es reiner UI-Zustand (s. ausgeblendet.ts). */
+  const [ausgeblendet, setAusgeblendet] = useState<Set<string>>(new Set());
+  const [zeigeAusgeblendete, setZeigeAusgeblendete] = useState(false);
   const [sortKey, setSortKey] = useState("frist");
   const [sortDir, setSortDir] = useState(1);
   const [awAlertOff, setAwAlertOff] = useState(false);   // #24 Zuschlag-Alert-Band ausgeblendet
@@ -518,8 +530,56 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
     applyState({ aktiveBranche, profilBranche, sortKey, sortDir, searchTokens: suchToken, filters });
     setProfile(realProfile);
     syncLocationColumn();
-    return postFilter(sorted(visible()), adv);
-  }, [aktiveBranche, sortKey, sortDir, tokens, filters, tick, realProfile, adv]);
+    const gefiltert = postFilter(sorted(visible()), adv);
+    // ⚠ Ausgeblendete fliegen ZULETZT raus, nicht vorher. Sonst fehlten sie auch in den
+    // Facettenzahlen, und der Nutzer saehe nicht mehr, dass es sie gibt.
+    return (zeigeAusgeblendete || ausgeblendet.size === 0)
+      ? gefiltert : gefiltert.filter((l) => !ausgeblendet.has(String(l.id)));
+  }, [aktiveBranche, sortKey, sortDir, tokens, filters, tick, realProfile, adv,
+      ausgeblendet, zeigeAusgeblendete]);
+
+  /* ── Trefferzahlen an den Filtern ──────────────────────────────────────────────────
+   *
+   * Jeder Chip traegt, wie viele Treffer er ergaebe. Das verhindert Klicks ins Leere, und
+   * die Zahlen liegen ohnehin vor.
+   *
+   * ⚠ DIE SEMANTIK IST „STATT", NICHT „ZUSAETZLICH". Gezaehlt wird gegen die aktuelle
+   * Auswahl OHNE diese eine Facette. Sonst faellt jeder nicht gewaehlte Wert einer bereits
+   * benutzten Facette auf null, und die Zahlen waeren nutzlos, sobald man einmal gefiltert
+   * hat.
+   *
+   * ⚠ GEZAEHLT WIRD MIT `postFilter`, NICHT MIT EINER ZWEITEN REGEL. Das ist langsamer als
+   * ein direkter Feldzugriff und der einzige Weg, der nicht auseinanderlaeuft: dieselbe
+   * Falle steht im Kopf von `postFilter` selbst („drei Kopien einer Reihenfolge laufen
+   * auseinander, und hier war es bereits passiert"). */
+  const facetZahlen = useMemo(() => {
+    const basis = sorted(visible());
+    const zaehle = (schluessel: keyof Adv, werte: string[]) => {
+      const ohneDiese = postFilter(basis, { ...adv, [schluessel]: [] } as Adv);
+      const m: Record<string, number> = {};
+      for (const w of werte) {
+        m[w] = postFilter(ohneDiese, { ...emptyAdv, [schluessel]: [w] } as Adv).length;
+      }
+      return m;
+    };
+    return {
+      staaten: zaehle("staaten", STAATEN.map((x) => x[0] as string)),
+      phases: zaehle("phases", PHASEN_KEYS),
+      leistung: zaehle("leistung", LEISTUNG.map((x) => x[0] as string)),
+      art: zaehle("art", ART.map((x) => x[0] as string)),
+      rahmen: zaehle("rahmen", RAHMEN.map((x) => x[0] as string)),
+      aufwand: zaehle("aufwand", BAND.map((x) => x[0] as string)),
+      chance: zaehle("chance", BAND.map((x) => x[0] as string)),
+      relevanz: zaehle("relevanz", BAND.map((x) => x[0] as string)),
+    } as Record<string, Record<string, number>>;
+  }, [adv, tick, aktiveBranche, sortKey, sortDir, tokens, filters, realProfile]);
+
+  /** Wie viele der aktuellen Treffer sind ausgeblendet — fuer den Schalter im Filter. */
+  const ausgeblendetImTreffer = useMemo(() => {
+    if (ausgeblendet.size === 0) return 0;
+    const roh = postFilter(sorted(visible()), adv);
+    return roh.reduce((n, l) => n + (ausgeblendet.has(String(l.id)) ? 1 : 0), 0);
+  }, [adv, tick, ausgeblendet, aktiveBranche, sortKey, sortDir, tokens, filters, realProfile]);
 
   // Akquise zeigt, worauf man sich BEWERBEN kann. Erteilte Zuschläge (#24) sind Marktbeobachtung
   // (wer hat gewonnen → wer kauft jetzt zu) und würden hier oben stehen, weil sie nach
@@ -673,6 +733,25 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
     if (!l) return;
     (l.log = (l.log as unknown[]) || []).push({ kind, text, who: t("Du"), ts: t("gerade eben") });
   }
+  /** Vorgang ausblenden oder wieder zeigen. Optimistisch, Supabase folgt. */
+  function toggleAusblenden(id: string) {
+    const l = CORE.find((x) => x.id === id);
+    const jetztAus = !ausgeblendet.has(id);
+    // ⚠ Der Zustand muss AUCH am Objekt stehen, nicht nur im React-Set: die Zeile wird aus
+    // `cellHTML` erzeugt und kennt nur den Lead. Dasselbe Muster wie `l.merk` beim Stern.
+    if (l) (l as { aus?: boolean }).aus = jetztAus;
+    setAusgeblendet((m) => {
+      const n = new Set(m);
+      if (jetztAus) n.add(id); else n.delete(id);
+      return n;
+    });
+    syncAusgeblendet(id, jetztAus, {
+      titel: (l?.titel as string) ?? null, buyer: (l as { buyer?: string } | undefined)?.buyer ?? null,
+    });
+    logEvent(l, "hidden", jetztAus ? t("Ausgeblendet") : t("Wieder eingeblendet"));
+    bump();
+  }
+
   function toggleStar(id: string) {
     const l = CORE.find((x) => x.id === id);
     if (l) {
@@ -692,6 +771,17 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
    * auf „< 0" ist deshalb toter Code — die Anzeige „abgelaufen" im Cockpit war es seit jeher.
    *
    * Was fehlt, kommt aus der Merkliste selbst, die seit heute Titel und Käufer mitführt. */
+  useEffect(() => {
+    let ab = false;
+    loadAusgeblendet().then((m) => {
+      if (ab) return;
+      // Auch hier ans Objekt, sonst zeigt der Knopf nach dem Neuladen den falschen Zustand.
+      CORE.forEach((l) => { (l as { aus?: boolean }).aus = m.has(String(l.id)); });
+      setAusgeblendet(m);
+    });
+    return () => { ab = true; };
+  }, []);
+
   const [verwaist, setVerwaist] = useState<MerkZeile[]>([]);
   useEffect(() => {
     let ab = false;
@@ -1699,6 +1789,7 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
                 onSort={handleSort}
                 onSelect={openLead}
                 onStar={toggleStar}
+                onHide={toggleAusblenden}
                 onNetz={toggleNetz}
                 onOwn={toggleOwn}
                 onHeadFilter={(facet, rect) =>
@@ -1762,6 +1853,10 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
         branche={aktiveBranche}
         profilBranche={profilBranche}
         brancheCounts={branchenCounts}
+        facetZahlen={facetZahlen}
+        ausgeblendetImTreffer={ausgeblendetImTreffer}
+        zeigeAusgeblendete={zeigeAusgeblendete}
+        onToggleAusgeblendete={() => setZeigeAusgeblendete((v) => !v)}
         onSetBranche={setBranche}
         onResetBranche={resetBranche}
         segments={cpvSegments}

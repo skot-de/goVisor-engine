@@ -87,11 +87,29 @@ const parseEur = (s: string): number | null => {
   return isNaN(n) ? null : n;
 };
 
+/* ── Die Zahl am Chip ────────────────────────────────────────────────────────────────
+ *
+ * ⚠ NULL WIRD ANGEZEIGT, NICHT VERSTECKT. Ein Chip ohne Zahl sieht aus wie einer, dessen
+ * Zahl noch laedt. „0" sagt dagegen genau das, wofuer die Zahlen da sind: hier gibt es
+ * nichts, spar dir den Klick. Fehlt die Facette ganz (noch nicht gezaehlt), bleibt es leer.
+ * Der Wert ist eine Auskunft, kein Teil der Beschriftung — deshalb `aria-hidden`. */
+function Zahl({ n }: { n?: number }) {
+  if (n == null) return null;
+  return <span className="fp-chip-n" aria-hidden>{n.toLocaleString("de-DE")}</span>;
+}
+
 export function FilterPanel({
   open, adv, resultCount, segments, onChange, onClose, onReset,
   branche, profilBranche, brancheCounts, onSetBranche, onResetBranche,
+  facetZahlen, ausgeblendetImTreffer, zeigeAusgeblendete, onToggleAusgeblendete,
 }: {
   open: boolean; adv: Adv; resultCount: number; segments: Segment[];
+  /** Je Facette und Wert: wie viele Treffer ergaebe dieser Chip STATT der aktuellen Wahl.
+   *  Leer, solange nichts gezaehlt wurde — dann rendert `Zahl` nichts. */
+  facetZahlen?: Record<string, Record<string, number>>;
+  ausgeblendetImTreffer?: number;
+  zeigeAusgeblendete?: boolean;
+  onToggleAusgeblendete?: () => void;
   onChange: (a: Adv) => void; onClose: () => void; onReset: () => void;
   // Grundraum: strukturell ein Filter (welcher Datenraum), deshalb hier statt im Header —
   // er wird aus dem Profil abgeleitet und ist kein Routine-Handgriff mehr.
@@ -135,12 +153,25 @@ export function FilterPanel({
             ) : null}
           </section>
 
+          {/* ⚠ GANZ OBEN, WEIL ER EINE LUECKE ERKLAERT. Wer etwas ausgeblendet hat, sieht
+              danach weniger Treffer, als die Zahlen versprechen. Steht der Schalter unten,
+              sucht er den Grund woanders. Erscheint nur, wenn es etwas auszublenden gibt. */}
+          {(ausgeblendetImTreffer ?? 0) > 0 && (
+            <section className="fp-sec">
+              <label className="fp-check">
+                <input type="checkbox" checked={!!zeigeAusgeblendete}
+                       onChange={() => onToggleAusgeblendete?.()} />
+                <span>{t("Ausgeblendete mitzeigen")}<Zahl n={ausgeblendetImTreffer} /></span>
+              </label>
+            </section>
+          )}
+
           <section className="fp-sec">
             <h5>{t("Land")} <span className="fp-hint">{t("Vergabeland (DACH)")}</span></h5>
             {STAATEN.map(([v, l]) => (
               <label key={v} className="fp-check">
                 <input type="checkbox" checked={adv.staaten.includes(v)} onChange={() => set({ staaten: toggle(adv.staaten, v) })} />
-                <span>{t(l)}</span>
+                <span>{t(l)}<Zahl n={facetZahlen?.staaten?.[v]} /></span>
               </label>
             ))}
           </section>
@@ -150,7 +181,7 @@ export function FilterPanel({
             {PHASEN.map(([v, l]) => (
               <label key={v} className="fp-check">
                 <input type="checkbox" checked={adv.phases.includes(v)} onChange={() => set({ phases: toggle(adv.phases, v) })} />
-                <span>{t(l)}</span>
+                <span>{t(l)}<Zahl n={facetZahlen?.phases?.[v]} /></span>
               </label>
             ))}
           </section>
@@ -232,7 +263,7 @@ export function FilterPanel({
             <h5>{t("Relevanz")} <span className="fp-hint">{t("Profil-Passung · braucht Profil")}</span></h5>
             <div className="fp-chips">
               {BAND.map(([v, l]) => (
-                <button key={v} className={`fp-chip ${adv.relevanz.includes(v) ? "on" : ""}`} onClick={() => set({ relevanz: toggle(adv.relevanz, v) })}>{t(l)}</button>
+                <button key={v} className={`fp-chip ${adv.relevanz.includes(v) ? "on" : ""}`} onClick={() => set({ relevanz: toggle(adv.relevanz, v) })}>{t(l)}<Zahl n={facetZahlen?.relevanz?.[v]} /></button>
               ))}
             </div>
           </section>
@@ -241,7 +272,7 @@ export function FilterPanel({
             <h5>{t("Chance")} <span className="fp-hint">{t("Wechsel-Chance")}</span></h5>
             <div className="fp-chips">
               {BAND.map(([v, l]) => (
-                <button key={v} className={`fp-chip ${adv.chance.includes(v) ? "on" : ""}`} onClick={() => set({ chance: toggle(adv.chance, v) })}>{t(l)}</button>
+                <button key={v} className={`fp-chip ${adv.chance.includes(v) ? "on" : ""}`} onClick={() => set({ chance: toggle(adv.chance, v) })}>{t(l)}<Zahl n={facetZahlen?.chance?.[v]} /></button>
               ))}
             </div>
           </section>
@@ -250,7 +281,7 @@ export function FilterPanel({
             <h5>{t("Aufwand")}</h5>
             <div className="fp-chips">
               {BAND.map(([v, l]) => (
-                <button key={v} className={`fp-chip ${adv.aufwand.includes(v) ? "on" : ""}`} onClick={() => set({ aufwand: toggle(adv.aufwand, v) })}>{t(l)}</button>
+                <button key={v} className={`fp-chip ${adv.aufwand.includes(v) ? "on" : ""}`} onClick={() => set({ aufwand: toggle(adv.aufwand, v) })}>{t(l)}<Zahl n={facetZahlen?.aufwand?.[v]} /></button>
               ))}
             </div>
             <div className="fp-chips" style={{ marginTop: 8 }}>
@@ -267,7 +298,7 @@ export function FilterPanel({
             <h5>{t("Leistungsart")}</h5>
             <div className="fp-chips">
               {LEISTUNG.map(([v, l]) => (
-                <button key={v} className={`fp-chip ${adv.leistung.includes(v) ? "on" : ""}`} onClick={() => set({ leistung: toggle(adv.leistung, v) })}>{t(l)}</button>
+                <button key={v} className={`fp-chip ${adv.leistung.includes(v) ? "on" : ""}`} onClick={() => set({ leistung: toggle(adv.leistung, v) })}>{t(l)}<Zahl n={facetZahlen?.leistung?.[v]} /></button>
               ))}
             </div>
           </section>
@@ -276,7 +307,7 @@ export function FilterPanel({
             <h5>{t("Vertragsart")}</h5>
             <div className="fp-chips">
               {ART.map(([v, l]) => (
-                <button key={v} className={`fp-chip ${adv.art.includes(v) ? "on" : ""}`} onClick={() => set({ art: toggle(adv.art, v) })}>{t(l)}</button>
+                <button key={v} className={`fp-chip ${adv.art.includes(v) ? "on" : ""}`} onClick={() => set({ art: toggle(adv.art, v) })}>{t(l)}<Zahl n={facetZahlen?.art?.[v]} /></button>
               ))}
             </div>
           </section>
@@ -285,7 +316,7 @@ export function FilterPanel({
             <h5>{t("Rechtsrahmen")}</h5>
             <div className="fp-chips">
               {RAHMEN.map(([v, l]) => (
-                <button key={v} className={`fp-chip ${adv.rahmen.includes(v) ? "on" : ""}`} onClick={() => set({ rahmen: toggle(adv.rahmen, v) })}>{t(l)}</button>
+                <button key={v} className={`fp-chip ${adv.rahmen.includes(v) ? "on" : ""}`} onClick={() => set({ rahmen: toggle(adv.rahmen, v) })}>{t(l)}<Zahl n={facetZahlen?.rahmen?.[v]} /></button>
               ))}
             </div>
           </section>

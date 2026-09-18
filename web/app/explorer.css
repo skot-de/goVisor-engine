@@ -2650,3 +2650,26 @@ td.c-doks .dok-na{opacity:.3}
 /* Störung: das Gegenteil einer Aussage über die Daten (Fallenkatalog A16). */
 .tcount-stoer{opacity:.75;color:var(--bad,#c62828)}
 .stoer-t{border-left:3px solid var(--bad,#c62828);padding-left:10px;text-align:left}
+
+
+/* ── Trefferzahl am Filter-Chip ────────────────────────────────────────────────────
+ * Eine Auskunft, kein Teil der Beschriftung: leiser gesetzt, mit Tabellenziffern, damit
+ * die Zahlen untereinander stehen. Auf einem gewaehlten Chip erbt sie dessen Farbe. */
+.fp-chip-n{
+  display:inline-block; margin-left:6px; font-size:11px; font-weight:600;
+  font-variant-numeric:tabular-nums; opacity:.55; letter-spacing:.01em;
+}
+.fp-chip.on .fp-chip-n{opacity:.75}
+.fp-check .fp-chip-n{margin-left:7px; color:var(--ink-500)}
+
+/* ── Ausblenden in der Trefferzeile ────────────────────────────────────────────────
+ * Sitzt neben dem Stern und bleibt bis zum Ueberfahren der Zeile leise: ein Knopf, der
+ * Treffer verschwinden laesst, darf nicht der auffaelligste sein. */
+.lt-hide{
+  background:none; border:0; padding:2px; cursor:pointer; line-height:0;
+  color:var(--ink-400); opacity:0; transition:opacity .12s ease, color .12s ease;
+}
+tr:hover .lt-hide, .lt-hide:focus-visible, .lt-hide.an{opacity:1}
+.lt-hide:hover{color:var(--ink-700)}
+.lt-hide.an{color:var(--ink-600)}
+@media (prefers-reduced-motion:reduce){.lt-hide{transition:none}}
