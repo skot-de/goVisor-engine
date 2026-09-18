@@ -18,13 +18,16 @@ import "../zugang.css";
 import { CheckMitbringsel } from "@/components/CheckMitbringsel";
 import "../landing-oeffentlich.css";
 import { staatenAufzaehlung } from "@/lib/staaten";
+// ⚠ AUS DEM MODUL, DAS DEN SCHLUESSEL BESITZT. Hier stand eine eigene Kopie
+// (`const PROFILE_KEY = "govisor.profile.v1"`). Genau deshalb fehlte darunter das
+// Signal: wer die Konstante kopiert, sieht die Pflicht nicht, die daneben steht.
+import { PROFILE_KEY, profilGeaendert } from "@/lib/useProfil";
 
 /* Onboarding — portiert aus INPUT/Design/govisor-onboarding-v1.4.html.
    Registrierung + Firmen-Matching + Profil in einem ganzseitigen Flow. Die Demo-ENTITIES
    der Vorlage sind hier durch das echte Matching (/api/entity-search, /api/entity-group)
    ersetzt; E-Mail/Passwort sind UI-Stub bis Supabase-Auth (Ticket #6). */
 
-const PROFILE_KEY = "govisor.profile.v1";
 
 type Feld = { cpv4: string; label: string | null; wins: number };
 type Feld6 = { cpv6: string; wins: number };
@@ -734,6 +737,14 @@ function testMailErlaubt(mail: string): boolean {
       };
     }
     try { localStorage.setItem(PROFILE_KEY, JSON.stringify(profile)); } catch { /* Quota */ }
+    /* ⚠ OHNE DIES BLEIBT DER ALTE FIRMENNAME IM KOPF STEHEN. `useProfil` haelt den Wert
+       im Zustand und liest ihn nur neu, wenn `govisor:profil` feuert — ein `storage`-
+       Ereignis des Browsers hilft nicht, das feuert nur in ANDEREN Tabs.
+       Gemeldet am 2026-09-18: nach einem Onboarding auf „H. Klostermann Baugesellschaft
+       mbH" stand in der Kopfzeile weiter „CANCOM" aus dem vorigen Durchlauf. Der Nutzer
+       sieht auf demselben Bildschirm zwei verschiedene Firmen und kann nicht wissen,
+       welche gilt. */
+    profilGeaendert();
     // Verbraucht. Sonst belegt ein zweiter Durchlauf still mit den Zahlen des ersten vor.
     track(EV.ONBOARDING_DONE, { matched: !!matched, entities: matched ? aktiv.size : 0 });
 
