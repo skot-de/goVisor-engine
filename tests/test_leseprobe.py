@@ -112,3 +112,84 @@ def test_die_seite_wirft_abgelaufenes_nochmal_raus():
     # ⚠ Deutsche Schreibweise: `new Date("08.09.2026")` ist ungültig, und dann wäre JEDER
     # Vorgang abgelaufen — die Leseprobe verschwände lautlos.
     assert re.search(r"\(\\d\{2\}\)\\\.", tsx) or "\\d{2})\\." in tsx
+
+
+# ── Der Vorbehalt darf nicht mit eingeklappt werden ─────────────────────────────────────
+
+def _ohne_kommentar(s: str) -> str:
+    """`//` und `/* */` raus. ⚠ OHNE DAS PRUEFT DIESE DATEI IHRE EIGENE BEGRUENDUNG: der
+    Kommentar ueber der Stelle nennt naturgemaess genau die Worte, auf die die Pruefung
+    anspringt. Am 2026-09-18 genau hier passiert — die Bedingung war im Rueckbau entfernt
+    und der Test blieb gruen, weil der Kommentar darueber sie erwaehnt (F13)."""
+    raus, i, n = [], 0, len(s)
+    while i < n:
+        if s[i] == "/" and i + 1 < n and s[i + 1] == "/":
+            while i < n and s[i] != "\n":
+                raus.append(" ")
+                i += 1
+            continue
+        if s[i] == "/" and i + 1 < n and s[i + 1] == "*":
+            while i < n and not (s[i] == "*" and i + 1 < n and s[i + 1] == "/"):
+                raus.append("\n" if s[i] == "\n" else " ")
+                i += 1
+            raus.append("  ")
+            i += 2
+            continue
+        raus.append(s[i])
+        i += 1
+    return "".join(raus)
+
+
+def _eignungscheck() -> str:
+    """⚠ ENTKOMMENTIERT. Wer hier den Rohtext will, holt ihn sich ausdruecklich."""
+    return _ohne_kommentar(
+        (WURZEL / "web" / "components" / "EignungsCheck.tsx").read_text(encoding="utf-8"))
+
+
+def test_der_vorbehalt_steht_in_der_sichtbaren_zeile():
+    """⚠ Am 2026-09-18 sind Grundlage und Vorbehalte eingeklappt worden („das lenkt nur
+    ab", Sven). Richtig, zwei Absaetze Kleingedrucktes direkt ueber dem Knopf ziehen den
+    Blick von den fuenf Vorgaengen weg.
+
+    Der Vorbehalt selbst darf dabei NICHT verschwinden. Die fuenf Zeilen sind offene
+    Vergaben aus Fachgebiet und Region, NICHT das Ergebnis der Eignungsrechnung darueber;
+    sie stehen nur direkt darunter. Wer beides nebeneinanderstellt, ohne das zu sagen,
+    behauptet „diese fuenf passen zu euch" — genau die Sorte Behauptung, die der Kommentar
+    im Leseproben-Block ausdruecklich ausschliesst.
+
+    Einklappen ist deshalb erlaubt, Verschweigen nicht: die ZEILE, die man ohne Klick
+    sieht, muss den Vorbehalt tragen. Wer die Zusammenfassung auf „Grundlage" kuerzt,
+    faellt hier durch.
+    """
+    s = _eignungscheck()
+    i = s.index('<details className="ec-methodik">')
+    kopf = s[i:s.index("</summary>", i)]
+    assert "nicht geprüft" in kopf, (
+        "die aufklappbare Zeile nennt den Vorbehalt nicht mehr. Dann sieht ein Besucher "
+        "fuenf Vergaben unter einer Eignungsrechnung und darf annehmen, sie haetten "
+        "miteinander zu tun")
+
+
+def test_die_belege_sind_nur_eingeklappt_nicht_geloescht():
+    """Beide Absaetze muessen im aufklappbaren Teil stehen bleiben. Ein `<details>`, das
+    nichts mehr enthaelt, ist eine Zeile, die etwas verspricht und nichts liefert."""
+    s = _eignungscheck()
+    i = s.index('<details className="ec-methodik">')
+    block = s[i:s.index("</details>", i)]
+    for was, wo in (("die nächsten Fristen zuerst", "die Herkunft der fuenf Zeilen"),
+                    ("Grundlage:", "die Zahl der ausgewerteten Unterlagen"),
+                    ("entscheidet die Vergabestelle", "der Hinweis auf den Einzelfall")):
+        assert was in block, f"{wo} fehlt im aufklappbaren Teil ({was!r})"
+
+
+def test_ohne_leseprobe_kein_satz_ueber_die_leseprobe():
+    """⚠ BEIM UMBAU SELBST ZUGESCHLAGEN. Der Absatz hing an `proben.liste.length > 0`,
+    solange er im Leseproben-Kasten stand. Herausgezogen ins `<details>` waere die
+    Bedingung mit verschwunden — und ohne Leseprobe stuende dort ein Satz ueber fuenf
+    Vorgaenge, die es nicht gibt."""
+    s = _eignungscheck()
+    i = s.index('<details className="ec-methodik">')
+    block = s[i:s.index("</details>", i)]
+    j = block.index("die nächsten Fristen zuerst")
+    assert "proben.liste.length > 0" in block[:j], (
+        "der Absatz ueber die Leseprobe steht ohne Bedingung im aufklappbaren Teil")

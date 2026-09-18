@@ -579,6 +579,31 @@ export function EignungsCheck({ check, fachgebiete, leseprobe }: {
                             Region. Sie sind NICHT gegen die Angaben geprüft. Ein Satz, der
                             zwei Zahlen aneinanderlegt, die nichts miteinander zu tun haben,
                             ist genau die Sorte Behauptung, die dieses Produkt nicht macht. */}
+                      </div>
+                    ) : null}
+
+                    {/* ⚠ EINGEKLAPPT, ABER NICHT VERSTECKT. Sven am 2026-09-18: „das lenkt nur
+                        ab" — stimmt, zwei Absaetze Kleingedrucktes direkt ueber dem Knopf
+                        ziehen den Blick von den fuenf Vorgaengen weg.
+
+                        Was NICHT mit einklappen darf, ist der Vorbehalt. „Gegen eure Angaben
+                        geprueft sind sie nicht" ist der Grund, warum die Leseprobe ueberhaupt
+                        gezeigt werden darf: die fuenf Zeilen sind offene Vergaben aus Fach und
+                        Region, nicht das Ergebnis der Eignungsrechnung darueber. Wer sie
+                        nebeneinanderstellt, ohne das zu sagen, macht genau die Behauptung, die
+                        dieses Produkt nicht macht. Deshalb traegt die aufgeklappte ZEILE ihn,
+                        nicht der eingeklappte Inhalt.
+
+                        `<details>` statt React-Zustand: kein Skript, mit Tastatur bedienbar,
+                        und es funktioniert auch, wenn das Bundle nicht laedt. */}
+                    <details className="ec-methodik">
+                      <summary>Grundlage, und was hier nicht geprüft ist</summary>
+                      {/* ⚠ Der Absatz gehoert zur Leseprobe und darf ohne sie NICHT stehen.
+                          Er hing an `proben.liste.length > 0`, als er noch im Kasten stand;
+                          beim Herausziehen ins <details> waere die Bedingung mit
+                          verschwunden, und ohne Leseprobe stuende hier ein Satz ueber fuenf
+                          Vorgaenge, die es nicht gibt. */}
+                      {proben.liste.length > 0 ? (
                         <p className="ec-probe-fuss">
                           Offene Vergaben aus {eigenerKatalog ? fachLabel : "eurem Fachgebiet"}
                           {/* ⚠ „in Bayern" durfte nicht dastehen, solange nur einer von fünf
@@ -596,9 +621,7 @@ export function EignungsCheck({ check, fachgebiete, leseprobe }: {
                           und wer bisher gewonnen hat. Dafür braucht es ein Konto, kostenlos
                           und ohne Zahlungsdaten.
                         </p>
-                      </div>
-                    ) : null}
-
+                      ) : null}
                     <p className="ec-fuss">
                       Grundlage: {nf(katalog?.n ?? 0)} ausgewertete Vergabeunterlagen
                       {eigenerKatalog ? ` in ${fachLabel}` : " über alle Fachgebiete"};
@@ -609,6 +632,7 @@ export function EignungsCheck({ check, fachgebiete, leseprobe }: {
                       unsere Auswertung nicht erfasst hat, fehlt hier. Über die Zulassung im
                       Einzelfall entscheidet die Vergabestelle.
                     </p>
+                    </details>
                   </>
                 ) : null}
               </div>

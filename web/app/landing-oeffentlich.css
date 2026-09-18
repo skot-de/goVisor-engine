@@ -242,6 +242,31 @@
 .ec-opt-an { background: var(--signal-deep, #067A55); border-color: var(--signal-deep, #067A55);
   color: #fff; font-weight: 600; }
 
+/* ── Grundlage und Vorbehalte: da, aber eingeklappt ────────────────────────────────
+   ⚠ Sven am 2026-09-18: „das lenkt nur ab". Zwei Absaetze Kleingedrucktes standen direkt
+   ueber dem Knopf und zogen den Blick von den fuenf Vorgaengen weg. Eingeklappt, nicht
+   entfernt: der Vorbehalt steht in der sichtbaren Zeile, die Belege dahinter.
+
+   `<details>` bringt in Safari und Chrome ein eigenes Dreieck mit, das nicht zur Schrift
+   passt. `::-webkit-details-marker` schaltet es ab (WebKit), `list-style` den Rest. */
+.ec-methodik { margin: 14px 0 0; }
+.ec-methodik > summary {
+  font-size: 11.5px; line-height: 1.6; color: var(--ink-400, #8C9B95);
+  cursor: pointer; list-style: none; display: inline-flex; align-items: center; gap: 6px;
+  border-bottom: 1px dotted var(--linie, #E3EAE7); padding-bottom: 1px;
+}
+.ec-methodik > summary::-webkit-details-marker { display: none; }
+.ec-methodik > summary::before {
+  content: "›"; display: inline-block; font-size: 13px; line-height: 1;
+  transition: transform .15s ease; transform: rotate(0deg);
+}
+.ec-methodik[open] > summary::before { transform: rotate(90deg); }
+.ec-methodik > summary:hover { color: var(--ink-300, #6E7D77); }
+/* ⚠ Tastaturbedienung sichtbar lassen. `outline: none` auf einem summary nimmt der
+   Tab-Navigation die einzige Rueckmeldung, die sie hat. */
+.ec-methodik > summary:focus-visible { outline: 2px solid var(--gruen, #1F6F4A); outline-offset: 3px; }
+.ec-methodik > .ec-probe-fuss:first-of-type { margin-top: 10px; }
+
 .ec-fuss { font-size: 11.5px; line-height: 1.6; color: var(--ink-400, #8C9B95); margin: 14px 0 0; }
 
 
