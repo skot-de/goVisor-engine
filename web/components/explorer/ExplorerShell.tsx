@@ -1522,7 +1522,18 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
                 <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
                   <path d="M3 5h18l-7 8v5l-4 2v-7L3 5Z" />
                 </svg>
-                {t("Filter")}{advCount(adv) ? <span className="filt-n">{advCount(adv)}</span> : null}
+                {t("Filter")}
+                {/* ⚠ AUCH DIE NULL ZEIGEN. Vorher verschwand die Zahl, sobald nichts
+                    gesetzt war — und dann liess sich „kein Filter aktiv" nicht von
+                    „die Anzeige fehlt" unterscheiden. Genau diese Unsicherheit hat Sven
+                    am 2026-09-18 gefragt („wo sehe ich nun die aktiven filter?"), nachdem
+                    er NICHT gefiltert hatte: das Ausbleiben war richtig und trotzdem
+                    keine Auskunft. Die Null beantwortet die Frage dauerhaft, an dem Ort,
+                    an dem man ohnehin nachsieht.
+                    Die Marken-Reihe ueber der Tabelle bleibt bedingt — sie zaehlt nicht,
+                    sie listet auf, und eine Reihe die „nichts" meldet ist eine Zeile
+                    zu viel. */}
+                <span className="filt-n" data-leer={advCount(adv) ? undefined : ""}>{advCount(adv)}</span>
               </button>
             </div>
             <div className="colcfg">

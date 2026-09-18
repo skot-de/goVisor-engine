@@ -324,6 +324,12 @@ img,svg{display:block;max-width:100%}
 /* Filter-Panel — schiebt von rechts ein */
 .filt-n{display:inline-grid;place-items:center;min-width:15px;height:15px;padding:0 4px;margin-left:5px;
   border-radius:100px;background:var(--signal-deep);color:#fff;font-family:var(--mono);font-size:9px;font-weight:600}
+/* ⚠ DIE NULL IST KEIN ABZEICHEN. In derselben gefuellten Pille wie eine aktive Zahl
+   saehe „kein Filter gesetzt" aus wie „ein Filter gesetzt" — die Anzeige wuerde die Frage
+   beantworten, die sie ausgeloest hat, und zwar falsch. Ohne Fuellung, gedeckte Farbe:
+   die Zahl ist da und meldet nichts. */
+.filt-n[data-leer]{background:none;color:var(--ink-400);font-weight:500}
+
 .fp-scrim{position:fixed;inset:0;background:rgba(18,33,29,.28);opacity:0;pointer-events:none;
   transition:opacity .22s;z-index:90}
 .fp-scrim.on{opacity:1;pointer-events:auto}
