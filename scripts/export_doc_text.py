@@ -101,17 +101,42 @@ def _abdruecke(con) -> dict[str, str]:
     # gehofft, sondern heruntergeschaltet, bis es geht. Und `preserve_insertion_order=false`
     # bleibt tabu, auch wenn DuckDB es vorschlaegt — s. der Kommentar in `main()`.
     letzte: Exception | None = None
-    for faeden in (4, 2, 1):
+    # ⚠ DAS HERUNTERSCHALTEN DER FAEDEN REICHT NICHT MEHR — und das war vorauszusehen.
+    # Genau drei Zeilen hoeher steht seit dem 2026-09-16: „der Bestand waechst taeglich,
+    # also scheitert jeder Folgelauf sicherer als der davor." Die Fadenstufe kaufte GENAU
+    # EINE NACHT (17.09. lief durch), am 18.09. starb der Schritt wieder — diesmal an
+    # einem PIN, nicht an einer Allokation:
+    #
+    #     failed to pin block of size 21.7 MiB (945.8 MiB/953.6 MiB used)
+    #
+    # Ein gepinnter Block kann nicht ausgelagert werden; das Auslagerungsverzeichnis von
+    # 20 GB hilft dagegen nichts, und weniger Faeden auch nicht. Gemessen am 2026-09-18
+    # ueber 14.742 Vorgaenge, alle sechs Kombinationen einzeln gefahren:
+    #
+    #     memory_limit  threads=4            threads=1
+    #     1 GB          ✖ OutOfMemory        ✖ OutOfMemory
+    #     2 GB          ✓ 14.742 in 1,7 s    ✓ 14.742 in 5,6 s
+    #     4 GB          ✓ 14.742 in 1,6 s    ✓ 14.742 in 5,5 s
+    #
+    # Bei 1 GB scheitert es unabhaengig von der Fadenzahl. Deshalb wird jetzt die GRENZE
+    # hochgeschaltet, nicht die Fadenzahl herunter — dieselbe Philosophie („nicht eine
+    # Zahl setzen und hoffen"), nur an der Stellschraube, die tatsaechlich wirkt. Mehr
+    # Faeden sind dabei schneller, nicht teurer.
+    #
+    # ⚠ Die Grenze wird hinterher NICHT zurueckgesetzt: `main()` setzt sie vor diesem
+    # Aufruf, und der teure Teil (das Lesen der Textspalten) kommt danach. Wer hier
+    # aufraeumt, nimmt dem Rest des Laufs den Speicher, den er gerade gebraucht hat.
+    for grenze in ("1GB", "2GB", "4GB"):
         try:
-            con.execute(f"SET threads={faeden}")
+            con.execute(f"SET memory_limit='{grenze}'")
             zeilen = con.execute(abfrage).fetchall()
-            if faeden < 4:
-                print(f"  (Fingerabdruecke mit threads={faeden} — bei mehr reicht der "
-                      f"Speicher nicht)")
+            if grenze != "1GB":
+                print(f"  (Fingerabdruecke mit memory_limit={grenze} — bei weniger "
+                      f"reicht der Speicher nicht)")
             return {str(a): str(b) for a, b in zeilen}
         except duckdb.OutOfMemoryException as e:                     # noqa: PERF203
             letzte = e
-            print(f"  ⚠ threads={faeden}: Speicher reicht nicht, schalte herunter.")
+            print(f"  ⚠ memory_limit={grenze}: Speicher reicht nicht, schalte hoch.")
     raise letzte
 
 
