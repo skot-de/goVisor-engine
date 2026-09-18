@@ -127,7 +127,7 @@ export function baueHinweise(f: HinweisFelder): Hinweis[] {
       label: LABEL.fristVerlaengert,
       beleg: alt
         ? `Veröffentlicht war der ${alt}, die aktuelle Frist ist der ${datum(f.deadlineAktuell)}.`
-        : `Die aktuelle Frist ist der ${datum(f.deadlineAktuell)} — später als zunächst veröffentlicht.`,
+        : `Die aktuelle Frist ist der ${datum(f.deadlineAktuell)}, später als zunächst veröffentlicht.`,
     });
   }
 
@@ -163,7 +163,7 @@ export function baueHinweise(f: HinweisFelder): Hinweis[] {
     out.push({
       art: "chance",
       label: LABEL.amtsinhaberNeu,
-      beleg: "Der bisherige Auftragnehmer hält den Bedarf erst seit einem Vergabezyklus —"
+      beleg: "Der bisherige Auftragnehmer hält den Bedarf erst seit einem Vergabezyklus,"
            + " es gibt keine gewachsene Bindung.",
     });
   }
@@ -174,7 +174,7 @@ export function baueHinweise(f: HinweisFelder): Hinweis[] {
       art: "herkunft",
       label: LABEL.mehrerePortale,
       beleg: `Dieselbe Vergabe erscheint auf ${f.portale.length} Portalen (${f.portale.join(", ")})`
-           + " — die Angaben sind zusammengeführt.",
+           + ", die Angaben sind zusammengeführt.",
     });
   }
   if (f.kategorieQuelle === "modell") {

@@ -199,7 +199,7 @@ export async function PATCH(req: Request) {
   // Gleicher Grund wie beim Archivieren: null getroffene Zeilen sind kein Fehler, sondern
   // eine leere Antwort — und ein `ok` darauf wäre falsch.
   if (!data?.length) {
-    return NextResponse.json({ error: "Nicht dein Baustein — nur die anlegende Person kann "
+    return NextResponse.json({ error: "Nicht dein Baustein, nur die anlegende Person kann "
                                      + "die Freigabe ändern." }, { status: 403 });
   }
   return NextResponse.json({ ok: true, sichtbarkeit: nachFirma ? "firma" : "privat" });
@@ -223,7 +223,7 @@ export async function DELETE(req: Request) {
     .update({ archived: true, last_edited_by: user.id }).eq("id", id).select("id");
   if (error) return NextResponse.json({ error: error.message }, { status: 500 });
   if (!data?.length) {
-    return NextResponse.json({ error: "Nicht dein Baustein — nur die anlegende Person kann "
+    return NextResponse.json({ error: "Nicht dein Baustein, nur die anlegende Person kann "
                                      + "ihn archivieren." }, { status: 403 });
   }
   return NextResponse.json({ ok: true });

@@ -110,7 +110,7 @@ function euro(n: number): string {
 function stufenLabel(s: { von: number; bis: number | null }): string {
   if (s.von === 0) return `bis ${euro(s.bis as number)}`;
   if (s.bis === null) return `über ${euro(s.von)}`;
-  return `${euro(s.von)} – ${euro(s.bis)}`;
+  return `${euro(s.von)} bis ${euro(s.bis)}`;
 }
 
 /** Eine Auswahlleiste: Knöpfe statt Aufklappmenü, weil man die Nachbarwerte sehen soll. */

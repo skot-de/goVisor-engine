@@ -47,7 +47,7 @@ export async function GET(req: Request) {
     return NextResponse.json(
       bestand
         ? { error: "kein Profil (keine belegten Zuschläge)", id }
-        : { error: "Firmenprofile nicht geladen — DATA_BASE_URL prüfen (docs/web-data-storage.md)" },
+        : { error: "Firmenprofile nicht geladen, DATA_BASE_URL prüfen (docs/web-data-storage.md)" },
       { status: bestand ? 404 : 503 });
   }
 

@@ -88,7 +88,7 @@ const AMPEL: Record<Antwort["lauf"]["ergebnis"], { farbe: string; text: string }
   durch:       { farbe: "gut",  text: "sauber durchgelaufen" },
   mit_fehlern: { farbe: "warn", text: "durchgelaufen, aber mit Fehlern" },
   laeuft:      { farbe: "info", text: "läuft gerade" },
-  abgebrochen: { farbe: "bad",  text: "ABGEBROCHEN — keine Schlussmeldung im Log" },
+  abgebrochen: { farbe: "bad",  text: "ABGEBROCHEN, keine Schlussmeldung im Log" },
   keiner:      { farbe: "bad",  text: "kein Lauf gefunden" },
 };
 
@@ -163,7 +163,7 @@ export default function LaufPage() {
                 </dl>
                 {ueberfaellig ? (
                   <p className="lauf-hinweis">
-                    Geplant sind 13:00 und 22:00 — bei diesem Alter ist mindestens ein Lauf
+                    Geplant sind 13:00 und 22:00, bei diesem Alter ist mindestens ein Lauf
                     ausgefallen.
                   </p>
                 ) : null}
@@ -192,8 +192,7 @@ export default function LaufPage() {
                       <p className="lf-aktuell">{d.lauf.letzterSchritt}</p>
                     ) : null}
                     {d.fortschritt.massstabAus ? (
-                      <p className="lf-fuss">Restzeit geschätzt aus dem letzten vollständigen Lauf —
-                        ändert sich der Umfang, stimmt sie nicht.</p>
+                      <p className="lf-fuss">Restzeit geschätzt aus dem letzten vollständigen Lauf. Ändert sich der Umfang, stimmt sie nicht.</p>
                     ) : null}
                   </div>
                 ) : null}
@@ -202,7 +201,7 @@ export default function LaufPage() {
               {d.lauf.logZeilen.length ? (
                 <section className="lauf-karte">
                   <div className="lauf-kopf">
-                    <b>Log — die letzten {d.lauf.logZeilen.length} Zeilen</b>
+                    <b>Log: die letzten {d.lauf.logZeilen.length} Zeilen</b>
                     <span className="lauf-urteil">
                       aktualisiert {new Date(d.erzeugt).toLocaleTimeString("de-DE")}
                     </span>
@@ -337,12 +336,12 @@ export default function LaufPage() {
                 {d.dokumente.abgeschossen > 0 ? (
                   <p className="lauf-hinweis">
                     {d.dokumente.abgeschossen} Archive an der Speicher- oder Zeitgrenze
-                    abgebrochen — bearbeitet, aber ohne Text. Kein Rückstand.
+                    abgebrochen. Bearbeitet, aber ohne Text. Kein Rückstand.
                   </p>
                 ) : null}
                 {d.dokumente.rueckstand == null ? (
                   <p className="lauf-hinweis">
-                    Noch kein Indexlauf, der seinen Stand hinterlassen hat — die Zahl kommt
+                    Noch kein Indexlauf, der seinen Stand hinterlassen hat, die Zahl kommt
                     mit dem nächsten Durchlauf. Bis dahin wird hier <b>nichts geschätzt</b>.
                   </p>
                 ) : null}
@@ -363,7 +362,7 @@ export default function LaufPage() {
                 <section className="lauf-karte lauf-bad">
                   <div className="lauf-kopf">
                     <span className="lauf-punkt" aria-hidden="true" />
-                    <b>Startversuch gescheitert — vor dem ersten Logeintrag</b>
+                    <b>Startversuch gescheitert, vor dem ersten Logeintrag</b>
                   </div>
                   <p className="lauf-hinweis">
                     Ein geplanter Lauf ist angesprungen und sofort gestorben. Er hat es nicht
@@ -435,7 +434,7 @@ export default function LaufPage() {
                       {Object.entries(ertrag.blockiert_nach_grund ?? {}).map(([g, n], i) => (
                         <span key={g}>{i ? " · " : ""}{g} {(n as number).toLocaleString("de-DE")}</span>
                       ))}
-                      <em>— Vorgänge, an deren Unterlagen wir ohne Zugang nicht herankommen.</em>
+                      <em>Vorgänge, an deren Unterlagen wir ohne Zugang nicht herankommen.</em>
                     </p>
                   ) : null}
                 </section>

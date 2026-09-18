@@ -39,11 +39,11 @@ export function exportProfilPdf(profil: Profil, ctx: ProfilContext) {
     return `<tr><td>${esc(label)}</td><td>${esc(val)}</td><td>${esc(a.zustand)}</td></tr>`;
   }).join("");
   const refs = profil.references.map((r) =>
-    `<tr><td>${esc(r.projekt)}</td><td>${esc(r.auftraggeber)}</td><td>${eur(r.wert)}</td><td>${esc(r.von)}–${esc(r.bis)}</td><td>${esc(r.cpv)}</td></tr>`).join("");
+    `<tr><td>${esc(r.projekt)}</td><td>${esc(r.auftraggeber)}</td><td>${eur(r.wert)}</td><td>${esc(r.von)} bis ${esc(r.bis)}</td><td>${esc(r.cpv)}</td></tr>`).join("");
   const certs = profil.certificates.map((c) =>
     `<tr><td>${esc(c.typ)}</td><td>${esc(c.nummer)}</td><td>${esc(c.gueltig_bis)}</td><td>${certValid(c) ? "gültig" : "abgelaufen"}</td></tr>`).join("");
 
-  const html = `<!doctype html><html lang="de"><head><meta charset="utf-8"><title>Eignungsübersicht — ${esc(ctx.companyName)}</title>
+  const html = `<!doctype html><html lang="de"><head><meta charset="utf-8"><title>Eignungsübersicht · ${esc(ctx.companyName)}</title>
 <style>
   body{font:13px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:#111;max-width:800px;margin:24px auto;padding:0 16px}
   h1{font-size:22px;margin:0 0 2px} h2{font-size:15px;border-bottom:1px solid #ccc;padding-bottom:3px;margin:22px 0 8px}

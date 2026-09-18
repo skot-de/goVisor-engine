@@ -90,7 +90,7 @@ export async function GET(req: Request, { params }: { params: Promise<{ token: s
         `DTSTAMP:${stamp}`,
         `DTSTART;VALUE=DATE:${d}`,
         `SUMMARY:Angebotsfrist${est ? " (voraussichtlich)" : ""}: ${esc(l.titel || "Ausschreibung")}`,
-        `DESCRIPTION:${esc(`${l.buyer || ""} — Angebotsfrist über goVisor`)}`,
+        `DESCRIPTION:${esc(`${l.buyer ? l.buyer + " · " : ""}Angebotsfrist über goVisor`)}`,
         "END:VEVENT",
       ].map(falte).join("\r\n"));
     }
@@ -130,7 +130,7 @@ export async function GET(req: Request, { params }: { params: Promise<{ token: s
         `DTSTAMP:${stamp}`,
         `DTSTART;VALUE=DATE:${d}`,
         `SUMMARY:${esc(`${warnung}${t.label}: ${eintrag?.titel || "Ausschreibung"}`)}`,
-        `DESCRIPTION:${esc(t.beleg || `${t.label} laut Vergabeunterlagen — über goVisor`)}`,
+        `DESCRIPTION:${esc(t.beleg || `${t.label} laut Vergabeunterlagen · über goVisor`)}`,
         "END:VEVENT",
       ].map(falte).join("\r\n"));
     }
@@ -138,7 +138,7 @@ export async function GET(req: Request, { params }: { params: Promise<{ token: s
 
   // Lieber gar keine Antwort als eine unvollstaendige, die vollstaendig aussieht.
   if (stoerung) {
-    return new NextResponse("Fristen gerade nicht abrufbar — bitte spaeter erneut.",
+    return new NextResponse("Fristen gerade nicht abrufbar, bitte spaeter erneut.",
                             { status: 503, headers: { "retry-after": "900" } });
   }
 

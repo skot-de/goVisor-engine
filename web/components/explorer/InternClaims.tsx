@@ -98,7 +98,7 @@ export function InternClaims() {
           {/* Der maschinelle Befund ist das Erste, was man wissen will. */}
           <p className={`ic-befund ${c.domainPasst ? "gut" : ""}`}>
             {c.domainPasst
-              ? "Domain stimmt mit der bekannten überein — vermutlich nur wegen zu weniger Belege nicht automatisch freigegeben."
+              ? "Domain stimmt mit der bekannten überein, vermutlich nur wegen zu weniger Belege nicht automatisch freigegeben."
               : c.grund || "kein maschineller Befund"}
           </p>
 

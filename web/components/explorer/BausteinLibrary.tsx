@@ -98,7 +98,7 @@ export function BausteinLibrary({ importOpen, onImport, theme, onTheme, onThemen
         }
         save(ferne); setBlocks(ferne);
         if (d.unlesbar) {
-          setHinweis(`${d.unlesbar} Baustein(e) konnten nicht entschlüsselt werden — `
+          setHinweis(`${d.unlesbar} Baustein(e) konnten nicht entschlüsselt werden, `
                      + "vermutlich wurde der Hauptschlüssel gewechselt.");
         }
       } catch { /* Server nicht erreichbar → lokal weiterarbeiten */ }
@@ -188,7 +188,7 @@ export function BausteinLibrary({ importOpen, onImport, theme, onTheme, onThemen
   return (
     <div className="libwrap">
       <div className="sechead">
-        <div><h1>Bausteine</h1><p>Eure Textbausteine für Angebote — gehören dem Unternehmen, nicht der einzelnen Person.</p></div>
+        <div><h1>Bausteine</h1><p>Eure Textbausteine für Angebote. Gehören dem Unternehmen, nicht der einzelnen Person.</p></div>
       </div>
 
       {importOpen && (
@@ -216,13 +216,13 @@ export function BausteinLibrary({ importOpen, onImport, theme, onTheme, onThemen
         <div className="baust-leer">
           <div className="bl-text">
             <h3>Einmal schreiben, immer wieder verwenden</h3>
-            <p>Jedes Angebot verlangt dieselben Passagen — Referenzen, Zertifikate,
+            <p>Jedes Angebot verlangt dieselben Passagen. Referenzen, Zertifikate,
               Datenschutz, Projektorganisation. Hier sammelt ihr sie einmal und setzt das
               nächste Angebot daraus zusammen.</p>
             <ol className="bl-wege">
               <li>
                 <b>Beim Prüfen einer Ausschreibung</b>
-                <span>In der Unterlagen-Checkliste „Kopieren &amp; abhaken" antippen — der
+                <span>In der Unterlagen-Checkliste „Kopieren &amp; abhaken" antippen. Der
                   Textbaustein landet hier, mit Herkunft und Stichworten.</span>
               </li>
               <li>
@@ -241,7 +241,7 @@ export function BausteinLibrary({ importOpen, onImport, theme, onTheme, onThemen
             {[
               { t: "Referenzen", m: "aus altem Angebot · 12.03.2026",
                 x: "Für die Stadtwerke Musterstadt haben wir zwischen 2023 und 2025 die "
-                 + "Wartung von 140 Trafostationen übernommen — Reaktionszeit unter vier "
+                 + "Wartung von 140 Trafostationen übernommen, Reaktionszeit unter vier "
                  + "Stunden, Verfügbarkeit 99,4 %.",
                 k: ["Wartung", "Energie", "SLA"] },
               { t: "Zertifikate & QM", m: "aus Checkliste · Lead 512883_2026",
@@ -282,8 +282,8 @@ export function BausteinLibrary({ importOpen, onImport, theme, onTheme, onThemen
                           disabled={!firma && (b.sichtbarkeit ?? "privat") === "privat"}
                           title={firma
                             ? ((b.sichtbarkeit ?? "privat") === "firma"
-                                ? "Für die Firma freigegeben — antippen, um zurückzunehmen"
-                                : "Nur für dich — antippen, um die Firma sehen zu lassen")
+                                ? "Für die Firma freigegeben. Antippen, um zurückzunehmen"
+                                : "Nur für dich. Antippen, um die Firma sehen zu lassen")
                             : "Freigeben geht erst, wenn eure Firmenzugehörigkeit belegt ist"}
                           onClick={() => freigabe(b, (b.sichtbarkeit ?? "privat") !== "firma")}>
                           {(b.sichtbarkeit ?? "privat") === "firma" ? "Für die Firma" : "Nur ich"}

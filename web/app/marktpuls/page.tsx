@@ -15,7 +15,7 @@ import Marktpuls, { type MarktpulsDaten } from "@/components/Marktpuls";
 export const revalidate = 3600;
 
 export const metadata = {
-  title: "Marktpuls — öffentliche Vergaben im Jahresverlauf",
+  title: "Marktpuls · öffentliche Vergaben im Jahresverlauf",
   description:
     "Wann wird ausgeschrieben, und was läuft gerade? Saisonalität und aktuelle Marktlage "
     + "öffentlicher Vergaben, gezählt je Verfahren.",

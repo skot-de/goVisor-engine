@@ -1592,7 +1592,7 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
                     <div><b>{fresh.length === 1
                         ? (realProfile ? t("{n} neuer Zuschlag in eurem Feld", { n: fresh.length }) : t("{n} neuer Zuschlag im Grundraum", { n: fresh.length }))
                         : (realProfile ? t("{n} neue Zuschläge in eurem Feld", { n: fresh.length }) : t("{n} neue Zuschläge im Grundraum", { n: fresh.length }))}</b>
-                      {winners.length ? ` — ${winners.join(` ${t("und")} `)}. ` : " — "}{t("Wer gerade gewonnen hat, kauft jetzt ein.")}</div>
+                      {winners.length ? `: ${winners.join(` ${t("und")} `)}. ` : ". "}{t("Wer gerade gewonnen hat, kauft jetzt ein.")}</div>
                     {/* Zuschläge sind nicht mehr bewerbbar und stehen deshalb nicht in der Akquise-Liste.
                         Hier — wo sie angekündigt werden — führt ein Klick direkt zu ihnen. */}
                     <button className="aw-alert-go" onClick={() => setAdv((a) => ({ ...a, phases: ["award"] }))}>

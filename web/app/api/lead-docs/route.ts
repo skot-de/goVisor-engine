@@ -78,7 +78,7 @@ export async function POST(req: Request) {
   const zuViel = vorab.find((r) => !r.ok);
   if (zuViel) {
     return NextResponse.json(
-      { error: "Zu viele Analysen — bitte später erneut.", retryAfter: zuViel.retryAfter },
+      { error: "Zu viele Analysen, bitte später erneut.", retryAfter: zuViel.retryAfter },
       { status: 429, headers: { "retry-after": String(zuViel.retryAfter) } });
   }
   let file: File | null = null;
@@ -108,7 +108,7 @@ export async function POST(req: Request) {
   if (!gl.ok || !perIp.ok) {
     const retry = Math.max(gl.retryAfter, perIp.retryAfter);
     return NextResponse.json(
-      { error: "Zu viele Analysen — bitte später erneut.", retryAfter: retry },
+      { error: "Zu viele Analysen, bitte später erneut.", retryAfter: retry },
       { status: 429, headers: { "retry-after": String(retry) } });
   }
 

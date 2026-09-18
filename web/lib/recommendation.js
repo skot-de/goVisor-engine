@@ -164,7 +164,7 @@ export function handlungsempfehlung(e, partnerMoeglich) {
   if (e.E8 === "eigen") return { label: "Verteidigen", cls: "blau", gruende: ["euer Bestandsvertrag läuft aus"], schritt: "Verteidigungsangebot vorbereiten" };
 
   if (e.E1 === "verletzt") {
-    if (partnerMoeglich) return { label: "Noch zu klären", cls: "neutral", frage: `${e.E1_grund || "Eine Anforderung"} fehlt — über eine Bietergemeinschaft abdeckbar?`, gruende: ["Pflichtanforderung fehlt"], schritt: "Partner suchen" };
+    if (partnerMoeglich) return { label: "Noch zu klären", cls: "neutral", frage: `${e.E1_grund || "Eine Anforderung"} fehlt, über eine Bietergemeinschaft abdeckbar?`, gruende: ["Pflichtanforderung fehlt"], schritt: "Partner suchen" };
     return { label: "Nicht bewerben", cls: "gedaempft", gruende: [`Pflichtanforderung nicht erfüllt${e.E1_grund ? ": " + e.E1_grund : ""}`], schritt: "überspringen und weitersuchen" };
   }
   if (e.E5 === "unzureichend") return { label: "Nicht bewerben", cls: "gedaempft", gruende: ["Frist reicht für den Aufwand nicht"], schritt: "überspringen und weitersuchen" };
@@ -180,7 +180,7 @@ export function handlungsempfehlung(e, partnerMoeglich) {
 
   // E1 erfüllt → Abwägung über {E3, E4, E5, E9}
   const unguenstig = [];
-  if (e.E3 === "unguenstig") unguenstig.push({ k: "E3", t: "Amtsinhaber fest gebunden — Verdrängung unwahrscheinlich" });
+  if (e.E3 === "unguenstig") unguenstig.push({ k: "E3", t: "Amtsinhaber fest gebunden, Verdrängung unwahrscheinlich" });
   if (e.E4 === "unverhaeltnismaessig") unguenstig.push({ k: "E4", t: "Aufwand unverhältnismäßig" });
   if (e.E5 === "knapp") unguenstig.push({ k: "E5", t: `Frist knapp (${e.E5tage} T, Median ${e.E5median})` });
   if (e.E9 === "unguenstig") unguenstig.push({ k: "E9", t: `starkes Feld (Median ${e.E9med} Bieter)` });
@@ -204,8 +204,8 @@ function zusaetze(e, partnerMoeglich) {
   if (e.E10_teilbar) z.push({ k: "los", t: `Einzel-Los möglich (${e.loseN} Lose)` });
   if (e.E5 === "knapp") z.push({ k: "frist", t: "Frist knapp" });
   if (e.E9 !== "unbekannt") z.push({ k: "bieter", t: `Median ${e.E9med} Bieter` });
-  if (e.istRahmen) z.push({ k: "rahmen", t: "Rahmenvertrag — Nennwert ist Schätzgrenze" });
-  if (e.E8 === "erstvergabe") z.push({ k: "erst", t: "Erstvergabe — kein Amtsinhaber" });
+  if (e.istRahmen) z.push({ k: "rahmen", t: "Rahmenvertrag, Nennwert ist Schätzgrenze" });
+  if (e.E8 === "erstvergabe") z.push({ k: "erst", t: "Erstvergabe, kein Amtsinhaber" });
   if (e.E6 === "vorhanden") z.push({ k: "stelle", t: "bekannte Stelle" });
   return z;
 }
@@ -240,7 +240,7 @@ export function recommend(lead, profile, ctx) {
 export function begruendungskette(e) {
   return [
     { E: "E1", label: "Pflichtanforderungen", zustand: e.E1, quelle: e.datenzustand === "A" ? "keine Unterlagen" : "Unterlagen + Profil" },
-    { E: "E2", label: "Relevanz", zustand: e.E2 == null ? "unbekannt" : `${e.E2} — ${e.E2band}`, quelle: "CPV · Region · Volumen" },
+    { E: "E2", label: "Relevanz", zustand: e.E2 == null ? "unbekannt" : `${e.E2} · ${e.E2band}`, quelle: "CPV · Region · Volumen" },
     { E: "E3", label: "Wettbewerbslage", zustand: e.E3 + (e.incAlter != null ? ` (Amtsinhaber ${e.incAlter} J.)` : e.E8 === "erstvergabe" ? " (Erstvergabe)" : ""), quelle: "incumbent · Wechselquote" },
     { E: "E4", label: "Aufwand/Wert", zustand: e.E4 + ` (Aufwand ${e.E4stufe})`, quelle: "#18 · Auftragswert" },
     { E: "E5", label: "Frist", zustand: e.E5tage == null ? "unbekannt" : `${e.E5tage} T · Median ${e.E5median}`, quelle: "Angebotsfrist" },

@@ -462,7 +462,6 @@
   "Diese Quote beruht auf {n} gemeldeten Teilnahmen. Verfahren, die ihr nicht gemeldet habt, fehlen, die tatsächliche Quote kann abweichen.": "Ce taux repose sur {n} participations déclarées. Les procédures non déclarées manquent, le taux réel peut différer.",
   "Diese Sektion ist noch nicht gebaut.": "Cette section n'est pas encore développée.",
   "Diese Stelle liegt in den Daten fragmentiert vor. Wir zeigen den größten zusammengeführten Teil, nicht garantiert die volle Historie.": "Ce service adjudicateur apparaît fragmenté dans les données. Nous affichons la plus grande partie consolidée, pas nécessairement l'historique complet.",
-  "Diese Stelle schreibt unterhalb der EU-Schwellenwerte aus. Wir kennen sie aus oeffentlichevergabe.de, nicht aus TED — deshalb fehlen hier Kennzahlen wie Single-Bidder-Anteil und Wechselquote.": "Cet acheteur publie sous les seuils européens. Nous le connaissons via oeffentlichevergabe.de, pas via TED.",
   "Diese Stelle verlangt fast immer": "Ce pouvoir adjudicateur exige presque toujours",
   "Diese Stellen kennen euch bereits. Der Balken zeigt, wie viel ihr dort abgeräumt habt, der Rest ging an andere.": "Ces services vous connaissent déjà. La barre indique ce que vous y avez remporté, le reste est allé à d'autres.",
   "Diese Stellen kennen euch bereits. Rechts steht, wie viele ihrer Vergaben gerade laufen.": "Ces acheteurs vous connaissent déjà. À droite figure le nombre de leurs marchés actuellement ouverts.",
@@ -858,7 +857,6 @@
   "Keine offenen Angaben mit spürbarer Wirkung. Was jetzt noch streut, liegt an der Datenlage der Vergabestellen (siehe unten).": "Aucune information manquante à effet notable. Ce qui reste imprécis vient des données publiées par les services adjudicateurs (voir ci-dessous).",
   "Kennung {id} gehört zu einem anderen Grundraum. Wir suchen, zu welchem.": "La référence {id} relève d'un autre secteur. Nous cherchons lequel.",
   "Kennung {id} liegt dort. Der Grundraum wird geladen, dann öffnet sich die Ausschreibung.": "La référence {id} s'y trouve. Le secteur se charge, puis l'appel d'offres s'ouvre.",
-  "Kennung {id} liegt in keinem Grundraum — sie ist nicht mehr im Bestand oder war nie darin.": "La référence {id} n'est dans aucun secteur — elle n'est plus dans les données, ou ne l'a jamais été.",
   "Kennung {q}": "Reference {q}",
   "Kennzahl": "Indicateur",
   "Klarer Fall": "Cas évident",
@@ -1520,7 +1518,6 @@
   "Von Ihnen ergänzt/korrigiert": "Ajouté ou corrigé par vous",
   "Von der Merkliste entfernt": "Retiré de la liste de suivi",
   "Von euch angegeben, nicht überprüft": "Indiqué par vous, non vérifié",
-  "Von {g} geprüften Aussagen ließen sich {n} nicht im Dokument belegen und wurden verworfen. Diese Auswertung ist lückenhafter als die meisten — lest die Unterlagen hier besonders selbst.": "Sur {g} affirmations verifiees, {n} n'ont pas pu etre etayees par le document et ont ete ecartees. Cette analyse est plus lacunaire que la plupart : lisez vous-memes les documents ici.",
   "Vor {jahr} liegt für diese Auswahl nichts vor. Das ist der Beginn unserer Erfassung, nicht der des Marktes. Die Achse bleibt trotzdem stehen, damit die Lücke sichtbar ist statt weggeschnitten.": "Rien n'est disponible pour cette sélection avant {jahr}. C'est le début de notre collecte, pas celui du marché. L'axe est néanmoins conservé, afin que la lacune reste visible au lieu d'être rognée.",
   "Vorgang": "Dossier de marché",
   "Vorgang ansehen": "Voir le dossier",
@@ -2237,7 +2234,6 @@
   "{quelle} kommt neu in den Bestand. Die Linie beginnt hier, der Markt nicht.": "{quelle} entre dans les données. C'est la ligne qui commence ici, pas le marché.",
   "{quelle} liefert erst ab {jahr} und bekommt deshalb eine eigene Linie. Nicht addiert: ein Quellen-Start wäre in einer Summe von echtem Wachstum nicht zu unterscheiden.": "{quelle} ne commence qu'en {jahr} et reçoit donc sa propre ligne. Pas d'addition : dans un total cumulé, le démarrage d'une source serait indiscernable d'une croissance réelle.",
   "{quelle} liegt vor {jahr} mit {n} Verfahren im Bestand. Zu wenige für einen Betrieb, deshalb ohne Linie ausgewiesen statt weggelassen.": "Avant {jahr}, {quelle} compte {n} procédures dans les données. Trop peu pour une exploitation, elle est donc signalée sans ligne plutôt qu'omise.",
-  "{quelle} zeigt die Namen der Vergabeunterlagen öffentlich an, die Dateien selbst nur nach Anmeldung. Wir haben keine davon geöffnet — was hier steht, ist der Dateiname und der daraus erkannte Typ.": "{quelle} affiche publiquement les noms des documents de marché, les fichiers eux-mêmes seulement après connexion. Nous n'en avons ouvert aucun : ce qui figure ici est le nom du fichier et le type qui en découle.",
   "{q} · {n} Verträge · belegt {echt} · geschätzt {schaetz} · ohne Wert {unk}": "{q} · {n} contrats · documenté {echt} · estimé {schaetz} · sans valeur {unk}",
   "{sichtbar} von {gesamt} Firmen, nach Schmerz-Volumen sortiert": "{sichtbar} entreprises sur {gesamt}, triées par volume de faiblesse",
   "{stelle} vergibt „{leistung}\" ({phase}).": "{stelle} attribue « {leistung} » ({phase}).",
@@ -2311,5 +2307,9 @@
   "✓ Beobachtet": "✓ Suivie",
   "✓ angesprochen": "✓ contactée",
   "🇦🇹 nur Österreich": "🇦🇹 Autriche uniquement",
-  "🇨🇭 nur Schweiz": "🇨🇭 Suisse uniquement"
+  "🇨🇭 nur Schweiz": "🇨🇭 Suisse uniquement",
+  "Kennung {id} liegt in keinem Grundraum, sie ist nicht mehr im Bestand oder war nie darin.": "La référence {id} n'est dans aucun secteur — elle n'est plus dans les données, ou ne l'a jamais été.",
+  "Von {g} geprüften Aussagen ließen sich {n} nicht im Dokument belegen und wurden verworfen. Diese Auswertung ist lückenhafter als die meisten. Lest die Unterlagen hier besonders selbst.": "Sur {g} affirmations verifiees, {n} n'ont pas pu etre etayees par le document et ont ete ecartees. Cette analyse est plus lacunaire que la plupart : lisez vous-memes les documents ici.",
+  "{quelle} zeigt die Namen der Vergabeunterlagen öffentlich an, die Dateien selbst nur nach Anmeldung. Wir haben keine davon geöffnet. Was hier steht, ist der Dateiname und der daraus erkannte Typ.": "{quelle} affiche publiquement les noms des documents de marché, les fichiers eux-mêmes seulement après connexion. Nous n'en avons ouvert aucun : ce qui figure ici est le nom du fichier et le type qui en découle.",
+  "Diese Stelle schreibt unterhalb der EU-Schwellenwerte aus. Wir kennen sie aus oeffentlichevergabe.de, nicht aus TED. Deshalb fehlen hier Kennzahlen wie Single-Bidder-Anteil und Wechselquote.": "Cet acheteur publie sous les seuils européens. Nous le connaissons via oeffentlichevergabe.de, pas via TED."
 }

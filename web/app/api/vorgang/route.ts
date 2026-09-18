@@ -69,7 +69,7 @@ export async function GET(req: Request) {
   return NextResponse.json(
     bestand
       ? { vorhanden: false, id, land, grund: "nicht in der exportierten Menge" }
-      : { error: "Vorgangsakten nicht geladen — DATA_BASE_URL prüfen "
+      : { error: "Vorgangsakten nicht geladen, DATA_BASE_URL prüfen "
                  + "(docs/web-data-storage.md)" },
     { status: bestand ? 404 : 503 });
 }

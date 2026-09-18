@@ -5,7 +5,7 @@ export function Brand({ size = 16 }: { size?: number }) {
   return (
     <Link
       href="/"
-      aria-label="goVisor — Startseite"
+      aria-label="goVisor · Startseite"
       style={{
         fontSize: size,
         fontWeight: 700,

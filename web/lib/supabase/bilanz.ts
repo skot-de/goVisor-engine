@@ -36,10 +36,10 @@ export type BilanzData = {
 function bandOf(v?: number | null): string {
   if (v == null) return "ohne Wert";
   if (v < 100_000) return "< 100k €";
-  if (v < 250_000) return "100–250k €";
-  if (v < 500_000) return "250–500k €";
-  if (v < 1_300_000) return "500k–1,3M €";
-  if (v < 5_000_000) return "1,3–5M €";
+  if (v < 250_000) return "100 bis 250k €";
+  if (v < 500_000) return "250 bis 500k €";
+  if (v < 1_300_000) return "500k bis 1,3M €";
+  if (v < 5_000_000) return "1,3 bis 5M €";
   return "> 5M €";
 }
 const LOSS_LABEL: Record<string, string> = { price: "Preis", quality: "Qualität", formal: "Formal", reference: "Referenzen", unknown: "unbekannt" };

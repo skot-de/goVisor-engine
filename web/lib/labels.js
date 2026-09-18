@@ -25,11 +25,11 @@ const CATALOG = {
     natur: { dienst: 'Dienstleistung', liefer: 'Lieferung', bau: 'Bauleistung' },
     // volumen.src ist ein Code (echt/schaetz/unbekannt) — hier zum Herkunfts-Satz übersetzt.
     volHint: { echt: 'Aus der Bekanntmachung.',
-               schaetz: 'Abgeleitet — nicht veröffentlicht.',
-               unbekannt: 'Abgeleitet — nicht veröffentlicht.' },
+               schaetz: 'Abgeleitet, nicht veröffentlicht.',
+               unbekannt: 'Abgeleitet, nicht veröffentlicht.' },
     // Ohne führendes Leerzeichen: der Abstand entsteht beim Zusammensetzen unten. Ein Schlüssel
     // mit Randweißraum findet seine Übersetzung sonst nicht wieder.
-    volHintFramework: 'Rahmenvertrag — der Nennwert ist Ober-/Schätzgrenze; real abgerufen wird oft ein Vielfaches.',
+    volHintFramework: 'Rahmenvertrag. Der Nennwert ist Ober-/Schätzgrenze; real abgerufen wird oft ein Vielfaches.',
   },
 };
 

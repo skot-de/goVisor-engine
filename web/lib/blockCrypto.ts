@@ -35,7 +35,7 @@ const ALGO = "aes-256-gcm";
  *  `content_encrypted`, und niemand würde nachsehen. */
 export class KeinSchluessel extends Error {
   constructor() {
-    super("BLOCKS_KEK ist nicht gesetzt — Bausteine werden nicht gespeichert. "
+    super("BLOCKS_KEK ist nicht gesetzt, Bausteine werden nicht gespeichert. "
           + "32 zufällige Bytes, base64: `openssl rand -base64 32`.");
     this.name = "KeinSchluessel";
   }

@@ -427,7 +427,7 @@ export function VergabeblickView() {
           </div>
           <div className="vb-draft">
             <div>
-              <span className="vb-draft-t">{t("Entwurf mitprüfen")} <span className="vb-draft-opt">— {t("optional")}</span></span>
+              <span className="vb-draft-t">{t("Entwurf mitprüfen")} <span className="vb-draft-opt">({t("optional")})</span></span>
               <span className="vb-draft-note">{t("Wir zählen die geforderten Nachweise und vergleichen sie mit ähnlichen Verfahren. Wird nur für diese Prüfung verarbeitet und danach verworfen.")}</span>
             </div>
             <button className="vb-draft-btn" disabled={draftBusy} onClick={() => {

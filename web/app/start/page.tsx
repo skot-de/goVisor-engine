@@ -84,7 +84,7 @@ export default function StartSeite() {
                 „Test" sehen in der App fast gleich aus — der Unterschied (Schreibschutz) muss
                 deshalb HIER klar sein, wo man wählt, nicht erst wenn etwas schiefgeht. */}
             <p className="start-hinweis">
-              <strong>Test</strong> hat volle Rechte — zum Durchklicken und Zustände erzeugen.{" "}
+              <strong>Test</strong> hat volle Rechte, zum Durchklicken und Zustände erzeugen.{" "}
               <strong>Vorführung</strong> kann nur lesen; damit lässt sich vor Publikum nichts
               versehentlich verändern.
             </p>

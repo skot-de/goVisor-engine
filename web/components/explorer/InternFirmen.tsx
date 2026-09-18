@@ -247,7 +247,7 @@ export function InternFirmen() {
     const nLeads = d?.leads?.length ?? 0;
     const kern = parts.length ? parts.join("; ") : `${f.wins36} Zuschläge in 36 Monaten, Median ${eur(f.medWert)}`;
     const lead = nLeads > 0 ? ` Dazu ${nLeads} offene Ausschreibungen, die exakt zum Profil passen.` : "";
-    return `Hallo, kurz zu ${f.name}: ${kern}.${lead} goVisor zeigt, wo Sie angreifbar sind und welche Aufträge jetzt passen — 15 Minuten dazu?`;
+    return `Hallo, kurz zu ${f.name}: ${kern}.${lead} goVisor zeigt, wo Sie angreifbar sind und welche Aufträge jetzt passen, 15 Minuten dazu?`;
   }
   function copyPitch(id: string, text: string) {
     try { navigator.clipboard.writeText(text); } catch { /* ignore */ }
@@ -369,7 +369,7 @@ export function InternFirmen() {
       {firmen && firmen.length > 0 && (
         <div className="in-count">
           {segMode
-           ? `${firmen.length} ${t("Treffer")} — ${t(SEGS.find((s) => s.key === segMode)?.tab || segMode)} (${segGeo ? `${t("Sitz")} ${segGeo}` : t("deutschlandweit")}${firmen.length >= 100 ? ", Top 100" : ""})`
+           ? `${firmen.length} ${t("Treffer")} · ${t(SEGS.find((s) => s.key === segMode)?.tab || segMode)} (${segGeo ? `${t("Sitz")} ${segGeo}` : t("deutschlandweit")}${firmen.length >= 100 ? ", Top 100" : ""})`
            : t("{sichtbar} von {gesamt} Firmen, nach Schmerz-Volumen sortiert", { sichtbar: visible.length, gesamt: firmen.length })}
         </div>
       )}
@@ -508,7 +508,7 @@ export function InternFirmen() {
 
                     {detail.wettbewerber && detail.wettbewerber.expiring.length > 0 && <div className="in-block">
                       <h3>{detail.wettbewerber.basis === "head_to_head" ? t("Hauptwettbewerber") : t("Größter Anbieter im Feld")}: {detail.wettbewerber.name.split(" ").slice(0, 4).join(" ")}
-                        <span className="in-scope"> · {detail.wettbewerber.basis === "head_to_head" ? t("hat die Firma verdrängt") : detail.wettbewerber.basis === "region" ? t("gleiche Region, Proxy") : t("bundesweit, Proxy")}</span> — {t("läuft aus")} <span className="in-h3n">{detail.wettbewerber.expiring.length}</span>
+                        <span className="in-scope"> · {detail.wettbewerber.basis === "head_to_head" ? t("hat die Firma verdrängt") : detail.wettbewerber.basis === "region" ? t("gleiche Region, Proxy") : t("bundesweit, Proxy")}</span>, {t("läuft aus")} <span className="in-h3n">{detail.wettbewerber.expiring.length}</span>
                         {" "}<a className="in-link" href={`/firma?id=${encodeURIComponent(detail.wettbewerber.id)}&from=intern`}>{t("Profil →")}</a></h3>
                       {detail.wettbewerber.expiring.slice(0, 5).map((e, i) => (
                         <div key={i} className="in-item">

@@ -161,7 +161,7 @@ function FirmaFakten({ m }: { m: Match }) {
             {m.topBuyers.map((k) => (
               <li key={k.name}>
                 <span className="fk-kn">{k.name}</span>
-                <span className="fk-kw">{k.wins} {k.wins === 1 ? t("Auftrag") : t("Aufträge")} · {k.seit === k.bis ? k.seit : `${k.seit}–${k.bis}`}</span>
+                <span className="fk-kw">{k.wins} {k.wins === 1 ? t("Auftrag") : t("Aufträge")} · {k.seit === k.bis ? k.seit : `${k.seit} bis ${k.bis}`}</span>
               </li>
             ))}
           </ul>

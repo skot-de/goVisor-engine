@@ -69,7 +69,7 @@ function anforderungen(l: Lead): [string, string][] | null {
   // `label`/`text` sind Lead-Inhalt (aus der Bekanntmachung/dem Profil), kein Oberflächentext —
   // übersetzt wird nur die Statusmarke.
   return m.teile.map((teil: { label: string; status: string; text: string }) =>
-    [teil.label, `${mark[teil.status] ? tk(mark[teil.status]) : teil.status} — ${teil.text}`]);
+    [teil.label, `${mark[teil.status] ? tk(mark[teil.status]) : teil.status} · ${teil.text}`]);
 }
 
 // ── Markdown ────────────────────────────────────────────────────────────────

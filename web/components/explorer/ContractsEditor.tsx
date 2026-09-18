@@ -63,7 +63,7 @@ export function ContractsEditor() {
 
   if (angemeldet === null) return <div className="spin">Lade …</div>;
   if (!angemeldet) return (
-    <div className="mnote">Meldet euch an und hinterlegt eure laufenden Verträge — dann rechnen wir hier,
+    <div className="mnote">Meldet euch an und hinterlegt eure laufenden Verträge. Dann rechnen wir hier,
       wann sie wieder Kapazität binden und welche ihr verteidigen müsst. <Link href="/login" style={{ textDecoration: "underline" }}>Anmelden</Link></div>
   );
 
@@ -85,7 +85,7 @@ export function ContractsEditor() {
 
       {analyse.bald.length ? (
         <div className="ce-defense">
-          <span className="ce-def-h">Eure auslaufenden Verträge — nächste zuerst</span>
+          <span className="ce-def-h">Eure auslaufenden Verträge. Nächste zuerst</span>
           {analyse.bald.slice(0, 5).map((r) => { const t = tageBis(r.end_date)!; const mon = Math.round(t / 30);
             return <div key={r.id} className="ce-def-row"><span className="ce-def-n">{r.titel || r.buyer_name || "—"}{r.is_framework ? <span className="st-tag">Rahmen</span> : null}</span>
               <span className="ce-def-w">{fmtEur(r.value_euro)}</span><span className="ce-def-t">in {mon} Mon.</span></div>; })}

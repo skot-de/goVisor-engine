@@ -41,7 +41,7 @@ export const TESTPROFILE: Testprofil[] = [
     id: "test-bau",
     name: "Bauunternehmen (Test)",
     art: "test",
-    beschreibung: "Mittelständischer Hochbau, Umkreis 50 km — der häufigste Fall.",
+    beschreibung: "Mittelständischer Hochbau, Umkreis 50 km, der häufigste Fall.",
     branche: "bau",
     ort: "Dortmund",
   },
@@ -49,7 +49,7 @@ export const TESTPROFILE: Testprofil[] = [
     id: "test-it",
     name: "IT-Dienstleister (Test)",
     art: "test",
-    beschreibung: "Software und Betrieb, bundesweit — prüft die Ortsunabhängigkeit.",
+    beschreibung: "Software und Betrieb, bundesweit, prüft die Ortsunabhängigkeit.",
     branche: "it",
   },
   {

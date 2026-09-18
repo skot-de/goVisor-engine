@@ -410,7 +410,7 @@ function FremderGrundraum({ lead, onClose }: {
       <div className="lb-head">
         <p className="lb-h">{t("Diese Ausschreibung finden wir nicht")}</p>
         <p className="lb-l">
-          {t("Kennung {id} liegt in keinem Grundraum — sie ist nicht mehr im Bestand oder war nie darin.", { id: lead.id })}
+          {t("Kennung {id} liegt in keinem Grundraum, sie ist nicht mehr im Bestand oder war nie darin.", { id: lead.id })}
         </p>
         <button className="lb-h4btn" onClick={onClose}>{t("Zurück zum Überblick")}</button>
       </div>

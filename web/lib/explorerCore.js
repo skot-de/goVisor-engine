@@ -456,7 +456,7 @@ const esc = s => String(s == null ? '' : s)
   .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
 
 const val = (text, src, hint) =>
-  `<span class="val" data-src="${src}" title="${esc(tk(SRC_TEXT[src]) + (hint ? ' — ' + tk(hint) : ''))}">${esc(text)}</span>`;
+  `<span class="val" data-src="${src}" title="${esc(tk(SRC_TEXT[src]) + (hint ? ' · ' + tk(hint) : ''))}">${esc(text)}</span>`;
 
 const bandMeter = (level, risk, cap, naTitle) => {
   // naTitle erklärt bei „n/a" die URSACHE (fehlende Angaben), statt den Nutzer raten zu lassen.
@@ -766,11 +766,11 @@ function cellHTML(l, key){
       const frei = isFreeLimit();
       const such = l.netzSuchend==null ? ''
         : frei ? `<span class="such lock" title="${esc(tk("Im Pro-Zugang seht ihr, wie viele hier schon einen Partner suchen, bevor ihr euch meldet"))}"><span class="nz-blur">${l.netzSuchend}</span></span>`
-        : `<span class="such ${l.netzSuchend>=4?'viel':''}" title="${esc(tk(l.netzSuchend>=4?'Hier bildet sich bereits ein Feld':'Noch wenig Bewegung — freie Wahl bei den Losen'))}">${l.netzSuchend}</span>`;
+        : `<span class="such ${l.netzSuchend>=4?'viel':''}" title="${esc(tk(l.netzSuchend>=4?'Hier bildet sich bereits ein Feld':'Noch wenig Bewegung, freie Wahl bei den Losen'))}">${l.netzSuchend}</span>`;
       return `<td class="c-netz"><span class="netzcell">
         <button class="nzring ${dabei?'on':''} ${match?'match':''}"
           data-netzint="${l.id}"
-          title="${match ? "Ihr sucht hier einen Partner — eine Firma ergänzt euch bereits"
+          title="${match ? "Ihr sucht hier einen Partner, eine Firma ergänzt euch bereits"
                 : dabei ? tk("Ihr sucht hier einen Partner, klicken zum Zurückziehen")
                 : 'Wir suchen hier einen Partner'}"
           aria-pressed="${dabei}" aria-label="Bietergemeinschaft">${ringe}</button>${such}
@@ -828,7 +828,7 @@ function cellHTML(l, key){
       return `<td class="c-vol">${l.volumen.src==='unbekannt' ? `<span style="color:var(--ink-300)">${tk("Wert offen")}</span>` : val(l.volumen.wert, l.volumen.src, l.volumen.hint)}</td>`;
     }
     case 'rahmen': return `<td class="c-rahmen">${l.rahmen
-      ? `<span class="rah rah-${l.rahmen}" title="${esc(tk(RAHMEN[l.rahmen].lang) + ' — ' + tk(RAHMEN[l.rahmen].x))}">${RAHMEN[l.rahmen].kurz}</span>`
+      ? `<span class="rah rah-${l.rahmen}" title="${esc(tk(RAHMEN[l.rahmen].lang) + ' · ' + tk(RAHMEN[l.rahmen].x))}">${RAHMEN[l.rahmen].kurz}</span>`
       : '<span style="color:var(--ink-300)">—</span>'}</td>`;
     case 'aufwand': {
       // Zuschlag erteilt → man kann sich nicht mehr bewerben; „Angebotsaufwand" trifft nicht zu.
@@ -1153,7 +1153,7 @@ function renderTeam(l){
 
 /* ── Tab-Renderer: pdotT, Übersicht, Teilnahme, Bewertung(analyse), Markt, Vergabestelle(buyer), Gate ── */
 const pdotT = (src,hint)=> src && src!=='echt'
-  ? `<span class="pdot pdot-${src}" title="${esc(tk(SRC_TEXT[src])+(hint?' — '+tk(hint):''))}"></span>` : '';
+  ? `<span class="pdot pdot-${src}" title="${esc(tk(SRC_TEXT[src])+(hint?' · '+tk(hint):''))}"></span>` : '';
 
 // Eigener „Unterlagen"-Tab: alles Dokument-Getriebene (Vergabe-Analyse / Upload / Volltext).
 // Upload-Prompt NUR bei offenen Ausschreibungen (src='f02', Frist nicht vorbei) — bei
@@ -1438,7 +1438,7 @@ function verlaesslichkeit(a){
   const ganz = verworfen + behalten;
   if(!verworfen || !ganz || verworfen / ganz <= VERWURF_HOCH) return '';
   return `<p class="verl">${tk(
-    "Von {g} geprüften Aussagen ließen sich {n} nicht im Dokument belegen und wurden verworfen. Diese Auswertung ist lückenhafter als die meisten — lest die Unterlagen hier besonders selbst.",
+    "Von {g} geprüften Aussagen ließen sich {n} nicht im Dokument belegen und wurden verworfen. Diese Auswertung ist lückenhafter als die meisten. Lest die Unterlagen hier besonders selbst.",
     {g: ganz, n: verworfen})}</p>`;
 }
 
@@ -1685,7 +1685,7 @@ function renderChecklistBlock(a, l){
   const portal = (l.unterlagen&&l.unterlagen.url) ? `<a href="${esc(l.unterlagen.url)}" target="_blank" rel="noopener" class="link">${tk("Zum Vergabeportal ↗")}</a>` : '';
   const chead = `<div class="chead">${renderUnterlagenstand(l)}<div class="r1"><span class="stand">Stand der Unterlagen: ${l.lbFiles||1} Datei${(l.lbFiles||1)===1?'':'en'}</span>${portal}</div>
     ${verlaesslichkeit(a)}
-    <div class="disc">Bitte regelmäßig prüfen, ob neue Unterlagen vorliegen. LLM-gestützte Analyse — kann Fehler enthalten. Jede Angabe ist mit Fundstelle im Originaldokument belegt${a.rejected_items>0&&!verlaesslichkeit(a)?`; ${a.rejected_items} unbelegte Aussagen wurden verworfen`:''}; maßgeblich bleiben die Vergabeunterlagen.</div></div>`;
+    <div class="disc">Bitte regelmäßig prüfen, ob neue Unterlagen vorliegen. LLM-gestützte Analyse. Kann Fehler enthalten. Jede Angabe ist mit Fundstelle im Originaldokument belegt${a.rejected_items>0&&!verlaesslichkeit(a)?`; ${a.rejected_items} unbelegte Aussagen wurden verworfen`:''}; maßgeblich bleiben die Vergabeunterlagen.</div></div>`;
   const toc = `<div class="toc"><div class="th"><b>${tk("Eure Checkliste")}</b><span class="pr"><span class="cl-doneN">${dn}</span> von ${tot} erledigt</span></div><div class="chips">${chips}<button class="tchip all" data-clcollapse>${tk("Alle zuklappen")}</button></div><div class="tprog"><i class="cl-tprog" style="width:${tot?Math.round(dn/tot*100):0}%"></i></div></div>`;
 
   // a2 Erstnutzer: leere Bibliothek → die Textbausteine sind noch generische Vorlagen (§9.1).
@@ -1737,7 +1737,7 @@ function renderDocs(l){
     }
     // Legacy-Fallback (Alt-Format-Analysen ohne checklist)
     const body = `${bl(tk("Muss erfüllt sein. K.o.-Kriterien"), check(a.ko_kriterien))}
-         ${bl('Einzureichen — Eignungsnachweise', check(a.eignung))}
+         ${bl('Einzureichen: Eignungsnachweise', check(a.eignung))}
          ${(a.zuschlag&&a.zuschlag.length)?bl('Zuschlagskriterien', `<div class="zug">${a.zuschlag.map(z=>`<div class="zug-row"><span class="zug-k">${esc(z.kriterium)}</span><span class="zug-bar"><i style="width:${Math.max(3,Math.min(100,Number(z.gewicht)||0))}%"></i></span><span class="zug-v">${esc(String(z.gewicht))} %</span></div>`).join('')}</div>`):''}
          ${(a.fristen&&a.fristen.length)?bl('Fristen', `<div class="kv">${a.fristen.map(f=>`<div class="kvi"><span class="k">${esc(f.typ||'')}</span><span class="vv"><span class="v">${esc(f.wert||'')}</span></span></div>`).join('')}</div>`):''}
          ${bl('Aufwandstreiber', check(a.aufwand))}`;
@@ -1980,7 +1980,7 @@ function renderDocs(l){
     const rest = Math.max(0, (li.dateien||[]).length - 40);
     return `<section class="sec va-liste">
       <h4>${tk("Was dort liegt")}<span class="cov">${tk("Dateiliste des Portals, nicht gelesen")}</span></h4>
-      <p class="dl-x">${tk("{quelle} zeigt die Namen der Vergabeunterlagen öffentlich an, die Dateien selbst nur nach Anmeldung. Wir haben keine davon geöffnet — was hier steht, ist der Dateiname und der daraus erkannte Typ.")
+      <p class="dl-x">${tk("{quelle} zeigt die Namen der Vergabeunterlagen öffentlich an, die Dateien selbst nur nach Anmeldung. Wir haben keine davon geöffnet. Was hier steht, ist der Dateiname und der daraus erkannte Typ.")
           .replace('{quelle}', esc(li.quelle||''))}</p>
       ${schwer ? `<div class="dl-schwer">${tk("Erkannt:")} ${schwer}</div>` : ''}
       <ul class="dl-liste">${zeilen}</ul>
@@ -2012,7 +2012,7 @@ function renderAwardUebersicht(l){
               : a.overlap==='mittel' ? tk("führt es teils selbst aus") : tk("führt es überwiegend selbst aus");
   const passungHead = topField
     ? `${esc(a.winner)} gewinnt überwiegend ${esc(topField)} und ${fuehrt}${
-        s.subQuote ? ` — bei ${s.subQuote} Aufträgen war Unterauftragsvergabe geregelt` : ''}. ${passung}`
+        s.subQuote ? `, bei ${s.subQuote} Aufträgen war Unterauftragsvergabe geregelt` : ''}. ${passung}`
     : passung;
   const isoDe = d => { const m=String(d).match(/^(\d{4})-(\d{2})-(\d{2})/); return m?`${m[3]}.${m[2]}.${m[1]}`:String(d); };
   const firma = a.winnerId
@@ -2029,7 +2029,7 @@ function renderAwardUebersicht(l){
         <div class="aw-line"><span class="k">${tk("Unteraufträge")}</span><span class="v">${subTxt}</span></div>
       </section>
       <section class="aw-card">
-        <h4>${esc(a.winner)} — was wir wissen</h4>
+        <h4>${esc(a.winner)}: was wir wissen</h4>
         <div class="aw-line"><span class="k">${tk("Zuschläge 36 Monate")}</span><span class="v">${s.wins36!=null?s.wins36:'—'}</span></div>
         <div class="aw-line"><span class="k">${tk("Ø Auftragswert")}</span><span class="v">${s.avgValue||'—'}</span></div>
         <div class="aw-line"><span class="k">${tk("mit Unterauftrags-Regelung")}</span><span class="v">${s.subQuote||'—'}</span></div>
@@ -2060,7 +2060,7 @@ function renderUebersicht(l){
   if(l.src==='award') return renderAwardUebersicht(l);
   const inc = l.incumbent;
   const pdot = (src,hint)=> src && src!=='echt'
-    ? `<span class="pdot pdot-${src}" title="${esc(tk(SRC_TEXT[src])+(hint?' — '+tk(hint):''))}"></span>` : '';
+    ? `<span class="pdot pdot-${src}" title="${esc(tk(SRC_TEXT[src])+(hint?' · '+tk(hint):''))}"></span>` : '';
   const iv = (text,src,hint,num)=>{
     const cls = (src==='unbekannt'?'v-unk ':src==='na'?'v-na ':'')+(num?'v-num':'');
     return `<span class="v ${cls}">${esc(text)}</span>${pdot(src,hint)}`;
@@ -2194,8 +2194,7 @@ function renderUebersicht(l){
       </div>` : ''}
       ${l.eigen && l.eigenBestaetigt===null ? `<div class="ownconfirm">
         <div class="oc-t"><b>${tk("Gehört dieser Vertrag euch?")}</b></div>
-        <div class="oc-x">Wir haben ${MEINE_FIRMA} als Auftragnehmer erkannt, aber nur über den Firmennamen —
-        das ist bei etwa jedem zwanzigsten Namen nicht eindeutig. Erst wenn du bestätigst, behandeln wir den Vertrag
+        <div class="oc-x">Wir haben ${MEINE_FIRMA} als Auftragnehmer erkannt, aber nur über den Firmennamen. Das ist bei etwa jedem zwanzigsten Namen nicht eindeutig. Erst wenn du bestätigst, behandeln wir den Vertrag
         als euren und warnen euch vor dem Auslaufen.</div>
         <div class="oc-btns">
           <button class="oc-yes" data-own="${l.id}:ja">${tk("Ja, gehört uns")}</button>
@@ -2264,7 +2263,7 @@ function renderTeilnahme(l){
       <div class="unt">
         <div class="unt-m">
           <span class="unt-t">${tk("Vergabeunterlagen")}</span>
-          <span class="unt-x">${desc}${l.aufwand&&l.aufwand.eabgabe==='Pflicht'?`<br>${tk('Abgabe nur elektronisch — die Registrierung dauert und sollte früh erledigt sein.')}`:''}</span>
+          <span class="unt-x">${desc}${l.aufwand&&l.aufwand.eabgabe==='Pflicht'?`<br>${tk('Abgabe nur elektronisch. Die Registrierung dauert und sollte früh erledigt sein.')}`:''}</span>
         </div>
         ${btn}
       </div>`;
@@ -2310,7 +2309,7 @@ function renderTeilnahme(l){
       <div class="kv">
         <div class="kvi"><span class="k">${tk("Teilbar")}</span>
           <span class="vv">${l.lose&&l.lose.length>1
-            ? `${iv('ja — '+l.lose.length+' Lose','echt')}` : iv('nein — ein Gesamtlos','echt')}</span></div>
+            ? `${iv('ja, '+l.lose.length+' Lose','echt')}` : iv('nein, ein Gesamtlos','echt')}</span></div>
         <div class="kvi"><span class="k">${tk("Angebot auf höchstens")}</span>
           <span class="vv">${l.loseMaxAngebot?iv(l.loseMaxAngebot+' Lose','echt'):`<span class="v-na">${tk("nicht begrenzt")}</span>`}</span></div>
         <div class="kvi"><span class="k">${tk("Zuschlag auf höchstens")}</span>
@@ -2336,14 +2335,14 @@ ${l.lose && l.lose.length>1 ? (()=>{
       const passtNr = l.bestLot ? l.bestLot.nr : null;
       return `<section class="sec">
         <h4>${tk("Lose")}<span class="cov">${l.lose.length} Teilleistungen</span></h4>
-        ${passtNr!=null?`<div class="los-passt-hint">${tk("Für euch relevant ist")}<b>Los ${passtNr}</b>${l.bestLot.titel?`: ${l.bestLot.titel}`:''}${l.bestLot.region?` · ${l.bestLot.region}`:''} — die Ausschreibung erbt dessen Relevanz, auch wenn sie insgesamt größer ist.</div>`:''}
+        ${passtNr!=null?`<div class="los-passt-hint">${tk("Für euch relevant ist")}<b>Los ${passtNr}</b>${l.bestLot.titel?`: ${l.bestLot.titel}`:''}${l.bestLot.region?` · ${l.bestLot.region}`:''}. Die Ausschreibung erbt dessen Relevanz, auch wenn sie insgesamt größer ist.</div>`:''}
         <div class="einstieg">
           <div class="ein-m">
             <span class="ein-k">${tk("Einstiegsschwelle")}</span>
             <span class="ein-v">${fmt(min)}</span>
           </div>
           <span class="ein-x">Ihr müsst nicht auf die volle Summe von ${fmt(werte.reduce((a,b)=>a+b,0))}
-          bieten. Das kleinste Los ist einzeln vergeben — <b>${l.lose[minI].titel}</b>.</span>
+          bieten. Das kleinste Los ist einzeln vergeben: <b>${l.lose[minI].titel}</b>.</span>
         </div>
         <div class="lose">
           <div class="los los-head"><span>${tk("Los")}</span><span>${tk("Leistung")}</span><span>${tk("Wert")}</span><span>${tk("Laufzeit")}</span><span>${tk("Ort")}</span></div>
@@ -2378,7 +2377,7 @@ ${l.lose && l.lose.length>1 ? (()=>{
           <span class="pnf-v"><span class="v-num">${l.loseMaxZuschlag}</span></span></div>
       </div>
       <p class="pn-deut">${tk("Selbst wenn ihr alles anbietet, bekommt ihr höchstens")}<b>${l.loseMaxZuschlag} von ${l.lose.length} Losen</b>. Wer den Gesamtauftrag will,
-      braucht Partner — wer allein bietet, kalkuliert ${l.lose.length-l.loseMaxZuschlag} Lose umsonst.</p>
+      braucht Partner. Wer allein bietet, kalkuliert ${l.lose.length-l.loseMaxZuschlag} Lose umsonst.</p>
 
       ${(()=>{ const frei=isFreeLimit();
         if(l.netzSuchend==null) return '';
@@ -2548,7 +2547,7 @@ function renderAnalyse(l){
           <span class="ds-x">${satz}</span>
           ${block}
           ${a.treiber.length?`<span class="ds-tr">Aufwandstreiber: ${a.treiber.join(' · ')}</span>`:''}
-          ${a.stufe!=='na'&&a.bekannt<4?`<span class="ds-cov">Aus ${a.bekannt} von 4 Angaben — die übrigen stehen nicht in der Bekanntmachung.</span>`:''}
+          ${a.stufe!=='na'&&a.bekannt<4?`<span class="ds-cov">Aus ${a.bekannt} von 4 Angaben, die übrigen stehen nicht in der Bekanntmachung.</span>`:''}
         </div>`;})()}
 
       ${(()=>{ const a=l.aufwand; if(!a) return '';
@@ -2636,7 +2635,7 @@ function renderAnalyse(l){
       <h4>${tk("Direktvergleich")}</h4>
       ${l.incumbent ? `<div class="note-box"><b>Wahrscheinlicher Amtsinhaber: ${esc(l.incumbent.name)}.</b>
       Die Firmen-Auflösung ist hier zu unsicher${l.incumbent.conf!=null?` (Konfidenz ${Math.round(l.incumbent.conf*100)} %)`:''}
-      für belastbare Feld-Zahlen — wir zeigen sie deshalb nicht, statt eine erfundene Statistik zu behaupten.
+      für belastbare Feld-Zahlen. Wir zeigen sie deshalb nicht, statt eine erfundene Statistik zu behaupten.
       Der Name kommt aus der letzten Zuschlagsbekanntmachung, nur über die Schreibweise erkannt.</div>`
       : `<div class="note-box"><b>${tk("Offenes Feld.")}</b>${tk("Ohne Amtsinhaber gibt es niemanden zu vergleichen, alle Bieter starten hier gleich.")}</div>`}
     </section>`}
@@ -2654,7 +2653,7 @@ function renderAnalyse(l){
             <span class="lbl">${r.n}</span>
             <span class="st">${hab?'In eurem Profil hinterlegt'
               : hart?tk("Fehlt in eurem Profil, ohne diesen Nachweis kein Angebot")
-              : 'Nicht hinterlegt — hier meist nachreichbar'}</span>
+              : 'Nicht hinterlegt, hier meist nachreichbar'}</span>
           </div>`;})()}
         ${(()=>{ const a = l.anf; if(!a) return '';
           // #15 Weg A — strukturierte Anforderungen aus eForms (echt, wo vorhanden; fehlende
@@ -2714,7 +2713,7 @@ function renderAnalyse(l){
         if(feld && feld.status==='no') return `<div class="note-box gap">
           <b>${tk("Dieses Feld liegt außerhalb eurer Schwerpunkte.")}</b><br>
           ${cpvLabel(l)} (CPV ${l.cpv}) gehört nicht zu euren hinterlegten Feldern. Wenn ihr das abdeckt,
-          trag es nach — dann steigt die Relevanz dieses und ähnlicher Leads.
+          trag es nach, dann steigt die Relevanz dieses und ähnlicher Leads.
           <div class="acts"><button>${tk("Feld ergänzen")}</button><button>${tk("Trifft nicht zu")}</button></div></div>`;
         if(feld && feld.status==='teil') return `<div class="note-box gap">
           <b>${tk("Nachbarfeld, kein voller Treffer.")}</b><br>
@@ -2742,7 +2741,7 @@ function renderAnalyse(l){
           ${eigene.map(c=>`<div class="ct"><span class="t">${esc(c.titel||c.buyer_name||'Vertrag')}${c.is_framework?' <span class="st-tag">Rahmen</span>':''}</span>
             <span class="v">${c.value_euro?fmtE(c.value_euro):'—'}</span>
             <span class="e">${c.end_date?'bis '+new Date(c.end_date).toLocaleDateString('de-DE',{month:'2-digit',year:'numeric'}):''}</span></div>`).join('')}
-          <div class="reqsum">${eigene.length===1?'Ein laufender Vertrag':eigene.length+tk(" laufende Verträge")} — ihr kennt diesen Auftraggeber bereits.</div>
+          <div class="reqsum">${eigene.length===1?'Ein laufender Vertrag':eigene.length+tk(" laufende Verträge")}, ihr kennt diesen Auftraggeber bereits.</div>
         </div>
       </section>`;
       return `
@@ -2835,7 +2834,7 @@ function renderMarkt(l){
   }
   const strukCls = {fragmentiert:'ok', moderat:'mid', oligopol:'risk'}[s.struktur] || 'mid';
   const strukNote = {
-    fragmentiert:'Offenes Feld — als Neuer hast du realistische Chancen.',
+    fragmentiert:'Offenes Feld, als Neuer hast du realistische Chancen.',
     moderat:'Einige feste Groessen, aber Raum fuer Neue.',
     oligopol:tk("Wenige teilen fast alles unter sich auf."),
   }[s.struktur] || '';
@@ -2928,7 +2927,7 @@ function renderBuyer(l){
     <div class="buyer-head">
       <div>
         <div class="buyer-name">${d.name}</div>
-        <div class="buyer-sub">${tk("Vergabestelle · Käufer-Dossier")}${d.quelle === "unterschwellig" ? ` · <span class="v-sparse" title="${esc(tk("Diese Stelle schreibt unterhalb der EU-Schwellenwerte aus. Wir kennen sie aus oeffentlichevergabe.de, nicht aus TED — deshalb fehlen hier Kennzahlen wie Single-Bidder-Anteil und Wechselquote."))}">${tk("unterschwellig")}</span>` : ""}</div>
+        <div class="buyer-sub">${tk("Vergabestelle · Käufer-Dossier")}${d.quelle === "unterschwellig" ? ` · <span class="v-sparse" title="${esc(tk("Diese Stelle schreibt unterhalb der EU-Schwellenwerte aus. Wir kennen sie aus oeffentlichevergabe.de, nicht aus TED. Deshalb fehlen hier Kennzahlen wie Single-Bidder-Anteil und Wechselquote."))}">${tk("unterschwellig")}</span>` : ""}</div>
         <button class="sec-link" data-buyerleads="${esc(l.buyerShort)}">${tk("Alle Leads dieser Vergabestelle")}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </button>
       </div>
@@ -2956,7 +2955,7 @@ function renderBuyer(l){
         <div class="bstat"><span class="bstat-k">${tk("Bekanntmachung bis Zuschlag")}</span><span class="bstat-v">${bnum(d.decision)}</span></div>
         <div class="bstat"><span class="bstat-k">${tk("Typischer Auftragswert")}</span><span class="bstat-v">${bnum(d.median)}</span><span class="bstat-m">${tk("Median")}</span></div>
         <div class="bstat bstat-wide"><span class="bstat-k">${tk("Bekanntes Volumen")}</span><span class="bstat-v">${b(d.volume)}</span>
-          ${d.coverage?`<span class="bstat-flag">Untergrenze — nur ${d.coverage} der Vergaben haben einen veröffentlichten Wert</span>`:''}</div>
+          ${d.coverage?`<span class="bstat-flag">Untergrenze, nur ${d.coverage} der Vergaben haben einen veröffentlichten Wert</span>`:''}</div>
       </div>
       <div class="bmix">
         <div class="bmix-head">
@@ -3039,7 +3038,7 @@ function renderBuyer(l){
     <section class="bsec">
       <h4>${tk("Wen muss ich schlagen?")}</h4>
       <div class="bwinners">
-        <span class="bwin-k">Die stärksten Wettbewerber — Anteil an allen ${d.total} Vergaben</span>
+        <span class="bwin-k">Die stärksten Wettbewerber, Anteil an allen ${d.total} Vergaben</span>
         <div class="bwin-list">
           ${d.topWinners.map(w=>`<div class="bwin-row">
             <span class="bwin-bar"><i style="width:${Math.min(100,w.pct*2)}%"></i></span>
@@ -3070,7 +3069,7 @@ function renderBuyer(l){
 
     <div class="buyer-floor">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg>
-      Volumen-Angaben sind Untergrenzen — nur für einen Teil der Vergaben ist ein Auftragswert veröffentlicht. ${d.below?`Diese Stelle vergibt auch unterschwellig (${d.below} Aufträge).`:''}
+      Volumen-Angaben sind Untergrenzen, nur für einen Teil der Vergaben ist ein Auftragswert veröffentlicht. ${d.below?`Diese Stelle vergibt auch unterschwellig (${d.below} Aufträge).`:''}
     </div>
   </div>`;
 }
@@ -3190,7 +3189,7 @@ function renderProfil(){
 
       ${historie && !belastbar?`<div class="note-box" style="margin-top:var(--s3)"><b>${tk("Dünne Grundlage.")}</b>
         Mit ${d.siege} ${d.siege===1?'Vergabe':'Vergaben'} bei ${d.kunden} ${d.kunden===1?'Auftraggeber':'Auftraggebern'}
-        lässt sich noch kein Muster ablesen — ergänzt unten, was wir nicht sehen können.</div>`:''}
+        lässt sich noch kein Muster ablesen. Ergänzt unten, was wir nicht sehen können.</div>`:''}
       ${!historie?`<div class="note-box" style="margin-top:var(--s3)">${tk("Wir finden unter eurem Namen noch keine gewonnene Vergabe.")}<b>${tk("Dann erklärt euer Profil selbst")}</b>${tk("Relevanz und Anforderungs-Check funktionieren auch ohne Historie.")}</div>`:''}
 
       <div class="ang">
@@ -3200,7 +3199,7 @@ function renderProfil(){
             const felder = (userProfile.cpvLabels&&userProfile.cpvLabels.length)?userProfile.cpvLabels:['—'];
             const regs = userProfile.regions ? (userProfile.regionLabels||[]).join(' · ') : 'Bundesweit';
             const vmin = fmt(userProfile.volMin), vmax = fmt(userProfile.volMax);
-            const vol = (vmin||vmax) ? `${vmin||'0'} – ${vmax||'beliebig'} €` : tk("keine Grenze");
+            const vol = (vmin||vmax) ? `${vmin||'0'} bis ${vmax||'beliebig'} €` : tk("keine Grenze");
             return `<div class="ang-sync">
               <div class="asy-h"><span class="asy-t">${tk("Eure Angaben")}<span class="asy-tag">${tk("erklärt")}</span></span>
                 <button class="asy-edit" data-editprofil="1">${tk("Bearbeiten")}</button></div>

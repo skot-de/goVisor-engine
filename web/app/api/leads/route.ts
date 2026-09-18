@@ -60,7 +60,7 @@ export async function GET(req: Request) {
 
   const json = await loadDataFile(`leads-${branche}.json`);
   if (!json) {
-    return NextResponse.json({ error: "keine Daten — export_web_leads.py laufen lassen" }, { status: 503 });
+    return NextResponse.json({ error: "keine Daten, export_web_leads.py laufen lassen" }, { status: 503 });
   }
   // #24 Zuschlagsphase: frische Zuschläge (src='award') derselben Branche in dieselbe Liste
   // einspeisen — kein eigener Bereich, eine Phase neben offen/auslaufend. Fehlt die Datei

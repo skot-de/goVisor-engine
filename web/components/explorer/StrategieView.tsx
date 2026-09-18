@@ -314,7 +314,7 @@ function Vergabestellen({ data, onOpenBuyer }: { data: Strat; onOpenBuyer: (s: S
             <span className="st-w">
               {s.neuAnteil
                 ? <Q q={s.neuAnteil} />
-                : <span className="v-sparse" title={t('Die Stelle taucht selbst erst im Beobachtungsfenster auf — dann wären zwangsläufig alle Anbieter „neu".')}>{t("nicht messbar")}</span>}
+                : <span className="v-sparse" title={t('Die Stelle taucht selbst erst im Beobachtungsfenster auf, dann wären zwangsläufig alle Anbieter „neu".')}>{t("nicht messbar")}</span>}
             </span>
             <span className="st-w">{s.bieterMedian != null ? <span className="v-num">{s.bieterMedian}</span> : <span style={{ color: "var(--ink-300)" }}>—</span>}</span>
             <span className="st-w"><Q q={s.kmu} /></span>
@@ -481,7 +481,7 @@ function StelleDetail({ s, alle, onBack }: { s: Stelle; alle: Stelle[]; onBack: 
         <div className={`bhero bhero-${konzCls}`} style={{ marginTop: "var(--s4)" }}>
           <div className="bhero-val">{s.top1} %</div>
           <div className="bhero-lbl">
-            <span className="bhero-title">{t("Der stärkste Anbieter hält")} <b>{s.top1} %</b> {t("der Zuschläge")} — {t(konz)}</span>
+            <span className="bhero-title">{t("Der stärkste Anbieter hält")} <b>{s.top1} %</b> {t("der Zuschläge")}, {t(konz)}</span>
             <span className="bhero-note">
               {konz === "fragmentiert" ? t("Kein Anbieter dominiert. Als Neuer sind die Chancen strukturell offen.")
                 : konz === "moderat" ? t("Einige feste Größen, aber es gibt Raum.")
@@ -542,7 +542,7 @@ function Felder({ data }: { data: Strat }) {
     <>
       <div className="st-head"><div>
         <h4>{t("Felder")}</h4>
-        <p className="st-frage">{t("Wo ist Platz, wo ist es eng?")}{pro ? "" : ` — ${t("Werte im Pro-Zugang")}`}</p>
+        <p className="st-frage">{t("Wo ist Platz, wo ist es eng?")}{pro ? "" : ` (${t("Werte im Pro-Zugang")})`}</p>
       </div></div>
 
       <div className="st-table st-felder">

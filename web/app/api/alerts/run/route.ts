@@ -20,7 +20,7 @@ async function run(req: NextRequest) {
   // (`/api/alerts`) ist davon unabhängig und rechnet mit neutralen Flags.
   if (!mailAktiv) {
     return NextResponse.json({ ok: true, uebersprungen: true,
-      grund: "kein EMAIL_API_KEY — es wird nichts als zugestellt markiert" });
+      grund: "kein EMAIL_API_KEY, es wird nichts als zugestellt markiert" });
   }
 
   const admin = createAdminClient();
@@ -46,7 +46,7 @@ async function run(req: NextRequest) {
     return NextResponse.json({
       ok: false,
       error: "datenspeicher-nicht-erreichbar",
-      hinweis: "Fristen nicht lesbar — es wurde NICHTS verschickt und nichts als zugestellt "
+      hinweis: "Fristen nicht lesbar, es wurde NICHTS verschickt und nichts als zugestellt "
              + "markiert. Der Lauf muss wiederholt werden.",
     }, { status: 503 });
   }

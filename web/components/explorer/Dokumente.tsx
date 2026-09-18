@@ -81,7 +81,7 @@ export function Dokumente({ leadId }: { leadId: string }) {
     <div className="dok-block">
       <p className="dok-kopf">
         <b>{dateien.length}</b> Datei{dateien.length === 1 ? "" : "en"} · {groesse(gesamt)}
-        <span className="dok-hinweis">Original aus dem Vergabeportal — ungefiltert.</span>
+        <span className="dok-hinweis">Original aus dem Vergabeportal. Ungefiltert.</span>
       </p>
 
       {RANG.map((r) => {

@@ -189,7 +189,7 @@ export function AppRail({
             <div className="planmenu" role="menu">
               <div className="pm-head">
                 <b>{userEmail || "Nicht angemeldet"}</b>
-                <span>{plan === "paid" ? "Pro — voller Zugang" : "Free — Lead-Liste unbegrenzt, 3 Bewertungen"}</span>
+                <span>{plan === "paid" ? "Pro · voller Zugang" : "Free · Lead-Liste unbegrenzt, 3 Bewertungen"}</span>
               </div>
               {/* Die Sperre hing frueher an der Abrechnung. Die Erfolgspraemie ist am
                   2026-08-21 gestrichen worden; was bleibt, ist die Kennzeichnung: bis die

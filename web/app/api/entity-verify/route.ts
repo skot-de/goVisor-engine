@@ -134,7 +134,7 @@ export async function POST(req: NextRequest) {
   if (FREEMAIL.has(stamm)) {
     return antwort({
       conf: "unbestaetigt", domainBekannt: !!bekannt,
-      grund: "private E-Mail-Adresse — sie lässt sich keiner Firma zuordnen",
+      grund: "private E-Mail-Adresse, sie lässt sich keiner Firma zuordnen",
     });
   }
   // Gehoert die Domain nachweislich einer ANDEREN Firma? Das ist kein Grenzfall mehr.

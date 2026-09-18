@@ -27,7 +27,7 @@ const SEITE = process.env.NEXT_PUBLIC_SITE_URL ?? "https://govisor.eu";
 export const metadata: Metadata = {
   metadataBase: new URL(SEITE),
   title: {
-    default: `${copy.brand} — ${copy.tagline}`,
+    default: `${copy.brand} · ${copy.tagline}`,
     template: `%s · ${copy.brand}`,
   },
   description: copy.metaDescription,
@@ -62,13 +62,13 @@ export const metadata: Metadata = {
     siteName: copy.brand,
     locale: "de_DE",
     url: SEITE,
-    title: `${copy.brand} — ${copy.tagline}`,
+    title: `${copy.brand} · ${copy.tagline}`,
     description: copy.metaDescription,
     images: [{ url: "/govisor-wordmark.png", width: 1200, height: 630, alt: copy.brand }],
   },
   twitter: {
     card: "summary_large_image",
-    title: `${copy.brand} — ${copy.tagline}`,
+    title: `${copy.brand} · ${copy.tagline}`,
     description: copy.metaDescription,
     images: ["/govisor-wordmark.png"],
   },

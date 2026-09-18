@@ -123,15 +123,15 @@ export function Kalender({
         <div>
           <h3 className="kal-t">Termine</h3>
           <p className="kal-sub">
-            {gesamt ? `${gesamt} anstehende${gesamt === 1 ? "r" : ""} Termin${gesamt === 1 ? "" : "e"} aus eurer Merkliste — Fristen, Bindefristen und Ortstermine`
-                    : "Fristen eurer beobachteten Leads — chronologisch"}
+            {gesamt ? `${gesamt} anstehende${gesamt === 1 ? "r" : ""} Termin${gesamt === 1 ? "" : "e"} aus eurer Merkliste. Fristen, Bindefristen und Ortstermine`
+                    : "Fristen eurer beobachteten Leads, chronologisch"}
           </p>
         </div>
         {onSubscribe && (
           feedUrl ? (
             <div className="kal-feed">
               <input readOnly value={feedUrl} onFocus={(e) => e.currentTarget.select()} aria-label="iCal-Feed-URL" />
-              <span className="kal-feed-h">In Outlook/Google-Kalender abonnieren — aktualisiert sich automatisch</span>
+              <span className="kal-feed-h">In Outlook/Google-Kalender abonnieren, aktualisiert sich automatisch</span>
             </div>
           ) : (
             <button className="kal-ics" onClick={onSubscribe} title={isPaid ? "iCal-Feed anlegen" : "Pro-Feature"}>
@@ -147,14 +147,13 @@ export function Kalender({
         <div className="kal-konflikt">
           <b>Achtung:</b> Bei {konflikte === 1 ? "einem Termin" : `${konflikte} Terminen`} nennen die
           Unterlagen eine <b>andere Angebotsfrist</b> als die Bekanntmachung. Welche gilt, kann nur
-          die Vergabestelle sagen — fragt nach, bevor ihr kalkuliert.
+          die Vergabestelle sagen. Fragt nach, bevor ihr kalkuliert.
         </div>
       )}
 
       {gesamt === 0 ? (
         <div className="kal-empty">
-          <b>Noch keine Termine.</b> Merkt euch Leads (☆), dann erscheinen ihre Fristen hier —
-          und, wo die Unterlagen ausgelesen sind, auch Bindefrist und Bieterfragen-Frist.
+          <b>Noch keine Termine.</b> Merkt euch Leads (☆), dann erscheinen ihre Fristen hier, und, wo die Unterlagen ausgelesen sind, auch Bindefrist und Bieterfragen-Frist.
         </div>
       ) : (
         gruppen.map((g) => (

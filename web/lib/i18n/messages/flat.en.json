@@ -462,7 +462,6 @@
   "Diese Quote beruht auf {n} gemeldeten Teilnahmen. Verfahren, die ihr nicht gemeldet habt, fehlen, die tatsächliche Quote kann abweichen.": "This rate is based on {n} reported bids. Procedures you did not report are missing, the actual rate may differ.",
   "Diese Sektion ist noch nicht gebaut.": "This section has not been built yet.",
   "Diese Stelle liegt in den Daten fragmentiert vor. Wir zeigen den größten zusammengeführten Teil, nicht garantiert die volle Historie.": "This contracting body appears fragmented in the data. We show the largest consolidated part, not necessarily the full history.",
-  "Diese Stelle schreibt unterhalb der EU-Schwellenwerte aus. Wir kennen sie aus oeffentlichevergabe.de, nicht aus TED — deshalb fehlen hier Kennzahlen wie Single-Bidder-Anteil und Wechselquote.": "This authority tenders below the EU thresholds. We know it from oeffentlichevergabe.de, not from TED — which is why figures like single-bidder rate and switching rate are missing here.",
   "Diese Stelle verlangt fast immer": "This authority almost always requires",
   "Diese Stellen kennen euch bereits. Der Balken zeigt, wie viel ihr dort abgeräumt habt, der Rest ging an andere.": "These bodies already know you. The bar shows how much you took there, the rest went to others.",
   "Diese Stellen kennen euch bereits. Rechts steht, wie viele ihrer Vergaben gerade laufen.": "These authorities already know you. On the right you see how many of their tenders are open right now.",
@@ -858,7 +857,6 @@
   "Keine offenen Angaben mit spürbarer Wirkung. Was jetzt noch streut, liegt an der Datenlage der Vergabestellen (siehe unten).": "No missing details with a noticeable effect. What still scatters comes from what contracting bodies publish (see below).",
   "Kennung {id} gehört zu einem anderen Grundraum. Wir suchen, zu welchem.": "Reference {id} belongs to another sector. We are looking up which one.",
   "Kennung {id} liegt dort. Der Grundraum wird geladen, dann öffnet sich die Ausschreibung.": "Reference {id} is there. The sector is loading, then the tender opens.",
-  "Kennung {id} liegt in keinem Grundraum — sie ist nicht mehr im Bestand oder war nie darin.": "Reference {id} is in no sector — it is no longer in the data, or never was.",
   "Kennung {q}": "Reference {q}",
   "Kennzahl": "Metric",
   "Klarer Fall": "Clear case",
@@ -1520,7 +1518,6 @@
   "Von Ihnen ergänzt/korrigiert": "Added or corrected by you",
   "Von der Merkliste entfernt": "Removed from watchlist",
   "Von euch angegeben, nicht überprüft": "Provided by you, not verified",
-  "Von {g} geprüften Aussagen ließen sich {n} nicht im Dokument belegen und wurden verworfen. Diese Auswertung ist lückenhafter als die meisten — lest die Unterlagen hier besonders selbst.": "Of {g} checked statements, {n} could not be backed by the document and were discarded. This analysis is patchier than most — read the documents yourself here.",
   "Vor {jahr} liegt für diese Auswahl nichts vor. Das ist der Beginn unserer Erfassung, nicht der des Marktes. Die Achse bleibt trotzdem stehen, damit die Lücke sichtbar ist statt weggeschnitten.": "Nothing is available for this selection before {jahr}. That is where our coverage begins, not the market. The axis is kept all the same, so that the gap stays visible instead of being cropped away.",
   "Vorgang": "Procurement file",
   "Vorgang ansehen": "View procurement file",
@@ -2237,7 +2234,6 @@
   "{quelle} kommt neu in den Bestand. Die Linie beginnt hier, der Markt nicht.": "{quelle} newly enters the data. The line starts here, the market does not.",
   "{quelle} liefert erst ab {jahr} und bekommt deshalb eine eigene Linie. Nicht addiert: ein Quellen-Start wäre in einer Summe von echtem Wachstum nicht zu unterscheiden.": "{quelle} only starts in {jahr} and therefore gets its own line. Not added up: in a combined total, a source starting up would be indistinguishable from real growth.",
   "{quelle} liegt vor {jahr} mit {n} Verfahren im Bestand. Zu wenige für einen Betrieb, deshalb ohne Linie ausgewiesen statt weggelassen.": "Before {jahr}, {quelle} holds {n} procedures in the data. Too few to count as operation, so it is reported without a line rather than dropped.",
-  "{quelle} zeigt die Namen der Vergabeunterlagen öffentlich an, die Dateien selbst nur nach Anmeldung. Wir haben keine davon geöffnet — was hier steht, ist der Dateiname und der daraus erkannte Typ.": "{quelle} shows the names of the tender documents publicly, the files themselves only after signing in. We have opened none of them: what you see is the file name and the type inferred from it.",
   "{q} · {n} Verträge · belegt {echt} · geschätzt {schaetz} · ohne Wert {unk}": "{q} · {n} contracts · documented {echt} · estimated {schaetz} · no value {unk}",
   "{sichtbar} von {gesamt} Firmen, nach Schmerz-Volumen sortiert": "{sichtbar} of {gesamt} companies, sorted by pain volume",
   "{stelle} vergibt „{leistung}\" ({phase}).": "{stelle} is awarding “{leistung}” ({phase}).",
@@ -2311,5 +2307,9 @@
   "✓ Beobachtet": "✓ Watching",
   "✓ angesprochen": "✓ contacted",
   "🇦🇹 nur Österreich": "🇦🇹 Austria only",
-  "🇨🇭 nur Schweiz": "🇨🇭 Switzerland only"
+  "🇨🇭 nur Schweiz": "🇨🇭 Switzerland only",
+  "Kennung {id} liegt in keinem Grundraum, sie ist nicht mehr im Bestand oder war nie darin.": "Reference {id} is in no sector — it is no longer in the data, or never was.",
+  "Von {g} geprüften Aussagen ließen sich {n} nicht im Dokument belegen und wurden verworfen. Diese Auswertung ist lückenhafter als die meisten. Lest die Unterlagen hier besonders selbst.": "Of {g} checked statements, {n} could not be backed by the document and were discarded. This analysis is patchier than most — read the documents yourself here.",
+  "{quelle} zeigt die Namen der Vergabeunterlagen öffentlich an, die Dateien selbst nur nach Anmeldung. Wir haben keine davon geöffnet. Was hier steht, ist der Dateiname und der daraus erkannte Typ.": "{quelle} shows the names of the tender documents publicly, the files themselves only after signing in. We have opened none of them: what you see is the file name and the type inferred from it.",
+  "Diese Stelle schreibt unterhalb der EU-Schwellenwerte aus. Wir kennen sie aus oeffentlichevergabe.de, nicht aus TED. Deshalb fehlen hier Kennzahlen wie Single-Bidder-Anteil und Wechselquote.": "This authority tenders below the EU thresholds. We know it from oeffentlichevergabe.de, not from TED — which is why figures like single-bidder rate and switching rate are missing here."
 }

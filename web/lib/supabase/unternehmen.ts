@@ -56,8 +56,8 @@ export function computeKmu(s: Stammdaten): KmuResult {
   else { kat = "grossunternehmen"; label = "Großunternehmen"; }
   const ist_kmu = kat !== "grossunternehmen";
   const begruendung = ist_kmu
-    ? `KMU: ja — ${ma} Beschäftigte (< 250) und ${fmt(umsatz)} Umsatz (≤ 50 Mio €).`
-    : `KMU: nein — ${ma} Beschäftigte oder ${fmt(umsatz)} Umsatz überschreiten die EU-Schwellen (250 / 50 Mio €).`;
+    ? `KMU: ja, ${ma} Beschäftigte (< 250) und ${fmt(umsatz)} Umsatz (≤ 50 Mio €).`
+    : `KMU: nein, ${ma} Beschäftigte oder ${fmt(umsatz)} Umsatz überschreiten die EU-Schwellen (250 / 50 Mio €).`;
   return { ist_kmu, kategorie: kat, label, begruendung };
 }
 

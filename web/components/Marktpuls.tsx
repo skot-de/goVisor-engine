@@ -621,7 +621,7 @@ function BieterDiagramm({ d, land, branche }: {
                         className="mp-punkt" data-teil="nein" style={{ stroke: farbe }}>
                   {/* Der Anteil allein sagt nichts über die Grössenordnung — die beiden
                       Zahlen dahinter gehören an denselben Punkt. */}
-                  <title>{`${r.von + i}: ${zahl(v, 1)} % — ${zahl(r.sb[i])} von ${zahl(r.n[i])}`}</title>
+                  <title>{`${r.von + i}: ${zahl(v, 1)} % · ${zahl(r.sb[i])} von ${zahl(r.n[i])}`}</title>
                 </circle>
               ))}
             </g>
