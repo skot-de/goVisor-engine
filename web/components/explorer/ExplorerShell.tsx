@@ -49,7 +49,21 @@ const PROFILE_KEY = "govisor.profile.v1";
    ⚠ DIESELBE LISTE BENUTZT DIE AUSWERTUNG (`scripts/auswertung_ausgeblendet.py`). Ein
    zweiter, abweichender Katalog dort waere die Sorte Bruch, die erst auffaellt, wenn die
    Zahlen nicht mehr aufgehen. */
-const AUS_GRUENDE = ["falscher Inhalt", "falsche Region", "zu klein", "Frist zu knapp"] as const;
+/* ⚠ NEU GEFASST am 2026-09-20, Sven: „die vier auswahlmöglichkeiten sind so naja."
+   Sie waren es auch, und zwar aus drei Gruenden:
+
+   · „Frist zu knapp" steht schon als Empfehlungs-Label in derselben Zeile. Zweimal
+     dasselbe Wort fuer zweierlei — und es ist ueberhaupt kein Passungsproblem, sondern
+     eine Terminfrage, die sich morgen anders stellt.
+   · „falscher Inhalt" und „falsche Region" sind aus der Sicht des SYSTEMS formuliert
+     („falsch" heisst: unsere Zuordnung stimmt nicht). Der Nutzer denkt nicht in
+     Zuordnungen, er denkt „das machen wir nicht".
+   · „zu klein" allein liess die Gegenrichtung weg — ein Auftrag, der zu GROSS ist, ist
+     derselbe Befund mit anderem Vorzeichen und fuer die Passung genauso wertvoll.
+
+   Jetzt vier, die je eine ANDERE Konsequenz haben: Fach (CPV/Branchenraum), Ort
+   (Regionsfilter), und die beiden Enden der Groessenachse. */
+const AUS_GRUENDE = ["nicht unser Fach", "zu weit weg", "zu groß", "zu klein"] as const;
 import { ColumnMenu, FilterBar, Suggestions, HeaderFilterPopover } from "./parts";
 import { AppRail, AppTop, type RailId } from "./Rail";
 
@@ -861,7 +875,22 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
        den naechsten Vorgang aus — dann rueckt die Frage dorthin, und der erste
        verschwindet still. Das ist die einzige Stelle, an der sie von allein geht. */
     setFragtNach(jetztAus ? { id, titel: (l?.titel as string) ?? id } : null);
-    bump();
+    /* ⛔ HIER STAND `bump()`, UND ES WAR DER GRUND FUER DIE TRAEGHEIT. Sven am 2026-09-20:
+       „die ladezeit bis die reaktion nach dem klick auf x kommt ist vieeel zu lang."
+
+       `bump()` erhoeht `tick`, und an `tick` haengen vier Berechnungen. Die teuerste ist
+       `facetZahlen`: sie fuehrt JE FACETTE UND JE WERT einen vollen `postFilter` aus —
+       gemessen 40 Durchlaeufe ueber 17.753 Leads im Grundraum bau, und `postFilter` tut
+       je Lead mehr als ein trivialer Durchlauf (mehrere Feldpruefungen, Mengenvergleiche,
+       Datumsrechnung). Dazu `ausgeblendetImTreffer`, `cpvSegments` und `rows`.
+
+       Gebraucht wird davon nichts: `setAusgeblendet` und `setFragtNach` sind State und
+       zeichnen die Liste ohnehin neu, und `rows` haengt bereits an `ausgeblendet`. Die
+       Facettenzahlen zaehlen ABSICHTLICH ohne Ausblendungen — sie muessen gar nicht neu.
+
+       ⚠ Messen statt vermuten hat hier zweimal gespart: die Filterkette selbst braucht
+       2 bis 6 ms und der Zeilenaufbau 1 bis 3 ms. Wer an ihnen optimiert haette, haette
+       nichts gefunden. */
   }
 
   /** Einen Grund zum zuletzt ausgeblendeten Vorgang nachreichen. */

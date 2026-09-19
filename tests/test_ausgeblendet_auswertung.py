@@ -95,6 +95,14 @@ def test_die_frage_ersetzt_die_zeile():
     """
     tab = (WURZEL / "web" / "components" / "explorer" / "LeadTable.tsx").read_text(encoding="utf-8")
     assert "function FrageZeile" in tab, "die Frage steht nicht in der Tabelle"
+    # ⚠ OHNE TITEL in der Zeile. Er stand an der Stelle, an der man ihn gerade gelesen und
+    # verworfen hat, und drueckte die Knoepfe bei schmalen Fenstern aus der Zeile. Welcher
+    # Vorgang gemeint ist, sagt die POSITION. (Gespeichert wird er weiterhin — dort ist er
+    # noetig, weil abgelaufene Vorgaenge aus dem Export fallen.)
+    i0 = tab.index("function FrageZeile")
+    block0 = tab[i0:tab.index("export function LeadTable", i0)]
+    assert 'className="af-t"' not in block0, (
+        "der Titel steht wieder in der Frage-Zeile")
     # ⚠ Im Block der FrageZeile, nicht irgendwo in der Datei: `colSpan={colspan}` steht
     # auch an der Leer-Zeile („Hier ist gerade nichts"). Der erste Anlauf dieses Tests
     # suchte in der ganzen Datei und blieb gruen, als ich es der Frage weggenommen hatte.
@@ -266,3 +274,34 @@ def test_die_frage_zeile_ist_so_hoch_wie_die_anderen():
     assert "box-sizing:border-box" in regel, (
         "ohne border-box addiert sich das Polster auf die Mindesthoehe und die Zeile wird "
         "zu hoch statt gleich hoch")
+
+
+def test_das_ausblenden_rechnet_die_liste_nicht_neu():
+    """⛔ Sven am 2026-09-20: „die ladezeit bis die reaktion nach dem klick auf x ist
+    vieeel zu lang."
+
+    Ursache war `bump()` in `toggleAusblenden`. Es erhoeht `tick`, und an `tick` haengen
+    vier Berechnungen. Die teuerste ist `facetZahlen`: sie fuehrt JE FACETTE UND JE WERT
+    einen vollen `postFilter` aus — gemessen **40 Durchlaeufe ueber 17.753 Leads** im
+    Grundraum bau, und `postFilter` tut je Lead mehr als ein trivialer Durchlauf.
+
+    ⚠ MESSEN STATT VERMUTEN HAT HIER ZWEIMAL GESPART. Die naheliegenden Verdaechtigen
+    waren schnell: die Filterkette braucht 2 bis 6 ms, der Zeilenaufbau 1 bis 3 ms. Wer
+    dort optimiert haette, haette Stunden verloren und nichts gefunden.
+
+    Gebraucht wird `bump()` an dieser Stelle nicht: `setAusgeblendet` und `setFragtNach`
+    sind State und zeichnen die Liste ohnehin neu, `rows` haengt bereits an
+    `ausgeblendet`, und die Facettenzahlen zaehlen ABSICHTLICH ohne Ausblendungen.
+    """
+    code = _ohne_kommentar(SHELL.read_text(encoding="utf-8"))
+    i = code.index("function toggleAusblenden")
+    block = " ".join(code[i:i + 4000].split())[:900]
+    assert "bump()" not in block, (
+        "bump() ist zurueck in toggleAusblenden — ein Klick auf das Kreuz rechnet dann "
+        "wieder die Facettenzahlen neu, also 40 volle Durchlaeufe ueber den Grundraum")
+    # ⚠ Gegenprobe zur Gegenprobe: `rows` MUSS an `ausgeblendet` haengen, sonst verschwindet
+    # die Zeile ohne bump() gar nicht mehr.
+    m = re.search(r"\}, \[aktiveBranche, sortKey, sortDir, tokens, filters, tick[^\]]*\]", code)
+    assert m and "ausgeblendet" in m.group(0), (
+        "rows haengt nicht mehr an `ausgeblendet` — ohne bump() bliebe die ausgeblendete "
+        "Zeile dann einfach stehen")

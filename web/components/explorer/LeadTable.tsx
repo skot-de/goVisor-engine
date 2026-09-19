@@ -43,7 +43,11 @@ function FrageZeile({ titel, gruende, onGrund, onZurueck, colspan }: {
     <tr className="ausfrage-zeile">
       <td colSpan={colspan}>
         <div className="ausfrage">
-          <span className="af-t">{titel}</span>
+          {/* ⚠ OHNE TITEL. Sven am 2026-09-20: „mach den titel der ausschreibung weg."
+              Er stand direkt an der Stelle, an der man ihn gerade gelesen und verworfen
+              hat — und er drueckte die vier Knoepfe bei schmalen Fenstern aus der Zeile.
+              Welcher Vorgang gemeint ist, sagt die Position: die Frage steht dort, wo er
+              stand. */}
           <span className="af-f">{t("Hilf uns besser zu werden:")}</span>
           {gruende.map((g) => (
             <button key={g} className="af-g" onClick={() => onGrund(g)}>{t(g)}</button>
