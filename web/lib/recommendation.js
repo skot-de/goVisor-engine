@@ -154,8 +154,13 @@ export function einordnung(e) {
   if (e.E8 === "eigen") return { label: "Bestandsvertrag", cls: "blau", gruende: ["läuft aus. Folgeausschreibung"] };
   if (e.E2 != null && e.E2 < T.E2_mittel) return { label: "Geringe Passung", cls: "gedaempft", gruende: ["wenig Überschneidung mit euren Feldern"] };
   if (e.E5 === "unzureichend") return { label: "Frist zu knapp", cls: "gedaempft", gruende: [tk("nur {n} Tage", { n: e.E5tage })] };
-  if (e.E2 != null && e.E2 >= T.E2_hoch && e.E3 === "guenstig") return { label: "Hohe Passung", cls: "gruen", gruende: ["hohe Passung", "Amtsinhaber angreifbar"] };
-  if (e.E2 != null && e.E2 >= T.E2_hoch) return { label: "Hohe Passung", cls: "gruen", gruende: ["hohe Passung"] };
+  /* ⚠ DER GRUND DARF NICHT DIE UEBERSCHRIFT WIEDERHOLEN. Hier stand zweimal
+     `gruende: ["hohe Passung"]` unter `label: "Hohe Passung"` — und die Zelle rendert
+     BEIDES untereinander. Gemeldet am 2026-09-19: „in spalte empfehlung, steht hohe
+     passung zweimal untereinander." Der Grund soll etwas hinzufuegen; gespiegelt an der
+     Gegenrichtung, die seit jeher „wenig Ueberschneidung mit euren Feldern" sagt. */
+  if (e.E2 != null && e.E2 >= T.E2_hoch && e.E3 === "guenstig") return { label: "Hohe Passung", cls: "gruen", gruende: ["viel Überschneidung mit euren Feldern", "Amtsinhaber angreifbar"] };
+  if (e.E2 != null && e.E2 >= T.E2_hoch) return { label: "Hohe Passung", cls: "gruen", gruende: ["viel Überschneidung mit euren Feldern"] };
   return { label: "Passung mittel", cls: "neutral", gruende: [] };
 }
 

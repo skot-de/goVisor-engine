@@ -458,13 +458,17 @@ const esc = s => String(s == null ? '' : s)
 const val = (text, src, hint) =>
   `<span class="val" data-src="${src}" title="${esc(tk(SRC_TEXT[src]) + (hint ? ' · ' + tk(hint) : ''))}">${esc(text)}</span>`;
 
+/* ⚠ DAS LABEL GEHT DURCH `tk()`, seit es in der Tabelle SICHTBAR ist (2026-09-19).
+   Vorher war es dort per CSS ausgeblendet und der rohe deutsche Wert fiel nicht auf;
+   sichtbar gemacht haette „hoch" bei jedem EN- und FR-Nutzer dagestanden. Die drei Werte
+   stehen im Katalog (high/medium/low, élevé/moyen/faible). */
 const bandMeter = (level, risk, cap, naTitle) => {
   // naTitle erklärt bei „n/a" die URSACHE (fehlende Angaben), statt den Nutzer raten zu lassen.
   const t = (level==='na' && naTitle) ? ` title="${esc(naTitle)}"`
           : cap ? ` title="${esc(cap)}: ${level==='na'?'n/a':level}"` : '';
   return level==='na'
     ? `<span class="band" data-level="na"${t}><span class="segs"><i></i><i></i><i></i></span><span class="lbl">n/a</span></span>`
-    : `<span class="band ${risk?'risk':''}" data-level="${level}"${t}><span class="segs"><i></i><i></i><i></i></span><span class="lbl">${level}</span></span>`;
+    : `<span class="band ${risk?'risk':''}" data-level="${level}"${t}><span class="segs"><i></i><i></i><i></i></span><span class="lbl">${tk(level)}</span></span>`;
 };
 /* Zweite Achse zur Relevanz-Stufe: die Passungszahl, IMMER gepaart mit der Beleglage.
  *

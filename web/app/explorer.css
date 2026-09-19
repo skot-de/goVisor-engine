@@ -32,10 +32,19 @@ input:focus-visible,.tsearch:focus-within{outline:none}
 .band[data-level="mittel"] .segs i:nth-child(-n+2){background:#34C08D}
 .band[data-level="niedrig"] .segs i:nth-child(-n+1){background:var(--ink-300)}
 .band .lbl{font-size:12px;color:var(--ink-700);text-transform:capitalize}
-td.c-band .band .lbl{display:none!important}
+/* ── IN DER TABELLE STEHT DAS WORT, NICHT DER BALKEN (2026-09-19) ──────────────────
+   ⚠ Sven: „es sind immer noch einfach ganz viele balken". Nachgezaehlt: drei Baender à
+   drei Segmente plus die fuenfteilige Passungsachse ergaben 14 kleine Rechtecke je Zeile,
+   bei 50 Zeilen rund 700 auf einem Schirm.
+
+   Die Baender trugen ihr Label die ganze Zeit mit, es war hier nur ausgeblendet. Wort
+   statt Segmente kostet nichts an Information — im Gegenteil, „mittel" ist in einer
+   104 px breiten Zelle ablesbar und drei Balkenstriche sind es nicht. Im Detail bleibt
+   die Segmentdarstellung: dort steht ein Band allein und traegt Bedeutung. */
+td.c-band .band .segs{display:none}
+td.c-band .band .lbl{font-size:12px;color:var(--ink-700)}
 .band[data-level="na"] .lbl{color:var(--ink-400);font-style:italic}
-td.c-band .band[data-level="na"] .segs i{background:var(--surface-3);border:1px dashed var(--line-strong);box-sizing:border-box}
-td.c-band .band[data-level="na"] .lbl{display:none!important}
+td.c-band .band[data-level="na"] .lbl{color:var(--ink-400);font-style:italic}
 body[data-view="verteidigung"] .band.risk[data-level="hoch"] .segs i:nth-child(-n+3){background:var(--risk)}
 body[data-view="verteidigung"] .band.risk[data-level="mittel"] .segs i:nth-child(-n+2){background:#E0A08A}
 
