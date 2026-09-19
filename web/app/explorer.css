@@ -2088,7 +2088,6 @@ a.lb-kachel{text-decoration:none}
 /* VERGABEUNTERLAGEN — die echten Dateien im Unterlagen-Reiter, vor der Analyse. */
 .dok-block { padding: 2px 32px 0; }
 .dok-laedt, .dok-leer { padding: 14px 32px; color: var(--muted, #6b7280); font-size: 13px; }
-.dok-leer { display: grid; gap: 3px; }
 .dok-leer b { color: var(--ink-900, #111827); }
 .dok-kopf { margin: 0 0 12px; font-size: 13px; color: var(--ink-700, #374151); }
 /* „ungefiltert" ist kein Beiwerk: hier greift KEINE PII-Schwaerzung, anders als beim
@@ -2634,19 +2633,28 @@ td.c-band .passung i{display:none}
 /* ⚠ Knopf, der wie Text aussieht. Alle sechs Zustaende sind `<button>` — damit Tastatur
    und Fokusring funktionieren wie bei Stern, Status und Ausblenden. Sichtbar bleibt davon
    nichts: keine Flaeche, kein Rahmen, Schriftgrad wie die Zelle. */
+/* ── Drei Label: Ja · Link · Nein ─────────────────────────────────────────────
+   ⚠ DIE ABSTUFUNG IST DIE AUSSAGE. „Ja" ist das Einzige, was der Nutzer von uns bekommt,
+   und traegt deshalb als Einziges Farbe. „Link" heisst „es gibt einen Weg, aber wir sind
+   ihn nicht gegangen" — gedeckt. „Nein" ist am blassesten und nicht anklickbar: seit jeder
+   Klick in dieser Spalte auf den Unterlagen-Tab fuehrt, waere es eine Sackgasse.
+
+   ⚠ Gemessen fuellt „Link" 81,7 % der Spalte. Das ist die ehrliche Lage und kein Fehler —
+   aber es ist auch der Grund, warum es sich NICHT hervorheben darf. */
+.dok-ja{font-size:11.5px;font-weight:600;color:var(--ink-600)}
+.dok-ja.dok-ausgewertet{color:var(--signal-deep)}
+.dok-link2{font-size:11.5px;color:var(--ink-400);
+  text-decoration:underline;text-decoration-style:dotted;text-underline-offset:2px}
+.dok-link2:hover{color:var(--signal)}
+.dok-nein{font-size:11.5px;color:var(--ink-200,#c9d2ce);cursor:help;user-select:none}
+
 td.c-doks button{background:none;border:0;padding:2px 4px;margin:-2px -4px;border-radius:5px;
   font:inherit;cursor:pointer;transition:.12s}
 td.c-doks button:hover{background:var(--surface-2)}
 td.c-doks button:focus-visible{outline:2px solid var(--signal);outline-offset:1px}
-.dok-liste{font-size:11.5px;color:var(--ink-400);cursor:pointer;
-  text-decoration:underline;text-decoration-style:dotted;text-underline-offset:2px;transition:.12s}
-.dok-liste:hover{color:var(--signal)}
-.dok-warte{font-size:11.5px;color:var(--ink-400);font-style:italic}
-.dok-leer{font-size:11.5px;color:var(--ink-300)}
 /* ⚠ Deutlich blasser als jeder Zustand MIT Inhalt, aber sichtbar. Eine leere Zelle liest
    sich als Fehler; ein Strich sagt „nachgesehen, nichts da". Nicht anklickbar — seit
    jeder Klick in der Spalte auf den Unterlagen-Tab fuehrt, waere er eine Sackgasse. */
-.dok-nix{font-size:11.5px;color:var(--ink-200,#c9d2ce);cursor:help;user-select:none}
 
 /* ── Der Weg zum Portal, im Detail statt in der Zelle ─────────────────────────
    ⚠ Ein echtes Anker-Element mit target=_blank, kein Skript. Nur so kann der Nutzer mit
@@ -2693,19 +2701,6 @@ td.c-doks button:focus-visible{outline:2px solid var(--signal);outline-offset:1p
 .va-nach .va-portal{margin-top:8px;padding:8px 14px;font-size:12.5px}
 
 td.c-doks{width:84px;text-align:center}
-td.c-doks .dok{display:inline-flex;align-items:baseline;gap:3px;padding:1px 6px;
-  border-radius:9px;background:var(--surface-3);border:1px solid var(--line);
-  font-variant-numeric:tabular-nums;line-height:1.5}
-td.c-doks .dok b{font-weight:600;font-size:12px}
-td.c-doks .dok i{font-style:normal;font-size:10px;opacity:.65}
-td.c-doks .dok i::before{content:"·";margin-right:3px;opacity:.5}
-td.c-doks .dok-gruen{border-color:var(--ok,#2e7d32)}
-td.c-doks .dok-rot{border-color:var(--bad,#c62828)}
-/* „ausgewertet, aber nichts gefunden" ist ein Befund und darf nicht wie „nicht
-   ausgewertet" aussehen — deshalb eine 0 im Rahmen, kein Strich. */
-td.c-doks .dok-leer{display:inline-block;padding:1px 6px;border-radius:9px;
-  border:1px dashed var(--line-strong);font-size:11px;opacity:.7}
-td.c-doks .dok-na{opacity:.3}
 
 /* ── Aktive Filter als einzeln abwerfbare Marken ──────────────────────────────────────
    Steht ueber der Liste, nicht im Filterfeld: die Frage „warum ist die Liste so kurz"

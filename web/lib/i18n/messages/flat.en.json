@@ -2361,5 +2361,7 @@
   "Noch nichts": "Nothing yet",
   "Nicht abrufbar": "Not available",
   "Neuere oder vollstaendigere Unterlagen?": "Newer or more complete documents?",
-  "Von diesem Vorgang liegen uns keine Unterlagen vor.": "We have no documents for this procedure."
+  "Von diesem Vorgang liegen uns keine Unterlagen vor.": "We have no documents for this procedure.",
+  "Beim Portal liegen Unterlagen. Wir haben sie noch nicht.": "Documents exist on the portal. We do not have them yet.",
+  "Ausgewertet: {p} Pruefpunkte, {k} K.-o.-Kriterien aus {d} Dokumenten. Ampel: {x}": "Analysed: {p} check points, {k} knock-out criteria from {d} documents. Signal: {x}"
 }

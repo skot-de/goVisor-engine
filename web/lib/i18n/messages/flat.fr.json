@@ -2361,5 +2361,7 @@
   "Noch nichts": "Rien pour l'instant",
   "Nicht abrufbar": "Non disponible",
   "Neuere oder vollstaendigere Unterlagen?": "Documents plus récents ou plus complets ?",
-  "Von diesem Vorgang liegen uns keine Unterlagen vor.": "Nous n'avons aucun document pour cette procédure."
+  "Von diesem Vorgang liegen uns keine Unterlagen vor.": "Nous n'avons aucun document pour cette procédure.",
+  "Beim Portal liegen Unterlagen. Wir haben sie noch nicht.": "Des documents existent sur le portail. Nous ne les avons pas encore.",
+  "Ausgewertet: {p} Pruefpunkte, {k} K.-o.-Kriterien aus {d} Dokumenten. Ampel: {x}": "Analysé : {p} points de contrôle, {k} critères éliminatoires de {d} documents. Feu : {x}"
 }

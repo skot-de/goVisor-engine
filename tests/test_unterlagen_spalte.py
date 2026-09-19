@@ -51,70 +51,66 @@ def _zelle() -> str:
     return code[i:code.index("case 'empf': {", i)]
 
 
-def test_die_spalte_zeigt_dokumente_nicht_pruefpunkte():
-    z = _zelle()
-    m = re.search(r"const zahl = ([^;]+);", z)
-    assert m, "die angezeigte Zahl wird nicht mehr benannt"
-    assert "a.dok" in m.group(1), (
-        "unter der Ueberschrift Unterlagen steht wieder etwas anderes als die Zahl der "
-        "Dokumente")
-    assert "a.pruef" not in m.group(1), "die Pruefpunkte sind wieder die Hauptzahl"
+def test_drei_label_statt_fuenf_zustaende():
+    """⚠ Sven am 2026-09-19, nach mehreren Anlaeufen: „was wäre mit labeln: Ja / Link /
+    Nein". Gemessen ueber bau+it+medizin, 28.072 Leads ohne Zuschlaege:
 
+        Ja      4.799   17,1 %   (ausgewertet 2.615 · Volltext 1.623 · Gliederung 561)
+        Link   22.923   81,7 %
+        Nein      350    1,2 %
 
-def test_null_dokumente_zeigen_ein_wort_keine_null():
-    """⚠ 14,7 % der Auswertungen tragen `dok = 0`. Eine 0 dort liest sich als
-    „keine Unterlagen" — obwohl ausgewertet wurde."""
-    z = _zelle()
-    assert re.search(r"a\.dok \? String\(a\.dok\) : tk\(", z), (
-        "bei 0 Dokumenten steht wieder eine Null statt eines Wortes")
-
-
-def test_die_fuenf_zustaende_sind_unterscheidbar():
-    """⚠ Gemessen ueber 17.837 Leads in Bau (ohne Zuschlaege):
-
-        nur der Link, nichts gelesen        13.909   78,0 %
-        analysiert, mit Pruefpunkten         2.105   11,8 %
-        Text liegt vor, Auswertung offen     1.383    7,8 %
-        gar nichts                             345    1,9 %
-        analysiert, nichts gefunden             95    0,5 %
-
-    ⚠ ICH HATTE HIER EINEN ZUSTAND ZU WENIG. Auf Svens Frage nach drei Zustaenden
-    antwortete ich, „nur Gliederung gelesen" gebe es nicht — gestuetzt allein auf die
-    ausgelieferten Lead-Daten. Sein Widerspruch war richtig: „bei einigen portalen lesen
-    wir nur die gliederung aus, weil wir die unterlagen nicht automatisiert herunterladen
-    dürfen." Der Zustand steht in `doc_listing_*.parquet` (subreport, vergabeportal.at):
-    2.670 Vorgaenge mit 53.966 gelisteten Dateien, davon 518 in Bau. Sie sahen aus wie ein
-    blosser Link, obwohl wir wissen, WELCHE Unterlagen es gibt.
-
-    ⚠ Die Manifest-Zeilen mit Status `nur_liste` tragen KEINE notice_id (alle 1.606 sind
-    NULL) — ueber sie ist der Zustand nicht zuzuordnen. Die Listen selbst haben eine
-    lead_id.
+    ⚠ „Link" fuellt damit 82 % — mehr als die 75 %, wegen derer die Fassung davor
+    gestrichen wurde. Das ist kein Rueckfall, sondern eine andere FRAGE: die alte Spalte
+    beantwortete „wie weit sind WIR", die neue „kommst du an die Unterlagen". Fuer die
+    zweite ist 82 % die Lage der Welt. Die Abstufung im Stil traegt den Rest: nur „Ja"
+    hat Farbe.
     """
     z = _zelle()
-    for klasse, was in (("dok dok-", "analysiert mit Pruefpunkten"),
-                        ("dok-leer", "analysiert, nichts gefunden"),
-                        ("dok-warte", "Text liegt vor, Auswertung offen"),
-                        ("dok-liste", "nur die Gliederung gelesen")):
-        assert klasse in z, f"der Zustand {was!r} ist nicht mehr unterscheidbar"
-    assert z.index("dok-warte") < z.index("dok-liste"), (
-        "die Reihenfolge stimmt nicht: vorhandener Volltext schlaegt die Gliederung")
-    # ⚠ WO WIR NICHTS HABEN, STEHT EIN ZEICHEN — KEINE LUECKE. Erst war dort „Link"
-    #   (75,1 % aller Zellen), dann gar nichts, jetzt ein blasser Strich.
-    #
-    #   Die leere Zelle war MEIN Vorschlag und praktisch falsch: „leer heisst, hier haben
-    #   wir noch nichts fuer dich" — am Bildschirm liest sich eine Luecke als Fehler.
-    #   Sven nach dem ersten Blick: „ich sehe teilweise einträge nicht."
-    #
-    #   Der Strich ist NICHT anklickbar: seit jeder Klick in dieser Spalte auf den
-    #   Unterlagen-Tab fuehrt, waere er eine Sackgasse in eine Ansicht, die sagt, dass es
-    #   nichts gibt.
-    assert 'class="dok-nix"' in z, (
-        "wo wir nichts haben, ist die Zelle wieder leer. Eine Luecke liest sich als "
-        "Fehler, nicht als Aussage.")
-    nix = z[z.index('class="dok-nix"'):]
-    assert "data-doklink" not in nix[:200], (
-        "der Strich ist wieder anklickbar und fuehrt in eine Ansicht, die sagt, dass es "
-        "nichts gibt")
+    for kl in ("dok-ja", "dok-link2", "dok-nein"):
+        assert kl in z, f"das Label {kl!r} gibt es nicht mehr"
+    assert z.index("dok-ja") < z.index("dok-link2") < z.index("dok-nein"), (
+        "die Reihenfolge stimmt nicht: was wir HABEN schlaegt den blossen Link, und der "
+        "schlaegt das Nichts")
+
+
+def test_keine_zahl_an_ja():
+    """⚠ Sven am 2026-09-19: „nein ohne zahl". Ich hatte die Dokumentzahl behalten, weil
+    sie verdiente Information ist. Sie ist aber die falsche Information AN DIESER STELLE:
+    „Ja 12" laedt zum Vergleichen ein, und auf „12 gegen 3" gibt es keine Antwort — ob
+    zwoelf Dateien mehr wert sind als drei, haengt am Inhalt. Im Unterlagen-Tab steht die
+    Zahl neben den Dateien und bedeutet etwas; in der Liste war sie nur wieder eine Zahl
+    in einer Spalte voller Zahlen, also genau das, wogegen der ganze Umbau lief.
+
+    Dieser Test steht hier, weil die Zahl billig ist: `a.dok` liegt im Lead-Datensatz, und
+    beim naechsten Anfassen der Zelle ist sie schnell wieder angehaengt. Zwei Waechter, die
+    sie frueher HUETETEN, sind dafuer gewichen — ihre Befunde gelten weiter und sind der
+    Grund, warum die Zahl als Anzeige nie gut war:
+
+    · Sie musste gegen die Pruefpunkte verteidigt werden: unter der Ueberschrift
+      „Unterlagen" stand zwischenzeitlich die Zahl der Pruefpunkte, was niemand so liest.
+    · **14,7 % der Auswertungen tragen `dok = 0`.** Eine 0 dort liest sich als „keine
+      Unterlagen", obwohl ausgewertet wurde — sie brauchte also eine Sonderbehandlung,
+      damit sie nicht das Gegenteil dessen sagt, was der Fall ist.
+
+    Eine Anzeige, die gegen zwei Missverstaendnisse abgesichert werden muss und am Ende
+    nichts Vergleichbares aussagt, ist in einer Liste falsch aufgehoben.
+    """
+    z = _zelle()
+    assert "<i>" not in z, "in der Zelle steht wieder eine Zahl"
+    assert "const zahl" not in z, (
+        "die Dokumentzahl wird wieder in die Zelle gerechnet — sie gehoert in den "
+        "Unterlagen-Tab, nicht in die Liste")
+
+
+def test_nein_ist_stumm():
+    """⚠ Seit jeder Klick in dieser Spalte auf den Unterlagen-Tab fuehrt, waere Nein"
+    eine Sackgasse: man landet in einer Ansicht, die sagt, dass es nichts gibt."""
+    z = _zelle()
+    nein = z[z.index("dok-nein"):]
+    assert "data-doklink" not in nein[:200], (
+        "Nein ist wieder anklickbar und fuehrt in eine leere Ansicht")
+    assert "<span" in z[max(0, z.index("dok-nein") - 40):z.index("dok-nein")], (
+        "Nein ist ein Knopf — es tut aber nichts")
 
 
 def test_alle_zustaende_sind_knoepfe():
@@ -133,8 +129,8 @@ def test_alle_zustaende_sind_knoepfe():
     """
     z = _zelle()
     knoepfe = len(re.findall(r"<button[^>]*data-doklink", z))
-    assert knoepfe == 4, (
-        f"nur {knoepfe} von 4 Zustaenden sind Knoepfe. Ein `<span>` ist mit der Tastatur "
+    assert knoepfe == 2, (
+        f"{knoepfe} statt 2 Label sind Knoepfe (Ja und Link; Nein ist stumm). Ein `<span>` ist mit der Tastatur "
         f"nicht erreichbar und traegt keinen Fokusring.")
     assert not re.search(r"<span[^>]*data-doklink", z), (
         "ein Zustand ist wieder ein `<span>` — nicht fokussierbar, nicht per Tastatur "
@@ -143,16 +139,22 @@ def test_alle_zustaende_sind_knoepfe():
 
 def test_kein_hilfe_zeiger_auf_etwas_das_wegspringt():
     """⚠ `cursor: help` verspricht einen Hinweis. Wer darauf klickt, landet in einer
-    anderen Ansicht — das ist die Sorte kleiner Luege, die Vertrauen kostet."""
+    anderen Ansicht — das ist die Sorte kleiner Luege, die Vertrauen kostet.
+
+    Umgekehrt gilt es genauso: „Nein" springt nirgendwohin und DARF den Hilfe-Zeiger
+    tragen, weil sein Titel das einzige ist, was es zu holen gibt.
+    """
     css = re.sub(r"/\*[\s\S]*?\*/", "",
                  (WURZEL / "web" / "app" / "explorer.css").read_text(encoding="utf-8"))
-    for kl in ("dok-warte", "dok-leer"):
+    for kl in ("dok-ja", "dok-link2"):
         m = re.search(rf"\.{kl}\b[^{{]*\{{([^}}]*)\}}", css)
         assert m, f".{kl} gibt es nicht mehr"
         assert "cursor:help" not in m.group(1).replace(" ", ""), (
-            f".{kl} traegt wieder den Hilfe-Zeiger, obwohl der Klick wegspringt")
-
-
+            f".{kl} traegt den Hilfe-Zeiger, obwohl der Klick wegspringt")
+    m = re.search(r"td\.c-doks button\b[^{]*\{([^}]*)\}", css)
+    assert m, "der Knopf-Zuschnitt der Spalte ist weg"
+    assert "cursor:pointer" in m.group(1).replace(" ", ""), (
+        "die Label sehen nicht mehr wie etwas Anklickbares aus")
 def test_der_klick_oeffnet_den_lead_und_nicht_das_portal():
     """⚠ HIER STAND DAS GEGENTEIL, und die Umkehr ist der Kern.
 
@@ -187,14 +189,13 @@ def test_der_klick_oeffnet_den_lead_und_nicht_das_portal():
 
 
 def test_jeder_zustand_der_spalte_springt():
-    """Sven: „bei jedem klick landet man in den ausschreibungs details unter Unterlagen."
+    """Sven: bei jedem klick landet man in den ausschreibungs details unter Unterlagen."
     Vorher trugen nur `Gliederung` und `Link` die Kennung; bei den anderen vier passierte
     dasselbe wie beim Klick auf jede andere Zelle."""
     z = _zelle()
-    assert z.count("data-doklink=") == 4, (
-        f"{z.count('data-doklink=')} statt 4 Zustaende fuehren in den Unterlagen-Tab. "
-        f"Seit dem 2026-09-19 sind es vier: die zwei Zustaende ohne eigene Arbeit "
-        f"(nur Link, gar nichts) zeigen nichts mehr an und springen auch nicht.")
+    assert z.count("data-doklink=") == 2, (
+        f"{z.count('data-doklink=')} statt 2 Label fuehren in den Unterlagen-Tab: „Ja\" "
+        f"und „Link\". „Nein\" ist stumm.")
 
 
 def test_der_portal_knopf_steht_im_detail_ueber_dem_feld():

@@ -903,57 +903,51 @@ function cellHTML(l, key){
       return `<td class="c-band">${bandMeter(a.stufe, true, tk('Angebotsaufwand'), naHint)}</td>`;
     }
     case 'doks': {
-      /* ⚠ DIE SPALTE ZEIGT NUR, WAS WIR HABEN. Gemessen ueber 17.837 Leads in Bau stand
-         vorher in 75,1 % der Zellen „Link" — also die ABWESENHEIT unserer Arbeit, in
-         derselben Position, in der sonst eine Anzahl steht. Eine Spalte, die in drei von
-         vier Faellen denselben Wert traegt, trennt nichts; dasselbe Argument hat am
-         2026-09-19 schon Relevanz und Chance aus der Vorbelegung genommen.
+      /* ⚠ DREI LABEL STATT FUENF ZUSTAENDEN. Sven am 2026-09-19, nach mehreren Anlaeufen:
+         „was wäre mit labeln: Ja / Link / Nein". Gemessen ueber bau+it+medizin, 28.072
+         Leads ohne Zuschlaege:
 
-         Leer heisst jetzt: hier haben wir noch nichts fuer dich. Das ist die ehrliche
-         Nachricht, und sie kostet nichts an Zugang — der Portal-Link liegt im Detail,
-         einen Zeilenklick entfernt.
+             Ja      4.799   17,1 %   (ausgewertet 2.615 · Volltext 1.623 · Gliederung 561)
+             Link   22.923   81,7 %
+             Nein      350    1,2 %
 
-         ⚠ WAS DAS AUFGIBT: der Weg „Spalte → Detail → hochladen" war fuer diese 75 % der
-         sichtbare Anstoss, uns Unterlagen zu geben. Er ist nicht weg, aber er wirbt nicht
-         mehr. Wenn die Upload-Zahlen einbrechen, ist das hier die Stelle.
+         ⚠ „Link" fuellt damit 82 % — mehr als die 75 %, wegen derer die Fassung davor
+         gestrichen wurde. Das ist kein Rueckfall, sondern eine andere Frage: die alte
+         Spalte beantwortete „wie weit sind WIR", die neue „kommst du an die Unterlagen".
+         Fuer die zweite ist 82 % die ehrliche Lage der Welt, keine Wiederholung ohne
+         Aussage. Und drei Woerter ueberfliegt man, fuenf liest man einzeln.
 
-         ⚠ Alle verbleibenden Zustaende sind `<button>` — fuenf der sechs anklickbaren
-         Zellen einer Zeile sind es, und diese war einmal die Ausnahme. Das Aussehen
-         regelt `td.c-doks button`: keine Flaeche, kein Rahmen, Schriftgrad der Zelle. */
+         ⚠ KEINE ZAHL. Sven am 2026-09-19: „nein ohne zahl". Ich hatte die Dokumentzahl
+         behalten wollen, weil sie verdiente Information ist. Sie ist aber die falsche
+         Information fuer diese Spalte: „Ja 12" laedt zum Vergleichen ein (12 gegen 3 —
+         ist das besser?), und die Antwort darauf gibt es nicht. Ob zwoelf Dateien mehr
+         wert sind als drei, haengt am Inhalt, nicht an der Anzahl. Wer es wissen will,
+         findet die Zahl im Unterlagen-Tab, wo sie neben den Dateien steht und etwas
+         bedeutet. In der Liste war sie nur wieder eine Zahl in einer Spalte voller
+         Zahlen — genau das, wogegen der Umbau lief.
+         Die Unterschiede innerhalb von „Ja" (ausgewertet / nur Volltext / nur
+         Gliederung) traegt der Titel, die Auswertung zusaetzlich die Farbe.
+
+         ⚠ „NEIN" IST STUMM. Seit jeder Klick in dieser Spalte auf den Unterlagen-Tab
+         fuehrt, waere es eine Sackgasse: man landete in einer Ansicht, die sagt, dass es
+         nichts gibt. */
       const a = l.docAn;
-      const u = l.unterlagen;
-      if (a && a.pruef) {
-        const titel = tk(a.dok === 1
-                         ? "{p} Pruefpunkte, {k} K.-o.-Kriterien aus einem Dokument. Ampel: {x}"
-                         : "{p} Pruefpunkte, {k} K.-o.-Kriterien aus {d} Dokumenten. Ampel: {x}",
-                         {p: a.pruef, k: a.ko, d: a.dok, x: tk(a.ampel || "unbekannt")});
-        const zahl = a.dok ? String(a.dok) : tk("gelesen");
-        return `<td class="c-doks"><button class="dok dok-${esc(a.ampel || "na")}" data-doklink="${esc(l.id)}" title="${esc(titel)}">`
-             + `<b>${esc(zahl)}</b>${a.ko ? `<i>${a.ko}</i>` : ""}</button></td>`;
+      const u = l.unterlagen || {};
+      if (a || u.gelesen || u.gliederung) {
+        const titel = a && a.pruef
+          ? tk("Ausgewertet: {p} Pruefpunkte, {k} K.-o.-Kriterien aus {d} Dokumenten. Ampel: {x}",
+               {p: a.pruef, k: a.ko, d: a.dok, x: tk(a.ampel || "unbekannt")})
+          : a ? tk("Unterlagen gelesen, aber kein Pruefpunkt gefunden.")
+          : u.gelesen ? tk("Die Unterlagen liegen uns vor. Die Auswertung steht noch aus.")
+          : tk("Wir kennen die {n} Dateien dieses Vorgangs, duerfen sie dort aber nicht selbst herunterladen.", {n: u.gliederung});
+        return `<td class="c-doks"><button class="dok-ja${a && a.pruef ? " dok-ausgewertet" : ""}"`
+             + ` data-doklink="${esc(l.id)}" title="${esc(titel)}">${tk("Ja")}</button></td>`;
       }
-      if (a)
-        return `<td class="c-doks"><button class="dok-leer" data-doklink="${esc(l.id)}" title="${esc(tk("Unterlagen gelesen, aber kein Pruefpunkt gefunden."))}">${tk("nichts gefunden")}</button></td>`;
-      if (u && u.gelesen)
-        return `<td class="c-doks"><button class="dok-warte" data-doklink="${esc(l.id)}" title="${esc(tk("Die Unterlagen liegen uns vor. Die Auswertung steht noch aus."))}">${tk("liegt vor")}</button></td>`;
-      if (u && u.gliederung)
-        return `<td class="c-doks"><button class="dok-liste" data-doklink="${esc(l.id)}" title="${
-          esc(tk("Wir kennen die {n} Dateien dieses Vorgangs, duerfen sie dort aber nicht selbst herunterladen.", {n: u.gliederung}))
-        }">${tk("Gliederung")}</button></td>`;
-      /* ⚠ EIN ZEICHEN, KEINE LUECKE — und das ist die Korrektur einer Fehlentscheidung
-         von mir. Ich hatte vorgeschlagen, die Zelle leer zu lassen: „leer heisst, hier
-         haben wir noch nichts fuer dich." Am Bildschirm stimmt das nicht. Sven nach dem
-         ersten Blick: „ich sehe teilweise einträge nicht." Eine Luecke in einer Tabelle
-         liest sich als Fehler, nicht als Aussage; der Nutzer sucht dann nach der Ursache
-         statt die Nachricht zu lesen.
-
-         Der Strich ist NICHT anklickbar. Das war der Grund, ihn urspruenglich zu
-         entfernen: seit jeder Klick in dieser Spalte auf den Unterlagen-Tab fuehrt, war
-         er eine Sackgasse mit Umweg — man landete in einer Ansicht, die sagt, dass es
-         nichts gibt. Stumm loest er das, ohne die Luecke zurueckzubringen.
-
-         Ein Zeichen fuer beide Faelle (nur ein Portal-Link: 75,1 %; gar nichts: 1,9 %):
-         fuer den Nutzer sind sie dasselbe — wir haben nichts. */
-      return `<td class="c-doks"><span class="dok-nix" title="${esc(tk("Von diesem Vorgang liegen uns keine Unterlagen vor."))}">–</span></td>`;
+      if (u.url)
+        return `<td class="c-doks"><button class="dok-link2" data-doklink="${esc(l.id)}" title="${
+          esc(tk("Beim Portal liegen Unterlagen. Wir haben sie noch nicht."))}">${tk("Link")}</button></td>`;
+      return `<td class="c-doks"><span class="dok-nein" title="${
+        esc(tk("Von diesem Vorgang liegen uns keine Unterlagen vor."))}">${tk("Nein")}</span></td>`;
     }
     case 'empf': {
       if(l.src==='award') return awardEmpfCell(l);
