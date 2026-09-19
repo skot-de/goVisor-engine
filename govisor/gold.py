@@ -3773,11 +3773,35 @@ def build_lead_export(cfg: Config, country: str = "DE"):
                  ELSE 'services' END                  AS contract_nature,
             CASE WHEN nt.contract_nature IN ('works','supplies','services')
                  THEN 'actual' ELSE 'estimated' END   AS contract_nature_source,
-            -- Wert: 'default'-Band ist zu unsicher → NULL, Frontend zeigt '—'
-            CASE WHEN d.band_source='default' THEN NULL ELSE d.value_effektiv END AS value_eur,
+            -- ── NUR AUSGELESENE WERTE, KEINE GERECHNETEN (2026-09-19) ──────────────
+            -- ⚠ Hier stand `CASE WHEN d.band_source='default' THEN NULL ELSE
+            --   d.value_effektiv END`, und `imputiert` wurde eine Zeile tiefer auf
+            --   'estimated' abgebildet — also auf dasselbe Vokabular wie ein Schaetzwert,
+            --   den die Vergabestelle SELBST veroeffentlicht hat.
+            --
+            --   `value_effektiv` ist bei `imputiert` der MEDIAN DER CPV-KLASSE. Gemessen
+            --   am 2026-09-19: der generische Code 45000000 trug damit 2.632 offene Leads
+            --   bei 963 verschiedenen Kaeufern — alle mit derselben Zahl, 391.540 €. Vier
+            --   davon einzeln nachgeschlagen: in Silber steht bei allen `estimated_value
+            --   = None`. Die Zahl kam nicht aus der Bekanntmachung, sie kam aus uns.
+            --
+            --   Gemeldet von Sven („bei mir steht überall 259.360"), entschieden von ihm:
+            --   „ich will das da nur werte stehen, wenn wir sie ausgelesen haben, nicht
+            --   wenn wir sie geschätzt haben."
+            --
+            -- ⚠ WAS DAS KOSTET, gemessen vorher: von 14.282 offenen Leads tragen nur
+            --   748 (5,2 %) einen ausgelesenen Wert. Bei den auslaufenden Vertraegen sind
+            --   es 44,3 %, weil dort `final_value` veroeffentlicht ist. Die Spalte wird
+            --   also bei den Ausschreibungen fast leer — und das ist die ehrliche Lage.
+            --
+            -- ⚠ NICHT MITGEAENDERT: `value_band`. Das Band speist die Gebuehrenrechnung
+            --   (`docs/pricing-modell.md`), nicht die Anzeige; dort ist eine imputierte
+            --   Groessenordnung ausdruecklich gewollt und `band_source` steht daneben.
+            CASE WHEN d.band_source IN ('echt','geschaetzt') THEN d.value_effektiv
+                 ELSE NULL END                        AS value_eur,
             d.band_effektiv                           AS value_band,
             CASE d.band_source WHEN 'echt' THEN 'actual'
-                 WHEN 'geschaetzt' THEN 'estimated' WHEN 'imputiert' THEN 'estimated'
+                 WHEN 'geschaetzt' THEN 'estimated'
                  ELSE 'unknown' END                   AS value_source,
             -- ⚠ `value_source` sagt, WIE SICHER der Wert ist; das hier sagt, ob der
             -- EURO-BETRAG gerechnet ist. Zwei verschiedene Fragen: ein Schweizer Zuschlag
