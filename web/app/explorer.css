@@ -2631,9 +2631,6 @@ td.c-band .passung i{display:none}
    gut. Die Spalte steht in jeder Zeile; 50 Knoepfe untereinander sind genau die Unruhe,
    die am selben Tag zweimal gemeldet wurde. Was klickbar ist, zeigt das ueber den Zeiger
    und eine gepunktete Unterstreichung, nicht ueber eine Flaeche. */
-.dok-verweis{font-size:11.5px;color:var(--ink-400);cursor:pointer;
-  text-decoration:underline;text-decoration-style:dotted;text-underline-offset:2px;transition:.12s}
-.dok-verweis:hover{color:var(--signal)}
 /* ⚠ Knopf, der wie Text aussieht. Alle sechs Zustaende sind `<button>` — damit Tastatur
    und Fokusring funktionieren wie bei Stern, Status und Ausblenden. Sichtbar bleibt davon
    nichts: keine Flaeche, kein Rahmen, Schriftgrad wie die Zelle. */

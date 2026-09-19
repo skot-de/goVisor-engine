@@ -903,38 +903,23 @@ function cellHTML(l, key){
       return `<td class="c-band">${bandMeter(a.stufe, true, tk('Angebotsaufwand'), naHint)}</td>`;
     }
     case 'doks': {
-      /* ⚠ `<button>`, NICHT `<span>` — und das war heute schon einmal falsch.
-         Sven sagte „finde die button auch gerade nicht gut", und ich habe daraufhin das
-         ELEMENT getauscht statt nur sein Aussehen. Der Einwand galt der gefuellten
-         Flaeche, nicht der Funktion. Die Folge war eine Regression: fuenf der sechs
-         anklickbaren Zellen einer Zeile sind `<button>` (Stern, Ausblenden, Netz, Unserer,
-         Status), meine war die Ausnahme — ohne Tastaturzugang, ohne Fokusring, und bei
-         vier der sechs Zustaende ohne Zeiger. Einer trug sogar `cursor: help`: er
-         verspricht einen Hinweis und springt stattdessen weg.
-         Jetzt wieder ein Knopf, der wie Text aussieht. */
-      /* ⚠ JEDER ZUSTAND SPRINGT INS DETAIL, nicht nur die beiden mit Link. Sven am
-         2026-09-19: „bei jedem klick landet man in den ausschreibungs details unter
-         Unterlagen." Die Spalte handelt von den Unterlagen — wer sie anklickt, will
-         dorthin, unabhaengig davon, wie weit wir mit ihnen sind. Vorher trugen nur
-         `Gliederung` und `Link` die Kennung; bei den drei uebrigen passierte dasselbe
-         wie beim Klick auf jede andere Zelle, naemlich ein Sprung an den Anfang. */
-      /* ⚠ FUENF ZUSTAENDE, GEMESSEN. Ueber 17.837 Leads in Bau (ohne Zuschlaege):
+      /* ⚠ DIE SPALTE ZEIGT NUR, WAS WIR HABEN. Gemessen ueber 17.837 Leads in Bau stand
+         vorher in 75,1 % der Zellen „Link" — also die ABWESENHEIT unserer Arbeit, in
+         derselben Position, in der sonst eine Anzahl steht. Eine Spalte, die in drei von
+         vier Faellen denselben Wert traegt, trennt nichts; dasselbe Argument hat am
+         2026-09-19 schon Relevanz und Chance aus der Vorbelegung genommen.
 
-           nur der Link, nichts gelesen        13.909   78,0 %
-           analysiert, mit Pruefpunkten         2.105   11,8 %
-           Text liegt vor, Auswertung offen     1.383    7,8 %
-           gar nichts                             345    1,9 %
-           analysiert, nichts gefunden             95    0,5 %
+         Leer heisst jetzt: hier haben wir noch nichts fuer dich. Das ist die ehrliche
+         Nachricht, und sie kostet nichts an Zugang — der Portal-Link liegt im Detail,
+         einen Zeilenklick entfernt.
 
-         Sven fragte nach drei Zustaenden („link vorhanden, unterlagen
-         vorhanden/analysiert, nur gliederung gelesen"). „Nur Gliederung" gibt es in den
-         ausgelieferten Daten nicht als eigenen Zustand — was ihm am naechsten kommt, ist
-         die letzte Zeile: gelesen, aber kein Pruefpunkt gefunden.
+         ⚠ WAS DAS AUFGIBT: der Weg „Spalte → Detail → hochladen" war fuer diese 75 % der
+         sichtbare Anstoss, uns Unterlagen zu geben. Er ist nicht weg, aber er wirbt nicht
+         mehr. Wenn die Upload-Zahlen einbrechen, ist das hier die Stelle.
 
-         ⚠ KEIN KNOPF MEHR IN DER ZELLE. Sven: „finde die button auch gerade nicht gut."
-         Die Zelle steht in jeder Zeile; was dort steht, muss lesbar sein und nicht
-         klickbar aussehen. Der Weg zum Portal liegt jetzt im Detail, als ein grosser
-         Knopf ueber dem Drop-Feld — dort hat er Platz und Zusammenhang. */
+         ⚠ Alle verbleibenden Zustaende sind `<button>` — fuenf der sechs anklickbaren
+         Zellen einer Zeile sind es, und diese war einmal die Ausnahme. Das Aussehen
+         regelt `td.c-doks button`: keine Flaeche, kein Rahmen, Schriftgrad der Zelle. */
       const a = l.docAn;
       const u = l.unterlagen;
       if (a && a.pruef) {
@@ -950,30 +935,23 @@ function cellHTML(l, key){
         return `<td class="c-doks"><button class="dok-leer" data-doklink="${esc(l.id)}" title="${esc(tk("Unterlagen gelesen, aber kein Pruefpunkt gefunden."))}">${tk("nichts gefunden")}</button></td>`;
       if (u && u.gelesen)
         return `<td class="c-doks"><button class="dok-warte" data-doklink="${esc(l.id)}" title="${esc(tk("Die Unterlagen liegen uns vor. Die Auswertung steht noch aus."))}">${tk("liegt vor")}</button></td>`;
-      /* ⚠ SECHSTER ZUSTAND, und Sven musste mich darauf stossen: „bei einigen portalen
-         lesen wir nur die gliederung aus, weil wir die unterlagen nicht automatisiert
-         herunterladen dürfen." Ich hatte nur die ausgelieferten Lead-Daten geprueft und
-         daraus geschlossen, den Zustand gebe es nicht — er steht in
-         `doc_listing_*.parquet`: subreport und vergabeportal.at sammeln Dateilisten und
-         laden nichts herunter. Gemessen 2.670 Vorgaenge mit 53.966 gelisteten Dateien,
-         davon 667 in Bau. Sie sahen bisher aus wie ein blosser Link.
-
-         Der Unterschied ist fuer den Nutzer erheblich: wir wissen, WELCHE Unterlagen es
-         gibt, nur nicht, was drinsteht. */
       if (u && u.gliederung)
         return `<td class="c-doks"><button class="dok-liste" data-doklink="${esc(l.id)}" title="${
           esc(tk("Wir kennen die {n} Dateien dieses Vorgangs, duerfen sie dort aber nicht selbst herunterladen.", {n: u.gliederung}))
         }">${tk("Gliederung")}</button></td>`;
-      if (u && u.url)
-        return `<td class="c-doks"><button class="dok-verweis" data-doklink="${esc(l.id)}" title="${esc(tk("Beim Portal liegen Unterlagen. Oeffnen und hochladen im Detail."))}">${tk("Link")}</button></td>`;
-      return `<td class="c-doks"><button class="dok-na" data-doklink="${esc(l.id)}" title="${esc(tk("Fuer diesen Vorgang liegen keine ausgewerteten Vergabeunterlagen vor."))}">—</button></td>`;
+      /* Nichts von uns: leer und nicht anklickbar. Ein Strich, der beim Klick eine
+         Ansicht oeffnet, die „hier ist nichts" sagt, ist eine Sackgasse mit Umweg. */
+      return `<td class="c-doks"></td>`;
     }
     case 'empf': {
       if(l.src==='award') return awardEmpfCell(l);
       // #26: eine Spalte, zwei Inhalte — Handlungsempfehlung wenn möglich, sonst Einordnung.
       const r = recForList(l);
-      return `<td class="c-empf"><span class="empf rec-${r.cls}" title="${esc(tk(r.grund))}">${tk(r.label)}</span>` +
-             `<span class="empf-grund">${esc(tk(r.grund))}</span></td>`;
+      /* ⚠ DER GRUND STEHT IM TITEL, NICHT IN EINER ZWEITEN ZEILE. `\u002eempf-grund` war
+         `display:block` und machte JEDE Tabellenzeile hoeher — in einer Liste, die am
+         selben Tag zweimal wegen Unruhe gemeldet wurde. Dazu stand derselbe Text ohnehin
+         schon im `title`, also doppelt. */
+      return `<td class="c-empf"><span class="empf rec-${r.cls}" title="${esc(tk(r.grund))}">${tk(r.label)}</span></td>`;
     }
     /* ⚠ DIE HERKUNFT GEHOERT AN DEN WERT. `regionQuelle` liegt seit jeher an 42.660 Leads
        und wurde im Frontend NIRGENDS gelesen. Die Begruendung steht im Export selbst: „Ein

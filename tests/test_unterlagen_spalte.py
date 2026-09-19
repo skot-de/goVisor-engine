@@ -94,16 +94,15 @@ def test_die_fuenf_zustaende_sind_unterscheidbar():
     for klasse, was in (("dok dok-", "analysiert mit Pruefpunkten"),
                         ("dok-leer", "analysiert, nichts gefunden"),
                         ("dok-warte", "Text liegt vor, Auswertung offen"),
-                        ("dok-liste", "nur die Gliederung gelesen"),
-                        ("dok-verweis", "nur der Link"),
-                        ("dok-na", "gar nichts")):
+                        ("dok-liste", "nur die Gliederung gelesen")):
         assert klasse in z, f"der Zustand {was!r} ist nicht mehr unterscheidbar"
-    # ⚠ Reihenfolge: der Strich-Zweig faengt sonst alles ab, was vor ihm haette greifen sollen.
-    assert z.index("dok-verweis") < z.index("dok-na"), (
-        "der Link-Zustand steht hinter dem Strich-Zweig und wird nie erreicht")
-    assert z.index("dok-warte") < z.index("dok-liste") < z.index("dok-verweis"), (
-        "die Reihenfolge stimmt nicht: vorhandener Volltext schlaegt die Gliederung, "
-        "und die Gliederung schlaegt den blossen Link")
+    assert z.index("dok-warte") < z.index("dok-liste"), (
+        "die Reihenfolge stimmt nicht: vorhandener Volltext schlaegt die Gliederung")
+    # ⚠ Wo wir NICHTS haben, bleibt die Zelle leer und stumm. Vorher stand dort „Link"
+    #   (75,1 % aller Zellen) bzw. ein Strich — beides die ABWESENHEIT unserer Arbeit, in
+    #   derselben Position, in der sonst eine Anzahl steht.
+    assert '<td class="c-doks"></td>' in z, (
+        "wo wir nichts haben, steht wieder etwas in der Zelle")
 
 
 def test_alle_zustaende_sind_knoepfe():
@@ -122,8 +121,8 @@ def test_alle_zustaende_sind_knoepfe():
     """
     z = _zelle()
     knoepfe = len(re.findall(r"<button[^>]*data-doklink", z))
-    assert knoepfe == 6, (
-        f"nur {knoepfe} von 6 Zustaenden sind Knoepfe. Ein `<span>` ist mit der Tastatur "
+    assert knoepfe == 4, (
+        f"nur {knoepfe} von 4 Zustaenden sind Knoepfe. Ein `<span>` ist mit der Tastatur "
         f"nicht erreichbar und traegt keinen Fokusring.")
     assert not re.search(r"<span[^>]*data-doklink", z), (
         "ein Zustand ist wieder ein `<span>` — nicht fokussierbar, nicht per Tastatur "
@@ -180,8 +179,10 @@ def test_jeder_zustand_der_spalte_springt():
     Vorher trugen nur `Gliederung` und `Link` die Kennung; bei den anderen vier passierte
     dasselbe wie beim Klick auf jede andere Zelle."""
     z = _zelle()
-    assert z.count("data-doklink=") == 6, (
-        f"nur {z.count('data-doklink=')} von 6 Zustaenden fuehren in den Unterlagen-Tab")
+    assert z.count("data-doklink=") == 4, (
+        f"{z.count('data-doklink=')} statt 4 Zustaende fuehren in den Unterlagen-Tab. "
+        f"Seit dem 2026-09-19 sind es vier: die zwei Zustaende ohne eigene Arbeit "
+        f"(nur Link, gar nichts) zeigen nichts mehr an und springen auch nicht.")
 
 
 def test_der_portal_knopf_steht_im_detail_ueber_dem_feld():
