@@ -1002,6 +1002,27 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
    * Sven am 2026-09-19: „ich will den status nicht nur aendern/setzen koennen, wenn ich
    * in den ausschreibungsdetails bin, sondern schon in der leaduebersicht."
    */
+  /* Unterlagen, die wir NICHT ausgewertet haben: der Klick tut zwei Dinge.
+   *
+   * Sven am 2026-09-19: „in einem neuen tab öffnen sich die unterlagen und in der
+   * detailansicht öffnet sich Unterlagen, damit die leute auf die idee kommen die
+   * unterlagen hochzuladen."
+   *
+   * ⚠ DAS FENSTER ZUERST. `window.open` gilt nur im direkten Klick als gewollt; steht
+   * davor ein `await` oder ein Zustandswechsel, wertet der Browser es als Pop-up und
+   * blockt es. Der Lead wird danach geoeffnet, das Springen noch eine Bildfolge spaeter,
+   * weil der Abschnitt erst existieren muss.
+   */
+  function dokLinkOeffnen(id: string) {
+    const l = CORE.find((x) => x.id === id) as (Lead & { unterlagen?: { url?: string } }) | undefined;
+    const url = l?.unterlagen?.url;
+    if (url) window.open(url, "_blank", "noopener,noreferrer");
+    openLead(id);
+    requestAnimationFrame(() => {
+      document.getElementById("an-unterlagen")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  }
+
   function setWfFuer(id: string, k: string | null) {
     const l = CORE.find((x) => x.id === id) as (Lead & { userStatus?: string | null }) | undefined;
     if (!l) return;
@@ -1823,6 +1844,7 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
               <LeadTable
                 rows={rows}
                 onWf={setWfFuer}
+                onDokLink={dokLinkOeffnen}
                 limit={renderCount}
                 laedt={loading}
                 stoerung={stoerung}

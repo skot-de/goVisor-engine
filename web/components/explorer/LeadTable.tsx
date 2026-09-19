@@ -37,6 +37,7 @@ export function LeadTable({
   onSelect,
   onStar,
   onWf,
+  onDokLink,
   onHide,
   onNetz,
   onOwn,
@@ -84,6 +85,8 @@ export function LeadTable({
   onStar: (id: string) => void;
   /** Status aus der Liste heraus setzen. `null` nimmt ihn zurueck. */
   onWf?: (id: string, k: string | null) => void;
+  /** Unterlagen beim Portal oeffnen UND den Lead aufschlagen. */
+  onDokLink?: (id: string) => void;
   onHide?: (id: string) => void;
   onNetz: (id: string) => void;
   onOwn: (id: string, ans: string) => void;
@@ -155,6 +158,8 @@ export function LeadTable({
 
   function handleRowClick(e: React.MouseEvent<HTMLTableSectionElement>) {
     const t = e.target as HTMLElement;
+    const dl = t.closest<HTMLElement>("[data-doklink]");
+    if (dl && onDokLink) { e.stopPropagation(); onDokLink(dl.dataset.doklink!); return; }
     const wf = t.closest<HTMLElement>("[data-wf]");
     if (wf && onWf) {
       e.stopPropagation();

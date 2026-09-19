@@ -2622,6 +2622,16 @@ td.c-band .passung i{display:none}
    ⚠ Die Ampel faerbt nur den Rand, nicht die Flaeche: 88,5 % aller Auswertungen sind
    gelb — eine flaechige Einfaerbung wuerde die Spalte zu einem Farbblock machen, in dem
    die Zahl untergeht, und dabei eine Unterscheidung behaupten, die es nicht gibt. */
+/* ── „ansehen" statt eines Strichs, wenn Unterlagen da, aber nicht ausgewertet sind ──
+   ⚠ Ruhig halten. Die Spalte steht in jeder Zeile; ein auffaelliger Knopf in 50 Zeilen
+   waere genau die Unruhe, die am selben Tag zweimal gemeldet wurde. Schriftgrad wie der
+   Rest der Zelle, Farbe erst beim Ueberfahren. */
+.dok-link{background:none;border:0;padding:2px 5px;margin:-2px -5px;border-radius:5px;
+  font:inherit;font-size:11.5px;color:var(--ink-400);cursor:pointer;transition:.12s;
+  text-decoration:underline;text-decoration-style:dotted;text-underline-offset:2px}
+.dok-link:hover{color:var(--signal);background:var(--surface-2)}
+.dok-link:focus-visible{outline:2px solid var(--signal);outline-offset:1px}
+
 td.c-doks{width:84px;text-align:center}
 td.c-doks .dok{display:inline-flex;align-items:baseline;gap:3px;padding:1px 6px;
   border-radius:9px;background:var(--surface-3);border:1px solid var(--line);

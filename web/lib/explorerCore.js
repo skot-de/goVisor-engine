@@ -582,7 +582,7 @@ const COLS = [
   {key:'aufwand',label:'Aufwand',  on:false, th:'center'},
   {key:'neu',   label:'Wettbewerb',on:true, th:'center'},
   {key:'konk',  label:'Konkurrenz',on:false},
-  {key:'vol',   label:'Volumen',   on:true,  th:'right'},
+  {key:'vol',   label:'Volumen',   on:false,  th:'right'},
   {key:'region',label:'Region',    on:false},
   {key:'inc',   label:'Amtsinhaber', on:false},
   {key:'status',label:'Sichtung',  on:false},
@@ -864,25 +864,44 @@ function cellHTML(l, key){
       return `<td class="c-band">${bandMeter(a.stufe, true, tk('Angebotsaufwand'), naHint)}</td>`;
     }
     case 'doks': {
-      /* ⚠ DIE AMPEL IST HIER NICHT DIE HAUPTSACHE. Gemessen ueber alle 10.951 Auswertungen
-         sind 88,5 % gelb — als Unterscheidungsmerkmal taugt sie nicht. Was traegt, ist die
-         DICHTE: Pruefpunkte streuen von 0 bis 186 bei einem Median von 57. Die Ampel steht
-         deshalb nur im Titel, die Zahl in der Zelle. */
-      if(!l.docAn)
-        return `<td class="c-doks"><span class="dok-na" title="${esc(tk("Fuer diesen Vorgang liegen keine ausgewerteten Vergabeunterlagen vor."))}">—</span></td>`;
+      /* ⚠ DIE SPALTE HEISST „UNTERLAGEN" UND ZEIGTE DIE PRUEFPUNKTE. Gemeldet von Sven am
+         2026-09-19: „die aktuelle angabe bei unterlagen in akquise ist nicht richtig."
+         Er hat recht, und der Fehler war nicht die Zahl, sondern ihre Ueberschrift: der
+         Index stimmt exakt mit dem Speicher ueberein (0 Abweichungen ueber 3.001
+         Vorgaenge), die Zahl war nur etwas anderes als das Wort darueber.
+
+         Jetzt steht dort, was die Spalte verspricht: wie viele Unterlagen wir gelesen
+         haben. Die Pruefpunkt-DICHTE bleibt im Titel — sie ist weiterhin das, was
+         unterscheidet (0 bis 186 bei einem Median von 57, waehrend 88,5 % der Ampeln
+         gelb sind). Sie ist jetzt eine Erklaerung statt einer Behauptung.
+
+         ⚠ `dok === 0` bei 14,7 % der Auswertungen. Dort eine „0" zu zeigen hiesse „keine
+         Unterlagen" — obwohl ausgewertet wurde. Deshalb ein Wort statt einer Null. */
       const a = l.docAn;
-      // 206 Auswertungen haben eine leere Checkliste. „Ausgewertet, 0 Pruefpunkte" ist ein
-      // anderer Zustand als „nicht ausgewertet" und darf nicht wie er aussehen.
-      if(!a.pruef)
+      if (a && a.pruef) {
+        const titel = tk(a.dok === 1
+                         ? "{p} Pruefpunkte, {k} K.-o.-Kriterien aus einem Dokument. Ampel: {x}"
+                         : "{p} Pruefpunkte, {k} K.-o.-Kriterien aus {d} Dokumenten. Ampel: {x}",
+                         {p: a.pruef, k: a.ko, d: a.dok, x: tk(a.ampel || "unbekannt")});
+        const zahl = a.dok ? String(a.dok) : tk("gelesen");
+        return `<td class="c-doks"><span class="dok dok-${esc(a.ampel || "na")}" title="${esc(titel)}">`
+             + `<b>${esc(zahl)}</b>${a.ko ? `<i>${a.ko}</i>` : ""}</span></td>`;
+      }
+      if (a)
         return `<td class="c-doks"><span class="dok-leer" title="${esc(tk("Unterlagen ausgewertet, aber kein Pruefpunkt gefunden."))}">0</span></td>`;
-      // Einzahl/Mehrzahl getrennt: „aus 1 Dokumenten" ist der Satz, an dem man sieht, dass
-      // niemand hingeschaut hat. 1.590 Auswertungen tragen genau ein Dokument.
-      const titel = tk(a.dok === 1
-                       ? "{p} Pruefpunkte, {k} K.-o.-Kriterien aus einem Dokument. Ampel: {a}"
-                       : "{p} Pruefpunkte, {k} K.-o.-Kriterien aus {d} Dokumenten. Ampel: {a}",
-                       {p: a.pruef, k: a.ko, d: a.dok, a: tk(a.ampel || "unbekannt")});
-      return `<td class="c-doks"><span class="dok dok-${esc(a.ampel || "na")}" title="${esc(titel)}">`
-           + `<b>${a.pruef}</b>${a.ko ? `<i>${a.ko}</i>` : ""}</span></td>`;
+      /* ⚠ NICHT AUSGEWERTET IST NICHT DASSELBE WIE NICHTS DA. Sven: „wenn nicht bei uns
+         verarbeitet vorhanden, dann link einfügen. in einem neuen tab öffnen sich die
+         unterlagen und in der detailansicht öffnet sich Unterlagen, damit die leute auf
+         die idee kommen die unterlagen hochzuladen."
+         Der Link ist kein `<a>`: er soll ZWEI Dinge tun (fremden Tab oeffnen UND das
+         Detail aufschlagen), und das Oeffnen des Leads laeuft ueber die Delegation der
+         Tabelle wie bei Stern, Status und Ausblenden. */
+      const u = l.unterlagen;
+      if (u && u.url)
+        return `<td class="c-doks"><button class="dok-link" data-doklink="${esc(l.id)}"`
+             + ` title="${esc(tk("Unterlagen beim Portal oeffnen und hier die Auswertung anstossen"))}">`
+             + `${tk("ansehen")}</button></td>`;
+      return `<td class="c-doks"><span class="dok-na" title="${esc(tk("Fuer diesen Vorgang liegen keine ausgewerteten Vergabeunterlagen vor."))}">—</span></td>`;
     }
     case 'empf': {
       if(l.src==='award') return awardEmpfCell(l);
@@ -1796,7 +1815,7 @@ function renderDocs(l){
        mit vorhandenem Volltext, aber noch ohne Auswertung, im Aufforderungs-Zweig „Hier
        hochladen (ZIP/PDF)". Gemessen am 2026-08-25: 1.154 von 5.899 offenen Leads mit
        Volltext. Der Nutzer wurde also gebeten, uns etwas zu schicken, das wir hatten. */
-    if (u.gelesen) return `<section class="sec va-empty">
+    if (u.gelesen) return `<section class="sec va-empty" id="an-unterlagen">
       <h4>${tk("Vergabe-Analyse")}<span class="cov">${tk("Unterlagen liegen vor")}</span></h4>
       <p class="va-sum">${tk("Die Vergabeunterlagen liegen uns bereits vor. Die Auswertung steht noch aus und erscheint hier, sobald sie durchgelaufen ist.")}</p>
       <p class="va-eigen">${dl}${zugang}</p>
@@ -1818,7 +1837,7 @@ function renderDocs(l){
        ⚠ `landOhneDocs` ist eine MESSUNG aus dem Export, kein fester Satz. Kommt die erste
        Unterlage, verschwindet die Bitte von allein. Ein hart geschriebenes „keine einzige"
        wuerde ab dem Tag luegen, ohne dass es jemand merkt. */
-    if (l.landOhneDocs) return `<section class="sec va-empty">
+    if (l.landOhneDocs) return `<section class="sec va-empty" id="an-unterlagen">
       <h4>${tk("Vergabe-Analyse")}<span class="cov">${tk("noch keine Unterlagen aus diesem Land")}</span></h4>
       <p class="va-sum">${tk("Aus diesem Land liegen uns bisher keine Vergabeunterlagen vor. Eure wären die ersten, und sie helfen allen, die hier bieten.")}</p>
       <ol class="va-steps">
@@ -1828,7 +1847,7 @@ function renderDocs(l){
       </ol>
       <div class="va-status" data-upstatus="${l.id}"></div>
     </section>`;
-    return `<section class="sec va-empty">
+    return `<section class="sec va-empty" id="an-unterlagen">
       <h4>${tk("Vergabe-Analyse")}<span class="cov">${tk("aus euren Unterlagen")}</span></h4>
       <p class="va-sum">${tk("Aus den Vergabeunterlagen machen wir in Sekunden eine")}<b>${tk("Ampel-Einschätzung")}</b>${tk(", eine abhakbare")}<b>${tk("Bieter-Checkliste")}</b>${tk("(K.o.-Kriterien, Eignungsnachweise, Zuschlagsgewichte) und")}<b>${tk("füllen Firmenangaben vor")}</b>.</p>
       <ol class="va-steps">
@@ -1838,7 +1857,7 @@ function renderDocs(l){
       </ol>
       <div class="va-status" data-upstatus="${l.id}"></div>
     </section>`;
-  })() : `<section class="sec va-empty">
+  })() : `<section class="sec va-empty" id="an-unterlagen">
       <h4>${tk("Vergabe-Analyse")}</h4>
       <p class="va-sum va-none">${l.src==='auslauf'
         ? tk("Diese Ausschreibung läuft aus bzw. ist abgeschlossen, die Vergabeunterlagen sind nur während der laufenden Angebotsfrist verfügbar. Sobald der Nachfolge-Auftrag ausgeschrieben ist, kannst du hier dessen Unterlagen analysieren.")

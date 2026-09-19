@@ -2340,5 +2340,8 @@
   "Profil ergänzen": "Compléter le profil",
   "Status setzen": "Définir le statut",
   "Kein Status": "Aucun statut",
-  "viel Überschneidung mit euren Feldern": "fort recoupement avec vos domaines"
+  "viel Überschneidung mit euren Feldern": "fort recoupement avec vos domaines",
+  "Unterlagen beim Portal oeffnen und hier die Auswertung anstossen": "Ouvrir les documents sur le portail et lancer l'analyse ici",
+  "{p} Pruefpunkte, {k} K.-o.-Kriterien aus einem Dokument. Ampel: {x}": "{p} points de contrôle, {k} critères éliminatoires d'un document. Feu : {x}",
+  "{p} Pruefpunkte, {k} K.-o.-Kriterien aus {d} Dokumenten. Ampel: {x}": "{p} points de contrôle, {k} critères éliminatoires de {d} documents. Feu : {x}"
 }

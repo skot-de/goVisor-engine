@@ -2340,5 +2340,8 @@
   "Profil ergänzen": "Complete profile",
   "Status setzen": "Set status",
   "Kein Status": "No status",
-  "viel Überschneidung mit euren Feldern": "substantial overlap with your fields"
+  "viel Überschneidung mit euren Feldern": "substantial overlap with your fields",
+  "Unterlagen beim Portal oeffnen und hier die Auswertung anstossen": "Open the documents on the portal and start the analysis here",
+  "{p} Pruefpunkte, {k} K.-o.-Kriterien aus einem Dokument. Ampel: {x}": "{p} check points, {k} knock-out criteria from one document. Signal: {x}",
+  "{p} Pruefpunkte, {k} K.-o.-Kriterien aus {d} Dokumenten. Ampel: {x}": "{p} check points, {k} knock-out criteria from {d} documents. Signal: {x}"
 }
