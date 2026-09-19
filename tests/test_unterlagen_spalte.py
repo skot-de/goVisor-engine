@@ -137,8 +137,24 @@ def test_der_klick_oeffnet_den_lead_und_nicht_das_portal():
     assert "window.open" not in rumpf, (
         "der Klick oeffnet wieder selbst einen Tab. Der Browser fokussiert ihn dann, und "
         "genau das sollte die Umstellung vermeiden.")
-    assert "openLead" in rumpf and "an-unterlagen" in rumpf, (
-        "der Klick schlaegt den Lead nicht mehr beim Unterlagen-Abschnitt auf")
+    assert "openLead" in rumpf, "der Klick schlaegt den Lead nicht mehr auf"
+    # ⚠ DER TAB, NICHT EIN SPRUNGZIEL. Eine erste Fassung scrollte zu `#an-unterlagen` —
+    #   das liegt IM Tab `docs`, wird bei aktiver Uebersicht gar nicht gerendert, und der
+    #   Sprung lief ins Leere. Er funktionierte nur, wenn der Tab zufaellig offen war.
+    assert 'setActiveTab("docs")' in rumpf, (
+        "der Klick stellt nicht mehr auf den Unterlagen-Tab")
+    assert "setTimeout" in rumpf, (
+        "der Tab wird ohne Verzoegerung gesetzt — der Wechsel auf den neuen Lead raeumt "
+        "ihn dann wieder weg")
+
+
+def test_jeder_zustand_der_spalte_springt():
+    """Sven: „bei jedem klick landet man in den ausschreibungs details unter Unterlagen."
+    Vorher trugen nur `Gliederung` und `Link` die Kennung; bei den anderen vier passierte
+    dasselbe wie beim Klick auf jede andere Zelle."""
+    z = _zelle()
+    assert z.count("data-doklink=") == 6, (
+        f"nur {z.count('data-doklink=')} von 6 Zustaenden fuehren in den Unterlagen-Tab")
 
 
 def test_der_portal_knopf_steht_im_detail_ueber_dem_feld():

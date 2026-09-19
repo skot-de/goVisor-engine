@@ -903,6 +903,12 @@ function cellHTML(l, key){
       return `<td class="c-band">${bandMeter(a.stufe, true, tk('Angebotsaufwand'), naHint)}</td>`;
     }
     case 'doks': {
+      /* ⚠ JEDER ZUSTAND SPRINGT INS DETAIL, nicht nur die beiden mit Link. Sven am
+         2026-09-19: „bei jedem klick landet man in den ausschreibungs details unter
+         Unterlagen." Die Spalte handelt von den Unterlagen — wer sie anklickt, will
+         dorthin, unabhaengig davon, wie weit wir mit ihnen sind. Vorher trugen nur
+         `Gliederung` und `Link` die Kennung; bei den drei uebrigen passierte dasselbe
+         wie beim Klick auf jede andere Zelle, naemlich ein Sprung an den Anfang. */
       /* ⚠ FUENF ZUSTAENDE, GEMESSEN. Ueber 17.837 Leads in Bau (ohne Zuschlaege):
 
            nur der Link, nichts gelesen        13.909   78,0 %
@@ -928,13 +934,13 @@ function cellHTML(l, key){
                          : "{p} Pruefpunkte, {k} K.-o.-Kriterien aus {d} Dokumenten. Ampel: {x}",
                          {p: a.pruef, k: a.ko, d: a.dok, x: tk(a.ampel || "unbekannt")});
         const zahl = a.dok ? String(a.dok) : tk("gelesen");
-        return `<td class="c-doks"><span class="dok dok-${esc(a.ampel || "na")}" title="${esc(titel)}">`
+        return `<td class="c-doks"><span class="dok dok-${esc(a.ampel || "na")}" data-doklink="${esc(l.id)}" title="${esc(titel)}">`
              + `<b>${esc(zahl)}</b>${a.ko ? `<i>${a.ko}</i>` : ""}</span></td>`;
       }
       if (a)
-        return `<td class="c-doks"><span class="dok-leer" title="${esc(tk("Unterlagen gelesen, aber kein Pruefpunkt gefunden."))}">${tk("nichts gefunden")}</span></td>`;
+        return `<td class="c-doks"><span class="dok-leer" data-doklink="${esc(l.id)}" title="${esc(tk("Unterlagen gelesen, aber kein Pruefpunkt gefunden."))}">${tk("nichts gefunden")}</span></td>`;
       if (u && u.gelesen)
-        return `<td class="c-doks"><span class="dok-warte" title="${esc(tk("Die Unterlagen liegen uns vor. Die Auswertung steht noch aus."))}">${tk("liegt vor")}</span></td>`;
+        return `<td class="c-doks"><span class="dok-warte" data-doklink="${esc(l.id)}" title="${esc(tk("Die Unterlagen liegen uns vor. Die Auswertung steht noch aus."))}">${tk("liegt vor")}</span></td>`;
       /* ⚠ SECHSTER ZUSTAND, und Sven musste mich darauf stossen: „bei einigen portalen
          lesen wir nur die gliederung aus, weil wir die unterlagen nicht automatisiert
          herunterladen dürfen." Ich hatte nur die ausgelieferten Lead-Daten geprueft und
@@ -951,7 +957,7 @@ function cellHTML(l, key){
         }">${tk("Gliederung")}</span></td>`;
       if (u && u.url)
         return `<td class="c-doks"><span class="dok-verweis" data-doklink="${esc(l.id)}" title="${esc(tk("Beim Portal liegen Unterlagen. Oeffnen und hochladen im Detail."))}">${tk("Link")}</span></td>`;
-      return `<td class="c-doks"><span class="dok-na" title="${esc(tk("Fuer diesen Vorgang liegen keine ausgewerteten Vergabeunterlagen vor."))}">—</span></td>`;
+      return `<td class="c-doks"><span class="dok-na" data-doklink="${esc(l.id)}" title="${esc(tk("Fuer diesen Vorgang liegen keine ausgewerteten Vergabeunterlagen vor."))}">—</span></td>`;
     }
     case 'empf': {
       if(l.src==='award') return awardEmpfCell(l);

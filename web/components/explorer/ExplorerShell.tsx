@@ -1079,12 +1079,26 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
    * selbst ueber den Tab — und ein Strg-Klick darauf macht den Hintergrund-Tab, den das
    * Skript nicht erzwingen konnte.
    */
+  /* Klick in der Unterlagen-Spalte: Lead aufschlagen UND auf den Unterlagen-Tab stellen.
+   *
+   * ⚠ EIN TAB, KEIN SPRUNGZIEL. Erste Fassung scrollte zu `#an-unterlagen` — und das
+   * Element liegt IM Tab `docs`. Solange „Uebersicht" aktiv ist, wird es gar nicht
+   * gerendert, `getElementById` liefert null und es passiert nichts. Der Sprung
+   * funktionierte nur, wenn der Tab zufaellig schon offen war.
+   *
+   * ⚠ `setTimeout(…, 0)` NACH `openLead`: derselbe Kniff steht eine Ecke weiter oben beim
+   * Hinweis-Einstieg. `openLead` setzt `activeId`; der Tab darf erst danach gesetzt
+   * werden, sonst raeumt der Wechsel auf den neuen Lead ihn wieder weg.
+   *
+   * Sven am 2026-09-19: „bei jedem klick landet man in den ausschreibungs details unter
+   * Unterlagen." Jeder Zustand der Spalte traegt deshalb `data-doklink`, nicht nur die
+   * beiden mit Link.
+   */
   function dokLinkOeffnen(id: string) {
     openLead(id);
-    requestAnimationFrame(() => {
-      document.getElementById("an-unterlagen")?.scrollIntoView({ behavior: "smooth", block: "start" });
-    });
+    setTimeout(() => setActiveTab("docs"), 0);
   }
+
 
 
   function setWfFuer(id: string, k: string | null) {
