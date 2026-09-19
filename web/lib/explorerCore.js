@@ -577,9 +577,9 @@ const COLS = [
   {key:'frist', label:'Frist',     on:true},
   // Die drei Entscheidungs-Achsen stehen bewusst NEBENEINANDER — man liest sie zusammen:
   // lohnt es sich (Relevanz), kann ich gewinnen (Chance), was kostet es (Aufwand).
-  {key:'relevanz', label:'Relevanz', on:true, th:'center'},
-  {key:'wechsel',  label:'Chance',   on:true, th:'center'},
-  {key:'aufwand',label:'Aufwand',  on:true, th:'center'},
+  {key:'relevanz', label:'Relevanz', on:false, th:'center'},
+  {key:'wechsel',  label:'Chance',   on:false, th:'center'},
+  {key:'aufwand',label:'Aufwand',  on:false, th:'center'},
   {key:'neu',   label:'Wettbewerb',on:true, th:'center'},
   {key:'konk',  label:'Konkurrenz',on:false},
   {key:'vol',   label:'Volumen',   on:true,  th:'right'},
@@ -731,7 +731,16 @@ function sorted(rows){
       case 'frist': return l.src==='award' ? (l.award ? l.award.ago : 9999)
                          : (handlungsFrist(l) ?? 9999);
       case 'vol': return l.volumen.src==='unbekannt' ? -1 : parseFloat(String(l.volumen.wert).replace(/[^\d,]/g,'').replace(',','.'))||0;
-      case 'empf': return l.src==='award' ? 9 : recForList(l).rank;   // #26 §4.1 Aussagestärke, stärkste zuerst
+      /* #26 §4.1 Aussagestaerke, staerkste zuerst — und bei Gleichstand die feinere
+         Passungszahl, absteigend.
+
+         ⚠ SEIT DIE RELEVANZSPALTE NICHT MEHR VORBELEGT IST (2026-09-19) waere die
+         Sortierung sonst grob: `rank` kennt eine Handvoll Stufen, und innerhalb von
+         „Hohe Passung" stuenden die Leads in zufaelliger Reihenfolge. Die Passungszahl
+         trennt dort 71 / 86 / 100. Faktor 1000, weil `rank` einstellig ist und die
+         Passung bis 100 geht — so entscheidet der Rang immer zuerst. */
+      case 'empf': return l.src==='award' ? 9000
+                        : recForList(l).rank * 1000 - (l.passung ?? 0);
       /* Passungszahl statt Stufe: dieselbe Richtung, nur feiner. Sie ist monoton aus
          demselben `s` abgeleitet wie die Stufe, die Reihenfolge der Baender bleibt also
          erhalten — innerhalb von „hoch" trennt sie jetzt 71 / 86 / 100. „na" (kein Profil)

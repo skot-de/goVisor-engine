@@ -723,10 +723,24 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
   // ohne Profil zurück auf Frist. Manuelle Sortierung schaltet das ab.
   useEffect(() => {
     if (!autoSort.current) return;
-    // Erster Blick auf die Akquise = die Leads, die zuerst Arbeit verdienen: Relevanz × Chance ×
-    // wenig Aufwand × genug Frist (topScore). Auch ohne Profil sinnvoll (dann ohne Relevanz-Anteil)
-    // — die Alternative „nach Frist" stellt die fast abgelaufenen nach oben, also das Gegenteil.
-    setSortKey("ranking");
+    /* ⚠ HIER STAND `ranking`, MIT EINEM ARGUMENT, DAS BESTEHEN BLEIBT.
+     *
+     * Die alte Begründung: „Erster Blick auf die Akquise = die Leads, die zuerst Arbeit
+     * verdienen: Relevanz × Chance × wenig Aufwand × genug Frist (topScore). Die
+     * Alternative ‚nach Frist' stellt die fast abgelaufenen nach oben, also das
+     * Gegenteil." Das ist nicht falsch: ein Lead mit zwei Tagen Restzeit steht dann über
+     * einem mit dreissig, und auf zwei Tage bietet praktisch niemand mehr.
+     *
+     * Sven hat am 2026-09-19 trotzdem die Frist verlangt („standardsortierung auf die
+     * frist. kürzeste oben"). Der Grund dafür steht nicht im Code, sondern in der
+     * Benutzung: wer die Liste durcharbeitet, will wissen, was ihm wegläuft — `ranking`
+     * beantwortet „was lohnt sich", die Frist beantwortet „was ist jetzt dran". Beides
+     * sind gute Fragen; welche die Liste beim ersten Blick beantwortet, ist eine
+     * Produktentscheidung und keine technische.
+     *
+     * `ranking` bleibt als Sortierspalte erreichbar und ist damit einen Klick entfernt.
+     */
+    setSortKey("frist");
     setSortDir(1);
   }, [realProfile]);
 
