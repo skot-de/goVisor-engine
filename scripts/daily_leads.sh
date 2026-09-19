@@ -1696,6 +1696,21 @@ $PY scripts/pruefe_nuts_vorgabe.py \
 $PY scripts/pruefe_sondierung.py \
   || echo "  → Sondierungs-Waechter meldet Befunde. Details: python3 scripts/pruefe_sondierung.py"
 
+# ── STEHT EINE MIGRATION NUR IM ORDNER? ──────────────────────────────────────────────────
+#
+# ⚠ Der lautloseste Ausfall, den dieses Projekt kennt. Die Client-Module fangen jeden
+# Datenbankfehler ab und tun dann nichts — richtig so, ein Klick in der Liste darf nie eine
+# rote Meldung erzeugen. Die Folge: eine fehlende Tabelle fuehlt sich an wie ein
+# erfolgreicher Klick. Der Knopf reagiert, die Oberflaeche merkt sich den Zustand, beim
+# naechsten Laden ist er weg. Und von der Testseite schweigt es genauso, denn die Tests
+# pruefen den Code, nicht die Datenbank.
+#
+# Gefunden am 2026-09-19, nebenbei: 0021 (Ausblenden) und 0022 (gespeicherte Filter) waren
+# nie angewandt. Zwei fertige, getestete Funktionen, die seit ihrem Bau nichts speichern.
+# Ohne Zugang oder Netz gibt die Sonde keine Auskunft (Rueckgabe 2) — das ist kein Befund.
+$PY scripts/pruefe_supabase_migrationen.py --still; _mig=$?
+[ "$_mig" = "1" ] && echo "  → Migrationen fehlen in der Datenbank. Details: python3 scripts/pruefe_supabase_migrationen.py"
+
 # ── ABDECKUNG: FEHLT UNS EIN GANZER MONAT? ───────────────────────────────────────────────
 #
 # Am 2026-09-07 fiel auf, dass Luxemburg fuer Juli NULL Bekanntmachungen hatte und fuer

@@ -28,6 +28,7 @@ import { currentUser, logout, loadProfile } from "@/lib/supabase/auth";
 import { recordLeadClick, recordAnalysis } from "@/lib/analytics";
 import { syncWatchlist, loadWatchlist, type MerkZeile } from "@/lib/supabase/watchlist";
 import { syncAusgeblendet, loadAusgeblendet } from "@/lib/supabase/ausgeblendet";
+import { syncLeadStatus, loadLeadStatus } from "@/lib/supabase/leadStatus";
 import { ladeFilter, speichereFilter, loescheFilter, merkeGebrauch, mischen,
          type GespeicherterFilter } from "@/lib/supabase/filterspeicher";
 import { Kalender } from "./Kalender";
@@ -855,6 +856,29 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
     return () => { ab = true; };
   }, []);
 
+  /* Die gespeicherten Einordnungen zurueck an die Leads.
+   *
+   * ⚠ ANS OBJEKT, NICHT IN EINEN STATE. Die Liste wird per `cellHTML(l, …)` aus dem
+   * Lead-Objekt gerendert, nicht aus React-State; ein `useState` daneben wuerde die
+   * Tabelle nicht erreichen. Dieselbe Stelle macht es beim Ausblenden eine Zeile weiter
+   * oben aus demselben Grund so.
+   *
+   * ⚠ `bump()` ZUM SCHLUSS. Die Daten kommen aus dem Netz, also nach dem ersten Zeichnen.
+   * Ohne den Anstoss stuende die Spalte bis zur naechsten Interaktion leer da — und das
+   * sieht genau so aus wie „wurde wieder nicht gespeichert". */
+  useEffect(() => {
+    let ab = false;
+    loadLeadStatus().then((m) => {
+      if (ab || !m.size) return;
+      CORE.forEach((l) => {
+        const k = m.get(String(l.id));
+        if (k) (l as { userStatus?: string | null }).userStatus = k;
+      });
+      bump();
+    });
+    return () => { ab = true; };
+  }, []);
+
   const [verwaist, setVerwaist] = useState<MerkZeile[]>([]);
   useEffect(() => {
     let ab = false;
@@ -1105,6 +1129,7 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
     const l = CORE.find((x) => x.id === id) as (Lead & { userStatus?: string | null }) | undefined;
     if (!l) return;
     l.userStatus = k;
+    syncLeadStatus(id, k, { titel: l.titel as string, buyer: (l as { buyer?: string }).buyer });
     const WFLABEL: Record<string, string> = { interessant: "Interessant", pruefung: "In Prüfung", fragen: "Offene Fragen", verworfen: "Verworfen" };
     logEvent(l, "status", k
       ? t("Status → {status}", { status: t(WFLABEL[k] || k) })
@@ -1116,6 +1141,8 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
     const l = CORE.find((x) => x.id === activeId) as (Lead & { userStatus?: string | null }) | undefined;
     if (!l) return;
     l.userStatus = l.userStatus === k ? null : k;
+    syncLeadStatus(String(l.id), l.userStatus,
+      { titel: l.titel as string, buyer: (l as { buyer?: string }).buyer });
     const WFLABEL: Record<string, string> = { interessant: "Interessant", pruefung: "In Prüfung", fragen: "Offene Fragen", verworfen: "Verworfen" };
     logEvent(l, "status", l.userStatus
       ? t("Status → {status}", { status: t(WFLABEL[k] || k) })
