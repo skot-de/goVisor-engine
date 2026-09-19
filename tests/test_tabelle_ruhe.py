@@ -157,16 +157,48 @@ def test_eine_zu_knappe_frist_ist_rot_und_sonst_nichts():
     eine TATSACHE, die den Vorgang schliesst. Beide trugen `gedaempft`, und gedaempft liest
     sich als „lohnt sich eher nicht" statt „geht nicht mehr".
 
-    ⚠ Rot vertraegt nur Seltenheit. Gemessen ueber bau+it+medizin+beratung (36.943 offene
-    Leads) mit breitem Profil: **5,4 %** — etwa jede achtzehnte Zeile. Deshalb prueft dieser
-    Test auch die Gegenrichtung: genau EIN Label ist rot. Wandern weitere hinein, wird die
-    Farbe zur Tapete und sagt nichts mehr.
+    ⚠ „NICHT BEWERBEN" KAM AM SELBEN TAG DAZU, auf Svens Nachfrage. Es ist die staerkere
+    Aussage von beiden; rotes „Frist zu knapp" neben grauem „Nicht bewerben" haette das
+    Mildere lauter gesagt. Alle FUENF Zweige, obwohl nur zwei davon Tatsachen sind (Frist,
+    Pflichtanforderung) und drei Abwaegungen (Passung, Aufwand gegen Wert, zwei unguenstige
+    Zusaetze): dasselbe Wort in zwei Farben waere schlimmer als eine, weil der Leser das
+    Wort sieht und nicht den Zweig.
+
+    ⚠ Rot vertraegt nur Seltenheit. Gemessen ueber bau+it+medizin+beratung, 36.943 offene
+    Leads, mit VOLLSTAENDIG beantwortetem Eignungsprofil:
+
+        Passung mittel     27.891   75,5 %
+        Noch zu klaeren     7.050   19,1 %
+        Nicht bewerben      1.040    2,8 %   ← alle mit dem Grund „Frist reicht nicht"
+        Frist zu knapp        962    2,6 %
+
+    Rot liegt damit bei **5,4 %**, genau wie vorher: die beiden Label sind DIESELBE
+    Population. Ob ein Fristproblem als „Frist zu knapp" (Kaskade A) oder als „Nicht
+    bewerben" (Kaskade B) erscheint, haengt allein daran, ob uns die Unterlagen vorliegen.
+
+    Deshalb prueft dieser Test auch die Gegenrichtung: genau DIESE ZWEI Label sind rot.
     """
     quelle = (WURZEL / "web" / "lib" / "recommendation.js").read_text(encoding="utf-8")
-    rot = re.findall(r'label: "([^"]+)", cls: "rot"', quelle)
-    assert rot == ["Frist zu knapp"], (
-        f"rot tragen: {rot}. Erwartet genau „Frist zu knapp\" — eine Alarmfarbe auf "
-        f"mehreren Labeln ist keine Alarmfarbe mehr.")
+    paare = re.findall(r'label: "([^"]+)", cls: "(\w+)"', quelle)
+    rot = {label for label, cls in paare if cls == "rot"}
+
+    # ⚠ EIN LABEL, EINE FARBE. „Nicht bewerben" steht an FUENF Zweigen; faellt einer davon
+    # auf `gedaempft` zurueck, steht dasselbe Wort in derselben Spalte mal rot und mal grau,
+    # und der Leser muesste raten, was die Farbe unterscheidet — genau das Argument, mit dem
+    # alle fuenf rot wurden. Die erste Fassung dieses Tests sammelte die Label in ein `set`
+    # und war gegen diesen Fall blind: vier rote Zweige genuegten ihr.
+    farben = {}
+    for label, cls in paare:
+        farben.setdefault(label, set()).add(cls)
+    uneinig = {k: sorted(v) for k, v in farben.items() if len(v) > 1}
+    assert not uneinig, (
+        f"dasselbe Label traegt verschiedene Farben: {uneinig}. In der Spalte sieht man "
+        f"das Wort, nicht den Zweig.")
+    assert rot == {"Frist zu knapp", "Nicht bewerben"}, (
+        f"rot tragen: {sorted(rot)}. Erwartet genau diese zwei. Die Grenze laeuft zwischen "
+        f"BESCHREIBEN und ANWEISEN: „Geringe Passung\" sagt, wie die Lage ist — darueber "
+        f"darf man anderer Meinung sein. „Nicht bewerben\" und „Frist zu knapp\" sagen, "
+        f"dass die Tuer zu ist. Jedes weitere rote Label macht die Farbe zur Tapete.")
 
     kern = _ohne_kommentar(CORE.read_text(encoding="utf-8"))
     m = re.search(r"REC_CLS = \{([^}]*)\}", kern)

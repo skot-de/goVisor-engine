@@ -170,19 +170,46 @@ export function einordnung(e) {
   return { label: "Passung mittel", cls: "neutral", gruende: [] };
 }
 
+/* ⚠ „NICHT BEWERBEN" IST ROT, „GERINGE PASSUNG" NICHT. Sven am 2026-09-19. Die Grenze
+   laeuft zwischen BESCHREIBEN und ANWEISEN, nicht zwischen stark und schwach: „Geringe
+   Passung" sagt, wie die Lage ist, und darueber darf man anderer Meinung sein. „Nicht
+   bewerben" sagt, was zu tun ist — eine geschlossene Tuer, ganz gleich aus welchem Grund.
+
+   ⚠ ALLE FUENF ZWEIGE, NICHT NUR DIE HARTEN. Zwei davon sind Tatsachen (Pflichtanforderung
+   verletzt, Frist reicht nicht), drei sind Abwaegungen (Passung, Aufwand gegen Wert, zwei
+   unguenstige Zusaetze). Dasselbe Wort in zwei Farben waere trotzdem schlimmer als eine:
+   der Leser sieht das Wort, nicht den Zweig, und muesste raten, was die Farbe unterscheidet.
+
+   ⚠ WAS ES IN DEN DATEN KOSTET — gemessen am 2026-09-19 ueber bau+it+medizin+beratung,
+   36.943 offene Leads, mit VOLLSTAENDIG beantwortetem Eignungsprofil:
+
+       Passung mittel     27.891   75,5 %
+       Noch zu klaeren     7.050   19,1 %
+       Nicht bewerben      1.040    2,8 %   ← alle 1.040 mit dem Grund „Frist reicht nicht"
+       Frist zu knapp        962    2,6 %
+
+   Rot bleibt damit bei **5,4 %** — exakt derselbe Anteil wie vor dieser Aenderung. Die
+   beiden Label sind dieselbe Population: ob ein Fristproblem als „Frist zu knapp"
+   (Kaskade A) oder als „Nicht bewerben" (Kaskade B) erscheint, haengt nur daran, ob uns
+   die Unterlagen vorliegen.
+
+   ⚠ UND: Kaskade B ist bei UNVOLLSTAENDIGEM Profil ganz gesperrt. Mit acht von zehn
+   Eignungsantworten erreicht sie 0 Leads (Sperrgrund „kaltstart"), mit zehn 21,9 %. Die
+   restlichen 78,1 % sperrt „keine_unterlagen". „Nicht bewerben" sieht also nur, wer sein
+   Profil fertig ausgefuellt hat. */
 // ── Kaskade B · Handlungsempfehlung (§3.3 B) ──
 export function handlungsempfehlung(e, partnerMoeglich) {
   if (e.E8 === "eigen") return { label: "Verteidigen", cls: "blau", gruende: ["euer Bestandsvertrag läuft aus"], schritt: "Verteidigungsangebot vorbereiten" };
 
   if (e.E1 === "verletzt") {
     if (partnerMoeglich) return { label: "Noch zu klären", cls: "neutral", frage: `${e.E1_grund || "Eine Anforderung"} fehlt, über eine Bietergemeinschaft abdeckbar?`, gruende: ["Pflichtanforderung fehlt"], schritt: "Partner suchen" };
-    return { label: "Nicht bewerben", cls: "gedaempft", gruende: [`Pflichtanforderung nicht erfüllt${e.E1_grund ? ": " + e.E1_grund : ""}`], schritt: "überspringen und weitersuchen" };
+    return { label: "Nicht bewerben", cls: "rot", gruende: [`Pflichtanforderung nicht erfüllt${e.E1_grund ? ": " + e.E1_grund : ""}`], schritt: "überspringen und weitersuchen" };
   }
-  if (e.E5 === "unzureichend") return { label: "Nicht bewerben", cls: "gedaempft", gruende: ["Frist reicht für den Aufwand nicht"], schritt: "überspringen und weitersuchen" };
-  if (e.E2 != null && e.E2 < T.E2_mittel) return { label: "Nicht bewerben", cls: "gedaempft", gruende: ["geringe Passung zum Profil"], schritt: "überspringen und weitersuchen" };
+  if (e.E5 === "unzureichend") return { label: "Nicht bewerben", cls: "rot", gruende: ["Frist reicht für den Aufwand nicht"], schritt: "überspringen und weitersuchen" };
+  if (e.E2 != null && e.E2 < T.E2_mittel) return { label: "Nicht bewerben", cls: "rot", gruende: ["geringe Passung zum Profil"], schritt: "überspringen und weitersuchen" };
   if (e.E4 === "unverhaeltnismaessig") {
     if (e.E10_teilbar) return { label: "Noch zu klären", cls: "neutral", frage: "Aufwand hoch fürs Gesamtvolumen. Bewerbung auf ein einzelnes Los prüfen?", gruende: ["Aufwand/Wert unausgewogen"], schritt: "Einzel-Los prüfen" };
-    return { label: "Nicht bewerben", cls: "gedaempft", gruende: ["Aufwand steht nicht im Verhältnis zum Auftragswert"], schritt: "überspringen und weitersuchen" };
+    return { label: "Nicht bewerben", cls: "rot", gruende: ["Aufwand steht nicht im Verhältnis zum Auftragswert"], schritt: "überspringen und weitersuchen" };
   }
   if (e.E1 === "unbekannt") {
     const frage = e.E1_grund ? `Erfüllt ihr: ${e.E1_grund}? Eine Angabe genügt.` : "Deckt euer Profil die geforderten Nachweise? Angaben ergänzen.";
@@ -204,7 +231,7 @@ export function handlungsempfehlung(e, partnerMoeglich) {
     return { label: "Bewerben", cls: "gruen", gruende: g.slice(0, 3), schritt: "Unterlagen in der Checkliste abarbeiten" };
   }
   if (unguenstig.length === 1) return { label: "Noch zu klären", cls: "neutral", frage: unguenstig[0].t, gruende: [unguenstig[0].t], schritt: "diesen Punkt klären, dann entscheiden" };
-  if (unguenstig.length >= 2) return { label: "Nicht bewerben", cls: "gedaempft", gruende: unguenstig.map((u) => u.t), schritt: "überspringen und weitersuchen" };
+  if (unguenstig.length >= 2) return { label: "Nicht bewerben", cls: "rot", gruende: unguenstig.map((u) => u.t), schritt: "überspringen und weitersuchen" };
   return { label: "Noch zu klären", cls: "neutral", frage: "Prüft Frist, Aufwand und Wettbewerbslage, einer der Punkte trägt die Entscheidung.", gruende: [], schritt: "diesen Punkt klären, dann entscheiden" };
 }
 
