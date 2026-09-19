@@ -2346,5 +2346,12 @@
   "{p} Pruefpunkte, {k} K.-o.-Kriterien aus {d} Dokumenten. Ampel: {x}": "{p} points de contrôle, {k} critères éliminatoires de {d} documents. Feu : {x}",
   "Schieb die Dokumente hier rein, wir analysieren sie für dich": "Déposez les documents ici, nous les analysons pour vous",
   "ZIP, PDF, Word, Excel. Das Ergebnis erscheint in wenigen Sekunden hier.": "ZIP, PDF, Word, Excel. Le résultat apparaît ici en quelques secondes.",
-  "Datei auswählen": "Choisir un fichier"
+  "Datei auswählen": "Choisir un fichier",
+  "Link": "Lien",
+  "liegt vor": "disponible",
+  "nichts gefunden": "rien trouvé",
+  "Hier Unterlagen einsehen": "Consulter les documents",
+  "Unterlagen gelesen, aber kein Pruefpunkt gefunden.": "Documents lus, aucun point de contrôle trouvé.",
+  "Die Unterlagen liegen uns vor. Die Auswertung steht noch aus.": "Nous avons les documents. L'analyse est encore en attente.",
+  "Beim Portal liegen Unterlagen. Oeffnen und hochladen im Detail.": "Des documents sont disponibles sur le portail. Ouvrir et téléverser depuis le détail."
 }

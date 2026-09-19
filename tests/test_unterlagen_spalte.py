@@ -69,29 +69,82 @@ def test_null_dokumente_zeigen_ein_wort_keine_null():
         "bei 0 Dokumenten steht wieder eine Null statt eines Wortes")
 
 
-def test_vorhandene_unterlagen_bekommen_einen_link():
+def test_die_fuenf_zustaende_sind_unterscheidbar():
+    """⚠ Gemessen ueber 17.837 Leads in Bau (ohne Zuschlaege):
+
+        nur der Link, nichts gelesen        13.909   78,0 %
+        analysiert, mit Pruefpunkten         2.105   11,8 %
+        Text liegt vor, Auswertung offen     1.383    7,8 %
+        gar nichts                             345    1,9 %
+        analysiert, nichts gefunden             95    0,5 %
+
+    Sven fragte nach drei Zustaenden. „Nur Gliederung gelesen" gibt es in den
+    ausgelieferten Daten nicht als eigenen; am naechsten kommt die letzte Zeile.
+    """
     z = _zelle()
-    assert "data-doklink=" in z, (
-        "wo Unterlagen beim Portal liegen, aber nicht ausgewertet sind, steht wieder nur "
-        "ein Strich")
-    i, j = z.index("data-doklink="), z.index("dok-na")
-    assert i < j, "der Link steht hinter dem Strich-Zweig und wird nie erreicht"
+    for klasse, was in (("dok dok-", "analysiert mit Pruefpunkten"),
+                        ("dok-leer", "analysiert, nichts gefunden"),
+                        ("dok-warte", "Text liegt vor, Auswertung offen"),
+                        ("dok-verweis", "nur der Link"),
+                        ("dok-na", "gar nichts")):
+        assert klasse in z, f"der Zustand {was!r} ist nicht mehr unterscheidbar"
+    # ⚠ Reihenfolge: der Strich-Zweig faengt sonst alles ab, was vor ihm haette greifen sollen.
+    assert z.index("dok-verweis") < z.index("dok-na"), (
+        "der Link-Zustand steht hinter dem Strich-Zweig und wird nie erreicht")
+    assert z.index("dok-warte") < z.index("dok-verweis"), (
+        "vorhandener Volltext wird als blosser Link gemeldet")
 
 
-def test_der_klick_oeffnet_beides():
-    """Fremden Tab UND das Detail. ⚠ Das Fenster ZUERST: `window.open` gilt nur im
-    direkten Klick als gewollt; steht ein Zustandswechsel davor, blockt der Browser es
-    als Pop-up."""
+def test_die_zelle_traegt_keinen_knopf():
+    """Sven: er finde den Knopf nicht gut. Die Spalte steht in jeder Zeile — 50 Knoepfe
+    untereinander sind die Unruhe, die am selben Tag zweimal gemeldet wurde."""
+    z = _zelle()
+    assert "<button" not in z, (
+        "in der Unterlagen-Zelle steht wieder ein Knopf. Was klickbar ist, zeigt das "
+        "ueber Zeiger und Unterstreichung, nicht ueber eine Flaeche.")
+
+
+def test_der_klick_oeffnet_den_lead_und_nicht_das_portal():
+    """⚠ HIER STAND DAS GEGENTEIL, und die Umkehr ist der Kern.
+
+    Erste Fassung: der Klick oeffnete die Portalseite in einem neuen Tab UND den Lead.
+    Die Anforderung war „die seite soll sich in einem neuen tab öffnen, aber govisor
+    bleibt das aktive fenster" — und genau das kann eine Seite nicht. Ein Hintergrund-Tab
+    entsteht durch Mittel- oder Strg/Cmd-Klick; der einzige Hebel dagegen waere
+    `handle.blur()`, und das Handle gibt `window.open` nur OHNE `noopener` zurueck. Dann
+    koennte die fremde Seite unser Fenster umleiten.
+
+    Sven hat es umgedreht: der Portal-Link ist ein echtes `<a target="_blank">` im Detail,
+    ueber dem Drop-Feld. Klickt der NUTZER ihn, entscheidet er selbst — und ein
+    Strg-Klick darauf macht den Hintergrund-Tab, den das Skript nicht erzwingen konnte.
+    """
     tab = _ohne_kommentar(TAB.read_text(encoding="utf-8"))
     assert 'closest<HTMLElement>("[data-doklink]")' in tab, "die Tabelle reicht den Klick nicht weiter"
     sh = _ohne_kommentar(SHELL.read_text(encoding="utf-8"))
     i = sh.index("function dokLinkOeffnen")
     rumpf = sh[i:sh.index("\n  }", i)]
-    assert "window.open" in rumpf and "openLead" in rumpf, "der Klick tut nicht beides"
-    assert rumpf.index("window.open") < rumpf.index("openLead"), (
-        "der Lead wird vor dem Fenster geoeffnet — der Browser wertet window.open dann "
-        "als Pop-up und blockt es")
-    assert "an-unterlagen" in rumpf, "es wird nicht zum Unterlagen-Abschnitt gesprungen"
+    assert "window.open" not in rumpf, (
+        "der Klick oeffnet wieder selbst einen Tab. Der Browser fokussiert ihn dann, und "
+        "genau das sollte die Umstellung vermeiden.")
+    assert "openLead" in rumpf and "an-unterlagen" in rumpf, (
+        "der Klick schlaegt den Lead nicht mehr beim Unterlagen-Abschnitt auf")
+
+
+def test_der_portal_knopf_steht_im_detail_ueber_dem_feld():
+    """Ein echtes Anker-Element, damit Strg-Klick funktioniert, und VOR dem Drop-Feld."""
+    code = _ohne_kommentar(CORE.read_text(encoding="utf-8"))
+    i = code.index("const dropFeld")
+    feld = code[i:code.index("\n};", i)]
+    assert 'class="va-portal"' in feld and "target=" in feld, (
+        "der Portal-Knopf ist kein Anker mehr — dann kann niemand mehr mit Strg-Klick "
+        "einen Hintergrund-Tab oeffnen")
+    # ⚠ NICHT die Position der KLASSE vergleichen. `class="va-portal"` steht in der
+    #   Variablendefinition weiter oben; die Ausgabereihenfolge haengt allein daran, wo
+    #   `${knopf}` im Rueckgabewert eingesetzt wird. Ein Rueckbau, der den Knopf ans Ende
+    #   schob, lief so gruen durch (gemessen beim Schreiben dieses Tests).
+    ruck = feld[feld.index("return `"):]
+    assert ruck.index("${knopf}") < ruck.index("va-drop"), (
+        "der Knopf wird unter dem Drop-Feld ausgegeben statt darueber")
 
 
 def test_der_abschnitt_ist_anspringbar():

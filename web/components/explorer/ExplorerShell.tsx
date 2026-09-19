@@ -1066,31 +1066,26 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
     void dateiHochladen(id, file, statusEl);
   }
 
+  /* Klick auf „Link" in der Unterlagen-Spalte: NUR den Lead aufschlagen.
+   *
+   * ⚠ HIER STAND `window.open`. Die Anforderung war „die seite soll sich in einem neuen
+   * tab öffnen, aber govisor bleibt das aktive fenster" — und genau das kann eine Seite
+   * nicht: ein Hintergrund-Tab entsteht durch Mittel- oder Strg/Cmd-Klick, beides nicht
+   * ausloesbar. Der einzige Hebel waere `handle.blur()`, und das Handle gaebe es nur ohne
+   * `noopener`; dann koennte die fremde Seite unser Fenster umleiten.
+   *
+   * Sven hat es daraufhin umgedreht („dann machen wir das anders"): der Portal-Link steht
+   * jetzt als Knopf im Detail, ueber dem Drop-Feld. Klickt der NUTZER ihn, entscheidet er
+   * selbst ueber den Tab — und ein Strg-Klick darauf macht den Hintergrund-Tab, den das
+   * Skript nicht erzwingen konnte.
+   */
   function dokLinkOeffnen(id: string) {
-    const l = CORE.find((x) => x.id === id) as (Lead & { unterlagen?: { url?: string } }) | undefined;
-    const url = l?.unterlagen?.url;
-    /* ⚠ DER NEUE TAB SOLL IM HINTERGRUND BLEIBEN, und das laesst sich nicht erzwingen.
-     *
-     * Sven: „die seite soll sich in einem neuen tab öffnen, aber govisor bleibt das
-     * aktive fenster". Ein Hintergrund-Tab entsteht im Browser durch Mittelklick oder
-     * Strg/Cmd+Klick — beides kann eine Seite nicht ausloesen. `window.open` fokussiert
-     * den neuen Tab, und der einzige Hebel dagegen waere `handle.blur()`.
-     *
-     * Dafuer braeuchte es das Fenster-Handle, und das gibt `window.open` nur OHNE
-     * `noopener` zurueck. Ohne `noopener` bekommt die fremde Seite aber `window.opener`
-     * und kann unser Fenster umleiten — bei beliebigen Portal-URLs ist das der teurere
-     * Handel. `noopener` bleibt.
-     *
-     * Was bleibt, ist `window.focus()` auf UNS: manche Browser holen den Fokus damit
-     * zurueck, Chrome ignoriert es. Es kostet nichts und ist ehrlicher als ein
-     * Sicherheitsloch fuer eine Bequemlichkeit.
-     */
-    if (url) { window.open(url, "_blank", "noopener,noreferrer"); window.focus(); }
     openLead(id);
     requestAnimationFrame(() => {
       document.getElementById("an-unterlagen")?.scrollIntoView({ behavior: "smooth", block: "start" });
     });
   }
+
 
   function setWfFuer(id: string, k: string | null) {
     const l = CORE.find((x) => x.id === id) as (Lead & { userStatus?: string | null }) | undefined;

@@ -473,15 +473,33 @@ const val = (text, src, hint) =>
  * auf dem Telefon gar nicht — dort gibt es nichts zu ziehen. Die Flaeche ist der Weg fuer
  * die Maus, der Knopf fuer alle anderen.
  */
-const dropFeld = (id) => `<div class="va-drop" data-dropzone="${esc(id)}">
+const dropFeld = (l) => {
+  /* ⚠ DER PORTAL-KNOPF STEHT UEBER DEM FELD, NICHT IN DER TABELLENZELLE.
+     Sven am 2026-09-19: „dann aber auf in die lead detailansicht auf unterlagen kommt und
+     da steht oben ein dicker button zu hier unterlagen einsehen und darunter das drop in
+     feld". Das loest zugleich ein Problem, das sich anders nicht loesen liess: ein
+     Hintergrund-Tab laesst sich aus einer Seite heraus nicht erzeugen. Klickt der NUTZER
+     den Knopf, entscheidet er selbst — und ein Strg- oder Cmd-Klick darauf macht genau
+     den Hintergrund-Tab, den ein Skript nicht erzwingen kann. */
+  const u = l.unterlagen;
+  const knopf = u && u.url
+    ? `<a class="va-portal" href="${esc(u.url)}" target="_blank" rel="noopener noreferrer">
+         <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor"
+              stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+           <path d="M14 4h6v6"/><path d="M20 4 11 13"/>
+           <path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/>
+         </svg>${tk("Hier Unterlagen einsehen")}</a>`
+    : '';
+  return `${knopf}<div class="va-drop" data-dropzone="${esc(l.id)}">
   <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor"
        stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
     <path d="M12 16V4m0 0L8 8m4-4 4 4"/><path d="M4 16v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3"/>
   </svg>
   <b>${tk("Schieb die Dokumente hier rein, wir analysieren sie für dich")}</b>
   <span>${tk("ZIP, PDF, Word, Excel. Das Ergebnis erscheint in wenigen Sekunden hier.")}</span>
-  <button class="va-upload-btn" data-uploaddocs="${esc(id)}">${tk("Datei auswählen")}</button>
+  <button class="va-upload-btn" data-uploaddocs="${esc(l.id)}">${tk("Datei auswählen")}</button>
 </div>`;
+};
 
 const bandMeter = (level, risk, cap, naTitle) => {
   // naTitle erklärt bei „n/a" die URSACHE (fehlende Angaben), statt den Nutzer raten zu lassen.
@@ -885,20 +903,25 @@ function cellHTML(l, key){
       return `<td class="c-band">${bandMeter(a.stufe, true, tk('Angebotsaufwand'), naHint)}</td>`;
     }
     case 'doks': {
-      /* ⚠ DIE SPALTE HEISST „UNTERLAGEN" UND ZEIGTE DIE PRUEFPUNKTE. Gemeldet von Sven am
-         2026-09-19: „die aktuelle angabe bei unterlagen in akquise ist nicht richtig."
-         Er hat recht, und der Fehler war nicht die Zahl, sondern ihre Ueberschrift: der
-         Index stimmt exakt mit dem Speicher ueberein (0 Abweichungen ueber 3.001
-         Vorgaenge), die Zahl war nur etwas anderes als das Wort darueber.
+      /* ⚠ FUENF ZUSTAENDE, GEMESSEN. Ueber 17.837 Leads in Bau (ohne Zuschlaege):
 
-         Jetzt steht dort, was die Spalte verspricht: wie viele Unterlagen wir gelesen
-         haben. Die Pruefpunkt-DICHTE bleibt im Titel — sie ist weiterhin das, was
-         unterscheidet (0 bis 186 bei einem Median von 57, waehrend 88,5 % der Ampeln
-         gelb sind). Sie ist jetzt eine Erklaerung statt einer Behauptung.
+           nur der Link, nichts gelesen        13.909   78,0 %
+           analysiert, mit Pruefpunkten         2.105   11,8 %
+           Text liegt vor, Auswertung offen     1.383    7,8 %
+           gar nichts                             345    1,9 %
+           analysiert, nichts gefunden             95    0,5 %
 
-         ⚠ `dok === 0` bei 14,7 % der Auswertungen. Dort eine „0" zu zeigen hiesse „keine
-         Unterlagen" — obwohl ausgewertet wurde. Deshalb ein Wort statt einer Null. */
+         Sven fragte nach drei Zustaenden („link vorhanden, unterlagen
+         vorhanden/analysiert, nur gliederung gelesen"). „Nur Gliederung" gibt es in den
+         ausgelieferten Daten nicht als eigenen Zustand — was ihm am naechsten kommt, ist
+         die letzte Zeile: gelesen, aber kein Pruefpunkt gefunden.
+
+         ⚠ KEIN KNOPF MEHR IN DER ZELLE. Sven: „finde die button auch gerade nicht gut."
+         Die Zelle steht in jeder Zeile; was dort steht, muss lesbar sein und nicht
+         klickbar aussehen. Der Weg zum Portal liegt jetzt im Detail, als ein grosser
+         Knopf ueber dem Drop-Feld — dort hat er Platz und Zusammenhang. */
       const a = l.docAn;
+      const u = l.unterlagen;
       if (a && a.pruef) {
         const titel = tk(a.dok === 1
                          ? "{p} Pruefpunkte, {k} K.-o.-Kriterien aus einem Dokument. Ampel: {x}"
@@ -909,19 +932,11 @@ function cellHTML(l, key){
              + `<b>${esc(zahl)}</b>${a.ko ? `<i>${a.ko}</i>` : ""}</span></td>`;
       }
       if (a)
-        return `<td class="c-doks"><span class="dok-leer" title="${esc(tk("Unterlagen ausgewertet, aber kein Pruefpunkt gefunden."))}">0</span></td>`;
-      /* ⚠ NICHT AUSGEWERTET IST NICHT DASSELBE WIE NICHTS DA. Sven: „wenn nicht bei uns
-         verarbeitet vorhanden, dann link einfügen. in einem neuen tab öffnen sich die
-         unterlagen und in der detailansicht öffnet sich Unterlagen, damit die leute auf
-         die idee kommen die unterlagen hochzuladen."
-         Der Link ist kein `<a>`: er soll ZWEI Dinge tun (fremden Tab oeffnen UND das
-         Detail aufschlagen), und das Oeffnen des Leads laeuft ueber die Delegation der
-         Tabelle wie bei Stern, Status und Ausblenden. */
-      const u = l.unterlagen;
+        return `<td class="c-doks"><span class="dok-leer" title="${esc(tk("Unterlagen gelesen, aber kein Pruefpunkt gefunden."))}">${tk("nichts gefunden")}</span></td>`;
+      if (u && u.gelesen)
+        return `<td class="c-doks"><span class="dok-warte" title="${esc(tk("Die Unterlagen liegen uns vor. Die Auswertung steht noch aus."))}">${tk("liegt vor")}</span></td>`;
       if (u && u.url)
-        return `<td class="c-doks"><button class="dok-link" data-doklink="${esc(l.id)}"`
-             + ` title="${esc(tk("Unterlagen beim Portal oeffnen und hier die Auswertung anstossen"))}">`
-             + `${tk("ansehen")}</button></td>`;
+        return `<td class="c-doks"><span class="dok-verweis" data-doklink="${esc(l.id)}" title="${esc(tk("Beim Portal liegen Unterlagen. Oeffnen und hochladen im Detail."))}">${tk("Link")}</span></td>`;
       return `<td class="c-doks"><span class="dok-na" title="${esc(tk("Fuer diesen Vorgang liegen keine ausgewerteten Vergabeunterlagen vor."))}">—</span></td>`;
     }
     case 'empf': {
@@ -1841,7 +1856,7 @@ function renderDocs(l){
       <p class="va-sum">${tk("Die Vergabeunterlagen liegen uns bereits vor. Die Auswertung steht noch aus und erscheint hier, sobald sie durchgelaufen ist.")}</p>
       <p class="va-eigen">${dl}${zugang}</p>
       <p class="va-sum va-eigen-hint">${tk("Du kannst nicht warten? Lade deine eigene Fassung hoch, dann wird sie sofort ausgewertet.")}</p>
-      ${dropFeld(l.id)}
+      ${dropFeld(l)}
       <div class="va-status" data-upstatus="${l.id}"></div>
     </section>`;
     /* ⚠ AUS DIESEM LAND HABEN WIR NOCH NICHTS. Gemessen am 2026-09-01: Deutschland hat
@@ -1858,13 +1873,13 @@ function renderDocs(l){
     if (l.landOhneDocs) return `<section class="sec va-empty" id="an-unterlagen">
       <h4>${tk("Vergabe-Analyse")}<span class="cov">${tk("noch keine Unterlagen aus diesem Land")}</span></h4>
       <p class="va-sum">${tk("Aus diesem Land liegen uns bisher keine Vergabeunterlagen vor. Eure wären die ersten, und sie helfen allen, die hier bieten.")}</p>
-      ${dropFeld(l.id)}
+      ${dropFeld(l)}
       <div class="va-status" data-upstatus="${l.id}"></div>
     </section>`;
     return `<section class="sec va-empty" id="an-unterlagen">
       <h4>${tk("Vergabe-Analyse")}<span class="cov">${tk("aus euren Unterlagen")}</span></h4>
       <p class="va-sum">${tk("Aus den Vergabeunterlagen machen wir in Sekunden eine")}<b>${tk("Ampel-Einschätzung")}</b>${tk(", eine abhakbare")}<b>${tk("Bieter-Checkliste")}</b>${tk("(K.o.-Kriterien, Eignungsnachweise, Zuschlagsgewichte) und")}<b>${tk("füllen Firmenangaben vor")}</b>.</p>
-      ${dropFeld(l.id)}
+      ${dropFeld(l)}
       <div class="va-status" data-upstatus="${l.id}"></div>
     </section>`;
   })() : `<section class="sec va-empty" id="an-unterlagen">

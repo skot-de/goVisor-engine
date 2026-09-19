@@ -2346,5 +2346,12 @@
   "{p} Pruefpunkte, {k} K.-o.-Kriterien aus {d} Dokumenten. Ampel: {x}": "{p} check points, {k} knock-out criteria from {d} documents. Signal: {x}",
   "Schieb die Dokumente hier rein, wir analysieren sie für dich": "Drop the documents here and we will analyse them for you",
   "ZIP, PDF, Word, Excel. Das Ergebnis erscheint in wenigen Sekunden hier.": "ZIP, PDF, Word, Excel. The result appears here within seconds.",
-  "Datei auswählen": "Choose a file"
+  "Datei auswählen": "Choose a file",
+  "Link": "Link",
+  "liegt vor": "on file",
+  "nichts gefunden": "nothing found",
+  "Hier Unterlagen einsehen": "View the documents",
+  "Unterlagen gelesen, aber kein Pruefpunkt gefunden.": "Documents read, but no check point found.",
+  "Die Unterlagen liegen uns vor. Die Auswertung steht noch aus.": "We have the documents. The analysis is still pending.",
+  "Beim Portal liegen Unterlagen. Oeffnen und hochladen im Detail.": "Documents are available on the portal. Open and upload from the detail view."
 }
