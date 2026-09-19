@@ -204,6 +204,26 @@ PYZ
   # Guthaben leer; der Arbeiter holte trotzdem alle 30 Sekunden 400 Vorgaenge, bekam bei
   # jedem 402 und meldete „Runde fertig". Eine Stunde lang, mit vollem Log und ohne einen
   # einzigen Fortschritt. Wer nichts tun kann, soll schlafen und es sagen.
+  # ⛔ UND NICHT, WENN DER TAGESDECKEL SCHON GERISSEN IST. Bis zum 2026-09-19 fehlte
+  # genau dieser Riegel, und er hat zwoelf Stunden gekostet: der Nachtlauf erschoepfte den
+  # Deckel um 03:20, danach kam stuendlich eine Runde, die 400 Vergaben zog, die ZIPs holte,
+  # auspackte, die PDFs parste — und beim ersten Modellaufruf die Absage bekam. Null
+  # analysierte Vorgaenge, dafuer 27 liegengebliebene Temp-Dateien (1,1 GB) und 1,56
+  # Millionen pypdf-Warnungen im Log.
+  #
+  # ⚠ Der Riegel fuer "kein Guthaben" darunter hat NICHT gegriffen, und das ist der
+  # lehrreiche Teil: das Guthaben war mit 23,30 $ voll. Leer war der Tagesdeckel mit
+  # 4,50 $. Zwei Toepfe, und es gab nur eine Abfrage — fuer den, der nicht leer war.
+  #
+  # Bis kurz nach Mitternacht schlafen, denn genau dann setzt `llm._tagesbuch()` den
+  # Startwert neu. Frueher aufzuwachen heisst, dieselbe Absage noch einmal zu holen.
+  if grep -q '"halt": "deckel"' "$ROOT/data/.llm_stand.json" 2>/dev/null; then
+    BIS=$(( $(date -v+1d -v0H -v0M -v30S +%s 2>/dev/null || echo 0) - $(date +%s) ))
+    [ "$BIS" -gt 0 ] 2>/dev/null || BIS=1800     # Rueckfall, falls `date -v` mal fehlt
+    sag "Tagesdeckel erschoepft — warte $((BIS/60)) min bis zum Tageswechsel. Anheben: GOVISOR_TAG_USD"
+    sleep "$BIS"; continue
+  fi
+
   if grep -q '"erschoepft": true' "$ROOT/data/.llm_stand.json" 2>/dev/null; then
     sag "Kein Guthaben bei keinem Anbieter — warte 30 min. Aufladen: openrouter.ai/credits"
     sleep 1800; continue

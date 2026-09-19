@@ -733,6 +733,42 @@ def _tagesbuch_zweck(zweck: str) -> float:
     return float(summen.get(zweck, 0.0))
 
 
+def tagesdeckel_frei(zweck: str | None = None) -> float | None:
+    """Was vom heutigen Tagesdeckel noch frei ist, in Dollar. ``None`` = nicht messbar.
+
+    ⚠ WOFUER ES DIESE FUNKTION GIBT. Die Geldwache in `chat()` verhindert AUSGABEN, nicht
+    ARBEIT. Wer den Deckel schon gerissen hat, zieht trotzdem erst 400 Vergaben, holt die
+    ZIPs, packt sie aus und parst die PDFs — und faellt erst beim Modellaufruf auf.
+
+    Gemessen am 2026-09-19: der Analyse-Arbeiter drehte so **zwoelf Stunden** leer. Der
+    Nachtlauf hatte den Deckel um 03:20 erschoepft, danach kam stuendlich eine Runde, die
+    alles vorbereitete und nichts lieferte. Die Spuren: 27 liegengebliebene Temp-Dateien
+    (1,1 GB auf der Systemplatte) und 1,56 Millionen pypdf-Warnungen (166 MB Log) bei null
+    analysierten Vorgaengen. Der Prozess sah dabei wie ein Haenger aus — ununterbrechbares
+    Warten auf Ein-/Ausgabe, 19 Minuten Rechenzeit in zehn Stunden. Er war keiner.
+
+    ⚠ WARUM `_lohnt_sich()` DAS NICHT SCHON GEMERKT HAT. Sie fragte nur das RESTGUTHABEN
+    ab. Das war mit 23,30 $ reichlich gefuellt; erschoepft war der TAGESDECKEL mit 4,50 $.
+    Zwei verschiedene Toepfe, und geprueft wurde der, der nicht leer war.
+
+    ⚠ ``None`` ist bewusst KEIN Stopp. Faellt die Kontoabfrage aus, soll der Lauf weiter
+    und sich auf die Wache in `chat()` verlassen — dieselbe Richtung wie ueberall sonst in
+    diesem Modul: zu wenig zu messen ist besser als gar nicht zu messen.
+    """
+    if not TAG_USD:
+        return None
+    stand = kontostand(frisch=True)
+    if stand is None:
+        return None
+    # ⚠ Dieselbe Rechnung wie in `chat()`, nicht eine zweite daneben. Wer sie hier
+    # nachbaut, hat ab dem naechsten Umbau zwei Wahrheiten.
+    if zweck in VORRANG:
+        return (UPLOAD_TAG_USD - _tagesbuch_zweck("upload")) if UPLOAD_TAG_USD else None
+    schonung = 0.0 if zweck in GESCHONT else SCHONUNG_USD
+    heute = max(0.0, _tagesbuch(stand) - _tagesbuch_zweck("upload"))
+    return (TAG_USD - schonung) - heute
+
+
 def _schreibe_tagesbuch(pfad, d) -> None:
     """⚠ Ein stilles Scheitern hier macht den Tagesdeckel wirkungslos — es wird geklagt."""
     import json as _json

@@ -39,6 +39,7 @@ from govisor.llm import (chat, letzter_anbieter, anbieter_stand,  # noqa: E402
                          AllKeysExhausted)
 from govisor.llm import BudgetErschoepft, kontostand as _llm_kontostand  # noqa: E402
 from govisor.llm import RESERVE_USD as _llm_reserve  # noqa: E402
+from govisor.llm import tagesdeckel_frei as _tagesdeckel_frei  # noqa: E402
 from govisor import doctypes, docextract, docparse, doctax, docpipe  # noqa: E402
 from govisor import lbauswahl, dokdubletten  # noqa: E402
 from govisor.docpipe import SQL_BRAUCHBAR  # noqa: E402
@@ -736,8 +737,13 @@ def _laeuft(pid: int) -> bool:
 MINDEST_UEBER_RESERVE = float(os.environ.get("MINDEST_UEBER_RESERVE", "0.50"))
 
 
-def _lohnt_sich() -> str | None:
-    """Grund, die Runde gar nicht erst anzufangen — oder ``None``.
+def _lohnt_sich() -> tuple[str, str] | None:
+    """Grund und Marke, die Runde gar nicht erst anzufangen — oder ``None``.
+
+    Die MARKE sagt dem Arbeiter-Mantel, wie lange er pausieren soll: „deckel" heisst
+    „bis morgen", „guthaben" heisst „bis jemand auflaedt". Ohne sie kannte er nur den
+    Fall „kein Guthaben" und haette bei erschoepftem Tagesdeckel alle 30 Sekunden eine
+    Leerrunde gedreht — billiger als vorher, aber immer noch sinnlos.
 
     ⚠ WARUM DIE PRUEFUNG GANZ VORNE STEHT. Die Geldwache sitzt in `llm.chat()`, also im
     einzelnen Aufruf. Sie verhindert Ausgaben, nicht Arbeit: eine Runde ohne Guthaben
@@ -749,6 +755,20 @@ def _lohnt_sich() -> str | None:
     unveraendert „1379 warten noch", waehrend der Rechner unbedienbar war. Bezahlt hat es
     niemand — es hat nur die Maschine gekostet.
     """
+    # ⛔ ZUERST DER TAGESDECKEL, DANN DAS GUTHABEN. Das sind zwei Toepfe, und bis zum
+    # 2026-09-19 wurde nur der zweite geprueft. Am 19.09. war das Guthaben mit 23,30 $
+    # voll und der Tagesdeckel mit 4,50 $ leer — die Runde lief also los, holte 400
+    # Vergaben samt ZIPs und PDFs und bekam beim ersten Modellaufruf die Absage. Zwoelf
+    # Stunden lang, stuendlich. Siehe `llm.tagesdeckel_frei()` fuer die Spuren.
+    try:
+        frei = _tagesdeckel_frei()
+    except Exception:                                       # noqa: BLE001
+        frei = None                                         # nicht abrufbar → lieber laufen
+    if frei is not None and frei <= 0:
+        return (f"Tagesdeckel erschoepft ({frei:.2f} $ frei) — der Lauf wuerde Unterlagen "
+                f"holen und auspacken, ohne einen einzigen Vorgang analysieren zu duerfen. "
+                f"Anheben: GOVISOR_TAG_USD. Sonst faengt der naechste Tag von vorn an.",
+                "deckel")
     try:
         rest = _restguthaben()
     except Exception:                                       # noqa: BLE001
@@ -759,13 +779,25 @@ def _lohnt_sich() -> str | None:
     if frei < MINDEST_UEBER_RESERVE:
         return (f"Guthaben {rest:.2f} $ bei {_llm_reserve:.2f} $ Reserve — "
                 f"{frei:.2f} $ frei, das reicht fuer keine sinnvolle Runde. "
-                f"Aufladen oder MINDEST_UEBER_RESERVE senken.")
+                f"Aufladen oder MINDEST_UEBER_RESERVE senken.", "guthaben")
     return None
 
 
 def _lauf() -> int:
-    if (grund := _lohnt_sich()):
+    if (halt := _lohnt_sich()):
+        grund, marke = halt
         print(f"⏸  Runde uebersprungen: {grund}", flush=True)
+        # ⚠ DIE MARKE MUSS IN DIE STANDSDATEI, sonst pausiert der Mantel nicht. Er liest
+        # nur diese Datei; ohne Eintrag behaelt sie den alten `wartend`-Wert, und er
+        # schlaeft die ueblichen 30 Sekunden statt bis zum naechsten Tag.
+        try:
+            pfad = ROOT / "data" / ".llm_stand.json"
+            alt = json.loads(pfad.read_text(encoding="utf-8")) if pfad.exists() else {}
+            alt.update({"zeit": int(time.time()), "fertig": 0, "halt": marke,
+                        "halt_grund": grund})
+            pfad.write_text(json.dumps(alt, ensure_ascii=False), encoding="utf-8")
+        except Exception:                                   # noqa: BLE001
+            pass                                            # Anzeige ist kein Grund zu scheitern
         return 0
     # Hausverbindung: Speichergrenze und Auslagerung auf die grosse Platte
     # (`data/.tmp`), nicht auf die 36-GB-Systemplatte.
@@ -1085,6 +1117,10 @@ def _lauf() -> int:
             # schlafen, wenn hier 0 steht.
             "wartend": max(0, anliegend - fertig),
             "erschoepft": erschoepft,
+            # ⚠ AUSDRUECKLICH LEEREN. Die Marke aus einer uebersprungenen Runde steht
+            # sonst weiter da, und der Mantel pausiert auch dann noch, wenn der Grund
+            # laengst weg ist. Ein Riegel, der sich nicht selbst oeffnet, ist eine Falle.
+            "halt": None,
             "anbieter": anbieter_stand(),
         }, ensure_ascii=False), encoding="utf-8")
     except Exception:                                      # noqa: BLE001

@@ -25,3 +25,34 @@ import warnings as _warnings
 # das Paket selbst NICHT getroffen. `scripts/extract_criteria.py` fuehrt seit jeher
 # dieselbe Zeile — sie war der Hinweis, dass die Praefix-Form die richtige ist.
 _warnings.filterwarnings("ignore", category=UserWarning, module="openpyxl")
+
+
+# ── pypdfs Reparatur-Meldungen ──────────────────────────────────────────────────────────
+#
+# ⚠ GEMESSEN AM 2026-09-19, und die Zahl ist der ganze Grund: `govisor-analyse.log` war
+# 166 MB gross, und **95,3 % davon waren vier pypdf-Saetze**.
+#
+#     Ignoring wrong pointing object      1.945.923 Zeilen
+#     Unexpected escaped string           1.565.143
+#     Multiple definitions in dictionary    204.401
+#     incorrect startxref                     4.879
+#     ────────────────────────────────────────────
+#     von insgesamt                       3.903.758
+#
+# Das ist nicht nur Platz. Es hat an diesem Tag eine Diagnose aktiv behindert: die letzte
+# echte Fortschrittszeile des Arbeiters lag auf Position 3.903.111 von 3.903.758 — die
+# Erklaerung fuer einen zwoelfstuendigen Leerlauf stand hinter 1,5 Millionen Zeilen
+# Rauschen. Ein Log, in dem man den Befund nicht mehr findet, ist kein Log.
+#
+# ⚠ WARUM `logging` UND NICHT `warnings` WIE BEI OPENPYXL DARUEBER. pypdf schickt diese
+# Meldungen durch `pypdf._utils.logger_warning()`, nicht durch `warnings.warn()`. Ein
+# `filterwarnings` haette hier nichts getan — die beiden Mechanismen sind getrennt.
+#
+# ⚠ UND WARUM DAS NICHTS VERDECKT. pypdf trennt seine drei Stufen ausdruecklich: eine
+# Ausnahme heisst „Daten verloren", `warnings.warn` heisst „der Aufrufer sollte etwas
+# aendern", und `logger_warning` heisst „ein Sonderfall, den die Bibliothek SELBST
+# behandelt hat". Genau diese dritte Stufe wird hier stumm. ERROR und CRITICAL gehen
+# weiter durch, und ein PDF, das sich nicht lesen laesst, wirft ohnehin.
+import logging as _logging
+
+_logging.getLogger("pypdf").setLevel(_logging.ERROR)
