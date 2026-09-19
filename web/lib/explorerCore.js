@@ -939,9 +939,21 @@ function cellHTML(l, key){
         return `<td class="c-doks"><button class="dok-liste" data-doklink="${esc(l.id)}" title="${
           esc(tk("Wir kennen die {n} Dateien dieses Vorgangs, duerfen sie dort aber nicht selbst herunterladen.", {n: u.gliederung}))
         }">${tk("Gliederung")}</button></td>`;
-      /* Nichts von uns: leer und nicht anklickbar. Ein Strich, der beim Klick eine
-         Ansicht oeffnet, die „hier ist nichts" sagt, ist eine Sackgasse mit Umweg. */
-      return `<td class="c-doks"></td>`;
+      /* ⚠ EIN ZEICHEN, KEINE LUECKE — und das ist die Korrektur einer Fehlentscheidung
+         von mir. Ich hatte vorgeschlagen, die Zelle leer zu lassen: „leer heisst, hier
+         haben wir noch nichts fuer dich." Am Bildschirm stimmt das nicht. Sven nach dem
+         ersten Blick: „ich sehe teilweise einträge nicht." Eine Luecke in einer Tabelle
+         liest sich als Fehler, nicht als Aussage; der Nutzer sucht dann nach der Ursache
+         statt die Nachricht zu lesen.
+
+         Der Strich ist NICHT anklickbar. Das war der Grund, ihn urspruenglich zu
+         entfernen: seit jeder Klick in dieser Spalte auf den Unterlagen-Tab fuehrt, war
+         er eine Sackgasse mit Umweg — man landete in einer Ansicht, die sagt, dass es
+         nichts gibt. Stumm loest er das, ohne die Luecke zurueckzubringen.
+
+         Ein Zeichen fuer beide Faelle (nur ein Portal-Link: 75,1 %; gar nichts: 1,9 %):
+         fuer den Nutzer sind sie dasselbe — wir haben nichts. */
+      return `<td class="c-doks"><span class="dok-nix" title="${esc(tk("Von diesem Vorgang liegen uns keine Unterlagen vor."))}">–</span></td>`;
     }
     case 'empf': {
       if(l.src==='award') return awardEmpfCell(l);

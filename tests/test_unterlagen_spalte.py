@@ -98,11 +98,23 @@ def test_die_fuenf_zustaende_sind_unterscheidbar():
         assert klasse in z, f"der Zustand {was!r} ist nicht mehr unterscheidbar"
     assert z.index("dok-warte") < z.index("dok-liste"), (
         "die Reihenfolge stimmt nicht: vorhandener Volltext schlaegt die Gliederung")
-    # ⚠ Wo wir NICHTS haben, bleibt die Zelle leer und stumm. Vorher stand dort „Link"
-    #   (75,1 % aller Zellen) bzw. ein Strich — beides die ABWESENHEIT unserer Arbeit, in
-    #   derselben Position, in der sonst eine Anzahl steht.
-    assert '<td class="c-doks"></td>' in z, (
-        "wo wir nichts haben, steht wieder etwas in der Zelle")
+    # ⚠ WO WIR NICHTS HABEN, STEHT EIN ZEICHEN — KEINE LUECKE. Erst war dort „Link"
+    #   (75,1 % aller Zellen), dann gar nichts, jetzt ein blasser Strich.
+    #
+    #   Die leere Zelle war MEIN Vorschlag und praktisch falsch: „leer heisst, hier haben
+    #   wir noch nichts fuer dich" — am Bildschirm liest sich eine Luecke als Fehler.
+    #   Sven nach dem ersten Blick: „ich sehe teilweise einträge nicht."
+    #
+    #   Der Strich ist NICHT anklickbar: seit jeder Klick in dieser Spalte auf den
+    #   Unterlagen-Tab fuehrt, waere er eine Sackgasse in eine Ansicht, die sagt, dass es
+    #   nichts gibt.
+    assert 'class="dok-nix"' in z, (
+        "wo wir nichts haben, ist die Zelle wieder leer. Eine Luecke liest sich als "
+        "Fehler, nicht als Aussage.")
+    nix = z[z.index('class="dok-nix"'):]
+    assert "data-doklink" not in nix[:200], (
+        "der Strich ist wieder anklickbar und fuehrt in eine Ansicht, die sagt, dass es "
+        "nichts gibt")
 
 
 def test_alle_zustaende_sind_knoepfe():
