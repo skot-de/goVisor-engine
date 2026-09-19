@@ -237,3 +237,107 @@ def test_die_laenderluecke_steht_als_luecke_da():
     j = code.index("BEWUSST_NUR_DE: dict[str, str] = {")
     assert "notice_changes" not in code[j:code.index("\n}", j)], (
         "die Luecke steht als BEWUSSTE Entscheidung da — sie ist aber eine Baustelle")
+
+
+# ── Geschwister desselben Vergabeverfahrens ─────────────────────────────────────────────
+#
+# ⚠ Sven am 2026-09-19: „mach die dubletten auch." Gemessen waren 163 Verfahren mit
+# mehreren OFFENEN Leads, 377 Zeilen, **214 davon ueberzaehlig**. „Metallbau Aussen/
+# Kunststofffenster" stand vier Mal in der Liste, alle vier mit derselben Frist.
+#
+# ⚠ WARUM DIE BESTEHENDE FIREWALL SIE NICHT FAND. `govisor/dedupe.py` vergleicht Titel und
+# Kaeufer und sperrt das Zusammenlegen zweier Saetze DERSELBEN Quelle — zu Recht, denn TED
+# fuehrt legitim mehrere Verfahren mit gleichem Titel. Nachgemessen kannte sie das Paar
+# 600363_2026 / 606341_2026 nicht: beide standen einzeln als Master gegen
+# Landesportal-Dubletten, aber nie gegeneinander.
+
+def test_veraltete_geschwister_fliegen_aus_der_liste():
+    """Der Export ueberspringt sie, und die Zahl steht im Lauf."""
+    code = EXPORT.read_text(encoding="utf-8")
+    assert "if r[\"lead_id\"] in VERALTET:" in code, (
+        "veraltete Geschwister werden nicht mehr uebersprungen")
+    assert "_uebersprungen += 1" in code and "_uebersprungen}" in code, (
+        "der Filter zaehlt nicht oder meldet nicht. Ein stiller Filter nimmt eines Tages "
+        "zu viel weg und sagt es niemandem — die Fehlerklasse, an der dieses Projekt "
+        "schon mehrfach haengengeblieben ist.")
+
+
+def test_der_juengste_geschwister_gewinnt():
+    """⚠ WEGEN DER FRIST, nicht aus Ordnungsliebe. Gemessen tragen Geschwister
+    VERSCHIEDENE Fristen — bei „Rahmenvereinbarung ueber Technologiespezifische …" standen
+    2026-09-22 und 2026-10-06 nebeneinander. Wer den aelteren behaelt, zeigt eine Frist,
+    die nicht mehr gilt.
+    """
+    code = EXPORT.read_text(encoding="utf-8")
+    i = code.index("def _verfahrens_dubletten")
+    block = code[i:code.index("\nGLIEDERUNG", i)]
+    sql = " ".join(block.split())
+    assert "ORDER BY p.am DESC, p.notice_id DESC" in sql, (
+        "die Reihenfolge ist nicht mehr zweistufig. Ohne das Datum gewinnt nicht der "
+        "juengste; ohne die Kennung als zweiten Schluessel entscheidet bei gleichem Datum "
+        "der Zufall, der Master wechselt zwischen zwei Laeufen und jeder gemerkte Vorgang "
+        "wandert mit.")
+    assert "WHERE rn = 1" in sql and "g.rn > 1" in sql, (
+        "nicht mehr der juengste ist der Master")
+    # ⚠ Die Phasenbedingung ist der Rand, an dem die Regel beim ersten Lauf zu weit griff:
+    # EIN `open` musste einem `expiring` weichen — eine laufende Ausschreibung einem
+    # auslaufenden Vertrag.
+    assert "g.phase = m.phase" in sql, (
+        "Geschwister verschiedener Phasen werden wieder zusammengelegt")
+
+
+def test_die_alten_kennungen_bleiben_auffindbar():
+    """⚠ DAS IST DER TEIL, DER SCHLIMMER WAERE ALS DIE DUBLETTE. Wer eine Nummer aus einer
+    alten Mail sucht und nichts findet, haelt das fuer Datenverlust. Die abgeloesten
+    Kennungen wandern deshalb an den ueberlebenden Lead und in `kennungIndex()`.
+    """
+    assert '"ersetzt": ERSETZT.get(' in EXPORT.read_text(encoding="utf-8"), (
+        "die abgeloesten Kennungen wandern nicht mit")
+    kern = _ohne_kommentar(CORE.read_text(encoding="utf-8"))
+    i = kern.index("function kennungIndex")
+    block = kern[i:kern.index("\n}", i)]
+    assert "l.ersetzt" in block, (
+        "der Kennungsindex kennt die abgeloesten Nummern nicht — aus einer doppelten "
+        "Zeile wird dann eine verschwundene")
+    assert "replace('_', '-')" in block, (
+        "die Bindestrich-Schreibweise der abgeloesten Nummern fehlt")
+
+
+def test_die_verfahrenskennung_kommt_aus_dem_erzeuger():
+    """⚠ Die Zuordnung geht SEPARAT heraus, nicht als Nebenprodukt der Ereignisse: zwei
+    Bekanntmachungen desselben Verfahrens sind auch dann Geschwister, wenn keine von beiden
+    eine Berichtigung traegt."""
+    code = ERZEUGER.read_text(encoding="utf-8")
+    assert "notice_procedures.parquet" in code, "die Verfahrenszuordnung wird nicht geschrieben"
+    assert "if len(zeilen) > 1" in code, (
+        "auch Verfahren mit nur EINER Bekanntmachung landen in der Tabelle — das blaeht "
+        "sie ohne Nutzen auf")
+
+
+def test_die_verfahrenskennung_allein_genuegt_nicht():
+    """⛔ DER GEFAEHRLICHSTE BEFUND DIESER ARBEIT, und gefunden hat ihn kein Test, sondern
+    das Lesen der Titel am konkreten Beispiel.
+
+    30 von 1.847 Verfahrenskennungen sind SAMMELBECKEN: eine Vergabestelle vergibt
+    dieselbe Kennung an alles, was sie ausschreibt. Unter einer davon standen „Metallbau
+    Aussen/Kunststofffenster", „Lieferung eines Mobilbaggers", „Firmenfitness" und
+    „Gebaeude- und Inhaltsversicherungen" — 18 Meldungen, 18 Titel, EIN Kaeufer.
+
+    Ohne zweiten Beleg haette der Filter 87 voellig verschiedene Ausschreibungen zu einer
+    zusammengeworfen und den Rest aus der Liste genommen. Das waere kein aufgeraeumter
+    Bestand gewesen, sondern Datenverlust, der aussieht wie Ordnung — und niemand haette
+    es gemerkt, weil eine kuerzere Liste nach Erfolg aussieht.
+
+    ⚠ Genau diese Vorsicht hatte `govisor/dedupe.py` immer schon (Sperre gegen das
+    Zusammenlegen innerhalb einer Quelle). Sie war richtig, nur zu grob.
+    """
+    code = EXPORT.read_text(encoding="utf-8")
+    i = code.index("def _verfahrens_dubletten")
+    sql = " ".join(code[i:code.index("\nGLIEDERUNG", i)].split())
+    assert "g.titel = m.titel" in sql, (
+        "der Titel muss mitstimmen — sonst legt eine Sammel-Verfahrenskennung voellig "
+        "verschiedene Ausschreibungen zusammen")
+    assert "g.kaeufer IS NOT DISTINCT FROM m.kaeufer" in sql, (
+        "der Kaeufer muss mitstimmen. `IS NOT DISTINCT FROM` und nicht `=`, weil ein "
+        "fehlender Kaeufer sonst jeden Vergleich unwahr macht und der Filter still "
+        "aufhoert zu wirken.")

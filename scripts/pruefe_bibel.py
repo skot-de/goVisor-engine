@@ -116,7 +116,7 @@ def _behauptungen() -> list[tuple[str, str, bool, str]]:
     # Verhalten belohnt, das CLAUDE.md verbietet: die Luecke verschweigen statt sie
     # einzutragen. Geprueft wird deshalb der INHALT — waechst die Liste um etwas
     # Unbenanntes, schlaegt sie weiterhin an.
-    _offen_erwartet = {"notice_changes"}
+    _offen_erwartet = {"notice_changes", "notice_procedures"}
     aus.append(("05/06", f"OFFEN_NUR_DE enthaelt genau {sorted(_offen_erwartet)} (Stand 2026-09-19)",
                 set(pv.OFFEN_NUR_DE) == _offen_erwartet,
                 f"{sorted(pv.OFFEN_NUR_DE)}"))

@@ -43,6 +43,12 @@ FK_AUSNAHMEN: dict[str, str] = {
         "werden. Wer hier auf null Waisen ginge, muesste beim Bauen schon wissen, welche "
         "Bekanntmachung spaeter ein Lead wird — und genau diese Kopplung soll die Tabelle "
         "nicht haben.",
+    "notice_procedures.parquet":
+        "Dieselbe Bauart wie notice_changes: die Tabelle ordnet BEKANNTMACHUNGEN ihrem "
+        "Vergabeverfahren zu, und die meisten werden nie ein Lead (Zuschlaege, "
+        "Vorinformationen, Wiederholungen). Gemessen 2026-09-19: 10.022 Zeilen in 4.170 "
+        "Verfahren, davon 377 ueberhaupt ein offener Lead. Wer hier auf null Waisen ginge, "
+        "koennte die Geschwister eines Leads gar nicht mehr finden — das ist der Zweck.",
 }
 
 

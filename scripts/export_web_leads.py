@@ -200,7 +200,92 @@ def _aenderungs_index() -> dict:
     return raus
 
 
+def _verfahrens_dubletten() -> tuple[dict, dict]:
+    """Geschwister desselben Vergabeverfahrens → (veraltet → Master, Master → [veraltet]).
+
+    ⚠ WARUM DAS DIE FIREWALL NICHT LEISTET. `govisor/dedupe.py` vergleicht Titel und
+    Kaeufer und hat eine Sperre gegen das Zusammenlegen zweier Saetze DERSELBEN Quelle —
+    zu Recht, denn TED fuehrt legitim mehrere Verfahren mit gleichem Titel (Lose,
+    Wiederholungen, Rahmenvertraege). Gemessen am 2026-09-19 kannte sie das Paar
+    600363_2026 / 606341_2026 nicht: beide standen einzeln als Master gegen
+    Landesportal-Dubletten, aber nie gegeneinander.
+
+    Die Verfahrenskennung (BT-04, `cbc:ContractFolderID`) ist kein Indiz, sondern eine
+    Aussage des Auftraggebers: dieselbe Kennung heisst dasselbe Verfahren. Sie steht seit
+    `scripts/baue_aenderungen.py` in `notice_procedures.parquet`.
+
+    ⚠ DER JUENGSTE GEWINNT, UND ZWAR WEGEN DER FRIST. Gemessen sind 163 Verfahren mit
+    mehreren offenen Leads, 377 Zeilen, **214 davon ueberzaehlig** — „Metallbau Aussen/
+    Kunststofffenster" stand vier Mal in der Liste. Bei „Rahmenvereinbarung ueber
+    Technologiespezifische …" tragen die Geschwister VERSCHIEDENE Fristen (2026-09-22 und
+    2026-10-06): wer den aelteren behaelt, zeigt eine Frist, die nicht mehr gilt.
+
+    ⚠ DIE ALTEN KENNUNGEN GEHEN NICHT VERLOREN. Sie wandern als `ersetzt` an den
+    ueberlebenden Lead, und `kennungIndex()` im Frontend nimmt sie auf — wer die Nummer aus
+    einer alten Mail sucht, landet weiterhin beim richtigen Vorgang. Ohne das waere aus
+    einer doppelten Zeile eine verschwundene geworden.
+    """
+    dateien = sorted(str(p) for p in pathlib.Path("data/gold").glob("*/notice_procedures.parquet"))
+    exporte = sorted(str(p) for p in pathlib.Path("data/gold").glob("*/lead_export*.parquet"))
+    if not dateien or not exporte:
+        return {}, {}
+    # ⚠ NUR GESCHWISTER DERSELBEN PHASE. Beim ersten Lauf entfernte der Filter 708 Zeilen,
+    # und EINE davon war ein `open`, das einem `expiring` weichen musste — zwei
+    # verschiedene Dinge: eine laufende Ausschreibung und ein auslaufender Vertrag. Ein
+    # Fall von 708 ist kein Zufall, den man stehen laesst, sondern der sichtbare Rand einer
+    # Regel, die zu weit greift. Mit der Bedingung bleiben 515 expiring→expiring und
+    # 216 open→open, und kein Zuschlag wird je beruehrt.
+    #
+    # ⚠ Die Reihenfolge ist zweistufig (Datum, dann Kennung) und muss es sein: bei gleichem
+    # Datum entschiede sonst der Zufall, der Master wechselte zwischen zwei Laeufen, und
+    # jeder gemerkte Vorgang wanderte mit.
+    #
+    # ⛔ UND DIE KENNUNG ALLEIN REICHT NICHT. Beim Nachsehen am konkreten Beispiel — nicht
+    # durch einen Test, sondern durch das Lesen der Titel — kam heraus, dass 30 von 1.847
+    # Verfahrenskennungen SAMMELBECKEN sind: eine Vergabestelle vergibt dieselbe Kennung an
+    # alles, was sie ausschreibt. Unter einer davon standen „Metallbau Aussen/
+    # Kunststofffenster", „Lieferung eines Mobilbaggers", „Firmenfitness" und
+    # „Gebaeude- und Inhaltsversicherungen" — 18 Meldungen, 18 Titel, EIN Kaeufer. Ohne
+    # zweiten Beleg haette der Filter 87 voellig verschiedene Ausschreibungen zu einer
+    # zusammengeworfen und den Rest geloescht. Das waere kein aufgeraeumter Bestand
+    # gewesen, sondern Datenverlust, der aussieht wie Ordnung.
+    #
+    # Deshalb muessen Titel UND Kaeufer mitstimmen. Genau diese Vorsicht hat
+    # `govisor/dedupe.py` mit seiner Sperre gegen das Zusammenlegen innerhalb einer Quelle
+    # immer schon gehabt — sie war richtig, nur zu grob.
+    sql = f"""
+      WITH g AS (
+        SELECT p.verfahren, p.notice_id, e.phase,
+               e.title AS titel, e.buyer_name AS kaeufer,
+               row_number() OVER (PARTITION BY p.verfahren
+                                  ORDER BY p.am DESC, p.notice_id DESC) AS rn
+          FROM read_parquet({dateien!r}, union_by_name=true) p
+          JOIN read_parquet({exporte!r}, union_by_name=true) e ON e.lead_id = p.notice_id
+         WHERE p.am IS NOT NULL),
+      m AS (SELECT verfahren, notice_id AS master, phase, titel, kaeufer
+              FROM g WHERE rn = 1)
+      SELECT g.notice_id, m.master
+        FROM g JOIN m USING (verfahren)
+       WHERE g.rn > 1 AND g.phase = m.phase
+         AND g.titel = m.titel
+         AND g.kaeufer IS NOT DISTINCT FROM m.kaeufer"""
+    try:
+        con = _db.connect()
+        paare = con.execute(sql).fetchall()
+    except Exception:
+        return {}, {}
+    veraltet: dict = {}
+    ersetzt: dict = {}
+    for alt_id, master in paare:
+        veraltet[alt_id] = master
+        ersetzt.setdefault(master, []).append(alt_id)
+    for k in ersetzt:
+        ersetzt[k].sort()
+    return veraltet, ersetzt
+
+
 GLIEDERUNG = _gliederungs_index()
+VERALTET, ERSETZT = _verfahrens_dubletten()
 VEROEFFENTLICHT = _veroeffentlicht_index()
 AENDERUNG = _aenderungs_index()
 VOLLTEXT = _volltext_index()
@@ -1114,7 +1199,15 @@ def export_branche(key):
 
     lots = lots_for([r["lead_id"] for r in rows])
     leads = []
+    # ⚠ VERALTETE GESCHWISTER RAUS — begruendet in `_verfahrens_dubletten`. Gemessen am
+    # 2026-09-19: 214 von 377 Zeilen waren Wiederholungen desselben Verfahrens, „Metallbau
+    # Aussen/Kunststofffenster" stand vier Mal. Nicht geloescht, sondern ersetzt: die
+    # Kennungen wandern unten als `ersetzt` an den ueberlebenden Lead und bleiben suchbar.
+    _uebersprungen = 0
     for r in rows:
+        if r["lead_id"] in VERALTET:
+            _uebersprungen += 1
+            continue
         g = lambda k: (None if (k not in r or r[k] is None or (isinstance(r[k], float) and r[k] != r[k])) else r[k])
         src = SRC.get(g("phase"), "auslauf")
         # Open House (§130a/§130c SGB V) ist kein Wettbewerb: jederzeit beitretbar, kein
@@ -1387,9 +1480,20 @@ def export_branche(key):
             # reicht 180 Tage zurueck (Begruendung in `_veroeffentlicht_index`).
             "pub": VEROEFFENTLICHT.get(g("lead_id")),
             "aufwand": None,
+            # Kennungen der Bekanntmachungen, die dieser Lead abloest (gleiche
+            # Verfahrenskennung, aelteres Datum). Fuer `kennungIndex()` im Frontend, damit
+            # eine Nummer aus einer alten Mail weiterhin hierher fuehrt.
+            "ersetzt": ERSETZT.get(g("lead_id")),
             "comments": [], "log": [], "kw": [], "extrakt": [],
             "hasCmp": bool(g("has_comparables")), "hasContracts": bool(g("has_contract_history")),
         })
+
+    # ⚠ DIE ZAHL GEHOERT IN DEN LAUF. Ein stiller Filter ist ein Filter, der eines Tages
+    # zu viel wegnimmt und es niemandem sagt — die Fehlerklasse, an der dieses Projekt
+    # schon mehrfach haengengeblieben ist. 214 war der Stand am 2026-09-19.
+    if _uebersprungen:
+        print(f"  {_uebersprungen} veraltete Geschwister uebersprungen "
+              f"(gleiche Verfahrenskennung, juengere Bekanntmachung vorhanden)")
 
     # Echte Vergabestellen-Profile anhängen (Vergabestelle-Tab)
     profs = buyer_profiles(sorted({l["buyer"] for l in leads if l["buyer"]}))

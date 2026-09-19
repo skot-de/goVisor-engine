@@ -402,7 +402,15 @@ function kennungIndex(){
   if(_kennIndex) return _kennIndex;
   _kennIndex = new Map();
   for(const l of LEADS){
-    for(const k of [l.vergabenr, l.id, String(l.id || '').replace('_', '-')]){
+    /* ⚠ AUCH DIE ABGELOESTEN KENNUNGEN. Seit dem 2026-09-19 nimmt der Export veraltete
+       Geschwister desselben Vergabeverfahrens aus der Liste (214 von 377 Zeilen waren
+       Wiederholungen). Ohne diese Zeile waere aus einer doppelten Zeile eine
+       VERSCHWUNDENE geworden: wer die Nummer aus einer alten Mail sucht, faende nichts
+       mehr — und das ist schlimmer als die Dublette, weil es wie ein Datenverlust
+       aussieht. */
+    const abgeloest = Array.isArray(l.ersetzt) ? l.ersetzt : [];
+    for(const k of [l.vergabenr, l.id, String(l.id || '').replace('_', '-'),
+                    ...abgeloest, ...abgeloest.map(x => String(x).replace('_', '-'))]){
       const n = _kennNorm(k);
       // ⚠ Zu kurze Kennungen nicht aufnehmen: „12" oder „A1" traefen zufaellig.
       if(n.length >= 4 && !_kennIndex.has(n)) _kennIndex.set(n, l.id);

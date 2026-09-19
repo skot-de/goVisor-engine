@@ -123,11 +123,11 @@ def sammle(ordner: pathlib.Path) -> tuple[dict, list]:
     return verfahren, berichtigungen
 
 
-def baue(land: str, monate: int) -> list[dict]:
+def baue(land: str, monate: int) -> tuple[list[dict], list[dict]]:
     wurzel = WURZEL / "data" / "raw_live" / land
     if not wurzel.is_dir():
         print(f"  (kein raw_live fuer {land})")
-        return []
+        return [], []
     ordner = sorted([p for p in wurzel.iterdir() if p.is_dir()])[-monate:]
     print(f"  Lese {land}: {', '.join(p.name for p in ordner)}")
     verfahren: dict[str, list] = defaultdict(list)
@@ -161,7 +161,16 @@ def baue(land: str, monate: int) -> list[dict]:
                 "grund_code": b["grund_code"], "frist_alt": frist_alt, "frist_neu": b["frist"],
                 "quelle_id": b["notice_id"],
             })
-    return raus
+    # ⚠ Die Verfahrenszuordnung geht SEPARAT heraus, nicht als Nebenprodukt der Ereignisse.
+    # Zwei Bekanntmachungen desselben Verfahrens sind auch dann Geschwister, wenn keine von
+    # beiden eine Berichtigung traegt — und genau die braucht der Dublettenschritt.
+    zuordnung = [{"land": land, "notice_id": g["notice_id"], "verfahren": k,
+                  "am": g["am"], "frist": g["frist"]}
+                 for k, zeilen in verfahren.items() if len(zeilen) > 1
+                 for g in zeilen]
+    print(f"    Verfahren mit mehreren Bekanntmachungen: {len({z['verfahren'] for z in zuordnung}):,}"
+          f" ({len(zuordnung):,} Zeilen)")
+    return raus, zuordnung
 
 
 def main() -> int:
@@ -171,7 +180,7 @@ def main() -> int:
     ap.add_argument("--trocken", action="store_true", help="nur zaehlen, nichts schreiben")
     a = ap.parse_args()
 
-    zeilen = baue(a.land, a.monate)
+    zeilen, zuordnung = baue(a.land, a.monate)
     if not zeilen:
         print("  keine Ereignisse gefunden")
         return 0
@@ -201,6 +210,25 @@ def main() -> int:
     c.execute(f"copy (select * from t order by lead_id, am) to '{teil}' (format parquet)")
     teil.replace(ziel)
     print(f"\n  → {ziel}")
+
+    # ── Verfahrensgeschwister ────────────────────────────────────────────────────────
+    #
+    # ⚠ DAS IST DER BELEG, DEN DIE DUBLETTEN-FIREWALL NICHT HAT. Sie vergleicht Titel und
+    # Kaeufer und hat eine Sperre gegen das Zusammenlegen zweier Saetze DERSELBEN Quelle —
+    # zu Recht, denn TED fuehrt legitim mehrere Verfahren mit gleichem Titel. Die
+    # Verfahrenskennung (BT-04) ist dagegen kein Indiz, sondern eine Aussage des
+    # Auftraggebers: dieselbe Kennung heisst dasselbe Verfahren.
+    if zuordnung:
+        ziel2 = WURZEL / "data" / "gold" / a.land / "notice_procedures.parquet"
+        teil2 = ziel2.with_suffix(".parquet.part")
+        c.execute("create table v (land varchar, notice_id varchar, verfahren varchar,"
+                  " am varchar, frist varchar)")
+        c.executemany("insert into v values (?,?,?,?,?)",
+                      [[z["land"], z["notice_id"], z["verfahren"], z["am"], z["frist"]]
+                       for z in zuordnung])
+        c.execute(f"copy (select * from v order by verfahren, am) to '{teil2}' (format parquet)")
+        teil2.replace(ziel2)
+        print(f"  → {ziel2}")
     return 0
 
 

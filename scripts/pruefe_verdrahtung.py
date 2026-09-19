@@ -260,6 +260,10 @@ OFFEN_NUR_DE: dict[str, str] = {
     # angefangen, nicht fertig gebaut.
     "notice_changes": "Aenderungserkennung haengt an eForms; AT/CH laufen ueber eigene "
                       "Portalformate, LU ist nur noch nicht gelaufen",
+    # Gleiche Baustelle, gleicher Erzeuger: `notice_procedures` faellt im selben Lauf an
+    # (`scripts/baue_aenderungen.py`) und teilt die Bedingung — die Verfahrenskennung
+    # `cbc:ContractFolderID` ist ein eForms-Feld.
+    "notice_procedures": "kommt aus demselben eForms-Lauf wie notice_changes",
 }
 
 
