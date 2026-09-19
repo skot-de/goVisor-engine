@@ -179,7 +179,6 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
    * die Gruende sind ein Angebot in der Leiste — vier Klicks als Moeglichkeit, keiner als
    * Pflicht. Wer weiterscrollt, hat nichts verloren. */
   const [fragtNach, setFragtNach] = useState<{ id: string; titel: string } | null>(null);
-  const ausLeisteTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const [sortKey, setSortKey] = useState("frist");
   const [sortDir, setSortDir] = useState(1);
   const [awAlertOff, setAwAlertOff] = useState(false);   // #24 Zuschlag-Alert-Band ausgeblendet
@@ -848,16 +847,20 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
       titel: (l?.titel as string) ?? null, buyer: (l as { buyer?: string } | undefined)?.buyer ?? null,
     });
     logEvent(l, "hidden", jetztAus ? t("Ausgeblendet") : t("Wieder eingeblendet"));
-    if (ausLeisteTimer.current) clearTimeout(ausLeisteTimer.current);
-    if (jetztAus) {
-      setFragtNach({ id, titel: (l?.titel as string) ?? id });
-      // ⚠ Zwoelf Sekunden. Kurz genug, dass die Leiste nicht im Weg steht, lang genug zum
-      // Lesen und Entscheiden — ein Ruecknahme-Angebot, das weg ist, bevor man es gesehen
-      // hat, ist keines.
-      ausLeisteTimer.current = setTimeout(() => setFragtNach(null), 12_000);
-    } else {
-      setFragtNach(null);
-    }
+    /* ⚠ KEIN ZEITGEBER. Sven am 2026-09-19: „der eintrag soll stehen bleiben bis er was
+       geklickt hat."
+
+       Meine erste Fassung raeumte die Frage nach zwoelf Sekunden weg, mit dem Argument,
+       eine stehende Frage sei ein Dialog mit Extraschritten. Das stimmt fuer eine Frage,
+       die den Weg versperrt — diese hier steht an der Stelle einer Zeile, die ohnehin
+       verschwinden sollte, und versperrt nichts. Und es hatte eine haessliche Folge: wer
+       beim Lesen unterbrochen wird, findet nach dem Blick aus dem Fenster eine Liste vor,
+       in der etwas fehlt, ohne je gefragt worden zu sein.
+
+       Die Frage bleibt also, bis geklickt wird. Wer ohne Antwort weiterarbeitet, blendet
+       den naechsten Vorgang aus — dann rueckt die Frage dorthin, und der erste
+       verschwindet still. Das ist die einzige Stelle, an der sie von allein geht. */
+    setFragtNach(jetztAus ? { id, titel: (l?.titel as string) ?? id } : null);
     bump();
   }
 
@@ -873,7 +876,6 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
     });
     logEvent(l, "hidden", t("Grund: {g}", { g: t(grund) }));
     setFragtNach(null);
-    if (ausLeisteTimer.current) clearTimeout(ausLeisteTimer.current);
   }
 
   function toggleStar(id: string) {

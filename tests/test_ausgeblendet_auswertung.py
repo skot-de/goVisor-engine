@@ -119,22 +119,38 @@ def test_die_frage_ersetzt_die_zeile():
         "die alte Leiste ueber der Liste ist noch da — zwei Wege fuer dieselbe Frage")
 
 
-def test_die_frage_verschwindet_von_allein():
-    """⚠ Eine Frage, die stehen bleibt, ist ein Dialog mit Extraschritten. Eine, die zu
-    schnell geht, hat man nicht gelesen.
+def test_die_frage_bleibt_bis_jemand_klickt():
+    """⚠ Sven am 2026-09-19: „der eintrag soll stehen bleiben bis er was geklickt hat."
 
-    ⚠ Und sie steht seit dem Umbau AN DER STELLE DES VORGANGS: laeuft die Zeit ab, ist der
-    Vorgang weg — genau das, was der Klick auf das Kreuz bedeutet hat. Ohne Zeitgeber
-    bliebe eine Frage stehen, die niemand beantworten will, und die Liste haette ein Loch.
+    Meine erste Fassung raeumte die Frage nach zwoelf Sekunden weg, begruendet damit, eine
+    stehende Frage sei ein Dialog mit Extraschritten. Das stimmt fuer eine Frage, die den
+    Weg versperrt — diese steht an der Stelle einer Zeile, die ohnehin verschwinden sollte,
+    und versperrt nichts.
+
+    Die haessliche Folge des Zeitgebers: wer beim Lesen unterbrochen wird, findet nach dem
+    Blick aus dem Fenster eine Liste vor, in der etwas fehlt, ohne je gefragt worden zu
+    sein. Die Frage ist die einzige Stelle, an der die Ausblendung noch sichtbar ist.
+
+    ⚠ Sie geht trotzdem nicht ewig: wer den naechsten Vorgang ausblendet, schiebt die Frage
+    dorthin, und der erste verschwindet still. Das ist die EINZIGE Stelle, an der sie von
+    allein geht, und sie ist eine Entscheidung des Nutzers.
     """
     code = _ohne_kommentar(SHELL.read_text(encoding="utf-8"))
-    m = re.search(r"setTimeout\(\(\) => setFragtNach\(null\), ([\d_]+)\)", code)
-    assert m, "die Frage verschwindet nicht von allein"
-    ms = int(m.group(1).replace("_", ""))
-    assert 6_000 <= ms <= 20_000, f"{ms} ms sind zu kurz zum Lesen oder zu lang zum Stehen"
-    assert "clearTimeout(ausLeisteTimer.current)" in code, (
-        "beim zweiten Ausblenden laeuft der alte Zeitgeber weiter und raeumt die neue "
-        "Frage zu frueh weg")
+    assert "setTimeout" not in " ".join(
+        code.split("function toggleAusblenden")[1][:4000].split())[:900], (
+        "die Frage raeumt sich wieder nach einer Frist weg — dann fehlt in der Liste "
+        "etwas, wonach niemand gefragt wurde")
+    assert "ausLeisteTimer" not in code, "der Zeitgeber ist noch da"
+    # ⚠ Leerraum einziehen, BEVOR gefenstert wird: `_ohne_kommentar` ersetzt Kommentare
+    # durch Leerzeichen, und ein Block mit zwanzig Kommentarzeilen ist dann tausend
+    # Zeichen lang, ohne eine einzige Anweisung zu enthalten. Der erste Anlauf dieses
+    # Tests hat genau darin nichts gefunden und den Code fuer kaputt erklaert.
+    i2 = code.index("function toggleAusblenden")
+    block = " ".join(code[i2:i2 + 4000].split())[:900]
+    m = re.search(r"setFragtNach\(jetztAus \?(.{0,80}?): null\)", block)
+    assert m, (
+        "beim Ausblenden wird keine Frage gestellt, oder beim WIEDEREINBLENDEN bleibt sie "
+        "stehen — beides haengt an demselben Ausdruck")
 
 
 def test_oberflaeche_und_auswertung_kennen_dieselben_gruende():

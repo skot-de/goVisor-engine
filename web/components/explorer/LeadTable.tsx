@@ -44,7 +44,7 @@ function FrageZeile({ titel, gruende, onGrund, onZurueck, colspan }: {
       <td colSpan={colspan}>
         <div className="ausfrage">
           <span className="af-t">{titel}</span>
-          <span className="af-f">{t("Warum passt es nicht?")}</span>
+          <span className="af-f">{t("Hilf uns besser zu werden:")}</span>
           {gruende.map((g) => (
             <button key={g} className="af-g" onClick={() => onGrund(g)}>{t(g)}</button>
           ))}
