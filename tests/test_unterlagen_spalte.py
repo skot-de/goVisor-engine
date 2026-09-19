@@ -78,21 +78,32 @@ def test_die_fuenf_zustaende_sind_unterscheidbar():
         gar nichts                             345    1,9 %
         analysiert, nichts gefunden             95    0,5 %
 
-    Sven fragte nach drei Zustaenden. „Nur Gliederung gelesen" gibt es in den
-    ausgelieferten Daten nicht als eigenen; am naechsten kommt die letzte Zeile.
+    ⚠ ICH HATTE HIER EINEN ZUSTAND ZU WENIG. Auf Svens Frage nach drei Zustaenden
+    antwortete ich, „nur Gliederung gelesen" gebe es nicht — gestuetzt allein auf die
+    ausgelieferten Lead-Daten. Sein Widerspruch war richtig: „bei einigen portalen lesen
+    wir nur die gliederung aus, weil wir die unterlagen nicht automatisiert herunterladen
+    dürfen." Der Zustand steht in `doc_listing_*.parquet` (subreport, vergabeportal.at):
+    2.670 Vorgaenge mit 53.966 gelisteten Dateien, davon 518 in Bau. Sie sahen aus wie ein
+    blosser Link, obwohl wir wissen, WELCHE Unterlagen es gibt.
+
+    ⚠ Die Manifest-Zeilen mit Status `nur_liste` tragen KEINE notice_id (alle 1.606 sind
+    NULL) — ueber sie ist der Zustand nicht zuzuordnen. Die Listen selbst haben eine
+    lead_id.
     """
     z = _zelle()
     for klasse, was in (("dok dok-", "analysiert mit Pruefpunkten"),
                         ("dok-leer", "analysiert, nichts gefunden"),
                         ("dok-warte", "Text liegt vor, Auswertung offen"),
+                        ("dok-liste", "nur die Gliederung gelesen"),
                         ("dok-verweis", "nur der Link"),
                         ("dok-na", "gar nichts")):
         assert klasse in z, f"der Zustand {was!r} ist nicht mehr unterscheidbar"
     # ⚠ Reihenfolge: der Strich-Zweig faengt sonst alles ab, was vor ihm haette greifen sollen.
     assert z.index("dok-verweis") < z.index("dok-na"), (
         "der Link-Zustand steht hinter dem Strich-Zweig und wird nie erreicht")
-    assert z.index("dok-warte") < z.index("dok-verweis"), (
-        "vorhandener Volltext wird als blosser Link gemeldet")
+    assert z.index("dok-warte") < z.index("dok-liste") < z.index("dok-verweis"), (
+        "die Reihenfolge stimmt nicht: vorhandener Volltext schlaegt die Gliederung, "
+        "und die Gliederung schlaegt den blossen Link")
 
 
 def test_die_zelle_traegt_keinen_knopf():

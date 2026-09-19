@@ -19,6 +19,29 @@ from datetime import date
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent.parent))
 
 from govisor import db as _db  # noqa: E402
+
+# ── ⛔ DIESES SKRIPT DARF NICHT IMPORTIERT WERDEN ────────────────────────────────────
+#
+# Es gibt hier keine `main()`: der ganze Export steht auf oberster Ebene. Ein `import`
+# faehrt ihn also komplett durch — Gold lesen, sieben Branchendateien schreiben, und
+# `plz-geo.json` neu erzeugen.
+#
+# ⚠ Das Letzte ist der Schaden. `plz-geo.json` wird dabei OHNE `_cities` geschrieben; die
+# Stadt-Umkreissuche ist danach tot, bis `build_city_index.py` laeuft. Genau das ist am
+# 2026-09-19 passiert: ich habe das Modul geladen, um einen frisch gebauten Index
+# nachzusehen, und damit einen vollen Export ausgeloest.
+#
+# ⚠ Die Falle war BEKANNT. `tests/test_unterlagen_block.py` umgeht sie seit jeher
+# ausdruecklich und liest den Syntaxbaum, statt zu importieren. Ein Befund in einem
+# Kommentar ist eben kein Waechter.
+#
+# Wer etwas aus dieser Datei braucht, liest sie mit `ast` oder ruft sie als Prozess auf.
+if __name__ != "__main__":
+    raise RuntimeError(
+        "export_web_leads.py ist ein Skript, kein Modul: ein Import fuehrt den ganzen "
+        "Export aus und schreibt plz-geo.json ohne _cities. Als Prozess aufrufen "
+        "(`python3 scripts/export_web_leads.py`) oder mit `ast` lesen.")
+
 from govisor.testvergaben import sql_bedingung as _testvergabe_sql
 from govisor.laender import AKTIV as _AKTIV  # noqa: E402
 
@@ -88,10 +111,51 @@ def _volltext_index() -> set:
     return set(d)
 
 
+def _gliederungs_index() -> dict:
+    """Vorgaenge, von denen wir nur die DATEILISTE haben, mit ihrer Dateizahl.
+
+    ⚠ EIN EIGENER ZUSTAND, und Sven musste mich darauf stossen (2026-09-19): „bei einigen
+    portalen lesen wir nur die gliederung aus, weil wir die unterlagen nicht automatisiert
+    herunterladen dürfen." Ich hatte nur die ausgelieferten Lead-Daten geprueft und daraus
+    geschlossen, den Zustand gebe es nicht — er steht in `doc_listing_*.parquet`.
+
+    subreport und vergabeportal.at sammeln Dateilisten und laden nichts herunter; im
+    Abruf-Manifest heisst das `nur_liste` und gilt ausdruecklich NICHT als Fehlschlag.
+    Gemessen: 2.670 Vorgaenge mit zusammen 53.966 gelisteten Dateien, davon 667 allein in
+    Bau — und alle tragen `gelesen = false`, sahen also bisher aus wie ein blosser Link.
+
+    ⚠ Die Manifest-Zeilen mit `nur_liste` tragen KEINE `notice_id` (alle 1.606 sind NULL),
+    ueber sie ist der Zustand also nicht zuzuordnen. Die Listen selbst haben eine
+    `lead_id` — deshalb kommt der Index von dort.
+    """
+    # ⚠ `ROOT` gibt es in diesem Skript NICHT — der Volltext-Index nebenan arbeitet mit
+    #   `OUT` (= web/data). Erste Fassung benutzte `ROOT` und waere zur Laufzeit
+    #   gescheitert, nicht beim Import: der Fehler haette erst im Nachtlauf zugeschlagen.
+    import glob as _glob
+    basis = pathlib.Path(__file__).resolve().parents[1] / "data" / "docs"
+    dateien = sorted(_glob.glob(str(basis / "*" / "doc_listing_*.parquet")))
+    if not dateien:
+        return {}
+    try:
+        con = _db.connect()
+        return {r[0]: int(r[1] or 0) for r in con.execute(
+            # ⚠ `n_dateien > 0`. Eine Liste mit null Dateien ist keine Gliederung; sie
+            #   als solche auszuweisen hiesse, Wissen zu behaupten, das wir nicht haben.
+            f"SELECT lead_id, max(n_dateien) FROM read_parquet({dateien!r}, union_by_name=true)"
+            " GROUP BY 1 HAVING max(n_dateien) > 0").fetchall()}
+    except Exception:
+        return {}
+
+
+GLIEDERUNG = _gliederungs_index()
 VOLLTEXT = _volltext_index()
 
 
-def _unterlagen(g, volltext: set) -> dict | None:
+def _unterlagen(g, volltext: set, gliederung: dict | None = None) -> dict | None:
+    # ⚠ `gliederung` als PARAMETER, nicht als Modul-Variable. `_unterlagen` wird von
+    #   `tests/test_unterlagen_block.py` ueber den Syntaxbaum herausgeschnitten und
+    #   ISOLIERT ausgefuehrt — genau dafuer bekommt schon `volltext` einen Parameter.
+    #   Eine globale Referenz darin ist dort ein NameError, und zwar sofort.
     """Der Unterlagen-Block eines Leads. ``None``, wenn es nichts zu sagen gibt.
 
     Zwei Fragen, die vorher zu einer verschmolzen waren:
@@ -107,6 +171,8 @@ def _unterlagen(g, volltext: set) -> dict | None:
     `source_url` gesetzt war.
     """
     gelesen = g("lead_id") in volltext
+    # Nur die Gliederung: wir kennen die Dateinamen, den Inhalt nicht.
+    gliederung = 0 if gelesen else (gliederung or {}).get(g("lead_id"), 0)
     wie = g("documents_source") or None
     if g("documents_url"):
         return {"url": g("documents_url"), "source": "docs",
@@ -114,11 +180,11 @@ def _unterlagen(g, volltext: set) -> dict | None:
                            else "kostenpflichtig" if g("documents_paid")
                            else "auf_anfrage" if wie == "on_request"
                            else "unknown"),
-                "wie": wie, "gelesen": gelesen}
+                "wie": wie, "gelesen": gelesen, "gliederung": gliederung}
     if g("source_url"):
         return {"url": g("source_url"), "source": "portal",
                 "access": "auf_anfrage" if wie == "on_request" else "unknown",
-                "wie": wie, "gelesen": gelesen}
+                "wie": wie, "gelesen": gelesen, "gliederung": gliederung}
     if gelesen:
         return {"url": None, "source": None, "access": "unknown", "wie": wie,
                 "gelesen": True}
@@ -1217,7 +1283,7 @@ def export_branche(key):
             # — 5.899 offene deutsche Leads mit Volltext zeigten dem Nutzer „unknown" oder
             # gar nichts. Der Block entsteht deshalb jetzt auch OHNE Link, wenn wir den
             # Text haben: sonst faellt genau die Auskunft weg, die zaehlt.
-            "unterlagen": _unterlagen(g, VOLLTEXT),
+            "unterlagen": _unterlagen(g, VOLLTEXT, GLIEDERUNG),
             # #15 Weg A — strukturierte Anforderungen aus eForms. True/False = belegt,
             # None = nicht veröffentlicht (ehrlich weglassen statt „erfüllt" zu behaupten).
             # #15/#18: strukturierte Anforderungen. Dokument-Signale (aus den Vergabeunterlagen)

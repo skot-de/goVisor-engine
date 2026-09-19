@@ -2353,5 +2353,7 @@
   "Hier Unterlagen einsehen": "View the documents",
   "Unterlagen gelesen, aber kein Pruefpunkt gefunden.": "Documents read, but no check point found.",
   "Die Unterlagen liegen uns vor. Die Auswertung steht noch aus.": "We have the documents. The analysis is still pending.",
-  "Beim Portal liegen Unterlagen. Oeffnen und hochladen im Detail.": "Documents are available on the portal. Open and upload from the detail view."
+  "Beim Portal liegen Unterlagen. Oeffnen und hochladen im Detail.": "Documents are available on the portal. Open and upload from the detail view.",
+  "Gliederung": "Structure",
+  "Wir kennen die {n} Dateien dieses Vorgangs, duerfen sie dort aber nicht selbst herunterladen.": "We know the {n} files of this procedure but may not download them there ourselves."
 }

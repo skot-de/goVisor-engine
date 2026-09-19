@@ -2353,5 +2353,7 @@
   "Hier Unterlagen einsehen": "Consulter les documents",
   "Unterlagen gelesen, aber kein Pruefpunkt gefunden.": "Documents lus, aucun point de contrôle trouvé.",
   "Die Unterlagen liegen uns vor. Die Auswertung steht noch aus.": "Nous avons les documents. L'analyse est encore en attente.",
-  "Beim Portal liegen Unterlagen. Oeffnen und hochladen im Detail.": "Des documents sont disponibles sur le portail. Ouvrir et téléverser depuis le détail."
+  "Beim Portal liegen Unterlagen. Oeffnen und hochladen im Detail.": "Des documents sont disponibles sur le portail. Ouvrir et téléverser depuis le détail.",
+  "Gliederung": "Sommaire",
+  "Wir kennen die {n} Dateien dieses Vorgangs, duerfen sie dort aber nicht selbst herunterladen.": "Nous connaissons les {n} fichiers de cette procédure mais ne pouvons pas les télécharger nous-mêmes."
 }

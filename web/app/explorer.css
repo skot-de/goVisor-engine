@@ -2634,6 +2634,9 @@ td.c-band .passung i{display:none}
 .dok-verweis{font-size:11.5px;color:var(--ink-400);cursor:pointer;
   text-decoration:underline;text-decoration-style:dotted;text-underline-offset:2px;transition:.12s}
 .dok-verweis:hover{color:var(--signal)}
+.dok-liste{font-size:11.5px;color:var(--ink-400);cursor:pointer;
+  text-decoration:underline;text-decoration-style:dotted;text-underline-offset:2px;transition:.12s}
+.dok-liste:hover{color:var(--signal)}
 .dok-warte{font-size:11.5px;color:var(--ink-400);font-style:italic;cursor:help}
 .dok-leer{font-size:11.5px;color:var(--ink-300);cursor:help}
 

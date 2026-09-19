@@ -935,6 +935,20 @@ function cellHTML(l, key){
         return `<td class="c-doks"><span class="dok-leer" title="${esc(tk("Unterlagen gelesen, aber kein Pruefpunkt gefunden."))}">${tk("nichts gefunden")}</span></td>`;
       if (u && u.gelesen)
         return `<td class="c-doks"><span class="dok-warte" title="${esc(tk("Die Unterlagen liegen uns vor. Die Auswertung steht noch aus."))}">${tk("liegt vor")}</span></td>`;
+      /* ⚠ SECHSTER ZUSTAND, und Sven musste mich darauf stossen: „bei einigen portalen
+         lesen wir nur die gliederung aus, weil wir die unterlagen nicht automatisiert
+         herunterladen dürfen." Ich hatte nur die ausgelieferten Lead-Daten geprueft und
+         daraus geschlossen, den Zustand gebe es nicht — er steht in
+         `doc_listing_*.parquet`: subreport und vergabeportal.at sammeln Dateilisten und
+         laden nichts herunter. Gemessen 2.670 Vorgaenge mit 53.966 gelisteten Dateien,
+         davon 667 in Bau. Sie sahen bisher aus wie ein blosser Link.
+
+         Der Unterschied ist fuer den Nutzer erheblich: wir wissen, WELCHE Unterlagen es
+         gibt, nur nicht, was drinsteht. */
+      if (u && u.gliederung)
+        return `<td class="c-doks"><span class="dok-liste" data-doklink="${esc(l.id)}" title="${
+          esc(tk("Wir kennen die {n} Dateien dieses Vorgangs, duerfen sie dort aber nicht selbst herunterladen.", {n: u.gliederung}))
+        }">${tk("Gliederung")}</span></td>`;
       if (u && u.url)
         return `<td class="c-doks"><span class="dok-verweis" data-doklink="${esc(l.id)}" title="${esc(tk("Beim Portal liegen Unterlagen. Oeffnen und hochladen im Detail."))}">${tk("Link")}</span></td>`;
       return `<td class="c-doks"><span class="dok-na" title="${esc(tk("Fuer diesen Vorgang liegen keine ausgewerteten Vergabeunterlagen vor."))}">—</span></td>`;
