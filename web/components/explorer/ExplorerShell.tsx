@@ -178,7 +178,7 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
    * Zweifel gehabt („wäre cool, aber vll auch nervig"). Also: ausblenden passiert sofort,
    * die Gruende sind ein Angebot in der Leiste — vier Klicks als Moeglichkeit, keiner als
    * Pflicht. Wer weiterscrollt, hat nichts verloren. */
-  const [zuletztAus, setZuletztAus] = useState<{ id: string; titel: string } | null>(null);
+  const [fragtNach, setFragtNach] = useState<{ id: string; titel: string } | null>(null);
   const ausLeisteTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const [sortKey, setSortKey] = useState("frist");
   const [sortDir, setSortDir] = useState(1);
@@ -558,10 +558,20 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
     const gefiltert = postFilter(sorted(visible()), adv);
     // ⚠ Ausgeblendete fliegen ZULETZT raus, nicht vorher. Sonst fehlten sie auch in den
     // Facettenzahlen, und der Nutzer saehe nicht mehr, dass es sie gibt.
-    return (zeigeAusgeblendete || ausgeblendet.size === 0)
-      ? gefiltert : gefiltert.filter((l) => !ausgeblendet.has(String(l.id)));
+    if (zeigeAusgeblendete || ausgeblendet.size === 0) return gefiltert;
+    /* ⚠ EINE AUSNAHME: der gerade ausgeblendete Vorgang bleibt in der Liste, solange die
+       Rueckfrage an seiner Stelle steht. Sven am 2026-09-19: „klicke ich den 5 lead in der
+       liste an bzw auf das X, dann soll anstelle der lead informationen die abfrage
+       eingeblendet werden."
+
+       ⚠ Mein erster Einwand dagegen war falsch, und zwar praezise falsch: ich hatte
+       argumentiert, eine Leiste IN der Zeile lasse die Liste springen. Das gilt fuer einen
+       ZUSAETZLICHEN Platzhalter — beim ERSETZEN bleibt die Zeilenzahl gleich, und die
+       Frage steht dort, wo der Klick war, statt am oberen Rand. */
+    return gefiltert.filter((l) => String(l.id) === fragtNach?.id
+                                   || !ausgeblendet.has(String(l.id)));
   }, [aktiveBranche, sortKey, sortDir, tokens, filters, tick, realProfile, adv,
-      ausgeblendet, zeigeAusgeblendete]);
+      ausgeblendet, zeigeAusgeblendete, fragtNach]);
 
   /* ── Trefferzahlen an den Filtern ──────────────────────────────────────────────────
    *
@@ -840,20 +850,20 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
     logEvent(l, "hidden", jetztAus ? t("Ausgeblendet") : t("Wieder eingeblendet"));
     if (ausLeisteTimer.current) clearTimeout(ausLeisteTimer.current);
     if (jetztAus) {
-      setZuletztAus({ id, titel: (l?.titel as string) ?? id });
+      setFragtNach({ id, titel: (l?.titel as string) ?? id });
       // ⚠ Zwoelf Sekunden. Kurz genug, dass die Leiste nicht im Weg steht, lang genug zum
       // Lesen und Entscheiden — ein Ruecknahme-Angebot, das weg ist, bevor man es gesehen
       // hat, ist keines.
-      ausLeisteTimer.current = setTimeout(() => setZuletztAus(null), 12_000);
+      ausLeisteTimer.current = setTimeout(() => setFragtNach(null), 12_000);
     } else {
-      setZuletztAus(null);
+      setFragtNach(null);
     }
     bump();
   }
 
   /** Einen Grund zum zuletzt ausgeblendeten Vorgang nachreichen. */
   function ausGrund(grund: string) {
-    const z = zuletztAus;
+    const z = fragtNach;
     if (!z) return;
     const l = CORE.find((x) => x.id === z.id);
     syncAusgeblendet(z.id, true, {
@@ -862,7 +872,7 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
       grund,
     });
     logEvent(l, "hidden", t("Grund: {g}", { g: t(grund) }));
-    setZuletztAus(null);
+    setFragtNach(null);
     if (ausLeisteTimer.current) clearTimeout(ausLeisteTimer.current);
   }
 
@@ -1975,24 +1985,12 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
                   </div>
                 );
               })()}
-              {/* ⚠ DIE LEISTE STEHT UEBER DER LISTE, NICHT IN DER ZEILE. In der Zeile
-                  waere sie ein Platzhalter, der die Liste springen laesst — und genau das
-                  Springen macht das Wegklicken mehrerer Treffer hintereinander muehsam.
-                  Hier bleibt die Liste ruhig und die Ruecknahme trotzdem in Reichweite. */}
-              {zuletztAus && (
-                <div className="ausleiste" role="status">
-                  <span className="al-t">{t("Ausgeblendet")}: <b>{zuletztAus.titel}</b></span>
-                  <span className="al-f">{t("Warum passt es nicht?")}</span>
-                  {AUS_GRUENDE.map((g) => (
-                    <button key={g} className="al-g" onClick={() => ausGrund(g)}>{t(g)}</button>
-                  ))}
-                  <button className="al-weg" onClick={() => { toggleAusblenden(zuletztAus.id); }}>
-                    {t("Rückgängig")}
-                  </button>
-                </div>
-              )}
               <LeadTable
                 rows={rows}
+                fragtNach={fragtNach}
+                ausGruende={AUS_GRUENDE as unknown as string[]}
+                onAusGrund={ausGrund}
+                onAusZurueck={(id) => toggleAusblenden(id)}
                 onWf={setWfFuer}
                 onDokLink={dokLinkOeffnen}
                 limit={renderCount}

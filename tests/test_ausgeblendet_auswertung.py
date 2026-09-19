@@ -83,17 +83,58 @@ def test_der_grund_kommt_nach_dem_klick():
     assert "grund," in code[j:j + 700], "ausGrund reicht den Grund nicht durch"
 
 
-def test_die_leiste_verschwindet_von_allein():
-    """⚠ Eine Leiste, die stehen bleibt, ist ein Dialog mit Extraschritten. Eine, die zu
-    schnell geht, hat man nicht gelesen."""
+def test_die_frage_ersetzt_die_zeile():
+    """⚠ Sven am 2026-09-19: „klicke ich den 5 lead in der liste an bzw auf das X, dann
+    soll anstelle der lead informationen die abfrage eingeblendet werden."
+
+    Mein erster Entwurf hatte eine Leiste ueber der Liste, mit dem Argument, eine Zeile
+    lasse die Liste springen. Das Argument gilt fuer einen ZUSAETZLICHEN Platzhalter, nicht
+    fuers Ersetzen — die Zeilenzahl bleibt gleich. Und es uebersah den wichtigeren Punkt:
+    nach dem fuenften weggeklickten Treffer sucht niemand mehr am oberen Rand nach der
+    Frage.
+    """
+    tab = (WURZEL / "web" / "components" / "explorer" / "LeadTable.tsx").read_text(encoding="utf-8")
+    assert "function FrageZeile" in tab, "die Frage steht nicht in der Tabelle"
+    # ⚠ Im Block der FrageZeile, nicht irgendwo in der Datei: `colSpan={colspan}` steht
+    # auch an der Leer-Zeile („Hier ist gerade nichts"). Der erste Anlauf dieses Tests
+    # suchte in der ganzen Datei und blieb gruen, als ich es der Frage weggenommen hatte.
+    # ⚠ Bis zur naechsten Funktion schneiden, nicht bis zur naechsten `}`-Zeile: die
+    # Typ-Annotation der Props endet selbst mit `}`, und der zweite Anlauf dieses Tests
+    # schnitt genau dort ab und pruefte nur noch die Signatur.
+    i = tab.index("function FrageZeile")
+    block = tab[i:tab.index("export function LeadTable", i)]
+    assert "colSpan={colspan}" in block, (
+        "die Frage sitzt in einzelnen Zellen — dann muss sie in ein Spaltenraster passen, "
+        "das sie nicht meint, und sieht bei jeder Spaltenauswahl anders aus")
+    # ⚠ BEIDE Render-Stellen: die Liste hat eine gruppierte und eine flache Fassung, und
+    # bis 2026-09-19 ist schon einmal eine davon vergessen worden (data-unread).
+    assert tab.count("<FrageZeile") == 2, (
+        f"{tab.count('<FrageZeile')} von 2 Render-Stellen zeigen die Frage. Die Liste hat "
+        f"eine gruppierte und eine flache Fassung.")
+    shell = _ohne_kommentar(SHELL.read_text(encoding="utf-8"))
+    assert 'String(l.id) === fragtNach?.id' in shell, (
+        "der befragte Vorgang wird sofort herausgefiltert — dann steht die Frage an einer "
+        "Stelle, an der es keine Zeile mehr gibt, und man sieht gar nichts")
+    assert "ausleiste" not in (WURZEL / "web" / "app" / "explorer.css").read_text(encoding="utf-8"), (
+        "die alte Leiste ueber der Liste ist noch da — zwei Wege fuer dieselbe Frage")
+
+
+def test_die_frage_verschwindet_von_allein():
+    """⚠ Eine Frage, die stehen bleibt, ist ein Dialog mit Extraschritten. Eine, die zu
+    schnell geht, hat man nicht gelesen.
+
+    ⚠ Und sie steht seit dem Umbau AN DER STELLE DES VORGANGS: laeuft die Zeit ab, ist der
+    Vorgang weg — genau das, was der Klick auf das Kreuz bedeutet hat. Ohne Zeitgeber
+    bliebe eine Frage stehen, die niemand beantworten will, und die Liste haette ein Loch.
+    """
     code = _ohne_kommentar(SHELL.read_text(encoding="utf-8"))
-    m = re.search(r"setTimeout\(\(\) => setZuletztAus\(null\), ([\d_]+)\)", code)
-    assert m, "die Leiste verschwindet nicht von allein"
+    m = re.search(r"setTimeout\(\(\) => setFragtNach\(null\), ([\d_]+)\)", code)
+    assert m, "die Frage verschwindet nicht von allein"
     ms = int(m.group(1).replace("_", ""))
     assert 6_000 <= ms <= 20_000, f"{ms} ms sind zu kurz zum Lesen oder zu lang zum Stehen"
     assert "clearTimeout(ausLeisteTimer.current)" in code, (
         "beim zweiten Ausblenden laeuft der alte Zeitgeber weiter und raeumt die neue "
-        "Leiste zu frueh weg")
+        "Frage zu frueh weg")
 
 
 def test_oberflaeche_und_auswertung_kennen_dieselben_gruende():
@@ -187,3 +228,25 @@ def test_die_auswertung_laeuft_jede_nacht():
     i = sh.index("$PY scripts/auswertung_ausgeblendet.py")
     assert "--mindestens" in sh[i:i + 120], (
         "ohne Schwelle meldet der Bericht Einzelklicks als Muster")
+
+
+def test_die_frage_zeile_ist_so_hoch_wie_die_anderen():
+    """⚠ GEMESSEN: ohne `min-height` war die Frage-Zeile 40 px hoch neben 47 px hohen
+    Nachbarn — die Liste ruckte beim Klicken um sieben Pixel, und beim Verschwinden noch
+    einmal. Genau das, was dieser Entwurf vermeiden sollte, und mein eigener Kommentar
+    behauptete bereits, es sei geloest.
+
+    `min-height` und nicht festes Polster: eine laengere Gruenden-Liste darf die Zeile
+    wachsen lassen, statt abgeschnitten zu werden.
+    """
+    css = re.sub(r"/\*[\s\S]*?\*/", "", CSS.read_text(encoding="utf-8"))
+    m = re.search(r"\.ausfrage\{([^}]*)\}", css)
+    assert m, ".ausfrage gibt es nicht mehr"
+    regel = m.group(1).replace(" ", "").replace("\n", "")
+    h = re.search(r"min-height:(\d+)px", regel)
+    assert h and int(h.group(1)) >= 44, (
+        f"min-height fehlt oder ist zu klein ({h.group(1) if h else 'keine'}) — die Liste "
+        f"ruckt dann beim Klicken")
+    assert "box-sizing:border-box" in regel, (
+        "ohne border-box addiert sich das Polster auf die Mindesthoehe und die Zeile wird "
+        "zu hoch statt gleich hoch")

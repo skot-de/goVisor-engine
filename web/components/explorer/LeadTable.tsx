@@ -21,6 +21,43 @@ const FunnelIcon = (
   </svg>
 );
 
+/* Die Rueckfrage AN DER STELLE DER ZEILE ───────────────────────────────────────────────
+ *
+ * ⚠ SIE ERSETZT DIE ZEILE, SIE KOMMT NICHT DAZU. Sven am 2026-09-19: „klicke ich den 5
+ * lead in der liste an bzw auf das X, dann soll anstelle der lead informationen die abfrage
+ * eingeblendet werden." Mein erster Entwurf hatte eine Leiste ueber der Liste, mit dem
+ * Argument, eine Zeile wuerde die Liste springen lassen. Das galt fuer einen ZUSAETZLICHEN
+ * Platzhalter; beim Ersetzen bleibt die Zeilenzahl gleich — und die Frage steht dort, wo
+ * der Klick war, statt am oberen Rand, wo man sie nach dem fuenften Treffer nicht mehr
+ * sucht.
+ *
+ * ⚠ `colSpan` ueber ALLE Spalten. Mit einzelnen Zellen muesste die Frage in ein
+ * Spaltenraster passen, das sie nicht meint — und bei jeder Spaltenauswahl anders aussehen.
+ */
+function FrageZeile({ titel, gruende, onGrund, onZurueck, colspan }: {
+  titel: string; gruende: string[];
+  onGrund: (g: string) => void; onZurueck: () => void; colspan: number;
+}) {
+  const { t } = useSprache();
+  return (
+    <tr className="ausfrage-zeile">
+      <td colSpan={colspan}>
+        <div className="ausfrage">
+          <span className="af-t">{titel}</span>
+          <span className="af-f">{t("Warum passt es nicht?")}</span>
+          {gruende.map((g) => (
+            <button key={g} className="af-g" onClick={() => onGrund(g)}>{t(g)}</button>
+          ))}
+          {/* ⚠ „Doch behalten", nicht „Rückgängig". Die Frage steht an der Stelle des
+              Vorgangs; die Antwort darauf ist eine Entscheidung ueber IHN, keine ueber
+              den letzten Klick. */}
+          <button className="af-weg" onClick={onZurueck}>{t("Doch behalten")}</button>
+        </div>
+      </td>
+    </tr>
+  );
+}
+
 export function LeadTable({
   rows,
   limit,
@@ -33,6 +70,10 @@ export function LeadTable({
   sortDir,
   activeId,
   activeFacets,
+  fragtNach,
+  ausGruende,
+  onAusGrund,
+  onAusZurueck,
   onSort,
   onSelect,
   onStar,
@@ -88,6 +129,11 @@ export function LeadTable({
   /** Unterlagen beim Portal oeffnen UND den Lead aufschlagen. */
   onDokLink?: (id: string) => void;
   onHide?: (id: string) => void;
+  /** Der Vorgang, an dessen Stelle gerade die Rueckfrage steht. */
+  fragtNach?: { id: string; titel: string } | null;
+  ausGruende?: string[];
+  onAusGrund?: (grund: string) => void;
+  onAusZurueck?: (id: string) => void;
   onNetz: (id: string) => void;
   onOwn: (id: string, ans: string) => void;
   onHeadFilter: (facet: string, rect: DOMRect) => void;
@@ -290,6 +336,12 @@ export function LeadTable({
               </td>
             </tr>
             {a.rows.length ? a.rows.slice(0, limit).map((l) => (
+              fragtNach && String(l.id) === fragtNach.id ? (
+                <FrageZeile key={l.id} titel={fragtNach.titel} colspan={colspan}
+                  gruende={ausGruende ?? []}
+                  onGrund={(g) => onAusGrund?.(g)}
+                  onZurueck={() => onAusZurueck?.(fragtNach.id)} />
+              ) :
               <tr key={l.id} data-id={l.id}
                 className={[l.status === "ungesichtet" ? "" : "gesichtet",
                   l.userStatus === "verworfen" ? "wf-verworfen" : ""].filter(Boolean).join(" ")}
@@ -301,6 +353,14 @@ export function LeadTable({
           </React.Fragment>
         )) : rows.length ? (
           rows.slice(0, limit).map((l) => {
+            if (fragtNach && String(l.id) === fragtNach.id) {
+              return (
+                <FrageZeile key={l.id} titel={fragtNach.titel} colspan={colspan}
+                  gruende={ausGruende ?? []}
+                  onGrund={(g) => onAusGrund?.(g)}
+                  onZurueck={() => onAusZurueck?.(fragtNach.id)} />
+              );
+            }
             const cls = [
               l.status === "ungesichtet" ? "" : "gesichtet",
               l.userStatus === "verworfen" ? "wf-verworfen" : "",

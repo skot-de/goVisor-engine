@@ -2829,27 +2829,34 @@ td.c-doks{width:84px;text-align:center}
 .fp-chip.on .fp-chip-n{opacity:.75}
 .fp-check .fp-chip-n{margin-left:7px; color:var(--ink-500)}
 
-/* ── Ruecknahme-Leiste nach dem Ausblenden ────────────────────────────────────────
- * ⚠ Steht UEBER der Liste, nicht in der Zeile: ein Platzhalter in der Zeile liesse die
- * Liste springen, und genau das macht das Wegklicken mehrerer Treffer muehsam. */
-/* ⚠ KEINE KAPSEL, SONDERN EIN RECHTECK MIT RUNDEN ECKEN. Mit `border-radius:100px` sah
-   die Leiste bei schmalen Fenstern kaputt aus: sechs Elemente brechen dort auf drei
-   Zeilen um, und eine dreizeilige „Pille" ist keine Form, die jemand entworfen haette.
-   Gemessen bei 880 px Breite, bevor es jemand zu sehen bekam. */
-.ausleiste{display:flex;align-items:center;gap:9px;flex-wrap:wrap;
-  margin:0 0 8px;padding:8px 14px;border-radius:12px;
-  background:var(--surface-2);border:1px solid var(--line);font-size:12px}
-.ausleiste .al-t{color:var(--ink-600);max-width:26ch;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.ausleiste .al-t b{font-weight:600;color:var(--ink-900)}
-.ausleiste .al-f{color:var(--ink-400);margin-left:4px}
-.al-g{font-size:11.5px;font-weight:500;padding:3px 9px;border-radius:100px;
+/* ── Rueckfrage AN DER STELLE DER ZEILE ───────────────────────────────────────────
+ *
+ * ⚠ SIE ERSETZT DIE ZEILE. Der erste Entwurf war eine Leiste ueber der Liste, mit dem
+ * Argument, eine Zeile lasse die Liste springen — das gilt fuer einen ZUSAETZLICHEN
+ * Platzhalter, nicht fuers Ersetzen. Sven hat darauf bestanden, und er hat recht: nach
+ * dem fuenften weggeklickten Treffer sucht niemand mehr am oberen Rand nach der Frage.
+ *
+ * ⚠ DIE HOEHE MUSS DER EINER NORMALEN ZEILE ENTSPRECHEN, sonst ruckt die Liste beim
+ * Klicken und wieder beim Verschwinden. Deshalb dasselbe vertikale Polster wie in `td`
+ * und eine einzeilige, nicht umbrechende Anordnung. */
+.ausfrage-zeile td{padding:0 !important;background:var(--flag-wash,#FBF2E6)}
+/* ⚠ `min-height` GEMESSEN, NICHT GESCHAETZT: ohne sie war die Frage-Zeile 40 px hoch
+   neben 47 px hohen Nachbarn, und die Liste ruckte beim Klicken um sieben Pixel — genau
+   das, was dieser Entwurf vermeiden sollte. Gemessen im gerenderten Bild, nicht im Kopf.
+   `min-height` statt festem Polster, damit eine laengere Gruenden-Liste die Zeile wachsen
+   lassen darf statt sie abzuschneiden. */
+.ausfrage{display:flex;align-items:center;gap:9px;padding:9px 12px;min-height:46px;
+  box-sizing:border-box;font-size:12px;white-space:nowrap;overflow-x:auto}
+.ausfrage .af-t{font-weight:600;color:var(--ink-900);max-width:32ch;
+  overflow:hidden;text-overflow:ellipsis}
+.ausfrage .af-f{color:var(--ink-500);margin-left:2px}
+.af-g{font-size:11.5px;font-weight:500;padding:3px 9px;border-radius:100px;flex:none;
   border:1px solid var(--line-strong);background:var(--surface);color:var(--ink-700);
   cursor:pointer;transition:.12s}
-.al-g:hover{border-color:var(--signal);color:var(--signal-deep)}
-.al-weg{margin-left:auto;font-size:12px;font-weight:600;background:none;border:0;
-  color:var(--signal-deep);cursor:pointer;text-decoration:underline;
-  text-underline-offset:2px}
-.al-weg:hover{color:var(--ink-900)}
+.af-g:hover{border-color:var(--signal);color:var(--signal-deep);background:var(--signal-wash)}
+.af-weg{margin-left:auto;flex:none;font-size:12px;font-weight:600;background:none;border:0;
+  color:var(--ink-500);cursor:pointer;text-decoration:underline;text-underline-offset:2px}
+.af-weg:hover{color:var(--ink-900)}
 
 /* ── Ausblenden in der Trefferzeile ────────────────────────────────────────────────
  * Sitzt neben dem Stern und bleibt bis zum Ueberfahren der Zeile leise: ein Knopf, der
