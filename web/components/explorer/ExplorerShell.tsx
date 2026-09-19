@@ -978,6 +978,27 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
     }
     bump();
   }
+  /* ⚠ ZWEI AUFRUFER, ZWEI BEDEUTUNGEN — und die duerfen nicht verwechselt werden.
+   *
+   * Im Detail sind die vier Zustaende nebeneinander sichtbar; ein Klick auf den AKTIVEN
+   * nimmt ihn zurueck (Umschalten). Im Listenmenue waehlt man aus vier Punkten aus; dort
+   * waere Umschalten falsch, denn „Interessant" auf einem Lead, der schon interessant
+   * ist, soll ihn nicht leeren. Das Zuruecknehmen hat dort einen eigenen Punkt.
+   *
+   * Sven am 2026-09-19: „ich will den status nicht nur aendern/setzen koennen, wenn ich
+   * in den ausschreibungsdetails bin, sondern schon in der leaduebersicht."
+   */
+  function setWfFuer(id: string, k: string | null) {
+    const l = CORE.find((x) => x.id === id) as (Lead & { userStatus?: string | null }) | undefined;
+    if (!l) return;
+    l.userStatus = k;
+    const WFLABEL: Record<string, string> = { interessant: "Interessant", pruefung: "In Prüfung", fragen: "Offene Fragen", verworfen: "Verworfen" };
+    logEvent(l, "status", k
+      ? t("Status → {status}", { status: t(WFLABEL[k] || k) })
+      : t("Status zurückgesetzt"));
+    bump();
+  }
+
   function setWf(k: string) {
     const l = CORE.find((x) => x.id === activeId) as (Lead & { userStatus?: string | null }) | undefined;
     if (!l) return;
@@ -1787,6 +1808,7 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
               })()}
               <LeadTable
                 rows={rows}
+                onWf={setWfFuer}
                 limit={renderCount}
                 laedt={loading}
                 stoerung={stoerung}

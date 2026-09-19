@@ -1536,6 +1536,28 @@ td.c-status{white-space:nowrap}
 .wf-ver.on,.wf-ver.filled{background:var(--ink-700);border-color:var(--ink-700);color:#fff}
 .wf-none{color:var(--ink-300)}
 td.c-wf{white-space:nowrap}
+/* ── Status aus der Liste setzen (2026-09-19) ──────────────────────────────────
+   ⚠ DIE ZELLE BEKOMMT KEIN NEUES AUSSEHEN. Sie sieht aus wie vorher; nur der Zeiger und
+   ein leiser Hintergrund beim Ueberfahren sagen, dass hier etwas geht. Vier Knoepfe je
+   Zeile waeren die naheliegende Loesung gewesen und bei 50 Zeilen 200 Elemente mehr —
+   am selben Tag lautete die andere Meldung „es sind immer noch einfach ganz viele
+   balken". */
+.wf-btn{background:none;border:0;padding:2px 4px;margin:-2px -4px;border-radius:6px;
+  font:inherit;cursor:pointer;transition:.12s}
+.wf-btn:hover{background:var(--surface-2)}
+.wf-btn:focus-visible{outline:2px solid var(--signal);outline-offset:1px}
+/* ⚠ Ueber allem, aber UNTER dem Menue. Ohne diese Flaeche schliesst der Klick daneben
+   nicht, sondern oeffnet die Zeile darunter. */
+.wfm-scrim{position:fixed;inset:0;z-index:120}
+.wfm{position:fixed;z-index:121;min-width:150px;padding:4px;display:flex;flex-direction:column;
+  background:var(--surface);border:1px solid var(--line-strong);border-radius:9px;
+  box-shadow:0 8px 24px rgba(18,33,29,.14)}
+.wfm-i{text-align:left;background:none;border:0;padding:6px 9px;border-radius:6px;
+  font-size:12px;font-weight:600;color:var(--ink-700);cursor:pointer;white-space:nowrap}
+.wfm-i:hover{background:var(--surface-2)}
+.wfm-i:focus-visible{outline:2px solid var(--signal);outline-offset:-2px}
+.wfm-weg{color:var(--ink-400);font-weight:500;border-top:1px solid var(--line);
+  margin-top:3px;padding-top:7px;border-radius:0 0 6px 6px}
 tr.wf-verworfen .ttitel{color:var(--ink-400);text-decoration:line-through;text-decoration-color:var(--ink-300)}
 
 .wfpick{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-bottom:14px}

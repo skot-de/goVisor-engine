@@ -1,7 +1,7 @@
 "use client";
 
-import React, { useRef } from "react";
-import { COLS, cellHTML, chanceCap } from "@/lib/explorerCore";
+import React, { useEffect, useRef, useState } from "react";
+import { COLS, WF, cellHTML, chanceCap } from "@/lib/explorerCore";
 import { useSprache } from "@/lib/i18n";
 
 type Col = { key: string; label: string; on: boolean; th?: string; lock?: boolean };
@@ -36,6 +36,7 @@ export function LeadTable({
   onSort,
   onSelect,
   onStar,
+  onWf,
   onHide,
   onNetz,
   onOwn,
@@ -81,6 +82,8 @@ export function LeadTable({
   onSort: (key: string) => void;
   onSelect: (id: string) => void;
   onStar: (id: string) => void;
+  /** Status aus der Liste heraus setzen. `null` nimmt ihn zurueck. */
+  onWf?: (id: string, k: string | null) => void;
   onHide?: (id: string) => void;
   onNetz: (id: string) => void;
   onOwn: (id: string, ans: string) => void;
@@ -125,8 +128,40 @@ export function LeadTable({
     return after;
   }
 
+  /* ── EIN Menue fuer alle Zeilen ────────────────────────────────────────────────
+     ⚠ NICHT vier Knoepfe je Zeile. Das waeren bei 50 Zeilen 200 zusaetzliche Elemente,
+     und die Meldung vom selben Tag lautete „es sind immer noch einfach ganz viele
+     balken". Die Zelle bleibt, wie sie war; dieses Menue haengt sich beim Klick an sie.
+
+     ⚠ Position in SEITENKOORDINATEN (`position:fixed`), nicht relativ zur Tabelle: die
+     Tabelle scrollt in einem eigenen Behaelter, und ein absolut positioniertes Menue
+     waere beim Scrollen mitgewandert, aber am falschen Ort stehengeblieben. */
+  const [wfMenu, setWfMenu] = useState<{ id: string; x: number; y: number } | null>(null);
+  useEffect(() => {
+    if (!wfMenu) return;
+    const zu = () => setWfMenu(null);
+    const taste = (ev: KeyboardEvent) => { if (ev.key === "Escape") setWfMenu(null); };
+    // ⚠ `capture`, sonst schliesst der Klick auf einen Menuepunkt das Menue, BEVOR
+    //    dessen eigener Handler laeuft — der Punkt waere dann nie erreichbar.
+    window.addEventListener("scroll", zu, true);
+    window.addEventListener("resize", zu);
+    window.addEventListener("keydown", taste);
+    return () => {
+      window.removeEventListener("scroll", zu, true);
+      window.removeEventListener("resize", zu);
+      window.removeEventListener("keydown", taste);
+    };
+  }, [wfMenu]);
+
   function handleRowClick(e: React.MouseEvent<HTMLTableSectionElement>) {
     const t = e.target as HTMLElement;
+    const wf = t.closest<HTMLElement>("[data-wf]");
+    if (wf && onWf) {
+      e.stopPropagation();
+      const r = wf.getBoundingClientRect();
+      setWfMenu((m) => (m?.id === wf.dataset.wf ? null : { id: wf.dataset.wf!, x: r.left, y: r.bottom + 4 }));
+      return;
+    }
     const star = t.closest<HTMLElement>("[data-star]");
     if (star) { e.stopPropagation(); onStar(star.dataset.star!); return; }
     const hide = t.closest<HTMLElement>("[data-hide]");
@@ -145,6 +180,7 @@ export function LeadTable({
   }
 
   return (
+    <>
     <table className="leads">
       <thead>
         <tr>
@@ -317,5 +353,26 @@ export function LeadTable({
         ) : null}
       </tbody>
     </table>
+    {wfMenu && onWf ? (
+      <>
+        {/* Auffangflaeche: ein Klick daneben schliesst, ohne dass die Zeile darunter
+            mitgeoeffnet wird. */}
+        <div className="wfm-scrim" onClick={() => setWfMenu(null)} />
+        <div className="wfm" style={{ left: wfMenu.x, top: wfMenu.y }} role="menu"
+             aria-label={t("Status setzen")}>
+          {Object.entries(WF as Record<string, { label: string; cls: string }>).map(([k, v]) => (
+            <button key={k} role="menuitem" className={`wfm-i ${v.cls}`}
+                    onClick={() => { onWf(wfMenu.id, k); setWfMenu(null); }}>
+              {t(v.label)}
+            </button>
+          ))}
+          <button role="menuitem" className="wfm-i wfm-weg"
+                  onClick={() => { onWf(wfMenu.id, null); setWfMenu(null); }}>
+            {t("Kein Status")}
+          </button>
+        </div>
+      </>
+    ) : null}
+    </>
   );
 }

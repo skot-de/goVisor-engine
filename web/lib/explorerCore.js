@@ -904,7 +904,17 @@ function cellHTML(l, key){
     }
     case 'inc': return `<td class="c-inc">${l.incumbent ? val(l.incumbent.name, l.incumbent.src) : `<span style="color:var(--ink-300)">${tk('offen')}</span>`}</td>`;
     case 'status': return `<td class="c-status"><span class="stat">${tk(l.seen || (l.status==='ungesichtet'?'neu':'gesichtet'))}</span></td>`;
-    case 'wf': return `<td class="c-wf">${l.userStatus ? wfPill(l.userStatus) : '<span class="wf-none">—</span>'}</td>`;
+    /* ⚠ ANKLICKBAR SEIT 2026-09-19. Sven: „ich will den status nicht nur aendern/setzen
+       koennen, wenn ich in den ausschreibungsdetails bin, sondern schon in der
+       leaduebersicht." Bis dahin hing `setWf` an `activeId`, also am GEOEFFNETEN Lead.
+
+       ⚠ KEINE VIER KNOEPFE JE ZEILE. Die naheliegende Loesung waere, alle Zustaende
+       nebeneinander zu zeigen — das waeren 4 Elemente mal 50 Zeilen, und am selben Tag
+       lautete die andere Meldung „es sind immer noch einfach ganz viele balken". Die
+       Zelle bleibt, wie sie war; ein EINZIGES Menue haengt sich beim Klick an sie.
+       `data-wf` traegt die Kennung, den Rest macht `LeadTable`. */
+    case 'wf': return `<td class="c-wf"><button class="wf-btn" data-wf="${esc(l.id)}" title="${esc(tk('Status setzen'))}">${
+      l.userStatus ? wfPill(l.userStatus) : '<span class="wf-none">—</span>'}</button></td>`;
   }
 }
 
