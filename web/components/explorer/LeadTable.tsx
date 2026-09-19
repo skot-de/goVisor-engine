@@ -293,7 +293,6 @@ export function LeadTable({
               <tr key={l.id} data-id={l.id}
                 className={[l.status === "ungesichtet" ? "" : "gesichtet",
                   l.userStatus === "verworfen" ? "wf-verworfen" : ""].filter(Boolean).join(" ")}
-                data-unread={l.status === "ungesichtet" ? "" : undefined}
                 aria-selected={l.id === activeId}
                 dangerouslySetInnerHTML={{ __html: cols.map((c) => cellHTML(l, c.key)).join("") }} />
             )) : (
@@ -314,7 +313,6 @@ export function LeadTable({
                 key={l.id}
                 data-id={l.id}
                 className={cls}
-                data-unread={l.status === "ungesichtet" ? "" : undefined}
                 aria-selected={l.id === activeId}
                 dangerouslySetInnerHTML={{ __html: html }}
               />

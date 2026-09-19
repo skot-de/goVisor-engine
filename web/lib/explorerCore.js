@@ -1000,8 +1000,19 @@ function cellHTML(l, key){
        lautete die andere Meldung „es sind immer noch einfach ganz viele balken". Die
        Zelle bleibt, wie sie war; ein EINZIGES Menue haengt sich beim Klick an sie.
        `data-wf` traegt die Kennung, den Rest macht `LeadTable`. */
+    /* ⚠ DER LEERE ZUSTAND IST EIN WORT, KEIN STRICH. Sven am 2026-09-19: „falls nicht,
+       dann brauchen wir was anderes fuer '-', ein neutralen status, damit man weiss das
+       man darauf klicken kann". Der Strich sah aus wie eine leere Zelle; dass dahinter
+       ein Knopf sitzt, war nicht zu sehen.
+
+       ⚠ WARUM NICHT „NEU", wie zuerst vorgeschlagen: zwei Spalten weiter steht in
+       „Wettbewerb" bereits `Neu` — dort heisst es Neuvergabe ohne Amtsinhaber. Dasselbe
+       Wort zweimal in einer Zeile, fuer zwei verschiedene Sachen. Und es waere falsch,
+       sobald man den Lead einmal geoeffnet hat: der leere Status heisst „noch nicht
+       eingeordnet", nicht „neu". Ein Vorgang, den man gestern zehn Minuten gelesen und
+       nicht eingeordnet hat, stuende weiter als „Neu" in der Liste. */
     case 'wf': return `<td class="c-wf"><button class="wf-btn" data-wf="${esc(l.id)}" title="${esc(tk('Status setzen'))}">${
-      l.userStatus ? wfPill(l.userStatus) : '<span class="wf-none">—</span>'}</button></td>`;
+      l.userStatus ? wfPill(l.userStatus) : `<span class="wf wf-none">${tk("Setzen")}</span>`}</button></td>`;
   }
 }
 

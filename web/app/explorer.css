@@ -1276,11 +1276,19 @@ td.c-src{width:96px}
 
 td.c-titel{min-width:280px;max-width:440px}
 .ttitel{font-weight:600;color:var(--ink-900);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;display:block}
-tr[data-unread]{background:var(--unread-wash,#F0F8F4)}
-tr[data-unread] .ttitel{font-weight:600}
-tr[data-unread] td:first-child{box-shadow:inset 3px 0 0 var(--signal)}
-tr.gesichtet .ttitel{font-weight:500;color:var(--ink-700)}
-tr[data-unread][aria-selected="true"]{background:var(--surface-3)}
+/* ⚠ HIER LAG EIN GRUENER TEPPICH, KEIN HINWEIS. `tr[data-unread]` haengt an
+   `status === "ungesichtet"`, und `export_web_leads.py` schreibt genau diesen Wert als
+   KONSTANTE in jeden Lead (gemessen 2026-09-19: 42.584 von 42.584 in allen acht
+   Branchendateien). Beim Laden war also JEDE Zeile gruen hinterlegt, mit gruenem Balken
+   links und fetterem Titel — drei Auszeichnungen fuer „neu", die auf 100 % der Zeilen
+   standen. Weiss wurde eine Zeile nur, wenn man sie in DIESER Sitzung angeklickt hat;
+   gespeichert wird das nirgends, nach dem Neuladen war wieder alles gruen.
+
+   Die Spur, die man beim Arbeiten hinterlaesst, bleibt trotzdem — nur andersherum:
+   `tr.gesichtet` blasst die BESUCHTEN Zeilen ab. Das ist dieselbe Auskunft mit der
+   umgekehrten Tinte: beim Laden ist nichts markiert, und mit jeder Zeile, die man
+   oeffnet, waechst die Markierung. Die Regel stand vorher schon da, sie ging unter. */
+tr.gesichtet .ttitel{font-weight:500;color:var(--ink-600)}
 
 td.c-buyer{color:var(--ink-500);white-space:nowrap;max-width:150px;overflow:hidden;text-overflow:ellipsis}
 td.c-frist{white-space:nowrap}
@@ -1541,17 +1549,20 @@ td.c-status{white-space:nowrap}
 .wf-pru.on,.wf-pru.filled{background:var(--note);border-color:var(--note);color:#fff}
 .wf-fra.on,.wf-fra.filled{background:var(--note);border-color:var(--note);color:#fff}
 .wf-ver.on,.wf-ver.filled{background:var(--ink-700);border-color:var(--ink-700);color:#fff}
-.wf-none{color:var(--ink-300)}
+/* ⚠ Gestrichelte Kontur statt Strich: ein leeres Feld, das man fuellen kann. Gefuellte
+   Status sind satt, dieser ist ein Umriss — die Form sagt „hier fehlt noch etwas". */
+.wf-none{color:var(--ink-400);border-style:dashed;border-color:var(--line-strong);
+  background:transparent;font-weight:500}
+.wf-btn:hover .wf-none{color:var(--ink-600);border-color:var(--ink-400)}
 td.c-wf{white-space:nowrap}
 /* ── Status aus der Liste setzen (2026-09-19) ──────────────────────────────────
-   ⚠ DIE ZELLE BEKOMMT KEIN NEUES AUSSEHEN. Sie sieht aus wie vorher; nur der Zeiger und
-   ein leiser Hintergrund beim Ueberfahren sagen, dass hier etwas geht. Vier Knoepfe je
+   ⚠ EIN KNOPF JE ZEILE, NICHT VIER. Der gesetzte Status sieht aus wie im Detail; leer
+   ist er ein gestrichelter Umriss, der sagt, dass hier etwas hingehoert. Vier Knoepfe je
    Zeile waeren die naheliegende Loesung gewesen und bei 50 Zeilen 200 Elemente mehr —
    am selben Tag lautete die andere Meldung „es sind immer noch einfach ganz viele
    balken". */
-.wf-btn{background:none;border:0;padding:2px 4px;margin:-2px -4px;border-radius:6px;
+.wf-btn{background:none;border:0;padding:0;margin:0;
   font:inherit;cursor:pointer;transition:.12s}
-.wf-btn:hover{background:var(--surface-2)}
 .wf-btn:focus-visible{outline:2px solid var(--signal);outline-offset:1px}
 /* ⚠ Ueber allem, aber UNTER dem Menue. Ohne diese Flaeche schliesst der Klick daneben
    nicht, sondern oeffnet die Zeile darunter. */
