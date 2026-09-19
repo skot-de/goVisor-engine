@@ -43,6 +43,11 @@ const LEADS = [];
 /* ── Mutabler Zustand (Defaults; React verwaltet ihn später) ── */
 let activeId = null, activeTab = 'uebersicht';
 let filters = {ungesichtet:false, gemerkt:false, kandidaten:false, netz:false};
+/* ⚠ Der Stichtag kommt von aussen, nicht aus `localStorage`. `explorerCore.js` laeuft in
+   den Sonden unter `node`, wo es kein `localStorage` gibt — ein Zugriff hier wuerde die
+   halbe Pruefkette mit einem ReferenceError stoppen. Die React-Schale setzt ihn. */
+let stichtagBesuch = null;
+export function setStichtag(tag){ stichtagBesuch = tag || null; }
 let editBestand = false;
 let offeneGruppen = new Set();   // welche Begriffs-Gruppen sind ausgeklappt   // Bestand kuratieren: + / − direkt in der Liste
 let searchTokens = [];   // [{type, value, label, radius?}]
@@ -814,6 +819,48 @@ function sorted(rows){
   });
 }
 
+/* ── Was ist seit deinem letzten Besuch passiert? ──────────────────────────────────────
+ *
+ * ⚠ EINE MARKE JE ZEILE, NICHT ZWEI. „Neu" ist eine Zeitachse, „geaendert/aufgehoben" eine
+ * Ereignisart — baut man beides getrennt, stehen am Ende zwei konkurrierende Auszeichnungen
+ * nebeneinander und der Leser muss sie gegeneinander abwaegen. Stattdessen traegt jede Zeile
+ * ihr JUENGSTES Ereignis, und „neu" ist davon nur der erste Fall.
+ *
+ * ⚠ UND SIE ERSCHEINT NUR, WENN DAS EREIGNIS JUENGER IST ALS DEIN LETZTER BESUCH. Damit
+ * heisst „neu" wirklich neu fuer DICH, nicht „in den letzten sieben Tagen veroeffentlicht",
+ * und die Marke verschwindet von allein, wenn du sie gesehen hast. Ohne diese Bedingung
+ * waere es wieder ein Teppich: 13,6 % der offenen Leads sind juenger als eine Woche.
+ *
+ * ⚠ DAS DATUM IST DIE AUSSAGE, NICHT DAS WORT. Bei einer Fristaenderung steht die NEUE
+ * Frist in der Marke — „Frist 06.10." sagt in vier Zeichen, was „geaendert" verschweigt.
+ * Gemessen ueber 12.557 Ereignisse aus drei Monaten ist die Fristaenderung mit 4.632 der
+ * haeufigste Fall, bei dem ueberhaupt etwas Konkretes danebensteht.
+ */
+const AKT_WORT = { aufgehoben:'aufgehoben', ausgesetzt:'ausgesetzt', geaendert:'geändert' };
+/* ⚠ ZWEI DAUERHAFTE ZUSTAENDE, DER REST SIND EREIGNISSE. Eine Aufhebung verfaellt nicht:
+   wer den Vorgang zum ersten Mal sieht, nachdem er aufgehoben wurde, muss das erfahren —
+   sonst steht dort „neu" ueber einer Ausschreibung, auf die niemand mehr bieten kann. Eine
+   Fristaenderung dagegen ist eine Nachricht, und Nachrichten sind irgendwann gelesen.
+   Aufgefallen ist der Unterschied erst in der Gegenprobe (`pruefe-frische.mjs`, Fall 4);
+   die erste Fassung liess auch die Aufhebung nach dem Besuch verfallen. */
+const AKT_BLEIBT = new Set(['aufgehoben', 'ausgesetzt']);
+function frischeMarke(l){
+  const seit = stichtagBesuch;
+  const a = l.aktualitaet;
+  if(a && a.am && (!seit || a.am > seit || AKT_BLEIBT.has(a.art))){
+    const art = a.art === 'frist' ? 'frist' : (AKT_WORT[a.art] ? a.art : 'geaendert');
+    const wort = art === 'frist' && a.fristNeu
+      ? tk("Frist {d}", {d: a.fristNeu.slice(8,10) + '.' + a.fristNeu.slice(5,7) + '.'})
+      : tk(AKT_WORT[art] || 'geändert');
+    const hinweis = [a.text, a.am].filter(Boolean).join(' · ');
+    return `<span class="akttag akt-${art}" title="${esc(hinweis)}">${wort}</span>`;
+  }
+  // Kein Ereignis, aber juenger als der letzte Besuch: schlicht neu.
+  if(l.pub && seit && l.pub > seit)
+    return `<span class="akttag akt-neu" title="${esc(tk("Veröffentlicht am {d}", {d: l.pub}))}">${tk("neu")}</span>`;
+  return '';
+}
+
 /* ── cellHTML — Zellen-Renderer (liefert HTML-String) ── */
 function cellHTML(l, key){
   switch(key){
@@ -855,9 +902,7 @@ function cellHTML(l, key){
       const beleg = f && f.ort!=='Titel'
         ? `<span class="fund"><span class="fund-o">${f.ort}</span>${f.text?`<span class="fund-t">${hervorheben(f.text, wort)}</span>`:''}</span>`
         : '';
-      const akt = l.aktualitaet
-        ? `<span class="akttag akt-${l.aktualitaet.art}" title="${esc(l.aktualitaet.text+' ('+l.aktualitaet.am+')')}">${
-            l.aktualitaet.art==='aufgehoben'?'aufgehoben':tk("geändert")}</span>` : '';
+      const akt = frischeMarke(l);
       const eigen = l.eigen && l.eigenBestaetigt!==false
         ? `<span class="eigentag" title="${esc(tk("Ihr seid hier Auftragnehmer. Für euch ein Risiko, kein Neugeschäft"))}">${tk("euer Vertrag")}</span>` : '';
       // #12: Bei Mehr-Los-Vergaben zeigen, über welches Los die Relevanz kommt (Best-Los).

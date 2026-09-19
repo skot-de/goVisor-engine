@@ -1420,6 +1420,20 @@ step "Bundeslaender ableiten (fuer Leads ohne NUTS-Kennung)"
 $PY scripts/region_ableiten.py \
   || echo "  ⚠ Regions-Ableitung fehlgeschlagen — Bundeslaender bleiben so lueckenhaft wie die Quelle."
 
+# ── WAS IST SEIT GESTERN AN LAUFENDEN VERFAHREN PASSIERT? ────────────────────────────
+#
+# ⚠ MUSS VOR DEM EXPORT LAUFEN. `export_web_leads.py` liest `notice_changes.parquet` und
+# haengt daraus das Feld `aktualitaet` an jeden Lead. Steht dieser Schritt dahinter, traegt
+# die Liste jeden Tag den Stand von GESTERN — und beim allerersten Lauf gar keinen. Genau
+# derselbe Fehler steckte oben schon einmal in `region_ableiten.py`; aufgefallen ist er
+# damals nur an nicht passenden Zeilennummern.
+#
+# ⚠ NUR DE. `baue_aenderungen.py` nimmt `--land`, aber die Erkennung haengt an eForms
+# (`<efac:Changes>`), waehrend AT und CH ueber eigene Portalformate laufen. Steht als
+# offene Luecke in `pruefe_verdrahtung.OFFEN_NUR_DE` — nicht hier stillschweigend nachziehen.
+$PY scripts/baue_aenderungen.py --land DE --monate 3 \
+  || echo "  ⚠ Aenderungen nicht gebaut — die Liste zeigt dann keine Fristaenderungen und keine Aufhebungen."
+
 step "Frontend-Daten exportieren (web/data)"
 if teil export_web_leads $PY scripts/export_web_leads.py; then
   # ACHTUNG: export_web_leads.py schreibt plz-geo.json komplett neu und wirft dabei den

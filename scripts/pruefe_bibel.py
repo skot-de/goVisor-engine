@@ -109,8 +109,17 @@ def _behauptungen() -> list[tuple[str, str, bool, str]]:
         "pv", ROOT / "scripts" / "pruefe_verdrahtung.py")
     pv = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(pv)
-    aus.append(("05/06", "OFFEN_NUR_DE ist leer (16 Tabellen verdrahtet)",
-                not pv.OFFEN_NUR_DE, f"{len(pv.OFFEN_NUR_DE)} Eintraege"))
+    # ⚠ AM 2026-09-19 WAR DIE LISTE NICHT MEHR LEER, und das ist richtig so: mit
+    # `notice_changes` (Aenderungserkennung) kam eine Tabelle dazu, die es nur fuer DE
+    # gibt — die Erkennung haengt an eForms, AT und CH laufen ueber eigene Portalformate.
+    # Die Pruefung auf „leer" haette den Eintrag zum Fehler gemacht und damit genau das
+    # Verhalten belohnt, das CLAUDE.md verbietet: die Luecke verschweigen statt sie
+    # einzutragen. Geprueft wird deshalb der INHALT — waechst die Liste um etwas
+    # Unbenanntes, schlaegt sie weiterhin an.
+    _offen_erwartet = {"notice_changes"}
+    aus.append(("05/06", f"OFFEN_NUR_DE enthaelt genau {sorted(_offen_erwartet)} (Stand 2026-09-19)",
+                set(pv.OFFEN_NUR_DE) == _offen_erwartet,
+                f"{sorted(pv.OFFEN_NUR_DE)}"))
 
     # Regions-Ebene je Land (Kapitel 07) — steht an ZWEI Stellen und muss uebereinstimmen.
     from govisor import gold

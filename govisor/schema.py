@@ -1842,6 +1842,83 @@ def _eforms_party(company: ET.Element) -> Party:
     )
 
 
+# ── Berichtigungen (eForms) ──────────────────────────────────────────────────────────
+#
+# ⚠ SEIT FEBRUAR 2024 SAHEN WIR KEINE EINZIGE MEHR. Gemessen am 2026-09-19:
+#
+#     Jahr   Ausschreibungen   erkannte Berichtigungen
+#     2023        171.607              14.835
+#     2024        172.605                 790
+#     2025        168.884                   0
+#     2026        132.048                   0
+#
+# Der Grund ist kein Rueckgang im Markt, sondern ein Formatwechsel: `notice_kind`
+# stand nur fuer das Legacy-Formular `F14_2014`, und dessen letzter Satz traegt den
+# 2024-02-05. eForms kennt kein eigenes Berichtigungsformular — eine Berichtigung IST
+# eine vollstaendige, neu veroeffentlichte `ContractNotice`, erkennbar allein am Block
+# `<efac:Changes>` in der UBL-Erweiterung.
+#
+# ⚠ ZWEI NAMENSRAEUME FUER DENSELBEN VERWEIS. `efbc:ChangedNoticeIdentifier` traegt
+# meist die eForms-UUID der geaenderten Fassung (`0a21b6ca-…-01`), gelegentlich aber
+# die Veroeffentlichungsnummer (`708565-2022`). Gemessen an 83 Berichtigungen aus
+# 2026-06: 81 UUID, 2 Nummer. Wer nur auf `publication_number` joint, findet 2,4 % und
+# haelt das fuer die Wahrheit. Deshalb steht daneben die VERFAHRENSKENNUNG
+# (`cbc:ContractFolderID`, BT-04), die alle Bekanntmachungen eines Verfahrens teilen —
+# der belastbarere Schluessel, in 593 von 600 Meldungen vorhanden.
+#
+# ⚠ WAS DIESE FUNKTION NICHT TUT: sie aendert `notice_kind` nicht. Eine Berichtigung
+# wird weiterhin als `cn` gefuehrt, und das ist eine offene Baustelle, keine
+# Entscheidung — gemessen sind 13 % aller eForms-Meldungen Berichtigungen, 81 von 195
+# davon stehen als EIGENER Lead im Export, und 39 dieser 81 haben dort einen Zwilling
+# mit gleichem Titel und Kaeufer. Das zu aendern heisst, die Lead-Erzeugung umzubauen
+# (die Berichtigung traegt die AKTUELLE Frist, das Original die veraltete), und das
+# gehoert nicht in denselben Schritt wie das Erkennen.
+_CHANGE_REASON_TEXT = {
+    "cor-buy": "Aenderung durch den Auftraggeber",
+    "cor-esen": "Uebermittlungsfehler",
+    "cor-pub": "Fehler bei der Veroeffentlichung",
+    "cor-no-statement": "ohne Angabe",
+}
+
+
+def eforms_changes(root: ET.Element) -> dict[str, str] | None:
+    """Die Aenderungsangaben einer eForms-Bekanntmachung, oder None.
+
+    Liefert Verweis, Verfahrenskennung, Grund (Code und Klartext) und die Beschreibung.
+    Die neue Angebotsfrist steht NICHT hier: sie ist die regulaere `submission_deadline`
+    der Bekanntmachung selbst — eine Berichtigung wiederholt alle Angaben.
+    """
+    changes = next(_iter_named(root, "Changes"), None)
+    if changes is None:
+        return None
+    raus: dict[str, str] = {}
+    ref, _ = _first_child_text(changes, ("ChangedNoticeIdentifier",))
+    if ref:
+        raus["geaendert_ref"] = ref.strip()
+        # Welcher Namensraum? Die Unterscheidung steht im Datensatz, nicht im Kopf des
+        # Lesers: `123456-2026` ist eine Veroeffentlichungsnummer, alles andere eine UUID.
+        raus["ref_art"] = "nummer" if re.fullmatch(r"\d+-\d{4}", ref.strip()) else "uuid"
+    for elem in _iter_named(root, "ContractFolderID"):
+        if elem.text and elem.text.strip():
+            raus["verfahren"] = elem.text.strip()
+            break
+    for reason in _iter_named(changes, "ChangeReason"):
+        code, _ = _first_child_text(reason, ("ReasonCode",))
+        text, _ = _first_child_text(reason, ("ReasonDescription",))
+        if code:
+            raus["grund_code"] = code.strip()
+            raus["grund"] = _CHANGE_REASON_TEXT.get(code.strip(), code.strip())
+        if text and text.strip():
+            raus["grund_text"] = " ".join(text.split())[:300]
+        break
+    for change in _iter_named(changes, "Change"):
+        text, _ = _first_child_text(change, ("ChangeDescription",))
+        if text and text.strip():
+            raus["beschreibung"] = " ".join(text.split())[:300]
+            break
+    return raus
+
+
 def _eforms_buyer_org_ids(root: ET.Element) -> list[str]:
     """Every buyer's org reference, in document order.
 

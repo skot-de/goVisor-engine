@@ -147,7 +147,62 @@ def _gliederungs_index() -> dict:
         return {}
 
 
+def _veroeffentlicht_index(tage: int = 180) -> dict:
+    """notice_id → Veroeffentlichungsdatum, fuer die letzten `tage`.
+
+    ⚠ WARUM EIN FENSTER. Der Wert traegt genau eine Frage: „ist das neu, seit ich zuletzt
+    hier war?" Ein Vorgang von vor einem Jahr ist fuer niemanden neu, egal wann er kommt.
+    Ohne Fenster waeren es 1,27 Mio. Eintraege im Speicher fuer eine Aussage, die nur die
+    juengsten betrifft; mit 180 Tagen sind es 104.126.
+
+    ⚠ Und deshalb bedeutet ein FEHLENDES Datum hier nicht „unbekannt", sondern „nicht
+    frisch". Die Oberflaeche darf daraus keine Luecke machen.
+    """
+    try:
+        con = _db.connect()
+        return {r[0]: str(r[1]) for r in con.execute(
+            "SELECT notice_id, publication_date FROM read_parquet("
+            "'data/silver/*/notices/**/*.parquet', union_by_name=true)"
+            f" WHERE notice_kind IN ('cn','pin') AND publication_date >= current_date - {tage}"
+        ).fetchall()}
+    except Exception:
+        return {}
+
+
+def _aenderungs_index() -> dict:
+    """lead_id → juengstes Ereignis am Verfahren (`scripts/baue_aenderungen.py`).
+
+    ⚠ JE LEAD NUR EINES. Ein Verfahren kann mehrfach berichtigt werden — in der Liste ist
+    Platz fuer eine Aussage, und das ist die letzte. Die aelteren bleiben in der Tabelle
+    und gehoeren in die Detailansicht.
+
+    ⚠ Die Rangfolge ist NICHT das Datum allein. Eine Aufhebung schlaegt eine spaetere
+    Fristaenderung: wer aufgehoben hat, hat aufgehoben, und dass danach noch etwas am
+    Verfahren passiert, aendert fuer den Bieter nichts.
+    """
+    rang = {"aufgehoben": 3, "ausgesetzt": 2, "frist": 1, "geaendert": 0}
+    dateien = sorted(str(p) for p in pathlib.Path("data/gold").glob("*/notice_changes.parquet"))
+    if not dateien:
+        return {}
+    try:
+        con = _db.connect()
+        zeilen = con.execute(
+            f"SELECT lead_id, art, am, text, frist_alt, frist_neu FROM read_parquet({dateien!r},"
+            " union_by_name=true)").fetchall()
+    except Exception:
+        return {}
+    raus: dict = {}
+    for lid, art, am, text, alt, neu_ in zeilen:
+        kandidat = {"art": art, "am": am, "text": text, "fristAlt": alt, "fristNeu": neu_}
+        da = raus.get(lid)
+        if da is None or (rang.get(art, 0), am or "") > (rang.get(da["art"], 0), da["am"] or ""):
+            raus[lid] = kandidat
+    return raus
+
+
 GLIEDERUNG = _gliederungs_index()
+VEROEFFENTLICHT = _veroeffentlicht_index()
+AENDERUNG = _aenderungs_index()
 VOLLTEXT = _volltext_index()
 
 
@@ -1320,7 +1375,18 @@ def export_branche(key):
                 "quelle": ("unterlagen" if g("doc_eligibility") or g("doc_guarantee") is not None else "eforms"),
             },
             "status": "ungesichtet", "seen": None, "merk": None,
-            "aktualitaet": None, "aufwand": None,
+            # ⚠ HIER STAND `"aktualitaet": None` — eine FESTE NULL, in allen 85.168 Leads.
+            # Das Frontend rendert dafuer seit jeher ein Faehnchen „geaendert"/„aufgehoben"
+            # am Titel, das folglich nie erschienen ist. Gebaut, nie gefuellt.
+            #
+            # Der Grund lag eine Ebene tiefer: `notice_kind='corrigendum'` traf seit dem
+            # 2024-02-05 nichts mehr, weil eForms kein eigenes Berichtigungsformular kennt.
+            # Gemessen ueber 37.398 Meldungen aus 2026-07..09: 13,4 % sind Berichtigungen.
+            "aktualitaet": AENDERUNG.get(g("lead_id")),
+            # ⚠ Ein FEHLENDES Datum heisst „nicht frisch", nicht „unbekannt" — der Index
+            # reicht 180 Tage zurueck (Begruendung in `_veroeffentlicht_index`).
+            "pub": VEROEFFENTLICHT.get(g("lead_id")),
+            "aufwand": None,
             "comments": [], "log": [], "kw": [], "extrakt": [],
             "hasCmp": bool(g("has_comparables")), "hasContracts": bool(g("has_contract_history")),
         })

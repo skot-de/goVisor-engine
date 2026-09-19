@@ -34,6 +34,15 @@ FK_AUSNAHMEN: dict[str, str] = {
         "12.861 nicht aufloesbar, davon 4.916 verschmolzen und 7.945 Mitglieder aus dem "
         "kuratierten Gruppen-Katalog, die in DE nie als Partei auftraten. Eine "
         "Gruppendefinition darf Mitglieder nennen, die man noch nicht gesehen hat.",
+    "notice_changes.parquet":
+        "82,4 % ohne Lead (10.346 von 12.557, gemessen 2026-09-19) — und das ist die "
+        "Bauart, kein Defekt. Ein Aenderungsereignis wird auf JEDE Bekanntmachung seines "
+        "Verfahrens geschrieben, weil der Lead im Export das Original sein kann oder die "
+        "Berichtigung selbst (gemessen 81 von 195 Berichtigungen sind ein eigener Lead). "
+        "Die uebrigen Geschwister sind Zuschlags- und Vorinformationen, die nie ein Lead "
+        "werden. Wer hier auf null Waisen ginge, muesste beim Bauen schon wissen, welche "
+        "Bekanntmachung spaeter ein Lead wird — und genau diese Kopplung soll die Tabelle "
+        "nicht haben.",
 }
 
 

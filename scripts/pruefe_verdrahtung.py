@@ -250,7 +250,17 @@ BEWUSST_NUR_DE: dict[str, str] = {
 #     lead_party       AT 38.681 / CH 16.462      buyer_stats   AT  4.341 / CH  5.656
 #     lead_requirement AT  2.748 / CH    595      market_opp.   AT    317 / CH    125
 # Die Liste ist leer und bleibt stehen, weil der naechste Fund dieselbe Form haben wird.
-OFFEN_NUR_DE: dict[str, str] = {}
+OFFEN_NUR_DE: dict[str, str] = {
+    # ⚠ `notice_changes` (2026-09-19) ist eine BAUSTELLE, keine Entscheidung — deshalb
+    # steht sie hier und nicht in `BEWUSST_NUR_DE`. `scripts/baue_aenderungen.py` nimmt
+    # `--land` entgegen und liest `data/raw_live/<land>/`; fuer AT, CH und LU ist es nie
+    # gelaufen. Ob es dort ueberhaupt etwas findet, ist offen: die Erkennung haengt an
+    # eForms (`<efac:Changes>`), waehrend AT und CH ueber eigene Portalformate laufen.
+    # Genau der Fall, den CLAUDE.md meint — wer ein Feature fuer DE baut, hat es
+    # angefangen, nicht fertig gebaut.
+    "notice_changes": "Aenderungserkennung haengt an eForms; AT/CH laufen ueber eigene "
+                      "Portalformate, LU ist nur noch nicht gelaufen",
+}
 
 
 # Laender, die in Silber liegen duerfen, ohne in Gold zu erscheinen. Alles andere ist ein

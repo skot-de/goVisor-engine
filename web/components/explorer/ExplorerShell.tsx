@@ -6,7 +6,7 @@ import {
   suggestList, classifyQuery, netzInteresse, netzFreigabe, offeneGruppen, angaben, setLeads, setMarket, setBestand,
   setNachbarn, setNetzZustand, toggleNetzLos, netzLoseVon, setPlzGeo, setPlzLand,
   setProfile, setUserContracts, parseWert, aufwandStufe,
-  applyAnalyse, handlungsFrist,
+  applyAnalyse, handlungsFrist, setStichtag,
 } from "@/lib/explorerCore";
 import { loadContracts } from "@/lib/supabase/contracts";
 import { buildProfile, brancheFromProfile } from "@/lib/profileEngine";
@@ -36,6 +36,7 @@ import { Cockpit } from "./Cockpit";
 import { getOrCreateCalendarFeed } from "@/lib/supabase/calendar";
 import { useSprache } from "@/lib/i18n";
 import { profilGeaendert } from "@/lib/useProfil";
+import { stichtag, besuchMerken } from "@/lib/besuch";
 
 type Profile = ReturnType<typeof buildProfile>;
 const PROFILE_KEY = "govisor.profile.v1";
@@ -866,6 +867,22 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
    * ⚠ `bump()` ZUM SCHLUSS. Die Daten kommen aus dem Netz, also nach dem ersten Zeichnen.
    * Ohne den Anstoss stuende die Spalte bis zur naechsten Interaktion leer da — und das
    * sieht genau so aus wie „wurde wieder nicht gespeichert". */
+  /* Frischemarke: Stichtag rein, Besuch raus.
+   *
+   * ⚠ DIE REIHENFOLGE IST DER GANZE TRICK. `stichtag()` liest den Stand des VORIGEN
+   * Besuchs; `besuchMerken()` ueberschreibt ihn. Wer beides beim Laden macht, loescht die
+   * Antwort auf die Frage, die er gerade stellt — es waere nie wieder etwas neu. Deshalb
+   * wird gemerkt, wenn die Seite verlassen wird.
+   *
+   * ⚠ `layout`-Effekt waere richtiger, aber CORE wird ohnehin erst nach dem ersten Zeichnen
+   * befuellt; ein `bump()` hier waere ein zweites Zeichnen ohne Gewinn. */
+  useEffect(() => {
+    setStichtag(stichtag());
+    const raus = () => besuchMerken();
+    window.addEventListener("pagehide", raus);
+    return () => { window.removeEventListener("pagehide", raus); raus(); };
+  }, []);
+
   useEffect(() => {
     let ab = false;
     loadLeadStatus().then((m) => {

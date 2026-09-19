@@ -633,7 +633,15 @@ mark.hit{background:#CFF3E4;box-shadow:0 0 0 2px #CFF3E4}
 .akttag{font-family:var(--mono);font-size:8.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;
   padding:1px 6px;border-radius:100px;margin-left:8px;white-space:nowrap;display:inline-block}
 .akt-aufgehoben{color:var(--risk);background:var(--risk-wash);border:1px solid var(--risk)}
+.akt-ausgesetzt{color:var(--risk);background:var(--risk-wash);border:1px solid var(--risk)}
 .akt-geaendert{color:var(--flag);background:var(--flag-wash);border:1px solid var(--flag)}
+/* ⚠ Die Fristaenderung ist die haeufigste Meldung mit konkretem Inhalt (4.632 von 12.557
+   Ereignissen in drei Monaten) und die einzige, die eine ZAHL traegt. Sie steht deshalb in
+   der Warnfarbe wie „geaendert" — es ist dieselbe Art von Nachricht, nur praeziser. */
+.akt-frist{color:var(--flag);background:var(--flag-wash);border:1px solid var(--flag)}
+/* ⚠ „neu" ist KEINE Warnung. Es sagt nur, dass die Zeile seit dem letzten Besuch dazukam;
+   wer sie in Alarmfarbe setzt, macht aus dem haeufigsten Fall den lautesten. */
+.akt-neu{color:var(--signal-deep);background:var(--signal-wash);border:1px solid transparent}
 .aktbar{display:flex;align-items:flex-start;gap:var(--s2);margin-bottom:var(--s3);
   padding:var(--s3) var(--s4);border-radius:var(--r);font-size:var(--t-sm);line-height:1.55}
 .aktbar svg{width:16px;height:16px;flex:none;margin-top:1px}
