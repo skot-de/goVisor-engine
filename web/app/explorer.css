@@ -1542,7 +1542,9 @@ td.c-status{white-space:nowrap}
 
 /* ── Team-Annotation: violett = menschliches Urteil (grün bleibt Maschinen-Fakt) ── */
 :root{--note:#6D5DA6;--note-wash:#EEEBF7;--note-line:#D6CFEA;--note-deep:#4C3E85}
-.wf{font-size:11px;font-weight:600;padding:3px 9px;border-radius:100px;display:inline-flex;align-items:center;gap:5px;white-space:nowrap;letter-spacing:.01em}
+/* 11,5 px wie Phase, Leistung und Unterlagen. Stand bis zum 2026-09-19 auf 11 px —
+   ein halbes Pixel, das man einzeln nicht sieht und nebeneinander schon. */
+.wf{font-size:11.5px;font-weight:600;padding:3px 9px;border-radius:100px;display:inline-flex;align-items:center;gap:5px;white-space:nowrap;letter-spacing:.01em}
 /* Alle Status-Labels gleich: neutraler Umriss; gewählt = gefüllt */
 .wf{border:1px solid var(--line-strong);background:var(--surface);color:var(--ink-700)}
 .wf-int.on,.wf-int.filled{background:var(--note);border-color:var(--note);color:#fff}
@@ -2655,13 +2657,25 @@ td.c-band .passung i{display:none}
    als eine andere Art von Sache. Der Grund traegt die Abstufung, nicht die Form. */
 .dokpill{font-size:11.5px;font-weight:500;display:inline-flex;align-items:center;
   white-space:nowrap;padding:3px 9px;border-radius:100px;border:1px solid transparent}
-.dok-ja{background:var(--surface-3);color:var(--ink-600)}
-.dok-ja.dok-ausgewertet{background:var(--signal-wash);color:var(--signal-deep);font-weight:600}
-.dok-link2{background:transparent;color:var(--ink-400);border-color:var(--line)}
-.dok-link2:hover{color:var(--signal-deep);border-color:var(--signal)}
-.dok-nein{color:var(--ink-300);cursor:help;user-select:none}
+/* ⚠ ZWEI VON DREI LABELN HATTEN GAR KEINEN GRUND. Gedacht war es als Abstufung, gelesen
+   wurde es als Ausfall: in einer Zeile, in der Phase, Leistung und Status jeweils eine
+   getoente Kapsel tragen, sieht ein Wort ohne Grund nach fehlender Farbe aus, nicht nach
+   Zurueckhaltung. Die Abstufung sitzt jetzt IM Grund, nicht in seiner Abwesenheit:
+   satt (ausgewertet) → gedaempft (vorhanden) → neutral (nur Link) → fast weg (nichts).
+   Dieselbe Bauart wie `.wettb`, das es mit signal-wash und surface-3 genauso macht. */
+.dok-ja{background:#EDF5F1;color:#2F6B4A}
+.dok-ja.dok-ausgewertet{background:var(--signal-wash);color:var(--signal-deep)}
+.dok-link2{background:var(--surface-3);color:var(--ink-500)}
+.dok-link2:hover{background:var(--signal-wash);color:var(--signal-deep)}
+.dok-nein{background:#F4F6F5;color:var(--ink-300);cursor:help;user-select:none}
 
-td.c-doks button{font:inherit;cursor:pointer;transition:.12s}
+/* ⚠ `font:inherit` STAND HIER UND HAT DIE KAPSEL UEBERSTIMMT. Das Kuerzel setzt Groesse,
+   Gewicht, Familie und Zeilenhoehe auf geerbt, und `td.c-doks button` ist spezifischer als
+   `.dokpill` — die Label standen in 13 px statt 11,5 px in einer Zeile mit lauter 11,5-px-
+   Marken. Beim Status faellt derselbe Fehler nicht auf, weil `.wf` dort auf einem INNEREN
+   span sitzt und die Vererbung schlaegt; hier sitzt die Klasse am Knopf selbst.
+   Nur die Familie erbt der Knopf naemlich wirklich nicht von allein. */
+td.c-doks button{font-family:inherit;cursor:pointer;transition:.12s}
 td.c-doks button:focus-visible{outline:2px solid var(--signal);outline-offset:1px}
 /* ⚠ „Nein" bleibt blasser als jedes Label MIT Inhalt, aber sichtbar: eine leere Zelle
    liest sich als Fehler, ein Wort sagt „nachgesehen, nichts da". Es traegt als einziges
