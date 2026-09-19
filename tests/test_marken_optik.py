@@ -105,3 +105,25 @@ def test_jede_ausnahme_traegt_eine_begruendung():
         f"Regel — dann gehoert die Regel geaendert, nicht die Liste verlaengert.")
     kommentar = "\n".join(z for z in block.splitlines() if z.strip().startswith("#"))
     assert len(kommentar) > 200, "die Ausnahmen sind nicht begruendet"
+
+
+def test_die_liste_deckt_alle_marken_spalten_ab():
+    """⚠ Die Sonde misst nur, was in `MARKEN` steht — und genau daran ist sie einmal
+    gescheitert: `.wettb` fehlte, also meldete sie „eine Bauform", waehrend die Spalte
+    Wettbewerb in 9,5 px mit Versalien danebenstand (15 px hoch statt 21). Gefunden hat es
+    Sven, nicht die Sonde.
+
+    Dieser Test schliesst die halbe Luecke: das ENTFERNEN einer bekannten Spalte faellt auf.
+    Eine NEUE Marken-Spalte muss weiterhin ein Mensch eintragen. Das ist ehrlicher, als so
+    zu tun, als liesse sich „ist das eine Marke?" aus dem Quelltext ableiten — in
+    `cellHTML` stehen Dutzende `<span class=…>`, und die meisten sind Text, nicht Marke.
+    """
+    code = SONDE.read_text(encoding="utf-8")
+    i = code.index("MARKEN = [")
+    block = code[i:code.index("\n]", i)]
+    for zelle, was in (("c-src", "Phase"), ("c-natur", "Leistung"), ("c-wf", "Status"),
+                       ("c-doks", "Unterlagen"), ("c-empf", "Empfehlung"),
+                       ("c-neu", "Wettbewerb")):
+        assert f'"{zelle}"' in block, (
+            f"die Spalte {was} ({zelle}) wird nicht mehr gemessen — sie kann beliebig "
+            f"auseinanderlaufen, ohne dass es auffaellt")

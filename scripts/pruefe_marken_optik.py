@@ -33,8 +33,17 @@ import sys
 
 WURZEL = pathlib.Path(__file__).resolve().parent.parent
 
-# Marke → (Zelle, HTML des Labels). Die Liste ist der Vertrag: wer eine Marken-Spalte
-# hinzufuegt, traegt sie hier ein, sonst prueft die Sonde sie nie.
+# Marke → (Zelle, HTML des Labels).
+#
+# ⚠ DIE GRENZE DIESER SONDE STEHT IN DIESER LISTE. Sie misst nur, was hier drinsteht — und
+# genau daran ist sie am 2026-09-19 einmal gescheitert: `.wettb` (Spalte Wettbewerb) fehlte,
+# also meldete sie „eine Bauform", waehrend diese eine Spalte in 9,5 px mit Versalien und
+# Sperrung danebenstand, 15 px hoch statt 21. Gefunden hat es wieder Sven, nicht die Sonde.
+#
+# `tests/test_marken_optik.py::test_die_liste_deckt_alle_marken_spalten_ab` haelt die
+# bekannten Spalten fest, sodass das ENTFERNEN einer auffaellt. Eine NEUE Marken-Spalte
+# muss weiterhin ein Mensch eintragen; das ist die verbleibende Luecke, und sie steht hier,
+# damit niemand die gruene Meldung fuer mehr haelt, als sie ist.
 MARKEN = [
     ("Phase",            "c-src",   '<span class="srcpill src-auslauf">Auslauf</span>'),
     ("Phase Zuschlag",   "c-src",   '<span class="srcpill src-award">Zuschlag</span>'),
@@ -48,6 +57,8 @@ MARKEN = [
     ("Empfehlung gut",   "c-empf",  '<span class="empf rec-go">Hohe Passung</span>'),
     ("Empfehlung offen", "c-empf",  '<span class="empf rec-open">Passung mittel</span>'),
     ("Empfehlung stop",  "c-empf",  '<span class="empf rec-stop">Frist zu knapp</span>'),
+    ("Wettbewerb neu",   "c-neu",   '<span class="wettb neu">Neu</span>'),
+    ("Wettbewerb folge", "c-neu",   '<span class="wettb folge">Folge</span>'),
 ]
 
 

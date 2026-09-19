@@ -1316,7 +1316,14 @@ td.c-konk{white-space:nowrap}
 .kf-none{font-size:11px;color:var(--ink-400);font-style:italic}
 
 td.c-neu{white-space:nowrap}
-.wettb{font-family:var(--mono);font-size:9.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:2px 7px;border-radius:100px}
+/* ⚠ WAR 9,5 PX IN VERSALIEN UND MONO. Sven am 2026-09-19: „kann es sein das die
+   wettbewerb label kleiner sind?" — nachgemessen ja, und nicht knapp: 15 px hoch statt
+   21, gesperrt und in Grossbuchstaben, waehrend jede andere Marke der Zeile eine
+   11,5-px-Kapsel ist. Die Sonderform stammt aus der Zeit, als die Spalte ein Beiwerk war;
+   inzwischen sagt sie dasselbe wie die uebrigen: ein Wort, ein Zustand. Die Farben
+   bleiben, die Form reiht sich ein. */
+.wettb{font-size:11.5px;font-weight:500;padding:3px 9px;border-radius:100px;
+  border:1px solid transparent;white-space:nowrap}
 .wettb.neu{background:var(--signal-wash);color:var(--signal-deep)}
 .wettb.folge{background:var(--surface-3);color:var(--ink-500)}
 td.c-vol{text-align:right;white-space:nowrap}
