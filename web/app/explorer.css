@@ -2634,11 +2634,18 @@ td.c-band .passung i{display:none}
 .dok-verweis{font-size:11.5px;color:var(--ink-400);cursor:pointer;
   text-decoration:underline;text-decoration-style:dotted;text-underline-offset:2px;transition:.12s}
 .dok-verweis:hover{color:var(--signal)}
+/* ⚠ Knopf, der wie Text aussieht. Alle sechs Zustaende sind `<button>` — damit Tastatur
+   und Fokusring funktionieren wie bei Stern, Status und Ausblenden. Sichtbar bleibt davon
+   nichts: keine Flaeche, kein Rahmen, Schriftgrad wie die Zelle. */
+td.c-doks button{background:none;border:0;padding:2px 4px;margin:-2px -4px;border-radius:5px;
+  font:inherit;cursor:pointer;transition:.12s}
+td.c-doks button:hover{background:var(--surface-2)}
+td.c-doks button:focus-visible{outline:2px solid var(--signal);outline-offset:1px}
 .dok-liste{font-size:11.5px;color:var(--ink-400);cursor:pointer;
   text-decoration:underline;text-decoration-style:dotted;text-underline-offset:2px;transition:.12s}
 .dok-liste:hover{color:var(--signal)}
-.dok-warte{font-size:11.5px;color:var(--ink-400);font-style:italic;cursor:help}
-.dok-leer{font-size:11.5px;color:var(--ink-300);cursor:help}
+.dok-warte{font-size:11.5px;color:var(--ink-400);font-style:italic}
+.dok-leer{font-size:11.5px;color:var(--ink-300)}
 
 /* ── Der Weg zum Portal, im Detail statt in der Zelle ─────────────────────────
    ⚠ Ein echtes Anker-Element mit target=_blank, kein Skript. Nur so kann der Nutzer mit

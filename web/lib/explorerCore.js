@@ -903,6 +903,15 @@ function cellHTML(l, key){
       return `<td class="c-band">${bandMeter(a.stufe, true, tk('Angebotsaufwand'), naHint)}</td>`;
     }
     case 'doks': {
+      /* ⚠ `<button>`, NICHT `<span>` — und das war heute schon einmal falsch.
+         Sven sagte „finde die button auch gerade nicht gut", und ich habe daraufhin das
+         ELEMENT getauscht statt nur sein Aussehen. Der Einwand galt der gefuellten
+         Flaeche, nicht der Funktion. Die Folge war eine Regression: fuenf der sechs
+         anklickbaren Zellen einer Zeile sind `<button>` (Stern, Ausblenden, Netz, Unserer,
+         Status), meine war die Ausnahme — ohne Tastaturzugang, ohne Fokusring, und bei
+         vier der sechs Zustaende ohne Zeiger. Einer trug sogar `cursor: help`: er
+         verspricht einen Hinweis und springt stattdessen weg.
+         Jetzt wieder ein Knopf, der wie Text aussieht. */
       /* ⚠ JEDER ZUSTAND SPRINGT INS DETAIL, nicht nur die beiden mit Link. Sven am
          2026-09-19: „bei jedem klick landet man in den ausschreibungs details unter
          Unterlagen." Die Spalte handelt von den Unterlagen — wer sie anklickt, will
@@ -934,13 +943,13 @@ function cellHTML(l, key){
                          : "{p} Pruefpunkte, {k} K.-o.-Kriterien aus {d} Dokumenten. Ampel: {x}",
                          {p: a.pruef, k: a.ko, d: a.dok, x: tk(a.ampel || "unbekannt")});
         const zahl = a.dok ? String(a.dok) : tk("gelesen");
-        return `<td class="c-doks"><span class="dok dok-${esc(a.ampel || "na")}" data-doklink="${esc(l.id)}" title="${esc(titel)}">`
-             + `<b>${esc(zahl)}</b>${a.ko ? `<i>${a.ko}</i>` : ""}</span></td>`;
+        return `<td class="c-doks"><button class="dok dok-${esc(a.ampel || "na")}" data-doklink="${esc(l.id)}" title="${esc(titel)}">`
+             + `<b>${esc(zahl)}</b>${a.ko ? `<i>${a.ko}</i>` : ""}</button></td>`;
       }
       if (a)
-        return `<td class="c-doks"><span class="dok-leer" data-doklink="${esc(l.id)}" title="${esc(tk("Unterlagen gelesen, aber kein Pruefpunkt gefunden."))}">${tk("nichts gefunden")}</span></td>`;
+        return `<td class="c-doks"><button class="dok-leer" data-doklink="${esc(l.id)}" title="${esc(tk("Unterlagen gelesen, aber kein Pruefpunkt gefunden."))}">${tk("nichts gefunden")}</button></td>`;
       if (u && u.gelesen)
-        return `<td class="c-doks"><span class="dok-warte" data-doklink="${esc(l.id)}" title="${esc(tk("Die Unterlagen liegen uns vor. Die Auswertung steht noch aus."))}">${tk("liegt vor")}</span></td>`;
+        return `<td class="c-doks"><button class="dok-warte" data-doklink="${esc(l.id)}" title="${esc(tk("Die Unterlagen liegen uns vor. Die Auswertung steht noch aus."))}">${tk("liegt vor")}</button></td>`;
       /* ⚠ SECHSTER ZUSTAND, und Sven musste mich darauf stossen: „bei einigen portalen
          lesen wir nur die gliederung aus, weil wir die unterlagen nicht automatisiert
          herunterladen dürfen." Ich hatte nur die ausgelieferten Lead-Daten geprueft und
@@ -952,12 +961,12 @@ function cellHTML(l, key){
          Der Unterschied ist fuer den Nutzer erheblich: wir wissen, WELCHE Unterlagen es
          gibt, nur nicht, was drinsteht. */
       if (u && u.gliederung)
-        return `<td class="c-doks"><span class="dok-liste" data-doklink="${esc(l.id)}" title="${
+        return `<td class="c-doks"><button class="dok-liste" data-doklink="${esc(l.id)}" title="${
           esc(tk("Wir kennen die {n} Dateien dieses Vorgangs, duerfen sie dort aber nicht selbst herunterladen.", {n: u.gliederung}))
-        }">${tk("Gliederung")}</span></td>`;
+        }">${tk("Gliederung")}</button></td>`;
       if (u && u.url)
-        return `<td class="c-doks"><span class="dok-verweis" data-doklink="${esc(l.id)}" title="${esc(tk("Beim Portal liegen Unterlagen. Oeffnen und hochladen im Detail."))}">${tk("Link")}</span></td>`;
-      return `<td class="c-doks"><span class="dok-na" data-doklink="${esc(l.id)}" title="${esc(tk("Fuer diesen Vorgang liegen keine ausgewerteten Vergabeunterlagen vor."))}">—</span></td>`;
+        return `<td class="c-doks"><button class="dok-verweis" data-doklink="${esc(l.id)}" title="${esc(tk("Beim Portal liegen Unterlagen. Oeffnen und hochladen im Detail."))}">${tk("Link")}</button></td>`;
+      return `<td class="c-doks"><button class="dok-na" data-doklink="${esc(l.id)}" title="${esc(tk("Fuer diesen Vorgang liegen keine ausgewerteten Vergabeunterlagen vor."))}">—</button></td>`;
     }
     case 'empf': {
       if(l.src==='award') return awardEmpfCell(l);

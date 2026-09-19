@@ -106,13 +106,40 @@ def test_die_fuenf_zustaende_sind_unterscheidbar():
         "und die Gliederung schlaegt den blossen Link")
 
 
-def test_die_zelle_traegt_keinen_knopf():
-    """Sven: er finde den Knopf nicht gut. Die Spalte steht in jeder Zeile — 50 Knoepfe
-    untereinander sind die Unruhe, die am selben Tag zweimal gemeldet wurde."""
+def test_alle_zustaende_sind_knoepfe():
+    """⚠ HIER STAND DAS GEGENTEIL, und das war ein Fehler von mir.
+
+    Sven sagte „finde die button auch gerade nicht gut", und ich habe daraufhin das
+    ELEMENT getauscht statt nur sein Aussehen. Der Einwand galt der gefuellten Flaeche,
+    nicht der Funktion. Gemessen ergab das eine Regression: fuenf der sechs anklickbaren
+    Zellen einer Zeile sind `<button>` (Stern, Ausblenden, Netz, Unserer, Status), meine
+    war die Ausnahme — ohne Tastaturzugang, ohne Fokusring, und bei vier der sechs
+    Zustaende ohne Zeiger. Einer trug sogar `cursor: help`: er verspricht einen Hinweis
+    und springt stattdessen weg.
+
+    Ein Knopf, der wie Text aussieht, erfuellt beides. Das Aussehen regelt die CSS
+    (`td.c-doks button`: keine Flaeche, kein Rahmen, Schriftgrad der Zelle).
+    """
     z = _zelle()
-    assert "<button" not in z, (
-        "in der Unterlagen-Zelle steht wieder ein Knopf. Was klickbar ist, zeigt das "
-        "ueber Zeiger und Unterstreichung, nicht ueber eine Flaeche.")
+    knoepfe = len(re.findall(r"<button[^>]*data-doklink", z))
+    assert knoepfe == 6, (
+        f"nur {knoepfe} von 6 Zustaenden sind Knoepfe. Ein `<span>` ist mit der Tastatur "
+        f"nicht erreichbar und traegt keinen Fokusring.")
+    assert not re.search(r"<span[^>]*data-doklink", z), (
+        "ein Zustand ist wieder ein `<span>` — nicht fokussierbar, nicht per Tastatur "
+        "ausloesbar")
+
+
+def test_kein_hilfe_zeiger_auf_etwas_das_wegspringt():
+    """⚠ `cursor: help` verspricht einen Hinweis. Wer darauf klickt, landet in einer
+    anderen Ansicht — das ist die Sorte kleiner Luege, die Vertrauen kostet."""
+    css = re.sub(r"/\*[\s\S]*?\*/", "",
+                 (WURZEL / "web" / "app" / "explorer.css").read_text(encoding="utf-8"))
+    for kl in ("dok-warte", "dok-leer"):
+        m = re.search(rf"\.{kl}\b[^{{]*\{{([^}}]*)\}}", css)
+        assert m, f".{kl} gibt es nicht mehr"
+        assert "cursor:help" not in m.group(1).replace(" ", ""), (
+            f".{kl} traegt wieder den Hilfe-Zeiger, obwohl der Klick wegspringt")
 
 
 def test_der_klick_oeffnet_den_lead_und_nicht_das_portal():
