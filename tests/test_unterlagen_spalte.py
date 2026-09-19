@@ -99,3 +99,41 @@ def test_der_abschnitt_ist_anspringbar():
     code = CORE.read_text(encoding="utf-8")
     assert 'id="an-unterlagen"' in code, (
         "der Aufforderungs-Abschnitt traegt keine Kennung mehr")
+
+
+# ── Das Drop-Feld ──────────────────────────────────────────────────────────────────────
+
+def test_es_gibt_ein_drop_feld_und_einen_knopf():
+    """⚠ BEIDES, nicht nur die Flaeche. Ein reines Drop-Feld ist mit der Tastatur nicht
+    bedienbar und auf dem Telefon gar nicht — dort gibt es nichts zu ziehen. Die Flaeche
+    ist der Weg fuer die Maus, der Knopf fuer alle anderen."""
+    code = _ohne_kommentar(CORE.read_text(encoding="utf-8"))
+    i = code.index("const dropFeld")
+    feld = code[i:code.index("`;", i)]
+    assert "data-dropzone=" in feld, "die Flaeche nimmt keine Dateien mehr entgegen"
+    assert "data-uploaddocs=" in feld, (
+        "der Dateiwaehler ist aus dem Drop-Feld verschwunden. Ohne ihn ist der Upload "
+        "mit Tastatur und auf dem Telefon unerreichbar.")
+
+
+def test_das_ziehen_wird_abgefangen():
+    """⚠ Ohne `preventDefault` beim Ueberziehen ist die Flaeche kein gueltiges Ziel: der
+    Browser oeffnet die fallengelassene Datei in einem neuen Tab, und der Nutzer verliert
+    seine Sicht. Das ist der haeufigste Fehler an Drop-Feldern."""
+    dp = _ohne_kommentar((WURZEL / "web" / "components" / "explorer" / "DetailPanel.tsx")
+                         .read_text(encoding="utf-8"))
+    # ⚠ MIT `={`, sonst trifft der Anker die PROP `onDropDocs` in der Signatur statt den
+    #   Handler (F19: der Anker ist nicht eindeutig). Beim Schreiben dieses Tests passiert.
+    for ereignis in ("onDragOver={", "onDrop={"):
+        i = dp.index(ereignis)
+        assert "preventDefault" in dp[i:i + 400], f"{ereignis} verhindert die Vorgabe nicht"
+
+
+def test_es_gibt_nur_einen_upload_weg():
+    """⚠ Der Ablauf nach dem Upload ist nicht trivial: Antwort in den Lead mischen,
+    Kaeufer-Rueckfrage bei `leadMismatch`, Hinweis bei `lbAnalyseWartet`. Zwei Kopien
+    davon waeren zwei Stellen, an denen dieser Hinweis kuenftig fehlt."""
+    sh = _ohne_kommentar(SHELL.read_text(encoding="utf-8"))
+    assert sh.count("async function dateiHochladen") == 1, "die Upload-Funktion gibt es nicht mehr"
+    assert sh.count("/api/lead-docs?id=") == 1, (
+        "es gibt wieder mehr als einen Weg, eine Datei hochzuladen")

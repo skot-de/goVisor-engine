@@ -55,10 +55,23 @@ def test_alle_laender_werden_geprueft():
 
 def test_die_hochladestrecke_bleibt_dieselbe():
     """Die Bitte ist ein anderer Text, kein zweiter Weg. Ein eigener Upload-Pfad wäre eine
-    zweite Stelle, die altert."""
+    zweite Stelle, die altert.
+
+    ⚠ SEIT DEM 2026-09-19 STEHT DER KNOPF EINE EBENE TIEFER. Die nummerierte Schrittliste
+    ist einem Drop-Feld gewichen (Sven: „ein text bzw großes drop feld"), und das Feld ist
+    eine gemeinsame Funktion `dropFeld(id)` statt dreimal derselbe HTML-Block. Der Knopf
+    steckt darin — die Strecke ist also unveraendert EINE, sie steht nur nicht mehr
+    woertlich im Abschnitt. Wer hier wieder ein Literal erwartet, prueft die Schreibweise
+    statt die Sache."""
     block = CORE[CORE.index("l.landOhneDocs"):]
     block = block[:block.index("</section>`;")]
-    assert "data-uploaddocs" in block and "data-upstatus" in block
+    assert "${dropFeld(" in block, (
+        "der Abschnitt bietet keinen Upload mehr an — weder direkt noch ueber das Drop-Feld")
+    assert "data-upstatus" in block, "die Statusanzeige fehlt"
+    feld = CORE[CORE.index("const dropFeld"):]
+    feld = feld[:feld.index("`;")]
+    assert "data-uploaddocs" in feld and "data-dropzone" in feld, (
+        "das Drop-Feld nimmt keine Dateien mehr entgegen")
 
 
 def test_die_drei_fehlenden_arten_werden_erfragt():

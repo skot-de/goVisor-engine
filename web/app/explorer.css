@@ -2626,6 +2626,24 @@ td.c-band .passung i{display:none}
    ⚠ Ruhig halten. Die Spalte steht in jeder Zeile; ein auffaelliger Knopf in 50 Zeilen
    waere genau die Unruhe, die am selben Tag zweimal gemeldet wurde. Schriftgrad wie der
    Rest der Zelle, Farbe erst beim Ueberfahren. */
+/* ── Das Drop-Feld fuer Vergabeunterlagen ──────────────────────────────────────
+   ⚠ GROSS UND RUHIG ZUGLEICH. Es ist der einzige Weg, auf dem ein Nutzer uns etwas
+   geben kann — es darf nicht uebersehen werden. Es steht aber in einem Bildschirm, der
+   gerade gemeldet hat, dass er nichts liefern kann; ein greller Kasten waere dort eine
+   Aufforderung im falschen Ton. Gestrichelter Rand, gedeckte Flaeche, Farbe erst wenn
+   etwas darueber schwebt. */
+.va-drop{display:flex;flex-direction:column;align-items:center;gap:7px;text-align:center;
+  padding:22px 18px;margin:14px 0 0;border:1.5px dashed var(--line-strong);border-radius:11px;
+  background:var(--surface-2,#f6f8f7);color:var(--ink-500);transition:.15s}
+.va-drop b{font-size:14px;font-weight:650;color:var(--ink-800,#1a2b26);letter-spacing:-.01em}
+.va-drop span{font-size:12px;line-height:1.5;max-width:46ch}
+.va-drop svg{color:var(--ink-300)}
+/* ⚠ Eigene Klasse, nicht `:hover`: waehrend eines Ziehvorgangs feuert `hover` nicht
+   zuverlaessig, die Rueckmeldung kaeme also genau dann nicht, wenn sie gebraucht wird. */
+.va-drop.dz-an{border-color:var(--signal);background:var(--surface);color:var(--ink-700)}
+.va-drop.dz-an svg{color:var(--signal)}
+.va-drop .va-upload-btn{margin-top:4px}
+
 .dok-link{background:none;border:0;padding:2px 5px;margin:-2px -5px;border-radius:5px;
   font:inherit;font-size:11.5px;color:var(--ink-400);cursor:pointer;transition:.12s;
   text-decoration:underline;text-decoration-style:dotted;text-underline-offset:2px}

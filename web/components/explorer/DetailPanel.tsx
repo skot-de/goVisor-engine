@@ -77,7 +77,7 @@ function VorgangHinweis({ leadId }: { leadId: string }) {
 export function DetailPanel({
   activeId, activeTab, mode, tick, buyerDemo, aktiveRegion, accountLimit,
   rows = [], alle = [], fremderLead = null, onPickLead, onGoto,
-  onTab, onClose, onExpand, onWf, onStar, onBodyAction,
+  onTab, onClose, onExpand, onWf, onStar, onBodyAction, onDropDocs,
 }: {
   activeId: string | null;
   activeTab: string;
@@ -103,6 +103,8 @@ export function DetailPanel({
   onWf: (k: string) => void;
   onStar: (id: string) => void;
   onBodyAction: (action: string, value: string, el: HTMLElement) => void;
+  /** Dateien, die ins Drop-Feld gezogen wurden. */
+  onDropDocs?: (id: string, files: FileList, el: HTMLElement) => void;
 }) {
   const wf = WF as Record<string, { label: string; cls: string }>;
   const { t, lang } = useSprache();
@@ -361,7 +363,31 @@ export function DetailPanel({
         />
       )}
 
-      <div onClick={handleBody} dangerouslySetInnerHTML={{ __html: bodyHtml }} />
+      {/* ⚠ DRAG-EREIGNISSE BLASEN, KLICKS AUCH — deshalb hier delegiert statt am Feld
+          selbst. Der Koerper ist `dangerouslySetInnerHTML`; ein Handler AM Drop-Feld
+          muesste nach jedem Neuzeichnen neu gebunden werden, und genau das vergisst man.
+
+          ⚠ `preventDefault` auch bei `dragOver`. Ohne das ist die Flaeche kein gueltiges
+          Ziel, der Browser oeffnet die Datei in einem neuen Tab und der Nutzer verliert
+          seine Sicht — der haeufigste Fehler an Drop-Feldern. */}
+      <div onClick={handleBody}
+           onDragOver={(e) => {
+             const z = (e.target as HTMLElement).closest<HTMLElement>("[data-dropzone]");
+             if (!z || !onDropDocs) return;
+             e.preventDefault();
+             z.classList.add("dz-an");
+           }}
+           onDragLeave={(e) => {
+             (e.target as HTMLElement).closest<HTMLElement>("[data-dropzone]")?.classList.remove("dz-an");
+           }}
+           onDrop={(e) => {
+             const z = (e.target as HTMLElement).closest<HTMLElement>("[data-dropzone]");
+             if (!z || !onDropDocs) return;
+             e.preventDefault();
+             z.classList.remove("dz-an");
+             if (e.dataTransfer?.files?.length) onDropDocs(z.dataset.dropzone!, e.dataTransfer.files, z);
+           }}
+           dangerouslySetInnerHTML={{ __html: bodyHtml }} />
     </>
   );
 }

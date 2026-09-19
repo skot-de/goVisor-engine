@@ -462,6 +462,27 @@ const val = (text, src, hint) =>
    Vorher war es dort per CSS ausgeblendet und der rohe deutsche Wert fiel nicht auf;
    sichtbar gemacht haette „hoch" bei jedem EN- und FR-Nutzer dagestanden. Die drei Werte
    stehen im Katalog (high/medium/low, élevé/moyen/faible). */
+/* Das Drop-Feld fuer Vergabeunterlagen.
+ *
+ * ⚠ Sven am 2026-09-19: „dazu dann ein text bzw großes drop feld — schieb die dokumente
+ * hier rein und wir analysieren sie für dich." Vorher stand hier eine nummerierte
+ * Schrittliste („1. Hier hochladen · 2. Ampel erscheint automatisch"). Die beschreibt
+ * einen Vorgang, statt eine Flaeche anzubieten, auf die man etwas fallen laesst.
+ *
+ * ⚠ DER KNOPF BLEIBT DRIN. Ein reines Drop-Feld ist mit der Tastatur nicht bedienbar und
+ * auf dem Telefon gar nicht — dort gibt es nichts zu ziehen. Die Flaeche ist der Weg fuer
+ * die Maus, der Knopf fuer alle anderen.
+ */
+const dropFeld = (id) => `<div class="va-drop" data-dropzone="${esc(id)}">
+  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor"
+       stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M12 16V4m0 0L8 8m4-4 4 4"/><path d="M4 16v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3"/>
+  </svg>
+  <b>${tk("Schieb die Dokumente hier rein, wir analysieren sie für dich")}</b>
+  <span>${tk("ZIP, PDF, Word, Excel. Das Ergebnis erscheint in wenigen Sekunden hier.")}</span>
+  <button class="va-upload-btn" data-uploaddocs="${esc(id)}">${tk("Datei auswählen")}</button>
+</div>`;
+
 const bandMeter = (level, risk, cap, naTitle) => {
   // naTitle erklärt bei „n/a" die URSACHE (fehlende Angaben), statt den Nutzer raten zu lassen.
   const t = (level==='na' && naTitle) ? ` title="${esc(naTitle)}"`
@@ -1820,10 +1841,7 @@ function renderDocs(l){
       <p class="va-sum">${tk("Die Vergabeunterlagen liegen uns bereits vor. Die Auswertung steht noch aus und erscheint hier, sobald sie durchgelaufen ist.")}</p>
       <p class="va-eigen">${dl}${zugang}</p>
       <p class="va-sum va-eigen-hint">${tk("Du kannst nicht warten? Lade deine eigene Fassung hoch, dann wird sie sofort ausgewertet.")}</p>
-      <ol class="va-steps">
-        <li><span class="va-step-n">1</span><div><button class="va-upload-btn" data-uploaddocs="${l.id}">${tk("Hier hochladen (ZIP/PDF)")}</button></div></li>
-        <li><span class="va-step-n">2</span><div class="va-step-res">${tk("Ampel + Checkliste erscheinen automatisch")}</div></li>
-      </ol>
+      ${dropFeld(l.id)}
       <div class="va-status" data-upstatus="${l.id}"></div>
     </section>`;
     /* ⚠ AUS DIESEM LAND HABEN WIR NOCH NICHTS. Gemessen am 2026-09-01: Deutschland hat
@@ -1840,21 +1858,13 @@ function renderDocs(l){
     if (l.landOhneDocs) return `<section class="sec va-empty" id="an-unterlagen">
       <h4>${tk("Vergabe-Analyse")}<span class="cov">${tk("noch keine Unterlagen aus diesem Land")}</span></h4>
       <p class="va-sum">${tk("Aus diesem Land liegen uns bisher keine Vergabeunterlagen vor. Eure wären die ersten, und sie helfen allen, die hier bieten.")}</p>
-      <ol class="va-steps">
-        <li><span class="va-step-n">1</span><div>${dl}${zugang}</div></li>
-        <li><span class="va-step-n">2</span><div><button class="va-upload-btn" data-uploaddocs="${l.id}">${tk("Hier hochladen (ZIP/PDF)")}</button></div></li>
-        <li><span class="va-step-n">3</span><div class="va-step-res">${tk("Ampel + Checkliste erscheinen automatisch")}</div></li>
-      </ol>
+      ${dropFeld(l.id)}
       <div class="va-status" data-upstatus="${l.id}"></div>
     </section>`;
     return `<section class="sec va-empty" id="an-unterlagen">
       <h4>${tk("Vergabe-Analyse")}<span class="cov">${tk("aus euren Unterlagen")}</span></h4>
       <p class="va-sum">${tk("Aus den Vergabeunterlagen machen wir in Sekunden eine")}<b>${tk("Ampel-Einschätzung")}</b>${tk(", eine abhakbare")}<b>${tk("Bieter-Checkliste")}</b>${tk("(K.o.-Kriterien, Eignungsnachweise, Zuschlagsgewichte) und")}<b>${tk("füllen Firmenangaben vor")}</b>.</p>
-      <ol class="va-steps">
-        <li><span class="va-step-n">1</span><div>${dl}${zugang}</div></li>
-        <li><span class="va-step-n">2</span><div><button class="va-upload-btn" data-uploaddocs="${l.id}">${tk("Hier hochladen (ZIP/PDF)")}</button></div></li>
-        <li><span class="va-step-n">3</span><div class="va-step-res">${tk("Ampel + Checkliste erscheinen automatisch")}</div></li>
-      </ol>
+      ${dropFeld(l.id)}
       <div class="va-status" data-upstatus="${l.id}"></div>
     </section>`;
   })() : `<section class="sec va-empty" id="an-unterlagen">

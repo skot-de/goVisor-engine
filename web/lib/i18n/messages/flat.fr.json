@@ -2343,5 +2343,8 @@
   "viel Überschneidung mit euren Feldern": "fort recoupement avec vos domaines",
   "Unterlagen beim Portal oeffnen und hier die Auswertung anstossen": "Ouvrir les documents sur le portail et lancer l'analyse ici",
   "{p} Pruefpunkte, {k} K.-o.-Kriterien aus einem Dokument. Ampel: {x}": "{p} points de contrôle, {k} critères éliminatoires d'un document. Feu : {x}",
-  "{p} Pruefpunkte, {k} K.-o.-Kriterien aus {d} Dokumenten. Ampel: {x}": "{p} points de contrôle, {k} critères éliminatoires de {d} documents. Feu : {x}"
+  "{p} Pruefpunkte, {k} K.-o.-Kriterien aus {d} Dokumenten. Ampel: {x}": "{p} points de contrôle, {k} critères éliminatoires de {d} documents. Feu : {x}",
+  "Schieb die Dokumente hier rein, wir analysieren sie für dich": "Déposez les documents ici, nous les analysons pour vous",
+  "ZIP, PDF, Word, Excel. Das Ergebnis erscheint in wenigen Sekunden hier.": "ZIP, PDF, Word, Excel. Le résultat apparaît ici en quelques secondes.",
+  "Datei auswählen": "Choisir un fichier"
 }

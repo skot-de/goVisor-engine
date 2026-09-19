@@ -1013,10 +1013,79 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
    * blockt es. Der Lead wird danach geoeffnet, das Springen noch eine Bildfolge spaeter,
    * weil der Abschnitt erst existieren muss.
    */
+  /* ── EIN Upload-Weg fuer Dateiwaehler UND Drop-Feld ───────────────────────────
+   * Sven am 2026-09-19: „dazu dann ein text bzw großes drop feld – schieb die dokumente
+   * hier rein und wir analysieren sie für dich."
+   *
+   * ⚠ HERAUSGELOEST, NICHT KOPIERT. Der Ablauf danach ist nicht trivial: Antwort in den
+   * Lead mischen, Kaeufer-Rueckfrage bei `leadMismatch`, und der Hinweis bei
+   * `lbAnalyseWartet` — ohne den saehe der Nutzer einen erfolgreichen Upload ohne
+   * Ergebnis und ohne Grund und laedt morgen erneut hoch. Zwei Kopien davon waeren zwei
+   * Stellen, an denen dieser Hinweis kuenftig fehlt.
+   */
+  async function dateiHochladen(leadId: string, file: File, statusEl: HTMLElement | null) {
+    if (statusEl) statusEl.textContent = t("Lade hoch und analysiere … (kann bis ~30 s dauern)");
+          const fd = new FormData();
+    fd.append("file", file);
+    const lbLead = CORE.find((x) => x.id === leadId) as (Lead & { buyer?: string; land?: string }) | undefined;
+    const lb = lbLead?.buyer || "";
+    // ⚠ DAS LAND MUSS MIT. Ohne es legt der Endpunkt jeden Upload unter „DE" ab — und
+    // weil AT und CH bei den Portalen 0 % Dokumentabdeckung haben, sind selbst
+    // hochgeladene Dateien dort die EINZIGE Quelle. Genau die landeten im falschen
+    // Land. Fehlt `land` am Lead, bleibt es bei der Vorgabe des Endpunkts.
+    const ll = lbLead?.land || "";
+    try {
+      const r = await fetch(`/api/lead-docs?id=${encodeURIComponent(leadId)}&buyer=${encodeURIComponent(lb)}`
+        + (ll ? `&land=${encodeURIComponent(ll)}` : ""),
+        { method: "POST", body: fd });
+      const d = await r.json();
+      if (!r.ok || d.error) { if (statusEl) statusEl.textContent = t("Fehler: {grund}", { grund: d.error || r.status }); return; }
+      const l = CORE.find((x) => x.id === leadId) as (Lead & { log?: unknown[] }) | undefined;
+      if (l) { Object.assign(l, d); logEvent(l, "analyze", t("Vergabeunterlagen hochgeladen & analysiert")); }
+      // §5-4: Käufer nicht in den Unterlagen gefunden → Rückfrage (Analyse trotzdem gezeigt).
+      const mm = (d as { leadMismatch?: { expected_buyer?: string } }).leadMismatch;
+      // Tagesdeckel für hochgeladene Unterlagen erreicht: die Datei liegt bereits,
+      // nur die Auswertung wartet. Das MUSS dastehen — sonst sieht der Nutzer einen
+      // erfolgreichen Upload ohne Ergebnis und ohne Grund und lädt morgen erneut hoch.
+      const wartet = (d as { lbAnalyseWartet?: boolean }).lbAnalyseWartet;
+      const teile: string[] = [];
+      if (mm) teile.push(`<span style="color:#b91c1c">${t("⚠ Diese Unterlagen erwähnen den Auftraggeber „{buyer}\" nicht, gehören sie wirklich zu diesem Lead? Die Analyse ist unten trotzdem angezeigt.", { buyer: (mm.expected_buyer || "").replace(/[<>&]/g, "") })}</span>`);
+      if (wartet) teile.push(`<span style="color:#92400e">${t("Die Unterlagen sind gespeichert. Ausgewertet werden sie im nächsten Tageslauf ab 00:30 Uhr, weil das Auswertungskontingent für hochgeladene Unterlagen heute aufgebraucht ist. Sie müssen nichts noch einmal hochladen.")}</span>`);
+      if (statusEl) statusEl.innerHTML = teile.join("<br>");
+      bump();
+    } catch {
+      if (statusEl) statusEl.textContent = t("Upload fehlgeschlagen.");
+    }
+  }
+
+  /** Dateien, die ins Drop-Feld gezogen wurden. Derselbe Weg wie der Dateiwaehler. */
+  function dateienFallengelassen(id: string, files: FileList, el: HTMLElement) {
+    const file = files[0];
+    if (!file) return;
+    const statusEl = el.closest(".detail")?.querySelector<HTMLElement>(`[data-upstatus="${id}"]`) || null;
+    void dateiHochladen(id, file, statusEl);
+  }
+
   function dokLinkOeffnen(id: string) {
     const l = CORE.find((x) => x.id === id) as (Lead & { unterlagen?: { url?: string } }) | undefined;
     const url = l?.unterlagen?.url;
-    if (url) window.open(url, "_blank", "noopener,noreferrer");
+    /* ⚠ DER NEUE TAB SOLL IM HINTERGRUND BLEIBEN, und das laesst sich nicht erzwingen.
+     *
+     * Sven: „die seite soll sich in einem neuen tab öffnen, aber govisor bleibt das
+     * aktive fenster". Ein Hintergrund-Tab entsteht im Browser durch Mittelklick oder
+     * Strg/Cmd+Klick — beides kann eine Seite nicht ausloesen. `window.open` fokussiert
+     * den neuen Tab, und der einzige Hebel dagegen waere `handle.blur()`.
+     *
+     * Dafuer braeuchte es das Fenster-Handle, und das gibt `window.open` nur OHNE
+     * `noopener` zurueck. Ohne `noopener` bekommt die fremde Seite aber `window.opener`
+     * und kann unser Fenster umleiten — bei beliebigen Portal-URLs ist das der teurere
+     * Handel. `noopener` bleibt.
+     *
+     * Was bleibt, ist `window.focus()` auf UNS: manche Browser holen den Fokus damit
+     * zurueck, Chrome ignoriert es. Es kostet nichts und ist ehrlicher als ein
+     * Sicherheitsloch fuer eine Bequemlichkeit.
+     */
+    if (url) { window.open(url, "_blank", "noopener,noreferrer"); window.focus(); }
     openLead(id);
     requestAnimationFrame(() => {
       document.getElementById("an-unterlagen")?.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -1295,46 +1364,13 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
         break;
       }
       case "uploaddocs": {
-        // Vergabeunterlagen hochladen → Pipeline (index→signals→LLM) → Felder in den Lead mergen.
         const statusEl = el.closest(".detail")?.querySelector<HTMLElement>(`[data-upstatus="${value}"]`) || null;
         const input = document.createElement("input");
         input.type = "file";
         input.accept = ".zip,.pdf,.doc,.docx,.xls,.xlsx,.txt,.html";
-        input.onchange = async () => {
+        input.onchange = () => {
           const file = input.files?.[0];
-          if (!file) return;
-          if (statusEl) statusEl.textContent = t("Lade hoch und analysiere … (kann bis ~30 s dauern)");
-          const fd = new FormData();
-          fd.append("file", file);
-          const lbLead = CORE.find((x) => x.id === value) as (Lead & { buyer?: string; land?: string }) | undefined;
-          const lb = lbLead?.buyer || "";
-          // ⚠ DAS LAND MUSS MIT. Ohne es legt der Endpunkt jeden Upload unter „DE" ab — und
-          // weil AT und CH bei den Portalen 0 % Dokumentabdeckung haben, sind selbst
-          // hochgeladene Dateien dort die EINZIGE Quelle. Genau die landeten im falschen
-          // Land. Fehlt `land` am Lead, bleibt es bei der Vorgabe des Endpunkts.
-          const ll = lbLead?.land || "";
-          try {
-            const r = await fetch(`/api/lead-docs?id=${encodeURIComponent(value)}&buyer=${encodeURIComponent(lb)}`
-              + (ll ? `&land=${encodeURIComponent(ll)}` : ""),
-              { method: "POST", body: fd });
-            const d = await r.json();
-            if (!r.ok || d.error) { if (statusEl) statusEl.textContent = t("Fehler: {grund}", { grund: d.error || r.status }); return; }
-            const l = CORE.find((x) => x.id === value) as (Lead & { log?: unknown[] }) | undefined;
-            if (l) { Object.assign(l, d); logEvent(l, "analyze", t("Vergabeunterlagen hochgeladen & analysiert")); }
-            // §5-4: Käufer nicht in den Unterlagen gefunden → Rückfrage (Analyse trotzdem gezeigt).
-            const mm = (d as { leadMismatch?: { expected_buyer?: string } }).leadMismatch;
-            // Tagesdeckel für hochgeladene Unterlagen erreicht: die Datei liegt bereits,
-            // nur die Auswertung wartet. Das MUSS dastehen — sonst sieht der Nutzer einen
-            // erfolgreichen Upload ohne Ergebnis und ohne Grund und lädt morgen erneut hoch.
-            const wartet = (d as { lbAnalyseWartet?: boolean }).lbAnalyseWartet;
-            const teile: string[] = [];
-            if (mm) teile.push(`<span style="color:#b91c1c">${t("⚠ Diese Unterlagen erwähnen den Auftraggeber „{buyer}\" nicht, gehören sie wirklich zu diesem Lead? Die Analyse ist unten trotzdem angezeigt.", { buyer: (mm.expected_buyer || "").replace(/[<>&]/g, "") })}</span>`);
-            if (wartet) teile.push(`<span style="color:#92400e">${t("Die Unterlagen sind gespeichert. Ausgewertet werden sie im nächsten Tageslauf ab 00:30 Uhr, weil das Auswertungskontingent für hochgeladene Unterlagen heute aufgebraucht ist. Sie müssen nichts noch einmal hochladen.")}</span>`);
-            if (statusEl) statusEl.innerHTML = teile.join("<br>");
-            bump();
-          } catch {
-            if (statusEl) statusEl.textContent = t("Upload fehlgeschlagen.");
-          }
+          if (file) void dateiHochladen(value, file, statusEl);
         };
         input.click();
         break;
@@ -1935,6 +1971,7 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
 
           <section className="detail">
             <DetailPanel
+              onDropDocs={dateienFallengelassen}
               activeId={activeId}
               activeTab={activeTab}
               mode={mode}
