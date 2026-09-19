@@ -1229,7 +1229,10 @@ td.c-band .band{justify-content:center;gap:0}
 .leads tbody tr[aria-selected="true"]{background:var(--signal-wash);box-shadow:inset 3px 0 0 var(--signal)}
 body[data-view="verteidigung"] .leads tbody tr[aria-selected="true"]{background:var(--surface-3);box-shadow:inset 3px 0 0 var(--ink-900)}
 
-td.c-star{width:30px;text-align:center;padding-right:0}
+/* ⚠ 30 px reichten fuer EIN Symbol. Seit das Ausblenden-Kreuz dauerhaft sichtbar ist,
+   stehen zwei nebeneinander (14 + 6 + 14) — bei 30 px haette das zweite die Zelle
+   gesprengt oder waere umgebrochen. */
+td.c-star{width:52px;text-align:center;padding-right:0;white-space:nowrap}
 .tstar{color:var(--ink-300);opacity:.45}
 .tstar[data-merk]{opacity:1}
 .tstar[data-merk="manuell"]{color:var(--ink-900)}
@@ -2826,15 +2829,49 @@ td.c-doks{width:84px;text-align:center}
 .fp-chip.on .fp-chip-n{opacity:.75}
 .fp-check .fp-chip-n{margin-left:7px; color:var(--ink-500)}
 
+/* ── Ruecknahme-Leiste nach dem Ausblenden ────────────────────────────────────────
+ * ⚠ Steht UEBER der Liste, nicht in der Zeile: ein Platzhalter in der Zeile liesse die
+ * Liste springen, und genau das macht das Wegklicken mehrerer Treffer muehsam. */
+/* ⚠ KEINE KAPSEL, SONDERN EIN RECHTECK MIT RUNDEN ECKEN. Mit `border-radius:100px` sah
+   die Leiste bei schmalen Fenstern kaputt aus: sechs Elemente brechen dort auf drei
+   Zeilen um, und eine dreizeilige „Pille" ist keine Form, die jemand entworfen haette.
+   Gemessen bei 880 px Breite, bevor es jemand zu sehen bekam. */
+.ausleiste{display:flex;align-items:center;gap:9px;flex-wrap:wrap;
+  margin:0 0 8px;padding:8px 14px;border-radius:12px;
+  background:var(--surface-2);border:1px solid var(--line);font-size:12px}
+.ausleiste .al-t{color:var(--ink-600);max-width:26ch;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ausleiste .al-t b{font-weight:600;color:var(--ink-900)}
+.ausleiste .al-f{color:var(--ink-400);margin-left:4px}
+.al-g{font-size:11.5px;font-weight:500;padding:3px 9px;border-radius:100px;
+  border:1px solid var(--line-strong);background:var(--surface);color:var(--ink-700);
+  cursor:pointer;transition:.12s}
+.al-g:hover{border-color:var(--signal);color:var(--signal-deep)}
+.al-weg{margin-left:auto;font-size:12px;font-weight:600;background:none;border:0;
+  color:var(--signal-deep);cursor:pointer;text-decoration:underline;
+  text-underline-offset:2px}
+.al-weg:hover{color:var(--ink-900)}
+
 /* ── Ausblenden in der Trefferzeile ────────────────────────────────────────────────
  * Sitzt neben dem Stern und bleibt bis zum Ueberfahren der Zeile leise: ein Knopf, der
  * Treffer verschwinden laesst, darf nicht der auffaelligste sein. */
+/* ⚠ WAR `opacity:0` BIS ZUM UEBERFAHREN — und damit fuer die meisten nicht vorhanden.
+   Sven hat am 2026-09-19 danach gesucht und ihn nicht gefunden. Jetzt dauerhaft sichtbar,
+   aber blass: sichtbar genug, um gefunden zu werden, leise genug, um nicht der
+   auffaelligste Knopf der Zeile zu sein. Beim Ueberfahren wird er deutlich. */
 .lt-hide{
   background:none; border:0; padding:2px; cursor:pointer; line-height:0;
-  color:var(--ink-400); opacity:0; transition:opacity .12s ease, color .12s ease;
+  color:var(--ink-200,#c9d2ce); opacity:1; margin-left:6px;
+  transition:color .12s ease;
 }
-tr:hover .lt-hide, .lt-hide:focus-visible, .lt-hide.an{opacity:1}
-.lt-hide:hover{color:var(--ink-700)}
+/* ⚠ OHNE DIESE ZEILE IST DAS KREUZ 0 PX BREIT. `globals.css` setzt `img,svg{display:block;
+   max-width:100%}`, und in einem Knopf ohne eigene Breite sind 100 % von nichts gleich
+   nichts — das `width`-Attribut am SVG zaehlt dann nicht mehr. Der Stern daneben hat
+   genau deshalb seit jeher `.tstar svg{width:14px}`; beim Kreuz fehlte sie, und im
+   gerenderten Bild war der Knopf 4 x 18 px gross, also praktisch unsichtbar. Gemessen,
+   nicht vermutet. */
+.lt-hide svg{width:14px;height:14px;vertical-align:middle}
+tr:hover .lt-hide{color:var(--ink-400)}
+.lt-hide:hover,.lt-hide:focus-visible{color:var(--risk)}
 .lt-hide.an{color:var(--ink-600)}
 @media (prefers-reduced-motion:reduce){.lt-hide{transition:none}}
 

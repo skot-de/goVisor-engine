@@ -1725,6 +1725,18 @@ $PY scripts/pruefe_sondierung.py \
 $PY scripts/pruefe_supabase_migrationen.py --still; _mig=$?
 [ "$_mig" = "1" ] && echo "  → Migrationen fehlen in der Datenbank. Details: python3 scripts/pruefe_supabase_migrationen.py"
 
+# ── WAS KLICKEN DIE NUTZER WEG? ──────────────────────────────────────────────────────────
+#
+# ⚠ Jedes Ausblenden ist ein negatives Beispiel fuer die Passung — die einzige Rueckmeldung,
+# die einen Klick kostet statt eines Formulars. Ungelesen ist sie eine Zeile in einer
+# Tabelle. Der Bericht laeuft deshalb mit, auch wenn er am Anfang leer ist: ein Bericht,
+# den man erst einschaltet, wenn man ihn braucht, existiert an dem Tag noch nicht.
+#
+# Die Schwelle steht bei 5 — drei Klicks auf dieselbe CPV-Klasse sind kein Muster, sondern
+# ein Mensch mit einem Nachmittag. Eine leere Auswertung ist KEIN Fehler (Rueckgabe 0).
+$PY scripts/auswertung_ausgeblendet.py --mindestens 5 \
+  || echo "  ⚠ Ausblend-Auswertung fehlgeschlagen."
+
 # ── ABDECKUNG: FEHLT UNS EIN GANZER MONAT? ───────────────────────────────────────────────
 #
 # Am 2026-09-07 fiel auf, dass Luxemburg fuer Juli NULL Bekanntmachungen hatte und fuer

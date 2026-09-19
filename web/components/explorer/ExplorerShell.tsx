@@ -40,6 +40,16 @@ import { stichtag, besuchMerken } from "@/lib/besuch";
 
 type Profile = ReturnType<typeof buildProfile>;
 const PROFILE_KEY = "govisor.profile.v1";
+/* ⚠ VIER GRUENDE, NICHT MEHR. Jeder weitere kostet Lesezeit in einer Leiste, die nach
+   zwoelf Sekunden verschwindet — und eine Liste, die man lesen muss, ist keine
+   Ein-Klick-Antwort mehr. Die vier decken ab, was ein falscher Treffer sein kann:
+   Inhalt, Ort, Groesse, Zeit. „Sonstiges" fehlt absichtlich: es traegt keine Information
+   und zieht erfahrungsgemaess die Haelfte aller Klicks auf sich.
+
+   ⚠ DIESELBE LISTE BENUTZT DIE AUSWERTUNG (`scripts/auswertung_ausgeblendet.py`). Ein
+   zweiter, abweichender Katalog dort waere die Sorte Bruch, die erst auffaellt, wenn die
+   Zahlen nicht mehr aufgehen. */
+const AUS_GRUENDE = ["falscher Inhalt", "falsche Region", "zu klein", "Frist zu knapp"] as const;
 import { ColumnMenu, FilterBar, Suggestions, HeaderFilterPopover } from "./parts";
 import { AppRail, AppTop, type RailId } from "./Rail";
 
@@ -160,6 +170,16 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
   const [gespeicherteFilter, setGespeicherteFilter] = useState<GespeicherterFilter[]>([]);
   const [ausgeblendet, setAusgeblendet] = useState<Set<string>>(new Set());
   const [zeigeAusgeblendete, setZeigeAusgeblendete] = useState(false);
+  /* Der zuletzt ausgeblendete Vorgang, solange die Ruecknahme-Leiste steht.
+   *
+   * ⚠ DER GRUND KOMMT NACH DEM KLICK, NICHT DAVOR. Die Migration 0021 hat das schon
+   * entschieden und begruendet: „Der Wert des Knopfes ist, dass er einen Klick kostet;
+   * wer eine Pflichtbegruendung davorsetzt, bekommt keine Daten." Sven hat denselben
+   * Zweifel gehabt („wäre cool, aber vll auch nervig"). Also: ausblenden passiert sofort,
+   * die Gruende sind ein Angebot in der Leiste — vier Klicks als Moeglichkeit, keiner als
+   * Pflicht. Wer weiterscrollt, hat nichts verloren. */
+  const [zuletztAus, setZuletztAus] = useState<{ id: string; titel: string } | null>(null);
+  const ausLeisteTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const [sortKey, setSortKey] = useState("frist");
   const [sortDir, setSortDir] = useState(1);
   const [awAlertOff, setAwAlertOff] = useState(false);   // #24 Zuschlag-Alert-Band ausgeblendet
@@ -818,7 +838,32 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
       titel: (l?.titel as string) ?? null, buyer: (l as { buyer?: string } | undefined)?.buyer ?? null,
     });
     logEvent(l, "hidden", jetztAus ? t("Ausgeblendet") : t("Wieder eingeblendet"));
+    if (ausLeisteTimer.current) clearTimeout(ausLeisteTimer.current);
+    if (jetztAus) {
+      setZuletztAus({ id, titel: (l?.titel as string) ?? id });
+      // ⚠ Zwoelf Sekunden. Kurz genug, dass die Leiste nicht im Weg steht, lang genug zum
+      // Lesen und Entscheiden — ein Ruecknahme-Angebot, das weg ist, bevor man es gesehen
+      // hat, ist keines.
+      ausLeisteTimer.current = setTimeout(() => setZuletztAus(null), 12_000);
+    } else {
+      setZuletztAus(null);
+    }
     bump();
+  }
+
+  /** Einen Grund zum zuletzt ausgeblendeten Vorgang nachreichen. */
+  function ausGrund(grund: string) {
+    const z = zuletztAus;
+    if (!z) return;
+    const l = CORE.find((x) => x.id === z.id);
+    syncAusgeblendet(z.id, true, {
+      titel: (l?.titel as string) ?? null,
+      buyer: (l as { buyer?: string } | undefined)?.buyer ?? null,
+      grund,
+    });
+    logEvent(l, "hidden", t("Grund: {g}", { g: t(grund) }));
+    setZuletztAus(null);
+    if (ausLeisteTimer.current) clearTimeout(ausLeisteTimer.current);
   }
 
   function toggleStar(id: string) {
@@ -1930,6 +1975,22 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
                   </div>
                 );
               })()}
+              {/* ⚠ DIE LEISTE STEHT UEBER DER LISTE, NICHT IN DER ZEILE. In der Zeile
+                  waere sie ein Platzhalter, der die Liste springen laesst — und genau das
+                  Springen macht das Wegklicken mehrerer Treffer hintereinander muehsam.
+                  Hier bleibt die Liste ruhig und die Ruecknahme trotzdem in Reichweite. */}
+              {zuletztAus && (
+                <div className="ausleiste" role="status">
+                  <span className="al-t">{t("Ausgeblendet")}: <b>{zuletztAus.titel}</b></span>
+                  <span className="al-f">{t("Warum passt es nicht?")}</span>
+                  {AUS_GRUENDE.map((g) => (
+                    <button key={g} className="al-g" onClick={() => ausGrund(g)}>{t(g)}</button>
+                  ))}
+                  <button className="al-weg" onClick={() => { toggleAusblenden(zuletztAus.id); }}>
+                    {t("Rückgängig")}
+                  </button>
+                </div>
+              )}
               <LeadTable
                 rows={rows}
                 onWf={setWfFuer}
