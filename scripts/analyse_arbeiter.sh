@@ -185,14 +185,34 @@ while true; do
   # Jetzt sagt der Lauf selbst, was er uebrig gelassen hat (`analyze_docs.py` schreibt
   # `wartend` nach `.llm_stand.json`). Nebeneffekt: die 358-MB-Datei wird nicht mehr
   # jede Runde nur zum Zaehlen eingelesen.
-  WARTEN="$($PY - 2>/dev/null <<'PYZ'
+  # ⛔ ALLE DREI WERTE UEBER `$PY`, NIEMALS UEBER grep/test AUF DIESE DATEI.
+  #
+  # ⚠ DER TEURE BEFUND VOM 2026-09-19, und er erklaert rueckwirkend einen zweiten Fehler.
+  # `data` ist ein Symlink auf ein externes Volume, und macOS vergibt den Zugriff darauf
+  # JE PROGRAMM. Das Python-Framework hat ihn, die von launchd gestartete Bash NICHT.
+  # Gemessen mit einer Sonde im laufenden Dienst:
+  #
+  #     grep: …/data/.llm_stand.json: Operation not permitted   (rc=2)
+  #
+  # Die Folge: JEDES `grep -q` auf diese Datei liefert „kein Treffer", und weil ein
+  # fehlender Treffer genauso aussieht wie ein negatives Ergebnis, ist der Riegel dahinter
+  # stumm ausgefallen. Das betraf nicht nur den neuen Tagesdeckel-Riegel, sondern auch den
+  # alten fuer „kein Guthaben" — der also seit seinem Einbau nie gegriffen hat. Genau das
+  # Verhalten, das am 2026-08-18 eine Stunde lang 402er-Leerrunden produziert hat.
+  #
+  # ⚠ UND DESHALB STEHT `2>/dev/null` HIER NICHT MEHR AN DER PRUEFUNG. Es hat die
+  # Fehlermeldung verschluckt, die den Befund sofort verraten haette.
+  STAND="$($PY - 2>/dev/null <<'PYZ'
 import json, pathlib
 try:
-    print(int(json.loads(pathlib.Path("data/.llm_stand.json").read_text())["wartend"]))
+    d = json.loads(pathlib.Path("data/.llm_stand.json").read_text())
+    halt = d.get("halt") or ""
+    print(f'{int(d.get("wartend", -1))}|{halt}|{1 if d.get("erschoepft") else 0}')
 except Exception:
-    print(-1)
+    print("-1||0")
 PYZ
 )"
+  WARTEN="${STAND%%|*}"; _r="${STAND#*|}"; HALT="${_r%%|*}"; ERSCH="${_r##*|}"
   case "$WARTEN" in ''|*[!0-9-]*) WARTEN=-1 ;; esac
   if [ "$WARTEN" -lt 0 ]; then
     sag "  Stand: unbekannt (kein .llm_stand.json — Lauf abgebrochen?)"
@@ -217,14 +237,14 @@ PYZ
   #
   # Bis kurz nach Mitternacht schlafen, denn genau dann setzt `llm._tagesbuch()` den
   # Startwert neu. Frueher aufzuwachen heisst, dieselbe Absage noch einmal zu holen.
-  if grep -q '"halt": "deckel"' "$ROOT/data/.llm_stand.json" 2>/dev/null; then
+  if [ "$HALT" = "deckel" ]; then
     BIS=$(( $(date -v+1d -v0H -v0M -v30S +%s 2>/dev/null || echo 0) - $(date +%s) ))
     [ "$BIS" -gt 0 ] 2>/dev/null || BIS=1800     # Rueckfall, falls `date -v` mal fehlt
     sag "Tagesdeckel erschoepft — warte $((BIS/60)) min bis zum Tageswechsel. Anheben: GOVISOR_TAG_USD"
     sleep "$BIS"; continue
   fi
 
-  if grep -q '"erschoepft": true' "$ROOT/data/.llm_stand.json" 2>/dev/null; then
+  if [ "$ERSCH" = "1" ]; then
     sag "Kein Guthaben bei keinem Anbieter — warte 30 min. Aufladen: openrouter.ai/credits"
     sleep 1800; continue
   fi
