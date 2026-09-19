@@ -1827,7 +1827,20 @@ function renderDocs(l){
       ${a.zusammenfassung?`<p class="va-sum">${esc(a.zusammenfassung)}</p>`:''}`;
     // Reiche Checkliste (§7, Prototyp-Design) wenn vorhanden — sie trägt Kopf/Haftung/Erfolgshonorar selbst.
     if(a.checklist && ('checklist' in a)) {
-      return `<section class="sec va-sec">${vahead}${renderChecklistBlock(a, l)}</section>`;
+      /* ⚠ AUCH HIER EIN WEG ZUM HOCHLADEN. Gemessen ueber 6.001 Auswertungen haben
+         1.448 (24,1 %) keinen fehlenden Doktyp — und der einzige Upload-Knopf steckte in
+         der Gruppe „Offen", die nur entsteht, wenn etwas fehlt (`fehlend.length ? … : ''`).
+         Bei einem Viertel der ausgewerteten Vorgaenge konnte also niemand eine neuere
+         Fassung schicken, auch wenn er eine hatte.
+
+         ⚠ NUR BEI OFFENEN VERGABEN. Bei einer abgelaufenen ist Hochladen sinnlos; der
+         umgebende Zweig prueft `istOffen` NICHT, der gilt nur fuer die leeren Zustaende. */
+      return `<section class="sec va-sec">${vahead}${renderChecklistBlock(a, l)}${
+        istOffen ? `<div class="va-nach">
+          <p class="va-nach-h">${tk("Neuere oder vollstaendigere Unterlagen?")}</p>
+          ${dropFeld(l)}
+          <div class="va-status" data-upstatus="${esc(l.id)}"></div>
+        </div>` : ''}</section>`;
     }
     // Legacy-Fallback (Alt-Format-Analysen ohne checklist)
     const body = `${bl(tk("Muss erfüllt sein. K.o.-Kriterien"), check(a.ko_kriterien))}
@@ -1859,7 +1872,7 @@ function renderDocs(l){
        hochladen (ZIP/PDF)". Gemessen am 2026-08-25: 1.154 von 5.899 offenen Leads mit
        Volltext. Der Nutzer wurde also gebeten, uns etwas zu schicken, das wir hatten. */
     if (u.gelesen) return `<section class="sec va-empty" id="an-unterlagen">
-      <h4>${tk("Vergabe-Analyse")}<span class="cov">${tk("Unterlagen liegen vor")}</span></h4>
+      <h4>${tk("Unterlagen")}<span class="cov">${tk("Liegen uns vor, Auswertung folgt")}</span></h4>
       <p class="va-sum">${tk("Die Vergabeunterlagen liegen uns bereits vor. Die Auswertung steht noch aus und erscheint hier, sobald sie durchgelaufen ist.")}</p>
       <p class="va-eigen">${dl}${zugang}</p>
       <p class="va-sum va-eigen-hint">${tk("Du kannst nicht warten? Lade deine eigene Fassung hoch, dann wird sie sofort ausgewertet.")}</p>
@@ -1878,19 +1891,19 @@ function renderDocs(l){
        Unterlage, verschwindet die Bitte von allein. Ein hart geschriebenes „keine einzige"
        wuerde ab dem Tag luegen, ohne dass es jemand merkt. */
     if (l.landOhneDocs) return `<section class="sec va-empty" id="an-unterlagen">
-      <h4>${tk("Vergabe-Analyse")}<span class="cov">${tk("noch keine Unterlagen aus diesem Land")}</span></h4>
+      <h4>${tk("Unterlagen")}<span class="cov">${tk("Noch nichts aus diesem Land")}</span></h4>
       <p class="va-sum">${tk("Aus diesem Land liegen uns bisher keine Vergabeunterlagen vor. Eure wären die ersten, und sie helfen allen, die hier bieten.")}</p>
       ${dropFeld(l)}
       <div class="va-status" data-upstatus="${l.id}"></div>
     </section>`;
     return `<section class="sec va-empty" id="an-unterlagen">
-      <h4>${tk("Vergabe-Analyse")}<span class="cov">${tk("aus euren Unterlagen")}</span></h4>
+      <h4>${tk("Unterlagen")}<span class="cov">${tk("Noch nichts")}</span></h4>
       <p class="va-sum">${tk("Aus den Vergabeunterlagen machen wir in Sekunden eine")}<b>${tk("Ampel-Einschätzung")}</b>${tk(", eine abhakbare")}<b>${tk("Bieter-Checkliste")}</b>${tk("(K.o.-Kriterien, Eignungsnachweise, Zuschlagsgewichte) und")}<b>${tk("füllen Firmenangaben vor")}</b>.</p>
       ${dropFeld(l)}
       <div class="va-status" data-upstatus="${l.id}"></div>
     </section>`;
   })() : `<section class="sec va-empty" id="an-unterlagen">
-      <h4>${tk("Vergabe-Analyse")}</h4>
+      <h4>${tk("Unterlagen")}<span class="cov">${tk("Nicht abrufbar")}</span></h4>
       <p class="va-sum va-none">${l.src==='auslauf'
         ? tk("Diese Ausschreibung läuft aus bzw. ist abgeschlossen, die Vergabeunterlagen sind nur während der laufenden Angebotsfrist verfügbar. Sobald der Nachfolge-Auftrag ausgeschrieben ist, kannst du hier dessen Unterlagen analysieren.")
         : tk("Diese Ausschreibung ist noch nicht offen (Vorinformation). Sobald die Angebotsfrist läuft, kannst du hier die Vergabeunterlagen hochladen und analysieren.")}</p>

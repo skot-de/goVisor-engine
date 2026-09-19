@@ -2355,5 +2355,10 @@
   "Die Unterlagen liegen uns vor. Die Auswertung steht noch aus.": "Nous avons les documents. L'analyse est encore en attente.",
   "Beim Portal liegen Unterlagen. Oeffnen und hochladen im Detail.": "Des documents sont disponibles sur le portail. Ouvrir et téléverser depuis le détail.",
   "Gliederung": "Sommaire",
-  "Wir kennen die {n} Dateien dieses Vorgangs, duerfen sie dort aber nicht selbst herunterladen.": "Nous connaissons les {n} fichiers de cette procédure mais ne pouvons pas les télécharger nous-mêmes."
+  "Wir kennen die {n} Dateien dieses Vorgangs, duerfen sie dort aber nicht selbst herunterladen.": "Nous connaissons les {n} fichiers de cette procédure mais ne pouvons pas les télécharger nous-mêmes.",
+  "Liegen uns vor, Auswertung folgt": "Disponibles, analyse à venir",
+  "Noch nichts aus diesem Land": "Rien encore pour ce pays",
+  "Noch nichts": "Rien pour l'instant",
+  "Nicht abrufbar": "Non disponible",
+  "Neuere oder vollstaendigere Unterlagen?": "Documents plus récents ou plus complets ?"
 }

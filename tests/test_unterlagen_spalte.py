@@ -245,3 +245,42 @@ def test_es_gibt_nur_einen_upload_weg():
     assert sh.count("async function dateiHochladen") == 1, "die Upload-Funktion gibt es nicht mehr"
     assert sh.count("/api/lead-docs?id=") == 1, (
         "es gibt wieder mehr als einen Weg, eine Datei hochzuladen")
+
+
+# ── Die Detailseite ueber ihre Zustaende ───────────────────────────────────────────────
+
+def test_auch_im_ausgewerteten_zustand_kann_man_nachreichen():
+    """⚠ Gemessen ueber 6.001 Auswertungen haben 1.448 (24,1 %) KEINEN fehlenden Doktyp.
+    Der einzige Upload-Knopf steckte in der Gruppe „Offen", die nur entsteht, wenn etwas
+    fehlt (`fehlend.length ? … : ''`). Bei einem Viertel der ausgewerteten Vorgaenge
+    konnte also niemand eine neuere Fassung schicken, auch wenn er eine hatte."""
+    code = _ohne_kommentar(CORE.read_text(encoding="utf-8"))
+    i = code.index('<section class="sec va-sec">')
+    zweig = code[i:i + 600]
+    assert "dropFeld(l)" in zweig, (
+        "der ausgewertete Zustand bietet keinen Weg mehr, Unterlagen nachzureichen")
+    assert "istOffen" in zweig, (
+        "der Nachreich-Block haengt nicht mehr an `istOffen` — bei einer abgelaufenen "
+        "Vergabe ist Hochladen sinnlos")
+
+
+def test_das_drop_feld_ist_formatiert():
+    """⚠ DIESE REGELN WAREN ZWEI COMMITS LANG WEG. Beim Ersetzen des Nachbarblocks traf
+    `rindex("/* ──", …)` den Kommentarkopf DIESES Blocks; das Drop-Feld rutschte mit
+    heraus und rendert seitdem unformatiert. Fallenkatalog F19/F20."""
+    css = (WURZEL / "web" / "app" / "explorer.css").read_text(encoding="utf-8")
+    for regel in (".va-drop{", ".va-drop.dz-an{", ".va-portal{"):
+        assert regel in css, f"die Regel {regel!r} fehlt — das Feld rendert unformatiert"
+
+
+def test_die_ueberschriften_nennen_den_zustand():
+    """Der Tab heisst „Unterlagen"; die Ueberschrift soll sagen, wie weit wir sind, nicht
+    wie das Produkt heisst. Vorher stand ueber allen vier leeren Zustaenden
+    „Vergabe-Analyse", und die Beischriften mischten Zustand und Herkunft."""
+    code = _ohne_kommentar(CORE.read_text(encoding="utf-8"))
+    i = code.index('class="sec va-empty"')
+    block = code[i:]
+    for zustand in ("Liegen uns vor, Auswertung folgt", "Noch nichts aus diesem Land",
+                    "Noch nichts", "Nicht abrufbar"):
+        assert zustand in block, f"der Zustand {zustand!r} wird nicht mehr benannt"
+    assert 'tk("Vergabe-Analyse")}<span class="cov")' not in block

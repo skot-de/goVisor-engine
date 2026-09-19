@@ -2355,5 +2355,10 @@
   "Die Unterlagen liegen uns vor. Die Auswertung steht noch aus.": "We have the documents. The analysis is still pending.",
   "Beim Portal liegen Unterlagen. Oeffnen und hochladen im Detail.": "Documents are available on the portal. Open and upload from the detail view.",
   "Gliederung": "Structure",
-  "Wir kennen die {n} Dateien dieses Vorgangs, duerfen sie dort aber nicht selbst herunterladen.": "We know the {n} files of this procedure but may not download them there ourselves."
+  "Wir kennen die {n} Dateien dieses Vorgangs, duerfen sie dort aber nicht selbst herunterladen.": "We know the {n} files of this procedure but may not download them there ourselves.",
+  "Liegen uns vor, Auswertung folgt": "On file, analysis to follow",
+  "Noch nichts aus diesem Land": "Nothing from this country yet",
+  "Noch nichts": "Nothing yet",
+  "Nicht abrufbar": "Not available",
+  "Neuere oder vollstaendigere Unterlagen?": "Newer or more complete documents?"
 }

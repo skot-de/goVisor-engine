@@ -2655,6 +2655,39 @@ td.c-doks button:focus-visible{outline:2px solid var(--signal);outline-offset:1p
 .va-portal:focus-visible{outline:2px solid var(--signal);outline-offset:3px}
 .va-portal + .va-drop{margin-top:10px}
 
+/* ── Das Drop-Feld fuer Vergabeunterlagen ──────────────────────────────────────
+   ⚠ DIESE REGELN WAREN ZWEI COMMITS LANG WEG. Beim Ersetzen des Nachbarblocks suchte ich
+   den Kommentarkopf mit `rindex("/* ──", 0, …)` und traf den Kopf DIESES Blocks — das
+   Drop-Feld rutschte mit heraus und rendert seitdem unformatiert. Dieselbe Familie wie
+   Fallenkatalog F19/F20: ein Anker, der nicht eindeutig ist, und ein Fenster, das zu
+   weit greift.
+
+   ⚠ GROSS UND RUHIG ZUGLEICH. Es ist der einzige Weg, auf dem ein Nutzer uns etwas geben
+   kann, darf also nicht uebersehen werden. Es steht aber in einem Bildschirm, der gerade
+   gemeldet hat, dass er nichts liefern kann; ein greller Kasten waere dort eine
+   Aufforderung im falschen Ton. */
+.va-drop{display:flex;flex-direction:column;align-items:center;gap:7px;text-align:center;
+  padding:22px 18px;margin:14px 0 0;border:1.5px dashed var(--line-strong);border-radius:11px;
+  background:var(--surface-2,#f6f8f7);color:var(--ink-500);transition:.15s}
+.va-drop b{font-size:14px;font-weight:650;color:var(--ink-800,#1a2b26);letter-spacing:-.01em}
+.va-drop span{font-size:12px;line-height:1.5;max-width:46ch}
+.va-drop svg{color:var(--ink-300)}
+/* ⚠ Eigene Klasse, nicht `:hover`: waehrend eines Ziehvorgangs feuert `hover` nicht
+   zuverlaessig, die Rueckmeldung kaeme also genau dann nicht, wenn sie gebraucht wird. */
+.va-drop.dz-an{border-color:var(--signal);background:var(--surface);color:var(--ink-700)}
+.va-drop.dz-an svg{color:var(--signal)}
+.va-drop .va-upload-btn{margin-top:4px}
+
+/* ── Nachreichen im ausgewerteten Zustand ────────────────────────────────────
+   Dort ist das Drop-Feld eine Korrektur, keine Aufforderung: abgesetzt durch eine Linie,
+   kleinere Ueberschrift, flacheres Feld. */
+.va-nach{margin-top:20px;padding-top:16px;border-top:1px solid var(--line)}
+.va-nach-h{font-size:12px;font-weight:650;color:var(--ink-600);margin:0 0 2px}
+.va-nach .va-drop{padding:14px 16px;margin-top:8px}
+.va-nach .va-drop b{font-size:13px}
+.va-nach .va-drop svg{width:18px;height:18px}
+.va-nach .va-portal{margin-top:8px;padding:8px 14px;font-size:12.5px}
+
 td.c-doks{width:84px;text-align:center}
 td.c-doks .dok{display:inline-flex;align-items:baseline;gap:3px;padding:1px 6px;
   border-radius:9px;background:var(--surface-3);border:1px solid var(--line);
