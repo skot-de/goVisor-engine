@@ -172,7 +172,12 @@ function empfehlung(l){
 
 /* #26 für die Liste — eine Zelle, zwei Inhalte: Handlungsempfehlung (Kaskade B) wenn verfügbar,
  * sonst Einordnung (Kaskade A). Farbklasse rec-go/def/open/skip, kurzer Grund. */
-const REC_CLS = { gruen:'go', blau:'def', neutral:'open', gedaempft:'skip' };
+/* ⚠ DIESE ZUORDNUNG STAND ZWEIMAL IM QUELLTEXT — hier und noch einmal als lokales `CLS`
+   im Detail-Verdikt (Zeile ~2607). Beim Nachtragen von `rot` waere die zweite Fassung
+   stehengeblieben und `CLS['rot']` haette `undefined` ergeben: die Klasse `rec-undefined`,
+   also ein Verdikt ohne jede Farbe im Detail, waehrend die Liste rot leuchtet. Jetzt gibt
+   es nur noch diese eine. */
+const REC_CLS = { gruen:'go', blau:'def', neutral:'open', gedaempft:'skip', rot:'stop' };
 // Aussagestärke für die Sortierung (§4.1): Bewerben/Hohe Passung zuerst, Nicht bewerben zuletzt.
 const REC_RANK = { 'Bewerben':0, 'Hohe Passung':0, 'Verteidigen':1, 'Bestandsvertrag':1,
   "Noch zu klären":2, 'Passung mittel':2, 'Geringe Passung':3, 'Frist zu knapp':3, 'Nicht bewerben':3 };
@@ -2604,7 +2609,7 @@ function renderAnalyse(l){
         // #26 Handlungsempfehlung (ersetzt #19). Kaskade A/B je Datenzustand + Abdeckung, plus
         // Begründungskette E1–E10 und Zusätze. Nie ein Verdikt ohne offengelegte Bedingungen (§7).
         const rec = recommend(l, userProfile, { ownBuyers: userContracts.map(c=>c.buyer_name).filter(Boolean) });
-        const CLS = { gruen:'go', blau:'def', neutral:'open', gedaempft:'skip' };
+        const CLS = REC_CLS;
         const kette = begruendungskette(rec.evals);
         const zTags = rec.zusaetze.map(z=>`<span class="rec-z">${esc(tk(z.t))}</span>`).join('');
         let head;

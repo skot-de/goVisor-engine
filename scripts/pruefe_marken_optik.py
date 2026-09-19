@@ -45,6 +45,9 @@ MARKEN = [
     ("Unterlagen Ja2",   "c-doks",  '<button class="dokpill dok-ja">Ja</button>'),
     ("Unterlagen Link",  "c-doks",  '<button class="dokpill dok-link2">Link</button>'),
     ("Unterlagen Nein",  "c-doks",  '<span class="dokpill dok-nein">Nein</span>'),
+    ("Empfehlung gut",   "c-empf",  '<span class="empf rec-go">Hohe Passung</span>'),
+    ("Empfehlung offen", "c-empf",  '<span class="empf rec-open">Passung mittel</span>'),
+    ("Empfehlung stop",  "c-empf",  '<span class="empf rec-stop">Frist zu knapp</span>'),
 ]
 
 

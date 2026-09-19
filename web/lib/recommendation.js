@@ -153,7 +153,13 @@ function evaluate(lead, profile, ctx) {
 export function einordnung(e) {
   if (e.E8 === "eigen") return { label: "Bestandsvertrag", cls: "blau", gruende: ["läuft aus. Folgeausschreibung"] };
   if (e.E2 != null && e.E2 < T.E2_mittel) return { label: "Geringe Passung", cls: "gedaempft", gruende: ["wenig Überschneidung mit euren Feldern"] };
-  if (e.E5 === "unzureichend") return { label: "Frist zu knapp", cls: "gedaempft", gruende: [tk("nur {n} Tage", { n: e.E5tage })] };
+  /* ⚠ ROT, NICHT GEDAEMPFT. Sven am 2026-09-19. Der Unterschied zu „Geringe Passung" ist
+     nicht der Grad, sondern die Art: eine schwache Passung ist ein URTEIL, ueber das man
+     anderer Meinung sein kann, eine zu kurze Frist ist eine TATSACHE, die den Vorgang
+     schliesst. Gedaempft las sich wie „lohnt sich eher nicht" statt „geht nicht mehr".
+     Gemessen ueber bau+it+medizin+beratung mit breitem Profil: 5,4 % der offenen Leads —
+     selten genug, dass Rot nicht zur Tapete wird. */
+  if (e.E5 === "unzureichend") return { label: "Frist zu knapp", cls: "rot", gruende: [tk("nur {n} Tage", { n: e.E5tage })] };
   /* ⚠ DER GRUND DARF NICHT DIE UEBERSCHRIFT WIEDERHOLEN. Hier stand zweimal
      `gruende: ["hohe Passung"]` unter `label: "Hohe Passung"` — und die Zelle rendert
      BEIDES untereinander. Gemeldet am 2026-09-19: „in spalte empfehlung, steht hohe

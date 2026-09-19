@@ -27,6 +27,27 @@ CORE = WURZEL / "web" / "lib" / "explorerCore.js"
 REC = WURZEL / "web" / "lib" / "recommendation.js"
 
 
+def _ohne_kommentar(s: str) -> str:
+    """`//` und `/* */` raus — sonst prueft der Test seine eigene Begruendung (F13)."""
+    raus, i, n = [], 0, len(s)
+    while i < n:
+        if s[i] == "/" and i + 1 < n and s[i + 1] == "/":
+            while i < n and s[i] != "\n":
+                raus.append(" ")
+                i += 1
+            continue
+        if s[i] == "/" and i + 1 < n and s[i + 1] == "*":
+            while i < n and not (s[i] == "*" and i + 1 < n and s[i + 1] == "/"):
+                raus.append("\n" if s[i] == "\n" else " ")
+                i += 1
+            raus.append("  ")
+            i += 2
+            continue
+        raus.append(s[i])
+        i += 1
+    return "".join(raus)
+
+
 def _ohne_kommentar_css(s: str) -> str:
     return re.sub(r"/\*[\s\S]*?\*/", "", s)
 
@@ -126,3 +147,51 @@ def test_die_unterlagen_label_haben_die_form_der_anderen_spalten():
     z = kern[i:kern.index("case '", i + 20)]
     assert z.count("dokpill") == 3, (
         f"{z.count('dokpill')} statt 3 Label tragen die gemeinsame Marke")
+
+
+def test_eine_zu_knappe_frist_ist_rot_und_sonst_nichts():
+    """⚠ Sven am 2026-09-19: „das 'frist zu knapp' label solltest du vll rot machen."
+
+    Der Unterschied zu „Geringe Passung" ist nicht der Grad, sondern die ART. Eine schwache
+    Passung ist ein URTEIL, ueber das man anderer Meinung sein kann; eine zu kurze Frist ist
+    eine TATSACHE, die den Vorgang schliesst. Beide trugen `gedaempft`, und gedaempft liest
+    sich als „lohnt sich eher nicht" statt „geht nicht mehr".
+
+    ⚠ Rot vertraegt nur Seltenheit. Gemessen ueber bau+it+medizin+beratung (36.943 offene
+    Leads) mit breitem Profil: **5,4 %** — etwa jede achtzehnte Zeile. Deshalb prueft dieser
+    Test auch die Gegenrichtung: genau EIN Label ist rot. Wandern weitere hinein, wird die
+    Farbe zur Tapete und sagt nichts mehr.
+    """
+    quelle = (WURZEL / "web" / "lib" / "recommendation.js").read_text(encoding="utf-8")
+    rot = re.findall(r'label: "([^"]+)", cls: "rot"', quelle)
+    assert rot == ["Frist zu knapp"], (
+        f"rot tragen: {rot}. Erwartet genau „Frist zu knapp\" — eine Alarmfarbe auf "
+        f"mehreren Labeln ist keine Alarmfarbe mehr.")
+
+    kern = _ohne_kommentar(CORE.read_text(encoding="utf-8"))
+    m = re.search(r"REC_CLS = \{([^}]*)\}", kern)
+    assert m and "rot:'stop'" in m.group(1).replace(" ", ""), (
+        "die Klasse `rot` hat keine Entsprechung — das Label bekaeme `rec-undefined`")
+
+    css = _ohne_kommentar_css(CSS.read_text(encoding="utf-8"))
+    for regel in (".c-empf .empf.rec-stop", ".rec-verdict.rec-stop"):
+        assert regel in css, f"{regel} fehlt — Liste und Detail muessen beide rot sein"
+    assert "--risk" in css[css.index(".c-empf .empf.rec-stop"):][:160], (
+        "das Rot ist kein Token, sondern ein eigener Wert")
+
+
+def test_die_klassenzuordnung_steht_nur_einmal():
+    """⚠ Sie stand ZWEIMAL: als `REC_CLS` fuer die Liste und noch einmal als lokales `CLS`
+    im Detail-Verdikt. Beim Nachtragen von `rot` waere die zweite Fassung stehengeblieben,
+    `CLS['rot']` haette `undefined` ergeben — ein Verdikt ohne jede Farbe im Detail,
+    waehrend die Liste rot leuchtet. Die Sorte Fehler, die niemand meldet, weil die eine
+    Ansicht ja stimmt.
+    """
+    kern = _ohne_kommentar(CORE.read_text(encoding="utf-8"))
+    # ⚠ Am Wort `gedaempft` erkannt, nicht an `gruen`: `AMP` (die Ampel der
+    # Dokumentauswertung) benutzt ebenfalls gruen/rot, meint aber etwas anderes und ist
+    # zu Recht eine eigene Tabelle. Der erste Anlauf dieses Tests hat sie mitgezaehlt.
+    eigene = re.findall(r"(?:const|let)\s+\w+\s*=\s*\{[^}]*gedaempft\s*:", kern)
+    assert len(eigene) == 1, (
+        f"{len(eigene)} Zuordnungen von Kaskaden-Klasse auf CSS-Klasse. Es darf nur eine "
+        f"geben, sonst altert eine davon unbemerkt.")
