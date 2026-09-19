@@ -1230,13 +1230,12 @@ td.c-star{width:30px;text-align:center;padding-right:0}
 .tstar[data-merk="auto"]{color:var(--ink-400)}
 
 td.c-src{width:96px}
-.srcpill{font-size:11.5px;font-weight:500;display:inline-flex;align-items:center;gap:6px;white-space:nowrap;padding:3px 9px;border-radius:100px;border:1px solid transparent}
-.srcpill::before{content:'';width:6px;height:6px;border-radius:50%;flex:none}
-.src-auslauf{background:#EDF1F7;color:#33507D}.src-auslauf::before{background:#3A6099}
-.src-f02{background:#EBF3EE;color:#2C5E43}.src-f02::before{background:#2F6B4A}
-.src-f01{background:#F7F0E6;color:#835616}.src-f01::before{background:#A2691E}
+.srcpill{font-size:11.5px;font-weight:500;display:inline-flex;align-items:center;white-space:nowrap;padding:3px 9px;border-radius:100px;border:1px solid transparent}
+.src-auslauf{background:#EDF1F7;color:#33507D}
+.src-f02{background:#EBF3EE;color:#2C5E43}
+.src-f01{background:#F7F0E6;color:#835616}
 /* #24 Zuschlagsphase — eigene Farbgebung (blau), damit sich Zuschläge von offenen Ausschreibungen unterscheiden */
-.src-award{background:#EAF1F8;color:#2B5F86}.src-award::before{background:#2B5F86}
+.src-award{background:#EAF1F8;color:#2B5F86}
 .award-when{display:inline-flex;flex-direction:column;line-height:1.15;font-size:12px;color:var(--ink-500)}
 .award-when.hot{color:#2B5F86;font-weight:600}
 .award-when .cdsub{font-size:9.5px;color:var(--ink-400);letter-spacing:.02em;margin-top:2px;font-weight:400}
@@ -1292,11 +1291,10 @@ td.c-frist{white-space:nowrap}
 .cd.none .val,.cd.none{color:var(--ink-300)}
 
 td.c-natur{white-space:nowrap}
-.nat{font-size:11.5px;font-weight:500;display:inline-flex;align-items:center;gap:6px;white-space:nowrap;padding:3px 9px;border-radius:100px;border:1px solid transparent}
-.nat::before{content:'';width:6px;height:6px;border-radius:50%;flex:none}
-.nat-dienst{background:#EDF1F6;color:#365574}.nat-dienst::before{background:#3A5A75}
-.nat-liefer{background:#F2EEF6;color:#614579}.nat-liefer::before{background:#6A4E7A}
-.nat-bau{background:#F5F0E7;color:#6E5A34}.nat-bau::before{background:#7A6640}
+.nat{font-size:11.5px;font-weight:500;display:inline-flex;align-items:center;white-space:nowrap;padding:3px 9px;border-radius:100px;border:1px solid transparent}
+.nat-dienst{background:#EDF1F6;color:#365574}
+.nat-liefer{background:#F2EEF6;color:#614579}
+.nat-bau{background:#F5F0E7;color:#6E5A34}
 
 td.c-konk{white-space:nowrap}
 .kf{display:inline-flex;align-items:center;gap:7px}
@@ -2641,20 +2639,23 @@ td.c-band .passung i{display:none}
 
    ⚠ Gemessen fuellt „Link" 81,7 % der Spalte. Das ist die ehrliche Lage und kein Fehler —
    aber es ist auch der Grund, warum es sich NICHT hervorheben darf. */
-.dok-ja{font-size:11.5px;font-weight:600;color:var(--ink-600)}
-.dok-ja.dok-ausgewertet{color:var(--signal-deep)}
-.dok-link2{font-size:11.5px;color:var(--ink-400);
-  text-decoration:underline;text-decoration-style:dotted;text-underline-offset:2px}
-.dok-link2:hover{color:var(--signal)}
-.dok-nein{font-size:11.5px;color:var(--ink-200,#c9d2ce);cursor:help;user-select:none}
+/* ⚠ Gleiche Bauform wie Phase (.srcpill), Leistung (.nat) und Wettbewerb (.wettb):
+   runde Kapsel, getoenter Grund, 11,5 px. Eine eigene Form in derselben Zeile liest sich
+   als eine andere Art von Sache. Der Grund traegt die Abstufung, nicht die Form. */
+.dokpill{font-size:11.5px;font-weight:500;display:inline-flex;align-items:center;
+  white-space:nowrap;padding:3px 9px;border-radius:100px;border:1px solid transparent}
+.dok-ja{background:var(--surface-3);color:var(--ink-600)}
+.dok-ja.dok-ausgewertet{background:var(--signal-wash);color:var(--signal-deep);font-weight:600}
+.dok-link2{background:transparent;color:var(--ink-400);border-color:var(--line)}
+.dok-link2:hover{color:var(--signal-deep);border-color:var(--signal)}
+.dok-nein{color:var(--ink-300);cursor:help;user-select:none}
 
-td.c-doks button{background:none;border:0;padding:2px 4px;margin:-2px -4px;border-radius:5px;
-  font:inherit;cursor:pointer;transition:.12s}
-td.c-doks button:hover{background:var(--surface-2)}
+td.c-doks button{font:inherit;cursor:pointer;transition:.12s}
 td.c-doks button:focus-visible{outline:2px solid var(--signal);outline-offset:1px}
-/* ⚠ Deutlich blasser als jeder Zustand MIT Inhalt, aber sichtbar. Eine leere Zelle liest
-   sich als Fehler; ein Strich sagt „nachgesehen, nichts da". Nicht anklickbar — seit
-   jeder Klick in der Spalte auf den Unterlagen-Tab fuehrt, waere er eine Sackgasse. */
+/* ⚠ „Nein" bleibt blasser als jedes Label MIT Inhalt, aber sichtbar: eine leere Zelle
+   liest sich als Fehler, ein Wort sagt „nachgesehen, nichts da". Es traegt als einziges
+   keinen Grund — nicht anklickbar, weil jeder Klick in dieser Spalte auf den
+   Unterlagen-Tab fuehrt und er hier in eine leere Ansicht fuehren wuerde. */
 
 /* ── Der Weg zum Portal, im Detail statt in der Zelle ─────────────────────────
    ⚠ Ein echtes Anker-Element mit target=_blank, kein Skript. Nur so kann der Nutzer mit

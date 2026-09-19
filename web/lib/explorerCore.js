@@ -928,6 +928,12 @@ function cellHTML(l, key){
          Die Unterschiede innerhalb von „Ja" (ausgewertet / nur Volltext / nur
          Gliederung) traegt der Titel, die Auswertung zusaetzlich die Farbe.
 
+         ⚠ DIE FORM IST DIE DER ANDEREN SPALTEN. Sven am 2026-09-19: „mach daraus so
+         label, wie in jeder anderen spalte auch". Phase (`.srcpill`), Leistung (`.nat`)
+         und Wettbewerb (`.wettb`) tragen dieselbe Marke: runde Kapsel, getoenter Grund,
+         11,5 px. Eine vierte Bauform in derselben Zeile liest sich als vierte Art von
+         Sache — dabei ist es dieselbe: ein Wort, das einen Zustand benennt.
+
          ⚠ „NEIN" IST STUMM. Seit jeder Klick in dieser Spalte auf den Unterlagen-Tab
          fuehrt, waere es eine Sackgasse: man landete in einer Ansicht, die sagt, dass es
          nichts gibt. */
@@ -940,13 +946,13 @@ function cellHTML(l, key){
           : a ? tk("Unterlagen gelesen, aber kein Pruefpunkt gefunden.")
           : u.gelesen ? tk("Die Unterlagen liegen uns vor. Die Auswertung steht noch aus.")
           : tk("Wir kennen die {n} Dateien dieses Vorgangs, duerfen sie dort aber nicht selbst herunterladen.", {n: u.gliederung});
-        return `<td class="c-doks"><button class="dok-ja${a && a.pruef ? " dok-ausgewertet" : ""}"`
+        return `<td class="c-doks"><button class="dokpill dok-ja${a && a.pruef ? " dok-ausgewertet" : ""}"`
              + ` data-doklink="${esc(l.id)}" title="${esc(titel)}">${tk("Ja")}</button></td>`;
       }
       if (u.url)
-        return `<td class="c-doks"><button class="dok-link2" data-doklink="${esc(l.id)}" title="${
+        return `<td class="c-doks"><button class="dokpill dok-link2" data-doklink="${esc(l.id)}" title="${
           esc(tk("Beim Portal liegen Unterlagen. Wir haben sie noch nicht."))}">${tk("Link")}</button></td>`;
-      return `<td class="c-doks"><span class="dok-nein" title="${
+      return `<td class="c-doks"><span class="dokpill dok-nein" title="${
         esc(tk("Von diesem Vorgang liegen uns keine Unterlagen vor."))}">${tk("Nein")}</span></td>`;
     }
     case 'empf': {
