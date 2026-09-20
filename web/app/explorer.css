@@ -2061,24 +2061,37 @@ tr.wf-verworfen .ttitel{color:var(--ink-400);text-decoration:line-through;text-d
   text-transform:uppercase;letter-spacing:.07em;color:var(--ink-600)}
 .lb-dot{width:7px;height:7px;border-radius:50%;flex:none}
 .lb-dot.heiss{background:#c2410c}
-.lb-dot.bald{background:#a16207}
-.lb-dot.markt{background:var(--signal,#12855a)}
-.lb-dot.luecke{background:#7c3aed}
 .lb-n2{font-size:24px;font-weight:700;letter-spacing:-.02em;line-height:1.1}
 .lb-n2 em{display:block;font-style:normal;font-size:11.5px;font-weight:400;color:var(--ink-500);margin-top:2px;line-height:1.4}
 .lb-nix{font-size:12px;color:var(--ink-400);padding:4px 0}
-.lb-mehr{align-self:flex-start;font-size:11.5px;color:var(--signal);background:none;border:0;padding:2px 0;cursor:pointer}
-.lb-mehr:hover{text-decoration:underline}
-.lb-kachel{display:flex;align-items:flex-start;gap:11px;text-align:left;width:100%;
-  padding:9px 11px;border:1px solid var(--line);border-radius:7px;background:var(--surface);cursor:pointer;transition:.15s}
-.lb-kachel:hover{border-color:var(--signal);background:var(--surface-2,#f6f8f7)}
-/* Feste 30 px schnitten vierstellige Zahlen in den Text daneben (1.990 braucht 39 px).
-   Jetzt mitwachsend, aber mit Mindestbreite für die Flucht der kleinen Zahlen. */
-.lb-kachel b{font-size:17px;font-weight:700;letter-spacing:-.02em;flex:none;
-  min-width:2.6em;text-align:right;font-variant-numeric:tabular-nums}
-.lb-kachel span{font-size:11.5px;color:var(--ink-600);line-height:1.4}
-.lb-kachel span i{font-style:normal;font-weight:600;color:var(--ink-800,#1a2b26)}
-a.lb-kachel{text-decoration:none}
+
+/* ── Die vier Kontext-Kacheln ───────────────────────────────────────────────────────
+   EINE Bauform statt dreier. Vorher standen hier fuenf Trefferzeilen, drei Luecken- und
+   drei Markt-Kacheln unter drei Ueberschriften: 18 klickbare Flaechen und 821 px, bei rund
+   800 px sichtbarer Hoehe. Jetzt vier gleiche Kacheln und ein Weg, gemessen 374 px.
+
+   ⚠ Zweispaltig, nicht vierspaltig: vier Kacheln nebeneinander waeren in der schmalen
+   Rasterspalte je 80 px breit, und die dritte Zeile („1.204 liegen ausserhalb eurer
+   Regionen") braucht Platz zum Umbrechen, sonst ist sie die eigentliche Unruhe. */
+.lb-kx{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.kx{display:flex;flex-direction:column;align-items:flex-start;gap:1px;text-align:left;
+  padding:10px 12px;border:1px solid var(--line);border-radius:10px;
+  background:var(--surface);cursor:pointer;transition:.15s;text-decoration:none}
+.kx:hover{border-color:var(--signal);background:var(--surface-2,#f6f8f7)}
+/* ⚠ 19 px, nicht 30: die Leitzahl links ist die einzige, die fuehren darf. Vier gleich
+   laute 30-px-Zahlen waren der Grund, warum der Block „voll" wirkte. */
+.kx-n{font-size:19px;font-weight:700;letter-spacing:-.02em;line-height:1.15;
+  color:var(--ink-900);font-variant-numeric:tabular-nums}
+.kx-l{font-size:12px;font-weight:600;color:var(--ink-900)}
+.kx-s{font-size:11px;color:var(--ink-400);line-height:1.35}
+
+/* Die Strategie ist keine Zahl, sondern ein Ort — flache Zeile ueber die volle Breite,
+   damit das Zweierraster kein Loch bekommt. */
+.lb-strat{display:flex;align-items:center;justify-content:flex-start;gap:6px;
+  width:100%;padding:9px 12px;border:1px solid transparent;border-radius:10px;
+  background:none;cursor:pointer;font-size:12px;font-weight:600;color:var(--signal);
+  text-align:left}
+.lb-strat:hover{border-color:var(--line);background:var(--surface-2,#f6f8f7)}
 
 /* Vorauswahl als Abschluss der Liste statt als Banner darueber. */
 .fussrow td{padding:0;border-top:1px solid var(--line);background:var(--surface-2,#f6f8f7)}

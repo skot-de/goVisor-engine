@@ -41,51 +41,74 @@ BREITEN = (1728, 1512, 1440, 1280)
 # keine zwei Spalten tragen, und das Stapeln ist dort die richtige Antwort, kein Fehler.
 STAPELN_ERLAUBT_UNTER = 1100
 
+# ⚠ EINE DECKE, KEIN MESSWERT. Der Block ist zweimal zugewachsen, beide Male in kleinen
+# Schritten: erst fuenf Vorschau-Zeilen, dann drei Luecken- und drei Markt-Kacheln. Am
+# 2026-09-20 waren es 18 Flaechen und 821 px bei rund 800 px sichtbarer Hoehe. Wer die
+# naechste Zeile einbaut, soll diese Zahl bewusst heben muessen.
+HOECHSTENS_FLAECHEN = 11
+
+
+def _fuellung() -> tuple[int, int, bool]:
+    """Wie viele Zeilen und Kacheln baut das ECHTE Bauteil? Aus dem Quelltext gelesen.
+
+    ⚠ OHNE DIESE ABLEITUNG MISST DIE SONDE NUR SICH SELBST. Zaehlt das Blatt eine feste
+    Zahl Kacheln, bleibt sie gruen, waehrend im Bauteil eine fuenfte und sechste stehen —
+    und genau so ist der Block zweimal zugewachsen. Jetzt traegt das Blatt so viel, wie
+    `DetailPanel.tsx` wirklich rendert.
+    """
+    q = _ohne_kommentar(TSX.read_text(encoding="utf-8"))
+    m = re.search(r"b\.heiss\.slice\(0, (\d+)\)", q)
+    return (int(m.group(1)) if m else 5, q.count("<Kachel"), "lb-strat" in q)
+
 
 def _blatt(ziel: pathlib.Path) -> None:
+    zeilen_n, kacheln_n, mit_strat = _fuellung()
     css = (WURZEL / "web" / "app" / "globals.css").read_text(encoding="utf-8")
     css += "\n" + (WURZEL / "web" / "app" / "explorer.css").read_text(encoding="utf-8")
-    # Fuellung in der Groessenordnung des echten Bestands: fuenf Zeilen links, drei
-    # Kacheln in der Mitte, drei Kacheln unten. Weniger wuerde die Reihe leichter
-    # aussehen lassen, als sie ist.
+    # Fuellung in der Groessenordnung des echten Bestands: fuenf Zeilen links, vier
+    # Kacheln rechts. Weniger wuerde den Block leichter aussehen lassen, als er ist.
     zeilen = "".join(
-        '<button class="lb-z"><span class="lb-zt">Ausschreibung Rahmenvertrag '
+        '<button class="lb-row"><span class="lb-row-t">Ausschreibung Rahmenvertrag '
         'Bauherrenvertretung und Projektsteuerung</span>'
-        '<span class="lb-zs">Bundesamt fuer Bauten und Logistik · noch 1 Tage</span></button>'
-        for _ in range(5))
+        '<span class="lb-row-s">noch 1 Tage</span></button>'
+        for _ in range(zeilen_n))
+    muster = (
+            ("4 von 6", "Angaben im Profil", "1.204 liegen ausserhalb eurer Regionen"),
+            ("1.180", "bahnen sich an", "Ankuendigungen und auslaufende Vertraege"),
+            ("37", "Mehrlos-Vergaben", "u.a. bei DB Netz und Stadt Koeln, hier lohnt ein Partner"),
+            ("12", "frische Zuschlaege", "u.a. an Strabag und Zueblin, wer gewonnen hat, kauft jetzt ein"))
     kacheln = "".join(
-        f'<button class="lb-kachel"><b>{n}</b><span><i>{ti}</i>. {tx}</span></button>'
-        for n, ti, tx in (
-            ("1.204", "Ohne Bundesland", "Ergaenzt eure Region, dann filtert der Umkreis."),
-            ("311", "Ohne Eignungsnachweis", "Hinterlegt Zertifikate, dann fallen K.-o.-Kriterien weg."),
-            ("88", "Ohne Referenzen", "Mit Referenzen steigt die Trefferquote.")))
-    markt = "".join(
-        f'<button class="lb-kachel"><b>{n}</b><span>{tx}</span></button>'
-        for n, tx in (
-            ("37", "Mehrlos-Vergaben, u.a. bei DB Netz und Stadt Koeln, hier lohnt ein Partner"),
-            ("12", "frische Zuschlaege, u.a. an Strabag und Zueblin"),
-            ("→", "Strategie: wohin sich euer Markt bewegt")))
+        '<button class="kx"><span class="kx-n">{}</span>'
+        '<span class="kx-l">{}</span><span class="kx-s">{}</span></button>'.format(*muster[i % len(muster)])
+        for i in range(kacheln_n))
     ziel.write_text(
-        '<meta charset="utf-8"><style>' + css + """
-body{margin:0;font-family:system-ui}
-.lb-z{display:flex;flex-direction:column;align-items:flex-start;gap:2px;background:none;
-  border:0;text-align:left;padding:5px 0;max-width:100%}
-.lb-zt{font-size:13px;font-weight:600;overflow:hidden;text-overflow:ellipsis;
-  white-space:nowrap;max-width:100%}
-.lb-zs{font-size:11.5px}</style>"""
+        '<meta charset="utf-8"><style>' + css + "\nbody{margin:0;font-family:system-ui}</style>"
         '<div class="lb"><div class="lb-zwei">'
         '<section class="lb-sp" data-a="jetzt"><h4><span class="lb-dot heiss"></span>'
         '<button class="lb-h4btn">Jetzt bewerben</button></h4>'
         '<p class="lb-n2">1.148<em>mit Frist in dieser Woche</em></p>'
         '<p class="lb-rahmen">6.501 innerhalb von drei Wochen</p>' + zeilen + '</section>'
-        '<div class="lb-kontext">'
-        '<section class="lb-sp" data-a="bald"><h4><span class="lb-dot bald"></span>Bahnt sich an</h4>'
-        '<p class="lb-n2">14<em>Ankuendigungen und auslaufende Vertraege</em></p></section>'
-        '<section class="lb-sp" data-a="bremst"><h4><span class="lb-dot luecke"></span>'
-        'Was euch bremst</h4>' + kacheln + '</section>'
-        '<section class="lb-sp" data-a="markt"><h4>Markt &amp; Netzwerk</h4>' + markt + '</section>'
-        '</div></div></div>',
+        '<div class="lb-kontext" data-a="kontext"><div class="lb-kx">' + kacheln + '</div>'
+        + ('<button class="lb-strat">Strategie: wohin sich euer Markt bewegt'
+           '<span>&rarr;</span></button>' if mit_strat else "")
+        + '</div></div></div>',
         encoding="utf-8")
+
+
+# ⚠ DIE GRENZE DIESER SONDE: das Blatt oben ist NACHGEBAUT, nicht das echte Bauteil. Zieht
+# jemand in `DetailPanel.tsx` andere Klassen ein, misst die Sonde weiter eine Anordnung,
+# die niemand mehr ausliefert — und meldet gruen. Genau diese Luecke hat `pruefe_marken_optik`
+# einmal eine ganze Spalte uebersehen lassen. Deshalb wird hier geprueft, dass jede Klasse,
+# die das Blatt benutzt, im echten Bauteil ueberhaupt vorkommt.
+KLASSEN = ("lb-zwei", "lb-kontext", "lb-kx", "kx-n", "kx-l", "kx-s", "lb-strat",
+           "lb-n2", "lb-rahmen", "lb-row")
+
+
+def klassen_pruefen() -> list[str]:
+    q = _ohne_kommentar(TSX.read_text(encoding="utf-8"))
+    fehlen = [k for k in KLASSEN if f'"{k}' not in q and f' {k}' not in q]
+    return ([f"die Sonde misst Klassen, die es im Bauteil nicht mehr gibt: "
+             + ", ".join(fehlen)] if fehlen else [])
 
 
 def messen() -> dict | None:
@@ -112,9 +135,22 @@ def messen() -> dict | None:
                         // ueber alle `.lb-sp` meldet deshalb immer drei Reihen und haette
                         // jede Anordnung fuer kaputt erklaert.
                         const kind = [...g.children].map(e => e.getBoundingClientRect());
-                        const s = [...g.querySelectorAll('.lb-sp')];
+                        const s = [...g.querySelectorAll('[data-a]')];
+                        // ⚠ „Laut" heisst: so gross, dass es den Blick zuerst zieht. Genau
+                        // EIN Element darf das sein. Vier gleich laute Zahlen waren der
+                        // Befund, mit dem dieser Umbau angefangen hat.
+                        // ⚠ Nicht „Element ohne Kinder": die Leitzahl `.lb-n2` traegt ein
+                        // <em> mit der Beschriftung und waere damit durchgerutscht. Zaehlt
+                        // wird der EIGENE Text eines Elements.
+                        const eigen = e => [...e.childNodes]
+                            .filter(n => n.nodeType === 3).map(n => n.textContent).join('').trim();
+                        const laut = [...g.querySelectorAll('*')].filter(e =>
+                            eigen(e) && parseFloat(getComputedStyle(e).fontSize) >= 20).length;
                         return { reihen: new Set(kind.map(x => Math.round(x.top))).size,
                                  hoehe: Math.round(g.getBoundingClientRect().height),
+                                 laut, flaechen: g.querySelectorAll('button, a').length,
+                                 kacheln: new Set([...g.querySelectorAll('.kx')].map(e =>
+                                          Math.round(e.getBoundingClientRect().width))).size,
                                  breiten: Object.fromEntries(s.map(e =>
                                           [e.dataset.a, Math.round(e.getBoundingClientRect().width)])) };
                     }""")
@@ -152,17 +188,19 @@ def leitzahl() -> list[str]:
         befunde.append(f"die Leitzahl im Ueberblick kommt aus `{woher}` statt aus `dieseWoche`")
     if not re.search(r'className="lb-rahmen">\{t\("\{n\} innerhalb von drei Wochen", \{ n: b\.heiss\.length', q):
         befunde.append("die drei Wochen stehen nicht mehr klein unter der Leitzahl")
-    # ⚠ Die zweite grosse Zahl ueber den Luecken-Kacheln wiederholte die erste Kachel:
-    # zweimal „1.204" untereinander liest sich wie zwei Befunde und ist einer.
-    if q.count('className="lb-n2"') > 2:
-        befunde.append(f"es stehen {q.count(chr(34) + 'lb-n2' + chr(34))} grosse Zahlen im "
-                       "Ueberblick statt zwei")
+    # ⚠ GENAU EINE grosse Zahl. Die zweite stand ueber den Luecken-Kacheln und wiederholte
+    # die erste Kachel: zweimal „1.204" untereinander liest sich wie zwei Befunde und ist
+    # einer. Seit die Kacheln ihre eigene, kleinere Zahl tragen, ist jede weitere `lb-n2`
+    # eine zweite Stimme, die genauso laut spricht wie die Leitzahl.
+    n2 = q.count('className="lb-n2"')
+    if n2 != 1:
+        befunde.append(f"es stehen {n2} grosse Zahlen im Ueberblick statt einer einzigen")
     return befunde
 
 
 def main() -> int:
     still = "--still" in sys.argv
-    befunde = leitzahl()
+    befunde = leitzahl() + klassen_pruefen()
 
     gemessen = messen()
     if gemessen is None:
@@ -183,9 +221,18 @@ def main() -> int:
         # „Jetzt bewerben" ist die einzige Spalte mit Arbeit fuer heute. Sie muss die
         # breiteste sein, sonst behauptet das Raster wieder Gleichrang.
         b = m["breiten"]
-        if b.get("jetzt", 0) <= b.get("bremst", 0):
-            befunde.append(f"bei {br} px ist „Jetzt bewerben\" {b.get('jetzt')} px breit und "
-                           f"damit nicht breiter als der Kontext ({b.get('bremst')} px)")
+        if b.get("jetzt", 0) <= b.get("kontext", 0):
+            befunde.append(f"bei {br} px ist die Arbeitsspalte {b.get('jetzt')} px breit und "
+                           f"damit nicht breiter als der Kontext ({b.get('kontext')} px)")
+        if m["laut"] != 1:
+            befunde.append(f"bei {br} px stehen {m['laut']} gleich laute Zahlen im Block "
+                           "statt einer einzigen Leitzahl")
+        if m["kacheln"] != 1:
+            befunde.append(f"bei {br} px sind die Kacheln unterschiedlich breit "
+                           f"({m['kacheln']} Breiten)")
+        if m["flaechen"] > HOECHSTENS_FLAECHEN:
+            befunde.append(f"bei {br} px stehen {m['flaechen']} klickbare Flaechen im Block "
+                           f"(hoechstens {HOECHSTENS_FLAECHEN})")
     eng = gemessen[STAPELN_ERLAUBT_UNTER]
     if eng["reihen"] == 1:
         befunde.append(f"bei {STAPELN_ERLAUBT_UNTER} px steht alles noch nebeneinander — "
@@ -197,8 +244,9 @@ def main() -> int:
         return 1
     if not still:
         h = gemessen[min(BREITEN)]["hoehe"]
+        f = gemessen[min(BREITEN)]["flaechen"]
         print(f"  Ueberblick: eine Reihe von {max(BREITEN)} bis {min(BREITEN)} px "
-              f"({h} px hoch), Leitzahl ist die Frist dieser Woche")
+              f"({h} px hoch), {f} klickbare Flaechen, eine Leitzahl")
     return 0
 
 

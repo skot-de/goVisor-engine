@@ -50,8 +50,14 @@ def test_die_zeilen_tragen_keinen_rahmen_mehr():
 
 def test_die_kacheln_behalten_ihren():
     """Sie sind Handlungsaufforderungen, keine Aufzaehlung. Ohne Rahmen waeren sie von den
-    Zeilen darueber nicht mehr zu unterscheiden, und dann war das Aufraeumen umsonst."""
-    rumpf = _regel(".lb-kachel")
+    Zeilen darueber nicht mehr zu unterscheiden, und dann war das Aufraeumen umsonst.
+
+    ⚠ Die Klasse heisst seit dem 2026-09-20 `.kx` statt `.lb-kachel`: aus drei Luecken- und
+    drei Markt-Kacheln wurden vier gleiche Kontext-Kacheln. Der Anspruch ist derselbe
+    geblieben, nur der Name hat sich geaendert — und dieser Test hat den Umbau gemeldet,
+    statt ihn stillschweigend durchzulassen.
+    """
+    rumpf = _regel(".kx")
     assert re.search(r"border\s*:\s*1px solid", rumpf), (
         "auch die Kacheln haben ihren Rahmen verloren. Dann sieht der ganze Ueberblick "
         "gleich aus und die drei Handlungsaufforderungen gehen unter.")

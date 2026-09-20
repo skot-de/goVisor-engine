@@ -81,6 +81,44 @@ function numOrNull(v) {
   return isNaN(n) ? null : n;
 }
 
+/* Wie viele der Angaben, die die Pruefung wirklich liest, sind hinterlegt?
+ *
+ * ⚠ DIE ZAHL IM NENNER IST KEINE MEINUNG. Gezaehlt wird genau das, was `matchLead` weiter
+ * unten ausliest UND was ein Mensch im Profil setzen kann. Ein Feld, das niemand fuellen
+ * kann (`cpvWins` kommt aus dem Onboarding-Abgleich, `nachbarFields` leiten wir ab), waere
+ * im Nenner eine Schuld, die man nicht begleichen kann.
+ *
+ * ⚠ DESHALB HEISST ES „4 von 6" UND NICHT „67 %". Ein Prozentsatz verspricht, dass 100
+ * erreichbar ist. Wer keine Buergschaft hat und keine will, kommt nie dorthin und wird
+ * dafuer jeden Tag angetippt. „4 von 6" sagt dasselbe, ohne das Versprechen.
+ *
+ * ⚠ `regions: null` heisst NICHT „nicht ausgefuellt", sondern „bundesweit taetig" (s.
+ * `buildProfile`: leere Eingabe wird bewusst zu null). Wer das als Luecke zaehlt, fordert
+ * eine Angabe ein, die der Nutzer schon gemacht hat. `regionTyp` traegt die Absicht.
+ */
+export function angabenStand(p) {
+  const gesetzt = (v) => {
+    if (v == null || v === false || v === '') return false;
+    if (Array.isArray(v)) return v.length > 0;
+    if (typeof v === 'object') return Object.values(v).some(gesetzt);
+    if (typeof v === 'number') return v !== 0;
+    return true;
+  };
+  const felder = [
+    ['fach',   gesetzt(p && p.cpvFields)],
+    ['region', !!(p && ((p.regions && p.regions.length) || p.regionTyp === 'bundesweit'))],
+    ['wert',   !!(p && (p.volMin != null || p.volMax != null))],
+    ['allein', !!(p && p.maxAlleine != null)],
+    ['buerg',  !!(p && p.buergschaft != null)],
+    ['aus',    gesetzt(p && p.exclusions)],
+  ];
+  return {
+    voll: felder.filter((f) => f[1]).length,
+    gesamt: felder.length,
+    offen: felder.filter((f) => !f[1]).map((f) => f[0]),
+  };
+}
+
 export function hasProfile(p) {
   return !!(p && p.cpvFields && p.cpvFields.length);
 }

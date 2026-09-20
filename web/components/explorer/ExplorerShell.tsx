@@ -2166,6 +2166,7 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
               accountLimit={accountLimit}
               rows={rows}
               alle={alleRows}
+              profil={realProfile}
               fremderLead={fremderLead}
               onGoto={(ziel) => {
                 // Ein Klick im Überblick soll die Ansicht wirklich wechseln, nicht nur

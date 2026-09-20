@@ -13,6 +13,7 @@ import { downloadDoc, downloadMarkdown, copyMarkdown } from "@/lib/dossier";
 import { track, EV } from "@/lib/analytics";
 import { markWonFromLead, loadContracts } from "@/lib/supabase/contracts";
 import { setUserContracts } from "@/lib/explorerCore";
+import { angabenStand } from "@/lib/profileEngine";
 import { sprachName, useSprache } from "@/lib/i18n";
 
 type Lead = {
@@ -76,7 +77,7 @@ function VorgangHinweis({ leadId }: { leadId: string }) {
 
 export function DetailPanel({
   activeId, activeTab, mode, tick, buyerDemo, aktiveRegion, accountLimit,
-  rows = [], alle = [], fremderLead = null, onPickLead, onGoto,
+  rows = [], alle = [], profil = null, fremderLead = null, onPickLead, onGoto,
   onTab, onClose, onExpand, onWf, onStar, onBodyAction, onDropDocs,
 }: {
   activeId: string | null;
@@ -90,6 +91,9 @@ export function DetailPanel({
   // (nicht der lokale Lead-Typ), damit die Shell ihre eigene Lead-Form durchreichen kann.
   rows?: BriefLead[];
   alle?: BriefLead[];
+  // Das echte Profil aus dem Onboarding. Wird nur gezaehlt, nicht gelesen: der Ueberblick
+  // sagt, WIE VIELE Angaben stehen, und nie, welche.
+  profil?: unknown;
   // Kennung, die geoeffnet werden SOLLTE, im geladenen Grundraum aber nicht liegt (Deep-Link
   // aus einer anderen Branche, Verlaufszeile einer Vergabestelle). Die Shell entscheidet das
   // vor dem Oeffnen und laedt den richtigen Grundraum nach; hier wird nur angezeigt, woran
@@ -154,7 +158,7 @@ export function DetailPanel({
   if (!activeId) {
     return fremderLead
       ? <FremderGrundraum lead={fremderLead} onClose={onClose} />
-      : <LeerBriefing rows={rows} alle={alle} onPick={onPickLead} onGoto={onGoto} />;
+      : <LeerBriefing rows={rows} alle={alle} profil={profil} onPick={onPickLead} onGoto={onGoto} />;
   }
 
   /* ⚠ Hier stand `…find(…)!`. Das Ausrufezeichen war eine Behauptung, keine Prüfung: es
@@ -447,16 +451,16 @@ function FremderGrundraum({ lead, onClose }: {
 /* Leerzustand als Tagesbriefing (statt „Kein Lead ausgewählt"): rechnet aus der AKTUELL
  * gefilterten Liste, was drängt und was sich lohnt — jede Zahl gemessen, keine erfundenen Werte.
  * Klick auf eine Zeile öffnet den Lead direkt. */
-function LeerBriefing({ rows, alle = [], onPick, onGoto }: {
+function LeerBriefing({ rows, alle = [], profil = null, onPick, onGoto }: {
   rows: BriefLead[]; alle?: BriefLead[];
+  // Nur gezaehlt, nie gelesen: der Ueberblick sagt, WIE VIELE Angaben stehen.
+  profil?: unknown;
   onPick?: (id: string) => void;
   onGoto?: (ziel: "netzwerk" | "strategie" | "award" | "vorschau" | "jetzt" | "trefferguete") => void;
 }) {
   const { t } = useSprache();
-  /* Drei Spalten nach Zeithorizont, nicht nach Datenherkunft:
-   *   jetzt   — worauf man sich diese Woche bewerben kann
-   *   bald    — was sich anbahnt (Ankündigungen, auslaufende Verträge)
-   *   drumrum — Markt und Netzwerk, also die Bausteine daneben
+  /* Zwei Spalten, nicht vier gleiche Viertel: links die Arbeit fuer heute, rechts vier
+   * Kacheln als Kontext. Der Schnitt folgt dem Zeithorizont, nicht der Datenherkunft.
    * `rows` ist die vorsortierte Akquise-Liste; „bald" braucht bewusst `alle`, weil die
    * Vorauswahl nur bewerbbare Ausschreibungen (f02) durchlässt und Ankündigungen sonst
    * unsichtbar blieben. */
@@ -476,7 +480,13 @@ function LeerBriefing({ rows, alle = [], onPick, onGoto }: {
        sie den Rahmen setzt, aber sie fuehrt nicht mehr. */
     const dieseWoche = heiss.filter((l) => (tageOf(l) ?? 99) <= 7);
 
-    // Vorschau: Ankündigungen + auslaufende Verträge, nach Möglichkeit profilnah.
+    /* Vorschau: Ankündigungen + auslaufende Verträge, nach Möglichkeit profilnah.
+     *
+     * ⚠ HIER STAND EINE MONATSANGABE JE ZEILE („läuft in ~7 Monaten aus"), und sie ist
+     * mit den Zeilen weggefallen. Falls sie jemand zurueckholt: bei einem GESCHAETZTEN
+     * Enddatum ist eine Monatszahl erfunden. Gemessen an den belegten Nachfolge-Ketten
+     * streut der Versatz je Gewerk um 267 bis 980 Tage (p25–p75). Nur wo `timing.src`
+     * „echt" ist, darf konkret formuliert werden; sonst gehoert dorthin eine Grobstufe. */
     const basis = alle.length ? alle : rows;
     const mitProfil = rows.some((l) => l.relevanz === "hoch" || l.relevanz === "mittel");
     const passend = (l: BriefLead) =>
@@ -518,31 +528,59 @@ function LeerBriefing({ rows, alle = [], onPick, onGoto }: {
        Zwei der Lücken haben ein EINGABEFELD, und zwar in der Treffergüte (`BetragInput`,
        Betrag eintippen, Enter). Die anderen sind keine leeren Felder, sondern Einladungen,
        das Profil zu WEITEN („arbeitet ihr dort doch?"), und das geschieht im Eignungsprofil. */
+    /* ⚠ `titel` und `text` sind hier am 2026-09-20 WEGGEFALLEN, nicht verlorengegangen:
+       die Anleitung („tragt den Rahmen ein, den eure Bank stellt") steht in der
+       Trefferguete, und das ist der einzige Ort, an dem der Wert auch eingetippt werden
+       kann. Eine zweite Fassung im Ueberblick waere eine Anweisung ohne Eingabefeld.
+       Geblieben ist `kurz` — die eine Zeile, die auf die Kachel passt. */
     const luecken = [
       { key: "buerg", ziel: "trefferguete", n: imFeld.filter((l) => blockerArt(l, "buergschaft_offen")).length,
-        titel: t("Bürgschaftsrahmen fehlt"),
-        text: t("fordern eine Bürgschaft. Tragt den Rahmen ein, den eure Bank stellt, dann prüfen wir sie mit.") },
+        bitte: (n: string) => t("Tragt euren Bürgschaftsrahmen ein, {n} fordern ihn", { n }) },
       { key: "allein", ziel: "trefferguete", n: imFeld.filter((l) => blockerArt(l, "partner")).length,
-        titel: t("Über eurer Alleingrenze"),
-        text: t("sind größer, als ihr allein stemmt. Sagt uns eure Grenze, dann trennen wir Partner-Fälle von Absagen.") },
+        bitte: (n: string) => t("Sagt uns eure Alleingrenze, {n} liegen darüber", { n }) },
       { key: "region", ziel: "profil", n: imFeld.filter((l) => teilStatus(l, "region") === "no").length,
-        titel: t("Außerhalb eurer Regionen"),
-        text: t("passen fachlich, liegen aber außerhalb. Arbeitet ihr dort doch? Dann nehmt die Region auf.") },
+        bitte: (n: string) => t("Nehmt die Region auf, {n} liegen außerhalb", { n }) },
       { key: "vol", ziel: "profil", n: imFeld.filter((l) => teilStatus(l, "vol") === "no").length,
-        titel: t("Außerhalb eurer Wertspanne"),
-        text: t("liegen über oder unter eurer Spanne. Passt sie an, wenn ihr dort doch bietet.") },
+        bitte: (n: string) => t("Passt eure Wertspanne an, {n} liegen außerhalb", { n }) },
       /* ⚠ Der Ortstermin gehört HIERHIN und nicht nur ins Lead-Detail. Ein Pflichttermin
          ist eine Zulassungsbedingung: wer nicht erscheint, darf nicht bieten. Wer das erst
          beim Lesen der Unterlagen merkt, hat den Vorgang schon in der Merkliste. Gemessen
          2026-09-01: 3.723 Vorgänge mit erkanntem Termin, davon 108 verpflichtend — selten,
          und genau deshalb fällt er im Alltag durch. */
       { key: "ortstermin", ziel: "profil", n: imFeld.filter((l) => blockerArt(l, "ortstermin")).length,
-        titel: t("Pflicht-Ortstermin außerhalb eures Gebiets"),
-        text: t("verlangen einen Termin vor Ort, an dem ihr teilnehmen müsst. Fahrt ihr hin? Dann gehört die Region ins Profil.") },
-    ].filter((x) => x.n > 0).sort((a, z) => z.n - a.n);
+        bitte: (n: string) => t("Nehmt die Region auf, {n} verlangen einen Ortstermin", { n }) },
+    ].filter((x) => x.n > 0).sort((a, z) => z.n - a.n)
+      /* ⚠ Die Zahl steht IN der Bitte, nicht davor. „1.204 liegen ausserhalb eurer
+         Regionen" benennt nur, was fehlt — das ist eine Maengelmeldung. Eine Einladung
+         sagt, was nach dem Klick passiert, und traegt die Zahl als Begruendung mit.
+         Dieselbe Regel steht seit dem 2026-09-01 in `test_aktivierung.py`; beim Umbau auf
+         Kacheln ist sie mir einmal durchgerutscht und der Waechter hat es gemeldet. */
+      .map((x) => ({ ...x, text: x.bitte(x.n.toLocaleString("de-DE")) }));
 
-    return { offen, heiss, dieseWoche, kuenftig, netz, zuschlaege, netzKaeufer, gewinner, luecken, imFeld, tageOf };
-  }, [rows, alle]);
+    /* ⚠ Der Stand kommt aus `profileEngine`, nicht aus einer Zaehlung hier. Dieselbe
+       Funktion liest auch `matchLead` aus; eine zweite Liste an dieser Stelle waere beim
+       ersten neuen Profilfeld still falsch geworden. */
+    const stand = angabenStand(profil);
+    return { offen, heiss, dieseWoche, kuenftig, netz, zuschlaege, netzKaeufer, gewinner,
+             luecken, imFeld, stand, tageOf };
+  }, [rows, alle, profil]);
+
+  /* Eine Kachel des Ueberblicks. `ziel` ist entweder ein Klick in einen Tab oder ein
+     echter Verweis — beide muessen dieselbe Kachel sein, sonst faellt eine aus der Reihe.
+     Ein `<a>` ist hier kein Schmuck: `/unternehmen` ist eine andere Seite, und die gehoert
+     in den Verlauf und in die Mittelklick-Geste. */
+  const Kachel = ({ n, label, sub, ziel }: {
+    n: string; label: string; sub: string; ziel: (() => void) | string;
+  }) => {
+    const innen = (<>
+      <span className="kx-n">{n}</span>
+      <span className="kx-l">{label}</span>
+      <span className="kx-s">{sub}</span>
+    </>);
+    return typeof ziel === "string"
+      ? <a className="kx" href={ziel}>{innen}</a>
+      : <button className="kx" onClick={ziel}>{innen}</button>;
+  };
 
   const Zeile = ({ l, sub }: { l: BriefLead; sub: string }) => (
     <button className="lb-row" onClick={() => onPick?.(l.id)} title={t("Lead öffnen")}>
@@ -550,32 +588,6 @@ function LeerBriefing({ rows, alle = [], onPick, onGoto }: {
       <span className="lb-row-s">{sub}</span>
     </button>
   );
-
-  /* Zeitangabe so grob, wie die Prognose wirklich ist.
-   *
-   * „in 0 Monaten" war doppelt falsch: es ist keine Zeitangabe, und es täuscht eine
-   * Genauigkeit vor, die wir nicht haben. Gemessen an den belegten Nachfolge-Ketten liegt
-   * die Streuung des Versatzes je nach Gewerk bei 267 bis 980 Tagen (p25–p75) — bei einem
-   * GESCHÄTZTEN Enddatum ist „in 7 Monaten" schlicht erfunden. Deshalb: steht ein echtes
-   * Datum in den Unterlagen, wird konkret formuliert; ist es geschätzt, nur die Grobstufe.
-   */
-  const monate = (l: BriefLead) => {
-    const d = l.endTage as number | null;
-    const echt = String((l.timing as { src?: string } | undefined)?.src ?? "") === "echt";
-    if (d == null) return t("Zeitpunkt offen");
-    if (d < 0) return t("bereits ausgelaufen");
-    if (!echt) {
-      // Geschätzt → nur Grobstufe, nie eine Monatszahl.
-      if (d <= 90) return t("läuft bald aus (geschätzt)");
-      if (d <= 365) return t("läuft dieses Jahr aus (geschätzt)");
-      return t("läuft in ein bis zwei Jahren aus (geschätzt)");
-    }
-    if (d <= 14) return t("läuft jetzt aus");
-    if (d <= 60) return t("läuft in den nächsten Wochen aus");
-    if (d < 365) return t("läuft in ~{n} Monaten aus", { n: Math.round(d / 30) });
-    const j = d / 365;
-    return j < 1.5 ? t("läuft in gut einem Jahr aus") : t("läuft in ~{n} Jahren aus", { n: Math.round(j) });
-  };
 
   return (
     <div className="lb">
@@ -620,72 +632,64 @@ function LeerBriefing({ rows, alle = [], onPick, onGoto }: {
           }) : <p className="lb-nix">{t("Gerade nichts Dringendes, gut so.")}</p>}
         </section>
 
-        {/* ── Kontext: drei Abschnitte, gestapelt in der schmalen Spalte. Sie
-            beantworten Fragen, die nicht heute dran sind. ⚠ Der Rahmen ist ein
-            echtes Element, kein Fragment: die Spaltenbreite der Grid-Zelle gilt
-            sonst je Abschnitt, und die drei stuenden wieder nebeneinander. */}
+        {/* ── Kontext: vier Kacheln und ein Weg ───────────────────────────────
+            Vorher standen hier drei Abschnitte mit eigener Ueberschrift, eigenem Punkt
+            und drei verschiedenen Bauformen: fuenf Trefferzeilen, drei Luecken-Kacheln,
+            drei Markt-Kacheln. Gemessen bei 1440 px: 18 klickbare Flaechen, 8 grosse
+            Zahlen, 205 Woerter, 821 px hoch — bei rund 800 px sichtbarer Hoehe. Sven am
+            2026-09-20: „sonst ist alles voll".
+
+            Jetzt EIN Muster: vier gleich gebaute Kacheln, jede mit einem Ziel, darunter
+            der eine Weg, der keine Zahl ist. Gemessen 11 Flaechen, 374 px.
+
+            ⚠ Was dabei WEGFAELLT, faellt nicht weg, sondern rueckt eine Ebene tiefer: die
+            fuenf Vorschau-Zeilen stehen im Phasen-Tab, die weiteren Profil-Luecken in der
+            Trefferguete. Die Kachel zeigt die groesste; schliesst man sie, rueckt die
+            naechste nach. */}
         <div className="lb-kontext">
-          {/* ── bald ────────────────────────────────────────────── */}
-          <section className="lb-sp">
-            <h4><span className="lb-dot bald" />{t("Bahnt sich an")}</h4>
-            <p className="lb-n2">{b.kuenftig.length.toLocaleString("de-DE")}<em>{t("Ankündigungen und auslaufende Verträge")}</em></p>
-            {b.kuenftig.length ? b.kuenftig.slice(0, 5).map((l) => (
-              <Zeile key={l.id} l={l} sub={monate(l)} />
-            )) : <p className="lb-nix">{t("Noch keine Vorankündigungen in eurem Feld.")}</p>}
-            {b.kuenftig.length > 5 ? (
-              <button className="lb-mehr" onClick={() => onGoto?.("vorschau")}>{t("Alle {n} ansehen", { n: b.kuenftig.length })}</button>
-            ) : null}
-          </section>
-
-          {/* ── was im Weg steht ──────────────────────────────────── */}
-          <section className="lb-sp">
-            <h4><span className="lb-dot luecke" />{t("Was euch bremst")}</h4>
-            {b.luecken.length ? (<>
-              {/* ⚠ HIER STAND DIE ERSTE LUECKE NOCH EINMAL ALS GROSSE ZAHL — und direkt
-                  darunter dieselbe Zahl als erste Kachel. Zweimal „1.204" untereinander
-                  liest sich wie zwei Befunde und ist einer. */}
-              {/* ⚠ Höchstens drei, nach Anzahl sortiert. An einem Bestand können fünf Lücken
-                  gleichzeitig offen sein; fünf Bitten auf einem Bildschirm sind keine
-                  Einladung mehr, sondern eine Mängelliste. Die drei mit der größten Wirkung
-                  gewinnen. */}
-              {b.luecken.slice(0, 3).map((g) => (
-                g.ziel === "trefferguete"
-                  ? <button key={g.key} className="lb-kachel" onClick={() => onGoto?.("trefferguete")}>
-                      <b>{g.n.toLocaleString("de-DE")}</b>
-                      <span><i>{g.titel}</i>. {g.text}</span>
-                    </button>
-                  : <a key={g.key} className="lb-kachel" href="/unternehmen">
-                      <b>{g.n.toLocaleString("de-DE")}</b>
-                      <span><i>{g.titel}</i>. {g.text}</span>
-                    </a>
-              ))}
-            </>) : (
-              <p className="lb-nix">{b.imFeld.length
-                ? t("Nichts blockiert euch gerade, euer Profil ist vollständig genug.")
-                : t("Legt unter „Unternehmen“ euer Profil an, dann zeigen wir hier, was euch Aufträge kostet.")}</p>
-            )}
-          </section>
-
-          {/* ── drumrum ───────────────────────────────────────────── */}
-          <section className="lb-sp">
-            <h4><span className="lb-dot markt" />{t("Markt & Netzwerk")}</h4>
-            <button className="lb-kachel" onClick={() => onGoto?.("netzwerk")}>
-              <b>{b.netz.length.toLocaleString("de-DE")}</b>
-              <span>{b.netzKaeufer.length
-                ? <>{t("Mehrlos-Vergaben, u.a. bei")} <i>{b.netzKaeufer.join(t(" und "))}</i> {t("hier lohnt ein Partner")}</>
-                : t("Vergaben mit mehreren Losen, hier lohnt ein Partner")}</span>
-            </button>
-            <button className="lb-kachel" onClick={() => onGoto?.("award")}>
-              <b>{b.zuschlaege.length.toLocaleString("de-DE")}</b>
-              <span>{b.gewinner.length
-                ? <>{t("frische Zuschläge, u.a. an")} <i>{b.gewinner.join(t(" und "))}</i> {t("wer gewonnen hat, kauft jetzt ein")}</>
-                : t("frische Zuschläge. Wer gewonnen hat, kauft jetzt ein")}</span>
-            </button>
-            <button className="lb-kachel" onClick={() => onGoto?.("strategie")}>
-              <b>→</b>
-              <span>{t("Strategie: wohin sich euer Markt bewegt")}</span>
-            </button>
-          </section>
+          <div className="lb-kx">
+            {/* ⚠ „4 von 6" und NICHT „67 %": ein Prozentsatz verspricht, dass 100
+                erreichbar ist. Wer keine Buergschaft hat und keine will, kommt nie
+                dorthin und wird dafuer jeden Tag angetippt. Die Zahl im Nenner steht in
+                `angabenStand` und zaehlt nur, was `matchLead` liest und ein Mensch
+                setzen kann. */}
+            <Kachel
+              n={t("{a} von {b}", { a: b.stand.voll, b: b.stand.gesamt })}
+              label={t("Angaben im Profil")}
+              sub={b.luecken.length
+                ? b.luecken[0].text
+                : b.imFeld.length
+                  ? t("Nichts blockiert euch gerade.")
+                  : t("Legt euer Profil an, dann zeigen wir hier, was euch Aufträge kostet.")}
+              ziel={b.luecken.length && b.luecken[0].ziel === "trefferguete"
+                ? () => onGoto?.("trefferguete") : "/unternehmen"} />
+            <Kachel
+              n={b.kuenftig.length.toLocaleString("de-DE")}
+              label={t("bahnen sich an")}
+              sub={b.kuenftig.length
+                ? t("Ankündigungen und auslaufende Verträge")
+                : t("Noch keine Vorankündigungen in eurem Feld.")}
+              ziel={() => onGoto?.("vorschau")} />
+            <Kachel
+              n={b.netz.length.toLocaleString("de-DE")}
+              label={t("Mehrlos-Vergaben")}
+              sub={b.netzKaeufer.length
+                ? t("u.a. bei {wer}, hier lohnt ein Partner", { wer: b.netzKaeufer.join(t(" und ")) })
+                : t("hier lohnt ein Partner")}
+              ziel={() => onGoto?.("netzwerk")} />
+            <Kachel
+              n={b.zuschlaege.length.toLocaleString("de-DE")}
+              label={t("frische Zuschläge")}
+              sub={b.gewinner.length
+                ? t("u.a. an {wer}, wer gewonnen hat, kauft jetzt ein", { wer: b.gewinner.join(t(" und ")) })
+                : t("wer gewonnen hat, kauft jetzt ein")}
+              ziel={() => onGoto?.("award")} />
+          </div>
+          {/* Die Strategie ist keine Zahl, sondern ein Ort. Als fuenfte Kachel liesse sie
+              im Zweierraster ein Loch; als flache Zeile schliesst sie den Block ab. */}
+          <button className="lb-strat" onClick={() => onGoto?.("strategie")}>
+            {t("Strategie: wohin sich euer Markt bewegt")}<span aria-hidden="true">→</span>
+          </button>
         </div>
       </div>
 

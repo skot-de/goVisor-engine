@@ -52,7 +52,12 @@ def test_der_ueberblick_steht_in_einer_reihe():
 
 
 def test_die_sonde_sieht_den_umbruch_der_vier_gleichen_spalten():
-    """Gegenprobe mit GENAU DEM ZUSTAND, der da war: vier Spalten `minmax(0,1fr)`."""
+    """Gegenprobe mit GENAU DEM ZUSTAND, der da war: vier Spalten `minmax(0,1fr)`.
+
+    ⚠ Drei Mutationen, nicht eine, und das ist der Lerneffekt: im Raster stehen heute zwei
+    Kinder. Vier Spalten allein lassen drei davon leer und brechen nie um. Erst wenn Rahmen
+    UND Kachelraster aufgeloest sind, stehen wieder sechs Felder nebeneinander.
+    """
     r = _mit_mutation(
         (CSS,
          ".lb-zwei{display:grid;grid-template-columns:1.6fr 1fr;gap:var(--s6);align-items:start}",
@@ -63,7 +68,9 @@ def test_die_sonde_sieht_den_umbruch_der_vier_gleichen_spalten():
         # Erst `display:contents` loest den Rahmen auf und macht die drei Kontextbloecke
         # wieder zu eigenen Rasterfeldern — genau die Anordnung vom 2026-09-20.
         (CSS, ".lb-kontext{display:flex;flex-direction:column;gap:var(--s5);min-width:0}",
-         ".lb-kontext{display:contents}"))
+         ".lb-kontext{display:contents}"),
+        (CSS, ".lb-kx{display:grid;grid-template-columns:1fr 1fr;gap:8px}",
+         ".lb-kx{display:contents}"))
     if r.returncode == 2:
         return
     assert r.returncode == 1, "die Sonde bleibt gruen, obwohl die Abschnitte wieder umbrechen"
@@ -107,15 +114,17 @@ def test_die_sonde_sieht_die_alte_leitzahl():
     assert "statt aus `dieseWoche`" in r.stdout, r.stdout
 
 
-def test_die_sonde_sieht_die_doppelte_grosse_zahl():
-    """Die Zahl ueber den Kacheln wiederholte die erste Kachel: zweimal 1.204."""
-    r = _mit_mutation(
-        (TSX,
-         '<h4><span className="lb-dot luecke" />{t("Was euch bremst")}</h4>',
-         '<h4><span className="lb-dot luecke" />{t("Was euch bremst")}</h4>\n'
-         '            <p className="lb-n2">{b.luecken[0].n.toLocaleString("de-DE")}'
-         '<em>{t("Luecken")}</em></p>'))
-    assert r.returncode == 1, "die Sonde bleibt gruen, obwohl dieselbe Zahl zweimal dasteht"
+def test_die_sonde_sieht_eine_zweite_grosse_zahl():
+    """Die Zahl ueber den Kacheln wiederholte die erste Kachel: zweimal 1.204 untereinander.
+
+    ⚠ Die Gegenprobe setzt sie woanders wieder ein als damals, und das ist Absicht: geprueft
+    wird die REGEL (eine einzige Leitzahl), nicht die Stelle, an der sie einmal verletzt war.
+    """
+    r = _mit_mutation((
+        TSX, '          <div className="lb-kx">',
+        '          <p className="lb-n2">{b.netz.length}<em>{t("Lose")}</em></p>\n'
+        '          <div className="lb-kx">'))
+    assert r.returncode == 1, "die Sonde bleibt gruen, obwohl zwei Zahlen gleich laut sprechen"
     assert "grosse Zahlen" in r.stdout, r.stdout
 
 
@@ -124,3 +133,50 @@ def test_die_sonde_sieht_eine_veraenderte_sieben_tage_grenze():
                        "const dieseWoche = heiss.filter((l) => (tageOf(l) ?? 99) <= 21);"))
     assert r.returncode == 1, "die Sonde bleibt gruen, obwohl diese Woche drei Wochen meint"
     assert "sieben Tagen" in r.stdout, r.stdout
+
+
+def test_die_sonde_sieht_eine_zweite_gleich_laute_zahl():
+    """Der Befund, mit dem der Umbau anfing: vier gleich laute 30-px-Zahlen nebeneinander.
+
+    ⚠ Kein Umbruch, keine falsche Breite, kein fehlender Text — die Anordnung bleibt exakt
+    dieselbe. Nur die BERECHNETE Schriftgroesse verraet es. Eine Textpruefung haette hier
+    nichts zu lesen.
+    """
+    r = _mit_mutation((CSS, ".kx-n{font-size:19px;", ".kx-n{font-size:30px;"))
+    if r.returncode == 2:
+        return
+    assert r.returncode == 1, "die Sonde bleibt gruen, obwohl vier Zahlen gleich laut sind"
+    assert "gleich laute Zahlen" in r.stdout, r.stdout
+
+
+def test_die_sonde_sieht_eine_kachel_mehr():
+    """Die Decke gegen das Zuwachsen. ⚠ Beweist zugleich, dass das Blatt seine Fuellung aus
+    dem Bauteil zieht: eine Kachel im TSX muss in der MESSUNG ankommen."""
+    r = _mit_mutation((
+        TSX,
+        '          {/* Die Strategie ist keine Zahl',
+        '            <Kachel n={"7"} label={t("Testkachel")} sub={t("dazugebaut")}\n'
+        '              ziel={() => onGoto?.("award")} />\n'
+        '          {/* Die Strategie ist keine Zahl'))
+    if r.returncode == 2:
+        return
+    assert r.returncode == 1, "die Sonde bleibt gruen, obwohl eine Kachel dazugekommen ist"
+    assert "klickbare Flaechen" in r.stdout, r.stdout
+
+
+def test_die_sonde_sieht_mehr_zeilen_in_der_arbeitsspalte():
+    """Zweiter Beweis fuer dieselbe Ableitung, von der anderen Seite."""
+    r = _mit_mutation((TSX, "b.heiss.slice(0, 5)", "b.heiss.slice(0, 9)"))
+    if r.returncode == 2:
+        return
+    assert r.returncode == 1, "die Sonde bleibt gruen, obwohl vier Zeilen dazugekommen sind"
+    assert "klickbare Flaechen" in r.stdout, r.stdout
+
+
+def test_die_sonde_merkt_wenn_sie_an_der_wirklichkeit_vorbei_misst():
+    """⚠ Die gefaehrlichste Luege dieser Sonde: sie misst ein NACHGEBAUTES Blatt. Benennt
+    jemand im Bauteil eine Klasse um, misst sie weiter eine Anordnung, die niemand mehr
+    ausliefert. Genau dieser Fall muss auffallen, und zwar ohne Playwright."""
+    r = _mit_mutation((TSX, 'className="lb-kx"', 'className="lb-kacheln"'))
+    assert r.returncode == 1, "die Sonde misst weiter, obwohl das Bauteil die Klasse nicht mehr kennt"
+    assert "nicht mehr gibt" in r.stdout, r.stdout

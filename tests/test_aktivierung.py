@@ -51,22 +51,35 @@ def test_jeder_hinweis_sagt_was_der_klick_tut():
     """Ein Hinweis, der nur benennt, was fehlt, ist eine Mängelmeldung. Eine Einladung sagt,
     was danach passiert."""
     block = _luecken()
-    texte = re.findall(r'text: t\("([^"]+)"\)', block)
+    # ⚠ Seit dem 2026-09-20 traegt die Bitte die Zahl selbst („Nehmt die Region auf, 1.204
+    # liegen ausserhalb"), weil auf der Kachel nur EINE Zeile Platz hat. Beim Umbau war sie
+    # kurzzeitig ein reiner Befund ohne Aufforderung — dieser Test hat es gemeldet.
+    texte = re.findall(r'bitte: \(n: string\) => t\("([^"]+)"', block)
     assert len(texte) == 5
+    # ⚠ HIER STAND EINE WORTLISTE (Tragt|Sagt|nehmt|Passt|gehört), und sie ist am
+    # 2026-09-20 an „Nehmt" gescheitert — dasselbe Wort, nur am Satzanfang gross. Eine
+    # Liste prueft, welche Verben mir damals eingefallen sind, nicht die Regel. Die Regel
+    # ist: jede Bitte FAENGT mit einer Aufforderung in der Ihr-Form an, und die endet im
+    # Deutschen auf -t (Tragt, Sagt, Nehmt, Passt, Ergaenzt, Hinterlegt).
     for txt in texte:
-        assert re.search(r"\b(Tragt|Sagt|nehmt|Passt|gehört)\b", txt), f"ohne Aufforderung: {txt[:60]}"
+        erstes = txt.split(",")[0].split()[0]
+        assert re.fullmatch(r"[A-ZÄÖÜ][a-zäöüß]+t", erstes), (
+            f"faengt nicht mit einer Aufforderung an: {txt[:60]}")
 
 
 def test_kein_gedankenstrich_in_der_kachel():
     """Sven-Vorgabe. Die Kachel trug bis zum 2026-09-01 einen zwischen Titel und Text."""
-    stelle = DP[DP.index("b.luecken.slice(0, 3)"):]
-    stelle = stelle[:stelle.index("))}")]
-    assert "—" not in stelle and "–" not in stelle
+    for txt in re.findall(r'bitte: \(n: string\) => t\("([^"]+)"', _luecken()):
+        assert "—" not in txt and "–" not in txt, txt
 
 
-def test_hoechstens_drei_bitten():
+def test_genau_eine_bitte():
     """⚠ Fünf Bitten auf einem Bildschirm sind keine Einladung mehr, sondern eine
-    Mängelliste. Sortiert wird nach betroffener Anzahl, die drei mit der größten Wirkung
-    gewinnen."""
-    assert "b.luecken.slice(0, 3)" in DP
+    Mängelliste. Bis zum 2026-09-20 waren es drei; seit dem Umbau auf Kacheln ist es genau
+    EINE, und zwar die mit der größten Wirkung. Schließt man sie, rückt die nächste nach.
+
+    ⚠ Die Sortierung ist dabei der eigentliche Anspruch, nicht die Eins: ohne sie zeigt die
+    Kachel irgendeine Lücke, und „die größte" wäre eine Behauptung."""
+    assert "b.luecken[0].text" in DP, "die Kachel zeigt nicht mehr die erste Lücke"
+    assert "b.luecken.slice" not in DP, "es werden wieder mehrere Bitten gezeigt"
     assert "sort((a, z) => z.n - a.n)" in DP
