@@ -2035,11 +2035,25 @@ tr.wf-verworfen .ttitel{color:var(--ink-400);text-decoration:line-through;text-d
 /* ── Ueberblick: drei Spalten nach Zeithorizont (jetzt · bald · drumrum) ── */
 /* Drei Spalten, solange sie lesbar bleiben; darunter zwei, dann eine.
    Kein starres 3er-Raster: in der schmalen Detailspalte quetscht es sonst. */
-.lb-drei{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--s6);
-  margin-top:var(--s5);align-items:start}
-@media (max-width:1560px){.lb-drei{grid-template-columns:repeat(3,minmax(0,1fr))}}
-@media (max-width:1180px){.lb-drei{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (max-width:760px){.lb-drei{grid-template-columns:1fr}}
+/* ⚠ EINE BREITE SPALTE UND EIN STAPEL, statt vier gleich breiter. Begruendung im Kopf
+   des Ueberblicks (DetailPanel.tsx): die vier Abschnitte beantworten vier Fragen, und nur
+   eine ist Arbeit fuer heute. Gleich breite Spalten behaupten einen Rang, den es nicht
+   gibt — und gaben „Bahnt sich an" mit 14 Eintraegen dasselbe Viertel wie den 10.018
+   offenen Fristen.
+
+   ⚠ 1,6fr zu 1fr, nicht 2:1. Die Arbeitsspalte traegt fuenf Titelzeilen, die abgeschnitten
+   werden, wenn sie zu schmal ist; der Stapel traegt kurze Zahlen und Kacheln. Gemessen
+   passt es damit oberhalb von 1100 px in eine Reihe, statt erst ab 1728. */
+.lb-zwei{display:grid;grid-template-columns:1.6fr 1fr;gap:var(--s6);align-items:start}
+@media (max-width:1100px){.lb-zwei{grid-template-columns:1fr}}
+/* Der Stapel: drei Kontextbloecke untereinander, mit Trennlinie statt Ueberschrift-Abstand.
+   ⚠ `min-width:0` ist Pflicht — ohne sie sprengt ein langer Kaeufername die Rasterspalte
+   statt zu kuerzen. */
+.lb-kontext{display:flex;flex-direction:column;gap:var(--s5);min-width:0}
+.lb-kontext > .lb-sp + .lb-sp{border-top:1px solid var(--line);padding-top:var(--s5)}
+/* Die Rahmenzahl steht neben der Leitzahl, nicht ueber ihr: sie ordnet ein, sie fuehrt
+   nicht. */
+.lb-rahmen{font-size:12px;color:var(--ink-400);margin:-4px 0 6px}
 .lb-sp{gap:9px}
 .lb-n2{font-size:30px}
 .lb-sp{display:flex;flex-direction:column;gap:7px;min-width:0}

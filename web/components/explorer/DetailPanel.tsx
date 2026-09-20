@@ -469,6 +469,12 @@ function LeerBriefing({ rows, alle = [], onPick, onGoto }: {
     const heiss = offen
       .filter((l) => { const t = tageOf(l); return t != null && t >= 0 && t <= 21; })
       .sort((a, z) => (tageOf(a) ?? 99) - (tageOf(z) ?? 99));
+    /* ⚠ DIE LEITZAHL MUSS MAN ANFASSEN KOENNEN. „6.501 mit Frist in den naechsten
+       3 Wochen" ist keine Aufgabe, sondern ein Druckmittel — niemand arbeitet 6.501 Leads
+       ab. Gemessen ueber alle Grundraeume: 10.018 in drei Wochen, 3.515 in einer, 1.672 in
+       zwei Tagen. Vorn steht deshalb die Woche; die groessere Zahl bleibt daneben, weil
+       sie den Rahmen setzt, aber sie fuehrt nicht mehr. */
+    const dieseWoche = heiss.filter((l) => (tageOf(l) ?? 99) <= 7);
 
     // Vorschau: Ankündigungen + auslaufende Verträge, nach Möglichkeit profilnah.
     const basis = alle.length ? alle : rows;
@@ -535,7 +541,7 @@ function LeerBriefing({ rows, alle = [], onPick, onGoto }: {
         text: t("verlangen einen Termin vor Ort, an dem ihr teilnehmen müsst. Fahrt ihr hin? Dann gehört die Region ins Profil.") },
     ].filter((x) => x.n > 0).sort((a, z) => z.n - a.n);
 
-    return { offen, heiss, kuenftig, netz, zuschlaege, netzKaeufer, gewinner, luecken, imFeld, tageOf };
+    return { offen, heiss, dieseWoche, kuenftig, netz, zuschlaege, netzKaeufer, gewinner, luecken, imFeld, tageOf };
   }, [rows, alle]);
 
   const Zeile = ({ l, sub }: { l: BriefLead; sub: string }) => (
@@ -578,7 +584,25 @@ function LeerBriefing({ rows, alle = [], onPick, onGoto }: {
         <p className="lb-l">{t("Wählt links eine Ausschreibung, oder steigt hier ein.")}</p>
       </div>
 
-      <div className="lb-drei">
+      {/* ⛔ NICHT MEHR VIER GLEICH BREITE SPALTEN. Gemessen bei den ueblichen
+          Fensterbreiten (`grid-template-columns:repeat(4,…)` greift erst ab 1560 px):
+
+              1728 px   4 Spalten   347 px hoch   alles in einer Reihe
+              1512 px   3 Spalten   603 px hoch   „Markt & Netzwerk" rutscht nach unten
+              1440 px   3 Spalten   603 px hoch   dito
+              1100 px   2 Spalten   611 px hoch   zwei Abschnitte rutschen
+
+          Ein MacBook 14" hat 1512, ein uebliches Fenster 1440 — die Seite war also fuer
+          eine Breite entworfen, die fast niemand hat, und wurde sonst doppelt so hoch,
+          mit dem vierten Abschnitt unter dem ersten, wo ihn niemand sucht.
+
+          ⚠ DER EIGENTLICHE GRUND IST ABER NICHT DIE BREITE, SONDERN DIE RANGFOLGE. Die
+          vier Abschnitte beantworten vier Fragen, und nur eine ist Arbeit fuer heute:
+          „was ist dringend". Die anderen drei sind Kontext. Gleich breite Spalten
+          behaupten Gleichrang, den es nicht gibt — und geben „Bahnt sich an" mit seinen
+          14 Eintraegen dasselbe Viertel wie den 10.018 offenen Fristen. Daher kommen die
+          weissen Loecher. */}
+      <div className="lb-zwei">
         {/* ── jetzt ─────────────────────────────────────────────── */}
         <section className="lb-sp">
           <h4>
@@ -586,7 +610,8 @@ function LeerBriefing({ rows, alle = [], onPick, onGoto }: {
             {/* Rückweg in die Liste: aus dem Überblick gab es bisher keinen. */}
             <button className="lb-h4btn" onClick={() => onGoto?.("jetzt")}>{t("Jetzt bewerben")}</button>
           </h4>
-          <p className="lb-n2">{b.heiss.length.toLocaleString("de-DE")}<em>{t("mit Frist in den nächsten 3 Wochen")}</em></p>
+          <p className="lb-n2">{b.dieseWoche.length.toLocaleString("de-DE")}<em>{t("mit Frist in dieser Woche")}</em></p>
+          <p className="lb-rahmen">{t("{n} innerhalb von drei Wochen", { n: b.heiss.length.toLocaleString("de-DE") })}</p>
           {b.heiss.length ? b.heiss.slice(0, 5).map((l) => {
             const tage = b.tageOf(l);
             return <Zeile key={l.id} l={l}
@@ -595,65 +620,73 @@ function LeerBriefing({ rows, alle = [], onPick, onGoto }: {
           }) : <p className="lb-nix">{t("Gerade nichts Dringendes, gut so.")}</p>}
         </section>
 
-        {/* ── bald ──────────────────────────────────────────────── */}
-        <section className="lb-sp">
-          <h4><span className="lb-dot bald" />{t("Bahnt sich an")}</h4>
-          <p className="lb-n2">{b.kuenftig.length.toLocaleString("de-DE")}<em>{t("Ankündigungen und auslaufende Verträge")}</em></p>
-          {b.kuenftig.length ? b.kuenftig.slice(0, 5).map((l) => (
-            <Zeile key={l.id} l={l} sub={monate(l)} />
-          )) : <p className="lb-nix">{t("Noch keine Vorankündigungen in eurem Feld.")}</p>}
-          {b.kuenftig.length > 5 ? (
-            <button className="lb-mehr" onClick={() => onGoto?.("vorschau")}>{t("Alle {n} ansehen", { n: b.kuenftig.length })}</button>
-          ) : null}
-        </section>
+        {/* ── Kontext: drei Abschnitte, gestapelt in der schmalen Spalte. Sie
+            beantworten Fragen, die nicht heute dran sind. ⚠ Der Rahmen ist ein
+            echtes Element, kein Fragment: die Spaltenbreite der Grid-Zelle gilt
+            sonst je Abschnitt, und die drei stuenden wieder nebeneinander. */}
+        <div className="lb-kontext">
+          {/* ── bald ────────────────────────────────────────────── */}
+          <section className="lb-sp">
+            <h4><span className="lb-dot bald" />{t("Bahnt sich an")}</h4>
+            <p className="lb-n2">{b.kuenftig.length.toLocaleString("de-DE")}<em>{t("Ankündigungen und auslaufende Verträge")}</em></p>
+            {b.kuenftig.length ? b.kuenftig.slice(0, 5).map((l) => (
+              <Zeile key={l.id} l={l} sub={monate(l)} />
+            )) : <p className="lb-nix">{t("Noch keine Vorankündigungen in eurem Feld.")}</p>}
+            {b.kuenftig.length > 5 ? (
+              <button className="lb-mehr" onClick={() => onGoto?.("vorschau")}>{t("Alle {n} ansehen", { n: b.kuenftig.length })}</button>
+            ) : null}
+          </section>
 
-        {/* ── was im Weg steht ──────────────────────────────────── */}
-        <section className="lb-sp">
-          <h4><span className="lb-dot luecke" />{t("Was euch bremst")}</h4>
-          {b.luecken.length ? (<>
-            <p className="lb-n2">{b.luecken[0].n.toLocaleString("de-DE")}<em>{b.luecken[0].titel.toLowerCase()}</em></p>
-            {/* ⚠ Höchstens drei, nach Anzahl sortiert. An einem Bestand können fünf Lücken
-                gleichzeitig offen sein; fünf Bitten auf einem Bildschirm sind keine
-                Einladung mehr, sondern eine Mängelliste. Die drei mit der größten Wirkung
-                gewinnen. */}
-            {b.luecken.slice(0, 3).map((g) => (
-              g.ziel === "trefferguete"
-                ? <button key={g.key} className="lb-kachel" onClick={() => onGoto?.("trefferguete")}>
-                    <b>{g.n.toLocaleString("de-DE")}</b>
-                    <span><i>{g.titel}</i>. {g.text}</span>
-                  </button>
-                : <a key={g.key} className="lb-kachel" href="/unternehmen">
-                    <b>{g.n.toLocaleString("de-DE")}</b>
-                    <span><i>{g.titel}</i>. {g.text}</span>
-                  </a>
-            ))}
-          </>) : (
-            <p className="lb-nix">{b.imFeld.length
-              ? t("Nichts blockiert euch gerade, euer Profil ist vollständig genug.")
-              : t("Legt unter „Unternehmen“ euer Profil an, dann zeigen wir hier, was euch Aufträge kostet.")}</p>
-          )}
-        </section>
+          {/* ── was im Weg steht ──────────────────────────────────── */}
+          <section className="lb-sp">
+            <h4><span className="lb-dot luecke" />{t("Was euch bremst")}</h4>
+            {b.luecken.length ? (<>
+              {/* ⚠ HIER STAND DIE ERSTE LUECKE NOCH EINMAL ALS GROSSE ZAHL — und direkt
+                  darunter dieselbe Zahl als erste Kachel. Zweimal „1.204" untereinander
+                  liest sich wie zwei Befunde und ist einer. */}
+              {/* ⚠ Höchstens drei, nach Anzahl sortiert. An einem Bestand können fünf Lücken
+                  gleichzeitig offen sein; fünf Bitten auf einem Bildschirm sind keine
+                  Einladung mehr, sondern eine Mängelliste. Die drei mit der größten Wirkung
+                  gewinnen. */}
+              {b.luecken.slice(0, 3).map((g) => (
+                g.ziel === "trefferguete"
+                  ? <button key={g.key} className="lb-kachel" onClick={() => onGoto?.("trefferguete")}>
+                      <b>{g.n.toLocaleString("de-DE")}</b>
+                      <span><i>{g.titel}</i>. {g.text}</span>
+                    </button>
+                  : <a key={g.key} className="lb-kachel" href="/unternehmen">
+                      <b>{g.n.toLocaleString("de-DE")}</b>
+                      <span><i>{g.titel}</i>. {g.text}</span>
+                    </a>
+              ))}
+            </>) : (
+              <p className="lb-nix">{b.imFeld.length
+                ? t("Nichts blockiert euch gerade, euer Profil ist vollständig genug.")
+                : t("Legt unter „Unternehmen“ euer Profil an, dann zeigen wir hier, was euch Aufträge kostet.")}</p>
+            )}
+          </section>
 
-        {/* ── drumrum ───────────────────────────────────────────── */}
-        <section className="lb-sp">
-          <h4><span className="lb-dot markt" />{t("Markt & Netzwerk")}</h4>
-          <button className="lb-kachel" onClick={() => onGoto?.("netzwerk")}>
-            <b>{b.netz.length.toLocaleString("de-DE")}</b>
-            <span>{b.netzKaeufer.length
-              ? <>{t("Mehrlos-Vergaben, u.a. bei")} <i>{b.netzKaeufer.join(t(" und "))}</i> {t("hier lohnt ein Partner")}</>
-              : t("Vergaben mit mehreren Losen, hier lohnt ein Partner")}</span>
-          </button>
-          <button className="lb-kachel" onClick={() => onGoto?.("award")}>
-            <b>{b.zuschlaege.length.toLocaleString("de-DE")}</b>
-            <span>{b.gewinner.length
-              ? <>{t("frische Zuschläge, u.a. an")} <i>{b.gewinner.join(t(" und "))}</i> {t("wer gewonnen hat, kauft jetzt ein")}</>
-              : t("frische Zuschläge. Wer gewonnen hat, kauft jetzt ein")}</span>
-          </button>
-          <button className="lb-kachel" onClick={() => onGoto?.("strategie")}>
-            <b>→</b>
-            <span>{t("Strategie: wohin sich euer Markt bewegt")}</span>
-          </button>
-        </section>
+          {/* ── drumrum ───────────────────────────────────────────── */}
+          <section className="lb-sp">
+            <h4><span className="lb-dot markt" />{t("Markt & Netzwerk")}</h4>
+            <button className="lb-kachel" onClick={() => onGoto?.("netzwerk")}>
+              <b>{b.netz.length.toLocaleString("de-DE")}</b>
+              <span>{b.netzKaeufer.length
+                ? <>{t("Mehrlos-Vergaben, u.a. bei")} <i>{b.netzKaeufer.join(t(" und "))}</i> {t("hier lohnt ein Partner")}</>
+                : t("Vergaben mit mehreren Losen, hier lohnt ein Partner")}</span>
+            </button>
+            <button className="lb-kachel" onClick={() => onGoto?.("award")}>
+              <b>{b.zuschlaege.length.toLocaleString("de-DE")}</b>
+              <span>{b.gewinner.length
+                ? <>{t("frische Zuschläge, u.a. an")} <i>{b.gewinner.join(t(" und "))}</i> {t("wer gewonnen hat, kauft jetzt ein")}</>
+                : t("frische Zuschläge. Wer gewonnen hat, kauft jetzt ein")}</span>
+            </button>
+            <button className="lb-kachel" onClick={() => onGoto?.("strategie")}>
+              <b>→</b>
+              <span>{t("Strategie: wohin sich euer Markt bewegt")}</span>
+            </button>
+          </section>
+        </div>
       </div>
 
       <p className="lb-foot">{t("Zahlen beziehen sich auf eure aktuell gefilterte Liste.")}</p>
