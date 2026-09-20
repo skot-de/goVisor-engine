@@ -1,35 +1,5 @@
 import { NextResponse } from "next/server";
 import { loadVorgang, vorgangZuLead, vorgangBestand } from "@/lib/vorgangsakte";
-import { loadDataFile } from "@/lib/dataSource";
-
-/* Wie oft wurde dieser Vorgang weggeklickt, und mit welchen Gruenden?
- *
- * ⚠ ANONYM UND ERST AB EINER SCHWELLE. Die Zahlen kommen aus
- * `scripts/export_ausblendungen.py`, das `user_lead_hidden` je Vorgang zusammenfasst und
- * alles unterhalb von n=5 gar nicht erst schreibt. Bei wenigen Kunden waere „1 Nutzer hat
- * weggeklickt: Entfernung" keine Statistik, sondern eine Aussage ueber eine bestimmte
- * Person — und die gehoert ihr, nicht der Akte.
- *
- * ⚠ DIE EIGENE SICHT KOMMT NICHT VON HIER. Sie steht in `user_lead_hidden` hinter RLS und
- * wird im Browser mit der Sitzung des Nutzers geladen (`meineAusblendungen`). Beides in
- * einer Antwort zu mischen hiesse, fremde und eigene Daten aus derselben Quelle zu
- * bedienen — und genau daran scheitert frueher oder spaeter die Trennung. */
-let _aus: Record<string, { n: number; gruende: Record<string, number> }> | null = null;
-async function ausblendungen(vorgangId: string) {
-  if (_aus === null) {
-    try {
-      const roh = await loadDataFile("ausblendungen.json");
-      _aus = roh ? (JSON.parse(roh).vorgaenge ?? {}) : {};
-    } catch { _aus = {}; }
-  }
-  return (_aus ?? {})[vorgangId] ?? null;
-}
-
-/* Eine Vorgangsakte: Ausschreibung, Korrekturen, Unterlagen und Zuschlag unter einer Nummer.
- *
- * Zwei Zugaenge, weil es zwei Wege gibt, hier zu landen: ueber die Vorgangsnummer selbst
- * (Verlinkung aus einer Kette) und ueber eine Bekanntmachung (Klick aus der Trefferliste,
- * wo der Nutzer nur die Vergabenummer in der Hand hat). */
 export const runtime = "nodejs";
 
 // `folder:<uuid>` und `pub:<nummer>` — mehr Formen erzeugt build_vorgaenge.py nicht.
@@ -85,7 +55,7 @@ export async function GET(req: Request) {
   }
 
   const akte = await loadVorgang(land, id);
-  if (akte) return NextResponse.json({ vorhanden: true, akte, ausblendungen: await ausblendungen(id) });
+  if (akte) return NextResponse.json({ vorhanden: true, akte });
 
   // Dieselbe Trennung wie in /api/firma: „gibt es nicht" ist etwas anderes als „ist nicht
   // geladen". Ohne sie sieht ein fehlender Datenspeicher aus wie ein leeres Ergebnis.

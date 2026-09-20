@@ -630,6 +630,15 @@ mit_grenze() {
 STILLSTAND=${GOVISOR_STILLSTAND:-1800}          # 30 min ohne Ausgabe = haengt
 GRENZE_ABRUF=${GOVISOR_GRENZE_ABRUF:-7200}      # 2 h  Rueckfall, Regelfall
 GRENZE_LANG=${GOVISOR_GRENZE_LANG:-14400}       # 4 h  subreport (gemessen 87,6 min)
+# ⚠ DER SCHRITT, DER ALS EINZIGER KEINEN DECKEL HATTE. Am 2026-09-20 lief die
+# Dubletten-Firewall 6 h 19 min an DE, ohne eine einzige Ausgabezeile — und der
+# 8-h-Gesamtriegel greift erst in `step()`, also erst NACH Rueckkehr des Schritts. Der
+# Lauf starb danach ohne Gold-Rebuild und ohne Frontend-Export; das Produkt stand einen
+# Tag still, ohne dass etwas Alarm schlug. Gemessene Normalwerte fuer alle vier Laender
+# zusammen: 57 s (18.09.), 195 s (19.09.), 923 s im Sonntags-Volllauf. 30 min je Land ist
+# also das Zwanzigfache des schlimmsten gesunden Falls — und der Stillstands-Waechter in
+# `mit_grenze` greift ohnehin frueher, sobald 30 min lang nichts mehr ins Protokoll kommt.
+GRENZE_DEDUPE=${GOVISOR_GRENZE_DEDUPE:-1800}    # 30 min je Land
 
 # Zeitlimit fuer einen Schritt. `timeout` gibt es auf macOS nicht von Haus aus, deshalb
 # selbst gebaut: Kind starten, Wecker danebenstellen, wer zuerst kommt gewinnt.
@@ -1737,12 +1746,20 @@ $PY scripts/pruefe_supabase_migrationen.py --still; _mig=$?
 $PY scripts/auswertung_ausgeblendet.py --mindestens 5 \
   || echo "  ⚠ Ausblend-Auswertung fehlgeschlagen."
 
-# ⚠ Das anonyme Aggregat je VORGANG fuer die Akte. Getrennt von der Auswertung oben, weil
-# es etwas anderes ist: die Auswertung liest jemand, dieses hier landet im Produkt. Und es
-# schreibt NUR oberhalb von n=5 — bei wenigen Kunden waere „1 Nutzer hat weggeklickt:
-# Entfernung" keine Statistik, sondern eine Aussage ueber eine bestimmte Person.
-$PY scripts/export_ausblendungen.py --mindestens 5 \
-  || echo "  ⚠ Ausblendungen je Vorgang nicht gebaut — die Akte zeigt dann nur die eigene Sicht."
+
+# ── SUCHT SICH EIN MUSTER IN DEM, WAS WEGGEKLICKT WIRD? ──────────────────────────────────
+#
+# ⚠ Der Bericht schweigt fast immer, und das ist Absicht. Jeder Befund wird gegen die
+# Verteilung im Grundraum gerechnet: fuenf weggeklickte Vorgaenge derselben CPV-Klasse sind
+# kein Muster, wenn diese Klasse ohnehin 80 % der Liste stellt. Ein Bericht, der immer
+# etwas findet, findet nichts.
+#
+# ⚠ Zwei Adressaten, und sie bleiben getrennt: „Fehlerhafte Zuordnung" ist ein Befund ueber
+# UNS (Kategorisierung pruefen), „Entfernung" und „Zu umfangreich" sind Befunde ueber den
+# Nutzer (exclusions vorschlagen). Die uebrigen drei liegen auf keiner Profilachse und
+# bekommen deshalb bewusst KEINEN Vorschlag.
+$PY scripts/muster_ausgeblendet.py --mindestens 4 --lift 3.0 \
+  || echo "  ⚠ Musteranalyse fehlgeschlagen."
 
 # ── ABDECKUNG: FEHLT UNS EIN GANZER MONAT? ───────────────────────────────────────────────
 #

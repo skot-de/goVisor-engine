@@ -35,9 +35,7 @@ type Akte = {
             guete: "belastbar" | "plausibel" | "schwach" | null;
             duennes_glied_sichtbar: boolean };
 };
-type Antwort = { vorhanden: boolean; akte?: Akte; grund?: string; error?: string;
-  /** Nutzeruebergreifend, anonym und erst ab n=5 (s. `scripts/export_ausblendungen.py`). */
-  ausblendungen?: { n: number; gruende: Record<string, number> } | null };
+type Antwort = { vorhanden: boolean; akte?: Akte; grund?: string; error?: string };
 
 const MONATE = ["Januar", "Februar", "März", "April", "Mai", "Juni",
                 "Juli", "August", "September", "Oktober", "November", "Dezember"];
@@ -252,45 +250,34 @@ export function Vorgangsakte() {
         </p>
       </header>
 
-      {/* ── Rueckmeldungen ─────────────────────────────────────────────────────────
-          ⚠ ZWEI ZEILEN AUS ZWEI QUELLEN, und der Unterschied ist Absicht:
-          · die eigene Angabe ist vollstaendig (es sind die eigenen Daten, RLS liefert
-            ohnehin nur sie)
-          · die fremde ist anonym, ohne Kennungen und erst ab fuenf Nutzern vorhanden.
-            Bei wenigen Kunden waere „1 Nutzer hat weggeklickt: Entfernung" keine
-            Statistik, sondern eine Aussage ueber eine bestimmte Person.
-          Steht der Block leer, wird er gar nicht gezeigt — eine Ueberschrift ueber
-          nichts ist ein Versprechen, das die Akte nicht halten kann. */}
+      {/* ── Nur die EIGENE Ausblendung ──────────────────────────────────────────────
+          ⛔ DIE FREMDE ZAHL IST AM 2026-09-20 WIEDER RAUSGEFLOGEN. Sven: „ich weiss nicht
+          ob die angaben in den lead details ein mehrwert haben — was soll der nutzer
+          damit? die sind fuer uns wichtig."
+
+          Er hat recht, und der Schaden ist groesser als das Nichts: „7 Nutzer haben das
+          weggeklickt" lenkt in die Irre. Wer einen Vorgang wegen ENTFERNUNG wegklickt,
+          sagt etwas ueber seinen eigenen Standort — fuer den naechsten Leser kann
+          derselbe Vorgang vor der Haustuer liegen. Eine Mehrheitsangabe ohne den Grund,
+          aus dem sie entstand, ist eine Empfehlung, die niemand gegeben hat.
+
+          ⚠ DIE EIGENE ANGABE BLEIBT, und zwar aus einem Grund, der nichts mit Statistik
+          zu tun hat: die Akte ist der einzige Weg, auf dem man einem ausgeblendeten
+          Vorgang wiederbegegnet (ueber Suche, Kette oder Deep-Link). Ohne diese Zeile
+          stuende er da, als waere nie etwas gewesen, und man fragte sich, warum er in der
+          Liste fehlt. Sie beantwortet „warum sehe ich das hier und nicht dort". */}
       {(() => {
         const eigen = (a.verlauf ?? []).flatMap((e) => e.ids ?? [])
           .map((id) => meine.get(id)).find((x) => x !== undefined);
-        const fremd = antwort.ausblendungen;
-        if (eigen === undefined && !fremd) return null;
-        const top = fremd
-          ? Object.entries(fremd.gruende).sort((x, y) => y[1] - x[1]).slice(0, 3)
-          : [];
+        if (eigen === undefined) return null;
         return (
           <section className="vg-block">
-            <h2>{t("Rückmeldungen")}</h2>
-            {eigen !== undefined && (
-              <p className="vg-rueck eigen">
-                {eigen
-                  ? t("Du hast diesen Vorgang ausgeblendet: {g}", { g: t(eigen) })
-                  : t("Du hast diesen Vorgang ausgeblendet, ohne einen Grund anzugeben.")}
-              </p>
-            )}
-            {fremd && (
-              <p className="vg-rueck">
-                {/* ⚠ Einzahlfassung, obwohl die Schwelle bei fuenf liegt und „1 Nutzer"
-                    heute nicht vorkommen kann. Der Waechter der Akte verlangt sie zu
-                    Recht: die Schwelle ist ein Parameter, und wer sie senkt, wuerde den
-                    Satz sonst grammatisch falsch ausliefern, ohne es zu merken. */}
-                {fremd.n === 1
-                  ? t("Ein Nutzer hat ihn ausgeblendet")
-                  : t("{n} Nutzer haben ihn ausgeblendet", { n: fremd.n })}
-                {top.length ? <>{": "}{top.map(([g, n]) => `${t(g)} (${n})`).join(" · ")}</> : "."}
-              </p>
-            )}
+            <h2>{t("Von dir ausgeblendet")}</h2>
+            <p className="vg-rueck eigen">
+              {eigen
+                ? t("Du hast diesen Vorgang ausgeblendet: {g}", { g: t(eigen) })
+                : t("Du hast diesen Vorgang ausgeblendet, ohne einen Grund anzugeben.")}
+            </p>
           </section>
         );
       })()}

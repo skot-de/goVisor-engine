@@ -383,8 +383,6 @@ def test_jeder_weggeklickte_vorgang_behaelt_seine_frage():
         "ausGrund nimmt die Kennung nicht entgegen")
 
 
-# ── Die Daten in der Akte ───────────────────────────────────────────────────────────────
-
 def test_der_grund_kommt_wirklich_an():
     """⛔ ER KAM BIS ZUM 2026-09-20 NIE AN. Gemessen in der Produktionsdatenbank an dem Tag:
     8 Ausblendungen, 1 Nutzer, **0 davon mit Grund**.
@@ -425,58 +423,3 @@ def test_die_sonde_sieht_den_alten_fehler():
         datei.write_text(echt, encoding="utf-8")
 
 
-def test_keine_nutzerkennung_in_der_akte():
-    """⛔ DIE GRENZE, DIE NICHT VERHANDELBAR IST. `web/data/vorgang/*.json` und
-    `ausblendungen.json` sind STATISCHE Dateien, fuer jeden angemeldeten Nutzer dieselbe.
-    Eine `user_id` darin waere fremde Information in einer Datei, die alle lesen.
-
-    Das Skript liest `user_id` deshalb nicht einmal aus der Datenbank — nicht als Vorsicht,
-    sondern damit sie auch bei einem spaeteren Umbau nicht versehentlich in die Ausgabe
-    wandern kann.
-    """
-    code = (WURZEL / "scripts" / "export_ausblendungen.py").read_text(encoding="utf-8")
-    sql = re.findall(r'"select ([^"]+)"', code) + re.findall(r"'select ([^']+)'", code)
-    for s_ in sql:
-        assert "user_id" not in s_, f"die Abfrage liest user_id: {s_[:80]}"
-    datei = WURZEL / "web" / "data" / "ausblendungen.json"
-    if datei.exists():
-        roh = datei.read_text(encoding="utf-8")
-        assert "user" not in roh.lower(), "die ausgelieferte Datei nennt Nutzer"
-
-
-def test_die_schwelle_schuetzt_einzelne():
-    """⚠ Bei wenigen Kunden ist „1 Nutzer hat weggeklickt: Entfernung" keine Statistik,
-    sondern eine Aussage ueber eine bestimmte Person — und die gehoert ihr, nicht der Akte.
-
-    ⚠ Erst ZAEHLEN, dann schwellen. Wer vorher filtert, verliert die Gesamtzahl und meldet
-    spaeter „2 Ausblendungen" fuer einen Vorgang, den fuenf weggeklickt haben.
-    """
-    sys.path.insert(0, str(WURZEL / "scripts"))
-    import importlib
-    m = importlib.import_module("export_ausblendungen")
-    importlib.reload(m)
-    # ohne Datenbank kann `baue` die Vorgangszuordnung nicht holen — dann ist alles leer,
-    # und der Test prueft wenigstens, dass die Schwelle ueberhaupt angewendet wird.
-    q = m.baue([("x", "Entfernung")] * 3, mindestens=5)
-    assert q == {}, "drei Ausblendungen erscheinen, obwohl die Schwelle bei 5 liegt"
-    assert "if n >= mindestens" in (WURZEL / "scripts" / "export_ausblendungen.py").read_text(
-        encoding="utf-8"), "die Schwelle wird nicht mehr angewendet"
-
-
-def test_die_akte_trennt_eigene_und_fremde_sicht():
-    """⚠ ZWEI QUELLEN MIT ABSICHT: die eigene Angabe kommt vollstaendig aus Supabase (RLS
-    liefert nur die eigenen Zeilen), die fremde anonym und geschwellt aus einer statischen
-    Datei. Wer beides aus derselben Quelle bedient, muss die Trennung im Code halten statt
-    in der Architektur — und daran scheitert sie frueher oder spaeter.
-    """
-    akte = (WURZEL / "web" / "components" / "explorer" / "Vorgangsakte.tsx").read_text(encoding="utf-8")
-    assert "meineAusblendungen" in akte, "die eigene Sicht wird nicht geladen"
-    assert "antwort.ausblendungen" in akte, "das anonyme Aggregat wird nicht gezeigt"
-    # ⚠ Kommentare raus. Der Kopf der Route ERKLAERT, warum sie nicht auf die
-    # Nutzertabelle zugreift — und nennt sie dabei beim Namen (F13, an diesem Projekt der
-    # haeufigste Testfehler).
-    route = _ohne_kommentar(
-        (WURZEL / "web" / "app" / "api" / "vorgang" / "route.ts").read_text(encoding="utf-8"))
-    assert "user_lead_hidden" not in route, (
-        "die Route greift selbst auf die Nutzertabelle zu — dann laeuft die fremde Sicht "
-        "ueber den Server und die Trennung haengt an einer Bedingung statt an der Quelle")
