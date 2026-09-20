@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import { meineAusblendungen } from "@/lib/supabase/ausgeblendet";
 import { useSprache } from "@/lib/i18n";
 
 /* Die Vorgangsakte: Ausschreibung, Korrekturen, Unterlagen und Zuschlag unter EINER Nummer.
@@ -34,7 +35,9 @@ type Akte = {
             guete: "belastbar" | "plausibel" | "schwach" | null;
             duennes_glied_sichtbar: boolean };
 };
-type Antwort = { vorhanden: boolean; akte?: Akte; grund?: string; error?: string };
+type Antwort = { vorhanden: boolean; akte?: Akte; grund?: string; error?: string;
+  /** Nutzeruebergreifend, anonym und erst ab n=5 (s. `scripts/export_ausblendungen.py`). */
+  ausblendungen?: { n: number; gruende: Record<string, number> } | null };
 
 const MONATE = ["Januar", "Februar", "März", "April", "Mai", "Juni",
                 "Juli", "August", "September", "Oktober", "November", "Dezember"];
@@ -98,6 +101,13 @@ export function Vorgangsakte() {
   const [frage, setFrage] = useState<string | null>(null);
   const [eingabe, setEingabe] = useState("");
   const [antwort, setAntwort] = useState<Antwort | null>(null);
+  /* Die EIGENE Ausblendung zu diesem Vorgang: Kennung → Grund.
+   *
+   * ⚠ ZWEI QUELLEN, UND DAS MIT ABSICHT. Die Zahl darunter ist anonym, gemittelt und erst
+   * ab fuenf Nutzern da; diese Karte hier ist vollstaendig, weil es die eigenen Daten sind.
+   * Wer beides aus derselben Quelle bediente, muesste die Trennung im Code halten statt in
+   * der Architektur — und genau daran scheitert sie frueher oder spaeter. */
+  const [meine, setMeine] = useState<Map<string, string>>(new Map());
   const [laedt, setLaedt] = useState(false);
 
   useEffect(() => {
@@ -125,7 +135,12 @@ export function Vorgangsakte() {
         : `q=${encodeURIComponent(frage!)}`;
     fetch(`/api/vorgang?${q}`)
       .then((r) => r.json())
-      .then(setAntwort)
+      .then((a: Antwort) => {
+        setAntwort(a);
+        const ids = (a.akte?.verlauf ?? []).flatMap((v) => v.ids ?? []);
+        if (ids.length) meineAusblendungen(ids).then(setMeine).catch(() => {});
+        else setMeine(new Map());
+      })
       .catch(() => setAntwort({ vorhanden: false, error: "nicht erreichbar" }))
       .finally(() => setLaedt(false));
   }, [id, land, lead, frage]);
@@ -236,6 +251,49 @@ export function Vorgangsakte() {
             : t("{n} Bekanntmachungen", { n: z.bekanntmachungen })}
         </p>
       </header>
+
+      {/* ── Rueckmeldungen ─────────────────────────────────────────────────────────
+          ⚠ ZWEI ZEILEN AUS ZWEI QUELLEN, und der Unterschied ist Absicht:
+          · die eigene Angabe ist vollstaendig (es sind die eigenen Daten, RLS liefert
+            ohnehin nur sie)
+          · die fremde ist anonym, ohne Kennungen und erst ab fuenf Nutzern vorhanden.
+            Bei wenigen Kunden waere „1 Nutzer hat weggeklickt: Entfernung" keine
+            Statistik, sondern eine Aussage ueber eine bestimmte Person.
+          Steht der Block leer, wird er gar nicht gezeigt — eine Ueberschrift ueber
+          nichts ist ein Versprechen, das die Akte nicht halten kann. */}
+      {(() => {
+        const eigen = (a.verlauf ?? []).flatMap((e) => e.ids ?? [])
+          .map((id) => meine.get(id)).find((x) => x !== undefined);
+        const fremd = antwort.ausblendungen;
+        if (eigen === undefined && !fremd) return null;
+        const top = fremd
+          ? Object.entries(fremd.gruende).sort((x, y) => y[1] - x[1]).slice(0, 3)
+          : [];
+        return (
+          <section className="vg-block">
+            <h2>{t("Rückmeldungen")}</h2>
+            {eigen !== undefined && (
+              <p className="vg-rueck eigen">
+                {eigen
+                  ? t("Du hast diesen Vorgang ausgeblendet: {g}", { g: t(eigen) })
+                  : t("Du hast diesen Vorgang ausgeblendet, ohne einen Grund anzugeben.")}
+              </p>
+            )}
+            {fremd && (
+              <p className="vg-rueck">
+                {/* ⚠ Einzahlfassung, obwohl die Schwelle bei fuenf liegt und „1 Nutzer"
+                    heute nicht vorkommen kann. Der Waechter der Akte verlangt sie zu
+                    Recht: die Schwelle ist ein Parameter, und wer sie senkt, wuerde den
+                    Satz sonst grammatisch falsch ausliefern, ohne es zu merken. */}
+                {fremd.n === 1
+                  ? t("Ein Nutzer hat ihn ausgeblendet")
+                  : t("{n} Nutzer haben ihn ausgeblendet", { n: fremd.n })}
+                {top.length ? <>{": "}{top.map(([g, n]) => `${t(g)} (${n})`).join(" · ")}</> : "."}
+              </p>
+            )}
+          </section>
+        );
+      })()}
 
       <section className="vg-block">
         <h2>{t("Verlauf")}</h2>

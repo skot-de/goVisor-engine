@@ -1737,6 +1737,13 @@ $PY scripts/pruefe_supabase_migrationen.py --still; _mig=$?
 $PY scripts/auswertung_ausgeblendet.py --mindestens 5 \
   || echo "  ⚠ Ausblend-Auswertung fehlgeschlagen."
 
+# ⚠ Das anonyme Aggregat je VORGANG fuer die Akte. Getrennt von der Auswertung oben, weil
+# es etwas anderes ist: die Auswertung liest jemand, dieses hier landet im Produkt. Und es
+# schreibt NUR oberhalb von n=5 — bei wenigen Kunden waere „1 Nutzer hat weggeklickt:
+# Entfernung" keine Statistik, sondern eine Aussage ueber eine bestimmte Person.
+$PY scripts/export_ausblendungen.py --mindestens 5 \
+  || echo "  ⚠ Ausblendungen je Vorgang nicht gebaut — die Akte zeigt dann nur die eigene Sicht."
+
 # ── ABDECKUNG: FEHLT UNS EIN GANZER MONAT? ───────────────────────────────────────────────
 #
 # Am 2026-09-07 fiel auf, dass Luxemburg fuer Juli NULL Bekanntmachungen hatte und fuer

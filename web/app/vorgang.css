@@ -83,3 +83,10 @@
                    border-radius: 8px; background: var(--chip, #eef0f4); color: inherit;
                    cursor: pointer; }
 .vg-suche button:hover { background: var(--line, #e3e5ea); }
+
+/* ── Rueckmeldungen in der Akte ───────────────────────────────────────────────────
+ * ⚠ Die eigene Angabe steht kraeftiger als die fremde: sie ist vollstaendig und
+ * ueberpruefbar, die andere ist ein anonymes Aggregat ab fuenf Nutzern. Wer beide gleich
+ * setzt, suggeriert dieselbe Verbindlichkeit. */
+.vg-rueck{margin:0 0 6px;font-size:13px;color:var(--ink-500)}
+.vg-rueck.eigen{color:var(--ink-900);font-weight:600}
