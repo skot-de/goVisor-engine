@@ -120,7 +120,7 @@ def test_die_frage_ersetzt_die_zeile():
         f"{tab.count('<FrageZeile')} von 2 Render-Stellen zeigen die Frage. Die Liste hat "
         f"eine gruppierte und eine flache Fassung.")
     shell = _ohne_kommentar(SHELL.read_text(encoding="utf-8"))
-    assert 'String(l.id) === fragtNach?.id' in shell, (
+    assert "fragen.has(String(l.id))" in shell, (
         "der befragte Vorgang wird sofort herausgefiltert — dann steht die Frage an einer "
         "Stelle, an der es keine Zeile mehr gibt, und man sieht gar nichts")
     assert "ausleiste" not in (WURZEL / "web" / "app" / "explorer.css").read_text(encoding="utf-8"), (
@@ -155,10 +155,9 @@ def test_die_frage_bleibt_bis_jemand_klickt():
     # Tests hat genau darin nichts gefunden und den Code fuer kaputt erklaert.
     i2 = code.index("function toggleAusblenden")
     block = " ".join(code[i2:i2 + 4000].split())[:900]
-    m = re.search(r"setFragtNach\(jetztAus \?(.{0,80}?): null\)", block)
-    assert m, (
-        "beim Ausblenden wird keine Frage gestellt, oder beim WIEDEREINBLENDEN bleibt sie "
-        "stehen — beides haengt an demselben Ausdruck")
+    assert "if (jetztAus) n.set(id," in block, "beim Ausblenden wird keine Frage gestellt"
+    assert "else n.delete(id)" in block, (
+        "beim WIEDEREINBLENDEN bleibt die Frage stehen")
 
 
 def test_oberflaeche_und_auswertung_kennen_dieselben_gruende():
@@ -348,3 +347,35 @@ def test_kein_label_braucht_kontextwissen():
         if g.startswith("Zu "):
             assert g.split()[1][0].islower(), (
                 f"{g!r}: nach „Zu\" folgt ein Adjektiv, das klein geschrieben wird")
+
+
+def test_jeder_weggeklickte_vorgang_behaelt_seine_frage():
+    """⛔ Sven am 2026-09-20: „wenn ich ein lead weggeklickt habe und der gelbe balken
+    kommt, kann ich weitere leads einfachso wegklicken ohne das der gelbe balken kommt."
+
+    Die Zustandslogik war richtig — nachgestellt wanderte die Frage sauber zum neuen
+    Vorgang. Der Fehler lag eine Ebene hoeher: es gab nur EINE. Der zweite Klick erbte den
+    Balken, und der erste Vorgang verschwand still, ohne dass jemand geantwortet hatte.
+
+    ⚠ Das stand zwei Tage vorher schon als Kommentar im Code („der erste verschwindet
+    still") — ich hatte es fuer einen Nebeneffekt gehalten statt fuer einen Widerspruch zu
+    Svens Ansage, die Zeile solle stehen bleiben, bis geklickt wird. Ein Satz, der ein
+    Problem richtig beschreibt und es „bewusst so" nennt, ist keine Begruendung.
+    """
+    shell = _ohne_kommentar(SHELL.read_text(encoding="utf-8"))
+    assert "useState<Map<string, string>>" in shell, (
+        "es gibt wieder nur EINE offene Frage — der zweite Klick erbt sie dann, und der "
+        "erste Vorgang verschwindet ohne Antwort")
+    assert "fragtNach" not in shell, "Rest der Einzelfrage-Fassung"
+
+    tab = (WURZEL / "web" / "components" / "explorer" / "LeadTable.tsx").read_text(encoding="utf-8")
+    assert tab.count("fragen?.has(String(l.id))") == 2, (
+        "nicht beide Render-Stellen (gruppiert und flach) kennen mehrere Fragen")
+
+    # ⚠ Die Kennung MUSS an `onAusGrund` mit: mit zehn offenen Balken waere „der zuletzt
+    # ausgeblendete" die Sorte Fehler, die den falschen Vorgang begruendet und nie auffaellt.
+    assert "onAusGrund?: (id: string, grund: string) => void;" in tab, (
+        "der Grund wird ohne Kennung gemeldet — bei mehreren offenen Fragen landet er am "
+        "falschen Vorgang")
+    assert "function ausGrund(id: string, grund: string)" in shell, (
+        "ausGrund nimmt die Kennung nicht entgegen")

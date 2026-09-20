@@ -212,7 +212,21 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
    * Zweifel gehabt („wäre cool, aber vll auch nervig"). Also: ausblenden passiert sofort,
    * die Gruende sind ein Angebot in der Leiste — vier Klicks als Moeglichkeit, keiner als
    * Pflicht. Wer weiterscrollt, hat nichts verloren. */
-  const [fragtNach, setFragtNach] = useState<{ id: string; titel: string } | null>(null);
+  /* ⛔ MEHRERE FRAGEN GLEICHZEITIG, nicht eine. Sven am 2026-09-20: „wenn ich ein lead
+     weggeklickt habe und der gelbe balken kommt, kann ich weitere leads einfachso
+     wegklicken ohne das der gelbe balken kommt."
+
+     Die Zustandslogik war richtig — nachgestellt wandert die Frage sauber zum neuen
+     Vorgang. Der Fehler lag eine Ebene hoeher: es gab nur EINE. Der zweite Klick erbte
+     den Balken, und der erste Vorgang verschwand still, ohne dass jemand geantwortet
+     hatte. Genau das hatte ich zwei Tage vorher selbst in den Kommentar geschrieben
+     („der erste verschwindet still") und fuer einen Nebeneffekt gehalten statt fuer
+     einen Widerspruch zu Svens Ansage, die Zeile solle stehen bleiben, bis geklickt wird.
+
+     Jetzt haelt jeder weggeklickte Vorgang seine eigene Frage, bis sie beantwortet ist.
+     Wer zehn wegklickt, sieht zehn Balken — und das ist ein ehrliches Bild dessen, was er
+     getan hat, kein Stau. */
+  const [fragen, setFragen] = useState<Map<string, string>>(new Map());
   const [sortKey, setSortKey] = useState("frist");
   const [sortDir, setSortDir] = useState(1);
   const [awAlertOff, setAwAlertOff] = useState(false);   // #24 Zuschlag-Alert-Band ausgeblendet
@@ -601,10 +615,10 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
        argumentiert, eine Leiste IN der Zeile lasse die Liste springen. Das gilt fuer einen
        ZUSAETZLICHEN Platzhalter — beim ERSETZEN bleibt die Zeilenzahl gleich, und die
        Frage steht dort, wo der Klick war, statt am oberen Rand. */
-    return gefiltert.filter((l) => String(l.id) === fragtNach?.id
+    return gefiltert.filter((l) => fragen.has(String(l.id))
                                    || !ausgeblendet.has(String(l.id)));
   }, [aktiveBranche, sortKey, sortDir, tokens, filters, tick, realProfile, adv,
-      ausgeblendet, zeigeAusgeblendete, fragtNach]);
+      ausgeblendet, zeigeAusgeblendete, fragen]);
 
   /* ── Trefferzahlen an den Filtern ──────────────────────────────────────────────────
    *
@@ -894,7 +908,11 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
        Die Frage bleibt also, bis geklickt wird. Wer ohne Antwort weiterarbeitet, blendet
        den naechsten Vorgang aus — dann rueckt die Frage dorthin, und der erste
        verschwindet still. Das ist die einzige Stelle, an der sie von allein geht. */
-    setFragtNach(jetztAus ? { id, titel: (l?.titel as string) ?? id } : null);
+    setFragen((m) => {
+      const n = new Map(m);
+      if (jetztAus) n.set(id, (l?.titel as string) ?? id); else n.delete(id);
+      return n;
+    });
     /* ⛔ HIER STAND `bump()`, UND ES WAR DER GRUND FUER DIE TRAEGHEIT. Sven am 2026-09-20:
        „die ladezeit bis die reaktion nach dem klick auf x kommt ist vieeel zu lang."
 
@@ -913,18 +931,21 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
        nichts gefunden. */
   }
 
-  /** Einen Grund zum zuletzt ausgeblendeten Vorgang nachreichen. */
-  function ausGrund(grund: string) {
-    const z = fragtNach;
-    if (!z) return;
-    const l = CORE.find((x) => x.id === z.id);
-    syncAusgeblendet(z.id, true, {
+  /** Einen Grund zu EINEM bestimmten ausgeblendeten Vorgang nachreichen.
+   *
+   * ⚠ Die Kennung muss mit, seit mehrere Fragen gleichzeitig stehen koennen. Vorher
+   * genuegte „der zuletzt ausgeblendete"; mit zehn offenen Balken waere das die Sorte
+   * Fehler, die den falschen Vorgang begruendet und nie auffaellt. */
+  function ausGrund(id: string, grund: string) {
+    if (!fragen.has(id)) return;
+    const l = CORE.find((x) => x.id === id);
+    syncAusgeblendet(id, true, {
       titel: (l?.titel as string) ?? null,
       buyer: (l as { buyer?: string } | undefined)?.buyer ?? null,
       grund,
     });
     logEvent(l, "hidden", t("Grund: {g}", { g: t(grund) }));
-    setFragtNach(null);
+    setFragen((m) => { const n = new Map(m); n.delete(id); return n; });
   }
 
   function toggleStar(id: string) {
@@ -2038,7 +2059,7 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
               })()}
               <LeadTable
                 rows={rows}
-                fragtNach={fragtNach}
+                fragen={fragen}
                 ausGruende={AUS_GRUENDE as unknown as string[]}
                 onAusGrund={ausGrund}
                 onAusZurueck={(id) => toggleAusblenden(id)}

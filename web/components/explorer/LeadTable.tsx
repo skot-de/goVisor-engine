@@ -34,8 +34,8 @@ const FunnelIcon = (
  * ⚠ `colSpan` ueber ALLE Spalten. Mit einzelnen Zellen muesste die Frage in ein
  * Spaltenraster passen, das sie nicht meint — und bei jeder Spaltenauswahl anders aussehen.
  */
-function FrageZeile({ titel, gruende, onGrund, onZurueck, colspan }: {
-  titel: string; gruende: string[];
+function FrageZeile({ gruende, onGrund, onZurueck, colspan }: {
+  gruende: string[];
   onGrund: (g: string) => void; onZurueck: () => void; colspan: number;
 }) {
   const { t } = useSprache();
@@ -74,7 +74,7 @@ export function LeadTable({
   sortDir,
   activeId,
   activeFacets,
-  fragtNach,
+  fragen,
   ausGruende,
   onAusGrund,
   onAusZurueck,
@@ -133,10 +133,13 @@ export function LeadTable({
   /** Unterlagen beim Portal oeffnen UND den Lead aufschlagen. */
   onDokLink?: (id: string) => void;
   onHide?: (id: string) => void;
-  /** Der Vorgang, an dessen Stelle gerade die Rueckfrage steht. */
-  fragtNach?: { id: string; titel: string } | null;
+  /** Vorgaenge, an deren Stelle gerade eine Rueckfrage steht: Kennung → Titel.
+   *  ⚠ MEHRERE, nicht einer: wer zwei Leads hintereinander wegklickt, soll zu beiden
+   *  gefragt werden. Vorher erbte der zweite Klick die eine Frage, und der erste
+   *  Vorgang verschwand still. */
+  fragen?: Map<string, string>;
   ausGruende?: string[];
-  onAusGrund?: (grund: string) => void;
+  onAusGrund?: (id: string, grund: string) => void;
   onAusZurueck?: (id: string) => void;
   onNetz: (id: string) => void;
   onOwn: (id: string, ans: string) => void;
@@ -340,11 +343,10 @@ export function LeadTable({
               </td>
             </tr>
             {a.rows.length ? a.rows.slice(0, limit).map((l) => (
-              fragtNach && String(l.id) === fragtNach.id ? (
-                <FrageZeile key={l.id} titel={fragtNach.titel} colspan={colspan}
-                  gruende={ausGruende ?? []}
-                  onGrund={(g) => onAusGrund?.(g)}
-                  onZurueck={() => onAusZurueck?.(fragtNach.id)} />
+              fragen?.has(String(l.id)) ? (
+                <FrageZeile key={l.id} colspan={colspan} gruende={ausGruende ?? []}
+                  onGrund={(g) => onAusGrund?.(String(l.id), g)}
+                  onZurueck={() => onAusZurueck?.(String(l.id))} />
               ) :
               <tr key={l.id} data-id={l.id}
                 className={[l.status === "ungesichtet" ? "" : "gesichtet",
@@ -357,12 +359,11 @@ export function LeadTable({
           </React.Fragment>
         )) : rows.length ? (
           rows.slice(0, limit).map((l) => {
-            if (fragtNach && String(l.id) === fragtNach.id) {
+            if (fragen?.has(String(l.id))) {
               return (
-                <FrageZeile key={l.id} titel={fragtNach.titel} colspan={colspan}
-                  gruende={ausGruende ?? []}
-                  onGrund={(g) => onAusGrund?.(g)}
-                  onZurueck={() => onAusZurueck?.(fragtNach.id)} />
+                <FrageZeile key={l.id} colspan={colspan} gruende={ausGruende ?? []}
+                  onGrund={(g) => onAusGrund?.(String(l.id), g)}
+                  onZurueck={() => onAusZurueck?.(String(l.id))} />
               );
             }
             const cls = [
