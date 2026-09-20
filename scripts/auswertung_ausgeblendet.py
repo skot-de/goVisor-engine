@@ -41,7 +41,8 @@ sys.path.insert(0, str(WURZEL))
 # ⚠ DIESELBE LISTE WIE IN DER OBERFLAECHE (`AUS_GRUENDE` in ExplorerShell.tsx). Ein
 # zweiter, abweichender Katalog hier waere die Sorte Bruch, die erst auffaellt, wenn die
 # Zahlen nicht mehr aufgehen — `tests/test_ausgeblendet_auswertung.py` haelt beide zusammen.
-GRUENDE = ["nicht unser Fach", "zu weit weg", "zu groß", "zu klein"]
+GRUENDE = ["Fehlerhafte Zuordnung", "Entfernung", "Zu umfangreich",
+           "Kein Interesse", "Zu kurzfristig", "Keine Chance"]
 
 
 def _dsn() -> str | None:

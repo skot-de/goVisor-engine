@@ -49,21 +49,41 @@ const PROFILE_KEY = "govisor.profile.v1";
    ⚠ DIESELBE LISTE BENUTZT DIE AUSWERTUNG (`scripts/auswertung_ausgeblendet.py`). Ein
    zweiter, abweichender Katalog dort waere die Sorte Bruch, die erst auffaellt, wenn die
    Zahlen nicht mehr aufgehen. */
-/* ⚠ NEU GEFASST am 2026-09-20, Sven: „die vier auswahlmöglichkeiten sind so naja."
-   Sie waren es auch, und zwar aus drei Gruenden:
+/* Die Gruende, vierte Fassung — von Sven am 2026-09-20 vorgegeben:
+   „Fehlerhafte Zuordnung", „Entfernung", „Zu Umfangreich", „Kein Interesse",
+   „Zu Kurzfristig", „Keine Chance".
 
-   · „Frist zu knapp" steht schon als Empfehlungs-Label in derselben Zeile. Zweimal
-     dasselbe Wort fuer zweierlei — und es ist ueberhaupt kein Passungsproblem, sondern
-     eine Terminfrage, die sich morgen anders stellt.
-   · „falscher Inhalt" und „falsche Region" sind aus der Sicht des SYSTEMS formuliert
-     („falsch" heisst: unsere Zuordnung stimmt nicht). Der Nutzer denkt nicht in
-     Zuordnungen, er denkt „das machen wir nicht".
-   · „zu klein" allein liess die Gegenrichtung weg — ein Auftrag, der zu GROSS ist, ist
-     derselbe Befund mit anderem Vorzeichen und fuer die Passung genauso wertvoll.
+   ⚠ SECHS STATT VIER, und das ist eine Entscheidung gegen die Lesezeit: die Leiste steht
+   an der Stelle einer Tabellenzeile und muss in einer Zeile bleiben. Gemessen passt es bei
+   900 px Fensterbreite; darunter scrollt die Zeile waagerecht (`overflow-x:auto`), statt
+   umzubrechen und die Liste zu verschieben.
 
-   Jetzt vier, die je eine ANDERE Konsequenz haben: Fach (CPV/Branchenraum), Ort
-   (Regionsfilter), und die beiden Enden der Groessenachse. */
-const AUS_GRUENDE = ["nicht unser Fach", "zu weit weg", "zu groß", "zu klein"] as const;
+   ⚠ „Zu umfangreich" und „Zu kurzfristig" KLEIN nach dem „Zu" — nach einem „zu" folgt im
+   Deutschen ein Adjektiv, und das schreibt man klein. Nur das erste Wort ist gross, weil
+   es ein Label ist. Svens Vorlage hatte beide Binnenmajuskeln; das ist die einzige
+   Aenderung an seinen Worten.
+
+   ⚠ WAS DIE SECHS FUER DIE AUSWERTUNG BEDEUTEN — sie sind nicht gleich verwertbar:
+
+     Entfernung            → `exclusions.regionen_aus`, direkt umsetzbar
+     Zu umfangreich        → `exclusions.wert_max`, direkt umsetzbar
+     Fehlerhafte Zuordnung → KEIN Ausschluss, sondern ein FEHLERBERICHT ueber uns. Wer das
+                             klickt, sagt nicht „diese Leistung will ich nicht", sondern
+                             „ihr habt falsch einsortiert". Daraus einen CPV-Ausschluss zu
+                             bauen waere genau verkehrt: es muesste unsere Zuordnung
+                             geprueft werden, nicht der Bestand des Nutzers beschnitten.
+     Kein Interesse        → keine Achse, reine Statistik
+     Zu kurzfristig        → keine Achse (die Frist steht in keinem Profilfeld) und
+                             ueberdies kein dauerhaftes Merkmal: derselbe Vorgang waere
+                             vier Wochen frueher in Ordnung gewesen
+     Keine Chance          → keine Achse, aber messbar gegen Chance/Amtsinhaber
+
+   ⚠ Und die Groessenachse ist jetzt EINSEITIG: „zu klein" fehlt. Ein Auftrag unterhalb
+   der Wirtschaftlichkeitsschwelle ist derselbe Befund mit anderem Vorzeichen, und
+   `exclusions.wert_min` liegt bereit. Bewusst so entschieden, hier notiert, damit es
+   nicht als Versehen gelesen wird. */
+const AUS_GRUENDE = ["Fehlerhafte Zuordnung", "Entfernung", "Zu umfangreich",
+                     "Kein Interesse", "Zu kurzfristig", "Keine Chance"] as const;
 import { ColumnMenu, FilterBar, Suggestions, HeaderFilterPopover } from "./parts";
 import { AppRail, AppTop, type RailId } from "./Rail";
 

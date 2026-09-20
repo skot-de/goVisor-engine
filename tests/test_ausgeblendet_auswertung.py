@@ -170,9 +170,13 @@ def test_oberflaeche_und_auswertung_kennen_dieselben_gruende():
     ui_liste = re.findall(r'"([^"]+)"', ui.group(1))
     assert ui_liste == _modul().GRUENDE, (
         f"Oberflaeche {ui_liste} gegen Auswertung {_modul().GRUENDE}")
-    assert len(ui_liste) == 4, (
-        f"{len(ui_liste)} Gruende. Jeder weitere kostet Lesezeit in einer Leiste, die nach "
-        f"zwoelf Sekunden verschwindet.")
+    # ⚠ SECHS seit dem 2026-09-20 (Svens Vorgabe). Die Grenze ist nicht Geschmack, sondern
+    # Platz: die Leiste steht an der Stelle einer Tabellenzeile und darf nicht umbrechen.
+    # Gemessen brauchen die sechs 951 px; unterhalb dieser Breite scrollt die Tabelle
+    # ohnehin waagerecht. Ein siebter Knopf muss erst wieder gemessen werden.
+    assert len(ui_liste) == 6, (
+        f"{len(ui_liste)} Gruende statt 6. Jeder weitere kostet Platz in einer Leiste, die "
+        f"in EINE Zeile passen muss — nachmessen, nicht schaetzen.")
     assert not any("sonst" in g.lower() for g in ui_liste), (
         "„Sonstiges\" traegt keine Information und zieht erfahrungsgemaess die Haelfte "
         "aller Klicks auf sich")
@@ -305,3 +309,42 @@ def test_das_ausblenden_rechnet_die_liste_nicht_neu():
     assert m and "ausgeblendet" in m.group(0), (
         "rows haengt nicht mehr an `ausgeblendet` — ohne bump() bliebe die ausgeblendete "
         "Zeile dann einfach stehen")
+
+
+def test_kein_label_braucht_kontextwissen():
+    """⚠ Sven am 2026-09-20: „geh davon aus das die nutzer dumm sind. die label müssen
+    kurz und einleuchtend sein." Anlass war „nicht unser Fach" — „Fach" heisst im
+    Deutschen zuerst Schulfach, dann Schrankfach, und erst im Handwerk das Gewerk.
+
+    Dieser Test haelt die drei Woerter fest, die im PRODUKT besetzt oder zu grob sind und
+    deshalb nie wieder auftauchen duerfen — jedes davon war beim Formulieren der naechste
+    naheliegende Kandidat:
+
+    · `Fach`     mehrdeutig (Schulfach), der urspruengliche Befund
+    · `bieten`   im Vergabekontext besetzt: 53-mal „Bieter" im Quelltext. „Bieten wir
+                 nicht an" liest sich als „wir geben kein Angebot ab" — eine
+                 Terminentscheidung statt einer Leistungsfrage.
+    · `Branche`  im Produkt der GRUNDRAUM (Bau, IT, Medizin). Wer im Bau-Raum eine
+                 Dachdecker-Ausschreibung wegklickt, meint das Gewerk, nicht die Branche —
+                 eine daraus abgeleitete Regel blendete den halben Bestand aus.
+    """
+    ui = re.search(r"AUS_GRUENDE = \[([^\]]*)\]", SHELL.read_text(encoding="utf-8"))
+    assert ui, "AUS_GRUENDE gibt es nicht mehr"
+    labels = re.findall(r'"([^"]+)"', ui.group(1))
+    for wort in ("Fach", "bieten", "Bieten", "Branche"):
+        treffer = [g for g in labels if wort in g]
+        assert not treffer, (
+            f"{treffer} benutzt {wort!r} — im Produkt besetzt oder mehrdeutig, "
+            f"Begruendung im Kopf dieses Tests")
+    for g in labels:
+        # ⚠ 21 statt 17 Zeichen seit „Fehlerhafte Zuordnung". Die Schwelle ist gemessen,
+        # nicht gesetzt: mit dieser Laenge brauchen die sechs Knoepfe 951 px, und darunter
+        # scrollt die Tabelle ohnehin. Wer sie hochsetzt, misst vorher nach.
+        assert len(g) <= 21, f"{g!r} ist {len(g)} Zeichen lang; in der Zeile ist kein Platz"
+        assert g[0].isupper(), f"{g!r} faengt klein an, die sechs stehen nebeneinander"
+        # ⚠ Nach einem „zu" folgt im Deutschen ein Adjektiv, und das schreibt man klein.
+        # Svens Vorlage hatte „Zu Umfangreich" und „Zu Kurzfristig" — die einzige Aenderung
+        # an seinen Worten, und eine, die man in einem Knopf sofort sieht.
+        if g.startswith("Zu "):
+            assert g.split()[1][0].islower(), (
+                f"{g!r}: nach „Zu\" folgt ein Adjektiv, das klein geschrieben wird")
