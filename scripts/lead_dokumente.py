@@ -57,7 +57,13 @@ def _lead_ok(lead: str) -> bool:
 def liste(lead: str, country: str = "DE") -> dict:
     ordner = DOCS / country / lead
     if not ordner.is_dir():
-        return {"lead": lead, "dateien": [], "grund": "keine Unterlagen abgelegt"}
+        # ⚠ DER GRUND DARF NICHT DER ZUSTAND SEIN. Hier stand "keine Unterlagen
+        # abgelegt" — genau der Satz, den die Oberflaeche schon fett darueber
+        # schreibt. Der Nutzer las zweimal dasselbe und erfuhr nicht, WARUM.
+        # Was diese Stelle wirklich weiss: den Ordner gibt es nicht, also haben
+        # wir fuer diesen Vorgang noch nichts geholt.
+        return {"lead": lead, "dateien": [],
+                "grund": "Wir haben fuer diesen Vorgang noch nichts aus dem Portal geholt."}
     dateien = []
     for zp in sorted(ordner.glob("*.zip")):
         try:

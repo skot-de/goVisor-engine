@@ -1928,7 +1928,7 @@ function renderChecklistBlock(a, l){
   const toc = `<div class="toc"><div class="th"><b>${tk("Eure Checkliste")}</b><span class="pr"><span class="cl-doneN">${dn}</span> von ${tot} erledigt</span></div><div class="chips">${chips}<button class="tchip all" data-clcollapse>${tk("Alle zuklappen")}</button></div><div class="tprog"><i class="cl-tprog" style="width:${tot?Math.round(dn/tot*100):0}%"></i></div></div>`;
 
   // a2 Erstnutzer: leere Bibliothek → die Textbausteine sind noch generische Vorlagen (§9.1).
-  const firstday = !_clHasBlocks() ? `<div class="cl-firstday">${tk("Eure Bausteinbibliothek ist noch leer, die Textvorschläge unten sind generische Vorlagen.")}<a href="/bausteine" class="link">${tk("Bibliothek füllen →")}</a>${tk("Dann setzt goVisor eure echten Referenzen und Zertifikate ein statt Platzhalter.")}</div>` : '';
+  const firstday = !_clHasBlocks() ? `<div class="cl-firstday">${tk("Eure Bausteinbibliothek ist noch leer, die Textvorschläge unten sind generische Vorlagen.")} <a href="/bausteine" class="link">${tk("Bibliothek füllen →")}</a> ${tk("Dann setzt goVisor eure echten Referenzen und Zertifikate ein statt Platzhalter.")}</div>` : '';
   return `<div class="va-checklist" data-clroot="${l.id}">${chead}${firstday}${fensterHtml}${profilHtml}${umfangHtml}${toc}${groupsHtml}${offen}${weitere}</div>`;
 }
 
@@ -2043,7 +2043,7 @@ function renderDocs(l){
     </section>`;
     return `<section class="sec va-empty" id="an-unterlagen">
       <h4>${tk("Unterlagen")}<span class="cov">${tk("Noch nichts")}</span></h4>
-      <p class="va-sum">${tk("Aus den Vergabeunterlagen machen wir in Sekunden eine")}<b>${tk("Ampel-Einschätzung")}</b>${tk(", eine abhakbare")}<b>${tk("Bieter-Checkliste")}</b>${tk("(K.o.-Kriterien, Eignungsnachweise, Zuschlagsgewichte) und")}<b>${tk("füllen Firmenangaben vor")}</b>.</p>
+      <p class="va-sum">${tk("Aus den Vergabeunterlagen machen wir in Sekunden eine")} <b>${tk("Ampel-Einschätzung")}</b>${tk(", eine abhakbare")} <b>${tk("Bieter-Checkliste")}</b> ${tk("(K.o.-Kriterien, Eignungsnachweise, Zuschlagsgewichte) und")} <b>${tk("füllen Firmenangaben vor")}</b>.</p>
       ${dropFeld(l)}
       <div class="va-status" data-upstatus="${l.id}"></div>
     </section>`;
@@ -2410,8 +2410,8 @@ function renderUebersicht(l){
           })()}
         </div>
         <div class="ex-legend">
-          <span><b>${tk("CPV")}</b>${tk("aus der amtlichen Einordnung")}</span>
-          <span><b>${tk("Text")}</b>${tk("aus der Beschreibung gelesen")}</span>
+          <span><b>${tk("CPV")}</b> ${tk("aus der amtlichen Einordnung")}</span>
+          <span><b>${tk("Text")}</b> ${tk("aus der Beschreibung gelesen")}</span>
           <span class="ex-hint">${tk("Klick einen Begriff, um ihn im Text zu finden.")}</span>
         </div>
       </div>` : ''}
@@ -2442,7 +2442,7 @@ function renderUebersicht(l){
           <button class="oc-no" data-own="${l.id}:nein">${tk("Nein, nicht unserer")}</button>
         </div>
       </div>` : ''}
-      ${!inc ? `<div class="note-box"><b>${tk("Noch nicht vergeben.")}</b>${tk("Diese Ausschreibung ist offen. Kein Amtsinhaber, kein Wechsel-Score. Offenes Feld.")}</div>`
+      ${!inc ? `<div class="note-box"><b>${tk("Noch nicht vergeben.")}</b> ${tk("Diese Ausschreibung ist offen. Kein Amtsinhaber, kein Wechsel-Score. Offenes Feld.")}</div>`
       : inc.src==='unsicher' && !l.eigen ? `<div class="note-box"><b><span class="pdot pdot-unsicher"></span>${esc(inc.name)}</b><br>${tk("Nur über den Namen aufgelöst. Wir zeigen keine Vertragsdauer, solange die Zuordnung nicht eindeutig ist.")}</div>`
       : `<div class="kv">
           <div class="kvi kvi-full"><span class="k">${tk("Firma")}</span><span class="vv"><span class="v">${esc(inc.name)}</span>${
@@ -2576,7 +2576,7 @@ ${l.lose && l.lose.length>1 ? (()=>{
       const passtNr = l.bestLot ? l.bestLot.nr : null;
       return `<section class="sec">
         <h4>${tk("Lose")}<span class="cov">${l.lose.length} Teilleistungen</span></h4>
-        ${passtNr!=null?`<div class="los-passt-hint">${tk("Für euch relevant ist")}<b>Los ${passtNr}</b>${l.bestLot.titel?`: ${l.bestLot.titel}`:''}${l.bestLot.region?` · ${l.bestLot.region}`:''}. Die Ausschreibung erbt dessen Relevanz, auch wenn sie insgesamt größer ist.</div>`:''}
+        ${passtNr!=null?`<div class="los-passt-hint">${tk("Für euch relevant ist")} <b>Los ${passtNr}</b>${l.bestLot.titel?`: ${l.bestLot.titel}`:''}${l.bestLot.region?` · ${l.bestLot.region}`:''}. Die Ausschreibung erbt dessen Relevanz, auch wenn sie insgesamt größer ist.</div>`:''}
         <div class="einstieg">
           <div class="ein-m">
             <span class="ein-k">${tk("Einstiegsschwelle")}</span>
@@ -2617,7 +2617,7 @@ ${l.lose && l.lose.length>1 ? (()=>{
           <span class="pnf-k">${tk("Ihr könnt höchstens gewinnen")}</span>
           <span class="pnf-v"><span class="v-num">${l.loseMaxZuschlag}</span></span></div>
       </div>
-      <p class="pn-deut">${tk("Selbst wenn ihr alles anbietet, bekommt ihr höchstens")}<b>${l.loseMaxZuschlag} von ${l.lose.length} Losen</b>. Wer den Gesamtauftrag will,
+      <p class="pn-deut">${tk("Selbst wenn ihr alles anbietet, bekommt ihr höchstens")} <b>${l.loseMaxZuschlag} von ${l.lose.length} Losen</b>. Wer den Gesamtauftrag will,
       braucht Partner. Wer allein bietet, kalkuliert ${l.lose.length-l.loseMaxZuschlag} Lose umsonst.</p>
 
       ${(()=>{ const frei=isFreeLimit();
@@ -2670,7 +2670,7 @@ ${l.lose && l.lose.length>1 ? (()=>{
           <span class="nz-m-d">${tk("deckt {n} Lose")
             .replace('{n}', l.netzPartner.deckung)}</span>
         </div>
-        <p class="nz-m-x">${tk("Zusammen kommt ihr auf")}<b>${(l.netzDeckung||0)+l.netzPartner.deckung} von ${(l.lose||[]).length} Losen</b>.
+        <p class="nz-m-x">${tk("Zusammen kommt ihr auf")} <b>${(l.netzDeckung||0)+l.netzPartner.deckung} von ${(l.lose||[]).length} Losen</b>.
         ${frei&&l.netzPartner.n?tk("Beide Seiten haben freigegeben, die Kontaktdaten liegen jetzt bei euch beiden.")
              :frei?tk("Ihr habt freigegeben. Sichtbar wird der Name erst, wenn die andere Seite ebenfalls freigibt.")
              :l.netzPartner.freigabeGegenseite?tk("Die andere Seite hat bereits freigegeben. Gebt ihr auch frei, tauschen wir die Kontakte aus.")
@@ -2735,7 +2735,7 @@ function renderAnalyse(l){
           head = `<div class="rec-verdict rec-${CLS[b.cls]}"><span class="rec-label">${esc(tk(b.label))}</span>`
             + (b.gruende&&b.gruende.length?`<span class="rec-grund">${esc(b.gruende.map(tk).join(' · '))}</span>`:'')
             + (b.frage?`<span class="rec-frage">${esc(tk(b.frage))}</span>`:'') + `</div>`
-            + (b.schritt?`<div class="rec-step">${tk("Nächster Schritt:")}<b>${esc(tk(b.schritt))}</b></div>`:'');
+            + (b.schritt?`<div class="rec-step">${tk("Nächster Schritt:")} <b>${esc(tk(b.schritt))}</b></div>`:'');
         } else {
           const a = rec.einordnung;
           const hint = rec.gesperrt==='keine_unterlagen' ? tk("Für eine Empfehlung fehlen die Vergabeunterlagen.")
@@ -2819,7 +2819,7 @@ function renderAnalyse(l){
       const z = l.zuschlag;
       if(!z || !z.length) return `<section class="sec" id="an-zuschlag" data-sec="zuschlag">
         <h4>${tk("Zuschlagskriterien")}</h4>
-        <div class="note-box"><b>${tk("Nicht veröffentlicht.")}</b>${tk("Bei knapp jeder fünften Ausschreibung fehlen die Kriterien in der Bekanntmachung, sie stehen dann nur in den Vergabeunterlagen.")}</div>
+        <div class="note-box"><b>${tk("Nicht veröffentlicht.")}</b> ${tk("Bei knapp jeder fünften Ausschreibung fehlen die Kriterien in der Bekanntmachung, sie stehen dann nur in den Vergabeunterlagen.")}</div>
       </section>`;
       const ohneGew = z.some(x=>x.pct==null);
       const preis = (z.find(x=>x.art==='preis')||{}).pct;
@@ -2878,7 +2878,7 @@ function renderAnalyse(l){
       Die Firmen-Auflösung ist hier zu unsicher${l.incumbent.conf!=null?` (Konfidenz ${Math.round(l.incumbent.conf*100)} %)`:''}
       für belastbare Feld-Zahlen. Wir zeigen sie deshalb nicht, statt eine erfundene Statistik zu behaupten.
       Der Name kommt aus der letzten Zuschlagsbekanntmachung, nur über die Schreibweise erkannt.</div>`
-      : `<div class="note-box"><b>${tk("Offenes Feld.")}</b>${tk("Ohne Amtsinhaber gibt es niemanden zu vergleichen, alle Bieter starten hier gleich.")}</div>`}
+      : `<div class="note-box"><b>${tk("Offenes Feld.")}</b> ${tk("Ohne Amtsinhaber gibt es niemanden zu vergleichen, alle Bieter starten hier gleich.")}</div>`}
     </section>`}
 
     <section class="sec" id="an-anforderungen" data-sec="anforderungen">
@@ -2965,7 +2965,7 @@ function renderAnalyse(l){
         if(m.partner) return `<div class="note-box">
           <b>${tk("Passt fachlich, aber groß.")}</b> ${cpvLabel(l)} liegt in eurem Feld, das Volumen übersteigt
           aber eure Alleingrenze. Realistisch nur mit Partner; im Netzwerk-Tab findet ihr Kandidaten.</div>`;
-        return `<div class="note-box"><b>${tk("Keine Lücke.")}</b>${tk("Feld, Region und Volumen passen zu eurem Profil. Das ist die Sorte Lead, die oben in eurer Liste stehen soll.")}</div>`;
+        return `<div class="note-box"><b>${tk("Keine Lücke.")}</b> ${tk("Feld, Region und Volumen passen zu eurem Profil. Das ist die Sorte Lead, die oben in eurer Liste stehen soll.")}</div>`;
       })()}
     </section>
 
@@ -2995,7 +2995,7 @@ function renderAnalyse(l){
     <section class="sec" id="an-historie" data-sec="historie">
       <h4>${tk("Wettbewerbs-Historie")}</h4>
       <div class="note-box build">
-        <b>${tk("In Aufbau.")}</b>${tk("Verdrängungs-Bilanz, Verlustquote und Vertragskette brauchen eine verifizierte Vorgänger-Verknüpfung. Aktuell sind rund 35 % der Verträge sicher verkettbar. Zu wenig, um daraus für diesen Lead eine belastbare Aussage zu machen. Wir zeigen hier nichts, bevor es stimmt.")}</div>
+        <b>${tk("In Aufbau.")}</b> ${tk("Verdrängungs-Bilanz, Verlustquote und Vertragskette brauchen eine verifizierte Vorgänger-Verknüpfung. Aktuell sind rund 35 % der Verträge sicher verkettbar. Zu wenig, um daraus für diesen Lead eine belastbare Aussage zu machen. Wir zeigen hier nichts, bevor es stimmt.")}</div>
     </section>
 
     <section class="sec" id="an-kontakt" data-sec="kontakt">
@@ -3013,10 +3013,10 @@ function renderAnalyse(l){
     </div>
 
     <div class="legend" style="margin-top:var(--s6);padding-top:var(--s4);border-top:1px solid var(--line)">
-      <span><i class="lg-echt"></i>${tk("gemessen")}</span>
-      <span><i class="lg-sch"></i>${tk("geschätzt")}</span>
-      <span><i class="lg-uns"></i>${tk("unsicher")}</span>
-      <span><i class="lg-unb"></i>${tk("unbekannt")}</span>
+      <span><i class="lg-echt"></i> ${tk("gemessen")}</span>
+      <span><i class="lg-sch"></i> ${tk("geschätzt")}</span>
+      <span><i class="lg-uns"></i> ${tk("unsicher")}</span>
+      <span><i class="lg-unb"></i> ${tk("unbekannt")}</span>
     </div>
   </div>`;
 }
@@ -3071,7 +3071,7 @@ function renderMarkt(l){
   if(!s){
     return `<div class="mbody"><div class="mwarn">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg>
-      <span><b>${tk("Für dieses CPV-Segment liegen noch keine Marktdaten vor.")}</b>${tk("Wir zeigen hier lieber nichts als einen fremden Markt.")}</span></div></div>`;
+      <span><b>${tk("Für dieses CPV-Segment liegen noch keine Marktdaten vor.")}</b> ${tk("Wir zeigen hier lieber nichts als einen fremden Markt.")}</span></div></div>`;
   }
   const strukCls = {fragmentiert:'ok', moderat:'mid', oligopol:'risk'}[s.struktur] || 'mid';
   const strukNote = {
@@ -3107,7 +3107,7 @@ function renderMarkt(l){
       <h4>${tk("Wie ist das Feld verteilt?")}</h4>
       <div class="bhero bhero-${strukCls}">
         <div class="bhero-val" style="font-size:19px;min-width:auto">${s.struktur||'&mdash;'}</div>
-        <div class="bhero-lbl"><span class="bhero-title">${tk("Die drei groessten Anbieter halten")}<b>${s.top3} %</b>${tk("der Auftraege")}</span>
+        <div class="bhero-lbl"><span class="bhero-title">${tk("Die drei groessten Anbieter halten")} <b>${s.top3} %</b> ${tk("der Auftraege")}</span>
           <span class="bhero-note">${strukNote}</span></div>
       </div>
     </section>
@@ -3396,7 +3396,7 @@ function renderProfil(){
     ${potTab!=='position'?'':`
     <section class="sec ${free?'sec-lock':''}">
       <h4>${tk("Eure Position im Markt")}<span class="cov">${tk("Branche × Region, nach Anzahl")}</span></h4>
-      ${free?`<div class="note-box" style="margin-bottom:var(--s3)"><b>${tk("Im Pro-Zugang enthalten.")}</b>${tk("Marktanteil und Rang rechnen wir aus allen Vergaben eures Feldes gegen eure Siege. Die Struktur siehst du, die Zahlen sind verdeckt.")}</div>`:''}
+      ${free?`<div class="note-box" style="margin-bottom:var(--s3)"><b>${tk("Im Pro-Zugang enthalten.")}</b> ${tk("Marktanteil und Rang rechnen wir aus allen Vergaben eures Feldes gegen eure Siege. Die Struktur siehst du, die Zahlen sind verdeckt.")}</div>`:''}
       <div class="pstats">
         <div class="pstat"><span class="pstat-k">${tk("Vergaben in eurem Feld")}</span><span class="pstat-v">${n(PMARKT.vergaben)}</span><span class="pstat-m">${tk("letzte 12 Monate")}</span></div>
         <div class="pstat"><span class="pstat-k">${tk("Davon von euch gewonnen")}</span><span class="pstat-v">${historie?n(d.siege):`<span class="pleer">${tk("keine")}</span>`}</span></div>
@@ -3407,7 +3407,7 @@ function renderProfil(){
         <div class="pstat pstat-wide"><span class="pstat-k">${tk("Vergabestellen in eurem Feld")}</span><span class="pstat-v">${n(PMARKT.stellen)}</span>
           <span class="pstat-m">${historie?`bei ${d.kunden} davon habt ihr schon gewonnen`:tk("noch bei keiner davon aktiv")}</span></div>
       </div>
-      <p class="pgap">${tk("Eine")}<b>${tk("Gewinnquote")}</b>${tk("können wir nicht ausweisen: Vergabestellen veröffentlichen den Gewinner, nicht die unterlegenen Bieter. Wir wissen, wie viele geboten haben, aber nicht, ob ihr dabei wart.")}</p>
+      <p class="pgap">${tk("Eine")} <b>${tk("Gewinnquote")}</b> ${tk("können wir nicht ausweisen: Vergabestellen veröffentlichen den Gewinner, nicht die unterlegenen Bieter. Wir wissen, wie viele geboten haben, aber nicht, ob ihr dabei wart.")}</p>
     </section>`}
 
     ${potTab!=='profil'?'':`
@@ -3431,7 +3431,7 @@ function renderProfil(){
       ${historie && !belastbar?`<div class="note-box" style="margin-top:var(--s3)"><b>${tk("Dünne Grundlage.")}</b>
         Mit ${d.siege} ${d.siege===1?'Vergabe':'Vergaben'} bei ${d.kunden} ${d.kunden===1?'Auftraggeber':'Auftraggebern'}
         lässt sich noch kein Muster ablesen. Ergänzt unten, was wir nicht sehen können.</div>`:''}
-      ${!historie?`<div class="note-box" style="margin-top:var(--s3)">${tk("Wir finden unter eurem Namen noch keine gewonnene Vergabe.")}<b>${tk("Dann erklärt euer Profil selbst")}</b>${tk("Relevanz und Anforderungs-Check funktionieren auch ohne Historie.")}</div>`:''}
+      ${!historie?`<div class="note-box" style="margin-top:var(--s3)">${tk("Wir finden unter eurem Namen noch keine gewonnene Vergabe.")} <b>${tk("Dann erklärt euer Profil selbst")}</b> ${tk("Relevanz und Anforderungs-Check funktionieren auch ohne Historie.")}</div>`:''}
 
       <div class="ang">
         ${(()=>{
@@ -3451,7 +3451,7 @@ function renderProfil(){
               <p class="asy-x">${tk("Diese Angaben steuern Relevanz und Anforderungs-Check. Bearbeiten öffnet den Profil-Dialog.")}</p>
             </div>`;
           }
-          return `<div class="note-box gap"><b>${tk("Noch kein Profil.")}</b>${tk("Richtet euer Firmenprofil ein. Es bestimmt, welche Ausschreibungen als relevant gelten, und speist den Anforderungs-Check.")}<div class="acts"><button data-editprofil="1">${tk("Profil einrichten")}</button></div></div>`;
+          return `<div class="note-box gap"><b>${tk("Noch kein Profil.")}</b> ${tk("Richtet euer Firmenprofil ein. Es bestimmt, welche Ausschreibungen als relevant gelten, und speist den Anforderungs-Check.")}<div class="acts"><button data-editprofil="1">${tk("Profil einrichten")}</button></div></div>`;
         })()}
 
         ${angFeld('nachweise','Nachweise & Zertifikate',tk("Werden im Anforderungs-Check gegen die Forderungen geprüft."),[])}
@@ -3471,7 +3471,7 @@ function renderProfil(){
         </div>
       </div>
 
-      <p class="pgap">${tk("Angaben von euch sind")}<b>${tk("nicht überprüft")}</b>${tk("wir kennzeichnen sie getrennt von dem, was wir aus euren Vergaben messen.")}</p>
+      <p class="pgap">${tk("Angaben von euch sind")} <b>${tk("nicht überprüft")}</b> ${tk("wir kennzeichnen sie getrennt von dem, was wir aus euren Vergaben messen.")}</p>
 
       <button class="sec-link" data-editbestand="an">${historie?tk("Eure Verträge pflegen"):tk("Frühere Vergaben nachtragen")}
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>

@@ -60,10 +60,17 @@ export function Dokumente({ leadId }: { leadId: string }) {
   if (!dateien.length) {
     return (
       <div className="dok-leer">
-        <b>Keine Unterlagen abgelegt.</b>
+        <b>Keine Unterlagen abgelegt.</b>{" "}
         {/* Der Grund gehoert dazu: „keine" kann heissen „noch nicht geholt", „Portal gibt
             nichts heraus" oder „hier gibt es keine Dateien". Ohne Unterscheidung sucht
-            man an der falschen Stelle. */}
+            man an der falschen Stelle.
+
+            ⚠ ZWEI FALLEN AUF EINMAL, gemeldet von Sven am 2026-09-20 („super viele
+            tippfehler"): `<b>` und `<span>` sind Inline-Elemente und standen ohne
+            Trennung nebeneinander — im Browser wurde daraus „abgelegt.keine". Und der
+            Grund aus `lead_dokumente.py` lautete woertlich „keine Unterlagen abgelegt",
+            also derselbe Satz noch einmal. Ein Grund, der den Zustand wiederholt, ist
+            keiner. */}
         <span>{grund || "Für diese Vergabe liegt bei uns kein Archiv."}</span>
       </div>
     );
