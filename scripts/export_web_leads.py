@@ -284,7 +284,43 @@ def _verfahrens_dubletten() -> tuple[dict, dict]:
     return veraltet, ersetzt
 
 
+def _frist_grund_index() -> dict:
+    """notice_id → warum die Zeitangabe als unsicher gilt: 'datum' oder 'laufzeit'.
+
+    ⛔ WARUM DAS NOETIG IST. `timing_source='uncertain'` entsteht aus VIER Qualitaetsflags
+    (`gold.py`), und zwei davon sagen etwas ueber verschiedene Zahlen:
+
+        datum_absurd, ende_vor_vergabe, datum_start_nach_ende  → ein DATUM ist unstimmig
+        laufzeit_unplausibel                                   → die VERTRAGSLAUFZEIT
+
+    Die Liste zeigt bei offenen Ausschreibungen aber die ANGEBOTSFRIST („10 Tage bis
+    Schluss"). Gemessen am 2026-09-20: von 357 so markierten Countdown-Leads tragen **128
+    ausschliesslich `laufzeit_unplausibel`** — dort warnte die Oberflaeche an einer Zahl,
+    ueber die gar nichts Schlechtes bekannt ist. Sven: „niemand versteht warum da datum
+    prüfen steht." Ein Drittel der Faelle war schlicht nicht gemeint.
+
+    ⚠ Nur die vier Flags, nur die betroffenen Saetze: die Qualitaetstabelle ist gross, und
+    ein voller Index waere Millionen Eintraege fuer ein Promille Anzeige.
+    """
+    import glob as _g
+    dateien = sorted(_g.glob("data/gold/*/quality*.parquet"))
+    if not dateien:
+        return {}
+    try:
+        con = _db.connect()
+        return {r[0]: r[1] for r in con.execute(
+            f"SELECT notice_id, CASE WHEN list_has_any(quality_flags,"
+            f" ['datum_absurd','ende_vor_vergabe','datum_start_nach_ende'])"
+            f" THEN 'datum' ELSE 'laufzeit' END"
+            f" FROM read_parquet({dateien!r}, union_by_name=true)"
+            f" WHERE list_has_any(quality_flags, ['datum_absurd','ende_vor_vergabe',"
+            f"'datum_start_nach_ende','laufzeit_unplausibel'])").fetchall()}
+    except Exception:
+        return {}
+
+
 GLIEDERUNG = _gliederungs_index()
+FRISTGRUND = _frist_grund_index()
 VERALTET, ERSETZT = _verfahrens_dubletten()
 VEROEFFENTLICHT = _veroeffentlicht_index()
 AENDERUNG = _aenderungs_index()
@@ -1388,6 +1424,11 @@ def export_branche(key):
                         "src": VAL_SRC.get(g("value_source"), "unbekannt")},
             "timing": {"wert": endet or (f"{tage} Tage" if tage is not None else "offen"),
                        "src": TIM_SRC.get(g("timing_source"), "unbekannt"), "warn": False,
+                       # ⚠ Worueber die Unstimmigkeit etwas sagt: 'datum' oder 'laufzeit'.
+                       # Ohne diese Angabe warnt die Liste am Countdown auch dann, wenn nur
+                       # die VERTRAGSLAUFZEIT unplausibel ist (gemessen 128 von 357).
+                       "grund": (FRISTGRUND.get(g("lead_id"))
+                                 if g("timing_source") == "uncertain" else None),
                        "hint": ""},
             "konk": {"wert": konk_wert,
                      # Dieselbe Falle als Vorgabewert — heute unbenutzt, aber sie waere

@@ -256,15 +256,29 @@ def test_die_frist_sagt_ihre_herkunft_in_worten():
     # schneidet die Funktion per Textsuche aus und fuehrt sie isoliert aus. Als sie noch
     # eine Modulkonstante war, starb die Sonde mit einem ReferenceError — dieselbe Falle
     # wie seinerzeit `GLIEDERUNG` in `_unterlagen`.
+    # ⚠ Leerraum einziehen, BEVOR gefenstert wird. `_ohne_kommentar` ersetzt Kommentare
+    # durch Leerzeichen, und `fristCell` traegt inzwischen zwanzig Kommentarzeilen — 1200
+    # Zeichen davon enthalten keine einzige Anweisung. Dieselbe Falle hat heute schon
+    # `test_ausgeblendet_auswertung.py` erwischt; sie ist dort beschrieben.
     i = kern.index("function fristCell")
-    m = re.search(r"HERKUNFT = \{([^}]*)\}", kern[i:i + 1200])
+    fn = " ".join(kern[i:i + 4000].split())
+    m = re.search(r"HERKUNFT = \{([^}]*)\}", fn)
     assert m, "die Herkunftstabelle steht nicht mehr in fristCell"
-    assert '"errechnet", false' in m.group(1).replace(" ", "").replace('"errechnet",false',
-                                                                      '"errechnet", false'), \
-        "„errechnet\" warnt farblich — bei 11,3 % der Leads waere das Tapete"
-    assert "Datum prüfen" in m.group(1), "das Wort fuer die unplausible Frist fehlt"
-    assert "unsicher" not in m.group(1).replace('unsicher:', ''), (
-        "das Wort „unsicher\" steht wieder in der Oberflaeche — Sven wollte es nicht")
+    assert '"errechnet", false' in m.group(1), (
+        "„errechnet\" warnt farblich — bei 11,3 % der Leads waere das Tapete")
+    assert '"fehlerhaft", true' in m.group(1), (
+        "das Wort fuer die unstimmige Angabe fehlt oder warnt nicht")
+    assert "Datum prüfen" not in kern, (
+        "„Datum prüfen\" ist zurueck — es sagt, was zu tun waere, aber nicht was los ist, "
+        "und laesst offen, WELCHES Datum gemeint ist")
+
+    # ⛔ Die Warnung gilt nur, wenn sie die ANGEZEIGTE Zahl betrifft. „unsicher" entsteht
+    # aus vier Qualitaetsflags, und `laufzeit_unplausibel` sagt etwas ueber die
+    # Vertragslaufzeit — nicht ueber die Angebotsfrist im Countdown. Gemessen: 126 von 354
+    # Countdown-Leads trugen ausschliesslich diesen Grund und warnten an der falschen Zahl.
+    assert "l.timing.grund" in fn, "der Grund wird nicht mehr gelesen"
+    assert "grund === 'datum'" in fn, (
+        "die Warnung erscheint wieder unabhaengig davon, worueber sie etwas sagt")
 
     css = _ohne_kommentar_css(CSS.read_text(encoding="utf-8"))
     assert "td.c-frist .val::before{display:none}" in css, (

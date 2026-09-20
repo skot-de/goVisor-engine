@@ -748,17 +748,28 @@ function handlungsFrist(l){
 /* Wort und ob es warnt: „errechnet" ist eine Einschraenkung (11,3 % der Leads),
    „Datum pruefen" eine Unstimmigkeit in der Quelle (2,0 %). Nur die zweite faerbt. */
 function fristCell(l){
-  /* ⚠ DIE TABELLE STEHT IN DER FUNKTION, NICHT DANEBEN. `pruefe-zeithorizont.mjs`
+  /* Woher kommt die angezeigte Zahl? Das Wort steht unter ihr, statt eines Punktes.
+     ⚠ DIE TABELLE STEHT IN DER FUNKTION, NICHT DANEBEN. `pruefe-zeithorizont.mjs`
      schneidet `fristCell` per Textsuche aus und fuehrt sie isoliert aus; eine
-     Modulkonstante gibt es dort nicht, und die Sonde starb mit
-     `ReferenceError: FRIST_HERKUNFT is not defined`.
+     Modulkonstante gibt es dort nicht, und die Sonde starb mit einem ReferenceError.
+     Dieselbe Falle hatte `_unterlagen` in `export_web_leads.py` schon einmal. */
+  const src = l.timing && l.timing.src;
+  /* ⛔ „unsicher" GILT NICHT IMMER FUER DIE ANGEZEIGTE ZAHL. Es entsteht aus vier
+     Qualitaetsflags, und `laufzeit_unplausibel` sagt etwas ueber die VERTRAGSLAUFZEIT —
+     nicht ueber die Angebotsfrist, die im Countdown steht. Gemessen am 2026-09-20: von
+     357 so markierten Countdown-Leads trugen 128 ausschliesslich diesen Grund. Dort stand
+     eine Warnung an einer Zahl, ueber die nichts Schlechtes bekannt ist, und genau das
+     war Svens Befund: „niemand versteht warum da datum prüfen steht."
 
-     Genau dieselbe Falle hatte `_unterlagen` in `export_web_leads.py` schon einmal (dort
-     war es `GLIEDERUNG`, und die Loesung war, es zum Parameter zu machen). Wer eine
-     Funktion anfasst, die eine Sonde ausschneidet, darf sie nicht von aussen abhaengig
-     machen — sonst faellt die Pruefkette, nicht das Produkt. */
-  const HERKUNFT = { schaetz: ["errechnet", false], unsicher: ["Datum prüfen", true] };
-  const [woher, warnt] = HERKUNFT[l.timing && l.timing.src] || [null, false];
+     ⚠ „fehlerhaft" STATT „Datum pruefen". Das erste sagt, WAS los ist (die Quelle
+     widerspricht sich), das zweite nur, was zu tun waere — und liess offen, welches Datum
+     ueberhaupt gemeint ist. */
+  const grund = l.timing && l.timing.grund;
+  const HERKUNFT = { schaetz: ["errechnet", false], unsicher: ["fehlerhaft", true] };
+  // Bei einem Countdown steht die ANGEBOTSFRIST da — dann zaehlt nur ein Datumsproblem.
+  // Beim Vertragsende zaehlt auch die unplausible Laufzeit, sie IST die angezeigte Zahl.
+  const gilt = src !== 'unsicher' || (l.tage != null ? grund === 'datum' : true);
+  const [woher, warnt] = (gilt && HERKUNFT[src]) || [null, false];
   if(l.tage != null){                       // offene Ausschreibung: Countdown
     const urg = l.tage <= 14;
     return `<span class="cd ${urg?'urg':''}">${val(tk('{n} Tage', {n: l.tage}), l.timing.src, l.timing.hint)}<span class="cdsub${woher ? (warnt ? " cd-woher cd-warn" : " cd-woher") : ""}">${tk(woher || "bis Schluss")}</span></span>`;
