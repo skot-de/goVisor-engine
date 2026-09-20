@@ -84,6 +84,7 @@ export function LeadTable({
   onWf,
   onDokLink,
   onHide,
+  onTabSelect,
   onNetz,
   onOwn,
   onHeadFilter,
@@ -133,6 +134,8 @@ export function LeadTable({
   /** Unterlagen beim Portal oeffnen UND den Lead aufschlagen. */
   onDokLink?: (id: string) => void;
   onHide?: (id: string) => void;
+  /** Klick auf eine Spalte mit eigenem Ziel: Lead oeffnen UND dorthin springen. */
+  onTabSelect?: (id: string, tab: string) => void;
   /** Vorgaenge, an deren Stelle gerade eine Rueckfrage steht: Kennung → Titel.
    *  ⚠ MEHRERE, nicht einer: wer zwei Leads hintereinander wegklickt, soll zu beiden
    *  gefragt werden. Vorher erbte der zweite Klick die eine Frage, und der erste
@@ -231,6 +234,24 @@ export function LeadTable({
       e.stopPropagation();
       const [id, ans] = own.dataset.own!.split(":");
       onOwn(id, ans);
+      return;
+    }
+    /* ⚠ JEDE SPALTE FUEHRT IN IHREN TAB — seit dem 2026-09-20 die Regel, nicht die
+       Ausnahme. Sven: „macht es sinn die felder in den spalten mit unterschiedlichen
+       zielen zu verlinken? sonst wird das mit unterlagen niemand checken." Genau das war
+       das Problem: EIN Sonderfall (Unterlagen) ist nicht lernbar, sieben gleichartige
+       Ziele sind es.
+
+       ⚠ DIESE ABFRAGE STEHT GANZ AM ENDE, hinter allen Knoepfen (Stern, Kreuz, Status,
+       Unterlagen) und unmittelbar vor dem Zeilenklick. Die Knoepfe liegen INNERHALB von
+       Zellen, die ein Ziel tragen koennen; stuende die Abfrage davor, oeffnete ein Klick
+       auf das Kreuz den Lead, statt ihn auszublenden. Heute kollidiert nichts — die erste
+       Zelle, die Knopf UND Ziel traegt, wuerde es sofort tun. */
+    const zelle = t.closest<HTMLElement>("[data-tab]");
+    const zeileFuerTab = t.closest<HTMLElement>("tr[data-id]");
+    if (zelle && zeileFuerTab && onTabSelect) {
+      e.stopPropagation();
+      onTabSelect(zeileFuerTab.dataset.id!, zelle.dataset.tab!);
       return;
     }
     const row = t.closest<HTMLElement>("tr[data-id]");

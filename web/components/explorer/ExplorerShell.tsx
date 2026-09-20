@@ -2138,6 +2138,7 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
                 onSelect={openLead}
                 onStar={toggleStar}
                 onHide={toggleAusblenden}
+                onTabSelect={(id, tab) => { openLead(id); setTimeout(() => setActiveTab(tab), 0); }}
                 onNetz={toggleNetz}
                 onOwn={toggleOwn}
                 onHeadFilter={(facet, rect) =>

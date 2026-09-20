@@ -910,7 +910,7 @@ function cellHTML(l, key){
        etwas ausgeblendet ist. Das Klicken faengt `handleRowClick` per Delegation ab. */
     case 'star': return `<td class="c-star"><button class="tstar" data-star="${l.id}" ${l.merk?`data-merk="${l.merk}"`:''} aria-label="Merken">${STAR}</button>`
       + `<button class="lt-hide${l.aus?' an':''}" data-hide="${l.id}" aria-label="${esc(tk(l.aus?'Wieder einblenden':'Passt nicht, ausblenden'))}" title="${esc(tk(l.aus?'Wieder einblenden':'Passt nicht, ausblenden'))}">${KREUZ}</button></td>`;
-    case 'src': return `<td class="c-src"><span class="srcpill src-${l.src}">${l.srcLabel}</span></td>`;
+    case 'src': return `<td class="c-src" data-tab="teilnahme"><span class="srcpill src-${l.src}">${l.srcLabel}</span></td>`;
     case 'titel': {
       const wort = (searchTokens.find(t=>t.type==='text')||{}).value;
       const f = wort ? fundstelle(l, wort) : null;
@@ -929,11 +929,20 @@ function cellHTML(l, key){
       return `<td class="c-titel"><span class="ttitel">${wort?hervorheben(l.titel, wort):esc(l.titel)}${akt}${eigen}</span>${awardSub}${lotHint}${beleg}</td>`;
     }
     case 'titel_alt': return `<td class="c-titel"><span class="ttitel" title="${esc(l.titel)}">${esc(l.titel)}</span></td>`;
-    case 'buyer': return `<td class="c-buyer" title="${esc(l.buyer)}">${esc(l.buyerShort)}</td>`;
-    case 'frist': return `<td class="c-frist">${l.src==='award'?awardWhen(l):fristCell(l)}</td>`;
-    case 'natur': return `<td class="c-natur"><span class="nat nat-${l.naturKat}">${esc(l.natur)}</span></td>`;
+    /* ⚠ „buyer" IST EIN PRO-TAB. Ein Klick dorthin endet fuer Free-Nutzer am Schloss —
+       schlechter als gar kein Klick, weil er etwas verspricht. `accountLimit` sagt, ob
+       die Sperre gilt; ohne Abo faellt das Ziel auf die Uebersicht zurueck, die den
+       Kaeufer ebenfalls nennt. */
+    case 'buyer': return `<td class="c-buyer" data-tab="${accountLimit ? 'uebersicht' : 'buyer'}" title="${esc(l.buyer)}">${esc(l.buyerShort)}</td>`;
+    case 'frist': return `<td class="c-frist" data-tab="teilnahme">${l.src==='award'?awardWhen(l):fristCell(l)}</td>`;
+    case 'natur': return `<td class="c-natur" data-tab="docs"><span class="nat nat-${l.naturKat}">${esc(l.natur)}</span></td>`;
     case 'konk': return `<td class="c-konk">${konkCell(l)}</td>`;
-    case 'neu': return `<td class="c-neu" style="text-align:center">${l.neu
+    /* ⚠ ZIEL IST BEWERTUNG, NICHT MARKT. Sven schlug „markt" vor; nachgemessen traegt der
+       Markt-Tab die SEGMENT-Ebene (Nachfrage, Chancen-Score, „Wo ist das Feld schwach"),
+       waehrend diese Spalte den AMTSINHABER meint (Neuvergabe/Folgevergabe). Das
+       „Verdraengungs-Risiko" steht in der Bewertung. Dazu ist Markt ein Pro-Tab: ein Klick
+       dorthin endete fuer Free-Nutzer am Schloss. */
+    case 'neu': return `<td class="c-neu" data-tab="analyse" style="text-align:center">${l.neu
         ? `<span class="wettb neu" title="${esc(tk("Neuvergabe. Kein Amtsinhaber, offenes Feld"))}">${tk("Neu")}</span>`
         : `<span class="wettb folge" title="${esc(tk("Folgevergabe. Amtsinhaber vorhanden"))}">${tk("Folge")}</span>`}</td>`;
     case 'relevanz': return `<td class="c-band">${bandMeter(l.relevanz)}${passungAchse(l, true)}</td>`;
@@ -1028,7 +1037,7 @@ function cellHTML(l, key){
          `display:block` und machte JEDE Tabellenzeile hoeher — in einer Liste, die am
          selben Tag zweimal wegen Unruhe gemeldet wurde. Dazu stand derselbe Text ohnehin
          schon im `title`, also doppelt. */
-      return `<td class="c-empf"><span class="empf rec-${r.cls}" title="${esc(tk(r.grund))}">${tk(r.label)}</span></td>`;
+      return `<td class="c-empf" data-tab="analyse"><span class="empf rec-${r.cls}" title="${esc(tk(r.grund))}">${tk(r.label)}</span></td>`;
     }
     /* ⚠ DIE HERKUNFT GEHOERT AN DEN WERT. `regionQuelle` liegt seit jeher an 42.660 Leads
        und wurde im Frontend NIRGENDS gelesen. Die Begruendung steht im Export selbst: „Ein

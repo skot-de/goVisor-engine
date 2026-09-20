@@ -24,6 +24,7 @@ was GEWOLLT ist, und das liest sich im Fehlerfall schneller als eine Pixelzahl.
 """
 from __future__ import annotations
 
+import re
 import subprocess
 import sys
 from pathlib import Path
@@ -169,3 +170,57 @@ def test_die_sonde_sieht_einen_fragezeichen_zeiger():
         assert "Fragezeichen" in r.stdout
     finally:
         css.write_text(echt, encoding="utf-8")
+
+
+def test_jede_spalte_fuehrt_in_ihren_tab():
+    """⚠ Sven am 2026-09-20: „macht es sinn die felder in den spalten mit unterschiedlichen
+    zielen zu verlinken? also das was wir mit unterlagen gemacht haben? sonst wird das mit
+    unterlagen niemand checken."
+
+    Genau das war das Problem: EIN Sonderfall ist nicht lernbar, sieben gleichartige Ziele
+    sind es. Die Ziele sind an den TAB-INHALTEN gemessen, nicht geraten:
+
+        Phase       → Teilnahme      „Unterlagen oeffnen · Vergabeplattform · Fristen"
+        Leistung    → Unterlagen     Leistungsbeschreibung liegt dort
+        Empfehlung  → Bewertung      „Bewertung · Relevanz · Verdraengungs-Risiko"
+        Frist       → Teilnahme      „Fristen · Frist fuer Rueckfragen · Angebotsfrist"
+        Auftraggeber→ Vergabestelle  „Kaeufer-Dossier · Alle Leads dieser Vergabestelle"
+        Wettbewerb  → Bewertung      s. u.
+        Unterlagen  → Unterlagen     seit 2026-09-19
+
+    ⚠ WETTBEWERB GEHT NICHT AUF „MARKT", obwohl das der naheliegende Name ist. Gemessen
+    traegt der Markt-Tab die SEGMENT-Ebene (Nachfrage, Chancen-Score, „Wo ist das Feld
+    schwach"), waehrend die Spalte den AMTSINHABER meint (Neuvergabe/Folgevergabe) — und
+    das „Verdraengungs-Risiko" steht in der Bewertung.
+
+    ⚠ UND DER AUFTRAGGEBER FAELLT FUER FREE-NUTZER AUF DIE UEBERSICHT ZURUECK. `buyer` und
+    `markt` sind Pro-Tabs; ein Klick, der am Schloss endet, ist schlechter als keiner, weil
+    er etwas verspricht.
+    """
+    kern = (WURZEL / "web" / "lib" / "explorerCore.js").read_text(encoding="utf-8")
+    erwartet = {"c-src": "teilnahme", "c-natur": "docs", "c-empf": "analyse",
+                "c-frist": "teilnahme", "c-neu": "analyse"}
+    for zelle, tab in erwartet.items():
+        m = re.search(rf'class="{zelle}"[^`]*?data-tab="([a-z]+)"', kern)
+        if not m:
+            m = re.search(rf'<td class="{zelle}" data-tab="([a-z]+)"', kern)
+        assert m, f"{zelle} hat kein Ziel mehr"
+        assert m.group(1) == tab, f"{zelle} zeigt auf {m.group(1)}, erwartet {tab}"
+    assert "data-tab=\"${accountLimit ? 'uebersicht' : 'buyer'}\"" in kern, (
+        "der Auftraggeber springt auch ohne Abo in den Pro-Tab — der Klick endet dann am "
+        "Schloss")
+
+    tab = (WURZEL / "web" / "components" / "explorer" / "LeadTable.tsx").read_text(encoding="utf-8")
+    # ⚠ DIE REIHENFOLGE IST DER GANZE TRICK, und der erste Anlauf hatte sie falsch: ich
+    # hatte die Zellen-Abfrage direkt hinter `data-doklink` gesetzt, also VOR Stern, Kreuz
+    # und Status. Heute kollidiert das nicht (diese Zellen tragen kein Ziel) — die erste
+    # Zelle, die Knopf UND Ziel traegt, wuerde es sofort tun, und dann oeffnete ein Klick
+    # auf das Kreuz den Lead, statt ihn auszublenden.
+    i_tab = tab.index('closest<HTMLElement>("[data-tab]")')
+    for haken, was in (("data-star", "Stern"), ("data-hide", "Ausblenden-Kreuz"),
+                       ("data-wf", "Status"), ("data-own", "Bestand"),
+                       ("data-doklink", "Unterlagen")):
+        assert tab.index(f'closest<HTMLElement>("[{haken}]")') < i_tab, (
+            f"{was} liegt hinter der Tab-Abfrage — ein Klick darauf oeffnet dann den Lead")
+    assert i_tab < tab.index('const row = t.closest<HTMLElement>("tr[data-id]")'), (
+        "die Tab-Abfrage liegt hinter dem Zeilenklick und kommt nie zum Zug")
