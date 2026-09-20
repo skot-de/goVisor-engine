@@ -1403,6 +1403,14 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
         if (it) { it.classList.toggle("done"); clPersist(el.closest<HTMLElement>(".va-checklist")); }
         break;
       }
+      /* Einen Pruefpunkt aufklappen: Fundstelle und Textbaustein erscheinen erst hier.
+         ⚠ Sie VORSORGLICH zu rendern war der Grund, warum eine Checkliste mit 58 Punkten
+         239 Knoepfe und 58 Textfelder trug und ganz aufgeklappt 22 Bildschirme hoch war.
+         Geschrieben wird in hoechstens eine Handvoll davon. */
+      case "clopen": {
+        el.closest<HTMLElement>(".item")?.classList.toggle("auf");
+        break;
+      }
       case "clkombi": {
         let blk: { theme?: string; label?: string; quote?: string } = {};
         try { blk = JSON.parse(value); } catch { /* ignore */ }

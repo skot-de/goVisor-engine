@@ -236,11 +236,27 @@ def test_nur_echt_ueber_dem_oberen_viertel():
 
 
 def test_der_vergleich_ist_nicht_fett():
-    """Die geforderte Zahl ist die Nachricht, die Einordnung ordnet sie ein. Im `<b>` schriee
-    sie lauter als das, worauf sie sich bezieht."""
+    """Die geforderte Zahl ist die Nachricht, die Einordnung ordnet sie ein. Fett schriee
+    sie lauter als das, worauf sie sich bezieht.
+
+    ⚠ DER ANSPRUCH IST GEBLIEBEN, DIE STELLE HAT SICH GEAENDERT. Bis zum 2026-09-20 stand
+    die Art des Pruefpunkts fett im Kopf (`<b>…</b>${vgl}`), und der Test hielt fest, dass
+    der Vergleich HINTER dem `<b>` steht. Seit die Zeile das Zitat traegt, gibt es dort gar
+    kein `<b>` mehr — der alte Wortlaut waere jetzt unerfuellbar, obwohl die Regel erfuellt
+    ist. Geprueft wird deshalb die Regel selbst: in der Zeile ist nichts fett ausser dem
+    Wert, und der Vergleich steht daneben.
+    """
     stelle = CORE[CORE.index('data-clchk="${it._i}">✓</button>'):]
     stelle = stelle[:stelle.index("</div>")]
-    assert "</b>${vgl}" in stelle, "der Vergleich steht im fetten Kopf"
+    assert "${vgl}" in stelle, "der Vergleich steht nicht mehr in der Zeile"
+    assert "<b>" not in stelle and "<strong" not in stelle, (
+        "in der Zeile steht wieder eine Fettung; nur der Wert darf fett sein, und der "
+        "bekommt sie aus `.cl-wert` im Stylesheet")
+    # ⚠ Die Fettung des Werts kommt aus dem Stylesheet, nicht aus dem Markup — sonst
+    # verschoebe sich die Regel nur eine Ebene tiefer, ohne dass es jemand merkt.
+    css = (WURZEL / "web" / "app" / "explorer.css").read_text(encoding="utf-8")
+    assert ".va-checklist .cl-wert{font-weight:700" in css, (
+        "der Wert ist nicht mehr der einzige fette Teil der Zeile")
 
 
 def test_gruppenschluessel_traegt_das_land():

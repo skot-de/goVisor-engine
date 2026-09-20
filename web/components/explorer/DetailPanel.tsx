@@ -190,7 +190,8 @@ export function DetailPanel({
     const map = ["anav", "openlead", "cmtsend", "grp", "mark", "region", "buyerdemo",
       "tonetz", "netz", "buyerleads", "partner", "netzint", "netzlos", "netzfrei", "ptab", "pstufe",
       "uploaddocs", "saveblock",
-      "clchk", "clkombi", "clnutzen", "clpick", "clcopy", "cljump", "clcollapse", "firma", "merk",
+      "clchk", "clopen", "clkombi", "clnutzen", "clpick", "clcopy", "cljump", "clcollapse",
+      "firma", "merk",
       "buyerwatch"];
     for (const a of map) {
       const el = t.closest<HTMLElement>(`[data-${a}]`);

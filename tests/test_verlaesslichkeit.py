@@ -45,9 +45,15 @@ def test_nennt_beide_zahlen():
 def test_verdoppelt_den_haftungshinweis_nicht():
     """⚠ Die Zahl stand schon im `disc`. Zwei Stellen mit derselben Zahl sind die Sorte
     Doppelung, die eine Oberfläche unlesbar macht — der Halbsatz weicht, wenn die Zeile steht."""
-    stelle = CORE[CORE.index('<div class="disc">'):]
-    stelle = stelle[:stelle.index("</div>")]
+    # ⚠ Der Haftungsabsatz ist am 2026-09-20 von einem `<div>` zu einem aufklappbaren
+    # `<details>` geworden (473 px Vorspann vor dem ersten Pruefpunkt). Der Anspruch ist
+    # derselbe geblieben, nur das Element nicht — deshalb wird jetzt die BEDINGUNG gesucht,
+    # nicht die Huelle.
+    i = CORE.index('class="disc"')
+    stelle = CORE[CORE.index("const verw =", i - 1500):i]
     assert "!verlaesslichkeit(a)" in stelle, "Haftungshinweis und Zeile nennen die Zahl doppelt"
+    # ⚠ Und der Singular: „1 unbelegte Aussagen" stand hier bis zum 2026-09-20 im Plural.
+    assert "rejected_items === 1" in stelle, "die Zahl 1 bekommt wieder den Plural"
 
 
 def test_traegt_die_hinweisfarbe_nicht_die_warnfarbe():

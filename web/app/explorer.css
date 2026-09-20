@@ -408,22 +408,30 @@ mark.hit{background:#CFF3E4;box-shadow:0 0 0 2px #CFF3E4}
 .va-amp.va-stop{color:#a5231b;background:#fbe6e4}
 /* Ticket #23 §7 — Checkliste je Lead (Prototyp-Design, an App-Variablen angepasst) */
 .va-checklist{--gt:#eaf6f0;--gt2:#f4faf7;--gd:#12855a;--amber:#a16207;--blue:#2b5f86;margin-top:var(--s3);display:flex;flex-direction:column;gap:0}
-.va-checklist .chead{background:#f8faf9;border:1px solid var(--line);border-radius:9px;padding:13px 16px;margin-bottom:10px}
+.va-checklist .chead{background:#f8faf9;border:1px solid var(--line);border-radius:9px;padding:11px 14px;margin-bottom:10px}
 .va-checklist .chead .r1{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:baseline}
 .va-checklist .chead .stand{font-family:var(--mono,monospace);font-size:12px;text-transform:none;letter-spacing:normal;color:var(--ink-700)}
 .va-checklist .chead .link{color:var(--gd);text-decoration:none;font-size:12.5px;font-weight:500}
-.va-checklist .chead .disc{font-size:11.5px;color:var(--ink-400);margin-top:9px;padding-top:9px;border-top:1px solid var(--line);line-height:1.55}
-.va-checklist .cl-firstday{background:#f6f8f7;border:1px solid var(--line);border-radius:9px;padding:11px 15px;margin-bottom:12px;font-size:12.5px;color:var(--ink-700);line-height:1.55}
+/* Haftung: eine Zeile offen, der Rest auf Klick. ⚠ Was gekuerzt wird, ist die
+   Erlaeuterung — die Warnung selbst steht in der Summary und ist immer sichtbar. */
+.va-checklist .disc{font-size:11.5px;color:var(--ink-400);margin-top:8px;padding-top:8px;border-top:1px solid var(--line);line-height:1.55}
+.va-checklist .disc>summary{list-style:none;cursor:pointer;display:flex;gap:8px;align-items:baseline}
+.va-checklist .disc>summary::-webkit-details-marker{display:none}
+.va-checklist .disc .disc-auf{color:var(--gd);white-space:nowrap}
+.va-checklist .disc[open] .disc-auf{visibility:hidden}
+.va-checklist .disc p{margin:7px 0 0}
+/* ⚠ Kein eigener Kasten mehr: der Hinweis ist eine Fussnote zum Kopf, kein Befund. */
+.va-checklist .cl-firstday{margin:0 0 10px;font-size:12px;color:var(--ink-400)}
 .va-checklist .cl-firstday .link{color:var(--gd);text-decoration:none;font-weight:600}
-.va-checklist .toc{border:1px solid var(--line);border-radius:9px;background:var(--surface);padding:13px 16px;margin-bottom:16px}
-.va-checklist .toc .th{display:flex;justify-content:space-between;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:11px}
+.va-checklist .toc{border:1px solid var(--line);border-radius:9px;background:var(--surface);padding:10px 14px;margin-bottom:12px}
+.va-checklist .toc .th{display:flex;justify-content:space-between;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:8px}
 .va-checklist .toc .th b{font-size:14px}.va-checklist .toc .th .pr{font-family:var(--mono,monospace);font-size:12px;color:var(--ink-700)}
 .va-checklist .chips{display:flex;gap:7px;flex-wrap:wrap}
 .va-checklist .tchip{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);background:var(--surface);border-radius:99px;padding:5px 11px;font-size:12.5px;cursor:pointer;color:var(--ink-900)}
 .va-checklist .tchip:hover{border-color:var(--signal-deep);background:var(--gt2)}
 .va-checklist .tchip .n{font-family:var(--mono,monospace);font-size:11px;color:var(--ink-400)}
 .va-checklist .tchip.all{background:var(--gt);border-color:#cfe8dc;color:var(--gd)}
-.va-checklist .tprog{height:3px;background:var(--line);border-radius:99px;overflow:hidden;margin-top:12px}
+.va-checklist .tprog{height:3px;background:var(--line);border-radius:99px;overflow:hidden;margin-top:9px}
 .va-checklist .tprog i{display:block;height:100%;background:var(--signal-deep);border-radius:99px;transition:width .25s}
 .va-checklist details.grp{border:1px solid var(--line);border-radius:9px;background:var(--surface);margin-bottom:11px;overflow:hidden}
 .va-checklist details.grp>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:11px;padding:12px 16px;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--ink-700)}
@@ -433,14 +441,34 @@ mark.hit{background:#CFF3E4;box-shadow:0 0 0 2px #CFF3E4}
 .va-checklist details.grp[open]>summary .caret{transform:rotate(90deg)}
 .va-checklist details.grp[open]>summary{border-bottom:1px solid var(--line)}
 .va-checklist .gbody{padding:13px 16px 6px}
-.va-checklist .item{border:1px solid var(--line);border-radius:8px;margin-bottom:11px;overflow:hidden;background:var(--surface)}
-.va-checklist .item .ih{display:flex;align-items:center;gap:11px;padding:11px 14px;border-bottom:1px solid var(--line)}
-.va-checklist .item .ih b{font-size:14px;font-weight:600}
-.va-checklist .item.done{background:var(--gt2);border-color:#d9e8e1}
-.va-checklist .item.done .ih{border-bottom:0}.va-checklist .item.done .ibody{display:none}
-.va-checklist .item .dsum{display:none;padding:8px 14px 11px;font-size:12.5px;color:var(--ink-700)}
-.va-checklist .item.done .dsum{display:block}
-.va-checklist .item .dsum .re{color:var(--gd);font-weight:500;background:none;border:0;padding:0;cursor:pointer;font-size:12.5px;text-decoration:underline;text-underline-offset:2px}
+/* ── Ein Pruefpunkt = EINE Zeile ───────────────────────────────────────────────────
+   Bis zum 2026-09-20 war jeder Punkt ein aufgeklappter Kasten mit Rahmen, Zitatblock,
+   Textfeld und zwei Knoepfen. Bei 58 Punkten (dem Median!) waren das 239 Knoepfe, 58
+   Textfelder und 19.837 px — 22 Bildschirme. Jetzt traegt die Zeile die Aussage, und
+   Fundstelle und Baustein kommen erst auf Klick.
+
+   ⚠ Der Rahmen je Punkt faellt mit weg. Er trennte Kaesten; Zeilen trennt eine Linie. */
+.va-checklist .item{border-bottom:1px solid var(--line);background:none}
+.va-checklist .item:last-child{border-bottom:0}
+.va-checklist .item .ih{display:grid;grid-template-columns:19px 1fr auto;align-items:baseline;
+  gap:10px;padding:7px 0}
+.va-checklist .item .dchk{align-self:center}
+/* Die Zeile selbst ist der Knopf. ⚠ Zwei Zeilen Deckel: 32 % der Zitate brechen ohnehin
+   mitten im Satz ab, und ein einzelnes 2.170-Zeichen-Zitat riss den Block wieder auf.
+   Aufgeklappt steht das vollstaendige Zitat im Fundstellenblock darunter. */
+.va-checklist .item .cl-satz{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;
+  overflow:hidden;text-align:left;background:none;border:0;padding:0;cursor:pointer;
+  font:inherit;font-size:13px;line-height:1.5;color:var(--ink-900);min-width:0}
+.va-checklist .item.auf .cl-satz{-webkit-line-clamp:unset}
+.va-checklist .item .cl-satz:hover{color:var(--signal-deep)}
+.va-checklist .cl-wert{font-weight:700;white-space:nowrap}
+/* Die Art ist jetzt Beiwerk: in 87 % der Faelle steht sie in derselben Liste mehrfach und
+   unterscheidet nichts. Sie bleibt, weil sie beim Ueberfliegen einer Gruppe einordnet. */
+.va-checklist .cl-art{font-size:10.5px;color:var(--ink-400);white-space:nowrap;padding-top:2px}
+.va-checklist .item .ibody{display:none}
+.va-checklist .item.auf .ibody{display:block;padding-bottom:9px}
+.va-checklist .item.done .cl-satz{color:var(--ink-400);text-decoration:line-through}
+.va-checklist .item.done .ibody{display:none}
 .va-checklist .dchk{width:19px;height:19px;border-radius:50%;border:1.5px solid #cfd6d2;background:#fff;cursor:pointer;flex-shrink:0;display:grid;place-items:center;color:transparent;font-size:11px;font-weight:800;padding:0}
 .va-checklist .dchk:hover{border-color:var(--signal-deep)}
 .va-checklist .item.done .dchk{background:var(--signal-deep);border-color:var(--signal-deep);color:#fff}
@@ -450,7 +478,8 @@ mark.hit{background:#CFF3E4;box-shadow:0 0 0 2px #CFF3E4}
   padding:2px 7px;font-weight:600;white-space:nowrap;line-height:1.4}
 .va-checklist .m-z{background:#eef4f9;color:var(--blue)}.va-checklist .m-e{background:var(--line);color:var(--ink-700)}
 .va-checklist .m-a{background:#faf3e8;color:var(--amber)}.va-checklist .m-v{background:var(--gt);color:var(--gd)}
-.va-checklist .quote{padding:13px 14px;background:#fbfcfb;border-bottom:1px solid var(--line)}
+.va-checklist .quote{padding:11px 13px;background:#fbfcfb;border:1px solid var(--line);border-radius:7px}
+.va-checklist .block{border:1px solid var(--line);border-top:0;border-radius:0 0 7px 7px;margin-top:-1px}
 .va-checklist .lbl{font-size:10px;letter-spacing:.11em;text-transform:uppercase;color:var(--ink-400);font-weight:600;margin-bottom:6px;display:flex;justify-content:space-between;align-items:center;gap:10px}
 .va-checklist .quote q{display:block;font-size:13.5px;line-height:1.6;quotes:'„' '“';overflow-wrap:anywhere}
 .va-checklist .quote .src{font-family:var(--mono,monospace);font-size:11px;color:var(--ink-400);margin-top:7px;overflow-wrap:anywhere}
@@ -2200,30 +2229,59 @@ tr.wf-verworfen .ttitel{color:var(--ink-400);text-decoration:line-through;text-d
                padding-left:var(--s3)}
 .top-werkzeuge .un-tabs{border:0;margin:0;padding:0}
 
-/* VERGABEUNTERLAGEN — die echten Dateien im Unterlagen-Reiter, vor der Analyse. */
-.dok-block { padding: 2px 32px 0; }
+/* VERGABEUNTERLAGEN — die echten Dateien im Unterlagen-Reiter, vor der Analyse.
+   ⚠ ZUGEKLAPPT. Gemessen ueber 293 Vorgaenge: Median 19 Dateien, p90 35, max 99. Offen
+   waren das 911 px — der ganze erste Bildschirm, bevor die Auswertung ueberhaupt anfing.
+   Sven am 2026-09-20: „der nimmt im zweifel super viel platz".
+   Die Kopfzeile traegt die Gruppen samt Anzahl, damit man OHNE Klick sieht, ob ein
+   Leistungsverzeichnis dabei ist. */
 .dok-laedt, .dok-leer { padding: 14px 32px; color: var(--muted, #6b7280); font-size: 13px; }
 .dok-leer b { color: var(--ink-900, #111827); }
-.dok-kopf { margin: 0 0 12px; font-size: 13px; color: var(--ink-700, #374151); }
-/* „ungefiltert" ist kein Beiwerk: hier greift KEINE PII-Schwaerzung, anders als beim
-   extrahierten Text. Wer die Datei oeffnet, muss wissen, dass es das Original ist. */
-.dok-hinweis { margin-left: 10px; color: var(--muted, #9ca3af); font-size: 12px; }
-.dok-gruppe { margin: 0 0 14px; }
-.dok-gruppe h4 { margin: 0 0 5px; font-size: 12px; text-transform: uppercase;
-                 letter-spacing: .04em; color: var(--muted, #6b7280);
-                 display: flex; align-items: baseline; gap: 7px; }
-.dok-gruppe h4 span { font-size: 11px; color: var(--ink-400, #9ca3af); }
-.dok-gruppe ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 1px; }
-.dok-gruppe li { display: flex; align-items: baseline; gap: 10px;
-                 padding: 5px 8px; border-radius: 5px; }
-.dok-gruppe li:hover { background: var(--surface-2, #f8fafc); }
-.dok-gruppe a { color: var(--ink-900, #111827); text-decoration: none;
-                font-size: 13px; overflow: hidden; text-overflow: ellipsis;
-                white-space: nowrap; }
-.dok-gruppe a:hover { text-decoration: underline; }
-.dok-gesperrt { color: var(--muted, #9ca3af); font-size: 13px; text-decoration: line-through; }
-.dok-meta { margin-left: auto; flex: none; font-size: 11px; color: var(--muted, #9ca3af);
-            font-variant-numeric: tabular-nums; }
+.dk { margin: 0 32px; border-bottom: 1px solid var(--line); }
+/* ⚠ DASS MAN AUFKLAPPEN KANN, MUSS MAN SEHEN. Sven am 2026-09-20: „vll noch mehr
+   highlighen das man die aufklappen kann". Eine Zeile Text sieht aus wie eine Zeile Text;
+   erst Pfeil, Rahmen beim Ueberfahren und ein beschrifteter Knopf machen sie zum Ziel. */
+.dk > summary { display: flex; align-items: center; gap: 9px; padding: 9px 11px; margin: 6px 0;
+                cursor: pointer; font-size: 13px; color: var(--ink-700); list-style: none;
+                border: 1px solid var(--line); border-radius: 8px; background: var(--surface);
+                transition: .15s; }
+.dk > summary::-webkit-details-marker { display: none; }
+.dk > summary:hover { border-color: var(--signal); background: var(--surface-2, #f6f8f7); }
+.dk-pfeil { flex: none; color: var(--ink-400); transition: transform .18s; }
+.dk[open] .dk-pfeil { transform: rotate(90deg); }
+.dk[open] > summary { border-color: var(--line); background: var(--surface-2, #f6f8f7); }
+.dk-ges { color: var(--muted, #9ca3af); font-variant-numeric: tabular-nums; }
+/* ⚠ Die Gruppen duerfen die Zeile nicht sprengen: bei 99 Dateien in sechs Gruppen stuenden
+   sonst zwei Zeilen dort, wo eine versprochen war. */
+/* ⚠ Ein harter Schnitt mitten im Wort sieht aus wie ein Fehler. Die Liste laeuft deshalb
+   aus, und der Abstand nach rechts haelt sie vom naechsten Text weg. */
+.dk-chips { display: flex; gap: 11px; flex: 1; min-width: 0; overflow: hidden;
+            color: var(--ink-400); font-size: 11.5px; white-space: nowrap;
+            padding-right: 14px;
+            -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 26px), transparent);
+            mask-image: linear-gradient(to right, #000 calc(100% - 26px), transparent); }
+.dk-g b { margin-left: 4px; color: var(--ink-600); font-weight: 600; }
+.dk-roh { font-size: 11.5px; color: var(--muted, #9ca3af); white-space: nowrap; }
+.dk-auf { font-size: 11.5px; font-weight: 600; color: var(--gd); white-space: nowrap;
+          border: 1px solid var(--line); border-radius: 99px; padding: 2px 9px;
+          background: var(--surface); }
+.dk > summary:hover .dk-auf { border-color: var(--signal); }
+.dk[open] .dk-auf { visibility: hidden; }
+.dk-body { padding: 2px 0 14px; }
+.dk-h { display: flex; align-items: baseline; gap: 6px; margin: 12px 0 3px;
+        font-size: 10.5px; font-weight: 700; text-transform: uppercase; letter-spacing: .07em;
+        color: var(--ink-400); }
+.dk-h span { font-weight: 600; letter-spacing: 0; }
+/* Name, Ordner, Groesse. ⚠ Der Name bekommt den Platz und kuerzt als Einziger — 74 % der
+   Eintraege tragen einen Ordnerpfad, und der ist in einer Liste zehnmal derselbe. */
+.dk-z { display: grid; grid-template-columns: minmax(0, 1fr) auto auto; gap: 12px;
+        align-items: baseline; padding: 3px 0; }
+.dk-n { font-size: 12.5px; color: var(--ink-900); text-decoration: none;
+        overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+a.dk-n:hover { text-decoration: underline; }
+.dk-o, .dk-m { font-size: 11px; color: var(--muted, #9ca3af); white-space: nowrap; }
+.dk-m { font-variant-numeric: tabular-nums; }
+.dok-gesperrt { color: var(--muted, #9ca3af); text-decoration: line-through; }
 
 /* BAUSTEINE — Leerzustand. Er zeigt das ZIEL, nicht die Luecke: links die zwei Wege als
    Schritte, rechts zwei Beispielkarten in derselben Form wie die echten.

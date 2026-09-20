@@ -13,6 +13,7 @@
  * ist deshalb eine Aussage darüber, was zuerst gebraucht wird — und keine Dateiliste.
  */
 import { useEffect, useState } from "react";
+import { useSprache } from "@/lib/i18n";
 
 type Datei = {
   archiv: string; pfad: string; name: string; endung: string;
@@ -42,6 +43,7 @@ function groesse(b: number): string {
 }
 
 export function Dokumente({ leadId }: { leadId: string }) {
+  const { t } = useSprache();
   const [dateien, setDateien] = useState<Datei[] | null>(null);
   const [grund, setGrund] = useState<string | null>(null);
 
@@ -55,12 +57,12 @@ export function Dokumente({ leadId }: { leadId: string }) {
     return () => { abbruch = true; };
   }, [leadId]);
 
-  if (dateien === null) return <p className="dok-laedt">Unterlagen werden gelesen …</p>;
+  if (dateien === null) return <p className="dok-laedt">{t("Unterlagen werden gelesen …")}</p>;
 
   if (!dateien.length) {
     return (
       <div className="dok-leer">
-        <b>Keine Unterlagen abgelegt.</b>{" "}
+        <b>{t("Keine Unterlagen abgelegt.")}</b>{" "}
         {/* Der Grund gehoert dazu: „keine" kann heissen „noch nicht geholt", „Portal gibt
             nichts heraus" oder „hier gibt es keine Dateien". Ohne Unterscheidung sucht
             man an der falschen Stelle.
@@ -71,7 +73,7 @@ export function Dokumente({ leadId }: { leadId: string }) {
             Grund aus `lead_dokumente.py` lautete woertlich „keine Unterlagen abgelegt",
             also derselbe Satz noch einmal. Ein Grund, der den Zustand wiederholt, ist
             keiner. */}
-        <span>{grund || "Für diese Vergabe liegt bei uns kein Archiv."}</span>
+        <span>{grund || t("Für diese Vergabe liegt bei uns kein Archiv.")}</span>
       </div>
     );
   }
@@ -84,46 +86,74 @@ export function Dokumente({ leadId }: { leadId: string }) {
   }
   const gesamt = dateien.reduce((s, d) => s + d.bytes, 0);
 
-  return (
-    <div className="dok-block">
-      <p className="dok-kopf">
-        <b>{dateien.length}</b> Datei{dateien.length === 1 ? "" : "en"} · {groesse(gesamt)}
-        <span className="dok-hinweis">Original aus dem Vergabeportal. Ungefiltert.</span>
-      </p>
+  /* ⚠ ZUGEKLAPPT, NICHT WEG. Sven am 2026-09-20: „den dokumenten index muessen wir anders
+     machen, der nimmt im zweifel super viel platz". Gemessen ueber 293 Vorgaenge mit
+     abgelegten Unterlagen: Median 19 Dateien, p90 35, Maximum 99 — als offene Liste 911 px,
+     also der ganze erste Bildschirm, bevor die Auswertung anfaengt.
 
-      {RANG.map((r) => {
-        const liste = nachGruppe.get(r.name);
-        if (!liste?.length) return null;
-        return (
-          <section key={r.name} className="dok-gruppe">
-            <h4>{r.name}<span>{liste.length}</span></h4>
-            <ul>
+     Die Kopfzeile traegt deshalb die Gruppen samt Anzahl. Wer wissen will, OB ein
+     Leistungsverzeichnis dabei ist, sieht es ohne zu klicken; wer die Datei braucht, klappt
+     auf. Das war der Grund, warum die Liste urspruenglich VOR der Analyse stand, und der
+     bleibt gueltig. */
+  return (
+    <details className="dk">
+      <summary>
+        {/* Der Pfeil ist die Ansage: hier geht etwas auf. Ohne ihn liest sich die Zeile
+            wie eine Ueberschrift. */}
+        <span className="dk-pfeil" aria-hidden="true">›</span>
+        <b>{dateien.length === 1 ? t("1 Datei") : t("{n} Dateien", { n: dateien.length })}</b>
+        <span className="dk-ges">· {groesse(gesamt)}</span>
+        <span className="dk-chips">
+          {RANG.map((r) => nachGruppe.get(r.name)?.length
+            ? <span key={r.name} className="dk-g">{t(r.name)}<b>{nachGruppe.get(r.name)!.length}</b></span>
+            : null)}
+        </span>
+        {/* ⚠ „ungefiltert" ist kein Beiwerk: hier greift KEINE PII-Schwaerzung, anders als
+            beim extrahierten Text. Wer die Datei oeffnet, muss wissen, dass es das Original
+            ist. Deshalb steht der Satz in der IMMER sichtbaren Kopfzeile, nicht im Inneren. */}
+        <span className="dk-roh">{t("Original, ungefiltert")}</span>
+        <span className="dk-auf">{t("alle zeigen")}</span>
+      </summary>
+      <div className="dk-body">
+        {RANG.map((r) => {
+          const liste = nachGruppe.get(r.name);
+          if (!liste?.length) return null;
+          return (
+            <section key={r.name}>
+              <div className="dk-h">{t(r.name)}<span>{liste.length}</span></div>
               {liste.sort((a, b) => a.name.localeCompare(b.name, "de")).map((d) => {
                 const url = `/api/lead/datei?lead=${encodeURIComponent(leadId)}`
                           + `&datei=${encodeURIComponent(d.pfad)}`;
+                /* ⚠ DER DATEINAME ZUERST, DER ORDNER DAHINTER. Gemessen an 3.160 Dateien
+                   tragen 74 % der Eintraege einen Ordnerpfad vor dem Namen; der Eintrag ist
+                   damit im Median 58 statt 39 Zeichen lang, und in einer Liste steht
+                   derselbe Pfad zehnmal untereinander. Der Pfad bleibt sichtbar, er sagt
+                   etwas (etwa „vom_unternehmen_auszufuellende_dokumente") — aber leise. */
+                const teile = String(d.name).replace(/\\/g, "/").split("/");
+                const datei = teile.pop() || d.name;
+                const ordner = teile.join("/");
                 return (
-                  <li key={d.pfad + d.archiv}>
+                  <div key={d.pfad + d.archiv} className="dk-z">
                     {d.gesperrt ? (
                       // Ausfuehrbares wird gar nicht erst verlinkt — nicht als Download,
                       // nicht als Ansicht. Sichtbar bleibt es trotzdem: markieren statt
                       // filtern, sonst wundert sich jemand ueber die fehlende Datei.
-                      <span className="dok-gesperrt" title="Dateityp wird nicht ausgeliefert">
-                        {d.name}
-                      </span>
+                      <span className="dk-n dok-gesperrt" title={t("Dateityp wird nicht ausgeliefert")}>{datei}</span>
                     ) : (
-                      <a href={url} target="_blank" rel="noopener noreferrer">{d.name}</a>
+                      <a className="dk-n" href={url} target="_blank" rel="noopener noreferrer">{datei}</a>
                     )}
-                    <span className="dok-meta">
+                    <span className="dk-o">{ordner}</span>
+                    <span className="dk-m">
                       {d.fehler ? d.fehler : `${d.endung.replace(".", "") || "?"} · ${groesse(d.bytes)}`}
                     </span>
-                  </li>
+                  </div>
                 );
               })}
-            </ul>
-          </section>
-        );
-      })}
-    </div>
+            </section>
+          );
+        })}
+      </div>
+    </details>
   );
 }
 

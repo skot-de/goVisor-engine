@@ -1841,6 +1841,32 @@ function renderFensterBlock(a, l){
   </div>`;
 }
 
+/* Ein Zitat aus einem Dokument lesbar machen.
+ *
+ * ⚠ DAS ZITAT IST EIN AUSSCHNITT und beginnt oft mitten im Wort („che, Vertragsstrafe").
+ * Auf Wortgrenzen beschneiden und Auslassungspunkte setzen: es bleibt ein Fragment, sieht
+ * aber nicht nach Fehler aus. Gemessen am 2026-09-20 enden **32 % der Zitate nicht auf
+ * einem Satzzeichen**, brechen also mitten im Satz ab.
+ *
+ * ⚠ HINTEN NICHTS WEGNEHMEN. Die erste Fassung schnitt das letzte Wort ab, wenn das Zitat
+ * nicht auf einem Satzzeichen endete — und machte aus „Bindefrist: 30.10.2026" ein
+ * „Bindefrist: …". Ausgerechnet die Zahl, wegen der man hinschaut.
+ *
+ * ⚠ NICHT angefasst wird die Trennung aus dem PDF („erfor- derlich"). Sie sieht schlechter
+ * aus, aber „Bau- und Betriebskosten" ist dieselbe Zeichenfolge — wer sie zusammenzieht,
+ * zerstoert echte Bindestriche. Lieber sichtbar unschoen als still falsch.
+ *
+ * ⚠ STAND BIS ZUM 2026-09-20 LOKAL im Anforderungs-Abschnitt. Die Checkliste zeigt jetzt
+ * dieselben Zitate als Zeile und braucht dieselbe Regel; zwei Fassungen waeren beim
+ * naechsten Anfassen auseinandergelaufen.
+ */
+function zitat(roh){
+  let z = String(roh).trim();
+  if (!/^[A-ZÄÖÜ0-9„"(]/.test(z)) z = '… ' + z.replace(/^\S+\s+/, '');
+  if (z.length >= 40 && !/[.!?»"]$/.test(z)) z += ' …';
+  return z;
+}
+
 function renderChecklistBlock(a, l){
   const items = (a.checklist||[]).map((it,i)=>({...it, _i:i}));
   /* AKTIVIERUNG A: welche erwarteten Unterlagen fehlen, und was dagegen zu tun ist.
@@ -1884,14 +1910,37 @@ function renderChecklistBlock(a, l){
       ? `<div class="quote"><div class="lbl"><span>${it.parser?'Struktur ausgelesen':'Aus den Unterlagen'}</span>${_markBadge(it.marking)}</div><q>${esc(it.quote)}</q><div class="src">${esc(it.source_file||'')}${it.source_page?(' · S. '+esc(String(it.source_page))):''}${it.parser?tk(" · Parser, kein LLM"):''}</div></div>`
       : `<div class="quote"><div class="lbl"><span>${it.parser?'Struktur ausgelesen':'Aus den Unterlagen'}</span>${_markBadge(it.marking)}</div><q>${esc(it.label||'')}${val?(' — '+esc(String(it.value))+(it.unit?' '+esc(String(it.unit)):'')):''}</q>${it.source_file?`<div class="src">${esc(it.source_file)}${it.parser?tk(" · Parser, kein LLM"):''}</div>`:''}</div>`;
     const kombi = JSON.stringify({theme:it.theme, label:it.label, quote:it.quote||'', i:it._i});
+    /* ⚠ DIE AUSSAGE IST DAS ZITAT, NICHT DIE ART. Bis zum 2026-09-20 stand die Art fett in
+       der Kopfzeile („Technische Mindestanforderung") und das Zitat klein darunter. Gemessen
+       ueber 392 Analysen tragen **87 % der Pruefpunkte eine Ueberschrift, die in derselben
+       Liste mehrfach vorkommt** — 38 mal „Technische Mindestanforderung" untereinander. Wer
+       etwas sucht, musste jedes Zitat lesen, weil die Ueberschriften nichts unterschieden.
+       Das Zitat dagegen ist kurz (Median 89 Zeichen) und sagt genau eines:
+       „Plasmaleistung mind. 250 W".
+
+       Sven am 2026-09-20: „die ist total unuebersichtlich, aber die wichtigste seite die wir
+       haben". Gemessen im Median-Fall: 58 Pruefpunkte, 239 Knoepfe, 58 Textfelder, 19.837 px
+       ganz aufgeklappt — 22 Bildschirme. */
+    const satz = zitat(it.quote || it.label || it.req_type || '');
+    /* ⚠ DER WERT NUR, WENN ER EINER IST. Gemessen ueber 14.739 Pruefpunkte mit `value`:
+       59 % sind laenger als 18 Zeichen, also Text und kein Wert („Unbedenklichkeits-
+       bescheinigung der Berufsgenossenschaft"), und 52 % stehen woertlich schon im Zitat.
+       Beides nebeneinander zu zeigen war eine Doppelung, die wie zwei Angaben aussah. */
+    /* ⚠ `_zeig` ist IMMER eine Zeichenkette — `String(null)` ergibt „null", und das ist
+       wahr. Genau so stand am 2026-09-20 in mehreren Zeilen ein fettes „null" am Ende.
+       Geprueft wird deshalb `it.value`, nicht die formatierte Fassung. */
+    const wert = (it.value != null && it.value !== '' && String(_zeig).length <= 18
+                  && !satz.includes(String(_zeig)))
+      ? ` <span class="cl-wert">${esc(_zeig)}${it.unit?(' '+esc(String(it.unit))):esc(schwellenEinheit(it, l))}</span>` : '';
     const block = `<div class="block"><div class="lbl"><span>${tk("Euer Textbaustein")}</span><span class="mark m-v">${tk("aus eurem Profil")}</span></div>
       <textarea class="ta cl-edit" placeholder="${esc(tk("Textbaustein aus eurem Profil einsetzen …"))}"></textarea>
       <div class="blockfoot"><span class="cl-hist"></span><span class="acts">
         <button class="btn btn-q btn-sm" data-clnutzen='${esc(kombi)}'>${tk("Aus Bibliothek")}</button>
         <button class="btn btn-p btn-sm" data-clkombi='${esc(kombi)}'>${tk("Kopieren &amp; speichern")}</button></span></div></div>`;
-    return `<article class="item${isDone?' done':''}" data-clitem="${it._i}">
-      <div class="ih"><button class="dchk" data-clchk="${it._i}">✓</button><b>${esc(it.label||it.req_type)}${val}</b>${vgl}</div>
-      <div class="dsum">${tk("Abgehakt.")}<button class="re" data-clchk="${it._i}">${tk("wieder öffnen")}</button></div>
+    return `<article class="item" data-clitem="${it._i}">
+      <div class="ih"><button class="dchk" data-clchk="${it._i}">✓</button>
+        <button class="cl-satz" data-clopen="${it._i}">${esc(satz)}${wert}${vgl}</button>
+        <span class="cl-art">${esc(it.label||it.req_type||'')}</span></div>
       <div class="ibody">${q}${block}</div></article>`;
   };
 
@@ -1924,11 +1973,31 @@ function renderChecklistBlock(a, l){
   const portal = (l.unterlagen&&l.unterlagen.url) ? `<a href="${esc(l.unterlagen.url)}" target="_blank" rel="noopener" class="link">${tk("Zum Vergabeportal ↗")}</a>` : '';
   const chead = `<div class="chead">${renderUnterlagenstand(l)}<div class="r1"><span class="stand">Stand der Unterlagen: ${l.lbFiles||1} Datei${(l.lbFiles||1)===1?'':'en'}</span>${portal}</div>
     ${verlaesslichkeit(a)}
-    <div class="disc">Bitte regelmäßig prüfen, ob neue Unterlagen vorliegen. LLM-gestützte Analyse. Kann Fehler enthalten. Jede Angabe ist mit Fundstelle im Originaldokument belegt${a.rejected_items>0&&!verlaesslichkeit(a)?`; ${a.rejected_items} unbelegte Aussagen wurden verworfen`:''}; maßgeblich bleiben die Vergabeunterlagen.</div></div>`;
+    ${(()=>{
+      /* ⚠ DIE WARNUNG BLEIBT SICHTBAR, DAS KLEINGEDRUCKTE NICHT. Der Haftungsabsatz stand
+         als 29 Woerter ueber jeder Checkliste; mit Kopf und Inhaltsverzeichnis waren es
+         473 px und 74 Woerter, bevor der erste Pruefpunkt kam. Sven am 2026-09-20: „dann
+         ist aber seeeehr viel text bis man zum ersten richtigen textbaustein kommt."
+
+         Gekuerzt wird NICHT die Aussage: der Satz, auf den es ankommt („LLM-gestuetzte
+         Analyse, kann Fehler enthalten"), steht weiter offen da. Weg klappt nur, was ihn
+         erlaeutert.
+
+         ⚠ „1 unbelegte Aussagen" stand hier im Plural, egal wie viele es waren. */
+      const verw = a.rejected_items > 0 && !verlaesslichkeit(a)
+        ? (a.rejected_items === 1
+            ? tk("1 unbelegte Aussage wurde verworfen.")
+            : tk("{n} unbelegte Aussagen wurden verworfen.", {n: a.rejected_items}))
+        : '';
+      return `<details class="disc"><summary>${tk("LLM-gestützte Analyse, kann Fehler enthalten.")}<span class="disc-auf">${tk("wie wir das absichern")}</span></summary>
+        <p>${tk("Jede Angabe ist mit Fundstelle im Originaldokument belegt.")} ${verw} ${tk("Maßgeblich bleiben die Vergabeunterlagen; bitte regelmäßig prüfen, ob neue vorliegen.")}</p></details>`;
+    })()}</div>`;
   const toc = `<div class="toc"><div class="th"><b>${tk("Eure Checkliste")}</b><span class="pr"><span class="cl-doneN">${dn}</span> von ${tot} erledigt</span></div><div class="chips">${chips}<button class="tchip all" data-clcollapse>${tk("Alle zuklappen")}</button></div><div class="tprog"><i class="cl-tprog" style="width:${tot?Math.round(dn/tot*100):0}%"></i></div></div>`;
 
   // a2 Erstnutzer: leere Bibliothek → die Textbausteine sind noch generische Vorlagen (§9.1).
-  const firstday = !_clHasBlocks() ? `<div class="cl-firstday">${tk("Eure Bausteinbibliothek ist noch leer, die Textvorschläge unten sind generische Vorlagen.")} <a href="/bausteine" class="link">${tk("Bibliothek füllen →")}</a> ${tk("Dann setzt goVisor eure echten Referenzen und Zertifikate ein statt Platzhalter.")}</div>` : '';
+  /* ⚠ EINE ZEILE, NICHT DREI. Der Hinweis erklaerte in 25 Woertern, was ein Klick zeigt.
+     Was er sagen muss: die Vorschlaege sind noch Vorlagen, und wo man das aendert. */
+  const firstday = !_clHasBlocks() ? `<p class="cl-firstday">${tk("Die Textvorschläge sind noch generische Vorlagen.")} <a href="/bausteine" class="link">${tk("Bibliothek füllen →")}</a></p>` : '';
   return `<div class="va-checklist" data-clroot="${l.id}">${chead}${firstday}${fensterHtml}${profilHtml}${umfangHtml}${toc}${groupsHtml}${offen}${weitere}</div>`;
 }
 
@@ -2071,17 +2140,6 @@ function renderDocs(l){
        NICHT angefasst wird die Trennung aus dem PDF („erfor- derlich"). Sie sieht schlechter
        aus, aber „Bau- und Betriebskosten" ist dieselbe Zeichenfolge — wer sie zusammenzieht,
        zerstoert echte Bindestriche. Lieber sichtbar unschoen als still falsch. */
-    const zitat = (roh) => {
-      let z = String(roh).trim();
-      // Vorn das angebrochene Wort wegnehmen: „che, Vertragsstrafe" ist kein Satzanfang.
-      if (!/^[A-ZÄÖÜ0-9„"(]/.test(z)) z = '… ' + z.replace(/^\S+\s+/, '');
-      /* ⚠ HINTEN NICHTS WEGNEHMEN. Die erste Fassung schnitt das letzte Wort ab, wenn das
-         Zitat nicht auf einem Satzzeichen endete — und machte aus „Bindefrist: 30.10.2026"
-         ein „Bindefrist: …". Ausgerechnet die Zahl, wegen der man hinschaut.
-         Kurze Zitate sind meist vollstaendig und bekommen gar nichts. */
-      if (z.length >= 40 && !/[.!?»"]$/.test(z)) z += ' …';
-      return z;
-    };
     const mitBeleg = (schluessel, wert) => {
       const z = beleg[schluessel];
       return z ? `<span class="hat-beleg" title="${esc(zitat(z))}">${esc(wert)}</span>` : esc(wert);
