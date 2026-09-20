@@ -1934,6 +1934,7 @@ function renderChecklistBlock(a, l){
       ? ` <span class="cl-wert">${esc(_zeig)}${it.unit?(' '+esc(String(it.unit))):esc(schwellenEinheit(it, l))}</span>` : '';
     const block = `<div class="block"><div class="lbl"><span>${tk("Euer Textbaustein")}</span><span class="mark m-v">${tk("aus eurem Profil")}</span></div>
       <textarea class="ta cl-edit" placeholder="${esc(tk("Textbaustein aus eurem Profil einsetzen …"))}"></textarea>
+      ${_clHasBlocks() ? '' : `<p class="cl-vorlage">${tk("Noch eine generische Vorlage.")} <a href="/bausteine" class="link">${tk("Bibliothek füllen →")}</a></p>`}
       <div class="blockfoot"><span class="cl-hist"></span><span class="acts">
         <button class="btn btn-q btn-sm" data-clnutzen='${esc(kombi)}'>${tk("Aus Bibliothek")}</button>
         <button class="btn btn-p btn-sm" data-clkombi='${esc(kombi)}'>${tk("Kopieren &amp; speichern")}</button></span></div></div>`;
@@ -1965,25 +1966,29 @@ function renderChecklistBlock(a, l){
   }</div></details>` : '';
   const weitere = other.length ? `<details class="grp" id="clg-weit"><summary><span class="caret">›</span>${tk("Weitere Dokumente")}<span class="cnt">${other.length}</span></summary><div class="gbody"><div class="flist" style="margin-bottom:11px">${other.slice(0,20).map(f=>`<div class="f"><span class="dot">·</span> ${esc(f)}</div>`).join('')}</div></div></details>` : '';
 
-  // TOC-Chips je nicht-leerer Gruppe
-  const chips = _CL_GROUPS.map(([id,title,set])=>{ const n=items.filter(it=>set.has(it.req_type)).length; return n?`<button class="tchip" data-cljump="clg-${id}">${esc(title)} <span class="n">${n}</span></button>`:''; }).join('')
-    + (fehlend.length?`<button class="tchip" data-cljump="clg-offen">${tk("Offen")}<span class="n">${fehlend.length}</span></button>`:'')
-    + (other.length?`<button class="tchip" data-cljump="clg-weit">${tk("Weitere")}<span class="n">${other.length}</span></button>`:'');
+  /* ⚠ DIE SPRUNGMARKEN SIND WEG, und das ist eine Folge des Umbaus, keine Sparmassnahme.
+     Sie waren das Inhaltsverzeichnis eines Dokuments, das ganz aufgeklappt 19.837 px hoch
+     war — 22 Bildschirme. Seit ein Pruefpunkt eine Zeile ist, sind es 3.340 px, und die
+     fuenf Gruppenkoepfe stehen selbst als Verzeichnis da, mit derselben Zahl daneben.
+     Zwei Verzeichnisse uebereinander, das obere 103 px fuer 19 Woerter.
+
+     ⚠ Die Zahl der offenen Luecken steht weiterhin an der Gruppe „Offen" selbst
+     (`<span class="cnt">`), s. `test_aktivierung_a.py::test_die_sprungmarke_zaehlt_alle`. */
 
   const portal = (l.unterlagen&&l.unterlagen.url) ? `<a href="${esc(l.unterlagen.url)}" target="_blank" rel="noopener" class="link">${tk("Zum Vergabeportal ↗")}</a>` : '';
-  const chead = `<div class="chead">${renderUnterlagenstand(l)}<div class="r1"><span class="stand">Stand der Unterlagen: ${l.lbFiles||1} Datei${(l.lbFiles||1)===1?'':'en'}</span>${portal}</div>
-    ${verlaesslichkeit(a)}
+  /* ⚠ EINE ZEILE, KEIN KASTEN. Hier standen drei Kaesten uebereinander (Herkunft,
+     Erstnutzer-Hinweis, Inhaltsverzeichnis), bevor der erste Pruefpunkt kam. Was dieser
+     Block sagt, ist Herkunft: woher die Auswertung stammt und wie weit man ihr trauen
+     darf. Das ist eine Fusszeile ihrem Wesen nach, und sie bekommt hier eine Zeile.
+
+     ⚠ ZWEI DATEIZAHLEN AUF EINER SEITE. „Stand der Unterlagen: 5 Dateien" meint die
+     AUSGEWERTETEN; der Index darueber zaehlt die VORHANDENEN (im gemessenen Fall 22).
+     Zwei verschieden grosse Zahlen mit demselben Wort, 200 px auseinander. Deshalb steht
+     hier jetzt „5 Dateien ausgewertet" — was die Zahl wirklich meint. */
+  const chead = `<div class="chead">${renderUnterlagenstand(l)}
+    <span class="stand">${(l.lbFiles||1) === 1
+      ? tk("1 Datei ausgewertet") : tk("{n} Dateien ausgewertet", {n: l.lbFiles||1})}</span>
     ${(()=>{
-      /* ⚠ DIE WARNUNG BLEIBT SICHTBAR, DAS KLEINGEDRUCKTE NICHT. Der Haftungsabsatz stand
-         als 29 Woerter ueber jeder Checkliste; mit Kopf und Inhaltsverzeichnis waren es
-         473 px und 74 Woerter, bevor der erste Pruefpunkt kam. Sven am 2026-09-20: „dann
-         ist aber seeeehr viel text bis man zum ersten richtigen textbaustein kommt."
-
-         Gekuerzt wird NICHT die Aussage: der Satz, auf den es ankommt („LLM-gestuetzte
-         Analyse, kann Fehler enthalten"), steht weiter offen da. Weg klappt nur, was ihn
-         erlaeutert.
-
-         ⚠ „1 unbelegte Aussagen" stand hier im Plural, egal wie viele es waren. */
       const verw = a.rejected_items > 0 && !verlaesslichkeit(a)
         ? (a.rejected_items === 1
             ? tk("1 unbelegte Aussage wurde verworfen.")
@@ -1991,13 +1996,25 @@ function renderChecklistBlock(a, l){
         : '';
       return `<details class="disc"><summary>${tk("LLM-gestützte Analyse, kann Fehler enthalten.")}<span class="disc-auf">${tk("wie wir das absichern")}</span></summary>
         <p>${tk("Jede Angabe ist mit Fundstelle im Originaldokument belegt.")} ${verw} ${tk("Maßgeblich bleiben die Vergabeunterlagen; bitte regelmäßig prüfen, ob neue vorliegen.")}</p></details>`;
-    })()}</div>`;
-  const toc = `<div class="toc"><div class="th"><b>${tk("Eure Checkliste")}</b><span class="pr"><span class="cl-doneN">${dn}</span> von ${tot} erledigt</span></div><div class="chips">${chips}<button class="tchip all" data-clcollapse>${tk("Alle zuklappen")}</button></div><div class="tprog"><i class="cl-tprog" style="width:${tot?Math.round(dn/tot*100):0}%"></i></div></div>`;
+    })()}
+    ${verlaesslichkeit(a)}${portal}</div>`;
+  /* ⚠ DIE UEBERSCHRIFT „Eure Checkliste" IST WEGGEFALLEN, und zwar absichtlich: darunter
+     standen dieselben Gruppen noch einmal als Marken, und die sagen mehr („K.-o.-Kriterien
+     13"). Eine Ueberschrift, die nur benennt, was direkt darunter steht, kostet eine Zeile
+     und traegt nichts. Der Fortschritt rueckt in die Markenzeile. */
+  /* Eine schmale Zeile statt eines Kastens: Fortschritt links, Zuklappen rechts.
+     ⚠ `cl-doneN` und `cl-tprog` MUESSEN bleiben — `clPersist` in der Shell schreibt beim
+     Abhaken hinein. Ohne sie faellt die Rueckmeldung stumm aus (die Shell prueft auf
+     `null` und tut dann nichts). */
+  const toc = `<div class="toc"><span class="pr"><span class="cl-doneN">${dn}</span> ${tk("von")} ${tot} ${tk("erledigt")}</span>
+    <span class="tprog"><i class="cl-tprog" style="width:${tot?Math.round(dn/tot*100):0}%"></i></span>
+    <button class="tchip all" data-clcollapse>${tk("Alle zuklappen")}</button></div>`;
 
   // a2 Erstnutzer: leere Bibliothek → die Textbausteine sind noch generische Vorlagen (§9.1).
-  /* ⚠ EINE ZEILE, NICHT DREI. Der Hinweis erklaerte in 25 Woertern, was ein Klick zeigt.
-     Was er sagen muss: die Vorschlaege sind noch Vorlagen, und wo man das aendert. */
-  const firstday = !_clHasBlocks() ? `<p class="cl-firstday">${tk("Die Textvorschläge sind noch generische Vorlagen.")} <a href="/bausteine" class="link">${tk("Bibliothek füllen →")}</a></p>` : '';
+  /* ⚠ DER HINWEIS IST NACH UNTEN GEWANDERT, nicht weg. Er stand als eigene Zeile im
+     Vorspann und erklaerte etwas, das man erst sieht, wenn man einen Pruefpunkt aufklappt:
+     dass der Textvorschlag noch eine Vorlage ist. Jetzt steht er AN der Vorlage. */
+  const firstday = '';
   return `<div class="va-checklist" data-clroot="${l.id}">${chead}${firstday}${fensterHtml}${profilHtml}${umfangHtml}${toc}${groupsHtml}${offen}${weitere}</div>`;
 }
 
@@ -2037,8 +2054,17 @@ function renderDocs(l){
       ? `<p class="va-zweifel">${tk("Achtung: der Auftraggeber dieses Leads kommt in den hochgeladenen Unterlagen nicht vor. Möglicherweise gehören sie zu einem anderen Verfahren. Prüft die Angaben, bevor ihr euch darauf verlasst.")}</p>` : '';
     const vahead = `<div class="va-head"><span class="va-amp ${cls}">${icon} ${label}</span><span class="cov">${tk("Vergabe-Analyse · aus den Unterlagen")}</span></div>
       ${zweifel}${quelle}
-      ${a.ampel_grund?`<p class="va-grund">${esc(a.ampel_grund)}</p>`:''}
-      ${a.zusammenfassung?`<p class="va-sum">${esc(a.zusammenfassung)}</p>`:''}`;
+      ${a.ampel_grund?`<p class="va-grund" data-grundauf="1" title="${esc(tk("Ganzen Text zeigen"))}">${esc(a.ampel_grund)}</p>`:''}
+      ${a.zusammenfassung?`<details class="va-worum"><summary>${tk("Worum es geht")}</summary><p class="va-sum">${esc(a.zusammenfassung)}</p></details>`:''}`;
+      /* ⚠ ZWEI ABSAETZE PROSA STANDEN HIER UEBEREINANDER, und beide gibt es bei 100 % der
+         Auswertungen: der Ampel-Grund (Median 163 Zeichen) und die Zusammenfassung (260).
+         Gemessen am Median-Fall waren es 533 px und 110 Woerter, bevor der erste
+         Pruefpunkt kam. Sven am 2026-09-20: „mir ist das zu viel text wenn man auf die
+         seite kommt."
+
+         Der Ampel-Grund BLEIBT offen: er sagt, warum die Ampel steht, wie sie steht, und
+         das ist die eine Aussage, wegen der man herkommt. Die Zusammenfassung beschreibt,
+         WAS beschafft wird — das steht schon im Titel und in der Leistungsbeschreibung. */
     // Reiche Checkliste (§7, Prototyp-Design) wenn vorhanden — sie trägt Kopf/Haftung/Erfolgshonorar selbst.
     if(a.checklist && ('checklist' in a)) {
       /* ⚠ AUCH HIER EIN WEG ZUM HOCHLADEN. Gemessen ueber 6.001 Auswertungen haben

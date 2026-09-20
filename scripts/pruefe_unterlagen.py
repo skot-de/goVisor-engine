@@ -46,6 +46,16 @@ MAX_HOEHE_GRUPPEN_OFFEN = 4_500
 MAX_KNOEPFE_JE_PUNKT = 2
 # Sichtbare Textfelder, solange kein Punkt aufgeklappt ist. 58 waren es vorher.
 MAX_TEXTFELDER_ZU = 0
+# ⚠ DER VORSPANN. Sven am 2026-09-20: „mir ist das zu viel text wenn man auf die seite
+# kommt." Gemessen waren es 533 px und 110 Woerter bis zum ersten Pruefpunkt — zwei
+# Absaetze Prosa (beide bei 100 % der Auswertungen vorhanden), drei Kaesten uebereinander.
+# Danach: 308 px und 59 Woerter. Die Woerter zaehlen mit, weil Pixel sich durch kleinere
+# Schrift schoenrechnen lassen.
+MAX_VORSPANN_PX = 370
+MAX_VORSPANN_WORTE = 70
+# Der Ampel-Grund BLEIBT — er sagt, warum die Ampel so steht, und das ist die eine Aussage,
+# wegen der man herkommt. Gekuerzt wird nur die Ansicht: zwei Zeilen, der Rest auf Klick.
+MAX_GRUND_ZEILEN = 2
 
 
 def _median_fall() -> pathlib.Path | None:
@@ -79,6 +89,16 @@ def _rendern(analyse: pathlib.Path, ziel: pathlib.Path) -> bool:
             _schnitt(src, "function zitat(roh){", "\nfunction renderChecklistBlock"),
             _schnitt(src, "const _CL_GROUPS = [", "function _clDone"),
             _schnitt(src, "function renderChecklistBlock(a, l){", "\n// Download-Knopf"),
+            # ⚠ DER AMPEL-KOPF GEHOERT DAZU. Er steht in `renderDocs` und traegt die zwei
+            # Absaetze Prosa, um die es Sven ging („mir ist das zu viel text wenn man auf
+            # die seite kommt"). Eine Messung, die nur die Checkliste kennt, misst den
+            # Vorspann nicht — und genau der war der Befund.
+            # ⚠ Der Schnitt endet MITTEN in der Funktion: im Original laeuft sie hinter
+            # dem Checklisten-Zweig weiter in den Alt-Format-Fall. Deshalb wird sie hier
+            # geschlossen — ohne das meldet node nur „Unexpected token 'export'".
+            _schnitt(src, "const head = l.lbAnalyse ? (()=>{", "    // Legacy-Fallback")
+              .replace("const head = l.lbAnalyse ? (()=>{", "function kopf(l){", 1)
+              + "\n  return '';\n}\n",
         ))
     except ValueError:
         return False
@@ -91,7 +111,8 @@ def _rendern(analyse: pathlib.Path, ziel: pathlib.Path) -> bool:
   const renderFensterBlock = () => ''; const renderProfilBlock = () => '';
   const renderUmfangBlock = () => ''; const renderUnterlagenstand = () => '';
   const verlaesslichkeit = () => '';
-""" + teile + "\n  export { renderChecklistBlock };\n"
+  const dropFeld = () => ''; const istOffen = false;
+""" + teile + "\n  export { kopf };\n"
     css = (WURZEL / "web" / "app" / "globals.css").read_text(encoding="utf-8")
     css += "\n" + (WURZEL / "web" / "app" / "explorer.css").read_text(encoding="utf-8")
     with tempfile.TemporaryDirectory() as t:
@@ -100,13 +121,14 @@ def _rendern(analyse: pathlib.Path, ziel: pathlib.Path) -> bool:
         mod.write_text(js, encoding="utf-8")
         treiber.write_text(f"""
 import {{ readFileSync, writeFileSync }} from "node:fs";
-const {{ renderChecklistBlock }} = await import({json.dumps(str(mod))});
+const {{ kopf }} = await import({json.dumps(str(mod))});
 const a = JSON.parse(readFileSync({json.dumps(str(analyse))}, "utf8"));
-const html = renderChecklistBlock(a, {{ id: "x", lbFiles: 5, unterlagen: {{ url: "https://x" }} }});
+const l = {{ id: "x", lbFiles: 5, lbAnalyse: a, unterlagen: {{ url: "https://x" }} }};
+const html = kopf(l);
 writeFileSync({json.dumps(str(ziel))},
   '<meta charset="utf-8"><style>' + {json.dumps(css)}
   + "\\nbody{{margin:0;font-family:system-ui;background:var(--surface)}}</style>"
-  + '<div class="dbody dbody-ov"><section class="sec va-sec">' + html + '</section></div>');
+  + '<div class="dbody dbody-ov">' + html + '</div>');
 """, encoding="utf-8")
         try:
             r = subprocess.run(["node", str(treiber)], capture_output=True, text=True,
@@ -130,11 +152,46 @@ def messen(blatt: pathlib.Path) -> dict | None:
             pg.goto(blatt.as_uri())
             raus = pg.evaluate("""() => {
                 const sicht = s => [...document.querySelectorAll(s)].filter(e => e.offsetParent).length;
+                const erst = document.querySelector('article.item');
+                const kopf = document.querySelector('.va-sec') || document.body;
+                /* ⚠ AM ELEMENT SCHNEIDEN, NICHT AM WORT. Der erste Anlauf trennte den
+                   Vorspann am Text „K.-o.-Kriterien" — der stand aber AUCH in den
+                   Sprungmarken daruber, also mitten im Vorspann. Gezaehlt wurden dann 62
+                   statt 69 Woerter: die Messung log zugunsten des gemessenen Zustands. */
+                /* ⚠ ZWEIMAL DANEBEN, BEVOR ES STIMMTE. Erst schnitt ich am Text
+                   „K.-o.-Kriterien" — der stand auch in den Sprungmarken, also mitten im
+                   Vorspann (gezaehlt: 62 statt 69, die Messung log zu meinen Gunsten).
+                   Dann schnitt ich am Element, per Range — die liest aber auch den TEXT
+                   IN ZUGEKLAPPTEN `<details>` mit (112 statt 69), also log sie in die
+                   andere Richtung. Gezaehlt wird, was ein Mensch SIEHT: `innerText` je
+                   Block, und der laesst zugeklappte Inhalte weg. */
+                const g1 = document.querySelector('details.grp');
+                const bloecke = [];
+                for (const wurzel of [kopf, kopf.querySelector('.va-checklist')]) {
+                    if (!wurzel) continue;
+                    for (const kind of wurzel.children) {
+                        if (kind === g1 || kind.contains(g1)) break;
+                        if (kind.matches('details.grp')) break;
+                        bloecke.push(kind.innerText || '');
+                    }
+                }
+                const vor = bloecke.join(' ');
                 const a = { punkte: document.querySelectorAll('article.item').length,
                             ta_zu: sicht('textarea'),
+                            vorspann: erst ? Math.round(erst.getBoundingClientRect().top) : 0,
+                            vorworte: vor.trim().split(/[ \\n\\t]+/).filter(Boolean).length,
                             h_zu: Math.round(document.body.scrollHeight) };
                 document.querySelectorAll('details.grp').forEach(d => d.open = true);
                 a.knoepfe = sicht('button');
+                /* ⚠ DEN DECKEL DIREKT MESSEN, NICHT UEBER DIE GESAMTHOEHE. Ein
+                   ungekuerzter Ampel-Grund kostet im Medianfall nur EINE Zeile (19 px) —
+                   unter jeder brauchbaren Pixelschwelle. Im schlechtesten Fall (298
+                   Zeichen) sind es drei. Gezaehlt werden deshalb die Zeilen. */
+                const g = document.querySelector('.va-grund');
+                if (g) {
+                    const lh = parseFloat(getComputedStyle(g).lineHeight) || 20;
+                    a.grund_zeilen = Math.round(g.getBoundingClientRect().height / lh);
+                }
                 a.h_offen = Math.round(document.body.scrollHeight);
                 // Ein aufgeklappter Punkt MUSS Fundstelle und Baustein zeigen — sonst ist
                 // die Ruhe damit erkauft, dass die Funktion verschwunden ist.
@@ -187,6 +244,15 @@ def main() -> int:
     if m["ta_zu"] > MAX_TEXTFELDER_ZU:
         befunde.append(f"{m['ta_zu']} Textfelder stehen offen, ohne dass jemand einen Punkt "
                        "aufgeklappt hat")
+    if m.get("grund_zeilen", 0) > MAX_GRUND_ZEILEN:
+        befunde.append(f"der Ampel-Grund steht in {m['grund_zeilen']} Zeilen "
+                       f"(hoechstens {MAX_GRUND_ZEILEN}, der Rest auf Klick)")
+    if m["vorspann"] > MAX_VORSPANN_PX:
+        befunde.append(f"bis zum ersten Pruefpunkt stehen {m['vorspann']} px Vorspann "
+                       f"(hoechstens {MAX_VORSPANN_PX})")
+    if m["vorworte"] > MAX_VORSPANN_WORTE:
+        befunde.append(f"{m['vorworte']} Woerter stehen vor dem ersten Pruefpunkt "
+                       f"(hoechstens {MAX_VORSPANN_WORTE})")
     # ⚠ Die Gegenrichtung: Ruhe darf nicht durch Verlust entstehen.
     if m["ta_auf"] < 1 or m["zitat_auf"] < 1:
         befunde.append("ein aufgeklappter Pruefpunkt zeigt keine Fundstelle oder kein "
@@ -198,7 +264,8 @@ def main() -> int:
         return 1
     if not still:
         print(f"  Unterlagen: {n} Pruefpunkte · {m['h_zu']:,} px beim Oeffnen · "
-              f"{m['h_offen']:,} px mit allen Gruppen · {m['knoepfe']} sichtbare Knoepfe")
+              f"{m['h_offen']:,} px mit allen Gruppen · {m['knoepfe']} sichtbare Knoepfe · "
+              f"Vorspann {m['vorspann']} px / {m['vorworte']} Woerter")
     return 0
 
 

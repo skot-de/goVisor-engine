@@ -100,12 +100,19 @@ def test_keine_sackgasse_mehr():
     assert "data-uploaddocs" in stelle, "die Bitte hat keinen Knopf"
 
 
-def test_die_sprungmarke_zaehlt_alle():
-    """Eine „Offen 1" über drei Lücken wäre schlicht falsch."""
+def test_die_zahl_der_luecken_zaehlt_alle():
+    """Eine „Offen 1" über drei Lücken wäre schlicht falsch.
+
+    ⚠ DIE STELLE HAT SICH AM 2026-09-20 GEAENDERT, DER ANSPRUCH NICHT. Die Zahl stand in
+    einer Sprungmarke über der Liste; die Sprungmarken waren das Inhaltsverzeichnis eines
+    22-Bildschirme-Dokuments und sind mit ihm weggefallen. Die Zahl steht jetzt am
+    Gruppenkopf „Offen" selbst — dort, wo man sie beim Aufklappen prüft.
+    """
     assert "hasMissZ" not in CORE
-    assert 'data-cljump="clg-offen"' in CORE
-    stelle = CORE[CORE.index('data-cljump="clg-offen"') - 120:CORE.index('data-cljump="clg-offen"') + 160]
-    assert "fehlend.length" in stelle
+    assert 'id="clg-offen"' in CORE, "die Gruppe Offen gibt es nicht mehr"
+    i = CORE.index('id="clg-offen"')
+    stelle = CORE[i:i + 220]
+    assert "fehlend.length" in stelle, "die Zahl an der Gruppe zaehlt nicht die Luecken"
 
 
 def test_der_deckel_und_die_ehrliche_meldung_stehen():

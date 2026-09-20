@@ -408,30 +408,45 @@ mark.hit{background:#CFF3E4;box-shadow:0 0 0 2px #CFF3E4}
 .va-amp.va-stop{color:#a5231b;background:#fbe6e4}
 /* Ticket #23 §7 — Checkliste je Lead (Prototyp-Design, an App-Variablen angepasst) */
 .va-checklist{--gt:#eaf6f0;--gt2:#f4faf7;--gd:#12855a;--amber:#a16207;--blue:#2b5f86;margin-top:var(--s3);display:flex;flex-direction:column;gap:0}
-.va-checklist .chead{background:#f8faf9;border:1px solid var(--line);border-radius:9px;padding:11px 14px;margin-bottom:10px}
-.va-checklist .chead .r1{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:baseline}
-.va-checklist .chead .stand{font-family:var(--mono,monospace);font-size:12px;text-transform:none;letter-spacing:normal;color:var(--ink-700)}
-.va-checklist .chead .link{color:var(--gd);text-decoration:none;font-size:12.5px;font-weight:500}
+/* Die Zusammenfassung beschreibt, WAS beschafft wird — nuetzlich, aber nicht der Grund,
+   warum jemand die Seite oeffnet. Sie klappt auf, der Ampel-Grund bleibt offen. */
+/* ⚠ Der Ampel-Grund ist die eine Aussage, wegen der man herkommt — er bleibt. Aber er ist
+   im Median 163 Zeichen lang und im Einzelfall 298: zwei Zeilen zeigen, der Rest auf
+   Klick. Gekuerzt wird die ANSICHT, nicht der Text. */
+.va-grund{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
+  cursor:pointer;margin:0 0 6px}
+.va-grund.auf{-webkit-line-clamp:unset;cursor:auto}
+.va-worum{margin:0 0 10px;font-size:12.5px}
+.va-worum>summary{list-style:none;cursor:pointer;color:var(--gd);font-weight:600;display:inline-flex;gap:5px;align-items:center}
+.va-worum>summary::-webkit-details-marker{display:none}
+.va-worum>summary::after{content:'\203A';transition:transform .18s;display:inline-block}
+.va-worum[open]>summary::after{transform:rotate(90deg)}
+.va-worum .va-sum{margin:7px 0 0}
+/* Herkunftszeile: kein Kasten, keine Flaeche — sie ordnet ein, sie fuehrt nicht. */
+.va-checklist .chead{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin:0 0 8px;font-size:11.5px;color:var(--ink-400)}
+.va-checklist .chead .stand{font-family:var(--mono,monospace);font-size:11.5px;text-transform:none;letter-spacing:normal;color:var(--ink-600)}
+.va-checklist .chead .link{margin-left:auto;color:var(--gd);text-decoration:none;font-size:12px;font-weight:600}
 /* Haftung: eine Zeile offen, der Rest auf Klick. ⚠ Was gekuerzt wird, ist die
    Erlaeuterung — die Warnung selbst steht in der Summary und ist immer sichtbar. */
-.va-checklist .disc{font-size:11.5px;color:var(--ink-400);margin-top:8px;padding-top:8px;border-top:1px solid var(--line);line-height:1.55}
+.va-checklist .disc{font-size:11.5px;color:var(--ink-400);line-height:1.55;min-width:0}
 .va-checklist .disc>summary{list-style:none;cursor:pointer;display:flex;gap:8px;align-items:baseline}
 .va-checklist .disc>summary::-webkit-details-marker{display:none}
 .va-checklist .disc .disc-auf{color:var(--gd);white-space:nowrap}
 .va-checklist .disc[open] .disc-auf{visibility:hidden}
 .va-checklist .disc p{margin:7px 0 0}
 /* ⚠ Kein eigener Kasten mehr: der Hinweis ist eine Fussnote zum Kopf, kein Befund. */
-.va-checklist .cl-firstday{margin:0 0 10px;font-size:12px;color:var(--ink-400)}
+.va-checklist .cl-vorlage{margin:7px 0 0;font-size:11.5px;color:var(--ink-400)}
 .va-checklist .cl-firstday .link{color:var(--gd);text-decoration:none;font-weight:600}
-.va-checklist .toc{border:1px solid var(--line);border-radius:9px;background:var(--surface);padding:10px 14px;margin-bottom:12px}
-.va-checklist .toc .th{display:flex;justify-content:space-between;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:8px}
-.va-checklist .toc .th b{font-size:14px}.va-checklist .toc .th .pr{font-family:var(--mono,monospace);font-size:12px;color:var(--ink-700)}
-.va-checklist .chips{display:flex;gap:7px;flex-wrap:wrap}
+/* Statuszeile, kein Kasten: 103 px fuer 19 Woerter waren der groesste Einzelposten
+   im Vorspann, und die Marken darin wiederholten die Gruppenkoepfe darunter. */
+.va-checklist .toc{display:flex;align-items:center;gap:12px;margin:0 0 10px}
+.va-checklist .toc .pr{font-family:var(--mono,monospace);font-size:11.5px;color:var(--ink-400);white-space:nowrap}
+.va-checklist .chips{display:flex;gap:7px;flex-wrap:wrap;align-items:center}
 .va-checklist .tchip{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);background:var(--surface);border-radius:99px;padding:5px 11px;font-size:12.5px;cursor:pointer;color:var(--ink-900)}
 .va-checklist .tchip:hover{border-color:var(--signal-deep);background:var(--gt2)}
 .va-checklist .tchip .n{font-family:var(--mono,monospace);font-size:11px;color:var(--ink-400)}
 .va-checklist .tchip.all{background:var(--gt);border-color:#cfe8dc;color:var(--gd)}
-.va-checklist .tprog{height:3px;background:var(--line);border-radius:99px;overflow:hidden;margin-top:9px}
+.va-checklist .tprog{flex:1;height:3px;background:var(--line);border-radius:99px;overflow:hidden}
 .va-checklist .tprog i{display:block;height:100%;background:var(--signal-deep);border-radius:99px;transition:width .25s}
 .va-checklist details.grp{border:1px solid var(--line);border-radius:9px;background:var(--surface);margin-bottom:11px;overflow:hidden}
 .va-checklist details.grp>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:11px;padding:12px 16px;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--ink-700)}

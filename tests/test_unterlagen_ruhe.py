@@ -104,3 +104,30 @@ def test_der_wert_steht_nur_da_wenn_er_einer_ist():
     assert "it.value != null" in b, "die Pruefung auf den leeren Wert fehlt wieder"
     assert "length <= 18" in b, "auch langer Text landet wieder in der Zeile"
     assert "satz.includes" in b, "der Wert wird wieder doppelt gezeigt"
+
+
+def test_die_sonde_sieht_die_zusammenfassung_wieder_offen():
+    """Gegenprobe zum zweiten Absatz Prosa. ⚠ Beide Absaetze gibt es bei 100 % der
+    Auswertungen; der Ampel-Grund bleibt offen, die Zusammenfassung klappt."""
+    r = _mit_mutation(
+        CORE,
+        '<details class="va-worum"><summary>${tk("Worum es geht")}</summary><p class="va-sum">${esc(a.zusammenfassung)}</p></details>',
+        '<p class="va-sum">${esc(a.zusammenfassung)}</p>')
+    if r.returncode == 2:
+        return
+    assert r.returncode == 1, "die Sonde bleibt gruen, obwohl die Zusammenfassung wieder offen steht"
+    assert "Woerter" in r.stdout or "Vorspann" in r.stdout, r.stdout
+
+
+def test_die_sonde_sieht_einen_ungekuerzten_ampelgrund():
+    """Der Grund ist im Median 163 Zeichen lang, im Einzelfall 298. Zwei Zeilen zeigen."""
+    r = _mit_mutation(
+        CSS,
+        ".va-grund{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;",
+        ".va-grund{display:block;overflow:visible;")
+    if r.returncode == 2:
+        return
+    assert r.returncode == 1, "die Sonde bleibt gruen, obwohl der Ampel-Grund ungekuerzt steht"
+    # ⚠ Der Deckel kostet im Medianfall nur EINE Zeile (19 px) und liegt damit unter jeder
+    # brauchbaren Pixelschwelle. Gemeldet wird deshalb die Zeilenzahl, nicht der Vorspann.
+    assert "Zeilen" in r.stdout, r.stdout

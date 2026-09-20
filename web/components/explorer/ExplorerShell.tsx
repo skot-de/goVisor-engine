@@ -1411,6 +1411,8 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
         el.closest<HTMLElement>(".item")?.classList.toggle("auf");
         break;
       }
+      // Der Ampel-Grund zeigt zwei Zeilen; ein Klick zeigt den Rest.
+      case "grundauf": { el.classList.toggle("auf"); break; }
       case "clkombi": {
         let blk: { theme?: string; label?: string; quote?: string } = {};
         try { blk = JSON.parse(value); } catch { /* ignore */ }
