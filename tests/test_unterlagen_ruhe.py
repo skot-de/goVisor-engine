@@ -111,7 +111,7 @@ def test_die_sonde_sieht_die_zusammenfassung_wieder_offen():
     Auswertungen; der Ampel-Grund bleibt offen, die Zusammenfassung klappt."""
     r = _mit_mutation(
         CORE,
-        '<details class="va-worum"><summary>${tk("Worum es geht")}</summary><p class="va-sum">${esc(a.zusammenfassung)}</p></details>',
+        '<details class="va-worum"><summary>${tk("Was beschafft wird")}</summary><p class="va-sum">${esc(a.zusammenfassung)}</p></details>',
         '<p class="va-sum">${esc(a.zusammenfassung)}</p>')
     if r.returncode == 2:
         return

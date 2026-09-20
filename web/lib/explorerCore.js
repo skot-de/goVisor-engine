@@ -2071,7 +2071,7 @@ function renderDocs(l){
     const vahead = `<div class="va-head"><span class="va-amp ${cls}">${icon} ${label}</span><span class="cov">${tk("Vergabe-Analyse · aus den Unterlagen")}</span></div>
       ${zweifel}${quelle}
       ${a.ampel_grund?`<p class="va-grund" data-grundauf="1" title="${esc(tk("Ganzen Text zeigen"))}">${esc(a.ampel_grund)}</p>`:''}
-      ${a.zusammenfassung?`<details class="va-worum"><summary>${tk("Worum es geht")}</summary><p class="va-sum">${esc(a.zusammenfassung)}</p></details>`:''}`;
+      ${a.zusammenfassung?`<details class="va-worum"><summary>${tk("Was beschafft wird")}</summary><p class="va-sum">${esc(a.zusammenfassung)}</p></details>`:''}`;
       /* ⚠ ZWEI ABSAETZE PROSA STANDEN HIER UEBEREINANDER, und beide gibt es bei 100 % der
          Auswertungen: der Ampel-Grund (Median 163 Zeichen) und die Zusammenfassung (260).
          Gemessen am Median-Fall waren es 533 px und 110 Woerter, bevor der erste
@@ -2080,7 +2080,12 @@ function renderDocs(l){
 
          Der Ampel-Grund BLEIBT offen: er sagt, warum die Ampel steht, wie sie steht, und
          das ist die eine Aussage, wegen der man herkommt. Die Zusammenfassung beschreibt,
-         WAS beschafft wird — das steht schon im Titel und in der Leistungsbeschreibung. */
+         WAS beschafft wird — das steht schon im Titel und in der Leistungsbeschreibung.
+
+         ⚠ SIE HIESS „Worum es geht" UND WAR DAMIT NICHT VON DER AMPEL-BEGRUENDUNG
+         DARUEBER ZU UNTERSCHEIDEN. Beides klang nach „hier steht, was los ist". Der
+         offene Satz ist eine BEWERTUNG (warum diese Ampel), die Faltung eine
+         BESCHREIBUNG (was beschafft wird). Die Beschriftung sagt das jetzt. */
     // Reiche Checkliste (§7, Prototyp-Design) wenn vorhanden — sie trägt Kopf/Haftung/Erfolgshonorar selbst.
     if(a.checklist && ('checklist' in a)) {
       /* ⚠ AUCH HIER EIN WEG ZUM HOCHLADEN. Gemessen ueber 6.001 Auswertungen haben
