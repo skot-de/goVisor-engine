@@ -722,13 +722,50 @@ function handlungsFrist(l){
   return l.tage != null ? l.tage : (l.endTage != null ? l.endTage : null);
 }
 
+/* Die Unterzeile der Fristzelle sagt, WOHER die Zahl kommt — statt eines Punktes.
+ *
+ * ⚠ Sven am 2026-09-20: „warum ist bei einer frist ein punkt davor?" Genau das ist der
+ * Befund: ein Zeichen, das man erklaeren muss, erklaert nichts. Der Punkt (`.val::before`)
+ * ist in der Tabelle der einzige, der etwas sagt — aber er sagt es nur dem, der schon
+ * weiss, dass es etwas zu lesen gibt. Gemessen ueber 42.563 Leads mit Frist: 85,3 % echt
+ * (kein Punkt), 11,3 % geschaetzt, 2,0 % unsicher, 1,4 % unbekannt.
+ *
+ * Die zweite Zeile der Zelle stand ohnehin auf „bis Schluss" — ein Satz, der bei jedem
+ * Lead derselbe ist und damit nichts sagt. Jetzt steht dort das Wort, wenn es eines
+ * braucht, und „bis Schluss" bleibt in den 85 %, in denen die Frist belegt ist.
+ *
+ * ⚠ ZWEI ZUSTAENDE, ZWEI WOERTER — und Sven hat nur fuer den ersten eines vorgegeben
+ * („mach aber nicht 'unsicher' sondern 'abgeleitet' oder 'errechnet'"). Gemessen in
+ * `gold.py` sind es verschiedene Dinge:
+ *   · `estimated` = wir haben die Frist aus dem Modell abgeleitet (CPV-Median-Bietfenster).
+ *     „errechnet" trifft das genau.
+ *   · `uncertain` = `NOT termin_plausibel`. Die Frist IST veroeffentlicht, sie ist nur
+ *     unglaubwuerdig (Frist vor Veroeffentlichung, absurdes Datum). „errechnet" waere hier
+ *     schlicht falsch — wir haben nichts gerechnet, die Quelle widerspricht sich.
+ *     Deshalb „Datum pruefen": eine Aufforderung statt eines Urteils, und sie sagt etwas
+ *     ueber die QUELLE, nicht ueber uns.
+ */
+/* Wort und ob es warnt: „errechnet" ist eine Einschraenkung (11,3 % der Leads),
+   „Datum pruefen" eine Unstimmigkeit in der Quelle (2,0 %). Nur die zweite faerbt. */
 function fristCell(l){
+  /* ⚠ DIE TABELLE STEHT IN DER FUNKTION, NICHT DANEBEN. `pruefe-zeithorizont.mjs`
+     schneidet `fristCell` per Textsuche aus und fuehrt sie isoliert aus; eine
+     Modulkonstante gibt es dort nicht, und die Sonde starb mit
+     `ReferenceError: FRIST_HERKUNFT is not defined`.
+
+     Genau dieselbe Falle hatte `_unterlagen` in `export_web_leads.py` schon einmal (dort
+     war es `GLIEDERUNG`, und die Loesung war, es zum Parameter zu machen). Wer eine
+     Funktion anfasst, die eine Sonde ausschneidet, darf sie nicht von aussen abhaengig
+     machen — sonst faellt die Pruefkette, nicht das Produkt. */
+  const HERKUNFT = { schaetz: ["errechnet", false], unsicher: ["Datum prüfen", true] };
+  const [woher, warnt] = HERKUNFT[l.timing && l.timing.src] || [null, false];
   if(l.tage != null){                       // offene Ausschreibung: Countdown
     const urg = l.tage <= 14;
-    return `<span class="cd ${urg?'urg':''}">${val(tk('{n} Tage', {n: l.tage}), l.timing.src, l.timing.hint)}<span class="cdsub">${tk("bis Schluss")}</span></span>`;
+    return `<span class="cd ${urg?'urg':''}">${val(tk('{n} Tage', {n: l.tage}), l.timing.src, l.timing.hint)}<span class="cdsub${woher ? (warnt ? " cd-woher cd-warn" : " cd-woher") : ""}">${tk(woher || "bis Schluss")}</span></span>`;
   }
   if(l.src==='f01') return `<span class="cd none">—<span class="cdsub">${tk("noch keine Frist")}</span></span>`;
-  return `<span class="cd">${val(endetText(l), l.timing.src, l.timing.hint)}<span class="cdsub">${tk("Vertragsende")}</span></span>`;
+  return `<span class="cd">${val(endetText(l), l.timing.src, l.timing.hint)}<span class="cdsub${
+    woher ? (warnt ? " cd-woher cd-warn" : " cd-woher") : ""}">${tk(woher || "Vertragsende")}</span></span>`;
 }
 
 function visible(){

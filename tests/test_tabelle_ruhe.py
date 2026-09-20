@@ -227,3 +227,49 @@ def test_die_klassenzuordnung_steht_nur_einmal():
     assert len(eigene) == 1, (
         f"{len(eigene)} Zuordnungen von Kaskaden-Klasse auf CSS-Klasse. Es darf nur eine "
         f"geben, sonst altert eine davon unbemerkt.")
+
+
+def test_die_frist_sagt_ihre_herkunft_in_worten():
+    """⚠ Sven am 2026-09-20: „warum ist bei einer frist ein punkt davor?" Genau das ist der
+    Befund: ein Zeichen, das man erklaeren muss, erklaert nichts. Der Punkt stand da, seit
+    es die Spalte gibt, und sein Sinn erschloss sich nur ueber den Tooltip — den liest, wer
+    schon weiss, dass es etwas zu lesen gibt.
+
+    Gemessen ueber 42.563 Leads mit Frist: 85,3 % echt (kein Zeichen), 11,3 % geschaetzt,
+    2,0 % unsicher, 1,4 % unbekannt.
+
+    Die zweite Zeile der Zelle stand ohnehin auf „bis Schluss" — ein Satz, der bei jedem
+    Lead derselbe ist und damit nichts sagt. Jetzt steht dort das Wort, wenn es eines
+    braucht.
+
+    ⚠ ZWEI ZUSTAENDE, ZWEI WOERTER, und sie bedeuten Verschiedenes (gemessen in gold.py):
+      · `estimated` = aus dem Modell abgeleitet → „errechnet" (Svens Wort)
+      · `uncertain` = `NOT termin_plausibel`, die Frist IST veroeffentlicht, nur
+        unglaubwuerdig → „Datum pruefen". „errechnet" waere hier falsch: wir haben nichts
+        gerechnet, die Quelle widerspricht sich.
+
+    ⚠ UND NUR DAS ZWEITE WARNT FARBLICH. Dieselbe Regel wie beim roten Empfehlungs-Label:
+    Warnfarbe vertraegt nur Seltenheit. 11,3 % in Orange waeren Tapete.
+    """
+    kern = _ohne_kommentar(CORE.read_text(encoding="utf-8"))
+    # ⚠ Die Tabelle steht IN `fristCell`, nicht daneben: `pruefe-zeithorizont.mjs`
+    # schneidet die Funktion per Textsuche aus und fuehrt sie isoliert aus. Als sie noch
+    # eine Modulkonstante war, starb die Sonde mit einem ReferenceError — dieselbe Falle
+    # wie seinerzeit `GLIEDERUNG` in `_unterlagen`.
+    i = kern.index("function fristCell")
+    m = re.search(r"HERKUNFT = \{([^}]*)\}", kern[i:i + 1200])
+    assert m, "die Herkunftstabelle steht nicht mehr in fristCell"
+    assert '"errechnet", false' in m.group(1).replace(" ", "").replace('"errechnet",false',
+                                                                      '"errechnet", false'), \
+        "„errechnet\" warnt farblich — bei 11,3 % der Leads waere das Tapete"
+    assert "Datum prüfen" in m.group(1), "das Wort fuer die unplausible Frist fehlt"
+    assert "unsicher" not in m.group(1).replace('unsicher:', ''), (
+        "das Wort „unsicher\" steht wieder in der Oberflaeche — Sven wollte es nicht")
+
+    css = _ohne_kommentar_css(CSS.read_text(encoding="utf-8"))
+    assert "td.c-frist .val::before{display:none}" in css, (
+        "der Punkt ist zurueck — jetzt zusaetzlich zum Wort, also doppelt")
+    # ⚠ Die Warnregel MUSS hinter `.cd .cdsub` stehen: gleiche Spezifitaet, spaetere Regel
+    # gewinnt. Der erste Anlauf setzte sie davor, und die Farbe blieb grau.
+    assert css.index(".cd .cdsub.cd-warn") > css.index(".cd .cdsub{"), (
+        "die Warnfarbe steht VOR der Grundregel und wird von ihr ueberstimmt")

@@ -1335,10 +1335,26 @@ td.c-titel{min-width:280px;max-width:440px}
 tr.gesichtet .ttitel{font-weight:500;color:var(--ink-600)}
 
 td.c-buyer{color:var(--ink-500);white-space:nowrap;max-width:150px;overflow:hidden;text-overflow:ellipsis}
+/* ⚠ KEIN PUNKT MEHR IN DER FRISTZELLE — das Wort darunter sagt dasselbe, nur lesbar.
+   Der Punkt bleibt ueberall SONST (Volumen, Detailansicht, Vorgangsakte): dort gibt es
+   keine zweite Zeile, in die ein Wort passt, und dort ist er weiterhin der einzige, der
+   etwas bedeutet. */
+td.c-frist .val::before{display:none}
+
 td.c-frist{white-space:nowrap}
 .cd{display:inline-flex;flex-direction:column;line-height:1.15}
 .cd .val{font-size:12px}
 .cd .cdsub{font-size:9.5px;color:var(--ink-400);letter-spacing:.02em;margin-top:2px}
+/* ⚠ MUSS HINTER `.cd .cdsub` STEHEN und eine Klasse mehr tragen. Der erste Anlauf setzte
+   `.cdsub.cd-woher` DAVOR — gleiche Spezifitaet, spaetere Regel gewinnt, also blieb die
+   Farbe grau. Dieselbe Falle wie am Vortag beim Mauszeiger; gemessen, nicht gelesen.
+
+   ⚠ NUR „Datum pruefen" IST GEFAERBT, „errechnet" nicht. Das ist keine Inkonsequenz,
+   sondern dieselbe Regel wie beim roten Empfehlungs-Label: Warnfarbe vertraegt nur
+   Seltenheit. „errechnet" traegt 11,3 % der Leads und ist eine EINSCHRAENKUNG („wir haben
+   gerechnet"); „Datum pruefen" traegt 2,0 % und ist eine UNSTIMMIGKEIT in der Quelle. Nur
+   die zweite verlangt eine Reaktion. */
+.cd .cdsub.cd-warn{color:var(--flag);font-weight:600}
 .cd.urg .val{color:var(--flag);font-weight:600}
 .cd.none .val,.cd.none{color:var(--ink-300)}
 
