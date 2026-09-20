@@ -131,3 +131,38 @@ def test_die_sonde_sieht_einen_ungekuerzten_ampelgrund():
     # ⚠ Der Deckel kostet im Medianfall nur EINE Zeile (19 px) und liegt damit unter jeder
     # brauchbaren Pixelschwelle. Gemeldet wird deshalb die Zeilenzahl, nicht der Vorspann.
     assert "Zeilen" in r.stdout, r.stdout
+
+
+def test_beim_aufschlagen_ist_alles_eingeklappt():
+    """Sven am 2026-09-20: „im default alles eingeklappt, das macht es ruhiger und setzt den
+    fokus auf den header."
+
+    ⚠ Gemessen: mit offener K.-o.-Gruppe 1.301 px beim Oeffnen, ohne 900 px. Die Gruppe
+    stand offen, weil sie die wichtigste ist — aber „wichtig" heisst nicht „aufgeklappt",
+    wenn die Zahl am Kopf schon sagt, dass es sie gibt.
+    """
+    q = CORE.read_text(encoding="utf-8")
+    i = q.index('<details class="grp" id="clg-${id}"')
+    assert " open" not in q[i:i + 90], "eine Gruppe steht wieder offen"
+    j = q.index('id="clg-offen"')
+    assert " open" not in q[j:j + 40], "die Luecken-Gruppe steht wieder offen"
+
+
+def test_die_fristwarnung_sagt_warum_beide_zahlen_dastehen():
+    """⚠ „49 Anforderungen in 30 Tagen" las sich wie eine Statistik. Der Grund, warum die
+    zwei Zahlen zusammengehoeren, stand nur im Stylesheet: die Frist waechst nicht mit dem
+    Aufwand (Korrelation 0,08 ueber 3.400 Vorgaenge)."""
+    import re as _re
+    q = CORE.read_text(encoding="utf-8")
+    b = q[q.index("function renderFensterBlock"):]
+    b = b[:b.index("\n}\n")]
+    # ⚠ OHNE KOMMENTARE PRUEFEN. Der erste Anlauf schlug an meiner eigenen Begruendung an
+    # („‚engstes Zehntel\u2018 versteht niemand") — Fallenkatalog F13, an einem Tag schon
+    # fuenfmal passiert. Geprueft wird der Code, nicht die Prosa darueber.
+    b = _re.sub(r"/\*.*?\*/", " ", b, flags=_re.S)
+    b = _re.sub(r"(?m)//.*$", " ", b)
+    assert "waechst nicht mit dem Aufwand" in b or "wächst nicht mit dem Aufwand" in b, (
+        "die Warnung sagt nicht mehr, warum Frist und Anforderungszahl zusammenstehen")
+    assert "engstes Zehntel" not in b, "das Fachwort ist zurueck"
+    # Der Abstand in Tagen ist die verstaendliche Groesse — Median 7 ueber 326 Faelle.
+    assert "f.median - f.tage" in b, "der Abstand wird nicht mehr in Tagen genannt"

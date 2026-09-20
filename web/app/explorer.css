@@ -2616,8 +2616,7 @@ td.c-band .passung i{display:none}
 .fenster.eng { border-left-color: var(--flag); }
 .fenster-t { font-size: var(--t-lg); font-weight: 650; letter-spacing: -.01em;
   color: var(--ink-900); font-variant-numeric: tabular-nums; }
-.fenster .bstat-leiste { max-width: 220px; margin: 4px 0 2px; }
-.fenster-m { font-size: var(--t-meta); color: var(--ink-500); font-variant-numeric: tabular-nums; }
+.fenster-m { font-size: var(--t-meta); color: var(--ink-500); line-height: 1.45; }
 .fenster-m em { font-style: normal; margin-left: 6px; font-weight: 600; color: var(--ink-700); }
 .fenster.eng .fenster-m em { color: var(--flag); }
 

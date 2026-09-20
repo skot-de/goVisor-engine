@@ -1825,19 +1825,27 @@ function renderFensterBlock(a, l){
   const n = (a.checklist||[]).length;
   if(!n) return '';
   if(f.tage > f.eng) return '';
-  const spanne = Math.max(1, f.oben - f.unten);
-  const pos = Math.max(0, Math.min(100, Math.round(((f.tage - f.unten) / spanne) * 50 + 25)));
-  // Den Rahmen NENNEN, wenn wir ihn kennen: „marktueblich 34 Tage" ohne Angabe, unter welcher
-  // Ordnung, waere genau die Vermischung, die der Vergleich vermeidet.
+  /* ⚠ DIE ZWEI ZAHLEN STANDEN NEBENEINANDER, OHNE ZU SAGEN, WARUM. „49 Anforderungen in
+     30 Tagen" las sich wie eine Statistik; Sven am 2026-09-20: „die grafik mit 49
+     anforderungen in 30 tagen verstehe ich nicht." Der Grund, warum die beiden zusammen
+     gehoeren, stand nur im Stylesheet: **die Frist waechst nicht mit dem Aufwand**
+     (Korrelation 0,08 ueber 3.400 Vorgaenge — ein Verfahren mit 186 Anforderungen bekommt
+     dieselbe Zeit wie eines mit dreien). Jetzt steht er auf dem Bildschirm.
+
+     ⚠ Der Abstand in TAGEN statt „engstes Zehntel". Gemessen ueber die 326 Faelle, in
+     denen dieser Block erscheint, liegt die Frist im Median 7 Tage unter dem Ueblichen
+     (p25 5, p75 13). „Eine Woche weniger" versteht jeder, „engstes Zehntel" niemand.
+
+     ⚠ DIE LEISTE IST WEG. Drei unbeschriftete Striche sagten dasselbe wie der Satz
+     darueber, nur unverstaendlich. */
   const rn = _RAHMEN_NAME[f.rahmen];
-  const bezug = rn
-    ? tk("üblich sind {d} Tage unter {r}", {d: f.median, r: rn})
-    : tk("üblich sind {d} Tage in vergleichbaren Verfahren", {d: f.median});
+  const weniger = Math.max(1, f.median - f.tage);
   return `<div class="fenster eng">
-    <span class="fenster-t">${tk("{n} Anforderungen in {d} Tagen", {n: n, d: f.tage})}</span>
-    <span class="bstat-leiste" aria-hidden="true"><i class="band"></i><i class="mitte"></i>
-      <i class="punkt" style="left:${pos}%"></i></span>
-    <span class="fenster-m">${bezug}<em>${tk("engstes Zehntel")}</em></span>
+    <span class="fenster-t">${tk("Nur {d} Tage Frist, {k} Tage weniger als üblich", {d: f.tage, k: weniger})}</span>
+    <span class="fenster-m">${rn
+      ? tk("Üblich sind {d} Tage unter {r}.", {d: f.median, r: rn})
+      : tk("Üblich sind {d} Tage in vergleichbaren Verfahren.", {d: f.median})}
+      ${tk("Zu erfüllen sind {n} Anforderungen, und die Frist wächst nicht mit dem Aufwand.", {n: n})}</span>
   </div>`;
 }
 
@@ -1950,14 +1958,22 @@ function renderChecklistBlock(a, l){
   const umfangHtml = renderUmfangBlock(l);
   const groupsHtml = _CL_GROUPS.map(([id,title,set])=>{
     const gi = items.filter(it=>set.has(it.req_type)); if(!gi.length) return '';
-    return `<details class="grp" id="clg-${id}"${id==='ko'?' open':''}><summary><span class="caret">›</span>${title}<span class="cnt">${gi.length}</span></summary><div class="gbody">${gi.map(itemHtml).join('')}</div></details>`;
+    /* ⚠ ALLES ZU BEIM AUFSCHLAGEN. Bis zum 2026-09-20 stand die K.-o.-Gruppe offen — bei
+       13 Punkten waren das sofort 13 Zeilen unter dem Kopf. Sven: „wenn man auf die
+       unterlagen seite kommt, sollte im default alles eingeklappt sein. das macht es
+       ruhiger und setzt den fokus auf den header." Die Gruppenkoepfe tragen ihre Zahl,
+       die Auswahl trifft also der Nutzer, nicht wir. */
+    return `<details class="grp" id="clg-${id}"><summary><span class="caret">›</span>${title}<span class="cnt">${gi.length}</span></summary><div class="gbody">${gi.map(itemHtml).join('')}</div></details>`;
   }).join('');
   // §7.4 Offen (Zuschlag nicht gefunden) + §7.5 Weitere Dokumente
   /* ⚠ EINE BITTE, KEIN BEFUND. Vorher stand hier „In den Unterlagen nicht eindeutig
      auffindbar. Bitte selbst pruefen." — richtig, aber eine Sackgasse: der Nutzer erfaehrt,
      dass etwas fehlt, und kann nichts tun. Jetzt steht daneben, WELCHE Datei hilft und ein
      Knopf, der sie entgegennimmt. Derselbe Upload-Weg wie ueberall, kein zweiter Pfad. */
-  const offen = fehlend.length ? `<details class="grp" id="clg-offen" open><summary><span class="caret">›</span>${tk("Offen")}<span class="cnt">${fehlend.length}</span></summary><div class="gbody">${
+  /* ⚠ AUCH DIE LUECKEN ZU. Sie standen offen, weil sie eine Bitte sind — aber eine Bitte,
+     die sich beim Aufschlagen selbst aufdraengt, ist der Grund, warum die Seite voll wirkte.
+     Die Zahl am Kopf sagt, dass es sie gibt. */
+  const offen = fehlend.length ? `<details class="grp" id="clg-offen"><summary><span class="caret">›</span>${tk("Offen")}<span class="cnt">${fehlend.length}</span></summary><div class="gbody">${
     fehlend.map(m=>`<article class="item"><div class="ih"><span style="width:19px;text-align:center;color:var(--ink-400)">—</span><b>${tk(FEHLT[m][0])}</b><span class="mark m-a" style="margin-left:auto">${tk("Nicht gefunden")}</span></div>
       <div class="ibody"><div class="block" style="color:var(--ink-500);font-size:13px;line-height:1.6">
         ${tk(FEHLT[m][1])}
