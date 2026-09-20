@@ -401,6 +401,19 @@ mark.hit{background:#CFF3E4;box-shadow:0 0 0 2px #CFF3E4}
 .kr-ko .kr-code{color:#a13a3a}
 /* Vergabe-Analyse (LLM aus den Unterlagen) — Ampel + Checkliste */
 .va-sec{background:var(--surface);border:1px solid var(--line-strong);border-radius:var(--r);padding:var(--s4)}
+/* ── Urteil und Begruendung in EINEM Kasten ──────────────────────────────────────
+   Die Ampel stand als Kapsel fuer sich, der Satz frei darunter. Sven am 2026-09-20:
+   „ich finde der satz sieht zusammenhangslos aus." Der Satz ist ohne die Ampel sinnlos,
+   und die Ampel ohne den Satz nichts wert: 88,4 % aller Auswertungen sind „gelb".
+   ⚠ Der farbige Rand links ist dieselbe Form wie bei der Fristwarnung darunter — eine
+   Sprache fuer Urteile, nicht drei. */
+.va-karte{padding:12px 14px;margin:0 0 12px;border-radius:var(--r);
+  background:var(--surface-2);border-left:3px solid var(--line-strong)}
+.va-karte.va-go{background:#f4fbf7;border-left-color:#0a7d3f}
+.va-karte.va-weigh{background:#fdfaf3;border-left-color:#b8860b}
+.va-karte.va-stop{background:#fdf5f4;border-left-color:#a5231b}
+.va-karte .va-grund{margin:0}
+.va-karte .va-worum{margin:8px 0 0}
 .va-head{display:flex;align-items:center;justify-content:space-between;gap:var(--s3);margin-bottom:var(--s2)}
 .va-amp{display:inline-flex;align-items:center;gap:6px;font-weight:700;font-size:var(--t-body);padding:4px 12px;border-radius:99px}
 .va-amp.va-go{color:#0a7d3f;background:#e7f6ec}

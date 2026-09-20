@@ -2068,10 +2068,20 @@ function renderDocs(l){
       ? `<p class="va-herkunft">${tk("Diese Auswertung stammt aus Unterlagen, die ein Nutzer hochgeladen hat.")}</p>` : '';
     const zweifel = a.zuordnung_zweifelhaft
       ? `<p class="va-zweifel">${tk("Achtung: der Auftraggeber dieses Leads kommt in den hochgeladenen Unterlagen nicht vor. Möglicherweise gehören sie zu einem anderen Verfahren. Prüft die Angaben, bevor ihr euch darauf verlasst.")}</p>` : '';
-    const vahead = `<div class="va-head"><span class="va-amp ${cls}">${icon} ${label}</span><span class="cov">${tk("Vergabe-Analyse · aus den Unterlagen")}</span></div>
+    /* ⚠ URTEIL UND BEGRUENDUNG IN EINEM KASTEN. Bis zum 2026-09-20 stand die Ampel als
+       Kapsel fuer sich, der begruendende Satz frei darunter, und dahinter drei weitere
+       lose Zeilen. Sven: „ich finde der satz sieht zusammenhangslos aus." Er hatte recht:
+       nichts band die beiden aneinander, obwohl der Satz ohne die Ampel sinnlos ist und
+       die Ampel ohne den Satz nichts sagt — gemessen sind **88,4 % aller Auswertungen
+       gelb**, der Satz ist also das Einzige, was sie unterscheidbar macht.
+
+       Der Kasten traegt die Farbe des Urteils am linken Rand, dieselbe Form wie die
+       Fristwarnung darunter. Damit hat der Block eine Sprache statt dreier. */
+    const vahead = `<div class="va-karte ${cls}">
+      <div class="va-head"><span class="va-amp ${cls}">${icon} ${label}</span><span class="cov">${tk("Vergabe-Analyse · aus den Unterlagen")}</span></div>
       ${zweifel}${quelle}
       ${a.ampel_grund?`<p class="va-grund" data-grundauf="1" title="${esc(tk("Ganzen Text zeigen"))}">${esc(a.ampel_grund)}</p>`:''}
-      ${a.zusammenfassung?`<details class="va-worum"><summary>${tk("Was beschafft wird")}</summary><p class="va-sum">${esc(a.zusammenfassung)}</p></details>`:''}`;
+      ${a.zusammenfassung?`<details class="va-worum"><summary>${tk("Was beschafft wird")}</summary><p class="va-sum">${esc(a.zusammenfassung)}</p></details>`:''}</div>`;
       /* ⚠ ZWEI ABSAETZE PROSA STANDEN HIER UEBEREINANDER, und beide gibt es bei 100 % der
          Auswertungen: der Ampel-Grund (Median 163 Zeichen) und die Zusammenfassung (260).
          Gemessen am Median-Fall waren es 533 px und 110 Woerter, bevor der erste

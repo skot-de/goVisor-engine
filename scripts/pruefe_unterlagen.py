@@ -81,6 +81,11 @@ def _schnitt(src: str, start: str, ende: str) -> str:
 
 
 def _rendern(analyse: pathlib.Path, ziel: pathlib.Path) -> bool:
+    # ⚠ ABSOLUT MACHEN. `node` laeuft mit `cwd=web/`; ein relativer Pfad von aussen zeigt
+    # dort ins Leere, und der Fehler sieht aus wie „die Checkliste liess sich nicht
+    # rendern" — also wie ein Befund ueber den Code statt ueber den Aufruf.
+    analyse = analyse.resolve()
+    ziel = ziel.resolve()
     """Die echte Checkliste bauen. Die drei Zusatzbloecke (Fenster/Profil/Umfang) sind
     gestubbt — sie kaemen NOCH dazu, jede Messung hier ist also eine Untergrenze."""
     src = CORE.read_text(encoding="utf-8")

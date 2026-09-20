@@ -166,3 +166,25 @@ def test_die_fristwarnung_sagt_warum_beide_zahlen_dastehen():
     assert "engstes Zehntel" not in b, "das Fachwort ist zurueck"
     # Der Abstand in Tagen ist die verstaendliche Groesse — Median 7 ueber 326 Faelle.
     assert "f.median - f.tage" in b, "der Abstand wird nicht mehr in Tagen genannt"
+
+
+def test_urteil_und_begruendung_stehen_in_einem_kasten():
+    """Sven am 2026-09-20: „ich finde der satz sieht zusammenhangslos aus."
+
+    ⚠ Der Satz ist ohne die Ampel sinnlos, und die Ampel ohne den Satz fast wertlos:
+    gemessen ueber alle 11.319 Auswertungen sind **88,4 % gelb**. Der begruendende Satz ist
+    also das Einzige, was neun von zehn Faellen unterscheidbar macht. Beide gehoeren
+    deshalb in dasselbe Element, und der Kasten traegt die Farbe des Urteils.
+    """
+    q = CORE.read_text(encoding="utf-8")
+    i = q.index('const vahead = ')
+    block = q[i:i + 1400]
+    assert 'class="va-karte ${cls}"' in block, "Urteil und Begruendung sind wieder getrennt"
+    # Ampel, Grund und die Faltung muessen INNERHALB des Kastens liegen.
+    kasten = block[block.index('class="va-karte'):]
+    kasten = kasten[:kasten.index("</div>`;") + 8]
+    for teil in ('class="va-amp', 'class="va-grund', 'class="va-worum'):
+        assert teil in kasten, f"{teil} steht nicht mehr im Kasten"
+    css = (WURZEL / "web" / "app" / "explorer.css").read_text(encoding="utf-8")
+    for farbe in ("va-go", "va-weigh", "va-stop"):
+        assert f".va-karte.{farbe}{{" in css, f"der Kasten kennt die Farbe {farbe} nicht"
