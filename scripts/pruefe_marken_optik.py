@@ -114,6 +114,52 @@ def messen() -> list[dict] | None:
             return None
 
 
+# ⚠ In einer KLICKBAREN Zeile ist `cursor:help` immer falsch: es verspricht einen Hinweis
+# und sonst nichts, waehrend jeder Klick den Lead oeffnet. Diese Elemente sassen am
+# 2026-09-20 alle fuenf auf `help` — gefunden hat es Sven, nicht die Sonde.
+ZEILE = [
+    ("Wert mit Beleg (Frist)", '<span class="val" data-src="schaetz" title="x">14 Tage</span>'),
+    ("Band ohne Wert",         '<span class="band-na">na</span>'),
+    ("Unterlagen Nein",        '<span class="dokpill dok-nein">Nein</span>'),
+    ("Beleg im Titel",         '<span class="hat-beleg">Beleg</span>'),
+    ("Punkt am Band",          '<span class="pdot pdot-schaetz"></span>'),
+]
+
+
+def zeiger() -> list[str] | None:
+    """Welcher Mauszeiger steht ueber den Elementen einer Trefferzeile? GEMESSEN.
+
+    ⚠ Eine CSS-Textpruefung taugt hier nicht, und der erste Anlauf hat es bewiesen: die
+    Sammelregel stand da, war aber mit `:where()` geschrieben und wurde von
+    `.c-band .band-na` (zwei Klassen) ueberstimmt. Im Text sah alles richtig aus.
+    """
+    try:
+        from playwright.sync_api import sync_playwright
+    except ImportError:
+        return None
+    import tempfile
+    css = (WURZEL / "web" / "app" / "globals.css").read_text(encoding="utf-8")
+    css += "\n" + (WURZEL / "web" / "app" / "explorer.css").read_text(encoding="utf-8")
+    zellen = "".join(f'<td class="c-band"><i data-z="{n}">{h}</i></td>' for n, h in ZEILE)
+    with tempfile.TemporaryDirectory() as t:
+        blatt = pathlib.Path(t) / "z.html"
+        blatt.write_text('<meta charset="utf-8"><style>' + css + "i{font-style:normal}</style>"
+                         f'<table class="leads"><tbody><tr>{zellen}</tr></tbody></table>',
+                         encoding="utf-8")
+        try:
+            with sync_playwright() as p:
+                b = p.chromium.launch()
+                pg = b.new_page()
+                pg.goto(blatt.as_uri())
+                raus = pg.evaluate("""() => [...document.querySelectorAll('[data-z]')].map(i => {
+                    const el = i.firstElementChild;
+                    return i.dataset.z + '|' + getComputedStyle(el).cursor; })""")
+                b.close()
+                return raus
+        except Exception:
+            return None
+
+
 def main() -> int:
     still = "--still" in sys.argv
     gemessen = messen()
@@ -144,6 +190,15 @@ def main() -> int:
             and m["name"] not in OHNE_GRUND_ERLAUBT]
     if ohne:
         befunde.append("ohne getoenten Grund: " + ", ".join(ohne))
+
+    z = zeiger()
+    if z is not None:
+        falsch = [x.split("|")[0] for x in z if x.split("|")[1] == "help"]
+        if falsch:
+            befunde.append("Fragezeichen-Zeiger in einer klickbaren Zeile: "
+                           + ", ".join(falsch)
+                           + " — der Klick oeffnet den Lead, das Fragezeichen verspricht "
+                             "etwas anderes")
 
     if not befunde:
         if not still:

@@ -1225,6 +1225,32 @@ td.c-band{width:104px;text-align:center}
 td.c-band .band{justify-content:center;gap:0}
 
 .leads tbody tr{cursor:pointer}
+/* ⛔ KEIN FRAGEZEICHEN IN EINER KLICKBAREN ZEILE. Sven am 2026-09-20: „wenn auf die frist
+   gehe und draufklicke, dann verändert sich mein mauszeiger zu einem fragezeichen?"
+
+   `cursor:help` verspricht einen Hinweis und sonst nichts. In dieser Tabelle oeffnet aber
+   JEDER Klick den Lead — das Versprechen wird also nicht gehalten, und zwar an fuenf
+   Stellen gleichzeitig (gemessen 2026-09-20): `.val` (jeder Wert mit Beleg, darunter die
+   Frist), `.band-na`, `.dok-nein`, `.hat-beleg` und `.pdot`.
+
+   ⚠ DIE TOOLTIPS BLEIBEN. Der `title` ist die Information, der Zeiger war nur das falsche
+   Etikett davor. Wer die Maus liegen laesst, bekommt weiterhin den Hinweis.
+
+   ⚠ WARUM EINE SAMMELREGEL UND NICHT FUENF EINZELNE: `.val` und `.pdot` gelten auch
+   AUSSERHALB der Trefferliste (Detailansicht, Vorgangsakte), und dort ist `help` richtig —
+   dort klickt niemand. Die Regel gehoert also an den Ort, nicht an die Klasse.
+
+   ⚠ UND SIE MUSS SPEZIFISCH GENUG SEIN. Der erste Anlauf schrieb `:where(...)` mit der
+   Begruendung, die Spezifitaet bei null zu halten — und genau daran scheiterte er:
+   `.c-band .band-na` (zwei Klassen) schlug die Regel, und der Zeiger blieb dort ein
+   Fragezeichen. Gemessen, nicht vermutet. Hier MUSS ueberstimmt werden, also zaehlen die
+   Klassen mit.
+
+   ⚠ Ich hatte genau diesen Fehler am 2026-09-19 fuer `.dok-nein` SELBST EINGEBAUT und im
+   Test sogar ausdruecklich erlaubt („Nein springt nirgendwohin und DARF den Hilfe-Zeiger
+   tragen") — dabei springt die Zeile darunter sehr wohl. */
+.leads tbody .val, .leads tbody .pdot, .leads tbody .c-band .band-na,
+.leads tbody .dok-nein, .leads tbody .hat-beleg{cursor:pointer}
 .leads tbody tr:hover{background:var(--surface-2)}
 .leads tbody tr[aria-selected="true"]{background:var(--signal-wash);box-shadow:inset 3px 0 0 var(--signal)}
 body[data-view="verteidigung"] .leads tbody tr[aria-selected="true"]{background:var(--surface-3);box-shadow:inset 3px 0 0 var(--ink-900)}

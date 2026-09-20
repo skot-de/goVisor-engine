@@ -127,3 +127,45 @@ def test_die_liste_deckt_alle_marken_spalten_ab():
         assert f'"{zelle}"' in block, (
             f"die Spalte {was} ({zelle}) wird nicht mehr gemessen — sie kann beliebig "
             f"auseinanderlaufen, ohne dass es auffaellt")
+
+
+def test_kein_fragezeichen_in_einer_klickbaren_zeile():
+    """⛔ Sven am 2026-09-20: „wenn auf die frist gehe und draufklicke, dann verändert sich
+    mein mauszeiger zu einem fragezeichen?"
+
+    `cursor:help` verspricht einen Hinweis und sonst nichts. In dieser Tabelle oeffnet aber
+    JEDER Klick den Lead. Betroffen waren fuenf Stellen gleichzeitig: `.val` (jeder Wert
+    mit Beleg, darunter die Frist), `.band-na`, `.dok-nein`, `.hat-beleg`, `.pdot`.
+
+    ⚠ EINE DAVON HATTE ICH SELBST EINGEBAUT UND IM TEST ERLAUBT. Am 2026-09-19 stand in
+    `test_unterlagen_spalte.py`: „„Nein" springt nirgendwohin und DARF den Hilfe-Zeiger
+    tragen" — dabei springt die Zeile darunter sehr wohl. Eine Ausnahme, die nur das
+    Element betrachtet und nicht seinen Ort, ist keine.
+
+    ⚠ UND DER ERSTE FIX WIRKTE NICHT. Die Sammelregel stand mit `:where()` da, um die
+    Spezifitaet bei null zu halten — und wurde prompt von `.c-band .band-na` (zwei Klassen)
+    ueberstimmt. Im CSS-TEXT sah alles richtig aus; nur die Messung zeigte es. Deshalb
+    prueft `pruefe_marken_optik.py` den BERECHNETEN Zeiger, nicht die Regel.
+    """
+    r = _lauf()
+    if r.returncode == 2:
+        return
+    assert r.returncode == 0, r.stdout[-1200:]
+    assert "Fragezeichen" not in r.stdout
+
+
+def test_die_sonde_sieht_einen_fragezeichen_zeiger():
+    """Gegenprobe: genau der Zustand, in dem die Tabelle monatelang war."""
+    css = WURZEL / "web" / "app" / "explorer.css"
+    echt = css.read_text(encoding="utf-8")
+    anker = ".leads tbody .val, .leads tbody .pdot, .leads tbody .c-band .band-na,"
+    assert anker in echt, "die Sammelregel sieht anders aus"
+    try:
+        css.write_text(echt.replace(anker, ".leads tbody .nichts-davon,", 1), encoding="utf-8")
+        r = _lauf()
+        if r.returncode == 2:
+            return
+        assert r.returncode == 1, "die Sonde laesst den Fragezeichen-Zeiger durch"
+        assert "Fragezeichen" in r.stdout
+    finally:
+        css.write_text(echt, encoding="utf-8")
