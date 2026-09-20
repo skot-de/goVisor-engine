@@ -1233,8 +1233,15 @@ body[data-view="verteidigung"] .leads tbody tr[aria-selected="true"]{background:
    stehen zwei nebeneinander (14 + 6 + 14) — bei 30 px haette das zweite die Zelle
    gesprengt oder waere umgebrochen. */
 td.c-star{width:52px;text-align:center;padding-right:0;white-space:nowrap}
-.tstar{color:var(--ink-300);opacity:.45}
-.tstar[data-merk]{opacity:1}
+/* ⚠ SCHWARZ STATT BLASS. Sven am 2026-09-20: „kannst du den stern und das x vll in
+   schwarz machen damit sie sichtbarer sind?" Vorher `--ink-300` bei 45 % Deckkraft — ein
+   Grau, das man suchen musste.
+
+   ⚠ DAMIT HAENGT GEMERKT/NICHT-GEMERKT NUR NOCH AN DER FUELLUNG. Vorher trugen die beiden
+   Zustaende drei Unterschiede (Farbe, Deckkraft, Fuellung), jetzt einen. Umriss gegen
+   ausgefuellt ist ein verstandenes Paar — aber es ist der einzige, der bleibt, und wer als
+   Naechstes an diesen Regeln arbeitet, darf ihn nicht auch noch wegnehmen. */
+.tstar{color:var(--ink-900);opacity:1}
 .tstar[data-merk="manuell"]{color:var(--ink-900)}
 .tstar svg{width:14px;height:14px;stroke-width:1.7;vertical-align:middle}
 .tstar[data-merk="manuell"] svg{fill:var(--ink-900)}
@@ -2867,7 +2874,7 @@ td.c-doks{width:84px;text-align:center}
    auffaelligste Knopf der Zeile zu sein. Beim Ueberfahren wird er deutlich. */
 .lt-hide{
   background:none; border:0; padding:2px; cursor:pointer; line-height:0;
-  color:var(--ink-200,#c9d2ce); opacity:1; margin-left:6px;
+  color:var(--ink-900); opacity:1; margin-left:6px;
   transition:color .12s ease;
 }
 /* ⚠ OHNE DIESE ZEILE IST DAS KREUZ 0 PX BREIT. `globals.css` setzt `img,svg{display:block;
@@ -2877,7 +2884,6 @@ td.c-doks{width:84px;text-align:center}
    gerenderten Bild war der Knopf 4 x 18 px gross, also praktisch unsichtbar. Gemessen,
    nicht vermutet. */
 .lt-hide svg{width:14px;height:14px;vertical-align:middle}
-tr:hover .lt-hide{color:var(--ink-400)}
 .lt-hide:hover,.lt-hide:focus-visible{color:var(--risk)}
 .lt-hide.an{color:var(--ink-600)}
 @media (prefers-reduced-motion:reduce){.lt-hide{transition:none}}

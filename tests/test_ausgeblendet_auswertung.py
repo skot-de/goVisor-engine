@@ -423,3 +423,29 @@ def test_die_sonde_sieht_den_alten_fehler():
         datei.write_text(echt, encoding="utf-8")
 
 
+
+
+def test_stern_und_kreuz_sind_sichtbar():
+    """⚠ Sven am 2026-09-20: „kannst du den stern und das x vll in schwarz machen damit sie
+    sichtbarer sind?" Vorher stand der Stern auf `--ink-300` bei 45 % Deckkraft und das
+    Kreuz auf `--ink-200` — ein Grau, das man suchen musste. Beides jetzt `--ink-900`.
+
+    ⛔ DAMIT HAENGT GEMERKT/NICHT-GEMERKT NUR NOCH AN DER FUELLUNG. Vorher trugen die
+    beiden Zustaende drei Unterschiede (Farbe, Deckkraft, Fuellung), jetzt einen. Umriss
+    gegen ausgefuellt ist ein verstandenes Paar — aber es ist der einzige, der bleibt.
+    Dieser Test haelt ihn fest, weil er beim naechsten Anfassen der Sternregeln billig
+    verlorengeht.
+    """
+    css = re.sub(r"/\*[\s\S]*?\*/", "", CSS.read_text(encoding="utf-8"))
+    for regel, was in ((r"\.tstar\{([^}]*)\}", "Stern"), (r"\.lt-hide\{([^}]*)\}", "Kreuz")):
+        m = re.search(regel, css)
+        assert m, f"{was}: die Regel gibt es nicht mehr"
+        inhalt = m.group(1).replace(" ", "").replace("\n", "")
+        assert "color:var(--ink-900)" in inhalt, (
+            f"{was} steht nicht mehr auf --ink-900 — blass war er schon einmal, und "
+            f"gefunden hat ihn niemand")
+        assert "opacity:0" not in inhalt, f"{was} ist wieder halbtransparent"
+    m = re.search(r'\.tstar\[data-merk="manuell"\] svg\{([^}]*)\}', css)
+    assert m and "fill:" in m.group(1), (
+        "der gemerkte Stern ist nicht mehr gefuellt — seit beide schwarz sind, ist die "
+        "Fuellung der EINZIGE Unterschied zwischen gemerkt und nicht gemerkt")
