@@ -2039,7 +2039,7 @@ tr.wf-verworfen .ttitel{color:var(--ink-400);text-decoration:line-through;text-d
 /* Der Überblick ist kein Randtext — er bekommt die Breite des Arbeitsbereichs.
    640 px waren der alte Lesespalten-Deckel aus der Detailansicht; hier stand die
    Übersicht dadurch in einem Viertel des verfügbaren Platzes. */
-.lb{max-width:1560px;margin:0 auto;padding:var(--s6) var(--s6) var(--s5)}
+.lb{max-width:1240px;margin:0 auto;padding:var(--s6) var(--s6) var(--s5)}
 .lb-head{margin-bottom:18px}
 .lb-h{font-size:17px;font-weight:700;color:var(--ink-900)}
 .lb-l{font-size:13px;color:var(--ink-500);margin-top:3px}
@@ -2135,8 +2135,26 @@ tr.wf-verworfen .ttitel{color:var(--ink-400);text-decoration:line-through;text-d
    ⚠ 1,6fr zu 1fr, nicht 2:1. Die Arbeitsspalte traegt fuenf Titelzeilen, die abgeschnitten
    werden, wenn sie zu schmal ist; der Stapel traegt kurze Zahlen und Kacheln. Gemessen
    passt es damit oberhalb von 1100 px in eine Reihe, statt erst ab 1728. */
-.lb-zwei{display:grid;grid-template-columns:1.6fr 1fr;gap:var(--s6);align-items:start}
-@media (max-width:1100px){.lb-zwei{grid-template-columns:1fr}}
+/* ⚠ FESTE BREITE LINKS. Mit `1.6fr 1fr` schwankte die Arbeitsspalte zwischen 649 px
+   (1150er Fenster) und 901 px (1728er) — gemessen. Zeilenlaengen, die sich mit dem Fenster
+   aendern, lesen sich bei jedem Rechner anders, und die Titel sind ohnehin auf 58 Zeichen
+   beschnitten: mehr Breite bringt nichts, sie verteilt nur Luft. Sven am 2026-09-21:
+   „kannst du dem linken bereich eine feste breite geben?"
+
+   ⚠ DER DECKEL GEHOERT DAZU. Ohne ihn frisst die feste Breite links die Schwankung nur
+   auf und gibt sie rechts wieder aus: bei 1728 px waere der Kontext 824 px breit, bei
+   1440 noch 704. Mit `max-width:1240` steht rechts konstant 504 px.
+
+   ⚠ Die Media-Query MUSS dieselbe Spezifitaet haben und danach stehen, sonst gewinnt die
+   feste Breite auch auf schmalen Fenstern. Im Entwurf mit `.b .lb-zwei` (zwei Klassen)
+   ist genau das passiert: bei 820 px lief die Seite quer. */
+.lb-zwei{display:grid;grid-template-columns:640px minmax(0,1fr);gap:var(--s6);align-items:start}
+@media (max-width:1150px){.lb-zwei{grid-template-columns:1fr}}
+
+/* Die Arbeitsspalte bekommt einen Rahmen: rechts stehen vier gerahmte Kacheln, links stand
+   der Inhalt frei auf der Flaeche. Ein Kasten macht aus den zwei Haelften ein Paar. */
+.lb-zwei > .lb-sp{border:1px solid var(--line);border-radius:12px;background:var(--surface);
+  padding:14px 16px}
 /* Der Stapel: drei Kontextbloecke untereinander, mit Trennlinie statt Ueberschrift-Abstand.
    ⚠ `min-width:0` ist Pflicht — ohne sie sprengt ein langer Kaeufername die Rasterspalte
    statt zu kuerzen. */

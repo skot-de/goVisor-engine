@@ -60,7 +60,7 @@ def test_die_sonde_sieht_den_umbruch_der_vier_gleichen_spalten():
     """
     r = _mit_mutation(
         (CSS,
-         ".lb-zwei{display:grid;grid-template-columns:1.6fr 1fr;gap:var(--s6);align-items:start}",
+         ".lb-zwei{display:grid;grid-template-columns:640px minmax(0,1fr);gap:var(--s6);align-items:start}",
          ".lb-zwei{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));"
          "gap:var(--s6);align-items:start}"),
         # ⚠ Die vier Spalten allein stellen den alten Zustand NICHT wieder her: im Raster
@@ -81,8 +81,10 @@ def test_die_sonde_sieht_gleich_breite_spalten():
     """⚠ Gleicher Rang ist kein Layoutfehler, den ein Umbruchzaehler sieht: zwei gleiche
     Spalten stehen sauber in EINER Reihe. Nur die Breitenmessung merkt, dass die
     Arbeitsspalte ihren Vorrang verloren hat."""
-    r = _mit_mutation((CSS, "grid-template-columns:1.6fr 1fr;gap:var(--s6)",
-                       "grid-template-columns:1fr 1fr;gap:var(--s6)"))
+    # ⚠ Der Anker traegt seit dem 2026-09-21 eine feste Breite; der Anspruch ist
+    # derselbe geblieben: die Arbeitsspalte muss breiter sein als der Kontext.
+    r = _mit_mutation((CSS, "grid-template-columns:640px minmax(0,1fr);gap:var(--s6)",
+                       "grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--s6)"))
     if r.returncode == 2:
         return
     assert r.returncode == 1, "die Sonde bleibt gruen, obwohl beide Spalten gleich breit sind"
@@ -90,7 +92,7 @@ def test_die_sonde_sieht_gleich_breite_spalten():
 
 
 def test_die_sonde_sieht_wenn_auf_schmalen_schirmen_nicht_gestapelt_wird():
-    r = _mit_mutation((CSS, "@media (max-width:1100px){.lb-zwei{grid-template-columns:1fr}}",
+    r = _mit_mutation((CSS, "@media (max-width:1150px){.lb-zwei{grid-template-columns:1fr}}",
                        "@media (max-width:600px){.lb-zwei{grid-template-columns:1fr}}"))
     if r.returncode == 2:
         return
@@ -180,3 +182,45 @@ def test_die_sonde_merkt_wenn_sie_an_der_wirklichkeit_vorbei_misst():
     r = _mit_mutation((TSX, 'className="lb-kx"', 'className="lb-kacheln"'))
     assert r.returncode == 1, "die Sonde misst weiter, obwohl das Bauteil die Klasse nicht mehr kennt"
     assert "nicht mehr gibt" in r.stdout, r.stdout
+
+
+def test_die_arbeitsspalte_hat_auf_allen_breiten_dieselbe_breite():
+    """Sven am 2026-09-21: „kannst du dem linken bereich eine feste breite geben?"
+
+    ⚠ Mit `1.6fr 1fr` schwankte sie gemessen zwischen 649 px (1150er Fenster) und 901 px
+    (1728er). Die Titel sind ohnehin auf 58 Zeichen beschnitten; mehr Breite bringt keinen
+    Text mehr, sie verteilt nur Luft — und dieselbe Liste liest sich auf jedem Rechner
+    anders.
+    """
+    r = _lauf()
+    if r.returncode == 2:
+        return
+    assert r.returncode == 0, r.stdout[-1200:]
+
+
+def test_die_sonde_sieht_eine_wieder_mitwachsende_spalte():
+    r = _mit_mutation((CSS, "grid-template-columns:640px minmax(0,1fr);gap:var(--s6)",
+                       "grid-template-columns:1.6fr 1fr;gap:var(--s6)"))
+    if r.returncode == 2:
+        return
+    assert r.returncode == 1, "die Sonde bleibt gruen, obwohl die Spalte wieder mitwaechst"
+    assert "nicht ueberall gleich breit" in r.stdout, r.stdout
+
+
+def test_die_sonde_sieht_wenn_die_feste_breite_auf_schmalen_fenstern_gewinnt():
+    """⚠ DER FALL, DER IM ENTWURF PASSIERT IST. Die Media-Query muss dieselbe Spezifitaet
+    haben und danach stehen; sonst bleibt die feste Breite auch bei 820 px stehen und die
+    Seite laeuft quer. Genau das hat mein Prototyp mit `.b .lb-zwei` getan."""
+    r = _mit_mutation((CSS, "@media (max-width:1150px){.lb-zwei{grid-template-columns:1fr}}",
+                       "@media (max-width:1150px){.lb-zwei.eng{grid-template-columns:1fr}}"))
+    if r.returncode == 2:
+        return
+    assert r.returncode == 1, "die Sonde bleibt gruen, obwohl die feste Breite nicht weicht"
+    assert "quer" in r.stdout or "gestapelt" in r.stdout, r.stdout
+
+
+def test_die_arbeitsspalte_traegt_einen_rahmen():
+    """Rechts stehen vier gerahmte Kacheln; links stand der Inhalt frei auf der Flaeche."""
+    css = CSS.read_text(encoding="utf-8")
+    assert ".lb-zwei > .lb-sp{border:1px solid var(--line)" in css, (
+        "die Arbeitsspalte hat ihren Rahmen verloren")

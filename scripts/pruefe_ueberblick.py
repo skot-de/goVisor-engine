@@ -35,11 +35,15 @@ TSX = WURZEL / "web" / "components" / "explorer" / "DetailPanel.tsx"
 # Breiten, die auf diesem Schreibtisch und bei Sven vorkommen. ⚠ 1728 ist ein MacBook Pro
 # 16" im Standard, 1512 das 14", 1440 ein gaengiger externer Schirm, 1280 ein kleines
 # Fenster. Faellt die Reihe bei einer davon auseinander, ist es kein Randfall.
-BREITEN = (1728, 1512, 1440, 1280)
+# ⚠ 1200 GEHOERT DAZU, UND ZWAR WEGEN DES DECKELS. `.lb` ist auf 1240 px begrenzt; oberhalb
+# davon ist die Arbeitsspalte auch mit `1.6fr 1fr` ueberall gleich breit, weil der Deckel die
+# Schwankung schluckt. Ohne einen Messpunkt UNTERHALB blieb die Gegenprobe gruen, obwohl die
+# Spalte wieder mitwuchs — die Sonde mass eine Eigenschaft des Deckels, nicht der Spalte.
+BREITEN = (1728, 1512, 1440, 1280, 1200)
 
 # Unter dieser Breite DARF gestapelt werden — ein Telefon oder ein halbes Fenster kann
 # keine zwei Spalten tragen, und das Stapeln ist dort die richtige Antwort, kein Fehler.
-STAPELN_ERLAUBT_UNTER = 1100
+STAPELN_ERLAUBT_UNTER = 1150
 
 # ⚠ EINE DECKE, KEIN MESSWERT. Der Block ist zweimal zugewachsen, beide Male in kleinen
 # Schritten: erst fuenf Vorschau-Zeilen, dann drei Luecken- und drei Markt-Kacheln. Am
@@ -147,6 +151,7 @@ def messen() -> dict | None:
                         const laut = [...g.querySelectorAll('*')].filter(e =>
                             eigen(e) && parseFloat(getComputedStyle(e).fontSize) >= 20).length;
                         return { reihen: new Set(kind.map(x => Math.round(x.top))).size,
+                                 quer: document.documentElement.scrollWidth > window.innerWidth,
                                  hoehe: Math.round(g.getBoundingClientRect().height),
                                  laut, flaechen: g.querySelectorAll('button, a').length,
                                  kacheln: new Set([...g.querySelectorAll('.kx')].map(e =>
@@ -213,8 +218,19 @@ def main() -> int:
             print("  (kein Playwright/Chromium — keine Auskunft)")
         return 2
 
+    # ⚠ DIE ARBEITSSPALTE MUSS AUF ALLEN BREITEN GLEICH BREIT SEIN. Mit `1.6fr 1fr` schwankte
+    # sie zwischen 649 und 901 px; Zeilenlaengen, die sich mit dem Fenster aendern, lesen
+    # sich auf jedem Rechner anders. Gemessen wird die Gleichheit, nicht die Zahl — wer sie
+    # bewusst aendert, soll das an EINER Stelle tun koennen.
+    breiten = {gemessen[br]["breiten"].get("jetzt") for br in BREITEN}
+    if len(breiten) > 1:
+        befunde.append("die Arbeitsspalte ist nicht ueberall gleich breit: "
+                       + ", ".join(f"{br} px -> {gemessen[br]['breiten'].get('jetzt')}"
+                                   for br in BREITEN))
     for br in BREITEN:
         m = gemessen[br]
+        if m.get("quer"):
+            befunde.append(f"bei {br} px laeuft die Seite quer")
         if m["reihen"] != 1:
             befunde.append(f"bei {br} px stehen die Abschnitte in {m['reihen']} Reihen "
                            f"({m['hoehe']} px hoch) statt in einer")
@@ -234,6 +250,12 @@ def main() -> int:
             befunde.append(f"bei {br} px stehen {m['flaechen']} klickbare Flaechen im Block "
                            f"(hoechstens {HOECHSTENS_FLAECHEN})")
     eng = gemessen[STAPELN_ERLAUBT_UNTER]
+    # ⚠ Auf schmalen Fenstern MUSS die feste Breite weichen. Sie tut es nur, wenn die
+    # Media-Query dieselbe Spezifitaet hat und danach steht — im Entwurf mit `.b .lb-zwei`
+    # (zwei Klassen) gewann die feste Breite, und bei 820 px lief die Seite quer.
+    if eng.get("quer"):
+        befunde.append(f"bei {STAPELN_ERLAUBT_UNTER} px laeuft die Seite quer; die feste "
+                       "Breite weicht nicht")
     if eng["reihen"] == 1:
         befunde.append(f"bei {STAPELN_ERLAUBT_UNTER} px steht alles noch nebeneinander — "
                        "so schmal gehoert es gestapelt")
