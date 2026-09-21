@@ -34,7 +34,11 @@ TAGS = "b|strong|em|i|a"
 # „Ampel-Einschätzung , eine" — eine Korrektur, die einen neuen Fehler baut.
 ANHAENGEND = ",.;:!?)"
 
-VOR = re.compile(rf'(?:tk|t)\("[^"]*[^ "]"\)\}}<(?:{TAGS})[ >]')
+# ⚠ EIN ZEICHEN IST KEIN WORT. `<i aria-hidden="true">›</i>` ist ein Pfeil, keine
+# Fortsetzung des Satzes; den Abstand macht dort `gap` im Stylesheet, und ein Leerzeichen
+# im Markup waere ein zweiter, ungewollter. Der Waechter hat genau das am 2026-09-21
+# gemeldet — richtig erkannt, falsch bewertet. Dekoration ist ausgenommen, Text nicht.
+VOR = re.compile(rf'(?:tk|t)\("[^"]*[^ "]"\)\}}<(?:{TAGS})(?![^>]*aria-hidden)[ >]')
 NACH = re.compile(rf'</(?:{TAGS})>\$\{{(?:tk|t)\("[^ "{re.escape(ANHAENGEND)}]')
 
 
@@ -82,3 +86,11 @@ def test_der_waechter_meckert_nicht_ueber_ein_anhaengendes_satzzeichen():
 
 def test_der_waechter_meckert_nicht_ueber_ein_vorhandenes_leerzeichen():
     assert not _fugen('x${tk("eine")} <b>${tk("Ampel")}</b> ${tk("und mehr")}x')
+
+
+def test_der_waechter_haelt_ein_dekoratives_zeichen_nicht_fuer_einen_satz():
+    """⚠ Gegenprobe zur Ausnahme: ein `aria-hidden`-Pfeil direkt hinter einem Text ist in
+    Ordnung, ein echtes Wort ohne Leerzeichen nicht."""
+    assert not _fugen('x${tk("Wie wir das absichern")}<i aria-hidden="true">\u203a</i>x')
+    assert _fugen('x${tk("Wie wir das absichern")}<i>und weiter</i>x'), (
+        "ein sichtbares Wort ohne Leerzeichen wird nicht mehr gemeldet")

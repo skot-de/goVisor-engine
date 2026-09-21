@@ -120,6 +120,16 @@ def _rendern(analyse: pathlib.Path, ziel: pathlib.Path) -> bool:
 """ + teile + "\n  export { kopf };\n"
     css = (WURZEL / "web" / "app" / "globals.css").read_text(encoding="utf-8")
     css += "\n" + (WURZEL / "web" / "app" / "explorer.css").read_text(encoding="utf-8")
+    # ⚠ DIE ECHTE DATEIZAHL, NICHT EINE ERFUNDENE. Der Kopf zeigt „18 von 25 Dateien
+    # ausgewertet"; mit einer festen 5 im Treiber haette die Sonde diesen Zweig nie
+    # gesehen und die Beschriftung waere ungeprueft geblieben.
+    dateien = 0
+    tx = WURZEL / "web" / "data" / "doc-text" / analyse.name
+    if tx.exists():
+        try:
+            dateien = int(json.loads(tx.read_text(encoding="utf-8")).get("files") or 0)
+        except Exception:
+            dateien = 0
     with tempfile.TemporaryDirectory() as t:
         mod = pathlib.Path(WURZEL / "web" / f".pruefe-unterlagen-{pathlib.Path(t).name}.mjs")
         treiber = pathlib.Path(t) / "treiber.mjs"
@@ -128,7 +138,7 @@ def _rendern(analyse: pathlib.Path, ziel: pathlib.Path) -> bool:
 import {{ readFileSync, writeFileSync }} from "node:fs";
 const {{ kopf }} = await import({json.dumps(str(mod))});
 const a = JSON.parse(readFileSync({json.dumps(str(analyse))}, "utf8"));
-const l = {{ id: "x", lbFiles: 5, lbAnalyse: a, unterlagen: {{ url: "https://x" }} }};
+const l = {{ id: "x", lbFiles: {dateien}, lbAnalyse: a, unterlagen: {{ url: "https://x" }} }};
 const html = kopf(l);
 writeFileSync({json.dumps(str(ziel))},
   '<meta charset="utf-8"><style>' + {json.dumps(css)}

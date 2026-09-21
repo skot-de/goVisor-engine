@@ -188,3 +188,54 @@ def test_urteil_und_begruendung_stehen_in_einem_kasten():
     css = (WURZEL / "web" / "app" / "explorer.css").read_text(encoding="utf-8")
     for farbe in ("va-go", "va-weigh", "va-stop"):
         assert f".va-karte.{farbe}{{" in css, f"der Kasten kennt die Farbe {farbe} nicht"
+
+
+def test_der_dateizaehler_nennt_zaehler_und_nenner():
+    """„25 Dateien ausgewertet" behauptete zu viel.
+
+    ⚠ `lbFiles` ist die Zahl der Dateien im Buendel, NICHT die der ausgewerteten. Gemessen
+    ueber 151 Paare liegt sie immer ueber `parsed_files + other_documents`, im Median um 7.
+    Ausgewertet wurde alles ausser den „Weiteren Dokumenten" — und genau die stehen unten
+    in der gleichnamigen Gruppe, die zwei Zahlen gehen also auf.
+    """
+    q = CORE.read_text(encoding="utf-8")
+    i = q.index('class="stand"')
+    b = q[max(0, i - 700):i + 300]
+    assert "other_documents" in b, "der Nenner zaehlt die nicht ausgewerteten Dateien nicht ab"
+    assert "{a} von {b} Dateien ausgewertet" in b, "der Zaehler steht wieder allein da"
+
+
+def test_die_haftungszeile_zeigt_dass_sie_aufklappt():
+    """Sven am 2026-09-21: „das ‚wie wir das absichern‘ ist zum einen alles klein
+    geschrieben und es ist nicht klar das man damit etwas auf/zuklappt."""
+    q = CORE.read_text(encoding="utf-8")
+    assert 'tk("Wie wir das absichern")' in q, "die Marke ist wieder kleingeschrieben"
+    i = q.index('tk("Wie wir das absichern")')
+    assert "<i aria-hidden" in q[i:i + 120], "die Marke hat kein Zeichen fuers Aufklappen"
+    css = (WURZEL / "web" / "app" / "explorer.css").read_text(encoding="utf-8")
+    assert ".va-checklist .disc[open] .disc-auf i{transform:rotate(90deg)}" in css, (
+        "der Pfeil dreht sich beim Aufklappen nicht mehr")
+    # ⚠ Gekuerzt werden darf der Haftungssatz, NIE die Marke — im ersten Anlauf lag die
+    # Kuerzung auf der ganzen Zeile und schnitt genau sie ab.
+    assert ".va-checklist .disc .disc-auf{flex:none}" in css, (
+        "die Marke kann wieder abgeschnitten werden")
+
+
+def test_der_weg_zum_portal_ist_ein_knopf():
+    """Es ist der einzige Weg zu den Originaldateien und stand als kleiner Text zwischen
+    zwei Hinweisen."""
+    q = CORE.read_text(encoding="utf-8")
+    i = q.index("const portal = ")
+    b = q[i:i + 400]
+    assert 'class="btn btn-s portal-btn"' in b, "der Portal-Weg ist wieder ein blosser Verweis"
+
+
+def test_die_herkunft_steht_hinter_den_urteilen():
+    """Sven: „den streifen unter den frist kasten." Sie sagt, woher die Auswertung kommt —
+    das liest man, wenn man zweifelt, nicht bevor man anfaengt."""
+    q = CORE.read_text(encoding="utf-8")
+    i = q.index('return `<div class="va-checklist"')
+    zeile = q[i:i + 260]
+    assert zeile.index("${fensterHtml}") < zeile.index("${chead}"), (
+        "der Herkunftsstreifen steht wieder vor den Urteilen")
+    assert zeile.index("${chead}") < zeile.index("${toc}")

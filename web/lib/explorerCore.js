@@ -1991,7 +1991,10 @@ function renderChecklistBlock(a, l){
      ⚠ Die Zahl der offenen Luecken steht weiterhin an der Gruppe „Offen" selbst
      (`<span class="cnt">`), s. `test_aktivierung_a.py::test_die_sprungmarke_zaehlt_alle`. */
 
-  const portal = (l.unterlagen&&l.unterlagen.url) ? `<a href="${esc(l.unterlagen.url)}" target="_blank" rel="noopener" class="link">${tk("Zum Vergabeportal ↗")}</a>` : '';
+  /* ⚠ EIN KNOPF, KEIN VERWEIS. Es ist der einzige Weg zu den Originaldateien und stand
+     als kleiner gruener Text zwischen zwei Hinweisen. Sven am 2026-09-21: „zum
+     vergabeportal kann vll ein richtiger button werden." */
+  const portal = (l.unterlagen&&l.unterlagen.url) ? `<a href="${esc(l.unterlagen.url)}" target="_blank" rel="noopener" class="btn btn-s portal-btn">${tk("Zum Vergabeportal")}<i aria-hidden="true">↗</i></a>` : '';
   /* ⚠ EINE ZEILE, KEIN KASTEN. Hier standen drei Kaesten uebereinander (Herkunft,
      Erstnutzer-Hinweis, Inhaltsverzeichnis), bevor der erste Pruefpunkt kam. Was dieser
      Block sagt, ist Herkunft: woher die Auswertung stammt und wie weit man ihr trauen
@@ -2002,15 +2005,31 @@ function renderChecklistBlock(a, l){
      Zwei verschieden grosse Zahlen mit demselben Wort, 200 px auseinander. Deshalb steht
      hier jetzt „5 Dateien ausgewertet" — was die Zahl wirklich meint. */
   const chead = `<div class="chead">${renderUnterlagenstand(l)}
-    <span class="stand">${(l.lbFiles||1) === 1
-      ? tk("1 Datei ausgewertet") : tk("{n} Dateien ausgewertet", {n: l.lbFiles||1})}</span>
+    ${(()=>{
+      /* ⚠ „25 Dateien ausgewertet" BEHAUPTETE ZU VIEL. `lbFiles` ist die Zahl der Dateien
+         im Buendel, nicht die der ausgewerteten — gemessen liegt sie IMMER ueber
+         `parsed_files + other_documents` (Median 7 darueber). Ausgewertet wurde alles
+         ausser dem, was als „Weitere Dokumente" aussortiert ist; genau diese Dateien
+         stehen unten in der gleichnamigen Gruppe, die zwei Zahlen gehen also auf.
+
+         ⚠ Der Token-Deckel kann in Einzelfaellen noch Doktypen abschneiden
+         (`truncated_doctypes`), gemessen in 0,5 % der Auswertungen. Deshalb ist der
+         Zaehler eine Obergrenze — bei einem halben Prozent nehme ich das in Kauf, statt
+         eine dritte Zahl zu zeigen. */
+      const ges = l.lbFiles || 0;
+      const raus = (a.other_documents || []).length;
+      if (ges > raus && raus > 0)
+        return `<span class="stand">${tk("{a} von {b} Dateien ausgewertet", {a: ges - raus, b: ges})}</span>`;
+      return `<span class="stand">${ges === 1
+        ? tk("1 Datei ausgewertet") : tk("{n} Dateien ausgewertet", {n: ges || 1})}</span>`;
+    })()}
     ${(()=>{
       const verw = a.rejected_items > 0 && !verlaesslichkeit(a)
         ? (a.rejected_items === 1
             ? tk("1 unbelegte Aussage wurde verworfen.")
             : tk("{n} unbelegte Aussagen wurden verworfen.", {n: a.rejected_items}))
         : '';
-      return `<details class="disc"><summary>${tk("LLM-gestützte Analyse, kann Fehler enthalten.")}<span class="disc-auf">${tk("wie wir das absichern")}</span></summary>
+      return `<details class="disc"><summary><span class="disc-txt">${tk("LLM-gestützte Analyse, kann Fehler enthalten.")}</span><span class="disc-auf">${tk("Wie wir das absichern")}<i aria-hidden="true">›</i></span></summary>
         <p>${tk("Jede Angabe ist mit Fundstelle im Originaldokument belegt.")} ${verw} ${tk("Maßgeblich bleiben die Vergabeunterlagen; bitte regelmäßig prüfen, ob neue vorliegen.")}</p></details>`;
     })()}
     ${verlaesslichkeit(a)}${portal}</div>`;
@@ -2031,7 +2050,10 @@ function renderChecklistBlock(a, l){
      Vorspann und erklaerte etwas, das man erst sieht, wenn man einen Pruefpunkt aufklappt:
      dass der Textvorschlag noch eine Vorlage ist. Jetzt steht er AN der Vorlage. */
   const firstday = '';
-  return `<div class="va-checklist" data-clroot="${l.id}">${chead}${firstday}${fensterHtml}${profilHtml}${umfangHtml}${toc}${groupsHtml}${offen}${weitere}</div>`;
+  /* ⚠ DIE HERKUNFT STEHT HINTER DEN URTEILEN, nicht davor. Sie sagt, woher die Auswertung
+     kommt und wie weit man ihr trauen darf — das liest man, wenn man zweifelt, nicht bevor
+     man anfaengt. Sven am 2026-09-21: „den streifen unter den frist kasten." */
+  return `<div class="va-checklist" data-clroot="${l.id}">${firstday}${fensterHtml}${profilHtml}${umfangHtml}${chead}${toc}${groupsHtml}${offen}${weitere}</div>`;
 }
 
 // Download-Knopf für unsere extrahierte Tabelle (nicht für die Original-Unterlagen — die

@@ -436,16 +436,40 @@ mark.hit{background:#CFF3E4;box-shadow:0 0 0 2px #CFF3E4}
 .va-worum[open]>summary::after{transform:rotate(90deg)}
 .va-worum .va-sum{margin:7px 0 0}
 /* Herkunftszeile: kein Kasten, keine Flaeche — sie ordnet ein, sie fuehrt nicht. */
-.va-checklist .chead{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin:0 0 8px;font-size:11.5px;color:var(--ink-400)}
+/* ⚠ EINE ZEILE, KEIN UMBRUCH. Mit `flex-wrap:wrap` schob `margin-left:auto` den
+   Portal-Knopf immer in eine zweite Zeile — auch bei 1100 px, also immer. Stattdessen
+   darf der Haftungstext schrumpfen; er ist der einzige Teil, der kuerzbar ist. */
+.va-checklist .chead{display:flex;align-items:center;gap:12px;flex-wrap:nowrap;
+  margin:0 0 8px;font-size:11.5px;color:var(--ink-400)}
+.va-checklist .chead .stand{flex:none}
+.va-checklist .chead .disc{flex:1 1 auto;min-width:0;overflow:hidden}
+/* ⚠ GEKUERZT WIRD DER HAFTUNGSSATZ, NICHT DIE MARKE. Im ersten Anlauf lag die Kuerzung
+   auf der ganzen Zeile — abgeschnitten wurde damit ausgerechnet „Wie wir das absichern",
+   also genau das, was sichtbar sein soll. */
+.va-checklist .chead .disc>summary{flex-wrap:nowrap;min-width:0}
+.va-checklist .disc-txt{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
+.va-checklist .disc .disc-auf{flex:none}
 .va-checklist .chead .stand{font-family:var(--mono,monospace);font-size:11.5px;text-transform:none;letter-spacing:normal;color:var(--ink-600)}
-.va-checklist .chead .link{margin-left:auto;color:var(--gd);text-decoration:none;font-size:12px;font-weight:600}
+/* Der Weg zu den Originaldateien ist ein Knopf, kein Beitext. */
+.va-checklist .portal-btn{margin-left:auto;display:inline-flex;align-items:center;gap:5px;
+  text-decoration:none;white-space:nowrap}
+.va-checklist .portal-btn i{font-style:normal}
 /* Haftung: eine Zeile offen, der Rest auf Klick. ⚠ Was gekuerzt wird, ist die
    Erlaeuterung — die Warnung selbst steht in der Summary und ist immer sichtbar. */
 .va-checklist .disc{font-size:11.5px;color:var(--ink-400);line-height:1.55;min-width:0}
 .va-checklist .disc>summary{list-style:none;cursor:pointer;display:flex;gap:8px;align-items:baseline}
 .va-checklist .disc>summary::-webkit-details-marker{display:none}
-.va-checklist .disc .disc-auf{color:var(--gd);white-space:nowrap}
-.va-checklist .disc[open] .disc-auf{visibility:hidden}
+/* ⚠ DASS MAN HIER AUFKLAPPT, MUSS MAN SEHEN. „wie wir das absichern" stand klein,
+   kleingeschrieben und ohne jedes Zeichen dafuer zwischen zwei Hinweisen. Jetzt:
+   Grossschreibung, Pfeil, und beim Ueberfahren ein Rahmen — dieselbe Marke wie am
+   Dokumenten-Index darueber. */
+.va-checklist .disc .disc-auf{display:inline-flex;align-items:center;gap:4px;
+  color:var(--gd);white-space:nowrap;font-weight:600;
+  border:1px solid transparent;border-radius:99px;padding:1px 8px}
+.va-checklist .disc>summary:hover .disc-auf{border-color:var(--line);background:var(--surface)}
+.va-checklist .disc .disc-auf i{font-style:normal;transition:transform .18s;display:inline-block}
+.va-checklist .disc[open] .disc-auf i{transform:rotate(90deg)}
+
 .va-checklist .disc p{margin:7px 0 0}
 /* ⚠ Kein eigener Kasten mehr: der Hinweis ist eine Fussnote zum Kopf, kein Befund. */
 .va-checklist .cl-vorlage{margin:7px 0 0;font-size:11.5px;color:var(--ink-400)}
