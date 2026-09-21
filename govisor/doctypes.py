@@ -112,7 +112,21 @@ _REGELN: tuple[tuple[str, dict[str, str]], ...] = (
         "pl": r"umow|wzór.{0,3}umowy|istotne.{0,3}postanowienia",
     }),
     ("aufforderung", {
-        "de": r"aufforder|anschreiben|angebotsauff|deckblatt.*angebot|begleitschreiben",
+        # ⚠ „Verzeichnis der einzureichenden Unterlagen" GEHOERT HIERHER. Es listet auf,
+        # welche Nachweise mit dem Angebot vorzulegen sind, und sagt in mehreren gelesenen
+        # Faellen woertlich, dass fehlende Unterlagen zum Ausschluss fuehren. Ohne diese
+        # Regel fiel es als `sonstiges` oder `formblatt` aus der Auswertung.
+        #
+        # ⚠ ZWEI WOERTER, NICHT EINES. Die Liste allein reicht nicht: „Inhaltsverzeichnis
+        # Vergabeunterlagen" ist ein Inhaltsverzeichnis und traegt keine Anforderung.
+        # Verlangt werden deshalb ein Listenwort UND ein Einreichungswort. Gemessen ueber
+        # 14.340 uebergangene Dateien: 160 Treffer (1,1 %), in einer Stichprobe von 12 waren
+        # alle 12 echte Anforderungslisten.
+        "de": r"aufforder|anschreiben|angebotsauff|deckblatt.*angebot|begleitschreiben|"
+              r"(verzeichnis|übersicht|uebersicht|auflistung|liste|checkliste)"
+              r"[^/]{0,30}(einzureichend|vorzulegend|beizubringend)|"
+              r"(einzureichend|vorzulegend|beizubringend)[^/]{0,30}"
+              r"(verzeichnis|übersicht|uebersicht|auflistung|liste)",
         "at": r"angebotsbestimm|einladung.{0,3}zur.{0,3}angebot|ausschreibungsschreiben|"
               r"angebotsschreiben",
         "fr": r"invitation|lettre.{0,3}de.{0,3}consultation|avis.{0,3}d.{0,3}appel",
@@ -245,6 +259,19 @@ _NUMMER_TYP: dict[str, str] = {
     "211": "aufforderung",          # 79 %, n=1.563   Aufforderung zur Angebotsabgabe
     "213": "aufforderung",          # 68 %, n=1.534   Angebotsschreiben
     "324": "aufforderung",          # 90 %, n=204
+    # ⚠ 216 IST ANDERS ABGELEITET ALS DER REST DIESER TABELLE. Die uebliche Methode
+    # (Rest des Dateinamens klassifizieren) ist hier zirkulaer: der Rest lautet
+    # „VHB Verzeichnis vorzulegende Unterlagen", und das Wort „VHB" trifft selbst die
+    # Formblatt-Regel — gemessen 74 % formblatt, also genau das, was der Name sagt, und
+    # nicht, was das Dokument ist. Entschieden hat deshalb der INHALT: 22 von 22 gelesenen
+    # 216-Dateien ordnet `classify_content` als aufforderung ein (100 %), und im Text
+    # steht woertlich „Ergaenzung der Aufforderung zur Angebotsabgabe".
+    #
+    # ⚠ WARUM DAS ZAEHLT: als `formblatt` fiel das Verzeichnis aus der Auswertung
+    # (`AUSWERTUNG` in scripts/analyze_docs.py) und landete unter „Weitere Dokumente" —
+    # obwohl es auflistet, WELCHE Nachweise einzureichen sind. Gemessen ueber 14.340
+    # uebergangene Dateien betrifft diese Familie 160 Stueck (1,1 %).
+    "216": "aufforderung",          # Inhalt 100 %, n=22   Verzeichnis vorzulegender Unterlagen
     "631": "aufforderung",          # 90 %, n=340
     # Eignung / Bewerbungsbedingungen
     "124": "eignung",               # 67 %, n=2.238
