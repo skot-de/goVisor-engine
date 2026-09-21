@@ -1980,7 +1980,7 @@ function renderChecklistBlock(a, l){
         <div style="margin-top:var(--s3)"><button class="va-upload-btn" data-uploaddocs="${l.id}">${tk("Hier hochladen (ZIP/PDF)")}</button></div>
       </div></div></article>`).join('')
   }</div></details>` : '';
-  const weitere = other.length ? `<details class="grp" id="clg-weit"><summary><span class="caret">›</span>${tk("Weitere Dokumente")}<span class="cnt">${other.length}</span></summary><div class="gbody"><div class="flist" style="margin-bottom:11px">${other.slice(0,20).map(f=>`<div class="f"><span class="dot">·</span> ${esc(f)}</div>`).join('')}</div></div></details>` : '';
+  const weitere = other.length ? `<details class="grp" id="clg-weit"><summary><span class="caret">›</span>${tk("Weitere Dokumente")}<span class="cnt">${other.length}</span></summary><div class="gbody"><p class="grp-hinweis">${tk("Nicht ausgewertet: Pläne, technische Anlagen und Formulare zum Ausfüllen tragen keine Anforderungen.")}</p><div class="flist" style="margin-bottom:11px">${other.slice(0,20).map(f=>`<div class="f"><span class="dot">·</span> ${esc(f)}</div>`).join('')}</div></div></details>` : '';
 
   /* ⚠ DIE SPRUNGMARKEN SIND WEG, und das ist eine Folge des Umbaus, keine Sparmassnahme.
      Sie waren das Inhaltsverzeichnis eines Dokuments, das ganz aufgeklappt 19.837 px hoch
@@ -2029,8 +2029,27 @@ function renderChecklistBlock(a, l){
             ? tk("1 unbelegte Aussage wurde verworfen.")
             : tk("{n} unbelegte Aussagen wurden verworfen.", {n: a.rejected_items}))
         : '';
-      return `<details class="disc"><summary><span class="disc-txt">${tk("LLM-gestützte Analyse, kann Fehler enthalten.")}</span><span class="disc-auf">${tk("Wie wir das absichern")}<i aria-hidden="true">›</i></span></summary>
-        <p>${tk("Jede Angabe ist mit Fundstelle im Originaldokument belegt.")} ${verw} ${tk("Maßgeblich bleiben die Vergabeunterlagen; bitte regelmäßig prüfen, ob neue vorliegen.")}</p></details>`;
+      /* ⚠ DER AUFGEKLAPPTE TEXT GEHOERT UNTER DIE ZEILE, NICHT IN SIE. Im ersten Anlauf
+         stand er im `<details>` selbst — das sitzt in einer nicht umbrechenden Zeile
+         zwischen Dateizahl und Portal-Knopf und ist damit rund 300 px breit. Der Absatz
+         quetschte sich in diese Spalte. Jetzt ist er ein Geschwister und nimmt die volle
+         Breite; sichtbar wird er ueber `details[open] ~ .disc-body`, ganz ohne Skript. */
+      return `<details class="disc"><summary><span class="disc-txt">${tk("LLM-gestützte Analyse, kann Fehler enthalten.")}</span><span class="disc-auf">${tk("Wie wir das absichern")}<i aria-hidden="true">›</i></span></summary></details>
+        <div class="disc-body">
+        <p>${tk("Jede Angabe ist mit Fundstelle im Originaldokument belegt.")} ${verw} ${tk("Maßgeblich bleiben die Vergabeunterlagen; bitte regelmäßig prüfen, ob neue vorliegen.")}</p>
+        ${(()=>{
+          /* ⚠ WARUM NICHT ALLE DATEIEN. Sven am 2026-09-21: „warum werten wir nur ein teil
+             der dokumente aus? vll kann man das dazu schreiben." Ausgewertet werden die
+             sechs Typen, die Anforderungen TRAGEN (`AUSWERTUNG` in `analyze_docs.py`:
+             Fragenbeantwortung, Eignung, Zuschlagskriterien, Leistungsbeschreibung,
+             Vertrag, Aufforderung). Gemessen an 3.030 uebergangenen Dateien sind die
+             anderen: 27 % technische Anlagen, 11 % Eigenerklaerungen, dazu Informations-
+             blaetter, Datenschutz, Formblaetter, Preisblaetter, und 44 % ohne erkannten
+             Typ. Formulare traegt man nicht aus, man fuellt sie aus; Plaene liest man
+             selbst. */
+          const raus = (a.other_documents || []).length;
+          return raus ? `<p>${tk("Ausgewertet werden die Unterlagen, die Anforderungen tragen: Aufforderung, Eignung, Zuschlagskriterien, Leistungsbeschreibung, Vertrag und die Fragenbeantwortung. Die übrigen {n} Dateien sind Pläne, technische Anlagen und Formulare zum Ausfüllen; sie stehen unten unter „Weitere Dokumente“.", {n: raus})}</p>` : '';
+        })()}</div>`;
     })()}
     ${verlaesslichkeit(a)}${portal}</div>`;
   /* ⚠ DIE UEBERSCHRIFT „Eure Checkliste" IST WEGGEFALLEN, und zwar absichtlich: darunter

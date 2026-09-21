@@ -239,3 +239,43 @@ def test_die_herkunft_steht_hinter_den_urteilen():
     assert zeile.index("${fensterHtml}") < zeile.index("${chead}"), (
         "der Herkunftsstreifen steht wieder vor den Urteilen")
     assert zeile.index("${chead}") < zeile.index("${toc}")
+
+
+def test_die_seite_sagt_warum_nicht_alle_dateien_ausgewertet_sind():
+    """Sven am 2026-09-21: „warum werten wir nur ein teil der dokumente aus? vll kann man
+    das dazu schreiben."
+
+    ⚠ Die Zahl ohne den Grund ist schlimmer als keine Zahl: „9 von 15" liest sich wie ein
+    Eingestaendnis, wenn niemand sagt, dass die uebrigen sechs Formulare und Plaene sind.
+    Ausgewertet werden die sechs Typen, die Anforderungen TRAGEN (`AUSWERTUNG` in
+    `scripts/analyze_docs.py`). Gemessen an 3.030 uebergangenen Dateien sind die anderen
+    27 % technische Anlagen, 11 % Eigenerklaerungen, dazu Informationsblaetter,
+    Datenschutz, Formblaetter, Preisblaetter und 44 % ohne erkannten Typ.
+    """
+    q = CORE.read_text(encoding="utf-8")
+    assert "Ausgewertet werden die Unterlagen, die Anforderungen tragen" in q, (
+        "die Erklaerung zur Dateizahl ist weg")
+    assert "Nicht ausgewertet: Pläne, technische Anlagen" in q, (
+        "die Gruppe Weitere Dokumente sagt nicht mehr, warum sie uebergangen wurde")
+    # ⚠ Die sechs Typen im Satz muessen die sechs im Erzeuger sein, sonst behauptet die
+    # Oberflaeche etwas ueber eine Auswahl, die woanders getroffen wird.
+    az = (WURZEL / "scripts" / "analyze_docs.py").read_text(encoding="utf-8")
+    assert 'AUSWERTUNG = ("fragenantworten",) + tuple(doctypes.PRIORITY)' in az, (
+        "die Auswahl im Erzeuger sieht anders aus als der Satz auf dem Bildschirm")
+    dt = (WURZEL / "govisor" / "doctypes.py").read_text(encoding="utf-8")
+    i = dt.index("PRIORITY: tuple[str, ...] = (")
+    block = dt[i:i + 200]
+    for typ in ("eignung", "zuschlagskriterien", "leistungsbeschreibung", "vertrag", "aufforderung"):
+        assert f'"{typ}"' in block, f"{typ} steht nicht mehr in PRIORITY, der Satz stimmt nicht mehr"
+
+
+def test_der_aufgeklappte_text_steht_unter_der_zeile():
+    """⚠ Im ersten Anlauf stand er IM `<details>`, das in einer nicht umbrechenden Zeile
+    zwischen Dateizahl und Knopf sitzt — rund 300 px breit. Jetzt eine eigene Rasterzeile
+    ueber die volle Breite."""
+    css = (WURZEL / "web" / "app" / "explorer.css").read_text(encoding="utf-8")
+    assert ".va-checklist .disc[open] ~ .disc-body{display:block}" in css, (
+        "der Text erscheint nicht mehr beim Aufklappen")
+    assert "grid-column:1 / -1;grid-row:2" in css, "der Text nimmt nicht mehr die volle Breite"
+    assert ".va-checklist .portal-btn{grid-column:3;grid-row:1" in css, (
+        "der Knopf kann wieder in eine dritte Zeile rutschen")

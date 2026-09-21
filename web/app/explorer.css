@@ -439,10 +439,20 @@ mark.hit{background:#CFF3E4;box-shadow:0 0 0 2px #CFF3E4}
 /* ⚠ EINE ZEILE, KEIN UMBRUCH. Mit `flex-wrap:wrap` schob `margin-left:auto` den
    Portal-Knopf immer in eine zweite Zeile — auch bei 1100 px, also immer. Stattdessen
    darf der Haftungstext schrumpfen; er ist der einzige Teil, der kuerzbar ist. */
-.va-checklist .chead{display:flex;align-items:center;gap:12px;flex-wrap:nowrap;
-  margin:0 0 8px;font-size:11.5px;color:var(--ink-400)}
-.va-checklist .chead .stand{flex:none}
-.va-checklist .chead .disc{flex:1 1 auto;min-width:0;overflow:hidden}
+/* ⚠ RASTER, NICHT FLEX. Mit `flex` stand der Portal-Knopf entweder in einer zweiten
+   Zeile (wrap) oder der aufgeklappte Text quetschte sich in eine 300-px-Spalte (nowrap).
+   Drei Spalten loesen beides: Dateizahl, Haftungszeile, Knopf — und der Text darunter
+   ueber alle drei. */
+.va-checklist .chead{display:grid;grid-template-columns:auto minmax(0,1fr) auto;
+  align-items:center;column-gap:12px;margin:0 0 8px;font-size:11.5px;color:var(--ink-400)}
+/* ⚠ PLAETZE FESTNAGELN. Der Textblock steht im Markup VOR dem Knopf (er gehoert zur
+   Haftungszeile); ohne feste Zuweisung schob die automatische Platzierung den Knopf in
+   eine dritte Zeile. */
+.va-checklist .disc-body{display:none;grid-column:1 / -1;grid-row:2}
+.va-checklist .disc[open] ~ .disc-body{display:block}
+.va-checklist .disc-body p{margin:7px 0 0;line-height:1.55;max-width:80ch}
+.va-checklist .chead .stand{justify-self:start}
+.va-checklist .chead .disc{min-width:0;overflow:hidden}
 /* ⚠ GEKUERZT WIRD DER HAFTUNGSSATZ, NICHT DIE MARKE. Im ersten Anlauf lag die Kuerzung
    auf der ganzen Zeile — abgeschnitten wurde damit ausgerechnet „Wie wir das absichern",
    also genau das, was sichtbar sein soll. */
@@ -451,8 +461,8 @@ mark.hit{background:#CFF3E4;box-shadow:0 0 0 2px #CFF3E4}
 .va-checklist .disc .disc-auf{flex:none}
 .va-checklist .chead .stand{font-family:var(--mono,monospace);font-size:11.5px;text-transform:none;letter-spacing:normal;color:var(--ink-600)}
 /* Der Weg zu den Originaldateien ist ein Knopf, kein Beitext. */
-.va-checklist .portal-btn{margin-left:auto;display:inline-flex;align-items:center;gap:5px;
-  text-decoration:none;white-space:nowrap}
+.va-checklist .portal-btn{grid-column:3;grid-row:1;display:inline-flex;align-items:center;
+  gap:5px;text-decoration:none;white-space:nowrap}
 .va-checklist .portal-btn i{font-style:normal}
 /* Haftung: eine Zeile offen, der Rest auf Klick. ⚠ Was gekuerzt wird, ist die
    Erlaeuterung — die Warnung selbst steht in der Summary und ist immer sichtbar. */
@@ -470,7 +480,7 @@ mark.hit{background:#CFF3E4;box-shadow:0 0 0 2px #CFF3E4}
 .va-checklist .disc .disc-auf i{font-style:normal;transition:transform .18s;display:inline-block}
 .va-checklist .disc[open] .disc-auf i{transform:rotate(90deg)}
 
-.va-checklist .disc p{margin:7px 0 0}
+.va-checklist .grp-hinweis{margin:0 0 9px;font-size:12px;color:var(--ink-400)}
 /* ⚠ Kein eigener Kasten mehr: der Hinweis ist eine Fussnote zum Kopf, kein Befund. */
 .va-checklist .cl-vorlage{margin:7px 0 0;font-size:11.5px;color:var(--ink-400)}
 .va-checklist .cl-firstday .link{color:var(--gd);text-decoration:none;font-weight:600}
