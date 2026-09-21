@@ -119,11 +119,15 @@ def _liste_von_seite(pg) -> list[str]:
 # Die Ueberschrift des Unterlagen-Abschnitts. Alles darueber gehoert zur BEKANNTMACHUNG
 # und traegt einen eigenen `download`-Knopf — wer den ganzen Seitentext prueft, verwechselt
 # beides. (Dieselbe Falle wie bei NetServer am 2026-08-24, dort war es die Brotkrume.)
-_ABSCHNITT = ("Access to the tender documents", "Zugang zu den Vergabeunterlagen")
+_ABSCHNITT = ("Access to the tender documents", "Einsicht in die Vergabeunterlagen",
+             "Zugang zu den Vergabeunterlagen")
 
 # ⚠ Gemessen sind die ENGLISCHEN Formen: die Seiten kommen anonym auf Englisch. Die
 # deutschen Entsprechungen stehen als beste Annahme daneben und sind UNGEPRUEFT — wer sie
-# bestaetigt oder widerlegt, streicht diesen Hinweis.
+# bestaetigt oder widerlegt, streicht diesen Hinweis. Bestätigt am 2026-09-22 in einem
+# deutschsprachigen Browser (E79145776): Überschrift „Einsicht in die Vergabeunterlagen"
+# (die frühere Annahme „Zugang zu …" traf nicht), Knopf „anzeigen". Die übrigen deutschen
+# Formen bleiben ungeprüft.
 _ABGELAUFEN = ("Validity expired", "Gültigkeit abgelaufen")
 _AUFGEHOBEN = ("canceled", "aufgehoben")
 _LOGIN_HINWEIS = ("Already registered", "Bereits registrierte")
@@ -143,6 +147,25 @@ def _abschnitt(txt: str) -> str | None:
         if i >= 0:
             return txt[i:i + _ABSCHNITT_MAX]
     return None
+
+
+# Welche Ergebnisse eine Vergabe für immer als ERFASST abhaken. Alles andere („leer",
+# „fehler") geht an die Warteschlange, und die entscheidet mit ihrer Sperrfrist über den
+# nächsten Versuch.
+#
+# ⚠ Bis zum 2026-09-22 galt JEDER Satz in `doc_listing_subreport.parquet` als erfasst,
+# auch „leer" und „fehler". Die Sperrfrist der Warteschlange kam dadurch nie zum Zug, und
+# jede Vergabe wurde genau einmal versucht. Gemessen an 8 zufälligen offenen „0 Dateien"-
+# Fällen (Erstversuch 04.–18.09.): 7 lieferten mit unverändertem Code eine Liste von 7 bis
+# 46 Dateien, eine war hinter der Anmeldung. Die Unterlagen werden oft erst nach der
+# Bekanntmachung eingestellt; wer beim ersten Besuch nichts findet, muss wiederkommen.
+_ENDGUELTIG = frozenset({"nur_liste", "abgelaufen", "aufgehoben", "gated",
+                         "passwortgeschuetzt"})
+
+
+def erledigt(altbestand: list[dict]) -> set[str]:
+    """Kennungen, die kein weiterer Lauf mehr anfassen muss."""
+    return {s["lead_id"] for s in altbestand if s.get("status") in _ENDGUELTIG}
 
 
 def hole_liste(url: str, pg) -> dict:
@@ -238,7 +261,7 @@ def lauf(limit: int | None, dry_run: bool, country: str = "DE",
     if out.exists() and not alles_neu:
         altbestand = con.execute(
             f"SELECT * FROM '{out.as_posix()}'").arrow().read_all().to_pylist()
-        bekannt = {s["lead_id"] for s in altbestand}
+        bekannt = erledigt(altbestand)
         vorher = len(rows)
         rows = [r for r in rows if r[0] not in bekannt]
         if vorher != len(rows):
