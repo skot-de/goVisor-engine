@@ -1827,5 +1827,20 @@ $PY scripts/pruefe_gold_integritaet.py \
 $PY scripts/pruefe_bibel.py \
   || echo "  → Bibel-Pruefung meldet Befunde. Details: python3 scripts/pruefe_bibel.py --offen"
 
+# ── Sonde: traegt jeder holbare Lead einen Zustand? ──────────────────────────────────────
+# Der Anlass (Sven, 2026-09-24): „wenn angeklopft wird, dann sollte es auch fuer alle
+# zustaende tags geben, sonst machts ja kein sinn." Die Tags gibt es — aber sie entstehen
+# beim Anklopfen und leben im Manifest. Wer nie angeklopft wurde, steht in keinem Manifest
+# und traegt deshalb keinen Zustand. Gemessen am 2026-09-24 waren das in DE 2.339 von
+# 10.446 holbaren Leads (22 %), sichtbar in keiner einzigen Zahl des Hauses.
+#
+# Diese Sonde rechnet vom LEAD aus statt vom Abrufer und prueft eine einzige Zusage: die
+# Summe der Klassen ist die Gesamtzahl. Die heute bekannten Portale ohne Abrufer stehen in
+# `curated/portale_ohne_abrufer.csv` und sind still; Befund ist, was NEU dazukommt — also
+# genau der Ausfall, der im September vier Wochen lang unbemerkt blieb.
+# ⚠ Sie liest nur und darf deshalb neben einem Abrufer laufen.
+$PY scripts/pruefe_vollstaendigkeit.py \
+  || echo "  → Ein holbarer Lead traegt keinen Zustand. Details: python3 scripts/pruefe_vollstaendigkeit.py --offen"
+
 # Alte Logs aufräumen (>30 Tage)
 find "$LOG_DIR" -name 'daily-*.log' -type f -mtime +30 -delete 2>/dev/null || true
