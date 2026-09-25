@@ -75,6 +75,7 @@ def gold_integrity(cfg: Config, country: str = "DE") -> list[tuple[str, int]]:
         ("contract_chains.incumbent → entities", "contract_chains.parquet", "incumbent", "entities.parquet", "entity_id"),
         ("buyer_stats.buyer → entities", "buyer_stats.parquet", "buyer_entity_id", "entities.parquet", "entity_id"),
         ("contractor_stats.entity → entities", "contractor_stats.parquet", "entity_id", "entities.parquet", "entity_id"),
+        ("entity_beleg.entity → entities", "entity_beleg.parquet", "entity_id", "entities.parquet", "entity_id"),
         ("buyer_contractor_history.contractor → entities", "buyer_contractor_history.parquet", "contractor_entity_id", "entities.parquet", "entity_id"),
         ("contract_succession.successor → quality", "contract_succession.parquet", "successor", "quality.parquet", "notice_id"),
         ("contract_succession.predecessor → quality", "contract_succession.parquet", "predecessor", "quality.parquet", "notice_id"),

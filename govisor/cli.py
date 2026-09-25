@@ -485,6 +485,10 @@ def main(argv: list[str] | None = None) -> int:
         print("laufzeit ²  :", f"{gold.build_lead_duration(cfg, c):,} Leads (mit frischer Kalibrierung)")
         print("lead-detail :", f"{gold.build_lead_detail(cfg, c):,} Leads (UI-View mit ehrlichen Flags)")
         print("identity    :", f"{gold.build_entity_identity(cfg, c):,} Entities (Gruppe=Identität, Winner-Match)")
+        # ⚠ MUSS NACH `identity` UND VOR dem Lieferanten-Export laufen: `export_suppliers.py`
+        # entscheidet damit, wer ueberhaupt in den Suchraum kommt. Bleibt die Tabelle alt,
+        # faellt eine frisch belegte Firma still wieder heraus.
+        print("beleg       :", f"{gold.build_entity_beleg(cfg, c):,} Firmen mit Beleglage (Anschrift/Domain/Kennnummer)")
         print("dim-plz     :", f"{gold.build_dim_plz(cfg, c):,} PLZ-Zentroide (Radius-Suche)")
         print("dim-nuts    :", f"{gold.build_dim_nuts(cfg, c):,} NUTS-Codes (Regions-Autocomplete)")
         print("lead-geo    :", f"{gold.build_lead_geo(cfg, c):,} Leads geokodiert (Radius-Suche)")

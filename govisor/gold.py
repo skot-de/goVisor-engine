@@ -3046,6 +3046,107 @@ def build_lead_duration(cfg: Config, country: str = "DE"):
     return n
 
 
+# ── BELEGLAGE EINER NUR-NAME-FIRMA ──────────────────────────────────────────────────────
+#
+# ⚠ WARUM DIESE TABELLE EXISTIERT. `suppliers.json` nimmt nur Identitaeten auf, die ueber
+# Handelsregister oder TED-Kennnummer aufgeloest sind. Gemessen am 2026-09-25 sind das 17 %
+# des Bestands; **54 % aller Firmen tragen die Methode `nur_name`**. Wer nur unter seinem
+# Namen bekannt ist, hat kein Firmenprofil, taucht in keiner Suche auf und existiert fuer
+# das Produkt nicht — auch mit fuenf Zuschlaegen nicht. Aufgefallen ist es an der
+# Westfaelischen Drahtindustrie aus Hamm: fuenf Zuschlaege, kein Profil.
+#
+# ⚠ DAS IST KEINE ZUSAMMENFUEHRUNG. `_consolidate_by_national_id` verschmilzt eine
+# nur-Name-Firma in ihren Register-Zwilling GLEICHEN NAMENS. Firmen ohne solchen Zwilling
+# erreicht sie nie; von 13.390 nur-Name-Firmen mit mindestens drei Zuschlaegen standen
+# 1.438 ueberhaupt als Kandidat. Hier geht es um etwas anderes: reicht die eigene
+# Beleglage, um die Firma als EINE Firma zu fuehren?
+#
+# ⚠ WIDERSPRUECHE WERDEN MARKIERT, NICHT AUFGELOEST. Sven am 2026-09-25: „die
+# widersprüchlichen markieren statt verschmelzen." Der Grund steht im Projektgedaechtnis:
+# bei der letzten Entity-Zusammenfuehrung zog die naheliegende Namensregel 25.250
+# Zuschlaege in einen Klumpen. 2.813 der 13.390 tragen ueber ihre Meldungen MEHRERE
+# Postleitzahlen — das koennen Niederlassungen sein oder zwei gleichnamige Firmen. Beides
+# sieht gleich aus, und der Unterschied entscheidet ueber die Richtigkeit jeder Kennzahl,
+# die daran haengt.
+_BELEG_FREIMAILER = ("gmail.com", "googlemail.com", "gmx.de", "gmx.net", "web.de",
+                     "t-online.de", "hotmail.com", "hotmail.de", "outlook.de", "outlook.com",
+                     "yahoo.de", "aol.com", "freenet.de", "posteo.de", "mailbox.org")
+
+
+def build_entity_beleg(cfg: Config, country: str = "DE") -> int:
+    """Je nur-Name-Firma mit Zuschlaegen: womit laesst sich belegen, dass sie EINE ist?
+
+    Fuenf Klassen, absteigend nach Belegkraft:
+
+      ``kennnummer``      eine einzige Kennnummer ueber alle Meldungen
+      ``anschrift``       eine einzige Postleitzahl ueber mindestens zwei Meldungen
+      ``maildomain``      eine einzige Firmen-Mail-Domain ueber mindestens zwei Meldungen
+      ``widerspruch``     mehrere Postleitzahlen — Niederlassungen ODER Namensgleiche
+      ``unbelegt``        kein Merkmal
+
+    ⚠ „vorhanden" IST KEIN BELEG. Gemessen tragen 78 % der Zielmenge irgendeine
+    Postleitzahl, aber nur 45 % ueber mehrere Meldungen DIESELBE. Der Unterschied ist der
+    ganze Punkt: eine einzelne Adresse bestaetigt nichts, sie steht nur da.
+
+    ⚠ FREIMAILER ZAEHLEN NICHT. Eine @gmx.de-Adresse belegt keine Firmenidentitaet; sie
+    belegt, dass jemand ein Postfach hat. Die Liste steht als Konstante daneben.
+
+    ⚠ DER WIDERSPRUCH SCHLAEGT DIE SCHWAECHEREN BELEGE, ABER NICHT DIE KENNNUMMER. Wer
+    mehrere Postleitzahlen fuehrt, aber durchgehend dieselbe Kennnummer traegt, ist
+    belegbar eine Firma mit mehreren Standorten. Ohne Kennnummer bleibt es offen.
+    """
+    g = cfg.gold_dir / country
+    PE = f"'{(g / 'party_entity.parquet').as_posix()}'"
+    EN = f"'{(g / 'entities.parquet').as_posix()}'"
+    NP = f"'{cfg.silver_table_glob('notice_parties', country)}'"
+    frei = ", ".join(f"'{d}'" for d in _BELEG_FREIMAILER)
+    out = g / "entity_beleg.parquet"
+    con = _db.connect(); con.execute("SET threads=4")
+    con.execute(f"""
+        COPY (
+          WITH saetze AS (
+            SELECT p.entity_id, p.notice_id,
+                   nullif(trim(np.postal_code), '') AS plz,
+                   nullif(trim(np.national_id), '') AS nid,
+                   lower(regexp_extract(nullif(trim(np.email), ''), '@(.+)$', 1)) AS maildomain
+            FROM read_parquet({PE}) p
+            JOIN read_parquet({NP}, hive_partitioning=1, union_by_name=1) np
+              ON np.notice_id = p.notice_id AND np.role = p.role AND np.seq = p.seq
+            WHERE p.role = 'winner'
+          ),
+          roh AS (
+            SELECT entity_id,
+                   count(DISTINCT notice_id) AS wins,
+                   count(DISTINCT plz) FILTER (WHERE plz IS NOT NULL) AS n_plz,
+                   count(*)            FILTER (WHERE plz IS NOT NULL) AS c_plz,
+                   any_value(plz)      FILTER (WHERE plz IS NOT NULL) AS plz,
+                   count(DISTINCT nid) FILTER (WHERE nid IS NOT NULL AND nid <> '-') AS n_nid,
+                   any_value(nid)      FILTER (WHERE nid IS NOT NULL AND nid <> '-') AS nid,
+                   count(DISTINCT maildomain) FILTER (
+                        WHERE maildomain IS NOT NULL AND maildomain NOT IN ({frei})) AS n_domain,
+                   count(*) FILTER (
+                        WHERE maildomain IS NOT NULL AND maildomain NOT IN ({frei})) AS c_domain,
+                   any_value(maildomain) FILTER (
+                        WHERE maildomain IS NOT NULL AND maildomain NOT IN ({frei})) AS maildomain
+            FROM saetze GROUP BY 1
+          )
+          SELECT r.entity_id, e.canonical_name, e.method, r.wins,
+                 r.n_plz, r.plz, r.n_domain, r.maildomain, r.n_nid, r.nid,
+                 CASE
+                   WHEN r.n_nid = 1                        THEN 'kennnummer'
+                   WHEN r.n_plz > 1                        THEN 'widerspruch'
+                   WHEN r.n_plz = 1 AND r.c_plz >= 2       THEN 'anschrift'
+                   WHEN r.n_domain = 1 AND r.c_domain >= 2 THEN 'maildomain'
+                   ELSE 'unbelegt'
+                 END AS beleg
+          FROM roh r JOIN read_parquet({EN}) e ON e.entity_id = r.entity_id
+        ) TO '{out.as_posix()}' (FORMAT PARQUET, COMPRESSION ZSTD)
+    """)
+    n = con.execute(f"SELECT count(*) FROM read_parquet('{out.as_posix()}')").fetchone()[0]
+    con.close()
+    return n
+
+
 def build_entity_identity(cfg: Config, country: str = "DE"):
     """„Gruppe = Identität"-Auflösung (P0-3) — jede Entity → stabile `identity_id`.
 

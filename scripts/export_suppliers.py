@@ -52,7 +52,14 @@ N = _silber_union("notices")
 E = _union("lead_export")
 
 MIN_WINS = 3      # Firmen ab 3 Zuschlägen auffindbar (Mittelstand); darunter ist das CPV-Profil zu dünn
-MAX_ROWS = 40000  # Sicherheits-Deckel gegen Ausreißer
+# ⚠ DER DECKEL HAT AM 2026-09-25 ZUGESCHLAGEN, UND ZWAR LAUTLOS. Er ist als Sicherung
+# gegen Ausreisser gedacht, nicht als Auswahl. Mit der zweiten Tuer (Beleglage statt nur
+# Register) stiegen die Identitaeten ab 3 Zuschlaegen von 32.659 auf 41.407 — ueber die
+# 40.000. `ORDER BY wins DESC, identity_id` schnitt den Rest bei Gleichstand ALPHABETISCH
+# ab: 5.523 Firmen mit genau drei Zuschlaegen verschwanden, lueckenlos ab „be…". Gemerkt
+# habe ich es nur, weil ich vorher und nachher verglichen habe; die Ausgabe des Skripts
+# meldete nichts.
+MAX_ROWS = 80000  # Sicherheits-Deckel gegen Ausreisser (gemessen belegt: 41.407)
 
 # Generik-/Käufer-Stämme (Ticket #7 v2, Leitplanke 2): keine öffentlichen Käufer, raus.
 # WORTANFANG-Match (am Namensanfang ODER nach einem Leerzeichen) — NICHT beliebiger Substring.
@@ -87,10 +94,39 @@ _KERN = "regexp_replace(split_part(identity_id, ':', -1), '[.0[:space:]-]', '', 
 GUELTIG = (f"length({_KERN}) >= 3 AND lower({_KERN}) "
            f"NOT IN ('na', 'n/a', 'keine', 'unbekannt', 'bieter', 'unknown')")
 
+# ── WER IN DEN SUCHRAUM KOMMT ───────────────────────────────────────────────────────
+#
+# Bis zum 2026-09-25: nur Register- und TED-Kennnummer-Identitaeten. Das sind gemessen
+# 17 % des Bestands, waehrend **54 % aller Firmen die Methode `nur_name` tragen**. Wer nur
+# unter seinem Namen bekannt ist, hatte kein Profil, tauchte in keiner Suche auf und
+# existierte fuer das Produkt nicht — auch mit fuenf Zuschlaegen nicht. Aufgefallen an der
+# Westfaelischen Drahtindustrie aus Hamm.
+#
+# ⚠ DIE ZWEITE TUER IST ENG, NICHT OFFEN. Herein kommt nur, wessen eigene Beleglage die
+# Firma als EINE Firma ausweist (`gold.build_entity_beleg`): eine durchgehende Kennnummer,
+# eine stabile Anschrift ueber mehrere Meldungen oder eine stabile Firmen-Mail-Domain.
+# Gemessen kommen damit 7.657 von 13.390 nur-Name-Firmen mit mindestens drei Zuschlaegen
+# herein (57 %).
+#
+# ⚠ WIDERSPRUECHE BLEIBEN DRAUSSEN UND WERDEN MARKIERT. 2.377 der Zielmenge fuehren ueber
+# ihre Meldungen MEHRERE Postleitzahlen. Das koennen Niederlassungen sein oder zwei
+# gleichnamige Firmen — beides sieht gleich aus. Sie als eine zu fuehren hiesse, ihre
+# Kennzahlen zu vermischen; die Belegtabelle haelt sie als `widerspruch` fest, damit sie
+# sichtbar bleiben statt still zu verschwinden. Sven am 2026-09-25: „die widersprüchlichen
+# markieren statt verschmelzen." Die Warnung dahinter ist teuer bezahlt: bei der letzten
+# Entity-Zusammenfuehrung zog die naheliegende Namensregel 25.250 Zuschlaege in einen
+# Klumpen. (Die Drahtindustrie selbst faellt uebrigens in diese Gruppe — drei Meldungen
+# nennen Hamm, zwei Berlin. Sie kommt NICHT herein, und das ist die richtige Antwort.)
+BELEG = f"read_parquet('{G}/entity_beleg.parquet')"
+_BELEG_OK = ("kennnummer", "anschrift", "maildomain")
+_beleg_liste = ", ".join(f"'{b}'" for b in _BELEG_OK)
+
 con.execute(f"""CREATE OR REPLACE TEMP TABLE belegt AS
   SELECT DISTINCT ei.identity_id
   FROM {EI} ei JOIN {EN} e ON e.entity_id = ei.entity_id
-  WHERE e.method IN ('handelsregister_exakt','ted_nationalid')
+  LEFT JOIN {BELEG} b ON b.entity_id = ei.entity_id
+  WHERE (e.method IN ('handelsregister_exakt','ted_nationalid')
+         OR coalesce(b.beleg, 'unbelegt') IN ({_beleg_liste}))
     AND {GUELTIG.replace('identity_id', 'ei.identity_id')}""")
 
 con.execute(f"""CREATE OR REPLACE TEMP TABLE w AS

@@ -63,6 +63,10 @@ KETTE: list[tuple[str, str]] = [
     ("build_succession_kpis",      "succession_events → incumbent_tenure"),
     ("build_incumbent_tenure",     "seit wann Incumbent — für lead_detail"),
     ("build_entity_identity",      "Gruppen-Identität"),
+    # ⚠ AT/CH/LU BRAUCHEN SIE GENAUSO. `export_suppliers.py` liest die Belegtabelle ueber
+    # alle Laender (`_union`); fehlt sie fuer ein Land, faellt dessen Bestand still auf
+    # die alte Regel zurueck (nur Register/TED) — und niemand sieht es.
+    ("build_entity_beleg",         "Beleglage je Firma (Anschrift/Domain/Kennnummer)"),
     ("build_duration_calibration", "CPV-Median-Laufzeiten"),
     ("build_lead_duration",        "Vertragsende je Lead — das Herz des Auslauf-Radars"),
     ("build_leads",                "die Auslauf-Leads selbst"),
