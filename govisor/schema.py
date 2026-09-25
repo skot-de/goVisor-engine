@@ -280,6 +280,19 @@ class Notice:
     awards: list[Award] = field(default_factory=list)
     requirements: list[Requirement] = field(default_factory=list)
     notice_kind: str | None = None   # cn | can | pin | corrigendum | other
+    # eForms-Untertyp aus `<cbc:SubTypeCode listName="notice-subtype">`.
+    #
+    # ⚠ WARUM DIESES FELD GEBRAUCHT WIRD. Das alte TED-Formular trug die Art der
+    # Bekanntmachung im Namen (`F07_2014` = Qualifizierungssystem). Unter eForms heissen
+    # ALLE Ausschreibungen `ContractNotice`; die Unterscheidung steckt nur noch in dieser
+    # Zahl. Gemessen am 2026-09-25: `F07_2014` faellt von 149 (2023) auf 12 (2024) auf
+    # NULL ab 2025 — dieselbe stille Bruchstelle wie bei den Berichtigungen, die schon
+    # einmal zwei Jahre lang unbemerkt blieb.
+    #
+    # ⚠ WELCHE ZAHL WAS BEDEUTET, IST GEMESSEN, NICHT GERATEN. Ueber drei Rohmonate
+    # (27.211 Meldungen) tragen 63 % der Subtyp-15-Meldungen das Wort
+    # „Qualifizierungssystem"; bei jedem anderen Subtyp sind es unter 6 %.
+    notice_subtype: str | None = None
 
     # Every buyer's country, not just the lead's. Joint procurements have
     # several, and TED counts the notice towards each of them — so a DE run
@@ -1919,6 +1932,25 @@ def eforms_changes(root: ET.Element) -> dict[str, str] | None:
     return raus
 
 
+def _eforms_subtype(root: ET.Element) -> str | None:
+    """Der eForms-Untertyp, z. B. „15" fuer ein Qualifizierungssystem.
+
+    ⚠ Die Liste wird am Attribut erkannt, nicht am Elementnamen. `cbc:SubTypeCode` gibt es
+    auch in anderen Zusammenhaengen, und `cbc:NoticeTypeCode` traegt eine ANDERE Liste
+    (`cont-modif` bei Vertragsaenderungen). Wer nur den Elementnamen nimmt, bekommt je
+    nach Meldung etwas anderes.
+    """
+    for elem in root.iter():
+        if _local(elem) != "SubTypeCode":
+            continue
+        if elem.attrib.get("listName") != "notice-subtype":
+            continue
+        wert = (elem.text or "").strip()
+        if wert:
+            return wert
+    return None
+
+
 def _eforms_buyer_org_ids(root: ET.Element) -> list[str]:
     """Every buyer's org reference, in document order.
 
@@ -2363,6 +2395,7 @@ def _parse_eforms(root: ET.Element, notice_id: str) -> Notice:
         awards=_eforms_awards(root, org_parties),
         requirements=_eforms_requirements(root),
         notice_kind=_EFORMS_KIND.get(_local(root), "other"),
+        notice_subtype=_eforms_subtype(root),
         buyer_countries=list(dict.fromkeys(buyer_countries)),
         texts=texts,
     )

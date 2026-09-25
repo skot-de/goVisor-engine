@@ -38,6 +38,10 @@ def rows(notice: schema.Notice, raw: bytes, country: str, year: int, month: int)
         "schema_gen": notice.schema,
         "form_type": notice.form_type,
         "notice_kind": notice.notice_kind,
+        # ⚠ Unter eForms heissen ALLE Ausschreibungen `ContractNotice`; welche Art es ist,
+        # steht nur noch im Untertyp. `form_type` allein hat den Qualifizierungssystem-
+        # Bestand seit 2025 auf null fallen lassen, ohne dass es jemand gemerkt hat.
+        "notice_subtype": getattr(notice, "notice_subtype", None),
         "language": notice.language,
         "title": notice.title,
         "description": notice.description,

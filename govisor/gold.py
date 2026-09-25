@@ -626,6 +626,49 @@ def build_quality(cfg: Config, country: str = "DE"):
     return n
 
 
+# ── QUALIFIZIERUNGSSYSTEME ──────────────────────────────────────────────────────────────
+#
+# eForms-Untertyp 15. Ein Qualifizierungssystem ist kein Wettbewerb mit Stichtag: wer die
+# Bedingungen erfuellt, tritt jederzeit bei, und danach laufen die Abrufe unter den
+# Qualifizierten. Es hat deshalb naturgemaess KEINE Angebotsfrist.
+#
+# ⚠ WAS DAS ANRICHTETE. `build_prospective_leads` verlangt eine ECHTE Frist in der Zukunft.
+# Ohne Frist fiel jedes Qualifizierungssystem heraus: gemessen am 2026-09-25 kamen von 48
+# in den DE-Rohdaten genau 2 im Produkt an. Die uebrigen 46 gab es fuer den Nutzer nicht —
+# und niemandem fiel es auf, weil nichts fehlte, was vorher dagewesen waere.
+#
+# ⚠ DAS ALTE MERKMAL IST TOT. Vor eForms hiess das Formular `F07_2014`; in DE fiel es von
+# 149 (2023) auf 12 (2024) auf NULL ab 2025. Dieselbe stille Bruchstelle wie bei den
+# Berichtigungen, nur zwei Jahre spaeter bemerkt.
+QUALIFIKATIONS_SUBTYP = "15"
+
+
+def _subtyp_spalte(con, glob_sql: str) -> str:
+    """`n.notice_subtype`, solange es die Spalte gibt — sonst NULL.
+
+    ⚠ DIE SPALTE FEHLT IN JEDER HEUTE VORHANDENEN SILBER-DATEI. Sie entsteht erst beim
+    naechsten Ingest (`normalize.rows`). Ein direkter Zugriff wuerde die ganze Gold-Kette
+    mit einem Binder-Fehler anhalten — und zwar fuer alle Laender gleichzeitig.
+
+    ⚠ `union_by_name` allein reicht NICHT. DuckDB vereint nur Spalten, die in mindestens
+    einer gelesenen Datei vorkommen; solange keine sie hat, bleibt der Name unbekannt.
+    Schlimmer: OHNE `union_by_name` liest DuckDB stillschweigend nach dem Schema der
+    ersten Datei und verschluckt die neue Spalte kommentarlos, sobald sie da ist. Beide
+    Fallen zusammen ergeben genau den Fehler, der hier repariert wird: etwas ist gebaut,
+    kommt aber nie an.
+    """
+    try:
+        cols = {r[0] for r in con.execute(
+            f"SELECT * FROM read_parquet({glob_sql}, union_by_name=1) LIMIT 0").description}
+    except Exception:
+        return "CAST(NULL AS VARCHAR)"
+    return "n.notice_subtype" if "notice_subtype" in cols else "CAST(NULL AS VARCHAR)"
+
+
+def _qualifikationssystem_sql(subtyp_ausdruck: str) -> str:
+    return f"({subtyp_ausdruck} = '{QUALIFIKATIONS_SUBTYP}')"
+
+
 def _open_house_sql(title_col: str = "title", deadline_col: str | None = None) -> str:
     """Erkennt Open-House-Verfahren (§130a/§130c SGB V) am Titel.
 
@@ -2762,6 +2805,10 @@ def build_lead_deadline(cfg: Config, country: str = "DE"):
     N = f"'{cfg.silver_table_glob('notices', country)}'"
     out = (g / "lead_deadline.parquet").as_posix()
     con = _db.connect(); con.execute("SET threads=4")
+    # ⚠ `union_by_name` IST HIER PFLICHT, nicht Vorsicht. Ohne sie liest DuckDB nach dem
+    # Schema der ERSTEN Datei und verschluckt `notice_subtype` stillschweigend, sobald der
+    # erste Ingest sie schreibt — die Reparatur waere gebaut und kaeme nie an.
+    QS = _qualifikationssystem_sql(_subtyp_spalte(con, N))
     ANRQ = _ANR_SQL(cfg, country)
     con.execute(f"""
         COPY (
@@ -2788,20 +2835,32 @@ def build_lead_deadline(cfg: Config, country: str = "DE"):
             -- vorhandenen, aber ueberholten Wert. Das ist der einzige Fall, in dem eine
             -- Dublette einen belegten Wert schlaegt — und er ist auf eindeutige 1:1-Paare
             -- begrenzt (Herleitung im Docstring von `dedupe.anreichern`).
+            -- ⚠ EIN UNBEFRISTETES VERFAHREN BEKOMMT KEINEN ERFUNDENEN STICHTAG. Die
+            -- Schaetzung unten setzt publication_date + ~30 Tage; bei einem
+            -- Qualifizierungssystem erzeugt das einen Zustand, den es nicht gibt —
+            -- „abgelaufen" bei etwas, dem man jederzeit beitreten kann. Gemessen am
+            -- 2026-09-25 galten dadurch 22 von 38 als vorbei. Stattdessen der Platzhalter,
+            -- den die Quellen selbst benutzen (AT: 01.01.2100); `_open_house_sql` erkennt
+            -- ihn und die Oberflaeche zeigt „laufend" statt einer Zahl.
             CASE WHEN vrl.wert IS NOT NULL THEN try_cast(vrl.wert AS DATE)
                  WHEN n.submission_deadline IS NOT NULL THEN n.submission_deadline::DATE
                  WHEN anr.wert IS NOT NULL THEN try_cast(anr.wert AS DATE)
+                 WHEN {QS} THEN DATE '2100-01-01'
                  ELSE (n.publication_date + (CAST(coalesce(win.m, gm.m) AS INT) * INTERVAL 1 DAY))::DATE
             END AS deadline_date,
             -- Eigene Herkunftsstufe, nicht als 'echt' getarnt: die Frist ist belegt, stammt
             -- aber aus einem anderen Satz. Wer sie benutzt, soll das sehen koennen.
+            -- ⚠ „unbefristet" ist weder echt noch geschaetzt, sondern die Aussage, dass
+            -- es keine Frist GIBT. Als 'geschaetzt' getarnt haette es eine Genauigkeit
+            -- behauptet, die niemand nachpruefen kann.
             CASE WHEN vrl.wert IS NOT NULL THEN 'echt_verlaengert'
                  WHEN n.submission_deadline IS NOT NULL THEN 'echt'
                  WHEN anr.wert IS NOT NULL THEN 'echt_aus_dublette'
+                 WHEN {QS} THEN 'unbefristet'
                  WHEN win.m IS NOT NULL THEN 'geschaetzt_cpv'
                  ELSE 'geschaetzt_global' END AS deadline_source,
             CAST(coalesce(win.m, gm.m) AS INT) AS est_window_days
-          FROM read_parquet({N}, hive_partitioning=1) n
+          FROM read_parquet({N}, hive_partitioning=1, union_by_name=1) n
           LEFT JOIN win ON win.cpv4 = substr(n.cpv_main,1,4)
           LEFT JOIN (SELECT notice_id, min(wert) AS wert FROM {ANRQ}
                      WHERE feld='submission_deadline' GROUP BY 1) anr USING (notice_id)
@@ -3231,6 +3290,11 @@ def build_prospective_leads(cfg: Config, country: str = "DE", reference_date: st
                              ("party_entity.parquet", "entities.parquet", "quality.parquet",
                               "dim_cpv.parquet", "dim_deflator.parquet", "leads.parquet"))
     con = _db.connect(); con.execute("SET threads=3")
+    # ⚠ Dieselbe Pflicht wie in `build_lead_deadline`: ohne `union_by_name` verschluckt
+    # DuckDB die Spalte stillschweigend, und ohne die Existenzpruefung in `_subtyp_spalte`
+    # haelt ein Binder-Fehler die ganze Gold-Kette an, solange kein Ingest sie geschrieben
+    # hat.
+    QS = _qualifikationssystem_sql(_subtyp_spalte(con, f"'{N}'"))
     con.execute(f"""
         CREATE TABLE buyer AS
         SELECT pe.notice_id, pe.entity_id, e.canonical_name AS buyer_name, e.confidence AS buyer_conf,
@@ -3317,7 +3381,7 @@ def build_prospective_leads(cfg: Config, country: str = "DE", reference_date: st
             (b.buyer_email IS NOT NULL OR b.buyer_url IS NOT NULL) AS reachable,
             round(coalesce(b.buyer_conf,0),2) AS source_confidence,
             true AS ist_hauptlos, 1 AS lose_im_cluster
-          FROM '{N}' n
+          FROM read_parquet('{N}', hive_partitioning=1, union_by_name=1) n
           JOIN buyer b ON b.notice_id=n.notice_id
           -- Zeilentreu: `quality.parquet` traegt genau eine Zeile je `notice_id` (geprueft
           -- am 2026-09-05: 2.275.460 Zeilen, ebenso viele verschiedene Kennungen), und
@@ -3342,7 +3406,12 @@ def build_prospective_leads(cfg: Config, country: str = "DE", reference_date: st
           -- Die ehrliche Loesung ist ein eigener Grundraum „Sonstiges" im Frontend; bis
           -- dahin ist die Fehlsortierung der Preis dafuer, die Vergabe ueberhaupt zu haben.
           WHERE n.notice_kind IN ('cn','pin')
-            AND {_FRIST_EFF} IS NOT NULL AND {_FRIST_EFF} >= DATE '{ref}'
+            -- ⚠ EIN QUALIFIZIERUNGSSYSTEM HAT KEINE FRIST, und die Bedingung darunter
+            -- verlangt eine. Genau daran fielen sie heraus: gemessen am 2026-09-25 kamen
+            -- von 48 in den DE-Rohdaten 2 im Produkt an. Sie sind nicht abgelaufen, sie
+            -- laufen dauerhaft — wer die Bedingungen erfuellt, tritt jederzeit bei.
+            AND ({QS} OR (
+            {_FRIST_EFF} IS NOT NULL AND {_FRIST_EFF} >= DATE '{ref}'
             -- A6 war ein HARTER Schnitt bei 5 Jahren. Gemessen 2026-08-13: er warf in
             -- Oesterreich 357 von 684 offenen atverg-Verfahren weg (52 %), davon 258 mit dem
             -- Platzhalter-Datum 2100-01-01 — laufende Rahmenvereinbarungen der OeBB und
@@ -3351,7 +3420,7 @@ def build_prospective_leads(cfg: Config, country: str = "DE", reference_date: st
             -- beitretbar, keine echte Frist — genau das, was `procedure_kind='open_house'`
             -- beschreibt. Konvention "markieren statt filtern": die Obergrenze bleibt nur als
             -- Absurditaets-Sperre gegen Parse-Muell, die Einordnung macht `_open_house_sql`.
-            AND {_FRIST_EFF} <= DATE '2200-01-01'
+            AND {_FRIST_EFF} <= DATE '2200-01-01'))
             {_redundante_zweitquelle_sql(cfg, country, stichtag=ref)}
         ) TO '{out}.tmp' (FORMAT PARQUET, COMPRESSION ZSTD)
     """)
