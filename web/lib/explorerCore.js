@@ -770,6 +770,23 @@ function fristCell(l){
   // Beim Vertragsende zaehlt auch die unplausible Laufzeit, sie IST die angezeigte Zahl.
   const gilt = src !== 'unsicher' || (l.tage != null ? grund === 'datum' : true);
   const [woher, warnt] = (gilt && HERKUNFT[src]) || [null, false];
+  /* ⚠ DAUERVERFAHREN HABEN KEINE FRIST, UND DARUEBER DARF MAN NICHT RECHNEN. Open-House-
+     und Qualifizierungsverfahren stehen dauerhaft offen; die Quellen tragen dafuer ein
+     Platzhalterdatum (01.01.2100 in AT, 31.12.2099 in DE). Daraus wurde in der Liste
+     „noch 26.761 Tage" und beim Vertragsende „in -24307 Mon." — gemessen am 2026-09-25
+     bei 390 Vorgaengen. Sven, beim Nachsehen zu einem Drahthersteller: die Zahl war das
+     Erste, was ihm auffiel.
+
+     ⚠ ERKANNT WIRD AM VERFAHREN, NICHT AM DATUM. Alle 390 tragen `verfahren:
+     'open_house'`; eine Datumsschwelle („mehr als zehn Jahre") waere geraten und wuerde
+     beim naechsten Platzhalter danebenliegen. Umgekehrt gilt: von den 2.522 Open-House-
+     Vorgaengen im Bestand tragen nur diese 390 ein solches Datum, die uebrigen haben eine
+     echte Frist und behalten ihren Countdown. Deshalb steht die Pruefung HIER und nicht
+     weiter oben — sie ersetzt keine vorhandene Frist, sie faengt die fehlende ab. */
+  if(l.verfahren === 'open_house' && (l.tage == null || l.tage > 3650)){
+    return `<span class="cd"><span class="val dauer">${tk("laufend")}</span>` +
+           `<span class="cdsub">${tk("dauerhaft offen")}</span></span>`;
+  }
   if(l.tage != null){                       // offene Ausschreibung: Countdown
     const urg = l.tage <= 14;
     return `<span class="cd ${urg?'urg':''}">${val(tk('{n} Tage', {n: l.tage}), l.timing.src, l.timing.hint)}<span class="cdsub${woher ? (warnt ? " cd-woher cd-warn" : " cd-woher") : ""}">${tk(woher || "bis Schluss")}</span></span>`;
@@ -2469,7 +2486,17 @@ function renderUebersicht(l){
         <div class="kvi kvi-lead"><span class="k">${tk("Auftragsvolumen")}</span>
           <span class="vv">${l.volumen.src==='unbekannt'?`<span class="v v-unk">${tk("Nicht veröffentlicht")}</span>`:iv(l.volumen.wert,l.volumen.src,l.volumen.hint,true)}</span></div>
         <div class="kvi kvi-lead"><span class="k">${tk("Frist")}</span>
-          <span class="vv">${l.tage!=null?iv(tk('{n} Tage', {n: l.tage}),l.timing.src,l.timing.hint,true)+`<span class="vm">${tk('bis Schluss')}</span>`:iv(endetText(l),l.timing.src,l.timing.hint,true)}</span></div>
+          <span class="vv">${(() => {
+            /* ⚠ DIESELBE STELLE ZUM ZWEITEN MAL. Die Liste zeigte „noch 26.761 Tage", das
+               Detail „in -24307 Mon." — zwei verschiedene Unsinnszahlen aus demselben
+               Platzhalterdatum. Wer nur die Liste repariert, laesst die Haelfte stehen. */
+            if (l.verfahren === 'open_house' && (l.tage == null || l.tage > 3650))
+              return `<span class="v">${tk("laufend")}</span><span class="vm">${tk("dauerhaft offen")}</span>`;
+            return l.tage != null
+              ? iv(tk('{n} Tage', {n: l.tage}), l.timing.src, l.timing.hint, true)
+                + `<span class="vm">${tk('bis Schluss')}</span>`
+              : iv(endetText(l), l.timing.src, l.timing.hint, true);
+          })()}</span></div>
         <div class="kvi"><span class="k">${tk("Art der Leistung")}</span>
           <span class="vv">${iv(l.natur,'echt')}<span class="vm">CPV ${l.cpv}</span></span></div>
         <div class="kvi"><span class="k">${tk("Wettbewerbslage")}</span>
