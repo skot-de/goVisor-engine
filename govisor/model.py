@@ -36,6 +36,17 @@ NOTICES = pa.schema([
     ("schema_gen", pa.string()),            # 'legacy' | 'eforms'
     ("form_type", pa.string()),
     ("notice_kind", pa.string()),           # 'cn' | 'can' | 'pin' | 'corrigendum' | 'other'
+    # ⚠ OHNE DIESE ZEILE KOMMT DAS FELD NIE IN SILBER AN. `normalize.rows` liefert es,
+    # der Schreiber baut die Tabelle aber gegen DIESES Schema — ein Schluessel, der hier
+    # fehlt, wird kommentarlos verworfen. Genau so ist es mir am 2026-09-26 passiert: die
+    # Extraktion war gebaut, getestet und gruen, und nach dem Nachtlauf stand die Spalte
+    # trotzdem nicht in der Datei.
+    #
+    # eForms-Untertyp aus `<cbc:SubTypeCode listName="notice-subtype">`. Unter eForms
+    # heissen ALLE Ausschreibungen `ContractNotice`; welche Art es ist (Qualifizierungs-
+    # system = 15), steht nur noch hier. Das alte Formular `F07_2014` faellt in DE von 149
+    # (2023) auf 12 (2024) auf NULL ab 2025.
+    ("notice_subtype", pa.string()),
     ("language", pa.string()),
     ("title", pa.string()),
     ("description", pa.string()),

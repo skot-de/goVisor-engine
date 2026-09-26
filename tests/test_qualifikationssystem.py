@@ -122,3 +122,43 @@ def test_die_fristherkunft_heisst_unbefristet_und_nicht_geschaetzt():
     assert "WHEN {QS} THEN 'unbefristet'" in blok
     assert "WHEN {QS} THEN DATE '2100-01-01'" in blok, (
         "ohne Platzhalterdatum faellt es wieder aus der Frist-Bedingung")
+
+
+def test_das_feld_ueberlebt_den_weg_bis_in_die_datei(tmp_path):
+    """⚠ DER FEHLER, DEN ICH SELBST GEMACHT HABE. Die Extraktion war gebaut, getestet und
+    gruen — und nach dem Nachtlauf stand die Spalte trotzdem nicht in Silber. Grund:
+    `model.TABLES['notices']` ist ein FESTES Arrow-Schema, und ein Schluessel, der dort
+    fehlt, wird beim Schreiben kommentarlos verworfen. Ein Test auf `normalize.rows` allein
+    haette den Fehler nie gesehen; geprueft wird deshalb bis in die geschriebene Datei.
+    """
+    import duckdb
+    import pyarrow as pa
+    import pyarrow.parquet as pq
+    from govisor import model
+
+    zeile = {f.name: None for f in model.TABLES["notices"]}
+    assert "notice_subtype" in zeile, (
+        "das Feld fehlt im Arrow-Schema — dann faellt es beim Schreiben lautlos weg")
+    zeile.update({"notice_id": "x", "notice_subtype": "15", "year": 2026, "month": 9})
+    ziel = tmp_path / "probe.parquet"
+    pq.write_table(pa.Table.from_pylist([zeile], schema=model.TABLES["notices"]), ziel)
+    con = duckdb.connect()
+    wert = con.execute(
+        f"SELECT notice_subtype FROM read_parquet('{ziel.as_posix()}')").fetchone()[0]
+    assert wert == "15", wert
+
+
+def test_die_extraktion_liefert_den_subtyp_an_normalize():
+    """Die Kette davor: XML -> parse -> rows. Ohne echte Rohdaten keine Aussage."""
+    import glob
+
+    from govisor import normalize, schema
+
+    treffer = glob.glob(str(WURZEL / "data" / "raw_live" / "DE" / "*" / "490416-2026.xml"))
+    if not treffer:
+        return
+    roh = Path(treffer[0]).read_bytes()
+    n = schema.parse(roh, "490416_2026")
+    assert n.notice_subtype == "15", n.notice_subtype
+    zeilen = normalize.rows(n, roh, "DE", 2026, 7)["notices"]
+    assert zeilen[0]["notice_subtype"] == "15"
