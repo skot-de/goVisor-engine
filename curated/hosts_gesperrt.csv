@@ -1,0 +1,3 @@
+host,land,grund,beleg,stand
+xvergabe.de,DE,robots,"robots.txt: User-agent: * / Disallow: / — der ganze Host ist fuer automatische Abrufe gesperrt. XVergabe ist zudem eine genormte SCHNITTSTELLE; der Weg dorthin fuehrt ueber die offizielle Anbindung, nicht ueber die Oberflaeche.",2026-09-26
+evoportal.vergabe.staatsanzeiger.de,DE,anmeldung,"HTTP 401 auf JEDE Seite, auch auf robots.txt — ohne Konto ist dort nichts erreichbar. Dieselbe Anwendung (URL-Form /awardProcedure/<uuid>) laeuft auf xvergabe.de.",2026-09-26

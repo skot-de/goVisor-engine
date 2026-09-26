@@ -156,27 +156,64 @@ def test_open_house_bleibt_draussen():
         f"Grundmenge {grund:,} != {alle:,} minus {oh:,} Open House")
 
 
-def test_gesperrte_portale_werden_nicht_als_ungeprueft_gefuehrt():
-    """⚠ „Kleinportal, ungeprueft" ist eine Absichtserklaerung, kein Befund. Bei zwei
-    Hosts war sie am 2026-09-26 nachweislich falsch, und der Unterschied entscheidet
-    darueber, ob jemand Arbeit in einen Abrufer steckt:
-
-      * `xvergabe.de` verbietet in robots.txt den GANZEN Host (User-agent: * / Disallow: /)
-      * `evoportal.vergabe.staatsanzeiger.de` antwortet auf JEDE Seite mit HTTP 401,
-        auch auf robots.txt
-
-    Beides ist keine Frage des Parsers. Wer das als „ungeprueft" fuehrt, laedt den
-    naechsten ein, es noch einmal zu versuchen.
+def test_gesperrte_hosts_stehen_nicht_in_der_abrufer_luecke():
+    """⚠ ZWEI LISTEN, ZWEI AUSSAGEN — und sie duerfen sich nicht ueberschneiden.
+    `portale_ohne_abrufer.csv` sagt „hier fehlt ein Abrufer" und laedt ein, einen zu bauen.
+    `hosts_gesperrt.csv` sagt das Gegenteil: es gibt einen, und er muss schweigen. Stuende
+    ein gesperrter Host in der ersten Liste, baute irgendwann jemand einen Abrufer gegen
+    eine robots.txt.
     """
     import csv
 
+    from govisor import docfetch_queue as _queue
+
     with LISTE.open(encoding="utf-8") as f:
-        nach_host = {z["host"]: z for z in csv.DictReader(f)}
-    for host, wort in (("xvergabe.de", "robots.txt"),
-                       ("evoportal.vergabe.staatsanzeiger.de", "401")):
-        z = nach_host.get(host)
-        if z is None:
-            continue                       # der Host kann aus dem Bestand fallen
-        assert wort in z["grund"], f"{host}: der gemessene Grund fehlt ({wort})"
-        assert "ungeprueft" not in z["grund"], (
-            f"{host}: steht wieder als ungeprueft da, obwohl die Sperre gemessen ist")
+        ohne_abrufer = {z["host"].strip().lower() for z in csv.DictReader(f)}
+    doppelt = ohne_abrufer & set(_queue.gesperrte_hosts())
+    assert not doppelt, f"stehen in beiden Listen: {sorted(doppelt)}"
+
+
+def test_querverweise_nennen_die_richtige_liste():
+    """⚠ DIESEN FEHLER HABE ICH SELBST GEBAUT (2026-09-26). Die LMBV-Zeile endete mit
+    „xvergabe.de steht in dieser Liste bereits" — und im selben Arbeitsgang habe ich
+    xvergabe.de aus dieser Liste genommen, weil der Host seitdem gesperrt ist und in
+    `hosts_gesperrt.csv` gehoert. Der Satz war damit falsch, und zwar auf die teuerste Art:
+    er beantwortet genau die Frage, die der naechste Leser hat, und schickt ihn ins Leere.
+
+    ⚠ DIE ERSTE FASSUNG DIESES TESTS HAETTE DEN FEHLER VERFEHLT. Sie fragte nur, ob der
+    genannte Host in IRGENDEINER der beiden Listen steht — xvergabe.de stand ja in der
+    Sperrliste, der falsche Satz waere gruen geblieben. Gefordert ist deshalb, dass der Text
+    die Liste nennt, in der der Host WIRKLICH steht. Die Verwechslung der beiden Listen ist
+    der ganze Punkt: „hier fehlt ein Abrufer" gegen „hier darf keiner fragen".
+    """
+    import csv
+    import re
+
+    # Dateinamen sehen wie Hostnamen aus. `robots.txt`, `hosts_gesperrt.csv` und
+    # `docfetch_queue.py` sind genau die Woerter, die in diesen Begruendungen vorkommen.
+    DATEI = re.compile(r"\.(csv|py|txt|json|md|sh|xml|zip|parquet)$")
+
+    with LISTE.open(encoding="utf-8") as f:
+        luecke = {z["host"].strip().lower(): (z.get("grund") or "") for z in csv.DictReader(f)}
+    with (ROOT / "curated" / "hosts_gesperrt.csv").open(encoding="utf-8") as f:
+        sperre = {z["host"].strip().lower() for z in csv.DictReader(f) if z.get("host")}
+
+    geprueft = 0
+    for host, text in luecke.items():
+        erwaehnt = {m.lower() for m in re.findall(r"\b(?:[a-z0-9-]+\.)+[a-z]{2,}\b", text)}
+        for fremd in erwaehnt - {host}:
+            if DATEI.search(fremd):
+                continue
+            geprueft += 1
+            if fremd in sperre:
+                assert "hosts_gesperrt" in text, (
+                    f"{host}: nennt {fremd}, aber der Host ist GESPERRT und der Text verweist "
+                    f"nicht auf curated/hosts_gesperrt.csv")
+            elif fremd in luecke:
+                assert "in dieser Liste" in text or "portale_ohne_abrufer" in text, (
+                    f"{host}: nennt {fremd} ohne zu sagen, dass er in dieser Liste steht")
+            else:
+                raise AssertionError(
+                    f"{host}: nennt {fremd} — der Host steht in keiner der beiden Listen, "
+                    f"also gibt es zu ihm keine festgehaltene Haltung")
+    assert geprueft, "kein einziger Querverweis geprueft — greift die Erkennung noch?"

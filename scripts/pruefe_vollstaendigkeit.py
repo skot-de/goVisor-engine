@@ -66,6 +66,10 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 # ⚠ VOR dem `govisor`-Import: der Tageslauf laeuft unter launchd ohne PYTHONPATH.
 sys.path.insert(0, str(ROOT))
 
+# ⚠ NACH `sys.path.insert`, nicht davor. Das Skript wird auch aus anderen Verzeichnissen
+# gestartet; ein Import oben scheitert dann, bevor der Pfad steht.
+from govisor import docfetch_queue as _queue  # noqa: E402
+
 from govisor.laender import AKTIV                                    # noqa: E402
 
 # Laender, in denen wir Unterlagen ueberhaupt holen wollen. Alles andere rechnet mit und
@@ -75,12 +79,17 @@ MIT_DOKUMENTEN = ("DE", "LU")
 BEKANNTE_LUECKE = ROOT / "curated" / "portale_ohne_abrufer.csv"
 
 # Reihenfolge der Ausgabe. Sie ist der Weg eines Leads, nicht das Alphabet.
-ORDNUNG = ["volltext", "geholt", "wartet", "kein_abrufer", "sperre", "dauerhaft"]
+ORDNUNG = ["volltext", "geholt", "wartet", "gesperrt", "kein_abrufer", "sperre", "dauerhaft"]
 
 ERKLAERUNG = {
     "volltext":     "Text liegt vor                       fertig",
     "geholt":       "geholt, Text noch nicht ausgelesen   kommt von selbst",
     "wartet":       "Abrufer zustaendig, noch nicht dran  Durchsatz",
+    # ⚠ EIGENE KLASSE, NICHT "kein Abrufer". Bei diesen Hosts fehlt kein Abrufer — es
+    # gibt einen, und er schweigt absichtlich (`docfetch_queue.gesperrte_hosts`). Als
+    # Luecke gefuehrt wuerde die Zahl jemanden einladen, einen Abrufer zu bauen, den es
+    # gibt und der nicht fragen darf.
+    "gesperrt":     "Host gesperrt, wird nicht gefragt    Absicht",
     "kein_abrufer": "kein Abrufer zustaendig              LUECKE",
     "sperre":       "Sperrfrist laeuft                    kommt von selbst",
     "dauerhaft":    "endgueltig, nichts mehr zu holen     erledigt",
@@ -190,6 +199,11 @@ def rechne(land: str) -> tuple[dict[str, int], dict[str, int], int]:
             k = "volltext"
         elif lead_id in zustand:
             k = _klasse(zustand[lead_id])
+        # ⚠ VOR den Abrufer-Praedikaten. Ein gesperrter Host wird von `ist_netserver` &
+        # Co. bewusst nicht mehr erkannt; ohne diese Zeile fiele er in `kein_abrufer` und
+        # stuende als Luecke da, obwohl er eine Entscheidung ist.
+        elif _queue.ist_gesperrt(url):
+            k = "gesperrt"
         elif any(_trifft(f, url) for _, f in pruefer):
             k = "wartet"
         else:

@@ -7,11 +7,9 @@ beschaffungen.barmer.de,DE,34,"Kleinportal, ungeprueft (Akte 03.09.: ~40 Faelle 
 vergabeplattform.charite.de,DE,21,"Kleinportal, ungeprueft (Akte 03.09.: ~40 Faelle fuer ~220 Vorgaenge)",2026-09-24
 www.swm.de,DE,19,"Kleinportal, ungeprueft (Akte 03.09.: ~40 Faelle fuer ~220 Vorgaenge)",2026-09-24
 www.bsr.de,DE,17,"Kleinportal, ungeprueft (Akte 03.09.: ~40 Faelle fuer ~220 Vorgaenge)",2026-09-24
-xvergabe.de,DE,12,"robots.txt verbietet den ganzen Host (User-agent: * / Disallow: /), gemessen 2026-09-26. Ein Abrufer waere kein technisches, sondern ein Zulaessigkeitsproblem. XVergabe ist zudem eine genormte SCHNITTSTELLE — der Weg dorthin fuehrt ueber die offizielle Anbindung, nicht ueber die Oberflaeche. ⚠ Der Bestand waechst: die LMBV ist zum 01.08.2026 hierher umgezogen (s. einkauf.lmbv.de).",2026-09-26
 bieterportal.pd-g.e-va.eu,DE,8,"Kleinportal, ungeprueft (Akte 03.09.: ~40 Faelle fuer ~220 Vorgaenge)",2026-09-24
 mp.aumass.de,DE,7,"Kleinportal, ungeprueft (Akte 03.09.: ~40 Faelle fuer ~220 Vorgaenge)",2026-09-24
 s2c.mercell.com,DE,7,"Kleinportal, ungeprueft (Akte 03.09.: ~40 Faelle fuer ~220 Vorgaenge)",2026-09-24
-evoportal.vergabe.staatsanzeiger.de,DE,6,"Der ganze Host antwortet mit HTTP 401, auch auf robots.txt (gemessen 2026-09-26) — Anmeldung fuer jede Seite, nichts oeffentlich abrufbar. Dieselbe Anwendung (URL-Form /awardProcedure/<uuid>) laeuft auch auf xvergabe.de.",2026-09-26
 ec.europa.eu,DE,4,"Kleinportal, ungeprueft (Akte 03.09.: ~40 Faelle fuer ~220 Vorgaenge)",2026-09-24
 vergabe-rmv.de,DE,4,"Kleinportal, ungeprueft (Akte 03.09.: ~40 Faelle fuer ~220 Vorgaenge)",2026-09-24
 www1.muelheim-ruhr.de,DE,4,"Kleinportal, ungeprueft (Akte 03.09.: ~40 Faelle fuer ~220 Vorgaenge)",2026-09-24
@@ -35,7 +33,7 @@ www.stadtwerke-jena.de,DE,2,"Kleinportal, ungeprueft (Akte 03.09.: ~40 Faelle fu
 bieterportal.dfg.de,DE,1,"Kleinportal, ungeprueft (Akte 03.09.: ~40 Faelle fuer ~220 Vorgaenge)",2026-09-24
 bieterportal.pd-g.de,DE,1,"Kleinportal, ungeprueft (Akte 03.09.: ~40 Faelle fuer ~220 Vorgaenge)",2026-09-24
 bieterportal.servicecenter-khs.e-va.eu,DE,1,"Kleinportal, ungeprueft (Akte 03.09.: ~40 Faelle fuer ~220 Vorgaenge)",2026-09-24
-einkauf.lmbv.de,DE,1,"Portal wird stillgelegt: die LMBV stellt zum 01.08.2026 auf xvergabe.de um (Hinweis auf der Startseite). Neue Verfahren erscheinen dort, nur laufende bleiben im alten AVA@LMBV. Ein Abrufer fuer diesen Host baut Arbeit fuer einen Bestand, der schrumpft; xvergabe.de steht in dieser Liste bereits.",2026-09-26
+einkauf.lmbv.de,DE,1,"Portal wird stillgelegt: die LMBV stellt zum 01.08.2026 auf xvergabe.de um (Hinweis auf der Startseite). Neue Verfahren erscheinen dort, nur laufende bleiben im alten AVA@LMBV. Ein Abrufer fuer diesen Host baut Arbeit fuer einen Bestand, der schrumpft; xvergabe.de steht nicht in dieser Liste, sondern in curated/hosts_gesperrt.csv: der Host verbietet automatische Abrufe in robots.txt, wir fragen dort gar nicht erst an. Die umgezogenen Verfahren sind damit als Bekanntmachung weiter bei uns, ihre Unterlagen aber dauerhaft nicht.",2026-09-26
 fbhh-evergabe.web.hamburg.de,DE,1,"Kleinportal, ungeprueft (Akte 03.09.: ~40 Faelle fuer ~220 Vorgaenge)",2026-09-24
 kreis-slf.eu,DE,1,"Kleinportal, ungeprueft (Akte 03.09.: ~40 Faelle fuer ~220 Vorgaenge)",2026-09-24
 plattform.aumass.de,DE,1,"Kleinportal, ungeprueft (Akte 03.09.: ~40 Faelle fuer ~220 Vorgaenge)",2026-09-24

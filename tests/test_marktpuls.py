@@ -924,21 +924,24 @@ def test_staatsanzeiger_frameset_ist_kein_fehler():
 
 
 def test_netserver_erkennt_auch_ohne_pfad_am_servlet():
-    """`xvergabe.de` fährt reines NetServer — über `PublicationControllerServlet?TWOID=`,
-    aber OHNE `/NetServer/` im Pfad. Ein Test nur auf Pfad ODER Hostliste übersah die
-    sieben Vorgänge lautlos. Die Servlet-Namen sind NetServer-eigen und überleben auch,
-    wenn der Betreiber die Anwendung an die Wurzel hängt.
+    """NetServer wird an den SERVLET-NAMEN erkannt, nicht am Pfad und nicht an einer
+    Hostliste. Ein Test nur auf `/NetServer/` ODER Hostliste uebersah die Vorgaenge eines
+    Betreibers, der die Anwendung an die Wurzel haengt — lautlos, denn die URL sieht gueltig
+    aus. Und der Servlet-Tausch muss dort ebenso greifen: die erste Fassung hatte einen
+    Sonderfall nur fuer `/NetServer/`, der Rest behielt `function=_Details` am falschen
+    Servlet und lief in HTTP 404.
 
-    Und der Servlet-Tausch muss dort ebenso greifen: die erste Fassung hatte einen
-    Sonderfall nur für `/NetServer/`, xvergabe fiel durch und behielt
-    `PublicationControllerServlet?function=_Details` — dieselbe 404-URL wie zuvor, nur an
-    einer Stelle, die der Fix nicht erfasst hatte.
-    """
+    ⚠ HIER STAND `xvergabe.de` ALS BELEG, und der ist seit dem 2026-09-26 weg: der Host ist
+    gesperrt (robots `Disallow: /`), `ist_netserver` gibt fuer ihn jetzt richtigerweise False
+    zurueck. Gemessen war er der einzige Host mit dieser Bauform, deshalb steht hier ein
+    erfundener Name. Die beiden Haelften des Befunds liegen getrennt: die Sperre in
+    `tests/test_hosts_gesperrt.py`, die Regel an echten Daten in
+    `tests/test_docfetch_netserver.py::test_wurzel_regel_gegen_echte_daten`."""
     N = _nsdoc()
-    u = "https://xvergabe.de/PublicationControllerServlet?function=Detail&TWOID=54321-Tender-abc"
+    u = "https://vergabe.beispielstadt.de/PublicationControllerServlet?function=Detail&TWOID=54321-Tender-abc"
     assert N.ist_netserver(u)
     z = N.unterlagen_url(u)
-    assert z.startswith("https://xvergabe.de/TenderingProcedureDetails?")
+    assert z.startswith("https://vergabe.beispielstadt.de/TenderingProcedureDetails?")
     assert "PublicationControllerServlet" not in z
     # Der Regelfall darf dabei nicht kaputtgehen.
     z2 = N.unterlagen_url("https://vergabe.landbw.de/NetServer/TenderingProcedureDetails"

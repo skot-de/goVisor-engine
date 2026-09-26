@@ -142,8 +142,17 @@ _SERVLETS = ("PublicationControllerServlet", "TenderingProcedureDetails",
 
 
 def ist_netserver(url: str | None) -> bool:
-    """Pfad ODER Servlet-Name ODER Hostliste — alle drei, s. Begruendung an `HOSTS`."""
+    """Pfad ODER Servlet-Name ODER Hostliste — alle drei, s. Begruendung an `HOSTS`.
+
+    ⚠ GESPERRTE HOSTS FALLEN VORHER RAUS. `xvergabe.de` faehrt dieselbe Anwendung und wird
+    ueber Pfad und Servlet-Namen erkannt — am 2026-09-26 standen deshalb 77 Saetze dieses
+    Hosts im Manifest, obwohl seine robots.txt `User-agent: * / Disallow: /` sagt. Die
+    Erkennung war also richtig und das Ergebnis trotzdem falsch. Die Pruefung gehoert
+    hierher und nicht in den Abrufer: wer erst fragt und dann einsortiert, hat gefragt.
+    """
     if not url:
+        return False
+    if _queue.ist_gesperrt(url):
         return False
     return ("/NetServer/" in url
             or any(sv in url for sv in _SERVLETS)
@@ -360,6 +369,14 @@ def lauf(limit: int | None = None, dry_run: bool = False, country: str = "DE") -
     wo = ("documents_url LIKE '%/NetServer/%' OR "
           + " OR ".join(f"documents_url LIKE '%{sv}%'" for sv in _SERVLETS) + " OR "
           + " OR ".join(f"documents_url LIKE '%//{h}/%'" for h in HOSTS))
+    # ⚠ GESPERRTE HOSTS AUCH HIER AUSSCHLIESSEN. Die eigentliche Bremse sitzt in
+    # `unterlagen_url` (ueber `ist_netserver`), und sie greift — aber diese Abfrage ist
+    # eine ZWEITE Fassung derselben Regel, und die Datei warnt weiter oben selbst davor,
+    # dass zwei Fassungen auseinanderlaufen. Ohne diese Zeile stuenden gesperrte Vorgaenge
+    # weiter in der Arbeitsliste und faenden erst eine Ebene spaeter ihr Ende.
+    for _h in _queue.gesperrte_hosts():
+        wo = (f"({wo}) AND documents_url NOT LIKE '%//{_h}/%'"
+              f" AND documents_url NOT LIKE '%//www.{_h}/%'")
     rows = con.execute(f"""
         SELECT lead_id, documents_url FROM read_parquet('{L.as_posix()}')
         WHERE phase='open' AND documents_url IS NOT NULL AND ({wo})

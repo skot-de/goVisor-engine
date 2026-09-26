@@ -8,6 +8,7 @@ from __future__ import annotations
 from pathlib import Path
 
 from govisor import docfetch_netserver as ns
+from govisor import docfetch_queue as _queue
 from govisor import docfetch_queue as q
 
 OID = "54321-Tender-19f6ecb40ae-38c0bb40d285174e"
@@ -73,10 +74,65 @@ def test_servlet_wird_getauscht_nicht_nur_der_parameter():
 
 
 def test_servlet_tausch_auch_ohne_netserver_pfad():
-    """xvergabe.de hängt an der Wurzel — der erste Fix erfasste nur `/NetServer/`."""
-    z = ns.unterlagen_url("https://xvergabe.de/PublicationControllerServlet?function=Detail&TWOID=abc")
+    """Haengt die Anwendung an der WURZEL statt unter `/NetServer/`, muss der Servlet-Tausch
+    genauso greifen. Der erste Fix erfasste nur `/NetServer/`; der Rest behielt
+    `PublicationControllerServlet?function=_Details` und lief in denselben HTTP 404.
+
+    ⚠ DER HOST HIER IST ERFUNDEN, UND ZWAR NOTGEDRUNGEN. Gemessen am 2026-09-26 war
+    `xvergabe.de` der EINZIGE Host im ganzen DACH-Bestand mit dem Servlet an der Wurzel
+    (1 von 528 Servlet-URLs) — und er ist seit demselben Tag gesperrt (robots
+    `Disallow: /`, s. `tests/test_hosts_gesperrt.py`). Die Regel bleibt, weil der naechste
+    Betreiber es wieder so aufhaengen kann; ihr echter Beleg ist aber weg. Damit das nicht
+    zur Behauptung verfaellt, prueft `test_wurzel_regel_gegen_echte_daten` unten dieselbe
+    Regel an den Live-Daten, sobald dort je wieder ein solcher Host auftaucht."""
+    z = ns.unterlagen_url("https://vergabe.beispielstadt.de/PublicationControllerServlet"
+                          "?function=Detail&TWOID=abc")
     assert z.endswith("thContext=publications")
     assert "/TenderingProcedureDetails?" in z
+    assert z.startswith("https://vergabe.beispielstadt.de/TenderingProcedureDetails?")
+
+
+def test_wurzel_regel_gegen_echte_daten():
+    """Zaehne fuer die Regel oben: JEDER nicht gesperrte Host, der ein NetServer-Servlet an
+    der Wurzel fuehrt, muss erkannt werden und eine Unterlagen-URL bekommen. Solange es
+    keinen gibt, hat der Test nichts zu pruefen und sagt das."""
+    import re
+    import pytest
+    try:
+        import duckdb
+    except ImportError:                       # pragma: no cover
+        pytest.skip("duckdb fehlt")
+    from pathlib import Path as _P
+    glob = str(_P(__file__).resolve().parent.parent / "data" / "gold" / "*" / "lead_export.parquet")
+    try:
+        roh = duckdb.connect().execute(
+            "SELECT DISTINCT documents_url FROM read_parquet(?, union_by_name=true) "
+            "WHERE documents_url ILIKE '%ControllerServlet%' "
+            "   OR documents_url ILIKE '%TenderingProcedureDetails%'", [glob]).fetchall()
+    except Exception as e:                    # pragma: no cover
+        pytest.skip(f"keine Gold-Daten lesbar: {e}")
+    an_der_wurzel = []
+    for (u,) in roh:
+        m = re.match(r"https?://[^/]+(/.*)?$", u or "")
+        if m and "/NetServer/" not in (m.group(1) or ""):
+            an_der_wurzel.append(u)
+    offen = [u for u in an_der_wurzel if not _queue.ist_gesperrt(u)]
+    if not offen:
+        pytest.skip(f"kein offener Host mit Servlet an der Wurzel ({len(an_der_wurzel)} gesperrte)")
+    for u in offen:
+        assert ns.ist_netserver(u), u
+        z = ns.unterlagen_url(u)
+        # ⚠ NICHT NUR AUF WAHRHEIT PRUEFEN. Die erste Fassung hier fragte `assert
+        # unterlagen_url(u)` — und blieb gruen, als die Gegenprobe die Wurzel-Regel
+        # zerstoerte: die kaputte Regel hing `/NetServer/TenderingProcedureDetails` hinten
+        # an die volle Roh-URL an. Das Ergebnis war Unsinn, aber ein nicht-leerer String.
+        assert z, u
+        herkunft = "://".join(u.split("://", 1)[0:1] + [u.split("://", 1)[1].split("/", 1)[0]])
+        assert z.startswith(herkunft + "/"), f"{u} -> {z} (anderer Host)"
+        pfad, _, abfrage = z.partition("?")
+        assert pfad.endswith("/TenderingProcedureDetails"), f"{u} -> {z}"
+        assert "?" not in abfrage, f"{u} -> {z} (zwei Fragezeichen)"
+        assert "thContext=publications" in abfrage and "TenderOID=" in abfrage, f"{u} -> {z}"
 
 
 # ── Rahmen-Wahl ───────────────────────────────────────────────────────────────────────────

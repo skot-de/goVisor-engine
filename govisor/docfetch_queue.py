@@ -35,6 +35,7 @@ entfernt. Der Grund steht im Manifest und ist abfragbar; die Auswahl überspring
 from __future__ import annotations
 
 import datetime as dt
+from functools import lru_cache
 from pathlib import Path
 
 # ── EIN VOKABULAR ─────────────────────────────────────────────────────────────────────────
@@ -173,6 +174,55 @@ KEIN_FEHLSCHLAG = frozenset({"downloaded", "exists", "probe", "nur_liste",
 # auf `data/`, der einen laufenden Index stören könnte) zeigt der Pfad einfach dorthin,
 # solange die Datei existiert. Neue Quellen bekommen den einheitlichen Namen.
 _ALT_DATEI = {"cosinex": "_manifest.parquet"}
+
+
+# ── HOSTS, BEI DENEN NICHT ANGEKLOPFT WIRD ──────────────────────────────────────────────
+#
+# ⚠ WARUM DAS EINE SPERRE IST UND KEIN LISTENEINTRAG. Am 2026-09-26 standen 77 Saetze fuer
+# `xvergabe.de` im NetServer-Manifest — wir haben dort also geholt, obwohl die robots.txt
+# des Hosts `User-agent: * / Disallow: /` sagt. Aufgefallen ist es beim Nachsehen, ob sich
+# ein Abrufer lohnt, nicht durch eine Pruefung. Sven daraufhin: „lass den dokumenten
+# sammler gar nicht erst bei den portalen anfragen."
+#
+# ⚠ EINE ZEILE IN `portale_ohne_abrufer.csv` HAETTE DAS GEGENTEIL BEWIRKT. Diese Liste
+# sagt „hier fehlt ein Abrufer" und laedt damit ein, einen zu bauen. Hier geht es um das
+# Umgekehrte: es gibt einen, und er muss schweigen.
+#
+# ⚠ DIE SPERRE GILT VOR DER ANFRAGE, nicht danach. Ein Abrufer, der erst fragt und dann
+# den 401 einsortiert, hat schon gefragt.
+_GESPERRT_CSV = Path(__file__).resolve().parent.parent / "curated" / "hosts_gesperrt.csv"
+
+
+@lru_cache(maxsize=1)
+def gesperrte_hosts() -> dict[str, str]:
+    """Rechnername → Grund (`robots` | `anmeldung`). Fehlt die Datei, ist nichts gesperrt."""
+    import csv
+
+    if not _GESPERRT_CSV.exists():
+        return {}
+    with _GESPERRT_CSV.open(encoding="utf-8") as f:
+        return {z["host"].strip().lower(): z["grund"].strip()
+                for z in csv.DictReader(f) if z.get("host", "").strip()}
+
+
+def ist_gesperrt(url: str | None) -> str | None:
+    """Grund, warum dieser Host nicht angefragt werden darf — oder None.
+
+    ⚠ Auch `www.`-Varianten und Unterdomaenen treffen: wer `xvergabe.de` sperrt, meint
+    nicht nur genau diese Schreibweise. Ein Host, der auf den gesperrten ENDET, zaehlt
+    mit — `meinxvergabe.de` faengt die Grenze `.` ab.
+    """
+    if not url:
+        return None
+    import urllib.parse
+
+    host = (urllib.parse.urlsplit(url).hostname or "").lower()
+    if not host:
+        return None
+    for g, grund in gesperrte_hosts().items():
+        if host == g or host.endswith("." + g):
+            return grund
+    return None
 
 
 def _pfad(out_root: Path, name: str) -> Path:
