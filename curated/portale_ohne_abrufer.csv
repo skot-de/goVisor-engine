@@ -7,11 +7,11 @@ beschaffungen.barmer.de,DE,34,"Kleinportal, ungeprueft (Akte 03.09.: ~40 Faelle 
 vergabeplattform.charite.de,DE,21,"Kleinportal, ungeprueft (Akte 03.09.: ~40 Faelle fuer ~220 Vorgaenge)",2026-09-24
 www.swm.de,DE,19,"Kleinportal, ungeprueft (Akte 03.09.: ~40 Faelle fuer ~220 Vorgaenge)",2026-09-24
 www.bsr.de,DE,17,"Kleinportal, ungeprueft (Akte 03.09.: ~40 Faelle fuer ~220 Vorgaenge)",2026-09-24
-xvergabe.de,DE,12,"Kleinportal, ungeprueft (Akte 03.09.: ~40 Faelle fuer ~220 Vorgaenge)",2026-09-24
+xvergabe.de,DE,12,"robots.txt verbietet den ganzen Host (User-agent: * / Disallow: /), gemessen 2026-09-26. Ein Abrufer waere kein technisches, sondern ein Zulaessigkeitsproblem. XVergabe ist zudem eine genormte SCHNITTSTELLE — der Weg dorthin fuehrt ueber die offizielle Anbindung, nicht ueber die Oberflaeche. ⚠ Der Bestand waechst: die LMBV ist zum 01.08.2026 hierher umgezogen (s. einkauf.lmbv.de).",2026-09-26
 bieterportal.pd-g.e-va.eu,DE,8,"Kleinportal, ungeprueft (Akte 03.09.: ~40 Faelle fuer ~220 Vorgaenge)",2026-09-24
 mp.aumass.de,DE,7,"Kleinportal, ungeprueft (Akte 03.09.: ~40 Faelle fuer ~220 Vorgaenge)",2026-09-24
 s2c.mercell.com,DE,7,"Kleinportal, ungeprueft (Akte 03.09.: ~40 Faelle fuer ~220 Vorgaenge)",2026-09-24
-evoportal.vergabe.staatsanzeiger.de,DE,5,"Kleinportal, ungeprueft (Akte 03.09.: ~40 Faelle fuer ~220 Vorgaenge)",2026-09-24
+evoportal.vergabe.staatsanzeiger.de,DE,6,"Der ganze Host antwortet mit HTTP 401, auch auf robots.txt (gemessen 2026-09-26) — Anmeldung fuer jede Seite, nichts oeffentlich abrufbar. Dieselbe Anwendung (URL-Form /awardProcedure/<uuid>) laeuft auch auf xvergabe.de.",2026-09-26
 ec.europa.eu,DE,4,"Kleinportal, ungeprueft (Akte 03.09.: ~40 Faelle fuer ~220 Vorgaenge)",2026-09-24
 vergabe-rmv.de,DE,4,"Kleinportal, ungeprueft (Akte 03.09.: ~40 Faelle fuer ~220 Vorgaenge)",2026-09-24
 www1.muelheim-ruhr.de,DE,4,"Kleinportal, ungeprueft (Akte 03.09.: ~40 Faelle fuer ~220 Vorgaenge)",2026-09-24

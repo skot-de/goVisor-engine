@@ -154,3 +154,29 @@ def test_open_house_bleibt_draussen():
     _, _, grund = v.rechne("DE")
     assert grund == alle - oh, (
         f"Grundmenge {grund:,} != {alle:,} minus {oh:,} Open House")
+
+
+def test_gesperrte_portale_werden_nicht_als_ungeprueft_gefuehrt():
+    """⚠ „Kleinportal, ungeprueft" ist eine Absichtserklaerung, kein Befund. Bei zwei
+    Hosts war sie am 2026-09-26 nachweislich falsch, und der Unterschied entscheidet
+    darueber, ob jemand Arbeit in einen Abrufer steckt:
+
+      * `xvergabe.de` verbietet in robots.txt den GANZEN Host (User-agent: * / Disallow: /)
+      * `evoportal.vergabe.staatsanzeiger.de` antwortet auf JEDE Seite mit HTTP 401,
+        auch auf robots.txt
+
+    Beides ist keine Frage des Parsers. Wer das als „ungeprueft" fuehrt, laedt den
+    naechsten ein, es noch einmal zu versuchen.
+    """
+    import csv
+
+    with LISTE.open(encoding="utf-8") as f:
+        nach_host = {z["host"]: z for z in csv.DictReader(f)}
+    for host, wort in (("xvergabe.de", "robots.txt"),
+                       ("evoportal.vergabe.staatsanzeiger.de", "401")):
+        z = nach_host.get(host)
+        if z is None:
+            continue                       # der Host kann aus dem Bestand fallen
+        assert wort in z["grund"], f"{host}: der gemessene Grund fehlt ({wort})"
+        assert "ungeprueft" not in z["grund"], (
+            f"{host}: steht wieder als ungeprueft da, obwohl die Sperre gemessen ist")
