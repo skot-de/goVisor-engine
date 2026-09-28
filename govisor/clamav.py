@@ -46,28 +46,41 @@ def pflicht() -> bool:
 
 
 @lru_cache(maxsize=1)
-def _scanner() -> tuple[str, str] | None:
+def _kandidaten() -> tuple[tuple[str, str], ...]:
+    """Verfuegbare Scanner in Vorzugsreihenfolge: clamdscan (Daemon, schnell), dann clamscan."""
+    liste = []
     for name in ("clamdscan", "clamscan"):
         prog = shutil.which(name)
         if prog:
-            return name, prog
-    return None
+            liste.append((name, prog))
+    return tuple(liste)
 
 
 def verfuegbar() -> bool:
-    return _scanner() is not None
+    return bool(_kandidaten())
 
 
 def _lauf(pfad: str) -> tuple[int, str]:
-    """Ruft den echten Scanner. Rueckgabe (Exit-Code, Ausgabe). clamscan/clamdscan:
-    0 = sauber, 1 = Fund, sonst Fehler."""
-    name, prog = _scanner()  # type: ignore[misc]
-    if name == "clamdscan":
-        args = [prog, "--no-summary", "--fdpass", pfad]
-    else:
-        args = [prog, "--no-summary", "--stdout", pfad]
-    r = subprocess.run(args, capture_output=True, text=True, timeout=_ZEIT_MS)
-    return r.returncode, (r.stdout or "") + (r.stderr or "")
+    """Ruft den echten Scanner. Rueckgabe (Exit-Code, Ausgabe): 0 = sauber, 1 = Fund, sonst
+    Fehler.
+
+    ⚠ clamdscan braucht den laufenden clamd-Daemon. Ist der nicht da (nur `brew install
+    clamav` + `freshclam`, kein Dienst), scheitert clamdscan mit einem Verbindungsfehler
+    (Exit 2) — DANN faellt der Lauf auf `clamscan` zurueck (langsamer, aber ohne Daemon).
+    Ohne diesen Rueckfall waere jede Datei stumm „ungeprueft", obwohl clamscan da ist."""
+    letzte = (2, "kein Scanner")
+    for name, prog in _kandidaten():
+        args = ([prog, "--no-summary", "--fdpass", pfad] if name == "clamdscan"
+                else [prog, "--no-summary", "--stdout", pfad])
+        try:
+            r = subprocess.run(args, capture_output=True, text=True, timeout=_ZEIT_MS)
+        except Exception as e:                            # noqa: BLE001
+            letzte = (2, f"{name}: {e}")
+            continue
+        if r.returncode in (0, 1):                        # eindeutiges Urteil
+            return r.returncode, (r.stdout or "") + (r.stderr or "")
+        letzte = (r.returncode, (r.stdout or "") + (r.stderr or ""))  # Fehler → naechster
+    return letzte
 
 
 def _deute(rc: int, aus: str) -> tuple[str, str]:

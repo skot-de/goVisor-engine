@@ -132,3 +132,26 @@ def test_eicar_wird_erkannt_wenn_clamav_da():
              + "ANTIVIRUS-TEST-FILE!" + "$H+H*").encode()
     urteil, sig = clamav.scan_bytes(eicar)
     assert urteil == clamav.INFIZIERT, (urteil, sig)
+
+
+def test_lauf_faellt_von_clamdscan_auf_clamscan(monkeypatch):
+    """clamdscan ohne Daemon (Exit 2) → Rueckfall auf clamscan, statt „ungeprueft"."""
+    monkeypatch.setattr(clamav, "_kandidaten",
+                        lambda: (("clamdscan", "/x/clamdscan"), ("clamscan", "/x/clamscan")))
+
+    class _R:
+        def __init__(self, rc, out):
+            self.returncode, self.stdout, self.stderr = rc, out, ""
+
+    gerufen = []
+
+    def fake_run(args, **kw):
+        gerufen.append(args[0])
+        if args[0].endswith("clamdscan"):
+            return _R(2, "ERROR: Could not connect to clamd")
+        return _R(1, "/f: Eicar-Test-Signature FOUND")
+
+    monkeypatch.setattr(clamav.subprocess, "run", fake_run)
+    rc, aus = clamav._lauf("/f")
+    assert rc == 1 and "FOUND" in aus
+    assert any("clamdscan" in c for c in gerufen) and any(c.endswith("clamscan") for c in gerufen)
