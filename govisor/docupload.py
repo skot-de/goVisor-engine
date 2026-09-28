@@ -140,6 +140,9 @@ def zuordnung_zweifelhaft(lead_buyer: str, fulltext: str) -> dict | None:
 
 
 def scan_malware(name: str, data: bytes) -> bool:
-    """Hook (§5-1). Gibt True = sauber zurück; die Produktion verdrahtet hier einen echten
-    Scanner (z. B. ClamAV). Bewusst kein selbstgebauter Scanner."""
-    return True
+    """§5-1: True = darf durch. Ruft ClamAV (`govisor.clamav`). INFIZIERT sperrt immer;
+    UNGEPRUEFT (ClamAV nicht installiert) sperrt nur bei `GOVISOR_MALWARE_SCAN=require`.
+    Frueher ein Stub, der blind True zurueckgab."""
+    from . import clamav
+    urteil, _sig = clamav.scan_bytes(data)
+    return clamav.darf_ausliefern(urteil)

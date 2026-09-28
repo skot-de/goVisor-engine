@@ -31,6 +31,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 DOCS = ROOT / "data" / "docs"
+sys.path.insert(0, str(ROOT))
+from govisor import clamav  # noqa: E402
 
 # Was der Browser gefahrlos selbst anzeigen kann. Alles andere wird zum Herunterladen
 # angeboten — ein `.exe` oder `.zip` inline auszuliefern waere fahrlaessig.
@@ -113,7 +115,23 @@ def hole(lead: str, datei: str, nach: str, country: str = "DE") -> dict:
                         continue
                     if i.file_size > 200 * 1024 ** 2:
                         return {"fehler": "Datei zu gross (>200 MB)"}
-                    Path(nach).write_bytes(zf.read(i))
+                    roh = zf.read(i)
+                    # ⚠ MALWARE-TOR. Erst hier, unmittelbar vor der Auslieferung, wird die
+                    # extrahierte Datei gescannt — das ist die Stelle, an der ein fremdes
+                    # Dokument zu einem Menschen gelangt. Ein Treffer quarantaeniert das
+                    # GANZE Archiv (`zp`): es soll weder erneut ausgeliefert noch geparst
+                    # werden. `UNGEPRUEFT` (ClamAV fehlt) sperrt nur bei
+                    # GOVISOR_MALWARE_SCAN=require, sonst laeuft der interne Gebrauch weiter.
+                    urteil, sig = clamav.scan_bytes(roh)
+                    if urteil == clamav.INFIZIERT:
+                        try:
+                            clamav.quarantaene(zp, f"{sig} in {i.filename}")
+                        except OSError:
+                            pass
+                        return {"fehler": "Malware erkannt, Datei gesperrt", "signatur": sig}
+                    if not clamav.darf_ausliefern(urteil):
+                        return {"fehler": "nicht auslieferbar: Malware-Scan nicht verfuegbar"}
+                    Path(nach).write_bytes(roh)
                     return {"pfad": nach, "bytes": i.file_size,
                             "typ": ANZEIGBAR.get(ext, "application/octet-stream"),
                             "name": Path(i.filename).name,
