@@ -30,6 +30,9 @@ def main(argv=None) -> int:
     p = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     p.add_argument("--country", default=None, help="nur ein Land, sonst alle")
     p.add_argument("--limit", type=int, default=0, help="hoechstens N Archive (0 = alle)")
+    p.add_argument("--neuer-als-tage", type=float, default=0.0, dest="neuer",
+                   help="nur Archive, die juenger als N Tage sind (0 = alle). Fuer den "
+                        "Nachtlauf: nur frisch Heruntergeladenes, nicht der ganze Bestand.")
     p.add_argument("--still", action="store_true")
     a = p.parse_args(argv)
 
@@ -48,6 +51,10 @@ def main(argv=None) -> int:
         return 0
 
     archive = sorted(wurzel.rglob("*.zip"))
+    if a.neuer > 0:
+        import time
+        grenze = time.time() - a.neuer * 86400
+        archive = [z for z in archive if z.stat().st_mtime >= grenze]
     if a.limit:
         archive = archive[: a.limit]
 

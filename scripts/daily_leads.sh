@@ -1196,6 +1196,15 @@ mit_grenze "$GRENZE_LANG" $PY -m govisor.subreport --limit 120 || echo "  ⚠ su
 # gedeckelt (gemessen ~45 min) und macht aus den Daten das Produkt.
 _ABRUF_PHASE=0
 
+step "Vergabeunterlagen auf Malware prüfen (ClamAV, Treffer → Quarantäne)"
+# ⚠ VOR dem Indexieren: ein infiziertes Archiv soll gar nicht erst geparst und schon gar
+# nicht ueber /api/lead/datei ausgeliefert werden. Nur frisch Heruntergeladenes (letzte 2
+# Tage) — nicht der ganze ~100-GB-Bestand; den Rest scannt das Auslieferungs-Tor beim
+# Oeffnen (scripts/lead_dokumente.py). Fehlt ClamAV, sagt scan_docs.py das und faehrt
+# sauber runter (Exit 0); der Schutz greift, sobald `brew install clamav` + `freshclam`
+# gelaufen sind. Ein Fund ist kein Fehler des Laufs, sondern sein Zweck — Exit bleibt 0.
+$PY scripts/scan_docs.py --neuer-als-tage 2 || echo "  ⚠ Malware-Sweep unvollständig."
+
 step "Unterlagen entpacken → Volltext-Index"
 # ⚠ ZWEI SCHUTZE, beide am 2026-08-14 durch Schaden gelernt:
 #
