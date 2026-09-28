@@ -618,7 +618,7 @@ const wfPill = k => `<span class="wf ${WF[k].cls} filled">${tk(WF[k].label)}</sp
 function konkCell(l){
   const k = l.konk;
   if(k.src==='na' || k.src==='unbekannt'){
-    return `<span class="kf"><span class="kf-none">${k.wert}</span></span>`;
+    return `<span class="kf"><span class="kf-none">${esc(k.wert)}</span></span>`;
   }
   return `<span class="kf kf-${k.stufe}" title="${esc(k.hint)}">
       <span class="ksegs"><i></i><i></i><i></i></span>
@@ -980,7 +980,7 @@ function cellHTML(l, key){
       const wort = (searchTokens.find(t=>t.type==='text')||{}).value;
       const f = wort ? fundstelle(l, wort) : null;
       const beleg = f && f.ort!=='Titel'
-        ? `<span class="fund"><span class="fund-o">${f.ort}</span>${f.text?`<span class="fund-t">${hervorheben(f.text, wort)}</span>`:''}</span>`
+        ? `<span class="fund"><span class="fund-o">${esc(f.ort)}</span>${f.text?`<span class="fund-t">${hervorheben(f.text, wort)}</span>`:''}</span>`
         : '';
       const akt = frischeMarke(l);
       const eigen = l.eigen && l.eigenBestaetigt!==false
@@ -2580,10 +2580,10 @@ function renderUebersicht(l){
                 <span class="ex-gh">${label}<i>${items.length}</i></span>
                 ${zeig.map(x=>{
                   const tref = wort && x.w.toLowerCase().includes(wort);
-                  return `<button class="ex-t ex-${x.s} ${x.unsicher?'ex-uns':''} ${tref?'on':''}" data-mark="${x.w}"
+                  return `<button class="ex-t ex-${esc(x.s)} ${x.unsicher?'ex-uns':''} ${tref?'on':''}" data-mark="${esc(x.w)}"
                     title="${x.s==='cpv'?"Aus der amtlichen CPV-Einordnung":'Aus dem Beschreibungstext gelesen'}${
                     x.unsicher?tk("Zahl aus dem Fließtext, ungeprüft"):''}${x.rand?tk("Randleistung, nicht der Kern"):''}">
-                    <span class="ex-w">${x.w}</span>
+                    <span class="ex-w">${esc(x.w)}</span>
                     <i class="ex-src">${tref?'gesucht':x.s==='cpv'?'CPV':'Text'}</i>
                   </button>`;}).join('')}
                 ${rest>0?`<button class="ex-more" data-grp="${k}">+ ${rest}</button>`:''}
@@ -2930,7 +2930,7 @@ function renderAnalyse(l){
         }
         return `<div class="rec26">${head}`
           + (zTags?`<div class="rec-zusaetze">${zTags}</div>`:'')
-          + `<table class="rec-kette"><tbody>${kette.map(k=>`<tr><td class="rec-e">${k.E}</td><td class="rec-kl">${esc(tk(k.label))}</td><td class="rec-kz">${esc(tk(k.zustand))}</td><td class="rec-kq">${esc(tk(k.quelle))}</td></tr>`).join('')}</tbody></table></div>`;
+          + `<table class="rec-kette"><tbody>${kette.map(k=>`<tr><td class="rec-e">${esc(k.E)}</td><td class="rec-kl">${esc(tk(k.label))}</td><td class="rec-kz">${esc(tk(k.zustand))}</td><td class="rec-kq">${esc(tk(k.quelle))}</td></tr>`).join('')}</tbody></table></div>`;
       })()}
       <div class="scores">
         <div class="score" data-level="${l.relevanz}">
@@ -2964,7 +2964,7 @@ function renderAnalyse(l){
         const m = l.match;
         const buerg = m && m.blocker.find(b=>b.art==='buergschaft');
         let block = '';
-        if(buerg) block = `<span class="ds-block"><b>K.-o.:</b> ${buerg.text}</span>`;
+        if(buerg) block = `<span class="ds-block"><b>K.-o.:</b> ${esc(buerg.text)}</span>`;
         else if(m && m.partner) block = `<span class="ds-block">${tk("Nur mit Partner realistisch, der Auftrag übersteigt eure Alleingrenze.")}</span>`;
         return `<div class="dreisatz">
           <span class="ds-t">${tk("Zusammengenommen")}</span>
@@ -3014,9 +3014,9 @@ function renderAnalyse(l){
       return `<section class="sec" id="an-zuschlag" data-sec="zuschlag">
         <h4>${tk("Zuschlagskriterien")}</h4>
         ${ohneGew?'':`<div class="zbar">${z.map(x=>
-          `<i class="zseg z-${x.art}" style="width:${x.pct}%" title="${esc(x.label)}: ${x.pct} %"></i>`).join('')}</div>`}
+          `<i class="zseg z-${esc(x.art)}" style="width:${x.pct}%" title="${esc(x.label)}: ${x.pct} %"></i>`).join('')}</div>`}
         <div class="zlist">${z.map(x=>`<span class="zitem">
-          <i class="zdot z-${x.art}"></i>${x.label}
+          <i class="zdot z-${esc(x.art)}"></i>${esc(x.label)}
           <b>${x.pct!=null?x.pct+' %':`<span class="v-unk">${tk("ohne Angabe")}</span>`}</b></span>`).join('')}</div>
         ${(l.zuschlagNamen||[]).length ? `<div class="zname">
           <span class="zname-k">${tk("So nennt die Vergabestelle sie")}</span>
@@ -3074,7 +3074,7 @@ function renderAnalyse(l){
           return `<div class="req req-rahmen">
             <span class="mk ${hab?'y':hart?'n':'q'}">${hab?'&#10003;':hart?'&#10007;':'?'}</span>
             <span class="code">${RAHMEN[l.rahmen].kurz}</span>
-            <span class="lbl">${r.n}</span>
+            <span class="lbl">${esc(r.n)}</span>
             <span class="st">${hab?'In eurem Profil hinterlegt'
               : hart?tk("Fehlt in eurem Profil, ohne diesen Nachweis kein Angebot")
               : 'Nicht hinterlegt, hier meist nachreichbar'}</span>
@@ -3132,7 +3132,7 @@ function renderAnalyse(l){
         const feld  = m.teile.find(t=>t.dim==='feld' && t.status!=='ok');
         const reg   = m.teile.find(t=>t.dim==='region' && t.status==='no');
         if(buerg) return `<div class="note-box gap"><b>${tk("Bürgschaft übersteigt euren Rahmen.")}</b><br>
-          ${buerg.text} Hinterlegt einen höheren Rahmen oder tretet mit einem Partner an.
+          ${esc(buerg.text)} Hinterlegt einen höheren Rahmen oder tretet mit einem Partner an.
           <div class="acts"><button>${tk("Rahmen anpassen")}</button><button>${tk("Trifft nicht zu")}</button></div></div>`;
         if(feld && feld.status==='no') return `<div class="note-box gap">
           <b>${tk("Dieses Feld liegt außerhalb eurer Schwerpunkte.")}</b><br>
@@ -3262,7 +3262,7 @@ function renderMarkt(l){
     moderat:'Einige feste Groessen, aber Raum fuer Neue.',
     oligopol:tk("Wenige teilen fast alles unter sich auf."),
   }[s.struktur] || '';
-  const na = v => v==null ? `<span class="v-sparse">${tk("zu wenig Daten")}</span>` : `<span class="v-num">${v}</span>`;
+  const na = v => v==null ? `<span class="v-sparse">${tk("zu wenig Daten")}</span>` : `<span class="v-num">${esc(v)}</span>`;
   return `<div class="mbody">
     <div class="buyer-head"><div>
       <div class="buyer-name">${esc(s.label)}</div>
@@ -3301,7 +3301,7 @@ function renderMarkt(l){
         <div class="bwin-list">
           ${s.dominatoren.map(d=>`<div class="bwin-row">
             <span class="bwin-bar"><i style="width:${Math.min(100,d.share*4)}%"></i></span>
-            <span class="bwin-name">${d.n}</span>
+            <span class="bwin-name">${esc(d.n)}</span>
             <span class="bwin-p"><span class="v-num">${d.share} %</span></span>
             <span class="bwin-c"><span class="v-num">${d.wins}</span>${tk("Siege")}</span>
           </div>`).join('') || `<span class="v-sparse">${tk("keine Gewinner erfasst")}</span>`}
@@ -3325,11 +3325,11 @@ function renderBuyer(l){
 
   const sparse = `<span class="v-sparse" title="${esc(tk("Zu wenige Vergaben für eine belastbare Kennzahl"))}">${tk("zu wenig Daten")}</span>`;
   const b = (val) => val==null ? sparse
-    : free ? `<span class="blur" aria-hidden="true">${val}</span><span class="lockmark" title="${esc(tk("Im Pro-Zugang"))}">🔒</span>`
-    : val;
+    : free ? `<span class="blur" aria-hidden="true">${esc(val)}</span><span class="lockmark" title="${esc(tk("Im Pro-Zugang"))}">🔒</span>`
+    : esc(val);
   const bnum = (val) => val==null ? sparse
-    : free ? `<span class="blur blur-num" aria-hidden="true">${val}</span>`
-    : `<span class="v-num">${val}</span>`;
+    : free ? `<span class="blur blur-num" aria-hidden="true">${esc(val)}</span>`
+    : `<span class="v-num">${esc(val)}</span>`;
   const upsell = '';   // kein Aufruf je Block — er steht einmal in der Seitenspalte
 
   const concClass = {fragmentiert:'ok', moderat:'mid', oligopol:'risk'}[d.concentration];
@@ -3412,9 +3412,9 @@ function renderBuyer(l){
           <div class="bmix-list">
             ${d.mix.map(m=>`<div class="bmix-row ${m.own?'own':''}">
               <i class="bmix-dot ${m.own?'own':''} ${m.rest?'rest':''}"></i>
-              <span class="bmix-l">${b(esc(m.label))}</span>
+              <span class="bmix-l">${b(m.label)}</span>
               <span class="bmix-p">${free?`<span class="blur blur-num">${m.pct} %</span>`:`<span class="v-num">${m.pct} %</span>`}</span>
-              <span class="bmix-n">${free?`<span class="blur blur-num">${m.n}</span>`:`<span class="v-num">${m.n}</span>`}</span>
+              <span class="bmix-n">${free?`<span class="blur blur-num">${esc(m.n)}</span>`:`<span class="v-num">${esc(m.n)}</span>`}</span>
             </div>`).join('')}
           </div>
         </div>
@@ -3468,15 +3468,15 @@ function renderBuyer(l){
             <span class="bwin-bar"><i style="width:${Math.min(100,w.pct*2)}%"></i></span>
             <span class="bwin-name">${b(w.n)}</span>
             <span class="bwin-p">${free?`<span class="blur blur-num">${w.pct} %</span>`:`<span class="v-num">${w.pct} %</span>`}</span>
-            <span class="bwin-c">${free?`<span class="blur blur-num">${w.w}</span>`:`<span class="v-num">${w.w}</span>`} Siege</span>
+            <span class="bwin-c">${free?`<span class="blur blur-num">${esc(w.w)}</span>`:`<span class="v-num">${esc(w.w)}</span>`} Siege</span>
           </div>`).join('')}
         </div>
       </div>
       <div class="bfeed">
         <div class="bfeed-row bfeed-head"><span>${tk("Zuletzt vergeben")}</span><span>${tk("Gewinner")}</span><span>${tk("Wert")}</span><span></span></div>
         ${d.recent.map(r=>{
-          const inner = `<span class="bf-t"><span class="bf-date">${esc(r.date)}</span>${b(esc(r.title))}${r.flag?`<span class="bf-flag" title="${esc(tk("Nur ein Bieter"))}">${r.flag}</span>`:''}</span>
-          <span class="bf-w">${b(esc(r.winner))}</span>
+          const inner = `<span class="bf-t"><span class="bf-date">${esc(r.date)}</span>${b(r.title)}${r.flag?`<span class="bf-flag" title="${esc(tk("Nur ein Bieter"))}">${esc(r.flag)}</span>`:''}</span>
+          <span class="bf-w">${b(r.winner)}</span>
           <span class="bf-v ${r.value.includes('unbekannt')?'unk':''}">${free?`<span class="blur">${esc(r.value)}</span>`:esc(r.value)}</span>`;
           if(free) return `<div class="bfeed-row">${inner}</div>`;
           return r.lead
@@ -3518,7 +3518,7 @@ function renderProfil(){
   const d = BESTAND || PROFIL[profilStufe] || PROFIL.neu;
   const historie = d.siege>0, belastbar = d.siege>=5 && d.kunden>=3;
   const free = isFreeLimit();
-  const n = v => `<span class="v-num">${v}</span>`;
+  const n = v => `<span class="v-num">${esc(v)}</span>`;
   return `<div class="pwrap">
     <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:var(--s4);flex-wrap:wrap">
       <div class="steck">
@@ -3565,14 +3565,14 @@ function renderProfil(){
         <div class="pb-h"><span class="pb-t">${tk("In eurem Markt")}</span><span class="pb-n">${PMARKT.offen} offen</span></div>
         <p class="pb-x">${tk("Die aktivsten Vergabestellen in eurem Feld und euren Regionen. Unabhängig davon, ob ihr dort schon geboten habt.")}</p>
         <div class="prow prow-h"><span>${tk("Vergabestelle")}</span><span>${tk("Vergaben")}</span><span>${tk("offen")}</span></div>
-        ${PMARKT.topStellen.map(v=>`<div class="prow"><span class="pr-n">${v.n}</span><span class="pr-a">${v.vergaben}</span>
+        ${PMARKT.topStellen.map(v=>`<div class="prow"><span class="pr-n">${esc(v.n)}</span><span class="pr-a">${v.vergaben}</span>
           <span class="pr-o">${v.offen?`<span class="pr-tag">${v.offen}</span>`:'<span style="color:var(--ink-300)">—</span>'}</span></div>`).join('')}
       </div>
       <div class="pblock">
         <div class="pb-h"><span class="pb-t">${tk("Einstiegsfreundlich")}</span></div>
         <p class="pb-x">${tk("Offene Ausschreibungen mit kleinem Los und wenigen Bietern, dort ist der Sprung hinein am kürzesten.")}</p>
         <div class="prow prow-h"><span>${tk("Ausschreibung")}</span><span>${tk("Kleinstes Los")}</span><span>${tk("Bieter")}</span></div>
-        ${PMARKT.einstieg.map(v=>`<div class="prow"><span class="pr-n">${v.n}</span><span class="pr-a">${v.wert}</span><span class="pr-a">${v.bieter||'—'}</span></div>`).join('')}
+        ${PMARKT.einstieg.map(v=>`<div class="prow"><span class="pr-n">${esc(v.n)}</span><span class="pr-a">${esc(v.wert)}</span><span class="pr-a">${v.bieter||'—'}</span></div>`).join('')}
         <p class="pgap">${tk("Die Bieterzahl stammt aus vergleichbaren, bereits entschiedenen Vergaben derselben Stelle, bei laufenden Ausschreibungen hat noch niemand geboten.")}</p>
       </div>
     </section>`}
