@@ -1462,9 +1462,12 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
             z.className = "cl-bib-z";
             z.dataset.clpick = String(alle.indexOf(b));
             const wie = b.verwendet ? ` · ${b.verwendet}×` : "";
-            z.innerHTML = `<span class="cl-bib-t">${b.theme}${wie}</span>`
-              + `<span class="cl-bib-x"></span>`;
-            // Textinhalt NICHT ueber innerHTML: ein Baustein enthaelt fremden Text.
+            z.innerHTML = `<span class="cl-bib-t"></span><span class="cl-bib-x"></span>`;
+            // Textinhalt NICHT ueber innerHTML: ein Baustein enthaelt fremden Text — das
+            // gilt fuer `theme` genauso wie fuer `content`. `theme` kommt aus der eigenen
+            // Bausteinbibliothek bzw. aus LLM-Auswertungen fremder Dokumente; roh ins
+            // innerHTML gesetzt (frueher hier der Fall) war es ein XSS-Weg.
+            z.querySelector(".cl-bib-t")!.textContent = b.theme + wie;
             z.querySelector(".cl-bib-x")!.textContent = b.content.slice(0, 160);
             if (passend.length && k === passend.length) z.classList.add("cl-bib-trenn");
             kasten.appendChild(z);

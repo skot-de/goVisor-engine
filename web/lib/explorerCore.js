@@ -2759,23 +2759,23 @@ ${l.lose && l.lose.length>1 ? (()=>{
       const passtNr = l.bestLot ? l.bestLot.nr : null;
       return `<section class="sec">
         <h4>${tk("Lose")}<span class="cov">${l.lose.length} Teilleistungen</span></h4>
-        ${passtNr!=null?`<div class="los-passt-hint">${tk("Für euch relevant ist")} <b>Los ${passtNr}</b>${l.bestLot.titel?`: ${l.bestLot.titel}`:''}${l.bestLot.region?` · ${l.bestLot.region}`:''}. Die Ausschreibung erbt dessen Relevanz, auch wenn sie insgesamt größer ist.</div>`:''}
+        ${passtNr!=null?`<div class="los-passt-hint">${tk("Für euch relevant ist")} <b>Los ${passtNr}</b>${l.bestLot.titel?`: ${esc(l.bestLot.titel)}`:''}${l.bestLot.region?` · ${esc(l.bestLot.region)}`:''}. Die Ausschreibung erbt dessen Relevanz, auch wenn sie insgesamt größer ist.</div>`:''}
         <div class="einstieg">
           <div class="ein-m">
             <span class="ein-k">${tk("Einstiegsschwelle")}</span>
             <span class="ein-v">${fmt(min)}</span>
           </div>
           <span class="ein-x">Ihr müsst nicht auf die volle Summe von ${fmt(werte.reduce((a,b)=>a+b,0))}
-          bieten. Das kleinste Los ist einzeln vergeben: <b>${l.lose[minI].titel}</b>.</span>
+          bieten. Das kleinste Los ist einzeln vergeben: <b>${esc(l.lose[minI].titel)}</b>.</span>
         </div>
         <div class="lose">
           <div class="los los-head"><span>${tk("Los")}</span><span>${tk("Leistung")}</span><span>${tk("Wert")}</span><span>${tk("Laufzeit")}</span><span>${tk("Ort")}</span></div>
           ${l.lose.map((x,i)=>`<div class="los ${i===minI?'los-min':''} ${x.nr===passtNr?'los-passt':''}">
             <span class="los-n">${x.nr}</span>
             <span class="los-t">${esc(x.titel)}${x.nr===passtNr?`<span class="los-tag los-tag-passt">${tk("passt")}</span>`:''}${i===minI?`<span class="los-tag">${tk("kleinstes")}</span>`:''}</span>
-            <span class="los-w">${x.wert}</span>
-            <span class="los-d">${x.dauer}</span>
-            <span class="los-r">${x.region}</span>
+            <span class="los-w">${esc(x.wert)}</span>
+            <span class="los-d">${esc(x.dauer)}</span>
+            <span class="los-r">${esc(x.region)}</span>
           </div>`).join('')}
         </div>
         ${l.optionen||l.verlaengerung?`<div class="note-box" style="margin-top:var(--s3)">
@@ -3029,7 +3029,7 @@ function renderAnalyse(l){
     <section class="sec" id="an-vergleich" data-sec="vergleich">
       <h4>${tk("Direktvergleich")}<span class="cov">im Feld ${cpvLabel(l)}, nach Anzahl Zuschlägen</span></h4>
       <table class="cmp">
-        <thead><tr><th>${tk("Kennzahl")}</th><th>${tk("Ihr")}</th><th></th><th>${l.incumbent ? l.incumbent.name.split(' ')[0] : '—'}</th></tr></thead>
+        <thead><tr><th>${tk("Kennzahl")}</th><th>${tk("Ihr")}</th><th></th><th>${l.incumbent ? esc(l.incumbent.name.split(' ')[0]) : '—'}</th></tr></thead>
         <tbody>
           ${(()=>{ const inc=l.incumbent, cpv4=String(l.cpv||'').slice(0,4);
             const uw = (userProfile && userProfile.cpvWins && userProfile.cpvWins[cpv4]);
@@ -3350,7 +3350,7 @@ function renderBuyer(l){
   return `<div class="dbody dbody-buyer">
     <div class="buyer-head">
       <div>
-        <div class="buyer-name">${d.name}</div>
+        <div class="buyer-name">${esc(d.name)}</div>
         <div class="buyer-sub">${tk("Vergabestelle · Käufer-Dossier")}${d.quelle === "unterschwellig" ? ` · <span class="v-sparse" title="${esc(tk("Diese Stelle schreibt unterhalb der EU-Schwellenwerte aus. Wir kennen sie aus oeffentlichevergabe.de, nicht aus TED. Deshalb fehlen hier Kennzahlen wie Single-Bidder-Anteil und Wechselquote."))}">${tk("unterschwellig")}</span>` : ""}</div>
         <button class="sec-link" data-buyerleads="${esc(l.buyerShort)}">${tk("Alle Leads dieser Vergabestelle")}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </button>
@@ -3522,10 +3522,10 @@ function renderProfil(){
   return `<div class="pwrap">
     <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:var(--s4);flex-wrap:wrap">
       <div class="steck">
-        <div class="steck-n">${userProfile&&userProfile.firma?userProfile.firma:'Euer Marktumfeld'}</div>
+        <div class="steck-n">${userProfile&&userProfile.firma?esc(userProfile.firma):'Euer Marktumfeld'}</div>
         <div class="steck-z">
           <span>${BRANCHEN[aktiveBranche]}</span><i>·</i>
-          <span>${userProfile?(userProfile.regions?(userProfile.regionLabels||[]).join(' · '):'bundesweit'):'bundesweit'}</span><i>·</i>
+          <span>${userProfile?(userProfile.regions?esc((userProfile.regionLabels||[]).join(' · ')):'bundesweit'):'bundesweit'}</span><i>·</i>
           ${userProfile
             ? `<span class="steck-ok" title="${esc(tk("Profil aktiv, steuert Relevanz und Anforderungs-Check."))}">${tk("Profil aktiv")}</span>`
             : `<span class="steck-m" title="${esc(tk("Meldet euch an und bestätigt eure Firma, um euer Profil zu verbinden (Relevanz, Historie, eigene Aufträge)."))}">${tk("Profil noch nicht verbunden")}</span>`}
