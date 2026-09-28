@@ -975,7 +975,7 @@ function cellHTML(l, key){
        etwas ausgeblendet ist. Das Klicken faengt `handleRowClick` per Delegation ab. */
     case 'star': return `<td class="c-star"><button class="tstar" data-star="${l.id}" ${l.merk?`data-merk="${l.merk}"`:''} aria-label="Merken">${STAR}</button>`
       + `<button class="lt-hide${l.aus?' an':''}" data-hide="${l.id}" aria-label="${esc(tk(l.aus?'Wieder einblenden':'Passt nicht, ausblenden'))}" title="${esc(tk(l.aus?'Wieder einblenden':'Passt nicht, ausblenden'))}">${KREUZ}</button></td>`;
-    case 'src': return `<td class="c-src" data-tab="teilnahme"><span class="srcpill src-${l.src}">${l.srcLabel}</span></td>`;
+    case 'src': return `<td class="c-src" data-tab="teilnahme"><span class="srcpill src-${l.src}">${esc(l.srcLabel)}</span></td>`;
     case 'titel': {
       const wort = (searchTokens.find(t=>t.type==='text')||{}).value;
       const f = wort ? fundstelle(l, wort) : null;
@@ -2439,13 +2439,13 @@ function renderAwardUebersicht(l){
         <div class="aw-line"><span class="k">${tk("Vergabestelle")}</span><span class="v">${esc(l.buyer||'—')}</span></div>
         <div class="aw-line"><span class="k">${tk("Zuschlag erteilt")}</span><span class="v">${a.date?isoDe(a.date):'—'}</span></div>
         <div class="aw-line"><span class="k">${tk("Auftragswert")}</span><span class="v">${esc(l.volumen.wert)}<span class="aw-vm">${l.volumen.src==='echt'?'gemessen':tk("geschätzt")}</span></span></div>
-        <div class="aw-line"><span class="k">${tk("Laufzeit")}</span><span class="v">${a.laufzeit?'bis '+a.laufzeit:tk("nicht veröffentlicht")}</span></div>
+        <div class="aw-line"><span class="k">${tk("Laufzeit")}</span><span class="v">${a.laufzeit?'bis '+esc(a.laufzeit):tk("nicht veröffentlicht")}</span></div>
         <div class="aw-line"><span class="k">${tk("Unteraufträge")}</span><span class="v">${subTxt}</span></div>
       </section>
       <section class="aw-card">
         <h4>${esc(a.winner)}: was wir wissen</h4>
         <div class="aw-line"><span class="k">${tk("Zuschläge 36 Monate")}</span><span class="v">${s.wins36!=null?s.wins36:'—'}</span></div>
-        <div class="aw-line"><span class="k">${tk("Ø Auftragswert")}</span><span class="v">${s.avgValue||'—'}</span></div>
+        <div class="aw-line"><span class="k">${tk("Ø Auftragswert")}</span><span class="v">${esc(s.avgValue||'—')}</span></div>
         <div class="aw-line"><span class="k">${tk("mit Unterauftrags-Regelung")}</span><span class="v">${s.subQuote||'—'}</span></div>
         ${bars ? `<h4 style="margin-top:14px">${tk("Leistungsfelder")}</h4><div class="aw-bars">${bars}</div>` : ''}
       </section>
@@ -2529,7 +2529,7 @@ function renderUebersicht(l){
     ${(l.extras && l.extras.length) ? `<section class="sec">
       <h4>${tk("Zusätzliche Angaben")}<span class="land-tag">${l.land==='CH'?tk("🇨🇭 nur Schweiz"):l.land==='AT'?tk("🇦🇹 nur Österreich"):(l.land||'')}</span></h4>
       <div class="kv">
-        ${l.extras.map(e=>`<div class="kvi"><span class="k">${e.label}</span>
+        ${l.extras.map(e=>`<div class="kvi"><span class="k">${esc(e.label)}</span>
           <span class="vv">${iv(e.value,'echt')}</span></div>`).join('')}
       </div>
     </section>` : ''}
@@ -2673,7 +2673,7 @@ function renderTeilnahme(l){
       const isPortal = u && u.source==='portal';
       const href = u && u.url ? u.url : '#';
       const desc = isDocs
-        ? (u.portal ? `Vollständige Leistungsbeschreibung, Vertragsbedingungen und Formulare auf <b>${u.portal}</b>.`
+        ? (u.portal ? `Vollständige Leistungsbeschreibung, Vertragsbedingungen und Formulare auf <b>${esc(u.portal)}</b>.`
                     : tk("Direkter Link zu den Vergabeunterlagen. Leistungsbeschreibung, Vertragsbedingungen und Formulare."))
         : isPortal
           ? tk("Kein direkter Unterlagen-Link veröffentlicht, nur die Vergabeplattform. Dort mit der Vergabenummer suchen.")
@@ -2780,7 +2780,7 @@ ${l.lose && l.lose.length>1 ? (()=>{
         </div>
         ${l.optionen||l.verlaengerung?`<div class="note-box" style="margin-top:var(--s3)">
           <b>${tk("Über die Grundlaufzeit hinaus:")}</b> ${[l.optionen?'Optionen vorgesehen':null,
-          l.verlaengerung?`Verlängerung möglich (${l.verlaengerung})`:null].filter(Boolean).join(' · ')}.
+          l.verlaengerung?`Verlängerung möglich (${esc(l.verlaengerung)})`:null].filter(Boolean).join(' · ')}.
           Der tatsächliche Vertragswert kann deutlich über der Summe der Lose liegen.</div>`:''}
       </section>`;
     })() : ''}
@@ -2970,7 +2970,7 @@ function renderAnalyse(l){
           <span class="ds-t">${tk("Zusammengenommen")}</span>
           <span class="ds-x">${satz}</span>
           ${block}
-          ${a.treiber.length?`<span class="ds-tr">Aufwandstreiber: ${a.treiber.join(' · ')}</span>`:''}
+          ${a.treiber.length?`<span class="ds-tr">Aufwandstreiber: ${esc(a.treiber.join(' · '))}</span>`:''}
           ${a.stufe!=='na'&&a.bekannt<4?`<span class="ds-cov">Aus ${a.bekannt} von 4 Angaben, die übrigen stehen nicht in der Bekanntmachung.</span>`:''}
         </div>`;})()}
 
@@ -2979,7 +2979,7 @@ function renderAnalyse(l){
                  [tk('Angebotsabgabe'),a.eabgabe],[tk('Lebensläufe gefordert'),a.lebenslauf]];
         return `<div class="aufl">${z.map(([k,v])=>`<div class="auf-r">
           <span class="auf-k">${k}</span>
-          <span class="auf-v ${v==null?'unk':''}">${v==null?tk("nicht angegeben"):v}</span>
+          <span class="auf-v ${v==null?'unk':''}">${v==null?tk("nicht angegeben"):esc(v)}</span>
         </div>`).join('')}</div>`;})()}
       ${(()=>{ const lue = bieterLuecke(l); if(!lue) return '';
         return `<div class="score-caveat">
@@ -3100,7 +3100,7 @@ function renderAnalyse(l){
             <span class="code">${tk("Bindefrist")}</span><span class="lbl">${a.bindefristTage} Tage</span>
             <span class="st">${tk("So lange bindet euer Angebot nach Abgabe")}</span></div>`);
           if(a.eignung && a.eignung.length) rows.push(`<div class="req"><span class="mk i">i</span>
-            <span class="code">${tk("Eignung")}</span><span class="lbl">${a.eignung.map(e=>EIG[e]||e).join(' · ')}</span>
+            <span class="code">${tk("Eignung")}</span><span class="lbl">${esc(a.eignung.map(e=>EIG[e]||e).join(' · '))}</span>
             <span class="st">${tk("Im Angebot nachzuweisen")}</span></div>`);
           if(!rows.length) return '';
           return `<div class="reqgroup-h">${tk("Strukturierte Anforderungen")}<span class="prov-echt">${tk("aus der Bekanntmachung")}</span></div>`+rows.join('');
@@ -3113,10 +3113,10 @@ function renderAnalyse(l){
           const WERT = {feld:[l.cpv, cpvLabel(l)], region:['Region', l.region], vol:['Volumen', l.volumen.wert]};
           const rows = m.teile.map(t=>{ const [cls,sym]=MK[t.status]||['q','?']; const [code,lbl]=WERT[t.dim]||['',''];
             return `<div class="req"><span class="mk ${cls}">${sym}</span>
-              <span class="code">${code}</span><span class="lbl">${lbl}</span><span class="st">${t.text}</span></div>`;}).join('');
+              <span class="code">${code}</span><span class="lbl">${esc(lbl)}</span><span class="st">${esc(t.text)}</span></div>`;}).join('');
           const blk = m.blocker.map(b=>{ const rot = b.art==='buergschaft';
             return `<div class="req req-blk"><span class="mk ${rot?'n':'q'}">${rot?'&#10007;':'!'}</span>
-              <span class="lbl">${b.text}</span></div>`;}).join('');
+              <span class="lbl">${esc(b.text)}</span></div>`;}).join('');
           const ok = m.teile.filter(t=>t.status==='ok').length;
           return rows + blk + `<div class="reqsum"><b>${ok} von ${m.teile.length} Kriterien erfüllt</b>${m.partner?tk(" · nur mit Partner realistisch"):''}</div>`;
         })()}
@@ -3265,8 +3265,8 @@ function renderMarkt(l){
   const na = v => v==null ? `<span class="v-sparse">${tk("zu wenig Daten")}</span>` : `<span class="v-num">${v}</span>`;
   return `<div class="mbody">
     <div class="buyer-head"><div>
-      <div class="buyer-name">${s.label}</div>
-      <div class="buyer-sub">Marktsegment &middot; CPV ${s.cpv4}${s.zeitraum?` &middot; ${s.zeitraum}`:''}</div>
+      <div class="buyer-name">${esc(s.label)}</div>
+      <div class="buyer-sub">Marktsegment &middot; CPV ${s.cpv4}${s.zeitraum?` &middot; ${esc(s.zeitraum)}`:''}</div>
     </div></div>
 
     <section class="bsec">
@@ -3374,7 +3374,7 @@ function renderBuyer(l){
       </h4>
       ${renderStellenprofil(l)}
       <div class="bstats">
-        <div class="bstat"><span class="bstat-k">${tk("Vergaben gesamt")}</span><span class="bstat-v">${bnum(d.total)}</span><span class="bstat-m">${d.zeitraum}</span></div>
+        <div class="bstat"><span class="bstat-k">${tk("Vergaben gesamt")}</span><span class="bstat-v">${bnum(d.total)}</span><span class="bstat-m">${esc(d.zeitraum)}</span></div>
         <div class="bstat"><span class="bstat-k">${tk("Vergaben pro Jahr")}</span><span class="bstat-v">${bnum(d.perYear)}</span></div>
         <div class="bstat"><span class="bstat-k">${tk("Bekanntmachung bis Zuschlag")}</span><span class="bstat-v">${bnum(d.decision)}</span></div>
         <div class="bstat"><span class="bstat-k">${tk("Typischer Auftragswert")}</span><span class="bstat-v">${bnum(d.median)}</span><span class="bstat-m">${tk("Median")}</span></div>
@@ -3412,7 +3412,7 @@ function renderBuyer(l){
           <div class="bmix-list">
             ${d.mix.map(m=>`<div class="bmix-row ${m.own?'own':''}">
               <i class="bmix-dot ${m.own?'own':''} ${m.rest?'rest':''}"></i>
-              <span class="bmix-l">${b(m.label)}</span>
+              <span class="bmix-l">${b(esc(m.label))}</span>
               <span class="bmix-p">${free?`<span class="blur blur-num">${m.pct} %</span>`:`<span class="v-num">${m.pct} %</span>`}</span>
               <span class="bmix-n">${free?`<span class="blur blur-num">${m.n}</span>`:`<span class="v-num">${m.n}</span>`}</span>
             </div>`).join('')}
@@ -3475,12 +3475,12 @@ function renderBuyer(l){
       <div class="bfeed">
         <div class="bfeed-row bfeed-head"><span>${tk("Zuletzt vergeben")}</span><span>${tk("Gewinner")}</span><span>${tk("Wert")}</span><span></span></div>
         ${d.recent.map(r=>{
-          const inner = `<span class="bf-t"><span class="bf-date">${r.date}</span>${b(r.title)}${r.flag?`<span class="bf-flag" title="${esc(tk("Nur ein Bieter"))}">${r.flag}</span>`:''}</span>
-          <span class="bf-w">${b(r.winner)}</span>
-          <span class="bf-v ${r.value.includes('unbekannt')?'unk':''}">${free?`<span class="blur">${r.value}</span>`:r.value}</span>`;
+          const inner = `<span class="bf-t"><span class="bf-date">${esc(r.date)}</span>${b(esc(r.title))}${r.flag?`<span class="bf-flag" title="${esc(tk("Nur ein Bieter"))}">${r.flag}</span>`:''}</span>
+          <span class="bf-w">${b(esc(r.winner))}</span>
+          <span class="bf-v ${r.value.includes('unbekannt')?'unk':''}">${free?`<span class="blur">${esc(r.value)}</span>`:esc(r.value)}</span>`;
           if(free) return `<div class="bfeed-row">${inner}</div>`;
           return r.lead
-            ? `<div class="bfeed-row bfeed-link" data-openlead="${r.lead}" title="${esc(tk("Vergabe öffnen"))}">${inner}<span class="bf-go" aria-hidden="true">›</span></div>`
+            ? `<div class="bfeed-row bfeed-link" data-openlead="${esc(r.lead)}" title="${esc(tk("Vergabe öffnen"))}">${inner}<span class="bf-go" aria-hidden="true">›</span></div>`
             : `<a class="bfeed-row bfeed-link" href="https://ted.europa.eu" target="_blank" rel="noopener" title="${esc(tk("Zuschlag auf TED ansehen"))}">${inner}<span class="bf-go bf-ext" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a>`;
         }).join('')}
       </div>
