@@ -35,6 +35,8 @@ from pathlib import Path
 
 import requests
 
+from . import ssrf
+
 from .config import Config
 
 _UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
@@ -155,9 +157,9 @@ def fetch_one(documents_url: str, notice_id: str, out_root: Path,
     s.headers.update({"User-Agent": _UA, "Accept-Language": "de-DE,de;q=0.9"})
     try:
         # 1) Session-Cookie setzen (Landingpage besuchen).
-        s.get(f"{origin}/{base}/notice/{cx}/documents", timeout=timeout, allow_redirects=True)
+        ssrf.hole(s, f"{origin}/{base}/notice/{cx}/documents", timeout=timeout)
         # 2) Archiv-ZIP anonym ziehen.
-        r = s.get(_zip_url(origin, base, cx), timeout=timeout, allow_redirects=True)
+        r = ssrf.hole(s, _zip_url(origin, base, cx), timeout=timeout)
     except requests.RequestException as e:
         return FetchResult(notice_id, cx, portal, "error", 0, 0, None, f"{type(e).__name__}: {e}"[:150])
 

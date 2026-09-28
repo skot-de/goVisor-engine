@@ -40,7 +40,17 @@ def parse_gaeb(data: bytes) -> dict | None:
     """
     try:
         from lxml import etree
-        root = etree.fromstring(data)
+        # ⚠ GEHAERTETER PARSER — `data` sind Bytes aus einer heruntergeladenen Vergabe-ZIP,
+        # also fremdkontrolliert. Der Standardparser von lxml loest externe Entities auf
+        # (`resolve_entities=True`); eine vergiftete `<!ENTITY x SYSTEM "file:///…/.secrets/
+        # openrouter.key">` landete damit im geparsten Baum und ueber die Positionen in
+        # `doc_positions`. `no_network` ist zwar Default, aber `file://` liest lokal —
+        # deshalb Entities und DTD ausdruecklich aus. Vordefinierte XML-Entities (&amp;,
+        # &lt; …) bleiben davon unberuehrt, GAEB-Text wird also unveraendert gelesen; GAEB
+        # DA XML kennt keine eigenen Entities.
+        parser = etree.XMLParser(resolve_entities=False, no_network=True,
+                                 load_dtd=False, dtd_validation=False)
+        root = etree.fromstring(data, parser)
     except Exception:
         return parse_gaeb_flat(data)
     positions = []
