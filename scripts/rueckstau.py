@@ -124,8 +124,14 @@ def _ausbeute(kurz: str, tage: int = 7) -> float | None:
     import duckdb
 
     verz = _manifest_ort(kurz)
-    # cosinex schreibt in `_manifest.parquet` ohne Namenszusatz — historisch der erste.
-    pfad = verz / (f"_manifest_{kurz}.parquet" if kurz != "cosinex" else "_manifest.parquet")
+    # ⚠ DERSELBE DREHER WIE IN `rueckstand()`, nur leiser. Hier stand der Kurzname direkt im
+    # Dateinamen; fuer `simap_docs` und `vergabeportal_at` heisst die Datei aber
+    # `_manifest_simap.parquet` bzw. `_manifest_vergabeportal.parquet`. Ergebnis war kein
+    # Fehler, sondern `None` — und damit die Vorgabequote 0,5 statt der gemessenen. Die
+    # Zuordnung steht jetzt an einer Stelle: `docfetch_queue.KENNUNG`.
+    from govisor.docfetch_queue import _pfad, kennung
+    name, _ = kennung(kurz)
+    pfad = _pfad(verz, name)
     if not pfad.exists():
         return None
     try:
@@ -137,6 +143,11 @@ def _ausbeute(kurz: str, tage: int = 7) -> float | None:
     except Exception:                                         # noqa: BLE001
         return None
     return (g or 0) / v if v else None
+
+
+# Nebenausgabe von `rueckstand()`: {abrufer: {grund: anzahl}}. Modulweit statt im
+# Rueckgabewert, damit die Signatur ihrer 13 Aufrufer sich nicht aendert.
+LETZTE_LAGEN: dict[str, dict[str, int]] = {}
 
 
 def rueckstand() -> list[tuple[str, int]]:
@@ -170,7 +181,7 @@ def rueckstand() -> list[tuple[str, int]]:
 
     import duckdb
 
-    from govisor.docfetch_queue import filtere, frueher
+    from govisor.docfetch_queue import ManifestFehler, filtere, frueher, kennung
 
     # ⚠ ALLE AKTIVEN LAENDER, NICHT NUR DE — seit 2026-09-15.
     #
@@ -224,6 +235,10 @@ def rueckstand() -> list[tuple[str, int]]:
     offen = [(lid, url) for lid, url in offen if lid not in schon]
 
     zahlen: dict[str, int] = {}
+    # Warum ein Kandidat NICHT geholt wird, je Abrufer — die zweite Liste, die bis
+    # zum 2026-09-20 fehlte. Der Trichter zeigte 15.972 Leads mit Link und 6.399
+    # geholte; warum die uebrigen 9.573 fehlen, sagte niemand.
+    lagen: dict[str, dict[str, int]] = {}
     for kurz, modul in abrufer().items():
         try:
             m = importlib.import_module(modul)
@@ -239,10 +254,26 @@ def rueckstand() -> list[tuple[str, int]]:
             continue
         # Frueher Gescheitertes zaehlt ebenfalls nicht: der Abrufer wuerde es gar nicht
         # erst anfassen (`filtere`), es blaeht nur die Zahl auf, nach der wir sortieren.
+        #
+        # ⚠ HIER STAND `frueher(_manifest_ort(kurz), kurz)` — mit dem KURZNAMEN als
+        # Manifest-Namen und ohne Schluesselfeld. Bei drei von dreizehn Abrufern ging das
+        # daneben (Namensdreher bzw. `notice_id` statt `lead_id`), und `frueher` antwortete
+        # mit einem leeren Ergebnis, das aussieht wie „noch nichts versucht". Folge: jeder
+        # laengst gelernte Ausgang zaehlte weiter mit. Gemessen am 2026-09-20 —
+        # simap_docs 1.566 gemeldet / 3 echt, cosinex 318 / 0.
+        #
+        # ⚠ UND DAS `except Exception: pass` DARUM HAT ES ZUGEDECKT. Ein Defekt im Aufruf
+        # darf nicht in denselben Topf wie ein unlesbares Manifest. `ManifestFehler` faellt
+        # deshalb bewusst durch.
+        name, id_feld = kennung(kurz)
         try:
             # ⚠ Das Manifest liegt beim Land des Abrufers, nicht bei DE.
-            treffer, _ = filtere(treffer, frueher(_manifest_ort(kurz), kurz),
-                                 lead_id=lambda x: x[0])
+            treffer, gruende = filtere(
+                treffer, frueher(_manifest_ort(kurz), name, id_feld=id_feld, streng=True),
+                lead_id=lambda x: x[0])
+            lagen[kurz] = gruende
+        except ManifestFehler:
+            raise
         except Exception:                                     # noqa: BLE001
             pass
         zahlen[kurz] = len(treffer)
@@ -253,7 +284,77 @@ def rueckstand() -> list[tuple[str, int]]:
         gewichtet.append((kurz, n, round(n * quote)))
     # Ausgabe traegt BEIDE Zahlen: die Erwartung steuert, der rohe Rueckstau erklaert sie.
     gewichtet.sort(key=lambda x: (-x[2], -x[1]))
+    global LETZTE_LAGEN
+    LETZTE_LAGEN = lagen
     return [(kurz, erwartet, roh) for kurz, roh, erwartet in gewichtet]
+
+
+# ── DIE ZWEITE LISTE: warum ein Kandidat NICHT geholt wird ───────────────────────────────
+#
+# WARUM (Sven, 2026-09-20): „macht es nicht sinn die eintraege zu flaggen und je nach flag
+# werden sie uebersprungen bzw in eine andere liste uebertragen?"
+#
+# Die Flags gibt es laengst — `docfetch_queue` fuehrt sie in DAUERHAFT, BLOCKIERT, WARTET
+# und KEIN_FEHLSCHLAG, und jeder Abrufer schreibt sie sauber ins Manifest. Was fehlte, war
+# die zweite Liste: `--rueckstand` zaehlt nur, was zu HOLEN ist, und alles andere fiel
+# stumm heraus. `scripts/dokumente_stand.py` zeigte 15.972 Leads mit Link und 6.399 geholte
+# — und ueber die uebrigen 9.573 sagte niemand ein Wort.
+#
+# ⚠ DER UNTERSCHIED IST NICHT KOSMETISCH. `blockiert:konto` ist eine Geschaeftsfrage (lohnt
+# ein Zugang?), `blockiert:parser` eine Arbeitsliste fuer uns, `dauerhaft` ein Schlussstrich
+# und `Sperre` nur Geduld. Zusammengeworfen sehen alle vier aus wie „geht halt nicht".
+_KLASSE = {
+    "dauerhaft": "endgueltig — nichts mehr zu holen",
+    "konto":     "braucht einen Zugang        (Geschaeftsfrage)",
+    "passwort":  "nur fuer eingeladene Bieter (nicht loesbar)",
+    "interesse": "braucht Interessensbekundung (Geschaeftsfrage)",
+    "parser":    "unsere Baustelle            (Arbeitsliste)",
+    "portal":    "Portal gibt es anonym nicht her",
+    "groesse":   "ueber der Groessengrenze dieses Laufs",
+    "sperre":    "Sperrfrist laeuft noch      (kommt von selbst wieder)",
+}
+
+
+def _klasse_von(grund: str) -> str:
+    """Manifest-Status → Klasse. Die Zuordnung steht in `docfetch_queue`, nicht hier."""
+    from govisor.docfetch_queue import BLOCKIERT, DAUERHAFT, normalisiere
+    st = normalisiere(grund)
+    if st in DAUERHAFT:
+        return "dauerhaft"
+    b = BLOCKIERT.get(st)
+    if b:
+        return b
+    return "sperre"
+
+
+def zeige_lage() -> int:
+    """Warum die Kandidaten nicht geholt werden — je Klasse, ueber alle Abrufer."""
+    import collections
+
+    reihen = rueckstand()
+    offen_gesamt = sum(roh for _, _, roh in reihen)
+    je_klasse: dict[str, int] = collections.Counter()
+    je_klasse_abrufer: dict[str, dict[str, int]] = collections.defaultdict(collections.Counter)
+    for kurz, gruende in LETZTE_LAGEN.items():
+        for grund, n in gruende.items():
+            k = _klasse_von(grund)
+            je_klasse[k] += n
+            je_klasse_abrufer[k][kurz] += n
+
+    print(f"  Zu holen (Rueckstau ueber alle Abrufer): {offen_gesamt:,}")
+    print()
+    print("  NICHT zu holen, und warum:")
+    for k, n in sorted(je_klasse.items(), key=lambda x: -x[1]):
+        wer = ", ".join(f"{a} {v:,}" for a, v in
+                        sorted(je_klasse_abrufer[k].items(), key=lambda x: -x[1])[:3])
+        print(f"    {n:>7,}  {_KLASSE.get(k, k):<44} {wer}")
+    summe = sum(je_klasse.values())
+    print(f"    {summe:>7,}  zusammen")
+    print()
+    print("  Die zwei Geschaeftsfragen stehen oben: ein Zugang bzw. eine Interessens-")
+    print("  bekundung wuerde genau diese Vorgaenge freischalten. `parser` ist unsere")
+    print("  Arbeit, `dauerhaft` ist erledigt, `Sperre` kommt von selbst wieder.")
+    return 0
 
 
 def frei() -> tuple[bool, str]:
@@ -326,6 +427,8 @@ def main(argv=None) -> int:
     ap.add_argument("--zeigen", action="store_true", help="verfügbare Abrufer auflisten")
     ap.add_argument("--rueckstand", action="store_true",
                     help="Abrufer nach offenem Rückstau sortiert (Name<TAB>Zahl)")
+    ap.add_argument("--lage", action="store_true",
+                    help="warum die uebrigen Kandidaten NICHT geholt werden (nach Klasse)")
     ap.add_argument("--connector", help=f"einer von: {', '.join(sorted(reg))}")
     ap.add_argument("--stunden", type=float, default=4.0)
     ap.add_argument("--limit", type=int, default=60, help="Vorgänge je Runde")
@@ -333,6 +436,8 @@ def main(argv=None) -> int:
                     help="auch bei laufendem Tageslauf starten (nur wenn man weiss, warum)")
     a = ap.parse_args(argv)
 
+    if a.lage:
+        return zeige_lage()
     if a.rueckstand:
         for kurz, erwartet, roh in rueckstand():
             print(f"{kurz}\t{erwartet}\t{roh}")

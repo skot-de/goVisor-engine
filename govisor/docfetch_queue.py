@@ -232,7 +232,48 @@ def _pfad(out_root: Path, name: str) -> Path:
     return out_root / f"_manifest_{name}.parquet"
 
 
-def frueher(out_root: Path, name: str, id_feld: str = "lead_id") -> dict[str, dict]:
+class ManifestFehler(RuntimeError):
+    """Das Manifest ist da, passt aber nicht zum Aufruf.
+
+    Eigene Klasse, damit sie NICHT in einem `except Exception: pass` verschwindet. Das ist
+    kein Zustand der Welt („noch nichts versucht"), sondern ein Defekt im Aufruf — und er
+    hat sich am 2026-09-20 genau so getarnt, s. `KENNUNG` unten.
+    """
+
+
+# ── WIE EIN ABRUFER SEIN MANIFEST FUEHRT: (Dateinamen-Kuerzel, Schluesselfeld) ────────────
+#
+# ⚠ WARUM ES DIESE TABELLE GIBT (2026-09-20). Es gab zwei Konventionen, die zufaellig
+# meistens uebereinstimmten: den Kurznamen, unter dem `scripts/rueckstau.py` einen Abrufer
+# fuehrt (aus dem Modulnamen abgeleitet), und den Namen, unter dem der Abrufer sein Manifest
+# SCHREIBT. Bei drei von dreizehn liefen sie auseinander — und weil `frueher()` auf „Datei
+# gibt es nicht" und auf „Spalte gibt es nicht" mit demselben leeren Ergebnis antwortete wie
+# auf „noch nichts versucht", hat es niemand gemerkt. Gemessen an diesem Tag:
+#
+#     simap_docs        1.566 gemeldet →     3 wirklich offen  (1.563 × interesse_noetig)
+#     cosinex             318 gemeldet →     0                 (254 gated, 34 fehler, 30 weg)
+#     vergabeportal_at    227 gemeldet →   217
+#
+# Der Dokumenten-Arbeiter waehlt nach diesen Zahlen aus, wer drankommt. Die beiden am
+# staerksten aufgeblaehten standen damit dauerhaft oben, mit 3 bzw. 0 echten Aufgaben.
+#
+# Wer einen Abrufer hinzufuegt, dessen Manifest anders heisst als sein Kurzname oder der
+# nicht `lead_id` fuehrt, traegt ihn HIER ein — `tests/test_docfetch_queue_kennung.py` haelt
+# die Tabelle gegen die Platte.
+KENNUNG: dict[str, tuple[str, str]] = {
+    "cosinex":          ("cosinex", "notice_id"),   # docfetch.py fuehrt notice_id
+    "simap_docs":       ("simap", "lead_id"),       # Modul heisst simap_docs, Manifest simap
+    "vergabeportal_at": ("vergabeportal", "lead_id"),
+}
+
+
+def kennung(kurz: str) -> tuple[str, str]:
+    """Kurzname eines Abrufers → (Manifest-Name, Schluesselfeld). Vorgabe: beides wie der Name."""
+    return KENNUNG.get(kurz, (kurz, "lead_id"))
+
+
+def frueher(out_root: Path, name: str, id_feld: str = "lead_id",
+            streng: bool = False) -> dict[str, dict]:
     """Letzter bekannter Ausgang je Kennung. Leeres Ergebnis, wenn es kein Manifest gibt.
 
     `id_feld` gibt es, weil `docfetch.py` seine Sätze über `notice_id` führt und die übrigen
@@ -241,15 +282,35 @@ def frueher(out_root: Path, name: str, id_feld: str = "lead_id") -> dict[str, di
 
     Bewusst fehlertolerant: ein unlesbares Manifest darf einen Lauf nicht verhindern. Der
     schlimmste Fall ist, dass wieder von vorn probiert wird — der Zustand von gestern.
+
+    ⚠ ZWEI LAGEN SIND ABER KEINE LAGE, SONDERN EIN DEFEKT, und die werden seit dem
+    2026-09-20 laut:
+      · Das Manifest ist da, führt das verlangte Schlüsselfeld aber nicht → `ManifestFehler`.
+        Ein leeres Ergebnis hiesse hier „noch nichts versucht", und dann läuft jeder bereits
+        gelernte Ausgang wieder in die Warteschlange.
+      · Die Datei fehlt und der Aufrufer hat `streng=True` gesetzt → Hinweis auf stderr.
+        Für einen Abrufer beim ersten Lauf ist das normal; für eine Auswertung, die über
+        ALLE Abrufer zählt, ist es fast immer ein Namensdreher.
     """
     p = _pfad(out_root, name)
     if not p.exists():
+        if streng:
+            print(f"  ⚠ kein Manifest '{p.name}' fuer '{name}' — es wird NICHTS als bereits "
+                  f"bekannt aussortiert. Namensdreher? Siehe docfetch_queue.KENNUNG.",
+                  file=_sys.stderr)
         return {}
     try:
         import duckdb
         con = duckdb.connect()
         spalten = {r[0] for r in con.execute(
             f"DESCRIBE SELECT * FROM read_parquet('{p.as_posix()}')").fetchall()}
+    except Exception:                                     # noqa: BLE001
+        return {}                                          # unlesbar → wie „noch nichts"
+    if id_feld not in spalten:
+        raise ManifestFehler(
+            f"{p.name} fuehrt kein Feld '{id_feld}' (vorhanden: {', '.join(sorted(spalten))}). "
+            f"Ein leeres Ergebnis waere hier stumm falsch — siehe docfetch_queue.KENNUNG.")
+    try:
         # Manifeste von vor dem 2026-08-14 kennen `versucht_am` nicht. Statt sie zu
         # verwerfen (und damit die gemessenen Fehlschlaege), gilt dann das Datum der
         # Datei — fuer die Sperrfrist genau genug, und die DAUERHAFT-Faelle brauchen es
@@ -260,8 +321,6 @@ def frueher(out_root: Path, name: str, id_feld: str = "lead_id") -> dict[str, di
             import datetime as _dt
             stand = _dt.date.fromtimestamp(p.stat().st_mtime)
             wann_sql = f"DATE '{stand.isoformat()}'"
-        if id_feld not in spalten:
-            return {}
         rows = con.execute(
             f"""SELECT {id_feld}, arg_max(status, {wann_sql}) AS status,
                        max({wann_sql}) AS wann
