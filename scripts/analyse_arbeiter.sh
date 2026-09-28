@@ -159,7 +159,25 @@ while true; do
   # Sie prueft alle zehn fertigen Vorgaenge; bei 40 gleichzeitigen Anfragen sind im Moment
   # des Abbruchs bis zu 40 unterwegs — bei 0,42 $ je Vorgang also bis zu 17 $ Ueberschuss.
   # Bei 8 sind es hoechstens 3 $.
-  LIMIT=400 PARALLEL="${PARALLEL:-8}" \
+  # ⛔ GEDROSSELT AM 2026-09-20: LIMIT 400 → 50, PARALLEL 8 → 2.
+  #
+  # ⚠ DER GRUND IST NICHT DAS GELD, SONDERN DIE RUNDENLAENGE. Die Sperrpruefung ganz oben
+  # in dieser Schleife kommt erst WIEDER DRAN, wenn eine Runde fertig ist. Gemessen am
+  # 2026-09-20: die Runde, die um 00:01 startete, lief um 11:39 immer noch — 11 h 39 min,
+  # zuletzt mit 6,3 GB auf einer 16-GB-Maschine. Sie ist um 00:30 quer durch den gesamten
+  # Nachtlauf marschiert. Der Tageslauf hatte die Sperre korrekt gesetzt; es hat ihn nur
+  # niemand gefragt. Ergebnis: freier Speicher die ganze Nacht 50 bis 90 MB, Auslagerung
+  # 30,6 GB, und der Nachtlauf kam nicht bis zum Gold-Rebuild.
+  #
+  # Mit 50 statt 400 endet eine Runde in Minuten statt in Stunden, und der Arbeiter weicht
+  # dem Nachtlauf wieder aus. PARALLEL 2 statt 8, weil jeder Faden Archive auspackt und bis
+  # zu 200.000 Token Text haelt — das ist der Speicher, nicht die Rechenzeit.
+  #
+  # ⚠ DER DURCHSATZ SINKT NICHT proportional: es laufen einfach mehr Runden. Was wirklich
+  # sinkt, ist die Spitze. Sven am 2026-09-20: Beschaffung hat Vorrang, die Analyse darf
+  # runter, bis wir in der Cloud skalieren. Dort wieder hochdrehen:
+  #     LIMIT=400 PARALLEL=8 scripts/analyse_arbeiter.sh
+  LIMIT="${LIMIT:-50}" PARALLEL="${PARALLEL:-2}" \
     # ⚠ NUR_OFFENE FILTERT SEIT 2026-09-15 NICHTS MEHR. Die Variable steuert nur noch,
     # ob eine Neuberechnung (`NEU_AB_MODELL`) abgelaufene Vorgaenge stehen laesst.
     # Die Arbeitsreihenfolge macht die Auswahl: offene Leads zuerst, abgelaufene

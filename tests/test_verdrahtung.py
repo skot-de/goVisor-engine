@@ -242,6 +242,13 @@ def test_die_echte_datenlage_ist_sauber():
     Suite fallen, nicht erst den Zufall."""
     assert pv.sonde_frische() == []
     assert pv.sonde_paritaet() == []
+    # ⚠ Sonde 8 gehoert HIERHER, nicht nur ins Protokoll. Ein Nachtlauf, der nicht bis zum
+    # Gold-Rebuild kam, ist kein Schoenheitsfehler: das Produkt zeigt dann den Stand des
+    # Vortags, und genau das ist am 2026-09-20 elf Stunden lang niemandem aufgefallen.
+    # Der Marker wird erst ueberschrieben, wenn wieder ein Lauf ZU ENDE meldet — die Suite
+    # bleibt also rot, bis die naechste Nacht wirklich durchgelaufen ist. Das ist die
+    # Absicht und nicht der Nebeneffekt.
+    assert pv.sonde_lauf() == []
 
 
 def test_die_sonde_laeuft_im_nachtlauf_mit():
@@ -1311,3 +1318,72 @@ def test_deutsche_portale_brauchen_keine_ausnahme():
     assert pv._ist_deutsche_quelle("govisor.subreport")
     assert not pv._ist_deutsche_quelle("govisor.simap_docs"), "CH ist kein deutsches Portal"
     assert not pv._ist_deutsche_quelle("scripts/rueckstau.py")
+
+
+# ── Sonde 8: hat der letzte Lauf das Produkt erreicht? ──────────────────────
+#
+# Der Fall, der sie noetig gemacht hat (2026-09-20): der Nachtlauf blieb in der
+# Dubletten-Firewall haengen, wurde nach 631 min abgeraeumt und kam nie bis zum
+# Gold-Rebuild. Sonde 1 blieb gruen, weil ein gleichmaessig einen Tag alter Bestand
+# keinen Rueckstand gegen sich selbst hat. Beide Richtungen werden geprueft: schlaegt
+# an / bleibt still — sonst ist die Sonde selbst unbewiesen.
+
+def _marker(tmp_path, zeile: str, alter_tage: float = 0.0) -> pathlib.Path:
+    p = tmp_path / "letzter_lauf.txt"
+    p.write_text(zeile + "\n", encoding="utf-8")
+    t = time.time() - alter_tage * TAG
+    os.utime(p, (t, t))
+    return p
+
+
+def _satz(ende, zustand="fertig", dauer=90) -> str:
+    """Eine Marker-Zeile im Format, das `daily_leads.sh` wirklich schreibt."""
+    return f"{ende:%Y-%m-%d %H:%M}  {zustand} · {dauer} min · 0 Warnungen"
+
+
+def test_lauf_meldet_den_abbruch(tmp_path):
+    jetzt = time.time()
+    ende = __import__("datetime").datetime.fromtimestamp(jetzt)
+    m = _marker(tmp_path, _satz(ende, "ABGEBROCHEN (Code 75) bei: Dubletten-Firewall", 631))
+    w = _gold(tmp_path, {"DE": {"lead_export": 0}})
+    fehler = pv.sonde_lauf(marker=m, gold_wurzel=w, jetzt=jetzt)
+    assert any("abgebrochen" in f for f in fehler)
+
+
+def test_lauf_findet_gold_das_aelter_ist_als_der_lauf(tmp_path):
+    """Der eigentliche Befund: der Lauf lief, Gold blieb liegen.
+
+    Lauf endete vor 1 h, dauerte 631 min — Start also vor rund 11,5 h. Gold ist 18 h alt
+    und liegt damit VOR dem Start. Genau die Lage vom 2026-09-20.
+    """
+    jetzt = time.time()
+    ende = __import__("datetime").datetime.fromtimestamp(jetzt - 3600)
+    m = _marker(tmp_path, _satz(ende, "fertig", 631))
+    w = _gold(tmp_path, {"DE": {"lead_export": 18 / 24}})
+    fehler = pv.sonde_lauf(marker=m, gold_wurzel=w, jetzt=jetzt)
+    assert any("AELTER als der Start" in f for f in fehler)
+
+
+def test_lauf_schweigt_wenn_gold_im_lauf_gebaut_wurde(tmp_path):
+    """Gegenrichtung: derselbe Lauf, aber Gold ist waehrend seiner Laufzeit entstanden."""
+    jetzt = time.time()
+    ende = __import__("datetime").datetime.fromtimestamp(jetzt - 3600)
+    m = _marker(tmp_path, _satz(ende, "fertig", 631))
+    w = _gold(tmp_path, {"DE": {"lead_export": 2 / 24}})
+    assert pv.sonde_lauf(marker=m, gold_wurzel=w, jetzt=jetzt) == []
+
+
+def test_lauf_meldet_einen_veralteten_marker(tmp_path):
+    """Kein Lauf mehr seit Tagen sieht sonst aus wie ein Lauf, der nichts zu tun hatte."""
+    jetzt = time.time()
+    ende = __import__("datetime").datetime.fromtimestamp(jetzt - 5 * TAG)
+    m = _marker(tmp_path, _satz(ende), alter_tage=5)
+    w = _gold(tmp_path, {"DE": {"lead_export": 5}})
+    fehler = pv.sonde_lauf(marker=m, gold_wurzel=w, jetzt=jetzt)
+    assert any("Tage alt" in f for f in fehler)
+
+
+def test_lauf_meldet_den_fehlenden_marker(tmp_path):
+    fehler = pv.sonde_lauf(marker=tmp_path / "gibtsnicht.txt",
+                           gold_wurzel=_gold(tmp_path, {"DE": {"lead_export": 0}}))
+    assert len(fehler) == 1 and "fehlt" in fehler[0]

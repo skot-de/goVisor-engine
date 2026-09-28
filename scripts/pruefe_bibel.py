@@ -217,7 +217,7 @@ def _behauptungen() -> list[tuple[str, str, bool, str]]:
     _sonden = sorted(set(_re2.findall(r"^def (sonde_\w+)", _pv_src, _re2.M)))
     _kap10 = (ROOT / "docs" / "laender" / "10-abnahme-und-messung.md").read_text(encoding="utf-8")
     aus.append(("10", "Kapitel 10 zaehlt so viele Sonden, wie es gibt",
-                len(_sonden) == 7 and "Die sieben Sonden" in _kap10,
+                len(_sonden) == 8 and "Die acht Sonden" in _kap10,
                 f"{len(_sonden)} Sonden im Code: {', '.join(s.replace('sonde_','') for s in _sonden)}"))
 
     # Die Baugrenze steht an drei Stellen. Laufen sie auseinander, buendelt jemand gegen

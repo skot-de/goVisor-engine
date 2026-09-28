@@ -162,13 +162,27 @@ laesst eine undatierte Zahl dort gar nicht durch).
 
       python3 scripts/pruefe_verdrahtung.py [--offen]
 
-  **Vier Sonden**, alle am Ende von `daily_leads.sh`: 1 Frische (welche Gold- oder
-  `web/data`-Datei hängt gegenüber dem Lauf ihres Landes zurück), 2 Länderparität (welche
-  Tabelle gibt es nur in DE), 3 DE-feste Pfade (welches Skript liest fest `data/gold/DE`),
-  4 Länder (wer liegt in Silber, ohne in Gold anzukommen). Ausnahmen stehen als Code **im
-  Skript**, nicht in einer Textdatei, und `tests/test_verdrahtung.py` hält sie ehrlich:
-  ohne Begründung, für etwas Gelöschtes oder für eine längst geschlossene Lücke wird die
-  Suite rot.
+  **Acht Sonden** (Stand 2026-09-20): 1 Frische (welche Gold- oder `web/data`-Datei hängt
+  gegenüber dem Lauf ihres Landes zurück), 2 Länderparität (welche Tabelle gibt es nur in
+  DE), 3 DE-feste Pfade (welches Skript liest fest `data/gold/DE`), 4 Länder (wer liegt in
+  Silber, ohne in Gold anzukommen), 5 Nutzlast, 6 Baugrenze, 7 Module, **8 Lauf** (hat die
+  letzte Nacht das Produkt überhaupt erreicht?). Ausnahmen stehen als Code **im Skript**,
+  nicht in einer Textdatei, und `tests/test_verdrahtung.py` hält sie ehrlich: ohne
+  Begründung, für etwas Gelöschtes oder für eine längst geschlossene Lücke wird die Suite
+  rot.
+
+  ⚠ **„Alle am Ende von `daily_leads.sh`" stand hier bis zum 2026-09-20 — und genau das war
+  der Fehler.** Die elf Prüfskripte lagen ab Zeile 1707 von 1860. In der Nacht zum 20.09.
+  starb der Tageslauf in Zeile 931, und **keine einzige Sonde lief** — im exakten Fall, für
+  den sie gebaut sind. Die Aufsicht hing am Beaufsichtigten. Seitdem:
+
+      scripts/waechterlauf.sh [--still]     # alle zwölf Sonden, unabhängig vom Tageslauf
+
+  Er nimmt die Tageslauf-Sperre **nicht** (alle Sonden lesen nur) und läuft als eigener
+  Dienst `eu.govisor.waechter`. Der Tageslauf ruft dieselben Sonden weiterhin selbst auf;
+  damit die zwei Listen nicht auseinanderlaufen, hält `tests/test_waechterlauf.py` sie
+  gegeneinander. Sein Protokoll liegt in `~/Library/Logs/govisor-waechter-*.log` und **nicht**
+  unter `data/logs/` — launchd-Bash darf das externe Volume nicht beschreiben.
 
       python3 scripts/verdrahtungskarte.py <tabelle>   # wer erzeugt es, wer liest es
       python3 scripts/pruefe_bibel.py [--stand]        # altert die Anleitung selbst?

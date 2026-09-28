@@ -32,7 +32,7 @@ cd web && npx tsc --noEmit                     # Typprüfung
 cd web && for f in scripts/pruefe-*.mjs; do node "$f"; done
 ```
 
-### Die sieben Sonden
+### Die acht Sonden
 
 `pruefe_verdrahtung.py` sucht die Fehlerklasse, die kein Unit-Test findet: jedes Stück für
 sich korrekt, aber niemand ruft es.
@@ -46,6 +46,15 @@ sich korrekt, aber niemand ruft es.
 | 5 Nutzlast | Wer liest, was wir ausliefern? | — |
 | **6 Baugrenze** | Wie nah ist `web/data` an der Dateizahl, die `next build` tötet? | 116.307 von ~156.000 (2026-09-04) |
 | **7 Module** | Welche Datei in `web/lib` importiert niemand? | `identityGate.ts` — ein fail-closed gebautes Sicherheitstor, das KEINE Stelle aufruft |
+| **8 Lauf** | Hat die letzte Nacht das Produkt überhaupt erreicht? | Nachtlauf vom 2026-09-20 blieb in der Dubletten-Firewall hängen, kam nie bis zum Gold-Rebuild — das Produkt stand einen Tag still, und alle anderen Sonden waren grün |
+
+⚠ **Sonde 1 und Sonde 8 messen absichtlich Verschiedenes.** Sonde 1 prüft jede Gold-Datei
+gegen die neueste Datei DESSELBEN Landes — ein gleichmässig einen Tag alter Bestand hat
+keinen Rückstand gegen sich selbst und bleibt dort grün. Sonde 8 nimmt den Gegenbezug:
+`data/logs/letzter_lauf.txt` nennt Endzeit und Dauer, daraus ergibt sich der Start. Liegt
+die neueste Gold-Datei davor, hat der Lauf Gold nicht angefasst. Der Marker wurde am
+2026-09-20 übrigens korrekt geschrieben („ABGEBROCHEN (Code 75) bei: Dubletten-Firewall")
+— gelesen hat ihn nur niemand.
 
 ⚠ **Ausnahmen sind länderbezogen möglich** (`LAND/tabelle`). Der blosse Tabellenname
 entschuldigte sonst auch das Land, in dem dieselbe Tabelle täglich gebaut wird.

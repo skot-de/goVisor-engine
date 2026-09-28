@@ -60,6 +60,7 @@ import os
 import pathlib
 import re
 import sys
+import time
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 # ⚠ ERST den Projektpfad, DANN `govisor` importieren. Unter launchd gibt es kein
@@ -952,16 +953,112 @@ def sonde_module(zeige_offen: bool = False,
     return befunde
 
 
+# ── Sonde 8: Lauf (hat die letzte Nacht das Produkt ueberhaupt erreicht?) ────────────
+#
+# WARUM ES DIESE SONDE GIBT. Am 2026-09-20 blieb der Nachtlauf in der Dubletten-Firewall
+# haengen, wurde nach 631 min vom Acht-Stunden-Riegel beendet und kam nie bis zum
+# Gold-Rebuild. Ausschreibungen wurden eingelesen, das Produkt zeigte trotzdem den Stand
+# des Vortags — und ALLE Sonden standen auf gruen.
+#
+# ⚠ Sonde 1 KANN das nicht sehen, und zwar mit Absicht. Sie misst jede Gold-Datei gegen die
+# neueste Datei DESSELBEN Landes; ein gleichmaessig einen Tag alter Bestand hat keinen
+# Rueckstand gegen sich selbst. Ihr Docstring sagt es woertlich: „Bezug ist die NEUESTE
+# Datei DESSELBEN Landes, nicht die Uhr: der Lauf kann ausfallen, ohne dass gleich alles
+# Alarm schlaegt." Diese Sonde hier ist die fehlende Gegenrichtung, nicht ihr Ersatz.
+#
+# ⚠ UND DER LAUF HAT ES SOGAR AUFGESCHRIEBEN. In `data/logs/letzter_lauf.txt` stand
+# wortwoertlich „ABGEBROCHEN (Code 75) bei: Dubletten-Firewall …". Die Datei hat nur
+# niemand gelesen — dieselbe Fehlerklasse wie „gebaut, nicht verdrahtet", diesmal beim
+# Waechter selbst.
+MARKER = ROOT / "data" / "logs" / "letzter_lauf.txt"
+
+# Ab wann gilt der Marker selbst als veraltet. Der Lauf startet 00:30; 2 Tage lassen einen
+# ausgefallenen Start durchgehen, aber keinen ausgefallenen Dienst.
+MARKER_SCHWELLE_TAGE = 2.0
+
+_DAUER = re.compile(r"·\s*(\d+)\s*min")
+
+
+def sonde_lauf(zeige_offen: bool = False,
+               marker: pathlib.Path | None = None,
+               gold_wurzel: pathlib.Path | None = None,
+               jetzt: float | None = None) -> list[str]:
+    """Hat der letzte Nachtlauf Gold gebaut, oder starb er vorher?
+
+    Drei Fragen, und die dritte ist die eigentliche:
+      (a) Gibt es ueberhaupt eine Spur des letzten Laufs?
+      (b) Sagt sie „ABGEBROCHEN"?
+      (c) Liegt die neueste Gold-Datei VOR dem Start dieses Laufs? Dann hat der Lauf
+          Gold nicht angefasst — egal, was er sonst gemeldet hat.
+
+    Fuer (c) reicht die Uhrzeit im Marker nicht: sie steht am ENDE des Laufs, und nach
+    einem gesunden Lauf ist sie immer juenger als Gold. Der Startzeitpunkt ergibt sich aus
+    Zeitstempel minus der Dauer, die im selben Satz steht.
+
+    `marker`, `gold_wurzel` und `jetzt` sind ausschliesslich fuer den Test da — eine
+    Sonde, die man nur gegen die echte Datenlage laufen lassen kann, ist unbewiesen.
+    """
+    marker = MARKER if marker is None else marker
+    gold_wurzel = GOLD if gold_wurzel is None else gold_wurzel
+    jetzt = time.time() if jetzt is None else jetzt
+    befunde: list[str] = []
+
+    if not marker.exists():
+        return [f"Lauf: {marker.name} fehlt — der Nachtlauf hinterlaesst keine Spur, "
+                f"ein Ausfall waere von aussen nicht zu sehen"]
+
+    zeile = marker.read_text(encoding="utf-8", errors="replace").strip()
+    alter = (jetzt - marker.stat().st_mtime) / 86400
+    if alter > MARKER_SCHWELLE_TAGE:
+        befunde.append(f"Lauf: letzter Eintrag ist {alter:.1f} Tage alt — seitdem hat kein "
+                       f"Nachtlauf mehr zu Ende gemeldet ({zeile[:80]})")
+
+    if "ABGEBROCHEN" in zeile:
+        befunde.append(f"Lauf: der letzte Nachtlauf ist abgebrochen — {zeile}")
+
+    # (c) Hat der Lauf Gold ueberhaupt angefasst?
+    dateien = _dateien(gold_wurzel)
+    if not dateien:
+        return befunde
+    gold_neu = max(f.stat().st_mtime for fs in dateien.values() for f in fs)
+    try:
+        ende = dt.datetime.strptime(zeile[:16], "%Y-%m-%d %H:%M").timestamp()
+    except ValueError:
+        befunde.append(f"Lauf: Zeitstempel in {marker.name} nicht lesbar — {zeile[:40]!r}")
+        return befunde
+    m = _DAUER.search(zeile)
+    if not m:
+        return befunde                      # ohne Dauer kein Startzeitpunkt, kein Urteil
+    start = ende - int(m.group(1)) * 60
+    if gold_neu < start:
+        befunde.append(
+            f"Lauf: die neueste Gold-Datei ({dt.datetime.fromtimestamp(gold_neu):%d.%m. %H:%M}) "
+            f"ist AELTER als der Start des letzten Laufs "
+            f"({dt.datetime.fromtimestamp(start):%d.%m. %H:%M}) — der Lauf hat Gold nicht "
+            f"gebaut, das Produkt steht auf altem Stand")
+    return befunde
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--sonde", choices=("frische", "paritaet", "pfade", "laender",
-                                       "nutzlast", "baugrenze", "module", "alle"),
+                                       "nutzlast", "baugrenze", "module", "lauf", "alle"),
                     default="alle")
     ap.add_argument("--offen", action="store_true",
                     help="bekannte Luecken und Leichen mit auflisten")
     a = ap.parse_args()
 
     alles: list[str] = []
+    # ⚠ ZUERST, und das ist keine Kosmetik: wenn der letzte Lauf gar nicht bis Gold kam,
+    # messen alle folgenden Sonden einen Bestand, den niemand gebaut hat. Dieser Befund
+    # gehoert oben, nicht unter sechs gruenen Haken.
+    if a.sonde in ("lauf", "alle"):
+        print("── Sonde 8: Lauf (hat die letzte Nacht das Produkt erreicht?) ──")
+        f = sonde_lauf(a.offen)
+        alles += f
+        for z in f:
+            print(f"    ⚠ {z}")
+        print(f"    {len(f)} Befund(e)")
     if a.sonde in ("frische", "alle"):
         print("── Sonde 1: Frische (wer wird nicht mitgebaut?) ──")
         f = sonde_frische(a.offen)

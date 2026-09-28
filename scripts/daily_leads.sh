@@ -899,8 +899,30 @@ if [ "${GOVISOR_NEUE_QUELLEN:-1}" = "1" ]; then
 # Annahmen darin: ruecklaufende Korrekturen an alten Saetzen, ein geaenderter Schwellwert,
 # eine neue Quelle mit Altbestand. Der Wochenlauf faengt das ein, und er faellt auf einen
 # Tag, an dem kein Mensch auf frische Zahlen wartet.
-if [ "$(date +%u)" = "7" ] || [ -n "${GOVISOR_DEDUPE_VOLL:-}" ]; then
-  _DEDUPE_MODUS="volle Historie ab 2004 (Sonntag)"
+# ⛔ DER SONNTAGS-VOLLLAUF IST AUSGESCHALTET (2026-09-20).
+#
+# Er war nie falsch gerechnet — die Begruendung darueber gilt weiter. Er passt nur nicht
+# mehr auf DIESE Maschine. Gemessen am 2026-09-20: der Volllauf laedt 2.254.783 Saetze und
+# haelt dabei 3,8 GB, auf 16 GB Arbeitsspeicher neben zwei Dauerarbeitern. Die Auslagerung
+# spitzte auf 30,6 GB, frei blieben 50 bis 90 MB, und der Schritt verbrauchte in 6,4 h
+# Laufzeit 19 min Rechenzeit — er hat zu 95 % auf die Platte gewartet. Der Lauf kam danach
+# nicht mehr bis zum Gold-Rebuild.
+#
+# Sven am 2026-09-20: „meinetwegen kann der dubletten check und die dokumentenanalyse dann
+# soweit runter gefahren werden, bis wir in die cloud gehen und da koennen wir dann
+# dementsprechend skalieren." Beschaffung hat Vorrang vor Nachrechnen.
+#
+# ⚠ WAS DAMIT WIRKLICH WEGFAELLT, damit es niemand spaeter raten muss: ruecklaufende
+# Korrekturen an Saetzen, die aelter als 190 Tage sind, ein nachtraeglich geaenderter
+# Schwellwert und eine neue Quelle mit Altbestand werden nicht mehr automatisch
+# eingefangen. Bei den drei gemessenen Gegenproben fand das Fenster KEIN Paar, das der
+# Volllauf nicht auch fand — das Risiko ist also klein, aber es ist nicht null.
+#
+# IN DER CLOUD WIEDER EINSCHALTEN. Bis dahin von Hand, wenn eine neue Quelle mit Altbestand
+# dazukommt oder ein Schwellwert sich aendert:
+#     GOVISOR_DEDUPE_VOLL=1 scripts/daily_leads.sh
+if [ -n "${GOVISOR_DEDUPE_VOLL:-}" ]; then
+  _DEDUPE_MODUS="volle Historie ab 2004 (von Hand angefordert)"
   _DEDUPE_ARGS=""
 else
   _DEDUPE_MODUS="rollendes Fenster 190 Tage (+ Saetze ohne Datum)"
@@ -909,8 +931,15 @@ fi
 step "Dubletten-Firewall + Anreicherung (DE/AT/CH/LU)"
 echo "  Modus: $_DEDUPE_MODUS"
 for L in DE AT CH LU; do
+  # ⚠ `mit_grenze` ist hier kein Luxus. Bis zum 2026-09-20 lief diese Schleife als einziger
+  # schwerer Schritt OHNE Deckel — sie ist deshalb am 20.09. 6 h 19 min an DE haengen
+  # geblieben, und der Lauf kam nie bis zum Gold-Rebuild. Der Stillstands-Waechter in
+  # `mit_grenze` haette sie nach 30 min ohne Ausgabe abgeraeumt und die restlichen Laender
+  # samt Gold und Export noch geschafft. Ein abgeschnittener Dublettencheck kostet einen
+  # Tag Anreicherung; ein haengender kostet den ganzen Lauf.
   # shellcheck disable=SC2086  # _DEDUPE_ARGS ist bewusst wortgetrennt
-  $PY -m govisor.dedupe --country "$L" --ab-jahr 2004 --alle-arten --anreichern $_DEDUPE_ARGS \
+  mit_grenze "$GRENZE_DEDUPE" \
+    $PY -m govisor.dedupe --country "$L" --ab-jahr 2004 --alle-arten --anreichern $_DEDUPE_ARGS \
     || echo "  ⚠ Dublettencheck $L fehlgeschlagen — Anreicherung bleibt auf altem Stand."
 done
 
