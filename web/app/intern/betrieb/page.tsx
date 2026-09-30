@@ -72,6 +72,7 @@ export default function BetriebCockpit() {
         <h1>Betrieb</h1>
         <nav className="cp-nav">
           <Link href="/intern/konten">Konten</Link>
+          <Link href="/intern/qualitaet">Datenqualität</Link>
           <Link href="/intern">Firmen-Radar</Link>
           <button onClick={() => setTs(Date.now())}>Aktualisieren</button>
         </nav>

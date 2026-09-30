@@ -227,3 +227,11 @@
 .cp-num { width: 56px; padding: 3px 6px; border: 1px solid #d1d5db; border-radius: 5px; }
 .cp-tab select { padding: 3px 6px; border: 1px solid #d1d5db; border-radius: 5px; }
 .cp-acts { display: flex; gap: 6px; }
+
+/* Datenqualität (Bereich 2) */
+.qa-bars { list-style: none; margin: 8px 0 0; padding: 0; display: flex; flex-direction: column; gap: 4px; }
+.qa-bars li { display: grid; grid-template-columns: 1fr 90px 60px; align-items: center; gap: 8px; font-size: 12.5px; }
+.qa-lbl { color: #374151; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.qa-bar { background: #f1f5f9; border-radius: 4px; height: 10px; overflow: hidden; }
+.qa-bar i { display: block; height: 100%; background: #2563eb; }
+.qa-n { text-align: right; color: #6b7280; }

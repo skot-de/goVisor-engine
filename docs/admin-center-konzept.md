@@ -149,5 +149,9 @@ Sicherheitsleitplanke nicht verloren gehen:
    `app/api/intern/konten` (Orgs mit Mitgliedern/Seats/Profilen/Plan; Seats/Profile/Plan
    setzen als manueller Hebel; Passwort-Reset-Mail) + die vorhandene `/api/intern/claims`
    (Identitaets-Ansprueche freigeben/ablehnen). Aggregation gegen die echte DB geprueft
-   (13 Orgs, u. a. CANCOM SE). Naechste Bereiche: 2 (Datenqualitaet), 6 (LLM&Kosten),
-   5 (Kuratierung), 4 (Vertrieb ausbauen).
+   (13 Orgs, u. a. CANCOM SE). **Bereich 2 (Datenqualitaet) GEBAUT 2026-09-30**: Seite `app/intern/qualitaet`, API
+   `app/api/intern/qualitaet` spawnt den Lese-Helfer `scripts/qa_uebersicht.py` (DuckDB
+   ueber die Gold-QA-Parquets): Review-Queue + Flags, Quality-Flags im Bestand,
+   Entity-Merge-Kandidaten/Urteile, Dubletten (Notice+Dokument), Laenderwaehler. Nur
+   Ansicht; Merge-Entscheidungen schreiben nach curated/ und kommen mit Bereich 5.
+   Naechste Bereiche: 6 (LLM&Kosten), 5 (Kuratierung), 4 (Vertrieb ausbauen).
