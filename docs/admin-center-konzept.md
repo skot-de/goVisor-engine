@@ -154,4 +154,14 @@ Sicherheitsleitplanke nicht verloren gehen:
    ueber die Gold-QA-Parquets): Review-Queue + Flags, Quality-Flags im Bestand,
    Entity-Merge-Kandidaten/Urteile, Dubletten (Notice+Dokument), Laenderwaehler. Nur
    Ansicht; Merge-Entscheidungen schreiben nach curated/ und kommen mit Bereich 5.
-   Naechste Bereiche: 6 (LLM&Kosten), 5 (Kuratierung), 4 (Vertrieb ausbauen).
+   **Bereich 6 (LLM & Kosten) GEBAUT 2026-09-30**: Seite `app/intern/kosten`, API
+   `app/api/intern/kosten` verbindet drei Quellen — das **Live-Guthaben** direkt von
+   OpenRouter (`/api/v1/credits`, Key aus `.secrets/openrouter.key`, nur serverseitig, nie
+   im Bundle), den Geldwache-Stand aus `.llm_stand.json` (erschoepft/haltGrund/wartend/
+   Modellwahl) und die **Ausgaben** ueber den Lese-Helfer `scripts/kosten_uebersicht.py`
+   (aggregiert `data/llm_kosten*.jsonl` nach Modell/Zweck/Tag). Datenschicht an echten
+   Dateien geprueft (gesamt 195,16 $, 38.905 Aufrufe; Live-Guthaben 0,93 $, HTTP 200;
+   3.946 wartend); UI tsc-sauber, Escape-Lint gruen. Nur Ansicht — die Aktion „Modell
+   umstellen / Reserve setzen" (A-Zeilen der Tabelle) folgt spaeter, sie schreibt in die
+   Geldwache-Konfig und gehoert hinter den Worker-Dienst (Weg C).
+   Naechste Bereiche: 5 (Kuratierung), 4 (Vertrieb ausbauen).
