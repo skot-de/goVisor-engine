@@ -58,6 +58,16 @@ export default function ProfilVerwaltung({ melde }: { melde: (m: string) => void
     if (r.ok) { melde(t("Gelöscht")); laden(); } else melde(j.error || t("Löschen fehlgeschlagen"));
   }
 
+  async function kaufen() {
+    const r = await fetch("/api/kauf/checkout", {
+      method: "POST", headers: { "content-type": "application/json" },
+      body: JSON.stringify({ art: "profile", menge: 1 }),
+    });
+    const j = await r.json().catch(() => ({}));
+    if (r.ok && j.url) { window.location.href = j.url; return; }
+    melde(j.error || t("Kauf nicht möglich"));
+  }
+
   async function wechseln(p: Prof) {
     if (p.active || busy) return;
     setBusy(true);
@@ -97,7 +107,12 @@ export default function ProfilVerwaltung({ melde }: { melde: (m: string) => void
           {t("Profil anlegen")}
         </button>
       </div>
-      {voll && <p className="set-hint">{t("Kontingent erreicht — weitere Profile sind kostenpflichtig.")}</p>}
+      {voll && (
+        <p className="set-hint">
+          {t("Kontingent erreicht — weitere Profile sind kostenpflichtig.")}{" "}
+          <button className="pv-btn" onClick={kaufen}>{t("Profil dazukaufen")}</button>
+        </p>
+      )}
     </div>
   );
 }

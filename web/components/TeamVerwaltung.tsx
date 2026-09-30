@@ -42,6 +42,16 @@ export default function TeamVerwaltung({ melde }: { melde: (m: string) => void }
     else melde(j.error || t("Einladen fehlgeschlagen"));
   }
 
+  async function seatsKaufen() {
+    const r = await fetch("/api/kauf/checkout", {
+      method: "POST", headers: { "content-type": "application/json" },
+      body: JSON.stringify({ art: "seat", menge: 1 }),
+    });
+    const j = await r.json().catch(() => ({}));
+    if (r.ok && j.url) { window.location.href = j.url; return; }
+    melde(j.error || t("Kauf nicht möglich"));
+  }
+
   async function zuruecknehmen(i: Einladung) {
     if (!window.confirm(t("Einladung an {e} zurücknehmen?").replace("{e}", i.email))) return;
     const r = await fetch(`/api/org/mitglieder?id=${encodeURIComponent(i.id)}`, { method: "DELETE" });
@@ -88,6 +98,7 @@ export default function TeamVerwaltung({ melde }: { melde: (m: string) => void }
             <option value="admin">{t("Admin")}</option>
           </select>
           <button className="pv-btn" onClick={einladen} disabled={!email.trim() || busy}>{t("Einladen")}</button>
+          <button className="pv-btn" onClick={seatsKaufen}>{t("Seat dazukaufen")}</button>
         </div>
       ) : (
         <p className="set-hint">{t("Nur Inhaber und Admins können Kollegen einladen.")}</p>

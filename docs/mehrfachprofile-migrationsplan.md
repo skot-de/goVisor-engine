@@ -79,12 +79,31 @@ also vor dem Anwenden in `main` liegen): `auth.ts` `aktivesProfilId` + `loadProf
   als Sektion „Team" in `/settings`. Mitgliederliste ueber den Admin-Client (user_profiles-RLS
   laesst nur die eigene Zeile), hart auf die Org des Aufrufers gescopet.
 
+**Kauf-Flow — GEBAUT 2026-09-30** (geld-sicherer Kern gegen PG17 verifiziert):
+- `supabase/0027_purchases.sql`: Ledger `purchases` (unique je provider+ref) + `security
+  definer`-Funktion `kauf_gutschreiben`, die das Kontingent GENAU EINMAL je Zahlungsreferenz
+  erhoeht — belegt: 2. Aufruf mit gleicher ref = `schon_verbucht`, kein Doppel-Increment.
+- `web/lib/preise.ts` (Preise als Platzhalter, Env-Override — Kostenmodell offen),
+  `web/lib/kauf.ts` (`erfuelleKauf` ruft die RPC), `app/api/kauf/checkout` +
+  `app/api/kauf/webhook` als EHRLICHE Stubs auf dem `lib/stripe.ts`-Muster (kein
+  vorgetaeuschter Erfolg; 503, solange Stripe/Preise fehlen), „Erweitern"-Knoepfe in
+  ProfilVerwaltung/TeamVerwaltung.
+
 ⚠ **Phase 2b — noch offen**:
-- **Kauf von Seats/Profilen** — haengt am Kostenmodell (Preise/Grenzen). Der Mechanismus
-  (`organizations.seats_paid`/`profiles_paid` + Trigger) steht; es fehlt nur, wer die Zahlen
-  gegen Bezahlung hochsetzt.
-- **Verifikation**: RLS-Laufzeit, Mailversand und der ganze Kreis brauchen einen Lauf gegen
-  eine Supabase-Instanz mit angewandten 0024/0025/0026 (hier nicht moeglich).
+- **Stripe scharf schalten** (lib/stripe.ts UMGESETZT + Keys) und **Preise** setzen — beides
+  am Kostenmodell. Der geld-sichere Fulfillment-Kern steht davon unabhaengig.
+
+## Anwenden auf Supabase (Stand 2026-09-30)
+Alle vier Migrationen 0024–0027 sind lokal gegen Postgres 17 verifiziert; die Verbindung zur
+echten Supabase (13 Nutzer, Org-Struktur noch nicht vorhanden) steht. Das **Anwenden** (DDL
+auf die Produktion) wurde vom Auto-Mode-Klassifikator von Claude Code blockiert — unabhaengig
+von der Supabase-Freigabe. Anzuwenden in Reihenfolge, je als eine Transaktion:
+
+    psql "$PGC" --single-transaction -v ON_ERROR_STOP=1 -f supabase/0024_organizations_profiles.sql
+    # dann 0025_active_profile_switch, 0026_pending_invites, 0027_purchases
+
+Danach RLS-Laufzeit + Signup/Umschalt/Invite/Kauf-Kreis in der App pruefen (das braucht echte
+Sessions, geht nicht ueber psql).
 
 Umbaupunkte (umgesetzt):
 
