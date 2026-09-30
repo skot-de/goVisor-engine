@@ -11,94 +11,39 @@ zuletzt **aufräumen** (alte Spalten fallen lassen). Zwischen den Phasen ist das
 jederzeit lauffähig — genau die Vorsicht, die die Auto-Memory einfordert („erst
 Determinismus/Lauffähigkeit, dann umbauen").
 
-## Phase 1 — Migration 0011 (additiv, verlustfrei)
+## Phase 1 — Migration 0024 (additiv, verlustfrei) — GEBAUT 2026-09-30
 
-Nächste freie Nummer: `supabase/0011_organizations_profiles.sql`. Skizze:
+Umgesetzt in **`supabase/0024_organizations_profiles.sql`** (noch NICHT auf die DB
+angewandt). Verbindlich ist die Datei; hier nur die Entscheidungen, damit Doc und SQL nicht
+auseinanderlaufen:
 
-```sql
--- Organisationen: das Unternehmen (z. B. Canom). Traeger von Seats und Profilen.
-create table if not exists public.organizations (
-  id            uuid primary key default gen_random_uuid(),
-  name          text not null,
-  plan          text not null default 'free' check (plan in ('free','paid','cancelled')),
-  seats_paid    int  not null default 1,   -- erlaubte Nutzer
-  profiles_paid int  not null default 1,   -- erlaubte Profile
-  created_at    timestamptz not null default now(),
-  updated_at    timestamptz not null default now()
-);
+- **Tabellen** `organizations` (Name, `plan`, `plan_until`, `seats_paid`, `profiles_paid`) und
+  `profiles` (Suchprofil-Felder + `profile`-Blob, `org_id`); `user_profiles` erweitert um
+  `org_id`, `active_profile_id`, `role`. RLS im Stil von 0001, `touch_updated_at`-Trigger.
+- **Abo/Plan** liegt kuenftig auf der Org (`plan`/`plan_until`); der Backfill kopiert die
+  heutigen Werte aus `user_profiles` (0001/0015) in die Org. `user_profiles.plan*` bleibt in
+  Phase 1 bestehen (Dual-State), faellt in Phase 3.
+- **Backfill** ist ein **idempotenter SQL-DO-Block in der Migration selbst** (nicht ein
+  separates Skript): je bestehendem Nutzer eine Org + ein Profil + `role='owner'` +
+  `active_profile_id`, `where org_id is null` (erneuter Lauf fasst Migriertes nicht an),
+  atomar in einer Transaktion. Direkt danach eine **Selbstpruefung**, die abbricht, wenn ein
+  Nutzer ohne Org/aktives Profil bleibt oder ein Profil verwaist ist — ein halber Backfill
+  ist damit unmoeglich.
 
--- Suchprofile: gehoeren der Org, nicht dem Nutzer. Die Felder wandern konzeptionell aus
--- user_profiles hierher (in Phase 3 dort entfernt).
-create table if not exists public.profiles (
-  id                 uuid primary key default gen_random_uuid(),
-  org_id             uuid not null references public.organizations(id) on delete cascade,
-  name               text not null default 'Standard',
-  identity_id        text,
-  confirmed_entities text[] not null default '{}',
-  cpv_fields         text[] not null default '{}',
-  cpv_labels         text[] not null default '{}',
-  regions            text[] not null default '{}',
-  region_labels      text[] not null default '{}',
-  vol_min            numeric,
-  vol_max            numeric,
-  branche            text,
-  profile_type       text not null default 'bidder'
-                     check (profile_type in ('bidder','contracting_authority')),
-  profile            jsonb,                -- der Engine-Blob, wie heute
-  created_by         uuid references public.user_profiles(id) on delete set null,
-  created_at         timestamptz not null default now(),
-  updated_at         timestamptz not null default now()
-);
+⚠ **Bewusst NICHT in 0024** (sondern Phase 2, mit dem Code zusammen), um ein Schreib-/Lese-
+Fenster mit Datenverlust zu vermeiden:
+- die `merge_profile`-RPC (0020) auf das aktive Profil umstellen,
+- `handle_new_user` (0001) so erweitern, dass Selbst-Registrierung Org+Profil+Owner anlegt
+  (und Straggler re-backfillt, die zwischen 0024 und Phase 2 mit `org_id=null` entstehen),
+- die Trigger, die `seats_paid`/`profiles_paid` durchsetzen.
 
--- user_profiles bleibt Auth-Spiegel, bekommt Mitgliedschaft + aktives Profil.
-alter table public.user_profiles
-  add column if not exists org_id            uuid references public.organizations(id) on delete cascade,
-  add column if not exists active_profile_id uuid references public.profiles(id)      on delete set null,
-  add column if not exists role              text not null default 'owner'
-                                             check (role in ('owner','admin','member'));
-```
-
-RLS (Stil wie 0001):
-
-```sql
-alter table public.organizations enable row level security;
-alter table public.profiles      enable row level security;
-
--- Mitglieder sehen ihre Org; nur owner/admin aendern sie.
-create policy "org_select_member" on public.organizations for select
-  using (id = (select org_id from public.user_profiles where id = auth.uid()));
-create policy "org_update_admin"  on public.organizations for update
-  using (id = (select org_id from public.user_profiles where id = auth.uid())
-         and (select role from public.user_profiles where id = auth.uid()) in ('owner','admin'));
-
--- Mitglieder sehen/nutzen die Profile ihrer Org; owner/admin legen an/aendern.
-create policy "profiles_select_member" on public.profiles for select
-  using (org_id = (select org_id from public.user_profiles where id = auth.uid()));
-create policy "profiles_write_admin"   on public.profiles for all
-  using (org_id = (select org_id from public.user_profiles where id = auth.uid())
-         and (select role from public.user_profiles where id = auth.uid()) in ('owner','admin'))
-  with check (org_id = (select org_id from public.user_profiles where id = auth.uid()));
-```
-
-Backfill (jedes heutige 1:1-Profil → Org + Profil + Owner):
-
-```sql
--- 1) je Nutzer eine Org
-insert into public.organizations (id, name, plan)
-  select gen_random_uuid(), coalesce(nullif(trim(company_name),''), 'Mein Unternehmen'), plan
-  from public.user_profiles where org_id is null;
--- (Zuordnung Org↔Nutzer ueber eine temporaere Hilfsspalte oder ein Skript, 1:1)
--- 2) je Nutzer ein Profil mit den bisherigen Feldern (inkl. profile-Blob)
--- 3) user_profiles.org_id, .active_profile_id setzen, role='owner'
-```
-
-⚠ Der Backfill ist der heikelste Teil (die 1:1-Zuordnung Org↔Profil↔Nutzer). Er gehört in
-ein **idempotentes Skript** (`scripts/migrate_0011_profiles.py`) mit Vorher/Nachher-Zählung,
-nicht in reines SQL — dieselbe Sorgfalt wie bei `normalize_notice_ids.py`.
-
-Trigger `handle_new_user` (0001) wird erweitert: **Selbst-Registrierung** legt Org + erstes
-Profil + `role='owner'` + `active_profile_id` an. **Eingeladene** Nutzer (Invite-Flow, später)
-bekommen `org_id`/`role` von der App gesetzt und legen KEINE neue Org an.
+**Verifikation**: gegen ein lokales Postgres 17 (Wegwerf-Cluster, Supabase-Teile gestubbt)
+gelaufen — Backfill korrekt (Feld-/Plan-Kopie, Fallback-Name), Selbstpruefung greift,
+**idempotent** (zweiter Lauf doppelt nichts). Belegt sind damit DDL, Backfill und Idempotenz.
+⚠ NICHT belegt (weil `auth.uid()` nur ein Stub war): die **RLS-Laufzeit** (sieht ein Mitglied
+wirklich nur die Profile seiner Org?) und der Signup-Trigger aus Phase 2. Vor dem Anwenden auf
+die Produktion gehoert deshalb weiterhin ein Lauf gegen eine **Dev-Instanz** — das ist Svens
+Startschuss, nicht meiner. Angewandt ist die Migration NICHT.
 
 ## Phase 2 — Code umstellen (aktives Profil)
 
