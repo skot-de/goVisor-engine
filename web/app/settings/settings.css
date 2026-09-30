@@ -40,3 +40,19 @@
   background:var(--ink-900);color:#fff;font-size:13px;padding:10px 18px;border-radius:100px;box-shadow:0 8px 24px rgba(0,0,0,.2)}
 .set-page select.inp{cursor:pointer}
 @media (max-width:720px){.set-page .set-wrap{grid-template-columns:1fr}.set-nav{position:static;flex-direction:row;flex-wrap:wrap}}
+
+/* Profil-Verwaltung (Mehrfachprofile, Phase 2b) */
+.set-profile { display: flex; flex-direction: column; gap: 12px; }
+.pv-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+.pv-row { display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  padding: 10px 12px; border: 1px solid var(--line, #e5e7eb); border-radius: 8px; }
+.pv-row.pv-active { border-color: var(--akzent, #2563eb); background: var(--akzent-weich, #eff6ff); }
+.pv-name { font-weight: 600; }
+.pv-acts { display: flex; gap: 6px; }
+.pv-btn { padding: 5px 10px; border: 1px solid var(--line, #d1d5db); border-radius: 6px;
+  background: var(--flaeche, #fff); cursor: pointer; font-size: 13px; }
+.pv-btn:hover:not(:disabled) { background: var(--flaeche-weich, #f3f4f6); }
+.pv-btn:disabled { opacity: .5; cursor: default; }
+.pv-del { color: #b91c1c; border-color: #fca5a5; }
+.pv-neu { display: flex; gap: 8px; }
+.pv-neu input { flex: 1; padding: 6px 10px; border: 1px solid var(--line, #d1d5db); border-radius: 6px; }

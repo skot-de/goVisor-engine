@@ -59,10 +59,23 @@ also vor dem Anwenden in `main` liegen): `auth.ts` `aktivesProfilId` + `loadProf
 `loadAccount` ueberlagert /settings mit dem aktiven Profil, neue Route
 `/api/profil/wechseln`, Client-Helfer `wechsleProfil` in `useProfil.ts`.
 
-⚠ **Phase 2b (offen)**: Profil-Umschalter-UI und Profil-Verwaltung (anlegen/umbenennen/
-loeschen), Invite-Flow fuer weitere Seats, Kauf von Seats/Profilen — Letzteres haengt am
-Kostenmodell. Und: RLS-Laufzeit + der ganze Umschalt-Kreis brauchen einen Lauf gegen eine
-Supabase-Instanz mit angewandten 0024/0025 (hier nicht moeglich).
+**Phase 2b — teilweise GEBAUT 2026-09-30** (tolerant, tsc-sauber, nicht angewandt):
+- Profil-**Verwaltung + Umschalter**: `app/api/profil/route.ts` (GET Liste, POST anlegen,
+  PATCH umbenennen, DELETE loeschen — Kontingent-Trigger aus 0025 wird zu freundlicher 409,
+  aktives/letztes Profil ist geschuetzt), Komponente `components/ProfilVerwaltung.tsx` als
+  neue Sektion „Profile" in `/settings`, Umschalten ueber `wechsleProfil` +
+  `/api/profil/wechseln`. Vor der Migration meldet die API `mehrfach:false` und die Sektion
+  zeigt nur einen Hinweis.
+
+⚠ **Phase 2b — noch offen**:
+- **Invite-Flow** fuer weitere Seats. Braucht eine eigene Migration (Tabelle `pending_invites`
+  o. ae.), damit `handle_new_user` einen eingeladenen Nutzer der Org zuordnet statt eine
+  Solo-Org anzulegen — die Trigger-Ausnahme dafuer ist in 0025 schon vorbereitet (ueberspringt,
+  wenn die `user_profiles`-Zeile bereits existiert). Dazu Supabase-Auth-Admin + E-Mail; ohne
+  angewandte DB nicht verifizierbar.
+- **Kauf von Seats/Profilen** — haengt am Kostenmodell (Preise/Grenzen).
+- **Verifikation**: RLS-Laufzeit + der ganze Umschalt-/Verwaltungs-Kreis brauchen einen Lauf
+  gegen eine Supabase-Instanz mit angewandten 0024/0025 (hier nicht moeglich).
 
 Umbaupunkte (umgesetzt):
 
