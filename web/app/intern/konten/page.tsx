@@ -85,6 +85,7 @@ export default function KontenPage() {
           <Link href="/intern/betrieb">Betrieb</Link>
           <Link href="/intern/qualitaet">Datenqualität</Link>
           <Link href="/intern/kosten">LLM & Kosten</Link>
+          <Link href="/intern/kuratierung">Kuratierung</Link>
           <Link href="/intern">Firmen-Radar</Link>
           <button onClick={() => setTs(Date.now())}>Aktualisieren</button>
         </nav>

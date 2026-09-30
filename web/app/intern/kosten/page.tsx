@@ -52,6 +52,7 @@ export default function KostenPage() {
           <Link href="/intern/betrieb">Betrieb</Link>
           <Link href="/intern/konten">Konten</Link>
           <Link href="/intern/qualitaet">Datenqualität</Link>
+          <Link href="/intern/kuratierung">Kuratierung</Link>
           <button onClick={() => setTs(Date.now())}>Aktualisieren</button>
         </nav>
       </header>

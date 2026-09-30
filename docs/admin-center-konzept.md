@@ -164,4 +164,21 @@ Sicherheitsleitplanke nicht verloren gehen:
    3.946 wartend); UI tsc-sauber, Escape-Lint gruen. Nur Ansicht — die Aktion „Modell
    umstellen / Reserve setzen" (A-Zeilen der Tabelle) folgt spaeter, sie schreibt in die
    Geldwache-Konfig und gehoert hinter den Worker-Dienst (Weg C).
-   Naechste Bereiche: 5 (Kuratierung), 4 (Vertrieb ausbauen).
+   **Bereich 5 (Kuratierung) GEBAUT 2026-09-30**: Seite `app/intern/kuratierung`, API
+   `app/api/intern/kuratierung` (reines Node-`fs`, kein Python noetig). Ansicht + Pflege
+   (Zeile anlegen/loeschen) der `curated/`-CSVs: Entity-Aliasse, Regions-/Kategorie-
+   Korrekturen, gesperrte Hosts, Portale ohne Abrufer; Firmengruppen + Worklist nur
+   als Ansicht (gross/abgeleitet). **Kernpunkt:** eine Registry schreibt jede Datei an
+   GENAU den Pfad, den ihr Konsument liest — an den echten Lesestellen im Code gemessen,
+   nicht an deren Kommentaren (s. Befund unten). Abgesichert: fail-closed gegen
+   `laeuft_was.sh` vor jedem Schreiben auf `data/`, atomar (tmp+rename), Formel-Injektions-
+   Guard (`=+@`), Laenderschranke je Datei. Datenschicht belegt: alle Lesepfade treffen
+   ihren Konsumenten, CSV-Roundtrip verlustfrei (Komma/Quotes), Anlegen/Loeschen gegen
+   Scratch-Kopie mit Pythons `csv.DictReader` gegengelesen. UI tsc-sauber, Escape-Lint gruen.
+   ⚠ **Befund (nicht hier gefixt, gehoert der Pipeline-Sitzung):** In `gold.py`
+   `_load_entity_aliases` behauptet der Kommentar „Repo-Pfad zuerst", der Code liest aber
+   NUR `cfg.data_dir/curated/<L>_entity_aliases.csv` (externe Platte, unversioniert). Die
+   handrecherchierte DB-Netz/InfraGO-Zeile liegt damit nur dort, nicht im versionierten Repo.
+   Bereich 5 schreibt Aliasse deshalb an den data/-Pfad (dort wirkt es), meldet den
+   Widerspruch aber, statt ihn stillschweigend zu umgehen.
+   Naechste Bereiche: 4 (Vertrieb ausbauen).

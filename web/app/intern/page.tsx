@@ -15,6 +15,7 @@ export default function Page() {
         <Link href="/intern/konten">Konten</Link>
         <Link href="/intern/qualitaet">Datenqualität</Link>
         <Link href="/intern/kosten">LLM & Kosten</Link>
+        <Link href="/intern/kuratierung">Kuratierung</Link>
         <span className="cp-hier">Firmen-Radar</span>
       </nav>
       <InternFirmen />
