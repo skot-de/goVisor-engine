@@ -48,6 +48,37 @@ ORT = sql_ort("p.town", "p.postal_code")
 G = ROOT / "data/gold/DE"
 SILBER = ROOT / "data/silver/DE/notice_parties"
 ZIEL = G / "entity_merge_map.parquet"
+# Menschlicher Entscheid (Admin-Portal Bereich 2) — VERSIONIERT im Repo, nicht unter data/.
+# Er ist die oberste Instanz: `gleich` verschmilzt auch ohne Ortsbeleg, `verschieden` trennt
+# auch gegen einen LLM-Konsens. Fehlt die Datei, bleibt alles wie gehabt.
+ENTSCHEID = ROOT / "curated" / "DE_entity_merge_entscheidung.csv"
+
+
+def _menschlicher_entscheid():
+    """Liest curated/DE_entity_merge_entscheidung.csv → (gleich_paare, verschieden_set).
+
+    `entity_b` darf wie im Urteil mehrere Kennungen ';'-getrennt tragen; jede wird ein Paar.
+    """
+    import csv
+    gleich, verschieden = [], set()
+    if not ENTSCHEID.exists():
+        return gleich, verschieden
+    with ENTSCHEID.open(newline="", encoding="utf-8") as fh:
+        for row in csv.DictReader(fh):
+            a = (row.get("entity_a") or "").strip()
+            b = (row.get("entity_b") or "").strip()
+            ent = (row.get("entscheidung") or "").strip()
+            if not a or not b or ent not in ("gleich", "verschieden"):
+                continue
+            for teil in b.split(";"):
+                teil = teil.strip()
+                if not teil:
+                    continue
+                if ent == "gleich":
+                    gleich.append((a, teil))
+                else:
+                    verschieden.add(frozenset((a, teil)))
+    return gleich, verschieden
 
 
 def main() -> int:
@@ -198,16 +229,30 @@ def main() -> int:
         if wx != wy:
             eltern[wx] = wy
 
+    gleich_mensch, versch_mensch = _menschlicher_entscheid()
+    mensch_ids = {e for paar in gleich_mensch for e in paar}
+    versch_uebergangen = 0
     for _, r in paare.iterrows():
+        # Menschliches „verschieden" trennt auch gegen den LLM-Konsens.
+        if frozenset((r["entity_a"], r["entity_b"])) in versch_mensch:
+            versch_uebergangen += 1
+            continue
         vereine(r["entity_a"], r["entity_b"])
+    # Menschliches „gleich" verschmilzt zusätzlich — ohne Ortsbeleg-Gate.
+    for a_id, b_id in gleich_mensch:
+        vereine(a_id, b_id)
 
     karte = pd.DataFrame([{"entity_id": k, "ziel_entity_id": finde(k),
-                           "quelle": "llm_konsens_2026-08-18", "stand": date.today().isoformat()}
+                           "quelle": "mensch" if k in mensch_ids else "llm_konsens_2026-08-18",
+                           "stand": date.today().isoformat()}
                           for k in eltern if finde(k) != k])
-    gruppen = karte.ziel_entity_id.nunique()
+    gruppen = karte.ziel_entity_id.nunique() if len(karte) else 0
     strittig_n = con.execute("SELECT count(*) FROM strittig").fetchone()[0]
     print(f"  Stufe {a.streng} · {len(paare):,} Beziehungen")
     print(f"  davon wegen getrennter Städte zurückgestellt: {strittig_n:,}")
+    if gleich_mensch or versch_mensch:
+        print(f"  menschlicher Entscheid: {len(gleich_mensch):,} × gleich (auch ohne Ortsbeleg), "
+              f"{versch_uebergangen:,} × verschieden übergangen")
     print(f"  → {len(karte):,} Entitäten wandern in {gruppen:,} Ziele")
 
     if a.probe:

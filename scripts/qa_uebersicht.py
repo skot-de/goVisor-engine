@@ -13,6 +13,8 @@ ROOT = Path(__file__).resolve().parent.parent
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--country", default="DE")
+    ap.add_argument("--merges", type=int, default=0,
+                    help="statt der Uebersicht: bis zu N Merge-Urteile als Liste (fuers Verdrahten der Buttons)")
     a = ap.parse_args(argv)
     land = "".join(c for c in a.country.upper() if c.isalpha())[:3] or "DE"
     G = ROOT / "data" / "gold" / land
@@ -23,6 +25,35 @@ def main(argv=None) -> int:
     rp = lambda n: f"read_parquet('{(G / (n + '.parquet')).as_posix()}')"
     da = lambda n: (G / (n + ".parquet")).exists()
     out: dict = {"country": land}
+
+    # Merge-Liste fuer Bereich 2 (Buttons): die adjudizierten Urteile mit lesbaren Namen +
+    # den Entity-Kennungen, die entity_merge_anwenden.py verwendet. Menschlich schon
+    # entschiedene Paare (curated/<L>_entity_merge_entscheidung.csv) werden markiert. Sortiert:
+    # was ein menschliches Urteil am ehesten braucht, zuerst (unsicher, dann verschieden).
+    if a.merges:
+        if not da("entity_merge_urteil"):
+            print(json.dumps({"country": land, "merge_liste": [], "fehler": "kein entity_merge_urteil"})); return 0
+        import csv as _csv
+        entschieden: dict = {}
+        ent_csv = ROOT / "curated" / f"{land}_entity_merge_entscheidung.csv"
+        if ent_csv.exists():
+            with ent_csv.open(newline="", encoding="utf-8") as fh:
+                for r in _csv.DictReader(fh):
+                    entschieden[(r.get("entity_a", ""), r.get("entity_b", ""))] = r.get("entscheidung", "")
+        n = max(1, min(500, a.merges))
+        rows = con.execute(f"""
+            select entity_a, entity_b, name_a, name_b, urteil, einig, regel_grund, kandidaten
+            from {rp('entity_merge_urteil')}
+            order by case urteil when 'unsicher' then 0 when 'verschieden' then 1 else 2 end,
+                     kandidaten desc
+            limit {n}""").fetchall()
+        liste = [{"entity_a": r[0], "entity_b": r[1], "name_a": r[2], "name_b": r[3],
+                  "urteil": r[4], "einig": bool(r[5]), "regel_grund": r[6], "kandidaten": r[7],
+                  "entschieden": entschieden.get((r[0], r[1]))} for r in rows]
+        gesamt = con.execute(f"select count(*) from {rp('entity_merge_urteil')}").fetchone()[0]
+        print(json.dumps({"country": land, "merge_liste": liste, "gesamt": gesamt,
+                          "entschieden_n": len(entschieden)}, ensure_ascii=False))
+        return 0
 
     if da("review_queue"):
         total = con.execute(f"select count(*) from {rp('review_queue')}").fetchone()[0]

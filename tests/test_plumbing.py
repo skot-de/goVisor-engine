@@ -336,6 +336,24 @@ def test_gold_liest_die_zusammenfuehrungskarte():
     assert "not in merge_map" in gold, "die Karte überschreibt Regel-Entscheidungen"
 
 
+def test_menschlicher_merge_entscheid_ist_verdrahtet():
+    """Der Admin-Entscheid aus Bereich 2 muss auch WIRKEN, nicht nur in eine CSV fallen.
+
+    Die Buttons schreiben `curated/<L>_entity_merge_entscheidung.csv`; `entity_merge_anwenden.py`
+    muss diese Datei lesen und in die Karte einrechnen (oberste Instanz). Fällt der Reader beim
+    Aufräumen weg, schreibt das Portal weiter ins Leere — genau die „gebaut, nicht verdrahtet"-
+    Klasse, gegen die es hier eine Sonde gibt.
+    """
+    wurzel = pathlib.Path(__file__).resolve().parent.parent
+    anw = (wurzel / "scripts/entity_merge_anwenden.py").read_text(encoding="utf-8")
+    assert "entity_merge_entscheidung.csv" in anw, "der menschliche Entscheid wird nicht gelesen"
+    assert "_menschlicher_entscheid" in anw, "die Override-Funktion fehlt"
+    assert "gleich_mensch" in anw and "versch_mensch" in anw, "Override wird nicht in die Union eingerechnet"
+    # Die Kuratierungs-Route muss die Art kennen (sonst hat der Button kein Ziel).
+    route = (wurzel / "web/app/api/intern/kuratierung/route.ts").read_text(encoding="utf-8")
+    assert '"entity_merge_entscheidung"' in route, "die Kuratierungs-Registry kennt die Merge-Entscheidung nicht"
+
+
 def test_qualitaetsbericht_liefert_was_die_anzeige_erwartet():
     """Die Kennzahlen, die `/intern/lauf` zeigt, muessen im Bericht auch stehen.
 

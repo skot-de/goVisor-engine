@@ -273,3 +273,8 @@
 .ziel-ok { font-size: 11px; color: #15803d; }
 .ziel-fehler { font-size: 11px; color: #b91c1c; }
 .ziel-link { font-size: 11px; font-family: monospace; color: #2563eb; }
+
+/* Bereich 2 — Merge-Kandidaten */
+.qa-mergebtn { margin-top: 8px; font-size: 12px; padding: 5px 10px; border: 1px solid #2563eb;
+  color: #2563eb; background: #fff; border-radius: 6px; cursor: pointer; }
+.qa-mergebtn:hover { background: #eff6ff; }

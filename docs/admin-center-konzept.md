@@ -153,7 +153,16 @@ Sicherheitsleitplanke nicht verloren gehen:
    `app/api/intern/qualitaet` spawnt den Lese-Helfer `scripts/qa_uebersicht.py` (DuckDB
    ueber die Gold-QA-Parquets): Review-Queue + Flags, Quality-Flags im Bestand,
    Entity-Merge-Kandidaten/Urteile, Dubletten (Notice+Dokument), Laenderwaehler. Nur
-   Ansicht; Merge-Entscheidungen schreiben nach curated/ und kommen mit Bereich 5.
+   Ansicht der Aggregate. **Merge-Buttons verdrahtet (2026-09-30):** die Karte
+   „Entity-Zusammenfuehrungen" laedt ueber `qa_uebersicht.py --merges` die adjudizierten
+   Kandidaten (lesbare Namen + LLM-Urteil, unklare zuerst); je Kandidat schreiben `gleich`/
+   `verschieden` einen menschlichen Entscheid nach `curated/<L>_entity_merge_entscheidung.csv`
+   (ueber die gehaertete Kuratierungs-API, Enum-validiert, versioniert). `entity_merge_anwenden.py`
+   liest diese Datei als OBERSTE Instanz — `gleich` verschmilzt auch ohne Ortsbeleg, `verschieden`
+   trennt gegen den LLM-Konsens. ⚠ Wirkt erst beim naechsten bewussten `entity_merge_anwenden`-
+   Lauf + Gold-Rebuild; der Button fasst Gold nie an (gleiche „markieren, dann eigener Lauf"-
+   Vorsicht wie im ganzen Merge-Subsystem). Verdrahtung per `tests/test_plumbing.py` gesichert;
+   Datenschicht belegt (echter 41-Kennungen-Kandidat rundet CSV→Reader verlustfrei).
    **Bereich 6 (LLM & Kosten) GEBAUT 2026-09-30**: Seite `app/intern/kosten`, API
    `app/api/intern/kosten` verbindet drei Quellen — das **Live-Guthaben** direkt von
    OpenRouter (`/api/v1/credits`, Key aus `.secrets/openrouter.key`, nur serverseitig, nie

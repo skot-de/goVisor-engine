@@ -43,6 +43,7 @@ type Art = {
   datei: (land: string) => string;  // Basename
   spalten: string[];                // CSV-Kopf in dieser Reihenfolge
   pflicht: string[];                // Spalten, die beim Anlegen nicht leer sein duerfen
+  enums?: Record<string, string[]>; // erlaubte Werte je Spalte (sonst frei)
   editierbar: boolean;
   gross?: boolean;                  // nur Vorschau (grosse, abgeleitete Datei)
   autoStand?: boolean;              // Spalte `stand` mit heute vorbelegen
@@ -85,6 +86,14 @@ const REGISTRY: Art[] = [
     spalten: ["host", "land", "leads", "grund", "stand"],
     pflicht: ["host", "land"], editierbar: true, autoStand: true,
     hinweis: "Bekannte Luecke: Portal ohne Parser (Anmeldung/abweisend). Kein Abruf, nur vermerkt.",
+  },
+  {
+    id: "entity_merge_entscheidung", label: "Merge-Entscheidungen (Bereich 2)", ort: "repo", perLand: true,
+    datei: (l) => `${l}_entity_merge_entscheidung.csv`,
+    spalten: ["entity_a", "entity_b", "entscheidung", "name_a", "name_b", "grund", "stand"],
+    pflicht: ["entity_a", "entity_b", "entscheidung"], editierbar: true, autoStand: true,
+    enums: { entscheidung: ["gleich", "verschieden"] },
+    hinweis: "Menschlicher Entscheid je Merge-Kandidat (aus Bereich 2). Oberste Instanz vor den LLM-Richtern; wirkt beim naechsten entity_merge_anwenden-Lauf + Gold-Rebuild.",
   },
   {
     id: "vergabestellen_worklist", label: "Vergabestellen-Worklist", ort: "repo", perLand: false,
@@ -266,6 +275,8 @@ export async function POST(req: Request) {
     if (a.autoStand && spalten.includes("stand") && !neu.stand) neu.stand = HEUTE();
     for (const s of a.pflicht) if (!neu[s]) return NextResponse.json({ error: `${s} fehlt` }, { status: 400 });
     for (const s of spalten) { const f = feldOk(neu[s]); if (f) return NextResponse.json({ error: `${s}: ${f}` }, { status: 400 }); }
+    if (a.enums) for (const [s, erlaubt] of Object.entries(a.enums))
+      if (neu[s] && !erlaubt.includes(neu[s])) return NextResponse.json({ error: `${s} muss ∈ {${erlaubt.join(",")}}` }, { status: 400 });
     zeilen.push(neu);
   }
 

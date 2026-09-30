@@ -19,11 +19,20 @@ export async function GET(req: Request) {
   if (process.env.NODE_ENV === "production" && process.env.INTERN_ENABLED !== "1") {
     return NextResponse.json({ error: "not found" }, { status: 404 });
   }
-  const land = (new URL(req.url).searchParams.get("country") || "DE").toUpperCase();
+  const sp = new URL(req.url).searchParams;
+  const land = (sp.get("country") || "DE").toUpperCase();
   if (!LAND.test(land)) return NextResponse.json({ error: "country ungültig" }, { status: 400 });
+  // ?merges=N: statt der Uebersicht die Merge-Kandidatenliste (fuer die Buttons in Bereich 2).
+  const args = ["scripts/qa_uebersicht.py", "--country", land];
+  const mRaw = sp.get("merges");
+  if (mRaw !== null) {
+    const n = Number(mRaw);
+    if (!Number.isInteger(n) || n < 1 || n > 500) return NextResponse.json({ error: "merges 1..500" }, { status: 400 });
+    args.push("--merges", String(n));
+  }
 
   const daten = await new Promise<Record<string, unknown>>((resolve, reject) => {
-    const p = spawn("python3", ["scripts/qa_uebersicht.py", "--country", land], { cwd: ROOT });
+    const p = spawn("python3", args, { cwd: ROOT });
     let out = "", err = "";
     p.stdout.on("data", (d) => (out += d));
     p.stderr.on("data", (d) => (err += d));

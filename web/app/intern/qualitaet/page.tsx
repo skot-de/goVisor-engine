@@ -18,6 +18,11 @@ type Daten = {
   notice_dubletten?: { total: number; beleg: { beleg: string; n: number }[] };
   dok_dubletten?: number;
 };
+type MergeRow = {
+  entity_a: string; entity_b: string; name_a: string; name_b: string;
+  urteil: string; einig: boolean; regel_grund: string; kandidaten: number;
+  entschieden: string | null;
+};
 const LAENDER = ["DE", "AT", "CH", "LU"];
 const nf = (n: number | undefined) => (n ?? 0).toLocaleString("de-DE");
 
@@ -54,6 +59,42 @@ export default function QualitaetPage() {
 
   const rq = d?.review_queue; const q = d?.quality;
   const nd = d?.notice_dubletten;
+
+  const [merges, setMerges] = useState<MergeRow[] | null>(null);
+  const [mergeMeta, setMergeMeta] = useState<{ gesamt: number; entschieden_n: number }>({ gesamt: 0, entschieden_n: 0 });
+  const [mergeBusy, setMergeBusy] = useState<string | null>(null);
+
+  const ladeMerges = async () => {
+    setMerges(null);
+    try {
+      const r = await fetch(`/api/intern/qualitaet?country=${land}&merges=150`, { cache: "no-store" });
+      if (!r.ok) { setFehler("Merge-Liste nicht ladbar."); return; }
+      const j = await r.json();
+      if (j.fehler) { setFehler(j.fehler); return; }
+      setMerges(j.merge_liste || []); setMergeMeta({ gesamt: j.gesamt || 0, entschieden_n: j.entschieden_n || 0 });
+    } catch { setFehler("Merge-Liste nicht ladbar."); }
+  };
+
+  const entscheide = async (row: MergeRow, entscheidung: "gleich" | "verschieden") => {
+    const key = row.entity_a + "|" + row.entity_b;
+    setMergeBusy(key); setFehler(null);
+    try {
+      const r = await fetch("/api/intern/kuratierung", {
+        method: "POST", headers: { "content-type": "application/json" },
+        body: JSON.stringify({
+          kind: "entity_merge_entscheidung", country: land, action: "append",
+          row: { entity_a: row.entity_a, entity_b: row.entity_b, entscheidung,
+                 name_a: row.name_a, name_b: (row.name_b || "").split("|")[0].trim(),
+                 grund: `Admin-Entscheid (LLM: ${row.urteil}${row.einig ? ", einig" : ""})` },
+        }),
+      });
+      const j = await r.json();
+      if (!r.ok) { setFehler(j.error || "Speichern fehlgeschlagen."); return; }
+      setMerges((cur) => cur?.map((m) =>
+        m.entity_a === row.entity_a && m.entity_b === row.entity_b ? { ...m, entschieden: entscheidung } : m) ?? cur);
+      setMergeMeta((mm) => ({ ...mm, entschieden_n: mm.entschieden_n + 1 }));
+    } finally { setMergeBusy(null); }
+  };
 
   return (
     <main className="cp-wrap">
@@ -94,6 +135,7 @@ export default function QualitaetPage() {
                 <li key={u.urteil}>{u.urteil}: {nf(u.n)}</li>)}</ul>
             : <p className="cp-klein">keine Urteile</p>}
           <p className="cp-klein">Urteile aus dem Merge-Lauf; „verschieden" = bewusst getrennt.</p>
+          <button className="qa-mergebtn" onClick={ladeMerges}>Kandidaten prüfen & entscheiden</button>
         </Karte>
 
         <Karte titel="Dubletten" gross={`${nf(nd?.total)} Notice-Paare`}>
@@ -102,9 +144,49 @@ export default function QualitaetPage() {
           <p className="cp-klein">Dokument-Paare: {nf(d?.dok_dubletten)}</p>
         </Karte>
       </div>
+      {merges && (
+        <section style={{ marginTop: 16 }}>
+          <h3>Merge-Kandidaten entscheiden</h3>
+          <p className="cp-klein">
+            {mergeMeta.entschieden_n} von {nf(mergeMeta.gesamt)} entschieden · unklare zuerst.
+            „gleich" verschmilzt (schlägt die LLM-Richter), „verschieden" trennt bewusst.
+            Wirkt beim nächsten <code>entity_merge_anwenden</code>-Lauf + Gold-Rebuild — Gold wird hier nicht angefasst.
+          </p>
+          <div className="kur-tabelle">
+            <table>
+              <thead><tr>
+                <th>Name (nur Name)</th><th>Kandidat</th><th>LLM</th><th>Grund</th><th>Aktion</th>
+              </tr></thead>
+              <tbody>
+                {merges.map((m) => {
+                  const key = m.entity_a + "|" + m.entity_b;
+                  return (
+                    <tr key={key}>
+                      <td title={m.entity_a}>{m.name_a}</td>
+                      <td title={m.entity_b}>{(m.name_b || "").split("|")[0].trim()}</td>
+                      <td>{m.urteil}{m.einig ? " ✓" : " ✗"}</td>
+                      <td>{m.regel_grund}</td>
+                      <td className="ziel-aktion">
+                        {m.entschieden
+                          ? <span className={m.entschieden === "gleich" ? "ziel-ok" : "ziel-sperre"}>{m.entschieden}</span>
+                          : <>
+                              <button disabled={mergeBusy === key} onClick={() => entscheide(m, "gleich")}>gleich</button>
+                              <button className="kur-del" disabled={mergeBusy === key} onClick={() => entscheide(m, "verschieden")}>verschieden</button>
+                            </>}
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+        </section>
+      )}
+
       <p className="cp-klein" style={{ marginTop: 12 }}>
-        Nur Ansicht. Merge bestätigen/ablehnen schreibt nach `curated/` und kommt mit Bereich 5
-        (Kuratierung); wirkt dann beim nächsten Gold-Lauf.
+        Ansicht plus Merge-Entscheid. Entscheidungen landen versioniert in
+        `curated/&lt;L&gt;_entity_merge_entscheidung.csv` (auch in Bereich 5 sichtbar) und
+        fließen beim nächsten Merge-Lauf ein.
       </p>
     </main>
   );
