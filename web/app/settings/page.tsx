@@ -17,13 +17,14 @@ import "../zugang.css";
 import "./settings.css";
 import { pwPruefung } from "@/lib/passwort";
 import ProfilVerwaltung from "@/components/ProfilVerwaltung";
+import TeamVerwaltung from "@/components/TeamVerwaltung";
 
 const BRANCHEN: [string, string][] = [
   ["it", "IT & Software"], ["bau", "Bau & Infrastruktur"], ["medizin", "Medizin & Gesundheit"],
   ["beratung", "Beratung & Dienstleistung"], ["sicherheit", "Sicherheit & Verteidigung"], ["energie", "Energie & Versorgung"],
 ];
 const SEKTIONEN: [string, string][] = [
-  ["profile", "Profile"], ["alerts", "Benachrichtigungen"], ["account", "Account"],
+  ["profile", "Profile"], ["team", "Team"], ["alerts", "Benachrichtigungen"], ["account", "Account"],
 ];
 
 export default function SettingsPage() {
@@ -70,6 +71,7 @@ export default function SettingsPage() {
           {sek === "gruppe" && <GruppeSektion acc={acc} />}
           {sek === "alerts" && alerts && <AlertSektion alerts={alerts} setAlerts={setAlerts} melde={melde} />}
           {sek === "profile" && <ProfilVerwaltung melde={melde} />}
+          {sek === "team" && <TeamVerwaltung melde={melde} />}
           {sek === "account" && <AccountSektion acc={acc} melde={melde} router={router} />}
         </main>
       </div>

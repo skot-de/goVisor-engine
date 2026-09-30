@@ -67,15 +67,24 @@ also vor dem Anwenden in `main` liegen): `auth.ts` `aktivesProfilId` + `loadProf
   `/api/profil/wechseln`. Vor der Migration meldet die API `mehrfach:false` und die Sektion
   zeigt nur einen Hinweis.
 
+**Invite-Flow — GEBAUT 2026-09-30** (DB gegen PG17 verifiziert):
+- `supabase/0026_pending_invites.sql`: Tabelle `pending_invites` (RLS: owner/admin der Org),
+  `handle_new_user` ordnet eine E-Mail mit offener Einladung DER Org zu (role aus der
+  Einladung, aktives Profil = aeltestes Org-Profil, Einladung → `eingeloest`), sonst Solo-Org.
+  Seat-Trigger schon bei der Einladung (belegt = Mitglieder + offene Einladungen). Belegt:
+  Eingeladener landet in der Org, Nicht-Eingeladener bekommt Solo-Org, Seat-Grenze greift
+  (voll → ab, Kapazitaet → an).
+- API `app/api/org/mitglieder/route.ts` (GET Team, POST einladen inkl. Supabase-Auth-Admin-
+  Mailversand, DELETE zuruecknehmen — owner/admin) und Komponente `components/TeamVerwaltung.tsx`
+  als Sektion „Team" in `/settings`. Mitgliederliste ueber den Admin-Client (user_profiles-RLS
+  laesst nur die eigene Zeile), hart auf die Org des Aufrufers gescopet.
+
 ⚠ **Phase 2b — noch offen**:
-- **Invite-Flow** fuer weitere Seats. Braucht eine eigene Migration (Tabelle `pending_invites`
-  o. ae.), damit `handle_new_user` einen eingeladenen Nutzer der Org zuordnet statt eine
-  Solo-Org anzulegen — die Trigger-Ausnahme dafuer ist in 0025 schon vorbereitet (ueberspringt,
-  wenn die `user_profiles`-Zeile bereits existiert). Dazu Supabase-Auth-Admin + E-Mail; ohne
-  angewandte DB nicht verifizierbar.
-- **Kauf von Seats/Profilen** — haengt am Kostenmodell (Preise/Grenzen).
-- **Verifikation**: RLS-Laufzeit + der ganze Umschalt-/Verwaltungs-Kreis brauchen einen Lauf
-  gegen eine Supabase-Instanz mit angewandten 0024/0025 (hier nicht moeglich).
+- **Kauf von Seats/Profilen** — haengt am Kostenmodell (Preise/Grenzen). Der Mechanismus
+  (`organizations.seats_paid`/`profiles_paid` + Trigger) steht; es fehlt nur, wer die Zahlen
+  gegen Bezahlung hochsetzt.
+- **Verifikation**: RLS-Laufzeit, Mailversand und der ganze Kreis brauchen einen Lauf gegen
+  eine Supabase-Instanz mit angewandten 0024/0025/0026 (hier nicht moeglich).
 
 Umbaupunkte (umgesetzt):
 
