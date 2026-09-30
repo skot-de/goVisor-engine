@@ -23,7 +23,18 @@ export async function loadAccount(): Promise<AccountRow | null> {
   const { data: { user } } = await sb.auth.getUser();
   if (!user) return null;
   const { data } = await sb.from("user_profiles").select("*").eq("id", user.id).single();
-  return (data as AccountRow) ?? null;
+  if (!data) return null;
+  // ⚠ Gibt es ein aktives Profil (Migration 0024/0025), ueberlagern dessen Such-/Identitaets-
+  // spalten die vom Konto — sonst zeigte /settings die Werte des ersten Profils statt des
+  // umgeschalteten. Tolerant: fehlt die Spalte (vor der Migration), bleibt es beim Konto.
+  const aktiv = (data as { active_profile_id?: string | null }).active_profile_id ?? null;
+  if (aktiv) {
+    const { data: p } = await sb.from("profiles")
+      .select("identity_id,confirmed_entities,cpv_fields,cpv_labels,regions,region_labels,vol_min,vol_max,branche")
+      .eq("id", aktiv).single();
+    if (p) Object.assign(data, p);
+  }
+  return data as AccountRow;
 }
 
 /**

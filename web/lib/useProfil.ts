@@ -34,6 +34,29 @@ export function profilGeaendert(): void {
   if (typeof window !== "undefined") window.dispatchEvent(new Event(PROFIL_EREIGNIS));
 }
 
+/**
+ * Aktives Profil wechseln (Mehrfachprofile). Setzt `active_profile_id` serverseitig, laedt
+ * das nun aktive Profil und aktualisiert den Zwischenspeicher, damit alle Anzeigen ohne
+ * Seitenneuladen umschalten. Gibt zurueck, ob der Wechsel geklappt hat.
+ */
+export async function wechsleProfil(profileId: string): Promise<boolean> {
+  try {
+    const r = await fetch("/api/profil/wechseln", {
+      method: "POST", headers: { "content-type": "application/json" },
+      body: JSON.stringify({ profile_id: profileId }),
+    });
+    if (!r.ok) return false;
+    const fern = await loadProfile().catch(() => null);
+    if (fern) {
+      try { localStorage.setItem(PROFILE_KEY, JSON.stringify(fern)); } catch { /* Quote */ }
+    }
+    profilGeaendert();
+    return true;
+  } catch {
+    return false;
+  }
+}
+
 // Kein eigener Typ neben `Profile`: der hier gebrauchte Wert IST der aus dem Auth-Layer.
 // Ein paralleler Typ waere die naechste Insel — er wuerde beim ersten Feldwechsel driften.
 export type Profil = Profile;

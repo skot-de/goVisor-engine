@@ -45,10 +45,26 @@ wirklich nur die Profile seiner Org?) und der Signup-Trigger aus Phase 2. Vor de
 die Produktion gehoert deshalb weiterhin ein Lauf gegen eine **Dev-Instanz** — das ist Svens
 Startschuss, nicht meiner. Angewandt ist die Migration NICHT.
 
-## Phase 2 — Code umstellen (aktives Profil)
+## Phase 2 — Code umstellen (aktives Profil) — VORBEREITET 2026-09-30
 
-Additiv bereits lauffähig (jede Org hat genau ein Profil = wie heute). Jetzt die Lesewege auf
-`active_profile_id` umstellen:
+**DB-Seite** in `supabase/0025_active_profile_switch.sql`, lokal gegen PG17 verifiziert:
+`merge_profile` schreibt ins aktive Profil (sonst `user_profiles`); `handle_new_user` legt bei
+Selbst-Registrierung Org+Profil+Owner an (Invite-Nutzer ausgenommen); Straggler-Nachzug;
+Grenzen-Trigger fuer `profiles_paid`/`seats_paid`. Belegt: RPC trifft aktives Profil, Signup
+legt an, 2. Profil/Nutzer wird abgewiesen, mit erhoehtem Kontingent zugelassen.
+
+**Code-Seite** gebaut und tsc-sauber, **tolerant** (ohne aktives Profil exakt wie heute, darf
+also vor dem Anwenden in `main` liegen): `auth.ts` `aktivesProfilId` + `loadProfile`/
+`saveProfile` (Blob + Such-Spalten ins aktive Profil, Konto-Spalten am Nutzer), `account.ts`
+`loadAccount` ueberlagert /settings mit dem aktiven Profil, neue Route
+`/api/profil/wechseln`, Client-Helfer `wechsleProfil` in `useProfil.ts`.
+
+⚠ **Phase 2b (offen)**: Profil-Umschalter-UI und Profil-Verwaltung (anlegen/umbenennen/
+loeschen), Invite-Flow fuer weitere Seats, Kauf von Seats/Profilen — Letzteres haengt am
+Kostenmodell. Und: RLS-Laufzeit + der ganze Umschalt-Kreis brauchen einen Lauf gegen eine
+Supabase-Instanz mit angewandten 0024/0025 (hier nicht moeglich).
+
+Umbaupunkte (umgesetzt):
 
 | Datei / Stelle | heute | nachher |
 |---|---|---|
