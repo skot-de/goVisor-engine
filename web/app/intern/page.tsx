@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { InternFirmen } from "@/components/explorer/InternFirmen";
 import "../globals.css";
 import "../intern.css";
@@ -7,5 +8,13 @@ import "../intern.css";
 export const metadata = { title: "goVisor · Firmen-Radar (intern)" };
 
 export default function Page() {
-  return <InternFirmen />;
+  return (
+    <>
+      <nav className="cp-adminnav">
+        <Link href="/intern/betrieb">Betrieb</Link>
+        <span className="cp-hier">Firmen-Radar</span>
+      </nav>
+      <InternFirmen />
+    </>
+  );
 }

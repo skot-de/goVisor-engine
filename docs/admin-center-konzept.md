@@ -137,4 +137,12 @@ Sicherheitsleitplanke nicht verloren gehen:
 1. Umfang 1-6 bestätigt (dieses Dokument). ✓
 2. Pro Bereich die konkrete Inhalts-/Aktionsliste ausdefiniert (Abschnitt „Inhalte je
    Bereich"). ✓ 2026-09-30
-3. Bau auf dem Worker-Dienst — nach dem Deploy-Startschuss (Weg C). Offen.
+3. Bau. **Bereich 1 (Betrieb-Cockpit) GEBAUT 2026-09-30** auf der bestehenden `/intern`-
+   Flaeche (istAdmin-gated), unabhaengig vom Deploy-Startschuss: Seite `app/intern/betrieb`,
+   API `app/api/intern/betrieb` (Sonden-Ampel aus dem Waechter-Log + LLM-Guthaben aus
+   `.llm_stand.json`) plus dem vorhandenen `/api/intern/lauf` (Nachtlauf, Ertrag/Bestand,
+   Dokument-Trichter, Datenqualitaet). Datenschicht gegen die echten Dateien geprueft
+   (12 Sonden/4 Befunde, Guthaben 0,93 $, 3.946 wartend); UI tsc-sauber. ⚠ Laufzeit-Ansicht
+   braucht eine Admin-Session (Middleware sperrt /intern auf istAdmin) — von mir nicht
+   einsehbar. Wandert mit Weg C spaeter auf den Worker-Dienst.
+   Naechste Bereiche: 3 (Konten&Profile), 2, 6, 5, 4.

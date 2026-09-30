@@ -194,3 +194,27 @@
 .ic-ok{background:#12855a;color:#fff;border-color:#12855a}
 .ic-nein{background:transparent;color:#a12727;border-color:#e3c9c9}
 .ic-ok:disabled,.ic-nein:disabled{opacity:.5;cursor:default}
+
+/* Betriebs-Cockpit (Admin-Portal Bereich 1) */
+.cp-wrap { max-width: 1100px; margin: 0 auto; padding: 24px 20px; }
+.cp-top { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; }
+.cp-top h1 { margin: 0; font-size: 22px; }
+.cp-nav { display: flex; gap: 12px; align-items: center; }
+.cp-nav a, .cp-nav button { font-size: 13px; padding: 6px 12px; border: 1px solid #d1d5db;
+  border-radius: 6px; background: #fff; cursor: pointer; text-decoration: none; color: #111; }
+.cp-hinweis { margin: 16px 0; padding: 10px 12px; border: 1px solid #fca5a5; background: #fef2f2; border-radius: 8px; }
+.cp-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 14px; margin-top: 18px; }
+.cp-karte { border: 1px solid #e5e7eb; border-radius: 10px; padding: 14px 16px; background: #fff; }
+.cp-karte h3 { margin: 0 0 8px; font-size: 13px; text-transform: uppercase; letter-spacing: .04em; color: #6b7280; }
+.cp-karte p { margin: 4px 0; font-size: 14px; }
+.cp-gross { font-size: 20px !important; font-weight: 700; }
+.cp-klein { font-size: 12.5px !important; color: #6b7280; }
+.cp-liste { margin: 8px 0 0; padding-left: 16px; font-size: 12.5px; color: #374151; }
+.cp-liste li { margin: 2px 0; word-break: break-word; }
+.cp-gut { border-left: 4px solid #16a34a; }
+.cp-warn { border-left: 4px solid #d97706; }
+.cp-schlecht { border-left: 4px solid #dc2626; }
+.cp-info { border-left: 4px solid #2563eb; }
+.cp-adminnav { max-width: 1100px; margin: 0 auto; padding: 16px 20px 0; display: flex; gap: 12px; align-items: center; }
+.cp-adminnav a { font-size: 13px; padding: 6px 12px; border: 1px solid #d1d5db; border-radius: 6px; background: #fff; text-decoration: none; color: #111; }
+.cp-adminnav .cp-hier { font-size: 13px; padding: 6px 12px; border: 1px solid #111; border-radius: 6px; background: #111; color: #fff; }
