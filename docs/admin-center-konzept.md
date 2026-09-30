@@ -145,4 +145,9 @@ Sicherheitsleitplanke nicht verloren gehen:
    (12 Sonden/4 Befunde, Guthaben 0,93 $, 3.946 wartend); UI tsc-sauber. ⚠ Laufzeit-Ansicht
    braucht eine Admin-Session (Middleware sperrt /intern auf istAdmin) — von mir nicht
    einsehbar. Wandert mit Weg C spaeter auf den Worker-Dienst.
-   Naechste Bereiche: 3 (Konten&Profile), 2, 6, 5, 4.
+   **Bereich 3 (Konten & Profile) GEBAUT 2026-09-30**: Seite `app/intern/konten`, API
+   `app/api/intern/konten` (Orgs mit Mitgliedern/Seats/Profilen/Plan; Seats/Profile/Plan
+   setzen als manueller Hebel; Passwort-Reset-Mail) + die vorhandene `/api/intern/claims`
+   (Identitaets-Ansprueche freigeben/ablehnen). Aggregation gegen die echte DB geprueft
+   (13 Orgs, u. a. CANCOM SE). Naechste Bereiche: 2 (Datenqualitaet), 6 (LLM&Kosten),
+   5 (Kuratierung), 4 (Vertrieb ausbauen).

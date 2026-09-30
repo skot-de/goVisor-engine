@@ -12,6 +12,7 @@ export default function Page() {
     <>
       <nav className="cp-adminnav">
         <Link href="/intern/betrieb">Betrieb</Link>
+        <Link href="/intern/konten">Konten</Link>
         <span className="cp-hier">Firmen-Radar</span>
       </nav>
       <InternFirmen />

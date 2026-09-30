@@ -218,3 +218,12 @@
 .cp-adminnav { max-width: 1100px; margin: 0 auto; padding: 16px 20px 0; display: flex; gap: 12px; align-items: center; }
 .cp-adminnav a { font-size: 13px; padding: 6px 12px; border: 1px solid #d1d5db; border-radius: 6px; background: #fff; text-decoration: none; color: #111; }
 .cp-adminnav .cp-hier { font-size: 13px; padding: 6px 12px; border: 1px solid #111; border-radius: 6px; background: #111; color: #fff; }
+
+/* Admin: Tabellen + Toast (Bereich 3) */
+.cp-toast { margin: 12px 0; padding: 8px 12px; border: 1px solid #16a34a; background: #f0fdf4; border-radius: 8px; font-size: 13px; }
+.cp-tab { width: 100%; border-collapse: collapse; font-size: 13px; margin-top: 6px; }
+.cp-tab th { text-align: left; font-weight: 600; color: #6b7280; border-bottom: 1px solid #e5e7eb; padding: 6px 8px; }
+.cp-tab td { border-bottom: 1px solid #f1f5f9; padding: 6px 8px; vertical-align: middle; }
+.cp-num { width: 56px; padding: 3px 6px; border: 1px solid #d1d5db; border-radius: 5px; }
+.cp-tab select { padding: 3px 6px; border: 1px solid #d1d5db; border-radius: 5px; }
+.cp-acts { display: flex; gap: 6px; }
