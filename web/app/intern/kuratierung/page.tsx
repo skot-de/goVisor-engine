@@ -92,6 +92,7 @@ export default function KuratierungPage() {
           <Link href="/intern/konten">Konten</Link>
           <Link href="/intern/qualitaet">Datenqualität</Link>
           <Link href="/intern/kosten">LLM & Kosten</Link>
+          <Link href="/intern/vertrieb">Vertrieb</Link>
           <select value={land} onChange={(e) => setLand(e.target.value)} aria-label="Land">
             {LAENDER.map((l) => <option key={l} value={l}>{l}</option>)}
           </select>

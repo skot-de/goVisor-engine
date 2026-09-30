@@ -8,7 +8,7 @@ export const runtime = "nodejs";
 export const maxDuration = 20;
 
 const ROOT = path.resolve(process.cwd(), "..");
-const ID_RE = /^(grp|solo):[0-9A-Za-z:._-]{1,120}$/;
+const ID_RE = /^(grp|solo):[0-9A-Za-zäöüÄÖÜß:._/-]{1,120}$/;
 const SEG_RE = /^[A-G]$/;
 const OUTCOMES = ["angesprochen", "interessiert", "gewonnen", "kein_interesse", "kein_kontakt"];
 const TEXT_RE = /^[0-9A-Za-zäöüÄÖÜß .,&'/+()-]{0,80}$/;

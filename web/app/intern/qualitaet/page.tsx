@@ -60,9 +60,12 @@ export default function QualitaetPage() {
       <header className="cp-top">
         <h1>Datenqualität</h1>
         <nav className="cp-nav">
+          <Link href="/intern">Firmen-Radar</Link>
           <Link href="/intern/betrieb">Betrieb</Link>
           <Link href="/intern/konten">Konten</Link>
-          <Link href="/intern">Firmen-Radar</Link>
+          <Link href="/intern/kosten">LLM & Kosten</Link>
+          <Link href="/intern/kuratierung">Kuratierung</Link>
+          <Link href="/intern/vertrieb">Vertrieb</Link>
           <select value={land} onChange={(e) => setLand(e.target.value)}>
             {LAENDER.map((l) => <option key={l} value={l}>{l}</option>)}
           </select>

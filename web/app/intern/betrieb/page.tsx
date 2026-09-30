@@ -75,6 +75,7 @@ export default function BetriebCockpit() {
           <Link href="/intern/qualitaet">Datenqualität</Link>
           <Link href="/intern/kosten">LLM & Kosten</Link>
           <Link href="/intern/kuratierung">Kuratierung</Link>
+          <Link href="/intern/vertrieb">Vertrieb</Link>
           <Link href="/intern">Firmen-Radar</Link>
           <button onClick={() => setTs(Date.now())}>Aktualisieren</button>
         </nav>

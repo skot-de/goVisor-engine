@@ -8,7 +8,7 @@ export const runtime = "nodejs";
 export const maxDuration = 30;
 
 const ROOT = path.resolve(process.cwd(), "..");
-const ID_RE = /^(grp|solo):[0-9A-Za-z:._-]{1,120}$/;
+const ID_RE = /^(grp|solo):[0-9A-Za-zäöüÄÖÜß:._/-]{1,120}$/;
 const SAFE = /^[0-9A-Za-zäöüÄÖÜß .,&'/+-]{1,60}$/;   // konservativ für Name/Ort/PLZ
 
 function run(args: string[]): Promise<Record<string, unknown>> {

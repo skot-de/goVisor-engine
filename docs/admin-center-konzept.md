@@ -181,4 +181,21 @@ Sicherheitsleitplanke nicht verloren gehen:
    handrecherchierte DB-Netz/InfraGO-Zeile liegt damit nur dort, nicht im versionierten Repo.
    Bereich 5 schreibt Aliasse deshalb an den data/-Pfad (dort wirkt es), meldet den
    Widerspruch aber, statt ihn stillschweigend zu umgehen.
-   Naechste Bereiche: 4 (Vertrieb ausbauen).
+   **Bereich 4 (Vertrieb & Outreach) GEBAUT 2026-09-30**: Seite `app/intern/vertrieb` fuehrt
+   die schon vorhandenen Bausteine zusammen — neu ist der Zielliste-Reader
+   `app/api/intern/zielliste` (Node-`fs` auf `data/zielliste.csv`, nur lesen; Sort nach Score,
+   Filter Region/Signal/Name), dazu die bestehenden `/api/intern/outreach` (Trefferquote +
+   12-Monats-Sperre) und `/api/intern/landing` (Landing `/t/<token>` erzeugen). Je Ziel:
+   Landing erzeugen, Ansprache loggen (setzt Sperre), Sperr-Badge. Firmensuche bleibt im
+   Firmen-Radar (`/intern`). Datenschicht belegt: 785 Ziele, Score-Sort, Filter DEA+S1=85,
+   Zahlentypen korrekt. UI tsc-sauber, Escape-Lint gruen.
+   ⚠ **Zwei vorbestehende Bugs in `/api/intern/landing` dabei gefunden und gefixt (web/):**
+   (1) Die Route rechnete den Token als `sha1(id)[:10]`, `export_outreach.token_of` nutzt aber
+   inzwischen gesalzenes `HMAC-SHA256[:16]` — die zurueckgegebene `/t/<token>`-URL waere ein
+   404 gewesen. Jetzt liest die Route den fertigen Token aus der Skript-Ausgabe (kein Nachrechnen,
+   kein zweiter Zugriff aufs Salt). (2) `ID_RE` verwarf 4 von 785 echten `identity_id` mit
+   Umlaut/Slash (z. B. `solo:id:114/5559/4478`); die Skripte bauen aus der ID nie einen Pfad
+   (nur parametrisiertes SQL + HMAC), deshalb um Umlaute/`/` erweitert — konsistent auch in
+   `outreach` und `firmen`. ⚠ Nicht real ausgeloest (Seiteneffekt auf echte Vertriebsdaten):
+   eine oeffentliche Landing bzw. ein Cooldown-Eintrag — das uebt der Betrieb ueber die UI aus.
+   Alle sechs Bereiche (1-3, 5, 6, 4) stehen; Bereich 7 (Agenten) bleibt ausgeklammert.

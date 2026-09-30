@@ -259,3 +259,17 @@
 .kur-del { font-size: 11px; color: #b91c1c; border: 1px solid #fca5a5; background: #fff;
   padding: 3px 8px; border-radius: 4px; cursor: pointer; }
 .kur-del:hover:not(:disabled) { background: #fef2f2; }
+
+/* Bereich 4 — Vertrieb & Outreach */
+.ziel-filter { display: flex; gap: 10px; margin: 14px 0 4px; flex-wrap: wrap; }
+.ziel-filter input, .ziel-filter select { font-size: 13px; padding: 6px 10px;
+  border: 1px solid #d1d5db; border-radius: 6px; }
+.ziel-filter input { min-width: 200px; }
+.ziel-aktion { display: flex; gap: 6px; align-items: center; white-space: nowrap; }
+.ziel-aktion button, .ziel-aktion select { font-size: 11px; padding: 3px 8px;
+  border: 1px solid #d1d5db; border-radius: 4px; background: #fff; cursor: pointer; }
+.ziel-sperre { font-size: 11px; color: #b45309; background: #fffbeb; border: 1px solid #fcd34d;
+  padding: 2px 6px; border-radius: 4px; }
+.ziel-ok { font-size: 11px; color: #15803d; }
+.ziel-fehler { font-size: 11px; color: #b91c1c; }
+.ziel-link { font-size: 11px; font-family: monospace; color: #2563eb; }
