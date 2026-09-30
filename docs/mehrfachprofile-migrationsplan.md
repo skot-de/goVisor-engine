@@ -93,17 +93,20 @@ also vor dem Anwenden in `main` liegen): `auth.ts` `aktivesProfilId` + `loadProf
 - **Stripe scharf schalten** (lib/stripe.ts UMGESETZT + Keys) und **Preise** setzen — beides
   am Kostenmodell. Der geld-sichere Fulfillment-Kern steht davon unabhaengig.
 
-## Anwenden auf Supabase (Stand 2026-09-30)
-Alle vier Migrationen 0024–0027 sind lokal gegen Postgres 17 verifiziert; die Verbindung zur
-echten Supabase (13 Nutzer, Org-Struktur noch nicht vorhanden) steht. Das **Anwenden** (DDL
-auf die Produktion) wurde vom Auto-Mode-Klassifikator von Claude Code blockiert — unabhaengig
-von der Supabase-Freigabe. Anzuwenden in Reihenfolge, je als eine Transaktion:
+## Anwenden auf Supabase — ERLEDIGT 2026-09-30
 
-    psql "$PGC" --single-transaction -v ON_ERROR_STOP=1 -f supabase/0024_organizations_profiles.sql
-    # dann 0025_active_profile_switch, 0026_pending_invites, 0027_purchases
+0024–0027 sind auf die Produktions-Supabase (`tegznbkbvbbbgzhsvoza`) angewandt, je als eine
+Transaktion. Verifiziert auf den echten 13 Nutzern: 13 Orgs / 13 Profile / 13 vollstaendig
+migriert (org_id + active_profile_id + role='owner'), 0 Waisen; Suchfelder korrekt kopiert
+(9 Nutzer mit cpv_fields → 9 Profile), 9 Orgs mit echtem Namen, 0 Profil/Org-Mismatch. RLS
+aktiv auf allen vier Tabellen, 7 Policies, 6 Trigger, alle Funktionen installiert.
 
-Danach RLS-Laufzeit + Signup/Umschalt/Invite/Kauf-Kreis in der App pruefen (das braucht echte
-Sessions, geht nicht ueber psql).
+⚠ NOCH ZU PRUEFEN (nur in der App moeglich, braucht echte Sessions): der Signup-/Umschalt-/
+Invite-/Kauf-Kreis und die RLS als eingeloggter Nutzer. Die reine DB-Logik ist ueber die
+PG17-Laeufe UND diese Anwendung belegt.
+
+⚠ Prod-DDL wird vom Claude-Code-Auto-Mode-Klassifikator gesperrt; es lief erst mit einer
+`Bash(psql:*)`-Permission-Regel.
 
 Umbaupunkte (umgesetzt):
 
