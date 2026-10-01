@@ -60,10 +60,10 @@ das und bricht **nicht** ab: lokal bleibt die Platte die Quelle.
 
 1. **Speicher anlegen und `DATA_BASE_URL` setzen.** Bis dahin findet ein Deployment keine
    Daten. Die Datenrouten antworten dann leer mit Begründung, nicht mit falschen Zahlen.
-2. **Sieben Nutzer-Routen rufen Python zur Laufzeit.** Hier stand `/firma` als der eine
+2. **Acht Nutzer-Routen rufen Python zur Laufzeit.** Hier stand `/firma` als der eine
    Fall — ausgerechnet der, der inzwischen gelöst ist: die Route liest zuerst die
    vorberechnete Datei und startet in Produktion **nie** Python, sondern antwortet mit
-   einer verwertbaren Meldung. Nachgezählt am 2026-10-01 rufen **vierzehn** Routen
+   einer verwertbaren Meldung. Nachgezählt am 2026-10-01 rufen **fünfzehn** Routen
    `child_process`, und sieben haben diesen Riegel:
 
    | Route | Riegel in Produktion |
@@ -73,6 +73,7 @@ das und bricht **nicht** ab: lokal bleibt die Platte die Quelle.
    | `/api/lead/dokumente`, `/api/lead/datei` | **nein** |
    | `/api/unternehmen/{vorbefuellung,bilanz}` | **nein** |
    | `/api/lead-docs`, `/api/draft-check`, `/api/blocks-import` | **nein** |
+   | `/api/firma/referenzen` | **nein** |
 
    ⚠ Ohne Riegel wird aus einer fehlenden Laufzeit ein **Exec-Fehler**, der wie ein
    Codefehler aussieht — genau das ist am 2026-08-22 bei `/firma` passiert und steht dort
@@ -82,13 +83,14 @@ das und bricht **nicht** ab: lokal bleibt die Platte die Quelle.
      ⚠ Die drei `intern/*`-Routen (Kosten, Kuratierung, Qualität) kamen mit den internen
      Werkzeugen dazu und tragen alle den Riegel `NODE_ENV === "production" &&
      INTERN_ENABLED !== "1"` → 404. Sie vergrössern die Gesamtzahl, nicht das Problem:
-     die Zahl der Routen OHNE Riegel steht unverändert bei sieben.
+     die Zahl der Routen OHNE Riegel liegt bei acht (die eigene Referenzliste
+     `/api/firma/referenzen` kam am 2026-10-01 dazu, On-Demand wie der `/firma`-Fallback).
 
    Zwei Wege, beide gangbar: entweder vorberechnen wie `/firma` es vormacht, oder ein
    Host mit Python (dann ist es kein Hindernis, sondern eine Anforderung an die
    Host-Entscheidung). Was nicht geht: es beim Umzug übersehen.
 
-   `tests/test_serverless.py` zählt mit und wird rot, wenn eine fünfzehnte dazukommt.
+   `tests/test_serverless.py` zählt mit und wird rot, wenn eine sechzehnte dazukommt.
 3. ~~**`/api/leads` hat kein Auth-Gate.**~~ **Erledigt.** Nachgeprüft am 2026-08-31 gegen
    den laufenden Server: `/api/leads`, `/api/branchen` und `/api/lead-detail` antworten
    ohne Sitzung mit `401`. Die Middleware sperrt alles ausser der `OFFEN`-Liste; die

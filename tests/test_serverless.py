@@ -38,6 +38,9 @@ BEKANNT: dict[str, bool] = {
     "unternehmen/vorbefuellung": False,
     "draft-check": False,
     "blocks-import": False,
+    "firma/referenzen": False,           # eigene Referenzliste, On-Demand wie firma-Fallback,
+                                         # kein Prod-Riegel → faellt in Produktion weich leer aus
+
     # Interne Werkzeuge, dazugekommen bis zum 2026-10-01. Alle drei tragen den Riegel
     # `NODE_ENV === "production" && INTERN_ENABLED !== "1"` → 404, starten in Produktion
     # also kein Python. Sie vergroessern die Gesamtzahl, nicht das Problem.

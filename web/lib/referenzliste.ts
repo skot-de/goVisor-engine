@@ -24,7 +24,7 @@ function kopf(firma: string, refs: Referenz[]): string {
 }
 
 export function referenzenMarkdown(firma: string, refs: Referenz[]): string {
-  const out = [`# ${z(firma)} — Referenzliste`, "", kopf(firma, refs).split("\n")[1], "",
+  const out = [`# ${z(firma)}: Referenzliste`, "", kopf(firma, refs).split("\n")[1], "",
     "| Jahr | Auftraggeber | Gegenstand | Auftragswert |", "|---|---|---|---|"];
   for (const r of refs) out.push(`| ${r.jahr ?? "—"} | ${z(r.auftraggeber)} | ${z(r.titel)} | ${eur(r.wert)} |`);
   out.push("", "*Jede Zeile ist eine öffentlich bekanntgemachte Vergabe (TED), keine Selbstauskunft. Erstellt mit goVisor.*");
@@ -43,7 +43,7 @@ export function referenzenDocHtml(firma: string, refs: Referenz[]): string {
   }).join("");
   return `<!DOCTYPE html><html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word"><head><meta charset="utf-8"><title>Referenzliste</title></head>
 <body style="font-family:Calibri,Arial,sans-serif;font-size:11pt;color:#12211d">
-<h1 style="font-size:18pt;margin-bottom:2px">${esc(z(firma))} — ${esc("Referenzliste")}</h1>
+<h1 style="font-size:18pt;margin-bottom:2px">${esc(z(firma))}: ${esc("Referenzliste")}</h1>
 <p style="color:#64766f;margin-top:0">${esc(kopf(firma, refs).split("\n")[1])}</p>
 <table style="border-collapse:collapse;width:100%;margin:8px 0;font-size:10pt">
 <tr><th style="border:1px solid #ccc;padding:6px 8px;background:#f5f7f6;text-align:left">Jahr</th>
