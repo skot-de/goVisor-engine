@@ -15,6 +15,7 @@ import {
   type Prefill,
 } from "@/lib/supabase/unternehmen";
 import { catalogFor, requiredKeysFor, type CatalogItem } from "@/lib/unternehmen/catalog";
+import { downloadReferenzenMd, downloadReferenzenDoc, copyReferenzen, type Referenz } from "@/lib/referenzliste";
 import { exportProfilJson, exportProfilPdf } from "@/lib/unternehmen/export";
 import { BilanzTab, ChancenTab } from "./BilanzChancen";
 import { MarktPanel } from "./MarktPanel";
@@ -217,6 +218,7 @@ function IdentitaetSektion({ profil, ctx, setProfil, toast, refresh }: SecP & { 
         <button className="un-btn" onClick={loadPrefill} disabled={busy || !ctx.identityId}>
           {busy ? t("Lädt Zuschläge …") : t("Aus eigenen Zuschlägen befüllen")}</button>
         <button className="un-btn ghost" onClick={() => setShowKorr((v) => !v)}>{t("Zuordnung korrigieren")}</button>
+        <ReferenzlisteKnopf identityId={ctx.identityId} firma={ctx.companyName} />
       </div>
       {err && <p className="un-err">{err}</p>}
 
@@ -626,5 +628,54 @@ function Section({ title, hint, children }: { title: string; hint?: string; chil
       <div className="un-sec-head"><h2>{title}</h2>{hint && <p className="un-sec-hint">{hint}</p>}</div>
       {children}
     </section>
+  );
+}
+
+/* Referenzliste der eigenen Firma: gewonnene TED-Zuschlaege, copy-/download-fertig (Word, Markdown,
+ * Zwischenablage). Quelle /api/firma/referenzen (nur eigene Identitaet). Muster wie das Lead-Briefing. */
+function ReferenzlisteKnopf({ identityId, firma }: { identityId: string | null; firma: string | null }) {
+  const { t } = useSprache();
+  const [refs, setRefs] = useState<Referenz[] | null>(null);
+  const [offen, setOffen] = useState(false);
+  const [busy, setBusy] = useState(false);
+  const [kopiert, setKopiert] = useState(false);
+  const name = firma || t("Unternehmen");
+
+  async function laden() {
+    if (refs) { setOffen((o) => !o); return; }
+    setBusy(true);
+    try {
+      const r = await fetch("/api/firma/referenzen", { cache: "no-store" });
+      const j = await r.json();
+      setRefs(Array.isArray(j.referenzen) ? j.referenzen : []);
+      setOffen(true);
+    } catch { setRefs([]); setOffen(true); }
+    finally { setBusy(false); }
+  }
+
+  return (
+    <div className="un-ref-wrap">
+      <button className="un-btn ghost" onClick={laden} disabled={busy || !identityId}
+        title={t("Eure gewonnenen Zuschläge als Referenzliste, copy- und download-fertig")}>
+        {busy ? t("Lädt …") : t("Referenzliste")}
+      </button>
+      {offen && refs && (
+        <div className="un-ref-menu">
+          {refs.length === 0 ? (
+            <p className="un-note">{t("Keine belegten Zuschläge gefunden.")}</p>
+          ) : (
+            <>
+              <div className="un-ref-h">{t("{n} belegte Zuschläge (TED)", { n: refs.length })}</div>
+              <button className="un-ref-opt" onClick={() => downloadReferenzenDoc(name, refs)}>
+                <b>Word</b><span>{t(".doc · öffnet in Word")}</span></button>
+              <button className="un-ref-opt" onClick={() => downloadReferenzenMd(name, refs)}>
+                <b>Markdown</b><span>{t(".md · Datei")}</span></button>
+              <button className="un-ref-opt" onClick={async () => { setKopiert(await copyReferenzen(name, refs)); setTimeout(() => setKopiert(false), 1500); }}>
+                <b>{kopiert ? t("Kopiert ✓") : t("Kopieren")}</b><span>{t("in die Zwischenablage")}</span></button>
+            </>
+          )}
+        </div>
+      )}
+    </div>
   );
 }
