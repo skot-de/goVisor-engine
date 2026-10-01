@@ -805,3 +805,16 @@ body:has(> .lp) { background: #E4E8E6; }
   .ec-probe-zeile { flex-direction: column-reverse; align-items: stretch; gap: 4px; }
   .ec-probe-frist { flex-direction: row; align-items: baseline; gap: 6px; }
 }
+
+/* Preise/Pakete (Preismodell v1.9 §5) */
+.lp-pakete { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 18px 0 14px; }
+.lp-paket { border: 1px solid var(--line, #E3E7E5); border-radius: 14px; padding: 18px 18px 16px;
+  background: var(--surface-2, #FAFBFA); display: flex; flex-direction: column; gap: 8px; }
+.lp-paket-mitte { border-color: var(--signal-deep, #067A55); background: var(--signal-wash, #E7F7F1); }
+.lp-paket h4 { margin: 0; font-size: 15px; color: var(--ink-900, #12211D); }
+.lp-paket p { margin: 0; font-size: 13px; line-height: 1.5; color: var(--ink-700, #33453F); }
+.lp-paket-preis { font-size: 24px; font-weight: 700; color: var(--ink-900, #12211D); display: flex;
+  flex-direction: column; }
+.lp-paket-preis span { font-size: 12px; font-weight: 400; color: var(--ink-500, #64766F); }
+.lp-preis-fuss { font-size: 13px; line-height: 1.6; color: var(--ink-500, #64766F); margin: 0 0 6px; }
+@media (max-width: 640px) { .lp-pakete { grid-template-columns: 1fr; } }

@@ -81,12 +81,12 @@ export async function Landing() {
 
   return (
     <main className="lp">
-      {/* Gründungsleiste. Bewusst OHNE Preisversprechen: die Vorlage warb mit einem
-          „Einführungspreis", und der ist nicht beschlossen. Was stimmt und trotzdem trägt,
-          ist der Zeitpunkt — wer jetzt kommt, redet mit den Leuten, die es bauen. */}
+      {/* Gründungsleiste. Der Gründungspreis ist seit Preismodell v1.9 (§5.4) beschlossen:
+          die ersten 50 Kunden, unbegrenzt gültig, solange das Abo läuft. */}
       <p className="lp-gruendung">
-        <b>Gründungsphase.</b> Der Bestand wächst täglich, das Produkt auch. Wer jetzt
-        einsteigt, redet direkt mit denen, die es bauen.
+        <b>Gründungsphase.</b> Die ersten 50 Kunden zahlen den Gründungspreis, unbegrenzt:
+        Analyse 49 € statt 99 €, Strategie 149 € statt 349 € im Monat. Wer jetzt einsteigt,
+        redet direkt mit denen, die es bauen.
       </p>
 
       <header className="lp-kopf">
@@ -457,6 +457,31 @@ export async function Landing() {
         <p className="lp-preis">
           <b>Was es kostet:</b> Der Einstieg nichts. Suchen, filtern und Vergaben ansehen
           bleibt dauerhaft frei. Bezahlt wird die Tiefe: ausgewertete Unterlagen und Bewertung.
+        </p>
+
+        {/* Preise/Pakete nach Preismodell v1.9 §5. Keine Code-Quelle fuer die Paketpreise
+            (99/349); die Erweiterung (29 €) steht in lib/preise.ts. */}
+        <div className="lp-pakete">
+          <div className="lp-paket">
+            <h4>Free</h4>
+            <p className="lp-paket-preis">0 €<span>dauerhaft</span></p>
+            <p>Alles sichtbar. Drei Vorgänge im Monat voll auswerten, Unterlagen und Bewertung.</p>
+          </div>
+          <div className="lp-paket lp-paket-mitte">
+            <h4>Analyse</h4>
+            <p className="lp-paket-preis">99 €<span>im Monat · 1.019 € im Jahr</span></p>
+            <p>Der komplette Vorgang je Ausschreibung, unbegrenzt. Ein Nutzer, ein Unternehmensprofil.</p>
+          </div>
+          <div className="lp-paket">
+            <h4>Strategie</h4>
+            <p className="lp-paket-preis">349 €<span>im Monat · 3.579 € im Jahr</span></p>
+            <p>Marktbearbeitung über Ausschreibungen hinweg: Pipeline, Wettbewerb, Felder. Ein Nutzer, ein Unternehmensprofil.</p>
+          </div>
+        </div>
+        <p className="lp-preis-fuss">
+          Jeder weitere Nutzer oder jedes weitere Unternehmensprofil kostet 29 € im Monat, in
+          beiden Paketen gleich. Jeder neue Account startet mit vier Wochen vollem Zugang, ohne
+          Zahlungsmittel. Danach bleibt das Konto als Free bestehen.
         </p>
 
         <div className="lp-abschluss" id="starten">
