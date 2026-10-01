@@ -67,20 +67,25 @@ Aktionen. Die folgenden von Hand im Browser, als Admin angemeldet:
 - Kuratierungs-Schreiben auf `data/`-Dateien ist fail-closed gegen laufende Laeufe
   (`laeuft_was.sh`) — waehrend des Nachtlaufs/Abrufs gewollt gesperrt (409).
 
-## 4. Mehrfachprofil-Flows (braucht echte Sessions — offen aus 0024-0027)
+## 4. Mehrfachprofil-Flows (braucht echte Sessions — aus 0024-0027)
 
-Diese Kreise liefen bisher nur gegen PG17 + die reine DB-Anwendung; in der App noch nie:
+1. **Signup + Profil-Wechsel + RLS — ✅ AUTOMATISIERT & GRÜN (2026-10-01):**
 
-1. **Signup** → `handle_new_user` legt Org + Profil + `owner` an (beim Wegwerf-Admin schon passiert).
-2. **Profil wechseln** (`/settings` → Profile, `wechsleProfil`) → `active_profile_id` wandert,
-   Suchprofil/Relevanz folgt dem aktiven Profil.
-3. **Mitglied einladen** (`/settings` → Team) → `pending_invites`, Seat-Grenze greift; der
-   Eingeladene landet nach Signup in DER Org (nicht Solo).
-4. **Kauf** (Seats/Profile erweitern) → erwartet **503**, solange Stripe/Preise nicht scharf
+       node web/scripts/test_profil_rls.mjs
+
+   Legt zwei Wegwerf-Konten in getrennten Orgs an und prueft gegen den laufenden Dev-Server:
+   Signup legt Org+Profil+owner an; A legt ein 2. Profil an (Kontingent vorher auf 2 gehoben)
+   und schaltet um (`/api/profil`, `/api/profil/wechseln`); **RLS**: A sieht nur As Profile,
+   B nur Bs, B kann As Profil weder lesen noch per API darauf umschalten (404). Raeumt Konten
+   **und Orgs** wieder weg (der User-Delete kaskadiert `user_profiles`, aber NICHT die Org —
+   das Skript loescht die Org darum selbst; mit `psql` gegengeprueft: 0 Waisen).
+2. **Mitglied einladen** (`/settings` → Team) → `pending_invites`, Seat-Grenze greift; der
+   Eingeladene landet nach Signup in DER Org (nicht Solo). — noch manuell.
+3. **Kauf** (Seats/Profile erweitern) → erwartet **503**, solange Stripe/Preise nicht scharf
    (`lib/stripe.ts`/`lib/preise.ts`); der idempotente Fulfillment-Kern (`kauf_gutschreiben`) steht.
+   — noch manuell.
 
-Fuer 2-4 je ein zweites Wegwerf-Konto nutzen; RLS pruefen (ein Mitglied sieht nur die Profile
-seiner Org). Siehe `docs/mehrfachprofile-migrationsplan.md`.
+Siehe `docs/mehrfachprofile-migrationsplan.md`.
 
 ## 5. Aufraeumen
 

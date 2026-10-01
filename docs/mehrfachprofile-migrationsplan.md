@@ -105,6 +105,13 @@ aktiv auf allen vier Tabellen, 7 Policies, 6 Trigger, alle Funktionen installier
 Invite-/Kauf-Kreis und die RLS als eingeloggter Nutzer. Die reine DB-Logik ist ueber die
 PG17-Laeufe UND diese Anwendung belegt.
 
+✅ **Signup + Profil-Wechsel + RLS in der App belegt (2026-10-01):**
+`node web/scripts/test_profil_rls.mjs` (zwei Wegwerf-Konten, getrennte Orgs) — alles gruen:
+Signup legt Org+Profil+owner an, Umschalten setzt `active_profile_id`, und die RLS isoliert
+sauber (B sieht/erreicht As Profile nicht, API-Umschalten auf fremdes Profil → 404). Teardown
+loescht Konten + Orgs (0 Waisen, mit psql gegengeprueft). OFFEN bleiben **Invite** und **Kauf**
+(503 bis Stripe/Preise scharf) — s. `docs/intern-laufzeittest.md`.
+
 ⚠ Prod-DDL wird vom Claude-Code-Auto-Mode-Klassifikator gesperrt; es lief erst mit einer
 `Bash(psql:*)`-Permission-Regel.
 
