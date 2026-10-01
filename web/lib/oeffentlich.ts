@@ -92,8 +92,17 @@ function exklusivSchicht(
 ): "predecessor" | "buyer_history" | "cycle" | null {
   if (Array.isArray(lead.ersetzt) && lead.ersetzt.length > 0) return "predecessor";
   if (Array.isArray(lead.kette) ? lead.kette.length > 0 : !!lead.kette) return "cycle";
-  const n = detail?.buyerProfile?.total;
-  if (typeof n === "number" && n >= 6) return "buyer_history";
+  // §11 nennt als dritte Exklusivschicht „Auftraggeber-Historie mit n>=6 in der CPV-GRUPPE
+  // dieser Ausschreibung". ⚠ Die Daten tragen das nicht: `buyerProfile` hat nur `total` (ALLE
+  // Vergaben des Auftraggebers) und `mix` (grob je Branche), keine CPV-gruppen-genaue Zahl.
+  // Ein Tor auf `total>=6` waere also durchlaessiger als §11 meint und nicht verifizierbar.
+  // Gemessen am 2026-10-01 (Peer, docs/weiterentwicklung/sichtbarkeit-in-ki-antworten.md §8)
+  // ist dieses Tor zudem das schwaechste (32 % der Vergabestellen) und inhaltlich nahe an dem,
+  // was §11 selbst ausschliesst — als Hauptweg hebelt es die eigene Schwelle aus. Darum zaehlt
+  // es NICHT zur Indexierbarkeit; die ruht auf den zwei starken, belegten Toren (Vorgaenger
+  // ~4.275 Leads, Zyklus ~47). Die Auftraggeber-Statistik wird weiter gezeigt
+  // (auftraggeberStatistik), sie indexiert nur nicht. Kommt spaeter eine CPV-gruppen-genaue
+  // Zahl, kann "buyer_history" hier zusaetzlich wieder einziehen.
   return null;
 }
 
