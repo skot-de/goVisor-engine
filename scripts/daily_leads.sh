@@ -1880,5 +1880,19 @@ $PY scripts/pruefe_bibel.py \
 $PY scripts/pruefe_vollstaendigkeit.py \
   || echo "  → Ein holbarer Lead traegt keinen Zustand. Details: python3 scripts/pruefe_vollstaendigkeit.py --offen"
 
+# ── ZAHLEN IN DER MARKTANALYSE NACHZIEHEN ────────────────────────────────────────────────
+# `docs/weiterentwicklung/sichtbarkeit-in-ki-antworten.md` stellt unseren gemessenen Bestand
+# fremden Behauptungen gegenueber. Zahlen in einem Strategiedokument veralten lautlos — und ein
+# Dokument, das 2,9 Mio. Bekanntmachungen behauptet, waehrend es 3,4 sind, ist als Argument
+# wertlos.
+#
+# ⚠ ERSETZT NUR DIE MARKIERTEN BLOECKE. Prosa und Strategie bleiben Handarbeit. Der Erzeuger
+# bricht ab, wenn eine Markierung fehlt, statt das Dokument zu ueberschreiben.
+#
+# ⚠ Rueckgabe 1 heisst NICHT Fehler, sondern „dieselbe Zahl steht auch ausserhalb des Blocks"
+# — dort wird sie nicht nachgezogen, und das Dokument widersprach sich. Deshalb `||`.
+$PY scripts/zahlen_nachziehen.py \
+  || echo "  → Zahlen nachgezogen, aber eine Zahl steht doppelt. Details: python3 scripts/zahlen_nachziehen.py"
+
 # Alte Logs aufräumen (>30 Tage)
 find "$LOG_DIR" -name 'daily-*.log' -type f -mtime +30 -delete 2>/dev/null || true
