@@ -109,8 +109,12 @@ PG17-Laeufe UND diese Anwendung belegt.
 `node web/scripts/test_profil_rls.mjs` (zwei Wegwerf-Konten, getrennte Orgs) — alles gruen:
 Signup legt Org+Profil+owner an, Umschalten setzt `active_profile_id`, und die RLS isoliert
 sauber (B sieht/erreicht As Profile nicht, API-Umschalten auf fremdes Profil → 404). Teardown
-loescht Konten + Orgs (0 Waisen, mit psql gegengeprueft). OFFEN bleiben **Invite** und **Kauf**
-(503 bis Stripe/Preise scharf) — s. `docs/intern-laufzeittest.md`.
+loescht Konten + Orgs (0 Waisen, mit psql gegengeprueft).
+
+✅ **Invite-Kreis in der App belegt (2026-10-01):** `node web/scripts/test_invite_rls.mjs` —
+Einladen ordnet den Eingeladenen DER Org zu (nicht Solo), Seat-Grenze greift (3. → 409),
+Signup ohne Einladung → Solo-Org, Mitglied darf nicht einladen (403). 0 Waisen. OFFEN bleibt
+nur noch **Kauf** (503 bis Stripe/Preise scharf) — s. `docs/intern-laufzeittest.md`.
 
 ⚠ Prod-DDL wird vom Claude-Code-Auto-Mode-Klassifikator gesperrt; es lief erst mit einer
 `Bash(psql:*)`-Permission-Regel.

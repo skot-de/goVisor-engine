@@ -79,11 +79,22 @@ Aktionen. Die folgenden von Hand im Browser, als Admin angemeldet:
    B nur Bs, B kann As Profil weder lesen noch per API darauf umschalten (404). Raeumt Konten
    **und Orgs** wieder weg (der User-Delete kaskadiert `user_profiles`, aber NICHT die Org —
    das Skript loescht die Org darum selbst; mit `psql` gegengeprueft: 0 Waisen).
-2. **Mitglied einladen** (`/settings` → Team) → `pending_invites`, Seat-Grenze greift; der
-   Eingeladene landet nach Signup in DER Org (nicht Solo). — noch manuell.
+2. **Mitglied einladen + Seat-Grenze + Authz — ✅ AUTOMATISIERT & GRÜN (2026-10-01):**
+
+       node web/scripts/test_invite_rls.mjs
+
+   Owner A (seats_paid=2) laedt X ein (POST `/api/org/mitglieder`) → X landet in As **Org**
+   (role member, aktives Profil = As Org-Profil), Einladung `eingeloest`, NICHT Solo
+   (`handle_new_user`, 0026). Die 3. Person wird abgewiesen (409, belegt = Mitglieder + offene
+   Einladungen ≥ seats_paid). Signup OHNE Einladung bekommt eine eigene Solo-Org. Ein Mitglied
+   darf nicht einladen (403). Raeumt Konten + Orgs weg (0 Waisen, mit psql gegengeprueft).
+   ⚠ Supabase weist `.invalid`-Adressen beim Auth-Invite ab — der Mailversand schlaegt also fehl
+   (die Einladung bleibt angelegt), und der Test simuliert den Signup des Eingeladenen; mit einer
+   zustellbaren Adresse legt `inviteUserByEmail` den Nutzer schon beim Einladen an. Beide Pfade
+   laufen durch dieselbe `handle_new_user`-Zuordnung.
 3. **Kauf** (Seats/Profile erweitern) → erwartet **503**, solange Stripe/Preise nicht scharf
    (`lib/stripe.ts`/`lib/preise.ts`); der idempotente Fulfillment-Kern (`kauf_gutschreiben`) steht.
-   — noch manuell.
+   — noch manuell / offen bis Kostenmodell.
 
 Siehe `docs/mehrfachprofile-migrationsplan.md`.
 
