@@ -54,7 +54,7 @@ try {
   console.log("  Teil A — API-Stub (503) + Validierung:");
   let r = await api(cookie, "/api/kauf/checkout", { method: "POST", body: JSON.stringify({ art: "seat", menge: 1 }) });
   let j = await r.json();
-  pruef(r.status === 503, "checkout seat → 503 (Preis offen)", j.error || `status ${r.status}`);
+  pruef(r.status === 503, "checkout seat → 503 (Stripe nicht konfiguriert)", j.error || `status ${r.status}`);
   r = await api(cookie, "/api/kauf/checkout", { method: "POST", body: JSON.stringify({ art: "profile", menge: 2 }) });
   pruef(r.status === 503, "checkout profile → 503");
   r = await api(cookie, "/api/kauf/webhook", { method: "POST", body: "{}" });
