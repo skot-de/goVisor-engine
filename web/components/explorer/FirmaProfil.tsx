@@ -1,6 +1,7 @@
 "use client";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { useSprache } from "@/lib/i18n";
+import { vorgangOeffnen } from "@/lib/kontingentClient";
 
 /* Feature #25 — Firmenprofil. Rollen-agnostische Firmen-Detailseite, KEIN Navigationspunkt:
  * erreichbar aus der Wettbewerbstabelle, vom Amtsinhaber im Lead und vom Gewinner eines
@@ -62,6 +63,12 @@ export function FirmaProfil() {
   // Profil laden, sobald eine Firma gewählt ist
   useEffect(() => {
     if (!id) { setData(null); return; }
+    // Vorgangs-Kontingent (v1.9 §4.3): ein EINZELN aufgerufenes Firmenprofil ist ein Vorgang.
+    // Ueber einen (bereits aufgeschlossenen) Lead erreichte Profile zaehlen nicht — solche
+    // Verweise tragen `?via=lead`. Idempotent + folgenlos, solange die Paywall aus ist.
+    try {
+      if (new URLSearchParams(window.location.search).get("via") !== "lead") vorgangOeffnen("firma", id);
+    } catch { /* SSR */ }
     setLoading(true);
     fetch(`/api/firma?id=${encodeURIComponent(id)}`)
       // Der deutsche Satz IST der Schlüssel — übersetzt wird unten beim Rendern (`t(data.error)`),

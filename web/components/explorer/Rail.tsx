@@ -7,6 +7,7 @@ import { SPRACHEN, sprachName, useSprache } from "@/lib/i18n";
 import { useProfil } from "@/lib/useProfil";
 import { SeitenSuche } from "./SeitenSuche";
 import { Posteingang } from "./Posteingang";
+import { Kontingent } from "./Kontingent";
 
 /* Die Hauptnavigation — EINE Quelle für alle Seiten.
  *
@@ -310,6 +311,10 @@ export function AppTop({ suche, werkzeuge, ohneSuche }: {
 
       {ohneSuche ? null : (suche ?? <SeitenSuche />)}
       {werkzeuge ? <div className="top-werkzeuge">{werkzeuge}</div> : null}
+
+      {/* Vorgangs-Zaehler (v1.9 §4.2) — zeigt sich nur bei Begrenzung (Free + scharfe Paywall),
+          sonst rendert er nichts. Gehoert wie Posteingang/Sprache zum Konto, nicht zur Liste. */}
+      <Kontingent />
 
       {/* Posteingang neben der Sprache, auf JEDER Seite — wie Profil und Sprache gehört er
           zum Konto, nicht zur Lead-Liste. Vorher gab es für Hinweise überhaupt keinen

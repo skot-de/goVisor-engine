@@ -3109,3 +3109,9 @@ td.c-doks{width:84px;text-align:center}
   border:1px solid var(--line); border-radius:7px; background:var(--bg-0); color:var(--ink-800);
 }
 .fp-name:focus-visible{outline:2px solid var(--acc); outline-offset:1px}
+
+/* Vorgangs-Zaehler im Kopf (Preismodell v1.9 §4.2). Zeigt sich nur bei Begrenzung. */
+.kontingent{display:inline-flex;align-items:center;gap:5px;padding:4px 9px;border:1px solid var(--line,#e5e7eb);border-radius:100px;font-size:11px;color:var(--ink-700,#374151);white-space:nowrap}
+.kontingent-zahl{font-family:var(--mono);font-weight:600}
+.kontingent-lbl{color:var(--ink-500,#6b7280)}
+.kontingent-voll{border-color:var(--signal,#f59e0b);color:var(--signal-ink,#b45309);background:var(--signal-bg,#fffbeb)}
