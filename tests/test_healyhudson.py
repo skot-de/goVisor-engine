@@ -1466,15 +1466,16 @@ def test_offene_endpunkte_haben_eine_bremse():
             continue
         basis = ROOT / "web" / "app" / pfad.lstrip("/")
         dateien = [basis / "route.ts"] if (basis / "route.ts").exists() else []
-        # ⚠ EINE OFFENE ROUTE KANN EINEN DYNAMISCHEN ABSCHNITT TRAGEN. Der iCal-Feed liegt
-        # unter `api/calendar/[token]/route.ts`; gesucht wurde nur `api/calendar/route.ts`.
-        # Der Waechter meldete deshalb „Route nicht gefunden" fuer eine Route, die es gibt —
-        # und die Bremse, nach der er sucht, hat er nie gelesen. Fuer den naechsten offenen
-        # `/api/…/[id]`-Endpunkt waere es genauso ausgegangen.
+        # ⚠ EINE OFFENE ROUTE KANN IHRE route.ts EINE EBENE TIEFER TRAGEN. Zwei Faelle:
+        # ein DYNAMISCHER Abschnitt (iCal-Feed unter `api/calendar/[token]/route.ts`) und ein
+        # BENANNTER (Schnellcheck unter `api/ausschreibung/schnellcheck/route.ts`). Gesucht
+        # wurde frueher nur `api/calendar/route.ts` bzw. nur `[...]`-Ordner — der Waechter
+        # meldete „Route nicht gefunden" fuer Routen, die es gibt, und las die Bremse nie.
+        # Jetzt zaehlt JEDER Unterordner mit eigener route.ts: so prueft der Waechter den
+        # ganzen offenen Teilbaum auf eine Bremse, nicht nur die Wurzel.
         if not dateien and basis.is_dir():
             dateien = [d / "route.ts" for d in sorted(basis.iterdir())
-                       if d.is_dir() and d.name.startswith("[") and d.name.endswith("]")
-                       and (d / "route.ts").exists()]
+                       if d.is_dir() and (d / "route.ts").exists()]
         if not dateien:
             ohne.append(f"{pfad}: Route nicht gefunden")
             continue
