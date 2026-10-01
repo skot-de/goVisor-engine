@@ -1,9 +1,8 @@
 # Schema für Preismodell v1.9 — Entwurf, nicht angewendet
 
 **Stand:** 2026-10-01 · **Grundlage:** `INPUT/govisor-preismodell.md` v1.9, §5.2 / §7.3 / §13
-**Status:** §2 ist **gebaut und eingespielt** (Migration `0028` am 2026-10-01 über
-`scripts/migrate.py`, `getTier` umgestellt). Der Rest (§3 Trigger, §4 Preise) ist weiter
-Vorschlag.
+**Status:** §2 und §3 sind **gebaut und eingespielt** (`0028` und `0032` am 2026-10-01 über
+`scripts/migrate.py`, `getTier` umgestellt). §4 (Preistabelle) ist weiter Vorschlag.
 
 Gegengeprüft nach dem Einspielen:
 
@@ -129,7 +128,7 @@ Selbstregistrierung erzeugt aber einen Straggler.
 
 ---
 
-## 3. Die Obergrenze muss stufenabhängig werden
+## 3. Die Obergrenze ist stufenabhängig (eingespielt)
 
 v1.9: *„Auf Analyse und Strategie gibt es keine Obergrenze."* Heute setzt
 `0025_active_profile_switch.sql` sie **unbedingt** durch:
@@ -168,6 +167,24 @@ $$;
 ```
 
 Für `pruefe_seat_grenze()` gilt dasselbe wortgleich mit `user_profiles`/`seats_paid`.
+
+**Eingespielt als `0032`, am laufenden System geprüft** (eine Transaktion, danach
+zurückgerollt, die 13 Organisationen blieben unberührt):
+
+| Stufe | zweites Profil | zweite Einladung |
+|---|---|---|
+| `free` | gesperrt ✓ | gesperrt ✓ (Sitz vom Inhaber belegt) |
+| `trial` | gesperrt ✓ | — |
+| `analyse` | erlaubt ✓ | erlaubt ✓ |
+
+⚠ Geprüft wird `tier in ('analyse','strategie')` und **nicht** `tier not in ('free','trial')`.
+Fände die Abfrage keine Organisation, wäre `t` NULL, und `NULL not in (…)` ist NULL — der
+Riegel wäre übersprungen und die Grenze griffe nicht. In der positiven Form ist NULL ebenfalls
+nicht wahr, also ist jede unbekannte Stufe begrenzt statt frei.
+
+Die Grenze für Free und Testphase ist fest **1** und nicht `profiles_paid`: das ist eine
+Stufengrenze, und ein Free-Konto rechnet nichts ab, also darf eine Abrechnungsmenge dort auch
+nichts erlauben. Festgehalten in `tests/test_stufengrenzen.py`.
 
 > ⚠ **Was dadurch möglich wird und gewollt ist:** `count(profiles) > profiles_paid`. Genau
 > dieser Zustand trägt die Proration — der Kunde legt ein Profil an, die Menge steigt, die
