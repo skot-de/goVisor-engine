@@ -66,6 +66,13 @@ export function BausteinLibrary({ importOpen, onImport, theme, onTheme, onThemen
   /** Die Firma, in die freigegeben werden darf — `null`, solange keine belegt ist.
    *  Kommt vom Server: die Ansicht soll nicht raten, ob ein Schalter etwas bewirkt. */
   const [firma, setFirma] = useState<string | null>(null);
+  const [kopiertIdx, setKopiertIdx] = useState<number | null>(null);
+
+  // One-Click-Copy eines Bausteins in die Zwischenablage (auch fuer geteilte, nur-lese Bloecke).
+  async function kopieren(text: string, idx: number) {
+    try { await navigator.clipboard.writeText(text); setKopiertIdx(idx); setTimeout(() => setKopiertIdx((v) => (v === idx ? null : v)), 1500); }
+    catch { /* Clipboard verweigert (kein Fokus o. Ae.) — der Text bleibt ja sichtbar */ }
+  }
 
   /* LOKAL-FIRST, dann abgleichen. Die lokale Liste steht sofort; der Server kommt danach.
    * Umgekehrt (erst laden, dann anzeigen) sähe die Bibliothek bei jedem Aufruf für einen
@@ -274,9 +281,15 @@ export function BausteinLibrary({ importOpen, onImport, theme, onTheme, onThemen
                       ohnehin verweigern würde — ein Knopf, der nichts tut, ist schlimmer
                       als keiner. */}
                   {amServer && b.eigen === false ? (
-                    <span className="chip" title="Von einer Kollegin freigegeben">geteilt</span>
+                    <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
+                      <button className="btn btn-q" title="In die Zwischenablage" onClick={() => kopieren(b.content, i)}>
+                        {kopiertIdx === i ? "Kopiert ✓" : "Kopieren"}</button>
+                      <span className="chip" title="Von einer Kollegin freigegeben">geteilt</span>
+                    </div>
                   ) : (
                     <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
+                      <button className="btn btn-q" title="In die Zwischenablage" onClick={() => kopieren(b.content, i)}>
+                        {kopiertIdx === i ? "Kopiert ✓" : "Kopieren"}</button>
                       {amServer && b.id && (
                         <button className="btn btn-q"
                           disabled={!firma && (b.sichtbarkeit ?? "privat") === "privat"}
