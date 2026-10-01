@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server";
 import { createClient } from "@/lib/supabase/server";
+import { createAdminClient } from "@/lib/supabase/admin";
+import { nutzbareProfilIds, darfProfil } from "@/lib/supabase/zuordnung";
 
 /**
  * Profil-Verwaltung einer Organisation (Mehrfachprofile, Phase 2b).
@@ -43,11 +45,16 @@ export async function GET() {
   const { data: profs } = await sb.from("profiles")
     .select("id,name,created_at").eq("org_id", org).order("created_at", { ascending: true });
   const { data: o } = await sb.from("organizations").select("profiles_paid").eq("id", org).single();
+  // §7.1: welche Profile DARF dieser Nutzer waehlen (Zuordnung)? null = keine Einschraenkung.
+  // Die Liste zeigt weiter ALLE Org-Profile (fuer die Verwaltung), markiert aber `nutzbar`.
+  const nutzbar = await nutzbareProfilIds(sb, user.id);
   return NextResponse.json({
     mehrfach: true,
     aktiv,
     limit: (o as { profiles_paid?: number } | null)?.profiles_paid ?? 1,
-    profiles: (profs ?? []).map((p) => ({ id: p.id, name: p.name, active: p.id === aktiv })),
+    profiles: (profs ?? []).map((p) => ({
+      id: p.id, name: p.name, active: p.id === aktiv, nutzbar: darfProfil(nutzbar, p.id),
+    })),
   }, { headers: { "cache-control": "no-store" } });
 }
 
@@ -66,6 +73,25 @@ export async function POST(req: Request) {
     return NextResponse.json(
       { error: kontingent ? "Profil-Kontingent erreicht, weitere Profile sind kostenpflichtig." : error.message },
       { status: kontingent ? 409 : 403 });
+  }
+  // §7.1: den Ersteller dem neuen Profil zuordnen (Admin-Client; keine Client-Schreib-Policy).
+  // ⚠ Hat er noch GAR KEINE Zuordnung (Fallback „alle Org-Profile"), zuerst seinen heutigen
+  // Zugang festschreiben — sonst verloere er mit der ERSTEN Zuordnung den Zugriff auf die
+  // uebrigen Profile. Tolerant: fehlt die Tabelle (vor 0033), bleibt es beim Fallback.
+  if (data?.id) {
+    try {
+      const admin = createAdminClient();
+      const { count } = await admin.from("user_profile_assignments")
+        .select("profile_id", { count: "exact", head: true }).eq("user_id", user.id);
+      if ((count ?? 0) === 0) {
+        const { data: alle } = await admin.from("profiles").select("id").eq("org_id", org);
+        const rows = (alle ?? []).map((p) => ({ user_id: user.id, profile_id: p.id })); // inkl. dem neuen
+        if (rows.length) await admin.from("user_profile_assignments").upsert(rows, { onConflict: "user_id,profile_id" });
+      } else {
+        await admin.from("user_profile_assignments")
+          .upsert({ user_id: user.id, profile_id: data.id }, { onConflict: "user_id,profile_id" });
+      }
+    } catch { /* vor 0033 */ }
   }
   return NextResponse.json({ ok: true, profile: data });
 }

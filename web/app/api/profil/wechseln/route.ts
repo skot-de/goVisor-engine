@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { createClient } from "@/lib/supabase/server";
+import { nutzbareProfilIds, darfProfil } from "@/lib/supabase/zuordnung";
 
 /**
  * Aktives Profil wechseln (Mehrfachprofile, s. docs/mehrfachprofile-konzept.md).
@@ -28,6 +29,13 @@ export async function POST(req: Request) {
   // Gehoert das Profil zu einer Org, die der Nutzer sehen darf? (RLS filtert auf die eigene Org.)
   const { data: p } = await supabase.from("profiles").select("id").eq("id", id).single();
   if (!p) return NextResponse.json({ error: "Profil nicht gefunden" }, { status: 404 });
+
+  // §7.1: nur auf ein ZUGEORDNETES Profil umschalten. Tolerant: ohne Zuordnung (oder vor 0033)
+  // gilt wie bisher „jedes sichtbare Org-Profil".
+  const nutzbar = await nutzbareProfilIds(supabase, user.id);
+  if (!darfProfil(nutzbar, id)) {
+    return NextResponse.json({ error: "Dieses Profil ist dir nicht zugeordnet." }, { status: 403 });
+  }
 
   const { error } = await supabase.from("user_profiles")
     .update({ active_profile_id: id }).eq("id", user.id);
