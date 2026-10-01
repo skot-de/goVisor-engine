@@ -1,30 +1,39 @@
 "use client";
 
 /**
- * Client-Ausloeser fuers Vorgangs-Kontingent (Preismodell v1.9 §4.3). Serverseite:
- * lib/kontingent.ts + /api/kontingent. Ruft der Ausloeser (erstes Oeffnen Unterlagen/
- * Bewertung je Lead, bzw. Einzelaufruf eines Firmenprofils), schaltet das den Vorgang frei.
+ * Client-Seite des Vorgangs-Kontingents (Preismodell v1.9 §4.3). Serverseite:
+ * lib/kontingent.ts + /api/kontingent. Ein Vorgang ist ein aufgeschlossener Lead (erstes
+ * Oeffnen Unterlagen/Bewertung) oder ein einzeln aufgerufenes Firmenprofil.
  *
- * ⚠ Folgenlos, solange die Paywall aus ist: der Server liefert dann Limit null (unbegrenzt)
- * und zaehlt nichts. Erst mit scharfer Paywall + Free-Stufe greift das Limit.
+ * `pruefeVorgang` schaltet den Vorgang frei UND sagt, ob er offen oder (fuer Free ueber dem
+ * Monatslimit) gesperrt ist — darauf baut das Gating (Blur + CTA) auf.
  *
- * Idempotent und doppelklick-fest: je (art, ref) wird pro Seitenaufenthalt nur einmal gerufen
- * (die Route ist ohnehin idempotent — das spart nur den ueberfluessigen Rundlauf).
+ * ⚠ Folgenlos, solange die Paywall aus ist: der Server liefert dann Limit null → immer
+ * `offen`. ⚠ FAIL-OPEN: bei einem Fehler nie sperren (lieber einmal zu viel zeigen, als einen
+ * Zahlenden aussperren). Je (art, ref) wird der Status gecacht — ein aufgeschlossener Vorgang
+ * bleibt offen; ein zweiter Rundlauf entfaellt.
  */
 
-const gesehen = new Set<string>();
+export type VorgangGate = "offen" | "gesperrt";
+const cache = new Map<string, VorgangGate>();
 
-export function vorgangOeffnen(art: "lead" | "firma", ref: string): void {
-  if (!ref) return;
+export async function pruefeVorgang(art: "lead" | "firma", ref: string): Promise<VorgangGate> {
+  if (!ref) return "offen";
   const schluessel = `${art}:${ref}`;
-  if (gesehen.has(schluessel)) return;
-  gesehen.add(schluessel);
-  fetch("/api/kontingent", {
-    method: "POST",
-    headers: { "content-type": "application/json" },
-    body: JSON.stringify({ art, ref }),
-  })
-    .then((r) => (r.ok ? r.json() : null))
-    .then(() => { try { window.dispatchEvent(new Event("kontingent:changed")); } catch { /* SSR */ } })
-    .catch(() => { gesehen.delete(schluessel); });   // beim naechsten Mal erneut versuchen
+  const bekannt = cache.get(schluessel);
+  if (bekannt) return bekannt;
+  try {
+    const r = await fetch("/api/kontingent", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({ art, ref }),
+    });
+    const j = r.ok ? await r.json() : null;
+    const gate: VorgangGate = j?.status === "limit_erreicht" ? "gesperrt" : "offen";
+    cache.set(schluessel, gate);
+    try { window.dispatchEvent(new Event("kontingent:changed")); } catch { /* SSR */ }
+    return gate;
+  } catch {
+    return "offen";   // fail-open
+  }
 }

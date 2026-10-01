@@ -36,7 +36,6 @@ import { Cockpit } from "./Cockpit";
 import { getOrCreateCalendarFeed } from "@/lib/supabase/calendar";
 import { useSprache } from "@/lib/i18n";
 import { profilGeaendert } from "@/lib/useProfil";
-import { vorgangOeffnen } from "@/lib/kontingentClient";
 import { stichtag, besuchMerken } from "@/lib/besuch";
 
 type Profile = ReturnType<typeof buildProfile>;
@@ -1152,9 +1151,8 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
   function setTab(k: string) {
     setActiveTab(k);
     setMode((m) => (m === "browse" ? "read" : m));
-    // Vorgangs-Kontingent (v1.9 §4.3): erstes Oeffnen von Unterlagen ODER Bewertung schliesst
-    // den Lead als Vorgang auf. Idempotent + folgenlos, solange die Paywall aus ist.
-    if ((k === "docs" || k === "analyse") && activeId) vorgangOeffnen("lead", activeId);
+    // Vorgangs-Kontingent (v1.9 §4.3): das Freischalten + Gating beim Oeffnen von Unterlagen/
+    // Bewertung macht DetailPanel (pruefeVorgang) — dort haengt auch der Blur dran.
     // Klick auf „Bewertung" markiert den Lead als analysiert. Das war einmal das Gate der
     // Erfolgspraemie (§4); die ist gestrichen, der Klick bleibt als Fortschrittsspur nuetzlich.
     if (k === "analyse" && !accountLimit) {

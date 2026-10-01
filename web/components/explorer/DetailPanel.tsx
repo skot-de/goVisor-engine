@@ -15,6 +15,8 @@ import { markWonFromLead, loadContracts } from "@/lib/supabase/contracts";
 import { setUserContracts } from "@/lib/explorerCore";
 import { angabenStand } from "@/lib/profileEngine";
 import { sprachName, useSprache } from "@/lib/i18n";
+import { pruefeVorgang } from "@/lib/kontingentClient";
+import { KontingentSperre } from "./KontingentSperre";
 
 type Lead = {
   id: string; src: string; phaseLabel: string; cpvLabel: string; titel: string;
@@ -153,6 +155,19 @@ export function DetailPanel({
   const [copied, setCopied] = useState(false);
   const [wonState, setWonState] = useState<"idle" | "saving" | "done" | "guest">("idle");
 
+  // Vorgangs-Kontingent (v1.9 §4.3): Unterlagen/Bewertung sind der Vorgangs-Ausloeser. Beim
+  // Oeffnen eines dieser Tabs den Lead freischalten und merken, ob er (Free ueber dem Limit)
+  // gesperrt ist → Blur + CTA. Fail-open; folgenlos, solange die Paywall aus ist.
+  const [vorgangGate, setVorgangGate] = useState<"offen" | "gesperrt" | null>(null);
+  useEffect(() => {
+    if (activeId && (activeTab === "docs" || activeTab === "analyse")) {
+      let weg = false;
+      pruefeVorgang("lead", activeId).then((g) => { if (!weg) setVorgangGate(g); });
+      return () => { weg = true; };
+    }
+    setVorgangGate(null);
+  }, [activeId, activeTab]);
+
   // Leerzustand = Tagesbriefing statt Platzhalter: was ist neu, was drängt, was lohnt sich.
   // Alle Zahlen aus der AKTUELL gefilterten Liste gerechnet — keine erfundenen Werte.
   if (!activeId) {
@@ -180,6 +195,9 @@ export function DetailPanel({
   const titelAnzeige = (docLang && fassungen[docLang]?.title) || l.titel;
   const analysed = l.status === "analysiert";
   const isFree = accountLimit;
+  // Vorgangs-Gate nur auf den Ausloeser-Tabs (Unterlagen/Bewertung). Blur + CTA, wenn der
+  // Lead ein neuer Vorgang ueber dem Free-Monatslimit ist.
+  const gesperrt = vorgangGate === "gesperrt" && (activeTab === "docs" || activeTab === "analyse");
 
   // Delegierte Interaktion im Tab-Körper (Anker, Kommentar, Region, Käufer-Demo, …)
   function handleBody(e: React.MouseEvent<HTMLDivElement>) {
@@ -375,7 +393,9 @@ export function DetailPanel({
           ⚠ `preventDefault` auch bei `dragOver`. Ohne das ist die Flaeche kein gueltiges
           Ziel, der Browser oeffnet die Datei in einem neuen Tab und der Nutzer verliert
           seine Sicht — der haeufigste Fehler an Drop-Feldern. */}
-      <div onClick={handleBody}
+      <div className="kgate-host">
+        <div className={gesperrt ? "kgate-blurred" : undefined}
+           onClick={handleBody}
            onDragOver={(e) => {
              const z = (e.target as HTMLElement).closest<HTMLElement>("[data-dropzone]");
              if (!z || !onDropDocs) return;
@@ -393,6 +413,8 @@ export function DetailPanel({
              if (e.dataTransfer?.files?.length) onDropDocs(z.dataset.dropzone!, e.dataTransfer.files, z);
            }}
            dangerouslySetInnerHTML={{ __html: bodyHtml }} />
+        {gesperrt && <KontingentSperre was={activeTab === "docs" ? t("Die Unterlagen") : t("Die Bewertung")} />}
+      </div>
     </>
   );
 }

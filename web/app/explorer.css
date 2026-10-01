@@ -3115,3 +3115,14 @@ td.c-doks{width:84px;text-align:center}
 .kontingent-zahl{font-family:var(--mono);font-weight:600}
 .kontingent-lbl{color:var(--ink-500,#6b7280)}
 .kontingent-voll{border-color:var(--signal,#f59e0b);color:var(--signal-ink,#b45309);background:var(--signal-bg,#fffbeb)}
+
+/* Vorgangs-Sperre (Preismodell v1.9 §4.1 Blur / §4.2 CTA). Mengen-Gate, nicht tier-Redaktion. */
+.kgate-host{position:relative}
+.kgate-blurred{filter:blur(6px);pointer-events:none;user-select:none}
+.kgate-overlay{position:absolute;inset:0;display:grid;justify-items:center;align-items:start;padding:40px 16px;z-index:5}
+.kgate-card{max-width:320px;text-align:center;background:var(--paper,#fff);border:1px solid var(--line,#e5e7eb);border-radius:12px;padding:18px 20px;box-shadow:0 10px 34px rgba(0,0,0,.14);display:flex;flex-direction:column;gap:8px}
+.kgate-card b{font-size:14px}
+.kgate-card p{font-size:12px;color:var(--ink-600,#4b5563);margin:0}
+.kgate-cta{display:inline-block;margin-top:4px;padding:8px 14px;border-radius:8px;background:var(--ink-900,#111827);color:#fff;font-size:12px;font-weight:600;text-decoration:none}
+.kgate-cta:hover{opacity:.9}
+.kgate-hint{font-size:11px;color:var(--ink-500,#6b7280)}

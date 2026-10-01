@@ -1,7 +1,8 @@
 "use client";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { useSprache } from "@/lib/i18n";
-import { vorgangOeffnen } from "@/lib/kontingentClient";
+import { pruefeVorgang } from "@/lib/kontingentClient";
+import { KontingentSperre } from "./KontingentSperre";
 
 /* Feature #25 — Firmenprofil. Rollen-agnostische Firmen-Detailseite, KEIN Navigationspunkt:
  * erreichbar aus der Wettbewerbstabelle, vom Amtsinhaber im Lead und vom Gewinner eines
@@ -50,6 +51,7 @@ export function FirmaProfil() {
   const [q, setQ] = useState("");
   const [matches, setMatches] = useState<Match[]>([]);
   const [watched, setWatched] = useState(false);
+  const [gesperrt, setGesperrt] = useState(false);   // Vorgangs-Gate (v1.9 §4.3)
   const deb = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   // Deep-Link ?id= beim Mount + bei Zurück/Vor
@@ -65,9 +67,11 @@ export function FirmaProfil() {
     if (!id) { setData(null); return; }
     // Vorgangs-Kontingent (v1.9 §4.3): ein EINZELN aufgerufenes Firmenprofil ist ein Vorgang.
     // Ueber einen (bereits aufgeschlossenen) Lead erreichte Profile zaehlen nicht — solche
-    // Verweise tragen `?via=lead`. Idempotent + folgenlos, solange die Paywall aus ist.
+    // Verweise tragen `?via=lead`. Blur + CTA, wenn Free ueber dem Limit. Fail-open.
     try {
-      if (new URLSearchParams(window.location.search).get("via") !== "lead") vorgangOeffnen("firma", id);
+      if (new URLSearchParams(window.location.search).get("via") !== "lead") {
+        pruefeVorgang("firma", id).then((g) => setGesperrt(g === "gesperrt"));
+      } else { setGesperrt(false); }
     } catch { /* SSR */ }
     setLoading(true);
     fetch(`/api/firma?id=${encodeURIComponent(id)}`)
@@ -156,6 +160,8 @@ export function FirmaProfil() {
     <div className="fp-wrap">
       <div className="fp-crumb"><a href="/leads">{t("Akquise")}</a> › {t("Firmenprofil")} › {data.name}</div>
 
+      <div className="kgate-host">
+      <div className={gesperrt ? "kgate-blurred" : undefined}>
       {/* Kopf */}
       <div className="fp-head">
         <div>
@@ -322,6 +328,9 @@ export function FirmaProfil() {
       <div className="fp-note fp-note-n">
         <svg viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="10" rx="2" /><path d={I_LOCK} /></svg>
         <div>{t("Alle Angaben stammen aus öffentlichen Vergabebekanntmachungen. goVisor zeigt keine Daten anderer Nutzer, keine Preise und keine Personen.")}</div>
+      </div>
+      </div>
+      {gesperrt && <KontingentSperre was={t("Dieses Firmenprofil")} />}
       </div>
     </div>
   );
