@@ -239,6 +239,50 @@ echt, macht die Schwelle goVisor nicht einzigartig, sondern **Zweiten**.
 Das ist prüfbar und sollte geprüft werden, bevor diese Prämisse einen ganzen Akquisekanal trägt
 (§9, erster Punkt).
 
+### ⚠ Gemessen: was die §11-Schwelle wirklich durchlässt
+
+Die Prämisse oben ist geprüft, und das Ergebnis dreht die Frage. aufträge.io **benennt** die
+Vertragsende-Prognose auf der Startseite („Wann Verträge enden und neu vergeben werden"), aber:
+kein Verfahren, keine Datengrundlage, kein einziges Beispiel mit einem vorhergesagten Datum,
+auch nicht auf tieferen Seiten der Domain. Belegt werden nur Erfahrungswerte (25 Jahre
+Vergabepraxis, 100 Mio. € gewonnene Aufträge, 3,1 Mio. analysierte Vergaben).
+
+**Die Exklusivität liegt damit nicht im Besitz der Funktion, sondern in ihrer Belegbarkeit.**
+Wir können Zahlen nennen, sie nennen keine. Nur sind unsere Zahlen kleiner als das Ticket
+voraussetzt:
+
+| §11-Tor | trifft zu auf | Bewertung |
+|---|---|---|
+| verifizierter Vorgängervertrag | **4.275 von 90.979 Leads (4,7 %)** | das starke Tor, aber ein schmaler Schwanz |
+| davon mit belegter Amtszeit | 421 | |
+| davon mit Zyklus (Kettentiefe ≥ 2) | **47** | als Alleinstellung zu wenig für einen Kanal |
+| Auftraggeber-Historie n ≥ 6 (CPV-gruppengenau) | **71.053 von 90.979 Leads (78,1 %)** | kein Tor, sondern eine Tür |
+
+Belegqualität der Nachfolge, gemessen: Ø `confidence` **0,76** bei `content_unique` (79.591
+Kanten) und **0,70** bei `llm_adjudicated` (35.675). Das ist mehr, als irgendein Wettbewerber
+über seine Prognose veröffentlicht — und es ist eine Zahl, die man hinschreiben kann.
+
+**Folgerungen für Ticket 17:**
+
+1. Das starke Tor trägt rund **4.300 indexierbare Seiten**. Das ist ein brauchbarer langer
+   Schwanz, aber kein „eine Seite je Ausschreibung".
+2. ⚠ **Das breite Tor ist keine Schwelle.** Nachgerechnet: „Auftraggeber hat n ≥ 6 Zuschläge in
+   der CPV-Gruppe dieser Ausschreibung" lässt **78,1 % aller Leads** durch. Eine Bedingung, die
+   vier von fünf Seiten erfüllen, gatet nicht — sie öffnet. Dazu ist sie inhaltlich genau das,
+   was §11 selbst ausschliesst („Segmentzahlen … zählen nicht"): dass eine Vergabestelle in
+   einer Division schon sechsmal vergeben hat, ist eine Segmentzahl, keine seitenspezifische
+   Erkenntnis.
+
+   ⚠ **Und sie ist herleitbar, anders als zunächst angenommen.** Die Nachbarsitzung hat das Tor
+   entfernt mit der Begründung, die Daten trügen keine CPV-gruppengenaue Zahl — ihr Code prüfte
+   `buyerProfile.total`. Die Zahl ist aber aus `party_entity` (role=buyer) und
+   `notices.cpv_main` berechenbar: 118.419 Paare Käufer × CPV-Division, davon 20.850 mit n ≥ 6.
+   Die Entscheidung bleibt richtig, der Grund war falsch — und das ist wichtig, weil sonst
+   jemand das Tor wieder einbaut, sobald er merkt, dass die Zahl doch zu haben ist.
+3. Die ehrliche Begründung der Schwelle ist nicht „das hat sonst keiner", sondern **„unsere
+   steht mit einer gemessenen Konfidenz da, die anderen nennen keine"**. Diese Begründung hält
+   auch, wenn aufträge.io die Funktion wirklich liefert.
+
 ### Zwei Kleinigkeiten
 
 **§7.2 trägt veraltete Stufennamen.** Dort steht „Pro/Premium: direkt in die Analyse". Seit dem
