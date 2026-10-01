@@ -155,7 +155,12 @@ def test_ein_leeres_fenster_wird_gemeldet(monkeypatch, capsys):
     m = _modul()
     monkeypatch.setattr(m, "api_count_zeitraum", lambda von, bis, cc, attempts=3: 5000)
     monkeypatch.setattr(m, "_silber_zeitraum", lambda land, von, bis: 1000)
-    befunde = m.laufender_monat("DE", "DEU", tage=9, karenz=4, schwelle=0.8)
+    # ⚠ FESTES DATUM MITTEN IM MONAT. Ohne das haengt der Test am Kalender: an den ersten
+    # vier Tagen eines Monats liegt `bis` (heute minus Karenz) vor dem Monatsersten, und
+    # `laufender_monat` kehrt korrekt leer zurueck („Monatsanfang, noch nichts fertig").
+    # Am 2026-10-01 war der Test genau deshalb rot, ohne dass am Code etwas falsch war.
+    befunde = m.laufender_monat("DE", "DEU", tage=9, karenz=4, schwelle=0.8,
+                                heute=dt.date(2026, 9, 20))
     assert len(befunde) == 1 and "20 %" in befunde[0], befunde
 
 
@@ -171,8 +176,8 @@ def test_das_fenster_greift_nie_in_den_vormonat(monkeypatch):
 
     monkeypatch.setattr(m, "api_count_zeitraum", ted)
     monkeypatch.setattr(m, "_silber_zeitraum", lambda land, von, bis: 1000)
-    m.laufender_monat("DE", "DEU", tage=60, karenz=4, schwelle=0.8)
-    heute = dt.date.today()
+    heute = dt.date(2026, 9, 20)             # fest, aus demselben Grund wie oben
+    m.laufender_monat("DE", "DEU", tage=60, karenz=4, schwelle=0.8, heute=heute)
     assert gesehen["von"] >= dt.date(heute.year, heute.month, 1), gesehen
 
 

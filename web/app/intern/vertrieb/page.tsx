@@ -36,7 +36,7 @@ export default function VertriebPage() {
     if (q) p.set("q", q);
     try {
       const r = await fetch(`/api/intern/zielliste?${p}`, { cache: "no-store" });
-      if (r.status === 404) { setFehler("Kein Zugriff — als Admin anmelden (istAdmin)."); return; }
+      if (r.status === 404) { setFehler("Kein Zugriff, als Admin anmelden (istAdmin)."); return; }
       const j = await r.json();
       if (j.error) { setFehler(j.error); return; }
       setZeilen(j.zeilen || []); setMeta({ gesamt: j.gesamt || 0, gefiltert: j.gefiltert || 0, fehlt: j.fehlt, hinweis: j.hinweis });

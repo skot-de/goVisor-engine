@@ -46,7 +46,7 @@ export async function GET(req: Request) {
 
   let raw: string;
   try { raw = fs.readFileSync(CSV, "utf8"); }
-  catch { return NextResponse.json({ zeilen: [], gesamt: 0, fehlt: true, hinweis: "data/zielliste.csv fehlt — scripts/zielliste.py laufen lassen." }); }
+  catch { return NextResponse.json({ zeilen: [], gesamt: 0, fehlt: true, hinweis: "data/zielliste.csv fehlt, scripts/zielliste.py laufen lassen." }); }
 
   const grid = parseCsv(raw).filter((r) => r.some((c) => c !== ""));
   if (!grid.length) return NextResponse.json({ zeilen: [], gesamt: 0 });

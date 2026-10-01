@@ -34,7 +34,7 @@ export default function KuratierungPage() {
   const ladeIndex = useCallback(async () => {
     try {
       const r = await fetch(`/api/intern/kuratierung?country=${land}`, { cache: "no-store" });
-      if (r.status === 404) { setFehler("Kein Zugriff — als Admin anmelden (istAdmin)."); return; }
+      if (r.status === 404) { setFehler("Kein Zugriff, als Admin anmelden (istAdmin)."); return; }
       const j = await r.json();
       setIndex(j.arten); setFehler(null);
     } catch { setFehler("Laden fehlgeschlagen."); }
@@ -126,7 +126,7 @@ export default function KuratierungPage() {
             <p className="cp-klein">{detail.hinweis}</p>
             <p className="cp-klein">Datei: <code>{detail.pfad}</code>{detail.unterData ? " (externe Platte)" : ""}</p>
             {detail.wirkung && <p className="cp-klein">⚠ {detail.wirkung}</p>}
-            {detail.gross && <p className="cp-klein">Grosse Datei — Vorschau der ersten {rows.length} von {detail.count} Zeilen.</p>}
+            {detail.gross && <p className="cp-klein">Grosse Datei, Vorschau der ersten {rows.length} von {detail.count} Zeilen.</p>}
 
             <div className="kur-tabelle">
               <table>

@@ -32,7 +32,7 @@ export default function KostenPage() {
       try {
         const r = await fetch("/api/intern/kosten", { cache: "no-store" });
         if (ab) return;
-        if (r.status === 404) { setFehler("Kein Zugriff — als Admin anmelden (istAdmin)."); return; }
+        if (r.status === 404) { setFehler("Kein Zugriff, als Admin anmelden (istAdmin)."); return; }
         const j = await r.json();
         setLive(j.live); setStand(j.stand); setAus(j.ausgaben); setFehler(null);
       } catch { if (!ab) setFehler("Laden fehlgeschlagen."); }

@@ -1349,12 +1349,22 @@ def test_abfragen_treffen_spalten_die_es_gibt():
         if m and m.group(1) not in {"constraint", "create", "primary"}:
             spalten.add(m.group(1))
     # Spalten, die spätere Migrationen hinzufügen oder entfernen
+    #
+    # ⚠ EIN ALTER-STATEMENT KANN MEHRERE SPALTEN TRAGEN. Hier stand ein Regex, der direkt
+    # hinter `alter table … add column` griff und damit NUR DIE ERSTE fand. Migration 0024
+    # fügt `org_id`, `active_profile_id` und `role` in einem Statement hinzu — die letzten
+    # zwei blieben unsichtbar, und der Test meldete sechs Fehlalarme auf Spalten, die es
+    # sehr wohl gibt. Ein Wächter, der dauerhaft rot steht, wird nicht mehr gelesen; damit
+    # war die Prüfung gegen den teuersten Fehler dieses Projekts praktisch abgeschaltet.
+    # Gelesen wird deshalb das GANZE Statement (bis zum Semikolon), dann alle Spalten darin.
     for datei in sorted((ROOT / "supabase").glob("*.sql")):
         t = datei.read_text(encoding="utf-8")
-        for m in re.finditer(r"alter table public\.user_profiles\s+add column(?: if not exists)?\s+([a-z_]+)", t):
-            spalten.add(m.group(1))
-        for m in re.finditer(r"alter table public\.user_profiles\s+drop column(?: if exists)?\s+([a-z_]+)", t):
-            spalten.discard(m.group(1))
+        for stmt in re.finditer(r"alter table public\.user_profiles\b(.*?);", t, re.S):
+            rumpf = stmt.group(1)
+            for m in re.finditer(r"add column(?: if not exists)?\s+([a-z_]+)", rumpf):
+                spalten.add(m.group(1))
+            for m in re.finditer(r"drop column(?: if exists)?\s+([a-z_]+)", rumpf):
+                spalten.discard(m.group(1))
     assert "plan" in spalten and "profile" in spalten, f"Schema nicht erkannt: {sorted(spalten)}"
 
     treffer = []
@@ -1362,7 +1372,14 @@ def test_abfragen_treffen_spalten_die_es_gibt():
                  if "node_modules" not in p.parts and ".next" not in p.parts]:
         text = pfad.read_text(encoding="utf-8")
         for m in re.finditer(r'from\("user_profiles"\)\s*\.select\("([^"]+)"\)', text):
-            for feld in m.group(1).split(","):
+            # ⚠ EINGEBETTETE SELECTS GEHÖREN EINER ANDEREN TABELLE. PostgREST schreibt sie
+            # als `spalte, fremdtabelle(a,b), spalte` — ein blankes `split(",")` zerlegte
+            # `organizations(tier, abo_status, trial_ends_at)` in die Phantomspalten
+            # `organizations(tier`, `abo_status` und `trial_ends_at)` und meldete sie als
+            # fehlend. Dieser Test prüft BEWUSST nur `user_profiles` (siehe Docstring), also
+            # fallen die Gruppen hier heraus statt falsch zugeordnet zu werden.
+            auswahl = re.sub(r"[a-z_]+\s*\([^)]*\)", "", m.group(1))
+            for feld in auswahl.split(","):
                 feld = feld.strip()
                 if feld in {"*", ""}:
                     continue
@@ -1570,13 +1587,35 @@ def test_kuendigung_sperrt_nicht_sofort():
 
     `plan_until` (Migration 0015) trägt jetzt das Ende des bezahlten Zeitraums. Ohne Datum
     bleibt es beim sofortigen Ende — dann wissen wir nichts Besseres.
+
+    ⚠ DIESER TEST PRUEFTE BIS ZUM 2026-10-01 EINE ZEICHENKETTE (`select("plan,plan_until")`)
+    und wurde rot, als die Quelle von `user_profiles.plan` auf `organizations.tier` wanderte —
+    obwohl das geprueffte VERHALTEN unveraendert blieb. Dieselbe Klasse Fehler, die im Haus
+    unter „Waechter messen Prosa statt Code" steht. Jetzt wird die echte Funktion gefahren.
     """
-    tier = (ROOT / "web" / "lib" / "tier.ts").read_text(encoding="utf-8")
-    assert 'select("plan,plan_until")' in tier, "das Enddatum wird gar nicht gelesen"
-    assert 'data?.plan === "cancelled" && data.plan_until' in tier, \
-        "gekündigte Konten verlieren den Zugang wieder sofort"
+    import shutil
+    import subprocess
+
     sql = (ROOT / "supabase" / "0015_abo_laufzeit.sql").read_text(encoding="utf-8")
     assert "add column if not exists plan_until" in sql
+    if not shutil.which("node"):
+        return
+    # Gekuendigt, Zeitraum laeuft noch → Zugang bleibt. Gekuendigt und vorbei → zu.
+    skript = """
+import { stufeZuTier } from "./web/lib/stufeZuTier.js";
+const jetzt = Date.parse("2026-10-01T12:00:00Z");
+const noch = stufeZuTier({ tier: "analyse", abo_status: "gekuendigt",
+                           plan_until: "2026-11-01T00:00:00Z" }, jetzt);
+const vorbei = stufeZuTier({ tier: "analyse", abo_status: "gekuendigt",
+                             plan_until: "2026-09-01T00:00:00Z" }, jetzt);
+const ohne = stufeZuTier({ tier: "analyse", abo_status: "gekuendigt" }, jetzt);
+console.log([noch, vorbei, ohne].join(","));
+"""
+    r = subprocess.run(["node", "--input-type=module", "-e", skript],
+                       capture_output=True, text=True, cwd=ROOT)
+    assert r.returncode == 0, r.stderr[-400:]
+    assert r.stdout.strip() == "pro,free,free", (
+        "gekuendigte Konten verlieren den Zugang zum falschen Zeitpunkt: " + r.stdout.strip())
 
 
 def test_startseite_sagt_wo_der_hinweis_ankommt():

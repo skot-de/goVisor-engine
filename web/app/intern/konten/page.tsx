@@ -37,7 +37,7 @@ export default function KontenPage() {
           fetch("/api/intern/claims", { cache: "no-store" }),
         ]);
         if (ab) return;
-        if (rk.status === 404) { setFehler("Kein Zugriff — als Admin anmelden (istAdmin)."); return; }
+        if (rk.status === 404) { setFehler("Kein Zugriff, als Admin anmelden (istAdmin)."); return; }
         setOrgs((await rk.json()).orgs ?? []);
         setClaims(rc.ok ? ((await rc.json()).claims ?? []) : []);
         setFehler(null);
@@ -101,7 +101,7 @@ export default function KontenPage() {
           <input type="email" value={reset} onChange={(e) => setReset(e.target.value)} placeholder="E-Mail des Nutzers" />
           <button className="pv-btn" onClick={passwortReset} disabled={!reset.trim()}>Reset-Mail senden</button>
         </div>
-        <p className="cp-klein">Es wird nur die Reset-Mail ausgelöst — nie ein Passwort gesetzt.</p>
+        <p className="cp-klein">Es wird nur die Reset-Mail ausgelöst, nie ein Passwort gesetzt.</p>
       </section>
 
       {/* Identitäts-Ansprüche */}

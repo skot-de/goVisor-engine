@@ -100,13 +100,13 @@ const REGISTRY: Art[] = [
     datei: () => `vergabestellen_kuratierung_worklist.csv`,
     spalten: ["notices", "fragmente", "beispiel_varianten"],
     pflicht: [], editierbar: false,
-    hinweis: "Kuratierungs-Aufgaben (Namensfragmente je Vergabestelle). Nur Ansicht — abgeleitet.",
+    hinweis: "Kuratierungs-Aufgaben (Namensfragmente je Vergabestelle). Nur Ansicht, abgeleitet.",
   },
   {
     id: "company_groups", label: "Firmengruppen (Vorschau)", ort: "data", perLand: true,
     datei: (l) => `${l}_company_groups.csv`,
     spalten: [], pflicht: [], editierbar: false, gross: true,
-    hinweis: "Auto-geseedet, gross. Nur Kopf-Vorschau — nicht von Hand editieren.",
+    hinweis: "Auto-geseedet, gross. Nur Kopf-Vorschau, nicht von Hand editieren.",
   },
 ];
 
@@ -254,7 +254,7 @@ export async function POST(req: Request) {
     const r = spawnSync("bash", ["scripts/laeuft_was.sh"], { cwd: ROOT, timeout: 20_000 });
     if (r.status !== 0) {
       return NextResponse.json(
-        { error: "Ein Lauf schreibt gerade nach data/ — Kuratierung jetzt gesperrt (fail-closed). Spaeter erneut." },
+        { error: "Ein Lauf schreibt gerade nach data/, Kuratierung jetzt gesperrt (fail-closed). Spaeter erneut." },
         { status: 409 },
       );
     }

@@ -49,7 +49,7 @@ export default function QualitaetPage() {
       try {
         const r = await fetch(`/api/intern/qualitaet?country=${land}`, { cache: "no-store" });
         if (ab) return;
-        if (r.status === 404) { setFehler("Kein Zugriff — als Admin anmelden (istAdmin)."); return; }
+        if (r.status === 404) { setFehler("Kein Zugriff, als Admin anmelden (istAdmin)."); return; }
         setD(await r.json()); setFehler(null);
       } catch { if (!ab) setFehler("Laden fehlgeschlagen."); }
       finally { if (!ab) setLadet(false); }
@@ -150,7 +150,7 @@ export default function QualitaetPage() {
           <p className="cp-klein">
             {mergeMeta.entschieden_n} von {nf(mergeMeta.gesamt)} entschieden · unklare zuerst.
             „gleich" verschmilzt (schlägt die LLM-Richter), „verschieden" trennt bewusst.
-            Wirkt beim nächsten <code>entity_merge_anwenden</code>-Lauf + Gold-Rebuild — Gold wird hier nicht angefasst.
+            Wirkt beim nächsten <code>entity_merge_anwenden</code>-Lauf + Gold-Rebuild, Gold wird hier nicht angefasst.
           </p>
           <div className="kur-tabelle">
             <table>

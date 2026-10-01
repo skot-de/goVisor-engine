@@ -54,7 +54,7 @@ export default function BetriebCockpit() {
           fetch("/api/intern/betrieb", { cache: "no-store" }),
         ]);
         if (ab) return;
-        if (rl.status === 404 || rb.status === 404) { setFehler("Kein Zugriff — als Admin anmelden (istAdmin)."); return; }
+        if (rl.status === 404 || rb.status === 404) { setFehler("Kein Zugriff, als Admin anmelden (istAdmin)."); return; }
         setL(await rl.json()); setB(await rb.json()); setFehler(null);
       } catch { if (!ab) setFehler("Laden fehlgeschlagen."); }
     })();

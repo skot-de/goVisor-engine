@@ -56,7 +56,7 @@ export async function POST(req: Request) {
   if (!user) return NextResponse.json({ error: "Anmeldung erforderlich" }, { status: 401 });
   let body: { name?: string };
   try { body = await req.json(); } catch { return NextResponse.json({ error: "ungültig" }, { status: 400 }); }
-  if (!nameOk(body.name)) return NextResponse.json({ error: "Name fehlt (1–80 Zeichen)" }, { status: 400 });
+  if (!nameOk(body.name)) return NextResponse.json({ error: "Name fehlt (1 bis 80 Zeichen)" }, { status: 400 });
   const { org } = await kontext(sb, user.id);
   if (!org) return NextResponse.json({ error: "keine Organisation" }, { status: 400 });
   const { data, error } = await sb.from("profiles")
@@ -64,7 +64,7 @@ export async function POST(req: Request) {
   if (error) {
     const kontingent = error.code === "23514" || /Kontingent/i.test(error.message);
     return NextResponse.json(
-      { error: kontingent ? "Profil-Kontingent erreicht — weitere Profile sind kostenpflichtig." : error.message },
+      { error: kontingent ? "Profil-Kontingent erreicht, weitere Profile sind kostenpflichtig." : error.message },
       { status: kontingent ? 409 : 403 });
   }
   return NextResponse.json({ ok: true, profile: data });
@@ -90,7 +90,7 @@ export async function DELETE(req: Request) {
   if (!UUID.test(id)) return NextResponse.json({ error: "id ungültig" }, { status: 400 });
   const { org, aktiv } = await kontext(sb, user.id);
   if (!org) return NextResponse.json({ error: "keine Organisation" }, { status: 400 });
-  if (id === aktiv) return NextResponse.json({ error: "Das aktive Profil lässt sich nicht löschen — erst umschalten." }, { status: 409 });
+  if (id === aktiv) return NextResponse.json({ error: "Das aktive Profil lässt sich nicht löschen, erst umschalten." }, { status: 409 });
   const { count } = await sb.from("profiles").select("id", { count: "exact", head: true }).eq("org_id", org);
   if ((count ?? 0) <= 1) return NextResponse.json({ error: "Das letzte Profil lässt sich nicht löschen." }, { status: 409 });
   const { error } = await sb.from("profiles").delete().eq("id", id);

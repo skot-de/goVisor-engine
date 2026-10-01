@@ -109,7 +109,7 @@ export default function ProfilVerwaltung({ melde }: { melde: (m: string) => void
       </div>
       {voll && (
         <p className="set-hint">
-          {t("Kontingent erreicht — weitere Profile sind kostenpflichtig.")}{" "}
+          {t("Kontingent erreicht, weitere Profile sind kostenpflichtig.")}{" "}
           <button className="pv-btn" onClick={kaufen}>{t("Profil dazukaufen")}</button>
         </p>
       )}

@@ -63,12 +63,13 @@ das und bricht **nicht** ab: lokal bleibt die Platte die Quelle.
 2. **Sieben Nutzer-Routen rufen Python zur Laufzeit.** Hier stand `/firma` als der eine
    Fall — ausgerechnet der, der inzwischen gelöst ist: die Route liest zuerst die
    vorberechnete Datei und startet in Produktion **nie** Python, sondern antwortet mit
-   einer verwertbaren Meldung. Nachgezählt am 2026-08-31 rufen **elf** Routen
-   `child_process`, und nur vier haben diesen Riegel:
+   einer verwertbaren Meldung. Nachgezählt am 2026-10-01 rufen **vierzehn** Routen
+   `child_process`, und sieben haben diesen Riegel:
 
    | Route | Riegel in Produktion |
    |---|---|
    | `/api/firma`, `/api/intern/{firmen,landing,outreach}` | ja |
+   | `/api/intern/{kosten,kuratierung,qualitaet}` | ja (`INTERN_ENABLED`) |
    | `/api/lead/dokumente`, `/api/lead/datei` | **nein** |
    | `/api/unternehmen/{vorbefuellung,bilanz}` | **nein** |
    | `/api/lead-docs`, `/api/draft-check`, `/api/blocks-import` | **nein** |
@@ -78,11 +79,16 @@ das und bricht **nicht** ab: lokal bleibt die Platte die Quelle.
    als Kommentar. Die Grundform oben („die Anwendung kennt die Datenfabrik nicht") gilt
    für die Datenrouten; für diese sieben gilt sie nicht.
 
+     ⚠ Die drei `intern/*`-Routen (Kosten, Kuratierung, Qualität) kamen mit den internen
+     Werkzeugen dazu und tragen alle den Riegel `NODE_ENV === "production" &&
+     INTERN_ENABLED !== "1"` → 404. Sie vergrössern die Gesamtzahl, nicht das Problem:
+     die Zahl der Routen OHNE Riegel steht unverändert bei sieben.
+
    Zwei Wege, beide gangbar: entweder vorberechnen wie `/firma` es vormacht, oder ein
    Host mit Python (dann ist es kein Hindernis, sondern eine Anforderung an die
    Host-Entscheidung). Was nicht geht: es beim Umzug übersehen.
 
-   `tests/test_serverless.py` zählt mit und wird rot, wenn eine zwölfte dazukommt.
+   `tests/test_serverless.py` zählt mit und wird rot, wenn eine fünfzehnte dazukommt.
 3. ~~**`/api/leads` hat kein Auth-Gate.**~~ **Erledigt.** Nachgeprüft am 2026-08-31 gegen
    den laufenden Server: `/api/leads`, `/api/branchen` und `/api/lead-detail` antworten
    ohne Sitzung mit `401`. Die Middleware sperrt alles ausser der `OFFEN`-Liste; die

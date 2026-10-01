@@ -86,13 +86,37 @@ def main(argv=None) -> int:
                   "-H", f"Authorization: Bearer {jeton}",
                   "-H", "Content-Type: application/json"]
 
+    # ⚠ DER BLOB LIEGT SEIT MIGRATION 0025 IM AKTIVEN PROFIL, NICHT MEHR IN user_profiles.
+    #
+    # Gemessen am 2026-10-01: die Sonde meldete 12 von 12 Runden „verloren" — und zwar BEIDE
+    # Felder, nicht eins gegen das andere. Das ist kein Wettlauf, sondern ein Schreibvorgang,
+    # der dort landet, wo niemand liest. `merge_profile` schreibt seit 0025 nach
+    # `profiles.profile`, sobald `active_profile_id` gesetzt ist (bei 13 von 13 Nutzern ist
+    # sie es); die Sonde las weiter `user_profiles.profile`.
+    #
+    # ⚠ DAS WAR EIN FEHLALARM, ABER DER TEUERSTE DENKBARE: er behauptete Datenverlust in
+    # einem Weg, der am 2026-09-17 wirklich einmal Daten verloren hat. Der Produktionscode
+    # liest richtig (`web/lib/supabase/auth.ts:163` holt `profiles.profile`, wenn ein aktives
+    # Profil gesetzt ist) — nur die Pruefung war stehen geblieben.
+    #
+    # Die Sonde folgt deshalb derselben Weiche wie auth.ts: aktives Profil, sonst Rueckfall.
+    aktiv = None
+    try:
+        d = json.loads(_curl([*kopf,
+            f"{url}/rest/v1/user_profiles?id=eq.{uid}&select=active_profile_id"]))
+        aktiv = (d[0].get("active_profile_id") if d else None) or None
+    except Exception:                                      # noqa: BLE001
+        aktiv = None                                       # tolerant gegen den Stand vor 0024
+
+    ziel = (f"profiles?id=eq.{aktiv}" if aktiv else f"user_profiles?id=eq.{uid}")
+
     def blob() -> dict:
-        d = json.loads(_curl([*kopf, f"{url}/rest/v1/user_profiles?id=eq.{uid}&select=profile"]))
+        d = json.loads(_curl([*kopf, f"{url}/rest/v1/{ziel}&select=profile"]))
         return (d[0].get("profile") or {}) if d else {}
 
     def setze(p: dict) -> None:
         _curl(["-X", "PATCH", *kopf, "-d", json.dumps({"profile": p}),
-               f"{url}/rest/v1/user_profiles?id=eq.{uid}"])
+               f"{url}/rest/v1/{ziel}"])
 
     def neu(feld: str, wert) -> None:
         """Ein Schreiber. `--alt` stellt den Zyklus nach, den dieser Commit abgeschafft hat."""

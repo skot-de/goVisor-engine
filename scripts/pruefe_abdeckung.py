@@ -110,9 +110,16 @@ def _silber_zeitraum(land: str, von: dt.date, bis: dt.date) -> int | None:
 
 
 def laufender_monat(land: str, cc: str, tage: int, karenz: int,
-                    schwelle: float) -> list[str]:
-    """Der laufende Monat, tageweise. Gibt die Befunde zurueck (leer = sauber)."""
-    heute = dt.date.today()
+                    schwelle: float, heute: dt.date | None = None) -> list[str]:
+    """Der laufende Monat, tageweise. Gibt die Befunde zurueck (leer = sauber).
+
+    ⚠ `heute` ist nur fuer Tests da und aendert im Betrieb nichts (None = heute). Ohne diesen
+    Einspritzpunkt haengen die Tests am Kalender: an den ersten vier Tagen eines Monats liegt
+    `bis` (heute minus Karenz) VOR dem Monatsersten, die Funktion kehrt unten korrekt leer
+    zurueck — und zwei Tests, die einen Befund erwarten, werden rot, ohne dass am Code etwas
+    falsch ist. Gemessen am 2026-10-01: genau das passierte.
+    """
+    heute = heute or dt.date.today()
     bis = heute - dt.timedelta(days=karenz)
     von = max(bis - dt.timedelta(days=tage - 1), dt.date(heute.year, heute.month, 1))
     if von > bis:

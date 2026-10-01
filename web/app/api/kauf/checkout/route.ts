@@ -30,7 +30,7 @@ export async function POST(req: Request) {
   if (!art || !(menge > 0 && menge <= 100)) return NextResponse.json({ error: "art/menge ungültig" }, { status: 400 });
 
   if (!preisOk(art)) {
-    return NextResponse.json({ error: "Preis noch nicht gesetzt — das Kostenmodell ist offen." }, { status: 503 });
+    return NextResponse.json({ error: "Preis noch nicht gesetzt, das Kostenmodell ist offen." }, { status: 503 });
   }
   if (!stripeEnabled) {
     return NextResponse.json({ error: "Zahlung noch nicht konfiguriert (Stripe).", stub: true }, { status: 503 });

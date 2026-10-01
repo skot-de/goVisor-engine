@@ -68,7 +68,7 @@ export async function POST(req: Request) {
     const voll = error.code === "23514" || /Kontingent|Seat/i.test(error.message);
     const doppelt = error.code === "23505";
     return NextResponse.json(
-      { error: voll ? "Seat-Kontingent erreicht — weitere Sitze sind kostenpflichtig."
+      { error: voll ? "Seat-Kontingent erreicht, weitere Sitze sind kostenpflichtig."
                     : doppelt ? "Für diese Adresse ist bereits eine Einladung offen." : error.message },
       { status: voll ? 409 : doppelt ? 409 : 400 });
   }
