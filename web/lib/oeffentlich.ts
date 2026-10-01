@@ -86,11 +86,19 @@ function zustandAus(lead: LeadRoh): "offen" | "wertung" | "zuschlag" | "unbekann
  *   - Zyklushistorie (`kette`, Vorgänger/Nachfolger verknüpft).
  * Segment- und Anbieterzahlen zählen NICHT (die stehen auf vielen Seiten gleich).
  */
-function exklusivSchicht(
-  lead: LeadRoh,
-  detail: DetailRoh | null,
-): "predecessor" | "buyer_history" | "cycle" | null {
-  if (Array.isArray(lead.ersetzt) && lead.ersetzt.length > 0) return "predecessor";
+function exklusivSchicht(lead: LeadRoh): "predecessor" | "buyer_history" | "cycle" | null {
+  // §11 Tor 1 — verifizierter Vorgaenger. Traeger ist `incumbent` mit src === "echt" (conf
+  // ~0,9), seitenspezifisch.
+  // ⚠ NICHT `lead.ersetzt`: das ist Dubletten-Buchhaltung (eingeschmolzene alte Kennungen,
+  //   damit alte Suchnummern weiter treffen), KEIN Vorgaengervertrag. Es als predecessor zu
+  //   fuehren waere eine falsche Tatsachenbehauptung auf einer oeffentlichen Seite (§1
+  //   Markenschaden). Peer-Messung 2026-10-01: ersetzt = 184 Dubletten vs. incumbent echt =
+  //   20.694 echte Vorgaenger.
+  // ⚠ src === "unsicher" (10.118) zaehlt NICHT: der Amtsinhaber ist dort nur aus dem letzten
+  //   vergleichbaren Zuschlag desselben Kaeufers geschaetzt (conf ~0,6) -> §6.3 „bei Zweifel
+  //   weglassen". Nur "echt" ist seitenspezifisch belegt.
+  if (lead.incumbent?.src === "echt") return "predecessor";
+  // §11 Tor 2 — verifizierter Zyklus (Vorgaenger/Nachfolger verknuepft).
   if (Array.isArray(lead.kette) ? lead.kette.length > 0 : !!lead.kette) return "cycle";
   // §11 nennt als dritte Exklusivschicht „Auftraggeber-Historie mit n>=6 in der CPV-GRUPPE
   // dieser Ausschreibung". Dieses Tor zaehlt hier NICHT zur Indexierbarkeit — aus einem Grund,
@@ -143,7 +151,8 @@ type LeadRoh = {
   lose?: Array<{ nr?: number; titel?: string; cpv?: string; region?: string; wert?: string }>;
   unterlagen?: { url?: string; access?: string; source?: string };
   wechsel?: string | null;
-  ersetzt?: string[] | null;
+  incumbent?: { src?: string; conf?: number; name?: string } | null;
+  ersetzt?: string[] | null; // ⚠ Dubletten-Buchhaltung (eingeschmolzene Kennungen), KEIN Vorgaenger
   kette?: unknown;
   zuschlag?: unknown[];
   zuschlagNamen?: string[] | null;
@@ -287,7 +296,7 @@ export function zuOeffentlich(lead: LeadRoh, detail: DetailRoh | null, branche: 
     hatVerdraengung: lead.wechsel != null && lead.wechsel !== "na",
     zustand: zustandAus(lead),
     gewinner,
-    exklusivSchicht: exklusivSchicht(lead, detail),
+    exklusivSchicht: exklusivSchicht(lead),
     indexierbar: false, // wird in ladeOeffentlich gesetzt (hängt an Schalter + Exklusivschicht)
     quelle: quelleAus(lead),
   };
