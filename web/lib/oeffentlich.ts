@@ -396,6 +396,37 @@ export async function ladeOeffentlich(slug: string): Promise<OeffentlicheSeite |
   return seite;
 }
 
+/**
+ * Slugs aller indexierbaren Seiten (§11) für die Sitemap — billig aus `leads-fristen.json`,
+ * ohne die Branchendateien zu laden. Enumeriert nur, was auch die Seite selbst auf `index`
+ * setzt: seitenspezifische Exklusivschicht (Vorgänger/Zyklus).
+ *
+ * ⚠ Hängt am Export-Feld `exklusivSchicht` in leads-fristen.json (der Peer baut es). TOLERANT:
+ *   solange das Feld fehlt ODER der Schalter aus ist, kommt eine leere Liste zurück — lieber
+ *   leer als falsch (eine Sitemap, die auf noindex-Seiten zeigt, schadet der Domain).
+ *
+ * ⚠ Der Slug wird hier mit derselben `vollSlug()` gebaut wie in der Route — EINE Normalisierung,
+ *   damit Sitemap-URL und Seiten-URL nie auseinanderlaufen (kein Python-Slug im Export).
+ */
+export async function indexierbareSlugs(): Promise<string[]> {
+  if (!OEFFENTLICHE_SEITEN_AN) return [];
+  const roh = await loadDataFile("leads-fristen.json");
+  if (!roh) return [];
+  try {
+    const arr = JSON.parse(roh) as Array<{ id?: string; titel?: string; exklusivSchicht?: string | null; x?: string | null }>;
+    if (!Array.isArray(arr)) return [];
+    const out: string[] = [];
+    for (const l of arr) {
+      const x = l.exklusivSchicht ?? l.x ?? null; // Feldname noch offen, beide lesen
+      if (!l.id || !l.titel || !x) continue;      // nur §11-indexierbare
+      out.push(vollSlug({ id: l.id, titel: l.titel }));
+    }
+    return out;
+  } catch {
+    return [];
+  }
+}
+
 /** Nur für Tests/Export: den Modul-Cache leeren. */
 export function _resetIndexCache(): void {
   brancheCache = null;
