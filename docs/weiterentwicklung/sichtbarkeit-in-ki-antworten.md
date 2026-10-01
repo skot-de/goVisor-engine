@@ -203,7 +203,57 @@ Patternos 10 %.
 
 ---
 
-## 8. Offene Prüfungen
+## 8. Abgleich mit Ticket 17 (Ausschreibungs-Landingpages)
+
+Gelesen am 2026-10-01: `INPUT/govisor-ticket-17-ausschreibungs-landingpages_v1.3`. Das Ticket
+ist in der Ausführung strenger als dieser Bauplan und kommt **unabhängig zum selben Kernschluss**.
+
+**Was sich deckt, und das ist die starke Nachricht.** §11 macht die Exklusivschicht zur
+**Bedingung für Indexierung**: verifizierter Vorgängervertrag, oder Auftraggeber-Historie mit
+n ≥ 6 in der CPV-Gruppe, oder Zyklushistorie. Ausdrücklich zählen *Segmentzahlen, Anbieterzahlen
+je Region und allgemeine Texte nicht*. Genau das ist der Befund aus §5 dieses Dokuments: die
+Datenfrage ist die einzige Achse, auf der goVisor nicht verliert. Und §5 des Tickets nennt als
+dritte Suchintention „Bisheriger Auftragnehmer → *Wird mein Vertrag neu vergeben?*" — die Frage,
+die heute messbar **niemand mit Daten beantwortet**.
+
+Zwei Wege, ein Ergebnis. Das ist Bestätigung, nicht Doppelarbeit.
+
+### ⚠ Eine echte Lücke: das Ticket gewinnt den langen Schwanz, nicht die Kategoriefrage
+
+Alle vier Suchintentionen in §5 des Tickets sind **vorgangsbezogen** — Vergabenummer, Titel,
+Leistung plus Stadt, eigener Vertragstitel. Keine davon ist „Tool um Ausschreibungen zu finden",
+und genau dort sitzt die Kaufabsicht und teilen sich heute acht Anbieter-Vergleichsblogs den
+Verkehr (§4).
+
+Eine Seite je Ausschreibung kann diese Frage nicht einfangen. Dafür braucht es den **zweiten
+Seitentyp**, den die Wettbewerber längst bauen: eine Seite je Portal und eine je Wettbewerber.
+Ticket 17 und dieser Bauplan sind damit nicht Alternativen, sondern zwei Hälften.
+
+### ⚠ Eine Prämisse, die geprüft werden muss statt angenommen
+
+§1 des Tickets: die Seite „weiß **mehr als jede andere Quelle**". Gegen TED und die Portale
+stimmt das. Gegen **aufträge.io** ist es eine offene Frage: sie bewerben Incumbent-Tracking UND
+Vertragsende-Prognose, also genau das, was §11 als Exklusivschicht definiert. Ist ihre Prognose
+echt, macht die Schwelle goVisor nicht einzigartig, sondern **Zweiten**.
+
+Das ist prüfbar und sollte geprüft werden, bevor diese Prämisse einen ganzen Akquisekanal trägt
+(§9, erster Punkt).
+
+### Zwei Kleinigkeiten
+
+**§7.2 trägt veraltete Stufennamen.** Dort steht „Pro/Premium: direkt in die Analyse". Seit dem
+2026-10-01 heißen die bezahlten Stufen **Analyse** und **Strategie** (Commit 5cb7f36). Inhaltlich
+stimmt es weiter, weil beide unbegrenzt sind (`darfAnalyse`), aber die Worte stammen von vor der
+Trennung. Die Free-Regel (3 Analysen je 30 Tage) deckt sich mit `web/lib/kontingent.ts`.
+
+**§11 setzt Crawler und tägliche Neubauten voraus.** Solange `govisor.eu` 404 liefert und die
+Coming-Soon-Sperre `noindex` setzt (§1), kann weder Search Console noch IndexNow beginnen. Das
+Ticket behandelt Deploy und Vorhang-Ausnahme zu Recht als eigene Entscheidung — es ist aber die
+Abhängigkeit, an der alles andere hängt.
+
+---
+
+## 9. Offene Prüfungen
 
 Zahlen, die eine Gegenprobe verdienen, bevor sie in einen eigenen Vergleich gehen:
 
