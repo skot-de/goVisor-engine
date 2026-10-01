@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { ladeMitGrund, DATEN_STOERUNG } from "@/lib/dataSource";
 import { STOERUNG_ANTWORT } from "@/lib/ladegrund.js";
 import { getTier } from "@/lib/tier";
+import { darfAnalyse } from "@/lib/stufeZuTier";
 import { redactMarkt } from "@/lib/redact";
 
 // Marktblöcke je Grundraum (Chancen-Tab). Für Free werden die Premium-Werte (Bieterzahlen,
@@ -15,7 +16,8 @@ export async function GET() {
   if (grund === DATEN_STOERUNG) return NextResponse.json(STOERUNG_ANTWORT, { status: 503 });
   if (!raw) return NextResponse.json({});
   const tier = await getTier();
-  if (tier === "pro") return new NextResponse(raw, { headers: HEADERS }); // kein Parse-Overhead
+  // §3.2: der Markt-Tab liegt auf Analyse, also darf jede bezahlte Stufe durch.
+  if (darfAnalyse(tier)) return new NextResponse(raw, { headers: HEADERS }); // kein Parse-Overhead
   try {
     return NextResponse.json(redactMarkt(JSON.parse(raw), tier));
   } catch {

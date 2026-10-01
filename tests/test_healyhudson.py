@@ -1609,13 +1609,19 @@ const noch = stufeZuTier({ tier: "analyse", abo_status: "gekuendigt",
 const vorbei = stufeZuTier({ tier: "analyse", abo_status: "gekuendigt",
                              plan_until: "2026-09-01T00:00:00Z" }, jetzt);
 const ohne = stufeZuTier({ tier: "analyse", abo_status: "gekuendigt" }, jetzt);
-console.log([noch, vorbei, ohne].join(","));
+// ⚠ Seit die zwei bezahlten Stufen getrennt sind (2026-10-01), ist auch pruefbar, dass die
+// Kuendigung die STUFE nicht veraendert: ein gekuendigtes Strategie-Konto faellt nicht auf
+// Analyse, sondern behaelt bis plan_until, wofuer es bezahlt hat.
+const stratNoch = stufeZuTier({ tier: "strategie", abo_status: "gekuendigt",
+                                plan_until: "2026-11-01T00:00:00Z" }, jetzt);
+console.log([noch, vorbei, ohne, stratNoch].join(","));
 """
     r = subprocess.run(["node", "--input-type=module", "-e", skript],
                        capture_output=True, text=True, cwd=ROOT)
     assert r.returncode == 0, r.stderr[-400:]
-    assert r.stdout.strip() == "pro,free,free", (
-        "gekuendigte Konten verlieren den Zugang zum falschen Zeitpunkt: " + r.stdout.strip())
+    assert r.stdout.strip() == "analyse,free,free,strategie", (
+        "gekuendigte Konten verlieren den Zugang zum falschen Zeitpunkt oder die falsche "
+        "Stufe: " + r.stdout.strip())
 
 
 def test_startseite_sagt_wo_der_hinweis_ankommt():

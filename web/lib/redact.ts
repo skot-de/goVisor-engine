@@ -1,10 +1,27 @@
 import "server-only";
 import type { Tier } from "@/lib/tier";
+import { darfAnalyse, darfStrategie } from "@/lib/stufeZuTier";
 
 /* Premium-Redaktion: für Free-Nutzer werden die echten Analytik-Werte server-seitig durch
  * Platzhalter ersetzt, BEVOR sie den Server verlassen. Der Client blurrt weiterhin (Tease-Optik
  * bleibt), aber per DevTools ist nur der Platzhalter lesbar — kein echter Pro-Wert mehr im DOM.
- * Gibt jeweils eine redigierte KOPIE zurück (mutiert den Route-Cache nicht). Pro → unverändert. */
+ * Gibt jeweils eine redigierte KOPIE zurück (mutiert den Route-Cache nicht).
+ *
+ * ── ZWEI SCHWELLEN, NICHT EINE (2026-10-01, Preismodell v1.9 §3) ───────────────────────────
+ *
+ * ⚠ HIER STAND VIERMAL `if (tier === "pro") return …`. Eine Schwelle fuer zwei bezahlte
+ * Stufen heisst: wer Analyse fuer 99 € kauft, bekommt Strategie fuer 349 € mit. Welche
+ * Funktion auf welcher Stufe liegt, steht in §3 und NICHT in diesem Kopf — nachgelesen, nicht
+ * geraten:
+ *
+ *   redactDetail   §3.2  Lead-Detail „Markt"/„Vergabestelle"      → +   `darfAnalyse`
+ *   redactMarkt    §3.2  Lead-Detail „Markt"                       → +   `darfAnalyse`
+ *   redactFirma    §3.5  Firmenprofil-Tab „Angriffspunkte"         → ++  `darfStrategie`
+ *   redactStrategie §3.6 ganzer Strategie-Bereich, „keine Ausnahme" → ++  `darfStrategie`
+ *
+ * ⚠ Gefragt wird ueber `darfAnalyse()`/`darfStrategie()`, nicht per Gleichheitsvergleich.
+ * Sonst steht die Schwelle wieder an vier Stellen und die naechste Stufe wird an drei davon
+ * vergessen — genau so ist dieser Befund entstanden. */
 
 const RED = 0; // Zahl-Platzhalter (wird beim Free-Blur ohnehin verwischt)
 
@@ -13,7 +30,7 @@ type Any = any;
 
 /** Premium-Analytik eines einzelnen Lead-Details (marktSegment, buyerProfile-Mix) redigieren. */
 export function redactDetail(one: Any, tier: Tier): Any {
-  if (tier === "pro" || !one) return one;
+  if (darfAnalyse(tier) || !one) return one;
   const d = structuredClone(one);
   const ms = d.marktSegment;
   if (ms) {
@@ -30,7 +47,7 @@ export function redactDetail(one: Any, tier: Tier): Any {
  * für Free-Nutzer nicht — sie ist in der UI Pro-badge-gated, und CSS-Blur allein ist DevTools-lesbar.
  * „Kopf an Kopf" ist ohne eigenes Profil ohnehin leer, KPIs/Wo-festsitzt bleiben frei. */
 export function redactFirma(p: Any, tier: Tier): Any {
-  if (tier === "pro" || !p || p.error) return p;
+  if (darfStrategie(tier) || !p || p.error) return p;
   const d = structuredClone(p);
   d.expiring = [];              // Pro: auslaufende Verträge der Firma
   return d;
@@ -46,7 +63,7 @@ export function redactFirma(p: Any, tier: Tier): Any {
  *  - Profil/Pipeline/Stellen/Nachbarn/Einstieg: unverändert frei.
  */
 export function redactStrategie(map: Any, tier: Tier): Any {
-  if (tier === "pro" || !map) return map;
+  if (darfStrategie(tier) || !map) return map;
   const out = structuredClone(map);
   for (const br of Object.keys(out)) {
     const s = out[br];
@@ -72,7 +89,7 @@ export function redactStrategie(map: Any, tier: Tier): Any {
 
 /** Marktblöcke (Chancen-Tab) redigieren — Bieterzahlen + Vergabestellen-Aufschlüsselungen raus. */
 export function redactMarkt(m: Any, tier: Tier): Any {
-  if (tier === "pro" || !m) return m;
+  if (darfAnalyse(tier) || !m) return m;
   const out = structuredClone(m);
   for (const b of Object.keys(out)) {
     const seg = out[b];

@@ -2,7 +2,7 @@ import "server-only";
 import { createClient } from "@/lib/supabase/server";
 import { stufeZuTier } from "@/lib/stufeZuTier";
 
-export type Tier = "free" | "pro";
+export type Tier = "free" | "analyse" | "strategie";
 
 /**
  * Server-seitiger Zugangs-Tier des aktuellen Nutzers — steuert die Premium-Redaktion in den
@@ -31,13 +31,26 @@ export type Tier = "free" | "pro";
  * Deshalb unten: fehlende Spalte wird als KONFIGURATIONSFEHLER erkannt und benannt, nicht als
  * „zahlt nicht" verbucht.
  *
- * ⚠ DIE VIER STUFEN WERDEN HIER AUF ZWEI ABGEBILDET. `Tier` kennt `free|pro`, weil die
- * Redaktion in `lib/redact.ts` nur diese zwei Ebenen unterscheidet. Das Gating „Strategie
- * schaltet den Bereich Strategie frei" (§3) braucht die rohe Stufe und ist NICHT gebaut; wer
- * das nachzieht, holt sie aus derselben Abfrage statt eine zweite aufzumachen.
+ * ── DIE BEIDEN BEZAHLTEN STUFEN SIND GETRENNT (2026-10-01) ──────────────────────────────
+ *
+ * ⚠ HIER STAND `Tier = "free" | "pro"`, UND DAS KOSTETE GELD. Eine einzige Schwelle fuer zwei
+ * bezahlte Stufen: `redact.ts` prueffte durchgehend `if (tier === "pro") return map`. Wer
+ * Analyse fuer 99 € kaufte, bekam damit Strategie fuer 349 € mit, obwohl §3.6 den ganzen
+ * Strategie-Bereich auf `++` legt („Keine Ausnahme, kein Free-Kontingent"). 250 € Unterschied
+ * je Kunde und Monat — unsichtbar, weil kein Test die Stufen unterscheiden KONNTE.
+ *
+ * `Tier` traegt jetzt die echte Stufe. Wer sie auswertet, fragt NICHT auf Gleichheit ab,
+ * sondern nimmt `darfAnalyse()` / `darfStrategie()` aus `lib/stufeZuTier.js` — sonst steht die
+ * Schwelle wieder an N Stellen und die naechste Stufe wird an N−1 davon vergessen.
+ *
+ * ⚠ `trial` wird zu `strategie`, nicht zu `analyse`: §3a gibt vier Wochen „alle Funktionen
+ * BEIDER Stufen".
  */
 export async function getTier(): Promise<Tier> {
-  if (process.env.PAYWALL_ENFORCED !== "true") return "pro"; // Gate aus → wie heute (alle Pro)
+  // ⚠ Gate aus → VOLLE Stufe, nicht die mittlere. Hier stand `return "pro"`; mit zwei
+  // getrennten Stufen muss es die obere sein, sonst wuerde das AUSSCHALTEN der Paywall
+  // ploetzlich den Strategie-Bereich sperren. Verhalten bleibt damit exakt wie bisher.
+  if (process.env.PAYWALL_ENFORCED !== "true") return "strategie";
   try {
     const supabase = await createClient();
     const { data: { user } } = await supabase.auth.getUser();
