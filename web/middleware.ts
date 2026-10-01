@@ -89,9 +89,18 @@ const PREVIEW_COOKIE = "gv_preview";
  *                               Versprechen, um dessentwillen es das Produkt gibt.
  *                               Die Berechtigung ist hier das CRON_SECRET: `requireCronSecret`
  *                               ist fail-closed (ohne Geheimnis 503, mit falschem 403).
+ *   /ausschreibung/<slug>       die oeffentlichen Ausschreibungs-One-Pager (Ticket #17), der
+ *   /api/ausschreibung/…        geplante Akquisekanal. Ohne Konto gedacht, wie /t. Sie sind
+ *                               dormant: ohne `OEFFENTLICHE_SEITEN=1` liefert die Datenschicht
+ *                               null → 404, es gibt sie dann nicht. ⚠ Der Go-live braucht
+ *                               ZUSAETZLICH eine Blackout-Ausnahme hier unten (sonst zeigt die
+ *                               Coming-Soon-Sperre in Produktion die schwarze Seite) und das
+ *                               Aufheben von `noindex` — beides bewusst nicht jetzt, sondern
+ *                               Svens Entscheidung. Die Route traegt ihre eigene Ratenbremse.
  */
 const OFFEN = ["/login", "/auth", "/api/health", "/onboarding", "/start", "/t", "/api/wer", "/api/entity-verify", "/api/impressum", "/api/entity-search",
                      "/api/entity-group", "/api/outreach-firma", "/api/calendar",
+                     "/ausschreibung", "/api/ausschreibung",
                      "/robots.txt", "/sitemap.xml", "/api/alerts/run"];
 
 function istOffen(pfad: string): boolean {

@@ -1,0 +1,128 @@
+/* Öffentlicher Ausschreibungs-One-Pager (Ticket #17). Mobile-first, eine Spalte; ab breit
+   bleibt der Lesefluss schmal (Lesbarkeit vor Breite). Palette wie im übrigen Produkt. */
+
+.aus-wrap {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 20px 16px 64px;
+  color: #12211d;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.aus-brot {
+  font-size: 13px;
+  color: #64766f;
+  margin-bottom: 14px;
+}
+
+.aus-h1 {
+  font-size: 24px;
+  line-height: 1.25;
+  margin: 0 0 8px;
+  font-weight: 650;
+}
+
+.aus-kennungen { margin: 0 0 6px; color: #3a4b45; font-size: 14px; }
+.aus-buyer { font-weight: 600; color: #12211d; }
+
+.aus-frist { margin: 10px 0 2px; font-size: 15px; }
+.aus-frist-rest { font-weight: 600; color: #1d6f4f; }
+.aus-frist-ab { font-weight: 600; color: #a23b2e; }
+.aus-verbindlich { margin: 0 0 10px; font-size: 12px; color: #8c9b95; }
+
+.aus-fakten { margin: 0 0 18px; font-size: 15px; color: #3a4b45; }
+.aus-zustand { font-weight: 600; }
+.aus-zustand-offen { color: #1d6f4f; }
+.aus-zustand-wertung { color: #9a7a1e; }
+.aus-zustand-zuschlag { color: #64766f; }
+
+.aus-block {
+  border-top: 1px solid #e4eae7;
+  padding: 16px 0 2px;
+}
+.aus-block h2 {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #64766f;
+  margin: 0 0 8px;
+}
+.aus-liste { margin: 0; padding-left: 18px; }
+.aus-liste li { margin: 2px 0; }
+
+.aus-leistung { margin: 0 0 4px; }
+.aus-aggregat { margin: 6px 0 0; }
+.aus-muted { color: #8c9b95; }
+.aus-klein { font-size: 12px; }
+
+/* Das EINE gesperrte Element: geblurrter Balken, kein Wert dahinter. */
+.aus-gesperrt .aus-blur {
+  filter: blur(6px);
+  user-select: none;
+  font-size: 22px;
+  letter-spacing: 6px;
+  color: #9fb3ab;
+  margin: 2px 0 6px;
+}
+.aus-cta-hint { font-size: 14px; color: #3a4b45; margin: 0; }
+
+/* Schnellcheck */
+.aus-check { background: #f5f7f6; border-radius: 12px; padding: 16px; margin: 20px 0; border-top: none; }
+.aus-check h2 { color: #12211d; font-size: 18px; text-transform: none; letter-spacing: 0; margin: 0 0 10px; }
+.aus-check-label { display: block; font-size: 14px; color: #3a4b45; margin-bottom: 6px; }
+.aus-check-input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 11px 12px;
+  border: 1px solid #cdd8d3;
+  border-radius: 8px;
+  font-size: 16px;
+  background: #fff;
+}
+.aus-check-liste { list-style: none; margin: 6px 0 0; padding: 0; background: #fff; border: 1px solid #e4eae7; border-radius: 8px; overflow: hidden; }
+.aus-check-wahl {
+  display: flex; justify-content: space-between; align-items: baseline; gap: 10px;
+  width: 100%; text-align: left; padding: 10px 12px; border: none; background: none; cursor: pointer;
+  border-bottom: 1px solid #eef2f0; font-size: 15px;
+}
+.aus-check-wahl:hover { background: #f0f5f3; }
+.aus-check-name { color: #12211d; }
+.aus-check-meta { color: #8c9b95; font-size: 13px; white-space: nowrap; }
+
+.aus-check-ergebnis { text-align: left; }
+.aus-check-firma { font-weight: 600; margin: 0 0 2px; }
+.aus-check-band { font-size: 18px; font-weight: 650; margin: 4px 0; }
+.aus-band-hoch { color: #1d6f4f; }
+.aus-band-mittel { color: #9a7a1e; }
+.aus-band-niedrig { color: #a23b2e; }
+.aus-check-zahl { margin: 0 0 12px; color: #3a4b45; font-size: 15px; }
+
+.aus-cta {
+  display: inline-block;
+  background: #1d6f4f;
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 18px;
+  border-radius: 9px;
+  font-weight: 600;
+  font-size: 15px;
+}
+.aus-cta:hover { background: #185c42; }
+.aus-check-reset { display: block; margin-top: 10px; background: none; border: none; color: #64766f; text-decoration: underline; cursor: pointer; font-size: 14px; padding: 0; }
+.aus-fehler { color: #a23b2e; font-size: 14px; }
+
+.aus-unterlagen { margin: 16px 0 0; }
+.aus-unterlagen a { color: #1d6f4f; }
+
+.aus-fuss {
+  margin-top: 28px;
+  padding-top: 14px;
+  border-top: 1px solid #e4eae7;
+  font-size: 12px;
+  color: #8c9b95;
+}
+
+@media (min-width: 720px) {
+  .aus-h1 { font-size: 30px; }
+}
