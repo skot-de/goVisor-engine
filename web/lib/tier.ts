@@ -68,13 +68,17 @@ export async function getTier(): Promise<Tier> {
     }
 
     // Kein org_id ist ein DATENFEHLER, kein Free-Kunde. 0024 hat den Bestand vollständig
-    // nachgezogen (die Migration bricht ab, wenn ein Nutzer ohne Org bleibt), aber
-    // `handle_new_user` ist noch nicht erweitert (0024, Block „Phase 2") — eine
-    // Selbstregistrierung kann also einen Nutzer ohne Organisation erzeugen. Gemessen am
-    // 2026-10-01: 0 von 14. Fail-closed mit lauter Meldung, damit es auffällt, bevor es wehtut.
+    // nachgezogen (die Migration bricht ab, wenn ein Nutzer ohne Org bleibt), und 0025 hat
+    // `handle_new_user` so erweitert, dass jede Selbstregistrierung Org, erstes Profil und
+    // `role='owner'` anlegt. Gemessen am 2026-10-01: 0 von 13 Nutzern ohne Organisation.
+    //
+    // ⚠ Hier stand, `handle_new_user` sei noch nicht erweitert — das war falsch, 0024 hatte
+    // es nur als Phase 2 ANGEKÜNDIGT und 0025 hat es ausgeführt. Der Riegel bleibt trotzdem:
+    // ein eingeladener Nutzer übergeht laut 0025 bewusst den Org-Zweig, und bei einem
+    // halben Invite-Pfad entsteht genau dieser Zustand. Fail-closed mit lauter Meldung.
     if (!data?.org_id) {
       console.error(`[tier] Nutzer ${user.id} hat keine Organisation (org_id null) — liefere free. ` +
-                    "Ursache pruefen: handle_new_user legt noch keine Org an (0024 Phase 2).");
+                    "Ursache pruefen: handle_new_user (0025) sollte sie anlegen.");
       return "free";
     }
     // Supabase typisiert eine 1:1-Einbettung je nach Version als Objekt ODER Array.

@@ -1,13 +1,22 @@
 # Schema für Preismodell v1.9 — Entwurf, nicht angewendet
 
 **Stand:** 2026-10-01 · **Grundlage:** `INPUT/govisor-preismodell.md` v1.9, §5.2 / §7.3 / §13
-**Status:** §2 ist **gebaut** (Migration `0028`, `getTier` umgestellt) und wartet auf das
-Einspielen. Der Rest (§3 Trigger, §4 Preise) ist weiter Vorschlag.
+**Status:** §2 ist **gebaut und eingespielt** (Migration `0028` am 2026-10-01 über
+`scripts/migrate.py`, `getTier` umgestellt). Der Rest (§3 Trigger, §4 Preise) ist weiter
+Vorschlag.
 
-> ⛔ **`0028` ist NICHT eingespielt.** Bis dahin muss `PAYWALL_ENFORCED` aus bleiben. `getTier`
-> erkennt die fehlende Spalte am Fehlercode `42703` und sagt es laut, aber es liefert dann
-> `free` — mit scharfer Paywall also Free-Umfang für jeden. Einspielen über den Supabase
-> SQL-Editor (DDL geht auf dieser Maschine nicht über den Pooler).
+Gegengeprüft nach dem Einspielen:
+
+| | |
+|---|---|
+| Spalten | `tier`, `abo_status` (`text`, Default `free`/`aktiv`), `trial_ends_at` (`timestamptz`) |
+| Prüfbedingungen | `tier ∈ (trial, free, analyse, strategie)` · `abo_status ∈ (aktiv, gekuendigt)` |
+| Backfill | 13 Organisationen, alle `tier='free'`, `abo_status='aktiv'`, 0 ohne `tier` |
+| Abfrage aus `tier.ts` | löst auf, Einbettung liefert die Organisation als Objekt |
+
+⚠ `PAYWALL_ENFORCED` scharfzuschalten ist jetzt technisch möglich, aber eine
+PRODUKTentscheidung: alle 13 Konten stehen auf `free`, es bekäme also jeder den
+Free-Umfang.
 
 ---
 
@@ -111,9 +120,11 @@ Drei Dinge fallen fail-closed aus, jedes mit eigener Meldung statt stillem `free
 | `org_id` ist null | eigene Meldung, nennt `handle_new_user` (0024 Phase 2) |
 | Organisation nicht lesbar (RLS) | eigene Meldung mit der org-ID |
 
-⚠ Der zweite Fall ist noch möglich: `handle_new_user` ist nicht erweitert, eine
-Selbstregistrierung kann einen Nutzer ohne Organisation erzeugen. Gemessen am 2026-10-01:
-**0 von 14 Nutzern** betroffen, der Backfill von 0024 war vollständig. Die nächste
+⚠ Zum zweiten Fall: hier stand, `handle_new_user` sei nicht erweitert. Das war falsch —
+0024 hatte es als Phase 2 ANGEKÜNDIGT, **0025 hat es ausgeführt** (Org, erstes Profil,
+`role='owner'`). Gemessen am 2026-10-01: **0 von 13 Nutzern** ohne Organisation. Der Riegel
+bleibt trotzdem sinnvoll, weil ein eingeladener Nutzer laut 0025 bewusst am Org-Zweig vorbei
+angelegt wird. Die nächste
 Selbstregistrierung erzeugt aber einen Straggler.
 
 ---
