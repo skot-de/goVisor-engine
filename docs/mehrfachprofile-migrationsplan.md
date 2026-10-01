@@ -124,6 +124,24 @@ Damit sind **alle vier** Mehrfachprofil-Kreise (Signup/Wechsel/RLS, Invite, Kauf
 belegt. OFFEN bleibt nur die **Stripe-Integration selbst** (Checkout-Session + Webhook-Signatur)
 — haengt am Kostenmodell, nicht am geld-sicheren Kern. S. `docs/intern-laufzeittest.md`.
 
+### Stripe scharf schalten — bewusst zurueckgestellt (Sven, 2026-10-01)
+
+Entscheidung: **erst Preismodell v1.9 fertig, dann Stripe verdrahten** — nicht parallel bauen,
+um keine Umverdrahtung zu riskieren. Reihenfolge, wenn es soweit ist:
+
+1. **Preismodell steht** — `0028` (tier/abo an die Org) eingespielt, §4-Preise fix
+   (s. `docs/preismodell-schema-v1.9.md`). Erst dann weiss der Checkout, was er berechnet.
+2. **Nur Sven:** Stripe-Account einrichten — Produkte/Preise anlegen (liefert Price-IDs),
+   Webhook-Endpoint registrieren (liefert das Signing-Secret), Keys in die Deploy-Umgebung:
+   `STRIPE_SECRET_KEY`, `STRIPE_WEBHOOK_SECRET`, Publishable Key.
+3. **Code (dann):** `stripe`-SDK einbinden; `web/lib/stripe.ts` `UMGESETZT=true`
+   (der Fail-loud-Riegel bleibt); `app/api/kauf/checkout` legt eine Checkout-Session mit
+   `metadata { org_id, art, menge }` an; `app/api/kauf/webhook` prueft die Signatur und ruft bei
+   `checkout.session.completed` `erfuelleKauf(...)` mit der Session-ID als `ref`.
+4. **Belegt ist schon:** der geld-sichere Kern `kauf_gutschreiben` (idempotent je provider+ref)
+   und die 503-/Validierungs-Pfade — `node web/scripts/test_kauf.mjs`. Nach dem Scharfschalten
+   derselbe Test plus ein echter Stripe-Testmodus-Durchlauf (Testkarten).
+
 ⚠ Prod-DDL wird vom Claude-Code-Auto-Mode-Klassifikator gesperrt; es lief erst mit einer
 `Bash(psql:*)`-Permission-Regel.
 
