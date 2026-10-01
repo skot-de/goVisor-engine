@@ -2,6 +2,7 @@ import Link from "next/link";
 import { loadDataFile } from "@/lib/dataSource";
 import { EignungsCheck, type Check, type Leseprobe } from "./EignungsCheck";
 import { RelevanzEcho } from "./RelevanzEcho";
+import { ERWEITERUNG_CENTS } from "@/lib/preise";
 import "../app/landing-oeffentlich.css";
 
 /**
@@ -459,8 +460,11 @@ export async function Landing() {
           bleibt dauerhaft frei. Bezahlt wird die Tiefe: ausgewertete Unterlagen und Bewertung.
         </p>
 
-        {/* Preise/Pakete nach Preismodell v1.9 §5. Keine Code-Quelle fuer die Paketpreise
-            (99/349); die Erweiterung (29 €) steht in lib/preise.ts. */}
+        {/* Preise/Pakete nach Preismodell v1.9 §5. Der Erweiterungspreis kommt aus
+            lib/preise.ts (EINE Quelle, wie der Checkout) — Landing ist eine Server-Komponente
+            und darf das server-only-Modul lesen. Die Paketpreise (99/349) haben noch KEINE
+            Code-Quelle; sie stehen hier als Copy, bis sie (wie die Erweiterung) in preise.ts
+            liegen. */}
         <div className="lp-pakete">
           <div className="lp-paket">
             <h4>Free</h4>
@@ -479,8 +483,8 @@ export async function Landing() {
           </div>
         </div>
         <p className="lp-preis-fuss">
-          Jeder weitere Nutzer oder jedes weitere Unternehmensprofil kostet 29 € im Monat, in
-          beiden Paketen gleich. Jeder neue Account startet mit vier Wochen vollem Zugang, ohne
+          Jeder weitere Nutzer oder jedes weitere Unternehmensprofil kostet {ERWEITERUNG_CENTS.monat / 100} € im
+          Monat, in beiden Paketen gleich. Jeder neue Account startet mit vier Wochen vollem Zugang, ohne
           Zahlungsmittel. Danach bleibt das Konto als Free bestehen.
         </p>
 
