@@ -43,13 +43,42 @@ export function redactDetail(one: Any, tier: Tier): Any {
   return d;
 }
 
-/** Firmenprofil (#25) redigieren: die Pro-Sektion „Was ausläuft" (expiring) verlässt den Server
- * für Free-Nutzer nicht — sie ist in der UI Pro-badge-gated, und CSS-Blur allein ist DevTools-lesbar.
- * „Kopf an Kopf" ist ohne eigenes Profil ohnehin leer, KPIs/Wo-festsitzt bleiben frei. */
+/** Firmenprofil (#25) redigieren — der Tab „Angriffspunkte" ist Strategie (§3.5).
+ *
+ * ⚠ HIER STAND NUR `expiring = []`, UND DER KOMMENTAR NANNTE DAS ABSICHTLICH SO
+ * („KPIs/Wo-festsitzt bleiben frei"). §3.5 von v1.9 ordnet aber FUENF Dinge dem Tab
+ * „Angriffspunkte" zu, und der traegt `++`: Wo festsitzt · Was auslaeuft · Kopf an Kopf ·
+ * weitere Signale · Beobachten. Drei davon tragen Daten, und zwei verliessen den Server
+ * trotzdem. Sven am 2026-10-01 auf Vorlage des Befundes: „ja, zieh sits nach."
+ *
+ * Was jetzt redigiert wird, je Abschnitt der Oberflaeche nachgesehen und nicht geraten:
+ *   `sits` + `n_vergabestellen`   Abschnitt „Wo {firma} festsitzt" (der Zaehler steht in
+ *                                 dessen Ueberschrift, er gehoert zum selben Abschnitt)
+ *   `expiring`                    Abschnitt „Was bei {firma} auslaeuft"
+ *   `signale`                     Abschnitt „Weitere Signale"
+ *
+ * Was BEWUSST frei bleibt, weil §3.5 es der „Uebersicht" (`+`) zuordnet: Identitaet,
+ * Zuordnungsguete, `kpi` (Kennzahlen), `felder` (Leistungsfelder), `regionen`.
+ *
+ * ⚠ UND `kpi.aus18_n` BLEIBT AUSDRUECKLICH DRIN, obwohl es „Laeuft aus ≤ 18 Monate" zaehlt
+ * und damit dieselbe Sache wie `expiring` betrifft. Das ist kein Leck, sondern der entworfene
+ * Anreiz: §3.5 legt die ZAHL in die Uebersicht und die LISTE (Namen, Fristen) in die
+ * Angriffspunkte. Wer die Zahl mitredigiert, nimmt dem Teaser seinen Zweck.
+ *
+ * ⚠ DIE FORM BLEIBT ERHALTEN, die Werte werden geleert. `signale = { gated: true }` waere
+ * kuerzer, aber die Oberflaeche liest `data.signale.bietergemeinschaften` und
+ * `t(data.signale.netzwerk)` direkt — ein fehlendes Feld waere dort kein Teaser, sondern ein
+ * Absturz. „Kopf an Kopf" braucht nichts: der Abschnitt rendert einen festen Leerzustand. */
 export function redactFirma(p: Any, tier: Tier): Any {
   if (darfStrategie(tier) || !p || p.error) return p;
   const d = structuredClone(p);
-  d.expiring = [];              // Pro: auslaufende Verträge der Firma
+  d.sits = [];                       // ++ „Wo festsitzt"
+  d.n_vergabestellen = RED;          //    dessen Zaehler in der Ueberschrift
+  d.expiring = [];                   // ++ „Was auslaeuft" (Namen und Fristen)
+  if (d.signale && typeof d.signale === "object") {
+    d.signale = { ...d.signale, subcontracting: RED, subcontracting_total: RED,
+                  bietergemeinschaften: RED, netzwerk: "" };   // ++ „Weitere Signale"
+  }
   return d;
 }
 
