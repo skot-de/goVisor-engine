@@ -307,33 +307,49 @@ function plattformIdAus(url: string | null | undefined): string | null {
 /* ------------------------------------------------------------------ Lookup */
 
 /*
- * ⚠ PROD-OPTIMIERUNG OFFEN: dieser Lookup lädt die Branchen-Dateien (zusammen ~110 MB) und
- *   hält eine schlanke id→{branche} Karte im Modulspeicher. Lokal/dormant völlig in Ordnung.
- *   Für den Go-live gehört hier dieselbe Behandlung wie bei `leads-fristen.json`: ein
- *   schlanker Export `ausschreibung-index.json` (id, branche, slug, exklusivSchicht), damit
- *   kein Kaltstart 110 MB zieht. Bewusst NICHT jetzt gebaut — kommt mit dem Go-live-Schritt.
+ * idSlug -> branche, der Schluessel zum richtigen `leads-<branche>.json`.
+ *
+ * ⚠ Quelle ist `leads-fristen.json` — die schlanke Datei, die der Export ohnehin schreibt
+ *   (9,2 MB / 42.105 Eintraege, je Eintrag u.a. `id` und `branche`; dieselbe, die leadIndex.ts
+ *   nutzt). Darum zieht ein Serverless-Kaltstart NICHT alle sieben `leads-<branche>.json`
+ *   (~110 MB), nur um die Branche eines Vorgangs zu finden. Kein eigener Index-Erzeuger noetig.
+ *
+ * ⚠ TOLERANT: fehlt die Datei oder traegt sie keine `branche` (aeltere Demo), faellt der
+ *   Lookup auf den Voll-Scan der Branchendateien zurueck — dann teuer, aber korrekt.
  */
-let indexCache: Map<string, string> | null = null; // idSlug → branche
+let brancheCache: Map<string, string> | null = null; // idSlug -> branche
 
 async function brancheFuer(id: string): Promise<string | null> {
-  if (!indexCache) {
+  if (!brancheCache) {
     const karte = new Map<string, string>();
-    for (const b of BRANCHEN) {
-      const roh = await loadDataFile(`leads-${b}.json`);
-      if (!roh) continue;
+    const roh = await loadDataFile("leads-fristen.json");
+    if (roh) {
       try {
-        const o = JSON.parse(roh) as unknown;
-        const arr = Array.isArray(o) ? o : Object.values(o as Record<string, unknown>);
-        for (const l of arr as LeadRoh[]) {
-          if (l?.id) karte.set(idSlug(String(l.id)), b);
+        const arr = JSON.parse(roh) as Array<{ id?: string; branche?: string }>;
+        if (Array.isArray(arr)) {
+          for (const l of arr) if (l?.id && l.branche) karte.set(idSlug(String(l.id)), l.branche);
         }
       } catch {
-        /* defekte Datei überspringen, nicht den ganzen Lookup umwerfen */
+        /* defekt -> faellt unten auf den Scan, wenn die Karte leer bleibt */
       }
     }
-    indexCache = karte;
+    if (karte.size === 0) {
+      // Fallback: Voll-Scan der Branchendateien (nur ohne brauchbare leads-fristen.json).
+      for (const b of BRANCHEN) {
+        const r = await loadDataFile(`leads-${b}.json`);
+        if (!r) continue;
+        try {
+          const o = JSON.parse(r) as unknown;
+          const arr = Array.isArray(o) ? o : Object.values(o as Record<string, unknown>);
+          for (const l of arr as LeadRoh[]) if (l?.id) karte.set(idSlug(String(l.id)), b);
+        } catch {
+          /* defekte Datei überspringen, nicht den ganzen Lookup umwerfen */
+        }
+      }
+    }
+    brancheCache = karte;
   }
-  return indexCache.get(idSlug(id)) ?? null;
+  return brancheCache.get(idSlug(id)) ?? null;
 }
 
 /**
@@ -382,5 +398,5 @@ export async function ladeOeffentlich(slug: string): Promise<OeffentlicheSeite |
 
 /** Nur für Tests/Export: den Modul-Cache leeren. */
 export function _resetIndexCache(): void {
-  indexCache = null;
+  brancheCache = null;
 }
