@@ -93,16 +93,21 @@ function exklusivSchicht(
   if (Array.isArray(lead.ersetzt) && lead.ersetzt.length > 0) return "predecessor";
   if (Array.isArray(lead.kette) ? lead.kette.length > 0 : !!lead.kette) return "cycle";
   // §11 nennt als dritte Exklusivschicht „Auftraggeber-Historie mit n>=6 in der CPV-GRUPPE
-  // dieser Ausschreibung". ⚠ Die Daten tragen das nicht: `buyerProfile` hat nur `total` (ALLE
-  // Vergaben des Auftraggebers) und `mix` (grob je Branche), keine CPV-gruppen-genaue Zahl.
-  // Ein Tor auf `total>=6` waere also durchlaessiger als §11 meint und nicht verifizierbar.
+  // dieser Ausschreibung". Dieses Tor zaehlt hier NICHT zur Indexierbarkeit — aus einem Grund,
+  // der auch dann gilt, wenn man die Zahl sauber berechnet:
   // Gemessen am 2026-10-01 (Peer, docs/weiterentwicklung/sichtbarkeit-in-ki-antworten.md §8)
-  // ist dieses Tor zudem das schwaechste (32 % der Vergabestellen) und inhaltlich nahe an dem,
-  // was §11 selbst ausschliesst — als Hauptweg hebelt es die eigene Schwelle aus. Darum zaehlt
-  // es NICHT zur Indexierbarkeit; die ruht auf den zwei starken, belegten Toren (Vorgaenger
-  // ~4.275 Leads, Zyklus ~47). Die Auftraggeber-Statistik wird weiter gezeigt
-  // (auftraggeberStatistik), sie indexiert nur nicht. Kommt spaeter eine CPV-gruppen-genaue
-  // Zahl, kann "buyer_history" hier zusaetzlich wieder einziehen.
+  // laesst das Tor 71.053 von 90.979 Leads durch = 78,1 %. Eine Bedingung, die vier von fuenf
+  // Seiten erfuellen, gatet nicht, sie oeffnet — und „diese Vergabestelle hat in der Division
+  // schon >=6 mal vergeben" ist genau die Art Segmentzahl, die §11 selbst ausschliesst, keine
+  // seitenspezifische Erkenntnis.
+  // ⚠ NICHT der Grund (eine fruehere Fassung behauptete das): „die Daten tragen die Zahl
+  // nicht". `buyerProfile` im web/data-JSON hat zwar nur `total`, aber die CPV-gruppen-genaue
+  // Zahl ist aus party_entity (role=buyer) × notices.cpv_main herleitbar (20.850 Paare mit
+  // n>=6). Wer das merkt, baut das Tor sonst wieder ein — es bleibt draussen wegen der 78 %,
+  // nicht wegen fehlender Daten.
+  // Die Indexierbarkeit ruht auf den zwei starken, belegten Toren (Vorgaenger ~4.275, Zyklus
+  // ~47) und haengt dadurch auch nicht mehr am Detail-Laden. Die Auftraggeber-Statistik wird
+  // weiter gezeigt (auftraggeberStatistik), sie indexiert nur nicht.
   return null;
 }
 
