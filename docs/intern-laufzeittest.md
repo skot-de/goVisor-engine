@@ -92,9 +92,21 @@ Aktionen. Die folgenden von Hand im Browser, als Admin angemeldet:
    (die Einladung bleibt angelegt), und der Test simuliert den Signup des Eingeladenen; mit einer
    zustellbaren Adresse legt `inviteUserByEmail` den Nutzer schon beim Einladen an. Beide Pfade
    laufen durch dieselbe `handle_new_user`-Zuordnung.
-3. **Kauf** (Seats/Profile erweitern) → erwartet **503**, solange Stripe/Preise nicht scharf
-   (`lib/stripe.ts`/`lib/preise.ts`); der idempotente Fulfillment-Kern (`kauf_gutschreiben`) steht.
-   — noch manuell / offen bis Kostenmodell.
+3. **Kauf-Pfad — ✅ AUTOMATISIERT & GRÜN (2026-10-01):**
+
+       node web/scripts/test_kauf.mjs
+
+   `/api/kauf/checkout` + `/api/kauf/webhook` sind ehrliche **503**-Stubs, solange Preise/Stripe
+   nicht scharf sind (kein vorgetaeuschter Erfolg); Validierung greift davor (ungueltige
+   art/menge → 400), ohne Session 401. Der geld-sichere Kern `kauf_gutschreiben` (0027) verbucht
+   **genau einmal** je (provider, provider_ref): 1. Aufruf `gutgeschrieben` + Kontingent hoch,
+   2. mit gleicher ref `schon_verbucht` ohne Doppel-Increment (Webhook-Retry-sicher); Ledger je
+   ref eine Zeile; ungueltige Eingaben werfen. `service_role` darf die aus `public` entzogene
+   Funktion ausfuehren (echter Webhook-Pfad). Teardown 0 Waisen (psql-gegengeprueft).
+   ⚠ OFFEN bleibt nur die **Stripe-Integration selbst** (Checkout-Session + Webhook-Signatur) —
+   haengt am Kostenmodell/Preisen, nicht an diesem Kern.
+
+Damit sind alle vier Mehrfachprofil-Kreise (Signup/Wechsel/RLS, Invite, Kauf) in der App belegt.
 
 Siehe `docs/mehrfachprofile-migrationsplan.md`.
 

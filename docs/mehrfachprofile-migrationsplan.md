@@ -113,8 +113,16 @@ loescht Konten + Orgs (0 Waisen, mit psql gegengeprueft).
 
 ✅ **Invite-Kreis in der App belegt (2026-10-01):** `node web/scripts/test_invite_rls.mjs` —
 Einladen ordnet den Eingeladenen DER Org zu (nicht Solo), Seat-Grenze greift (3. → 409),
-Signup ohne Einladung → Solo-Org, Mitglied darf nicht einladen (403). 0 Waisen. OFFEN bleibt
-nur noch **Kauf** (503 bis Stripe/Preise scharf) — s. `docs/intern-laufzeittest.md`.
+Signup ohne Einladung → Solo-Org, Mitglied darf nicht einladen (403). 0 Waisen.
+
+✅ **Kauf-Pfad in der App belegt (2026-10-01):** `node web/scripts/test_kauf.mjs` — checkout/
+webhook sind ehrliche 503-Stubs (Validierung 400 davor, 401 ohne Session), und
+`kauf_gutschreiben` (0027) verbucht idempotent genau einmal je (provider, provider_ref)
+(2. Aufruf `schon_verbucht`, kein Doppel-Increment; Ledger je ref eine Zeile). 0 Waisen.
+
+Damit sind **alle vier** Mehrfachprofil-Kreise (Signup/Wechsel/RLS, Invite, Kauf) in der App
+belegt. OFFEN bleibt nur die **Stripe-Integration selbst** (Checkout-Session + Webhook-Signatur)
+— haengt am Kostenmodell, nicht am geld-sicheren Kern. S. `docs/intern-laufzeittest.md`.
 
 ⚠ Prod-DDL wird vom Claude-Code-Auto-Mode-Klassifikator gesperrt; es lief erst mit einer
 `Bash(psql:*)`-Permission-Regel.
