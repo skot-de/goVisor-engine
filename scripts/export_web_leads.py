@@ -1088,6 +1088,37 @@ def ch_extras_for(ids):
 FRISTEN: list[dict] = []
 
 
+# ── EXKLUSIVSCHICHT: fuer die Sitemap, nicht fuer die Seite ──────────────────────────────
+#
+# WOFUER. Ticket #17 §11 verlangt eine Sitemap der indexierbaren Seiten. Ohne dieses Feld
+# muesste ein Sitemap-Bau die sieben vollen Lead-Dateien lesen, also 110 MB fuer eine URL-Liste
+# — genau das, wovon `leads-fristen.json` die Abkehr ist.
+#
+# ⚠ DREI ZAHLEN FUER SCHEINBAR DASSELBE, alle am 2026-10-01 gemessen. Wer sie verwechselt,
+# plant den falschen Kanal:
+#     4.275   Gold Layer: Leads mit Eintrag in lead_predecessor.parquet, ueber ALLE 90.979
+#     20.694  Export: Leads mit `incumbent.src == "echt"` von 42.105 exportierten  ← dieses Feld
+#        53   Export: Leads mit `kette` (Nachfolgetiefe >= 2)
+# Die Sitemap kennt nur die exportierten, also 20.747 (49,3 %).
+#
+# ⚠ KOSTEN: rund 650 KB auf einer 9,2-MB-Datei, die in einem ANFRAGEPFAD geladen wird (+7 %),
+# fuer einen Bedarf, der im BAU entsteht. Vertretbar, aber kein Nulltarif — wer es billiger
+# braucht, kuerzt den Schluessel oder legt eine eigene kleine Datei fuer die Aufzaehlung an.
+#
+# ⚠ DER SLUG STEHT HIER ABSICHTLICH NICHT. Eine erste Fassung lieferte ihn mit, portiert aus
+# `titelSlug`/`vollSlug` (web/lib/oeffentlich.ts). Das waere eine ZWEITE Normalisierung
+# derselben Sache gewesen, und zwei driften: weichen sie ab, zeigen Sitemap und Route auf
+# verschiedene URLs und jede indexierte Seite ist ein 301 auf sich selbst. Ein Gleichlauf-Test
+# haette die Drift VERWALTET; sie gar nicht zu erzeugen ist besser. Die Leseseite leitet den
+# Slug deshalb allein in TS ab — aus `id` und `titel`, die ohnehin in dieser Datei stehen, mit
+# derselben `vollSlug()`, die auch die Route benutzt. Eine Quelle.
+#
+# ⚠ BEI null WIRD DER SCHLUESSEL WEGGELASSEN, nicht auf `null` gesetzt. 42.105 Eintraege mit
+# `"exklusivSchicht":null` waeren rund 1 MB auf einer Datei, die in einem ANFRAGEPFAD geladen
+# wird. Die Leseseite prueft `exklusivSchicht != null`, und in JS ist `undefined != null`
+# falsch — fehlender Schluessel und `null` verhalten sich dort also gleich.
+
+
 def _frist_zeile(l: dict, branche: str) -> dict:
     # ⚠ `buyer` kam am 2026-09-01 dazu, fuer die beobachtete Vergabestelle (Aktivierung D).
     # Der Posteingang muss wissen, WER ausschreibt, und der einzige andere Weg dorthin waere,
@@ -1099,11 +1130,55 @@ def _frist_zeile(l: dict, branche: str) -> dict:
     # welchen Grundraum er laden soll (`web/lib/leadIndex.ts::leadBranchen`). Ohne dieses
     # Feld faellt der Nachschlag auf die sieben vollen Dateien zurueck — 110 MB fuer einen
     # Klick, und zwar in einem ANFRAGEPFAD, nicht in einem Nachtlauf.
-    return {"id": l.get("id"), "titel": l.get("titel"), "src": l.get("src"),
-            "tage": l.get("tage"), "endTage": l.get("endTage"),
-            "endeEcht": (l.get("timing") or {}).get("src") == "echt",
-            "buyer": l.get("buyerShort") or l.get("buyer"),
-            "branche": branche}
+    zeile = {"id": l.get("id"), "titel": l.get("titel"), "src": l.get("src"),
+             "tage": l.get("tage"), "endTage": l.get("endTage"),
+             "endeEcht": (l.get("timing") or {}).get("src") == "echt",
+             "buyer": l.get("buyerShort") or l.get("buyer"),
+             "branche": branche}
+    # Nur wo es eine gibt — s. Kommentar oben zum weggelassenen Schluessel.
+    if (ex := _exklusiv(l)):
+        zeile["exklusivSchicht"] = ex
+    return zeile
+
+
+# ⚠ DIESE FUNKTION MUSS ZWISCHEN `_frist_zeile` UND `export_branche` STEHEN.
+# `tests/test_plumbing.py::_export_web_leads_teil` schneidet genau dieses Fenster heraus
+# und fuehrt es isoliert aus — ein Helfer davor ist dort nicht im Namensraum und der
+# Test stirbt mit `NameError`. Genau das passierte beim Einbau am 2026-10-01.
+def _exklusiv(l):
+    """Welche Exklusivschicht traegt dieser Lead (Ticket #17 §11)?
+
+    Werte: "predecessor" | "cycle" | None. Muss `exklusivSchicht()` in
+    `web/lib/oeffentlich.ts` spiegeln — sonst indexiert die Sitemap Seiten, die sich selbst als
+    nicht indexierbar ausweisen, oder umgekehrt.
+
+    ⛔ `l["ersetzt"]` WIRD HIER NICHT GELESEN, UND DAS IST DER WICHTIGSTE SATZ DIESER FUNKTION.
+    Eine fruehere Fassung beider Seiten nahm es als „verifizierter Vorgaengervertrag". Es ist
+    aber die Liste der DOPPELTEN Kennungen, die `_verfahrens_dubletten()` in diesen Lead
+    einschmilzt, damit alte Nummern aus alten Mails suchbar bleiben (s. Kommentar an
+    `ERSETZT`). Ein Aufraeumartefakt, kein Vertrag. Gemessen am 2026-10-01: 184 Leads tragen
+    es — die Seite haette 184 Mal einen Vorgaengervertrag behauptet, den es nicht gibt, als
+    GRUND fuer die Indexierung. §1 des Tickets nennt genau das als Markenschaden.
+
+    ⚠ UND `src == "unsicher"` ZAEHLT NICHT. Der Amtsinhaber ist dort aus dem letzten
+    vergleichbaren Zuschlag DESSELBEN KAEUFERS geraten (conf 0,6), nicht aus diesem Verfahren.
+    Eine Seite, die ihn benennt, behauptet Gewissheit, die sie nicht hat — §6.3 sagt „bei
+    Zweifel weglassen". Gemessen: 20.694 Leads mit `src="echt"` (conf >= 0,8), 10.118 mit
+    `src="unsicher"`.
+
+    ⚠ Das dritte Tor aus §11 (Auftraggeber-Historie n >= 6 in der CPV-Gruppe) fehlt
+    ABSICHTLICH: es laesst 78,1 % aller Leads durch und gatet damit nicht. Begruendung und
+    Messung in oeffentlich.ts::exklusivSchicht und der Marktanalyse §8.
+
+    ⚠ DIE RANGFOLGE IST BINDEND (predecessor vor cycle), damit die Sitemap-Begruendung und die
+    Seitenbegruendung dieselbe ist, wenn ein Lead beides traegt.
+    """
+    inc = l.get("incumbent") or {}
+    if inc.get("name") and inc.get("src") == "echt":
+        return "predecessor"
+    if l.get("kette"):
+        return "cycle"
+    return None
 
 
 def export_branche(key):

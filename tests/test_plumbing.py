@@ -4989,6 +4989,22 @@ def test_fristzeile_traegt_genau_die_gebrauchten_felder():
         "beschreibung": "…" * 2000, "lose": [1, 2, 3],
     }, "it")
     assert set(zeile) == {"id", "titel", "src", "tage", "endTage", "endeEcht", "buyer", "branche"}
+
+    # ⚠ DAS NEUNTE FELD, UND HIER IST DER VERLANGTE NACHWEIS. `exklusivSchicht` kam am
+    # 2026-10-01 dazu, fuer die Sitemap der indexierbaren Seiten (Ticket #17 §11). Der einzige
+    # andere Weg zu dieser Liste waeren wieder die sieben vollen Lead-Dateien — 110 MB fuer eine
+    # Aufzaehlung von rund 20.700 URLs, also genau das, wovon diese Datei die Abkehr ist.
+    #
+    # WAS ES KOSTET: rund 650 KB auf 9,2 MB (+7 %), und zwar nur auf den Eintraegen, die eine
+    # Exklusivschicht TRAGEN — bei den uebrigen fehlt der Schluessel ganz. 42.105 Eintraege mit
+    # `"exklusivSchicht":null` waeren 1 MB fuer keine Information.
+    bauer = _export_web_leads_teil("_frist_zeile")
+    mit = bauer({"id": "1", "titel": "T", "timing": {"src": "echt"},
+                 "incumbent": {"name": "Beispiel GmbH", "src": "echt"}}, "it")
+    assert mit["exklusivSchicht"] == "predecessor"
+    ohne = bauer({"id": "2", "titel": "T", "timing": {"src": "echt"}}, "it")
+    assert "exklusivSchicht" not in ohne, \
+        "der Schluessel steht auch ohne Exklusivschicht da — das ist 1 MB fuer nichts"
     assert zeile["endeEcht"] is True
     assert zeile["buyer"] == "Stadt X"
     assert zeile["branche"] == "it"
