@@ -27,18 +27,22 @@ export const ANBIETER = {
    * wird hier nicht erschlossen: fuer eine Firma mit Sitz in Hamm liegt „Amtsgericht Hamm"
    * nahe, aber in Nordrhein-Westfalen sind die Registergerichte konzentriert, und welches
    * Amtsgericht ein bestimmtes Register fuehrt, ergibt sich aus der Zustaendigkeits-
-   * verordnung und nicht aus der Postanschrift. Naheliegend ist keine Messung, und auf
-   * einer Pflichtseite ist eine naheliegende Angabe genau so falsch wie eine geratene. Es
-   * steht im Handelsregisterauszug; eine Zeile genuegt, sobald jemand nachgesehen hat. */
-  registergericht: null as string | null,
+   * verordnung und nicht aus der Postanschrift. Naheliegend ist keine Messung — Sven hat
+   * am 2026-10-02 nachgesehen und beides genannt. (Seine Schreibweise „Amtgericht" ist
+   * hier zu „Amtsgericht" berichtigt; das ist Rechtschreibung, keine Sachaenderung.) */
+  registergericht: "Amtsgericht Hamm",
   registernummer: "HRB 12177",
 
   /* ⚠ EINE ELEKTRONISCHE KONTAKTMOEGLICHKEIT IST PFLICHT (§ 5 Abs. 1 Nr. 2 DDG) — eine
-   * Adresse, die eine schnelle Kontaktaufnahme erlaubt. Die persoenliche Mailadresse des
-   * Geschaeftsfuehrers steht zwar in der Projektumgebung, aber sie dort zu nehmen und auf
-   * eine oeffentliche Seite zu schreiben waere eine Entscheidung ueber seine Daten, die
-   * ihm gehoert und nicht mir. Sven nennt die Adresse, die dort stehen soll. */
-  email: null as string | null,
+   * Adresse, die eine schnelle Kontaktaufnahme erlaubt. Bewusst eine Funktionsadresse und
+   * nicht die persoenliche des Geschaeftsfuehrers: sie steht zwar in der Projektumgebung,
+   * aber sie dort zu nehmen und auf eine oeffentliche Seite zu schreiben waere eine
+   * Entscheidung ueber seine Daten gewesen, die ihm gehoert. Von Sven am 2026-10-02.
+   *
+   * ⚠ DIE ADRESSE MUSS POST ANNEHMEN. Eine Pflichtangabe, die ins Leere laeuft, erfuellt
+   * die Pflicht nicht — und sie steht ab dem Start auf einer oeffentlichen Seite, wird
+   * also auch von Maschinen geerntet. Vor dem Go-live einmal eine Testmail dorthin. */
+  email: "msg@govisor.eu",
   telefon: null as string | null,
 
   /* Verantwortlicher im Sinne der DSGVO ist dieselbe Stelle; ein Datenschutzbeauftragter
