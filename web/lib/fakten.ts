@@ -13,13 +13,12 @@
  *
  * ⚠ WAS BEWUSST FEHLT, und warum:
  *
- *   Betreiber, Sitz, Rechtsform, Handelsregister
- *     Im Repo gibt es keine Anbieterkennung: kein Impressum, keine AGB, keine
- *     Datenschutzerklaerung (gemessen 2026-10-02, `web/app` traegt keine dieser Seiten).
- *     Das Vorbild nennt diese Felder, und eine Grounding Page ohne Betreiber ist
- *     schwaecher. Geraten wird trotzdem nicht. ⚠ Unabhaengig von dieser Seite ist das
- *     Fehlen einer Anbieterkennung bei einer oeffentlich erreichbaren deutschen Seite
- *     auch rechtlich ein eigenes Thema (§ 5 DDG) — Sven entscheidet, was dort hingehoert.
+ *   Handelsregister-Eintragung
+ *     Registergericht und HRB-Nummer liegen nicht vor. Sie stehen im Impressum, sobald
+ *     sie da sind; hier bleiben sie weg, statt geraten zu werden. Betreiber, Sitz und
+ *     Rechtsform sind seit dem 2026-10-02 bekannt und stehen in `lib/anbieter.ts` — EINE
+ *     Quelle fuer Impressum, Datenschutzerklaerung und diese Seite, damit die Anschrift
+ *     nicht an drei Stellen auseinanderlaufen kann.
  *
  *   Pakete und Preise
  *     `govisor/pricing.py` wurde am 2026-08-17 geloescht; ein verbindliches Paketmodell
@@ -94,6 +93,8 @@ export const FAKTEN = {
   kernfakten: [
     { name: "Entitätstyp", wert: "B2B-Analyseplattform (SaaS) für öffentliche Vergabedaten" },
     { name: "Klassifikation", wert: "Vergabedaten-Analyse, Wechselprognose und Lead-Erzeugung" },
+    { name: "Betreiber", wert: "skot UG (haftungsbeschränkt)" },
+    { name: "Sitz", wert: "Hamm, Deutschland" },
     { name: "Hauptdomain", wert: "https://govisor.eu" },
     {
       name: "Datenbasis",

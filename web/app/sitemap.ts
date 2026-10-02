@@ -26,6 +26,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     // zu werden. Eine Faktenseite, die kein Abrufer findet, ist keine.
     { url: `${SEITE}/fakten`, lastModified: jetzt, changeFrequency: "weekly", priority: 0.9 },
     { url: `${SEITE}/start`, lastModified: jetzt, changeFrequency: "monthly", priority: 0.6 },
+    // Pflichtseiten. Niedrige Prioritaet, aber sie gehoeren in die Liste: wer die Seite
+    // maschinell prueft, soll sie finden, ohne sie zu erraten.
+    { url: `${SEITE}/impressum`, lastModified: jetzt, changeFrequency: "yearly", priority: 0.3 },
+    { url: `${SEITE}/datenschutz`, lastModified: jetzt, changeFrequency: "yearly", priority: 0.3 },
     { url: `${SEITE}/login`, lastModified: jetzt, changeFrequency: "yearly", priority: 0.3 },
   ];
   const ausschreibungen: MetadataRoute.Sitemap = (await indexierbareSlugs()).map((slug) => ({

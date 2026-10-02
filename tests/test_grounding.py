@@ -229,9 +229,27 @@ def test_seite_kommt_durch_die_coming_soon_sperre():
 
 
 def test_seite_verlangt_keine_anmeldung():
+    """⚠ Geprueft wird die WIRKUNG, nicht der Wortlaut.
+
+    Hier stand `"const OFFEN = [...GROUNDING" in t`. Das war an eine Schreibweise
+    geklebt: als die Pflichtseiten dazukamen und die Liste `DURCH_DIE_SPERRE` hiess, wurde
+    der Test rot, obwohl die Sache stimmte. Ein Test, der beim Umbenennen anschlaegt und
+    beim Loeschen schweigen koennte, misst das Falsche.
+
+    Jetzt wird gefragt, was zaehlt: landet `GROUNDING` ueber irgendeine Kette in `OFFEN`?
+    """
     t = _text(MIDDLEWARE)
-    assert "const OFFEN = [...GROUNDING" in t, (
-        "Die Grounding-Pfade stehen nicht in OFFEN — ein Abrufer landete auf /login.")
+    offen = t.split("const OFFEN = [")[1].split("]")[0]
+    gestreut = re.findall(r"\.\.\.([A-Z_]+)", offen)
+    erreicht = set(gestreut)
+    # Eine Ebene aufloesen: `OFFEN` kann ueber eine Zwischenliste auf GROUNDING zeigen.
+    for name in list(gestreut):
+        if f"const {name} = [" in t:
+            zwischen = t.split(f"const {name} = [")[1].split("]")[0]
+            erreicht |= set(re.findall(r"\.\.\.([A-Z_]+)", zwischen))
+    assert "GROUNDING" in erreicht, (
+        f"GROUNDING landet nicht in OFFEN (gefunden: {sorted(erreicht)}) — ein Abrufer "
+        f"landete auf /login.")
 
 
 def test_llms_txt_kommt_auch_durch():

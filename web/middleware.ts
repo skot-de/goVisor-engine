@@ -118,7 +118,25 @@ const PREVIEW_COOKIE = "gv_preview";
  */
 const GROUNDING = ["/fakten", "/llms.txt"];
 
-const OFFEN = [...GROUNDING, "/login", "/auth", "/api/health", "/onboarding", "/start", "/t", "/api/wer", "/api/entity-verify", "/api/impressum", "/api/entity-search",
+/**
+ * PFLICHTSEITEN — Impressum und Datenschutzerklaerung.
+ *
+ * ⚠ Sie muessen aus einem ANDEREN Grund durch dieselben Tore als die Grounding Page, und
+ * der Grund ist staerker: die Anbieterkennung nach § 5 DDG knuepft an die Erreichbarkeit
+ * des Angebots, nicht an den Zustand der Baustelle. Ein Impressum hinter einer
+ * Coming-Soon-Sperre ist keines. Dasselbe gilt fuer die Datenschutzerklaerung: wer wissen
+ * will, was mit seinen Daten geschieht, muss das koennen, BEVOR er sich anmeldet.
+ *
+ * Zwei Listen und nicht eine, obwohl die Mechanik dieselbe ist: die Begruendungen sind
+ * verschieden, und wer eine davon spaeter aendert, soll nicht versehentlich die andere
+ * mitaendern.
+ */
+const RECHTLICHES = ["/impressum", "/datenschutz"];
+
+/** Alles, was die Sperre passieren muss. */
+const DURCH_DIE_SPERRE = [...GROUNDING, ...RECHTLICHES];
+
+const OFFEN = [...DURCH_DIE_SPERRE, "/login", "/auth", "/api/health", "/onboarding", "/start", "/t", "/api/wer", "/api/entity-verify", "/api/impressum", "/api/entity-search",
                      "/api/entity-group", "/api/outreach-firma", "/api/calendar",
                      "/ausschreibung", "/api/ausschreibung",
                      "/robots.txt", "/sitemap.xml", "/api/alerts/run"];
@@ -131,9 +149,9 @@ function istOffen(pfad: string): boolean {
   return OFFEN.some((o) => pfad === o || pfad.startsWith(o + "/"));
 }
 
-/** Gehoert der Pfad zur oeffentlichen Faktenseite? Eine Stelle, zwei Tore. */
+/** Muss der Pfad ohne Anmeldung und ohne Sperre erreichbar sein? Eine Stelle, zwei Tore. */
 function istGrounding(pfad: string): boolean {
-  return GROUNDING.some((o) => pfad === o || pfad.startsWith(o + "/"));
+  return DURCH_DIE_SPERRE.some((o) => pfad === o || pfad.startsWith(o + "/"));
 }
 
 function istIntern(pfad: string): boolean {

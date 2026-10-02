@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ANBIETER } from "@/lib/anbieter";
 import { FAKTEN } from "@/lib/fakten";
 
 /**
@@ -74,12 +75,25 @@ function jsonLd() {
     description: FAKTEN.einSatz,
     featureList: FAKTEN.begriffe.map((b) => b.begriff),
     countriesSupported: FAKTEN.laender.map((l) => l.code).join(", "),
+    provider: { "@id": `${SEITE}#organisation` },
   };
+  // ⚠ Die Anschrift kommt aus `lib/anbieter.ts`, derselben Quelle wie Impressum und
+  // Datenschutzerklaerung. Eine Organisation, die im JSON-LD anders adressiert ist als im
+  // Impressum, ist fuer ein Modell zwei Organisationen.
   const organisation = {
     "@type": "Organization",
     "@id": `${SEITE}#organisation`,
-    name: "goVisor",
+    name: ANBIETER.firma,
+    alternateName: "goVisor",
     url: SEITE,
+    vatID: ANBIETER.ustIdNr,
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: ANBIETER.strasse,
+      postalCode: ANBIETER.plz,
+      addressLocality: ANBIETER.ort,
+      addressCountry: "DE",
+    },
     description: FAKTEN.einSatz,
   };
   const faq = {
