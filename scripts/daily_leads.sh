@@ -1894,5 +1894,17 @@ $PY scripts/pruefe_vollstaendigkeit.py \
 $PY scripts/zahlen_nachziehen.py \
   || echo "  → Zahlen nachgezogen, aber eine Zahl steht doppelt. Details: python3 scripts/zahlen_nachziehen.py"
 
+# ─────────────────────────────────────────────────────────────────────────────────────────
+# TELEMETRIE-AUFBEWAHRUNG (0035). Loescht Ereignisse aelter als 180 Tage.
+#
+# ⚠ OHNE DIESEN AUFRUF RAEUMT NICHTS. Die Funktion steht seit 0035 in der Datenbank, aber
+# Postgres hat keinen Zeitgeber. Speicherbegrenzung ist Pflicht (DSGVO Art. 5 Abs. 1 lit. e),
+# und der Ausfall waere lautlos: die Tabelle waechst, nichts geht kaputt, niemand merkt es.
+#
+# Fail-open mit `||`: ein nicht geraeumtes Protokoll ist ein Mangel, aber kein Grund, den
+# restlichen Nachtlauf abzubrechen.
+$PY scripts/telemetrie_aufraeumen.py \
+  || echo "  → Telemetrie nicht geräumt. Details: python3 scripts/telemetrie_aufraeumen.py --probe"
+
 # Alte Logs aufräumen (>30 Tage)
 find "$LOG_DIR" -name 'daily-*.log' -type f -mtime +30 -delete 2>/dev/null || true

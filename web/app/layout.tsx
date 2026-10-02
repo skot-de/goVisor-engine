@@ -4,6 +4,7 @@ import { Archivo, IBM_Plex_Mono } from "next/font/google";
 import { copy } from "@/lib/copy";
 import "./globals.css";
 import { SprachProvider } from "@/lib/i18n";
+import Telemetrie from "@/components/Telemetrie";
 
 const archivo = Archivo({
   subsets: ["latin"],
@@ -142,7 +143,10 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(strukturdaten) }}
         />
       </head>
-      <body><SprachProvider><ProfilBanner />{children}</SprachProvider></body>
+      {/* `Telemetrie` rendert NICHTS (s. components/Telemetrie.tsx) — es haengt nur die
+          Sammler ein. Deshalb steht es ausserhalb von `children` und veraendert das
+          ausgelieferte Markup nicht: Ticket 17 §6.2 verlangt identisches HTML fuer Crawler. */}
+      <body><SprachProvider><Telemetrie /><ProfilBanner />{children}</SprachProvider></body>
     </html>
   );
 }

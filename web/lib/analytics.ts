@@ -1,13 +1,26 @@
 "use client";
 import { createClient } from "./supabase/client";
 import { dichte, merkmale } from "./dichte";
+import { sendeEreignis } from "./telemetrie";
 
 /* Analytics (Ticket #8) — eine dünne, pluggbare Event-Schicht. Sink-Reihenfolge:
- *  1) PostHog, falls `window.posthog` initialisiert ist (Integrationspunkt — braucht Key/Init,
+ *  1) EIGENE SENKE → `/api/ereignis` → `gov_ereignisse` (0035). Seit 2026-10-02 die
+ *     tragende Senke: kein Drittanbieter, keine Cookies, Daten bleiben in unserer Instanz.
+ *  2) PostHog, falls `window.posthog` initialisiert ist (Integrationspunkt — braucht Key/Init,
  *     bewusst kein harter Dependency: `posthog-js` + init in einem Provider ergänzen, dann fließt es).
- *  2) In-Memory-Ring (`window.__gvEvents`) + console.debug — zum Prüfen ohne PostHog.
+ *  3) In-Memory-Ring (`window.__gvEvents`) + console.debug — zum Prüfen ohne Senke.
  * Die Success-Fee-/HITL-Events aus dem Ticket sind als Konstanten vorbereitet; Revenue-Events
- * feuert der Server-Billing-Pfad, nicht der Client. */
+ * feuert der Server-Billing-Pfad, nicht der Client.
+ *
+ * ⚠ BIS ZUM 2026-10-02 GAB ES KEINE SENKE. Senke 1 existierte nicht, der PostHog-Zweig war
+ *   tot (keine Abhängigkeit, keine Initialisierung, `window.posthog` nie gesetzt), und der
+ *   Ring-Puffer verschwand beim Schließen des Tabs. Alle neun Ereignisse feuerten also ins
+ *   Leere — gebaut, nicht verdrahtet. Wer hier etwas umbaut: `tests/test_telemetrie.py`
+ *   prüft, dass `track()` die Senke weiterhin ruft.
+ *
+ * ⚠ NEUE EREIGNISSE GEHÖREN AN ZWEI STELLEN eingetragen: nach `EV` hier UND in die Liste
+ *   `ERLAUBT` in `lib/telemetrieSenke.ts`. Der Server verwirft, was er nicht kennt — sonst
+ *   wächst die Tabelle mit Tippfehlern zu. Die Wache oben prüft auch das. */
 
 type Props = Record<string, unknown>;
 
@@ -16,6 +29,7 @@ declare global { interface Window { posthog?: any; __gvEvents?: { event: string;
 
 export function track(event: string, props: Props = {}) {
   if (typeof window === "undefined") return;
+  try { sendeEreignis(event, props); } catch { /* Senke darf nie die Oberfläche stören */ }
   try { window.posthog?.capture?.(event, props); } catch { /* Sink optional */ }
   (window.__gvEvents ||= []).push({ event, props, t: Date.now() });
   if (window.__gvEvents.length > 200) window.__gvEvents.shift();
