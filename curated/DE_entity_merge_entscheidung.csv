@@ -1,0 +1,8 @@
+entity_a,entity_b,entscheidung,name_a,name_b,grund,stand
+name:h klostermann baugesellschaft mbhh,hr:R2404_HRB6313,gleich,H Klostermann Baugesellschaft mbhH,H. Klostermann Baugesellschaft mbH,"Gleicher Name, Rechtsform verschrieben (mbhH)",2026-10-02
+name:h klostermann bauges,hr:R2404_HRB6313,gleich,H. Klostermann Bauges. mbH,H. Klostermann Baugesellschaft mbH,"Gleicher Name abgekuerzt (Bauges. = Baugesellschaft), gleiche Rechtsform",2026-10-02
+name:klostermann bauges,hr:R2404_HRB6313,gleich,Klostermann Bauges. mbH,H. Klostermann Baugesellschaft mbH,"Gleicher Name abgekuerzt ohne Vornamensinitial, gleiche Rechtsform",2026-10-02
+name:h klostermann baugeselschaft,hr:R2404_HRB6313,gleich,H. Klostermann Baugeselschaft mbH,H. Klostermann Baugesellschaft mbH,"Gleicher Name, Tippfehler (Baugeselschaft)",2026-10-02
+name:h klostermann baugsellschaft,hr:R2404_HRB6313,gleich,H. Klostermann Baugsellschaft mbH,H. Klostermann Baugesellschaft mbH,"Gleicher Name, Tippfehler (Baugsellschaft)",2026-10-02
+name:h klostermann baugesellschaft ort hamm uentrop nuts code dea54 hamm kreisfreie stadt postleitzahl 59008,hr:R2404_HRB6313,gleich,H. Klostermann Baugesellschaft mbH Ort: Hamm-Uentrop ... 59008,H. Klostermann Baugesellschaft mbH,Exakter Name plus Anschrift; PLZ 59008 deckt sich mit dem Beleg von HRB 6313,2026-10-02
+name:h klostermann baugesellschaft ort hamm uentrop nuts code dea54 hamm kreisfreie stadt postleitzahl 59008 land deutschland,hr:R2404_HRB6313,gleich,H. Klostermann Baugesellschaft mbH Ort: Hamm-Uentrop ... 59008 Land: Deutschland,H. Klostermann Baugesellschaft mbH,Exakter Name plus Anschrift und Land; PLZ 59008 deckt sich mit dem Beleg von HRB 6313,2026-10-02

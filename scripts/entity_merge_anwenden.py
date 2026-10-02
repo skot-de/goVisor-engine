@@ -88,6 +88,8 @@ def main() -> int:
                     help="wie viel POSITIVER Beleg verlangt wird (s. Modulkopf)")
     ap.add_argument("--vergleich", action="store_true",
                     help="alle drei Stufen rechnen und gegenüberstellen, nichts schreiben")
+    ap.add_argument("--schrumpfen-erlauben", action="store_true",
+                    help="die Schrumpfsperre übergehen (nur mit Grund, s. Modulkopf)")
     a = ap.parse_args()
 
     import duckdb
@@ -258,6 +260,34 @@ def main() -> int:
     if a.probe:
         print("  (Probe — nichts geschrieben)")
         return 0
+
+    # ── SCHRUMPFSPERRE ───────────────────────────────────────────────────────────────────
+    # ⚠ DIESER LAUF IST NICHT WIEDERHOLBAR, und das ist keine Vermutung: `paare_fuer` joint
+    # die Kandidaten gegen `entities.parquet`, und dort stehen die Entitäten NACH Anwendung
+    # der bestehenden Karte. Was eine frühere Karte verschmolzen hat, existiert als
+    # `entity_b` nicht mehr und fällt aus dem Join. Gemessen 2026-10-02: 10.847 Kandidaten,
+    # davon nur 4.750 mit noch existierendem `entity_b` — 6.097 waren bereits verschmolzen.
+    # Ein zweiter Lauf schreibt deshalb eine KLEINERE Karte, und weil `to_parquet`
+    # überschreibt, löscht er die Differenz. Am 2026-10-02 hätte das 9.978 von 10.025
+    # Verschmelzungen vernichtet.
+    #
+    # Die Sperre vergleicht daher gegen die bestehende Datei und bricht ab, statt zu
+    # überschreiben. Wer wirklich neu rechnen will, löscht die Karte von Hand oder setzt
+    # --schrumpfen-erlauben; beides ist eine bewusste Handlung, kein Versehen.
+    if ZIEL.exists() and not getattr(a, "schrumpfen_erlauben", False):
+        import duckdb as _dd
+        _vorher = _dd.connect().execute(
+            f"SELECT count(*) FROM '{ZIEL.as_posix()}'").fetchone()[0]
+        if len(karte) < _vorher:
+            print(f"\n  ⛔ ABBRUCH: die neue Karte hätte {len(karte):,} Zeilen, die "
+                  f"bestehende hat {_vorher:,}.")
+            print(f"     Überschreiben würde {_vorher - len(karte):,} Verschmelzungen "
+                  "LÖSCHEN. Dieser Lauf ist nicht wiederholbar (s. Kommentar an der "
+                  "Schrumpfsperre).")
+            print("     Gewollt? Dann die Karte von Hand löschen oder "
+                  "--schrumpfen-erlauben setzen.")
+            return 1
+
     karte.to_parquet(ZIEL, index=False)
     print(f"  ✓ {ZIEL.relative_to(ROOT)}")
     print("  `entities.parquet` ist UNVERÄNDERT. Die Karte anzuwenden ist ein eigener Schritt.")
